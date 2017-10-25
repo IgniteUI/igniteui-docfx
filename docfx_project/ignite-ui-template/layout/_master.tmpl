@@ -1,0 +1,49 @@
+{{!Copyright (c) Microsoft. All rights reserved. Licensed under the MIT license. See LICENSE file in the project root for
+full license information.}} {{!include(/^styles/.*/)}} {{!include(/^fonts/.*/)}} {{!include(favicon.ico)}} {{!include(logo.svg)}}
+{{!include(search-stopwords.json)}}
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+{{>partials/head}}
+
+<body data-spy="scroll" data-target="#affix">
+
+    <div id="wrapper">
+
+        <header>
+            {{^_disableNavbar}} {{>partials/navbar}} {{/_disableNavbar}} {{^_disableBreadcrumb}} {{!>partials/breadcrumb}} {{/_disableBreadcrumb}}
+        </header>
+
+        {{!#_enableSearch}}
+        <div class="container-fluid body-content">
+            {{!>partials/searchResults}}
+        </div>
+        {{!/_enableSearch}}
+
+        <div id="main" role="main" class="container-fluid body-content hide-when-search">
+
+            <div class="row">
+
+                <div class="col-lg-2 col-md-3">
+                    {{^_disableToc}} {{>partials/toc}} {{/_disableToc}}
+                </div>
+
+                <div class="col-lg-8 col-md-9">
+                    <article class="content wrap" id="_content" data-uid="{{uid}}">
+                        {{!body}}
+                    </article>
+                </div>
+
+                <div class="col-lg-2 small-hidden">
+                    {{^_disableAffix}} {{>partials/affix}} {{/_disableAffix}}
+                </div>
+            </div>
+
+
+            {{^_disableFooter}} {{>partials/footer}} {{/_disableFooter}}
+        </div>
+
+        {{>partials/scripts}}
+</body>
+
+</html>

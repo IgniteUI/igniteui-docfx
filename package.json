@@ -1,0 +1,18 @@
+{
+    "name": "igniteui-for-angular-docfx",
+    "version": "1.0.0",
+    "description": "Static sample site generator for Ignite UI for Angular.",
+    "main": "index.js",
+    "scripts": {
+        "start": "gulp serve",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Infragistics",
+    "license": "ISC",
+    "dependencies": {
+        "browser-sync": "^2.18.13",
+        "del": "^3.0.0",
+        "gulp": "^3.9.1",
+        "gulp-shell": "^0.6.3"
+    }
+}
