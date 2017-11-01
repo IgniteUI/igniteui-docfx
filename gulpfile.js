@@ -14,7 +14,7 @@ const DOCFX_TEMPLATE = path.join(
 );
 const DOCFX_SITE = `${DOCFX_BASE}/_site`;
 const DOCFX_API = `${DOCFX_BASE}/api`;
-const DOCFX_ARTICLES = `${DOCFX_BASE}/articles`;
+const DOCFX_ARTICLES = `${DOCFX_BASE}/components`;
 
 gulp.task('serve', ['build'], () => {
     browserSync.init({
