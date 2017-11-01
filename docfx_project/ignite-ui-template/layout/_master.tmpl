@@ -7,43 +7,33 @@ full license information.}} {{!include(/^styles/.*/)}} {{!include(/^fonts/.*/)}}
 {{>partials/head}}
 
 <body data-spy="scroll" data-target="#affix">
+    <header>
+        {{^_disableNavbar}} {{>partials/navbar}} {{/_disableNavbar}} {{^_disableBreadcrumb}} {{!>partials/breadcrumb}} {{/_disableBreadcrumb}}
+    </header>
 
-    <div id="wrapper">
+    <div id="main" role="main" class="container-fluid">
+        {{!#_enableSearch}} {{!--
+        <div class="row"> --}} {{!>partials/searchResults}} {{!-- </div> --}} {{!/_enableSearch}}
+        <div class="row body-content">
 
-        <header>
-            {{^_disableNavbar}} {{>partials/navbar}} {{/_disableNavbar}} {{^_disableBreadcrumb}} {{!>partials/breadcrumb}} {{/_disableBreadcrumb}}
-        </header>
-
-        {{!#_enableSearch}}
-        <div class="container-fluid body-content">
-            {{!>partials/searchResults}}
-        </div>
-        {{!/_enableSearch}}
-
-        <div id="main" role="main" class="container-fluid body-content hide-when-search">
-
-            <div class="row">
-
-                <div class="col-lg-2 col-md-3">
-                    {{^_disableToc}} {{>partials/toc}} {{/_disableToc}}
-                </div>
-
-                <div class="col-lg-8 col-md-9">
-                    <article class="content wrap" id="_content" data-uid="{{uid}}">
-                        {{!body}}
-                    </article>
-                </div>
-
-                <div class="col-lg-2 small-hidden">
-                    {{^_disableAffix}} {{>partials/affix}} {{/_disableAffix}}
-                </div>
+            <div class="sidenav-container col-lg-2 col-md-3">
+                {{^_disableToc}} {{>partials/toc}} {{/_disableToc}}
             </div>
 
+            <div class="article-container col-lg-8 col-md-9 col-sm-12">
+                <article class="content wrap" id="_content" data-uid="{{uid}}">
+                    {{!body}}
+                </article>
+            </div>
 
-            {{^_disableFooter}} {{>partials/footer}} {{/_disableFooter}}
+            <div class="col-lg-2 hidden-md">
+                {{^_disableAffix}} {{>partials/affix}} {{/_disableAffix}}
+            </div>
+
         </div>
 
-        {{>partials/scripts}}
+    </div>
+    {{^_disableFooter}} {{>partials/footer}} {{/_disableFooter}} {{>partials/scripts}}
 </body>
 
 </html>

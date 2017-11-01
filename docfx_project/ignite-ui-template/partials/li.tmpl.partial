@@ -2,7 +2,13 @@
 full license information.}}
 
 <ul class="nav level{{level}}">
-    {{#items}}
+    {{#items}} {{#header}}
+    <li class="sidenav__header">{{name}}</li>
+    {{/header}} {{#cta}}
+    <li class="nav__cta">
+        <a href="{{topicHref}} name={{tocHref}}" title="{{name}}">{{name}}</a>
+    </li>
+    {{/cta}} {{^header}} {{^cta}}
     <li>
         {{^leaf}}
         <span class="expand-stub"></span>
@@ -12,5 +18,5 @@ full license information.}}
         <a>{{{name}}}</a>
         {{/topicHref}} {{^leaf}} {{>partials/li}} {{/leaf}}
     </li>
-    {{/items}}
+    {{/cta}} {{/header}} {{/items}}
 </ul>

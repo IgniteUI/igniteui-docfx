@@ -1,0 +1,8 @@
+.article-container {
+    height: 100%;
+    padding: 24px;
+    z-index: 1;
+    @media only screen and (min-width: 992px) {
+        display: table-cell;
+    }
+}

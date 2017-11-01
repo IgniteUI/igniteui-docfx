@@ -17,7 +17,7 @@ $(function() {
     renderNavbar();
     renderSidebar();
     renderAffix();
-    renderFooter();
+    // renderFooter();
     renderLogo();
 
     breakText();
@@ -49,7 +49,7 @@ $(function() {
     // See http://getbootstrap.com/css/#tables
     function renderTables() {
         $('table')
-            .addClass('table table-bordered table-striped table-condensed')
+            .addClass('table')
             .wrap('<div class="table-responsive"></div>');
     }
 
@@ -63,8 +63,9 @@ $(function() {
     // Enable anchors for headings.
     (function() {
         anchors.options = {
-            placement: 'left',
-            visible: 'touch'
+            placement: 'right',
+            visible: 'touch',
+            icon: ''
         };
         anchors.add(
             'article h2:not(.no-anchor), article h3:not(.no-anchor), article h4:not(.no-anchor)'
@@ -475,6 +476,12 @@ $(function() {
     }
 
     function renderSidebar() {
+        var sidetoggle = $('.sidetoggle.collapse')[0];
+        $(window).resize(function() {
+            $(sidetoggle).height('auto');
+            $(sidetoggle).removeClass('in');
+        });
+        console.log(sidetoggle);
         var sidetoc = $('#sidetoggle .sidetoc')[0];
         if (typeof sidetoc === 'undefined') {
             loadToc();
@@ -636,8 +643,9 @@ $(function() {
     //Setup Affix
     function renderAffix() {
         var hierarchy = getHierarchy();
+
         if (hierarchy.length > 0) {
-            var html = '<h5 class="title">In This Article</h5>';
+            var html = '<h5 class="sifeaffix__title">IN THIS ARTICLE</h5>';
             html += util.formList(hierarchy, ['nav', 'bs-docs-sidenav']);
             $('#affix')
                 .empty()
@@ -667,8 +675,8 @@ $(function() {
 
         function getHierarchy() {
             // supported headers are h1, h2, h3, and h4
-            // The topest header is ignored
-            var selector = '.article article';
+            // The topmost header is ignored
+            var selector = '.article-container article';
             var affixSelector = '#affix';
             var headers = ['h4', 'h3', 'h2', 'h1'];
             var hierarchy = [];
@@ -758,46 +766,46 @@ $(function() {
     }
 
     // Show footer
-    function renderFooter() {
-        initFooter();
-        $(window).on('scroll', showFooterCore);
+    // function renderFooter() {
+    //     initFooter();
+    //     $(window).on('scroll', showFooterCore);
 
-        function initFooter() {
-            if (needFooter()) {
-                shiftUpBottomCss();
-                $('footer').show();
-            } else {
-                resetBottomCss();
-                $('footer').hide();
-            }
-        }
+    //     function initFooter() {
+    //         if (needFooter()) {
+    //             shiftUpBottomCss();
+    //             $('footer').show();
+    //         } else {
+    //             resetBottomCss();
+    //             $('footer').hide();
+    //         }
+    //     }
 
-        function showFooterCore() {
-            if (needFooter()) {
-                shiftUpBottomCss();
-                $('footer').fadeIn();
-            } else {
-                resetBottomCss();
-                $('footer').fadeOut();
-            }
-        }
+    //     function showFooterCore() {
+    //         if (needFooter()) {
+    //             shiftUpBottomCss();
+    //             $('footer').fadeIn();
+    //         } else {
+    //             resetBottomCss();
+    //             $('footer').fadeOut();
+    //         }
+    //     }
 
-        function needFooter() {
-            var scrollHeight = $(document).height();
-            var scrollPosition = $(window).height() + $(window).scrollTop();
-            return scrollHeight - scrollPosition < 1;
-        }
+    //     function needFooter() {
+    //         var scrollHeight = $(document).height();
+    //         var scrollPosition = $(window).height() + $(window).scrollTop();
+    //         return scrollHeight - scrollPosition < 1;
+    //     }
 
-        function resetBottomCss() {
-            $('.sidetoc').removeClass('shiftup');
-            $('.sideaffix').removeClass('shiftup');
-        }
+    //     function resetBottomCss() {
+    //         // $('.sidetoc').removeClass('shiftup');
+    //         $('.sideaffix').removeClass('shiftup');
+    //     }
 
-        function shiftUpBottomCss() {
-            // $('.sidetoc').addClass('shiftup');
-            $('.sideaffix').addClass('shiftup');
-        }
-    }
+    //     function shiftUpBottomCss() {
+    //         // $('.sidetoc').addClass('shiftup');
+    //         // $('.sideaffix').addClass('shiftup');
+    //     }
+    // }
 
     function renderLogo() {
         // For LOGO SVG

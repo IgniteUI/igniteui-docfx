@@ -4,6 +4,7 @@
  * This method will be called at the start of exports.transform in conceptual.html.primary.js
  */
 exports.preTransform = function(model) {
+    model._disableContribution = true;
     return model;
 };
 

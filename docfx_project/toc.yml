@@ -1,5 +1,15 @@
-- name: Articles
-  href: articles/
-- name: Api Documentation
+- name: Getting Started 
   href: api/
   homepage: api/index.md
+- name: Components
+  href: components/
+- name: UI Kit 
+  href: api/
+  homepage: api/index.md
+- name: Roadmap 
+  href: api/
+  homepage: api/index.md
+- name: Pricing 
+  href: api/
+  homepage: api/index.md
+  cta: true
