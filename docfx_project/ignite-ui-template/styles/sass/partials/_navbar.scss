@@ -1,4 +1,30 @@
 .navbar {
+    margin-bottom: 0;
+}
+
+.navbar .navbar-nav {
+    display: inline-block;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    font-size: 18px;
+    padding: 0;
+}
+
+.navbar-fixed-top {
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+}
+
+.navbar-collapse {
+    margin: 0 -15px;
+    padding: 0;
+}
+
+.navbar {
     .navbar-brand > span {
         color: #fff;
     }

@@ -1,0 +1,27 @@
+button,
+a {
+    color: #337ab7;
+    cursor: pointer;
+}
+button:hover,
+button:focus,
+a:hover,
+a:focus {
+    color: #23527c;
+    text-decoration: none;
+}
+a.disable,
+a.disable:hover {
+    text-decoration: none;
+    cursor: default;
+    color: #000000;
+}
+
+/* additional spacing fixes */
+.btn + .btn {
+    margin-left: 10px;
+}
+.btn.pull-right {
+    margin-left: 10px;
+    margin-top: 5px;
+}

@@ -1,0 +1,320 @@
+body .toc {
+    background-color: #fff;
+    overflow-x: hidden;
+}
+
+.sidenav-container {
+    display: block;
+    position: relative;
+    @media only screen and (min-width: 992px) {
+        display: table-cell;
+        position: relative;
+    }
+}
+
+.toc-toggle {
+    justify-content: center;
+    padding: 16px 0;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #585858;
+}
+
+.sidetoc {
+    position: relative;
+    margin-left: -15px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: #fff;
+    z-index: 1;
+}
+
+.sidetoc.shiftup {
+    bottom: 70px;
+}
+
+.sidetoc-expand > .caret {
+    margin-left: 0;
+    margin-top: -2px;
+}
+
+.sidetoc-expand > .caret-side {
+    border-left: 4px solid;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    margin-left: 4px;
+    margin-top: -4px;
+}
+
+.sidetoc-heading {
+    font-weight: 500;
+}
+
+.expand-stub {
+    position: absolute;
+    left: -10px;
+}
+
+.toc .nav > li > a.sidetoc-expand {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.toc .nav > li > a {
+    color: #585858;
+    display: block;
+    position: relative;
+    padding: 0;
+}
+
+.toc .nav > li > a:hover,
+.toc .nav > li > a:focus {
+    color: #000000;
+    background: none;
+    text-decoration: inherit;
+}
+
+.toc .nav > li.active > a {
+    color: #337ab7;
+}
+
+.toc .nav > li.active > a:hover,
+.toc .nav > li.active > a:focus {
+    color: #23527c;
+}
+
+.toc .nav > li > .expand-stub {
+    cursor: pointer;
+}
+
+.toc .nav > li.active > .expand-stub::before,
+.toc .nav > li.in > .expand-stub::before,
+.toc .nav > li.in.active > .expand-stub::before,
+.toc .nav > li.filtered > .expand-stub::before {
+    content: '-';
+}
+
+.toc .nav > li > .expand-stub::before,
+.toc .nav > li.active > .expand-stub::before {
+    content: '+';
+}
+
+.toc .nav > li.filtered > ul,
+.toc .nav > li.in > ul {
+    display: block;
+}
+
+.toc .nav > li > ul {
+    display: none;
+}
+
+.toc ul {
+    font-size: 12px;
+}
+
+.toc .level1 > li {
+    font-weight: bold;
+    margin-top: 10px;
+    position: relative;
+    font-size: 16px;
+}
+
+.toc .level2 {
+    font-weight: normal;
+    margin: 5px 0 0 15px;
+    font-size: 14px;
+}
+
+.toc-toggle {
+    display: none;
+    margin: 0 15px 0 15px;
+}
+
+.sidetoc-expand > .caret {
+    margin-left: 0;
+    margin-top: -2px;
+}
+
+.sidetoc-expand > .caret-side {
+    border-left: 4px solid;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    margin-left: 4px;
+    margin-top: -4px;
+}
+
+.sidetoc-heading {
+    font-weight: 500;
+}
+
+.toc .nav > li > a.sidetoc-expand {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.toc .nav > li > a {
+    color: #585858;
+    display: block;
+    position: relative;
+    padding: 0;
+}
+
+.toc .nav > li > a:hover,
+.toc .nav > li > a:focus {
+    color: #000000;
+    background: none;
+    text-decoration: inherit;
+}
+
+.toc .nav > li.active > a {
+    color: #337ab7;
+}
+
+.toc .nav > li.active > a:hover,
+.toc .nav > li.active > a:focus {
+    color: #23527c;
+}
+
+.toc .nav > li > .expand-stub {
+    cursor: pointer;
+}
+
+.toc .nav > li.active > .expand-stub::before,
+.toc .nav > li.in > .expand-stub::before,
+.toc .nav > li.in.active > .expand-stub::before,
+.toc .nav > li.filtered > .expand-stub::before {
+    content: '-';
+}
+
+.toc .nav > li > .expand-stub::before,
+.toc .nav > li.active > .expand-stub::before {
+    content: '+';
+}
+
+.toc .nav > li.filtered > ul,
+.toc .nav > li.in > ul {
+    display: block;
+}
+
+.toc .nav > li > ul {
+    display: none;
+}
+
+.toc ul {
+    font-size: 12px;
+}
+
+.toc .level1 > li {
+    font-weight: bold;
+    margin-top: 10px;
+    position: relative;
+    font-size: 16px;
+}
+
+.toc .level2 {
+    font-weight: normal;
+    margin: 5px 0 0 15px;
+    font-size: 14px;
+}
+
+.toc-toggle {
+    display: none;
+    margin: 0 15px 0 15px;
+}
+
+.toc-filter {
+    border-radius: 5px;
+    background: #fff;
+    color: #666666;
+    padding: 5px;
+    position: relative;
+    margin: 0 5px 0 5px;
+}
+
+.toc-filter > input {
+    border: 0;
+    color: #666666;
+    padding-left: 20px;
+    width: 100%;
+}
+
+.toc-filter > input:focus {
+    outline: 0;
+}
+
+.toc-filter > .filter-icon {
+    position: absolute;
+    top: 10px;
+    left: 5px;
+}
+.sidenav {
+    margin-right: -15px;
+
+    &__header {
+        padding: 24px 16px !important;
+        position: relative;
+        font-size: 16px !important;
+        color: $vivid-cerise;
+        font-weight: 400 !important;
+    }
+
+    &__header::after {
+        position: absolute;
+        content: '';
+        left: 15px;
+        bottom: 0;
+        height: 1px;
+        width: 100%;
+        background: #f1f1f1;
+    }
+}
+
+.toc {
+    .nav {
+        li {
+            position: relative;
+            font-size: 14px;
+            margin: 0;
+            a {
+                color: #585858;
+                font-weight: normal;
+                padding: 16px;
+            }
+        }
+
+        li.active {
+            background-color: #f1f1f1;
+            &::before {
+                position: absolute;
+                content: '';
+                width: 2px;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                background-color: $vivid-cerise;
+            }
+            a {
+                color: #585858;
+                font-weight: 500;
+            }
+            a:hover {
+                color: #000;
+            }
+        }
+    }
+    @media only screen and (min-width: 992px) {
+        &::after {
+            position: absolute;
+            content: '';
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            box-shadow: inset -24px 0 30px -16px rgba(0, 0, 0, 0.14);
+            pointer-events: none;
+        }
+    }
+}

@@ -1,3 +1,16 @@
+.article {
+    margin-top: 120px;
+    margin-bottom: 115px;
+}
+
+.article.grid-right {
+    margin-left: 280px;
+}
+
+.article img {
+    max-width: 100%;
+}
+
 .article-container {
     height: 100%;
     padding: 24px;

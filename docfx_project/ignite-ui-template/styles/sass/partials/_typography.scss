@@ -1,5 +1,6 @@
 html,
 .root {
+    font-family: 'aktiv-grotesk', sans-serif;
     font-size: 16px;
     line-height: 24px;
     -webkit-font-smoothing: antialiased;
@@ -11,6 +12,26 @@ body,
     line-height: 1.5rem;
     margin: auto;
     color: #585858;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.text-break {
+    word-wrap: break-word;
+    word-break: break-word;
+}
+
+h1 mark,
+h2 mark,
+h3 mark,
+h4 mark,
+h5 mark,
+h6 mark {
+    padding: 0;
 }
 
 h1,
@@ -90,6 +111,10 @@ hr,
 .hr {
     border: 1px solid;
     margin: -1px 0;
+}
+
+hr {
+    border-color: #cccccc;
 }
 
 // a, b, i, strong, em, small, code {
