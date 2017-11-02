@@ -42,4 +42,4 @@ npm start
 npm run build
 ```
 
-The build script produces a folder called _site at the root of the projects
+The build script produces a folder called _site at the root of the project.
