@@ -68,14 +68,14 @@
         top: 6px;
         bottom: 6px;
         left: 0;
-        background-color: $vivid-cerise;
+        background-color: $byzantium;
     }
 }
 
 .affix ul > li.active:hover > a {
     color: #585858;
     &::before {
-        background-color: $vivid-cerise;
+        background-color: $byzantium;
     }
 }
 
@@ -93,7 +93,8 @@
 
     &.active:hover a,
     &.active a {
-        color: $vivid-cerise;
+        color: $byzantium;
+        font-weight: 400;
     }
 
     &:hover a::before,

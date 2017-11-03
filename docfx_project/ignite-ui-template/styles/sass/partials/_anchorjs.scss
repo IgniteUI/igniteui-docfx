@@ -1,8 +1,19 @@
 .anchorjs-link {
-    position: relative;
-    display: inline-block;
-    width: 24px;
-    height: 24px;
-    margin-left: 8px;
-    background: url('../../images/hyperlink.svg') no-repeat;
+    position: absolute;
+    color: transparentize($byzantium, 0.4);
+    font-family: 'Material Icons';
+
+    &:hover {
+        color: $byzantium;
+    }
+
+    &::after {
+        content: 'link';
+        line-height: 1;
+        text-transform: none;
+        letter-spacing: normal;
+        word-wrap: normal;
+        white-space: nowrap;
+        direction: ltr;
+    }
 }

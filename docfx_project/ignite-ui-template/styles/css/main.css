@@ -45,7 +45,7 @@ h2,
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
   font-weight: 300;
-  color: #e41c77; }
+  color: #731963; }
 
 h3,
 .h3 {
@@ -62,7 +62,7 @@ h3,
     width: 24px;
     height: 2px;
     left: 0;
-    background-color: #e41c77; }
+    background-color: #731963; }
 
 h4,
 .h4 {
@@ -307,7 +307,7 @@ sub {
     padding: 24px 16px !important;
     position: relative;
     font-size: 16px !important;
-    color: #e41c77;
+    color: #731963;
     font-weight: 400 !important; }
   .sidenav__header::after {
     position: absolute;
@@ -336,7 +336,7 @@ sub {
     top: 0;
     bottom: 0;
     left: 0;
-    background-color: #e41c77; }
+    background-color: #731963; }
   .toc .nav li.active a {
     color: #585858;
     font-weight: 500; }
@@ -463,12 +463,12 @@ sub {
     top: 6px;
     bottom: 6px;
     left: 0;
-    background-color: #e41c77; }
+    background-color: #731963; }
 
 .affix ul > li.active:hover > a {
   color: #585858; }
   .affix ul > li.active:hover > a::before {
-    background-color: #e41c77; }
+    background-color: #731963; }
 
 .affix > ul > li.active:last-child {
   margin-bottom: 24px; }
@@ -481,7 +481,8 @@ sub {
 
 .affix ul ul > li.active:hover a,
 .affix ul ul > li.active a {
-  color: #e41c77; }
+  color: #731963;
+  font-weight: 400; }
 
 .affix ul ul > li:hover a::before,
 .affix ul ul > li.active:hover a::before {
@@ -591,12 +592,19 @@ table a {
       background-color: transparent; }
 
 .anchorjs-link {
-  position: relative;
-  display: inline-block;
-  width: 24px;
-  height: 24px;
-  margin-left: 8px;
-  background: url("../../images/hyperlink.svg") no-repeat; }
+  position: absolute;
+  color: rgba(115, 25, 99, 0.6);
+  font-family: 'Material Icons'; }
+  .anchorjs-link:hover {
+    color: #731963; }
+  .anchorjs-link::after {
+    content: 'link';
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr; }
 
 button,
 a {
