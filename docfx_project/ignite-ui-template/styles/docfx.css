@@ -162,17 +162,6 @@ svg:hover path {
 }
 
 @media (max-width: 991px) {
-    .toc-toggle {
-        display: flex;
-    }
-    .sidenav {
-        padding: 0;
-        margin: 24px 0 !important;
-        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.14);
-    }
-    .sidetoc {
-        margin: 0;
-    }
     .article-container {
         box-shadow: none !important;
     }
