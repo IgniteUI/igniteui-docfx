@@ -8,10 +8,7 @@ const autoprefixer = require('gulp-autoprefixer');
 
 const DOCFX_BASE = './docfx_project';
 const DOCFX_CONF = `${DOCFX_BASE}/docfx.json`;
-const DOCFX_TEMPLATE = path.join(
-    __dirname,
-    `${DOCFX_BASE}//ignite-ui-template`
-);
+const DOCFX_TEMPLATE = path.join(__dirname, `${DOCFX_BASE}/ignite-ui-template`);
 const DOCFX_SITE = `${DOCFX_BASE}/_site`;
 const DOCFX_API = `${DOCFX_BASE}/api`;
 const DOCFX_ARTICLES = `${DOCFX_BASE}/components`;
@@ -40,7 +37,7 @@ gulp.task('serve', ['build'], () => {
     });
 
     gulp.watch(`${DOCFX_TEMPLATE}/**/*`, ['watch']);
-    gulp.watch(`${DOCFX_ARTICLES}/**/*`, ['build']);
+    gulp.watch([`${DOCFX_BASE}/**/*.md`, `${DOCFX_ARTICLES}/**/*`], ['build']);
 });
 
 gulp.task('styles', () => {

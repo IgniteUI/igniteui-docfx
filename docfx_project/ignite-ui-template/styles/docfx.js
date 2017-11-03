@@ -481,7 +481,6 @@ $(function() {
             $(sidetoggle).height('auto');
             $(sidetoggle).removeClass('in');
         });
-        console.log(sidetoggle);
         var sidetoc = $('#sidetoggle .sidetoc')[0];
         if (typeof sidetoc === 'undefined') {
             loadToc();
