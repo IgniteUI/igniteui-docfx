@@ -48,3 +48,8 @@ You can programmatically get all of the icon properties with the following icon 
 `getIconColor()` returns the icon color
 `getIconName()` returns the icon name
 `getActive()` returns the icon active state
+
+### Demo
+<div class="sample-container" style="height:600px">
+<iframe src='https://embed.plnkr.co/ak3LxRxtDkXjBR7pzY3j/?show=preview&sidebar=false' width="100%" height="100%" seamless frameBorder="0"></inframe>
+</div>

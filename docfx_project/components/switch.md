@@ -36,3 +36,7 @@ You can easily use it within forms with `[(ngModel)]`
     </div>
 </form>
 ```
+### Demo
+<div class="sample-container" style="height:600px">
+<iframe src='https://embed.plnkr.co/a2Zmf05zcAX1hiE6OwxY/?show=preview&sidebar=false' width="100%" height="100%" seamless frameBorder="0"></inframe>
+</div>
