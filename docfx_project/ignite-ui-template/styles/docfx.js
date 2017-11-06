@@ -476,6 +476,8 @@ $(function() {
     }
 
     function renderSidebar() {
+        var contentHeight = $('#main').height();
+        $('#toc').height(contentHeight);
         var sidetoggle = $('.sidetoggle.collapse')[0];
         $(window).resize(function() {
             $(sidetoggle).height('auto');
