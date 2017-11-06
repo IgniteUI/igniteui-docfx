@@ -13,56 +13,56 @@
 - name: Switch 
   href: switch.md
 - name: Radio Button 
-  href: switch.md
+  href: radio_button.md
 - name: Label 
-  href: switch.md
+  href: label.md
 - name: Input 
-  href: switch.md
+  href: input.md
 - name: Badge 
-  href: switch.md
+  href: badge.md
 - name: Icon 
-  href: switch.md
+  href: icon.md
 - name: Linear Progress 
-  href: switch.md
+  href: linear_progress.md
 - name: Circular Progress 
-  href: switch.md
+  href: circular_progress.md
 - name: Interactions
   header: true
 - name: Dialog Windows 
-  href: switch.md
+  href: dialog.md
 - name: Slider 
-  href: switch.md
+  href: slider.md
 - name: Scrollbar 
-  href: switch.md
+  href: scrollbar.md
 - name: Ripple 
-  href: switch.md
+  href: ripple.md
 - name: Menus
   header: true
 - name: Navigation Drawer 
-  href: switch.md
+  href: navdrawer.md
 - name: Navbar 
-  href: switch.md
+  href: navbar.md
 - name: Layouts
   header: true
 - name: Layout Manager 
-  href: switch.md
+  href: layout.md
 - name: Carousel 
-  href: switch.md
-- name: Tabbar 
-  href: switch.md
+  href: carousel.md
+- name: Tab Bar 
+  href: tabbar.md
 - name: Card 
-  href: switch.md
+  href: card.md
 - name: Avatar 
-  href: switch.md
+  href: avatar.md
 - name: Notifications
-  heaader: true
+  header: true
 - name: Snackbar 
-  href: switch.md
+  href: snackbar.md
 - name: Toast 
-  href: switch.md
+  href: toast.md
 - name: Scheduling
   header: true
 - name: Calendar 
-  href: switch.md
+  href: calendar.md
 - name: Date Picker 
-  href: switch.md
+  href: date_picker.md
