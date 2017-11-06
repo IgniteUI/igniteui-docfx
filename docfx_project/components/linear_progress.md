@@ -29,3 +29,8 @@ The linear progress bar component provides the ability to display a progress bar
 | `getValue()` | Return passed value to progress bar to be in range between min(0) and max. |
 | `getPercentValue()` | Calculate the percentage based on passed value. |
 | `onProgressChanged` | Exposed event, that could be handled to track progress changing |
+
+### Linear progress bar example
+<div class="sample-container" style="height: 400px">
+    <iframe frameborder="0" seamless width="100%" height="800px" src="https://embed.plnkr.co/C8rf1s2ImziUZRnskkjp/?show=preview&sidebar=false"></iframe>
+</div>
