@@ -308,6 +308,10 @@
     font-weight: 500;
     text-transform: uppercase;
     color: #585858;
+    &:focus,
+    &:hover {
+        color: $byzantium;
+    }
 }
 
 .sidetoc {
@@ -320,6 +324,9 @@
 }
 
 @media only screen and (max-width: 991px) {
+    #toc {
+        height: auto !important;
+    }
     .toc-toggle {
         display: flex;
     }

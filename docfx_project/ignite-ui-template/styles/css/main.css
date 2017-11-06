@@ -372,6 +372,8 @@ sub {
   font-weight: 500;
   text-transform: uppercase;
   color: #585858; }
+  .toc-toggle:focus, .toc-toggle:hover {
+    color: #731963; }
 
 .sidetoc {
   position: relative;
@@ -382,6 +384,8 @@ sub {
   z-index: 1; }
 
 @media only screen and (max-width: 991px) {
+  #toc {
+    height: auto !important; }
   .toc-toggle {
     display: -webkit-box;
     display: -ms-flexbox;
