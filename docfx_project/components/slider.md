@@ -71,3 +71,9 @@ import { IgxSlider } from "../../../src/main";
 | Name | Description |
 | :--- | :--- | 
 | onValueChange  | This event is emitted when user has stopped interacting the thumb and value is changed.  |
+
+
+### Slider example
+<div class="sample-container" style="height: 400px">
+    <iframe frameborder="0" seamless width="100%" height="800px" src="https://run.plnkr.co/preview/cj9ocx40100093b5wv2126gmz/"></iframe>
+</div>

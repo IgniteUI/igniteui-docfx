@@ -78,3 +78,8 @@ import { IgxScroll } from "../../../src/main";
 | Name   | Arguments | Return Type | Description |
 |:----------:|:------|:------|:------|  
 | scrollVertically  | delta: number | void | Scroll with the given delta. Does not scrolls when the scroll delta is outside of the scroll boundaries. |
+
+### Scrollbar example
+<div class="sample-container" style="height: 500px">
+    <iframe frameborder="0" seamless width="100%" height="800px" src="https://run.plnkr.co/preview/cj9ocn6cs000a3b5waw57vjkb/"></iframe>
+</div>

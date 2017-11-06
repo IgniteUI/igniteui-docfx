@@ -39,3 +39,8 @@ You can hide the Snackbar by using `snackbar.hide()` method.
 
 The Snackbar will be automatically hidden after 10000 milliseconds, this can be controller by the
 `displayTime` attribute, the automatic hiding can be also controller by using the `autoHide` attribute.
+
+### Snackbar example
+<div class="sample-container" style="height: 400px">
+    <iframe frameborder="0" seamless width="100%" height="800px" src="https://run.plnkr.co/preview/cj9ocym5b00093b5wbekq9xgm/"></iframe>
+</div>

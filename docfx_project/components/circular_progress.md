@@ -26,3 +26,8 @@ The `circular` progress indicator component provides the ability to display prog
 | `getValue()` | Return passed value to progress bar to be in range between min(0) and max. |
 | `getPercentValue()` | Calculate the percentage based on passed value. |
 | `onProgressChanged` | Exposed event, that could be handled to track progress changing |
+
+### Circular progress bar example
+<div class="sample-container" style="height: 400px">
+    <iframe frameborder="0" seamless width="100%" height="800px" src="https://run.plnkr.co/preview/cj9oblr9u000a3b5w02w05u42/"></iframe>
+</div>

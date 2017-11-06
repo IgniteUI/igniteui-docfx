@@ -55,3 +55,8 @@ You can handle the onShowing event by using `(onShowing)="someFunc($event)"`.
 You can handle the onShown event by using `(onShowing)="someFunc($event)"`.
 You can handle the onHiding event by using `(onHiding)="someFunc($event)"`.
 You can handle the onHidden event by using `(onHidden)="someFunc($event)"`.
+
+### Toast example
+<div class="sample-container" style="height: 400px">
+    <iframe frameborder="0" seamless width="100%" height="800px" src="https://run.plnkr.co/preview/cj9oe09rl000a3b5w2m9sw1wg/"></iframe>
+</div>
