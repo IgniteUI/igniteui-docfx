@@ -5,7 +5,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ---
 
 ## Data Grid
-**igx-grid** component provides the capability to manipulate and represent tabular data 
+**igx-grid** component provides the capability to manipulate and represent tabular data
 
 ### Usage
 ```html
@@ -228,3 +228,9 @@ Column component is used to define grid's *columns* collection. Cell, header and
 | filteringCondition  | FilteringCondition  | Boolean, date, string or number conditions. Default is string *contains*  |
 | filteringIgnoreCase  | boolean  | Ignore capitalization of words |
 | dataType  | DataType  | String, number, Boolean or Date |
+
+
+### Grid Example
+<div class="sample-container" style="height:600px">
+    <iframe src='https://embed.plnkr.co/uua2w0Dj7tm6zQurt3VQ/?show=preview&sidebar=false' width="100%" height="100%" seamless frameBorder="0"></inframe>
+</div>
