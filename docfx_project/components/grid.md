@@ -31,13 +31,15 @@ Now that we have all dependencies imported, let’s get started with a basic con
 <igx-grid #grid1 id="grid1" [data]="localData" [autoGenerate]="true">
 </igx-grid>
 ```
-The **id** property is a string value and is the unique identifier of the grid, while **data** binds the grid to local data.
+The **id** property is a string value and is the unique identifier of the grid, while **data** binds the grid, in this case to local data.
 
 The **autoGenerate** property tells the **igx-grid** to auto generate columns based on the data source fields. Otherwise, the developer needs to explicitly define the columns and the mapping to the data source fields.
 
 #### Columns configuration
 
-**IgxGridColumnComponent** is used to define grid's *columns* collection and to enable features per column like **fitering**, **sorting**, **paging**. Cell, header and footer templates are available.
+**IgxGridColumnComponent** is used to define grid's *columns* collection and to enable features per column like **fitering**, **sorting**, **paging**. Cell, header and footer templates are also available. 
+
+Let's turn the autogenerating option off and define the columns collection in the markup:
 
 ```html
 <igx-grid #grid1 [data]="localData" [autoGenerate]="false"
@@ -70,7 +72,7 @@ An alternative to define columns in the markup is defining the columns in code i
 The above code will make the column sortable, filterable and editable and will bring the corresponding features UI (like inputs for editing and save dialogs) out of the box. 
 
 ### Data binding
-Before going any further with the grid we want to change the grid to bind to remote data, like it will in a real life scenario. A good practice is to separate all data fetching related logic in a separate data service, so we are going to create data-service.ts:
+Before going any further with the grid we want to change the grid to bind to remote data, like it will in a real life scenario. A good practice is to separate all data fetching related logic in a separate data service, so we are going to create data-service.ts
 
 ```typescript
 import { Component, Injectable } from '@angular/core';
@@ -105,8 +107,11 @@ export class DataService {
 After importing the data service in the component, we need to initialize it in the constructor and use it to retrieve the data in the ngOnInit event:
 
 ```typescript
-  public ngOnInit(): void {
-      this.data = this.dataService.records;
+constructor(
+    private localService: DataService,
+) {}
+public ngOnInit(): void {
+    this.data = this.dataService.records;
 }
 ```
 
@@ -146,7 +151,7 @@ These can be wired to user interactions, not necessarily related to the **igx-gr
 ```
 
 ### Filtering
-**Filtering** is enabled on column level, either using markup or code using the `filtering` input. In addition, `filteringCondition` and `filteringIgnoreCase` options are provided to customize the filtering behavior. `filteringCondition` is a function that does filtering on specific condition, if not set the defaults fall back to "contains". `filteringIgnoreCase` is a boolean that controls if capitalization is ignored. We have already enabled filtering on columns, now we can customize the behavior:
+**Filtering** is enabled on column level, either using markup or code using the `filtering` input. In addition, `filteringCondition` and `filteringIgnoreCase` options are provided to customize the filtering behavior. `filteringCondition` is a function that does filtering on specific condition, and if not set the default value falls back to "contains". `filteringIgnoreCase` is a boolean that controls if capitalization is ignored. We have already enabled filtering on columns, now we can customize the behavior:
 
 ```html
 <igx-column [field]="'ProductName'" [header]="'ProductName'" [sortable]="false" [filtering]="true" [filteringIgnoreCase]="false">
@@ -171,7 +176,12 @@ These can be wired to user interactions, not necessarily related to the **igx-gr
       }
     };
 ```
-As we can see from the above example, the State property defines the state not only for sorting, but also for paging and filtering. 
+As we can see from the above example, the State property defines the state not only for sorting, but also for paging and filtering.
+
+### Example
+<div class="sample-container" style="height:600px">
+<iframe src='https://embed.plnkr.co/uua2w0Dj7tm6zQurt3VQ/?show=preview&sidebar=false' width="100%" height="100%" seamless frameBorder="0"></inframe>
+</div>
 
 ## API
 
