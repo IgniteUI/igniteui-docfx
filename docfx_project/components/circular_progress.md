@@ -5,3 +5,24 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ---
 
 ##Circular Progress
+The `circular` progress indicator component provides the ability to display progress in a circle and update its appearance as its state changes.  
+
+### Usage
+```html
+<igx-circular-bar (onProgressChanged)="f($event)" [value]="currentValue">
+</igx-circular-bar>
+```
+
+### API Summary
+| Name   |       Type      |  Description |
+|:----------|:-------------:|:------|
+| `max` |  number | Set maximum value that can be passed. Default `max` value is 100. |
+| `value` |  number | Set value that indicates the completed bar position. |
+| `animate` |  boolean | animation on progress bar. |
+
+### Methods
+| Name   |  Description |
+|:----------|:------|
+| `getValue()` | Return passed value to progress bar to be in range between min(0) and max. |
+| `getPercentValue()` | Calculate the percentage based on passed value. |
+| `onProgressChanged` | Exposed event, that could be handled to track progress changing |
