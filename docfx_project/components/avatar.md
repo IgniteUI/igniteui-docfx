@@ -1,6 +1,6 @@
 ---
 title: Avatar Component
-_description: Ignite UI for Angular Avatar control enables users to add images, material icons or initials within any application for instances such as a profile button. 
+_description: Ignite UI for Angular Avatar control enables users to add images, material icons or initials within any application for instances such as a profile button.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Avatar component, Angular Avatar control
 ---
 
@@ -40,3 +40,8 @@ Using `TypeScript` to modify and existing igx-avatar instance.
 avatarInstance.srcImage('https://unsplash.it/60/60?image=55');
 avatarInstance.size('small');
 ```
+
+### Avatar Example
+<div class="sample-container" style="height:600px">
+    <iframe src='https://embed.plnkr.co/XGorLNIgs8qMOXHAZSqM/?show=preview&sidebar=false' width="100%" height="100%" seamless frameBorder="0"></inframe>
+</div>

@@ -1,6 +1,6 @@
 ---
 title: Tab Bar Component
-_description: Display tabs for any occasion and implement a completely tabbed user interface. These UI controls manage every aspect of your tabs’ appearance and behavior. 
+_description: Display tabs for any occasion and implement a completely tabbed user interface. These UI controls manage every aspect of your tabs’ appearance and behavior.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Tab Bar component, Angular Tab Bar controls
 ---
 
@@ -25,8 +25,8 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ```
 
 _Igx-Tab-Bar represents a single content area with multiple panels, each associated with a tab._
-Igx-Tab-Bar provides two observable collections (QueryLists): one with panels and one with related tabs. 
-The children components of the Igx-Tab-Bar are: 
+Igx-Tab-Bar provides two observable collections (QueryLists): one with panels and one with related tabs.
+The children components of the Igx-Tab-Bar are:
 
 - *Igx-Tab-Panel* - represents the wrapper of the content that needs to be displayed
 - *Igx-Tab* - button that triggers displaying of the associated panel
@@ -69,3 +69,8 @@ There should always be a selected tab. Only one tab can be selected at a time.
 
 #### Tab Methods
 - `select` - Select the tab and the associated panel
+
+### Tabbar Example
+<div class="sample-container" style="height:600px">
+    <iframe src='https://embed.plnkr.co/DOarGXGXOhO6BsWNdvhr/?show=preview&sidebar=false' width="100%" height="100%" seamless frameBorder="0"></inframe>
+</div>
