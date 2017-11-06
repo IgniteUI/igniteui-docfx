@@ -42,18 +42,16 @@ The **autoGenerate** property tells the **igx-grid** to auto generate columns ba
 Let's turn the autogenerating option off and define the columns collection in the markup:
 
 ```html
-<igx-grid #grid1 [data]="localData" [autoGenerate]="false"
+
+<igx-grid #grid1 [data]="data | async" [autoGenerate]="false" [paging]="true" [perPage]="6"
     (onColumnInit)="initColumns($event)" (onCellSelection)="selectCell($event)">
-    <igx-column [field]="'ID'" [header]="'ID'" []>
-        <ng-template igxHeader let-column="column">
-            <p style="color: crimson">{{ column.field }}</p>
-        </ng-template>
-    </igx-column>
-    <igx-column [field]="'Name'" [header]="'Name'" [sortable]="true" [filtering]="true">
-        <ng-template igxCell let-col="column" let-ri="rowIndex" let-item="item">
-            <span *ngIf="!showInput(ri, col.field)">{{ item }}</span>
-            <input *ngIf="showInput(ri, col.field)" igxInput [value]="item" (blur)="editCell = null"    (change)="grid1.updateCell(ri, col.field, $event.target.value); editCell = null">
-        </ng-template>
+    <igx-column [field]="'Name'" [sortable]="true" [header]="' '" [filtering]="true"></igx-column>
+    <igx-column [field]="'AthleteNumber'" [sortable]="true" [header]="'Athlete number'" ></igx-column>
+    <igx-column [field]="'TrackProgress'" [header]="'Track progress'">
+      <ng-template igxCell let-col="column" let-ri="rowIndex" let-item="item">
+        <igx-linear-bar [striped]="false" [value]="item" [max]="100">
+        </igx-linear-bar>
+      </ng-template>
     </igx-column>
 </igx-grid>
 ```
@@ -170,9 +168,13 @@ These can be wired to user interactions, not necessarily related to the **igx-gr
           recordsPerPage: 10
       },
       sorting: {
-          expressions: [
-          {fieldName: 'UnitsInStock', dir: SortingDirection.Desc}
-          ]
+        expressions: [
+          {
+            fieldName: 'TrackProgress',
+            dir: SortingDirection.Desc
+          }
+        ],
+        strategy: new StableSortingStrategy()
       }
     };
 ```
