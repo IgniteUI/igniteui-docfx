@@ -5,26 +5,23 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ---
 
 ##Button
-The __igxButton directive__ is intended to be used on any button, span, div, or anchor element to turn it into a fully functional button.
 
-###Getting Started
-Bushwick Schlitz. Est Shoreditch small batch, dolor Schlitz sapiente twee stumptown ex. Duis Carles pickled, cornhole Thundercats McSweeney's minim PBR vegan Tumblr irony.
+The **igxButton** directive is intended to be used on any button, span, div, or anchor element to turn it into a fully functional button.
+
+### Usage
 ```html
-<span igxButton="flat">Button</span>
+<target-element igxButton [..options]>Click me</target-element>
 ```
 
-```typescript
-import { Component } from '@angular/core';
+### API Summary
+| Name   |      Type      |  Description |
+|:----------|:-------------:|:------|
+| `igxButton` |  string | Set the type of igxButton to be used. Default is set to flat. |
+| `igxButtonColor` |    string   |   Set the button text color. You can pass any CSS valid color value. |
+| `igxButtonBackground` | string | Set the button background color. You can pass any CSS valid color value. |
 
-export default class AppComponent {
-    name = 'test';
-}
-```
-###Types
-Bushwick Schlitz. Est Shoreditch small batch, dolor Schlitz sapiente twee flat, raised, fab, icon, navbar. Duis Carles pickled, cornhole Thundercats McSweeney's minim PBR vegan Tumblr irony. Kogi eu Thundercats, sed scenester before they sold out et aesthetic. Elit cred Vice ethical pickled sartorial. Stumptown roof party freegan High Life vero, ea sed minim meggings.
-
-
-| Type | |
+### Button types
+| Name   | Description |
 |:----------|:-------------:|
 | `flat` | The default button type. Transparent background and primary theme color for text. |
 | `raised` | As the name implies, this button type uses subtle box-shadow. Primary theme color for background and white for text color. |
@@ -33,4 +30,9 @@ Bushwick Schlitz. Est Shoreditch small batch, dolor Schlitz sapiente twee flat, 
 | `icon` | This is the simplest of button types. Use it whenever you need to use an icon as button. |
 | `navbar` | Same as the icon button type, albeit optimized for use with the igx-navbar component. |
 
-###Changing the color
+### Examples
+
+Using `igxButton` to turn a span element into an js blocks styled button.
+```html
+<span igxButton="raised" igxButtonColor="yellow" igxButtonBackground="#000">Click me<span>
+```

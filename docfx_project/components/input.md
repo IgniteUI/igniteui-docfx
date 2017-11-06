@@ -5,3 +5,12 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ---
 
 ##Input
+With the igxInput directive you can add **inputs** in your markup.
+
+### Usage
+```html
+    <div class="igx-form-group">
+        <input type="text" igxInput [(ngModel)]="user.name"/>
+        <label igxLabel>Username</label>
+    </div>
+```
