@@ -74,6 +74,6 @@ import { IgxSlider } from "../../../src/main";
 
 
 ### Slider example
-<div class="sample-container" style="height: 400px">
-    <iframe frameborder="0" seamless width="100%" height="800px" src="https://run.plnkr.co/preview/cj9ocx40100093b5wv2126gmz/"></iframe>
+<div class="sample-container" style="height: 500px">
+    <iframe frameborder="0" seamless width="100%" height="800px" src="https://embed.plnkr.co/oSE8Ux47XGvBAxPZOQyq/?show=preview&sidebar=false"></iframe>
 </div>

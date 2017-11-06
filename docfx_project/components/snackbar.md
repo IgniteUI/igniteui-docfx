@@ -42,5 +42,5 @@ The Snackbar will be automatically hidden after 10000 milliseconds, this can be 
 
 ### Snackbar example
 <div class="sample-container" style="height: 400px">
-    <iframe frameborder="0" seamless width="100%" height="800px" src="https://run.plnkr.co/preview/cj9ocym5b00093b5wbekq9xgm/"></iframe>
+    <iframe frameborder="0" seamless width="100%" height="800px" src="https://embed.plnkr.co/zSe5yxEigtRSEZQoKdzy/?show=preview&sidebar=false"></iframe>
 </div>

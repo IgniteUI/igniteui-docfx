@@ -32,5 +32,5 @@ The linear progress bar component provides the ability to display a progress bar
 
 ### Linear progress bar example
 <div class="sample-container" style="height: 400px">
-    <iframe frameborder="0" seamless width="100%" height="800px" src="https://run.plnkr.co/preview/cj9obkyak000a3b5w5q3c5ax7/"></iframe>
+    <iframe frameborder="0" seamless width="100%" height="800px" src="https://embed.plnkr.co/C8rf1s2ImziUZRnskkjp/?show=preview&sidebar=false"></iframe>
 </div>

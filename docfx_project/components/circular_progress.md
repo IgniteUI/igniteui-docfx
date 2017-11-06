@@ -29,5 +29,5 @@ The `circular` progress indicator component provides the ability to display prog
 
 ### Circular progress bar example
 <div class="sample-container" style="height: 400px">
-    <iframe frameborder="0" seamless width="100%" height="800px" src="https://run.plnkr.co/preview/cj9oblr9u000a3b5w02w05u42/"></iframe>
+    <iframe frameborder="0" seamless width="100%" height="800px" src="https://embed.plnkr.co/EqEQWTixihBKywSLk1MX/?show=preview&sidebar=false"></iframe>
 </div>
