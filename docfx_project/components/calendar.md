@@ -65,3 +65,8 @@ When a day inside the current month is focused:
 | Name   | Arguments | Return Type | Description |
 |:----------:|:------|:------|:------|
 | `selectDate` | `date: Date \| Date[]` | `void` | Change the calendar selection. Calling this method will emit the `onSelection` event. |
+
+### Calendar Example
+<div class="sample-container" style="height:600px">
+    <iframe src='https://embed.plnkr.co/QVkzMWZoFyfzLcZFDm3T/?show=preview&sidebar=false' width="100%" height="100%" seamless frameBorder="0"></inframe>
+</div>
