@@ -5,49 +5,85 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ---
 
 ## Data Grid
-**igx-grid** component provides the capability to manipulate and represent tabular data
+
+**igx-grid** is a Material Design inspired component used for displaying and manipulating tabular data. The component architecture follows the Angular way of building using decoupled components and directives, where each one perform a specific task, for example filtering the data.
+
+### Dependencies
+The most basic grid that can be run depends on the **IgxGridComponent** only, however in order to use all features available, let's include the adittional dependencies too. Some of these are **DataContainer** (responsible for CRUD operations, data records access, data processing etb.), **IDataSate** (filtering, sorting, paging features), sorting and filtering strategies, etc:
+
+```typescript
+import { IgxColumnComponent } from 'igniteui-js-blocks/grid/column.component';
+import {
+   DataContainer,
+   IDataState,
+   IgxGridBindingBehavior,
+   IgxGridColumnInitEvent,
+   IgxGridComponent,
+   IPagingState, PagingError,
+   SortingDirection,
+   IgxGridCell, IgxGridRow
+} from 'igniteui-js-blocks/main';
+```
+
 
 ### Usage
+Now that we have all dependencies imported, let’s get started with a basic configuration of the IgxGrid that binds to local data:
+
 ```html
-<igx-grid #grid1 [data]="localData" [autoGenerate]="true"
-    (onColumnInit)="initColumns($event)" (onCellSelection)="selectCell($event)">
+<igx-grid #grid1 id="grid1" [data]="localData" [autoGenerate]="true">
 </igx-grid>
 ```
+The **id** property is a string value and is the unique identifier of the grid, while **data** binds the grid, in this case to local data.
 
-### Getting Started
+The **autoGenerate** property tells the **igx-grid** to auto generate columns based on the data source fields. Otherwise, the developer needs to explicitly define the columns and the mapping to the data source fields.
 
-Import *IgxGridBindingBehavior*, *IgxGridColumnInitEvent*, *DataContainer* (responsible for CRUD operations, data records access, data processing etb.), *IDataSate* (filtering, sorting, paging features), *sorting* and *filtering* strategies etc.
+#### Columns configuration
 
-```typescript
-import { IgxGridBindingBehavior, IgxGridColumnInitEvent, IgxGridComponent } from "../../../src/grid/grid.component";
-import {
-    DataContainer,
-    IDataState,
-    IgxSnackbar,
-    IgxToast,
-    IPagingState,
-    PagingError,
-    SortingDirection,
-    StableSortingStrategy
-} from "../../../src/main";
-```
+**IgxGridColumnComponent** is used to define grid's *columns* collection and to enable features per column like **fitering**, **sorting**, **paging**. Cell, header and footer templates are also available. 
 
-### Basic configuration
+Let's turn the autogenerating option off and define the columns collection in the markup:
 
-Define the grid
 ```html
-<igx-grid #grid1 [data]="localData" [autoGenerate]="true"
+
+<igx-grid #grid1 [data]="data | async" [autoGenerate]="false" [paging]="true" [perPage]="6"
     (onColumnInit)="initColumns($event)" (onCellSelection)="selectCell($event)">
+    <igx-column [field]="'Name'" [sortable]="true" [header]="' '" [filtering]="true"></igx-column>
+    <igx-column [field]="'AthleteNumber'" [sortable]="true" [header]="'Athlete number'" ></igx-column>
+    <igx-column [field]="'TrackProgress'" [header]="'Track progress'">
+      <ng-template igxCell let-col="column" let-ri="rowIndex" let-item="item">
+        <igx-linear-bar [striped]="false" [value]="item" [max]="100">
+        </igx-linear-bar>
+      </ng-template>
+    </igx-column>
 </igx-grid>
 ```
-
-When all needed dependencies are included, next step would be to configure local or remote service that will return grids data. For example:
+An alternative to define columns in the markup is defining the columns in code in the onColumnsInit event:
 
 ```typescript
+  public initColumns(event: IgxGridColumnInitEvent) {
+    const column: IgxColumnComponent = event.column;
+    if (column.field === 'ProductName') {
+      column.filtering = true;
+      column.sortable = true;
+      column.editable = true;
+    }
+  }
+```
+The above code will make the column sortable, filterable and editable and will bring the corresponding features UI (like inputs for editing and save dialogs) out of the box. 
+
+### Data binding
+Before going any further with the grid we want to change the grid to bind to remote data, like it will in a real life scenario. A good practice is to separate all data fetching related logic in a separate data service, so we are going to create data-service.ts
+
+```typescript
+import { Component, Injectable } from '@angular/core';
+import { Observable } from 'rxjs/Observable';
+import { BehaviorSubject } from 'rxjs/BehaviorSubject';
+import { Http, Response, Headers, RequestOptions } from '@angular/http';
+
 @Injectable()
-export class LocalService {
+export class DataService {
     public records: Observable<any[]>;
-    private url: string = "http://services.odata.org/V4/Northwind/Northwind.svc/Alphabetical_list_of_products";
+    private url = 'http://services.odata.org/V4/Northwind/Northwind.svc/Alphabetical_list_of_products';
     private _records: BehaviorSubject<any[]>;
     private dataStore: any[];
 
@@ -65,68 +101,28 @@ export class LocalService {
           this._records.next(this.dataStore);
         });
     }
-
 }
-```
 
-Create the Grid component that will be used in the application. This will include:
-- define data fetching on ngOnInit() and implement some sorting or paging for example.
+```
+After importing the data service in the component, we need to initialize it in the constructor and use it to retrieve the data in the ngOnInit event:
 
 ```typescript
+constructor(
+    private localService: DataService,
+) {}
 public ngOnInit(): void {
-    this.data = this.localService.records;
-    this.remote = this.remoteService.remoteData;
-
-    this.localService.getData();
-
-    this.localData = [
-        {ID: 1, Name: "A"},
-        {ID: 2, Name: "B"},
-    ];
-...
-    this.grid3.state = {
-    paging: {
-        index: 2,
-        recordsPerPage: 10
-    },
-    sorting: {
-        expressions: [
-        {fieldName: "ProductID", dir: SortingDirection.Desc}
-        ]
-    }
-    };
-}
-...
-public ngAfterViewInit() {
-    this.remoteService.getData(this.grid3.dataContainer.state);
-}
-
-```
-
-- enable some features for certaing columns
-
-```typescript
-public initColumns(event: IgxGridColumnInitEvent) {
-    const column: IgxColumnComponent = event.column;
-    if (column.field === "Name") {
-    column.filtering = true;
-    column.sortable = true;
-    column.editable = true;
-    }
+    this.data = this.dataService.records;
 }
 ```
 
-- Аdd event handlers for CRUD operations
+### CRUD operations though the API
+
+Corresponding public methods are exposed for developers to perform CRUD operations:
 
 ```typescript
 public addRow() {
-    if (!this.newRecord.trim()) {
-    this.newRecord = "";
-    return;
-    }
-    const record = {ID: this.grid1.data[this.grid1.data.length - 1].ID + 1, Name: this.newRecord};
+    const record = {ProductID: this.grid1.data[this.grid1.data.length - 1].ProductID + 1, ProductName: 'Camembert Pierrot'};
     this.grid1.addRow(record);
-    this.newRecord = "";
 }
 
 public updateRecord(event) {
@@ -142,11 +138,60 @@ public deleteRow(event) {
     this.snax.show();
 }
 ```
+These can be wired to user interactions, not necessarily related to the **igx-grid**, for example a button click:
+```html
+<button igxButton igxRipple (click)="deleteRow($event)">Delete Row</button>
+```
+
+### Paging
+**Paging** is initialized on the root igxGrid component, and is configurable via the `paging` and `perPage` options. Paging is a boolean that controls whether the feature is enabled and the perPage option controls the visible records per page. Let’s update our grid to provide paging:
+
+```html
+<igx-grid #grid1 [data]="data | async" [paging]="true" [perPage]="20" [autoGenerate]="false">
+```
+
+### Filtering
+**Filtering** is enabled on column level, either using markup or code using the `filtering` input. In addition, `filteringCondition` and `filteringIgnoreCase` options are provided to customize the filtering behavior. `filteringCondition` is a function that does filtering on specific condition, and if not set the default value falls back to "contains". `filteringIgnoreCase` is a boolean that controls if capitalization is ignored. We have already enabled filtering on columns, now we can customize the behavior:
+
+```html
+<igx-column [field]="'ProductName'" [header]="'ProductName'" [sortable]="false" [filtering]="true" [filteringIgnoreCase]="false">
+</igx-column>
+```
+
+### Sorting
+**Sorting** is also enabled on column level, meaning that the **igx-grid** can have both sortable and non-sortable columns. This is done via the sortable option, that takes a Boolean value as demonstrated already in the above code examples. Additionally the developer may want to have the grid sorted on load, which is done by passing the sorting expression to the State property:
+
+```typescript
+  public ngOnInit(): void {
+    this.data = this.localService.records;
+    this.grid1.state = {
+      paging: {
+          index: 2,
+          recordsPerPage: 10
+      },
+      sorting: {
+        expressions: [
+          {
+            fieldName: 'TrackProgress',
+            dir: SortingDirection.Desc
+          }
+        ],
+        strategy: new StableSortingStrategy()
+      }
+    };
+```
+As we can see from the above example, the State property defines the state not only for sorting, but also for paging and filtering.
+
+### Example
+<div class="sample-container" style="height:600px">
+<iframe src='https://embed.plnkr.co/uua2w0Dj7tm6zQurt3VQ/?show=preview&sidebar=false' width="100%" height="100%" seamless frameBorder="0"></inframe>
+</div>
 
 ## API
 
 ### Inputs
 
+Below is the list if all inputs that the developers may set to configure the grid look/behavior:
 | Name | Type | Description |
 | :--- |:--- | :--- |
 | id  | string  | Unique identifier of the Grid |
@@ -157,7 +202,7 @@ public deleteRow(event) {
 
 
 ### Outputs
-
+A list of the events emitted by the **igx-grid**:
 | Name | Description |
 | :--- | :--- |
 | *Event emitters* | *Notify for a change* |
@@ -172,7 +217,14 @@ public deleteRow(event) {
 | onBeforeProcess  | Emit binding behavior  |
 
 
+Defining handlers for these event emitters id done using declarative event binding:
+```html
+<igx-grid #grid1 [data]="data | async" [autoGenerate]="false"
+ (onColumnInit)="initColumns($event)" (onCellSelection)="selectCell($event)">
+```
 ### Methods
+
+Here is a list of all public methods exposed by the **igx-grid**:
 
 | Signature | Description |
 | :--- | :--- |
@@ -190,30 +242,9 @@ public deleteRow(event) {
 | sortColumn | Sort grid column  |
 | paginate | Change the current page by passed number  |
 
-
-## IgxColumnComponent
-
-Column component is used to define grid's *columns* collection. Cell, header and footer templates are available.
-
-### Example
-```html
-<igx-grid #grid2 [data]="data | async" [paging]="true" [perPage]="10"
-    (onCellSelection)="onInlineEdit($event)">
-    <igx-column [sortable]="true" [field]="'ProductID'" [header]="'ID'"></igx-column>
-    <igx-column [sortable]="true" [filtering]="true" [field]="'ProductName'"></igx-column>
-    <igx-column [sortable]="true" [field]="'UnitsInStock'" [header]="'In Stock'">
-        <ng-template igxCell let-col="column" let-ri="rowIndex" let-item="item">
-            <span *ngIf="!showInput(ri, col.field)">{{ item }}</span>
-            <input *ngIf="showInput(ri, col.field)" igxInput [value]="item">
-        </ng-template>
-    </igx-column>
-```
-
-
-### API
-
 #### Inputs
 
+Inputs available on the **IgxGridColumnComponent** to define columns:
 | Name | Type | Description |
 | :--- |:--- | :--- |
 | field  | string  | Column field name |
