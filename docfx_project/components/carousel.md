@@ -1,6 +1,6 @@
 ---
 title: Carousel Component
-_description: Use Ignite UI for Angular Carousel component to navigate through a collection of slides, cards or page-based interfaces with endless programmatic features. 
+_description: Use Ignite UI for Angular Carousel component to navigate through a collection of slides, cards or page-based interfaces with endless programmatic features.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Carousel component, Angular Carousel control
 ---
 
@@ -17,6 +17,11 @@ or inside another component.
     </igx-slide>
 </igx-carousel>
 ```
+
+### Carousel Example
+<div class="sample-container" style="height: 800px">
+    <iframe seamless width="100%" height="100%" frameborder="0" src="https://embed.plnkr.co/sznDmtSNfotjC2THSGav/?show=preview&sidebar=false">
+</div>
 
 ###API Summary
 #### igx-carousel

@@ -18,3 +18,8 @@ Using `igxButton` to turn a span element into an js blocks styled button.
 ```html
 <span igxLabel>Single line text<span>
 ```
+
+### Demo
+<div class="sample-container" style="height:600px">
+<iframe src='https://embed.plnkr.co/mHKDmEKTUxwNpTDjaNfe/?show=preview&sidebar=false' width="100%" height="100%" seamless frameBorder="0"></inframe>
+</div>
