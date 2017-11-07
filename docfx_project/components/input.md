@@ -14,3 +14,8 @@ With the igxInput directive you can add **inputs** in your markup.
         <label igxLabel>Username</label>
     </div>
 ```
+
+### Demo
+<div class="sample-container" style="height:600px">
+<iframe src='https://embed.plnkr.co/Ow8X0PGgSuvYZ26HoI6u/?show=preview&sidebar=false' width="100%" height="100%" seamless frameBorder="0"></inframe>
+</div>
