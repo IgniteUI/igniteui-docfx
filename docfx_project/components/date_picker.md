@@ -73,3 +73,9 @@ The DatePicker also supports binding through `ngModel` if two-way date-bind is n
 | Name   | Arguments | Return Type | Description |
 |:----------:|:------|:------|:------|
 | `selectDate` | `date: Date` | `void` | Change the calendar selection. Calling this method will emit the `onSelection` event. |
+
+
+### Datepicker example
+<div class="sample-container" style="height: 700px">
+    <iframe frameborder="0" seamless width="100%" height="800px" src="https://embed.plnkr.co/BLcKDnP9ZCQmNTMY7MnF/?show=preview&sidebar=false"></iframe>
+</div>
