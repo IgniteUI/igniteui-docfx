@@ -5,6 +5,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ---
 
 ## Data Grid
+
 **igx-grid** is a Material Design inspired component used for displaying and manipulating tabular data. The component architecture follows the Angular way of building using decoupled components and directives, where each one perform a specific task, for example filtering the data.
 
 ### Dependencies
@@ -23,6 +24,7 @@ import {
    IgxGridCell, IgxGridRow
 } from 'igniteui-js-blocks/main';
 ```
+
 
 ### Usage
 Now that we have all dependencies imported, let’s get started with a basic configuration of the IgxGrid that binds to local data:
@@ -257,3 +259,9 @@ Inputs available on the **IgxGridColumnComponent** to define columns:
 | filteringCondition  | FilteringCondition  | Boolean, date, string or number conditions. Default is string *contains*  |
 | filteringIgnoreCase  | boolean  | Ignore capitalization of words |
 | dataType  | DataType  | String, number, Boolean or Date |
+
+
+### Grid Example
+<div class="sample-container" style="height:600px">
+    <iframe src='https://embed.plnkr.co/uua2w0Dj7tm6zQurt3VQ/?show=preview&sidebar=false' width="100%" height="100%" seamless frameBorder="0"></inframe>
+</div>

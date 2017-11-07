@@ -63,3 +63,8 @@ _Child component of Igx-List, that represents a single interactable item. Its co
 - `hidden` - Determines whether the item should be displayed
 - `panState` - Gets the items pan state
 - `options` - Defines the options of particular list item, that will be displayed on item swipe (pan)
+
+### Demo
+<div class="sample-container" style="height:600px">
+<iframe src='https://embed.plnkr.co/lBqSPM8X3hYEzkXxXhUY/?show=preview&sidebar=false' width="100%" height="100%" seamless frameBorder="0"></inframe>
+</div>

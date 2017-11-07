@@ -32,3 +32,8 @@ You can set the action button icon of the navbar by setting `actionButtonIcon="a
 You can set the visible state of the navbar by setting `isActionButtonVisible="true"`;
 
 You can set the action of the navbar button by setting `(onAction)="executeAction()"`;
+
+### Demo
+<div class="sample-container" style="height: 600px">
+    <iframe frameborder="0" seamless width="100%" height="800px" src="https://embed.plnkr.co/CsSNXnyAdtcJktBOssOB/?show=preview&sidebar=false"></iframe>
+</div>
