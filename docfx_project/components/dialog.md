@@ -77,3 +77,8 @@ When you are using Custom Dialogs you don't have a message property set.
 ```
 
 You can make the dialog dismissible `closeOnOutsideSelect="true"``
+
+### Dialog Example
+<div class="sample-container" style="height:600px">
+    <iframe src='https://embed.plnkr.co/yIeKqBnaO2ScYppfq1p4/?show=preview&sidebar=false' width="100%" height="100%" seamless frameBorder="0"></inframe>
+</div>
