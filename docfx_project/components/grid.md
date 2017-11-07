@@ -27,7 +27,7 @@ import {
 
 
 ### Usage
-Now that we have all dependencies imported, let’s get started with a basic configuration of the IgxGrid that binds to local data:
+Now that we have all dependencies imported, let’s get started with a basic configuration of the **igx-grid** that binds to local data:
 
 ```html
 <igx-grid #grid1 id="grid1" [data]="localData" [autoGenerate]="true">
@@ -37,7 +37,7 @@ The **id** property is a string value and is the unique identifier of the grid, 
 
 The **autoGenerate** property tells the **igx-grid** to auto generate columns based on the data source fields. Otherwise, the developer needs to explicitly define the columns and the mapping to the data source fields.
 
-#### Columns configuration
+### Columns configuration
 
 **IgxGridColumnComponent** is used to define grid's *columns* collection and to enable features per column like **fitering**, **sorting**, **paging**. Cell, header and footer templates are also available. 
 
@@ -57,7 +57,7 @@ Let's turn the autogenerating option off and define the columns collection in th
     </igx-column>
 </igx-grid>
 ```
-An alternative to define columns in the markup is defining the columns in code in the onColumnsInit event:
+Columns options can also be set in code in the initColumns event:
 
 ```typescript
   public initColumns(event: IgxGridColumnInitEvent) {
@@ -144,7 +144,7 @@ These can be wired to user interactions, not necessarily related to the **igx-gr
 ```
 
 ### Paging
-**Paging** is initialized on the root igxGrid component, and is configurable via the `paging` and `perPage` options. Paging is a boolean that controls whether the feature is enabled and the perPage option controls the visible records per page. Let’s update our grid to provide paging:
+**Paging** is initialized on the root **igx-grid** component, and is configurable via the `paging` and `perPage` options. Paging is a boolean that controls whether the feature is enabled and the perPage option controls the visible records per page. Let’s update our grid to provide paging:
 
 ```html
 <igx-grid #grid1 [data]="data | async" [paging]="true" [perPage]="20" [autoGenerate]="false">
