@@ -48,3 +48,8 @@ The `igxRipple` uses the Web Animation API and runs natively on
 [browsers that support it.](http://caniuse.com/#feat=web-animation)
 The `web-animations.min.js` polyfill is [available](https://github.com/web-animations/web-animations-js)
 for other browsers.
+
+### Buttons $ Ripples Example
+<div class="sample-container" style="height: 800px">
+    <iframe seamless width="100%" height="100%" frameborder="0" src="https://embed.plnkr.co/dGoEcDAQx51I6bQbs6CV/?show=preview&sidebar=false">
+</div>
