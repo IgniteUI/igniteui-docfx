@@ -21,6 +21,7 @@ $(function() {
     renderLogo();
 
     breakText();
+    renderHeader();
 
     window.refresh = function(article) {
         // Update markup result
@@ -44,6 +45,8 @@ $(function() {
             $(this).breakWord();
         });
     }
+
+    function renderHeader() {}
 
     // Styling for tables in conceptual documents using Bootstrap.
     // See http://getbootstrap.com/css/#tables
@@ -392,6 +395,7 @@ $(function() {
     // Update href in navbar
     function renderNavbar() {
         var navbar = $('#navbar ul')[0];
+        $('.navigation').addClass('sf-js-enabled');
         if (typeof navbar === 'undefined') {
             loadNavbar();
         } else {

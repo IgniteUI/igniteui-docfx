@@ -633,7 +633,7 @@ a.disable:hover {
 
 #main {
   position: relative;
-  padding-top: 50px;
+  padding-top: 127px;
   width: 100%;
   min-height: 100%; }
 
@@ -833,3 +833,7 @@ footer {
   border-top: 1px solid #e7e7e7;
   background-color: #f8f8f8;
   padding: 15px 0; }
+
+.globalnav__wrapper {
+  max-width: 100% !important;
+  margin: auto 15px !important; }
