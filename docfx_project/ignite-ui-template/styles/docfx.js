@@ -51,7 +51,7 @@ $(function() {
     // Styling for tables in conceptual documents using Bootstrap.
     // See http://getbootstrap.com/css/#tables
     function renderTables() {
-        $('table')
+        $('#main table')
             .addClass('table')
             .wrap('<div class="table-responsive"></div>');
     }

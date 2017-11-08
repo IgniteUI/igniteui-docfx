@@ -16,14 +16,14 @@ full license information.}}
     <meta property="docfx:rel" content="{{_rel}}">{{/_enableSearch}} {{#_enableNewTab}}
     <meta property="docfx:newtab" content="true">{{/_enableNewTab}}
     <link rel="shortcut icon" href="{{_rel}}{{{_appFaviconPath}}}{{^_appFaviconPath}}favicon.ico{{/_appFaviconPath}}">
-    <link rel="stylesheet" href="{{_rel}}styles/docfx.vendor.css">
-    <link rel="stylesheet" href="{{_rel}}styles/docfx.css">
-    <link rel="stylesheet" href="{{_rel}}styles/monokai-sublime.css">
-    <link rel="stylesheet" href="{{_rel}}styles/css/main.css">
     <link rel="stylesheet" href="https://infragistics.com/assets/modern/css/layout.css">
     <link rel="stylesheet" href="https://infragistics.com/assets/modern/css/animate-custom.css">
     <link rel="stylesheet" href="https://infragistics.com/assets/modern/css/fontello.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://infragistics.com/css/navigation.css">
     <link rel="stylesheet" href="https://infragistics.com/css/footer.css">
+    <link rel="stylesheet" href="{{_rel}}styles/docfx.vendor.css">
+    <link rel="stylesheet" href="{{_rel}}styles/docfx.css">
+    <link rel="stylesheet" href="{{_rel}}styles/monokai-sublime.css">
+    <link rel="stylesheet" href="{{_rel}}styles/css/main.css">
 </head>
