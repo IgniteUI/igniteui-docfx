@@ -676,6 +676,22 @@ $(function() {
                     );
                 }
             });
+
+            var contentOffset = $('#_content').offset().top;
+            $('body').data('offset', contentOffset);
+            $('.bs-docs-sidenav a').on('click', function(e) {
+                var scrollPos =
+                    $('body')
+                        .find($(this).attr('href'))
+                        .offset().top - contentOffset;
+
+                $('body, html').animate(
+                    { scrollTop: scrollPos },
+                    500,
+                    function() {}
+                );
+                return false;
+            });
         }
 
         function getHierarchy() {
