@@ -15,35 +15,28 @@
     padding: 0;
 }
 
-.navbar-fixed-top {
-}
-
 .navbar-collapse {
     margin: 0 -15px;
     padding: 0;
 }
 
 .navbar {
-    .navbar-brand > span {
+    .navbar-brand>span {
         color: #fff;
     }
-
     .nav.navbar-nav {
-        display: flex;
-        align-items: center;
+        width: 100%;
+        padding: 16px;
         font-size: 14px;
         font-weight: 400;
-
-        li > a {
+        li>a {
             transition: all 0.25s ease-in-out;
         }
-
-        li.active > a {
+        li.active>a {
             background-color: transparent !important;
             font-weight: 500;
         }
-
-        li.nav__cta > a {
+        li.nav__cta>a {
             color: #fff;
             background-color: #0099ff;
             text-transform: uppercase;
@@ -54,6 +47,12 @@
                 color: #0099ff;
                 background-color: transparent;
             }
+        }
+        @media only screen and (min-width: 768px) {
+            display: flex;
+            align-items: center;
+            padding: 0;
+            width: auto;
         }
     }
 }

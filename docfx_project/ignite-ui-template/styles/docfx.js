@@ -395,7 +395,7 @@ $(function() {
     // Update href in navbar
     function renderNavbar() {
         var navbar = $('#navbar ul')[0];
-        $('.navigation').addClass('sf-js-enabled');
+        $('.navigation').addClass('sf-js-enabled sf-with-ul');
         if (typeof navbar === 'undefined') {
             loadNavbar();
         } else {
@@ -486,6 +486,7 @@ $(function() {
         $(window).resize(function() {
             $(sidetoggle).height('auto');
             $(sidetoggle).removeClass('in');
+            $('#toc').height(contentHeight);
         });
         var sidetoc = $('#sidetoggle .sidetoc')[0];
         if (typeof sidetoc === 'undefined') {
@@ -948,4 +949,17 @@ $(function() {
             return this;
         };
     }
+});
+
+$(document).ready(function() {
+    var contentOffset = $('#_content').offset().top;
+    $('.anchorjs-link').on('click', function() {
+        var scrollPos =
+            $('body')
+                .find($(this).attr('href'))
+                .offset().top - contentOffset;
+
+        $('body, html').animate({ scrollTop: scrollPos }, 500, function() {});
+        return false;
+    });
 });

@@ -428,7 +428,7 @@ sub {
   margin-top: 24px;
   max-height: 100%;
   overflow: hidden;
-  top: 50px;
+  top: 127px;
   position: fixed;
   font-size: 14px; }
   .sideaffix.shiftup {
@@ -572,12 +572,8 @@ table a {
   color: #fff; }
 
 .navbar .nav.navbar-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  width: 100%;
+  padding: 16px;
   font-size: 14px;
   font-weight: 400; }
   .navbar .nav.navbar-nav li > a {
@@ -596,6 +592,16 @@ table a {
     .navbar .nav.navbar-nav li.nav__cta > a:hover {
       color: #0099ff;
       background-color: transparent; }
+  @media only screen and (min-width: 768px) {
+    .navbar .nav.navbar-nav {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      padding: 0;
+      width: auto; } }
 
 .anchorjs-link {
   position: absolute;
