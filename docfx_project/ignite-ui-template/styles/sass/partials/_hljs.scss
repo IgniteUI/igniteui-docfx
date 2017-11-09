@@ -15,11 +15,17 @@ hue-6:   #d19a66
 hue-6-2: #e6c07b
 */
 
+pre {
+    opacity: 1;
+    background: darken($byzantium, 15%);
+    color: #f1f1f1;
+}
+
 .hljs {
     display: block;
     overflow-x: auto;
-    color: #abb2bf;
-    background: #000;
+    color: #fff;
+    background: inherit;
 }
 
 .hljs-comment,
@@ -31,7 +37,7 @@ hue-6-2: #e6c07b
 .hljs-doctag,
 .hljs-keyword,
 .hljs-formula {
-    color: #c678dd;
+    color: #fbb13c;
 }
 
 .hljs-section,
@@ -43,7 +49,7 @@ hue-6-2: #e6c07b
 }
 
 .hljs-literal {
-    color: #56b6c2;
+    color: #0099fb;
 }
 
 .hljs-string,
@@ -51,7 +57,7 @@ hue-6-2: #e6c07b
 .hljs-addition,
 .hljs-attribute,
 .hljs-meta-string {
-    color: #98c379;
+    color: #a1e248;
 }
 
 .hljs-built_in,

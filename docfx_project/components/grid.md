@@ -44,30 +44,29 @@ The **autoGenerate** property tells the **igx-grid** to auto generate columns ba
 Let's turn the autogenerating option off and define the columns collection in the markup:
 
 ```html
-
-<igx-grid #grid1 [data]="data | async" [autoGenerate]="false" [paging]="true" [perPage]="6"
-    (onColumnInit)="initColumns($event)" (onCellSelection)="selectCell($event)">
+<igx-grid #grid1 [data]="data | async" [autoGenerate]="false" [paging]="true" [perPage]="6" (onColumnInit)="initColumns($event)"
+    (onCellSelection)="selectCell($event)">
     <igx-column [field]="'Name'" [sortable]="true" [header]="' '" [filtering]="true"></igx-column>
-    <igx-column [field]="'AthleteNumber'" [sortable]="true" [header]="'Athlete number'" ></igx-column>
+    <igx-column [field]="'AthleteNumber'" [sortable]="true" [header]="'Athlete number'"></igx-column>
     <igx-column [field]="'TrackProgress'" [header]="'Track progress'">
-      <ng-template igxCell let-col="column" let-ri="rowIndex" let-item="item">
-        <igx-linear-bar [striped]="false" [value]="item" [max]="100">
-        </igx-linear-bar>
-      </ng-template>
+        <ng-template igxCell let-col="column" let-ri="rowIndex" let-item="item">
+            <igx-linear-bar [striped]="false" [value]="item" [max]="100">
+            </igx-linear-bar>
+        </ng-template>
     </igx-column>
 </igx-grid>
 ```
 Columns options can also be set in code in the initColumns event:
 
 ```typescript
-  public initColumns(event: IgxGridColumnInitEvent) {
+public initColumns(event: IgxGridColumnInitEvent) {
     const column: IgxColumnComponent = event.column;
     if (column.field === 'ProductName') {
       column.filtering = true;
       column.sortable = true;
       column.editable = true;
     }
-  }
+}
 ```
 The above code will make the column sortable, filterable and editable and will bring the corresponding features UI (like inputs for editing and save dialogs) out of the box. 
 
@@ -76,9 +75,9 @@ Before going any further with the grid we want to change the grid to bind to rem
 
 ```typescript
 import { Component, Injectable } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
-import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 import { Http, Response, Headers, RequestOptions } from '@angular/http';
+import { BehaviorSubject } from 'rxjs/BehaviorSubject';
+import { Observable } from 'rxjs/Observable';
 
 @Injectable()
 export class DataService {
@@ -102,14 +101,13 @@ export class DataService {
         });
     }
 }
-
 ```
+
 After importing the data service in the component, we need to initialize it in the constructor and use it to retrieve the data in the ngOnInit event:
 
 ```typescript
-constructor(
-    private localService: DataService,
-) {}
+constructor(private localService: DataService) {}
+
 public ngOnInit(): void {
     this.data = this.dataService.records;
 }
@@ -162,30 +160,27 @@ These can be wired to user interactions, not necessarily related to the **igx-gr
 **Sorting** is also enabled on column level, meaning that the **igx-grid** can have both sortable and non-sortable columns. This is done via the sortable option, that takes a Boolean value as demonstrated already in the above code examples. Additionally the developer may want to have the grid sorted on load, which is done by passing the sorting expression to the State property:
 
 ```typescript
-  public ngOnInit(): void {
+public ngOnInit(): void {
     this.data = this.localService.records;
+    
     this.grid1.state = {
-      paging: {
-          index: 2,
-          recordsPerPage: 10
-      },
-      sorting: {
-        expressions: [
-          {
-            fieldName: 'TrackProgress',
-            dir: SortingDirection.Desc
-          }
-        ],
-        strategy: new StableSortingStrategy()
-      }
+        paging: {
+            index: 2,
+            recordsPerPage: 10
+        },
+        sorting: {
+            expressions: [
+                {
+                    fieldName: 'TrackProgress',
+                    dir: SortingDirection.Desc
+                }
+            ],
+            strategy: new StableSortingStrategy()
+        }
     };
+}
 ```
 As we can see from the above example, the State property defines the state not only for sorting, but also for paging and filtering.
-
-### Example
-<div class="sample-container" style="height:600px">
-<iframe src='https://embed.plnkr.co/uua2w0Dj7tm6zQurt3VQ/?show=preview&sidebar=false' width="100%" height="100%" seamless frameBorder="0"></inframe>
-</div>
 
 ## API
 
