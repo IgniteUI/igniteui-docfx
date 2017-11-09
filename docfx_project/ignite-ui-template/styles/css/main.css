@@ -1,3 +1,11 @@
+::-moz-selection {
+  color: #fff;
+  background: #731963; }
+
+::selection {
+  color: #fff;
+  background: #731963; }
+
 html,
 .root {
   font-size: 16px;
@@ -504,8 +512,7 @@ sub {
 .affix ul > li.active > ul,
 .affix ul > li.active > a:before,
 .affix ul > li > a:hover:before {
-  display: block;
-  white-space: nowrap; }
+  display: block; }
 
 .table {
   margin-bottom: 10px; }
