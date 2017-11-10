@@ -1,11 +1,7 @@
 - name: Home
   href: https://infragistics.com/products/ignite-ui-angular/
-- name: Features
-  href: https://infragistics.com/products/ignite-ui-angular/features
 - name: Components
   href: components/
-- name: Roadmap
-  href: https://infragistics.com/products/ignite-ui-angular/roadmap
 - name: Get Started 
   href: https://infragistics.com/products/ignite-ui-angular/get-started
   cta: true

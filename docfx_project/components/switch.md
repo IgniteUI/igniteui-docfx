@@ -5,7 +5,8 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ---
 
 ##Switch
-`igx-switch` is a selection component that allows users to make a binary choice for a certain condition. It behaves similar to the switch component in iOS. 
+<p class="highlight">The Ignite UI for Angular Switch component is a binary choice selection component that behaves similarly to the switch component in iOS.</p>
+<div class="divider"></div>
 
 ### Usage
 
@@ -36,7 +37,9 @@ You can easily use it within forms with `[(ngModel)]`
     </div>
 </form>
 ```
-### Demo
+<div class="divider"></div>
+
+### Switch Demo
 <div class="sample-container" style="height:600px">
 <iframe src='https://embed.plnkr.co/a2Zmf05zcAX1hiE6OwxY/?show=preview&sidebar=false' width="100%" height="100%" seamless frameBorder="0"></inframe>
 </div>

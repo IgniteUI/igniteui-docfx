@@ -5,6 +5,9 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ---
 
 ##Layout Manager
+<p class="highlight">The Ignite UI for Angular Layout Directive allows developers to specify a layout direction for any children of the container it is applied to. Layout can flow vertically or horizontally, with controls for wrapping, justification, and alignment.</p>
+<div class="divider"></div>
+
 ###Usage
 Use the **igxLayout** directive on a container element to specify the layout
 direction for its children: horizontally with `igxLayoutDir="row"` or vertically with
@@ -12,6 +15,7 @@ direction for its children: horizontally with `igxLayoutDir="row"` or vertically
 
 **Note**: the `igxLayout` directive affects the flow directions for that
 container's **immediate** children.
+<div class="divider--half"></div>
 
 ### Nesting 
 Use the `igxFlex` directive for elements inside an `igxLayout` parent to control specific flexbox properties.
@@ -21,8 +25,9 @@ Use the `igxFlex` directive for elements inside an `igxLayout` parent to control
 | `igxFlexOrder` | number | Controls in what order are the elements laid out in the flex container. Defaults to `0`. |
 | `igxFlexGrow` | number | Sets whether an item should grow in a propotion to its peers inside the flex container. Defaults to `1`. |
 | `igxFlexShrink` | number | Sets whether an items should shrink in a propotion to its peers. Defaults to `1` and negative number are not accepted. |
+<div class="divider--half"></div>
 
-### API Summary
+### API
 | Name   |      Type      |  Description |
 |:----------|:-------------:|:------|
 | `igxLayoutDir` |  string | Sets the default flow direction of the container's children. Defaults to `rows`. |

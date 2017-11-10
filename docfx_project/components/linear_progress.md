@@ -5,16 +5,17 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ---
 
 ##Linear Progress
-
-The linear progress bar component provides the ability to display a progress bar and update its appearance as its state changes. This component offers a choice of colors and can be striped or non-striped.
+<p class="highlight">The Ignite UI for Angular Linear Progress Bar Indicator component provides a visual indicator of an application’s process as it changes. The indicator updates its appearance as its state changes. The indicator can be styled with a choice of colors in stripes or solids.</p>
+<div class="divider"></div>
 
 ### Usage
 ```html
 <igx-linear-bar [striped]="false" [value]="currentValue" [max]="200">
 </igx-linear-bar>
 ```
+<div class="divider--half"></div>
 
-### API Summary
+### API
 | Name   |       Type      |  Description |
 |:----------|:-------------:|:------|
 | `max` |  number | Set maximum value that can be passed. |
@@ -22,6 +23,7 @@ The linear progress bar component provides the ability to display a progress bar
 | `value` |  number | Set value that indicates the completed bar position. |
 | `stripped` |  boolean | Set bar to have striped style. |
 | `animate` |  boolean | animation on progress bar. |
+<div class="divider--half"></div>
 
 ### Methods
 | Name   |  Description |
@@ -29,8 +31,9 @@ The linear progress bar component provides the ability to display a progress bar
 | `getValue()` | Return passed value to progress bar to be in range between min(0) and max. |
 | `getPercentValue()` | Calculate the percentage based on passed value. |
 | `onProgressChanged` | Exposed event, that could be handled to track progress changing |
+<div class="divider--half"></div>
 
-### Linear progress bar example
+### Linear Progress Demo 
 <div class="sample-container" style="height: 400px">
     <iframe frameborder="0" seamless width="100%" height="800px" src="https://embed.plnkr.co/C8rf1s2ImziUZRnskkjp/?show=preview&sidebar=false"></iframe>
 </div>

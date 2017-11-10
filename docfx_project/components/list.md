@@ -5,7 +5,8 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ---
 
 ##List View
-_Igx-List represents a list of identical items._
+<p class="highlight">The Ignite UI for Angular List component displays rows of items and supports one or more header items as well as search and filtering of list items. Each list item is completely templateable and will support any valid HTML or Angular component. </p>
+<div class="divider"></div>
 
 ###Usage
 ```html
@@ -48,12 +49,14 @@ The list provides three arrays:
 - `onPanStateChange` - Triggered when pan gesture is executed on list item
 - `onLeftPan` - Triggered when left pan gesture is executed on list item
 - `onRightPan` - Triggered when right pan gesture is executed on list item
+<div class="divider--half"></div>
 
 ###List Header
 _Child component of Igx-List, that represents a single non-interactable item, that is used as a header of the following items. The header implements `IListChild` interface._
 
 #### Header Properties
 - `index` - The index of header in children array
+<div class="divider--half"></div>
 
 ###List Item
 _Child component of Igx-List, that represents a single interactable item. Its content can be text or any other HTML content. The item implements `IListChild` interface._
@@ -63,8 +66,9 @@ _Child component of Igx-List, that represents a single interactable item. Its co
 - `hidden` - Determines whether the item should be displayed
 - `panState` - Gets the items pan state
 - `options` - Defines the options of particular list item, that will be displayed on item swipe (pan)
+<div class="divider--half"></div>
 
-### Demo
-<div class="sample-container" style="height:600px">
-<iframe src='https://embed.plnkr.co/lBqSPM8X3hYEzkXxXhUY/?show=preview&sidebar=false' width="100%" height="100%" seamless frameBorder="0"></inframe>
+### List Demo
+<div class="sample-container" style="height:100%">
+<iframe src='https://embed.plnkr.co/lBqSPM8X3hYEzkXxXhUY/?show=preview&sidebar=false' width="100%" height="1000px" seamless frameBorder="0"></inframe>
 </div>

@@ -5,16 +5,17 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ---
 
 ##Avatar
-
-The **igx-avatar** component allows you to add images or initials as avatars in your application.
+<p class="highlight">Use the Ignite UI for Angular Avatar to add images, material icons, or initials to an application, which is helpful for representing users in lists or profile buttons. The Avatar can be square or circular, with three size options. The control supports all images from the material icon set as well as custom images.</p>
+<div class="divider"></div>
 
 ### Usage
 ```html
 <igx-avatar roundShape="true" icon="person" bgColor="#0375be" data-init="SS">
 </igx-avatar>
 ```
+<div class="divider--half"></div>
 
-### API Summary
+### API
 | Name   |      Type      |  Description |
 |:----------|:-------------:|:------|
 | `src` |  string | Set the image source of the avatar. |
@@ -25,7 +26,9 @@ The **igx-avatar** component allows you to add images or initials as avatars in 
 | `roundShape` | boolean | Set the shape of the avatar to circle. The default shape is square. |
 | `size` | string | Set the size of the avatar to either small, medium, or large. |
 
+<div class="divider--half"></div>
 *You can also set all igx-avatar properties programmatically.
+<div class="divider--half"></div>
 
 ### Examples
 
@@ -40,8 +43,9 @@ Using `TypeScript` to modify and existing igx-avatar instance.
 avatarInstance.srcImage('https://unsplash.it/60/60?image=55');
 avatarInstance.size('small');
 ```
+<div class="divider--half"></div>
 
-### Avatar Example
+### Avatar Demo
 <div class="sample-container" style="height:600px">
     <iframe src='https://embed.plnkr.co/KLPxh3/?show=preview&sidebar=false' width="100%" height="100%" seamless frameBorder="0"></inframe>
 </div>

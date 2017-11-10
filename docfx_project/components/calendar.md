@@ -5,10 +5,8 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ---
 
 ##Calendar
-
-The **igxCalendar** provides a way for the user to select date(s).
-
-You can see it in action [here](http://139.59.168.161/demos/calendar)
+<p class="highlight">The Ignite UI for Angular Calendar component provides three easy, intuitive ways for applications to display date information. Users can input dates, select a single date, or pick a range of dates.</p>
+<div class="divider"></div>
 
 ### Usage
 ```typescript
@@ -30,6 +28,7 @@ The calendar also supports binding through `ngModel` if two-way data-bind is nee
 ```html
 <igx-calendar [(ngModel)]="myDateValue"></igx-calendar>
 ```
+<div class="divider--half"></div>
 
 ### Keyboard navigation
 When the **igxCalendar** component is focused:
@@ -43,10 +42,13 @@ When the **igxCalendar** component is focused:
 When a day inside the current month is focused:
 - Arrow keys will navigate through the days.
 - `Enter` will select the currently focused day.
+<div class="divider--half"></div>
 
-### API Summary
+### API
 
 #### Inputs
+<div class="divider--half"></div>
+
 | Name       |      Type      |  Description |
 |:----------:|:-------------|:------|
 | `weekStart`| `Number \| WEEKDAYS` | Sets on which day will the week start. |
@@ -57,16 +59,21 @@ When a day inside the current month is focused:
 | `formatOptions` | `Object` | The format options passed along with the `locale` property used for formatting the dates. |
 
 #### Outputs
+<div class="divider--half"></div>
+
 | Name | Return Type | Description |
 |:--:|:---|:---|
 | `onSelection` | `Date \| Date[]` | Fired when selection is made in the calendar. The event contains the selected value(s) based on the type of selection the component is set to |
 
 #### Methods
+<div class="divider--half"></div>
+
 | Name   | Arguments | Return Type | Description |
 |:----------:|:------|:------|:------|
 | `selectDate` | `date: Date \| Date[]` | `void` | Change the calendar selection. Calling this method will emit the `onSelection` event. |
+<div class="divider--half"></div>
 
-### Calendar Example
+### Calendar Demo
 <div class="sample-container" style="height:600px">
     <iframe src='https://embed.plnkr.co/QVkzMWZoFyfzLcZFDm3T/?show=preview&sidebar=false' width="100%" height="100%" seamless frameBorder="0"></inframe>
 </div>

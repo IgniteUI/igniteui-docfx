@@ -5,6 +5,8 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ---
 
 ## Tab Bar
+<p class="highlight">The Ignite UI for Angular Tab Bar component enables the user to navigate between different content displayed in one view of three to five panels. Panels are identified with an icon and/or text across the bottom.</p>
+<div class="divider"></div>
 
 ### Usage
 ```html
@@ -43,6 +45,7 @@ There should always be a selected tab. Only one tab can be selected at a time.
 #### Events
 - `onTabSelected` - Fired when new tab is selected
 - `onTabDeselected` - Fired when tab is deselected
+<div class="divider--half"></div>
 
 ### Panel
 *Igx-Tab-Panel* - _Child component of Igx-Tab-Bar, that represents the container of the content need to be displayed._
@@ -57,6 +60,7 @@ There should always be a selected tab. Only one tab can be selected at a time.
 
 #### Panel Methods
 - `select` - Select the panel and the associated tab
+<div class="divider--half"></div>
 
 ### Tab
 *Igx-Tab* - _Child component of Igx-Tab-Bar, that represents the button that triggers displaying of the associated panel._
@@ -69,8 +73,9 @@ There should always be a selected tab. Only one tab can be selected at a time.
 
 #### Tab Methods
 - `select` - Select the tab and the associated panel
+<div class="divider--half"></div>
 
-### Tabbar Example
+### Tabbar Demo
 <div class="sample-container" style="height:600px">
     <iframe src='https://embed.plnkr.co/DOarGXGXOhO6BsWNdvhr/?show=preview&sidebar=false' width="100%" height="100%" seamless frameBorder="0"></inframe>
 </div>

@@ -5,7 +5,8 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ---
 
 ##Navigation Drawer
-The **ig-nav-drawer** is a container element for side navigation, providing quick access between views. It can be used for navigation apps and with top-level views. Drawer will be hidden until invoked by the user.
+<p class="highlight">The Ignite UI for Angular Navigation Drawer component is a slide in/slide out navigation container that can be pinned or allowed to collapse out of the way when not in use. It can be positioned on either side of the page, with left as the default. The component allows complete programmatic control, including reporting on which panel is currently selected, and allows the use of both navigation items and non-active headers.</p>
+<div class="divider"></div>
 
 ### Usage
 ```html
@@ -28,8 +29,9 @@ The **ig-nav-drawer** is a container element for side navigation, providing quic
         </div>
 </ig-nav-drawer>
 ```
+<div class="divider--half"></div>
 
-### API Summary
+### API
 
 #### Properties
 | Name      | Type|  Description |
@@ -42,6 +44,7 @@ The **ig-nav-drawer** is a container element for side navigation, providing quic
 | `pinThreshold` | number | Minimum device width required for automatic pin to be toggled. Deafult is 1024, can be set to falsy value to ignore. |
 | `width` | string| Width of the drawer in its open state. Defaults to 300px based on the `.ig-nav-drawer` style. Can be used to override or dynamically modify the width.|
 | `miniWidth` | string | Width of the drawer in its mini state. Defaults to 60px based on the `.ig-nav-drawer.mini` style. Can be used to override or dynamically modify the width. |
+<div class="divider--half"></div>
 
 ### Methods
 | Name      |  Description |
@@ -50,6 +53,7 @@ The **ig-nav-drawer** is a container element for side navigation, providing quic
 | `close`   | Close the Navigation Drawer. Has no effect if already closed. *@param* fireEvents Optional flag determining whether events should be fired or not. *@return* Promise that is resolved once the operation completes. |
 | `expectedWidth()`  | Get the Drawer width for specific state. Will attempt to evaluate requested state and cache. |
 | `expectedMiniWidth()`| Get the Drawer mini width for specific state. Will attempt to evaluate requested state and cache. |
+<div class="divider--half"></div>
 
 ### Events
 | Name      |  Description |
@@ -58,6 +62,7 @@ The **ig-nav-drawer** is a container element for side navigation, providing quic
 | `opened`  | Event fired when the Navigation Drawer has opened. |
 | `closing` | Event fired as the Navigation Drawer is about to close. |
 | `closed`  | Event fired when the Navigation Drawer has closed. |
+<div class="divider--half"></div>
 
 Using `TypeScript` to configure Drawer component
 

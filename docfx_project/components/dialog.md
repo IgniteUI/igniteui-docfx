@@ -5,7 +5,8 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ---
 
 ##Dialog Windows
-With the igx-dialog you can create **alerts**, **dialogs** and **custom dialogs**.
+<p class="highlight">Use the Ignite UI for Angular Dialog Window component to display messages or present forms for users to fill out. The component opens a dialog window centered on top of app content. You can also provide a standard alert message that users can cancel.</p>
+<div class="divider"></div>
 
 ### Alerts
 
@@ -23,7 +24,7 @@ You can set title to the alert `title="TitleofTheAlert"`
 You can be more descriptive and set message `message="Your email has been sent successfully!"`
 
 You can attach to the left button select event `(onLeftButtonSelect)="alert.close()"`
-
+<div class="divider--half"></div>
 
 ###Standard Dialogs
 **Dialogs are done by adding another button.**
@@ -50,7 +51,7 @@ You can access all properties of the button component with the following attribu
 `leftButtonBackgroundColor`
 
 `leftButtonRipple`
-
+<div class="divider--half"></div>
 
 ###Custom Dialogs
 **Custom Dialogs are done by adding any mark up in the igx-dialog tag.**
@@ -77,6 +78,7 @@ When you are using Custom Dialogs you don't have a message property set.
 ```
 
 You can make the dialog dismissible `closeOnOutsideSelect="true"``
+<div class="divider--half"></div>
 
 ### Dialog Example
 <div class="sample-container" style="height:600px">

@@ -1,14 +1,20 @@
 ---
-title: Scrollbar Component
+title: Scroll Component
 _description: The Ignite UI for Angular Scroll Bar component is a stand-alone native control that enables you to implement scrolling anywhere for responsive and intuitive UI. 
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Scrollbar components, Angular Scrollbar controls
 ---
 
-##Scrollbar
+##Scroll
+<p class="highlight">The Ignite UI for Angular Scroll component enables developers to put content in a scrollable container. Specify the height of the container or the number of items of content that should be visible at a time. DOM virtualization can be applied to the content inside the scrollable container.</p>
+<div class="divider"></div>
 
-The `IgxScroll` component enables developers to put content in a scrollable container with set height, or number of items in the content to be visible at a time. The scroll component allows for DOM virtualization to be applied to the content inside the scrollable container.  
+### Getting Started
+To use the IgxSlider import the IgxSlider:
 
-### Usage
+```typescript
+import { IgxScroll } from "igniteui-js-blocks/IgxScrollModule";
+```
+<div class="divider--half"></div>
 
 ```html
 <igx-scroll #scroll
@@ -46,15 +52,8 @@ export class IgxScrollSampleComponent {
 }
 
 ```
-## Getting Started
+<div class="divider--half"></div>
 
-### Dependencies
-
-To use the IgxSlider import the IgxSlider:
-
-```typescript
-import { IgxScroll } from "../../../src/main";
-```
 
 ## API
 
@@ -62,22 +61,25 @@ import { IgxScroll } from "../../../src/main";
 
 | Name | Type | Description |
 | :--- | :--- | :--- |
-| itemHeight | boolean | Disables or enables UI interaction. |
-| scrollTop | number | Gets the scroll top of the scroll. |
-| totalItemsCount | number | The amount of the actual rendered items in the scroll. |
-| visibleItemsCount | number | The total amount of items in that will be virtualized. |
+| `itemHeight` | boolean | Disables or enables UI interaction. |
+| `scrollTop` | number | Gets the scroll top of the scroll. |
+| `totalItemsCount` | number | The amount of the actual rendered items in the scroll. |
+| `visibleItemsCount` | number | The total amount of items in that will be virtualized. |
+<div class="divider--half"></div>
 
 ### Outputs
 
 | Name | Description |
 | :--- | :--- | 
-| onScroll  | Scroll event executed each time when the viewport of the IgxScroll is scrolled. Raised with IgxScrollEvent argument|
+| `onScroll`  | Scroll event executed each time when the viewport of the IgxScroll is scrolled. Raised with IgxScrollEvent argument|
+<div class="divider--half"></div>
 
 ### Methods
 
 | Name   | Arguments | Return Type | Description |
 |:----------:|:------|:------|:------|  
-| scrollVertically  | delta: number | void | Scroll with the given delta. Does not scrolls when the scroll delta is outside of the scroll boundaries. |
+| `scrollVertically`  | delta: number | void | Scroll with the given delta. Does not scrolls when the scroll delta is outside of the scroll boundaries. |
+<div class="divider--half"></div>
 
 ### Scrollbar example
 <div class="sample-container" style="height: 600px">

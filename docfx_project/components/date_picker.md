@@ -5,8 +5,8 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ---
 
 ##Date Picker
-The **igx-datePicker** component allows you to choose date from calendar
-which is presented into input field.
+<p class="highlight">The Ignite UI for Angular Date Picker component displays a month-view calendar or a pop-up calendar that lets users pick a single date. The control can focus on the current date and has a cancel button.</p>
+<div class="divider"></div>
 
 ### Usage
 ```typescript
@@ -14,45 +14,51 @@ import { IgxDatePickerComponent } from "igniteui-js-blocks";
 ```
 
 ####Basic initialization
+<div class="divider--half"></div>
+
 ```html
 <igx-datePicker></igx-datePicker>
 ```
 Custom formatter function with passed initial date and locale.
+
 ```html
-<igx-datePicker [formatter]="customFormatter" [value]="dateValue" [locale]="'en-US'">
-</igx-datePicker>
+<igx-datePicker [formatter]="customFormatter" [value]="dateValue" [locale]="'en-US'"></igx-datePicker>
 ```
 
 ####Adding Buttons
+<div class="divider--half"></div>
+
 ```html
-<igx-datePicker [cancelButtonLabel]="'Close'"[todayButtonLabel]="'Today'">
-</igx-datePicker>
+<igx-datePicker [cancelButtonLabel]="'Close'"[todayButtonLabel]="'Today'"></igx-datePicker>
 ```
 
 ####Disabled state
 You have also ability to disable the datePicker
+
 ```html
-<igx-datePicker [isDisabled]="false">
-</igx-datePicker>
+<igx-datePicker [isDisabled]="false"></igx-datePicker>
 ```
 
 ####Settings
 DatePicker with first day of week set to Monday and an event handler when selection is done.
+
 ```html
-<igx-datePicker [weekStart]="1" (onSelection)="eventHandler($event)">
-</igx-datePicker>
+<igx-datePicker [weekStart]="1" (onSelection)="eventHandler($event)"></igx-datePicker>
 ```
 
 ####Binding
 The DatePicker also supports binding through `ngModel` if two-way date-bind is needed.
+
 ```html
-<igx-datePicker [(ngModel)]="myDateValue">
-</igx-datePicker>
+<igx-datePicker [(ngModel)]="myDateValue"></igx-datePicker>
 ```
+<div class="divider"></div>
 
 ### API
 
 #### Inputs
+<div class="divider--half"></div>
+
 | Name   |      Type      |  Description |
 |:----------|:-------------:|:------|
 | `todayBottonLabel` | `string` | Renders today button with custom name, which selects today date from calendar, and fill the datePicker input. |
@@ -64,18 +70,23 @@ The DatePicker also supports binding through `ngModel` if two-way date-bind is n
 | `formatOptions` | `Object` | The format options passed along with the `locale` property used for formatting the dates. |
 
 #### Outputs
+<div class="divider--half"></div>
+
 | Name | Return Type | Description |
 |:--:|:---|:---|
 | `onSelection` | `Date` | Fired when selection is made in the calendar. The event contains the selected value(s) based on the type of selection the component is set to |
 | `onOpen`  | `datePicker` | Emitted when a datePicker calendar is being opened.  |
 
 #### Methods
+<div class="divider--half"></div>
+
 | Name   | Arguments | Return Type | Description |
 |:----------:|:------|:------|:------|
 | `selectDate` | `date: Date` | `void` | Change the calendar selection. Calling this method will emit the `onSelection` event. |
 
+<div class="divider--half"></div>
 
-### Datepicker example
+### Date Picker Demo
 <div class="sample-container" style="height: 700px">
     <iframe frameborder="0" seamless width="100%" height="800px" src="https://embed.plnkr.co/BLcKDnP9ZCQmNTMY7MnF/?show=preview&sidebar=false"></iframe>
 </div>

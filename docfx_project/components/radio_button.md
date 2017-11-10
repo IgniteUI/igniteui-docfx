@@ -5,7 +5,8 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ---
 
 ##Radio Button
-**igx-radio** renders a set of radio buttons to allow the user make a choice and submit data. The user is able to select just one from the available options.
+<p class="highlight">The Ignite UI for Angular Radio Button component renders a set of radio buttons to allow the user make a choice and submit data. The user is able to select just one from the available options.</p>
+<div class="divider"></div>
 
 ### Usage
 
@@ -23,6 +24,7 @@ A number of options, attributes and events are available to customize the compon
 
 The above markup will render three radio buttons, one for each item of the ['Foo', 'Bar', 'Baz'] array. The'value' property is mapped to the input element value attribute,
 while the content of the <igx-radio> tag is what gets displayed in the label associated with the input.
+<div class="divider--half"></div>
 
 ###Properties
 You can assign unique id's by using the 'id' property and use the 'name' property to group buttons together.
@@ -40,6 +42,7 @@ The rest of the properties are also standard and control the tabIndex, disabled 
     {{item}}
 </igx-radio>
 ```
+<div class="divider--half"></div>
 
 ###Events
 You can attach to a change event using `(onchange)="doAlert($event)"`:
@@ -76,8 +79,9 @@ export class RadioSampleComponent {
     }
 }
 ```
+<div class="divider--half"></div>
 
-### Demo
+### Radio Button Demo
 <div class="sample-container" style="height:600px">
 <iframe src='https://embed.plnkr.co/a2Zmf05zcAX1hiE6OwxY/?show=preview&sidebar=false' width="100%" height="100%" seamless frameBorder="0"></inframe>
 </div>

@@ -5,22 +5,16 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ---
 
 ##Button
-
-The **igxButton** directive is intended to be used on any button, span, div, or anchor element to turn it into a fully functional button.
+<p class="highlight">The Button directive is intended to be used on any button, span, div, or anchor element to turn it into a fully functional button.</p>
+<div class="divider"></div>
 
 ### Usage
 ```html
 <target-element igxButton [..options]>Click me</target-element>
 ```
+<div class="divider--half"></div>
 
-### API Summary
-| Name   |      Type      |  Description |
-|:----------|:-------------:|:------|
-| `igxButton` |  string | Set the type of igxButton to be used. Default is set to flat. |
-| `igxButtonColor` |    string   |   Set the button text color. You can pass any CSS valid color value. |
-| `igxButtonBackground` | string | Set the button background color. You can pass any CSS valid color value. |
-
-### Button types
+### Button Types
 | Name   | Description |
 |:----------|:-------------:|
 | `flat` | The default button type. Transparent background and primary theme color for text. |
@@ -29,15 +23,22 @@ The **igxButton** directive is intended to be used on any button, span, div, or 
 | `fab` | Floating action button type. Circular with primary theme color for background and white text. |
 | `icon` | This is the simplest of button types. Use it whenever you need to use an icon as button. |
 | `navbar` | Same as the icon button type, albeit optimized for use with the igx-navbar component. |
+<div class="divider--half"></div>
 
-### Examples
+### API
+| Name   |      Type      |  Description |
+|:----------|:-------------:|:------|
+| `igxButton` |  string | Set the type of igxButton to be used. Default is set to flat. |
+| `igxButtonColor` |    string   |   Set the button text color. You can pass any CSS valid color value. |
+| `igxButtonBackground` | string | Set the button background color. You can pass any CSS valid color value. |
+<div class="divider--half"></div>
+
+### Button Demo
 
 Using `igxButton` to turn a span element into an js blocks styled button.
 ```html
 <span igxButton="raised" igxButtonColor="yellow" igxButtonBackground="#000">Click me<span>
 ```
-
-### Buttons $ Ripples Example
 <div class="sample-container" style="height: 800px">
     <iframe seamless width="100%" height="100%" frameborder="0" src="https://embed.plnkr.co/dGoEcDAQx51I6bQbs6CV/?show=preview&sidebar=false">
 </div>

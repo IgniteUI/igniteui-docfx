@@ -5,9 +5,8 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ---
 
 ##Carousel
-A carousel component is used to browse or navigate through a collection of slides - galleries of images,
-cards, on-boarding tutorials or page-based interfaces. It can be used as a separate full screen element
-or inside another component.
+<p class="highlight">Use the Ignite UI for Angular Carousel component to browse or navigate through a collection of slides, including image galleries, cards, onboarding tutorials, or page-based interfaces. The carousel can be used as a full-screen element or situated inside another component. Slides can be programmed to change at defined intervals in slide-show mode, or set to be scrolled manually by users. Programmatic features of the control include raising an event when a slide is changed, added, or removed.</p>
+<div class="divider"></div>
 
 ### Usage
 ```html
@@ -17,14 +16,20 @@ or inside another component.
     </igx-slide>
 </igx-carousel>
 ```
+<div class="divider--half"></div>
 
-### Carousel Example
+### Carousel Demo 
 <div class="sample-container" style="height: 800px">
     <iframe seamless width="100%" height="100%" frameborder="0" src="https://embed.plnkr.co/sznDmtSNfotjC2THSGav/?show=preview&sidebar=false">
 </div>
+<div class="divider--half"></div>
 
-###API Summary
-#### igx-carousel
+###API 
+<div class="divider--half"></div>
+
+#### Carousel (igx-carousel)
+<div class="divider--half"></div>
+
 | Name   |      Type      |  Description |
 |:----------|:-------------:|:------|
 | `loop` |  boolean | Should the carousel wrap back to the first slide after it reaches the last. Defaults to `true`. |
@@ -49,7 +54,9 @@ or inside another component.
 | `get(index: Number)` | IgxSlide or void | Returns the slide with the given index or null. |
 | `select(slide: IgxSlide, direction: Direction)`| void | Selects the slide and the direction to transition to. Emits `onSlideChanged` event. |
 
-#### igx-slide
+#### Slide (igx-slide)
+<div class="divider--half"></div>
+
 | Name   |      Type      |  Description |
 |:----------|:-------------:|:------|
 | `index` |  number | The index of the slide inside the carousel. |

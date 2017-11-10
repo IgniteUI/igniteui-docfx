@@ -5,8 +5,8 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ---
 
 ##Checkbox
-
-`igx-checkbox` is a selection component that allows users to make a binary choice for a certain condition. It behaves similar to the native browser checkbox.  
+<p class="highlight">The Ignite UI for Angular Checkbox component is a selection control that allows users to make a binary choice for a certain condition. It behaves similarly to the native browser checkbox.</p>
+<div class="divider"></div>
 
 ### Usage
 
@@ -37,7 +37,7 @@ You can easily use it within forms with `[(ngModel)]`
 </form>
 ```
 
-### Demo
+### Checkbox Demo
 <div class="sample-container" style="height:600px">
 <iframe src='https://embed.plnkr.co/07AdbpRH48oYwxvnfelD/?show=preview&sidebar=false' width="100%" height="100%" seamless frameBorder="0"></inframe>
 </div>

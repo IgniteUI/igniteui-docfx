@@ -45,3 +45,11 @@ header .navbar {
 .toc {
     background-color: #fff;
 }
+
+.divider {
+    display: block;
+    height: 24px;
+    &--half {
+        height: 12px;
+    }
+}

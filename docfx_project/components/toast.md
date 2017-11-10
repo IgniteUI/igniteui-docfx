@@ -5,7 +5,8 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ---
 
 ##Toast
-**igx-toast** IgxToast provides information and warning messages. They could not be dismissed, are non-interactive and can appear on top, middle and the bottom of the screen.
+<p class="highlight">The Toast component provides information and warning messages that are non-interactive and cannot be dismissed by users. Notifications can be displayed at the bottom, middle, or top of the page.</p>
+<div class="divider"></div>
 
 ###Usage
 
@@ -23,6 +24,7 @@ You can be more descriptive and set message `message="Something happened!"`.
 You can show the toast by using `toast.show()` method.
 
 You can show hide toast by using `toast.hide()` method.
+<div class="divider--half"></div>
 
 ###Positioning
 
@@ -36,6 +38,7 @@ You can show hide toast by using `toast.hide()` method.
 ```
 
 You can modify the position of the toast by setting `postion="IgxToastPosition.Top"`.
+<div class="divider--half"></div>
 
 ###Events
 
@@ -55,8 +58,9 @@ You can handle the onShowing event by using `(onShowing)="someFunc($event)"`.
 You can handle the onShown event by using `(onShowing)="someFunc($event)"`.
 You can handle the onHiding event by using `(onHiding)="someFunc($event)"`.
 You can handle the onHidden event by using `(onHidden)="someFunc($event)"`.
+<div class="divider--half"></div>
 
-### Toast example
+### Toast Demo
 <div class="sample-container" style="height: 400px">
     <iframe frameborder="0" seamless width="100%" height="800px" src="https://embed.plnkr.co/O4aTIlhk5RgtyEM8viaS/?show=preview&sidebar=false"></iframe>
 </div>

@@ -5,22 +5,14 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ---
 
 ##Badge
-
-The **igx-badge** component is an absolutely positioned element that can be used in tandem with other components such as avatars, navigation menus, or anywhere else in an app where some active indication is required.
-With the igx-badge you can display active count or an icon in several different predefined styles.
+<p class="highlight">The Ignite UI for Angular Badge is an absolutely positioned element that can be used to decorate avatars, navigation menus, or other components in the app that require an active indicator. Badges can display an active count, and can be designed as icons with a predefined style to communicate information, success, warnings, or errors.</p>
+<div class="divider"></div>
 
 ### Usage
 ```html
 <igx-badge value="8"></igx-badge>
 ```
-
-### API Summary
-| Name   |      Type      |  Description |
-|:----------|:-------------:|:------|
-| `type` | string | Set the type of the badge to either `default`, `info`, `success`, `warning`, or `error`. This will change the background color of the badge according to the values set in the default theme. |
-| `position` | string | Set the position of the badge relative to its parent container to either `top-right`, `top-left`, `bottom-right`, or `bottom-left`. |
-| `value` | string | Set the value to be displayed inside the badge. |
-| `icon` | string | Set an icon for the badge from the material icons set. Will not be displayed if `value` for the badge is already set. |
+<div class="divider--half"></div>
 
 ### Examples
 
@@ -30,7 +22,18 @@ Using `igx-badge` with the `igx-avatar` component to show active status.
     <igx-badge type="info" value="8"></igx-badge>
 </igx-avatar>
 ```
-### Badge Example
+<div class="divider--half"></div>
+
+### API Summary
+| Name   |      Type      |  Description |
+|:----------|:-------------:|:------|
+| `type` | string | Set the type of the badge to either `default`, `info`, `success`, `warning`, or `error`. This will change the background color of the badge according to the values set in the default theme. |
+| `position` | string | Set the position of the badge relative to its parent container to either `top-right`, `top-left`, `bottom-right`, or `bottom-left`. |
+| `value` | string | Set the value to be displayed inside the badge. |
+| `icon` | string | Set an icon for the badge from the material icons set. Will not be displayed if `value` for the badge is already set. |
+<div class="divider--half"></div>
+
+### Badge Demo
 <div class="sample-container" style="height:600px">
     <iframe src='https://embed.plnkr.co/cKRXdm6dhpKOq30UcGdN/?show=preview&sidebar=false' width="100%" height="100%" seamless frameBorder="0"></inframe>
 </div>

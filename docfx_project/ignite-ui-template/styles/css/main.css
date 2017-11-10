@@ -95,6 +95,14 @@ blockquote {
   margin-top: 0rem;
   margin-bottom: 1.5rem;
   font-weight: 300; }
+  p.highlight,
+  ul.highlight,
+  ol.highlight,
+  pre.highlight,
+  table.highlight,
+  blockquote.highlight {
+    font-weight: 400;
+    color: #333; }
 
 ul ul,
 ol ol,
@@ -685,6 +693,12 @@ header .navbar {
 .fixed_header,
 .toc {
   background-color: #fff; }
+
+.divider {
+  display: block;
+  height: 24px; }
+  .divider--half {
+    height: 12px; }
 
 .breadcrumb {
   margin: 0;
