@@ -606,7 +606,8 @@ table a {
 .anchorjs-link {
   position: absolute;
   color: rgba(115, 25, 99, 0.6);
-  font-family: 'Material Icons'; }
+  font-family: 'Material Icons';
+  padding-top: 0.1em; }
   .anchorjs-link:hover {
     color: #731963; }
   .anchorjs-link::after {
@@ -920,7 +921,7 @@ pre {
   color: #e06c75; }
 
 .hljs-literal {
-  color: #0099fb; }
+  color: #e32659; }
 
 .hljs-string,
 .hljs-regexp,
@@ -949,7 +950,7 @@ pre {
 .hljs-meta,
 .hljs-selector-id,
 .hljs-title {
-  color: #61aeee; }
+  color: #00ffff; }
 
 .hljs-emphasis {
   font-style: italic; }
