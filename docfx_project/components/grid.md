@@ -222,7 +222,7 @@ A list of the events emitted by the **igx-grid**:
 Defining handlers for these event emitters id done using declarative event binding:
 ```html
 <igx-grid #grid1 [data]="data | async" [autoGenerate]="false"
- (onColumnInit)="initColumns($event)" (onCellSelection)="selectCell($event)">
+ (onColumnInit)="initColumns($event)" (onCellSelection)="selectCell($event)"></igx-grid>
 ```
 <div class="divider--half"></div>
 
