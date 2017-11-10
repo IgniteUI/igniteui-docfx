@@ -987,7 +987,7 @@ pre {
   .color-title a {
     color: inherit; }
     .color-title a:hover {
-      color: #fff; }
+      color: inherit; }
 
 .color-values {
   display: -webkit-box;
