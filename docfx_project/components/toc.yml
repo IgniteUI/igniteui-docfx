@@ -66,3 +66,11 @@
   href: calendar.md
 - name: Date Picker 
   href: date_picker.md
+- name: Styleguide
+  header: true
+- name: Colors
+  href: colors.md
+- name: Typography
+  href: typography.md
+- name: Shadows
+  href: shadows.md
