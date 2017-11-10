@@ -5,17 +5,10 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 _extraFont: https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600,700 
 ---
 
-## Typography Styleguide 
-<p class="highlight">Use the Ignite UI for Angular Avatar to add images, material icons, or initials to an application, which is helpful for representing users in lists or profile buttons. The Avatar can be square or circular, with three size options. The control supports all images from the material icon set as well as custom images.</p>
-<div class="divider"></div>
-
-### Typeface
-<article class="sample-column">
-    <p>Ignite UI JS Blocks uses <a href="https://fonts.google.com/specimen/Titillium+Web">Titillium Web</a> as the font
+## Typography
+<p class="highlight">Ignite UI JS Blocks uses <a href="https://fonts.google.com/specimen/Titillium+Web">Titillium Web</a> as the font
         of choice. It is highly optimized for the web, legible, and pairs great with Google's own <a href="https://fonts.google.com/specimen/Roboto">Roboto</a>.</p>
-</article>
-
-<div class="divider--half"></div>
+<div class="divider"></div>
 
 ### Font Weights
 
