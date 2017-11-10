@@ -1222,3 +1222,78 @@ pre {
 .elevation-sample.elevate-24 {
   -webkit-box-shadow: 0 11px 15px -7px rgba(0, 0, 0, 0.26), 0 24px 38px 3px rgba(0, 0, 0, 0.12), 0 9px 46px 8px rgba(0, 0, 0, 0.08);
           box-shadow: 0 11px 15px -7px rgba(0, 0, 0, 0.26), 0 24px 38px 3px rgba(0, 0, 0, 0.12), 0 9px 46px 8px rgba(0, 0, 0, 0.08); }
+
+.typography-sample {
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 27px;
+  margin-bottom: 24px; }
+  .typography-sample .h1--igx {
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 3.375rem;
+    margin-top: 1.6875rem;
+    margin-bottom: 3.375rem; }
+  .typography-sample .h2--igx {
+    font-size: 2.25rem;
+    font-weight: 600;
+    line-height: 2.8125rem;
+    margin-top: 1.6875rem;
+    margin-bottom: 1.6875rem; }
+  .typography-sample .h3--igx {
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 2.1875rem;
+    margin-top: 1.6875rem;
+    margin-bottom: 0; }
+  .typography-sample .h4--igx {
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 1.375rem;
+    margin-top: 1.6875rem;
+    margin-bottom: 0; }
+  .typography-sample p {
+    margin-top: 0;
+    margin-bottom: 1.6875rem;
+    font-weight: 400; }
+  .typography-sample blockquote {
+    font-size: 1.5rem;
+    line-height: 2.185rem;
+    margin-top: 0;
+    margin-bottom: 1.6875rem; }
+  .typography-sample ul,
+  .typography-sample ol {
+    font-weight: 400; }
+
+.typography-group div.typography-sample {
+  margin-top: 0; }
+
+.typography-sample div.spec {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap; }
+
+.font-weights {
+  list-style: none;
+  padding: 0; }
+
+.font-weights li {
+  font-size: 28px;
+  line-height: 35px; }
+
+.font-weights li.light {
+  font-weight: 300; }
+
+.font-weights li.normal {
+  font-weight: 400; }
+
+.font-weights li.semibold {
+  font-weight: 600; }
+
+.font-weights li.bold {
+  font-weight: 700; }
