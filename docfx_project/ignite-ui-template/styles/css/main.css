@@ -320,7 +320,7 @@ sub {
 .sidenav {
   margin-right: -15px; }
   .sidenav__header {
-    padding: 24px 16px !important;
+    padding: 16px !important;
     position: relative;
     font-size: 16px !important;
     color: #731963;
@@ -341,7 +341,7 @@ sub {
   .toc .nav li a {
     color: #585858;
     font-weight: normal;
-    padding: 16px; }
+    padding: 8px 16px; }
 
 .toc .nav li.active {
   background-color: #f1f1f1; }
