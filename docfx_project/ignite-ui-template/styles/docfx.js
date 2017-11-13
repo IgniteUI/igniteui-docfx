@@ -22,6 +22,7 @@ $(function() {
 
     breakText();
     renderHeader();
+    copyCode();
 
     window.refresh = function(article) {
         // Update markup result
@@ -86,17 +87,42 @@ $(function() {
         }
     }
 
+    function copyCode() {
+        var btn = '.hljs-code-copy';
+        var cpb = new Clipboard(btn, {
+            text: function(trigger) {
+                var codeSnippet = $(trigger)
+                    .prevAll('code')
+                    .text();
+
+                return codeSnippet;
+            }
+        });
+    }
+
     // Enable highlight.js
     function highlight() {
         $('pre code').each(function(i, block) {
             hljs.highlightBlock(block);
+
             $(block)
                 .parent()
-                .append(
+                .append([
                     '<span class="hljs-lang-name">' +
                         block.result.language +
-                        '</span>'
-                );
+                        '</span>',
+                    '<button class="hljs-code-copy hidden">COPY CODE</button>'
+                ])
+                .on('mouseenter', function() {
+                    $(this)
+                        .find('.hljs-code-copy')
+                        .removeClass('hidden');
+                })
+                .on('mouseleave', function() {
+                    $(this)
+                        .find('.hljs-code-copy')
+                        .addClass('hidden');
+                });
         });
         $('pre code[highlight-lines]').each(function(i, block) {
             if (block.innerHTML === '') return;

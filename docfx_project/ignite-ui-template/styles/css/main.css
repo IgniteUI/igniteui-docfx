@@ -918,6 +918,36 @@ pre {
   font-weight: bold;
   opacity: .7; }
 
+.hljs-code-copy {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 8px;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
+  background: #731963;
+  font-weight: bold;
+  border: 0;
+  top: 0;
+  right: 0;
+  outline-style: none;
+  -webkit-transition: color .25s ease-in-out;
+  transition: color .25s ease-in-out; }
+  .hljs-code-copy:hover {
+    color: #fff; }
+  .hljs-code-copy::before {
+    font-family: 'Material Icons';
+    font-size: inherit;
+    content: '\E14D';
+    color: inherit;
+    margin-right: 8px; }
+  .hljs-code-copy.hidden {
+    display: none; }
+
 .hljs-comment,
 .hljs-quote {
   color: #5c6370;

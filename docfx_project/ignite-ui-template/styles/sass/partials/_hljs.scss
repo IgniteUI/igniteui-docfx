@@ -24,6 +24,35 @@ pre {
     opacity: .7;
 }
 
+.hljs-code-copy {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    font-size: 12px;
+    color: transparentize(#fff, .4);
+    background: $byzantium;
+    font-weight: bold;
+    border: 0;
+    top: 0;
+    right: 0;
+    outline-style: none;
+    transition: color .25s ease-in-out;
+    &:hover {
+        color: #fff;
+    }
+    &::before {
+        font-family: 'Material Icons';
+        font-size: inherit;
+        content: '\E14D';
+        color: inherit;
+        margin-right: 8px;
+    }
+    &.hidden {
+        display: none;
+    }
+}
+
 .hljs-comment,
 .hljs-quote {
     color: #5c6370;
