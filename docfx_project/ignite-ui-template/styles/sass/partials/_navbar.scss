@@ -21,7 +21,7 @@
 }
 
 .navbar {
-    .navbar-brand>span {
+    .navbar-brand > span {
         color: #fff;
     }
     .nav.navbar-nav {
@@ -29,14 +29,14 @@
         padding: 16px;
         font-size: 14px;
         font-weight: 400;
-        li>a {
+        li > a {
             transition: all 0.25s ease-in-out;
         }
-        li.active>a {
+        li.active > a {
             background-color: transparent !important;
             font-weight: 500;
         }
-        li.nav__cta>a {
+        li.nav__cta > a {
             color: #fff;
             background-color: #0099ff;
             text-transform: uppercase;
@@ -60,3 +60,8 @@
 // #autocollapse .nav.navbar-nav {
 //     display: inline-block !important;
 // }
+
+.navbar-toggle {
+    margin: 10px 10px 4px 10px;
+    padding: 8px;
+}
