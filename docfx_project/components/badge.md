@@ -8,6 +8,12 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <p class="highlight">The Ignite UI for Angular Badge is an absolutely positioned element that can be used to decorate avatars, navigation menus, or other components in the app that require an active indicator. Badges can display an active count, and can be designed as icons with a predefined style to communicate information, success, warnings, or errors.</p>
 <div class="divider"></div>
 
+### Badge Demo
+<div class="sample-container" style="height:600px">
+    <iframe src='https://embed.plnkr.co/cKRXdm6dhpKOq30UcGdN/?show=preview&sidebar=false' width="100%" height="100%" seamless frameBorder="0"></inframe>
+</div>
+<div class="divider--half"></div>
+
 ### Usage
 ```html
 <igx-badge value="8"></igx-badge>
@@ -33,7 +39,4 @@ Using `igx-badge` with the `igx-avatar` component to show active status.
 | `icon` | string | Set an icon for the badge from the material icons set. Will not be displayed if `value` for the badge is already set. |
 <div class="divider--half"></div>
 
-### Badge Demo
-<div class="sample-container" style="height:600px">
-    <iframe src='https://embed.plnkr.co/cKRXdm6dhpKOq30UcGdN/?show=preview&sidebar=false' width="100%" height="100%" seamless frameBorder="0"></inframe>
-</div>
+

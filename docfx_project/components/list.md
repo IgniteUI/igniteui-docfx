@@ -8,6 +8,12 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <p class="highlight">The Ignite UI for Angular List component displays rows of items and supports one or more header items as well as search and filtering of list items. Each list item is completely templateable and will support any valid HTML or Angular component. </p>
 <div class="divider"></div>
 
+### List Demo
+<div class="sample-container" style="height:100%">
+<iframe src='https://embed.plnkr.co/lBqSPM8X3hYEzkXxXhUY/?show=preview&sidebar=false' width="100%" height="1000px" seamless frameBorder="0"></inframe>
+</div>
+<div class="divider--half"></div>
+
 ###Usage
 ```html
 <igx-list>
@@ -67,8 +73,3 @@ _Child component of Igx-List, that represents a single interactable item. Its co
 - `panState` - Gets the items pan state
 - `options` - Defines the options of particular list item, that will be displayed on item swipe (pan)
 <div class="divider--half"></div>
-
-### List Demo
-<div class="sample-container" style="height:100%">
-<iframe src='https://embed.plnkr.co/lBqSPM8X3hYEzkXxXhUY/?show=preview&sidebar=false' width="100%" height="1000px" seamless frameBorder="0"></inframe>
-</div>

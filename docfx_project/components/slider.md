@@ -8,6 +8,13 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <p class="highlight">Configure a slider or range slider with the Ignite UI for Angular Slider control. Users can select a value in a given range, or a range of values. The range can be defined as continuous or stepped.</p>
 <div class="divider"></div>
 
+### Slider Example
+<div class="sample-container" style="height: 500px">
+    <iframe frameborder="0" seamless width="100%" height="100%" src="https://embed.plnkr.co/oSE8Ux47XGvBAxPZOQyq/?show=preview&sidebar=false"></iframe>
+</div>
+<div class="divider--half"></div>
+
+
 ###Usage
 #####Basic Slider
 <div class="divider--half"></div>
@@ -78,8 +85,3 @@ import { IgxSlider } from "igniteui-js-blocks/IgxSliderModule";
 | :--- | :--- | 
 | `onValueChange`  | This event is emitted when user has stopped interacting the thumb and value is changed.  |
 <div class="divider--half"></div>
-
-### Slider Example
-<div class="sample-container" style="height: 500px">
-    <iframe frameborder="0" seamless width="100%" height="800px" src="https://embed.plnkr.co/oSE8Ux47XGvBAxPZOQyq/?show=preview&sidebar=false"></iframe>
-</div>

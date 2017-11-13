@@ -8,6 +8,12 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <p class="highlight">Use the Ignite UI for Angular Dialog Window component to display messages or present forms for users to fill out. The component opens a dialog window centered on top of app content. You can also provide a standard alert message that users can cancel.</p>
 <div class="divider"></div>
 
+### Dialog Example
+<div class="sample-container" style="height:600px">
+    <iframe src='https://embed.plnkr.co/yIeKqBnaO2ScYppfq1p4/?show=preview&sidebar=false' width="100%" height="100%" seamless frameBorder="0"></inframe>
+</div>
+<div class="divider--half"></div>
+
 ### Alerts
 
 **Alerts are done by adding title, message and button label.**
@@ -79,8 +85,3 @@ When you are using Custom Dialogs you don't have a message property set.
 
 You can make the dialog dismissible `closeOnOutsideSelect="true"``
 <div class="divider--half"></div>
-
-### Dialog Example
-<div class="sample-container" style="height:600px">
-    <iframe src='https://embed.plnkr.co/yIeKqBnaO2ScYppfq1p4/?show=preview&sidebar=false' width="100%" height="100%" seamless frameBorder="0"></inframe>
-</div>

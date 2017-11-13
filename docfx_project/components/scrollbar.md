@@ -8,6 +8,12 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <p class="highlight">The Ignite UI for Angular Scroll component enables developers to put content in a scrollable container. Specify the height of the container or the number of items of content that should be visible at a time. DOM virtualization can be applied to the content inside the scrollable container.</p>
 <div class="divider"></div>
 
+### Scrollbar Demo
+<div class="sample-container" style="height: 600px">
+    <iframe frameborder="0" seamless width="100%" height="100%" src="https://embed.plnkr.co/67GGHsYqmyVIlepa2P9U/?show=preview&sidebar=false"></iframe>
+</div>
+<div class="divider--half"></div>
+
 ### Getting Started
 To use the IgxSlider import the IgxSlider:
 
@@ -80,8 +86,3 @@ export class IgxScrollSampleComponent {
 |:----------:|:------|:------|:------|  
 | `scrollVertically`  | delta: number | void | Scroll with the given delta. Does not scrolls when the scroll delta is outside of the scroll boundaries. |
 <div class="divider--half"></div>
-
-### Scrollbar example
-<div class="sample-container" style="height: 600px">
-    <iframe frameborder="0" seamless width="100%" height="800px" src="https://embed.plnkr.co/67GGHsYqmyVIlepa2P9U/?show=preview&sidebar=false"></iframe>
-</div>

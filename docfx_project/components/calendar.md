@@ -8,6 +8,12 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <p class="highlight">The Ignite UI for Angular Calendar component provides three easy, intuitive ways for applications to display date information. Users can input dates, select a single date, or pick a range of dates.</p>
 <div class="divider"></div>
 
+### Calendar Demo
+<div class="sample-container" style="height:900px">
+    <iframe src='https://embed.plnkr.co/QVkzMWZoFyfzLcZFDm3T/?show=preview&sidebar=false' width="100%" height="100%" seamless frameBorder="0"></inframe>
+</div>
+<div class="divider--half"></div>
+
 ### Usage
 ```typescript
 import { IgxCalendarComponent } from "igniteui-js-blocks";
@@ -72,8 +78,3 @@ When a day inside the current month is focused:
 |:----------:|:------|:------|:------|
 | `selectDate` | `date: Date \| Date[]` | `void` | Change the calendar selection. Calling this method will emit the `onSelection` event. |
 <div class="divider--half"></div>
-
-### Calendar Demo
-<div class="sample-container" style="height:600px">
-    <iframe src='https://embed.plnkr.co/QVkzMWZoFyfzLcZFDm3T/?show=preview&sidebar=false' width="100%" height="100%" seamless frameBorder="0"></inframe>
-</div>

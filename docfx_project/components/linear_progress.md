@@ -8,6 +8,12 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <p class="highlight">The Ignite UI for Angular Linear Progress Bar Indicator component provides a visual indicator of an application’s process as it changes. The indicator updates its appearance as its state changes. The indicator can be styled with a choice of colors in stripes or solids.</p>
 <div class="divider"></div>
 
+### Linear Progress Demo 
+<div class="sample-container" style="height: 400px">
+    <iframe frameborder="0" seamless width="100%" height="100%" src="https://embed.plnkr.co/C8rf1s2ImziUZRnskkjp/?show=preview&sidebar=false"></iframe>
+</div>
+<div class="divider--half"></div>
+
 ### Usage
 ```html
 <igx-linear-bar [striped]="false" [value]="currentValue" [max]="200">
@@ -32,8 +38,3 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 | `getPercentValue()` | Calculate the percentage based on passed value. |
 | `onProgressChanged` | Exposed event, that could be handled to track progress changing |
 <div class="divider--half"></div>
-
-### Linear Progress Demo 
-<div class="sample-container" style="height: 400px">
-    <iframe frameborder="0" seamless width="100%" height="800px" src="https://embed.plnkr.co/C8rf1s2ImziUZRnskkjp/?show=preview&sidebar=false"></iframe>
-</div>

@@ -8,6 +8,12 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <p class="highlight">The Ignite UI for Angular Icon component unifies icon/font sets so developers can use them interchangeably and add material icons to markup. The component supports custom colors. Icons can be set as inactive.</p>
 <div class="divider"></div>
 
+### Icon Demo
+<div class="sample-container" style="height:600px">
+<iframe src='https://embed.plnkr.co/ak3LxRxtDkXjBR7pzY3j/?show=preview&sidebar=false' width="100%" height="100%" seamless frameBorder="0"></inframe>
+</div>
+<div class="divider--half"></div>
+
 ### Usage
 
 ```html
@@ -45,8 +51,3 @@ You can programmatically get all of the icon properties with the following icon 
 `getIconName()` returns the icon name
 `getActive()` returns the icon active state
 <div class="divider"></div>
-
-### Icon Demo
-<div class="sample-container" style="height:600px">
-<iframe src='https://embed.plnkr.co/ak3LxRxtDkXjBR7pzY3j/?show=preview&sidebar=false' width="100%" height="100%" seamless frameBorder="0"></inframe>
-</div>

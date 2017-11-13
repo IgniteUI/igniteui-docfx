@@ -8,6 +8,12 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <p class="highlight">Use the Ignite UI for Angular Avatar to add images, material icons, or initials to an application, which is helpful for representing users in lists or profile buttons. The Avatar can be square or circular, with three size options. The control supports all images from the material icon set as well as custom images.</p>
 <div class="divider"></div>
 
+### Avatar Demo
+<div class="sample-container" style="height:600px">
+    <iframe src='https://embed.plnkr.co/KLPxh3/?show=preview&sidebar=false' width="100%" height="100%" seamless frameBorder="0"></inframe>
+</div>
+<div class="divider--half"></div>
+
 ### Usage
 ```html
 <igx-avatar roundShape="true" icon="person" bgColor="#0375be" data-init="SS">
@@ -45,7 +51,3 @@ avatarInstance.size('small');
 ```
 <div class="divider--half"></div>
 
-### Avatar Demo
-<div class="sample-container" style="height:600px">
-    <iframe src='https://embed.plnkr.co/KLPxh3/?show=preview&sidebar=false' width="100%" height="100%" seamless frameBorder="0"></inframe>
-</div>

@@ -8,6 +8,12 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <p class="highlight">The Ignite UI for Angular Card component displays text, images, icons, and buttons in visually rich presentation that can serve as an entry point to more detailed information. Cards can be used to create a multimedia dashboard. The Card component supports pagination using the same component as the Ignite UI for Angular Grid, with some custom coding required.</p>
 <div class="divider"></div>
 
+### Card Demo
+<div class="sample-container" style="height: 800px">
+    <iframe seamless width="100%" height="100%" frameborder="0" src="https://embed.plnkr.co/JWAYTeaQnt4dn8SONIwd/?show=preview&sidebar=false"></iframe>
+</div>
+<div class="divider--half"></div>
+
 ### Getting Started
 Import the `IgxCardModule` inside your application/module.
 ```typescript
@@ -36,8 +42,3 @@ import { IgxCardModule } from "igniteui-js-blocks";
 ```
 <div class="divider--half"></div>
 
-### Card Demo
-<div class="sample-container" style="height: 800px">
-    <iframe seamless width="100%" height="100%" frameborder="0" src="https://embed.plnkr.co/JWAYTeaQnt4dn8SONIwd/?show=preview&sidebar=false"></iframe>
-</div>
-<div class="divider--half"></div>

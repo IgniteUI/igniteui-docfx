@@ -8,6 +8,12 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <p class="highlight">The Ignite UI for Angular Circular Progress Indicator component provides a visual indicator of an application’s process as it changes. The circular indicator updates its appearance as its state changes.<p>
 <div class="divider"></div>
 
+### Circular Progress Demo
+<div class="sample-container" style="height: 400px">
+    <iframe frameborder="0" seamless width="100%" height="100%" src="https://embed.plnkr.co/EqEQWTixihBKywSLk1MX/?show=preview&sidebar=false"></iframe>
+</div>
+<div class="divider--half"></div>
+
 ### Usage
 ```html
 <igx-circular-bar (onProgressChanged)="f($event)" [value]="currentValue">
@@ -30,8 +36,3 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 | `getPercentValue()` | Calculate the percentage based on passed value. |
 | `onProgressChanged` | Exposed event, that could be handled to track progress changing |
 <div class="divider--half"></div>
-
-### Circular Progress Demo
-<div class="sample-container" style="height: 400px">
-    <iframe frameborder="0" seamless width="100%" height="800px" src="https://embed.plnkr.co/EqEQWTixihBKywSLk1MX/?show=preview&sidebar=false"></iframe>
-</div>

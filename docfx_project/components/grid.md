@@ -8,6 +8,12 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <p class="highlight">Display and manipulate tabular data with the Ignite UI for Angular Data Grid. Quickly bind your data with very little coding or configuration. Features include filtering, sorting, paging, templates, movable columns, and the ability to edit and update data. User actions are easy to understand and can be controlled programmatically.</p>
 <div class="divider"></div>
 
+### Grid Demo
+<div class="sample-container" style="height:600px">
+    <iframe src='https://embed.plnkr.co/uua2w0Dj7tm6zQurt3VQ/?show=preview&sidebar=false' width="100%" height="100%" seamless frameBorder="0"></inframe>
+</div>
+<div class="divider--half"></div>
+
 ### Dependencies
 The most basic grid that can be run depends on the **IgxGridComponent** only, however in order to use all features available, let's include the adittional dependencies too. Some of these are **DataContainer** (responsible for CRUD operations, data records access, data processing etb.), **IDataSate** (filtering, sorting, paging features), sorting and filtering strategies, etc:
 
@@ -264,8 +270,3 @@ Inputs available on the **IgxGridColumnComponent** to define columns:
 | `filteringIgnoreCase`  | boolean  | Ignore capitalization of words |
 | `dataType`  | DataType  | String, number, Boolean or Date |
 <div class="divider--half"></div>
-
-### Grid Demo
-<div class="sample-container" style="height:600px">
-    <iframe src='https://embed.plnkr.co/uua2w0Dj7tm6zQurt3VQ/?show=preview&sidebar=false' width="100%" height="100%" seamless frameBorder="0"></inframe>
-</div>

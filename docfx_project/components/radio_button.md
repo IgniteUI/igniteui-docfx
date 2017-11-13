@@ -8,6 +8,12 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <p class="highlight">The Ignite UI for Angular Radio Button component renders a set of radio buttons to allow the user make a choice and submit data. The user is able to select just one from the available options.</p>
 <div class="divider"></div>
 
+### Radio Button Demo
+<div class="sample-container" style="height:600px">
+<iframe src='https://embed.plnkr.co/a2Zmf05zcAX1hiE6OwxY/?show=preview&sidebar=false' width="100%" height="100%" seamless frameBorder="0"></inframe>
+</div>
+<div class="divider--half"></div>
+
 ### Usage
 
 A number of options, attributes and events are available to customize the component look and feel and the way the radio button is working.
@@ -80,8 +86,3 @@ export class RadioSampleComponent {
 }
 ```
 <div class="divider--half"></div>
-
-### Radio Button Demo
-<div class="sample-container" style="height:600px">
-<iframe src='https://embed.plnkr.co/a2Zmf05zcAX1hiE6OwxY/?show=preview&sidebar=false' width="100%" height="100%" seamless frameBorder="0"></inframe>
-</div>

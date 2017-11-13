@@ -8,6 +8,12 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <p class="highlight">The Toast component provides information and warning messages that are non-interactive and cannot be dismissed by users. Notifications can be displayed at the bottom, middle, or top of the page.</p>
 <div class="divider"></div>
 
+### Toast Demo
+<div class="sample-container" style="height: 600px">
+    <iframe frameborder="0" seamless width="100%" height="100%" src="https://embed.plnkr.co/O4aTIlhk5RgtyEM8viaS/?show=preview&sidebar=false"></iframe>
+</div>
+<div class="divider--half"></div>
+
 ###Usage
 
 ```html
@@ -59,8 +65,3 @@ You can handle the onShown event by using `(onShowing)="someFunc($event)"`.
 You can handle the onHiding event by using `(onHiding)="someFunc($event)"`.
 You can handle the onHidden event by using `(onHidden)="someFunc($event)"`.
 <div class="divider--half"></div>
-
-### Toast Demo
-<div class="sample-container" style="height: 400px">
-    <iframe frameborder="0" seamless width="100%" height="800px" src="https://embed.plnkr.co/O4aTIlhk5RgtyEM8viaS/?show=preview&sidebar=false"></iframe>
-</div>

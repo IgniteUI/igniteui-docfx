@@ -8,6 +8,12 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <p class="highlight">With the Ignite UI for Angular Ripple directive, you can create a ripple animation effect to give users feedback when they’re trying to click or touch regions that aren’t configured to receive that input. Use it to define a relatively positioned element to animate in response to a touch or mouse click.</p>
 <div class="divider"></div>
 
+### Ripple Demo
+<div class="sample-container" style="height: 800px">
+    <iframe seamless width="100%" height="100%" frameborder="0" src="https://embed.plnkr.co/dGoEcDAQx51I6bQbs6CV/?show=preview&sidebar=false">
+</div>
+<div class="divider--half"></div>
+
 ### Usage
 ```html
 <target-element igxRipple [...options]>Click me</target-element>
@@ -46,8 +52,3 @@ for other browsers.
 | `igxRippleCentered` | boolean | If true, the ripple animation originates from the center of the element rather than the location of the click event. |
 | `igxRippleDuration` | number | The duration of the ripple animation. Defaults to 600 milliseconds. |
 <div class="divider--half"></div>
-
-### Ripple Demo
-<div class="sample-container" style="height: 800px">
-    <iframe seamless width="100%" height="100%" frameborder="0" src="https://embed.plnkr.co/dGoEcDAQx51I6bQbs6CV/?show=preview&sidebar=false">
-</div>

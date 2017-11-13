@@ -8,6 +8,12 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <p class="highlight">The Ignite UI for Angular Date Picker component displays a month-view calendar or a pop-up calendar that lets users pick a single date. The control can focus on the current date and has a cancel button.</p>
 <div class="divider"></div>
 
+### Date Picker Demo
+<div class="sample-container" style="height: 800px">
+    <iframe frameborder="0" seamless width="100%" height="100%" src="https://embed.plnkr.co/BLcKDnP9ZCQmNTMY7MnF/?show=preview&sidebar=false"></iframe>
+</div>
+<div class="divider--half"></div>
+
 ### Usage
 ```typescript
 import { IgxDatePickerComponent } from "igniteui-js-blocks";
@@ -85,8 +91,3 @@ The DatePicker also supports binding through `ngModel` if two-way date-bind is n
 | `selectDate` | `date: Date` | `void` | Change the calendar selection. Calling this method will emit the `onSelection` event. |
 
 <div class="divider--half"></div>
-
-### Date Picker Demo
-<div class="sample-container" style="height: 700px">
-    <iframe frameborder="0" seamless width="100%" height="800px" src="https://embed.plnkr.co/BLcKDnP9ZCQmNTMY7MnF/?show=preview&sidebar=false"></iframe>
-</div>

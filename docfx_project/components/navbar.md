@@ -8,6 +8,12 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <p class="highlight">The Ignite UI for Angular Navigation Bar component informs the user of their current position in an app, and helps them move back (much like the “back” button in a browser). The Navigation Bar can also provide links to quick actions such as search or favorite, helping users navigate smoothly through an application without trying to move to invalid routes or states. The bar sits at the top of the container it is placed in.</p>
 <div class="divider"></div>
 
+### Navbar Demo
+<div class="sample-container" style="height: 600px">
+    <iframe frameborder="0" seamless width="100%" height="100%" src="https://embed.plnkr.co/CsSNXnyAdtcJktBOssOB/?show=preview&sidebar=false"></iframe>
+</div>
+<div class="divider--half"></div>
+
 ### Usage
 ```html
 <igx-navbar title="Settings"></igx-navbar>
@@ -34,8 +40,3 @@ You can set the visible state of the navbar by setting `isActionButtonVisible="t
 
 You can set the action of the navbar button by setting `(onAction)="executeAction()"`;
 <div class="divider--half"></div>
-
-### Navbar Demo
-<div class="sample-container" style="height: 600px">
-    <iframe frameborder="0" seamless width="100%" height="800px" src="https://embed.plnkr.co/CsSNXnyAdtcJktBOssOB/?show=preview&sidebar=false"></iframe>
-</div>

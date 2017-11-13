@@ -8,6 +8,17 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <p class="highlight">The Button directive is intended to be used on any button, span, div, or anchor element to turn it into a fully functional button.</p>
 <div class="divider"></div>
 
+### Button Demo
+
+Using `igxButton` to turn a span element into an js blocks styled button.
+```html
+<span igxButton="raised" igxButtonColor="yellow" igxButtonBackground="#000">Click me<span>
+```
+<div class="sample-container" style="height: 800px">
+    <iframe seamless width="100%" height="100%" frameborder="0" src="https://embed.plnkr.co/dGoEcDAQx51I6bQbs6CV/?show=preview&sidebar=false">
+</div>
+<div class="divider--half"></div>
+
 ### Usage
 ```html
 <target-element igxButton [..options]>Click me</target-element>
@@ -32,13 +43,3 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 | `igxButtonColor` |    string   |   Set the button text color. You can pass any CSS valid color value. |
 | `igxButtonBackground` | string | Set the button background color. You can pass any CSS valid color value. |
 <div class="divider--half"></div>
-
-### Button Demo
-
-Using `igxButton` to turn a span element into an js blocks styled button.
-```html
-<span igxButton="raised" igxButtonColor="yellow" igxButtonBackground="#000">Click me<span>
-```
-<div class="sample-container" style="height: 800px">
-    <iframe seamless width="100%" height="100%" frameborder="0" src="https://embed.plnkr.co/dGoEcDAQx51I6bQbs6CV/?show=preview&sidebar=false">
-</div>
