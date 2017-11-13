@@ -613,7 +613,8 @@ table a {
 
 .navbar-toggle {
   margin: 10px 10px 4px 10px;
-  padding: 8px; }
+  padding: 8px;
+  border-radius: 0; }
 
 .anchorjs-link {
   position: absolute;
