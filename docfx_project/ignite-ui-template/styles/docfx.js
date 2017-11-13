@@ -90,6 +90,13 @@ $(function() {
     function highlight() {
         $('pre code').each(function(i, block) {
             hljs.highlightBlock(block);
+            $(block)
+                .parent()
+                .append(
+                    '<span class="hljs-lang-name">' +
+                        block.result.language +
+                        '</span>'
+                );
         });
         $('pre code[highlight-lines]').each(function(i, block) {
             if (block.innerHTML === '') return;

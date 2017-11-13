@@ -896,6 +896,7 @@ footer {
     right: 0; } }
 
 pre {
+  position: relative;
   opacity: 1;
   background: #340b2d;
   color: #f1f1f1; }
@@ -904,7 +905,18 @@ pre {
   display: block;
   overflow-x: auto;
   color: #fff;
-  background: inherit; }
+  background: inherit;
+  position: relative; }
+
+.hljs-lang-name {
+  position: absolute;
+  padding: 8px;
+  top: 0;
+  right: 0;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: bold;
+  opacity: .7; }
 
 .hljs-comment,
 .hljs-quote {
