@@ -10,7 +10,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ### Badge Demo
 <div class="sample-container" style="height:600px">
-    <iframe src='https://embed.plnkr.co/cKRXdm6dhpKOq30UcGdN/?show=preview&sidebar=false' width="100%" height="100%" seamless frameBorder="0"></inframe>
+    <iframe src='https://www.infragistics.com/angular-demos/badge' width="100%" height="100%" seamless frameBorder="0"></inframe>
 </div>
 <div class="divider--half"></div>
 

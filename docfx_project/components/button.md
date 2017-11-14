@@ -15,7 +15,7 @@ Using `igxButton` to turn a span element into an js blocks styled button.
 <span igxButton="raised" igxButtonColor="yellow" igxButtonBackground="#000">Click me<span>
 ```
 <div class="sample-container" style="height: 800px">
-    <iframe seamless width="100%" height="100%" frameborder="0" src="https://embed.plnkr.co/dGoEcDAQx51I6bQbs6CV/?show=preview&sidebar=false">
+    <iframe seamless width="100%" height="100%" frameborder="0" src="https://www.infragistics.com/angular-demos/buttons">
 </div>
 <div class="divider--half"></div>
 

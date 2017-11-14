@@ -10,7 +10,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ### Calendar Demo
 <div class="sample-container" style="height:900px">
-    <iframe src='https://embed.plnkr.co/QVkzMWZoFyfzLcZFDm3T/?show=preview&sidebar=false' width="100%" height="100%" seamless frameBorder="0"></inframe>
+    <iframe src='https://www.infragistics.com/angular-demos/calendar' width="100%" height="100%" seamless frameBorder="0"></inframe>
 </div>
 <div class="divider--half"></div>
 

@@ -8,9 +8,9 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <p class="highlight">Use the Ignite UI for Angular Carousel component to browse or navigate through a collection of slides, including image galleries, cards, onboarding tutorials, or page-based interfaces. The carousel can be used as a full-screen element or situated inside another component. Slides can be programmed to change at defined intervals in slide-show mode, or set to be scrolled manually by users. Programmatic features of the control include raising an event when a slide is changed, added, or removed.</p>
 <div class="divider"></div>
 
-### Carousel Demo 
+### Carousel Demo
 <div class="sample-container" style="height: 800px">
-    <iframe seamless width="100%" height="100%" frameborder="0" src="https://embed.plnkr.co/sznDmtSNfotjC2THSGav/?show=preview&sidebar=false">
+    <iframe seamless width="100%" height="100%" frameborder="0" src="https://www.infragistics.com/angular-demos/carousel">
 </div>
 <div class="divider--half"></div>
 
@@ -24,7 +24,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ```
 <div class="divider--half"></div>
 
-###API 
+###API
 <div class="divider--half"></div>
 
 #### Carousel (igx-carousel)

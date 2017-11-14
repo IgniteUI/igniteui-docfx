@@ -1,6 +1,6 @@
 ---
 title: Scroll Component
-_description: The Ignite UI for Angular Scroll Bar component is a stand-alone native control that enables you to implement scrolling anywhere for responsive and intuitive UI. 
+_description: The Ignite UI for Angular Scroll Bar component is a stand-alone native control that enables you to implement scrolling anywhere for responsive and intuitive UI.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Scrollbar components, Angular Scrollbar controls
 ---
 
@@ -10,7 +10,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ### Scrollbar Demo
 <div class="sample-container" style="height: 600px">
-    <iframe frameborder="0" seamless width="100%" height="100%" src="https://embed.plnkr.co/67GGHsYqmyVIlepa2P9U/?show=preview&sidebar=false"></iframe>
+    <iframe frameborder="0" seamless width="100%" height="100%" src="https://www.infragistics.com/angular-demos/scroll"></iframe>
 </div>
 <div class="divider--half"></div>
 
@@ -76,13 +76,13 @@ export class IgxScrollSampleComponent {
 ### Outputs
 
 | Name | Description |
-| :--- | :--- | 
+| :--- | :--- |
 | `onScroll`  | Scroll event executed each time when the viewport of the IgxScroll is scrolled. Raised with IgxScrollEvent argument|
 <div class="divider--half"></div>
 
 ### Methods
 
 | Name   | Arguments | Return Type | Description |
-|:----------:|:------|:------|:------|  
+|:----------:|:------|:------|:------|
 | `scrollVertically`  | delta: number | void | Scroll with the given delta. Does not scrolls when the scroll delta is outside of the scroll boundaries. |
 <div class="divider--half"></div>

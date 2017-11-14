@@ -1,12 +1,18 @@
 ---
 title: Navigation Drawer Component
-_description: Implement a user-friendly slide in/out navigation container with complete programmatic control with Ignite UI for Angular Navigation Drawer component. 
+_description: Implement a user-friendly slide in/out navigation container with complete programmatic control with Ignite UI for Angular Navigation Drawer component.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Navigation Drawer component, Angular Navigation Drawer control
 ---
 
 ##Navigation Drawer
 <p class="highlight">The Ignite UI for Angular Navigation Drawer component is a slide in/slide out navigation container that can be pinned or allowed to collapse out of the way when not in use. It can be positioned on either side of the page, with left as the default. The component allows complete programmatic control, including reporting on which panel is currently selected, and allows the use of both navigation items and non-active headers.</p>
 <div class="divider"></div>
+
+### Navigation Drawer Demo
+<div class="sample-container" style="height: 600px">
+    <iframe frameborder="0" seamless width="100%" height="100%" src="https://www.infragistics.com/angular-demos/navigation-drawer"></iframe>
+</div>
+<div class="divider--half"></div>
 
 ### Usage
 ```html
