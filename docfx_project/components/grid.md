@@ -15,7 +15,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <div class="divider--half"></div>
 
 ### Dependencies
-The most basic grid that can be run depends on the **IgxGridComponent** only, however in order to use all features available, let's include the adittional dependencies too. Some of these are **DataContainer** (responsible for CRUD operations, data records access, data processing etb.), **IDataSate** (filtering, sorting, paging features), sorting and filtering strategies, etc:
+The most basic grid that can be run depends on the **IgxGridComponent** only; however, in order to use all features available, let's include the additional dependencies too. Some of these are **DataContainer** (responsible for CRUD operations, data records access, data processing, etc.), **IDataState** (filtering, sorting, paging features), sorting and filtering strategies, etc.:
 
 ```typescript
 import { IgxColumnComponent } from 'igniteui-js-blocks/grid/column.component';
@@ -40,12 +40,12 @@ Now that we have all dependencies imported, let’s get started with a basic con
 ```
 The **id** property is a string value and is the unique identifier of the grid, while **data** binds the grid, in this case to local data.
 
-The **autoGenerate** property tells the **igx-grid** to auto generate columns based on the data source fields. Otherwise, the developer needs to explicitly define the columns and the mapping to the data source fields.
+The **autoGenerate** property tells the **igx-grid** to autogenerate columns based on the data source fields. Otherwise, the developer needs to explicitly define the columns and the mapping to the data source fields.
 <div class="divider--half"></div>
 
 ### Columns configuration
 
-**IgxGridColumnComponent** is used to define grid's *columns* collection and to enable features per column like **fitering**, **sorting**, **paging**. Cell, header and footer templates are also available. 
+**IgxGridColumnComponent** is used to define the grid's *columns* collection and to enable features per column like **filtering**, **sorting**, and **paging**. Cell, header, and footer templates are also available. 
 
 Let's turn the autogenerating option off and define the columns collection in the markup:
 
@@ -74,11 +74,11 @@ public initColumns(event: IgxGridColumnInitEvent) {
     }
 }
 ```
-The above code will make the column sortable, filterable and editable and will bring the corresponding features UI (like inputs for editing and save dialogs) out of the box. 
+The above code will make the column sortable, filterable, and editable and will bring the corresponding features UI (like inputs for editing and save dialogs) out of the box. 
 <div class="divider--half"></div>
 
 ### Data binding
-Before going any further with the grid we want to change the grid to bind to remote data, like it will in a real life scenario. A good practice is to separate all data fetching related logic in a separate data service, so we are going to create data-service.ts
+Before going any further with the grid we want to change the grid to bind to remote data, as it will in a real-life scenario. A good practice is to separate all data fetching related logic in a separate data service, so we are going to create data-service.ts
 
 ```typescript
 import { Component, Injectable } from '@angular/core';
@@ -144,14 +144,14 @@ public deleteRow(event) {
     this.snax.show();
 }
 ```
-These can be wired to user interactions, not necessarily related to the **igx-grid**, for example a button click:
+These can be wired to user interactions, not necessarily related to the **igx-grid**; for example, a button click:
 ```html
 <button igxButton igxRipple (click)="deleteRow($event)">Delete Row</button>
 ```
 <div class="divider--half"></div>
 
 ### Paging
-**Paging** is initialized on the root **igx-grid** component, and is configurable via the `paging` and `perPage` options. Paging is a boolean that controls whether the feature is enabled and the perPage option controls the visible records per page. Let’s update our grid to provide paging:
+**Paging** is initialized on the root **igx-grid** component, and is configurable via the `paging` and `perPage` options. Paging is a Boolean that controls whether the feature is enabled and the perPage option controls the visible records per page. Let’s update our grid to provide paging:
 
 ```html
 <igx-grid #grid1 [data]="data | async" [paging]="true" [perPage]="20" [autoGenerate]="false"></igx-grid>
@@ -159,7 +159,7 @@ These can be wired to user interactions, not necessarily related to the **igx-gr
 <div class="divider--half"></div>
 
 ### Filtering
-**Filtering** is enabled on column level, either using markup or code using the `filtering` input. In addition, `filteringCondition` and `filteringIgnoreCase` options are provided to customize the filtering behavior. `filteringCondition` is a function that does filtering on specific condition, and if not set the default value falls back to "contains". `filteringIgnoreCase` is a boolean that controls if capitalization is ignored. We have already enabled filtering on columns, now we can customize the behavior:
+**Filtering** is enabled on column level, either using markup or code using the `filtering` input. In addition, `filteringCondition` and `filteringIgnoreCase` options are provided to customize the filtering behavior. `filteringCondition` is a function that does filtering on a specific condition, and if not set the default value falls back to "contains". `filteringIgnoreCase` is a boolean that controls whether capitalization is ignored. We have already enabled filtering on columns, so now we can customize the behavior:
 
 ```html
 <igx-column [field]="'ProductName'" [header]="'ProductName'" [sortable]="false" [filtering]="true" [filteringIgnoreCase]="false">
