@@ -1,5 +1,5 @@
 ---
-title: List View Component 
+title: List View Component
 _description: Using any template, display data within rows seamlessly and intuitively through a native Angular framework with Ignite UI for Angular List View component.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular List View components, Angular List View controls
 ---
@@ -10,7 +10,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ### List Demo
 <div class="sample-container" style="height:100%">
-<iframe src='https://embed.plnkr.co/lBqSPM8X3hYEzkXxXhUY/?show=preview&sidebar=false' width="100%" height="1000px" seamless frameBorder="0"></inframe>
+<iframe src='https://www.infragistics.com/angular-demos/list' width="100%" height="1000px" seamless frameBorder="0"></inframe>
 </div>
 <div class="divider--half"></div>
 
@@ -33,8 +33,8 @@ The children components of the IgxList are:
 - *Igx-List-Header* - represents list header - non-interactable list item which role is to label, describe and unify the next list items, composed below it
 - *Igx-List-Item* - represents list item
 
-Both: item and header, implement `IListChild`.  
-The list provides three arrays: 
+Both: item and header, implement `IListChild`.
+The list provides three arrays:
 
 - one that contains all the children: items and headers,
 - only items,

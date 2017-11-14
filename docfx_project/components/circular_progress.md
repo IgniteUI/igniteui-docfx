@@ -10,7 +10,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ### Circular Progress Demo
 <div class="sample-container" style="height: 400px">
-    <iframe frameborder="0" seamless width="100%" height="100%" src="https://embed.plnkr.co/EqEQWTixihBKywSLk1MX/?show=preview&sidebar=false"></iframe>
+    <iframe frameborder="0" seamless width="100%" height="100%" src="https://www.infragistics.com/angular-demos/progressbar"></iframe>
 </div>
 <div class="divider--half"></div>
 

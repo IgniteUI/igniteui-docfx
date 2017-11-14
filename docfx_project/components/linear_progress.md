@@ -1,6 +1,6 @@
 ---
 title: Linear Progress Component
-_description: Display a progress bar and customize its appearance with endless color and striping options with Ignite UI for Angular Linear Progress Bar component. 
+_description: Display a progress bar and customize its appearance with endless color and striping options with Ignite UI for Angular Linear Progress Bar component.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Linear Progress components, Angular Linear Progress controls
 ---
 
@@ -8,9 +8,9 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <p class="highlight">The Ignite UI for Angular Linear Progress Bar Indicator component provides a visual indicator of an application’s process as it changes. The indicator updates its appearance as its state changes. The indicator can be styled with a choice of colors in stripes or solids.</p>
 <div class="divider"></div>
 
-### Linear Progress Demo 
+### Linear Progress Demo
 <div class="sample-container" style="height: 400px">
-    <iframe frameborder="0" seamless width="100%" height="100%" src="https://embed.plnkr.co/C8rf1s2ImziUZRnskkjp/?show=preview&sidebar=false"></iframe>
+    <iframe frameborder="0" seamless width="100%" height="100%" src="https://www.infragistics.com/angular-demos/progressbar"></iframe>
 </div>
 <div class="divider--half"></div>
 
