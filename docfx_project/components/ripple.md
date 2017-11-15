@@ -9,7 +9,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <div class="divider"></div>
 
 ### Ripple Demo
-<div class="sample-container" style="height: 800px">
+<div class="sample-container" style="height: 1192px">
     <iframe seamless width="100%" height="100%" frameborder="0" src="https://www.infragistics.com/angular-demos/buttons">
 </div>
 <div class="divider--half"></div>

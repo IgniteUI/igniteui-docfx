@@ -9,8 +9,8 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <div class="divider"></div>
 
 ### Checkbox Demo
-<div class="sample-container" style="height:600px">
-<iframe src='https://www.infragistics.com/angular-demos/form-elements' width="100%" height="100%" seamless frameBorder="0"></inframe>
+<div class="sample-container" style="height:1390px">
+<iframe src='https://www.infragistics.com/angular-demos/form-elements' width="100%" height="100%" seamless frameBorder="0"></iframe>
 </div>
 <div class="divider--half"></div>
 

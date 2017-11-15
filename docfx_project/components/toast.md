@@ -9,7 +9,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <div class="divider"></div>
 
 ### Toast Demo
-<div class="sample-container" style="height: 600px">
+<div class="sample-container" style="height: 928px">
     <iframe frameborder="0" seamless width="100%" height="100%" src="https://www.infragistics.com/angular-demos/toast"></iframe>
 </div>
 <div class="divider--half"></div>
@@ -29,7 +29,7 @@ You can be more descriptive and set message `message="Something happened!"`.
 
 You can show the toast by using `toast.show()` method.
 
-You can show hide toast by using `toast.hide()` method.
+You can hide the toast by using `toast.hide()` method.
 <div class="divider--half"></div>
 
 ###Positioning

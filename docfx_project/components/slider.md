@@ -9,7 +9,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <div class="divider"></div>
 
 ### Slider Example
-<div class="sample-container" style="height: 500px">
+<div class="sample-container" style="height: 530px">
     <iframe frameborder="0" seamless width="100%" height="100%" src="https://www.infragistics.com/angular-demos/slider"></iframe>
 </div>
 <div class="divider--half"></div>
@@ -44,15 +44,14 @@ import { IgxSlider } from "igniteui-js-blocks/IgxSliderModule";
 ```
 <div class="divider"></div>
 
-## API
-<div class="divider--half"></div>
+## API <div class="divider--half"></div>
 
 ### SliderType
 
 | Name | Description |
 | :--- | :---------- |
 | `SLIDER` | Slider with single thumb. |
-| `RANGE` | Range slider with multiple thumbs, that can mark the range. |
+| `RANGE` | Range slider with multiple thumbs, which can mark the range. |
 <div class="divider--half"></div>
 
 ### IRangeSliderValue
@@ -76,7 +75,7 @@ import { IgxSlider } from "igniteui-js-blocks/IgxSliderModule";
 | `thumbLabelVisibilityDuration` | number | The duration visibility of thumbs labels. The default value is 750 milliseconds. |
 | `type` | [SliderType](#slidertype) | The duration visibility of thumbs labels. The default value is 750 milliseconds. |
 | `upperBound` | number | The lower boundary of the slider value. If not set is the same as min value. |
-| `value` | number\|[IRangeSliderValue](#irangeslidervalue) | The slider value. If the slider is of type SLIDER the argument is number. By default if no value is set the default value is same as lower upper bound. If the slider type is RANGE the the argument is object containing lower and upper properties for the values.  By default if no value is set the default value is for lower value it is the same as lower bound and if no value is set for the upper value it is the same as the upper bound.
+| `value` | number\|[IRangeSliderValue](#irangeslidervalue) | The slider value. If the slider is of type SLIDER the argument is number. By default if no value is set the default value is same as lower upper bound. If the slider type is RANGE the argument is object containing lower and upper properties for the values.  By default if no value is set the default value is for lower value it is the same as lower bound and if no value is set for the upper value it is the same as the upper bound.
 <div class="divider--half"></div>
 
 ### Outputs

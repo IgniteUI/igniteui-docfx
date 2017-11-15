@@ -9,8 +9,8 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <div class="divider"></div>
 
 ### Radio Button Demo
-<div class="sample-container" style="height:600px">
-<iframe src='https://www.infragistics.com/angular-demos/form-elements' width="100%" height="100%" seamless frameBorder="0"></inframe>
+<div class="sample-container" style="height:1390px">
+<iframe src='https://www.infragistics.com/angular-demos/form-elements' width="100%" height="100%" seamless frameBorder="0"></iframe>
 </div>
 <div class="divider--half"></div>
 
@@ -28,12 +28,12 @@ A number of options, attributes and events are available to customize the compon
 </igx-radio>
 ```
 
-The above markup will render three radio buttons, one for each item of the ['Foo', 'Bar', 'Baz'] array. The'value' property is mapped to the input element value attribute,
+The above markup will render three radio buttons, one for each item of the ['Foo', 'Bar', 'Baz'] array. The 'value' property is mapped to the input element value attribute,
 while the content of the <igx-radio> tag is what gets displayed in the label associated with the input.
 <div class="divider--half"></div>
 
 ###Properties
-You can assign unique id's by using the 'id' property and use the 'name' property to group buttons together.
+You can assign unique IDs by using the `id` property and use the `name` property to group buttons together.
 
 The rest of the properties are also standard and control the tabIndex, disabled and checked attributes of the input element that gets rendered:
 

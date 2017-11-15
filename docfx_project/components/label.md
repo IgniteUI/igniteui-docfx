@@ -5,12 +5,12 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ---
 
 ##Label
-<p class="highlight">The Ignite UI for Angular Label directive is to be used to add additional CSS styles to single-line text elements. It is especially useful when combined with the Switch, Checkbox, or Avatar components.</p>
+<p class="highlight">The Ignite UI for Angular Label directive is used to add additional CSS styles to single-line text elements. It is especially useful when combined with the Switch, Checkbox, or Avatar components.</p>
 <div class="divider"></div>
 
 ### Label Demo
-<div class="sample-container" style="height:600px">
-<iframe src='https://www.infragistics.com/angular-demos/form-elements' width="100%" height="100%" seamless frameBorder="0"></inframe>
+<div class="sample-container" style="height:1390px">
+<iframe src='https://www.infragistics.com/angular-demos/form-elements' width="100%" height="100%" seamless frameBorder="0"></iframe>
 </div>
 <div class="divider--half"></div>
 
@@ -22,7 +22,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ### Examples
 
-Using `igxButton` to turn a span element into an js blocks styled button.
+Using `igxButton` to turn a span element into a Ignite UI for Angular styled button.
 ```html
 <span igxLabel>Single line text<span>
 ```

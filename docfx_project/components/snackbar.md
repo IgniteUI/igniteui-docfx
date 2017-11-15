@@ -8,7 +8,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <div class="divider"></div>
 
 ### Snackbar Demo
-<div class="sample-container" style="height: 500px">
+<div class="sample-container" style="height: 672px">
     <iframe frameborder="0" seamless width="100%" height="100%" src="https://www.infragistics.com/angular-demos/snackbar"></iframe>
 </div>
 <div class="divider--half"></div>
@@ -25,7 +25,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 You can be more descriptive and set message `message="This is a simple snackbar!"`.
 
-You can show the snacbar by using `snacbar.show()` method.
+You can show the snackbar by using `snackbar.show()` method.
 
 
 **Snackbar with button and action**
@@ -39,10 +39,10 @@ You can show the snacbar by using `snacbar.show()` method.
 </igx-snackbar>
 ```
 
-You can set the title of the button by setting `actionName="Dissmis"`;
+You can set the title of the button by setting `actionName="Dismiss"`;
 
 You can hide the Snackbar by using `snackbar.hide()` method.
 
-The Snackbar will be automatically hidden after 10000 milliseconds, this can be controller by the
-`displayTime` attribute, the automatic hiding can be also controller by using the `autoHide` attribute.
+The Snackbar will be automatically hidden after 10000 milliseconds, this can be controlled by the
+`displayTime` attribute. The automatic hiding can be also controlled by using the `autoHide` attribute.
 <div class="divider--half"></div>

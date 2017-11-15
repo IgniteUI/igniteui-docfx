@@ -9,7 +9,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <div class="divider"></div>
 
 ### Date Picker Demo
-<div class="sample-container" style="height: 800px">
+<div class="sample-container" style="height: 720px">
     <iframe frameborder="0" seamless width="100%" height="100%" src="https://www.infragistics.com/angular-demos/datepicker"></iframe>
 </div>
 <div class="divider--half"></div>
@@ -39,7 +39,7 @@ Custom formatter function with passed initial date and locale.
 ```
 
 ####Disabled state
-You have also ability to disable the datePicker
+You also have the ability to disable the datePicker.
 
 ```html
 <igx-datePicker [isDisabled]="false"></igx-datePicker>
@@ -53,7 +53,7 @@ DatePicker with first day of week set to Monday and an event handler when select
 ```
 
 ####Binding
-The DatePicker also supports binding through `ngModel` if two-way date-bind is needed.
+The DatePicker also supports binding through `ngModel` if two-way date-binding is needed.
 
 ```html
 <igx-datePicker [(ngModel)]="myDateValue"></igx-datePicker>
@@ -67,7 +67,7 @@ The DatePicker also supports binding through `ngModel` if two-way date-bind is n
 
 | Name   |      Type      |  Description |
 |:----------|:-------------:|:------|
-| `todayBottonLabel` | `string` | Renders today button with custom name, which selects today date from calendar, and fill the datePicker input. |
+| `todayBottonLabel` | `string` | Renders today button with custom name, which selects today's date from calendar, and fill the datePicker input. |
 | `cancelButtonLabel` | `string` | Renders cancel button with custom name, which closes the calendar. |
 | `formatter` | `function` | Applied custom formatter on the selected or passed date. |
 | `isDisabled` | `boolean` | Disable the datePicker. |

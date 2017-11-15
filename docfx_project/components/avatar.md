@@ -9,7 +9,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <div class="divider"></div>
 
 ### Avatar Demo
-<div class="sample-container" style="height:600px">
+<div class="sample-container" style="height:512px">
     <iframe src='https://www.infragistics.com/angular-demos/avatar' width="100%" height="100%" seamless frameBorder="0"></inframe>
 </div>
 <div class="divider--half"></div>
@@ -38,7 +38,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ### Examples
 
-Using `igx-avatar` tag to include it into your app.
+Using `igx-avatar` tag to include it in your app.
 ```html
 <igx-avatar roundShape="true" icon="person" bgColor="#0375be" data-init="SS">
 </igx-avatar>

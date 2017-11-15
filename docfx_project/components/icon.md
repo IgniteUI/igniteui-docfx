@@ -8,22 +8,20 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <p class="highlight">The Ignite UI for Angular Icon component unifies icon/font sets so developers can use them interchangeably and add material icons to markup. The component supports custom colors. Icons can be set as inactive.</p>
 <div class="divider"></div>
 
-### Icon Demo
-<div class="sample-container" style="height:600px">
-<iframe src='https://embed.plnkr.co/ak3LxRxtDkXjBR7pzY3j/?show=preview&sidebar=false' width="100%" height="100%" seamless frameBorder="0"></inframe>
-</div>
-<div class="divider--half"></div>
-
 ### Usage
 
 ```html
 <igx-icon fontSet="material" name="home" color="magenta" isActive="false"></igx-icon>
 ```
 
-You can set the fontSet to `fontSet="material"` to select the material icons set (default). More to be added later.
+You can set the `fontSet` to `fontSet="material"` to select the material icons set (default). _More to be added later_.
+
 You can set the icon by providing its name from the official [material icons set](https://material.io/icons/) `name="home"`.
+
 You can set the icon color by providing a string value with the color `color="#474747"`
+
 You can attach set the icon to active/inactive by providing setting `isActive="true"` to true or false (default is true).
+
 You can access all properties of the button component with the following attributes:
 
 `fontSet`
@@ -39,9 +37,9 @@ You can access all properties of the button component with the following attribu
 You can programmatically set all of the icon properties with the following icon setters: 
 
 `fontSet(fontFamily: string)` sets the icon font family
-`color(color: string)` sets the icon color
+`color(color: string)` sets the icon `color`
 `name(icon: string)` sets the icon name
-`isActive(state: boolean)` sets the icon style to inactive if set the false
+`isActive(state: boolean)` sets the icon style to inactive if set to false
 
 **Getters**
 You can programmatically get all of the icon properties with the following icon getters: 

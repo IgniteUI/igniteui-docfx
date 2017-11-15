@@ -9,8 +9,8 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <div class="divider"></div>
 
 ### Layout Demo
-<div class="sample-container" style="height: 600px">
-    <iframe src='https://www.infragistics.com/angular-demos/layout' width="100%" height="100%" seamless frameBorder="0"></inframe>
+<div class="sample-container" style="height: 3704px">
+    <iframe src='https://www.infragistics.com/angular-demos/layout' width="100%" height="100%" seamless frameBorder="0"></iframe>
 </div>
 <div class="divider--half"></div>
 
@@ -29,8 +29,8 @@ Use the `igxFlex` directive for elements inside an `igxLayout` parent to control
 | Name   |      Type      |  Description |
 |:----------|:-------------:|:------|
 | `igxFlexOrder` | number | Controls in what order are the elements laid out in the flex container. Defaults to `0`. |
-| `igxFlexGrow` | number | Sets whether an item should grow in a propotion to its peers inside the flex container. Defaults to `1`. |
-| `igxFlexShrink` | number | Sets whether an items should shrink in a propotion to its peers. Defaults to `1` and negative number are not accepted. |
+| `igxFlexGrow` | number | Sets whether an item should grow in a proportion to its peers inside the flex container. Defaults to `1`. |
+| `igxFlexShrink` | number | Sets whether an items should shrink in a proportion to its peers. Defaults to `1` and negative number are not accepted. |
 <div class="divider--half"></div>
 
 ### API

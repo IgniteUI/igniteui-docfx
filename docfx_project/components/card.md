@@ -5,11 +5,11 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ---
 
 ##Card
-<p class="highlight">The Ignite UI for Angular Card component displays text, images, icons, and buttons in visually rich presentation that can serve as an entry point to more detailed information. Cards can be used to create a multimedia dashboard. The Card component supports pagination using the same component as the Ignite UI for Angular Grid, with some custom coding required.</p>
+<p class="highlight">The Ignite UI for Angular Card component displays text, images, icons, and buttons in a visually rich presentation that can serve as an entry point to more detailed information. Cards can be used to create a multimedia dashboard. The Card component supports pagination using the same component as the Ignite UI for Angular Grid, with some custom coding required.</p>
 <div class="divider"></div>
 
 ### Card Demo
-<div class="sample-container" style="height: 800px">
+<div class="sample-container" style="height: 1661px">
     <iframe seamless width="100%" height="100%" frameborder="0" src="https://www.infragistics.com/angular-demos/card"></iframe>
 </div>
 <div class="divider--half"></div>

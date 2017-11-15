@@ -9,7 +9,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <div class="divider"></div>
 
 ### Grid Demo
-<div class="sample-container" style="height:600px">
+<div class="sample-container" style="height:780px">
     <iframe src='https://www.infragistics.com/angular-demos/grid' width="100%" height="100%" seamless frameBorder="0"></inframe>
 </div>
 <div class="divider--half"></div>
@@ -45,11 +45,7 @@ The **autoGenerate** property tells the **igx-grid** to autogenerate columns bas
 
 ### Columns configuration
 
-<<<<<<< HEAD
 **IgxGridColumnComponent** is used to define the grid's *columns* collection and to enable features per column like **filtering**, **sorting**, and **paging**. Cell, header, and footer templates are also available. 
-=======
-**IgxGridColumnComponent** is used to define grid's *columns* collection and to enable features per column like **fitering**, **sorting**, **paging**. Cell, header and footer templates are also available.
->>>>>>> e420d241d7b6dc7779a6c7f8236d586a2bb3232f
 
 Let's turn the autogenerating option off and define the columns collection in the markup:
 
@@ -78,11 +74,7 @@ public initColumns(event: IgxGridColumnInitEvent) {
     }
 }
 ```
-<<<<<<< HEAD
 The above code will make the column sortable, filterable, and editable and will bring the corresponding features UI (like inputs for editing and save dialogs) out of the box. 
-=======
-The above code will make the column sortable, filterable and editable and will bring the corresponding features UI (like inputs for editing and save dialogs) out of the box.
->>>>>>> e420d241d7b6dc7779a6c7f8236d586a2bb3232f
 <div class="divider--half"></div>
 
 ### Data binding
@@ -176,7 +168,7 @@ These can be wired to user interactions, not necessarily related to the **igx-gr
 <div class="divider--half"></div>
 
 ### Sorting
-**Sorting** is also enabled on column level, meaning that the **igx-grid** can have both sortable and non-sortable columns. This is done via the sortable option, that takes a Boolean value as demonstrated already in the above code examples. Additionally the developer may want to have the grid sorted on load, which is done by passing the sorting expression to the State property:
+**Sorting** is also enabled on column level, meaning that the **igx-grid** can have both sortable and non-sortable columns. This is done via the sortable option, which takes a Boolean value as demonstrated already in the above code examples. In addition, the developer may want to have the grid sorted on load, which is done by passing the sorting expression to the State property:
 
 ```typescript
 public ngOnInit(): void {
@@ -206,7 +198,7 @@ As we can see from the above example, the State property defines the state not o
 
 ### Inputs
 
-Below is the list if all inputs that the developers may set to configure the grid look/behavior:
+Below is the list of all inputs that the developers may set to configure the grid look/behavior:
 | Name | Type | Description |
 | :--- |:--- | :--- |
 | id  | string  | Unique identifier of the Grid |
@@ -233,7 +225,7 @@ A list of the events emitted by the **igx-grid**:
 | `onBeforeProcess`  | Emit binding behavior  |
 <div class="divider"></div>
 
-Defining handlers for these event emitters id done using declarative event binding:
+Defining handlers for these event emitters is done using declarative event binding:
 ```html
 <igx-grid #grid1 [data]="data | async" [autoGenerate]="false"
  (onColumnInit)="initColumns($event)" (onCellSelection)="selectCell($event)"></igx-grid>
@@ -254,7 +246,7 @@ Here is a list of all public methods exposed by the **igx-grid**:
 | `filterData` | Filter data by search term and column  |
 | `addRow` | Add record to the grid data container  |
 | `deleteRow` | Remove record from the grid data container  |
-| `updateRow` | Update record from teh grid data container  |
+| `updateRow` | Update record from the grid data container  |
 | `updateCell` | Update grid cell by index, column field and passed value  |
 | `sortColumn` | Sort grid column  |
 | `paginate` | Change the current page by passed number  |

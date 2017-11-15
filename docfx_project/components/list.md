@@ -9,8 +9,8 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <div class="divider"></div>
 
 ### List Demo
-<div class="sample-container" style="height:100%">
-<iframe src='https://www.infragistics.com/angular-demos/list' width="100%" height="1000px" seamless frameBorder="0"></inframe>
+<div class="sample-container" style="height: 760px">
+<iframe src='https://www.infragistics.com/angular-demos/list' width="100%" height="100%" seamless frameBorder="0"></inframe>
 </div>
 <div class="divider--half"></div>
 
@@ -28,9 +28,9 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 </igx-list>
 ```
 
-The children components of the IgxList are:
+The child components of the IgxList are:
 
-- *Igx-List-Header* - represents list header - non-interactable list item which role is to label, describe and unify the next list items, composed below it
+- *Igx-List-Header* - represents list header - non-interactable list item whose role is to label, describe and unify the next list items, composed below it
 - *Igx-List-Item* - represents list item
 
 Both: item and header, implement `IListChild`.
@@ -58,18 +58,18 @@ The list provides three arrays:
 <div class="divider--half"></div>
 
 ###List Header
-_Child component of Igx-List, that represents a single non-interactable item, that is used as a header of the following items. The header implements `IListChild` interface._
+_Child component of Igx-List, which represents a single non-interactable `item` that is used as a header of the following items. The header implements `IListChild` interface._
 
 #### Header Properties
 - `index` - The index of header in children array
 <div class="divider--half"></div>
 
 ###List Item
-_Child component of Igx-List, that represents a single interactable item. Its content can be text or any other HTML content. The item implements `IListChild` interface._
+_Child component of Igx-List, which represents a single interactable item. Its content can be text or any other HTML content. The item implements `IListChild` interface._
 
 #### Item Properties
 - `index` - The index of item in children array
 - `hidden` - Determines whether the item should be displayed
-- `panState` - Gets the items pan state
-- `options` - Defines the options of particular list item, that will be displayed on item swipe (pan)
+- `panState` - Gets the item's pan state
+- `options` - Defines the options of the particular list item that will be displayed on item swipe (pan)
 <div class="divider--half"></div>

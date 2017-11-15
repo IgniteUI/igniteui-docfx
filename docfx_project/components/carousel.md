@@ -9,8 +9,8 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <div class="divider"></div>
 
 ### Carousel Demo
-<div class="sample-container" style="height: 800px">
-    <iframe seamless width="100%" height="100%" frameborder="0" src="https://www.infragistics.com/angular-demos/carousel">
+<div class="sample-container" style="height: 532px">
+    <iframe seamless width="100%" height="100%" frameborder="0" src="https://www.infragistics.com/angular-demos/carousel"></iframe>
 </div>
 <div class="divider--half"></div>
 

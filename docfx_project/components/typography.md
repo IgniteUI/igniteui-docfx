@@ -6,7 +6,7 @@ _extraFont: https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600,70
 ---
 
 ## Typography
-<p class="highlight">Ignite UI JS Blocks uses <a href="https://fonts.google.com/specimen/Titillium+Web">Titillium Web</a> as the font
+<p class="highlight">Ignite UI for Angular uses <a href="https://fonts.google.com/specimen/Titillium+Web">Titillium Web</a> as the font
         of choice. It is highly optimized for the web, legible, and pairs great with Google's own <a href="https://fonts.google.com/specimen/Roboto">Roboto</a>.</p>
 <div class="divider"></div>
 
@@ -122,7 +122,7 @@ _extraFont: https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600,70
 ### Typography Specimen
 <article class="sample-column">
     <div class="typography-sample">
-        <p class="h1--igx">The Raise of Android</p>
+        <p class="h1--igx">The Rise of Android</p>
         <p class="h2--igx">Brief history</p>
         <p>
             Android is a free and open source operating system project, developed and maintained by Google. Why is it free and open source?
@@ -131,15 +131,15 @@ _extraFont: https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600,70
             get their foot in the door. Google’s strategy was to give Android away so that it would become the dominant
             mobile operating system. It worked. As time went by, Google figured out more ways to monetize their “free”
             operating system, primarily through sales made via the Android Market, which later became "Google Play"
-            when Google expanded their offerings to include music, movies, tv shows, books, and magazines. Android
+            when Google expanded their offerings to include music, movies, TV shows, books, and magazines. Android
             has become the mobile operating system of choice for manufacturers looking for low-cost and highly customizable
-            software to run their hardware. These days, now that Android has "won" the smartphone "war," at least
-            in terms of its world-wide install base, Google exercises some stronger control on just how Android is
+            software to run their hardware. These days, now that Android has "won" the smartphone "war", at least
+            in terms of its worldwide install base, Google exercises some stronger control over just how Android is
             used if OEMs (Original Equipment Manufacturers) want to keep enjoying the benefits of Google Play and
-            other core Google apps, like Gmail, Drive, Hangouts, etc. As a result, Android is perhaps less "open
+            other core Google apps like Gmail, Drive, Hangouts, etc. As a result, Android is perhaps less "open
             source" than it used to be, though its source code still remains open to use and manipulate by anyone.
         </p>
-        <p class="h4--igx"> This is your quick primer on the the different versions of Android that are still alive and kicking, from
+        <p class="h4--igx"> This is your quick primer on the different versions of Android that are still alive and kicking, from
             newest to oldest:
         </p>
         <br>

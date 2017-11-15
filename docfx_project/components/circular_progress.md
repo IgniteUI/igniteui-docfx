@@ -9,7 +9,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <div class="divider"></div>
 
 ### Circular Progress Demo
-<div class="sample-container" style="height: 400px">
+<div class="sample-container" style="height:650px">
     <iframe frameborder="0" seamless width="100%" height="100%" src="https://www.infragistics.com/angular-demos/progressbar"></iframe>
 </div>
 <div class="divider--half"></div>
@@ -34,5 +34,5 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 |:----------|:------|
 | `getValue()` | Return passed value to progress bar to be in range between min(0) and max. |
 | `getPercentValue()` | Calculate the percentage based on passed value. |
-| `onProgressChanged` | Exposed event, that could be handled to track progress changing |
+| `onProgressChanged` | Exposed event, which could be handled to track progress changing |
 <div class="divider--half"></div>

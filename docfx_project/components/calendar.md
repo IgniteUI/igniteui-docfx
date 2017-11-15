@@ -9,8 +9,8 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <div class="divider"></div>
 
 ### Calendar Demo
-<div class="sample-container" style="height:900px">
-    <iframe src='https://www.infragistics.com/angular-demos/calendar' width="100%" height="100%" seamless frameBorder="0"></inframe>
+<div class="sample-container" style="height:1728px">
+    <iframe src='https://www.infragistics.com/angular-demos/calendar' width="100%" height="100%" seamless frameBorder="0"></iframe>
 </div>
 <div class="divider--half"></div>
 
@@ -24,13 +24,13 @@ Basic initialization
 <igx-calendar></igx-calendar>
 ```
 
-A range selection calendar with first day of week set to Monday and an event
+A range selection calendar with the first day of week set to Monday and an event
 handler when selection is done.
 ```html
 <igx-calendar weekStart="1" selection="range" (onSelection)="eventHandler($event)"></igx-calendar>
 ```
 
-The calendar also supports binding through `ngModel` if two-way data-bind is needed.
+The calendar also supports binding through `ngModel` if two-way data-binding is needed.
 ```html
 <igx-calendar [(ngModel)]="myDateValue"></igx-calendar>
 ```
@@ -42,8 +42,8 @@ When the **igxCalendar** component is focused:
 - `PageDown` will move to the next month.
 - `Shift + PageUp` will move to the previous year.
 - `Shift + PageDown` will move to the next year.
-- `Home` will focus the first day of the current month that is into view.
-- `End` will focus the last day of the current month that is into view.
+- `Home` will focus the first day of the current month that is in view.
+- `End` will focus the last day of the current month that is in view.
 
 When a day inside the current month is focused:
 - Arrow keys will navigate through the days.
@@ -57,7 +57,7 @@ When a day inside the current month is focused:
 
 | Name       |      Type      |  Description |
 |:----------:|:-------------|:------|
-| `weekStart`| `Number \| WEEKDAYS` | Sets on which day will the week start. |
+| `weekStart`| `Number \| WEEKDAYS` | Sets which day the week will start. |
 | `locale` | `string` | Sets the locale used for formatting and displaying the dates in the calendar. For more information check out [this](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl) page for valid formats. |
 | `selection` | `string` | Sets the type of selection in the calendar. Valid values are `single` (default), `multi` and `range` |
 | `viewDate` | `Date` | Sets the year/month that will be presented in the default view when the calendar renders. By default it is the current year/month.   |

@@ -9,7 +9,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <div class="divider"></div>
 
 ### Linear Progress Demo
-<div class="sample-container" style="height: 400px">
+<div class="sample-container" style="height:650px">
     <iframe frameborder="0" seamless width="100%" height="100%" src="https://www.infragistics.com/angular-demos/progressbar"></iframe>
 </div>
 <div class="divider--half"></div>
@@ -25,9 +25,9 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 | Name   |       Type      |  Description |
 |:----------|:-------------:|:------|
 | `max` |  number | Set maximum value that can be passed. |
-| `type` |  string | Set type of the linear bar. Possible options - `default`, `success`, `info`, `warning` and `danger`. |
+| `type` |  string | Set type of the linear bar. Possible options - `default`, `success`, `info`, `warning`, and `danger`. |
 | `value` |  number | Set value that indicates the completed bar position. |
-| `stripped` |  boolean | Set bar to have striped style. |
+| `striped` |  boolean | Set bar to have striped style. |
 | `animate` |  boolean | animation on progress bar. |
 <div class="divider--half"></div>
 
@@ -36,5 +36,5 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 |:----------|:------|
 | `getValue()` | Return passed value to progress bar to be in range between min(0) and max. |
 | `getPercentValue()` | Calculate the percentage based on passed value. |
-| `onProgressChanged` | Exposed event, that could be handled to track progress changing |
+| `onProgressChanged` | Exposed event, which could be handled to track progress changing |
 <div class="divider--half"></div>
