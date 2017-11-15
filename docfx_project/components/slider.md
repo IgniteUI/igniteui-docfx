@@ -44,7 +44,7 @@ import { IgxSlider } from "igniteui-js-blocks/IgxSliderModule";
 ```
 <div class="divider"></div>
 
-## API <div class="divider--half"></div>
+## API
 
 ### SliderType
 
