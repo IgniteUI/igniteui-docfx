@@ -10,7 +10,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ### Grid Demo
 <div class="sample-container" style="height:600px">
-    <iframe src='https://embed.plnkr.co/uua2w0Dj7tm6zQurt3VQ/?show=preview&sidebar=false' width="100%" height="100%" seamless frameBorder="0"></inframe>
+    <iframe src='https://www.infragistics.com/angular-demos/grid' width="100%" height="100%" seamless frameBorder="0"></inframe>
 </div>
 <div class="divider--half"></div>
 
@@ -45,7 +45,11 @@ The **autoGenerate** property tells the **igx-grid** to autogenerate columns bas
 
 ### Columns configuration
 
+<<<<<<< HEAD
 **IgxGridColumnComponent** is used to define the grid's *columns* collection and to enable features per column like **filtering**, **sorting**, and **paging**. Cell, header, and footer templates are also available. 
+=======
+**IgxGridColumnComponent** is used to define grid's *columns* collection and to enable features per column like **fitering**, **sorting**, **paging**. Cell, header and footer templates are also available.
+>>>>>>> e420d241d7b6dc7779a6c7f8236d586a2bb3232f
 
 Let's turn the autogenerating option off and define the columns collection in the markup:
 
@@ -74,7 +78,11 @@ public initColumns(event: IgxGridColumnInitEvent) {
     }
 }
 ```
+<<<<<<< HEAD
 The above code will make the column sortable, filterable, and editable and will bring the corresponding features UI (like inputs for editing and save dialogs) out of the box. 
+=======
+The above code will make the column sortable, filterable and editable and will bring the corresponding features UI (like inputs for editing and save dialogs) out of the box.
+>>>>>>> e420d241d7b6dc7779a6c7f8236d586a2bb3232f
 <div class="divider--half"></div>
 
 ### Data binding
@@ -173,7 +181,7 @@ These can be wired to user interactions, not necessarily related to the **igx-gr
 ```typescript
 public ngOnInit(): void {
     this.data = this.localService.records;
-    
+
     this.grid1.state = {
         paging: {
             index: 2,

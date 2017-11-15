@@ -10,7 +10,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ### Navbar Demo
 <div class="sample-container" style="height: 600px">
-    <iframe frameborder="0" seamless width="100%" height="100%" src="https://embed.plnkr.co/CsSNXnyAdtcJktBOssOB/?show=preview&sidebar=false"></iframe>
+    <iframe frameborder="0" seamless width="100%" height="100%" src="https://www.infragistics.com/angular-demos/navbar"></iframe>
 </div>
 <div class="divider--half"></div>
 

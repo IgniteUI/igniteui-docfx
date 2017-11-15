@@ -1,6 +1,6 @@
 ---
 title: Label Directive
-_description: With Ignite UI for Angular Label component, developers can create single-line text elements to add additional CSS styles and integrate with other controls. 
+_description: With Ignite UI for Angular Label component, developers can create single-line text elements to add additional CSS styles and integrate with other controls.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Label components, Angular Label controls
 ---
 
@@ -10,7 +10,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ### Label Demo
 <div class="sample-container" style="height:600px">
-<iframe src='https://embed.plnkr.co/mHKDmEKTUxwNpTDjaNfe/?show=preview&sidebar=false' width="100%" height="100%" seamless frameBorder="0"></inframe>
+<iframe src='https://www.infragistics.com/angular-demos/form-elements' width="100%" height="100%" seamless frameBorder="0"></inframe>
 </div>
 <div class="divider--half"></div>
 

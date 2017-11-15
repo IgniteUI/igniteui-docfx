@@ -1,6 +1,6 @@
 ---
 title: Snackbar Component
-_description: Easily integrate a brief, single-line message within your mobile and desktop applications with Ignite UI for Angular Snackbar component. 
+_description: Easily integrate a brief, single-line message within your mobile and desktop applications with Ignite UI for Angular Snackbar component.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Snackbar component, Angular Snackbar control
 ---
 ##Snackbar
@@ -9,11 +9,11 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ### Snackbar Demo
 <div class="sample-container" style="height: 500px">
-    <iframe frameborder="0" seamless width="100%" height="100%" src="https://embed.plnkr.co/zSe5yxEigtRSEZQoKdzy/?show=preview&sidebar=false"></iframe>
+    <iframe frameborder="0" seamless width="100%" height="100%" src="https://www.infragistics.com/angular-demos/snackbar"></iframe>
 </div>
 <div class="divider--half"></div>
 
-### Usage 
+### Usage
 **Snackbar with button and action**
 ```html
 <button (click)="snackbar.show()">Show snackbar</button>

@@ -1,6 +1,6 @@
 ---
 title: Toast Component
-_description: With Ignite UI for Angular Toast component, users can provide quick, non-interactive messages to end users within their application. 
+_description: With Ignite UI for Angular Toast component, users can provide quick, non-interactive messages to end users within their application.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Toast component, Angular Toast control
 ---
 
@@ -10,7 +10,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ### Toast Demo
 <div class="sample-container" style="height: 600px">
-    <iframe frameborder="0" seamless width="100%" height="100%" src="https://embed.plnkr.co/O4aTIlhk5RgtyEM8viaS/?show=preview&sidebar=false"></iframe>
+    <iframe frameborder="0" seamless width="100%" height="100%" src="https://www.infragistics.com/angular-demos/toast"></iframe>
 </div>
 <div class="divider--half"></div>
 

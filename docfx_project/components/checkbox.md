@@ -1,6 +1,6 @@
 ---
 title: Checkbox Component
-_description: Ignite UI for Angular Checkbox component is a selection control that allows users to make a binary choice for a certain condition. 
+_description: Ignite UI for Angular Checkbox component is a selection control that allows users to make a binary choice for a certain condition.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Checkbox components, Angular Checkbox controls
 ---
 
@@ -10,7 +10,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ### Checkbox Demo
 <div class="sample-container" style="height:600px">
-<iframe src='https://embed.plnkr.co/07AdbpRH48oYwxvnfelD/?show=preview&sidebar=false' width="100%" height="100%" seamless frameBorder="0"></inframe>
+<iframe src='https://www.infragistics.com/angular-demos/form-elements' width="100%" height="100%" seamless frameBorder="0"></inframe>
 </div>
 <div class="divider--half"></div>
 

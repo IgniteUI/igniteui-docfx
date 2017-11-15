@@ -10,7 +10,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ### Slider Example
 <div class="sample-container" style="height: 500px">
-    <iframe frameborder="0" seamless width="100%" height="100%" src="https://embed.plnkr.co/oSE8Ux47XGvBAxPZOQyq/?show=preview&sidebar=false"></iframe>
+    <iframe frameborder="0" seamless width="100%" height="100%" src="https://www.infragistics.com/angular-demos/slider"></iframe>
 </div>
 <div class="divider--half"></div>
 
@@ -82,6 +82,6 @@ import { IgxSlider } from "igniteui-js-blocks/IgxSliderModule";
 ### Outputs
 
 | Name | Description |
-| :--- | :--- | 
+| :--- | :--- |
 | `onValueChange`  | This event is emitted when user has stopped interacting the thumb and value is changed.  |
 <div class="divider--half"></div>

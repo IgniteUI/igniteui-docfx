@@ -10,7 +10,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ### Dialog Example
 <div class="sample-container" style="height:600px">
-    <iframe src='https://embed.plnkr.co/yIeKqBnaO2ScYppfq1p4/?show=preview&sidebar=false' width="100%" height="100%" seamless frameBorder="0"></inframe>
+    <iframe src='https://www.infragistics.com/angular-demos/dialog' width="100%" height="100%" seamless frameBorder="0"></inframe>
 </div>
 <div class="divider--half"></div>
 
