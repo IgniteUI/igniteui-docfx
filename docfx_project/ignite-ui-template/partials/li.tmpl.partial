@@ -6,7 +6,7 @@ full license information.}}
     <li class="sidenav__header">{{name}}</li>
     {{/header}} {{#cta}}
     <li class="nav__cta">
-        <a href="{{topicHref}} name={{tocHref}}" title="{{name}}">{{name}}</a>
+        <a href="{{topicHref}}" title="{{name}}">{{name}}</a>
     </li>
     {{/cta}} {{^header}} {{^cta}}
     <li>

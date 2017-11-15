@@ -1,7 +1,5 @@
-- name: Home
-  href: https://infragistics.com/products/ignite-ui-angular/
 - name: Components
   href: components/
 - name: Get Started 
-  href: https://infragistics.com/products/ignite-ui-angular/getting-started
+  href: https://infragistics.com/products/ignite-ui-angular/getting-started/
   cta: true
