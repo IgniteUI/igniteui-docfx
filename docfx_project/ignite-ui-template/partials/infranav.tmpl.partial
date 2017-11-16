@@ -20,24 +20,24 @@
 <!-- <br /><br /><br /> --> <!-- Brand -->
 <div class="globalnav__brand"><a href="http://www.infragistics.com"> <img class="globalnav__logo" src="https://static.infragistics.com/marketing/Website/General/Infragistics-horizontal.svg" alt="Infragistics"> <img class="globalnav__logo_abbr" src="https://static.infragistics.com/marketing/Website/General/IG-icon.svg" alt="Infragistics"> </a></div>
 <!-- Mobile Menu Toggle -->
-<div class="globalnav__mobile-menu"><a class="globalnav__menu-toggle" href="#"> <span>Menu</span> </a></div>
+<div class="globalnav__mobile-menu responsive"><a class="globalnav__menu-toggle" href="#"> <span>Menu</span> </a></div>
 <!-- Global Search Toggle -->
 <div class="globalnav__search-toggle">
 <div class="globalnav__search-close"><i> </i></div>
 </div>
 <!-- Menu --><nav class="globalnav__menu-container" style="margin-right: 40px;">
-<ul class="navigation navigation--navbar navigation--hpad-0 sf-menu sf-js-enabled sf-arrows">
+<ul class="navigation navigation--navbar navigation--hpad-0 sf-menu responsive">
 <li class="navigation__mobile-link">
 <div class="globalnav__callout-text">North American Sales: 1-800-321-8588</div>
 </li>
-<li class="navigation__mobile-link"><a class="navigation__sub-menu sf-with-ul" href="#">My Account</a>
-<ul class="sub-menu clearfix" style="display: none;"><li><a class="signInLink" href="https://www.infragistics.com/login.aspx?ReturnUrl=%2fmy-account%2fkeys-and-downloads">Sign In/Register</a></li></ul>
+<li class="navigation__mobile-link"><a class="navigation__sub-menu" href="#">My Account</a>
+<ul class="sub-menu clearfix" style=""><li><a class="signInLink" href="https://www.infragistics.com/login.aspx?ReturnUrl=%2fmy-account%2fkeys-and-downloads">Sign In/Register</a></li></ul>
 </li>
-<li><a class="navigation__sub-menu sf-with-ul" title="For Developers" href="https://www.infragistics.com/products/ultimate">Developers</a>
-<ul class="navigation_sub-menu-featured" style="display: none;">
+<li><a class="navigation__sub-menu" title="For Developers" href="https://www.infragistics.com/products/ultimate">Developers</a>
+<ul class="navigation_sub-menu-featured" style="">
 <li><a class="navigation__callout-link" title="Infragistics Ultimate" href="https://www.infragistics.com/products/ultimate"> <span class="navigation__callout-title">Infragistics Ultimate</span> <span class="deemphasize">The complete toolkit for building high performing web, mobile, and desktop apps</span> </a></li>
-<li><a title="IgniteUI: Angular" href="https://www.infragistics.com/products/ignite-ui-angular">Ignite UI for Angular <span class="deemphasize">30+ True Angular Components</span></a></li>
-<li><a title="IgniteUI: JavaScript / HTML 5" href="https://www.infragistics.com/products/ignite-ui">Ignite UI for JavaScript <span class="deemphasize">Productivity Tools plus JavaScript / HTML5 and True Angular Components</span></a></li>
+<li><a title="IgniteUI: Angular" href="https://www.infragistics.com/products/ignite-ui-angular">Ignite UI for Angular <span class="deemphasize">30+ Material-based UI components designed and built on Google’s Angular framework</span></a></li>
+<li><a title="IgniteUI: JavaScript / HTML 5" href="https://www.infragistics.com/products/ignite-ui">Ignite UI for JavaScript <span class="deemphasize">75+ HTML5 / JavaScript jQuery components with extensions for React, Angular &amp; ASP.NET MVC</span></a></li>
 <li><a title="ASP.NET" href="https://www.infragistics.com/products/aspnet">Ultimate UI for ASP.NET <span class="deemphasize">Versatile ASP.NET AJAX UI controls</span></a></li>
 <li><a title="Windows Forms" href="https://www.infragistics.com/products/windows-forms">Windows Forms <span class="deemphasize">100+ fully featured, Microsoft Office-style UI controls</span></a></li>
 <li><a title="WPF" href="https://www.infragistics.com/products/wpf">Ultimate UI for WPF <span class="deemphasize">UI controls &amp; productivity tools</span></a></li>
@@ -52,22 +52,22 @@
 </li>
 </ul>
 </li>
-<li><a class="navigation__sub-menu sf-with-ul" title="UX" href="https://www.infragistics.com/products/indigo-studio">UX</a>
-<ul style="display: none;">
+<li><a class="navigation__sub-menu" title="UX" href="https://www.infragistics.com/products/indigo-studio">UX</a>
+<ul style="">
 <li><a title="Indigo Studio" href="https://www.infragistics.com/products/indigo-studio">Indigo Studio <span class="deemphasize">Collaborative prototyping and remote usability testing for UX &amp; usability professionals</span></a></li>
 <li><a title="UX Consulting" href="https://www.infragistics.com/consulting">UX Consulting <span class="deemphasize">Partner with our UX &amp; Development consultants to create useful, usable, high-performing applications</span></a></li>
 </ul>
 </li>
-<li><a class="navigation__sub-menu sf-with-ul" title="For Business Teams" href="https://www.infragistics.com/business-teams">Business Teams</a>
-<ul style="display: none;">
+<li><a class="navigation__sub-menu" title="For Business Teams" href="https://www.infragistics.com/business-teams">Business Teams</a>
+<ul style="">
 <li class="navigation__mobile-link"><a title="For Business Teams" href="https://www.infragistics.com/business-teams">For Business Teams</a></li>
 <li><a title="SharePlus Enterprise" href="https://www.infragistics.com/products/shareplus-enterprise">SharePlus Enterprise <span class="deemphasize">Mobile workspaces with business processes, collaboration, and data visualization for teams</span></a></li>
 <li><a title="ReportPlus" href="https://www.infragistics.com/enterprise-solutions/enterprise-mobility/reportplus">ReportPlus <span class="deemphasize">Exceptional analytics on any device</span></a></li>
 <li><a title="ReportPlus Embedded" href="https://www.infragistics.com/products/reportplus-embedded">ReportPlus Embedded <span class="deemphasize">Deliver embedded reports and dashboards in your apps</span></a></li>
 </ul>
 </li>
-<li><a class="navigation__sub-menu sf-with-ul" title="Consulting" href="https://www.infragistics.com/consulting">Consulting</a>
-<ul style="display: none;">
+<li><a class="navigation__sub-menu" title="Consulting" href="https://www.infragistics.com/consulting">Consulting</a>
+<ul style="">
 <li class="navigation__mobile-link"><a title="Consulting" href="https://www.infragistics.com/consulting">Consulting</a></li>
 <li><a title="Popular Services" href="https://www.infragistics.com/consulting#popular-services">Popular Services</a></li>
 <li><a title="Our Process" href="https://www.infragistics.com/consulting/process">Our Process</a></li>
@@ -76,8 +76,8 @@
 <li><a title="Contact Us" href="https://www.infragistics.com/consulting#contact">Contact Us</a></li>
 </ul>
 </li>
-<li><a class="navigation__sub-menu sf-with-ul" title="Learn and Support" href="https://www.infragistics.com/support">Learn &amp; Support</a>
-<ul style="display: none;">
+<li><a class="navigation__sub-menu" title="Learn and Support" href="https://www.infragistics.com/support">Learn &amp; Support</a>
+<ul style="">
 <li><a title="Help and Support Documents" href="https://www.infragistics.com/support">Help &amp; Support Documents</a></li>
 <li><a title="Blogs" href="https://www.infragistics.com/community/blogs">Blogs</a></li>
 <li><a title="Forums" href="https://www.infragistics.com/community/forums">Forums</a></li>
@@ -89,8 +89,8 @@
 </ul>
 </li>
 <li><a title="Free Trials" href="https://www.infragistics.com/free-downloads">Free Trials</a></li>
-<li><a class="navigation__sub-menu sf-with-ul" title="Purchase and Renew" href="https://www.infragistics.com/how-to-buy/product-pricing">Purchase &amp; Renew</a>
-<ul style="display: none;">
+<li><a class="navigation__sub-menu" title="Purchase and Renew" href="https://www.infragistics.com/how-to-buy/product-pricing">Purchase &amp; Renew</a>
+<ul style="">
 <li><a title="Pricing" href="https://www.infragistics.com/how-to-buy/product-pricing">Product Pricing / Buy Online</a></li>
 <li><a title="Renew Existing License" href="https://www.infragistics.com/how-to-buy/renewal">Renew Existing License</a></li>
 <li><a title="Contact Us" href="https://www.infragistics.com/about-us/contact-us">Contact Us</a></li>
@@ -102,4 +102,4 @@
 </div>
 </section>
 </section></div>
-</div></div>
+</div>
