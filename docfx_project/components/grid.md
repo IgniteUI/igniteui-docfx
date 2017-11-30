@@ -15,25 +15,39 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <div class="divider--half"></div>
 
 ### Dependencies
-The most basic grid that can be run depends on the **IgxGridComponent** only; however, in order to use all features available, let's include the additional dependencies too. Some of these are **DataContainer** (responsible for CRUD operations, data records access, data processing, etc.), **IDataState** (filtering, sorting, paging features), sorting and filtering strategies, etc.:
+The grid is exported as a feature `NgModule`, thus making the grid availabe across your application is just importing the *IgxGridModule*
+inside your `AppModule`:
 
 ```typescript
-import { IgxColumnComponent } from 'igniteui-js-blocks/grid/column.component';
-import {
-   DataContainer,
-   IDataState,
-   IgxGridBindingBehavior,
-   IgxGridColumnInitEvent,
-   IgxGridComponent,
-   IPagingState, PagingError,
-   SortingDirection,
-   IgxGridCell, IgxGridRow
-} from 'igniteui-js-blocks/main';
+// app.module.ts
+
+import { IgxGridModule } from 'igniteui-js-blocks/main';
+
+@NgModule({
+    imports: [
+        ...
+        IgxGridModule,
+        ...
+    ]
+})
+export class AppModule {}
 ```
+
+Each of the components, directives and helper classes in the *IgxGridModule* can be imported either through the *grid.component* or through
+the main bundle in *igniteui-js-blocks*. While you don't need to import all of them to instantiate and use the grid, you usually will import them
+(or your editor will auto-import them for you) when declaring types that are part of the grid API.
+
+```typescript
+import { IgxGridComponent } from 'igniteui-js-blocks/grid/grid.component';
+...
+
+@ViewChild('myGrid', { read: IgxGridComponent }) public grid: IgxGridComponent;
+```
+
 <div class="divider--half"></div>
 
 ### Usage
-Now that we have all dependencies imported, let’s get started with a basic configuration of the **igx-grid** that binds to local data:
+Now that we have the grid module imported, let’s get started with a basic configuration of the **igx-grid** that binds to local data:
 
 ```html
 <igx-grid #grid1 id="grid1" [data]="localData" [autoGenerate]="true"></igx-grid>
@@ -45,16 +59,16 @@ The **autoGenerate** property tells the **igx-grid** to autogenerate columns bas
 
 ### Columns configuration
 
-**IgxGridColumnComponent** is used to define the grid's *columns* collection and to enable features per column like **filtering**, **sorting**, and **paging**. Cell, header, and footer templates are also available. 
+**IgxGridColumnComponent** is used to define the grid's *columns* collection and to enable features per column like **filtering**, **sorting**, and **paging**. Cell, header, and footer templates are also available.
 
 Let's turn the autogenerating option off and define the columns collection in the markup:
 
 ```html
 <igx-grid #grid1 [data]="data | async" [autoGenerate]="false" [paging]="true" [perPage]="6" (onColumnInit)="initColumns($event)"
     (onCellSelection)="selectCell($event)">
-    <igx-column [field]="'Name'" [sortable]="true" [header]="' '" [filtering]="true"></igx-column>
-    <igx-column [field]="'AthleteNumber'" [sortable]="true" [header]="'Athlete number'"></igx-column>
-    <igx-column [field]="'TrackProgress'" [header]="'Track progress'">
+    <igx-column field="Name" [sortable]="true" header=" " [filtering]="true"></igx-column>
+    <igx-column field="AthleteNumber" [sortable]="true" header="Athlete number"></igx-column>
+    <igx-column field="TrackProgress" header="Track progress">
         <ng-template igxCell let-col="column" let-ri="rowIndex" let-item="item">
             <igx-linear-bar [striped]="false" [value]="item" [max]="100">
             </igx-linear-bar>
@@ -74,51 +88,149 @@ public initColumns(event: IgxGridColumnInitEvent) {
     }
 }
 ```
-The above code will make the column sortable, filterable, and editable and will bring the corresponding features UI (like inputs for editing and save dialogs) out of the box. 
+The above code will make the column sortable, filterable, and editable and will bring the corresponding features UI (like inputs for editing and save dialogs) out of the box.
 <div class="divider--half"></div>
 
 ### Data binding
-Before going any further with the grid we want to change the grid to bind to remote data, as it will in a real-life scenario. A good practice is to separate all data fetching related logic in a separate data service, so we are going to create data-service.ts
+Before going any further with the grid we want to change the grid to bind to remote data, as it will in a real-life scenario. A good practice is to separate all data fetching related logic in a separate data service, so we are going to create a service which
+will handle the fetching of data from the server.
+
+Let's implement our service in a separate file
 
 ```typescript
-import { Component, Injectable } from '@angular/core';
-import { Http, Response, Headers, RequestOptions } from '@angular/http';
-import { BehaviorSubject } from 'rxjs/BehaviorSubject';
+// northwind.service.ts
+
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
+import { of } from 'rxjs/observable/of';
+import { catchError, map } from 'rxjs/operators';
+```
+
+If you're familiar with Angular this should be no surprise to you.
+We're importing the `Injectable` decorator which is an [essential ingredient](https://angular.io/guide/dependency-injection) in every Angular service definition. The `HttpClient` will provide us with the functionality to communicate with
+backend services. It returns an `Observable` of some result on which we will subscribe in our grid component.
+
+**Note**: Before Angular 5 the `HttpClient` was located in `@angular/http` and was named `Http`.
+
+Since we will receive a JSON response containing an array of records we may as well help ourselves by specifing what kind
+of data we're expecting to be returned in the observable by defining an interface with the correct shape. Typechecking
+is always worth it and can save you some headaches down the road.
+
+```typescript
+// northwind.service.ts
+
+export interface NorthwindRecord {
+    ProductID: number;
+    ProductName: string;
+    SupplierID: number;
+    CategoryID: number;
+    QuantityPerUnit: string;
+    UnitPrice: number;
+    UnitsInStock: number;
+    UnitsOnOrder: number;
+    ReorderLevel: number;
+    Discontinued: boolean;
+    CategoryName: string;
+}
+```
+
+The service itself is pretty simple consisting of one method: `fetchData` that will return an `Observable<NorthwindRecord[]>`.
+In case where the request fails for some reason (server unavailable, network error, etc), the `HttpClient` will return an
+error. We'll leverage the `catchError` operator which intercepts and *Observable* that failed and passes the error to an error handler.
+Our error handler will log the error and return a safe value.
+
+```typescript
+// northwind.service.ts
 
 @Injectable()
-export class DataService {
-    public records: Observable<any[]>;
-    private url = 'http://services.odata.org/V4/Northwind/Northwind.svc/Alphabetical_list_of_products';
-    private _records: BehaviorSubject<any[]>;
-    private dataStore: any[];
+export class NorthwindService {
 
-    constructor(private http: Http) {
-      this.dataStore = [];
-      this._records = new BehaviorSubject([]);
-      this.records = this._records.asObservable();
+    private url = 'http://services.odata.org/V4/Northwind/Northwind.svc/Alphabetical_list_of_products';
+
+    constructor(private http: HttpClient) {}
+
+    public fetchData(): Observable<NorthwindRecord[]> {
+        return this.http.get(this.url)
+            .pipe(
+                map(response => response['value']),
+                catchError(this.errorHandler('Error loading northwind data', []))
+            );
     }
 
-    public getData() {
-      return this.http.get(this.url)
-        .map((response) => response.json())
-        .subscribe((data) => {
-          this.dataStore = data.value;
-          this._records.next(this.dataStore);
-        });
+    private errorHandler<T>(message: string, result: T) {
+        return (error: any): Observable<any> => {
+            console.error(`${message}: ${error.message}`);
+            return of(result as T);
+        }
     }
 }
 ```
 
-After importing the data service in the component, we need to initialize it in the constructor and use it to retrieve the data in the ngOnInit event:
+Make sure to import both the `HttpClientModule` and our service in the application module and register the service as a provider.
 
 ```typescript
-constructor(private localService: DataService) {}
+// app.module.ts
 
-public ngOnInit(): void {
-    this.data = this.dataService.records;
+import { HttpClientModule } from '@angular/common/http';
+...
+import { NorthwindService } from './northwind.service';
+
+@NgModule({
+    imports: [
+        ...
+        HttpClientModule
+        ...
+    ],
+    providers: [
+        NorthwindService
+    ]
+})
+export class AppModule {}
+```
+
+
+After implementing the service we will inject it in our components constructor and use it to retrieve the data.
+The `ngOnInit` lifecycle hook is a good place to make our the initial request.
+
+**Note**: In the code below you may wonder why are we setting the *records* property to an empty array before subscribing to the service.
+The Http request is asynchronous and until it completes the *records* property will be *undefined* which will result in an error
+when the grid tries to bind to it. You should either initialize it with a default value or use a `BehaviorSubject`.
+
+```typescript
+// my.component.ts
+
+@Component({
+    ...
+})
+export class MyComponent implements OnInit {
+
+    public records: NorthwindRecord[];
+
+
+    constructor(private northwindService: NorthwindService) {}
+
+    ngOnInit() {
+        this.records = [];
+        this.northwindService.fetchData().subscribe((records) => this.records = records);
+    }
 }
 ```
+
+and in the template of the component:
+
+```html
+<igx-grid [data]="records">
+    <igx-column field="ProductId"></igx-column>
+    <!-- rest of the column definitions -->
+    ...
+</igx-grid>
+```
+
+**Note**: The grid `autoGenerate` property is best to be avoided when binding to remote data for now. It assumes your data is available in order
+to inspect it and generate the appropriate columns. As this usually is not the case unitl the remote service responds,
+the grid will throw an error. It is in our roadmap for future versions.
+
 <div class="divider--half"></div>
 
 ### CRUD operations though the API
