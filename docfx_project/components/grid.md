@@ -15,7 +15,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <div class="divider--half"></div>
 
 ### Dependencies
-The grid is exported as a feature `NgModule`, thus making the grid availabe across your application is just importing the *IgxGridModule*
+The grid is exported as as an `NgModule`, thus all you need to do in your application is to import the *IgxGridModule*
 inside your `AppModule`:
 
 ```typescript
@@ -61,7 +61,7 @@ The **autoGenerate** property tells the **igx-grid** to autogenerate columns bas
 
 **IgxGridColumnComponent** is used to define the grid's *columns* collection and to enable features per column like **filtering**, **sorting**, and **paging**. Cell, header, and footer templates are also available.
 
-Let's turn the autogenerating option off and define the columns collection in the markup:
+Let's turn the **autoGenerate** property off and define the columns collection in the markup:
 
 ```html
 <igx-grid #grid1 [data]="data | async" [autoGenerate]="false" [paging]="true" [perPage]="6" (onColumnInit)="initColumns($event)"
@@ -76,7 +76,7 @@ Let's turn the autogenerating option off and define the columns collection in th
     </igx-column>
 </igx-grid>
 ```
-Columns options can also be set in code in the initColumns event:
+Column properties can also be set in code in the **initColumns** event:
 
 ```typescript
 public initColumns(event: IgxGridColumnInitEvent) {
@@ -88,11 +88,11 @@ public initColumns(event: IgxGridColumnInitEvent) {
     }
 }
 ```
-The above code will make the column sortable, filterable, and editable and will bring the corresponding features UI (like inputs for editing and save dialogs) out of the box.
+The code above will make the **ProductName** column sortable, filterable, and editable and will instantiate the corresponding features UI (like inputs for editing, save dialogs, etc.).
 <div class="divider--half"></div>
 
 ### Data binding
-Before going any further with the grid we want to change the grid to bind to remote data, as it will in a real-life scenario. A good practice is to separate all data fetching related logic in a separate data service, so we are going to create a service which
+Before going any further with the grid we want to change the grid to bind to remote data service, which is a common scenario in real production applications. A good practice is to separate all data fetching related logic in a separate data service, so we are going to create a service which
 will handle the fetching of data from the server.
 
 Let's implement our service in a separate file
@@ -107,15 +107,14 @@ import { of } from 'rxjs/observable/of';
 import { catchError, map } from 'rxjs/operators';
 ```
 
-If you're familiar with Angular this should be no surprise to you.
 We're importing the `Injectable` decorator which is an [essential ingredient](https://angular.io/guide/dependency-injection) in every Angular service definition. The `HttpClient` will provide us with the functionality to communicate with
 backend services. It returns an `Observable` of some result on which we will subscribe in our grid component.
 
 **Note**: Before Angular 5 the `HttpClient` was located in `@angular/http` and was named `Http`.
 
-Since we will receive a JSON response containing an array of records we may as well help ourselves by specifing what kind
-of data we're expecting to be returned in the observable by defining an interface with the correct shape. Typechecking
-is always worth it and can save you some headaches down the road.
+Since we will receive a JSON response containing an array of records, we may as well help ourselves by specifing what kind
+of data we're expecting to be returned in the observable by defining an interface with the correct shape. Type checking
+is always recommended and can save you some headaches down the road.
 
 ```typescript
 // northwind.service.ts
@@ -136,7 +135,7 @@ export interface NorthwindRecord {
 ```
 
 The service itself is pretty simple consisting of one method: `fetchData` that will return an `Observable<NorthwindRecord[]>`.
-In case where the request fails for some reason (server unavailable, network error, etc), the `HttpClient` will return an
+In cases when the request fails for any reason (server unavailable, network error, etc), the `HttpClient` will return an
 error. We'll leverage the `catchError` operator which intercepts and *Observable* that failed and passes the error to an error handler.
 Our error handler will log the error and return a safe value.
 
@@ -191,10 +190,10 @@ export class AppModule {}
 
 
 After implementing the service we will inject it in our components constructor and use it to retrieve the data.
-The `ngOnInit` lifecycle hook is a good place to make our the initial request.
+The `ngOnInit` lifecycle hook is a good place to dispatch the initial request.
 
-**Note**: In the code below you may wonder why are we setting the *records* property to an empty array before subscribing to the service.
-The Http request is asynchronous and until it completes the *records* property will be *undefined* which will result in an error
+**Note**: In the code below, you may wonder why are we setting the *records* property to an empty array before subscribing to the service.
+The Http request is asynchronous, and until it completes, the *records* property will be *undefined* which will result in an error
 when the grid tries to bind to it. You should either initialize it with a default value or use a `BehaviorSubject`.
 
 ```typescript
@@ -227,9 +226,9 @@ and in the template of the component:
 </igx-grid>
 ```
 
-**Note**: The grid `autoGenerate` property is best to be avoided when binding to remote data for now. It assumes your data is available in order
-to inspect it and generate the appropriate columns. As this usually is not the case unitl the remote service responds,
-the grid will throw an error. It is in our roadmap for future versions.
+**Note**: The grid `autoGenerate` property is best to be avoided when binding to remote data for now. It assumes that the data is available in order
+to inspect it and generate the appropriate columns. This is usually not the case until the remote service responds, and
+the grid will throw an error. Making `autoGenerate` available, when binding to remote service, is on our roadmap for future versions.
 
 <div class="divider--half"></div>
 
@@ -263,7 +262,7 @@ These can be wired to user interactions, not necessarily related to the **igx-gr
 <div class="divider--half"></div>
 
 ### Paging
-**Paging** is initialized on the root **igx-grid** component, and is configurable via the `paging` and `perPage` options. Paging is a Boolean that controls whether the feature is enabled and the perPage option controls the visible records per page. Let’s update our grid to provide paging:
+**Paging** is initialized on the root **igx-grid** component, and is configurable via the `paging` and `perPage` inputs. Paging is a Boolean property that controls whether the feature is enabled and the perPage property controls the visible records per page. Let’s update our grid to enable paging:
 
 ```html
 <igx-grid #grid1 [data]="data | async" [paging]="true" [perPage]="20" [autoGenerate]="false"></igx-grid>
@@ -271,7 +270,7 @@ These can be wired to user interactions, not necessarily related to the **igx-gr
 <div class="divider--half"></div>
 
 ### Filtering
-**Filtering** is enabled on column level, either using markup or code using the `filtering` input. In addition, `filteringCondition` and `filteringIgnoreCase` options are provided to customize the filtering behavior. `filteringCondition` is a function that does filtering on a specific condition, and if not set the default value falls back to "contains". `filteringIgnoreCase` is a boolean that controls whether capitalization is ignored. We have already enabled filtering on columns, so now we can customize the behavior:
+**Filtering** is enabled on a per-column level, either using markup or code using the `filtering` input. In addition, `filteringCondition` and `filteringIgnoreCase` properties are provided to customize the filtering behavior. `filteringCondition` is a function that performs filtering based on a specific condition, and if not set the value defaults to "contains". `filteringIgnoreCase` is a boolean property that controls whether capitalization is ignored. Now that we have filtering enabled for the columns, we can customize the behavior:
 
 ```html
 <igx-column [field]="'ProductName'" [header]="'ProductName'" [sortable]="false" [filtering]="true" [filteringIgnoreCase]="false">
@@ -280,7 +279,7 @@ These can be wired to user interactions, not necessarily related to the **igx-gr
 <div class="divider--half"></div>
 
 ### Sorting
-**Sorting** is also enabled on column level, meaning that the **igx-grid** can have both sortable and non-sortable columns. This is done via the sortable option, which takes a Boolean value as demonstrated already in the above code examples. In addition, the developer may want to have the grid sorted on load, which is done by passing the sorting expression to the State property:
+**Sorting** is also enabled on a per-column level, meaning that the **igx-grid** can have a mix of sortable and non-sortable columns. This is done via the sortable input, which takes a Boolean value as demonstrated already in the above code examples. In addition, the developer may want to have the grid sorted on load, which is done by passing the sorting expression to the `State` property:
 
 ```typescript
 public ngOnInit(): void {
@@ -303,7 +302,7 @@ public ngOnInit(): void {
     };
 }
 ```
-As we can see from the above example, the State property defines the state not only for sorting, but also for paging and filtering.
+As we can see from the above example, the `State` property defines the state not only for sorting, but also for paging and filtering.
 <div class="divider"></div>
 
 ## API
