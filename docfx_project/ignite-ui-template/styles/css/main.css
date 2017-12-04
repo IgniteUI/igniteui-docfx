@@ -631,6 +631,8 @@ table a {
     word-wrap: normal;
     white-space: nowrap;
     direction: ltr; }
+  .anchorjs-link:focus {
+    color: #666; }
 
 button,
 a {
