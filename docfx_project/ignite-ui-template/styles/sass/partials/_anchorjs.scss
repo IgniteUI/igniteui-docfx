@@ -3,11 +3,9 @@
     color: transparentize($byzantium, 0.4);
     font-family: 'Material Icons';
     padding-top: 0.1em;
-
     &:hover {
         color: $byzantium;
     }
-
     &::after {
         content: 'link';
         line-height: 1;
@@ -16,5 +14,8 @@
         word-wrap: normal;
         white-space: nowrap;
         direction: ltr;
+    }
+    &:focus {
+        color: $midgray;
     }
 }

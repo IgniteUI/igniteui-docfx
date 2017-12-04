@@ -1,5 +1,5 @@
 // Copyright (c) Microsoft. All rights reserved. Licensed under the MIT license. See LICENSE file in the project root for full license information.
-$(function() {
+$(function () {
     var active = 'active';
     var expanded = 'in';
     var collapsed = 'collapsed';
@@ -24,7 +24,7 @@ $(function() {
     renderHeader();
     copyCode();
 
-    window.refresh = function(article) {
+    window.refresh = function (article) {
         // Update markup result
         if (
             typeof article == 'undefined' ||
@@ -42,7 +42,7 @@ $(function() {
     function breakText() {
         $('.xref').addClass('text-break');
         var texts = $('.text-break');
-        texts.each(function() {
+        texts.each(function () {
             $(this).breakWord();
         });
     }
@@ -65,14 +65,14 @@ $(function() {
     }
 
     // Enable anchors for headings.
-    (function() {
+    (function () {
         anchors.options = {
             placement: 'right',
             visible: 'touch',
             icon: ''
         };
         anchors.add(
-            'article h2:not(.no-anchor), article h3:not(.no-anchor), article h4:not(.no-anchor)'
+            'article h2:not(.no-anchor), article h3:not(.no-anchor)'
         );
     })();
 
@@ -80,7 +80,7 @@ $(function() {
     function renderLinks() {
         if ($("meta[property='docfx:newtab']").attr('content') === 'true') {
             $(document.links)
-                .filter(function() {
+                .filter(function () {
                     return this.hostname !== window.location.hostname;
                 })
                 .attr('target', '_blank');
@@ -90,7 +90,7 @@ $(function() {
     function copyCode() {
         var btn = '.hljs-code-copy';
         var cpb = new Clipboard(btn, {
-            text: function(trigger) {
+            text: function (trigger) {
                 var codeSnippet = $(trigger)
                     .prevAll('code')
                     .text();
@@ -102,29 +102,29 @@ $(function() {
 
     // Enable highlight.js
     function highlight() {
-        $('pre code').each(function(i, block) {
+        $('pre code').each(function (i, block) {
             hljs.highlightBlock(block);
 
             $(block)
                 .parent()
                 .append([
                     '<span class="hljs-lang-name">' +
-                        block.result.language +
-                        '</span>',
+                    block.result.language +
+                    '</span>',
                     '<button class="hljs-code-copy hidden">COPY CODE</button>'
                 ])
-                .on('mouseenter', function() {
+                .on('mouseenter', function () {
                     $(this)
                         .find('.hljs-code-copy')
                         .removeClass('hidden');
                 })
-                .on('mouseleave', function() {
+                .on('mouseleave', function () {
                     $(this)
                         .find('.hljs-code-copy')
                         .addClass('hidden');
                 });
         });
-        $('pre code[highlight-lines]').each(function(i, block) {
+        $('pre code[highlight-lines]').each(function (i, block) {
             if (block.innerHTML === '') return;
             var lines = block.innerHTML.split('\n');
 
@@ -132,7 +132,8 @@ $(function() {
             if (!queryString) return;
 
             var ranges = queryString.split(',');
-            for (var j = 0, range; (range = ranges[j++]); ) {
+            for (var j = 0, range;
+                (range = ranges[j++]);) {
                 var found = range.match(/^(\d+)\-(\d+)?$/);
                 if (found) {
                     // consider region as `{startlinenumber}-{endlinenumber}`, in which {endlinenumber} is optional
@@ -191,7 +192,7 @@ $(function() {
         function renderSearchBox() {
             autoCollapse();
             $(window).on('resize', autoCollapse);
-            $(document).on('click', '.navbar-collapse.in', function(e) {
+            $(document).on('click', '.navbar-collapse.in', function (e) {
                 if ($(e.target).is('a')) {
                     $(this).collapse('hide');
                 }
@@ -212,10 +213,14 @@ $(function() {
         // Search factory
         function localSearch() {
             console.log('using local search');
-            var lunrIndex = lunr(function() {
+            var lunrIndex = lunr(function () {
                 this.ref('href');
-                this.field('title', { boost: 50 });
-                this.field('keywords', { boost: 20 });
+                this.field('title', {
+                    boost: 50
+                });
+                this.field('keywords', {
+                    boost: 20
+                });
             });
             lunr.tokenizer.seperator = /[\s\-\.]+/;
             var searchData = {};
@@ -224,7 +229,7 @@ $(function() {
             var indexPath = relHref + 'index.json';
             if (indexPath) {
                 searchDataRequest.open('GET', indexPath);
-                searchDataRequest.onload = function() {
+                searchDataRequest.onload = function () {
                     if (this.status != 200) {
                         return;
                     }
@@ -238,10 +243,10 @@ $(function() {
                 searchDataRequest.send();
             }
 
-            $('body').bind('queryReady', function() {
+            $('body').bind('queryReady', function () {
                 var hits = lunrIndex.search(query);
                 var results = [];
-                hits.forEach(function(hit) {
+                hits.forEach(function (hit) {
                     var item = searchData[hit.ref];
                     results.push({
                         href: item.href,
@@ -257,7 +262,7 @@ $(function() {
             console.log('using Web Worker');
             var indexReady = $.Deferred();
 
-            worker.onmessage = function(oEvent) {
+            worker.onmessage = function (oEvent) {
                 switch (oEvent.data.e) {
                     case 'index-ready':
                         indexReady.resolve();
@@ -269,9 +274,11 @@ $(function() {
                 }
             };
 
-            indexReady.promise().done(function() {
-                $('body').bind('queryReady', function() {
-                    worker.postMessage({ q: query });
+            indexReady.promise().done(function () {
+                $('body').bind('queryReady', function () {
+                    worker.postMessage({
+                        q: query
+                    });
                 });
             });
         }
@@ -281,7 +288,7 @@ $(function() {
             var q = url('?q');
             if (q !== null) {
                 var keywords = q.split('%20');
-                keywords.forEach(function(keyword) {
+                keywords.forEach(function (keyword) {
                     if (keyword !== '') {
                         $('.data-searchable *').mark(keyword);
                         $('article *').mark(keyword);
@@ -291,13 +298,13 @@ $(function() {
         }
 
         function addSearchEvent() {
-            $('body').bind('searchEvent', function() {
-                $('#search-query').keypress(function(e) {
+            $('body').bind('searchEvent', function () {
+                $('#search-query').keypress(function (e) {
                     return e.which !== 13;
                 });
 
                 $('#search-query')
-                    .keyup(function() {
+                    .keyup(function () {
                         query = $(this).val();
                         if (query.length < 3) {
                             flipContents('show');
@@ -370,13 +377,13 @@ $(function() {
                 $('#pagination').twbsPagination({
                     totalPages: Math.ceil(hits.length / numPerPage),
                     visiblePages: 5,
-                    onPageClick: function(event, page) {
+                    onPageClick: function (event, page) {
                         var start = (page - 1) * numPerPage;
                         var curHits = hits.slice(start, start + numPerPage);
                         $('#search-results>.sr-items')
                             .empty()
                             .append(
-                                curHits.map(function(hit) {
+                                curHits.map(function (hit) {
                                     var currentUrl = window.location.href;
                                     var itemRawHref = relativeUrlToAbsoluteUrl(
                                         currentUrl,
@@ -397,9 +404,9 @@ $(function() {
                                         .attr('class', 'item-title')
                                         .append(
                                             $('<a>')
-                                                .attr('href', itemHref)
-                                                .attr('target', '_blank')
-                                                .text(itemTitle)
+                                            .attr('href', itemHref)
+                                            .attr('target', '_blank')
+                                            .text(itemTitle)
                                         );
                                     var itemHrefNode = $('<div>')
                                         .attr('class', 'item-href')
@@ -414,7 +421,7 @@ $(function() {
                                     return itemNode;
                                 })
                             );
-                        query.split(/\s+/).forEach(function(word) {
+                        query.split(/\s+/).forEach(function (word) {
                             if (word !== '') {
                                 $('#search-results>.sr-items *').mark(word);
                             }
@@ -453,7 +460,7 @@ $(function() {
 
             if (tocPath) tocPath = tocPath.replace(/\\/g, '/');
 
-            $.get(navbarPath, function(data) {
+            $.get(navbarPath, function (data) {
                 $(data)
                     .find('#toc>ul')
                     .appendTo('#navbar');
@@ -473,7 +480,7 @@ $(function() {
                 // set active item
                 $('#navbar')
                     .find('a[href]')
-                    .each(function(i, e) {
+                    .each(function (i, e) {
                         var href = $(e).attr('href');
                         if (util.isRelativePath(href)) {
                             href = navrel + href;
@@ -516,7 +523,7 @@ $(function() {
         var contentHeight = $('#main').height();
         $('#toc').height(contentHeight);
         var sidetoggle = $('.sidetoggle.collapse')[0];
-        $(window).resize(function() {
+        $(window).resize(function () {
             $(sidetoggle).height('auto');
             $(sidetoggle).removeClass('in');
             $('#toc').height(contentHeight);
@@ -534,7 +541,7 @@ $(function() {
             var top = 0;
             $('#toc a.active')
                 .parents('li')
-                .each(function(i, e) {
+                .each(function (i, e) {
                     $(e)
                         .addClass(active)
                         .addClass(expanded);
@@ -553,19 +560,19 @@ $(function() {
         }
 
         function registerTocEvents() {
-            $('.toc .nav > li > .expand-stub').click(function(e) {
+            $('.toc .nav > li > .expand-stub').click(function (e) {
                 $(e.target)
                     .parent()
                     .toggleClass(expanded);
             });
-            $('.toc .nav > li > .expand-stub + a:not([href])').click(function(
+            $('.toc .nav > li > .expand-stub + a:not([href])').click(function (
                 e
             ) {
                 $(e.target)
                     .parent()
                     .toggleClass(expanded);
             });
-            $('#toc_filter_input').on('input', function(e) {
+            $('#toc_filter_input').on('input', function (e) {
                 var val = this.value;
                 if (val === '') {
                     // Clear 'filtered' class
@@ -577,10 +584,10 @@ $(function() {
 
                 // Get leaf nodes
                 $('#toc li>a')
-                    .filter(function(i, e) {
+                    .filter(function (i, e) {
                         return $(e).siblings().length === 0;
                     })
-                    .each(function(i, anchor) {
+                    .each(function (i, anchor) {
                         var text = $(anchor).attr('title');
                         var parent = $(anchor).parent();
                         var parentNodes = parent.parents('ul>li');
@@ -599,10 +606,10 @@ $(function() {
                         }
                     });
                 $('#toc li>a')
-                    .filter(function(i, e) {
+                    .filter(function (i, e) {
                         return $(e).siblings().length > 0;
                     })
-                    .each(function(i, anchor) {
+                    .each(function (i, anchor) {
                         var parent = $(anchor).parent();
                         if (parent.find('li.show').length > 0) {
                             parent.addClass(show);
@@ -630,7 +637,7 @@ $(function() {
                 return;
             }
             tocPath = tocPath.replace(/\\/g, '/');
-            $('#sidetoc').load(tocPath + ' #sidetoggle > div', function() {
+            $('#sidetoc').load(tocPath + ' #sidetoggle > div', function () {
                 var index = tocPath.lastIndexOf('/');
                 var tocrel = '';
                 if (index > -1) {
@@ -641,7 +648,7 @@ $(function() {
                 );
                 $('#sidetoc')
                     .find('a[href]')
-                    .each(function(i, e) {
+                    .each(function (i, e) {
                         var href = $(e).attr('href');
                         if (util.isRelativePath(href)) {
                             href = tocrel + href;
@@ -662,13 +669,13 @@ $(function() {
 
     function renderBreadcrumb() {
         var breadcrumb = [];
-        $('#navbar a.active').each(function(i, e) {
+        $('#navbar a.active').each(function (i, e) {
             breadcrumb.push({
                 href: e.href,
                 name: e.innerHTML
             });
         });
-        $('#toc a.active').each(function(i, e) {
+        $('#toc a.active').each(function (i, e) {
             breadcrumb.push({
                 href: e.href,
                 name: e.innerHTML
@@ -692,7 +699,7 @@ $(function() {
             if ($('footer').is(':visible')) {
                 $('.sideaffix').css('bottom', '70px');
             }
-            $('#affix').on('activate.bs.scrollspy', function(e) {
+            $('#affix').on('activate.bs.scrollspy', function (e) {
                 if (e.target) {
                     if ($(e.target).find('li.active').length > 0) {
                         return;
@@ -700,7 +707,7 @@ $(function() {
                     var top = $(e.target).position().top;
                     $(e.target)
                         .parents('li')
-                        .each(function(i, e) {
+                        .each(function (i, e) {
                             top += $(e).position().top;
                         });
                     var container = $('#affix > ul');
@@ -713,16 +720,17 @@ $(function() {
 
             var contentOffset = $('#_content').offset().top;
             $('body').data('offset', contentOffset);
-            $('.bs-docs-sidenav a').on('click', function(e) {
+            $('.bs-docs-sidenav a').on('click', function (e) {
                 var scrollPos =
                     $('body')
-                        .find($(this).attr('href'))
-                        .offset().top - contentOffset;
+                    .find($(this).attr('href'))
+                    .offset().top - contentOffset;
 
-                $('body, html').animate(
-                    { scrollTop: scrollPos },
+                $('body, html').animate({
+                        scrollTop: scrollPos
+                    },
                     500,
-                    function() {}
+                    function () {}
                 );
                 return false;
             });
@@ -775,7 +783,7 @@ $(function() {
                             currentSelector += ':not(' + prevSelector + ')';
                         $(header[j])
                             .siblings(currentSelector)
-                            .each(function(index, e) {
+                            .each(function (index, e) {
                                 if (e.id) {
                                     item.items.push({
                                         name: htmlEncode($(e).text()), // innerText decodes text while innerHTML not
@@ -866,7 +874,7 @@ $(function() {
         // For LOGO SVG
         // Replace SVG with inline SVG
         // http://stackoverflow.com/questions/11978995/how-to-change-color-of-svg-image-using-css-jquery-svg-image-replacement
-        jQuery('img.svg').each(function() {
+        jQuery('img.svg').each(function () {
             var $img = jQuery(this);
             var imgID = $img.attr('id');
             var imgClass = $img.attr('class');
@@ -874,7 +882,7 @@ $(function() {
 
             jQuery.get(
                 imgURL,
-                function(data) {
+                function (data) {
                     // Get the SVG tag, ignore the rest
                     var $svg = jQuery(data).find('svg');
 
@@ -949,9 +957,9 @@ $(function() {
                     var href = item.href;
                     var name = item.name;
                     if (!name) continue;
-                    html += href
-                        ? '<li><a href="' + href + '">' + name + '</a>'
-                        : '<li>' + name;
+                    html += href ?
+                        '<li><a href="' + href + '">' + name + '</a>' :
+                        '<li>' + name;
                     html += getList(item, cls) || '';
                     html += '</li>';
                 }
@@ -961,21 +969,21 @@ $(function() {
         }
 
         /**
-     * Add <wbr> into long word.
-     * @param {String} text - The word to break. It should be in plain text without HTML tags.
-     */
+         * Add <wbr> into long word.
+         * @param {String} text - The word to break. It should be in plain text without HTML tags.
+         */
         function breakPlainText(text) {
             if (!text) return text;
             return text.replace(/([a-z])([A-Z])|(\.)(\w)/g, '$1$3<wbr>$2$4');
         }
 
         /**
-     * Add <wbr> into long word. The jQuery element should contain no html tags.
-     * If the jQuery element contains tags, this function will not change the element.
-     */
-        $.fn.breakWord = function() {
+         * Add <wbr> into long word. The jQuery element should contain no html tags.
+         * If the jQuery element contains tags, this function will not change the element.
+         */
+        $.fn.breakWord = function () {
             if (this.html() == this.text()) {
-                this.html(function(index, text) {
+                this.html(function (index, text) {
                     return breakPlainText(text);
                 });
             }
@@ -984,15 +992,20 @@ $(function() {
     }
 });
 
-$(document).ready(function() {
+$(document).ready(function () {
     var contentOffset = $('#_content').offset().top;
-    $('.anchorjs-link').on('click', function() {
-        var scrollPos =
-            $('body')
-                .find($(this).attr('href'))
-                .offset().top - contentOffset;
 
-        $('body, html').animate({ scrollTop: scrollPos }, 500, function() {});
+    $('.anchorjs-link').on('click', function (e) {
+        var hashLocation = $(this).attr('href');
+        history.pushState({}, '', window.location.href.split('#')[0] + hashLocation);
+
+        var scrollPos = $('body')
+            .find(hashLocation)
+            .offset().top - contentOffset;
+
+        $('body, html').stop().animate({
+            scrollTop: scrollPos
+        }, 500, function () {});
         return false;
     });
 });
