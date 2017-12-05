@@ -5,15 +5,19 @@ const shell = require('gulp-shell');
 const browserSync = require('browser-sync').create();
 const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
+const argv = require('yargs').argv;
 
-const DOCFX_BASE = './docfx_project';
-const DOCFX_CONF = `${DOCFX_BASE}/docfx.json`;
-const DOCFX_TEMPLATE = path.join(__dirname, `${DOCFX_BASE}/ignite-ui-template`);
-const DOCFX_SITE = `${DOCFX_BASE}/_site`;
-const DOCFX_API = `${DOCFX_BASE}/api`;
-const DOCFX_ARTICLES = `${DOCFX_BASE}/components`;
+const DOCFX_BASE = {
+    en: './en',
+    jp: './jp'
+};
+const DOCFX_CONF = `${DOCFX_BASE[argv.lang]}/docfx.json`;
+const DOCFX_TEMPLATE = path.join(__dirname, `./templates/ignite-ui-template`);
+const DOCFX_SITE = `${DOCFX_BASE[argv.lang]}/_site`;
+const DOCFX_ARTICLES = `${DOCFX_BASE[argv.lang]}/components`;
 
 gulp.task('serve', ['build'], () => {
+    console.log(argv.lang);
     browserSync.init({
         server: {
             baseDir: `${DOCFX_SITE}`
@@ -37,7 +41,7 @@ gulp.task('serve', ['build'], () => {
     });
 
     gulp.watch(`${DOCFX_TEMPLATE}/**/*`, ['watch']);
-    gulp.watch([`${DOCFX_BASE}/**/*.md`, `${DOCFX_ARTICLES}/**/*`], ['build']);
+    gulp.watch([`${DOCFX_BASE[argv.lang]}/**/*.md`, `${DOCFX_ARTICLES}/**/*`], ['build']);
 });
 
 gulp.task('styles', () => {
