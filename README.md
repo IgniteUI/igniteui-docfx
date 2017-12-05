@@ -32,14 +32,31 @@ yarn install
 ``` 
 
 ## Starting the Development Server
+The command takes an adittional argument --lang [ en | jp ] to serve either the English or Japanese version.
+
+For instance, for English:
 ```
-npm start
+npm start -- --lang en
+```
+
+For the Japanese version:
+```
+npm start -- --lang jp
 ```
 
 ## Building the Static Site
+The command takes an adittional argument --lang [ en | jp ] to serve either the English or Japanese version.
+
+For instance, for English:
 
 ```
-npm run build
+npm run build -- --lang en
 ```
 
-The build script produces a folder called _site at the root of the project.
+For the Japanese version:
+```
+npm run build -- --lang jp
+```
+
+The build script produces a folder called _site at the root of the respective project.
+For instance, for English, the static site lives under `en/_site`;
