@@ -1,20 +1,20 @@
----
-title: Avatar Component
-_description: Ignite UI for Angular Avatar control enables users to add images, material icons or initials within any application for instances such as a profile button.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Avatar component, Angular Avatar control
+﻿---
+title: Avatar コンポーネント
+_description: Ignite UI for Angular の Avatar コントロールは、プロファイル ボタンなどのアプリケーションのインスタンスに画像、マテリアル アイコン、またはイニシャルを追加できます。
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Avatar コンポーネント, Angular Avatar コントロール
 ---
 
 ##Avatar
-<p class="highlight">Use the Ignite UI for Angular Avatar to add images, material icons, or initials to an application, which is helpful for representing users in lists or profile buttons. The Avatar can be square or circular, with three size options. The control supports all images from the material icon set as well as custom images.</p>
+<p class="highlight">Ignite UI for Angular の Avatar を使用し、リストまたはプロファイル ボタンでユーザーを表す場合などに画像、マテリアル アイコン、またはイニシャルを追加します。Avatar の形式は四角または丸で、3 つのサイズ オプションがあります。コントロールはマテリアル アイコン セットからすべての画像、さらにカスタム画像もサポートします。</p>
 <div class="divider"></div>
 
-### Avatar Demo
+### Avatar デモ
 <div class="sample-container" style="height:512px">
     <iframe src='https://{environment:host}/angular-demos/avatar' width="100%" height="100%" seamless frameBorder="0"></inframe>
 </div>
 <div class="divider--half"></div>
 
-### Usage
+### 使用方法
 ```html
 <igx-avatar roundShape="true" icon="person" bgColor="#0375be" data-init="SS">
 </igx-avatar>
@@ -22,29 +22,29 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <div class="divider--half"></div>
 
 ### API
-| Name   |      Type      |  Description |
+| 名前   |      型      |  説明 |
 |:----------|:-------------:|:------|
-| `src` |  string | Set the image source of the avatar. |
-| `initials` | string | Set the initials of the avatar. |
-| `icon` | string | Set the icon of the avatar. Currently all icons from the material icon set are supported. Not applicable for initials and image avatars. |
-| `bgColor` | string | Set the background color of initials or icon avatars. |
-| `color` | string | Set the color of initials or icon avatars. (optional) |
-| `roundShape` | boolean | Set the shape of the avatar to circle. The default shape is square. |
-| `size` | string | Set the size of the avatar to either small, medium, or large. |
+| `src` |  string | アバターの画像ソースを設定します。 |
+| `initials` | string | アバターのイニシャルを設定します。 |
+| `icon` | string | アバターのアイコンを設定します。現在、マテリアル アイコン セットのすべてのアイコンがサポートされます。イニシャルおよび画像アバターは適用外です。 |
+| `bgColor` | string | イニシャルまたはアイコン アバターの背景色を設定します。 |
+| `color` | string | イニシャルまたはアイコン アバターの色を設定します。(オプション) |
+| `roundShape` | boolean | アバターの図形を丸に設定します。既定の図形は四角です。 |
+| `size` | string | アバターのサイズを小、中、大に設定します。 |
 
 <div class="divider--half"></div>
-*You can also set all igx-avatar properties programmatically.
+*igx-avatar プロパティをすべてコードで設定できます。
 <div class="divider--half"></div>
 
-### Examples
+### コード例
 
-Using `igx-avatar` tag to include it in your app.
+`igx-avatar` タグを使用してコントロールをアプリケーションに含みます。
 ```html
 <igx-avatar roundShape="true" icon="person" bgColor="#0375be" data-init="SS">
 </igx-avatar>
 ```
 
-Using `TypeScript` to modify and existing igx-avatar instance.
+既存の igx-avatar インスタンスを `TypeScript` によって変更します。
 ```typescript
 avatarInstance.srcImage('https://unsplash.it/60/60?image=55');
 avatarInstance.size('small');
