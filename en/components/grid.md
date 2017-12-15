@@ -136,7 +136,7 @@ export interface NorthwindRecord {
 
 The service itself is pretty simple consisting of one method: `fetchData` that will return an `Observable<NorthwindRecord[]>`.
 In cases when the request fails for any reason (server unavailable, network error, etc), the `HttpClient` will return an
-error. We'll leverage the `catchError` operator which intercepts and *Observable* that failed and passes the error to an error handler.
+error. We'll leverage the `catchError` operator which intercepts an *Observable* that failed and passes the error to an error handler.
 Our error handler will log the error and return a safe value.
 
 ```typescript
