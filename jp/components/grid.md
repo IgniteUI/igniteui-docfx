@@ -10,7 +10,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ### Grid Demo
 <div class="sample-container" style="height:780px">
-    <iframe src='https://www.infragistics.com/angular-demos/grid' width="100%" height="100%" seamless frameBorder="0"></inframe>
+    <iframe src='https://{environment:host}/angular-demos/grid' width="100%" height="100%" seamless frameBorder="0"></inframe>
 </div>
 <div class="divider--half"></div>
 

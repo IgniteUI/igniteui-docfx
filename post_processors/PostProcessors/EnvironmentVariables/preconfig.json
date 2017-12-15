@@ -1,0 +1,21 @@
+﻿{
+  "environment": "development",
+
+  "fileExtensionsToProcess": [ "html" ],
+
+  "variables": {
+    "development": {
+      "host": "www.infragistics.com"
+    },
+    "staging": {
+      "host": "staging.infragistics.com"
+    },
+    "production": {
+      "host": "www.infragistics.com"
+    }
+  },
+
+  "deleteConfigAfterProcessing": true,
+
+  "_configFileName": "set-environment-variables.config"
+}

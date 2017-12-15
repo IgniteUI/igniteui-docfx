@@ -6,6 +6,9 @@ const browserSync = require('browser-sync').create();
 const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
 const argv = require('yargs').argv;
+const fs = require('fs');
+const environmentVariablesPreConfig = require(
+    './post_processors/PostProcessors/EnvironmentVariables/preconfig.json');
 
 const DOCFX_BASE = {
     en: './en',
@@ -62,10 +65,26 @@ gulp.task('watch', ['build'], done => {
     done();
 });
 
+gulp.task('post-processor-configs', ['cleanup'], () => {
+    if (process.env.NODE_ENV) {
+        environmentVariablesPreConfig.environment = process.env.NODE_ENV.trim();
+    }
+    
+    environmentVariablesPreConfig.variables = environmentVariablesPreConfig.variables[
+        environmentVariablesPreConfig.environment];
+
+    if (!fs.existsSync(`${DOCFX_SITE}`)) {
+        fs.mkdirSync(`${DOCFX_SITE}`);
+    }
+    
+    fs.writeFileSync(`${DOCFX_SITE}/${environmentVariablesPreConfig._configFileName}`,
+        JSON.stringify(environmentVariablesPreConfig));
+});
+
 gulp.task('build-site', shell.task([`docfx build ${DOCFX_CONF}`]));
 
 gulp.task('cleanup', () => {
     return del([`${DOCFX_SITE}`]);
 });
 
-gulp.task('build', ['styles', 'cleanup', 'build-site']);
+gulp.task('build', ['styles', 'cleanup', 'post-processor-configs', 'build-site']);

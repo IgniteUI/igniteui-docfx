@@ -6,6 +6,8 @@
     "scripts": {
         "start": "gulp serve",
         "build": "gulp build",
+        "build-staging": "set NODE_ENV=staging && gulp build",
+        "build-production": "set NODE_ENV=production && gulp build",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "author": "Infragistics",

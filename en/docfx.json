@@ -32,7 +32,7 @@
         "globalMetadataFiles": [],
         "fileMetadataFiles": [],
         "template": ["../templates/ignite-ui-template"],
-        "postProcessors": [],
+        "postProcessors": [ "SetEnvironmentVariables" ],
         "noLangKeyword": false,
         "keepFileLink": false,
         "cleanupCacheHistory": false
