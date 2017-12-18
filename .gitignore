@@ -60,3 +60,11 @@ typings/
 # docfx build
 en/_site
 jp/_site
+
+# post processors
+/post_processors/.vs/
+/post_processors/packages/
+/post_processors/PostProcessors/bin/
+/post_processors/PostProcessors/obj/
+/templates/ignite-ui-template/plugins/*
+!/templates/ignite-ui-template/plugins/PostProcessors.dll

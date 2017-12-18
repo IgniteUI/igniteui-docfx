@@ -10,7 +10,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ### Slider Example
 <div class="sample-container" style="height: 530px">
-    <iframe frameborder="0" seamless width="100%" height="100%" src="https://www.infragistics.com/angular-demos/slider"></iframe>
+    <iframe frameborder="0" seamless width="100%" height="100%" src="https://{environment:host}/angular-demos/slider"></iframe>
 </div>
 <div class="divider--half"></div>
 

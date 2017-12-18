@@ -10,7 +10,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ### Tabbar Demo
 <div class="sample-container" style="height:645px">
-    <iframe src='https://www.infragistics.com/angular-demos/tabbar' width="100%" height="100%" seamless frameBorder="0"></inframe>
+    <iframe src='https://{environment:host}/angular-demos/tabbar' width="100%" height="100%" seamless frameBorder="0"></inframe>
 </div>
 <div class="divider--half"></div>
 
