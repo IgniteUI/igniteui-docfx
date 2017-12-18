@@ -1,20 +1,20 @@
----
-title: Checkbox Component
-_description: Ignite UI for Angular Checkbox component is a selection control that allows users to make a binary choice for a certain condition.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Checkbox components, Angular Checkbox controls
+﻿---
+title: Checkbox コンポーネント
+_description: Ignite UI for Angular Checkbox コンポーネントは、特定の条件のバイナリ選択を許可する選択コントロールです。
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Checkbox コンポーネント, Angular Checkbox コントロール
 ---
 
-##Checkbox
-<p class="highlight">The Ignite UI for Angular Checkbox component is a selection control that allows users to make a binary choice for a certain condition. It behaves similarly to the native browser checkbox.</p>
+## Checkbox
+<p class="highlight">Ignite UI for Angular Checkbox コンポーネントは、特定の条件のバイナリ選択を可能にする選択コントロールです。ネイティブ ブラウザーのチェックボックスと同様に動作します。</p>
 <div class="divider"></div>
 
-### Checkbox Demo
+### Checkbox デモ
 <div class="sample-container" style="height:1390px">
 <iframe src='https://{environment:host}/angular-demos/form-elements' width="100%" height="100%" seamless frameBorder="0"></iframe>
 </div>
 <div class="divider--half"></div>
 
-### Usage
+### 使用方法
 
 ```html
 <ul>
@@ -26,7 +26,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 </ul>
 ```
 
-You can easily use it within forms with `[(ngModel)]`
+フォームで `[(ngModel)]` と共に簡単に使用できます。
 
 ```html
 <form (submit)="saveForm()">

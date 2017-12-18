@@ -1,29 +1,29 @@
----
-title: Label Directive
-_description: With Ignite UI for Angular Label component, developers can create single-line text elements to add additional CSS styles and integrate with other controls.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Label components, Angular Label controls
+﻿---
+title: Label ディレクティブ
+_description: Ignite UI for Angular Label コンポーネントを使用すると、単一行のテキスト要素を作成するための CSS スタイルを追加し、その他のコントロールと統合できます。
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Label コンポーネント, Angular Label コントロール
 ---
 
-##Label
-<p class="highlight">The Ignite UI for Angular Label directive is used to add additional CSS styles to single-line text elements. It is especially useful when combined with the Switch, Checkbox, or Avatar components.</p>
+## Label
+<p class="highlight">Ignite UI for Angular Label ディレクティブは、単一行のテキスト要素に CSS スタイルを追加するために使用されます。Switch、Checkbox、または Avatar コンポーネントとの使用は大変便利です。</p>
 <div class="divider"></div>
 
-### Label Demo
+### Label デモ
 <div class="sample-container" style="height:1390px">
 <iframe src='https://{environment:host}/angular-demos/form-elements' width="100%" height="100%" seamless frameBorder="0"></iframe>
 </div>
 <div class="divider--half"></div>
 
-### Usage
+### 使用方法
 ```html
-<target-element igxLabel [..options]>Click me</target-element>
+<target-element igxLabel [..options]>クリック</target-element>
 ```
 <div class="divider--half"></div>
 
-### Examples
+### コード例
 
-Using `igxButton` to turn a span element into a Ignite UI for Angular styled button.
+`igxButton` を使用して span 要素を Ignite UI for Angular のスタイル設定済みボタンにします。
 ```html
-<span igxLabel>Single line text<span>
+<span igxLabel>単一行テキスト<span>
 ```
 <div class="divider--half"></div>

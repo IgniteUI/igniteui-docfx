@@ -1,20 +1,20 @@
----
-title: Circular Progress Component
-_description: Ignite UI for Angular Circular Progress Indicator component allows developers to display progress in a circle with endless customization options.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Circular Progress components, Angular Circular Progress controls
+﻿---
+title: Circular Progress コンポーネント
+_description: Ignite UI for Angular Circular Progress インジケーター コンポーネントは、丸形で進行状況を表示し、カスタマイズできるコンポーネントです。
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Circular Progress コンポーネント, Angular Circular Progress コントロール
 ---
 
-##Circular Progress
-<p class="highlight">The Ignite UI for Angular Circular Progress Indicator component provides a visual indicator of an application’s process as it changes. The circular indicator updates its appearance as its state changes.<p>
+## Circular Progress
+<p class="highlight">Ignite UI for Angular Circular Progress インジケーター コンポーネントは、変更でアプリケーションの進行状況を表す視覚的なインジケーターです。丸形インジケーターは状態変更で外観を更新します。<p>
 <div class="divider"></div>
 
-### Circular Progress Demo
+### Circular Progress デモ
 <div class="sample-container" style="height:650px">
     <iframe frameborder="0" seamless width="100%" height="100%" src="https://{environment:host}/angular-demos/progressbar"></iframe>
 </div>
 <div class="divider--half"></div>
 
-### Usage
+### 使用方法
 ```html
 <igx-circular-bar (onProgressChanged)="f($event)" [value]="currentValue">
 </igx-circular-bar>
@@ -22,17 +22,17 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <div class="divider--half"></div>
 
 ### API
-| Name   |       Type      |  Description |
+| 名前   |       型      |  説明 |
 |:----------|:-------------:|:------|
-| `max` |  number | Set maximum value that can be passed. Default `max` value is 100. |
-| `value` |  number | Set value that indicates the completed bar position. |
-| `animate` |  boolean | animation on progress bar. |
+| `max` |  number | 渡すことができる最大値を設定します。デフォルト `max` 値は 100 です。 |
+| `value` |  number | 完了した位置を示す値を設定します。|
+| `animate` |  boolean | 進行状況バーにアニメーションがあるかどうか。 |
 <div class="divider--half"></div>
 
-### Methods
-| Name   |  Description |
+### メソッド
+| 名前   |  説明 |
 |:----------|:------|
-| `getValue()` | Return passed value to progress bar to be in range between min(0) and max. |
-| `getPercentValue()` | Calculate the percentage based on passed value. |
-| `onProgressChanged` | Exposed event, which could be handled to track progress changing |
+| `getValue()` | 最小値 (0) および最大値の間の進行状況バーに渡された値を返します。 |
+| `getPercentValue()` | 渡された値に基づいてパーセンテージを計算します。 |
+| `onProgressChanged` | 進行状況の変更をトラックするために処理可能な公開イベント。 |
 <div class="divider--half"></div>

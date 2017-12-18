@@ -1,28 +1,28 @@
----
-title: Icon Component
-_description: Developers can unify and use various icon and font sets interchangeably with custom colors and more with Ignite UI for Angular Icon component. 
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Icon components, Angular Icon controls
+﻿---
+title: Icon コンポーネント
+_description: Ignite UI for Angular Icon コンポーネントを使用して、様々なアイコンおよびフォント セットを統合して交互に使用し、カスタム色を定義できます。
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Icon コンポーネント, Angular Icon コントロール
 ---
 
-##Icon
-<p class="highlight">The Ignite UI for Angular Icon component unifies icon/font sets so developers can use them interchangeably and add material icons to markup. The component supports custom colors. Icons can be set as inactive.</p>
+## Icon
+<p class="highlight">Ignite UI for Angular Icon コンポーネントはアイコンおよびフォント セットを統合するため、交互の使用やマテリアル アイコンをマークアップに追加できます。コンポーネントはカスタム色をサポートします。アイコンを非アクティブに設定できます。</p>
 <div class="divider"></div>
 
-### Usage
+### 使用方法
 
 ```html
 <igx-icon fontSet="material" name="home" color="magenta" isActive="false"></igx-icon>
 ```
 
-You can set the `fontSet` to `fontSet="material"` to select the material icons set (default). _More to be added later_.
+`fontSet` を `fontSet="material"` に設定すると、マテリアル アイコン セット (デフォルト) を選択します。 _その他の設定も追加予定です。_
 
-You can set the icon by providing its name from the official [material icons set](https://material.io/icons/) `name="home"`.
+アイコンを設定するには、[マテリアル アイコン セット](https://material.io/icons/)の名前を提供します。例: `name="home"`。
 
-You can set the icon color by providing a string value with the color `color="#474747"`
+アイコンの色を設定するには、色を示す文字列値を提供します。例: `color="#474747"`。
 
-You can attach set the icon to active/inactive by providing setting `isActive="true"` to true or false (default is true).
+アイコンをアクティブまたは非アクティブに設定するには、isActive プロパティを true または false に設定します。例: `isActive="true"`。
 
-You can access all properties of the button component with the following attributes:
+次の属性を使用して、Icon コンポーネントのすべてのプロパティにアクセスできます。
 
 `fontSet`
 
@@ -33,19 +33,19 @@ You can access all properties of the button component with the following attribu
 `isActive`
 
 
-**Setters**
-You can programmatically set all of the icon properties with the following icon setters: 
+**セッター**
+アイコンのすべてのプロパティを以下のアイコン セッターによってコードで設定できます。
 
-`fontSet(fontFamily: string)` sets the icon font family
-`color(color: string)` sets the icon `color`
-`name(icon: string)` sets the icon name
-`isActive(state: boolean)` sets the icon style to inactive if set to false
+`fontSet(fontFamily: string)` はアイコンのフォント ファミリを設定します。
+`color(color: string)` はアイコンの色を設定します。
+`name(icon: string)` はアイコンの名前を設定します。
+`isActive(state: boolean)` は、false に設定される場合にアイコン スタイルを非アクティブに設定します。
 
-**Getters**
-You can programmatically get all of the icon properties with the following icon getters: 
+**ゲッター**
+アイコンのすべてのプロパティを以下のアイコン ゲッターによってコードで取得できます。
 
-`getFontSet()` returns the icon font family
-`getIconColor()` returns the icon color
-`getIconName()` returns the icon name
-`getActive()` returns the icon active state
+`getFontSet()` はアイコンのフォント ファミリを返します。
+`getIconColor()` はアイコンの色を返します。
+`getIconName()` はアイコンの名前を返します。
+`getActive()` はアイコンのアクティブ状態を返します。
 <div class="divider"></div>
