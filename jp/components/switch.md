@@ -1,22 +1,22 @@
----
-title: Switch Component
-_description: Ignite UI for Angular Switch component enables developers to use binary on/off or true/false data input functions within their applications.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Switch components, Angular Switch controls
+﻿---
+title: Switch コンポーネント
+_description: Ignite UI for Angular Switch コンポーネントはアプリケーションにバイナリ有効/無効または true/false のデータ入力関数を追加します。
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Switch コンポーネント, Angular Switch コントロール
 ---
 
-##Switch
-<p class="highlight">The Ignite UI for Angular Switch component is a binary choice selection component that behaves similarly to the switch component in iOS.</p>
+## Switch
+<p class="highlight">Ignite UI for Angular Switch コンポーネントは iOS の switch コンポーネントと同様に動作するバイナリ選択コンポーネントです。</p>
 <div class="divider"></div>
 
-### Switch Demo
+### Switch デモ
 <div class="sample-container" style="height:1390px">
 <iframe src='https://{environment:host}/angular-demos/form-elements' width="100%" height="100%" seamless frameBorder="0"></iframe>
 </div>
 <div class="divider--half"></div>
 
-### Usage
+### 使用方法
 
-Basic usage of `igx-switch`
+`igx-switch` の基本使用
 
 ```html
 <ul>
@@ -28,7 +28,7 @@ Basic usage of `igx-switch`
 </ul>
 ```
 
-You can easily use it within forms with `[(ngModel)]`
+フォームで `[(ngModel)]` と共に簡単に使用できます。
 
 ```html
 <form (submit)="saveForm()">

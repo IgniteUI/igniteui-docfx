@@ -1,10 +1,10 @@
-- name: Grids & Lists
+﻿- name: グリッドとリスト
   header: true
 - name: Data Grid 
   href: grid.md
 - name: List View 
   href: list.md
-- name: Data Entry & Display
+- name: データ入力と表示
   header: true
 - name: Button 
   href: button.md
@@ -26,7 +26,7 @@
   href: linear_progress.md
 - name: Circular Progress 
   href: circular_progress.md
-- name: Interactions
+- name: インタラクション
   header: true
 - name: Dialog Windows 
   href: dialog.md
@@ -36,13 +36,13 @@
   href: scrollbar.md
 - name: Ripple 
   href: ripple.md
-- name: Menus
+- name: メニュー
   header: true
 - name: Navigation Drawer 
   href: navdrawer.md
 - name: Navbar 
   href: navbar.md
-- name: Layouts
+- name: レイアウト
   header: true
 - name: Layout Manager 
   href: layout.md
@@ -54,19 +54,19 @@
   href: card.md
 - name: Avatar 
   href: avatar.md
-- name: Notifications
+- name: 通知
   header: true
 - name: Snackbar 
   href: snackbar.md
 - name: Toast 
   href: toast.md
-- name: Scheduling
+- name: スケジュール
   header: true
 - name: Calendar 
   href: calendar.md
 - name: Date Picker 
   href: date_picker.md
-- name: Style Guide
+- name: スタイル ガイド
   header: true
 - name: Colors
   href: colors.md
