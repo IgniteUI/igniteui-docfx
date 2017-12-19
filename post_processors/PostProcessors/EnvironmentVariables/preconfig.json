@@ -1,21 +1,21 @@
 ﻿{
-  "environment": "development",
+    "environment": "development",
 
-  "fileExtensionsToProcess": [ "html" ],
+    "fileExtensionsToProcess": ["html"],
 
-  "variables": {
-    "development": {
-      "host": "www.infragistics.com"
+    "variables": {
+        "development": {
+            "host": "localhost:4200"
+        },
+        "staging": {
+            "host": "staging.infragistics.com"
+        },
+        "production": {
+            "host": "www.infragistics.com"
+        }
     },
-    "staging": {
-      "host": "staging.infragistics.com"
-    },
-    "production": {
-      "host": "www.infragistics.com"
-    }
-  },
 
-  "deleteConfigAfterProcessing": true,
+    "deleteConfigAfterProcessing": true,
 
-  "_configFileName": "set-environment-variables.config"
+    "_configFileName": "set-environment-variables.config"
 }

@@ -7,6 +7,7 @@ const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
 const argv = require('yargs').argv;
 const fs = require('fs');
+const env = require('dotenv').config();
 const environmentVariablesPreConfig = require('./post_processors/PostProcessors/EnvironmentVariables/preconfig.json');
 
 const DOCFX_BASE = {
@@ -23,7 +24,6 @@ const DOCFX_SITE = `${DOCFX_PATH}/_site`;
 const DOCFX_ARTICLES = `${DOCFX_PATH}/components`;
 
 gulp.task('serve', ['build'], () => {
-    console.log(argv.lang);
     browserSync.init({
         server: {
             baseDir: `${DOCFX_SITE}`
@@ -69,14 +69,21 @@ gulp.task('watch', ['build'], done => {
 });
 
 gulp.task('post-processor-configs', ['cleanup'], () => {
+    console.log(process.env.NODE_ENV);
     if (process.env.NODE_ENV) {
         environmentVariablesPreConfig.environment = process.env.NODE_ENV.trim();
     }
 
-    environmentVariablesPreConfig.variables =
+    if (
         environmentVariablesPreConfig.variables[
             environmentVariablesPreConfig.environment
-        ];
+        ]
+    ) {
+        environmentVariablesPreConfig.variables =
+            environmentVariablesPreConfig.variables[
+                environmentVariablesPreConfig.environment
+            ];
+    }
 
     if (!fs.existsSync(`${DOCFX_SITE}`)) {
         fs.mkdirSync(`${DOCFX_SITE}`);
