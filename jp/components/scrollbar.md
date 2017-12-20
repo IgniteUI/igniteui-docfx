@@ -1,21 +1,21 @@
----
-title: Scroll Component
-_description: The Ignite UI for Angular Scroll Bar component is a stand-alone native control that enables you to implement scrolling anywhere for responsive and intuitive UI.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Scrollbar components, Angular Scrollbar controls
+﻿---
+title: Scroll コンポーネント
+_description: Ignite UI for Angular Scroll Bar コンポーネントは、レスポンシブで直感的な UI のためにスクロールを実装するスタンドアロン ネイティブなコントロールです。
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Scrollbar コンポーネント, Angular Scrollbar コントロール
 ---
 
 ##Scroll
-<p class="highlight">The Ignite UI for Angular Scroll component enables developers to put content in a scrollable container. Specify the height of the container or the number of items of content that should be visible at a time. DOM virtualization can be applied to the content inside the scrollable container.</p>
+<p class="highlight">Ignite UI for Angular Scroll コンポーネントはコンテンツをスクロール コンテナーにホストします。コンテナーの高さまたは一度に表示するコンテンツの項目の数を指定します。DOM 仮想化をスクロールを含むコンテナー内のコンテンツに適用できます。</p>
 <div class="divider"></div>
 
-### Scrollbar Demo
+### Scrollbar デモ
 <div class="sample-container" style="height: 755px">
     <iframe frameborder="0" seamless width="100%" height="100%" src="https://{environment:host}/angular-demos/scroll"></iframe>
 </div>
 <div class="divider--half"></div>
 
-### Getting Started
-To use the IgxSlider import the IgxSlider:
+### はじめに
+IgxScroll を使用するには、IgxScroll をインポートします。
 
 ```typescript
 import { IgxScroll } from "igniteui-js-blocks/IgxScrollModule";
@@ -63,26 +63,26 @@ export class IgxScrollSampleComponent {
 
 ## API
 
-### Inputs
+### 入力
 
-| Name | Type | Description |
+| 名前 | 型 | 説明 |
 | :--- | :--- | :--- |
-| `itemHeight` | boolean | Disables or enables UI interaction. |
-| `scrollTop` | number | Gets the scroll top of the scroll. |
-| `totalItemsCount` | number | The amount of the actual rendered items in the scroll. |
-| `visibleItemsCount` | number | The total amount of items in that will be virtualized. |
+| `itemHeight` | boolean | UI 操作を無効にするか、有効にします。 |
+| `scrollTop` | number | スクロールの上位置を取得します。 |
+| `totalItemsCount` | number | 項目の合計数。 |
+| `visibleItemsCount` | number | スクロールで描画される実際の項目の数。 |
 <div class="divider--half"></div>
 
-### Outputs
+### 出力
 
-| Name | Description |
+| 名前 | 説明 |
 | :--- | :--- |
-| `onScroll`  | Scroll event executed each time when the viewport of the IgxScroll is scrolled. Raised with IgxScrollEvent argument|
+| `onScroll`  | IgxScroll のビューポートがスクロールされたときに実行されるスクロール イベント。IgxScrollEvent 引数で発生されます。|
 <div class="divider--half"></div>
 
-### Methods
+### メソッド
 
-| Name   | Arguments | Return Type | Description |
+| 名前   | 引数 | 戻り値の型 | 説明 |
 |:----------:|:------|:------|:------|
-| `scrollVertically`  | delta: number | void | Scroll with the given delta. Does not scrolls when the scroll delta is outside of the scroll boundaries. |
+| `scrollVertically`  | delta: number | void | 指定したデルタでスクロールします。スクロール デルタがスクロール境界以外の場合はスクロールしません。 |
 <div class="divider--half"></div>

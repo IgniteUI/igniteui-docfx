@@ -1,20 +1,20 @@
----
-title: Linear Progress Component
-_description: Display a progress bar and customize its appearance with endless color and striping options with Ignite UI for Angular Linear Progress Bar component.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Linear Progress components, Angular Linear Progress controls
+﻿---
+title: Linear Progress コンポーネント
+_description: Ignite UI for Angular Linear Progress Bar コンポーネントを使用すると、プログレス バーを表示し、色またはストライプなどの外観をカスタマイズします。
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Linear Progress コンポーネント, Angular Linear Progress コントロール
 ---
 
-##Linear Progress
-<p class="highlight">The Ignite UI for Angular Linear Progress Bar Indicator component provides a visual indicator of an application’s process as it changes. The indicator updates its appearance as its state changes. The indicator can be styled with a choice of colors in stripes or solids.</p>
+## Linear Progress
+<p class="highlight">Ignite UI for Angular Linear Progress インジケーター コンポーネントは、変更でアプリケーションの進行状況を表す視覚的なインジケーターです。インジケーターは状態変更で外観を更新します。インジケーターがストライプまたは実線色でスタイル設定できます。</p>
 <div class="divider"></div>
 
-### Linear Progress Demo
+### Linear Progress デモ
 <div class="sample-container" style="height:650px">
     <iframe frameborder="0" seamless width="100%" height="100%" src="https://{environment:host}/angular-demos/progressbar"></iframe>
 </div>
 <div class="divider--half"></div>
 
-### Usage
+### 使用方法
 ```html
 <igx-linear-bar [striped]="false" [value]="currentValue" [max]="200">
 </igx-linear-bar>
@@ -22,19 +22,19 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <div class="divider--half"></div>
 
 ### API
-| Name   |       Type      |  Description |
+| 名前   |       型      |  説明 |
 |:----------|:-------------:|:------|
-| `max` |  number | Set maximum value that can be passed. |
-| `type` |  string | Set type of the linear bar. Possible options - `default`, `success`, `info`, `warning`, and `danger`. |
-| `value` |  number | Set value that indicates the completed bar position. |
-| `striped` |  boolean | Set bar to have striped style. |
-| `animate` |  boolean | animation on progress bar. |
+| `max` |  number | 渡すことができる最大値を設定します。 |
+| `type` |  string | リニア棒のタイプを設定します。オプションは `default`、`success`、`info`、`warning`、または `danger` です。 |
+| `value` |  number | 完了した位置を示す値を設定します。 |
+| `striped` |  boolean | 棒をストライプ スタイルに設定します。 |
+| `animate` |  boolean | 進行状況バーにアニメーションがあるかどうか。 |
 <div class="divider--half"></div>
 
-### Methods
-| Name   |  Description |
+### メソッド
+| 名前   |  説明 |
 |:----------|:------|
-| `getValue()` | Return passed value to progress bar to be in range between min(0) and max. |
-| `getPercentValue()` | Calculate the percentage based on passed value. |
-| `onProgressChanged` | Exposed event, which could be handled to track progress changing |
+| `getValue()` | 最小値 (0) および最大値の間の進行状況バーに渡された値を返します。 |
+| `getPercentValue()` | 渡された値に基づいてパーセンテージを計算します。 |
+| `onProgressChanged` | 進行状況の変更をトラックするための公開イベント。 |
 <div class="divider--half"></div>
