@@ -1,58 +1,58 @@
----
-title: Toast Component
-_description: With Ignite UI for Angular Toast component, users can provide quick, non-interactive messages to end users within their application.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Toast component, Angular Toast control
+﻿---
+title: Toast コンポーネント
+_description: Ignite UI for Angular Toast コンポーネントは、アプリケーションで非対話型メッセージをユーザーに表示できます。
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Toast コンポーネント, Angular Toast コントロール
 ---
 
 ##Toast
-<p class="highlight">The Toast component provides information and warning messages that are non-interactive and cannot be dismissed by users. Notifications can be displayed at the bottom, middle, or top of the page.</p>
+<p class="highlight">Toast コンポーネントはユーザーによって閉じることができない非対話型の情報および報告メッセージを表示できます。通知はページの下側、中央、または上側に表示できます。</p>
 <div class="divider"></div>
 
-### Toast Demo
+### Toast デモ
 <div class="sample-container" style="height: 928px">
     <iframe frameborder="0" seamless width="100%" height="100%" src="https://{environment:host}/angular-demos/toast"></iframe>
 </div>
 <div class="divider--half"></div>
 
-###Usage
+### 使用方法
 
 ```html
-<button (click)="toast.show()">Show toast</button>
-<button (click)="toast.hide()">Hide toast</button>
+<button (click)="toast.show()">Toast の表示</button>
+<button (click)="toast.hide()">Toast の非表示</button>
 
 <igx-toast #toast
-           message="Something happened!">
+           message="メッセージを表示しました。">
 </igx-toast>
 ```
 
-You can be more descriptive and set message `message="Something happened!"`.
+詳細メッセージを設定するには、`message="メッセージを表示しました。"` を使用します。
 
-You can show the toast by using `toast.show()` method.
+Toast を表示するには `toast.show()` メソッドを使用します。
 
-You can hide the toast by using `toast.hide()` method.
+Toast を非表示するには `toast.hide()` メソッドを使用します。
 <div class="divider--half"></div>
 
-###Positioning
+### 配置
 
 ```html
-<button (click)="toast.show()">Show toast</button>
+<button (click)="toast.show()">Toast の表示</button>
 
 <igx-toast #toast
-           message="Something happened!"
+           message="メッセージを表示しました。"
            position="IgxToastPosition.Top">
 </igx-toast>
 ```
 
-You can modify the position of the toast by setting `postion="IgxToastPosition.Top"`.
+Toast の位置を変更できます。例: `postion="IgxToastPosition.Top"`。
 <div class="divider--half"></div>
 
-###Events
+### イベント
 
 ```html
-<button (click)="toast.show()">Show toast</button>
+<button (click)="toast.show()">Toast の表示</button>
 
 <igx-toast #toast
-           message="Something happened!"
+           message="メッセージを表示しました。"
            (onShowing)="onToastShowing($event)"
            (onShown)="onToastShown($event)"
            (onHiding)="onToastShowing($event)"
@@ -60,8 +60,8 @@ You can modify the position of the toast by setting `postion="IgxToastPosition.T
 </igx-toast>
 ```
 
-You can handle the onShowing event by using `(onShowing)="someFunc($event)"`.
-You can handle the onShown event by using `(onShowing)="someFunc($event)"`.
-You can handle the onHiding event by using `(onHiding)="someFunc($event)"`.
-You can handle the onHidden event by using `(onHidden)="someFunc($event)"`.
+onShowing イベントを処理できます。例: `(onShowing)="someFunc($event)"`。
+onShown イベントを処理できます。例: `(onShown)="someFunc($event)"`。
+onHiding イベントを処理できます。例: `(onHiding)="someFunc($event)"`。
+onHidden イベントを処理できます。例: `(onHidden)="someFunc($event)"`。
 <div class="divider--half"></div>

@@ -1,45 +1,45 @@
----
-title: Button Directive
-_description: Enhance standard buttons with built-in text, images and more features through Ignite UI for Angular Buttons control.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Buttons components, Angular Buttons controls
+﻿---
+title: Button ディレクティブ
+_description: Ignite UI for Angular の Button コントロールで規格のボタンに定義済みテキスト、画像、およびその他の機能を追加します。
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Button コンポーネント, Angular Button コントロール
 ---
 
-##Button
-<p class="highlight">The Button directive is intended to be used on any button, span, div, or anchor element to turn it into a fully functional button.</p>
+## Button
+<p class="highlight">Button ディレクティブを任意の button、span、div、または anchor 要素に適用して完全に機能するボタンにします。</p>
 <div class="divider"></div>
 
-### Button Demo
+### Button デモ
 
-Using `igxButton` to turn a span element into a Ignite UI for Angular styled button.
+`igxButton` を使用して span 要素を Ignite UI for Angular のスタイル設定済みボタンにします。
 ```html
-<span igxButton="raised" igxButtonColor="yellow" igxButtonBackground="#000">Click me<span>
+<span igxButton="raised" igxButtonColor="yellow" igxButtonBackground="#000">クリック<span>
 ```
 <div class="sample-container" style="height: 1192px">
     <iframe seamless width="100%" height="100%" frameborder="0" src="https://{environment:host}/angular-demos/buttons">
 </div>
 <div class="divider--half"></div>
 
-### Usage
+### 使用方法
 ```html
-<target-element igxButton [..options]>Click me</target-element>
+<target-element igxButton [..options]>クリック</target-element>
 ```
 <div class="divider--half"></div>
 
-### Button Types
-| Name   | Description |
+### Button タイプ
+| 名前   | 説明 |
 |:----------|:-------------:|
-| `flat` | The default button type. Transparent background and primary theme color for text. |
-| `raised` | As the name implies, this button type uses subtle box-shadow. Primary theme color for background and white for text color. |
-| `gradient` | Same as the raised button type. Additionally you can specify a gradient value for background color. |
-| `fab` | Floating action button type. Circular with primary theme color for background and white text. |
-| `icon` | This is the simplest of button types. Use it whenever you need to use an icon as button. |
-| `navbar` | Same as the icon button type, albeit optimized for use with the igx-navbar component. |
+| `flat` | デフォルトのボタン タイプ。透明な背景およびプライマリ テーマ色のテキスト。 |
+| `raised` | 名前どおり、このボタン タイプは box-shadow を使用します。プライマリ テーマ色の背景および白いテキスト。 |
+| `gradient` | raised ボタン タイプと同じです。それに、背景色にグラデーションを指定できます。 |
+| `fab` | フローティング アクションのボタン タイプ。丸形で、プライマリ テーマ色の背景色と白い前景色。 |
+| `icon` | これは最もシンプルなボタン タイプです。アイコンをボタンとして使用する場合に使用します。 |
+| `navbar` | icon ボタン タイプと同じですが、igx-navbar コンポーネントで使用するために最適化されています。 |
 <div class="divider--half"></div>
 
 ### API
-| Name   |      Type      |  Description |
+| 名前   |      型      |  説明 |
 |:----------|:-------------:|:------|
-| `igxButton` |  string | Set the type of igxButton to be used. Default is set to flat. |
-| `igxButtonColor` |    string   |   Set the button text color. You can pass any CSS valid color value. |
-| `igxButtonBackground` | string | Set the button background color. You can pass any CSS valid color value. |
+| `igxButton` |  string | 使用される igxButton のタイプを設定します。デフォルト値は flat です。|
+| `igxButtonColor` |    string   |   ボタンのテキスト色を設定します。任意の有効な CSS 色値を使用できます。 |
+| `igxButtonBackground` | string | ボタンの背景色を設定します。任意の有効な CSS 色値を使用できます。 |
 <div class="divider--half"></div>

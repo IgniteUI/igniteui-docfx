@@ -1,22 +1,22 @@
----
-title: Radio Component
-_description: With Ignite UI for Angular Radio Button control, developers can seamlessly present lists of options for users to select for better UI.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Radio Button components, Angular Radio Button controls
+﻿---
+title: Radio コンポーネント
+_description: Ignite UI for Angular Radio Button コントロールは、選択可能なオプションのリストを表示します。
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Radio Button コンポーネント, Angular Radio Button コントロール
 ---
 
-##Radio Button
-<p class="highlight">The Ignite UI for Angular Radio Button component renders a set of radio buttons to allow the user make a choice and submit data. The user is able to select just one from the available options.</p>
+## Radio Button
+<p class="highlight">Ignite UI for Angular Radio Button コンポーネントはラジオ ボタンのセットを描画します。ユーザーがオプションを選択してデータを送信します。ユーザーが利用可能なオプションから単一のオプションを選択できます。</p>
 <div class="divider"></div>
 
-### Radio Button Demo
+### Radio Button デモ
 <div class="sample-container" style="height:1390px">
 <iframe src='https://{environment:host}/angular-demos/form-elements' width="100%" height="100%" seamless frameBorder="0"></iframe>
 </div>
 <div class="divider--half"></div>
 
-### Usage
+### 使用方法
 
-A number of options, attributes and events are available to customize the component look and feel and the way the radio button is working.
+ラジオ ボタン コンポーネントの外観および動作をカスタマイズするためのオプション、属性、およびイベントが複数あります。
 
 ```html
 <igx-radio
@@ -28,14 +28,13 @@ A number of options, attributes and events are available to customize the compon
 </igx-radio>
 ```
 
-The above markup will render three radio buttons, one for each item of the ['Foo', 'Bar', 'Baz'] array. The 'value' property is mapped to the input element value attribute,
-while the content of the <igx-radio> tag is what gets displayed in the label associated with the input.
+上記のマークアップは ['Foo', 'Bar', 'Baz'] 配列の各項目に 3 つのラジオ ボタンを描画します。'value' プロパティは入力要素の value 属性にマップされ、<igx-radio> タグのコンテンツは入力と関連するラベルに表示されます。
 <div class="divider--half"></div>
 
-###Properties
-You can assign unique IDs by using the `id` property and use the `name` property to group buttons together.
+### プロパティ
+`id` プロパティを使用して一意の ID を割り当て、ボタンをグループ化するために `name` プロパティを使用します。
 
-The rest of the properties are also standard and control the tabIndex, disabled and checked attributes of the input element that gets rendered:
+残りのプロパティは規格のプロパティで、描画される入力要素の tabIndex、disabled、および checked 属性を制御します。
 
 ```html
 <igx-radio
@@ -50,8 +49,8 @@ The rest of the properties are also standard and control the tabIndex, disabled 
 ```
 <div class="divider--half"></div>
 
-###Events
-You can attach to a change event using `(onchange)="doAlert($event)"`:
+### イベント
+変更イベントにアタッチできます。例: `(onchange)="doAlert($event)"`。
 
 ```html
 <igx-radio
@@ -75,13 +74,13 @@ import { IgxRadioModule } from "../../src/radio/radio";
 })
 export class RadioSampleComponent {
     user = {
-        name: 'John Doe',
+        name: 'ジョン ドウ',
         favouriteVarName: 'Foo',
         id: 12,
     };
 
     doAlert() {
-        alert("Thank you for selecting this option ! !");
+        alert("このオプションを選択しました。");
     }
 }
 ```

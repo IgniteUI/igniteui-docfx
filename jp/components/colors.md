@@ -1,18 +1,18 @@
----
-title: Colors Styleguide
+﻿---
+title: Colors スタイルガイド
 _description: 
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library 
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ
 ---
 
 ## Colors
 <p class="highlight"></p>
 <div class="divider"></div>
 
-### Default Colors
+### デフォルト色
 <article class="row">
     <div class="col-md-4 col-sm-12">
         <div class="color-container primary-color">
-            <h4 class="color-title">Primary Color</h4>
+            <h4 class="color-title">原色</h4>
             <div class="color-values">
                 <span class="variable">$ocean-blue</span>
                 <span class="hex">#0375BE</span>
@@ -21,7 +21,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
     </div>
     <div class="col-md-4 col-sm-12">
         <div class="color-container secondary-color">
-            <h4 class="color-title">Secondary Color</h4>
+            <h4 class="color-title">二次色</h4>
             <div class="color-values">
                 <span class="variable">$vivid-cerise</span>
                 <span class="hex">#E41C77</span>
@@ -30,7 +30,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
     </div>
     <div class="col-md-4 col-sm-12">
         <div class="color-container accent-color">
-            <h4 class="color-title">Accent Color</h4>
+            <h4 class="color-title">アクセント カラー</h4>
             <div class="color-values">
                 <span class="variable">$yellow-orange</span>
                 <span class="hex">#FBB13C</span>
@@ -41,11 +41,11 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 <div class="divider"></div>
 
-### Supporting Colors
+### サポート カラー
 <article class="row">
     <div class="col-md-4 col-sm-12">
         <div class="color-container success-color">
-            <h4 class="color-title">Success Color</h4>
+            <h4 class="color-title">成功カラー</h4>
             <div class="color-values">
                 <span class="variable">$success-color</span>
                 <span class="hex">#4CAF50</span>
@@ -54,7 +54,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
     </div>
     <div class="col-md-4 col-sm-12">
         <div class="color-container warn-color">
-            <h4 class="color-title">Warning Color</h4>
+            <h4 class="color-title">警告カラー</h4>
             <div class="color-values">
                 <span class="variable">$warn-color</span>
                 <span class="hex">#FBB13C</span>
@@ -63,7 +63,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
     </div>
     <div class="col-md-4 col-sm-12">
         <div class="color-container error-color">
-            <h4 class="color-title">Error Color</h4>
+            <h4 class="color-title">エラー カラー</h4>
             <div class="color-values">
                 <span class="variable">$error-color</span>
                 <span class="hex">#F44336</span>
@@ -74,11 +74,11 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 <div class="divider"></div>
 
-### Color Palettes
+### カラー パレット
 <article class="color-palettes row">
     <div class="color-palette col-md-6 col-sm-12">
         <div class="color-container primary-color">
-            <h4 class="color-title">Primary Color</h4>
+            <h4 class="color-title">原色</h4>
             <div class="color-values">
                 <span class="variable">500 ($primary-color)</span>
                 <span class="hex">#0375BE</span>
@@ -123,7 +123,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
     </div>
     <div class="color-palette col-md-6 col-sm-12">
         <div class="color-container secondary-color">
-            <h4 class="color-title">Secondary Color</h4>
+            <h4 class="color-title">二次色</h4>
             <div class="color-values">
                 <span class="variable">500 ($secondary-color)</span>
                 <span class="hex">#E41C77</span>
@@ -168,7 +168,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
     </div>
     <div class="color-palette col-md-6 col-sm-12">
         <div class="color-container accent-color">
-            <h4 class="color-title">Accent Color</h4>
+            <h4 class="color-title">アクセント カラー</h4>
             <div class="color-values">
                 <span class="variable">500 ($accent-color)</span>
                 <span class="hex">#FBB13C</span>
@@ -213,7 +213,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
     </div>
     <div class="color-palette col-md-6 col-sm-12">
         <div class="color-container gray-color">
-            <h4 class="color-title">Gray Color</h4>
+            <h4 class="color-title">グレー色</h4>
             <div class="color-values">
                 <span class="variable">500 ($gray)</span>
                 <span class="hex">rgba(0, 0, 0, .38)</span>

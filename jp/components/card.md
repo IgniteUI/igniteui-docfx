@@ -1,42 +1,42 @@
----
-title: Card Component
-_description: Present users with dashboards and engaging text, images, icons or buttons as an entry point for detailed information with Ignite UI for Angular Card component.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Card component, Angular Card controls
+﻿---
+title: Card コンポーネント
+_description: Ignite UI for Angular Card コンポーネントを使用して、詳細情報のエントリ ポイントとして、ダッシュボード、テキスト、画像、アイコン、ボタンなどを表示します。
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Card コンポーネント, Angular Card コントロール
 ---
 
-##Card
-<p class="highlight">The Ignite UI for Angular Card component displays text, images, icons, and buttons in a visually rich presentation that can serve as an entry point to more detailed information. Cards can be used to create a multimedia dashboard. The Card component supports pagination using the same component as the Ignite UI for Angular Grid, with some custom coding required.</p>
+## Card
+<p class="highlight">Ignite UI for Angular Card コンポーネントはテキスト、画像、アイコン、およびボタンを表示します。この要素は詳細情報のエントリ ポイントになります。Card を使用してマルチメディア ダッシュボードを作成できます。Card コンポーネントは、Ignite UI for Angular Grid と同じコンポーネントを使用してページングをサポートします。ただし、カスタム コードが必要です。</p>
 <div class="divider"></div>
 
-### Card Demo
+### Card デモ
 <div class="sample-container" style="height: 1661px">
     <iframe seamless width="100%" height="100%" frameborder="0" src="https://{environment:host}/angular-demos/card"></iframe>
 </div>
 <div class="divider--half"></div>
 
-### Getting Started
-Import the `IgxCardModule` inside your application/module.
+### はじめに
+アプリケーションまたはモジュールに `IgxCardModule` をインポートします。
 ```typescript
 import { IgxCardModule } from "igniteui-js-blocks";
 ```
 <div class="divider--half"></div>
 
-### Usage
+### 使用方法
 ```html
 <igx-card>
     <igx-card-header>
         <igx-avatar src="..." roundShape="true">
-            <h3>Elon Musk</h3>
+            <h3>イーロン・マスク</h3>
         </igx-avatar>
     </igx-card-header>
     <igx-card-content>
         <p>
-        South African entrepreneur Elon Musk is known for founding Tesla Motors and SpaceX, which launched a landmark commercial spacecraft in 2012.
+        イーロン・マスクは南アフリカ共和国の起業家です。Tesla Motors および 2012 年にコマーシャル スペースクラフトを立ち上げた SpaceX の設立者です。
         </p>
     </igx-card-content>
     <igx-card-actions>
-        <button igxButton (click)="openUrl('https://www.facebook.com/pages/Elon-Musk/108250442531979')">Like</button>
-        <button igxButton (click)="openUrl('https://twitter.com/elonmusk')">Share</button>
+        <button igxButton (click)="openUrl('https://www.facebook.com/pages/Elon-Musk/108250442531979')">いいね</button>
+        <button igxButton (click)="openUrl('https://twitter.com/elonmusk')">シェア</button>
     </igx-card-actions>
 </igx-card>
 ```

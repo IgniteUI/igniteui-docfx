@@ -1,48 +1,47 @@
+﻿---
+title: Snackbar コンポーネント
+_description: Ignite UI for Angular Snackbar を使用すると、単一行メッセージをモバイルおよびデスクトップ アプリケーションに含みます。
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Snackbar コンポーネント, Angular Snackbar コントロール
 ---
-title: Snackbar Component
-_description: Easily integrate a brief, single-line message within your mobile and desktop applications with Ignite UI for Angular Snackbar component.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Snackbar component, Angular Snackbar control
----
-##Snackbar
-<p class="highlight">The Snack Bar component provides feedback about an operation with a single-line message, which can include a link to an action such as Undo. The Snack Bar message appears above all other screen elements, located at the bottom of a mobile device screen or at the lower left of larger device screens.</p>
+##　Snackbar
+<p class="highlight">Snack Bar コンポーネントは単一行のメッセージで操作のフィードバックを提供します。元に戻すなどの操作へのリンクを追加できます。Snack Bar メッセージがその他の画面要素の上に表示されます。モバイル デバイス画面の下部に配置され、より大きいデバイス画面の左下に配置されます。</p>
 <div class="divider"></div>
 
-### Snackbar Demo
+### Snackbar デモ
 <div class="sample-container" style="height: 672px">
     <iframe frameborder="0" seamless width="100%" height="100%" src="https://{environment:host}/angular-demos/snackbar"></iframe>
 </div>
 <div class="divider--half"></div>
 
-### Usage
-**Snackbar with button and action**
+### 使用方法
+**ボタンのある Snackbar**
 ```html
-<button (click)="snackbar.show()">Show snackbar</button>
+<button (click)="snackbar.show()">Snackbar の表示</button>
 
 <igx-snackbar #snackbar
-            message="This is a simple snackbar!">
+            message="これはシンプルな Snackbar です。">
 </igx-snackbar>
 ```
 
-You can be more descriptive and set message `message="This is a simple snackbar!"`.
+詳細メッセージを設定するには、`message="これはシンプルな Snackbar です。"` を使用します。
 
-You can show the snackbar by using `snackbar.show()` method.
+Snackbar を表示するには `snackbar.show()` メソッドを使用します。
 
 
-**Snackbar with button and action**
+**ボタンと動作のある Snackbar**
 ```html
-<button (click)="snackbar.show()">Show snackbar</button>
+<button (click)="snackbar.show()">Snackbar の表示</button>
 
 <igx-snackbar #snackbar
-             message="This is a snackbar with a button and action!"
-             actionName="Dismiss"
+             message="これはボタンと動作のある Snackbar です。"
+             actionName="閉じる"
              (onAction)="snackbar.hide()">
 </igx-snackbar>
 ```
 
-You can set the title of the button by setting `actionName="Dismiss"`;
+ボタンのタイトルを設定できます。例: `actionName="閉じる"`。
 
-You can hide the Snackbar by using `snackbar.hide()` method.
+Snackbar を非表示するには `snackbar.hide()` メソッドを使用します。
 
-The Snackbar will be automatically hidden after 10000 milliseconds, this can be controlled by the
-`displayTime` attribute. The automatic hiding can be also controlled by using the `autoHide` attribute.
+Snackbar は 10000 ミリ秒の後に非表示されます。`displayTime` 属性でこの期間を設定できます。自動非表示は `autoHide` 属性でも構成できます。
 <div class="divider--half"></div>

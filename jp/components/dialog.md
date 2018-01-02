@@ -1,52 +1,52 @@
----
-title: Dialog Window Component
-_description: Whether building informative dialogs or data manipulation windows, Ignite UI for Angular Dialog Window component can manage information shown in real-time for fast capability.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Dialog Window components, Angular Dialog Window controls
+﻿---
+title: Dialog Window コンポーネント
+_description: Ignite UI for Angular Dialog Window コンポーネントを使用すると、情報ダイアログまたはデータ変換ウィンドウを作成し、リアルタイムで情報を表示して管理できます。
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Dialog Window コンポーネント, Angular Dialog Window コントロール
 ---
 
 ##Dialog Windows
-<p class="highlight">Use the Ignite UI for Angular Dialog Window component to display messages or present forms for users to fill out. The component opens a dialog window centered on top of app content. You can also provide a standard alert message that users can cancel.</p>
+<p class="highlight">Ignite UI for Angular Dialog Window コンポーネントをメッセージを表示するか、入力フォームを表示するために使用します。コンポーネントはアプリケーション コンテンツの中央上にダイアログ ウィンドウを開きます。キャンセル可能な規格の警告メッセージを提供できます。</p>
 <div class="divider"></div>
 
-### Dialog Example
+### Dialog の例
 <div class="sample-container" style="height:588px">
     <iframe src='https://{environment:host}/angular-demos/dialog' width="100%" height="100%" seamless frameBorder="0"></iframe>
 </div>
 <div class="divider--half"></div>
 
-### Alerts
+### 警告
 
-**Alerts are done by adding title, message, and button label.**
+**警告を作成するには、タイトル、メッセージ、およびボタン ラベルを追加します。**
 
 ```html
 <igx-dialog #alert
-    title="Alert"
-    message="Your email has been sent successfully!"
+    title="警告"
+    message="メールは正しく送信されました。"
     leftButtonLabel="OK" (onLeftButtonSelect)="alert.close()">
 </igx-dialog>
 ```
-You can set title to the alert `title="TitleofTheAlert"`
+警告のタイトルを設定するには、`title="TitleofTheAlert"` を使用します。
 
-You can be more descriptive and set message `message="Your email has been sent successfully!"`
+詳細メッセージを設定するには、`message="メールは正しく送信されました。"` を使用します。
 
-You can attach to the left button select event `(onLeftButtonSelect)="alert.close()"`
+左ボタンの選択イベントにアタッチするには、`(onLeftButtonSelect)="alert.close()"` を使用します。
 <div class="divider--half"></div>
 
-###Standard Dialogs
-**Dialogs are done by adding another button.**
+### 規格のダイアログ
+**ダイアログは警告と同様ですが、その他のボタンが追加されます。**
 
 ```html
 <igx-dialog #dialog
-    title="Confirmation"
-    message="Are you sure you want to delete the Microsoft_Annual_Report_2015.pdf and Microsoft_Annual_Report_2015.pdf files?"
-    leftButtonLabel="Cancel"
+    title="確認"
+    message="Microsoft_Annual_Report_2015.pdf および Microsoft_Annual_Report_2015.pdf を削除してもよろしいですか?"
+    leftButtonLabel="キャンセル"
     (onLeftButtonSelect)="dialog.close()"
     rightButtonLabel="OK"
     (onRightButtonSelect)="onDialogOKSelected($event)">
 </igx-dialog>
 ```
 
-You can access all properties of the button component with the following attributes:
+次の属性を使用して、ボタン コンポーネントのすべてのプロパティにアクセスできます。
 
 `leftButtonLabel`
 
@@ -59,29 +59,29 @@ You can access all properties of the button component with the following attribu
 `leftButtonRipple`
 <div class="divider--half"></div>
 
-###Custom Dialogs
-**Custom Dialogs are done by adding any markup in the igx-dialog tag.**
-When you are using Custom Dialogs you don't have a message property set.
+### カスタム ダイアログ
+**カスタム ダイアログを作成するには、マークアップを igx-dialog タグに追加します。**
+カスタム ダイアログは message プロパティを設定しません。
 
 ```HTML
 <igx-dialog #form
-    title="Sign In"
-    leftButtonLabel="Cancel"
+    title="サインイン"
+    leftButtonLabel="キャンセル"
     (onLeftButtonSelect)="form.close()"
-    rightButtonLabel="Sign In"
+    rightButtonLabel="サインイン"
     rightButtonBackgroundColor="green"
     rightButtonColor="white"
     closeOnOutsideSelect="true">
     <div class="ig-form-group">
         <input type="text" igInput />
-        <label igLabel>Username</label>
+        <label igLabel>ユーザー名</label>
     </div>
     <div class="ig-form-group">
         <input type="password" igInput />
-        <label igLabel>Password</label>
+        <label igLabel>パスワード</label>
     </div>
 </igx-dialog>
 ```
 
-You can make the dialog dismissible `closeOnOutsideSelect="true"``
+ダイアログを閉じられるようにするには、`closeOnOutsideSelect="true"` を設定します。
 <div class="divider--half"></div>
