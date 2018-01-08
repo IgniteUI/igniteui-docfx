@@ -1,20 +1,20 @@
----
-title: Navigation Drawer Component
-_description: Implement a user-friendly slide in/out navigation container with complete programmatic control with Ignite UI for Angular Navigation Drawer component.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Navigation Drawer component, Angular Navigation Drawer control
+﻿---
+title: Navigation Drawer コンポーネント
+_description: Ignite UI for Angular Navigation Drawer コンポーネントは、コードでスライド イン/アウト ナビゲーション コンテナーの実装が可能です。
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Navigation Drawer コンポーネント, Angular Navigation Drawer コントロール
 ---
 
-##Navigation Drawer
-<p class="highlight">The Ignite UI for Angular Navigation Drawer component is a slide in/slide out navigation container that can be pinned or allowed to collapse out of the way when not in use. It can be positioned on either side of the page, with left as the default. The component allows complete programmatic control, including reporting on which panel is currently selected, and allows the use of both navigation items and non-active headers.</p>
+## Navigation Drawer
+<p class="highlight">Ignite UI for Angular Navigation Drawer コンポーネントは、スライドしてピン固定できるナビゲーション コンテナーです。使用されていない場合、縮小して非表示にもできます。ページの両端に配置できます。デフォルト位置は左側です。コンポーネントをコードで設定できます。選択済みのパネルを通知できます。また、ナビゲーション項目および非アクティブなヘッダーを設定できます。</p>
 <div class="divider"></div>
 
-### Navigation Drawer Demo
+### Navigation Drawer デモ
 <div class="sample-container" style="height: 600px">
     <iframe frameborder="0" seamless width="100%" height="100%" src="https://{environment:host}/angular-demos/navigation-drawer"></iframe>
 </div>
 <div class="divider--half"></div>
 
-### Usage
+### 使用方法
 ```html
 <ig-nav-drawer id="test"
     (opened)="logEvent($event)"
@@ -25,7 +25,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
     [width]="drawerWidth"
     [miniWidth]="drawerMiniWidth">
         <div class="ig-drawer-content">
-            <h3>Drawer Title</h3>
+            <h3>Drawer タイトル</h3>
             <div *ngFor="let navItem of navItems"><img src="http://www.infragistics.com/assets/images/favicon.ico" width='16' />
             <a routerLink="{{navItem.link}}"> {{navItem.text}} </a></div>
         </div>
@@ -39,45 +39,45 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ### API
 
-#### Properties
-| Name      | Type|  Description |
+#### プロパティ
+| 名前      | 型|  説明 |
 |:----------|:----:|:------|
-| `ID`| string | ID of the component. |
-| `position` | string | Position of the Navigation Drawer. Can be "left"(default) or "right". Only has effect when not pinned.|
-| `enableGestures`| boolean | Enables the use of touch gestures to manipulate the drawer - such as swipe/pan from edge to open, swipe toggle and pan drag. |
-| `isOpen` | boolean | State of the drawer. |
-| `pin` | boolean | Pinned state of the drawer. Currently only support. |
-| `pinThreshold` | number | Minimum device width required for automatic pin to be toggled. Deafult is 1024, can be set to falsy value to ignore. |
-| `width` | string| Width of the drawer in its open state. Defaults to 300px based on the `.ig-nav-drawer` style. Can be used to override or dynamically modify the width.|
-| `miniWidth` | string | Width of the drawer in its mini state. Defaults to 60px based on the `.ig-nav-drawer.mini` style. Can be used to override or dynamically modify the width. |
+| `ID`| string | コンポーネントの ID。 |
+| `position` | string | Navigation Drawer の位置。"left" (デフォルト値) または "right" です。固定されていない場合のみ効果があります。|
+| `enableGestures`| boolean | ドロアーを利用するために、端からスワイプ/パンニングして開く、スワイプ切り替え、およびパンニング ドラッグなどのタッチ ジェスチャの使用を有効にします。 |
+| `isOpen` | boolean | ドロアーの状態。 |
+| `pin` | boolean | ドロアーのピン固定状態。 |
+| `pinThreshold` | number | 自動ピン固定を切り替えるためのデバイスの最小幅。デフォルト値は 1024 です。無視するには falsy 値に設定します。 |
+| `width` | string| 開いたドロアーの幅。`.ig-nav-drawer` スタイルに基づいてデフォルト値は 300px です。幅をオーバーライドするか、幅を動的に変更するために使用できます。|
+| `miniWidth` | string | mini 状態でドロアーの幅。`.ig-nav-drawer.mini` スタイルに基づいてデフォルト値は 60px です。幅をオーバーライドするか、幅を動的に変更するために使用できます。 |
 <div class="divider--half"></div>
 
-### Methods
-| Name      |  Description |
+### メソッド
+| 名前      |  説明 |
 |:----------|:------|
-| `open`    | Open the Navigation Drawer. Has no effect if already opened. *@param* fireEvents Optional flag determining whether events should be fired or not. *@return* Promise that is resolved once the operation completes. |
-| `close`   | Close the Navigation Drawer. Has no effect if already closed. *@param* fireEvents Optional flag determining whether events should be fired or not. *@return* Promise that is resolved once the operation completes. |
-| `expectedWidth()`  | Get the Drawer width for specific state. Will attempt to evaluate requested state and cache. |
-| `expectedMiniWidth()`| Get the Drawer mini width for specific state. Will attempt to evaluate requested state and cache. |
+| `open`    | Navigation Drawer を開きます。すでに開いている場合は効果がありません。 *@param* fireEvents イベントを発生するかどうかを決定するオプションのフラグ。 *@return* 操作が完了したときに解決される Promise。 |
+| `close`   | Navigation Drawer を閉じます。すでに閉じている場合は効果がありません。 *@param* fireEvents イベントを発生するかどうかを決定するオプションのフラグ。 *@return* 操作が完了したときに解決される Promise。 |
+| `expectedWidth()`  | 特定の状態の Drawer 幅を取得します。要求された状態を評価してキャッシュされようとします。 |
+| `expectedMiniWidth()`| 特定の状態の Drawer の mini 幅を取得します。要求された状態を評価してキャッシュされようとします。 |
 <div class="divider--half"></div>
 
-### Events
-| Name      |  Description |
+### イベント
+| 名前      |  説明 |
 |:----------|:------|
-| `opening` | Event fired as the Navigation Drawer is about to open. |
-| `opened`  | Event fired when the Navigation Drawer has opened. |
-| `closing` | Event fired as the Navigation Drawer is about to close. |
-| `closed`  | Event fired when the Navigation Drawer has closed. |
+| `opening` | Navigation Drawer が開くときに発生するイベント。 |
+| `opened`  | Navigation Drawer が開いたときに発生するイベント。 |
+| `closing` | Navigation Drawer が閉じるときに発生するイベント。 |
+| `closed`  | Navigation Drawer が閉じたときに発生するイベント。 |
 <div class="divider--half"></div>
 
-Using `TypeScript` to configure Drawer component
+`TypeScript` で Drawer コンポーネントの構成:
 
 ```typescript
 export class MainDrawerSampleComponent {
     navItems: Array<Object> = [
-        { text: 'Default sample', link: '/navigation-drawer' },
-        { text: 'Pin sample', link: '/navigation-drawer/pin' },
-        { text: 'Mini sample', link: '/navigation-drawer/mini' }
+        { text: 'デフォルトのサンプル', link: '/navigation-drawer' },
+        { text: 'ピン固定サンプル', link: '/navigation-drawer/pin' },
+        { text: 'Mini サンプル', link: '/navigation-drawer/mini' }
     ];
 
     pin: boolean = false;

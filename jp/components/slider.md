@@ -1,22 +1,22 @@
----
-title: Slider Component
-_description: Ignite UI for Angular Slider control provides a rich input for value selection and delivers consistent experience across browsers.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Slider components, Angular Slider controls
+﻿---
+title: Slider コンポーネント
+_description: Ignite UI for Angular Slider コントロールは、ブラウザー間で統一したエクスペリエンスおよび値選択の入力機能を提供します。
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Slider コンポーネント, Angular Slider コントロール
 ---
 
-##Slider
-<p class="highlight">Configure a slider or range slider with the Ignite UI for Angular Slider control. Users can select a value in a given range, or a range of values. The range can be defined as continuous or stepped.</p>
+## Slider
+<p class="highlight">Ignite UI for Angular Slider コントロールでスライダーや範囲スライダーを構成します。ユーザーが指定した範囲内の値、または値の範囲を選択できます。範囲は連続またはステップ付きとして定義できます。</p>
 <div class="divider"></div>
 
-### Slider Example
+### Slider デモ
 <div class="sample-container" style="height: 530px">
     <iframe frameborder="0" seamless width="100%" height="100%" src="https://{environment:host}/angular-demos/slider"></iframe>
 </div>
 <div class="divider--half"></div>
 
 
-###Usage
-#####Basic Slider
+### 使用方法
+##### ベーシック スライダー
 <div class="divider--half"></div>
 
 ```html
@@ -24,7 +24,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 </igx-slider>
 ```
 
-####Range slider
+#### 範囲スライダー
 <div class="divider--half"></div>
 
 ```html
@@ -34,10 +34,10 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ```
 <div class="divider--half"></div>
 
-### Getting Started
+### はじめに
 
-#### Dependencies
-To use the IgxSlider import the IgxSlider:
+#### 依存関係
+IgxSlider を使用するには、IgxSlider をインポートします。
 
 ```typescript
 import { IgxSlider } from "igniteui-js-blocks/IgxSliderModule";
@@ -48,39 +48,39 @@ import { IgxSlider } from "igniteui-js-blocks/IgxSliderModule";
 
 ### SliderType
 
-| Name | Description |
+| 名前 | 説明 |
 | :--- | :---------- |
-| `SLIDER` | Slider with single thumb. |
-| `RANGE` | Range slider with multiple thumbs, which can mark the range. |
+| `SLIDER` | 単一のつまみを持つスライダー。 |
+| `RANGE` | 範囲を定義する複数のつまみを持つ範囲スライダー。 |
 <div class="divider--half"></div>
 
 ### IRangeSliderValue
 
-| Name | Type | Description |
+| 名前 | 型 | 説明 |
 | :--- | :--- | :---------- |
-| `lower` | number | The lower value of the range slider |
-| `upper` | number | The upper value of the range slider |
+| `lower` | number | 範囲スライダーの低値。 |
+| `upper` | number | 範囲スライダーの高値。 |
 <div class="divider--half"></div>
 
-### Inputs
+### 入力
 
-| Name | Type | Description |
+| 名前 | 型 | 説明 |
 | :--- | :--- | :--- |
-| `disabled` | boolean | Disables or enables UI interaction. |
-| `isContinuous` | boolean | Marks slider as continuous. By default is considered that the slider is discrete. Discrete slider does not have ticks and does not shows bubble labels for values. |
-| `lowerBound` | number | The lower boundary of the slider value. If not set is the same as min value. |
-| `maxValue` | number | The maximal value for the slider. |
-| `minValue` | number | The minimal value for the slider. |
-| `step` | number | The incremental/decremental step of the value when dragging the thumb. The default step is 1, and step should not be less or equal than 0. |
-| `thumbLabelVisibilityDuration` | number | The duration visibility of thumbs labels. The default value is 750 milliseconds. |
-| `type` | [SliderType](#slidertype) | The duration visibility of thumbs labels. The default value is 750 milliseconds. |
-| `upperBound` | number | The lower boundary of the slider value. If not set is the same as min value. |
-| `value` | number\|[IRangeSliderValue](#irangeslidervalue) | The slider value. If the slider is of type SLIDER the argument is number. By default if no value is set the default value is same as lower upper bound. If the slider type is RANGE the argument is object containing lower and upper properties for the values.  By default if no value is set the default value is for lower value it is the same as lower bound and if no value is set for the upper value it is the same as the upper bound.
+| `disabled` | boolean | UI 操作を無効にするか、有効にします。 |
+| `isContinuous` | boolean | スライダーを連続にします。スライダーはデフォルトで不連続です。不連続スライダーには目盛がなく、値にバブル ラベルを表示しません。 |
+| `lowerBound` | number | スライダー値の下方境界。設定しない場合は、最小値と同じです。 |
+| `maxValue` | number | スライダーの最大値。 |
+| `minValue` | number | スライダーの最小値。 |
+| `step` | number | つまみのドラッグ時の値を増加/減少する手順。デフォルト手順は 1 です。ステップを 0 以下に設定しないでください。 |
+| `thumbLabelVisibilityDuration` | number | つまみラベルの表示期間。デフォルト値は 750 ミリ秒です。 |
+| `type` | [SliderType](#slidertype) | つまみのタイプ。 |
+| `upperBound` | number | スライダー値の上方境界。設定しない場合は、最大値と同じです。 |
+| `value` | number\|[IRangeSliderValue](#irangeslidervalue) | スライダー値。スライダーのタイプが SLIDER の場合、引数は数値です。値が設定されない場合、デフォルト値は下限と同じです。スライダーのタイプが RANGE の場合、引数は値の lower および upper プロパティを含むオブジェクトです。値が設定されない場合、最小値のデフォルト値は下限と同じで、最大値が上限と同じです。
 <div class="divider--half"></div>
 
-### Outputs
+### 出力
 
-| Name | Description |
+| 名前 | 説明 |
 | :--- | :--- |
-| `onValueChange`  | This event is emitted when user has stopped interacting the thumb and value is changed.  |
+| `onValueChange`  | このイベントは、ユーザーがつまみ操作を中止して値が変更されたときに発生されます。  |
 <div class="divider--half"></div>

@@ -1,20 +1,20 @@
----
-title: Carousel Component
-_description: Use Ignite UI for Angular Carousel component to navigate through a collection of slides, cards or page-based interfaces with endless programmatic features.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Carousel component, Angular Carousel control
+﻿---
+title: Carousel コンポーネント
+_description: Ignite UI for Angular Carousel コンポーネントを使用すると、スライド、カード、またはページに基づいたインターフェイスのコレクション間を移動できます。
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Carousel コンポーネント, Angular Carousel コントロール
 ---
 
-##Carousel
-<p class="highlight">Use the Ignite UI for Angular Carousel component to browse or navigate through a collection of slides, including image galleries, cards, onboarding tutorials, or page-based interfaces. The carousel can be used as a full-screen element or situated inside another component. Slides can be programmed to change at defined intervals in slide-show mode, or set to be scrolled manually by users. Programmatic features of the control include raising an event when a slide is changed, added, or removed.</p>
+## Carousel
+<p class="highlight">Ignite UI for Angular Carousel コンポーネントを使用してギャラリー、カード、チュートリアル、またはページに基づくインターフェイスなどのスライドのコレクション間を移動します。カルーセルを全画面要素またはコンポーネントの子に設定できます。スライドショー モードでスライドを定義された間隔に変更するか、ユーザーによって手動的にスクロールします。コントロールはスライドの変更、追加、または削除でイベントを発生します。</p>
 <div class="divider"></div>
 
-### Carousel Demo
+### Carousel デモ
 <div class="sample-container" style="height: 800px">
     <iframe seamless width="100%" height="100%" frameborder="0" src="https://{environment:host}/angular-demos/carousel"></iframe>
 </div>
 <div class="divider--half"></div>
 
-### Usage
+### 使用方法
 ```html
 <igx-carousel [interval]="interval" [pause]="shouldPause" [loop]="shouldLoop">
     <igx-slide *ngFor="let slide of slides;" [active]="slide.active">
@@ -30,35 +30,35 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 #### Carousel (igx-carousel)
 <div class="divider--half"></div>
 
-| Name   |      Type      |  Description |
+| 名前   |      型      |  説明 |
 |:----------|:-------------:|:------|
-| `loop` |  boolean | Should the carousel wrap back to the first slide after it reaches the last. Defaults to `true`. |
-| `pause` | boolean | Should the carousel stop playing on user interaction. Defaults to `true`.  |
-| `interval` | number | The amount of time in milliseconds between slides transition. |
-| `navigation` | boolean | Controls should the carousel render the left/right navigation buttons. Defaults to `true`. |
-| `total` | number | The number of slides the carousel currently has.  |
-| `current` | number | The index of the slide currently showing. |
-| `isPlaying` | boolean | Returns whether the carousel is paused/playing. |
-| `isDestroyed` | boolean | If the carousel is destroyed (`ngOnDestroy` was called) |
-| `onSlideChanged` | event | Emitted on slide change |
-| `onSlideAdded` | event | Emitted when a slide is being added to the carousel |
-| `onSlideRemoved`| event | Emitted whe a slide is being removed from the carousel |
-| `onCarouselPaused` | event | Emitted when the carousel is pausing. |
-| `onCarouselPlaying`| event | Emitted when the carousel starts/resumes playing. |
-| `play()` | void | Emits `onCarouselPlaying` event and starts the transition between slides. |
-| `stop()` | void | Emits `onCarouselPaused` event and stops the transition between slides. |
-| `prev()` | void | Switches to the previous slide. Emits `onSlideChanged` event. |
-| `next()` | void | Switches to the next slide. Emits `onSlideChanged` event. |
-| `add(slide: IgxSlide)` | void | Adds a slide to the carousel. Emits `onSlideAdded` event. |
-| `remove(slide: IgxSlide)` | void | Removes an existing slide from the carousel. Emits `onSlideRemoved` event. |
-| `get(index: Number)` | IgxSlide or void | Returns the slide with the given index or null. |
-| `select(slide: IgxSlide, direction: Direction)`| void | Selects the slide and the direction to transition to. Emits `onSlideChanged` event. |
+| `loop` |  boolean | カルーセルが最後のスライドから最初のスライドに移動するかどうか。デフォルトは `true` です。|
+| `pause` | boolean | カルーセルがユーザー操作の後に再生を中止するかどうか。デフォルトは `true` です。  |
+| `interval` | number | スライド トランジション間の間隔 (ミリ秒)。 |
+| `navigation` | boolean | カルーセルに左/右のナビゲーション ボタンを描画するかどうか。デフォルトは `true` です。 |
+| `total` | number | カルーセルが持つスライドの数。  |
+| `current` | number | 表示しているスライドのインデックス。 |
+| `isPlaying` | boolean | カルーセルが一時停止されているか、再生しているかを返します。 |
+| `isDestroyed` | boolean | カルーセルが破棄された (`ngOnDestroy` が呼び出された) かどうか。 |
+| `onSlideChanged` | event | スライドの変更で発生します。 |
+| `onSlideAdded` | event | スライドがカルーセルに追加される時に発生します。 |
+| `onSlideRemoved`| event | スライドがカルーセルから削除される時に発生します。 |
+| `onCarouselPaused` | event | カルーセルが一時停止されているときに発生します。 |
+| `onCarouselPlaying`| event | カルーセルが再生されているときに発生します。 |
+| `play()` | void | `onCarouselPlaying` イベントを発生し、スライド間のトランジションを開始します。 |
+| `stop()` | void | `onCarouselPaused` イベントを発生し、スライド間のトランジションを中止します。 |
+| `prev()` | void | 前のスライドに移動します。`onSlideChanged` イベントを発生します。 |
+| `next()` | void | 次のスライドに移動します。`onSlideChanged` イベントを発生します。 |
+| `add(slide: IgxSlide)` | void | カルーセルにスライドを追加します。`onSlideAdded` イベントを発生します。 |
+| `remove(slide: IgxSlide)` | void | 既存のスライドをカルーセルから削除します。`onSlideRemoved` イベントを発生します。 |
+| `get(index: Number)` | IgxSlide または void | 所定のインデックスのスライドまたは null を返します。 |
+| `select(slide: IgxSlide, direction: Direction)`| void | スライドおよびトランジション方向を選択します。`onSlideChanged` イベントを発生します。 |
 
 #### Slide (igx-slide)
 <div class="divider--half"></div>
 
-| Name   |      Type      |  Description |
+| 名前   |      型      |  説明 |
 |:----------|:-------------:|:------|
-| `index` |  number | The index of the slide inside the carousel. |
-| `direction` |  Direction | The direction in which the slide should transition. Possibly values are `NONE`, `NEXT`, `PREV` |
-| `active`| boolean | Whether the current slide is active, i.e. the one being currently displayed by the carousel. |
+| `index` |  number | カルーセル内のスライドのインデックス。 |
+| `direction` |  Direction | スライドのトランジション方向。設定可能な値は `NONE`、`NEXT`、および `PREV` です。 |
+| `active`| boolean | 現在のスライドがアクティブ、つまりカルーセルに表示されているかどうか。 |

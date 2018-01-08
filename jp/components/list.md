@@ -1,75 +1,75 @@
----
-title: List View Component
-_description: Using any template, display data within rows seamlessly and intuitively through a native Angular framework with Ignite UI for Angular List View component.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular List View components, Angular List View controls
+﻿---
+title: List View コンポーネント
+_description: Ignite UI for Angular List View コンポーネントを使用すると、ネイティブ Angular フレームワークで行にデータを任意のテンプレートを使用して表示します。
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular List View コンポーネント, Angular List View コントロール
 ---
 
-##List View
-<p class="highlight">The Ignite UI for Angular List component displays rows of items and supports one or more header items as well as search and filtering of list items. Each list item is completely templateable and will support any valid HTML or Angular component. </p>
+## List View
+<p class="highlight">Ignite UI for Angular List コンポーネントは項目の行を表示し、ヘッダー項目を 1 つ以上サポートし、リスト項目の検索およびフィルタリングをサポートします。各リスト項目をテンプレートに設定できます。テンプレートは有効な HTML または Angular コンポーネントをサポートします。</p>
 <div class="divider"></div>
 
-### List Demo
+### List デモ
 <div class="sample-container" style="height: 760px">
 <iframe src='https://{environment:host}/angular-demos/list' width="100%" height="100%" seamless frameBorder="0"></inframe>
 </div>
 <div class="divider--half"></div>
 
-###Usage
+### 使用方法
 ```html
 <igx-list>
-    <igx-list-header>Header 1</igx-list-header>
-    <igx-list-item>Item 1</igx-list-item>
-    <igx-list-item>Item 2</igx-list-item>
-    <igx-list-item>Item 3</igx-list-item>
-    <igx-list-header>Header 2</igx-list-header>
-    <igx-list-item>Item 4</igx-list-item>
-    <igx-list-item>Item 5</igx-list-item>
-    <igx-list-item>Item 6</igx-list-item>
+    <igx-list-header>ヘッダー 1</igx-list-header>
+    <igx-list-item>項目 1</igx-list-item>
+    <igx-list-item>項目 2</igx-list-item>
+    <igx-list-item>項目 3</igx-list-item>
+    <igx-list-header>ヘッダー 2</igx-list-header>
+    <igx-list-item>項目 4</igx-list-item>
+    <igx-list-item>項目 5</igx-list-item>
+    <igx-list-item>項目 6</igx-list-item>
 </igx-list>
 ```
 
-The child components of the IgxList are:
+IgxList の子コンポーネント:
 
-- *Igx-List-Header* - represents list header - non-interactable list item whose role is to label, describe and unify the next list items, composed below it
-- *Igx-List-Item* - represents list item
+- *Igx-List-Header* - リスト ヘッダーを表します。子リスト項目をラベルし、説明し、グループ化する非対話型なリスト項目。
+- *Igx-List-Item* - リスト項目を表します。
 
-Both: item and header, implement `IListChild`.
-The list provides three arrays:
+項目およびヘッダーの両方は `IListChild` を実装します。
+リストは 3 つの配列を提供します。
 
-- one that contains all the children: items and headers,
-- only items,
-- only headers.
+- 項目およびヘッダーのすべての子要素を含む配列。
+- 項目のみの配列。
+- ヘッダーのみの配列。
 
-#### List Properties
-- `children` - Array of all `IListChild` components: items and headers
-- `items` - Array of items in the list
-- `headers` - Array of headers in the list
-- `allowLeftPanning` - Determines whether the left panning of an item is allowed
-- `allowRightPanning` - Determines whether the right panning on an item is allowed
+#### List プロパティ
+- `children` - 項目およびヘッダーのすべての `IListChild` コンポーネントの配列。
+- `items` - リスト内の項目の配列。
+- `headers` - リスト内のヘッダーの配列。
+- `allowLeftPanning` - 項目の左パンニングが許可されるかどうかを決定します。
+- `allowRightPanning` - 項目の右パンニングが許可されるかどうかを決定します。
 
-#### Methods
-- `addChild` - Add `IListChild` component to children array and to the respective specific array
-- `removeChild` - Remove `IListChild` component from children array and from the respective specific array
+#### メソッド
+- `addChild` - `IListChild` コンポーネントを子要素配列および項目タイプの配列に追加します。
+- `removeChild` - `IListChild` コンポーネントを子要素配列および項目タイプの配列から削除します。
 
-#### Events
-- `onPanStateChange` - Triggered when pan gesture is executed on list item
-- `onLeftPan` - Triggered when left pan gesture is executed on list item
-- `onRightPan` - Triggered when right pan gesture is executed on list item
+#### イベント
+- `onPanStateChange` - パンニング ジェスチャがリスト項目で実行されるときにトリガーされます。
+- `onLeftPan` - 左パンニング ジェスチャがリスト項目で実行されるときにトリガーされます。
+- `onRightPan` - 右パンニング ジェスチャがリスト項目で実行されるときにトリガーされます。
 <div class="divider--half"></div>
 
-###List Header
-_Child component of Igx-List, which represents a single non-interactable `item` that is used as a header of the following items. The header implements `IListChild` interface._
+### リスト ヘッダー
+_子項目のヘッダーとして使用される非対話型な単一の `item` を表す Igx-List の子コンポーネント。ヘッダーは `IListChild` インターフェイスを実装します。_
 
-#### Header Properties
-- `index` - The index of header in children array
+#### ヘッダー プロパティ
+- `index` - 子配列でヘッダーのインデックス。
 <div class="divider--half"></div>
 
-###List Item
-_Child component of Igx-List, which represents a single interactable item. Its content can be text or any other HTML content. The item implements `IListChild` interface._
+### リスト項目
+_単一の操作可能な単一の項目を表す Igx-List の子コンポーネント。コンテンツがテキストまたは任意の HTML コンテンツに設定できます。項目は `IListChild` インターフェイスを実装します。_
 
-#### Item Properties
-- `index` - The index of item in children array
-- `hidden` - Determines whether the item should be displayed
-- `panState` - Gets the item's pan state
-- `options` - Defines the options of the particular list item that will be displayed on item swipe (pan)
+#### 項目プロパティ
+- `index` - 子配列で項目のインデックス。
+- `hidden` - 項目が表示されるかどうかを決定します。
+- `panState` - 項目のパンニング状態を取得します。
+- `options` - そのリスト項目の項目スワイプ (パンニング操作) で表示されるオプションを定義します。
 <div class="divider--half"></div>

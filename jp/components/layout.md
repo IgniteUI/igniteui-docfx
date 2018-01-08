@@ -1,43 +1,40 @@
----
-title: Layout Manager Directive
-_description: Only Ignite UI for Angular Layout Manager directive provides various styles of responsive and fluid user interfaces.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Layout Manager component, Angular Layout Manager controls
+﻿---
+title: Layout Manager ディレクティブ
+_description: Ignite UI for Angular Layout Manager ディレクティブはさまざまなレスポンシブで移動可能なユーザー インターフェイス スタイルを提供します。
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Layout Manager コンポーネント, Angular Layout Manager コントロール
 ---
 
-##Layout Manager
-<p class="highlight">The Ignite UI for Angular Layout Directive allows developers to specify a layout direction for any children of the container it is applied to. Layout can flow vertically or horizontally, with controls for wrapping, justification, and alignment.</p>
+## Layout Manager
+<p class="highlight">Ignite UI for Angular Layout ディレクティブは、適用されたコンテナーの子要素のレイアウト方向を指定する機能を提供します。レイアウトを垂直方向または水平方向に設定できます。折り返し、両端揃え、および配置も制御できます。</p>
 <div class="divider"></div>
 
-### Layout Demo
+### Layout デモ
 <div class="sample-container" style="height: 3704px">
     <iframe src='https://{environment:host}/angular-demos/layout' width="100%" height="100%" seamless frameBorder="0"></iframe>
 </div>
 <div class="divider--half"></div>
 
-###Usage
-Use the **igxLayout** directive on a container element to specify the layout
-direction for its children: horizontally with `igxLayoutDir="row"` or vertically with
-`igxLayoutDir="column"`.
+### 使用方法
+**igxLayout** ディレクティブをコンテナー要素に適用して、子要素のレイアウト方向を指定します。水平方向は `igxLayoutDir="row"` で、垂直方向は `igxLayoutDir="column"` です。
 
-**Note**: the `igxLayout` directive affects the flow directions for that
-container's **immediate** children.
+**注**: `igxLayout` ディレクティブはそのコンテナーの**直下**の子のフロー方向に影響します。
 <div class="divider--half"></div>
 
-### Nesting
-Use the `igxFlex` directive for elements inside an `igxLayout` parent to control specific flexbox properties.
+### ネスト
+`igxFlex` ディレクティブを `igxLayout` 親内の要素に使用して、特定のフレックスボックス プロパティを制御します。
 
-| Name   |      Type      |  Description |
+| 名前   |      型      |  説明 |
 |:----------|:-------------:|:------|
-| `igxFlexOrder` | number | Controls in what order are the elements laid out in the flex container. Defaults to `0`. |
-| `igxFlexGrow` | number | Sets whether an item should grow in a proportion to its peers inside the flex container. Defaults to `1`. |
-| `igxFlexShrink` | number | Sets whether an items should shrink in a proportion to its peers. Defaults to `1` and negative number are not accepted. |
+| `igxFlexOrder` | number | フレックス コンテナーで要素の配置順序を制御します。デフォルト値は `0` です。 |
+| `igxFlexGrow` | number | 項目がフレックス コンテナー内のピアに対して大きくなるかどうかを設定します。デフォルト値は `1` です。 |
+| `igxFlexShrink` | number | 項目がフレックス コンテナー内にピアに対して小さくなるかどうかを設定します。デフォルト値は `1` で、負の数は無効です。 |
 <div class="divider--half"></div>
 
 ### API
-| Name   |      Type      |  Description |
+| 名前   |      型      |  説明 |
 |:----------|:-------------:|:------|
-| `igxLayoutDir` |  string | Sets the default flow direction of the container's children. Defaults to `rows`. |
-| `igxLayoutReverse` |    boolean   | Defines the direction flex children are placed in the flex container. When set to `true`, the `rows` direction goes right to left and `columns` goes bottom to top.    |
-| `igxLayoutWrap` | string | By default the immediate children will all try to fit onto one line. The default value `nowrap` sets this behavior. Other accepted values are `wrap` and `wrap-reverse`|
-| `igxLayoutJustify` | string | Defines the alignment along the main axis. Defaults to `flex-start` which packs the children toward the start line. Other possible values are `flex-end`, `center`, `space-between`, `space-around`|
-| `igxLayoutItemAlign` | string | Defines the default behavior for how children are laid out along the corss axis of the current line. Defaults to `flex-start`. Other possible values are `flex-end`, `center`, `baseline`, and `stretch` |
+| `igxLayoutDir` |  string | コンテナーの子要素のデフォルト フロー方向を設定します。デフォルト値は `rows` です。 |
+| `igxLayoutReverse` |    boolean   | フレックス子要素がフレックス コンテナーに配置される方向を定義します。`true` に設定される場合、`rows` は右から左へ、`columns` は下から上への方向になります。    |
+| `igxLayoutWrap` | string | デフォルトで直下の子は単一行に配置されます。`nowrap` のデフォルト値でこの動作を設定します。その他の値は `wrap` および `wrap-reverse` です。|
+| `igxLayoutJustify` | string | 主軸での配置を定義します。デフォルト値は開始線の近くに子要素を配置する `flex-start` です。その他の値は `flex-end`、`center`、`space-between`、および `space-around` です。|
+| `igxLayoutItemAlign` | string | 現在の行の交差軸に子要素が配置されるデフォルト動作を定義します。デフォルト値は `flex-start` です。その他の値は `flex-end`、`center`、`baseline`、および `stretch` です。 |

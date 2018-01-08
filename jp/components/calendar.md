@@ -1,80 +1,79 @@
----
-title: Calendar Component
-_description: Create an intuitive calendar for applications to display date information, and users to input date information with Ignite UI for Angular Calendar component.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Calendar components, Angular Calendar controls
+﻿---
+title: Calendar コンポーネント
+_description: Ignite UI for Angular の Calendar コンポーネントを使用して、アプリケーションで日付情報の表示および日付の入力を可能なカレンダーを作成します。
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Calendar コンポーネント, Angular Calendar コントロール
 ---
 
-##Calendar
-<p class="highlight">The Ignite UI for Angular Calendar component provides three easy, intuitive ways for applications to display date information. Users can input dates, select a single date, or pick a range of dates.</p>
+## Calendar
+<p class="highlight">Ignite UI for Angular の Calendar コンポーネントは日付情報を表示する 3 つの方法を提供します。ユーザーが日付を入力するか、単一の日付を選択するか、日付の範囲を選択できます。</p>
 <div class="divider"></div>
 
-### Calendar Demo
+### Calendar デモ
 <div class="sample-container" style="height:1728px">
     <iframe src='https://{environment:host}/angular-demos/calendar' width="100%" height="100%" seamless frameBorder="0"></iframe>
 </div>
 <div class="divider--half"></div>
 
-### Usage
+### 使用方法
 ```typescript
 import { IgxCalendarComponent } from "igniteui-js-blocks";
 ```
 
-Basic initialization
+基本的な初期化
 ```html
 <igx-calendar></igx-calendar>
 ```
 
-A range selection calendar with the first day of week set to Monday and an event
-handler when selection is done.
+範囲選択カレンダー。最初の曜日は月曜日に設定し、選択の完了でイベント ハンドラーがあります。
 ```html
 <igx-calendar weekStart="1" selection="range" (onSelection)="eventHandler($event)"></igx-calendar>
 ```
 
-The calendar also supports binding through `ngModel` if two-way data-binding is needed.
+カレンダーは、両方向のデータ バインディングが必要な場合、`ngModel` でのバインディングをサポートします。
 ```html
 <igx-calendar [(ngModel)]="myDateValue"></igx-calendar>
 ```
 <div class="divider--half"></div>
 
-### Keyboard navigation
-When the **igxCalendar** component is focused:
-- `PageUp` will move to the previous month.
-- `PageDown` will move to the next month.
-- `Shift + PageUp` will move to the previous year.
-- `Shift + PageDown` will move to the next year.
-- `Home` will focus the first day of the current month that is in view.
-- `End` will focus the last day of the current month that is in view.
+### キーボード ナビゲーション
+**igxCalendar** コンポーネントがフォーカスを持つ場合:
+- `PageUp` は前の月へ移動します。
+- `PageDown` は次の月へ移動します。
+- `Shift + PageUp` は前の年へ移動します。
+- `Shift + PageDown` は次の年へ移動します。
+- `Home` は表示されている現在月の最初日にフォーカスします。
+- `End` は表示されている現在月の最後日にフォーカスします。
 
-When a day inside the current month is focused:
-- Arrow keys will navigate through the days.
-- `Enter` will select the currently focused day.
+現在月の日がフォーカスされる場合:
+- 矢印キーは日を移動します。
+- `Enter` はフォーカスされている日を選択します。
 <div class="divider--half"></div>
 
 ### API
 
-#### Inputs
+#### 入力
 <div class="divider--half"></div>
 
-| Name       |      Type      |  Description |
+| 名前       |      型      |  説明 |
 |:----------:|:-------------|:------|
-| `weekStart`| `Number \| WEEKDAYS` | Sets which day the week will start. |
-| `locale` | `string` | Sets the locale used for formatting and displaying the dates in the calendar. For more information check out [this](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl) page for valid formats. |
-| `selection` | `string` | Sets the type of selection in the calendar. Valid values are `single` (default), `multi` and `range` |
-| `viewDate` | `Date` | Sets the year/month that will be presented in the default view when the calendar renders. By default it is the current year/month.   |
-| `value` | `Date \| Date[]` | Gets/Sets the current value of the calendar widget. Both multi-selection and range selection return an array of selected dates. |
-| `formatOptions` | `Object` | The format options passed along with the `locale` property used for formatting the dates. |
+| `weekStart`| `Number \| WEEKDAYS` | 週の最初の日を設定します。 |
+| `locale` | `string` | カレンダーで日付の書式および表示のためのロケールを設定します。有効な書式の詳細については、[この](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl)ページを参照してください。 |
+| `selection` | `string` | カレンダーの選択タイプを設定します。有効な値は `single` (デフォルト)、`multi`、および `range` です。|
+| `viewDate` | `Date` | カレンダーを描画するときにデフォルト ビューで表示される年と月を設定します。デフォルト値は現在の年と月です。   |
+| `value` | `Date \| Date[]` | カレンダー ウィジェットの現在値を取得または設定します。複数選択および範囲選択は選択日付の配列を返します。 |
+| `formatOptions` | `Object` | 日付を書式設定するために使用される `locale` プロパティと渡される書式オプション。 |
 
-#### Outputs
+#### 出力
 <div class="divider--half"></div>
 
-| Name | Return Type | Description |
+| 名前 | 戻り値の型 | 説明 |
 |:--:|:---|:---|
-| `onSelection` | `Date \| Date[]` | Fired when selection is made in the calendar. The event contains the selected value(s) based on the type of selection the component is set to |
+| `onSelection` | `Date \| Date[]` | カレンダーで選択が実行されるときに発生します。イベントは、コンポーネントの選択タイプに基づいた選択値を含みます。 |
 
-#### Methods
+#### メソッド
 <div class="divider--half"></div>
 
-| Name   | Arguments | Return Type | Description |
+| 名前   | 引数 | 戻り値の型 | 説明 |
 |:----------:|:------|:------|:------|
-| `selectDate` | `date: Date \| Date[]` | `void` | Change the calendar selection. Calling this method will emit the `onSelection` event. |
+| `selectDate` | `date: Date \| Date[]` | `void` | カレンダーの選択を変更します。このメソッドの呼び出しは `onSelection` イベントを発生させます。 |
 <div class="divider--half"></div>

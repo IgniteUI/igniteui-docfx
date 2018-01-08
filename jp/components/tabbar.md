@@ -1,83 +1,83 @@
----
-title: Tab Bar Component
-_description: Display tabs for any occasion and implement a completely tabbed user interface. These UI controls manage every aspect of your tabs’ appearance and behavior.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Tab Bar component, Angular Tab Bar controls
+﻿---
+title: Tab Bar コンポーネント
+_description: タブ付きのユーザー インターフェイスでタブを表示します。この UI コントロールはタブの外観および動作を管理します。
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Tab Bar コンポーネント, Angular Tab Bar コントロール
 ---
 
 ## Tab Bar
-<p class="highlight">The Ignite UI for Angular Tab Bar component enables the user to navigate between different content displayed in one view of three to five panels. Panels are identified with an icon and/or text across the bottom.</p>
+<p class="highlight">Ignite UI for Angular Tab Bar コンポーネントでは 3∼5 パネルのビューで表示されるコンテンツ間を移動できます。パネルは下部のアイコンまたはテキストで識別されます。</p>
 <div class="divider"></div>
 
-### Tabbar Demo
+### Tabbar デモ
 <div class="sample-container" style="height:645px">
     <iframe src='https://{environment:host}/angular-demos/tabbar' width="100%" height="100%" seamless frameBorder="0"></inframe>
 </div>
 <div class="divider--half"></div>
 
-### Usage
+### 使用方法;
 ```html
 <igx-tab-bar>
-    <igx-tab-panel label="Tab 1">
-        <h1>Tab 1 Content</h1>
+    <igx-tab-panel label="タブ 1">
+        <h1>タブ 1 のコンテンツ</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     </igx-tab-panel>
-    <igx-tab-panel label="Tab 2">
-        <h1>Tab 2 Content</h1>
+    <igx-tab-panel label="タブ 2">
+        <h1>タブ 2 のコンテンツ</h1>
         <p>Lorem ipsum dolor sit amet...</p>
     </igx-tab-panel>
-    <igx-tab-panel label="Tab 3">
-        <h1>Tab 3 Content</h1>
+    <igx-tab-panel label="タブ 3">
+        <h1>タブ 3 のコンテンツ</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae malesuada odio.</p>
     </igx-tab-panel>
 </igx-tab-bar>
 ```
 
-_Igx-Tab-Bar represents a single content area with multiple panels, each associated with a tab._
-Igx-Tab-Bar provides two observable collections (QueryLists): one with panels and one with related tabs.
-The child components of the Igx-Tab-Bar are:
+_Igx-Tab-Bar はタブと関連づけられた複数のパネルを持つ単一のコンテンツ領域を表します。_
+Igx-Tab-Bar は 2 つ (パネルと関連づけられたタブ) の監視可能コレクション (QueryLists) を提供します。
+Igx-Tab-Bar の子コンポーネント:
 
-- *Igx-Tab-Panel* - represents the wrapper of the content that needs to be displayed
-- *Igx-Tab* - button that triggers display of the associated panel
+- *Igx-Tab-Panel* - 表示されるコンテンツのラッパーを表します。
+- *Igx-Tab* - 関連付けられているパネルの表示をトリガーするボタン。
 
-Each tab (Igx-Tab) is related to a particular panel (Igx-Tab-Panel). When tab is clicked, the associated panel is selected and visualized into a single container.
-There should always be a selected tab. Only one tab can be selected at a time.
+各タブ (Igx-Tab) は特定のパネル (Igx-Tab-Panel) に関連付けられます。タブをクリックすると、関連づけられたパネルが選択され、単一のコンテナーに可視化されます。
+常に選択済みのタブがあります。一度に選択済みのタブは 1 つだけです。
 
-#### Tab Bar Properties
-- `tabs` - Observable collection of all IgxTab view children
-- `panels` - Observable collection of all IgxTabPanel content children
-- `selectedIndex` - Gets the index of selected tab/panel in the respective collection. Default value: -1
-- `selectedTab` - Gets the selected IgxTab in the tabbar based on `selectedIndex`
+#### Tab Bar プロパティ
+- `tabs` - すべての IgxTab ビューの子要素の Observable コレクション。
+- `panels` - すべての IgxTabPanel コンテンツの子要素の Observable コレクション。
+- `selectedIndex` - 対応するコレクションの選択済みのタブまたはパネルのインデックスを取得します。デフォルト値は -1 です。
+- `selectedTab` - Tab Bar で選択済みの IgxTab を `selectedIndex` に基づいて取得します。
 
-#### Events
-- `onTabSelected` - Fired when new tab is selected
-- `onTabDeselected` - Fired when tab is deselected
+#### イベント
+- `onTabSelected` - 新しいタブが選択されたときに発生します。
+- `onTabDeselected` - タブが選択解除されたときに発生します。
 <div class="divider--half"></div>
 
-### Panel
-*Igx-Tab-Panel* - _Child component of Igx-Tab-Bar, that represents the container of the content need to be displayed._
+### パネル
+*Igx-Tab-Panel* - _表示するコンテンツのコンテナーを表す Igx-Tab-Bar の子コンポーネントです。_
 
-#### Panel Properties
-- `isSelected` - Determines whether the panel is selected
-- `isDisabled` - Determines whether the panel is disabled
-- `index` - Gets the index of a panel in the panel collection
-- `relatedTab` - Gets the tab associated with the panel
-- `label` - Defines the label on the associated tab
-- `icon` - Defines the icon on the associated tab
+#### パネルのプロパティ
+- `isSelected` - パネルが選択されているかどうかを決定します。
+- `isDisabled` - パネルが無効されているかどうかを決定します。
+- `index` - パネル コレクションのパネルのインデックスを取得します。
+- `relatedTab` - パネルに関連付けられたタブを取得します。
+- `label` - 関連付けられているタブでのラベルを定義します。
+- `icon` - 関連付けられているタブでのアイコンを定義します。
 
-#### Panel Methods
-- `select` - Selects the panel and the associated tab
+#### パネルのメソッド
+- `select` - パネルおよび関連付けられているタブを選択します。
 <div class="divider--half"></div>
 
-### Tab
-*Igx-Tab* - _Child component of Igx-Tab-Bar, which represents the button that triggers display of the associated panel._
+### タブ
+*Igx-Tab* - _関連付けられているパネルの表示をトリガーするボタンを表す Igx-Tab-Bar の子コンポーネントです。_
 
-#### Tab Properties
-- `isDisabled` - Determines whether the tab is disabled
-- `isSelected` - Determines whether the tab is selected
-- `index` - Gets the index of a tab in the tab collection
-- `relatedPanel` - Gets the panel associated with the tab
+#### タブのプロパティ
+- `isDisabled` - タブが無効されているかどうかを決定します。
+- `isSelected` - タブが選択されているかどうかを決定します。
+- `index` - タブ コレクションのタブのインデックスを取得します。
+- `relatedPanel` - タブに関連付けられているパネルを取得します。
 
-#### Tab Methods
-- `select` - Selects the tab and the associated panel
+#### タブのメソッド
+- `select` - タブおよび関連付けられているパネルを選択します。
 <div class="divider--half"></div>
 

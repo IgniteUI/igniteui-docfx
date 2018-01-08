@@ -1,28 +1,28 @@
----
-title: Badge Component
-_description: Display an active count or icon in a predefined style to decorate other components anywhere in an application with Ignite UI for Angular Badge control.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Badge components, Angular Badge controls
+﻿---
+title: Badge コンポーネント
+_description: Ignite UI for Angular の Badge コントロールは、アプリケーションでその他のコンポーネントを装飾するために定義済みスタイルでアクティブ カウントまたはアイコンを表示します。
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Badge コンポーネント, Angular Badge コントロール
 ---
 
-##Badge
-<p class="highlight">The Ignite UI for Angular Badge is an absolutely positioned element that can be used to decorate avatars, navigation menus, or other components in the app that require an active indicator. Badges can display an active count, and can be designed as icons with a predefined style to communicate information, success, warnings, or errors.</p>
+## Badge
+<p class="highlight">Ignite UI for Angular の Badge はアプリケーションでアクティブ インジケーターが必要なアバター、ナビゲーション メニュー、またはその他のコンポーネントをデコレートする絶対配置要素です。Badge はアクティブ カウントを表示できます。情報、成功、警告、またはエラーを示す定義済みのスタイルを持つアイコンとして設定できます。</p>
 <div class="divider"></div>
 
-### Badge Demo
+### Badge デモ
 <div class="sample-container" style="height:530px">
     <iframe src='https://{environment:host}/angular-demos/badge' width="100%" height="100%" seamless frameBorder="0"></iframe>
 </div>
 <div class="divider--half"></div>
 
-### Usage
+### 使用方法
 ```html
 <igx-badge value="8"></igx-badge>
 ```
 <div class="divider--half"></div>
 
-### Examples
+### コード例
 
-Using `igx-badge` with the `igx-avatar` component to show active status.
+`igx-badge` を `igx-avatar` コンポーネントにアクティブ状態を示すために使用します。
 ```html
 <igx-avatar [src]="src" [roundShape]="true">
     <igx-badge type="info" value="8"></igx-badge>
@@ -30,13 +30,13 @@ Using `igx-badge` with the `igx-avatar` component to show active status.
 ```
 <div class="divider--half"></div>
 
-### API Summary
-| Name   |      Type      |  Description |
+### API 概要
+| 名前   |      型      |  説明 |
 |:----------|:-------------:|:------|
-| `type` | string | Set the type of the badge to either `default`, `info`, `success`, `warning`, or `error`. This will change the background color of the badge according to the values set in the default theme. |
-| `position` | string | Set the position of the badge relative to its parent container to either `top-right`, `top-left`, `bottom-right`, or `bottom-left`. |
-| `value` | string | Set the value to be displayed inside the badge. |
-| `icon` | string | Set an icon for the badge from the material icons set. Will not be displayed if `value` for the badge is already set. |
+| `type` | string | バッジの型を `default`、`info`、`success`、`warning`、または `error` に設定します。デフォルト テーマで設定される値に基づいてバッジの背景色を変更します。 |
+| `position` | string | 親コンテナーに相対するバッジの位置を `top-right`、`top-left`、`bottom-right`、または `bottom-left` に設定します。|
+| `value` | string | バッジで表示する値を設定します。 |
+| `icon` | string | マテリアル アイコン セットからバッジのアイコンを設定します。バッジの `value` が既に設定されている場合は表示されません。 |
 <div class="divider--half"></div>
 
 
