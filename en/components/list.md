@@ -12,7 +12,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ### List Demo
 
 <div class="sample-container" style="height: 477px">
-<iframe src='http://{environment:host}/list-sample-4' width="100%" height="100%" seamless frameBorder="0"></inframe>
+<iframe src='http://{environment:host}/list-sample-4' width="100%" height="100%" seamless frameBorder="0"></iframe>
 </div>
 <div class="divider--half"></div>
 
@@ -55,7 +55,7 @@ Then in the template of our contacts component we can add the following code to 
 If all went well, you should see the following in your browser:
 
 <div class="sample-container" style="height: 200px">
-<iframe src='http://{environment:host}/list-sample-2' width="100%" height="100%" seamless frameBorder="0"></inframe>
+<iframe src='http://{environment:host}/list-sample-2' width="100%" height="100%" seamless frameBorder="0"></iframe>
 </div>
 
 #### Custom List Items
@@ -66,7 +66,7 @@ In our component typescript file we can define a list of contacts:
 ```typescript
 // contacts.component.ts
 ...
-private contacts = [{
+public contacts = [{
     name: "Terrance Orta",
     phone: "770-504-2217"
 }, {
@@ -120,7 +120,7 @@ You may have noticed that despite the fact that we used span elements to display
 After all that our list should now look like that:
 
 <div class="sample-container" style="height: 400px">
-<iframe src='http://{environment:host}/list-sample-3' width="100%" height="100%" seamless frameBorder="0"></inframe>
+<iframe src='http://{environment:host}/list-sample-3' width="100%" height="100%" seamless frameBorder="0"></iframe>
 </div>
 
 #### Adding Avatar and Icons
@@ -149,7 +149,7 @@ Next, we need to add some more information to our contact object, like a `photo`
 ```typescript
 // contacts.comoponent.ts
 
-private contacts = [{
+public contacts = [{
     name: 'Terrance Orta',
     phone: '770-504-2217',
     photo: 'https://randomuser.me/api/portraits/men/27.jpg',
@@ -253,7 +253,7 @@ toggleFavorite(index: number) {
 And here's the result of all that work:
 
 <div class="sample-container" style="height: 477px">
-<iframe src='http://{environment:host}/list-sample-4' width="100%" height="100%" seamless frameBorder="0"></inframe>
+<iframe src='http://{environment:host}/list-sample-4' width="100%" height="100%" seamless frameBorder="0"></iframe>
 </div>
 <div class="divider--half"></div>
 
@@ -292,7 +292,7 @@ It's time to import the **IgxFilterModule** in our **app.module.ts** file and **
 
     @Component({...})
     export class ContactListComponent {
-        private searchContact: string;
+        public searchContact: string;
         ...
         get filterContacts(): IgxFilterOptions {
             const fo = new IgxFilterOptions();

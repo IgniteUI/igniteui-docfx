@@ -5,17 +5,20 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 ---
 
 ## Data Grid
+
 <p class="highlight">Ignite UI for Angular Data Grid で表形式データを表示して変更します。最小限のコードと構成でデータをすばやくバインドできます。機能は、フィルタリング、並べ替え、ページング、テンプレート、移動可能な列、およびデータの編集と更新です。ユーザー操作が簡単に認識できるため、コードで制御できます。</p>
 <div class="divider"></div>
 
 ### Grid デモ
+
 <div class="sample-container" style="height:780px">
-    <iframe src='https://{environment:host}/angular-demos/grid' width="100%" height="100%" seamless frameBorder="0"></inframe>
+    <iframe src='https://{environment:host}/angular-demos/grid' width="100%" height="100%" seamless frameBorder="0"></iframe>
 </div>
 <div class="divider--half"></div>
 
 ### 依存関係
-グリッドは `NgModule` としてエクスポートされるため、アプリケーションで `AppModule` に *IgxGridModule* をインポートする必要があります。
+
+グリッドは `NgModule` としてエクスポートされるため、アプリケーションで `AppModule` に _IgxGridModule_ をインポートする必要があります。
 
 ```typescript
 // app.module.ts
@@ -32,7 +35,7 @@ import { IgxGridModule } from 'igniteui-js-blocks/main';
 export class AppModule {}
 ```
 
-*IgxGridModule* の各コンポーネント、ディレクティブ、およびヘルパー クラスは *grid.component* または *igniteui-js-blocks* のメイン バンドルでインポートできます。グリッドをインスタンス化して使用するためすべての機能をインポートする必要はありませんが、グリッド API の部分である型を宣言するときにそれをインポートまたはエディターで自動的にインポートします。
+_IgxGridModule_ の各コンポーネント、ディレクティブ、およびヘルパー クラスは _grid.component_ または _igniteui-js-blocks_ のメイン バンドルでインポートできます。グリッドをインスタンス化して使用するためすべての機能をインポートする必要はありませんが、グリッド API の部分である型を宣言するときにそれをインポートまたはエディターで自動的にインポートします。
 
 ```typescript
 import { IgxGridComponent } from 'igniteui-js-blocks/grid/grid.component';
@@ -44,19 +47,22 @@ import { IgxGridComponent } from 'igniteui-js-blocks/grid/grid.component';
 <div class="divider--half"></div>
 
 ### 使用方法
+
 グリッド モジュールをインポート後、ローカル データにバインドする **igx-grid** の基本構成を設定します。
 
 ```html
 <igx-grid #grid1 id="grid1" [data]="localData" [autoGenerate]="true"></igx-grid>
 ```
+
 **id** プロパティは文字列値で、グリッドの一意識別子です。**data** はグリッドをローカル データにバインドします。
 
 **autoGenerate** プロパティは **igx-grid** をデータ ソース フィールドに基づいて列を自動生成します。それ以外の場合、開発者は列およびデータ ソース フィールドへのマッピングを明示的に定義する必要があります。
+
 <div class="divider--half"></div>
 
 ### 列の構成
 
-**IgxGridColumnComponent** はグリッドの *columns* コレクションを定義し、**フィルタリング**、**並べ替え**、および**ページング**などの列ごとの機能を有効にするために使用されます。セル、ヘッダー、およびフッター テンプレートも利用可能です。
+**IgxGridColumnComponent** はグリッドの _columns_ コレクションを定義し、**フィルタリング**、**並べ替え**、および**ページング**などの列ごとの機能を有効にするために使用されます。セル、ヘッダー、およびフッター テンプレートも利用可能です。
 
 **autoGenerate** プロパティを無効にし、マークアップで列コレクションを定義します。
 
@@ -73,6 +79,7 @@ import { IgxGridComponent } from 'igniteui-js-blocks/grid/grid.component';
     </igx-column>
 </igx-grid>
 ```
+
 列プロパティを **initColumns** イベントにコードで設定できます。
 
 ```typescript
@@ -85,10 +92,13 @@ public initColumns(event: IgxGridColumnInitEvent) {
     }
 }
 ```
+
 上記のコードは **ProductName** 列の並べ替え、フィルター、および編集機能を有効にし、対応する機能の UI (編集の入力フィールド、保存ダイアログなど) をインスタンス化します。
+
 <div class="divider--half"></div>
 
 ### データ バインディング
+
 グリッドをリモート データ サービスにバインドするために変更します。実際のアプリケーションでは一般的なシナリオです。すべてのデータ取得に関連するロジックを別のデータ サービスに分割することがベスト プラクティスであるため、サーバーからデータの取得を処理するサービスを作成します。
 
 サービスを別のファイルで実装します。
@@ -127,25 +137,25 @@ export interface NorthwindRecord {
 }
 ```
 
-サービスは `Observable<NorthwindRecord[]>` を返す `fetchData` の単一のメソッドを含みます。
-要求が任意の理由 (サーバーが利用不可、ネットワーク エラーなど) のため失敗すれば、`HttpClient` はエラーを返します。 失敗した *Observable* をインターセプトしてエラーをハンドラーに渡す `catchError` 演算子を使用します。
-エラー ハンドラーがエラーをログに追加して有効な値を返します。
+サービスは `Observable<NorthwindRecord[]>` を返す `fetchData` の単一のメソッドを含みます。要求が任意の理由 (サーバーが利用不可、ネットワーク エラーなど) のため失敗すれば、`HttpClient` はエラーを返します。 失敗した _Observable_ をインターセプトしてエラーをハンドラーに渡す `catchError` 演算子を使用します。エラー ハンドラーがエラーをログに追加して有効な値を返します。
 
 ```typescript
 // northwind.service.ts
 
 @Injectable()
 export class NorthwindService {
-
     private url = 'http://services.odata.org/V4/Northwind/Northwind.svc/Alphabetical_list_of_products';
 
     constructor(private http: HttpClient) {}
 
     public fetchData(): Observable<NorthwindRecord[]> {
-        return this.http.get(this.url)
+        return this.http
+            .get(this.url)
             .pipe(
                 map(response => response['value']),
-                catchError(this.errorHandler('Error loading northwind data', []))
+                catchError(
+                    this.errorHandler('Error loading northwind data', [])
+                )
             );
     }
 
@@ -153,7 +163,7 @@ export class NorthwindService {
         return (error: any): Observable<any> => {
             console.error(`${message}: ${error.message}`);
             return of(result as T);
-        }
+        };
     }
 }
 ```
@@ -180,12 +190,11 @@ import { NorthwindService } from './northwind.service';
 export class AppModule {}
 ```
 
-
 サービスを実装した後、コンポーネントのコンストラクターにインジェクトしてデータを取得するために使用します。
 `ngOnInit` ライフサイクル フックに最初の要求を追加します。
 
-**注**: 以下のコードでは、サービスに加入する前に *records* プロパティを空の配列に設定しています。
-Http 要求は非同期です。完了するまで、*records* プロパティが *undefined* で、グリッドをプロパティにバインドしようとするときにエラーが発生されます。デフォルト値に初期化するか、`BehaviorSubject` を使用します。
+**注**: 以下のコードでは、サービスに加入する前に _records_ プロパティを空の配列に設定しています。
+Http 要求は非同期です。完了するまで、_records_ プロパティが _undefined_ で、グリッドをプロパティにバインドしようとするときにエラーが発生されます。デフォルト値に初期化するか、`BehaviorSubject` を使用します。
 
 ```typescript
 // my.component.ts
@@ -244,30 +253,38 @@ public deleteRow(event) {
     this.snax.show();
 }
 ```
+
 **igx-grid** に関係なく、ボタンのクリックなどのユーザー インタラクションに接続できます。
+
 ```html
 <button igxButton igxRipple (click)="deleteRow($event)">行の削除</button>
 ```
+
 <div class="divider--half"></div>
 
 ### ページング
+
 **ページング**がルート **igx-grid** コンポーネントで初期化され、`paging` および `perPage` 入力によって構成できます。機能が有効かどうかを制御する paging は Boolean プロパティです。perPage プロパティはページごとで表示可能なレコードを制御します。グリッドでページングを有効にします。
 
 ```html
 <igx-grid #grid1 [data]="data | async" [paging]="true" [perPage]="20" [autoGenerate]="false"></igx-grid>
 ```
+
 <div class="divider--half"></div>
 
 ### フィルタリング
+
 **フィルタリング**は、マークアップ、または `filtering` 入力を使用するコードで、列ごとのレベルで有効化されます。さらに、フィルタリング動作をカスタマイズするために、`filteringCondition` および `filteringIgnoreCase` プロパティが提供されます。`filteringCondition` は特定の条件に基づいてフィルタリングを実行する関数です。設定されていない場合、デフォルト値は "contains" です。`filteringIgnoreCase` は大文字小文字を区別するかどうかを制御するブール値のプロパティです。フィルタリングを列で有効にした後、動作をカスタマイズできます。
 
 ```html
 <igx-column [field]="'ProductName'" [header]="'ProductName'" [sortable]="false" [filtering]="true" [filteringIgnoreCase]="false">
 </igx-column>
 ```
+
 <div class="divider--half"></div>
 
 ### 並べ替え
+
 **並べ替え**も列ごとのレベルで有効化されます。つまり、**igx-grid** に並べ替え可能な列および並べ替え可能ではない列の両方を含むことが可能です。上記のコード例で説明したとおり、Boolean 値を取得する sortable 入力を使用します。また、グリッドを読み込みで並べ替えるには、並べ替え式を `State` プロパティに渡します。
 
 ```typescript
@@ -291,7 +308,9 @@ public ngOnInit(): void {
     };
 }
 ```
+
 上記の例で、`State` プロパティは並べ替えだけでなく、ページングおよびフィルタリングの状態も定義します。
+
 <div class="divider"></div>
 
 ## API
@@ -301,55 +320,62 @@ public ngOnInit(): void {
 グリッドの外観および動作を構成するには、以下の入力を使用します。
 | 名前 | 型 | 説明 |
 | :--- |:--- | :--- |
-| id  | string  | グリッドの一意識別子。 |
-| `paging`  | bool  | ページング機能を有効化にします。 |
-| `perPage`  | number  | ページごとの表示項目。デフォルト値は 25 です。 |
-| `state`  | IDataState  | フィルタリング、並べ替え、およびページングの状態を定義します。  |
-| `autoGenerate`  | boolean  | グリッドの列を自動生成します。デフォルト値は *false* です。 |
+| id | string | グリッドの一意識別子。 |
+| `paging` | bool | ページング機能を有効化にします。 |
+| `perPage` | number | ページごとの表示項目。デフォルト値は 25 です。 |
+| `state` | IDataState | フィルタリング、並べ替え、およびページングの状態を定義します。 |
+| `autoGenerate` | boolean | グリッドの列を自動生成します。デフォルト値は _false_ です。 |
+
 <div class="divider--half"></div>
 
 ### 出力
+
 **igx-grid** によって発生されるイベントのリスト:
 
-| 名前 | 説明 |
-| :--- | :--- |
-| *イベント発生* | *変更の通知* |
-| `onEditDone`  | 更新された行を出力するために行更新で使用されます。  |
-| `onFilterDone`  | 列およびフィルタリング式を出力するためにデータのフィルタリングで使用されます。  |
-| `onSortingDone`  | 列、方向、および並べ替え式を出力するためにデータの並べ替えで使用されます。  |
-| `onMovingDone`  | ドロップ イベントを発生するために列移動で使用されます。  |
-| `onCellSelection`  | セルを出力するためにセルのフォーカスで使用されます。  |
-| `onRowSelection`  | 行を出力するために行のフォーカスで使用されます。  |
-| `onPagingDone`  | ページング イベントを発生するためにページングで使用されます。  |
-| `onColumnInit`  | 列を出力するために初期化で使用されます。  |
-| `onBeforeProcess`  | バインド動作を出力します。  |
+| 名前              | 説明                                                                           |
+| :---------------- | :----------------------------------------------------------------------------- |
+| _イベント発生_    | _変更の通知_                                                                   |
+| `onEditDone`      | 更新された行を出力するために行更新で使用されます。                             |
+| `onFilterDone`    | 列およびフィルタリング式を出力するためにデータのフィルタリングで使用されます。 |
+| `onSortingDone`   | 列、方向、および並べ替え式を出力するためにデータの並べ替えで使用されます。     |
+| `onMovingDone`    | ドロップ イベントを発生するために列移動で使用されます。                        |
+| `onCellSelection` | セルを出力するためにセルのフォーカスで使用されます。                           |
+| `onRowSelection`  | 行を出力するために行のフォーカスで使用されます。                               |
+| `onPagingDone`    | ページング イベントを発生するためにページングで使用されます。                  |
+| `onColumnInit`    | 列を出力するために初期化で使用されます。                                       |
+| `onBeforeProcess` | バインド動作を出力します。                                                     |
+
 <div class="divider"></div>
 
 このイベント発生のハンドラーは宣言的なイベント バインディングで定義されます。
+
 ```html
 <igx-grid #grid1 [data]="data | async" [autoGenerate]="false"
  (onColumnInit)="initColumns($event)" (onCellSelection)="selectCell($event)"></igx-grid>
 ```
+
 <div class="divider--half"></div>
 
 ### メソッド
+
 **igx-grid** によって公開されるすべてのパブリック メソッドのリスト:
 
-| 構文 | 説明 |
-| :--- | :--- |
-| `getColumnByIndex(index: number)`  | グリッドの列をインデックスによって取得します。  |
-| `getColumnByField(field: string)`  | グリッドの列をフィールド名によって取得します。  |
-| `getCell(rowIndex: number, columnField: string)` | rowIndex/columnIndex にあるセルを返します。  |
-| `getRow(rowIndex: number)` | 行を返します。  |
-| `focusCell` | 指定した行および列にあるグリッド セルにフォーカスします。  |
-| `focusRow` | `index` にあるグリッド行にフォーカスします。  |
-| `filterData` | データを検索用語および列によってフィルターします。  |
-| `addRow` | レコードをグリッド データ コンテナーに追加します。  |
-| `deleteRow` | レコードをグリッド データ コンテナーから削除します。  |
-| `updateRow` | レコードをグリッド データ コンテナーに更新します。  |
-| `updateCell` | インデックス、列フィールド、および渡された値によってグリッド セルを更新します。  |
-| `sortColumn` | グリッド列を並べ替えます。  |
-| `paginate` | 現在のページを渡された数値によって変更します。  |
+| 構文                                             | 説明                                                                            |
+| :----------------------------------------------- | :------------------------------------------------------------------------------ |
+| `getColumnByIndex(index: number)`                | グリッドの列をインデックスによって取得します。                                  |
+| `getColumnByField(field: string)`                | グリッドの列をフィールド名によって取得します。                                  |
+| `getCell(rowIndex: number, columnField: string)` | rowIndex/columnIndex にあるセルを返します。                                     |
+| `getRow(rowIndex: number)`                       | 行を返します。                                                                  |
+| `focusCell`                                      | 指定した行および列にあるグリッド セルにフォーカスします。                       |
+| `focusRow`                                       | `index` にあるグリッド行にフォーカスします。                                    |
+| `filterData`                                     | データを検索用語および列によってフィルターします。                              |
+| `addRow`                                         | レコードをグリッド データ コンテナーに追加します。                              |
+| `deleteRow`                                      | レコードをグリッド データ コンテナーから削除します。                            |
+| `updateRow`                                      | レコードをグリッド データ コンテナーに更新します。                              |
+| `updateCell`                                     | インデックス、列フィールド、および渡された値によってグリッド セルを更新します。 |
+| `sortColumn`                                     | グリッド列を並べ替えます。                                                      |
+| `paginate`                                       | 現在のページを渡された数値によって変更します。                                  |
+
 <div class="divider--half"></div>
 
 #### 入力
@@ -357,16 +383,17 @@ public ngOnInit(): void {
 **IgxGridColumnComponent** で列を定義するために利用可能な入力:
 | 名前 | 型 | 説明 |
 | :--- |:--- | :--- |
-| `field`  | string  | 列フィールド名。 |
-| `header`  | string  | 列ヘッダー テキスト。 |
-| `sortable`  | boolean  | 列が並べ替え可能かどうかを設定します。 |
-| `editable`  | boolean  | 列値を編集可能に設定します。 |
-| `filtering`  | boolean  | 列値をフィルター可能に設定します。 |
-| `hidden`  | boolean  | 列の表示状態。 |
-| `movable`  | boolean  | 列移動。 |
-| `width`  | string  | 列幅。 |
-| `index`  | string  | 列インデックス。 |
-| `filteringCondition`  | FilteringCondition  | ブール値、日付、文字列、または数値条件。デフォルトは *contains* 文字列条件です。  |
-| `filteringIgnoreCase`  | boolean  | 大文字小文字を無視します。 |
-| `dataType`  | DataType  | String、Number、Boolean、または Date。 |
+| `field` | string | 列フィールド名。 |
+| `header` | string | 列ヘッダー テキスト。 |
+| `sortable` | boolean | 列が並べ替え可能かどうかを設定します。 |
+| `editable` | boolean | 列値を編集可能に設定します。 |
+| `filtering` | boolean | 列値をフィルター可能に設定します。 |
+| `hidden` | boolean | 列の表示状態。 |
+| `movable` | boolean | 列移動。 |
+| `width` | string | 列幅。 |
+| `index` | string | 列インデックス。 |
+| `filteringCondition` | FilteringCondition | ブール値、日付、文字列、または数値条件。デフォルトは _contains_ 文字列条件です。 |
+| `filteringIgnoreCase` | boolean | 大文字小文字を無視します。 |
+| `dataType` | DataType | String、Number、Boolean、または Date。 |
+
 <div class="divider--half"></div>
