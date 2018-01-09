@@ -328,7 +328,6 @@ The following inputs are available on the **igx-list** component:
 | `emptyListImage` | String | Provide an image url to be used as placeholder when the list is empty. |
 | `emptyListMessage` | String | Provide an emtpy list message. |
 | `emptyListButtonText` | String | Customize the empty list button text. |
-| `emptyListButtonText` | String | Customize the empty list button text. |
 
 <div class="divider"></div>
 
@@ -340,10 +339,10 @@ The following inputs are available on the **igx-list-item** component:
 <div class="divider"></div>
 
 ####Outputs
-The following outputs are availabe on the **igx-list** component:
+The following outputs are available on the **igx-list** component:
 | Name | Type | Description |
 | :--- | :--- | :--- |
-| `emptyListButtonClick` | EventEmitter | Emmits an event with the current list when the Empty List Button is clicked. |
+| `emptyListButtonClick` | EventEmitter | Emits an event with the current list when the Empty List Button is clicked. |
 
 <div class="divider"></div>
 
@@ -366,7 +365,7 @@ The following getters are available on the **igx-list-item** component:
 ###Additional Resources
 
 <div class="divider--half"></div>
-Our comminity is active and always welcoming to new ideas.
+Our community is active and always welcoming to new ideas.
 
 * [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
 * [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-js-blocks)
