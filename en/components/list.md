@@ -186,7 +186,7 @@ Cool, now let's update the template for our contacts list to to show the avatar 
   <igx-list-item isHeader="true">
     Contacts
   </igx-list-item>
-  <igx-list-item *ngFor="let contact of contacts; let i = index">
+  <igx-list-item #item *ngFor="let contact of contacts;">
     <div class="item-container">
       <div class="contact">
         <igx-avatar [src]="contact.photo" roundShape="true"></igx-avatar>
@@ -195,7 +195,7 @@ Cool, now let's update the template for our contacts list to to show the avatar 
           <span class="phone">{{ contact.phone }}</span>
         </div>
       </div>
-      <igx-icon name="star" [color]="contact.isFavorite ? 'orange' : 'lightgray'" (click)="toggleFavorite(i)"></igx-icon>
+      <igx-icon name="star" [color]="contact.isFavorite ? 'orange' : 'lightgray'" (click)="toggleFavorite(item)"></igx-icon>
     </div>
   </igx-list-item>
 </igx-list>
@@ -244,8 +244,8 @@ We then listen for a click event on the IgxIcon component to toggle the _isFavor
 // contacts.component.ts
 
 ...
-toggleFavorite(index: number) {
-    const contact = this.contacts[index];
+toggleFavorite(item: IgxListItem) {
+    const contact = this.contacts[item.index - 1];
     contact.isFavorite = !contact.isFavorite;
 }
 ```
