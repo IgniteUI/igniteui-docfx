@@ -7,20 +7,23 @@ const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
 const argv = require('yargs').argv;
 const fs = require('fs');
-const environmentVariablesPreConfig = require(
-    './post_processors/PostProcessors/EnvironmentVariables/preconfig.json');
+const env = require('dotenv').config();
+const environmentVariablesPreConfig = require('./post_processors/PostProcessors/EnvironmentVariables/preconfig.json');
 
 const DOCFX_BASE = {
     en: './en',
     jp: './jp'
 };
-const DOCFX_CONF = `${DOCFX_BASE[argv.lang]}/docfx.json`;
+const DOCFX_PATH =
+    argv.lang !== undefined
+        ? `${DOCFX_BASE[argv.lang]}`
+        : `${DOCFX_BASE['en']}`;
+const DOCFX_CONF = `${DOCFX_PATH}/docfx.json`;
 const DOCFX_TEMPLATE = path.join(__dirname, `./templates/ignite-ui-template`);
-const DOCFX_SITE = `${DOCFX_BASE[argv.lang]}/_site`;
-const DOCFX_ARTICLES = `${DOCFX_BASE[argv.lang]}/components`;
+const DOCFX_SITE = `${DOCFX_PATH}/_site`;
+const DOCFX_ARTICLES = `${DOCFX_PATH}/components`;
 
 gulp.task('serve', ['build'], () => {
-    console.log(argv.lang);
     browserSync.init({
         server: {
             baseDir: `${DOCFX_SITE}`
@@ -44,7 +47,7 @@ gulp.task('serve', ['build'], () => {
     });
 
     gulp.watch(`${DOCFX_TEMPLATE}/**/*`, ['watch']);
-    gulp.watch([`${DOCFX_BASE[argv.lang]}/**/*.md`, `${DOCFX_ARTICLES}/**/*`], ['build']);
+    gulp.watch([`${DOCFX_PATH}/**/*.md`, `${DOCFX_ARTICLES}/**/*`], ['build']);
 });
 
 gulp.task('styles', () => {
@@ -66,19 +69,30 @@ gulp.task('watch', ['build'], done => {
 });
 
 gulp.task('post-processor-configs', ['cleanup'], () => {
+    console.log(process.env.NODE_ENV);
     if (process.env.NODE_ENV) {
         environmentVariablesPreConfig.environment = process.env.NODE_ENV.trim();
     }
-    
-    environmentVariablesPreConfig.variables = environmentVariablesPreConfig.variables[
-        environmentVariablesPreConfig.environment];
+
+    if (
+        environmentVariablesPreConfig.variables[
+            environmentVariablesPreConfig.environment
+        ]
+    ) {
+        environmentVariablesPreConfig.variables =
+            environmentVariablesPreConfig.variables[
+                environmentVariablesPreConfig.environment
+            ];
+    }
 
     if (!fs.existsSync(`${DOCFX_SITE}`)) {
         fs.mkdirSync(`${DOCFX_SITE}`);
     }
-    
-    fs.writeFileSync(`${DOCFX_SITE}/${environmentVariablesPreConfig._configFileName}`,
-        JSON.stringify(environmentVariablesPreConfig));
+
+    fs.writeFileSync(
+        `${DOCFX_SITE}/${environmentVariablesPreConfig._configFileName}`,
+        JSON.stringify(environmentVariablesPreConfig)
+    );
 });
 
 gulp.task('build-site', shell.task([`docfx build ${DOCFX_CONF}`]));
@@ -87,4 +101,9 @@ gulp.task('cleanup', () => {
     return del([`${DOCFX_SITE}`]);
 });
 
-gulp.task('build', ['styles', 'cleanup', 'post-processor-configs', 'build-site']);
+gulp.task('build', [
+    'styles',
+    'cleanup',
+    'post-processor-configs',
+    'build-site'
+]);
