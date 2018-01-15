@@ -10,7 +10,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ### Card Demo
 <div class="sample-container" style="height: 1661px">
-    <iframe seamless width="100%" height="100%" frameborder="0" src="https://{environment:host}/angular-demos/card"></iframe>
+    <iframe seamless width="100%" height="100%" frameborder="0" src="https://{environment:demosBaseUrl}/card"></iframe>
 </div>
 <div class="divider--half"></div>
 

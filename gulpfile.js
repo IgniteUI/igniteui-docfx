@@ -69,29 +69,24 @@ gulp.task('watch', ['build'], done => {
 });
 
 gulp.task('post-processor-configs', ['cleanup'], () => {
-    console.log(process.env.NODE_ENV);
+    var environmentVariablesConfig = JSON.parse(JSON.stringify(environmentVariablesPreConfig));
+
     if (process.env.NODE_ENV) {
-        environmentVariablesPreConfig.environment = process.env.NODE_ENV.trim();
+        environmentVariablesConfig.environment = process.env.NODE_ENV.trim();
     }
 
-    if (
-        environmentVariablesPreConfig.variables[
-            environmentVariablesPreConfig.environment
-        ]
-    ) {
-        environmentVariablesPreConfig.variables =
-            environmentVariablesPreConfig.variables[
-                environmentVariablesPreConfig.environment
-            ];
-    }
+    environmentVariablesConfig.variables =
+        environmentVariablesConfig.variables[
+            environmentVariablesConfig.environment
+        ];
 
     if (!fs.existsSync(`${DOCFX_SITE}`)) {
         fs.mkdirSync(`${DOCFX_SITE}`);
     }
 
     fs.writeFileSync(
-        `${DOCFX_SITE}/${environmentVariablesPreConfig._configFileName}`,
-        JSON.stringify(environmentVariablesPreConfig)
+        `${DOCFX_SITE}/${environmentVariablesConfig._configFileName}`,
+        JSON.stringify(environmentVariablesConfig)
     );
 });
 

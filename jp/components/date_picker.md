@@ -10,7 +10,7 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 
 ### Date Picker デモ
 <div class="sample-container" style="height: 720px">
-    <iframe frameborder="0" seamless width="100%" height="100%" src="https://{environment:host}/angular-demos/datepicker"></iframe>
+    <iframe frameborder="0" seamless width="100%" height="100%" src="https://{environment:demosBaseUrl}/datepicker"></iframe>
 </div>
 <div class="divider--half"></div>
 

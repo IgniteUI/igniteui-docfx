@@ -10,7 +10,7 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 
 ### Radio Button デモ
 <div class="sample-container" style="height:1390px">
-<iframe src='https://{environment:host}/angular-demos/form-elements' width="100%" height="100%" seamless frameBorder="0"></iframe>
+<iframe src='https://{environment:demosBaseUrl}/form-elements' width="100%" height="100%" seamless frameBorder="0"></iframe>
 </div>
 <div class="divider--half"></div>
 

@@ -5,13 +5,13 @@
 
     "variables": {
         "development": {
-            "host": "localhost:4200"
+            "demosBaseUrl": "localhost:4200"
         },
         "staging": {
-            "host": "staging.infragistics.com/angular-demos"
+            "demosBaseUrl": "staging.infragistics.local/angular-demos"
         },
         "production": {
-            "host": "www.infragistics.com/angular-demos"
+            "demosBaseUrl": "www.infragistics.com/angular-demos"
         }
     },
 
