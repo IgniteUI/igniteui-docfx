@@ -10,7 +10,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ### Layout Demo
 <div class="sample-container" style="height: 3704px">
-    <iframe src='https://{environment:host}/angular-demos/layout' width="100%" height="100%" seamless frameBorder="0"></iframe>
+    <iframe src='https://{environment:demosBaseUrl}/layout' width="100%" height="100%" seamless frameBorder="0"></iframe>
 </div>
 <div class="divider--half"></div>
 

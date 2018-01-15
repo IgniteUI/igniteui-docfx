@@ -10,7 +10,7 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 
 ### Calendar デモ
 <div class="sample-container" style="height:1728px">
-    <iframe src='https://{environment:host}/angular-demos/calendar' width="100%" height="100%" seamless frameBorder="0"></iframe>
+    <iframe src='https://{environment:demosBaseUrl}/calendar' width="100%" height="100%" seamless frameBorder="0"></iframe>
 </div>
 <div class="divider--half"></div>
 

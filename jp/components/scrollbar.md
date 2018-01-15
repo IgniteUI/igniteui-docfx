@@ -10,7 +10,7 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 
 ### Scrollbar デモ
 <div class="sample-container" style="height: 755px">
-    <iframe frameborder="0" seamless width="100%" height="100%" src="https://{environment:host}/angular-demos/scroll"></iframe>
+    <iframe frameborder="0" seamless width="100%" height="100%" src="https://{environment:demosBaseUrl}/scroll"></iframe>
 </div>
 <div class="divider--half"></div>
 
