@@ -8,10 +8,10 @@
             "host": "localhost:4200"
         },
         "staging": {
-            "host": "staging.infragistics.com/angular-demos"
+            "host": "staging.infragistics.local"
         },
         "production": {
-            "host": "www.infragistics.com/angular-demos"
+            "host": "www.infragistics.com"
         }
     },
 
