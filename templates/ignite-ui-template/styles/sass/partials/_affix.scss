@@ -5,26 +5,21 @@
     top: 127px;
     position: fixed;
     font-size: 14px;
-
     &.shiftup {
         bottom: 70px;
     }
-
     div.contribution {
         margin-bottom: 20px;
     }
-
-    div.contribution > ul > li > a.contribution-link {
+    div.contribution>ul>li>a.contribution-link {
         padding: 6px 10px;
         font-weight: bold;
         font-size: 14px;
     }
-
-    div.contribution > ul > li > a.contribution-link:hover {
+    div.contribution>ul>li>a.contribution-link:hover {
         background-color: #ffffff;
     }
-
-    ul.nav > li > a:focus {
+    ul.nav>li>a:focus {
         background: none;
     }
 }
@@ -41,24 +36,21 @@
     font-weight: 300;
 }
 
-.affix > ul.level1 {
-    overflow: hidden;
-    // height: calc(100% - 100px);
+.affix>ul.level1 {
+    overflow: hidden; // height: calc(100% - 100px);
 }
 
-.affix ul > li > a {
+.affix ul>li>a {
     padding: 8px;
     color: #585858;
     font-weight: bold;
-
     &:hover {
         background: none;
-        color: #000;
+        color: $byzantium;
         &::before {
-            background-color: #000;
+            background-color: rgba(0, 0, 0, .38);
         }
     }
-
     &::before {
         position: absolute;
         content: '';
@@ -71,38 +63,36 @@
     }
 }
 
-.affix ul > li.active:hover > a {
+.affix ul>li.active:hover>a {
     color: #585858;
     &::before {
         background-color: $byzantium;
     }
 }
 
-.affix > ul > li.active:last-child {
+.affix>ul>li.active:last-child {
     margin-bottom: 24px;
 }
 
-.affix ul ul > li {
+.affix ul ul>li {
     a {
         position: relative;
         padding: 8px;
         margin-left: 8px;
         font-weight: 300;
     }
-
     &.active:hover a,
     &.active a {
         color: $byzantium;
         font-weight: 400;
     }
-
     &:hover a::before,
     &.active:hover a::before {
         background: none;
     }
 }
 
-.affix ul ul > li > a::before {
+.affix ul ul>li>a::before {
     content: '';
     background: none;
     &::hover {
@@ -110,14 +100,13 @@
     }
 }
 
-.affix ul > li > a::before,
+.affix ul>li>a::before,
 .affix ul ul {
     display: none;
 }
 
-.affix ul > li.active > ul,
-.affix ul > li.active > a:before,
-.affix ul > li > a:hover:before {
-    display: block;
-    // white-space: nowrap;
+.affix ul>li.active>ul,
+.affix ul>li.active>a:before,
+.affix ul>li>a:hover:before {
+    display: block; // white-space: nowrap;
 }

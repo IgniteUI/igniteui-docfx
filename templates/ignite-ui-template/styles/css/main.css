@@ -472,9 +472,9 @@ sub {
   font-weight: bold; }
   .affix ul > li > a:hover {
     background: none;
-    color: #000; }
+    color: #731963; }
     .affix ul > li > a:hover::before {
-      background-color: #000; }
+      background-color: rgba(0, 0, 0, 0.38); }
   .affix ul > li > a::before {
     position: absolute;
     content: '';
