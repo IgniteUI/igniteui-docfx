@@ -29,7 +29,7 @@ To get started with the Ignite UI for Angular List, let's first import the **Igx
 // app.module.ts
 
 ...
-import { IgxListModule } from 'igniteui-js-blocks/main';
+import { IgxListModule } from 'igniteui-angular/main';
 
 @NgModule({
     ...
@@ -135,7 +135,7 @@ import {
     IgxListModule,
     IgxAvatarModule,
     IgxIconModule
-} from 'igniteui-js-blocks/main';
+} from 'igniteui-angular/main';
 
 @NgModule({
     ...
@@ -280,7 +280,7 @@ It's time to import the **IgxFilterModule** in our **app.module.ts** file and **
 ```typescript
     // app.module.ts
     ...
-    import { IgxFilterModule } from 'igniteui-js-blocks/main';
+    import { IgxFilterModule } from 'igniteui-angular/main';
 
     @NgModule({
         imports: [..., IgxFilterModule]
@@ -288,7 +288,7 @@ It's time to import the **IgxFilterModule** in our **app.module.ts** file and **
 
     // contacts.component.ts
     ...
-    import { IgxFilterOptions } from 'igniteui-js-blocks/main';
+    import { IgxFilterOptions } from 'igniteui-angular/main';
 
     @Component({...})
     export class ContactListComponent {
@@ -368,4 +368,4 @@ The following getters are available on the **igx-list-item** component:
 Our community is active and always welcoming to new ideas.
 
 * [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-js-blocks)
+* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

@@ -24,7 +24,7 @@ inside your `AppModule`:
 ```typescript
 // app.module.ts
 
-import { IgxGridModule } from 'igniteui-js-blocks/main';
+import { IgxGridModule } from 'igniteui-angular/main';
 
 @NgModule({
     imports: [
@@ -37,11 +37,11 @@ export class AppModule {}
 ```
 
 Each of the components, directives and helper classes in the _IgxGridModule_ can be imported either through the _grid.component_ or through
-the main bundle in _igniteui-js-blocks_. While you don't need to import all of them to instantiate and use the grid, you usually will import them
+the main bundle in _igniteui-angular_. While you don't need to import all of them to instantiate and use the grid, you usually will import them
 (or your editor will auto-import them for you) when declaring types that are part of the grid API.
 
 ```typescript
-import { IgxGridComponent } from 'igniteui-js-blocks/grid/grid.component';
+import { IgxGridComponent } from 'igniteui-angular/grid/grid.component';
 ...
 
 @ViewChild('myGrid', { read: IgxGridComponent }) public grid: IgxGridComponent;

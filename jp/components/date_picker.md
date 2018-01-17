@@ -16,7 +16,7 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 
 ### 使用方法
 ```typescript
-import { IgxDatePickerComponent } from "igniteui-js-blocks";
+import { IgxDatePickerComponent } from "igniteui-angular";
 ```
 
 ####　基本的な初期化

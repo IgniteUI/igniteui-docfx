@@ -40,7 +40,7 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 IgxSlider を使用するには、IgxSlider をインポートします。
 
 ```typescript
-import { IgxSlider } from "igniteui-js-blocks/IgxSliderModule";
+import { IgxSlider } from "igniteui-angular/IgxSliderModule";
 ```
 <div class="divider"></div>
 

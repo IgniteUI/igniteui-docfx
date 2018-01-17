@@ -17,7 +17,7 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 ### はじめに
 アプリケーションまたはモジュールに `IgxCardModule` をインポートします。
 ```typescript
-import { IgxCardModule } from "igniteui-js-blocks";
+import { IgxCardModule } from "igniteui-angular";
 ```
 <div class="divider--half"></div>
 

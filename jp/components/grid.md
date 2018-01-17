@@ -23,7 +23,7 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 ```typescript
 // app.module.ts
 
-import { IgxGridModule } from 'igniteui-js-blocks/main';
+import { IgxGridModule } from 'igniteui-angular/main';
 
 @NgModule({
     imports: [
@@ -35,10 +35,10 @@ import { IgxGridModule } from 'igniteui-js-blocks/main';
 export class AppModule {}
 ```
 
-_IgxGridModule_ の各コンポーネント、ディレクティブ、およびヘルパー クラスは _grid.component_ または _igniteui-js-blocks_ のメイン バンドルでインポートできます。グリッドをインスタンス化して使用するためすべての機能をインポートする必要はありませんが、グリッド API の部分である型を宣言するときにそれをインポートまたはエディターで自動的にインポートします。
+_IgxGridModule_ の各コンポーネント、ディレクティブ、およびヘルパー クラスは _grid.component_ または _igniteui-angular_ のメイン バンドルでインポートできます。グリッドをインスタンス化して使用するためすべての機能をインポートする必要はありませんが、グリッド API の部分である型を宣言するときにそれをインポートまたはエディターで自動的にインポートします。
 
 ```typescript
-import { IgxGridComponent } from 'igniteui-js-blocks/grid/grid.component';
+import { IgxGridComponent } from 'igniteui-angular/grid/grid.component';
 ...
 
 @ViewChild('myGrid', { read: IgxGridComponent }) public grid: IgxGridComponent;

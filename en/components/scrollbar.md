@@ -18,7 +18,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 To use the IgxSlider import the IgxSlider:
 
 ```typescript
-import { IgxScroll } from "igniteui-js-blocks/IgxScrollModule";
+import { IgxScroll } from "igniteui-angular/IgxScrollModule";
 ```
 <div class="divider--half"></div>
 
