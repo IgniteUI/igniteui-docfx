@@ -6,6 +6,8 @@ $(function () {
     var filtered = 'filtered';
     var show = 'show';
     var hide = 'hide';
+    var codeCopiedText = 'COPIED!';
+    var codeCopyText = 'COPY CODE';
     var util = new utility();
 
     highlight();
@@ -113,6 +115,13 @@ $(function () {
                 return codeSnippet;
             }
         });
+
+        cpb.on('success', function (e) {
+            e.trigger.innerText = codeCopiedText;
+            setTimeout(function () {
+                e.trigger.innerText = codeCopyText;
+            }, 750)
+        })
     }
 
     // Enable highlight.js
@@ -126,7 +135,7 @@ $(function () {
                     '<span class="hljs-lang-name">' +
                     block.result.language +
                     '</span>',
-                    '<button class="hljs-code-copy hidden">COPY CODE</button>'
+                    '<button class="hljs-code-copy hidden">' + codeCopyText + '</button>'
                 ])
                 .on('mouseenter', function () {
                     $(this)
