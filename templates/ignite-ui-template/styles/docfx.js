@@ -736,16 +736,20 @@ $(function () {
             var contentOffset = $('#_content').offset().top;
             $('body').data('offset', contentOffset);
             $('.bs-docs-sidenav a').on('click', function (e) {
+                var hashLocation = $(this).attr('href');
                 var scrollPos =
                     $('body')
-                    .find($(this).attr('href'))
+                    .find(hashLocation)
                     .offset().top - contentOffset;
+
 
                 $('body, html').animate({
                         scrollTop: scrollPos
                     },
                     500,
-                    function () {}
+                    function () {
+                        updateUrl(hashLocation);
+                    }
                 );
                 return false;
             });
@@ -1007,15 +1011,19 @@ $(function () {
     }
 });
 
+function updateUrl(target) {
+    history.pushState({},
+        '',
+        window.location.href.split('#')[0] + target
+    );
+}
+
 $(document).ready(function () {
     var contentOffset = $('#_content').offset().top;
 
     $('.anchorjs-link').on('click', function (e) {
         var hashLocation = $(this).attr('href');
-        history.pushState({},
-            '',
-            window.location.href.split('#')[0] + hashLocation
-        );
+        updateUrl(hashLocation);
 
         var scrollPos =
             $('body')
