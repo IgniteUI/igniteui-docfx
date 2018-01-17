@@ -18,7 +18,7 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 IgxScroll を使用するには、IgxScroll をインポートします。
 
 ```typescript
-import { IgxScroll } from "igniteui-js-blocks/IgxScrollModule";
+import { IgxScroll } from "igniteui-angular/IgxScrollModule";
 ```
 <div class="divider--half"></div>
 

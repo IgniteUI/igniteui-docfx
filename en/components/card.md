@@ -17,7 +17,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ### Getting Started
 Import the `IgxCardModule` inside your application/module.
 ```typescript
-import { IgxCardModule } from "igniteui-js-blocks";
+import { IgxCardModule } from "igniteui-angular";
 ```
 <div class="divider--half"></div>
 

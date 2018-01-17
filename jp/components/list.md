@@ -28,7 +28,7 @@ Ignite UI for Angular List を初期化する前に、最初に **IgxListModule*
 // app.module.ts
 
 ...
-import { IgxListModule } from 'igniteui-js-blocks/main';
+import { IgxListModule } from 'igniteui-angular/main';
 
 @NgModule({
     ...
@@ -134,7 +134,7 @@ import {
     IgxListModule,
     IgxAvatarModule,
     IgxIconModule
-} from 'igniteui-js-blocks/main';
+} from 'igniteui-angular/main';
 
 @NgModule({
     ...
@@ -279,7 +279,7 @@ toggleFavorite(item: IgxListItem) {
 ```typescript
     // app.module.ts
     ...
-    import { IgxFilterModule } from 'igniteui-js-blocks/main';
+    import { IgxFilterModule } from 'igniteui-angular/main';
 
     @NgModule({
         imports: [..., IgxFilterModule]
@@ -287,7 +287,7 @@ toggleFavorite(item: IgxListItem) {
 
     // contacts.component.ts
     ...
-    import { IgxFilterOptions } from 'igniteui-js-blocks/main';
+    import { IgxFilterOptions } from 'igniteui-angular/main';
 
     @Component({...})
     export class ContactListComponent {
@@ -367,4 +367,4 @@ toggleFavorite(item: IgxListItem) {
 是非コミュニティに参加してください。
 
 * [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-js-blocks)
+* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

@@ -16,7 +16,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ### Usage
 ```typescript
-import { IgxCalendarComponent } from "igniteui-js-blocks";
+import { IgxCalendarComponent } from "igniteui-angular";
 ```
 
 Basic initialization
