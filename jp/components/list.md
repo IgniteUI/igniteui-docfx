@@ -11,7 +11,7 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 ### List デモ
 
 <div class="sample-container" style="height: 477px">
-<iframe src='http://{environment:demosBaseUrl}/list-sample-4' width="100%" height="100%" seamless frameBorder="0"></iframe>
+<iframe src='{environment:demosBaseUrl}/list-sample-4' width="100%" height="100%" seamless frameBorder="0"></iframe>
 </div>
 <div class="divider--half"></div>
 
@@ -54,7 +54,7 @@ export class AppModule {}
 以下は結果です:
 
 <div class="sample-container" style="height: 200px">
-<iframe src='http://{environment:demosBaseUrl}/list-sample-2' width="100%" height="100%" seamless frameBorder="0"></iframe>
+<iframe src='{environment:demosBaseUrl}/list-sample-2' width="100%" height="100%" seamless frameBorder="0"></iframe>
 </div>
 
 #### カスタム リスト項目
@@ -119,7 +119,7 @@ public contacts = [{
 結果は以下のようになります。
 
 <div class="sample-container" style="height: 400px">
-<iframe src='http://{environment:demosBaseUrl}/list-sample-3' width="100%" height="100%" seamless frameBorder="0"></iframe>
+<iframe src='{environment:demosBaseUrl}/list-sample-3' width="100%" height="100%" seamless frameBorder="0"></iframe>
 </div>
 
 #### アバターおよびアイコンの追加
@@ -252,7 +252,7 @@ toggleFavorite(item: IgxListItem) {
 結果は以下のようになります。
 
 <div class="sample-container" style="height: 477px">
-<iframe src='http://{environment:demosBaseUrl}/list-sample-4' width="100%" height="100%" seamless frameBorder="0"></iframe>
+<iframe src='{environment:demosBaseUrl}/list-sample-4' width="100%" height="100%" seamless frameBorder="0"></iframe>
 </div>
 <div class="divider--half"></div>
 

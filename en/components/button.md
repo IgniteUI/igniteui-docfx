@@ -15,7 +15,7 @@ Using `igxButton` to turn a span element into a Ignite UI for Angular styled but
 <span igxButton="raised" igxButtonColor="yellow" igxButtonBackground="#000">Click me<span>
 ```
 <div class="sample-container" style="height: 1192px">
-    <iframe seamless width="100%" height="100%" frameborder="0" src="https://{environment:demosBaseUrl}/buttons">
+    <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/buttons">
 </div>
 <div class="divider--half"></div>
 

@@ -10,7 +10,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ### Navigation Drawer Demo
 <div class="sample-container" style="height: 600px">
-    <iframe frameborder="0" seamless width="100%" height="100%" src="https://{environment:demosBaseUrl}/navigation-drawer"></iframe>
+    <iframe frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/navigation-drawer"></iframe>
 </div>
 <div class="divider--half"></div>
 

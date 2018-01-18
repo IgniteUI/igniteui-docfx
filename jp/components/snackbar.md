@@ -9,7 +9,7 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 
 ### Snackbar デモ
 <div class="sample-container" style="height: 672px">
-    <iframe frameborder="0" seamless width="100%" height="100%" src="https://{environment:demosBaseUrl}/snackbar"></iframe>
+    <iframe frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/snackbar"></iframe>
 </div>
 <div class="divider--half"></div>
 

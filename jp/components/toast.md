@@ -10,7 +10,7 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 
 ### Toast デモ
 <div class="sample-container" style="height: 928px">
-    <iframe frameborder="0" seamless width="100%" height="100%" src="https://{environment:demosBaseUrl}/toast"></iframe>
+    <iframe frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/toast"></iframe>
 </div>
 <div class="divider--half"></div>
 

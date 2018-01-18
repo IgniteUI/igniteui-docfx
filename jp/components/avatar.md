@@ -12,7 +12,7 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 ### Avatar デモ
 
 <div class="sample-container" style="height:512px">
-    <iframe src='https://{environment:demosBaseUrl}/avatar' width="100%" height="100%" seamless frameBorder="0"></iframe>
+    <iframe src='{environment:demosBaseUrl}/avatar' width="100%" height="100%" seamless frameBorder="0"></iframe>
 </div>
 <div class="divider--half"></div>
 
