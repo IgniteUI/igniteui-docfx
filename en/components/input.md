@@ -9,7 +9,7 @@ With the igxInput directive you can add **inputs** in your markup.
 
 ### Input Demo
 <div class="sample-container" style="height:1390px">
-<iframe src='https://{environment:demosBaseUrl}/form-elements' width="100%" height="100%" seamless frameBorder="0"></iframe>
+<iframe src='{environment:demosBaseUrl}/form-elements' width="100%" height="100%" seamless frameBorder="0"></iframe>
 </div>
 
 ### Usage
