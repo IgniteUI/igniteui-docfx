@@ -56,11 +56,11 @@ import { IgxCalendarComponent } from "igniteui-angular";
 
 | 名前       |      型      |  説明 |
 |:----------:|:-------------|:------|
-| `weekStart`| `Number | WEEKDAYS` | 週の最初の日を設定します。 |
+| `weekStart`| `Number` または `WEEKDAYS` | 週の最初の日を設定します。 |
 | `locale` | `string` | カレンダーで日付の書式および表示のためのロケールを設定します。有効な書式の詳細については、[この](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl)ページを参照してください。 |
 | `selection` | `string` | カレンダーの選択タイプを設定します。有効な値は `single` (デフォルト)、`multi`、および `range` です。|
 | `viewDate` | `Date` | カレンダーを描画するときにデフォルト ビューで表示される年と月を設定します。デフォルト値は現在の年と月です。   |
-| `value` | `Date | Date[]` | カレンダー ウィジェットの現在値を取得または設定します。複数選択および範囲選択は選択日付の配列を返します。 |
+| `value` | `Date` または `Date[]` | カレンダー ウィジェットの現在値を取得または設定します。複数選択および範囲選択は選択日付の配列を返します。 |
 | `formatOptions` | `Object` | 日付を書式設定するために使用される `locale` プロパティと渡される書式オプション。 |
 
 #### 出力
@@ -68,7 +68,7 @@ import { IgxCalendarComponent } from "igniteui-angular";
 
 | 名前 | 戻り値の型 | 説明 |
 |:--:|:---|:---|
-| `onSelection` | `Date | Date[]` | カレンダーで選択が実行されるときに発生します。イベントは、コンポーネントの選択タイプに基づいた選択値を含みます。 |
+| `onSelection` | `Date` または `Date[]` | カレンダーで選択が実行されるときに発生します。イベントは、コンポーネントの選択タイプに基づいた選択値を含みます。 |
 
 #### メソッド
 <div class="divider--half"></div>
