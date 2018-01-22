@@ -5,7 +5,7 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 ---
 
 ## Label
-<p class="highlight">Ignite UI for Angular Label ディレクティブは、単一行のテキスト要素に CSS スタイルを追加するために使用されます。Switch、Checkbox、または Avatar コンポーネントとの使用は大変便利です。</p>
+<p class="highlight">Ignite UI for Angular Label ディレクティブは、単一行のテキスト要素に CSS スタイルを追加するために使用されます。Switch、Checkbox、または Avatar コンポーネントとの使用が便利です。</p>
 <div class="divider"></div>
 
 ### Label デモ
