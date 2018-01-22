@@ -14,7 +14,7 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 <igx-icon fontSet="material" name="home" color="magenta" isActive="false"></igx-icon>
 ```
 
-`fontSet` を `fontSet="material"` に設定すると、マテリアル アイコン セット (デフォルト) を選択します。 _その他の設定も追加予定です。_
+`fontSet` を `fontSet="material"` に設定すると、マテリアル アイコン セット (デフォルト) を選択します。 その他の設定も追加予定です。
 
 アイコンを設定するには、[マテリアル アイコン セット](https://material.io/icons/)の名前を提供します。例: `name="home"`。
 
