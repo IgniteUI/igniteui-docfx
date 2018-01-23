@@ -24,12 +24,12 @@ import { IgxCalendarComponent } from "igniteui-angular";
 <igx-calendar></igx-calendar>
 ```
 
-範囲選択カレンダー。最初の曜日は月曜日に設定し、選択の完了でイベント ハンドラーがあります。
+最初の曜日を月曜日に設定し、選択完了時にイベント ハンドラーのある範囲選択カレンダー。
 ```html
 <igx-calendar weekStart="1" selection="range" (onSelection)="eventHandler($event)"></igx-calendar>
 ```
 
-カレンダーは、両方向のデータ バインディングが必要な場合、`ngModel` でのバインディングをサポートします。
+カレンダーで両方向のデータ バインディングが必要な場合、`ngModel` でのバインディングもサポートされます。
 ```html
 <igx-calendar [(ngModel)]="myDateValue"></igx-calendar>
 ```
