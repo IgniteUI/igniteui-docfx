@@ -134,7 +134,7 @@ _extraFont: https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600,70
 			Hangouts などのアプリケーションを提供するかわりに Google が Android の使用を制御しています。その結果、Android は以前に比べ
 			「オープン ソース」の部分が少なくなりましたが、ソース コードはまだ利用可能です。
         </p>
-        <p class="h4--igx"> まだサポートされている Android バージョンのリスト:
+        <p class="h4--igx"> サポートされる Android バージョン:
         </p>
         <br>
         <ul>
@@ -142,7 +142,7 @@ _extraFont: https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600,70
             <li>Android 6.0 Marshmallow (2015 年末)</li>
             <li>Android 5.0 Lollipop (2014 年末)</li>
             <li>Android 4.4 KitKat (2013 年末)</li>
-            <li>Android 4.1-4.3 Jelly Bean (2012 年半ば)</li>
+            <li>Android 4.1-4.3 Jelly Bean (2012 年中旬)</li>
         </ul>
     </div>
 </article>
