@@ -75,5 +75,5 @@ import { IgxCalendarComponent } from "igniteui-angular";
 
 | 名前   | 引数 | 戻り値の型 | 説明 |
 |:----------:|:------|:------|:------|
-| `selectDate` | `date: Date | Date[]` | `void` | カレンダーの選択を変更します。このメソッドの呼び出しは `onSelection` イベントを発生させます。 |
+| `selectDate` | `date: Date` または `Date[]` | `void` | カレンダーの選択を変更します。このメソッドの呼び出しは `onSelection` イベントを発生させます。 |
 <div class="divider--half"></div>
