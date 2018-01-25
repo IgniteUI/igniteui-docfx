@@ -5,7 +5,7 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 ---
 
 ##Dialog Windows
-<p class="highlight">Ignite UI for Angular Dialog Window コンポーネントをメッセージを表示するか、入力フォームを表示するために使用します。コンポーネントはアプリケーション コンテンツの中央上にダイアログ ウィンドウを開きます。キャンセル可能な規格の警告メッセージを提供できます。</p>
+<p class="highlight">Ignite UI for Angular Dialog Window コンポーネントをメッセージを表示するか、入力フォームを表示するために使用します。コンポーネントはアプリケーション コンテンツの中央上にダイアログ ウィンドウを開きます。キャンセル可能な標準の警告メッセージを提供できます。</p>
 <div class="divider"></div>
 
 ### Dialog の例
@@ -32,7 +32,7 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 左ボタンの選択イベントにアタッチするには、`(onLeftButtonSelect)="alert.close()"` を使用します。
 <div class="divider--half"></div>
 
-### 規格のダイアログ
+### 標準ダイアログ
 **ダイアログは警告と同様ですが、その他のボタンが追加されます。**
 
 ```html
