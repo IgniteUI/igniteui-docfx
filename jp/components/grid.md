@@ -2,6 +2,7 @@
 title: Data Grid コンポーネント
 _description: Ignite UI for Angular Data Grid コントロールは、タッチ レスポンシブなデータ グリッドです。階層およびリスト ビューなどの機能があります。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Data Grid コンポーネント, Angular Data Grid コントロール
+_language: ja
 ---
 
 ## Data Grid
@@ -334,7 +335,7 @@ public ngOnInit(): void {
 
 | 名前              | 説明                                                                           |
 | :---------------- | :----------------------------------------------------------------------------- |
-| イベント発生    | 変更の通知                                                                   |
+| イベント発生      | 変更の通知                                                                     |
 | `onEditDone`      | 更新された行を出力するために行更新で使用されます。                             |
 | `onFilterDone`    | 列およびフィルタリング式を出力するためにデータのフィルタリングで使用されます。 |
 | `onSortingDone`   | 列、方向、および並べ替え式を出力するためにデータの並べ替えで使用されます。     |
