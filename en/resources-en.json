@@ -2,5 +2,8 @@
     "hljs": {
         "copyCode": "COPY CODE",
         "codeCopied": "COPIED"
+    },
+    "sideaffix": {
+        "title": "IN THIS ARTICLE"
     }
 }

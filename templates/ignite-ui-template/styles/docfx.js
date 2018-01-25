@@ -713,7 +713,8 @@ $(function() {
         var hierarchy = getHierarchy();
 
         if (hierarchy.length > 0) {
-            var html = '<h5 class="sifeaffix__title">IN THIS ARTICLE</h5>';
+            var html =
+                '<h5 data-localize="sideaffix.title" class="sifeaffix__title"></h5>';
             html += util.formList(hierarchy, ['nav', 'bs-docs-sidenav']);
             $('#affix')
                 .empty()
