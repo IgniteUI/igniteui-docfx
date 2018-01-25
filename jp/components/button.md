@@ -5,7 +5,7 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 ---
 
 ## Button
-<p class="highlight">Button ディレクティブを任意の button、span、div、または anchor 要素に適用して完全に機能するボタンにします。</p>
+<p class="highlight">Button ディレクティブを任意の button、span、div、または anchor 要素に適用して高機能なボタンを構成できます。</p>
 <div class="divider"></div>
 
 ### Button デモ
