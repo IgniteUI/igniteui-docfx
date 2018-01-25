@@ -24,7 +24,7 @@ import { IgxCalendarComponent } from "igniteui-angular";
 <igx-calendar></igx-calendar>
 ```
 
-最初の曜日を月曜日に設定し、選択完了時にイベント ハンドラーのある範囲選択カレンダー。
+最初の曜日を月曜日に設定し、選択完了時にイベント ハンドラーのある範囲選択カレンダーを構成します。
 ```html
 <igx-calendar weekStart="1" selection="range" (onSelection)="eventHandler($event)"></igx-calendar>
 ```
