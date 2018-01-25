@@ -5,6 +5,7 @@ full license information.}}
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script>
 <script type="text/javascript" src="{{_rel}}styles/docfx.vendor.js"></script>
 <script type="text/javascript" src="{{_rel}}styles/docfx.js"></script>
+<script type="text/javascript" src="{{_rel}}styles/jquery-localize.js"></script>
 <script type="text/javascript" src="{{_rel}}styles/main.js"></script>
 <script type="text/javascript" src="https://infragistics.com/assets/modern/scripts/jquery-migrate.min.js"></script>
 <script type="text/javascript" src="https://infragistics.com/assets/modern/scripts/plugins.nav.js"></script>
@@ -12,6 +13,5 @@ full license information.}}
 <script type="text/javascript" src="{{_rel}}styles/igviewer.common.js"></script>
 <script type="text/javascript" src="{{_rel}}styles/igviewer.renderingService.js"></script>
 <script type="text/javascript" src="{{_rel}}styles/api-browser.js"></script>
-
 <script src="https://use.typekit.net/zhy2hpz.js"></script>
 <script>try { Typekit.load({ async: true }); } catch (e) { }</script>
