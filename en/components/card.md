@@ -163,11 +163,24 @@ Easy, right? Let's see how it turned out in the browser:
 <iframe src='{environment:demosBaseUrl}/card-sample-3' width="100%" height="100%" seamless frameBorder="0"></iframe>
 </div>
 
-<div class="divider"></div>
 <!--### API Summary-->
+####Styles
+The following built-in CSS classes helped us achieve this card layout:
+| Name | Description |
+| :--- | :--- |
+| `igx-card-header` | Makes the header a flexible container which stacks its child items in a row from left to right and wraps them if necessary. Each item is centered and occupies the whole width of the container which results into displaying the title and subtitle one above the other. |
+| `igx-card-header__title` | Extends the header element class with margin, color and font-size values specific to title elements. |
+| `igx-card-header__subtitle` | Extends the header element class with margin, color and font-size values specific to subtitle elements. |
+| `igx-card-content` | Makes the content area a flexible container which stacks its child items in a row from left to right and wraps them if necessary. |
+| `igx-card-content__text` | Extends the content element class with margin, color and font-size values specific to text elements. |
+| `igx-card-actions__igroup` | Makes the group a flexible container with a specific max-height, which stacks its child items in a row but does not wrap them. All items are of equal size and color, and do not shrink during resizing. |
+| `igx-card-actions__igroup--start` | Aligns the items to the left. |
 
+
+####Summary
 In this article we covered a lot of ground with the card component. First, we created a very simple card with text content only. Then added some images to make the card a bit more appealing. Finally, we used some additional Ignite UI for Angular components inside our card, like avatars, buttons and icons, to enrich the experience and add some functionality. The card component is capable of displaying more different layouts worth exploring in the Card Demo in the beginning of this article.
 
+<div class="divider"></div>
 ###Additional Resources
 
 <div class="divider--half"></div>
