@@ -661,6 +661,40 @@ a.disable:hover {
   margin-left: 10px;
   margin-top: 5px; }
 
+.stackblitz-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.8);
+  border: 0;
+  border-radius: 2px;
+  text-transform: uppercase;
+  background: #731963;
+  padding: 8px 16px;
+  outline-style: none;
+  -webkit-box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.26), 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.08);
+          box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.26), 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.08);
+  -webkit-transition: all 0.25s ease-out;
+  transition: all 0.25s ease-out; }
+  .stackblitz-btn:hover, .stackblitz-btn:focus {
+    color: white;
+    -webkit-box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.26), 0 8px 10px 1px rgba(0, 0, 0, 0.12), 0 3px 14px 2px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.26), 0 8px 10px 1px rgba(0, 0, 0, 0.12), 0 3px 14px 2px rgba(0, 0, 0, 0.08); }
+  .stackblitz-btn::before {
+    content: '';
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    margin-right: 8px;
+    background-image: url("../../images/stackblitz-logo.svg");
+    background-size: 100%; }
+  .stackblitz-btn::after {
+    content: 'view on stackblitz'; }
+
 #main {
   position: relative;
   padding-top: 127px;
