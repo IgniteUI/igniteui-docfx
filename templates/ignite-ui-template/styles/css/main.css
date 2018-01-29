@@ -692,8 +692,6 @@ a.disable:hover {
     margin-right: 8px;
     background-image: url("../../images/stackblitz-logo.svg");
     background-size: 100%; }
-  .stackblitz-btn::after {
-    content: 'view on stackblitz'; }
 
 #main {
   position: relative;

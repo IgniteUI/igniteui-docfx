@@ -57,7 +57,4 @@ a.disable:hover {
         background-image: url('../../images/stackblitz-logo.svg');
         background-size: 100%;
     }
-    &::after {
-        content: 'view on stackblitz';
-    }
 }

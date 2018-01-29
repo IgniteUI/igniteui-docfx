@@ -15,7 +15,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
     <iframe src='{environment:demosBaseUrl}/grid' width="100%" height="100%" seamless frameBorder="0"></iframe>
 </div>
 <br/>
-<button class="stackblitz-btn"></button>
+<button data-localize="stackblitz" class="stackblitz-btn">view on stackblitz</button>
 <div class="divider--half"></div>
 
 ### Dependencies
