@@ -5,7 +5,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ---
 
 ##Slider
-<p class="highlight">The Ignite UI for Angular Slider component allows selection in a given range by moving the thumb along the track. The track can be defined as continuous or stepped and you can choose between single and range slider type.</p>
+<p class="highlight">The Ignite UI for Angular Slider component allows selection in a given range by moving the thumb along the track. The track can be defined as continuous or stepped and you can choose between single and range slider types.</p>
 <div class="divider"></div>
 
 ### Slider Demo
@@ -35,7 +35,7 @@ export class AppModule {}
 ```
 
 ####Continuous Slider
-Let’s start with a simple continuous slider with minimum and maximum values set using `minValue` and `maxValue`. By default, the slider type is discrete so we can change this by setting `isContinuous` input to true. We also bind the slider `value` to a property in our component called volume.
+Let’s start with a simple continuous slider with minimum and maximum values set using `minValue` and `maxValue`. By default, the slider type is discrete so we can change this by setting the `isContinuous` input to true. We also bind the slider `value` to a property in our component called "volume".
 
 > [!NOTE]
 > Continuous slider does not display ticks and bubble label for the current value.
@@ -63,7 +63,7 @@ If the sample is configured properly, dragging the slider thumb should update th
 ####Discrete Slider
 By default, the Ignite UI for Angular Slider is discrete. You can use a discrete slider with predefined steps to track only meaningful values for the user. For example, the discrete slider can visualize rating from 0 to 5 or completion percentage from 0% to 100%.
 
-In the following example, we define a discrete slider that displays values from 0% to 100%. The `step` is set to 10. We also bind the slider `value` to a property in our component called completion to allow two way binding with an input component.
+In the following example, we define a discrete slider that displays values from 0% to 100%. The `step` is set to 10. We also bind the slider `value` to a property in our component called "completion" to allow two way binding with an input component.
 
 ```html
 <!--sample.component.html-->
@@ -137,7 +137,7 @@ class PriceRange {
 <iframe src='{environment:demosBaseUrl}/slider-sample-4' width="100%" height="100%" seamless frameBorder="0"></iframe>
 </div>
 
-In some cases, values near to the minimum and maximum are not appropriate. You can further provide a useful range to limit user choice along with setting `minValue` and `maxValue`. This can be done by setting `lowerBound` and `upperBound`. Now, the user won't be able to move the thumb in the range of 0 to 100 and in the range of 900 to 1000.
+In some cases, values near to the minimum and maximum are not appropriate. You can further provide a useful range to limit user choice along with setting `minValue` and `maxValue`. This can be done by setting `lowerBound` and `upperBound`. Now, the user will not be able to move the thumb in the range of 0 to 100 and in the range of 900 to 1000.
 
 ```html
 <!--sample.component.html-->
@@ -149,7 +149,7 @@ In some cases, values near to the minimum and maximum are not appropriate. You c
 <iframe src='{environment:demosBaseUrl}/slider-sample-5' width="100%" height="100%" seamless frameBorder="0"></iframe>
 </div>
 
-Let's add two inputs as well and bind them to the lower and upper range slider values. Thus, we can visualize and modify slider values.
+Let's add two inputs in addition and bind them to the lower and upper range slider values. Thus, we can visualize and modify current slider values.
 
 ```html
 <!--sample.component.html-->
