@@ -35,7 +35,7 @@ export class AppModule {}
 ```
 
 ####Continuous Slider
-Let’s start with a simple continuous slider with minimum and maximum values set using `minValue` and `maxValue`. By default, the slider type is discrete so we can change this by setting the `isContinuous` input to true. We also bind the slider `value` to a property in our component called "volume".
+Let's start with a simple continuous slider. First, specify the slider type by setting the `isContinuous` input to true. Next, define the minimum and maximum values using `minValue` and `maxValue`. We also bind the slider `value` to a property in our component called "volume".
 
 > [!NOTE]
 > Continuous slider does not display ticks and bubble label for the current value.
@@ -61,7 +61,9 @@ If the sample is configured properly, dragging the slider thumb should update th
 </div>
 
 ####Discrete Slider
-By default, the Ignite UI for Angular Slider is discrete. You can use a discrete slider with predefined steps to track only meaningful values for the user. For example, the discrete slider can visualize rating from 0 to 5 or completion percentage from 0% to 100%.
+By default, the Ignite UI for Angular Slider is discrete. Discrete slider provides visualization of the current value with a numeric label (bubble).
+
+You can use a discrete slider with predefined steps to track only meaningful values for the user. For example, the discrete slider can visualize rating from 0 to 5 or completion percentage from 0% to 100%.
 
 In the following example, we define a discrete slider that displays values from 0% to 100%. The `step` is set to 10. We also bind the slider `value` to a property in our component called "completion" to allow two way binding with an input component.
 
@@ -105,9 +107,7 @@ If the sample is configured properly, dragging the slider thumb should update th
 </div>
 
 ####Range Slider
-To visualize a price range filter for example, use a range slider. 
-
-To achieve this, set the slider `type` to `RANGE`. Next, we bind the slider value to an object of type PriceRange. That object has two properties for lower and upper range values.
+To visualize a range filter for example, use a range slider. To achieve this, set the slider `type` to `RANGE`. Next, we bind the slider value to an object of type PriceRange. That object has two properties for lower and upper range values.
 
 ```html
 <!--sample.component.html-->
@@ -137,7 +137,7 @@ class PriceRange {
 <iframe src='{environment:demosBaseUrl}/slider-sample-4' width="100%" height="100%" seamless frameBorder="0"></iframe>
 </div>
 
-In some cases, values near to the minimum and maximum are not appropriate. You can further provide a useful range to limit user choice along with setting `minValue` and `maxValue`. This can be done by setting `lowerBound` and `upperBound`. Now, the user will not be able to move the thumb in the range of 0 to 100 and in the range of 900 to 1000.
+In some cases, values near to the minimum and maximum are not appropriate. You can further provide a useful range to limit the user choice along with setting `minValue` and `maxValue`. This can be done by setting `lowerBound` and `upperBound`. Now, the user will not be able to move the thumb in the range of 0 to 100 and in the range of 900 to 1000.
 
 ```html
 <!--sample.component.html-->
@@ -222,7 +222,7 @@ The following inputs are available in the **igx-slider** component:
 | Name | Type | Description |
 | :--- | :--- | :--- |
 | `disabled` | boolean | Disables/enables the interactions with slider. |
-| `isContinuous` | boolean | When set to true, marks the slider as continuous. The continuous slider does not have ticks and does not shows bubble labels for values. By default, the slider is discrete. |
+| `isContinuous` | boolean | By default, `isContinuous` is false. When set to true, marks the slider as continuous. |
 | `lowerBound` | number | Specifies the lower boundary of the slider value. If not set, it is the same as the `minValue`. |
 | `maxValue` | number | Specifies the maximum slider value. |
 | `minValue` | number | Specifies the minimum slider value. |
