@@ -2,13 +2,16 @@
 title: Colors スタイルガイド
 _description: 
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ
+_language: ja
 ---
 
 ## Colors
+
 <p class="highlight"></p>
 <div class="divider"></div>
 
 ### デフォルト色
+
 <article class="row">
     <div class="col-md-4 col-sm-12">
         <div class="color-container primary-color">
@@ -42,6 +45,7 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 <div class="divider"></div>
 
 ### サポート カラー
+
 <article class="row">
     <div class="col-md-4 col-sm-12">
         <div class="color-container success-color">
@@ -75,6 +79,7 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 <div class="divider"></div>
 
 ### カラー パレット
+
 <article class="color-palettes row">
     <div class="color-palette col-md-6 col-sm-12">
         <div class="color-container primary-color">
