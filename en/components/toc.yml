@@ -14,10 +14,8 @@
   href: switch.md
 - name: Radio Button 
   href: radio_button.md
-- name: Label 
-  href: label.md
-- name: Input 
-  href: input.md
+- name: Label & Input
+  href: label_input.md
 - name: Badge 
   href: badge.md
 - name: Icon 
