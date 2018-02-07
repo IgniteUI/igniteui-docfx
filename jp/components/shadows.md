@@ -2,13 +2,16 @@
 title: Shadows スタイルガイド
 _description:
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ
+_language: ja
 ---
 
 ## Shadows
+
 <p class="highlight"></p>
 <div class="divider"></div>
 
 ### 推定高さ
+
 <div class="elevations row">
     <div class="col-lg-4 col-md-4 col-sm-6">
         <div class="elevation-sample elevate-1">
@@ -143,6 +146,7 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 </div>
 
 ### 使用方法
+
 <div class="elevate-image">
     <img width="100%" height="100%" src="../images/whatismaterial_3d_elevation2.jpg" alt="Shadows Usage">
 </div>

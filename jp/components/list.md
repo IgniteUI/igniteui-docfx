@@ -1,6 +1,8 @@
-﻿title: List View コンポーネント
+﻿---
+title: List View コンポーネント
 _description: Ignite UI for Angular List View コンポーネントを使用すると、ネイティブ Angular フレームワークで行にデータを任意のテンプレートを使用して表示します。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular List View コンポーネント, Angular List View コントロール
+_language: ja
 ---
 
 ## List View
@@ -21,6 +23,7 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 > <br/> <br/>`$ npm install hammerjs @types/hammerjs`
 
 ### 使用方法
+
 List コンポーネントは項目の垂直リストを表示します。項目のデフォルト スタイル設定はマテリアル デザイン [**ガイドライン**](https://material.io/guidelines/components/lists.html)の単一行リストの仕様に基づきます。
 Ignite UI for Angular List を初期化する前に、最初に **IgxListModule** を **app.module.ts** ファイルにインポートします:
 
@@ -59,8 +62,7 @@ export class AppModule {}
 
 #### カスタム リスト項目
 
-リスト項目にカスタム マークアップおよびスタイルを適用します。名前の下に電話番号が表示される連絡先のリストを作成します。
-コンポーネントの typescript ファイルで連絡先のリストを定義します:
+リスト項目にカスタム マークアップおよびスタイルを適用します。名前の下に電話番号が表示される連絡先のリストを作成します。コンポーネントの typescript ファイルで連絡先のリストを定義します:
 
 ```typescript
 // contacts.component.ts
@@ -258,8 +260,7 @@ toggleFavorite(item: IgxListItem) {
 
 ### フィルタリング
 
-リストで連絡先を名前によって検索する機能を追加します。フィルタリング パイプを使用して実装できます。
-フィルタリングを追加します。
+リストで連絡先を名前によって検索する機能を追加します。フィルタリング パイプを使用して実装できます。フィルタリングを追加します。
 
 コンポーネント テンプレートの上側に入力フィールドを追加し、コンポーネントの _searchContact_ プロパティにバインドします:
 
@@ -318,9 +319,10 @@ toggleFavorite(item: IgxListItem) {
 
 ### API 概要
 
-この記事で List コンポーネントを説明しました。連絡先項目のリストを作成しました。アバターおよびアイコンの追加の Ignite UI for Angular コンポーネントをリスト項目で使用しました。Cカスタム項目レイアウトを作成してスタイル設定しました。リスト フィルタリングを追加しました。以下は、List コンポーネントのその他の API です。
+この記事で List コンポーネントを説明しました。連絡先項目のリストを作成しました。アバターおよびアイコンの追加の Ignite UI for Angular コンポーネントをリスト項目で使用しました。カスタム項目レイアウトを作成してスタイル設定しました。リスト フィルタリングを追加しました。以下は、List コンポーネントのその他の API です。
 
 #### 入力
+
 以下の入力は **igx-list** コンポーネントで利用できます。
 | 名前 | 型 | 説明 |
 | :--- | :--- | :--- |
@@ -338,6 +340,7 @@ toggleFavorite(item: IgxListItem) {
 <div class="divider"></div>
 
 #### 出力
+
 以下の出力は **igx-list** コンポーネントで利用できます。
 | 名前 | 型 | 説明 |
 | :--- | :--- | :--- |
@@ -346,6 +349,7 @@ toggleFavorite(item: IgxListItem) {
 <div class="divider"></div>
 
 #### ゲッター
+
 以下のゲッターは **igx-list** コンポーネントで利用できます。
 | 名前 | 型 | 説明 |
 | :--- | :--- | :--- |
