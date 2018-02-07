@@ -2,10 +2,12 @@
 title: Typography スタイルガイド
 _description:
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ
-_extraFont: https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600,700 
+_language: ja
+_extraFont: https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600,700
 ---
 
 ## Typography
+
 <p class="highlight">Ignite UI for Angular のフォントは <a href="https://fonts.google.com/specimen/Titillium+Web">Titillium Web</a> です。Web 用に最適化されており、読みやすく、Google の <a href="https://fonts.google.com/specimen/Roboto">Roboto</a> フォントと互換性があります。</p>
 <div class="divider"></div>
 
@@ -25,6 +27,7 @@ _extraFont: https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600,70
 <div class="divider--half"></div>
 
 ### ヘッダー
+
 <article class="sample-column">
     <div class="typography-group row">
         <div class="col-sm-6 col-xs-12">
@@ -79,6 +82,7 @@ _extraFont: https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600,70
 <div class="divider"></div>
 
 ### 本文
+
 <article class="sample-column">
     <div class="typography-sample">
         <p>
@@ -102,6 +106,7 @@ _extraFont: https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600,70
 <div class="divider"></div>
 
 ### Blockquote
+
 <article class="sample-column">
     <div class="typography-sample">
         <blockquote>
@@ -119,6 +124,7 @@ _extraFont: https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600,70
 <div class="divider"></div>
 
 ### Typography の例
+
 <article class="sample-column">
     <div class="typography-sample">
         <p class="h1--igx">Android の履歴</p>

@@ -27,7 +27,7 @@
         ],
         "resource": [
             {
-                "files": ["images/**"],
+                "files": ["images/**", "resources-en.json"],
                 "exclude": ["obj/**", "_site/**"]
             }
         ],

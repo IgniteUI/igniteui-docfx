@@ -2,9 +2,11 @@
 title: Icon コンポーネント
 _description: Ignite UI for Angular Icon コンポーネントを使用して、様々なアイコンおよびフォント セットを統合して交互に使用し、カスタム色を定義できます。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Icon コンポーネント, Angular Icon コントロール
+_language: ja
 ---
 
 ## Icon
+
 <p class="highlight">Ignite UI for Angular Icon コンポーネントはアイコンおよびフォント セットを統合するため、交互の使用やマテリアル アイコンをマークアップに追加できます。コンポーネントはカスタム色をサポートします。アイコンを非アクティブに設定できます。</p>
 <div class="divider"></div>
 
@@ -32,7 +34,6 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 
 `isActive`
 
-
 **セッター**
 アイコンのすべてのプロパティを以下のアイコン セッターによってコードで設定できます。
 
@@ -48,4 +49,5 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 `getIconColor()` はアイコンの色を返します。
 `getIconName()` はアイコンの名前を返します。
 `getActive()` はアイコンのアクティブ状態を返します。
+
 <div class="divider"></div>

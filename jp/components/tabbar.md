@@ -2,6 +2,7 @@
 title: Tab Bar コンポーネント
 _description: タブ付きのユーザー インターフェイスでタブを表示します。この UI コントロールはタブの外観および動作を管理します。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Tab Bar コンポーネント, Angular Tab Bar コントロール
+_language: ja
 ---
 
 ## Tab Bar
@@ -55,7 +56,7 @@ Igx-Tab-Bar の子コンポーネント:
 
 * `onTabSelected` - 新しいタブが選択されたときに発生します。
 * `onTabDeselected` - タブが選択解除されたときに発生します。
-  <div class="divider--half"></div>
+    <div class="divider--half"></div>
 
 ### パネル
 
@@ -73,7 +74,7 @@ _Igx-Tab-Panel_ - 表示するコンテンツのコンテナーを表す Igx-Tab
 #### パネルのメソッド
 
 * `select` - パネルおよび関連付けられているタブを選択します。
-  <div class="divider--half"></div>
+    <div class="divider--half"></div>
 
 ### タブ
 
@@ -89,4 +90,4 @@ _Igx-Tab_ - 関連付けられているパネルの表示をトリガーする�
 #### タブのメソッド
 
 * `select` - タブおよび関連付けられているパネルを選択します。
-  <div class="divider--half"></div>
+    <div class="divider--half"></div>
