@@ -2,13 +2,16 @@
 title: Switch コンポーネント
 _description: Ignite UI for Angular Switch コンポーネントはアプリケーションにバイナリ有効/無効または true/false のデータ入力関数を追加します。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Switch コンポーネント, Angular Switch コントロール
+_language: ja
 ---
 
 ## Switch
+
 <p class="highlight">Ignite UI for Angular Switch コンポーネントは iOS の switch コンポーネントと同様に動作するバイナリ選択コンポーネントです。</p>
 <div class="divider"></div>
 
 ### Switch デモ
+
 <div class="sample-container" style="height:1390px">
 <iframe src='{environment:demosBaseUrl}/form-elements' width="100%" height="100%" seamless frameBorder="0"></iframe>
 </div>
@@ -43,4 +46,5 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
     </div>
 </form>
 ```
+
 <div class="divider"></div>
