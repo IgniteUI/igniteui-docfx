@@ -23,7 +23,6 @@ $(function() {
     breakText();
     renderHeader();
     copyCode();
-    showLoadingIframe();
 
     window.refresh = function(article) {
         // Update markup result
@@ -39,22 +38,6 @@ $(function() {
         renderAlerts();
         renderAffix();
     };
-
-    function showLoadingIframe() {
-        var iframes = document.querySelectorAll('iframe');
-
-        for (iframe of iframes) {
-            $(iframe)
-                .parent()
-                .addClass('loading');
-            $(iframe).on('load', function() {
-                $(this)
-                    .parent()
-                    .removeClass('loading');
-            });
-        }
-        $('.sample-iframe').on('load', function() {});
-    }
 
     function breakText() {
         $('.xref').addClass('text-break');

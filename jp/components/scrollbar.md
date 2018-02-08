@@ -12,8 +12,8 @@ _language: ja
 
 ### Scrollbar デモ
 
-<div class="sample-container" style="height: 755px">
-    <iframe frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/scroll"></iframe>
+<div class="sample-container loading" style="height: 755px">
+    <iframe frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/scroll" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div class="divider--half"></div>
 

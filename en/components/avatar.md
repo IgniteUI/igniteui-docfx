@@ -11,8 +11,8 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ### Avatar Demo
 
-<div class="sample-container" style="height:512px">
-    <iframe src='{environment:demosBaseUrl}/avatar' width="100%" height="100%" seamless frameBorder="0"></iframe>
+<div class="sample-container loading" style="height:512px">
+    <iframe src='{environment:demosBaseUrl}/avatar' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div class="divider--half"></div>
 
