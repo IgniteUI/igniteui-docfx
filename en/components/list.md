@@ -55,8 +55,9 @@ Then in the template of our contacts component we can add the following code to 
 If all went well, you should see the following in your browser:
 
 <div class="sample-container" style="height: 200px">
-<iframe src='{environment:demosBaseUrl}/list-sample-2' width="100%" height="100%" seamless frameBorder="0"></iframe>
+<iframe id="list-sample-2-iframe" src='{environment:demosBaseUrl}/list-sample-2' width="100%" height="100%" seamless frameBorder="0"></iframe>
 </div>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 
 #### Custom List Items
 
