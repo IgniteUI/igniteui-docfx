@@ -63,9 +63,7 @@
             files: sharedFileContent.files.concat(data)
         }
 
-        console.log(sharedFileContent.dependencies);
         var form = createStackblitzForm(formData);
-        console.log(form);
         form.appendTo($("body"));
         form.submit();
         isButtonClickInProgress = false;
