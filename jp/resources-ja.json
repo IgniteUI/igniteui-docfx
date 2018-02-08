@@ -1,9 +1,9 @@
 {
     "hljs": {
         "copyCode": "コピー",
-        "codeCopied": "コピー済"
+        "codeCopied": "コピー済み"
     },
     "sideaffix": {
-        "title": "IN THIS ARTICLE"
+        "title": "トピック コンテンツ:"
     }
 }
