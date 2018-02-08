@@ -12,8 +12,8 @@ _language: ja
 
 ### Card デモ
 
-<div class="sample-container" style="height: 1661px">
-    <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/card"></iframe>
+<div class="sample-container loading" style="height: 1661px">
+    <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/card" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div class="divider--half"></div>
 

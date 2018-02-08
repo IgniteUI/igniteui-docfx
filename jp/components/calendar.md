@@ -12,8 +12,8 @@ _language: ja
 
 ### Calendar デモ
 
-<div class="sample-container" style="height:1728px">
-    <iframe src='{environment:demosBaseUrl}/calendar' width="100%" height="100%" seamless frameBorder="0"></iframe>
+<div class="sample-container loading" style="height:1728px">
+    <iframe src='{environment:demosBaseUrl}/calendar' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div class="divider--half"></div>
 

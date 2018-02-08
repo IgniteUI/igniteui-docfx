@@ -12,8 +12,8 @@ _language: ja
 
 ### List デモ
 
-<div class="sample-container" style="height: 477px">
-<iframe src='{environment:demosBaseUrl}/list-sample-4' width="100%" height="100%" seamless frameBorder="0"></iframe>
+<div class="sample-container loading" style="height: 477px">
+<iframe src='{environment:demosBaseUrl}/list-sample-4' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div class="divider--half"></div>
 
@@ -56,8 +56,8 @@ export class AppModule {}
 
 以下は結果です:
 
-<div class="sample-container" style="height: 200px">
-<iframe src='{environment:demosBaseUrl}/list-sample-2' width="100%" height="100%" seamless frameBorder="0"></iframe>
+<div class="sample-container loading" style="height: 200px">
+<iframe src='{environment:demosBaseUrl}/list-sample-2' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 
 #### カスタム リスト項目
@@ -120,8 +120,8 @@ public contacts = [{
 
 結果は以下のようになります。
 
-<div class="sample-container" style="height: 400px">
-<iframe src='{environment:demosBaseUrl}/list-sample-3' width="100%" height="100%" seamless frameBorder="0"></iframe>
+<div class="sample-container loading" style="height: 400px">
+<iframe src='{environment:demosBaseUrl}/list-sample-3' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 
 #### アバターおよびアイコンの追加
@@ -253,8 +253,8 @@ toggleFavorite(item: IgxListItem) {
 
 結果は以下のようになります。
 
-<div class="sample-container" style="height: 477px">
-<iframe src='{environment:demosBaseUrl}/list-sample-4' width="100%" height="100%" seamless frameBorder="0"></iframe>
+<div class="sample-container loading" style="height: 477px">
+<iframe src='{environment:demosBaseUrl}/list-sample-4' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div class="divider--half"></div>
 

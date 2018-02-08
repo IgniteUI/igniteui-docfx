@@ -12,8 +12,8 @@ _language: ja
 
 ### Toast デモ
 
-<div class="sample-container" style="height: 928px">
-    <iframe frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/toast"></iframe>
+<div class="sample-container loading" style="height: 928px">
+    <iframe frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/toast" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div class="divider--half"></div>
 

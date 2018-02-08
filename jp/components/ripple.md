@@ -12,8 +12,8 @@ _language: ja
 
 ### Ripple デモ
 
-<div class="sample-container" style="height: 1192px">
-    <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/buttons">
+<div class="sample-container loading" style="height: 1192px">
+    <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/buttons" onload="onSampleIframeContentLoaded(this);">
 </div>
 <div class="divider--half"></div>
 
