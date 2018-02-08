@@ -27,4 +27,5 @@ full license information.}}
     <link rel="stylesheet" href="{{_rel}}styles/docfx.vendor.css">
     <link rel="stylesheet" href="{{_rel}}styles/docfx.css">
     <link rel="stylesheet" href="{{_rel}}styles/css/main.css">
+	<script type="text/javascript" src="{{_rel}}styles/sample-iframe-handler.js"></script>
 </head>

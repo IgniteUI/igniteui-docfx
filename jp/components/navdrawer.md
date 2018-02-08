@@ -12,8 +12,8 @@ _language: ja
 
 ### Navigation Drawer デモ
 
-<div class="sample-container" style="height: 600px">
-    <iframe frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/navigation-drawer"></iframe>
+<div class="sample-container loading" style="height: 600px">
+    <iframe frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/navigation-drawer" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div class="divider--half"></div>
 

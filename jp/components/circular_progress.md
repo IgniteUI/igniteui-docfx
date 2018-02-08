@@ -12,8 +12,8 @@ _language: ja
 
 ### Circular Progress デモ
 
-<div class="sample-container" style="height:650px">
-    <iframe frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/progressbar"></iframe>
+<div class="sample-container loading" style="height:650px">
+    <iframe frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/progressbar" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div class="divider--half"></div>
 
