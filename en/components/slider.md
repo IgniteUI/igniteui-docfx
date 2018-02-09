@@ -9,8 +9,8 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <div class="divider"></div>
 
 ### Slider Demo
-<div class="sample-container" style="height: 250px">
-    <iframe frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/slider-sample-1"></iframe>
+<div class="sample-container loading" style="height: 250px">
+    <iframe frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/slider-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div class="divider--half"></div>
 
@@ -56,8 +56,8 @@ public volume = 20;
 
 If the sample is configured properly, dragging the slider thumb should update the label below and the slider value should be limited between the specified minimum and maximum values:
 
-<div class="sample-container" style="height: 140px">
-<iframe src='{environment:demosBaseUrl}/slider-sample-2' width="100%" height="100%" seamless frameBorder="0"></iframe>
+<div class="sample-container loading" style="height: 140px">
+<iframe src='{environment:demosBaseUrl}/slider-sample-2' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 
 ####Discrete Slider
@@ -102,8 +102,8 @@ class Task {
 
 If the sample is configured properly, dragging the slider thumb should update the input value and modifying the input value should update the slider value.
 
-<div class="sample-container" style="height: 170px">
-<iframe src='{environment:demosBaseUrl}/slider-sample-3' width="100%" height="100%" seamless frameBorder="0"></iframe>
+<div class="sample-container loading" style="height: 170px">
+<iframe src='{environment:demosBaseUrl}/slider-sample-3' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 
 ####Range Slider
@@ -133,8 +133,8 @@ class PriceRange {
 
 ```
 
-<div class="sample-container" style="height: 120px">
-<iframe src='{environment:demosBaseUrl}/slider-sample-4' width="100%" height="100%" seamless frameBorder="0"></iframe>
+<div class="sample-container loading" style="height: 120px">
+<iframe src='{environment:demosBaseUrl}/slider-sample-4' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 
 In some cases, values near to the minimum and maximum are not appropriate. You can further provide a useful range to limit the user choice along with setting `minValue` and `maxValue`. This can be done by setting `lowerBound` and `upperBound`. Now, the user will not be able to move the thumb in the range of 0 to 100 and in the range of 900 to 1000.
@@ -145,8 +145,8 @@ In some cases, values near to the minimum and maximum are not appropriate. You c
 <igx-slider [type]="sliderType.RANGE" [minValue]="0" [maxValue]="1000" [(ngModel)]="priceRange" [lowerBound]="100" [upperBound]="900" ></igx-slider>
 ```
 
-<div class="sample-container" style="height: 120px">
-<iframe src='{environment:demosBaseUrl}/slider-sample-5' width="100%" height="100%" seamless frameBorder="0"></iframe>
+<div class="sample-container loading" style="height: 120px">
+<iframe src='{environment:demosBaseUrl}/slider-sample-5' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 
 Let's add two inputs in addition and bind them to the lower and upper range slider values. Thus, we can visualize and modify current slider values.
@@ -190,8 +190,8 @@ public updatePriceRange(event) {
 ```
 If the sample is configured properly, the final result should look like that:
 
-<div class="sample-container" style="height: 250px">
-<iframe src='{environment:demosBaseUrl}/slider-sample-1' width="100%" height="100%" seamless frameBorder="0"></iframe>
+<div class="sample-container loading" style="height: 250px">
+<iframe src='{environment:demosBaseUrl}/slider-sample-1' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div> 
 
 <div class="divider"></div>
