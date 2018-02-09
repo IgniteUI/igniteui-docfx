@@ -7,7 +7,7 @@ _language: ja
 
 ## Carousel
 
-<p class="highlight">The Ignite UI for Angular Carousel component is developed as a native [Angular component](https://angular.io/guide/architecture#components). Use it to browse or navigate through a collection of slides, including image galleries, cards, onboarding tutorials, or page-based interfaces.</p>
+<p class="highlight">Ignite UI for Angular Carousel コンポーネントは、ネイティブ [Angular コンポーネント](https://angular.io/guide/architecture#components)です。画像ギャラリー、カード、チュートリアル、またはページごとのインターフェイスでスライド コレクションをブラウズ、移動します。</p>
 <div class="divider"></div>
 
 ### Carousel デモ
@@ -17,13 +17,14 @@ _language: ja
 </div>
 
 > [!WARNING]
-> Ignite UI for Angular has a [peer dependency](https://nodejs.org/en/blog/npm/peer-dependencies/) on [**HammerJS**](https://hammerjs.github.io/).
-> Make sure you add it to your Angular project.
+> Ignite UI for Angular に [**HammerJS**](https://hammerjs.github.io/) の[ピア依存関係](https://nodejs.org/en/blog/npm/peer-dependencies/)があります。
+> それを Angular プロジェクトに追加してください。
 > <br/> <br/>`$ npm install hammerjs @types/hammerjs`
 
 ### 使用方法
 
-The carousel can be used as a full-screen element or situated inside another component. Also, the slides may feature any valid html content inside, including other Angular components. To get started with the **Ignite UI for Angular Carousel**, let's first import the **IgxCarouselModule** in our **app.module.ts** file:
+カルーセルを全画面要素またはコンポーネントの子に設定できます。また、スライドに有効な HTML コンテンツ、その他の Angular コンポーネントなども含めることができます。**Ignite UI for Angular Carousel** を初期化する前に、**IgxCarouselModule** を **app.module.ts** ファイルにインポートします。 
+
 ```typescript
 // app.module.ts
 ...
@@ -35,7 +36,8 @@ import { IgxCarouselModule } from 'igniteui-angular/main';
 })
 export class AppModule {}
 ```
-Then in the template of our carousel component we can add the following markup to add two slides and define their html content:
+
+次に、カルーセル コンポーネントのテンプレートに以下のマークアップを追加し、2 つのスライドとその HTML コンテンツを定義します。
 
 ```html
 <!-- app.component.html -->
@@ -51,15 +53,15 @@ Then in the template of our carousel component we can add the following markup t
 </igx-carousel>
 ```
 
-This is enough to have the carousel instantiated on our page, let's have a look at it:
+このコードはカルーセルをページでインスタンス化します。
 
 <div class="sample-container" style="height: 230px">
 <iframe src='{environment:demosBaseUrl}/carousel-sample-1' width="100%" height="100%" seamless frameBorder="0"></iframe>
 </div>
 
-### Displaying slides using the ngFor directive
+### ngFor ディレクティブを使用したスライドの表示
 
-A real world scenario would include dynamically loading the slides and not declaring via markup. To demonstrate this, first we will provide the slides via code:
+実環境シナリオでスライドをマークアップに宣言する代わりに動的に読み込みます。この方法を説明するためにコードでスライドを提供します。
 
 ```typescript
   // app.component.ts
@@ -81,7 +83,8 @@ A real world scenario would include dynamically loading the slides and not decla
       );
   }
 ```
-And now we are ready to add the ngFor directive to the **igx-slide** and provide our html inside as usual. We are also adding an image to each slide:
+
+次に **igx-slide** に ngFor ディレクティブを追加して HTML コンテンツを提供します。各スライドに画像も追加します。
 
 ```html
 <!-- app.component.html -->
@@ -94,7 +97,7 @@ And now we are ready to add the ngFor directive to the **igx-slide** and provide
 </igx-carousel>
 ```
 
-The carousel that we created is functional but not really well looking. Let's add some styles to it starting from the navigation as it is the most important feature. Previous and Next arrows must be eye catching so we need to change their default color and center the carousel content:
+作成したカルーセルは動作しますが、外観に変更が必要です。スタイルを最も重要なナビゲーション機能に追加します。[前へ] および [次へ] 矢印のデフォルト色を変更し、カルーセル コンテンツを中央揃えにします。
 
 ```css
 /* app.component.css */
@@ -107,15 +110,15 @@ a > igx-icon > span{
 }
 ```
 
-Let's see what we have now, sure looks better with the arrows standing out clearly on both sides and all the content centered:
+スタイルを適用した後、矢印が強調表示され、コンテンツが中央揃えになります。
 
 <div class="sample-container" style="height: 600px">
 <iframe src='{environment:demosBaseUrl}/carousel-sample-2' width="100%" height="100%" seamless frameBorder="0"></iframe>
 </div>
 
-### Navigation
+### ナビゲーション
 
-As mentioned navigation and transition are the most important carousel features. One should make sure that the transition interval, auto playing and pausing are configured as per the requirements. All those are easily managed through the exposed properties, like we are going to demonstrate now. Say we don't want to distract the users, so we will stop the automatic playing, enable pausing on interactions and enable looping (looping is when first slide comes after navigating Next from last slide):
+ナビゲーションおよびトランジションは一番重要なカルーセル機能です。トランジション期間、自動再生、および停止機能を要件に応じて構成できます。この機能は、公開されたプロパティによって管理できます。ユーザーの注意をそらさないよう自動再生を無効にし、操作によって停止を有効にして、ループ化 (最初のスライドが最後のスライドの後になること) を有効にします。
 
 ```html
 <!-- app.component.html -->
@@ -123,7 +126,8 @@ As mentioned navigation and transition are the most important carousel features.
 ...
 </igx-carousel>
 ```
-In the above snippet we are setting values to the **loop** and **pause** element properties using [property binding](https://angular.io/guide/template-syntax#property-binding). Another optional property to set is the **transition**, which sets the amount of time in milliseconds between slides transition. We are skipping this as we do not want our carousel to transition the content by itself, but want it to be entirely controlled by the user. The component properties values are provided via code below. Notice that to disable the automatic playing we need to call the **stop()** method exposed by the carousel:
+
+上記のスニペットで、[プロパティ バインディング](https://angular.io/guide/template-syntax#property-binding)を使用して **loop** および **pause** 要素プロパティに値を設定します。オプションのプロパティには、スライド変更の間隔をミリ秒単位で設定する **transition** があります。コンテンツがカルーセルに自動的に変更される代わりに、ユーザーの操作によって変更されるために、このプロパティを設定しません。コンポーネントのプロパティ値が以下のコードによって設定されます。注: 自動再生を無効にするには、カルーセルの **stop()** メソッドを呼び出します。
 
 ```typescript
   // app.component.ts
@@ -138,13 +142,15 @@ In the above snippet we are setting values to the **loop** and **pause** element
      this.carousel.stop();
   }
 ```
-Having those configured this way, we empowered the user to have full control over the carousel. What we want to do now is customize the navigation further and replace the carousel indicators with a nice looking progress bar. Hooking up on the **onSlideChanged** event and using the **IgxLinearProgressBar** component we will add adittional UI indicating the progress made. First we need to import the **IgxLinearProgressBar** module:
+
+プロパティを構成した後、ユーザーはカルーセルのコンテンツを変更できます。次、ナビゲーションをカスタマイズし、カルーセルのインジケーターをプログレス バーと置き換えます。**onSlideChanged** イベントを処理し、**IgxLinearProgressBar** コンポーネントを使用して進行状況を示す UI を追加します。最初、**IgxLinearProgressBar** モジュールをインポートします。
 
 ```typescript
 // app.component.ts
 import { Direction, IgxCarousel, IgxLinearProgressBar } from "igniteui-angular/main";
 ```
-Once we have the module imported, we can continue with adding the **IgxLinearProgressBar** in our template. Notice that we set the **max** property to bind to the **total** property value, which will be defined in the **app.component.ts** file. Also, we add a handler for the **onSlideChanged** event and an indicator text in adittion to the progress bar:
+
+モジュールをインポートした後、**IgxLinearProgressBar** をテンプレートに追加します。**max** プロパティを **app.component.ts** ファイルで定義される **total** プロパティの値に設定します。**onSlideChanged** イベントのハンドラーを追加し、進行状況のテキストを追加します。
 
 ```html
 <!-- app.component.html -->
@@ -159,7 +165,7 @@ Once we have the module imported, we can continue with adding the **IgxLinearPro
 </igx-carousel>
 ```
 
-We update the **total** and **current** properties values in the **ngOnInit** and the linear bar value in the **onSlideChanged** event handler:
+**total** および **current** プロパティの値を **ngOnInit** で更新し、リニア バーの値を **onSlideChanged** イベント ハンドラーで更新します。
 
 ```typescript
 // app.component.ts
@@ -183,7 +189,8 @@ We update the **total** and **current** properties values in the **ngOnInit** an
     this.linearbar.value = carousel.current + 1;
   }
 ```
-Now we have a nice progress bar that is also showing its percent value which we don't need (because we added our custom indicating text "1 out of 3"). Let's hide this percent value and the carousel original indicators, which are still visible:
+
+プログレス バーがパーセンテージ値を表示しますが、カスタム インジケーター テキストを追加したため、このパーセンテージ値を表示する必要がありません。このパーセンテージ値およびカルーセルの元のインジケーターを非表示にします。
 
 ```css
 /* app.component.css */
@@ -195,14 +202,14 @@ ul.igx-carousel__indicators {
 }
 ```
 
-Following all the steps above brings us a nice and functional carousel that the user has full control over using the navigation arrows. The linear bar provides adittional UI that acts as an indicator of the user progress:
+すべての手順を実行すると、ナビゲーション矢印を使用してユーザーが管理するカルーセルになります。リニア バーが進行状況のインジケーターになります。
 
 <div class="sample-container" style="height: 550px">
     <iframe src='{environment:demosBaseUrl}/carousel-sample-3' width="100%" height="100%" seamless frameBorder="0"></iframe>
 </div>
 
-### Actions on tap/click
-Our carousel now displays nicely the home page content. What it is missing is defining actions that will follow the user interactions with the slides. Once the user made a choice and clicked/tapped on the slide, it is expected that the carousel will transfer the user to a new page/view. Let's see how to do this by setting a route to navigate to - we will replace the heading with an IgxButton and  add an event handler for the button click event:
+### タップ / クリックでのアクション
+カルーセルがホーム ページ コンテンツを表示しています。ただし、スライドとのユーザー インタラクション ハンドラーを実装する必要があります。ユーザーがスライドにクリック/タップしたとき、カルーセルが新しいページまたはビューに移動することが予期されます。これには、移動するルートを設定します。ヘッダーを IgxButton と置き換え、ボタンのクリック イベントにイベント ハンドラーを追加します。
 
 ```html
 <!-- app.component.html-->
@@ -213,7 +220,8 @@ Our carousel now displays nicely the home page content. What it is missing is de
     ...
 </igx-slide>
 ```
-Don't forget to add the **IgxButtonModule** to the **app.component.ts**. The **goto()** function will use the [Angular router](https://angular.io/guide/router) to navigate to another view:
+
+**IgxButtonModule** を **app.component.ts** に追加します。**goto()** 関数は [Angular ルーター](https://angular.io/guide/router)を使用してその他のビューに移動します。
 
 ```typescript
   // app.component.ts
@@ -229,7 +237,8 @@ Don't forget to add the **IgxButtonModule** to the **app.component.ts**. The **g
     this.router.navigate(["/details", index]);
   }
 ```
-Given this configuration, the router matches that URL to the given route path **/details:index** and displays the corresponding page:
+
+これを構成した後、ルーターが URL を指定した **/details:index** ルート パスと一致させ、相対するページを表示します。
 
 <div class="sample-container" style="height: 620px">
     <iframe src='{environment:demosBaseUrl}/carousel-sample-4' width="100%" height="100%" seamless frameBorder="0"></iframe>
