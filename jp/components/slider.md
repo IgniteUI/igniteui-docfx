@@ -13,7 +13,10 @@ _language: ja
 ### Slider デモ
 
 <div class="sample-container loading" style="height: 530px">
-    <iframe frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/slider" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="slide-sample-1-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/slider" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="slide-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
 
