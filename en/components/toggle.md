@@ -75,7 +75,7 @@ Demo
 
 #### Automatic toggle actions
 
-In order to prevent this invocation of these methods there is a directive which has `onClick` handler and changes the state to the toggle we are referred to. So let's deep in. Firstly we have to import the **IgxToggleActionModule** in our **app.module.ts**
+In order to prevent this invocation of these methods there is a directive which has `onClick` handler and changes the state to the toggle we are referred to. So let's dive in. Firstly we have to import the **IgxToggleActionModule** in our **app.module.ts**
 
 ```typescript
 // app.module.ts
