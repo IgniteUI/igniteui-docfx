@@ -16,19 +16,19 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <div class="divider--half"></div>
 
 ### Usage
-To get started with the Ignite UI for Angular Label and Input, let's first import the **IgxLabelModule** and **IgxInput** in our **app.module.ts** file:
+To get started with the Ignite UI for Angular Label and Input, let's first import the **IgxLabelModule** and **IgxInputModule** in our **app.module.ts** file:
 
 ```typescript
 // app.module.ts
 
 ...
 import { IgxLabelModule } from 'igniteui-angular/main';
-import { IgxInput } from 'igniteui-angular/main';
+import { IgxInputModule } from 'igniteui-angular/main';
 
 @NgModule({
     ...
     imports: [..., IgxLabelModule],
-    imports: [..., IgxInput],
+    imports: [..., IgxInputModule],
     ...
 })
 export class AppModule {}
