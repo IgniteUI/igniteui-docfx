@@ -1,27 +1,27 @@
----
-title: Toggle Directive
-_description: Using any content wrapped into an element which implements the toggle directive become a box you can open and close intuitively through a native Angular framework with Ingite UI for Angular Toggle directive.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Toggle directives, Angular Toggle controls
+﻿---
+title: Toggle ディレクティブ
+_description: Ignite UI for Angular Toggle ディレクティブは、ネイティブ Angular フレームワークで Toggle ディレクティブを実装する要素に含まれるコンテンツを直感的に開いたり、閉じたりできるボックスとして使用できます。
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Toggle ディレクティブ, Angular Toggle コントロール
 ---
 
-##Toggle
+## Toggle
 
-<p class="highlight">The ignite UI for Angular Toggle directive wraps a content into a box which could be opened and respectively closed programmatically or interactively.</p>
+<p class="highlight">Ignite UI for Angular Toggle ディレクティブは、コードまたは操作によって開いたり、閉じたりできるボックスにコンテンツをラップします。</p>
 <div class="divider"></div>
 
-##Toggle Demo
+## Toggle デモ
 
 <div>Demo</div>
 <div class="divider--half"></div>
 
 > [!WARNING]
-> Ignite UI for Angular has a [peer dependency](https://nodejs.org/en/blog/npm/peer-dependencies/) on [**HammerJS**](https://hammerjs.github.io/).
-> Make sure you add it to your Angular project.
+> Ignite UI for Angular に [**HammerJS**](https://hammerjs.github.io/) の[ピア依存関係](https://nodejs.org/en/blog/npm/peer-dependencies/)があります。
+> それを Angular プロジェクトに追加してください。
 > <br/> <br/>`$ npm install hammerjs @types/hammerjs`
 
-##Usage
-The toggle allows you easilly to wrap some content into a box which easily can be opened and closed.
-To get started with the IgniteUI for Angular Toggle, let's first import the **IgxToggleModule** in our **app.module.ts**
+## 使用方法
+Toggle は、簡単に開いたり、閉じたりできるボックスにコンテンツをラップします。
+Ignite UI for Angular Toggle を初期化する前に、**IgxToggleModule** を **app.module.ts** ファイルにインポートします。
 
 ```typescript
 // app.module.ts
@@ -36,7 +36,8 @@ import { IgxToggleModule } from 'igniteui-angular/main'
 })
 export class AppModule {}
 ```
-Then in the template of our component we can apply the directive on the element we want to be togglable.
+
+コンポーネントのテンプレートで、トグル可能になる要素にディレクティブを適用します。
 
 ```html
 <!--template.component.html-->
@@ -46,7 +47,7 @@ Then in the template of our component we can apply the directive on the element 
 </div>
 ```
 
-In order to show and hide this content we will have to invoke one of the two methods open/close.
+このコンテンツを表示/非表示にするには、open または close メソッドを呼び出します。
 
 ```typescript
 import { IgxToggleDirective } from 'igniteui-angular/main'
@@ -67,15 +68,15 @@ export class Class {
 }
 ```
 
-If all went well, you should see the following in your browser:
+以下は結果です:
 
 <div class="sample-container" style="height: 200px">
 Demo
 </div>
 
-#### Automatic toggle actions
+#### トグル自動操作
 
-In order to prevent this invocation of these methods there is a directive which has `onClick` handler and changes the state to the toggle we are referred to. So let's deep in. Firstly we have to import the **IgxToggleActionModule** in our **app.module.ts**
+このメソッドの呼び出しを回避するための `onClick` ハンドラーを含む、参照トグルの状態を変更できるディレクティブがあります。はじめに **IgxToggleActionModule** を **app.module.ts** にインポートします。
 
 ```typescript
 // app.module.ts
@@ -91,7 +92,7 @@ import { IgxToggleModule, IgxToggleActionModule } from 'igniteui-angular/main'
 export class AppModule {}
 ```
 
-Then in the template we need to declare **IgxToggleActionDirective** by assigning the **IgxToggleDirective** to it. The **IgxToggleActionDirective** should be declared on the element we are planing to use like a trigger(toggle).
+次にテンプレートで **IgxToggleDirective** を割り当てて **IgxToggleActionDirective** を宣言します。トリガー (トグル) として使用する要素で **IgxToggleActionDirective** を宣言します。
 
 ```html
 <!--template.component.html-->
@@ -101,54 +102,54 @@ Then in the template we need to declare **IgxToggleActionDirective** by assignin
 </div>
 ```
 
-After these changes the toggle should work exactly in the same way.
+この変更後、トグルが以下のように動作します。
 
 <div class="sample-container" style="height: 400px">
 Demo
 </div>
 
-### API Summary
+### API まとめ
 
-In this article we covered the details of how to use Toggle directive. We created a content which would possible to be hidden or shown by invoking programmatically methods which determine this behaviour.
-Furthermore we added another helping directive which controls automatically this same behaviour by giving it the appropriate toggle reference.
+このトピックでは Toggle ディレクティブの使用方法について紹介しました。この動作を決定するコードでメソッドを呼び出して表示または非表示にすることができるコンテンツを作成しました。
+さらに適切なトグル参照を使用して同じ動作を自動的に制御するその他のディレクティブを追加しました。
 
-###Inputs
-The following inputs are available on the **igxToggle** directive:
-| Name | Type | Description |
+### 入力
+以下の入力は **igxToggle** ディレクティブで利用できます。
+| 名前 | 型 | 説明 |
 | :--- | :--- | :--- |
-| `collapsed` | Boolean | Determines whether the toggle is open or closed. |
+| `collapsed` | Boolean | トグルが開くか閉じるかを決定します。 |
 
 <div class="divider"></div>
 
-The following inputs are available on the **igxToggleAction** directive:
-| Name | Type | Description |
+以下の入力は **igxToggleAction** ディレクティブで利用できます。
+| 名前 | 型 | 説明 |
 | :--- | :--- | :--- |
-| `igxToggleAction` | IgxToggleDirective | Accepts the toggle that has to be controlled. |
+| `igxToggleAction` | IgxToggleDirective | 制御するトグルを受け付けます。 |
 
 <div class="divider"></div>
 
-####Outputs
-The following outputs are available on the **igxToggle** directive:
-| Name | Type | Description |
+#### 出力
+以下の出力は **igxToggle** ディレクティブで利用できます。
+| 名前 | 型 | 説明 |
 | :--- | :--- | :--- |
-| `onOpen` | EventEmitter | Emits an event when the toggle container is opened. |
-| `onClose` | EventEmitter | Emits an event when the toggle container is closed. |
+| `onOpen` | EventEmitter | トグル コンテナーが開いたときにイベントを発生します。 |
+| `onClose` | EventEmitter | トグル コンテナーが閉じたときにイベントを発生します。 |
 
 <div class="divider"></div>
 
-####Methods
-The following methods are available on the **igxToggle** directive:
-| Name | Type | Description |
+#### メソッド
+以下のメソッドは **igxToggle** ディレクティブで利用できます。
+| 名前 | 型 | 説明 |
 | :--- | :--- | :--- |
-| `open` | void | Opens the toggle. |
-| `close` | void | Closes the toggle. |
+| `open` | void | トグルを開きます。 |
+| `close` | void | トグルを閉じます。 |
 
 <div class="divider"></div>
 
-###Additional Resources
+### 追加のリソース
 
 <div class="divider--half"></div>
-Our community is active and always welcoming to new ideas.
+是非コミュニティに参加してください。
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
