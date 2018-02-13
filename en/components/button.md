@@ -5,13 +5,13 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ---
 
 ##Button
-<p class="highlight">The Ignite UI for Angular Button directive is intended to be used on any button, span, div, or anchor element to turn it into a fully functional button.</p>
+<p class="highlight">The Button directive is intended to be used on any button, span, div, or anchor element to turn it into a fully functional button.</p>
 <div class="divider"></div>
 
 ### Button Demo
 
-<div class="sample-container" style="height: 1192px">
-    <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/buttons">
+<div class="sample-container" style="height: 436px">
+    <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/buttons-sample-1">
 </div>
 <div class="divider--half"></div>
 
@@ -41,16 +41,67 @@ export class AppModule {}
 ```
 ### Examples
 
-Using `igxButton` to turn a span element into a Ignite UI for Angular styled button.
+Setting a simple `igxButton`. Note that if you do not choose a type, by default it will be set to `flat`.
 ```html
-<span igxButton="raised" igxButtonColor="yellow" igxButtonBackground="#000">Click me</span>
+<button igxButton="flat">Flat</button>
 ```
-Setting a ripple effect on igxButton.
+Result:
+<div class="sample-container" style="height: 48px">
+    <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/buttons-sample-2">
+</div>
+
+You can add a Ripple effect. And also set its color `igxRipple="blue"`.
 ```html
-<span igxButton="raised" igxRipple="#e41c77" igxRippleCentered="true">
-    <i class="material-icons">edit</i>
-</span>
+<button igxButton="flat" igxRipple>Flat</button>
 ```
+Default ripple color. Custom ripple color:
+<div class="sample-container" style="height: 48px">
+    <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/buttons-sample-3">
+</div>
+
+Using `igxButton` to turn a `span` element into a Ignite UI for Angular styled button.
+```html
+<span igxButton="raised" igxButtonColor="yellow" igxButtonBackground="#000" igxRipple="yellow">Click me</span>
+```
+The span now looks like:
+<div class="sample-container" style="height: 54px">
+    <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/buttons-sample-4">
+</div>
+
+You can create a rased button.
+```html
+<button igxButton="raised" igxRipple="white">Raised</button>
+```
+<div class="sample-container" style="height: 54px">
+    <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/buttons-sample-5">
+</div>
+
+A floating action button and use an icon to display:
+```html
+<button igxButton="fab" igxButtonColor="#FBB13C" igxButtonBackground="#340068" igxRipple="#FBB13C">
+  <igx-icon fontSet="material" name="edit"></igx-icon>
+</button>
+```
+<div class="sample-container" style="height: 74px">
+    <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/buttons-sample-6">
+</div>
+
+Or use an icons as buttons:
+```html
+<button igxButton="icon" igxRipple igxRippleCentered="true">
+  <igx-icon fontSet="material" name="search"></igx-icon>
+</button>
+```
+```html
+<button igxButton="icon" igxRipple igxButtonColor="#E41C77" igxRippleCentered="true">
+  <igx-icon fontSet="material" name="favorite"></igx-icon>
+</button>
+```
+Icon results:
+<div class="sample-container" style="height: 54px">
+    <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/buttons-sample-7">
+</div>
+
 <div class="divider--half"></div>
 
 ### Button Types
