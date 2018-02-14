@@ -19,7 +19,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ### Usage
 ```html
-<ig-nav-drawer id="test"
+<igx-nav-drawer id="test"
     (opened)="logEvent($event)"
     [position]="position"
     [pin]="pin"
@@ -36,7 +36,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
             <span class="hamburger" igxNavToggle="test" > &#9776; </span>
             <div *ngFor="let navItem of navItems"><img src="http://www.infragistics.com/assets/images/favicon.ico" width='16' /></div>
         </div>
-</ig-nav-drawer>
+</igx-nav-drawer>
 ```
 <div class="divider--half"></div>
 
