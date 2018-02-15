@@ -36,6 +36,8 @@
   href: scrollbar.md
 - name: Ripple 
   href: ripple.md
+- name: Toggle
+  href: toggle.md
 - name: Menus
   header: true
 - name: Navigation Drawer 
