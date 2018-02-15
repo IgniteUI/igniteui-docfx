@@ -9,10 +9,15 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 <p class="highlight">Ignite UI for Angular Toggle ディレクティブは、コードまたは操作によって開いたり、閉じたりできるボックスにコンテンツをラップします。</p>
 <div class="divider"></div>
 
-## Toggle デモ
+### Toggle デモ
 
-<div>Demo</div>
-<div class="divider--half"></div>
+<div class="sample-container loading" style="height: 370px">
+    <iframe id="toggle-iframe" src='{environment:demosBaseUrl}/toggle' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="toggle-iframe" data-demos-base-url="{environment:demosBaseUrl}">                       view on stackblitz
+    </button>
+</div>
 
 > [!WARNING]
 > Ignite UI for Angular に [**HammerJS**](https://hammerjs.github.io/) の[ピア依存関係](https://nodejs.org/en/blog/npm/peer-dependencies/)があります。
@@ -20,18 +25,18 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 > <br/> <br/>`$ npm install hammerjs @types/hammerjs`
 
 ## 使用方法
-Toggle は、簡単に開いたり、閉じたりできるボックスにコンテンツをラップします。
-Ignite UI for Angular Toggle を初期化する前に、**IgxToggleModule** を **app.module.ts** ファイルにインポートします。
+The toggle allows you easilly to wrap some content into a box which easily can be opened and closed.
+To get started with the IgniteUI for Angular Toggle, let's first import the **IgxToggleModule** in our **app.module.ts**. We are also planing to take advantage of **igxButton** directive so we will have to import **IgxButtonModule** into the **app.module.ts** too.
 
 ```typescript
 // app.module.ts
 
 ...
-import { IgxToggleModule } from 'igniteui-angular/main'
+import { IgxToggleModule, IgxButtonModule } from 'igniteui-angular/main'
 
 @NgModule({
     ...
-    imports: [..., IgxToggleModule]
+    imports: [..., IgxToggleModule, IgxButtonModule]
     ...
 })
 export class AppModule {}
@@ -41,9 +46,17 @@ export class AppModule {}
 
 ```html
 <!--template.component.html-->
-<button (onClick)="toggle()">Open/Close</button>
-<div igxToggle>
-    <p>Content</p>
+<button class="toggle-button"  igxButton="raised" (click)="toggleContent()">Toggle</button>
+<div class="toggle-content" igxToggle #toggleRef="toggle">
+    <section class="toggle-section">
+        <ul>
+            <li>Bananas</li>
+            <li>Apples</li>
+            <li>Strawberries</li>
+            <li>Raspberry</li>
+            <li>Cherry</li>
+        </ul>
+    </section>
 </div>
 ```
 
@@ -70,23 +83,27 @@ export class Class {
 
 以下は結果です:
 
-<div class="sample-container" style="height: 200px">
-Demo
+<div class="sample-container loading" style="height: 370px">
+    <iframe id="toggle-sample-1-iframe" src='{environment:demosBaseUrl}/toggle-sample-1' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="toggle-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">                       view on stackblitz
+    </button>
 </div>
 
-#### トグル自動操作
+### トグル自動操作
 
-このメソッドの呼び出しを回避するための `onClick` ハンドラーを含む、参照トグルの状態を変更できるディレクティブがあります。はじめに **IgxToggleActionModule** を **app.module.ts** にインポートします。
+In order to prevent this invocation of these methods there is a directive which has `onClick` handler and changes the state to the toggle we are referred to. So let's dive in. To take advantage of this functionality we will have to use **IgxToggleActionDirective** Which is located into the same **IgxToggleModule**.
 
 ```typescript
 // app.module.ts
 
 ...
-import { IgxToggleModule, IgxToggleActionModule } from 'igniteui-angular/main'
+import { IgxToggleModule, IgxButtonModule } from 'igniteui-angular/main'
 
 @NgModule({
     ...
-    imports: [..., IgxToggleModule, IgxToggleActionModule]
+    imports: [..., IgxToggleModule, IgxButtonModule]
     ...
 })
 export class AppModule {}
@@ -96,28 +113,75 @@ export class AppModule {}
 
 ```html
 <!--template.component.html-->
-<button [igxToggleAction]="toggle">Open/Close</button>
-<div igxToggle #toggle="toggle">
-    <p>Content</p>
+<button class="toggle-button"  igxButton="raised" [igxToggleAction]="toggleRef">Toggle</button>
+<div class="toggle-content" igxToggle #toggleRef="toggle">
+    <section class="toggle-section">
+        <img src="link to random image"/>
+    </section>
 </div>
 ```
 
 この変更後、トグルが以下のように動作します。
 
-<div class="sample-container" style="height: 400px">
-Demo
+<div class="sample-container loading" style="height: 370px">
+    <iframe id="toggle-sample-2-iframe" src='{environment:demosBaseUrl}/toggle-sample-2' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="toggle-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">                       view on stackblitz
+    </button>
 </div>
 
-### API まとめ
+### Automatic toggle actions with service provider
 
-このトピックでは Toggle ディレクティブの使用方法について紹介しました。この動作を決定するコードでメソッドを呼び出して表示または非表示にすることができるコンテンツを作成しました。
-さらに適切なトグル参照を使用して同じ動作を自動的に制御するその他のディレクティブを追加しました。
+There is a convenient way to keep the state and command our **igxToggle** through **igxNavigationService** provider which would be convenient for us to keep tracking it everywhere in our applicaiton. We just need to declare identifier to our **igxToggle** directive and the registration happens for us. If we would like this state to be controlled automatically again we just need to pass this identifier to our helping **igxToggleActionDirective**.
+
+```typescript
+// app.module.ts
+
+...
+import { IgxToggleModule, IgxButtonModule } from 'igniteui-angular/main'
+
+@NgModule({
+    ...
+    imports: [..., IgxToggleModule, IgxButtonModule]
+    ...
+})
+export class AppModule {}
+```
+
+```html
+<!--template.component.html-->
+<button igxToggleAction="toggleId" [closeOnOutsideClick]="true" class="toggle-button"  igxButton="raised">Toggle</button>
+<div igxToggle id="toggleId" class="toggle-content" [collapsed]="false">
+    <section class="toggle-section">
+    <h3>Click 
+        <br/> Out of the Box</h3>
+    </section>
+</div>
+```
+
+If all went well we have to see this:
+
+<div class="sample-container loading" style="height: 370px">
+    <iframe id="toggle-sample-3-iframe" src='{environment:demosBaseUrl}/toggle-sample-3' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="toggle-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">                       view on stackblitz
+    </button>
+</div>
+
+
+## API まとめ
+
+In this article we covered the details of how to use Toggle directive. We created a content which would possible to be hidden or shown by invoking programmatically methods which determine this behaviour.
+Furthermore we added another helping directive which controls automatically this same behaviour by giving it the appropriate toggle reference. At the end we have registered our **igxToggle** directive into **igxNavigationService** provider by giving it identifier which "ID" was given to our helping **igxToggleAction** directive.
 
 ### 入力
 以下の入力は **igxToggle** ディレクティブで利用できます。
 | 名前 | 型 | 説明 |
 | :--- | :--- | :--- |
 | `collapsed` | Boolean | トグルが開くか閉じるかを決定します。 |
+| `id` | Boolean | Indentifier which is registered into **igxNavigationService**. |
 
 <div class="divider"></div>
 
@@ -125,6 +189,7 @@ Demo
 | 名前 | 型 | 説明 |
 | :--- | :--- | :--- |
 | `igxToggleAction` | IgxToggleDirective | 制御するトグルを受け付けます。 |
+| `closeOnOutsideClick` | IgxToggleDirective | Determines whether toggle should be closed when you click outside. |
 
 <div class="divider"></div>
 
@@ -143,6 +208,7 @@ Demo
 | :--- | :--- | :--- |
 | `open` | void | トグルを開きます。 |
 | `close` | void | トグルを閉じます。 |
+| `toggle` | void | Open or close the toggle depending on the state. |
 
 <div class="divider"></div>
 
