@@ -9,8 +9,8 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <div class="divider"></div>
 
 ### Switch Demo
-<div class="sample-container loading" style="height:1390px">
-    <iframe id="form-elements-sample-iframe" src='{environment:demosBaseUrl}/form-elements' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container" style="height:200px">
+    <iframe id="form-elements-sample-iframe" src='{environment:demosBaseUrl}/switch-sample-2' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
 <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="form-elements-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
@@ -19,31 +19,88 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ### Usage
 
-Basic usage of `igx-switch`
+At its core the switch component allows for toggling between on/off state. The default styling is done according to the selection controls specification as per the Material Design guidelines.
+To get started with the Ignite UI for Angular Switch, let's first import the **IgxSwitchModule** in the **app.module.ts** file:
 
-```html
-<ul>
-    <li *ngFor="let task of tasks">
-        <igx-switch [checked]="task.done" (change)="handler($event)">
-            {{ task.description }}
-        </igx-switch>
-    </li>
-</ul>
+```typescript
+// app.module.ts
+
+...
+import { IgxSwitchModule } from 'igniteui-angular/main';
+
+@NgModule({
+    ...
+    imports: [..., IgxSwitchModule],
+    ...
+})
+export class AppModule {}
 ```
 
-You can easily use it within forms with `[(ngModel)]`
+To get a simple switch, add the following code inside the compnent template:
 
 ```html
-<form (submit)="saveForm()">
-    <div class="order-detail__cbxgroup" *ngIf="order.items">
-        <div *ngFor="let item of order.items">
-            <ig-switch [disabled]="order.completed || order.canceled"
-                         [checked]="order.completed"
-                         [(ngModel)]="item.completed">
-                {{ item.description }}
-            </ig-switch>
-        </div>
-    </div>
-</form>
+<igx-switch checked="true">
+    Simple switch
+</igx-switch>
 ```
+
+If all went well, you should see something like the following in the browser:
+
+<div class="sample-container" style="height: 150px">
+<iframe src='{environment:demosBaseUrl}/switch-sample-1' width="100%" height="100%" seamless frameBorder="0"></iframe>
+</div>
+
+#### Switch properties
+
+Let's enhance the code above by binding the switch properties to some data. Say, we have an array of setting objects, each having two properties: name and state. You can bind the switch component checked property to the underlying setting object state property. Analogically you can bind the value property to name.
+
+```typescript
+// toggle.component.ts
+...
+  public settings = [
+    { name: 'WiFi', state: false},
+    { name: 'Bluetooth', state: true},
+    { name: 'Device visibility', state: false}
+  ];
+
+```
+Enhance the component template by adding a switch for each setting and then binding the corresponding property:
+
+```html
+<!--toggle.component.html-->
+
+<igx-switch *ngFor="let setting of settings" [checked]="setting.state">
+  <div style="width: 150px">
+      {{ setting.name }}
+  </div>
+</igx-switch>
+```
+The final result would be something like that:
+
+<div class="sample-container" style="height: 200px">
+<iframe src='{environment:demosBaseUrl}/switch-sample-2' width="100%" height="100%" seamless frameBorder="0"></iframe>
+</div>
+
+### API Summary
+
+####Inputs
+The following inputs are available on the **igx-switch** component:
+| Name | Type | Description |
+| :--- | :--- | :--- |
+| `checked` | bool | Switche is turned on if true. |
+
 <div class="divider"></div>
+
+####Outputs
+The following outputs are available on the **igx-switch** component:
+| Name | Type | Description |
+| :--- | :--- | :--- |
+| `change` | EventEmitter | Emits an event when the switch is turned on or off. |
+
+###Additional Resources
+
+<div class="divider--half"></div>
+Our community is active and always welcoming to new ideas.
+
+* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
