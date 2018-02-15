@@ -7,19 +7,19 @@ _language: ja
 
 ## List View
 
-<p class="highlight">Ignite UI for Angular List コンポーネントは項目の行を表示し、ヘッダー項目を 1 つ以上サポートし、リスト項目の検索およびフィルタリングをサポートします。各リスト項目をテンプレートに設定できます。テンプレートは有効な HTML または Angular コンポーネントをサポートします。 </p>
+<p class="highlight">Ignite UI for Angular List コンポーネントは項目の行を表示し、ヘッダー項目を 1 つ以上、さらにリスト項目の検索およびフィルタリングをサポートします。各リスト項目はすべての有効な HTML または Angular コンポーネントをサポートするテンプレートに設定できます。</p>
 <div class="divider"></div>
 
 ### List デモ
 
-<div class="sample-container" style="height: 477px">
-<iframe src='{environment:demosBaseUrl}/list-sample-4' width="100%" height="100%" seamless frameBorder="0"></iframe>
+<div class="sample-container loading" style="height: 477px">
+<iframe src='{environment:demosBaseUrl}/list-sample-4' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div class="divider--half"></div>
 
 > [!WARNING]
 > Ignite UI for Angular に [**HammerJS**](https://hammerjs.github.io/) の[ピア依存関係](https://nodejs.org/en/blog/npm/peer-dependencies/)があります。
-> Angular プロジェクトに追加してください。
+> それを Angular プロジェクトに追加してください。
 > <br/> <br/>`$ npm install hammerjs @types/hammerjs`
 
 ### 使用方法
@@ -56,8 +56,8 @@ export class AppModule {}
 
 以下は結果です:
 
-<div class="sample-container" style="height: 200px">
-<iframe src='{environment:demosBaseUrl}/list-sample-2' width="100%" height="100%" seamless frameBorder="0"></iframe>
+<div class="sample-container loading" style="height: 200px">
+<iframe src='{environment:demosBaseUrl}/list-sample-2' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 
 #### カスタム リスト項目
@@ -120,8 +120,8 @@ public contacts = [{
 
 結果は以下のようになります。
 
-<div class="sample-container" style="height: 400px">
-<iframe src='{environment:demosBaseUrl}/list-sample-3' width="100%" height="100%" seamless frameBorder="0"></iframe>
+<div class="sample-container loading" style="height: 400px">
+<iframe src='{environment:demosBaseUrl}/list-sample-3' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 
 #### アバターおよびアイコンの追加
@@ -253,15 +253,13 @@ toggleFavorite(item: IgxListItem) {
 
 結果は以下のようになります。
 
-<div class="sample-container" style="height: 477px">
-<iframe src='{environment:demosBaseUrl}/list-sample-4' width="100%" height="100%" seamless frameBorder="0"></iframe>
+<div class="sample-container loading" style="height: 477px">
+<iframe src='{environment:demosBaseUrl}/list-sample-4' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div class="divider--half"></div>
 
 ### フィルタリング
-
-リストで連絡先を名前によって検索する機能を追加します。フィルタリング パイプを使用して実装できます。フィルタリングを追加します。
-
+リストで連絡先を名前によって検索する機能を追加します。これはフィルタリング パイプを使用して実装できます。
 コンポーネント テンプレートの上側に入力フィールドを追加し、コンポーネントの _searchContact_ プロパティにバインドします:
 
 ```html
@@ -317,9 +315,9 @@ toggleFavorite(item: IgxListItem) {
 
 <div class="divider"></div>
 
-### API 概要
+### API まとめ
 
-この記事で List コンポーネントを説明しました。連絡先項目のリストを作成しました。アバターおよびアイコンの追加の Ignite UI for Angular コンポーネントをリスト項目で使用しました。C カスタム項目レイアウトを作成してスタイル設定しました。リスト フィルタリングを追加しました。以下は、List コンポーネントのその他の API です。
+この記事では List コンポーネントについて説明しました。アバターおよびアイコンの Ignite UI for Angular コンポーネントを使用して連絡先項目のリストを作成し、カスタム項目レイアウトを作成してスタイル設定、更にリスト フィルタリングを追加しました。以下は、List コンポーネントのその他の API です。
 
 #### 入力
 

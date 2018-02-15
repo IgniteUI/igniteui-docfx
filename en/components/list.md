@@ -11,8 +11,8 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ### List Demo
 
-<div class="sample-container" style="height: 477px">
-<iframe src='{environment:demosBaseUrl}/list-sample-4' width="100%" height="100%" seamless frameBorder="0"></iframe>
+<div class="sample-container loading" style="height: 477px">
+<iframe src='{environment:demosBaseUrl}/list-sample-4' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div class="divider--half"></div>
 
@@ -54,8 +54,8 @@ Then in the template of our contacts component we can add the following code to 
 
 If all went well, you should see the following in your browser:
 
-<div class="sample-container" style="height: 200px">
-<iframe src='{environment:demosBaseUrl}/list-sample-2' width="100%" height="100%" seamless frameBorder="0"></iframe>
+<div class="sample-container loading" style="height: 200px">
+<iframe src='{environment:demosBaseUrl}/list-sample-2' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 
 #### Custom List Items
@@ -119,8 +119,8 @@ You may have noticed that despite the fact that we used span elements to display
 
 After all that our list should now look like that:
 
-<div class="sample-container" style="height: 400px">
-<iframe src='{environment:demosBaseUrl}/list-sample-3' width="100%" height="100%" seamless frameBorder="0"></iframe>
+<div class="sample-container loading" style="height: 400px">
+<iframe src='{environment:demosBaseUrl}/list-sample-3' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 
 #### Adding Avatar and Icons
@@ -252,8 +252,8 @@ toggleFavorite(item: IgxListItem) {
 
 And here's the result of all that work:
 
-<div class="sample-container" style="height: 477px">
-<iframe src='{environment:demosBaseUrl}/list-sample-4' width="100%" height="100%" seamless frameBorder="0"></iframe>
+<div class="sample-container loading" style="height: 477px">
+<iframe src='{environment:demosBaseUrl}/list-sample-4' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div class="divider--half"></div>
 

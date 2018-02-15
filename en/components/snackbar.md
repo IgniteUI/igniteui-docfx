@@ -8,8 +8,8 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <div class="divider"></div>
 
 ### Snackbar Demo
-<div class="sample-container" style="height: 672px">
-    <iframe frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/snackbar"></iframe>
+<div class="sample-container loading" style="height: 672px">
+    <iframe frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/snackbar" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div class="divider--half"></div>
 
