@@ -4,6 +4,8 @@
   href: grid.md
 - name: List View 
   href: list.md
+- name: Virtual For Directive
+  href: for_of.md
 - name: データ入力と表示
   header: true
 - name: Button 

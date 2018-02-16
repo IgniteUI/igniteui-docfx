@@ -1,0 +1,93 @@
+---
+title: igxFor
+_description: The Ignite UI for Angular product is providing virtual directive igxFor similar to ngFor, but it is creating scrollbars and only renders small chunks of the data.
+_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Virtualization, Performance, Virtual directive, Virtual For
+---
+
+## igxFor
+
+<p class="highlight">Display huge amount of repeated items. The directive is creating scrollable containers and renders small chunks of the data. Is is used inside igx-grid and it can be used to build virtual igx-list.</p>
+<div class="divider"></div>
+
+### igxFor Demo
+
+<div class="sample-container loading" style="height:780px">
+    <iframe src='{environment:demosBaseUrl}/igx-for' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<!--<button data-localize="stackblitz" class="stackblitz-btn">view on stackblitz</button> -->
+<div class="divider--half"></div>
+
+### Dependencies
+
+The igxFor directive is exported as as an `NgModule`, thus all you need to do in your application is to import the _IgxForOfModule_
+inside your `AppModule`:
+
+```typescript
+// app.module.ts
+
+import { IgxForOfModule } from 'igniteui-angular/main';
+
+@NgModule({
+    imports: [
+        ...
+        IgxForOfModule,
+        ...
+    ]
+})
+export class AppModule {}
+```
+
+### Usage
+
+Now that we have the igxForOf module imported, let’s get started with a basic configuration of the **igxFor** that binds to local data:
+
+```html
+<span #container>
+    <ng-template *igxFor="data"></ng-template>
+</span>
+```
+
+The **data** property is an array and it provides the virtualized data.
+
+
+<div class="divider--half"></div>
+
+## API
+
+### Inputs
+
+Below is the list of all inputs that the developers may set to configure the igxFor look/behavior:
+| Name | Type | Description |
+| :--- |:--- | :--- |
+| id | string | Unique identifier of the Grid |
+| `igxForOf` | any[] | The data to be virtualized |
+| `igxForScrollOrientation` | string | specify the virtualization direction - "horizontal" or "vertical", default value is _vertical_ |
+| `igxForScrollContainer` | any | Specify the container where the helper scrollbars will be contained, it is useful when nesting the directive |
+| `igxForContainerSize` | any |  specifies the container size |
+| `igxForItemSize` | any | Specifies the item size, when the virtualization is vertical it is used as height  |
+
+<div class="divider--half"></div>
+
+### Outputs
+
+A list of the events emitted by the **igx-for**:
+
+| Name              | Description                                                              |
+| :---------------- | :----------------------------------------------------------------------- |
+| _Event emitters_  | _Notify for a change_                                                    |
+| `onChunkLoaded`   | Used when scrolled to emit the loaded chunk of data                      |
+| `onChunkLoading`  | Used when scrolled to emit the chunk of data which is about to be loaded |
+
+<div class="divider"></div>
+
+### Methods
+
+Here is a list of all public methods exposed by the **igx-for**:
+
+| Signature       | Description                     |
+| :-------------- | :------------------------------ |
+| `scrollNext()`  | Loads the previous virtual page |
+| `scrollPrev()`  | Loads the next virtual page     |
+
+<div class="divider--half"></div>
