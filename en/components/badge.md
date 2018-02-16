@@ -156,6 +156,8 @@ Notice that the **igx-badge** has `icon` and `type` inputs to configure the badg
 
 In our sample, `icon` and `type` are bound to model properties named *icon* and *type*.
 
+In order to position the badge in its parent container, create a custom css class *badge-style* and define the top and right positions.
+
 ```html
 <!-- contacts.component.html -->
 
@@ -167,7 +169,7 @@ In our sample, `icon` and `type` are bound to model properties named *icon* and 
     <div class="wrapper">
       <div>
         <igx-avatar icon="person" roundShape="true" size="small">
-          <igx-badge position="bottom-right" [icon]="member.icon" [type]="member.type"></igx-badge>
+          <igx-badge [icon]="member.icon" [type]="member.type" class="badge-style"></igx-badge>
         </igx-avatar>
       </div>
       <div style="margin-left: 20px; align-content: center;">
@@ -176,6 +178,17 @@ In our sample, `icon` and `type` are bound to model properties named *icon* and 
     </div>
   </igx-list-item>
 </igx-list>
+```
+
+```css
+<!-- contacts.component.css -->
+
+.badge-style
+{
+  position: absolute;
+  bottom: -6px;
+  right: -50px;
+}
 ```
 
 If the sample is configured properly, a list of members should be displayed and every member has an avatar and a badge showing its current state.
@@ -194,7 +207,6 @@ The following inputs are available in the **igx-badge** component:
 | Name   |      Type      |  Description |
 |:----------|:-------------:|:------|
 | `icon` | string | Set an icon from the material icons set. The icon will not be displayed if the badge `value` is already set. |
-| `position` | string | Set the badge position relative to its parent container to either `top-right`, `top-left`, `bottom-right`, or `bottom-left`. |
 | `type` | string | Set the badge type to either `default`, `info`, `success`, `warning`, or `error`. Depending on the type, specific background color is set as declared in the default theme. |
 | `value` | string | Set the value displayed inside the badge. |
 
