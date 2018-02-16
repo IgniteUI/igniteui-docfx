@@ -209,7 +209,7 @@ In order to position the badge in its parent container, create a custom css clas
 If the sample is configured properly, a list of members should be displayed and every member has an avatar and a badge showing its current state.
 
 <div class="sample-container" style="height: 280px">
-    <iframe id="buttons-sample-3-iframe" src='{environment:demosBaseUrl}/badge-sample-3' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="badge-sample-3-iframe" src='{environment:demosBaseUrl}/badge-sample-3' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="badge-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">                view on stackblitz
