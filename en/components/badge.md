@@ -10,7 +10,10 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ### Badge Demo
 <div class="sample-container" style="height:280px">
-    <iframe src='{environment:demosBaseUrl}/badge-sample-3' width="100%" height="100%" seamless frameBorder="0"></iframe>
+    <iframe id="badge-sample-iframe" src='{environment:demosBaseUrl}/badge-sample-3' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="badge-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
 
@@ -120,8 +123,14 @@ class Member {
 If the sample is configured properly, a list with members' name and status should be displayed.
 
 <div class="sample-container" style="height: 280px">
-<iframe src='{environment:demosBaseUrl}/badge-sample-1' width="100%" height="100%" seamless frameBorder="0"></iframe>
+    <iframe id="badge-sample-1-iframe" src='{environment:demosBaseUrl}/badge-sample-1' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="badge-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">                view on stackblitz
+    </button>
+</div>
+
+<div class="divider--half"></div>
 
 Let's add an avatar in front of every chat member. To do this, put another div element in the **igx-list-item** containing the [**IgxAvatar**](https://www.infragistics.com/products/ignite-ui-angular/angular/components/avatar.html). Modify the list item content as shown below.
 
@@ -147,14 +156,22 @@ Let's add an avatar in front of every chat member. To do this, put another div e
 ```
 
 <div class="sample-container" style="height: 280px">
-<iframe src='{environment:demosBaseUrl}/badge-sample-2' width="100%" height="100%" seamless frameBorder="0"></iframe>
+<iframe id="badge-sample-2-iframe" src='{environment:demosBaseUrl}/badge-sample-2' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="badge-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">                view on stackblitz
+    </button>
+</div>
+
+<div class="divider--half"></div>
 
 Having just a list with names doesn't provide much useful visual information. The last step is to add **igx-badge** to show the contact state notification. Modify the **igx-list-item** content as shown below adding a badge component inside the avatar component.
 
 Notice that the **igx-badge** has `icon` and `type` inputs to configure the badge look. You can set `icon` by providing its name from the official [material icons set](https://material.io/icons/). The badge `type` can be set to either `default`, `info`, `success`, `warning`, or `error`. Depending on the type, a specific background color is applied.
 
 In our sample, `icon` and `type` are bound to model properties named *icon* and *type*.
+
+In order to position the badge in its parent container, create a custom css class *badge-style* and define the top and right positions.
 
 ```html
 <!-- contacts.component.html -->
@@ -167,7 +184,7 @@ In our sample, `icon` and `type` are bound to model properties named *icon* and 
     <div class="wrapper">
       <div>
         <igx-avatar icon="person" roundShape="true" size="small">
-          <igx-badge position="bottom-right" [icon]="member.icon" [type]="member.type"></igx-badge>
+          <igx-badge [icon]="member.icon" [type]="member.type" class="badge-style"></igx-badge>
         </igx-avatar>
       </div>
       <div style="margin-left: 20px; align-content: center;">
@@ -178,10 +195,25 @@ In our sample, `icon` and `type` are bound to model properties named *icon* and 
 </igx-list>
 ```
 
+```css
+<!-- contacts.component.css -->
+
+.badge-style
+{
+  position: absolute;
+  bottom: -6px;
+  right: -50px;
+}
+```
+
 If the sample is configured properly, a list of members should be displayed and every member has an avatar and a badge showing its current state.
 
 <div class="sample-container" style="height: 280px">
-<iframe src='{environment:demosBaseUrl}/badge-sample-3' width="100%" height="100%" seamless frameBorder="0"></iframe>
+    <iframe id="badge-sample-3-iframe" src='{environment:demosBaseUrl}/badge-sample-3' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="badge-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">                view on stackblitz
+    </button>
 </div>
 
 <div class="divider--half"></div>
@@ -194,7 +226,6 @@ The following inputs are available in the **igx-badge** component:
 | Name   |      Type      |  Description |
 |:----------|:-------------:|:------|
 | `icon` | string | Set an icon from the material icons set. The icon will not be displayed if the badge `value` is already set. |
-| `position` | string | Set the badge position relative to its parent container to either `top-right`, `top-left`, `bottom-right`, or `bottom-left`. |
 | `type` | string | Set the badge type to either `default`, `info`, `success`, `warning`, or `error`. Depending on the type, specific background color is set as declared in the default theme. |
 | `value` | string | Set the value displayed inside the badge. |
 

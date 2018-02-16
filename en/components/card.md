@@ -10,7 +10,10 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ###Card Demo
 <div class="sample-container loading" style="height: 1200px">
-    <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/card" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="card-sample-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/card" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="card-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
 
@@ -51,7 +54,10 @@ Then in the template of our info card component we can add the following code to
 
 If all went well, you should see the following card in your browser:
 <div class="sample-container" style="height: 300px">
-<iframe src='{environment:demosBaseUrl}/card-sample-1' width="100%" height="100%" seamless frameBorder="0"></iframe>
+    <iframe id="card-sample-1-iframe" src='{environment:demosBaseUrl}/card-sample-1' width="100%" height="100%" seamless frameBorder="0"  onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="card-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
 ####Adding Avatar and Images
@@ -97,7 +103,10 @@ Next, we need to update the template for our card to show a round-shaped avatar 
 
 At this point the card should look similar to the following:
 <div class="sample-container" style="height: 480px">
-<iframe src='{environment:demosBaseUrl}/card-sample-2' width="100%" height="100%" seamless frameBorder="0"></iframe>
+    <iframe id="card-sample-2-iframe" src='{environment:demosBaseUrl}/card-sample-2' width="100%" height="100%" seamless frameBorder="0"  onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="card-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
 ####Adding Actions
@@ -160,7 +169,10 @@ public icons = ['add', 'star'];
 
 Easy, right? Let's see how it turned out in the browser:
 <div class="sample-container" style="height: 400px">
-<iframe src='{environment:demosBaseUrl}/card-sample-3' width="100%" height="100%" seamless frameBorder="0"></iframe>
+    <iframe id="card-sample-3-iframe" src='{environment:demosBaseUrl}/card-sample-3' width="100%" height="100%" seamless frameBorder="0"  onload="onSampleIframeContentLoaded(this);"></iframe>
+<div>
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="card-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
 <!--### API Summary-->
