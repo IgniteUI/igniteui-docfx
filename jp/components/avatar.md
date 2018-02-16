@@ -13,7 +13,10 @@ _language: ja
 ### Avatar デモ
 
 <div class="sample-container loading" style="height:512px">
-    <iframe src='{environment:demosBaseUrl}/avatar' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="avatar-sample-iframe" src='{environment:demosBaseUrl}/avatar' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="avatar-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
 
