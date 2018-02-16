@@ -14,6 +14,9 @@ _language: ja
 <div class="sample-container loading" style="height: 1200px">
     <iframe id="card-sample-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/card" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="card-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
 <div class="divider--half"></div>
 
 ### 使用方法
@@ -53,7 +56,10 @@ export class AppModule {}
 
 以下は結果です。
 <div class="sample-container" style="height: 300px">
-<iframe id="card-sample-1-iframe" src='{environment:demosBaseUrl}/card-sample-1' width="100%" height="100%" seamless frameBorder="0"  onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="card-sample-1-iframe" src='{environment:demosBaseUrl}/card-sample-1' width="100%" height="100%" seamless frameBorder="0"  onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="card-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
 #### アバターおよび画像の追加
@@ -99,7 +105,10 @@ export class AppModule {}
 
 この時点でカードは以下のような外観になります。
 <div class="sample-container" style="height: 480px">
-<iframe id="card-sample-2-iframe" src='{environment:demosBaseUrl}/card-sample-2' width="100%" height="100%" seamless frameBorder="0"  onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="card-sample-2-iframe" src='{environment:demosBaseUrl}/card-sample-2' width="100%" height="100%" seamless frameBorder="0"  onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="card-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
 #### アクションの追加
@@ -162,7 +171,10 @@ public icons = ['add', 'star'];
 
 簡単に機能を追加できました。ブラウザーで結果を確認します。
 <div class="sample-container" style="height: 400px">
-<iframe id="card-sample-3-iframe" src='{environment:demosBaseUrl}/card-sample-3' width="100%" height="100%" seamless frameBorder="0"  onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="card-sample-3-iframe" src='{environment:demosBaseUrl}/card-sample-3' width="100%" height="100%" seamless frameBorder="0"  onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="card-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
 <!--### API Summary-->
