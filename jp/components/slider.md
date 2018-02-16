@@ -59,7 +59,10 @@ public volume = 20;
 サンプルの構成後、スライダーのつまみをドラッグするとラベルを更新しますが、スライダー値は指定した最小値および最大値の間に制限されます。
 
 <div class="sample-container" style="height: 140px">
-<iframe src='{environment:demosBaseUrl}/slider-sample-2' width="100%" height="100%" seamless frameBorder="0"></iframe>
+    <iframe id="slide-sample-2-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/slider-sample-2" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="slide-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
 #### 不連続スライダー
@@ -106,7 +109,10 @@ class Task {
 サンプルを構成した後、スライダーのつまみをドラッグすると入力値を更新し、入力値を変更するとスライダー値を更新します。
 
 <div class="sample-container" style="height: 170px">
-<iframe src='{environment:demosBaseUrl}/slider-sample-3' width="100%" height="100%" seamless frameBorder="0"></iframe>
+    <iframe id="slide-sample-3-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/slider-sample-3" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="slide-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
 #### 範囲スライダー
@@ -138,7 +144,10 @@ class PriceRange {
 ```
 
 <div class="sample-container" style="height: 120px">
-<iframe src='{environment:demosBaseUrl}/slider-sample-4' width="100%" height="100%" seamless frameBorder="0"></iframe>
+    <iframe id="slide-sample-4-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/slider-sample-4" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="slide-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
 最大値および最小値に近い値が適切でない場合があります。`minValue` と `maxValue` の設定以外に、ユーザー選択を更に制限するための範囲も設定できます。これは、`lowerBound` および `upperBound` プロパティで設定します。この設定により、0 ～ 100 および 900 ～ 1000 の範囲でつまみを移動できなくなります。
@@ -150,8 +159,12 @@ class PriceRange {
 ```
 
 <div class="sample-container" style="height: 120px">
-<iframe src='{environment:demosBaseUrl}/slider-sample-5' width="100%" height="100%" seamless frameBorder="0"></iframe>
+    <iframe id="slide-sample-5-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/slider-sample-5" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="slide-sample-5-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+
 
 2 つの入力を追加し、スライダーの上限および下限にバインドします。このように、スライダー値を可視化して変更できます。
 
@@ -194,9 +207,13 @@ public updatePriceRange(event) {
 ```
 サンプルを構成した後、結果は以下のようになります。
 
+
 <div class="sample-container" style="height: 250px">
-<iframe src='{environment:demosBaseUrl}/slider-sample-1' width="100%" height="100%" seamless frameBorder="0"></iframe>
-</div> 
+    <iframe id="slide-sample-1-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/slider-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="slide-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
 
 <div class="divider"></div>
 
