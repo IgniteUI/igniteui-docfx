@@ -6,7 +6,10 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ## igxFor
 
-<p class="highlight">Display huge amount of repeated items. The directive is creating scrollable containers and renders small chunks of the data. Is is used inside igx-grid and it can be used to build virtual igx-list.</p>
+<p class="highlight">
+`igxForOf` is now available as an alternative to `ngForOf` for templating large amounts of data. The `igxForOf` uses virtualization technology behind the scenes to optimize DOM rendering and memory consumption. Virtualization technology works similar to Paging by slicing the data into smaller chucks which are swapped from a container viewport while the user scrolls the data horizontally/vertically. The difference with the Paging is that virtualization mimics the natural behavior of the scrollbar.
+The directive is creating scrollable containers and renders small chunks of the data. Is is used inside igx-grid and it can be used to build virtual igx-list.
+</p>
 <div class="divider"></div>
 
 ### igxFor Demo
