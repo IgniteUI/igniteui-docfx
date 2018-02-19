@@ -50,7 +50,11 @@ Then in the template of our carousel component we can add the following markup t
 This is enough to have the carousel instantiated on our page, let's have a look at it:
 
 <div class="sample-container" style="height: 230px">
-<iframe src='{environment:demosBaseUrl}/carousel-sample-1' width="100%" height="100%" seamless frameBorder="0"></iframe>
+    <iframe id="carousel-sample-1-iframe" src='{environment:demosBaseUrl}/carousel-sample-1' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="carousel-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">                view on stackblitz
+    </button>
 </div>
 
 ### Displaying slides using the ngFor directive
@@ -106,7 +110,11 @@ a > igx-icon > span{
 Let's see what we have now, sure looks better with the arrows standing out clearly on both sides and all the content centered:
 
 <div class="sample-container" style="height: 600px">
-<iframe src='{environment:demosBaseUrl}/carousel-sample-2' width="100%" height="100%" seamless frameBorder="0"></iframe>
+<iframe id="carousel-sample-2-iframe" src='{environment:demosBaseUrl}/carousel-sample-2' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="carousel-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">                view on stackblitz
+    </button>
 </div>
 
 ### Navigation
@@ -194,7 +202,11 @@ ul.igx-carousel__indicators {
 Following all the steps above brings us a nice and functional carousel that the user has full control over using the navigation arrows. The linear bar provides adittional UI that acts as an indicator of the user progress:
 
 <div class="sample-container" style="height: 550px">
-    <iframe src='{environment:demosBaseUrl}/carousel-sample-3' width="100%" height="100%" seamless frameBorder="0"></iframe>
+    <iframe id="carousel-sample-3-iframe" src='{environment:demosBaseUrl}/carousel-sample-3' width="100%" height="100%" seamless frameBorder="0"  onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="carousel-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">                view on stackblitz
+    </button>
 </div>
 
 ### Actions on tap/click

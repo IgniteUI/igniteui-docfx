@@ -25,8 +25,8 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 > <br/> <br/>`$ npm install hammerjs @types/hammerjs`
 
 ##Usage
-The toggle allows you easilly to wrap some content into a box which easily can be opened and closed.
-To get started with the IgniteUI for Angular Toggle, let's first import the **IgxToggleModule** in our **app.module.ts**. We are also planing to take advantage of **igxButton** directive so we will have to import **IgxButtonModule** into the **app.module.ts** too.
+The toggle allows you easily to wrap some content into a box which easily can be opened and closed.
+To get started with the IgniteUI for Angular Toggle, let's first import the **IgxToggleModule** in our **app.module.ts**. We are also planning to take advantage of **igxButton** directive so we will have to import **IgxButtonModule** into the **app.module.ts** too.
 
 ```typescript
 // app.module.ts
@@ -92,7 +92,7 @@ If all went well, you should see the following in your browser:
 
 ### Automatic toggle actions
 
-In order to prevent this invocation of these methods there is a directive which has `onClick` handler and changes the state to the toggle we are referred to. So let's dive in. To take advantage of this functionality we will have to use **IgxToggleActionDirective** Which is located into the same **IgxToggleModule**.
+In order to prevent this invocation of these methods there is a directive which has `onClick` handler and changes the state to the toggle we are referred to. So let's dive in. If we would like to take advantage of this functionality we will have to use **IgxToggleActionDirective** Which is comming from the same **IgxToggleModule**.
 
 ```typescript
 // app.module.ts
@@ -132,7 +132,7 @@ After these changes the toggle should work exactly in the same way.
 
 ### Automatic toggle actions with service provider
 
-There is a convenient way to keep the state and command our **igxToggle** through **igxNavigationService** provider which would be convenient for us to keep tracking it everywhere in our applicaiton. We just need to declare identifier to our **igxToggle** directive and the registration happens for us. If we would like this state to be controlled automatically again we just need to pass this identifier to our helping **igxToggleActionDirective**.
+There is a convenient way to keep the state and command our **igxToggle** through **igxNavigationService** provider which would be convenient for us to keep tracking it everywhere in our application. We just need to set identifier for our **igxToggle** directive and the registration into the service happens for us. If we would like this state to be controlled automatically again we just need to pass this identifier to our helping **igxToggleActionDirective**.
 
 ```typescript
 // app.module.ts
@@ -159,7 +159,7 @@ export class AppModule {}
 </div>
 ```
 
-If all went well we have to see this:
+If all went well, it will look like this:
 
 <div class="sample-container loading" style="height: 370px">
     <iframe id="toggle-sample-3-iframe" src='{environment:demosBaseUrl}/toggle-sample-3' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -173,14 +173,14 @@ If all went well we have to see this:
 ## API Summary
 
 In this article we covered the details of how to use Toggle directive. We created a content which would possible to be hidden or shown by invoking programmatically methods which determine this behaviour.
-Furthermore we added another helping directive which controls automatically this same behaviour by giving it the appropriate toggle reference. At the end we have registered our **igxToggle** directive into **igxNavigationService** provider by giving it identifier which "ID" was given to our helping **igxToggleAction** directive.
+Furthermore we added another helping directive which controls automatically this same behaviour by giving it the appropriate toggle reference. In the end we have registered our **igxToggle** directive in the **igxNavigationService** provider by giving it an ID, which we then provided to our helping **igxToggleAction** directive.
 
 ###Inputs
 The following inputs are available on the **igxToggle** directive:
 | Name | Type | Description |
 | :--- | :--- | :--- |
 | `collapsed` | Boolean | Determines whether the toggle is open or closed. |
-| `id` | Boolean | Indentifier which is registered into **igxNavigationService**. |
+| `id` | Boolean | Identifier which is registered into **igxNavigationService**. |
 
 <div class="divider"></div>
 
