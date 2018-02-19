@@ -130,11 +130,11 @@ Below is the list of all inputs that the developers may set to configure the `ig
 
 A list of the events emitted by the **igx-for**:
 
-| Name              | Description                                                              |
-| :---------------- | :----------------------------------------------------------------------- |
-| _Event emitters_  | _Notify for a change_                                                    |
-| `onItemLoad`      | Used when scrolled to emit the loaded chunk of data                      |
-| `onItemPreload`   | Used when scrolled to emit the chunk of data which is about to be loaded |
+| Name              | Description                                                          |
+| :---------------- | :------------------------------------------------------------------- |
+| _Event emitters_  | _Notify for a change_                                                |
+| `onItemLoad`      | Used when scrolled to emit the loaded data item                      |
+| `onItemPreload`   | Used when scrolled to emit the data item which is about to be loaded |
 
 <div class="divider"></div>
 
