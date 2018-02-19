@@ -108,6 +108,12 @@ The directive can be used to virtualize the data in vertical, horizontal or both
 </div>
 ```
 
+**Note**: The `igxForOf` directive can bind to remote service too. Review the following demo for more information.
+#### igxFor bound to remote service Demo
+<div class="sample-container loading" style="height:780px">
+    <iframe src='{environment:demosBaseUrl}/igx-for-sample-2' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
 <div class="divider--half"></div>
 
 ## API
