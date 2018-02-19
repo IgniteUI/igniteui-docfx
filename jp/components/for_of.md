@@ -6,13 +6,16 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ## igxFor
 
-<p class="highlight">Display huge amount of repeated items. The directive is creating scrollable containers and renders small chunks of the data. Is is used inside igx-grid and it can be used to build virtual igx-list.</p>
+<p class="highlight">
+`igxForOf` is now available as an alternative to `ngForOf` for templating large amounts of data. The `igxForOf` uses virtualization technology behind the scenes to optimize DOM rendering and memory consumption. Virtualization technology works similar to Paging by slicing the data into smaller chucks which are swapped from a container viewport while the user scrolls the data horizontally/vertically. The difference with the Paging is that virtualization mimics the natural behavior of the scrollbar.
+The directive is creating scrollable containers and renders small chunks of the data. Is is used inside `igx-grid` and it can be used to build virtual `igx-list`.
+</p>
 <div class="divider"></div>
 
 ### igxFor Demo
 
 <div class="sample-container loading" style="height:780px">
-    <iframe src='{environment:demosBaseUrl}/igx-for' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe src='{environment:demosBaseUrl}/igx-for-sample-1' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <!--<button data-localize="stackblitz" class="stackblitz-btn">view on stackblitz</button> -->
@@ -20,7 +23,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ### Dependencies
 
-The igxFor directive is exported as as an `NgModule`, thus all you need to do in your application is to import the _IgxForOfModule_
+The `igxFor` directive is exported as as an `NgModule`, thus all you need to do in your application is to import the _IgxForOfModule_
 inside your `AppModule`:
 
 ```typescript
@@ -40,7 +43,7 @@ export class AppModule {}
 
 ### Usage
 
-Now that we have the igxForOf module imported, let’s get started with a basic configuration of the **igxFor** that binds to local data:
+Now that we have the `igxForOf` module imported, let’s get started with a basic configuration of the **igxFor** that binds to local data:
 
 ```html
 <span #container>
@@ -50,7 +53,7 @@ Now that we have the igxForOf module imported, let’s get started with a basic 
 
 
 
-The **data** property is an array and it provides the virtualized data.
+The **data** property is an array that provides the virtualized data.
 
 
 The directive can be used to virtualize the data in vertical, horizontal or both directions.
@@ -111,7 +114,7 @@ The directive can be used to virtualize the data in vertical, horizontal or both
 
 ### Inputs
 
-Below is the list of all inputs that the developers may set to configure the igxFor look/behavior:
+Below is the list of all inputs that the developers may set to configure the `igxFor` look/behavior:
 | Name | Type | Description |
 | :--- |:--- | :--- |
 | id | string | Unique identifier of the Grid |
