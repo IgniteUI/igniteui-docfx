@@ -6,24 +6,107 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ##Avatar
 
-<p class="highlight">Use the Ignite UI for Angular Avatar to add images, material icons, or initials to an application, which is helpful for representing users in lists or profile buttons. The Avatar can be square or circular, with three size options. The control supports all images from the material icon set as well as custom images.</p>
+<p class="highlight">The Ignite UI for Angular Avatar component helps adding images, material icons, or initials to your application.</p>
 <div class="divider"></div>
 
 ### Avatar Demo
 
-<div class="sample-container loading" style="height:512px">
-    <iframe id="avatar-sample-iframe" src='{environment:demosBaseUrl}/avatar' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height:200px">
+    <iframe id="avatar-sample-3-iframe" src='{environment:demosBaseUrl}/avatar-sample-3' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="avatar-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">        view on stackblitz
+    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="avatar-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">        view on stackblitz
     </button>
 </div>
 <div class="divider--half"></div>
 
 ### Usage
 
+To get started with the Ignite UI for Angular Avatar, let's first import the **IgxAvatarModule** in the **app.module.ts** file:
+
+```typescript
+// app.module.ts
+
+...
+import { IgxAvatarModule } from 'igniteui-angular/main';
+
+@NgModule({
+    ...
+    imports: [..., IgxAvatarModule],
+    ...
+})
+export class AppModule {}
+```
+The Avatar can be either square or circular, with three size options (small, medium and large). It can be used for displaying initials, images or icons.
+
+####Avatar displaying initials
+To get a simple avatar with initials (i.e. JS  for  'Jack Sock'), add the following code inside the component template:
+
 ```html
-<igx-avatar roundShape="true" icon="person" bgColor="#0375be" data-init="SS">
+<igx-avatar initials="JS">
+</igx-avatar>
+```
+Let's enhance our avatar by making it circular and bigger in size. We can also change the background through the `bgColor` property or set a color on the initials through the `color` property. All of these are input properties and can be bound to some component properties.
+
+```html
+<igx-avatar initials="JS" 
+            [roundShape]="isCircular" 
+            size="medium" 
+            [bgColor]="bgColor" 
+            [color]="color">
+</igx-avatar>
+```
+```typescript
+// avatar.component.ts
+...
+  public bgColor = "#0375be";
+  public color = "black";
+  public isCircular = true;
+
+```
+If all went well, you should see something like the following in the browser:
+
+<div class="sample-container loading" style="height:100px">
+    <iframe id="avatar-sample-1-iframe" src='{environment:demosBaseUrl}/avatar-sample-1' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="avatar-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">        view on stackblitz
+    </button>
+</div>
+
+####Avatar displaying image
+To get an avatar that dispalays an image, all you have to do is setting the image source via the `src` property.
+
+```html
+<igx-avatar [src]="imgSource"
+            roundShape="true"
+            size="large">
+</igx-avatar>
+```
+
+```typescript
+// avatar.component.ts
+...
+  public imgSource = "https://randomuser.me/api/portraits/men/1.jpg";
+
+```
+If all went well, you should see something like the following in the browser:
+
+<div class="sample-container loading" style="height:100px">
+    <iframe id="avatar-sample-2-iframe" src='{environment:demosBaseUrl}/avatar-sample-2' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="avatar-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">        view on stackblitz
+    </button>
+</div>
+
+####Avatar displaying icon
+Analogically the avatar can display an icon via the `icon` property. Currently all icons from the material icon set are supported.
+
+```html
+<igx-avatar icon="phone"
+            roundShape="true"
+            size="large">
 </igx-avatar>
 ```
 
@@ -41,24 +124,3 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 | `roundShape` | boolean | Set the shape of the avatar to circle. The default shape is square.                                                                      |
 | `size`       | string  | Set the size of the avatar to either small, medium, or large.                                                                            |
 
-<div class="divider--half"></div>
-*You can also set all igx-avatar properties programmatically.
-<div class="divider--half"></div>
-
-### Examples
-
-Using `igx-avatar` tag to include it in your app.
-
-```html
-<igx-avatar roundShape="true" icon="person" bgColor="#0375be" data-init="SS">
-</igx-avatar>
-```
-
-Using `TypeScript` to modify and existing igx-avatar instance.
-
-```typescript
-avatarInstance.srcImage('https://unsplash.it/60/60?image=55');
-avatarInstance.size('small');
-```
-
-<div class="divider--half"></div>
