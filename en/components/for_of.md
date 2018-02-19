@@ -6,17 +6,13 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ## igxFor
 
-<p class="highlight">
-`igxForOf` is now available as an alternative to `ngForOf` for templating large amounts of data. The `igxForOf` uses virtualization technology behind the scenes to optimize DOM rendering and memory consumption. Virtualization technology works similar to Paging by slicing the data into smaller chucks which are swapped from a container viewport while the user scrolls the data horizontally/vertically. The difference with the Paging is that virtualization mimics the natural behavior of the scrollbar.
-The directive is creating scrollable containers and renders small chunks of the data. It is used inside `igx-grid` and it can be used to build virtual `igx-list`.
-`igxForOf` can be used to virtualize data horizontally, vertically or both.
-</p>
+<p class="highlight">Display huge amount of repeated items. The directive is creating scrollable containers and renders small chunks of the data. Is is used inside igx-grid and it can be used to build virtual igx-list.</p>
 <div class="divider"></div>
 
 ### igxFor Demo
 
 <div class="sample-container loading" style="height:780px">
-    <iframe src='{environment:demosBaseUrl}/igx-for-sample-1' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe src='{environment:demosBaseUrl}/igx-for' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <!--<button data-localize="stackblitz" class="stackblitz-btn">view on stackblitz</button> -->
@@ -24,7 +20,7 @@ The directive is creating scrollable containers and renders small chunks of the 
 
 ### Dependencies
 
-The `igxFor` directive is exported as as an `NgModule`, thus all you need to do in your application is to import the _IgxForOfModule_
+The igxFor directive is exported as as an `NgModule`, thus all you need to do in your application is to import the _IgxForOfModule_
 inside your `AppModule`:
 
 ```typescript
@@ -44,7 +40,9 @@ export class AppModule {}
 
 ### Usage
 
-Now that we have the `igxForOf` module imported, let’s get started with a basic configuration of the **igxFor** that binds to local data:
+
+
+Now that we have the igxForOf module imported, let’s get started with a basic configuration of the **igxFor** that binds to local data:
 
 ```html
 <span #container>
@@ -52,8 +50,62 @@ Now that we have the `igxForOf` module imported, let’s get started with a basi
 </span>
 ```
 
-The **data** property is an array that provides the data.
 
+
+The **data** property is an array and it provides the virtualized data.
+
+
+The directive can be used to virtualize the data in vertical, horizontal or both directions.
+#### Vertical virtualization
+
+```html
+<div style='height:500px;'>
+    <ng-template igxFor let-item [igxForOf]="data" #virtDirVertical
+        [igxForScrollOrientation]="'vertical'"
+        [igxForContainerSize]='"500px"'
+        [igxForItemSize]='"50px"'
+        let-rowIndex="index">
+            <div style='height:50px;'>{{rowIndex}} : {{item.text}}</div>
+    </ng-template>
+</div>
+```
+
+#### Horizontal virtualization
+
+```html
+<table> 
+    <tbody style='display:grid;'>
+    <tr style='width:500px; height:118px;'>               
+        <ng-template igxFor let-item [igxForOf]="data" #virtDirHorizontal
+            [igxForScrollOrientation]="'horizontal'"
+            [igxForContainerSize]='"500px"'
+            let-rowIndex="index">
+                <td  [style.width.px]='item.width' style='height:100px;'>{{rowIndex}} : {{item.text}}</td>
+            </ng-template>
+    </tr>
+    </tbody>
+</table>
+```
+
+#### Horizontal and vertical virtualization
+
+```html
+<div #container [style.width]='width' [style.height]='height'>
+    <ng-template #scrollContainer igxFor let-rowData [igxForOf]="data"
+        [igxForScrollOrientation]="'vertical'"
+        [igxForContainerSize]='height'
+        [igxForItemSize]='"50px"'>
+        <div [style.display]="'flex'" [style.height]="'50px'">
+            <ng-template #childContainer igxFor let-col [igxForOf]="cols"
+                [igxForScrollOrientation]="'horizontal'"
+                [igxForScrollContainer]="parentVirtDir"
+                [igxForContainerSize]='width'>
+                    <div [style.min-width]='col.width + "px"'>{{rowData[col.field]}}</div>
+            </ng-template>
+        </div>
+    </ng-template>
+</div>
+```
 
 <div class="divider--half"></div>
 
@@ -61,15 +113,15 @@ The **data** property is an array that provides the data.
 
 ### Inputs
 
-Below is the list of all inputs that the developers may set to configure the `igxFor` look/behavior:
+Below is the list of all inputs that the developers may set to configure the igxFor look/behavior:
 | Name | Type | Description |
 | :--- |:--- | :--- |
 | id | string | Unique identifier of the Grid |
 | `igxForOf` | any[] | The data to be virtualized |
-| `igxForScrollOrientation` | string | Specifies the scroll direction - "horizontal" or "vertical", default value is _vertical_ |
-| `igxForScrollContainer` | any | Specifies the container where the helper scrollbars will be contained, it is useful when nesting the directive |
-| `igxForContainerSize` | any |  Specifies the container size in pixels. For "vertical" virtualization this is the height of the container. For "horizontal" virtualization this is the width of the container. |
-| `igxForItemSize` | any | Specifies the item size in pixels. For "vertical" virtualization this is the height of the item/row.  |
+| `igxForScrollOrientation` | string | Virtualization direction - "horizontal" or "vertical" |
+| `igxForScrollContainer` | any | The container where the vertical and horizontal scrollbars will be created, the is useful when nesting the directive and for cases where the scrolling container is not going to be the direct parent |
+| `igxForContainerSize` | any | Specifies the container size |
+| `igxForItemSize` | any | Specifies the item size, when the virtualization is vertical it is used as height and as width when the virtualization is horizontal. It is mostly used for the vertical direction, because for the horizontal width it is possible to have items with different widhts |
 
 <div class="divider--half"></div>
 
@@ -91,7 +143,7 @@ Here is a list of all public methods exposed by the **igx-for**:
 
 | Signature       | Description                     |
 | :-------------- | :------------------------------ |
-| `scrollNext()`  | Loads the previous chunk of data |
-| `scrollPrev()`  | Loads the next chunk of data     |
+| `scrollNext()`  | Scrolls by one item into the  appropriate  next direction |
+| `scrollPrev()`  | Scrolls by one item into the  appropriate  previous direction     |
 
 <div class="divider--half"></div>
