@@ -1,6 +1,6 @@
 ---
 title: igxFor
-_description: The Ignite UI for Angular product is providing virtual directive igxFor similar to ngFor, but it is creating scrollbars and only renders small chunks of the data.
+_description: Ignite UI for Angular now exposes a virtual igxFor directive similar to ngFor, which virtualizes DOM object rendering by visualizing only the visible chunks of the data in the DOM.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Virtualization, Performance, Virtual directive, Virtual For
 ---
 
@@ -133,8 +133,8 @@ A list of the events emitted by the **igx-for**:
 | Name              | Description                                                              |
 | :---------------- | :----------------------------------------------------------------------- |
 | _Event emitters_  | _Notify for a change_                                                    |
-| `onChunkLoaded`   | Used when scrolled to emit the loaded chunk of data                      |
-| `onChunkLoading`  | Used when scrolled to emit the chunk of data which is about to be loaded |
+| `onItemLoad`      | Used when scrolled to emit the loaded chunk of data                      |
+| `onItemPreload`   | Used when scrolled to emit the chunk of data which is about to be loaded |
 
 <div class="divider"></div>
 
@@ -144,7 +144,7 @@ Here is a list of all public methods exposed by the **igx-for**:
 
 | Signature       | Description                     |
 | :-------------- | :------------------------------ |
-| `scrollNext()`  | Scrolls by one item into the  appropriate  next direction |
-| `scrollPrev()`  | Scrolls by one item into the  appropriate  previous direction     |
+| `scrollNextItem()`  | Scrolls by one item into the  appropriate  next direction |
+| `scrollPrevItem()`  | Scrolls by one item into the  appropriate  previous direction     |
 
 <div class="divider--half"></div>
