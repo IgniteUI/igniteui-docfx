@@ -56,7 +56,11 @@ export class AppModule {}
 このコードはカルーセルをページでインスタンス化します。
 
 <div class="sample-container" style="height: 230px">
-<iframe src='{environment:demosBaseUrl}/carousel-sample-1' width="100%" height="100%" seamless frameBorder="0"></iframe>
+    <iframe id="carousel-sample-1-iframe" src='{environment:demosBaseUrl}/carousel-sample-1' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="carousel-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">                view on stackblitz
+    </button>
 </div>
 
 ### ngFor ディレクティブを使用したスライドの表示
@@ -111,9 +115,12 @@ a > igx-icon > span{
 ```
 
 スタイルを適用した後、矢印が強調表示され、コンテンツが中央揃えになります。
-
 <div class="sample-container" style="height: 600px">
-<iframe src='{environment:demosBaseUrl}/carousel-sample-2' width="100%" height="100%" seamless frameBorder="0"></iframe>
+<iframe id="carousel-sample-2-iframe" src='{environment:demosBaseUrl}/carousel-sample-2' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="carousel-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">                view on stackblitz
+    </button>
 </div>
 
 ### ナビゲーション
@@ -205,7 +212,11 @@ ul.igx-carousel__indicators {
 すべての手順を実行すると、ナビゲーション矢印を使用してユーザーが管理するカルーセルになります。リニア バーが進行状況のインジケーターになります。
 
 <div class="sample-container" style="height: 550px">
-    <iframe src='{environment:demosBaseUrl}/carousel-sample-3' width="100%" height="100%" seamless frameBorder="0"></iframe>
+    <iframe id="carousel-sample-3-iframe" src='{environment:demosBaseUrl}/carousel-sample-3' width="100%" height="100%" seamless frameBorder="0"  onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="carousel-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">                view on stackblitz
+    </button>
 </div>
 
 ### タップ / クリックでのアクション

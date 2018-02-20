@@ -13,5 +13,6 @@ full license information.}}
 <script type="text/javascript" src="{{_rel}}styles/igviewer.common.js"></script>
 <script type="text/javascript" src="{{_rel}}styles/igviewer.renderingService.js"></script>
 <script type="text/javascript" src="{{_rel}}styles/api-browser.js"></script>
+<script type="text/javascript" src="{{_rel}}styles/stackblitz-handler.js"></script>
 <script src="https://use.typekit.net/zhy2hpz.js"></script>
 <script>try { Typekit.load({ async: true }); } catch (e) { }</script>
