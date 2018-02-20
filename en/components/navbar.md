@@ -40,3 +40,34 @@ You can set the visible state of the navbar by setting `isActionButtonVisible="t
 
 You can set the action of the navbar button by setting `(onAction)="executeAction()"`;
 <div class="divider--half"></div>
+<div class="divider"></div>
+
+### API Summary
+
+In this article we covered a lot of ground with the list component. We created a list of contact items. Used some additional Ignite UI for Angular components inside our list items, like avatars and icons. Created some custom item layout and styled it. Finally, we added list filtering. The list component has a few more APIs to explore, which are listed below.
+
+####Inputs
+The following inputs are available on the **igx-navbar** component:
+| Name | Type | Description |
+| :--- | :--- | :--- |
+| `actionButtonIcon` | String | Provide the name of the material icon to be used in the action button. |
+| `isActionButtonVisible` | Boolean | Whether the action button should be displayed. |
+| `title` | String | Provide the title the navbar should display. |
+
+<div class="divider"></div>
+
+####Outputs
+The following outputs are available on the **igx-navbar** component:
+| Name | Type | Description |
+| :--- | :--- | :--- |
+| `onAction` | EventEmitter | Emits an event when the action is executed. |
+
+<div class="divider"></div>
+
+###Additional Resources
+
+<div class="divider--half"></div>
+Our community is active and always welcoming to new ideas.
+
+* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
