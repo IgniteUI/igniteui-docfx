@@ -38,10 +38,6 @@ import { IgxButtonModule } from 'igniteui-angular/main';
 export class AppModule {}
 ```
 
-### Usage
-```html
-<target-element igxButton [..options]>Click me</target-element>
-```
 ### Examples
 
 Setting a simple `igxButton`. Note that if you do not choose a type, by default it will be set to `flat`.
