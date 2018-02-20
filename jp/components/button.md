@@ -75,7 +75,7 @@ export class AppModule {}
 `igxButton` を使用して span 要素を Ignite UI for Angular のスタイル設定済みボタンにします。
 
 ```html
-<span igxButton="raised" igxButtonColor="yellow" igxButtonBackground="#000" igxRipple="yellow">Click me</span>
+<span igxButton="raised" igxButtonColor="yellow" igxButtonBackground="#000" igxRipple="yellow">クリック</span>
 ```
 
 span は以下のようになります。
