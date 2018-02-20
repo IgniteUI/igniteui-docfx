@@ -15,9 +15,9 @@ _language: ja
 <div class="sample-container loading" style="height: 930px">
     <iframe id="nav-bar-sample-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/navbar" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
-<!-- <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="nav-bar-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div> -->
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="nav-bar-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+</div>
 <div class="divider--half"></div>
 
 ### 使用方法
