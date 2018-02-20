@@ -60,15 +60,15 @@ The directive can be used to virtualize the data in vertical, horizontal or both
 #### Vertical virtualization
 
 ```html
-<div style='height:500px;'>
+<table style='height:500px;'>
     <ng-template igxFor let-item [igxForOf]="data" #virtDirVertical
         [igxForScrollOrientation]="'vertical'"
         [igxForContainerSize]='"500px"'
         [igxForItemSize]='"50px"'
         let-rowIndex="index">
-            <div style='height:50px;'>{{rowIndex}} : {{item.text}}</div>
+            <tr style='height:50px;'>{{rowIndex}} : {{item.text}}</tr>
     </ng-template>
-</div>
+</table>
 ```
 
 #### Horizontal virtualization
@@ -91,21 +91,21 @@ The directive can be used to virtualize the data in vertical, horizontal or both
 #### Horizontal and vertical virtualization
 
 ```html
-<div #container [style.width]='width' [style.height]='height'>
+<table #container [style.width]='width' [style.height]='height'>
     <ng-template #scrollContainer igxFor let-rowData [igxForOf]="data"
         [igxForScrollOrientation]="'vertical'"
         [igxForContainerSize]='height'
         [igxForItemSize]='"50px"'>
-        <div [style.display]="'flex'" [style.height]="'50px'">
+        <tr [style.display]="'flex'" [style.height]="'50px'">
             <ng-template #childContainer igxFor let-col [igxForOf]="cols"
                 [igxForScrollOrientation]="'horizontal'"
                 [igxForScrollContainer]="parentVirtDir"
                 [igxForContainerSize]='width'>
-                    <div [style.min-width]='col.width + "px"'>{{rowData[col.field]}}</div>
+                    <td [style.min-width]='col.width + "px"'>{{rowData[col.field]}}</td>
             </ng-template>
-        </div>
+        </tr>
     </ng-template>
-</div>
+</table>
 ```
 
 **Note**: The `igxForOf` directive can bind to remote service too. Review the following demo for more information.
@@ -123,12 +123,23 @@ The directive can be used to virtualize the data in vertical, horizontal or both
 Below is the list of all inputs that the developers may set to configure the `igxFor` look/behavior:
 | Name | Type | Description |
 | :--- |:--- | :--- |
-| id | string | Unique identifier of the Grid |
+| id | string | Unique identifier of the directive |
 | `igxForOf` | any[] | The data to be virtualized |
 | `igxForScrollOrientation` | string | Virtualization direction - "horizontal" or "vertical" |
 | `igxForScrollContainer` | any | The container where the vertical and horizontal scrollbars will be created, the is useful when nesting the directive and for cases where the scrolling container is not going to be the direct parent |
 | `igxForContainerSize` | any | Specifies the container size |
 | `igxForItemSize` | any | Specifies the item size, when the virtualization is vertical it is used as height and as width when the virtualization is horizontal. It is mostly used for the vertical direction, because for the horizontal width it is possible to have items with different widhts |
+
+<div class="divider--half"></div>
+
+### Accessors
+
+List of public accessors that the developers may use to get information from the `igxFor`:
+| Name | Type | Description |
+| :--- |:--- | :--- |
+| id | string | Unique identifier of the directive |
+| `state` | IgxForState | The current state of the directive it contains `startIndex` and `chunkSize` |
+| `totalItemCount` | number | The total count of the virtual data items, when using remote service |
 
 <div class="divider--half"></div>
 
@@ -139,8 +150,8 @@ A list of the events emitted by the **igx-for**:
 | Name              | Description                                                          |
 | :---------------- | :------------------------------------------------------------------- |
 | _Event emitters_  | _Notify for a change_                                                |
-| `onItemLoad`      | Used when scrolled to emit the loaded data item                      |
-| `onItemPreload`   | Used when scrolled to emit the data item which is about to be loaded |
+| `OnChunkLoad`      | Used when scrolled to emit the loaded data item                      |
+| `OnChunkPreload`   | Used when scrolled to emit the data item which is about to be loaded |
 
 <div class="divider"></div>
 
@@ -150,7 +161,8 @@ Here is a list of all public methods exposed by the **igx-for**:
 
 | Signature       | Description                     |
 | :-------------- | :------------------------------ |
-| `scrollNextItem()`  | Scrolls by one item into the  appropriate  next direction |
-| `scrollPrevItem()`  | Scrolls by one item into the  appropriate  previous direction     |
+| `scrollNext()`  | Scrolls by one item into the  appropriate  next direction |
+| `scrollPrev()`  | Scrolls by one item into the  appropriate  previous direction|
+| `scrollTo(index)`  | Scrolls to the specified index |
 
 <div class="divider--half"></div>
