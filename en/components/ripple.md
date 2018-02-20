@@ -9,39 +9,101 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <div class="divider"></div>
 
 ### Ripple Demo
-<div class="sample-container loading" style="height: 1192px">
+<div class="sample-container loading" style="height: 558px">
     <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/ripple-sample-1" onload="onSampleIframeContentLoaded(this);">
 </div>
 <div class="divider--half"></div>
 
+### Dependencies
+
+The Ripple Directive is exported as an `NgModule`, thus all you need to do in your application is to import the _IgxRippleModule_
+inside your `AppModule`:
+
+```typescript
+// app.module.ts
+
+import { IgxRippleModule } from 'igniteui-angular/main';
+
+@NgModule({
+    imports: [
+        ...
+        IgxRippleModule,
+        ...
+    ]
+})
+export class AppModule {}
+```
 ### Usage
-```html
-<target-element igxRipple [...options]>Click me</target-element>
-```
-<div class="divider--half"></div>
+#### Adding Ripple Effect
 
-### Examples
-Using `igxRippleTarget` to attach a ripple effect to a specific element inside a
-more complex component.
+Use `igxRipple` to add a ripple effect to the specified element. It will add a ripple effect with the default color.
 ```html
-<igx-list>
-    <igx-list-item igxRipple igxRipplTarget=".igx-list__item" *ngFor="let item of navItems">
-        {{ item.text }}
-    </igx-list-item>
-</igx-list>
+<button igxButton="raised" igxRipple>Click Me</button>
 ```
+<div class="sample-container loading" style="height: 68px">
+    <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/ripple-sample-5" onload="onSampleIframeContentLoaded(this);">
+</div>
 
-Setting a centered ripple effect with custom color.
+#### Custom Color
+
+You can set the ripple color again using `igxRipple`.
 ```html
-<span igxButton="raised" igxRipple="#e41c77" igxRippleCentered="true">
+<button igxButton="raised" igxRipple="white">White</button>
+```
+This sample is with white ripple color:
+<div class="sample-container loading" style="height: 68px">
+    <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/ripple-sample-6" onload="onSampleIframeContentLoaded(this);">
+</div>
+
+#### Centered Ripple Effect
+The ripple effect will start from the location of the click event. You can change that behaviour by using `igxRippleCentered` and set the center of the element as origin.  
+```html
+<button igxButton="raised" igxRipple="white" igxRippleCentered="true">Centered</button>
+```
+<div class="sample-container loading" style="height: 68px">
+    <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/ripple-sample-3" onload="onSampleIframeContentLoaded(this);">
+</div>
+
+
+```html
+<span igxButton="raised" igxRipple="blue" igxRippleCentered="true">
     <i class="material-icons">edit</i>
 </span>
 ```
+#### Ripple Target
+Use `igxRippleTarget` to attach a ripple effect to a specific element inside a parent element.
+```html
+<div class="parent-div" igxRipple="blue" igxRippleTarget=".child-div" igxRippleCentered="true">
+  Parent Div
+  <div class="child-div">
+    Child Div
+  </div>
+</div>
+```
+Notice that if you click on the parent or the child divs the ripple effect will only appear inside the child div. The child div is has to have postion set to **relative**.
+<div class="sample-container loading" style="height: 168px">
+    <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/ripple-sample-2" onload="onSampleIframeContentLoaded(this);">
+</div>
+
+#### Ripple Duration
+Use `igxRippleDuration` to change te duration of the ripple animation. The default is 600 miliseconds.
+```html
+<div class="ripple-sample dark" [igxRippleDuration]=2000 igxRipple="white">
+  <p style="margin-bottom:0">Long Ripple Animation</p>
+</div>
+```
+In this sample the `igxRippleDuration` is set to 2000 miliseconds.
+<div class="sample-container loading" style="height: 148px">
+    <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/ripple-sample-4" onload="onSampleIframeContentLoaded(this);">
+</div>
 
 The `igxRipple` uses the Web Animation API and runs natively on
 [browsers that support it.](http://caniuse.com/#feat=web-animation)
 The `web-animations.min.js` polyfill is [available](https://github.com/web-animations/web-animations-js)
 for other browsers.
+
+> [!NOTE]
+> Use a relatively positioned element for the ripple animation. You can also use `igxRippleTarget` to target a child element.
 <div class="divider--half"></div>
 
 ### API
@@ -52,3 +114,11 @@ for other browsers.
 | `igxRippleCentered` | boolean | If true, the ripple animation originates from the center of the element rather than the location of the click event. |
 | `igxRippleDuration` | number | The duration of the ripple animation. Defaults to 600 milliseconds. |
 <div class="divider--half"></div>
+
+###Additional Resources
+
+<div class="divider--half"></div>
+Our community is active and always welcoming to new ideas.
+
+* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
