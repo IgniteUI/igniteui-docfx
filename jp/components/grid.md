@@ -15,8 +15,9 @@ _language: ja
 <div class="sample-container loading" style="height:780px">
     <iframe id="grid-sample-iframe" src='{environment:demosBaseUrl}/grid' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
+<br/>
 <div>
-<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="grid-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="grid-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
@@ -382,7 +383,7 @@ public ngOnInit(): void {
 
 <div class="divider--half"></div>
 
-#### 入力
+### 入力
 
 **IgxGridColumnComponent** で列を定義するために利用可能な入力:
 | 名前 | 型 | 説明 |

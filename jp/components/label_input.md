@@ -1,25 +1,26 @@
 ﻿---
-title: Label and Input Directive
-_description: With Ignite UI for Angular Label component, developers can create single-line text elements to add additional CSS styles and integrate with other controls.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Label components, Angular Label controls
+title: Label および Input ディレクティブ
+_description: Ignite UI for Angular Label コンポーネントを使用すると、単一行のテキスト要素を作成するための CSS スタイルを追加し、その他のコントロールと統合できます。
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Label コンポーネント, Angular Label コントロール
 ---
 
 ##Label & Input
-<p class="highlight">The Ignite UI for Angular Label directive is used to add additional CSS styles to single-line text elements. It is especially useful when combined with the Ignite UI for Angular Input directive with which you can add **inputs** in your markup.</p>
+<p class="highlight">Ignite UI for Angular Label ディレクティブは、単一行のテキスト要素に CSS スタイルを追加するために使用されます。マークアップに**入力**を追加する Ignite UI for Angular Input ディレクティブと一緒に使用すると便利です。</p>
 <div class="divider--half"></div>
 
-### Label & Input Demo
-#### Create account
+### Label および Input デモ
+#### アカウントの作成
 <div class="sample-container" style="height:500px">
 <iframe id="label-input-sample-frame" src='{environment:demosBaseUrl}/label-input' width="100%" height="100%" seamless frameBorder="0"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="label-input-sample-frame" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="label-input-sample-frame" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
-### Usage
-To get started with the Ignite UI for Angular Label and Input, let's first import the **IgxLabelModule** and **IgxInputModule** in our **app.module.ts** file:
+### 使用方法
+
+Ignite UI for Angular Label および Input を初期化する前に、**IgxLabelModule** および **IgxInputModule** を **app.module.ts** ファイルにインポートします。
 
 ```typescript
 // app.module.ts
@@ -37,7 +38,7 @@ import { IgxInputModule } from 'igniteui-angular/main';
 export class AppModule {}
 ```
 
-Then in the template of our account component we can add the following code to get the styled label and input. The key thing here is to add the **igx-form-group** class to the div that contains tha label and input and put the label after the input:
+アカウント コンポーネントのテンプレートで、以下のコードを追加するとスタイル設定されたラベルおよび入力が作成されます。**igx-form-group** クラスをラベルおよび入力を含む div に追加し、ラベルを入力の後に配置します。
 
 ```html
 <!--account.component.html-->
@@ -49,8 +50,9 @@ Then in the template of our account component we can add the following code to g
 ```
 <div class="divider--half"></div>
 
-###Additional Resources
-Our community is active and always welcoming to new ideas.
+### 追加のリソース
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+是非コミュニティに参加してください。
+
+* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

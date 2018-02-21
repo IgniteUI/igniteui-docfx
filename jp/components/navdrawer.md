@@ -16,14 +16,14 @@ _language: ja
     <iframe id="nav-drawer-sample-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/navigation-drawer" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="nav-drawer-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="nav-drawer-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
 ### 使用方法
 
 ```html
-<ig-nav-drawer id="test"
+<igx-nav-drawer id="test"
     (opened)="logEvent($event)"
     [position]="position"
     [pin]="pin"
@@ -40,7 +40,7 @@ _language: ja
             <span class="hamburger" igxNavToggle="test" > &#9776; </span>
             <div *ngFor="let navItem of navItems"><img src="http://www.infragistics.com/assets/images/favicon.ico" width='16' /></div>
         </div>
-</ig-nav-drawer>
+</igx-nav-drawer>
 ```
 
 <div class="divider--half"></div>
