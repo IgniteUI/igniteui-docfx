@@ -5,38 +5,237 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ---
 
 ##Badge
-<p class="highlight">The Ignite UI for Angular Badge is an absolutely positioned element that can be used to decorate avatars, navigation menus, or other components in the app that require an active indicator. Badges can display an active count, and can be designed as icons with a predefined style to communicate information, success, warnings, or errors.</p>
+<p class="highlight">The Ignite UI for Angular Badge is an absolutely positioned element that is used to decorate avatars, navigation menus, or other components in the application when visual notification is needed. Badges usually are designed as icons with a predefined style to communicate information, success, warnings, or errors.</p>
 <div class="divider"></div>
 
 ### Badge Demo
-<div class="sample-container" style="height:530px">
-    <iframe src='{environment:demosBaseUrl}/badge' width="100%" height="100%" seamless frameBorder="0"></iframe>
+<div class="sample-container" style="height:280px">
+    <iframe id="badge-sample-iframe" src='{environment:demosBaseUrl}/badge-sample-3' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="badge-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
 
-### Usage
-```html
-<igx-badge value="8"></igx-badge>
+> [!WARNING]
+> To start using Ignite UI for Angular components in your own projects, make sure you have configured all necessary dependencies and have performed the proper setup of your project. You can learn how to do this in the [**installation**](https://www.infragistics.com/products/ignite-ui-angular/getting-started#installation) topic.
+
+###Usage
+To get started with the Ignite UI for Angular Badge, let's first import the **IgxBadgeModule** in the **app.module.ts** file:
+
+```typescript
+// app.module.ts
+
+...
+import { IgxBadgeModule } from 'igniteui-angular/main';
+
+@NgModule({
+    ...
+    imports: [..., IgxBadgeModule],
+    ...
+})
+export class AppModule {}
 ```
+
+Let's create a simple list with contacts similar to those in chat clients. In addition to the contact name, we want to display an avatar and the current state of the contact (online, offline or away). To achieve this, we use the **igx-badge** and **igx-avatar** components. For a container, **igx-list** is used.
+
+To continue, include all needed modules and import them in the **app.module.ts** file.
+
+```typescript
+// app.module.ts
+
+...
+import {
+    IgxListModule,
+    IgxAvatarModule,
+    IgxBadgeModule
+} from 'igniteui-angular/main';
+
+@NgModule({
+    ...
+    imports: [..., IgxListModule, IgxAvatarModule, IgxBadgeModule],
+})
+export class AppModule {}
+```
+
+Having all set up, let's show all the contacts in the [**IgxList**](https://www.infragistics.com/products/ignite-ui-angular/angular/components/list.html) component. The list contains the member name and its availability.
+
+```html
+<!-- contacts.component.html -->
+
+<igx-list>
+  <igx-list-item isHeader="true">
+    Team Members (4)
+  </igx-list-item>
+  <igx-list-item *ngFor="let member of members">
+    <div>
+      <div>
+        <span class="contact-name">{{ member.name }}</span>
+        <span>({{ member.status }})</span>
+      </div>
+    </div>
+  </igx-list-item>
+</igx-list>
+```
+
+```typescript
+// contacts.component.ts
+
+...
+ public members: Member[] = [
+    new Member("Terrance Orta", "online"),
+    new Member("Donna Price", "online"),
+    new Member("Lisa Landers", "away"),
+    new Member("Dorothy H. Spencer", "offline"),
+  ];
+
+```
+
+```typescript
+
+...
+class Member {
+    public name: string;
+    public status: string;
+    public type: string;
+    public icon: string;
+
+    constructor(name: string, status: string) {
+        this.name = name;
+        this.status = status;
+        switch (status) {
+            case "online":
+                this.type = "success";
+                this.icon = "check";
+                break;
+            case "away":
+                this.type = "warning";
+                this.icon = "schedule";
+                break;
+            case "offline":
+                this.type = "error";
+                this.icon = "remove";
+                break;
+        }
+    }
+}
+```
+If the sample is configured properly, a list with members' name and status should be displayed.
+
+<div class="sample-container" style="height: 280px">
+    <iframe id="badge-sample-1-iframe" src='{environment:demosBaseUrl}/badge-sample-1' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="badge-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">                view on stackblitz
+    </button>
+</div>
+
 <div class="divider--half"></div>
 
-### Examples
+Let's add an avatar in front of every chat member. To do this, put another div element in the **igx-list-item** containing the [**IgxAvatar**](https://www.infragistics.com/products/ignite-ui-angular/angular/components/avatar.html). Modify the list item content as shown below.
 
-Using `igx-badge` with the `igx-avatar` component to show active status.
 ```html
-<igx-avatar [src]="src" [roundShape]="true">
-    <igx-badge type="info" value="8"></igx-badge>
-</igx-avatar>
+<!-- contacts.component.html -->
+
+<igx-list>
+  <igx-list-item isHeader="true">
+    Team Members (4)
+  </igx-list-item>
+  <igx-list-item *ngFor="let member of members">
+    <div class="wrapper">
+      <div>
+        <igx-avatar icon="person" roundShape="true" size="small"></igx-avatar>
+      </div>
+      <div style="margin-left: 20px; align-content: center;">
+        <span class="contact-name">{{ member.name }}</span>
+        <span>({{ member.status }})</span>
+      </div>
+    </div>
+  </igx-list-item>
+</igx-list>
 ```
+
+<div class="sample-container" style="height: 280px">
+<iframe id="badge-sample-2-iframe" src='{environment:demosBaseUrl}/badge-sample-2' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="badge-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">                view on stackblitz
+    </button>
+</div>
+
+<div class="divider--half"></div>
+
+Having just a list with names doesn't provide much useful visual information. The last step is to add **igx-badge** to show the contact state notification. Modify the **igx-list-item** content as shown below adding a badge component inside the avatar component.
+
+Notice that the **igx-badge** has `icon` and `type` inputs to configure the badge look. You can set `icon` by providing its name from the official [material icons set](https://material.io/icons/). The badge `type` can be set to either `default`, `info`, `success`, `warning`, or `error`. Depending on the type, a specific background color is applied.
+
+In our sample, `icon` and `type` are bound to model properties named *icon* and *type*.
+
+In order to position the badge in its parent container, create a custom css class *badge-style* and define the top and right positions.
+
+```html
+<!-- contacts.component.html -->
+
+<igx-list>
+  <igx-list-item isHeader="true">
+    Team Members (4)
+  </igx-list-item>
+  <igx-list-item *ngFor="let member of members">
+    <div class="wrapper">
+      <div>
+        <igx-avatar icon="person" roundShape="true" size="small">
+          <igx-badge [icon]="member.icon" [type]="member.type" class="badge-style"></igx-badge>
+        </igx-avatar>
+      </div>
+      <div style="margin-left: 20px; align-content: center;">
+        <span class="contact-name">{{ member.name }}</span>
+      </div>
+    </div>
+  </igx-list-item>
+</igx-list>
+```
+
+```css
+<!-- contacts.component.css -->
+
+.badge-style
+{
+  position: absolute;
+  bottom: -6px;
+  right: -50px;
+}
+```
+
+If the sample is configured properly, a list of members should be displayed and every member has an avatar and a badge showing its current state.
+
+<div class="sample-container" style="height: 280px">
+    <iframe id="badge-sample-3-iframe" src='{environment:demosBaseUrl}/badge-sample-3' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="badge-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">                view on stackblitz
+    </button>
+</div>
+
 <div class="divider--half"></div>
 
 ### API Summary
+The following table summarizes some of the useful **igx-badge** component inputs.
+#### Inputs
+The following inputs are available in the **igx-badge** component:
+
 | Name   |      Type      |  Description |
 |:----------|:-------------:|:------|
-| `type` | string | Set the type of the badge to either `default`, `info`, `success`, `warning`, or `error`. This will change the background color of the badge according to the values set in the default theme. |
-| `position` | string | Set the position of the badge relative to its parent container to either `top-right`, `top-left`, `bottom-right`, or `bottom-left`. |
-| `value` | string | Set the value to be displayed inside the badge. |
-| `icon` | string | Set an icon for the badge from the material icons set. Will not be displayed if `value` for the badge is already set. |
+| `icon` | string | Set an icon from the material icons set. The icon will not be displayed if the badge `value` is already set. |
+| `type` | string | Set the badge type to either `default`, `info`, `success`, `warning`, or `error`. Depending on the type, specific background color is set as declared in the default theme. |
+| `value` | string | Set the value displayed inside the badge. |
+
+<div class="divider"></div>
+
+###Additional Resources
 <div class="divider--half"></div>
+Our community is active and always welcoming to new ideas.
+* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+
 
 

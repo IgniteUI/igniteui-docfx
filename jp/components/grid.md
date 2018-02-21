@@ -2,6 +2,7 @@
 title: Data Grid コンポーネント
 _description: Ignite UI for Angular Data Grid コントロールは、タッチ レスポンシブなデータ グリッドです。階層およびリスト ビューなどの機能があります。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Data Grid コンポーネント, Angular Data Grid コントロール
+_language: ja
 ---
 
 ## Data Grid
@@ -11,8 +12,12 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 
 ### Grid デモ
 
-<div class="sample-container" style="height:780px">
-    <iframe src='{environment:demosBaseUrl}/grid' width="100%" height="100%" seamless frameBorder="0"></iframe>
+<div class="sample-container loading" style="height:780px">
+    <iframe id="grid-sample-iframe" src='{environment:demosBaseUrl}/grid' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="grid-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
@@ -334,7 +339,7 @@ public ngOnInit(): void {
 
 | 名前              | 説明                                                                           |
 | :---------------- | :----------------------------------------------------------------------------- |
-| _イベント発生_    | _変更の通知_                                                                   |
+| イベント発生      | 変更の通知                                                                     |
 | `onEditDone`      | 更新された行を出力するために行更新で使用されます。                             |
 | `onFilterDone`    | 列およびフィルタリング式を出力するためにデータのフィルタリングで使用されます。 |
 | `onSortingDone`   | 列、方向、および並べ替え式を出力するためにデータの並べ替えで使用されます。     |
@@ -378,7 +383,7 @@ public ngOnInit(): void {
 
 <div class="divider--half"></div>
 
-#### 入力
+### 入力
 
 **IgxGridColumnComponent** で列を定義するために利用可能な入力:
 | 名前 | 型 | 説明 |

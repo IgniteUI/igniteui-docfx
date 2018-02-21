@@ -2,6 +2,7 @@
 title: Avatar コンポーネント
 _description: Ignite UI for Angular の Avatar コントロールは、プロファイル ボタンなどのアプリケーションのインスタンスに画像、マテリアル アイコン、またはイニシャルを追加できます。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Avatar コンポーネント, Angular Avatar コントロール
+_language: ja
 ---
 
 ##Avatar
@@ -11,8 +12,11 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 
 ### Avatar デモ
 
-<div class="sample-container" style="height:512px">
-    <iframe src='{environment:demosBaseUrl}/avatar' width="100%" height="100%" seamless frameBorder="0"></iframe>
+<div class="sample-container loading" style="height:512px">
+    <iframe id="avatar-sample-iframe" src='{environment:demosBaseUrl}/avatar' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="avatar-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
 

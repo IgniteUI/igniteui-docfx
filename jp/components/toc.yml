@@ -4,6 +4,8 @@
   href: grid.md
 - name: List View 
   href: list.md
+- name: Virtual For Directive
+  href: for_of.md
 - name: データ入力と表示
   header: true
 - name: Button 
@@ -14,10 +16,8 @@
   href: switch.md
 - name: Radio Button 
   href: radio_button.md
-- name: Label 
-  href: label.md
-- name: Input 
-  href: input.md
+- name: Label & Input
+  href: label_input.md
 - name: Badge 
   href: badge.md
 - name: Icon 
@@ -36,6 +36,8 @@
   href: scrollbar.md
 - name: Ripple 
   href: ripple.md
+- name: Toggle
+  href: toggle.md
 - name: メニュー
   header: true
 - name: Navigation Drawer 

@@ -2,15 +2,21 @@
 title: Toast コンポーネント
 _description: Ignite UI for Angular Toast コンポーネントは、アプリケーションで非対話型メッセージをユーザーに表示できます。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Toast コンポーネント, Angular Toast コントロール
+_language: ja
 ---
 
 ##Toast
+
 <p class="highlight">Toast コンポーネントはユーザーによって閉じることができない非対話型の情報および報告メッセージを表示できます。通知はページの下側、中央、または上側に表示できます。</p>
 <div class="divider"></div>
 
 ### Toast デモ
-<div class="sample-container" style="height: 928px">
-    <iframe frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/toast"></iframe>
+
+<div class="sample-container loading" style="height: 928px">
+    <iframe id="toast-sample-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/toast" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="toast-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
@@ -30,6 +36,7 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 Toast を表示するには `toast.show()` メソッドを使用します。
 
 Toast を非表示するには `toast.hide()` メソッドを使用します。
+
 <div class="divider--half"></div>
 
 ### 配置
@@ -44,6 +51,7 @@ Toast を非表示するには `toast.hide()` メソッドを使用します。
 ```
 
 Toast の位置を変更できます。例: `postion="IgxToastPosition.Top"`。
+
 <div class="divider--half"></div>
 
 ### イベント
@@ -64,4 +72,5 @@ onShowing イベントを処理できます。例: `(onShowing)="someFunc($event
 onShown イベントを処理できます。例: `(onShown)="someFunc($event)"`。
 onHiding イベントを処理できます。例: `(onHiding)="someFunc($event)"`。
 onHidden イベントを処理できます。例: `(onHidden)="someFunc($event)"`。
+
 <div class="divider--half"></div>
