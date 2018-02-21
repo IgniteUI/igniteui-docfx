@@ -4,7 +4,7 @@ _description: Using any template, display data within rows seamlessly and intuit
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular List View components, Angular List View controls
 ---
 
-##List View
+## List View
 
 <p class="highlight">The Ignite UI for Angular List component displays rows of items and supports one or more header items as well as search and filtering of list items. Each list item is completely templateable and will support any valid HTML or Angular component. </p>
 <div class="divider"></div>
@@ -24,7 +24,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 > Make sure you add it to your Angular project.
 > <br/> <br/>`$ npm install hammerjs @types/hammerjs`
 
-###Usage
+### Usage
 At its core the list component allows you to easily display a vertical list of items. The default styling of the items is done according to the single-line list specification as per the Material Design [**guidelines**](https://material.io/guidelines/components/lists.html).
 To get started with the Ignite UI for Angular List, let's first import the **IgxListModule** in our **app.module.ts** file:
 
@@ -42,7 +42,45 @@ import { IgxListModule } from 'igniteui-angular/main';
 export class AppModule {}
 ```
 
-Then in the template of our contacts component we can add the following code to get a simple list of items:
+Then in the template of our contacts component we can create our list, but what if currently (or at some point in the future) we have no items in it?
+In this case, the list provides us with a default template that is used when the list is empty.
+We can always provide our own template for the look of our empty list by simply using the `igxEmptyList` directive. In this case, the default template will not be used:
+
+```html
+<!--contacts.component.html-->
+
+<igx-list>
+    <ng-template igxEmptyList>
+        <p class="empty">No contacts! :(</p>
+    </ng-template>
+</igx-list>
+```
+
+And our style for the empty template:
+
+```css
+/* contacts.component.css */
+
+.empty {
+    color: rgba(0, 153, 255, 1);
+    font-size: 25px;
+    font-weight: 600;
+    text-shadow: 2px 1px 2px rgba(150, 150, 150, 1);
+}
+```
+
+If all went great, this is how our empty list should look like:
+
+<div class="sample-container loading" style="height: 100px">
+<iframe id="list-sample-5-iframe" src='{environment:demosBaseUrl}/list-sample-5' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-sample-5-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+
+#### Add List Items
+
+It's nice having a template for when the list is empty, but now let's add some items! We can add the following code to get a simple list of items:
 
 ```html
 <!--contacts.component.html-->
@@ -333,48 +371,55 @@ Finally, we need to apply the filtering pipe to our contacts data before we can 
 
 In this article we covered a lot of ground with the list component. We created a list of contact items. Used some additional Ignite UI for Angular components inside our list items, like avatars and icons. Created some custom item layout and styled it. Finally, we added list filtering. The list component has a few more APIs to explore, which are listed below.
 
-####Inputs
+#### Inputs
 The following inputs are available on the **igx-list** component:
 | Name | Type | Description |
 | :--- | :--- | :--- |
-| `emptyListImage` | String | Provide an image url to be used as placeholder when the list is empty. |
-| `emptyListMessage` | String | Provide an emtpy list message. |
-| `emptyListButtonText` | String | Customize the empty list button text. |
+| `allowLeftPanning` | Boolean | Determines whether the left panning of an item is allowed. |
+| `allowRightPanning` | Boolean | Determines whether the right panning of an item is allowed. |
+| `emptyListTemplate` | IgxEmptyListTemplateDirective | The custom template to be used when the list is empty. |
 
 <div class="divider"></div>
 
 The following inputs are available on the **igx-list-item** component:
 | Name | Type | Description |
 | :--- | :--- | :--- |
-| `isHeader` | Boolean | Sets the current list items as list header. |
+| `isHeader` | Boolean | Sets the current list item as list header. |
+| `hidden` | Boolean | Determines whether the item should be displayed. |
 
 <div class="divider"></div>
 
-####Outputs
+#### Outputs
 The following outputs are available on the **igx-list** component:
 | Name | Type | Description |
 | :--- | :--- | :--- |
-| `emptyListButtonClick` | EventEmitter | Emits an event with the current list when the Empty List Button is clicked. |
+| `onPanStateChange` | EventEmitter | Emits an event with the current list when pan gesture is executed on list item. |
+| `onLeftPan` | EventEmitter | Emits an event with the current list when left pan gesture is executed on list item. |
+| `onRightPan` | EventEmitter | Emits an event with the current list when right pan gesture is executed on list item. |
+| `onItemClicked` | EventEmitter | Emits an event with the current list when a list item has been clicked. |
 
 <div class="divider"></div>
 
-####Getters
-The following getters are available on the **igx-list** component:
+#### Properties
+The following properties are available on the **igx-list** component:
 | Name | Type | Description |
 | :--- | :--- | :--- |
-| `items` | IgxListItem | Returns an array of all list items excluding item headers. |
-| `headers` | IgxListItem | Returns an array of all list headers. |
+| `children` | QueryList | Returns a collection of all IListChild components: items and headers. |
+| `items` | IgxListItemComponent[] | Returns an array of all list items excluding item headers. |
+| `headers` | IgxListItemComponent[] | Returns an array of all list headers. |
 
 <div class="divider"></div>
 
-The following getters are available on the **igx-list-item** component:
+The following properties are available on the **igx-list-item** component:
 | Name | Type | Description |
 | :--- | :--- | :--- |
-| `index` | number | Retrieve the index of a list item. |
+| `index` | number | Retrieve the index of the list item. |
+| `panState` | IgxListPanState | Retrieve the pan state of the list item. |
+| `list` | IgxListComponent | Retrieve the list that is associated with the list item. |
 
 <div class="divider"></div>
 
-###Additional Resources
+### Additional Resources
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.
