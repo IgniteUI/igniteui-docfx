@@ -16,7 +16,7 @@ _language: ja
     <iframe id="scroll-sample-1" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/scroll" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="scroll-sample-1" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="scroll-sample-1" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
