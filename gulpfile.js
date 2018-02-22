@@ -10,14 +10,12 @@ const fs = require('fs');
 const env = require('dotenv').config();
 const environmentVariablesPreConfig = require('./post_processors/PostProcessors/EnvironmentVariables/preconfig.json');
 
+const LANG = argv.lang === undefined ? "en" : argv.lang;
 const DOCFX_BASE = {
     en: './en',
     jp: './jp'
 };
-const DOCFX_PATH =
-    argv.lang !== undefined
-        ? `${DOCFX_BASE[argv.lang]}`
-        : `${DOCFX_BASE['en']}`;
+const DOCFX_PATH =`${DOCFX_BASE[LANG]}`;
 const DOCFX_CONF = `${DOCFX_PATH}/docfx.json`;
 const DOCFX_TEMPLATE = path.join(__dirname, `./templates/ignite-ui-template`);
 const DOCFX_SITE = `${DOCFX_PATH}/_site`;
@@ -76,9 +74,8 @@ gulp.task('post-processor-configs', ['cleanup'], () => {
     }
 
     environmentVariablesConfig.variables =
-        environmentVariablesConfig.variables[
-            environmentVariablesConfig.environment
-        ];
+        environmentVariablesConfig.variables[LANG.toLowerCase().trim()][
+            environmentVariablesConfig.environment];
 
     if (!fs.existsSync(`${DOCFX_SITE}`)) {
         fs.mkdirSync(`${DOCFX_SITE}`);

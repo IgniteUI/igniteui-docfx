@@ -39,12 +39,6 @@ import { IgxIconModule } from 'igniteui-angular/main';
 })
 export class AppModule {}
 ```
-
-### Usage
-
-```html
-<igx-icon name=[..options] color=[..options] isActive=[..options]></igx-icon>
-```
 ### Examples
 
 Using `igx-icon` to set an `active` home icon with magenta `color`.
