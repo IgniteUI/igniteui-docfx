@@ -220,7 +220,9 @@ For more detailed explanation of what are **parts** in the template context, ple
 |   `selection`   | `string`                   | カレンダーの選択タイプを設定します。有効な値は `single` (デフォルト)、`multi`、および `range` です。                                                                                                           |
 |   `viewDate`    | `Date`                     | カレンダーを描画するときにデフォルト ビューで表示される年と月を設定します。デフォルト値は現在の年と月です。                                                                                                    |
 |     `value`     | `Date` または `Date[]`     | カレンダー ウィジェットの現在値を取得または設定します。複数選択および範囲選択は選択日付の配列を返します。                                                                                                      |
-| `formatOptions` | `Object`                   | 日付を書式設定するために使用される `locale` プロパティと渡される書式オプション。                                                                                                                               |
+| `formatOptions` | `Object` | The format options passed along with the `locale` property used for formatting the dates. The default values are { day: 'numeric', month: 'short', weekday: 'short', year: 'numeric' }. |
+|`formatViews`| `Object`| Controls whether the date parts in the different calendar views should be formatted according to the provided locale and formatOptions. defaults are { day: false, month: true, year: false }. |
+| `vertical` | `boolean` | Controls the layout of the calendar component. When vertical is set to true the calendar header will be rendered to the side of the calendar body.|
 
 #### 出力
 

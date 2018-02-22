@@ -215,8 +215,9 @@ When a day inside the current month is focused:
 | `selection` | `string` | Sets the type of selection in the calendar. Valid values are `single` (default), `multi` and `range` |
 | `viewDate` | `Date` | Sets the year/month that will be presented in the default view when the calendar renders. By default it is the current year/month.   |
 | `value` | `Date \| Date[]` | Gets/Sets the current value of the calendar widget. Both multi-selection and range selection return an array of selected dates. |
-| `formatOptions` | `Object` | The format options passed along with the `locale` property used for formatting the dates. |
-
+| `formatOptions` | `Object` | The format options passed along with the `locale` property used for formatting the dates. The default values are { day: 'numeric', month: 'short', weekday: 'short', year: 'numeric' }. |
+|`formatViews`| `Object`| Controls whether the date parts in the different calendar views should be formatted according to the provided locale and formatOptions. defaults are { day: false, month: true, year: false }. |
+| `vertical` | `boolean` | Controls the layout of the calendar component. When vertical is set to true the calendar header will be rendered to the side of the calendar body.|
 #### Outputs
 <div class="divider--half"></div>
 
