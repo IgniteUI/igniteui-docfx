@@ -51,7 +51,7 @@ import { IgxCalendarComponent } from 'igniteui-angular/main';
 > Consider using the [appropriate polyfills](https://github.com/andyearnshaw/Intl.js/) if your target platform does not support them.
 
 ### Selection
-Instantiating the **IgxCalendarComponent** is as easy as placing its selector element in the template. This will leave the calendar display the current month by default and run in single selection mode. We switch to any of the other selection modes - **multi** and **range**, by setting value to the **selection** property:
+Instantiating the **IgxCalendarComponent** is as easy as placing its selector element in the template. This will leave the calendar display the current month by default and run in single selection mode. We switch to any of the other selection modes - **multi** and **range**, by setting the **selection** property:
 ```html
 <!-- app.component.html -->
 <!-- Single selection mode -->
@@ -71,17 +71,17 @@ Notice that the calendar header is not rendered when the selection is either `mu
 
 ###Localization and formatting
 
-Due to their very nature, localization and formatting are essentials to any calendar. In the **IgxCalendarComponent** those are controlled and customized through the following properties - **locale**, **formatOptions**, **formatViews**:
+Due to their very nature, localization and formatting are essential to any calendar. In the **IgxCalendarComponent** those are controlled and customized through the following properties - **locale**, **formatOptions**, **formatViews**:
 
 | Name | Description |
 |:--:|:---|:---|
-| `locale` | Controls the locale used for formatting and displaying the dates in the calendar. The expected string value should be a [BCP 47 language tag](https://tools.ietf.org/html/rfc5646) and if not set defaults to en-EN. |
+| `locale` | Controls the locale used for formatting and displaying the dates in the calendar. The expected string value should be a [BCP 47 language tag](https://tools.ietf.org/html/rfc5646) and if not set defaults to "en". |
 | `formatOptions` | Controls the date-time components to use in formatted output, and their desired representations ([Аdditional information](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat)). The default values are { day: 'numeric', month: 'short', weekday: 'short', year: 'numeric' }. |
 | `formatViews` | Controls whether the date parts in the different calendar views should be formatted according to the provided locale and formatOptions. defaults are { day: false, month: true, year: false }. For the properties set to false, the views will display the corresponding `Date.getFullYear()` \ `Date.getDate()` \  `Date.getMonth()` value. |
 <br>
 Let's go ahead and try those along with other customizations from the **IgxCalendarComponent** API. Say we are having visitors on our page coming from countries from EFTA (European Free Trade Association) countries, so we need to display the calendar in the corresponding culture. First thing we need to set is the **weekstart**, which controls the starting day of the week. It defaults to 0, which corresponds to Sunday, so we set a value of 1.
 
-In the markup below we are also binding the **formatOptions** and **formatViews** properties to customize the display formatting. Finally we are binding the **locale** property to a value, based on users location choice:
+In the markup below we are also binding the **formatOptions** and **formatViews** properties to customize the display formatting. Finally we are binding the **locale** property to a value, based on user's location choice:
 
 ```html
 <!-- app.component.html -->
@@ -93,7 +93,7 @@ In the markup below we are also binding the **formatOptions** and **formatViews*
 </igx-calendar>
 <select id="locations" (change)="changeLocale($event)">...</select>
 ```
-All properties values are set in the AppCоmponent file:
+All property values are set in the AppCоmponent file:
 
 ```typescript
 // app.component.ts
@@ -166,7 +166,7 @@ We have seen how to make use of the **IgxCalendarComponents** API (properties, e
 To do that we need to decorate a ng-template inside the calendar with **igxCalendarHeader** or **igxCalendarSubheader** directive and use the context returned to customize the way the date is displayed.
 The template decorated with the **igxCalendarHeader** directive is rendered only when the calendar selection is set to single. The **igxCalendarSubheader** is available in all selection modes.
 
-Our example slightly modify the default template and will make the header display the full date and modify the subheader to include the weekday:
+In our example we slightly modify the default template and will make the header display the full date and modify the subheader to include the weekday:
 
 ```html
 <!-- app.component.html-->
