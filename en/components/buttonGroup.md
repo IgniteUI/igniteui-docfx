@@ -42,8 +42,29 @@ Use `igx-ButtonGroup` to organize buttons into an for Angular styled button grou
 ```typescript
 //sample.component.ts
 import { ButtonGroupAlignment } from "igniteui-angular/main";
-
+...
+public alignment = ButtonGroupAlignment.vertical;
+...
+ public ngOnInit() {
+    this.cities = [
+      new Button({
+          label: "Sofia"
+      }),
+      new Button({
+          label: "London"
+      }),
+      new Button({
+          label: "New York",
+          selected: true
+      }),
+      new Button({
+          label: "Tokyo"
+      })
+  ];
+  }
+...
 ```
+
 ```html
 <igx-buttongroup [multiSelection]="false" [values]="cities" [alignment]="alignment">
 </igx-buttongroup>
@@ -58,11 +79,37 @@ import { ButtonGroupAlignment } from "igniteui-angular/main";
 
 
 While you can use Exclusive or Multiple selection you can also set a button to be togglable and disabled. In the folowing example the leftmost button is selected, but not togglable. The rightmost is disabled.
+```typescript
+//sample.component.ts
+...
+public ngOnInit() {
+    this.alignOptions = [
+      new Button({
+          icon: "format_align_left",
+          selected: true,
+          togglable: false
+      }),
+      new Button({
+          icon: "format_align_center",
+      }),
+      new Button({
+          icon: "format_align_right",
+          selected: true
+      }),
+      new Button({
+          disabled: true,
+          icon: "format_align_justify",
+      })
+  ];
+  }
+...
+
+```
 ```html
-<igx-buttongroup [multiSelection]="false" [values]="cities" [alignment]="alignment">
+<igx-buttongroup [multiSelection]="true" [values]="alignOptions">
 </igx-buttongroup>
 ```
-You can also make disabled button selected and it will be with lighter color.
+
 <div class="sample-container" style="height: 100px">
     <iframe id="buttonGroup-sample-3-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/button-group-sample-3" onload="onSampleIframeContentLoaded(this);">
 </div>
@@ -76,9 +123,9 @@ You can also make disabled button selected and it will be with lighter color.
 The following inputs are available on the **igx-ButtonGroup** component:
 | Name   |      Type      |  Description |
 |:----------|:-------------:|:------|
-| `multiSelection` |  boolean | Enables selecting multiple buttons. Value by default is false.  |
-| `alignment` |    enum   |   Set the button group alignment. Available enum members are ButtonGroupAlignment.horizontal (default) or ButtonGroupAlignment.vertical. |
-| `disabled` | boolean | Disables the igxButtounGroup component. False by default. |
+| `multiSelection` |  boolean | Enables selecting multiple buttons. By default, `multiselection` is false.
+| `alignment` |    enum   |   Sets the button group alignment. Available options are `ButtonGroupAlignment.horizontal` (default) and `ButtonGroupAlignment.vertical.` |
+| `disabled` | boolean | Disables the igxButtounGroup component. By default, it is false. |
 
 #### Outputs
 A list of the events emitted by **igx-ButtonGroup**
