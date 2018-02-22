@@ -9,7 +9,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <div class="divider"></div>
 
 ### Linear Progress Demo
-<div class="sample-container loading" style="height:650px">
+<div class="sample-container loading" style="height:500px">
     <iframe id="progressbar-sample-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/linear-progressbar" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -82,7 +82,7 @@ than in the second where is set to 100(default value). So let's see the code...
   }
 ```
 If all went well, you should see something like the following in your browser:
-<div class="sample-container loading" style="height:650px">
+<div class="sample-container loading" style="height:500px">
     <iframe id="linear-progressbar-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/linear-progressbar" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -147,7 +147,7 @@ And now let's enhance our example and create a different types of loading bars, 
   }
 ```
 So if we set up everything correct, let's see what happened in the browser:
-<div class="sample-container loading" style="height:650px">
+<div class="sample-container loading" style="height:550px">
     <iframe id="linear-sample-1-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/linear-progressbar-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
