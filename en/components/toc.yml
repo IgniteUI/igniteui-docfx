@@ -8,6 +8,8 @@
   header: true
 - name: Button 
   href: button.md
+- name: Button Group
+  href: buttonGroup.md
 - name: Checkbox 
   href: checkbox.md
 - name: Switch 
@@ -24,6 +26,8 @@
   href: linear_progress.md
 - name: Circular Progress 
   href: circular_progress.md
+- name: Virtual For Directive
+  href: for_of.md
 - name: Interactions
   header: true
 - name: Dialog Windows 

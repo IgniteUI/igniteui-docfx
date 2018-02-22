@@ -4,14 +4,27 @@
     "fileExtensionsToProcess": ["html"],
 
     "variables": {
-        "development": {
-            "demosBaseUrl": "http://localhost:4200"
+        "en": {
+            "development": {
+                "demosBaseUrl": "http://localhost:4200"
+            },
+            "staging": {
+                "demosBaseUrl": "https://staging.infragistics.local/angular-demos"
+            },
+            "production": {
+                "demosBaseUrl": "https://www.infragistics.com/angular-demos"
+            }
         },
-        "staging": {
-            "demosBaseUrl": "https://staging.infragistics.local/angular-demos"
-        },
-        "production": {
-            "demosBaseUrl": "https://www.infragistics.com/angular-demos"
+        "jp": {
+            "development": {
+                "demosBaseUrl": "http://localhost:4200"
+            },
+            "staging": {
+                "demosBaseUrl": "https://jp.staging.infragistics.local/angular-demos"
+            },
+            "production": {
+                "demosBaseUrl": "https://jp.infragistics.com/angular-demos"
+            }
         }
     },
 

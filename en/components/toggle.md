@@ -1,6 +1,6 @@
 ---
 title: Toggle Directive
-_description: Using any content wrapped into an element which implements the toggle directive become a box you can open and close intuitively through a native Angular framework with Ingite UI for Angular Toggle directive.
+_description: Using any content wrapped into an element which implements the toggle directive become a box you can open and close intuitively through a native Angular framework with Ignite UI for Angular Toggle directive.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Toggle directives, Angular Toggle controls
 ---
 
