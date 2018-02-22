@@ -137,7 +137,7 @@ Lets build on top of that sample a bit. We will require the user to enter a date
 </igx-calendar>
 ```
 
-The value passed on in the **onSelection** event is the collection of dates selected, so we can read its length to base our logic upon it. If we alert the user for the invalid selection, we also reset the selection to contain only the first date from the range using the **selectDate** method:
+The value passed in the **onSelection** event is the collection of dates selected, so we can read its length to base our logic upon it. If we alert the user for the invalid selection, we also reset the selection to contain only the first date from the range using the **selectDate** method:
 
 ```typescript
 // app.component.ts
@@ -165,7 +165,7 @@ We have seen how to make use of the **IgxCalendarComponents** API (properties, e
 To do that we need to decorate a ng-template inside the calendar with **igxCalendarHeader** or **igxCalendarSubheader** directive and use the context returned to customize the way the date is displayed.
 The template decorated with the **igxCalendarHeader** directive is rendered only when the calendar selection is set to single. The **igxCalendarSubheader** is available in all selection modes.
 
-In our example we slightly modify the default template the default template and will make the header display the full date and modify the subheader to include the weekday:
+In our example we slightly modify the default template and will make the header display the full date and modify the subheader to include the weekday:
 
 ```html
 <!-- app.component.html-->
@@ -180,7 +180,7 @@ In our example we slightly modify the default template the default template and 
     </ng-template>
 </igx-calendar>  
 ```
-For more detailed explanation of what are **parts** in the template context, please refer to **TemplateContext** under the [API](http://localhost:3000/components/calendar.html#template-context) section. Let's see how the templated calendar looks like:
+For more detailed explanation of what **parts** are the template context, please refer to **TemplateContext** under the [API](http://localhost:3000/components/calendar.html#template-context) section. Let's see what the templated calendar looks like:
 
 <div class="sample-container" style="height: 500px">
     <iframe id="calendar-sample-4-iframe" src='{environment:demosBaseUrl}/calendar-sample-4' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
