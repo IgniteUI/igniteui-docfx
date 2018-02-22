@@ -9,7 +9,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <div class="divider"></div>
 
 ### Navbar Demo
-<div class="sample-container loading" style="height: 930px">
+<div class="sample-container loading" style="height: 530px">
     <iframe id="nav-bar-sample-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/navbar" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -17,37 +17,89 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 </div>
 <div class="divider--half"></div>
 
-### Usage
-```html
-<igx-navbar title="Settings"></igx-navbar>
+###Usage
+To get started with the Ignite UI for Angular NavBar component, let's first import the **IgxNavbarModule** in our **app.module.ts** file:
+
+```typescript
+// app.module.ts
+
+...
+import { IgxNavbarModule } from 'igniteui-angular/main';
+
+@NgModule({
+    ...
+    imports: [..., IgxNavbarModule],
+    ...
+})
+export class AppModule {}
 ```
 
-You can be more descriptive and set title `title="User settings"`.
-
-#### With back button
-<div class="divider--half"></div>
+Then in the template of our component we can add the following code to show a basic navbar with a title only:
 
 ```html
-<igx-navbar title="Settings"
-            actionButtonIcon="arrow_back"
-            [isActionButtonVisible]="canGoBack()"
-            (onAction)="navigateBack()">
+<!--navbar.component.html-->
+
+<igx-navbar title="Sample App">
 </igx-navbar>
 ```
 
-You can set the title of the navbar by setting `title="Settings"`;
+####With back button
+Good, we know which application we have opened. Now, let's see what capabilities it offers us by exploring its menu. To achieve this we will show the action button and make it use a menu icon as follows:
 
-You can set the action button icon of the navbar by setting `actionButtonIcon="arrow_back"`;
+```html
+<!--navbar.component.html-->
 
-You can set the visible state of the navbar by setting `isActionButtonVisible="true"`;
+<igx-navbar title="Sample App"
+    actionButtonIcon="menu"
+    [isActionButtonVisible]="true">
+</igx-navbar>
+```
 
-You can set the action of the navbar button by setting `(onAction)="executeAction()"`;
+If all went well, you should see the following in your browser:
+<div class="sample-container loading" style="height: 330px">
+    <iframe id="nav-bar-sample-1-iframe" frameborder="0" seamless width="100%" height="100%" src='{environment:demosBaseUrl}/navbar-sample-1' onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="nav-bar-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
 <div class="divider--half"></div>
+
+#### Adding Icons
+
+Now that our app has its menu in place, we can make it a little more functional by adding options for searching, favorites and more. To do that let's grab the [**IgxIcon**](https://www.infragistics.com/products/ignite-ui-angular/angular/components/icon.html) module and import it in our **app.module.ts** file.
+```typescript
+// app.module.ts
+
+...
+import {
+    IgxNavbarModule,
+    IgxIconModule
+} from 'igniteui-angular/main';
+
+@NgModule({
+    ...
+    imports: [..., IgxIconModule],
+})
+export class AppModule {}
+```
+
+Next, we need to update our template with an icon for each of the options we want our app to provide:
+
+```html
+<!--navbar.component.html-->
+
+ <igx-navbar title="Sample App" actionButtonIcon="menu">
+    <igx-icon name="search"></igx-icon>
+    <igx-icon name="favorite"></igx-icon>
+    <igx-icon name="more_vert"></igx-icon>
+</igx-navbar>
+```
+
 <div class="divider"></div>
 
 ### API Summary
 
-In this article we covered a lot of ground with the list component. We created a list of contact items. Used some additional Ignite UI for Angular components inside our list items, like avatars and icons. Created some custom item layout and styled it. Finally, we added list filtering. The list component has a few more APIs to explore, which are listed below.
+In this article we show a few scenarios where the navbar component may come in handy. The APIs, we used to achieve them, are listed below.
 
 ####Inputs
 The following inputs are available on the **igx-navbar** component:
