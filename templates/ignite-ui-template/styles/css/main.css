@@ -188,11 +188,11 @@ sub {
 .toc .nav > li.in > .expand-stub::before,
 .toc .nav > li.in.active > .expand-stub::before,
 .toc .nav > li.filtered > .expand-stub::before {
-  content: '-'; }
+  content: "-"; }
 
 .toc .nav > li > .expand-stub::before,
 .toc .nav > li.active > .expand-stub::before {
-  content: '+'; }
+  content: "+"; }
 
 .toc .nav > li.filtered > ul,
 .toc .nav > li.in > ul {
@@ -264,11 +264,11 @@ sub {
 .toc .nav > li.in > .expand-stub::before,
 .toc .nav > li.in.active > .expand-stub::before,
 .toc .nav > li.filtered > .expand-stub::before {
-  content: '-'; }
+  content: "-"; }
 
 .toc .nav > li > .expand-stub::before,
 .toc .nav > li.active > .expand-stub::before {
-  content: '+'; }
+  content: "+"; }
 
 .toc .nav > li.filtered > ul,
 .toc .nav > li.in > ul {
@@ -327,7 +327,7 @@ sub {
     font-weight: 400 !important; }
   .sidenav__header::after {
     position: absolute;
-    content: '';
+    content: "";
     left: 15px;
     bottom: 0;
     height: 1px;
@@ -347,22 +347,48 @@ sub {
   background-color: #f1f1f1; }
   .toc .nav li.active::before {
     position: absolute;
-    content: '';
+    content: "";
     width: 2px;
     top: 0;
     bottom: 0;
     left: 0;
     background-color: #731963; }
   .toc .nav li.active a {
-    color: #585858;
+    color: #000;
     font-weight: 500; }
   .toc .nav li.active a:hover {
+    color: #585858; }
+
+.toc .nav .nav.level2 {
+  margin: 0;
+  padding: 0 16px; }
+  .toc .nav .nav.level2 li a {
+    font-weight: 400;
+    color: #666; }
+  .toc .nav .nav.level2 li a:hover {
+    color: #4d4d4d; }
+  .toc .nav .nav.level2 > li::before {
+    position: absolute;
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.12);
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%); }
+  .toc .nav .nav.level2 > li:hover::before {
+    background: rgba(0, 0, 0, 0.42); }
+  .toc .nav .nav.level2 > li.active a {
+    font-weight: 500;
     color: #000; }
+  .toc .nav .nav.level2 > li.active::before {
+    background: rgba(0, 0, 0, 0.7); }
 
 @media only screen and (min-width: 992px) {
   .toc::after {
     position: absolute;
-    content: '';
+    content: "";
     top: 0;
     right: 0;
     bottom: 0;
@@ -675,6 +701,7 @@ a.disable:hover {
   text-transform: uppercase;
   background: #731963;
   padding: 8px 16px;
+  margin: 24px 0;
   outline-style: none;
   -webkit-box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.26), 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.08);
           box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.26), 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.08);
@@ -685,7 +712,7 @@ a.disable:hover {
     -webkit-box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.26), 0 8px 10px 1px rgba(0, 0, 0, 0.12), 0 3px 14px 2px rgba(0, 0, 0, 0.08);
             box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.26), 0 8px 10px 1px rgba(0, 0, 0, 0.12), 0 3px 14px 2px rgba(0, 0, 0, 0.08); }
   .stackblitz-btn::before {
-    content: '';
+    content: "";
     display: inline-block;
     width: 28px;
     height: 28px;
