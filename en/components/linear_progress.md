@@ -120,8 +120,10 @@ And now let's enhance our example and create a different types of loading bars, 
 ```typescript
   @ViewChildren(IgxLinearProgressBarComponent, { read: IgxLinearProgressBarComponent })
   public linearBars: QueryList<IgxLinearProgressBarComponent>;
+
   public disable = false;
   public interval: any;
+
   public updateValue() {
     this.disable = true;
     this.linearBars.map((bar) => bar.value += this.randomIntFromInterval(1, 3));
@@ -131,6 +133,7 @@ And now let's enhance our example and create a different types of loading bars, 
     this.interval = clearInterval(this.interval);
     }
   }
+
   public tick() {
     if (this.interval) {
         this.interval = clearInterval(this.interval);
@@ -139,9 +142,11 @@ And now let's enhance our example and create a different types of loading bars, 
     }
     this.interval = setInterval(this.updateValue.bind(this), 60);
   }
+
   public reset() {
     this.linearBars.toArray().forEach((bar) => bar.value = 0);
   }
+  
   private randomIntFromInterval(min: number, max: number) {
       return Math.floor(Math.random() * (max - min + 1) + min);
   }
