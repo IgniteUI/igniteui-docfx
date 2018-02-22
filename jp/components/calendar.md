@@ -37,7 +37,6 @@ import { IgxCalendarModule } from 'igniteui-angular/main';
 export class AppModule {}
 ```
 You will usually also import the **IgxCalendarComponent** in the AppComponent file (or your editor will auto-import them for you) when declaring types that are part of the calendar API:
-.
 
 ```typescript
 import { IgxCalendarComponent } from 'igniteui-angular/main';
