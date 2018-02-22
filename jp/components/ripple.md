@@ -7,48 +7,112 @@ _language: ja
 
 ## Ripple
 
-<p class="highlight">Ignite UI for Angular Ripple ディレクティブを使用すると、入力の受け取りが構成されていない領域にクリックまたはタッチした場合にリップル アニメーション エフェクトのフィードバックを作成できます。タッチまたはマウス クリックの応答としてアニメーションを再生する相対的な位置を持つ要素を定義します。</p>
+<p class="highlight">Ignite UI for Angular Ripple ディレクティブを使用すると、入力の受け取りが構成されていない領域にクリックまたはタッチした場合にリップル アニメーション エフェクトのフィードバックを作成できます。タッチまたはマウス クリックの応答としてアニメーションを再生する相対的な位置を持つ要素にこのディレクティブを設定します。</p>
 <div class="divider"></div>
 
 ### Ripple デモ
 
-<div class="sample-container loading" style="height: 1192px">
-    <iframe id="buttons-sample-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/buttons" onload="onSampleIframeContentLoaded(this);">
+<div class="sample-container loading" style="height: 558px">
+    <iframe id="ripple-sample-1-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/ripple-sample-1" onload="onSampleIframeContentLoaded(this);">
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="buttons-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="ripple-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
+### 依存関係
+
+Ripple ディレクティブが `NgModule` としてエクスポートされるため、アプリケーションで `AppModule` に _IgxRippleModule_ をインポートする必要があります。
+
+```typescript
+// app.module.ts
+
+import { IgxRippleModule } from 'igniteui-angular/main';
+
+@NgModule({
+    imports: [
+        ...
+        IgxRippleModule,
+        ...
+    ]
+})
+export class AppModule {}
+```
+
 ### 使用方法
+#### リップル エフェクトの追加
+
+`igxRipple` を使用して指定した要素にリップル効果を追加します。デフォルト色のリップル エフェクトを追加します。
 
 ```html
-<target-element igxRipple [...options]>クリック</target-element>
+<button igxButton="raised" igxRipple>Click Me</button>
 ```
 
-<div class="divider--half"></div>
+<div class="sample-container loading" style="height: 68px">
+    <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/ripple-sample-5" onload="onSampleIframeContentLoaded(this);">
+</div>
 
-### コード例
+#### カスタム色
 
-`igxRippleTarget` を使用して複雑な要素内の特定の要素にリップル エフェクトをアタッチします。
+`igxRipple` でリップル色を設定できます。このサンプルでは、リップルに白色を設定します。
 
 ```html
-<igx-list>
-    <igx-list-item igxRipple igxRipplTarget=".igx-list__item" *ngFor="let item of navItems">
-        {{ item.text }}
-    </igx-list-item>
-</igx-list>
+<button igxButton="raised" igxRipple="white">White</button>
 ```
 
-カスタム色を使用する中央リップル エフェクトを設定します。
+<div class="sample-container loading" style="height: 68px">
+    <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/ripple-sample-6" onload="onSampleIframeContentLoaded(this);">
+</div>
+
+#### 中央揃えのリップル エフェクト
+
+リップル エフェクトはクリック イベントの位置から開始します。この動作で要素の中点を原点に変更するには、`igxRippleCentered` を使用できます。
 
 ```html
-<span igxButton="raised" igxRipple="#e41c77" igxRippleCentered="true">
-    <i class="material-icons">edit</i>
-</span>
+<button igxButton="raised" igxRipple="white" igxRippleCentered="true">Centered</button>
 ```
 
-`igxRipple` は Web Animation API を使用し、[サポートされるブラウザー](http://caniuse.com/#feat=web-animation)でネイティブに実行します。その他のブラウザーのために `web-animations.min.js` [ポリフィル](https://github.com/web-animations/web-animations-js)を使用できます。
+<div class="sample-container loading" style="height: 68px">
+    <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/ripple-sample-3" onload="onSampleIframeContentLoaded(this);">
+</div>
+
+#### リップルの対象要素
+
+`igxRippleTarget` を使用して親要素内の特定の要素にリップル エフェクトをアタッチします。
+
+```html
+<div class="parent-div" igxRipple="blue" igxRippleTarget=".child-div" igxRippleCentered="true">
+  Parent Div
+  <div class="child-div">
+    Child Div
+  </div>
+</div>
+```
+
+親 div または子 div をクリックすると、リップル エフェクトは子 div 内のみに表示されます。子 div の要素を **relative** に設定する必要があります。
+
+<div class="sample-container loading" style="height: 168px">
+    <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/ripple-sample-2" onload="onSampleIframeContentLoaded(this);">
+</div>
+
+#### リップルの期間
+
+`igxRippleDuration` を使用するとリップル アニメーションの期間を変更できます。デフォルト値は 600 ミリ秒です。このサンプルで `igxRippleDuration` は 2000 ミリ秒に設定されます。
+
+```html
+<div class="ripple-sample dark" [igxRippleDuration]=2000 igxRipple="white">
+  <p style="margin-bottom:0">Long Ripple Animation</p>
+</div>
+```
+
+<div class="sample-container loading" style="height: 148px">
+    <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/ripple-sample-4" onload="onSampleIframeContentLoaded(this);">
+</div>
+
+`igxRipple` は Web Animation API を使用し、[サポートされるブラウザー](http://caniuse.com/#feat=web-animation)でネイティブに実行します。その他のブラウザーで `web-animations.min.js` [ポリフィル](https://github.com/web-animations/web-animations-js)を使用します。
+
+> [!NOTE]
+> リップル アニメーションで相対的な位置を持つ要素を使用します。また、`igxRippleTarget` を使用して子要素を対象にすることもできます。
 
 <div class="divider--half"></div>
 
@@ -62,3 +126,11 @@ _language: ja
 | `igxRippleDuration` | number  | リップル アニメーションの期間。デフォルト値は 600 ミリ秒です。                                                                            |
 
 <div class="divider--half"></div>
+
+### 追加のリソース
+
+<div class="divider--half"></div>
+是非コミュニティに参加してください。
+
+* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
