@@ -248,7 +248,7 @@ export class LinearProgressbarSample2Component implements OnInit {
 }
 ```
 
-And now let's to see it in the browser:
+And now let's see it in the browser:
 
 <div class="sample-container loading" style="height:700px">
     <iframe id="linear-sample-2-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/linear-progressbar-sample-2" onload="onSampleIframeContentLoaded(this);"></iframe>
