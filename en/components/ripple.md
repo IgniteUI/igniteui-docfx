@@ -84,8 +84,8 @@ Notice that if you click on the parent or the child divs the ripple effect will 
 #### Ripple Duration
 Use `igxRippleDuration` to change the duration of the ripple animation. The default is 600 miliseconds. In this sample the `igxRippleDuration` is set to 2000 miliseconds.
 ```html
-<div class="ripple-sample dark" [igxRippleDuration]=2000 igxRipple="white">
-  <p style="margin-bottom:0">Long Ripple Animation</p>
+<div [igxRippleDuration]=2000 igxRipple="white">
+  <p>Long Ripple Animation</p>
 </div>
 ```
 <div class="sample-container loading" style="height: 148px">
