@@ -44,9 +44,7 @@ import { IgxListModule } from 'igniteui-angular/main';
 export class AppModule {}
 ```
 
-Then in the template of our contacts component we can create our list, but what if currently (or at some point in the future) we have no items in it?
-In this case, the list provides us with a default template that is used when the list is empty.
-We can always provide our own template for the look of our empty list by simply using the `igxEmptyList` directive. In this case, the default template will not be used:
+連絡先コンポーネントのテンプレートでリストを作成できます。項目がない場合は、空のリストのデフォルト テンプレートを使用できます。`igxEmptyList` ディレクティブを使用して空のリストの外観をカスタマイズするためにカスタム テンプレートを設定できます。この場合、デフォルト テンプレートは使用されません。
 
 ```html
 <!--contacts.component.html-->
@@ -58,7 +56,7 @@ We can always provide our own template for the look of our empty list by simply 
 </igx-list>
 ```
 
-And our style for the empty template:
+空のテンプレートのスタイル:
 
 ```css
 /* contacts.component.css */
@@ -71,18 +69,18 @@ And our style for the empty template:
 }
 ```
 
-If all went great, this is how our empty list should look like:
+空のリストは以下のようになります:
 
 <div class="sample-container loading" style="height: 100px">
 <iframe id="list-sample-5-iframe" src='{environment:demosBaseUrl}/list-sample-5' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-sample-5-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-sample-5-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
-#### Add List Items
+#### リスト項目の追加
 
-It's nice having a template for when the list is empty, but now let's add some items! We can add the following code to get a simple list of items:
+リストが空の場合にテンプレートは便利ですが、次は項目を追加します。以下のコードを追加すると項目の簡易なリストを作成できます。
 
 ```html
 <!--contacts.component.html-->
@@ -374,9 +372,9 @@ toggleFavorite(item: IgxListItem) {
 以下の入力は **igx-list** コンポーネントで利用できます。
 | 名前 | 型 | 説明 |
 | :--- | :--- | :--- |
-| `allowLeftPanning` | Boolean | Determines whether the left panning of an item is allowed. |
-| `allowRightPanning` | Boolean | Determines whether the right panning of an item is allowed. |
-| `emptyListTemplate` | IgxEmptyListTemplateDirective | The custom template to be used when the list is empty. |
+| `allowLeftPanning` | Boolean | 項目の左パンニングが許可されるかどうかを決定します。 |
+| `allowRightPanning` | Boolean | 項目の右パンニングが許可されるかどうかを決定します。 |
+| `emptyListTemplate` | IgxEmptyListTemplateDirective | リストが空の場合に使用するカスタム テンプレート。 |
 
 <div class="divider"></div>
 
@@ -384,7 +382,7 @@ toggleFavorite(item: IgxListItem) {
 | 名前 | 型 | 説明 |
 | :--- | :--- | :--- |
 | `isHeader` | Boolean | 現在のリスト項目をリスト ヘッダーに設定します。 |
-| `hidden` | Boolean | Determines whether the item should be displayed. |
+| `hidden` | Boolean | 項目が表示されるかどうかを決定します。 |
 
 <div class="divider"></div>
 
@@ -393,30 +391,32 @@ toggleFavorite(item: IgxListItem) {
 以下の出力は **igx-list** コンポーネントで利用できます。
 | 名前 | 型 | 説明 |
 | :--- | :--- | :--- |
-| `onPanStateChange` | EventEmitter | Emits an event with the current list when pan gesture is executed on list item. |
-| `onLeftPan` | EventEmitter | Emits an event with the current list when left pan gesture is executed on list item. |
-| `onRightPan` | EventEmitter | Emits an event with the current list when right pan gesture is executed on list item. |
-| `onItemClicked` | EventEmitter | Emits an event with the current list when a list item has been clicked. |
+| `onPanStateChange` | EventEmitter | パンニング ジェスチャがリスト項目に実行されたときに現在のリストを含むイベントを発生します。 |
+| `onLeftPan` | EventEmitter | 左パンニング ジェスチャがリスト項目に実行されたときに現在のリストを含むイベントを発生します。 |
+| `onRightPan` | EventEmitter | 右パンニング ジェスチャがリスト項目に実行されたときに現在のリストを含むイベントを発生します。 |
+| `onItemClicked` | EventEmitter | リスト項目がクリックされたときに現在のリストを含むイベントを発生します。 |
 
 <div class="divider"></div>
 
-#### Properties
+#### プロパティ
 
-The following properties are available on the **igx-list** component:
+以下のプロパティは **igx-list** コンポーネントで利用できます。
+
 | 名前 | 型 | 説明 |
 | :--- | :--- | :--- |
-| `children` | QueryList | Returns a collection of all IListChild components: items and headers. |
-| `items` | IgxListItemComponent[] | Returns an array of all list items excluding item headers. |
-| `headers` | IgxListItemComponent[] | Returns an array of all list headers. |
+| `children` | QueryList | 項目およびヘッダーのすべての IListChild コンポーネントのコレクションを返します。 |
+| `items` | IgxListItemComponent[] | 項目ヘッダーを含まないすべてのリスト項目の配列を返します。 |
+| `headers` | IgxListItemComponent[] | すべてのリスト ヘッダーの配列を返します。 |
 
 <div class="divider"></div>
 
-The following properties are available on the **igx-list-item** component:
+以下のプロパティは **igx-list-item** コンポーネントで利用できます。
+
 | 名前 | 型 | 説明 |
 | :--- | :--- | :--- |
-| `index` | number | Retrieve the index of the list item. |
-| `panState` | IgxListPanState | Retrieve the pan state of the list item. |
-| `list` | IgxListComponent | Retrieve the list that is associated with the list item. |
+| `index` | number | リスト項目のインデックスを取得します。 |
+| `panState` | IgxListPanState | リスト項目のパンニング状態を取得します。 |
+| `list` | IgxListComponent | リスト項目に関連付けられたリストを取得します。 |
 
 <div class="divider"></div>
 
