@@ -204,7 +204,7 @@ The mini variant is commonly used in a persistent setup, so we've set `pin` and 
 
 ### Item Styling
 
-The content of the Navigation Drawer can be anything provided by the template, however for scenarios using the standard list of navigation items the optional `igxDrawerItem` directive can be used style them. This will apply default styles and patterns to your items as well as the appropriate theme colors.
+The content of the Navigation Drawer can be anything provided by the template, however for scenarios using the standard list of navigation items the optional `igxDrawerItem` directive can be used to style them. This will apply default styles and patterns to your items as well as the appropriate theme colors.
 
 The directive has two `@Input` properties:
 - `active` to style an item as selected.
@@ -222,7 +222,7 @@ The directive is exported both from the main `IgxNavigationDrawerModule` and sep
 <div class="divider--half"></div>
 
 #### Example: Use default item styles with Angular Router
-To make use of the `igxDrawerItem` directive to style items normally the `active` input should be set, however in the case with routing that state is controlled externally.
+To make use of the `igxDrawerItem` directive to style items normally the `active` input should be set, however with routing that state is controlled externally.
 
 Take the following items defined in `app.component.ts` like:
 
@@ -278,7 +278,7 @@ This approach, of course, does not affect the actual directive active state and 
 #### Inputs
 | Name      | Type|  Description |
 |:----------|:----:|:------|
-| `id`| string | Unique identifier of the Grid. ID required to register with provided `IgxNavigationService` allow directives to target the control from other template files. |
+| `id`| string | Unique identifier of the Navigation Drawer. ID required to register with provided `IgxNavigationService` to allow directives to target the control from other template files. |
 | `position` | string | Position of the Navigation Drawer. Can be "left"(default) or "right". Only has effect when not pinned.|
 | `enableGestures`| boolean | Enables the use of touch gestures to manipulate the drawer - such as swipe/pan from edge to open, swipe toggle and pan drag. |
 | `isOpen` | boolean | State of the drawer. |
