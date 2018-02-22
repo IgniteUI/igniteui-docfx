@@ -52,7 +52,7 @@ With the dependencies imported, the Navigation Drawer can be defined in the app 
 </igx-nav-drawer>
 ```
 The content for the drawer should be provided via `<ng-template>` decorated with `igxDrawer` directive.
-While any content can be provided in the template, the `igxDrawerItem` directive (see [Item styling](#item-styling)) is available to apply out-of-the-box styling to items. The `igxRipple` directive completes the look and feel:
+While any content can be provided in the template, the `igxDrawerItem` directive (see [Item styling](#item-styling)) is available to apply out-of-the-box styling to items. The [`igxRipple`](ripple.html) directive completes the look and feel:
 ```html
 <!-- app.component.html -->
 <div class="content-wrap">
@@ -87,7 +87,6 @@ To accommodate for the drawer switching modes, a simple flexible wrapper around 
     width: 100%;
     height: 100%;
     display: flex;
-    flex-flow: row nowrap;
 }
 ```
 There are various ways to open and close the drawer. Input properties can be bound to app state, programatic access to the API in the component using a [`@ViewChild(IgxNavigationDrawerComponent)`](https://angular.io/api/core/ViewChild) reference or even in this case using the `#drawer` [template reference variable](https://angular.io/guide/template-syntax#ref-vars):
@@ -140,7 +139,7 @@ Here's how that would would look applied to the previous example:
 </div>
 ```
 ```css
-.main {
+.content-wrap {
     width: 100%;
 }
 ```
@@ -174,10 +173,9 @@ Alternatively, skipping using directives, manual styling can be applied similar 
 #### Mini variant
 With the mini variant the Navigation Drawer changes its width instead of closing.
 Most commonly used to maintain quick selection available on the side at all times, leaving just the icons.
+This variant is enabled simply by the presence of an alternative mini template decorated with `igxDrawerMini` directive.
 
-This variant is enabled simply by the presence of an alternative mini template marked with `igxDrawerMini`.
 The mini variant is commonly used in a persistent setup, so we've set `pin` and disabled the responsive threshold:
-
 ```html
 <igx-nav-drawer id="navigation" [pin]="true" [pinThreshold]="0">
   <ng-template igxDrawer>
@@ -223,8 +221,8 @@ The directive is exported both from the main `IgxNavigationDrawerModule` and sep
 
 <div class="divider--half"></div>
 
-### Example: Use default item styles with Angular Router
-To make use of the `igxDrawerItem` directive to style items normally the `active` input should be set, however if the state is controlled externally as is the case with routing.
+#### Example: Use default item styles with Angular Router
+To make use of the `igxDrawerItem` directive to style items normally the `active` input should be set, however in the case with routing that state is controlled externally.
 
 Take the following items defined in `app.component.ts` like:
 
