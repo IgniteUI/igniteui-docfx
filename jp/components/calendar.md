@@ -138,7 +138,7 @@ Lets build on top of that sample a bit. We will require the user to enter a date
 </igx-calendar>
 ```
 
-The value passed on in the **onSelection** event is the collection of dates selected, so we can read its length to base our logic upon it. If we alert the user for the invalid selection, we also reset the selection to contain only the first date from the range using the **selectDate** method:
+The value passed in the **onSelection** event is the collection of dates selected, so we can read its length to base our logic upon it. If we alert the user for the invalid selection, we also reset the selection to contain only the first date from the range using the **selectDate** method:
 
 ```typescript
 // app.component.ts
@@ -181,7 +181,7 @@ In our example we slightly modify the default template and will make the header 
     </ng-template>
 </igx-calendar>  
 ```
-For more detailed explanation of what are **parts** in the template context, please refer to **TemplateContext** under the [API](http://localhost:3000/components/calendar.html#template-context) section. Let's see how the templated calendar looks like:
+For more detailed explanation of what **parts** are the template context, please refer to **TemplateContext** under the [API](http://localhost:3000/components/calendar.html#template-context) section. Let's see what the templated calendar looks like:
 
 <div class="sample-container" style="height: 500px">
     <iframe id="calendar-sample-4-iframe" src='{environment:demosBaseUrl}/calendar-sample-4' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -220,7 +220,7 @@ For more detailed explanation of what are **parts** in the template context, ple
 |   `selection`   | `string`                   | カレンダーの選択タイプを設定します。有効な値は `single` (デフォルト)、`multi`、および `range` です。                                                                                                           |
 |   `viewDate`    | `Date`                     | カレンダーを描画するときにデフォルト ビューで表示される年と月を設定します。デフォルト値は現在の年と月です。                                                                                                    |
 |     `value`     | `Date` または `Date[]`     | カレンダー ウィジェットの現在値を取得または設定します。複数選択および範囲選択は選択日付の配列を返します。                                                                                                      |
-| `formatOptions` | `Object` | The format options passed along with the `locale` property used for formatting the dates. The default values are { day: 'numeric', month: 'short', weekday: 'short', year: 'numeric' }. |
+| `formatOptions` | `Object` | The format options passed along with the `locale` property used for formatting the dates. Defaults are { day: 'numeric', month: 'short', weekday: 'short', year: 'numeric' }. |
 |`formatViews`| `Object`| Controls whether the date parts in the different calendar views should be formatted according to the provided locale and formatOptions. defaults are { day: false, month: true, year: false }. |
 | `vertical` | `boolean` | Controls the layout of the calendar component. When vertical is set to true the calendar header will be rendered to the side of the calendar body.|
 
