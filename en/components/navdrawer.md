@@ -98,15 +98,15 @@ The Navigation Drawer also integrates with `igxNavigationService` and can be tar
 
 Let's replace the `<main>` in **app.component.html** with the following, adding [`igxButton`](button.html) and [Icon component](icon.html) to style our toggle:
 ```html
-  <main>
-    <span igxButton="icon" igxToggleAction="navigation" [closeOnOutsideClick]="false">
-      <igx-icon fontSet="material" name="menu"></igx-icon>
-    </span>
-  </main>
+<main>
+  <span igxButton="icon" igxToggleAction="navigation" [closeOnOutsideClick]="false">
+    <igx-icon fontSet="material" name="menu"></igx-icon>
+  </span>
+</main>
 ```
 
 And the final result should look like that:
-<div class="sample-container loading" style="height: 600px">
+<div class="sample-container loading" style="height: 500px">
     <iframe id="nav-drawer-simple-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/navigation-drawer-simple" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -126,14 +126,17 @@ The drawer can be pinned to take advantage of larger screens, placing it within 
 
 
 #### Pinned (persistent) setup
-Pin changes the position of the drawer from `fixed` to `relative` to put it on the same flow as content. Therefore, the app styling should account for such layout, especially if the drawer needs to be toggled in this mode. While there's more than one way to achieve such fluid layout (including programmatically), the easiest way is using `igxLayout` and `igxFlex` directives:
+Pin changes the position of the drawer from `fixed` to `relative` to put it on the same flow as content. Therefore, the app styling should account for such layout, especially if the drawer needs to be toggled in this mode. While there's more than one way to achieve such fluid layout (including programmatically), the easiest way is using `igxLayout` and `igxFlex` directives.
 
+Here's how that would would look applied to the previous example: 
 ```html
-<div class="main" igxLayout igxLayoutDir="row">
-    <igx-nav-drawer></igx-nav-drawer>
-    <div igxFlex>
+<div class="content-wrap" igxLayout igxLayoutDir="row">
+    <igx-nav-drawer id="navigation" #drawer [isOpen]="true">
+        <!-- template(s) -->
+    </igx-nav-drawer>
+    <main igxFlex>
         <!-- content here -->
-    </div>
+    </main>
 </div>
 ```
 ```css
@@ -141,6 +144,14 @@ Pin changes the position of the drawer from `fixed` to `relative` to put it on t
     width: 100%;
 }
 ```
+
+<div class="sample-container loading" style="height: 500px">
+    <iframe id="nav-drawer-pin-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/navigation-drawer-pin" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="nav-drawer-pin-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+
 The drawer applies `flex-basis` on its host element, allowing the rest of the content to take up the remaining width.
 Alternatively, skipping using directives, manual styling can be applied similar to:
 ```css
@@ -164,24 +175,33 @@ Alternatively, skipping using directives, manual styling can be applied similar 
 With the mini variant the Navigation Drawer changes its width instead of closing.
 Most commonly used to maintain quick selection available on the side at all times, leaving just the icons.
 
-This variant is enabled simply by the presence of an alternative mini template marked with `igxDrawerMini`, for example:
+This variant is enabled simply by the presence of an alternative mini template marked with `igxDrawerMini`.
+The mini variant is commonly used in a persistent setup, so we've set `pin` and disabled the responsive threshold:
 
 ```html
-<igx-nav-drawer id="navdrawer">
-    <ng-template igxDrawer>
-        <span igxDrawerItem [isHeader]="true"> Header </span>
-        <span igxDrawerItem igxRipple> 
-            <igx-icon fontSet="material" name="home"></igx-icon>
-            <span>Home</span>
-        </span>
-    </ng-template>
-    <ng-template igxDrawerMini>
-        <span igxDrawerItem igxRipple> 
-            <igx-icon fontSet="material" name="home"></igx-icon>
-        </span>
-    </ng-template>
+<igx-nav-drawer id="navigation" [pin]="true" [pinThreshold]="0">
+  <ng-template igxDrawer>
+      <span igxDrawerItem [isHeader]="true"> Header </span>
+      <span igxDrawerItem igxRipple> 
+          <igx-icon fontSet="material" name="home"></igx-icon>
+          <span>Home</span>
+      </span>
+  </ng-template>
+  <ng-template igxDrawerMini>
+      <span igxDrawerItem igxRipple> 
+          <igx-icon fontSet="material" name="home"></igx-icon>
+      </span>
+  </ng-template>
 </igx-nav-drawer>
 ```
+
+<div class="sample-container loading" style="height: 400px">
+    <iframe id="nav-drawer-mini-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/navigation-drawer-mini" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="nav-drawer-mini-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+
 <div class="divider--half"></div>
 
 ### Item Styling
