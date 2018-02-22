@@ -52,10 +52,18 @@ Notice that the **igx-circular-bar** emits `onProgressChanged` event that output
 
 ```html
 <section class="sample-content">
-    <h4 class="sample-title">Circular progress indicator</h4>
-    <div class="circular-samples circular-container">
-        <igx-circular-bar [value]="currentValue" [max]="100" [animate]="true" (onProgressChanged)="progresChanged($event)"></igx-circular-bar>
-    </div>
+    <article class="sample-column">
+      <h5>Text is hidden</h5>
+      <div class="circular-container">
+        <igx-circular-bar [value]="currentValue" [max]="100" [animate]="true" [textVisibility]="false" (onProgressChanged)="progresChanged($event)"></igx-circular-bar>
+      </div>
+    </article>
+    <article class="sample-column">
+      <h5>Text is displayed</h5>
+      <div class="circular-container">
+        <igx-circular-bar [value]="currentValue" [max]="100" [animate]="true" [textVisibility]="true" (onProgressChanged)="progresChanged($event)"></igx-circular-bar>
+      </div>
+     </article>
 </section>
 <div class="button-container">
     <p>Press the button to start updating the bar</p>
@@ -110,6 +118,7 @@ And now if we set up everything correct we should have the folllowing displayed 
 | `max` |  number | Set maximum value that can be passed. Default `max` value is 100. |
 | `value` |  number | Set value that indicates the completed bar position. |
 | `animate` |  boolean | animation on progress bar. |
+| `textVisibility` | boolean | Set the text to be visible. By default is set to `true`. |
 <div class="divider--half"></div>
 
 ### Methods
