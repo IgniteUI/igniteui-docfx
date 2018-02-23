@@ -10,7 +10,6 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 `igxForOf` is now available as an alternative to `ngForOf` for templating large amounts of data. The `igxForOf` uses virtualization technology behind the scenes to optimize DOM rendering and memory consumption. Virtualization technology works similar to Paging by slicing the data into smaller chucks which are swapped from a container viewport while the user scrolls the data horizontally/vertically. The difference with the Paging is that virtualization mimics the natural behavior of the scrollbar.
 The directive is creating scrollable containers and renders small chunks of the data. Is is used inside `igx-grid` and it can be used to build virtual `igx-list`.
 </p>
-<div class="divider"></div>
 
 ### igxFor Demo
 
@@ -19,7 +18,6 @@ The directive is creating scrollable containers and renders small chunks of the 
 </div>
 <br/>
 <!--<button data-localize="stackblitz" class="stackblitz-btn">view on stackblitz</button> -->
-<div class="divider--half"></div>
 
 ### Dependencies
 
@@ -57,7 +55,7 @@ The **data** property is an array that provides the virtualized data.
 
 
 The directive can be used to virtualize the data in vertical, horizontal or both directions.
-#### Vertical virtualization
+### Vertical virtualization
 
 ```html
 <table style='height:500px;'>
@@ -71,7 +69,7 @@ The directive can be used to virtualize the data in vertical, horizontal or both
 </table>
 ```
 
-#### Horizontal virtualization
+### Horizontal virtualization
 
 ```html
 <table> 
@@ -88,7 +86,7 @@ The directive can be used to virtualize the data in vertical, horizontal or both
 </table>
 ```
 
-#### Horizontal and vertical virtualization
+### Horizontal and vertical virtualization
 
 ```html
 <table #container [style.width]='width' [style.height]='height'>
@@ -107,15 +105,83 @@ The directive can be used to virtualize the data in vertical, horizontal or both
     </ng-template>
 </table>
 ```
+### igxFor bound to remote service
 
-**Note**: The `igxForOf` directive can bind to remote service too. Review the following demo for more information.
-#### igxFor bound to remote service Demo
-<div class="sample-container loading" style="height:780px">
-    <iframe src='{environment:demosBaseUrl}/igx-for-sample-2' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+The `igxForOf` directive can be bound to remote service. You need to use `Observable` property - `remoteData`(in the following case). Also the `chunkLoading` event should be utilized to trigger the requests to the data.
+
+```html
+<div style='height:500px;'>
+    <ng-template igxFor let-item [igxForOf]="remoteData | async" (onChunkPreload)="chunkLoading($event)"
+    [igxForScrollOrientation]="'vertical'"
+    [igxForContainerSize]='"500px"'
+    [igxForItemSize]='"50px"'
+    [igxForRemote]='true'
+    let-rowIndex="index" #virtDirRemote>
+    <div style='height:50px;'>{{item.ProductID}} : {{item.ProductName}}</div>
+    </ng-template>
 </div>
-<br/>
-<div class="divider--half"></div>
+```
 
+Also there is a requirement to set the `totalItemCount` property in the instance of `igxForOf`.
+```typescript
+this.virtDirRemote.totalItemCount = data["@odata.count"];
+```
+
+In order access the directive instance from the component it should be marked as `ViewChild`:
+```typescript
+@ViewChild("virtDirRemote", { read: IgxForOfDirective })
+public virtDirRemote: IgxForOfDirective<any>;
+```
+And after the request to load the first chunk, the `totalItemCount` can be set:
+```typescript
+public ngAfterViewInit() {
+    this.remoteService.getData(this.virtDirRemote.state, (data) => {
+        this.virtDirRemote.totalItemCount = data["@odata.count"];
+    });
+}
+```
+When requesting data you can take advantage of `IgxForOfState` interface, which provides the `startIndex` and `chunkSize`. But note, that initialy the chunkSize will be 0, so you have to specify the size of the first loaded chunk(the best value is `igxForContainerSize` initially divided by `igxForItemSize`).
+```typescript
+public getData(data?: IForOfState, cb?: (any) => void): any {
+    var dataState = data;
+    return this.http
+        .get(this.buildUrl(dataState))
+        .map((response) => response.json())
+        .map((response) => {
+            return response;
+        })
+        .subscribe((data) => {
+            this._remoteData.next(data.value);
+            if (cb) {
+                cb(data);
+            }
+        });
+}
+
+private buildUrl(dataState: any): string {
+    let qS: string = "?", requiredChunkSize: number;
+    if (dataState) {
+        const skip = dataState.startIndex;
+            requiredChunkSize =  dataState.chunkSize === 0 ?
+                // Set initial chunk size, the best value is igxForContainerSize initially divided by igxForItemSize
+                10 : dataState.chunkSize;
+        const top = requiredChunkSize;
+        qS += `$skip=${skip}&$top=${top}&$count=true`;
+    }
+    return `${this.url}${qS}`;
+}
+```
+And every time the `onChunkPreload` event is thrown the new chunk of data should be requested:
+```typescript
+chunkLoading(evt) {
+    if(this.prevRequest){
+        this.prevRequest.unsubscribe();
+     }
+     this.prevRequest = this.remoteService.getData(evt, ()=> {
+        this.virtDirRemote.cdr.detectChanges();
+    });
+}
+```
 ## API
 
 ### Inputs
@@ -123,23 +189,31 @@ The directive can be used to virtualize the data in vertical, horizontal or both
 Below is the list of all inputs that the developers may set to configure the `igxFor` look/behavior:
 | Name | Type | Description |
 | :--- |:--- | :--- |
-| id | string | Unique identifier of the directive |
 | `igxForOf` | any[] | The data to be virtualized |
 | `igxForScrollOrientation` | string | Virtualization direction - "horizontal" or "vertical" |
 | `igxForScrollContainer` | any | The container where the vertical and horizontal scrollbars will be created, the is useful when nesting the directive and for cases where the scrolling container is not going to be the direct parent |
 | `igxForContainerSize` | any | Specifies the container size |
 | `igxForItemSize` | any | Specifies the item size, when the virtualization is vertical it is used as height and as width when the virtualization is horizontal. It is mostly used for the vertical direction, because for the horizontal width it is possible to have items with different widhts |
 
-<div class="divider--half"></div>
-
 ### Accessors
 
-List of public accessors that the developers may use to get information from the `igxFor`:
+List of public accessors that the developers may use to get information from the `igxForOf`:
 | Name | Type | Description |
 | :--- |:--- | :--- |
-| id | string | Unique identifier of the directive |
-| `state` | IgxForState | The current state of the directive it contains `startIndex` and `chunkSize` |
-| `totalItemCount` | number | The total count of the virtual data items, when using remote service |
+| `state`            | IgxForState | The current state of the directive. It contains `startIndex` and `chunkSize` |
+| `state.startIndex` | number      | The index of the item at which the current visible chunk begins   |
+| `state.chunkSize`  | number      | The number of items the current visible chunk holds               |
+| `totalItemCount`   | number      | The total count of the virtual data items, when using remote service     |
+
+
+### Local Variables
+
+List of exported values by the `igxForOf` that can be aliased to local variables:
+| Name        | Type    | Description                                           |
+| :---------- |:------- | :---------------------------------------------------- |
+| `$implicit` | T       | The value of the individual items in the iterable     |
+| `index`     | number  | The index of the current item in the iterable.        |
+| `dirty`     | boolean | True when the current item needs to reset their state |
 
 <div class="divider--half"></div>
 
@@ -153,7 +227,6 @@ A list of the events emitted by the **igx-for**:
 | `OnChunkLoad`      | Used when scrolled to emit the loaded data item                      |
 | `OnChunkPreload`   | Used when scrolled to emit the data item which is about to be loaded |
 
-<div class="divider"></div>
 
 ### Methods
 
@@ -164,5 +237,3 @@ Here is a list of all public methods exposed by the **igx-for**:
 | `scrollNext()`  | Scrolls by one item into the  appropriate  next direction |
 | `scrollPrev()`  | Scrolls by one item into the  appropriate  previous direction|
 | `scrollTo(index)`  | Scrolls to the specified index |
-
-<div class="divider--half"></div>
