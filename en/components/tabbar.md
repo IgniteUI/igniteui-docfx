@@ -170,7 +170,7 @@ After these modifications our Tab Bar should looks similar to this:
 
 <div class="divider--half"></div>
 
-If chaning the tabs' labels and tabs' icons is not enough, you can also create your own template for each tabs.
+If changing the tabs' labels and tabs' icons is not enough, you can also create your own template for each tabs.
 Here is an example:
 
 ```html
@@ -294,12 +294,12 @@ Edit the component's template markup by adding the following Tab Bar with an Igx
     </igx-tab-panel>
     <igx-tab-panel icon="supervisor_account">
         <div class="tab-content">
-            <h3>Tab 2 Content</h3>
+            <h3>Tab 2 Content ...</h3>
         </div>
     </igx-tab-panel>
     <igx-tab-panel icon="format_list_bulleted">
         <div class="tab-content">
-            <h3>Tab 3 Content</h3>
+            <h3>Tab 3 Content ...</h3>
         </div>
     </igx-tab-panel>
 </igx-tab-bar>
