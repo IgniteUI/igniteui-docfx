@@ -89,7 +89,7 @@ To add standard dialog, in the template of our file manager component we can add
 ####Custom Dialog
 
 To add custom dialog, in the template of our sign in component we can add the following code to get the custom dialog. We have to set the `title`,`leftButtonLabel`,`rightButtonBackgroundColor`, `rightButtonColor`, `rightButtonLabel`, `closeOnOutsideSelect` and handle `onLeftButtonSelect` and `onRightButtonSelect` event.
-Also we can add two groups of label and input decorated with the [**igxLabel**](../components/label_input.html) and [**igxInput**](../components/label_input.html) directives.
+Also we can add two groups of label and input decorated with the [**igxLabel**](label_input.md) and [**igxInput**](label_input.md) directives.
 
 ```html
 <!--sign-in.component.html-->
