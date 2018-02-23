@@ -4,6 +4,17 @@
   href: grid.md
 - name: List View 
   href: list.md
+- name: Styling & Themes
+  header: true
+- name: Themes
+  href: themes.md
+  items:
+    - name: Palettes
+      href: colors.md
+    - name: Typography
+      href: typography.md
+- name: Shadows
+  href: shadows.md
 - name: Data Entry & Display
   header: true
 - name: Button 
@@ -70,11 +81,3 @@
   href: calendar.md
 - name: Date Picker 
   href: date_picker.md
-- name: Style Guide
-  header: true
-- name: Colors
-  href: colors.md
-- name: Typography
-  href: typography.md
-- name: Shadows
-  href: shadows.md
