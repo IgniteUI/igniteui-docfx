@@ -34,7 +34,7 @@ import { IgxProgressBarModule } from 'igniteui-angular/main';
 export class AppModule {}
 ```
 And now to have a better understanding how everything works, let's create a simple example, in which we will simulate a real process progress, that is
-triggered on button click. In order to make out example better we will need to import and some additional modules in the **app.module.ts** file.
+triggered on button click. In order to make our example better we will need to import some additional modules in the **app.module.ts** file.
 
 ```typescript
 // app.module.ts
@@ -48,7 +48,7 @@ import {
 })
 export class AppModule {}
 ```
-Notice that the **igx-circular-bar** emits `onProgressChanged` event that outputs object that give us `{currentValue: 65, previousValue: 64}` on each step.
+Notice that the **igx-circular-bar** emits `onProgressChanged` event that outputs an object that gives us `{currentValue: 65, previousValue: 64}` on each step.
 
 ```html
 <section class="sample-content">
@@ -103,7 +103,7 @@ Notice that the **igx-circular-bar** emits `onProgressChanged` event that output
   }
 ```
 
-And now if we set up everything correct we should have the folllowing displayed in our browser:
+And now if we set up everything correctly we should have the folllowing displayed in our browser:
 <div class="sample-container loading" style="height:400px">
     <iframe id="progressbar-sample-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/circular-progressbar" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -118,7 +118,7 @@ And now if we set up everything correct we should have the folllowing displayed 
 | `max` |  number | Set maximum value that can be passed. Default `max` value is 100. |
 | `value` |  number | Set value that indicates the completed bar position. |
 | `animate` |  boolean | animation on progress bar. |
-| `textVisibility` | boolean | Set the text to be visible. By default is set to `true`. |
+| `textVisibility` | boolean | Set the text to be visible. By default it is set to `true`. |
 <div class="divider--half"></div>
 
 ### Methods

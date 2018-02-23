@@ -34,8 +34,7 @@ export class AppModule {}
 ```
 
 And now let's create a simple example in which we are going to simulate a continuous process, that is triggered on button click. In addition you can notice
-that the speed of loading depends on the `max` attribute that we are set to our `igx-linear-bar`. In first case our max value is set to 200 and loads quite slower,
-than in the second where is set to 100(default value). So let's see the code...
+that the speed of loading depends on the `max` attribute that we have set to our `igx-linear-bar`. In the first case our max value is set to 200 and loads slower than in the second where it is set to 100 (default value). So let's see the code...
 
 ```html
 ...
@@ -93,7 +92,7 @@ If all went well, you should see something like the following in your browser:
 <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="linear-progressbar-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
-And now let's enhance our example and create a different types of loading bars, that can be striped or not.
+And now let's enhance our example and create different types of loading bars, that can be striped or not.
 ```html
 ...
 <section class="sample-content">
@@ -155,7 +154,7 @@ And now let's enhance our example and create a different types of loading bars, 
       return Math.floor(Math.random() * (max - min + 1) + min);
   }
 ```
-So if we set up everything correct, let's see what happened in the browser:
+So if we set up everything correctly, let's see what happened in the browser:
 <div class="sample-container loading" style="height:550px">
     <iframe id="linear-sample-1-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/linear-progressbar-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -165,7 +164,7 @@ So if we set up everything correct, let's see what happened in the browser:
 <div class="divider--half"></div>
 
 Finally let's make our sample even more exciting and good as we set the following attributes: `textAlign`, `textVisibility`, `textTop` and `text`.
-And now let's see how looks like our code:
+And now let's see how our code looks:
 ```html
 ...
 <section class="sample-content">
@@ -181,7 +180,7 @@ And now let's see how looks like our code:
         <igx-linear-bar type="warning" [text]="'Custom text'" [textAlign]="positionCenter" [striped]="true"></igx-linear-bar>
         <h5>Text is set above the line</h5>
         <igx-linear-bar type="danger" [textTop]="true"></igx-linear-bar>
-        <h5>Witout text</h5>
+        <h5>Without text</h5>
         <igx-linear-bar type="default" [textVisibility]="false"></igx-linear-bar>
         </div>
 </section>
@@ -200,7 +199,7 @@ And now let's see how looks like our code:
 ...
 ```
 
-And do not forget to firts import `IgxTextAlign` in your component.
+And do not forget to first import `IgxTextAlign` in your component.
 
 ```typescript
 import { ..., IgxTextAlign } from "igniteui-angular/main";
@@ -266,10 +265,10 @@ And now let's see it in the browser:
 | `value` |  number | Set value that indicates the completed bar position. |
 | `striped` |  boolean | Set bar to have striped style. |
 | `animate` |  boolean | animation on progress bar. |
-| `textAlign` | enum | Set the position that define where the text is aligned. Possible options - `IgxTextAlign.START` (default), `IgxTextAlign.CENTER`, `IgxTextAlign.END`. |
-| `textVisibility` | boolean | Set the text to be visible. By default is set to `true`. |
-| `textTop` | boolean | Set the position that defene is text to be aligned above the progress line. By default is set to `false`. |
-| `text` | string | Set a custom text that is displayed according defined position. |
+| `textAlign` | enum | Set the position that defines where the text is aligned. Possible options - `IgxTextAlign.START` (default), `IgxTextAlign.CENTER`, `IgxTextAlign.END`. |
+| `textVisibility` | boolean | Set the text to be visible. By default it is set to `true`. |
+| `textTop` | boolean | Set the position that defines if the text should be aligned above the progress line. By default is set to `false`. |
+| `text` | string | Set a custom text that is displayed according to the defined position. |
 <div class="divider--half"></div>
 
 ### Methods
