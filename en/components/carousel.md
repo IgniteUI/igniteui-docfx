@@ -81,7 +81,7 @@ A real world scenario would include dynamically loading the slides and not decla
       );
   }
 ```
-And now we are ready to add the ngFor directive to the **igx-slide** and provide our html inside as usual. We are also adding an image to each slide:
+And now we are ready to add the ngFor directive to the `igx-slide` and provide our html inside as usual. We are also adding an image to each slide:
 
 ```html
 <!-- app.component.html -->
@@ -127,7 +127,7 @@ As mentioned navigation and transition are the most important carousel features.
 ...
 </igx-carousel>
 ```
-In the above snippet we are setting values to the **loop** and **pause** element properties using [property binding](https://angular.io/guide/template-syntax#property-binding). Another optional property to set is the **transition**, which sets the amount of time in milliseconds between slides transition. We are skipping this as we do not want our carousel to transition the content by itself, but want it to be entirely controlled by the user. The component properties values are provided via code below. Notice that to disable the automatic playing we need to call the **stop()** method exposed by the carousel:
+In the above snippet we are setting values to the `loop` and `pause` element properties using [property binding](https://angular.io/guide/template-syntax#property-binding). Another optional property to set is the `transition`, which sets the amount of time in milliseconds between slides transition. We are skipping this as we do not want our carousel to transition the content by itself, but want it to be entirely controlled by the user. The component properties values are provided via code below. Notice that to disable the automatic playing we need to call the `stop` method exposed by the carousel:
 
 ```typescript
   // app.component.ts
@@ -142,13 +142,13 @@ In the above snippet we are setting values to the **loop** and **pause** element
      this.carousel.stop();
   }
 ```
-Having those configured this way, we empowered the user to have full control over the carousel. What we want to do now is customize the navigation further and replace the carousel indicators with a nice looking progress bar. Hooking up on the **onSlideChanged** event and using the **IgxLinearProgressBar** component we will add adittional UI indicating the progress made. First we need to import the **IgxLinearProgressBar** module:
+Having those configured this way, we empowered the user to have full control over the carousel. What we want to do now is customize the navigation further and replace the carousel indicators with a nice looking progress bar. Hooking up on the `onSlideChanged` event and using the **IgxLinearProgressBar** component we will add adittional UI indicating the progress made. First we need to import the **IgxLinearProgressBar** module:
 
 ```typescript
 // app.component.ts
 import { Direction, IgxCarousel, IgxLinearProgressBar } from "igniteui-angular/main";
 ```
-Once we have the module imported, we can continue with adding the **IgxLinearProgressBar** in our template. Notice that we set the **max** property to bind to the **total** property value, which will be defined in the **app.component.ts** file. Also, we add a handler for the **onSlideChanged** event and an indicator text in adittion to the progress bar:
+Once we have the module imported, we can continue with adding the **IgxLinearProgressBar** in our template. Notice that we set the `max` property to bind to the `total` property value, which will be defined in the **app.component.ts** file. Also, we add a handler for the `onSlideChanged` event and an indicator text in adittion to the progress bar:
 
 ```html
 <!-- app.component.html -->
@@ -163,7 +163,7 @@ Once we have the module imported, we can continue with adding the **IgxLinearPro
 </igx-carousel>
 ```
 
-We update the **total** and **current** properties values in the **ngOnInit** and the linear bar value in the **onSlideChanged** event handler:
+We update the `total` and `current` properties values in the **ngOnInit** and the linear bar value in the `onSlideChanged` event handler:
 
 ```typescript
 // app.component.ts
@@ -221,7 +221,7 @@ Our carousel now displays nicely the home page content. What it is missing is de
     ...
 </igx-slide>
 ```
-Don't forget to add the **IgxButtonModule** to the **app.component.ts**. The **goto()** function will use the [Angular router](https://angular.io/guide/router) to navigate to another view:
+Don't forget to add the **IgxButtonModule** to the **app.component.ts**. The `goto()` function will use the [Angular router](https://angular.io/guide/router) to navigate to another view:
 
 ```typescript
   // app.component.ts

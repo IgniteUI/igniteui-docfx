@@ -49,7 +49,7 @@ import { IgxCalendarComponent } from 'igniteui-angular/main';
 > Consider using the [appropriate polyfills](https://github.com/andyearnshaw/Intl.js/) if your target platform does not support them.
 
 ### Selection
-Instantiating the **IgxCalendarComponent** is as easy as placing its selector element in the template. This will display the current month in the calendar and use single selection mode. We switch to any of the other selection modes - **multi** and **range**, by setting the **selection** property:
+Instantiating the **IgxCalendarComponent** is as easy as placing its selector element in the template. This will display the current month in the calendar and use single selection mode. We switch to any of the other selection modes - `multi` and `range`, by setting the `selection` property:
 ```html
 <!-- app.component.html -->
 <!-- Single selection mode -->
@@ -69,7 +69,7 @@ Notice that the calendar header is not rendered when the selection is either `mu
 
 ###Localization and formatting
 
-Due to their very nature, localization and formatting are essential to any calendar. In the **IgxCalendarComponent** those are controlled and customized through the following properties - **locale**, **formatOptions**, **formatViews**:
+Due to their very nature, localization and formatting are essential to any calendar. In the **IgxCalendarComponent** those are controlled and customized through the following properties - `locale`, `formatOptions`, `formatViews`:
 
 | Name | Description |
 |:--:|:---|:---|
@@ -77,9 +77,9 @@ Due to their very nature, localization and formatting are essential to any calen
 | `formatOptions` | Controls the date-time components to use in formatted output, and their desired representations ([Аdditional information](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat)). The default values are { day: 'numeric', month: 'short', weekday: 'short', year: 'numeric' }. |
 | `formatViews` | Controls whether the date parts in the different calendar views should be formatted according to the provided locale and formatOptions. defaults are { day: false, month: true, year: false }. For the properties set to false, the views will display the corresponding `Date.getFullYear()` \ `Date.getDate()` \  `Date.getMonth()` value. |
 <br>
-Let's go ahead and try those along with other customizations from the **IgxCalendarComponent** API. Say we are having visitors on our page coming from countries from EFTA (European Free Trade Association) countries, so we need to display the calendar in the corresponding culture. First thing we need to set is the **weekstart**, which controls the starting day of the week. It defaults to 0, which corresponds to Sunday, so we set a value of 1.
+Let's go ahead and try those along with other customizations from the **IgxCalendarComponent** API. Say we are having visitors on our page coming from countries from EFTA (European Free Trade Association) countries, so we need to display the calendar in the corresponding culture. First thing we need to set is the `weekstart`, which controls the starting day of the week. It defaults to 0, which corresponds to Sunday, so we set a value of 1.
 
-In the markup below we are also binding the **formatOptions** and **formatViews** properties to customize the display formatting. Finally we are binding the **locale** property to a value, based on the user's location choice:
+In the markup below we are also binding the `formatOptions` and `formatViews` properties to customize the display formatting. Finally we are binding the `locale` property to a value, based on the user's location choice:
 
 ```html
 <!-- app.component.html -->
@@ -125,7 +125,7 @@ Great, we should now have a calendar with customized dates display that also cha
 </div>
 
 ### Events
-Lets build on top of that sample a bit. We will require the user to enter a date range that does not exceed 5 days. We need to change the **selection** mode of the calendar to "range" and prompt the user to correct the selection, if the range is not valid. To do this we will use the **onSelection** event:
+Lets build on top of that sample a bit. We will require the user to enter a date range that does not exceed 5 days. We need to change the `selection` mode of the calendar to "range" and prompt the user to correct the selection, if the range is not valid. To do this we will use the `onSelection` event:
 
 ```html
 <!-- app.component.html -->
@@ -136,7 +136,7 @@ Lets build on top of that sample a bit. We will require the user to enter a date
 </igx-calendar>
 ```
 
-The value passed in the **onSelection** event is the collection of dates selected, so we can read its length to base our logic upon it. If we alert the user for the invalid selection, we also reset the selection to contain only the first date from the range using the **selectDate** method:
+The value passed in the `onSelection` event is the collection of dates selected, so we can read its length to base our logic upon it. If we alert the user for the invalid selection, we also reset the selection to contain only the first date from the range using the `selectDate` method:
 
 ```typescript
 // app.component.ts
@@ -179,7 +179,7 @@ In our example we slightly modify the default template and will make the header 
     </ng-template>
 </igx-calendar>  
 ```
-For more detailed explanation of what **parts** are the template context, please refer to **TemplateContext** under the [API](http://localhost:3000/components/calendar.html#template-context) section. Let's see what the templated calendar looks like:
+For more detailed explanation of what **parts** are the template context, please refer to [TemplateContext](http://localhost:3000/components/calendar.html#template-context) section. Let's see what the templated calendar looks like:
 
 <div class="sample-container" style="height: 500px">
     <iframe id="calendar-sample-4-iframe" src='{environment:demosBaseUrl}/calendar-sample-4' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
