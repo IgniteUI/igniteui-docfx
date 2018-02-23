@@ -107,7 +107,7 @@ The directive can be used to virtualize the data in vertical, horizontal or both
 ```
 ### igxFor bound to remote service
 
-The `igxForOf` directive can be bound to remote service. You need to use `Observeble` property - `remoteData`(in the following case). Also the `chunkLoading` event should be utilized to trigger the requests to the data.
+The `igxForOf` directive can be bound to remote service. You need to use `Observable` property - `remoteData`(in the following case). Also the `chunkLoading` event should be utilized to trigger the requests to the data.
 
 ```html
 <div style='height:500px;'>
@@ -122,7 +122,7 @@ The `igxForOf` directive can be bound to remote service. You need to use `Observ
 </div>
 ```
 
-Also there is a requirement to set the `totatItemsCount` property in the instance of `igxForOf`.
+Also there is a requirement to set the `totalItemCount` property in the instance of `igxForOf`.
 ```typescript
 this.virtDirRemote.totalItemCount = data["@odata.count"];
 ```
@@ -140,7 +140,7 @@ public ngAfterViewInit() {
     });
 }
 ```
-When requesting data you can take advantage of `IgxForOfState` interface, which provides the `startIndex` and `chunkSize`. But note, that initialy the chunkSize will be 0, so you have to specify the size of the first loaded chunk(the best value is `igxForContainerSize` divided on `igxForItemSize`).
+When requesting data you can take advantage of `IgxForOfState` interface, which provides the `startIndex` and `chunkSize`. But note, that initialy the chunkSize will be 0, so you have to specify the size of the first loaded chunk(the best value is `igxForContainerSize` initially divided by `igxForItemSize`).
 ```typescript
 public getData(data?: IForOfState, cb?: (any) => void): any {
     var dataState = data;
@@ -163,7 +163,7 @@ private buildUrl(dataState: any): string {
     if (dataState) {
         const skip = dataState.startIndex;
             requiredChunkSize =  dataState.chunkSize === 0 ?
-                // Set initial chunk size, the best value is igxForContainerSize divided on igxForItemSize
+                // Set initial chunk size, the best value is igxForContainerSize initially divided by igxForItemSize
                 10 : dataState.chunkSize;
         const top = requiredChunkSize;
         qS += `$skip=${skip}&$top=${top}&$count=true`;
