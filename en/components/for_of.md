@@ -198,13 +198,24 @@ Below is the list of all inputs that the developers may set to configure the `ig
 
 ### Accessors
 
-List of public accessors that the developers may use to get information from the `igxFor`:
+List of public accessors that the developers may use to get information from the `igxForOf`:
 | Name | Type | Description |
 | :--- |:--- | :--- |
 | id | string | Unique identifier of the directive |
 | `state` | IgxForState | The current state of the directive it contains `startIndex` and `chunkSize` |
 | `totalItemCount` | number | The total count of the virtual data items, when using remote service |
 
+
+### Local Variables
+
+List of exported values by the `igxForOf` that can be aliased to local variables:
+| Name       | Type    | Description                                           |
+| :--------- |:------- | :---------------------------------------------------- |
+| $implicit  | T       | The value of the individual items in the iterable     |
+| index      | number  | The index of the current item in the iterable.        |
+| dirty      | boolean | True when the current item needs to reset their state |
+
+<div class="divider--half"></div>
 
 ### Outputs
 
