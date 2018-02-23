@@ -9,7 +9,7 @@ _language: ja
 
 <p class="highlight">
 大量データをテンプレート化するために `ngForOf` の代わりに `igxForOf` を使用できます。`igxForOf` は、DOM 描画およびメモリ使用を最適化するために仮想化を使用します。仮想化はページング機能のようにデータをより小さいチャンクに分割します。このチャンクは、ユーザーがデータを水平/垂直にスクロールするときにコンテナー ビューポートで切り替えます。ページングの動作との違いは、仮想化が通常のスクロールバーの動作を装うことです。ディレクティブはスクロール可能なコンテナーを作成して、データの小さい部分を描画します。`igx-grid` で使用され、仮想化された `igx-list` を作成するために使用できます。</p>
-<div class="divider"></div>
+
 
 ### igxFor デモ
 
@@ -17,8 +17,7 @@ _language: ja
     <iframe src='{environment:demosBaseUrl}/igx-for-sample-1' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
-<!--<button data-localize="stackblitz" class="stackblitz-btn">StackBlitz で表示</button> -->
-<div class="divider--half"></div>
+<!--<button data-localize="stackblitz" class="stackblitz-btn">view on stackblitz</button> -->
 
 ### 依存関係
 
@@ -103,17 +102,83 @@ export class AppModule {}
     </ng-template>
 </table>
 ```
+### igxFor bound to remote service
 
-**注:** `igxForOf` ディレクティブはリモート サービスにもバインドできます。詳細については、以下のデモを参照してください。
+The `igxForOf` directive can be bound to remote service. You need to use `Observable` property - `remoteData`(in the following case). Also the `chunkLoading` event should be utilized to trigger the requests to the data.
 
-#### リモート サービスにバインドされる igxFor デモ
-
-<div class="sample-container loading" style="height:780px">
-    <iframe src='{environment:demosBaseUrl}/igx-for-sample-2' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+```html
+<div style='height:500px;'>
+    <ng-template igxFor let-item [igxForOf]="remoteData | async" (onChunkPreload)="chunkLoading($event)"
+    [igxForScrollOrientation]="'vertical'"
+    [igxForContainerSize]='"500px"'
+    [igxForItemSize]='"50px"'
+    [igxForRemote]='true'
+    let-rowIndex="index" #virtDirRemote>
+    <div style='height:50px;'>{{item.ProductID}} : {{item.ProductName}}</div>
+    </ng-template>
 </div>
-<br/>
-<div class="divider--half"></div>
+```
 
+Also there is a requirement to set the `totalItemCount` property in the instance of `igxForOf`.
+```typescript
+this.virtDirRemote.totalItemCount = data["@odata.count"];
+```
+
+In order access the directive instance from the component it should be marked as `ViewChild`:
+```typescript
+@ViewChild("virtDirRemote", { read: IgxForOfDirective })
+public virtDirRemote: IgxForOfDirective<any>;
+```
+And after the request to load the first chunk, the `totalItemCount` can be set:
+```typescript
+public ngAfterViewInit() {
+    this.remoteService.getData(this.virtDirRemote.state, (data) => {
+        this.virtDirRemote.totalItemCount = data["@odata.count"];
+    });
+}
+```
+When requesting data you can take advantage of `IgxForOfState` interface, which provides the `startIndex` and `chunkSize`. But note, that initialy the chunkSize will be 0, so you have to specify the size of the first loaded chunk(the best value is `igxForContainerSize` initially divided by `igxForItemSize`).
+```typescript
+public getData(data?: IForOfState, cb?: (any) => void): any {
+    var dataState = data;
+    return this.http
+        .get(this.buildUrl(dataState))
+        .map((response) => response.json())
+        .map((response) => {
+            return response;
+        })
+        .subscribe((data) => {
+            this._remoteData.next(data.value);
+            if (cb) {
+                cb(data);
+            }
+        });
+}
+
+private buildUrl(dataState: any): string {
+    let qS: string = "?", requiredChunkSize: number;
+    if (dataState) {
+        const skip = dataState.startIndex;
+            requiredChunkSize =  dataState.chunkSize === 0 ?
+                // Set initial chunk size, the best value is igxForContainerSize initially divided by igxForItemSize
+                10 : dataState.chunkSize;
+        const top = requiredChunkSize;
+        qS += `$skip=${skip}&$top=${top}&$count=true`;
+    }
+    return `${this.url}${qS}`;
+}
+```
+And every time the `onChunkPreload` event is thrown the new chunk of data should be requested:
+```typescript
+chunkLoading(evt) {
+    if(this.prevRequest){
+        this.prevRequest.unsubscribe();
+     }
+     this.prevRequest = this.remoteService.getData(evt, ()=> {
+        this.virtDirRemote.cdr.detectChanges();
+    });
+}
+```
 ## API
 
 ### 入力
@@ -129,7 +194,6 @@ export class AppModule {}
 | `igxForContainerSize` | any | コンテナー サイズを指定します。 |
 | `igxForItemSize` | any | 項目のサイズを指定します。仮想化が垂直方向の場合、高さのサイズです。仮想化が水平方向の場合、このサイズは幅です。水平方向の場合は項目が異なる幅を持つことが可能なため、通常は垂直方向で使用されます。 |
 
-<div class="divider--half"></div>
 
 ### アクセサー
 
@@ -141,7 +205,6 @@ export class AppModule {}
 | `state` | IgxForState | ディレクティブの現在状態。`startIndex` および `chunkSize` を含みます。 |
 | `totalItemCount` | number | リモート サービスを使用する場合、仮想データ項目の合計数。 |
 
-<div class="divider--half"></div>
 
 ### 出力
 
@@ -153,7 +216,6 @@ export class AppModule {}
 | `OnChunkLoad`      | スクロール時、読み込んだデータ項目を発生します。                     |
 | `OnChunkPreload`   | スクロール時、読み込むデータ項目を発生するために使用されます。 |
 
-<div class="divider"></div>
 
 ### メソッド
 
@@ -165,4 +227,4 @@ export class AppModule {}
 | `scrollPrev()`  | 「前」の方向に 1 項目スクロールします。|
 | `scrollTo(index)`  | 指定されたインデックスへスクロールします。 |
 
-<div class="divider--half"></div>
+
