@@ -133,13 +133,24 @@ export class AppModule {}
 
 ### アクセサー
 
-以下は、`igxFor` から情報を取得するための公開用アクセサーのリストです。
+以下は、`igxForOf` から情報を取得するための公開用アクセサーのリストです。
 
 | 名前 | 型 | 説明 |
 | :--- |:--- | :--- |
 | id | string | ディレクティブの一意識別子 |
 | `state` | IgxForState | ディレクティブの現在状態。`startIndex` および `chunkSize` を含みます。 |
 | `totalItemCount` | number | リモート サービスを使用する場合、仮想データ項目の合計数。 |
+
+<div class="divider--half"></div>
+
+### Local Variables
+
+List of exported values by the `igxForOf` that can be aliased to local variables:
+| Name       | Type    | Description                                           |
+| :--------- |:------- | :---------------------------------------------------- |
+| $implicit  | T       | The value of the individual items in the iterable     |
+| index      | number  | The index of the current item in the iterable.        |
+| dirty      | boolean | True when the current item needs to reset their state |
 
 <div class="divider--half"></div>
 
