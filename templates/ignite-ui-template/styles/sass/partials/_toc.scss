@@ -1,343 +1,385 @@
 .toc {
-    background-color: #fff;
-    overflow-x: hidden;
+  background-color: #fff;
+  overflow-x: hidden;
 }
 
 .sidetoc.shiftup {
-    bottom: 70px;
+  bottom: 70px;
 }
 
 .sidetoc-expand > .caret {
-    margin-left: 0;
-    margin-top: -2px;
+  margin-left: 0;
+  margin-top: -2px;
 }
 
 .sidetoc-expand > .caret-side {
-    border-left: 4px solid;
-    border-top: 4px solid transparent;
-    border-bottom: 4px solid transparent;
-    margin-left: 4px;
-    margin-top: -4px;
+  border-left: 4px solid;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  margin-left: 4px;
+  margin-top: -4px;
 }
 
 .sidetoc-heading {
-    font-weight: 500;
+  font-weight: 500;
 }
 
 .expand-stub {
-    position: absolute;
-    left: -10px;
+  position: absolute;
+  left: -10px;
 }
 
 .toc .nav > li > a.sidetoc-expand {
-    position: absolute;
-    top: 0;
-    left: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .toc .nav > li > a {
-    color: #585858;
-    display: block;
-    position: relative;
-    padding: 0;
+  color: #585858;
+  display: block;
+  position: relative;
+  padding: 0;
 }
 
 .toc .nav > li > a:hover,
 .toc .nav > li > a:focus {
-    color: #000000;
-    background: none;
-    text-decoration: inherit;
+  color: #000000;
+  background: none;
+  text-decoration: inherit;
 }
 
 .toc .nav > li.active > a {
-    color: #337ab7;
+  color: #337ab7;
 }
 
 .toc .nav > li.active > a:hover,
 .toc .nav > li.active > a:focus {
-    color: #23527c;
+  color: #23527c;
 }
 
 .toc .nav > li > .expand-stub {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .toc .nav > li.active > .expand-stub::before,
 .toc .nav > li.in > .expand-stub::before,
 .toc .nav > li.in.active > .expand-stub::before,
 .toc .nav > li.filtered > .expand-stub::before {
-    content: '-';
+  content: "-";
 }
 
 .toc .nav > li > .expand-stub::before,
 .toc .nav > li.active > .expand-stub::before {
-    content: '+';
+  content: "+";
 }
 
 .toc .nav > li.filtered > ul,
 .toc .nav > li.in > ul {
-    display: block;
+  display: block;
 }
 
 .toc .nav > li > ul {
-    display: none;
+  display: none;
 }
 
 .toc ul {
-    font-size: 12px;
+  font-size: 12px;
 }
 
 .toc .level1 > li {
-    font-weight: bold;
-    margin-top: 10px;
-    position: relative;
-    font-size: 16px;
+  font-weight: bold;
+  margin-top: 10px;
+  position: relative;
+  font-size: 16px;
 }
 
 .toc .level2 {
-    font-weight: normal;
-    margin: 5px 0 0 15px;
-    font-size: 14px;
+  font-weight: normal;
+  margin: 5px 0 0 15px;
+  font-size: 14px;
 }
 
 .toc-toggle {
-    display: none;
-    margin: 0 15px 0 15px;
+  display: none;
+  margin: 0 15px 0 15px;
 }
 
 .sidetoc-expand > .caret {
-    margin-left: 0;
-    margin-top: -2px;
+  margin-left: 0;
+  margin-top: -2px;
 }
 
 .sidetoc-expand > .caret-side {
-    border-left: 4px solid;
-    border-top: 4px solid transparent;
-    border-bottom: 4px solid transparent;
-    margin-left: 4px;
-    margin-top: -4px;
+  border-left: 4px solid;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  margin-left: 4px;
+  margin-top: -4px;
 }
 
 .sidetoc-heading {
-    font-weight: 500;
+  font-weight: 500;
 }
 
 .toc .nav > li > a.sidetoc-expand {
-    position: absolute;
-    top: 0;
-    left: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .toc .nav > li > a {
-    color: #585858;
-    display: block;
-    position: relative;
-    padding: 0;
+  color: #585858;
+  display: block;
+  position: relative;
+  padding: 0;
 }
 
 .toc .nav > li > a:hover,
 .toc .nav > li > a:focus {
-    color: #000000;
-    background: none;
-    text-decoration: inherit;
+  color: #000000;
+  background: none;
+  text-decoration: inherit;
 }
 
 .toc .nav > li.active > a {
-    color: #337ab7;
+  color: #337ab7;
 }
 
 .toc .nav > li.active > a:hover,
 .toc .nav > li.active > a:focus {
-    color: #23527c;
+  color: #23527c;
 }
 
 .toc .nav > li > .expand-stub {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .toc .nav > li.active > .expand-stub::before,
 .toc .nav > li.in > .expand-stub::before,
 .toc .nav > li.in.active > .expand-stub::before,
 .toc .nav > li.filtered > .expand-stub::before {
-    content: '-';
+  content: "-";
 }
 
 .toc .nav > li > .expand-stub::before,
 .toc .nav > li.active > .expand-stub::before {
-    content: '+';
+  content: "+";
 }
 
 .toc .nav > li.filtered > ul,
 .toc .nav > li.in > ul {
-    display: block;
+  display: block;
 }
 
 .toc .nav > li > ul {
-    display: none;
+  display: none;
 }
 
 .toc ul {
-    font-size: 12px;
+  font-size: 12px;
 }
 
 .toc .level1 > li {
-    font-weight: bold;
-    margin-top: 10px;
-    position: relative;
-    font-size: 16px;
+  font-weight: bold;
+  margin-top: 10px;
+  position: relative;
+  font-size: 16px;
 }
 
 .toc .level2 {
-    font-weight: normal;
-    margin: 5px 0 0 15px;
-    font-size: 14px;
+  font-weight: normal;
+  margin: 5px 0 0 15px;
+  font-size: 14px;
 }
 
 .toc-toggle {
-    display: none;
-    margin: 0 15px 0 15px;
+  display: none;
+  margin: 0 15px 0 15px;
 }
 
 .toc-filter {
-    border-radius: 5px;
-    background: #fff;
-    color: #666666;
-    padding: 5px;
-    position: relative;
-    margin: 0 5px 0 5px;
+  border-radius: 5px;
+  background: #fff;
+  color: #666666;
+  padding: 5px;
+  position: relative;
+  margin: 0 5px 0 5px;
 }
 
 .toc-filter > input {
-    border: 0;
-    color: #666666;
-    padding-left: 20px;
-    width: 100%;
+  border: 0;
+  color: #666666;
+  padding-left: 20px;
+  width: 100%;
 }
 
 .toc-filter > input:focus {
-    outline: 0;
+  outline: 0;
 }
 
 .toc-filter > .filter-icon {
-    position: absolute;
-    top: 10px;
-    left: 5px;
+  position: absolute;
+  top: 10px;
+  left: 5px;
 }
+
 .sidenav {
-    margin-right: -15px;
+  margin-right: -15px;
 
-    &__header {
-        padding: 16px !important;
-        position: relative;
-        font-size: 16px !important;
-        color: $byzantium;
-        font-weight: 400 !important;
-    }
+  &__header {
+    padding: 16px !important;
+    position: relative;
+    font-size: 16px !important;
+    color: $byzantium;
+    font-weight: 400 !important;
+  }
 
-    &__header::after {
-        position: absolute;
-        content: '';
-        left: 15px;
-        bottom: 0;
-        height: 1px;
-        width: 100%;
-        background: #f1f1f1;
-    }
+  &__header::after {
+    position: absolute;
+    content: "";
+    left: 15px;
+    bottom: 0;
+    height: 1px;
+    width: 100%;
+    background: #f1f1f1;
+  }
 }
 
 .toc {
-    .nav {
-        li {
-            position: relative;
-            font-size: 14px;
-            margin: 0;
-            a {
-                color: #585858;
-                font-weight: normal;
-                padding: 8px 16px;
-            }
+  .nav {
+    li {
+      position: relative;
+      font-size: 14px;
+      margin: 0;
+      a {
+        color: #585858;
+        font-weight: normal;
+        padding: 8px 16px;
+      }
+    }
+
+    li.active {
+      background-color: #f1f1f1;
+      &::before {
+        position: absolute;
+        content: "";
+        width: 2px;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        background-color: $byzantium;
+      }
+      a {
+        color: #000;
+        font-weight: 500;
+      }
+      a:hover {
+        color: #585858;
+      }
+    }
+
+    .nav.level2 {
+      margin: 0;
+      padding: 0 16px;
+
+      li {
+        a {
+          font-weight: 400;
+          color: $midgray;
+        }
+        a:hover {
+          color: darken($midgray, 10%);
+        }
+      }
+
+      > li::before {
+        position: absolute;
+        content: "";
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: rgba(#000, 0.12);
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      > li:hover::before {
+        background: rgba(#000, 0.42);
+      }
+
+      > li.active {
+        a {
+          font-weight: 500;
+          color: #000;
         }
 
-        li.active {
-            background-color: #f1f1f1;
-            &::before {
-                position: absolute;
-                content: '';
-                width: 2px;
-                top: 0;
-                bottom: 0;
-                left: 0;
-                background-color: $byzantium;
-            }
-            a {
-                color: #585858;
-                font-weight: 500;
-            }
-            a:hover {
-                color: #000;
-            }
+        &::before {
+          background: rgba(#000, 0.7);
         }
+      }
     }
-    @media only screen and (min-width: 992px) {
-        &::after {
-            position: absolute;
-            content: '';
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            box-shadow: inset -24px 0 30px -16px rgba(0, 0, 0, 0.14);
-            pointer-events: none;
-        }
+  }
+  @media only screen and (min-width: 992px) {
+    &::after {
+      position: absolute;
+      content: "";
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      box-shadow: inset -24px 0 30px -16px rgba(0, 0, 0, 0.14);
+      pointer-events: none;
     }
+  }
 }
 
 .sidenav-container {
-    display: block;
+  display: block;
+  position: relative;
+  @media only screen and (min-width: 992px) {
+    display: table-cell;
     position: relative;
-    @media only screen and (min-width: 992px) {
-        display: table-cell;
-        position: relative;
-    }
+  }
 }
 
 .toc-toggle {
-    justify-content: center;
-    padding: 16px 0;
-    font-size: 16px;
-    font-weight: 500;
-    text-transform: uppercase;
-    color: #585858;
-    &:focus,
-    &:hover {
-        color: $byzantium;
-    }
+  justify-content: center;
+  padding: 16px 0;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #585858;
+  &:focus,
+  &:hover {
+    color: $byzantium;
+  }
 }
 
 .sidetoc {
-    position: relative;
-    margin-left: -15px;
-    overflow-x: hidden;
-    overflow-y: auto;
-    background-color: #fff;
-    z-index: 1;
+  position: relative;
+  margin-left: -15px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: #fff;
+  z-index: 1;
 }
 
 @media only screen and (max-width: 991px) {
-    #toc {
-        height: auto !important;
-    }
-    .toc-toggle {
-        display: flex;
-    }
+  #toc {
+    height: auto !important;
+  }
+  .toc-toggle {
+    display: flex;
+  }
 
-    .sidetoc {
-        margin: 0;
-    }
+  .sidetoc {
+    margin: 0;
+  }
 
-    .sidenav {
-        padding: 0;
-        margin: 24px 0 !important;
-        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.14);
-    }
+  .sidenav {
+    padding: 0;
+    margin: 24px 0 !important;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.14);
+  }
 }
