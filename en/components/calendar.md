@@ -69,7 +69,7 @@ Notice that the calendar header is not rendered when the selection is either `mu
 
 ###Localization and formatting
 
-Due to their very nature, localization and formatting are essential to any calendar. In the **IgxCalendarComponent** those are controlled and customized through the following properties - ``locale`, `formatOptions`, `formatViews`:
+Due to their very nature, localization and formatting are essential to any calendar. In the **IgxCalendarComponent** those are controlled and customized through the following properties - `locale`, `formatOptions`, `formatViews`:
 
 | Name | Description |
 |:--:|:---|:---|
