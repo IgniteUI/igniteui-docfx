@@ -189,7 +189,6 @@ chunkLoading(evt) {
 Below is the list of all inputs that the developers may set to configure the `igxFor` look/behavior:
 | Name | Type | Description |
 | :--- |:--- | :--- |
-| id | string | Unique identifier of the directive |
 | `igxForOf` | any[] | The data to be virtualized |
 | `igxForScrollOrientation` | string | Virtualization direction - "horizontal" or "vertical" |
 | `igxForScrollContainer` | any | The container where the vertical and horizontal scrollbars will be created, the is useful when nesting the directive and for cases where the scrolling container is not going to be the direct parent |
@@ -201,19 +200,20 @@ Below is the list of all inputs that the developers may set to configure the `ig
 List of public accessors that the developers may use to get information from the `igxForOf`:
 | Name | Type | Description |
 | :--- |:--- | :--- |
-| id | string | Unique identifier of the directive |
-| `state` | IgxForState | The current state of the directive it contains `startIndex` and `chunkSize` |
-| `totalItemCount` | number | The total count of the virtual data items, when using remote service |
+| `state`            | IgxForState | The current state of the directive. It contains `startIndex` and `chunkSize` |
+| `state.startIndex` | number      | The index of the item at which the current visible chunk begins   |
+| `state.chunkSize`  | number      | The number of items the current visible chunk holds               |
+| `totalItemCount`   | number      | The total count of the virtual data items, when using remote service     |
 
 
 ### Local Variables
 
 List of exported values by the `igxForOf` that can be aliased to local variables:
-| Name       | Type    | Description                                           |
-| :--------- |:------- | :---------------------------------------------------- |
-| $implicit  | T       | The value of the individual items in the iterable     |
-| index      | number  | The index of the current item in the iterable.        |
-| dirty      | boolean | True when the current item needs to reset their state |
+| Name        | Type    | Description                                           |
+| :---------- |:------- | :---------------------------------------------------- |
+| `$implicit` | T       | The value of the individual items in the iterable     |
+| `index`     | number  | The index of the current item in the iterable.        |
+| `dirty`     | boolean | True when the current item needs to reset their state |
 
 <div class="divider--half"></div>
 

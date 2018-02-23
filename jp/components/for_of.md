@@ -187,7 +187,6 @@ chunkLoading(evt) {
 
 | 名前 | 型 | 説明 |
 | :--- |:--- | :--- |
-| id | string | ディレクティブの一意識別子 |
 | `igxForOf` | any[] | 仮想化するデータ |
 | `igxForScrollOrientation` | string | 仮想化の方向 - "horizontal" または "vertical" |
 | `igxForScrollContainer` | any | 垂直および水平スクロールバーが作成されるコンテナー。ディレクティブをネストするか、スクロール コンテナーが直接の親ではない場合に便利です。 |
@@ -201,19 +200,20 @@ chunkLoading(evt) {
 
 | 名前 | 型 | 説明 |
 | :--- |:--- | :--- |
-| id | string | ディレクティブの一意識別子 |
-| `state` | IgxForState | ディレクティブの現在状態。`startIndex` および `chunkSize` を含みます。 |
-| `totalItemCount` | number | リモート サービスを使用する場合、仮想データ項目の合計数。 |
+| `state`            | IgxForState | ディレクティブの現在状態。`startIndex` および `chunkSize` を含みます。 |
+| `state.startIndex` | number      | The index of the item at which the current visible chunk begins    |
+| `state.chunkSize`  | number      | The number of items the current visible chunk holds                |
+| `totalItemCount`   | number      | リモート サービスを使用する場合、仮想データ項目の合計数。               |
 
 
 ### Local Variables
 
 List of exported values by the `igxForOf` that can be aliased to local variables:
-| Name       | Type    | Description                                           |
-| :--------- |:------- | :---------------------------------------------------- |
-| $implicit  | T       | The value of the individual items in the iterable     |
-| index      | number  | The index of the current item in the iterable.        |
-| dirty      | boolean | True when the current item needs to reset their state |
+| Name        | Type    | Description                                           |
+| :---------- |:------- | :---------------------------------------------------- |
+| `$implicit` | T       | The value of the individual items in the iterable     |
+| `index`     | number  | The index of the current item in the iterable.        |
+| `dirty`     | boolean | True when the current item needs to reset their state |
 
 <div class="divider--half"></div>
 
