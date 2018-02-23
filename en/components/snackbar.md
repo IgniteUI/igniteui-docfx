@@ -47,13 +47,13 @@ In order to display the snackbar component, use its `show()` method and call it 
 </div>
 ```
 
-If the sample is configured properly, a snackbar should appear displaying a text message when the button is clicked.
+If the sample is configured properly, a snackbar appears displaying a text message when the button is clicked.
 
 <div class="sample-container loading" style="height: 170px">
     <iframe id="snackbar-sample-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/snackbar-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 
-#### Hide/Autohide
+#### Hide/Auto Hide
 Once opened, the snackbar disappears after a period specified by the `displayTime` input which is set initially to 4000 milliseconds. This behavior is enabled by default but you can change this by setting `autoHide` to **false**. In this way, the snackbar will remain visible. Using the snackbar `hide()` method, you can close the component in the code.
 
 ```html
@@ -73,7 +73,7 @@ public close(element) {
 }
 ```
 
-If the sample is configured properly, a snackbar should appear when the button is clicked showing message and action button. The auto hide feature is disabled and the snackbar disappears on 'CLOSE' button click.
+If the sample is configured properly, a snackbar appears when the button is clicked showing message and action button. The auto hide feature is disabled and the snackbar disappears on 'CLOSE' button click.
 
 <div class="sample-container loading" style="height: 170px">
     <iframe id="snackbar-sample-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/snackbar-sample-2" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -91,7 +91,7 @@ Use `displayTime` and set it to an interval in milliseconds to configure how lon
 </div>
 ```
 
-If the sample is configured properly, the snackbar auto hides pretty fast.
+If the sample is configured properly, the snackbar auto hides faster.
 
 <div class="sample-container loading" style="height: 170px">
     <iframe id="snackbar-sample-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/snackbar-sample-3" onload="onSampleIframeContentLoaded(this);"></iframe>

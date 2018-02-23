@@ -41,7 +41,7 @@
   href: for_of.md
 - name: Interactions
   header: true
-- name: Dialog Windows 
+- name: Dialog Window
   href: dialog.md
 - name: Slider 
   href: slider.md
