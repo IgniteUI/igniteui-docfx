@@ -69,10 +69,10 @@ If all went well, you should see the following in your browser:
 
 ### Customizing Tabs
 
-Let's modify the tabs and make them more appealing by including icons. The Tab Bar contorl is compatible with the Material Design 
+Let's modify the tabs and make them more appealing by including icons. The Tab Bar control is compatible with the Material Design
 [**Icons**](https://material.io/icons/) so it will be very easy for you to addopt them in your application.
 
-First add the Material+Icons import in your 'styles.css' file in the main application folder. 
+First add the Material+Icons import in your 'styles.css' file in the main application folder.
 
 ```css
 // styles.css
@@ -114,14 +114,14 @@ and also DIV and SPAN elements to visualize the data content correctly:
 
 ```html
 <igx-tab-bar>
-  
+
   <igx-tab-panel label="Songs" icon="library_music">
     <div class="item" *ngFor="let song of songsList">
       <span class="item-line1">{{song.title}}</span><br/>
       <span class="item-line2">{{song.artist}}</span>
     </div>
   </igx-tab-panel>
-  
+
   <igx-tab-panel label="Movies" icon="video_library">
     <div class="item" *ngFor="let movie of moviesList">
       <span class="item-line1">{{movie.title}}</span><br/>
@@ -139,7 +139,7 @@ and also DIV and SPAN elements to visualize the data content correctly:
 </igx-tab-bar>
 ```
 
-Finally add the CSS classes used by the DIV and SPAN elements of the template to the component's CSS file: 
+Finally add the CSS classes used by the DIV and SPAN elements of the template to the component's CSS file:
 
 ```css
 .item {
@@ -157,7 +157,7 @@ Finally add the CSS classes used by the DIV and SPAN elements of the template to
 }
 ```
 
-After these modifications our Tab Bar should looks similar to this:
+After these modifications our Tab Bar should look similar to this:
 
 <div class="sample-container loading" style="height: 350px; width: 300px; border: 1px solid gray;">
     <iframe id="tabbar-sample-2-iframe" src='{environment:demosBaseUrl}/tabbar-sample-2' width="100%" height="100%" seamless
@@ -170,7 +170,7 @@ After these modifications our Tab Bar should looks similar to this:
 
 <div class="divider--half"></div>
 
-If changing the tabs' labels and tabs' icons is not enough, you can also create your own template for each tabs.
+If changing the tabs' labels and tabs' icons is not enough, you can also create your own template for each tab.
 Here is an example:
 
 ```html
@@ -182,7 +182,7 @@ Here is an example:
                 <!-- your custom tab content goes here -->
             </div>
         </ng-template>
-        
+
         <h1>Tab content</h1>
     </igx-tab-panel>
 </igx-tab-bar>
@@ -306,7 +306,7 @@ Edit the component's template markup by adding the following Tab Bar with an Igx
 ...
 ```
 
-And don't forget to include these CSS definitions in order for the application to looks correctly:
+And don't forget to include the following CSS definitions in order for the application to look correctly:
 
 ```css
 .tab-content {
@@ -406,7 +406,7 @@ The following getters are available on the **igx-tab** component:
 | Name | Type | Description |
 | :--- | :--- | :--- |
 | `isDisabled` | Boolean | Determines whether the tab is disabled. |
-| `isSelected` | Boolean | Determines whether the tab is selecte. |
+| `isSelected` | Boolean | Determines whether the tab is selected. |
 | `index` | Number | Gets the index of the tab in the tab collection. |
 | `relatedPanel` | IgxTabPanel | Gets the panel associated with the tab. |
 
