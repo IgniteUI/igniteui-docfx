@@ -38,7 +38,7 @@ export class AppModule {}
 ```
 ### Examples
 
-Use `igx-ButtonGroup` to organize buttons into an for Angular styled button group.
+Use `igx-ButtonGroup` to organize buttons into an Angular styled button group.
 ```typescript
 //sample.component.ts
 import { ButtonGroupAlignment } from "igniteui-angular/main";
@@ -78,7 +78,7 @@ public alignment = ButtonGroupAlignment.vertical;
 <div class="divider--half"></div>
 
 
-While you can use Exclusive or Multiple selection you can also set a button to be togglable and disabled. In the folowing example the leftmost button is selected, but not togglable. The rightmost is disabled.
+While you can use Exclusive or Multiple selection you can also set a button to be togglable and disabled. In the following example the leftmost button is selected, but not togglable. The rightmost is disabled.
 ```typescript
 //sample.component.ts
 ...
