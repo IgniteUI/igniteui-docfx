@@ -1,17 +1,17 @@
 ---
 title: igxFor
-_description: Ignite UI for Angular now exposes a virtual igxFor directive similar to ngFor, which virtualizes DOM object rendering by visualizing only the visible chunks of the data in the DOM.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Virtualization, Performance, Virtual directive, Virtual For
+_description: Ignite UI for Angular は ngFor と同様の仮想 igxFor ディレクティブを公開します。DOM でデータの表示されている部分のみを可視化すると DOM オブジェクトの描画が仮想化されます。
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, 仮想化, パフォーマンス, 仮想ディレクティブ, 仮想 For
+_language: ja
 ---
 
 ## igxFor
 
 <p class="highlight">
-`igxForOf` is now available as an alternative to `ngForOf` for templating large amounts of data. The `igxForOf` uses virtualization technology behind the scenes to optimize DOM rendering and memory consumption. Virtualization technology works similar to Paging by slicing the data into smaller chucks which are swapped from a container viewport while the user scrolls the data horizontally/vertically. The difference with the Paging is that virtualization mimics the natural behavior of the scrollbar.
-The directive is creating scrollable containers and renders small chunks of the data. Is is used inside `igx-grid` and it can be used to build virtual `igx-list`.
-</p>
+大量データをテンプレート化するために `ngForOf` の代わりに `igxForOf` を使用できます。`igxForOf` は、DOM 描画およびメモリ使用を最適化するために仮想化を使用します。仮想化はページング機能のようにデータをより小さいチャンクに分割します。このチャンクは、ユーザーがデータを水平/垂直にスクロールするときにコンテナー ビューポートで切り替えます。ページングの動作との違いは、仮想化が通常のスクロールバーの動作を装うことです。ディレクティブはスクロール可能なコンテナーを作成して、データの小さい部分を描画します。`igx-grid` で使用され、仮想化された `igx-list` を作成するために使用できます。</p>
 
-### igxFor Demo
+
+### igxFor デモ
 
 <div class="sample-container loading" style="height:780px">
     <iframe src='{environment:demosBaseUrl}/igx-for-sample-1' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -19,10 +19,9 @@ The directive is creating scrollable containers and renders small chunks of the 
 <br/>
 <!--<button data-localize="stackblitz" class="stackblitz-btn">view on stackblitz</button> -->
 
-### Dependencies
+### 依存関係
 
-The `igxFor` directive is exported as as an `NgModule`, thus all you need to do in your application is to import the _IgxForOfModule_
-inside your `AppModule`:
+`igxFor` ディレクティブが `NgModule` としてエクスポートされるため、アプリケーションで `AppModule` に _IgxForOfModule_ をインポートする必要があります。
 
 ```typescript
 // app.module.ts
@@ -39,9 +38,9 @@ import { IgxForOfModule } from 'igniteui-angular/main';
 export class AppModule {}
 ```
 
-### Usage
+### 使用方法
 
-Now that we have the `igxForOf` module imported, let’s get started with a basic configuration of the **igxFor** that binds to local data:
+`igxForOf` モジュールをインポート後、ローカル データにバインドする **igxFor** の基本構成を設定します。
 
 ```html
 <span #container>
@@ -49,13 +48,11 @@ Now that we have the `igxForOf` module imported, let’s get started with a basi
 </span>
 ```
 
+**data** プロパティは、仮想化されたデータを提供する配列です。
 
+ディレクティブはデータを垂直、水平、または両方向で仮想化できます。
 
-The **data** property is an array that provides the virtualized data.
-
-
-The directive can be used to virtualize the data in vertical, horizontal or both directions.
-### Vertical virtualization
+#### 垂直仮想化
 
 ```html
 <table style='height:500px;'>
@@ -69,7 +66,7 @@ The directive can be used to virtualize the data in vertical, horizontal or both
 </table>
 ```
 
-### Horizontal virtualization
+#### 水平仮想化
 
 ```html
 <table> 
@@ -86,7 +83,7 @@ The directive can be used to virtualize the data in vertical, horizontal or both
 </table>
 ```
 
-### Horizontal and vertical virtualization
+#### 水平仮想化および垂直仮想化
 
 ```html
 <table #container [style.width]='width' [style.height]='height'>
@@ -184,45 +181,50 @@ chunkLoading(evt) {
 ```
 ## API
 
-### Inputs
+### 入力
 
-Below is the list of all inputs that the developers may set to configure the `igxFor` look/behavior:
-| Name | Type | Description |
+`igxFor` の外観および動作を構成するには、以下の入力を使用します。
+
+| 名前 | 型 | 説明 |
 | :--- |:--- | :--- |
-| id | string | Unique identifier of the directive |
-| `igxForOf` | any[] | The data to be virtualized |
-| `igxForScrollOrientation` | string | Virtualization direction - "horizontal" or "vertical" |
-| `igxForScrollContainer` | any | The container where the vertical and horizontal scrollbars will be created, the is useful when nesting the directive and for cases where the scrolling container is not going to be the direct parent |
-| `igxForContainerSize` | any | Specifies the container size |
-| `igxForItemSize` | any | Specifies the item size, when the virtualization is vertical it is used as height and as width when the virtualization is horizontal. It is mostly used for the vertical direction, because for the horizontal width it is possible to have items with different widhts |
+| id | string | ディレクティブの一意識別子 |
+| `igxForOf` | any[] | 仮想化するデータ |
+| `igxForScrollOrientation` | string | 仮想化の方向 - "horizontal" または "vertical" |
+| `igxForScrollContainer` | any | 垂直および水平スクロールバーが作成されるコンテナー。ディレクティブをネストするか、スクロール コンテナーが直接の親ではない場合に便利です。 |
+| `igxForContainerSize` | any | コンテナー サイズを指定します。 |
+| `igxForItemSize` | any | 項目のサイズを指定します。仮想化が垂直方向の場合、高さのサイズです。仮想化が水平方向の場合、このサイズは幅です。水平方向の場合は項目が異なる幅を持つことが可能なため、通常は垂直方向で使用されます。 |
 
-### Accessors
 
-List of public accessors that the developers may use to get information from the `igxFor`:
-| Name | Type | Description |
+### アクセサー
+
+以下は、`igxFor` から情報を取得するための公開用アクセサーのリストです。
+
+| 名前 | 型 | 説明 |
 | :--- |:--- | :--- |
-| id | string | Unique identifier of the directive |
-| `state` | IgxForState | The current state of the directive it contains `startIndex` and `chunkSize` |
-| `totalItemCount` | number | The total count of the virtual data items, when using remote service |
+| id | string | ディレクティブの一意識別子 |
+| `state` | IgxForState | ディレクティブの現在状態。`startIndex` および `chunkSize` を含みます。 |
+| `totalItemCount` | number | リモート サービスを使用する場合、仮想データ項目の合計数。 |
 
 
-### Outputs
+### 出力
 
-A list of the events emitted by the **igx-for**:
+**igx-for** によって発生されるイベントのリスト:
 
-| Name              | Description                                                          |
+| 名前              | 説明                                                          |
 | :---------------- | :------------------------------------------------------------------- |
-| _Event emitters_  | _Notify for a change_                                                |
-| `OnChunkLoad`      | Used when scrolled to emit the loaded data item                      |
-| `OnChunkPreload`   | Used when scrolled to emit the data item which is about to be loaded |
+| イベント発生  | 変更の通知                                                |
+| `OnChunkLoad`      | スクロール時、読み込んだデータ項目を発生します。                     |
+| `OnChunkPreload`   | スクロール時、読み込むデータ項目を発生するために使用されます。 |
 
 
-### Methods
+### メソッド
 
-Here is a list of all public methods exposed by the **igx-for**:
+**igx-for** によって公開されるすべてのパブリック メソッドのリスト:
 
-| Signature       | Description                     |
+| 構文       | 説明                     |
 | :-------------- | :------------------------------ |
-| `scrollNext()`  | Scrolls by one item into the  appropriate  next direction |
-| `scrollPrev()`  | Scrolls by one item into the  appropriate  previous direction|
-| `scrollTo(index)`  | Scrolls to the specified index |
+| `scrollNext()`  | 「次」の方向に 1 項目スクロールします。 |
+| `scrollPrev()`  | 「前」の方向に 1 項目スクロールします。|
+| `scrollTo(index)`  | 指定されたインデックスへスクロールします。 |
+
+
