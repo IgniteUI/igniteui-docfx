@@ -11,7 +11,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ### Tabbar Demo
 
-<div class="sample-container loading" style="height: 600px; width: 400px" >
+<div class="sample-container loading" style="height: 600px; width: 400px; border: 1px solid gray;" >
     <iframe id="tabbar-sample-iframe" src='{environment:demosBaseUrl}/tabbar' width="100%" height="100%" seamless
         frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -56,7 +56,7 @@ Then, modify the component's template to include the Tab Bar and add three panel
 ```
 If all went well, you should see the following in your browser:
 
-<div class="sample-container loading" style="height: 200px; width: 300px">
+<div class="sample-container loading" style="height: 200px; width: 300px; border: 1px solid gray;">
     <iframe id="tabbar-sample-1-iframe" src='{environment:demosBaseUrl}/tabbar-sample-1' width="100%" height="100%" seamless
         frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -159,7 +159,7 @@ Finally add the CSS classes used by the DIV and SPAN elements of the template to
 
 After these modifications our Tab Bar should looks similar to this:
 
-<div class="sample-container loading" style="height: 350px; width: 300px">
+<div class="sample-container loading" style="height: 350px; width: 300px; border: 1px solid gray;">
     <iframe id="tabbar-sample-2-iframe" src='{environment:demosBaseUrl}/tabbar-sample-2' width="100%" height="100%" seamless
         frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
