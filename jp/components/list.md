@@ -44,7 +44,43 @@ import { IgxListModule } from 'igniteui-angular/main';
 export class AppModule {}
 ```
 
-連絡先コンポーネントのテンプレートで、以下のコードを追加すると項目の簡易なリストを作成します。
+連絡先コンポーネントのテンプレートでリストを作成できます。項目がない場合は、空のリストのデフォルト テンプレートを使用できます。`igxEmptyList` ディレクティブを使用して空のリストの外観をカスタマイズするためにカスタム テンプレートを設定できます。この場合、デフォルト テンプレートは使用されません。
+
+```html
+<!--contacts.component.html-->
+
+<igx-list>
+    <ng-template igxEmptyList>
+        <p class="empty">No contacts! :(</p>
+    </ng-template>
+</igx-list>
+```
+
+空のテンプレートのスタイル:
+
+```css
+/* contacts.component.css */
+
+.empty {
+    color: rgba(0, 153, 255, 1);
+    font-size: 25px;
+    font-weight: 600;
+    text-shadow: 2px 1px 2px rgba(150, 150, 150, 1);
+}
+```
+
+空のリストは以下のようになります:
+
+<div class="sample-container loading" style="height: 100px">
+<iframe id="list-sample-5-iframe" src='{environment:demosBaseUrl}/list-sample-5' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-sample-5-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+</div>
+
+#### リスト項目の追加
+
+リストが空の場合にテンプレートは便利ですが、次は項目を追加します。以下のコードを追加すると項目の簡易なリストを作成できます。
 
 ```html
 <!--contacts.component.html-->
@@ -336,9 +372,9 @@ toggleFavorite(item: IgxListItem) {
 以下の入力は **igx-list** コンポーネントで利用できます。
 | 名前 | 型 | 説明 |
 | :--- | :--- | :--- |
-| `emptyListImage` | String | リストが空の場合にプレースホルダーとして使用する画像 URL を設定します。 |
-| `emptyListMessage` | String | 空のリスト メッセージを設定します。 |
-| `emptyListButtonText` | String | 空のリスト ボタン テキストをカスタマイズ化します。 |
+| `allowLeftPanning` | Boolean | 項目の左パンニングが許可されるかどうかを決定します。 |
+| `allowRightPanning` | Boolean | 項目の右パンニングが許可されるかどうかを決定します。 |
+| `emptyListTemplate` | IgxEmptyListTemplateDirective | リストが空の場合に使用するカスタム テンプレート。 |
 
 <div class="divider"></div>
 
@@ -346,6 +382,7 @@ toggleFavorite(item: IgxListItem) {
 | 名前 | 型 | 説明 |
 | :--- | :--- | :--- |
 | `isHeader` | Boolean | 現在のリスト項目をリスト ヘッダーに設定します。 |
+| `hidden` | Boolean | 項目が表示されるかどうかを決定します。 |
 
 <div class="divider"></div>
 
@@ -354,24 +391,32 @@ toggleFavorite(item: IgxListItem) {
 以下の出力は **igx-list** コンポーネントで利用できます。
 | 名前 | 型 | 説明 |
 | :--- | :--- | :--- |
-| `emptyListButtonClick` | EventEmitter | 空のリスト ボタンがクリックされたときに現在のリストを含むイベントを発生します。 |
+| `onPanStateChange` | EventEmitter | パンニング ジェスチャがリスト項目に実行されたときに現在のリストを含むイベントを発生します。 |
+| `onLeftPan` | EventEmitter | 左パンニング ジェスチャがリスト項目に実行されたときに現在のリストを含むイベントを発生します。 |
+| `onRightPan` | EventEmitter | 右パンニング ジェスチャがリスト項目に実行されたときに現在のリストを含むイベントを発生します。 |
+| `onItemClicked` | EventEmitter | リスト項目がクリックされたときに現在のリストを含むイベントを発生します。 |
 
 <div class="divider"></div>
 
-#### ゲッター
+#### プロパティ
 
-以下のゲッターは **igx-list** コンポーネントで利用できます。
+以下のプロパティは **igx-list** コンポーネントで利用できます。
+
 | 名前 | 型 | 説明 |
 | :--- | :--- | :--- |
-| `items` | IgxListItem | 項目ヘッダーを含まないすべてのリスト項目の配列を返します。 |
-| `headers` | IgxListItem | すべてのリスト ヘッダーの配列を返します。 |
+| `children` | QueryList | 項目およびヘッダーのすべての IListChild コンポーネントのコレクションを返します。 |
+| `items` | IgxListItemComponent[] | 項目ヘッダーを含まないすべてのリスト項目の配列を返します。 |
+| `headers` | IgxListItemComponent[] | すべてのリスト ヘッダーの配列を返します。 |
 
 <div class="divider"></div>
 
-以下のゲッターは **igx-list-item** コンポーネントで利用できます。
+以下のプロパティは **igx-list-item** コンポーネントで利用できます。
+
 | 名前 | 型 | 説明 |
 | :--- | :--- | :--- |
 | `index` | number | リスト項目のインデックスを取得します。 |
+| `panState` | IgxListPanState | リスト項目のパンニング状態を取得します。 |
+| `list` | IgxListComponent | リスト項目に関連付けられたリストを取得します。 |
 
 <div class="divider"></div>
 
