@@ -6,23 +6,23 @@ _language: ja
 ---
 
 ## Date Picker
-<p class="highlight">The Ignite UI for Angular Date Picker component displays a month-view calendar or a pop-up calendar that lets users pick a single date. It supports locales and custom date formatting. The component can display a today and cancel buttons.</p>
+<p class="highlight">Ignite UI for Angular Date Picker コンポーネントは、単一の日付選択を可能にする月表示カレンダーまたはポップアップ カレンダーを表示します。ロケールおよびカスタム日付書式設定をサポートします。コンポーネントに [今日] および [キャンセル] ボタンを表示できます。</p>
 <div class="divider"></div>
 
-### Date Picker Demo
+### Date Picker デモ
 <div class="sample-container loading" style="height: 540px;">
     <iframe id="date-picker-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/datepicker-sample-4" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="date-picker-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="date-picker-sample" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
 > [!WARNING]
-> To start using Ignite UI for Angular components in your own projects, make sure you have configured all necessary dependencies and have performed the proper setup of your project. You can learn how to do this in the [**installation**](https://www.infragistics.com/products/ignite-ui-angular/getting-started#installation) topic.
+> Ignite UI for Angular コンポーネントをプロジェクトに追加する前に、すべての必要な依存関係を構成し、プロジェクトのセットアップが正しく完了したことを確認してください。「[**インストール**](https://jp.infragistics.com/products/ignite-ui-angular/getting-started#installation)」のトピックで手順を参照できます。
 
-### Usage
-The `IgxDatePickerComponent` allows you to pick a date from a calendar. The picker uses the `IgxCalendarComponent` internally as a calendar. To get started with the Ignite UI for Angular Date Picker, let's first import the **IgxDatePickerModule** in our **app.module.ts** file:
+### 使用方法
+`IgxDatePickerComponent` を使用してカレンダーから日付を選択できます。ピッカーが内部に `IgxCalendarComponent` をカレンダーとして使用します。Ignite UI for Angular Date Picker を初期化する前に、**IgxDatePickerModule** を **app.module.ts** ファイルにインポートします。
 
 ```typescript
 // app.module.ts
@@ -38,67 +38,73 @@ import { IgxDatePickerModule } from 'igniteui-angular/main';
 export class AppModule {}
 ```
 
-Then in our template we place the date picker:
+テンプレートに日付ピッカーを追加します。
 
 ```html
 <igx-datePicker></igx-datePicker>
 ```
 
-The result is as follows:
+以下は結果です。
+
 <div class="sample-container loading" style="height: 540px;">
     <iframe id="date-picker-sample-1" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/datepicker-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="date-picker-sample-1" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="date-picker-sample-1" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
-#### Setting date
-We could set a date to our `IgxDatePickerComponent` using the `value` input. Just add a date:
+#### 日付の設定
+
+`IgxDatePickerComponent` に日付を設定するには、`value` 入力を設定します。日付を追加します。
 
 ```typescript
 public date: Date = new Date(Date.now());
 ```
 
-Then use the `value` input in the template:
+テンプレートで `value` 入力を使用します。
 
 ```html
 <igx-datePicker [value]="date"></igx-datePicker>
 ```
 
-And there we have it:
+以下は結果です。
+
 <div class="sample-container loading" style="height: 540px;">
     <iframe id="date-picker-sample-2" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/datepicker-sample-2" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="date-picker-sample-2" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="date-picker-sample-2" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
-If we want to use a two-way data-binding, we could just use `ngModule` like this:
+TwoWay データ バインディングを使用するには、`ngModule` を以下のように使用します。
 
 ```html
 <igx-datePicker [(ngModel)]="date"></igx-datePicker>
 ```
 
-#### Adding buttons
-The `IgxDatePickerComponent` supports a today button which selects the current day from the calendar. Cancel button could be enabled too. Here is how we can enable the buttons in our template:
+#### ボタンの追加
+
+`IgxDatePickerComponent` は、カレンダーからの現在の日を選択する [今日] ボタンをサポートします。[キャンセル] ボタンも有効にできます。テンプレートでボタンを有効にするには、以下のコードを使用します。
 
 ```html
 <igx-datePicker cancelButtonLabel="cancel" todayButtonLabel="today" [(ngModel)]="date"></igx-datePicker>
 ```
 
-Here you can see the buttons:
+ボタンが表示されるサンプル:
+
 <div class="sample-container loading" style="height: 580px;">
     <iframe id="date-picker-sample-3" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/datepicker-sample-3" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="date-picker-sample-3" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="date-picker-sample-3" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
-#### Custom formatting
-By default our date will be formatted based on the `locale` we set. We could use our own formatter though. To achieve this add a formatter function:
+#### カスタム書式設定
+
+デフォルトで日付は設定した `locale` に基づいて書式設定され、カスタム フォーマッタも使用できます。フォーマッタ関数の追加:
 
 ```typescript
 public date: Date = new Date(Date.now());
@@ -111,23 +117,25 @@ public formatter = (date: Date) => {
 }
 ```
 
-And then use the `formatter` input of the `IgxDatePickerComponent`:
+次、`IgxDatePickerComponent` の `formatter` 入力を使用します。
 
 ```html
 <igx-datePicker [value]="date" [formatter]="formatter"></igx-datePicker>
 ```
 
-Here is the formatted date:
+書式設定した日付を表示するサンプル:
+
 <div class="sample-container loading" style="height: 540px;">
     <iframe id="date-picker-sample-4" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/datepicker-sample-4" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="date-picker-sample-4" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="date-picker-sample-4" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
-### Internationalization
-The `IgxDatePickerComponent` supports locales. You can set them using the `locale` input. Using the `IgxCalendarComponent` templates for header (`igxCalendarHeader`) and subheader (`igxCalendarSubheader`), you can specify the look of your header and subheader. More information on how to use these templates you can find in the `IgxCalendarComponent` [documentation](calendar.md). Here is how a date picker with Japanese locale definition would look like:
+### インターナショナリゼーション
+
+`IgxDatePickerComponent` はロケールをサポートします。`locale` 入力を使用して設定できます。ヘッダー (`igxCalendarHeader`) およびサブヘッダー (`igxCalendarSubheader`) の `IgxCalendarComponent` テンプレートを使用して、ヘッダーおよびサブヘッダーの外観を設定できます。このテンプレートを使用する方法の詳細については、`IgxCalendarComponent` [ヘルプ](calendar.md)を参照してください。以下は日本ロケール定義を持つ日付ピッカーです。
 
 ```html
 <igx-datePicker locale="ja-JP" [value]="date">
@@ -141,12 +149,13 @@ The `IgxDatePickerComponent` supports locales. You can set them using the `local
 </igx-datePicker>
 ```
 
-The result is as follows:
+以下は結果です。
+
 <div class="sample-container loading" style="height: 580px;">
     <iframe id="date-picker-sample-5" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/datepicker-sample-5" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="date-picker-sample-5" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="date-picker-sample-5" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
@@ -156,17 +165,17 @@ The result is as follows:
 
 <div class="divider--half"></div>
 
-| 名前                |             型             | 説明                                                                                                                                                                                                              |
-| :------------------ | :------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `value` | `Date` | Sets the selected date. |
-| `todayBottonLabel`  |          `string`          | [今日] ボタンをカスタム名で描画します。ボタンはカレンダーで今日の日付を選択し、datePicker フィールドに入力します。                                                                                                |
-| `cancelButtonLabel` |          `string`          | [キャンセル] ボタンをカスタム名で描画します。ボタンはカレンダーを閉じます。                                                                                                                                       |
-| `formatter`         |         `function`         | 選択した日付または渡した日付にカスタム書式を適用します。                                                                                                                                                          |
-| `isDisabled`        |         `boolean`          | datePicker を無効にします。                                                                                                                                                                                       |
-| `weekStart`         | `Number` または `WEEKDAYS` | 週の最初の曜日を設定します。                                                                                                                                                                                      |
-| `locale`            |          `string`          | カレンダーで日付の書式および表示のためのロケールを設定します。有効な書式の詳細については、[このページ](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl)を参照してください。 |
-| `formatOptions`     |          `Object`          | 日付を書式設定するために使用される `locale` プロパティと渡される書式オプション。                                                                                                                                  |
-| `formatViews` | `Object` | The format views passed along with the `locale` property used for formatting dates. |
+| 名前   |      型      |  説明 |
+|:----------|:-------------:|:------|
+| `value` | `Date` | 選択された日付を設定します。 |
+| `todayButtonLabel` | `string` | [今日] ボタンをカスタム名で描画します。ボタンはカレンダーで今日の日付を選択し、datePicker フィールドに入力します。 |
+| `cancelButtonLabel` | `string` | [キャンセル] ボタンをカスタム名で描画します。ボタンはカレンダーを閉じます。 |
+| `formatter` | `function` | 選択した日付または渡した日付にカスタム書式を適用します。 |
+| `isDisabled` | `boolean` | datePicker を無効にします。 |
+| `weekStart`| `Number` または `WEEKDAYS` | 週の最初の曜日を設定します。 |
+| `locale` | `string` | カレンダーで日付の書式および表示のためのロケールを設定します。有効な書式の詳細については、[このページ](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl)を参照してください。 |
+| `formatOptions` | `Object` | 日付を書式設定するために使用される `locale` プロパティと渡される書式オプション。 |
+| `formatViews` | `Object` | 日付を書式設定するために使用される `locale` プロパティと渡される書式ビュー。 |
 
 #### 出力
 
@@ -187,9 +196,9 @@ The result is as follows:
 
 <div class="divider--half"></div>
 
-### Additional Resources
+### 追加のリソース
 <div class="divider--half"></div>
-Our community is active and always welcoming to new ideas.
+是非コミュニティに参加してください。
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

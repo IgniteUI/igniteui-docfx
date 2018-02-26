@@ -6,23 +6,23 @@ _language: ja
 ---
 
 ## Calendar
-<p class="highlight">The Ignite UI for Angular Calendar component is developed as a native [Angular component](https://angular.io/guide/architecture#components). Use it to provide your application with three easy and intuitive ways to display date information. Users can select a single date, multiple dates or pick a range of dates.</p>
+<p class="highlight">Ignite UI for Angular Calendar コンポーネントは、ネイティブ [Angular コンポーネント](https://angular.io/guide/architecture#components)です。アプリケーションで日付情報を 3 つの方法で表示できます。ユーザーが単一の日付、複数の日付、または日付の範囲を選択できます。</p>
 
-### Calendar Demo
+### Calendar デモ
 <div class="sample-container loading" style="height: 500px">
     <iframe id="calendar-sample-5-iframe" src='{environment:demosBaseUrl}/calendar-sample-5' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="calendar-sample-5-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="calendar-sample-5-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
 > [!WARNING]
-> Ignite UI for Angular has a [peer dependency](https://nodejs.org/en/blog/npm/peer-dependencies/) on [**HammerJS**](https://hammerjs.github.io/).
-> Make sure you add it to your Angular project.
+> Ignite UI for Angular に [**HammerJS**](https://hammerjs.github.io/) のピ[ア依存関係](https://nodejs.org/en/blog/npm/peer-dependencies/)があります。
+> Angular プロジェクトにそれを追加する必要があります。
 > <br/> <br/>`$ npm install hammerjs @types/hammerjs`
 
-### Usage
-To get started with the **Ignite UI for Angular Calendar**, let's first import the **IgxCalendarModule** in the application's AppModule, typically this is the **app.module.ts** file. Note that the **IgxCalendarComponent** is also dependent on the **BrowserAnimationsModule**, so it needs to be added to the AppModule as well:
+### 使用方法
+Ignite UI for Angular Calendar を初期化する前に、**IgxCalendarModule** をアプリケーションの AppModule (**app.module.ts** ファイル) にインポートします。注: **IgxCalendar** に **BrowserAnimationsModule** の依存関係があるため、それを AppModule に追加する必要もあります。
 
 ```typescript
 // app.module.ts
@@ -36,7 +36,8 @@ import { IgxCalendarModule } from 'igniteui-angular/main';
 })
 export class AppModule {}
 ```
-You will usually also import the **IgxCalendarComponent** in the AppComponent file (or your editor will auto-import them for you) when declaring types that are part of the calendar API:
+
+カレンダー API の型を宣言する前に **IgxCalendarComponent** を AppComponent ファイルにインポートします。エディターが自動的にインポートすることが可能です。
 
 ```typescript
 import { IgxCalendarComponent } from 'igniteui-angular/main';
@@ -46,11 +47,12 @@ import { IgxCalendarComponent } from 'igniteui-angular/main';
 ```
 
 > [!WARNING]
-> Note that the **igxCaledarComponent** uses the [Intl](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat) WebAPI for localization and formatting of dates. 
-> Consider using the [appropriate polyfills](https://github.com/andyearnshaw/Intl.js/) if your target platform does not support them.
+> 注: **igxCalendarComponent** が日付のローカライズおよび書式設定のために [Intl](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat) WebAPI を使用します。
+> 対象プラットフォームがその API をサポートしない場合、[適切なポリフィル](https://github.com/andyearnshaw/Intl.js/)を使用してください。
 
-### Selection
-Instantiating the **IgxCalendarComponent** is as easy as placing its selector element in the template. This will leave the calendar display the current month by default and run in single selection mode. We switch to any of the other selection modes - `multi` and `range`, by setting the `selection` property:
+### 選択
+**IgxCalendarComponent** をインスタンス化するには、セレクター要素をテンプレートに追加します。カレンダーで現在の月が表示され、単一選択モードが使用されます。その他の選択モードに変更するには、`selection` プロパティを `multi` または `range` に設定します。
+
 ```html
 <!-- app.component.html -->
 <!-- Single selection mode -->
@@ -60,27 +62,29 @@ Instantiating the **IgxCalendarComponent** is as easy as placing its selector el
 <!-- Range selection mode -->
 <igx-calendar selection="range"></igx-calendar>
 ```
-Notice that the calendar header is not rendered when the selection is either `multi` or `range`:
+
+選択が `multi` または `range` の場合、カレンダー ヘッダーは描画されません。
+
 <div class="sample-container" style="height: 500px">
     <iframe id="calendar-sample-1-iframe" src='{environment:demosBaseUrl}/calendar-sample-1' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="calendar-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="calendar-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
-###Localization and formatting
+### ローカライズおよび書式設定
 
-Due to their very nature, localization and formatting are essential to any calendar. In the **IgxCalendarComponent** those are controlled and customized through the following properties - `locale`, `formatOptions`, `formatViews`:
+ローカライズおよび書式設定は任意のカレンダーに重要です。**IgxCalendarComponent** では、その機能が `locale`、`formatOptions`、および `formatViews` プロパティによって制御してカスタマイズ化されます。
 
-| Name | Description |
+| 名前 | 説明 |
 |:--:|:---|:---|
-| `locale` | Controls the locale used for formatting and displaying the dates in the calendar. The expected string value should be a [BCP 47 language tag](https://tools.ietf.org/html/rfc5646) and if not set defaults to "en". |
-| `formatOptions` | Controls the date-time components to use in formatted output, and their desired representations ([Аdditional information](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat)). The default values are { day: 'numeric', month: 'short', weekday: 'short', year: 'numeric' }. |
-| `formatViews` | Controls whether the date parts in the different calendar views should be formatted according to the provided locale and formatOptions. defaults are { day: false, month: true, year: false }. For the properties set to false, the views will display the corresponding `Date.getFullYear()` \ `Date.getDate()` \  `Date.getMonth()` value. |
+| `locale` | カレンダーで日付の書式および表示のためのロケールを制御します。予期される文字列値は [BCP 47 言語タグ](https://tools.ietf.org/html/rfc5646)です。設定されない場合、デフォルト値は "en" です。 |
+| `formatOptions` | 書式設定付きの出力に使用する日時コンポーネントおよびその表現を制御します ([詳細](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat))。デフォルト値は { day: 'numeric', month: 'short', weekday: 'short', year: 'numeric' } です。 |
+| `formatViews` |カレンダー ビューの日付部分が提供された locale および formatOptions に基づいて書式設定するかどうかを制御します。デフォルト値は { day: false, month: true, year: false } です。false に設定したプロパティの場合、ビューが相対する `Date.getFullYear` / `Date.getDate()` / `Date.getMonth()` 値を表示します。 |
 <br>
-Let's go ahead and try those along with other customizations from the **IgxCalendarComponent** API. Say we are having visitors on our page coming from countries from EFTA (European Free Trade Association) countries, so we need to display the calendar in the corresponding culture. First thing we need to set is the `weekstart`, which controls the starting day of the week. It defaults to 0, which corresponds to Sunday, so we set a value of 1.
+この設定および **IgxCalendarComponent** API からその他のカスタマイズ化を使用します。EFTA (欧州自由貿易連合) 国内からページへアクセスする場合、カレンダーを対応するカルチャで表示する必要があります。最初に週の開始日を制御する `weekstart` を設定します。デフォルト値が 0 (日曜日) であるため、値を 1 に設定します。
 
-In the markup below we are also binding the `formatOptions` and `formatViews` properties to customize the display formatting. Finally we are binding the `locale` property to a value, based on user's location choice:
+以下のマークアップで表示書式設定をカスタマイズするには `formatOptions` および `formatViews` プロパティもバインドしています。最後に、`locale` プロパティをユーザーの場所選択に基づいて値にバインドします。
 
 ```html
 <!-- app.component.html -->
@@ -92,7 +96,8 @@ In the markup below we are also binding the `formatOptions` and `formatViews` pr
 </igx-calendar>
 <select id="locations" (change)="changeLocale($event)">...</select>
 ```
-All property values are set in the AppCоmponent file:
+
+すべてのプロパティ値が AppComponent ファイルに設定されます。
 
 ```typescript
 // app.component.ts
@@ -116,7 +121,7 @@ public changeLocale(event) {
 }
 ```
 
-Great, we should now have a calendar with customized dates display that also changes the locale representation based on the user location. Let's have a look at it:
+カスタマイズされた日付を持つカレンダーが表示され、ユーザーの場所に基づいてロケール表現を変更します。以下は結果です。
 
 <div class="sample-container" style="height: 500px">
     <iframe id="calendar-sample-2-iframe" src='{environment:demosBaseUrl}/calendar-sample-2' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -125,8 +130,8 @@ Great, we should now have a calendar with customized dates display that also cha
     <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="calendar-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-### Events
-Lets build on top of that sample a bit. We will require the user to enter a date range that does not exceed 5 days. We need to change the `selection` mode of the calendar to "range" and prompt the user to correct the selection, if the range is not valid. To do this we will use the `onSelection` event:
+### イベント
+このサンプルを拡張します。ユーザーが 5 日以下の日付範囲を入力する必要があります。カレンダーの `selection` モードを range に設定し、範囲が無効な場合にユーザーに選択を変更するための通知を表示する `onSelection` イベントを使用します。
 
 ```html
 <!-- app.component.html -->
@@ -137,7 +142,7 @@ Lets build on top of that sample a bit. We will require the user to enter a date
 </igx-calendar>
 ```
 
-The value passed in the `onSelection` event is the collection of dates selected, so we can read its length to base our logic upon it. If we alert the user for the invalid selection, we also reset the selection to contain only the first date from the range using the `selectDate` method:
+`onSelection` イベントに渡した値が選択した日付のコレクションで、その長さに基づいてロジックを実行します。無効な選択でユーザーに通知する場合、選択を範囲の最初の日のみを含むために `selectDate` メソッドを使用してリセットします。
 
 ```typescript
 // app.component.ts
@@ -150,22 +155,23 @@ public verifyRange(dates: Date[]) {
 }
 ```
 
-Let's try this out by playing around with selecting ranges:
+範囲の選択を試してください。
+
 <div class="sample-container" style="height: 460px">
     <iframe id="calendar-sample-3-iframe" src='{environment:demosBaseUrl}/calendar-sample-3' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="calendar-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="calendar-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
-### Templating
+### テンプレート
 
-We have seen how to make use of the **IgxCalendarComponents** API (properties, events, methods) so that we configure the calendar per our requirements and interact with it programatically. Now we want to go further and customize its look, benefiting from the header and subheader templating capabilities.
+**IgxCalendarComponent** API (プロパティ、イベント、メソッド) を使用して要件によってカレンダーを構成し、コードで操作する方法を説明しました。 今度、ヘッダーおよびサブヘッダーのテンプレート機能を使用して外観をカスタマイズします。
 
-To do that we need to decorate a ng-template inside the calendar with **igxCalendarHeader** or **igxCalendarSubheader** directive and use the context returned to customize the way the date is displayed.
-The template decorated with the **igxCalendarHeader** directive is rendered only when the calendar selection is set to single. The **igxCalendarSubheader** is available in all selection modes.
+カスタマイズは、カレンダーの ng-template を **igxCalendarHeader** または **igxCalendarSubheader** ディレクティブでデコレートし、返されたコンテキストを使用して日付の表示をカスタマイズします。
+**igxCalendarHeader** ディレクティブでデコレートされるテンプレートは、カレンダーの選択が単一に設定された場合のみ描画されます。**igxCalendarSubheader** はすべての選択モードで利用可能です。
 
-In our example we slightly modify the default template and will make the header display the full date and modify the subheader to include the weekday:
+この例で、ヘッダーが完全な日付を表示し、サブヘッダーが曜日を含むためにデフォルト テンプレートを変更します。
 
 ```html
 <!-- app.component.html-->
@@ -180,13 +186,14 @@ In our example we slightly modify the default template and will make the header 
     </ng-template>
 </igx-calendar>  
 ```
-For more detailed explanation of what **parts** are the template context, please refer to the [TemplateContext](#template-context) section. Let's see what the templated calendar looks like:
+
+テンプレート コンテキストの **parts** の詳細情報については、API セクションの [TemplateContext](#template-context) を参照してください。テンプレート化されたカレンダーの外観は以下です。
 
 <div class="sample-container" style="height: 500px">
     <iframe id="calendar-sample-4-iframe" src='{environment:demosBaseUrl}/calendar-sample-4' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="calendar-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="calendar-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
 ### キーボード ナビゲーション
@@ -209,48 +216,47 @@ For more detailed explanation of what **parts** are the template context, please
 ### API
 
 #### 入力
-
 <div class="divider--half"></div>
 
-|      名前       | 型                         | 説明                                                                                                                                                                                                           |
-| :-------------: | :------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|   `weekStart`   | `Number` または `WEEKDAYS` | 週の最初の日を設定します。                                                                                                                                                                                     |
-|    `locale`     | `string`                   | カレンダーで日付の書式および表示のためのロケールを設定します。有効な書式の詳細については、[この](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl)ページを参照してください。 |
-|   `selection`   | `string`                   | カレンダーの選択タイプを設定します。有効な値は `single` (デフォルト)、`multi`、および `range` です。                                                                                                           |
-|   `viewDate`    | `Date`                     | カレンダーを描画するときにデフォルト ビューで表示される年と月を設定します。デフォルト値は現在の年と月です。                                                                                                    |
-|     `value`     | `Date` または `Date[]`     | カレンダー ウィジェットの現在値を取得または設定します。複数選択および範囲選択は選択日付の配列を返します。                                                                                                      |
-| `formatOptions` | `Object` | The format options passed along with the `locale` property used for formatting the dates. Defaults are { day: 'numeric', month: 'short', weekday: 'short', year: 'numeric' }. |
-|`formatViews`| `Object`| Controls whether the date parts in the different calendar views should be formatted according to the provided locale and formatOptions. defaults are { day: false, month: true, year: false }. |
-| `vertical` | `boolean` | Controls the layout of the calendar component. When vertical is set to true the calendar header will be rendered to the side of the calendar body.|
+| 名前        |      型      |  説明 |
+|:----------:|:-------------|:------|
+| `weekStart`| `Number` または `WEEKDAYS` | 週の最初の日を設定します。 |
+| `locale` | `string` | カレンダーで日付の書式および表示のためのロケールを設定します。有効な書式の詳細については、[この](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl)ページを参照してください。 |
+| `selection` | `string` | カレンダーの選択タイプを設定します。有効な値は `single` (デフォルト)、`multi`、および `range` です。 |
+| `viewDate` | `Date` | カレンダーを描画するときにデフォルト ビューで表示される年と月を設定します。デフォルト値は現在の年と月です。   |
+| `value` | `Date` または `Date[]` | カレンダー ウィジェットの現在値を取得または設定します。複数選択および範囲選択は選択日付の配列を返します。 |
+| `formatOptions` | `Object` | 日付を書式設定するために使用される `locale` プロパティと渡される書式オプション。デフォルト値は { day: 'numeric', month: 'short', weekday: 'short', year: 'numeric' } です。 |
+|`formatViews`| `Object`| カレンダー ビューの日付部分が提供された locale および formatOptions に基づいて書式設定するかどうかを制御します。デフォルト値は { day: false, month: true, year: false } です。|
+| `vertical` | `boolean` | カレンダー コンポーネントのレイアウトを制御します。`vertical` が true に設定される場合、カレンダー ヘッダーはカレンダーの隣に描画されます。|
 
 #### 出力
-
 <div class="divider--half"></div>
 
-|     名前      | 戻り値の型             | 説明                                                                                                             |
-| :-----------: | :--------------------- | :--------------------------------------------------------------------------------------------------------------- |
+| 名前 |戻り値の型 | 説明 |
+|:--:|:---|:---|
 | `onSelection` | `Date` または `Date[]` | カレンダーで選択が実行されるときに発生します。イベントは、コンポーネントの選択タイプに基づいた選択値を含みます。 |
 
 #### メソッド
 <div class="divider--half"></div>
 
-|     名前     | 引数                         | 戻り値の型 | 説明                                                                                          |
-| :----------: | :--------------------------- | :--------- | :-------------------------------------------------------------------------------------------- |
-| `selectDate` | `date: Date` または `Date[]` | `void`     | カレンダーの選択を変更します。このメソッドの呼び出しは `onSelection` イベントを発生させます。 |
+
+| 名前   | 引数 | 戻り値の型 | 説明 |
+|:----------:|:------|:------|:------|
+| `selectDate` | `date: Date` または `Date[]` | `void` | カレンダーの選択を変更します。このメソッドの呼び出しは `onSelection` イベントを発生させます。 |
 
 <div class="divider--half"></div>
-#### Template Context
+#### テンプレート コンテキスト
 <div class="divider--half"></div>
 
-| Name | Return Type | Description |
+| 名前 | 戻り値の型 | 説明 |
 |:--:|:---|:---|
-| `date` | `Date` | The date object in the context of the template. |
-| `full` | `string` | The full date representation returned after applying the formatOptions. |
-| `monthView` | `function` | A function which when called puts the calendar in month view. |
-| `yearView` | `function` | A function which when called puts the calendar in year view. |
-| `era` | `object` | The era date component (if applicable) formatted to the supplied locale. |
-| `year` | `object` | The year date component (if applicable) formatted to the supplied locale. |
-| `month` | `object` | The month date component (if applicable) formatted to the supplied locale. |
-| `day` | `object` | The day date component (if applicable) formatted to the supplied locale. |
-| `weekday` | `object` | The weekday date component (if applicable) formatted to the supplied locale. |
+| `date` | `Date` | テンプレートのコンテキストの日付オブジェクト。 |
+| `full` | `string` | formatOptions を適用した後に返された完全な日付の表現。 |
+| `monthView` | `function` | カレンダーを月表示に設定する関数。 |
+| `yearView` | `function` | カレンダーを年表示に設定する関数。 |
+| `era` | `object` | 提供したロケールに書式設定される年号の日付コンポーネント (適用可能な場合)。 |
+| `year` | `object` | 提供したロケールに書式設定される年の日付コンポーネント (適用可能な場合)。 |
+| `month` | `object` | 提供したロケールに書式設定される月の日付コンポーネント (適用可能な場合)。 |
+| `day` | `object` | 提供したロケールに書式設定される日の日付コンポーネント (適用可能な場合)。 |
+| `weekday` | `object` | 提供したロケールに書式設定される曜日の日付コンポーネント (適用可能な場合)。 |
 <div class="divider--half"></div>

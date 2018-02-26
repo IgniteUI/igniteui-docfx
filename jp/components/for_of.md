@@ -104,9 +104,9 @@ export class AppModule {}
     </ng-template>
 </table>
 ```
-### igxFor bound to remote service
+### リモート サービスにバインドされる igxFor
 
-The `igxForOf` directive can be bound to remote service. You need to use `Observable` property - `remoteData`(in the following case). Also the `chunkLoading` event should be utilized to trigger the requests to the data.
+`igxForOf` ディレクティブはリモート サービスにバインドできます。 `Observeable` プロパティを使用する必要があります。以下の例は `remoteData` プロパティです。また、`chunkLoading` イベントを使用してデータへの要求をトリガーします。
 
 ```html
 <div style='height:500px;'>
@@ -121,17 +121,21 @@ The `igxForOf` directive can be bound to remote service. You need to use `Observ
 </div>
 ```
 
-Also there is a requirement to set the `totalItemCount` property in the instance of `igxForOf`.
+また、`totalItemCount` プロパティを `igxForOf` インスタンスに設定する必要があります。
+
 ```typescript
 this.virtDirRemote.totalItemCount = data["@odata.count"];
 ```
 
-In order access the directive instance from the component it should be marked as `ViewChild`:
+コンポーネントからディレクティブ インスタンスにアクセスするには、`ViewChild` としてマークします。
+
 ```typescript
 @ViewChild("virtDirRemote", { read: IgxForOfDirective })
 public virtDirRemote: IgxForOfDirective<any>;
 ```
-And after the request to load the first chunk, the `totalItemCount` can be set:
+
+最初のチャンクを読み込む要求の後に `totalItemCount` を設定します。
+
 ```typescript
 public ngAfterViewInit() {
     this.remoteService.getData(this.virtDirRemote.state, (data) => {
@@ -139,7 +143,9 @@ public ngAfterViewInit() {
     });
 }
 ```
-When requesting data you can take advantage of `IgxForOfState` interface, which provides the `startIndex` and `chunkSize`. But note, that initialy the chunkSize will be 0, so you have to specify the size of the first loaded chunk(the best value is `igxForContainerSize` initially divided by `igxForItemSize`).
+
+データを要求する際に `startIndex` および `chunkSize` を提供する `IgxForOfState` インターフェイスを使用できます。注: 最初の chunkSize は 0 です。最初に読み込んだ部分のサイズを指定する必要があります。最適な値は `igxForContainerSize` / `igxForItemSize` です。
+
 ```typescript
 public getData(data?: IForOfState, cb?: (any) => void): any {
     var dataState = data;
@@ -170,7 +176,9 @@ private buildUrl(dataState: any): string {
     return `${this.url}${qS}`;
 }
 ```
-And every time the `onChunkPreload` event is thrown the new chunk of data should be requested:
+
+`onChunkPreload` イベントが発生されたとき、新しいデータの部分を要求します。
+
 ```typescript
 chunkLoading(evt) {
     if(this.prevRequest){
@@ -203,19 +211,20 @@ chunkLoading(evt) {
 | 名前 | 型 | 説明 |
 | :--- |:--- | :--- |
 | `state`            | IgxForState | ディレクティブの現在状態。`startIndex` および `chunkSize` を含みます。 |
-| `state.startIndex` | number      | The index of the item at which the current visible chunk begins    |
-| `state.chunkSize`  | number      | The number of items the current visible chunk holds                |
+| `state.startIndex` | number      | 現在の表示チャンクが開始する項目のインデックス。    |
+| `state.chunkSize`  | number      | 現在の表示チャンクに含まれる項目の数。                |
 | `totalItemCount`   | number      | リモート サービスを使用する場合、仮想データ項目の合計数。               |
 
 
-### Local Variables
+### ローカル変数
 
-List of exported values by the `igxForOf` that can be aliased to local variables:
-| Name        | Type    | Description                                           |
+`igxForOf` にエクスポートされる、ローカル変数にエイリアス可能な値のリスト。
+
+| 名前        | 型    | 説明                                           |
 | :---------- |:------- | :---------------------------------------------------- |
-| `$implicit` | T       | The value of the individual items in the iterable     |
-| `index`     | number  | The index of the current item in the iterable.        |
-| `dirty`     | boolean | True when the current item needs to reset their state |
+| `$implicit` | T       | 列挙子に含まれる項目の値。     |
+| `index`     | number  | 列挙子の現在項目のインデックス。        |
+| `dirty`     | boolean | 現在の項目が状態をリセットする必要がある場合は true。 |
 
 <div class="divider--half"></div>
 

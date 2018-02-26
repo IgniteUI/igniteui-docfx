@@ -20,7 +20,7 @@ _language: ja
 </div>
 <div class="divider--half"></div>
 
-> [!WARNING]
+> [!NOTE]
 > Ignite UI for Angular コンポーネントをプロジェクトに追加する前に、すべての必要な依存関係を構成し、プロジェクトのセットアップが正しく完了したことを確認してください。[「**インストール**」](https://jp.infragistics.com/products/ignite-ui-angular/getting-started#installation)のトピックで手順を参照できます。
 
 ### 使用方法

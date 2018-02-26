@@ -7,10 +7,10 @@ _language: ja
 
 ## Tab Bar
 
-<p class="highlight">The Ignite UI for Angular Tab Bar component enables the user to navigate among a number of content panels displayed in a single view. The navigation through the panels is accomplished with the tab buttons located at bottom.</p>
+<p class="highlight">Ignite UI for Angular Tab Bar コンポーネントは、単一ビューで表示される複数のコンテンツ パネル間での移動を可能にします。パネルの間のナビゲーションは下部にあるタブ ボタンで実行されます。</p>
 <div class="divider"></div>
 
-### Tabbar Demo
+### Tabbar デモ
 
 <div class="sample-container loading" style="height: 600px; width: 400px; border: 1px solid gray;">
     <iframe id="tabbar-sample-iframe" src='{environment:demosBaseUrl}/tabbar' width="100%" height="100%" seamless
@@ -18,19 +18,19 @@ _language: ja
 </div>
 <div>
 <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="tabbar-sample-iframe"
-    data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
 <div class="divider--half"></div>
 
 > [!WARNING]
-> Ignite UI for Angular has a [peer dependency](https://nodejs.org/en/blog/npm/peer-dependencies/) on [**HammerJS**](https://hammerjs.github.io/).
-> Make sure you add it to your Angular project.
+> Ignite UI for Angular に [**HammerJS**](https://hammerjs.github.io/) の[ピア依存関係](https://nodejs.org/en/blog/npm/peer-dependencies/)があります。
+> それを Angular プロジェクトに追加してください。
 > <br/> <br/>`$ npm install hammerjs @types/hammerjs`
 
-### Usage
+### 使用方法
 
-To get started with the control, let's first import the **IgxTabBarModule** in the **app.module.ts** file:
+コントロールを初期化する前に、**IgxTabBarModule** を **app.module.ts** ファイルにインポートします。
 
 ```typescript
 // app.module.ts
@@ -46,7 +46,7 @@ import { IgxTabBarModule } from 'igniteui-angular/main';
 export class AppModule {}
 ```
 
-Then, modify the component's template to include the Tab Bar and add three panels.
+次にコンポーネントのテンプレートを Tab Bar に追加し、3 つのパネルを追加します。
 
 ```html
 <igx-tab-bar>
@@ -55,7 +55,8 @@ Then, modify the component's template to include the Tab Bar and add three panel
   <igx-tab-panel label="Tab 3">This is Tab 3 content.</igx-tab-panel>
 </igx-tab-bar>
 ```
-If all went well, you should see the following in your browser:
+
+以下は結果です:
 
 <div class="sample-container loading" style="height: 200px; width: 300px; border: 1px solid gray;">
     <iframe id="tabbar-sample-1-iframe" src='{environment:demosBaseUrl}/tabbar-sample-1' width="100%" height="100%" seamless
@@ -63,17 +64,16 @@ If all went well, you should see the following in your browser:
 </div>
 <div>
 <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="tabbar-sample-1-iframe"
-    data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
 <div class="divider"></div>
 
-### Customizing Tabs
+### タブのカスタマイズ
 
-Let's modify the tabs and make them more appealing by including icons. The Tab Bar contorl is compatible with the Material Design 
-[**Icons**](https://material.io/icons/) so it will be very easy for you to addopt them in your application.
+タブにアイコンを追加します。Tab Bar コントロールがマテリアル デザイン [**アイコン**](https://material.io/icons/)と互換性があるため、アプリケーションにアイコンを簡単に追加できます。 
 
-First add the Material+Icons import in your 'styles.css' file in the main application folder. 
+最初に Material+Icons をメイン アプリケーション フォルダーの 'styles.css' ファイルにインポートします。
 
 ```css
 // styles.css
@@ -83,7 +83,7 @@ First add the Material+Icons import in your 'styles.css' file in the main applic
 ...
 ```
 
-Define some object arrays for the data source in the component typescript file:
+コンポーネントの typescript ファイルにデータ ソースのオブジェクト配列を定義します。
 
 ```typescript
 ...
@@ -110,8 +110,7 @@ public booksList: object[] = [
 ...
 ```
 
-Update the component's template markup by adding new tabs' labels, icon names from the Material Design Icons library
-and also DIV and SPAN elements to visualize the data content correctly:
+コンポーネントのテンプレート マークアップに新しいタブのラベル、マテリアル デザイン アイコンのライブラリからのアイコン名、およびデータ コンテンツを表示するための DIV および SPAN 要素を追加します。
 
 ```html
 <igx-tab-bar>
@@ -140,7 +139,7 @@ and also DIV and SPAN elements to visualize the data content correctly:
 </igx-tab-bar>
 ```
 
-Finally add the CSS classes used by the DIV and SPAN elements of the template to the component's CSS file: 
+最後に、テンプレートの DIV および SPAN 要素に使用される CSS クラスをコンポーネントの CSS ファイルに追加します。
 
 ```css
 .item {
@@ -158,7 +157,7 @@ Finally add the CSS classes used by the DIV and SPAN elements of the template to
 }
 ```
 
-After these modifications our Tab Bar should looks similar to this:
+Tab Bar は以下のようになります。
 
 <div class="sample-container loading" style="height: 350px; width: 300px; border: 1px solid gray;">
     <iframe id="tabbar-sample-2-iframe" src='{environment:demosBaseUrl}/tabbar-sample-2' width="100%" height="100%" seamless
@@ -166,13 +165,12 @@ After these modifications our Tab Bar should looks similar to this:
 </div>
 <div>
 <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="tabbar-sample-2-iframe"
-    data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
 <div class="divider--half"></div>
 
-If chaning the tabs' labels and tabs' icons is not enough, you can also create your own template for each tabs.
-Here is an example:
+タブのラベルおよびアイコンの変更を拡張するには、各タブでカスタム テンプレートを作成できます。以下は例です。
 
 ```html
 <igx-tab-bar>
@@ -191,12 +189,12 @@ Here is an example:
 
 <div class="divider"></div>
 
-### Embedding Other Igx Controls
+### その他の Igx コントロールの使用
 
-You can combine other Ignite UI for Angular components with the Tab Bar to achieve more complex applications.
-For example you may use the IgxList to create a list of contacts in a Tab Bar's panel and also visualize each contact using IgxAvatar and IgxIcon.
+その他の Ignite UI for Angular コンポーネントを Tab Bar と使用すると、より高度なアプリケーションを実装できます。
+たとえば、Tab Bar のパネルで連絡先のリストを作成するには IgxList を使用できます。各連絡先を可視化するには、IgxAvatar および IgxIcon を使用できます。
 
-This time you will need to include both the IgxTabBar and IgxList components in your "app.module.ts" file:
+IgxTabBar および IgxList コンポーネントを "app.module.ts" ファイルにインポートします。
 
 ```typescript
 // app.module.ts
@@ -215,7 +213,7 @@ import { IgxTabBarModule } from 'igniteui-angular/main';
 export class AppModule {}
 ```
 
-Let's start the application by creating a data source of the contacts in the component typescript file:
+コンポーネントの typescript ファイルに連絡先のデータ ソースを作成します。
 
 ```typescript
 ...
@@ -272,7 +270,7 @@ public contactsList: object[] = [{
 ...
 ```
 
-Edit the component's template markup by adding the following Tab Bar with an IgxList in its first panel:
+コンポーネントのテンプレート マークアップに最初のパネルにある IgxList を含む Tab Bar を追加して編集します。
 
 ```html
 ...
@@ -307,7 +305,7 @@ Edit the component's template markup by adding the following Tab Bar with an Igx
 ...
 ```
 
-And don't forget to include these CSS definitions in order for the application to looks correctly:
+アプリケーションをスタイル設定するために CSS 定義も含める必要があります。
 
 ```css
 .tab-content {
@@ -345,78 +343,78 @@ And don't forget to include these CSS definitions in order for the application t
 }
 ```
 
-You can see the result of the code above at the begining of this article in the [Tabbar Demo](#tabbar-demo) section.
+このトピックの [TabBar デモ](#tabbar-demo) セクションに結果が表示されます。
 
 <div class="divider"></div>
 
-### API Summary
+### API まとめ
 
-The tab bar component has a few more APIs to explore, which are listed below.
+以下は、Tab Bar コンポーネントのその他の API です。
 
-#### Inputs
+#### 入力
 
-The following inputs are available on the **igx-tab-panel** component:
-| Name | Type | Description |
+以下の入力が **igx-tab-panel** コンポーネントで利用できます。
+| 名前 | 型 | 説明 |
 | :--- | :--- | :--- |
-| `label` | String | Defines the label on the associated tab. |
-| `icon` | String | Defines the icon on the associated tab. |
-| `select` | Method | Selects the panel and the associated tab. |
+| `label` | String | 関連付けられているタブでのラベルを定義します。 |
+| `icon` | String | 関連付けられているタブでのアイコンを定義します。 |
+| `select` | Method | パネルおよび関連付けられているタブを選択します。 |
 
 <div class="divider--half"></div>
 
-The following inputs are available on the **igx-tab** component:
-| Name | Type | Description |
+以下の入力が **igx-tab** コンポーネントで利用できます。
+| 名前 | 型 | 説明 |
 | :--- | :--- | :--- |
-| `select` | Method | Selects the tab and the associated panel. |
+| `select` | Method | タブおよび関連付けられているパネルを選択します。 |
 
 <div class="divider"></div>
 
-#### Outputs
+#### 出力
 
-The following outputs are available on the **igx-tab-bar** component:
-| Name | Type | Description |
+以下の出力が **igx-tab-bar** コンポーネントで利用できます。
+| 名前 | 型 | 説明 |
 | :--- | :--- | :--- |
-| `onTabSelected` | EventEmitter | Emits an event when a new tab is selected. |
-| `onTabDeselected` | EventEmitter | Emits an event when a tab is deselected. |
+| `onTabSelected` | EventEmitter | 新しいタブが選択されたときにイベントを発生します。 |
+| `onTabDeselected` | EventEmitter | タブが選択解除されたときにイベントを発生します。 |
 
 <div class="divider"></div>
 
-#### Getters
+#### ゲッター
 
-The following getters are available on the **igx-tab-bar** component:
-| Name | Type | Description |
+以下のゲッターが **igx-tab-bar** コンポーネントで利用できます。
+| 名前 | 型 | 説明 |
 | :--- | :--- | :--- |
-| `tabs` | QueryList | Provides an observable collection of all IgxTab view children. |
-| `panels` | QueryList | Provides an observable collection of all IgxTabPanel content children. |
-| `selectedIndex` | Number | Gets the index of selected tab/panel in the respective collection. |
-| `selectedTab` | IgxTab | Gets the selected IgxTab in the tabbar based on `selectedIndex`. |
+| `tabs` | QueryList | すべての IgxTab ビューの子要素の Observable コレクションを提供します。 |
+| `panels` | QueryList | すべての IgxTabPanel コンテンツの子要素の Observable コレクションを提供します。 |
+| `selectedIndex` | Number | 対応するコレクションの選択済みのタブまたはパネルのインデックスを取得します。 |
+| `selectedTab` | IgxTab | Tab Bar で選択済みの IgxTab を `selectedIndex` に基づいて取得します。 |
 
 <div class="divider--half"></div>
 
-The following getters are available on the **igx-tab-panel** component:
-| Name | Type | Description |
+以下のゲッターが **igx-tab-panel** コンポーネントで利用できます。
+| 名前 | 型 | 説明 |
 | :--- | :--- | :--- |
-| `isDisabled` | Boolean | Determines whether the panel is disabled. |
-| `isSelected` | Boolean | Determines whether the panel is selected. |
-| `index` | Number | Gets the index of a panel in the panel collection. |
-| `relatedTab` | IgxTab | Gets the tab associated with the panel. |
+| `isDisabled` | Boolean | パネルが無効されているかどうかを決定します。 |
+| `isSelected` | Boolean | パネルが選択されているかどうかを決定します。 |
+| `index` | Number | パネル コレクションのパネルのインデックスを取得します。|
+| `relatedTab` | IgxTab | パネルに関連付けられたタブを取得します。 |
 
 <div class="divider--half"></div>
 
-The following getters are available on the **igx-tab** component:
-| Name | Type | Description |
+以下のゲッターが **igx-tab** コンポーネントで利用できます。
+| 名前 | 型 | 説明 |
 | :--- | :--- | :--- |
-| `isDisabled` | Boolean | Determines whether the tab is disabled. |
-| `isSelected` | Boolean | Determines whether the tab is selecte. |
-| `index` | Number | Gets the index of the tab in the tab collection. |
-| `relatedPanel` | IgxTabPanel | Gets the panel associated with the tab. |
+| `isDisabled` | Boolean | タブが無効かどうかを決定します。 |
+| `isSelected` | Boolean | タブが選択されているかどうかを決定します。 |
+| `index` | Number | タブ コレクションのタブのインデックスを取得します。 |
+| `relatedPanel` | IgxTabPanel | タブに関連付けられているパネルを取得します。 |
 
 <div class="divider"></div>
 
-###Additional Resources
+### 追加のリソース
 
 <div class="divider--half"></div>
-Our community is active and always welcoming to new ideas.
+是非コミュニティに参加してください。
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

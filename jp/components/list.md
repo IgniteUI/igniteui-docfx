@@ -171,7 +171,7 @@ public contacts = [{
 
 #### アバターおよびアイコンの追加
 
-エクスペリエンスを向上して機能を追加するためにその他のコンポーネントを IgxList と使用できます。名前および電話番号の値の左に画像のアバターを表示できます。また、連絡先をお気に入りに追加するために右側に星アイコンを追加できます。その要素を追加するには、[**IgxAvatar**](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/avatar.html) および [**IgxIcon**](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/icon.html) モジュールを **app.module.ts** ファイルにインポートします。
+エクスペリエンスを向上して機能を追加するためにその他のコンポーネントを [**IgxList**](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/list.html) と使用できます。名前および電話番号の値の左に画像のアバターを表示できます。また、連絡先をお気に入りに追加するために右側に星アイコンを追加できます。その要素を追加するには、[**IgxAvatar**](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/avatar.html) および [**IgxIcon**](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/icon.html) モジュールを **app.module.ts** ファイルにインポートします。
 
 ```typescript
 // app.module.ts
