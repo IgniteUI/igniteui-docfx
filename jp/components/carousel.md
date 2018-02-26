@@ -88,7 +88,7 @@ export class AppModule {}
   }
 ```
 
-次に **igx-slide** に ngFor ディレクティブを追加して HTML コンテンツを提供します。各スライドに画像も追加します。
+次に `igx-slide` に ngFor ディレクティブを追加して HTML コンテンツを提供します。各スライドに画像も追加します。
 
 ```html
 <!-- app.component.html -->
@@ -134,7 +134,7 @@ a > igx-icon > span{
 </igx-carousel>
 ```
 
-上記のスニペットで、[プロパティ バインディング](https://angular.io/guide/template-syntax#property-binding)を使用して **loop** および **pause** 要素プロパティに値を設定します。オプションのプロパティには、スライド変更の間隔をミリ秒単位で設定する **transition** があります。コンテンツがカルーセルに自動的に変更される代わりに、ユーザーの操作によって変更されるために、このプロパティを設定しません。コンポーネントのプロパティ値が以下のコードによって設定されます。注: 自動再生を無効にするには、カルーセルの **stop()** メソッドを呼び出します。
+上記のスニペットで、[プロパティ バインディング](https://angular.io/guide/template-syntax#property-binding)を使用して `loop` および `pause` 要素プロパティに値を設定します。オプションのプロパティには、スライド変更の間隔をミリ秒単位で設定する `transition` があります。コンテンツがカルーセルに自動的に変更される代わりに、ユーザーの操作によって変更されるために、このプロパティを設定しません。コンポーネントのプロパティ値が以下のコードによって設定されます。注: 自動再生を無効にするには、カルーセルの `stop` メソッドを呼び出します。
 
 ```typescript
   // app.component.ts
@@ -150,14 +150,14 @@ a > igx-icon > span{
   }
 ```
 
-プロパティを構成した後、ユーザーはカルーセルのコンテンツを変更できます。次、ナビゲーションをカスタマイズし、カルーセルのインジケーターをプログレス バーと置き換えます。**onSlideChanged** イベントを処理し、**IgxLinearProgressBar** コンポーネントを使用して進行状況を示す UI を追加します。最初、**IgxLinearProgressBar** モジュールをインポートします。
+プロパティを構成した後、ユーザーはカルーセルのコンテンツを変更できます。次、ナビゲーションをカスタマイズし、カルーセルのインジケーターをプログレス バーと置き換えます。`onSlideChanged` イベントを処理し、**IgxLinearProgressBar** コンポーネントを使用して進行状況を示す UI を追加します。最初、**IgxLinearProgressBar** モジュールをインポートします。
 
 ```typescript
 // app.component.ts
 import { Direction, IgxCarousel, IgxLinearProgressBar } from "igniteui-angular/main";
 ```
 
-モジュールをインポートした後、**IgxLinearProgressBar** をテンプレートに追加します。**max** プロパティを **app.component.ts** ファイルで定義される **total** プロパティの値に設定します。**onSlideChanged** イベントのハンドラーを追加し、進行状況のテキストを追加します。
+モジュールをインポートした後、**IgxLinearProgressBar** をテンプレートに追加します。`max` プロパティを **app.component.ts** ファイルで定義される `total` プロパティの値に設定します。`onSlideChanged` イベントのハンドラーを追加し、進行状況のテキストを追加します。
 
 ```html
 <!-- app.component.html -->
@@ -172,7 +172,7 @@ import { Direction, IgxCarousel, IgxLinearProgressBar } from "igniteui-angular/m
 </igx-carousel>
 ```
 
-**total** および **current** プロパティの値を **ngOnInit** で更新し、リニア バーの値を **onSlideChanged** イベント ハンドラーで更新します。
+`total` および `current` プロパティの値を **ngOnInit** で更新し、リニア バーの値を `onSlideChanged` イベント ハンドラーで更新します。
 
 ```typescript
 // app.component.ts
@@ -232,7 +232,7 @@ ul.igx-carousel__indicators {
 </igx-slide>
 ```
 
-**IgxButtonModule** を **app.component.ts** に追加します。**goto()** 関数は [Angular ルーター](https://angular.io/guide/router)を使用してその他のビューに移動します。
+**IgxButtonModule** を **app.component.ts** に追加します。`goto()` 関数は [Angular ルーター](https://angular.io/guide/router)を使用してその他のビューに移動します。
 
 ```typescript
   // app.component.ts
