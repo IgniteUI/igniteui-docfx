@@ -22,7 +22,7 @@ _language: ja
 > <br/> <br/>`$ npm install hammerjs @types/hammerjs`
 
 ### Usage
-To get started with the **Ignite UI for Angular Calendar**, let's first import the **IgxCalendarModule** in the application's AppModule, typically this is the **app.module.ts** file. Note that the **IgxCalendar** is also dependent on the **BrowserAnimationsModule**, so it needs to be added to the AppModule as well:
+To get started with the **Ignite UI for Angular Calendar**, let's first import the **IgxCalendarModule** in the application's AppModule, typically this is the **app.module.ts** file. Note that the **IgxCalendarComponent** is also dependent on the **BrowserAnimationsModule**, so it needs to be added to the AppModule as well:
 
 ```typescript
 // app.module.ts
@@ -180,7 +180,7 @@ In our example we slightly modify the default template and will make the header 
     </ng-template>
 </igx-calendar>  
 ```
-For more detailed explanation of what **parts** are the template context, please refer to the [TemplateContext](http://localhost:3000/components/calendar.html#template-context) section. Let's see what the templated calendar looks like:
+For more detailed explanation of what **parts** are the template context, please refer to the [TemplateContext](#template-context) section. Let's see what the templated calendar looks like:
 
 <div class="sample-container" style="height: 500px">
     <iframe id="calendar-sample-4-iframe" src='{environment:demosBaseUrl}/calendar-sample-4' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -191,7 +191,7 @@ For more detailed explanation of what **parts** are the template context, please
 
 ### キーボード ナビゲーション
 
-**igxCalendar** コンポーネントがフォーカスを持つ場合:
+**IgxCalendarComponent** コンポーネントがフォーカスを持つ場合:
 
 * `PageUp` は前の月へ移動します。
 * `PageDown` は次の月へ移動します。
