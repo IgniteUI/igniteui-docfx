@@ -45,7 +45,7 @@ import { IgxCalendarComponent } from 'igniteui-angular/main';
 ```
 
 > [!WARNING]
-> Note that the **igxCaledarComponent** uses the [Intl](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat) WebAPI for localization and formatting of dates. 
+> Note that the **igxCalendarComponent** uses the [Intl](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat) WebAPI for localization and formatting of dates. 
 > Consider using the [appropriate polyfills](https://github.com/andyearnshaw/Intl.js/) if your target platform does not support them.
 
 ### Selection
@@ -179,7 +179,7 @@ In our example we slightly modify the default template and will make the header 
     </ng-template>
 </igx-calendar>  
 ```
-For more detailed explanation of what **parts** are the template context, please refer to [TemplateContext](http://localhost:3000/components/calendar.html#template-context) section. Let's see what the templated calendar looks like:
+For more detailed explanation of what **parts** are the template context, please refer to [TemplateContext](#template-context) section. Let's see what the templated calendar looks like:
 
 <div class="sample-container" style="height: 500px">
     <iframe id="calendar-sample-4-iframe" src='{environment:demosBaseUrl}/calendar-sample-4' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -237,7 +237,7 @@ When a day inside the current month is focused:
 
 | Name | Return Type | Description |
 |:--:|:---|:---|
-| `date` | `Date` | The date object in the context of the template. See * below for details. |
+| `date` | `Date` | The date object in the context of the template. |
 | `full` | `string` | The full date representation returned after applying the formatOptions. |
 | `monthView` | `function` | A function which when called puts the calendar in month view. |
 | `yearView` | `function` | A function which when called puts the calendar in year view. |
