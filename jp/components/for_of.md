@@ -14,10 +14,12 @@ _language: ja
 ### igxFor デモ
 
 <div class="sample-container loading" style="height:780px">
-    <iframe src='{environment:demosBaseUrl}/igx-for-sample-1' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="igx-for-sample-iframe" src='{environment:demosBaseUrl}/igx-for-sample-1' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
-<!--<button data-localize="stackblitz" class="stackblitz-btn">view on stackblitz</button> -->
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="igx-for-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
 
 ### 依存関係
 
