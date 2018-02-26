@@ -607,7 +607,7 @@ Here is a list of all public methods exposed by the **igx-grid**:
 |`getColumnByName(name: string)`|Returns the column object with field property equal to `name` or `undefined` if no such column exists.|
 |`getCellByColumn(rowIndex: number, columnField: string)`|Returns the cell object in column with `columnField` and row with `rowIndex` or `undefined`.|
 |`addRow(data: any)`|Creates a new row object and adds the `data` record to the end of the data source.|
-|`deleteRow(rowIndex: number)`|Removes the row object and and the corresponding data record from the data source.|
+|`deleteRow(rowIndex: number)`|Removes the row object and the corresponding data record from the data source.|
 |`updateRow(value: any, rowIndex: number)`|Updates the row object and the data source record with the passed value.|
 |`updateCell(value: any, rowIndex: number, column: string)`|Updates the cell object and the record field in the data source.|
 |`filter(column: string, value: any, condition?, ignoreCase?: boolean)`|Filters a single column. Check the available [filtering conditions](#filtering-conditions)|
