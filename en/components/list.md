@@ -172,7 +172,7 @@ After all that our list should now look like that:
 
 #### Adding Avatar and Icons
 
-We can use some of our other components in conjuction with the Igx List component to enrich the experience and add some functionality. We can have a nice picture avatar to the left of the name and phone values. Additionally, we can add a star icon to the right of them to allow the user to favorite a contact. To do that let's grab the [**IgxAvatar**](https://www.infragistics.com/products/ignite-ui-angular/angular/components/avatar.html) and [**IgxIcon**](https://www.infragistics.com/products/ignite-ui-angular/angular/components/icon.html) modules and import them in our **app.module.ts** file.
+We can use some of our other components in conjunction with the [**IgxList**](https://www.infragistics.com/products/ignite-ui-angular/angular/components/list.html) component to enrich the experience and add some functionality. We can have a nice picture avatar to the left of the name and phone values. Additionally, we can add a star icon to the right of them to allow the user to favorite a contact. To do that let's grab the [**IgxAvatar**](https://www.infragistics.com/products/ignite-ui-angular/angular/components/avatar.html) and [**IgxIcon**](https://www.infragistics.com/products/ignite-ui-angular/angular/components/icon.html) modules and import them in our **app.module.ts** file.
 
 ```typescript
 // app.module.ts
