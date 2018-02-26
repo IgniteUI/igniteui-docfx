@@ -70,7 +70,7 @@ If all went well, you should see the following in your browser:
 ### Customizing Tabs
 
 Let's modify the tabs and make them more appealing by including icons. The Tab Bar control is compatible with the Material Design
-[**Icons**](https://material.io/icons/) so it will be very easy for you to addopt them in your application.
+[**Icons**](https://material.io/icons/) so it will be very easy for you to adopt them in your application.
 
 First add the Material+Icons import in your 'styles.css' file in the main application folder.
 
@@ -344,7 +344,7 @@ And don't forget to include the following CSS definitions in order for the appli
 }
 ```
 
-You can see the result of the code above at the begining of this article in the [Tabbar Demo](#tabbar-demo) section.
+You can see the result of the code above at the beginning of this article in the [Tabbar Demo](#tabbar-demo) section.
 
 <div class="divider"></div>
 
