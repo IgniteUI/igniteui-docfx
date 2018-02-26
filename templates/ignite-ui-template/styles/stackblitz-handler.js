@@ -51,7 +51,7 @@
         var assetsUrl = demosBaseUrl + assetsFolder;
         for (var i = 0; i < files.length; i++) {
             if (files[i].hasRelativeAssetsUrls) {
-                files[i].content = files[i].content.replace(assetsRegex, "https://www.infragistics.com/angular-demos/assets/");
+                files[i].content = files[i].content.replace(assetsRegex, assetsUrl);
             }
         }
     }
