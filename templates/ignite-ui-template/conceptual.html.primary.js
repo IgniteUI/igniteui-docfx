@@ -14,6 +14,11 @@ exports.transform = function (model) {
   if (extension && extension.postTransform) {
     model = extension.postTransform(model);
   }
+  
+  model._isLangEn = true;
+  if (model._language && model._language === "ja") {
+    model._isLangEn = false;
+  }
 
   return model;
 }

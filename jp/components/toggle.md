@@ -2,6 +2,7 @@
 title: Toggle ディレクティブ
 _description: Ignite UI for Angular Toggle ディレクティブは、ネイティブ Angular フレームワークで Toggle ディレクティブを実装する要素に含まれるコンテンツを直感的に開いたり、閉じたりできるボックスとして使用できます。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Toggle ディレクティブ, Angular Toggle コントロール
+_language: ja
 ---
 
 ## Toggle
