@@ -244,7 +244,7 @@ For more detailed explanation of what **parts** are the template context, please
 
 | Name | Return Type | Description |
 |:--:|:---|:---|
-| `date` | `Date` | The date object in the context of the template. See * below for details. |
+| `date` | `Date` | The date object in the context of the template. |
 | `full` | `string` | The full date representation returned after applying the formatOptions. |
 | `monthView` | `function` | A function which when called puts the calendar in month view. |
 | `yearView` | `function` | A function which when called puts the calendar in year view. |
