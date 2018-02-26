@@ -1,105 +1,121 @@
 <div id="header" class="globalnav" data-nav-auto-init="false">
-<div class="sticky-wrapper" style="height: 77px;"><section id="header-wrap" class="globalnav__container stuck no-transparent top-animate" data-default-height="175" data-sticky-height="175"><!-- CSE Container -->
-<div class="globalnav__search">
-<div class="globalnav__search-container globalnav__wrapper">
-<div id="___gcse_0"><div class="gsc-control-searchbox-only gsc-control-searchbox-only-en" dir="ltr"><form class="gsc-search-box gsc-search-box-tools" accept-charset="utf-8"><table cellspacing="0" cellpadding="0" class="gsc-search-box"><tbody><tr><td class="gsc-input"><div class="gsc-input-box" id="gsc-iw-id1"><table cellspacing="0" cellpadding="0" id="gs_id50" class="gstl_50 " style="width: 100%; padding: 0px;"><tbody><tr><td id="gs_tti50" class="gsib_a"><input autocomplete="off" type="text" size="10" class="gsc-input" name="search" title="search" id="gsc-i-id1" style="width: 100%; padding: 0px; border: none; margin: -0.0625em 0px 0px; height: 1.25em; outline: none;" x-webkit-speech="" x-webkit-grammar="builtin:search" lang="en" dir="ltr" spellcheck="false" placeholder="Search Infragistics.com"></td><td class="gsib_b"><div class="gsst_b" id="gs_st50" dir="ltr"><a class="gsst_a" href="javascript:void(0)" style="display: none;"><span class="gscb_a" id="gs_cb50">×</span></a></div></td></tr></tbody></table></div><input type="hidden" name="bgresponse" id="bgresponse"></td><td class="gsc-search-button"><input type="image" src="https://www.google.com/uds/css/v2/search_box_icon.png" class="gsc-search-button gsc-search-button-v2" title="search"></td><td class="gsc-clear-button"><div class="gsc-clear-button" title="clear results">&nbsp;</div></td></tr></tbody></table><table cellspacing="0" cellpadding="0" class="gsc-branding"><tbody><tr style="display: none;"><td class="gsc-branding-user-defined"></td><td class="gsc-branding-text"><div class="gsc-branding-text">powered by</div></td><td class="gsc-branding-img"><img src="https://www.google.com/cse/static/images/1x/googlelogo_grey_46x15dp.png" class="gsc-branding-img" srcset="https://www.google.com/cse/static/images/2x/googlelogo_grey_46x15dp.png 2x"></td></tr></tbody></table></form></div></div>
-</div>
-</div>
-<!-- Primary Nav -->
-<section class="globalnav__primary clearfix">
-<div class="globalnav__wrapper"><!-- My Account -->
-<div class="globalnav__section clearfix"><nav class="globalnav__menu-container">
-<ul class="navigation navigation--xs navigation--hpad-0">
-<li class="navigation__text deemphasize" style="width: auto;">North American Sales: 1-800-231-8588</li>
-<li><a href="http://www.infragistics.com/about-us/contact-us">Global Contacts</a></li>
-<li class="navigation__account">
-<a class="signInLink" href="https://www.infragistics.com/login.aspx?ReturnUrl=%2fmy-account%2fkeys-and-downloads">My Account</a>
-</li>
-</ul>
-</nav></div>
-<!-- <br /><br /><br /> --> <!-- Brand -->
-<div class="globalnav__brand"><a href="http://www.infragistics.com"> <img class="globalnav__logo" src="https://static.infragistics.com/marketing/Website/General/Infragistics-horizontal.svg" alt="Infragistics"> <img class="globalnav__logo_abbr" src="https://static.infragistics.com/marketing/Website/General/IG-icon.svg" alt="Infragistics"> </a></div>
-<!-- Mobile Menu Toggle -->
-<div class="globalnav__mobile-menu responsive"><a class="globalnav__menu-toggle" href="#"> <span>Menu</span> </a></div>
-<!-- Global Search Toggle -->
-<div class="globalnav__search-toggle">
-<div class="globalnav__search-close"><i> </i></div>
-</div>
-<!-- Menu --><nav class="globalnav__menu-container" style="margin-right: 40px;">
-<ul class="navigation navigation--navbar navigation--hpad-0 sf-menu responsive">
-<li class="navigation__mobile-link">
-<div class="globalnav__callout-text">North American Sales: 1-800-321-8588</div>
-</li>
-<li class="navigation__mobile-link"><a class="navigation__sub-menu" href="#">My Account</a>
-<ul class="sub-menu clearfix" style=""><li><a class="signInLink" href="https://www.infragistics.com/login.aspx?ReturnUrl=%2fmy-account%2fkeys-and-downloads">Sign In/Register</a></li></ul>
-</li>
-<li><a class="navigation__sub-menu" title="For Developers" href="https://www.infragistics.com/products/ultimate">Developers</a>
-<ul class="navigation_sub-menu-featured" style="">
-<li><a class="navigation__callout-link" title="Infragistics Ultimate" href="https://www.infragistics.com/products/ultimate"> <span class="navigation__callout-title">Infragistics Ultimate</span> <span class="deemphasize">The complete toolkit for building high performing web, mobile, and desktop apps</span> </a></li>
-<li><a title="IgniteUI: Angular" href="https://www.infragistics.com/products/ignite-ui-angular">Ignite UI for Angular <span class="deemphasize">30+ Material-based UI components designed and built on Google’s Angular framework</span></a></li>
-<li><a title="IgniteUI: JavaScript / HTML 5" href="https://www.infragistics.com/products/ignite-ui">Ignite UI for JavaScript <span class="deemphasize">75+ HTML5 / JavaScript jQuery components with extensions for React, Angular &amp; ASP.NET MVC</span></a></li>
-<li><a title="ASP.NET" href="https://www.infragistics.com/products/aspnet">Ultimate UI for ASP.NET <span class="deemphasize">Versatile ASP.NET AJAX UI controls</span></a></li>
-<li><a title="Windows Forms" href="https://www.infragistics.com/products/windows-forms">Windows Forms <span class="deemphasize">100+ fully featured, Microsoft Office-style UI controls</span></a></li>
-<li><a title="WPF" href="https://www.infragistics.com/products/wpf">Ultimate UI for WPF <span class="deemphasize">UI controls &amp; productivity tools</span></a></li>
-<li><a title="Xamarin" href="https://www.infragistics.com/products/xamarin">Ultimate UI for Xamarin&nbsp;<span class="deemphasize">UI controls &amp; productivity tools</span></a></li>
-<li><a title="ReportPlus Embedded SDK" href="https://www.infragistics.com/products/reportplus-embedded/sdk">ReportPlus Embedded SDK <span class="deemphasize">Tools to embed reports and dashboards in your apps</span></a></li>
-<li>
-<a href="https://www.infragistics.com/products/all" class="navigation__feature-link"> All Products<span class="navigation__feature-icon">
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
-                            <path d="M256 480h224v-224h-224v224zM544 256v224h224v-224h-224zM544 768h224v-224h-224v224zM256 768h224v-224h-224v224z"></path>
-                          </svg>
-                        </span></a>
-</li>
-</ul>
-</li>
-<li><a class="navigation__sub-menu" title="UX" href="https://www.infragistics.com/products/indigo-studio">UX</a>
-<ul style="">
-<li><a title="Indigo Studio" href="https://www.infragistics.com/products/indigo-studio">Indigo Studio <span class="deemphasize">Collaborative prototyping and remote usability testing for UX &amp; usability professionals</span></a></li>
-<li><a title="UX Consulting" href="https://www.infragistics.com/consulting">UX Consulting <span class="deemphasize">Partner with our UX &amp; Development consultants to create useful, usable, high-performing applications</span></a></li>
-</ul>
-</li>
-<li><a class="navigation__sub-menu" title="For Business Teams" href="https://www.infragistics.com/business-teams">Business Teams</a>
-<ul style="">
-<li class="navigation__mobile-link"><a title="For Business Teams" href="https://www.infragistics.com/business-teams">For Business Teams</a></li>
-<li><a title="SharePlus Enterprise" href="https://www.infragistics.com/products/shareplus-enterprise">SharePlus Enterprise <span class="deemphasize">Mobile workspaces with business processes, collaboration, and data visualization for teams</span></a></li>
-<li><a title="ReportPlus" href="https://www.infragistics.com/enterprise-solutions/enterprise-mobility/reportplus">ReportPlus <span class="deemphasize">Exceptional analytics on any device</span></a></li>
-<li><a title="ReportPlus Embedded" href="https://www.infragistics.com/products/reportplus-embedded">ReportPlus Embedded <span class="deemphasize">Deliver embedded reports and dashboards in your apps</span></a></li>
-</ul>
-</li>
-<li><a class="navigation__sub-menu" title="Consulting" href="https://www.infragistics.com/consulting">Consulting</a>
-<ul style="">
-<li class="navigation__mobile-link"><a title="Consulting" href="https://www.infragistics.com/consulting">Consulting</a></li>
-<li><a title="Popular Services" href="https://www.infragistics.com/consulting#popular-services">Popular Services</a></li>
-<li><a title="Our Process" href="https://www.infragistics.com/consulting/process">Our Process</a></li>
-<li><a title="Our Work" href="https://www.infragistics.com/consulting/our-work">Our Work</a></li>
-<li><a title="Blog" href="https://www.infragistics.com/community/blogs/For-UX-Professionals/default.aspx">Blog</a></li>
-<li><a title="Contact Us" href="https://www.infragistics.com/consulting#contact">Contact Us</a></li>
-</ul>
-</li>
-<li><a class="navigation__sub-menu" title="Learn and Support" href="https://www.infragistics.com/support">Learn &amp; Support</a>
-<ul style="">
-<li><a title="Help and Support Documents" href="https://www.infragistics.com/support">Help &amp; Support Documents</a></li>
-<li><a title="Blogs" href="https://www.infragistics.com/community/blogs">Blogs</a></li>
-<li><a title="Forums" href="https://www.infragistics.com/community/forums">Forums</a></li>
-<li><a title="Reference Applications" href="https://www.infragistics.com/resources/sample-applications">Reference Applications</a></li>
-<li><a title="Customer Stories" href="https://www.infragistics.com/resources/case-studies">Customer Stories</a></li>
-<li><a title="Webinars" href="https://www.infragistics.com/webinars">Webinars</a></li>
-<li><a title="eBooks and Whitepapers" href="https://www.infragistics.com/resources/whitepapers">eBook &amp; Whitepapers</a></li>
-<li><a title="Events" href="https://www.infragistics.com/events">Events</a></li>
-</ul>
-</li>
-<li><a title="Free Trials" href="https://www.infragistics.com/free-downloads">Free Trials</a></li>
-<li><a class="navigation__sub-menu" title="Purchase and Renew" href="https://www.infragistics.com/how-to-buy/product-pricing">Purchase &amp; Renew</a>
-<ul style="">
-<li><a title="Pricing" href="https://www.infragistics.com/how-to-buy/product-pricing">Product Pricing / Buy Online</a></li>
-<li><a title="Renew Existing License" href="https://www.infragistics.com/how-to-buy/renewal">Renew Existing License</a></li>
-<li><a title="Contact Us" href="https://www.infragistics.com/about-us/contact-us">Contact Us</a></li>
-</ul>
-</li>
-</ul>
-</nav>
-<div class="globalnav__overlay">&nbsp;</div>
-</div>
-</section>
-</section></div>
+    <div class="sticky-wrapper" style="height: 77px;">
+        <section id="header-wrap" class="globalnav__container stuck no-transparent top-animate" data-default-height="175" data-sticky-height="175">
+            <!-- CSE Container -->
+            <div class="globalnav__search">
+                <div class="globalnav__search-container globalnav__wrapper">
+                    <div id="___gcse_0"><div class="gsc-control-searchbox-only gsc-control-searchbox-only-en" dir="ltr"><form class="gsc-search-box gsc-search-box-tools" accept-charset="utf-8"><table class="gsc-search-box" cellspacing="0" cellpadding="0"><tbody><tr><td class="gsc-input"><div class="gsc-input-box" id="gsc-iw-id1"><table style="width: 100%; padding: 0px;" id="gs_id50" class="gstl_50 " cellspacing="0" cellpadding="0"><tbody><tr><td id="gs_tti50" class="gsib_a"><input autocomplete="off" size="10" class="gsc-input" name="search" title="search" style="width: 100%; padding: 0px; border: medium none; margin: 0px; height: auto; outline: medium none currentcolor;" id="gsc-i-id1" x-webkit-speech="" x-webkit-grammar="builtin:search" dir="ltr" spellcheck="false" placeholder="Search Infragistics.com" type="text" lang="en"></td><td class="gsib_b"><div class="gsst_b" id="gs_st50" dir="ltr"><a class="gsst_a" href="javascript:void(0)" style="display: none;"><span class="gscb_a" id="gs_cb50">×</span></a></div></td></tr></tbody></table></div></td><td class="gsc-search-button"><input src="https://www.google.com/uds/css/v2/search_box_icon.png" class="gsc-search-button gsc-search-button-v2" title="search" type="image"></td><td class="gsc-clear-button"><div class="gsc-clear-button" title="clear results">&nbsp;</div></td></tr></tbody></table><table class="gsc-branding" cellspacing="0" cellpadding="0"><tbody><tr style="display: none;"><td class="gsc-branding-user-defined"></td><td class="gsc-branding-text"><div class="gsc-branding-text">powered by</div></td><td class="gsc-branding-img"><img src="https://www.google.com/cse/static/images/1x/googlelogo_grey_46x15dp.png" class="gsc-branding-img" srcset="https://www.google.com/cse/static/images/2x/googlelogo_grey_46x15dp.png 2x"></td></tr></tbody></table></form></div></div>
+                </div>
+            </div>
+            <!-- Primary Nav -->
+            <section class="globalnav__primary clearfix">
+                <div class="globalnav__wrapper">
+                    <!-- My Account -->
+                    <div class="globalnav__section clearfix">
+                        <nav class="globalnav__menu-container">
+                            <ul class="navigation navigation--xs navigation--hpad-0">
+                                <li class="navigation__text deemphasize" style="width: auto;">North American Sales: 1-800-231-8588</li>
+                                <li><a href="http://www.infragistics.com/about-us/contact-us">Global Contacts</a></li>
+                                <li class="navigation__account">
+                                    <a class="signInLink" href="https://www.infragistics.com/login.aspx?ReturnUrl=%2fmy-account%2fkeys-and-downloads">My Account</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <!-- <br /><br /><br /> --> <!-- Brand -->
+                    <div class="globalnav__brand"><a href="http://www.infragistics.com"> <img class="globalnav__logo" src="https://static.infragistics.com/marketing/Website/General/Infragistics-horizontal.svg" alt="Infragistics"> <img class="globalnav__logo_abbr" src="https://static.infragistics.com/marketing/Website/General/IG-icon.svg" alt="Infragistics"> </a></div>
+                    <!-- Mobile Menu Toggle -->
+                    <div class="globalnav__mobile-menu"><a class="globalnav__menu-toggle" href="#"> <span>Menu</span> </a></div>
+                    <!-- Global Search Toggle -->
+                    <div class="globalnav__search-toggle">
+                        <div class="globalnav__search-close"><i> </i></div>
+                    </div>
+                    <!-- Menu --><nav class="globalnav__menu-container" style="margin-right: 40px;">
+                        <ul class="navigation navigation--navbar navigation--hpad-0 sf-menu sf-js-enabled sf-arrows">
+                            <li class="navigation__mobile-link">
+                                <div class="globalnav__callout-text">North American Sales: 1-800-321-8588</div>
+                            </li>
+                            <li class="navigation__mobile-link">
+                                <a class="navigation__sub-menu sf-with-ul" href="#">My Account</a>
+                                <ul class="sub-menu clearfix" style="display: none;"><li><a class="signInLink" href="https://www.infragistics.com/login.aspx?ReturnUrl=%2fmy-account%2fkeys-and-downloads">Sign In/Register</a></li></ul>
+                            </li>
+                            <li>
+                                <a class="navigation__sub-menu sf-with-ul" title="For Developers" href="https://www.infragistics.com/products/ultimate">Developers</a>
+                                <ul class="navigation_sub-menu-featured" style="display: none;">
+                                    <li><a class="navigation__callout-link" title="Infragistics Ultimate" href="https://www.infragistics.com/products/ultimate"> <span class="navigation__callout-title">Infragistics Ultimate</span> <span class="deemphasize">The complete toolkit for building high performing web, mobile, and desktop apps</span> </a></li>
+                                    <li><a title="IgniteUI: Angular" href="https://www.infragistics.com/products/ignite-ui-angular">Ignite UI for Angular <span class="deemphasize">30+ Material-based UI components designed and built on Google’s Angular framework</span></a></li>
+                                    <li><a title="IgniteUI: JavaScript / HTML 5" href="https://www.infragistics.com/products/ignite-ui">Ignite UI for JavaScript <span class="deemphasize">75+ HTML5 / JavaScript jQuery components with extensions for React, Angular &amp; ASP.NET MVC</span></a></li>
+                                    <li><a title="ASP.NET" href="https://www.infragistics.com/products/aspnet">Ultimate UI for ASP.NET <span class="deemphasize">Versatile ASP.NET AJAX UI controls</span></a></li>
+                                    <li><a title="Windows Forms" href="https://www.infragistics.com/products/windows-forms">Windows Forms <span class="deemphasize">100+ fully featured, Microsoft Office-style UI controls</span></a></li>
+                                    <li><a title="WPF" href="https://www.infragistics.com/products/wpf">Ultimate UI for WPF <span class="deemphasize">UI controls &amp; productivity tools</span></a></li>
+                                    <li><a title="Xamarin" href="https://www.infragistics.com/products/xamarin">Ultimate UI for Xamarin&nbsp;<span class="deemphasize">UI controls &amp; productivity tools</span></a></li>
+                                    <li><a title="ReportPlus Embedded SDK" href="https://www.infragistics.com/products/reportplus-embedded/sdk">ReportPlus Embedded SDK <span class="deemphasize">Tools to embed reports and dashboards in your apps</span></a></li>
+                                    <li>
+                                        <a href="https://www.infragistics.com/products/all" class="navigation__feature-link">
+                                            All Products<span class="navigation__feature-icon">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+                                                    <path d="M256 480h224v-224h-224v224zM544 256v224h224v-224h-224zM544 768h224v-224h-224v224zM256 768h224v-224h-224v224z"></path>
+                                                </svg>
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="navigation__sub-menu sf-with-ul" title="UX" href="https://www.infragistics.com/products/indigo-studio">UX</a>
+                                <ul style="display: none;">
+                                    <li><a title="Indigo Studio" href="https://www.infragistics.com/products/indigo-studio">Indigo Studio <span class="deemphasize">Collaborative prototyping and remote usability testing for UX &amp; usability professionals</span></a></li>
+                                    <li><a title="UX Consulting" href="https://www.infragistics.com/consulting">UX Consulting <span class="deemphasize">Partner with our UX &amp; Development consultants to create useful, usable, high-performing applications</span></a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="navigation__sub-menu sf-with-ul" title="For Business Teams" href="https://www.infragistics.com/business-teams">Business Teams</a>
+                                <ul style="display: none;">
+                                    <li class="navigation__mobile-link"><a title="For Business Teams" href="https://www.infragistics.com/business-teams">For Business Teams</a></li>
+                                    <li><a title="SharePlus Enterprise" href="https://www.infragistics.com/products/shareplus-enterprise">SharePlus Enterprise <span class="deemphasize">Mobile workspaces with business processes, collaboration, and data visualization for teams</span></a></li>
+                                    <li><a title="ReportPlus" href="https://www.infragistics.com/enterprise-solutions/enterprise-mobility/reportplus">ReportPlus <span class="deemphasize">Exceptional analytics on any device</span></a></li>
+                                    <li><a title="ReportPlus Embedded" href="https://www.infragistics.com/products/reportplus-embedded">ReportPlus Embedded <span class="deemphasize">Deliver embedded reports and dashboards in your apps</span></a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="navigation__sub-menu sf-with-ul" title="Consulting" href="https://www.infragistics.com/consulting">Consulting</a>
+                                <ul style="display: none;">
+                                    <li class="navigation__mobile-link"><a title="Consulting" href="https://www.infragistics.com/consulting">Consulting</a></li>
+                                    <li><a title="Popular Services" href="https://www.infragistics.com/consulting#popular-services">Popular Services</a></li>
+                                    <li><a title="Our Process" href="https://www.infragistics.com/consulting/process">Our Process</a></li>
+                                    <li><a title="Our Work" href="https://www.infragistics.com/consulting/our-work">Our Work</a></li>
+                                    <li><a title="Blog" href="https://www.infragistics.com/community/blogs/For-UX-Professionals/default.aspx">Blog</a></li>
+                                    <li><a title="Contact Us" href="https://www.infragistics.com/consulting#contact">Contact Us</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="navigation__sub-menu sf-with-ul" title="Learn and Support" href="https://www.infragistics.com/support">Learn &amp; Support</a>
+                                <ul style="display: none;">
+                                    <li><a title="Help and Support Documents" href="https://www.infragistics.com/support">Help &amp; Support Documents</a></li>
+                                    <li><a title="Blogs" href="https://www.infragistics.com/community/blogs">Blogs</a></li>
+                                    <li><a title="Forums" href="https://www.infragistics.com/community/forums">Forums</a></li>
+                                    <li><a title="Ideas" href="https://www.infragistics.com/community/ideas">Ideas</a></li>
+                                    <li><a title="Reference Applications" href="https://www.infragistics.com/resources/sample-applications">Reference Applications</a></li>
+                                    <li><a title="Customer Stories" href="https://www.infragistics.com/resources/case-studies">Customer Stories</a></li>
+                                    <li><a title="Webinars" href="https://www.infragistics.com/webinars">Webinars</a></li>
+                                    <li><a title="eBooks and Whitepapers" href="https://www.infragistics.com/resources/whitepapers">eBook &amp; Whitepapers</a></li>
+                                    <li><a title="Events" href="https://www.infragistics.com/events">Events</a></li>
+                                </ul>
+                            </li>
+                            <li><a title="Free Trials" href="https://www.infragistics.com/free-downloads">Free Trials</a></li>
+                            <li>
+                                <a class="navigation__sub-menu sf-with-ul" title="Purchase and Renew" href="https://www.infragistics.com/how-to-buy/product-pricing">Purchase &amp; Renew</a>
+                                <ul style="display: none;">
+                                    <li><a title="Pricing" href="https://www.infragistics.com/how-to-buy/product-pricing">Product Pricing / Buy Online</a></li>
+                                    <li><a title="Renew Existing License" href="https://www.infragistics.com/how-to-buy/renewal">Renew Existing License</a></li>
+                                    <li><a title="Contact Us" href="https://www.infragistics.com/about-us/contact-us">Contact Us</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="globalnav__overlay">&nbsp;</div>
+                </div>
+            </section>
+        </section>
+    </div>
 </div>

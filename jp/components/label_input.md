@@ -2,6 +2,7 @@
 title: Label および Input ディレクティブ
 _description: Ignite UI for Angular Label コンポーネントを使用すると、単一行のテキスト要素を作成するための CSS スタイルを追加し、その他のコントロールと統合できます。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Label コンポーネント, Angular Label コントロール
+_language: ja
 ---
 
 ##Label & Input
