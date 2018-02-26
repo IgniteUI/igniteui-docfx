@@ -2,7 +2,13 @@
 full license information.}}
 
 <nav id="autocollapse" class="navbar navbar-fixed-top navbar-inverse ng-scope" role="navigation">
-    {{>partials/infranav}}
+    {{#_isLangEn}}
+        {{>partials/infranav}}
+    {{/_isLangEn}}
+
+    {{^_isLangEn}}
+        {{>partials/infranav.ja}}
+    {{/_isLangEn}}
     <div class="container-fluid">
 
         <div class="navbar-header">
