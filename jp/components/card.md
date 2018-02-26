@@ -177,6 +177,8 @@ public icons = ['add', 'star'];
     <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="card-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
+<div class="divider--half"></div>
+
 <!--### API Summary-->
 #### スタイル
 以下の定義済み CSS クラスを使用してカード レイアウトを構成しました。
