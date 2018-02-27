@@ -147,9 +147,9 @@ The following outputs are available in the **igx-toast** component:
 
 | Name | Description |
 | :--- | :--- |
-| `onShowing`  | Emits an event prior the toast is shown.  |
+| `onShowing`  | Emits an event prior to the toast being shown. |
 | `onShown`  | Emits an event when the toast is shown. |
-| `onHiding`  | Emits an event prior the toast is hidden. |
+| `onHiding`  | Emits an event prior to the toast being hidden. |
 | `onHidden`  | Emits an event when the toast is hidden. |
 
 #### Methods
