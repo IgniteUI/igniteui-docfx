@@ -1,26 +1,26 @@
 ﻿---
-title: Dialog Window Component
-_description: Whether building informative dialogs or data manipulation windows, Ignite UI for Angular Dialog Window component can manage information shown in real-time for fast capability.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Dialog Window components, Angular Dialog Window controls
+title: Dialog Window コンポーネント
+_description: Ignite UI for Angular Dialog Window コンポーネントを使用すると、情報ダイアログまたはデータ変換ウィンドウを作成し、リアルタイムで情報を表示して管理できます。
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Dialog Window コンポーネント, Angular Dialog Window コントロール
 _language: ja
 ---
 
-##Dialog Window
-<p class="highlight">Use the Ignite UI for Angular Dialog Window component to display messages or present forms for users to fill out. The component opens a dialog window centered on top of app content. You can also provide a standard alert message that users can cancel.</p>
+## Dialog Window
+<p class="highlight">Ignite UI for Angular Dialog Window コンポーネントをメッセージを表示するか、入力フォームを表示するために使用します。コンポーネントはアプリケーション コンテンツの中央上にダイアログ ウィンドウを開きます。キャンセル可能な標準の警告メッセージを提供できます。</p>
 <div class="divider"></div>
 
-### Dialog Demo
+### Dialog デモ
 <div class="sample-container loading" style="height:300px">
     <iframe id="dialog-sample-iframe" src='{environment:demosBaseUrl}/dialog' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="dialog-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="dialog-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
-### Usage
+### 使用方法
 
-To get started with the Ignite UI for Angular Dialog Window, let's first import the **IgxDialogModule** in our **app.module.ts** file:
+Ignite UI for Angular Dialog Window を初期化する前に、**IgxDialogModule** を **app.module.ts** ファイルにインポートします。
 
 ```typescript
 // app.module.ts
@@ -37,10 +37,9 @@ export class AppModule {}
 ```
 <div class="divider--half"></div>
 
-#### Alert
+#### 警告
 
-To add alert, in the template of our email component we can add the following code to get the notification dialog. We have to set the `title`, `message`, 
-`leftButtonLabel` and handle `onLeftButtonSelect` event:
+通知を追加するには、メール コンポーネントのテンプレートで、以下のコードを追加すると通知ダイアログが作成されます。`title`、 `message`、`leftButtonLabel` を設定し、`onLeftButtonSelect` イベントを処理します。
 
 ```html
 <!--email.component.html-->
@@ -56,14 +55,13 @@ To add alert, in the template of our email component we can add the following co
     <iframe id="dialog-sample-1-iframe" src='{environment:demosBaseUrl}/dialog-sample-1' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="dialog-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="dialog-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
-####Standard Dialog
+#### 標準ダイアログ
 
-To add standard dialog, in the template of our file manager component we can add the following code to get the standard dialog. We have to set the `title`, `message`, 
-`leftButtonLabel`, `rightButtonLabel`, `rightButtonRipple` and handle `onLeftButtonSelect` and `onRightButtonSelect` events:
+規格のダイアログを追加するには、ファイル マネージャー コンポーネントのテンプレートで、以下のコードを追加すると規格のダイアログが作成されます。`title`、 `message`、`leftButtonLabel`、`rightButtonLabel`、`rightButtonRipple` を設定し、`onLeftButtonSelect` および `onRightButtonSelect` イベントを処理します。
 
 ```html
 <!--file-manager.component.html-->
@@ -83,14 +81,14 @@ To add standard dialog, in the template of our file manager component we can add
     <iframe id="dialog-sample-2-iframe" src='{environment:demosBaseUrl}/dialog-sample-2' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="dialog-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="dialog-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
-####Custom Dialog
+#### カスタム ダイアログ
 
-To add custom dialog, in the template of our sign in component we can add the following code to get the custom dialog. We have to set the `title`,`leftButtonLabel`,`rightButtonBackgroundColor`, `rightButtonColor`, `rightButtonLabel`, `closeOnOutsideSelect` and handle `onLeftButtonSelect` and `onRightButtonSelect` event.
-Also we can add two groups of label and input decorated with the [**igxLabel**](label_input.md) and [**igxInput**](label_input.md) directives.
+カスタム ダイアログを追加するには、サインイン コンポーネントのテンプレートで、以下のコードを追加するとカスタム ダイアログが作成されます。`title`、`leftButtonLabel`、`rightButtonLabel`、`rightButtonBackgroundColor`、`rightButtonColor`、`rightButtonLabel`、`closeOnOutsideSelect` を設定し、`onLeftButtonSelect` および `onRightButtonSelect` イベントを処理します。
+また、[**igxLabel**](label_input.md) および [**igxInput**](label_input.md) ディレクティブでデコレートされるラベルおよび入力の 2 つのグループを追加できます。
 
 ```html
 <!--sign-in.component.html-->
@@ -119,66 +117,66 @@ Also we can add two groups of label and input decorated with the [**igxLabel**](
     <iframe id="dialog-sample-3-iframe" src='{environment:demosBaseUrl}/dialog-sample-3' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="dialog-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="dialog-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
-### API Summary
-The following tables summarize some of the useful **igx-dialog** component inputs, outputs and methods.
+### API まとめ
+以下の表は便利な **igx-dialog** コンポーネントの入力、出力、およびメソッドを説明します。
 
-#### Inputs
-The following inputs are available in the **igx-dialog** component:
+#### 入力
+以下の入力が **igx-dialog** コンポーネントで利用できます。
 
-| Name | Type | Description |
+| 名前 | 型 | 説明 |
 | :--- | :--- | :--- |
-| `id` | string | Unique identifier of the dialog. |
-| `title` | string | Specifies the title of the dialog. |
-| `message` | string | Specifies the message of the dialog. |
-| `leftButtonLabel` | string | When set, the left button becomes visible. |
-| `leftButtonType` | string | Specifies the left button [**type**](button.md#button-types). Default value is flat. |
-| `leftButtonColor` | string | Specifies the left button text color. |
-| `leftButtonBackgroundColor` | string | Specifies the left button background color. |
-| `leftButtonRipple` | string | Specifies the left button [**ripple**](ripple.md) effect. |
-| `rightButtonLabel` | string | When set, the right button becomes visible. |
-| `rightButtonType` | string | Specifies the right button [**type**](button.md#button-types). Default value is flat. |
-| `rightButtonColor` | string | Specifies the right button text color. |
-| `rightButtonBackgroundColor` | string | Specifies the right button background color. |
-| `rightButtonRipple` | string | Specifies the right button [**ripple**](ripple.md) effect. |
-| `closeOnOutsideSelect` | boolean | When set to true the dialog closes when clicking outside. Default value is false. |
+| `id` | string | ダイアログの一意識別子。 |
+| `title` | string | ダイアログのタイトルを指定します。 |
+| `message` | string | ダイアログのメッセージを指定します。 |
+| `leftButtonLabel` | string | true に設定すると、左ボタンを表示します。 |
+| `leftButtonType` | string | 左ボタンの [**type**](button.md#button-types) を指定します。デフォルト値は flat です。 |
+| `leftButtonColor` | string | 左ボタンのテキスト色を指定します。 |
+| `leftButtonBackgroundColor` | string | 左ボタンの背景色を指定します。 |
+| `leftButtonRipple` | string | 左ボタンの [**ripple**](ripple.md) エフェクトを指定します。 |
+| `rightButtonLabel` | string | true に設定すると、右ボタンを表示します。 |
+| `rightButtonType` | string | 右ボタンの [**type**](button.md#button-types) を指定します。デフォルト値は flat です。 |
+| `rightButtonColor` | string | 右ボタンのテキスト色を指定します。 |
+| `rightButtonBackgroundColor` | string | 右ボタンの背景色を指定します。|
+| `rightButtonRipple` | string | 右ボタンの [**ripple**](ripple.md) エフェクトを指定します。 |
+| `closeOnOutsideSelect` | boolean | true に設定する場合、外にクリックするとダイアログを閉じます。デフォルトは false です。 |
 <div class="divider--half"></div>
 
-#### Outputs
-The following outputs are available in the **igx-dialog** component:
+#### 出力
+以下の出力は **igx-dialog** コンポーネントで利用できます。
 
-| Name | Description |
+| 名前 | 説明 |
 | :--- | :--- |
-| `onOpen`  | Emits an event when the user open the dialog. |
-| `onClose`  | Emits an event when the user close the dialog. |
-| `onLeftButtonSelect`  | Emits an event when the user click on the left button. |
-| `onRightButtonSelect`  | Emits an event when the user click on the right button. |
+| `onOpen`  | ユーザーがダイアログを開くときにイベントを発生します。 |
+| `onClose`  | ユーザーがダイアログを閉じるときにイベントを発生します。 |
+| `onLeftButtonSelect`  | ユーザーが左ボタンをクリックするときにイベントを発生します。 |
+| `onRightButtonSelect`  | ユーザーが右ボタンをクリックするときにイベントを発生します。 |
 
-#### Methods
-The following methods are available in the **igx-dialog** component:
+#### メソッド
+以下のメソッドが **igx-dialog** コンポーネントで利用できます。
 
-| Signature | Description |
+| 構文 | 説明 |
 | :--- | :--- |
-| `open`  | Opens the dialog. |
-| `close`  | Closes the dialog. |
-| `toggle`  | Changes the state of the dialog. |
+| `open`  | ダイアログを開きます。 |
+| `close`  | ダイアログを閉じます。 |
+| `toggle`  | ダイアログの状態を変更します。 |
 
-#### Getters
-The following getters are available on the **igx-dialog** component:
+#### ゲッター
+以下のゲッターが **igx-dialog** コンポーネントで利用できます。
 
-| Name | Type | Description |
+| 名前 | 型 | 説明 |
 | :--- | :--- | :--- |
-| `state` | string | Returns the state of the dialog. |
-| `isOpen` | boolean | Returns true if the the dialog is open and false if it is closed. |
-| `role` | string | Returns the type of the dialog. |
-| `titleId` | string | Returns the unique id of the dialog's title. |
+| `state` | string | ダイアログの状態を返します。 |
+| `isOpen` | boolean | ダイアログが開いた場合は true、閉じた場合は false を返します。 |
+| `role` | string | ダイアログのタイプを返します。 |
+| `titleId` | string | ダイアログのタイトルの一意の ID を返します。 |
 
-###Additional Resources
+### 追加のリソース
 
 <div class="divider--half"></div>
-Our community is active and always welcoming to new ideas.
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+是非コミュニティに参加してください。
+* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

@@ -1,25 +1,27 @@
 ﻿---
-title: Linear Progress Component
-_description: Display a progress bar and customize its appearance with endless color and striping options with Ignite UI for Angular Linear Progress Bar component.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Linear Progress components, Angular Linear Progress controls
+title: Linear Progress コンポーネント
+_description: Ignite UI for Angular Linear Progress Bar コンポーネントを使用すると、プログレス バーを表示し、色またはストライプなどの外観をカスタマイズします。
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Linear Progress コンポーネント, Angular Linear Progress コントロール
 _language: ja
 ---
 
-##Linear Progress
-<p class="highlight">The Ignite UI for Angular Linear Progress Bar Indicator component provides a visual indicator of an application’s process as it changes. The indicator updates its appearance as its state changes. The indicator can be styled with a choice of colors in stripes or solids.</p>
+## Linear Progress
+<p class="highlight">Ignite UI for Angular Linear Progress インジケーター コンポーネントは、変更でアプリケーションの進行状況を表す視覚的なインジケーターです。インジケーターは状態変更で外観を更新します。インジケーターがストライプまたは実線色でスタイル設定できます。</p>
 <div class="divider"></div>
 
-### Linear Progress Demo
+### Linear Progress デモ
 <div class="sample-container loading" style="height:550px">
     <iframe id="progressbar-sample-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/linear-progressbar-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="progressbar-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="progressbar-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
-### Usage
-To get started with the Ignite UI for Angular Linear Progress, we should first import the **IgxProgressBarModule** in the **app.module.ts** file:
+### 使用方法
+
+Ignite UI for Angular Linear Progress を初期化する前に、**IgxProgressBarModule** を **app.module.ts** ファイルにインポートします。
+
 ```typescript
 // app.module.ts
 
@@ -34,8 +36,7 @@ import { IgxProgressBarModule } from 'igniteui-angular/main';
 export class AppModule {}
 ```
 
-And now let's create a simple example in which we are going to simulate a continuous process, that is triggered on button click. In addition you can notice
-that the speed of loading depends on the `max` attribute that we have set to our `igx-linear-bar`. In the first case our max value is set to 200 and loads slower than in the second where it is set to 100 (default value). So let's see the code...
+ボタン クリックでトリガーされる連続プロセスをシミュレートする実例を作成します。また、読み込むスピードは `igx-linear-bar` に設定される `max` 属性に基づきます。最初の場合、`max` 値が 200 に設定されるため、100 (デフォルト値) に設定される第 2 の場合より遅く読み込みます。コードは以下です。
 
 ```html
 ...
@@ -59,6 +60,7 @@ that the speed of loading depends on the `max` attribute that we have set to our
 </div>
 ...
 ```
+
 ```typescript
   @ViewChildren(IgxLinearProgressBarComponent, { read: IgxLinearProgressBarComponent })
   public linearBars: QueryList<IgxLinearProgressBarComponent>;
@@ -85,15 +87,19 @@ that the speed of loading depends on the `max` attribute that we have set to our
       return Math.floor(Math.random() * (max - min + 1) + min);
   }
 ```
-If all went well, you should see something like the following in your browser:
+
+以下は結果です。
+
 <div class="sample-container loading" style="height:500px">
     <iframe id="linear-progressbar-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/linear-progressbar" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="linear-progressbar-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="linear-progressbar-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 <div class="divider--half"></div>
-And now let's enhance our example and create different types of loading bars, that can be striped or not.
+
+背景が縞模様など、読み込みバーの様々なタイプを作成する方法を例で紹介します。
+
 ```html
 ...
 <section class="sample-content">
@@ -155,17 +161,19 @@ And now let's enhance our example and create different types of loading bars, th
       return Math.floor(Math.random() * (max - min + 1) + min);
   }
 ```
-So if we set up everything correctly, let's see what happened in the browser:
+
+以下は、正しく構成した場合の結果です。
+
 <div class="sample-container loading" style="height:550px">
     <iframe id="linear-sample-1-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/linear-progressbar-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="linear-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="linear-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
-Finally let's make our sample even more exciting and good as we set the following attributes: `textAlign`, `textVisibility`, `textTop` and `text`.
-And now let's see how our code looks:
+最後に、`textAlign`、`textVisibility`、`textTop`、および `text` の属性を設定します。以下はコード例です。
+
 ```html
 ...
 <section class="sample-content">
@@ -200,7 +208,7 @@ And now let's see how our code looks:
 ...
 ```
 
-And do not forget to first import `IgxTextAlign` in your component.
+最初に `IgxTextAlign` をコンポーネントにインポートする必要があります。
 
 ```typescript
 import { ..., IgxTextAlign } from "igniteui-angular/main";
@@ -248,34 +256,34 @@ export class LinearProgressbarSample2Component implements OnInit {
 }
 ```
 
-And now let's see it in the browser:
+以下は結果です。
 
 <div class="sample-container loading" style="height:700px">
     <iframe id="linear-sample-2-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/linear-progressbar-sample-2" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="linear-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="linear-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
 ### API
-| Name   |       Type      |  Description |
+| 名前   |       型      |  説明 |
 |:----------|:-------------:|:------|
-| `max` |  number | Set maximum value that can be passed. By default it is set to 100. |
-| `type` |  string | Set type of the linear bar. Possible options - `default`, `success`, `info`, `warning`, and `danger`. |
-| `value` |  number | Set value that indicates the completed bar position. |
-| `striped` |  boolean | Set bar to have striped style. |
-| `animate` |  boolean | animation on progress bar. |
-| `textAlign` | enum | Set the position that defines where the text is aligned. Possible options - `IgxTextAlign.START` (default), `IgxTextAlign.CENTER`, `IgxTextAlign.END`. |
-| `textVisibility` | boolean | Set the text to be visible. By default it is set to `true`. |
-| `textTop` | boolean | Set the position that defines if the text should be aligned above the progress line. By default is set to `false`. |
-| `text` | string | Set a custom text that is displayed according to the defined position. |
+| `max` |  number | 渡すことができる最大値を設定します。デフォルトで 100 に設定されます。 |
+| `type` |  string | リニア棒のタイプを設定します。オプションは `default`、`success`、`info`、`warning`、または `danger` です。|
+| `value` |  number | 完了した位置を示す値を設定します。 |
+| `striped` |  boolean | 棒をストライプ スタイルに設定します。 |
+| `animate` |  boolean | 進行状況バーにアニメーションがあるかどうか。 |
+| `textAlign` | enum | テキスト配置を定義する位置を設定します。オプションは `IgxTextAlign.START` (デフォルト値)、`IgxTextAlign.CENTER`、および `IgxTextAlign.END` です。 |
+| `textVisibility` | boolean | テキストを表示するかどうかを設定します。デフォルトで `true` に設定されます。 |
+| `textTop` | boolean | テキストをイナズマ線の上に配置するかどうかを定義する位置を設定します。デフォルトで `false` に設定されます。 |
+| `text` | string | 定義された位置に基づいて表示されるカスタム テキストを設定します。 |
 <div class="divider--half"></div>
 
-### Methods
-| Name   |  Description |
+### メソッド
+| 名前   |  説明 |
 |:----------|:------|
-| `getValue()` | Return passed value to progress bar to be in range between min(0) and max. |
-| `getPercentValue()` | Calculate the percentage based on passed value. |
-| `onProgressChanged` | Exposed event, which could be handled to track progress changing |
+| `getValue()` | 最小値 (0) および最大値の間の進行状況バーに渡された値を返します。|
+| `getPercentValue()` | 渡された値に基づいてパーセンテージを計算します。 |
+| `onProgressChanged` | 進行状況の変更をトラックするための公開イベント。 |
 <div class="divider--half"></div>
