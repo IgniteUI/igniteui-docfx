@@ -85,7 +85,7 @@ A floating action button and use an icon to display:
     <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/buttons-sample-6">
 </div>
 
-Or use an icons as buttons:
+Or use icons as buttons:
 ```html
 <button igxButton="icon" igxRipple igxRippleCentered="true">
   <igx-icon fontSet="material" name="search"></igx-icon>
