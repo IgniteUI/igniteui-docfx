@@ -7,19 +7,31 @@
     var assetsFolder = "/assets/";
     var demoFilesFolderUrlPath =  assetsFolder + "samples/";
     var assetsRegex = new RegExp("\/?assets\/", "g");
+    var samplesFilesUrls = [];
+    var sampleFilesContentByUrl = {};
 
     var isButtonClickInProgress = false;
 
     var demosBaseUrl;
     var sharedFileContent;
 
-	var init = function () {        
+	var init = function () {
         var stackblitzButtons = $("." + buttonClass);
         if (stackblitzButtons.length > 0) {
-            demosBaseUrl = $(stackblitzButtons[0]).attr(buttonDemosUrlAttrName);            
-            $("." + buttonClass).on("click", onStackblitzButtonClicked);
+            demosBaseUrl = $(stackblitzButtons[0]).attr(buttonDemosUrlAttrName);
+
+            $.each(stackblitzButtons, function(index, element) {
+                var $button = $(element);
+                var sampleFileUrl = getSampleUrlByStackBlitzButton($button);
+                if (samplesFilesUrls.indexOf(sampleFileUrl) === -1) {
+                    samplesFilesUrls.push(sampleFileUrl);
+                }
+
+                $button.on("click", onStackblitzButtonClicked);
+            });
 
             getDemosSharedFile();
+            getSamplesFiles();
         }
     }
 
@@ -31,20 +43,43 @@
         });
     }
 
-    var onStackblitzButtonClicked = function (event) {
-		if (isButtonClickInProgress) {
-			return;
-		}
+    var getSamplesFiles = function () {
+        $.each(samplesFilesUrls, function(index, url) {
+            $.get(url).done(function (data, requestType, httpResponse) { 
+                sampleFilesContentByUrl[url] = data;
+            });
+        });
+    }
 
-        isButtonClickInProgress = true;
-        var $button = $(this);
+    var getSampleUrlByStackBlitzButton = function ($button) {
         var iframeSrc = $("#" + $button.attr(buttonIframeIdAttrName)).attr("src");
         var demoPath = iframeSrc.replace(demosBaseUrl, "");
         var demoFileUrl = demosBaseUrl +
-            demoFilesFolderUrlPath.substring(0, demoFilesFolderUrlPath.length - 1) +
-            demoPath + ".json";
+                demoFilesFolderUrlPath.substring(0, demoFilesFolderUrlPath.length - 1) +
+                    demoPath + ".json";
+        return demoFileUrl;
+    }
 
-        $.get(demoFileUrl).done(onDemoFileReceieved);
+    var onStackblitzButtonClicked = function (event) {
+		if (isButtonClickInProgress) {
+			return;
+        }
+        
+        isButtonClickInProgress = true;
+        var $button = $(this);
+        var sampleFileUrl = getSampleUrlByStackBlitzButton($button);
+        var sampleContent = sampleFilesContentByUrl[sampleFileUrl];
+        replaceRelativeAssetsUrls(sampleContent);
+        var formData = {
+            dependencies: sharedFileContent.dependencies,
+            files: sharedFileContent.files.concat(sampleContent)
+        }
+
+        var form = createStackblitzForm(formData);
+        form.appendTo($("body"));
+        form.submit();
+        form.remove();        
+        isButtonClickInProgress = false;
     }
 
     var replaceRelativeAssetsUrls = function (files) {
@@ -54,19 +89,6 @@
                 files[i].content = files[i].content.replace(assetsRegex, assetsUrl);
             }
         }
-    }
-
-    var onDemoFileReceieved = function (data, requestType, httpResponse) {
-        replaceRelativeAssetsUrls(data);
-        var formData = {
-            dependencies: sharedFileContent.dependencies,
-            files: sharedFileContent.files.concat(data)
-        }
-
-        var form = createStackblitzForm(formData);
-        form.appendTo($("body"));
-        form.submit();
-        isButtonClickInProgress = false;
     }
 
     /*  a sample forms object -
