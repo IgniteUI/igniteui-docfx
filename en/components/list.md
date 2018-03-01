@@ -19,11 +19,6 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 </div>
 <div class="divider--half"></div>
 
-> [!WARNING]
-> Ignite UI for Angular has a [peer dependency](https://nodejs.org/en/blog/npm/peer-dependencies/) on [**HammerJS**](https://hammerjs.github.io/).
-> Make sure you add it to your Angular project.
-> <br/> <br/>`$ npm install hammerjs @types/hammerjs`
-
 ### Usage
 At its core the list component allows you to easily display a vertical list of items. The default styling of the items is done according to the single-line list specification as per the Material Design [**guidelines**](https://material.io/guidelines/components/lists.html).
 To get started with the Ignite UI for Angular List, let's first import the **IgxListModule** in our **app.module.ts** file:

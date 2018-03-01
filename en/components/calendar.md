@@ -15,11 +15,6 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
     <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="calendar-sample-5-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-> [!WARNING]
-> Ignite UI for Angular has a [peer dependency](https://nodejs.org/en/blog/npm/peer-dependencies/) on [**HammerJS**](https://hammerjs.github.io/).
-> Make sure you add it to your Angular project.
-> <br/> <br/>`$ npm install hammerjs @types/hammerjs`
-
 ### Usage
 To get started with the **Ignite UI for Angular Calendar**, let's first import the **IgxCalendarModule** in the application's AppModule, typically this is the **app.module.ts** file. Note that the **IgxCalendar** is also dependent on the **BrowserAnimationsModule**, so it needs to be added to the AppModule as well:
 

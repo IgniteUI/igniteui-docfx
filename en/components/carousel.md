@@ -13,10 +13,6 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
     <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/carousel-sample-4"></iframe>
 </div>
 
-> [!WARNING]
-> Ignite UI for Angular has a [peer dependency](https://nodejs.org/en/blog/npm/peer-dependencies/) on [**HammerJS**](https://hammerjs.github.io/).
-> Make sure you add it to your Angular project.
-> <br/> <br/>`$ npm install hammerjs @types/hammerjs`
 
 ### Usage
 The carousel can be used as a full-screen element or situated inside another component. Also, the slides may feature any valid html content inside, including other Angular components. To get started with the **Ignite UI for Angular Carousel**, let's first import the **IgxCarouselModule** in our **app.module.ts** file:
