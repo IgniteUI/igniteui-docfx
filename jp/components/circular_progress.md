@@ -1,26 +1,29 @@
 ﻿---
-title: Circular Progress Component
-_description: Ignite UI for Angular Circular Progress Indicator component allows developers to display progress in a circle with endless customization options.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Circular Progress components, Angular Circular Progress controls
+title: Circular Progress コンポーネント
+_description: Ignite UI for Angular Circular Progress インジケーター コンポーネントは、丸形で進行状況を表示し、カスタマイズできるコンポーネントです。
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Circular Progress コンポーネント, Angular Circular Progress コントロール
 _language: ja
 ---
 
 ##Circular Progress
-<p class="highlight">The Ignite UI for Angular Circular Progress Indicator component provides a visual indicator of an application’s process as it changes. The circular indicator updates its appearance as its state changes.<p>
+<p class="highlight">Ignite UI for Angular Circular Progress インジケーター コンポーネントは、変更でアプリケーションの進行状況を表す視覚的なインジケーターです。丸形インジケーターは状態変更で外観を更新します。<p>
 <div class="divider"></div>
 
-### Circular Progress Demo
+### Circular Progress デモ
 <div class="sample-container loading" style="height:400px">
     <iframe id="progressbar-sample-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/circular-progressbar" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="progressbar-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="progressbar-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
-### Usage
- Circular Progress Indicator can be used to show a user that he is in a process.
-To get started with the Ignite UI for Angular Circular Progress,  we should first import import the **IgxProgressBarModule** in the **app.module.ts** file:
+### 使用方法
+
+Circular Progress Indicator はプロセスの進行状況を表示します。
+
+Ignite UI for Angular Circular Progress を初期化する前に、**IgxProgressBarModule** を **app.module.ts** ファイルにインポートします。
+
 ```typescript
 // app.module.ts
 
@@ -34,8 +37,8 @@ import { IgxProgressBarModule } from 'igniteui-angular/main';
 })
 export class AppModule {}
 ```
-And now to have a better understanding how everything works, let's create a simple example, in which we will simulate a real process progress, that is
-triggered on button click. In order to make our example better we will need to import some additional modules in the **app.module.ts** file.
+
+ボタン クリックでトリガーされるプロセスの進行状況をシミュレートする実例を作成します。更に追加のモジュールを **app.module.ts** ファイルにインポートします。
 
 ```typescript
 // app.module.ts
@@ -49,7 +52,8 @@ import {
 })
 export class AppModule {}
 ```
-Notice that the **igx-circular-bar** emits `onProgressChanged` event that outputs an object that gives us `{currentValue: 65, previousValue: 64}` on each step.
+
+注: **igx-circular-bar** が各段階で `{currentValue: 65, previousValue: 64}` オブジェクトを出力する `onProgressChanged` イベントを発生します。
 
 ```html
 <section class="sample-content">
@@ -104,28 +108,29 @@ Notice that the **igx-circular-bar** emits `onProgressChanged` event that output
   }
 ```
 
-And now if we set up everything correctly we should have the folllowing displayed in our browser:
+すべてが正しく設定されるとブラウザーで以下のように表示されます。
+
 <div class="sample-container loading" style="height:400px">
     <iframe id="progressbar-sample-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/circular-progressbar" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="progressbar-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="progressbar-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
 ### API
-| Name   |       Type      |  Description |
+| 名前   |       型      |  説明 |
 |:----------|:-------------:|:------|
-| `max` |  number | Set maximum value that can be passed. Default `max` value is 100. |
-| `value` |  number | Set value that indicates the completed bar position. |
-| `animate` |  boolean | animation on progress bar. |
-| `textVisibility` | boolean | Set the text to be visible. By default it is set to `true`. |
+| `max` |  number | 渡すことができる最大値を設定します。デフォルト `max` 値は 100 です。 |
+| `value` |  number | 完了した位置を示す値を設定します。 |
+| `animate` |  boolean | 進行状況バーにアニメーションがあるかどうか。 |
+| `textVisibility` | boolean | テキストを表示するかどうかを設定します。デフォルトで `true` に設定されます。 |
 <div class="divider--half"></div>
 
-### Methods
-| Name   |  Description |
+### メソッド
+| 名前   |  説明 |
 |:----------|:------|
-| `getValue()` | Return passed value to progress bar to be in range between min(0) and max. |
-| `getPercentValue()` | Calculate the percentage based on passed value. |
-| `onProgressChanged` | Exposed event, which could be handled to track progress changing |
+| `getValue()` | 最小値 (0) および最大値の間の進行状況バーに渡された値を返します。 |
+| `getPercentValue()` | 渡された値に基づいてパーセンテージを計算します。 |
+| `onProgressChanged` | 進行状況の変更をトラックするために処理可能な公開イベント。 |
 <div class="divider--half"></div>

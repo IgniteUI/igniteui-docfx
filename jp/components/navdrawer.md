@@ -7,7 +7,7 @@ _language: ja
 
 ## Navigation Drawer
 
-<p class="highlight">Ignite UI for Angular Navigation Drawer コンポーネントは、スライドしてピン固定できるナビゲーション コンテナーです。使用されていない場合、縮小して非表示にもできます。ページの両端に配置できます。デフォルト位置は左側です。コンポーネントをコードで設定できます。選択済みのパネルを通知できます。また、ナビゲーション項目および非アクティブなヘッダーを設定できます。</p>
+<p class="highlight">Ignite UI for Angular Navigation Drawer コンポーネントはサイド ナビゲーション コンテナーです。コンテンツの上からスライドインまたはスライドアウトするか、コンテンツに展開/縮小するためにピン固定できます。ミニ バージョンが閉じている場合もナビゲーションへのクイック アクセスを提供します。Navigation Drawer はレスポンシブ モード選択およびタッチ ジェスチャをサポートします。コンテンツをカスタマイズするか、デフォルトのメニュー項目スタイル設定を使用できます。</p>
 <div class="divider"></div>
 
 ### Navigation Drawer デモ
@@ -20,100 +20,315 @@ _language: ja
 </div>
 <div class="divider--half"></div>
 
+### 依存関係
+
+すべての必要な依存関係を含むには、`IgxNavigationDrawerModule` を使用してアプリケーションの `AppModule` にインポートします。
+
+```typescript
+import { IgxNavigationDrawerModule } from 'igniteui-angular/main';
+```
+
+または
+
+```typescript
+import { IgxNavigationDrawerModule } from 'igniteui-angular/navigation-drawer';
+```
+
+app.module にインポートします。
+
+```typescript
+@NgModule({
+    imports: [
+        IgxNavigationDrawerModule,
+        ...
+    ]
+})
+export class AppModule {
+}
+```
+
+> または、両方のモジュールが `IgxNavigationDrawerComponent` および追加のディレクティブをエクスポートするため、必要に応じてそれを別に宣言/参照できます。
+
+<div class="divider--half"></div>
+
 ### 使用方法
 
+依存関係をインポートした後、Navigation Drawer をコンポーネントのテンプレートで定義できます。
+
 ```html
-<igx-nav-drawer id="test"
-    (opened)="logEvent($event)"
-    [position]="position"
-    [pin]="pin"
-    [enableGestures]='gestures'
-    [isOpen]="open"
-    [width]="drawerWidth"
-    [miniWidth]="drawerMiniWidth">
-        <div class="ig-drawer-content">
-            <h3>Drawer タイトル</h3>
-            <div *ngFor="let navItem of navItems"><img src="http://www.infragistics.com/assets/images/favicon.ico" width='16' />
-            <a routerLink="{{navItem.link}}"> {{navItem.text}} </a></div>
-        </div>
-        <div *ngIf="miniTemplate" class="ig-drawer-mini-content">
-            <span class="hamburger" igxNavToggle="test" > &#9776; </span>
-            <div *ngFor="let navItem of navItems"><img src="http://www.infragistics.com/assets/images/favicon.ico" width='16' /></div>
-        </div>
+<igx-nav-drawer id="navdrawer" [isOpen]="true">
+    <!-- template(s) -->
 </igx-nav-drawer>
+```
+
+Drawer のコンテンツを `igxDrawer` ディレクティブでデコレートした `<ng-template>` で設定します。
+任意のコンテンツをテンプレートに設定できますが、`igxDrawerItem` ディレクティブ ([項目のスタイル設定](#item-styling)を参照) が定義済みのスタイル設定を項目に適用します。[`igxRipple`](ripple.html) ディレクティブはルックアンドフィールを向上します。
+
+```html
+<!-- app.component.html -->
+<div class="content-wrap">
+  <igx-nav-drawer id="navigation" #drawer [isOpen]="true">
+    <ng-template igxDrawer>
+      <nav>
+        <span igxDrawerItem [isHeader]="true"> Email Account </span>
+        <span igxDrawerItem igxRipple> Inbox </span>
+        <span igxDrawerItem igxRipple [active]="true"> Drafts </span>
+        <span igxDrawerItem igxRipple> Sent </span>
+        <span igxDrawerItem [isHeader]="true"> Folders </span>
+        <span igxDrawerItem igxRipple> Deleted </span>
+        <span igxDrawerItem igxRipple> Archive </span>
+      </nav>
+    </ng-template>
+  </igx-nav-drawer>
+  <main>
+    <!-- app content -->
+  </main>
+</div>
+```
+
+> `igxDrawerMini` ディレクティブでデコレートした追加のテンプレートを閉じた状態の代わりの [Mini バリアント](#mini-variant)として提供できます。 
+
+> [!NOTE]
+> Navigation Drawer をコンテンツの上または隣に固定配置できます。デフォルトで、ビュー サイズに基づいてその配置の間に切り替えます。詳細については、「[モード](#modes)」を参照してください。
+
+モードの間に切り替えるため、2 つのコンテンツ セクションの周りに簡易なラッパーを以下のようにスタイルできます。
+
+```css
+/* app.component.css */
+.content-wrap
+{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+```
+
+Drawer を開く/閉じる方法が複数あります。入力プロパティをアプリケーション状態にバインドするか、[`@ViewChild(IgxNavigationDrawerComponent)`](https://angular.io/api/core/ViewChild) 参照を使用してコンポーネントの API へコードでアクセスするか、この場合で `#drawer` [テンプレート参照変数](https://angular.io/guide/template-syntax#ref-vars)を使用できます。
+
+```html
+<button (click)="drawer.toggle()"> Menu </button>
+```
+
+Navigation Drawer は `igxNavigationService` とも統合し、[`igxToggleAction`](toggle.html#automatic-toggle-actions) ディレクティブで id によって対象にされます。
+
+**app.component.html** の `<main>` を以下のコードと置き換えます。トグルをスタイル設定するために [`igxButton`](button.html) および [Icon コンポーネント](icon.html)を追加します。
+
+```html
+<main>
+  <span igxButton="icon" igxToggleAction="navigation" [closeOnOutsideClick]="false">
+    <igx-icon fontSet="material" name="menu"></igx-icon>
+  </span>
+</main>
+```
+
+結果は以下のようになります。
+
+<div class="sample-container loading" style="height: 500px">
+    <iframe id="nav-drawer-simple-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/navigation-drawer-simple" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="nav-drawer-simple-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+</div>
+
+<div class="divider--half"></div>
+
+### モード
+
+ピン固定されていないモード (コンテンツの上に配置) は標準の動作です。Drawer は上に配置され、すべてのコンテンツの上に暗いオーバーレイを適用します。モバイル デバイスで使用される一時的なナビゲーションを提供するために使用されます。
+
+より大きいな画面に Drawer をピン固定すると、相対的な位置を使用して通常のコンテンツ フローで配置されます。アプリケーションに Drawer を切り替える方法を提供するかどうかにより、ピン固定モードを使用して、[確定または永続的な動作](https://material.io/guidelines/patterns/navigation-drawer.html#navigation-drawer-behavior)を実装できます。
+
+> [!NOTE]
+> Navigation Drawer はデフォルトでレスポンシブです。画面サイズに基づいて固定解除および固定モード間で切り替わります。この動作は `pinThreshold` プロパティによって制御され、falsy 値 (0 など) を設定すると無効になります。
+
+
+#### ピン固定 (persistent) モード
+
+ピン固定は、コンテンツと同じフローに配置するために、Drawer の位置を `fixed` から `relative` に変更します。従って、このモードで Drawer を切り替える必要がある場合、アプリケーションのスタイル設定を切り替えるためにレイアウトをデザインする必要があります。流動レイアウトを実装するには、`igxLayout` および `igFlex` ディレクティブを使用します。
+
+上記の例に適用すると以下のようになります。
+
+```html
+<div class="content-wrap" igxLayout igxLayoutDir="row">
+    <igx-nav-drawer id="navigation" #drawer [isOpen]="true">
+        <!-- template(s) -->
+    </igx-nav-drawer>
+    <main igxFlex>
+        <!-- content here -->
+    </main>
+</div>
+```
+```css
+.content-wrap {
+    width: 100%;
+}
+```
+
+<div class="sample-container loading" style="height: 500px">
+    <iframe id="nav-drawer-pin-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/navigation-drawer-pin" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="nav-drawer-pin-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+</div>
+
+Drawer は `flex-basis` をホスト要素に適用すると、残りのコンテンツが残りの幅に合わせます。
+代わりに、ディレクティブを使用せずに以下の手動的なスタイルを適用できます。
+
+```css
+.main {
+    position: absolute;
+    display: flex;
+    flex-flow: row nowrap;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.main > * {
+    width: 100%;
+}
+```
+
+#### ミニ バリアント
+
+ミニ バリアントを使用する場合、Navigation Drawer を閉じる代わりに幅を変更します。サイドでクイック選択を利用可能にするためにアイコンが常に表示されます。このバリアントを使用するには、`igxDrawerMini` ディレクティブでデコレートしたミニ テンプレートを設定します。
+
+通常、ミニ バリアントが persistent セットアップで使用されるため、`pin` を設定し、レスポンシブしきい値を無効にしました。
+
+```html
+<igx-nav-drawer id="navigation" [pin]="true" [pinThreshold]="0">
+  <ng-template igxDrawer>
+      <span igxDrawerItem [isHeader]="true"> Header </span>
+      <span igxDrawerItem igxRipple> 
+          <igx-icon fontSet="material" name="home"></igx-icon>
+          <span>Home</span>
+      </span>
+  </ng-template>
+  <ng-template igxDrawerMini>
+      <span igxDrawerItem igxRipple> 
+          <igx-icon fontSet="material" name="home"></igx-icon>
+      </span>
+  </ng-template>
+</igx-nav-drawer>
+```
+
+<div class="sample-container loading" style="height: 400px">
+    <iframe id="nav-drawer-mini-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/navigation-drawer-mini" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="nav-drawer-mini-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+</div>
+
+<div class="divider--half"></div>
+
+### 項目のスタイル
+
+Navigation Drawer のコンテンツをテンプレートに設定します。ナビゲーション項目の規格リストを使用するシナリオの場合、スタイル設定するためにオプションの `igxDrawerItem` ディレクティブを使用できます。項目にデフォルト スタイル設定およびパターン、さらに適切なテーマ色を適用します。
+
+このディレクティブに 2 つの `@Input` プロパティがあります。
+- `active` - 項目を選択済みとしてスタイル設定します。
+- `isHeader`- 項目をグループ ヘッダーとしてスタイル設定します。active に設定できません。
+
+```html
+<!-- ... -->
+<ng-template igxDrawer>
+    <span igxDrawerItem [isHeader]="true"> Header </span>
+    <span igxDrawerItem [active]="true"> Selected Item </span>
+<!-- ... -->
+```
+
+ディレクティブはメイン `IgxNavigationDrawerModule` からエクスポートされ、`IgxNavDrawerItemDirective` として個別にエクスポートされます。
+
+<div class="divider--half"></div>
+
+#### 事例: Angular ルーターでデフォルト項目スタイルの使用
+
+項目をスタイル設定するために `igxDrawerItem` ディレクティブを使用するには、`active` 入力を標準に設定しますが、ルーティングの場合、その状態が外部に制御されます。
+
+`app.component.ts` に定義される以下の項目があります。
+
+```typescript
+export class AppComponent {
+    public componentLinks = [
+        {
+            link: "/avatar",
+            name: "Avatar"
+        },
+        {
+            link: "/badge",
+            name: "Badge"
+        }
+        // ...
+    ];
+}
+```
+
+アクティブ状態に接続するには、[`routerLinkActive`](https://angular.io/api/router/RouterLinkActive) デフォルト機能を直接使用し、Drawer 項目のアクティブ クラス `igx-nav-drawer__item--active` を渡します。`<igx-nav-drawer>` テンプレートは以下のようになります。 
+
+```html
+<!-- ... -->
+<ng-template igxDrawer>
+    <nav>
+        <span *ngFor="let item of componentLinks" routerLink="{{item.link}}"
+            igxDrawerItem igxRipple 
+            routerLinkActive="igx-nav-drawer__item--active" >
+                {{item.name}}
+        </span>
+    </nav>
+</ng-template>
+<!-- ... -->
+```
+
+この方法が実際のディレクティブのアクティブ状態に影響しませんが、スタイル変更によって影響される場合があります。その代わり、`routerLinkActive` を使用して、テンプレート変数に割り当て、`isActive` をバインディングで使用します。
+
+```html
+<!-- ... -->
+<ng-template igxDrawer>
+    <nav>
+        <span *ngFor="let item of componentLinks" routerLink="{{item.link}}"
+            routerLinkActive #rla="routerLinkActive"
+            igxDrawerItem igxRipple [active]="rla.isActive">
+                {{item.name}}
+        </span>
+    </nav>
+</ng-template>
+<!-- ... -->
 ```
 
 <div class="divider--half"></div>
 
 ### API
 
-#### プロパティ
+#### 入力
 
-| 名前             |   型    | 説明                                                                                                                                                        |
-| :--------------- | :-----: | :---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `ID`             | string  | コンポーネントの ID。                                                                                                                                       |
-| `position`       | string  | Navigation Drawer の位置。"left" (デフォルト値) または "right" です。固定されていない場合のみ効果があります。                                               |
-| `enableGestures` | boolean | ドロアーを利用するために、端からスワイプ/パンニングして開く、スワイプ切り替え、およびパンニング ドラッグなどのタッチ ジェスチャの使用を有効にします。       |
-| `isOpen`         | boolean | ドロアーの状態。                                                                                                                                            |
-| `pin`            | boolean | ドロアーのピン固定状態。                                                                                                                                    |
-| `pinThreshold`   | number  | 自動ピン固定を切り替えるためのデバイスの最小幅。デフォルト値は 1024 です。無視するには falsy 値に設定します。                                               |
-| `width`          | string  | 開いたドロアーの幅。`.ig-nav-drawer` スタイルに基づいてデフォルト値は 300px です。幅をオーバーライドするか、幅を動的に変更するために使用できます。          |
-| `miniWidth`      | string  | mini 状態でドロアーの幅。`.ig-nav-drawer.mini` スタイルに基づいてデフォルト値は 60px です。幅をオーバーライドするか、幅を動的に変更するために使用できます。 |
+| 名前      | 型|  説明 |
+|:----------|:----:|:------|
+| `id`| string | Navigation Drawer の一意識別子。その他のテンプレート ファイルのディレクティブがコントロールを対象にすることを許可する、提供された `IgxNavigationService` で登録するために必要な ID。 |
+| `position` | string | Navigation Drawer の位置。"left" (デフォルト値) または "right" です。固定されていない場合のみ効果があります。|
+| `enableGestures`| boolean | ドロアーを利用するために、端からスワイプ/パンニングして開く、スワイプ切り替え、およびパンニング ドラッグなどのタッチ ジェスチャの使用を有効にします。 |
+| `isOpen` | boolean | ドロアーの状態。 |
+| `pin` | boolean | ピン固定される場合、Drawer をコンテンツ上に配置する代わりに相対的な位置が設定されます。追加のレイアウト スタイルが必要になる場合があります。 |
+| `pinThreshold` | number | 自動ピン固定を切り替えるためのデバイスの最小幅。デフォルト値は 1024 です。この動作を無効にするには falsy 値に設定します。 |
+| `width` | string| 開いたドロアーの幅。デフォルト値は "280px" です。|
+| `miniWidth` | string | ミニ バリアントでのドロアーの幅。デフォルト値は "60px" です。 |
 
-<div class="divider--half"></div>
+#### 出力
 
-### メソッド
-
-| 名前                  | 説明                                                                                                                                                                                                   |
-| :-------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `open`                | Navigation Drawer を開きます。すでに開いている場合は効果がありません。 _@param_ fireEvents イベントを発生するかどうかを決定するオプションのフラグ。 _@return_ 操作が完了したときに解決される Promise。 |
-| `close`               | Navigation Drawer を閉じます。すでに閉じている場合は効果がありません。 _@param_ fireEvents イベントを発生するかどうかを決定するオプションのフラグ。 _@return_ 操作が完了したときに解決される Promise。 |
-| `expectedWidth()`     | 特定の状態の Drawer 幅を取得します。要求された状態を評価してキャッシュされようとします。                                                                                                               |
-| `expectedMiniWidth()` | 特定の状態の Drawer の mini 幅を取得します。要求された状態を評価してキャッシュされようとします。                                                                                                       |
-
-<div class="divider--half"></div>
-
-### イベント
-
-| 名前      | 説明                                               |
-| :-------- | :------------------------------------------------- |
-| `opening` | Navigation Drawer が開くときに発生するイベント。   |
+| 名前      |  説明 |
+|:----------|:------|
+| `pinChange` | pin プロパティの TwoWay バインディングのためのピン固定状態変更の出力。例: `<igx-nav-drawer [(pin)]="drawerState.pin"> ..` |
+| イベント発生 | 変更の通知 |
+| `opening` | Navigation Drawer が開くときに発生するイベント。 |
 | `opened`  | Navigation Drawer が開いたときに発生するイベント。 |
 | `closing` | Navigation Drawer が閉じるときに発生するイベント。 |
 | `closed`  | Navigation Drawer が閉じたときに発生するイベント。 |
 
-<div class="divider--half"></div>
+#### メソッド
 
-`TypeScript` で Drawer コンポーネントの構成:
-
-```typescript
-export class MainDrawerSampleComponent {
-    navItems: Array<Object> = [
-        { text: 'デフォルトのサンプル', link: '/navigation-drawer' },
-        { text: 'ピン固定サンプル', link: '/navigation-drawer/pin' },
-        { text: 'Mini サンプル', link: '/navigation-drawer/mini' }
-    ];
-
-    pin: boolean = false;
-    open: boolean = false;
-    position = 'left';
-    drawerMiniWidth = '';
-    @ViewChild(NavigationDrawer) viewChild: NavigationDrawer;
-    /** Sample-specific configurations: */
-    showMiniWidth: boolean = false;
-    showEventLog: boolean = true;
-    showToggle: boolean = true;
-
-    logEvent(event) {
-        if (event === 'closing') {
-            // this will cause change detection, potentially run outside of angular
-            this.open = false;
-        }
-    }
-    testToggle() {
-        this.viewChild.toggle().then(value => {
-            this.logEvent('API call resolved: ' + value);
-        });
-    }
-}
-```
+| 構文      |  説明 |
+|:----------|:------|
+| `open`    | Navigation Drawer を開きます。すでに開いている場合は効果がありません。操作が完了したときに解決される `Promise` を返します。 |
+| `close`   | Navigation Drawer を閉じます。すでに閉じている場合は効果がありません。操作が完了したときに解決される `Promise` を返します。 |
+| `toggle`  | Navigation Drawer の開く状態を切り替えます。操作が完了したときに解決される `Promise` を返します。 |

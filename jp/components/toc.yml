@@ -4,10 +4,23 @@
   href: grid.md
 - name: List View 
   href: list.md
+- name: スタイルとテーマ
+  header: true
+- name: Themes
+  href: themes.md
+  items:
+    - name: Palettes
+      href: colors.md
+    - name: Typography
+      href: typography.md
+- name: Shadows
+  href: shadows.md
 - name: データ入力と表示
   header: true
 - name: Button 
   href: button.md
+- name: Button Group
+  href: buttonGroup.md
 - name: Checkbox 
   href: checkbox.md
 - name: Switch 
@@ -66,11 +79,3 @@
   href: calendar.md
 - name: Date Picker 
   href: date_picker.md
-- name: スタイル ガイド
-  header: true
-- name: Colors
-  href: colors.md
-- name: Typography
-  href: typography.md
-- name: Shadows
-  href: shadows.md

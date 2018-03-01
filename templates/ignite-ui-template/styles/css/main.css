@@ -662,7 +662,8 @@ table a {
     color: #666; }
 
 button,
-a, a > code {
+a,
+a > code {
   color: #337ab7;
   cursor: pointer; }
 
