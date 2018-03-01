@@ -19,11 +19,6 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
     </button>
 </div>
 
-> [!WARNING]
-> Ignite UI for Angular has a [peer dependency](https://nodejs.org/en/blog/npm/peer-dependencies/) on [**HammerJS**](https://hammerjs.github.io/).
-> Make sure you add it to your Angular project.
-> <br/> <br/>`$ npm install hammerjs @types/hammerjs`
-
 ##Usage
 The toggle allows you easily to wrap some content into a box which easily can be opened and closed.
 To get started with the IgniteUI for Angular Toggle, let's first import the **IgxToggleModule** in our **app.module.ts**. We are also planning to take advantage of **igxButton** directive so we will have to import **IgxButtonModule** into the **app.module.ts** too.

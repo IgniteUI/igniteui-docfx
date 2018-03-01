@@ -22,11 +22,6 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 <div class="divider--half"></div>
 
-> [!WARNING]
-> Ignite UI for Angular has a [peer dependency](https://nodejs.org/en/blog/npm/peer-dependencies/) on [**HammerJS**](https://hammerjs.github.io/).
-> Make sure you add it to your Angular project.
-> <br/> <br/>`$ npm install hammerjs @types/hammerjs`
-
 ### Usage
 
 To get started with the control, let's first import the **IgxTabBarModule** in the **app.module.ts** file:

@@ -20,11 +20,6 @@ _language: ja
 </div>
 <div class="divider--half"></div>
 
-> [!WARNING]
-> Ignite UI for Angular に [**HammerJS**](https://hammerjs.github.io/) の[ピア依存関係](https://nodejs.org/en/blog/npm/peer-dependencies/)があります。
-> それを Angular プロジェクトに追加してください。
-> <br/> <br/>`$ npm install hammerjs @types/hammerjs`
-
 ### 使用方法
 
 List コンポーネントは項目の垂直リストを表示します。項目のデフォルト スタイル設定はマテリアル デザイン [**ガイドライン**](https://material.io/guidelines/components/lists.html)の単一行リストの仕様に基づきます。

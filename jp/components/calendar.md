@@ -16,11 +16,6 @@ _language: ja
     <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="calendar-sample-5-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
-> [!WARNING]
-> Ignite UI for Angular に [**HammerJS**](https://hammerjs.github.io/) のピ[ア依存関係](https://nodejs.org/en/blog/npm/peer-dependencies/)があります。
-> Angular プロジェクトにそれを追加する必要があります。
-> <br/> <br/>`$ npm install hammerjs @types/hammerjs`
-
 ### 使用方法
 Ignite UI for Angular Calendar を初期化する前に、**IgxCalendarModule** をアプリケーションの AppModule (**app.module.ts** ファイル) にインポートします。注: **IgxCalendar** に **BrowserAnimationsModule** の依存関係があるため、それを AppModule に追加する必要もあります。
 

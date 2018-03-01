@@ -23,11 +23,6 @@ _language: ja
 
 <div class="divider--half"></div>
 
-> [!WARNING]
-> Ignite UI for Angular に [**HammerJS**](https://hammerjs.github.io/) の[ピア依存関係](https://nodejs.org/en/blog/npm/peer-dependencies/)があります。
-> それを Angular プロジェクトに追加してください。
-> <br/> <br/>`$ npm install hammerjs @types/hammerjs`
-
 ### 使用方法
 
 コントロールを初期化する前に、**IgxTabBarModule** を **app.module.ts** ファイルにインポートします。
