@@ -338,7 +338,7 @@ public contactsList: object[] = [{
 }
 ```
 
-このトピックの [TabBar デモ](#tabbar-demo) セクションに結果が表示されます。
+このトピックの [TabBar デモ](#tabbar-デモ) セクションに結果が表示されます。
 
 <div class="divider"></div>
 

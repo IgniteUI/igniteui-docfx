@@ -64,7 +64,7 @@ export class AppModule {}
 
 #### アバターおよび画像の追加
 
-ルーパート スタドラーは人気がありますが、カードをもう少し魅力的に変えてみます。名前の左に画像のアバターを表示し、より大きい Audi TT 画像を追加できます。要素を追加するには、[**IgxAvatar**](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/avatar.html) モジュールを **app.module.ts** ファイルにインポートします。
+ルーパート スタドラーは人気がありますが、カードをもう少し魅力的に変えてみます。名前の左に画像のアバターを表示し、より大きい Audi TT 画像を追加できます。要素を追加するには、[**IgxAvatar**](avatar.html) モジュールを **app.module.ts** ファイルにインポートします。
 ```typescript
 // app.module.ts
 
@@ -114,7 +114,7 @@ export class AppModule {}
 #### アクションの追加
 
 カードに多くの情報が含まれるようになりました。更に他の機能も追加します。その他のコンポーネントを使用してエクスペリエンスを向上し、機能を追加します。
-カードからソーシャル メディアにアクセスするオプションを追加します。要素を追加するには、[**IgxButton**](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/button.html) および [**IgxIcon**](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/icon.html) モジュールを取得して **app.module.ts** ファイルにインポートします。
+カードからソーシャル メディアにアクセスするオプションを追加します。要素を追加するには、[**IgxButton**](button.html) および [**IgxIcon**](icon.html) モジュールを取得して **app.module.ts** ファイルにインポートします。
 
 ```typescript
 // app.module.ts
@@ -179,7 +179,6 @@ public icons = ['add', 'star'];
 
 <div class="divider--half"></div>
 
-<!--### API Summary-->
 #### スタイル
 以下の定義済み CSS クラスを使用してカード レイアウトを構成しました。
 | 名前 | 説明 |

@@ -182,7 +182,7 @@ public verifyRange(dates: Date[]) {
 </igx-calendar>  
 ```
 
-テンプレート コンテキストの **parts** の詳細情報については、API セクションの [TemplateContext](#template-context) を参照してください。テンプレート化されたカレンダーの外観は以下です。
+テンプレート コンテキストの **parts** の詳細情報については、API セクションの [TemplateContext](#テンプレート-コンテキスト) を参照してください。テンプレート化されたカレンダーの外観は以下です。
 
 <div class="sample-container" style="height: 500px">
     <iframe id="calendar-sample-4-iframe" src='{environment:demosBaseUrl}/calendar-sample-4' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -240,6 +240,7 @@ public verifyRange(dates: Date[]) {
 | `selectDate` | `date: Date` または `Date[]` | `void` | カレンダーの選択を変更します。このメソッドの呼び出しは `onSelection` イベントを発生させます。 |
 
 <div class="divider--half"></div>
+
 #### テンプレート コンテキスト
 <div class="divider--half"></div>
 
