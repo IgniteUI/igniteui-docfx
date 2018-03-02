@@ -82,7 +82,7 @@ $(function() {
     }
   }
 
-  async function copyCode() {
+  function copyCode() {
     var btn = ".hljs-code-copy";
     var localeData = $.localize.data;
     var cpb = new Clipboard(btn, {
@@ -90,7 +90,6 @@ $(function() {
         var codeSnippet = $(trigger)
           .prevAll("code")
           .text();
-
         return codeSnippet;
       }
     });
