@@ -13,7 +13,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 Since **IgniteUI for Angular** bases its component designs on the **<a href="https://material.io/guidelines/material-design/introduction.html" target="_blank">Material Design Guidelines</a>**, we try to get as close as possible to colors, sizes, and overall look and feel of our components to those created by Google.
 
-Our approach to themeing is based around several simple concepts.
+Our approach to theming is based around several simple concepts.
 
 #### Palettes
 
@@ -28,11 +28,11 @@ The second concept is the one of themes. Palettes, wouldn't do much good if they
 The last concept revolves around typography. Although we have a default typeface choice, we really want to give you the power to style your application in every single way. Typography is such an important part of that. We provide a method for changing the font family, the sizes and weights for headings, subheadings and paragraph texts in your app.
 
 > [!NOTE]
-> Themeing **requires** [**Sass**](https://github.com/sass/node-sass).
+> Theming **requires** [**Sass**](https://github.com/sass/node-sass).
 
 ### Generating Color Palettes
 
-Our themeing library is based on Sass. If you used the **<a href="https://github.com/IgniteUI/igniteui-cli" target="_blank">Ignite UI CLI</a>** to bootstrap your app, you can specify the style in the **angular-cli.json** config to _scss_, the CLI will take care of compiling the Sass styles for you. If you haven't used Ignite UI CLI then you have to configure your builder to compile Sass styles for you.
+Our theming library is based on Sass. If you used the **<a href="https://github.com/IgniteUI/igniteui-cli" target="_blank">Ignite UI CLI</a>** to bootstrap your app, you can specify the style in the **angular-cli.json** config to _scss_, the CLI will take care of compiling the Sass styles for you. If you haven't used Ignite UI CLI then you have to configure your builder to compile Sass styles for you.
 
 Our palettes accept arguments for `primary`, `secondary`, `info`, `success`, `warn`, and `error` colors. The primary color is the one that will be the more prominent color throughout your application. The secondary color is the one used on elements that are actionable, such as buttons, switches, sliders, etc. The only required arguments we require, though, are the ones for `primary` and `secondary` colors. We default the ones for `info`, `success`, `warn`, and `error` to a predefined set of our choosing.
 
