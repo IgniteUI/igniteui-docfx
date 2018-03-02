@@ -16,11 +16,6 @@ _language: ja
     <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/carousel"></iframe>
 </div>
 
-> [!WARNING]
-> Ignite UI for Angular に [**HammerJS**](https://hammerjs.github.io/) の[ピア依存関係](https://nodejs.org/en/blog/npm/peer-dependencies/)があります。
-> それを Angular プロジェクトに追加してください。
-> <br/> <br/>`$ npm install hammerjs @types/hammerjs`
-
 ### 使用方法
 
 カルーセルを全画面要素またはコンポーネントの子に設定できます。また、スライドに有効な HTML コンテンツ、その他の Angular コンポーネントなども含めることができます。**Ignite UI for Angular Carousel** を初期化する前に、**IgxCarouselModule** を **app.module.ts** ファイルにインポートします。 

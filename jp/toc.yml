@@ -1,5 +1,5 @@
-- name: Components
-  href: 'https://infragistics.com/products/ignite-ui-angular'
-- name: Get Started
-  href: 'https://infragistics.com/products/ignite-ui-angular/getting-started/'
+﻿- name: コンポーネント
+  href: 'https://jp.infragistics.com/products/ignite-ui-angular'
+- name: はじめに
+  href: 'https://jp.infragistics.com/products/ignite-ui-angular/getting-started/'
   cta: true
