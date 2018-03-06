@@ -423,7 +423,7 @@ this.grid.paging = false;
 <igx-column field="Price" filterable="true" dataType="number"></igx-column>
 ```
 
-列で設定された `dataType` に基づいて、[**フィルタリング条件**](#filtering-conditions)の正しいセットがフィルター UI ドロップダウンで読み込まれます。また、列の `filteringIgnoreCase` および最初の `filteringCondition` プロパティを設定できます。
+列で設定された `dataType` に基づいて、[**フィルター条件**](#フィルター条件)の正しいセットがフィルター UI ドロップダウンで読み込まれます。また、列の `filteringIgnoreCase` および最初の `filteringCondition` プロパティを設定できます。
 
 #### API でのフィルター
 
@@ -607,7 +607,7 @@ public ngOnInit() {
 |`deleteRow(rowIndex: number)`|行オブジェクトおよび相対するデータ レコードをデータ ソースから削除します。|
 |`updateRow(value: any, rowIndex: number)`|行オブジェクトおよびデータ ソース レコードを渡された値で更新します。|
 |`updateCell(value: any, rowIndex: number, column: string)`|セル オブジェクトおよびデータ ソースのレコード フィールドを更新します。|
-|`filter(column: string, value: any, condition?, ignoreCase?: boolean)`|単一の列をフィルターします。利用可能な[フィルター条件](#filtering-conditions)を参照してください。|
+|`filter(column: string, value: any, condition?, ignoreCase?: boolean)`|単一の列をフィルターします。利用可能な[フィルター条件](#フィルター条件)を参照してください。|
 |`filter(expressions: Array)`|グリッド列を提供したフィルター式の配列に基づいてフィルターします。|
 |`filterGlobal(value: any, condition? ignoreCase?)`|グリッドの列をすべてフィルターします。|
 |`clearFilter(name?: string)`|`name` が提供された場合、相対する列のフィルター状態をクリアします。それ以外の場合、すべての列のフィルター状態をクリアします。|

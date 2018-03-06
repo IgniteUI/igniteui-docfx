@@ -62,7 +62,7 @@ export class AppModule {
 ```
 
 Drawer のコンテンツを `igxDrawer` ディレクティブでデコレートした `<ng-template>` で設定します。
-任意のコンテンツをテンプレートに設定できますが、`igxDrawerItem` ディレクティブ ([項目のスタイル設定](#item-styling)を参照) が定義済みのスタイル設定を項目に適用します。[`igxRipple`](ripple.html) ディレクティブはルックアンドフィールを向上します。
+任意のコンテンツをテンプレートに設定できますが、`igxDrawerItem` ディレクティブ ([項目のスタイル設定](#項目のスタイル)を参照) が定義済みのスタイル設定を項目に適用します。[`igxRipple`](ripple.html) ディレクティブはルックアンドフィールを向上します。
 
 ```html
 <!-- app.component.html -->
@@ -86,10 +86,10 @@ Drawer のコンテンツを `igxDrawer` ディレクティブでデコレート
 </div>
 ```
 
-> `igxDrawerMini` ディレクティブでデコレートした追加のテンプレートを閉じた状態の代わりの [Mini バリアント](#mini-variant)として提供できます。 
+> `igxDrawerMini` ディレクティブでデコレートした追加のテンプレートを閉じた状態の代わりの [Mini バリアント](#ミニ-バリアント)として提供できます。 
 
 > [!NOTE]
-> Navigation Drawer をコンテンツの上または隣に固定配置できます。デフォルトで、ビュー サイズに基づいてその配置の間に切り替えます。詳細については、「[モード](#modes)」を参照してください。
+> Navigation Drawer をコンテンツの上または隣に固定配置できます。デフォルトで、ビュー サイズに基づいてその配置の間に切り替えます。詳細については、「[モード](#モード)」を参照してください。
 
 モードの間に切り替えるため、2 つのコンテンツ セクションの周りに簡易なラッパーを以下のようにスタイルできます。
 
@@ -109,7 +109,7 @@ Drawer を開く/閉じる方法が複数あります。入力プロパティを
 <button (click)="drawer.toggle()"> Menu </button>
 ```
 
-Navigation Drawer は `igxNavigationService` とも統合し、[`igxToggleAction`](toggle.html#automatic-toggle-actions) ディレクティブで id によって対象にされます。
+Navigation Drawer は `igxNavigationService` とも統合し、[`igxToggleAction`](toggle.html#トグル自動操作) ディレクティブで id によって対象にされます。
 
 **app.component.html** の `<main>` を以下のコードと置き換えます。トグルをスタイル設定するために [`igxButton`](button.html) および [Icon コンポーネント](icon.html)を追加します。
 
