@@ -144,7 +144,7 @@ $my-color-palette: igx-palette(
 @import "~igniteui-angular/core/styles/themes/index";
 // IMPORTANT: Make sure you always include igx-core first!
 @include igx-core();
-@include igx-theme();
+@include igx-theme($default-palette);
 
 //Include after igx-core
 @include igx-typography($config: (font-family: "Comic Sans MS"));
