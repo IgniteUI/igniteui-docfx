@@ -10,7 +10,7 @@ _language: ja
 <p class="highlight"></p>
 <div class="divider"></div>
 
-### 推定高さ
+### エレベーション
 
 <div class="elevations row">
     <div class="col-lg-4 col-md-4 col-sm-6">
