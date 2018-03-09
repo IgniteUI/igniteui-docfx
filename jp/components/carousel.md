@@ -145,7 +145,7 @@ a > igx-icon > span{
   }
 ```
 
-プロパティを構成した後、ユーザーはカルーセルのコンテンツを変更できます。次、ナビゲーションをカスタマイズし、カルーセルのインジケーターをプログレス バーと置き換えます。`onSlideChanged` イベントを処理し、**IgxLinearProgressBar** コンポーネントを使用して進行状況を示す UI を追加します。最初、**IgxLinearProgressBar** モジュールをインポートします。
+プロパティを構成した後、ユーザーはカルーセルのコンテンツを変更できます。次にナビゲーションをカスタマイズし、カルーセルのインジケーターをプログレス バーと置き換えます。`onSlideChanged` イベントを処理し、**IgxLinearProgressBar** コンポーネントを使用して進行状況を示す UI を追加します。最初、**IgxLinearProgressBar** モジュールをインポートします。
 
 ```typescript
 // app.component.ts
