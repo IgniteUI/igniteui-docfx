@@ -7,7 +7,7 @@ _language: ja
 
 ## Navigation Drawer
 
-<p class="highlight">Ignite UI for Angular Navigation Drawer コンポーネントはサイド ナビゲーション コンテナーです。コンテンツの上からスライドインまたはスライドアウトするか、コンテンツに展開/縮小するためにピン固定できます。ミニ バージョンが閉じている場合もナビゲーションへのクイック アクセスを提供します。Navigation Drawer はレスポンシブ モード選択およびタッチ ジェスチャをサポートします。コンテンツをカスタマイズするか、デフォルトのメニュー項目スタイル設定を使用できます。</p>
+<p class="highlight">Ignite UI for Angular Navigation Drawer コンポーネントはサイド ナビゲーション コンテナーです。コンテンツの上からスライドインまたはスライドアウト、コンテンツ内で展開/縮小するためにピン固定できます。ミニ バージョンが閉じている場合もナビゲーションへのクイック アクセスを提供します。Navigation Drawer はレスポンシブ モード選択およびタッチ ジェスチャをサポートします。コンテンツは、デフォルトのメニュー項目スタイル設定を使用する他、カスタマイズも可能です。</p>
 <div class="divider"></div>
 
 ### Navigation Drawer デモ
@@ -22,7 +22,7 @@ _language: ja
 
 ### 依存関係
 
-すべての必要な依存関係を含むには、`IgxNavigationDrawerModule` を使用してアプリケーションの `AppModule` にインポートします。
+必要となるすべての依存関係を含むために `IgxNavigationDrawerModule` を使用してアプリケーションの `AppModule` にインポートします。
 
 ```typescript
 import { IgxNavigationDrawerModule } from 'igniteui-angular/main';
@@ -47,7 +47,7 @@ export class AppModule {
 }
 ```
 
-> または、両方のモジュールが `IgxNavigationDrawerComponent` および追加のディレクティブをエクスポートするため、必要に応じてそれを別に宣言/参照できます。
+> または、両方のモジュールで `IgxNavigationDrawerComponent` および追加のディレクティブをエクスポートするため、必要に応じてそれを別に宣言/参照できます。
 
 <div class="divider--half"></div>
 
@@ -103,7 +103,7 @@ Drawer のコンテンツを `igxDrawer` ディレクティブでデコレート
 }
 ```
 
-Drawer を開く/閉じる方法が複数あります。入力プロパティをアプリケーション状態にバインドするか、[`@ViewChild(IgxNavigationDrawerComponent)`](https://angular.io/api/core/ViewChild) 参照を使用してコンポーネントの API へコードでアクセスするか、この場合で `#drawer` [テンプレート参照変数](https://angular.io/guide/template-syntax#ref-vars)を使用できます。
+Drawer を開く/閉じる方法が複数あります。入力プロパティをアプリケーション状態にバインドするか、[`@ViewChild(IgxNavigationDrawerComponent)`](https://angular.io/api/core/ViewChild) 参照を使用してコンポーネントの API へコードでアクセス、あるいはこのような場合では `#drawer` [テンプレート参照変数](https://angular.io/guide/template-syntax#ref-vars)を使用できます。
 
 ```html
 <button (click)="drawer.toggle()"> Menu </button>
@@ -136,7 +136,7 @@ Navigation Drawer は `igxNavigationService` とも統合し、[`igxToggleAction
 
 ピン固定されていないモード (コンテンツの上に配置) は標準の動作です。Drawer は上に配置され、すべてのコンテンツの上に暗いオーバーレイを適用します。モバイル デバイスで使用される一時的なナビゲーションを提供するために使用されます。
 
-より大きいな画面に Drawer をピン固定すると、相対的な位置を使用して通常のコンテンツ フローで配置されます。アプリケーションに Drawer を切り替える方法を提供するかどうかにより、ピン固定モードを使用して、[確定または永続的な動作](https://material.io/guidelines/patterns/navigation-drawer.html#navigation-drawer-behavior)を実装できます。
+より大きい画面に Drawer をピン固定すると、相対的な位置を使用して通常のコンテンツ フローで配置されます。アプリケーションに Drawer を切り替える方法を提供するかどうかにより、ピン固定モードを使用して、[確定または永続的な動作](https://material.io/guidelines/patterns/navigation-drawer.html#navigation-drawer-behavior)を実装できます。
 
 > [!NOTE]
 > Navigation Drawer はデフォルトでレスポンシブです。画面サイズに基づいて固定解除および固定モード間で切り替わります。この動作は `pinThreshold` プロパティによって制御され、falsy 値 (0 など) を設定すると無効になります。
@@ -281,7 +281,7 @@ export class AppComponent {
 <!-- ... -->
 ```
 
-この方法が実際のディレクティブのアクティブ状態に影響しませんが、スタイル変更によって影響される場合があります。その代わり、`routerLinkActive` を使用して、テンプレート変数に割り当て、`isActive` をバインディングで使用します。
+この方法は実際のディレクティブのアクティブ状態に影響しませんが、スタイルが変更されると影響される場合があります。その代わり、`routerLinkActive` を使用して、テンプレート変数に割り当て、`isActive` をバインディングで使用します。
 
 ```html
 <!-- ... -->
