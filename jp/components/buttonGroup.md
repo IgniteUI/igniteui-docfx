@@ -80,7 +80,7 @@ public alignment = ButtonGroupAlignment.vertical;
 <div class="divider--half"></div>
 
 
-「排他的」または「複数選択」を使用することもできますが、ボタンを切り替え可能および無効に設定することもできます。次の例では、一番左のボタンが選択されますが、切り替え可能ではありません。一番右のが無効になっています。
+「排他的」または「複数選択」を使用することもできますが、ボタンを切り替え可能および無効に設定することもできます。次の例では、一番左のボタンが選択されますが切り替えはできません。一番右のボタンは無効になっています。
 
 ```typescript
 //sample.component.ts
@@ -129,7 +129,7 @@ public ngOnInit() {
 
 | 名前   |      型      |  説明 |
 |:----------|:-------------:|:------|
-| `multiSelection` |  boolean | 複数のボタン選択を有効にします。デフォルトで `multiselection` は false です。
+| `multiSelection` |  boolean | ボタンの複数選択を有効にします。デフォルトで `multiselection` は false です。
 | `alignment` |    enum   |   ボタン グループの配置を設定します。利用可能なオプションは、`ButtonGroupAlignment.horizontal` （デフォルト) と `ButtonGroupAlignment.vertical` です。 |
 | `disabled` | boolean | igxButtonGroup コンポーネントを無効にします。デフォルトで false です。 |
 

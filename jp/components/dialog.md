@@ -133,12 +133,12 @@ export class AppModule {}
 | `title` | string | ダイアログのタイトルを指定します。 |
 | `message` | string | ダイアログのメッセージを指定します。 |
 | `leftButtonLabel` | string | true に設定すると、左ボタンを表示します。 |
-| `leftButtonType` | string | 左ボタンの [**type**](button.md#button-types) を指定します。デフォルト値は flat です。 |
+| `leftButtonType` | string | 左ボタンの [**type**](button.md#button-タイプ) を指定します。デフォルト値は flat です。 |
 | `leftButtonColor` | string | 左ボタンのテキスト色を指定します。 |
 | `leftButtonBackgroundColor` | string | 左ボタンの背景色を指定します。 |
 | `leftButtonRipple` | string | 左ボタンの [**ripple**](ripple.md) エフェクトを指定します。 |
 | `rightButtonLabel` | string | true に設定すると、右ボタンを表示します。 |
-| `rightButtonType` | string | 右ボタンの [**type**](button.md#button-types) を指定します。デフォルト値は flat です。 |
+| `rightButtonType` | string | 右ボタンの [**type**](button.md#button-タイプ) を指定します。デフォルト値は flat です。 |
 | `rightButtonColor` | string | 右ボタンのテキスト色を指定します。 |
 | `rightButtonBackgroundColor` | string | 右ボタンの背景色を指定します。|
 | `rightButtonRipple` | string | 右ボタンの [**ripple**](ripple.md) エフェクトを指定します。 |

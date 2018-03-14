@@ -15,7 +15,6 @@ full license information.}}
     <meta name="searchOption" content="noindex">{{/_noindex}} {{#_enableSearch}}
     <meta property="docfx:rel" content="{{_rel}}">{{/_enableSearch}} {{#_enableNewTab}}
     <meta property="docfx:newtab" content="true">{{/_enableNewTab}} {{#_extraFont}}
-    <script>(function (w, d, s, l, i) { w[l] = w[l] || []; w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' }); var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f); })(window, document, 'script', 'dataLayer', 'GTM-T65CF7');</script>
     <link rel="stylesheet" href="{{_extraFont}}"> {{/_extraFont}}
     <link rel="shortcut icon" href="https://www.infragistics.com/assets/images/favicon.ico">
     <link rel="stylesheet" href="https://infragistics.com/assets/modern/css/layout.css">
@@ -27,5 +26,5 @@ full license information.}}
     <link rel="stylesheet" href="{{_rel}}styles/docfx.vendor.css">
     <link rel="stylesheet" href="{{_rel}}styles/docfx.css">
     <link rel="stylesheet" href="{{_rel}}styles/css/main.css">
-	<script type="text/javascript" src="{{_rel}}styles/sample-iframe-handler.js"></script>
+    <script type="text/javascript" src="{{_rel}}styles/sample-iframe-handler.js"></script>
 </head>
