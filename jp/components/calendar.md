@@ -69,7 +69,7 @@ import { IgxCalendarComponent } from 'igniteui-angular/main';
 
 ### ローカライズおよび書式設定
 
-ローカライズおよび書式設定は任意のカレンダーに重要です。**IgxCalendarComponent** では、その機能が `locale`、`formatOptions`、および `formatViews` プロパティによって制御してカスタマイズ化されます。
+カレンダーにおいてローカライズおよび書式設定はとても重要な要素です。**IgxCalendarComponent** では、その機能が `locale`、`formatOptions`、および `formatViews` プロパティによって制御してカスタマイズ化されます。
 
 | 名前 | 説明 |
 |:--:|:---|:---|
@@ -77,7 +77,7 @@ import { IgxCalendarComponent } from 'igniteui-angular/main';
 | `formatOptions` | 書式設定付きの出力に使用する日時コンポーネントおよびその表現を制御します ([詳細](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat))。デフォルト値は { day: 'numeric', month: 'short', weekday: 'short', year: 'numeric' } です。 |
 | `formatViews` |カレンダー ビューの日付部分が提供された locale および formatOptions に基づいて書式設定するかどうかを制御します。デフォルト値は { day: false, month: true, year: false } です。false に設定したプロパティの場合、ビューが相対する `Date.getFullYear` / `Date.getDate()` / `Date.getMonth()` 値を表示します。 |
 <br>
-この設定および **IgxCalendarComponent** API からその他のカスタマイズ化を使用します。EFTA (欧州自由貿易連合) 国内からページへアクセスする場合、カレンダーを対応するカルチャで表示する必要があります。最初に週の開始日を制御する `weekstart` を設定します。デフォルト値が 0 (日曜日) であるため、値を 1 に設定します。
+これらの設定に加え、**IgxCalendarComponent** API のその他のカスタマイズ機能も使用できます。EFTA (欧州自由貿易連合) 国内からページへアクセスする場合、カレンダーを対応するカルチャで表示する必要があります。最初に週の開始日を制御する `weekstart` を設定し、デフォルト値が 0 (日曜日) であるため、値を 1 に設定します。
 
 以下のマークアップで表示書式設定をカスタマイズするには `formatOptions` および `formatViews` プロパティもバインドしています。最後に、`locale` プロパティをユーザーの場所選択に基づいて値にバインドします。
 
@@ -137,7 +137,7 @@ public changeLocale(event) {
 </igx-calendar>
 ```
 
-`onSelection` イベントに渡した値が選択した日付のコレクションで、その長さに基づいてロジックを実行します。無効な選択でユーザーに通知する場合、選択を範囲の最初の日のみを含むために `selectDate` メソッドを使用してリセットします。
+`onSelection` イベントに渡した値が選択した日付のコレクションで、その長さに基づいてロジックを実行します。無効な選択をユーザーに通知する場合、選択を範囲の最初の日のみを含むために `selectDate` メソッドを使用してリセットします。
 
 ```typescript
 // app.component.ts
@@ -150,7 +150,7 @@ public verifyRange(dates: Date[]) {
 }
 ```
 
-範囲の選択を試してください。
+以下で範囲の選択動作を確認できます。
 
 <div class="sample-container" style="height: 460px">
     <iframe id="calendar-sample-3-iframe" src='{environment:demosBaseUrl}/calendar-sample-3' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -161,12 +161,12 @@ public verifyRange(dates: Date[]) {
 
 ### テンプレート
 
-**IgxCalendarComponent** API (プロパティ、イベント、メソッド) を使用して要件によってカレンダーを構成し、コードで操作する方法を説明しました。 今度、ヘッダーおよびサブヘッダーのテンプレート機能を使用して外観をカスタマイズします。
+**IgxCalendarComponent** API (プロパティ、イベント、メソッド) を使用して要件によってカレンダーを構成し、コードで操作する方法を説明しました。次にヘッダーおよびサブヘッダーのテンプレート機能を使用して外観をカスタマイズします。
 
 カスタマイズは、カレンダーの ng-template を **igxCalendarHeader** または **igxCalendarSubheader** ディレクティブでデコレートし、返されたコンテキストを使用して日付の表示をカスタマイズします。
 **igxCalendarHeader** ディレクティブでデコレートされるテンプレートは、カレンダーの選択が単一に設定された場合のみ描画されます。**igxCalendarSubheader** はすべての選択モードで利用可能です。
 
-この例で、ヘッダーが完全な日付を表示し、サブヘッダーが曜日を含むためにデフォルト テンプレートを変更します。
+この例ではヘッダーに完全な日付を表示し、サブヘッダーに曜日を含むためにデフォルト テンプレートを変更します。
 
 ```html
 <!-- app.component.html-->
@@ -182,7 +182,7 @@ public verifyRange(dates: Date[]) {
 </igx-calendar>  
 ```
 
-テンプレート コンテキストの **parts** の詳細情報については、API セクションの [TemplateContext](#テンプレート-コンテキスト) を参照してください。テンプレート化されたカレンダーの外観は以下です。
+テンプレート コンテキストの **parts** の詳細情報については、API セクションの [TemplateContext](#テンプレート-コンテキスト) を参照してください。以下はテンプレート化されたカレンダーの外観です。
 
 <div class="sample-container" style="height: 500px">
     <iframe id="calendar-sample-4-iframe" src='{environment:demosBaseUrl}/calendar-sample-4' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -250,9 +250,9 @@ public verifyRange(dates: Date[]) {
 | `full` | `string` | formatOptions を適用した後に返された完全な日付の表現。 |
 | `monthView` | `function` | カレンダーを月表示に設定する関数。 |
 | `yearView` | `function` | カレンダーを年表示に設定する関数。 |
-| `era` | `object` | 提供したロケールに書式設定される年号の日付コンポーネント (適用可能な場合)。 |
-| `year` | `object` | 提供したロケールに書式設定される年の日付コンポーネント (適用可能な場合)。 |
-| `month` | `object` | 提供したロケールに書式設定される月の日付コンポーネント (適用可能な場合)。 |
-| `day` | `object` | 提供したロケールに書式設定される日の日付コンポーネント (適用可能な場合)。 |
-| `weekday` | `object` | 提供したロケールに書式設定される曜日の日付コンポーネント (適用可能な場合)。 |
+| `era` | `object` | 提供されたロケールに書式設定される年号の日付コンポーネント (適用可能な場合)。 |
+| `year` | `object` | 提供されたロケールに書式設定される年の日付コンポーネント (適用可能な場合)。 |
+| `month` | `object` | 提供されたロケールに書式設定される月の日付コンポーネント (適用可能な場合)。 |
+| `day` | `object` | 提供されたロケールに書式設定される日の日付コンポーネント (適用可能な場合)。 |
+| `weekday` | `object` | 提供されたロケールに書式設定される曜日の日付コンポーネント (適用可能な場合)。 |
 <div class="divider--half"></div>
