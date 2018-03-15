@@ -695,7 +695,8 @@ a.disable:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-weight: 500;
+  font-size: 13px;
+  font-weight: 400;
   color: rgba(255, 255, 255, 0.8);
   border: 0;
   border-radius: 2px;
@@ -719,7 +720,15 @@ a.disable:hover {
     height: 28px;
     margin-right: 8px;
     background-image: url("../../images/stackblitz-logo.svg");
-    background-size: 100%; }
+    background-size: 100%;
+    background-repeat: no-repeat; }
+  .stackblitz-btn[disabled] {
+    color: rgba(0, 0, 0, 0.28);
+    background: #eee;
+    -webkit-box-shadow: none;
+            box-shadow: none; }
+    .stackblitz-btn[disabled]::before {
+      background-image: url("../../images/stackblitz-logo-dark.svg"); }
 
 #main {
   position: relative;
