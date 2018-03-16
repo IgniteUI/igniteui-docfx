@@ -5,5 +5,12 @@
     },
     "sideaffix": {
         "title": "トピック コンテンツ:"
+    },
+    "noteBlocks": {
+        "note": "jpNOTE",
+        "warning": "jpWARNING",
+        "tip": "jpTIP",
+        "important": "jpIMPORTANT",
+        "caution": "jpCAUTION"
     }
 }
