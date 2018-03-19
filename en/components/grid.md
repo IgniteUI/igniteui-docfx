@@ -546,7 +546,7 @@ public ngOnInit() {
 
 ### Column Pinning
 
-**Column Pinning** is available through **igx-grid** API. Each column may be pinned as long as the pinned area does not become wider than the grid itself. Pinning is controlled through the `pinned` input. Pinned columns are always rendered at the left side and do not participate in the horizontal scrolling of the unpinned ones.
+**Column Pinning** is available through the **igx-grid** API. Each column can be pinned as long as the pinned area does not become wider than the grid itself. Column pinning is controlled through the `pinned` input of the `igx-column`. Pinned columns are always rendered on the left side of the grid and stay fixed through horizontal scrolling of the unpinned columns in the grid body.
 
 ```html
 <igx-grid #grid1 [data]="data | async" [width]="700px" [autoGenerate]="false" [paging]="true" [perPage]="6" (onColumnInit)="initColumns($event)"
@@ -557,14 +557,14 @@ public ngOnInit() {
 </igx-grid>
 ```
 
-You may also use the grid's `pinColumn` or `unpinColumn` methods:
+You may also use the grid's `pinColumn` or `unpinColumn` methods of the `IgxGridComponent` to pin or unpin columns by their field name:
 
 ```typescript
 this.grid.pinColumn("AthleteNumber");
 this.grid.unpinColumn("Name");
 ```
 
-Pinning columns will add them to the right of already pinned ones. Changing the order may be achieved by subscribing to the `onColumnPinning` event and changing the `insertAtIndex` property of the event arguments.
+Pinning a column will the column right rightmost pinned column. Changing the order of the pinned columns can be done by subscribing to the `onColumnPinning` event and changing the `insertAtIndex` property of the event arguments to the desired position index.
 
 ```html
 <igx-grid #grid1 [data]="data | async" [autoGenerate]="true" (onColumnPinning)="columnPinning($event)"></igx-grid>
@@ -656,8 +656,8 @@ Here is a list of all public methods exposed by **igx-grid**:
 |`nextPage()`|Goes to the next page if paging is enabled and current page is not the last.|
 |`paginate(page: number)`|Goes to the specified page if paging is enabled. Page indices are 0 based.|
 |`markForCheck()`|Manually triggers a change detection cycle for the grid and its children.|
-|`pinColumn(name: string): boolean`|Pins a column by name. Returns if the operation is successful.|
-|`unpinColumn(name: string): boolean`|Unpins a column by name. Returns if the operation is successful.|
+|`pinColumn(name: string): boolean`|Pins a column by field name. Returns whether the operation is successful.|
+|`unpinColumn(name: string): boolean`|Unpins a column by field name. Returns whether the operation is successful.|
 
 
 <div class="divider--half"></div>
