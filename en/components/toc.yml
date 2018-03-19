@@ -29,6 +29,8 @@
   href: radio_button.md
 - name: Label & Input
   href: label_input.md
+- name: Mask
+  href: mask.md
 - name: Badge 
   href: badge.md
 - name: Icon 
