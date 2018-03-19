@@ -7,10 +7,10 @@
         "title": "トピック コンテンツ:"
     },
     "noteBlocks": {
-        "note": "jpNOTE",
-        "warning": "jpWARNING",
-        "tip": "jpTIP",
-        "important": "jpIMPORTANT",
-        "caution": "jpCAUTION"
+        "note": "注",
+        "warning": "警告",
+        "tip": "ヒント",
+        "important": "重要な情報",
+        "caution": "注意"
     }
 }
