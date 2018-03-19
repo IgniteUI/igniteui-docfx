@@ -81,10 +81,10 @@ export class AppModule {}
 <!--contacts.component.html-->
 
 <igx-list>
-    <igx-list-item isHeader="true">ヘッダー</igx-list-item>
-    <igx-list-item>項目 1</igx-list-item>
-    <igx-list-item>項目 2</igx-list-item>
-    <igx-list-item>項目 3</igx-list-item>
+    <igx-list-item isHeader="true">Header</igx-list-item>
+    <igx-list-item>Item 1</igx-list-item>
+    <igx-list-item>Item 2</igx-list-item>
+    <igx-list-item>Item 3</igx-list-item>
 </igx-list>
 ```
 
@@ -166,7 +166,7 @@ public contacts = [{
 
 #### アバターおよびアイコンの追加
 
-エクスペリエンスを向上して機能を追加するためにその他のコンポーネントを [**IgxList**](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/list.html) と使用できます。名前および電話番号の値の左に画像のアバターを表示できます。また、連絡先をお気に入りに追加するために右側に星アイコンを追加できます。その要素を追加するには、[**IgxAvatar**](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/avatar.html) および [**IgxIcon**](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/icon.html) モジュールを **app.module.ts** ファイルにインポートします。
+エクスペリエンスを向上して機能を追加するためにその他のコンポーネントを [**IgxList**](list.html) と使用できます。名前および電話番号の値の左に画像のアバターを表示できます。また、連絡先をお気に入りに追加するために右側に星アイコンを追加できます。その要素を追加するには、[**IgxAvatar**](avatar.html) および [**IgxIcon**](icon.html) モジュールを **app.module.ts** ファイルにインポートします。
 
 ```typescript
 // app.module.ts

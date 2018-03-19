@@ -7,7 +7,7 @@ _language: ja
 
 ## Carousel
 
-<p class="highlight">Ignite UI for Angular Carousel コンポーネントは、ネイティブ [Angular コンポーネント](https://angular.io/guide/architecture#components)です。画像ギャラリー、カード、チュートリアル、またはページごとのインターフェイスでスライド コレクションをブラウズ、移動します。</p>
+<p class="highlight">Ignite UI for Angular Carousel コンポーネントは、ネイティブ [Angular コンポーネント](https://angular.io/guide/architecture#components)です。画像ギャラリー、カード、チュートリアル、またはページごとのインターフェイスでスライド コレクションをブラウズ、移動できます。</p>
 <div class="divider"></div>
 
 ### Carousel デモ
@@ -96,7 +96,7 @@ export class AppModule {}
 </igx-carousel>
 ```
 
-作成したカルーセルは動作しますが、外観に変更が必要です。スタイルを最も重要なナビゲーション機能に追加します。[前へ] および [次へ] 矢印のデフォルト色を変更し、カルーセル コンテンツを中央揃えにします。
+ここまででカルーセルは動作しますが、更に外観を変更してみます。最も重要なナビゲーション機能にスタイルを追加するために [前へ] および [次へ] 矢印のデフォルト色を変更し、カルーセル コンテンツを中央揃えにします。
 
 ```css
 /* app.component.css */
@@ -109,7 +109,7 @@ a > igx-icon > span{
 }
 ```
 
-スタイルを適用した後、矢印が強調表示され、コンテンツが中央揃えになります。
+スタイルの適用後、矢印が強調表示され、コンテンツが中央揃えになります。
 <div class="sample-container" style="height: 600px">
 <iframe id="carousel-sample-2-iframe" src='{environment:demosBaseUrl}/carousel-sample-2' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -120,7 +120,7 @@ a > igx-icon > span{
 
 ### ナビゲーション
 
-ナビゲーションおよびトランジションは一番重要なカルーセル機能です。トランジション期間、自動再生、および停止機能を要件に応じて構成できます。この機能は、公開されたプロパティによって管理できます。ユーザーの注意をそらさないよう自動再生を無効にし、操作によって停止を有効にして、ループ化 (最初のスライドが最後のスライドの後になること) を有効にします。
+ナビゲーションおよびトランジションは最も重要なカルーセル機能です。トランジション期間、自動再生、および停止機能を要件に応じて構成できます。この機能は、公開されたプロパティによって管理できます。ユーザーの注意をそらさないよう自動再生を無効にし、操作によって停止を有効にして、ループ化 (最初のスライドが最後のスライドの後になること) を有効にします。
 
 ```html
 <!-- app.component.html -->
@@ -145,7 +145,7 @@ a > igx-icon > span{
   }
 ```
 
-プロパティを構成した後、ユーザーはカルーセルのコンテンツを変更できます。次、ナビゲーションをカスタマイズし、カルーセルのインジケーターをプログレス バーと置き換えます。`onSlideChanged` イベントを処理し、**IgxLinearProgressBar** コンポーネントを使用して進行状況を示す UI を追加します。最初、**IgxLinearProgressBar** モジュールをインポートします。
+プロパティを構成した後、ユーザーはカルーセルのコンテンツを変更できます。次にナビゲーションをカスタマイズし、カルーセルのインジケーターをプログレス バーと置き換えます。`onSlideChanged` イベントを処理し、**IgxLinearProgressBar** コンポーネントを使用して進行状況を示す UI を追加します。最初、**IgxLinearProgressBar** モジュールをインポートします。
 
 ```typescript
 // app.component.ts

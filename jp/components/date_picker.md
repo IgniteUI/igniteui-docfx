@@ -6,7 +6,7 @@ _language: ja
 ---
 
 ## Date Picker
-<p class="highlight">Ignite UI for Angular Date Picker コンポーネントは、単一の日付選択を可能にする月表示カレンダーまたはポップアップ カレンダーを表示します。ロケールおよびカスタム日付書式設定をサポートします。コンポーネントに [今日] および [キャンセル] ボタンを表示できます。</p>
+<p class="highlight">Ignite UI for Angular Date Picker コンポーネントは、単一の日付選択が可能な月表示カレンダーまたはポップアップ カレンダーを表示します。ロケールおよびカスタム日付書式設定のサポートやコンポーネントに [今日] および [キャンセル] ボタンも表示できます。</p>
 <div class="divider"></div>
 
 ### Date Picker デモ
@@ -22,7 +22,7 @@ _language: ja
 > Ignite UI for Angular コンポーネントをプロジェクトに追加する前に、すべての必要な依存関係を構成し、プロジェクトのセットアップが正しく完了したことを確認してください。「[**インストール**](https://jp.infragistics.com/products/ignite-ui-angular/getting-started#installation)」のトピックで手順を参照できます。
 
 ### 使用方法
-`IgxDatePickerComponent` を使用してカレンダーから日付を選択できます。ピッカーが内部に `IgxCalendarComponent` をカレンダーとして使用します。Ignite UI for Angular Date Picker を初期化する前に、**IgxDatePickerModule** を **app.module.ts** ファイルにインポートします。
+`IgxDatePickerComponent` を使用してカレンダーから日付を選択できます。ピッカーは内部で `IgxCalendarComponent` をカレンダーとして使用します。Ignite UI for Angular Date Picker を初期化する前に、**IgxDatePickerModule** を **app.module.ts** ファイルにインポートします。
 
 ```typescript
 // app.module.ts
@@ -117,7 +117,7 @@ public formatter = (date: Date) => {
 }
 ```
 
-次、`IgxDatePickerComponent` の `formatter` 入力を使用します。
+次に `IgxDatePickerComponent` の `formatter` 入力を使用します。
 
 ```html
 <igx-datePicker [value]="date" [formatter]="formatter"></igx-datePicker>
@@ -135,7 +135,7 @@ public formatter = (date: Date) => {
 
 ### インターナショナリゼーション
 
-`IgxDatePickerComponent` はロケールをサポートします。`locale` 入力を使用して設定できます。ヘッダー (`igxCalendarHeader`) およびサブヘッダー (`igxCalendarSubheader`) の `IgxCalendarComponent` テンプレートを使用して、ヘッダーおよびサブヘッダーの外観を設定できます。このテンプレートを使用する方法の詳細については、`IgxCalendarComponent` [ヘルプ](calendar.md)を参照してください。以下は日本ロケール定義を持つ日付ピッカーです。
+`IgxDatePickerComponent` はロケールをサポートします。`locale` 入力を使用して設定できます。ヘッダー (`igxCalendarHeader`) およびサブヘッダー (`igxCalendarSubheader`) の `IgxCalendarComponent` テンプレートを使用してヘッダーおよびサブヘッダーの外観を設定できます。このテンプレートを使用する方法の詳細については、`IgxCalendarComponent` [ヘルプ](calendar.md)を参照してください。以下は日本ロケール定義を持つ日付ピッカーです。
 
 ```html
 <igx-datePicker locale="ja-JP" [value]="date">

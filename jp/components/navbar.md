@@ -7,12 +7,12 @@ _language: ja
 
 ## Navbar
 
-<p class="highlight">Ignite UI for Angular Navigation Bar コンポーネントは、アプリケーション内の現在位置を示し、ブラウザーの [戻る] ボタンのように戻る機能を提供します。Navigation Bar は検索またはお気に入りなどのリンクも提供します。このように、ユーザーがアプリケーションでスムーズにナビゲーションを実行できます。バーは、バーが含まれるコンテナーの上に配置されます。</p>
+<p class="highlight">Ignite UI for Angular Navigation Bar コンポーネントは、アプリケーション内の現在位置を示し、ブラウザーの [戻る] ボタンのように戻る機能を提供します。Navigation Bar の検索またはお気に入りなどのリンクによって、ユーザーはアプリケーションでナビゲーションをスムーズに実行できます。バーは、バーが含まれるコンテナーの上に配置されます。</p>
 <div class="divider"></div>
 
 ### Navbar デモ
 
-<div class="sample-container loading" style="height: 930px">
+<div class="sample-container loading" style="height: 530px">
     <iframe id="nav-bar-sample-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/navbar" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -22,30 +22,120 @@ _language: ja
 
 ### 使用方法
 
-```html
-<igx-navbar title="設定"></igx-navbar>
+Ignite UI for Angular NavBar コンポーネントを初期化する前に **IgxNavbarModule** を **app.module.ts** ファイルにインポートします。
+
+```typescript
+// app.module.ts
+
+...
+import { IgxNavbarModule } from 'igniteui-angular/main';
+
+@NgModule({
+    ...
+    imports: [..., IgxNavbarModule],
+    ...
+})
+export class AppModule {}
 ```
 
-タイトルを設定できます。例: `title="ユーザー設定"`。
-
-#### [戻る] ボタンの例
-
-<div class="divider--half"></div>
+コンポーネントのテンプレートで、以下のコードを追加し、タイトルのみのベーシックな NavBar を作成します。
 
 ```html
-<igx-navbar title="設定"
-            actionButtonIcon="arrow_back"
-            [isActionButtonVisible]="canGoBack()"
-            (onAction)="navigateBack()">
+<!--navbar.component.html-->
+
+<igx-navbar title="Sample App">
 </igx-navbar>
 ```
 
-navbar のタイトルを設定できます。例: `title="設定"`。
+#### [戻る] ボタンの例
 
-navbar のアクション ボタン アイコンを設定できます。例: `actionButtonIcon="arrow_back"`。
+開いたアプリケーションが確認でき、メニューでアプリケーションの機能も表示できます。以下のコードは、アクション ボタンを表示し、ボタンにメニュー アイコンを使用します。
 
-navbar のアクション ボタンの表示状態を設定できます。例: `isActionButtonVisible="true"`。
+```html
+<!--navbar.component.html-->
 
-navbar ボタンのアクションを設定できます。例: `(onAction)="executeAction()"`。
+<igx-navbar title="Sample App"
+    actionButtonIcon="menu"
+    [isActionButtonVisible]="true">
+</igx-navbar>
+```
+
+以下は結果です:
+
+<div class="sample-container loading" style="height: 330px">
+    <iframe id="nav-bar-sample-1-iframe" frameborder="0" seamless width="100%" height="100%" src='{environment:demosBaseUrl}/navbar-sample-1' onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="nav-bar-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+</div>
 
 <div class="divider--half"></div>
+
+#### アイコンの追加
+
+アプリケーションのメニューを実装した後、検索、お気に入りなどのオプションを追加できます。要素を追加するには、[**IgxIcon**](icon.html) モジュールを **app.module.ts** ファイルにインポートします。
+
+```typescript
+// app.module.ts
+
+...
+import {
+    IgxNavbarModule,
+    IgxIconModule
+} from 'igniteui-angular/main';
+
+@NgModule({
+    ...
+    imports: [..., IgxIconModule],
+})
+export class AppModule {}
+```
+
+各オプションにアイコンを追加するためにテンプレートを更新します。
+
+```html
+<!--navbar.component.html-->
+
+ <igx-navbar title="Sample App" actionButtonIcon="menu">
+    <igx-icon name="search"></igx-icon>
+    <igx-icon name="favorite"></igx-icon>
+    <igx-icon name="more_vert"></igx-icon>
+</igx-navbar>
+```
+
+<div class="divider"></div>
+
+### API まとめ
+
+このトピックでは NavBar コンポーネントの使用例を紹介しました。以下は、使用したコンポーネントの API です。
+
+#### 入力
+
+以下の入力が **igx-navbar** コンポーネントで利用できます。
+
+| 名前 | 型 | 説明 |
+| :--- | :--- | :--- |
+| `actionButtonIcon` | String | アクション ボタンに使用するマテリアル アイコンの名前を提供します。 |
+| `isActionButtonVisible` | Boolean | アクション ボタンが表示されるかどうか。 |
+| `title` | String | NavBar に表示されるタイトルを提供します。 |
+
+<div class="divider"></div>
+
+#### 出力
+
+以下の出力が **igx-navbar** コンポーネントで利用できます。
+
+| 名前 | 型 | 説明 |
+| :--- | :--- | :--- |
+| `onAction` | EventEmitter | アクションが実行されたときにイベントを発生します。 |
+
+<div class="divider"></div>
+
+### 追加のリソース
+
+<div class="divider--half"></div>
+
+是非コミュニティに参加してください。
+
+* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
