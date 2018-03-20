@@ -564,7 +564,22 @@ this.grid.pinColumn("AthleteNumber");
 this.grid.unpinColumn("Name");
 ```
 
-Pinning a column will the column right rightmost pinned column. Changing the order of the pinned columns can be done by subscribing to the `onColumnPinning` event and changing the `insertAtIndex` property of the event arguments to the desired position index.
+Both methods return a boolean value indicating whether their respective operation is successful or not. Usually the reason they fail is that the column is already in the desired state. `pinColumn` also fails when the result would mean that the pinned area becomes larger than or the same size as the grid itself. Consider the following example:
+
+```html
+<igx-grid #grid1 [data]="data | async" [width]="300px" [autoGenerate]="false">
+    <igx-column [field]="Name" [width]="200px" [pinned]="true"></igx-column>
+    <igx-column [field]="AthleteNumber" [width]="200px"></igx-column>
+</igx-grid>
+```
+
+```typescript
+var succeed = this.grid.pinColumn("AthleteNumber"); // pinning fails and succeed will be false
+```
+
+If pinning the `AthleteNumber` column is allowed the pinned area would exceed the grid's width.
+
+A column is pinned to the right of the rightmost pinned column. Changing the order of the pinned columns can be done by subscribing to the `onColumnPinning` event and changing the `insertAtIndex` property of the event arguments to the desired position index.
 
 ```html
 <igx-grid #grid1 [data]="data | async" [autoGenerate]="true" (onColumnPinning)="columnPinning($event)"></igx-grid>
