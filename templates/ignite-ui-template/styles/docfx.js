@@ -23,6 +23,7 @@ $(function() {
   breakText();
   renderHeader();
   copyCode();
+  renderNoteBlocks();
 
   window.refresh = function(article) {
     // Update markup result
@@ -99,6 +100,37 @@ $(function() {
       setTimeout(function() {
         e.trigger.innerText = localeData.resources.hljs.copyCode;
       }, 500);
+    });
+  }
+
+  // Set note blocks titles
+  async function renderNoteBlocks() {
+    var title, newHeaderElement;
+
+    $(".alert").each(function(i) {
+      title = $(this).attr('class').split(' ')[0];
+
+      switch (title) {
+        case "NOTE":
+          newHeaderElement = '<h5 data-localize="noteBlocks.note"></h5>';
+          break;
+        case "WARNING":
+          newHeaderElement = '<h5 data-localize="noteBlocks.warning"></h5>';
+          break;
+        case "TIP":
+          newHeaderElement = '<h5 data-localize="noteBlocks.tip"></h5>';
+          break;
+        case "IMPORTANT":
+          newHeaderElement = '<h5 data-localize="noteBlocks.important"></h5>';
+          break;
+        case "CAUTION":
+          newHeaderElement = '<h5 data-localize="noteBlocks.caution"></h5>';
+          break;
+        default:
+          break;
+      }
+
+      $(this.firstElementChild).replaceWith(newHeaderElement);
     });
   }
 

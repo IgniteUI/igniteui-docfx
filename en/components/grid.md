@@ -1,7 +1,7 @@
 ---
 title: Data Grid Component
 _description: The Ignite UI for Angular Data Grid control features the fastest, touch-responsive data-rich grid with popular features, including hierarchical and list views.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Data Grid component, Angular Data Grid control
+_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Data Grid component, Angular Data Grid control, Angular Grid component, Angular Grid control, Angular High Performance Grid
 ---
 
 ## Data Grid
@@ -544,6 +544,55 @@ public ngOnInit() {
 }
 ```
 
+### Column Pinning
+
+**Column Pinning** is available through the **igx-grid** API. Each column can be pinned as long as the pinned area does not become wider than the grid itself. Column pinning is controlled through the `pinned` input of the `igx-column`. Pinned columns are always rendered on the left side of the grid and stay fixed through horizontal scrolling of the unpinned columns in the grid body.
+
+```html
+<igx-grid #grid1 [data]="data | async" [width]="700px" [autoGenerate]="false" [paging]="true" [perPage]="6" (onColumnInit)="initColumns($event)"
+    (onSelection)="selectCell($event)">
+    <igx-column [field]="Name" [pinned]="true"></igx-column>
+    <igx-column [field]="AthleteNumber"></igx-column>
+    <igx-column [field]="TrackProgress"></igx-column>
+</igx-grid>
+```
+
+You may also use the grid's `pinColumn` or `unpinColumn` methods of the `IgxGridComponent` to pin or unpin columns by their field name:
+
+```typescript
+this.grid.pinColumn("AthleteNumber");
+this.grid.unpinColumn("Name");
+```
+
+Both methods return a boolean value indicating whether their respective operation is successful or not. Usually the reason they fail is that the column is already in the desired state. `pinColumn` also fails when the result would mean that the pinned area becomes larger than or the same size as the grid itself. Consider the following example:
+
+```html
+<igx-grid #grid1 [data]="data | async" [width]="300px" [autoGenerate]="false">
+    <igx-column [field]="Name" [width]="200px" [pinned]="true"></igx-column>
+    <igx-column [field]="AthleteNumber" [width]="200px"></igx-column>
+</igx-grid>
+```
+
+```typescript
+var succeed = this.grid.pinColumn("AthleteNumber"); // pinning fails and succeed will be false
+```
+
+If pinning the `AthleteNumber` column is allowed the pinned area would exceed the grid's width.
+
+A column is pinned to the right of the rightmost pinned column. Changing the order of the pinned columns can be done by subscribing to the `onColumnPinning` event and changing the `insertAtIndex` property of the event arguments to the desired position index.
+
+```html
+<igx-grid #grid1 [data]="data | async" [autoGenerate]="true" (onColumnPinning)="columnPinning($event)"></igx-grid>
+```
+
+```typescript
+public columnPinning(event) {
+    if (event.column.field === "Name") {
+        event.insertAtIndex = 0;
+    }
+}
+```
+
 <div class="divider--half"></div>
 
 ## API
@@ -585,6 +634,7 @@ A list of the events emitted by the **igx-grid**:
 |`onPagingDone`|Emitted when paging is performed. Returns an object consisting of the previous and the new page.|
 |`onRowAdded`|Emitted when a row is being added to the grid through the API. Returns the data for the new row object.|
 |`onRowDeleted`|Emitted when a row is deleted through the grid API. Returns the row object being removed.|
+|`onColumnPinning`|Emitted when a column is pinned through the grid API. The index that the column is inserted at may be changed through the `insertAtIndex` property.|
 
 
 <div class="divider--half"></div>
@@ -600,7 +650,7 @@ Defining handlers for these event emitters is done using declarative event bindi
 
 ### Methods
 
-Here is a list of all public methods exposed by the **igx-grid**:
+Here is a list of all public methods exposed by **igx-grid**:
 
 |Signature|Description|
 |--- |--- |
@@ -621,6 +671,8 @@ Here is a list of all public methods exposed by the **igx-grid**:
 |`nextPage()`|Goes to the next page if paging is enabled and current page is not the last.|
 |`paginate(page: number)`|Goes to the specified page if paging is enabled. Page indices are 0 based.|
 |`markForCheck()`|Manually triggers a change detection cycle for the grid and its children.|
+|`pinColumn(name: string): boolean`|Pins a column by field name. Returns whether the operation is successful.|
+|`unpinColumn(name: string): boolean`|Unpins a column by field name. Returns whether the operation is successful.|
 
 
 <div class="divider--half"></div>
@@ -647,6 +699,15 @@ Inputs available on the **IgxGridColumnComponent** to define columns:
 |`filteringIgnoreCase`|boolean|Ignore capitalization of strings when filtering is applied. Defaults to _true_.|
 |`sortingIgnoreCase`|boolean|Ignore capitalization of strings when sorting is applied. Defaults to _true_.|
 |`dataType`|DataType|One of string, number, boolean or Date. When filtering is enabled the filter UI conditions are based on the `dataType` of the column. Defaults to `string` if it is not provided. With `autoGenerate` enabled the grid will try to resolve the correct data type for each column based on the data source.|
+|`pinned`|boolean|Set column to be pinned or not|
+
+### Methods
+Here is a list of all public methods exposed by **IgxGridColumnComponent**:
+
+|Signature|Description|
+|--- |--- |
+|`pin(): boolean`|Pins the column. Returns if the operation is successful.|
+|`unpin(): boolean`|Unpins the column. Returns if the operation is successful.|
 
 <div class="divider--half"></div>
 

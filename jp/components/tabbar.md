@@ -165,7 +165,7 @@ Tab Bar は以下のようになります。
 
 <div class="divider--half"></div>
 
-タブのラベルおよびアイコンの変更を拡張するには、各タブでカスタム テンプレートを作成できます。以下は例です。
+タブのラベルおよびアイコンの変更を拡張する場合、各タブでカスタム テンプレートを作成することもできます。以下はその例です。
 
 ```html
 <igx-tab-bar>
@@ -186,8 +186,8 @@ Tab Bar は以下のようになります。
 
 ### その他の Igx コントロールの使用
 
-その他の Ignite UI for Angular コンポーネントを Tab Bar と使用すると、より高度なアプリケーションを実装できます。
-たとえば、Tab Bar のパネルで連絡先のリストを作成するには IgxList を使用できます。各連絡先を可視化するには、IgxAvatar および IgxIcon を使用できます。
+その他 Ignite UI for Angular コンポーネントを Tab Bar と使用し、より高度なアプリケーションを実装できます。
+たとえば、Tab Bar のパネルの連絡先リストの作成には IgxList、各連絡先を可視化には、IgxAvatar や IgxIcon を使用できます。
 
 IgxTabBar および IgxList コンポーネントを "app.module.ts" ファイルにインポートします。
 
@@ -300,7 +300,7 @@ public contactsList: object[] = [{
 ...
 ```
 
-アプリケーションをスタイル設定するために CSS 定義も含める必要があります。
+アプリケーションのスタイルを設定するために CSS 定義も含める必要があります。
 
 ```css
 .tab-content {
@@ -338,7 +338,7 @@ public contactsList: object[] = [{
 }
 ```
 
-このトピックの [TabBar デモ](#tabbar-デモ) セクションに結果が表示されます。
+このトピックの [TabBar デモ](#tabbar-デモ) セクションで結果を確認できます。
 
 <div class="divider"></div>
 
@@ -348,16 +348,16 @@ public contactsList: object[] = [{
 
 #### 入力
 
-以下の入力が **igx-tab-panel** コンポーネントで利用できます。
+以下の入力は **igx-tab-panel** コンポーネントで利用できます。
 | 名前 | 型 | 説明 |
 | :--- | :--- | :--- |
-| `label` | String | 関連付けられているタブでのラベルを定義します。 |
-| `icon` | String | 関連付けられているタブでのアイコンを定義します。 |
+| `label` | String | 関連付けられているタブのラベルを定義します。 |
+| `icon` | String | 関連付けられているタブのアイコンを定義します。 |
 | `select` | Method | パネルおよび関連付けられているタブを選択します。 |
 
 <div class="divider--half"></div>
 
-以下の入力が **igx-tab** コンポーネントで利用できます。
+以下の入力は **igx-tab** コンポーネントで利用できます。
 | 名前 | 型 | 説明 |
 | :--- | :--- | :--- |
 | `select` | Method | タブおよび関連付けられているパネルを選択します。 |
@@ -366,7 +366,7 @@ public contactsList: object[] = [{
 
 #### 出力
 
-以下の出力が **igx-tab-bar** コンポーネントで利用できます。
+以下の出力は **igx-tab-bar** コンポーネントで利用できます。
 | 名前 | 型 | 説明 |
 | :--- | :--- | :--- |
 | `onTabSelected` | EventEmitter | 新しいタブが選択されたときにイベントを発生します。 |
@@ -376,17 +376,17 @@ public contactsList: object[] = [{
 
 #### ゲッター
 
-以下のゲッターが **igx-tab-bar** コンポーネントで利用できます。
+以下のゲッターは **igx-tab-bar** コンポーネントで利用できます。
 | 名前 | 型 | 説明 |
 | :--- | :--- | :--- |
 | `tabs` | QueryList | すべての IgxTab ビューの子要素の Observable コレクションを提供します。 |
 | `panels` | QueryList | すべての IgxTabPanel コンテンツの子要素の Observable コレクションを提供します。 |
-| `selectedIndex` | Number | 対応するコレクションの選択済みのタブまたはパネルのインデックスを取得します。 |
+| `selectedIndex` | Number | 各コレクションの選択済みのタブまたはパネルのインデックスを取得します。 |
 | `selectedTab` | IgxTab | Tab Bar で選択済みの IgxTab を `selectedIndex` に基づいて取得します。 |
 
 <div class="divider--half"></div>
 
-以下のゲッターが **igx-tab-panel** コンポーネントで利用できます。
+以下のゲッターは **igx-tab-panel** コンポーネントで利用できます。
 | 名前 | 型 | 説明 |
 | :--- | :--- | :--- |
 | `isDisabled` | Boolean | パネルが無効されているかどうかを決定します。 |
@@ -396,7 +396,7 @@ public contactsList: object[] = [{
 
 <div class="divider--half"></div>
 
-以下のゲッターが **igx-tab** コンポーネントで利用できます。
+以下のゲッターは **igx-tab** コンポーネントで利用できます。
 | 名前 | 型 | 説明 |
 | :--- | :--- | :--- |
 | `isDisabled` | Boolean | タブが無効かどうかを決定します。 |

@@ -7,7 +7,7 @@ _language: ja
 
 ## Layout Manager
 
-<p class="highlight">Ignite UI for Angular Layout ディレクティブは、適用されたコンテナーの子要素のレイアウト方向を指定する機能を提供します。レイアウトを垂直方向または水平方向に設定できます。折り返し、両端揃え、および配置も制御できます。</p>
+<p class="highlight">Ignite UI for Angular Layout ディレクティブは、適用されたコンテナーの子要素のレイアウト方向を指定する機能を提供します。レイアウトを垂直方向または水平方向に設定や折り返し、両端揃え、配置の制御も可能です。</p>
 <div class="divider"></div>
 
 ### Layout デモ
@@ -22,7 +22,7 @@ _language: ja
 
 ### 使用方法
 
-**igxLayout** ディレクティブをコンテナー要素に適用して、子要素のレイアウト方向を指定します。水平方向は `igxLayoutDir="row"` で、垂直方向は `igxLayoutDir="column"` です。
+**igxLayout** ディレクティブをコンテナー要素に適用して子要素のレイアウト方向を指定します。水平方向は `igxLayoutDir="row"`、垂直方向は `igxLayoutDir="column"` です。
 
 **注**: `igxLayout` ディレクティブはそのコンテナーの**直下**の子のフロー方向に影響します。
 

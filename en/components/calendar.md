@@ -255,11 +255,11 @@ When a day inside the current month is focused:
 
 | Name       |      Type      |  Description |
 |:----------:|:-------------|:------|
-| `weekStart`| `Number \| WEEKDAYS` | Sets which day the week will start. |
+| `weekStart`| `Number` or `WEEKDAYS` | Sets which day the week will start. |
 | `locale` | `string` | Sets the locale used for formatting and displaying the dates in the calendar. For more information check out [this](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl) page for valid formats. |
 | `selection` | `string` | Sets the type of selection in the calendar. Valid values are `single` (default), `multi` and `range` |
 | `viewDate` | `Date` | Sets the year/month that will be presented in the default view when the calendar renders. By default it is the current year/month.   |
-| `value` | `Date \| Date[]` | Gets/Sets the current value of the calendar widget. Both multi-selection and range selection return an array of selected dates. |
+| `value` | `Date` or `Date[]` | Gets/Sets the current value of the calendar widget. Both multi-selection and range selection return an array of selected dates. |
 | `formatOptions` | `Object` | The format options passed along with the `locale` property used for formatting the dates. Defaults are { day: 'numeric', month: 'short', weekday: 'short', year: 'numeric' }. |
 |`formatViews`| `Object`| Controls whether the date parts in the different calendar views should be formatted according to the provided locale and formatOptions. defaults are { day: false, month: true, year: false }. |
 | `vertical` | `boolean` | Controls the layout of the calendar component. When vertical is set to true the calendar header will be rendered to the side of the calendar body.|
@@ -268,14 +268,14 @@ When a day inside the current month is focused:
 
 | Name | Return Type | Description |
 |:--:|:---|:---|
-| `onSelection` | `Date \| Date[]` | Fired when selection is made in the calendar. The event contains the selected value(s) based on the type of selection the component is set to |
+| `onSelection` | `Date` or `Date[]` | Fired when selection is made in the calendar. The event contains the selected value(s) based on the type of selection the component is set to |
 
 #### Methods
 <div class="divider--half"></div>
 
 | Name   | Arguments | Return Type | Description |
 |:----------:|:------|:------|:------|
-| `selectDate` | `date: Date \| Date[]` | `void` | Change the calendar selection. Calling this method will emit the `onSelection` event. |
+| `selectDate` | `date: Date` or `Date[]` | `void` | Change the calendar selection. Calling this method will emit the `onSelection` event. |
 <div class="divider--half"></div>
 
 #### Template Context
