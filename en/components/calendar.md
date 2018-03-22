@@ -195,7 +195,7 @@ To support those browsers we are going to use alternative template using [ngIf](
     <!-- Parse template for browsers not supporting Intl parts-->
     <ng-template #parseTemplate>
         <ng-template igxCalendarHeader let-parts>
-            {{ getDatePart(parts, component, 'month') | titlecase }} {{ getDatePart(parts, component, 'day' }} {{ getDatePart(parts, component, 'weekday') }}
+            {{ getDatePart(parts, component, 'month') | titlecase }} {{ getDatePart(parts, component, 'day') }} {{ getDatePart(parts, component, 'weekday') }}
         </ng-template>
         <ng-template igxCalendarSubheader let-parts>
             <span class="date__el" (click)="parts.monthView()">{{ getDatePart(parts, component, 'month') }}</span> 
