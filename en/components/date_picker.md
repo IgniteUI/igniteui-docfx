@@ -161,11 +161,11 @@ To support those browsers we are going to use alternative template using [ngIf](
     <!-- Parse template for browsers not supporting Intl-->
     <ng-template #parseTemplate>
         <ng-template igxCalendarHeader let-format>
-            {{ parser.getDatePart(format, component, 'month') | titlecase }} {{ format.date.getDate() }} {{ parser.getDatePart(format, component, 'weekday') }}
+            {{ getDatePart(format, component, 'month') | titlecase }} {{ getDatePart(format, component, 'day' }} {{ getDatePart(format, component, 'weekday') }}
         </ng-template>
         <ng-template igxCalendarSubheader let-format>
-            <span class="date__el" (click)="format.yearView()">{{ parser.getDatePart(format, component, 'year') }}</span>
-            <span class="date__el" (click)="format.monthView()">{{ parser.getDatePart(format, component, 'month') }}</span> 
+            <span class="date__el" (click)="format.yearView()">{{ getDatePart(format, component, 'year') }}</span>
+            <span class="date__el" (click)="format.monthView()">{{ getDatePart(format, component, 'month') }}</span> 
         </ng-template>
     </ng-template>
 </igx-datePicker>
