@@ -543,6 +543,55 @@ public ngOnInit() {
 }
 ```
 
+### 列のピン固定
+
+**列のピン固定**は **igx-grid** API で利用できます。ピン固定領域の幅がグリッドより大きくならない限り各列をピン固定できます。列のピン固定は `igx-column` の `pinned` 入力によって制御されます。ピン固定列は常にグリッドの左側に描画され、グリッド本体のピン固定されていない列の水平スクロールで固定されます。
+
+```html
+<igx-grid #grid1 [data]="data | async" [width]="700px" [autoGenerate]="false" [paging]="true" [perPage]="6" (onColumnInit)="initColumns($event)"
+    (onSelection)="selectCell($event)">
+    <igx-column [field]="Name" [pinned]="true"></igx-column>
+    <igx-column [field]="AthleteNumber"></igx-column>
+    <igx-column [field]="TrackProgress"></igx-column>
+</igx-grid>
+```
+
+グリッドの `IgxGridComponent` の `pinColumn` または `unpinColumn` メソッドを使用してフィールド名によって列をピン固定またはピン固定解除できます。
+
+```typescript
+this.grid.pinColumn("AthleteNumber");
+this.grid.unpinColumn("Name");
+```
+
+両方のメソッドは操作に成功したかどうかを示すブール値を返します。通常の失敗理由として列が既に設定されていることがあります。`pinColumn` は、ピン固定領域がグリッドのサイズ以上である場合も失敗します。以下はその例です。
+
+```html
+<igx-grid #grid1 [data]="data | async" [width]="300px" [autoGenerate]="false">
+    <igx-column [field]="Name" [width]="200px" [pinned]="true"></igx-column>
+    <igx-column [field]="AthleteNumber" [width]="200px"></igx-column>
+</igx-grid>
+```
+
+```typescript
+var succeed = this.grid.pinColumn("AthleteNumber"); // pinning fails and succeed will be false
+```
+
+`AthleteNumber` 列をピン固定すると、ピン固定領域がグリッドの幅より大きくなります。
+
+列をピン固定すると、一番右に配置されたピン固定列の右にピン固定されます。ピン固定列の順序を変更するには、`onColumnPinning` イベントでイベント引数の `insertAtIndex` プロパティを適切な位置インデックスに変更します。
+
+```html
+<igx-grid #grid1 [data]="data | async" [autoGenerate]="true" (onColumnPinning)="columnPinning($event)"></igx-grid>
+```
+
+```typescript
+public columnPinning(event) {
+    if (event.column.field === "Name") {
+        event.insertAtIndex = 0;
+    }
+}
+```
+
 <div class="divider--half"></div>
 
 ## API
@@ -583,6 +632,7 @@ public ngOnInit() {
 |`onPagingDone`|ページングが実行されたときに発生されます。前のページおよび新しいページを含むオブジェクトを返します。|
 |`onRowAdded`|行が API によってグリッドに追加されている間に発生されます。新しい行オブジェクトのデータを返します。|
 |`onRowDeleted`|行がグリッド API によって削除されたときに発生されます。削除されている行オブジェクトを返します。|
+|`onColumnPinning`|列がグリッド API によってピン固定されたときに発生されます。列に挿入するインデックスを `insertAtIndex` プロパティによって変更できます。|
 
 <div class="divider--half"></div>
 
@@ -618,6 +668,8 @@ public ngOnInit() {
 |`nextPage()`|ページングが有効で、現在のページが最後のページではない場合に次のページに移動します。|
 |`paginate(page: number)`|ページングが有効の場合、指定したページに移動します。ページ インデックスは 0 から開始します。|
 |`markForCheck()`|グリッドおよびすべての子要素に変更検出サイクルを手動的にトリガーします。|
+|`pinColumn(name: string): boolean`|列をフィールド名によってピン固定します。操作が成功したかどうかを返します。|
+|`unpinColumn(name: string): boolean`|列をフィールド名によってピン固定解除します。操作が成功したかどうかを返します。|
 
 <div class="divider--half"></div>
 
@@ -644,6 +696,15 @@ public ngOnInit() {
 |`filteringIgnoreCase`|boolean|フィルタリングが適用される場合に文字列の大文字化を無視します。デフォルトは _true_ です。|
 |`sortingIgnoreCase`|boolean|並べ替えが適用される場合に文字列の大文字化を無視します。デフォルトは _true_ です。|
 |`dataType`|DataType|string、number、boolean、または Date。フィルタリングが有効な場合、フィルター UI 条件は列の `dataType` に基づきます。設定されない場合、デフォルト値は `string` です。`autoGenerate` が有効な場合、グリッドはデータ ソースに基づいて各列の正しいデータ型を解決しようとします。|
+|`pinned`|boolean|列がピン固定かどうかを設定します。|
+
+### メソッド
+**IgxGridColumnComponent** によって公開されるすべてのパブリック メソッドのリスト:
+
+|構文|説明|
+|--- |--- |
+|`pin(): boolean`|列をピン固定します。操作が成功したかどうかを返します。|
+|`unpin(): boolean`|列をピン固定解除します。操作が成功したかどうかを返します。|
 
 <div class="divider--half"></div>
 
