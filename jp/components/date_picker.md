@@ -148,6 +148,57 @@ public formatter = (date: Date) => {
   </ng-template>
 </igx-datePicker>
 ```
+> [!NOTE]
+> Keep in mind that for Internet Explorer and Edge browsers the date parts will be empty strings, because both browsers don't implement the Intl API providing this functionality. (See [formatToParts](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat/formatToParts))
+
+To support those browsers we are going to use alternative template using [ngIf](https://angular.io/api/common/NgIf#using-non-inlined-then-template) directive:
+
+```html
+<!-- app.component.html-->
+<igx-datePicker id="date-picker" locale="ja-JP" [value]="date" #component>
+    <div *ngIf="formatParts; else parseTemplate">
+        <ng-template igxCalendarHeader let-format>
+            {{ format.month.combined | titlecase }} {{ format.day.combined }} {{ format.weekday.combined }}
+        </ng-template>
+        <ng-template igxCalendarSubheader let-format>
+            <span class="date__el" (click)="format.yearView()">{{ format.year.combined }}</span>
+            <span class="date__el" (click)="format.monthView()">{{ format.month.combined | titlecase }}</span>
+        </ng-template>
+    </div>
+
+    <!-- Parse template for browsers not supporting Intl-->
+    <ng-template #parseTemplate>
+        <ng-template igxCalendarHeader let-format>
+            {{ getDatePart(format, component, 'month') | titlecase }} {{ getDatePart(format, component, 'day') }} {{ getDatePart(format, component, 'weekday') }}
+        </ng-template>
+        <ng-template igxCalendarSubheader let-format>
+            <span class="date__el" (click)="format.yearView()">{{ getDatePart(format, component, 'year') }}</span>
+            <span class="date__el" (click)="format.monthView()">{{ getDatePart(format, component, 'month') }}</span>
+        </ng-template>
+    </ng-template>
+</igx-datePicker>
+```
+Note that **ngIf** evaluates the value of the **formatParts** expression to control which template to use. Let's have a look at the alernative **#parseTemplate** template: the expressions in the curly brackets invokes the **getDatePart** method that returns the evaluated value, in our case this is a formatted date part (year, weekday, month, etc.). The parameters passed to the **getDatePart** are necessary so that formatting is based on the **IgxDatePickerComponent** locale and format options:
+
+```typescript
+// app.component.ts
+public intlDateTimeFormat = new Intl.DateTimeFormat() as any;
+public formatParts: boolean = this.intlDateTimeFormat.formatToParts;
+
+public getDatePart(val: any, component: any, datePart: string) {
+    const date = val.date as Date;
+    const locale = component.locale;
+    const formatOptions: Intl.DateTimeFormatOptions = {};
+    formatOptions[datePart] = component.formatOptions[datePart];
+
+    return date.toLocaleString(locale, formatOptions);
+
+    // instead of toLocaleString we can use Intl.DateTimeFormat.format as well:
+    // const partFormatter = new Intl.DateTimeFormat(locale, formatOptions);
+    // return partFormatter.format(date);
+}
+```
+
 
 以下は結果です。
 

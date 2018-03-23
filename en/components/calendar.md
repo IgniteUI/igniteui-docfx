@@ -40,7 +40,7 @@ import { IgxCalendarComponent } from 'igniteui-angular/main';
 ```
 
 > [!WARNING]
-> Note that the **igxCalendarComponent** uses the [Intl](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat) WebAPI for localization and formatting of dates. 
+> Note that the **igxCalendarComponent** uses the [Intl](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat) WebAPI for localization and formatting of dates.
 > Consider using the [appropriate polyfills](https://github.com/andyearnshaw/Intl.js/) if your target platform does not support them.
 
 ### Selection
@@ -169,13 +169,13 @@ In our example we slightly modify the default template and will make the header 
         {{ parts.month.combined | titlecase }} {{parts.day.combined }} {{ parts.weekday.combined }}
     </ng-template>
     <ng-template igxCalendarSubheader let-parts>
-        <span class="date__el" (click)="parts.monthView()">{{ parts.month.combined }}</span>            
+        <span class="date__el" (click)="parts.monthView()">{{ parts.month.combined }}</span>
         <span class="date__el" (click)="parts.yearView()">{{ parts.year.combined }}</span>
     </ng-template>
-</igx-calendar>  
+</igx-calendar>
 ```
 > [!NOTE]
-> Mind that both in Internet Explorer and Edge all of the date parts will be empty strings as both browsers don't implement the Intl API providing this functionality. (See [formatToParts](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat/formatToParts))
+> Keep in mind that for Internet Explorer and Edge browsers the date parts will be empty strings, because both browsers don't implement the Intl API providing this functionality. (See [formatToParts](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat/formatToParts))
 
 To support those browsers we are going to use alternative template using [ngIf](https://angular.io/api/common/NgIf#using-non-inlined-then-template) directive:
 
@@ -187,7 +187,7 @@ To support those browsers we are going to use alternative template using [ngIf](
             {{ parts.month.combined | titlecase }} {{ parts.day.combined }} {{ parts.weekday.combined }}
         </ng-template>
         <ng-template igxCalendarSubheader let-parts>
-            <span class="date__el" (click)="parts.monthView()">{{ parts.month.combined }}</span>            
+            <span class="date__el" (click)="parts.monthView()">{{ parts.month.combined }}</span>
             <span class="date__el" (click)="parts.yearView()">{{ parts.year.combined }}</span>
         </ng-template>
     </div>
@@ -198,7 +198,7 @@ To support those browsers we are going to use alternative template using [ngIf](
             {{ getDatePart(parts, component, 'month') | titlecase }} {{ getDatePart(parts, component, 'day') }} {{ getDatePart(parts, component, 'weekday') }}
         </ng-template>
         <ng-template igxCalendarSubheader let-parts>
-            <span class="date__el" (click)="parts.monthView()">{{ getDatePart(parts, component, 'month') }}</span> 
+            <span class="date__el" (click)="parts.monthView()">{{ getDatePart(parts, component, 'month') }}</span>
             <span class="date__el" (click)="parts.yearView()">{{ getDatePart(parts, component, 'year') }}</span>
         </ng-template>
     </ng-template>

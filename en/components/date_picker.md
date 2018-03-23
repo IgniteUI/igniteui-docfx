@@ -141,7 +141,7 @@ The `IgxDatePickerComponent` supports locales. You can set them using the `local
 ```
 
 > [!NOTE]
-> Mind that both in Internet Explorer and Edge all of the date parts will be empty strings as both browsers don't implement the Intl API providing this functionality. (See [formatToParts](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat/formatToParts))
+> Keep in mind that for Internet Explorer and Edge browsers the date parts will be empty strings, because both browsers don't implement the Intl API providing this functionality. (See [formatToParts](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat/formatToParts))
 
 To support those browsers we are going to use alternative template using [ngIf](https://angular.io/api/common/NgIf#using-non-inlined-then-template) directive:
 
@@ -165,7 +165,7 @@ To support those browsers we are going to use alternative template using [ngIf](
         </ng-template>
         <ng-template igxCalendarSubheader let-format>
             <span class="date__el" (click)="format.yearView()">{{ getDatePart(format, component, 'year') }}</span>
-            <span class="date__el" (click)="format.monthView()">{{ getDatePart(format, component, 'month') }}</span> 
+            <span class="date__el" (click)="format.monthView()">{{ getDatePart(format, component, 'month') }}</span>
         </ng-template>
     </ng-template>
 </igx-datePicker>
