@@ -654,6 +654,34 @@ export class GridComponent implements OnInit {
 }
 ```
 
+It is good to keep in mind that in order to have a better performance **igx-grid** cache all summaries and recalculate them if you perform CRUD operation over you data. But if your data source is modified outside the **igx-grid**, you need to explicitly force the **igx-grid** to recalculate your summaries by invoking the method `clearSummaryCache()`.
+
+```typescript
+<igx-grid #grid1 [data]="data" [autoGenerate]="false" height="800px" width="800px" (onColumnInit)="initColunm($event)" >
+    <igx-column field="ProductID" width="200px"  [sortable]="true">
+    </igx-column>
+    <igx-column field="ProductName" width="200px" [sortable]="true" [hasSummary]="true">
+    </igx-column>
+    <igx-column field="UnitsInStock" width="200px" [dataType]="'number'" [hasSummary]="true" [summaries]="mySummary" [sortable]="true">
+    </igx-column>
+    <igx-column field="ReorderLevel" width="200px" [editable]="true" [dataType]="'number'" [hasSummary]="true">
+    </igx-column>
+</igx-grid>
+<button (click)="updateData()">Update Data</button>
+```
+
+```typescript
+...
+export class GridComponent implements OnInit {
+
+ updateData() {
+    const d = [].concat(this.data).concat(this.data.slice(0, 15));
+    this.data = d;
+    this.grid1.clearSummaryCache();
+  }
+}
+```
+
 ### Column Pinning
 
 **Column Pinning** is available through the **igx-grid** API. Each column can be pinned as long as the pinned area does not become wider than the grid itself. Column pinning is controlled through the `pinned` input of the `igx-column`. Pinned columns are always rendered on the left side of the grid and stay fixed through horizontal scrolling of the unpinned columns in the grid body.
@@ -781,6 +809,7 @@ Here is a list of all public methods exposed by **igx-grid**:
 |`unpinColumn(columnName: string)`|Unpin a column by its name|
 |`enableSummaries(fieldName: string, customSummary?: any)`|Enable summaries for the specified column and apply your `customSummary`. If you do not provide `customSummary` default summary for the column data type will be applied.|
 |`enableSummaries(expressions: Array)`|Enable summaries for the columns and apply your `customSummary` if it is provided.|
+|`clearSummaryCache()`|Delete all cached summaries and force to recalculate them.|
 |`previousPage()`|Goes to the previous page if paging is enabled and the current page is not the first.|
 |`nextPage()`|Goes to the next page if paging is enabled and current page is not the last.|
 |`paginate(page: number)`|Goes to the specified page if paging is enabled. Page indices are 0 based.|
