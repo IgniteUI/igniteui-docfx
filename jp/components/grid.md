@@ -946,7 +946,6 @@ import {
 |`empty`|`(target: any)`|Returns true if `target` is either `null` or `undefined`.|
 |`notEmpty`|`(target: any)`|Returns true if target is not `null` or `undefined`.|
 
-
 <div class="divider--half"></div>
 
 ## IgxGridRowComponent
