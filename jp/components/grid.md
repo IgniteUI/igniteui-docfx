@@ -547,26 +547,26 @@ public ngOnInit() {
 
 ### Summaries
 > [!NOTE]
-> The summary of the column on is a **function of all column values**, even if paging, filtering or sorting is applied.
+> The summary of the column is a **function of all column values**, even if paging, filtering or sorting is applied.
  
-Grid **summaries** can also be enabled per-column level, which means that you can activate it only for columns that you need to. **Grid summaries** gives you a predefined set of default summaries, depending on the type of data in the column, so that you can save some time:
+Grid **summaries** can also be enabled on a per-column level, which means that you can activate it only for columns that you need to. **Grid summaries** gives you a predefined set of default summaries, depending on the type of data in the column, so that you can save some time:
 
 For `string` and `boolean` data type is available the following function:
  - count
 
-For `number` data type are available the following functions:
+For `number` data type, the following functions are available:
  - count
  - min
  - max
  - average
  - sum
 
-For `date` data type are available the following functions:
+For `date` data type, the following functions are available:
  - count
  - earliest
  - latest
 
-**Grid summaries** are enabled per-column by setting `hasSummary` property to `true`. It is also important to keep in mind that the summaries for each column are resolved accordind column data type. In the `igx-grid` default column data type is `string`, so if you want `number` or `date` specific summaries you should specify `dataType` property to `number` or `date`.
+**Grid summaries** are enabled per-column by setting `hasSummary` property to `true`. It is also important to keep in mind that the summaries for each column are resolved according to the column data type. In the `igx-grid` the default column data type is `string`, so if you want `number` or `date` specific summaries you should specify the `dataType` property as `number` or `date`.
 
 ```typescript
 <igx-grid #grid1 [data]="data" [autoGenerate]="false" height="800px" width="800px" (onColumnInit)="initColunm($event)" >
@@ -579,7 +579,7 @@ For `date` data type are available the following functions:
 </igx-grid>
 ```
 
-The other way to enable summary for specific column or a list of columns is to use the public method `enableSummaries` of the **igx-grid**.
+The other way to enable summaries for a specific column or a list of columns is to use the public method `enableSummaries` of the **igx-grid**.
 
 ```typescript
 <igx-grid #grid1 [data]="data" [autoGenerate]="false" height="800px" width="800px" (onColumnInit)="initColunm($event)" >
@@ -599,7 +599,7 @@ public enableSummary() {
   }
 ```
 
-If these functions do not fulfill your requirements you can provide a custom summary for the specific columns. In order to achieve this you have to override one of the base classes `IgxSummaryOperand`, `IgxNumberSummaryOperand`, `IgxDateSummaryOperand` according to the column data type and your needs. In this way you can redifine the existing or you can add new functions. `IgxSummaryOperand` class provide default implementation only for `count` method. `IgxNumberSummaryOperand` extends `IgxSummaryOperand` and provide implementation for methods: `min`, `max`, `sum` and `average`. `IgxDateSummaryOperand` extends `IgxSummaryOperand` and additionally gives you: `earliest` and `latest`.
+If these functions do not fulfill your requirements you can provide a custom summary for the specific columns. In order to achieve this you have to override one of the base classes `IgxSummaryOperand`, `IgxNumberSummaryOperand` or `IgxDateSummaryOperand` according to the column data type and your needs.In this way you can redefine the existing function or you can add new functions. `IgxSummaryOperand`  class provides the default implementation only for `count` method. `IgxNumberSummaryOperand` extends `IgxSummaryOperand` and provides implementation for the `min`, `max`, `sum` and `average`. `IgxDateSummaryOperand` extends `IgxSummaryOperand`and additionally gives you `earliest` and `latest`.
 
 ```typescript
 import { IgxSummaryResult, IgxSummaryOperand, IgxNumberSummaryOperand, IgxDateSummaryOperand } from 'igniteui-angular/grid/grid-summary';
@@ -654,7 +654,7 @@ export class GridComponent implements OnInit {
 }
 ```
 
-It is good to keep in mind that in order to have a better performance **igx-grid** cache all summaries and recalculate them if you perform CRUD operation over you data. But if your data source is modified outside the **igx-grid**, you need to explicitly force the **igx-grid** to recalculate your summaries by invoking the method `clearSummaryCache()`.
+It is good to keep in mind that in order to improve performance, **igx-grid** cache all summaries and recalculate them if you perform CRUD operations over your data. But if your data source is modified outside the **igx-grid**, you need to explicitly force the **igx-grid** to recalculate your summaries by invoking the method `clearSummaryCache()`.
 
 ```typescript
 <igx-grid #grid1 [data]="data" [autoGenerate]="false" height="800px" width="800px" (onColumnInit)="initColunm($event)" >
@@ -805,9 +805,7 @@ Here is a list of all public methods exposed by **igx-grid**:
 |`sort(name: string, direction, ignorecase)`|Sorts a single column.|
 |`sort(expressions: Array)`|Sorts the grid columns based on the provided array of sorting expressions.|
 |`clearSort(name?: string)`|If `name` is provided, clears the sorting state of the corresponding column, otherwise clears the sorting state of all columns.|
-|`pinColumn(columnName: string)`|Pin a column by its name|
-|`unpinColumn(columnName: string)`|Unpin a column by its name|
-|`enableSummaries(fieldName: string, customSummary?: any)`|Enable summaries for the specified column and apply your `customSummary`. If you do not provide `customSummary` default summary for the column data type will be applied.|
+|`enableSummaries(fieldName: string, customSummary?: any)`|Enable summaries for the specified column and apply your `customSummary`. If you do not provide the `customSummary`,then the default summary for the column data type will be applied.|
 |`enableSummaries(expressions: Array)`|Enable summaries for the columns and apply your `customSummary` if it is provided.|
 |`clearSummaryCache()`|Delete all cached summaries and force to recalculate them.|
 |`previousPage()`|Goes to the previous page if paging is enabled and the current page is not the first.|
