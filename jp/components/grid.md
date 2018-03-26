@@ -231,7 +231,7 @@ export interface NorthwindRecord {
 }
 ```
 
-サービスは `Observable<NorthwindRecord[]>` を返す `fetchData` の単一のメソッドを含みます。要求が任意の理由 (サーバーが利用不可、ネットワーク エラーなど) のため失敗すれば、`HttpClient` はエラーを返します。 失敗した _Observable_ をインターセプトしてエラーをハンドラーに渡す `catchError` 演算子を使用します。エラー ハンドラーがエラーをログに追加して有効な値を返します。
+サービスは `Observable<NorthwindRecord[]>` を返す `fetchData` の単一のメソッドを含みます。要求が任意の理由 (サーバーが利用不可、ネットワーク エラーなど) により失敗した場合、`HttpClient` はエラーを返します。失敗した _Observable_ をインターセプトしてエラーをハンドラーに渡す `catchError` 演算子を使用し、エラー ハンドラーがエラーをログに追加して有効な値を返します。
 
 ```typescript
 // northwind.service.ts
@@ -286,7 +286,7 @@ export class AppModule {}
 
 サービスを実装した後、コンポーネントのコンストラクターにインジェクトしてデータを取得するために使用します。`ngOnInit` ライフサイクル フックに最初の要求を追加します。
 
-**注**: 以下のコードでは、サービスに加入する前に _records_ プロパティを空の配列に設定しています。Http 要求は非同期です。完了するまで、_records_ プロパティが _undefined_ で、グリッドをプロパティにバインドしようとするときにエラーが発生されます。デフォルト値に初期化するか、`BehaviorSubject` を使用します。
+**注**: 以下のコードでは、サービスに加入する前に _records_ プロパティを空の配列に設定しています。Http 要求は非同期です。完了するまで _records_ プロパティは _undefined_ で、グリッドをプロパティにバインドするときにエラーが発生されます。デフォルト値に初期化するか、`BehaviorSubject` を使用します。
 
 ```typescript
 // my.component.ts
@@ -414,7 +414,7 @@ this.grid.paging = false;
 ### フィルタリング
 
 > [!NOTE]
-> フィルタリング操作がグリッドの基本データ ソースを変更**しません**。
+> フィルタリング操作でグリッドの基になるデータ ソースは変更**しません**。
 
 列の `filterable` プロパティを true に設定すると、**フィルタリング**を列ごとに有効できます。
 
@@ -438,7 +438,7 @@ this.grid.paging = false;
 this.grid.filter('ProductName', 'myproduct', STRING_FILTERS.contains, true);
 ```
 
-必要なパラメーターは列フィールドおよびフィルター条件です。条件および大文字と小文字の区別が設定されない場合、列プロパティから推測されます。複数フィルターの場合、このメソッドはフィルター式の配列を受けます。
+必要なパラメーターは列フィールドおよびフィルター条件です。条件および大文字と小文字の区別が設定されない場合、列プロパティから推測されます。複数フィルターの場合、このメソッドはフィルター式の配列を受け取ります。
 
 ```typescript
 // Multi column filtering
@@ -499,7 +499,7 @@ this.grid.filteringLogic = FilteringLogic.OR;
 ### 並べ替え
 
 > [!NOTE]
-> 並べ替え操作がグリッドの基本データ ソースを変更**しません**。
+> 並べ替え操作でグリッドの基になるデータ ソースは変更**しません**。
 
 **並べ替え**も列ごとのレベルで有効化されます。つまり、**igx-grid** に並べ替え可能な列および並べ替え可能ではない列の両方を含むことが可能です。`sortable` 入力によって実行できます。グリッド フィルターと同じように、`sortingIgnoreCase` プロパティを設定すると、大文字と小文字を区別する並べ替えを実行できます。
 
@@ -563,7 +563,7 @@ this.grid.pinColumn("AthleteNumber");
 this.grid.unpinColumn("Name");
 ```
 
-両方のメソッドは操作に成功したかどうかを示すブール値を返します。通常の失敗理由として列が既に設定されていることがあります。`pinColumn` は、ピン固定領域がグリッドのサイズ以上である場合も失敗します。以下はその例です。
+両方のメソッドは操作に成功したかどうかを示すブール値を返します。よくある失敗原因に列が既にその状態である場合ことがあります。`pinColumn` は、ピン固定領域がグリッドのサイズ以上である場合も失敗します。以下はその例です。
 
 ```html
 <igx-grid #grid1 [data]="data | async" [width]="300px" [autoGenerate]="false">
@@ -632,7 +632,7 @@ public columnPinning(event) {
 |`onPagingDone`|ページングが実行されたときに発生されます。前のページおよび新しいページを含むオブジェクトを返します。|
 |`onRowAdded`|行が API によってグリッドに追加されている間に発生されます。新しい行オブジェクトのデータを返します。|
 |`onRowDeleted`|行がグリッド API によって削除されたときに発生されます。削除されている行オブジェクトを返します。|
-|`onColumnPinning`|列がグリッド API によってピン固定されたときに発生されます。列に挿入するインデックスを `insertAtIndex` プロパティによって変更できます。|
+|`onColumnPinning`|列がグリッド API によってピン固定されたときに発生されます。列に挿入するインデックスは `insertAtIndex` プロパティによって変更できます。|
 
 <div class="divider--half"></div>
 
@@ -651,8 +651,8 @@ public columnPinning(event) {
 
 |構文|説明 |
 |--- |--- |
-|`getColumnByName(name: string)`|`name` と等しいフィールド プロパティを持つ列オブジェクトを返します。このような列がない場合に `undefined` を返します。|
-|`getCellByColumn(rowIndex: number, columnField: string)`|列が `columnField` で、行が `rowIndex` である列のセル オブジェクトを返します。ない場合に `undefined` を返します。|
+|`getColumnByName(name: string)`|`name` と等しいフィールド プロパティを持つ列オブジェクトを返します。このような列がない場合は `undefined` を返します。|
+|`getCellByColumn(rowIndex: number, columnField: string)`|列が `columnField` で、行が `rowIndex` である列のセル オブジェクトを返します。ない場合は `undefined` を返します。|
 |`addRow(data: any)`|新しい行オブジェクトを作成し、データ レコードをデータ ソースの終了に追加します。|
 |`deleteRow(rowIndex: number)`|行オブジェクトおよび相対するデータ レコードをデータ ソースから削除します。|
 |`updateRow(value: any, rowIndex: number)`|行オブジェクトおよびデータ ソース レコードを渡された値で更新します。|
