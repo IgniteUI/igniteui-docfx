@@ -579,7 +579,7 @@ For `date` data type, the following functions are available:
 </igx-grid>
 ```
 
-The other way to enable summaries for a specific column or a list of columns is to use the public method `enableSummaries` of the **igx-grid**.
+The other way to enable/disable summaries for a specific column or a list of columns is to use the public method `enableSummaries`/`disableSummaries` of the **igx-grid**.
 
 ```typescript
 <igx-grid #grid1 [data]="data" [autoGenerate]="false" height="800px" width="800px" (onColumnInit)="initColunm($event)" >
@@ -590,13 +590,17 @@ The other way to enable summaries for a specific column or a list of columns is 
     <igx-column field="ReorderLevel" width="200px" [editable]="true" [dataType]="'number'" [hasSummary]="false">
     </igx-column>
 </igx-grid>
-<button (click)="enableSummary()"> Enable Summary</button>
+<button (click)="enableSummary()">Enable Summary</button>
+<button (click)="disableSummary()">Disable Summary </button>
 ```
 ```typescript
 public enableSummary() {
     this.grid1.enableSummaries([{fieldName: "ReorderLevel", customSummary: this.mySummary},
     {fieldName: "ProductID"}]);
   }
+public disableSummary() {
+    this.grid1.disableSummaries("ProductName");
+}
 ```
 
 If these functions do not fulfill your requirements you can provide a custom summary for the specific columns. In order to achieve this you have to override one of the base classes `IgxSummaryOperand`, `IgxNumberSummaryOperand` or `IgxDateSummaryOperand` according to the column data type and your needs. In this way you can redefine the existing function or you can add new functions. `IgxSummaryOperand`  class provides the default implementation only for `count` method. `IgxNumberSummaryOperand` extends `IgxSummaryOperand` and provides implementation for the `min`, `max`, `sum` and `average`. `IgxDateSummaryOperand` extends `IgxSummaryOperand`and additionally gives you `earliest` and `latest`.
