@@ -807,6 +807,8 @@ Here is a list of all public methods exposed by **igx-grid**:
 |`clearSort(name?: string)`|If `name` is provided, clears the sorting state of the corresponding column, otherwise clears the sorting state of all columns.|
 |`enableSummaries(fieldName: string, customSummary?: any)`|Enable summaries for the specified column and apply your `customSummary`. If you do not provide the `customSummary`, then the default summary for the column data type will be applied.|
 |`enableSummaries(expressions: Array)`|Enable summaries for the columns and apply your `customSummary` if it is provided.|
+|`disableSummaries(fieldName: string)`|Disable summaries for the specified column.|
+|`disableSummaries(columns: string[])`|Disable summaries for the listed columns.|
 |`clearSummaryCache()`|Delete all cached summaries and force recalculation.|
 |`previousPage()`|Goes to the previous page if paging is enabled and the current page is not the first.|
 |`nextPage()`|Goes to the next page if paging is enabled and current page is not the last.|
