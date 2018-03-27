@@ -551,7 +551,7 @@ public ngOnInit() {
  
 Grid **summaries** can also be enabled on a per-column level, which means that you can activate it only for columns that you need to. **Grid summaries** gives you a predefined set of default summaries, depending on the type of data in the column, so that you can save some time:
 
-For `string` and `boolean` data type is available the following function:
+For `string` and `boolean` data types, the following function is available:
  - count
 
 For `number` data type, the following functions are available:
@@ -599,7 +599,7 @@ public enableSummary() {
   }
 ```
 
-If these functions do not fulfill your requirements you can provide a custom summary for the specific columns. In order to achieve this you have to override one of the base classes `IgxSummaryOperand`, `IgxNumberSummaryOperand` or `IgxDateSummaryOperand` according to the column data type and your needs.In this way you can redefine the existing function or you can add new functions. `IgxSummaryOperand`  class provides the default implementation only for `count` method. `IgxNumberSummaryOperand` extends `IgxSummaryOperand` and provides implementation for the `min`, `max`, `sum` and `average`. `IgxDateSummaryOperand` extends `IgxSummaryOperand`and additionally gives you `earliest` and `latest`.
+If these functions do not fulfill your requirements you can provide a custom summary for the specific columns. In order to achieve this you have to override one of the base classes `IgxSummaryOperand`, `IgxNumberSummaryOperand` or `IgxDateSummaryOperand` according to the column data type and your needs. In this way you can redefine the existing function or you can add new functions. `IgxSummaryOperand`  class provides the default implementation only for `count` method. `IgxNumberSummaryOperand` extends `IgxSummaryOperand` and provides implementation for the `min`, `max`, `sum` and `average`. `IgxDateSummaryOperand` extends `IgxSummaryOperand`and additionally gives you `earliest` and `latest`.
 
 ```typescript
 import { IgxSummaryResult, IgxSummaryOperand, IgxNumberSummaryOperand, IgxDateSummaryOperand } from 'igniteui-angular/grid/grid-summary';
@@ -630,7 +630,7 @@ interface IgxSummaryResult {
     summaryResult: any;
 }
 ```
-And now let's add our custom summary to the column `UnitsInStock`. We will achieve that as we set the property `summaries` to the class, we created below.
+And now let's add our custom summary to the column `UnitsInStock`. We will achieve that by setting the `summaries` property to the class we create below.
 ```typescript
 <igx-grid #grid1 [data]="data" [autoGenerate]="false" height="800px" width="800px" (onColumnInit)="initColunm($event)" >
     <igx-column field="ProductID" width="200px"  [sortable]="true">
@@ -805,9 +805,9 @@ Here is a list of all public methods exposed by **igx-grid**:
 |`sort(name: string, direction, ignorecase)`|Sorts a single column.|
 |`sort(expressions: Array)`|Sorts the grid columns based on the provided array of sorting expressions.|
 |`clearSort(name?: string)`|If `name` is provided, clears the sorting state of the corresponding column, otherwise clears the sorting state of all columns.|
-|`enableSummaries(fieldName: string, customSummary?: any)`|Enable summaries for the specified column and apply your `customSummary`. If you do not provide the `customSummary`,then the default summary for the column data type will be applied.|
+|`enableSummaries(fieldName: string, customSummary?: any)`|Enable summaries for the specified column and apply your `customSummary`. If you do not provide the `customSummary`, then the default summary for the column data type will be applied.|
 |`enableSummaries(expressions: Array)`|Enable summaries for the columns and apply your `customSummary` if it is provided.|
-|`clearSummaryCache()`|Delete all cached summaries and force to recalculate them.|
+|`clearSummaryCache()`|Delete all cached summaries and force recalculation.|
 |`previousPage()`|Goes to the previous page if paging is enabled and the current page is not the first.|
 |`nextPage()`|Goes to the next page if paging is enabled and current page is not the last.|
 |`paginate(page: number)`|Goes to the specified page if paging is enabled. Page indices are 0 based.|
@@ -829,7 +829,7 @@ Inputs available on the **IgxGridColumnComponent** to define columns:
 |`sortable`|boolean|Set column to be sorted or not|
 |`editable`|boolean|Set column values to be editable|
 |`filterable`|boolean|Set column values to be filterable|
-|`hasSummary`| boolean  |Set the specific column to have a summaries or not|
+|`hasSummary`| boolean  |Sets whether or not the specific column has summaries enabled.|
 |`summaries`| IgxSummaryOperand |Set custom summary for the specific column|
 |`hidden`|boolean|Visibility of the column|
 |`movable`|boolean|Column moving|
