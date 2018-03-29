@@ -1,11 +1,11 @@
 ---
 title: Mask Directive
 _description: The Mask directive is intended to provide means for controlling user input and formatting the visible value based on a configurable mask rules.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular mask directive, Mask, Directive
+_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular mask directive, Mask, Directive, Mask Editor, Angular Mask Editor
 ---
 
 ##Mask
-<p class="highlight">The Ignite UI for Angular Mask directive provides convenient way to format user input through configurable mask rules. Masks are important when the input should obey specific format. They also provide visual clue for the end user what is expected as an input.</p>
+<p class="highlight">The Ignite UI for Angular Mask directive provides convenient way to format user input through configurable mask rules. Masks are important when the input should obey specific format, like for example a phone number. They also provide visual clue for the end user what is expected as an input.</p>
 <div class="divider--half"></div>
 
 ### Mask Demo
@@ -57,7 +57,7 @@ export class AppModule {}
 | C | any keyboard character |
 
 #### Apply Mask on Input
-In the following example, we apply a phone mask to an input. 
+In the following example, we apply a phone number with an extension mask to an input. 
 
 ```html
 <!--sample.component.html-->
@@ -206,9 +206,9 @@ The following inputs are available for the **igxMask** directive:
 
 | Name | Type | Description |
 | :--- | :--- | :--- |
-| `igxMask` | string | Specifies the current mask. |
+| `igxMask` | string | Specifies the current input mask. |
 | `promptChar` | string | Specifies the character representing a fillable spot in the mask. By default, the prompt char is "_". |
-| `includeLiterals` | boolean | Specifies if the binded value includes the formatting symbols.  |
+| `includeLiterals` | boolean | Specifies if the bound value includes the formatting symbols.  |
 
 <div class="divider--half"></div>
 
