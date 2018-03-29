@@ -186,7 +186,7 @@ The following methods are available in the **igx-time-picker** component:
 
 | Signature | Return Type | Description |
 | :--- | :--- | :--- |
-| `okButtonClick()` | `void` | If current value is valid selects it and closes the dialog. **[Otherwise this should return a value that it fails]** |
+| `okButtonClick()` | `boolean` | If current value is valid selects it, closes the dialog and returns true, otherwise returns false. |
 | `cancelButtonClick()` | `void` | Closes the dialog without selecting the current value. |
 | `hoursInView()` | `string[]` | Returns an array of the hours currently in view. |
 | `minutesInView()` | `string[]` | Returns an array of the minutes currently in view. |

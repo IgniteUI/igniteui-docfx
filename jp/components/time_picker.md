@@ -1,7 +1,7 @@
 ---
 title: Time Picker Component
 _description: Add the functionality to select a time from a dialog to your web application with Ignite UI for Angular Time Picker control.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Time Picker components, Angular Time Picker controls
+_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Time Picker component, Angular Time Picker control, Time Picker
 ---
 
 ## Time Picker
@@ -159,15 +159,15 @@ The following inputs are available in the **igx-time-picker** component:
 
 | Name | Type | Description |
 | :--- | :--- | :--- |
-| `okButtonLabel` | string | Renders OK button with custom name, which commits the selected time, and fill the timePicker input. By default `okButtonLabel` is set to `OK`.|
-| `cancelButtonLabel` | string | Renders cancel button with custom name, which closes the dialog. By default `cancelButtonLabel` is set to `Cancel`. |
+| `okButtonLabel` | string | Renders OK button with custom text, which commits the selected time, and fill the timePicker input. By default `okButtonLabel` is set to `OK`.|
+| `cancelButtonLabel` | string | Renders cancel button with custom text, which closes the dialog. By default `cancelButtonLabel` is set to `Cancel`. |
 | `value` | Date | Gets/Sets the value of the timePicker. |
 | `isDisabled` | boolean | Disable the timePicker. |
-| `itemsDelta`| object | Gets/Sets the delta for hour and minute items. By default `itemsDelta` is set to `{hours:1, minutes:1}`. Note! This cannot be set run time. |
+| `itemsDelta`| object | Gets/Sets the delta by which hour and minute items would be displayed. By default `itemsDelta` is set to `{hours:1, minutes:1}`. Note! This cannot be set run time. |
 | `minValue` | string | Gets/Sets minimum value. It should follow the `format` of the timePicker. |
 | `maxValue` | string | Gets/Sets maximum value. It should follow the `format` of the timePicker. |
 | `vertical` | boolean | Gets/Sets the orientation of the timePicker. By default `vertical` is set to `false`. |
-| `isSpinLoop` | boolean | Determines the spin behavior. By default `isSpinLoop` is set to true. Note! This cannot be set run time. |
+| `isSpinLoop` | boolean | Determines the spin behavior. If set to true the hours and minutes spinning will wrap around. By default `isSpinLoop` is set to true. Note! This cannot be set run time. |
 | `format` | string | Gets/Sets format of time while timePicker has no focus. By default `format` is set to `hh:mm tt`. Note! This cannot be set run time.<br>List of time-flags:<br> `h` : hours field in 12-hours format without leading zero<br>`hh` : hours field in 12-hours format with leading zero<br>`H` : hours field in 24-hours format without leading zero<br>`HH` : hours field in 24-hours format with leading zero<br>`m` : minutes field without leading zero<br>`mm` : minutes field with leading zero<br>`tt` : 2 characters of string which represents AM/PM field |
 
 <div class="divider--half"></div>
@@ -186,12 +186,12 @@ The following methods are available in the **igx-time-picker** component:
 
 | Signature | Return Type | Description |
 | :--- | :--- | :--- |
-| `okButtonClick()` | `void` | If current value is valid selects it and closes the dialog. |
+| `okButtonClick()` | `boolean` | If current value is valid selects it, closes the dialog and returns true, otherwise returns false. |
 | `cancelButtonClick()` | `void` | Closes the dialog without selecting the current value. |
 | `hoursInView()` | `string[]` | Returns an array of the hours currently in view. |
 | `minutesInView()` | `string[]` | Returns an array of the minutes currently in view. |
 | `ampmInView()` | `string[]` | Returns an array of the ampm currently in view. |
-| `scrollHourIntoView(item: string)` | `void` | Scrolls a hour item into view. |
+| `scrollHourIntoView(item: string)` | `void` | Scrolls an hour item into view. |
 | `scrollMinuteIntoView(item: string)` | `void` | Scrolls a minute item into view. |
 | `scrollAmPmIntoView(item: string)` | `void` | Scrolls a period item into view. |
 
