@@ -87,7 +87,7 @@ The final result would be something like that:
 The following inputs are available on the **igx-switch** component:
 | Name | Type | Description |
 | :--- | :--- | :--- |
-| `checked` | bool | Switche is turned on if true. |
+| `checked` | bool | Switch is turned on if true. |
 
 <div class="divider"></div>
 
