@@ -4,6 +4,23 @@
   href: grid.md
 - name: List View 
   href: list.md
+- name: Data Visualization
+  header: true
+  href: categorychart.md
+- name: Category Chart
+  href: categorychart.md
+  items:
+    - name: Axis
+      href: categorychart_axis.md
+    - name: Configuring Category Chart
+      href: categorychart_configuring.md
+- name: Financial Chart
+  href: financialchart.md
+  items:
+    - name: Axis
+      href: financialchart_axis.md
+    - name: Panes
+      href: financialchart_panes.md
 - name: Styling & Themes
   header: true
 - name: Themes
