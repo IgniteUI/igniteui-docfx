@@ -273,7 +273,7 @@ public getDatePart(val: any, component: any, datePart: string) {
 | `viewDate` | `Date` | カレンダーを描画するときにデフォルト ビューで表示される年と月を設定します。デフォルト値は現在の年と月です。   |
 | `value` | `Date` または `Date[]` | カレンダー ウィジェットの現在値を取得または設定します。複数選択および範囲選択は選択日付の配列を返します。 |
 | `formatOptions` | `Object` | 日付を書式設定するために使用される `locale` プロパティと渡される書式オプション。デフォルト値は { day: 'numeric', month: 'short', weekday: 'short', year: 'numeric' } です。 |
-|`formatViews`| `Object`| カレンダー ビューの日付部分が提供された locale および formatOptions に基づいて書式設定するかどうかを制御します。デフォルト値は { day: false, month: true, year: false } です。|
+|`formatViews`| `Object`| カレンダー ビューの日付コンポーネントが提供された locale および formatOptions に基づいて書式設定するかどうかを制御します。デフォルト値は { day: false, month: true, year: false } です。ヘッダーの描画に影響しません。|
 | `vertical` | `boolean` | カレンダー コンポーネントのレイアウトを制御します。`vertical` が true に設定される場合、カレンダー ヘッダーはカレンダーの隣に描画されます。|
 
 #### 出力
