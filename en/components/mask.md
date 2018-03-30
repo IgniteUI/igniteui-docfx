@@ -1,11 +1,11 @@
 ---
 title: Mask Directive
-_description: The Mask directive is intended to provide means for controlling user input and formatting the visible value based on a configurable mask rules.
+_description: The Mask directive is intended to provide means for controlling user input and formatting the visible value based on configurable mask rules.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular mask directive, Mask, Directive, Mask Editor, Angular Mask Editor
 ---
 
 ##Mask
-<p class="highlight">The Ignite UI for Angular Mask directive provides convenient way to format user input through configurable mask rules. Masks are important when the input should obey specific format, like for example a phone number. They also provide visual clue for the end user what is expected as an input.</p>
+<p class="highlight">The Ignite UI for Angular Mask directive provides a convenient way to format user input through configurable mask rules. Masks are important when the input should obey a specific format, like for example a phone number. They also provide a visual clue for the end user what is expected as input.</p>
 <div class="divider--half"></div>
 
 ### Mask Demo
@@ -21,7 +21,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 > To start using Ignite UI for Angular components in your own projects, make sure you have configured all necessary dependencies and have performed the proper setup of your project. You can learn how to do this in the [**installation**](https://www.infragistics.com/products/ignite-ui-angular/getting-started#installation) topic.
 
 ### Usage
-To get started with the Ignite UI for Angular Mask directive, let's first import the **IgxMaskModule** and **IgxInputModule** in our **app.module.ts** file. **IgxInputModule** is not required; it is used later in the examples code. The **igxMask** directive can be used with any Angular input control.
+To get started with the Ignite UI for Angular Mask directive, let's first import the **IgxMaskModule** and **IgxInputModule** in our **app.module.ts** file. **IgxInputModule** is not required; it is used later in the examples. The **igxMask** directive can be used with any Angular input control.
 
 ```typescript
 // app.module.ts
