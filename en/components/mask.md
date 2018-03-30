@@ -5,7 +5,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ---
 
 ##Mask
-<p class="highlight">The Ignite UI for Angular Mask directive provides a convenient way to format user input through configurable mask rules. Masks are important when the input should obey a specific format, like for example a phone number. They also provide a visual clue for the end user what is expected as input.</p>
+<p class="highlight">The Ignite UI for Angular Mask directive provides a convenient way to format user input through configurable mask rules. Masks are important when the input should obey a specific format, like for example a phone number. They also provide a visual clue for the end user what is expected as input. Mask directive can be used in template-driven or reactive forms.</p>
 <div class="divider--half"></div>
 
 ### Mask Demo
@@ -116,29 +116,24 @@ In addition to setting a mask to an input, you can validate the entered value as
 ```html
 <!--sample.component.html-->
 
-<div class="sample-wrapper">
-  <section class="sample-content">
-      <article class="sample-column">
-        <form class="input-sample" action="/" method="POST">
-          <h4>Personal Data</h4>
-          <br />
-          <div class="igx-form-group">
-            <input igxInput name="name" type="text" [(ngModel)]="person.name" required  />
-            <label igxLabel for="name">Name*</label>
-          </div>
-          <div class="igx-form-group">
-              <input igxInput #dateInput name="birthday" type="text" [igxMask]="'00/00/0000'" [(ngModel)]="person.birthday" (blur)="validateDate(dateInput, snackbar)"/>
-              <label igxLabel for="email">Birthday</label>
-          </div>
-          <div class="igx-form-group">
-            <input igxInput #ssn name="socialSecurityNumber" type="text" [igxMask]="'###-##-####'" [(ngModel)]="person.socialSecurityNumber" (blur)="validateSSN(ssn, snackbar)"/>
-            <label igxLabel for="socialSecurityNumber">Social Security Number</label>
-          </div>
-          <igx-snackbar #snackbar></igx-snackbar>
-        </form>
-      </article>
-    </section>
-</div>
+<form class="input-sample" action="/" method="POST">
+    <h4>Personal Data</h4>
+    <br />
+    <div class="igx-form-group">
+        <input igxInput name="name" type="text" [(ngModel)]="person.name" required  />
+        <label igxLabel for="name">Name*</label>
+    </div>
+    <div class="igx-form-group">
+        <input igxInput #dateInput name="birthday" type="text" [igxMask]="'00/00/0000'" [(ngModel)]="person.birthday" (blur)="validateDate(dateInput, snackbar)"/>
+        <label igxLabel for="email">Birthday</label>
+    </div>
+    <div class="igx-form-group">
+        <input igxInput #ssn name="socialSecurityNumber" type="text" [igxMask]="'###-##-####'" [(ngModel)]="person.socialSecurityNumber" (blur)="validateSSN(ssn, snackbar)"/>
+        <label igxLabel for="socialSecurityNumber">Social Security Number</label>
+    </div>
+    <igx-snackbar #snackbar></igx-snackbar>
+</form>
+
 ```
 
 ```typescript
