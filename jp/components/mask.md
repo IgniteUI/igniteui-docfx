@@ -1,27 +1,30 @@
----
-title: Mask Directive
-_description: The Mask directive is intended to provide means for controlling user input and formatting the visible value based on a configurable mask rules.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular mask directive, Mask, Directive
+﻿---
+title: Mask ディレクティブ
+_description: Mask ディレクティブは、ユーザー入力を制御し、構成可能なマスク ルールに基づいて表示値を書式設定するために使用されます。
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Mask ディレクティブ, マスク, ディレクティブ, マスク エディター, Angular Mask エディター
+_language: ja
 ---
 
-##Mask
-<p class="highlight">The Ignite UI for Angular Mask directive provides convenient way to format user input through configurable mask rules. Masks are important when the input should obey specific format. They also provide visual clue for the end user what is expected as an input.</p>
+## Mask
+
+<p class="highlight">Ignite UI for Angular Mask ディレクティブは、構成可能なマスク ルールによってユーザー入力を書式設定する方法を提供します。マスクは、入力を電話番号などの指定した書式に合わせる必要がある場合に便利です。入力の書式のビジュアル表現も提供します。Mask ディレクティブをテンプレートまたはリアクティブ フォームで使用できます。</p>
 <div class="divider--half"></div>
 
-### Mask Demo
+### Mask デモ
 <div class="sample-container loading" style="height: 500px">
     <iframe id="mask-sample-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/mask-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="mask-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="mask-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
 </div>
 <div class="divider--half"></div>
 
 > [!NOTE]
-> To start using Ignite UI for Angular components in your own projects, make sure you have configured all necessary dependencies and have performed the proper setup of your project. You can learn how to do this in the [**installation**](https://www.infragistics.com/products/ignite-ui-angular/getting-started#installation) topic.
+> Ignite UI for Angular コンポーネントをプロジェクトに追加する前に、すべての必要な依存関係を構成し、プロジェクトのセットアップが正しく完了したことを確認してください。「[**インストール**](https://jp.infragistics.com/products/ignite-ui-angular/getting-started#installation)」のトピックで手順を参照できます。
 
-### Usage
-To get started with the Ignite UI for Angular Mask directive, let's first import the **IgxMaskModule** and **IgxInputModule** in our **app.module.ts** file. **IgxInputModule** is not required; it is used later in the examples code. The **igxMask** directive can be used with any Angular input control.
+### 使用方法
+
+Ignite UI for Angular Mask ディレクティブを初期化する前に、**IgxMaskModule** および **IgxInputModule** を **app.module.ts** ファイルにインポートします。**IgxInputModule** は必須ではありません。以下の例で使用します。**igxMask** ディレクティブを任意の Angular 入力コントロールと使用できます。
 
 ```typescript
 // app.module.ts
@@ -41,23 +44,23 @@ export class AppModule {}
 
 <div class="divider--half"></div>
 
-#### Supported Built-in Mask Rules
+#### サポートされる定義済みマスク ルール
 
-
-| Mask Character | Description |
+| マスク文字 | 説明 |
 | :--- | :--- | 
-| 0 | requires a digit (0-9) |
-| 9 | requires a digit (0-9) or a space |
-| # | requires a digit (0-9), plus (+), or minus (-) sign |
-| L | requires a letter (a-Z) |
-| ? | requires a letter (a-Z) or a space |
-| A | requires an alphanumeric (0-9, a-Z) |
-| a | requires an alphanumeric (0-9, a-Z) or a space |
-| & | any keyboard character (excluding space) |
-| C | any keyboard character |
+| 0 | 数値が必須 (0-9) |
+| 9 | 数値 (0-9) またはスペースが必須 |
+| # | 数値 (0-9)、正符号 (+) 、または負符号 (-) が必須|
+| L | 英文字が必須 (a-Z) |
+| ? | 英文字 (a-Z) またはスペースが必須 |
+| A | 英数字が必須 (0-9, a-Z) |
+| a | 英数字 (0-9, a-Z) またはスペースが必須 |
+| & | 任意のキーボード文字 (スペース以外) |
+| C | 任意のキーボード文字 |
 
-#### Apply Mask on Input
-In the following example, we apply a phone mask to an input. 
+#### マスクを入力に適用
+
+以下の例で、内線を含む電話番号のマスクを入力に適用します。
 
 ```html
 <!--sample.component.html-->
@@ -65,18 +68,19 @@ In the following example, we apply a phone mask to an input.
  <input igxInput name="phone" type="text" [igxMask]="'(####) 00-00-00 Ext. 9999'"/>
 ```
 
-If the sample is configured properly, an input with the applied formatting mask appears.
+サンプルを正しく構成した場合、書式マスクが適用される入力が表示されます。
 
 <div class="sample-container loading" style="height: 100px">
     <iframe id="mask-sample2-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/mask-sample-2" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="mask-sample2-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="mask-sample2-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
 </div>
 
-#### Bind to Formatted/Raw Value
-Use the `includeLiterals` input to configure which input value (formatted or raw) to bind in your form when a specific mask is applied. By default, `includeLiterals` is set to *false* and the raw value is used.
+#### 書式設定付き/Raw 値にバインド
+
+`includeLiterals` 入力を使用して、指定したマスクが適用される場合にフォームにバインドする入力値 (書式設定付きまたは Raw) を構成します。デフォルトで `includeLiterals` が *false* に設定し、Raw 値が使用されます。
 
 ```html
 <!--sample.component.html-->
@@ -107,38 +111,34 @@ public clear() {
 </div>
 
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="mask-sample3-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="mask-sample3-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
 </div>
 
-#### Validate Masked Values
-In addition to setting a mask to an input, you can validate the entered value as well. The following example implements masks, validation and notification for invalid data using the Mask directive and Snack Bar component.
+#### マスク値を検証
+
+入力にマスクを設定し、入力した値を検証できます。以下の例は、Mask ディレクティブおよび Snack Bar コンポーネントを使用してマスクを実装し、無効なデータのための検証および通知を実装します。
 
 ```html
 <!--sample.component.html-->
 
-<div class="sample-wrapper">
-  <section class="sample-content">
-      <article class="sample-column">
-        <form class="input-sample" action="/" method="POST">
-          <h4>Personal Data</h4>
-          <br />
-          <div class="igx-form-group">
-            <input igxInput name="name" type="text" [(ngModel)]="person.name" required  />
-            <label igxLabel for="name">Name*</label>
-          </div>
-          <div class="igx-form-group">
-              <input igxInput #dateInput name="birthday" type="text" [igxMask]="'00/00/0000'" [(ngModel)]="person.birthday" (blur)="validateDate(dateInput, snackbar)"/>
-              <label igxLabel for="email">Birthday</label>
-          </div>
-          <div class="igx-form-group">
-            <input igxInput #ssn name="socialSecurityNumber" type="text" [igxMask]="'###-##-####'" [(ngModel)]="person.socialSecurityNumber" (blur)="validateSSN(ssn, snackbar)"/>
-            <label igxLabel for="socialSecurityNumber">Social Security Number</label>
-          </div>
-          <igx-snackbar #snackbar></igx-snackbar>
-        </form>
-      </article>
-    </section>
-</div>
+<form class="input-sample" action="/" method="POST">
+    <h4>Personal Data</h4>
+    <br />
+    <div class="igx-form-group">
+        <input igxInput name="name" type="text" [(ngModel)]="person.name" required  />
+        <label igxLabel for="name">Name*</label>
+    </div>
+    <div class="igx-form-group">
+        <input igxInput #dateInput name="birthday" type="text" [igxMask]="'00/00/0000'" [(ngModel)]="person.birthday" (blur)="validateDate(dateInput, snackbar)"/>
+        <label igxLabel for="email">Birthday</label>
+    </div>
+    <div class="igx-form-group">
+        <input igxInput #ssn name="socialSecurityNumber" type="text" [igxMask]="'###-##-####'" [(ngModel)]="person.socialSecurityNumber" (blur)="validateSSN(ssn, snackbar)"/>
+        <label igxLabel for="socialSecurityNumber">Social Security Number</label>
+    </div>
+    <igx-snackbar #snackbar></igx-snackbar>
+</form>
+
 ```
 
 ```typescript
@@ -196,33 +196,36 @@ export class Person {
 }
 ```
 
-### API Summary
-The following tables summarize some of the useful **igxMask** directive inputs and outputs.
+### API まとめ
+
+以下の表は便利な **igxMask** ディレクティブの入力および出力を説明します。
 
 <div class="divider--half"></div>
 
-#### Inputs
-The following inputs are available for the **igxMask** directive:
+#### 入力
 
-| Name | Type | Description |
+以下の入力は **igxMask** ディレクティブで利用できます。
+
+| 名前 | 型 | 説明 |
 | :--- | :--- | :--- |
-| `igxMask` | string | Specifies the current mask. |
-| `promptChar` | string | Specifies the character representing a fillable spot in the mask. By default, the prompt char is "_". |
-| `includeLiterals` | boolean | Specifies if the binded value includes the formatting symbols.  |
+| `igxMask` | string | 現在の入力マスクを指定します。 |
+| `promptChar` | string | マスクで入力可能な文字を表すキャラクターを指定します。デフォルトでプロンプト文字は "_" です。 |
+| `includeLiterals` | boolean | バインドされた値が書式設定記号を含むかどうかを指定します。  |
 
 <div class="divider--half"></div>
 
-#### Outputs
-The following outputs are available for the **igxMask** directive:
+#### 出力
 
-| Name | Description |
+以下の出力は **igxMask** ディレクティブで利用できます。
+
+| 名前 | 説明 |
 | :--- | :--- |
-| `onValueChange`  | Emits an event each time the value changes. The event parameter provides `rawValue` and `formattedValue` properties. |
+| `onValueChange`  | 値が変更されたときにイベントを発生します。イベント パラメーターは `rawValue` および `formattedValue` プロパティを提供します。 |
 
 
-###Additional Resources
+### 追加のリソース
 
 <div class="divider--half"></div>
-Our community is active and always welcoming to new ideas.
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+是非コミュニティに参加してください。
+* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
