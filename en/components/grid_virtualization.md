@@ -7,8 +7,8 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ## Grid Virtualization and Performance
 
 <p class="highlight">Many modern applications require displaying big data in a way that is performant and seamless to the end user.
-For this reason the Angular Data Grid control now utilizes our `igxForOf` directive and virtualizes its content both vertically (the data records) and horizontally (the columns), allowing the user to scroll through a large set of data smoothly with optimal performance.
-By utilizing the `igxForOf` directive the DataGrid now optimizes DOM rendering and memory consumption by rendering only what is currently visible in the view port and swapping the displayed data while the user scrolls the data horizontally/vertically.</p>
+For this reason the `igxGrid` control now utilizes the `igxForOf` directive and virtualizes its content both vertically (the data records) and horizontally (the columns), allowing the user to scroll through a large set of data smoothly with optimal performance.
+By utilizing the `igxForOf` directive the Data Grid now optimizes DOM rendering and memory consumption by rendering only what is currently visible in the view port and swapping the displayed data while the user scrolls the data horizontally/vertically.</p>
 <div class="divider"></div>
 
 ### Grid Virtualization Demo
@@ -23,20 +23,18 @@ By utilizing the `igxForOf` directive the DataGrid now optimizes DOM rendering a
 
 ### Enabling Virtualization
 
-Virtualization requires the following settings to be applied in order to take affect.
-
-The size of the related grid dimension should be set.
+Virtualization is automatically enabled if the size of the related grid dimension is set.
 
 *   height for vertical (row) virtualization. Can be set in pixels ("500px") or percentage("50%").
 
 *   width for horizontal (column) virtualization. Can be set in pixels ("500px") or percentage("50%").
 
-If the related dimension is not set then virtualization will be disabled.
+If the related dimension is not set then the respective row/column virtualization will be disabled.
 
-The size of the data chunks are determined by the size of the related virtualized elements.
+The size of the data chunks are determined by:
 
 *   The row height for the vertical (row) virtualization. This is determined by the `rowHeight` option and is 50(px) by default.
-*   The individual column widths in pixels for the horizontal (column) virtualization. They can be determiend by either setting explicit width for each column component or setting the grid's `columnWidth` option, which will be applied to all columns that don't have explicit width set.
+*   The individual column widths in pixels for the horizontal (column) virtualization. They can be determined by either setting explicit width for each column component or setting the grid's `columnWidth` option, which will be applied to all columns that don't have explicit width set.
 
 Not specifying the required sizes will, in most cases, create a grid that is not virtualized. For example a grid with no height will render ***all*** rows at once and grow naturally based on their total size, while a grid that has set width but with columns without one is expected to render them in the available space without a scrollbar. The latter applies to grids with column widths in percentages (%) as well.
 
