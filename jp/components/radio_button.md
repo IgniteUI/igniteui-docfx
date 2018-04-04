@@ -54,9 +54,9 @@ export class AppModule {}
 <iframe src='{environment:demosBaseUrl}/radio-sample-1' width="100%" height="100%" seamless frameBorder="0"></iframe>
 </div>
 
-### プロパティ
+### 
 
-ラジオ ボタンをグループで追加します。上記のコードに 4 つのラジオ ボタンを追加します。各ボタンは特定の背景色を適用します。含まれる div 要素の backgroundColor プロパティをコンポーネントの selectedColor プロパティにバインドします。selectedColor は NgModel ディレクティブによって双方向バインディングが設定されます。ユーザーが別のラジオ ボタン (色) を選択したときに値が更新されます。
+ラジオ ボタンをグループに追加します。上記のコードにラジオ ボタンを 4 つ追加し、各ボタンに特定の背景色を適用します。更に含まれる div 要素の backgroundColor プロパティをコンポーネントの selectedColor プロパティにバインドし、selectedColor に NgModel ディレクティブによって双方向バインディングを設定します。これによりユーザーが他のラジオ ボタン (色) を選択したときに値が更新されます。
 
 ```typescript
 // radiogroup.component.ts
@@ -84,7 +84,7 @@ public colors = ['Yellow', 'Red', "Green", "Transparent"];
 
 双方向バインディングで ngModel ディレクティブを使用する前に、FormsModule をインポートし、NgModule の imports リストに追加する必要があります。
 
-以上を実行すると結果が以下のようになります。
+以上を実行すると以下のような結果になります。
 
 <div class="sample-container" style="height: 300px">
 <iframe src='{environment:demosBaseUrl}/radio-sample-2' width="100%" height="100%" seamless frameBorder="0"></iframe>

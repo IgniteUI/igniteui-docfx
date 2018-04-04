@@ -320,10 +320,6 @@ and in the template of the component:
 
 **Note**: The grid `autoGenerate` property is best to be avoided when binding to remote data for now. It assumes that the data is available in order to inspect it and generate the appropriate columns. This is usually not the case until the remote service responds, and the grid will throw an error. Making `autoGenerate` available, when binding to remote service, is on our roadmap for future versions.
 
-### Virtualization
-
-The grid supports both horizontal and vertical DOM virtualization. In order to activate it make sure to set either the `height` or `width` property of the grid.
-
 ### CRUD operations
 
 The `IgxGridComponent` provides a straigtforward API for basic CRUD operations.
@@ -543,6 +539,197 @@ public ngOnInit() {
     ];
 }
 ```
+<div class="divider--half"></div>
+
+### Summaries
+> [!NOTE]
+> The summary of the column is a **function of all column values**, even if paging, filtering or sorting is applied.
+ 
+Grid **summaries** can also be enabled on a per-column level, which means that you can activate it only for columns that you need to. **Grid summaries** gives you a predefined set of default summaries, depending on the type of data in the column, so that you can save some time:
+
+For `string` and `boolean` data types, the following function is available:
+ - count
+
+For `number` data type, the following functions are available:
+ - count
+ - min
+ - max
+ - average
+ - sum
+
+For `date` data type, the following functions are available:
+ - count
+ - earliest
+ - latest
+
+**Grid summaries** are enabled per-column by setting `hasSummary` property to `true`. It is also important to keep in mind that the summaries for each column are resolved according to the column data type. In the `igx-grid` the default column data type is `string`, so if you want `number` or `date` specific summaries you should specify the `dataType` property as `number` or `date`.
+
+```typescript
+<igx-grid #grid1 [data]="data" [autoGenerate]="false" height="800px" width="800px" (onColumnInit)="initColunm($event)" >
+    <igx-column field="ProductID" header="Product ID" width="200px"  [sortable]="true">
+    </igx-column>
+    <igx-column field="ProductName" header="Product Name" width="200px" [sortable]="true" [hasSummary]="true">
+    </igx-column>
+    <igx-column field="ReorderLevel" width="200px" [editable]="true" [dataType]="'number'" [hasSummary]="true">
+    </igx-column>
+</igx-grid>
+```
+
+The other way to enable/disable summaries for a specific column or a list of columns is to use the public method `enableSummaries`/`disableSummaries` of the **igx-grid**.
+
+```typescript
+<igx-grid #grid1 [data]="data" [autoGenerate]="false" height="800px" width="800px" (onColumnInit)="initColunm($event)" >
+    <igx-column field="ProductID" header="Product ID" width="200px"  [sortable]="true">
+    </igx-column>
+    <igx-column field="ProductName" header="Product Name" width="200px" [sortable]="true" [hasSummary]="true">
+    </igx-column>
+    <igx-column field="ReorderLevel" width="200px" [editable]="true" [dataType]="'number'" [hasSummary]="false">
+    </igx-column>
+</igx-grid>
+<button (click)="enableSummary()">Enable Summary</button>
+<button (click)="disableSummary()">Disable Summary </button>
+```
+```typescript
+public enableSummary() {
+    this.grid1.enableSummaries([{fieldName: "ReorderLevel", customSummary: this.mySummary},
+    {fieldName: "ProductID"}]);
+  }
+public disableSummary() {
+    this.grid1.disableSummaries("ProductName");
+}
+```
+
+If these functions do not fulfill your requirements you can provide a custom summary for the specific columns. In order to achieve this you have to override one of the base classes `IgxSummaryOperand`, `IgxNumberSummaryOperand` or `IgxDateSummaryOperand` according to the column data type and your needs. In this way you can redefine the existing function or you can add new functions. `IgxSummaryOperand`  class provides the default implementation only for `count` method. `IgxNumberSummaryOperand` extends `IgxSummaryOperand` and provides implementation for the `min`, `max`, `sum` and `average`. `IgxDateSummaryOperand` extends `IgxSummaryOperand`and additionally gives you `earliest` and `latest`.
+
+```typescript
+import { IgxSummaryResult, IgxSummaryOperand, IgxNumberSummaryOperand, IgxDateSummaryOperand } from 'igniteui-angular/grid/grid-summary';
+
+class MySummary extends IgxNumberSummaryOperand {
+
+  constructor() {
+    super();
+  }
+  operate(data?: any[]): IgxSummaryResult[] {
+    const result = super.operate(data);
+    result.push({
+      key: 'test',
+      label: 'Test',
+      summaryResult: data.filter(rec => rec > 10 && rec < 30).length
+    });
+
+    return result;
+  }
+}
+```
+
+In the code below you can see that method **operate** returns a list of **IgxSummaryResult**, which is an interface.
+```typescript
+interface IgxSummaryResult {
+    key: string;
+    label: string;
+    summaryResult: any;
+}
+```
+And now let's add our custom summary to the column `UnitsInStock`. We will achieve that by setting the `summaries` property to the class we create below.
+```typescript
+<igx-grid #grid1 [data]="data" [autoGenerate]="false" height="800px" width="800px" (onColumnInit)="initColunm($event)" >
+    <igx-column field="ProductID" width="200px"  [sortable]="true">
+    </igx-column>
+    <igx-column field="ProductName" width="200px" [sortable]="true" [hasSummary]="true">
+    </igx-column>
+    <igx-column field="UnitsInStock" width="200px" [dataType]="'number'" [hasSummary]="true" [summaries]="mySummary" [sortable]="true">
+    </igx-column>
+    <igx-column field="ReorderLevel" width="200px" [editable]="true" [dataType]="'number'" [hasSummary]="true">
+    </igx-column>
+</igx-grid>
+```
+
+```typescript
+...
+export class GridComponent implements OnInit {
+
+  mySummary = MySummary;
+
+    ....
+}
+```
+
+It is good to keep in mind that in order to improve performance, **igx-grid** cache all summaries and recalculate them if you perform CRUD operations over your data. But if your data source is modified outside the **igx-grid**, you need to explicitly force the **igx-grid** to recalculate your summaries by invoking the method `clearSummaryCache()`.
+
+```typescript
+<igx-grid #grid1 [data]="data" [autoGenerate]="false" height="800px" width="800px" (onColumnInit)="initColunm($event)" >
+    <igx-column field="ProductID" width="200px"  [sortable]="true">
+    </igx-column>
+    <igx-column field="ProductName" width="200px" [sortable]="true" [hasSummary]="true">
+    </igx-column>
+    <igx-column field="UnitsInStock" width="200px" [dataType]="'number'" [hasSummary]="true" [summaries]="mySummary" [sortable]="true">
+    </igx-column>
+    <igx-column field="ReorderLevel" width="200px" [editable]="true" [dataType]="'number'" [hasSummary]="true">
+    </igx-column>
+</igx-grid>
+<button (click)="updateData()">Update Data</button>
+```
+
+```typescript
+...
+export class GridComponent implements OnInit {
+
+ updateData() {
+    const d = [].concat(this.data).concat(this.data.slice(0, 15));
+    this.data = d;
+    this.grid1.clearSummaryCache();
+  }
+}
+```
+
+### Column Pinning
+
+**Column Pinning** is available through the **igx-grid** API. Each column can be pinned as long as the pinned area does not become wider than the grid itself. Column pinning is controlled through the `pinned` input of the `igx-column`. Pinned columns are always rendered on the left side of the grid and stay fixed through horizontal scrolling of the unpinned columns in the grid body.
+
+```html
+<igx-grid #grid1 [data]="data | async" [width]="700px" [autoGenerate]="false" [paging]="true" [perPage]="6" (onColumnInit)="initColumns($event)"
+    (onSelection)="selectCell($event)">
+    <igx-column [field]="Name" [pinned]="true"></igx-column>
+    <igx-column [field]="AthleteNumber"></igx-column>
+    <igx-column [field]="TrackProgress"></igx-column>
+</igx-grid>
+```
+
+You may also use the grid's `pinColumn` or `unpinColumn` methods of the `IgxGridComponent` to pin or unpin columns by their field name:
+
+```typescript
+this.grid.pinColumn("AthleteNumber");
+this.grid.unpinColumn("Name");
+```
+
+Both methods return a boolean value indicating whether their respective operation is successful or not. Usually the reason they fail is that the column is already in the desired state. `pinColumn` also fails when the result would mean that the pinned area becomes larger than or the same size as the grid itself. Consider the following example:
+
+```html
+<igx-grid #grid1 [data]="data | async" [width]="300px" [autoGenerate]="false">
+    <igx-column [field]="Name" [width]="200px" [pinned]="true"></igx-column>
+    <igx-column [field]="AthleteNumber" [width]="200px"></igx-column>
+</igx-grid>
+```
+
+```typescript
+var succeed = this.grid.pinColumn("AthleteNumber"); // pinning fails and succeed will be false
+```
+
+If pinning the `AthleteNumber` column is allowed the pinned area would exceed the grid's width.
+
+A column is pinned to the right of the rightmost pinned column. Changing the order of the pinned columns can be done by subscribing to the `onColumnPinning` event and changing the `insertAtIndex` property of the event arguments to the desired position index.
+
+```html
+<igx-grid #grid1 [data]="data | async" [autoGenerate]="true" (onColumnPinning)="columnPinning($event)"></igx-grid>
+```
+
+```typescript
+public columnPinning(event) {
+    if (event.column.field === "Name") {
+        event.insertAtIndex = 0;
+    }
+}
+```
 
 <div class="divider--half"></div>
 
@@ -585,6 +772,7 @@ A list of the events emitted by the **igx-grid**:
 |`onPagingDone`|Emitted when paging is performed. Returns an object consisting of the previous and the new page.|
 |`onRowAdded`|Emitted when a row is being added to the grid through the API. Returns the data for the new row object.|
 |`onRowDeleted`|Emitted when a row is deleted through the grid API. Returns the row object being removed.|
+|`onColumnPinning`|Emitted when a column is pinned through the grid API. The index that the column is inserted at may be changed through the `insertAtIndex` property.|
 
 
 <div class="divider--half"></div>
@@ -600,7 +788,7 @@ Defining handlers for these event emitters is done using declarative event bindi
 
 ### Methods
 
-Here is a list of all public methods exposed by the **igx-grid**:
+Here is a list of all public methods exposed by **igx-grid**:
 
 |Signature|Description|
 |--- |--- |
@@ -617,10 +805,17 @@ Here is a list of all public methods exposed by the **igx-grid**:
 |`sort(name: string, direction, ignorecase)`|Sorts a single column.|
 |`sort(expressions: Array)`|Sorts the grid columns based on the provided array of sorting expressions.|
 |`clearSort(name?: string)`|If `name` is provided, clears the sorting state of the corresponding column, otherwise clears the sorting state of all columns.|
+|`enableSummaries(fieldName: string, customSummary?: any)`|Enable summaries for the specified column and apply your `customSummary`. If you do not provide the `customSummary`, then the default summary for the column data type will be applied.|
+|`enableSummaries(expressions: Array)`|Enable summaries for the columns and apply your `customSummary` if it is provided.|
+|`disableSummaries(fieldName: string)`|Disable summaries for the specified column.|
+|`disableSummaries(columns: string[])`|Disable summaries for the listed columns.|
+|`clearSummaryCache()`|Delete all cached summaries and force recalculation.|
 |`previousPage()`|Goes to the previous page if paging is enabled and the current page is not the first.|
 |`nextPage()`|Goes to the next page if paging is enabled and current page is not the last.|
 |`paginate(page: number)`|Goes to the specified page if paging is enabled. Page indices are 0 based.|
 |`markForCheck()`|Manually triggers a change detection cycle for the grid and its children.|
+|`pinColumn(name: string): boolean`|Pins a column by field name. Returns whether the operation is successful.|
+|`unpinColumn(name: string): boolean`|Unpins a column by field name. Returns whether the operation is successful.|
 
 
 <div class="divider--half"></div>
@@ -636,6 +831,8 @@ Inputs available on the **IgxGridColumnComponent** to define columns:
 |`sortable`|boolean|Set column to be sorted or not|
 |`editable`|boolean|Set column values to be editable|
 |`filterable`|boolean|Set column values to be filterable|
+|`hasSummary`| boolean  |Sets whether or not the specific column has summaries enabled.|
+|`summaries`| IgxSummaryOperand |Set custom summary for the specific column|
 |`hidden`|boolean|Visibility of the column|
 |`movable`|boolean|Column moving|
 |`width`|string|Columns width|
@@ -647,6 +844,15 @@ Inputs available on the **IgxGridColumnComponent** to define columns:
 |`filteringIgnoreCase`|boolean|Ignore capitalization of strings when filtering is applied. Defaults to _true_.|
 |`sortingIgnoreCase`|boolean|Ignore capitalization of strings when sorting is applied. Defaults to _true_.|
 |`dataType`|DataType|One of string, number, boolean or Date. When filtering is enabled the filter UI conditions are based on the `dataType` of the column. Defaults to `string` if it is not provided. With `autoGenerate` enabled the grid will try to resolve the correct data type for each column based on the data source.|
+|`pinned`|boolean|Set column to be pinned or not|
+
+### Methods
+Here is a list of all public methods exposed by **IgxGridColumnComponent**:
+
+|Signature|Description|
+|--- |--- |
+|`pin(): boolean`|Pins the column. Returns if the operation is successful.|
+|`unpin(): boolean`|Unpins the column. Returns if the operation is successful.|
 
 <div class="divider--half"></div>
 
@@ -741,7 +947,6 @@ import {
 |`notNull`|`(target: any)`|Returns true if `target` is not `null`.|
 |`empty`|`(target: any)`|Returns true if `target` is either `null` or `undefined`.|
 |`notEmpty`|`(target: any)`|Returns true if target is not `null` or `undefined`.|
-
 
 <div class="divider--half"></div>
 
