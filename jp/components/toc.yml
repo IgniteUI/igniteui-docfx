@@ -3,7 +3,7 @@
 - name: Data Grid 
   href: grid.md
   items:
-    - name: Grid Virtualization and Performance
+    - name: Virtualization and performance
       href: grid_virtualization.md
 - name: List View 
   href: list.md

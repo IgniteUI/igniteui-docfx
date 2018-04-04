@@ -55,7 +55,7 @@ Without information about the sizes of the container and the items before render
 
 Please refer to the below table for details on how each combination of configurations would affect the end result.
 
-| Set Grid width     | Set Grid height    | Set `rowHeight`    | Set `columnWidth` or all columns have explicitly set width | Result                                                |
+| Set Grid width     | Set Grid height    | Set 'rowHeight'    | Set 'columnWidth' or all columns have explicitly set width | Result                                                |
 |--------------------|--------------------|--------------------|------------------------------------------------------------|-------------------------------------------------------|
 | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark:                                         | Grid with both horizontal and vertical virtualization |
 | :heavy_check_mark: | :x:                | N/A                | :heavy_check_mark:                                         | Grid with just horizontal virtualization              |
@@ -65,5 +65,6 @@ Please refer to the below table for details on how each combination of configura
 | :heavy_check_mark: | :heavy_check_mark: | :x:                | :heavy_check_mark:                                         | Invalid config                                        |
 | :heavy_check_mark: | :heavy_check_mark: | :x:                | :x:                                                        | Invalid config                                        |
 
+<br/>
 *   Setting the grid height but deliberately passing `null` for `rowHeight` is not supported
 *   Setting some of the column widths but leaving others unset without specifying `columnWidth` for the grid will result in a grid without horizontal virtualization. The exact sizes of the columns will be determined by the flex rules applied for the container.
