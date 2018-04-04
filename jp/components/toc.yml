@@ -1,6 +1,8 @@
 ﻿- name: グリッドとリスト
   header: true
 - name: Data Grid 
+    - name: Selection
+    - href: grid_selection.md
   href: grid.md
 - name: List View 
   href: list.md
