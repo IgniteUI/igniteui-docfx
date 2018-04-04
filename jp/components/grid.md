@@ -231,7 +231,7 @@ export interface NorthwindRecord {
 }
 ```
 
-サービスは `Observable<NorthwindRecord[]>` を返す `fetchData` の単一のメソッドを含みます。要求が任意の理由 (サーバーが利用不可、ネットワーク エラーなど) のため失敗すれば、`HttpClient` はエラーを返します。 失敗した _Observable_ をインターセプトしてエラーをハンドラーに渡す `catchError` 演算子を使用します。エラー ハンドラーがエラーをログに追加して有効な値を返します。
+サービスは `Observable<NorthwindRecord[]>` を返す `fetchData` の単一のメソッドを含みます。要求が任意の理由 (サーバーが利用不可、ネットワーク エラーなど) により失敗した場合、`HttpClient` はエラーを返します。失敗した _Observable_ をインターセプトしてエラーをハンドラーに渡す `catchError` 演算子を使用し、エラー ハンドラーがエラーをログに追加して有効な値を返します。
 
 ```typescript
 // northwind.service.ts
@@ -286,7 +286,7 @@ export class AppModule {}
 
 サービスを実装した後、コンポーネントのコンストラクターにインジェクトしてデータを取得するために使用します。`ngOnInit` ライフサイクル フックに最初の要求を追加します。
 
-**注**: 以下のコードでは、サービスに加入する前に _records_ プロパティを空の配列に設定しています。Http 要求は非同期です。完了するまで、_records_ プロパティが _undefined_ で、グリッドをプロパティにバインドしようとするときにエラーが発生されます。デフォルト値に初期化するか、`BehaviorSubject` を使用します。
+**注**: 以下のコードでは、サービスに加入する前に _records_ プロパティを空の配列に設定しています。Http 要求は非同期です。完了するまで _records_ プロパティは _undefined_ で、グリッドをプロパティにバインドするときにエラーが発生されます。デフォルト値に初期化するか、`BehaviorSubject` を使用します。
 
 ```typescript
 // my.component.ts
@@ -414,7 +414,7 @@ this.grid.paging = false;
 ### フィルタリング
 
 > [!NOTE]
-> フィルタリング操作がグリッドの基本データ ソースを変更**しません**。
+> フィルタリング操作では、グリッドにバインドされているデータ ソースは変更**されません**。
 
 列の `filterable` プロパティを true に設定すると、**フィルタリング**を列ごとに有効できます。
 
@@ -438,7 +438,7 @@ this.grid.paging = false;
 this.grid.filter('ProductName', 'myproduct', STRING_FILTERS.contains, true);
 ```
 
-必要なパラメーターは列フィールドおよびフィルター条件です。条件および大文字と小文字の区別が設定されない場合、列プロパティから推測されます。複数フィルターの場合、このメソッドはフィルター式の配列を受けます。
+必要なパラメーターは列フィールドおよびフィルター条件です。条件および大文字と小文字の区別が設定されない場合、列プロパティから推測されます。複数フィルターの場合、このメソッドはフィルター式の配列を受け取ります。
 
 ```typescript
 // Multi column filtering
@@ -499,7 +499,7 @@ this.grid.filteringLogic = FilteringLogic.OR;
 ### 並べ替え
 
 > [!NOTE]
-> 並べ替え操作がグリッドの基本データ ソースを変更**しません**。
+> 並べ替え操作では、グリッドにバインドされているデータ ソースは変更**されません**。
 
 **並べ替え**も列ごとのレベルで有効化されます。つまり、**igx-grid** に並べ替え可能な列および並べ替え可能ではない列の両方を含むことが可能です。`sortable` 入力によって実行できます。グリッド フィルターと同じように、`sortingIgnoreCase` プロパティを設定すると、大文字と小文字を区別する並べ替えを実行できます。
 
@@ -545,6 +545,202 @@ public ngOnInit() {
 
 <div class="divider--half"></div>
 
+### 集計
+
+> [!NOTE]
+> 列の集計は、ページング、フィルタリング、または並べ替えが適用された場合も**列値すべての関数**です。
+ 
+グリッド**集計**を列ごとに有効できます。つまり、必要な列のみアクティブ化できます。**グリッド集計**は、列のデータ型に基づいてデフォルト集計の定義済みセットを提供します。
+
+`string` および `boolean` データ型の場合、以下の関数が利用できます。
+ - count
+
+`number` データ型の場合、以下の関数が利用できます。
+ - count
+ - min
+ - max
+ - average
+ - sum
+
+`date` データ型の場合、以下の関数が利用できます。
+ - count
+ - earliest
+ - latest
+
+列で `hasSummary` プロパティを `true` に設定すると**グリッド集計**が有効になります。各列の集計は列のデータ型に基づいて解決されます。`igx-grid` でデフォルトの列データ型は `string` のため、`number` または `date` の集計を適用するには、`dataType` プロパティを `number` または `date` に設定します。
+
+```typescript
+<igx-grid #grid1 [data]="data" [autoGenerate]="false" height="800px" width="800px" (onColumnInit)="initColunm($event)" >
+    <igx-column field="ProductID" header="Product ID" width="200px"  [sortable]="true">
+    </igx-column>
+    <igx-column field="ProductName" header="Product Name" width="200px" [sortable]="true" [hasSummary]="true">
+    </igx-column>
+    <igx-column field="ReorderLevel" width="200px" [editable]="true" [dataType]="'number'" [hasSummary]="true">
+    </igx-column>
+</igx-grid>
+```
+
+特定の列または列のリストで集計を有効/無効にするもう 1 つの方法として **igx-grid** の `enableSummaries`/`disableSummaries` 公開メソッドがあります。
+
+```typescript
+<igx-grid #grid1 [data]="data" [autoGenerate]="false" height="800px" width="800px" (onColumnInit)="initColunm($event)" >
+    <igx-column field="ProductID" header="Product ID" width="200px"  [sortable]="true">
+    </igx-column>
+    <igx-column field="ProductName" header="Product Name" width="200px" [sortable]="true" [hasSummary]="true">
+    </igx-column>
+    <igx-column field="ReorderLevel" width="200px" [editable]="true" [dataType]="'number'" [hasSummary]="false">
+    </igx-column>
+</igx-grid>
+<button (click)="enableSummary()">Enable Summary</button>
+<button (click)="disableSummary()">Disable Summary </button>
+```
+```typescript
+public enableSummary() {
+    this.grid1.enableSummaries([{fieldName: "ReorderLevel", customSummary: this.mySummary},
+    {fieldName: "ProductID"}]);
+  }
+public disableSummary() {
+    this.grid1.disableSummaries("ProductName");
+}
+```
+
+この関数が要件に合わない場合、指定した列にカスタム集計を提供できます。これを実装するには、列のデータ型に基づいて `IgxSummaryOperand`、`IgxNumberSummaryOperand`、または `IgxDateSummaryOperand` の基本クラスをオーバーライドします。このように既存の関数を変更または新しい関数を追加できます。`IgxSummaryOperand` クラスのデフォルト集計は `count` メソッドのみです。`IgxNumberSummaryOperand` は `IgxSummaryOperand` を拡張し、`min`、`max`、`sum`、および `average` 集計を提供します。`IgxDateSummaryOperand` は `IgxSummaryOperand` を拡張し、`earliest` および `latest` を提供します。
+
+```typescript
+import { IgxSummaryResult, IgxSummaryOperand, IgxNumberSummaryOperand, IgxDateSummaryOperand } from 'igniteui-angular/grid/grid-summary';
+
+class MySummary extends IgxNumberSummaryOperand {
+
+  constructor() {
+    super();
+  }
+  operate(data?: any[]): IgxSummaryResult[] {
+    const result = super.operate(data);
+    result.push({
+      key: 'test',
+      label: 'Test',
+      summaryResult: data.filter(rec => rec > 10 && rec < 30).length
+    });
+
+    return result;
+  }
+}
+```
+
+以下のコードで、`operate` メソッドはインターフェイスである `IgxSummaryResult` のリストを返します。
+
+```typescript
+interface IgxSummaryResult {
+    key: string;
+    label: string;
+    summaryResult: any;
+}
+```
+
+`UnitsInStock` 列にカスタム集計を追加します。`summaries` プロパティを以下に作成するクラスに設定します。
+
+```typescript
+<igx-grid #grid1 [data]="data" [autoGenerate]="false" height="800px" width="800px" (onColumnInit)="initColunm($event)" >
+    <igx-column field="ProductID" width="200px"  [sortable]="true">
+    </igx-column>
+    <igx-column field="ProductName" width="200px" [sortable]="true" [hasSummary]="true">
+    </igx-column>
+    <igx-column field="UnitsInStock" width="200px" [dataType]="'number'" [hasSummary]="true" [summaries]="mySummary" [sortable]="true">
+    </igx-column>
+    <igx-column field="ReorderLevel" width="200px" [editable]="true" [dataType]="'number'" [hasSummary]="true">
+    </igx-column>
+</igx-grid>
+```
+
+```typescript
+...
+export class GridComponent implements OnInit {
+
+  mySummary = MySummary;
+
+    ....
+}
+```
+
+パフォーマンスを向上するため、**igx-grid** はすべての集計をキャッシュし、データで CRUD 操作を実行する場合に再計算します。データ ソースが **igx-grid** 以外に変更される場合、`clearSummaryCache()` メソッドを呼び出して **igx-grid** の集計の再計算を実行する必要があります。
+
+```typescript
+<igx-grid #grid1 [data]="data" [autoGenerate]="false" height="800px" width="800px" (onColumnInit)="initColunm($event)" >
+    <igx-column field="ProductID" width="200px"  [sortable]="true">
+    </igx-column>
+    <igx-column field="ProductName" width="200px" [sortable]="true" [hasSummary]="true">
+    </igx-column>
+    <igx-column field="UnitsInStock" width="200px" [dataType]="'number'" [hasSummary]="true" [summaries]="mySummary" [sortable]="true">
+    </igx-column>
+    <igx-column field="ReorderLevel" width="200px" [editable]="true" [dataType]="'number'" [hasSummary]="true">
+    </igx-column>
+</igx-grid>
+<button (click)="updateData()">Update Data</button>
+```
+
+```typescript
+...
+export class GridComponent implements OnInit {
+
+ updateData() {
+    const d = [].concat(this.data).concat(this.data.slice(0, 15));
+    this.data = d;
+    this.grid1.clearSummaryCache();
+  }
+}
+```
+
+### 列のピン固定
+
+**列のピン固定**は **igx-grid** API で利用できます。ピン固定領域の幅がグリッドより大きくならない限り各列をピン固定できます。列のピン固定は `igx-column` の `pinned` 入力によって制御されます。ピン固定列は常にグリッドの左側に描画され、グリッド本体のピン固定されていない列の水平スクロールで固定されます。
+
+```html
+<igx-grid #grid1 [data]="data | async" [width]="700px" [autoGenerate]="false" [paging]="true" [perPage]="6" (onColumnInit)="initColumns($event)"
+    (onSelection)="selectCell($event)">
+    <igx-column [field]="Name" [pinned]="true"></igx-column>
+    <igx-column [field]="AthleteNumber"></igx-column>
+    <igx-column [field]="TrackProgress"></igx-column>
+</igx-grid>
+```
+
+グリッドの `IgxGridComponent` の `pinColumn` または `unpinColumn` メソッドを使用してフィールド名によって列をピン固定またはピン固定解除できます。
+
+```typescript
+this.grid.pinColumn("AthleteNumber");
+this.grid.unpinColumn("Name");
+```
+
+両方のメソッドは操作に成功したかどうかを示すブール値を返します。よくある失敗原因に列が既にその状態である場合ことがあります。`pinColumn` は、ピン固定領域がグリッドのサイズ以上である場合も失敗します。以下はその例です。
+
+```html
+<igx-grid #grid1 [data]="data | async" [width]="300px" [autoGenerate]="false">
+    <igx-column [field]="Name" [width]="200px" [pinned]="true"></igx-column>
+    <igx-column [field]="AthleteNumber" [width]="200px"></igx-column>
+</igx-grid>
+```
+
+```typescript
+var succeed = this.grid.pinColumn("AthleteNumber"); // pinning fails and succeed will be false
+```
+
+`AthleteNumber` 列をピン固定すると、ピン固定領域がグリッドの幅より大きくなります。
+
+列をピン固定すると、一番右に配置されたピン固定列の右にピン固定されます。ピン固定列の順序を変更するには、`onColumnPinning` イベントでイベント引数の `insertAtIndex` プロパティを適切な位置インデックスに変更します。
+
+```html
+<igx-grid #grid1 [data]="data | async" [autoGenerate]="true" (onColumnPinning)="columnPinning($event)"></igx-grid>
+```
+
+```typescript
+public columnPinning(event) {
+    if (event.column.field === "Name") {
+        event.insertAtIndex = 0;
+    }
+}
+```
+
+<div class="divider--half"></div>
+
 ## API
 
 ### 入力
@@ -583,6 +779,7 @@ public ngOnInit() {
 |`onPagingDone`|ページングが実行されたときに発生されます。前のページおよび新しいページを含むオブジェクトを返します。|
 |`onRowAdded`|行が API によってグリッドに追加されている間に発生されます。新しい行オブジェクトのデータを返します。|
 |`onRowDeleted`|行がグリッド API によって削除されたときに発生されます。削除されている行オブジェクトを返します。|
+|`onColumnPinning`|列がグリッド API によってピン固定されたときに発生されます。列に挿入するインデックスは `insertAtIndex` プロパティによって変更できます。|
 
 <div class="divider--half"></div>
 
@@ -601,8 +798,8 @@ public ngOnInit() {
 
 |構文|説明 |
 |--- |--- |
-|`getColumnByName(name: string)`|`name` と等しいフィールド プロパティを持つ列オブジェクトを返します。このような列がない場合に `undefined` を返します。|
-|`getCellByColumn(rowIndex: number, columnField: string)`|列が `columnField` で、行が `rowIndex` である列のセル オブジェクトを返します。ない場合に `undefined` を返します。|
+|`getColumnByName(name: string)`|`name` と等しいフィールド プロパティを持つ列オブジェクトを返します。このような列がない場合は `undefined` を返します。|
+|`getCellByColumn(rowIndex: number, columnField: string)`|列が `columnField` で、行が `rowIndex` である列のセル オブジェクトを返します。ない場合は `undefined` を返します。|
 |`addRow(data: any)`|新しい行オブジェクトを作成し、データ レコードをデータ ソースの終了に追加します。|
 |`deleteRow(rowIndex: number)`|行オブジェクトおよび相対するデータ レコードをデータ ソースから削除します。|
 |`updateRow(value: any, rowIndex: number)`|行オブジェクトおよびデータ ソース レコードを渡された値で更新します。|
@@ -614,10 +811,17 @@ public ngOnInit() {
 |`sort(name: string, direction, ignorecase)`|単一の列を並べ替えます。|
 |`sort(expressions: Array)`|グリッド列を提供した並べ替え式の配列に基づいて並べ替えます。|
 |`clearSort(name?: string)`|`name` が提供された場合、相対する列の並べ替え状態をクリアします。それ以外の場合、すべての列の並べ替え状態をクリアします。|
+|`enableSummaries(fieldName: string, customSummary?: any)`|指定した列で集計を有効にし、`customSummary` を適用します。`customSummary` を設定しない場合、列のデータ型のデフォルト集計が適用されます。|
+|`enableSummaries(expressions: Array)`|列で集計を有効にし、提供される場合に `customSummary` を適用します。|
+|`disableSummaries(fieldName: string)`|指定した列で集計を無効にします。|
+|`disableSummaries(columns: string[])`|配列の列で集計を無効にします。|
+|`clearSummaryCache()`|すべてのキャッシュされた集計を削除し、再計算を実行します。|
 |`previousPage()`|ページングが有効で、現在のページが最初のページではない場合に前のページに移動します。|
 |`nextPage()`|ページングが有効で、現在のページが最後のページではない場合に次のページに移動します。|
 |`paginate(page: number)`|ページングが有効の場合、指定したページに移動します。ページ インデックスは 0 から開始します。|
 |`markForCheck()`|グリッドおよびすべての子要素に変更検出サイクルを手動的にトリガーします。|
+|`pinColumn(name: string): boolean`|列をフィールド名によってピン固定します。操作が成功したかどうかを返します。|
+|`unpinColumn(name: string): boolean`|列をフィールド名によってピン固定解除します。操作が成功したかどうかを返します。|
 
 <div class="divider--half"></div>
 
@@ -632,7 +836,9 @@ public ngOnInit() {
 | `header` | string | 列ヘッダー テキスト。 |
 | `sortable` | boolean | 列が並べ替え可能かどうかを設定します。 |
 | `editable` | boolean | 列値を編集可能に設定します。 |
-| `filtering` | boolean | 列値をフィルター可能に設定します。 |
+| `filterable` | boolean | 列値をフィルター可能に設定します。 |
+|`hasSummary`| boolean  |特定の列に集計が有効化されるかどうかを設定します。|
+|`summaries`| IgxSummaryOperand |指定した列にカスタム集計を設定します。|
 | `hidden` | boolean | 列の表示状態。 |
 | `movable` | boolean | 列移動。 |
 | `width` | string | 列幅。 |
@@ -644,6 +850,15 @@ public ngOnInit() {
 |`filteringIgnoreCase`|boolean|フィルタリングが適用される場合に文字列の大文字化を無視します。デフォルトは _true_ です。|
 |`sortingIgnoreCase`|boolean|並べ替えが適用される場合に文字列の大文字化を無視します。デフォルトは _true_ です。|
 |`dataType`|DataType|string、number、boolean、または Date。フィルタリングが有効な場合、フィルター UI 条件は列の `dataType` に基づきます。設定されない場合、デフォルト値は `string` です。`autoGenerate` が有効な場合、グリッドはデータ ソースに基づいて各列の正しいデータ型を解決しようとします。|
+|`pinned`|boolean|列がピン固定かどうかを設定します。|
+
+### メソッド
+**IgxGridColumnComponent** によって公開されるすべてのパブリック メソッドのリスト:
+
+|構文|説明|
+|--- |--- |
+|`pin(): boolean`|列をピン固定します。操作が成功したかどうかを返します。|
+|`unpin(): boolean`|列をピン固定解除します。操作が成功したかどうかを返します。|
 
 <div class="divider--half"></div>
 

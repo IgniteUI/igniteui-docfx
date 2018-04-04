@@ -5,5 +5,12 @@
     },
     "sideaffix": {
         "title": "トピック コンテンツ:"
+    },
+    "noteBlocks": {
+        "note": "注",
+        "warning": "警告",
+        "tip": "ヒント",
+        "important": "重要な情報",
+        "caution": "注意"
     }
 }

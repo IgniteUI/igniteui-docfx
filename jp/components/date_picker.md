@@ -149,6 +149,59 @@ public formatter = (date: Date) => {
 </igx-datePicker>
 ```
 
+> [!NOTE]
+> Internet Explorer および Edge ブラウザーの場合、両方のブラウザーがこの機能を提供する Intl API を実装しないため、日付部分は空の文字列です。 ([formatToParts](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat/formatToParts) を参照)
+
+このブラウザーをサポートするには、[ngIf](https://angular.io/api/common/NgIf#using-non-inlined-then-template) ディレクティブを使用する代わりのテンプレートを使用します。
+
+```html
+<!-- app.component.html-->
+<igx-datePicker id="date-picker" locale="ja-JP" [value]="date" #component>
+    <div *ngIf="formatParts; else parseTemplate">
+        <ng-template igxCalendarHeader let-format>
+            {{ format.month.combined | titlecase }} {{ format.day.combined }} {{ format.weekday.combined }}
+        </ng-template>
+        <ng-template igxCalendarSubheader let-format>
+            <span class="date__el" (click)="format.yearView()">{{ format.year.combined }}</span>
+            <span class="date__el" (click)="format.monthView()">{{ format.month.combined | titlecase }}</span>
+        </ng-template>
+    </div>
+
+    <!-- Parse template for browsers not supporting Intl-->
+    <ng-template #parseTemplate>
+        <ng-template igxCalendarHeader let-format>
+            {{ getDatePart(format, component, 'month') | titlecase }} {{ getDatePart(format, component, 'day') }} {{ getDatePart(format, component, 'weekday') }}
+        </ng-template>
+        <ng-template igxCalendarSubheader let-format>
+            <span class="date__el" (click)="format.yearView()">{{ getDatePart(format, component, 'year') }}</span>
+            <span class="date__el" (click)="format.monthView()">{{ getDatePart(format, component, 'month') }}</span>
+        </ng-template>
+    </ng-template>
+</igx-datePicker>
+```
+
+**ngIf** は、使用するテンプレートを制御するために **formatParts** 式の値を評価します。代わりの **#parseTemplate** テンプレートを参照します。{} にある式は評価された値を返す **getDatePart** メソッドを起動します。この場合、書式設定された日付部分 (年、曜日、月など) を返します。**getDatePart** に渡されたパラメーターは、書式設定が **IgxDatePickerComponent** の locale および format オプションに基づいて設定されるために必要です。
+
+```typescript
+// app.component.ts
+public intlDateTimeFormat = new Intl.DateTimeFormat() as any;
+public formatParts: boolean = this.intlDateTimeFormat.formatToParts;
+
+public getDatePart(val: any, component: any, datePart: string) {
+    const date = val.date as Date;
+    const locale = component.locale;
+    const formatOptions: Intl.DateTimeFormatOptions = {};
+    formatOptions[datePart] = component.formatOptions[datePart];
+
+    return date.toLocaleString(locale, formatOptions);
+
+    // instead of toLocaleString we can use Intl.DateTimeFormat.format as well:
+    // const partFormatter = new Intl.DateTimeFormat(locale, formatOptions);
+    // return partFormatter.format(date);
+}
+```
+
+
 以下は結果です。
 
 <div class="sample-container loading" style="height: 580px;">
