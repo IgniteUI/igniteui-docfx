@@ -25,13 +25,17 @@ The exporting functionality is encapsulated in the `IgxExcelExporterService` cla
 
 ### Usage
 
-To start using the IgniteUI Excel Exporter first import the **IgxExcelExporterService** in the **app.module.ts** file:
+To start using the IgniteUI Excel Exporter first import the **IgxExcelExporterService** in the **app.module.ts** file and add the service to the `providers` array:
 
 ```typescript
 // app.module.ts
 
 ...
 import { IgxExcelExporterService } from "igniteui-angular/services/index";
+
+@NgModule({
+  providers: [ IgxExcelExporterService ]
+})
 
 export class AppModule {}
 ```
@@ -42,7 +46,7 @@ To initiate an export process you may use the handler of a button in your compon
 <button (click)="exportButtonHandler()">Export Data to Excel</button>
 ```
 
-To export some data in MS Excel format you need to instantiate the `IgxExcelExporterService` class and invoke its `exportData` method. This method accepts as a first argument the data you want to export and the second argument is of type `IgxExcelExporterOptions` and allows you to configure the export process.
+You may access the exporter service by defining an argument of type `IgxExcelExporterService` in the component's constructor and the Angular framework will provide an instance of the service. To export some data in MS Excel format you need to invoke the exporter service's `exportData` method. This method accepts as a first argument the data you want to export and the second argument is of type `IgxExcelExporterOptions` and allows you to configure the export process.
 
 Here is the code which will execute the export process in the component's typescript file:
 
@@ -53,15 +57,17 @@ Here is the code which will execute the export process in the component's typesc
 import { IgxExcelExporterService, IgxExcelExporterOptions } from "igniteui-angular/services/index";
 ...
 
-localData = [
+public localData = [
   { Name: "Eric Ridley", Age: "26" },
   { Name: "Alanis Brook", Age: "22" },
   { Name: "Jonathan Morris", Age: "23" }
 ];
 
-exportButtonHandler() {
-  let ees: IgxExcelExporterService = new IgxExcelExporterService();
-  ees.ExportData(this.localData, new IgxExcelExporterOptions("ExportedDataFile"));
+constructor(private excelExportService: IgxExcelExporterService) {
+}
+
+public exportButtonHandler() {
+  this.excelExportService.exportData(this.localData, new IgxExcelExporterOptions("ExportedDataFile"));
 }
 
 ```
@@ -89,17 +95,19 @@ import { IgxExcelExporterService, IgxExcelExporterOptions } from "igniteui-angul
 import { IgxGridComponent } from "igniteui-angular/grid/grid.component";
 ...
 
-@ViewChild("igxGrid1") igxGrid1: IgxGridComponent;
+@ViewChild("igxGrid1") public igxGrid1: IgxGridComponent;
 
-localData = [
+public localData = [
   { Name: "Eric Ridley", Age: "26" },
   { Name: "Alanis Brook", Age: "22" },
   { Name: "Jonathan Morris", Age: "23" }
 ];
 
-exportButtonHandler() {
-  let ees: IgxExcelExporterService = new IgxExcelExporterService();
-  ees.Export(this.igxGrid1, new IgxExcelExporterOptions("ExportedDataFile"));
+constructor(private excelExportService: IgxExcelExporterService) {
+}
+
+public exportButtonHandler() {
+  this.excelExportService.export(this.igxGrid1, new IgxExcelExporterOptions("ExportedDataFile"));
 }
 
 ```
@@ -124,17 +132,15 @@ The following example will exclude a column from the export if its header is "Ag
 ```typescript
 // component.ts
 
-...
-  let ees: IgxExcelExporterService = new IgxExcelExporterService();
-  ees.onColumnExport.subscribe((args: IColumnExportingEventArgs) => {
-    if (args.header == "Age" && args.columnIndex == 1) {
-        args.cancel = true;
-    }
-  });
-  ees.Export(this.igxGrid1, new IgxExcelExporterOptions("ExportedDataFile"));
+this.excelExportService.onColumnExport.subscribe((args: IColumnExportingEventArgs) => {
+  if (args.header == "Age" && args.columnIndex == 1) {
+      args.cancel = true;
+  }
+});
+this.excelExportService.export(this.igxGrid1, new IgxExcelExporterOptions("ExportedDataFile"));
 ```
 
-When you are exporting data from the `IgxGrid` the export process takes in account features like row filtering and column hidding and exports only the data visible in the grid. You can configure the exporter service to include filtered rows or hidden columns by setting properties on the `IgxExcelExporterOptions` object. These properties are described in below.
+When you are exporting data from `IgxGrid` the export process takes in account features like row filtering and column hidding and exports only the data visible in the grid. You can configure the exporter service to include filtered rows or hidden columns by setting properties on the `IgxExcelExporterOptions` object. These properties are described in the table below.
 
 ### API Summary
 

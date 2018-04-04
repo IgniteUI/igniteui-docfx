@@ -23,13 +23,17 @@ The exporting functionality is encapsulated in the `IgxCsvExporterService` class
 </div>
 <div class="divider--half"></div>
 
-To start using the IgniteUI CSV Exporter first import the **IgxCsvExporterService** in the **app.module.ts** file:
+To start using the IgniteUI CSV Exporter first import the **IgxCsvExporterService** in the **app.module.ts** file and add the service to the `providers` array:
 
 ```typescript
 // app.module.ts
 
 ...
 import { IgxCsvExporterService } from "igniteui-angular/services/index";
+
+@NgModule({
+  providers: [ IgxCsvExporterService ]
+})
 
 export class AppModule {}
 ```
@@ -40,7 +44,7 @@ To initiate an export process you may use the handler of a button in your compon
 <button (click)="exportButtonHandler()">Export Data to CSV</button>
 ```
 
-To export some data in CSV you need to instantiate the `IgxCsvExporterService` class and invoke its `exportData` method. This method accepts as a first argument the data you want to export and the second argument is of type `IgxCsvExporterOptions` and allows you to configure the export process.
+You may access the exporter service by defining an argument of type `IgxCsvExporterService` in the component's constructor and the Angular framework will provide an instance of the service. To export some data in CSV format you need to invoke the exporter service's `exportData` method. This method accepts as a first argument the data you want to export and the second argument is of type `IgxCsvExporterOptions` and allows you to configure the export process.
 
 Here is the code which will execute the export process in the component's typescript file:
 
@@ -51,15 +55,17 @@ Here is the code which will execute the export process in the component's typesc
 import { IgxCsvExporterService, IgxCsvExporterOptions, CsvFileTypes } from "igniteui-angular/services/index";
 ...
 
-localData = [
+public localData = [
   { Name: "Eric Ridley", Age: "26" },
   { Name: "Alanis Brook", Age: "22" },
   { Name: "Jonathan Morris", Age: "23" }
 ];
 
-exportButtonHandler() {
-  let ees: IgxCsvExporterService = new IgxCsvExporterService();
-  ees.ExportData(this.localData, new IgxCsvExporterOptions("ExportedDataFile"), CsvFileTypes.CSV);
+constructor(private csvExportService: IgxCsvExporterService) {
+}
+
+public exportButtonHandler() {
+  this.csvExportService.exportData(this.localData, new IgxCsvExporterOptions("ExportedDataFile"), CsvFileTypes.CSV);
 }
 
 ```
@@ -87,17 +93,19 @@ import { IgxCsvExporterService, IgxCsvExporterOptions, CsvFileTypes } from "igni
 import { IgxGridComponent } from "igniteui-angular/grid/grid.component";
 ...
 
-@ViewChild("igxGrid1") igxGrid1: IgxGridComponent;
+@ViewChild("igxGrid1") public igxGrid1: IgxGridComponent;
 
-localData = [
+public localData = [
   { Name: "Eric Ridley", Age: "26" },
   { Name: "Alanis Brook", Age: "22" },
   { Name: "Jonathan Morris", Age: "23" }
 ];
 
-exportButtonHandler() {
-  let ees: IgxCsvExporterService = new IgxCsvExporterService();
-  ees.Export(this.igxGrid1, new IgxCsvExporterOptions("ExportedDataFile", CsvFileTypes.CSV));
+constructor(private csvExportService: IgxCsvExporterService) {
+}
+
+public exportButtonHandler() {
+  this.csvExportService.export(this.igxGrid1, new IgxCsvExporterOptions("ExportedDataFile", CsvFileTypes.CSV));
 }
 
 ```
@@ -139,16 +147,15 @@ The following example will exclude a column from the export if its name is "Age"
 ```typescript
 // component.ts
 
-...
-  let ees: IgxCsvExporterService = new IgxCsvExporterService();
-  ees.onColumnExport.subscribe((args: IColumnExportingEventArgs) => {
-    if (args.header == "Age" && args.columnIndex == 1) {
-        args.cancel = true;
-    }
-  });
-  ees.Export(this.igxGrid1, new IgxCsvExporterOptions("ExportedDataFile"));
+this.csvExportService.onColumnExport.subscribe((args: IColumnExportingEventArgs) => {
+  if (args.header == "Age" && args.columnIndex == 1) {
+      args.cancel = true;
+  }
+});
+this.csvExportService.export(this.igxGrid1, new IgxCsvExporterOptions("ExportedDataFile"));
 ```
 
+When you are exporting data from `IgxGrid` the export process takes in account features like row filtering and column hidding and exports only the data visible in the grid. You can configure the exporter service to include filtered rows or hidden columns by setting properties on the `IgxExcelExporterOptions` object. These properties are described in the table below.
 
 ### API Summary
 
