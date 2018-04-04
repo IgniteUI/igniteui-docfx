@@ -102,7 +102,7 @@ Also we can add two groups of label and input decorated with the [**igxLabel**](
     rightButtonLabel="Sign In"
     rightButtonBackgroundColor="#0375be"
     rightButtonColor="#ffffff"
-    closeOnOutsideSelect="true">
+    [closeOnOutsideSelect]="true">
     <div class="ig-form-group">
         <input type="text" igxInput />
         <label igxLabel>Username</label>

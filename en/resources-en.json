@@ -5,5 +5,12 @@
     },
     "sideaffix": {
         "title": "IN THIS ARTICLE"
+    },
+    "noteBlocks": {
+        "note": "NOTE",
+        "warning": "WARNING",
+        "tip": "TIP",
+        "important": "IMPORTANT",
+        "caution": "CAUTION"
     }
 }
