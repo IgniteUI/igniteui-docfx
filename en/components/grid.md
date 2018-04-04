@@ -544,7 +544,7 @@ public ngOnInit() {
 ### Summaries
 > [!NOTE]
 > The summary of the column is a **function of all column values**, even if paging, filtering or sorting is applied.
- 
+
 Grid **summaries** can also be enabled on a per-column level, which means that you can activate it only for columns that you need to. **Grid summaries** gives you a predefined set of default summaries, depending on the type of data in the column, so that you can save some time:
 
 For `string` and `boolean` data types, the following function is available:
@@ -984,3 +984,19 @@ import {
 |Name|Return Type|Description|
 |--- |--- |--- |
 |`update(val: any)`|void|Emits the `onEditDone` event and updates the appropriate record in the data source.|
+
+
+### Additional Resources
+<div class="divider--half"></div>
+
+* [Virtualization and Performance](grid_virtualization.html)
+* [Filtering](grid_filtering.html)
+* [Sorting](grid_sorting.html)
+* [Summaries](grid_summaries.html)
+* [Column Pinning](grid_column_pinning.html)
+
+<div class="divider--half"></div>
+Our community is active and always welcoming to new ideas.
+
+* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

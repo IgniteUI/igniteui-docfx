@@ -549,7 +549,7 @@ public ngOnInit() {
 
 > [!NOTE]
 > 列の集計は、ページング、フィルタリング、または並べ替えが適用された場合も**列値すべての関数**です。
- 
+
 グリッド**集計**を列ごとに有効できます。つまり、必要な列のみアクティブ化できます。**グリッド集計**は、列のデータ型に基づいてデフォルト集計の定義済みセットを提供します。
 
 `string` および `boolean` データ型の場合、以下の関数が利用できます。
@@ -990,3 +990,18 @@ import {
 |名前|戻り値の型|説明|
 |--- |--- |--- |
 |`update(val: any)`|void|`onEditDone` イベントを発生し、データ ソースで適切なレコードを更新します。|
+
+### Additional Resources
+<div class="divider--half"></div>
+
+* [Virtualization and Performance](grid_virtualization.html)
+* [Filtering](grid_filtering.html)
+* [Sorting](grid_sorting.html)
+* [Summaries](grid_summaries.html)
+* [Column Pinning](grid_column_pinning.html)
+
+<div class="divider--half"></div>
+Our community is active and always welcoming to new ideas.
+
+* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
