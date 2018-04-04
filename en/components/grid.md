@@ -320,10 +320,6 @@ and in the template of the component:
 
 **Note**: The grid `autoGenerate` property is best to be avoided when binding to remote data for now. It assumes that the data is available in order to inspect it and generate the appropriate columns. This is usually not the case until the remote service responds, and the grid will throw an error. Making `autoGenerate` available, when binding to remote service, is on our roadmap for future versions.
 
-### Virtualization
-
-The grid supports both horizontal and vertical DOM virtualization. In order to activate it make sure to set either the `height` or `width` property of the grid.
-
 ### CRUD operations
 
 The `IgxGridComponent` provides a straigtforward API for basic CRUD operations.
