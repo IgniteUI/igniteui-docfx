@@ -60,7 +60,7 @@ The directive can be used to virtualize the data in vertical, horizontal or both
 ### Vertical virtualization
 
 ```html
-<table style='height:500px;'>
+<table style='height: 500px; overflow: hidden;'>
     <ng-template igxFor let-item [igxForOf]="data" #virtDirVertical
         [igxForScrollOrientation]="'vertical'"
         [igxForContainerSize]='"500px"'
@@ -74,9 +74,9 @@ The directive can be used to virtualize the data in vertical, horizontal or both
 ### Horizontal virtualization
 
 ```html
-<table> 
+<table>
     <tbody style='display:grid;'>
-    <tr style='width:500px; height:118px;'>               
+    <tr style='width:500px; height:118px; overflow: hidden;'>
         <ng-template igxFor let-item [igxForOf]="data" #virtDirHorizontal
             [igxForScrollOrientation]="'horizontal'"
             [igxForContainerSize]='"500px"'
@@ -88,10 +88,12 @@ The directive can be used to virtualize the data in vertical, horizontal or both
 </table>
 ```
 
+***Note:*** It is strongly advised that the parent container of the `igxForOf` template for has the related dimension set (`height` for vertical and `width` for horizontal) and `overflow: hidden` CSS rules applied. This is because the smooth scrolling behavior is achieved through content offsets that could visually affect other parts of the page if they remain visible.
+
 ### Horizontal and vertical virtualization
 
 ```html
-<table #container [style.width]='width' [style.height]='height'>
+<table #container [style.width]='width' [style.height]='height' [style.overflow]='"hidden"'>
     <ng-template #scrollContainer igxFor let-rowData [igxForOf]="data"
         [igxForScrollOrientation]="'vertical'"
         [igxForContainerSize]='height'
@@ -112,14 +114,14 @@ The directive can be used to virtualize the data in vertical, horizontal or both
 The `igxForOf` directive can be bound to remote service. You need to use `Observable` property - `remoteData`(in the following case). Also the `chunkLoading` event should be utilized to trigger the requests to the data.
 
 ```html
-<div style='height:500px;'>
+<div style='height:500px; overflow: hidden;'>
     <ng-template igxFor let-item [igxForOf]="remoteData | async" (onChunkPreload)="chunkLoading($event)"
-    [igxForScrollOrientation]="'vertical'"
-    [igxForContainerSize]='"500px"'
-    [igxForItemSize]='"50px"'
-    [igxForRemote]='true'
-    let-rowIndex="index" #virtDirRemote>
-    <div style='height:50px;'>{{item.ProductID}} : {{item.ProductName}}</div>
+        [igxForScrollOrientation]="'vertical'"
+        [igxForContainerSize]='"500px"'
+        [igxForItemSize]='"50px"'
+        [igxForRemote]='true'
+        let-rowIndex="index" #virtDirRemote>
+        <div style='height:50px;'>{{item.ProductID}} : {{item.ProductName}}</div>
     </ng-template>
 </div>
 ```
@@ -215,7 +217,6 @@ List of exported values by the `igxForOf` that can be aliased to local variables
 | :---------- |:------- | :---------------------------------------------------- |
 | `$implicit` | T       | The value of the individual items in the iterable     |
 | `index`     | number  | The index of the current item in the iterable.        |
-| `dirty`     | boolean | True when the current item needs to reset their state |
 
 <div class="divider--half"></div>
 
