@@ -1,7 +1,8 @@
 ---
 title: Input Group Component
-_description: With Ignite UI for Angular Input Group component, developers can create a single-line or multi-line text elements, to add additional CSS styles and integrate with other controls.
+_description: With Ignite UI for Angular Input Group component, developers can create a single-line or multi-line text elements, add additional CSS styles and integrate with other controls.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Label components, Angular Label controls
+_language: ja
 ---
 
 ## Input Group
@@ -20,7 +21,7 @@ The Ignite UI for Angular Input Group component is used to create a single-line 
 <div class="divider--half"></div>
 
 ### Usage
-The default styling of the Input Group component as well as its complimentary directives follow the text fields specification in the Material Design 
+The default styling of the Input Group component as well as its complimentary directives follow the text fields specification in the Material Design
 [**guidelines**](https://material.io/guidelines/components/text-fields.html).
 
 To get started with the Ignite UI for Angular Input Group, Input, Label, Prefix, Suffix and Hint let's first import the **IgxInputGroup** in our **app.module.ts** file:
@@ -58,7 +59,7 @@ And the result is:
 </div>
 <div class="divider--half"></div>
 
-The `igxInput` directive could be applied to `<input>` and `<textarea>` HTML element. We support both single-line and multi-line text fields.
+The `igxInput` directive could be applied to `<input>` and `<textarea>` HTML elements. We support both single-line and multi-line text fields.
 
 #### Validation
 Ignite UI for Angular Input directive provides a Material-based styling when you have validation. Let's add `required` attribute to our input:
@@ -70,7 +71,7 @@ Ignite UI for Angular Input directive provides a Material-based styling when you
 </igx-input-group>
 ```
 
-In the demonstration of the code below you can see we receive an asterisk next to the label as well as the input turns green/red when we write in it depending on whether the validation passes/fails.
+In the demonstration of the code below you can see we receive an asterisk next to the label and the input turns green/red when we write in it depending on whether the validation passes/fails.
 
 <div class="sample-container" style="height:100px">
 <iframe id="input-group-sample-2-frame" src='{environment:demosBaseUrl}/input-group-sample-2' width="100%" height="100%" seamless frameBorder="0"></iframe>
@@ -131,14 +132,14 @@ Ignite UI for Angular Hint provides a helper text placed below the input. The hi
 </igx-input-group>
 ```
 
-This is how the phone field with hint looks like:
+This is how the phone field with hint looks:
 <div class="sample-container" style="height:110px">
 <iframe id="input-group-sample-4-frame" src='{environment:demosBaseUrl}/input-group-sample-4' width="100%" height="100%" seamless frameBorder="0"></iframe>
 </div>
 <div class="divider--half"></div>
 
 ### Styling
-Our inputs could be styled differently by using the `type` property of the `igxInputGroup` component. Currently we support four different ways of styling: line (the default one), box, border and search. this is how they look like:
+Our inputs could be styled differently by using the `type` property of the `igxInputGroup` component. Currently we support four different ways of styling: line (the default one), box, border and search. This is how they look:
 
 <div class="sample-container" style="height:520px">
 <iframe id="input-group-sample-5-frame" src='{environment:demosBaseUrl}/input-group-sample-5' width="100%" height="100%" seamless frameBorder="0"></iframe>
