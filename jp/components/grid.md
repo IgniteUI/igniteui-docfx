@@ -615,18 +615,18 @@ import {
 |--- |--- |--- |
 |`update(val: any)`|void|`onEditDone` イベントを発生し、データ ソースで適切なレコードを更新します。|
 
-### Additional Resources
+### 追加のリソース
 <div class="divider--half"></div>
 
-* [Virtualization and Performance](grid_virtualization.html)
-* [Paging](grid_paging.html)
-* [Filtering](grid_filtering.html)
-* [Sorting](grid_sorting.html)
-* [Summaries](grid_summaries.html)
-* [Column Pinning](grid_column_pinning.html)
+* [仮想化とパフォーマンス](grid_virtualization.html)
+* [ページング](grid_paging.html)
+* [フィルタリング](grid_filtering.html)
+* [並べ替え](grid_sorting.html)
+* [集計](grid_summaries.html)
+* [列のピン固定](grid_column_pinning.html)
 
 <div class="divider--half"></div>
-Our community is active and always welcoming to new ideas.
+是非コミュニティに参加してください。
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
