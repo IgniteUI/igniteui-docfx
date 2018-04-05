@@ -68,3 +68,19 @@ Please refer to the below table for details on how each combination of configura
 <br/>
 *   Setting the grid height but deliberately passing `null` for `rowHeight` is not supported
 *   Setting some of the column widths but leaving others unset without specifying `columnWidth` for the grid will result in a grid without horizontal virtualization. The exact sizes of the columns will be determined by the flex rules applied for the container.
+
+### Additional Resources
+<div class="divider--half"></div>
+
+* [Grid overview](grid.html)
+* [Paging](grid_paging.html)
+* [Filtering](grid_filtering.html)
+* [Sorting](grid_sorting.html)
+* [Summaries](grid_summaries.html)
+* [Column Pinning](grid_column_pinning.html)
+
+<div class="divider--half"></div>
+Our community is active and always welcoming to new ideas.
+
+* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
