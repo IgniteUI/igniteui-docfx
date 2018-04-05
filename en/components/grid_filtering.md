@@ -89,3 +89,19 @@ The default value of `AND` returns only the rows that match all the currently ap
 When set to `OR`, a row will be returned when either the 'ProductName' cell value contains 'myproduct' or the 'Price' cell value is greater than 55.
 
 <div class="divider--half"></div>
+
+### Additional Resources
+<div class="divider--half"></div>
+
+* [Grid overview](grid.html)
+* [Virtualization and Performance](grid_virtualization.html)
+* [Paging](grid_paging.html)
+* [Sorting](grid_sorting.html)
+* [Summaries](grid_summaries.html)
+* [Column Pinning](grid_column_pinning.html)
+
+<div class="divider--half"></div>
+Our community is active and always welcoming to new ideas.
+
+* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

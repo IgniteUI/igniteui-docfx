@@ -145,3 +145,19 @@ export class GridComponent implements OnInit {
   }
 }
 ```
+
+### Additional Resources
+<div class="divider--half"></div>
+
+* [Grid overview](grid.html)
+* [Virtualization and Performance](grid_virtualization.html)
+* [Paging](grid_paging.html)
+* [Filtering](grid_filtering.html)
+* [Sorting](grid_sorting.html)
+* [Column Pinning](grid_column_pinning.html)
+
+<div class="divider--half"></div>
+Our community is active and always welcoming to new ideas.
+
+* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
