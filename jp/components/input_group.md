@@ -1,30 +1,29 @@
----
-title: Input Group Component
-_description: With Ignite UI for Angular Input Group component, developers can create a single-line or multi-line text elements, add additional CSS styles and integrate with other controls.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Label components, Angular Label controls
+﻿---
+title: Input Group コンポーネント
+_description: Ignite UI for Angular Input Group コンポーネントを使用すると、単一行または複数行のテキスト要素を作成し、CSS スタイルを追加し、その他のコントロールと統合できます。
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Label コンポーネント, Angular Label コントロール
 _language: ja
 ---
 
 ## Input Group
 <p class="highlight">
-The Ignite UI for Angular Input Group component is used to create a single-line or multi-line text elements. Combined with the Label, Input, Suffix, Prefix and Hint directives, it helps you to cover common scenarios when dealing with form inputs.
+Ignite UI for Angular Input Group コンポーネントを使用すると、単一行または複数行のテキスト要素を作成できます。Label、Input、Suffix、Prefix、および Hint ディレクティブと使用すれば、フォーム入力の全般的なシナリオを実装できます。
 </p>
 <div class="divider--half"></div>
 
-### Input Group Demo
+### Input Group デモ
 <div class="sample-container" style="height:500px">
 <iframe id="input-group-sample-6-frame" src='{environment:demosBaseUrl}/input-group-sample-6' width="100%" height="100%" seamless frameBorder="0"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="input-group-sample-6-frame" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="input-group-sample-6-frame" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
 </div>
 <div class="divider--half"></div>
 
-### Usage
-The default styling of the Input Group component as well as its complimentary directives follow the text fields specification in the Material Design
-[**guidelines**](https://material.io/guidelines/components/text-fields.html).
+### 使用方法
+Input Group コンポーネントおよびその関連するディレクティブのデフォルト スタイル設定はマテリアル デザイン [**ガイドライン**](https://material.io/guidelines/components/text-fields.html)のテキスト フィールド仕様を実装します。
 
-To get started with the Ignite UI for Angular Input Group, Input, Label, Prefix, Suffix and Hint let's first import the **IgxInputGroup** in our **app.module.ts** file:
+Ignite UI for Angular Input Group、Input、Label、Prefix、Suffix、および Hint を初期化する前に、最初に **IgxInputGroup** を **app.module.ts** ファイルにインポートします:
 
 ```typescript
 // app.module.ts
@@ -41,10 +40,10 @@ export class AppModule {}
 ```
 
 > [!NOTE]
-> To use any of the directives `igxInput`, `igxLabel`, `igxPrefix`, `igxSuffix` or `igxHint`, you have to wrap them in an `<igx-input-group>` container.
+> `igxInput`、`igxLabel`、`igxPrefix`、`igxSuffix`、または `igxHint` ディレクティブを使用するには、`<igx-input-group>` コンテナーにラップする必要があります。
 
-### Label & Input
-HTML labels and inputs are the core building blocks of the HTML forms. Here is how you can use the `igxLabel` and `igxInput` directives:
+### Label および Input
+HTML ラベルおよび入力は HTML フォームの基本要素です。`igxLabel` および `igxInput` ディレクティブの使用例:
 
 ```html
 <igx-input-group>
@@ -53,16 +52,17 @@ HTML labels and inputs are the core building blocks of the HTML forms. Here is h
 </igx-input-group>
 ```
 
-And the result is:
+結果は以下です。
+
 <div class="sample-container" style="height:100px">
 <iframe id="input-group-sample-1-frame" src='{environment:demosBaseUrl}/input-group-sample-1' width="100%" height="100%" seamless frameBorder="0"></iframe>
 </div>
 <div class="divider--half"></div>
 
-The `igxInput` directive could be applied to `<input>` and `<textarea>` HTML elements. We support both single-line and multi-line text fields.
+`igxInput` ディレクティブを `<input>` および `<textarea>` HTML 要素に適用できます。単一行および複数行テキスト フィールドをサポートします。
 
-#### Validation
-Ignite UI for Angular Input directive provides a Material-based styling when you have validation. Let's add `required` attribute to our input:
+#### 検証
+Ignite UI for Angular Input ディレクティブで検証が有効な場合にマテリアルに基づくスタイル設定を提供します。入力に `required` 属性を追加します。
 
 ```html
 <igx-input-group>
@@ -71,15 +71,15 @@ Ignite UI for Angular Input directive provides a Material-based styling when you
 </igx-input-group>
 ```
 
-In the demonstration of the code below you can see we receive an asterisk next to the label and the input turns green/red when we write in it depending on whether the validation passes/fails.
+以下のコード例およびデモは、検証に成功または失敗するかどうかに基づいてラベルの隣にあるアスタリスクを表示し、入力が緑または赤くなることを確認できます。
 
 <div class="sample-container" style="height:100px">
 <iframe id="input-group-sample-2-frame" src='{environment:demosBaseUrl}/input-group-sample-2' width="100%" height="100%" seamless frameBorder="0"></iframe>
 </div>
 <div class="divider--half"></div>
 
-#### Data Binding
-Ignite UI for Angular Input supports one-way and two-way data-binding. Let's add a two-way data-binding to our input. Here is the code in our component:
+#### データ バインディング
+Ignite UI for Angular Input は one-way および two-way データ バインディングをサポートします。入力に両方向のデータ バインディングを追加します。以下はコンポーネントのコード:
 
 ```typescript
 public user = {
@@ -88,7 +88,7 @@ public user = {
 
 ```
 
-and in our markup:
+マークアップのコード:
 
 ```html
 <igx-input-group>
@@ -97,8 +97,8 @@ and in our markup:
 </igx-input-group>
 ```
 
-### Prefix & Suffix
-If you want to have an input prefix or suffix, you can use Ignite UI for Angular Prefix or Suffix. Let's add a new input field with prefix and suffix:
+### Prefix と Suffix
+入力のプレフィックスまたはサフィックスを追加するために Ignite UI for Angular Prefix または Suffix を使用できます。プレフィックスおよびサフィックスを持つ新しい入力フィールドを追加します。
 
 ```html
 <igx-input-group>
@@ -111,14 +111,15 @@ If you want to have an input prefix or suffix, you can use Ignite UI for Angular
 </igx-input-group>
 ```
 
-Here is how the sample looks:
+デモは以下のようになります。
+
 <div class="sample-container" style="height:100px">
 <iframe id="input-group-sample-3-frame" src='{environment:demosBaseUrl}/input-group-sample-3' width="100%" height="100%" seamless frameBorder="0"></iframe>
 </div>
 <div class="divider--half"></div>
 
-### Hints
-Ignite UI for Angular Hint provides a helper text placed below the input. The hint can be placed at the start or at the end of the input. The position of the `igxHint` can be set using the `position` property. Let's add a hint to our phone input:
+### Hint
+Ignite UI for Angular Hint は入力の下に配置されるヘルパー テキストを提供します。ヒントを入力の開始または終了に配置できます。`igxHint` の位置を `position` プロパティを使用して設定できます。phone 入力にヒントを追加します。
 
 ```html
 <igx-input-group>
@@ -132,71 +133,72 @@ Ignite UI for Angular Hint provides a helper text placed below the input. The hi
 </igx-input-group>
 ```
 
-This is how the phone field with hint looks:
+ヒントを持つ phone フィールドは以下のようになります。
+
 <div class="sample-container" style="height:110px">
 <iframe id="input-group-sample-4-frame" src='{environment:demosBaseUrl}/input-group-sample-4' width="100%" height="100%" seamless frameBorder="0"></iframe>
 </div>
 <div class="divider--half"></div>
 
-### Styling
-Our inputs could be styled differently by using the `type` property of the `igxInputGroup` component. Currently we support four different ways of styling: line (the default one), box, border and search. This is how they look:
+### スタイル設定
+入力にスタイルを適用するには、`igxInputGroup` コンポーネントの `type` プロパティを使用します。現在 line (デフォルト)、box、border、および search のスタイル設定をサポートします。スタイル設定の結果:
 
 <div class="sample-container" style="height:520px">
 <iframe id="input-group-sample-5-frame" src='{environment:demosBaseUrl}/input-group-sample-5' width="100%" height="100%" seamless frameBorder="0"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="input-group-sample-5-frame" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="input-group-sample-5-frame" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
 </div>
 <div class="divider--half"></div>
 
 ## Input Group API
 
-### Inputs
+### 入力
 
-|Name|Type|Description|
+|名前|型|説明|
 |--- |--- |--- |
-|`type`|string|How the input will be styled. The allowed values are `line`, `box`, `border` and `search`. The default is `line`.|
+|`type`|string|入力のスタイル方法。有効な値は `line`、`box`、`border`、および `search` です。デフォルト値は `line` です。|
 <div class="divider--half"></div>
 
-### Methods
+### メソッド
 
-|Signature|Description|
+|構文|説明|
 |--- |--- |
-|`isTypeLine()`|Whether the `igxInputGroup` type is line.|
-|`isTypeBox()`|Whether the `igxInputGroup` type is box.|
-|`isTypeBorder()`|Whether the `igxInputGroup` type is border.|
-|`isTypeSearch()`|Whether the `igxInputGroup` type is search.|
+|`isTypeLine()`|`igxInputGroup` の `type` が `line` かどうか。|
+|`isTypeBox()`|`igxInputGroup` の `type` が `box` かどうか。|
+|`isTypeBorder()`|`igxInputGroup` の `type` が `border` かどうか。|
+|`isTypeSearch()`|`igxInputGroup` の `type` が `search` かどうか。|
 <div class="divider--half"></div>
 
 ## Input API
 
-### Inputs
+### 入力
 
-|Name|Type|Description|
+|名前|型|説明|
 |--- |--- |--- |
-|`value`|any|The value of the input.|
+|`value`|any|入力の値。|
 <div class="divider--half"></div>
 
-### Getters/Setters
+### ゲッター/セッター
 
-|Name|Type|Getter|Setter|Description|
+|名前|型|ゲッター|セッター|説明|
 |--- |--- |--- |--- |--- |
-|`valid`|IgxInputState|Yes|No|Gets the input validation state. The possible values could be `IgxInputState.INITIAL`, `IgxInputState.VALID`, `IgxInputState.INVALID`.
-|`disabled`|boolean|Yes|Yes|Gets/Sets the disabled property of the input.|
-|`focused`|boolean|Yes|No|Gets whether the input is currently in focus.|
+|`valid`|IgxInputState|はい|いいえ|入力の検証状態。有効な値は `IgxInputState.INITIAL`、`IgxInputState.VALID`、および `IgxInputState.INVALID` です。|
+|`disabled`|boolean|はい|はい|入力の `disabled` プロパティを取得または設定します。|
+|`focused`|boolean|はい|いいえ|入力がフォーカスを持つかどうかを取得します。|
 <div class="divider--half"></div>
 
 ## Hint API
 
-### Inputs
+### 入力
 
-|Name|Type|Description|
+|名前|型|説明|
 |--- |--- |--- |
-|`position`|string|Where the hint will be placed. The allowed values are `start` and `end`. The default value is `start`.|
+|`position`|string|ヒントの配置。有効な値は `start` および `end` です。デフォルト値は `start` です。|
 <div class="divider--half"></div>
 
-## Additional Resources
-Our community is active and always welcoming to new ideas.
+## 追加のリソース
+是非コミュニティに参加してください。
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
