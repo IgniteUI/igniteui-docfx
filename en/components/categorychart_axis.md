@@ -7,7 +7,7 @@ _keywords: Ignite UI for Angular, Data Visualization, UI controls, Angular widge
 
 In the Category Chart control, an Axis provides base properties for specifying appearance of axis main lines, tickmarks, titles, and axis labels. 
 
-By default, you do not need to explicitly set the labels. The Category Chart will use the first appropriate string property that it finds within the data you provided and will use that for the labels. 
+By default, you do not need to explicitly set the labels. The Category Chart will use the first appropriate string property that it finds within the data you provided and will explicitly set which property to use for the labels. 
 
 <div class="divider"></div>
 
@@ -30,12 +30,13 @@ The Category Chart control allows you full control over configuring, formatting 
 The following code example shows how to style labels on the x-axis using style properties:
 
 ```html
-<ig-category-chart
+<igx-category-chart
     [dataSource]="data"
+    style="width:700px; height:500px"
     xAxisLabelTextStyle="16pt Verdana"
     xAxisLabelRightMargin="14"
     xAxisLabelTextColor="red">
-</ig-category-chart>
+</igx-category-chart>
 ```
 
 <div class="divider--half"></div>
@@ -46,15 +47,16 @@ The axis title feature of the Category Chart control allows you to add contextua
 The following code example shows how to set and customize the titles on the x-axis and y-axis:
 
 ```html
- <ig-category-chart
+ <igx-category-chart
       [dataSource]="data"
+      style="width:700px; height:500px"
       xAxisTitle="Country"
       xAxisTitleTextColor="blue"
       xAxisTitleTextStyle="20pt Times New Roman|Georgia|Serif"
       yAxisTitle="Millions of People"
       yAxisTitleAngle="90"
       yAxisTitleTextColor="red">
- </ig-category-chart>
+ </igx-category-chart>
 ```
 
 ### Axis Tickmarks
@@ -63,12 +65,13 @@ Tick marks display points on the axes. They represent a certain numeric point on
 The following code snippet demonstrates how to set the color, length and thickness of the tickmark on the x-axis.
 
 ```html
- <ig-category-chart
+ <igx-category-chart
       [dataSource]="data"
+      style="width:700px; height:500px"
       xAxisTickLength="10"
       xAxisTickStrokeThickness="3"
       xAxisTickStroke="red">
- </ig-category-chart>
+ </igx-category-chart>
 ```
 
 <div class="divider--half"></div>
@@ -79,11 +82,12 @@ In the Category Chart control, the range on numeric axes is the difference in nu
 The following sample code demonstrates how to change the axis range on the y-axis.
 
 ```html
- <ig-category-chart
+ <igx-category-chart
       [dataSource]="data"
+      style="width:700px; height:500px"
       yAxisMinimumValue="-200"
       yAxisMaximumValue="1000">
- </ig-category-chart>
+ </igx-category-chart>
 ```
 
 <div class="divider--half"></div>
@@ -94,15 +98,16 @@ In the Category Chart control, the axis major interval specifies how frequently 
 The following code snippet demonstrates how to configure the interval on the y-axis.
 
 ```html
- <ig-category-chart
+ <igx-category-chart
     [dataSource]="data"
+    style="width:700px; height:500px"
     yAxisInterval="100"
     yAxisMinorInterval="10" 
     yAxisMinorStroke="Red"    
     yAxisMajorStroke="Green"  
     yAxisMinorStrokeThickness="1"
     yAxisMajorStrokeThickness="1">
- </ig-category-chart>
+ </igx-category-chart>
 ```
 
 <div class="divider--half"></div>
@@ -118,14 +123,15 @@ The property accepts a numeric float value between 0 and 1. The value represents
 To set the Category Chart with `xAxisGap` of `0.5` the following code can be used:
 
 ```html
-<ig-category-chart
+<igx-category-chart
     [dataSource]="data"
+    style="width:700px; height:500px"
     title="Countries population"
     xAxisTitle="Countries"
     yAxisTitle="Millions of people"
     chartType="column"
     xAxisGap="0.5">
-</ig-category-chart>
+</igx-category-chart>
 ```
 
 <div class="divider--half"></div>
@@ -142,14 +148,15 @@ The property accepts a numeric float value between -1 and 1. The value represent
 The following code example sets the `xAxisOverlap` to 0.5, which is a half of the available space is used to draw categories overlapping each other.
 
 ```html
- <ig-category-chart
+ <igx-category-chart
     [dataSource]="data"
+    style="width:700px; height:500px"
     title="Countries population"
     xAxisTitle="Countries"
     yAxisTitle="Millions of people"
     chartType="column"
     xAxisOverlap="0.5">
-</ig-category-chart>
+</igx-category-chart>
 ```
 
 <div class="divider--half"></div>

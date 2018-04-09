@@ -30,12 +30,13 @@ The Financial Chart control allows you full control over configuring and formatt
 The following code example shows how to style labels on the x-axis using style properties:
 
 ```html
-<ig-financial-chart
+<igx-financial-chart
     [dataSource]="data"
+    style="width:700px; height:500px"
     xAxisLabelTextStyle="16pt Verdana"
     xAxisLabelRightMargin="14"
     xAxisLabelTextColor="red">
-</ig-financial-chart>
+</igx-financial-chart>
 ```
 <div class="divider--half"></div>
 
@@ -45,15 +46,16 @@ The axis title feature of the Financial Chart control allows you to add contextu
 The following code example shows how to set and customize the titles on the x-axis and y-axis:
 
 ```html
- <ig-financial-chart
+ <igx-financial-chart
       [dataSource]="data"
+      style="width:700px; height:500px"
       xAxisTitle="Country"
       xAxisTitleTextColor="blue"
       xAxisTitleTextStyle="20pt Times New Roman|Georgia|Serif"
       yAxisTitle="Millions of People"
       yAxisTitleAngle="90"
       yAxisTitleTextColor="red">
- </ig-financial-chart>
+ </igx-financial-chart>
 ```
 <div class="divider--half"></div>
 
@@ -63,12 +65,13 @@ Tick marks display points on the axes. They represent a certain numeric point on
 The following code snippet demonstrates how to set the color, length and thickness of the tickmark on the x-axis.
 
 ```html
- <ig-financial-chart
+ <igx-financial-chart
       [dataSource]="data"
+      style="width:700px; height:500px"
       xAxisTickLength="10"
       xAxisTickStrokeThickness="3"
       xAxisTickStroke="red">
- </ig-financial-chart>
+ </igx-financial-chart>
 ```
 <div class="divider--half"></div>
 
@@ -78,11 +81,12 @@ In the Financial Chart control, the range on numeric axes is the difference in n
 The following sample code demonstrates how to change the axis range on the y-axis.
 
 ```html
- <ig-financial-chart
+ <igx-financial-chart
       [dataSource]="data"
+      style="width:700px; height:500px"
       yAxisMinimumValue="-200"
       yAxisMaximumValue="1000">
- </ig-financial-chart>
+ </igx-financial-chart>
 ```
 <div class="divider--half"></div>
 
@@ -92,14 +96,15 @@ In the Financial Chart control, the axis major interval specifies how frequently
 The following code snippet demonstrates how to configure the interval on the y-axis.
 
 ```html
- <ig-financial-chart
+ <igx-financial-chart
     [dataSource]="data"
+    style="width:700px; height:500px"
     yAxisInterval="100"
     yAxisMinorInterval="10" 
     yAxisMinorStroke="Red"    
     yAxisMajorStroke="Green"  
     yAxisMinorStrokeThickness="1"
     yAxisMajorStrokeThickness="1">
- </ig-financial-chart>
+ </igx-financial-chart>
 ```
 <div class="divider--half"></div>

@@ -24,14 +24,15 @@ This page will walk you through with code samples the different properties that 
 As shown in the above demo, the brushes for the chart types can be configured. The following code example sets the chart type to waterfall and changes the default color of the brushes.
 
 ```html
- <ig-category-chart
+ <igx-category-chart
     [dataSource]="data"
+    style="width:700px; height:500px"
     chartType="waterfall"
 	brushes="blue, green"
 	negativeBrushes="red, yellow"
 	outlines="black"
 	thickness="5">
-</ig-category-chart>
+</igx-category-chart>
 ```
 
 ### Configuring Chart Markers
@@ -41,12 +42,13 @@ Markers are visual elements that display the values of data points in the Catego
 The appearance of chart markers is managed through the `markerType`, `markerBrushes`, `markerOutlines` properties of the Category Chart, as demonstrated in the following code example.
 
 ```html
-<ig-category-chart
+<igx-category-chart
     [dataSource]="data"
+    style="width:700px; height:500px"
     markerType="diamondMarker"
     markerBrushes="red"
     markerOutlines="yellow">
-</ig-category-chart>
+</igx-category-chart>
 ```
 
 ### Transition In Animations
@@ -65,10 +67,11 @@ The transition type is configured by setting the transitionInMode option to the 
 The following example demonstrates how to enable transition in animations and have the chart accordion in from the right.
 
 ```html
- <ig-category-chart
+ <igx-category-chart
     [dataSource]="data"
+    style="width:700px; height:500px"
     isTransitionInEnabled="true"
     transitionInDuration="5000"
     transitionInMode="AccordionFromRight">
-</ig-category-chart>
+</igx-category-chart>
 ```

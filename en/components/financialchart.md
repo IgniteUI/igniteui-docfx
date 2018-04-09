@@ -5,7 +5,7 @@ _keywords: Ignite UI for Angular, Data Visualization, UI controls, Angular widge
 ---
 ## Financial Chart 
 
-The Financial Chart is a lightweight, high-performance chart. This chart can be easily configured to display financial data using an extremely simple and intuitive API. All you need to do is bind your data (a collection or a collection of collections) and the chart takes care of everything else. The chart offers multiple ways for the user to visualize and interpret the data, including several display modes for price and volume, and many financial indicators. The chart also makes use of label formatting to give the data context. 
+The Financial Chart is a lightweight, high-performance chart. This chart can be easily configured to display financial data using an extremely simple and intuitive API. All you need to do is bind your data (a collection or a collection of collections) and the chart takes care of everything else. The chart analyzes the structure of the data source bound to the 'data' property. It plots one financial price series for each collection found in the data source. Also, it analyzes data items of each collection by searching for 5 numeric data columns with Open, High, Low, Close, Volume names and 1 date time column with Time name. The chart offers multiple ways for the user to visualize and interpret the data, including several display modes for price and volume, and many financial indicators. The chart also makes use of label formatting to give the data context. 
 
 You can explicitly specify the chart type by setting the `chartType` property to one of the following options: 
     
@@ -86,8 +86,8 @@ var data = [
 The following code demonstrates how to bind the financial chart to the above data. 
 
 ```html 
- <ig-financial-chart [dataSource]="data">
- </ig-financial-chart>
+ <igx-financial-chart [dataSource]="data" style="width:700px; height:500px">
+ </igx-financial-chart>
 ```
 
 

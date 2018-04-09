@@ -23,8 +23,6 @@ However, you can also explicitly specify the chart type by setting the `chartTyp
 
 Another example of the intuitive behavior of the Category Chart control is that you do not need to explicitly set the labels. The Category Chart will use the first appropriate string property that it finds within the data you provided and will use that for the labels.
 
-Built to be easily configurable, it uses the Data Chart control as its engine, which means that it benefits from the high performing and powerful Data Chart. You can also extend upon the category chart to avail of the powerful and extensive features of the data chart control.
-
 <div class="divider"></div>
 
 ### Category Chart Demo
@@ -41,7 +39,7 @@ Built to be easily configurable, it uses the Data Chart control as its engine, w
 
 ### Dependencies
 
-The category chart is exported as as an `NgModule`, you need to import the _IgxCategoryChartModule_ inside your `AppModule`:
+The category chart is exported as an `NgModule`, you need to import the _IgxCategoryChartModule_ inside your `AppModule`:
 
 ```typescript
 // app.module.ts
@@ -56,6 +54,9 @@ import { IgxCategoryChartModule } from '@infragistics/ignite-ui-xplatform-for-an
 })
 export class AppModule {}
 ```
+
+It's also possible to load a more minimal configuration of category chart whereby it can only load a subset of the possible series, and exclude other optional features by instead loading the CategoryChartCoreModule, and the dynamic module for the series in question, e.g. LineSeriesDynamicModule. If the chartType is auto, it wil make sure to select a series type that has been loaded.
+
 <div class="divider--half"></div>
 
 ### Usage
@@ -78,8 +79,9 @@ var data = [
 The following code demonstrates how to bind the category chart to the above data. 
 
 ```html 
- <ig-category-chart [dataSource]="data">
- </ig-category-chart>
+ <igx-category-chart [dataSource]="data"
+                     style="width:700px; height:500px">
+ </igx-category-chart>
 ```
 
 <div class="divider--half"></div>

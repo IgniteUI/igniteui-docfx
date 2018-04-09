@@ -30,37 +30,41 @@ By default the indicator panes are not displayed. The toolbar allows the end use
 In order to display the pane, an indicator type must be set, as demonstrated in the following code:
 
 ```html
- <ig-financial-chart
+ <igx-financial-chart
     [dataSource]="data"
+    style="width:700px; height:500px"
     indicatorTypes="AverageTrueRange">
- </ig-financial-chart>
+ </igx-financial-chart>
 ```
 
 ### Price Pane
 This pane displays stock prices and shows the stock's high, low, open and close prices over time. In addition it can display trend lines and overlays. Your end user can choose different chart types from the toolbar. By default, the chart type is set to `auto`. You can override the default setting, as demonstrated in the following code:
 
  ```html
- <ig-financial-chart
+ <igx-financial-chart
     [dataSource]="data"
+    style="width:700px; height:500px"
     chartType="line">
- </ig-financial-chart>
+ </igx-financial-chart>
 ```
 
 ### Volume Pane
 The volume pane represents the number of shares traded during a given period. Low volume would indicate little interest, while high volume would indicate high interest with a lot of trades.  This can be displayed using column, line or area chart types. The toolbar allows the end user to display the volume pane by selecting a chart type to render the data at runtime. In order the display the pane, a volume type must be set, as demonstrated in the following code:
 
 ```html
- <ig-financial-chart
+ <igx-financial-chart
     [dataSource]="data"
+    style="width:700px; height:500px"
     volumeType="column">
- </ig-financial-chart>
+ </igx-financial-chart>
 ```
 
 ### Zoom Pane
 This pane controls the zoom of all the displayed panes. This pane is displayed by default. It can be turned off by setting the 'zoomSliderType' to 'none' as demonstrated in the following code:
 ```html
- <ig-financial-chart
+ <igx-financial-chart
     [dataSource]="data"
+    style="width:700px; height:500px"
     zoomSliderType="none">
- </ig-financial-chart>
+ </igx-financial-chart>
 ```
