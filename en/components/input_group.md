@@ -1,7 +1,7 @@
 ---
 title: Input Group Component
 _description: With Ignite UI for Angular Input Group component, developers can create a single-line or multi-line text elements, add additional CSS styles and integrate with other controls.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Label components, Angular Label controls
+_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Label components, Angular Label controls, Angular Input components, Angular Input controls, Input component, Input control, Label component, Label control, Angular Input Group components, Angular Input Group controls, Angular Input directive, Angular Label directive, Angular Forms, Angular Reactive Forms, Angular Form Validation
 ---
 
 ## Input Group
@@ -97,7 +97,7 @@ and in our markup:
 ```
 
 ### Prefix & Suffix
-If you want to have an input prefix or suffix, you can use Ignite UI for Angular Prefix or Suffix. Let's add a new input field with prefix and suffix:
+If you want to have an input prefix or suffix, you can use Ignite UI for Angular Prefix or Suffix. [Please explain what the Prefix and Suffix can contain] Let's add a new input field with prefix and suffix:
 
 ```html
 <igx-input-group>
