@@ -95,7 +95,7 @@ this.grid.filteringLogic = FilteringLogic.OR;
 
 * [グリッドの概要](grid.html)
 * [仮想化とパフォーマンス](grid_virtualization.html)
-* [Paging](grid_paging.html)
+* [ページング](grid_paging.html)
 * [並べ替え](grid_sorting.html)
 * [集計](grid_summaries.html)
 * [列のピン固定](grid_column_pinning.html)
