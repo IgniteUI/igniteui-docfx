@@ -61,7 +61,7 @@ You can set all properties of the icon component with the following `attributes`
 |:----------|:-------------:|:------|
 | `name` |  `name="home"` | Set the icon by providing its name from the official [material icons set](https://material.io/icons/) . |
 | `active` |  `isActive="true"` | Set the icon to active/inactive (default is true). |
-| `animate` |  `color="#474747"` | Set the icon color by providing a string value. |
+| `color` |  `color="#474747"` | Set the icon color by providing a string value. |
 <div class="divider--half"></div>
 
 ####Setters
