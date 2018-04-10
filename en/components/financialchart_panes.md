@@ -32,7 +32,8 @@ In order to display the pane, an indicator type must be set, as demonstrated in 
 ```html
  <igx-financial-chart
     [dataSource]="data"
-    style="width:850px; height:600px"
+    width="850px"
+    height="600px"
     indicatorTypes="AverageTrueRange">
  </igx-financial-chart>
 ```
@@ -43,7 +44,8 @@ This pane displays stock prices and shows the stock's high, low, open and close 
  ```html
  <igx-financial-chart
     [dataSource]="data"
-    style="width:850px; height:600px"
+    width="850px"
+    height="600px"
     chartType="line">
  </igx-financial-chart>
 ```
@@ -54,7 +56,8 @@ The volume pane represents the number of shares traded during a given period. Lo
 ```html
  <igx-financial-chart
     [dataSource]="data"
-    style="width:850px; height:600px"
+    width="850px"
+    height="600px"
     volumeType="column">
  </igx-financial-chart>
 ```
@@ -64,7 +67,8 @@ This pane controls the zoom of all the displayed panes. This pane is displayed b
 ```html
  <igx-financial-chart
     [dataSource]="data"
-    style="width:850px; height:600px"
+    width="850px"
+    height="600px"
     zoomSliderType="none">
  </igx-financial-chart>
 ```

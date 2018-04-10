@@ -80,7 +80,8 @@ The following code demonstrates how to bind the category chart to the above data
 
 ```html 
  <igx-category-chart [dataSource]="data"
-                     style="width:700px; height:500px">
+                     width="700px"
+                     height="500px">
  </igx-category-chart>
 ```
 

@@ -32,7 +32,8 @@ The following code example shows how to style labels on the x-axis using style p
 ```html
 <igx-category-chart
     [dataSource]="data"
-    style="width:700px; height:500px"
+    width="700px"
+    height="500px"
     xAxisLabelTextStyle="16pt Verdana"
     xAxisLabelRightMargin="14"
     xAxisLabelTextColor="red">
@@ -49,7 +50,8 @@ The following code example shows how to set and customize the titles on the x-ax
 ```html
  <igx-category-chart
       [dataSource]="data"
-      style="width:700px; height:500px"
+      width="700px"
+      height="500px"
       xAxisTitle="Country"
       xAxisTitleTextColor="blue"
       xAxisTitleTextStyle="20pt Times New Roman|Georgia|Serif"
@@ -67,7 +69,8 @@ The following code snippet demonstrates how to set the color, length and thickne
 ```html
  <igx-category-chart
       [dataSource]="data"
-      style="width:700px; height:500px"
+      width="700px"
+      height="500px"
       xAxisTickLength="10"
       xAxisTickStrokeThickness="3"
       xAxisTickStroke="red">
@@ -84,7 +87,8 @@ The following sample code demonstrates how to change the axis range on the y-axi
 ```html
  <igx-category-chart
       [dataSource]="data"
-      style="width:700px; height:500px"
+      width="700px"
+      height="500px"
       yAxisMinimumValue="-200"
       yAxisMaximumValue="1000">
  </igx-category-chart>
@@ -100,7 +104,8 @@ The following code snippet demonstrates how to configure the interval on the y-a
 ```html
  <igx-category-chart
     [dataSource]="data"
-    style="width:700px; height:500px"
+    width="700px"
+    height="500px"
     yAxisInterval="100"
     yAxisMinorInterval="10" 
     yAxisMinorStroke="Red"    
@@ -125,7 +130,8 @@ To set the Category Chart with `xAxisGap` of `0.5` the following code can be use
 ```html
 <igx-category-chart
     [dataSource]="data"
-    style="width:700px; height:500px"
+    width="700px"
+    height="500px"
     title="Countries population"
     xAxisTitle="Countries"
     yAxisTitle="Millions of people"
@@ -150,7 +156,8 @@ The following code example sets the `xAxisOverlap` to 0.5, which is a half of th
 ```html
  <igx-category-chart
     [dataSource]="data"
-    style="width:700px; height:500px"
+    width="700px"
+    height="500px"
     title="Countries population"
     xAxisTitle="Countries"
     yAxisTitle="Millions of people"

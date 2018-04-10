@@ -26,7 +26,8 @@ As shown in the above demo, the brushes for the chart types can be configured. T
 ```html
  <igx-category-chart
     [dataSource]="data"
-    style="width:700px; height:500px"
+    width="700px"
+    height="500px"
     chartType="waterfall"
 	brushes="blue, green"
 	negativeBrushes="red, yellow"
@@ -44,7 +45,8 @@ The appearance of chart markers is managed through the `markerType`, `markerBrus
 ```html
 <igx-category-chart
     [dataSource]="data"
-    style="width:700px; height:500px"
+    width="700px"
+    height="500px"
     markerType="diamondMarker"
     markerBrushes="red"
     markerOutlines="yellow">
@@ -69,7 +71,8 @@ The following example demonstrates how to enable transition in animations and ha
 ```html
  <igx-category-chart
     [dataSource]="data"
-    style="width:700px; height:500px"
+    width="700px"
+    height="500px"
     isTransitionInEnabled="true"
     transitionInDuration="5000"
     transitionInMode="AccordionFromRight">
