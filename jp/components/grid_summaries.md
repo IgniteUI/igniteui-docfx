@@ -1,11 +1,11 @@
----
-title: Grid summaries
-_description: The Ignite UI for Angular Data Grid control features the fastest, touch-responsive data-rich grid with popular features, including hierarchical and list views.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Data Grid component, Angular Data Grid control, Angular Grid component, Angular Grid control, Angular High Performance Grid, Summaries, Summary
+﻿---
+title: グリッドの集計
+_description: Ignite UI for Angular Data Grid コントロールは、タッチ レスポンシブなデータ グリッドです。階層およびリスト ビューなどの機能があります。
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Data Grid コンポーネント, Angular Data Grid コントロール, Angular Grid コンポーネント, Angular Grid コントロール, Angular 高いパフォーマンス Grid, 集計機能, 集計
 _language: ja
 ---
 
-### 集計
+### グリッドの集計
 
 > [!NOTE]
 > 列の集計は、ページング、フィルタリング、または並べ替えが適用された場合も**列値すべての関数**です。
@@ -150,18 +150,18 @@ export class GridComponent implements OnInit {
 }
 ```
 
-### Additional Resources
+### 追加のリソース
 <div class="divider--half"></div>
 
-* [Grid overview](grid.html)
-* [Virtualization and Performance](grid_virtualization.html)
-* [Paging](grid_paging.html)
-* [Filtering](grid_filtering.html)
-* [Sorting](grid_sorting.html)
-* [Column Pinning](grid_column_pinning.html)
+* [グリッドの概要](grid.html)
+* [仮想化とパフォーマンス](grid_virtualization.html)
+* [ページング](grid_paging.html)
+* [フィルタリング](grid_filtering.html)
+* [並べ替え](grid_sorting.html)
+* [列のピン固定](grid_column_pinning.html)
 
 <div class="divider--half"></div>
-Our community is active and always welcoming to new ideas.
+是非コミュニティに参加してください。
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
