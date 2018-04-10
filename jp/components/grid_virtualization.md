@@ -2,6 +2,7 @@
 title: Grid Virtualization and Performance
 _description: The Ignite UI for Angular Data Grid control now virtualizes its columns and rows, visualizing only the visible chunks of the data in the DOM, as a result allowing smooth and seamless scrolling through large sets of data.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Data Grid component, Angular Data Grid control, Angular Grid component, Angular Grid control, Angular High Performance Grid, Virtualization, Performance
+_language: ja
 ---
 
 ## Grid Virtualization and Performance
@@ -31,7 +32,7 @@ The size of the related grid dimension should be set.
 *   height for vertical (row) virtualization. Can be set in pixels ("500px") or percentage("50%").
 
 *   width for horizontal (column) virtualization. Can be set in pixels ("500px") or percentage("50%").
-        
+
 If the related dimension is not set then virtualization will be disabled.
 
 The size of the data chunks are determined by the size of the related virtualized elements.
@@ -69,3 +70,19 @@ Please refer to the below table for details on how each combination of configura
 |:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|:x:|Invalid config
 |:heavy_check_mark:|:heavy_check_mark:|:x:|:heavy_check_mark:|Invalid config
 |:heavy_check_mark:|:heavy_check_mark:|:x:|:x:|Invalid config
+
+### Additional Resources
+<div class="divider--half"></div>
+
+* [Grid overview](grid.html)
+* [Paging](grid_paging.html)
+* [Filtering](grid_filtering.html)
+* [Sorting](grid_sorting.html)
+* [Summaries](grid_summaries.html)
+* [Column Pinning](grid_column_pinning.html)
+
+<div class="divider--half"></div>
+Our community is active and always welcoming to new ideas.
+
+* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

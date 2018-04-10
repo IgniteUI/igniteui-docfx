@@ -1,11 +1,21 @@
 - name: Grids & Lists
   header: true
-- name: Data Grid 
+- name: Data Grid
   href: grid.md
   items:
     - name: Virtualization and performance
       href: grid_virtualization.md
-- name: List View 
+    - name: Paging
+      href: grid_paging.md
+    - name: Filtering
+      href: grid_filtering.md
+    - name: Sorting
+      href: grid_sorting.md
+    - name: Summaries
+      href: grid_summaries.md
+    - name: Column pinning
+      href: grid_column_pinning.md
+- name: List View
   href: list.md
 - name: Styling & Themes
   header: true
@@ -20,27 +30,27 @@
   href: shadows.md
 - name: Data Entry & Display
   header: true
-- name: Button 
+- name: Button
   href: button.md
 - name: Button Group
   href: buttonGroup.md
-- name: Checkbox 
+- name: Checkbox
   href: checkbox.md
-- name: Switch 
+- name: Switch
   href: switch.md
-- name: Radio Button 
+- name: Radio Button
   href: radio_button.md
 - name: Label & Input
   href: label_input.md
 - name: Mask
   href: mask.md
-- name: Badge 
+- name: Badge
   href: badge.md
-- name: Icon 
+- name: Icon
   href: icon.md
-- name: Linear Progress 
+- name: Linear Progress
   href: linear_progress.md
-- name: Circular Progress 
+- name: Circular Progress
   href: circular_progress.md
 - name: Virtual For Directive
   href: for_of.md
@@ -48,41 +58,41 @@
   header: true
 - name: Dialog Window
   href: dialog.md
-- name: Slider 
+- name: Slider
   href: slider.md
-- name: Ripple 
+- name: Ripple
   href: ripple.md
 - name: Toggle
   href: toggle.md
 - name: Menus
   header: true
-- name: Navigation Drawer 
+- name: Navigation Drawer
   href: navdrawer.md
-- name: Navbar 
+- name: Navbar
   href: navbar.md
 - name: Layouts
   header: true
-- name: Layout Manager 
+- name: Layout Manager
   href: layout.md
-- name: Carousel 
+- name: Carousel
   href: carousel.md
-- name: Tab Bar 
+- name: Tab Bar
   href: tabbar.md
-- name: Card 
+- name: Card
   href: card.md
-- name: Avatar 
+- name: Avatar
   href: avatar.md
 - name: Notifications
   header: true
-- name: Snackbar 
+- name: Snackbar
   href: snackbar.md
-- name: Toast 
+- name: Toast
   href: toast.md
 - name: Scheduling
   header: true
-- name: Calendar 
+- name: Calendar
   href: calendar.md
-- name: Date Picker 
+- name: Date Picker
   href: date_picker.md
 - name: Time Picker 
   href: time_picker.md
