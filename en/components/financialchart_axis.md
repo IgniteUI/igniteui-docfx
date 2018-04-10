@@ -32,7 +32,7 @@ The following code example shows how to style labels on the x-axis using style p
 ```html
 <igx-financial-chart
     [dataSource]="data"
-    style="width:700px; height:500px"
+    style="width:850px; height:600px"
     xAxisLabelTextStyle="16pt Verdana"
     xAxisLabelRightMargin="14"
     xAxisLabelTextColor="red">
@@ -48,7 +48,7 @@ The following code example shows how to set and customize the titles on the x-ax
 ```html
  <igx-financial-chart
       [dataSource]="data"
-      style="width:700px; height:500px"
+      style="width:850px; height:600px"
       xAxisTitle="Country"
       xAxisTitleTextColor="blue"
       xAxisTitleTextStyle="20pt Times New Roman|Georgia|Serif"
@@ -67,7 +67,7 @@ The following code snippet demonstrates how to set the color, length and thickne
 ```html
  <igx-financial-chart
       [dataSource]="data"
-      style="width:700px; height:500px"
+      style="width:850px; height:600px"
       xAxisTickLength="10"
       xAxisTickStrokeThickness="3"
       xAxisTickStroke="red">
@@ -83,7 +83,7 @@ The following sample code demonstrates how to change the axis range on the y-axi
 ```html
  <igx-financial-chart
       [dataSource]="data"
-      style="width:700px; height:500px"
+      style="width:850px; height:600px"
       yAxisMinimumValue="-200"
       yAxisMaximumValue="1000">
  </igx-financial-chart>
@@ -98,7 +98,7 @@ The following code snippet demonstrates how to configure the interval on the y-a
 ```html
  <igx-financial-chart
     [dataSource]="data"
-    style="width:700px; height:500px"
+    style="width:850px; height:600px"
     yAxisInterval="100"
     yAxisMinorInterval="10" 
     yAxisMinorStroke="Red"    

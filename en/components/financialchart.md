@@ -86,7 +86,7 @@ var data = [
 The following code demonstrates how to bind the financial chart to the above data. 
 
 ```html 
- <igx-financial-chart [dataSource]="data" style="width:700px; height:500px">
+ <igx-financial-chart [dataSource]="data" style="width:850px; height:600px">
  </igx-financial-chart>
 ```
 
