@@ -396,7 +396,7 @@ this.grid.deleteRow(this.selectedCell.rowIndex);
 |--- |--- |
 |イベント発生|変更の通知  |
 |`onEditDone`|セル値を変更するときに発生されます。`{ currentValue: any, newValue: any }` を返します。|
-|`onCellClick`|Emitted when a cell is clicked. Returns the cell object.|
+|`onCellClick`|セルがクリックされたときに発生されます。セル オブジェクトを返します。|
 |`onSelection`|セルが選択されたときに発生されます。セル オブジェクトを返します。|
 |`onColumnInit`|グリッド列が初期化されるときに発生されます。列オブジェクトを返します。|
 |`onSortingDone`|並べ替えが UI で実行されたときに発生されます。並べ替え式を返します。|
