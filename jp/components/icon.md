@@ -74,7 +74,7 @@ export class AppModule {}
 |:----------|:-------------:|:------|
 | `name` |  `name="home"` | アイコンを設定するには、名前を公式の[マテリアル アイコン セット](https://material.io/icons/)から提供します。 |
 | `active` |  `isActive="true"` | アイコンをアクティブ/非アクティブに設定します。デフォルト値は true です。 |
-| `animate` |  `color="#474747"` | 文字列値を指定してアイコンの色を設定します。 |
+| `color` |  `color="#474747"` | 文字列値を指定してアイコンの色を設定します。 |
 
 <div class="divider--half"></div>
 
