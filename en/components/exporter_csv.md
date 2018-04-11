@@ -110,7 +110,7 @@ public exportButtonHandler() {
 
 ```
 
-<div class="sample-container loading" style="height: 450px;">
+<div class="sample-container loading" style="height: 300px;">
     <iframe id="csv-export-sample-iframe2" src="{environment:demosBaseUrl}/export-csv-sample-1"
         width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -140,7 +140,7 @@ You can also specify a custom delimiter using the `IgxCsvExporterOptions` object
 
 ### Customizing the Exported Content
 
-In the above examples the CSV Exporter service was exporting all available data. There are situation in which you may want to skip exporting a row or even an entire column. To achieve this you may hook to the `onColumnExport` or `onRowExport` which are fired respectively for each column or each row and cancel the respective event by setting the event argument object's `cancel` property to `true`.
+In the above examples the CSV Exporter service was exporting all available data. There are situations in which you may want to skip exporting a row or even an entire column. To achieve this you may hook to the `onColumnExport` or `onRowExport` which are fired respectively for each column or each row and cancel the respective event by setting the event argument object's `cancel` property to `true`.
 
 The following example will exclude a column from the export if its name is "Age" and if its index is 1:
 
@@ -179,6 +179,7 @@ The following inputs are available on the **IgxCsvExporterOptions** component:
 | `ignoreColumnsOrder` | boolean | Specifies if the exporter should ignore the current column order in the grid. |
 | `ignoreColumnsVisibility` | boolean | Specifies whether hidden columns should be exported. |
 | `ignoreFiltering` | boolean | Specifies whether filtered out rows should be exported. |
+| `ignoreSorting` | boolean | Specifies whether the exported data should be sorted as in the grid. |
 | `valueDelimiter` | string | Provides a custom delimiter which will overwrite the default delimitor of the selected file type. |
 
 <div class="divider"></div>
