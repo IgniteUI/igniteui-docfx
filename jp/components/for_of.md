@@ -113,12 +113,12 @@ export class AppModule {}
 ```html
 <div style='height: 500px; overflow: hidden; position: relative;'>
     <ng-template igxFor let-item [igxForOf]="remoteData | async" (onChunkPreload)="chunkLoading($event)"
-		[igxForScrollOrientation]="'vertical'"
-		[igxForContainerSize]='"500px"'
-		[igxForItemSize]='"50px"'
-		[igxForRemote]='true'
-		let-rowIndex="index" #virtDirRemote>
-		<div style='height:50px;'>{{item.ProductID}} : {{item.ProductName}}</div>
+        [igxForScrollOrientation]="'vertical'"
+        [igxForContainerSize]='"500px"'
+        [igxForItemSize]='"50px"'
+        [igxForRemote]='true'
+        let-rowIndex="index" #virtDirRemote>
+        <div style='height:50px;'>{{item.ProductID}} : {{item.ProductName}}</div>
     </ng-template>
 </div>
 ```
