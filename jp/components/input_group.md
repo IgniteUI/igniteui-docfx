@@ -98,7 +98,7 @@ public user = {
 ```
 
 ### Prefix と Suffix
-入力のプレフィックスまたはサフィックスを追加するために Ignite UI for Angular Prefix または Suffix を使用できます。[Please explain what the Prefix and Suffix can contain] プレフィックスおよびサフィックスを持つ新しい入力フィールドを追加します。
+入力のプレフィックスまたはサフィックスを追加するために Ignite UI for Angular Prefix または Suffix を使用できます。両方のディレクティブが HTML 要素、文字列、またはその他のコンポーネントを含むことができます。文字列 **prefix** (`+359`) および igxIcon **suffix** (`<igx-icon name="phone"></igx-icon>`) を持つ新しい入力フィールドを追加します。
 
 ```html
 <igx-input-group>
