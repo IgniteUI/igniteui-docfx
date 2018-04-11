@@ -97,7 +97,7 @@ and in our markup:
 ```
 
 ### Prefix & Suffix
-If you want to have an input prefix or suffix, you can use Ignite UI for Angular Prefix or Suffix. Both directives can contain html elements, strings or even other components. Let's add a new input field with prefix and suffix:
+If you want to have an input prefix or suffix, you can use Ignite UI for Angular Prefix or Suffix. Both directives can contain html elements, strings, icons or even other components. Let's add a new input field with `string` prefix (+350) and igxIcon `suffix`:
 
 ```html
 <igx-input-group>
