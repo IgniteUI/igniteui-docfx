@@ -1,8 +1,21 @@
 ﻿- name: グリッドとリスト
   header: true
-- name: Data Grid 
+- name: Data Grid
   href: grid.md
-- name: List View 
+  items:
+    - name: 仮想化とパフォーマンス
+      href: grid_virtualization.md
+    - name: ページング
+      href: grid_paging.md
+    - name: フィルタリング
+      href: grid_filtering.md
+    - name: 並べ替え
+      href: grid_sorting.md
+    - name: 集計
+      href: grid_summaries.md
+    - name: 列のピン固定
+      href: grid_column_pinning.md
+- name: List View
   href: list.md
 - name: スタイルとテーマ
   header: true
@@ -17,69 +30,69 @@
   href: shadows.md
 - name: データ入力と表示
   header: true
-- name: Button 
+- name: Button
   href: button.md
 - name: Button Group
   href: buttonGroup.md
-- name: Checkbox 
+- name: Checkbox
   href: checkbox.md
-- name: Switch 
+- name: Switch
   href: switch.md
-- name: Radio Button 
+- name: Radio Button
   href: radio_button.md
 - name: Label & Input
   href: label_input.md
 - name: Mask
   href: mask.md
-- name: Badge 
+- name: Badge
   href: badge.md
-- name: Icon 
+- name: Icon
   href: icon.md
-- name: Linear Progress 
+- name: Linear Progress
   href: linear_progress.md
-- name: Circular Progress 
+- name: Circular Progress
   href: circular_progress.md
 - name: Virtual For Directive
   href: for_of.md
 - name: インタラクション
   header: true
-- name: Dialog Windows 
+- name: Dialog Windows
   href: dialog.md
-- name: Slider 
+- name: Slider
   href: slider.md
-- name: Ripple 
+- name: Ripple
   href: ripple.md
 - name: Toggle
   href: toggle.md
 - name: メニュー
   header: true
-- name: Navigation Drawer 
+- name: Navigation Drawer
   href: navdrawer.md
-- name: Navbar 
+- name: Navbar
   href: navbar.md
 - name: レイアウト
   header: true
-- name: Layout Manager 
+- name: Layout Manager
   href: layout.md
-- name: Carousel 
+- name: Carousel
   href: carousel.md
-- name: Tab Bar 
+- name: Tab Bar
   href: tabbar.md
-- name: Card 
+- name: Card
   href: card.md
-- name: Avatar 
+- name: Avatar
   href: avatar.md
 - name: 通知
   header: true
-- name: Snackbar 
+- name: Snackbar
   href: snackbar.md
-- name: Toast 
+- name: Toast
   href: toast.md
 - name: スケジュール
   header: true
-- name: Calendar 
+- name: Calendar
   href: calendar.md
-- name: Date Picker 
+- name: Date Picker
   href: date_picker.md
-- name: Time Picker 
+- name: Time Picker
   href: time_picker.md
