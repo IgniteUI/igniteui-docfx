@@ -9,6 +9,9 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <p class="highlight">The Ignite UI for Angular Tab Bar component enables the user to navigate among a number of content panels displayed in a single view. The navigation through the panels is accomplished with the tab buttons located at bottom.</p>
 <div class="divider"></div>
 
+> [!NOTE]
+> `igx-tab-bar` selector is deprecated. You could use `igx-bottom-nav` instead.
+
 ### Tabbar Demo
 
 <div class="sample-container loading" style="height: 600px; width: 400px; border: 1px solid gray;" >
@@ -43,11 +46,11 @@ export class AppModule {}
 Then, modify the component's template to include the Tab Bar and add three panels.
 
 ```html
-<igx-tab-bar>
+<igx-bottom-nav>
   <igx-tab-panel label="Tab 1">This is Tab 1 content.</igx-tab-panel>
   <igx-tab-panel label="Tab 2">This is Tab 2 content.</igx-tab-panel>
   <igx-tab-panel label="Tab 3">This is Tab 3 content.</igx-tab-panel>
-</igx-tab-bar>
+</igx-bottom-nav>
 ```
 If all went well, you should see the following in your browser:
 
@@ -108,7 +111,7 @@ Update the component's template markup by adding new tabs' labels, icon names fr
 and also DIV and SPAN elements to visualize the data content correctly:
 
 ```html
-<igx-tab-bar>
+<igx-bottom-nav>
 
   <igx-tab-panel label="Songs" icon="library_music">
     <div class="item" *ngFor="let song of songsList">
@@ -131,7 +134,7 @@ and also DIV and SPAN elements to visualize the data content correctly:
     </div>
   </igx-tab-panel>
 
-</igx-tab-bar>
+</igx-bottom-nav>
 ```
 
 Finally add the CSS classes used by the DIV and SPAN elements of the template to the component's CSS file:
@@ -169,7 +172,7 @@ If changing the tabs' labels and tabs' icons is not enough, you can also create 
 Here is an example:
 
 ```html
-<igx-tab-bar>
+<igx-bottom-nav>
     <igx-tab-panel>
 
         <ng-template igxTab>
@@ -180,7 +183,7 @@ Here is an example:
 
         <h1>Tab content</h1>
     </igx-tab-panel>
-</igx-tab-bar>
+</igx-bottom-nav>
 ```
 
 <div class="divider"></div>
@@ -270,7 +273,7 @@ Edit the component's template markup by adding the following Tab Bar with an Igx
 
 ```html
 ...
-<igx-tab-bar>
+<igx-bottom-nav>
     <igx-tab-panel icon="phone">
         <igx-list [allowRightPanning]="true" [allowLeftPanning]="true">
             <igx-list-item [isHeader]="true">History</igx-list-item>
@@ -297,7 +300,7 @@ Edit the component's template markup by adding the following Tab Bar with an Igx
             <h3>Tab 3 Content ...</h3>
         </div>
     </igx-tab-panel>
-</igx-tab-bar>
+</igx-bottom-nav>
 ...
 ```
 
@@ -367,7 +370,7 @@ The following inputs are available on the **igx-tab** component:
 
 #### Outputs
 
-The following outputs are available on the **igx-tab-bar** component:
+The following outputs are available on the **igx-bottom-nav** component:
 | Name | Type | Description |
 | :--- | :--- | :--- |
 | `onTabSelected` | EventEmitter | Emits an event when a new tab is selected. |
@@ -377,7 +380,7 @@ The following outputs are available on the **igx-tab-bar** component:
 
 #### Getters
 
-The following getters are available on the **igx-tab-bar** component:
+The following getters are available on the **igx-bottom-nav** component:
 | Name | Type | Description |
 | :--- | :--- | :--- |
 | `tabs` | QueryList | Provides an observable collection of all IgxTab view children. |
