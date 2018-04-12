@@ -99,6 +99,7 @@ When set to `OR`, a row will be returned when either the 'ProductName' cell valu
 * [Sorting](grid_sorting.html)
 * [Summaries](grid_summaries.html)
 * [Column Pinning](grid_column_pinning.html)
+* [Column Resizing](grid_column_resizing.html)
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.
