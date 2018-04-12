@@ -124,7 +124,7 @@ public exportButtonHandler() {
 
 The CSV Exporter supports several types of exporting formats. The export format may be specified:
 * as a second argument of the `IgxCsvExporterOptions` objects's constructor
-* using the `IgxCsvExporterOptions` objects's `fileType` property
+* using the `IgxCsvExporterOptions` object's `fileType` property
 
 Different export formats have different file extensions and value delimiters. The following table maps the export formats and their respective file extensions and delimiters:
 
