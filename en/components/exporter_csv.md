@@ -75,7 +75,7 @@ If all went well, you should see an export button. When pressed, it will trigger
 
 ### Exporting IgxGrid's Data
 
-The CSV Exporter service can also export data in CSV format from an `IgxGrid`. The only difference if that you need to invoke the 
+The CSV Exporter service can also export data in CSV format from an `IgxGrid`. The only difference is that you need to invoke the 
 `IgxCsvExporterService`'s `export` method and pass the `IgxGrid` as first argument.
 
 Here is an example:
@@ -123,10 +123,10 @@ public exportButtonHandler() {
 ### Customizing the Exported Format
 
 The CSV Exporter supports several types of exporting formats. The export format may be specified:
-* as second argument of the `IgxCsvExporterOptions` objects's constructor
+* as a second argument of the `IgxCsvExporterOptions` objects's constructor
 * using the `IgxCsvExporterOptions` objects's `fileType` property
 
-Different export formats have different file extensions and value delimiters. The following table maps the export formats and their respactive file extendions and delimiters:
+Different export formats have different file extensions and value delimiters. The following table maps the export formats and their respective file extensions and delimiters:
 
 | Format | File Extension | Default Delimiter |
 | :--- | :--- | :--- |

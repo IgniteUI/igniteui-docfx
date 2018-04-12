@@ -75,7 +75,7 @@ If all went well, you should see an export button. When pressed, it will trigger
 
 ### Exporting IgxGrid's Data
 
-The CSV Exporter service can also export data in CSV format from an `IgxGrid`. The only difference if that you need to invoke the 
+The CSV Exporter service can also export data in CSV format from an `IgxGrid`. The only difference is that you need to invoke the 
 `IgxCsvExporterService`'s `export` method and pass the `IgxGrid` as first argument.
 
 Here is an example:
@@ -110,7 +110,7 @@ public exportButtonHandler() {
 
 ```
 
-<div class="sample-container loading" style="height: 450px;">
+<div class="sample-container loading" style="height: 300px;">
     <iframe id="csv-export-sample-iframe2" src="{environment:demosBaseUrl}/export-csv-sample-1"
         width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -123,10 +123,10 @@ public exportButtonHandler() {
 ### Customizing the Exported Format
 
 The CSV Exporter supports several types of exporting formats. The export format may be specified:
-* as second argument of the `IgxCsvExporterOptions` objects's constructor
+* as a second argument of the `IgxCsvExporterOptions` objects's constructor
 * using the `IgxCsvExporterOptions` objects's `fileType` property
 
-Different export formats have different file extensions and value delimiters. The following table maps the export formats and their respactive file extendions and delimiters:
+Different export formats have different file extensions and value delimiters. The following table maps the export formats and their respective file extensions and delimiters:
 
 | Format | File Extension | Default Delimiter |
 | :--- | :--- | :--- |
@@ -140,7 +140,7 @@ You can also specify a custom delimiter using the `IgxCsvExporterOptions` object
 
 ### Customizing the Exported Content
 
-In the above examples the CSV Exporter service was exporting all available data. There are situation in which you may want to skip exporting a row or even an entire column. To achieve this you may hook to the `onColumnExport` or `onRowExport` which are fired respectively for each column or each row and cancel the respective event by setting the event argument object's `cancel` property to `true`.
+In the above examples the CSV Exporter service was exporting all available data. There are situations in which you may want to skip exporting a row or even an entire column. To achieve this you may hook to the `onColumnExport` and/or `onRowExport` events which are fired respectively for each column and/or each row and cancel the respective event by setting the event argument object's `cancel` property to `true`.
 
 The following example will exclude a column from the export if its name is "Age" and if its index is 1:
 
@@ -179,6 +179,7 @@ The following inputs are available on the **IgxCsvExporterOptions** component:
 | `ignoreColumnsOrder` | boolean | Specifies if the exporter should ignore the current column order in the grid. |
 | `ignoreColumnsVisibility` | boolean | Specifies whether hidden columns should be exported. |
 | `ignoreFiltering` | boolean | Specifies whether filtered out rows should be exported. |
+| `ignoreSorting` | boolean | Specifies whether the exported data should be sorted as in the grid. |
 | `valueDelimiter` | string | Provides a custom delimiter which will overwrite the default delimitor of the selected file type. |
 
 <div class="divider"></div>
