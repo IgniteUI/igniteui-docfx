@@ -57,7 +57,7 @@ export class AppModule {}
 #### 垂直仮想化
 
 ```html
-<table style='height:500px;'>
+<table style='height: 500px; overflow: hidden; position: relative;'>
     <ng-template igxFor let-item [igxForOf]="data" #virtDirVertical
         [igxForScrollOrientation]="'vertical'"
         [igxForContainerSize]='"500px"'
@@ -71,9 +71,9 @@ export class AppModule {}
 #### 水平仮想化
 
 ```html
-<table> 
-    <tbody style='display:grid;'>
-    <tr style='width:500px; height:118px;'>               
+<table>
+    <tbody style='display: grid; position: relative;'>
+    <tr style='width:500px; height:118px; overflow: hidden;'>
         <ng-template igxFor let-item [igxForOf]="data" #virtDirHorizontal
             [igxForScrollOrientation]="'horizontal'"
             [igxForContainerSize]='"500px"'
@@ -85,10 +85,12 @@ export class AppModule {}
 </table>
 ```
 
+***注:*** `igxForOf` テンプレートの親コンテナーで関連するディメンション (垂直の場合は `height` で、水平の場合は `width`) を設定し、`overflow: hidden` および `position: relative` の CSS ルールを適用する必要があります。スムーズ スクロール動作が、表示されたままの場合にページのその他の部分に視覚的に影響を与えることが可能なコンテンツ オフセットによって実装されるためです。
+
 #### 水平仮想化および垂直仮想化
 
 ```html
-<table #container [style.width]='width' [style.height]='height'>
+<table #container [style.width]='width' [style.height]='height' [style.overflow]='"hidden"' [style.position]='"relative"'>
     <ng-template #scrollContainer igxFor let-rowData [igxForOf]="data"
         [igxForScrollOrientation]="'vertical'"
         [igxForContainerSize]='height'
@@ -109,14 +111,14 @@ export class AppModule {}
 `igxForOf` ディレクティブはリモート サービスにバインドできます。 `Observeable` プロパティを使用する必要があります。以下の例は `remoteData` プロパティです。また、`chunkLoading` イベントを使用してデータへの要求をトリガーします。
 
 ```html
-<div style='height:500px;'>
+<div style='height: 500px; overflow: hidden; position: relative;'>
     <ng-template igxFor let-item [igxForOf]="remoteData | async" (onChunkPreload)="chunkLoading($event)"
-    [igxForScrollOrientation]="'vertical'"
-    [igxForContainerSize]='"500px"'
-    [igxForItemSize]='"50px"'
-    [igxForRemote]='true'
-    let-rowIndex="index" #virtDirRemote>
-    <div style='height:50px;'>{{item.ProductID}} : {{item.ProductName}}</div>
+        [igxForScrollOrientation]="'vertical'"
+        [igxForContainerSize]='"500px"'
+        [igxForItemSize]='"50px"'
+        [igxForRemote]='true'
+        let-rowIndex="index" #virtDirRemote>
+        <div style='height:50px;'>{{item.ProductID}} : {{item.ProductName}}</div>
     </ng-template>
 </div>
 ```
@@ -224,7 +226,6 @@ chunkLoading(evt) {
 | :---------- |:------- | :---------------------------------------------------- |
 | `$implicit` | T       | 列挙子に含まれる項目の値。     |
 | `index`     | number  | 列挙子の現在項目のインデックス。        |
-| `dirty`     | boolean | 現在の項目が状態をリセットする必要がある場合は true。 |
 
 <div class="divider--half"></div>
 
