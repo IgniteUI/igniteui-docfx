@@ -155,7 +155,7 @@ this.csvExportService.onColumnExport.subscribe((args: IColumnExportingEventArgs)
 this.csvExportService.export(this.igxGrid1, new IgxCsvExporterOptions("ExportedDataFile"));
 ```
 
-When you are exporting data from `IgxGrid` the export process takes in account features like row filtering and column hiding and exports only the data visible in the grid. You can configure the exporter service to include filtered rows or hidden columns by setting properties on the `IgxExcelExporterOptions` object. These properties are described in the table below.
+When you are exporting data from `IgxGrid` the export process takes in account features like row filtering and column hiding and exports only the data visible in the grid. You can configure the exporter service to include filtered rows or hidden columns by setting properties on the `IgxCsvExporterOptions` object. These properties are described in the table below.
 
 ### API Summary
 

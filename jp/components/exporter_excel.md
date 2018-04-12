@@ -177,7 +177,7 @@ The following outputs are available on the **IgxExcelExporterService** component
 | :--- | :--- | :--- |
 | `onColumnExport` | EventEmitter<`IColumnExportingEventArgs`> | Emitted when an excel column is being exported. |
 | `onRowExport` | EventEmitter<`IRowExportingEventArgs`> | Emitted when an excel row is being exported. |
-| `onExportEnded` | EventEmitter<`ICsvExportEndedEventArgs`> | Emitted when the excel file has been exported. |
+| `onExportEnded` | EventEmitter<`IExcelExportEndedEventArgs`> | Emitted when the excel file has been exported. |
 
 <div class="divider"></div>
 
