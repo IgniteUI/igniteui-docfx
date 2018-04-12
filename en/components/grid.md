@@ -403,6 +403,7 @@ A list of the events emitted by the **igx-grid**:
 |`onRowAdded`|Emitted when a row is being added to the grid through the API. Returns the data for the new row object.|
 |`onRowDeleted`|Emitted when a row is deleted through the grid API. Returns the row object being removed.|
 |`onColumnPinning`|Emitted when a column is pinned through the grid API. The index that the column is inserted at may be changed through the `insertAtIndex` property.|
+|`onContextMenu`|Emitted when a cell is right clicked. Returns the cell object.|
 
 
 <div class="divider--half"></div>
