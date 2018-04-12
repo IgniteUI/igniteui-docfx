@@ -1,6 +1,6 @@
 ---
 title: Financial Chart Component
-_description: Present users with dashboards and engaging text, images, icons or buttons as an entry point for detailed information with Ignite UI for Angular Financial Chart component.
+_description: The Ignite UI for Angular Financial Chart component is a touch-enabled, highly performant, lightweight charting control that makes visualizing financial data a breeze.
 _keywords: Ignite UI for Angular, Data Visualization, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Chart component, Angular Financial Chart component, Angular Chart controls, Angular Financial Chart controls, Data Visualization
 ---
 ## Financial Chart 
@@ -41,7 +41,7 @@ A toolbar is displayed at the top of the financial chart. This allows your end u
 
 ### Dependencies
 
-The finacial chart is exported as as an `NgModule`, you need to import the _IgxFinancialChartModule_ inside your `AppModule`:
+The financial chart is exported as as an `NgModule`, you need to import the _IgxFinancialChartModule_ inside your `AppModule`:
 
 ```typescript
 // app.module.ts
@@ -63,7 +63,7 @@ export class AppModule {}
 
 Now that the financial chart module is imported, next step is to bind it to data.
 
-In order to create an igFinancialChart control, you must first have data to bind it to. The following code snippet demonstrates how to create a simple data source. 
+In order to create an igxFinancialChart control, you must first have data to bind it to. The following code snippet demonstrates how to create a simple data source. 
 
 ```typescript
 
