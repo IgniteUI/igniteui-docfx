@@ -12,7 +12,7 @@ Ignite UI for Angular Input Group コンポーネントを使用すると、単�
 <div class="divider--half"></div>
 
 ### Input Group デモ
-<div class="sample-container" style="height:500px">
+<div class="sample-container" style="height:600px">
 <iframe id="input-group-sample-6-frame" src='{environment:demosBaseUrl}/input-group-sample-6' width="100%" height="100%" seamless frameBorder="0"></iframe>
 </div>
 <div>
@@ -43,59 +43,7 @@ export class AppModule {}
 > `igxInput`、`igxLabel`、`igxPrefix`、`igxSuffix`、または `igxHint` ディレクティブを使用するには、`<igx-input-group>` コンテナーにラップする必要があります。
 
 ### Label および Input
-HTML ラベルおよび入力は HTML フォームの基本要素です。`igxLabel` および `igxInput` ディレクティブの使用例:
-
-```html
-<igx-input-group>
-    <input igxInput name="fullName" type="text" />
-    <label igxLabel for="fullName">Full Name</label>
-</igx-input-group>
-```
-
-結果は以下です。
-
-<div class="sample-container" style="height:100px">
-<iframe id="input-group-sample-1-frame" src='{environment:demosBaseUrl}/input-group-sample-1' width="100%" height="100%" seamless frameBorder="0"></iframe>
-</div>
-<div class="divider--half"></div>
-
-`igxInput` ディレクティブを `<input>` および `<textarea>` HTML 要素に適用できます。単一行および複数行テキスト フィールドをサポートします。
-
-#### 検証
-Ignite UI for Angular Input ディレクティブで検証が有効な場合にマテリアルに基づくスタイル設定を提供します。入力に `required` 属性を追加します。
-
-```html
-<igx-input-group>
-    <input igxInput name="fullName" type="text" required="required" />
-    <label igxLabel for="fullName">Full Name</label>
-</igx-input-group>
-```
-
-以下のコード例およびデモは、検証に成功または失敗するかどうかに基づいてラベルの隣にあるアスタリスクを表示し、入力が緑または赤くなることを確認できます。
-
-<div class="sample-container" style="height:100px">
-<iframe id="input-group-sample-2-frame" src='{environment:demosBaseUrl}/input-group-sample-2' width="100%" height="100%" seamless frameBorder="0"></iframe>
-</div>
-<div class="divider--half"></div>
-
-#### データ バインディング
-Ignite UI for Angular Input は one-way および two-way データ バインディングをサポートします。入力に両方向のデータ バインディングを追加します。以下はコンポーネントのコード:
-
-```typescript
-public user = {
-    fullName: ""
-};
-
-```
-
-マークアップのコード:
-
-```html
-<igx-input-group>
-    <input igxInput name="fullName" type="text" [(ngModel)]="user.fullName" required="required" />
-    <label igxLabel for="fullName">Full Name</label>
-</igx-input-group>
-```
+You can read about the `igxLabel` and `igxInput` directives as well as their validation, data binding and API in a separate topic [here](label_input.md).
 
 ### Prefix と Suffix
 入力のプレフィックスまたはサフィックスを追加するために Ignite UI for Angular Prefix または Suffix を使用できます。両方のディレクティブが HTML 要素、文字列、またはその他のコンポーネントを含むことができます。文字列 **prefix** (`+359`) および igxIcon **suffix** (`<igx-icon name="phone"></igx-icon>`) を持つ新しい入力フィールドを追加します。
@@ -170,24 +118,6 @@ Ignite UI for Angular Hint は入力の下に配置されるヘルパー テキ�
 |`isTypeSearch()`|`igxInputGroup` の `type` が `search` かどうか。|
 <div class="divider--half"></div>
 
-## Input API
-
-### 入力
-
-|名前|型|説明|
-|--- |--- |--- |
-|`value`|any|入力の値。|
-<div class="divider--half"></div>
-
-### ゲッター/セッター
-
-|名前|型|ゲッター|セッター|説明|
-|--- |--- |--- |--- |--- |
-|`valid`|IgxInputState|はい|いいえ|入力の検証状態。有効な値は `IgxInputState.INITIAL`、`IgxInputState.VALID`、および `IgxInputState.INVALID` です。|
-|`disabled`|boolean|はい|はい|入力の `disabled` プロパティを取得または設定します。|
-|`focused`|boolean|はい|いいえ|入力がフォーカスを持つかどうかを取得します。|
-<div class="divider--half"></div>
-
 ## Hint API
 
 ### 入力
@@ -198,6 +128,11 @@ Ignite UI for Angular Hint は入力の下に配置されるヘルパー テキ�
 <div class="divider--half"></div>
 
 ## 追加のリソース
+Related topics:
+
+* [Label & Input](label_input.md)
+<div class="divider--half"></div>
+
 是非コミュニティに参加してください。
 
 * [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
