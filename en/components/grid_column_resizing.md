@@ -6,7 +6,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ### Grid Column Resizing
 
-**Column resizing** is also enabled per-column level, meaning that the **igx-grid** can have a mix of resizable and non-resizable columns. This is done via the `resizable` input of the `igx-column`. The **igx-grid** supports deferred column resizing, meaning that columns are not immediately resized. A temporary resize indicator is shown while the drag operation is in effect and the new column size is only applied once the drag operation ends. Resizing a certain column affects the overall width of the grid meaning that the rest of the columns will preserve their current widths.
+**Column resizing** is also enabled per-column level, meaning that the **igx-grid** can have a mix of resizable and non-resizable columns. This is done via the `resizable` input of the `igx-column`. The **igx-grid** supports deferred column resizing, meaning that columns are not immediately resized. A temporary resize indicator is shown while the drag operation is in effect and the new column size is only applied once the drag operation ends. Resizing a certain column affects the overall width of the grid, so the rest of the columns will preserve their current widths.
 
 ```html
     <igx-column [field]="Name" [width]="'200px'" [resizable]="true"></igx-column>
