@@ -27,7 +27,7 @@ Another example of the intuitive behavior of the Category Chart control is that 
 
 ### Category Chart Demo
 
-<div class="sample-container" style="height: 280px">
+<div class="sample-container" style="height: 650px">
     <iframe id="category-chart-overview-sample-1-iframe" src='{environment:demosBaseUrl}/category-chart-overview-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
