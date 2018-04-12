@@ -1,18 +1,18 @@
 ---
-title: Tab Bar Component
+title: Bottom Navigation Component
 _description: Display tabs for any occasion and implement a completely tabbed user interface. These UI controls manage every aspect of your tabs’ appearance and behavior.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Tab Bar component, Angular Tab Bar controls
+_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Bottom Nav component, Angular Bottom Navigation controls
 ---
 
-## Tab Bar
+## Bottom Navigation
 
-<p class="highlight">The Ignite UI for Angular Tab Bar component enables the user to navigate among a number of content panels displayed in a single view. The navigation through the panels is accomplished with the tab buttons located at bottom.</p>
+<p class="highlight">The Ignite UI for Angular Bottom Navigation component enables the user to navigate among a number of content panels displayed in a single view. The navigation through the panels is accomplished with the tab buttons located at bottom.</p>
 <div class="divider"></div>
 
 > [!NOTE]
-> `igx-tab-bar` selector is deprecated. You could use `igx-bottom-nav` instead.
+> `igx-tab-bar` selector is deprecated. You could use `igx-bottom-nav` instead. `IgxTabBarComponent` class is renamed to `IgxBottomNavComponent`. `IgxTabBarModule` is renamed to `IgxBottomNavModule`
 
-### Tabbar Demo
+### Bottom Navigation Demo
 
 <div class="sample-container loading" style="height: 600px; width: 400px; border: 1px solid gray;" >
     <iframe id="tabbar-sample-iframe" src='{environment:demosBaseUrl}/tabbar' width="100%" height="100%" seamless
@@ -27,23 +27,23 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ### Usage
 
-To get started with the control, let's first import the **IgxTabBarModule** in the **app.module.ts** file:
+To get started with the control, let's first import the **IgxBottomNavModule** in the **app.module.ts** file:
 
 ```typescript
 // app.module.ts
 
 ...
-import { IgxTabBarModule } from 'igniteui-angular/main';
+import { IgxBottomNavModule } from 'igniteui-angular/main';
 
 @NgModule({
     ...
-    imports: [..., IgxTabBarModule],
+    imports: [..., IgxBottomNavModule],
     ...
 })
 export class AppModule {}
 ```
 
-Then, modify the component's template to include the Tab Bar and add three panels.
+Then, modify the component's template to include the Bottom Navigation and add three panels.
 
 ```html
 <igx-bottom-nav>
@@ -67,7 +67,7 @@ If all went well, you should see the following in your browser:
 
 ### Customizing Tabs
 
-Let's modify the tabs and make them more appealing by including icons. The Tab Bar control is compatible with the Material Design
+Let's modify the tabs and make them more appealing by including icons. The Bottom Navigation control is compatible with the Material Design
 [**Icons**](https://material.io/icons/) so it will be very easy for you to adopt them in your application.
 
 First add the Material+Icons import in your 'styles.css' file in the main application folder.
@@ -155,7 +155,7 @@ Finally add the CSS classes used by the DIV and SPAN elements of the template to
 }
 ```
 
-After these modifications our Tab Bar should look similar to this:
+After these modifications our Bottom Navigation should look similar to this:
 
 <div class="sample-container loading" style="height: 350px; width: 300px; border: 1px solid gray;">
     <iframe id="tabbar-sample-2-iframe" src='{environment:demosBaseUrl}/tabbar-sample-2' width="100%" height="100%" seamless
@@ -190,10 +190,10 @@ Here is an example:
 
 ### Embedding Other Igx Controls
 
-You can combine other Ignite UI for Angular components with the Tab Bar to achieve more complex applications.
-For example you may use the IgxList to create a list of contacts in a Tab Bar's panel and also visualize each contact using IgxAvatar and IgxIcon.
+You can combine other Ignite UI for Angular components with the Bottom Navigation to achieve more complex applications.
+For example you may use the IgxListComponent to create a list of contacts in a Bottom Navigation's panel and also visualize each contact using IgxAvatarComponent and IgxIconComponent.
 
-This time you will need to include both the IgxTabBar and IgxList components in your "app.module.ts" file:
+This time you will need to include both the IgxBottomNavComponent and IgxListComponent components in your "app.module.ts" file:
 
 ```typescript
 // app.module.ts
@@ -202,11 +202,11 @@ This time you will need to include both the IgxTabBar and IgxList components in 
 import { IgxAvatarModule } from 'igniteui-angular/main';
 import { IgxIconModule } from 'igniteui-angular/main';
 import { IgxListModule } from 'igniteui-angular/main';
-import { IgxTabBarModule } from 'igniteui-angular/main';
+import { IgxBottomNavModule } from 'igniteui-angular/main';
 
 @NgModule({
     ...
-    imports: [..., IgxAvatarModule, IgxIconModule, IgxListModule, IgxTabBarModule],
+    imports: [..., IgxAvatarModule, IgxIconModule, IgxListModule, IgxBottomNavModule],
     ...
 })
 export class AppModule {}
@@ -269,7 +269,7 @@ public contactsList: object[] = [{
 ...
 ```
 
-Edit the component's template markup by adding the following Tab Bar with an IgxList in its first panel:
+Edit the component's template markup by adding the following Bottom Navigation with an IgxListComponent in its first panel:
 
 ```html
 ...
@@ -342,13 +342,13 @@ And don't forget to include the following CSS definitions in order for the appli
 }
 ```
 
-You can see the result of the code above at the beginning of this article in the [Tabbar Demo](#tabbar-demo) section.
+You can see the result of the code above at the beginning of this article in the [Bottom Navigation Demo](#bottom-navigation-demo) section.
 
 <div class="divider"></div>
 
 ### API Summary
 
-The tab bar component has a few more APIs to explore, which are listed below.
+The Bottom Navigation component has a few more APIs to explore, which are listed below.
 
 #### Inputs
 
