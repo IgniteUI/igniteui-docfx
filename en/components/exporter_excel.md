@@ -124,7 +124,7 @@ public exportButtonHandler() {
 
 ### Customizing the Exported Content
 
-In the above examples the Excel Exporter service was exporting all available data. There are situations in which you may want to skip exporting a row or even an entire column. To achieve this you may hook to the `onColumnExport` or `onRowExport` which are fired respectively for each column or each row and cancel the respective event by setting the event argument object's `cancel` property to `true`.
+In the above examples the Excel Exporter service was exporting all available data. There are situations in which you may want to skip exporting a row or even an entire column. To achieve this you may hook to the `onColumnExport` and/or `onRowExport` events which are fired respectively for each column and/or each row and cancel the respective event by setting the event argument object's `cancel` property to `true`.
 
 The following example will exclude a column from the export if its header is "Age" and if its index is 1:
 
