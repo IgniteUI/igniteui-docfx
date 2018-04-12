@@ -394,6 +394,7 @@ A list of the events emitted by the **igx-grid**:
 |--- |--- |
 |_Event emitters_|_Notify for a change_|
 |`onEditDone`|Emitted when a cell value changes. Returns `{ currentValue: any, newValue: any }`|
+|`onCellClick`|Emitted when a cell is clicked. Returns the cell object.|
 |`onSelection`|Emitted when a cell is selected. Returns the cell object.|
 |`onColumnInit`|Emitted when the grid columns are initialized. Returns the column object.|
 |`onSortingDone`|Emitted when sorting is performed through the UI. Returns the sorting expression.|
@@ -402,6 +403,7 @@ A list of the events emitted by the **igx-grid**:
 |`onRowAdded`|Emitted when a row is being added to the grid through the API. Returns the data for the new row object.|
 |`onRowDeleted`|Emitted when a row is deleted through the grid API. Returns the row object being removed.|
 |`onColumnPinning`|Emitted when a column is pinned through the grid API. The index that the column is inserted at may be changed through the `insertAtIndex` property.|
+|`onContextMenu`|Emitted when a cell is right clicked. Returns the cell object.|
 
 
 <div class="divider--half"></div>
