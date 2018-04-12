@@ -89,17 +89,33 @@ The final result would be something like that:
 
 ####Inputs
 The following inputs are available on the **igx-checkbox** component:
-| Name | Type | Description |
-| :--- | :--- | :--- |
-| `checked` | bool | Checkbox is checked if true. |
-
+| Name   |      Type      |  Description |
+|:----------|:-------------:|:------|
+| `@Input()` id |    string   | The unique `id` attribute to be used for the checkbox. If you do not provide a value, it will be auto-generated. |
+| `@Input()` labelId |    string   | The unique `id` attribute to be used for the checkbox label. If you do not provide a value, it will be auto-generated. |
+| `@Input()` name |  string | The `name` attribute to be used for the checkbox. |
+| `@Input()` value | any | The value to be set for the checkbox. |
+| `@Input()` tabindex | number | Specifies the tabbing order of the checkbox. |
+| `@Input()` checked | boolean | Specifies the checked state of the checkbox. |
+| `@Input()` indeterminate | boolean | Specifies the indeterminate state of the checkbox. |
+| `@Input()` required | boolean | Specifies the required state of the checkbox. |
+| `@Input()` disabled | boolean | Specifies the disabled state of the checkbox. |
+| `@Input()` disableRipple | boolean | Specifies the whether the ripple effect should be disabled for the checkbox. |
+| `@Input()` labelPosition | string `|` enum LabelPosition | Specifies the position of the text label relative to the checkbox element. |
+| `@Input("aria-labelledby")` ariaLabelledBy | string | Specify an external element by id to be used as label for the checkbox. |
 <div class="divider"></div>
 
 ####Outputs
 The following outputs are available on the **igx-checkbox** component:
 | Name | Type | Description |
 | :--- | :--- | :--- |
-| `change` | EventEmitter | Emits an event when the checkbox is clicked. |
+| `@Output()` change | EventEmitter<IChangeCheckboxEventArgs> | Emitted when the checkbox checked value changes. |
+
+####Methods
+The following methods are available on the **igx-checkbox** component:
+| toggle |
+|:----------|
+| Toggles the checked state of the checkbox. |
 
 ###Additional Resources
 
@@ -108,6 +124,3 @@ Our community is active and always welcoming to new ideas.
 
 * [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
 * [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
-
-
-
