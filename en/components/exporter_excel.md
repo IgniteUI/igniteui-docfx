@@ -139,7 +139,7 @@ this.excelExportService.onColumnExport.subscribe((args: IColumnExportingEventArg
 this.excelExportService.export(this.igxGrid1, new IgxExcelExporterOptions("ExportedDataFile"));
 ```
 
-When you are exporting data from `IgxGrid` the export process takes in account features like row filtering and column hidding and exports only the data visible in the grid. You can configure the exporter service to include filtered rows or hidden columns by setting properties on the `IgxExcelExporterOptions` object. These properties are described in the table below.
+When you are exporting data from `IgxGrid` the export process takes in account features like row filtering and column hiding and exports only the data visible in the grid. You can configure the exporter service to include filtered rows or hidden columns by setting properties on the `IgxExcelExporterOptions` object. These properties are described in the table below.
 
 ### API Summary
 
@@ -164,7 +164,7 @@ The following inputs are available on the **IgxExcelExporterOptions** component:
 | `ignoreColumnsVisibility` | boolean | Specifies whether hidden columns should be exported. |
 | `ignoreFiltering` | boolean | Specifies whether filtered out rows should be exported. |
 | `ignoreSorting` | boolean | Specifies whether the exported data should be sorted as in the grid. |
-| `exportAsTable` | boolean | Specifies whether the exported data should be formated as Excel table. (True by default) |
+| `exportAsTable` | boolean | Specifies whether the exported data should be formatted as Excel table. (True by default) |
 | `columnWidth` | number | Specifies the width of the columns in the exported excel file. If left unspecified or 0, the width of the largest string in the column will be used. |
 | `rowHeight` | number | Specifies the height of the rows in the exported excel file. If left unspecified or 0, the default height of the excel rows will be used. |
 

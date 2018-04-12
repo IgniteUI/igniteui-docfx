@@ -155,7 +155,7 @@ this.csvExportService.onColumnExport.subscribe((args: IColumnExportingEventArgs)
 this.csvExportService.export(this.igxGrid1, new IgxCsvExporterOptions("ExportedDataFile"));
 ```
 
-When you are exporting data from `IgxGrid` the export process takes in account features like row filtering and column hidding and exports only the data visible in the grid. You can configure the exporter service to include filtered rows or hidden columns by setting properties on the `IgxExcelExporterOptions` object. These properties are described in the table below.
+When you are exporting data from `IgxGrid` the export process takes in account features like row filtering and column hiding and exports only the data visible in the grid. You can configure the exporter service to include filtered rows or hidden columns by setting properties on the `IgxExcelExporterOptions` object. These properties are described in the table below.
 
 ### API Summary
 
@@ -180,7 +180,7 @@ The following inputs are available on the **IgxCsvExporterOptions** component:
 | `ignoreColumnsVisibility` | boolean | Specifies whether hidden columns should be exported. |
 | `ignoreFiltering` | boolean | Specifies whether filtered out rows should be exported. |
 | `ignoreSorting` | boolean | Specifies whether the exported data should be sorted as in the grid. |
-| `valueDelimiter` | string | Provides a custom delimiter which will overwrite the default delimitor of the selected file type. |
+| `valueDelimiter` | string | Provides a custom delimiter which will overwrite the default delimiter of the selected file type. |
 
 <div class="divider"></div>
 
