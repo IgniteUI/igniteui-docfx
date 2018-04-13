@@ -43,7 +43,7 @@ A toolbar is displayed at the top of the financial chart. This allows your end u
 
 ### Dependencies
 
-The financial chart is exported as as an `NgModule`, you need to import the _IgxFinancialChartModule_ inside your `AppModule`:
+The financial chart is exported as an `NgModule`, you need to import the _IgxFinancialChartModule_ inside your `AppModule`:
 
 ```typescript
 // app.module.ts
