@@ -6,7 +6,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ## Label & Input
 <p class="highlight">
-The Ignite UI for Angular Input and Label directives are used to create a single-line or multi-line text elements. They help to cover common scenarios when dealing with form inputs.
+The Ignite UI for Angular Input and Label directives are used to create single-line or multi-line text elements. They help to cover common scenarios when dealing with form inputs.
 </p>
 <div class="divider--half"></div>
 
