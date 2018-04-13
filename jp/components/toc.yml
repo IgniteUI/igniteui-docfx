@@ -3,17 +3,17 @@
 - name: Data Grid
   href: grid.md
   items:
-    - name: Virtualization and performance
+    - name: 仮想化とパフォーマンス
       href: grid_virtualization.md
-    - name: Paging
+    - name: ページング
       href: grid_paging.md
-    - name: Filtering
+    - name: フィルタリング
       href: grid_filtering.md
-    - name: Sorting
+    - name: 並べ替え
       href: grid_sorting.md
-    - name: Summaries
+    - name: 集計
       href: grid_summaries.md
-    - name: Column pinning
+    - name: 列のピン固定
       href: grid_column_pinning.md
 - name: List View
   href: list.md
@@ -42,6 +42,8 @@
   href: radio_button.md
 - name: Label & Input
   href: label_input.md
+- name: Input Group
+  href: input_group.md
 - name: Mask
   href: mask.md
 - name: Badge

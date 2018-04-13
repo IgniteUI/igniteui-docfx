@@ -88,7 +88,7 @@ export class AppModule {}
 #### カスタム ダイアログ
 
 カスタム ダイアログを追加するには、サインイン コンポーネントのテンプレートで、以下のコードを追加するとカスタム ダイアログが作成されます。`title`、`leftButtonLabel`、`rightButtonLabel`、`rightButtonBackgroundColor`、`rightButtonColor`、`rightButtonLabel`、`closeOnOutsideSelect` を設定し、`onLeftButtonSelect` および `onRightButtonSelect` イベントを処理します。
-また、[**igxLabel**](label_input.md) および [**igxInput**](label_input.md) ディレクティブでデコレートされるラベルおよび入力の 2 つのグループを追加できます。
+また、[**igxLabel**](input_group.md) および [**igxInput**](input_group.md) ディレクティブでデコレートされるラベルおよび入力の 2 つのグループを追加できます。
 
 ```html
 <!--sign-in.component.html-->

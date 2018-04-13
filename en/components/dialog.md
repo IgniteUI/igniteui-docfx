@@ -45,9 +45,10 @@ To add alert, in the template of our email component we can add the following co
 <!--email.component.html-->
 
 <igx-dialog #alert
-    title="Alert"
+    title="Notification"
     message="Your email has been sent successfully!"
-    leftButtonLabel="OK" (onLeftButtonSelect)="alert.close()">
+    leftButtonLabel="OK"
+    (onLeftButtonSelect)="alert.close()">
 </igx-dialog>
 ```
 
@@ -62,19 +63,17 @@ To add alert, in the template of our email component we can add the following co
 ####Standard Dialog
 
 To add standard dialog, in the template of our file manager component we can add the following code to get the standard dialog. We have to set the `title`, `message`, 
-`leftButtonLabel`, `rightButtonLabel`, `rightButtonRipple` and handle `onLeftButtonSelect` and `onRightButtonSelect` events:
+`leftButtonLabel`, `rightButtonLabel`, and handle `onLeftButtonSelect` and `onRightButtonSelect` events:
 
 ```html
 <!--file-manager.component.html-->
 
-<igx-dialog #dialog
-    title="Confirmation"
-    message="Are you sure you want to delete the Microsoft_Annual_Report_2015.pdf and Microsoft_Annual_Report_2015.pdf files?"
+<igx-dialog #dialog title="Confirmation"
     leftButtonLabel="Cancel"
     (onLeftButtonSelect)="dialog.close()"
     rightButtonLabel="OK"
-    rightButtonRipple="#4CAF50"
-    (onRightButtonSelect)="onDialogOKSelected($event)">
+    (onRightButtonSelect)="onDialogOKSelected($event)"
+    message="Are you sure you want to delete the Microsoft_Annual_Report_2015.pdf and Microsoft_Annual_Report_2015.pdf files?">
 </igx-dialog>
 ```
 
@@ -88,29 +87,34 @@ To add standard dialog, in the template of our file manager component we can add
 
 ####Custom Dialog
 
-To add custom dialog, in the template of our sign in component we can add the following code to get the custom dialog. We have to set the `title`,`leftButtonLabel`,`rightButtonBackgroundColor`, `rightButtonColor`, `rightButtonLabel`, `closeOnOutsideSelect` and handle `onLeftButtonSelect` and `onRightButtonSelect` event.
-Also we can add two groups of label and input decorated with the [**igxLabel**](label_input.md) and [**igxInput**](label_input.md) directives.
+To add custom dialog, in the template of our sign in component we can add the following code to get the custom dialog. We have to set the `title`,`leftButtonLabel`, `rightButtonLabel`, `closeOnOutsideSelect` and handle `onLeftButtonSelect` and `onRightButtonSelect` event.
+Also we can add two groups of label and input decorated with the [**igxLabel**](input_group.md) and [**igxInput**](input_group.md) directives.
 
 ```html
 <!--sign-in.component.html-->
 
-<igx-dialog #form
-    title="Sign In"
+<igx-dialog #form title="Sign In"
     leftButtonLabel="Cancel"
     (onLeftButtonSelect)="form.close()"
     (onRightButtonSelect)="signIn($event)"
     rightButtonLabel="Sign In"
-    rightButtonBackgroundColor="#0375be"
-    rightButtonColor="#ffffff"
     [closeOnOutsideSelect]="true">
-    <div class="ig-form-group">
-        <input type="text" igxInput />
-        <label igxLabel>Username</label>
-    </div>
-    <div class="ig-form-group">
-        <input type="password" igxInput />
-        <label igxLabel>Password</label>
-    </div>
+    <form class="signInForm">
+        <igx-input-group>
+            <igx-prefix>
+                <igx-icon>person</igx-icon>
+            </igx-prefix>
+            <label igxLabel for="username">Username</label>
+            <input igxInput id="username" type="text" />
+        </igx-input-group>
+        <igx-input-group>
+            <igx-prefix>
+                <igx-icon>lock</igx-icon>
+            </igx-prefix>
+            <label igxLabel>Password</label>
+            <input igxInput id="password" type="password" />
+        </igx-input-group>
+    </form>
 </igx-dialog>
 ```
 

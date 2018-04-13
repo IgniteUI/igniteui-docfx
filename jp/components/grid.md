@@ -396,6 +396,7 @@ this.grid.deleteRow(this.selectedCell.rowIndex);
 |--- |--- |
 |イベント発生|変更の通知  |
 |`onEditDone`|セル値を変更するときに発生されます。`{ currentValue: any, newValue: any }` を返します。|
+|`onCellClick`|セルがクリックされたときに発生されます。セル オブジェクトを返します。|
 |`onSelection`|セルが選択されたときに発生されます。セル オブジェクトを返します。|
 |`onColumnInit`|グリッド列が初期化されるときに発生されます。列オブジェクトを返します。|
 |`onSortingDone`|並べ替えが UI で実行されたときに発生されます。並べ替え式を返します。|
@@ -404,6 +405,7 @@ this.grid.deleteRow(this.selectedCell.rowIndex);
 |`onRowAdded`|行が API によってグリッドに追加されている間に発生されます。新しい行オブジェクトのデータを返します。|
 |`onRowDeleted`|行がグリッド API によって削除されたときに発生されます。削除されている行オブジェクトを返します。|
 |`onColumnPinning`|列がグリッド API によってピン固定されたときに発生されます。列に挿入するインデックスは `insertAtIndex` プロパティによって変更できます。|
+|`onContextMenu`|セルが右クリックされたときに発生されます。セル オブジェクトを返します。|
 
 <div class="divider--half"></div>
 
@@ -615,18 +617,18 @@ import {
 |--- |--- |--- |
 |`update(val: any)`|void|`onEditDone` イベントを発生し、データ ソースで適切なレコードを更新します。|
 
-### Additional Resources
+### 追加のリソース
 <div class="divider--half"></div>
 
-* [Virtualization and Performance](grid_virtualization.html)
-* [Paging](grid_paging.html)
-* [Filtering](grid_filtering.html)
-* [Sorting](grid_sorting.html)
-* [Summaries](grid_summaries.html)
-* [Column Pinning](grid_column_pinning.html)
+* [仮想化とパフォーマンス](grid_virtualization.html)
+* [ページング](grid_paging.html)
+* [フィルタリング](grid_filtering.html)
+* [並べ替え](grid_sorting.html)
+* [集計](grid_summaries.html)
+* [列のピン固定](grid_column_pinning.html)
 
 <div class="divider--half"></div>
-Our community is active and always welcoming to new ideas.
+是非コミュニティに参加してください。
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

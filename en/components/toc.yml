@@ -15,8 +15,27 @@
       href: grid_summaries.md
     - name: Column pinning
       href: grid_column_pinning.md
+    - name: Column resizing
+      href: grid_column_resizing.md
 - name: List View
   href: list.md
+- name: Data Visualization
+  header: true
+  href: categorychart.md
+- name: Category Chart
+  href: categorychart.md
+  items:
+    - name: Axis
+      href: categorychart_axis.md
+    - name: Configuring Category Chart
+      href: categorychart_configuring.md
+- name: Financial Chart
+  href: financialchart.md
+  items:
+    - name: Axis
+      href: financialchart_axis.md
+    - name: Panes
+      href: financialchart_panes.md
 - name: Styling & Themes
   header: true
 - name: Themes
@@ -42,6 +61,8 @@
   href: radio_button.md
 - name: Label & Input
   href: label_input.md
+- name: Input Group
+  href: input_group.md
 - name: Mask
   href: mask.md
 - name: Badge
@@ -76,7 +97,7 @@
   href: layout.md
 - name: Carousel
   href: carousel.md
-- name: Tab Bar
+- name: Bottom Navigation
   href: tabbar.md
 - name: Card
   href: card.md
