@@ -59,8 +59,8 @@
   href: switch.md
 - name: Radio Button
   href: radio_button.md
-- name: Label & Input
-  href: label_input.md
+- name: Input Group
+  href: input_group.md
 - name: Mask
   href: mask.md
 - name: Badge
