@@ -405,6 +405,7 @@ this.grid.deleteRow(this.selectedCell.rowIndex);
 |`onRowAdded`|行が API によってグリッドに追加されている間に発生されます。新しい行オブジェクトのデータを返します。|
 |`onRowDeleted`|行がグリッド API によって削除されたときに発生されます。削除されている行オブジェクトを返します。|
 |`onColumnPinning`|列がグリッド API によってピン固定されたときに発生されます。列に挿入するインデックスは `insertAtIndex` プロパティによって変更できます。|
+|`onContextMenu`|セルが右クリックされたときに発生されます。セル オブジェクトを返します。|
 
 <div class="divider--half"></div>
 
