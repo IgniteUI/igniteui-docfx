@@ -7,6 +7,20 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 The igxCategoryChart is a lightweight, highly performant chart. This chart can be easily configured to display category data using an extremely simple and intuitive API. All you need to do is bind your data (a collection or a collection of collections) and the chart takes care of everything else.
 
+<div class="divider"></div>
+
+### Category Chart Demo
+
+<div class="sample-container" style="height: 650px">
+    <iframe id="category-chart-overview-sample-iframe" src='{environment:demosBaseUrl}/category-chart-overview-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="category-chart-overview-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+    </button>
+</div>
+
+<div class="divider--half"></div>
+
 By using a smart Data Adapter, the data is analyzed and the appropriate visualization is rendered. For example, if the `chartType` is set to `Auto`, the control can determine that if it is provided a small data set then a column chart should be plotted, while a larger data set will draw a line chart.
 
 However, you can also explicitly specify the chart type by setting the `chartType` to:
@@ -22,20 +36,6 @@ However, you can also explicitly specify the chart type by setting the `chartTyp
 - Waterfall
 
 Another example of the intuitive behavior of the Category Chart control is that you do not need to explicitly set the labels. The Category Chart will use the first appropriate string property that it finds within the data you provided and will use that for the labels.
-
-<div class="divider"></div>
-
-### Category Chart Demo
-
-<div class="sample-container" style="height: 650px">
-    <iframe id="category-chart-overview-sample-1-iframe" src='{environment:demosBaseUrl}/category-chart-overview-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="category-chart-overview-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
-    </button>
-</div>
-
-<div class="divider--half"></div>
 
 ### Dependencies
 

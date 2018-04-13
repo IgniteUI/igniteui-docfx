@@ -1,5 +1,5 @@
 ---
-title: Category Chart Component
+title: Category Chart Configuring
 _description: The Ignite UI for Angular Category Chart component is a touch-enabled, highly performant, lightweight charting control that makes visualizing category data a breeze.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Chart component, Angular Category Chart component, Angular Chart controls, Angular Category Chart controls
 ---
@@ -10,8 +10,8 @@ This page will walk you through with code samples the different properties that 
 
 <div class="divider"></div>
 
-### Category Chart Demo
-<div class="sample-container" style="height: 280px">
+### Configuring Category Chart Demo
+<div class="sample-container" style="height: 650px">
     <iframe id="category-chart-configuring-sample-iframe" src='{environment:demosBaseUrl}/category-chart-configuring-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -59,14 +59,13 @@ This feature allows you to animate the series as it loads a new data source. The
 
 The chart resizes allowing for the title and subtitle information.
 
->[!NOTE] 
->By default, animated transitions are disabled and you can enable transition-in animations by setting the `isTransitionInEnabled` option to “true”.
+By default, animated transitions are disabled and you can enable transition-in animations by setting the `isTransitionInEnabled` option to “true”.
 
 Animated transitions can be configured in terms of transition type, speed of the individual data points relative to each other, and the easing transition (managed by an easing function).
 
 The transition type is configured by setting the transitionInMode option to the desired transition name. Automatic selection of the transition type based on the series type is possible, too, by setting the property to “Auto” (default).
 
-The following example demonstrates how to enable transition in animations and have the chart accordion in from the right.
+The following code example demonstrates how to enable transition in animations and have the chart accordion in from the right.
 
 ```html
  <igx-category-chart
