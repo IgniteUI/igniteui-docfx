@@ -90,31 +90,37 @@ Try it! The final result would be something like that:
 ### API Summary
 
 ####Inputs
-The following inputs are available on the **igx-switch** component:
+The following inputs are available on the **igx-radio** component:
 | Name | Type | Description |
 | :--- | :--- | :--- |
-| `value` | bool | The value of the radio button. |
-
+| `@Input()` id |    string   | The unique `id` attribute to be used for the radio button. If you do not provide a value, it will be auto-generated. |
+| `@Input()` labelId |    string   | The unique `id` attribute to be used for the radio button label. If you do not provide a value, it will be auto-generated. |
+| `@Input()` name |  string | The `name` attribute to be used for the radio button. |
+| `@Input()` value | any | The value to be set for the radio button. |
+| `@Input()` tabindex | number | Specifies the tabbing order of the radio button. |
+| `@Input()` checked | boolean | Specifies the checked state of the radio button. |
+| `@Input()` required | boolean | Specifies the required state of the radio button. |
+| `@Input()` disabled | boolean | Specifies the disabled state of the radio button. |
+| `@Input()` disableRipple | boolean | Specifies the whether the ripple effect should be disabled for the radio button. |
+| `@Input()` labelPosition | string `|` enum RadioLabelPosition | Specifies the position of the text label relative to the radio button element. Possible values are "before" and "after". |
+| `@Input("aria-labelledby")` ariaLabelledBy | string | Specify an external element by id to be used as label for the radio button. |
 <div class="divider"></div>
 
 ####Outputs
-The following outputs are available on the **igx-switch** component:
+The following outputs are available on the **igx-radio** component:
 | Name | Type | Description |
 | :--- | :--- | :--- |
-| `change` | EventEmitter | Emits an event when the radio is clicked. 
+| `@Output()` change | EventEmitter<IChangeRadioEventArgs> | Emitted when the radio button checked value changes. |
+
+####Methods
+The following methods are available on the **igx-radio** component:
+| select |
+|:----------|
+| Selects the radio button. |
 
 ###Additional Resources
-
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.
 
 * [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
 * [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
-
-
-
-
-
-
-
-

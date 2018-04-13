@@ -9,7 +9,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <div class="divider--half"></div>
 
 ### Mask Demo
-<div class="sample-container loading" style="height: 500px">
+<div class="sample-container loading" style="height: 280px">
     <iframe id="mask-sample-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/mask-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -21,19 +21,17 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 > To start using Ignite UI for Angular components in your own projects, make sure you have configured all necessary dependencies and have performed the proper setup of your project. You can learn how to do this in the [**installation**](https://www.infragistics.com/products/ignite-ui-angular/getting-started#installation) topic.
 
 ### Usage
-To get started with the Ignite UI for Angular Mask directive, let's first import the **IgxMaskModule** and **IgxInputModule** in our **app.module.ts** file. **IgxInputModule** is not required; it is used later in the examples. The **igxMask** directive can be used with any Angular input control.
+To get started with the Ignite UI for Angular Mask directive, let's first import the **IgxMaskModule** and **IgxInputGroupModule** in our **app.module.ts** file. The **igxMask** directive can be used with any Angular input control.
 
 ```typescript
 // app.module.ts
 
 ...
-import { IgxMaskModule } from 'igniteui-angular/main';
-import { IgxInputModule } from 'igniteui-angular/main';
+import { IgxMaskModule, IgxInputGroupModule } from 'igniteui-angular/main';
 
 @NgModule({
     ...
-    imports: [..., IgxMaskModule],
-    imports: [..., IgxInputModule],
+    imports: [..., IgxInputGroupModule, IgxMaskModule]
     ...
 })
 export class AppModule {}
@@ -42,7 +40,7 @@ export class AppModule {}
 <div class="divider--half"></div>
 
 #### Supported Built-in Mask Rules
-
+<div class="divider--half"></div>
 
 | Mask Character | Description |
 | :--- | :--- | 
@@ -62,7 +60,13 @@ In the following example, we apply a phone number with an extension mask to an i
 ```html
 <!--sample.component.html-->
 
- <input igxInput name="phone" type="text" [igxMask]="'(####) 00-00-00 Ext. 9999'"/>
+<igx-input-group>
+    <igx-prefix>
+        <igx-icon>phone</igx-icon>
+    </igx-prefix>
+    <label igxLabel>Phone</label>
+    <input igxInput type="text" [igxMask]="'(####) 00-00-00 Ext. 9999'"/>
+</igx-input-group>
 ```
 
 If the sample is configured properly, an input with the applied formatting mask appears.
@@ -81,14 +85,22 @@ Use the `includeLiterals` input to configure which input value (formatted or raw
 ```html
 <!--sample.component.html-->
 
-<div>
-  <igx-switch class="switch-style" [(ngModel)]="includeLiterals" (change)="clear()">
-    <div style="width: 150px">Include Literals</div>
-  </igx-switch>
-  <input igxInput #ssn name="socialSecurityNumber" type="text" [igxMask]="'###-##-####'" [(ngModel)]="socialSecurityNumber"
-    [includeLiterals]="includeLiterals" />
-  <p>Value: {{ socialSecurityNumber }}</p>
-</div>
+<igx-switch [(ngModel)]="includeLiterals" (change)="clear()">
+    Include Literals
+</igx-switch>
+
+<igx-input-group>
+    <label igxLabel>
+        Social Security Number
+    </label>
+    <input #ssn name="socialSecurityNumber" type="text"
+        igxInput
+        [igxMask]="'###-##-####'"
+        [(ngModel)]="socialSecurityNumber"
+        [includeLiterals]="includeLiterals" />
+</igx-input-group>
+
+<p *ngIf="socialSecurityNumber.length > 0">Value: {{ socialSecurityNumber }}</p>
 ```
 
 ```typescript
@@ -102,7 +114,7 @@ public clear() {
 }
 ```
 
-<div class="sample-container loading" style="height: 140px">
+<div class="sample-container loading" style="height: 160px">
     <iframe id="mask-sample3-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/mask-sample-3" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 
@@ -116,24 +128,33 @@ In addition to setting a mask to an input, you can validate the entered value as
 ```html
 <!--sample.component.html-->
 
-<form class="input-sample" action="/" method="POST">
-    <h4>Personal Data</h4>
-    <br />
-    <div class="igx-form-group">
-        <input igxInput name="name" type="text" [(ngModel)]="person.name" required  />
-        <label igxLabel for="name">Name*</label>
-    </div>
-    <div class="igx-form-group">
-        <input igxInput #dateInput name="birthday" type="text" [igxMask]="'00/00/0000'" [(ngModel)]="person.birthday" (blur)="validateDate(dateInput, snackbar)"/>
+<form class="mask-sample" action="/" method="POST">
+    <h4 class="form-title">Personal Data</h4>
+
+    <igx-input-group>
+        <label igxLabel for="name">Name</label>
+        <input igxInput name="name" type="text" required 
+        [(ngModel)]="person.name" />
+    </igx-input-group>
+
+    <igx-input-group>
         <label igxLabel for="email">Birthday</label>
-    </div>
-    <div class="igx-form-group">
-        <input igxInput #ssn name="socialSecurityNumber" type="text" [igxMask]="'###-##-####'" [(ngModel)]="person.socialSecurityNumber" (blur)="validateSSN(ssn, snackbar)"/>
+        <input igxInput #dateInput name="birthday" type="text" 
+            [igxMask]="'00/00/0000'" 
+            [(ngModel)]="person.birthday" 
+            (blur)="validateDate(dateInput, snackbar)" />
+    </igx-input-group>
+
+    <igx-input-group>
         <label igxLabel for="socialSecurityNumber">Social Security Number</label>
-    </div>
+        <input igxInput #ssn name="socialSecurityNumber" type="text" 
+        [igxMask]="'###-##-####'" 
+        [(ngModel)]="person.socialSecurityNumber" 
+        (blur)="validateSSN(ssn, snackbar)" />
+    </igx-input-group>
+
     <igx-snackbar #snackbar></igx-snackbar>
 </form>
-
 ```
 
 ```typescript
@@ -213,7 +234,6 @@ The following outputs are available for the **igxMask** directive:
 | Name | Description |
 | :--- | :--- |
 | `onValueChange`  | Emits an event each time the value changes. The event parameter provides `rawValue` and `formattedValue` properties. |
-
 
 ###Additional Resources
 

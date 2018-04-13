@@ -312,23 +312,26 @@ Let's add an input field to the top in our component template first and bind it 
 ```html
 <!--contacts.component.html-->
 
-<div class="igx-form-group" style="margin: 4px">
-  <input class="igx-form-group__input--search" placeholder="Search Contacts" [(ngModel)]="searchContact">
-  <label class="igx-form-group__label">
-    <igx-icon name="search"></igx-icon>
-  </label>
-</div>
+<igx-input-group type="search" class="search">
+    <igx-prefix>
+        <igx-icon>search</igx-icon>
+    </igx-prefix>
+    <input #search igxInput placeholder="Search Contacts" [(ngModel)]="searchContact">
+    <igx-suffix *ngIf="search.value.length > 0" (click)="searchContact = null">
+        <igx-icon>clear</igx-icon>
+    </igx-suffix>
+</igx-input-group>
 ```
 
-It's time to import the **IgxFilterModule** in our **app.module.ts** file and **IgxFilterOptions** in our contacts component:
+It's time to import the **IgxFilterModule** and the **IgxInputGroupModule** in our **app.module.ts** file and **IgxFilterOptions** in our contacts component:
 
 ```typescript
     // app.module.ts
     ...
-    import { IgxFilterModule } from 'igniteui-angular/main';
+    import { IgxFilterModule, IgxInputGroupModule } from 'igniteui-angular/main';
 
     @NgModule({
-        imports: [..., IgxFilterModule]
+        imports: [..., IgxFilterModule, IgxInputGroupModule]
     })
 
     // contacts.component.ts
@@ -342,7 +345,7 @@ It's time to import the **IgxFilterModule** in our **app.module.ts** file and **
         get filterContacts(): IgxFilterOptions {
             const fo = new IgxFilterOptions();
             fo.key = 'name';
-            fo.inputFiels = this.searchContact;
+            fo.inputValue = this.searchContact;
             return fo;
         }
     }
