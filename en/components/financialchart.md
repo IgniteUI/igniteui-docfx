@@ -1,20 +1,34 @@
 ---
 title: Financial Chart Component
-_description: Present users with dashboards and engaging text, images, icons or buttons as an entry point for detailed information with Ignite UI for Angular Financial Chart component.
+_description: The Ignite UI for Angular Financial Chart component is a touch-enabled, highly performant, lightweight charting control that makes visualizing financial data a breeze.
 _keywords: Ignite UI for Angular, Data Visualization, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Chart component, Angular Financial Chart component, Angular Chart controls, Angular Financial Chart controls, Data Visualization
 ---
 ## Financial Chart 
 
 The Financial Chart is a lightweight, high-performance chart. This chart can be easily configured to display financial data using an extremely simple and intuitive API. All you need to do is bind your data (a collection or a collection of collections) and the chart takes care of everything else. The chart analyzes the structure of the data source bound to the 'data' property. It plots one financial price series for each collection found in the data source. Also, it analyzes data items of each collection by searching for 5 numeric data columns with Open, High, Low, Close, Volume names and 1 date time column with Time name. The chart offers multiple ways for the user to visualize and interpret the data, including several display modes for price and volume, and many financial indicators. The chart also makes use of label formatting to give the data context. 
 
+<div class="divider"></div>
+
+### Financial Chart Demo
+
+<div class="sample-container" style="height: 650px">
+    <iframe id="financial-chart-overview-sample-iframe" src='{environment:demosBaseUrl}/financial-chart-overview-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="financial-chart-overview-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+    </button>
+</div>
+
+<div class="divider--half"></div>
+
 You can explicitly specify the chart type by setting the `chartType` property to one of the following options: 
     
 Property|Description|Example
----|---|---
-`bar`|Specifies the bar series with markers at each data point|![](/images/financial_chart_bar.png)
-`candle`|Specifies the candle series|![](/images/financial_chart_candle.png)
-`column`|Specifies the column series|![](/images/financial_chart_column.png)
-`line`|Specifies the line series|![](/images/financial_chart_line.png)
+---|---
+`bar`|Specifies the bar series with markers at each data point
+`candle`|Specifies the candle series
+`column`|Specifies the column series
+`line`|Specifies the line series
 `auto`|Specifies automatic selection of chart type based on suggestions from Data Adapter
 
 A toolbar is displayed at the top of the financial chart. This allows your end users to change various details about the data being displayed, and also displays different panes. The toolbar consists of the following selectors:
@@ -25,23 +39,11 @@ A toolbar is displayed at the top of the financial chart. This allows your end u
 - Chart Type Selector - Allows users to select chart types for the financial chart. These are displayed in the price pane.
 - Volume Type Selector -  Allows users to view the stock volume data in the Volume Pane. Users can choose between None, Column, Line, and Area chart types.
 
-<div class="divider"></div>
 
-### Financial Chart Demo
-
-<div class="sample-container" style="height: 280px">
-    <iframe id="financial-chart-overview-sample-iframe" src='{environment:demosBaseUrl}/financial-chart-overview-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="financial-chart-overview-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
-    </button>
-</div>
-
-<div class="divider--half"></div>
 
 ### Dependencies
 
-The finacial chart is exported as as an `NgModule`, you need to import the _IgxFinancialChartModule_ inside your `AppModule`:
+The financial chart is exported as an `NgModule`, you need to import the _IgxFinancialChartModule_ inside your `AppModule`:
 
 ```typescript
 // app.module.ts
@@ -63,7 +65,7 @@ export class AppModule {}
 
 Now that the financial chart module is imported, next step is to bind it to data.
 
-In order to create an igFinancialChart control, you must first have data to bind it to. The following code snippet demonstrates how to create a simple data source. 
+In order to create an igxFinancialChart control, you must first have data to bind it to. The following code snippet demonstrates how to create a simple data source. 
 
 ```typescript
 

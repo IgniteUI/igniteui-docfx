@@ -22,20 +22,30 @@
 - name: Data Visualization
   header: true
   href: categorychart.md
-- name: Category Chart
+-  name: Category Chart
   href: categorychart.md
   items:
+    - name: Performance
+      href: categorychart_performance.md
     - name: Axis
       href: categorychart_axis.md
     - name: Configuring Category Chart
       href: categorychart_configuring.md
+    - name: Custom Tooltips
+      href: categorychart_custom_tooltips.md 
 - name: Financial Chart
   href: financialchart.md
   items:
+    - name: Performance
+      href: financialchart_performance.md
+    - name: Binding to Data
+      href: financialchart_binding_data.md
     - name: Axis
       href: financialchart_axis.md
     - name: Panes
       href: financialchart_panes.md
+    - name: Custom Tooltips
+      href: financialchart_custom_tooltips.md
 - name: Styling & Themes
   header: true
 - name: Themes
