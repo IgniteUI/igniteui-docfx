@@ -15,12 +15,14 @@
       href: grid_summaries.md
     - name: Column pinning
       href: grid_column_pinning.md
+    - name: Column resizing
+      href: grid_column_resizing.md
 - name: List View
   href: list.md
 - name: Data Visualization
   header: true
   href: categorychart.md
-- name: Category Chart
+-  name: Category Chart
   href: categorychart.md
   items:
     - name: Performance
@@ -67,6 +69,8 @@
   href: switch.md
 - name: Radio Button
   href: radio_button.md
+- name: Label & Input
+  href: label_input.md
 - name: Input Group
   href: input_group.md
 - name: Mask
@@ -103,7 +107,7 @@
   href: layout.md
 - name: Carousel
   href: carousel.md
-- name: Tab Bar
+- name: Bottom Navigation
   href: tabbar.md
 - name: Card
   href: card.md
@@ -121,5 +125,11 @@
   href: calendar.md
 - name: Date Picker
   href: date_picker.md
-- name: Time Picker
+- name: Time Picker 
   href: time_picker.md
+- name: Services
+  header: true
+- name: CSV Exporter
+  href: exporter_csv.md
+- name: Excel Exporter
+  href: exporter_excel.md
