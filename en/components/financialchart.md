@@ -33,7 +33,7 @@ Property|Description
 ### Toolbar
 A toolbar is displayed at the top of the financial chart. This allows your end users to change various details about the data being displayed, and also displays different panes. The toolbar consists of the following selectors:
 - Indicator Type Selector - Allows users to select different types of financial indicators. These indicators are displayed below the price pane in an indicator pane because they do not share the same Y-Axis scale.
-- Overlay Type Indicator - Allows users to select different types of financial overlays. These overlays are displayed in front of the financial prices series because they share the same y-axis scale.
+- Overlay Type - Allows users to select different types of financial overlays. These overlays are displayed in front of the financial prices series because they share the same y-axis scale. There are two types of overlays the BollingerBands and PriceChannel. 
 - Trendline Type Selector - Allows users to select different types of trendlines. The trendline is displayed in a trendline layer on the price pane and the volume pane.
 - Date Range Selector - Allows users to select different range presets to view the data.
 - Chart Type Selector - Allows users to select chart types for the financial chart. These are displayed in the price pane.
