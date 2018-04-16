@@ -6,16 +6,14 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ## Performance
 
 The igxCategoryChart is capable of handling high volumes of data, ranging into the millions of data points, and updating them every few milliseconds. The following demo shows the amazing performance of the category chart component.
-
 <div class="divider"></div>
 
 ### Performance 
-
 <div class="sample-container" style="height: 650px">
-    <iframe id="category-chart-performance-iframe" src='{environment:demosBaseUrl}/category-chart-performance' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="category-chart-high-frequency-sample-iframe" src='{environment:demosBaseUrl}/category-chart-high-frequency-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="category-chart-performance-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="category-chart-high-frequency-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
     </button>
 </div>
 

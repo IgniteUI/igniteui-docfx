@@ -6,7 +6,6 @@ _keywords: Ignite UI for Angular, Data Visualization, UI controls, Angular widge
 ## Custom Tooltips 
 
 The igxFinancialChart provides default tooltips for each type of series. The default tooltips displays all the information relevant to the particular series item for example series title, data values, axis values. They are styled to match the series' style. If default tooltips are not sufficient, custom tooltips can be configured to customize the tooltip content and look and feel.
-
 <div class="divider"></div>
 
 ### Custom Tooltips
@@ -15,7 +14,7 @@ The igxFinancialChart provides default tooltips for each type of series. The def
     <iframe id="financial-custom-tooltips-iframe" src='{environment:demosBaseUrl}/financial-custom-tooltips' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="custom-tooltips-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="financial-custom-tooltips-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
     </button>
 </div>
 

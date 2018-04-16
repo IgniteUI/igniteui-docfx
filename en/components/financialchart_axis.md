@@ -5,10 +5,9 @@ _keywords: Ignite UI for Angular, Data Visualization, UI controls, Angular widge
 ---
 ## Financial Chart Axis 
 
-In the Financial Chart control, an Axis provides base properties for specifying appearance of axis main lines, tickmarks, titles, and axis labels. 
+In the Financial Chart control, an axis provides base properties for specifying appearance of axis main lines, tickmarks, titles, and axis labels. 
 
 By default, you do not need to explicitly set the labels. The Financial Chart will use the first appropriate property that it finds within the data you provided and will use that for the labels. 
-
 <div class="divider"></div>
 
 ### Financial Chart Axis Demo
@@ -23,8 +22,27 @@ By default, you do not need to explicitly set the labels. The Financial Chart wi
 
 <div class="divider--half"></div>
 
-### Axis Labels 
+### Axis Interval
+In the Financial Chart control, the axis major interval specifies how frequently major gridlines and axis labels are rendered on an axis. Similarly, axis minor interval specifies how frequently minor gridlines are rendered on an axis.
 
+The following code snippet demonstrates how to configure the interval on the y-axis.
+
+```html
+ <igx-financial-chart
+    [dataSource]="data"
+    width="850px"
+    height="600px"
+    yAxisInterval="100"
+    yAxisMinorInterval="10" 
+    yAxisMinorStroke="Red"    
+    yAxisMajorStroke="Green"  
+    yAxisMinorStrokeThickness="1"
+    yAxisMajorStrokeThickness="1">
+ </igx-financial-chart>
+```
+<div class="divider--half"></div>
+
+### Axis Labels 
 The Financial Chart control allows you full control over configuring and formatting the labels displayed on your chart. You can change the rotation angle, margin, horizontal/vertical alignment, opacity, padding and visibility. 
 
 The following code example shows how to style labels on the x-axis using style properties:
@@ -38,6 +56,81 @@ The following code example shows how to style labels on the x-axis using style p
     xAxisLabelRightMargin="14"
     xAxisLabelTextColor="red">
 </igx-financial-chart>
+```
+<div class="divider--half"></div>
+
+### Axis Modes 
+The igxFinancialChart control allows you to set different modes on the x-axis and the y-axis. 
+For the x-axis you can choose between the following modes:
+- Time - This mode will render space along the x-axis for gaps in data, for example no stock trading on weekends or holidays.
+- Ordinal - This mode will collapse date areas where data does not exist. This the default value.
+
+For the y-axis you can choose between the following modes:
+- Numeric - This mode will be charted with the exact value of the data. This is the default value.
+- PercentChange - The mode will the display the data as a percentage change relative to the first data point provided.
+
+The following code example shows how to set the modes for the axes:
+
+```html
+<igx-financial-chart
+    [dataSource]="data"
+    width="850px"
+    height="600px"
+    xAxisMode="time"
+    yAxisMode="percentChange">
+</igx-financial-chart>
+```
+<div class="divider--half"></div>
+
+### Axis Range
+In the Financial Chart control, the range on numeric axes is the difference in numeric values from the beginning of the axis to the end or from the smallest to largest values in the data. The range minimum is the lowest value of the axis. The range maximum is the highest value of the axis. By default, the Financial Chart control will calculate the minimum and maximum values for the y-axis range based on the lowest and highest data points in order to maximize the chart plot area. The automatic calculation of an axis' minimum and maximum values may not be appropriate for your set of data points. For example, if your data has a minimum value of 850, you may want to set the minimum value of the axis using y-axis’s `yAxisMinimumValue` property to 800 so that there will be a space value of 50 between the axis minimum and the lowest value of data points. The same can be applied to the axis maximum value and the highest value of data points using y-axis’s `yAxisMaximumValue` property.
+
+The following sample code demonstrates how to change the axis range on the y-axis.
+
+```html
+ <igx-financial-chart
+      [dataSource]="data"
+      width="850px"
+      height="600px"
+      yAxisMinimumValue="-200"
+      yAxisMaximumValue="1000">
+ </igx-financial-chart>
+```
+<div class="divider--half"></div>
+
+### Axis Scale
+In the Financial Chart control, you can control if the data in the chart is mapped logarithmically along the y-axis, this is done by setting the following properties:
+- yAxisIsLogarithmic - This specifies if the y-axis should use a logarithmic scale instead of a linear one. By default this property is set to false. 
+- yAxisLogarithmBase - The base value to use in the log function when mapping the position of data items along the y-axis.
+This is effective only when yAxisIsLogarithmic is true.
+
+The following code snippet demonstrates how to set the color, length and thickness of the tickmark on the x-axis.
+
+```html
+ <igx-financial-chart
+      [dataSource]="data"
+      width="850px"
+      height="600px"
+      yAxisIsLogarithmic="true"
+      yAxisLogarithmBase="10">
+ </igx-financial-chart>
+```
+<div class="divider--half"></div>
+
+### Axis Tickmarks
+Tick marks display points on the axes. They represent a certain numeric point on a scale or the value of the category in a category axis. You can change the length, thickness and color of the x-axis and y-axis labels.
+
+The following code snippet demonstrates how to set the color, length and thickness of the tickmark on the x-axis.
+
+```html
+ <igx-financial-chart
+      [dataSource]="data"
+      width="850px"
+      height="600px"
+      xAxisTickLength="10"
+      xAxisTickStrokeThickness="3"
+      xAxisTickStroke="red">
+ </igx-financial-chart>
 ```
 <div class="divider--half"></div>
 
@@ -61,55 +154,4 @@ The following code example shows how to set and customize the titles on the x-ax
 ```
 <div class="divider--half"></div>
 
-### Axis Tickmarks
-Tick marks display points on the axes. They represent a certain numeric point on a scale or the value of the category in a category axis. You can change the length, thickness and color of the x-axis and y-axis labels.
 
-The following code snippet demonstrates how to set the color, length and thickness of the tickmark on the x-axis.
-
-```html
- <igx-financial-chart
-      [dataSource]="data"
-      width="850px"
-      height="600px"
-      xAxisTickLength="10"
-      xAxisTickStrokeThickness="3"
-      xAxisTickStroke="red">
- </igx-financial-chart>
-```
-<div class="divider--half"></div>
-
-### Axis Range
-In the Financial Chart control, the range on numeric axes is the difference in numeric values from the beginning of the axis to the end or from the smallest to largest values in the data. The range minimum is the lowest value of the axis. The range maximum is the highest value of the axis. By default, the Financial Chart control will calculate the minimum and maximum values for the y-axis range based on the lowest and highest data points in order to maximize the chart plot area. The automatic calculation of an axis' minimum and maximum values may not be appropriate for your set of data points. For example, if your data has a minimum value of 850, you may want to set the minimum value of the axis using y-axis’s `yAxisMinimumValue` property to 800 so that there will be a space value of 50 between the axis minimum and the lowest value of data points. The same can be applied to the axis maximum value and the highest value of data points using y-axis’s `yAxisMaximumValue` property.
-
-The following sample code demonstrates how to change the axis range on the y-axis.
-
-```html
- <igx-financial-chart
-      [dataSource]="data"
-      width="850px"
-      height="600px"
-      yAxisMinimumValue="-200"
-      yAxisMaximumValue="1000">
- </igx-financial-chart>
-```
-<div class="divider--half"></div>
-
-### Axis Interval
-In the Financial Chart control, the axis major interval specifies how frequently major gridlines and axis labels are rendered on an axis. Similarly, axis minor interval specifies how frequently minor gridlines are rendered on an axis.
-
-The following code snippet demonstrates how to configure the interval on the y-axis.
-
-```html
- <igx-financial-chart
-    [dataSource]="data"
-    width="850px"
-    height="600px"
-    yAxisInterval="100"
-    yAxisMinorInterval="10" 
-    yAxisMinorStroke="Red"    
-    yAxisMajorStroke="Green"  
-    yAxisMinorStrokeThickness="1"
-    yAxisMajorStrokeThickness="1">
- </igx-financial-chart>
-```
-<div class="divider--half"></div>

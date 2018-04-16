@@ -8,9 +8,10 @@ _keywords: Ignite UI for Angular, Data Visualization, UI controls, Angular widge
 The Financial Chart has multiple panes to display financial data. 
 
 * Indicator Pane - Renders all the financial indicators in a separate chart while the BollingerBands and PriceChannel overlays are rendered in the Price Pane because they share the same values range on Y-Axis. 
-* Price Pane - Renders prices using Line, Candlestick, Bar (OHLC), trendlines and financial overlays.
 * Volume Pane - Renders stocks volumes using Column, Line, and Area chart types.
+* Price Pane - Renders prices using Line, Candlestick, Bar (OHLC), trendlines and financial overlays.
 * Zoom Pane - Controls the zoom of all the panes.
+<div class="divider"></div>
 
 ### Financial Indicator Pane Demo
 <div class="sample-container" style="height: 650px">
