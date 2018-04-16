@@ -63,6 +63,7 @@ public ngOnInit() {
 * [フィルタリング](grid_filtering.html)
 * [集計](grid_summaries.html)
 * [列のピン固定](grid_column_pinning.html)
+* [列のサイズ変更](grid_column_resizing.html)
 
 <div class="divider--half"></div>
 是非コミュニティに参加してください。
