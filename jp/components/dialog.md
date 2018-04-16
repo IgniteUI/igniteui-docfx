@@ -45,9 +45,10 @@ export class AppModule {}
 <!--email.component.html-->
 
 <igx-dialog #alert
-    title="Alert"
+    title="Notification"
     message="Your email has been sent successfully!"
-    leftButtonLabel="OK" (onLeftButtonSelect)="alert.close()">
+    leftButtonLabel="OK"
+	(onLeftButtonSelect)="alert.close()">
 </igx-dialog>
 ```
 
@@ -61,19 +62,17 @@ export class AppModule {}
 
 #### 標準ダイアログ
 
-規格のダイアログを追加するには、ファイル マネージャー コンポーネントのテンプレートで、以下のコードを追加すると規格のダイアログが作成されます。`title`、 `message`、`leftButtonLabel`、`rightButtonLabel`、`rightButtonRipple` を設定し、`onLeftButtonSelect` および `onRightButtonSelect` イベントを処理します。
+規格のダイアログを追加するには、ファイル マネージャー コンポーネントのテンプレートで、以下のコードを追加すると規格のダイアログが作成されます。`title`、 `message`、`leftButtonLabel`、`rightButtonLabel` を設定し、`onLeftButtonSelect` および `onRightButtonSelect` イベントを処理します。
 
 ```html
 <!--file-manager.component.html-->
 
-<igx-dialog #dialog
-    title="Confirmation"
-    message="Are you sure you want to delete the Microsoft_Annual_Report_2015.pdf and Microsoft_Annual_Report_2015.pdf files?"
+<igx-dialog #dialog title="Confirmation"
     leftButtonLabel="Cancel"
     (onLeftButtonSelect)="dialog.close()"
     rightButtonLabel="OK"
-    rightButtonRipple="#4CAF50"
-    (onRightButtonSelect)="onDialogOKSelected($event)">
+    (onRightButtonSelect)="onDialogOKSelected($event)"
+	message="Are you sure you want to delete the Microsoft_Annual_Report_2015.pdf and Microsoft_Annual_Report_2015.pdf files?">
 </igx-dialog>
 ```
 
@@ -87,29 +86,34 @@ export class AppModule {}
 
 #### カスタム ダイアログ
 
-カスタム ダイアログを追加するには、サインイン コンポーネントのテンプレートで、以下のコードを追加するとカスタム ダイアログが作成されます。`title`、`leftButtonLabel`、`rightButtonLabel`、`rightButtonBackgroundColor`、`rightButtonColor`、`rightButtonLabel`、`closeOnOutsideSelect` を設定し、`onLeftButtonSelect` および `onRightButtonSelect` イベントを処理します。
+カスタム ダイアログを追加するには、サインイン コンポーネントのテンプレートで、以下のコードを追加するとカスタム ダイアログが作成されます。`title`、`leftButtonLabel`、`rightButtonLabel`、`closeOnOutsideSelect` を設定し、`onLeftButtonSelect` および `onRightButtonSelect` イベントを処理します。
 また、[**igxLabel**](input_group.md) および [**igxInput**](input_group.md) ディレクティブでデコレートされるラベルおよび入力の 2 つのグループを追加できます。
 
 ```html
 <!--sign-in.component.html-->
 
-<igx-dialog #form
-    title="Sign In"
+<igx-dialog #form title="Sign In"
     leftButtonLabel="Cancel"
     (onLeftButtonSelect)="form.close()"
     (onRightButtonSelect)="signIn($event)"
     rightButtonLabel="Sign In"
-    rightButtonBackgroundColor="#0375be"
-    rightButtonColor="#ffffff"
     [closeOnOutsideSelect]="true">
-    <div class="ig-form-group">
-        <input type="text" igxInput />
-        <label igxLabel>Username</label>
-    </div>
-    <div class="ig-form-group">
-        <input type="password" igxInput />
-        <label igxLabel>Password</label>
-    </div>
+    <form class="signInForm">
+        <igx-input-group>
+            <igx-prefix>
+                <igx-icon>person</igx-icon>
+            </igx-prefix>
+            <label igxLabel for="username">Username</label>
+            <input igxInput id="username" type="text" />
+        </igx-input-group>
+        <igx-input-group>
+            <igx-prefix>
+                <igx-icon>lock</igx-icon>
+            </igx-prefix>
+            <label igxLabel>Password</label>
+            <input igxInput id="password" type="password" />
+        </igx-input-group>
+    </form>
 </igx-dialog>
 ```
 

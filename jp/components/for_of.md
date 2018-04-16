@@ -1,19 +1,19 @@
 ---
-title: igxFor
+title: Virtual For ディレクティブ
 _description: Ignite UI for Angular は ngFor と同様の仮想 igxFor ディレクティブを公開します。DOM でデータの表示されている部分のみを可視化すると DOM オブジェクトの描画が仮想化されます。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, 仮想化, パフォーマンス, 仮想ディレクティブ, 仮想 For
 _language: ja
 ---
 
-## igxFor
+## Virtual For ディレクティブ
 
 <p class="highlight">
 大量データをテンプレート化するために `ngForOf` の代わりに `igxForOf` を使用できます。`igxForOf` は、DOM 描画およびメモリ使用を最適化するために仮想化を使用します。仮想化はページング機能のようにデータをより小さいチャンクに分割します。このチャンクは、ユーザーがデータを水平/垂直にスクロールするときにコンテナー ビューポートで切り替えます。ページングの動作との違いは、仮想化が通常のスクロールバーの動作を装うことです。ディレクティブはスクロール可能なコンテナーを作成して、データの小さい部分を描画します。`igx-grid` で使用され、仮想化された `igx-list` を作成するために使用できます。</p>
 
 
-### igxFor デモ
+### デモ
 
-<div class="sample-container loading" style="height:780px">
+<div class="sample-container loading" style="height:650px">
     <iframe id="igx-for-sample-iframe" src='{environment:demosBaseUrl}/igx-for-sample-1' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>

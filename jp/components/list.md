@@ -308,23 +308,26 @@ toggleFavorite(item: IgxListItem) {
 ```html
 <!--contacts.component.html-->
 
-<div class="igx-form-group" style="margin: 4px">
-  <input class="igx-form-group__input--search" placeholder="連絡先の検索" [(ngModel)]="searchContact">
-  <label class="igx-form-group__label">
-    <igx-icon name="search"></igx-icon>
-  </label>
-</div>
+<igx-input-group type="search" class="search">
+    <igx-prefix>
+        <igx-icon>search</igx-icon>
+    </igx-prefix>
+    <input #search igxInput placeholder="Search Contacts" [(ngModel)]="searchContact">
+    <igx-suffix *ngIf="search.value.length > 0" (click)="searchContact = null">
+        <igx-icon>clear</igx-icon>
+    </igx-suffix>
+</igx-input-group>
 ```
 
-**IgxFilterModule** を **app.module.ts** ファイルにインポートし、**IgxFilterOptions** を連絡先コンポーネントにインポートします。
+**IgxFilterModule** および **IgxInputGroupModule** を **app.module.ts** ファイルにインポートし、**IgxFilterOptions** を連絡先コンポーネントにインポートします。
 
 ```typescript
     // app.module.ts
     ...
-    import { IgxFilterModule } from 'igniteui-angular/main';
+    import { IgxFilterModule, IgxInputGroupModule } from 'igniteui-angular/main';
 
     @NgModule({
-        imports: [..., IgxFilterModule]
+        imports: [..., IgxFilterModule, IgxInputGroupModule]
     })
 
     // contacts.component.ts
@@ -338,7 +341,7 @@ toggleFavorite(item: IgxListItem) {
         get filterContacts(): IgxFilterOptions {
             const fo = new IgxFilterOptions();
             fo.key = 'name';
-            fo.inputFiels = this.searchContact;
+            fo.inputValue = this.searchContact;
             return fo;
         }
     }

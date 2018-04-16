@@ -98,7 +98,17 @@ public colors = ['Yellow', 'Red', "Green", "Transparent"];
 
 | 名前 | 型 | 説明 |
 | :--- | :--- | :--- |
-| `value` | bool | ラジオ ボタンの値。 |
+| `@Input()` id |    string   | ラジオ ボタンに使用される一意の `id` 属性。値を設定しない場合、自走生成されます。 |
+| `@Input()` labelId |    string   | ラジオ ボタン ラベルに使用される一意の `id` 属性。値を設定しない場合、自走生成されます。 |
+| `@Input()` name |  string | ラジオ ボタンに使用される `name` 属性。 |
+| `@Input()` value | any | ラジオ ボタンに設定する値。 |
+| `@Input()` tabindex | number | ラジオ ボタンのタブ順序を指定します。 |
+| `@Input()` checked | boolean | ラジオ ボタンのチェックされた状態を指定します。 |
+| `@Input()` required | boolean | ラジオ ボタンの必須状態を指定します。 |
+| `@Input()` disabled | boolean | ラジオ ボタンの無効状態を指定します。 |
+| `@Input()` disableRipple | boolean | リップル エフェクトをラジオ ボタンで無効にするかどうかを指定します。 |
+| `@Input()` labelPosition | string `|` enum RadioLabelPosition | ラジオ ボタン要素に対するテキスト ラベルの位置を指定します。可能となる値は  "before" と "after" です。 |
+| `@Input("aria-labelledby")` ariaLabelledBy | string | ラジオ ボタンのラベルに使用される外部の要素を id によって指定します。 |
 
 <div class="divider"></div>
 
@@ -108,7 +118,15 @@ public colors = ['Yellow', 'Red', "Green", "Transparent"];
 
 | 名前 | 型 | 説明 |
 | :--- | :--- | :--- |
-| `change` | EventEmitter | ラジオがクリックされたときにイベントを発生します。 |
+| `@Output()` change | EventEmitter<IChangeRadioEventArgs> | ラジオ ボタンの checked 値が変更するときに発生します。 |
+
+#### メソッド
+
+以下のメソッドは **igx-radio** コンポーネントで利用できます。
+
+| select |
+|:----------|
+| ラジオ ボタンを選択します。 |
 
 ### 追加のリソース
 

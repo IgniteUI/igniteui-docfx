@@ -95,7 +95,17 @@ export class AppModule {}
 
 | 名前 | 型 | 説明 |
 | :--- | :--- | :--- |
-| `checked` | bool | true の場合、Switch が有効にされます。 |
+| `@Input()` id |   string   | スイッチに使用される一意の `id` 属性。値を設定しない場合、自走生成されます。 |
+| `@Input()` labelId |    string   | スイッチ ラベルに使用される一意の `id` 属性。値を設定しない場合、自走生成されます。 |
+| `@Input()` name |  string | スイッチに使用される `name` 属性。 |
+| `@Input()` value | any | スイッチに設定する値。 |
+| `@Input()` tabindex | number | スイッチのタブ順序を指定します。 |
+| `@Input()` checked | boolean | スイッチのチェックされた状態を指定します。 |
+| `@Input()` required | boolean | スイッチの必須状態を指定します。 |
+| `@Input()` disabled | boolean | スイッチの無効状態を指定します。 |
+| `@Input()` disableRipple | boolean | リップル エフェクトがスイッチで無効にするかどうかを指定します。 |
+| `@Input()` labelPosition | string `|` enum LabelPosition | スイッチ要素に対するテキスト ラベルの位置を指定します。 |
+| `@Input("aria-labelledby")` ariaLabelledBy | string | スイッチのラベルに使用される外部の要素を id によって指定します。 |
 
 <div class="divider"></div>
 
@@ -105,7 +115,15 @@ export class AppModule {}
 
 | 名前 | 型 | 説明 |
 | :--- | :--- | :--- |
-| `change` | EventEmitter | Switch をオンまたはオフにすると、イベントを発生します。 |
+| `@Output()` change | EventEmitter<IChangeCheckboxEventArgs> | スイッチの checked 値が変更するときに発生します。 |
+
+#### メソッド
+
+以下のメソッドは **igx-switch** コンポーネントで利用できます。
+
+| toggle |
+|:----------|
+| スイッチのチェックされた状態を切り替えます。 |
 
 ### 追加のリソース
 

@@ -115,20 +115,25 @@ Snackbar の主な機能を説明しました。次の例はより複雑なサ�
 ```html
 <!--sample.component.html-->
 
-<igx-list allowLeftPanning="true" allowRightPanning="true">
+<igx-list>
     <igx-list-item [isHeader]="true">Contacts</igx-list-item>
-    <igx-list-item options="true" igxRipple="pink" igxRippleTarget=".igx-list__item" *ngFor="let item of navItems">
-        <div class="item">
-            <igx-avatar [src]="item.avatar" roundShape="true"></igx-avatar>
-                <span igxLabel>{{item.text}}</span>
-                <span igxButton="icon" igxRipple igxRippleCentered="true" (click)="delete(item)">
-                    <igx-icon fontSet="material" color="#ff5252" name="delete"></igx-icon>
-                </span>
-        </div>
+
+	<igx-list-item igxRipple="pink" igxRippleTarget=".igx-list__item" *ngFor="let item of navItems">
+        <div class="item-container">
+            <div class="contact">
+                <igx-avatar [src]="item.avatar" roundShape="true"></igx-avatar>
+                <div class="contact__info">
+                    <span class="name">{{item.text}}</span>
+                </div>
+            </div>
+            <span igxButton="icon" igxRipple igxRippleCentered="true" (click)="delete(item)">
+                <igx-icon color="#ff5252">delete</igx-icon>
+            </span>
+		</div>
+		
     </igx-list-item>
-    <div class="snackbar-container">
-        <igx-snackbar message="Contact deleted" actionText="Undo" (onAction)="restore()"></igx-snackbar>
-    </div>
+	
+    <igx-snackbar message="Contact deleted" actionText="Undo" (onAction)="restore()"></igx-snackbar>
 </igx-list>
 ```
 
