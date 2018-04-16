@@ -12,7 +12,7 @@ Quick to set up and very easy on the eye, row selection for Data Grid can easily
 ### Grid Demo
 
 <div class="sample-container loading" style="height:800px">
-    <iframe id="grid-sample-2-iframe" src='{environment:demosBaseUrl}/grid-selection' width="100%" height="90%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="grid-selection-iframe" src='{environment:demosBaseUrl}/grid-selection' width="100%" height="90%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
@@ -25,7 +25,7 @@ Quick to set up and very easy on the eye, row selection for Data Grid can easily
 
 #### Single Selection
 
-The grid single selection can be easily setup using the grid's `onSelection` event. The event emits a reference to the cell component. Conveniently, that cell component has a reference to the row component that is holding it. We can use that row component reference and push the "row" (using either its `primaryValue` property or an object reference to `row.rowData`) in the appropriate list of the selectionAPI. To make sure that only a single row is always selected, we empty the `selectionAPI` row selection list beforehand (using `deselectAllRows` method of `igx-grid`)
+The grid single selection can be easily setup using the grid's `onSelection` event. The event emits a reference to the cell component. That cell component has a reference to the row component that is holding it. The row component reference `rowID` getter can be used to pass a unique identifier for the row (using either `rowData[primaryKey]` or the `rowData` object itself) to the appropriate list of the selectionAPI. To make sure that only a single row is always selected, we empty the `selectionAPI` row selection list beforehand (the second argument in the `selectRows` method call):
 
 ```html
     <!-- in example.component.html -->
@@ -38,18 +38,88 @@ The grid single selection can be easily setup using the grid's `onSelection` eve
 ```
 ```typescript
     /* in examplegrid.component.ts */
-    public handleGridSelection(cell: IgxGridCellComponent) {
-        this.grid1.deselectAllRows();
-        this.grid1.selectRows([cell.row]);
+    public handleRowSelection(args) {
+        const targetCell = args.cell as IgxGridCellComponent;
+        if (!this.selection) {
+            this.grid1.selectRows([targetCell.row.rowID], true);
+        }
     }
 
 ```
 
 #### Multiple Selection
 
-To enable multiple row selection, the `igx-grid` incorporates the `rowSelectable` property. Setting `rowSelectable` to `true` enables a select checkbox field on every row and in the grid header. The checkbox allows users to select multiple columns, with the selection persisting through paging, sorting, filtering and
+To enable multiple row selection, the `igx-grid` incorporates the `rowSelectable` property. Setting `rowSelectable` to `true` enables a select checkbox field on each row and in the grid header. The checkbox allows users to select multiple columns, with the selection persisting through scrolling, paging, and data operations such as sorting and filtering:
 
 ```html
     <igx-grid #grid1 [data]="remote | async" [primaryKey]="'ProductID'" [rowSelectable]="selection" (onSelection)="handleRowSelection($event)"
       [width]="'800px'" [height]="'600px'">
+```
+
+### Methods
+
+#### IgxGridComponent
+
+   | Name     | Description                | Return type                                       | Parameters           |
+   |----------|----------------------------|---------------------------------------------------|----------------------|
+   | selectedRows | Get current selection state    | `Array<any>`- array with selected rows' ID (primaryKey or rowData)| |
+   | selectRows   | Select specified rows by ID      | `void`- does not return anything | `Array<any>`, clearCurrentSelection: `boolean`    |   
+   | deselectRows | Deselect specified rows by ID    | `void`- does not return anything | `Array<any>` |
+   | selectAllRows | Select all rows            | `void`- does not return anything |    N/A                    |
+   | deselectAllRows | Select all rows          | `void`- does not return anything |    N/A                    |
+
+*Note:* If filtering is in place, `selectAllRows()` and `deselectAllRows()` select/deselect all *filtered* rows.
+
+### Events
+|Name|Description|Cancelable|Parameters|
+|--|--|--|--|
+| onRowSelectionChange | Emitted when selection is changing. | false | { selection: `Array<any>`, row: IgxRowComponent, rowID: any|
+
+*Note:* cell selection will trigger onSelection and not onRowSelection
+
+### <a name='aria-support'>ARIA Support</a>
+The following components gets the corresponding aria attributes
+*  row - aria-selected
+*  header checkbox - aria-checked, aria-label="Select all"/"Select all filtered/Deselect All"
+*  row checkbox - aria-checked, aria-label="Select row with key ${primaryKey}"/"Select row/Deselect Row"; when primary key is omitted, then it's not possible to describe row as a string
+
+### <a name='assumptions-and-limitations'>Assumptions and Limitations</a>
+
+Following the Material Design Guidelines the following setting where omitted, to allow easy configuration of the feature.
+All the below can be achieved, using the row selection API.
+
+* the only mode of selection will be multiple
+ - single selection will be achieved using the onSelection event and its arguments that are holding not only cell, but also row data.
+* the only way to select row, will be through the checkbox.
+* checkbox will be always rendered (along with the header one)
+
+### Code Snippets
+
+#### Select rows programatically
+Ihe below code example can be used to select several rows simultaniously (via `primaryKey`):
+```html
+<!-- in component.html -->
+<igx-grid ... [primaryKey]="'ID'">
+...
+</igx-grid>
+...
+<button (click)="this.grid.selectRows([1,2,5])">Select 1,2 and 5</button>
+```
+This will add the rows which correspond to the data entries with IDs 1, 2 and 5 to the grid selection.
+
+#### Cancel selection event
+```html
+<!-- in component.html -->
+<igx-grid
+    (onRowSelectionChange)="handleRowSelectionChange($event)"
+>
+...
+</igx-grid>
+```
+```typescript
+// in component.ts
+public handleRowSelectionChange(args) {
+    args.newSelection = args.oldSelection; // overwrites the new selection, making it so that no new row(s) are entered in the selectionAPI
+    args.checked = false; // overwrites the checkbox state 
+}
 ```
