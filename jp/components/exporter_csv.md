@@ -1,17 +1,18 @@
----
+﻿---
 title: CSV Exporter
-_description: The IgniteUI CSV Exporter service can export data in character separated values (CSV) format.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, CSV Export
+_description: Ignite UI CSV Exporter サービスは文字分割値 (CSV) 形式でデータをエクスポートします。
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, CSV エクスポート
+_language: ja
 ---
 
 ## CSV Exporter
 
 <p class="highlight">
-The IgniteUI CSV Exporter service can export data in a Character Separated Values format from both raw data (array) or from an `IgxGrid`.
-The exporting functionality is encapsulated in the `IgxCsvExporterService` class.</p>
+Ignite UI CSV Exporter サービスは、文字分割値 (CSV) 形式で生データ (配列) または `IgxGrid` からデータをエクスポートします。
+エクスポート機能は `IgxCsvExporterService` クラスにカプセル化されます。</p>
 <div class="divider"></div>
 
-### CSV Exporter Demo
+### CSV Exporter デモ
 
 <div class="sample-container loading" style="height: 150px;">
     <iframe id="csv-export-sample-iframe" src="{environment:demosBaseUrl}/export-csv"
@@ -19,11 +20,11 @@ The exporting functionality is encapsulated in the `IgxCsvExporterService` class
 </div>
 <div>
 <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="csv-export-sample-iframe"
-    data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
 </div>
 <div class="divider--half"></div>
 
-To start using the IgniteUI CSV Exporter first import the **IgxCsvExporterService** in the **app.module.ts** file and add the service to the `providers` array:
+Ignite UI CSV Exporter をインスタンス化するには、**IgxCsvExporterService** を **app.module.ts** ファイルにインポートし、サービスを `providers` 配列に追加します。
 
 ```typescript
 // app.module.ts
@@ -38,15 +39,15 @@ import { IgxCsvExporterService } from "igniteui-angular/services/index";
 export class AppModule {}
 ```
 
-To initiate an export process you may use the handler of a button in your component's template.
+エクスポート処理を開始するためにコンポーネントのテンプレートでボタンのハンドラーを使用できます。
 
 ```html
 <button (click)="exportButtonHandler()">Export Data to CSV</button>
 ```
 
-You may access the exporter service by defining an argument of type `IgxCsvExporterService` in the component's constructor and the Angular framework will provide an instance of the service. To export some data in CSV format you need to invoke the exporter service's `exportData` method. This method accepts as a first argument the data you want to export and the second argument is of type `IgxCsvExporterOptions` and allows you to configure the export process.
+エクスポーター サービスにアクセスするには、コンポーネントのコンストラクターで `IgxCsvExporterService` 型の引数を定義します。Angular フレームワークはサービスのインスタンスを提供します。データを CSV 形式でエクスポートするには、エクスポーター サービスの `exportData` メソッドを起動します。このメソッドで、エクスポートするデータは最初の引数です。2 番目の引数は `IgxCsvExporterOptions` 型で、エクスポート処理の構成を許可します。
 
-Here is the code which will execute the export process in the component's typescript file:
+以下のコードはコンポーネントの typescript ファイルでエクスポート処理を実行します。
 
 ```typescript
 // component.ts
@@ -70,15 +71,14 @@ public exportButtonHandler() {
 
 ```
 
-If all went well, you should see an export button. When pressed, it will trigger the export process and the browser will download a file named "ExportedDataFile.csv" which contains the data from the `localData` array in CSV format. 
+結果とは、エクスポート ボタンが表示されます。押されたとき、エクスポート処理をトリガーし、ブラウザーが "ExportedDataFile.csv" ファイルをダウンロードします。このファイルは `localData` 配列のデータを CSV 形式で含みます。
 
 
-### Exporting IgxGrid's Data
+### IgxGrid のデータのエクスポート
 
-The CSV Exporter service can also export data in CSV format from an `IgxGrid`. The only difference is that you need to invoke the 
-`IgxCsvExporterService`'s `export` method and pass the `IgxGrid` as first argument.
+CSV Exporter サービスも `IgxGrid` からのデータを CSV 形式でエクスポートできます。`IgxCsvExporterService` の `export` メソッドを起動し、`IgxGrid` を最初の引数として渡します。
 
-Here is an example:
+以下は例です。
 
 ```html
 <igx-grid #igxGrid1 [data]="localData" [autoGenerate]="true"></igx-grid>
@@ -116,33 +116,33 @@ public exportButtonHandler() {
 </div>
 <div>
 <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="csv-export-sample-iframe2"
-    data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
 </div>
 
 
-### Customizing the Exported Format
+### エクスポートされた形式のカスタマイズ化
 
-The CSV Exporter supports several types of exporting formats. The export format may be specified:
-* as a second argument of the `IgxCsvExporterOptions` objects's constructor
-* using the `IgxCsvExporterOptions` objects's `fileType` property
+CSV Exporter は複数のエクスポート形式タイプをサポートします。エクスポート形式を以下の方法で指定できます:
+* `IgxCsvExporterOptions` オブジェクトのコンストラクターの 2 番目の引数として指定
+* `IgxCsvExporterOptions` オブジェクトの `fileType` プロパティを使用して指定
 
-Different export formats have different file extensions and value delimiters. The following table maps the export formats and their respective file extensions and delimiters:
+別のエクスポート形式は別のファイル拡張子および区切り記号があります。以下の表はエクスポート形式を相対するファイル拡張子および区切り記号にマップします。
 
-| Format | File Extension | Default Delimiter |
+| 形式 | ファイルの拡張子 | デフォルトの区切り記号 |
 | :--- | :--- | :--- |
-| `CsvFileTypes.CSV` | .csv | Comma |
-| `CsvFileTypes.TAB` | .tab | Tab |
-| `CsvFileTypes.TSV` | .tsv | Tab |
+| `CsvFileTypes.CSV` | .csv | コンマ  |
+| `CsvFileTypes.TAB` | .tab | タブ |
+| `CsvFileTypes.TSV` | .tsv | タブ |
 
 <div class="divider--half"></div>
 
-You can also specify a custom delimiter using the `IgxCsvExporterOptions` objects's `valueDelimiter` property.
+`IgxCsvExporterOptions` オブジェクトの `valueDelimiter` プロパティを使用してカスタム区切り記号を指定できます。
 
-### Customizing the Exported Content
+### エクスポートされたコンテンツのカスタマイズ化
 
-In the above examples the CSV Exporter service was exporting all available data. There are situations in which you may want to skip exporting a row or even an entire column. To achieve this you may hook to the `onColumnExport` and/or `onRowExport` events which are fired respectively for each column and/or each row and cancel the respective event by setting the event argument object's `cancel` property to `true`.
+上記の例で、CSV Exporter サービスがすべての利用可能なデータをエクスポートしました。行または列のエクスポートをスキップするシナリオがあります。これを実装するには、各列のために発生される `onColumnExport` または各行のために発生される `onRowExport` イベントを処理し、イベント引数オブジェクトの `cancel` プロパティを `true` に設定すると各イベントをキャンセルできます。
 
-The following example will exclude a column from the export if its name is "Age" and if its index is 1:
+以下の例では、名前が "Age" で、インデックスが 1 の場合、エクスポートから列を除外します。
 
 ```typescript
 // component.ts
@@ -155,50 +155,53 @@ this.csvExportService.onColumnExport.subscribe((args: IColumnExportingEventArgs)
 this.csvExportService.export(this.igxGrid1, new IgxCsvExporterOptions("ExportedDataFile"));
 ```
 
-When you are exporting data from `IgxGrid` the export process takes in account features like row filtering and column hiding and exports only the data visible in the grid. You can configure the exporter service to include filtered rows or hidden columns by setting properties on the `IgxCsvExporterOptions` object. These properties are described in the table below.
+`IgxGrid` からのデータのエクスポートで、エクスポート処理は行フィルタリングおよび列の非表示などの機能に応じてグリッドで表示されるデータのみをエクスポートします。`IgxCsvExporterOptions` オブジェクトのプロパティを設定し、エクスポーター サービスを構成してフィルターした行または非表示の列を含むことができます。このプロパティは以下の表で説明します。
 
-### API Summary
+### API まとめ
 
-The CSV Exporter service has a few more APIs to explore, which are listed below.
+以下は、CSV Exporter サービスのその他の API です。
 
-#### Inputs
+#### 入力
 
-The following inputs are available on the **IgxCsvExporterService** component:
-| Name | Type | Description |
+以下の入力は **IgxCsvExporterService** コンポーネントで利用できます。
+
+| 名前 | 型 | 説明 |
 | :--- | :--- | :--- |
-| `export` | Method | Method for exporting IgxGrid component's data into CSV format. |
-| `exportData` | Method | Method for exporting any kind of array data into CSV format. |
+| `export` | Method | IgxGrid コンポーネントのデータを CSV 形式にエクスポートするメソッド。 |
+| `exportData` | Method | 任意の配列のデータを CSV 形式にエクスポートするメソッド。 |
 
 <div class="divider--half"></div>
 
-The following inputs are available on the **IgxCsvExporterOptions** component:
-| Name | Type | Description |
+以下の入力は **IgxCsvExporterOptions** コンポーネントで利用できます。
+
+| 名前 | 型 | 説明 |
 | :--- | :--- | :--- |
-| `fileName` | string | Provide the name of the file for the export operation. |
-| `fileType` | `CsvFileTypes` | Specifies the CSV export format. |
-| `ignoreColumnsOrder` | boolean | Specifies if the exporter should ignore the current column order in the grid. |
-| `ignoreColumnsVisibility` | boolean | Specifies whether hidden columns should be exported. |
-| `ignoreFiltering` | boolean | Specifies whether filtered out rows should be exported. |
-| `ignoreSorting` | boolean | Specifies whether the exported data should be sorted as in the grid. |
-| `valueDelimiter` | string | Provides a custom delimiter which will overwrite the default delimiter of the selected file type. |
+| `fileName` | string | エクスポート操作でファイル名を提供します。 |
+| `fileType` | `CsvFileTypes` | CSV エクスポート形式を指定します。 |
+| `ignoreColumnsOrder` | boolean | エクスポーターがグリッドの列順序を無視するかどうかを指定します。 |
+| `ignoreColumnsVisibility` | boolean | 非表示される列をエクスポートするかどうかを指定します。 |
+| `ignoreFiltering` | boolean | フィルター アウトされた行をエクスポートするかどうかを指定します。 |
+| `ignoreSorting` | boolean | エクスポートされたデータをグリッドのように並べ替えるかどうかを指定します。 |
+| `valueDelimiter` | string | 選択したファイル タイプのデフォルト区切り記号を上書きするカスタム区切り記号を提供します。 |
 
 <div class="divider"></div>
 
-#### Outputs
+#### 出力
 
-The following outputs are available on the **IgxCsvExporterService** component:
-| Name | Type | Description |
+以下の出力は **IgxCsvExporterService** コンポーネントで利用できます。
+
+| 名前 | 型 | 説明 |
 | :--- | :--- | :--- |
-| `onColumnExport` | EventEmitter<`IColumnExportingEventArgs`> | Emits an event when a column is exported. |
-| `onRowExport` | EventEmitter<`IRowExportingEventArgs`> | Emits an event when a row is exported. |
-| `onExportEnded` | EventEmitter<`ICsvExportEndedEventArgs`> | Emits an event when the export process finishes. |
+| `onColumnExport` | EventEmitter<`IColumnExportingEventArgs`> | 列がエクスポートされたときにイベントを発生します。 |
+| `onRowExport` | EventEmitter<`IRowExportingEventArgs`> | 行がエクスポートされたときにイベントを発生します。 |
+| `onExportEnded` | EventEmitter<`ICsvExportEndedEventArgs`> | エクスポート処理が完了されたときにイベントを発生します。 |
 
 <div class="divider"></div>
 
-### Additional Resources
+### 追加のリソース
 
 <div class="divider--half"></div>
-Our community is active and always welcoming to new ideas.
+是非コミュニティに参加してください。
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
