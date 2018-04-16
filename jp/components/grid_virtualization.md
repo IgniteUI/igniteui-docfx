@@ -82,7 +82,7 @@ _language: ja
 * [列のサイズ変更](grid_column_resizing.html)
 
 <div class="divider--half"></div>
-是非コミュニティに参加してください。
+コミュニティに参加して新しいアイデアをご提案ください。
 
 * [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
 * [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
