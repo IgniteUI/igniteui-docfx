@@ -22,7 +22,7 @@
 - name: Data Visualization
   header: true
   href: categorychart.md
--  name: Category Chart
+- name: Category Chart
   href: categorychart.md
   items:
     - name: Performance
