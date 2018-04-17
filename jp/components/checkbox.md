@@ -100,7 +100,18 @@ statusChanged()
 
 | 名前 | 型 | 説明 |
 | :--- | :--- | :--- |
-| `checked` | bool | true の場合、チェックボックスがチェック付きです。 |
+| `@Input()` id |    string   | チェックボックスに使用される一意の `id` 属性。値を設定しない場合、自動生成されます。 |
+| `@Input()` labelId |    string   | チェックボックス ラベルに使用される一意の `id` 属性。値を設定しない場合、自走生成されます。 |
+| `@Input()` name |  string | チェックボックスに使用される `name` 属性。|
+| `@Input()` value | any | チェックボックスに設定する値。 |
+| `@Input()` tabindex | number | チェックボックスのタブ順序を指定します。 |
+| `@Input()` checked | boolean | チェックボックスのチェックされた状態を指定します。|
+| `@Input()` indeterminate | boolean | チェックボックスの不確定状態を指定します。 |
+| `@Input()` required | boolean | チェックボックスの必須状態を指定します。 |
+| `@Input()` disabled | boolean | チェックボックスの無効状態を指定します。 |
+| `@Input()` disableRipple | boolean | リップル エフェクトをチェックボックスで無効にするかどうかを指定します。 |
+| `@Input()` labelPosition | string `|` enum LabelPosition | チェックボックス要素に対するテキスト ラベルの位置を指定します。 |
+| `@Input("aria-labelledby")` ariaLabelledBy | string | チェックボックスのラベルに使用される外部の要素を id によって指定します。 |
 
 <div class="divider"></div>
 
@@ -110,12 +121,20 @@ statusChanged()
 
 | 名前 | 型 | 説明 |
 | :--- | :--- | :--- |
-| `change` | EventEmitter | チェックボックスがクリックされるとイベントを発生します。 |
+| `@Output()` change | EventEmitter<IChangeCheckboxEventArgs> | チェックボックスの checked 値が変更するときに発生します。 |
+
+#### メソッド
+
+以下のメソッドは **igx-checkbox** コンポーネントで利用できます。
+
+| toggle |
+|:----------|
+| チェックボックスのチェックされた状態を切り替えます。 |
 
 ### 追加のリソース
 
 <div class="divider--half"></div>
-是非コミュニティに参加してください。
+コミュニティに参加して新しいアイデアをご提案ください。
 
 * [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
 * [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

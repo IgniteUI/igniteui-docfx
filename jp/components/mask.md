@@ -11,7 +11,7 @@ _language: ja
 <div class="divider--half"></div>
 
 ### Mask デモ
-<div class="sample-container loading" style="height: 500px">
+<div class="sample-container loading" style="height: 280px">
     <iframe id="mask-sample-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/mask-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -24,19 +24,17 @@ _language: ja
 
 ### 使用方法
 
-Ignite UI for Angular Mask ディレクティブを初期化する前に、**IgxMaskModule** および **IgxInputModule** を **app.module.ts** ファイルにインポートします。**IgxInputModule** は必須ではありません。以下の例で使用します。**igxMask** ディレクティブを任意の Angular 入力コントロールと使用できます。
+Ignite UI for Angular Mask ディレクティブを初期化する前に、**IgxMaskModule** および **IgxInputGroupModule** を **app.module.ts** ファイルにインポートします。**igxMask** ディレクティブを任意の Angular 入力コントロールと使用できます。
 
 ```typescript
 // app.module.ts
 
 ...
-import { IgxMaskModule } from 'igniteui-angular/main';
-import { IgxInputModule } from 'igniteui-angular/main';
+import { IgxMaskModule, IgxInputGroupModule } from 'igniteui-angular/main';
 
 @NgModule({
     ...
-    imports: [..., IgxMaskModule],
-    imports: [..., IgxInputModule],
+    imports: [..., IgxInputGroupModule, IgxMaskModule]
     ...
 })
 export class AppModule {}
@@ -45,6 +43,7 @@ export class AppModule {}
 <div class="divider--half"></div>
 
 #### サポートされる定義済みマスク ルール
+<div class="divider--half"></div>
 
 | マスク文字 | 説明 |
 | :--- | :--- | 
@@ -65,7 +64,13 @@ export class AppModule {}
 ```html
 <!--sample.component.html-->
 
- <input igxInput name="phone" type="text" [igxMask]="'(####) 00-00-00 Ext. 9999'"/>
+<igx-input-group>
+    <igx-prefix>
+        <igx-icon>phone</igx-icon>
+    </igx-prefix>
+    <label igxLabel>Phone</label>
+    <input igxInput type="text" [igxMask]="'(####) 00-00-00 Ext. 9999'"/>
+</igx-input-group>
 ```
 
 サンプルを正しく構成した場合、書式マスクが適用される入力が表示されます。
@@ -85,14 +90,22 @@ export class AppModule {}
 ```html
 <!--sample.component.html-->
 
-<div>
-  <igx-switch class="switch-style" [(ngModel)]="includeLiterals" (change)="clear()">
-    <div style="width: 150px">Include Literals</div>
-  </igx-switch>
-  <input igxInput #ssn name="socialSecurityNumber" type="text" [igxMask]="'###-##-####'" [(ngModel)]="socialSecurityNumber"
-    [includeLiterals]="includeLiterals" />
-  <p>Value: {{ socialSecurityNumber }}</p>
-</div>
+<igx-switch [(ngModel)]="includeLiterals" (change)="clear()">
+    Include Literals
+</igx-switch>
+
+<igx-input-group>
+    <label igxLabel>
+        Social Security Number
+    </label>
+    <input #ssn name="socialSecurityNumber" type="text"
+        igxInput
+        [igxMask]="'###-##-####'"
+        [(ngModel)]="socialSecurityNumber"
+        [includeLiterals]="includeLiterals" />
+</igx-input-group>
+
+<p *ngIf="socialSecurityNumber.length > 0">Value: {{ socialSecurityNumber }}</p>
 ```
 
 ```typescript
@@ -106,7 +119,7 @@ public clear() {
 }
 ```
 
-<div class="sample-container loading" style="height: 140px">
+<div class="sample-container loading" style="height: 160px">
     <iframe id="mask-sample3-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/mask-sample-3" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 
@@ -121,21 +134,31 @@ public clear() {
 ```html
 <!--sample.component.html-->
 
-<form class="input-sample" action="/" method="POST">
-    <h4>Personal Data</h4>
-    <br />
-    <div class="igx-form-group">
-        <input igxInput name="name" type="text" [(ngModel)]="person.name" required  />
-        <label igxLabel for="name">Name*</label>
-    </div>
-    <div class="igx-form-group">
-        <input igxInput #dateInput name="birthday" type="text" [igxMask]="'00/00/0000'" [(ngModel)]="person.birthday" (blur)="validateDate(dateInput, snackbar)"/>
+<form class="mask-sample" action="/" method="POST">
+    <h4 class="form-title">Personal Data</h4>
+
+    <igx-input-group>
+        <label igxLabel for="name">Name</label>
+        <input igxInput name="name" type="text" required 
+        [(ngModel)]="person.name" />
+    </igx-input-group>
+
+    <igx-input-group>
         <label igxLabel for="email">Birthday</label>
-    </div>
-    <div class="igx-form-group">
-        <input igxInput #ssn name="socialSecurityNumber" type="text" [igxMask]="'###-##-####'" [(ngModel)]="person.socialSecurityNumber" (blur)="validateSSN(ssn, snackbar)"/>
+        <input igxInput #dateInput name="birthday" type="text" 
+            [igxMask]="'00/00/0000'" 
+            [(ngModel)]="person.birthday" 
+            (blur)="validateDate(dateInput, snackbar)" />
+    </igx-input-group>
+
+    <igx-input-group>
         <label igxLabel for="socialSecurityNumber">Social Security Number</label>
-    </div>
+        <input igxInput #ssn name="socialSecurityNumber" type="text" 
+        [igxMask]="'###-##-####'" 
+        [(ngModel)]="person.socialSecurityNumber" 
+        (blur)="validateSSN(ssn, snackbar)" />
+    </igx-input-group>
+	
     <igx-snackbar #snackbar></igx-snackbar>
 </form>
 
@@ -226,6 +249,6 @@ export class Person {
 ### 追加のリソース
 
 <div class="divider--half"></div>
-是非コミュニティに参加してください。
+コミュニティに参加して新しいアイデアをご提案ください。
 * [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
 * [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
