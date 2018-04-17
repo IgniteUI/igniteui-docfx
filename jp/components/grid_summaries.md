@@ -167,6 +167,16 @@ export class GridComponent implements OnInit {
 }
 ```
 
+Same applies for the case when `http` request is made, we should clean up the cache.
+
+```typescript
+this.http.get<any[]>('/assets/data.json')
+    .subscribe(data => {
+    this.data = data;
+    this.grid1.clearSummaryCache();
+});
+```
+
 ### 追加のリソース
 <div class="divider--half"></div>
 
