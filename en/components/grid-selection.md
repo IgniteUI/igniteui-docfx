@@ -1,7 +1,7 @@
 ---
 title: Data Grid - Selection
 _description: A detailed guid on how to implement and best configure the igx-grid selection property for a grid on your page.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Data Grid component, Angular Data Grid control, Angular Grid component, Angular Grid control, Angular High Performance Grid
+_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Data Grid component, Angular Data Grid control, Angular Grid component, Angular Grid control, Angular High Performance Grid, Angular Grid Row Selection, Angular Grid Selection, Grid Row Selection, Grid Selection
 ---
 
 ## Data Grid
@@ -49,14 +49,14 @@ The grid single selection can be easily setup using the grid's `onSelection` eve
 
 #### Multiple Selection
 
-To enable multiple row selection, the `igx-grid` incorporates the `rowSelectable` property. Setting `rowSelectable` to `true` enables a select checkbox field on each row and in the grid header. The checkbox allows users to select multiple columns, with the selection persisting through scrolling, paging, and data operations such as sorting and filtering:
+To enable multiple row selection, the `igx-grid` exposes the `rowSelectable` property. Setting `rowSelectable` to `true` enables a select checkbox field on each row and in the grid header. The checkbox allows users to select multiple rows, with the selection persisting through scrolling, paging, and data operations such as sorting and filtering:
 
 ```html
     <igx-grid #grid1 [data]="remote | async" [primaryKey]="'ProductID'" [rowSelectable]="selection" (onSelection)="handleRowSelection($event)"
       [width]="'800px'" [height]="'600px'">
 ```
 
-*Note:* In order to have proper row selection and cell selection, while grid has remote virtualization, `primaryKey` should be defined
+*Note:* In order to have proper row selection and cell selection, while grid has remote virtualization, `primaryKey` should be provided.
 
 ### Methods
 
@@ -82,7 +82,7 @@ To enable multiple row selection, the `igx-grid` incorporates the `rowSelectable
 ### Code Snippets
 
 #### Select rows programatically
-Ihe below code example can be used to select several rows simultaniously (via `primaryKey`):
+Ihe below code example can be used to select one or multiple rows simultaniously (via `primaryKey`):
 ```html
 <!-- in component.html -->
 <igx-grid ... [primaryKey]="'ID'">
