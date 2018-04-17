@@ -5,7 +5,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ---
 ## Performance - High Frequency
 
-The igxCategoryChart is capable of handling high volumes of data, ranging into the millions of data points, and updating them every few milliseconds as demonstrated in teh following demo.
+The igxCategoryChart is capable of handling high volumes of data, ranging into the millions of data points, and updating them every few milliseconds as demonstrated in the following demo.
 
 ### High Frequency Demo
 <div class="sample-container" style="height: 650px">
