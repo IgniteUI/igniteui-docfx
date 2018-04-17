@@ -6,6 +6,14 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ### Grid Filtering
 
+
+**Filtering** can be enabled on a per-column level, by setting a column `filterable` property to true.
+
+```html
+<igx-column field="ProductName" filterable="true" dataType="string"></igx-column>
+<igx-column field="Price" filterable="true" dataType="number"></igx-column>
+```
+
 #### Grid Demo
 
 <div class="sample-container loading" style="height:550px">
@@ -19,14 +27,6 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 > [!NOTE]
 > The filtering operation **DOES NOT** change the underlying data source of the grid.
-
-
-**Filtering** can be enabled on a per-column level, by setting a column `filterable` property to true.
-
-```html
-<igx-column field="ProductName" filterable="true" dataType="string"></igx-column>
-<igx-column field="Price" filterable="true" dataType="number"></igx-column>
-```
 
 Depending on the set `dataType` of the column the correct set of [**filtering conditions**](#filtering-conditions) will be loaded inside the filter UI dropdown. Additionally, you can set the `filteringIgnoreCase` and the initial `filteringCondition` property of the column.
 

@@ -4,6 +4,14 @@ _description: The Ignite UI for Angular Data Grid control features the fastest, 
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Data Grid component, Angular Data Grid control, Angular Grid component, Angular Grid control, Angular High Performance Grid, Summaries, Summary
 ---
 
+### Grid Summaries
+
+Displays a summary row for the data in the columns of the grid. There are predefined summary functions, but you can create custom function to calculate custom summaries.
+Grid **summaries** can also be enabled on a per-column level, which means that you can activate it only for columns that you need to.
+
+> [!NOTE]
+> The summary of the column is a **function of all column values**, unless filtering is applied, then the summary of the column will be **function of the filtered result values**
+
 ### Grid Demo
 
 <div class="sample-container loading" style="height:750px">
@@ -15,11 +23,9 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 </div>
 <div class="divider--half"></div>
 
-### Grid Summaries
-> [!NOTE]
-> The summary of the column is a **function of all column values**, even if paging, filtering or sorting is applied.
 
-Grid **summaries** can also be enabled on a per-column level, which means that you can activate it only for columns that you need to. **Grid summaries** gives you a predefined set of default summaries, depending on the type of data in the column, so that you can save some time:
+**Grid summaries** gives you a predefined set of default summaries, depending on the type of data in the column, so that you can save some time:
+
 
 For `string` and `boolean` data types, the following function is available:
  - count

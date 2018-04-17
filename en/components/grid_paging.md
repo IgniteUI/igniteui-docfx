@@ -6,6 +6,12 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ## Grid Paging
 
+**Paging** is initialized on the root **igx-grid** component, and is configurable via the `paging` and `perPage` inputs. Paging is a Boolean property that controls whether the feature is enabled and the `perPage` property controls the visible records per page. Let’s update our grid to enable paging:
+
+```html
+<igx-grid #grid1 [data]="data | async" [paging]="true" [perPage]="20" [autoGenerate]="false"></igx-grid>
+```
+
 #### Grid Demo
 
 <div class="sample-container loading" style="height:420px">
@@ -17,11 +23,6 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 </div>
 <div class="divider--half"></div>
 
-**Paging** is initialized on the root **igx-grid** component, and is configurable via the `paging` and `perPage` inputs. Paging is a Boolean property that controls whether the feature is enabled and the `perPage` property controls the visible records per page. Let’s update our grid to enable paging:
-
-```html
-<igx-grid #grid1 [data]="data | async" [paging]="true" [perPage]="20" [autoGenerate]="false"></igx-grid>
-```
 
 The paging area supports templating by the user, if a template reference is passed to the grid during initialization. The example below is a template where the pagination is controlled through an input.
 
