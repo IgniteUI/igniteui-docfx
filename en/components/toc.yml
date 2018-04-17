@@ -21,14 +21,16 @@
       href: grid_selection.md
 - name: List View
   href: list.md
-- name: Data Visualization
+- name: Charts
   header: true
   href: categorychart.md
 - name: Category Chart
   href: categorychart.md
   items:
-    - name: Performance
-      href: categorychart_performance.md
+    - name: Performance - High Frequency
+      href: categorychart_performance_high_frequency.md
+    - name: Performance - High Volume
+      href: categorychart_performance_high_volume.md
     - name: Axis
       href: categorychart_axis.md
     - name: Configuring Category Chart

@@ -6,7 +6,6 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ## Category Chart Axis 
 
 In the Category Chart control, an Axis provides base properties for specifying appearance of axis main lines, tickmarks, titles, and axis labels. 
-
 <div class="divider"></div>
 
 ### Category Chart Axis Demo
@@ -24,7 +23,6 @@ In the Category Chart control, an Axis provides base properties for specifying a
 By default, you do not need to explicitly set the labels. The Category Chart will use the first appropriate string property that it finds within the data you provided and will explicitly set which property to use for the labels. 
 
 ### Axis Labels 
-
 The Category Chart control allows you full control over configuring, formatting and styling the font of the labels displayed on your chart. You can change the rotation angle, margin, horizontal/vertical alignment, opacity, padding and visibility. 
 
 The following code example shows how to style labels on the x-axis using style properties:
@@ -118,7 +116,6 @@ The following code snippet demonstrates how to configure the interval on the y-a
 <div class="divider--half"></div>
 
 ### Axis Gap 
-
 The Axis Gap feature of the Category Chart control allows setting the gap between series of the chart.
 
 The property accepts a numeric float value between 0 and 1. The value represents a relative width of the gap out of the available number of pixels between series. 
@@ -143,7 +140,6 @@ To set the Category Chart with `xAxisGap` of `0.5` the following code can be use
 <div class="divider--half"></div>
 
 ### Axis Overlap
-
 The Axis Overlap feature of the Category Chart control allows setting overlap of rendered categories. 
 
 The property accepts a numeric float value between -1 and 1. The value represents a relative overlap out of the available number of pixels dedicated to each series.
