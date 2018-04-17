@@ -5,7 +5,7 @@ _keywords: Ignite UI for Angular, Data Visualization, UI controls, Angular widge
 ---
 ## Binding Financial Chart to Data 
 
-The igxFinancialChart is an intuitive control that automatically analyzes and selects data columns - Date/Time column to use for x-axis and Open, High, Low, Close, Volume columns or the first 5 numeric columns for y-axis. 
+The igxFinancialChart can bind easily to multiple data sources, as shown in the following demo. 
 
 ### Binding to Multiple Data Sources Demo
 <div class="sample-container" style="height: 550px">

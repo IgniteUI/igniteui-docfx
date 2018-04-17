@@ -5,7 +5,7 @@ _keywords: Ignite UI for Angular, Data Visualization, UI controls, Angular widge
 ---
 ## Configuring Financial Chart 
 
-There are many areas of the financial chart that can be customized, such as the navigation behavior, trendline layers,  overlays, chart titles and subtitles.
+There are many areas of the financial chart that can be customized, such as the navigation behavior, trendline layers, overlays, chart titles and subtitles.
 This page will walk you through with code samples the different properties that required to be set in order to achieve a customized financial chart.
 
 ### Configuring Financial Chart Demo

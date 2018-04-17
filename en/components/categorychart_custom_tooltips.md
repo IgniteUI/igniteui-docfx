@@ -19,17 +19,5 @@ The igxCategoryChart provides default tooltips for each type of series. The defa
 
 <div class="divider--half"></div>
 
-TODO - UPDATE CONTENT AND CODE SNIPPET
-
-The tooltip content is customized through the seriesAdded event
-
-```html
-<igx-category-chart
-    [dataSource]="data"
-    width="700px"
-    height="500px"
-    >
-</igx-category-chart>
-```
 
 

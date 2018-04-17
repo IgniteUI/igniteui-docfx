@@ -5,7 +5,7 @@ _keywords: Ignite UI for Angular, Data Visualization, UI controls, Angular widge
 ---
 ## Performance 
 
-The igxFinancialChart is capable of handling high volumes of data. The following demo binds 20years of data, with 1 day intervals and displays the stock prices using candle sticks.
+The igxFinancialChart is capable of handling high volumes of data. The following demo binds 20 years of data, with 1 day intervals and displays the stock prices using candle sticks.
 
 ### Performance Demo
 
