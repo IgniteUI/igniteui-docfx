@@ -1,6 +1,6 @@
 ﻿---
 title: Financial Chart コンポーネント
-_description: Ignite UI for Angular Financial Chart コンポーネントを使用して、詳細情報のエントリ ポイントとして、ダッシュボード、テキスト、画像、アイコン、ボタンなどを表示します。
+_description: Ignite UI for Angular Financial Chart コンポーネントは、財務データを表示するタッチ対応、高いパフォーマンス、軽量なチャート コントロールです。
 _keywords: Ignite UI for Angular, データ ビジュアライゼーション, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Chart コンポーネント, Angular Financial Chart コンポーネント, Angular Chart コントロール, Angular Financial Chart コントロール
 _language: ja
 ---
@@ -8,15 +8,29 @@ _language: ja
 
 Financial Chart は軽量で高パフォーマンスなチャートです。このチャートは、シンプルで直感的な API を使用した財務データの表示を簡単に構成できます。データ (コレクションまたはコレクションのコレクション) をバインドするだけで後の作業はチャートがすべて行います。チャートは data プロパティにバインドされるデータ ソースの構造を解析します。データ ソースにある各コレクション用に単一の財務物価シリーズをプロットします。また、各コレクションのデータ項目で Open、High、Low、Close、および Volume 名前を持つ 5 つの数値データ列および Time 名前を持つ単一の日刻列を検索して解析します。チャートを使用してデータを可視化する複数方法を提供します。価格およびボリュームに複数の表示モードおよび財務指標の大量を提供します。チャートにデータ コンテキストを表示するためにラベルの書式設定を使用します。
 
+<div class="divider"></div>
+
+### Financial Chart デモ
+
+<div class="sample-container" style="height: 650px">
+    <iframe id="financial-chart-overview-sample-iframe" src='{environment:demosBaseUrl}/financial-chart-overview-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="financial-chart-overview-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
+    </button>
+</div>
+
+<div class="divider--half"></div>
+
 `chartType` プロパティを以下のオプションの 1 つに設定してチャート タイプを明示的に指定することもできます。
     
-プロパティ|説明|例
----|---|---
-`bar`|各データ ポイントにマーカーがある棒シリーズを指定します。|![](/images/financial_chart_bar.png)
-`candle`|ローソク足シリーズを指定します。|![](/images/financial_chart_candle.png)
-`column`|柱状シリーズを指定します。|![](/images/financial_chart_column.png)
-`line`|折れ線シリーズを指定します。|![](/images/financial_chart_line.png)
-`auto`|データ アダプターからの提案に基づいてチャート タイプの自動選択を指定します。|
+プロパティ|説明
+---|---
+`bar`|各データ ポイントにマーカーがある棒シリーズを指定します。
+`candle`|ローソク足シリーズを指定します。
+`column`|柱状シリーズを指定します。
+`line`|折れ線シリーズを指定します。
+`auto`|データ アダプターからの提案に基づいてチャート タイプの自動選択を指定します。
 
 ファイナンシャル チャートの上側にツールバーが表示されます。チャートで表示されるデータの詳細を変更でき、複数のペインの表示もできます。ツールバーには次のセレクターが含まれます:
 
@@ -26,20 +40,6 @@ Financial Chart は軽量で高パフォーマンスなチャートです。こ�
 - 日付範囲セレクター - データを表示するために定義済みの範囲を選択できます。
 - チャート タイプ セレクター - ファイナンシャル チャートのチャート タイプを選択できます。これは価格ペインで表示されます。
 - ボリューム タイプ セレクター - ボリューム ペインで出来高を表示します。None、Column、Line、および Area チャート タイプから選択できます。
-
-<div class="divider"></div>
-
-### Financial Chart デモ
-
-<div class="sample-container" style="height: 280px">
-    <iframe id="financial-chart-overview-sample-iframe" src='{environment:demosBaseUrl}/financial-chart-overview-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="financial-chart-overview-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
-    </button>
-</div>
-
-<div class="divider--half"></div>
 
 ### 依存関係
 

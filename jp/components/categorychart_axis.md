@@ -1,6 +1,6 @@
 ﻿---
-title: Category Chart コンポーネント
-_description: Ignite UI for Angular Category Chart コンポーネントを使用して、詳細情報のエントリ ポイントとして、ダッシュボード、テキスト、画像、アイコン、ボタンなどを表示します。
+title: Category Chart 軸
+_description: Ignite UI for Angular Category Chart コンポーネントは、カテゴリ データを表示するタッチ対応、高いパフォーマンス、軽量なチャート コントロールです。
 _keywords: Ignite UI for Angular, データ ビジュアライゼーション, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Chart コンポーネント, Angular Category Chart コンポーネント, Angular Chart コントロール, Angular Category Chart コントロール
 _language: ja
 ---
@@ -8,13 +8,11 @@ _language: ja
 
 Category Chart コントロールでは、軸は軸線、目盛、タイトル、や軸のラベルの外観を設定する基本プロパティを提供します。
 
-デフォルトでは、ラベルを明示的に設定する必要はありません。Category Chart は、提供したデータ内で最初の適切な文字列プロパティを使用し、ラベルに使用するプロパティを明示的に設定します。
-
 <div class="divider"></div>
 
 ### Category Chart 軸デモ
 
-<div class="sample-container" style="height: 280px">
+<div class="sample-container" style="height: 650px">
     <iframe id="category-chart-axis-sample-iframe" src='{environment:demosBaseUrl}/category-chart-axis-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -23,6 +21,8 @@ Category Chart コントロールでは、軸は軸線、目盛、タイトル�
 </div>
 
 <div class="divider--half"></div>
+
+デフォルトでは、ラベルを明示的に設定する必要はありません。Category Chart は、提供したデータ内で最初の適切な文字列プロパティを使用し、ラベルに使用するプロパティを明示的に設定します。
 
 ### 軸ラベル
 

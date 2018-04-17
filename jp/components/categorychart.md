@@ -1,12 +1,26 @@
 ﻿---
 title: Category Chart コンポーネント
-_description: Ignite UI for Angular Category Chart コンポーネントを使用して、詳細情報のエントリ ポイントとして、ダッシュボード、テキスト、画像、アイコン、ボタンなどを表示します。
+_description: Ignite UI for Angular Category Chart コンポーネントは、カテゴリ データを表示するタッチ対応、高いパフォーマンス、軽量なチャート コントロールです。
 _keywords: Ignite UI for Angular, データ ビジュアライゼーション, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Chart コンポーネント, Angular Category Chart コンポーネント, Angular Chart コントロール, Angular Category Chart コントロール
 _language: ja
 ---
 ## Category Chart 
 
 カテゴリー チャートは軽量で高パフォーマンスなチャートです。このチャートは、シンプルで直感的な API を使用したカテゴリ データの表示を簡単に構成できます。データ (コレクションまたはコレクションのコレクション) をバインドするだけで後の作業はチャートがすべて行います。
+
+<div class="divider"></div>
+
+### Category Chart デモ
+
+<div class="sample-container" style="height: 650px">
+    <iframe id="category-chart-overview-sample-iframe" src='{environment:demosBaseUrl}/category-chart-overview-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="category-chart-overview-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
+    </button>
+</div>
+
+<div class="divider--half"></div>
 
 スマート データ アダプターは、データを分析して適切なビジュアライゼーションを描画します。たとえば `chartType` を `Auto` に設定した場合、大きなデータセットで折れ線チャートを描画する間、コントロールは小さなデータセットを提供して柱状チャートがプロットされるかどうかを決定します。
 
@@ -23,20 +37,6 @@ _language: ja
 - Waterfall
 
 その他のカテゴリ チャート コントロールの直感的な動作の例は、明示的にラベルを設定する必要がないことです。カテゴリ チャートは、提供したデータ内で最初の適切な文字列プロパティを使用し、ラベルに使用します。
-
-<div class="divider"></div>
-
-### Category Chart デモ
-
-<div class="sample-container" style="height: 280px">
-    <iframe id="category-chart-overview-sample-1-iframe" src='{environment:demosBaseUrl}/category-chart-overview-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="category-chart-overview-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
-    </button>
-</div>
-
-<div class="divider--half"></div>
 
 ### 依存関係
 
@@ -99,14 +99,14 @@ var data = [
 
 プロパティ|説明|例
 ---|---|---
-`line`|各データ ポイントにマーカーがあるカテゴリ折れ線シリーズを指定します。|![](/images/category_chart_line.png)
-`area`|カテゴリ エリア シリーズを指定します。|![](/images/category_chart_area.png)
-`column`|各データ ポイントに垂直長方形があるカテゴリ柱状チャートを指定します。|![](/images/category_chart_column.png)
-`point`|各データ ポイントにマーカーがあるカテゴリ ポイント チャートを指定します。|![](/images/category_chart_point.png)
-`stepLine`|カテゴリ ステップ折れ線チャートを指定します。|![](/images/category_chart_stepline.png)
-`stepArea`|カテゴリ ステップ エリア チャートを指定します。|![](/images/category_chart_steparea.png)
-`spline`|各データ ポイントにマーカーがあるカテゴリ スプライン折れ線シリーズを指定します。|![](/images/category_chart_spline.png)
-`splineArea`|カテゴリ スプライン エリア シリーズを指定します。|![](/images/category_chart_splinearea.png)
-`waterfall`|カテゴリ ウォーターフォール チャートを指定します。|![](/images/category_chart_waterfall.png)
+`line`|各データ ポイントにマーカーがあるカテゴリ折れ線シリーズを指定します。|![](../images/category_chart_line.png)
+`area`|カテゴリ エリア シリーズを指定します。|![](../images/category_chart_area.png)
+`column`|各データ ポイントに垂直長方形があるカテゴリ柱状チャートを指定します。|![](../images/category_chart_column.png)
+`point`|各データ ポイントにマーカーがあるカテゴリ ポイント チャートを指定します。|![](../images/category_chart_point.png)
+`stepLine`|カテゴリ ステップ折れ線チャートを指定します。|![](../images/category_chart_stepline.png)
+`stepArea`|カテゴリ ステップ エリア チャートを指定します。|![](../images/category_chart_steparea.png)
+`spline`|各データ ポイントにマーカーがあるカテゴリ スプライン折れ線シリーズを指定します。|![](../images/category_chart_spline.png)
+`splineArea`|カテゴリ スプライン エリア シリーズを指定します。|![](../images/category_chart_splinearea.png)
+`waterfall`|カテゴリ ウォーターフォール チャートを指定します。|![](../images/category_chart_waterfall.png)
 `auto`|データ アダプターからの提案に基づいてチャート タイプの自動選択を指定します。|
 
