@@ -56,6 +56,8 @@ To enable multiple row selection, the `igx-grid` incorporates the `rowSelectable
       [width]="'800px'" [height]="'600px'">
 ```
 
+*Note:* In order to have proper row selection and cell selection, while grid has remote virtualization, `primaryKey` should be defined
+
 ### Methods
 
 #### IgxGridComponent
@@ -75,7 +77,7 @@ To enable multiple row selection, the `igx-grid` incorporates the `rowSelectable
 |--|--|--|
 | onRowSelectionChange | Emitted when selection is changing. | { selection: `Array<any>`, row: IgxRowComponent, rowID: any|
 
-*Note:* cell selection will trigger onSelection and not onRowSelection
+*Note:* Cell selection will trigger onSelection and not onRowSelection.
 
 ### Code Snippets
 
