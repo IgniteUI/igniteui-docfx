@@ -7,6 +7,12 @@ _language: ja
 
 ### Grid デモ
 
+Displays a summary row for the data in the columns of the grid. There are predefined summary functions, but you can create custom function to calculate custom summaries.
+Grid **summaries** can also be enabled on a per-column level, which means that you can activate it only for columns that you need to.
+
+> [!NOTE]
+> The summary of the column is a **function of all column values**, unless filtering is applied, then the summary of the column will be **function of the filtered result values**
+
 <div class="sample-container loading" style="height:750px">
     <iframe id="grid-summary-sample-iframe" src='{environment:demosBaseUrl}/grid-summary' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -159,6 +165,16 @@ export class GridComponent implements OnInit {
     this.grid1.clearSummaryCache();
   }
 }
+```
+
+Same applies for the case when `http` request is made, we should clean up the cache.
+
+```typescript
+this.http.get<any[]>('/assets/data.json')
+    .subscribe(data => {
+    this.data = data;
+    this.grid1.clearSummaryCache();
+});
 ```
 
 ### 追加のリソース
