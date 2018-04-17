@@ -71,27 +71,11 @@ To enable multiple row selection, the `igx-grid` incorporates the `rowSelectable
 *Note:* If filtering is in place, `selectAllRows()` and `deselectAllRows()` select/deselect all *filtered* rows.
 
 ### Events
-|Name|Description|Cancelable|Parameters|
-|--|--|--|--|
-| onRowSelectionChange | Emitted when selection is changing. | false | { selection: `Array<any>`, row: IgxRowComponent, rowID: any|
+|Name|Description|Parameters|
+|--|--|--|
+| onRowSelectionChange | Emitted when selection is changing. | { selection: `Array<any>`, row: IgxRowComponent, rowID: any|
 
 *Note:* cell selection will trigger onSelection and not onRowSelection
-
-### <a name='aria-support'>ARIA Support</a>
-The following components gets the corresponding aria attributes
-*  row - aria-selected
-*  header checkbox - aria-checked, aria-label="Select all"/"Select all filtered/Deselect All"
-*  row checkbox - aria-checked, aria-label="Select row with key ${primaryKey}"/"Select row/Deselect Row"; when primary key is omitted, then it's not possible to describe row as a string
-
-### <a name='assumptions-and-limitations'>Assumptions and Limitations</a>
-
-Following the Material Design Guidelines the following setting where omitted, to allow easy configuration of the feature.
-All the below can be achieved, using the row selection API.
-
-* the only mode of selection will be multiple
- - single selection will be achieved using the onSelection event and its arguments that are holding not only cell, but also row data.
-* the only way to select row, will be through the checkbox.
-* checkbox will be always rendered (along with the header one)
 
 ### Code Snippets
 
