@@ -1,8 +1,6 @@
 ﻿- name: グリッドとリスト
   header: true
 - name: Data Grid
-    - name: Selection
-    - href: grid_selection.md
   href: grid.md
   items:
     - name: 仮想化とパフォーマンス
@@ -19,6 +17,8 @@
       href: grid_column_pinning.md
     - name: 列のサイズ変更
       href: grid_column_resizing.md
+    - name: Selection
+      href: grid_selection.md
 - name: List View
   href: list.md
 - name: スタイルとテーマ
@@ -102,7 +102,7 @@
   href: calendar.md
 - name: Date Picker
   href: date_picker.md
-- name: Time Picker 
+- name: Time Picker
   href: time_picker.md
 - name: Services
   header: true
