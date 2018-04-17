@@ -3,9 +3,6 @@
 - name: Data Grid
   href: grid.md
   items:
-
-    - name: Selection
-      href: grid-selection.md
     - name: Virtualization and performance
       href: grid_virtualization.md
     - name: Paging
@@ -20,6 +17,8 @@
       href: grid_column_pinning.md
     - name: Column resizing
       href: grid_column_resizing.md
+    - name: Selection
+      href: grid_selection.md
 - name: List View
   href: list.md
 - name: Data Visualization
@@ -35,7 +34,7 @@
     - name: Configuring Category Chart
       href: categorychart_configuring.md
     - name: Custom Tooltips
-      href: categorychart_custom_tooltips.md 
+      href: categorychart_custom_tooltips.md
 - name: Financial Chart
   href: financialchart.md
   items:
@@ -130,7 +129,7 @@
   href: calendar.md
 - name: Date Picker
   href: date_picker.md
-- name: Time Picker 
+- name: Time Picker
   href: time_picker.md
 - name: Services
   header: true

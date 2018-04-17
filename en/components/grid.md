@@ -630,6 +630,7 @@ import {
 * [Sorting](grid_sorting.html)
 * [Summaries](grid_summaries.html)
 * [Column Pinning](grid_column_pinning.html)
+* [Selection](grid_selection.html)
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.
