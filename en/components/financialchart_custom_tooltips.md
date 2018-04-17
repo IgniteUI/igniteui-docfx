@@ -19,6 +19,23 @@ The igxFinancialChart provides default tooltips for each type of series. The def
 
 <div class="divider--half"></div>
 
-TODO - UPDATE CONTENT AND CODE SNIPPET
+The tooltip content is customized by creating a template for the tooltip as demonstrated in the following code.
 
-The tooltip content is customized through the seriesAdded event
+```html
+<ng-template let-series="series" let-item="item" #valueTooltip> 
+    <div> 
+        <span [style.color]="series.actualBrush">{{series.title}}</span> 
+        <span> stock opened on {{item.time | date}} with a value of ${{item.open | number}} and closed with a value of ${{item.close | number}}.</span> 
+    </div> 
+</ng-template> 
+
+
+<igx-financial-chart 
+    [dataSource]="data"
+    width="850px"
+    height="600px"
+    [tooltipTemplate]="valueTooltip" > 
+</igx-financial-chart> 
+```
+
+
