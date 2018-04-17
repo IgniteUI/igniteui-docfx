@@ -8,11 +8,10 @@ _keywords: Ignite UI for Angular, Data Visualization, UI controls, Angular widge
 In the Financial Chart control, an axis provides base properties for specifying appearance of axis main lines, tickmarks, titles, and axis labels. 
 
 By default, you do not need to explicitly set the labels. The Financial Chart will use the first appropriate property that it finds within the data you provided and will use that for the labels. 
-<div class="divider"></div>
 
 ### Financial Chart Axis Demo
 
-<div class="sample-container" style="height: 650px">
+<div class="sample-container" style="height: 550px">
     <iframe id="financial-chart-axis-sample-iframe" src='{environment:demosBaseUrl}/financial-chart-axis-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>

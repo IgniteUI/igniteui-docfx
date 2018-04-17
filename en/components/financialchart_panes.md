@@ -11,10 +11,9 @@ The Financial Chart has multiple panes to display financial data.
 * Volume Pane - Renders stocks volumes using Column, Line, and Area chart types.
 * Price Pane - Renders prices using Line, Candlestick, Bar (OHLC), trendlines and financial overlays.
 * Zoom Pane - Controls the zoom of all the panes.
-<div class="divider"></div>
 
 ### Financial Indicator Pane Demo
-<div class="sample-container" style="height: 650px">
+<div class="sample-container" style="height: 550px">
     <iframe id="financial-chart-indicator-pane-sample-iframe" src='{environment:demosBaseUrl}/financial-chart-indicator-pane-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -36,7 +35,6 @@ In order to display the pane, an indicator type must be set, as demonstrated in 
     indicatorTypes="AverageTrueRange">
  </igx-financial-chart>
 ```
-<div class="divider"></div>
 
 ### Volume Pane
 The volume pane represents the number of shares traded during a given period. Low volume would indicate little interest, while high volume would indicate high interest with a lot of trades.  This can be displayed using column, line or area chart types. The toolbar allows the end user to display the volume pane by selecting a chart type to render the data at runtime. In order the display the pane, a volume type must be set, as demonstrated in the following code:
@@ -58,9 +56,6 @@ The volume pane represents the number of shares traded during a given period. Lo
     volumeType="column">
  </igx-financial-chart>
 ```
-<div class="divider"></div>
-
-
 
 ### Price Pane
 This pane displays stock prices and shows the stock's high, low, open and close prices over time. In addition it can display trend lines and overlays. Your end user can choose different chart types from the toolbar. By default, the chart type is set to `auto`. You can override the default setting, as demonstrated in the following code:

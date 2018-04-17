@@ -42,12 +42,16 @@
   items:
     - name: Performance
       href: financialchart_performance.md
-    - name: Binding to Data
-      href: financialchart_binding_data.md
+    - name: Binding to Live Data
+      href: financialchart_binding_to_live_data.md
+    - name: Binding to Multiple Data Sources
+      href: financialchart_binding_to_multiple_data.md
     - name: Axis
       href: financialchart_axis.md
     - name: Panes
       href: financialchart_panes.md
+    - name: Custom Indicators
+      href: financialchart_custom_indicators.md
     - name: Custom Tooltips
       href: financialchart_custom_tooltips.md
 - name: Styling & Themes
