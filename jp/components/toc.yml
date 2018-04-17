@@ -1,6 +1,8 @@
 ﻿- name: グリッドとリスト
   header: true
 - name: Data Grid
+    - name: Selection
+    - href: grid_selection.md
   href: grid.md
   items:
     - name: 仮想化とパフォーマンス

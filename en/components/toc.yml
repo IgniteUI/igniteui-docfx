@@ -3,6 +3,9 @@
 - name: Data Grid
   href: grid.md
   items:
+
+    - name: Selection
+      href: grid-selection.md
     - name: Virtualization and performance
       href: grid_virtualization.md
     - name: Paging
