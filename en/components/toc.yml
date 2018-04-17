@@ -112,6 +112,8 @@
   href: carousel.md
 - name: Bottom Navigation
   href: tabbar.md
+- name: Tabs
+  href: tabs.md
 - name: Card
   href: card.md
 - name: Avatar
