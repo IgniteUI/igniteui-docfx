@@ -1,16 +1,19 @@
 ﻿---
-title: Tab Bar コンポーネント
+title: Bottom Navigation コンポーネント
 _description: タブ付きのユーザー インターフェイスでタブを表示します。この UI コントロールはタブの外観および動作を管理します。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Tab Bar コンポーネント, Angular Tab Bar コントロール
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Bottom Nav コンポーネント, Angular Bottom Navigation コントロール
 _language: ja
 ---
 
-## Tab Bar
+## Bottom Navigation
 
-<p class="highlight">Ignite UI for Angular Tab Bar コンポーネントは、単一ビューで表示される複数のコンテンツ パネル間での移動を可能にします。パネルの間のナビゲーションは下部にあるタブ ボタンで実行されます。</p>
+<p class="highlight">Ignite UI for Angular Bottom Navigation コンポーネントは、単一ビューで表示される複数のコンテンツ パネル間での移動を可能にします。パネルの間のナビゲーションは下部にあるタブ ボタンで実行されます。</p>
 <div class="divider"></div>
 
-### Tabbar デモ
+> [!NOTE]
+> `igx-tab-bar` セレクターは非推奨です。代わりに `igx-bottom-nav` を使用してください。`IgxTabBarComponent` クラスは `IgxBottomNavComponent` に名前変更しました。`IgxTabBarModule` は `IgxBottomNavModule` に名前変更しました。
+
+### Bottom Navigation デモ
 
 <div class="sample-container loading" style="height: 600px; width: 400px; border: 1px solid gray;">
     <iframe id="tabbar-sample-iframe" src='{environment:demosBaseUrl}/tabbar' width="100%" height="100%" seamless
@@ -25,30 +28,30 @@ _language: ja
 
 ### 使用方法
 
-コントロールを初期化する前に、**IgxTabBarModule** を **app.module.ts** ファイルにインポートします。
+コントロールを初期化する前に、**IgxBottomNavModule** を **app.module.ts** ファイルにインポートします。
 
 ```typescript
 // app.module.ts
 
 ...
-import { IgxTabBarModule } from 'igniteui-angular/main';
+import { IgxBottomNavModule } from 'igniteui-angular/main';
 
 @NgModule({
     ...
-    imports: [..., IgxTabBarModule],
+    imports: [..., IgxBottomNavModule],
     ...
 })
 export class AppModule {}
 ```
 
-次にコンポーネントのテンプレートを Tab Bar に追加し、3 つのパネルを追加します。
+次にコンポーネントのテンプレートを Bottom Navigation に追加し、3 つのパネルを追加します。
 
 ```html
-<igx-tab-bar>
+<igx-bottom-nav>
   <igx-tab-panel label="Tab 1">This is Tab 1 content.</igx-tab-panel>
   <igx-tab-panel label="Tab 2">This is Tab 2 content.</igx-tab-panel>
   <igx-tab-panel label="Tab 3">This is Tab 3 content.</igx-tab-panel>
-</igx-tab-bar>
+</igx-bottom-nav>
 ```
 
 以下は結果です:
@@ -66,7 +69,7 @@ export class AppModule {}
 
 ### タブのカスタマイズ
 
-タブにアイコンを追加します。Tab Bar コントロールがマテリアル デザイン [**アイコン**](https://material.io/icons/)と互換性があるため、アプリケーションにアイコンを簡単に追加できます。 
+タブにアイコンを追加します。Bottom Navigation コントロールがマテリアル デザイン [**アイコン**](https://material.io/icons/)と互換性があるため、アプリケーションにアイコンを簡単に追加できます。 
 
 最初に Material+Icons をメイン アプリケーション フォルダーの 'styles.css' ファイルにインポートします。
 
@@ -108,7 +111,7 @@ public booksList: object[] = [
 コンポーネントのテンプレート マークアップに新しいタブのラベル、マテリアル デザイン アイコンのライブラリからのアイコン名、およびデータ コンテンツを表示するための DIV および SPAN 要素を追加します。
 
 ```html
-<igx-tab-bar>
+<igx-bottom-nav>
   
   <igx-tab-panel label="Songs" icon="library_music">
     <div class="item" *ngFor="let song of songsList">
@@ -131,7 +134,7 @@ public booksList: object[] = [
     </div>
   </igx-tab-panel>
 
-</igx-tab-bar>
+</igx-bottom-nav>
 ```
 
 最後に、テンプレートの DIV および SPAN 要素に使用される CSS クラスをコンポーネントの CSS ファイルに追加します。
@@ -152,7 +155,7 @@ public booksList: object[] = [
 }
 ```
 
-Tab Bar は以下のようになります。
+Bottom Navigation は以下のようになります。
 
 <div class="sample-container loading" style="height: 350px; width: 300px; border: 1px solid gray;">
     <iframe id="tabbar-sample-2-iframe" src='{environment:demosBaseUrl}/tabbar-sample-2' width="100%" height="100%" seamless
@@ -168,7 +171,7 @@ Tab Bar は以下のようになります。
 タブのラベルおよびアイコンの変更を拡張する場合、各タブでカスタム テンプレートを作成することもできます。以下はその例です。
 
 ```html
-<igx-tab-bar>
+<igx-bottom-nav>
     <igx-tab-panel>
 
         <ng-template igxTab>
@@ -179,17 +182,17 @@ Tab Bar は以下のようになります。
         
         <h1>Tab content</h1>
     </igx-tab-panel>
-</igx-tab-bar>
+</igx-bottom-nav>
 ```
 
 <div class="divider"></div>
 
 ### その他の Igx コントロールの使用
 
-その他 Ignite UI for Angular コンポーネントを Tab Bar と使用し、より高度なアプリケーションを実装できます。
-たとえば、Tab Bar のパネルの連絡先リストの作成には IgxList、各連絡先を可視化には、IgxAvatar や IgxIcon を使用できます。
+その他 Ignite UI for Angular コンポーネントを Bottom Navigation と使用し、より高度なアプリケーションを実装できます。
+たとえば、Bottom Navigation のパネルの連絡先リストの作成には IgxListComponent、各連絡先の可視化は、IgxAvatarComponent や IgxIconComponent を使用できます。
 
-IgxTabBar および IgxList コンポーネントを "app.module.ts" ファイルにインポートします。
+IgxBottomNavComponent および IgxListComponent コンポーネントを "app.module.ts" ファイルにインポートします。
 
 ```typescript
 // app.module.ts
@@ -198,11 +201,11 @@ IgxTabBar および IgxList コンポーネントを "app.module.ts" ファイ�
 import { IgxAvatarModule } from 'igniteui-angular/main';
 import { IgxIconModule } from 'igniteui-angular/main';
 import { IgxListModule } from 'igniteui-angular/main';
-import { IgxTabBarModule } from 'igniteui-angular/main';
+import { IgxBottomNavModule } from 'igniteui-angular/main';
 
 @NgModule({
     ...
-    imports: [..., IgxAvatarModule, IgxIconModule, IgxListModule, IgxTabBarModule],
+    imports: [..., IgxAvatarModule, IgxIconModule, IgxListModule, IgxBottomNavModule],
     ...
 })
 export class AppModule {}
@@ -265,11 +268,11 @@ public contactsList: object[] = [{
 ...
 ```
 
-コンポーネントのテンプレート マークアップに最初のパネルにある IgxList を含む Tab Bar を追加して編集します。
+コンポーネントのテンプレート マークアップに最初のパネルにある IgxListComponent を含む Bottom Navigation を追加して編集します。
 
 ```html
 ...
-<igx-tab-bar>
+<igx-bottom-nav>
     <igx-tab-panel icon="phone">
         <igx-list [allowRightPanning]="true" [allowLeftPanning]="true">
             <igx-list-item [isHeader]="true">History</igx-list-item>
@@ -296,7 +299,7 @@ public contactsList: object[] = [{
             <h3>Tab 3 Content</h3>
         </div>
     </igx-tab-panel>
-</igx-tab-bar>
+</igx-bottom-nav>
 ...
 ```
 
@@ -338,13 +341,13 @@ public contactsList: object[] = [{
 }
 ```
 
-このトピックの [TabBar デモ](#tabbar-デモ) セクションで結果を確認できます。
+このトピックの [Bottom Navigation デモ](#bottom-navigation-デモ) セクションで結果を確認できます。
 
 <div class="divider"></div>
 
 ### API まとめ
 
-以下は、Tab Bar コンポーネントのその他の API です。
+以下は、Bottom Navigation コンポーネントのその他の API です。
 
 #### 入力
 
@@ -366,7 +369,7 @@ public contactsList: object[] = [{
 
 #### 出力
 
-以下の出力は **igx-tab-bar** コンポーネントで利用できます。
+以下の出力は **igx-bottom-nav** コンポーネントで利用できます。
 | 名前 | 型 | 説明 |
 | :--- | :--- | :--- |
 | `onTabSelected` | EventEmitter | 新しいタブが選択されたときにイベントを発生します。 |
@@ -376,7 +379,7 @@ public contactsList: object[] = [{
 
 #### ゲッター
 
-以下のゲッターは **igx-tab-bar** コンポーネントで利用できます。
+以下のゲッターは **igx-bottom-nav** コンポーネントで利用できます。
 | 名前 | 型 | 説明 |
 | :--- | :--- | :--- |
 | `tabs` | QueryList | すべての IgxTab ビューの子要素の Observable コレクションを提供します。 |
