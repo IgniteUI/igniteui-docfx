@@ -9,7 +9,7 @@ The igxFinancialChart provides default tooltips for each type of series. The def
 
 ### Custom Tooltips Demo
 
-<div class="sample-container" style="height: 650px">
+<div class="sample-container" style="height: 550px">
     <iframe id="financial-chart-custom-tooltips-iframe" src='{environment:demosBaseUrl}/financial-chart-custom-tooltips' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>

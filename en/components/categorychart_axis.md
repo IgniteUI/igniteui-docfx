@@ -9,7 +9,7 @@ In the Category Chart control, an Axis provides base properties for specifying a
 
 ### Category Chart Axis Demo
 
-<div class="sample-container" style="height: 650px">
+<div class="sample-container" style="height: 550px">
     <iframe id="category-chart-axis-sample-iframe" src='{environment:demosBaseUrl}/category-chart-axis-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>

@@ -9,7 +9,7 @@ There are many areas of the category chart that can be customized, such as the m
 This page will walk you through with code samples the different properties that required to be set in order to achieve a customized category chart.
 
 ### Configuring Category Chart Demo
-<div class="sample-container" style="height: 650px">
+<div class="sample-container" style="height: 550px">
     <iframe id="category-chart-configuring-sample-iframe" src='{environment:demosBaseUrl}/category-chart-configuring-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
