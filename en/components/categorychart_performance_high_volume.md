@@ -3,10 +3,9 @@ title: Category Chart Performance
 _description: The Ignite UI for Angular Category Chart component is a touch-enabled, highly performant, lightweight charting control that makes visualizing category data a breeze.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Chart component, Angular Category Chart component, Angular Chart controls, Angular Category Chart controls, Data Visualization
 ---
-## High Volume Performance
+## Performance - High Volume
 
 The igxCategoryChart is capable of handling high volumes of data, ranging into the millions of data points, as demonstated in the following demo.
-<div class="divider"></div>
 
 ### High Volume Demo 
 <div class="sample-container" style="height: 650px">

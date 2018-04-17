@@ -48,6 +48,8 @@
       href: financialchart_axis.md
     - name: Panes
       href: financialchart_panes.md
+    - name: Custom Indicators
+      href: financialchart_custom_indicators.md
     - name: Custom Tooltips
       href: financialchart_custom_tooltips.md
 - name: Styling & Themes

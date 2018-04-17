@@ -6,7 +6,6 @@ _keywords: Ignite UI for Angular, Data Visualization, UI controls, Angular widge
 ## Performance 
 
 The igxFinancialChart is capable of handling high volumes of data. The following demo shows the amazing performance of the financial chart component.
-<div class="divider"></div>
 
 ### Performance Demo
 

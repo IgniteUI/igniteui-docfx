@@ -6,7 +6,6 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ## Category Chart Axis 
 
 In the Category Chart control, an Axis provides base properties for specifying appearance of axis main lines, tickmarks, titles, and axis labels. 
-<div class="divider"></div>
 
 ### Category Chart Axis Demo
 

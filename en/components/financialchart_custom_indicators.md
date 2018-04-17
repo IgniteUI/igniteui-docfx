@@ -6,7 +6,6 @@ _keywords: Ignite UI for Angular, Data Visualization, UI controls, Angular widge
 ## Custom Indicators 
 
 The igxFinancialChart component allows you to define custom financial indicators to display in the Indicator Pane.
-<div class="divider"></div>
 
 ### Custom Indicators Demo
 
