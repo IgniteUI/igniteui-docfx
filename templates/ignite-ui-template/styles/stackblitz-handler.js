@@ -69,10 +69,10 @@
         var $button = $(this);
         var sampleFileUrl = getSampleUrlByStackBlitzButton($button);
         var sampleContent = sampleFilesContentByUrl[sampleFileUrl];
-        replaceRelativeAssetsUrls(sampleContent);
+        replaceRelativeAssetsUrls(sampleContent.sampleFiles);
         var formData = {
-            dependencies: sharedFileContent.dependencies,
-            files: sharedFileContent.files.concat(sampleContent)
+            dependencies: sampleContent.sampleDependencies,
+            files: sharedFileContent.files.concat(sampleContent.sampleFiles)
         }
 
         var form = createStackblitzForm(formData);
