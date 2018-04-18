@@ -17,6 +17,18 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 </igx-grid>
 ```
 
+#### Column Pinning Demo
+
+<div class="sample-container loading" style="height:530px">
+    <iframe id="grid-sample-pinning-iframe" src='{environment:demosBaseUrl}/grid-sample-pinning' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="grid-sample-pinning-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+
+#### Column Pinning API
+
 You may also use the grid's `pinColumn` or `unpinColumn` methods of the `IgxGridComponent` to pin or unpin columns by their field name:
 
 ```typescript

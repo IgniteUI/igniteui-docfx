@@ -13,7 +13,7 @@ By utilizing the `igxForOf` directive the Data Grid now optimizes DOM rendering 
 
 ### Grid Virtualization Demo
 
-<div class="sample-container loading" style="height:850px">
+<div class="sample-container loading" style="height:530px">
     <iframe id="grid-sample-2-iframe" src='{environment:demosBaseUrl}/grid-sample-2' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
