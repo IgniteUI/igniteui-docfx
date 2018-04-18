@@ -7,11 +7,9 @@ _keywords: Ignite UI for Angular, Data Visualization, UI controls, Angular widge
 
 The Financial Chart is a lightweight, high-performance chart. This chart can be easily configured to display financial data using an extremely simple and intuitive API. All you need to do is bind your data (a collection or a collection of collections) and the chart takes care of everything else. The chart analyzes the structure of the data source bound to the 'data' property. It plots one financial price series for each collection found in the data source. Also, it analyzes data items of each collection by searching for 5 numeric data columns with Open, High, Low, Close, Volume names and 1 date time column with Time name. The chart offers multiple ways for the user to visualize and interpret the data, including several display modes for price and volume, and many financial indicators. The chart also makes use of label formatting to give the data context. 
 
-<div class="divider"></div>
-
 ### Financial Chart Demo
 
-<div class="sample-container" style="height: 650px">
+<div class="sample-container" style="height: 550px">
     <iframe id="financial-chart-overview-sample-iframe" src='{environment:demosBaseUrl}/financial-chart-overview-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -23,7 +21,7 @@ The Financial Chart is a lightweight, high-performance chart. This chart can be 
 
 You can explicitly specify the chart type by setting the `chartType` property to one of the following options: 
     
-Property|Description|Example
+Property|Description
 ---|---
 `bar`|Specifies the bar series with markers at each data point
 `candle`|Specifies the candle series
@@ -31,18 +29,16 @@ Property|Description|Example
 `line`|Specifies the line series
 `auto`|Specifies automatic selection of chart type based on suggestions from Data Adapter
 
+### Toolbar
 A toolbar is displayed at the top of the financial chart. This allows your end users to change various details about the data being displayed, and also displays different panes. The toolbar consists of the following selectors:
 - Indicator Type Selector - Allows users to select different types of financial indicators. These indicators are displayed below the price pane in an indicator pane because they do not share the same Y-Axis scale.
-- Overlay Type Indicator - Allows users to select different types of financial overlays. These overlays are displayed in front of the financial prices series because they share the same y-axis scale.
+- Overlay Type - Allows users to select different types of financial overlays. These overlays are displayed in front of the financial prices series because they share the same y-axis scale. There are two types of overlays the BollingerBands and PriceChannel. 
 - Trendline Type Selector - Allows users to select different types of trendlines. The trendline is displayed in a trendline layer on the price pane and the volume pane.
 - Date Range Selector - Allows users to select different range presets to view the data.
 - Chart Type Selector - Allows users to select chart types for the financial chart. These are displayed in the price pane.
 - Volume Type Selector -  Allows users to view the stock volume data in the Volume Pane. Users can choose between None, Column, Line, and Area chart types.
 
-
-
 ### Dependencies
-
 The financial chart is exported as an `NgModule`, you need to import the _IgxFinancialChartModule_ inside your `AppModule`:
 
 ```typescript
@@ -62,7 +58,6 @@ export class AppModule {}
 <div class="divider--half"></div>
 
 ### Usage
-
 Now that the financial chart module is imported, next step is to bind it to data.
 
 In order to create an igxFinancialChart control, you must first have data to bind it to. The following code snippet demonstrates how to create a simple data source. 

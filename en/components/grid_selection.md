@@ -65,7 +65,7 @@ To enable multiple row selection, the `igx-grid` exposes the `rowSelectable` pro
    | Name     | Description                | Return type                                       | Parameters           |
    |----------|----------------------------|---------------------------------------------------|----------------------|
    | selectedRows | Get current selection state    | `Array<any>`- array with selected rows' ID (primaryKey or rowData)| |
-   | selectRows   | Select specified rows by ID      | `void`- does not return anything | `Array<any>`, clearCurrentSelection: `boolean`    |   
+   | selectRows   | Select specified rows by ID      | `void`- does not return anything | `Array<any>`, clearCurrentSelection: `boolean`    |
    | deselectRows | Deselect specified rows by ID    | `void`- does not return anything | `Array<any>` |
    | selectAllRows | Select all rows            | `void`- does not return anything |    N/A                    |
    | deselectAllRows | Select all rows          | `void`- does not return anything |    N/A                    |
@@ -106,6 +106,24 @@ This will add the rows which correspond to the data entries with IDs 1, 2 and 5 
 // in component.ts
 public handleRowSelectionChange(args) {
     args.newSelection = args.oldSelection; // overwrites the new selection, making it so that no new row(s) are entered in the selectionAPI
-    args.checked = false; // overwrites the checkbox state 
+    args.checked = false; // overwrites the checkbox state
 }
 ```
+
+### Additional Resources
+<div class="divider--half"></div>
+
+* [Grid overview](grid.html)
+* [Paging](grid_paging.html)
+* [Filtering](grid_filtering.html)
+* [Sorting](grid_sorting.html)
+* [Summaries](grid_summaries.html)
+* [Column Pinning](grid_column_pinning.html)
+* [Column Resizing](grid_column_resizing.html)
+* [Virtualization and Performance](grid_virtualization.html)
+
+<div class="divider--half"></div>
+Our community is active and always welcoming to new ideas.
+
+* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

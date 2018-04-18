@@ -1,17 +1,15 @@
 ---
-title: Category Chart Configuring
+title: Configuration Options
 _description: The Ignite UI for Angular Category Chart component is a touch-enabled, highly performant, lightweight charting control that makes visualizing category data a breeze.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Chart component, Angular Category Chart component, Angular Chart controls, Angular Category Chart controls
 ---
-## Configuring Category Chart 
+## Configuration Options 
 
 There are many areas of the category chart that can be customized, such as the markers, chart titles and subtitles, and the chart types.
 This page will walk you through with code samples the different properties that required to be set in order to achieve a customized category chart.
 
-<div class="divider"></div>
-
-### Configuring Category Chart Demo
-<div class="sample-container" style="height: 650px">
+### Configuration Options Demo
+<div class="sample-container" style="height: 550px">
     <iframe id="category-chart-configuring-sample-iframe" src='{environment:demosBaseUrl}/category-chart-configuring-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
