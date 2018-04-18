@@ -35,6 +35,7 @@ However, you can also explicitly specify the chart type by setting the `chartTyp
 
 Another example of the intuitive behavior of the Category Chart control is that you do not need to explicitly set the labels. The Category Chart will use the first appropriate string property that it finds within the data you provided and will use that for the labels.
 
+
 ### Dependencies
 
 The category chart is exported as an `NgModule`, you need to import the _IgxCategoryChartModule_ inside your `AppModule`:
