@@ -23,4 +23,3 @@ In the igxFinancialChart, you can enable custom financial indicators by adding n
 
 The following code example shows how to set up and calculate two custom indicators, one featuring the Simple Moving Average (SMA) and one displaying random values.
 
-TODO - ADD CODE SNIPPETS
