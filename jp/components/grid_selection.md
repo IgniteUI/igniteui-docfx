@@ -66,7 +66,7 @@ To enable multiple row selection, the `igx-grid` exposes the `rowSelectable` pro
    | Name     | Description                | Return type                                       | Parameters           |
    |----------|----------------------------|---------------------------------------------------|----------------------|
    | selectedRows | Get current selection state    | `Array<any>`- array with selected rows' ID (primaryKey or rowData)| |
-   | selectRows   | Select specified rows by ID      | `void`- does not return anything | `Array<any>`, clearCurrentSelection: `boolean`    |
+   | selectRows   | Select specified rows by ID      | `void`- does not return anything | `Array<any>`, clearCurrentSelection: `boolean`    |   
    | deselectRows | Deselect specified rows by ID    | `void`- does not return anything | `Array<any>` |
    | selectAllRows | Select all rows            | `void`- does not return anything |    N/A                    |
    | deselectAllRows | Select all rows          | `void`- does not return anything |    N/A                    |
@@ -128,3 +128,4 @@ Our community is active and always welcoming to new ideas.
 
 * [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
 * [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+

@@ -3,6 +3,8 @@
 - name: Data Grid
   href: grid.md
   items:
+    - name: 選択
+      href: grid_selection.md
     - name: 仮想化とパフォーマンス
       href: grid_virtualization.md
     - name: ページング
@@ -21,6 +23,33 @@
       href: grid_selection.md
 - name: List View
   href: list.md
+- name: データ ビジュアライゼーション
+  header: true
+  href: categorychart.md
+- name: Category Chart
+  href: categorychart.md
+  items:
+    - name: パフォーマンス
+      href: categorychart_performance.md
+    - name: 軸
+      href: categorychart_axis.md
+    - name: Category Chart の構成
+      href: categorychart_configuring.md
+    - name: カスタム ツールチップ
+      href: categorychart_custom_tooltips.md 
+- name: Financial Chart
+  href: financialchart.md
+  items:
+    - name: パフォーマンス
+      href: financialchart_performance.md
+    - name: データ バインド
+      href: financialchart_binding_data.md
+    - name: 軸
+      href: financialchart_axis.md
+    - name: ペイン
+      href: financialchart_panes.md
+    - name: カスタム ツールチップ
+      href: financialchart_custom_tooltips.md
 - name: スタイルとテーマ
   header: true
 - name: Themes
@@ -82,7 +111,7 @@
   href: layout.md
 - name: Carousel
   href: carousel.md
-- name: Tab Bar
+- name: Bottom Navigation
   href: tabbar.md
 - name: Tabs
   href: tabs.md

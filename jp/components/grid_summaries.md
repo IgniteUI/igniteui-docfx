@@ -5,13 +5,15 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 _language: ja
 ---
 
-### Grid デモ
+### グリッドの集計
 
 Displays a summary row for the data in the columns of the grid. There are predefined summary functions, but you can create custom function to calculate custom summaries.
-Grid **summaries** can also be enabled on a per-column level, which means that you can activate it only for columns that you need to.
+グリッド**集計**を列ごとに有効できます。つまり、必要な列のみアクティブ化できます。
 
 > [!NOTE]
 > The summary of the column is a **function of all column values**, unless filtering is applied, then the summary of the column will be **function of the filtered result values**
+
+### Grid デモ
 
 <div class="sample-container loading" style="height:750px">
     <iframe id="grid-summary-sample-iframe" src='{environment:demosBaseUrl}/grid-summary' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -22,12 +24,7 @@ Grid **summaries** can also be enabled on a per-column level, which means that y
 </div>
 <div class="divider--half"></div>
 
-### グリッドの集計
-
-> [!NOTE]
-> 列の集計は、ページング、フィルタリング、または並べ替えが適用された場合も**列値すべての関数**です。
-
-グリッド**集計**を列ごとに有効できます。つまり、必要な列のみアクティブ化できます。**グリッド集計**は、列のデータ型に基づいてデフォルト集計の定義済みセットを提供します。
+**グリッド集計**は、列のデータ型に基づいてデフォルト集計の定義済みセットを提供します。
 
 `string` および `boolean` データ型の場合、以下の関数が利用できます。
  - count

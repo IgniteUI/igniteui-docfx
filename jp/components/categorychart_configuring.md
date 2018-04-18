@@ -1,6 +1,6 @@
 ﻿---
-title: コンポーネント
-_description: Ignite UI for Angular Category Chart コンポーネントを使用して、詳細情報のエントリ ポイントとして、ダッシュボード、テキスト、画像、アイコン、ボタンなどを表示します。
+title: Category Chart の構成
+_description: Ignite UI for Angular Category Chart コンポーネントは、カテゴリ データを表示するタッチ対応、高いパフォーマンス、軽量なチャート コントロールです。
 _keywords: Ignite UI for Angular, データ ビジュアライゼーション, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Chart コンポーネント, Angular Category Chart コンポーネント, Angular Chart コントロール, Angular Category Chart コントロール
 _language: ja
 ---
@@ -10,8 +10,8 @@ _language: ja
 
 <div class="divider"></div>
 
-### Category Chart デモ
-<div class="sample-container" style="height: 280px">
+### Category Chart の構成デモ
+<div class="sample-container" style="height: 650px">
     <iframe id="category-chart-configuring-sample-iframe" src='{environment:demosBaseUrl}/category-chart-configuring-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
