@@ -6,6 +6,20 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ### Grid Sorting
 
+Sorts columns in an ascending or descending order. 
+
+### Grid Demo
+Additionally there is a custom contextmenu added for sorting using **igx-grid**'s onContextMenu Output.
+
+<div class="sample-container loading" style="height:550px">
+    <iframe id="grid-sample-iframe" src='{environment:demosBaseUrl}/grid-sorting-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="grid-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
+
 > [!NOTE]
 > The sorting operation **DOES NOT** change the underlying data source of the grid.
 
@@ -24,7 +38,7 @@ this.grid.sort('ProductName', SortingDirection.Asc, true);
 
 // Perform sorting on both the ProductName and Price columns.
 this.grid.sort([
-    { fieldName: 'ProductName' dir: SortingDirection.Asc, true },
+    { fieldName: 'ProductName', dir: SortingDirection.Asc, ignoreCase: true },
     { fieldName: 'Price', dir: SortingDirection.Desc }
 ]);
 ```
@@ -46,7 +60,7 @@ It is possible to set the initial sorting state of the grid by passing an array 
 ```typescript
 public ngOnInit() {
     this.grid.sortingExpressions = [
-        { fieldName: 'ProductName' dir: SortingDirection.Asc, true },
+        { fieldName: 'ProductName' dir: SortingDirection.Asc, ignoreCase: true },
         { fieldName: 'Price', dir: SortingDirection.Desc }
     ];
 }
