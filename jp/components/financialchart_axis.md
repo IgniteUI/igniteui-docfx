@@ -24,6 +24,27 @@ Financial Chart コントロールでは、軸は軸線、目盛、タイトル�
 
 <div class="divider--half"></div>
 
+### 軸間隔
+
+Financial Chart コントロールで、軸の主間隔は主グリッド線および軸ラベルが軸に描画される頻度を指定します。同様に、軸副間隔は副グリッド線が軸に描画される頻度を指定します。
+
+以下のコード スニペットは、Y 軸の間隔を設定する方法を示します。
+ 
+```html
+ <igx-financial-chart
+    [dataSource]="data"
+    width="850px"
+    height="600px"
+    yAxisInterval="100"
+    yAxisMinorInterval="10" 
+    yAxisMinorStroke="Red"    
+    yAxisMajorStroke="Green"  
+    yAxisMinorStrokeThickness="1"
+    yAxisMajorStrokeThickness="1">
+ </igx-financial-chart>
+```
+<div class="divider--half"></div>
+
 ### 軸ラベル
 
 Financial Chart コントロールは、チャートで表示されるラベルの構成および書式設定を制御することが可能です。回転角度、余白、水平方向/垂直方向の配置、不透明度、パディング、および表示状態を変更できます。
@@ -42,7 +63,85 @@ Financial Chart コントロールは、チャートで表示されるラベル�
 ```
 <div class="divider--half"></div>
 
+### 軸モード 
+
+igxFinancialChart コントロールで X 軸および Y 軸に別のモードを設定できます。X 軸で以下のモードを選択できます。
+- Time - このモードはデータのギャップを X 軸にスペースを用いて描画します。つまり、週末または休日に株取引がないことを示します。
+- Ordinal - このモードはデータがない日付領域を縮小します。これがデフォルト値です。
+
+Y 軸で以下のモードを選択できます。
+- Numeric - このモードはデータの値を描画します。これがデフォルト値です。
+- PercentChange - このモードは最初のデータ ポイントに相対するパーセンテージ変更としてデータを表示します。
+
+以下のコード例では、軸のモードを設定する方法を示します。
+
+```html
+<igx-financial-chart
+    [dataSource]="data"
+    width="850px"
+    height="600px"
+    xAxisMode="time"
+    yAxisMode="percentChange">
+</igx-financial-chart>
+```
+<div class="divider--half"></div>
+
+### 軸の範囲
+
+Financial Chart コントロールで、数値軸の範囲は軸の始めと終わり、つまりデータの最小値と最大値の数値の差です。範囲の最小値は、軸の最小値です。範囲の最大値は、軸の最大値です。デフォルトで、Financial Chart コントロールは、チャート プロット領域を最大化するために、最小データ ポイントおよび最大データ ポイントに基づいて軸の範囲の最小値と最大値を計算します。軸の最小値と最大値の自動計算は、データ ポイントのセットに適切でない場合があります。たとえば、データの最小値が 850 の場合、y 軸の `yAxisMinimumValue` プロパティを使用して軸の最小値を 800 に設定したい場合があります。これにより、軸の最小値とデータ ポイントの最小値の間に 50 のスペース値ができることになります。y 軸の `yAxisMaximumValue` プロパティを使用して軸の最大値とデータ ポイントの最大値にも同様に適用できます。
+
+以下のサンプル コードは、y 軸で軸の範囲を変更する方法を示します。
+
+```html
+  <igx-financial-chart
+       [dataSource]="data"
+       width="850px"
+       height="600px"
+      yAxisMinimumValue="-200"
+      yAxisMaximumValue="1000">
+  </igx-financial-chart>
+```
+ <div class="divider--half"></div>
+ 
+### 軸スケール
+
+Financial Chart コントロールで、チャートのデータが Y 軸に対数的にマップされるかどうかを制御できます。これは以下の設定で実行されます。
+- yAxisIsLogarithmic - Y 軸がリニア スケールの代わりに対数目盛を使用するかどうかを指定します。デフォルトでこのプロパティは False に設定されます。
+- yAxisLogarithmBase - Y 軸にデータ項目の位置をマップするときに log 関数で使用する基本値。これは yAxisIsLogarithmic が True の場合のみ効果があります。
+
+以下のコードスニペットは、x 軸の目盛りの色、長さ、太さを設定します。
+
+```html
+ <igx-financial-chart
+      [dataSource]="data"
+      width="850px"
+      height="600px"
+      yAxisIsLogarithmic="true"
+      yAxisLogarithmBase="10">
+ </igx-financial-chart>
+```
+<div class="divider--half"></div>
+
+### 軸目盛
+
+目盛りは軸にポイントを表示します。スケールに特定の数値ポイント、またはカテゴリ軸にカテゴリ値を表します。x 軸および y 軸のラベルの長さ、太さ、色を変更できます。
+
+以下のコードスニペットは、x 軸の目盛りの色、長さ、太さを設定します。
+
+```html
+  <igx-financial-chart
+      [dataSource]="data"
+      width="850px"
+      height="600px"
+      xAxisTickLength="10"
+      xAxisTickStrokeThickness="3"
+      xAxisTickStroke="red">
+  </igx-financial-chart>
+```
+<div class="divider--half"></div>
+
 ### 軸タイトル
+
 Financial Chart コントロールの軸タイトル機能は、チャートの x および y 軸に情報を追加できます。Financial Chart は、x 軸および y 軸のタイトルのフォント スタイル、マージン、配置などを変更してルックアンドフィールをカスタマイズできます。
 
 以下のコード例は、x 軸と y 軸のタイトルを設定してカスタマイズします。
@@ -58,60 +157,6 @@ Financial Chart コントロールの軸タイトル機能は、チャートの 
       yAxisTitle="Millions of People"
       yAxisTitleAngle="90"
       yAxisTitleTextColor="red">
- </igx-financial-chart>
-```
-<div class="divider--half"></div>
-
-### 軸目盛
-目盛りは軸にポイントを表示します。スケールに特定の数値ポイント、またはカテゴリ軸にカテゴリ値を表します。x 軸および y 軸のラベルの長さ、太さ、色を変更できます。
-
-以下のコードスニペットは、x 軸の目盛りの色、長さ、太さを設定します。
-
-```html
- <igx-financial-chart
-      [dataSource]="data"
-      width="850px"
-      height="600px"
-      xAxisTickLength="10"
-      xAxisTickStrokeThickness="3"
-      xAxisTickStroke="red">
- </igx-financial-chart>
-```
-<div class="divider--half"></div>
-
-### 軸の範囲
-Financial Chart コントロールで、数値軸の範囲は軸の始めと終わり、つまりデータの最小値と最大値の数値の差です。範囲の最小値は、軸の最小値です。範囲の最大値は、軸の最大値です。デフォルトで、Financial Chart コントロールは、チャート プロット領域を最大化するために、最小データ ポイントおよび最大データ ポイントに基づいて軸の範囲の最小値と最大値を計算します。
-軸の最小値と最大値の自動計算は、データ ポイントのセットに適切でない場合があります。たとえば、データの最小値が 850 の場合、y 軸の `yAxisMinimumValue` プロパティを使用して軸の最小値を 800 に設定したい場合があります。これにより、軸の最小値とデータ ポイントの最小値の間に 50 のスペース値ができることになります。y 軸の `yAxisMaximumValue` プロパティを使用して軸の最大値とデータ ポイントの最大値にも同様に適用できます。
-
-以下のサンプル コードは、y 軸で軸の範囲を変更する方法を示します。
-
-```html
- <igx-financial-chart
-      [dataSource]="data"
-      width="850px"
-      height="600px"
-      yAxisMinimumValue="-200"
-      yAxisMaximumValue="1000">
- </igx-financial-chart>
-```
-<div class="divider--half"></div>
-
-### 軸間隔
-Financial Chart コントロールで、軸の主間隔は主グリッド線および軸ラベルが軸に描画される頻度を指定します。同様に、軸副間隔は副グリッド線が軸に描画される頻度を指定します。
-
-以下のコード スニペットは、Y 軸の間隔を設定する方法を示します。
-
-```html
- <igx-financial-chart
-    [dataSource]="data"
-    width="850px"
-    height="600px"
-    yAxisInterval="100"
-    yAxisMinorInterval="10" 
-    yAxisMinorStroke="Red"    
-    yAxisMajorStroke="Green"  
-    yAxisMinorStrokeThickness="1"
-    yAxisMajorStrokeThickness="1">
  </igx-financial-chart>
 ```
 <div class="divider--half"></div>

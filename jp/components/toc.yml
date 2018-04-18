@@ -3,8 +3,6 @@
 - name: Data Grid
   href: grid.md
   items:
-    - name: 選択
-      href: grid_selection.md
     - name: 仮想化とパフォーマンス
       href: grid_virtualization.md
     - name: ページング
@@ -23,17 +21,19 @@
       href: grid_selection.md
 - name: List View
   href: list.md
-- name: データ ビジュアライゼーション
+- name: チャート
   header: true
   href: categorychart.md
 - name: Category Chart
   href: categorychart.md
   items:
-    - name: パフォーマンス
-      href: categorychart_performance.md
+    - name: パフォーマンス - 高頻度
+      href: categorychart_performance_high_frequency.md
+    - name: パフォーマンス - 大容量
+      href: categorychart_performance_high_volume.md
     - name: 軸
       href: categorychart_axis.md
-    - name: Category Chart の構成
+    - name: 構成
       href: categorychart_configuring.md
     - name: カスタム ツールチップ
       href: categorychart_custom_tooltips.md 
@@ -48,6 +48,8 @@
       href: financialchart_axis.md
     - name: ペイン
       href: financialchart_panes.md
+    - name: 構成
+      href: financialchart_configuring.md
     - name: カスタム ツールチップ
       href: financialchart_custom_tooltips.md
 - name: スタイルとテーマ
@@ -133,7 +135,7 @@
   href: date_picker.md
 - name: Time Picker
   href: time_picker.md
-- name: Services
+- name: サービス
   header: true
 - name: CSV Exporter
   href: exporter_csv.md
