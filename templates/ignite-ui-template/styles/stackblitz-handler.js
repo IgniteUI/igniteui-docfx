@@ -45,7 +45,8 @@
 
     var getSamplesFiles = function () {
         $.each(samplesFilesUrls, function(index, url) {
-            $.get(url).done(function (data, requestType, httpResponse) { 
+            $.get(url).done(function (data, requestType, httpResponse) {
+                replaceRelativeAssetsUrls(data.sampleFiles);
                 sampleFilesContentByUrl[url] = data;
             });
         });
@@ -69,7 +70,6 @@
         var $button = $(this);
         var sampleFileUrl = getSampleUrlByStackBlitzButton($button);
         var sampleContent = sampleFilesContentByUrl[sampleFileUrl];
-        replaceRelativeAssetsUrls(sampleContent.sampleFiles);
         var formData = {
             dependencies: sampleContent.sampleDependencies,
             files: sharedFileContent.files.concat(sampleContent.sampleFiles)
