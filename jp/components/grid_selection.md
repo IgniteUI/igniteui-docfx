@@ -1,32 +1,32 @@
----
-title: Data Grid - Selection
-_description: A detailed guid on how to implement and best configure the igx-grid selection property for a grid on your page.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Data Grid component, Angular Data Grid control, Angular Grid component, Angular Grid control, Angular High Performance Grid, Angular Grid Row Selection, Angular Grid Selection, Grid Row Selection, Grid Selection
+﻿---
+title: Data Grid 選択
+_description: ページのグリッドで igx-grid の selection プロパティを構成して実装するガイド。
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Data Grid コンポーネント, Angular Data Grid コントロール, Angular Grid コンポーネント, Angular Grid コントロール, Angular 高いパフォーマンス Grid, Angular Grid 行選択, Angular Grid 選択, Grid 行選択, Grid 選択
 _language: ja
 ---
 
 ## Data Grid
 
-Quick to set up and very easy on the eye, row selection for Data Grid can easily be enabled and configured. Find out how to set up your grid to allow multiple or single row selection in the samples below.
+Data Grid の行選択を簡単に有効され、構成できます。以下のデモで複数行または単一行選択を構成する方法は紹介されます。
 <div class="divider"></div>
 
-### Grid Demo
+### Grid デモ
 
 <div class="sample-container loading" style="height:800px">
     <iframe id="grid-selection-iframe" src='{environment:demosBaseUrl}/grid-selection' width="100%" height="90%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="grid-selection" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="grid-selection" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
 </div>
 <div class="divider--half"></div>
 
 
-### Setup
+### 構成
 
-#### Single Selection
+#### 単一選択
 
-The grid single selection can be easily setup using the grid's `onSelection` event. The event emits a reference to the cell component. That cell component has a reference to the row component that is holding it. The row component reference `rowID` getter can be used to pass a unique identifier for the row (using either `rowData[primaryKey]` or the `rowData` object itself) to the appropriate list of the selectionAPI. To make sure that only a single row is always selected, we empty the `selectionAPI` row selection list beforehand (the second argument in the `selectRows` method call):
+グリッドの単一選択を grid の `onSelection` イベントで構成できます。イベントはセル コンポーネントへの参照を発行します。そのセル コンポーネントは含まれる行コンポーネントへの参照を含みます。行コンポーネント参照の `rowID` ゲッターを使用して、`rowData[primaryKey]` または `rowData` オブジェクト自身を使用して行の一意識別子を selectionAPI の適切なリストに渡します。単一の行のみが選択されることを確認するには、`selectionAPI` 行選択リストを空になります。これは `selectRows` メソッドの呼び出しの 2 番目の引数です。
 
 ```html
     <!-- in example.component.html -->
@@ -48,42 +48,44 @@ The grid single selection can be easily setup using the grid's `onSelection` eve
 
 ```
 
-#### Multiple Selection
+#### 複数選択
 
-To enable multiple row selection, the `igx-grid` exposes the `rowSelectable` property. Setting `rowSelectable` to `true` enables a select checkbox field on each row and in the grid header. The checkbox allows users to select multiple rows, with the selection persisting through scrolling, paging, and data operations such as sorting and filtering:
+複数行選択を有効にするには、`igx-grid` の `rowSelectable` プロパティを使用します。`rowSelectable` を `true` に設定すると、各行およびグリッド ヘッダーで選択チェックボックス フィールドを有効にします。チェックボックスを使用して複数行を選択できます。選択はスクロール、ページング、および並べ替えとフィルターなどのデータ操作で保持されます。
 
 ```html
     <igx-grid #grid1 [data]="remote | async" [primaryKey]="'ProductID'" [rowSelectable]="selection" (onSelection)="handleRowSelection($event)"
       [width]="'800px'" [height]="'600px'">
 ```
 
-*Note:* In order to have proper row selection and cell selection, while grid has remote virtualization, `primaryKey` should be provided.
+**注**: 行選択およびセル選択を正しく実行するには、グリッドにリモート仮想化がある場合、`primaryKey` を設定します。
 
-### Methods
+### メソッド
 
 #### IgxGridComponent
 
-   | Name     | Description                | Return type                                       | Parameters           |
-   |----------|----------------------------|---------------------------------------------------|----------------------|
-   | selectedRows | Get current selection state    | `Array<any>`- array with selected rows' ID (primaryKey or rowData)| |
-   | selectRows   | Select specified rows by ID      | `void`- does not return anything | `Array<any>`, clearCurrentSelection: `boolean`    |   
-   | deselectRows | Deselect specified rows by ID    | `void`- does not return anything | `Array<any>` |
-   | selectAllRows | Select all rows            | `void`- does not return anything |    N/A                    |
-   | deselectAllRows | Select all rows          | `void`- does not return anything |    N/A                    |
+| 名前     | 説明                | 戻り型                                       | パラメーター           |
+|----------|----------------------------|---------------------------------------------------|----------------------|
+| selectedRows | 現在の選択状態を取得します。    | `Array<any>`- 選択済み行の ID (primaryKey または rowData) を持つ配列| |
+| selectRows   | 指定した行を ID によって選択します。      | `void`- 何も返しません。 | `Array<any>`, clearCurrentSelection: `boolean`    |   
+| deselectRows | 指定した行を ID によって選択解除します。    | `void`- 何も返しません。 | `Array<any>` |
+| selectAllRows | すべての行を選択します。            | `void`- 何も返しません。 |    N/A                    |
+| deselectAllRows | すべての行を選択解除します。         | `void`- 何も返しません。 |    N/A                    |
 
-*Note:* If filtering is in place, `selectAllRows()` and `deselectAllRows()` select/deselect all *filtered* rows.
+**注**: フィルタリング機能が有効にされる場合、`selectAllRows()` および `deselectAllRows()` は**フィルターされた行**のみを選択/選択解除します。
 
-### Events
-|Name|Description|Parameters|
+### イベント
+|名前|説明|パラメーター|
 |--|--|--|
-| onRowSelectionChange | Emitted when selection is changing. | { selection: `Array<any>`, row: IgxRowComponent, rowID: any|
+| onRowSelectionChange | 選択が変更されているときに発生します。 | { selection: `Array<any>`, row: IgxRowComponent, rowID: any|
 
-*Note:* Cell selection will trigger onSelection and not onRowSelection.
+**注**: セル選択は onSelection をトリガーしますが、onRowSelection をトリガーしません。
 
-### Code Snippets
+### コード スニペット
 
-#### Select rows programatically
-Ihe below code example can be used to select one or multiple rows simultaniously (via `primaryKey`):
+#### コードで行を選択
+
+以下のコード例は `primaryKey` を使用して単一または複数行を選択します。
+
 ```html
 <!-- in component.html -->
 <igx-grid ... [primaryKey]="'ID'">
@@ -92,9 +94,11 @@ Ihe below code example can be used to select one or multiple rows simultaniously
 ...
 <button (click)="this.grid.selectRows([1,2,5])">Select 1,2 and 5</button>
 ```
-This will add the rows which correspond to the data entries with IDs 1, 2 and 5 to the grid selection.
 
-#### Cancel selection event
+1、2、および 5 の ID を持つデータ エントリに相対する行をグリッド選択に追加します。
+
+#### 選択イベントのキャンセル
+
 ```html
 <!-- in component.html -->
 <igx-grid
@@ -103,6 +107,7 @@ This will add the rows which correspond to the data entries with IDs 1, 2 and 5 
 ...
 </igx-grid>
 ```
+
 ```typescript
 // in component.ts
 public handleRowSelectionChange(args) {
@@ -111,21 +116,20 @@ public handleRowSelectionChange(args) {
 }
 ```
 
-### Additional Resources
+### 追加のリソース
 <div class="divider--half"></div>
 
-* [Grid overview](grid.html)
-* [Paging](grid_paging.html)
-* [Filtering](grid_filtering.html)
-* [Sorting](grid_sorting.html)
-* [Summaries](grid_summaries.html)
-* [Column Pinning](grid_column_pinning.html)
-* [Column Resizing](grid_column_resizing.html)
-* [Virtualization and Performance](grid_virtualization.html)
+* [グリッドの概要](grid.html)
+* [ページング](grid_paging.html)
+* [フィルタリング](grid_filtering.html)
+* [並べ替え](grid_sorting.html)
+* [集計](grid_summaries.html)
+* [列のピン固定](grid_column_pinning.html)
+* [列のサイズ変更](grid_column_resizing.html)
+* [仮想化とパフォーマンス](grid_virtualization.html)
 
 <div class="divider--half"></div>
-Our community is active and always welcoming to new ideas.
+コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
-
+* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

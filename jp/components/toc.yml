@@ -19,7 +19,7 @@
       href: grid_column_pinning.md
     - name: 列のサイズ変更
       href: grid_column_resizing.md
-    - name: Selection
+    - name: 選択
       href: grid_selection.md
 - name: List View
   href: list.md
