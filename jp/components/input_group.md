@@ -43,7 +43,7 @@ export class AppModule {}
 > `igxInput`、`igxLabel`、`igxPrefix`、`igxSuffix`、または `igxHint` ディレクティブを使用するには、`<igx-input-group>` コンテナーにラップする必要があります。
 
 ### Label および Input
-You can read about the `igxLabel` and `igxInput` directives as well as their validation, data binding and API in a separate topic [here](label_input.md).
+`igxLabel` および `igxInput` ディレクティブ、およびその検証、データ バインディング、および API を[このトピック](label_input.md)に参照してください。
 
 ### Prefix と Suffix
 入力のプレフィックスまたはサフィックスを追加するために Ignite UI for Angular Prefix または Suffix を使用できます。両方のディレクティブが HTML 要素、文字列、またはその他のコンポーネントを含むことができます。文字列 **prefix** (`+359`) および igxIcon **suffix** (`<igx-icon name="phone"></igx-icon>`) を持つ新しい入力フィールドを追加します。
@@ -128,12 +128,12 @@ Ignite UI for Angular Hint は入力の下に配置されるヘルパー テキ�
 <div class="divider--half"></div>
 
 ## 追加のリソース
-Related topics:
+関連トピック:
 
-* [Label & Input](label_input.md)
+* [Label および Input](label_input.md)
 <div class="divider--half"></div>
 
-是非コミュニティに参加してください。
+コミュニティに参加して新しいアイデアをご提案ください。
 
 * [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
 * [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

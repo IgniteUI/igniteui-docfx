@@ -5,14 +5,20 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 _language: ja
 ---
 
-### Grid Demo
+### Grid デモ
+
+Displays a summary row for the data in the columns of the grid. There are predefined summary functions, but you can create custom function to calculate custom summaries.
+Grid **summaries** can also be enabled on a per-column level, which means that you can activate it only for columns that you need to.
+
+> [!NOTE]
+> The summary of the column is a **function of all column values**, unless filtering is applied, then the summary of the column will be **function of the filtered result values**
 
 <div class="sample-container loading" style="height:750px">
     <iframe id="grid-summary-sample-iframe" src='{environment:demosBaseUrl}/grid-summary' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="grid-summary-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="grid-summary-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
@@ -161,6 +167,16 @@ export class GridComponent implements OnInit {
 }
 ```
 
+Same applies for the case when `http` request is made, we should clean up the cache.
+
+```typescript
+this.http.get<any[]>('/assets/data.json')
+    .subscribe(data => {
+    this.data = data;
+    this.grid1.clearSummaryCache();
+});
+```
+
 ### 追加のリソース
 <div class="divider--half"></div>
 
@@ -170,9 +186,10 @@ export class GridComponent implements OnInit {
 * [フィルタリング](grid_filtering.html)
 * [並べ替え](grid_sorting.html)
 * [列のピン固定](grid_column_pinning.html)
+* [列のサイズ変更](grid_column_resizing.html)
 
 <div class="divider--half"></div>
-是非コミュニティに参加してください。
+コミュニティに参加して新しいアイデアをご提案ください。
 
 * [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
 * [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

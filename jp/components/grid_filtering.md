@@ -7,15 +7,27 @@ _language: ja
 
 ### グリッドのフィルタリング
 
-> [!NOTE]
-> フィルタリング操作では、グリッドにバインドされているデータ ソースは変更**されません**。
-
 列の `filterable` プロパティを true に設定すると、**フィルタリング**を列ごとに有効できます。
 
 ```html
 <igx-column field="ProductName" filterable="true" dataType="string"></igx-column>
 <igx-column field="Price" filterable="true" dataType="number"></igx-column>
 ```
+
+#### Grid Demo
+
+<div class="sample-container loading" style="height:550px">
+    <iframe id="grid-sample-iframe" src='{environment:demosBaseUrl}/grid-filtering-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="grid-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
+
+> [!NOTE]
+> フィルタリング操作では、グリッドにバインドされているデータ ソースは変更**されません**。
+
 
 列で設定された `dataType` に基づいて、[**フィルター条件**](#フィルター条件)の正しいセットがフィルター UI ドロップダウンで読み込まれます。また、列の `filteringIgnoreCase` および最初の `filteringCondition` プロパティを設定できます。
 
@@ -99,9 +111,10 @@ this.grid.filteringLogic = FilteringLogic.OR;
 * [並べ替え](grid_sorting.html)
 * [集計](grid_summaries.html)
 * [列のピン固定](grid_column_pinning.html)
+* [列のサイズ変更](grid_column_resizing.html)
 
 <div class="divider--half"></div>
-是非コミュニティに参加してください。
+コミュニティに参加して新しいアイデアをご提案ください。
 
 * [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
 * [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

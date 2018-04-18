@@ -405,6 +405,7 @@ this.grid.deleteRow(this.selectedCell.rowIndex);
 |`onRowAdded`|行が API によってグリッドに追加されている間に発生されます。新しい行オブジェクトのデータを返します。|
 |`onRowDeleted`|行がグリッド API によって削除されたときに発生されます。削除されている行オブジェクトを返します。|
 |`onColumnPinning`|列がグリッド API によってピン固定されたときに発生されます。列に挿入するインデックスは `insertAtIndex` プロパティによって変更できます。|
+|`onColumnResized`|列がサイズ変更されたときに発生されます。列オブジェクト、以前の列幅、および新しい列幅を返します。|
 |`onContextMenu`|セルが右クリックされたときに発生されます。セル オブジェクトを返します。|
 
 <div class="divider--half"></div>
@@ -467,7 +468,10 @@ this.grid.deleteRow(this.selectedCell.rowIndex);
 |`summaries`| IgxSummaryOperand |指定した列にカスタム集計を設定します。|
 | `hidden` | boolean | 列の表示状態。 |
 | `movable` | boolean | 列移動。 |
+|`resizable`|boolean|列をサイズ変更可能に設定します。|
 | `width` | string | 列幅。 |
+|`minWidth`|string|列の最小幅|
+|`maxWidth`|string|列の最大幅|
 |`headerClasses`|string|ヘッダー要素に適用される追加の CSS クラス。|
 |`cellClasses`|string|この列のセルに適用される追加の CSS クラス。|
 |`formatter`|Function|列にセル テンプレートを渡さないでセルの値をテンプレート化するために使用される関数。|
@@ -628,7 +632,7 @@ import {
 * [列のピン固定](grid_column_pinning.html)
 
 <div class="divider--half"></div>
-是非コミュニティに参加してください。
+コミュニティに参加して新しいアイデアをご提案ください。
 
 * [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
 * [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

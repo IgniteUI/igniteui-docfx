@@ -15,6 +15,10 @@
       href: grid_summaries.md
     - name: 列のピン固定
       href: grid_column_pinning.md
+    - name: 列のサイズ変更
+      href: grid_column_resizing.md
+    - name: Selection
+      href: grid_selection.md
 - name: List View
   href: list.md
 - name: スタイルとテーマ
@@ -40,7 +44,7 @@
   href: switch.md
 - name: Radio Button
   href: radio_button.md
-- name: Label & Input
+- name: Label および Input
   href: label_input.md
 - name: Input Group
   href: input_group.md
@@ -80,6 +84,8 @@
   href: carousel.md
 - name: Tab Bar
   href: tabbar.md
+- name: Tabs
+  href: tabs.md
 - name: Card
   href: card.md
 - name: Avatar
@@ -96,7 +102,7 @@
   href: calendar.md
 - name: Date Picker
   href: date_picker.md
-- name: Time Picker 
+- name: Time Picker
   href: time_picker.md
 - name: Services
   header: true

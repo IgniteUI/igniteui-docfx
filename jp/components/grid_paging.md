@@ -13,6 +13,17 @@ _language: ja
 <igx-grid #grid1 [data]="data | async" [paging]="true" [perPage]="20" [autoGenerate]="false"></igx-grid>
 ```
 
+#### Grid Demo
+
+<div class="sample-container loading" style="height:420px">
+    <iframe id="grid-sample-iframe" src='{environment:demosBaseUrl}/grid-paging-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="grid-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
+
 ページング領域がテンプレート化をサポートしますが、テンプレート参照を初期化でグリッドに渡す必要があります。以下の例はページングが入力によって制御されるテンプレートを使用します。
 
 ```html
@@ -60,9 +71,10 @@ this.grid.paging = false;
 * [並べ替え](grid_sorting.html)
 * [集計](grid_summaries.html)
 * [列のピン固定](grid_column_pinning.html)
+* [列のサイズ変更](grid_column_resizing.html)
 
 <div class="divider--half"></div>
-是非コミュニティに参加してください。
+コミュニティに参加して新しいアイデアをご提案ください。
 
 * [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
 * [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
