@@ -18,7 +18,7 @@ _language: ja
 </igx-grid>
 ```
 
-#### Column Pinning Demo
+#### 列のピン固定デモ
 
 <div class="sample-container loading" style="height:530px">
     <iframe id="grid-sample-pinning-iframe" src='{environment:demosBaseUrl}/grid-sample-pinning' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -28,7 +28,7 @@ _language: ja
 <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="grid-sample-pinning-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-#### Column Pinning API
+#### 列のピン固定 API
 
 グリッドの `IgxGridComponent` の `pinColumn` または `unpinColumn` メソッドを使用してフィールド名によって列をピン固定またはピン固定解除できます。
 
