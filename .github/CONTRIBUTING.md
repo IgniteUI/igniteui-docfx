@@ -1,7 +1,7 @@
 ## In this topic
  ### 1. [Writing an article](#writing-an-article)
  ### 2. [Workflow](#workflow)
- ### 3. [StackBlitz configuration](#stackblitz)
+ ### 3. [StackBlitz configuration](#stackblitz-configuration)
 
 # <a name='#writing-an-article'>Writing an article</a>
 
@@ -74,7 +74,7 @@ Open both repositories and perform `npm start`. This will start both projects an
 > Note: Keep in mind that when you submit a change in the EN .md files, you will need to make the same change in the JP version as well. This will help our Localization team to translate the change.
 
 
-# <a name='#stackblitz'>StackBlitz configuration</a>
+# <a name='#stackblitz-configuration'>StackBlitz configuration</a>
 
 StackBlitz button should be added for each live editing sample.
 In order to do that, certain configuration should be added in the [angular samples](https://github.com/IgniteUI/igniteui-angular-samples) repository. More could be found here [To do](https://github.com/IgniteUI/igniteui-angular-samples/issues/130).
