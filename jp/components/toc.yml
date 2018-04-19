@@ -42,6 +42,8 @@
   items:
     - name: パフォーマンス
       href: financialchart_performance.md
+    - name: 大容量のパフォーマンス
+      href: financialchart_performance_high_volume.md
     - name: データ バインド
       href: financialchart_binding_data.md
     - name: 軸

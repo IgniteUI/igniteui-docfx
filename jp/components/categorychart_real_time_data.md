@@ -12,7 +12,7 @@ igxCategoryChart は、数百万のデータ ポイントに及ぶ大量のデ�
 
 ### リアルタイム データ デモ
 
-<div class="sample-container" style="height: 650px">
+<div class="sample-container" style="height: 570px">
     <iframe id="category-chart-performance-iframe" src='{environment:demosBaseUrl}/category-chart-high-frequency-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>

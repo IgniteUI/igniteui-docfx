@@ -22,17 +22,4 @@ igxCategoryChart は、各シリーズ タイプにデフォルト ツールチ�
 
 <div class="divider--half"></div>
 
-TODO - UPDATE CONTENT AND CODE SNIPPET
-
-ツールチップ コンテンツは `seriesAdded` イベントでカスタマイズされます。
-
-```html
-<igx-category-chart
-    [dataSource]="data"
-    width="700px"
-    height="500px"
-    >
-</igx-category-chart>
-```
-
 

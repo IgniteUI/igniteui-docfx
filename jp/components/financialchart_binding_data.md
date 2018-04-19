@@ -6,7 +6,7 @@ _language: ja
 ---
 ## ファイナンシャル チャートをデータにバインド
 
-igxFinancialChart コントロールはデータ列を自動的に解析して選択します。日/時列を X 軸で使用し、Open、High、Low、Close、Volume 列、または最初の 5 つの数値列を Y 軸で使用します。
+igxFinancialChart は、以下のデモのように複数のデータ ソースにバインドできます。
 
 <div class="divider"></div>
 

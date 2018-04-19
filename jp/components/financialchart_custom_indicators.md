@@ -25,5 +25,3 @@ igxFinancialChart コンポーネントでは、インジケーター ペイン�
 igxFinancialChart でカスタム財務指標を有効にするには、`CustomIndicatorNames` プロパティに名前を追加し、`ApplyCustomIndicators` イベントで計算を実行します。
 
 以下のコード例は、2 つのカスタム インジケーターを設定して計算する方法を紹介します。単純移動平均 (SMA) およびランダム値を表示するインジケーターを使用します。
-
-TODO - ADD CODE SNIPPETS
