@@ -182,6 +182,7 @@ this.http.get<any[]>('/assets/data.json')
 * [Sorting](grid_sorting.html)
 * [Column Pinning](grid_column_pinning.html)
 * [Column Resizing](grid_column_resizing.html)
+* [Selection](grid_selection.html)
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.

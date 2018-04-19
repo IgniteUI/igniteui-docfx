@@ -6,7 +6,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ### Grid Sorting
 
-Sorts columns in an ascending or descending order. 
+Sorts columns in an ascending or descending order.
 
 ### Grid Demo
 Additionally there is a custom contextmenu added for sorting using **igx-grid**'s onContextMenu Output.
@@ -77,6 +77,7 @@ public ngOnInit() {
 * [Summaries](grid_summaries.html)
 * [Column Pinning](grid_column_pinning.html)
 * [Column Resizing](grid_column_resizing.html)
+* [Selection](grid_selection.html)
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.
