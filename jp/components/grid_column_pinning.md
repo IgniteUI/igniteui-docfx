@@ -78,6 +78,7 @@ public columnPinning(event) {
 * [並べ替え](grid_sorting.html)
 * [集計](grid_summaries.html)
 * [列のサイズ変更](grid_column_resizing.html)
+* [選択](grid_selection.html)
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。

@@ -5,9 +5,23 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 _language: ja
 ---
 
-### グリッドの列サイズ変更
+## グリッドの列サイズ変更
 
-**列のサイズ変更**も列ごとのレベルで有効化されます。つまり、**igx-grid** にサイズ変更可能な列およびサイズ変更可能ではない列の両方を含むことが可能です。`igx-column` の `resizable` 入力によって制御されます。**igx-grid** は遅延列のサイズ変更をサポートします。つまり、列はすぐにサイズ変更されません。サイズ変更インジケーターがドラッグ操作で一時的に表示され、ドラッグ操作が終了したときに新しい列サイズが適用されます。特定の列のサイズ変更はグリッド全体の幅に影響するため、残りの列の現在の幅は変更されません。
+<p class="highlight">Column resizing feature allows the user to change the width of a certain column at runtime. The `igx-grid` control supports **deferred column resizing**. Clicking on the right header border displays a temporary resize indicator that can be dragged left or right, serving as a preview. The column does not change its width while dragging the resize indicator. The new size is applied only when the drag operation is over. Resizing a certain column affects the overall width of the grid, so the rest of the columns will preserve their current widths.</p>
+<div class="divider"></div>
+
+### Grid Column Resizing Demo
+
+<div class="sample-container loading" style="height:550px">
+     <iframe id="grid-resizing-sample-iframe" src='{environment:demosBaseUrl}/grid-resizing-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="grid-resizing-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
+</div>
+<div class="divider--half"></div>
+
+**列のサイズ変更**も列ごとのレベルで有効化されます。つまり、**igx-grid** にサイズ変更可能な列およびサイズ変更可能ではない列の両方を含むことが可能です。`igx-column` の `resizable` 入力によって制御されます。
 
 ```html
     <igx-column [field]="Name" [width]="'200px'" [resizable]="true"></igx-column>
@@ -83,6 +97,7 @@ public onResize(event) {
 * [並べ替え](grid_sorting.html)
 * [集計](grid_summaries.html)
 * [列のピン固定](grid_column_pinning.html)
+* [選択](grid_selection.html)
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
