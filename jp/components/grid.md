@@ -414,7 +414,7 @@ this.grid.deleteRow(this.selectedCell.rowIndex);
 
 ```html
 <igx-grid #grid1 [data]="data | async" [autoGenerate]="false"
- (onColumnInit)="initColumns($event)" (onCellSelection)="selectCell($event)"></igx-grid>
+ (onColumnInit)="initColumns($event)" (onSelection)="selectCell($event)"></igx-grid>
 ```
 
 <div class="divider--half"></div>
