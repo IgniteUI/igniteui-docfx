@@ -37,6 +37,10 @@ If you are using yarn, run:
 yarn install
 ```
 
+## Command-Line Shell Permissions
+
+Start your command-line shell (CMD, PowerShell, Bash, etc.) with elevated permissions ("Run As Administrator" in Windows). This is required by Chocolatey, for further information read point 1 from [here](https://chocolatey.org/security#overall).
+
 ## Starting the Development Server
 
 The build process depends on the environment variable `NODE_ENV` to be able to set the correct URL for the Angular Samples. Assign either `development`, `staging`, or `production` to `NODE_ENV`.
