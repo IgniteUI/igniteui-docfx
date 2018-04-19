@@ -1,29 +1,29 @@
----
-title: Tabs Component
-_description: Display tabs for any occasion and implement a completely tabbed user interface. These UI controls manage every aspect of your tabs’ appearance and behavior.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Tabs component, Angular Tabs controls
+﻿---
+title: Tabs コンポーネント
+_description: タブ付きのユーザー インターフェイスでタブを表示します。この UI コントロールはタブの外観および動作を管理します。
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Tabs コンポーネント, Angular Tabs コントロール
 ---
 
 ## Tabs
 
-<p class="highlight">The Ignite UI for Angular Tabs component enables the user to switch between different views. The Tabs component places the tabs headers at the top and allows scrolling when there are multiple tab items outside the visible area. Tabs items are ordered in a single row above their associated content.</p>
+<p class="highlight">Ignite UI for Angular Tabs コンポーネントは複数のビューの間の切り替え機能を提供します。Tabs コンポーネントはタブ ヘッダーを上側に配置し、表示されていないタブ項目がある場合にスクロールを許可します。Tabs 項目は関連コンテンツの上にある単一の行に配置されます。</p>
 <div class="divider--half"></div>
 
-### Tabs Demo
+### Tabs デモ
 <div class="sample-container loading" style="height: 250px; width: 600px;">
-    <iframe id="tabs-sample-3" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/tabs-sample-3" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="tabs-sample-0" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/tabs-sample-3" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="tabs-sample-3" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="tabs-sample-0" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
 </div>
 <div class="divider--half"></div>
 
 > [!NOTE]
-> To start using Ignite UI for Angular components in your own projects, make sure you have configured all necessary dependencies and have performed the proper setup of your project. You can learn how to do this in the [**installation**](https://www.infragistics.com/products/ignite-ui-angular/getting-started#installation) topic.
+> Ignite UI for Angular コンポーネントをプロジェクトに追加する前に、すべての必要な依存関係を構成し、プロジェクトのセットアップが正しく完了したことを確認してください。「[**インストール**](https://jp.infragistics.com/products/ignite-ui-angular/getting-started#installation)」のトピックで手順を参照できます。
 
-### Usage
+### 使用方法
 
-To get started with the Ignite UI for Angular Tabs component, let's first import the **IgxTabsModule** in the **app.module.ts** file.
+Ignite UI for Angular Tabs コンポーネントを初期化する前に **IgxTabsModule** を **app.module.ts** ファイルにインポートします。
 
 ```typescript
 // app.module.ts
@@ -39,7 +39,7 @@ import { IgxTabsModule } from 'igniteui-angular/main';
 export class AppModule {}
 ```
 
-Then, specify three tabs groups with `label` and content.
+`label` およびコンテンツを持つ 3 つのタブ グループを指定します。
 
 ```html
 <igx-tabs>
@@ -51,7 +51,7 @@ Then, specify three tabs groups with `label` and content.
 </igx-tabs>
 ```
 
-If the sample is configured properly, the final result should look like that:
+サンプルを構成した後、結果は以下のようになります。
 
 <div class="sample-container loading" style="height: 200px; width: 600px; border: 1px solid gray;">
     <iframe id="tabs-sample-1-iframe" src='{environment:demosBaseUrl}/tabs-sample-1' width="100%" height="100%" seamless
@@ -59,16 +59,44 @@ If the sample is configured properly, the final result should look like that:
 </div>
 <div>
 <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="tabs-sample-1-iframe"
-    data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
 </div>
 
 <div class="divider"></div>
 
-### Tabs Types
-There are two types of tabs. Set the `tabsType` input to choose between fixed and content-fit tabs.
-- **Content-fit tabs** (default): the width of the tab header depends on the content (label, icon, both) and all tabs have equal padding.
-Nevertheless what type of tabs you have choose, the tab header width is limited by the specified min and max width. 
-- **Fixed tabs**: all tab headers are with equal width and fit in the tabs component. If the provided space is not enough for all items, scroll buttons are displayed.
+### Tabs タイプ
+2 種類のタブがあります。fixed または contentfit タブを選択するには、`tabsType` 入力を設定します。
+- **contentfit タブ** (デフォルト): タブ ヘッダーの幅はコンテンツ (ラベル、アイコン、両方) に基づいて決定され、すべてのタブのパディングが等しくなります。
+タブのタイプに関係なく、タブ ヘッダーの幅は指定した最小幅および最大幅によって制限されます。
+- **fixed タブ**: すべてのタブ ヘッダーは同じ幅を持ち、Tabs コンポーネントに一致します。提供されたスペースが足りない場合、スクロール ボタンが表示されます。
+
+```html
+<div class="items-wrapper__item items-wrapper__item-small items-wrapper__item--blue">
+  <h4 class="sample-title">CONTENT-FIT TABS</h4>
+  <igx-navbar title="Contacts" actionButtonIcon="menu">
+    <igx-icon name="search"></igx-icon>
+    <igx-icon name="more_vert"></igx-icon>
+  </igx-navbar>
+  <igx-tabs>
+    <igx-tabs-group label="HOME">Home content.</igx-tabs-group>
+    <igx-tabs-group label="RECENT CONTACTS">Recent contacts list.</igx-tabs-group>
+    <igx-tabs-group label="MORE INFORMATION ABOUT SELECTED CONTACT">More detailed contact information.</igx-tabs-group>
+  </igx-tabs>
+</div>
+
+<div class="items-wrapper__item items-wrapper__item-small items-wrapper__item--blue">
+  <h4 class="sample-title">FIXED TABS</h4>
+  <igx-navbar title="Contacts" actionButtonIcon="menu">
+    <igx-icon name="search"></igx-icon>
+    <igx-icon name="more_vert"></igx-icon>
+  </igx-navbar>
+  <igx-tabs tabsType="fixed">
+    <igx-tabs-group label="HOME">Home content.</igx-tabs-group>
+    <igx-tabs-group label="RECENT CONTACTS">Recent contacts list.</igx-tabs-group>
+    <igx-tabs-group label="MORE INFORMATION ABOUT SELECTED CONTACT">More detailed contact information.</igx-tabs-group>
+  </igx-tabs>
+</div>
+```
 
 <div class="sample-container loading" style="height: 450px; width: 800px;">
     <iframe id="tabs-sample-2-iframe" src='{environment:demosBaseUrl}/tabs-sample-2' width="100%" height="100%" seamless
@@ -76,17 +104,16 @@ Nevertheless what type of tabs you have choose, the tab header width is limited 
 </div>
 <div>
 <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="tabs-sample-2-iframe"
-    data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
 </div>
 
 <div class="divider"></div>
 
-### Customizing Tabs
+### タブのカスタマイズ
 
-Let's modify the tabs and make them more appealing by including icons. The Tabs component is compatible with the Material Design
-[**Icons**](https://material.io/icons/) so it will be very easy to adopt them in your application.
+タブにアイコンを追加します。Tabs コントロールはマテリアル デザイン [**アイコン**](https://material.io/icons/)と互換性があるため、アプリケーションにアイコンを簡単に追加できます。
 
-First add the Material+Icons import in your 'styles.css' file in the main application folder.
+最初に Material+Icons をメイン アプリケーション フォルダーの 'styles.css' ファイルにインポートします。
 
 ```css
 // styles.css
@@ -129,20 +156,20 @@ First add the Material+Icons import in your 'styles.css' file in the main applic
 </igx-tabs>
 ```
 
-If the sample is configured properly, the tabs should look like the following example:
+サンプルを正しく構成した場合、タブは以下の例のようになります。
 
-<div class="sample-container loading" style="height: 250px; width: 600px; border: 1px solid gray;">
+<div class="sample-container loading" style="height: 250px; width: 600px;">
     <iframe id="tabs-sample-3-iframe" src='{environment:demosBaseUrl}/tabs-sample-3' width="100%" height="100%" seamless
         frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="tabs-sample-2-iframe"
-    data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="tabs-sample-3-iframe"
+    data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
 </div>
 
 <div class="divider--half"></div>
 
-If changing the tabs' labels and icons is not enough, you can also create your own template for each tab header.
+タブのラベルおよびアイコンの変更を拡張する場合、各タブ ヘッダーでカスタム テンプレートを作成することもできます。
 
 ```html
 <igx-tabs>
@@ -159,73 +186,77 @@ If changing the tabs' labels and icons is not enough, you can also create your o
 
 <div class="divider"></div>
 
-### API Summary
+### API まとめ
 
-The following tables summarize some of the useful Tabs component inputs and outputs.
+以下の表は便利な Tabs コンポーネントの入力および出力を説明します。
 
-#### Inputs
+#### 入力
 
-The following input is available in the **igx-tabs** component:
+以下の入力は **igx-tabs** コンポーネントで利用できます。
 
-| Name | Type | Description |
+| 名前 | 型 | 説明 |
 | :--- | :--- | :--- |
-| `tabsType` | TabsType | Defines the tab header sizing mode - `contentfit` (default) or `fixed`. |
+| `tabsType` | TabsType | タブ ヘッダーのサイズ モードを定義します。有効な設定は `contentfit` (デフォルト) または `fixed` です。 |
 
 
-The following inputs are available in the **igx-tabs-group** component:
+以下の入力は **igx-tabs-group** コンポーネントで利用できます。
 
-| Name | Type | Description |
+| 名前 | 型 | 説明 |
 | :--- | :--- | :--- |
-| `label` | String | Defines the label of the associated tab header. |
-| `icon` | String | Defines the icon of the associated tab header. |
+| `label` | String | 関連付けられているタブ ヘッダーのラベルを定義します。 |
+| `icon` | String | 関連付けられているタブ ヘッダーのアイコンを定義します。 |
 
 <div class="divider"></div>
 
-#### Outputs
+#### 出力
 
-The following outputs are available on the **igx-tabs** component:
-| Name | Type | Description |
+以下の出力は **igx-tabs** コンポーネントで利用できます。
+
+| 名前 | 型 | 説明 |
 | :--- | :--- | :--- |
-| `onTabItemSelected` | EventEmitter | Emits an event when a tab item is selected. |
-| `onTabItemDeselected` | EventEmitter | Emits an event when a tab item is deselected. |
+| `onTabItemSelected` | EventEmitter | タブ項目が選択されたときにイベントを発生します。 |
+| `onTabItemDeselected` | EventEmitter | タブ項目が選択解除されたときにイベントを発生します。 |
 
 <div class="divider"></div>
 
-#### Getters
+#### ゲッター
 
-The following getters are available in the **igx-tabs** component:
-| Name | Type | Description |
+以下のゲッターは **igx-tabs** コンポーネントで利用できます。
+
+| 名前 | 型 | 説明 |
 | :--- | :--- | :--- |
-| `tabs` | QueryList | Provides an observable collection of all IgxTabItemComponent-s. |
-| `groups` | QueryList | Provides an observable collection of all IgxTabsGroupComponent-s. |
-| `selectedIndex` | number | Gets the index of selected tab item. |
-| `selectedTabItem` | IgxTabItemComponent | Gets the selected IgxTabItemComponent based on `selectedIndex`. |
+| `tabs` | QueryList | すべての IgxTabItemComponent の監視可能コレクションを提供します。 |
+| `groups` | QueryList | すべての IgxTabsGroupComponent の監視可能コレクションを提供します。 |
+| `selectedIndex` | number | 選択されたタブ項目のインデックスを取得します。 |
+| `selectedTabItem` | IgxTabItemComponent | 選択済みの IgxTabItemComponent を `selectedIndex` に基づいて取得します。 |
 
 <div class="divider--half"></div>
 
-The following getters are available on the **igx-tabs-group** component:
-| Name | Type | Description |
+以下のゲッターは **igx-tabs-group** コンポーネントで利用できます。
+
+| 名前 | 型 | 説明 |
 | :--- | :--- | :--- |
-| `isDisabled` | boolean | Gets whether the group is disabled. |
-| `index` | number | Gets the group index in the groups collection. |
-| `relatedTab` | IgxTabItemComponent | Gets the tab associated with the group. |
+| `isDisabled` | boolean | グループが無効かどうかを取得します。 |
+| `index` | number | グループ コレクションのグループ インデックスを取得します。 |
+| `relatedTab` | IgxTabItemComponent | グループに関連付けられたタブを取得します。 |
 
 <div class="divider--half"></div>
 
-The following getters are available on the **igx-tab-item** component:
-| Name | Type | Description |
+以下のゲッターは **igx-tab-item** コンポーネントで利用できます。
+
+| 名前 | 型 | 説明 |
 | :--- | :--- | :--- |
-| `isDisabled` | boolean | Gets whether the tab is disabled. |
-| `isSelected` | boolean | Gets whether the tab is selected. |
-| `index` | number | Gets the index of the tab in the tab collection. |
-| `relatedGroup` | IgxTabsGroupComponent | Gets the group associated with the tab. |
+| `isDisabled` | boolean | タブが無効かどうかを取得します。 |
+| `isSelected` | boolean | タブが選択されているかどうかを取得します。 |
+| `index` | number | タブ コレクションのタブのインデックスを取得します。 |
+| `relatedGroup` | IgxTabsGroupComponent | タブに関連付けられているグループを取得します。 |
 
 <div class="divider"></div>
 
-### Additional Resources
+### 追加のリソース
 
 <div class="divider--half"></div>
-Our community is active and always welcoming to new ideas.
+コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

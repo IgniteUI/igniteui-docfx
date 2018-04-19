@@ -1,14 +1,14 @@
 ---
-title: Configuring Financial Chart
-_description: The Ignite UI for Angular Financial Chart component is a touch-enabled, highly performant, lightweight charting control that makes visualizing financial data a breeze.
-_keywords: Ignite UI for Angular, Data Visualization, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Chart component, Angular Financial Chart component, Angular Chart controls, Angular Financial Chart controls, Data Visualization
+title: Financial Chart - Configuration Options
+_description: The Ignite UI for Angular Financial Chart component is easily configured to display financial data using a simple and intuitive API, as once the user binds the data, the chart offers multiple ways in which the data can then be visualized and interpreted. 
+_keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Chart Control, Angular Chart Example, Angular Grid Component, Angular Chart Component, Angular Financial Chart 
 ---
-## Configuring Financial Chart 
+## Configuration Options 
 
 There are many areas of the financial chart that can be customized, such as the navigation behavior, trendline layers, overlays, chart titles and subtitles.
 This page will walk you through with code samples the different properties that required to be set in order to achieve a customized financial chart.
 
-### Configuring Financial Chart Demo
+### Configuration Options Demo
 
 <div class="sample-container" style="height: 550px">
     <iframe id="financial-chart-configuring-iframe" src='{environment:demosBaseUrl}/financial-chart-configuring' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>

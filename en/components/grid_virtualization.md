@@ -13,7 +13,7 @@ By utilizing the `igxForOf` directive the Data Grid now optimizes DOM rendering 
 
 ### Grid Virtualization Demo
 
-<div class="sample-container loading" style="height:850px">
+<div class="sample-container loading" style="height:530px">
     <iframe id="grid-sample-2-iframe" src='{environment:demosBaseUrl}/grid-sample-2' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
@@ -43,6 +43,16 @@ Explicitly setting column widths in percentages (%) will, in most cases, create 
 ### Remote Virtualization
 
 `igxGrid` supports the scenario in which the data chunks are requested from a remote service, exposing the behavior implemented in the `igxForOf` directive it uses internally.
+
+### Grid Remote Virtualization Demo
+
+<div class="sample-container loading" style="height:550px">
+    <iframe id="grid-sample-4-iframe" src='{environment:demosBaseUrl}/grid-sample-4' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="grid-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
 
 ### Virtualization Limitations
 

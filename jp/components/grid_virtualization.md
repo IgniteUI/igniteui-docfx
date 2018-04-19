@@ -14,7 +14,7 @@ _language: ja
 
 ### グリッドの仮想化デモ
 
-<div class="sample-container loading" style="height:850px">
+<div class="sample-container loading" style="height:530px">
     <iframe id="grid-sample-2-iframe" src='{environment:demosBaseUrl}/grid-sample-2' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
@@ -38,6 +38,16 @@ _language: ja
 *   水平 (列) 仮想化の列幅 (ピクセル単位)。各列コンポーネントで明示的に幅を設定するか、明示的に幅が設定されないすべての列に適用するグリッドの `columnWidth` オプションを設定できます。
 
 必要なサイズを指定しない場合、仮想化がないグリッドを作成します。たとえば、高さが指定されないグリッドは**すべて**の行を一度に表示し、合計サイズに基づいて高さを増加します。幅が指定されたが列に幅が設定されないグリッドは列をすべて利用可能なスペースでスクロールバーなしで描画します。列幅がパーセンテージ (%) で定義されるグリッドにも適用します。
+
+### Grid Remote Virtualization Demo
+
+<div class="sample-container loading" style="height:550px">
+    <iframe id="grid-sample-4-iframe" src='{environment:demosBaseUrl}/grid-sample-4' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="grid-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
 
 ### 仮想化の制限
 

@@ -6,19 +6,30 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ### Grid Column Resizing
 
+#### Grid Demo
+
+<div class="sample-container loading" style="height:550px">
+    <iframe id="grid-resizing-sample-iframe" src='{environment:demosBaseUrl}/grid-resizing-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="grid-resizing-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
+
 **Column resizing** is also enabled per-column level, meaning that the **igx-grid** can have a mix of resizable and non-resizable columns. This is done via the `resizable` input of the `igx-column`. The **igx-grid** supports deferred column resizing, meaning that columns are not immediately resized. A temporary resize indicator is shown while the drag operation is in effect and the new column size is only applied once the drag operation ends. Resizing a certain column affects the overall width of the grid, so the rest of the columns will preserve their current widths.
 
 ```html
-    <igx-column [field]="Name" [width]="'200px'" [resizable]="true"></igx-column>
-    <igx-column [field]="AthleteNumber" [width]="'200px'"></igx-column>
+<igx-column [field]="'ID'" width="100px" [resizable]="true"></igx-column>
+<igx-column [field]="'CompanyName'" width="100px" [resizable]="true"></igx-column>
 ```
 
 You can subscribe to the `onColumnResized` event of the `igx-grid` to implement some custom logic when a column is resized. Both, previous and new column widths, as well as the `IgxColumnComponent` object, are exposed through the event arguments.
 
 ```html
 <igx-grid [data]="data" (onColumnResized)="onResize($event)" [autoGenerate]="false">
-    <igx-column [field]="Name" [width]="'200px'" [resizable]="true"></igx-column>
-    <igx-column [field]="AthleteNumber" [width]="'200px'"></igx-column>
+    <igx-column [field]="'ID'" width="100px" [resizable]="true"></igx-column>
+    <igx-column [field]="'CompanyName'" width="100px" [resizable]="true"></igx-column>
 </igx-grid>
 ```
 
@@ -35,8 +46,8 @@ public onResize(event) {
 You can also configure the minimum and maximum allowable column widths. This is done via the `minWidth` and `maxWidth` inputs of the `igx-column`. In this case the resize indicator drag operation is restricted to notify the user that the column cannot be resized outside the bounderies defined by `minWidth` and `maxWidth`.
 
 ```html
-    <igx-column [field]="Name" [width]="'150px'" [resizable]="true" [minWidth]="'60px'"
-        [maxWidth]="'250px'"></igx-column>
+<igx-column [field]="'ContactName'" width="100px" [resizable]="true"
+            [minWidth]="'60px'" [maxWidth]="'230px'"></igx-column>
 ```
 
 > [!NOTE]
