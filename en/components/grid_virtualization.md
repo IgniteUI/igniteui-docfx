@@ -54,6 +54,66 @@ Explicitly setting column widths in percentages (%) will, in most cases, create 
 <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="grid-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
+
+To utilize this feature, users need to subscribe to the `onDataPreload` output so that they can make the appropriate request based on the arguments received, as well as set the public `igxGrid` property `totalItemCount` with the respective information coming from their service. 
+
+```html
+<igx-grid #grid1 [data]="remoteData | async" (onDataPreLoad)="dataLoading($event)" >
+    <igx-column *ngFor="let c of columns" [field]="c.field" [header]="c.header">
+    </igx-column>
+</igx-grid>
+```
+
+```typescript
+public ngAfterViewInit() {
+    this.remoteService.getData(this.grid.virtualizationState, (data) => {
+        this.grid.totalItemCount = data["@odata.count"];
+    });
+}
+
+public dataLoading(evt) {
+    if (this.prevRequest) {
+        this.prevRequest.unsubscribe();
+    }
+    this.prevRequest = this.remoteService.getData(evt, () => {
+        this.cdr.detectChanges();
+    });
+}
+```
+
+When requesting data, users utilize the `IForOfState` interface, which provides the `startIndex` and `chunkSize` properties.
+
+***Note:*** The first `chunkSize` will always be 0 and should be determined by the user based on the specific application scenario.
+
+```typescript
+public getData(data?: IForOfState, cb?: (any) => void): any {
+    const dataState = data;
+    return this.http
+        .get(this.buildUrl(dataState))
+        .subscribe((d: any) => {
+            this._remoteData.next(d.value);
+            if (cb) {
+                cb(d);
+            }
+        });
+}
+
+private buildUrl(dataState: any): string {
+    let qS: string = "?";
+    let requiredChunkSize: number;
+    if (dataState) {
+        const skip = dataState.startIndex;
+
+        requiredChunkSize = dataState.chunkSize === 0 ?
+            // Set initial chunk size, the best value is igxForContainerSize divided on igxForItemSize
+            10 : dataState.chunkSize;
+        const top = requiredChunkSize;
+        qS += `$skip=${skip}&$top=${top}&$count=true`;
+    }
+    return `${this.url}${qS}`;
+}
+```
+
 ### Virtualization Limitations
 
 *   Variable row heights are not supported. All rows must have the same height.
