@@ -240,3 +240,9 @@ Here is a list of all public methods exposed by the **igx-for**:
 | `scrollNext()`  | Scrolls by one item into the  appropriate  next direction |
 | `scrollPrev()`  | Scrolls by one item into the  appropriate  previous direction|
 | `scrollTo(index)`  | Scrolls to the specified index |
+
+## Limitations
+
+| Name  | Description | Status |
+| :---- | :---------- | :----- |
+| Content Height Limitation | The browsers currently have height limitation for DOM elements. Because of that the total height of the rows shouldn't exceed the height limitation for the browsers. Otherwise there may be unexpected changes in behavior of the igxGrid. For example IE11 has height limitation of 1 533 916 pixels, which for rows with height 50px means no more than 30 678 rows. | Fix planned |
