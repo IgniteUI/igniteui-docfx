@@ -9,7 +9,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <div class="divider"></div>
 
 ### Radio Button Demo
-<div class="sample-container" style="height:300px">
+<div class="sample-container" style="height: 384px">
     <iframe id="form-elements-sample-iframe" src='{environment:demosBaseUrl}/radio-sample-2' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -33,58 +33,67 @@ import { IgxRadioModule } from 'igniteui-angular/main';
     imports: [..., IgxRadioModule],
     ...
 })
-export class AppModule {}
+export class AppModule {
+    public selected: any;
+}
 ```
-To get a simple radio button, add the following code inside the compnent template:
+To get a started with some radio buttons, add the following code inside the component template:
 
 ```html
-<igx-radio>
-    Simple radio button
-</igx-radio>
+<igx-radio [(ngModel)]="selected" value="option1">Option 1</igx-radio>
+<igx-radio [(ngModel)]="selected" value="option2">Option 2</igx-radio>
 ```
 
 If all went well, you should see something like the following in the browser:
 
-<div class="sample-container" style="height: 150px">
-<iframe src='{environment:demosBaseUrl}/radio-sample-1' width="100%" height="100%" seamless frameBorder="0"></iframe>
+<div class="sample-container" style="height: 88px">
+    <iframe src='{environment:demosBaseUrl}/radio-sample-1' width="100%" height="100%" seamless frameBorder="0"></iframe>
 </div>
 
 ###Properties
-Radio buttons are only useful when added in a group.
-So let's enhance the code above by adding four radio buttons, each responsible for applying a certain color as a backgroung. We will bind the backgroundColor property of the containing div element to the component's selectedColor peroprty. You will notice that selectedColor also participates in a two way binding through the NgModel directive, therefore its value is updated each time the user selects a different radio button (color).
+Radio buttons are only useful when added in a group. Let's enhance the code above by adding four radio buttons, each responsible for applying a certain color as a background. We will bind the backgroundColor property of a div element to the component's selectedColor property. You will notice that selectedColor also participates in a two way binding relation through the NgModel directive, therefore its value is updated each time the user selects a different radio button(color).
 
 ```typescript
 // radiogroup.component.ts
 ...
-title = "Select Background";
+public title = "Select Background";
 
-public colors = ['Yellow', 'Red', "Green", "Transparent"];
+public colors = [{
+    hex: "#f06a2f",
+    name: "Carrot"
+}, {
+    hex: "#ff134a",
+    name: "Watermelon"
+}, {
+    hex: "#7bc96f",
+    name: "Grass"
+},
+{
+    hex: "transparent",
+    name: "No color"
+}];
 
-public selectedColor: string = this.colors[3];
-
+public selectedColor: string = this.colors[3].hex;
 ```
 
 ```html
 <!--radiogroup.component.html-->
+<igx-radio *ngFor="let color of colors" 
+    name="color" 
+    [value]="color.hex" 
+    [(ngModel)]="selectedColor">
+    {{color.name}}
+</igx-radio>
 
-<h2>{{title}}</h2>
-<div [style.background-color]="selectedColor">
-    <igx-radio *ngFor="let color of colors" 
-                name="color group" 
-                checked="selectedColor" 
-                [value] = "color" 
-                [(ngModel)]="selectedColor">
-        <div>{{color}}</div>
-    </igx-radio>
-</div>
+<div class="box" [style.background-color]="selectedColor"></div>
 ```
 
 Pay attention that before using the ngModel directive in a two-way data binding, you must import the FormsModule and add it to the NgModule's imports list.
 
 Try it! The final result would be something like that:
 
-<div class="sample-container" style="height: 300px">
-<iframe src='{environment:demosBaseUrl}/radio-sample-2' width="100%" height="100%" seamless frameBorder="0"></iframe>
+<div class="sample-container" style="height: 384px">
+    <iframe src='{environment:demosBaseUrl}/radio-sample-2' width="100%" height="100%" seamless frameBorder="0"></iframe>
 </div>
 
 ### API Summary
