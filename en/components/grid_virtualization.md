@@ -38,6 +38,16 @@ The size of the data chunks are determined by:
 
 Not specifying the required sizes will, in most cases, create a grid that is not virtualized. For example a grid with no height will render ***all*** rows at once and grow naturally based on their total size, while a grid that has set width but with columns without one is expected to render them in the available space without a scrollbar. The latter applies to grids with column widths in percentages (%) as well.
 
+### Grid Remote Virtualization Demo
+
+<div class="sample-container loading" style="height:550px">
+    <iframe id="grid-sample-4-iframe" src='{environment:demosBaseUrl}/grid-sample-4' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="grid-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+
 ### Virtualization Limitations
 
 *   Variable row heights are not supported. All rows must have the same height.
