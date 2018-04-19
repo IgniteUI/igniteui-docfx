@@ -8,11 +8,9 @@ _language: ja
 
 カテゴリー チャートは軽量で高パフォーマンスなチャートです。このチャートは、シンプルで直感的な API を使用したカテゴリ データの表示を簡単に構成できます。データ (コレクションまたはコレクションのコレクション) をバインドするだけで後の作業はチャートがすべて行います。
 
-<div class="divider"></div>
-
 ### Category Chart デモ
 
-<div class="sample-container" style="height: 650px">
+<div class="sample-container" style="height: 550px">
     <iframe id="category-chart-overview-sample-iframe" src='{environment:demosBaseUrl}/category-chart-overview-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>

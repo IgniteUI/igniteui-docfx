@@ -8,11 +8,9 @@ _language: ja
 
 igxCategoryChart は、各シリーズ タイプにデフォルト ツールチップを提供します。デフォルト ツールチップは特定のシリーズ項目に関連するすべての情報を表示します。これはシリーズ タイトル、データ値、および軸値を含みます。シリーズのスタイルと一致します。デフォルト ツールチップのコンテンツおよびルック アンド フィールを変更するためにカスタム ツールチップを構成できます。
 
-<div class="divider"></div>
-
 ### カスタム ツールチップ デモ
 
-<div class="sample-container" style="height: 650px">
+<div class="sample-container" style="height: 550px">
     <iframe id="category-chart-custom-tooltips-iframe" src='{environment:demosBaseUrl}/category-chart-custom-tooltips' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>

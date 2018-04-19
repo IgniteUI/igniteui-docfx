@@ -8,8 +8,6 @@ _language: ja
 
 igxCategoryChart は、以下のデモで表示されるように、数百万のデータ ポイントに及ぶ大量のデータを処理しできます。
 
-<div class="divider"></div>
-
 ### 大量データを使用したデモ
 
 <div class="sample-container" style="height: 570px">

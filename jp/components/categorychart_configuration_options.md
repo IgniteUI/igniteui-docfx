@@ -8,11 +8,9 @@ _language: ja
 
 マーカー、チャート タイトルとサブタイトル、およびチャート タイプなどのカテゴリ チャート機能をカスタマイズできます。このページは、カスタマイズされたカテゴリ チャートを作成するために設定するプロパティをコード例を使用して説明します。
 
-<div class="divider"></div>
-
 ### 構成オプション デモ
 
-<div class="sample-container" style="height: 650px">
+<div class="sample-container" style="height: 550px">
     <iframe id="category-chart-configuring-sample-iframe" src='{environment:demosBaseUrl}/category-chart-configuring-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>

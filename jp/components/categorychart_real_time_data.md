@@ -8,8 +8,6 @@ _language: ja
 
 igxCategoryChart は、数百万のデータ ポイントに及ぶ大量のデータを処理し、それらを数ミリ秒ごとに更新する機能を備えます。以下のデモはカテゴリ チャート コンポーネントのパフォーマンスを紹介します。
 
-<div class="divider"></div>
-
 ### リアルタイム データ デモ
 
 <div class="sample-container" style="height: 570px">

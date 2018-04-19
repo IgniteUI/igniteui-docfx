@@ -44,12 +44,16 @@
       href: financialchart_performance.md
     - name: 大容量のパフォーマンス
       href: financialchart_performance_high_volume.md
-    - name: データ バインド
-      href: financialchart_binding_data.md
+    - name: ライブ データへのバインド
+      href: financialchart_binding_to_live_data.md
+    - name: 複数データ ソースへのバインド
+      href: financialchart_binding_to_multiple_data.md
     - name: 軸
       href: financialchart_axis.md
     - name: ペイン
       href: financialchart_panes.md
+    - name: カスタム インジケーター
+      href: financialchart_custom_indicators.md
     - name: 構成
       href: financialchart_configuring.md
     - name: カスタム ツールチップ

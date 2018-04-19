@@ -10,11 +10,9 @@ Financial Chart コントロールでは、軸は軸線、目盛、タイトル�
 
 デフォルトでは、ラベルを明示的に設定する必要はありません。Financial Chart は、データ内で最初の適切なプロパティを使用し、ラベルに使用します。
 
-<div class="divider"></div>
-
 ### Financial Chart 軸デモ
 
-<div class="sample-container" style="height: 650px">
+<div class="sample-container" style="height: 550px">
     <iframe id="financial-chart-axis-sample-iframe" src='{environment:demosBaseUrl}/financial-chart-axis-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
