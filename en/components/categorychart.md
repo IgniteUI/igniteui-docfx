@@ -1,11 +1,11 @@
 ---
-title: Category Chart Component
-_description: The Ignite UI for Angular Category Chart component is a touch-enabled, highly performant, lightweight charting control that makes visualizing category data a breeze.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Chart component, Angular Category Chart component, Angular Chart controls, Angular Category Chart controls, Data Visualization
+title: Category Chart Component - Native Angular | Ignite UI for Angular 
+_description: The Ignite UI for Category Chart component simplifies the complexities of the data visualization domain into manageable API so that a user can bind a collection of data, a group of collections, and a data property, and let the charting control do the rest. 
+_keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Chart Control, Angular Chart Example, Angular Grid Component, Angular Chart Component, Angular Category Chart 
 ---
 ## Category Chart 
 
-The igxCategoryChart is a lightweight, highly performant chart. This chart can be easily configured to display category data using an extremely simple and intuitive API. All you need to do is bind your data (a collection or a collection of collections) and the chart takes care of everything else.
+The Category Chart is a charting component that makes visualizing category data easy to do. The control simplifies the complexities of the data visualization domain into manageable API. A user can bind a collection of data, a group of collections, and a data property and let the charting control do the rest. The component will analyze the data and then automatically choose the best series to represent the data. Furthermore, the user can instead set the ‘chartType’ property to choose from predefined charts, such as: Line, Area, Column, Point, Spline, Spline Area, Step Areas, Step Line, and Waterfall.  
 
 ### Category Chart Demo
 

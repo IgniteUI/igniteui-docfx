@@ -1,12 +1,12 @@
 ---
-title: Performance - High Volume
-_description: The Ignite UI for Angular Financial Chart component is a touch-enabled, highly performant, lightweight charting control that makes visualizing financial data a breeze.
-_keywords: Ignite UI for Angular, Data Visualization, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Chart component, Angular Financial Chart component, Angular Chart controls, Angular Financial Chart controls, Data Visualization
+title: Financial Chart - High Volume Data
+_description: The Ignite UI for Angular Financial Chart component is easily configured to display financial data using a simple and intuitive API, as once the user binds the data, the chart offers multiple ways in which the data can then be visualized and interpreted. 
+_keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Chart Control, Angular Chart Example, Angular Grid Component, Angular Chart Component, Angular Financial Chart 
 ---
-## Performance 
+## High Volume Data
 The igxFinancialChart is capable of handling high volumes of data as shown in the following demo. 
 
-### Performance Demo
+### High Volume Data Demo
 <div class="sample-container" style="height: 550px">
     <iframe id="financial-chart-high-volume-iframe" src='{environment:demosBaseUrl}/financial-chart-high-volume' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>

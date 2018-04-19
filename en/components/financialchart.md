@@ -1,11 +1,13 @@
 ---
-title: Financial Chart Component
-_description: The Ignite UI for Angular Financial Chart component is a touch-enabled, highly performant, lightweight charting control that makes visualizing financial data a breeze.
-_keywords: Ignite UI for Angular, Data Visualization, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Chart component, Angular Financial Chart component, Angular Chart controls, Angular Financial Chart controls, Data Visualization
+title: Financial Chart Component - Native Angular | Ignite UI for Angular 
+_description: The Ignite UI for Angular Financial Chart component is easily configured to display financial data using a simple and intuitive API, as once the user binds the data, the chart offers multiple ways in which the data can then be visualized and interpreted. 
+_keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Chart Control, Angular Chart Example, Angular Grid Component, Angular Chart Component, Angular Financial Chart 
 ---
 ## Financial Chart 
 
-The Financial Chart is a lightweight, high-performance chart. This chart can be easily configured to display financial data using an extremely simple and intuitive API. All you need to do is bind your data (a collection or a collection of collections) and the chart takes care of everything else. The chart analyzes the structure of the data source bound to the 'data' property. It plots one financial price series for each collection found in the data source. Also, it analyzes data items of each collection by searching for 5 numeric data columns with Open, High, Low, Close, Volume names and 1 date time column with Time name. The chart offers multiple ways for the user to visualize and interpret the data, including several display modes for price and volume, and many financial indicators. The chart also makes use of label formatting to give the data context. 
+The Financial Chart is a charting component that makes it easy to visualize financial data by using a simple and intuitive API. Once the user binds the data, the chart offers multiple ways in which the data can then be visualized and interpreted. There are several display modes for price and volume and a host of financial indicators. The chart also makes use of label formatting to give context to the data.  
+ 
+The financial chart component analyzes and selects data columns - Date/Time column to use for x-axis and Open, High, Low, Close, Volume columns or the first 5 numeric columns for y-axis. Beyond this, the user can specify the chart type to either Bar, Candle, Column, and Line. With its five main visual elements, a toolbar, a prices view, a volume view, an indicators view, and a navigation view, data has become more perceptible.  
 
 ### Financial Chart Demo
 
