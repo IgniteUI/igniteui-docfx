@@ -9,9 +9,6 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 Displays a summary row for the data in the columns of the grid. There are predefined summary functions, but you can create custom function to calculate custom summaries.
 Grid **summaries** can also be enabled on a per-column level, which means that you can activate it only for columns that you need to.
 
-> [!NOTE]
-> The summary of the column is a **function of all column values**, unless filtering is applied, then the summary of the column will be **function of the filtered result values**
-
 ### Grid Demo
 
 <div class="sample-container loading" style="height:750px">
@@ -54,6 +51,9 @@ For `date` data type, the following functions are available:
     </igx-column>
 </igx-grid>
 ```
+
+> [!NOTE]
+> The summary of the column is a **function of all column values**, unless filtering is applied, then the summary of the column will be **function of the filtered result values**
 
 The other way to enable/disable summaries for a specific column or a list of columns is to use the public method `enableSummaries`/`disableSummaries` of the **igx-grid**.
 
