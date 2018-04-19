@@ -77,6 +77,7 @@ public columnPinning(event) {
 * [Sorting](grid_sorting.html)
 * [Summaries](grid_summaries.html)
 * [Column Resizing](grid_column_resizing.html)
+* [Selection](grid_selection.html)
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.
