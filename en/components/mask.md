@@ -1,12 +1,12 @@
 ---
-title: Mask Directive
-_description: The Mask directive is intended to provide means for controlling user input and formatting the visible value based on configurable mask rules.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular mask directive, Mask, Directive, Mask Editor, Angular Mask Editor
+title: Mask Directive Component - Native Angular | Ignite UI for Angular
+_description: With the Mask Directive in Ignite UI for Angular, the developer can control user input and format the visible value based on configurable mask rules, providing different input options and ease in use and configuration.
+_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular mask directive, Mask, Directive, Mask Editor, Angular Mask Editor
 ---
 
 ##Mask
-<p class="highlight">The Ignite UI for Angular Mask directive provides a convenient way to format user input through configurable mask rules. Masks are important when the input should obey a specific format, like for example a phone number. They also provide a visual clue for the end user what is expected as input. Mask directive can be used in template-driven or reactive forms.</p>
-<div class="divider--half"></div>
+
+With the mask directive in Ignite UI for Angular, the developer can control user input and format the visible value based on configurable mask rules. It provides different input options and ease in use and configuration.
 
 ### Mask Demo
 <div class="sample-container loading" style="height: 280px">

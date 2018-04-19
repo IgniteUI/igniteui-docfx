@@ -6,13 +6,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ### Grid Filtering
 
-
-**Filtering** can be enabled on a per-column level, by setting a column `filterable` property to true.
-
-```html
-<igx-column field="ProductName" filterable="true" dataType="string"></igx-column>
-<igx-column field="Price" filterable="true" dataType="number"></igx-column>
-```
+The Grid component in Ignite UI for Angular provides extensive filtering API through the Data Container to which the grid is bound. There's a default filtering strategy provided out of the box, as well as all the standard filtering conditions, which the developer can replace with their own implementation. In addition, we've provided a way to easily plug in your own custom filtering conditions. The Grid currently provides not only a simplistic filtering UI but also more complex filtering options.
 
 #### Grid Demo
 
@@ -30,7 +24,10 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 Depending on the set `dataType` of the column the correct set of [**filtering conditions**](#filtering-conditions) will be loaded inside the filter UI dropdown. Additionally, you can set the `filteringIgnoreCase` and the initial `filteringCondition` property of the column.
 
-#### Filtering through the API
+```html
+<igx-column field="ProductName" filterable="true" dataType="string"></igx-column>
+<igx-column field="Price" filterable="true" dataType="number"></igx-column>
+```
 
 You can filter any column or a combination of columns through the grid API. The grid exposes two methods for this task:
 

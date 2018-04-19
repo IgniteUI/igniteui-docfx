@@ -1,13 +1,12 @@
 ---
-title: Tabs Component
-_description: Display tabs for any occasion and implement a completely tabbed user interface. These UI controls manage every aspect of your tabs’ appearance and behavior.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Tabs component, Angular Tabs controls
+title: Tabs Component - Native Angular | Ignite UI for Angular 
+_description: The Ignite UI for Angular Tabs component places tabs at the top and allows for scrolling when there are multiple tab items on the screen. 
+_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Components, Native Angular Controls, Native Angular Components Library, Angular Tabs component, Angular Tabs controls, Angular Tabs
 ---
 
 ## Tabs
 
-<p class="highlight">The Ignite UI for Angular Tabs component enables the user to switch between different views. The Tabs component places the tabs headers at the top and allows scrolling when there are multiple tab items outside the visible area. Tabs items are ordered in a single row above their associated content.</p>
-<div class="divider--half"></div>
+The tabs component in Ignite UI for Angular is used to organize or switch between similar data sets. It functions as a wrapper for `igx-tab-item` and `igx-tabs-group`, as these respectively represent the container for the data and the tab header. The tabs component also places tabs at the top and allows for scrolling when there are multiple tab items on the screen.
 
 ### Tabs Demo
 <div class="sample-container loading" style="height: 250px; width: 600px;">

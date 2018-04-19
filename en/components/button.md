@@ -4,9 +4,9 @@ _description: Enhance standard buttons with built-in text, images and more featu
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Buttons components, Angular Buttons controls
 ---
 
-##Button
-<p class="highlight">The Button directive is intended to be used on any button, span, div, or anchor element to turn it into a fully functional button.</p>
-<div class="divider"></div>
+###Button
+
+The Button directive within Ignite UI for Angular is intended to be used on any button, span, div, or anchor element to turn it into a fully functional button. 
 
 ### Button Demo
 

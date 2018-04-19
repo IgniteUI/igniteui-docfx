@@ -1,7 +1,7 @@
 ﻿---
-title: Time Picker コンポーネント
-_description: Ignite UI for Angular Time Picker コントロールを使用して web アプリケーションにダイアログから時間を選択する機能を追加できます。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Time Picker コンポーネント, Angular Time Picker コントロール、タイムピッカー
+title: Time Picker Component - Native Angular | Ignite UI for Angular 
+_description: The Ignite UI for Angular Time Picker component allows the user to select time from a dialog with spinners which is then mirrored in the input field. 
+_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Components, Angular Time Picker component, Angular Time Picker control, Time Picker, Angular Time Picker
 _language: ja
 ---
 

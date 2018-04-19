@@ -6,7 +6,8 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ## Button Group
 
-The **igx-ButtonGroup** component provides a button group functionality to developers and also allows horizontal/vertical alignment, single/multiple selection along with toggling. The igx-ButtonGroup component makes use of the [igxButton directive.](button.md)
+The **igx-ButtonGroup** component in Ignite UI for Angular provides a button group functionality to developers with horizontal/vertical alignment and single/multiple selection along with toggling. The igx-ButtonGroup component makes use of the [igxButton directive.](button.md)
+
 ### Button Group Demo
 
 <div class="sample-container" style="height: 436px">

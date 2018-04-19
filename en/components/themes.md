@@ -1,13 +1,12 @@
 ---
-title: Themes
-_description: Ignite UI for Angular Avatar control enables users to add images, material icons or initials within any application for instances such as a profile button.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Avatar component, Angular Avatar control
+title: Theming Component - Native Angular | Ignite UI for Angular
+_description: The Ignite UI for Angular Theming component was developed through SASS with a low-difficulty API that offers restyling of one component, multiple components, or the entire suite.
+_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Components, Angular Theming Component, Angular Theming
 ---
 
 ## Themes
 
-<p class="highlight">Ignite UI for Angular includes a comprehensive set of **<a href="http://sass-lang.com/" target="_blank">Sass</a>** functions and mixins, giving you the power to easily style your entire application or only certain parts of it.</p>
-<div class="divider"></div>
+With only a few lines of code, users can easily change the theming for their components. Being developed through SASS, the API use is low-difficulty and offers restyling of one component, multiple components, or the entire suite.
 
 ### The Essence of a Theme
 

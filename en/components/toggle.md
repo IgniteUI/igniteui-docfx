@@ -1,13 +1,12 @@
 ---
-title: Toggle Directive
-_description: Using any content wrapped into an element which implements the toggle directive become a box you can open and close intuitively through a native Angular framework with Ignite UI for Angular Toggle directive.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Toggle directives, Angular Toggle controls
+title: Toggle Component - Native Angular | Ignite UI for Angular 
+_description: The Ignite UI for Angular Toggle directive allows the users to open, to interact with, to apply animations, and to close a toggle container. 
+_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Components, Angular Toggle directives, Angular Toggle controls, Angular Toggle Component,
 ---
 
 ##Toggle
 
-<p class="highlight">The ignite UI for Angular Toggle directive wraps a content into a box which could be opened and respectively closed programmatically or interactively.</p>
-<div class="divider"></div>
+The igxToggle directive allows the users to open, to interact with, to apply animations, and to close a toggle container. All toggle components implement the `igxToggle` or `igxToggleAction` internally, and users can implement toggle-based components and views, like dropdowns, while the `igxToggleAction` directive controls other components until the toggle umbrella.
 
 ###Toggle Demo
 
