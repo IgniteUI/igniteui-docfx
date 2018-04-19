@@ -104,7 +104,7 @@ $(function() {
   }
 
   // Set note blocks titles
-  async function renderNoteBlocks() {
+  function renderNoteBlocks() {
     var title, newHeaderElement;
 
     $(".alert").each(function(i) {
