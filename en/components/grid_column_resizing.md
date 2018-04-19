@@ -6,7 +6,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ## Grid Column Resizing
 
-<p class="highlight">Column resizing feature allows the user to change the width of a certain column at runtime. The `igx-grid` control supports **deferred column resizing**. Clicking on the right header border displays a temporary resize indicator that can be dragged left ot right, serving as a preview. The column does not change its width while dragging the resize indicator. The new size is applied only when the drag operation is over. Resizing a certain column affects the overall width of the grid, so the rest of the columns will preserve their current widths.</p>
+<p class="highlight">Column resizing feature allows the user to change the width of a certain column at runtime. The `igx-grid` control supports **deferred column resizing**. Clicking on the right header border displays a temporary resize indicator that can be dragged left or right, serving as a preview. The column does not change its width while dragging the resize indicator. The new size is applied only when the drag operation is over. Resizing a certain column affects the overall width of the grid, so the rest of the columns will preserve their current widths.</p>
 <div class="divider"></div>
 
 ### Grid Column Resizing Demo
