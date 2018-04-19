@@ -1,4 +1,9 @@
-# Writing an article
+## In this topic
+ ### 1. [Writing an article](#writing-an-article)
+ ### 2. [Workflow](#workflow)
+ ### 3. [StackBlitz configuration](#stackblitz)
+
+# <a name='#writing-an-article'>Writing an article</a>
 
 When writing an article about a specific component, it is important to have a plan that you stick to. This will improve the overall cohesion of the text, making it more structured and clear for the reader.
 
@@ -29,3 +34,63 @@ There are a few questions one can ask, when charting such plan.
 ### 7. Do we have a summary of the article and component APIs?
 
 ### 8. Where does one find further help related to the topic of the article?
+
+# <a name='#workflow'>Workflow</a>
+
+When working on an issue for the Ignite UI Angular DocFX Site Builder, you need to be aware of and to follow a correct status workflow. We have created a number of status labels in order to communicate well what the current status of a single issue/pull request is. The statuses are as follows:
+
+## Development - applicable to issues and pull requests
+1. `status: in-review` this is the initial status of an issue. If the label is not placed, go ahead and place it.
+2. `status: in-development` this is the status once you start working on an issue. Assign the issue to yourself if it hasn't been assigned already and remove the previous status and assign it an in development status.
+3. `status: by-design` this is the status of an issue that has been reviewed and has been determined that the current design of the feature is such that the issue describes the correct behavior as incorrect. Remove other statuses and place this status if you've reviewed the issue.
+4. `status: third-party-issue` this is the status of an issue that has been reviewed, has been determined to be an issue, but the root case is not in the Ignite UI for Angular code. Example would be browser specific bugs caused by the particular browser's rendering or JavaScript engines, or an issue with the Angular framework. Remove other statuses and place only this one if you're the one performing the investigation.
+5. `status: not-to-fix` this is the status of issues that derive from our code, but have been decided to leave as is. This is done when fixes require general design and/or architecture changes and are very risky.
+
+> Note: In most cases the development will be related to new topics creation or updating of existing one. Keep in mind that **for each newly added topic the toc.yml should be updated with a reference to the new topic**. It is recommended `Additional references` section to be added at the end of each topic.
+
+## Testing - applicable to pull requests
+1. `status: awaiting-test` this is the initial status of pull requests. If you're performing the pull request, please place this status on it. Pull requests are accepted if and only if all status checks pass, review is performed, and the pull request has been tested and contains `status: verified`.
+2. `status: in-test` place this status once you pick up the pull request for testing.
+3. `status: verified` place this status once you've tested the pull request, have verified that the issue is fixed, and have included all necessary automated tests for the issue.
+4. `status: not-fixed` place this status once you've tested the pull request and you are still able to reproduce the issue it's attempting to fix. Then assign the developer back on the pull request.
+
+> Note: When you are assigned to test a PR related to new topic creation or updating an existing one:
+1. Check the build result.
+2. Be sure that `Writing an article` guidance is respected.
+3. Check whether the embed sample is working.
+4. Stackblitz demo is working as well (Button action).
+5. Each hyperlink is working properly.
+6. Table of content is correct.
+
+> Note: Testing a PR from Angular Samples (when new sample is added) with combination of PR related to topic update (or when new topic is added).
+Open both repositories and perform `npm start`. This will start both projects and you will see the embed sample in your topic under `localhost`.
+
+## Localization - applicable to issues and pull requests
+1. `status: pending-localization` this status tells that there are changes in the localization strings that need to be translated. When you make such changes, put this status badge without removing the other applicable ones and assign a person to do the translations.
+
+> Note: This status should be set only when the PR is approved. This will indicate that no further changes will be applied.
+2. `status: localized` this status is for issues that were with a pending translation status and have already been localized. Place this status label once these translation changes have been included in the current pull request, or the changes are already pulled with a different pull request.
+
+> Note: Keep in mind that when you submit a change in the EN .md files, you will need to make the same change in the JP version as well. This will help our Localization team to translate the change.
+
+
+# <a name='#stackblitz'>StackBlitz configuration</a>
+
+StackBlitz button should be added for each live editing sample.
+In order to do that, certain configuration should be added in the [angular samples](https://github.com/IgniteUI/igniteui-angular-samples) repository. More could be found here [To do](https://github.com/IgniteUI/igniteui-angular-samples/issues/130).
+
+
+StackBlitz button should be referencing the iframe provided by angular samples repo. Add the button in both the EN and JP versions of the documentation:
+
+```html
+<div class="sample-container loading" style="height: 477px">
+    <iframe id="list-sample-4-iframe" src='{environment:demosBaseUrl}/list-sample-4' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+```
+
+Here is an explanation of how the StackBlitz integration works. For each sample (grid-sample-1) a .json file is created (grid-sample-1.json). Each .json file contains the source code of the sample.
+
+All of the `.json` files are located under `/assets/samples` of [igniteui-angular-samples](https://github.com/IgniteUI/igniteui-angular-samples/) project. When you press a StackBlitz button, `igniteui-docfx` consumes a `.json` file from igniteui-angular-samples, creates a hidden `<form>` and submits it to StackBlitz using their [API](https://gist.github.com/EricSimons/72017ec7ba068a5b492ee39f9e3a7f32).
