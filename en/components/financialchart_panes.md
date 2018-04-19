@@ -5,7 +5,7 @@ _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Nati
 ---
 ## Financial Chart Panes
 
-The `igxFinancialChart` control has multiple panes to display financial data.
+The **igx-financial-chart** control has multiple panes to display financial data.
 
 * Price Pane - Renders prices using Line, Candlestick, Bar (OHLC), trendlines and financial overlays.
 * Indicator Pane - Renders all the financial indicators in a separate chart while the `BollingerBands` and `PriceChannel` overlays are rendered in the Price Pane because they share the same values range on Y-Axis.

@@ -5,7 +5,7 @@ _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Nati
 ---
 ## Financial Chart Axis
 
-In the `igxFinancialChart` control, an axis provides base properties for specifying appearance of axis main lines, tickmarks, titles, and axis labels.
+In the **igx-financial-chart** control, an axis provides base properties for specifying appearance of axis main lines, tickmarks, titles, and axis labels.
 
 By default, you do not need to explicitly set the labels. The Financial Chart will use the first appropriate property that it finds within the data you provided and will use that for the labels.
 
