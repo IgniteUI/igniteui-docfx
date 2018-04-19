@@ -20,9 +20,6 @@ Additionally there is a custom contextmenu added for sorting using **igx-grid**'
 </div>
 <div class="divider--half"></div>
 
-> [!NOTE]
-> The sorting operation **DOES NOT** change the underlying data source of the grid.
-
 
 **Sorting** is also enabled on a per-column level, meaning that the **igx-grid** can have a mix of sortable and non-sortable columns. This is done via the `sortable` input. As with the grid filtering you can also set the `sortingIgnoreCase` property to perform case sensitive sorting.
 
@@ -52,6 +49,9 @@ this.grid.clearSort('ProductName');
 // Removes the sorting state from every column in the grid
 this.grid.clearSort();
 ```
+
+> [!NOTE]
+> The sorting operation **DOES NOT** change the underlying data source of the grid.
 
 #### Initial sorting state
 
