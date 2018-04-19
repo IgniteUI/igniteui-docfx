@@ -25,10 +25,6 @@ _language: ja
 </div>
 <div class="divider--half"></div>
 
-> [!NOTE]
-> フィルタリング操作では、グリッドにバインドされているデータ ソースは変更**されません**。
-
-
 列で設定された `dataType` に基づいて、[**フィルター条件**](#フィルター条件)の正しいセットがフィルター UI ドロップダウンで読み込まれます。また、列の `filteringIgnoreCase` および最初の `filteringCondition` プロパティを設定できます。
 
 #### API でのフィルター
@@ -45,6 +41,9 @@ this.grid.filter('ProductName', 'myproduct', STRING_FILTERS.contains, true);
 ```
 
 必要なパラメーターは列フィールドおよびフィルター条件です。条件および大文字と小文字の区別が設定されない場合、列プロパティから推測されます。複数フィルターの場合、このメソッドはフィルター式の配列を受け取ります。
+
+> [!NOTE]
+> フィルタリング操作では、グリッドにバインドされているデータ ソースは変更**されません**。
 
 ```typescript
 // Multi column filtering

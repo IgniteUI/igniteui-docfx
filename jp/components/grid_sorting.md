@@ -22,9 +22,6 @@ _language: ja
 </div>
 <div class="divider--half"></div>
 
-> [!NOTE]
-> 並べ替え操作では、グリッドにバインドされているデータ ソースは変更**されません**。
-
 **並べ替え**も列ごとのレベルで有効化されます。つまり、**igx-grid** に並べ替え可能な列および並べ替え可能ではない列の両方を含むことが可能です。`sortable` 入力によって実行できます。グリッド フィルターと同じように、`sortingIgnoreCase` プロパティを設定すると、大文字と小文字を区別する並べ替えを実行できます。
 
 #### API での並べ替え
@@ -53,6 +50,9 @@ this.grid.clearSort('ProductName');
 // Removes the sorting state from every column in the grid
 this.grid.clearSort();
 ```
+
+> [!NOTE]
+> 並べ替え操作では、グリッドにバインドされているデータ ソースは変更**されません**。
 
 #### 初期の並べ替え状態
 
