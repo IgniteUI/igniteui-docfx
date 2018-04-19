@@ -7,17 +7,18 @@ _language: ja
 
 ### グリッドの並べ替え
 
-Sorts columns in an ascending or descending order. 
+列を昇順または降順に並べ替えます。
 
-### Grid Demo
-Additionally there is a custom contextmenu added for sorting using **igx-grid**'s onContextMenu Output.
+### Grid デモ
+
+以下のデモでは、**igx-grid** の `onContextMenu` 出力を使用してカスタム コンテキスト メニューが追加されました。
 
 <div class="sample-container loading" style="height:550px">
     <iframe id="grid-sample-iframe" src='{environment:demosBaseUrl}/grid-sorting-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="grid-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="grid-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
 </div>
 <div class="divider--half"></div>
 
