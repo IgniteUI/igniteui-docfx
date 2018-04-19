@@ -70,15 +70,13 @@ Enhance the component template by adding a switch for each setting and then bind
 <!--toggle.component.html-->
 
 <igx-switch *ngFor="let setting of settings" [checked]="setting.state">
-  <div style="width: 150px">
-      {{ setting.name }}
-  </div>
+    {{ setting.name }}
 </igx-switch>
 ```
 The final result would be something like that:
 
 <div class="sample-container" style="height: 200px">
-<iframe src='{environment:demosBaseUrl}/switch-sample-2' width="100%" height="100%" seamless frameBorder="0"></iframe>
+    <iframe src='{environment:demosBaseUrl}/switch-sample-2' width="100%" height="100%" seamless frameBorder="0"></iframe>
 </div>
 
 ### API Summary
