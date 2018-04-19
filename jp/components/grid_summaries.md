@@ -7,11 +7,11 @@ _language: ja
 
 ### グリッドの集計
 
-Displays a summary row for the data in the columns of the grid. There are predefined summary functions, but you can create custom function to calculate custom summaries.
+グリッドの列データの集計行を表示します。事前に設定された集計関数がありますが、カスタム関数を作成してカスタム集計を計算できます。
 グリッド**集計**を列ごとに有効できます。つまり、必要な列のみアクティブ化できます。
 
 > [!NOTE]
-> The summary of the column is a **function of all column values**, unless filtering is applied, then the summary of the column will be **function of the filtered result values**
+> 列の集計は**列値すべての関数**ですが、フィルタリングが適用された場合、列の集計は**フィルターされた結果値の関数**になります。
 
 ### Grid デモ
 
@@ -164,7 +164,7 @@ export class GridComponent implements OnInit {
 }
 ```
 
-Same applies for the case when `http` request is made, we should clean up the cache.
+`http` 要求が実行された場合にもキャッシュを更新します。
 
 ```typescript
 this.http.get<any[]>('/assets/data.json')

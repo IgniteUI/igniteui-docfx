@@ -13,10 +13,10 @@ igxFinancialChart コントロールはデータ列を自動的に解析して�
 ### 複数のデータ ソースへのバインド デモ
 
 <div class="sample-container" style="height: 650px">
-    <iframe id="financial-chart-binding-to-multiple-data-sources-iframe" src='{environment:demosBaseUrl}/financial-chart-binding-to-multiple-data-sources' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="financial-chart-multiple-data-iframe" src='{environment:demosBaseUrl}/financial-chart-binding-to-multiple-data-sources' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="financial-chart-binding-to-multiple-data-sources-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="financial-chart-multiple-data-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
     </button>
 </div>
 
