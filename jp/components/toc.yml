@@ -27,14 +27,14 @@
 - name: Category Chart
   href: categorychart.md
   items:
-    - name: パフォーマンス - 高頻度
-      href: categorychart_performance_high_frequency.md
-    - name: パフォーマンス - 大容量
-      href: categorychart_performance_high_volume.md
-    - name: 軸
-      href: categorychart_axis.md
-    - name: 構成
-      href: categorychart_configuring.md
+    - name: チャートのタイプの選択
+      href: categorychart_explore_chart_types.md
+    - name: リアルタイム データ
+      href: categorychart_real_time_data.md
+    - name: 大量なデータの処理
+      href: categorychart_high_volume_data.md
+    - name: 構成オプション
+      href: categorychart_configuration_options.md
     - name: カスタム ツールチップ
       href: categorychart_custom_tooltips.md 
 - name: Financial Chart
