@@ -27,43 +27,54 @@
   href: list.md
 - name: Charts
   header: true
-  href: categorychart.md
 - name: Category Chart
   href: categorychart.md
-  new: true
   items:
     - name: Explore Chart Types
       href: categorychart_explore_chart_types.md
+      new: true
     - name: Real Time Data
       href: categorychart_real_time_data.md
+      new: true
     - name: High Volume Data
       href: categorychart_high_volume_data.md
+      new: true
     - name: Configuration Options
       href: categorychart_configuration_options.md
+      new: true
     - name: Custom Tooltips
       href: categorychart_custom_tooltips.md
+      new: true
 - name: Financial Chart
   href: financialchart.md
-  new: true
   items:
     - name: Explore Chart Types
       href: financialchart_explore_chart_types.md
+      new: true
     - name: Real Time Data
       href: financialchart_real_time_data.md
+      new: true
     - name: High Volume Data
       href: financialchart_high_volume_data.md
+      new: true
     - name: Performance
       href: financialchart_performance.md
+      new: true
     - name: Binding to Multiple Data Sources
       href: financialchart_binding_to_multiple_data.md
+      new: true
     - name: Panes
       href: financialchart_panes.md
+      new: true
     - name: Configuration Options
       href: financialchart_configuration_options.md
+      new: true
     - name: Custom Indicators
       href: financialchart_custom_indicators.md
+      new: true
     - name: Custom Tooltips
       href: financialchart_custom_tooltips.md
+      new: true
 - name: Styling & Themes
   header: true
 - name: Themes
