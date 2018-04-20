@@ -19,5 +19,7 @@ The igxCategoryChart provides default tooltips for each type of series. The defa
 
 <div class="divider--half"></div>
 
+The tooltip content is customized by creating a template for the tooltip as demonstrated in the following code.
+
 
 
