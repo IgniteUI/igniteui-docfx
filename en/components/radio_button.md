@@ -111,7 +111,7 @@ The following inputs are available on the **igx-radio** component:
 | `@Input()` required | boolean | Specifies the required state of the radio button. |
 | `@Input()` disabled | boolean | Specifies the disabled state of the radio button. |
 | `@Input()` disableRipple | boolean | Specifies the whether the ripple effect should be disabled for the radio button. |
-| `@Input()` labelPosition | string `|` enum RadioLabelPosition | Specifies the position of the text label relative to the radio button element. Possible values are "before" and "after". |
+| `@Input()` labelPosition | string or enum RadioLabelPosition | Specifies the position of the text label relative to the radio button element. Possible values are "before" and "after". |
 | `@Input("aria-labelledby")` ariaLabelledBy | string | Specify an external element by id to be used as label for the radio button. |
 <div class="divider"></div>
 
@@ -120,12 +120,14 @@ The following outputs are available on the **igx-radio** component:
 | Name | Type | Description |
 | :--- | :--- | :--- |
 | `@Output()` change | EventEmitter<IChangeRadioEventArgs> | Emitted when the radio button checked value changes. |
+<div class="divider"></div>
 
 ####Methods
 The following methods are available on the **igx-radio** component:
-| select |
-|:----------|
-| Selects the radio button. |
+| Name | Description|
+| :--- | :--- |
+| select | Selects the radio button. |
+<div class="divider"></div>
 
 ###Additional Resources
 <div class="divider--half"></div>
