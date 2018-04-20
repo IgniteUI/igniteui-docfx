@@ -23,13 +23,8 @@ By utilizing the `igxForOf` directive the Data Grid now optimizes DOM rendering 
 
 ### Enabling Virtualization
 
-Virtualization is automatically enabled if the size of the related grid dimension is set.
 
-*   height for vertical (row) virtualization. Can be set in pixels ("500px") or percentage("50%").
-
-*   width for horizontal (column) virtualization. Can be set in pixels ("500px") or percentage("50%").
-
-`igxGrid`'s `width` and `height` defaults to `100%` which will enable virtualization if the content displayed cannot fit inside the available space and scrollbars are required either vertically or horizontally. However, it is also possible to explicitly set the grid's `width` and/or `height` to `null` which means that the related dimension will be determined by the total size of the items inside. No scrollbar will then be shown and all items will be rendered along the respective dimension (columns if `width` is null and rows if height is `null`).
+`igxGrid`'s `width` and `height` defaults to `100%` which will enable virtualization if the content displayed cannot fit inside the available space and scrollbars are required either vertically or horizontally. However, it is also possible to explicitly set the grid's `width` and/or `height` to `null` which means that the related dimension will be determined by the total size of the items inside. No scrollbar will then be shown and all items will be rendered along the respective dimension (columns if `width` is `null` and rows if height is `null`).
 
 The size of the data chunks is determined by:
 
@@ -55,7 +50,7 @@ Explicitly setting column widths in percentages (%) will, in most cases, create 
 </div>
 
 
-To utilize this feature, users need to subscribe to the `onDataPreload` output so that they can make the appropriate request based on the arguments received, as well as set the public `igxGrid` property `totalItemCount` with the respective information coming from their service. 
+To utilize this feature, you need to subscribe to the `onDataPreLoad` output so that you make the appropriate request based on the arguments received, as well as set the public `igxGrid` property `totalItemCount` with the respective information coming from the service. 
 
 ```html
 <igx-grid #grid1 [data]="remoteData | async" (onDataPreLoad)="dataLoading($event)" >
@@ -81,9 +76,9 @@ public dataLoading(evt) {
 }
 ```
 
-When requesting data, users utilize the `IForOfState` interface, which provides the `startIndex` and `chunkSize` properties.
+When requesting data, you need to utilize the `IForOfState` interface, which provides the `startIndex` and `chunkSize` properties.
 
-***Note:*** The first `chunkSize` will always be 0 and should be determined by the user based on the specific application scenario.
+***Note:*** The first `chunkSize` will always be 0 and should be determined by you based on the specific application scenario.
 
 ```typescript
 public getData(data?: IForOfState, cb?: (any) => void): any {
@@ -98,7 +93,7 @@ public getData(data?: IForOfState, cb?: (any) => void): any {
         });
 }
 
-private buildUrl(dataState: any): string {
+private buildUrl(dataState: IForOfState): string {
     let qS: string = "?";
     let requiredChunkSize: number;
     if (dataState) {
