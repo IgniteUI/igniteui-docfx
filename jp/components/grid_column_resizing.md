@@ -9,6 +9,19 @@ _language: ja
 
 With deferred column resizing, the user will see a temporary resize indicator while the drag operation is in effect. The new column size is only put into its place once the drag operation has ended.
 
+#### Demo
+
+<div class="sample-container loading" style="height:550px">
+    <iframe id="grid-resizing-sample-iframe" src='{environment:demosBaseUrl}/grid-resizing-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="grid-resizing-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
+
+**Column resizing** is also enabled per-column level, meaning that the **igx-grid** can have a mix of resizable and non-resizable columns. This is done via the `resizable` input of the `igx-column`
+
 ```html
     <igx-column [field]="Name" [width]="'200px'" [resizable]="true"></igx-column>
     <igx-column [field]="AthleteNumber" [width]="'200px'"></igx-column>

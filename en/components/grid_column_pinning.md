@@ -8,9 +8,9 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 For Ignite UI for Angular, **Column Pinning** is available through the `igx-grid` API. Each column can be pinned, as long as the pinned area does not become wider than the grid itself. Column pinning is controlled through the pinned input of the `igx-column`. Pinned columns are always rendered on the left side of the grid and stay fixed through horizontal scrolling of the unpinned columns in the grid body.
 
-#### Column Pinning Demo
+#### Demo
 
-<div class="sample-container loading" style="height:530px">
+<div class="sample-container loading" style="height:550px">
     <iframe id="grid-sample-pinning-iframe" src='{environment:demosBaseUrl}/grid-sample-pinning' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>

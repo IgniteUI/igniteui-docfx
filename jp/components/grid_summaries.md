@@ -9,10 +9,7 @@ _language: ja
 
 The Grid component in ignite UI for Angular has a **summaries** feature that functions on a per-column level. The user is able to see the column information in a separate container with a predefined set of default summary items, depending on the type of data within the column.
 
-> [!NOTE]
-> 列の集計は**列値すべての関数**ですが、フィルタリングが適用された場合、列の集計は**フィルターされた結果値の関数**になります。
-
-### Grid デモ
+#### Demo
 
 <div class="sample-container loading" style="height:750px">
     <iframe id="grid-summary-sample-iframe" src='{environment:demosBaseUrl}/grid-summary' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -22,6 +19,9 @@ The Grid component in ignite UI for Angular has a **summaries** feature that fun
 <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="grid-summary-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 <div class="divider--half"></div>
+
+> [!NOTE]
+> 列の集計は**列値すべての関数**ですが、フィルタリングが適用された場合、列の集計は**フィルターされた結果値の関数**になります。
 
 **Grid summaries** can also be enabled on a per-column level in Ignite UI for Angular, which means that you can activate it only for columns that you need. Grid summaries gives you a predefined set of default summaries, depending on the type of data in the column, so that you can save some time:
 

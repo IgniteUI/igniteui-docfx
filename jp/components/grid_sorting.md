@@ -9,7 +9,7 @@ _language: ja
 
 In Ignite UI for Angular, **Sorting** is enabled on a per-column level, meaning that the igx-grid can have a mix of sortable and non-sortable columns. This is done via the `sortable` input. With the grid sorting, you can also set the `sortingIgnoreCase` property to perform case sensitive sorting.
 
-### Grid Demo
+#### Demo
 Additionally there is a custom contextmenu added for sorting using **igx-grid**'s onContextMenu Output.
 
 <div class="sample-container loading" style="height:550px">
