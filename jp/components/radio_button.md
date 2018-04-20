@@ -12,7 +12,7 @@ _language: ja
 
 ### Radio Button デモ
 
-<div class="sample-container loading" style="height:300px">
+<div class="sample-container loading" style="height:384px">
     <iframe id="form-elements-sample-iframe" src='{environment:demosBaseUrl}/radio-sample-2' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -37,21 +37,22 @@ import { IgxRadioModule } from 'igniteui-angular/main';
     imports: [..., IgxRadioModule],
     ...
 })
-export class AppModule {}
+export class AppModule {
+    public selected: any;
+}
 ```
 
-簡易なラジオ ボタンを作成するには、コンポーネントのテンプレートで以下のコードを追加します。
+ラジオ ボタンを作成するには、コンポーネントのテンプレートで以下のコードを追加します。
 
 ```html
-<igx-radio>
-    Simple radio button
-</igx-radio>
+<igx-radio [(ngModel)]="selected" value="option1">Option 1</igx-radio>
+<igx-radio [(ngModel)]="selected" value="option2">Option 2</igx-radio>
 ```
 
 以下は結果です:
 
-<div class="sample-container" style="height: 150px">
-<iframe src='{environment:demosBaseUrl}/radio-sample-1' width="100%" height="100%" seamless frameBorder="0"></iframe>
+<div class="sample-container" style="height: 88px">
+    <iframe src='{environment:demosBaseUrl}/radio-sample-1' width="100%" height="100%" seamless frameBorder="0"></iframe>
 </div>
 
 ### プロパティ
@@ -61,33 +62,45 @@ export class AppModule {}
 ```typescript
 // radiogroup.component.ts
 ...
-title = "Select Background";
+public title = "Select Background";
 
-public colors = ['Yellow', 'Red', "Green", "Transparent"];
+public colors = [{
+    hex: "#f06a2f",
+    name: "Carrot"
+}, {
+    hex: "#ff134a",
+    name: "Watermelon"
+}, {
+    hex: "#7bc96f",
+    name: "Grass"
+},
+{
+    hex: "transparent",
+    name: "No color"
+}];
 
+public selectedColor: string = this.colors[3].hex;
 ```
 
 ```html
 <!--radiogroup.component.html-->
 
-<h2>{{title}}</h2>
-<div [style.background-color]="selectedColor">
-    <igx-radio *ngFor="let color of colors" 
-                name="color group" 
-                checked="selectedColor" 
-                [value] = "color" 
-                [(ngModel)]="selectedColor">
-        <div>{{color}}</div>
-    </igx-radio>
-</div>
+<igx-radio *ngFor="let color of colors" 
+    name="color" 
+    [value]="color.hex" 
+    [(ngModel)]="selectedColor">
+    {{color.name}}
+</igx-radio>
+
+<div class="box" [style.background-color]="selectedColor"></div>
 ```
 
 双方向バインディングで ngModel ディレクティブを使用する前に、FormsModule をインポートし、NgModule の imports リストに追加する必要があります。
 
 以上を実行すると以下のような結果になります。
 
-<div class="sample-container" style="height: 300px">
-<iframe src='{environment:demosBaseUrl}/radio-sample-2' width="100%" height="100%" seamless frameBorder="0"></iframe>
+<div class="sample-container" style="height: 384px">
+    <iframe src='{environment:demosBaseUrl}/radio-sample-2' width="100%" height="100%" seamless frameBorder="0"></iframe>
 </div>
 
 ### API まとめ
@@ -107,7 +120,7 @@ public colors = ['Yellow', 'Red', "Green", "Transparent"];
 | `@Input()` required | boolean | ラジオ ボタンの必須状態を指定します。 |
 | `@Input()` disabled | boolean | ラジオ ボタンの無効状態を指定します。 |
 | `@Input()` disableRipple | boolean | リップル エフェクトをラジオ ボタンで無効にするかどうかを指定します。 |
-| `@Input()` labelPosition | string `|` enum RadioLabelPosition | ラジオ ボタン要素に対するテキスト ラベルの位置を指定します。可能となる値は  "before" と "after" です。 |
+| `@Input()` labelPosition | string または enum RadioLabelPosition | ラジオ ボタン要素に対するテキスト ラベルの位置を指定します。可能となる値は  "before" と "after" です。 |
 | `@Input("aria-labelledby")` ariaLabelledBy | string | ラジオ ボタンのラベルに使用される外部の要素を id によって指定します。 |
 
 <div class="divider"></div>
@@ -119,14 +132,16 @@ public colors = ['Yellow', 'Red', "Green", "Transparent"];
 | 名前 | 型 | 説明 |
 | :--- | :--- | :--- |
 | `@Output()` change | EventEmitter<IChangeRadioEventArgs> | ラジオ ボタンの checked 値が変更するときに発生します。 |
+<div class="divider"></div>
 
 #### メソッド
 
 以下のメソッドは **igx-radio** コンポーネントで利用できます。
 
-| select |
-|:----------|
-| ラジオ ボタンを選択します。 |
+| 名前 | 説明|
+| :--- | :--- |
+| select | ラジオ ボタンを選択します。 |
+<div class="divider"></div>
 
 ### 追加のリソース
 

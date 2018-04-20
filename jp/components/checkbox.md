@@ -110,7 +110,7 @@ statusChanged()
 | `@Input()` required | boolean | チェックボックスの必須状態を指定します。 |
 | `@Input()` disabled | boolean | チェックボックスの無効状態を指定します。 |
 | `@Input()` disableRipple | boolean | リップル エフェクトをチェックボックスで無効にするかどうかを指定します。 |
-| `@Input()` labelPosition | string `|` enum LabelPosition | チェックボックス要素に対するテキスト ラベルの位置を指定します。 |
+| `@Input()` labelPosition | string または enum LabelPosition | チェックボックス要素に対するテキスト ラベルの位置を指定します。 |
 | `@Input("aria-labelledby")` ariaLabelledBy | string | チェックボックスのラベルに使用される外部の要素を id によって指定します。 |
 
 <div class="divider"></div>
@@ -122,14 +122,16 @@ statusChanged()
 | 名前 | 型 | 説明 |
 | :--- | :--- | :--- |
 | `@Output()` change | EventEmitter<IChangeCheckboxEventArgs> | チェックボックスの checked 値が変更するときに発生します。 |
+<div class="divider"></div>
 
 #### メソッド
 
 以下のメソッドは **igx-checkbox** コンポーネントで利用できます。
 
-| toggle |
-|:----------|
-| チェックボックスのチェックされた状態を切り替えます。 |
+| 名前 | 説明|
+| :--- | :--- |
+| toggle | チェックボックスのチェックされた状態を切り替えます。 |
+<div class="divider"></div>
 
 ### 追加のリソース
 

@@ -7,9 +7,9 @@ _language: ja
 
 ### グリッドの仮想化とパフォーマンス
 
-Many modern applications require displaying big data in a way that is performant and seamless to the end user. For this reason, within Ignite UI for Angular, the `igxGrid` control now utilizes the `igxForOf` directive and virtualizes its content both vertically (the data records) and horizontally (the columns), allowing the user to scroll through a large set of data smoothly with optimal performance. By utilizing the `igxForOf` directive the Data Grid now optimizes DOM rendering and memory consumption by rendering only what is currently visible in the view port and swapping the displayed data while the user scrolls the data horizontally/vertically.
+最新のアプリケーションでは、高いパフォーマンスでシームレスに大きいデータ セットを表示する要件があります。このため、Ignite UI for Angular `igxGrid` コントロールは `igxForOf` ディレクティブを使用します。コンテンツを垂直方向 (データ レコード) および水平方向 (列) に仮想化します。ユーザーが大きいデータ セットでスムーズにスクロールできます。`igxForOf` ディレクティブを使用すると、ビューポートに表示されているデータのみを描画し、ユーザーがスクロールするときに表示されるデータを切り替えると、Data Grid は DOM 描画およびメモリ使用を最適化します。
 
-#### Demo
+#### デモ
 
 <div class="sample-container loading" style="height:550px">
     <iframe id="grid-sample-2-iframe" src='{environment:demosBaseUrl}/grid-sample-2' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -36,14 +36,14 @@ Many modern applications require displaying big data in a way that is performant
 
 必要なサイズを指定しない場合、仮想化がないグリッドを作成します。たとえば、高さが指定されないグリッドは**すべて**の行を一度に表示し、合計サイズに基づいて高さを増加します。幅が指定されたが列に幅が設定されないグリッドは列をすべて利用可能なスペースでスクロールバーなしで描画します。列幅がパーセンテージ (%) で定義されるグリッドにも適用します。
 
-### Grid Remote Virtualization Demo
+### Grid リモート仮想化デモ
 
 <div class="sample-container loading" style="height:550px">
     <iframe id="grid-sample-4-iframe" src='{environment:demosBaseUrl}/grid-sample-4' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="grid-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="grid-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
 </div>
 
 ### 仮想化の制限
@@ -88,6 +88,7 @@ Many modern applications require displaying big data in a way that is performant
 * [集計](grid_summaries.html)
 * [列のピン固定](grid_column_pinning.html)
 * [列のサイズ変更](grid_column_resizing.html)
+* [選択](grid_selection.html)
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。

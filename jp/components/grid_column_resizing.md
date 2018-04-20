@@ -9,7 +9,7 @@ _language: ja
 
 With deferred column resizing, the user will see a temporary resize indicator while the drag operation is in effect. The new column size is only put into its place once the drag operation has ended.
 
-#### Demo
+#### デモ
 
 <div class="sample-container loading" style="height:550px">
     <iframe id="grid-resizing-sample-iframe" src='{environment:demosBaseUrl}/grid-resizing-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -20,7 +20,7 @@ With deferred column resizing, the user will see a temporary resize indicator wh
 </div>
 <div class="divider--half"></div>
 
-**Column resizing** is also enabled per-column level, meaning that the **igx-grid** can have a mix of resizable and non-resizable columns. This is done via the `resizable` input of the `igx-column`
+**列のサイズ変更**も列ごとのレベルで有効化されます。つまり、**igx-grid** にサイズ変更可能な列およびサイズ変更可能ではない列の両方を含むことが可能です。`igx-column` の `resizable` 入力によって制御されます。
 
 ```html
     <igx-column [field]="Name" [width]="'200px'" [resizable]="true"></igx-column>
@@ -96,6 +96,7 @@ public onResize(event) {
 * [並べ替え](grid_sorting.html)
 * [集計](grid_summaries.html)
 * [列のピン固定](grid_column_pinning.html)
+* [選択](grid_selection.html)
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。

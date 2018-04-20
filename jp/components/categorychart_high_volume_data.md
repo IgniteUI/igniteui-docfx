@@ -1,18 +1,16 @@
 ﻿---
-title: Category Chart パフォーマンス
-_description: Ignite UI for Angular Category Chart コンポーネントは、カテゴリ データを表示するタッチ対応、高いパフォーマンス、軽量なチャート コントロールです。
-_keywords: Ignite UI for Angular, データ ビジュアライゼーション, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Chart コンポーネント, Angular Category Chart コンポーネント, Angular Chart コントロール, Angular Category Chart コントロール
+title: 大量なデータの処理
+_description: Ignite UI for Angular Category Chart コンポーネントは複雑なデータ ビジュアライゼーションを API によって簡素化できます。ユーザーがデータのコレクションまたはコレクションのグループにバインドし、データを指定するプロパティを設定後、チャート コントロールが残りの作業を処理します。
+_keywords: Ignite UI for Angular, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular チャート, Angular チャート コントロール, Angular チャート例, Angular チャート コンポーネント, Angular Category Chart
 _language: ja
 ---
-## 大容量時のパフォーマンス
+## 大量なデータの処理
 
 igxCategoryChart は、以下のデモで表示されるように、数百万のデータ ポイントに及ぶ大量のデータを処理しできます。
 
-<div class="divider"></div>
-
 ### 大量データを使用したデモ
 
-<div class="sample-container" style="height: 650px">
+<div class="sample-container" style="height: 570px">
     <iframe id="category-chart-performance-iframe" src='{environment:demosBaseUrl}/category-chart-high-volume-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>

@@ -9,7 +9,7 @@ _language: ja
 
 The Grid component in Ignite UI for Angular provides extensive filtering API through the Data Container to which the grid is bound. There's a default filtering strategy provided out of the box, as well as all the standard filtering conditions, which the developer can replace with their own implementation. In addition, we've provided a way to easily plug in your own custom filtering conditions. The Grid currently provides not only a simplistic filtering UI but also more complex filtering options.
 
-#### Demo
+#### デモ
 
 <div class="sample-container loading" style="height:600px">
     <iframe id="grid-sample-iframe" src='{environment:demosBaseUrl}/grid-filtering-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -19,10 +19,6 @@ The Grid component in Ignite UI for Angular provides extensive filtering API thr
 <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="grid-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
 </div>
 <div class="divider--half"></div>
-
-> [!NOTE]
-> フィルタリング操作では、グリッドにバインドされているデータ ソースは変更**されません**。
-
 
 列で設定された `dataType` に基づいて、[**フィルター条件**](#フィルター条件)の正しいセットがフィルター UI ドロップダウンで読み込まれます。また、列の `filteringIgnoreCase` および最初の `filteringCondition` プロパティを設定できます。
 
@@ -43,6 +39,9 @@ this.grid.filter('ProductName', 'myproduct', STRING_FILTERS.contains, true);
 ```
 
 必要なパラメーターは列フィールドおよびフィルター条件です。条件および大文字と小文字の区別が設定されない場合、列プロパティから推測されます。複数フィルターの場合、このメソッドはフィルター式の配列を受け取ります。
+
+> [!NOTE]
+> フィルタリング操作では、グリッドにバインドされているデータ ソースは変更**されません**。
 
 ```typescript
 // Multi column filtering
@@ -110,6 +109,7 @@ this.grid.filteringLogic = FilteringLogic.OR;
 * [集計](grid_summaries.html)
 * [列のピン固定](grid_column_pinning.html)
 * [列のサイズ変更](grid_column_resizing.html)
+* [選択](grid_selection.html)
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。

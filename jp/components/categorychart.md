@@ -1,18 +1,16 @@
 ﻿---
-title: Category Chart コンポーネント
-_description: Ignite UI for Angular Category Chart コンポーネントは、カテゴリ データを表示するタッチ対応、高いパフォーマンス、軽量なチャート コントロールです。
-_keywords: Ignite UI for Angular, データ ビジュアライゼーション, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Chart コンポーネント, Angular Category Chart コンポーネント, Angular Chart コントロール, Angular Category Chart コントロール
+title: Category Chart コンポーネント - ネイティブ Angular | Ignite UI for Angular 
+_description: Ignite UI for Angular Category Chart コンポーネントは複雑なデータ ビジュアライゼーションを API によって簡素化できます。ユーザーがデータのコレクションまたはコレクションのグループにバインドし、データを指定するプロパティを設定後、チャート コントロールが残りの作業を処理します。
+_keywords: Ignite UI for Angular, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular チャート, Angular チャート コントロール, Angular チャート例, Angular チャート コンポーネント, Angular Category Chart
 _language: ja
 ---
 ## Category Chart 
 
-カテゴリー チャートは軽量で高パフォーマンスなチャートです。このチャートは、シンプルで直感的な API を使用したカテゴリ データの表示を簡単に構成できます。データ (コレクションまたはコレクションのコレクション) をバインドするだけで後の作業はチャートがすべて行います。
-
-<div class="divider"></div>
+Category Chart はカテゴリ データを可視化するチャート コンポーネントです。複雑なデータ ビジュアライゼーションを API で簡素化できます。ユーザーがデータのコレクョンまたはコレクション グループにバインドし、データを指定するプロパティの設定後、残りの作業はチャート コントロールによって処理されます。コンポーネントはデータを解析し、データを表すための最適なシリーズを自動的に選択します。また、ユーザーが `chartType` プロパティを設定して定義済みのチャート タイプから選択できます。チャート タイプは折れ線、エリア、柱状、ポイント、スプライン、スプライン エリア、ステップ エリア、ステップ折れ線、およびウォーターフォールを含みます。
 
 ### Category Chart デモ
 
-<div class="sample-container" style="height: 650px">
+<div class="sample-container" style="height: 550px">
     <iframe id="category-chart-overview-sample-iframe" src='{environment:demosBaseUrl}/category-chart-overview-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>

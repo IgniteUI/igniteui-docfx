@@ -7,13 +7,13 @@ _language: ja
 
 ### グリッドのページング
 
-In Ignite UI for Angular, **Paging** is initialized on the root `igx-grid` component and is configurable via the `paging` and `perPage` inputs. Paging is a Boolean property that controls whether the feature is enabled, and the `perPage` property controls the visible records per page. Let’s update our grid to enable paging:
+Ignite UI for Angular で、**ページング**がルート `igx-grid` コンポーネントで初期化され、`paging` および `perPage` 入力によって構成できます。機能が有効かどうかを制御する paging は Boolean プロパティです。`perPage` プロパティはページごとで表示可能なレコードを制御します。グリッドでページングを有効にします。
 
 ```html
 <igx-grid #grid1 [data]="data | async" [paging]="true" [perPage]="20" [autoGenerate]="false"></igx-grid>
 ```
 
-#### Demo
+#### デモ
 
 <div class="sample-container loading" style="height:600px">
     <iframe id="grid-sample-iframe" src='{environment:demosBaseUrl}/grid-paging-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -72,6 +72,7 @@ this.grid.paging = false;
 * [集計](grid_summaries.html)
 * [列のピン固定](grid_column_pinning.html)
 * [列のサイズ変更](grid_column_resizing.html)
+* [選択](grid_selection.html)
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。

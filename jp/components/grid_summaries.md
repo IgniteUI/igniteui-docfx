@@ -9,7 +9,7 @@ _language: ja
 
 The Grid component in ignite UI for Angular has a **summaries** feature that functions on a per-column level. The user is able to see the column information in a separate container with a predefined set of default summary items, depending on the type of data within the column.
 
-#### Demo
+#### デモ
 
 <div class="sample-container loading" style="height:750px">
     <iframe id="grid-summary-sample-iframe" src='{environment:demosBaseUrl}/grid-summary' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -183,6 +183,7 @@ this.http.get<any[]>('/assets/data.json')
 * [並べ替え](grid_sorting.html)
 * [列のピン固定](grid_column_pinning.html)
 * [列のサイズ変更](grid_column_resizing.html)
+* [選択](grid_selection.html)
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
