@@ -54,7 +54,7 @@ import { IgxCategoryChartModule } from '@infragistics/ignite-ui-xplatform-for-an
 export class AppModule {}
 ```
 
-利用可能なシリーズのサブセットおよびその他のオプションの機能を除外するカテゴリ チャートの最小構成を読み込むことができます。それにより、CategoryChartCoreModule および LineSeriesDynamicModule などの使用されるシリーズの動的なモジュールのみを読み込みます。chartType が auto の場合、読み込んだシリーズ型が選択されます。
+利用可能なシリーズのサブセットおよびその他のオプションの機能を除外するカテゴリ チャートの最小構成を読み込むことができます。それにより、igxCategoryChartCoreModule および igxLineSeriesDynamicModule などの使用されるシリーズの動的なモジュールのみを読み込みます。`chartType` が `auto` の場合、読み込んだシリーズ型が選択されます。
 
 <div class="divider--half"></div>
 
@@ -62,7 +62,7 @@ export class AppModule {}
 
 カテゴリ チャート モジュールをインポートした後、チャートをデータにバインドします。
 
-カテゴリ チャート コントロールを作成するには、はじめにデータをバインドする必要があります。以下のコード スニペットは、シンプルなデータソースを作成する方法を示します。
+`igx-category-chart` コントロールを作成するには、はじめにデータをバインドする必要があります。以下のコード スニペットは、シンプルなデータソースを作成する方法を示します。
 
 ```typescript
 var data = [
