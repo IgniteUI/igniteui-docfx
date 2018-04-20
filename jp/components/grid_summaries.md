@@ -53,9 +53,6 @@ The Grid component in ignite UI for Angular has a **summaries** feature that fun
 </igx-grid>
 ```
 
-> [!NOTE]
-> 列の集計は**列値すべての関数**ですが、フィルタリングが適用された場合、列の集計は**フィルターされた結果値の関数**になります。
-
 特定の列または列のリストで集計を有効/無効にするもう 1 つの方法として **igx-grid** の `enableSummaries`/`disableSummaries` 公開メソッドがあります。
 
 ```typescript
