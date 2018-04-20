@@ -13,12 +13,16 @@
       href: grid_sorting.md
     - name: 集計
       href: grid_summaries.md
+      new: true
     - name: 列のピン固定
       href: grid_column_pinning.md
+      new: true
     - name: 列のサイズ変更
       href: grid_column_resizing.md
+      new: true
     - name: 選択
       href: grid_selection.md
+      new: true
 - name: List View
   href: list.md
 - name: チャート
@@ -39,6 +43,7 @@
       href: categorychart_custom_tooltips.md 
 - name: Financial Chart
   href: financialchart.md
+  new: true
   items:
     - name: パフォーマンス
       href: financialchart_performance.md
@@ -85,8 +90,10 @@
   href: label_input.md
 - name: Input Group
   href: input_group.md
+  new: true
 - name: Mask
   href: mask.md
+  new: true
 - name: Badge
   href: badge.md
 - name: Icon
@@ -123,6 +130,7 @@
   href: tabbar.md
 - name: Tabs
   href: tabs.md
+  new: true
 - name: Card
   href: card.md
 - name: Avatar
@@ -141,9 +149,12 @@
   href: date_picker.md
 - name: Time Picker
   href: time_picker.md
+  name: true
 - name: サービス
   header: true
 - name: CSV Exporter
   href: exporter_csv.md
+  new: true
 - name: Excel Exporter
   href: exporter_excel.md
+  new: true
