@@ -5,7 +5,7 @@ _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Nati
 ---
 ## Configuration Options
 
-The **igx-financial-chart** control provides many visuals that can be customized, such as the navigation behavior, trendline layers, overlays, chart titles and subtitles.
+The `igx-financial-chart` control provides many visuals that can be customized, such as the navigation behavior, trendline layers, overlays, chart titles and subtitles.
 This page will walk you through with code samples the different properties that required to be set in order to achieve a customized financial chart.
 
 ### Configuration Options Demo
@@ -21,7 +21,7 @@ This page will walk you through with code samples the different properties that 
 <div class="divider--half"></div>
 
 ### Configuring Navigations
-In the igxFinancialChart control, chart navigation is enabled by default. However, you can customize it by setting the following properties:
+In the `igx-financial-chart` control, chart navigation is enabled by default. However, you can customize it by setting the following properties:
 
 - `isHorizontalZoomEnabled` - This specifies if the chart can be horizontally zoomed through user interactions. By default, this property is set to true.
 - `isVerticalZoomEnabled` - This specifies if the chart can be vertically zoomed through user interactions. By default, this property is set to false.
