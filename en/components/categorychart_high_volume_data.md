@@ -5,7 +5,7 @@ _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Nati
 ---
 ## High Volume Data
 
-The igxCategoryChart is capable of handling high volumes of data, ranging into the millions of data points, as demonstated in the following demo.
+The Category Chart control is capable of handling high volumes of data, ranging into the millions of data points, as demonstated in the following demo.
 
 ### High Volume Data Demo 
 <div class="sample-container" style="height: 570px">

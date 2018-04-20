@@ -35,9 +35,7 @@ However, you can also explicitly specify the chart type by setting the `chartTyp
 
 Another example of the intuitive behavior of the Category Chart control is that you do not need to explicitly set the labels. The Category Chart will use the first appropriate string property that it finds within the data you provided and will use that for the labels.
 
-
 ### Dependencies
-
 The category chart is exported as an `NgModule`, you need to import the _IgxCategoryChartModule_ inside your `AppModule`:
 
 ```typescript
@@ -54,15 +52,14 @@ import { IgxCategoryChartModule } from '@infragistics/ignite-ui-xplatform-for-an
 export class AppModule {}
 ```
 
-It's also possible to load a more minimal configuration of category chart whereby it can only load a subset of the possible series, and exclude other optional features by instead loading the CategoryChartCoreModule, and the dynamic module for the series in question, e.g. LineSeriesDynamicModule. If the chartType is auto, it wil make sure to select a series type that has been loaded.
+It's also possible to load a more minimal configuration of category chart whereby it can only load a subset of the possible series, and exclude other optional features by instead loading the igxCategoryChartCoreModule, and the dynamic module for the series in question, e.g. igxLineSeriesDynamicModule. If the `chartType` is `auto`, it wil make sure to select a series type that has been loaded.
 
 <div class="divider--half"></div>
 
 ### Usage
-
 Now that the category chart module is imported, next step is to bind it to data.
 
-In order to create an igxCategoryChart control, you must first have data to bind it to. The following code snippet demonstrates how to create a simple data source. 
+In order to create an `igx-category-chart` control, you must first have data to bind it to. The following code snippet demonstrates how to create a simple data source. 
 
 ```typescript
 var data = [
@@ -87,7 +84,6 @@ The following code demonstrates how to bind the category chart to the above data
 <div class="divider--half"></div>
 
 ### Chart Types
-
 You can overwrite the default behavior of the category chart and set which type of chart should be displayed. This is done by setting the `chartType` property.
 Below are listed all of the types that the Category Chart supports.
 
@@ -95,7 +91,6 @@ Below are listed all of the types that the Category Chart supports.
 > Special case is the `auto` setting of that property. If `auto` is used the chart will analyze assigned data and will assign the most suitable chart type.
 
 #### Supported chart types
-
 Property|Description|Example
 ---|---|---
 `line`|Specifies category line series with markers at each data point|![](../images/category_chart_line.png)

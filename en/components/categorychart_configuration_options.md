@@ -61,7 +61,7 @@ By default, transition in animations are disabled and you can enable transition-
 
 Transition in animations can be configured in terms of transition type, speed of the individual data points relative to each other, and the easing transition (managed by an easing function).
 
-The transition type is configured by setting the transitionInMode option to the desired transition name. Automatic selection of the transition type based on the series type is possible, too, by setting the property to “Auto” (default).
+The transition type is configured by setting the transitionInMode option to the desired transition name. Automatic selection of the transition type based on the series type is possible, too, by setting the property to `Auto` (default).
 
 The following code example demonstrates how to enable transition in animations and have the chart accordion in from the right.
 
