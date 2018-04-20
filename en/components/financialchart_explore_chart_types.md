@@ -64,7 +64,7 @@ The following code example shows how to style labels on the x-axis using style p
 <div class="divider--half"></div>
 
 ### Axis Modes
-The igxFinancialChart control allows you to set different modes on the x-axis and the y-axis.
+The `igx-financial-chart` control allows you to set different modes on the x-axis and the y-axis.
 For the x-axis you can choose between the following modes:
 - Time - This mode will render space along the x-axis for gaps in data, for example no stock trading on weekends or holidays.
 - Ordinal - This mode will collapse date areas where data does not exist. This the default value.
