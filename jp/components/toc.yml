@@ -27,43 +27,54 @@
   href: list.md
 - name: チャート
   header: true
-  href: categorychart.md
 - name: Category Chart
   href: categorychart.md
-  new: true
   items:
     - name: チャートのタイプの選択
       href: categorychart_explore_chart_types.md
+      new: true
     - name: リアルタイム データ
       href: categorychart_real_time_data.md
+      new: true
     - name: 大量なデータの処理
       href: categorychart_high_volume_data.md
+      new: true
     - name: 構成オプション
       href: categorychart_configuration_options.md
+      new: true
     - name: カスタム ツールチップ
       href: categorychart_custom_tooltips.md 
+      new: true
 - name: Financial Chart
   href: financialchart.md
-  new: true
   items:
     - name: チャートのタイプの選択
       href: financialchart_explore_chart_types.md
+      new: true
     - name: リアルタイム データ
       href: financialchart_real_time_data.md
+      new: true
     - name: 大量なデータの処理
       href: financialchart_high_volume_data.md
+      new: true
     - name: パフォーマンス
       href: financialchart_performance.md
+      new: true
     - name: 複数データ ソースへのバインド
       href: financialchart_binding_to_multiple_data.md
+      new: true
     - name: ペイン
       href: financialchart_panes.md
+      new: true
     - name: 構成オプション
       href: financialchart_configuration_options.md
+      new: true
     - name: カスタム インジケーター
       href: financialchart_custom_indicators.md
+      new: true
     - name: カスタム ツールチップ
       href: financialchart_custom_tooltips.md
+      new: true
 - name: スタイルとテーマ
   header: true
 - name: Themes
