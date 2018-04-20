@@ -5,7 +5,7 @@ _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Nati
 ---
 ## Binding Financial Chart to Multiple Data Sources
 
-The **igx-financial-chart** control can bind easily to multiple data sources, as shown in the following demo.
+The `igx-financial-chart` control can bind easily to multiple data sources, as shown in the following demo.
 
 ### Binding to Multiple Data Sources Demo
 <div class="sample-container" style="height: 550px">
