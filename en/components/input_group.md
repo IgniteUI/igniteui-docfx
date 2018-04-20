@@ -1,14 +1,12 @@
 ---
-title: Input Group Component
-_description: With Ignite UI for Angular Input Group component, developers can create a single-line or multi-line text elements, add additional CSS styles and integrate with other controls.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Label components, Angular Label controls, Angular Input components, Angular Input controls, Input component, Input control, Label component, Label control, Angular Input Group components, Angular Input Group controls, Angular Input directive, Angular Label directive, Angular Forms, Angular Reactive Forms, Angular Form Validation
+title: Input Groups Component - Native Angular | Ignite UI for Angular
+_description: The Input Groups component in Ignite UI for Angular allows for easy-to-use and aesthetic forms, simplicity with inputting data, and provides mitigation for handling validation and errors.
+_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Components, Angular Label components, Angular Label controls, Angular Input components, Angular Input controls, Input component, Input control, Label component, Label control, Angular Input Group components, Angular Input Group controls, Angular Input directive, Angular Label directive, Angular Forms, Angular Reactive Forms, Angular Form Validation
 ---
 
 ## Input Group
-<p class="highlight">
-The Ignite UI for Angular Input Group component is used to create a single-line or multi-line text elements. Combined with the Label, Input, Suffix, Prefix and Hint directives, it helps you to cover common scenarios when dealing with form inputs.
-</p>
-<div class="divider--half"></div>
+
+Input groups in the Ignite UI for Angular controls allow developers to create easy-to-use and aesthetic forms. The user experiences simplicity with inputting data, and the inputs also provide mitigation for handling validation and errors.
 
 ### Input Group Demo
 <div class="sample-container" style="height:600px">

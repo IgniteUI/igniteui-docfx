@@ -7,8 +7,7 @@ _language: ja
 
 ## Virtual For ディレクティブ
 
-<p class="highlight">
-大量データをテンプレート化するために `ngForOf` の代わりに `igxForOf` を使用できます。`igxForOf` は、DOM 描画およびメモリ使用を最適化するために仮想化を使用します。仮想化はページング機能のようにデータをより小さいチャンクに分割します。このチャンクは、ユーザーがデータを水平/垂直にスクロールするときにコンテナー ビューポートで切り替えます。ページングの動作との違いは、仮想化が通常のスクロールバーの動作を装うことです。ディレクティブはスクロール可能なコンテナーを作成して、データの小さい部分を描画します。`igx-grid` で使用され、仮想化された `igx-list` を作成するために使用できます。</p>
+In Ignite UI for Angular, `igxForOf` is an alternative to `ngForOf` for templating large amounts of data. The `igxForOf` uses virtualization technology behind the scenes to optimize DOM rendering and memory consumption. Virtualization technology works similarly to Paging by slicing the data into smaller chucks which are swapped from a container viewport while the user scrolls the data horizontally/vertically. The difference with the Paging is that virtualization mimics the natural behavior of the scrollbar. The directive is creating scrollable containers and renders small chunks of the data. Is is used inside `igx-grid` and it can be used to build virtual `igx-list`.
 
 
 ### デモ
@@ -250,4 +249,8 @@ chunkLoading(evt) {
 | `scrollPrev()`  | 「前」の方向に 1 項目スクロールします。|
 | `scrollTo(index)`  | 指定されたインデックスへスクロールします。 |
 
+## Limitations
 
+| Name  | Description | Status |
+| :---- | :---------- | :----- |
+| Content Height Limitation | Browsers currently have height limitation for DOM elements. Because of that the total height of the rows shouldn't exceed the height limitation of the browsers. Otherwise there may be unexpected changes in behavior of `igxForOf`. For example Internet Explorer 11 has height limitation of 1 533 916 pixels, which for rows with height 50px means no more than 30 678 rows. | Fix planned |

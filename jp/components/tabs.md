@@ -1,13 +1,12 @@
 ﻿---
-title: Tabs コンポーネント
-_description: タブ付きのユーザー インターフェイスでタブを表示します。この UI コントロールはタブの外観および動作を管理します。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Tabs コンポーネント, Angular Tabs コントロール
+title: Tabs Component - Native Angular | Ignite UI for Angular 
+_description: The Ignite UI for Angular Tabs component places tabs at the top and allows for scrolling when there are multiple tab items on the screen. 
+_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Components, Native Angular Controls, Native Angular Components Library, Angular Tabs component, Angular Tabs controls, Angular Tabs
 ---
 
 ## Tabs
 
-<p class="highlight">Ignite UI for Angular Tabs コンポーネントは複数のビューの間の切り替え機能を提供します。Tabs コンポーネントはタブ ヘッダーを上側に配置し、表示されていないタブ項目がある場合にスクロールを許可します。Tabs 項目は関連コンテンツの上にある単一の行に配置されます。</p>
-<div class="divider--half"></div>
+The tabs component in Ignite UI for Angular is used to organize or switch between similar data sets. It functions as a wrapper for `igx-tab-item` and `igx-tabs-group`, as these respectively represent the container for the data and the tab header. The tabs component also places tabs at the top and allows for scrolling when there are multiple tab items on the screen.
 
 ### Tabs デモ
 <div class="sample-container loading" style="height: 250px; width: 600px;">

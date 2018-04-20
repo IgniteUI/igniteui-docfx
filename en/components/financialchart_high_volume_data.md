@@ -1,10 +1,11 @@
 ---
 title: Financial Chart - High Volume Data
-_description: The Ignite UI for Angular Financial Chart component is easily configured to display financial data using a simple and intuitive API, as once the user binds the data, the chart offers multiple ways in which the data can then be visualized and interpreted. 
-_keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Chart Control, Angular Chart Example, Angular Grid Component, Angular Chart Component, Angular Financial Chart 
+_description: The Ignite UI for Angular Financial Chart component is easily configured to display financial data using a simple and intuitive API, as once the user binds the data, the chart offers multiple ways in which the data can then be visualized and interpreted.
+_keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Chart Control, Angular Chart Example, Angular Grid Component, Angular Chart Component, Angular Financial Chart
 ---
 ## High Volume Data
-The igxFinancialChart is capable of handling high volumes of data as shown in the following demo. 
+
+The **igx-financial-chart** control is capable of handling high volumes of data. The following demo binds 20 years of data, with 1 hour intervals and displays the stock prices using line chart type.
 
 ### High Volume Data Demo
 <div class="sample-container" style="height: 550px">
@@ -18,9 +19,39 @@ The igxFinancialChart is capable of handling high volumes of data as shown in th
 
 There are several chart features and Angular specific features that affect performance of the chart and they should be considered when optimizing performance in your application.
 
-* When storing lots of data in properties in your components to bind against, you should make sure to set changeDetection: ChangeDetectionStrategy.OnPush in your @Component decorator.  
-     * Setting this will tell Angular not to dig deeply into changes within your data array, something you don't want Angular doing every change detection cycle.
-* Instead of Angular automatically telling the charts how they should react to data changes, its your responsibility to notify the components how the data they have been bound to has been modified. 
-    * Reacting to these delta notifications can be done much more efficiently than to have to compare a 1M record array for any changes, every time Angular runs a change detection. 
-    * Look for the notify* methods on each chart for more information about how to notify the chart of changes to the data it is bound against.
-* When Angular is in Debug mode, there is a lot of overhead in some browsers that will drag down performance. When evaluating real would performance always make sure to serve or build with --prod
+* When storing lots of data in properties in your components to bind against, you should make sure to set changeDetection: ChangeDetectionStrategy.OnPush in your @Component decorator. Setting this will tell Angular not to dig deeply into changes within your data array, something you don't want Angular doing every change detection cycle.
+
+The following code demonstrates how to bind the financial chart to high volumes of data.
+
+```typescript
+import { GenerateHourlyPricesService } from "../services/generate-hourly-prices.service";
+
+export class AppComponent {
+    public data: any;
+
+    constructor(private dataService: GenerateHourlyPricesService) {
+        const dateEnd = new Date(2018, 3, 20); // April 20, 2018
+        const dateStart = new Date(1998, 3, 20); // April 20, 1998
+        this.data = this.dataService.GetStockHistoryBetween(dateStart, dateEnd);
+    }
+}
+```
+
+```html
+ <igx-financial-chart
+    [dataSource]="data"
+    width="850px"
+    height="600px">
+ </igx-financial-chart>
+```
+
+<div class="divider--half"></div>
+
+### Additional Resources
+<div class="divider--half"></div>
+
+* [Chart Performance](financialchart_performance.html)
+* [Binding Real-Time Data](financialchart_real_time_data.html)
+* [Binding Multiple Data Sources](financialchart_binding_to_multiple_data.html)
+
+

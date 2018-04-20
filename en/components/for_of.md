@@ -6,10 +6,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ## Virtual For Directive
 
-<p class="highlight">
-`igxForOf` is now available as an alternative to `ngForOf` for templating large amounts of data. The `igxForOf` uses virtualization technology behind the scenes to optimize DOM rendering and memory consumption. Virtualization technology works similar to Paging by slicing the data into smaller chucks which are swapped from a container viewport while the user scrolls the data horizontally/vertically. The difference with the Paging is that virtualization mimics the natural behavior of the scrollbar.
-The directive is creating scrollable containers and renders small chunks of the data. Is is used inside `igx-grid` and it can be used to build virtual `igx-list`.
-</p>
+In Ignite UI for Angular, `igxForOf` is an alternative to `ngForOf` for templating large amounts of data. The `igxForOf` uses virtualization technology behind the scenes to optimize DOM rendering and memory consumption. Virtualization technology works similarly to Paging by slicing the data into smaller chucks which are swapped from a container viewport while the user scrolls the data horizontally/vertically. The difference with the Paging is that virtualization mimics the natural behavior of the scrollbar. The directive is creating scrollable containers and renders small chunks of the data. Is is used inside `igx-grid` and it can be used to build virtual `igx-list`.
 
 ### Demo
 
@@ -240,3 +237,9 @@ Here is a list of all public methods exposed by the **igx-for**:
 | `scrollNext()`  | Scrolls by one item into the  appropriate  next direction |
 | `scrollPrev()`  | Scrolls by one item into the  appropriate  previous direction|
 | `scrollTo(index)`  | Scrolls to the specified index |
+
+## Limitations
+
+| Name  | Description | Status |
+| :---- | :---------- | :----- |
+| Content Height Limitation | Browsers currently have height limitation for DOM elements. Because of that the total height of the rows shouldn't exceed the height limitation of the browsers. Otherwise there may be unexpected changes in behavior of `igxForOf`. For example Internet Explorer 11 has height limitation of 1 533 916 pixels, which for rows with height 50px means no more than 30 678 rows. | Fix planned |

@@ -1,27 +1,26 @@
 ﻿---
-title: グリッド列の遅延サイズ変更
-_description: Ignite UI for Angular Data Grid コントロールは、タッチ レスポンシブなデータ グリッドです。階層およびリスト ビューなどの機能があります。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Data Grid コンポーネント, Angular Data Grid コントロール, Angular Grid コンポーネント, Angular Grid コントロール, Angular 高いパフォーマンス Grid, 列のサイズ変更, 遅延列サイズ変更, グリッド列のサイズ変更, Angular Grid 列のサイズ変更
+title: Column Resizing Component - Native Angular | Ignite UI for Angular
+_description: With deferred column resizing, see a temporary resize indicator while the drag operation is in effect with using the Ignite UI for Angular Column Resizing Component.
+_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Data Grid component, Angular Data Grid control, Native Angular Components, Angular Grid component, Angular Grid control, Angular High Performance Grid, Column Resizing, Deferred Column Reszing, Grid Column Resizing, Angular Grid Column Resizing, Angular column 
 _language: ja
 ---
 
 ## グリッドの列サイズ変更
 
-<p class="highlight">Column resizing feature allows the user to change the width of a certain column at runtime. The `igx-grid` control supports **deferred column resizing**. Clicking on the right header border displays a temporary resize indicator that can be dragged left or right, serving as a preview. The column does not change its width while dragging the resize indicator. The new size is applied only when the drag operation is over. Resizing a certain column affects the overall width of the grid, so the rest of the columns will preserve their current widths.</p>
-<div class="divider"></div>
+With deferred column resizing, the user will see a temporary resize indicator while the drag operation is in effect. The new column size is only put into its place once the drag operation has ended.
 
-### Grid Column Resizing Demo
+#### デモ
 
 <div class="sample-container loading" style="height:550px">
-     <iframe id="grid-resizing-sample-iframe" src='{environment:demosBaseUrl}/grid-resizing-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="grid-resizing-sample-iframe" src='{environment:demosBaseUrl}/grid-resizing-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="grid-resizing-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="grid-resizing-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
 
-**列のサイズ変更**も列ごとのレベルで有効化されます。つまり、**igx-grid** にサイズ変更可能な列およびサイズ変更可能ではない列の両方を含むことが可能です。`igx-column` の `resizable` 入力によって制御されます。
+**Column resizing** is also enabled per-column level, meaning that the **igx-grid** can have a mix of resizable and non-resizable columns. This is done via the `resizable` input of the `igx-column`.
 
 ```html
     <igx-column [field]="Name" [width]="'200px'" [resizable]="true"></igx-column>

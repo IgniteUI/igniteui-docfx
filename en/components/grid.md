@@ -9,7 +9,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <p class="highlight">Display and manipulate tabular data with the Ignite UI for Angular Data Grid. Quickly bind your data with very little coding or configuration. Features include filtering, sorting, paging, templates, movable columns, and the ability to edit and update data. User actions are easy to understand and can be controlled programmatically.</p>
 <div class="divider"></div>
 
-### Grid Demo
+### Demo
 
 <div class="sample-container loading" style="height:650px">
     <iframe id="grid-sample-iframe" src='{environment:demosBaseUrl}/grid' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -630,6 +630,7 @@ import {
 * [Sorting](grid_sorting.html)
 * [Summaries](grid_summaries.html)
 * [Column Pinning](grid_column_pinning.html)
+* [Column Resizing](grid_column_resizing.html)
 * [Selection](grid_selection.html)
 
 <div class="divider--half"></div>

@@ -5,10 +5,9 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 _language: ja
 ---
 
-## Shadows
+### Shadows
 
-<p class="highlight"></p>
-<div class="divider"></div>
+Shadows are used to establish and maintain functional boundaries between Document Object Model trees to enable better functional encapsulation.
 
 ### エレベーション
 

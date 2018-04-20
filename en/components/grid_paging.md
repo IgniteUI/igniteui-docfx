@@ -4,17 +4,17 @@ _description: The Ignite UI for Angular Data Grid control features the fastest, 
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Data Grid component, Angular Data Grid control, Angular Grid component, Angular Grid control, Angular High Performance Grid, Paging, Pagination, Page
 ---
 
-## Grid Paging
+### Grid Paging
 
-**Paging** is initialized on the root **igx-grid** component, and is configurable via the `paging` and `perPage` inputs. Paging is a Boolean property that controls whether the feature is enabled and the `perPage` property controls the visible records per page. Let’s update our grid to enable paging:
+In Ignite UI for Angular, **Paging** is initialized on the root `igx-grid` component and is configurable via the `paging` and `perPage` inputs. Paging is a Boolean property that controls whether the feature is enabled, and the `perPage` property controls the visible records per page. Let’s update our grid to enable paging:
 
 ```html
 <igx-grid #grid1 [data]="data | async" [paging]="true" [perPage]="20" [autoGenerate]="false"></igx-grid>
 ```
 
-#### Grid Demo
+#### Demo
 
-<div class="sample-container loading" style="height:420px">
+<div class="sample-container loading" style="height:600px">
     <iframe id="grid-sample-iframe" src='{environment:demosBaseUrl}/grid-paging-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
@@ -72,6 +72,7 @@ this.grid.paging = false;
 * [Summaries](grid_summaries.html)
 * [Column Pinning](grid_column_pinning.html)
 * [Column Resizing](grid_column_resizing.html)
+* [Selection](grid_selection.html)
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.

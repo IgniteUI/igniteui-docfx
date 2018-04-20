@@ -6,17 +6,11 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ### Grid Filtering
 
+The Grid component in Ignite UI for Angular provides extensive filtering API through the Data Container to which the grid is bound. There's a default filtering strategy provided out of the box, as well as all the standard filtering conditions, which the developer can replace with their own implementation. In addition, we've provided a way to easily plug in your own custom filtering conditions. The Grid currently provides not only a simplistic filtering UI but also more complex filtering options.
 
-**Filtering** can be enabled on a per-column level, by setting a column `filterable` property to true.
+#### Demo
 
-```html
-<igx-column field="ProductName" filterable="true" dataType="string"></igx-column>
-<igx-column field="Price" filterable="true" dataType="number"></igx-column>
-```
-
-#### Grid Demo
-
-<div class="sample-container loading" style="height:550px">
+<div class="sample-container loading" style="height:600px">
     <iframe id="grid-sample-iframe" src='{environment:demosBaseUrl}/grid-filtering-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
@@ -25,12 +19,12 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 </div>
 <div class="divider--half"></div>
 
-> [!NOTE]
-> The filtering operation **DOES NOT** change the underlying data source of the grid.
-
 Depending on the set `dataType` of the column the correct set of [**filtering conditions**](#filtering-conditions) will be loaded inside the filter UI dropdown. Additionally, you can set the `filteringIgnoreCase` and the initial `filteringCondition` property of the column.
 
-#### Filtering through the API
+```html
+<igx-column field="ProductName" filterable="true" dataType="string"></igx-column>
+<igx-column field="Price" filterable="true" dataType="number"></igx-column>
+```
 
 You can filter any column or a combination of columns through the grid API. The grid exposes two methods for this task:
 
@@ -44,6 +38,9 @@ this.grid.filter('ProductName', 'myproduct', STRING_FILTERS.contains, true);
 ```
 
 The only required parameters are the column field and the filtering term. Both the condition and the case sensitivity will be inferred from the column properties if not provided. In the case of multiple filtering, the method accepts an array of filtering expressions.
+
+> [!NOTE]
+> The filtering operation **DOES NOT** change the underlying data source of the grid.
 
 ```typescript
 // Multi column filtering
@@ -111,6 +108,7 @@ When set to `OR`, a row will be returned when either the 'ProductName' cell valu
 * [Summaries](grid_summaries.html)
 * [Column Pinning](grid_column_pinning.html)
 * [Column Resizing](grid_column_resizing.html)
+* [Selection](grid_selection.html)
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.

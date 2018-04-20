@@ -359,6 +359,34 @@ sub {
   .toc .nav li.active a:hover {
     color: #585858; }
 
+.toc .nav li.new .new__badge {
+  position: absolute;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  padding: 2px 0;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 10px;
+  color: #fff;
+  background: #ff134a;
+  width: 32px;
+  height: 18px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none; }
+
 .toc .nav .nav.level2 {
   margin: 0;
   padding: 0 16px; }
@@ -367,6 +395,8 @@ sub {
     color: #666; }
   .toc .nav .nav.level2 li a:hover {
     color: #4d4d4d; }
+  .toc .nav .nav.level2 li.new .new__badge {
+    right: -16px; }
   .toc .nav .nav.level2 > li::before {
     position: absolute;
     content: "";

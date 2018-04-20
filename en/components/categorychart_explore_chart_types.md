@@ -10,10 +10,10 @@ In the Category Chart control, an Axis provides base properties for specifying a
 ### Explore Chart Types Demo
 
 <div class="sample-container" style="height: 550px">
-    <iframe id="category-chart-axis-sample-iframe" src='{environment:demosBaseUrl}/category-chart-axis-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="category-chart-axis-options-sample-iframe" src='{environment:demosBaseUrl}/category-chart-axis-options-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="category-chart-axis-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="category-chart-axis-options-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
     </button>
 </div>
 
@@ -31,9 +31,12 @@ The following code example shows how to style labels on the x-axis using style p
     [dataSource]="data"
     width="700px"
     height="500px"
-    xAxisLabelTextStyle="16pt Verdana"
-    xAxisLabelRightMargin="14"
-    xAxisLabelTextColor="red">
+    xAxisLabelTextStyle="10pt Verdana"
+    xAxisLabelTopMargin="5"
+    xAxisLabelTextColor="gray"
+    yAxisLabelTextStyle="10pt Verdana"
+    yAxisLabelRightMargin="5"
+    yAxisLabelTextColor="gray">
 </igx-category-chart>
 ```
 
@@ -49,12 +52,15 @@ The following code example shows how to set and customize the titles on the x-ax
       [dataSource]="data"
       width="700px"
       height="500px"
-      xAxisTitle="Country"
-      xAxisTitleTextColor="blue"
-      xAxisTitleTextStyle="20pt Times New Roman|Georgia|Serif"
-      yAxisTitle="Millions of People"
+      xAxisTitle="Countries"
+      xAxisTitleTextColor="gray"
+      xAxisTitleTextStyle="12pt Verdana"
+      xAxisTitleAngle="0"
+      yAxisTitle="Trillions of Watt-hours (TWh)"
+      yAxisTitleTextStyle="12pt Verdana"
+      yAxisTitleTextColor="gray"
       yAxisTitleAngle="90"
-      yAxisTitleTextColor="red">
+      yAxisTitleLeftMargin="5">
  </igx-category-chart>
 ```
 
@@ -68,9 +74,10 @@ The following code snippet demonstrates how to set the color, length and thickne
       [dataSource]="data"
       width="700px"
       height="500px"
-      xAxisTickLength="10"
-      xAxisTickStrokeThickness="3"
-      xAxisTickStroke="red">
+      xAxisTickLength="15"
+      xAxisTickStrokeThickness="2"
+      xAxisTickStroke="gray"
+      yAxisTickLength="0">
  </igx-category-chart>
 ```
 
@@ -86,7 +93,7 @@ The following sample code demonstrates how to change the axis range on the y-axi
       [dataSource]="data"
       width="700px"
       height="500px"
-      yAxisMinimumValue="-200"
+      yAxisMinimumValue="0"
       yAxisMaximumValue="1000">
  </igx-category-chart>
 ```
@@ -104,11 +111,11 @@ The following code snippet demonstrates how to configure the interval on the y-a
     width="700px"
     height="500px"
     yAxisInterval="100"
-    yAxisMinorInterval="10" 
-    yAxisMinorStroke="Red"    
-    yAxisMajorStroke="Green"  
-    yAxisMinorStrokeThickness="1"
-    yAxisMajorStrokeThickness="1">
+    yAxisMajorStroke="black"
+    yAxisMajorStrokeThickness="1"
+    yAxisMinorInterval="20"
+    yAxisMinorStroke="gray"
+    yAxisMinorStrokeThickness="0.5">
  </igx-category-chart>
 ```
 
@@ -121,18 +128,14 @@ The property accepts a numeric float value between 0 and 1. The value represents
    0 - no gap is rendered between series; 
    1 - maximum available gap is rendered between series.
 
-To set the Category Chart with `xAxisGap` of `0.5` the following code can be used:
+To set the Category Chart with `xAxisGap` of `0.125` the following code can be used:
 
 ```html
 <igx-category-chart
     [dataSource]="data"
     width="700px"
     height="500px"
-    title="Countries population"
-    xAxisTitle="Countries"
-    yAxisTitle="Millions of people"
-    chartType="column"
-    xAxisGap="0.5">
+    xAxisGap="0.125" >
 </igx-category-chart>
 ```
 
@@ -146,18 +149,14 @@ The property accepts a numeric float value between -1 and 1. The value represent
 * Negative value (up to -1): the categories are pushed away from each other producing a gap between themselves.
 * Positive value (up to 1): the categories are overlapping each other. Value of 1 directs the chart to render categories on top of each other.
 
-The following code example sets the `xAxisOverlap` to 0.5, which is a half of the available space is used to draw categories overlapping each other.
+The following code example sets the `xAxisOverlap` to 0.
 
 ```html
  <igx-category-chart
     [dataSource]="data"
     width="700px"
     height="500px"
-    title="Countries population"
-    xAxisTitle="Countries"
-    yAxisTitle="Millions of people"
-    chartType="column"
-    xAxisOverlap="0.5">
+    xAxisOverlap="0">
 </igx-category-chart>
 ```
 

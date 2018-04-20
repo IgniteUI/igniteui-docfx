@@ -7,10 +7,9 @@ _language: ja
 
 ### グリッドの並べ替え
 
-列を昇順または降順に並べ替えます。
+**並べ替え**も列ごとのレベルで有効化されます。つまり、**igx-grid** に並べ替え可能な列および並べ替え可能ではない列の両方を含むことが可能です。`sortable` 入力によって実行できます。グリッド フィルターと同じように、`sortingIgnoreCase` プロパティを設定すると、大文字と小文字を区別する並べ替えを実行できます。
 
-### Grid デモ
-
+#### デモ
 以下のデモでは、**igx-grid** の `onContextMenu` 出力を使用してカスタム コンテキスト メニューが追加されました。
 
 <div class="sample-container loading" style="height:550px">
@@ -21,8 +20,6 @@ _language: ja
 <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="grid-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
 </div>
 <div class="divider--half"></div>
-
-**並べ替え**も列ごとのレベルで有効化されます。つまり、**igx-grid** に並べ替え可能な列および並べ替え可能ではない列の両方を含むことが可能です。`sortable` 入力によって実行できます。グリッド フィルターと同じように、`sortingIgnoreCase` プロパティを設定すると、大文字と小文字を区別する並べ替えを実行できます。
 
 #### API での並べ替え
 

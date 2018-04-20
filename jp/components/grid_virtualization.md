@@ -1,20 +1,17 @@
 ﻿---
-title: グリッドの仮想化とパフォーマンス
-_description: Ignite UI for Angular Data Grid コントロールは列および行を仮想化します。表示されるデータの部分のみを DOM に可視化します。結果は、データの大きいセットでスムーズにスクロールできます。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Data Grid コンポーネント, Angular Data Grid コントロール, Angular Grid コンポーネント, Angular Grid コントロール, Angular 高いパフォーマンス Grid, 仮想化, パフォーマンス
+title: Virtualization Directive - Native Angular | Ignite UI for Angular 
+_description: The Ignite UI for Angular Virtualization directive is the core mechanic behind the speed and performance of the grid when handling large data sets, since its virtual rendering mechanism allows the user to effortlessly scroll by its fixing of the number of DOM objects in memory. 
+_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Components, Angular Data Grid component, Angular Data Grid control, Angular Grid component, Angular Grid control, Angular High Performance Grid, Angular Virtualization Directive, Virtualization, Performance
 _language: ja
 ---
 
-## グリッドの仮想化とパフォーマンス
+### グリッドの仮想化とパフォーマンス
 
-<p class="highlight">最新のアプリケーションでは、高いパフォーマンスでシームレスに大きいデータ セットを表示する要件があります。
-このため、`igxGrid` コントロールは `igxForOf` ディレクティブを使用します。コンテンツを垂直方向 (データ レコード) および水平方向 (列) に仮想化します。ユーザーが大きいデータ セットでスムーズにスクロールできます。
-`igxForOf` ディレクティブを使用すると、ビューポートに表示されているデータのみを描画し、ユーザーがスクロールするときに表示されるデータを切り替えると、Data Grid は DOM 描画およびメモリ使用を最適化します。</p>
-<div class="divider"></div>
+Many modern applications require displaying big data in a way that is performant and seamless to the end user. For this reason, within Ignite UI for Angular, the `igxGrid` control now utilizes the `igxForOf` directive and virtualizes its content both vertically (the data records) and horizontally (the columns), allowing the user to scroll through a large set of data smoothly with optimal performance. By utilizing the `igxForOf` directive the Data Grid now optimizes DOM rendering and memory consumption by rendering only what is currently visible in the view port and swapping the displayed data while the user scrolls the data horizontally/vertically.
 
-### グリッドの仮想化デモ
+#### Demo
 
-<div class="sample-container loading" style="height:530px">
+<div class="sample-container loading" style="height:550px">
     <iframe id="grid-sample-2-iframe" src='{environment:demosBaseUrl}/grid-sample-2' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
@@ -54,6 +51,7 @@ _language: ja
 *   変更可能な行高さはサポートされません。すべての行を同じ高さに設定する必要があります。
 *   列仮想化の場合、すべての列をピクセル単位で定義される幅が必要です。列コンポーネントで明示的に設定するか、グリッドの `columnWidth` オプションで設定します。
 *   行/列の指定したディメンションが実際の描画された要素と一致する必要があります。たとえば、グリッド セルのために行高さを大きくするテンプレートまたはクラスが定義される場合、指定した `rowHeight` 値と一致しない場合、垂直仮想化が正しく操作しません。仮想項目数が DOM の実際要素と一致しません。列およびその幅に同じ条件があります。
+*   Browsers currently have height limitation for DOM elements. Because of that the total height of the rows shouldn't exceed the height limitation of the browsers. Otherwise there may be unexpected changes in behavior of `igxGrid`. For example Internet Explorer 11 has height limitation of 1 533 916 pixels, which for rows with height 50px means no more than 30 678 rows.
 
 
 ### FAQ

@@ -1,20 +1,18 @@
 ---
-title: Data Grid - Selection
-_description: A detailed guid on how to implement and best configure the igx-grid selection property for a grid on your page.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Data Grid component, Angular Data Grid control, Angular Grid component, Angular Grid control, Angular High Performance Grid, Angular Grid Row Selection, Angular Grid Selection, Grid Row Selection, Grid Selection
+title: Row Selection Component - Native Angular | Ignite UI for Angular
+_description: With the Row Selection component in Ignite UI for Angular, there is a checkbox that precedes all other columns within the row, allowing the row to be either selected or deselected and enabling the user to select multiple rows of data.
+_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Data Grid component, Angular Data Grid control, Angular Grid component, Angular Grid control, Angular High Performance Grid, Angular Grid Row Selection, Angular Row Selection, Angular Grid Selection, Grid Row Selection, Grid Selection
 ---
 
-## Data Grid
+### Data Grid Row Selection
 
-Quick to set up and very easy on the eye, row selection for Data Grid can easily be enabled and configured. Find out how to set up your grid to allow multiple or single row selection in the samples below.
-<div class="divider"></div>
+With row selection in Ignite UI for Angular, there is a checkbox that precedes all other columns within the row. When a user clicks on the checkbox, the row will either become selected or deselected, enabling the user to select multiple rows of data.
 
-### Grid Demo
+#### Demo
 
-<div class="sample-container loading" style="height:800px">
+<div class="sample-container loading" style="height:750px">
     <iframe id="grid-selection-iframe" src='{environment:demosBaseUrl}/grid-selection' width="100%" height="90%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
-<br/>
 <div>
 <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="grid-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
