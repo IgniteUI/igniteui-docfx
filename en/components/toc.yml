@@ -91,6 +91,7 @@
   href: label_input.md
 - name: Input Group
   href: input_group.md
+  new: true
 - name: Mask
   href: mask.md
   new: true
