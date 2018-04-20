@@ -20,7 +20,7 @@ With deferred column resizing, the user will see a temporary resize indicator wh
 </div>
 <div class="divider--half"></div>
 
-**Column resizing** is also enabled per-column level, meaning that the **igx-grid** can have a mix of resizable and non-resizable columns. This is done via the `resizable` input of the `igx-column`.
+**列のサイズ変更**も列ごとのレベルで有効化されます。つまり、**igx-grid** にサイズ変更可能な列およびサイズ変更可能ではない列の両方を含むことが可能です。`igx-column` の `resizable` 入力によって制御されます。
 
 ```html
     <igx-column [field]="Name" [width]="'200px'" [resizable]="true"></igx-column>
