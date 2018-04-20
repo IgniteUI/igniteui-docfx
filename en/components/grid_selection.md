@@ -10,10 +10,9 @@ With row selection in Ignite UI for Angular, there is a checkbox that precedes a
 
 ### Grid Demo
 
-<div class="sample-container loading" style="height:800px">
-    <iframe id="grid-selection-iframe" src='{environment:demosBaseUrl}/grid-selection' width="100%" height="90%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height:650px">
+    <iframe id="grid-selection-iframe" src='{environment:demosBaseUrl}/grid-selection' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
-<br/>
 <div>
 <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="grid-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
