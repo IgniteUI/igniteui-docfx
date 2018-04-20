@@ -2,21 +2,40 @@
 full license information.}}
 
 <ul class="nav level{{level}}">
-    {{#items}} {{#header}}
-    <li class="sidenav__header">{{name}}</li>
-    {{/header}} {{#cta}}
-    <li class="nav__cta">
-        <a href="{{topicHref}}" title="{{name}}">{{name}}</a>
-    </li>
-    {{/cta}} {{^header}} {{^cta}}
-    <li>
-        {{^leaf}}
-        <span class="expand-stub"></span>
-        {{/leaf}} {{#topicHref}}
-        <a href="{{topicHref}}" name="{{tocHref}}" title="{{name}}">{{name}}</a>
-        {{/topicHref}} {{^topicHref}}
-        <a>{{{name}}}</a>
-        {{/topicHref}} {{^leaf}} {{>partials/li}} {{/leaf}}
-    </li>
-    {{/cta}} {{/header}} {{/items}}
+    {{#items}} 
+    {{#header}}
+        <li class="sidenav__header">{{name}}</li>
+    {{/header}} 
+    {{#cta}}
+        <li class="nav__cta">
+            <a href="{{topicHref}}" title="{{name}}">{{name}}</a>
+        </li>
+    {{/cta}} 
+    {{#new}}
+        <li class="new">
+            <a href="{{topicHref}}" title="{{name}}">{{name}}</a>
+            <span class="new__badge">NEW</span>
+        </li>
+    {{/new}} 
+    {{^header}} 
+    {{^cta}}
+    {{^new}}
+        <li>
+            {{^leaf}}
+                <span class="expand-stub"></span>
+            {{/leaf}} 
+            {{#topicHref}}
+                <a href="{{topicHref}}" name="{{tocHref}}" title="{{name}}">{{name}}</a>
+            {{/topicHref}} 
+            {{^topicHref}}
+                <a>{{{name}}}</a>
+            {{/topicHref}} 
+            {{^leaf}} 
+                {{>partials/li}} 
+            {{/leaf}}
+        </li>
+    {{/new}}
+    {{/cta}}
+    {{/header}} 
+    {{/items}}
 </ul>

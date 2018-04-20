@@ -279,6 +279,27 @@
       }
     }
 
+    li.new {
+      .new__badge {
+        position: absolute;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        padding: 2px 0;
+        font-size: 10px;
+        font-weight: 500;
+        line-height: 10px;
+        color: #fff;
+        background: #ff134a;
+        width: 32px;
+        height: 18px;
+        user-select: none;
+      }
+    }
+
     .nav.level2 {
       margin: 0;
       padding: 0 16px;
@@ -290,6 +311,12 @@
         }
         a:hover {
           color: darken($midgray, 10%);
+        }
+
+        &.new {
+          .new__badge {
+            right: -16px;
+          }
         }
       }
 
