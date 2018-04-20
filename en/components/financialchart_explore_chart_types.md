@@ -3,13 +3,13 @@ title: Financial Chart - Explore Chart Types
 _description: The Ignite UI for Angular Financial Chart component is easily configured to display financial data using a simple and intuitive API, as once the user binds the data, the chart offers multiple ways in which the data can then be visualized and interpreted.
 _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Chart Control, Angular Chart Example, Angular Grid Component, Angular Chart Component, Angular Financial Chart
 ---
-## Financial Chart Axis
+## Explore Chart Types
 
 In the `igx-financial-chart` control, an axis provides base properties for specifying appearance of axis main lines, tickmarks, titles, and axis labels.
 
 By default, you do not need to explicitly set the labels. The Financial Chart will use the first appropriate property that it finds within the data you provided and will use that for the labels.
 
-### Axis Demo
+### Explore Chart Types Demo
 
 <div class="sample-container" style="height: 550px">
     <iframe id="financial-chart-axis-types-iframe" src='{environment:demosBaseUrl}/financial-chart-axis-types' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -22,9 +22,9 @@ By default, you do not need to explicitly set the labels. The Financial Chart wi
 <div class="divider--half"></div>
 
 ### Axis Interval
-In the Financial Chart control, the axis major interval specifies how frequently major gridlines and axis labels are rendered on an axis. Similarly, axis minor interval specifies how frequently minor gridlines are rendered on an axis.
+In the Financial Chart control, the `yAxisInterval` property specifies how frequently major gridlines and axis labels are rendered on an axis. Similarly, the `yAxisMinorInterval` property specifies how frequently minor gridlines are rendered on an axis.
 
-The following code snippet demonstrates how to configure the interval on the y-axis.
+The following code snippet demonstrates how to configure intervals on the y-axis.
 
 ```html
  <igx-financial-chart
@@ -104,8 +104,8 @@ The following sample code demonstrates how to change the axis range on the y-axi
 
 ### Axis Scale
 In the Financial Chart control, you can control if the data in the chart is mapped logarithmically along the y-axis, this is done by setting the following properties:
-- yAxisIsLogarithmic - This specifies if the y-axis should use a logarithmic scale instead of a linear one. By default this property is set to false.
-- yAxisLogarithmBase - The base value to use in the log function when mapping the position of data items along the y-axis.
+- `yAxisIsLogarithmic` - This specifies if the y-axis should use a logarithmic scale instead of a linear one. By default this property is set to false.
+- `yAxisLogarithmBase` - The base value to use in the log function when mapping the position of data items along the y-axis.
 This is effective only when yAxisIsLogarithmic is true.
 
 The following code snippet demonstrates how to set the color, length and thickness of the tickmark on the x-axis.

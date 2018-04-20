@@ -1,9 +1,9 @@
 ---
 title: Configuration Options
-_description: The Ignite UI for Category Chart component simplifies the complexities of the data visualization domain into manageable API so that a user can bind a collection of data, a group of collections, and a data property, and let the charting control do the rest. 
-_keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Chart Control, Angular Chart Example, Angular Grid Component, Angular Chart Component, Angular Category Chart 
+_description: The Ignite UI for Category Chart component simplifies the complexities of the data visualization domain into manageable API so that a user can bind a collection of data, a group of collections, and a data property, and let the charting control do the rest.
+_keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Chart Control, Angular Chart Example, Angular Grid Component, Angular Chart Component, Angular Category Chart
 ---
-## Configuration Options 
+## Configuration Options
 
 There are many areas of the category chart that can be customized, such as the markers, chart titles and subtitles, and the chart types.
 This page will walk you through with code samples the different properties that is required to be set in order to achieve a customized category chart.
@@ -17,7 +17,7 @@ This page will walk you through with code samples the different properties that 
     </button>
 </div>
 
-### Configuring Chart Types
+### Configuring Chart Visuals
 
 As shown in the above demo, the brushes for the chart types can be configured. The following code example sets the chart type to waterfall and changes the default color of the brushes.
 

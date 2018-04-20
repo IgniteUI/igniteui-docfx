@@ -60,7 +60,7 @@ Setting the `chartType` option can have the following impact on chart performanc
 * `bar` - is more expensive to render than the `column` chart type and it is recommended when rendering data items with OHLC  numeric values,
 * `candle` - is more expensive to render than the `bar` chart type and it is also recommended when rendering data items with OHLC  numeric values,
 
-## Volume Type
+### Volume Type
 Setting the `volumeType` option can have the following impact on chart performance:
 
 * `line` - is the least expensive volume type to render and it is recommended when rendering a lot of data points or when plotting a lot of data sources,

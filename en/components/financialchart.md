@@ -48,6 +48,8 @@ A toolbar is displayed at the top of the financial chart. This allows your end u
 - Chart Type Selector - Allows users to select chart types for the financial chart. These are displayed in the price pane.
 - Volume Type Selector -  Allows users to view the stock volume data in the Volume Pane. Users can choose between None, Column, Line, and Area chart types.
 
+Note that depending on the width of the financial chart, the toolbar might not may or may not contain all of the elements discussed in above section. Increasing width of the financial chart and its container will cause the toolbar to display more of these selectors.
+
 Also, you can hide the toolbar if you wish to maximize vertical space for the chart panes. The following code show how to hide the toolbar:
 
 ```html
