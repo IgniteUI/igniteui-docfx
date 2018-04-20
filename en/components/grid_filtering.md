@@ -25,9 +25,6 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 </div>
 <div class="divider--half"></div>
 
-> [!NOTE]
-> The filtering operation **DOES NOT** change the underlying data source of the grid.
-
 Depending on the set `dataType` of the column the correct set of [**filtering conditions**](#filtering-conditions) will be loaded inside the filter UI dropdown. Additionally, you can set the `filteringIgnoreCase` and the initial `filteringCondition` property of the column.
 
 #### Filtering through the API
@@ -44,6 +41,9 @@ this.grid.filter('ProductName', 'myproduct', STRING_FILTERS.contains, true);
 ```
 
 The only required parameters are the column field and the filtering term. Both the condition and the case sensitivity will be inferred from the column properties if not provided. In the case of multiple filtering, the method accepts an array of filtering expressions.
+
+> [!NOTE]
+> The filtering operation **DOES NOT** change the underlying data source of the grid.
 
 ```typescript
 // Multi column filtering
@@ -111,6 +111,7 @@ When set to `OR`, a row will be returned when either the 'ProductName' cell valu
 * [Summaries](grid_summaries.html)
 * [Column Pinning](grid_column_pinning.html)
 * [Column Resizing](grid_column_resizing.html)
+* [Selection](grid_selection.html)
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.

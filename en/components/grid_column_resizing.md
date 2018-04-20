@@ -4,9 +4,12 @@ _description: The Ignite UI for Angular Data Grid control features the fastest, 
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Data Grid component, Angular Data Grid control, Angular Grid component, Angular Grid control, Angular High Performance Grid, Column Resizing, Deferred Column Reszing, Grid Column Resizing, Angular Grid Column Resizing
 ---
 
-### Grid Column Resizing
+## Grid Column Resizing
 
-#### Grid Demo
+<p class="highlight">Column resizing feature allows the user to change the width of a certain column at runtime. The `igx-grid` control supports **deferred column resizing**. Clicking on the right header border displays a temporary resize indicator that can be dragged left or right, serving as a preview. The column does not change its width while dragging the resize indicator. The new size is applied only when the drag operation is over. Resizing a certain column affects the overall width of the grid, so the rest of the columns will preserve their current widths.</p>
+<div class="divider"></div>
+
+### Grid Column Resizing Demo
 
 <div class="sample-container loading" style="height:550px">
     <iframe id="grid-resizing-sample-iframe" src='{environment:demosBaseUrl}/grid-resizing-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -17,7 +20,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 </div>
 <div class="divider--half"></div>
 
-**Column resizing** is also enabled per-column level, meaning that the **igx-grid** can have a mix of resizable and non-resizable columns. This is done via the `resizable` input of the `igx-column`. The **igx-grid** supports deferred column resizing, meaning that columns are not immediately resized. A temporary resize indicator is shown while the drag operation is in effect and the new column size is only applied once the drag operation ends. Resizing a certain column affects the overall width of the grid, so the rest of the columns will preserve their current widths.
+**Column resizing** is also enabled per-column level, meaning that the **igx-grid** can have a mix of resizable and non-resizable columns. This is done via the `resizable` input of the `igx-column`.
 
 ```html
 <igx-column [field]="'ID'" width="100px" [resizable]="true"></igx-column>
@@ -94,6 +97,7 @@ The following output is available for **column resizing**:
 * [Sorting](grid_sorting.html)
 * [Summaries](grid_summaries.html)
 * [Column Pinning](grid_column_pinning.html)
+* [Selection](grid_selection.html)
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.
