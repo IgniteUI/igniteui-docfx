@@ -5,7 +5,7 @@ _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Nati
 ---
 ## Custom Indicators
 
-The **igx-financial-chart** control component allows you to define custom financial indicators to display in the Indicator Pane.
+The `igx-financial-chart` control component allows you to define custom financial indicators to display in the Indicator Pane.
 
 ### Custom Indicators Demo
 
@@ -19,7 +19,7 @@ The **igx-financial-chart** control component allows you to define custom financ
 
 <div class="divider--half"></div>
 
-In the igxFinancialChart, you can enable custom financial indicators by adding names for them to the `customIndicatorNames` property and performing calculations for them in the `applyCustomIndicators` event.
+In the `igx-financial-chart`, you can enable custom financial indicators by adding names for them to the `customIndicatorNames` property and performing calculations for them in the `applyCustomIndicators` event.
 
 The following code example shows how to set up and calculate two custom indicators, one featuring the Simple Moving Average (SMA) and one displaying random values.
 
