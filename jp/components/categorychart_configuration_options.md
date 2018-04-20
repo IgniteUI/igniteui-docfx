@@ -11,10 +11,10 @@ _language: ja
 ### 構成オプション デモ
 
 <div class="sample-container" style="height: 550px">
-    <iframe id="category-chart-configuring-sample-iframe" src='{environment:demosBaseUrl}/category-chart-configuring-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="category-chart-config-options-sample-iframe" src='{environment:demosBaseUrl}/category-chart-config-options-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="category-chart-configuring-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
+    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="category-chart-config-options-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
     </button>
 </div>
 
@@ -59,9 +59,9 @@ _language: ja
 チャートでタイトルおよびサブタイトル情報がサイズ変更できます。
 
 >[!NOTE] 
->デフォルトでアニメーション トランジションは無効ですが、`isTransitionInEnabled` オプションを `true` に設定してトランジションイン アニメーションを有効にできます。
+>デフォルトでトランジション イン アニメーションは無効ですが、`isTransitionInEnabled` オプションを `true` に設定してトランジションイン アニメーションを有効にできます。
 
-アニメーション化されたトランジションのトランジション タイプ、データ ポイントに相対するスピード、およびイージング関数によって管理されるイージング トランジションを構成できます。
+トランジション イン アニメーションのトランジション タイプ、データ ポイントに相対するスピード、およびイージング関数によって管理されるイージング トランジションを構成できます。
 
 トランジション タイプは、transitionInMode オプションを任意のトランジション名に設定して構成します。プロパティを "Auto" (デフォルト値) に設定すると、シリーズ タイプに基づきトランジション タイプを自動的に選択することもできます。
 
