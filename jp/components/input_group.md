@@ -1,15 +1,13 @@
 ﻿---
-title: Input Group コンポーネント
-_description: Ignite UI for Angular Input Group コンポーネントを使用すると、単一行または複数行のテキスト要素を作成し、CSS スタイルを追加し、その他のコントロールと統合できます。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Label コンポーネント, Angular Label コントロール, Angular Input コンポーネント, Angular Input コントロール, Input コンポーネント, Input コントロール, Label コンポーネント, Label コントロール, Angular Input Group コンポーネント, Angular Input Group コントロール, Angular Input ディレクティブ, Angular Label ディレクティブ, Angular Forms, Angular Reactive Forms, Angular フォーム検証
+title: Input Groups Component - Native Angular | Ignite UI for Angular
+_description: The Input Groups component in Ignite UI for Angular allows for easy-to-use and aesthetic forms, simplicity with inputting data, and provides mitigation for handling validation and errors.
+_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Components, Angular Label components, Angular Label controls, Angular Input components, Angular Input controls, Input component, Input control, Label component, Label control, Angular Input Group components, Angular Input Group controls, Angular Input directive, Angular Label directive, Angular Forms, Angular Reactive Forms, Angular Form Validation
 _language: ja
 ---
 
 ## Input Group
-<p class="highlight">
-Ignite UI for Angular Input Group コンポーネントを使用すると、単一行または複数行のテキスト要素を作成できます。Label、Input、Suffix、Prefix、および Hint ディレクティブと使用すれば、フォーム入力の全般的なシナリオを実装できます。
-</p>
-<div class="divider--half"></div>
+
+Input groups in the Ignite UI for Angular controls allow developers to create easy-to-use and aesthetic forms. The user experiences simplicity with inputting data, and the inputs also provide mitigation for handling validation and errors.
 
 ### Input Group デモ
 <div class="sample-container" style="height:600px">

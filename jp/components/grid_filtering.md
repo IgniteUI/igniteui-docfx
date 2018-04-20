@@ -7,12 +7,7 @@ _language: ja
 
 ### グリッドのフィルタリング
 
-列の `filterable` プロパティを true に設定すると、**フィルタリング**を列ごとに有効できます。
-
-```html
-<igx-column field="ProductName" filterable="true" dataType="string"></igx-column>
-<igx-column field="Price" filterable="true" dataType="number"></igx-column>
-```
+The Grid component in Ignite UI for Angular provides extensive filtering API through the Data Container to which the grid is bound. There's a default filtering strategy provided out of the box, as well as all the standard filtering conditions, which the developer can replace with their own implementation. In addition, we've provided a way to easily plug in your own custom filtering conditions. The Grid currently provides not only a simplistic filtering UI but also more complex filtering options.
 
 #### Grid デモ
 
@@ -31,7 +26,10 @@ _language: ja
 
 列で設定された `dataType` に基づいて、[**フィルター条件**](#フィルター条件)の正しいセットがフィルター UI ドロップダウンで読み込まれます。また、列の `filteringIgnoreCase` および最初の `filteringCondition` プロパティを設定できます。
 
-#### API でのフィルター
+```html
+<igx-column field="ProductName" filterable="true" dataType="string"></igx-column>
+<igx-column field="Price" filterable="true" dataType="number"></igx-column>
+```
 
 列または複数の列をグリッド API でフィルターできます。グリッドはフィルターのための 2 つのメソッドを公開します。
 

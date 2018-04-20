@@ -1,14 +1,13 @@
 ﻿---
-title: Mask ディレクティブ
-_description: Mask ディレクティブは、ユーザー入力を制御し、構成可能なマスク ルールに基づいて表示値を書式設定するために使用されます。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Mask ディレクティブ, マスク, ディレクティブ, マスク エディター, Angular Mask エディター
+title: Mask Directive Component - Native Angular | Ignite UI for Angular
+_description: With the Mask Directive in Ignite UI for Angular, the developer can control user input and format the visible value based on configurable mask rules, providing different input options and ease in use and configuration.
+_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular mask directive, Mask, Directive, Mask Editor, Angular Mask Editor
 _language: ja
 ---
 
 ## Mask
 
-<p class="highlight">Ignite UI for Angular Mask ディレクティブは、構成可能なマスク ルールによってユーザー入力を書式設定する方法を提供します。マスクは、入力を電話番号などの指定した書式に合わせる必要がある場合に便利です。入力の書式のビジュアル表現も提供します。Mask ディレクティブをテンプレートまたはリアクティブ フォームで使用できます。</p>
-<div class="divider--half"></div>
+With the mask directive in Ignite UI for Angular, the developer can control user input and format the visible value based on configurable mask rules. It provides different input options and ease in use and configuration.
 
 ### Mask デモ
 <div class="sample-container loading" style="height: 280px">
