@@ -5,7 +5,6 @@
   items:
     - name: Virtualization and performance
       href: grid_virtualization.md
-      new: true
     - name: Paging
       href: grid_paging.md
     - name: Filtering
@@ -14,12 +13,16 @@
       href: grid_sorting.md
     - name: Summaries
       href: grid_summaries.md
+      new: true
     - name: Column pinning
       href: grid_column_pinning.md
+      new: true
     - name: Column resizing
       href: grid_column_resizing.md
+      new: true
     - name: Selection
       href: grid_selection.md
+      new: true
 - name: List View
   href: list.md
 - name: Charts
@@ -90,6 +93,7 @@
   href: input_group.md
 - name: Mask
   href: mask.md
+  new: true
 - name: Badge
   href: badge.md
 - name: Icon
@@ -144,9 +148,12 @@
   href: date_picker.md
 - name: Time Picker
   href: time_picker.md
+  new: true
 - name: Services
   header: true
 - name: CSV Exporter
   href: exporter_csv.md
+  new: true
 - name: Excel Exporter
   href: exporter_excel.md
+  new: true
