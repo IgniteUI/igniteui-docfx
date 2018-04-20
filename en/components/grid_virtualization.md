@@ -4,13 +4,13 @@ _description: The Ignite UI for Angular Virtualization directive is the core mec
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Components, Angular Data Grid component, Angular Data Grid control, Angular Grid component, Angular Grid control, Angular High Performance Grid, Angular Virtualization Directive, Virtualization, Performance
 ---
 
-## Grid Virtualization and Performance
+### Grid Virtualization and Performance
 
 Many modern applications require displaying big data in a way that is performant and seamless to the end user. For this reason, within Ignite UI for Angular, the `igxGrid` control now utilizes the `igxForOf` directive and virtualizes its content both vertically (the data records) and horizontally (the columns), allowing the user to scroll through a large set of data smoothly with optimal performance. By utilizing the `igxForOf` directive the Data Grid now optimizes DOM rendering and memory consumption by rendering only what is currently visible in the view port and swapping the displayed data while the user scrolls the data horizontally/vertically.
 
-### Grid Virtualization Demo
+#### Demo
 
-<div class="sample-container loading" style="height:530px">
+<div class="sample-container loading" style="height:550px">
     <iframe id="grid-sample-2-iframe" src='{environment:demosBaseUrl}/grid-sample-2' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
