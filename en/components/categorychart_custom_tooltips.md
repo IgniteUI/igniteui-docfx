@@ -35,11 +35,11 @@ The tooltip content is customized by creating a template for the tooltip as demo
     
 <div class="chart">
     <igx-category-chart height="100%" width="100%"
-        [dataSource]="data" title="Energy Production"
+        [dataSource]="data" chartTitle="Energy Production"
         subtitle="by Country"
         [tooltipTemplate]="valueTooltip"
         [chartType]="chartType">
     </igx-category-chart>
 </div>
-
+```
     
