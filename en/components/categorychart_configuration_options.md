@@ -6,14 +6,14 @@ _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Nati
 ## Configuration Options 
 
 There are many areas of the category chart that can be customized, such as the markers, chart titles and subtitles, and the chart types.
-This page will walk you through with code samples the different properties that required to be set in order to achieve a customized category chart.
+This page will walk you through with code samples the different properties that is required to be set in order to achieve a customized category chart.
 
 ### Configuration Options Demo
 <div class="sample-container" style="height: 550px">
-    <iframe id="category-chart-configuring-sample-iframe" src='{environment:demosBaseUrl}/category-chart-configuring-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="category-chart-config-options-sample-iframe" src='{environment:demosBaseUrl}/category-chart-config-options-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="category-chart-configuring-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="category-chart-config-options-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
     </button>
 </div>
 
@@ -57,9 +57,9 @@ This feature allows you to animate the series as it loads a new data source. The
 
 The chart resizes allowing for the title and subtitle information.
 
-By default, animated transitions are disabled and you can enable transition-in animations by setting the `isTransitionInEnabled` option to “true”.
+By default, transition in animations are disabled and you can enable transition-in animations by setting the `isTransitionInEnabled` option to “true”.
 
-Animated transitions can be configured in terms of transition type, speed of the individual data points relative to each other, and the easing transition (managed by an easing function).
+Transition in animations can be configured in terms of transition type, speed of the individual data points relative to each other, and the easing transition (managed by an easing function).
 
 The transition type is configured by setting the transitionInMode option to the desired transition name. Automatic selection of the transition type based on the series type is possible, too, by setting the property to “Auto” (default).
 

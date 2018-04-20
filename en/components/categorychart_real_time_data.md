@@ -8,8 +8,10 @@ _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Nati
 The igxCategoryChart is capable of handling high volumes of data, ranging into the millions of data points, and updating them every few milliseconds as demonstrated in the following demo.
 
 ### Real Time Data Demo
-<div class="sample-container" style="height: 570px">
-    <iframe id="category-chart-high-frequency-sample-iframe" src='{environment:demosBaseUrl}/category-chart-high-frequency-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div align="center">
+<div class="sample-container" style="height: 570px; width: 600px; ">
+    <iframe id="category-chart-high-frequency-sample-iframe" align="center" src='{environment:demosBaseUrl}/category-chart-high-frequency-sample' height="100%" width="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
 </div>
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="category-chart-high-frequency-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
