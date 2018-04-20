@@ -1,14 +1,14 @@
 ﻿---
-title: データ バインド
-_description: Ignite UI for Angular Financial Chart コンポーネントは、財務データを表示するタッチ対応、高いパフォーマンス、軽量なチャート コントロールです。
-_keywords: Ignite UI for Angular, データ ビジュアライゼーション, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Chart コンポーネント, Angular Financial Chart コンポーネント, Angular Chart コントロール, Angular Financial Chart コントロール
+title: Financial Chart - リアルタイム データ
+_description: Ignite UI for Angular Financial Chart コンポーネントは簡易な API を使用してファイナンシャル データを表示できます。ユーザーがデータにバインド後にチャートがデータの可視化オプションを複数提供します。
+_keywords: Ignite UI for Angular, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular チャート, Angular チャート コントロール, Angular チャート例, Angular チャート コンポーネント, Angular Financial Chart
 _language: ja
 ---
-## ファイナンシャル チャートをデータにバインド
+## リアルタイム データ
 
 igxFinancialChart は、以下のデモのように複数のデータ ソースにバインドできます。
 
-### ライブ データへのバインド デモ
+### リアルタイム データ デモ
 
 <div class="sample-container" style="height: 550px">
     <iframe id="financial-chart-binding-to-live-data-iframe" src='{environment:demosBaseUrl}/financial-chart-binding-to-live-data' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>

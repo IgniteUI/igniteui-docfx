@@ -45,22 +45,22 @@
   href: financialchart.md
   new: true
   items:
+    - name: チャートのタイプの選択
+      href: financialchart_explore_chart_types.md
+    - name: リアルタイム データ
+      href: financialchart_real_time_data.md
+    - name: 大量なデータの処理
+      href: financialchart_high_volume_data.md
     - name: パフォーマンス
       href: financialchart_performance.md
-    - name: 大容量のパフォーマンス
-      href: financialchart_performance_high_volume.md
-    - name: ライブ データへのバインド
-      href: financialchart_binding_to_live_data.md
     - name: 複数データ ソースへのバインド
       href: financialchart_binding_to_multiple_data.md
-    - name: 軸
-      href: financialchart_axis.md
     - name: ペイン
       href: financialchart_panes.md
+    - name: 構成オプション
+      href: financialchart_configuration_options.md
     - name: カスタム インジケーター
       href: financialchart_custom_indicators.md
-    - name: 構成
-      href: financialchart_configuring.md
     - name: カスタム ツールチップ
       href: financialchart_custom_tooltips.md
 - name: スタイルとテーマ
