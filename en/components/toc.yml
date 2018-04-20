@@ -131,6 +131,7 @@
   href: tabbar.md
 - name: Tabs
   href: tabs.md
+  new: true
 - name: Card
   href: card.md
 - name: Avatar
