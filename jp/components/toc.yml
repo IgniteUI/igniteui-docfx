@@ -30,6 +30,7 @@
   href: categorychart.md
 - name: Category Chart
   href: categorychart.md
+  new: true
   items:
     - name: チャートのタイプの選択
       href: categorychart_explore_chart_types.md
@@ -149,6 +150,7 @@
   href: date_picker.md
 - name: Time Picker
   href: time_picker.md
+  new: true
   name: true
 - name: サービス
   header: true
