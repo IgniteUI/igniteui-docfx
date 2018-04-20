@@ -5,6 +5,7 @@
   items:
     - name: Virtualization and performance
       href: grid_virtualization.md
+      new: true
     - name: Paging
       href: grid_paging.md
     - name: Filtering
@@ -26,6 +27,7 @@
   href: categorychart.md
 - name: Category Chart
   href: categorychart.md
+  new: true
   items:
     - name: Explore Chart Types
       href: categorychart_explore_chart_types.md
@@ -39,6 +41,7 @@
       href: categorychart_custom_tooltips.md
 - name: Financial Chart
   href: financialchart.md
+  new: true
   items:
     - name: Explore Chart Types
       href: financialchart_explore_chart_types.md
