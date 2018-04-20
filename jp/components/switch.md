@@ -75,16 +75,14 @@ export class AppModule {}
 <!--toggle.component.html-->
 
 <igx-switch *ngFor="let setting of settings" [checked]="setting.state">
-  <div style="width: 150px">
-      {{ setting.name }}
-  </div>
+   {{ setting.name }}
 </igx-switch>
 ```
 
 結果は以下のようになります。
 
 <div class="sample-container" style="height: 200px">
-<iframe src='{environment:demosBaseUrl}/switch-sample-2' width="100%" height="100%" seamless frameBorder="0"></iframe>
+　　　　<iframe src='{environment:demosBaseUrl}/switch-sample-2' width="100%" height="100%" seamless frameBorder="0"></iframe>
 </div>
 
 ### API まとめ
@@ -104,7 +102,7 @@ export class AppModule {}
 | `@Input()` required | boolean | スイッチの必須状態を指定します。 |
 | `@Input()` disabled | boolean | スイッチの無効状態を指定します。 |
 | `@Input()` disableRipple | boolean | リップル エフェクトがスイッチで無効にするかどうかを指定します。 |
-| `@Input()` labelPosition | string `|` enum LabelPosition | スイッチ要素に対するテキスト ラベルの位置を指定します。 |
+| `@Input()` labelPosition | string または enum LabelPosition | スイッチ要素に対するテキスト ラベルの位置を指定します。 |
 | `@Input("aria-labelledby")` ariaLabelledBy | string | スイッチのラベルに使用される外部の要素を id によって指定します。 |
 
 <div class="divider"></div>
@@ -116,14 +114,16 @@ export class AppModule {}
 | 名前 | 型 | 説明 |
 | :--- | :--- | :--- |
 | `@Output()` change | EventEmitter<IChangeCheckboxEventArgs> | スイッチの checked 値が変更するときに発生します。 |
+<div class="divider"></div>
 
 #### メソッド
 
 以下のメソッドは **igx-switch** コンポーネントで利用できます。
 
-| toggle |
-|:----------|
-| スイッチのチェックされた状態を切り替えます。 |
+| 名前 | 説明 |
+| :--- | :--- |
+| toggle | スイッチのチェックされた状態を切り替えます。 |
+<div class="divider"></div>
 
 ### 追加のリソース
 
