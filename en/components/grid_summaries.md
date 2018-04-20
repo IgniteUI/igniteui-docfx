@@ -8,9 +8,6 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 The Grid component in ignite UI for Angular has a **summaries** feature that functions on a per-column level. The user is able to see the column information in a separate container with a predefined set of default summary items, depending on the type of data within the column.
 
-> [!NOTE]
-> The summary of the column is a **function of all column values**, unless filtering is applied, then the summary of the column will be **function of the filtered result values**
-
 ### Grid Demo
 
 <div class="sample-container loading" style="height:750px">
@@ -53,6 +50,9 @@ For `date` data type, the following functions are available:
     </igx-column>
 </igx-grid>
 ```
+
+> [!NOTE]
+> The summary of the column is a **function of all column values**, unless filtering is applied, then the summary of the column will be **function of the filtered result values**
 
 The other way to enable/disable summaries for a specific column or a list of columns is to use the public method `enableSummaries`/`disableSummaries` of the **igx-grid**.
 
@@ -181,6 +181,7 @@ this.http.get<any[]>('/assets/data.json')
 * [Sorting](grid_sorting.html)
 * [Column Pinning](grid_column_pinning.html)
 * [Column Resizing](grid_column_resizing.html)
+* [Selection](grid_selection.html)
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.

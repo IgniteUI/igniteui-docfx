@@ -20,8 +20,6 @@ Additionally there is a custom contextmenu added for sorting using **igx-grid**'
 </div>
 <div class="divider--half"></div>
 
-> [!NOTE]
-> The sorting operation **DOES NOT** change the underlying data source of the grid.
 
 #### Sorting through the API
 
@@ -50,6 +48,9 @@ this.grid.clearSort('ProductName');
 this.grid.clearSort();
 ```
 
+> [!NOTE]
+> The sorting operation **DOES NOT** change the underlying data source of the grid.
+
 #### Initial sorting state
 
 It is possible to set the initial sorting state of the grid by passing an array of sorting expressions to the `sortingExpressions` property of the grid.
@@ -74,6 +75,7 @@ public ngOnInit() {
 * [Summaries](grid_summaries.html)
 * [Column Pinning](grid_column_pinning.html)
 * [Column Resizing](grid_column_resizing.html)
+* [Selection](grid_selection.html)
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.
