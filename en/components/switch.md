@@ -70,15 +70,13 @@ Enhance the component template by adding a switch for each setting and then bind
 <!--toggle.component.html-->
 
 <igx-switch *ngFor="let setting of settings" [checked]="setting.state">
-  <div style="width: 150px">
-      {{ setting.name }}
-  </div>
+    {{ setting.name }}
 </igx-switch>
 ```
 The final result would be something like that:
 
 <div class="sample-container" style="height: 200px">
-<iframe src='{environment:demosBaseUrl}/switch-sample-2' width="100%" height="100%" seamless frameBorder="0"></iframe>
+    <iframe src='{environment:demosBaseUrl}/switch-sample-2' width="100%" height="100%" seamless frameBorder="0"></iframe>
 </div>
 
 ### API Summary
@@ -96,7 +94,7 @@ The following inputs are available on the **igx-switch** component:
 | `@Input()` required | boolean | Specifies the required state of the switch. |
 | `@Input()` disabled | boolean | Specifies the disabled state of the switch. |
 | `@Input()` disableRipple | boolean | Specifies the whether the ripple effect should be disabled for the switch. |
-| `@Input()` labelPosition | string `|` enum LabelPosition | Specifies the position of the text label relative to the switch element. |
+| `@Input()` labelPosition | string or enum LabelPosition | Specifies the position of the text label relative to the switch element. |
 | `@Input("aria-labelledby")` ariaLabelledBy | string | Specify an external element by id to be used as label for the switch. |
 
 <div class="divider"></div>
@@ -107,11 +105,15 @@ The following outputs are available on the **igx-switch** component:
 | :--- | :--- | :--- |
 | `@Output()` change | EventEmitter<IChangeCheckboxEventArgs> | Emitted when the switch checked value changes. |
 
+<div class="divider"></div>
+
 ####Methods
 The following methods are available on the **igx-switch** component:
-| toggle |
-|:----------|
-| Toggles the checked state of the switch. |
+| Name | Description|
+| :--- | :--- |
+| toggle | Toggles the checked state of the switch. | 
+
+<div class="divider"></div>
 
 ###Additional Resources
 <div class="divider--half"></div>

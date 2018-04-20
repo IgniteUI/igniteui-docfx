@@ -10,7 +10,7 @@ The **igx-ButtonGroup** component in Ignite UI for Angular provides a button gro
 
 ### Button Group Demo
 
-<div class="sample-container" style="height: 436px">
+<div class="sample-container" style="height: 362px">
     <iframe id="buttonGroup-sample-1-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/button-group-sample-1" onload="onSampleIframeContentLoaded(this);">
 </div>
 <div>
@@ -70,7 +70,7 @@ public alignment = ButtonGroupAlignment.vertical;
 <igx-buttongroup [multiSelection]="false" [values]="cities" [alignment]="alignment">
 </igx-buttongroup>
 ```
-<div class="sample-container" style="height: 200px">
+<div class="sample-container" style="height: 164px">
     <iframe id="buttonGroup-sample-2-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/button-group-sample-2" onload="onSampleIframeContentLoaded(this);">
 </div>
 <div>
@@ -111,7 +111,7 @@ public ngOnInit() {
 </igx-buttongroup>
 ```
 
-<div class="sample-container" style="height: 100px">
+<div class="sample-container" style="height: 52px">
     <iframe id="buttonGroup-sample-3-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/button-group-sample-3" onload="onSampleIframeContentLoaded(this);">
 </div>
 <div>

@@ -101,7 +101,7 @@ The following inputs are available on the **igx-checkbox** component:
 | `@Input()` required | boolean | Specifies the required state of the checkbox. |
 | `@Input()` disabled | boolean | Specifies the disabled state of the checkbox. |
 | `@Input()` disableRipple | boolean | Specifies the whether the ripple effect should be disabled for the checkbox. |
-| `@Input()` labelPosition | string `|` enum LabelPosition | Specifies the position of the text label relative to the checkbox element. |
+| `@Input()` labelPosition | string or enum LabelPosition | Specifies the position of the text label relative to the checkbox element. |
 | `@Input("aria-labelledby")` ariaLabelledBy | string | Specify an external element by id to be used as label for the checkbox. |
 <div class="divider"></div>
 
@@ -110,12 +110,14 @@ The following outputs are available on the **igx-checkbox** component:
 | Name | Type | Description |
 | :--- | :--- | :--- |
 | `@Output()` change | EventEmitter<IChangeCheckboxEventArgs> | Emitted when the checkbox checked value changes. |
+<div class="divider"></div>
 
 ####Methods
 The following methods are available on the **igx-checkbox** component:
-| toggle |
-|:----------|
-| Toggles the checked state of the checkbox. |
+| Name | Description|
+| :--- | :--- |
+| toggle | Toggles the checked state of the checkbox. |
+<div class="divider"></div>
 
 ###Additional Resources
 
