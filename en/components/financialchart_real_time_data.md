@@ -5,7 +5,7 @@ _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Nati
 ---
 ## Binding Real-Time Data
 
-The **igx-financial-chart** control is very fast control that can handle rendering of data in real-time. The following demo shows how Financial Chart is capable of handling high frequency of data updates.
+The `igx-financial-chart` control is very fast control that can handle rendering of data in real-time. The following demo shows how Financial Chart is capable of handling high frequency of data updates.
 
 ### Binding Real-Time Demo
 
