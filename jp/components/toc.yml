@@ -28,6 +28,9 @@
     - name: 選択
       href: grid_selection.md
       new: true
+    - name: Excel エクスポート
+      href: exporter_excel.md
+      new: true
 - name: List View
   href: list.md
 - name: チャート
