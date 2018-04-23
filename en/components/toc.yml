@@ -6,12 +6,16 @@
   items:
     - name: Virtualization and performance
       href: grid_virtualization.md
+      new: false
     - name: Paging
       href: grid_paging.md
+      new: false
     - name: Filtering
       href: grid_filtering.md
+      new: false
     - name: Sorting
       href: grid_sorting.md
+      new: false
     - name: Summaries
       href: grid_summaries.md
       new: true
