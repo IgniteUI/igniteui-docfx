@@ -9,7 +9,7 @@ _language: ja
 
 遅延の列のサイズ変更を使用すると、ドラッグ操作が実行中に、一時のサイズ変更インジケーターが表示されます。ドラッグ操作が完了した後、新しい列サイズが適用されます。
 
-#### デモ
+#### グリッドの列サイズ変更デモ
 
 <div class="sample-container loading" style="height:550px">
     <iframe id="grid-resizing-sample-iframe" src='{environment:demosBaseUrl}/grid-resizing-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -54,7 +54,7 @@ public onResize(event) {
 ```
 
 > [!NOTE]
-> `minWidth` がその値より小さい値に設定されても、列を **48px** より小さくサイズ変更することができません。
+> `minWidth` がその値より小さい値に設定されても、列を **88px** より小さくサイズ変更することができません。
 
 #### ダブルクリックで列の自動サイズ調整
 
