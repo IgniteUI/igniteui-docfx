@@ -2,15 +2,20 @@
   header: true
 - name: Data Grid
   href: grid.md
+  new: true
   items:
     - name: 仮想化とパフォーマンス
       href: grid_virtualization.md
+      new: false
     - name: ページング
       href: grid_paging.md
+      new: false
     - name: フィルタリング
       href: grid_filtering.md
+      new: false
     - name: 並べ替え
       href: grid_sorting.md
+      new: false
     - name: 集計
       href: grid_summaries.md
       new: true
@@ -29,6 +34,7 @@
   header: true
 - name: Category Chart
   href: categorychart.md
+  new: true
   items:
     - name: チャートのタイプの選択
       href: categorychart_explore_chart_types.md
@@ -47,6 +53,7 @@
       new: true
 - name: Financial Chart
   href: financialchart.md
+  new: true
   items:
     - name: チャートのタイプの選択
       href: financialchart_explore_chart_types.md

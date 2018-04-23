@@ -2,15 +2,20 @@
   header: true
 - name: Data Grid
   href: grid.md
+  new: true
   items:
     - name: Virtualization and performance
       href: grid_virtualization.md
+      new: false
     - name: Paging
       href: grid_paging.md
+      new: false
     - name: Filtering
       href: grid_filtering.md
+      new: false
     - name: Sorting
       href: grid_sorting.md
+      new: false
     - name: Summaries
       href: grid_summaries.md
       new: true
@@ -32,6 +37,7 @@
   header: true
 - name: Category Chart
   href: categorychart.md
+  new: true
   items:
     - name: Explore Chart Types
       href: categorychart_explore_chart_types.md
@@ -50,6 +56,7 @@
       new: true
 - name: Financial Chart
   href: financialchart.md
+  new: true
   items:
     - name: Explore Chart Types
       href: financialchart_explore_chart_types.md
