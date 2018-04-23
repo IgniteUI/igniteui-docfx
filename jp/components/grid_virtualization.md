@@ -51,7 +51,7 @@ _language: ja
 *   変更可能な行高さはサポートされません。すべての行を同じ高さに設定する必要があります。
 *   列仮想化の場合、すべての列をピクセル単位で定義される幅が必要です。列コンポーネントで明示的に設定するか、グリッドの `columnWidth` オプションで設定します。
 *   行/列の指定したディメンションが実際の描画された要素と一致する必要があります。たとえば、グリッド セルのために行高さを大きくするテンプレートまたはクラスが定義される場合、指定した `rowHeight` 値と一致しない場合、垂直仮想化が正しく操作しません。仮想項目数が DOM の実際要素と一致しません。列およびその幅に同じ条件があります。
-*   Browsers currently have height limitation for DOM elements. Because of that the total height of the rows shouldn't exceed the height limitation of the browsers. Otherwise there may be unexpected changes in behavior of `igxGrid`. For example Internet Explorer 11 has height limitation of 1 533 916 pixels, which for rows with height 50px means no more than 30 678 rows.
+*   ブラウザーは現在 DOM 要素に高さの制限があります。そのため、行の高さの合計をブラウザーの高さの制限より大きくする必要があります。より大きくなる場合、`igxGrid` が正しく動作しない可能性があります。たとえば、Internet Explorer 11 の高さの制限は 1,533,916 ピクセルです。つまり、高さが 50px の行の制限は 30,678 行です。
 
 
 ### FAQ

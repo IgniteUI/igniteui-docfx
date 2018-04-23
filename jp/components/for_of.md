@@ -249,8 +249,8 @@ chunkLoading(evt) {
 | `scrollPrev()`  | 「前」の方向に 1 項目スクロールします。|
 | `scrollTo(index)`  | 指定されたインデックスへスクロールします。 |
 
-## Limitations
+## 制限
 
-| Name  | Description | Status |
+| 名前  | 説明 | 状態 |
 | :---- | :---------- | :----- |
-| Content Height Limitation | Browsers currently have height limitation for DOM elements. Because of that the total height of the rows shouldn't exceed the height limitation of the browsers. Otherwise there may be unexpected changes in behavior of `igxForOf`. For example Internet Explorer 11 has height limitation of 1 533 916 pixels, which for rows with height 50px means no more than 30 678 rows. | Fix planned |
+| コンテンツの高さ制限 | ブラウザーは現在 DOM 要素に高さの制限があります。そのため、行の高さの合計をブラウザーの高さの制限より大きくする必要があります。より大きくなる場合、`igxForOf` が正しく動作しない可能性があります。たとえば、Internet Explorer 11 の高さの制限は 1,533,916 ピクセルです。つまり、高さが 50px の行の制限は 30,678 行です。 | 修正予定 |
