@@ -1,11 +1,11 @@
 ---
-title: Category Chart Component - Native Angular | Ignite UI for Angular 
-_description: The Ignite UI for Category Chart component simplifies the complexities of the data visualization domain into manageable API so that a user can bind a collection of data, a group of collections, and a data property, and let the charting control do the rest. 
-_keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Chart Control, Angular Chart Example, Angular Grid Component, Angular Chart Component, Angular Category Chart 
+title: Category Chart Component - Native Angular | Ignite UI for Angular
+_description: The Ignite UI for Category Chart component simplifies the complexities of the data visualization domain into manageable API so that a user can bind a collection of data, a group of collections, and a data property, and let the charting control do the rest.
+_keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Chart Control, Angular Chart Example, Angular Grid Component, Angular Chart Component, Angular Category Chart
 ---
-## Category Chart 
+## Category Chart
 
-The Category Chart is a charting component that makes visualizing category data easy to do. The control simplifies the complexities of the data visualization domain into manageable API. A user can bind a collection of data, a group of collections, and a data property and let the charting control do the rest. The component will analyze the data and then automatically choose the best series to represent the data. Furthermore, the user can instead set the ‘chartType’ property to choose from predefined charts, such as: Line, Area, Column, Point, Spline, Spline Area, Step Areas, Step Line, and Waterfall.  
+The Category Chart is a charting component that makes visualizing category data easy to do. The control simplifies the complexities of the data visualization domain into manageable API. A user can bind a collection of data, a group of collections, and a data property and let the charting control do the rest. The component will analyze the data and then automatically choose the best series to represent the data. Furthermore, the user can instead set the `chartType` property to choose from predefined charts, such as: Line, Area, Column, Point, Spline, Spline Area, Step Areas, Step Line, and Waterfall.
 
 ### Category Chart Demo
 
@@ -19,10 +19,10 @@ The Category Chart is a charting component that makes visualizing category data 
 
 <div class="divider--half"></div>
 
-By using a smart Data Adapter, the data is analyzed and the appropriate visualization is rendered. For example, if the `chartType` is set to `Auto`, the control can determine that if it is provided a small data set then a column chart should be plotted, while a larger data set will draw a line chart.
+By using a smart Data Adapter, the data is analyzed and the appropriate visualization is rendered. For example, if the `chartType` property is set to `Auto`, the control will use a column chart for a small data sets or a line chart for larger data sets.
 
 However, you can also explicitly specify the chart type by setting the `chartType` to:
-    
+
 - Line
 - Area
 - Column
@@ -52,14 +52,14 @@ import { IgxCategoryChartModule } from '@infragistics/ignite-ui-xplatform-for-an
 export class AppModule {}
 ```
 
-It's also possible to load a more minimal configuration of category chart whereby it can only load a subset of the possible series, and exclude other optional features by instead loading the igxCategoryChartCoreModule, and the dynamic module for the series in question, e.g. igxLineSeriesDynamicModule. If the `chartType` is `auto`, it wil make sure to select a series type that has been loaded.
+It's also possible to load a more minimal configuration of category chart whereby it can only load a subset of the possible series, and exclude other optional features by instead loading the `igxCategoryChartCoreModule`, and the dynamic module for the series in question, e.g. igxLineSeriesDynamicModule. If the `chartType` is `auto`, it wil make sure to select a series type that has been loaded.
 
 <div class="divider--half"></div>
 
 ### Usage
 Now that the category chart module is imported, next step is to bind it to data.
 
-In order to create an `igx-category-chart` control, you must first have data to bind it to. The following code snippet demonstrates how to create a simple data source. 
+In order to create an `igx-category-chart` control, you must first have data to bind it to. The following code snippet demonstrates how to create a simple data source.
 
 ```typescript
 var data = [
@@ -72,9 +72,9 @@ var data = [
 
 ```
 
-The following code demonstrates how to bind the category chart to the above data. 
+The following code demonstrates how to bind the category chart to the above data.
 
-```html 
+```html
  <igx-category-chart [dataSource]="data"
                      width="700px"
                      height="500px">
@@ -84,7 +84,7 @@ The following code demonstrates how to bind the category chart to the above data
 <div class="divider--half"></div>
 
 ### Chart Types
-You can overwrite the default behavior of the category chart and set which type of chart should be displayed. This is done by setting the `chartType` property.
+You can override the default behavior of the category chart and set which type of chart should be displayed. This is done by setting the `chartType` property.
 Below are listed all of the types that the Category Chart supports.
 
 > [!NOTE]

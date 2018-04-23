@@ -20,7 +20,7 @@ Ignite UI for Angular Grid コンポーネントは、グリッドにバイン�
 </div>
 <div class="divider--half"></div>
 
-列で設定された `dataType` に基づいて、[**フィルター条件**](#フィルター条件)の正しいセットがフィルター UI ドロップダウンで読み込まれます。また、列の `filteringIgnoreCase` および最初の `filteringCondition` プロパティを設定できます。
+There's a default filtering strategy provided out of the box, as well as all the standard filtering conditions, which the developer can replace with their own implementation. In addition, we've provided a way to easily plug in your own custom filtering conditions. The Grid currently provides not only a simplistic filtering UI but also more complex filtering options. Depending on the set `dataType` of the column the correct set of [**filtering conditions**](#filtering-conditions) will be loaded inside the filter UI dropdown. Additionally, you can set the `filteringIgnoreCase` and the initial `filteringCondition` property of the column.
 
 ```html
 <igx-column field="ProductName" filterable="true" dataType="string"></igx-column>

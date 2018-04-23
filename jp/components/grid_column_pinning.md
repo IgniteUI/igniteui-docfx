@@ -7,7 +7,7 @@ _language: ja
 
 ### グリッドの列のピン固定
 
-Ignite UI for Angular で、**列のピン固定**は `igx-grid` API で利用できます。ピン固定領域の幅がグリッドより大きくならない限り各列をピン固定できます。列のピン固定は `igx-column` の `pinned` 入力によって制御されます。ピン固定列は常にグリッドの左側に描画され、グリッド本体のピン固定されていない列の水平スクロールで固定されます。
+For Ignite UI for Angular, **Column Pinning** is available through the `igx-grid` API. 
 
 #### デモ
 
@@ -20,6 +20,8 @@ Ignite UI for Angular で、**列のピン固定**は `igx-grid` API で利用�
 </div>
 
 #### 列のピン固定 API
+
+Each column can be pinned, as long as the pinned area does not become wider than the grid itself. Column pinning is controlled through the pinned input of the `igx-column`. Pinned columns are always rendered on the left side of the grid and stay fixed through horizontal scrolling of the unpinned columns in the grid body.
 
 ```html
 <igx-grid #grid1 [data]="data | async" [width]="700px" [autoGenerate]="false" [paging]="true" [perPage]="6" (onColumnInit)="initColumns($event)"

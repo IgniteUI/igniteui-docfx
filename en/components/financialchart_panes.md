@@ -14,10 +14,10 @@ The `igx-financial-chart` control has multiple panes to display financial data.
 
 ### Financial Indicator Pane Demo
 <div class="sample-container" style="height: 550px">
-    <iframe id="financial-chart-indicator-pane-sample-iframe" src='{environment:demosBaseUrl}/financial-chart-indicator-pane-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="financial-chart-panes-iframe" src='{environment:demosBaseUrl}/financial-chart-panes-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="financial-chart-indicator-pane-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="financial-chart-panes-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
     </button>
 </div>
 
@@ -25,7 +25,7 @@ The `igx-financial-chart` control has multiple panes to display financial data.
 Financial Indicators are often used by traders to measure changes and to show trends in stock prices. These indicators are usually displayed below the price pane because they do not share the same Y-Axis scale.
 
 By default the indicator panes are not displayed. The toolbar allows the end user to select which indicator to display at run time.
-In order to display the pane, an indicator type must be set, as demonstrated in the following code:
+In order to display an indicator pane initially, the `indicatorTypes` property must be set to a least one type of indicator, as demonstrated in the following code:
 
 ```html
  <igx-financial-chart

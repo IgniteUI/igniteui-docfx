@@ -1,11 +1,11 @@
 ---
 title: Explore Chart Types
-_description: The Ignite UI for Category Chart component simplifies the complexities of the data visualization domain into manageable API so that a user can bind a collection of data, a group of collections, and a data property, and let the charting control do the rest. 
-_keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Chart Control, Angular Chart Example, Angular Grid Component, Angular Chart Component, Angular Category Chart 
+_description: The Ignite UI for Category Chart component simplifies the complexities of the data visualization domain into manageable API so that a user can bind a collection of data, a group of collections, and a data property, and let the charting control do the rest.
+_keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Chart Control, Angular Chart Example, Angular Grid Component, Angular Chart Component, Angular Category Chart
 ---
 ## Explore Chart Types
 
-In the Category Chart control, an Axis provides base properties for specifying appearance of axis main lines, tickmarks, titles, and axis labels. 
+In the Category Chart control, an Axis provides base properties for specifying appearance of axis main lines, tickmarks, titles, and axis labels.
 
 ### Explore Chart Types Demo
 
@@ -19,10 +19,10 @@ In the Category Chart control, an Axis provides base properties for specifying a
 
 <div class="divider--half"></div>
 
-By default, you do not need to explicitly set the labels. The Category Chart will use the first appropriate string property that it finds within the data you provided and will explicitly set which property to use for the labels. 
+By default, you do not need to explicitly set the labels. The Category Chart will use the first appropriate string property that it finds within the data you provided and will explicitly set which property to use for the labels.
 
-### Axis Labels 
-The Category Chart control allows you full control over configuring, formatting and styling the font of the labels displayed on your chart. You can change the rotation angle, margin, horizontal/vertical alignment, opacity, padding and visibility. 
+### Axis Labels
+The Category Chart control allows you full control over configuring, formatting and styling the font of the labels displayed on your chart. You can change the rotation angle, margin, horizontal/vertical alignment, opacity, padding and visibility.
 
 The following code example shows how to style labels on the x-axis using style properties:
 
@@ -43,7 +43,7 @@ The following code example shows how to style labels on the x-axis using style p
 <div class="divider--half"></div>
 
 ### Axis Titles
-The axis title feature of the Category Chart control allows you to add contextual information to the x and y axes of the chart. You can customize the look and feel of the Category Chart's x-axis and y-axis titles in many different ways such as applying different font styles, margins, and alignment. 
+The axis title feature of the Category Chart control allows you to add contextual information to the x and y axes of the chart. You can customize the look and feel of the Category Chart's x-axis and y-axis titles in many different ways such as applying different font styles, margins, and alignment.
 
 The following code example shows how to set and customize the titles on the x-axis and y-axis:
 
@@ -101,7 +101,7 @@ The following sample code demonstrates how to change the axis range on the y-axi
 <div class="divider--half"></div>
 
 ### Axis Interval
-In the Category Chart control, the axis major interval specifies how frequently major gridlines and axis labels are rendered on an axis. Similarly, axis minor interval specifies how frequently minor gridlines are rendered on an axis.
+In the Category Chart control, the `yAxisInterval` property specifies how frequently major gridlines and axis labels are rendered on an axis. Similarly, the `yAxisMinorInterval` property specifies how frequently minor gridlines are rendered on an axis.
 
 The following code snippet demonstrates how to configure the interval on the y-axis.
 
@@ -121,11 +121,11 @@ The following code snippet demonstrates how to configure the interval on the y-a
 
 <div class="divider--half"></div>
 
-### Axis Gap 
+### Axis Gap
 The Axis Gap feature of the Category Chart control allows setting the gap between series of the chart.
 
-The property accepts a numeric float value between 0 and 1. The value represents a relative width of the gap out of the available number of pixels between series. 
-   0 - no gap is rendered between series; 
+The property accepts a numeric float value between 0 and 1. The value represents a relative width of the gap out of the available number of pixels between series.
+   0 - no gap is rendered between series;
    1 - maximum available gap is rendered between series.
 
 To set the Category Chart with `xAxisGap` of `0.125` the following code can be used:
@@ -142,7 +142,7 @@ To set the Category Chart with `xAxisGap` of `0.125` the following code can be u
 <div class="divider--half"></div>
 
 ### Axis Overlap
-The Axis Overlap feature of the Category Chart control allows setting overlap of rendered categories. 
+The Axis Overlap feature of the Category Chart control allows setting overlap of rendered categories.
 
 The property accepts a numeric float value between -1 and 1. The value represents a relative overlap out of the available number of pixels dedicated to each series.
 
