@@ -10,7 +10,7 @@ The Grid component in ignite UI for Angular has a **summaries** feature that fun
 
 #### Demo
 
-<div class="sample-container loading" style="height:750px">
+<div class="sample-container loading" style="height:650px">
     <iframe id="grid-summary-sample-iframe" src='{environment:demosBaseUrl}/grid-summary' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
