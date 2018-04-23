@@ -20,7 +20,7 @@ This page will walk you through with code samples the different properties that 
 
 <div class="divider--half"></div>
 
-### Configuring Navigations
+### Configuring Navigation
 In the `igx-financial-chart` control, chart navigation is enabled by default. However, you can customize it by setting the following properties:
 
 - `isHorizontalZoomEnabled` - This specifies if the chart can be horizontally zoomed through user interactions. By default, this property is set to true.
@@ -35,6 +35,69 @@ In the `igx-financial-chart` control, chart navigation is enabled by default. Ho
     height="600px"
     isHorizontalZoomEnabled="true"
     isVerticalZoomEnabled="false">
+ </igx-financial-chart>
+```
+
+### Configuring Price Pane
+The price pane is always displayed in the Financial Chart and you can configure it by changing chart type and customizing appearance of its visuals. The following code demonstrates how to set the brushes and thickness of series in the price pane.
+
+```html
+ <igx-financial-chart
+    [dataSource]="data"
+    width="850px"
+    height="600px"
+    chartType="Candle"
+    brushes="Green, Blue"
+    outlines="Green, Blue"
+    negativeBrushes="Red"
+    negativeOutlines="Red"
+    thickness="2">
+ </igx-financial-chart>
+```
+
+### Configuring Overlays
+By default overlays are not displayed on the igxFinancialChart. There are two types of overlays - `BollingerBands` and `PriceChannel`. You can also customize the default settings of the overlays. The following code demonstrates how to set the color, overlay outlines and thickness.
+
+```html
+ <igx-financial-chart
+    [dataSource]="data"
+    width="850px"
+    height="600px"
+    overlayTypes="BollingerBands"
+    overlayBrushes="Red"
+    overlayOutlines="Green"
+    overlayThickness="2">
+ </igx-financial-chart>
+```
+
+### Configuring Indicators
+By default the indicator panes are not displayed in the Financial Chart. The toolbar allows the end user to select which indicator to display at run time. In order to display the pane, an indicator type must be set, as demonstrated in the following code:
+
+```html
+ <igx-financial-chart
+    [dataSource]="data"
+    width="850px"
+    height="600px"
+    indicatorTypes="AverageTrueRange,ForceIndex"
+    indicatorBrushes="Green, Blue"
+    indicatorNegativeBrushes="Red"
+    indicatorDisplayTypes="Line"
+    indicatorThickness="2">
+ </igx-financial-chart>
+```
+
+### Configuring Volume Pane
+By default volume pane is not displayed in the Financial Chart. However, you can enable this pane at runtime using chart toolbar or in programmatically as it is demonstrated in the following code:
+
+```html
+ <igx-financial-chart
+    [dataSource]="data"
+    width="850px"
+    height="600px"
+    volumeType="Column"
+    volumeBrushes="Green, Blue"
+    volumeOutlines="White"
+    volumeThickness="2">
  </igx-financial-chart>
 ```
 
@@ -54,19 +117,15 @@ The following code demonstrates how to set the color and thickness of the trendl
  </igx-financial-chart>
 ```
 
-### Configuring Overlays
-By default overlays are not displayed on the igxFinancialChart. There are two types of overlays - `BollingerBands` and `PriceChannel`. You can also customize the default settings of the overlays.
-
-The following code demonstrates how to set the color, overlay outlines and thickness.
+### Configuring Titles
+You can set title and subtitle that will be displayed between chart's toolbar and the price pane of the Financial Chart. The following code demonstrates how to set the title and subtitle.
 
 ```html
  <igx-financial-chart
     [dataSource]="data"
     width="850px"
     height="600px"
-    overlayTypes="BollingerBands"
-    overlayBrushes="Red"
-    overlayOutlines="Green"
-    overlayThickness="2">
+    chartTitle="Stock Prices"
+    subtitle="Between 2000 and 2015">
  </igx-financial-chart>
 ```
