@@ -15,10 +15,10 @@ _language: ja
 
 ### 財務インジケーター ペイン デモ
 <div class="sample-container" style="height: 550px">
-    <iframe id="financial-chart-indicator-pane-sample-iframe" src='{environment:demosBaseUrl}/financial-chart-indicator-pane-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="financial-chart-panes-iframe" src='{environment:demosBaseUrl}/financial-chart-panes' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="financial-chart-indicator-pane-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
+    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="financial-chart-panes-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
     </button>
 </div>
 
