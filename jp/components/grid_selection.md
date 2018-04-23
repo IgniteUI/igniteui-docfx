@@ -11,7 +11,7 @@ With row selection in Ignite UI for Angular, there is a checkbox that precedes a
 
 #### デモ
 
-<div class="sample-container loading" style="height:750px">
+<div class="sample-container loading" style="height:730px">
     <iframe id="grid-selection-iframe" src='{environment:demosBaseUrl}/grid-selection' width="100%" height="90%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
