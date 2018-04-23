@@ -7,7 +7,7 @@ _language: ja
 
 ### Shadows
 
-Shadows are used to establish and maintain functional boundaries between Document Object Model trees to enable better functional encapsulation.
+Shadows は、Document Object Model ツリーの間に境界線を描画し、機能のカプセル化を向上します。
 
 ### エレベーション
 

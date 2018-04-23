@@ -1,13 +1,13 @@
 ﻿---
-title: Row Selection Component - Native Angular | Ignite UI for Angular
-_description: With the Row Selection component in Ignite UI for Angular, there is a checkbox that precedes all other columns within the row, allowing the row to be either selected or deselected and enabling the user to select multiple rows of data.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Data Grid component, Angular Data Grid control, Angular Grid component, Angular Grid control, Angular High Performance Grid, Angular Grid Row Selection, Angular Row Selection, Angular Grid Selection, Grid Row Selection, Grid Selection
+title: 行選択 - ネイティブ Angular | Ignite UI for Angular
+_description: Ignite UI for Angular 行選択を使用すると、行ですべての他の列の前に描画されるチェックボックス列があります。このチェックボックスによって行を選択または選択解除でき、データの複数行を選択できます。
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular Data Grid コンポーネント, Angular Data Grid コントロール, Angular Grid コンポーネント, Angular Grid コントロール, Angular 高いパフォーマンス Grid, Angular Grid 行選択, Angular 行選択,Angular Grid 選択, Grid 行選択, Grid 選択
 _language: ja
 ---
 
 ### Data Grid 行選択
 
-With row selection in Ignite UI for Angular, there is a checkbox that precedes all other columns within the row. When a user clicks on the checkbox, the row will either become selected or deselected, enabling the user to select multiple rows of data.
+Ignite UI for Angular 行選択を使用すると、行ですべての他の列の前に描画されるチェックボックス列があります。チェックボックスをクリックすると、行を選択または選択解除になり、データの複数行を選択できます。
 
 #### デモ
 

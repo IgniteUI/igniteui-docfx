@@ -1,7 +1,7 @@
 ﻿---
-title: Export to Excel Component - Native Angular | Ignite UI for Angular
-_description: Users can export their data for editing or offline presentation can do so in Excel format with the Export to Excel Ignite UI for Angular component.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Controls, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Grid, Angular Data Grid, Angular Grid Control, Angular Grid Component, Excel Export, Angular Excel Component, Angular Export Excel
+title: Excel へのエクスポート コンポーネント - ネイティブ Angular | Ignite UI for Angular
+_description: ユーザーが編集またはオフライン プレゼンテーションのためにデータをエクスポートできます。Excel へのエクスポート Ignite UI for Angular コンポーネントで Excel 形式にエクスポートできます。
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Grid, Angular Data Grid, Angular Grid コントロール, Angular Grid コンポーネント, Excel エクスポート, Angular Excel コンポーネント, Angular エクスポート Excel
 _language: ja
 ---
 

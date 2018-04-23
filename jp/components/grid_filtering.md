@@ -7,7 +7,7 @@ _language: ja
 
 ### グリッドのフィルタリング
 
-The Grid component in Ignite UI for Angular provides extensive filtering API through the Data Container to which the grid is bound. There's a default filtering strategy provided out of the box, as well as all the standard filtering conditions, which the developer can replace with their own implementation. In addition, we've provided a way to easily plug in your own custom filtering conditions. The Grid currently provides not only a simplistic filtering UI but also more complex filtering options.
+Ignite UI for Angular Grid コンポーネントは、グリッドにバインドされるデータ コンテナーによってフィルタリング API を提供します。定義済みのデフォルト フィルタリング方法および規格のフィルタリング条件が適用されます。開発者がこれをカスタム実装と置き換えることができます。また、カスタム フィルタリング条件を追加する方法も提供します。Grid は現在簡易なフィルター UI を提供し、より詳細なフィルター オプションも提供します。
 
 #### デモ
 

@@ -1,13 +1,13 @@
 ﻿---
-title: Theming Component - Native Angular | Ignite UI for Angular
-_description: The Ignite UI for Angular Theming component was developed through SASS with a low-difficulty API that offers restyling of one component, multiple components, or the entire suite.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Components, Angular Theming Component, Angular Theming
+title: Theming コンポーネント - ネイティブ Angular | Ignite UI for Angular
+_description: Ignite UI for Angular Theming コンポーネントは SASS によって開発されます。API は簡単で、単一のコンポーネント、複数のコンポーネント、またはスイート全体のスタイル変更を適用できます。
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, ネイティブ Angular コンポーネント, Angular Theming コンポーネント, Angular Theming
 _language: ja
 ---
 
 ## テーマ
 
-With only a few lines of code, users can easily change the theming for their components. Being developed through SASS, the API use is low-difficulty and offers restyling of one component, multiple components, or the entire suite.
+コードの少数行で、コンポーネントのテーマを簡単に変更できます。SASS によって開発されるため、API は簡単で、単一のコンポーネント、複数のコンポーネント、またはスイート全体のスタイル変更を適用できます。
 
 ### テーマの概要
 

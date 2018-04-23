@@ -1,13 +1,13 @@
 ﻿---
-title: Input Groups Component - Native Angular | Ignite UI for Angular
-_description: The Input Groups component in Ignite UI for Angular allows for easy-to-use and aesthetic forms, simplicity with inputting data, and provides mitigation for handling validation and errors.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Components, Angular Label components, Angular Label controls, Angular Input components, Angular Input controls, Input component, Input control, Label component, Label control, Angular Input Group components, Angular Input Group controls, Angular Input directive, Angular Label directive, Angular Forms, Angular Reactive Forms, Angular Form Validation
+title: Input Groups コンポーネント - ネイティブ Angular | Ignite UI for Angular
+_description: Ignite UI for Angular Input Groups は、データ入力のための使用安いフォームの入力を提供し、検証およびエラーの処理機能も提供します。
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, ネイティブ Angular コンポーネント, Angular Label コンポーネント, Angular Label コントロール, Angular Input Group コンポーネント, Angular Input Group コントロール, Angular Input コンポーネント, Angular Input コントロール, Input コンポーネント, Input コントロール, Label コンポーネント, Label コントロール, Angular Input ディレクティブ, Angular Label ディレクティブ, Angular Forms, Angular Reactive Forms, Angular フォームの検証
 _language: ja
 ---
 
 ## Input Group
 
-Input groups in the Ignite UI for Angular controls allow developers to create easy-to-use and aesthetic forms. The user experiences simplicity with inputting data, and the inputs also provide mitigation for handling validation and errors.
+Ignite UI for Angular Input Groups を使用すると、簡単に使用できるデータ入力フォームを作成できます。データ入力を簡単になり、入力コントロールは検証およびエラーの処理機能も提供します。
 
 ### Input Group デモ
 <div class="sample-container" style="height:600px">

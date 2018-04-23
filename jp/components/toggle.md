@@ -1,13 +1,13 @@
 ﻿---
-title: Toggle Component - Native Angular | Ignite UI for Angular 
-_description: The Ignite UI for Angular Toggle directive allows the users to open, to interact with, to apply animations, and to close a toggle container. 
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Components, Angular Toggle directives, Angular Toggle controls, Angular Toggle Component,
+title: Toggle コンポーネント - ネイティブ Angular | Ignite UI for Angular
+_description: Ignite UI for Angular Toggle ディレクティブを使用すると、トグル コンテナーを開く、操作、アニメーションに適用、および閉じることができます。
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, ネイティブ Angular コンポーネント, Angular Toggle ディレクティブ, Angular Toggle コントロール, Angular Toggle コンポーネント
 _language: ja
 ---
 
 ## Toggle
 
-The igxToggle directive allows the users to open, to interact with, to apply animations, and to close a toggle container. All toggle components implement the `igxToggle` or `igxToggleAction` internally, and users can implement toggle-based components and views, like dropdowns, while the `igxToggleAction` directive controls other components until the toggle umbrella.
+igxToggle ディレクティブを使用すると、トグル コンテナーを開く、操作、アニメーションに適用、および閉じることができます。すべてのトグル コンポーネントは `igxToggle` または `igxToggleAction` を内部に実装します。`igxToggleAction` ディレクティブがその他のコンポーネントを制御する間にドロップダウンなどのトグルに基づくコンポーネントおよびビューを実装できます。
 
 ### Toggle デモ
 
