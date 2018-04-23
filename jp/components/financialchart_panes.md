@@ -6,12 +6,12 @@ _language: ja
 ---
 ## Financial Chart ペイン
 
-Financial Chart は財務データを表示する複数のペインがあります。
+`igx-financial-chart` コントロールは財務データを表示する複数のペインがあります。
 
-* インジケーター ペイン - すべての財務指標を別のチャートに描画し、BollingerBands および PriceChannel オーバーレイが Y 軸と同じ値範囲を使用するために価格ペインに描画されます。
-* ボリューム ペイン - 柱状、折れ線、およびエリアのチャート タイプを使用して出来高を描画します。
 * 価格ペイン - 折れ線、ローソク足、棒 (OHLC)、トレンドライン、および財務オーバーレイを使用して価格を描画します。
-* ズーム ペイン - すべてのペインのズームを制御します。
+* インジケーター ペイン - すべての財務指標を別のチャートに描画し、`BollingerBands` および `PriceChannel` オーバーレイが Y 軸と同じ値範囲を使用するために価格ペインに描画されます。
+* ボリューム ペイン - 柱状、折れ線、およびエリアのチャート タイプを使用して出来高を上記のペインの下に描画します。
+* ズーム ペイン - すべてのペインのズームを制御します。常にチャートの下側に描画されます。
 
 ### 財務インジケーター ペイン デモ
 <div class="sample-container" style="height: 550px">
@@ -32,28 +32,19 @@ Financial Chart は財務データを表示する複数のペインがありま�
     [dataSource]="data"
     width="850px"
     height="600px"
-    indicatorTypes="AverageTrueRange">
+    indicatorTypes="AverageTrueRange,ForceIndex">
  </igx-financial-chart>
 ```
 
 ### ボリューム ペイン
 ボリューム ペインは指定した期間で取引された株式の数を表します。出来高の低さは関心が低いことを示し、出来高の多さは取引が多く、関心が高いことを示します。柱状、折れ線、またはエリア チャート タイプを使用して表示できます。ツールバーでチャート タイプを選択すると、ランタイムにデータを表示するボリューム ペインが表示されます。ペインを表示するには、以下のコードのようにボリューム タイプを設定する必要があります。
 
-### 財務ボリューム ペイン デモ
-<div class="sample-container" style="height: 650px">
-    <iframe id="financial-chart-volume-pane-sample-iframe" src='{environment:demosBaseUrl}/financial-chart-volume-pane-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="financial-chart-volume-pane-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
-    </button>
-</div>
-
 ```html
  <igx-financial-chart
     [dataSource]="data"
     width="850px"
     height="600px"
-    volumeType="column">
+    volumeType="Column">
  </igx-financial-chart>
 ```
 
@@ -65,9 +56,11 @@ Financial Chart は財務データを表示する複数のペインがありま�
     [dataSource]="data"
     width="850px"
     height="600px"
-    chartType="line">
+    chartType="Line">
  </igx-financial-chart>
 ```
+
+注: 複数のデータ ソースまたはデータ ポイントが大量にあるデータ ソースを描画する場合、折れ線チャート タイプを使用してください。
 
 ### ズーム ペイン
 このペインはすべての表示されるペインのズームを制御します。このペインはデフォルトで表示されます。以下のコードのように `zoomSliderType` を `none` に設定すると機能を無効にできます。
@@ -80,3 +73,23 @@ Financial Chart は財務データを表示する複数のペインがありま�
     zoomSliderType="none">
  </igx-financial-chart>
 ```
+
+注: `zoomSliderType` オプションを `chartType` オプションと同じ値に設定してください。このように、ズーム スライダーは価格ペインの正しいプレビューを表示します。以下のコードはその方法を示しています。
+
+```html
+ <igx-financial-chart
+    [dataSource]="data"
+    width="850px"
+    height="600px"
+    chartType="Line"
+    zoomSliderType="Line">
+ </igx-financial-chart>
+```
+
+
+<div class="divider--half"></div>
+
+### 追加のリソース
+<div class="divider--half"></div>
+
+* [チャートのパフォーマンス](financialchart_performance.html)

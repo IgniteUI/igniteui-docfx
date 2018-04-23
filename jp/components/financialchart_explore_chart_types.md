@@ -6,17 +6,17 @@ _language: ja
 ---
 ## Financial Chart 軸 
 
-Financial Chart コントロールでは、軸は軸線、目盛、タイトル、や軸のラベルの外観を設定する基本プロパティを提供します。
+`igx-financial-chart` コントロールでは、軸は軸線、目盛、タイトル、や軸のラベルの外観を設定する基本プロパティを提供します。
 
 デフォルトでは、ラベルを明示的に設定する必要はありません。Financial Chart は、データ内で最初の適切なプロパティを使用し、ラベルに使用します。
 
-### Financial Chart 軸デモ
+### 軸デモ
 
 <div class="sample-container" style="height: 550px">
-    <iframe id="financial-chart-axis-sample-iframe" src='{environment:demosBaseUrl}/financial-chart-axis-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="financial-chart-axis-types-iframe" src='{environment:demosBaseUrl}/financial-chart-axis-types' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="financial-chart-axis-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
+    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="financial-chart-axis-types-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
     </button>
 </div>
 
@@ -30,15 +30,15 @@ Financial Chart コントロールで、軸の主間隔は主グリッド線お�
  
 ```html
  <igx-financial-chart
-    [dataSource]="data"
+	yAxisInterval="200"
+    yAxisMinorInterval="50"
+    yAxisMajorStroke="Black"
+    yAxisMinorStroke="Gray"
+    yAxisMinorStrokeThickness="0.5"
+    yAxisMajorStrokeThickness="0.5"
     width="850px"
     height="600px"
-    yAxisInterval="100"
-    yAxisMinorInterval="10" 
-    yAxisMinorStroke="Red"    
-    yAxisMajorStroke="Green"  
-    yAxisMinorStrokeThickness="1"
-    yAxisMajorStrokeThickness="1">
+	[dataSource]="data"
  </igx-financial-chart>
 ```
 <div class="divider--half"></div>
@@ -51,19 +51,24 @@ Financial Chart コントロールは、チャートで表示されるラベル�
 
 ```html
 <igx-financial-chart
-    [dataSource]="data"
+    xAxisLabelTextStyle="8pt Verdana"
+    xAxisLabelTextColor="Gray"
+    xAxisLabelTopMargin="5"
+    xAxisLabeleAngle="0"
+    yAxisLabelTextStyle="8pt Verdana"
+    yAxisLabelTextColor="Gray"
+    yAxisLabelLeftMargin="5"
+    yAxisLabeleAngle="0"
     width="850px"
     height="600px"
-    xAxisLabelTextStyle="16pt Verdana"
-    xAxisLabelRightMargin="14"
-    xAxisLabelTextColor="red">
+    [dataSource]="data">
 </igx-financial-chart>
 ```
 <div class="divider--half"></div>
 
 ### 軸モード 
 
-igxFinancialChart コントロールで X 軸および Y 軸に別のモードを設定できます。X 軸で以下のモードを選択できます。
+`igx-financial-chart` コントロールで X 軸および Y 軸に別のモードを設定できます。X 軸で以下のモードを選択できます。
 - Time - このモードはデータのギャップを X 軸にスペースを用いて描画します。つまり、週末または休日に株取引がないことを示します。
 - Ordinal - このモードはデータがない日付領域を縮小します。これがデフォルト値です。
 
@@ -75,11 +80,11 @@ Y 軸で以下のモードを選択できます。
 
 ```html
 <igx-financial-chart
-    [dataSource]="data"
+    xAxisMode="time"
+    yAxisMode="percentChange"
     width="850px"
     height="600px"
-    xAxisMode="time"
-    yAxisMode="percentChange">
+	[dataSource]="data">
 </igx-financial-chart>
 ```
 <div class="divider--half"></div>
@@ -92,11 +97,11 @@ Financial Chart コントロールで、数値軸の範囲は軸の始めと終�
 
 ```html
   <igx-financial-chart
-       [dataSource]="data"
-       width="850px"
-       height="600px"
-      yAxisMinimumValue="-200"
-      yAxisMaximumValue="1000">
+    yAxisMinimumValue="-200"
+    yAxisMaximumValue="1000"
+    width="850px"
+    height="600px"
+    [dataSource]="data">
   </igx-financial-chart>
 ```
  <div class="divider--half"></div>
@@ -111,11 +116,11 @@ Financial Chart コントロールで、チャートのデータが Y 軸に対�
 
 ```html
  <igx-financial-chart
-      [dataSource]="data"
-      width="850px"
-      height="600px"
-      yAxisIsLogarithmic="true"
-      yAxisLogarithmBase="10">
+    yAxisIsLogarithmic="true"
+    yAxisLogarithmBase="10"
+    width="850px"
+    height="600px"
+    [dataSource]="data">
  </igx-financial-chart>
 ```
 <div class="divider--half"></div>
@@ -128,12 +133,12 @@ Financial Chart コントロールで、チャートのデータが Y 軸に対�
 
 ```html
   <igx-financial-chart
-      [dataSource]="data"
-      width="850px"
-      height="600px"
-      xAxisTickLength="10"
-      xAxisTickStrokeThickness="3"
-      xAxisTickStroke="red">
+    xAxisTickLength="10"
+    xAxisTickStrokeThickness="1"
+    xAxisTickStroke="Gray"
+    width="850px"
+    height="600px"
+    [dataSource]="data">
   </igx-financial-chart>
 ```
 <div class="divider--half"></div>
@@ -146,15 +151,16 @@ Financial Chart コントロールの軸タイトル機能は、チャートの 
 
 ```html
  <igx-financial-chart
-      [dataSource]="data"
+      xAxisTitle="Data Range"
+      xAxisTitleTextColor="Black"
+      xAxisTitleTextStyle="15pt Times New Roman|Georgia|Serif"
+      xAxisTitleAngle="0"
+      yAxisTitle="Stock Prices ($)"
+      yAxisTitleTextColor="Black"
+      yAxisTitleAngle="90"
       width="850px"
       height="600px"
-      xAxisTitle="Country"
-      xAxisTitleTextColor="blue"
-      xAxisTitleTextStyle="20pt Times New Roman|Georgia|Serif"
-      yAxisTitle="Millions of People"
-      yAxisTitleAngle="90"
-      yAxisTitleTextColor="red">
+	  [dataSource]="data">
  </igx-financial-chart>
 ```
 <div class="divider--half"></div>

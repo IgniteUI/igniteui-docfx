@@ -6,15 +6,15 @@ _language: ja
 ---
 ## 構成オプション
 
-ナビゲーション動作、トレンドライン レイヤー、オーバーレイ、チャート タイトル、チャート サブタイトルなどのファイナンシャル チャートでカスタマイズ可能な領域があります。このページは、カスタマイズされたファイナンシャル チャートを作成するために設定するプロパティをコード例を使用して説明します。
+`igx-financial-chart` コントロールで、ナビゲーション動作、トレンドライン レイヤー、オーバーレイ、チャート タイトル、チャート サブタイトルなどのカスタマイズ可能なビジュアルがあります。このページは、カスタマイズされたファイナンシャル チャートを作成するために設定するプロパティをコード例を使用して説明します。
 
 ### 構成オプション デモ
 
 <div class="sample-container" style="height: 550px">
-    <iframe id="financial-chart-configuring-iframe" src='{environment:demosBaseUrl}/financial-chart-configuring' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="financial-chart-trendlines-iframe" src='{environment:demosBaseUrl}/financial-chart-trendlines' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="financial-chart-configuring-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
+    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="financial-chart-trendlines-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
     </button>
 </div>
 
@@ -22,20 +22,20 @@ _language: ja
 
 ### ナビゲーションの構成
 
-igxFinancialChart コントロールでは、チャート ナビゲーションがデフォルトで有効になっています。ただし、以下のプロパティを設定することによって、カスタマイズできます。
+`igx-financial-chart` コントロールでは、チャート ナビゲーションがデフォルトで有効になっています。ただし、以下のプロパティを設定することによって、カスタマイズできます。
 
-- IsHorizontalZoomEnabled - チャートがユーザー操作により水平方向にズーム可能かどうかを指定します。デフォルトでこのプロパティは true に設定されます。
-- IsVerticalZoomEnabled - チャートがユーザー操作により垂直方向にズーム可能かどうかを指定します。デフォルトでこのプロパティは false に設定されます。
-- IsWindowSyncedToVisibleRange - true に設定される場合、Y 軸は表示データ範囲に自動的にサイズ変更します。デフォルトでこのプロパティは false に設定されます。
-- WindowRect - igxFinancialChart のスクロール状態およびズーム状態を取得または設定するために使用できます。WindowRect は、 0 ~ 1 の間の座標およびサイズの Rectangle として表現されます。
+- `IsHorizontalZoomEnabled` - チャートがユーザー操作により水平方向にズーム可能かどうかを指定します。デフォルトでこのプロパティは true に設定されます。
+- `IsVerticalZoomEnabled` - チャートがユーザー操作により垂直方向にズーム可能かどうかを指定します。デフォルトでこのプロパティは false に設定されます。
+- `IsWindowSyncedToVisibleRange` - true に設定される場合、Y 軸は表示データ範囲に自動的にサイズ変更します。デフォルトでこのプロパティは false に設定されます。
+- `WindowRect` - `igx-financial-chart` のスクロール状態およびズーム状態を取得または設定するために使用できます。`windowRect` は、 0 ~ 1 の間の座標およびサイズの Rectangle として表現されます。
 
 ```html
  <igx-financial-chart
     [dataSource]="data"
     width="850px"
     height="600px"
-    isHorizontalZoomEnabled="false"
-    isVerticalZoomEnabled="true">
+    isHorizontalZoomEnabled="true"
+    isVerticalZoomEnabled="false">
  </igx-financial-chart>
 ```
 
@@ -51,14 +51,14 @@ igxFinancialChart コントロールでは、チャート ナビゲーション�
     width="850px"
     height="600px"
     trendLineType="QuinticFit"
-    trendLineBrushes="Green"
-    trendLineThickness="2">
+	trendLineThickness="2"
+    trendLineBrushes="Green, Blue">
  </igx-financial-chart>
 ```
 
 ### オーバーレイの構成
 
-オーバーレイはデフォルトで igxFinancialChart に表示されません。オーバーレイには、BollingerBands および PriceChannel の 2 種類があります。オーバーレイのデフォルト設定をカスタマイズできます。
+オーバーレイはデフォルトで igxFinancialChart に表示されません。オーバーレイには、`BollingerBands` および `PriceChannel` の 2 種類があります。オーバーレイのデフォルト設定をカスタマイズできます。
 
 以下のコードはオーバーレイの色、アウトライン、および太さを設定します。
 
@@ -70,6 +70,6 @@ igxFinancialChart コントロールでは、チャート ナビゲーション�
     overlayTypes="BollingerBands"
     overlayBrushes="Red"
     overlayOutlines="Green"
-    overlayThickness="2"> 
+    overlayThickness="2">
  </igx-financial-chart>
 ```
