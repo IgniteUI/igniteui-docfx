@@ -80,7 +80,7 @@ To enable multiple row selection, the `igx-grid` exposes the `rowSelectable` pro
 ### Code Snippets
 
 #### Select rows programatically
-Ihe below code example can be used to select one or multiple rows simultaniously (via `primaryKey`):
+The below code example can be used to select one or multiple rows simultaniously (via `primaryKey`):
 ```html
 <!-- in component.html -->
 <igx-grid ... [primaryKey]="'ID'">
