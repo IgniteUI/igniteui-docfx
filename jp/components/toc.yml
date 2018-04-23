@@ -172,7 +172,6 @@
 - name: Time Picker
   href: time_picker.md
   new: true
-  name: true
 - name: サービス
   header: true
 - name: CSV Exporter
