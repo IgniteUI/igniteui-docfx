@@ -6,7 +6,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ### Grid Summaries
 
-The Grid component in ignite UI for Angular has a **summaries** feature that functions on a per-column level. The user is able to see the column information in a separate container with a predefined set of default summary items, depending on the type of data within the column.
+The Grid component in ignite UI for Angular has a **summaries** feature that functions on a per-column level.
 
 #### Demo
 
@@ -22,7 +22,7 @@ The Grid component in ignite UI for Angular has a **summaries** feature that fun
 > [!NOTE]
 > The summary of the column is a **function of all column values**, unless filtering is applied, then the summary of the column will be **function of the filtered result values**
 
-**Grid summaries** can also be enabled on a per-column level in Ignite UI for Angular, which means that you can activate it only for columns that you need. Grid summaries gives you a predefined set of default summaries, depending on the type of data in the column, so that you can save some time:
+The user is able to see the column information in a separate container with a predefined set of default summary items, depending on the type of data within the column. **Grid summaries** can also be enabled on a per-column level in Ignite UI for Angular, which means that you can activate it only for columns that you need. Grid summaries gives you a predefined set of default summaries, depending on the type of data in the column, so that you can save some time:
 
 
 For `string` and `boolean` data types, the following function is available:

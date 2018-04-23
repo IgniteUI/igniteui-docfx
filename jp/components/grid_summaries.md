@@ -7,7 +7,7 @@ _language: ja
 
 ### グリッドの集計
 
-The Grid component in ignite UI for Angular has a **summaries** feature that functions on a per-column level. The user is able to see the column information in a separate container with a predefined set of default summary items, depending on the type of data within the column.
+The Grid component in ignite UI for Angular has a **summaries** feature that functions on a per-column level.
 
 #### デモ
 
@@ -23,7 +23,7 @@ The Grid component in ignite UI for Angular has a **summaries** feature that fun
 > [!NOTE]
 > 列の集計は**列値すべての関数**ですが、フィルタリングが適用された場合、列の集計は**フィルターされた結果値の関数**になります。
 
-**Grid summaries** can also be enabled on a per-column level in Ignite UI for Angular, which means that you can activate it only for columns that you need. Grid summaries gives you a predefined set of default summaries, depending on the type of data in the column, so that you can save some time:
+The user is able to see the column information in a separate container with a predefined set of default summary items, depending on the type of data within the column. **Grid summaries** can also be enabled on a per-column level in Ignite UI for Angular, which means that you can activate it only for columns that you need. Grid summaries gives you a predefined set of default summaries, depending on the type of data in the column, so that you can save some time:
 
 `string` および `boolean` データ型の場合、以下の関数が利用できます。
  - count
