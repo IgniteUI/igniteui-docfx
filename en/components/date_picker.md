@@ -224,6 +224,7 @@ The result is as follows:
 |:--:|:---|:---|
 | `onSelection` | `Date` | Fired when selection is made in the calendar. The event contains the selected value(s) based on the type of selection the component is set to |
 | `onOpen`  | `datePicker` | Emitted when a datePicker calendar is being opened.  |
+| `onClose`  | `datePicker` | Emitted when a datePicker calendar is being closed.  |
 
 #### Methods
 <div class="divider--half"></div>
