@@ -7,7 +7,7 @@ _language: ja
 
 ### グリッドの仮想化とパフォーマンス
 
-In Ignite UI for Angular, the `igxGrid` control now utilizes the `igxForOf` directive and virtualizes its content both vertically and horizontally.
+Ignite UI for Angular `igxGrid` コントロールは `igxForOf` ディレクティブを使用します。コンテンツを垂直方向 (データ レコード) および水平方向 (列) に仮想化します。
 
 #### デモ
 
@@ -21,7 +21,7 @@ In Ignite UI for Angular, the `igxGrid` control now utilizes the `igxForOf` dire
 
 ### 仮想化の有効化
 
-`igxGrid` の `width` および `height` のデフォルト値は 100% です。コンテンツが利用可能なスペースにフィットせず、垂直方向または水平方向にスクロールバーが必要な場合に仮想化が有効になります。ただし、グリッドの `width` または `height` を明示的に `null` 値に設定できます。つまり、関連するディメンションが項目の合計サイズに基づいて決定されます。スクロールバーが表示されず、すべての項目が相対するディメンション (`width` が `null` 値の場合は列で、`height` が `null` 値の場合は行) に描画されます。
+ユーザーが大きいデータ セットでスムーズにスクロールできます。`igxForOf` ディレクティブを使用すると、ビューポートに表示されているデータのみを描画し、ユーザーがスクロールするときに表示されるデータを切り替えると、Data Grid は DOM 描画およびメモリ使用を最適化します。`igxGrid` の `width` および `height` のデフォルト値は 100% です。コンテンツが利用可能なスペースにフィットせず、垂直方向または水平方向にスクロールバーが必要な場合に仮想化が有効になります。ただし、グリッドの `width` または `height` を明示的に `null` 値に設定できます。つまり、関連するディメンションが項目の合計サイズに基づいて決定されます。スクロールバーが表示されず、すべての項目が相対するディメンション (`width` が `null` 値の場合は列で、`height` が `null` 値の場合は行) に描画されます。
 
 データ部分のサイズが以下のことによって決定されます。
 
