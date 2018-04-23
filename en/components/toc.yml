@@ -2,6 +2,7 @@
   header: true
 - name: Data Grid
   href: grid.md
+  new: true
   items:
     - name: Virtualization and performance
       href: grid_virtualization.md
