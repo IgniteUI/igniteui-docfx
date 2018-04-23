@@ -29,6 +29,7 @@
   header: true
 - name: Category Chart
   href: categorychart.md
+  new: true
   items:
     - name: Explore Chart Types
       href: categorychart_explore_chart_types.md
@@ -47,6 +48,7 @@
       new: true
 - name: Financial Chart
   href: financialchart.md
+  new: true
   items:
     - name: Explore Chart Types
       href: financialchart_explore_chart_types.md

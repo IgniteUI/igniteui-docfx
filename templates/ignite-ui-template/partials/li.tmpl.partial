@@ -10,32 +10,32 @@ full license information.}}
         <li class="nav__cta">
             <a href="{{topicHref}}" title="{{name}}">{{name}}</a>
         </li>
-    {{/cta}} 
-    {{#new}}
-        <li class="new">
-            <a href="{{topicHref}}" title="{{name}}">{{name}}</a>
-            <span class="new__badge">NEW</span>
-        </li>
-    {{/new}} 
-    {{^header}} 
-    {{^cta}}
-    {{^new}}
-        <li>
-            {{^leaf}}
-                <span class="expand-stub"></span>
-            {{/leaf}} 
-            {{#topicHref}}
-                <a href="{{topicHref}}" name="{{tocHref}}" title="{{name}}">{{name}}</a>
-            {{/topicHref}} 
-            {{^topicHref}}
-                <a>{{{name}}}</a>
-            {{/topicHref}} 
-            {{^leaf}} 
-                {{>partials/li}} 
-            {{/leaf}}
-        </li>
-    {{/new}}
     {{/cta}}
-    {{/header}} 
+    {{^header}} 
+    {{^cta}}        
+        {{#new}}
+            <li class="new">        
+        {{/new}}
+        {{^new}}
+            <li>
+        {{/new}}
+        {{^leaf}}
+            <span class="expand-stub"></span>
+        {{/leaf}}
+        {{#topicHref}}
+            <a href="{{topicHref}}" name="{{tocHref}}" title="{{name}}">{{name}}</a>
+        {{/topicHref}} 
+        {{^topicHref}}
+            <a>{{{name}}}</a>
+        {{/topicHref}} 
+        {{#new}}
+            <span class="new__badge">NEW</span>
+        {{/new}}
+        {{^leaf}} 
+            {{>partials/li}} 
+        {{/leaf}}
+        </li>
+    {{/cta}}
+    {{/header}}
     {{/items}}
 </ul>
