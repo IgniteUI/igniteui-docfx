@@ -7,22 +7,19 @@ _language: ja
 
 ### グリッドの並べ替え
 
-In Ignite UI for Angular, **Sorting** is enabled on a per-column level, meaning that the igx-grid can have a mix of sortable and non-sortable columns. This is done via the `sortable` input. With the grid sorting, you can also set the `sortingIgnoreCase` property to perform case sensitive sorting.
+Ignite UI for Angular で、**並べ替え**も列ごとのレベルで有効化されます。つまり、`igx-grid` に並べ替え可能な列および並べ替え可能ではない列の両方を含むことが可能です。`sortable` 入力によって実行できます。グリッド フィルターと同じように、`sortingIgnoreCase` プロパティを設定すると、大文字と小文字を区別する並べ替えを実行できます。
 
-### Grid Demo
-Additionally there is a custom contextmenu added for sorting using **igx-grid**'s onContextMenu Output.
+#### デモ
+以下のデモでは、**igx-grid** の `onContextMenu` 出力を使用してカスタム コンテキスト メニューが追加されました。
 
 <div class="sample-container loading" style="height:550px">
     <iframe id="grid-sample-iframe" src='{environment:demosBaseUrl}/grid-sorting-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="grid-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="grid-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
 </div>
 <div class="divider--half"></div>
-
-> [!NOTE]
-> 並べ替え操作では、グリッドにバインドされているデータ ソースは変更**されません**。
 
 #### API での並べ替え
 
@@ -51,6 +48,9 @@ this.grid.clearSort('ProductName');
 this.grid.clearSort();
 ```
 
+> [!NOTE]
+> 並べ替え操作では、グリッドにバインドされているデータ ソースは変更**されません**。
+
 #### 初期の並べ替え状態
 
 グリッドの初期の並べ替え状態を設定するには、並べ替え式の配列をグリッドの `sortingExpressions` プロパティに渡します。
@@ -76,6 +76,7 @@ public ngOnInit() {
 * [集計](grid_summaries.html)
 * [列のピン固定](grid_column_pinning.html)
 * [列のサイズ変更](grid_column_resizing.html)
+* [選択](grid_selection.html)
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。

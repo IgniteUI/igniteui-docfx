@@ -7,7 +7,7 @@ _language: ja
 
 ## Button
 
-The Button directive within Ignite UI for Angular is intended to be used on any button, span, div, or anchor element to turn it into a fully functional button. 
+Ignite UI for Angular Button ディレクティブを任意の button、span、div、または anchor 要素に適用して高機能なボタンを構成できます。
 
 ### Button デモ
 

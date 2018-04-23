@@ -1,18 +1,18 @@
 ﻿---
-title: Financial Chart コンポーネント
-_description: Ignite UI for Angular Financial Chart コンポーネントは、財務データを表示するタッチ対応、高いパフォーマンス、軽量なチャート コントロールです。
-_keywords: Ignite UI for Angular, データ ビジュアライゼーション, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Chart コンポーネント, Angular Financial Chart コンポーネント, Angular Chart コントロール, Angular Financial Chart コントロール
+title: Financial Chart コンポーネント - ネイティブ Angular | Ignite UI for Angular 
+_description: Ignite UI for Angular Financial Chart コンポーネントは簡易な API を使用してファイナンシャル データを表示できます。ユーザーがデータにバインド後にチャートがデータの可視化オプションを複数提供します。
+_keywords: Ignite UI for Angular, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular チャート, Angular チャート コントロール, Angular チャート例, Angular チャート コンポーネント, Angular Financial Chart
 _language: ja
 ---
 ## ファイナンシャル チャート
 
-Financial Chart は軽量で高パフォーマンスなチャートです。このチャートは、シンプルで直感的な API を使用した財務データの表示を簡単に構成できます。データ (コレクションまたはコレクションのコレクション) をバインドするだけで後の作業はチャートがすべて行います。チャートは data プロパティにバインドされるデータ ソースの構造を解析します。データ ソースにある各コレクション用に単一の財務物価シリーズをプロットします。また、各コレクションのデータ項目で Open、High、Low、Close、および Volume 名前を持つ 5 つの数値データ列および Time 名前を持つ単一の日刻列を検索して解析します。チャートを使用してデータを可視化する複数方法を提供します。価格およびボリュームに複数の表示モードおよび財務指標の大量を提供します。チャートにデータ コンテキストを表示するためにラベルの書式設定を使用します。
+Financial Chart は簡易な API を持つファイナンシャル データを可視化するチャート コンポーネントです。ユーザーがデータをバインド後、チャートはデータの可視化オプションを複数提供します。価格および出来高のための複数の表示モードがあり、財務指標がおおあります。チャートにデータ コンテキストを表示するためにラベルの書式設定を使用します。
 
-<div class="divider"></div>
+ファイナンシャル チャート コンポーネントはデータ列を解析して選択します。日/時列を X 軸で使用し、Open、High、Low、Close、Volume 列、または最初の 5 つの数値列を Y 軸で使用します。ユーザーがチャート タイプを棒、ローソク足、柱状、または折れ線に設定できます。主要なビジュアル要素にツールバー、価格ペイン、ボリューム ペイン、インジケーター ペイン、およびナビゲーション ペインがあります。
 
 ### Financial Chart デモ
 
-<div class="sample-container" style="height: 650px">
+<div class="sample-container" style="height: 550px">
     <iframe id="financial-chart-overview-sample-iframe" src='{environment:demosBaseUrl}/financial-chart-overview-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>

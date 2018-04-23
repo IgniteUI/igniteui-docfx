@@ -10,7 +10,7 @@ _language: ja
 <p class="highlight">Ignite UI for Angular Data Grid で表形式データを表示して変更します。最小限のコードと構成でデータをすばやくバインドできます。機能は、フィルタリング、並べ替え、ページング、テンプレート、移動可能な列、およびデータの編集と更新です。ユーザー操作が簡単に認識できるため、コードで制御できます。</p>
 <div class="divider"></div>
 
-### Grid デモ
+### デモ
 
 <div class="sample-container loading" style="height:650px">
     <iframe id="grid-sample-iframe" src='{environment:demosBaseUrl}/grid' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -414,7 +414,7 @@ this.grid.deleteRow(this.selectedCell.rowIndex);
 
 ```html
 <igx-grid #grid1 [data]="data | async" [autoGenerate]="false"
- (onColumnInit)="initColumns($event)" (onCellSelection)="selectCell($event)"></igx-grid>
+ (onColumnInit)="initColumns($event)" (onSelection)="selectCell($event)"></igx-grid>
 ```
 
 <div class="divider--half"></div>
@@ -630,6 +630,7 @@ import {
 * [並べ替え](grid_sorting.html)
 * [集計](grid_summaries.html)
 * [列のピン固定](grid_column_pinning.html)
+* [列のサイズ変更](grid_column_resizing.html)
 * [選択](grid_selection.html)
 
 <div class="divider--half"></div>

@@ -1,22 +1,20 @@
 ﻿---
-title: Category Chart 軸
-_description: Ignite UI for Angular Category Chart コンポーネントは、カテゴリ データを表示するタッチ対応、高いパフォーマンス、軽量なチャート コントロールです。
-_keywords: Ignite UI for Angular, データ ビジュアライゼーション, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Chart コンポーネント, Angular Category Chart コンポーネント, Angular Chart コントロール, Angular Category Chart コントロール
+title: チャート タイプの選択
+_description: Ignite UI for Angular Category Chart コンポーネントは複雑なデータ ビジュアライゼーションを API によって簡素化できます。ユーザーがデータのコレクションまたはコレクションのグループにバインドし、データを指定するプロパティを設定後、チャート コントロールが残りの作業を処理します。
+_keywords: Ignite UI for Angular, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular チャート, Angular チャート コントロール, Angular チャート例, Angular チャート コンポーネント, Angular Category Chart
 _language: ja
 ---
-## Category Chart 軸 
+## チャート タイプの選択
 
 Category Chart コントロールでは、軸は軸線、目盛、タイトル、や軸のラベルの外観を設定する基本プロパティを提供します。
 
-<div class="divider"></div>
+### チャート タイプのデモ
 
-### Category Chart 軸デモ
-
-<div class="sample-container" style="height: 650px">
-    <iframe id="category-chart-axis-sample-iframe" src='{environment:demosBaseUrl}/category-chart-axis-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container" style="height: 550px">
+    <iframe id="category-chart-axis-options-sample-iframe" src='{environment:demosBaseUrl}/category-chart-axis-options-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="category-chart-axis-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="category-chart-axis-options-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
     </button>
 </div>
 
@@ -35,9 +33,12 @@ Category Chart コントロールは、チャートで表示されるラベル�
     [dataSource]="data"
     width="700px"
     height="500px"
-    xAxisLabelTextStyle="16pt Verdana"
-    xAxisLabelRightMargin="14"
-    xAxisLabelTextColor="red">
+    xAxisLabelTextStyle="10pt Verdana"
+    xAxisLabelTopMargin="5"
+    xAxisLabelTextColor="gray"
+    yAxisLabelTextStyle="10pt Verdana"
+    yAxisLabelRightMargin="5"
+    yAxisLabelTextColor="gray">
 </igx-category-chart>
 ```
 
@@ -53,12 +54,15 @@ Category Chart コントロールの軸タイトル機能は、チャートの x
       [dataSource]="data"
       width="700px"
       height="500px"
-      xAxisTitle="Country"
-      xAxisTitleTextColor="blue"
-      xAxisTitleTextStyle="20pt Times New Roman|Georgia|Serif"
-      yAxisTitle="Millions of People"
+      xAxisTitle="Countries"
+      xAxisTitleTextColor="gray"
+      xAxisTitleTextStyle="12pt Verdana"
+      xAxisTitleAngle="0"
+      yAxisTitle="Trillions of Watt-hours (TWh)"
+      yAxisTitleTextStyle="12pt Verdana"
+      yAxisTitleTextColor="gray"
       yAxisTitleAngle="90"
-      yAxisTitleTextColor="red">
+      yAxisTitleLeftMargin="5">
  </igx-category-chart>
 ```
 
@@ -72,9 +76,10 @@ Category Chart コントロールの軸タイトル機能は、チャートの x
       [dataSource]="data"
       width="700px"
       height="500px"
-      xAxisTickLength="10"
-      xAxisTickStrokeThickness="3"
-      xAxisTickStroke="red">
+      xAxisTickLength="15"
+      xAxisTickStrokeThickness="2"
+      xAxisTickStroke="gray"
+      yAxisTickLength="0">
  </igx-category-chart>
 ```
 
@@ -90,7 +95,7 @@ Category Chart コントロールで、数値軸の範囲は軸の始めと終�
       [dataSource]="data"
       width="700px"
       height="500px"
-      yAxisMinimumValue="-200"
+      yAxisMinimumValue="0"
       yAxisMaximumValue="1000">
  </igx-category-chart>
 ```
@@ -108,11 +113,11 @@ Category Chart コントロールで、軸の主間隔は主グリッド線お�
     width="700px"
     height="500px"
     yAxisInterval="100"
-    yAxisMinorInterval="10" 
-    yAxisMinorStroke="Red"    
-    yAxisMajorStroke="Green"  
-    yAxisMinorStrokeThickness="1"
-    yAxisMajorStrokeThickness="1">
+    yAxisMajorStroke="black"
+    yAxisMajorStrokeThickness="1"
+    yAxisMinorInterval="20"
+    yAxisMinorStroke="gray"
+    yAxisMinorStrokeThickness="0.5">
  </igx-category-chart>
 ```
 
@@ -126,18 +131,14 @@ Category Chart コントロールの軸間隔機能は、チャート シリー�
    0 - シリーズ間の間隔は描画されません。
    1 - シリーズ間に利用可能な最大の間隔が描画されます。
 
-Category Chart の `xAxisGap` を `0.5` に設定するには、以下のコードを使用できます。
+Category Chart の `xAxisGap` を `0.125` に設定するには、以下のコードを使用できます。
 
 ```html
 <igx-category-chart
     [dataSource]="data"
     width="700px"
     height="500px"
-    chartTitle="Countries population"
-    xAxisTitle="Countries"
-    yAxisTitle="Millions of people"
-    chartType="column"
-    xAxisGap="0.5">
+    xAxisGap="0.125">
 </igx-category-chart>
 ```
 
@@ -152,18 +153,14 @@ Category Chart コントロールの軸重複機能は、描画されるカテ�
 * 負の値 (-1 以上): カテゴリは互いに生成する間隔によって引き離されます。
 * 正の数 (1 以下): カテゴリが互いに重なります。値 1 は、互いのチャート上にカテゴリを描画します。
 
-以下のコード例は、`xAxisOverlap` を互いに重なり合うカテゴリを描画する際に利用可能なスペースの半分である 0.5 に設定します。
+以下のコード例は、`xAxisOverlap` を 0 に設定します。
 
 ```html
  <igx-category-chart
     [dataSource]="data"
     width="700px"
     height="500px"
-    chartTitle="Countries population"
-    xAxisTitle="Countries"
-    yAxisTitle="Millions of people"
-    chartType="column"
-    xAxisOverlap="0.5">
+    xAxisOverlap="0">
 </igx-category-chart>
 ```
 

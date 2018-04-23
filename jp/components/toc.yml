@@ -13,45 +13,68 @@
       href: grid_sorting.md
     - name: 集計
       href: grid_summaries.md
+      new: true
     - name: 列のピン固定
       href: grid_column_pinning.md
+      new: true
     - name: 列のサイズ変更
       href: grid_column_resizing.md
+      new: true
     - name: 選択
       href: grid_selection.md
+      new: true
 - name: List View
   href: list.md
 - name: チャート
   header: true
-  href: categorychart.md
 - name: Category Chart
   href: categorychart.md
   items:
-    - name: パフォーマンス - 高頻度
-      href: categorychart_performance_high_frequency.md
-    - name: パフォーマンス - 大容量
-      href: categorychart_performance_high_volume.md
-    - name: 軸
-      href: categorychart_axis.md
-    - name: 構成
-      href: categorychart_configuring.md
+    - name: チャートのタイプの選択
+      href: categorychart_explore_chart_types.md
+      new: true
+    - name: リアルタイム データ
+      href: categorychart_real_time_data.md
+      new: true
+    - name: 大量なデータの処理
+      href: categorychart_high_volume_data.md
+      new: true
+    - name: 構成オプション
+      href: categorychart_configuration_options.md
+      new: true
     - name: カスタム ツールチップ
       href: categorychart_custom_tooltips.md 
+      new: true
 - name: Financial Chart
   href: financialchart.md
   items:
+    - name: チャートのタイプの選択
+      href: financialchart_explore_chart_types.md
+      new: true
+    - name: リアルタイム データ
+      href: financialchart_real_time_data.md
+      new: true
+    - name: 大量なデータの処理
+      href: financialchart_high_volume_data.md
+      new: true
     - name: パフォーマンス
       href: financialchart_performance.md
-    - name: データ バインド
-      href: financialchart_binding_data.md
-    - name: 軸
-      href: financialchart_axis.md
+      new: true
+    - name: 複数データ ソースへのバインド
+      href: financialchart_binding_to_multiple_data.md
+      new: true
     - name: ペイン
       href: financialchart_panes.md
-    - name: 構成
-      href: financialchart_configuring.md
+      new: true
+    - name: 構成オプション
+      href: financialchart_configuration_options.md
+      new: true
+    - name: カスタム インジケーター
+      href: financialchart_custom_indicators.md
+      new: true
     - name: カスタム ツールチップ
       href: financialchart_custom_tooltips.md
+      new: true
 - name: スタイルとテーマ
   header: true
 - name: Themes
@@ -79,8 +102,10 @@
   href: label_input.md
 - name: Input Group
   href: input_group.md
+  new: true
 - name: Mask
   href: mask.md
+  new: true
 - name: Badge
   href: badge.md
 - name: Icon
@@ -117,6 +142,7 @@
   href: tabbar.md
 - name: Tabs
   href: tabs.md
+  new: true
 - name: Card
   href: card.md
 - name: Avatar
@@ -135,9 +161,13 @@
   href: date_picker.md
 - name: Time Picker
   href: time_picker.md
+  new: true
+  name: true
 - name: サービス
   header: true
 - name: CSV Exporter
   href: exporter_csv.md
+  new: true
 - name: Excel Exporter
   href: exporter_excel.md
+  new: true

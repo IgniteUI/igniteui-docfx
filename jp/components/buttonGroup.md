@@ -7,11 +7,11 @@ _language: ja
 
 ## Button Group
 
-The **igx-ButtonGroup** component in Ignite UI for Angular provides a button group functionality to developers with horizontal/vertical alignment and single/multiple selection along with toggling. The igx-ButtonGroup component makes use of the [igxButton directive.](button.md)
+Ignite UI for Angular **igx-ButtonGroup** コンポーネントは、ボタン グループの機能、さらに水平/垂直の配置、単一/複数の選択、および切り替え機能を提供します。igx-ButtonGroup コンポーネントは、[igxButton ディレクティブ](button.md)を使用します。
 
 ### Button Group デモ
 
-<div class="sample-container" style="height: 436px">
+<div class="sample-container" style="height: 362px">
     <iframe id="buttonGroup-sample-1-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/button-group-sample-1" onload="onSampleIframeContentLoaded(this);">
 </div>
 <div>
@@ -71,7 +71,7 @@ public alignment = ButtonGroupAlignment.vertical;
 <igx-buttongroup [multiSelection]="false" [values]="cities" [alignment]="alignment">
 </igx-buttongroup>
 ```
-<div class="sample-container" style="height: 200px">
+<div class="sample-container" style="height: 164px">
     <iframe id="buttonGroup-sample-2-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/button-group-sample-2" onload="onSampleIframeContentLoaded(this);">
 </div>
 <div>
@@ -114,7 +114,7 @@ public ngOnInit() {
 </igx-buttongroup>
 ```
 
-<div class="sample-container" style="height: 100px">
+<div class="sample-container" style="height: 52px">
     <iframe id="buttonGroup-sample-3-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/button-group-sample-3" onload="onSampleIframeContentLoaded(this);">
 </div>
 <div>
