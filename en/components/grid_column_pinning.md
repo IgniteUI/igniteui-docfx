@@ -65,6 +65,10 @@ public columnPinning(event) {
 }
 ```
 
+### Pinning Limitations
+
+*   Setting column widths in percentage (%) explicitly makes the grid body and header content to be misaligned when there are pinned columns. For column pinning to function correctly the column widths should be in pixels (px) or auto-assigned by the grid.
+
 <div class="divider--half"></div>
 
 ### Additional Resources
