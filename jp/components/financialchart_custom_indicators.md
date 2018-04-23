@@ -6,7 +6,7 @@ _language: ja
 ---
 ## カスタム インジケーター
 
-igxFinancialChart コンポーネントでは、インジケーター ペインに表示するカスタム財務指標を定義できます。
+`igx-financial-chart` コントロールでは、インジケーター ペインに表示するカスタム財務指標を定義できます。
 
 ### カスタム インジケーター デモ
 
@@ -20,6 +20,46 @@ igxFinancialChart コンポーネントでは、インジケーター ペイン�
 
 <div class="divider--half"></div>
 
-igxFinancialChart でカスタム財務指標を有効にするには、`CustomIndicatorNames` プロパティに名前を追加し、`ApplyCustomIndicators` イベントで計算を実行します。
+`igx-financial-chart` でカスタム財務指標を有効にするには、`customIndicatorNames` プロパティに名前を追加し、`applyCustomIndicators` イベントで計算を実行します。
 
 以下のコード例は、2 つのカスタム インジケーターを設定して計算する方法を紹介します。単純移動平均 (SMA) およびランダム値を表示するインジケーターを使用します。
+
+```html
+ <igx-financial-chart
+    width="850px"
+    height="600px"
+    [dataSource]="data"
+    (applyCustomIndicators)="applyCustomIndicators($event)"
+    customIndicatorNames="Open, Open (SMA)">
+ </igx-financial-chart>
+```
+
+```typescript
+    public applyCustomIndicators(event: { sender: any, args: FinancialChartCustomIndicatorArgs }) {
+        if (event.args.index === 0) {
+            const info: FinancialEventArgs = event.args.indicatorInfo;
+            const ds = info.dataSource;
+            const open = ds.openColumn;
+            for (let i = 0; i < ds.indicatorColumn.length; i++) {
+                ds.indicatorColumn[i] = open[i];
+            }
+        } else {
+            const info: FinancialEventArgs = event.args.indicatorInfo;
+            const ds = info.dataSource;
+            const close = ds.closeColumn;
+            for (let i = 0; i < ds.indicatorColumn.length; i++) {
+                let startIndex = i - 9;
+                if (startIndex < 0) {
+                    startIndex = 0;
+                }
+                const count = (i - startIndex) + 1;
+
+                let sum = 0;
+                for (let j = startIndex; j <= i; j++) {
+                    sum += close[j];
+                }
+                ds.indicatorColumn[i] = sum / count;
+            }
+        }
+    }
+```

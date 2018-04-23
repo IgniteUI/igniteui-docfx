@@ -1,7 +1,7 @@
 ﻿---
-title: Virtualization Directive - Native Angular | Ignite UI for Angular 
-_description: The Ignite UI for Angular Virtualization directive is the core mechanic behind the speed and performance of the grid when handling large data sets, since its virtual rendering mechanism allows the user to effortlessly scroll by its fixing of the number of DOM objects in memory. 
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Components, Angular Data Grid component, Angular Data Grid control, Angular Grid component, Angular Grid control, Angular High Performance Grid, Angular Virtualization Directive, Virtualization, Performance
+title: 仮想化ディレクティブ - ネイティブ Angular | Ignite UI for Angular
+_description: Ignite UI for Angular Virtualization ディレクティブは大量データ セットの処理でスピードおよびパフォーマンスのための主な機能です。仮想描画機能はメモリでの DOM オブジェクトの数を固定すると、スムーズなスクロールを実現できます。
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, ネイティブ Angular コンポーネント, Angular Data Grid コンポーネント, Angular Data Grid コントロール, Angular Grid コンポーネント, Angular Grid コントロール, Angular 高いパフォーマンス Grid, Angular Virtualization ディレクティブ, 仮想化, パフォーマンス
 _language: ja
 ---
 
@@ -21,22 +21,20 @@ In Ignite UI for Angular, the `igxGrid` control now utilizes the `igxForOf` dire
 
 ### 仮想化の有効化
 
-By utilizing the `igxForOf` directive the Data Grid now optimizes DOM rendering and memory consumption by rendering only what is currently visible in the view port and swapping the displayed data while the user scrolls the data horizontally/vertically. `igxGrid`'s `width` and `height` defaults to `100%` which will enable virtualization if the content displayed cannot fit inside the available space and scrollbars are required either vertically or horizontally. However, it is also possible to explicitly set the grid's `width` and/or `height` to `null` which means that the related dimension will be determined by the total size of the items inside. No scrollbar will then be shown and all items will be rendered along the respective dimension (columns if `width` is `null` and rows if height is `null`).
-
-関連するグリッド ディメンションのサイズが設定される場合、仮想化は自動的に有効化されます。
-
-*   垂直 (行) 仮想化の場合は高さ。ピクセル ("500px") またはパーセンテージ ("50%") で設定できます。
-
-*   水平 (列) 仮想化の場合は幅。ピクセル ("500px") またはパーセンテージ ("50%") で設定できます。
-
-関連するディメンションが設定されない場合、相対する行/列仮想化は無効になります。
+`igxGrid` の `width` および `height` のデフォルト値は 100% です。コンテンツが利用可能なスペースにフィットせず、垂直方向または水平方向にスクロールバーが必要な場合に仮想化が有効になります。ただし、グリッドの `width` または `height` を明示的に `null` 値に設定できます。つまり、関連するディメンションが項目の合計サイズに基づいて決定されます。スクロールバーが表示されず、すべての項目が相対するディメンション (`width` が `null` 値の場合は列で、`height` が `null` 値の場合は行) に描画されます。
 
 データ部分のサイズが以下のことによって決定されます。
 
 *   垂直 (行) 仮想化の行高さ。これは `rowHeight` オプションによって決定され、デフォルト値は 50 (px) です。
 *   水平 (列) 仮想化の列幅 (ピクセル単位)。各列コンポーネントで明示的に幅を設定するか、明示的に幅が設定されないすべての列に適用するグリッドの `columnWidth` オプションを設定できます。
 
-必要なサイズを指定しない場合、仮想化がないグリッドを作成します。たとえば、高さが指定されないグリッドは**すべて**の行を一度に表示し、合計サイズに基づいて高さを増加します。幅が指定されたが列に幅が設定されないグリッドは列をすべて利用可能なスペースでスクロールバーなしで描画します。列幅がパーセンテージ (%) で定義されるグリッドにも適用します。
+ほとんどの場合、ディメンションを設定せずにグリッドでデフォルト動作を適用する場合、望ましいレイアウトになります。列幅は列カウント、幅が設定された列、およびグリッド コンテナーの計算幅に基づいて決定されます。グリッドは、割り当てる幅が 136px より小さくならない場合、すべての列を利用可能なスペースに合わせようとします。その場合、割り当てられない幅を持つ列は 136px の最小幅に設定され、水平方向スクロールバーが表示されます。グリッドは水平方向に仮想化されます。
+
+列幅をパーセンテージ (%) で明示的に設定する場合、ほとんどの場合に水平スクロールバーがない水平方向に仮想化されないグリッドを作成します。
+
+### リモート仮想化
+
+`igxGrid` は、データ部分がリモート サービスから要求されたシナリオをサポートします。このシナリオは内部に使用される `igxForOf` で実装される動作を公開します。
 
 ### Grid リモート仮想化デモ
 
@@ -48,12 +46,70 @@ By utilizing the `igxForOf` directive the Data Grid now optimizes DOM rendering 
 <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="grid-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
 </div>
 
+この機能を使用するには、取得した引数に基づいて適切な要求を実行するために `onDataPreLoad` 出力にサブスクライブし、サービスから送信される相対する情報とパブリック `igxGrid` の `totalItemCount` プロパティを設定する必要があります。
+
+```html
+<igx-grid #grid1 [data]="remoteData | async" (onDataPreLoad)="dataLoading($event)" >
+    <igx-column *ngFor="let c of columns" [field]="c.field" [header]="c.header">
+    </igx-column>
+</igx-grid>
+```
+
+```typescript
+public ngAfterViewInit() {
+    this.remoteService.getData(this.grid.virtualizationState, (data) => {
+        this.grid.totalItemCount = data["@odata.count"];
+    });
+}
+
+public dataLoading(evt) {
+    if (this.prevRequest) {
+        this.prevRequest.unsubscribe();
+    }
+    this.prevRequest = this.remoteService.getData(evt, () => {
+        this.cdr.detectChanges();
+    });
+}
+```
+
+データを要求する際に `startIndex` および `chunkSize` プロパティを提供する `IForOfState` インターフェイスを使用できます。
+
+**注:** 最初の `chunkSize` は常に 0 で、特定のアプリケーション シナリオに基づいて設定する必要があります。
+
+```typescript
+public getData(data?: IForOfState, cb?: (any) => void): any {
+    const dataState = data;
+    return this.http
+        .get(this.buildUrl(dataState))
+        .subscribe((d: any) => {
+            this._remoteData.next(d.value);
+            if (cb) {
+                cb(d);
+            }
+        });
+}
+
+private buildUrl(dataState: IForOfState): string {
+    let qS: string = "?";
+    let requiredChunkSize: number;
+    if (dataState) {
+        const skip = dataState.startIndex;
+
+        requiredChunkSize = dataState.chunkSize === 0 ?
+            // Set initial chunk size, the best value is igxForContainerSize divided on igxForItemSize
+            10 : dataState.chunkSize;
+        const top = requiredChunkSize;
+        qS += `$skip=${skip}&$top=${top}&$count=true`;
+    }
+    return `${this.url}${qS}`;
+}
+```
+
 ### 仮想化の制限
 
 *   変更可能な行高さはサポートされません。すべての行を同じ高さに設定する必要があります。
-*   列仮想化の場合、すべての列をピクセル単位で定義される幅が必要です。列コンポーネントで明示的に設定するか、グリッドの `columnWidth` オプションで設定します。
 *   行/列の指定したディメンションが実際の描画された要素と一致する必要があります。たとえば、グリッド セルのために行高さを大きくするテンプレートまたはクラスが定義される場合、指定した `rowHeight` 値と一致しない場合、垂直仮想化が正しく操作しません。仮想項目数が DOM の実際要素と一致しません。列およびその幅に同じ条件があります。
-*   Browsers currently have height limitation for DOM elements. Because of that the total height of the rows shouldn't exceed the height limitation of the browsers. Otherwise there may be unexpected changes in behavior of `igxGrid`. For example Internet Explorer 11 has height limitation of 1 533 916 pixels, which for rows with height 50px means no more than 30 678 rows.
+*   ブラウザーは現在 DOM 要素に高さの制限があります。そのため、行の高さの合計をブラウザーの高さの制限より大きくする必要があります。より大きくなる場合、`igxGrid` が正しく動作しない可能性があります。たとえば、Internet Explorer 11 の高さの制限は 1,533,916 ピクセルです。つまり、高さが 50px の行の制限は 30,678 行です。
 
 
 ### FAQ
@@ -61,24 +117,6 @@ By utilizing the `igxForOf` directive the Data Grid now optimizes DOM rendering 
 #### 仮想化のためにグリッドでディメンションを設定する必要がある理由とは?
 
 描画する前にコンテナーおよび項目のサイズの情報がない場合、グリッドでランダム位置にスクロールすると、スクロールバーの幅または高さの設定、または表示する項目の決定は正しくありません。実際のディメンションの前提がスクロールバーの変な動作になり、エクスペリエンスが悪くなります。そのため、仮想化を有効化するには、関連ディメンションを設定する必要があります。
-
-#### グリッドの幅/高さを設定し、列の幅および行の高さも設定すると、結果はどうなりますか?
-
-構成の組み合わせの結果の詳細については、以下の表を参照してください。
-
-| グリッド幅の設定     | グリッドの高さの設定    | 'rowHeight' の設定    | 'columnHeight' の設定、またはすべての列の幅の明示的な設定 | 結果                                                |
-|--------------------|--------------------|--------------------|------------------------------------------------------------|-------------------------------------------------------|
-| :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark:                                         | 水平および垂直仮想化が有効化されたグリッド |
-| :heavy_check_mark: | :x:                | N/A                | :heavy_check_mark:                                         | 水平仮想化のみが有効化されたグリッド              |
-| :x:                | :heavy_check_mark: | :heavy_check_mark: | N/A                                                        | 垂直の仮想化のみが有効化されたグリッド                |
-| :x:                | :x:                | N/A                | N/A                                                        | 仮想化のないグリッド                           |
-| :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x:                                                        | 垂直の仮想化のみが有効化されたグリッド                |
-| :heavy_check_mark: | :heavy_check_mark: | :x:                | :heavy_check_mark:                                         | 無効な構成                                        |
-| :heavy_check_mark: | :heavy_check_mark: | :x:                | :x:                                                        | 無効な構成                                        |
-
-<br/>
-*   グリッドの高さを設定し、`rowHeight` を `null` 値に設定することはサポートされません。
-*   グリッドの `columnWidth` が設定されない場合、特定の列幅を設定してその他の列幅を設定しないと、垂直仮想化がないグリッドを作成します。列のサイズはコンテナーに適用されるフレックス ルールによって決定されます。
 
 ### 追加のリソース
 <div class="divider--half"></div>

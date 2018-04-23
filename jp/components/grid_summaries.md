@@ -1,13 +1,13 @@
 ﻿---
-title: Summaries Component - Native Angular | Ignite UI for Angular
-_description: With the Ignite UI for Angular Summaries component, see the column information in a separate container with a predefined set of default summary items, depending on the type of data within the column.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Component, Angular Grid, Angular Data Grid component, Angular Data Grid control, Angular Grid component, Angular Grid control, Angular High Performance Grid, Summaries, Summary
+title: 集計 - ネイティブ Angular | Ignite UI for Angular
+_description: Ignite UI for Angular 集計を使用すると、列のデータ型に基づいて定義済みのデフォルト集計項目を持つ別のコンテナーで列情報を表示します。
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, ネイティブ Angular コンポーネント, Angular Grid, Angular Data Grid コンポーネント, Angular Data Grid コントロール, Angular Grid コンポーネント, Angular Grid コントロール, Angular 高いパフォーマンス Grid, 集計機能, 集計
 _language: ja
 ---
 
 ### グリッドの集計
 
-The Grid component in ignite UI for Angular has a **summaries** feature that functions on a per-column level.
+Ignite UI for Angular Grid コンポーネントは列ごとレベルに操作する**集計**機能があります。列のデータ型に基づいて定義済みのデフォルト集計項目を持つ別のコンテナーで列情報を表示します。
 
 #### デモ
 
@@ -23,7 +23,7 @@ The Grid component in ignite UI for Angular has a **summaries** feature that fun
 > [!NOTE]
 > 列の集計は**列値すべての関数**ですが、フィルタリングが適用された場合、列の集計は**フィルターされた結果値の関数**になります。
 
-The user is able to see the column information in a separate container with a predefined set of default summary items, depending on the type of data within the column. **Grid summaries** can also be enabled on a per-column level in Ignite UI for Angular, which means that you can activate it only for columns that you need. Grid summaries gives you a predefined set of default summaries, depending on the type of data in the column, so that you can save some time:
+Ignite UI for Angular で**グリッド集計**を列ごとに有効できます。つまり、必要な列のみアクティブ化できます。グリッド集計は、列のデータ型に基づいてデフォルト集計の定義済みセットを提供します。
 
 `string` および `boolean` データ型の場合、以下の関数が利用できます。
  - count

@@ -6,7 +6,7 @@ _language: ja
 ---
 ## 大量なデータの処理
 
-igxFinancialChart は、以下のデモのように大量のデータを処理できます。
+`igx-financial-chart` コントロールは大量のデータを処理できます。以下のデモは 20 年にわたるデータをバインドします。1 時間隔で在庫価格を折れ線チャート タイプで表示します。
 
 <div class="divider"></div>
 
@@ -24,9 +24,38 @@ igxFinancialChart は、以下のデモのように大量のデータを処理�
 
 チャートのパフォーマンスに影響を及ぼすチャート機能および Angular 固有の機能があり、アプリケーションでのパフォーマンスを最適化する際に検討する必要があります。
 
-* コンポーネントにバインドするプロパティで大量のデータを保存する場合、`@Component` デコレーターで `changeDetection: ChangeDetectionStrategy.OnPush` を設定します。
-     * Angular の各変更検出のサイクルでデータ配列内の変更を確認しないようにする設定です。
-* チャートに Angular が自動でデータ変更を通知する代わりに、バインドされたデータが変更された方法をコンポーネントに通知できます。
-    * デルタ通知の処理は、Angular が変更検出を実行する際に 100 万のレコードを含む配列のすべての変更を比較するより効果的に実行できます。
-    * バインドしたデータの変更をチャートに通知する方法の詳細については、チャートの `notify*` メソッドを参照してください。
-* Angular が Debug モードで実行されている場合、特定のブラウザーでパフォーマンスを低下させるオーバーヘッドがあります。実環境パフォーマンスを評価する場合、`--prod` を使用して serve または build してください。
+* コンポーネントにバインドするプロパティで大量のデータを保存する場合、`@Component` デコレーターで `changeDetection: ChangeDetectionStrategy.OnPush` を設定します。 Angular の各変更検出のサイクルでデータ配列内の変更を確認しないようにする設定です。
+
+以下のコードはファイナンシャル チャートを大量のデータにバインドします。
+
+```typescript
+import { GenerateHourlyPricesService } from "../services/generate-hourly-prices.service";
+
+export class AppComponent {
+    public data: any;
+
+    constructor(private dataService: GenerateHourlyPricesService) {
+        const dateEnd = new Date(2018, 3, 20); // April 20, 2018
+        const dateStart = new Date(1998, 3, 20); // April 20, 1998
+        this.data = this.dataService.GetStockHistoryBetween(dateStart, dateEnd);
+    }
+}
+```
+
+```html
+ <igx-financial-chart
+    [dataSource]="data"
+    width="850px"
+    height="600px">
+ </igx-financial-chart>
+```
+
+<div class="divider--half"></div>
+
+### 追加のリソース
+<div class="divider--half"></div>
+
+* [チャートのパフォーマンス](financialchart_performance.html)
+* [リアルタイム データにバインド](financialchart_real_time_data.html)
+* [複数データ ソースへのバインド](financialchart_binding_to_multiple_data.html)
+

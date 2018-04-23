@@ -1,13 +1,13 @@
 ﻿---
-title: Column Resizing Component - Native Angular | Ignite UI for Angular
-_description: With deferred column resizing, see a temporary resize indicator while the drag operation is in effect with using the Ignite UI for Angular Column Resizing Component.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Data Grid component, Angular Data Grid control, Native Angular Components, Angular Grid component, Angular Grid control, Angular High Performance Grid, Column Resizing, Deferred Column Reszing, Grid Column Resizing, Angular Grid Column Resizing, Angular column 
+title: 列のサイズ変更 - ネイティブ Angular | Ignite UI for Angular
+_description: Ignite UI for Angular 遅延の列のイズ変更を使用すると、ドラッグ操作が実行中に、一時のサイズ変更インジケーターが表示されます。
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Data Grid コンポーネント, Angular Data Grid コントロール, ネイティブ Angular コンポーネント, Angular Grid コンポーネント, Angular Grid コントロール, Angular 高いパフォーマンス Grid, 列のサイズ変更, 遅延列サイズ変更, グリッド列のサイズ変更, Angular Grid 列のサイズ変更, Angular 列
 _language: ja
 ---
 
 ### グリッドの列サイズ変更
 
-With deferred column resizing, the user will see a temporary resize indicator while the drag operation is in effect. The new column size is only put into its place once the drag operation has ended.
+遅延の列のサイズ変更を使用すると、ドラッグ操作が実行中に、一時のサイズ変更インジケーターが表示されます。ドラッグ操作が完了した後、新しい列サイズが適用されます。
 
 #### デモ
 
