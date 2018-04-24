@@ -7,7 +7,7 @@ _language: ja
 
 ## Mask
 
-Ignite UI for Angular Mask ディレクティブを使用すると、構成可能なマスク ルールに基づいてユーザー入力を制御し、表示される値を書式設定できます。入力オプションも構成できます。
+**テキスト入力フィールド**に `igxMask` ディレクティブを適用すると、構成可能なマスク ルールに基づいてユーザー入力を制御し、表示される値を書式設定できます。入力オプションも構成できます。
 
 ### Mask デモ
 <div class="sample-container loading" style="height: 280px">
@@ -23,7 +23,7 @@ Ignite UI for Angular Mask ディレクティブを使用すると、構成可�
 
 ### 使用方法
 
-Ignite UI for Angular Mask ディレクティブを初期化する前に、**IgxMaskModule** および **IgxInputGroupModule** を **app.module.ts** ファイルにインポートします。**igxMask** ディレクティブを任意の Angular 入力コントロールと使用できます。
+`igxMask` ディレクティブは **text** 型の入力にしようされます。Ignite UI for Angular Mask ディレクティブを初期化する前に、**IgxMaskModule** および **IgxInputGroupModule** を **app.module.ts** ファイルにインポートします。**igxMask** ディレクティブを任意の Angular 入力コントロールと使用できます。
 
 ```typescript
 // app.module.ts
