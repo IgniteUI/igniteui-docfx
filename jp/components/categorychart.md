@@ -6,9 +6,9 @@ _language: ja
 ---
 ## Category Chart 
 
-Category Chart はカテゴリ データを可視化するチャート コンポーネントです。複雑なデータ ビジュアライゼーションを API で簡素化できます。ユーザーがデータのコレクョンまたはコレクション グループにバインドし、データを指定するプロパティの設定後、残りの作業はチャート コントロールによって処理されます。コンポーネントはデータを解析し、データを表すための最適なシリーズを自動的に選択します。また、ユーザーが `chartType` プロパティを設定して定義済みのチャート タイプから選択できます。チャート タイプは折れ線、エリア、柱状、ポイント、スプライン、スプライン エリア、ステップ エリア、ステップ折れ線、およびウォーターフォールを含みます。
+Category Chart はカテゴリ データを可視化するチャート コンポーネントです。複雑なデータ ビジュアライゼーションを API で簡素化できます。
 
-### Category Chart デモ
+### デモ
 
 <div class="sample-container" style="height: 550px">
     <iframe id="category-chart-overview-sample-iframe" src='{environment:demosBaseUrl}/category-chart-overview-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -20,7 +20,9 @@ Category Chart はカテゴリ データを可視化するチャート コンポ
 
 <div class="divider--half"></div>
 
-スマート データ アダプターは、データを分析して適切なビジュアライゼーションを描画します。たとえば `chartType` を `Auto` に設定した場合、大きなデータセットで折れ線チャートを描画する間、コントロールは小さなデータセットを提供して柱状チャートがプロットされるかどうかを決定します。
+ユーザーがデータのコレクョンまたはコレクション グループにバインドし、データを指定するプロパティの設定後、残りの作業はチャート コントロールによって処理されます。コンポーネントはデータを解析し、データを表すための最適なシリーズを自動的に選択します。また、ユーザーが `chartType` プロパティを設定して定義済みのチャート タイプから選択できます。チャート タイプは折れ線、エリア、柱状、ポイント、スプライン、スプライン エリア、ステップ エリア、ステップ折れ線、およびウォーターフォールを含みます。
+
+スマート データ アダプターは、データを分析して適切なビジュアライゼーションを描画します。たとえば、`chartType` プロパティが `Auto` に設定される場合、コントロールは小さいデータ セットのために柱状チャートを使用し、より大きいデータ セットのために折れ線チャートを使用します。
 
 ただし、`chartType` を明示的に以下に設定してチャート タイプを指定することもできます。
     
@@ -54,7 +56,7 @@ import { IgxCategoryChartModule } from '@infragistics/ignite-ui-xplatform-for-an
 export class AppModule {}
 ```
 
-利用可能なシリーズのサブセットおよびその他のオプションの機能を除外するカテゴリ チャートの最小構成を読み込むことができます。それにより、igxCategoryChartCoreModule および igxLineSeriesDynamicModule などの使用されるシリーズの動的なモジュールのみを読み込みます。`chartType` が `auto` の場合、読み込んだシリーズ型が選択されます。
+利用可能なシリーズのサブセットおよびその他のオプションの機能を除外するカテゴリ チャートの最小構成を読み込むことができます。それにより、`igxCategoryChartCoreModule` および igxLineSeriesDynamicModule などの使用されるシリーズの動的なモジュールのみを読み込みます。`chartType` が `auto` の場合、読み込んだシリーズ型が選択されます。
 
 <div class="divider--half"></div>
 

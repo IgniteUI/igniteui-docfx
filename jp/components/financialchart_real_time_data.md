@@ -8,7 +8,7 @@ _language: ja
 
 `igx-financial-chart` コントロールはリアルタイムでデータの描画をすばやく処理できるコントロールです。以下のデモは Financial Chart でデータ更新の高頻度の処理を紹介します。
 
-### リアルタイム データにバインドするデモ
+### デモ
 
 <div class="sample-container" style="height: 550px">
     <iframe id="financial-chart-high-frequency-iframe" src='{environment:demosBaseUrl}/financial-chart-high-frequency' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>

@@ -110,9 +110,7 @@ private buildUrl(dataState: IForOfState): string {
 *   変更可能な行高さはサポートされません。すべての行を同じ高さに設定する必要があります。
 *   行/列の指定したディメンションが実際の描画された要素と一致する必要があります。たとえば、グリッド セルのために行高さを大きくするテンプレートまたはクラスが定義される場合、指定した `rowHeight` 値と一致しない場合、垂直仮想化が正しく操作しません。仮想項目数が DOM の実際要素と一致しません。列およびその幅に同じ条件があります。
 *   ブラウザーは現在 DOM 要素に高さの制限があります。そのため、行の高さの合計をブラウザーの高さの制限より大きくする必要があります。より大きくなる場合、`igxGrid` が正しく動作しない可能性があります。たとえば、Internet Explorer 11 の高さの制限は 1,533,916 ピクセルです。つまり、高さが 50px の行の制限は 30,678 行です。
-*   When the grid has responsive width and/or height and responds to size changes of the browser's window or other elements sizes, the scroll position resets to 0. A more natural solution to the changing scrollbar position and size is planned for future releases.
-*   When the grid has responsive width and/or height and responds to size changes of the browser's window or other elements sizes, the scroll position resets to 0. A more natural solution to the changing scrollbar position and size is planned for future releases.
-*   On Mac OS horizontal scrollbar is not visible when "Show scrollbars only when scrolling" system option is set to true (which is the default value). This is because the grid’s row container has an overflow set to hidden. Change the option to "Always" and the scrollbar will appear.
+*   グリッドにレスポンシブな幅または高さがあり、ブラウザーのウィンドウまたはその他の要素のサイズに対してサイズ変更する場合、スクロール位置は 0 にリセットします。スクロールバー位置およびサイズの変更の解決策は今後のリリースで予定されます。
 
 ### FAQ
 

@@ -8,7 +8,7 @@ _language: ja
 
 `igx-financial-chart` コントロールは大量のデータ ポイントの描画で高いパフォーマンスを実現します。以下のデモは 20 年にわたるデータをバインドします。1 日間隔で在庫価格をローソク足チャートで表示します。
 
-### パフォーマンス デモ
+### デモ
 
 <div class="sample-container" style="height: 550px">
     <iframe id="financial-chart-performance-iframe" src='{environment:demosBaseUrl}/financial-chart-performance' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>

@@ -8,7 +8,7 @@ _language: ja
 
 `igx-financial-chart` コントロールは、以下のデモのように複数のデータ ソースにバインドできます。
 
-### 複数のデータ ソースにバインドするデモ
+### デモ
 
 <div class="sample-container" style="height: 550px">
     <iframe id="financial-chart-multiple-data-iframe" src='{environment:demosBaseUrl}/financial-chart-multiple-data' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>

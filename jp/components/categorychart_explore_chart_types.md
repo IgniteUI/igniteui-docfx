@@ -8,7 +8,7 @@ _language: ja
 
 Category Chart コントロールでは、軸は軸線、目盛、タイトル、や軸のラベルの外観を設定する基本プロパティを提供します。
 
-### チャート タイプのデモ
+### デモ
 
 <div class="sample-container" style="height: 550px">
     <iframe id="category-chart-axis-options-sample-iframe" src='{environment:demosBaseUrl}/category-chart-axis-options-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -103,7 +103,7 @@ Category Chart コントロールで、数値軸の範囲は軸の始めと終�
 <div class="divider--half"></div>
 
 ### 軸間隔
-Category Chart コントロールで、軸の主間隔は主グリッド線および軸ラベルが軸に描画される頻度を指定します。同様に、軸副間隔は副グリッド線が軸に描画される頻度を指定します。
+Category Chart コントロールで、`yAxisInterval` プロパティは主グリッド線および軸ラベルが軸に描画される頻度を指定します。同様に、`yAxisMinorInterval` プロパティは副グリッド線が軸に描画される頻度を指定します。
 
 以下のコード スニペットは、Y 軸の間隔を設定する方法を示します。
 
