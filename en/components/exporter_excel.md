@@ -7,7 +7,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ## Excel Exporter
 
 <p class="highlight">
-The IgniteUI Excel Exporter service can export data in Microsoft® Excel® format from both raw data (array) or from an `IgxGrid`. The exporting functionality is encapsulated in the `IgxExcelExporterService` class and the data is exported in MS Excel table format. This format allows features like filtering, sorting, etc.</p>
+The Ignite UI for Angular Excel Exporter service can export data in Microsoft® Excel® format from both raw data (array) or from an `IgxGrid`. The exporting functionality is encapsulated in the `IgxExcelExporterService` class and the data is exported in MS Excel table format. This format allows features like filtering, sorting, etc.</p>
 <div class="divider"></div>
 
 ### Excel Exporter Demo

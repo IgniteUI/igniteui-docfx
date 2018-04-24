@@ -5,7 +5,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ---
 
 ## Time Picker
-<p class="highlight">The Ignite UI for Angular Time Picker component displays an input or a pop-up with spin sections that lets users pick time. It supports custom time formatting.</p>
+<p class="highlight">In following the design and functionality of the Date Picker, Ignite UI for Angular Time Picker component allows the user to select time from a dialog with spinners which is then mirrored in the input field.</p>
 <div class="divider"></div>
 
 ### Time Picker Demo
