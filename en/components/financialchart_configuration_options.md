@@ -6,9 +6,8 @@ _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Nati
 ## Configuration Options
 
 The `igx-financial-chart` control provides many visuals that can be customized, such as the navigation behavior, trendline layers, overlays, chart titles and subtitles.
-This page will walk you through with code samples the different properties that required to be set in order to achieve a customized financial chart.
 
-### Configuration Options Demo
+### Demo
 
 <div class="sample-container" style="height: 550px">
     <iframe id="financial-chart-trendlines-iframe" src='{environment:demosBaseUrl}/financial-chart-trendlines' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>

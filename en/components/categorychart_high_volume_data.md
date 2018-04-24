@@ -7,7 +7,7 @@ _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Nati
 
 The Category Chart control is capable of handling high volumes of data, ranging into the millions of data points, as demonstated in the following demo.
 
-### High Volume Data Demo 
+### Demo 
 <div class="sample-container" style="height: 570px">
     <iframe id="category-chart-high-volume-sample-iframe" src='{environment:demosBaseUrl}/category-chart-high-volume-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>

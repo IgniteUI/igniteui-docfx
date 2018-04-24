@@ -5,11 +5,9 @@ _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Nati
 ---
 ## Financial Chart
 
-The Financial Chart is a charting component that makes it easy to visualize financial data by using a simple and intuitive API. Once the user binds the data, the chart offers multiple ways in which the data can then be visualized and interpreted. There are several display modes for price and volume and a host of financial indicators. The chart also makes use of label formatting to give context to the data.
+The Financial Chart is a charting component that makes it easy to visualize financial data by using a simple and intuitive API. 
 
-The financial chart component analyzes and selects data columns - Date/Time column to use for x-axis and Open, High, Low, Close, Volume columns or the first 5 numeric columns for y-axis. Beyond this, the user can specify the chart type to either Bar, Candle, Column, and Line. With its five main visual elements, a toolbar, a prices view, a volume view, an indicators view, and a navigation view, data has become more perceptible.
-
-### Financial Chart Demo
+### Demo
 
 <div class="sample-container" style="height: 550px">
     <iframe id="financial-chart-overview-sample-iframe" src='{environment:demosBaseUrl}/financial-chart-overview-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -20,6 +18,10 @@ The financial chart component analyzes and selects data columns - Date/Time colu
 </div>
 
 <div class="divider--half"></div>
+
+Once the user binds the data, the chart offers multiple ways in which the data can then be visualized and interpreted. There are several display modes for price and volume and a host of financial indicators. The chart also makes use of label formatting to give context to the data.
+
+The financial chart component analyzes and selects data columns - Date/Time column to use for x-axis and Open, High, Low, Close, Volume columns or the first 5 numeric columns for y-axis. Beyond this, the user can specify the chart type to either Bar, Candle, Column, and Line. With its five main visual elements, a toolbar, a prices view, a volume view, an indicators view, and a navigation view, data has become more perceptible.
 
 You can explicitly specify the chart type by setting the `chartType` property to one of the following options:
 

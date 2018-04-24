@@ -7,7 +7,7 @@ _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Nati
 
 The `igx-financial-chart` control is very fast control that can handle rendering of data in real-time. The following demo shows how Financial Chart is capable of handling high frequency of data updates.
 
-### Binding Real-Time Demo
+### Demo
 
 <div class="sample-container" style="height: 550px">
     <iframe id="financial-chart-high-frequency-iframe" src='{environment:demosBaseUrl}/financial-chart-high-frequency' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>

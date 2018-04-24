@@ -7,7 +7,7 @@ _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Nati
 
 The `igx-financial-chart` control allows you to define custom financial indicators to display in the Indicator Pane.
 
-### Custom Indicators Demo
+### Demo
 
 <div class="sample-container" style="height: 550px">
     <iframe id="financial-chart-custom-indicators-iframe" src='{environment:demosBaseUrl}/financial-chart-custom-indicators' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
