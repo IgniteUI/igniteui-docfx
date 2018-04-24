@@ -173,14 +173,14 @@ this.http.get<any[]>('/assets/data.json')
 ### Additional Resources
 <div class="divider--half"></div>
 
-* [Grid overview](grid.html)
-* [Virtualization and Performance](grid_virtualization.html)
-* [Paging](grid_paging.html)
-* [Filtering](grid_filtering.html)
-* [Sorting](grid_sorting.html)
-* [Column Pinning](grid_column_pinning.html)
-* [Column Resizing](grid_column_resizing.html)
-* [Selection](grid_selection.html)
+* [Grid overview](grid.md)
+* [Virtualization and Performance](grid_virtualization.md)
+* [Paging](grid_paging.md)
+* [Filtering](grid_filtering.md)
+* [Sorting](grid_sorting.md)
+* [Column Pinning](grid_column_pinning.md)
+* [Column Resizing](grid_column_resizing.md)
+* [Selection](grid_selection.md)
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.

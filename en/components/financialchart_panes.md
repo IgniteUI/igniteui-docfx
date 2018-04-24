@@ -93,4 +93,4 @@ Note that you should set the `zoomSliderType` option to the same value as the `c
 ### Additional Resources
 <div class="divider--half"></div>
 
-* [Chart Performance](financialchart_performance.html)
+* [Chart Performance](financialchart_performance.md)

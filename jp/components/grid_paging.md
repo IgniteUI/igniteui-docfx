@@ -71,14 +71,14 @@ this.grid.paging = false;
 ### 追加のリソース
 <div class="divider--half"></div>
 
-* [グリッドの概要](grid.html)
-* [仮想化とパフォーマンス](grid_virtualization.html)
-* [フィルタリング](grid_filtering.html)
-* [並べ替え](grid_sorting.html)
-* [集計](grid_summaries.html)
-* [列のピン固定](grid_column_pinning.html)
-* [列のサイズ変更](grid_column_resizing.html)
-* [選択](grid_selection.html)
+* [グリッドの概要](grid.md)
+* [仮想化とパフォーマンス](grid_virtualization.md)
+* [フィルタリング](grid_filtering.md)
+* [並べ替え](grid_sorting.md)
+* [集計](grid_summaries.md)
+* [列のピン固定](grid_column_pinning.md)
+* [列のサイズ変更](grid_column_resizing.md)
+* [選択](grid_selection.md)
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。

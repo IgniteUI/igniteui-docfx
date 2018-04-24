@@ -99,6 +99,6 @@ By default, the financial chart is already optimized for the best performance an
 ### Additional Resources
 <div class="divider--half"></div>
 
-* [Binding High Volume Data](financialchart_high_volume_data.html)
-* [Binding Real-Time Data](financialchart_real_time_data.html)
-* [Binding Multiple Data Sources](financialchart_binding_to_multiple_data.html)
+* [Binding High Volume Data](financialchart_high_volume_data.md)
+* [Binding Real-Time Data](financialchart_real_time_data.md)
+* [Binding Multiple Data Sources](financialchart_binding_to_multiple_data.md)

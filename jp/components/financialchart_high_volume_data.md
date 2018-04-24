@@ -55,7 +55,7 @@ export class AppComponent {
 ### 追加のリソース
 <div class="divider--half"></div>
 
-* [チャートのパフォーマンス](financialchart_performance.html)
-* [リアルタイム データにバインド](financialchart_real_time_data.html)
-* [複数データ ソースへのバインド](financialchart_binding_to_multiple_data.html)
+* [チャートのパフォーマンス](financialchart_performance.md)
+* [リアルタイム データにバインド](financialchart_real_time_data.md)
+* [複数データ ソースへのバインド](financialchart_binding_to_multiple_data.md)
 

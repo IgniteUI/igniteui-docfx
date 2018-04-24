@@ -47,6 +47,6 @@ private tick(): void {
 ### 追加のリソース
 <div class="divider--half"></div>
 
-* [チャートのパフォーマンス](financialchart_performance.html)
-* [大量のデータのバインド](financialchart_high_volume_data.html)
-* [複数データ ソースへのバインド](financialchart_binding_to_multiple_data.html)
+* [チャートのパフォーマンス](financialchart_performance.md)
+* [大量のデータのバインド](financialchart_high_volume_data.md)
+* [複数データ ソースへのバインド](financialchart_binding_to_multiple_data.md)

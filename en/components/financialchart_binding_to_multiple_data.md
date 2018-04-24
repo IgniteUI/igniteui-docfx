@@ -55,6 +55,6 @@ The following code demonstrates how to bind the financial chart to the above dat
 ### Additional Resources
 <div class="divider--half"></div>
 
-* [Chart Performance](financialchart_performance.html)
-* [Binding Real-Time Data](financialchart_real_time_data.html)
-* [Binding High Volume Data](financialchart_high_volume_data.html)
+* [Chart Performance](financialchart_performance.md)
+* [Binding Real-Time Data](financialchart_real_time_data.md)
+* [Binding High Volume Data](financialchart_high_volume_data.md)

@@ -92,4 +92,4 @@ _language: ja
 ### 追加のリソース
 <div class="divider--half"></div>
 
-* [チャートのパフォーマンス](financialchart_performance.html)
+* [チャートのパフォーマンス](financialchart_performance.md)

@@ -62,7 +62,7 @@ import {
 export class AppModule {}
 ```
 
-構成の後、すべての連絡先を [**IgxList**](list.html) コンポーネントに表示します。リストはメンバー名および状態を表示します。
+構成の後、すべての連絡先を [**IgxList**](list.md) コンポーネントに表示します。リストはメンバー名および状態を表示します。
 
 ```html
 <!-- contacts.component.html -->
@@ -136,7 +136,7 @@ class Member {
 
 <div class="divider--half"></div>
 
-各チャット メンバーの前にアバターを追加します。そのため、[**IgxAvatar**](avatar.html) を含む **igx-list-item** に div 要素を追加します。リスト項目コンテンツを以下のように変更します。
+各チャット メンバーの前にアバターを追加します。そのため、[**IgxAvatar**](avatar.md) を含む **igx-list-item** に div 要素を追加します。リスト項目コンテンツを以下のように変更します。
 
 ```html
 <!-- contacts.component.html -->

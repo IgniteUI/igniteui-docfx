@@ -89,14 +89,14 @@ The following output is available for **column resizing**:
 ### Additional Resources
 <div class="divider--half"></div>
 
-* [Grid overview](grid.html)
-* [Virtualization and Performance](grid_virtualization.html)
-* [Paging](grid_paging.html)
-* [Filtering](grid_filtering.html)
-* [Sorting](grid_sorting.html)
-* [Summaries](grid_summaries.html)
-* [Column Pinning](grid_column_pinning.html)
-* [Selection](grid_selection.html)
+* [Grid overview](grid.md)
+* [Virtualization and Performance](grid_virtualization.md)
+* [Paging](grid_paging.md)
+* [Filtering](grid_filtering.md)
+* [Sorting](grid_sorting.md)
+* [Summaries](grid_summaries.md)
+* [Column Pinning](grid_column_pinning.md)
+* [Selection](grid_selection.md)
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.

@@ -52,7 +52,7 @@ With the dependencies imported, the Navigation Drawer can be defined in the app 
 </igx-nav-drawer>
 ```
 The content for the drawer should be provided via `<ng-template>` decorated with `igxDrawer` directive.
-While any content can be provided in the template, the `igxDrawerItem` directive (see [Item styling](#item-styling)) is available to apply out-of-the-box styling to items. The [`igxRipple`](ripple.html) directive completes the look and feel:
+While any content can be provided in the template, the `igxDrawerItem` directive (see [Item styling](#item-styling)) is available to apply out-of-the-box styling to items. The [`igxRipple`](ripple.md) directive completes the look and feel:
 ```html
 <!-- app.component.html -->
 <div class="content-wrap">
@@ -93,9 +93,9 @@ There are various ways to open and close the drawer. Input properties can be bou
 ```html
 <button (click)="drawer.toggle()"> Menu </button>
 ```
-The Navigation Drawer also integrates with `igxNavigationService` and can be targeted by id with an [`igxToggleAction`](toggle.html#automatic-toggle-actions) directive.
+The Navigation Drawer also integrates with `igxNavigationService` and can be targeted by id with an [`igxToggleAction`](toggle.md#automatic-toggle-actions) directive.
 
-Let's replace the `<main>` in **app.component.html** with the following, adding [`igxButton`](button.html) and [Icon component](icon.html) to style our toggle:
+Let's replace the `<main>` in **app.component.html** with the following, adding [`igxButton`](button.md) and [Icon component](icon.md) to style our toggle:
 ```html
 <main>
   <span igxButton="icon" igxToggleAction="navigation" [closeOnOutsideClick]="false">

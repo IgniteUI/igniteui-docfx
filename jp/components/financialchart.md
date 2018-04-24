@@ -32,7 +32,7 @@ Financial Chart は簡易な API を持つファイナンシャル データを�
 `line`|折れ線シリーズを指定します。
 `auto`|データ アダプターに基づいてチャート タイプの自動選択を指定します。これは、データの名前および数値列の数に基づいて上記の値を選択します。たとえば、Open、High、Low、および Close 列があるデータ項目のために `bar` を使用します。
 
-その他のチャート ペインの詳細については、「[Financial Chart ペイン](financialchart_panes.html)」トピックを参照してください。
+その他のチャート ペインの詳細については、「[Financial Chart ペイン](financialchart_panes.md)」トピックを参照してください。
 
 ```html
 <igx-financial-chart

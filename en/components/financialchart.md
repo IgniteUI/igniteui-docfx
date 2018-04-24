@@ -33,7 +33,7 @@ Property|Description
 `line`|Specifies the line series
 `auto`|Specifies automatic selection of chart type based on Data Adapter which suggest one of above values based names and number of numeric columns in your data. For example, it will suggest `bar` for data items with Open, High, Low, Close columns.
 
-Refer to the [Financial Chart Panes](financialchart_panes.html) topics for  information on other chart panes.
+Refer to the [Financial Chart Panes](financialchart_panes.md) topics for  information on other chart panes.
 
 ```html
  <igx-financial-chart

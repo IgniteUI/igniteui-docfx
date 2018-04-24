@@ -98,6 +98,6 @@ export class AppComponent {
 ### 追加のリソース
 <div class="divider--half"></div>
 
-* [大量のデータのバインド](financialchart_high_volume_data.html)
-* [リアルタイム データにバインド](financialchart_real_time_data.html)
-* [複数データ ソースへのバインド](financialchart_binding_to_multiple_data.html)
+* [大量のデータのバインド](financialchart_high_volume_data.md)
+* [リアルタイム データにバインド](financialchart_real_time_data.md)
+* [複数データ ソースへのバインド](financialchart_binding_to_multiple_data.md)
