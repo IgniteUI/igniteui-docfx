@@ -4,13 +4,13 @@ _description: Ignite UI for Angular Financial Chart コンポーネントは簡�
 _keywords: Ignite UI for Angular, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular チャート, Angular チャート コントロール, Angular チャート例, Angular チャート コンポーネント, Angular Financial Chart
 _language: ja
 ---
-## Financial Chart 軸 
+## チャートのタイプの選択
 
 `igx-financial-chart` コントロールでは、軸は軸線、目盛、タイトル、や軸のラベルの外観を設定する基本プロパティを提供します。
 
 デフォルトでは、ラベルを明示的に設定する必要はありません。Financial Chart は、データ内で最初の適切なプロパティを使用し、ラベルに使用します。
 
-### 軸デモ
+### チャート タイプのデモ
 
 <div class="sample-container" style="height: 550px">
     <iframe id="financial-chart-axis-types-iframe" src='{environment:demosBaseUrl}/financial-chart-axis-types' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -24,7 +24,7 @@ _language: ja
 
 ### 軸間隔
 
-Financial Chart コントロールで、軸の主間隔は主グリッド線および軸ラベルが軸に描画される頻度を指定します。同様に、軸副間隔は副グリッド線が軸に描画される頻度を指定します。
+Financial Chart コントロールで、`yAxisInterval` プロパティは主グリッド線および軸ラベルが軸に描画される頻度を指定します。同様に、`yAxisMinorInterval` プロパティは副グリッド線が軸に描画される頻度を指定します。
 
 以下のコード スニペットは、Y 軸の間隔を設定する方法を示します。
  
@@ -109,8 +109,8 @@ Financial Chart コントロールで、数値軸の範囲は軸の始めと終�
 ### 軸スケール
 
 Financial Chart コントロールで、チャートのデータが Y 軸に対数的にマップされるかどうかを制御できます。これは以下の設定で実行されます。
-- yAxisIsLogarithmic - Y 軸がリニア スケールの代わりに対数目盛を使用するかどうかを指定します。デフォルトでこのプロパティは False に設定されます。
-- yAxisLogarithmBase - Y 軸にデータ項目の位置をマップするときに log 関数で使用する基本値。これは yAxisIsLogarithmic が True の場合のみ効果があります。
+- `yAxisIsLogarithmic` - Y 軸がリニア スケールの代わりに対数目盛を使用するかどうかを指定します。デフォルトでこのプロパティは False に設定されます。
+- `yAxisLogarithmBase` - Y 軸にデータ項目の位置をマップするときに log 関数で使用する基本値。これは yAxisIsLogarithmic が True の場合のみ効果があります。
 
 以下のコードスニペットは、x 軸の目盛りの色、長さ、太さを設定します。
 
