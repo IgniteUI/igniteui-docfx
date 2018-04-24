@@ -20,7 +20,7 @@ Ignite UI for Angular Grid コンポーネントは、グリッドにバイン�
 </div>
 <div class="divider--half"></div>
 
-定義済みのデフォルト フィルタリング方法および規格のフィルタリング条件が適用されます。開発者がこれをカスタム実装と置き換えることができます。また、カスタム フィルタリング条件を追加する方法も提供します。Grid は現在簡易なフィルター UI を提供し、より詳細なフィルター オプションも提供します。列で設定された `dataType` に基づいて、[**フィルター条件**](#フィルター条件)の正しいセットがフィルター UI ドロップダウンで読み込まれます。また、列の `filteringIgnoreCase` および最初の `filteringCondition` プロパティを設定できます。
+定義済みのデフォルト フィルタリング方法および規格のフィルタリング条件が適用されます。開発者がこれをカスタム実装と置き換えることができます。また、カスタム フィルタリング条件を追加する方法も提供します。Grid は現在簡易なフィルター UI を提供し、より詳細なフィルター オプションも提供します。列で設定された `dataType` に基づいて、[**フィルター条件**](grid.md#フィルター条件)の正しいセットがフィルター UI ドロップダウンで読み込まれます。また、列の `filteringIgnoreCase` および最初の `filteringCondition` プロパティを設定できます。
 
 ```html
 <igx-column field="ProductName" filterable="true" dataType="string"></igx-column>
@@ -102,14 +102,14 @@ this.grid.filteringLogic = FilteringLogic.OR;
 ### 追加のリソース
 <div class="divider--half"></div>
 
-* [グリッドの概要](grid.html)
-* [仮想化とパフォーマンス](grid_virtualization.html)
-* [ページング](grid_paging.html)
-* [並べ替え](grid_sorting.html)
-* [集計](grid_summaries.html)
-* [列のピン固定](grid_column_pinning.html)
-* [列のサイズ変更](grid_column_resizing.html)
-* [選択](grid_selection.html)
+* [グリッドの概要](grid.md)
+* [仮想化とパフォーマンス](grid_virtualization.md)
+* [ページング](grid_paging.md)
+* [並べ替え](grid_sorting.md)
+* [集計](grid_summaries.md)
+* [列のピン固定](grid_column_pinning.md)
+* [列のサイズ変更](grid_column_resizing.md)
+* [選択](grid_selection.md)
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。

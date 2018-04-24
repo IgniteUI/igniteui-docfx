@@ -111,14 +111,14 @@ public handleRowSelectionChange(args) {
 ### Additional Resources
 <div class="divider--half"></div>
 
-* [Grid overview](grid.html)
-* [Paging](grid_paging.html)
-* [Filtering](grid_filtering.html)
-* [Sorting](grid_sorting.html)
-* [Summaries](grid_summaries.html)
-* [Column Pinning](grid_column_pinning.html)
-* [Column Resizing](grid_column_resizing.html)
-* [Virtualization and Performance](grid_virtualization.html)
+* [Grid overview](grid.md)
+* [Paging](grid_paging.md)
+* [Filtering](grid_filtering.md)
+* [Sorting](grid_sorting.md)
+* [Summaries](grid_summaries.md)
+* [Column Pinning](grid_column_pinning.md)
+* [Column Resizing](grid_column_resizing.md)
+* [Virtualization and Performance](grid_virtualization.md)
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.

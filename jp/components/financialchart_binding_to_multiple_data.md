@@ -56,6 +56,6 @@ let data: any = [ dataSource1, dataSource2 ]
 ### 追加のリソース
 <div class="divider--half"></div>
 
-* [チャートのパフォーマンス](financialchart_performance.html)
-* [リアルタイム データにバインド](financialchart_real_time_data.html)
-* [大量のデータのバインド](financialchart_high_volume_data.html)
+* [チャートのパフォーマンス](financialchart_performance.md)
+* [リアルタイム データにバインド](financialchart_real_time_data.md)
+* [大量のデータのバインド](financialchart_high_volume_data.md)

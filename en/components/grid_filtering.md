@@ -19,7 +19,7 @@ The Grid component in Ignite UI for Angular provides extensive filtering API thr
 </div>
 <div class="divider--half"></div>
 
-There's a default filtering strategy provided out of the box, as well as all the standard filtering conditions, which the developer can replace with their own implementation. In addition, we've provided a way to easily plug in your own custom filtering conditions. The Grid currently provides not only a simplistic filtering UI but also more complex filtering options. Depending on the set `dataType` of the column the correct set of [**filtering conditions**](#filtering-conditions) will be loaded inside the filter UI dropdown. Additionally, you can set the `filteringIgnoreCase` and the initial `filteringCondition` property of the column.
+There's a default filtering strategy provided out of the box, as well as all the standard filtering conditions, which the developer can replace with their own implementation. In addition, we've provided a way to easily plug in your own custom filtering conditions. The Grid currently provides not only a simplistic filtering UI but also more complex filtering options. Depending on the set `dataType` of the column the correct set of [**filtering conditions**](grid.md#filtering-conditions) will be loaded inside the filter UI dropdown. Additionally, you can set the `filteringIgnoreCase` and the initial `filteringCondition` property of the column.
 
 ```html
 <igx-column field="ProductName" filterable="true" dataType="string"></igx-column>
@@ -101,14 +101,14 @@ When set to `OR`, a row will be returned when either the 'ProductName' cell valu
 ### Additional Resources
 <div class="divider--half"></div>
 
-* [Grid overview](grid.html)
-* [Virtualization and Performance](grid_virtualization.html)
-* [Paging](grid_paging.html)
-* [Sorting](grid_sorting.html)
-* [Summaries](grid_summaries.html)
-* [Column Pinning](grid_column_pinning.html)
-* [Column Resizing](grid_column_resizing.html)
-* [Selection](grid_selection.html)
+* [Grid overview](grid.md)
+* [Virtualization and Performance](grid_virtualization.md)
+* [Paging](grid_paging.md)
+* [Sorting](grid_sorting.md)
+* [Summaries](grid_summaries.md)
+* [Column Pinning](grid_column_pinning.md)
+* [Column Resizing](grid_column_resizing.md)
+* [Selection](grid_selection.md)
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.

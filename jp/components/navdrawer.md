@@ -62,7 +62,7 @@ export class AppModule {
 ```
 
 Drawer のコンテンツを `igxDrawer` ディレクティブでデコレートした `<ng-template>` で設定します。
-任意のコンテンツをテンプレートに設定できますが、`igxDrawerItem` ディレクティブ ([項目のスタイル設定](#項目のスタイル)を参照) が定義済みのスタイル設定を項目に適用します。[`igxRipple`](ripple.html) ディレクティブはルックアンドフィールを向上します。
+任意のコンテンツをテンプレートに設定できますが、`igxDrawerItem` ディレクティブ ([項目のスタイル設定](#項目のスタイル)を参照) が定義済みのスタイル設定を項目に適用します。[`igxRipple`](ripple.md) ディレクティブはルックアンドフィールを向上します。
 
 ```html
 <!-- app.component.html -->
@@ -109,9 +109,9 @@ Drawer を開く/閉じる方法が複数あります。入力プロパティを
 <button (click)="drawer.toggle()"> Menu </button>
 ```
 
-Navigation Drawer は `igxNavigationService` とも統合し、[`igxToggleAction`](toggle.html#トグル自動操作) ディレクティブで id によって対象にされます。
+Navigation Drawer は `igxNavigationService` とも統合し、[`igxToggleAction`](toggle.md#トグル自動操作) ディレクティブで id によって対象にされます。
 
-**app.component.html** の `<main>` を以下のコードと置き換えます。トグルをスタイル設定するために [`igxButton`](button.html) および [Icon コンポーネント](icon.html)を追加します。
+**app.component.html** の `<main>` を以下のコードと置き換えます。トグルをスタイル設定するために [`igxButton`](button.md) および [Icon コンポーネント](icon.md)を追加します。
 
 ```html
 <main>
