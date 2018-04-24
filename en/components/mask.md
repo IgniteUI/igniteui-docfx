@@ -6,7 +6,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ##Mask
 
-With the mask directive in Ignite UI for Angular, the developer can control user input and format the visible value based on configurable mask rules. It provides different input options and ease in use and configuration.
+By applying `igxMask` directive on a **text input field**, the developer can control user input and format the visible value, based on configurable mask rules. It provides different input options and ease in use and configuration.
 
 ### Mask Demo
 <div class="sample-container loading" style="height: 280px">
@@ -21,7 +21,8 @@ With the mask directive in Ignite UI for Angular, the developer can control user
 > To start using Ignite UI for Angular components in your own projects, make sure you have configured all necessary dependencies and have performed the proper setup of your project. You can learn how to do this in the [**installation**](https://www.infragistics.com/products/ignite-ui-angular/getting-started#installation) topic.
 
 ### Usage
-To get started with the Ignite UI for Angular Mask directive, let's first import the **IgxMaskModule** and **IgxInputGroupModule** in our **app.module.ts** file. The **igxMask** directive can be used with any Angular input control.
+`igxMask` directive is used on an input of type **text**.
+To get started with the Ignite UI for Angular Mask directive, let's first import the **IgxMaskModule** and **IgxInputGroupModule** in our **app.module.ts** file.
 
 ```typescript
 // app.module.ts
@@ -43,7 +44,7 @@ export class AppModule {}
 <div class="divider--half"></div>
 
 | Mask Character | Description |
-| :--- | :--- | 
+| :--- | :--- |
 | 0 | requires a digit (0-9) |
 | 9 | requires a digit (0-9) or a space |
 | # | requires a digit (0-9), plus (+), or minus (-) sign |
@@ -55,7 +56,7 @@ export class AppModule {}
 | C | any keyboard character |
 
 #### Apply Mask on Input
-In the following example, we apply a phone number with an extension mask to an input. 
+In the following example, we apply a phone number with an extension mask to an input.
 
 ```html
 <!--sample.component.html-->
@@ -133,23 +134,23 @@ In addition to setting a mask to an input, you can validate the entered value as
 
     <igx-input-group>
         <label igxLabel for="name">Name</label>
-        <input igxInput name="name" type="text" required 
+        <input igxInput name="name" type="text" required
         [(ngModel)]="person.name" />
     </igx-input-group>
 
     <igx-input-group>
         <label igxLabel for="email">Birthday</label>
-        <input igxInput #dateInput name="birthday" type="text" 
-            [igxMask]="'00/00/0000'" 
-            [(ngModel)]="person.birthday" 
+        <input igxInput #dateInput name="birthday" type="text"
+            [igxMask]="'00/00/0000'"
+            [(ngModel)]="person.birthday"
             (blur)="validateDate(dateInput, snackbar)" />
     </igx-input-group>
 
     <igx-input-group>
         <label igxLabel for="socialSecurityNumber">Social Security Number</label>
-        <input igxInput #ssn name="socialSecurityNumber" type="text" 
-        [igxMask]="'###-##-####'" 
-        [(ngModel)]="person.socialSecurityNumber" 
+        <input igxInput #ssn name="socialSecurityNumber" type="text"
+        [igxMask]="'###-##-####'"
+        [(ngModel)]="person.socialSecurityNumber"
         (blur)="validateSSN(ssn, snackbar)" />
     </igx-input-group>
 
@@ -161,7 +162,7 @@ In addition to setting a mask to an input, you can validate the entered value as
 // sample.component.ts
 
 public person: Person;
-  
+
 constructor() {
     this.person = {
         birthday: null,
