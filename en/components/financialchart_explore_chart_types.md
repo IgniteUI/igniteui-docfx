@@ -7,9 +7,7 @@ _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Nati
 
 In the `igx-financial-chart` control, an axis provides base properties for specifying appearance of axis main lines, tickmarks, titles, and axis labels.
 
-By default, you do not need to explicitly set the labels. The Financial Chart will use the first appropriate property that it finds within the data you provided and will use that for the labels.
-
-### Explore Chart Types Demo
+### Demo
 
 <div class="sample-container" style="height: 550px">
     <iframe id="financial-chart-axis-types-iframe" src='{environment:demosBaseUrl}/financial-chart-axis-types' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -20,6 +18,8 @@ By default, you do not need to explicitly set the labels. The Financial Chart wi
 </div>
 
 <div class="divider--half"></div>
+
+By default, you do not need to explicitly set the labels. The Financial Chart will use the first appropriate property that it finds within the data you provided and will use that for the labels.
 
 ### Axis Interval
 In the Financial Chart control, the `yAxisInterval` property specifies how frequently major gridlines and axis labels are rendered on an axis. Similarly, the `yAxisMinorInterval` property specifies how frequently minor gridlines are rendered on an axis.

@@ -7,12 +7,7 @@ _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Nati
 
 The `igx-financial-chart` control has multiple panes to display financial data.
 
-* Price Pane - Renders prices using Line, Candlestick, Bar (OHLC), trendlines and financial overlays.
-* Indicator Pane - Renders all the financial indicators in a separate chart while the `BollingerBands` and `PriceChannel` overlays are rendered in the Price Pane because they share the same values range on Y-Axis.
-* Volume Pane - Renders stocks volumes using Column, Line, and Area chart types below all above panes.
-* Zoom Pane - Controls the zoom of all the panes and it is always rendered at bottom of the chart.
-
-### Financial Indicator Pane Demo
+### Demo
 <div class="sample-container" style="height: 550px">
     <iframe id="financial-chart-panes-iframe" src='{environment:demosBaseUrl}/financial-chart-panes' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -20,6 +15,12 @@ The `igx-financial-chart` control has multiple panes to display financial data.
     <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="financial-chart-panes-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
     </button>
 </div>
+
+The following panes are available in the Financial Chart control:
+* Price Pane - Renders prices using Line, Candlestick, Bar (OHLC), trendlines and financial overlays.
+* Indicator Pane - Renders all the financial indicators in a separate chart while the `BollingerBands` and `PriceChannel` overlays are rendered in the Price Pane because they share the same values range on Y-Axis.
+* Volume Pane - Renders stocks volumes using Column, Line, and Area chart types below all above panes.
+* Zoom Pane - Controls the zoom of all the panes and it is always rendered at bottom of the chart.
 
 ### Indicator Pane
 Financial Indicators are often used by traders to measure changes and to show trends in stock prices. These indicators are usually displayed below the price pane because they do not share the same Y-Axis scale.

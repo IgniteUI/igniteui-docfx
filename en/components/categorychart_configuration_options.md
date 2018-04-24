@@ -6,9 +6,8 @@ _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Nati
 ## Configuration Options
 
 There are many areas of the category chart that can be customized, such as the markers, chart titles and subtitles, and the chart types.
-This page will walk you through with code samples the different properties that is required to be set in order to achieve a customized category chart.
 
-### Configuration Options Demo
+### Demo
 <div class="sample-container" style="height: 550px">
     <iframe id="category-chart-config-options-sample-iframe" src='{environment:demosBaseUrl}/category-chart-config-options-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>

@@ -7,7 +7,7 @@ _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Nati
 
 The `igx-financial-chart` control can bind easily to multiple data sources, as shown in the following demo.
 
-### Binding to Multiple Data Sources Demo
+### Demo
 <div class="sample-container" style="height: 550px">
     <iframe id="financial-chart-multiple-data-iframe" src='{environment:demosBaseUrl}/financial-chart-multiple-data' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>

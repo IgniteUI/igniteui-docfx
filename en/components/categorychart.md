@@ -5,9 +5,9 @@ _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Nati
 ---
 ## Category Chart
 
-The Category Chart is a charting component that makes visualizing category data easy to do. The control simplifies the complexities of the data visualization domain into manageable API. A user can bind a collection of data, a group of collections, and a data property and let the charting control do the rest. The component will analyze the data and then automatically choose the best series to represent the data. Furthermore, the user can instead set the `chartType` property to choose from predefined charts, such as: Line, Area, Column, Point, Spline, Spline Area, Step Areas, Step Line, and Waterfall.
+The Category Chart is a charting component that makes visualizing category data easy to do. The control simplifies the complexities of the data visualization domain into manageable API.
 
-### Category Chart Demo
+### Demo
 
 <div class="sample-container" style="height: 550px">
     <iframe id="category-chart-overview-sample-iframe" src='{environment:demosBaseUrl}/category-chart-overview-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -18,6 +18,8 @@ The Category Chart is a charting component that makes visualizing category data 
 </div>
 
 <div class="divider--half"></div>
+
+ A user can bind a collection of data, a group of collections, and a data property and let the charting control do the rest. The component will analyze the data and then automatically choose the best series to represent the data. Furthermore, the user can instead set the `chartType` property to choose from predefined charts, such as: Line, Area, Column, Point, Spline, Spline Area, Step Areas, Step Line, and Waterfall.
 
 By using a smart Data Adapter, the data is analyzed and the appropriate visualization is rendered. For example, if the `chartType` property is set to `Auto`, the control will use a column chart for a small data sets or a line chart for larger data sets.
 

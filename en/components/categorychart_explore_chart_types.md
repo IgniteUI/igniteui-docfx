@@ -7,7 +7,7 @@ _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Nati
 
 In the Category Chart control, an Axis provides base properties for specifying appearance of axis main lines, tickmarks, titles, and axis labels.
 
-### Explore Chart Types Demo
+### Demo
 
 <div class="sample-container" style="height: 550px">
     <iframe id="category-chart-axis-options-sample-iframe" src='{environment:demosBaseUrl}/category-chart-axis-options-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
