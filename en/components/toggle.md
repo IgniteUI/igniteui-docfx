@@ -6,7 +6,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ##Toggle
 
-The igxToggle directive allows the users to open, to interact with, to apply animations, and to close a toggle container. All toggle components implement the `igxToggle` or `igxToggleAction` internally, and users can implement toggle-based components and views, like dropdowns, while the `igxToggleAction` directive controls other components until the toggle umbrella.
+The `igxToggle` directive allows the users to open, to interact with, to apply animations, and to close a toggle container. All toggle components implement the `igxToggle` or `igxToggleAction` internally, and users can implement toggle-based components and views, like dropdowns, while the `igxToggleAction` directive controls other components until the toggle umbrella.
 
 ###Toggle Demo
 
