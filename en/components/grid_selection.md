@@ -55,6 +55,7 @@ To enable multiple row selection, the `igx-grid` exposes the `rowSelectable` pro
 ```
 
 *Note:* In order to have proper row selection and cell selection, while grid has remote virtualization, `primaryKey` should be provided.
+*Note:* When grid has remote virtualization then clicking the header checkox will select/deselect all records. But when all records are selected through header checkbox and then a visible row has been deselected, when new data is loaded in the grid on demand, it is a limitation that the newly loaded rows are not selected.
 
 ### Methods
 
