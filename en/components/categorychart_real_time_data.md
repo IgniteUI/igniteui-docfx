@@ -8,7 +8,7 @@ _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Nati
 The Category Chart control is capable of handling high volumes of data, ranging into the millions of data points, and updating them every few milliseconds as demonstrated in the following demo.
 
 ### Demo
-<div class="sample-container" style="height: 570px;">
+<div class="sample-container" style="height: 600px;">
     <iframe id="category-chart-high-frequency-sample-iframe" align="center" src='{environment:demosBaseUrl}/category-chart-high-frequency-sample' height="100%" width="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
