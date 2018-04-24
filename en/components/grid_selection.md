@@ -6,7 +6,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ### Data Grid Row Selection
 
-With row selection in Ignite UI for Angular, there is a checkbox that precedes all other columns within the row.
+With row selection in Ignite UI for Angular, there is a checkbox that precedes all other columns within the row. When a user clicks on the checkbox, the row will either become selected or deselected, enabling the user to select multiple rows of data.  
 
 #### Demo
 
