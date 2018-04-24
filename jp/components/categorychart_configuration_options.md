@@ -6,9 +6,9 @@ _language: ja
 ---
 ## 構成オプション
 
-マーカー、チャート タイトルとサブタイトル、およびチャート タイプなどのカテゴリ チャート機能をカスタマイズできます。このページは、カスタマイズされたカテゴリ チャートを作成するために設定するプロパティをコード例を使用して説明します。
+マーカー、チャート タイトルとサブタイトル、およびチャート タイプなどのカテゴリ チャート機能をカスタマイズできます。
 
-### 構成オプション デモ
+### デモ
 
 <div class="sample-container" style="height: 550px">
     <iframe id="category-chart-config-options-sample-iframe" src='{environment:demosBaseUrl}/category-chart-config-options-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>

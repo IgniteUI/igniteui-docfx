@@ -8,9 +8,7 @@ _language: ja
 
 `igx-financial-chart` コントロールでは、軸は軸線、目盛、タイトル、や軸のラベルの外観を設定する基本プロパティを提供します。
 
-デフォルトでは、ラベルを明示的に設定する必要はありません。Financial Chart は、データ内で最初の適切なプロパティを使用し、ラベルに使用します。
-
-### チャート タイプのデモ
+### デモ
 
 <div class="sample-container" style="height: 550px">
     <iframe id="financial-chart-axis-types-iframe" src='{environment:demosBaseUrl}/financial-chart-axis-types' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -21,6 +19,8 @@ _language: ja
 </div>
 
 <div class="divider--half"></div>
+
+デフォルトでは、ラベルを明示的に設定する必要はありません。Financial Chart は、データ内で最初の適切なプロパティを使用し、ラベルに使用します。
 
 ### 軸間隔
 

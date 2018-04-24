@@ -8,12 +8,7 @@ _language: ja
 
 `igx-financial-chart` コントロールは財務データを表示する複数のペインがあります。
 
-* 価格ペイン - 折れ線、ローソク足、棒 (OHLC)、トレンドライン、および財務オーバーレイを使用して価格を描画します。
-* インジケーター ペイン - すべての財務指標を別のチャートに描画し、`BollingerBands` および `PriceChannel` オーバーレイが Y 軸と同じ値範囲を使用するために価格ペインに描画されます。
-* ボリューム ペイン - 柱状、折れ線、およびエリアのチャート タイプを使用して出来高を上記のペインの下に描画します。
-* ズーム ペイン - すべてのペインのズームを制御します。常にチャートの下側に描画されます。
-
-### 財務インジケーター ペイン デモ
+### デモ
 <div class="sample-container" style="height: 550px">
     <iframe id="financial-chart-panes-iframe" src='{environment:demosBaseUrl}/financial-chart-panes' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -21,6 +16,12 @@ _language: ja
     <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="financial-chart-panes-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
     </button>
 </div>
+
+以下のペインは Financial Chart コントロールで利用可能です:
+* 価格ペイン - 折れ線、ローソク足、棒 (OHLC)、トレンドライン、および財務オーバーレイを使用して価格を描画します。
+* インジケーター ペイン - すべての財務指標を別のチャートに描画し、`BollingerBands` および `PriceChannel` オーバーレイが Y 軸と同じ値範囲を使用するために価格ペインに描画されます。
+* ボリューム ペイン - 柱状、折れ線、およびエリアのチャート タイプを使用して出来高を上記のペインの下に描画します。
+* ズーム ペイン - すべてのペインのズームを制御します。常にチャートの下側に描画されます。
 
 ### インジケーター ペイン
 財務指標は、株価の動きの計測やトレンドを確認するためにトレーダーによって使用されます。これらのインジケーターは、同じ Y 軸を共有しないため価格ペインの下に表示されます。

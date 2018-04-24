@@ -8,7 +8,7 @@ _language: ja
 
 Category Chart コントロールは、以下のデモで表示されるように、数百万のデータ ポイントに及ぶ大量のデータを処理しできます。
 
-### 大量データを使用したデモ
+### デモ
 
 <div class="sample-container" style="height: 570px">
     <iframe id="category-chart-performance-iframe" src='{environment:demosBaseUrl}/category-chart-high-volume-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>

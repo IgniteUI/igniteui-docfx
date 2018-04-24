@@ -8,7 +8,7 @@ _language: ja
 
 Category Chart コントロールでは、軸は軸線、目盛、タイトル、や軸のラベルの外観を設定する基本プロパティを提供します。
 
-### チャート タイプのデモ
+### デモ
 
 <div class="sample-container" style="height: 550px">
     <iframe id="category-chart-axis-options-sample-iframe" src='{environment:demosBaseUrl}/category-chart-axis-options-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>

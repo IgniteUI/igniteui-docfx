@@ -8,7 +8,7 @@ _language: ja
 
 `igx-financial-chart` コントロールで、ナビゲーション動作、トレンドライン レイヤー、オーバーレイ、チャート タイトル、チャート サブタイトルなどのカスタマイズ可能なビジュアルがあります。このページは、カスタマイズされたファイナンシャル チャートを作成するために設定するプロパティをコード例を使用して説明します。
 
-### 構成オプション デモ
+### デモ
 
 <div class="sample-container" style="height: 550px">
     <iframe id="financial-chart-trendlines-iframe" src='{environment:demosBaseUrl}/financial-chart-trendlines' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
