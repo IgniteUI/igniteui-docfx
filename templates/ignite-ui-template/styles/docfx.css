@@ -1,4 +1,5 @@
 /* Copyright (c) Microsoft Corporation. All Rights Reserved. Licensed under the MIT License. See License.txt in the project root for license information. */
+
 html,
 body {
     box-sizing: border-box;
@@ -57,6 +58,7 @@ svg:hover path {
 }
 
 /* blends header footer and content together with gradient effect */
+
 .grad-top {
     /* For Safari 5.1 to 6.0 */
     /* For Opera 11.1 to 12.0 */
@@ -65,6 +67,7 @@ svg:hover path {
     /* Standard syntax */
     height: 5px;
 }
+
 .grad-bottom {
     /* For Safari 5.1 to 6.0 */
     /* For Opera 11.1 to 12.0 */
@@ -155,7 +158,7 @@ svg:hover path {
         float: none;
         white-space: nowrap;
     }
-    .topnav .navbar-nav > li {
+    .topnav .navbar-nav>li {
         float: none;
         display: inline-block;
     }
@@ -194,23 +197,6 @@ svg:hover path {
         padding-bottom: 0;
         border: none;
     }
-    .toc .nav > li,
-    .toc .nav > li > a {
-        display: inline-block;
-    }
-    .toc li:after {
-        margin-left: -3px;
-        margin-right: 5px;
-        content: ', ';
-        color: #666666;
-    }
-    .toc .level1 > li {
-        display: block;
-    }
-
-    .toc .level1 > li:after {
-        display: none;
-    }
     .article.grid-right {
         margin-left: 0;
     }
@@ -221,9 +207,6 @@ svg:hover path {
     .sidetoggle.ng-hide {
         display: none !important;
     }
-    /*.expand-all {
-    display: none;
-  }*/
     .sideaffix {
         display: none;
     }
@@ -233,7 +216,6 @@ svg:hover path {
     .breadcrumb {
         white-space: inherit;
     }
-
     /* workaround for #hashtag url is no longer needed*/
     h1:before,
     h2:before,
@@ -245,17 +227,18 @@ svg:hover path {
 }
 
 /* For toc iframe */
+
 @media (max-width: 260px) {
-    .toc .level2 > li {
+    .toc .level2>li {
         display: block;
     }
-
-    .toc .level2 > li:after {
+    .toc .level2>li:after {
         display: none;
     }
 }
 
 /* For Embedded Video */
+
 div.embeddedvideo {
     padding-top: 56.25%;
     position: relative;
@@ -273,6 +256,7 @@ div.embeddedvideo iframe {
 }
 
 /* For printer */
+
 @media print {
     .article.grid-right {
         margin-top: 0;

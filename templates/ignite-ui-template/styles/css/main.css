@@ -403,17 +403,22 @@ sub {
     width: 6px;
     height: 6px;
     border-radius: 50%;
-    background: rgba(0, 0, 0, 0.12);
+    background: transparent;
     top: 50%;
     -webkit-transform: translateY(-50%);
             transform: translateY(-50%); }
-  .toc .nav .nav.level2 > li:hover::before {
-    background: rgba(0, 0, 0, 0.42); }
+    @media only screen and (min-width: 992px) {
+      .toc .nav .nav.level2 > li::before {
+        background: rgba(0, 0, 0, 0.12); } }
+  @media only screen and (min-width: 992px) {
+    .toc .nav .nav.level2 > li:hover::before {
+      background: rgba(0, 0, 0, 0.42); } }
   .toc .nav .nav.level2 > li.active a {
     font-weight: 500;
     color: #000; }
-  .toc .nav .nav.level2 > li.active::before {
-    background: rgba(0, 0, 0, 0.7); }
+  @media only screen and (min-width: 992px) {
+    .toc .nav .nav.level2 > li.active::before {
+      background: rgba(0, 0, 0, 0.7); } }
 
 @media only screen and (min-width: 992px) {
   .toc::after {

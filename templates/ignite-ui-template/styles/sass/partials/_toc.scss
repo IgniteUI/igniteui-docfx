@@ -326,13 +326,19 @@
         width: 6px;
         height: 6px;
         border-radius: 50%;
-        background: rgba(#000, 0.12);
+        background: transparent;
         top: 50%;
         transform: translateY(-50%);
+
+        @media only screen and (min-width: 992px) {
+          background: rgba(#000, 0.12);
+        }
       }
 
       > li:hover::before {
-        background: rgba(#000, 0.42);
+        @media only screen and (min-width: 992px) {
+          background: rgba(#000, 0.42);
+        }
       }
 
       > li.active {
@@ -342,11 +348,14 @@
         }
 
         &::before {
-          background: rgba(#000, 0.7);
+          @media only screen and (min-width: 992px) {
+            background: rgba(#000, 0.7);
+          }
         }
       }
     }
   }
+
   @media only screen and (min-width: 992px) {
     &::after {
       position: absolute;
@@ -359,6 +368,7 @@
       pointer-events: none;
     }
   }
+
 }
 
 .sidenav-container {
