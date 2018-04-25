@@ -180,3 +180,27 @@
 - name: Excel Exporter
   href: exporter_excel.md
   new: true
+- name: Excel Engine
+  href: excel_engine.md
+  new: true
+- name: Barcode
+  href: barcode.md
+  new: true
+- name: Doughnut Chart
+  href: doughnut_chart.md
+  new: true
+- name: Funnel Chart
+  href: funnel_chart.md
+  new: true
+- name: Pie Chart
+  href: pie_chart.md
+  new: true
+- name: Bullet Graph
+  href: bullet_graph.md
+  new: true
+- name: Linear Gauge
+  href: linear_gauge.md
+  new: true
+- name: Radial Gauge
+  href: radial_gauge.md
+  new: true
