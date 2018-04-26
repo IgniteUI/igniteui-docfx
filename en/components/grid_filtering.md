@@ -26,6 +26,9 @@ There's a default filtering strategy provided out of the box, as well as all the
 <igx-column field="Price" filterable="true" dataType="number"></igx-column>
 ```
 
+> [!NOTE]
+> If values of type `string` are used by column of dataType `Date`, the grid won't parse it to `Date` objects and using of filtering conditions won't be possible. If you want to use `string` objects, additional logic should be implemented on application level, in order to parse the values to `Date` object.
+
 You can filter any column or a combination of columns through the grid API. The grid exposes two methods for this task:
 
 *   `filter` - filter a single column or a combination of columns.
