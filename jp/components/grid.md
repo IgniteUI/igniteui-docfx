@@ -7,7 +7,7 @@ _language: ja
 
 ## Data Grid
 
-<p class="highlight">Ignite UI for Angular Data Grid で表形式データを表示して変更します。最小限のコードと構成でデータをすばやくバインドできます。機能は、フィルタリング、並べ替え、ページング、テンプレート、移動可能な列、およびデータの編集と更新です。ユーザー操作が簡単に認識できるため、コードで制御できます。</p>
+<p class="highlight">Ignite UI for Angular Data Grid は、表形式でデータの表示や編集ができます。最小限のコードと構成でデータをすばやくバインドできます。フィルタリング、並べ替え、ページング、テンプレート、移動可能な列、およびデータの編集と更新などの機能があり、ユーザー操作を簡単に認識してコードで制御できます。</p>
 <div class="divider"></div>
 
 ### デモ
@@ -42,7 +42,7 @@ import { IgxGridModule } from 'igniteui-angular/grid';
 export class AppModule {}
 ```
 
-_IgxGridModule_ の各コンポーネント、ディレクティブ、およびヘルパー クラスは _grid_ または _igniteui-angular_ のメイン バンドルでインポートできます。グリッドをインスタンス化して使用するためすべての機能をインポートする必要はありませんが、グリッド API の部分である型を宣言するときにそれをインポートまたはエディターで自動的にインポートします。
+_IgxGridModule_ の各コンポーネント、ディレクティブ、およびヘルパー クラスは _grid_ または _igniteui-angular_ のメイン バンドルでインポートできます。グリッドをインスタンス化して使用するためにすべての機能をインポートする必要はありませんが、グリッド API の一部である型を宣言する場合はインポート (またはエディターで自動的にインポート) します。
 
 ```typescript
 import { IgxGridComponent } from 'igniteui-angular/grid/';
@@ -317,7 +317,7 @@ export class MyComponent implements OnInit {
 </igx-grid>
 ```
 
-**注**: リモート データにバインドする場合、グリッドの `autoGenerate` プロパティは使用しないことをお勧めします。データを検証して適切な列を生成するためにデータが利用可能である必要があります。リモート サービスの応答が完了するまでデータが利用できないため、グリッドはエラーを発生します。リモート サービスにバインド時に `autoGenerate` を使用する機能は今後追加予定です。
+**注**: リモート データにバインドする場合、グリッドの `autoGenerate` プロパティは使用しないことをお勧めします。データを検証して適切な列を生成するためにデータが利用可能である必要があります。リモート サービスの応答が完了するまでデータが利用できないため、グリッドはエラーを発生します。リモート サービスへバインド時に `autoGenerate` を使用する機能は今後追加予定です。
 
 ### 仮想化
 
@@ -325,7 +325,7 @@ export class MyComponent implements OnInit {
 
 ### CRUD 操作
 
-`IgxGridComponent` は基本 CRUD 操作のための簡易な API を提供します。
+`IgxGridComponent` は基本的な CRUD 操作のための簡易な API を提供します。
 
 #### 新しいレコードの追加
 
@@ -340,7 +340,7 @@ this.grid.addRow(record);
 
 #### データをグリッドで更新
 
-グリッドでデータの更新が `updateRow` および `updateCell` メソッドを使用して実行されます。セル値を直接に更新するには `update` メソッドを使用できます。
+グリッドのデータの更新は `updateRow` および `updateCell` メソッドを使用して実行されます。セル値を直接更新するには `update` メソッドを使用できます。
 
 ```typescript
 // Updating the whole row
@@ -445,7 +445,7 @@ this.grid.deleteRow(this.selectedCell.rowIndex);
 |`clearSummaryCache()`|すべてのキャッシュされた集計を削除し、再計算を実行します。|
 |`previousPage()`|ページングが有効で、現在のページが最初のページではない場合に前のページに移動します。|
 |`nextPage()`|ページングが有効で、現在のページが最後のページではない場合に次のページに移動します。|
-|`paginate(page: number)`|ページングが有効の場合、指定したページに移動します。ページ インデックスは 0 から開始します。|
+|`paginate(page: number)`|ページングが有効な場合、指定したページに移動します。ページ インデックスは 0 から開始します。|
 |`markForCheck()`|グリッドおよびすべての子要素に変更検出サイクルを手動的にトリガーします。|
 |`pinColumn(name: string): boolean`|列をフィールド名によってピン固定します。操作が成功したかどうかを返します。|
 |`unpinColumn(name: string): boolean`|列をフィールド名によってピン固定解除します。操作が成功したかどうかを返します。|
@@ -474,7 +474,7 @@ this.grid.deleteRow(this.selectedCell.rowIndex);
 |`maxWidth`|string|列の最大幅|
 |`headerClasses`|string|ヘッダー要素に適用される追加の CSS クラス。|
 |`cellClasses`|string|この列のセルに適用される追加の CSS クラス。|
-|`formatter`|Function|列にセル テンプレートを渡さないでセルの値をテンプレート化するために使用される関数。|
+|`formatter`|Function|列にセル テンプレートを渡さずにセルの値をテンプレート化するために使用される関数。|
 | `index` | string | 列インデックス。 |
 | `filteringCondition` | FilteringCondition | ブール値、日付、文字列、または数値条件。デフォルトは _contains_ 文字列条件です。 |
 |`filteringIgnoreCase`|boolean|フィルタリングが適用される場合に文字列の大文字化を無視します。デフォルトは _true_ です。|
