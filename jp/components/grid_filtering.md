@@ -28,7 +28,7 @@ Ignite UI for Angular Grid コンポーネントは、グリッドにバイン�
 ```
 
 > [!NOTE]
-> If values of type `string` are used by column of dataType `Date`, the grid won't parse it to `Date` objects and using of filtering conditions won't be possible. If you want to use `string` objects, additional logic should be implemented on application level, in order to parse the values to `Date` object.
+> If values of type `string` are used by column of dataType `Date`, the grid won't parse it to `Date` objects and using of filtering conditions won't be possible. If you want to use `string` objects, additional logic should be implemented on application level, in order to parse the values to `Date` objects.
 
 列または複数の列をグリッド API でフィルターできます。グリッドはフィルターのための 2 つのメソッドを公開します。
 
