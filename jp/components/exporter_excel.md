@@ -46,7 +46,7 @@ export class AppModule {}
 <button (click)="exportButtonHandler()">Export Data to Excel</button>
 ```
 
-エクスポーター サービスにアクセスするには、コンポーネントのコンストラクターで `IgxExcelExporterService` 型の引数を定義します。Angular フレームワークはサービスのインスタンスを提供します。データを MS Excel 形式でエクスポートするには、エクスポーター サービスの `exportData` メソッドを呼び出します。このメソッドで、エクスポートするデータは最初の引数です。2 番目の引数は `IgxExcelExporterOptions` 型で、エクスポート処理の構成を許可します。
+エクスポーター サービスへのアクセスは、コンポーネントのコンストラクターで `IgxExcelExporterService` 型の引数を定義します。Angular フレームワークはサービスのインスタンスを提供します。データを MS Excel 形式でエクスポートするには、エクスポーター サービスの `exportData` メソッドを呼び出します。このメソッドで、エクスポートするデータは最初の引数です。2 番目の引数は `IgxExcelExporterOptions` 型で、エクスポート処理の構成を許可します。
 
 以下のコードはコンポーネントの typescript ファイルでエクスポート処理を実行します。
 
@@ -75,7 +75,7 @@ public exportButtonHandler() {
 正しく設定された場合、エクスポート ボタンが表示されます。ボタンが押されるとエクスポート処理をトリガーし、ブラウザーで "ExportedDataFile.csv" ファイルをダウンロードします。このファイルは `localData` 配列のデータを CSV 形式で含みます。
 
 
-### IgxGrid のデータのエクスポート
+### IgxGrid データのエクスポート
 
 Excel Exporter サービスも `IgxGrid` からのデータを MS Excel 形式でエクスポートできますが、`IgxExcelExporterService` の `export` メソッドを呼び出し、`IgxGrid` を最初の引数として渡す必要があります。
 
@@ -122,9 +122,9 @@ public exportButtonHandler() {
 
 
 
-### エクスポートするコンテンツのカスタマイズ化
+### エクスポートするコンテンツのカスタマイズ
 
-上記の例で、Excel Exporter サービスがすべての利用可能なデータをエクスポートしました。行または列のエクスポートをスキップするシナリオがあります。これを実装するには、各列のために発生される `onColumnExport` または各行のために発生される `onRowExport` イベントを処理し、イベント引数オブジェクトの `cancel` プロパティを `true` に設定すると各イベントをキャンセルできます。
+上記の例では、Excel Exporter ービスで利用可能なデータをすべてエクスポートしましたが、特定の行や列をエクスポートしない場合の実装は、各列で発生される `onColumnExport` または各行で発生される `onRowExport` イベントを処理し、イベント引数オブジェクトの cancel プロパティを true に設定して各イベントをキャンセルします。
 
 以下の例では、ヘッダーが "Age" で、インデックスが 1 の場合、エクスポートから列を除外します。
 

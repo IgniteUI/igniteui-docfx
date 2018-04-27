@@ -23,7 +23,7 @@ _language: ja
 
 ### 使用方法
 
-`igxMask` ディレクティブは **text** 型の入力にしようされます。Ignite UI for Angular Mask ディレクティブを初期化する前に、**IgxMaskModule** および **IgxInputGroupModule** を **app.module.ts** ファイルにインポートします。**igxMask** ディレクティブを任意の Angular 入力コントロールと使用できます。
+`igxMask` ディレクティブは **text** 型の入力に使用します。Ignite UI for Angular Mask ディレクティブを初期化する前に、**IgxMaskModule** および **IgxInputGroupModule** を **app.module.ts** ファイルにインポートします。**igxMask** ディレクティブを任意の Angular 入力コントロールと使用できます。
 
 ```typescript
 // app.module.ts
@@ -58,7 +58,7 @@ export class AppModule {}
 
 #### マスクを入力に適用
 
-以下の例で、内線を含む電話番号のマスクを入力に適用します。
+以下の例では、内線を含む電話番号のマスクを入力に適用します。
 
 ```html
 <!--sample.component.html-->

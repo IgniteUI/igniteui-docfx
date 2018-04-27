@@ -7,7 +7,7 @@ _language: ja
 
 ## Input Group
 
-Ignite UI for Angular Input Groups を使用すると、簡単に使用できるデータ入力フォームを作成できます。データ入力を簡単になり、入力コントロールは検証およびエラーの処理機能も提供します。
+Ignite UI for Angular Input Groups は、簡単に使用できるデータ入力フォームを作成できます。データ入力を簡素化し、入力コントロールには検証やエラーの処理機能も提供します。
 
 ### Input Group デモ
 <div class="sample-container" style="height:600px">
@@ -19,9 +19,9 @@ Ignite UI for Angular Input Groups を使用すると、簡単に使用できる
 <div class="divider--half"></div>
 
 ### 使用方法
-Input Group コンポーネントおよびその関連するディレクティブのデフォルト スタイル設定はマテリアル デザイン [**ガイドライン**](https://material.io/guidelines/components/text-fields.html)のテキスト フィールド仕様を実装します。
+Input Group コンポーネントおよびその関連するディレクティブのデフォルト スタイル設定は、マテリアル デザイン [**ガイドライン**](https://material.io/guidelines/components/text-fields.html)のテキスト フィールド仕様を実装します。
 
-Ignite UI for Angular Input Group、Input、Label、Prefix、Suffix、および Hint を初期化する前に、最初に **IgxInputGroup** を **app.module.ts** ファイルにインポートします:
+Ignite UI for Angular Input Group、Input、Label、Prefix、Suffix、および Hint を初期化する前に **IgxInputGroup** を **app.module.ts** ファイルにインポートします:
 
 ```typescript
 // app.module.ts
@@ -41,10 +41,10 @@ export class AppModule {}
 > `igxInput`、`igxLabel`、`igxPrefix`、`igxSuffix`、または `igxHint` ディレクティブを使用するには、`<igx-input-group>` コンテナーにラップする必要があります。
 
 ### Label および Input
-`igxLabel` および `igxInput` ディレクティブ、およびその検証、データ バインディング、および API を[このトピック](label_input.md)に参照してください。
+`igxLabel` および `igxInput` ディレクティブとその検証、データ バインディング、API については、[このトピック](label_input.md)を参照してください。
 
 ### Prefix と Suffix
-入力のプレフィックスまたはサフィックスを追加するために Ignite UI for Angular Prefix または Suffix を使用できます。両方のディレクティブが HTML 要素、文字列、またはその他のコンポーネントを含むことができます。文字列 **prefix** (`+359`) および igxIcon **suffix** (`<igx-icon name="phone"></igx-icon>`) を持つ新しい入力フィールドを追加します。
+Ignite UI for Angular Prefix または Suffix を使用して入力のプレフィックスまたはサフィックスを追加できます。両方のディレクティブに HTML 要素、文字列、またはその他のコンポーネントを含むことができます。文字列 **prefix** (`+359`) および igxIcon **suffix** (`<igx-icon name="phone"></igx-icon>`) を持つ新しい入力フィールドを追加します。
 
 ```html
 <igx-input-group>
@@ -57,7 +57,7 @@ export class AppModule {}
 </igx-input-group>
 ```
 
-デモは以下のようになります。
+結果は以下のようになります。
 
 <div class="sample-container" style="height:100px">
 <iframe id="input-group-sample-3-frame" src='{environment:demosBaseUrl}/input-group-sample-3' width="100%" height="100%" seamless frameBorder="0"></iframe>
@@ -65,7 +65,7 @@ export class AppModule {}
 <div class="divider--half"></div>
 
 ### Hint
-Ignite UI for Angular Hint は入力の下に配置されるヘルパー テキストを提供します。ヒントを入力の開始または終了に配置できます。`igxHint` の位置を `position` プロパティを使用して設定できます。phone 入力にヒントを追加します。
+Ignite UI for Angular Hint は、入力の下に配置されるヘルパー テキストを提供します。ヒントは入力の開始または終了に配置できます。`igxHint` の位置は `position` プロパティを使用して設定します。以下は phone 入力にヒントを追加します。
 
 ```html
 <igx-input-group>
@@ -79,7 +79,7 @@ Ignite UI for Angular Hint は入力の下に配置されるヘルパー テキ�
 </igx-input-group>
 ```
 
-ヒントを持つ phone フィールドは以下のようになります。
+ヒントを追加した phone フィールドは以下のようになります。
 
 <div class="sample-container" style="height:110px">
 <iframe id="input-group-sample-4-frame" src='{environment:demosBaseUrl}/input-group-sample-4' width="100%" height="100%" seamless frameBorder="0"></iframe>
