@@ -71,7 +71,7 @@ public ngOnInit() {
 ```
 
 > [!NOTE]
-> If values of type `string` are used by column of dataType `Date`, the grid won't parse it to `Date` objects and using of igxGrid `sorting` won't work as expected. If you want to use `string` objects, additional logic should be implemented on application level, in order to parse the values to `Date` object.
+> If values of type `string` are used by column of dataType `Date`, the grid won't parse it to `Date` objects and using igxGrid `sorting` won't work as expected. If you want to use `string` objects, additional logic should be implemented on an application level, in order to parse the values to `Date` object.
 
 <div class="divider--half"></div>
 
