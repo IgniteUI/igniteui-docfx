@@ -6,14 +6,12 @@ _language: ja
 ---
 ## リアルタイム データ
 
-Category Chart コントロールは、数百万のデータ ポイントに及ぶ大量のデータを処理し、それらを数ミリ秒ごとに更新する機能を備えます。以下のデモはカテゴリ チャート コンポーネントのパフォーマンスを紹介します。
+Category Chart コントロールは、数百万に及ぶデータ ポイントを含む大量データを処理し、それらを数ミリ秒ごとに更新できます。以下では、カテゴリ チャート コンポーネントの高パフォーマンスをご確認いただけます。
 
 ### デモ
 
-<div align="center">
 <div class="sample-container" style="height: 570px">
     <iframe id="category-chart-performance-iframe" src='{environment:demosBaseUrl}/category-chart-high-frequency-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
 </div>
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="category-chart-high-frequency-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
@@ -24,7 +22,7 @@ Category Chart コントロールは、数百万のデータ ポイントに及�
 
 ### パフォーマンス最適化
 
-チャートのパフォーマンスに影響を及ぼすチャート機能および Angular 固有の機能があり、アプリケーションでのパフォーマンスを最適化する際に検討する必要があります。
+チャートのパフォーマンスに影響を及ぼすチャート機能および Angular 固有の機能があり、アプリケーションのパフォーマンスを最適化する際に検討する必要があります。
 
 * コンポーネントにバインドするプロパティで大量のデータを保存する場合、`@Component` デコレーターで `changeDetection: ChangeDetectionStrategy.OnPush` を設定します。
      * Angular の各変更検出のサイクルでデータ配列内の変更を確認しないようにする設定です。

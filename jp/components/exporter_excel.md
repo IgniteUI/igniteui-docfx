@@ -75,7 +75,7 @@ public exportButtonHandler() {
 正しく設定された場合、エクスポート ボタンが表示されます。ボタンが押されるとエクスポート処理をトリガーし、ブラウザーで "ExportedDataFile.csv" ファイルをダウンロードします。このファイルは `localData` 配列のデータを CSV 形式で含みます。
 
 
-### IgxGrid のデータのエクスポート
+### IgxGrid データのエクスポート
 
 Excel Exporter サービスでも `IgxGrid` からのデータを MS Excel 形式でエクスポートできますが、`IgxExcelExporterService` の `export` メソッドを呼び出し、`IgxGrid` を最初の引数として渡す必要があります。
 
