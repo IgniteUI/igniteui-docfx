@@ -7,10 +7,10 @@ _language: ja
 
 ### グリッドの並べ替え
 
-Ignite UI for Angular で、**並べ替え**も列ごとのレベルで有効化されます。つまり、`igx-grid` に並べ替え可能な列および並べ替え可能ではない列の両方を含むことが可能です。
+Ignite UI for Angular では、列レベルでの**並べ替え**が可能です。つまり、`igx-grid` に並べ替え可能な列および並べ替え不可の列の両方を含むことができます。
 
 #### デモ
-以下のデモでは、**igx-grid** の `onContextMenu` 出力を使用してカスタム コンテキスト メニューが追加されました。
+以下のデモは、**igx-grid** の `onContextMenu` 出力を使用してカスタム コンテキスト メニューを追加しています。
 
 <div class="sample-container loading" style="height:550px">
     <iframe id="grid-sample-iframe" src='{environment:demosBaseUrl}/grid-sorting-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -21,7 +21,7 @@ Ignite UI for Angular で、**並べ替え**も列ごとのレベルで有効化
 </div>
 <div class="divider--half"></div>
 
-`sortable` 入力によって実行できます。グリッド フィルターと同じように、`sortingIgnoreCase` プロパティを設定すると、大文字と小文字を区別する並べ替えを実行できます。
+以下のように `sortable` 入力を使用します。グリッド フィルター同様、`sortingIgnoreCase` プロパティを設定して大文字と小文字を区別する並べ替えを実行できます。
 
 ```html
 <igx-column field="ProductName" header="Product Name" [dataType]="'string'" sortable="true"></igx-column>

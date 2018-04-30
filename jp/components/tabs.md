@@ -7,7 +7,7 @@ _language: ja
 
 ## Tabs
 
-Ignite UI for Angular Tabs コンポーネントは、同様なデータ セットの体系化や切り替えに使用します。`igx-tab-item` および `igx-tabs-group` のラッパーとして機能し、データのコンテナーおよびタブ ヘッダーを表します。Tabs コンポーネントは、タブを上側に配置して複数のタブ項目がある場合にスクロールを許可します。
+Ignite UI for Angular `igxTabs` コンポーネントは、同様なデータ セットの体系化や切り替えに使用します。`igx-tab-item` および `igx-tabs-group` のラッパーとして機能し、データのコンテナーおよびタブ ヘッダーを表します。Tabs コンポーネントは、タブを上側に配置して複数のタブ項目がある場合にスクロールを許可します。
 
 ### Tabs デモ
 <div class="sample-container loading" style="height: 250px; width: 600px;">

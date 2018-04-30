@@ -20,13 +20,13 @@ Ignite UI for Angular で、**ページング**がルート `igx-grid` コンポ
 </div>
 <div class="divider--half"></div>
 
-機能が有効かどうかを制御する paging は Boolean プロパティです。`perPage` プロパティはページごとで表示可能なレコードを制御します。グリッドでページングを有効にします。
+機能が有効かどうかを制御する paging は Boolean プロパティです。`perPage` プロパティはページごとに表示可能なレコードを制御します。以下のようにグリッドでページングを有効にします。
 
 ```html
 <igx-grid #grid1 [data]="data | async" [paging]="true" [perPage]="20" [autoGenerate]="false"></igx-grid>
 ```
 
-ページング領域がテンプレート化をサポートしますが、テンプレート参照を初期化でグリッドに渡す必要があります。以下の例はページングが入力によって制御されるテンプレートを使用します。
+ページング領域でテンプレート化がサポートされますが、初期化でテンプレート参照をグリッドに渡す必要があります。以下は、ページングが入力によって制御されるテンプレートの例です。
 
 ```html
 <ng-template #myTemplate let-grid>
@@ -40,7 +40,7 @@ Ignite UI for Angular で、**ページング**がルート `igx-grid` コンポ
 </igx-grid>
 ```
 
-ページングも Grid API によってコードで実行できます。
+ページングも Grid API を使用してコードで設定できます。
 
 ```typescript
 // Go to page 6

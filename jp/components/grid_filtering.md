@@ -20,7 +20,7 @@ Ignite UI for Angular Grid コンポーネントは、グリッドにバイン�
 </div>
 <div class="divider--half"></div>
 
-定義済みのデフォルト フィルタリング方法および規格のフィルタリング条件が適用されます。開発者がこれをカスタム実装と置き換えることができます。また、カスタム フィルタリング条件を追加する方法も提供します。Grid は現在簡易なフィルター UI を提供し、より詳細なフィルター オプションも提供します。列で設定された `dataType` に基づいて、[**フィルター条件**](grid.md#フィルター条件)の正しいセットがフィルター UI ドロップダウンで読み込まれます。また、列の `filteringIgnoreCase` および最初の `filteringCondition` プロパティを設定できます。
+デフォルトの定義済みフィルタリングおよび標準のフィルタリング条件があり、カスタム実装で置き換えることも可能です。また、カスタム フィルタリング条件を追加することもできます。Grid には、簡易なフィルター UI および詳細なフィルター オプションがあります。列で設定された `dataType` に基づいて、[**フィルター条件**](grid.md#フィルター条件)の正しいセットがフィルター UI ドロップダウンで読み込まれます。また、列の `filteringIgnoreCase` および最初の `filteringCondition` プロパティを設定できます。
 
 ```html
 <igx-column field="ProductName" filterable="true" dataType="string"></igx-column>
@@ -38,7 +38,7 @@ Ignite UI for Angular Grid コンポーネントは、グリッドにバイン�
 this.grid.filter('ProductName', 'myproduct', STRING_FILTERS.contains, true);
 ```
 
-必要なパラメーターは列フィールドおよびフィルター条件です。条件および大文字と小文字の区別が設定されない場合、列プロパティから推測されます。複数フィルターの場合、このメソッドはフィルター式の配列を受け取ります。
+必要なパラメーターは列フィールドおよびフィルター条件です。条件および大文字と小文字の区別を設定しない場合、列プロパティで推測されます。フィルターが複数ある場合、このメソッドはフィルター式の配列を受け取ります。
 
 > [!NOTE]
 > フィルタリング操作では、グリッドにバインドされているデータ ソースは変更**されません**。
@@ -93,7 +93,7 @@ import { FilteringLogic } from 'igniteui-angular/main';
 this.grid.filteringLogic = FilteringLogic.OR;
 ```
 
-`AND` のデフォルト値はすべての適用されているフィルター式と一致する行のみを返します。上記の例で、'ProductName セル値が 'myproduct' を含み、'Price' セル値が 55 より大きい場合に行が返されます。
+`AND` のデフォルト値はすべての適用されているフィルター式と一致する行のみを返します。上記の例は、'ProductName セル値が 'myproduct' を含み、'Price' セル値が 55 より大きい場合に行が返されます。
 
 `OR` に設定される場合、'ProductName セル値が 'myproduct' を含むか、'Price' セル値が 55 より大きい場合に行が返されます。
 

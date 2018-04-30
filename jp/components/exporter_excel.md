@@ -8,7 +8,7 @@ _language: ja
 ## Excel Exporter
 
 <p class="highlight">
-Ignite UI Excel Exporter サービスは、Microsoft® Excel® 形式で生データ (配列) または `IgxGrid` のデータをエクスポートできます。エクスポート機能は、`IgxExcelExporterService` クラスでカプセル化され、MS Excel テーブル形式でデータをエクスポートします。この形式では、フィルタリングや並べ替えなどの機能が使用できます。</p>
+Ignite UI for Angular Excel Exporter サービスは、Microsoft® Excel® 形式で生データ (配列) または `IgxGrid` のデータをエクスポートできます。エクスポート機能は、`IgxExcelExporterService` クラスでカプセル化され、MS Excel テーブル形式でデータをエクスポートします。この形式では、フィルタリングや並べ替えなどの機能が使用できます。</p>
 <div class="divider"></div>
 
 ### Excel Exporter デモ
@@ -40,13 +40,13 @@ import { IgxExcelExporterService } from "igniteui-angular/services/index";
 export class AppModule {}
 ```
 
-エクスポート処理を開始するためにコンポーネントのテンプレートでボタンのハンドラーを使用できます。
+エクスポート処理の開始は、コンポーネントのテンプレートでボタンのハンドラーを使用します。
 
 ```html
 <button (click)="exportButtonHandler()">Export Data to Excel</button>
 ```
 
-エクスポーター サービスへのアクセスは、コンポーネントのコンストラクターで `IgxExcelExporterService` 型の引数を定義します。Angular フレームワークはサービスのインスタンスを提供します。データを MS Excel 形式でエクスポートするには、エクスポーター サービスの `exportData` メソッドを呼び出します。このメソッドで、エクスポートするデータは最初の引数です。2 番目の引数は `IgxExcelExporterOptions` 型で、エクスポート処理の構成を許可します。
+エクスポーター サービスへのアクセスは、コンポーネントのコンストラクターで `IgxExcelExporterService` 型の引数を定義し、Angular フレームワークはサービスのインスタンスを提供します。データを MS Excel 形式でエクスポートするには、エクスポーター サービスの `exportData` メソッドを呼び出します。このメソッドで、エクスポートするデータは最初の引数です。2 番目の引数は `IgxExcelExporterOptions` 型で、エクスポート処理の構成を許可します。
 
 以下のコードはコンポーネントの typescript ファイルでエクスポート処理を実行します。
 
@@ -77,7 +77,7 @@ public exportButtonHandler() {
 
 ### IgxGrid データのエクスポート
 
-Excel Exporter サービスも `IgxGrid` からのデータを MS Excel 形式でエクスポートできますが、`IgxExcelExporterService` の `export` メソッドを呼び出し、`IgxGrid` を最初の引数として渡す必要があります。
+Excel Exporter サービスでも `IgxGrid` からのデータを MS Excel 形式でエクスポートできますが、`IgxExcelExporterService` の `export` メソッドを呼び出し、`IgxGrid` を最初の引数として渡す必要があります。
 
 以下はその例です。
 
@@ -124,7 +124,7 @@ public exportButtonHandler() {
 
 ### エクスポートするコンテンツのカスタマイズ
 
-上記の例では、Excel Exporter ービスで利用可能なデータをすべてエクスポートしましたが、特定の行や列をエクスポートしない場合の実装は、各列で発生される `onColumnExport` または各行で発生される `onRowExport` イベントを処理し、イベント引数オブジェクトの cancel プロパティを true に設定して各イベントをキャンセルします。
+上記の例では、Excel Exporter サービスで利用可能なデータをすべてエクスポートしましたが、特定の行や列をエクスポートしない場合の実装は、各列で発生される `onColumnExport` または各行で発生される `onRowExport` イベントを処理し、イベント引数オブジェクトの `cancel` プロパティを `true` に設定して各イベントをキャンセルします。
 
 以下の例では、ヘッダーが "Age" で、インデックスが 1 の場合、エクスポートから列を除外します。
 
