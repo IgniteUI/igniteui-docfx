@@ -7,7 +7,7 @@ _language: ja
 
 ### グリッドの集計
 
-Ignite UI for Angular Grid コンポーネントは列ごとレベルに操作する**集計**機能があります。
+Ignite UI for Angular Grid コンポーネントには、列レベルで制御可能な**集計**機能があります。
 
 #### デモ
 
