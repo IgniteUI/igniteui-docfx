@@ -27,6 +27,9 @@ Ignite UI for Angular Grid コンポーネントは、グリッドにバイン�
 <igx-column field="Price" filterable="true" dataType="number"></igx-column>
 ```
 
+> [!NOTE]
+> `string` 型の値が `Date` dataType の列で使用される場合、グリッドは値を `Date` オブジェクトに解析しないためフィルター条件は使用できません。`string` オブジェクトを使用する場合、値を `Date` オブジェクトに解析するためのロジックをアプリケーション レベルで実装する必要があります。
+
 列または複数の列をグリッド API でフィルターできます。グリッドはフィルターのための 2 つのメソッドを公開します。
 
 *   `filter` - 単一の列または複数の列をフィルターします。

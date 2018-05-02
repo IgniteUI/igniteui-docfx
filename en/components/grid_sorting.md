@@ -6,7 +6,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ### Grid Sorting
 
-In Ignite UI for Angular, **Sorting** is enabled on a per-column level, meaning that the igx-grid can have a mix of sortable and non-sortable columns. 
+In Ignite UI for Angular, **Sorting** is enabled on a per-column level, meaning that the igx-grid can have a mix of sortable and non-sortable columns.
 
 #### Demo
 Additionally there is a custom contextmenu added for sorting using **igx-grid**'s onContextMenu Output.
@@ -68,6 +68,10 @@ public ngOnInit() {
     ];
 }
 ```
+
+> [!NOTE]
+> If values of type `string` are used by column of dataType `Date`, the grid won't parse it to `Date` objects and using igxGrid `sorting` won't work as expected. If you want to use `string` objects, additional logic should be implemented on an application level, in order to parse the values to `Date` object.
+
 <div class="divider--half"></div>
 
 ### Additional Resources

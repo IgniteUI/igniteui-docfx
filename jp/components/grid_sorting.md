@@ -70,6 +70,9 @@ public ngOnInit() {
 }
 ```
 
+> [!NOTE]
+> `string` 型の値が `Date` dataType の列で使用される場合、グリッドが値を `Date` オブジェクトに解析しないため igxGrid 並べ替え機能が正しく動作しません。`string` オブジェクトを使用する場合、値を `Date` オブジェクトに解析するためのロジックをアプリケーション レベルで実装する必要があります。
+
 <div class="divider--half"></div>
 
 ### 追加のリソース
