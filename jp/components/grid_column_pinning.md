@@ -1,13 +1,13 @@
 ﻿---
 title: 列ピン固定 - ネイティブ Angular | Ignite UI for Angular
-_description: Ignite UI for Angular 列ピン固定を使用して列をピン固定すると、ピン固した列が水平スクロール時に常に表示されます。
+_description: Ignite UI for Angular 列ピン固定を使用して列をピン固定すると、ピン固定した列が水平スクロール時に常に表示されます。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, ネイティブ Angular コンポーネント, Angular Data Grid コンポーネント, Angular Data Grid コントロール, Angular Grid コンポーネント, Angular Grid コントロール, Angular 高いパフォーマンス Grid, 列のピン固定, ピン固定, ピン
 _language: ja
 ---
 
 ### グリッドの列のピン固定
 
-Ignite UI for Angular で、**列のピン固定**は `igx-grid` API で利用できます。
+単一または複数の列をグリッドの左端にピン固定できます。Ignite UI for Angular の**列ピン固定**機能を使用して列をピン固定した場合、水平スクロール時にピン固定した列が常に表示されます。
 
 #### デモ
 
@@ -39,7 +39,7 @@ this.grid.pinColumn("AthleteNumber");
 this.grid.unpinColumn("Name");
 ```
 
-両方のメソッドは操作に成功したかどうかを示すブール値を返します。よくある失敗原因に列が既にその状態である場合ことがあります。`pinColumn` は、ピン固定領域がグリッドのサイズ以上である場合も失敗します。以下はその例です。
+両方のメソッドは操作に成功したかどうかを示すブール値を返します。よくある失敗原因に列が既にその状態である場合があります。`pinColumn` は、ピン固定領域がグリッドのサイズ以上である場合も失敗します。以下はその例です。
 
 ```html
 <igx-grid #grid1 [data]="data | async" [width]="300px" [autoGenerate]="false">
@@ -70,7 +70,7 @@ public columnPinning(event) {
 
 ### ピン固定の制限
 
-*   列幅をパーセンテージ (%) で設定することは、ピン固定列がある場合にグリッドの本体およびヘッダー コンテンツの配置を正しくなりません。列のピン固定を正しく操作するには、列幅をピクセル (px) に設定するか、グリッドによって自動的に割り当てる必要があります。
+*   列幅をパーセンテージ (%) で設定した場合にピン固定列があるとグリッド本体およびヘッダー コンテンツが正しく配置されません。列のピン固定を正しく設定するには、列幅をピクセル (px) に設定するか、グリッドによって自動的に割り当てる必要があります。
 
 <div class="divider--half"></div>
 
