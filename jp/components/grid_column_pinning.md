@@ -1,13 +1,13 @@
 ﻿---
 title: 列ピン固定 - ネイティブ Angular | Ignite UI for Angular
-_description: Ignite UI for Angular 列ピン固定を使用して列をピン固定すると、ピン固した列が水平スクロール時に常に表示されます。
+_description: Ignite UI for Angular 列ピン固定を使用して列をピン固定すると、ピン固定した列が水平スクロール時に常に表示されます。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, ネイティブ Angular コンポーネント, Angular Data Grid コンポーネント, Angular Data Grid コントロール, Angular Grid コンポーネント, Angular Grid コントロール, Angular 高いパフォーマンス Grid, 列のピン固定, ピン固定, ピン
 _language: ja
 ---
 
 ### グリッドの列のピン固定
 
-単一または複数の列をグリッドの左端にピン固定できます。Ignite UI for Angular の**列ピン固定**機能を使用して列をピン固定した場合、水平スクロール時にピン固した列が常に表示されます。
+単一または複数の列をグリッドの左端にピン固定できます。Ignite UI for Angular の**列ピン固定**機能を使用して列をピン固定した場合、水平スクロール時にピン固定した列が常に表示されます。
 
 #### デモ
 
