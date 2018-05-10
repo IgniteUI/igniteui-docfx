@@ -21,17 +21,17 @@ Input groups in the Ignite UI for Angular controls allow developers to create ea
 The default styling of the Input Group component as well as its complimentary directives follow the text fields specification in the Material Design
 [**guidelines**](https://material.io/guidelines/components/text-fields.html).
 
-To get started with the Ignite UI for Angular Input Group, Input, Label, Prefix, Suffix and Hint let's first import the **IgxInputGroup** in our **app.module.ts** file:
+To get started with the Ignite UI for Angular Input Group, Input, Label, Prefix, Suffix and Hint let's first import the **IgxInputGroupModule** in our **app.module.ts** file:
 
 ```typescript
 // app.module.ts
 
 ...
-import { IgxInputGroup } from 'igniteui-angular/main';
+import { IgxInputGroupModule } from 'igniteui-angular/main';
 
 @NgModule({
     ...
-    imports: [..., IgxInputGroup],
+    imports: [..., IgxInputGroupModule],
     ...
 })
 export class AppModule {}

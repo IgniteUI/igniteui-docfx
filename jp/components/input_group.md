@@ -21,17 +21,17 @@ Ignite UI for Angular Input Groups は、簡単に使用できるデータ入力
 ### 使用方法
 Input Group コンポーネントおよびその関連するディレクティブのデフォルト スタイル設定は、マテリアル デザイン [**ガイドライン**](https://material.io/guidelines/components/text-fields.html)のテキスト フィールド仕様を実装します。
 
-Ignite UI for Angular Input Group、Input、Label、Prefix、Suffix、および Hint を初期化する前に **IgxInputGroup** を **app.module.ts** ファイルにインポートします:
+Ignite UI for Angular Input Group、Input、Label、Prefix、Suffix、および Hint を初期化する前に **IgxInputGroupModule** を **app.module.ts** ファイルにインポートします:
 
 ```typescript
 // app.module.ts
 
 ...
-import { IgxInputGroup } from 'igniteui-angular/main';
+import { IgxInputGroupModule } from 'igniteui-angular/main';
 
 @NgModule({
     ...
-    imports: [..., IgxInputGroup],
+    imports: [..., IgxInputGroupModule],
     ...
 })
 export class AppModule {}
