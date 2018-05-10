@@ -9,7 +9,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <div class="divider"></div>
 
 ### Drop Down Demo
-<div class="sample-container" style="height:240px">
+<div class="sample-container" style="height:380px">
     <iframe id="dropdown-sample-3-iframe" src='{environment:demosBaseUrl}/dropdown-sample-3' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -208,7 +208,7 @@ To provide more useful visual information, use `isHeader` to group items semanti
 
 If the sample is configured properly, a list  of countries should be displayed as a group under EU header and UK as a non-interactive item.
 
-<div class="sample-container" style="height: 280px">
+<div class="sample-container" style="height: 380px">
     <iframe id="dropdown-sample-3-iframe" src='{environment:demosBaseUrl}/dropdown-sample-3' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
