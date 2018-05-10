@@ -254,7 +254,7 @@ The following getters are available on the **igx-drop-down** component:
 | Name | Type | Description |
 | :--- | :--- | :--- |
 | `selectedItem` | `number` | Gets the selected item. |
-| `items` | `QueryList of IgxDropDownItemComponent` | Gets all of the items. |
+| `items` | `QueryList of IgxDropDownItemComponent` | Gets all of the items but headers. |
 | `headers` | `IgxDropDownItemComponent[]` | Gets header items. |
 
 
