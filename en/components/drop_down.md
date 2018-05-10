@@ -37,7 +37,7 @@ import { IgxDropDownModule } from 'igniteui-angular/main';
 export class AppModule {}
 ```
 
-Let's create a simple dropdown that provides several options items to choose from. To achieve this, we use the **igx-drop-down** and **igx-drop-down-item** components as well as **igx-toggle** to open/close the dropdown.
+Let's create a simple dropdown that provides several options items to choose from. To achieve this, we use the **igx-drop-down** component as well as **igx-toggle** to open/close the dropdown.
 
 To continue, include all needed modules and import them in the **app.module.ts** file.
 
