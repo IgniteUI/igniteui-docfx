@@ -1,0 +1,287 @@
+---
+title: Drop Down Component
+_description: Use Ignite UI for Angular Drop Down component to display a list of items which supports a single item selection.
+_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Drop Down components, Angular Drop Down controls
+---
+
+##Drop Down
+<p class="highlight">The Ignite UI for Angular Drop Down displays a scrollable list of items which may be visually grouped and supports selection of a single item. Clicking or tapping an item selects it and closes the Drop Down</p>
+<div class="divider"></div>
+
+### Drop Down Demo
+<div class="sample-container" style="height:240px">
+    <iframe id="dropdown-sample-3-iframe" src='{environment:demosBaseUrl}/dropdown-sample-3' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="dropdown-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
+
+> [!NOTE]
+> To start using Ignite UI for Angular components in your own projects, make sure you have configured all necessary dependencies and have performed the proper setup of your project. You can learn how to do this in the [**installation**](https://www.infragistics.com/products/ignite-ui-angular/getting-started#installation) topic.
+
+###Usage
+To get started with the Ignite UI for Angular Drop Down, let's first import the **IgxDropDownModule** in the **app.module.ts** file:
+
+```typescript
+// app.module.ts
+
+...
+import { IgxDropDownModule } from 'igniteui-angular/main';
+
+@NgModule({
+    ...
+    imports: [..., IgxDropDownModule],
+    ...
+})
+export class AppModule {}
+```
+
+Let's create a simple dropdown that provides several options items to choose from. To achieve this, we use the **igx-drop-down** and **igx-drop-down-item** components as well as **igx-toggle** to open/close the dropdown.
+
+To continue, include all needed modules and import them in the **app.module.ts** file.
+
+```typescript
+// app.module.ts
+
+...
+import {
+    IgxDropDownModule,
+    IgxToggleModule
+} from 'igniteui-angular/main';
+
+@NgModule({
+    ...
+    imports: [..., IgxDropDownModule, IgxToggleModule],
+})
+export class AppModule {}
+```
+
+Having all set up, let's show all the options in the [**IgxDropDownComponent**](https://www.infragistics.com/products/ignite-ui-angular/angular/components/drop_down.html) component. The dropdown contains several options as dropdown items.
+
+```html
+<!-- dropdown.component.html -->
+
+<div class="sample-wrapper drop-down-wrapper">
+    <button igxButton="raised" igxRipple (click)="toggleDropDown()">Options</button>
+    <igx-drop-down>
+        <igx-drop-down-item *ngFor="let item of items">
+            {{ item.field }}
+        </igx-drop-down-item>
+    </igx-drop-down>
+</div>
+```
+
+```typescript
+// dropdown.component.ts
+
+...
+    @ViewChild(IgxDropDownComponent) public igxDropDown: IgxDropDownComponent;
+
+    public items: any[] = [];
+
+    constructor() {
+        for (let i = 1; i < 4; i ++) {
+            const item = { field: "Option " + i };
+            this.items.push(item);
+        }
+    }
+
+    public ngOnInit() {
+    }
+
+    public toggleDropDown() {
+        this.igxDropDown.toggle();
+    }
+
+```
+
+
+If the sample is configured properly, a dropdown with several options should be displayed.
+
+<div class="sample-container" style="height: 200px">
+    <iframe id="dropdown-sample-1-iframe" src='{environment:demosBaseUrl}/dropdown-sample-1' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="dropdown-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">                view on stackblitz
+    </button>
+</div>
+
+<div class="divider--half"></div>
+
+Let's say we want to have a predefined selected item. To do this, handle **igx-drop-down**  `onOpening` event of  [**IgxDropDownComponent**](https://www.infragistics.com/products/ignite-ui-angular/angular/components/drop_down.html).
+
+```html
+<!-- dropdown.component.html -->
+
+<div class="sample-wrapper drop-down-wrapper">
+    <button igxButton="raised" igxRipple (click)="toggleDropDown()">Options</button>
+    <igx-drop-down (onOpening)="onOpening($event)">
+        <igx-drop-down-item *ngFor="let item of items">
+            {{ item.field }}
+        </igx-drop-down-item>
+    </igx-drop-down>
+</div>
+```
+
+```typescript
+// dropdown.component.ts
+
+...
+    @ViewChild(IgxDropDownComponent) public igxDropDown: IgxDropDownComponent;
+
+    public items: any[] = [];
+
+    constructor() {
+        for (let i = 1; i < 4; i ++) {
+            const item = { field: "Option " + i };
+            this.items.push(item);
+        }
+    }
+
+    public ngOnInit() {
+    }
+
+    public toggleDropDown() {
+        this.igxDropDown.toggle();
+    }
+
+    public onOpening(ev) {
+        this.igxDropDown.setSelectedItem(0);
+    }
+
+```
+
+<div class="sample-container" style="height: 200px">
+    <iframe id="dropdown-sample-2-iframe" src='{environment:demosBaseUrl}/dropdown-sample-2' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="dropdown-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">                view on stackblitz
+    </button>
+</div>
+
+<div class="divider--half"></div>
+
+To provide more useful visual information, use `isHeader` to group items semantically or `isDisabled` to display an item as non-interactive.
+
+```html
+<!-- dropdown.component.html -->
+
+<div class="sample-wrapper drop-down-wrapper">
+    <button igxButton="raised" igxRipple (click)="toggleDropDown()">Countries</button>
+    <igx-drop-down>
+        <igx-drop-down-item *ngFor="let item of items" isDisabled={{item.disabled}} isHeader={{item.header}}>
+            {{ item.field }}
+        </igx-drop-down-item>
+    </igx-drop-down>
+</div>
+
+```
+
+```typescript
+// dropdown.component.ts
+
+...
+    @ViewChild(IgxDropDownComponent) public igxDropDown: IgxDropDownComponent;
+
+    public items: any[] = [
+        { field: "EU", header: true },
+        { field: "Germany" },
+        { field: "Bulgaria" },
+        { field: "UK", disabled: true }];
+
+    constructor() {
+    }
+
+    public ngOnInit() {
+    }
+
+    public toggleDropDown() {
+        this.igxDropDown.toggle();
+    }
+
+```
+
+If the sample is configured properly, a list  of countries should be displayed as a group under EU header and UK as a non-interactive item.
+
+<div class="sample-container" style="height: 280px">
+    <iframe id="dropdown-sample-3-iframe" src='{environment:demosBaseUrl}/dropdown-sample-3' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="dropdown-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">                view on stackblitz
+    </button>
+</div>
+
+<div class="divider--half"></div>
+
+### API Summary
+The following table summarizes some of the useful **igx-drop-down** component inputs, outputs and methods.
+
+#### Inputs
+The following inputs are available in the **igx-drop-down** component:
+
+| Name | Type | Description |
+| :--- | :--- | :--- |
+| `width` | string | Sets the tab width of the control. |
+| `height` | string | Sets the tab height of the control. |
+| `allowItemsFocus` | boolean | Allows items to take focus. |
+
+<div class="divider--half"></div>
+
+#### Outputs
+The following outputs are available in the **igx-drop-down** component:
+
+| Name | Cancelable | Description | Parameters
+| :--- | :--- | :--- | :--- |
+| `onSelection` | false | Emitted when item selection is changing, before the selection completes. | `{ oldSelection: string, newSelection: string, event?: Event }` |
+| `onOpening` | false | Emitted before the dropdown is opened. |
+| `onOpened` | false | Emitted when a dropdown is being opened. |
+| `onClosed` | false | Emitted when a dropdown is being closed. |
+
+#### Methods
+The following methods are available in the **igx-drop-down** component:
+
+| Signature | Description |
+| :--- | :--- | :--- |
+| `toggle()` | Toggles the drop down opened/closed. |
+| `setSelectedItem(index: number)` | Selects dropdown item by index. |
+| `open()` | Opens the dropdown. |
+| `close()` | Closes the dropdown. |
+
+#### Getters
+The following getters are available on the **igx-drop-down** component:
+
+| Name | Type | Description |
+| :--- | :--- | :--- |
+| `selectedItem` | `number` | Gets the selected item. |
+| `items` | `QueryList of IgxDropDownItemComponent` | Gets all of the items. |
+| `headers` | `IgxDropDownItemComponent[]` | Gets header items. |
+
+
+The following table summarizes some of the useful **igx-drop-down-item** component inputs, outputs and methods.
+
+#### Inputs
+The following inputs are available in the **igx-drop-down-item** component:
+
+| Name | Type | Description |
+| :--- | :--- | :--- |
+| `isHeader` | boolean| Defines if the item is a group header. |
+| `isDisabled` | boolean| Disables the given item. |
+| `isFocused` | boolean| Defines if the given item is focused. |
+
+#### Getters
+The following getters are available on the **igx-drop-down** component:
+
+| Name | Type | Description |
+| :--- | :--- | :--- |
+| `isSelected` | `boolean` | Defines if the given item is selected. |
+
+###Additional Resources
+
+<div class="divider--half"></div>
+Our community is active and always welcoming to new ideas.
+* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+
+
+
