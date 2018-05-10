@@ -63,7 +63,7 @@ Having all set up, let's show all the options in the [**IgxDropDownComponent**](
 <!-- dropdown.component.html -->
 
 <div class="sample-wrapper drop-down-wrapper">
-    <button igxButton="raised" igxRipple (click)="toggleDropDown()">Options</button>
+    <button igxButton="raised" (click)="toggleDropDown()">Options</button>
     <igx-drop-down>
         <igx-drop-down-item *ngFor="let item of items">
             {{ item.field }}
@@ -115,7 +115,7 @@ Let's say we want to have a predefined selected item. To do this, handle **igx-d
 <!-- dropdown.component.html -->
 
 <div class="sample-wrapper drop-down-wrapper">
-    <button igxButton="raised" igxRipple (click)="toggleDropDown()">Options</button>
+    <button igxButton="raised" (click)="toggleDropDown()">Options</button>
     <igx-drop-down (onOpening)="onOpening($event)">
         <igx-drop-down-item *ngFor="let item of items">
             {{ item.field }}
@@ -168,7 +168,7 @@ To provide more useful visual information, use `isHeader` to group items semanti
 <!-- dropdown.component.html -->
 
 <div class="sample-wrapper drop-down-wrapper">
-    <button igxButton="raised" igxRipple (click)="toggleDropDown()">Countries</button>
+    <button igxButton="raised" (click)="toggleDropDown()">Countries</button>
     <igx-drop-down>
         <igx-drop-down-item *ngFor="let item of items" isDisabled={{item.disabled}} isHeader={{item.header}}>
             {{ item.field }}
