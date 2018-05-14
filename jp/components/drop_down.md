@@ -1,27 +1,27 @@
----
-title: Drop Down Component
-_description: Use Ignite UI for Angular Drop Down component to display a list of items which supports a single item selection.
+﻿---
+title: Drop Down コンポーネント
+_description: Ignite UI for Angular Drop Down は、単一項目の選択が可能なグループ化された項目のリストにスクロールを表示します。
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Drop Down components, Angular Drop Down controls
 ---
 
 ##Drop Down
-<p class="highlight">The Ignite UI for Angular Drop Down displays a scrollable list of items which may be visually grouped and supports selection of a single item. Clicking or tapping an item selects it and closes the Drop Down</p>
+<p class="highlight">Ignite UI for Angular Drop Down は、単一項目の選択が可能なグループ項目をスクロールできるリストで表示します。項目をクリックまたはタップして選択し、ドロップダウンを閉じます。</p>
 <div class="divider"></div>
 
-### Drop Down Demo
+### Drop Down デモ
 <div class="sample-container" style="height:240px">
     <iframe id="dropdown-sample-3-iframe" src='{environment:demosBaseUrl}/dropdown-sample-3' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="dropdown-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="dropdown-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
 </div>
 <div class="divider--half"></div>
 
 > [!NOTE]
-> To start using Ignite UI for Angular components in your own projects, make sure you have configured all necessary dependencies and have performed the proper setup of your project. You can learn how to do this in the [**installation**](https://www.infragistics.com/products/ignite-ui-angular/getting-started#installation) topic.
+> Ignite UI for Angular コンポーネントをプロジェクトに追加する前に、すべての必要な依存関係を構成し、プロジェクトのセットアップが正しく完了したことを確認してください。[**インストール**](https://jp.infragistics.com/products/ignite-ui-angular/getting-started#installation) のトピックで手順を確認できます。
 
-###Usage
-To get started with the Ignite UI for Angular Drop Down, let's first import the **IgxDropDownModule** in the **app.module.ts** file:
+###使用方法
+Ignite UI for Angular Drop Down コンポーネントを初期化する前に **IgxDropDownModule** を **app.module.ts** ファイルにインポートします。
 
 ```typescript
 // app.module.ts
@@ -37,9 +37,9 @@ import { IgxDropDownModule } from 'igniteui-angular/main';
 export class AppModule {}
 ```
 
-Let's create a simple dropdown that provides several options items to choose from. To achieve this, we use the **igx-drop-down** component as well as **igx-toggle** to open/close the dropdown.
+選択可能な複数のオプション項目を提供するシンプルなドロップダウンを作成します。**igx-drop-down** コンポーネントと **igx-toggle** を使用してドロップダウンの開く/閉じるを有効にします。
 
-To continue, include all needed modules and import them in the **app.module.ts** file.
+次にすべての必要なモジュールを含み、**app.module.ts** ファイルにインポートします。
 
 ```typescript
 // app.module.ts
@@ -55,9 +55,8 @@ import {
     imports: [..., IgxDropDownModule, IgxToggleModule],
 })
 export class AppModule {}
-```
-
-Having all set up, let's show all the options in the [**IgxDropDownComponent**](https://www.infragistics.com/products/ignite-ui-angular/angular/components/drop_down.html) component. The dropdown contains several options as dropdown items.
+```　
+構成の後、すべてのオプションを  [**IgxDropDownComponent**](https://www.infragistics.com/products/ignite-ui-angular/angular/components/drop_down.html) コンポーネントに表示します。ドロップダウンは、ドロップダウン項目として複数のオプションを含みます。
 
 ```html
 <!-- dropdown.component.html -->
@@ -97,7 +96,7 @@ Having all set up, let's show all the options in the [**IgxDropDownComponent**](
 ```
 
 
-If the sample is configured properly, a dropdown with several options should be displayed.
+サンプルを正しく構成すると、複数のオプションを含むドロップダウンが表示されます。
 
 <div class="sample-container" style="height: 200px">
     <iframe id="dropdown-sample-1-iframe" src='{environment:demosBaseUrl}/dropdown-sample-1' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -109,7 +108,7 @@ If the sample is configured properly, a dropdown with several options should be 
 
 <div class="divider--half"></div>
 
-Let's say we want to have a predefined selected item. To do this, handle **igx-drop-down**  `onOpening` event of  [**IgxDropDownComponent**](https://www.infragistics.com/products/ignite-ui-angular/angular/components/drop_down.html).
+選択済みの項目をあらかじめ定義する場合、[**IgxDropDownComponent**](https://www.infragistics.com/products/ignite-ui-angular/angular/components/drop_down.html) **igx-drop-down**  `onOpening` イベントを処理します。
 
 ```html
 <!-- dropdown.component.html -->
@@ -156,13 +155,13 @@ Let's say we want to have a predefined selected item. To do this, handle **igx-d
     <iframe id="dropdown-sample-2-iframe" src='{environment:demosBaseUrl}/dropdown-sample-2' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="dropdown-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">                view on stackblitz
+    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="dropdown-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">                stackblitz で開く
     </button>
 </div>
 
 <div class="divider--half"></div>
 
-To provide more useful visual information, use `isHeader` to group items semantically or `isDisabled` to display an item as non-interactive.
+`isHeader` を使用して意味的なグループ化や `isDisabled` を使用して非インタラクティブな項目を表示するなど、有用なビジュアル情報を提供できます。
 
 ```html
 <!-- dropdown.component.html -->
@@ -202,86 +201,83 @@ To provide more useful visual information, use `isHeader` to group items semanti
 
 ```
 
-If the sample is configured properly, a list  of countries should be displayed as a group under EU header and UK as a non-interactive item.
+サンプルが正しく構成されると、EU ヘッダーの下に国の一覧がグループ形式で表示され、UK は非インタラクティブな項目として表示されます。
 
 <div class="sample-container" style="height: 280px">
     <iframe id="dropdown-sample-3-iframe" src='{environment:demosBaseUrl}/dropdown-sample-3' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="dropdown-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">                view on stackblitz
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="dropdown-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">                stackblitz で開く
     </button>
 </div>
 
 <div class="divider--half"></div>
 
-### API Summary
-The following table summarizes some of the useful **igx-drop-down** component inputs, outputs and methods.
+### API まとめ
+以下の表は、便利な **igx-drop-down**  コンポーネントの入力、出力、およびメソッドを示します。
 
-#### Inputs
-The following inputs are available in the **igx-drop-down** component:
+#### 入力
+以下の入力は **igx-drop-down** コンポーネントで利用できます。
 
-| Name | Type | Description |
+| 名前 | タイプ | 説明 |
 | :--- | :--- | :--- |
-| `width` | string | Sets the tab width of the control. |
-| `height` | string | Sets the tab height of the control. |
-| `allowItemsFocus` | boolean | Allows items to take focus. |
+| `width` | 文字列 | コントロールのタブ幅を設定します。 |
+| `height` | 文字列 | コントロールのタブの高さを設定します。 |
+| `allowItemsFocus` | ブール値 | フォーカスを取得する項目を許可します。 |
 
 <div class="divider--half"></div>
 
-#### Outputs
-The following outputs are available in the **igx-drop-down** component:
+#### 出力
+以下の出力は **igx-drop-down** コンポーネントで利用できます。
 
-| Name | Cancelable | Description | Parameters
+| 名前 | キャンセル可能 | 説明 | パラメーター
 | :--- | :--- | :--- | :--- |
-| `onSelection` | false | Emitted when item selection is changing, before the selection completes. | `{ oldSelection: string, newSelection: string, event?: Event }` |
-| `onOpening` | false | Emitted before the dropdown is opened. |
-| `onOpened` | false | Emitted when a dropdown is being opened. |
-| `onClosed` | false | Emitted when a dropdown is being closed. |
+| `onSelection` | false | 選択を完了する前にアイテム選択が変更されるときに発生されます。| `{ oldSelection: string, newSelection: string, event?: Event }` |
+| `onOpening` | false | ドロップダウンが開かれる前に発生されます。 |
+| `onOpened` | false | ドロップダウンが開いているときに発生します。 |
+| `onClosed` | false | ドロップダウンが閉じているときに発生します。 |
 
-#### Methods
-The following methods are available in the **igx-drop-down** component:
+#### メソッド
+以下のメソッドは **igx-drop-down** コンポーネントで利用できます。
 
-| Signature | Description |
+| シグネチャ | 説明 |
 | :--- | :--- | :--- |
-| `toggle()` | Toggles the drop down opened/closed. |
-| `setSelectedItem(index: number)` | Selects dropdown item by index. |
-| `open()` | Opens the dropdown. |
-| `close()` | Closes the dropdown. |
+| `toggle()` | ドロップダウンの開く/閉じるを切り替えます。 |
+| `setSelectedItem(index: number)` |ドロップダウン項目をインデックスで選択します。 |
+| `open()` | ドロップダウンを開きます。|
+| `close()` | ドロップダウンを閉じます。 |
 
-#### Getters
-The following getters are available on the **igx-drop-down** component:
+#### ゲッター
+以下のゲッターは **igx-drop-down** コンポーネントで利用できます。
 
-| Name | Type | Description |
+| 名前 | タイプ | 説明 |
 | :--- | :--- | :--- |
-| `selectedItem` | `number` | Gets the selected item. |
-| `items` | `QueryList of IgxDropDownItemComponent` | Gets all of the items but headers. |
-| `headers` | `IgxDropDownItemComponent[]` | Gets header items. |
+| `selectedItem` | `number` | 選択項目を取得します。|
+| `items` | `QueryList of IgxDropDownItemComponent` | Gヘッダー以外のすべての項目を取得します。 |
+| `headers` | `IgxDropDownItemComponent[]` | ヘッダー項目を取得します。 |
 
 
-The following table summarizes some of the useful **igx-drop-down-item** component inputs, outputs and methods.
+以下の表は、便利な **igx-drop-down-item** コンポーネントの入力、出力、およびメソッドを示します。
 
-#### Inputs
-The following inputs are available in the **igx-drop-down-item** component:
+#### 入力
+以下の入力は **igx-drop-down-item** コンポーネントで利用できます。
 
-| Name | Type | Description |
+| 名前 | タイプ | 説明 |
 | :--- | :--- | :--- |
-| `isHeader` | boolean| Defines if the item is a group header. |
-| `isDisabled` | boolean| Disables the given item. |
-| `isFocused` | boolean| Defines if the given item is focused. |
+| `isHeader` | ブール値| 項目がグループ ヘッダーかどうかを定義します。 |
+| `isDisabled` | ブール値| 指定した項目を無効にします。 |
+| `isFocused` | ブール値| 指定した項目がフォーカスされるかどうかを定義します。|
 
-#### Getters
-The following getters are available on the **igx-drop-down** component:
+#### ゲッター
+以下のゲッターは **igx-drop-down** コンポーネントで利用できます。
 
-| Name | Type | Description |
+| 名前 | タイプ | 説明 |
 | :--- | :--- | :--- |
-| `isSelected` | `boolean` | Defines if the given item is selected. |
+| `isSelected` | `boolean` | 指定した項目が選択されるかどうかを定義します。 |
 
-###Additional Resources
+###その他のリソース
 
 <div class="divider--half"></div>
-Our community is active and always welcoming to new ideas.
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
-
-
-
+コミュニティに参加して新しいアイデアをご提案ください。
+* [Ignite UI for Angular **フォーラム **(英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
