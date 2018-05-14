@@ -29,7 +29,7 @@ Ignite UI for Angular では、列レベルでの**並べ替え**が可能です
 
 #### API での並べ替え
 
-グリッドの `sort` メソッドを使用すると、列または複数の列をグリッド API で並べ替えできます。
+グリッドの `sort` メソッドを使用し、列または複数の列をグリッド API で並べ替えできます。
 
 ```typescript
 import { SortingDirection } from 'igniteui-angular/main';

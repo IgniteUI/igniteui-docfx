@@ -7,7 +7,7 @@ _language: ja
 
 ### グリッドのフィルタリング
 
-Ignite UI for Angular Grid コンポーネントは、グリッドにバインドされるデータ コンテナーによってフィルタリング API を提供します。
+Ignite UI for Angular Grid コンポーネントは、グリッドにバインドされるデータ コンテナーにフィルタリング API を提供します。
 
 #### デモ
 

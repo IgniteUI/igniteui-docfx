@@ -7,7 +7,7 @@ _language: ja
 
 ## Data Grid
 
-<p class="highlight">Ignite UI for Angular Data Grid は、表形式でデータの表示や編集ができます。最小限のコードと構成でデータをすばやくバインドできます。フィルタリング、並べ替え、ページング、テンプレート、移動可能な列、およびデータの編集と更新などの機能があり、ユーザー操作を簡単に認識してコードで制御できます。</p>
+<p class="highlight">Ignite UI for Angular Data Grid は、最小限のコードと構成でデータをすばやくバインドし、表形式でのデータの表示や編集ができます。フィルタリング、並べ替え、ページング、テンプレート、列移動、データの編集と更新など、多数の機能があり、ユーザー操作を簡単に認識してコード制御できます。</p>
 <div class="divider"></div>
 
 ### デモ
@@ -67,7 +67,7 @@ public grid: IgxGridComponent;
 
 ### 列の構成
 
-**IgxGridColumnComponent** はグリッドの _columns_ コレクションを定義し、**フィルタリング**、**並べ替え**、および**ページング**などの列ごとの機能を有効にするために使用されます。セル、ヘッダー、およびフッター テンプレートも利用可能です。
+**IgxGridColumnComponent** は、グリッドの _columns_ コレクションを定義し、**フィルタリング**、**並べ替え**、**ページング**など、列ごとの機能を有効にするために使用します。セル、ヘッダー、およびフッター テンプレートも利用できます。
 
 **autoGenerate** プロパティを無効にし、マークアップで列コレクションを定義します。
 
@@ -353,7 +353,7 @@ this.grid.updateCell(newData, this.selectedCell.rowIndex, this.selectedCell.colu
 this.selectedCell.update(newData);
 ```
 
-#### グリッドからデータの削除
+#### グリッドからデータを削除
 
 ```typescript
 this.grid.deleteRow(this.selectedCell.rowIndex);
