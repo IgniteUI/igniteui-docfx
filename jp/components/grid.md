@@ -407,6 +407,7 @@ this.grid.deleteRow(this.selectedCell.rowIndex);
 |`onColumnPinning`|列がグリッド API によってピン固定されたときに発生されます。列に挿入するインデックスは `insertAtIndex` プロパティによって変更できます。|
 |`onColumnResized`|列がサイズ変更されたときに発生されます。列オブジェクト、以前の列幅、および新しい列幅を返します。|
 |`onContextMenu`|セルが右クリックされたときに発生されます。セル オブジェクトを返します。|
+|`onDoubleClick`|Emitted when a cell is double clicked. Returns the cell object.|
 
 <div class="divider--half"></div>
 
