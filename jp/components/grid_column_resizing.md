@@ -20,7 +20,7 @@ _language: ja
 </div>
 <div class="divider--half"></div>
 
-**列のサイズ変更**も列レベルで有効化にできます。つまり、**igx-grid** にサイズ変更可能な列およびサイズ変更不可の列の両方を含むことが可能です。`igx-column` の `resizable` 入力によって制御されます。
+**列のサイズ変更**も列レベルで有効にできます。つまり、**igx-grid** にサイズ変更可能な列およびサイズ変更不可の列の両方を含むことが可能で `igx-column` の `resizable` 入力によって制御されます。
 
 ```html
     <igx-column [field]="Name" [width]="'200px'" [resizable]="true"></igx-column>
