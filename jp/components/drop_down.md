@@ -109,7 +109,7 @@ export class AppModule {}
 
 <div class="divider--half"></div>
 
-選択済みの項目をあらかじめ定義する場合、[**IgxDropDownComponent**](drop_down.md) **igx-drop-down**  `onOpening` イベントを処理します。
+選択済みの項目をあらかじめ定義する場合、[**IgxDropDownComponent**](drop_down.md) **igx-drop-down** の `onOpening` イベントを処理します。
 
 ```html
 <!-- dropdown.component.html -->
@@ -231,7 +231,7 @@ export class AppModule {}
 #### 出力
 以下の出力は **igx-drop-down** コンポーネントで利用できます。
 
-| 名前 | キャンセル可能 | 説明 | パラメーター
+| 名前 | キャンセル可 | 説明 | パラメーター
 | :--- | :--- | :--- | :--- |
 | `onSelection` | false | 選択を完了する前にアイテム選択が変更されるときに発生されます。| `{ oldSelection: string, newSelection: string, event?: Event }` |
 | `onOpening` | false | ドロップダウンが開かれる前に発生されます。 |
