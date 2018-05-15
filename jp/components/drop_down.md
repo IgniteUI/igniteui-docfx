@@ -1,7 +1,8 @@
 ﻿---
 title: Drop Down コンポーネント
 _description: Ignite UI for Angular Drop Down は、単一項目の選択が可能なグループ化された項目のリストにスクロールを表示します。
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Drop Down components, Angular Drop Down controls
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Drop Down コンポーネント, Angular Drop Down コントロール
+_language: ja
 ---
 
 ##Drop Down
@@ -13,7 +14,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
     <iframe id="dropdown-sample-3-iframe" src='{environment:demosBaseUrl}/dropdown-sample-3' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="dropdown-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="dropdown-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
 </div>
 <div class="divider--half"></div>
 
@@ -56,7 +57,7 @@ import {
 })
 export class AppModule {}
 ```　
-構成の後、すべてのオプションを  [**IgxDropDownComponent**](https://www.infragistics.com/products/ignite-ui-angular/angular/components/drop_down.html) コンポーネントに表示します。ドロップダウンは、ドロップダウン項目として複数のオプションを含みます。
+構成の後、すべてのオプションを  [**IgxDropDownComponent**](drop_down.md) コンポーネントに表示します。ドロップダウンは、ドロップダウン項目として複数のオプションを含みます。
 
 ```html
 <!-- dropdown.component.html -->
@@ -102,13 +103,13 @@ export class AppModule {}
     <iframe id="dropdown-sample-1-iframe" src='{environment:demosBaseUrl}/dropdown-sample-1' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="dropdown-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">                view on stackblitz
+    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="dropdown-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">                StackBlitz で開く
     </button>
 </div>
 
 <div class="divider--half"></div>
 
-選択済みの項目をあらかじめ定義する場合、[**IgxDropDownComponent**](https://www.infragistics.com/products/ignite-ui-angular/angular/components/drop_down.html) **igx-drop-down**  `onOpening` イベントを処理します。
+選択済みの項目をあらかじめ定義する場合、[**IgxDropDownComponent**](drop_down.md) **igx-drop-down**  `onOpening` イベントを処理します。
 
 ```html
 <!-- dropdown.component.html -->
@@ -155,7 +156,7 @@ export class AppModule {}
     <iframe id="dropdown-sample-2-iframe" src='{environment:demosBaseUrl}/dropdown-sample-2' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="dropdown-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">                stackblitz で開く
+    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="dropdown-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">                StackBlitz で開く
     </button>
 </div>
 
@@ -207,7 +208,7 @@ export class AppModule {}
     <iframe id="dropdown-sample-3-iframe" src='{environment:demosBaseUrl}/dropdown-sample-3' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="dropdown-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">                stackblitz で開く
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="dropdown-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">                StackBlitz で開く
     </button>
 </div>
 
@@ -219,11 +220,11 @@ export class AppModule {}
 #### 入力
 以下の入力は **igx-drop-down** コンポーネントで利用できます。
 
-| 名前 | タイプ | 説明 |
+| 名前 | 型 | 説明 |
 | :--- | :--- | :--- |
-| `width` | 文字列 | コントロールのタブ幅を設定します。 |
-| `height` | 文字列 | コントロールのタブの高さを設定します。 |
-| `allowItemsFocus` | ブール値 | フォーカスを取得する項目を許可します。 |
+| `width` | string | コントロールの幅を設定します。 |
+| `height` | string | コントロールの高さを設定します。 |
+| `allowItemsFocus` | boolean | フォーカスを取得する項目を許可します。 |
 
 <div class="divider--half"></div>
 
@@ -250,10 +251,10 @@ export class AppModule {}
 #### ゲッター
 以下のゲッターは **igx-drop-down** コンポーネントで利用できます。
 
-| 名前 | タイプ | 説明 |
+| 名前 | 型 | 説明 |
 | :--- | :--- | :--- |
 | `selectedItem` | `number` | 選択項目を取得します。|
-| `items` | `QueryList of IgxDropDownItemComponent` | Gヘッダー以外のすべての項目を取得します。 |
+| `items` | `QueryList of IgxDropDownItemComponent` | ヘッダー以外のすべての項目を取得します。 |
 | `headers` | `IgxDropDownItemComponent[]` | ヘッダー項目を取得します。 |
 
 
@@ -262,7 +263,7 @@ export class AppModule {}
 #### 入力
 以下の入力は **igx-drop-down-item** コンポーネントで利用できます。
 
-| 名前 | タイプ | 説明 |
+| 名前 | 型 | 説明 |
 | :--- | :--- | :--- |
 | `isHeader` | ブール値| 項目がグループ ヘッダーかどうかを定義します。 |
 | `isDisabled` | ブール値| 指定した項目を無効にします。 |
@@ -271,7 +272,7 @@ export class AppModule {}
 #### ゲッター
 以下のゲッターは **igx-drop-down** コンポーネントで利用できます。
 
-| 名前 | タイプ | 説明 |
+| 名前 | 型 | 説明 |
 | :--- | :--- | :--- |
 | `isSelected` | `boolean` | 指定した項目が選択されるかどうかを定義します。 |
 
