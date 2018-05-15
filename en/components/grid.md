@@ -405,6 +405,7 @@ A list of the events emitted by the **igx-grid**:
 |`onColumnPinning`|Emitted when a column is pinned through the grid API. The index that the column is inserted at may be changed through the `insertAtIndex` property.|
 |`onColumnResized`|Emitted when a column is resized. Returns the column object, previous and new column width.|
 |`onContextMenu`|Emitted when a cell is right clicked. Returns the cell object.|
+|`onDoubleClick`|Emitted when a cell is double clicked. Returns the cell object.|
 
 
 <div class="divider--half"></div>
