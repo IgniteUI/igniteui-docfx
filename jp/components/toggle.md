@@ -195,8 +195,10 @@ export class AppModule {}
 以下の出力は **igxToggle** ディレクティブで利用できます。
 | 名前 | 型 | 説明 |
 | :--- | :--- | :--- |
-| `onOpen` | EventEmitter | トグル コンテナーが開いたときにイベントを発生します。 |
-| `onClose` | EventEmitter | トグル コンテナーが閉じたときにイベントを発生します。 |
+| `onOpening` | EventEmitter | トグル コンテナーが開く前にイベントを発生します。 |
+| `onOpened` | EventEmitter | トグル コンテナーが開いた後にイベントを発生します。 |
+| `onClosing` | EventEmitter | トグル コンテナーが閉じる前にイベントを発生します。 |
+| `onClosed` | EventEmitter | トグル コンテナーが閉じた後にイベントを発生します。 |
 
 <div class="divider"></div>
 
