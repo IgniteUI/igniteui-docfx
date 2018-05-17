@@ -237,7 +237,7 @@ The following outputs are available in the **igx-drop-down** component:
 
 | Name | Cancelable | Description | Parameters
 | :--- | :--- | :--- | :--- |
-| `onSelection` | false | Emitted when item selection is changing, before the selection completes. | `{ oldSelection: string, newSelection: string, event?: Event }` |
+| `onSelection` | false | Emitted when item selection is changing, before the selection completes. | ISelectionEventArgs |
 | `onOpening` | false | Emitted before the dropdown is opened. |
 | `onOpened` | false | Emitted when a dropdown is being opened. |
 | `onClosed` | false | Emitted when a dropdown is being closed. |
@@ -258,8 +258,10 @@ The following getters are available on the **igx-drop-down** component:
 | Name | Type | Description |
 | :--- | :--- | :--- |
 | `selectedItem` | `number` | Gets the selected item. |
-| `items` | `QueryList of IgxDropDownItemComponent` | Gets all of the items but headers. |
+| `items` | `IgxDropDownItemComponent[]` | Gets all of the items but headers. |
 | `headers` | `IgxDropDownItemComponent[]` | Gets header items. |
+| `collapsed` | `boolean` | Gets if the dropdown is collapsed. |
+
 
 
 The following table summarizes some of the useful **igx-drop-down-item** component inputs, outputs and methods.

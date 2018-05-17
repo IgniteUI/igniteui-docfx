@@ -233,7 +233,7 @@ export class AppModule {}
 
 | 名前 | キャンセル可 | 説明 | パラメーター
 | :--- | :--- | :--- | :--- |
-| `onSelection` | false | 選択を完了する前にアイテム選択が変更されるときに発生されます。| `{ oldSelection: string, newSelection: string, event?: Event }` |
+| `onSelection` | false | 選択を完了する前にアイテム選択が変更されるときに発生されます。| ISelectionEventArgs |
 | `onOpening` | false | ドロップダウンが開かれる前に発生されます。 |
 | `onOpened` | false | ドロップダウンが開いているときに発生します。 |
 | `onClosed` | false | ドロップダウンが閉じているときに発生します。 |
@@ -254,9 +254,9 @@ export class AppModule {}
 | 名前 | 型 | 説明 |
 | :--- | :--- | :--- |
 | `selectedItem` | `number` | 選択項目を取得します。|
-| `items` | `QueryList of IgxDropDownItemComponent` | ヘッダー以外のすべての項目を取得します。 |
+| `items` | `IgxDropDownItemComponent[]` | ヘッダー以外のすべての項目を取得します。 |
 | `headers` | `IgxDropDownItemComponent[]` | ヘッダー項目を取得します。 |
-
+| `collapsed` | `boolean` | Gets if the dropdown is collapsed. |
 
 以下の表は、便利な **igx-drop-down-item** コンポーネントの入力、出力、およびメソッドを示します。
 
