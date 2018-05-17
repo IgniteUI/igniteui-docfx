@@ -256,7 +256,7 @@ export class AppModule {}
 | `selectedItem` | `number` | 選択項目を取得します。|
 | `items` | `IgxDropDownItemComponent[]` | ヘッダー以外のすべての項目を取得します。 |
 | `headers` | `IgxDropDownItemComponent[]` | ヘッダー項目を取得します。 |
-| `collapsed` | `boolean` | Gets if the dropdown is collapsed. |
+| `collapsed` | `boolean` | ドロップダウンが閉じたかどうかを取得します。 |
 
 以下の表は、便利な **igx-drop-down-item** コンポーネントの入力、出力、およびメソッドを示します。
 
