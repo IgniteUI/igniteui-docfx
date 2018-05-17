@@ -28,6 +28,9 @@
     - name: Selection
       href: grid_selection.md
       new: true
+    - name: Searching
+      href: grid_search.md
+      new: true
     - name: Export to Excel
       href: exporter_excel.md
       new: true
