@@ -127,7 +127,7 @@ In order to freely search and navigate among our search results, let's create a 
 
 #### Add keyboard search
 
-We can also allow the users to navigate the results by using the keyboard's arrow keys and the Enter key. In order to achieve this, we can handle the **keydown** event of our search input by preventing the default carret movement of the input with the preventDefault() method and invoke the `findNext`/`findPrev` methods depending on which key the user has pressed.
+We can also allow the users to navigate the results by using the keyboard's arrow keys and the Enter key. In order to achieve this, we can handle the **keydown** event of our search input by preventing the default caret movement of the input with the preventDefault() method and invoke the `findNext`/`findPrev` methods depending on which key the user has pressed.
 
 ```html
 <!--searchgrid.component.html-->
