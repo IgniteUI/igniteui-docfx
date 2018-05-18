@@ -10,7 +10,7 @@ The Ignite UI for Angular Data Grid control features a **search API** that allow
 
 #### Demo
 
-<div class="sample-container loading" style="height:700px">
+<div class="sample-container loading" style="height:650px">
     <iframe id="grid-search-sample-iframe" src='{environment:demosBaseUrl}/grid-search-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
@@ -59,8 +59,12 @@ Let's add some custom styles for the components we will be using!
     margin-bottom: 15px;
 }
 
-.searchButton {
-    width: 80px;
+.caseSensitiveButton {
+    margin-left: 10px;
+}
+
+.searchButtons {    
+    margin-left: 5px;
 }
 ```
 
@@ -68,9 +72,9 @@ Let's add some custom styles for the components we will be using!
 
 Now let's create our search input! By binding our **searchText** as ngModel to our newly created input and subscribing for the ngModelChange event, we can detect every single modification over our **searchText** by the user. This will allow us to use the grid's `findNext` and `findPrev` methods to highlight all the occurrences of the **searchText** and scroll navigate to the next/previous one (depending on which method we have invoked).
 
-Both the `findNext` and the `findPrev` methods require two arguments:
+Both the `findNext` and the `findPrev` methods have two arguments:
 - **string** value (the text we are searching for)
-- **boolean** value (should the search be case sensitive). 
+- (optional) **boolean** value (should the search be case sensitive or not, default value is false). 
 
 The methods from above return a **number** value (the number of times the grid contains the given string).
 
@@ -81,13 +85,21 @@ The methods from above return a **number** value (the number of times the grid c
 ```
 
 #### Display results count
-Let's also display the results count by accessing the grid's `lastSearchInfo` property. We can get the results count from the `lastSearchInfo.matchInfoCache.length` value. This property is automatically updated when using the **find** methods.
+Let's also display the position of the current occurrence, along with the total results count! We can do this by using the grid's `lastSearchInfo` property. This property is automatically updated when using the **find** methods.
+
+- The `grid.lastSearchInfo.matchInfoCache.length` value will give us the total results count. 
+- The `grid.lastSearchInfo.activeMatchIndex` value will give us the index position of the current occurrence (match). 
 
 ```html
 <!--searchgrid.component.html-->
 
-<div class="offset">
-    <span *ngIf="grid.lastSearchInfo.matchInfoCache.length > 0">Results: {{ grid.lastSearchInfo.matchInfoCache.length }}</span>
+<div *ngIf="grid.lastSearchInfo">
+    <span *ngIf="grid.lastSearchInfo.matchInfoCache.length > 0">
+        {{ grid.lastSearchInfo.activeMatchIndex + 1 }} of {{ grid.lastSearchInfo.matchInfoCache.length }} results
+    </span>
+    <span *ngIf="grid.lastSearchInfo.matchInfoCache.length == 0">
+        No results
+    </span>
 </div>
 ```
 
@@ -98,10 +110,9 @@ In order to freely search and navigate among our search results, let's create a 
 ```html
 <!--searchgrid.component.html-->
 
-<div class="offset">
-    <input class="searchButton" type="button" value="Previous" (click)="grid.findPrev(searchText, caseSensitive)" />
-    <input class="searchButton" type="button" value="Next" (click)="grid.findNext(searchText, caseSensitive)" />
-    <span *ngIf="grid.lastSearchInfo.matchInfoCache.length > 0">Results: {{ grid.lastSearchInfo.matchInfoCache.length }}</span>
+<div class="searchButtons">
+    <input type="button" value="Previous" (click)="grid.findPrev(searchText, caseSensitive)" />
+    <input type="button" value="Next" (click)="grid.findNext(searchText, caseSensitive)" />
 </div>
 ```
 
@@ -156,10 +167,14 @@ In order to reapply the current search, we can always use the `refreshSearch` me
 - Has no parameters.
 - Reapplies the existing search and returns how many times the grid contains the last search.
 
+#### Grid search and virtualization
+
+What's great about the grid's search API is that its searching logic is **independent** from the visual tree of the page (which is not the case with our browser's default search). Even if not all rows and columns are loaded in the tree, the search will be performed over the entire data we have bound to the grid and not for the currently rendered elements only!
+
 #### Adding icons
 
-By using some of our other components, we can create an enriched user interface and improve the overal design of our search input. We can have a nice search icon on the left of the search input, a delete icon on the right (for deleting the entire content of the input) and a nicely styled checkbox. We can wrap some of these components inside an input group for a more refined design.
-To do this, let's go and grab the [**IgxInputGroup**](https://www.infragistics.com/products/ignite-ui-angular/angular/components/input_group.html), [**IgxIcon**](https://www.infragistics.com/products/ignite-ui-angular/angular/components/icon.html) and the [**IgxCheckbox**](https://www.infragistics.com/products/ignite-ui-angular/angular/components/checkbox.html) modules.
+By using some of our other components, we can create an enriched user interface and improve the overall design of our entire search bar! We can have a nice search or delete icon on the left of the search input and some material design icons combined with nice ripple styled buttons for our search options and navigation on the right. We can wrap these components inside an input group for a more refined design.
+To do this, let's go and grab the [**IgxInputGroup**](https://www.infragistics.com/products/ignite-ui-angular/angular/components/input_group.html), [**IgxIcon**](https://www.infragistics.com/products/ignite-ui-angular/angular/components/icon.html),  [**IgxRipple**](https://www.infragistics.com/products/ignite-ui-angular/angular/components/ripple.html) and the [**IgxButton**](https://www.infragistics.com/products/ignite-ui-angular/angular/components/button.html) modules.
 
 ```typescript
 // app.module.ts
@@ -169,37 +184,37 @@ import {
     IgxGridModule.forRoot(),
     IgxInputGroupModule,
     IgxIconModule,
-    IgxCheckboxModule
+    IgxRippleModule,
+    IgxButtonModule    
 } from 'igniteui-angular/main';
 
 @NgModule({
     ...
-    imports: [..., IgxInputGroupModule, IgxIconModule, IgxCheckboxModule],
+    imports: [..., IgxInputGroupModule, IgxIconModule, IgxRippleModule, IgxButtonModule],
 })
 export class AppModule {}
 ```
 
-Finally, let's update our template with the new components! We will wrap our search icon, search input and delete icon by using the **IgxInputGroup**. In addition, whenever the delete icon is clicked, we will update our **searchText** and invoke the grid's `clearSearch` method to clear the highlights.
+Finally, let's update our template with the new components!
+
+We will wrap all of our components inside an **IgxInputGroup**. On the left we will toggle between a search and a delete/clear icon (depending on whether the search input is empty or not). In the center, we will position the input itself. In addition, whenever the delete icon is clicked, we will update our **searchText** and invoke the grid's `clearSearch` method to clear the highlights.
 
 ```html
 <!--searchgrid.component.html-->
 
 <igx-input-group type="search" class="offset">
     <igx-prefix>
-        <igx-icon>search</igx-icon>
+        <igx-icon *ngIf="searchText.length == 0">search</igx-icon>
+        <igx-icon *ngIf="searchText.length > 0" (click)="clearSearch()">clear</igx-icon>
     </igx-prefix>
 
-    <input #search1 id="search1" igxInput placeholder="Search" [(ngModel)]="searchText"
-           (ngModelChange)="grid.findNext(searchText, caseSensitive)" (keydown)="searchKeyDown($event)" />
-
-    <igx-suffix *ngIf="searchText.length > 0" (click)="clearSearch()">
-        <igx-icon>clear</igx-icon>
+    <input #search1 id="search1" igxInput placeholder="Search" [(ngModel)]="searchText" (ngModelChange)="grid.findNext(searchText, caseSensitive)"
+        (keydown)="searchKeyDown($event)" />
+    
+    <igx-suffix *ngIf="searchText.length > 0">
+        ...
     </igx-suffix>
 </igx-input-group>
-
-<igx-checkbox class="offset" [checked]="caseSensitive" (change)="updateSearch()">
-    <span>Case sensitive</span>
-</igx-checkbox>
 ```
 
 ```typescript
@@ -211,9 +226,57 @@ public clearSearch() {
 }
 ```
 
+On the right in our input group, let's create three separate containers with the following purposes:
+- For displaying the search results.
+
+```html
+<!--searchgrid.component.html-->
+
+<igx-suffix *ngIf="searchText.length > 0">
+    <div *ngIf="grid.lastSearchInfo">
+        <span *ngIf="grid.lastSearchInfo.matchInfoCache.length > 0">
+            {{ grid.lastSearchInfo.activeMatchIndex + 1 }} of {{ grid.lastSearchInfo.matchInfoCache.length }} results
+        </span>
+        <span *ngIf="grid.lastSearchInfo.matchInfoCache.length == 0">
+            No results
+        </span>
+    </div>
+    ...
+```
+- For a button that toggles the **caseSensitive** property. We have replaced the checkbox with a more stylish button that contains a material icon. Whenever the button is clicked, we invoke our custom **updateSearch** method again and we set different background to our button depending on the state of the **caseSensitive** property.
+
+```html
+<!--searchgrid.component.html-->
+
+    ...
+    <div class="caseSensitiveButton">
+        <button igxButton="icon" igxRipple igxRippleCentered="true" (click)="updateSearch()"
+                [igxButtonBackground]="caseSensitive? 'lightgrey' : 'transparent'">
+            <igx-icon fontSet="material" name="text_fields"></igx-icon>
+        </button>
+    </div>
+    ...
+```
+- For the search navigation buttons. Here we have transformed our inputs into ripple styled buttons with material icons. The handlers for the click events remain the same - invoking the `findNext`/`findPrev` methods.
+
+```html
+<!--searchgrid.component.html-->
+
+    ...
+    <div class="searchButtons">
+        <button igxButton="icon" igxRipple igxRippleCentered="true" (click)="grid.findPrev(searchText, caseSensitive)">
+            <igx-icon fontSet="material" name="navigate_before"></igx-icon>
+        </button>
+        <button igxButton="icon" igxRipple igxRippleCentered="true" (click)="grid.findNext(searchText, caseSensitive)">
+            <igx-icon fontSet="material" name="navigate_next"></igx-icon>
+        </button>
+    </div>
+</igx-suffix>
+```
+
 ### API Summary
 
-In this article we implemented our own search box for the grid with some additional functionality when it comes to navigating between the search results. We also used some additional Ignite UI for Angular components like icons and inputs. The search API options and methods are listed below.
+In this article we implemented our own bar for the grid with some additional functionality when it comes to navigating between the search results. We also used some additional Ignite UI for Angular components like icons and inputs. The search API is listed below.
 
 #### Methods
 The following methods are available on the **IgxGridComponent**:
