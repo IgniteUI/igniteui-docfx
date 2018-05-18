@@ -6,9 +6,11 @@
     var sharedFileName = "shared.json";
     var assetsFolder = "/assets/";
     var demoFilesFolderUrlPath =  assetsFolder + "samples/";
+    var demoFilesCSSSupportFolderUrlPath = demoFilesFolderUrlPath + "css-support/";
     var assetsRegex = new RegExp("\/?assets\/", "g");
     var samplesFilesUrls = [];
     var sampleFilesContentByUrl = {};
+    var isIE = navigator.userAgent.indexOf('MSIE')!==-1 || navigator.appVersion.indexOf('Trident/') > 0;
 
     var isButtonClickInProgress = false;
 
@@ -35,8 +37,16 @@
         }
     }
 
+    var getDemoFilesFolderUrlPath = function() {
+        if (isIE) {
+            return demoFilesCSSSupportFolderUrlPath;
+        }
+
+        return demoFilesFolderUrlPath;
+    }
+
     var getDemosSharedFile = function () {        
-        var sharedFileUrl = demosBaseUrl + demoFilesFolderUrlPath + sharedFileName;
+        var sharedFileUrl = demosBaseUrl + getDemoFilesFolderUrlPath() + sharedFileName;
         $.get(sharedFileUrl).done(function (data, requestType, httpResponse) {
             replaceRelativeAssetsUrls(data.files);
             sharedFileContent = data;
@@ -56,7 +66,7 @@
         var iframeSrc = $("#" + $button.attr(buttonIframeIdAttrName)).attr("src");
         var demoPath = iframeSrc.replace(demosBaseUrl, "");
         var demoFileUrl = demosBaseUrl +
-                demoFilesFolderUrlPath.substring(0, demoFilesFolderUrlPath.length - 1) +
+            getDemoFilesFolderUrlPath().substring(0, getDemoFilesFolderUrlPath().length - 1) +
                     demoPath + ".json";
         return demoFileUrl;
     }
