@@ -6,7 +6,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ### Grid Searching
 
-The Ignite UI for Angular Data Grid control features a **search API** that allows developers to implement search functionality for the grid.
+While browsers natively provide search functionality, most of the time the grid virtualizes its columns and rows that are out of view. In these cases, the native search is unable to search the virtualized cells, since they are not part of the DOM. We have extended the Ignite UI for Angular Data Grid with a **search API** that allows you to search through the **virtualized content** of the grid.
 
 #### Demo
 
@@ -22,7 +22,7 @@ The Ignite UI for Angular Data Grid control features a **search API** that allow
 ### Usage
 
 #### Grid setup
-Let's start by creating our grid and binding it to our data. 
+Let's start by creating our grid and binding it to our data. We will also add some custom styles for the components we will be using!
 
 ```html
 <!--searchgrid.component.html-->
@@ -37,17 +37,6 @@ Let's start by creating our grid and binding it to our data.
     </igx-grid>
 ```
 
-Great, and now let's prepare for the search API of our Data Grid! We can create a couple of properties, which can be used for storing the currently searched text and whether the search is case sensitive or not.
-
-```typescript
-// searchgrid.component.ts
-
-public searchText: string = "";
-public caseSensitive: boolean = false;
-```
-
-Let's add some custom styles for the components we will be using!
-
 ```css
 /* searchgrid.component.css */
 
@@ -59,8 +48,19 @@ Let's add some custom styles for the components we will be using!
     margin-bottom: 15px;
 }
 
+.resultsText {
+    font-size: 0.875rem;
+}
+
 .caseSensitiveButton {
     margin-left: 10px;
+}
+
+.caseSensitiveIcon {
+    width: 1.25rem;
+    height: 1.25rem;
+    font-size: 1.25rem;
+    color: rgba(0, 0, 0, .54);
 }
 
 .searchButtons {    
@@ -68,9 +68,18 @@ Let's add some custom styles for the components we will be using!
 }
 ```
 
+Great, and now let's prepare for the search API of our Data Grid! We can create a couple of properties, which can be used for storing the currently searched text and whether the search is case sensitive or not.
+
+```typescript
+// searchgrid.component.ts
+
+public searchText: string = "";
+public caseSensitive: boolean = false;
+```
+
 #### Search input box
 
-Now let's create our search input! By binding our **searchText** as ngModel to our newly created input and subscribing for the ngModelChange event, we can detect every single modification over our **searchText** by the user. This will allow us to use the grid's `findNext` and `findPrev` methods to highlight all the occurrences of the **searchText** and scroll navigate to the next/previous one (depending on which method we have invoked).
+Now let's create our search input! By binding our **searchText** as ngModel to our newly created input and subscribe to the ngModelChange event, we can detect every single **searchText** modification by the user. This will allow us to use the grid's `findNext` and `findPrev` methods to highlight all the occurrences of the **searchText** and scroll to the next/previous one (depending on which method we have invoked).
 
 Both the `findNext` and the `findPrev` methods have two arguments:
 - **string** value (the text we are searching for)
@@ -93,7 +102,7 @@ Let's also display the position of the current occurrence, along with the total 
 ```html
 <!--searchgrid.component.html-->
 
-<div *ngIf="grid.lastSearchInfo">
+<div class="resultsText" *ngIf="grid.lastSearchInfo">
     <span *ngIf="grid.lastSearchInfo.matchInfoCache.length > 0">
         {{ grid.lastSearchInfo.activeMatchIndex + 1 }} of {{ grid.lastSearchInfo.matchInfoCache.length }} results
     </span>
@@ -118,7 +127,7 @@ In order to freely search and navigate among our search results, let's create a 
 
 #### Add keyboard search
 
-We can also allow the users to search navigate the results by using the keyboard's arrow keys and the Enter key. In order to achieve this, we can handle the **keydown** event of our search input and invoke the `findNext`/`findPrev` methods depending on which key the user has pressed.
+We can also allow the users to navigate the results by using the keyboard's arrow keys and the Enter key. In order to achieve this, we can handle the **keydown** event of our search input by preventing the default carret movement of the input with the preventDefault() method and invoke the `findNext`/`findPrev` methods depending on which key the user has pressed.
 
 ```html
 <!--searchgrid.component.html-->
@@ -132,8 +141,10 @@ We can also allow the users to search navigate the results by using the keyboard
 
 public searchKeyDown(ev) {
     if (ev.key === "Enter" || ev.key === "ArrowDown" || ev.key === "ArrowRight") {
+        ev.preventDefault();
         this.grid.findNext(this.searchText, this.caseSensitive);
     } else if (ev.key === "ArrowUp" || ev.key === "ArrowLeft") {
+        ev.preventDefault();
         this.grid.findPrev(this.searchText, this.caseSensitive);
     }
 }
@@ -161,15 +172,7 @@ public updateSearch() {
 
 #### Persistence
 
-What if we would like to filter and sort our grid or even to add and remove records? After such operations, the highlights of our current search automatically update and persist over any text that matches the **searchText**!
-
-In order to reapply the current search, we can always use the `refreshSearch` method manually, which:
-- Has no parameters.
-- Reapplies the existing search and returns how many times the grid contains the last search.
-
-#### Grid search and virtualization
-
-What's great about the grid's search API is that its searching logic is **independent** from the visual tree of the page (which is not the case with our browser's default search). Even if not all rows and columns are loaded in the tree, the search will be performed over the entire data we have bound to the grid and not for the currently rendered elements only!
+What if we would like to filter and sort our grid or even to add and remove records? After such operations, the highlights of our current search automatically update and persist over any text that matches the **searchText**! Furthermore, the search will work with paging and will persist the highlights through changes of the grid's `perPage` property.
 
 #### Adding icons
 
@@ -233,7 +236,7 @@ On the right in our input group, let's create three separate containers with the
 <!--searchgrid.component.html-->
 
 <igx-suffix *ngIf="searchText.length > 0">
-    <div *ngIf="grid.lastSearchInfo">
+    <div class="resultsText" *ngIf="grid.lastSearchInfo">
         <span *ngIf="grid.lastSearchInfo.matchInfoCache.length > 0">
             {{ grid.lastSearchInfo.activeMatchIndex + 1 }} of {{ grid.lastSearchInfo.matchInfoCache.length }} results
         </span>
@@ -257,7 +260,7 @@ On the right in our input group, let's create three separate containers with the
     </div>
     ...
 ```
-- For the search navigation buttons. Here we have transformed our inputs into ripple styled buttons with material icons. The handlers for the click events remain the same - invoking the `findNext`/`findPrev` methods.
+- For the search navigation buttons, we have transformed our inputs into ripple styled buttons with material icons. The handlers for the click events remain the same - invoking the `findNext`/`findPrev` methods.
 
 ```html
 <!--searchgrid.component.html-->
