@@ -255,7 +255,7 @@ On the right in our input group, let's create three separate containers with the
     <div class="caseSensitiveButton">
         <button igxButton="icon" igxRipple igxRippleCentered="true" (click)="updateSearch()"
                 [igxButtonBackground]="caseSensitive? 'lightgrey' : 'transparent'">
-            <igx-icon fontSet="material" name="text_fields"></igx-icon>
+            <igx-icon class="caseSensitiveIcon" fontSet="material" name="text_fields"></igx-icon>
         </button>
     </div>
     ...
