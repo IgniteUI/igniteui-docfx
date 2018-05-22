@@ -45,20 +45,48 @@ Explicitly setting column widths in percentages (%) will, in most cases, create 
 <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="grid-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-
 To utilize this feature, you need to subscribe to the `onDataPreLoad` output so that you make the appropriate request based on the arguments received, as well as set the public `igxGrid` property `totalItemCount` with the respective information coming from the service. 
 
 ```html
-<igx-grid #grid1 [data]="remoteData | async" (onDataPreLoad)="dataLoading($event)" >
-    <igx-column *ngFor="let c of columns" [field]="c.field" [header]="c.header">
+<igx-grid #grid [data]="remoteData | async" [height]="'500px'" [width]="'100%'" [autoGenerate]='false' (onDataPreLoad)="dataLoading($event)">
+    <igx-column [field]="'ID'"></igx-column>
+    <igx-column [field]="'ProductName'"></igx-column>
+    <igx-column [field]="'CategoryName'"></igx-column>
+    <igx-column [field]="'Rating'" [dataType]="'number'" [headerClasses]="'headerAlignSyle'">
+        <ng-template igxHeader>
+            <span class="cellAlignSyle">Rating</span>
+        </ng-template>
+        <ng-template igxCell let-val>
+            <div class="currency-badge-container">
+                <igx-badge *ngIf="val>0" type="success" position="bottom-right" icon="arrow_upward" class="badge-left"></igx-badge>
+                <igx-badge *ngIf="val<=0" type="error" position="bottom-right" icon="arrow_downward" class="error badge-left"></igx-badge>
+                <span class="cellAlignSyle" [class.up]="val>0" [class.down]="val<=0">{{ formatNumber(val) }}</span>
+            </div>
+        </ng-template>
     </igx-column>
+    <igx-column [field]="'UnitPrice'" [dataType]="'number'" [formatter]="formatCurrency"></igx-column>
+    <igx-column [field]="'UnitsInStock'" [dataType]="'number'" [headerClasses]="'headerAlignSyle'">
+        <ng-template igxHeader>
+            <span class="cellAlignSyle">UnitsInStock</span>
+        </ng-template>
+        <ng-template igxCell let-val>
+            <div class="currency-badge-container">
+                <igx-badge *ngIf="val>50" type="success" position="bottom-right" icon="arrow_upward" class="badge-left"></igx-badge>
+                <igx-badge *ngIf="val<=50" type="error" position="bottom-right" icon="arrow_downward" class="error badge-left"></igx-badge>
+                <span class="cellAlignSyle" [class.up]="val>50" [class.down]="val<=50">{{ formatNumber(val) }}</span>
+            </div>
+        </ng-template>
+    </igx-column>
+    <igx-column [field]="'SupplierName'"></igx-column>
 </igx-grid>
+
+<igx-toast #toast></igx-toast>
 ```
 
 ```typescript
 public ngAfterViewInit() {
     this.remoteService.getData(this.grid.virtualizationState, (data) => {
-        this.grid.totalItemCount = data["@odata.count"];
+            this.grid.totalItemCount = data.totalCount;
     });
 }
 
@@ -77,16 +105,17 @@ When requesting data, you need to utilize the `IForOfState` interface, which pro
 ***Note:*** The first `chunkSize` will always be 0 and should be determined by you based on the specific application scenario.
 
 ```typescript
-public getData(data?: IForOfState, cb?: (any) => void): any {
-    const dataState = data;
-    return this.http
-        .get(this.buildUrl(dataState))
-        .subscribe((d: any) => {
-            this._remoteData.next(d.value);
+public getData(virtualizationArgs?: IForOfState, cb?: (any) => void): any {
+    return this.http.get(this._url).subscribe((json: any) => {
+        json.totalCount = json.length;
+        this.http.get(this.buildUrl(virtualizationArgs)).subscribe((data: any) => {
+            data.totalCount = json.totalCount;
+            this._remoteData.next(data);
             if (cb) {
-                cb(d);
+                cb(data);
             }
         });
+    });
 }
 
 private buildUrl(dataState: IForOfState): string {
@@ -104,6 +133,27 @@ private buildUrl(dataState: IForOfState): string {
     return `${this.url}${qS}`;
 }
 ```
+### Remote Sorting Virtualization Demo
+To provide remote sorting, you need to subscribe to the `onDataPreLoad` and `onSortingDone` outputs so that you make the appropriate request based on the arguments received, as well as set the public `igxGrid` property `totalItemCount` with the respective information coming from the service. You should mark the sortable columns setting `sortable` input to *true*.  
+
+<div class="sample-container loading" style="height:550px">
+    <iframe id="grid-remote-sorting-iframe" src='{environment:demosBaseUrl}/grid-remote-sorting' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="grid-remote-sorting-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+
+### Remote Filtering Virtualization Demo
+To provide remote filtering, you need to subscribe to the `onDataPreLoad` and `onFilteringDone` outputs so that you make the appropriate request based on the arguments received, as well as set the public `igxGrid` property `totalItemCount` with the respective information coming from the service. You should mark the filterable columns setting `filterable` input to *true*. 
+
+<div class="sample-container loading" style="height:550px">
+    <iframe id="grid-remote-filtering-iframe" src='{environment:demosBaseUrl}/grid-remote-filtering' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="grid-remote-filtering-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
 
 ### Virtualization Limitations
 
