@@ -1,28 +1,28 @@
+﻿---
+title: Grid 検索
+_description: Ignite UI for Angular Data Grid コントロールは、グリッド内で検索機能を実装する検索 API があります。 
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Data Grid コンポーネント, Angular Data Grid コントロール, Angular Grid コンポーネント, Angular Grid コントロール, Angular 高パフォーマンス ‘Grid, 検索, サーチ, API 検索
 ---
-title: Grid searching
-_description: The Ignite UI for Angular Data Grid control features a search API that allows developers to implement search functionality within the grid.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Data Grid component, Angular Data Grid control, Angular Grid component, Angular Grid control, Angular High Performance Grid, Searching, Search, Search API
----
 
-### Grid Searching
+### Grid 検索
 
-While browsers natively provide search functionality, most of the time the grid virtualizes its columns and rows that are out of view. In these cases, the native search is unable to search the virtualized cells, since they are not part of the DOM. We have extended the Ignite UI for Angular Data Grid with a **search API** that allows you to search through the **virtualized content** of the grid.
+ブラウザーにはネイティブな検索機能がありますが、ほとんどの場合でグリッドの行列が表示範囲外になります。このような場合、ネイティブ検索は DOM の一部でないため仮想化セルを検索できません。Ignite UI for Angular Data Grid を**検索 API** で拡張したため、グリッドの**仮想コンテンツ**を介して検索できるようになりました。
 
-#### Demo
+#### デモ
 
 <div class="sample-container loading" style="height:650px">
     <iframe id="grid-search-sample-iframe" src='{environment:demosBaseUrl}/grid-search-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="grid-search-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="grid-search-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
 </div>
 <div class="divider--half"></div>
 
-### Usage
+### 使用方法
 
-#### Grid setup
-Let's start by creating our grid and binding it to our data. We will also add some custom styles for the components we will be using!
+#### グリッドの設定
+グリッドを作成してからデータをバインドします。コンポーネントにカスタム スタイルも追加しました。
 
 ```html
 <!--searchgrid.component.html-->
@@ -68,7 +68,7 @@ Let's start by creating our grid and binding it to our data. We will also add so
 }
 ```
 
-Great, and now let's prepare for the search API of our Data Grid! We can create a couple of properties, which can be used for storing the currently searched text and whether the search is case sensitive or not.
+データグリッドの検索 API を使用します。検索したテキストの保存や検索で大文字小文字を区別するかどうかに使用できるプロパティを作成できます。
 
 ```typescript
 // searchgrid.component.ts
@@ -77,15 +77,16 @@ public searchText: string = "";
 public caseSensitive: boolean = false;
 ```
 
-#### Search input box
+#### 検索入力ボックス
 
-Now let's create our search input! By binding our **searchText** as ngModel to our newly created input and subscribe to the ngModelChange event, we can detect every single **searchText** modification by the user. This will allow us to use the grid's `findNext` and `findPrev` methods to highlight all the occurrences of the **searchText** and scroll to the next/previous one (depending on which method we have invoked).
+検索入力を作成します。**searchText** を ngModel として新しく作成した入力へバインドして ngModelChange イベントにサブスクライブします。ユーザーによるすべての ngModelChange 変更を検出できます。
+これはグリッドの `findNext` と `findPrev` メソッドを使用して **searchText** のすべての発生を強調し、次へまたは前 (呼び出すメソッドに基づいて) へスクロールするメソッドです。
 
-Both the `findNext` and the `findPrev` methods have two arguments:
-- **string** value (the text we are searching for)
-- (optional) **boolean** value (should the search be case sensitive or not, default value is false). 
+`findNext` と `findPrev` メソッドの両方に 2 つの引数があります。
+- **string** 値 (検索テキスト)
+- (オプション) **boolean** 値 (検索は大文字と小文字を区別するかどうか、デフォルト値は false). 
 
-The methods from above return a **number** value (the number of times the grid contains the given string).
+上記のメソッドは **number** 値を返します (グリッドで指定した文字列が含まれる回数)
 
 ```html
 <!--searchgrid.component.html-->
@@ -93,11 +94,11 @@ The methods from above return a **number** value (the number of times the grid c
 <input #search1 id="search1" placeholder="Search" [(ngModel)]="searchText" (ngModelChange)="grid.findNext(searchText, caseSensitive)" />
 ```
 
-#### Display results count
-Let's also display the position of the current occurrence, along with the total results count! We can do this by using the grid's `lastSearchInfo` property. This property is automatically updated when using the **find** methods.
+#### 検索結果の個数を表示
+検索で見つかった個数と場所を示します。グリッドの `lastSearchInfo` プロパティを使用します。このプロパティは、**find** メソッド使用時に自動的に更新されます。 
 
-- The `grid.lastSearchInfo.matchInfoCache.length` value will give us the total results count. 
-- The `grid.lastSearchInfo.activeMatchIndex` value will give us the index position of the current occurrence (match). 
+- `grid.lastSearchInfo.matchInfoCache.length` 値は検索で見つかった個数です。
+- The `grid.lastSearchInfo.activeMatchIndex` 値は、現在の一致 (出現) のインデックス位置です。
 
 ```html
 <!--searchgrid.component.html-->
@@ -112,9 +113,9 @@ Let's also display the position of the current occurrence, along with the total 
 </div>
 ```
 
-#### Add search buttons
+#### 検索ボタンの追加
 
-In order to freely search and navigate among our search results, let's create a couple of buttons by invoking the `findNext` and the `findPrev` methods inside the buttons' respective click event handlers.
+ボタンの各クリック イベント ハンドラー内で `findNext` と `findPrev` メソッドを呼び出して検索や検索結果をナビゲーションするためのボタンを作成します。
 
 ```html
 <!--searchgrid.component.html-->
@@ -125,9 +126,9 @@ In order to freely search and navigate among our search results, let's create a 
 </div>
 ```
 
-#### Add keyboard search
+#### キーボード検索の追加
 
-We can also allow the users to navigate the results by using the keyboard's arrow keys and the Enter key. In order to achieve this, we can handle the **keydown** event of our search input by preventing the default caret movement of the input with the preventDefault() method and invoke the `findNext`/`findPrev` methods depending on which key the user has pressed.
+ユーザーは矢印キーと Enter キーで結果を移動できます。 preventDefault() メソッドのデフォルト キャレットの移動を防止する検索入力の  **keydown** イベントを処理し、ユーザーが押したキーに基づいて `findNext`/`findPrev` メソッドを呼び出します。
 
 ```html
 <!--searchgrid.component.html-->
@@ -150,10 +151,9 @@ public searchKeyDown(ev) {
 }
 ```
 
-#### Case sensitive
+#### 大文字と小文字の区別
 
-Now let's allow the user to choose whether the search should be case sensitive or not. For this purpose we can use a simple checkbox input by binding our **caseSensitive** property to its **checked** property and handle the **change** event by toggling our property and invoking the `findNext` method.
-
+ユーザーは検索で大文字と小文字を区別するかどうかを選択できます。 この目的で、 **caseSensitive** プロパティを **checked** プロパティにバインドしてシンプルなチェックボックス入力を使用し、プロパティを切り替えて変更イベントを処理し、 `findNext` メソッドを呼び出します。
 ```html
 <!--searchgrid.component.html-->
 
@@ -170,14 +170,14 @@ public updateSearch() {
 }
 ```
 
-#### Persistence
+#### 永続化
 
-What if we would like to filter and sort our grid or even to add and remove records? After such operations, the highlights of our current search automatically update and persist over any text that matches the **searchText**! Furthermore, the search will work with paging and will persist the highlights through changes of the grid's `perPage` property.
+グリッドのフィルターや並べ替え、レコードの追加や削除などの場合、処理後に現在の検索が自動的に更新されて **searchText** に一致するテキストが保持されます。更に検索がページングで動作し、グリッドの `perPage` プロパティの変更時も強調表示が保持されます。
 
-#### Adding icons
+#### アイコンの追加
 
-By using some of our other components, we can create an enriched user interface and improve the overall design of our entire search bar! We can have a nice search or delete icon on the left of the search input and some material design icons combined with nice ripple styled buttons for our search options and navigation on the right. We can wrap these components inside an input group for a more refined design.
-To do this, let's go and grab the [**IgxInputGroup**](https://www.infragistics.com/products/ignite-ui-angular/angular/components/input_group.html), [**IgxIcon**](https://www.infragistics.com/products/ignite-ui-angular/angular/components/icon.html),  [**IgxRipple**](https://www.infragistics.com/products/ignite-ui-angular/angular/components/ripple.html) and the [**IgxButton**](https://www.infragistics.com/products/ignite-ui-angular/angular/components/button.html) modules.
+その他のコンポーネントを使用するためにユーザー インターフェイスを作成し、検索バー全体のデザインを向上します。左側にはより洗練されたデザイン検索または削除アイコン、右側には検索オプション用に Ripple スタイルのマテリアル デザイン アイコンを表示できます。入力グループ内のコンポーネントをラップしてより洗練されたデザインにすることができます。
+[**IgxInputGroup**](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/input_group.html), [**IgxIcon**](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/icon.html),  [**IgxRipple**](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/ripple.html) and the [**IgxButton**](https://www.infragistics.com/products/ignite-ui-angular/angular/components/button.html) モジュールを使用します。
 
 ```typescript
 // app.module.ts
@@ -198,9 +198,9 @@ import {
 export class AppModule {}
 ```
 
-Finally, let's update our template with the new components!
+最後にテンプレートを新しいコンポーネントで更新します。
 
-We will wrap all of our components inside an **IgxInputGroup**. On the left we will toggle between a search and a delete/clear icon (depending on whether the search input is empty or not). In the center, we will position the input itself. In addition, whenever the delete icon is clicked, we will update our **searchText** and invoke the grid's `clearSearch` method to clear the highlights.
+**IgxInputGroup** 内のすべてのコンポーネントをラップします。左側で検索とアイコンの削除/クリアを切り替えます (検索入力が空かどうかに基づきます)。 中央に入力を配置します。更に削除アイコンがクリックされたときに **searchText** を更新し、グリッドの `clearSearch` メソッドを呼び出して強調表示をクリアします。
 
 ```html
 <!--searchgrid.component.html-->
@@ -246,7 +246,7 @@ On the right in our input group, let's create three separate containers with the
     </div>
     ...
 ```
-- For a button that toggles the **caseSensitive** property. We have replaced the checkbox with a more stylish button that contains a material icon. Whenever the button is clicked, we invoke our custom **updateSearch** method again and we set different background to our button depending on the state of the **caseSensitive** property.
+- ボタンは **caseSensitive** チェックボックスをマテリアル アイコンを含むスタイリッシュなボタンで置き換えました。ボタンがクリックされるとカスタム **updateSearch**  メソッドを再び呼び出して、 **caseSensitive** プロパティの状態に基づいてボタンに異なる背景を設定します。
 
 ```html
 <!--searchgrid.component.html-->
@@ -277,34 +277,34 @@ On the right in our input group, let's create three separate containers with the
 </igx-suffix>
 ```
 
-### API Summary
+### API まとめ
 
-In this article we implemented our own bar for the grid with some additional functionality when it comes to navigating between the search results. We also used some additional Ignite UI for Angular components like icons and inputs. The search API is listed below.
+検索結果のナビゲーションは、グリッドにカスタムバー機能を追加して実装しました。アイコンや入力などその他の Ignite UI for Angular コンポーネントも使用しています。以下は検索 API です。
 
-#### Methods
-The following methods are available on the **IgxGridComponent**:
-| Name | Type | Parameters |Description |
+#### メソッド
+以下のメソッドは **IgxGridComponent** で使用できます。
+| 名前 | 型 | パラメーター |説明 |
 | :--- | :--- | :--- | :--- |
-| `findNext` | number | The string to search and, optionally, if the search should be case sensitive (defaults to false). | Finds the next occurrence of a given string in the grid and scrolls to the cell if it isn't visible. Returns how many times the grid contains the string. |
-| `findPrev` | number | The string to search and, optionally, if the search should be case sensitive (defaults to false). | Finds the previous occurrence of a given string in the grid and scrolls to the cell if it isn't visible. Returns how many times the grid contains the string. |
-| `clearSearch` | void | N/A | Removes all the highlights in the grid. |
-| `refreshSearch` | number | N/A | Reapplies the existing search. Returns how many times the grid contains the last search. |
+| `findNext` | number | 検索文字列と検索で大文字と小文字の区別をするかどうか (デフォルトは false)。 | グリッドで文字列の次の出現を検索します。表示されていない場合はセルへスクロールします。グリッドに文字列が何回含まれるかを返します。|
+| `findPrev` | number | 検索文字列と検索で大文字と小文字の区別をするかどうか (デフォルトは false)。 | グリッドで文字列の前の出現を検索します。表示されていない場合はセルへスクロールします。 グリッドに文字列が何回含まれるかを返します。|
+| `clearSearch` | void | N/A | グリッドのすべての強調表示を削除します。 |
+| `refreshSearch` | number | N/A | 既存の検索を再適用します。グリッドに文字列が何回含まれるかを返します。 |
 
 <div class="divider"></div>
 
-The following methods are available on the **IgxGridCellComponent**:
-| Name | Type | Parameters |Description |
+以下のメソッドは **IgxGridCellComponent** で使用できます。
+| 名前 | 型 | パラメーター |説明 |
 | :--- | :--- | :--- | :--- |
-| `highlightText` | number | The string to search and, optionally, if the search should be case sensitive (defaults to false). | Highlights all occurrences of a string in a given cell. Return how many times the searched string is contained in the cell. |
+| `highlightText` | number | 検索文字列と検索で大文字と小文字の区別をするかどうか (デフォルトは false)。 | セルで文字列のすべての出現を強調表示します。検索文字列がセルに何回含まれるかを返します。 |
 | `clearHighlight` | void | N/A | Removes all the highlights in the cell. |
 
 <div class="divider"></div>
 
-#### Properties
-The following properties are available on the **IgxGridComponent**:
-| Name | Type | Description |
+#### プロパティ
+以下のプロパティは **IgxGridComponent** で使用できます。
+| 名前 | 型 | 説明 |
 | :--- | :--- | :--- |
-| `lastSearchInfo` | ISearchInfo | Contains information about the last performed search. |
+| `lastSearchInfo` | ISearchInfo | 最後に実行された検索についての情報を含みます。 |
 
 
 <div class="divider"></div>
@@ -324,7 +324,7 @@ The following properties are available on the **IgxGridComponent**:
 * [Export to Excel](exporter_excel.md)
 
 <div class="divider--half"></div>
-Our community is active and always welcoming to new ideas.
+コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+* [Ignite UI for Angular **フォーラム**　(英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub**　(英語)](https://github.com/IgniteUI/igniteui-angular)
