@@ -8,7 +8,7 @@ const autoprefixer = require('gulp-autoprefixer');
 const argv = require('yargs').argv;
 const fs = require('fs');
 const env = require('dotenv').config();
-const environmentVariablesPreConfig = require('./post_processors/PostProcessors/EnvironmentVariables/preconfig.json');
+const environmentVariablesPreConfig = require('./templates/ignite-ui-template/post-processors/PostProcessors/EnvironmentVariables/preconfig.json');
 
 const LANG = argv.lang === undefined ? "en" : argv.lang;
 const DOCFX_BASE = {
