@@ -1,12 +1,13 @@
 ﻿---
 title: Grid 検索
 _description: Ignite UI for Angular Data Grid コントロールは、グリッド内で検索機能を実装する検索 API があります。 
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Data Grid コンポーネント, Angular Data Grid コントロール, Angular Grid コンポーネント, Angular Grid コントロール, Angular 高パフォーマンス ‘Grid, 検索, サーチ, API 検索
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Data Grid コンポーネント, Angular Data Grid コントロール, Angular Grid コンポーネント, Angular Grid コントロール, Angular 高パフォーマンス Grid, 検索, サーチ, API 検索
+_language: ja
 ---
 
 ### Grid 検索
 
-ブラウザーにはネイティブな検索機能がありますが、ほとんどの場合でグリッドの行列が表示範囲外になります。このような場合、ネイティブ検索は DOM の一部でないため仮想化セルを検索できません。Ignite UI for Angular Data Grid を**検索 API** で拡張したため、グリッドの**仮想コンテンツ**を介して検索できるようになりました。
+ブラウザーにはネイティブな検索機能がありますが、ほとんどの場合でグリッドの行列が表示範囲外に仮想化されます。このような場合、ネイティブ検索は DOM の一部でないため仮想化セルを検索できません。Ignite UI for Angular Data Grid を**検索 API** で拡張したため、グリッドの**仮想コンテンツ**を介して検索できるようになりました。
 
 #### デモ
 
@@ -22,7 +23,7 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 ### 使用方法
 
 #### グリッドの設定
-グリッドを作成してからデータをバインドします。コンポーネントにカスタム スタイルも追加しました。
+グリッドを作成してからデータをバインドします。コンポーネントにカスタム スタイルも追加します。
 
 ```html
 <!--searchgrid.component.html-->
@@ -68,7 +69,7 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 }
 ```
 
-データグリッドの検索 API を使用します。検索したテキストの保存や検索で大文字小文字を区別するかどうかに使用できるプロパティを作成できます。
+データ グリッドの検索 API を構成します。検索したテキストの保存や検索で大文字小文字を区別するかどうかに使用できるプロパティを作成できます。
 
 ```typescript
 // searchgrid.component.ts
@@ -80,13 +81,13 @@ public caseSensitive: boolean = false;
 #### 検索入力ボックス
 
 検索入力を作成します。**searchText** を ngModel として新しく作成した入力へバインドして ngModelChange イベントにサブスクライブします。ユーザーによるすべての ngModelChange 変更を検出できます。
-これはグリッドの `findNext` と `findPrev` メソッドを使用して **searchText** のすべての発生を強調し、次へまたは前 (呼び出すメソッドに基づいて) へスクロールするメソッドです。
+これはグリッドの `findNext` と `findPrev` メソッドを使用して **searchText** のすべての出現を強調し、次へまたは前 (呼び出すメソッドに基づいて) へスクロールできます。
 
 `findNext` と `findPrev` メソッドの両方に 2 つの引数があります。
 - **string** 値 (検索テキスト)
-- (オプション) **boolean** 値 (検索は大文字と小文字を区別するかどうか、デフォルト値は false). 
+- (オプション) **boolean** 値 (検索は大文字と小文字を区別するかどうか、デフォルト値は false)。
 
-上記のメソッドは **number** 値を返します (グリッドで指定した文字列が含まれる回数)
+上記のメソッドは **number** 値を返します (グリッドで指定した文字列が含まれる回数)。
 
 ```html
 <!--searchgrid.component.html-->
@@ -95,10 +96,10 @@ public caseSensitive: boolean = false;
 ```
 
 #### 検索結果の個数を表示
-検索で見つかった個数と場所を示します。グリッドの `lastSearchInfo` プロパティを使用します。このプロパティは、**find** メソッド使用時に自動的に更新されます。 
+検索で見つかった場所と総個数を示します。グリッドの `lastSearchInfo` プロパティを使用します。このプロパティは、**find** メソッド使用時に自動的に更新されます。 
 
 - `grid.lastSearchInfo.matchInfoCache.length` 値は検索で見つかった個数です。
-- The `grid.lastSearchInfo.activeMatchIndex` 値は、現在の一致 (出現) のインデックス位置です。
+- `grid.lastSearchInfo.activeMatchIndex` 値は、現在の一致 (出現) のインデックス位置です。
 
 ```html
 <!--searchgrid.component.html-->
@@ -153,7 +154,7 @@ public searchKeyDown(ev) {
 
 #### 大文字と小文字の区別
 
-ユーザーは検索で大文字と小文字を区別するかどうかを選択できます。 この目的で、 **caseSensitive** プロパティを **checked** プロパティにバインドしてシンプルなチェックボックス入力を使用し、プロパティを切り替えて変更イベントを処理し、 `findNext` メソッドを呼び出します。
+ユーザーは検索で大文字と小文字を区別するかどうかを選択できます。 この目的で、 **caseSensitive** プロパティを **checked** プロパティにバインドしてシンプルなチェックボックス入力を使用し、プロパティを切り替えて **change** イベントを処理し、 `findNext` メソッドを呼び出します。
 ```html
 <!--searchgrid.component.html-->
 
@@ -176,8 +177,8 @@ public updateSearch() {
 
 #### アイコンの追加
 
-その他のコンポーネントを使用するためにユーザー インターフェイスを作成し、検索バー全体のデザインを向上します。左側にはより洗練されたデザイン検索または削除アイコン、右側には検索オプション用に Ripple スタイルのマテリアル デザイン アイコンを表示できます。入力グループ内のコンポーネントをラップしてより洗練されたデザインにすることができます。
-[**IgxInputGroup**](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/input_group.html), [**IgxIcon**](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/icon.html),  [**IgxRipple**](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/ripple.html) and the [**IgxButton**](https://www.infragistics.com/products/ignite-ui-angular/angular/components/button.html) モジュールを使用します。
+その他のコンポーネントを使用するためにユーザー インターフェイスを作成し、検索バー全体のデザインを向上します。左側には更にデザインが洗練された検索または削除アイコン、右側にはマテリアル デザイン アイコンと Ripple スタイルのボタンを組み合わせた検索オプションとナビゲーションを表示できます。入力グループ内のコンポーネントをラップしてより洗練されたデザインにすることができます。
+[**IgxInputGroup**](input_group.md)、[**IgxIcon**](icon.md)、[**IgxRipple**](ripple.md)、[**IgxButton**](button.md) のモジュールを使用します。
 
 ```typescript
 // app.module.ts
@@ -200,7 +201,7 @@ export class AppModule {}
 
 最後にテンプレートを新しいコンポーネントで更新します。
 
-**IgxInputGroup** 内のすべてのコンポーネントをラップします。左側で検索とアイコンの削除/クリアを切り替えます (検索入力が空かどうかに基づきます)。 中央に入力を配置します。更に削除アイコンがクリックされたときに **searchText** を更新し、グリッドの `clearSearch` メソッドを呼び出して強調表示をクリアします。
+**IgxInputGroup** 内のすべてのコンポーネントをラップします。左側で検索と削除/クリア アイコンを切り替えます (検索入力が空かどうかに基づきます)。中央に入力を配置します。更に削除アイコンがクリックされたときに **searchText** を更新し、グリッドの `clearSearch` メソッドを呼び出して強調表示をクリアします。
 
 ```html
 <!--searchgrid.component.html-->
@@ -229,8 +230,8 @@ public clearSearch() {
 }
 ```
 
-On the right in our input group, let's create three separate containers with the following purposes:
-- For displaying the search results.
+右側の入力グループに以下の目的で別のコンテナーを作成します。
+- 検索結果の表示
 
 ```html
 <!--searchgrid.component.html-->
@@ -246,7 +247,7 @@ On the right in our input group, let's create three separate containers with the
     </div>
     ...
 ```
-- ボタンは **caseSensitive** チェックボックスをマテリアル アイコンを含むスタイリッシュなボタンで置き換えました。ボタンがクリックされるとカスタム **updateSearch**  メソッドを再び呼び出して、 **caseSensitive** プロパティの状態に基づいてボタンに異なる背景を設定します。
+- **caseSensitive** プロパティを切り替えるボタンをマテリアル アイコンを含むスタイリッシュなボタンで置き換えました。ボタンがクリックされるとカスタム **updateSearch**  メソッドを再び呼び出して、 **caseSensitive** プロパティの状態に基づいてボタンに異なる背景を設定します。
 
 ```html
 <!--searchgrid.component.html-->
@@ -260,7 +261,7 @@ On the right in our input group, let's create three separate containers with the
     </div>
     ...
 ```
-- For the search navigation buttons, we have transformed our inputs into ripple styled buttons with material icons. The handlers for the click events remain the same - invoking the `findNext`/`findPrev` methods.
+- 検索ナビゲーション ボタンは、マテリアルアイコンを使用して入力を Ripple スタイルボタンにします。click イベントのハンドラーはそのままで `findNext`/`findPrev` メソッドを呼び出します。
 
 ```html
 <!--searchgrid.component.html-->
@@ -296,7 +297,7 @@ On the right in our input group, let's create three separate containers with the
 | 名前 | 型 | パラメーター |説明 |
 | :--- | :--- | :--- | :--- |
 | `highlightText` | number | 検索文字列と検索で大文字と小文字の区別をするかどうか (デフォルトは false)。 | セルで文字列のすべての出現を強調表示します。検索文字列がセルに何回含まれるかを返します。 |
-| `clearHighlight` | void | N/A | Removes all the highlights in the cell. |
+| `clearHighlight` | void | N/A | セルのすべての強調表示を削除します。 |
 
 <div class="divider"></div>
 
@@ -309,19 +310,19 @@ On the right in our input group, let's create three separate containers with the
 
 <div class="divider"></div>
 
-### Additional Resources
+### その他のリソース
 <div class="divider--half"></div>
 
-* [Grid overview](grid.md)
-* [Virtualization and Performance](grid_virtualization.md)
-* [Filtering](grid_filtering.md)
-* [Paging](grid_paging.md)
-* [Sorting](grid_sorting.md)
-* [Summaries](grid_summaries.md)
-* [Column Pinning](grid_column_pinning.md)
-* [Column Resizing](grid_column_resizing.md)
-* [Selection](grid_selection.md)
-* [Export to Excel](exporter_excel.md)
+* [Grid の概要](grid.md)
+* [仮想化とパフォーマンス](grid_virtualization.md)
+* [フィルタリング](grid_filtering.md)
+* [ページング](grid_paging.md)
+* [並べ替え](grid_sorting.md)
+* [並べ替え](grid_summaries.md)
+* [列のピン固定](grid_column_pinning.md)
+* [列のサイズ変更](grid_column_resizing.md)
+* [列のサイズ変更](grid_selection.md)
+* [Excel へエクスポート](exporter_excel.md)
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
