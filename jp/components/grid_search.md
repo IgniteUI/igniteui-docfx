@@ -307,6 +307,12 @@ public clearSearch() {
 | :--- | :--- | :--- |
 | `lastSearchInfo` | ISearchInfo | 最後に実行された検索についての情報を含みます。 |
 
+<div class="divider"></div>
+
+The following properties are available on the **IgxColumnComponent**:
+| Name | Type | Description |
+| :--- | :--- | :--- |
+| `searchable` | boolean | Determines whether the column is included in the search. If set to false, the cell values for this column will not be included in the results of the search API of the grid (defaults to true). |
 
 <div class="divider"></div>
 
