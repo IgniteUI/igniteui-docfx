@@ -324,10 +324,10 @@ public clearSearch() {
 * [フィルタリング](grid_filtering.md)
 * [ページング](grid_paging.md)
 * [並べ替え](grid_sorting.md)
-* [並べ替え](grid_summaries.md)
+* [集計](grid_summaries.md)
 * [列のピン固定](grid_column_pinning.md)
 * [列のサイズ変更](grid_column_resizing.md)
-* [列のサイズ変更](grid_selection.md)
+* [選択](grid_selection.md)
 * [Excel へエクスポート](exporter_excel.md)
 
 <div class="divider--half"></div>
