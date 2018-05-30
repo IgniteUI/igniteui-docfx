@@ -20,7 +20,7 @@
         "gulp-autoprefixer": "^4.0.0",
         "gulp-sass": "^3.1.0",
         "gulp-shell": "^0.6.3",
-        "igniteui-docfx-template": "1.0.1",
+        "igniteui-docfx-template": "1.0.0",
         "yargs": "^10.0.3"
     }
 }
