@@ -309,10 +309,10 @@ public clearSearch() {
 
 <div class="divider"></div>
 
-The following properties are available on the **IgxColumnComponent**:
-| Name | Type | Description |
+以下のプロパティは **IgxColumnComponent** で使用できます。
+| 名前 | 型 | 説明 |
 | :--- | :--- | :--- |
-| `searchable` | boolean | Determines whether the column is included in the search. If set to false, the cell values for this column will not be included in the results of the search API of the grid (defaults to true). |
+| `searchable` | boolean | 列が検索に含まれるかどうかを決定します。false (デフォルトは true) に設定した場合、この列のセル値はグリッドの検索 API の結果に含まれません。 |
 
 <div class="divider"></div>
 
