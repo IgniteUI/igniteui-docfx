@@ -9,7 +9,7 @@ _language: ja
 `igx-financial-chart` コントロールには、財務データを表示する複数のペインがあります。
 
 ### デモ
-<div class="sample-container" style="height: 550px">
+<div class="sample-container" style="height: 570px">
     <iframe id="financial-chart-panes-iframe" src='{environment:demosBaseUrl}/financial-chart-panes' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>

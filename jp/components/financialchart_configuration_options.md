@@ -10,7 +10,7 @@ _language: ja
 
 ### デモ
 
-<div class="sample-container" style="height: 550px">
+<div class="sample-container" style="height: 570px">
     <iframe id="financial-chart-trendlines-iframe" src='{environment:demosBaseUrl}/financial-chart-trendlines' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
