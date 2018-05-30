@@ -11,7 +11,7 @@ Ignite UI for Angular Grid コンポーネントは、グリッドにバイン�
 
 #### デモ
 
-<div class="sample-container loading" style="height:600px">
+<div class="sample-container loading" style="height:620px">
     <iframe id="grid-sample-iframe" src='{environment:demosBaseUrl}/grid-filtering-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>

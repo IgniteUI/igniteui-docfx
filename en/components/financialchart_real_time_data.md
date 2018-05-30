@@ -9,7 +9,7 @@ The `igx-financial-chart` control is very fast control that can handle rendering
 
 ### Demo
 
-<div class="sample-container" style="height: 550px">
+<div class="sample-container" style="height: 570px">
     <iframe id="financial-chart-high-frequency-iframe" src='{environment:demosBaseUrl}/financial-chart-high-frequency' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
