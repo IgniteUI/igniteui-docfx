@@ -307,6 +307,12 @@ public clearSearch() {
 | :--- | :--- | :--- |
 | `lastSearchInfo` | ISearchInfo | 最後に実行された検索についての情報を含みます。 |
 
+<div class="divider"></div>
+
+以下のプロパティは **IgxColumnComponent** で使用できます。
+| 名前 | 型 | 説明 |
+| :--- | :--- | :--- |
+| `searchable` | boolean | 列が検索に含まれるかどうかを決定します。false (デフォルトは true) に設定した場合、この列のセル値はグリッドの検索 API の結果に含まれません。 |
 
 <div class="divider"></div>
 
@@ -318,10 +324,10 @@ public clearSearch() {
 * [フィルタリング](grid_filtering.md)
 * [ページング](grid_paging.md)
 * [並べ替え](grid_sorting.md)
-* [並べ替え](grid_summaries.md)
+* [集計](grid_summaries.md)
 * [列のピン固定](grid_column_pinning.md)
 * [列のサイズ変更](grid_column_resizing.md)
-* [列のサイズ変更](grid_selection.md)
+* [選択](grid_selection.md)
 * [Excel へエクスポート](exporter_excel.md)
 
 <div class="divider--half"></div>
