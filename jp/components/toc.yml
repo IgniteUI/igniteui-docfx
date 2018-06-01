@@ -101,9 +101,9 @@
   href: shadows.md
 - name: データ入力と表示
   header: true
-- name: Drop Down
-  href: drop_down.md
-  new: true
+# - name: Drop Down
+#   href: drop_down.md
+#   new: true
 - name: Button
   href: button.md
 - name: Button Group
