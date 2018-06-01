@@ -31,6 +31,8 @@
     - name: Searching
       href: grid_search.md
       new: true
+    - name: Toolbar
+      href: grid_toolbar.md
     - name: Export to Excel
       href: exporter_excel.md
       new: true
