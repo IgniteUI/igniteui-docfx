@@ -274,6 +274,13 @@ The following properties are available on the **IgxGridComponent**:
 
 <div class="divider"></div>
 
+The following properties are available on the **IgxColumnComponent**:
+| Name | Type | Description |
+| :--- | :--- | :--- |
+| `disableHiding` | boolean | Determines whether the column cannot be hidden through the column hiding UI. |
+
+<div class="divider"></div>
+
 #### Methods
 The following methods are available on the **IgxColumnHidingComponent**:
 | Name | Type | Parameters |Description |
