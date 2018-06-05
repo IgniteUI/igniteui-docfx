@@ -17,11 +17,10 @@
         "del": "^3.0.0",
         "dotenv": "^4.0.0",
         "gulp": "^3.9.1",
-        "gulp-autoprefixer": "^4.0.0",
+        "gulp-autoprefixer": "^5.0.0",
         "gulp-sass": "^4.0.1",
-        "gulp-shell": "^0.6.3",
+        "gulp-shell": "^0.6.5",
         "igniteui-docfx-template": "1.0.4",
-        "node-sass": "^4.9.0",
         "yargs": "^10.0.3"
     }
 }
