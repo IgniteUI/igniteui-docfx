@@ -38,7 +38,7 @@ export class AppModule {}
 To get a simple checkbox, add the following code inside the compnent template:
 
 ```html
-<igx-checkbox checked="true">
+<igx-checkbox [checked]="true">
     simple checkbox
 </igx-checkbox>
 ```

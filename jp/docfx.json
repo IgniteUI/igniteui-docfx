@@ -35,9 +35,9 @@
             }
         ],
         "dest": "_site",
-        "globalMetadataFiles": [],
+        "globalMetadataFiles": ["global.json"],
         "fileMetadataFiles": [],
-        "template": ["../templates/ignite-ui-template"],
+        "template": ["../node_modules/igniteui-docfx-template"],
         "postProcessors": ["SetEnvironmentVariables"],
         "noLangKeyword": false,
         "keepFileLink": false,

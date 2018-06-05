@@ -8,7 +8,7 @@ const autoprefixer = require('gulp-autoprefixer');
 const argv = require('yargs').argv;
 const fs = require('fs');
 const env = require('dotenv').config();
-const environmentVariablesPreConfig = require('./post_processors/PostProcessors/EnvironmentVariables/preconfig.json');
+const environmentVariablesPreConfig = require('./node_modules/igniteui-docfx-template/post-processors/PostProcessors/EnvironmentVariables/preconfig.json');
 
 const LANG = argv.lang === undefined ? "en" : argv.lang;
 const DOCFX_BASE = {
@@ -17,7 +17,7 @@ const DOCFX_BASE = {
 };
 const DOCFX_PATH =`${DOCFX_BASE[LANG]}`;
 const DOCFX_CONF = `${DOCFX_PATH}/docfx.json`;
-const DOCFX_TEMPLATE = path.join(__dirname, `./templates/ignite-ui-template`);
+const DOCFX_TEMPLATE = path.join(__dirname, `./node_modules/igniteui-docfx-template`);
 const DOCFX_SITE = `${DOCFX_PATH}/_site`;
 const DOCFX_ARTICLES = `${DOCFX_PATH}/components`;
 

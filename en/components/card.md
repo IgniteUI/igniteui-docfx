@@ -9,7 +9,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <div class="divider"></div>
 
 ###Card Demo
-<div class="sample-container loading" style="height: 1200px">
+<div class="sample-container loading" style="height: 930px">
     <iframe id="card-sample-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/card"
         onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -45,11 +45,11 @@ Then in the template of our info card component we can add the following code to
 
 <igx-card>
   <igx-card-header>
-    <h3 class="igx-card-header__title">Rupert Stadler</h3>
+    <h3 class="igx-card-header__title">Brad Stanley</h3>
     <h5 class="igx-card-header__subtitle">Audi AG</h5>
   </igx-card-header>
   <igx-card-content>
-    <p class="igx-card-content__text">Rupert Stadler (born 17 March 1963 in Titting, Germany) is a German business executive and chairman of the Vorstand (CEO) of Audi AG.</p>
+    <p class="igx-card-content__text">Brad Stanley (born 17 March 1963 in Titting, Germany) is a German business executive and chairman of the Vorstand (CEO) of Audi AG.</p>
   </igx-card-content>
 </igx-card>
 ```
@@ -65,7 +65,7 @@ If all went well, you should see the following card in your browser:
 
 ####Adding Avatar and Images
 
-Yes, Rupert Stadler is popular, but maybe we want to make his card a bit more interesting. We can add a nice picture avatar to the left of his name and a larger Audi TT image. To do that let's grab the [**IgxAvatar**](https://www.infragistics.com/products/ignite-ui-angular/angular/components/avatar.html) module and import it in our **app.module.ts** file.
+Yes, Brad Stanley is popular, but maybe we want to make his card a bit more interesting. We can add a nice picture avatar to the left of his name and a larger Audi TT image. To do that let's grab the [**IgxAvatar**](https://www.infragistics.com/products/ignite-ui-angular/angular/components/avatar.html) module and import it in our **app.module.ts** file.
 ```typescript
 // app.module.ts
 
@@ -89,9 +89,9 @@ Next, we need to update the template for our card to show a round-shaped avatar 
 
 <igx-card>
     <igx-card-header class="compact">
-        <igx-avatar src="assets/images/card/avatars/rupert_stadler.jpg" roundShape="true"></igx-avatar>
+        <igx-avatar src="assets/images/card/avatars/brad_stanley.jpg" roundShape="true"></igx-avatar>
         <div class="igx-card-header__tgroup">
-            <h3 class="igx-card-header__title--small">Rupert Stadler</h3>
+            <h3 class="igx-card-header__title--small">Brad Stanley</h3>
             <h5 class="igx-card-header__subtitle">Audi AG</h5>
         </div>
     </igx-card-header>
@@ -99,7 +99,7 @@ Next, we need to update the template for our card to show a round-shaped avatar 
         <img width="100%" height="100%" src="assets/images/card/media/audi_tt.jpg">
     </div>
     <igx-card-content>
-      <p class="igx-card-content__text">Rupert Stadler (born 17 March 1963 in Titting, Germany) is a German business executive and chairman of the Vorstand (CEO) of Audi AG.</p>
+      <p class="igx-card-content__text">Brad Stanley (born 17 March 1963 in Titting, Germany) is a German business executive and chairman of the Vorstand (CEO) of Audi AG.</p>
     </igx-card-content>
 </igx-card>
 ```
@@ -142,9 +142,9 @@ Next, we need to update the template for our card to show these action buttons:
 
 <igx-card>
     <igx-card-header class="compact">
-        <igx-avatar src="assets/images/card/avatars/rupert_stadler.jpg" roundShape="true"></igx-avatar>
+        <igx-avatar src="assets/images/card/avatars/brad_stanley.jpg" roundShape="true"></igx-avatar>
         <div class="igx-card-header__tgroup">
-            <h3 class="igx-card-header__title--small">Rupert Stadler</h3>
+            <h3 class="igx-card-header__title--small">Brad Stanley</h3>
             <h5 class="igx-card-header__subtitle">Audi AG</h5>
         </div>
     </igx-card-header>

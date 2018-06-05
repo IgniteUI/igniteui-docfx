@@ -11,7 +11,7 @@ _language: ja
 <div class="divider"></div>
 
 ### Card デモ
-<div class="sample-container loading" style="height: 1200px">
+<div class="sample-container loading" style="height: 930px">
     <iframe id="card-sample-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/card" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -45,11 +45,11 @@ export class AppModule {}
 
 <igx-card>
   <igx-card-header>
-    <h3 class="igx-card-header__title">Rupert Stadler</h3>
+    <h3 class="igx-card-header__title">Brad Stanley</h3>
     <h5 class="igx-card-header__subtitle">Audi AG</h5>
   </igx-card-header>
   <igx-card-content>
-    <p class="igx-card-content__text">Rupert Stadler (born 17 March 1963 in Titting, Germany) is a German business executive and chairman of the Vorstand (CEO) of Audi AG.</p>
+    <p class="igx-card-content__text">Brad Stanley (born 17 March 1963 in Titting, Germany) is a German business executive and chairman of the Vorstand (CEO) of Audi AG.</p>
   </igx-card-content>
 </igx-card>
 ```
@@ -88,9 +88,9 @@ export class AppModule {}
 
 <igx-card>
     <igx-card-header class="compact">
-        <igx-avatar src="assets/images/card/avatars/rupert_stadler.jpg" roundShape="true"></igx-avatar>
+        <igx-avatar src="assets/images/card/avatars/brad_stanley.jpg" roundShape="true"></igx-avatar>
         <div class="igx-card-header__tgroup">
-            <h3 class="igx-card-header__title--small">Rupert Stadler</h3>
+            <h3 class="igx-card-header__title--small">Brad Stanley</h3>
             <h5 class="igx-card-header__subtitle">Audi AG</h5>
         </div>
     </igx-card-header>
@@ -98,7 +98,7 @@ export class AppModule {}
         <img width="100%" height="100%" src="assets/images/card/media/audi_tt.jpg">
     </div>
     <igx-card-content>
-      <p class="igx-card-content__text">Rupert Stadler (born 17 March 1963 in Titting, Germany) is a German business executive and chairman of the Vorstand (CEO) of Audi AG.</p>
+      <p class="igx-card-content__text">Brad Stanley (born 17 March 1963 in Titting, Germany) is a German business executive and chairman of the Vorstand (CEO) of Audi AG.</p>
     </igx-card-content>
 </igx-card>
 ```
@@ -141,9 +141,9 @@ export class AppModule {}
 
 <igx-card>
     <igx-card-header class="compact">
-        <igx-avatar src="assets/images/card/avatars/rupert_stadler.jpg" roundShape="true"></igx-avatar>
+        <igx-avatar src="assets/images/card/avatars/brad_stanley.jpg" roundShape="true"></igx-avatar>
         <div class="igx-card-header__tgroup">
-            <h3 class="igx-card-header__title--small">Rupert Stadler</h3>
+            <h3 class="igx-card-header__title--small">Brad Stanley</h3>
             <h5 class="igx-card-header__subtitle">Audi AG</h5>
         </div>
     </igx-card-header>
