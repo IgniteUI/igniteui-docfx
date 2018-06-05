@@ -1,12 +1,12 @@
 ﻿---
 title: Drop Down コンポーネント
-_description: Ignite UI for Angular Drop Down は、単一項目の選択が可能なグループ化された項目のリストにスクロールを表示します。
+_description: Ignite UI for Angular Drop Down は、単一項目の選択が可能なグループ項目をスクロール付きのリストで表示します。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Drop Down コンポーネント, Angular Drop Down コントロール
 _language: ja
 ---
 
 ##Drop Down
-<p class="highlight">Ignite UI for Angular Drop Down は、単一項目の選択が可能なグループ項目をスクロールできるリストで表示します。項目をクリックまたはタップして選択し、ドロップダウンを閉じます。</p>
+<p class="highlight">Ignite UI for Angular Drop Down は、単一項目の選択が可能なグループ項目をスクロール付きのリストで表示します。項目をクリックまたはタップして選択するとドロップダウンが閉じます。</p>
 <div class="divider"></div>
 
 ### Drop Down デモ
@@ -19,7 +19,7 @@ _language: ja
 <div class="divider--half"></div>
 
 > [!NOTE]
-> Ignite UI for Angular コンポーネントをプロジェクトに追加する前に、すべての必要な依存関係を構成し、プロジェクトのセットアップが正しく完了したことを確認してください。[**インストール**](https://jp.infragistics.com/products/ignite-ui-angular/getting-started#installation) のトピックで手順を確認できます。
+> Ignite UI for Angular コンポーネントをプロジェクトに追加する前に、必要なすべての依存関係を構成し、プロジェクトのセットアップが正しく完了したことを確認してください。[**インストール**](https://jp.infragistics.com/products/ignite-ui-angular/getting-started#installation) のトピックで手順を確認できます。
 
 ###使用方法
 Ignite UI for Angular Drop Down コンポーネントを初期化する前に **IgxDropDownModule** を **app.module.ts** ファイルにインポートします。
@@ -202,7 +202,7 @@ export class AppModule {}
 
 ```
 
-サンプルが正しく構成されると、EU ヘッダーの下に国の一覧がグループ形式で表示され、UK は非インタラクティブな項目として表示されます。
+サンプルが正しく構成されると EU ヘッダーの下に国の一覧がグループ形式で表示され、UK は非インタラクティブな項目として表示されます。
 
 <div class="sample-container" style="height: 280px">
     <iframe id="dropdown-sample-3-iframe" src='{environment:demosBaseUrl}/dropdown-sample-3' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -280,5 +280,5 @@ export class AppModule {}
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
-* [Ignite UI for Angular **フォーラム **(英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
 * [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
