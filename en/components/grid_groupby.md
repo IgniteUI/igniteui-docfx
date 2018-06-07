@@ -64,13 +64,13 @@ Grouping works in conjuction with sorting and grouping expressions are applied a
 In addition to grouping expresions you can also control the expansion states for group rows. They are stored in a seperate property of the `igxGrid` component `groupingExpansionState`. A group row is uniquely identified based on the field name it is created for and the value it represents for each level of grouping. This means that the signature of an expansion state interface is the following:
 
 ```typescript
-export interface IGroupCompositeKey {
+export interface IGroupByKey {
     fieldName: string;
     value: any;
 }
 
 export interface IGroupByExpandState {
-    hierarchy: Array<IGroupCompositeKey>;
+    hierarchy: Array<IGroupByKey>;
     expanded: boolean;
 }
 ```
@@ -82,12 +82,43 @@ As with `groupingExpression`, setting a list of `IGroupByExpandState` directly t
     grid.toggleGroup(groupRow);
 ```
 
----
+Groups can be created expanded (***default***) or collapsed and the expansion states would generally only contain the state opposite to the default behavior. You can control whether groups should be created expanded or not through the `groupsExpanded` property
 
 #### Group Row Templates
 
+The group row without its expand/collapse UI is fully templatable. By default it renders a grouping icon and displays the field name and value it represents. The grouping record the template is rendered against has the following signature:
 
+```typescript
+export interface IGroupByRecord {
+    expression: ISortingExpression;
+    level: number;
+    records: GroupedRecords;
+    value: any;
+    __groupParent: IGroupByRecord;
+}
+```
 
+As an example, the following template would make the group rows summary more verbous:
+
+```html
+<ng-template igxGroupByRow let-groupRow>
+    <span>Total items with value: {{ groupRow.value }} are {{ groupRow.records.length }}</span>
+</ng-template>
+```
+
+#### Keyboard Navigation
+
+The grouping UI supports the following keyboard interactions:
+
+- For group rows (focus should be on the row or the expand/collapse cell)
+   - <kbd>SPACE</kbd> - toggles the group
+
+- For group `igxChip` components in the group by area (focus should be on the chip)
+   - <kbd>SHIFT</kbd> + <kbd>LEFT</kbd> - moves the focused chip left, changing the grouping order, if possible
+   - <kbd>SHIFT</kbd> + <kbd>RIGHT</kbd> - moves the focused chip right, changing the grouping order, if possible
+   - <kbd>SPACE</kbd> - changes the sorting direction
+   - <kbd>DELETE</kbd> - ungroups the field
+   - The seperate elements of the chip are also focusable and can be interacted with using the <kbd>ENTER</kbd> key.
 
 ### Additional Resources
 <div class="divider--half"></div>
