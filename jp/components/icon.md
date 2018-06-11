@@ -60,6 +60,11 @@ export class AppModule {}
 <igx-icon name="volume_off" isActive="false"></igx-icon>
 ```
 
+コンテンツ プロジェクションでアイコンを設定します。
+```html
+<igx-icon color="red">bluetooth</igx-icon>
+```
+
 <div class="divider--half"></div>
 
 ### API まとめ

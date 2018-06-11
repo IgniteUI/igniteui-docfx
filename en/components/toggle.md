@@ -190,8 +190,10 @@ The following inputs are available on the **igxToggleAction** directive:
 The following outputs are available on the **igxToggle** directive:
 | Name | Type | Description |
 | :--- | :--- | :--- |
-| `onOpen` | EventEmitter | Emits an event when the toggle container is opened. |
-| `onClose` | EventEmitter | Emits an event when the toggle container is closed. |
+| `onOpening` | EventEmitter | Emits an event before the toggle container is opened. |
+| `onOpened` | EventEmitter | Emits an event after the toggle container is opened. |
+| `onClosing` | EventEmitter | Emits an event before the toggle container is closed. |
+| `onClosed` | EventEmitter | Emits an event after the toggle container is closed. |
 
 <div class="divider"></div>
 

@@ -43,7 +43,7 @@ export class AppModule {}
 シンプルなスイッチを作成するには、コンポーネントのテンプレートで以下のコードを追加します。
 
 ```html
-<igx-switch checked="true">
+<igx-switch [checked]="true">
     Simple switch
 </igx-switch>
 ```

@@ -43,7 +43,7 @@ export class AppModule {}
 簡易なチェックボックスを作成するには、コンポーネントのテンプレートで以下のコードを追加します。
 
 ```html
-<igx-checkbox checked="true">
+<igx-checkbox [checked]="true">
     simple checkbox
 </igx-checkbox>
 ```

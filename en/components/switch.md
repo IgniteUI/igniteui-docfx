@@ -39,7 +39,7 @@ export class AppModule {}
 To get a simple switch, add the following code inside the compnent template:
 
 ```html
-<igx-switch checked="true">
+<igx-switch [checked]="true">
     Simple switch
 </igx-switch>
 ```
