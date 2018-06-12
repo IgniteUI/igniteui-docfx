@@ -653,5 +653,5 @@ Our community is active and always welcoming to new ideas.
 
 |Issue|Description|Status
 |--- |--- |--- |
-|Column widths into `percentage`| Currently we do not support setting width per column into `%`. The calculation of the chunk size won't be accurate and the `horizontal virtualization` and `pinning` won't work as expected.|<img src="../images/negative.png" alt="negative" />
+|Column widths into `percentage`| Currently we do not support setting width per column into `%`. The column widths get parsed to `pixels` so the calculation of the chunk size of the `data` won't be accurate and the `horizontal virtualization` and `pinning` won't work as expected.|<img src="../images/negative.png" alt="negative" />
 |Skipped `height` on the parent of the grid or grid itself| The `grid` is not rendered correctly whenever the `height` on the parent or on the grid itself is omitted.|<img src="../images/negative.png" alt="negative" />
