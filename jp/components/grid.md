@@ -639,3 +639,21 @@ import {
 
 * [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
 * [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+
+
+## Known Issues and Limitations
+
+<div ckass="devider"></div>
+
+|Legend||
+|--- |--- |
+|<img src="../images/positive.png" alt="positive" />| Workaround available|
+|<img src="../images/negative.png" alt="negative" />| No known workaround|
+|<img src="../images/plannedFix.png" alt="plannedFix" />| No know workaround, fix planned|
+
+### General
+
+|Issue|Description|Status
+|--- |--- |--- |
+|Column widths into `percentage`| Currently we do not support setting width per column into `%`. The colculation of the chunk size won't be accurate and the `horizontal virtualization` and `pinning` won't work as expected.|<img src="../images/negative.png" alt="negative" />
+|Skipped `height` on the parent of the grid or grid itself| The `grid` is not rendered correctly whenever the `height` on the parent or on the grid itself is omitted.|<img src="../images/negative.png" alt="negative" />
