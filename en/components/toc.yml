@@ -7,6 +7,9 @@
     - name: Virtualization and performance
       href: grid_virtualization.md
       new: false
+    - name: Editing
+      href: grid_editing.md
+      new: false
     - name: Paging
       href: grid_paging.md
       new: false
