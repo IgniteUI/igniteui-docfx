@@ -1,12 +1,12 @@
 ---
 title: Group By Component – Native Angular | Ignite UI for Angular
 _description: The Ignite UI for Angular Group By component allows users to group data based on common values for particular columns.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Components, Angular Data Grid component, Angular Data Grid control, Angular Grid component, Angular Grid control, Angular High Performance Grid, group by, groupby, grouping
+_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Components, Angular Data Grid component, Angular Data Grid control, Angular Grid component, Angular Grid control, Angular High Performance Grid, group by, groupby, grouping, column grouping
 ---
 
 ### Grid Group By
 
-`igxGrid` supports column grouping that enables the user to employ the data in one or more columns in a grid as a primary and, respectively, secondary, tertiery, etc. criteria for organizing the data records in groups. Groups can be expanded or collapsed and the order of grouping may be changed through the UI or API.
+`igxGrid` supports column grouping that allows for visualizing data records in hierarchical groups according to the column group values. Groups can be expanded or collapsed and the order of grouping may be changed through the UI or API.
 
 
 #### Demo
@@ -36,7 +36,7 @@ Grouping expressions implement the `ISortingExpression` interface.
 
 #### Group By API
 
-Grouping is available through the UI and through a robust API exposed by the grid component. At the most basic level you can allow end-users to group columns by setting their `groupable` property to `true`.
+Grouping is available through the UI and through a robust API exposed by the grid component. Developers can allow end-users to group the grid data by certain columns, by setting each column's `groupable` property to `true`.
 
 ```html
 <igx-grid [data]="data">
