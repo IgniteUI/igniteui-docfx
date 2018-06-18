@@ -1,7 +1,7 @@
 ---
 title: Column Moving - Native Angular | Ignite UI for Angular
 _description: Column moving feature provides means for reordering columns interactively via a standard drag/drop mouse gesture.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Data Grid component, Angular Data Grid control, Native Angular Components, Angular Grid component, Angular Grid control, Angular High Performance Grid, Column Moving, Grid Column Moving, Angular Grid Column Moving, Angular column
+_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Data Grid component, Angular Data Grid control, Native Angular Components, Angular Grid component, Angular Grid control, Angular High Performance Grid, Column Moving, Grid Column Moving, Angular Grid Column Moving, Angular column moving
 ---
 
 ### Grid Column Moving
@@ -20,14 +20,14 @@ The Grid component in Ignite UI for Angular provides **column moving** to allow 
 <div class="divider--half"></div>
 
 #### Overview
-**Column moving** feature is enabled per-column level, meaning that the **igx-grid** can have a mix of movable and non-movable columns. This is done via the `movable` input of the `igx-column`.
+**Column moving** feature is enabled on a per-column level, meaning that the **igx-grid** can have a mix of movable and immovable columns. This is done via the `movable` input of the `igx-column`.
 
 ```html
 <igx-column [field]="'Category'" [movable]="true"></igx-column>
 ```
 
 #### Events
-There are several events related to the column moving to provide means of customizing the columns drag and drop operations. These are `onColumnMovingStart`, `onColumnMoving` and `onColumnMovingEnd`. 
+There are several events related to the column moving to provide means of tapping into the columns' drag and drop operations. These are `onColumnMovingStart`, `onColumnMoving` and `onColumnMovingEnd`. 
 You can subscribe to the `onColumnMovingEnd` event of the `igx-grid` to implement some custom logic when a column is dropped to a new position. For example, you can cancel dropping the Category after the Change On Year(%) column.
 
 ```html
@@ -48,11 +48,11 @@ public onColumnMovingEnd(event) {
 ### API Summary
 
 #### Inputs
-The following `IgxColumnComponent` input is available for configuring the **column moving**:
+The following `IgxColumnComponent` input is available to configure the **column moving**:
 
 | Name | Type | Description |
 | :--- | :--- | :--- |
-|`movable`|boolean|Set column to be movable.|
+|`movable`|boolean|Sets column to be movable.|
 
 <div class="divider--half"></div>
 
@@ -61,7 +61,7 @@ The following `IgxGridComponent` outputs are available for **column moving**:
 
 | Name | Type | Description |
 | :--- | :--- | :--- |
-|`onColumnMoving`| EventEmitter |Emitted when a column is moved. Returns the source and target columns objects. This event is cancelable.|
+|`onColumnMoving`| EventEmitter |Emitted throughout the column moving operation. Returns the source and target columns objects. This event is cancelable.|
 |`onColumnMovingEnd`| EventEmitter |Emitted when a column moving ends. Returns the source and target columns objects. This event is cancelable.|
 |`onColumnMovingStart`| EventEmitter |Emitted when a column moving starts. Returns the moved column object.|
 
