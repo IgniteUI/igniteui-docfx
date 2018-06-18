@@ -639,19 +639,16 @@ Our community is active and always welcoming to new ideas.
 * [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
 * [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
 
-## Known Issues and Limitations
+## Grid Limitations
 
 <div ckass="devider"></div>
 
-|Legend||
-|--- |--- |
-|<img src="../images/positive.png" alt="positive" />| Workaround available|
-|<img src="../images/negative.png" alt="negative" />| No known workaround|
-|<img src="../images/plannedFix.png" alt="plannedFix" />| No know workaround, fix planned|
-
 ### General
 
-|Issue|Description|Status
+|Limitation|Description|
 |--- |--- |--- |
-|Column widths into `percentage`|Currently we do not support mixing column widths with `%` and `px`.|<img src="../images/negative.png" alt="negative" />
-|Skipped `height` on the parent of the grid or grid itself| The `grid` is not rendered correctly whenever the `height` on the parent or on the grid itself is omitted.|<img src="../images/negative.png" alt="negative" />
+|Column widths into `percentage`|Currently we do not support mixing column widths with `%` and `px`.
+|Skipped `height` on the parent of the grid or grid itself| The `grid` is not rendered correctly whenever the `height` on the parent or on the grid itself is omitted.|
+|`NaN` whenever filter number column|When filter number column and type a character different from digit, `NaN` value appers due incorrect cast and no filter is applied.|
+|`undefined` in edit mode|When `data` persists `undefined` values and enter into `edit mode` the string value `undefined` is displayed.|
+|Grid `width` |Currently the `width` of the grid is spanning the container(parent) it is placed in. Column `widths` does not reflect on the `view port` of the grid.|
