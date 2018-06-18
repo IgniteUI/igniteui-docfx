@@ -645,7 +645,6 @@ import {
 
 <div ckass="devider"></div>
 
-
 |Limitation|Description|
 |--- |--- |
 |Column widths set in `percentage` and `px`|Currently we do not support mixing of column widths with `%` and `px`.
