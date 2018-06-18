@@ -229,6 +229,8 @@ public getDatePart(val: any, component: any, datePart: string) {
 | `locale` | `string` | カレンダーで日付の書式および表示のためのロケールを設定します。有効な書式の詳細については、[このページ](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl)を参照してください。 |
 | `formatOptions` | `Object` | 日付を書式設定するために使用される `locale` プロパティと渡される書式オプション。 |
 | `formatViews` | `Object` | 日付を書式設定するために使用される `locale` プロパティと渡される書式ビュー。 |
+| `label` | `string` | Changes the default text label. |
+| `labelVisability` | `string ` | Hide/Show the label. |
 
 #### 出力
 
