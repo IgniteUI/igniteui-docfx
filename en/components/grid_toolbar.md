@@ -74,11 +74,12 @@ export class AppModule {}
 
 #### Customizing the Export
 
-When the user initiates an export process the IgxGrid's `onToolbarExporting` event is emitted. This event can be canceled and this allows you to configure the export process by customizing its parameters as opposite to the export with default parameters which will be executed if you do not cancel the event.
+When the user initiates an export process the IgxGrid's `onToolbarExporting` event is emitted. This event exposes the export options and the exporter and this allows you to configure the export process.
 
 > [!NOTE]
 > By default when eporting to CSV the exporter exports using a comma separator and uses a '.csv' extension for the output file.
-> You can customize this exporting parameters by canceling the `onToolbarExporting` event and set new parameters to the exporter reference available in the event arguments object.
+> You can customize these exporting parameters by subscribing to events of the exporter or changing the values of the exporter options fileds.
+> You can also cancel the export process by setting the cancel field of the event args to true.
 
 The following code snippet demonstrates how to subscribe to the `onToolbarExporting` event and cancel the default exporting process.
 
@@ -92,22 +93,28 @@ import { IgxExcelExporterService, IgxCsvExporterService } from "igniteui-angular
 ...
 
 public toolbarExportingHandler(args) {
-    args.cancel = true; // cancel default exporting process
-    let exporter;
-    switch (args.type) {
-        case "excel" :
-            exporter = args.exporter as IgxExcelExporterService;
-            // configure and perform excel export operation here
-            break;
-        case "csv" :
-            exporter = args.exporter as IgxCsvExporterService;
-            // configure and perform csv export operation here
-            break;
+    // You can customize the exporting from this event
+    const options: IgxExporterOptionsBase = args.options ;
+    options.fileName = "Custom Title";
+
+    if (options instanceof IgxExcelExporterOptions) {
+        const excelOptions = options as IgxExcelExporterOptions;
+        excelOptions.columnWidth = 10;
+    } else {
+        const csvOptions = options as IgxCsvExporterOptions;
+        csvOptions.fileType = CsvFileTypes.TSV;
+        csvOptions.valueDelimiter = "\t";
     }
+
+    args.exporter.onColumnExport.subscribe((columnArgs: IColumnExportingEventArgs) => {
+        // Don't export image fields
+        columnArgs.cancel = columnArgs.header === "Avatar" ||
+                            columnArgs.header === "CountryFlag";
+    });
 }
 ```
 
-The following sample demonstrates how to cancel the default exporting processes which occure when you click on the export buttons:
+The following sample demonstrates how to customize the exported files:
 
 <div class="sample-container loading" style="height:420px">
     <iframe id="grid-toolbar-sample-3-iframe" src='{environment:demosBaseUrl}/grid-toolbar-sample-3' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -154,7 +161,7 @@ The following fields are available on the **IGridToolbarExportEventArgs** event 
 | :--- | :--- | :--- |
 | `grid` | `IgxGridComponent` | A reference to the grid component which is about the be exported. |
 | `exporter` | `IgxBaseExporter` | A reference to the exporter object which will be used for the export operation. |
-| `type` | `string` | Provides the export type which is initiated ("excel" / "csv"). |
+| `options` | `IgxExporterOptionsBase` | A reference to the export options. |
 | `cancel` | `boolean` | This field is set to `false` by default. If you set it to `true` the export operation with default paramerers will not be started and you can provide your own export implementation. |
 
 ### Additional Resources
