@@ -12,7 +12,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 #### Demo
 
 <div class="sample-container loading" style="height:550px">
-    <iframe id="grid-sample-pinning-iframe" src='{environment:demosBaseUrl}/grid-sample-groupby' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="grid-sample-pinning-iframe" src='{environment:demosBaseUrl}/grid-groupby' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
@@ -53,15 +53,15 @@ public ngOnInit() {
 }
 ```
 
-During runtime the expressions are gettable and settable from the `groupingExpressions` property. If you need to just add or change an existing expression you may also use the `groupBy` method with both a single or an array of `ISortingExpression`.
+During runtime the expressions are gettable and settable from the `groupingExpressions` property. If you need to just add or change an existing expression you may also use the `groupBy` method with either a single or an array of `ISortingExpression`.
 
 ```typescript
 grid.groupBy({ fieldName: 'ProductName', dir: SortingDirection.Desc, ignoreCase: true });
 ```
 
-Grouping works in conjuction with sorting and grouping expressions are applied as sorting ones even though columns may be sorted without being grouped. You will always find the grouping expressions in the `sortingExpression` property, sorted in a way that grouped columns' expressions are always first. The sorting API will affect grouping if it changes the expression for a column that is grouped. Removing a grouping expression (ungrouping a column) also unsorts it.
+Grouping works in conjunction with sorting and grouping expressions are applied as sorting ones even though columns may be sorted without being grouped. You will always find the grouping expressions in the `sortingExpression` property, sorted in a way that grouped columns' expressions are always first. The sorting API will affect grouping if it changes the expression for a column that is grouped. Removing a grouping expression (ungrouping a column) also unsorts it.
 
-In addition to grouping expresions you can also control the expansion states for group rows. They are stored in a seperate property of the `igxGrid` component `groupingExpansionState`. A group row is uniquely identified based on the field name it is created for and the value it represents for each level of grouping. This means that the signature of an expansion state interface is the following:
+In addition to grouping expressions you can also control the expansion states for group rows. They are stored in a separate property of the `igxGrid` component `groupingExpansionState`. A group row is uniquely identified based on the field name it is created for and the value it represents for each level of grouping. This means that the signature of an expansion state interface is the following:
 
 ```typescript
 export interface IGroupByKey {
@@ -98,7 +98,7 @@ export interface IGroupByRecord {
 }
 ```
 
-As an example, the following template would make the group rows summary more verbous:
+As an example, the following template would make the group rows summary more verbose:
 
 ```html
 <ng-template igxGroupByRow let-groupRow>
