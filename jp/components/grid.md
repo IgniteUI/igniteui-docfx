@@ -650,6 +650,6 @@ import {
 |--- |--- |--- |
 |Column widths into `percentage`|Currently we do not support mixing column widths with `%` and `px`.
 |Skipped `height` on the parent of the grid or grid itself| The `grid` is not rendered correctly whenever the `height` on the parent or on the grid itself is omitted.|
-|`NaN` whenever filter number column|When filter number column and type a character different from digit, `NaN` value appers due incorrect cast and no filter is applied.|
+|`NaN` whenever filter number column|When filter number column and enter character different from digit, `NaN` value appers due incorrect cast and no filter is applied.|
 |`undefined` in edit mode|When `data` persists `undefined` values and enter into `edit mode` the string value `undefined` is displayed.|
 |Grid `width` |Currently the `width` of the grid is spanning the container(parent) it is placed in. Column `widths` does not reflect on the `view port` of the grid.|
