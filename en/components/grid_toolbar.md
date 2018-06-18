@@ -1,12 +1,12 @@
 ---
 title: Grid Toolbar Component - Native Angular | Ignite UI for Angular
 _description: With the Ignite UI for Angular Grid Toolbar component you can have a centralized location for IgxGrid features UI controls.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Component, Angular Grid, Angular Data Grid component, Angular Data Grid control, Angular Grid component, Angular Grid control, Angular High Performance Grid, Angular Data Grid Toolbar
+_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Component, Angular Grid, Angular Data Grid component, Angular Data Grid control, Angular Grid component, Angular Grid control, Angular High Performance Grid, Angular Data Grid Toolbar, Grid Toolbar, Angular Grid Toolbar, excel export, grid column hiding chooser, grid column pinning chooser
 ---
 
 ### Grid Toolbar
 
-The Grid in ignite UI for Angular supports a **toolbar** feature which is essentially a container for **UI** controls. The toolbar is located at the top of the grid and it matches the grid's horizontal size. The toolbar container hosts different UI controls which are related to some grid's features.
+The Grid in Ignite UI for Angular supports a **toolbar** feature which is essentially a container for **UI** operations. The toolbar is located at the top of the grid and it matches the grid's horizontal size. The toolbar container hosts different UI controls which are related to some grid's features - column hiding, column pinning, excel exporting, etc.
 
 #### Demo
 
@@ -18,7 +18,7 @@ The Grid in ignite UI for Angular supports a **toolbar** feature which is essent
 <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="grid-toolbar-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-The IgxGrid's toolbar is shown using the grid's `showToolbar` property - just set it to `true`. The toolbar supports a textual title which is left aligned and its content is set using the grid's `toolbarTitle` property. The following code snippet demonstrates how to create a toolbar and set its title:
+The IgxGrid's toolbar is shown using the grid's `showToolbar` property - just set it to `true`. The toolbar supports a textual title which is left aligned and its content is set using the grid's `toolbarTitle` property. The following code snippet demonstrates how to enable a toolbar and set its title:
 
 ```html
 <igx-grid [data]="data" [autoGenerate]="true" height="400px" width="600px"
