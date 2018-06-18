@@ -647,7 +647,7 @@ import {
 
 
 |Limitation|Description|
-|--- |--- |--- |
+|--- |--- |
 |Column widths set in `percentage` and `px`|Currently we do not support mixing of column widths with `%` and `px`.
 |When `height` of the grid's parent element is not set| The `grid` is not rendered correctly when the `height` of the parent container is not set.|
 |When grid's `height` is not set|When grid's `height` is not set, it will span the parent cantainer it is placed in.|
