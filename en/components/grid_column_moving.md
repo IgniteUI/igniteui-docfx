@@ -6,7 +6,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ### Grid Column Moving
 
-The Grid component in Ignite UI for Angular provides **column moving** to allow column reordering via standard drag/drop mouse gestures.
+The Grid component in Ignite UI for Angular provides **column moving** to allow columns reordering via standard drag/drop mouse or touch gestures.
 
 #### Demo
 
