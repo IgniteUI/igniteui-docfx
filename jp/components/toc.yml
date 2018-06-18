@@ -19,6 +19,9 @@
     - name: 集計
       href: grid_summaries.md
       new: true
+    - name: Column moving
+      href: grid_column_moving.md
+      new: true
     - name: 列のピン固定
       href: grid_column_pinning.md
       new: true

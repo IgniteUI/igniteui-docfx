@@ -247,6 +247,15 @@ The following getters are available on the **igx-tab-item** component:
 | `index` | number | Gets the index of the tab in the tab collection. |
 | `relatedGroup` | IgxTabsGroupComponent | Gets the group associated with the tab. |
 
+<div class="divider--half"></div>
+
+
+#### Methods
+The following method is available on the **igx-tabs-group** component:
+| Name | Description |
+| :--- | :--- | 
+| `select()` | Selects the related IgxTabsGroupComponent. |
+
 <div class="divider"></div>
 
 ### Additional Resources
