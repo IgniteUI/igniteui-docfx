@@ -28,9 +28,11 @@
     - name: 選択
       href: grid_selection.md
       new: true
-    - name: Searching
+    - name: 検索
       href: grid_search.md
       new: true
+    - name: ツールバー
+      href: grid_toolbar.md
     - name: Excel エクスポート
       href: exporter_excel.md
       new: true
