@@ -217,7 +217,7 @@ The result is as follows:
 | `formatOptions` | `Object` | The format options passed along with the `locale` property used for formatting the dates. |
 | `formatViews` | `Object` | The format views passed along with the `locale` property used for formatting dates. |
 | `label` | `string` | Changes the default text label. |
-| `labelVisability` | `string ` | Hide/Show the label. |
+| `labelVisibility` | `string ` | Hide/Show the label. |
 
 #### Outputs
 <div class="divider--half"></div>
