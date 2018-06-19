@@ -51,7 +51,7 @@ public initColumns(column: IgxColumnComponent) {
 
 ### Toolbar's Column Hiding UI
 
-The built-in Column Hiding UI can be shown by using a dropdown button which is inside the grid's toolbar.
+The built-in Column Hiding UI is placed inside an IgxDropDown in the grid's toolbar. We can show/hide the Column Hiding UI by using this exact dropdown.
 For this purpose all we have to do is set both the `showToolbar` and the `columnHiding` properties of the grid to true. If the toolbar is not enabled, enabling the `columnHiding` property will have no effect.
 We will also add a title to our toolbar by using the `toolbarTitle` property and a custom style for our grid's wrapper.
 
@@ -88,7 +88,17 @@ The `hiddenColumnsText` property is quite handy since it can be used for localiz
 </div>
 ```
 
-In order to use the expanded set of functionalities for the column hiding UI, we can use the grid's `columnHidingUI` property, which returns a reference to the column hiding UI component itself. This way we can access its respective API and use it according to our application's requirements.
+By using the `columnsAreaMaxHeight` property of the column hiding UI, we can set the maximum height of the area that contains the columns. This way if we have a lot of columns and not all of them can fit in the container, a scrollbar will appear, which will allow us to navigate to any column we want by keeping the search input pinned at the top and the show/hide all buttons at the bottom.
+
+```typescript
+// columnHiding.component.ts
+
+public ngAfterViewInit() {        
+    this.grid.toolbar.columnHidingUI.columnsAreaMaxHeight = "200px";
+}
+```
+
+In order to use the expanded set of functionalities for the column hiding UI, we can use the toolbar's `columnHidingUI` property, which returns a reference to the column hiding UI component itself. This way we can access its respective API and use it according to our application's requirements.
 
 You can see the result of the code from above at the beginning of this article in the [Column Hiding Demo](#demo) section.
 
@@ -112,13 +122,13 @@ import {
 export class AppModule {}
 ```
 
-Now let's create our IgxColumnHidingComponent! We will set the `columns` property of the component to the columns of our grid. We will also need the `togglable` property set to false, since we will not be using a dropdown button for displaying the component (which is not the case with the toolbar's column hiding UI, where this property is true by default). We will include some custom styles to make our application look even better!
+Now let's create our IgxColumnHidingComponent! In our application, we will place it next to the grid (which is not the case with the toolbar's column hiding UI, where the component is inside a dropdown by design). We will also set the `columns` property of the component to the columns of our grid and include some custom styles to make our application look even better!
 
 ```html
 <!--columnHiding.component.html-->
 
 <div class="columnHidingContainer">
-    <igx-column-hiding #columnHidingUI id="columnHidingUI" [columns]="grid.columns" [togglable]="false">
+    <igx-column-hiding #columnHidingUI id="columnHidingUI" [columns]="grid.columns">
     </igx-column-hiding>
 </div>
 <div class="gridContainer">
@@ -136,11 +146,12 @@ Now let's create our IgxColumnHidingComponent! We will set the `columns` propert
 .grid__wrapper {
     margin: 15px;
     display: flex;
-    flex-direction: row;    
+    flex-direction: row;
 }
 
 .columnHidingContainer {
-    width: 300px;
+    width: 350px;
+    height: 560px;
     display: flex;
     flex-direction: column;
     padding-left: 20px;
@@ -151,8 +162,8 @@ Now let's create our IgxColumnHidingComponent! We will set the `columns` propert
 }
 
 .columnsOrderOptionsContainer {
-    margin-top: 50px;
-    margin-bottom: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .gridContainer {
@@ -171,7 +182,7 @@ A couple more things we can do in order to enrich the user experience of our col
 <!--columnHiding.component.html-->
 
 <div class="columnHidingContainer">
-    <igx-column-hiding #columnHidingUI id="columnHidingUI" [columns]="grid.columns" [togglable]="false"
+    <igx-column-hiding #columnHidingUI id="columnHidingUI" [columns]="grid.columns"
                        title="Column Hiding" filterColumnsPrompt="Type here to search">
     </igx-column-hiding>
 </div>
@@ -271,12 +282,11 @@ The following properties are available on the **IgxColumnHidingComponent**:
 | `title` | string | The title to be displayed. |
 | `filterColumnsPrompt` | string | The prompt to be displayed in the filter input. |
 | `filterCriteria` | string | The value to filter the columns list by. |
-| `togglable` | boolean | Whether the Column Hiding UI should be displayed in a Toggle. (defaults to true) |
 | `disableHideAll` | boolean | 	Returns whether the Hide All button will be disabled. |
 | `disableShowAll` | boolean | Returns whether the Show All button will be disabled. |
 | `showAllText` | string | The text to be displayed inside the Show All button. |
 | `hideAllText` | string | The text to be displayed inside the Hide All button. |
-| `dropDown` | IgxDropDownComponent | Reference to the dropDown that is used for showing/closing the built-in Column Hiding UI (The dropDown exposes events like `onOpening`, `onOpened`, `OnClosing`, `OnClosed`). |
+| `columnsAreaMaxHeight` | string | The maximum height of the area of the Column Hiding UI that contains the columns. |
 
 <div class="divider"></div>
 
@@ -304,7 +314,6 @@ The following methods are available on the **IgxColumnHidingComponent**:
 | :--- | :--- | :--- | :--- |
 | `showAllColumns` | void | N/A | Shows all columns in the grid. |
 | `hideAllColumns` | void | N/A | Hides all columns in the grid. |
-| `toggleDropDown` | void | N/A | Shows/Hides the dropdown that contains the built-in Column Hiding UI. |
 
 <div class="divider"></div>
 
