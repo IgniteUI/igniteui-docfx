@@ -7,8 +7,8 @@ _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Nati
 <div class="feature feature--hero">
   <div class="feature__details">
     <h2 id="the-fastest-data-angular-data-grid">The Fastest Angular Data Grid</h2>
-    <p>Ignite UI for Angular’s <a href="/components/grid.html">Data Grid</a> is built for optimization, speed, high-performance, and smooth handling of large data sets. With an updated virtualization directive and powerful grid features, your data grid is ready for no-lag scrolling through millions of data points.</p>
-    <a class="cta-btn" href="https://www.google.com">get started for free</a>
+    <p>Ignite UI for Angular’s [Data Grid](grid.md) is built for optimization, speed, high-performance, and smooth handling of large data sets. With an updated virtualization directive and powerful grid features, your data grid is ready for no-lag scrolling through millions of data points.</p>
+    <a class="cta-btn" href="https://www.infragistics.com/products/ignite-ui-angular/getting-started">get started for free</a>
   </div>
   <div class="feature__image feature__image--right">
     <img src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid.svg" alt="Ignite UI for Angular's Data Grid optimized for speed and performance.">
@@ -21,10 +21,10 @@ _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Nati
   <div class="feature">
     <div class="feature__image feature__image--right">
       <img class="b-lazy b-lazy-gifs" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-lazy-load.png" data-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-virtualization-performance-768.jpg" data-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-virtualization-performance-480.jpg 480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-virtualization-performance-768.jpg 768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-virtualization-performance-1100.jpg 1100w" data-gif-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-virtualization-performance-768.gif" data-gif-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-virtualization-performance-480.gif 480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-virtualization-performance-768.gif 768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-virtualization-performance-1100.gif 1100w" sizes="(min-width: 1800px) 575px,(max-width: 1799px) and (min-width: 1200px) 50vw,(max-width: 1199px) and (min-width: 992px) 33vw,(max-width: 991px) and (min-width: 768px) 50vw, 100vw" alt="The virtualization directive brings smooth scrolling to the Angular Data Grid">
-      <a href="/components/grid_virtualization.html" class="feature__more-details">Virtualization Directive Walkthrough</a>
+      <a href="grid_virtualization.md" class="feature__more-details">Virtualization Directive Walkthrough</a>
     </div>
     <div class="feature__details">
-      <h3 id="virtualization-and-performance"><a href="/components/grid_virtualization.html">Virtualization and Performance</a></h3>
+      <h3 id="virtualization-and-performance">[Virtualization and Performance](grid_virtualization.md)</h3>
       <p>The updated Ignite UI for Angular Virtualization directive ensures that you can seamlessly scroll through large-scale data sets with millions of points, giving our fastest Angular Data Grid high-speed rendering and no-lag loading.</p>
     </div>
   </div>
@@ -32,10 +32,10 @@ _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Nati
   <div class="feature">
     <div class="feature__image feature__image--left">
       <img class="b-lazy" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-lazy-load.png" data-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-paging-768.gif" data-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-paging-480.gif 480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-paging-768.gif 768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-paging-1100.gif 1100w" sizes="(min-width: 1800px) 575px,(max-width: 1799px) and (min-width: 1200px) 50vw,(max-width: 1199px) and (min-width: 992px) 33vw,(max-width: 991px) and (min-width: 768px) 50vw, 100vw" alt="Paging component allows for programmatic pagination">
-      <a href="/components/grid.html" class="feature__more-details">Paging Component Documentation</a>
+      <a href="grid.md" class="feature__more-details">Paging Component Documentation</a>
     </div>
     <div class="feature__details">
-      <h3 id="paging"><a href="/components/grid_virtualization.html">Paging</a></h3>
+      <h3 id="paging">[Paging](grid.md)</h3>
       <p>Controlling whether a feature is enabled, the paging component allows for templated and programmatic pagination.</p>
     </div>
   </div>
@@ -43,10 +43,10 @@ _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Nati
   <div class="feature">
     <div class="feature__image feature__image--right">
       <img class="b-lazy" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-lazy-load.png" data-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-cell-summaries-768.jpg" data-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-cell-summaries-480.jpg 480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-cell-summaries-768.jpg 768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-cell-summaries-1100.jpg 1100w" sizes="(min-width: 1800px) 575px,(max-width: 1799px) and (min-width: 1200px) 50vw,(max-width: 1199px) and (min-width: 992px) 33vw,(max-width: 991px) and (min-width: 768px) 50vw, 100vw" alt="The Summaries component shows summary items in separate container">
-      <a href="/components/grid_summaries.html" class="feature__more-details">Summaries Component Explained</a>
+      <a href="grid_summaries.md" class="feature__more-details">Summaries Component Explained</a>
     </div>
     <div class="feature__details">
-      <h3 id="summaries"><a href="/components/grid_summaries.html">Summaries</a></h3>
+      <h3 id="summaries">[Summaries](grid_summaries.md)</h3>
       <p>See predefined default summary items for a column in a separate container.</p>
     </div>
   </div>
@@ -74,10 +74,10 @@ _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Nati
   <div class="feature">
     <div class="feature__image feature__image--left">
       <img class="b-lazy" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-lazy-load.png" data-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-live-update-768.gif" data-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-live-update-480.gif 480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-live-update-768.gif  768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-live-update-1100.gif 1100w" sizes="(min-width: 1800px) 575px,(max-width: 1799px) and (min-width: 1200px) 50vw,(max-width: 1199px) and (min-width: 992px) 33vw,(max-width: 991px) and (min-width: 768px) 50vw, 100vw" alt="Real-time Angular Grid updates for Grid edits and changes.">
-      <a href="/components/grid.html" class="feature__more-details">See Live Updates demo</a>
+      <a href="grid.md" class="feature__more-details">See Live Updates demo</a>
     </div>
     <div class="feature__details">
-      <h3 id="live-updates"><a href="/components/grid.html">Live Updates</a></h3>
+      <h3 id="live-updates">[Live Updates](grid.md)</h3>
       <p>Experience updates that happen in real-time with your data grid edits and changes and connect your grid to a live feed.</p>
     </div>
   </div>
@@ -115,10 +115,10 @@ _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Nati
   <div class="feature">
     <div class="feature__image feature__image--left">
       <img class="b-lazy" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-lazy-load.png" data-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-filtering-768.gif" data-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-filtering-480.gif 480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-filtering-768.gif  768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-filtering-1100.gif 1100w" sizes="(min-width: 1800px) 575px,(max-width: 1799px) and (min-width: 1200px) 50vw,(max-width: 1199px) and (min-width: 992px) 33vw,(max-width: 991px) and (min-width: 768px) 50vw, 100vw" alt="Per-column filtering to filter in the Angular Data Grid.">
-      <a href="/components/grid_filtering.html" class="feature__more-details">Filtering Explained</a>
+      <a href="grid_filtering.md" class="feature__more-details">Filtering Explained</a>
     </div>
     <div class="feature__details">
-      <h3 id="filtering"><a href="/components/grid_filtering.html">Filtering</a></h3>
+      <h3 id="filtering">[Filtering](grid_filtering.md)</h3>
       <p>The grid features both a simplistic and complex per-column filtering UI</p>
     </div>
   </div>
@@ -136,10 +136,10 @@ _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Nati
   <div class="feature">
     <div class="feature__image feature__image--left">
       <img class="b-lazy" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-lazy-load.png" data-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-sorting-768.gif" data-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-sorting-480.gif 480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-sorting-768.gif 768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-sorting-1100.gif 1100w" sizes="(min-width: 1800px) 575px,(max-width: 1799px) and (min-width: 1200px) 50vw,(max-width: 1199px) and (min-width: 992px) 33vw,(max-width: 991px) and (min-width: 768px) 50vw, 100vw" alt="Sort columns in the Angular Data Grid.">
-      <a href="/components/grid_sorting.html" class="feature__more-details">Sorting with the Data Grid</a>
+      <a href="grid_sorting.md" class="feature__more-details">Sorting with the Data Grid</a>
     </div>
     <div class="feature__details">
-      <h3 id="sorting"><a href="/components/grid_sorting.html">Sorting</a></h3>
+      <h3 id="sorting">[Sorting](grid_sorting.md)</h3>
       <p>The grid supports a mix of non-sortable and sortable columns, since Grid Sorting is on a per-column level.</p>
     </div>
   </div>
@@ -147,10 +147,10 @@ _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Nati
   <div class="feature">
     <div class="feature__image feature__image--right">
       <img class="b-lazy" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-lazy-load.png" data-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-filtering-768.jpg" data-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-filtering-480.jpg 480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-filtering-768.jpg  768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-filtering-1100.jpg 1100w" sizes="(min-width: 1800px) 575px,(max-width: 1799px) and (min-width: 1200px) 50vw,(max-width: 1199px) and (min-width: 992px) 33vw,(max-width: 991px) and (min-width: 768px) 50vw, 100vw" alt="Text filter columns in the Angular Data Grid.">
-      <a href="/components/grid_filtering.html" class="feature__more-details">Column Text Filtering via the Filtering API</a>
+      <a href="grid_filtering.md" class="feature__more-details">Column Text Filtering via the Filtering API</a>
     </div>
     <div class="feature__details">
-      <h3 id="column-text-filter"><a href="/components/grid_filtering.html">Column Text Filter</a></h3>
+      <h3 id="column-text-filter">[Column Text Filter](grid_filtering.md)</h3>
       <p>Use text to filter on a per-column level to quickly find information.</p>
     </div>
   </div>
@@ -158,10 +158,10 @@ _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Nati
   <div class="feature">
     <div class="feature__image feature__image--left">
       <img class="b-lazy" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-lazy-load.png" data-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-cell-virtual-scrolling-768.jpg" data-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-cell-virtual-scrolling-480.jpg 480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-cell-virtual-scrolling-768.jpg  768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-cell-virtual-scrolling-1100.jpg 1100w" sizes="(min-width: 1800px) 575px,(max-width: 1799px) and (min-width: 1200px) 50vw,(max-width: 1199px) and (min-width: 992px) 33vw,(max-width: 991px) and (min-width: 768px) 50vw, 100vw" alt="Virtual row rendering for scrolling in Angular Data Grid.">
-      <a href="/components/grid_virtualization.html" class="feature__more-details">Virual Row Implementation</a>
+      <a href="grid_virtualization.md" class="feature__more-details">Virual Row Implementation</a>
     </div>
     <div class="feature__details">
-      <h3 id="virtual-row"><a href="/components/grid_virtualization.html">Virtual Row</a></h3>
+      <h3 id="virtual-row">[Virtual Row](grid_virtualization.md)</h3>
       <p>Quickly navigate through on-screen rows with the rest rendering immediately upon scrolling.</p>
     </div>
   </div>
@@ -169,10 +169,10 @@ _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Nati
   <div class="feature">
     <div class="feature__image feature__image--right">
       <img class="b-lazy" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-lazy-load.png" data-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-cell-virtual-scrolling-768.jpg" data-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-cell-virtual-scrolling-480.jpg 480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-cell-virtual-scrolling-768.jpg  768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-cell-virtual-scrolling-1100.jpg 1100w" sizes="(min-width: 1800px) 575px,(max-width: 1799px) and (min-width: 1200px) 50vw,(max-width: 1199px) and (min-width: 992px) 33vw,(max-width: 991px) and (min-width: 768px) 50vw, 100vw" alt="Virtual column rendering for scrolling in Angular Data Grid.">
-      <a href="/components/grid_virtualization.html" class="feature__more-details">Virual Column Implementation</a>
+      <a href="grid_virtualization.md" class="feature__more-details">Virual Column Implementation</a>
     </div>
     <div class="feature__details">
-      <h3 id="virtual-column"><a href="/components/grid_virtualization.html">Virtual Column</a></h3>
+      <h3 id="virtual-column">[Virtual Column](grid_virtualization.md)</h3>
       <p>Easily navigate through on-screen columns with the rest rendering immediately upon scrolling.</p>
     </div>
   </div>
