@@ -1,24 +1,25 @@
+﻿---
+title: グリッド ツールバー コンポーネント - ネイティブ Angular | Ignite UI for Angular
+_description: Ignite UI for Angular Grid Toolbar コンポーネントは、IgxGrid 機能 UI コントロールを一元管理できます。
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, ネイティブ Angular コンポーネント, Angular Grid, Angular Data Grid コンポーネント, Angular Data Grid コントロール, Angular Grid コンポーネント, Angular Grid コントロール, Angular 高いパフォーマンス Grid, Angular Data Grid Toolbar, Grid Toolbar, Angular Grid Toolbar, excel エクスポート, グリッド列非表示選択, グリッド列ピン固定選択
+_language: ja
 ---
-title: Grid Toolbar Component - Native Angular | Ignite UI for Angular
-_description: With the Ignite UI for Angular Grid Toolbar component you can have a centralized location for IgxGrid features UI controls.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Component, Angular Grid, Angular Data Grid component, Angular Data Grid control, Angular Grid component, Angular Grid control, Angular High Performance Grid, Angular Data Grid Toolbar, Grid Toolbar, Angular Grid Toolbar, excel export, grid column hiding chooser, grid column pinning chooser
----
 
-### Grid Toolbar
+### グリッド ツールバー
 
-The Grid in Ignite UI for Angular supports a **toolbar** feature which is essentially a container for **UI** operations. The toolbar is located at the top of the grid and it matches the grid's horizontal size. The toolbar container hosts different UI controls which are related to some of the grid's features - column hiding, column pinning, excel exporting, etc.
+Ignite UI for Angular のグリッドは、**UI** 操作のコンテナーとなる **toolbar** 機能をサポートします。ツールバーはグリッドの一番上に配置されグリッドの水平サイズに一致します。ツールバーのコンテナーは、グリッド機能に関連するさまざまな UI コントロール (列の非表示、列ピン固定、エクセル エクスポートなど) をホストします。
 
-#### Demo
+#### デモ
 
 <div class="sample-container loading" style="height:420px">
     <iframe id="grid-toolbar-sample-1-iframe" src='{environment:demosBaseUrl}/grid-toolbar-sample-1' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="grid-toolbar-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="grid-toolbar-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
 </div>
 
-The IgxGrid's toolbar is shown using the grid's `showToolbar` property - just set it to `true`. The toolbar supports a textual title which is left aligned and its content is set using the grid's `toolbarTitle` property. The following code snippet demonstrates how to enable a toolbar and set its title:
+`showToolbar` プロパティを使用して IgxGrid ツールバーを表示するには、`true` に設定します。ツールバーは、テキスト タイトルの左揃えをサポートし、グリッドの `toolbarTitle` プロパティを使用してコンテンツを設定します。以下のコード スニペットは、ツールバーとタイトルを設定する方法を確認できます。
 
 ```html
 <igx-grid [data]="data" [autoGenerate]="true" height="400px" width="600px"
@@ -27,13 +28,13 @@ The IgxGrid's toolbar is shown using the grid's `showToolbar` property - just se
 </igx-grid>
 ```
 
-#### Exporting
+#### エクスポート
 
-The IgxGrid's toolbar can be configured to allow IgxGrid's data exporting in different formats - MS Excel and CSV. You can enable each exporting format independently by setting its dedicated boolean property to true:
-- for MS Excel export set the grid's `exportExcel` property to `true`
-- for CSV export set the grid's `exportCsv` property to `true`
+IgxGrid のツールバーは、さまざまな形式 (MS Excel および CSV) の IgxGrid のデータ エクスポートを構成できます。ブール値プロパティを true に設定して個別にエクスポート形式を設定できます。
+- MS Excel エクスポートは、グリッドの `exportExcel` プロパティを `true` に設定できます。
+- CSV エクスポートは、グリッドの `exportCsv` プロパティを `true` に設定できます。
 
-The available export options are hosted in a drop down which is shown when the main export button on the toolbar is pressed. There are properties for configuring each button's text and they are listed in the API section below.
+エクスポート オプションは、ドロップダウンでホストし、ツールバーでメインのエクスポート ボタンが押されたときに表示されます。各ボタン テキストを構成するためのプロパティがあり、以下のAPI セクションに一覧があります。
 
 <div class="sample-container loading" style="height:420px">
     <iframe id="grid-toolbar-sample-2-iframe" src='{environment:demosBaseUrl}/grid-toolbar-sample-2' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -43,7 +44,7 @@ The available export options are hosted in a drop down which is shown when the m
 <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="grid-toolbar-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-The following code snippet demonstrates how to enable the MS Excel export and CSV export features on the toolbar and also set titles for the exporting buttons:
+以下のコード スニペットは、ツールバーで MS Excel エクスポートと CSV エクスポートの機能を有効にし、エクスポート ボタンのにタイトルを設定する方法を示します。
 
 ```html
 <igx-grid [data]="data" [autoGenerate]="true" height="400px" width="600px"
@@ -57,7 +58,7 @@ The following code snippet demonstrates how to enable the MS Excel export and CS
 </igx-grid>
 ```
 
-The export to MS Excel and the export to CSV features are using respectively the `IgxExcelExporterService` and `IgxCsvExporterService` as providers. If you need to use any of them you should specify them in the 'providers' array of your 'app.module.ts' file. For example the following code snippet demonstrates how to include all exporter services:
+MS Excel および CSV へのエクスポートは、プロバイダーとしてそれぞれ `IgxExcelExporterService` と `IgxCsvExporterService` を使用します。いずれかを使用する場合は、'app.module.ts' ファイルのプロバイダー配列で指定してください。たとえば、以下のコード スニペットは、すべてのエクスポーター サービスを含む方法を示します。
 
 ```typescript
 // app.module.ts
@@ -72,16 +73,16 @@ import { IgxExcelExporterService, IgxCsvExporterService } from "igniteui-angular
 export class AppModule {}
 ```
 
-#### Customizing the Export
+#### エクスポートをカスタマイズ
 
-When the user initiates an export process the IgxGrid's `onToolbarExporting` event is emitted. This event exposes both the export options and the exporter itself. This allows you to configure the export process.
+エクスポート処理を開始する際に IgxGrid の `onToolbarExporting` イベントが発生されます。このイベントはエクスポート オプションとエクスポーターを公開し、エクスポート処理を構成できます。
 
 > [!NOTE]
-> By default when eporting to CSV the exporter exports using a comma separator and uses a '.csv' extension for the output file.
-> You can customize these exporting parameters by subscribing to events of the exporter or changing the values of the exporter options fields.
-> You can also cancel the export process by setting the cancel field of the event args to true.
+> デフォルトで CSV にエクスポートした際にエクスポーターがカンマ区切りセパレーターを使用してエクスポートし、出力ファイルに .csv 拡張しを使用します。
+> エクスポーターのイベントにサブスクライブまたはエクスポーター オプション フィールドの値を変更して、エクスポート パラメーターをカスタマイズできます。
+> またイベント引数のキャンセル フィールドを true に設定してエクスポートをキャンセルすることもできます。
 
-The following code snippet demonstrates how to subscribe to the `onToolbarExporting` event and cancel the default exporting process.
+以下のコード スニペットは、`onToolbarExporting` イベントにサブスクライブする方法やデフォルトのエクスポート処理をキャンセルする方法を示します。
 
 ```html
 <igx-grid ... (onToolbarExporting)="toolbarExportingHandler($event)"></igx-grid>
@@ -114,7 +115,7 @@ public toolbarExportingHandler(args) {
 }
 ```
 
-The following sample demonstrates how to customize the exported files:
+以下のサンプルは、エクスポート ファイルをカスタマイズする方法を示します。
 
 <div class="sample-container loading" style="height:420px">
     <iframe id="grid-toolbar-sample-3-iframe" src='{environment:demosBaseUrl}/grid-toolbar-sample-3' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -126,48 +127,48 @@ The following sample demonstrates how to customize the exported files:
 
 <div class="divider"></div>
 
-### API Summary
+### API まとめ
 
-The Grid Toolbar service has a few more APIs to explore, which are listed below.
+以下は、Grid Toolbar サービスのその他の API です。
 
-#### Inputs
+#### 入力
 
-The following inputs are available on the **IgxGrid** component:
-| Name | Type | Description |
+以下の入力は **IgxGrid** コンポーネントで利用できます。
+| 名前 | 型 | 説明 |
 | :--- | :--- | :--- |
-| `showToolbar` | boolean | Show or hide the grid's toolbar. |
-| `toolbarTitle` | string | Sets the toolbar title. |
-| `exportExcel` | boolean | Show or hide the option for exporting to MS Excel. |
-| `exportCsv` | boolean | Show or hide the option for exporting to CSV. |
-| `exportText` | string | Sets the textual content for the main export button. |
-| `exportExcelText` | string | Sets the textual content for the MS Excel export button. |
-| `exportCsvText` | string | Sets the textual content for the CSV export button. |
+| `showToolbar` | boolean | グリッドのツールバーを表示または非表示にします。 |
+| `toolbarTitle` | string | ツールバーのタイトルを設定します。 |
+| `exportExcel` | boolean | MS Excel エクスポートするオプションを表示または非表示にします。|
+| `exportCsv` | boolean | MS CSV エクスポートするオプションを表示または非表示にします。 |
+| `exportText` | string | エクスポート ボタンのテキスト コンテンツを設定します。 |
+| `exportExcelText` | string | MS Export エクスポート ボタンのテキスト コンテンツを設定します。 |
+| `exportCsvText` | string | CSV エクスポート ボタンのテキスト コンテンツを設定します。 |
 
 <div class="divider"></div>
 
-#### Outputs
+#### 出力
 
-The following outputs are available on the **IgxGrid** component:
-| Name | Type | Description |
+以下の出力は **IgxGrid** コンポーネントで利用できます。
+| 名前 | 型 | 説明 |
 | :--- | :--- | :--- |
-| `onToolbarExporting` | EventEmitter<`IGridToolbarExportEventArgs`> | Emitted when an export process is initiated by the user. |
+| `onToolbarExporting` | EventEmitter<`IGridToolbarExportEventArgs`> | ユーザーがエクスポート処理が開始すると発生されます。 |
 
 <div class="divider"></div>
 
-#### Event Arguments
+#### イベント引数
 
-The following fields are available on the **IGridToolbarExportEventArgs** event object:
-| Name | Type | Description |
+以下のフィールドは **IGridToolbarExportEventArgs** イベント オブジェクトで使用できます。
+| 名前 | 型 | 説明 |
 | :--- | :--- | :--- |
-| `grid` | `IgxGridComponent` | A reference to the grid component which is about the be exported. |
-| `exporter` | `IgxBaseExporter` | A reference to the exporter object which will be used for the export operation. |
-| `options` | `IgxExporterOptionsBase` | A reference to the export options. |
-| `cancel` | `boolean` | Whether the export operation should be canceled. |
+| `grid` | `IgxGridComponent` | エクスポートされるグリッド コンポーネントへの参照。 |
+| `exporter` | `IgxBaseExporter` | エクスポート処理に使用されるエクスポーター オブジェクトへの参照。 |
+| `options` | `IgxExporterOptionsBase` | エクスポート オプションへの参照。 |
+| `cancel` | `boolean` | このフィールドはデフォルトで `false` に設定されています。`true` に設定した場合、デフォルト パラメーターでエクスポート処理が開始されないため、代わりにカスタムなエクスポートを実装できます。 |
 
-### Additional Resources
+### その他のリソース
 
 <div class="divider--half"></div>
-Our community is active and always welcoming to new ideas.
+コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
