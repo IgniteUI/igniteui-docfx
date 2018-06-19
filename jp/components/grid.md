@@ -643,7 +643,7 @@ import {
 
 ## Known Limitations
 
-<div class="devider"></div>
+<div class="divider"></div>
 
 |Limitation|Description|
 |--- |--- |

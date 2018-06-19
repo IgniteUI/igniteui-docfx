@@ -641,7 +641,7 @@ Our community is active and always welcoming to new ideas.
 
 ## Known Limitations
 
-<div class="devider"></div>
+<div class="divider"></div>
 
 |Limitation|Description|
 |--- |--- |
