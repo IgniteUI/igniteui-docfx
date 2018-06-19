@@ -6,7 +6,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ### Grid Toolbar
 
-The Grid in Ignite UI for Angular supports a **toolbar** feature which is essentially a container for **UI** operations. The toolbar is located at the top of the grid and it matches the grid's horizontal size. The toolbar container hosts different UI controls which are related to some grid's features - column hiding, column pinning, excel exporting, etc.
+The Grid in Ignite UI for Angular supports a **toolbar** feature which is essentially a container for **UI** operations. The toolbar is located at the top of the grid and it matches the grid's horizontal size. The toolbar container hosts different UI controls which are related to some of the grid's features - column hiding, column pinning, excel exporting, etc.
 
 #### Demo
 
@@ -74,11 +74,11 @@ export class AppModule {}
 
 #### Customizing the Export
 
-When the user initiates an export process the IgxGrid's `onToolbarExporting` event is emitted. This event exposes the export options and the exporter and this allows you to configure the export process.
+When the user initiates an export process the IgxGrid's `onToolbarExporting` event is emitted. This event exposes both the export options and the exporter itself. This allows you to configure the export process.
 
 > [!NOTE]
 > By default when eporting to CSV the exporter exports using a comma separator and uses a '.csv' extension for the output file.
-> You can customize these exporting parameters by subscribing to events of the exporter or changing the values of the exporter options fileds.
+> You can customize these exporting parameters by subscribing to events of the exporter or changing the values of the exporter options fields.
 > You can also cancel the export process by setting the cancel field of the event args to true.
 
 The following code snippet demonstrates how to subscribe to the `onToolbarExporting` event and cancel the default exporting process.
@@ -138,7 +138,7 @@ The following inputs are available on the **IgxGrid** component:
 | `showToolbar` | boolean | Show or hide the grid's toolbar. |
 | `toolbarTitle` | string | Sets the toolbar title. |
 | `exportExcel` | boolean | Show or hide the option for exporting to MS Excel. |
-| `exportCsv` | boolean | Show ot hide the option for exporting to CSV. |
+| `exportCsv` | boolean | Show or hide the option for exporting to CSV. |
 | `exportText` | string | Sets the textual content for the main export button. |
 | `exportExcelText` | string | Sets the textual content for the MS Excel export button. |
 | `exportCsvText` | string | Sets the textual content for the CSV export button. |
@@ -162,7 +162,7 @@ The following fields are available on the **IGridToolbarExportEventArgs** event 
 | `grid` | `IgxGridComponent` | A reference to the grid component which is about the be exported. |
 | `exporter` | `IgxBaseExporter` | A reference to the exporter object which will be used for the export operation. |
 | `options` | `IgxExporterOptionsBase` | A reference to the export options. |
-| `cancel` | `boolean` | This field is set to `false` by default. If you set it to `true` the export operation with default paramerers will not be started and you can provide your own export implementation. |
+| `cancel` | `boolean` | Whether the export operation should be canceled. |
 
 ### Additional Resources
 
