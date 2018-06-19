@@ -28,7 +28,7 @@ In order to be able to enter edit mode for specific cell, you should first set t
 
 You can enter edit mode for specific cell, when an editable cell is focused in one of the following ways:
  - on double click;
- - on single click - Single click will enter edit mode only if the previously selected cell was in edit mode and currently selected cell is editable. If the previously selected cell was not in edit mode, single click will select the cell without entering edit mode.
+ - on single click - Single click will enter edit mode only if the previously selected cell was in edit mode and currently selected cell is editable. If the previously selected cell was not in edit mode, single click will select the cell without entering edit mode;
  - on key press `enter`;
  - on key press `F2`;
 
@@ -56,7 +56,7 @@ You can also modify the cell value and through IgxGrid API:
 ```
 Please notice that if the cell you want to update is outside grid's display container the new value will not be submitted.
 
-Another way to update cell is directly through update method of IgxCellCOmponent:
+Another way to update cell is directly through update method of IgxCellComponent:
 
 ```typescript
 ...
@@ -66,3 +66,18 @@ Another way to update cell is directly through update method of IgxCellCOmponent
     }
 ...
 ```
+If you want to define a custom template which will be applied when the cell is edit mode, you can see the documentation for [Grid Columns configuration](grid.md#columns-configuration).
+
+### Additional Resources
+<div class="divider--half"></div>
+
+* [Grid overview](grid.md)
+* [Virtualization and Performance](grid_virtualization.md)
+* [Paging](grid_paging.md)
+* [Filtering](grid_filtering.md)
+* [Sorting](grid_sorting.md)
+* [Summaries](grid_summaries.md)
+* [Column Pinning](grid_column_pinning.md)
+* [Column Resizing](grid_column_resizing.md)
+* [Selection](grid_selection.md)
+* [Searching](grid_search.md)
