@@ -641,13 +641,13 @@ Our community is active and always welcoming to new ideas.
 
 ## Grid Limitations
 
-<div ckass="devider"></div>
+<div class="devider"></div>
 
 |Limitation|Description|
 |--- |--- |
 |Column widths set in `percentage` and `px`|Currently we do not support mixing of column widths with `%` and `px`.
 |When `height` of the grid's parent element is not set| The `grid` is not rendered correctly when the `height` of the parent container is not set.|
-|When grid's `height` is not set|When grid's `height` is not set, it will span the parent cantainer it is placed in.|
-|`NaN` is returned when try to filter column of type number|if value different than `number` is entered into the filtering input, `NaN` is returned due incorrect cast and no filter is applied.|
-|Grid `width` does not depend on the column widths | The `width` of all columns does not determine the spanning of the grid itself, it is determined by the parent container dimensions or the difined grid's `width`.
-|Grid nested in parent container | When grid's `width` is not set and it is placed in parent container with defined dimensions, the grid spans to this container.
+|When grid's `height` is not set|When grid's `height` is not set, it will span the parent container it is placed in.|
+|When trying to filter a column of type `number`|If a value different than `number` is entered into the filtering input, `NaN` is returned due to an incorrect cast|
+|Grid `width` does not depend on the column widths | The `width` of all columns does not determine the spanning of the grid itself. It is determined by the parent container dimensions or the difined grid's `width`.
+|Grid nested in parent container | When grid's `width` is not set and it is placed in a parent container with defined dimensions, the grid spans to this container.
