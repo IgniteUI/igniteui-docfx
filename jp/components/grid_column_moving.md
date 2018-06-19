@@ -1,34 +1,35 @@
----
-title: Column Moving - Native Angular | Ignite UI for Angular
+﻿---
+title: 列移動 - ネイティブ Angular | Ignite UI for Angular
 _description: Column moving feature provides means for reordering columns interactively via a standard drag/drop mouse gesture.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Data Grid component, Angular Data Grid control, Native Angular Components, Angular Grid component, Angular Grid control, Angular High Performance Grid, Column Moving, Grid Column Moving, Angular Grid Column Moving, Angular column
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Data Grid コンポーネント, Angular Data Grid コントロール, ネイティブ Angular コンポーネント, Angular Grid コンポーネント, Angular Grid コントロール, Angular 高いパフォーマンス Grid, 列のサイズ変更, 遅延列サイズ変更, グリッド列のサイズ変更, Angular Grid 列のサイズ変更, Angular 列
+_language: ja
 ---
 
-### Grid Column Moving
+### グリッドの列移動機能
 
-The Grid component in Ignite UI for Angular provides **column moving** to allow column reordering via standard drag/drop mouse gestures.
+Ignite UI for Angular の Grid コンポーネントは、標準ドラッグ/ドロップのマウス ジェスチャで **column moving** を使用して列の並び替えができます。
 
-#### Demo
+#### デモ
 
 <div class="sample-container loading" style="height:630px">
     <iframe id="column-moving-sample-iframe" src='{environment:demosBaseUrl}/grid-moving-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="column-moving-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="column-moving-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
 </div>
 <div class="divider--half"></div>
 
-#### Overview
-**Column moving** feature is enabled per-column level, meaning that the **igx-grid** can have a mix of movable and non-movable columns. This is done via the `movable` input of the `igx-column`.
+#### 概要
+**列移動は各列レベルで有効にできます。つまり、i**igx-grid** に移動可能な列と移動不可の列の両方を含むことができます。`igx-column` の `movable` 入力によって制御されます。
 
 ```html
 <igx-column [field]="'Category'" [movable]="true"></igx-column>
 ```
 
-#### Events
-There are several events related to the column moving to provide means of customizing the columns drag and drop operations. These are `onColumnMovingStart`, `onColumnMoving` and `onColumnMovingEnd`. 
-You can subscribe to the `onColumnMovingEnd` event of the `igx-grid` to implement some custom logic when a column is dropped to a new position. For example, you can cancel dropping the Category after the Change On Year(%) column.
+#### イベント
+列のドラッグアンドドロップ操作をカスタマイズするための列移動に関連するイベントが複数あります。`onColumnMovingStart`、`onColumnMoving`、`onColumnMovingEnd` があります。
+igx-grid の `onColumnMovingEnd イベントを処理し、列が新しい位置にドロップされたときにカスタム ロジックを実装できます。たとえば、Change On Year(%) 列の後に Category のドロップをキャンセルできます。
 
 ```html
 <igx-grid #dataGrid [data]="data" [autoGenerate]="false" (onColumnMovingEnd)="onColumnMovingEnd($event)">
@@ -45,45 +46,45 @@ public onColumnMovingEnd(event) {
 }
 ```
 
-### API Summary
+### API まとめ
 
-#### Inputs
-The following `IgxColumnComponent` input is available for configuring the **column moving**:
+#### 入力
+以下の `IgxColumnComponent` 入力は、**column moving** の構成に使用できます。
 
-| Name | Type | Description |
+| 名前 | タイプ | 説明 |
 | :--- | :--- | :--- |
-|`movable`|boolean|Set column to be movable.|
+|`movable`|boolean|列を移動可能に設定します。|
 
 <div class="divider--half"></div>
 
-#### Outputs
-The following `IgxGridComponent` outputs are available for **column moving**:
+#### 出力
+以下の `IgxGridComponent` 出力は **column moving** で使用できます。
 
-| Name | Type | Description |
+| 名前 | タイプ | 説明 |
 | :--- | :--- | :--- |
-|`onColumnMoving`| EventEmitter |Emitted when a column is moved. Returns the source and target columns objects. This event is cancelable.|
-|`onColumnMovingEnd`| EventEmitter |Emitted when a column moving ends. Returns the source and target columns objects. This event is cancelable.|
-|`onColumnMovingStart`| EventEmitter |Emitted when a column moving starts. Returns the moved column object.|
+|`onColumnMoving`| 列が移動されたときに発生されます。ソースとターゲットの列オブジェクトを返します。This event is cancelable.|
+|`onColumnMovingEnd`| EventEmitter |列移動が終了したときに発生されます。ソースとターゲットの列オブジェクトを返します。このイベントはキャンセルできます。|
+|`onColumnMovingStart`| EventEmitter |列移動を開始したときに発生されます。移動した列オブジェクトを返します。|
 
 <div class="divider--half"></div>
 
-### Additional Resources
+### その他のリソース
 <div class="divider--half"></div>
 
-* [Grid overview](grid.md)
-* [Virtualization and Performance](grid_virtualization.md)
-* [Paging](grid_paging.md)
-* [Filtering](grid_filtering.md)
-* [Sorting](grid_sorting.md)
-* [Summaries](grid_summaries.md)
-* [Column Pinning](grid_column_pinning.md)
-* [Column Resizing](grid_column_resizing.md)
-* [Selection](grid_selection.md)
-* [Searching](grid_search.md)
-* [Excel Exporter](exporter_excel.md)
+* [Grid の概要](grid.md)
+* [仮想化とパフォーマンス](grid_virtualization.md)
+* [ページング](grid_paging.md)
+* [フィルタリング](grid_filtering.md)
+* [並べ替え](grid_sorting.md)
+* [集計](grid_summaries.md)
+* [列のピン固定](grid_column_pinning.md)
+* [列のサイズ変更](grid_column_resizing.md)
+* [選択](grid_selection.md)
+* [検索](grid_search.md)
+* [Excel エクスポーター](exporter_excel.md)
 
 <div class="divider--half"></div>
-Our community is active and always welcoming to new ideas.
+コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

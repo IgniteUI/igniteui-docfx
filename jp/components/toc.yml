@@ -19,7 +19,7 @@
     - name: 集計
       href: grid_summaries.md
       new: true
-    - name: Column moving
+    - name: 列移動
       href: grid_column_moving.md
       new: true
     - name: 列のピン固定

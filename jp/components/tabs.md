@@ -253,6 +253,15 @@ export class AppModule {}
 
 <div class="divider"></div>
 
+
+#### メソッド
+以下のメソッドは **igx-tabs-group** コンポーネントで利用できます。
+| 名前 | 説明 |
+| :--- | :--- | 
+| `select()` | 関連する IgxTabsGroupComponent 選択します。 |
+
+<div class="divider"></div>
+
 ### 追加のリソース
 
 <div class="divider--half"></div>
