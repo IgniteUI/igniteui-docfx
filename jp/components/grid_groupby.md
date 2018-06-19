@@ -1,6 +1,6 @@
 ﻿---
-title: Group By コンポーネント - ネイティブ  Angular | Ignite UI for Angular
-_description: Ignite UI for Angular Group By コンポーネントは、特定の列の共通の値に基づいてデータをグループ化します。
+title: グループ化コンポーネント - ネイティブ  Angular | Ignite UI for Angular
+_description: Ignite UI for Angular グループ化コンポーネントは、特定の列の共通の値に基づいてデータをグループ化します。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, ネイティブ Angular コンポーネント, Angular Data Grid コンポーネント, Angular Data Grid コントロール, Angular Grid コンポーネント, Angular Grid コントロール, Angular 高パフォーマンス Grid, group by, groupby, グループ化, 列グループ化
 _language: ja
 ---
@@ -37,7 +37,7 @@ public ngOnInit() {
 
 #### グループ化 API
 
-グループ化は、UI およびグリッド コンポーネントで公開された API で実行できます。各列の `groupable` プロパティを `true`.に設定してエンドユーザーは特定の列でグリッド データをグループ化できます。
+グループ化は、UI およびグリッド コンポーネントで公開された API で実行できます。各列の `groupable` プロパティを `true`に設定してエンドユーザーは特定の列でグリッド データをグループ化できます。
 
 ```html
 <igx-grid [data]="data">
@@ -54,7 +54,7 @@ public ngOnInit() {
 }
 ```
 
-ランタイムの式は `groupingExpressions` プロパティの gettable および settable です。既存の式を追加または変更する必要がある場合、`ISortingExpression` の単一または配列 の `groupBy` メソッドを使用してください。
+ランタイムの式は `groupingExpressions` プロパティから取得または設定できます。既存の式を追加または変更する必要がある場合、`ISortingExpression` の単一または配列 の `groupBy` メソッドを使用してください。
 
 ```typescript
 grid.groupBy({ fieldName: 'ProductName', dir: SortingDirection.Desc, ignoreCase: true });
@@ -83,7 +83,7 @@ export interface IGroupByExpandState {
     grid.toggleGroup(groupRow);
 ```
 
-Groups は expanded (***デフォルト***) または collapsed に作成でき、展開状態は一般的にデフォルト動作の反対の状態のみ含みます。グループを作成して展開するかどうか、または `groupsExpanded` プロパティを介すかどうかを制御できます。
+グループは展開済み (***デフォルト***) または縮小済みに作成でき、展開状態は一般的にデフォルト動作の反対の状態のみ含みます。グループを作成して展開するかどうか、または `groupsExpanded` プロパティを介すかどうかを制御できます。
 
 #### グループ行テンプレート
 
@@ -136,5 +136,5 @@ export interface IGroupByRecord {
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム**(英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**(英語)](https://github.com/IgniteUI/igniteui-angular)
+* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
