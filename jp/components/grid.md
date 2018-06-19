@@ -641,7 +641,7 @@ import {
 * [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
 
 
-## Known Issues and Limitations
+## Grid Limitations
 
 <div class="devider"></div>
 
