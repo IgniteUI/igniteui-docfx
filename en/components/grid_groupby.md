@@ -128,6 +128,7 @@ The grouping UI supports the following keyboard interactions:
 * [Paging](grid_paging.md)
 * [Filtering](grid_filtering.md)
 * [Sorting](grid_sorting.md)
+* [Column Moving](grid_column_moving.md)
 * [Summaries](grid_summaries.md)
 * [Column Resizing](grid_column_resizing.md)
 * [Selection](grid_selection.md)

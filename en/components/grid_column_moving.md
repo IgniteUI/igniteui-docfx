@@ -67,6 +67,15 @@ The following `IgxGridComponent` outputs are available for **column moving**:
 
 <div class="divider--half"></div>
 
+#### Methods
+The following `IgxGridComponent` method is related to **column moving**:
+
+| Name | Description |
+| :--- | :--- |
+|`moveColumn(column: IgxColumnComponent, dropTarget: IgxColumnComponent)` | Provides a way to move a column to the specified drop target via API. |
+
+<div class="divider--half"></div>
+
 ### Additional Resources
 <div class="divider--half"></div>
 

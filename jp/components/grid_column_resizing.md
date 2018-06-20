@@ -95,6 +95,7 @@ public onResize(event) {
 * [フィルタリング](grid_filtering.md)
 * [並べ替え](grid_sorting.md)
 * [集計](grid_summaries.md)
+* [Column Moving](grid_column_moving.md)
 * [列のピン固定](grid_column_pinning.md)
 * [選択](grid_selection.md)
 

@@ -109,6 +109,7 @@ When set to `OR`, a row will be returned when either the 'ProductName' cell valu
 * [Paging](grid_paging.md)
 * [Sorting](grid_sorting.md)
 * [Summaries](grid_summaries.md)
+* [Column Moving](grid_column_moving.md)
 * [Column Pinning](grid_column_pinning.md)
 * [Column Resizing](grid_column_resizing.md)
 * [Selection](grid_selection.md)
