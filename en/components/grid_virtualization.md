@@ -48,42 +48,18 @@ Explicitly setting column widths in percentages (%) will, in most cases, create 
 To utilize this feature, you need to subscribe to the `onDataPreLoad` output so that you make the appropriate request based on the arguments received, as well as set the public `igxGrid` property `totalItemCount` with the respective information coming from the service. 
 
 ```html
-<igx-grid #grid [data]="remoteData | async" [height]="'500px'" [width]="'100%'" [autoGenerate]='false' (onDataPreLoad)="processData()">
-    <igx-column [field]="'ID'"></igx-column>
-    <igx-column [field]="'ProductName'"></igx-column>
-    <igx-column [field]="'CategoryName'"></igx-column>
-    <igx-column [field]="'Rating'" [dataType]="'number'" [headerClasses]="'headerAlignSyle'">
-        <ng-template igxHeader>
-            <span class="cellAlignSyle">Rating</span>
-        </ng-template>
-        <ng-template igxCell let-val>
-            <div class="currency-badge-container">
-                <igx-badge *ngIf="val>0" type="success" position="bottom-right" icon="arrow_upward" class="badge-left"></igx-badge>
-                <igx-badge *ngIf="val<=0" type="error" position="bottom-right" icon="arrow_downward" class="error badge-left"></igx-badge>
-                <span class="cellAlignSyle" [class.up]="val>0" [class.down]="val<=0">{{ formatNumber(val) }}</span>
-            </div>
-        </ng-template>
-    </igx-column>
-    <igx-column [field]="'UnitPrice'" [dataType]="'number'" [formatter]="formatCurrency"></igx-column>
-    <igx-column [field]="'UnitsInStock'" [dataType]="'number'" [headerClasses]="'headerAlignSyle'">
-        <ng-template igxHeader>
-            <span class="cellAlignSyle">UnitsInStock</span>
-        </ng-template>
-        <ng-template igxCell let-val>
-            <div class="currency-badge-container">
-                <igx-badge *ngIf="val>50" type="success" position="bottom-right" icon="arrow_upward" class="badge-left"></igx-badge>
-                <igx-badge *ngIf="val<=50" type="error" position="bottom-right" icon="arrow_downward" class="error badge-left"></igx-badge>
-                <span class="cellAlignSyle" [class.up]="val>50" [class.down]="val<=50">{{ formatNumber(val) }}</span>
-            </div>
-        </ng-template>
-    </igx-column>
-    <igx-column [field]="'SupplierName'"></igx-column>
+<igx-grid #grid [data]="remoteData | async" [height]="'500px'" [width]="'100%'" [autoGenerate]='false' (onDataPreLoad)="processData(false)"
+    (onSortingDone)="processData(true)">
+    <igx-column [field]="'ID'" [sortable]="true"></igx-column>
+    <igx-column [field]="'ProductName'" [sortable]="true"></igx-column>
+    <igx-column [field]="'CategoryName'" [sortable]="true"></igx-column>
+    ...
 </igx-grid>
 ```
 
 ```typescript
 public ngAfterViewInit() {
-    this.remoteService.getData(this.grid.virtualizationState, (data) => {
+    this._remoteService.getData(this.grid.virtualizationState, this.grid.sortingExpressions[0], true, (data) => {
         this.grid.totalItemCount = data.Count;
     });
 }
@@ -93,7 +69,9 @@ public processData() {
         this.prevRequest.unsubscribe();
     }
 
-    this.prevRequest = this.remoteService.getData(this.grid.virtualizationState, () => {
+    this._prevRequest = this._remoteService.getData(this.grid.virtualizationState,
+        this.grid.sortingExpressions[0], reset, () => {
+        ...
         this.cdr.detectChanges();
     });
 }
@@ -102,29 +80,6 @@ public processData() {
 When requesting data, you need to utilize the `IForOfState` interface, which provides the `startIndex` and `chunkSize` properties.
 
 ***Note:*** The first `chunkSize` will always be 0 and should be determined by you based on the specific application scenario.
-
-```typescript
-public getData(virtualizationArgs?: IForOfState, cb?: (any) => void): any {
-    return this.http.get(this.buildDataUrl(virtualizationArgs)).subscribe((data: any) => {
-        this._remoteData.next(data.Results);
-        if (cb) {
-            cb(data);
-        }
-    });
-}
-
-private buildDataUrl(virtualizationArgs: any): string {
-    let baseQueryString = `${DATA_URL}?$inlinecount=allpages`;
-
-    // Set initial chunk size, the best value is igxForContainerSize divided on igxForItemSize
-    const top = virtualizationArgs.chunkSize === 0 ? 10 : virtualizationArgs.chunkSize;
-    const skip = virtualizationArgs.startIndex;
-
-    baseQueryString += `&$skip=${skip}&$top=${top}`;
-
-    return baseQueryString;
-}
-```
 
 ### Remote Sorting/Filtering Virtualization
 To provide remote sorting and filtering, you need to subscribe to the `onDataPreLoad`, `onSortingDone`, `onFilteringDone` outputs so that you make the appropriate request based on the arguments received, as well as set the public `igxGrid` property `totalItemCount` with the respective information coming from the service.
