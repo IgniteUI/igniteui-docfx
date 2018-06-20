@@ -641,16 +641,16 @@ import {
 * [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
 
 
-## Known Limitations
+## 既知の問題と制限
 
 <div class="divider"></div>
 
-|Limitation|Description|
+|制限|説明|
 |--- |--- |
-|Column widths set in `percentage` and `px`|Currently we do not support mixing of column widths with `%` and `px`.|
-|When `height` of the grid's parent element is not set| The `grid` is not rendered correctly when the `height` of the parent container is not set.|
-|When grid's `height` is not set|When grid's `height` is not set, it will span the parent container it is placed in.|
-|When trying to filter a column of type `number`|If a value different than `number` is entered into the filtering input, `NaN` is returned due to an incorrect cast.|
-|Grid `width` does not depend on the column widths | The `width` of all columns does not determine the spanning of the grid itself. It is determined by the parent container dimensions or the defined grid's `width`.|
-|Grid nested in parent container | When grid's `width` is not set and it is placed in a parent container with defined dimensions, the grid spans to this container.|
-|Grid `OnPush` ChangeDetectionStrategy |The grid operates with `ChangeDetectionStrategy.OnPush` so whenever some customization appears make sure that the grid is notified about the changes that happens.|
+|`percentage` および `px` で設定した列幅|列に `%` と `px` を組み合わせて使用することはできません。|
+|グリッドの親要素の `height` が設定されていない場合| 親コンテナーの  `height` が設定されていない場合、`grid` は正しく描画されません。|
+|グリッドの `height` が設定されていない場合|グリッドの `height` が設定されていない場合、親コンテナーをスパンします。|
+|`number` 型の列をフィルターする場合|フィルター入力に入力された値が `number` と異なる場合、キャストが正しくないため `NaN` が返されます。|
+|グリッドの `width` が列幅に依存しない| すべての列の `width` でグリッド自体のスパンは決定しません。親コンテナーのディメンションまたは定義したグリッドの `width` で決定されます。|
+|親コンテナーでネストされた Grid | グリッドの `width` を設定せずに定義済みのディメンションで親コンテナーに配置した場合、グリッドがコンテナーに合わせてスパンします。|
+|Grid `OnPush` ChangeDetectionStrategy |グリッドで `ChangeDetectionStrategy.OnPush` を処理し、カスタム表示されたときにグリッドに発生した変更について通知します。|
