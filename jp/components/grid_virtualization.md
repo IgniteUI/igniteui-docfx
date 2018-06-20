@@ -105,6 +105,17 @@ private buildUrl(dataState: IForOfState): string {
 }
 ```
 
+### リモートの並べ替え/フィルタリングの仮想化
+リモートの並べ替えおよびフィルタリングは、`onDataPreLoad`, `onSortingDone`, `onFilteringDone` 出力にサブスクライブし、パブリック `igxGrid` プロパティの `totalItemCount` をサービスから送信される個々の情報とともに設定し、受け取った引数に基づいて適切な要求を作成します。
+
+<div class="sample-container loading" style="height:550px">
+    <iframe id="grid-remote-filtering-iframe" src='{environment:demosBaseUrl}/grid-remote-filtering' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="grid-remote-filtering-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+
 ### 仮想化の制限
 
 *   行の高さの変更はサポートされません。すべての行を同じ高さに設定する必要があります。
