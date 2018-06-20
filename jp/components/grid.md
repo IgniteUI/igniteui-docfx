@@ -365,6 +365,16 @@ this.grid.deleteRow(this.selectedCell.rowIndex);
 <button igxButton igxRipple (click)="deleteRow($event)">行の削除</button>
 ```
 
+## 既知の問題と制限
+
+|制限|説明|
+|--- |--- |
+|`percentage` および `px` で設定した列幅|列に `%` と `px` を組み合わせて使用することはできません。|
+|`number` 型の列をフィルターする場合|フィルター入力に入力された値が `number` と異なる場合、キャストが正しくないため `NaN` が返されます。|
+|グリッドの `width` が列幅に依存しない| すべての列の `width` でグリッド自体のスパンは決定しません。親コンテナーのディメンションまたは定義したグリッドの `width` で決定されます。|
+|親コンテナーでネストされた Grid | グリッドの `width` を設定せずに定義済みのディメンションで親コンテナーに配置した場合、グリッドがコンテナーに合わせてスパンします。|
+|Grid `OnPush` ChangeDetectionStrategy |グリッドで `ChangeDetectionStrategy.OnPush` を処理し、カスタム表示されたときにグリッドに発生した変更について通知します。|
+
 ## API
 
 ### 入力
@@ -639,18 +649,3 @@ import {
 
 * [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
 * [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
-
-
-## 既知の問題と制限
-
-<div class="divider"></div>
-
-|制限|説明|
-|--- |--- |
-|`percentage` および `px` で設定した列幅|列に `%` と `px` を組み合わせて使用することはできません。|
-|グリッドの親要素の `height` が設定されていない場合| 親コンテナーの  `height` が設定されていない場合、`grid` は正しく描画されません。|
-|グリッドの `height` が設定されていない場合|グリッドの `height` が設定されていない場合、親コンテナーをスパンします。|
-|`number` 型の列をフィルターする場合|フィルター入力に入力された値が `number` と異なる場合、キャストが正しくないため `NaN` が返されます。|
-|グリッドの `width` が列幅に依存しない| すべての列の `width` でグリッド自体のスパンは決定しません。親コンテナーのディメンションまたは定義したグリッドの `width` で決定されます。|
-|親コンテナーでネストされた Grid | グリッドの `width` を設定せずに定義済みのディメンションで親コンテナーに配置した場合、グリッドがコンテナーに合わせてスパンします。|
-|Grid `OnPush` ChangeDetectionStrategy |グリッドで `ChangeDetectionStrategy.OnPush` を処理し、カスタム表示されたときにグリッドに発生した変更について通知します。|
