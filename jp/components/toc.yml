@@ -36,6 +36,9 @@
       new: true
 - name: List View
   href: list.md
+- name: Combo
+  href: combo.md
+  new: true
 - name: チャート
   header: true
 - name: Category Chart
