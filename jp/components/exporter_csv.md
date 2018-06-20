@@ -39,7 +39,7 @@ import { IgxCsvExporterService } from "igniteui-angular/services/index";
 export class AppModule {}
 ```
 
-> 注: CSV Exporter サービスは JSZip に peer dependency があります。 JSZip ライブラリは CSV Exporter 使用時にインストールしてください。
+> 注: CSV Exporter サービスは JSZip にピア依存関係があります。 JSZip ライブラリは CSV Exporter 使用時にインストールしてください。
 
 エクスポート処理を開始するためにコンポーネントのテンプレートでボタンのハンドラーを使用できます。
 
