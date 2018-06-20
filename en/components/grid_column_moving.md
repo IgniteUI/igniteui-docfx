@@ -1,6 +1,6 @@
 ---
 title: Column Moving - Native Angular | Ignite UI for Angular
-_description: Column moving feature provides means for reordering columns interactively via a standard drag/drop mouse gesture.
+_description: Column moving feature provides a means for reordering columns interactively via a standard drag/drop mouse gesture.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Data Grid component, Angular Data Grid control, Native Angular Components, Angular Grid component, Angular Grid control, Angular High Performance Grid, Column Moving, Grid Column Moving, Angular Grid Column Moving, Angular column moving
 ---
 
@@ -27,7 +27,7 @@ The Grid component in Ignite UI for Angular provides **column moving** to allow 
 ```
 
 #### Events
-There are several events related to the column moving to provide means of tapping into the columns' drag and drop operations. These are `onColumnMovingStart`, `onColumnMoving` and `onColumnMovingEnd`. 
+There are several events related to the column moving to provide a means of tapping into the columns' drag and drop operations. These are `onColumnMovingStart`, `onColumnMoving` and `onColumnMovingEnd`. 
 You can subscribe to the `onColumnMovingEnd` event of the `igx-grid` to implement some custom logic when a column is dropped to a new position. For example, you can cancel dropping the Category after the Change On Year(%) column.
 
 ```html
@@ -62,8 +62,8 @@ The following `IgxGridComponent` outputs are available for **column moving**:
 | Name | Type | Description |
 | :--- | :--- | :--- |
 |`onColumnMoving`| EventEmitter |Emitted throughout the column moving operation. Returns the source and target columns objects. This event is cancelable.|
-|`onColumnMovingEnd`| EventEmitter |Emitted when a column moving ends. Returns the source and target columns objects. This event is cancelable.|
-|`onColumnMovingStart`| EventEmitter |Emitted when a column moving starts. Returns the moved column object.|
+|`onColumnMovingEnd`| EventEmitter |Emitted when column moving ends. Returns the source and target columns objects. This event is cancelable.|
+|`onColumnMovingStart`| EventEmitter |Emitted when column moving starts. Returns the moved column object.|
 
 <div class="divider--half"></div>
 
