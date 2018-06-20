@@ -69,7 +69,7 @@ We will also add a title to our toolbar by using the `toolbarTitle` property and
 /* columnHiding.component.css */
 
 .grid__wrapper {
-    margin: 10px 100px 0px 100px;
+    margin: 20px 150px 0px 150px;
 }
 
 ```
@@ -295,7 +295,6 @@ The following properties are available on the **IgxGridComponent**:
 | :--- | :--- | :--- |
 | `columnHiding` | boolean | Whether the built-in column hiding UI for the grid is enabled. |
 | `columnHidingTitle` | string | The title to be displayed of the built-in column hiding UI. |
-| `columnHidingUI` | IgxColumnHidingComponent | Reference to the built-in column hiding UI component. |
 | `hiddenColumnsCount` | number | The number of hidden columns. |
 | `hiddenColumnsText` | string | The text to be displayed inside the toggle button for the built-in column hiding UI. |
 
@@ -308,6 +307,15 @@ The following properties are available on the **IgxColumnComponent**:
 
 <div class="divider"></div>
 
+The following properties are available on the **IgxGridToolbarComponent**:
+| Name | Type | Description |
+| :--- | :--- | :--- |
+| `columnHidingUI` | IgxColumnHidingComponent | Reference to the built-in column hiding UI component. |
+| `columnHidingDropdown` | IgxDropDownComponent | Reference to the dropdown, that contains the built-in column hiding UI component. |
+
+<div class="divider"></div>
+
+
 #### Methods
 The following methods are available on the **IgxColumnHidingComponent**:
 | Name | Type | Parameters |Description |
@@ -317,10 +325,12 @@ The following methods are available on the **IgxColumnHidingComponent**:
 
 <div class="divider"></div>
 
-The following methods are available on the **IgxGridComponent**:
+The following methods are available on the **IgxGridToolbarComponent**:
 | Name | Type | Parameters |Description |
 | :--- | :--- | :--- | :--- |
 | `toggleColumnHidingUI` | void | N/A | Shows/Hides the built-in column hiding UI. |
+
+<div class="divider"></div>
 
 #### Outputs
 The following outputs are available on the **IgxColumnHidingComponent**:
