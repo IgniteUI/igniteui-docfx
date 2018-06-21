@@ -35,6 +35,9 @@
     - name: Excel エクスポート
       href: exporter_excel.md
       new: true
+    - name: Multi Column Headers
+      href: grid_multi_column_headers.md
+      new: true
 - name: List View
   href: list.md
 - name: チャート
@@ -56,7 +59,7 @@
       href: categorychart_configuration_options.md
       new: true
     - name: カスタム ツールチップ
-      href: categorychart_custom_tooltips.md 
+      href: categorychart_custom_tooltips.md
       new: true
 - name: Financial Chart
   href: financialchart.md
