@@ -83,7 +83,7 @@ public ngOnInit() {
 * [ページング](grid_paging.md)
 * [フィルタリング](grid_filtering.md)
 * [集計](grid_summaries.md)
-* [Column Moving](grid_column_moving.md)
+* [列移動](grid_column_moving.md)
 * [列のピン固定](grid_column_pinning.md)
 * [列のサイズ変更](grid_column_resizing.md)
 * [選択](grid_selection.md)
