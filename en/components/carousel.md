@@ -19,7 +19,7 @@ The carousel can be used as a full-screen element or situated inside another com
 ```typescript
 // app.module.ts
 ...
-import { IgxCarouselModule } from 'igniteui-angular/main';
+import { IgxCarouselModule } from 'igniteui-angular';
 @NgModule({
     ...
     imports: [..., IgxCarouselModule],
@@ -142,7 +142,7 @@ Having those configured this way, we empowered the user to have full control ove
 
 ```typescript
 // app.component.ts
-import { Direction, IgxCarousel, IgxLinearProgressBar } from "igniteui-angular/main";
+import { Direction, IgxCarousel, IgxLinearProgressBar } from 'igniteui-angular';
 ```
 Once we have the module imported, we can continue with adding the **IgxLinearProgressBar** in our template. Notice that we set the `max` property to bind to the `total` property value, which will be defined in the **app.component.ts** file. Also, we add a handler for the `onSlideChanged` event and an indicator text in adittion to the progress bar:
 
@@ -222,7 +222,7 @@ Don't forget to add the **IgxButtonModule** to the **app.component.ts**. The `go
 ```typescript
   // app.component.ts
   import { Router } from "@angular/router";
-  import { Direction, IgxButtonModule, IgxCarousel, IgxLinearProgressBar } from "igniteui-angular/main";
+  import { Direction, IgxButtonModule, IgxCarousel, IgxLinearProgressBar } from 'igniteui-angular';
   ...
 
   export class AppComponent implements OnInit {

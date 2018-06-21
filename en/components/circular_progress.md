@@ -24,7 +24,7 @@ To get started with the Ignite UI for Angular Circular Progress,  we should firs
 // app.module.ts
 
 ...
-import { IgxProgressBarModule } from 'igniteui-angular/main';
+import { IgxProgressBarModule } from 'igniteui-angular';
 
 @NgModule({
     ...
@@ -40,7 +40,7 @@ triggered on button click. In order to make our example better we will need to i
 // app.module.ts
 import {
     ..., IgxButtonModule, IgxIconModule, IgxRippleModule
-} from 'igniteui-angular/main';
+} from 'igniteui-angular';
 
 @NgModule({
     ...

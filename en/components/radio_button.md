@@ -26,7 +26,7 @@ To get started with the Ignite UI for Angular Radio, let's first import the **Ig
 // app.module.ts
 
 ...
-import { IgxRadioModule } from 'igniteui-angular/main';
+import { IgxRadioModule } from 'igniteui-angular';
 
 @NgModule({
     ...

@@ -27,7 +27,7 @@ The `IgxDatePickerComponent` allows you to pick a date from a calendar. The pick
 // app.module.ts
 
 ...
-import { IgxDatePickerModule } from 'igniteui-angular/main';
+import { IgxDatePickerModule } from 'igniteui-angular';
 
 @NgModule({
     ...

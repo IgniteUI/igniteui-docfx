@@ -28,7 +28,7 @@ Ignite UI for Angular Drop Down コンポーネントを初期化する前に **
 // app.module.ts
 
 ...
-import { IgxDropDownModule } from 'igniteui-angular/main';
+import { IgxDropDownModule } from 'igniteui-angular';
 
 @NgModule({
     ...
@@ -49,7 +49,7 @@ export class AppModule {}
 import {
     IgxDropDownModule,
     IgxToggleModule
-} from 'igniteui-angular/main';
+} from 'igniteui-angular';
 
 @NgModule({
     ...

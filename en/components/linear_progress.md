@@ -23,7 +23,7 @@ To get started with the Ignite UI for Angular Linear Progress, we should first i
 // app.module.ts
 
 ...
-import { IgxProgressBarModule } from 'igniteui-angular/main';
+import { IgxProgressBarModule } from 'igniteui-angular';
 
 @NgModule({
     ...
@@ -202,7 +202,7 @@ And now let's see how our code looks:
 And do not forget to first import `IgxTextAlign` in your component.
 
 ```typescript
-import { ..., IgxTextAlign } from "igniteui-angular/main";
+import { ..., IgxTextAlign } from 'igniteui-angular';
 .....
 export class LinearProgressbarSample2Component implements OnInit {
   @ViewChildren(IgxLinearProgressBarComponent, { read: IgxLinearProgressBarComponent })

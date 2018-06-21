@@ -28,7 +28,7 @@ _language: ja
 // app.module.ts
 
 ...
-import { IgxDatePickerModule } from 'igniteui-angular/main';
+import { IgxDatePickerModule } from 'igniteui-angular';
 
 @NgModule({
     ...

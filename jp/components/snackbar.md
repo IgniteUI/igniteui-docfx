@@ -31,7 +31,7 @@ Ignite UI for Angular Snack Bar を初期化する前に、**IgxSnackbarModule**
 // app.module.ts
 
 ...
-import { IgxSnackbarModule } from 'igniteui-angular/main';
+import { IgxSnackbarModule } from 'igniteui-angular';
 
 @NgModule({
     ...
@@ -141,7 +141,7 @@ Snackbar の主な機能を説明しました。次の例はより複雑なサ�
 //sample.component.ts 
 
 import { Component, OnInit, ViewChild } from "@angular/core";
-import { IgxSnackbarComponent } from "igniteui-angular/main";
+import { IgxSnackbarComponent } from 'igniteui-angular';
 
 ...
 @ViewChild(IgxSnackbarComponent)

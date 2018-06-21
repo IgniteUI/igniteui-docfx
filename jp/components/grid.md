@@ -28,7 +28,7 @@ _language: ja
 ```typescript
 // app.module.ts
 
-import { IgxGridModule } from 'igniteui-angular/main';
+import { IgxGridModule } from 'igniteui-angular';
 // Or
 import { IgxGridModule } from 'igniteui-angular/grid';
 
@@ -47,7 +47,7 @@ _IgxGridModule_ の各コンポーネント、ディレクティブ、および�
 ```typescript
 import { IgxGridComponent } from 'igniteui-angular/grid/';
 // Or
-import { IgxGridComponent } from 'igniteui-angular/main';
+import { IgxGridComponent } from 'igniteui-angular';
 ...
 
 @ViewChild('myGrid', { read: IgxGridComponent })
@@ -514,7 +514,7 @@ import {
     NUMBER_FILTERS,
     DATE_FILTERS,
     BOOLEAN_FILTERS
-} from 'igniteui-angular/main';
+} from 'igniteui-angular';
 ```
 
 ### 文字列型

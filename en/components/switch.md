@@ -26,7 +26,7 @@ To get started with the Ignite UI for Angular Switch, let's first import the **I
 // app.module.ts
 
 ...
-import { IgxSwitchModule } from 'igniteui-angular/main';
+import { IgxSwitchModule } from 'igniteui-angular';
 
 @NgModule({
     ...

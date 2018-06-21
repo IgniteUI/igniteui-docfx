@@ -28,7 +28,7 @@ To get started with the Ignite UI for Angular Avatar, let's first import the **I
 // app.module.ts
 
 ...
-import { IgxAvatarModule } from 'igniteui-angular/main';
+import { IgxAvatarModule } from 'igniteui-angular';
 
 @NgModule({
     ...

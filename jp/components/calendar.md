@@ -23,7 +23,7 @@ Ignite UI for Angular Calendar を初期化する前に、**IgxCalendarModule** 
 // app.module.ts
 ...
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { IgxCalendarModule } from 'igniteui-angular/main';
+import { IgxCalendarModule } from 'igniteui-angular';
 @NgModule({
     ...
     imports: [..., BrowserAnimationsModule, IgxCalendarModule],
@@ -35,7 +35,7 @@ export class AppModule {}
 カレンダー API の型を宣言する前に **IgxCalendarComponent** を AppComponent ファイルにインポートします。エディターが自動的にインポートすることが可能です。
 
 ```typescript
-import { IgxCalendarComponent } from 'igniteui-angular/main';
+import { IgxCalendarComponent } from 'igniteui-angular';
 ...
 
 @ViewChild('calendar', { read: IgxCalendarComponent }) public calendar: IgxCalendarComponent;

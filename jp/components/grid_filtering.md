@@ -90,7 +90,7 @@ public ngOnInit() {
 グリッドの `filteringLogic` プロパティはグリッドで複数の列のフィルターが解決する方法を制御します。グリッド API またはグリッドの入力プロパティによって変更できます。
 
 ```typescript
-import { FilteringLogic } from 'igniteui-angular/main';
+import { FilteringLogic } from 'igniteui-angular';
 ...
 
 this.grid.filteringLogic = FilteringLogic.OR;

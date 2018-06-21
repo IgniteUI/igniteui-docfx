@@ -28,7 +28,7 @@ Ignite UI for Angular Circular Progress を初期化する前に、**IgxProgress
 // app.module.ts
 
 ...
-import { IgxProgressBarModule } from 'igniteui-angular/main';
+import { IgxProgressBarModule } from 'igniteui-angular';
 
 @NgModule({
     ...
@@ -44,7 +44,7 @@ export class AppModule {}
 // app.module.ts
 import {
     ..., IgxButtonModule, IgxIconModule, IgxRippleModule
-} from 'igniteui-angular/main';
+} from 'igniteui-angular';
 
 @NgModule({
     ...

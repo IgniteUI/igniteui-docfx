@@ -27,7 +27,7 @@ Ignite UI for Angular で、大量データをテンプレート化するため�
 ```typescript
 // app.module.ts
 
-import { IgxForOfModule } from 'igniteui-angular/main';
+import { IgxForOfModule } from 'igniteui-angular';
 
 @NgModule({
     imports: [
