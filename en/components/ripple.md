@@ -25,7 +25,7 @@ inside your `AppModule`:
 ```typescript
 // app.module.ts
 
-import { IgxRippleModule } from 'igniteui-angular/main';
+import { IgxRippleModule } from 'igniteui-angular';
 
 @NgModule({
     imports: [

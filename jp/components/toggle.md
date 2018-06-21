@@ -29,7 +29,7 @@ Ignite UI for Angular Toggle を初期化する前に、**IgxToggleModule** を 
 // app.module.ts
 
 ...
-import { IgxToggleModule, IgxButtonModule } from 'igniteui-angular/main'
+import { IgxToggleModule, IgxButtonModule } from 'igniteui-angular'
 
 @NgModule({
     ...
@@ -60,7 +60,7 @@ export class AppModule {}
 このコンテンツを表示/非表示にするには、open または close メソッドを呼び出します。
 
 ```typescript
-import { IgxToggleDirective } from 'igniteui-angular/main'
+import { IgxToggleDirective } from 'igniteui-angular'
 
 @Component({
     ...
@@ -96,7 +96,7 @@ export class Class {
 // app.module.ts
 
 ...
-import { IgxToggleModule, IgxButtonModule } from 'igniteui-angular/main'
+import { IgxToggleModule, IgxButtonModule } from 'igniteui-angular'
 
 @NgModule({
     ...
@@ -136,7 +136,7 @@ export class AppModule {}
 // app.module.ts
 
 ...
-import { IgxToggleModule, IgxButtonModule } from 'igniteui-angular/main'
+import { IgxToggleModule, IgxButtonModule } from 'igniteui-angular'
 
 @NgModule({
     ...

@@ -32,7 +32,7 @@ To get started with the Ignite UI for Angular Label & Input, let's first import 
 // app.module.ts
 
 ...
-import { IgxInputGroup } from 'igniteui-angular/main';
+import { IgxInputGroup } from 'igniteui-angular';
 
 @NgModule({
     ...

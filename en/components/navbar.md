@@ -24,7 +24,7 @@ To get started with the Ignite UI for Angular NavBar component, let's first impo
 // app.module.ts
 
 ...
-import { IgxNavbarModule } from 'igniteui-angular/main';
+import { IgxNavbarModule } from 'igniteui-angular';
 
 @NgModule({
     ...
@@ -74,7 +74,7 @@ Now that our app has its menu in place, we can make it a little more functional 
 import {
     IgxNavbarModule,
     IgxIconModule
-} from 'igniteui-angular/main';
+} from 'igniteui-angular';
 
 @NgModule({
     ...

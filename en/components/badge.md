@@ -27,7 +27,7 @@ To get started with the Ignite UI for Angular Badge, let's first import the **Ig
 // app.module.ts
 
 ...
-import { IgxBadgeModule } from 'igniteui-angular/main';
+import { IgxBadgeModule } from 'igniteui-angular';
 
 @NgModule({
     ...
@@ -49,7 +49,7 @@ import {
     IgxListModule,
     IgxAvatarModule,
     IgxBadgeModule
-} from 'igniteui-angular/main';
+} from 'igniteui-angular';
 
 @NgModule({
     ...

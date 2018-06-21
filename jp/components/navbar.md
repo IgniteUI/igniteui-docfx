@@ -28,7 +28,7 @@ Ignite UI for Angular NavBar コンポーネントを初期化する前に **Igx
 // app.module.ts
 
 ...
-import { IgxNavbarModule } from 'igniteui-angular/main';
+import { IgxNavbarModule } from 'igniteui-angular';
 
 @NgModule({
     ...
@@ -82,7 +82,7 @@ export class AppModule {}
 import {
     IgxNavbarModule,
     IgxIconModule
-} from 'igniteui-angular/main';
+} from 'igniteui-angular';
 
 @NgModule({
     ...

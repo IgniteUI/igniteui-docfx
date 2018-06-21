@@ -189,7 +189,7 @@ import {
     IgxIconModule,
     IgxRippleModule,
     IgxButtonModule    
-} from 'igniteui-angular/main';
+} from 'igniteui-angular';
 
 @NgModule({
     ...

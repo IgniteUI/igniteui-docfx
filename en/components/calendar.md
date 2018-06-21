@@ -22,7 +22,7 @@ To get started with the **Ignite UI for Angular Calendar**, let's first import t
 // app.module.ts
 ...
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { IgxCalendarModule } from 'igniteui-angular/main';
+import { IgxCalendarModule } from 'igniteui-angular';
 @NgModule({
     ...
     imports: [..., BrowserAnimationsModule, IgxCalendarModule],
@@ -33,7 +33,7 @@ export class AppModule {}
 You will usually also import the **IgxCalendarComponent** in the AppComponent file (or your editor will auto-import them for you) when declaring types that are part of the calendar API:
 
 ```typescript
-import { IgxCalendarComponent } from 'igniteui-angular/main';
+import { IgxCalendarComponent } from 'igniteui-angular';
 ...
 
 @ViewChild('calendar', { read: IgxCalendarComponent }) public calendar: IgxCalendarComponent;

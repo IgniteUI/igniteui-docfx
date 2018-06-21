@@ -27,7 +27,7 @@ To get started with the Ignite UI for Angular Drop Down, let's first import the 
 // app.module.ts
 
 ...
-import { IgxDropDownModule } from 'igniteui-angular/main';
+import { IgxDropDownModule } from 'igniteui-angular';
 
 @NgModule({
     ...
@@ -48,7 +48,7 @@ To continue, include all needed modules and import them in the **app.module.ts**
 import {
     IgxDropDownModule,
     IgxToggleModule
-} from 'igniteui-angular/main';
+} from 'igniteui-angular';
 
 @NgModule({
     ...

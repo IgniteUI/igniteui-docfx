@@ -28,7 +28,7 @@ To get started with the Ignite UI for Angular Mask directive, let's first import
 // app.module.ts
 
 ...
-import { IgxMaskModule, IgxInputGroupModule } from 'igniteui-angular/main';
+import { IgxMaskModule, IgxInputGroupModule } from 'igniteui-angular';
 
 @NgModule({
     ...

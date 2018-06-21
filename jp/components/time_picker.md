@@ -27,7 +27,7 @@ Ignite UI for Angular Time Picker を初期化する前に、**IgxTimePickerModu
 
 ...
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { IgxTimePickerModule } from 'igniteui-angular/main';
+import { IgxTimePickerModule } from 'igniteui-angular';
 
 @NgModule({
     ...
@@ -115,7 +115,7 @@ TwoWay データ バインディングを使用するには、`ngModel` を以�
 
 ...
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { IgxTimePickerModule, IgxToastModule } from 'igniteui-angular/main';
+import { IgxTimePickerModule, IgxToastModule } from 'igniteui-angular';
 
 @NgModule({
     ...

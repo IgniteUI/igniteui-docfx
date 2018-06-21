@@ -28,7 +28,7 @@ Ignite UI for Angular Card を初期化する前に、**IgxCardModule** を **ap
 ```typescript
 // app.module.ts
 ...
-import { IgxCardModule } from 'igniteui-angular/main';
+import { IgxCardModule } from 'igniteui-angular';
 
 @NgModule({
     ...
@@ -72,7 +72,7 @@ export class AppModule {}
 import {
     IgxCardModule,
     IgxAvatarModule
-} from 'igniteui-angular/main';
+} from 'igniteui-angular';
 
 @NgModule({
     ...
@@ -125,7 +125,7 @@ import {
     IgxAvatarModule,
     IgxIconModule,
     IgxButtonModule
-} from 'igniteui-angular/main';
+} from 'igniteui-angular';
 
 @NgModule({
     ...

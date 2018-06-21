@@ -26,7 +26,7 @@ inside your `AppModule`:
 ```typescript
 // app.module.ts
 
-import { IgxButtonGroupModule } from 'igniteui-angular/main';
+import { IgxButtonGroupModule } from 'igniteui-angular';
 
 @NgModule({
     imports: [
@@ -42,7 +42,7 @@ export class AppModule {}
 Use `igx-ButtonGroup` to organize buttons into an Angular styled button group.
 ```typescript
 //sample.component.ts
-import { ButtonGroupAlignment } from "igniteui-angular/main";
+import { ButtonGroupAlignment } from 'igniteui-angular';
 ...
 public alignment = ButtonGroupAlignment.vertical;
 ...

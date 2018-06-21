@@ -28,7 +28,7 @@ To get started with the Ignite UI for Angular Tabs component, let's first import
 // app.module.ts
 
 ...
-import { IgxTabsModule } from 'igniteui-angular/main';
+import { IgxTabsModule } from 'igniteui-angular';
 
 @NgModule({
     ...

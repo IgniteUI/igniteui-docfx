@@ -26,7 +26,7 @@ Ignite UI for Angular Linear Progress を初期化する前に、**IgxProgressBa
 // app.module.ts
 
 ...
-import { IgxProgressBarModule } from 'igniteui-angular/main';
+import { IgxProgressBarModule } from 'igniteui-angular';
 
 @NgModule({
     ...
@@ -211,7 +211,7 @@ export class AppModule {}
 最初に `IgxTextAlign` をコンポーネントにインポートする必要があります。
 
 ```typescript
-import { ..., IgxTextAlign } from "igniteui-angular/main";
+import { ..., IgxTextAlign } from 'igniteui-angular';
 .....
 export class LinearProgressbarSample2Component implements OnInit {
   @ViewChildren(IgxLinearProgressBarComponent, { read: IgxLinearProgressBarComponent })

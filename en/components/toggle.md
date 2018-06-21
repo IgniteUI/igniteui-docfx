@@ -26,7 +26,7 @@ To get started with the IgniteUI for Angular Toggle, let's first import the **Ig
 // app.module.ts
 
 ...
-import { IgxToggleModule, IgxButtonModule } from 'igniteui-angular/main'
+import { IgxToggleModule, IgxButtonModule } from 'igniteui-angular'
 
 @NgModule({
     ...
@@ -56,7 +56,7 @@ Then in the template of our component we can apply the directive on the element 
 In order to show and hide this content we will have to invoke one of the two methods open/close.
 
 ```typescript
-import { IgxToggleDirective } from 'igniteui-angular/main'
+import { IgxToggleDirective } from 'igniteui-angular'
 
 @Component({
     ...
@@ -92,7 +92,7 @@ In order to prevent this invocation of these methods there is a directive which 
 // app.module.ts
 
 ...
-import { IgxToggleModule, IgxButtonModule } from 'igniteui-angular/main'
+import { IgxToggleModule, IgxButtonModule } from 'igniteui-angular'
 
 @NgModule({
     ...
@@ -132,7 +132,7 @@ There is a convenient way to keep the state and command our **igxToggle** throug
 // app.module.ts
 
 ...
-import { IgxToggleModule, IgxButtonModule } from 'igniteui-angular/main'
+import { IgxToggleModule, IgxButtonModule } from 'igniteui-angular'
 
 @NgModule({
     ...

@@ -30,7 +30,7 @@ Ignite UI for Angular Switch を初期化する前に、**IgxSwitchModule** を 
 // app.module.ts
 
 ...
-import { IgxSwitchModule } from 'igniteui-angular/main';
+import { IgxSwitchModule } from 'igniteui-angular';
 
 @NgModule({
     ...

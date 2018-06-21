@@ -31,7 +31,7 @@ Ignite UI for Angular Toast を初期化する前に、最初に **IgxToastModul
 // app.module.ts
 
 ...
-import { IgxToastModule } from 'igniteui-angular/main';
+import { IgxToastModule } from 'igniteui-angular';
 
 @NgModule({
     ...
@@ -109,7 +109,7 @@ Toast コンポーネントを表示するには、ボタン クリックで `sh
 ```typescript
 // sample.component.ts
 
-import { IgxToastPosition } from "igniteui-angular/main";
+import { IgxToastPosition } from 'igniteui-angular';
 
 ...
 public toastPosition: IgxToastPosition;

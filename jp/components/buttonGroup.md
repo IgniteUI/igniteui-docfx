@@ -26,7 +26,7 @@ Button Group が `NgModule` としてエクスポートされるため、アプ�
 ```typescript
 // app.module.ts
 
-import { IgxButtonGroupModule } from 'igniteui-angular/main';
+import { IgxButtonGroupModule } from 'igniteui-angular';
 
 @NgModule({
     imports: [
@@ -43,7 +43,7 @@ export class AppModule {}
 
 ```typescript
 //sample.component.ts
-import { ButtonGroupAlignment } from "igniteui-angular/main";
+import { ButtonGroupAlignment } from 'igniteui-angular';
 ...
 public alignment = ButtonGroupAlignment.vertical;
 ...

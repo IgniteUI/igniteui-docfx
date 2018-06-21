@@ -27,7 +27,7 @@ The grid is exported as as an `NgModule`, thus all you need to do in your applic
 ```typescript
 // app.module.ts
 
-import { IgxGridModule } from 'igniteui-angular/main';
+import { IgxGridModule } from 'igniteui-angular';
 // Or
 import { IgxGridModule } from 'igniteui-angular/grid';
 
@@ -46,7 +46,7 @@ Each of the components, directives and helper classes in the _IgxGridModule_ can
 ```typescript
 import { IgxGridComponent } from 'igniteui-angular/grid/';
 // Or
-import { IgxGridComponent } from 'igniteui-angular/main'
+import { IgxGridComponent } from 'igniteui-angular'
 ...
 
 @ViewChild('myGrid', { read: IgxGridComponent })
@@ -524,7 +524,7 @@ import {
     NUMBER_FILTERS,
     DATE_FILTERS,
     BOOLEAN_FILTERS
-} from 'igniteui-angular/main';
+} from 'igniteui-angular';
 ```
 
 ### String types
