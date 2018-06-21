@@ -6,7 +6,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ## Multi Column Headers
 
-`igxGrid` supports `multi-column headers` which allows you to group columns by placing them under a common header. Every `column group` could be a representation of combination between other groups or columns.
+`igxGrid` supports `multi-column headers` which allows you to group columns by placing them under a common header. Every `column group` could be a representation of combinations between other groups or columns.
 
 ## Demo
 
@@ -79,5 +79,27 @@ Every `igx-column-group` supports `moving`, `pinning` and `hidding`.
 |`parent`| IgxColumnGroupComponent|IgxColumnComponent | yes | no | Returns the direct parent of the `column group`.|
 |`children`| IgxColumnComponent[] | yes | no | Returns the direct children of the `column group`. |
 |`topLevelParent`| IgxColumnGroupComponent | yes | no | Returns the top level parent of the `group`. |
-|`width`| string | yes | no | Returns the `width` of current `column group` determined by the children it contains. | 
+|`width`| string | yes | no | Returns the `width` of current `column group` determined by the children it contains. |
 |`pinned`| boolean | yes | yes | Get/Sets whether current `column group` is pinned. |
+
+
+<div class="divider--half"></div>
+
+### Additional Resources
+<div class="divider--half"></div>
+
+* [Grid overview](grid.md)
+* [Virtualization and Performance](grid_virtualization.md)
+* [Paging](grid_paging.md)
+* [Filtering](grid_filtering.md)
+* [Sorting](grid_sorting.md)
+* [Summaries](grid_summaries.md)
+* [Column Resizing](grid_column_resizing.md)
+* [Selection](grid_selection.md)
+* [Group by](grid_groupby.md)
+
+<div class="divider--half"></div>
+Our community is active and always welcoming to new ideas.
+
+* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
