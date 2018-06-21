@@ -25,28 +25,18 @@ Let's start by creating our grid and binding it to our data. We will also enable
 ```html
 <!--columnHiding.component.html-->
 
-<igx-grid #grid id="grid" [data]="data" [autoGenerate]="false" width="100%" height="560px" columnWidth="200px"
-            (onColumnInit)="initColumns($event)">
-    <igx-column [field]="'ID'" dataType="string"></igx-column>
-    <igx-column [field]="'ContactName'" dataType="string"></igx-column>
-    <igx-column [field]="'ContactTitle'" dataType="string"></igx-column>
-    <igx-column [field]="'City'" dataType="string"></igx-column>
-    <igx-column [field]="'CompanyName'" dataType="string"></igx-column>
-    <igx-column [field]="'Fax'" dataType="string"></igx-column>
-    <igx-column [field]="'Address'" dataType="string"></igx-column>
-    <igx-column [field]="'PostalCode'" dataType="string"></igx-column>
-    <igx-column [field]="'Country'" dataType="string"></igx-column>
-    <igx-column [field]="'Phone'" dataType="string"></igx-column>
+<igx-grid #grid id="grid" [data]="data" [autoGenerate]="false" width="100%" height="560px" columnWidth="200px">
+    <igx-column [field]="'ID'" dataType="string" [filterable]="true" [sortable]="true"></igx-column>
+    <igx-column [field]="'ContactName'" dataType="string" [filterable]="true" [sortable]="true"></igx-column>
+    <igx-column [field]="'ContactTitle'" dataType="string" [filterable]="true" [sortable]="true"></igx-column>
+    <igx-column [field]="'City'" dataType="string" [filterable]="true" [sortable]="true"></igx-column>
+    <igx-column [field]="'CompanyName'" dataType="string" [filterable]="true" [sortable]="true"></igx-column>
+    <igx-column [field]="'Fax'" dataType="string" [filterable]="true" [sortable]="true"></igx-column>
+    <igx-column [field]="'Address'" dataType="string" [filterable]="true" [sortable]="true"></igx-column>
+    <igx-column [field]="'PostalCode'" dataType="string" [filterable]="true" [sortable]="true"></igx-column>
+    <igx-column [field]="'Country'" dataType="string" [filterable]="true" [sortable]="true"></igx-column>
+    <igx-column [field]="'Phone'" dataType="string" [filterable]="true" [sortable]="true"></igx-column>
 </igx-grid>
-```
-
-```typescript
-// columnHiding.component.ts
-
-public initColumns(column: IgxColumnComponent) {
-    column.filterable = true;
-    column.sortable = true;
-}
 ```
 
 ### Toolbar's Column Hiding UI
@@ -132,8 +122,7 @@ Now let's create our IgxColumnHidingComponent! In our application, we will place
     </igx-column-hiding>
 </div>
 <div class="gridContainer">
-    <igx-grid #grid id="grid" [data]="data" [autoGenerate]="false" width="100%" height="500px" columnWidth="200px"
-              (onColumnInit)="initColumns($event)">
+    <igx-grid #grid id="grid" [data]="data" [autoGenerate]="false" width="100%" height="500px" columnWidth="200px">
         ...
     </igx-grid>
 </div>
@@ -159,6 +148,9 @@ Now let's create our IgxColumnHidingComponent! In our application, we will place
     border: 1px gray;
     border-radius: 10px;
     box-shadow: 1px 1px 2px 2px rgba(50, 50, 50, 0.25);
+    igx-column-hiding {
+        height: 100%;
+    }
 }
 
 .columnsOrderOptionsContainer {
@@ -248,8 +240,8 @@ We can easily prevent the user from being able to hide columns through the colum
 <div class="gridContainer">
     <igx-grid ... >
         ...
-        <igx-column [field]="'ContactName'" dataType="string" [disableHiding]="true"></igx-column>
-        <igx-column [field]="'ContactTitle'" dataType="string" [disableHiding]="true"></igx-column>
+        <igx-column [field]="'ContactName'" dataType="string" [filterable]="true" [sortable]="true" [disableHiding]="true"></igx-column>
+        <igx-column [field]="'ContactTitle'" dataType="string" [filterable]="true" [sortable]="true" [disableHiding]="true"></igx-column>
         ...
     </igx-grid>
 </div>
