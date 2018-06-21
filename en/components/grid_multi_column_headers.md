@@ -6,7 +6,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ## Multi Column Headers
 
-`igxGrid` supports `multi-column headers` which allows you to group columns by placing them under a common header. Every `column group` could be a representation of combination between other groups or columns.
+`igxGrid` supports `multi-column headers` which allows you to group columns by placing them under a common header. Every `column group` could be a representation of combinations between other groups or columns.
 
 ## Demo
 
