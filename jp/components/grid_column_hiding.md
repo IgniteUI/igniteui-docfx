@@ -1,7 +1,7 @@
 ---
 title: Column Hiding Component – Native Angular | Ignite UI for Angular
 _description: Column hiding with the Ignite UI for Angular Column Hiding component allows the users hide and show columns by using a built-in UI of the Data Grid.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Components, Angular Data Grid component, Angular Data Grid control, Angular Grid component, Angular Grid control, Angular High Performance Grid, column hiding, hiding, hide
+_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Components, Angular Data Grid component, Angular Data Grid control, Angular Grid component, Angular Grid control, Angular High Performance Grid, grid column hiding, column hiding, angular grid column hiding, angular column hiding
 ---
 
 ### Grid Column Hiding
@@ -41,7 +41,7 @@ Let's start by creating our grid and binding it to our data. We will also enable
 
 ### Toolbar's Column Hiding UI
 
-The built-in Column Hiding UI is placed inside an IgxDropDown in the grid's toolbar. We can show/hide the Column Hiding UI by using this exact dropdown.
+The built-in Column Hiding UI is placed inside an `IgxDropDownComponent` in the grid's toolbar. We can show/hide the Column Hiding UI by using this exact dropdown.
 For this purpose all we have to do is set both the `showToolbar` and the `columnHiding` properties of the grid to true. If the toolbar is not enabled, enabling the `columnHiding` property will have no effect.
 We will also add a title to our toolbar by using the `toolbarTitle` property and a custom style for our grid's wrapper.
 
