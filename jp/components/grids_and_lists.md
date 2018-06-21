@@ -1,13 +1,13 @@
 ---
 title: Data Grids および Lists コンポーネント
-_description: Ignite UI for Angular は、高速な Angular Data Grid と描画、パワフルな Angular グリッドにマテリアル ベースのコンポーネントを提供します。
+_description: Ignite UI for Angular は、高速な Angular Data Grid と描画、パワフルな Angular グリッドにマテリアル ベースのコンポーネントです。
 _keywords: Ignite UI for Angular, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular グリッド, Angular データグリッド, Angular グリッドコントロール, Angular グリッドコンポーネント
 ---
 
 <div class="feature feature--hero">
   <div class="feature__details">
     <h2 id="the-fastest-data-angular-data-grid">高速 Angular データ グリッド</h2>
-    <p>Ignite UI for Angular の [Data Grid](grid.md)  は、最適化、スピード、高パフォーマンス、更にサイズの大きなデータセットのスムーズな処理を可能にします。仮想ディレクティブとパワフルなグリッド機能でデータグリッドは、数百のデータ ポイントを遅延なしにスクリールできます。</p>
+    <p>Ignite UI for Angular の [Data Grid](grid.md)   は高速処理や高パフォーマンスの実現に最適化されています。更にサイズの大きなデータセットのスムーズな処理を可能にします。仮想ディレクティブとパワフルなグリッド機能でデータグリッドは、数百のデータ ポイントを遅延なしにスクリールできます。</p>
     <a class="cta-btn" href="https://jp.infragistics.com/products/ignite-ui-angular/getting-started">無償版ダウンロード</a>
   </div>
   <div class="feature__image feature__image--right">
@@ -25,7 +25,7 @@ _keywords: Ignite UI for Angular, Angular, ネイティブ Angular コンポー�
     </div>
     <div class="feature__details">
       <h3 id="virtualization-and-performance">[仮想化とパフォーマンス](grid_virtualization.md)</h3>
-      <p>Ignite UI for Angular Virtualization ディレクティブは、数百のポイントをがある大きなデータセットをシームレスにスクロール、高速な Angular Data Grid の描画や遅延なしで読み込みが可能です。</p>
+      <p>Ignite UI for Angular Virtualization ディレクティブは、数百のポイントがある大きなデータセットをシームレスにスクロール、高速な Angular Data Grid の描画や遅延なしの読み込みが可能です。</p>
     </div>
   </div>
 
@@ -36,7 +36,7 @@ _keywords: Ignite UI for Angular, Angular, ネイティブ Angular コンポー�
     </div>
     <div class="feature__details">
       <h3 id="paging">[Paging](grid.md)</h3>
-      <p>機能が有効にするかどうかを制御し、ページング コンポーネントはテンプレートやコードによる改ページを可能となります。</p>
+      <p>機能を有効にするかどうかを制御し、ページング コンポーネントはテンプレートやコードによる改ページが可能となります。</p>
     </div>
   </div>
 
@@ -57,7 +57,7 @@ _keywords: Ignite UI for Angular, Angular, ネイティブ Angular コンポー�
     </div>
     <div class="feature__details">
       <h3 id="cell-copying-and-pasting">セルのコピーと貼り付け</h3>
-      <p>各セルやセル範囲間で情報を簡単にコピーおよび貼り付けできます。 </p>
+      <p>各セルやセル範囲間で情報のコピーおよび貼り付けが簡単にできます。</p>
     </div>
   </div>
 
@@ -98,7 +98,7 @@ _keywords: Ignite UI for Angular, Angular, ネイティブ Angular コンポー�
     </div>
     <div class="feature__details">
       <h3 id="cell-styling">セルのスタイル設定</h3>
-      <p>特定のスタイルをセルに適用します。</p>
+      <p>セルに特定のスタイルを適用します。</p>
     </div>
   </div>
 
@@ -114,7 +114,7 @@ _keywords: Ignite UI for Angular, Angular, ネイティブ Angular コンポー�
 
   <div class="feature">
     <div class="feature__image feature__image--left">
-      <img class="b-lazy" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-lazy-load.png" data-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-filtering-768.gif" data-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-filtering-480.gif 480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-filtering-768.gif  768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-filtering-1100.gif 1100w" sizes="(min-width: 1800px) 575px,(max-width: 1799px) and (min-width: 1200px) 50vw,(max-width: 1199px) and (min-width: 992px) 33vw,(max-width: 991px) and (min-width: 768px) 50vw, 100vw" alt="グリッド機能は、シンプルまたは複雑な列ごとのフィルタリングを可能にします。">
+      <img class="b-lazy" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-lazy-load.png" data-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-filtering-768.gif" data-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-filtering-480.gif 480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-filtering-768.gif  768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-filtering-1100.gif 1100w" sizes="(min-width: 1800px) 575px,(max-width: 1799px) and (min-width: 1200px) 50vw,(max-width: 1199px) and (min-width: 992px) 33vw,(max-width: 991px) and (min-width: 768px) 50vw, 100vw" alt="グリッド機能は、列ごとのフィルタリング (簡易/高度) を可能にします。">
       <a href="grid_filtering.md" class="feature__more-details">フィルタリングについて</a>
     </div>
     <div class="feature__details">
@@ -140,7 +140,7 @@ _keywords: Ignite UI for Angular, Angular, ネイティブ Angular コンポー�
     </div>
     <div class="feature__details">
       <h3 id="sorting">[Sorting](grid_sorting.md)</h3>
-      <p>グリッドは、グリッド並べ替えが列レベルであるため並べ可能な列と並べ替え無効な列を組み合わせることができます。</p>
+      <p>グリッドの並べ替えが列レベルで実行されるため、並べ可能な列と並べ替え無効な列を組み合わせることができます。</p>
     </div>
   </div>
 
@@ -158,7 +158,7 @@ _keywords: Ignite UI for Angular, Angular, ネイティブ Angular コンポー�
   <div class="feature">
     <div class="feature__image feature__image--left">
       <img class="b-lazy" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-lazy-load.png" data-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-cell-virtual-scrolling-768.jpg" data-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-cell-virtual-scrolling-480.jpg 480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-cell-virtual-scrolling-768.jpg  768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-cell-virtual-scrolling-1100.jpg 1100w" sizes="(min-width: 1800px) 575px,(max-width: 1799px) and (min-width: 1200px) 50vw,(max-width: 1199px) and (min-width: 992px) 33vw,(max-width: 991px) and (min-width: 768px) 50vw, 100vw" alt="Angular Data Grid のスクロール時の列描画の仮想化">
-      <a href="grid_virtualization.md" class="feature__more-details">Virual Row Implementation</a>
+      <a href="grid_virtualization.md" class="feature__more-details">行仮想化の実装</a>
     </div>
     <div class="feature__details">
       <h3 id="virtual-row">[行の仮想化](grid_virtualization.md)</h3>
