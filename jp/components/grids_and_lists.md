@@ -183,7 +183,7 @@ _language: ja
       <img class="b-lazy" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-lazy-load.png" data-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-aria-support-768.jpg" data-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-aria-support-480.jpg 480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-aria-support-768.jpg  768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-aria-support-1100.jpg 1100w" sizes="(min-width: 1800px) 575px,(max-width: 1799px) and (min-width: 1200px) 50vw,(max-width: 1199px) and (min-width: 992px) 33vw,(max-width: 991px) and (min-width: 768px) 50vw, 100vw" alt="Angular Data Grid の ARIA サポート。">
     </div>
     <div class="feature__details">
-      <h3 id="aria-support"><abbr title="RIA (リッチ インターネット アプリケーション)">ARIA</abbr> サポート</h3>
+      <h3 id="aria-support"><abbr title="アクセシブルなリッチインターネットアプリケーション (Accessible Rich Internet Applications)">ARIA</abbr> サポート</h3>
       <p>グリッドに支援テクノロジーを統合できます。</p>
     </div>
   </div>
