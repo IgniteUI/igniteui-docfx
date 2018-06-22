@@ -21,7 +21,7 @@ Ignite UI for Angular の Grid コンポーネントは、標準ドラッグ/ド
 <div class="divider--half"></div>
 
 #### 概要
-**列移動は各列レベルで有効にできます。つまり、i**igx-grid** に移動可能な列と移動不可の列の両方を含むことができます。`igx-column` の `movable` 入力によって制御されます。
+**列移動**は各列レベルで有効にできます。つまり、**igx-grid** に移動可能な列と移動不可の列の両方を含むことができます。`igx-column` の `movable` 入力によって制御されます。
 
 ```html
 <igx-column [field]="'Category'" [movable]="true"></igx-column>
@@ -29,7 +29,7 @@ Ignite UI for Angular の Grid コンポーネントは、標準ドラッグ/ド
 
 #### イベント
 列のドラッグアンドドロップ操作をカスタマイズするための列移動に関連するイベントが複数あります。`onColumnMovingStart`、`onColumnMoving`、`onColumnMovingEnd` があります。
-igx-grid の `onColumnMovingEnd イベントを処理し、列が新しい位置にドロップされたときにカスタム ロジックを実装できます。たとえば、Change On Year(%) 列の後に Category のドロップをキャンセルできます。
+igx-grid の `onColumnMovingEnd` イベントを処理し、列が新しい位置にドロップされたときにカスタム ロジックを実装できます。たとえば、Change On Year(%) 列の後に Category のドロップをキャンセルできます。
 
 ```html
 <igx-grid #dataGrid [data]="data" [autoGenerate]="false" (onColumnMovingEnd)="onColumnMovingEnd($event)">
