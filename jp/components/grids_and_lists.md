@@ -7,7 +7,7 @@ _keywords: Ignite UI for Angular, Angular, ネイティブ Angular コンポー�
 <div class="feature feature--hero">
   <div class="feature__details">
     <h2 id="the-fastest-data-angular-data-grid">高速 Angular データ グリッド</h2>
-    <p>Ignite UI for Angular の [Data Grid](grid.md)   は高速処理や高パフォーマンスの実現に最適化されています。更にサイズの大きなデータセットのスムーズな処理を可能にします。仮想ディレクティブとパワフルなグリッド機能でデータグリッドは、数百のデータ ポイントを遅延なしにスクリールできます。</p>
+    <p>Ignite UI for Angular の [Data Grid](grid.md)   は、サイズの大きなデータセットの高速処理など高パフォーマンスに最適化されています。仮想ディレクティブとパワフルなグリッド機能により、数百のデータ ポイントを遅延なしでスクロールできます。</p>
     <a class="cta-btn" href="https://jp.infragistics.com/products/ignite-ui-angular/getting-started">無償版ダウンロード</a>
   </div>
   <div class="feature__image feature__image--right">
@@ -36,7 +36,7 @@ _keywords: Ignite UI for Angular, Angular, ネイティブ Angular コンポー�
     </div>
     <div class="feature__details">
       <h3 id="paging">[Paging](grid.md)</h3>
-      <p>機能を有効にするかどうかを制御し、ページング コンポーネントはテンプレートやコードによる改ページが可能となります。</p>
+      <p>ページング コンポーネントは、テンプレートやコードによる改ページ機能を有効にするかどうかを制御できます。</p>
     </div>
   </div>
 
@@ -47,7 +47,7 @@ _keywords: Ignite UI for Angular, Angular, ネイティブ Angular コンポー�
     </div>
     <div class="feature__details">
       <h3 id="summaries">[Summaries](grid_summaries.md)</h3>
-      <p>列にデフォルトで定義済みの集計項目があります。</p>
+      <p>各コンテナの列にデフォルトで定義済みの集計項目があります。</p>
     </div>
   </div>
 
@@ -67,7 +67,7 @@ _keywords: Ignite UI for Angular, Angular, ネイティブ Angular コンポー�
     </div>
     <div class="feature__details">
       <h3 id="keyboard-navigation">Keyboard Navigation</h3>
-      <p>キーボード、タッチ、マウスによるナビゲーションをサポートし、グリッドで igx-scroll 機能を使用した両方の軸をスクロールできます。</p>
+      <p>キーボード、タッチ、マウスによるナビゲーションをサポートし、グリッドで igx-scroll 機能を使用した両軸のスクロールが可能です。</p>
     </div>
   </div>
 
@@ -78,7 +78,7 @@ _keywords: Ignite UI for Angular, Angular, ネイティブ Angular コンポー�
     </div>
     <div class="feature__details">
       <h3 id="live-updates">[Live Updates](grid.md)</h3>
-      <p>データグリッドの編集や変更をリアルタイムに更新し、グリッドをライブ フィードに接続します。</p>
+      <p>データグリッドの編集や変更をライブ フィードに接続してリアルタイムに更新します</p>
     </div>
   </div>
 
@@ -88,7 +88,7 @@ _keywords: Ignite UI for Angular, Angular, ネイティブ Angular コンポー�
     </div>
     <div class="feature__details">
       <h3 id="cell-selection">セル選択</h3>
-      <p>データ セルを個別に選択または選択解除</p>
+      <p>データ セルを個別に選択または選択解除できます。</p>
     </div>
   </div>
 
@@ -98,7 +98,7 @@ _keywords: Ignite UI for Angular, Angular, ネイティブ Angular コンポー�
     </div>
     <div class="feature__details">
       <h3 id="cell-styling">セルのスタイル設定</h3>
-      <p>セルに特定のスタイルを適用します。</p>
+      <p>セルに固有のスタイルを設定できます。</p>
     </div>
   </div>
 
@@ -119,7 +119,7 @@ _keywords: Ignite UI for Angular, Angular, ネイティブ Angular コンポー�
     </div>
     <div class="feature__details">
       <h3 id="filtering">[Filtering](grid_filtering.md)</h3>
-      <p>グリッド機能は、シンプルまたは複雑な列ごとのフィルタリングを可能にします。</p>
+      <p>フィルター機能は、列ごとのフィルタリング (簡易/高度) を可能にします。</p>
     </div>
   </div>
 
@@ -140,7 +140,7 @@ _keywords: Ignite UI for Angular, Angular, ネイティブ Angular コンポー�
     </div>
     <div class="feature__details">
       <h3 id="sorting">[Sorting](grid_sorting.md)</h3>
-      <p>グリッドの並べ替えが列レベルで実行されるため、並べ可能な列と並べ替え無効な列を組み合わせることができます。</p>
+      <p>並べ替えを列レベルで実行できるため、グリッドで並べ可能な列と並べ替え無効な列を組み合わせることができます。</p>
     </div>
   </div>
 
@@ -151,7 +151,7 @@ _keywords: Ignite UI for Angular, Angular, ネイティブ Angular コンポー�
     </div>
     <div class="feature__details">
       <h3 id="column-text-filter">[列テキストフィルター](grid_filtering.md)</h3>
-      <p>列レベルでテキストをフィルターして情報をすばやく見つけます。</p>
+      <p>列レベルでテキストをフィルターして情報をすばやく検索できます。</p>
     </div>
   </div>
 
@@ -162,7 +162,7 @@ _keywords: Ignite UI for Angular, Angular, ネイティブ Angular コンポー�
     </div>
     <div class="feature__details">
       <h3 id="virtual-row">[行の仮想化](grid_virtualization.md)</h3>
-      <p>スクロールに合わせて直ちに描画される行をすばやくナビゲーションします。</p>
+      <p>スクロールに合わせて行がすばやく描画されるため、多数の行でもスムーズにナビゲーションできます。</p>
     </div>
   </div>
 
@@ -183,7 +183,7 @@ _keywords: Ignite UI for Angular, Angular, ネイティブ Angular コンポー�
     </div>
     <div class="feature__details">
       <h3 id="aria-support"><abbr title="RIA (リッチ インターネット アプリケーション)">ARIA</abbr> サポート</h3>
-      <p>グリッドに支援テクノロジーを統合</p>
+      <p>グリッドに支援テクノロジーを統合できます。</p>
     </div>
   </div>
 
@@ -193,7 +193,7 @@ _keywords: Ignite UI for Angular, Angular, ネイティブ Angular コンポー�
     </div>
     <div class="feature__details">
       <h3 id="row-deletion">Row Deletion</h3>
-      <p>Easily remove rows of data.</p>
+      <p>単一または複数の列を削除できます。</p>
     </div>
   </div>
 </section>
