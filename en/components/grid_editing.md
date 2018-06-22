@@ -22,7 +22,7 @@ The Grid component in ignite UI for Angular provides you a default cell template
 In order to be able to enter edit mode for specific cell, you should first set that the column is **editable**. If you want to use the data type specific *edit templates* you should also specify the column **dataType** property. So let's now see what are default templates for each type:
 
  - For `string` data type, default template use **igxInput**
- - For `number` data type, default template use **igxInput type="number"**, so if you try to update cell to a value which can not be parsed to a number your change is going to be discarded.
+ - For `number` data type, default template use **igxInput type="number"**, so if you try to update cell to a value which can not be parsed to a number your change is going to be discarded, and the value in the cell will be set to **0**.
  - For `date` data type, default template use **igx-datePicker**
  - For `boolean` data type, default template use **igx-checkbox**
 
@@ -34,13 +34,14 @@ You can enter edit mode for specific cell, when an editable cell is focused in o
 
 You can exit edit mode **without commiting** the changes in one of the following ways:
  - on key press `Escape`;
- - when you perform *sorting*, *filtering* and *searching* operations;
+ - when you perform *sorting*, *filtering*, *searching* and *hiding* operations;
 
 You can exit edit mode and **commit** the changes in one of the following ways:
  - on key press `Enter`;
  - on key press `F2`;
  - on key press `Tab`;
  - on single click to another cell - when you click to another cell in the grid your changes in cell value will be submited.
+ - when you perform 'moving' and 'pinning' operations;
 
 > [!NOTE]
 > The cell remains in edit mode when you scroll vertically or horizontally, click outside the grid, resize or pin column or go to another page.
@@ -67,6 +68,51 @@ Another way to update cell is directly through update method of IgxCellComponent
 ...
 ```
 If you want to define a custom template which will be applied when the cell is edit mode, you can see the documentation for [Grid Columns configuration](grid.md#columns-configuration).
+
+### CRUD operations
+
+> [!NOTE]
+> Please keep in mind that when you perform some **CRUD operation** all of the applied pipes like **filtering**, **sorting** and **grouping** will be re-applied and your view will be automatically updated.
+
+The `IgxGridComponent` provides a straigtforward API for basic CRUD operations.
+
+#### Adding a new record
+
+The grid component exposes the `addRow` method which will add the provided data to the data source itself.
+
+```typescript
+// Adding a new record
+// Assuming we have a `getNewRecord` method returning the new row data.
+const record = this.getNewRecord();
+this.grid.addRow(record);
+```
+
+#### Updating data in the grid
+
+Updating data in the grid is achieved through `updateRow` and `updateCell` methods. You can also directly update a cell value through its `update` method.
+
+```typescript
+// Updating the whole row
+this.grid.updateRow(newData, this.selectedCell.rowIndex);
+
+// Just a particualr cell through the Grid API
+this.grid.updateCell(newData, this.selectedCell.rowIndex, this.selectedCell.column.field);
+
+// Directly using the cell `update` method
+this.selectedCell.update(newData);
+```
+
+#### Deleting data from the grid
+
+```typescript
+this.grid.deleteRow(this.selectedCell.rowIndex);
+```
+These can be wired to user interactions, not necessarily related to the **igx-grid**; for example, a button click:
+```html
+<button igxButton igxRipple (click)="deleteRow($event)">Delete Row</button>
+```
+
+<div class="divider--half"></div>
 
 ### Additional Resources
 <div class="divider--half"></div>
