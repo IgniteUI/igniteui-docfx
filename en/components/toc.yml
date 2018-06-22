@@ -38,6 +38,9 @@
     - name: Export to Excel
       href: exporter_excel.md
       new: true
+    - name: Multi Column Headers
+      href: grid_multi_column_headers.md
+      new: true
 - name: List View
   href: list.md
 - name: Charts
