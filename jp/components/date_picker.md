@@ -28,7 +28,7 @@ _language: ja
 // app.module.ts
 
 ...
-import { IgxDatePickerModule } from 'igniteui-angular/main';
+import { IgxDatePickerModule } from 'igniteui-angular';
 
 @NgModule({
     ...
@@ -230,7 +230,7 @@ public getDatePart(val: any, component: any, datePart: string) {
 | `formatOptions` | `Object` | 日付を書式設定するために使用される `locale` プロパティと渡される書式オプション。 |
 | `formatViews` | `Object` | 日付を書式設定するために使用される `locale` プロパティと渡される書式ビュー。 |
 | `label` | `string` | デフォルト テキスト ラベルを変更します。 |
-| `labelVisability` | `string ` | ラベルを表示または非表示にします。 |
+| `labelVisibility` | `string ` | ラベルを表示または非表示にします。 |
 
 #### 出力
 

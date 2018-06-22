@@ -27,7 +27,7 @@ To get started with the Ignite UI for Angular Input Group, Input, Label, Prefix,
 // app.module.ts
 
 ...
-import { IgxInputGroupModule } from 'igniteui-angular/main';
+import { IgxInputGroupModule } from 'igniteui-angular';
 
 @NgModule({
     ...

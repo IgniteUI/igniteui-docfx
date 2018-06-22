@@ -33,7 +33,7 @@ To get started with the control, let's first import the **IgxBottomNavModule** i
 // app.module.ts
 
 ...
-import { IgxBottomNavModule } from 'igniteui-angular/main';
+import { IgxBottomNavModule } from 'igniteui-angular';
 
 @NgModule({
     ...
@@ -199,10 +199,10 @@ This time you will need to include both the IgxBottomNavComponent and IgxListCom
 // app.module.ts
 
 ...
-import { IgxAvatarModule } from 'igniteui-angular/main';
-import { IgxIconModule } from 'igniteui-angular/main';
-import { IgxListModule } from 'igniteui-angular/main';
-import { IgxBottomNavModule } from 'igniteui-angular/main';
+import { IgxAvatarModule } from 'igniteui-angular';
+import { IgxIconModule } from 'igniteui-angular';
+import { IgxListModule } from 'igniteui-angular';
+import { IgxBottomNavModule } from 'igniteui-angular';
 
 @NgModule({
     ...

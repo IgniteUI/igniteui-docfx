@@ -89,7 +89,7 @@ public ngOnInit() {
 The `filteringLogic` property of the grid controls how filtering multiple columns will resolve in the grid. You can change it at any time through the grid API or through the grid input property.
 
 ```typescript
-import { FilteringLogic } from 'igniteui-angular/main';
+import { FilteringLogic } from 'igniteui-angular';
 ...
 
 this.grid.filteringLogic = FilteringLogic.OR;

@@ -28,7 +28,7 @@ _language: ja
 ```typescript
 // app.module.ts
 
-import { IgxGridModule } from 'igniteui-angular/main';
+import { IgxGridModule } from 'igniteui-angular';
 // Or
 import { IgxGridModule } from 'igniteui-angular/grid';
 
@@ -47,7 +47,7 @@ _IgxGridModule_ の各コンポーネント、ディレクティブ、および�
 ```typescript
 import { IgxGridComponent } from 'igniteui-angular/grid/';
 // Or
-import { IgxGridComponent } from 'igniteui-angular/main';
+import { IgxGridComponent } from 'igniteui-angular';
 ...
 
 @ViewChild('myGrid', { read: IgxGridComponent })
@@ -365,6 +365,16 @@ this.grid.deleteRow(this.selectedCell.rowIndex);
 <button igxButton igxRipple (click)="deleteRow($event)">行の削除</button>
 ```
 
+## 既知の問題と制限
+
+|制限|説明|
+|--- |--- |
+|`percentage` および `px` で設定した列幅|列に `%` と `px` を組み合わせて使用することはできません。|
+|`number` 型の列をフィルターする場合|フィルター入力に入力された値が `number` と異なる場合、キャストが正しくないため `NaN` が返されます。|
+|グリッドの `width` が列幅に依存しない| すべての列の `width` でグリッド自体のスパンは決定しません。親コンテナーのディメンションまたは定義したグリッドの `width` で決定されます。|
+|親コンテナーでネストされた Grid | グリッドの `width` を設定せずに定義済みのディメンションで親コンテナーに配置した場合、グリッドがコンテナーに合わせてスパンします。|
+|Grid `OnPush` ChangeDetectionStrategy |グリッドで `ChangeDetectionStrategy.OnPush` を処理し、カスタム表示されたときにグリッドに発生した変更について通知します。|
+
 ## API
 
 ### 入力
@@ -514,7 +524,7 @@ import {
     NUMBER_FILTERS,
     DATE_FILTERS,
     BOOLEAN_FILTERS
-} from 'igniteui-angular/main';
+} from 'igniteui-angular';
 ```
 
 ### 文字列型

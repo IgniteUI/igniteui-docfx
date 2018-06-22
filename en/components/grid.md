@@ -27,7 +27,7 @@ The grid is exported as as an `NgModule`, thus all you need to do in your applic
 ```typescript
 // app.module.ts
 
-import { IgxGridModule } from 'igniteui-angular/main';
+import { IgxGridModule } from 'igniteui-angular';
 // Or
 import { IgxGridModule } from 'igniteui-angular/grid';
 
@@ -46,7 +46,7 @@ Each of the components, directives and helper classes in the _IgxGridModule_ can
 ```typescript
 import { IgxGridComponent } from 'igniteui-angular/grid/';
 // Or
-import { IgxGridComponent } from 'igniteui-angular/main'
+import { IgxGridComponent } from 'igniteui-angular'
 ...
 
 @ViewChild('myGrid', { read: IgxGridComponent })
@@ -320,6 +320,18 @@ and in the template of the component:
 
 **Note**: The grid `autoGenerate` property is best to be avoided when binding to remote data for now. It assumes that the data is available in order to inspect it and generate the appropriate columns. This is usually not the case until the remote service responds, and the grid will throw an error. Making `autoGenerate` available, when binding to remote service, is on our roadmap for future versions.
 
+## Known Limitations
+
+|Limitation|Description|
+|--- |--- |
+|Column widths set in `percentage` and `px`|Currently we do not support mixing of column widths with `%` and `px`.|
+|When trying to filter a column of type `number`|If a value different than `number` is entered into the filtering input, `NaN` is returned due to an incorrect cast.|
+|Grid `width` does not depend on the column widths | The `width` of all columns does not determine the spanning of the grid itself. It is determined by the parent container dimensions or the defined grid's `width`.|
+|Grid nested in parent container | When grid's `width` is not set and it is placed in a parent container with defined dimensions, the grid spans to this container.|
+|Grid `OnPush` ChangeDetectionStrategy |The grid operates with `ChangeDetectionStrategy.OnPush` so whenever some customization appears make sure that the grid is notified about the changes that happens.|
+
+
+<div class="divider--half"></div>
 
 ## API
 
@@ -472,7 +484,7 @@ import {
     NUMBER_FILTERS,
     DATE_FILTERS,
     BOOLEAN_FILTERS
-} from 'igniteui-angular/main';
+} from 'igniteui-angular';
 ```
 
 ### String types
@@ -579,7 +591,6 @@ import {
 |Name|Return Type|Description|
 |--- |--- |--- |
 |`update(val: any)`|void|Emits the `onEditDone` event and updates the appropriate record in the data source.|
-
 
 ### Additional Resources
 <div class="divider--half"></div>

@@ -26,7 +26,7 @@ To get started with the Ignite UI for Angular Snack Bar, let's first import the 
 // app.module.ts
 
 ...
-import { IgxSnackbarModule } from 'igniteui-angular/main';
+import { IgxSnackbarModule } from 'igniteui-angular';
 
 @NgModule({
     ...
@@ -130,7 +130,7 @@ Let’s create a list with contacts that can be deleted. When an item is deleted
 //sample.component.ts 
 
 import { Component, OnInit, ViewChild } from "@angular/core";
-import { IgxSnackbarComponent } from "igniteui-angular/main";
+import { IgxSnackbarComponent } from 'igniteui-angular';
 
 ...
 @ViewChild(IgxSnackbarComponent)

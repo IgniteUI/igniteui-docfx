@@ -29,7 +29,7 @@ Ignite UI for Angular Tabs コンポーネントを初期化する前に **IgxTa
 // app.module.ts
 
 ...
-import { IgxTabsModule } from 'igniteui-angular/main';
+import { IgxTabsModule } from 'igniteui-angular';
 
 @NgModule({
     ...

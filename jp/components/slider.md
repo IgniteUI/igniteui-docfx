@@ -29,7 +29,7 @@ Ignite UI for Angular Slider を初期化する前に、**IgxSliderModule** を 
 // app.module.ts
 
 ...
-import { IgxSliderModule } from 'igniteui-angular/main';
+import { IgxSliderModule } from 'igniteui-angular';
 
 @NgModule({
     ...

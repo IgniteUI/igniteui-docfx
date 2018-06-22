@@ -23,7 +23,7 @@ _language: ja
 ```typescript
 // app.module.ts
 ...
-import { IgxCarouselModule } from 'igniteui-angular/main';
+import { IgxCarouselModule } from 'igniteui-angular';
 @NgModule({
     ...
     imports: [..., IgxCarouselModule],
@@ -149,7 +149,7 @@ a > igx-icon > span{
 
 ```typescript
 // app.component.ts
-import { Direction, IgxCarousel, IgxLinearProgressBar } from "igniteui-angular/main";
+import { Direction, IgxCarousel, IgxLinearProgressBar } from 'igniteui-angular';
 ```
 
 モジュールをインポートした後、**IgxLinearProgressBar** をテンプレートに追加します。`max` プロパティを **app.component.ts** ファイルで定義される `total` プロパティの値に設定します。`onSlideChanged` イベントのハンドラーを追加し、進行状況のテキストを追加します。
@@ -232,7 +232,7 @@ ul.igx-carousel__indicators {
 ```typescript
   // app.component.ts
   import { Router } from "@angular/router";
-  import { Direction, IgxButtonModule, IgxCarousel, IgxLinearProgressBar } from "igniteui-angular/main";
+  import { Direction, IgxButtonModule, IgxCarousel, IgxLinearProgressBar } from 'igniteui-angular';
   ...
 
   export class AppComponent implements OnInit {

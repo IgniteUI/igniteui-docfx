@@ -28,7 +28,7 @@ inside your `AppModule`:
 ```typescript
 // app.module.ts
 
-import { IgxIconModule } from 'igniteui-angular/main';
+import { IgxIconModule } from 'igniteui-angular';
 
 @NgModule({
     imports: [

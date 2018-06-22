@@ -26,7 +26,7 @@ To get started with the Ignite UI for Angular Time Picker, let's first import th
 
 ...
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { IgxTimePickerModule } from 'igniteui-angular/main';
+import { IgxTimePickerModule } from 'igniteui-angular';
 
 @NgModule({
     ...
@@ -111,7 +111,7 @@ that the min/max values should follow the `format`:
 
 ...
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { IgxTimePickerModule, IgxToastModule } from 'igniteui-angular/main';
+import { IgxTimePickerModule, IgxToastModule } from 'igniteui-angular';
 
 @NgModule({
     ...

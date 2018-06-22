@@ -30,7 +30,7 @@ Ignite UI for Angular Radio を初期化する前に、**IgxRadioModule** を **
 // app.module.ts
 
 ...
-import { IgxRadioModule } from 'igniteui-angular/main';
+import { IgxRadioModule } from 'igniteui-angular';
 
 @NgModule({
     ...

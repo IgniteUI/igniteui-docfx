@@ -28,7 +28,7 @@ Icon コンポーネントが `NgModule` としてエクスポートされるた
 ```typescript
 // app.module.ts
 
-import { IgxIconModule } from 'igniteui-angular/main';
+import { IgxIconModule } from 'igniteui-angular';
 
 @NgModule({
     imports: [
