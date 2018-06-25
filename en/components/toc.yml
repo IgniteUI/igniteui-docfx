@@ -149,6 +149,16 @@
   href: ripple.md
 - name: Toggle
   href: toggle.md
+- name: Overlay
+  href: overlay_main.md
+  new: true
+  items: 
+  - name: Positioning Strategies
+    href: overlay_position.md
+    new: true
+  - name: Scrolling Strategies
+    href: overlay_scroll.md
+    new: true
 - name: Menus
   header: true
 - name: Navigation Drawer
