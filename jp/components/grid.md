@@ -323,47 +323,6 @@ export class MyComponent implements OnInit {
 
 グリッドは水平および垂直 DOM 仮想化をサポートします。仮想化をアクティブ化するには、グリッドの `height` または `width` プロパティを設定します。
 
-### CRUD 操作
-
-`IgxGridComponent` は基本的な CRUD 操作のための簡易な API を提供します。
-
-#### 新しいレコードの追加
-
-グリッド コンポーネントは、提供したデータをデータ ソースに追加する `addRow` メソッドを公開します。
-
-```typescript
-// Adding a new record
-// Assuming we have a `getNewRecord` method returning the new row data.
-const record = this.getNewRecord();
-this.grid.addRow(record);
-```
-
-#### データをグリッドで更新
-
-グリッドのデータの更新は `updateRow` および `updateCell` メソッドを使用して実行されます。セル値を直接更新するには `update` メソッドを使用できます。
-
-```typescript
-// Updating the whole row
-this.grid.updateRow(newData, this.selectedCell.rowIndex);
-
-// Just a particualr cell through the Grid API
-this.grid.updateCell(newData, this.selectedCell.rowIndex, this.selectedCell.column.field);
-
-// Directly using the cell `update` method
-this.selectedCell.update(newData);
-```
-
-#### グリッドからデータを削除
-
-```typescript
-this.grid.deleteRow(this.selectedCell.rowIndex);
-```
-
-**igx-grid** に関係なく、ボタンのクリックなどのユーザー インタラクションに接続できます。
-
-```html
-<button igxButton igxRipple (click)="deleteRow($event)">行の削除</button>
-```
 
 ## 既知の問題と制限
 

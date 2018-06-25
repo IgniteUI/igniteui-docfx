@@ -320,46 +320,6 @@ and in the template of the component:
 
 **Note**: The grid `autoGenerate` property is best to be avoided when binding to remote data for now. It assumes that the data is available in order to inspect it and generate the appropriate columns. This is usually not the case until the remote service responds, and the grid will throw an error. Making `autoGenerate` available, when binding to remote service, is on our roadmap for future versions.
 
-### CRUD operations
-
-The `IgxGridComponent` provides a straigtforward API for basic CRUD operations.
-
-#### Adding a new record
-
-The grid component exposes the `addRow` method which will add the provided data to the data source itself.
-
-```typescript
-// Adding a new record
-// Assuming we have a `getNewRecord` method returning the new row data.
-const record = this.getNewRecord();
-this.grid.addRow(record);
-```
-
-#### Updating data in the grid
-
-Updating data in the grid is achieved through `updateRow` and `updateCell` methods. You can also directly update a cell value through its `update` method.
-
-```typescript
-// Updating the whole row
-this.grid.updateRow(newData, this.selectedCell.rowIndex);
-
-// Just a particualr cell through the Grid API
-this.grid.updateCell(newData, this.selectedCell.rowIndex, this.selectedCell.column.field);
-
-// Directly using the cell `update` method
-this.selectedCell.update(newData);
-```
-
-#### Deleting data from the grid
-
-```typescript
-this.grid.deleteRow(this.selectedCell.rowIndex);
-```
-These can be wired to user interactions, not necessarily related to the **igx-grid**; for example, a button click:
-```html
-<button igxButton igxRipple (click)="deleteRow($event)">Delete Row</button>
-```
-
 ## Known Limitations
 
 |Limitation|Description|
