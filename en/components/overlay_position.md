@@ -6,24 +6,26 @@ _description: Explanation and example about the Overlay Service's IPositionStrat
 # Position strategies
 
 Position strategies determine where to display the component in the provided IgxOverlayService. There are three position strategies:
-1) **Global** - Positions the element based on the directions passed in trough PositionSettings. These are Top/Middle/Bottom for verticalDirection and Left/Center/Right for horizontalDirection. Defaults to:
+1) **Global** - Positions the element based on the directions passed in through PositionSettings. These are Top/Middle/Bottom for verticalDirection and Left/Center/Right for horizontalDirection. Defaults to:
 
 | horizontalDirection        | verticalDirection        |
 |:---------------------------|:-------------------------|
 | HorizontalAlignment.Center | VerticalAlignment.Middle |
 
 
-2) **Connected** - Positions the element based on the directions and start point passed in trough PositionSettings. It is possible to either pass a start point or an HTMLElement as a positioning base. Defaults to:
+2) **Connected** - Positions the element based on the directions and start point passed in through PositionSettings. It is possible to either pass a start point or an HTMLElement as a positioning base. Defaults to:
 
 | target          | horizontalDirection       |  verticalDirection       | horizontalStartPoint     | verticalStartPoint       |
 |:----------------|:--------------------------|:-------------------------|:-------------------------|:-------------------------|
 | new Point(0, 0) | HorizontalAlignment.Right | VerticalAlignment.Bottom | HorizontalAlignment.Left | VerticalAlignment.Bottom |
 
-3) **Auto** - Positions the element as in **Connected** positioning strategy and re-positions the element in the view port (calculating a different start point) in case the element is partially getting out of view, adding an offsetPadding. Defaults to:
+3) **Auto** - Positions the element as in **Connected** positioning strategy and re-positions the element in the view port (calculating a different start point) in case the element is partially out of view. Defaults to:
 
 | target          | horizontalDirection       |  verticalDirection       | horizontalStartPoint     | verticalStartPoint       |
 |:----------------|:--------------------------|:-------------------------|:-------------------------|:-------------------------|
 | new Point(0, 0) | HorizontalAlignment.Right | VerticalAlignment.Bottom | HorizontalAlignment.Left | VerticalAlignment.Bottom |
+
+*Note*: Will not reposition the element if it uses Center / Middle alignment
 
 ## Usage
 Position an element based on an existing button as a target, so it's start point is the button's Bottom/Left corner.

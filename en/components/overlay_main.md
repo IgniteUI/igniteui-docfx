@@ -4,9 +4,24 @@ _description: Provides a service which enables developers to position content ab
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Overlay Service component
 ---
 
-### Usage
+## Overlay Description
+<p class="highlight">
+The `IgxOverlayService` is fully integrated in the `IgxToggle` directive. When using the toggle directive, a developer can provide an optional `overlaySettings` parameter to the toggle's `toggle()` method in order to change the way the toggled content if rendered.
+</p>
+<div class="divider--half"></div>
 
-The `IgxOverlayService` is fully integrated in the `IgxToggle` directive. When using the toggle directive, a developer can provide an optional `overlaySettings` parameter to the toggle's `toggle()` method in order to change the way the toggled content if rendered. If *no* `overlaySettings` are configured, the toggled element falls back to *default display settings*:
+## Overlay Demo
+<div class="sample-container loading" style="height: 600px">
+    <iframe id="overlay-sample-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/overlay-sample" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="overlay-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
+
+## Usage
+
+If *no* `overlaySettings` are configured, the toggled element falls back to *default display settings*:
 ```typescript
 defaultOverlaySettings = {
         positionStrategy: new GlobalPositionStrategy(),
@@ -52,6 +67,10 @@ export class ExampleComponent {
     }
 }
 ```
+<div class="divider--half"></div>
+
+## API
+
 ### Properties
 
  `IPositionStrategy`
@@ -130,74 +149,9 @@ export class ExampleComponent {
    |onClosed     | Emitted after  overlay hides       | false      |            |
 
 
-## <a name='assumptions-and-limitations'>4. Assumptions and Limitations</a>
+## Assumptions and Limitations</a>
 Up to now there are no known limitations.
 
-
-## <a name='tests'>5. Test Scenarios
-
-### Automated
-
-Test with several different fixed window sizes.
-
-**I. Positioning Strategy**
-
-1) **GlobalPositioningStrategy** (show components, by default, in the window center).
-* igx-overlay is rendered on top of all other views/components (any previously existing html on the page) etc.
-* igx-overlay covers the whole window 100% width and height.
-* The shown component is inside the contend div, which is inside wrapper div as a last child.
-* The shown component, by default, is in the center of igx-overlay (visible window).
-* When adding more than one component to show in igx-overlay:
-    - When adding a new instance of a component with the same options, it is rendered exactly on top of the previous one.
-    - When adding a component near the visible window borders (left, right, up, down), it should be rendered, by default, in the center of igx-overlay (visible window) and no scrollbars should appear.
-* If the shown component is bigger than the visible window, by default it should be centered and the corresponding scrollbars should appear.
-
-2) **ConnectedPositioningStrategy** (show components based on a specified target (point or Html element), horizontal and vertical alignment, and horizontal and vertical show direction)
-* igx-overlay is rendered on top of all other views/components (any previously existing html on the page) etc.             
-* igx-overlay covers the whole window 100% width and height.
-* The shown component is child element of the contend div, which is inside wrapper div.
-* the shown component is positioned according to the options passed (target / alignment / starting position / animations).
-* If using a ConnectedPositioningStrategy without passing options, the omitted default to (Window top left corner shown in bottom right direction).
-* When adding more than one component to show in igx-overlay:
-    - When adding a new instance of component with the same options, it is rendered exactly on top of the previous one.
-    - When adding a new component it should be rendered where expected based on the options.
-    - When adding a component near the visible window borders (left, right, up, down) it should be partially hidden and depending on the scroll strategy used:
-        * for NoOpScrollStrategy: scrolling should not be affected in any way.
-        * for CloseScrollStrategy: on a scroll the component should hide.
-        * for BlockScrollStrategy: it should be partially hidden. When scrolling, no scrolling should happen.
-        * for AbsoluteScrollStrategy: it should be partially hidden but can scroll it into view. Component persist state. (example: expanded DropDown remains expanded).
-
-3) **AutoPositionStrategy** (fit the shown component into the visible window.)
-* igx-overlay is rendered on top of all other views/components (any previously existing html on the page) etc.             
-* igx-overlay covers the whole window 100% width and height.
-* The shown component is inside  contend div, which is inside wrapper div.
-* igx-overlay displays each shown component based on the options specified if the component fits into the visible window.
-* The component repositioned and rendered correctly in the window even when the rendering options passed should result in otherwise a partially hidden component. No scrollbars should appear.
-* igx-overlay margins should be rendered correctly
-* igx-overlay displays each shown component in the browser’s visible window and tries to fit it in case of AutoPosition.
-* When adding more than one component to show in igx-overlay:
-    - When the options used fit the component in the window - adding a new instance of the component with the same options will render it on top of the previous one.
-    - When the options used will not fit the component in the window and AutoPosition is used - adding a new instance of the component with the same options, will render it on top of the previous one.(For both scenarios when options used fit the component in the window and when AutoPosition is used to fit the component) 
-* When adding a component like Menu that has a sub-menu near the visible window, upon opening the submenu, no scrollbar will appear but the submenus are rearranged in order to fit in the visible window. 
-* If the width/height allows, the submenu should be show in the window and if not, it should be positioned in the window.
-
-**II. Scroll Strategy**
-1) **NoOperation**
-* Does nothing. 
-
-2) **Block**
-* The component do not scroll with the window. The event is canceled. No scrolling happens.
-* The component shown in igx-overlay do not change its state. For example, an expanded DropDown stays expanded during a scrolling attempt.  
-
-3) **Close** (Uses a tolerance and closes an expanded component upon scrolling if the tolerance is exceeded.(example: DropDown or Dialog component collapse/closes after scrolling 10px for example.)
-* Till tolerance scrolling happens.
-* The component shown in igx-overlay do not change its state until it exceeds the scrolling tolerance set. 
-* The component shown in igx-overlay changes its state when it exceeds the scrolling tolerance set (an expanded DropDown, Menu, DatePicker, etc. collapses).
-
-4) **Absolute**
-* Scrolls everything.
-* Components persist open state.
-
-### Additional Resources
+## Additional Resources
 * [Position strategies](overlay_position.md)
 * [Scroll strategies](overlay_scroll.md)
