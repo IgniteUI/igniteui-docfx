@@ -197,3 +197,7 @@ Test with several different fixed window sizes.
 4) **Absolute**
 * Scrolls everything.
 * Components persist open state.
+
+### Additional Resources
+* [Position strategies](overlay_position.md)
+* [Scroll strategies](overlay_scroll.md)
