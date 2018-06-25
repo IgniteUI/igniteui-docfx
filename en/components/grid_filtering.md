@@ -99,7 +99,7 @@ this.grid.clearFilter();
 
 #### Initial filtered state
 
-It is possible to set the initial filtering state of the grid by an array of expressions to the `filteringExpressionsTree` property of the grid.
+To set the initial filtering state of the grid, set the IgxGridComponent `filteringExpressionsTree` property to an array of IFilteringExpressionsTree for each column to be filtered.
 
 ```typescript
 public ngOnInit() {
