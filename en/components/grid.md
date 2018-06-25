@@ -369,6 +369,7 @@ These can be wired to user interactions, not necessarily related to the **igx-gr
 |Grid `width` does not depend on the column widths | The `width` of all columns does not determine the spanning of the grid itself. It is determined by the parent container dimensions or the defined grid's `width`.|
 |Grid nested in parent container | When grid's `width` is not set and it is placed in a parent container with defined dimensions, the grid spans to this container.|
 |Grid `OnPush` ChangeDetectionStrategy |The grid operates with `ChangeDetectionStrategy.OnPush` so whenever some customization appears make sure that the grid is notified about the changes that happens.|
+| Columns have a minimum allowed column width. Depending on the `displayDensity` option, they are as follows: <br/>"compact": 24px <br/> "cosy": 32px <br/> "comfortable ": 48px | If width less than the minimum allowed is set it will not affect the rendered elements. They will render with the minimum allowed width for the related display density. This may lead to unexpected behaviors with horizontal virtualization and is therefore not supported.
 
 
 <div class="divider--half"></div>
