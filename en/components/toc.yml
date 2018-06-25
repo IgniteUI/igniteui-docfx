@@ -10,7 +10,7 @@
       new: false
     - name: Editing
       href: grid_editing.md
-      new: false
+      new: true
     - name: Paging
       href: grid_paging.md
       new: false
