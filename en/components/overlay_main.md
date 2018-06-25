@@ -152,7 +152,7 @@ Test with several different fixed window sizes.
     - When adding a component near the visible window borders (left, right, up, down), it should be rendered, by default, in the center of igx-overlay (visible window) and no scrollbars should appear.
 * If the shown component is bigger than the visible window, by default it should be centered and the corresponding scrollbars should appear.
 
-2) **ConnectedPositioningStrategy** (show components based on a specified target (point or Html element), horizontal and vertical alignment, and horizontal and vertical starting diraction)
+2) **ConnectedPositioningStrategy** (show components based on a specified target (point or Html element), horizontal and vertical alignment, and horizontal and vertical show direction)
 * igx-overlay is rendered on top of all other views/components (any previously existing html on the page) etc.             
 * igx-overlay covers the whole window 100% width and height.
 * The shown component is child element of the contend div, which is inside wrapper div.
