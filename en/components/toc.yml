@@ -20,6 +20,9 @@
     - name: Summaries
       href: grid_summaries.md
       new: true
+    - name: Column moving
+      href: grid_column_moving.md
+      new: true
     - name: Column pinning
       href: grid_column_pinning.md
       new: true
