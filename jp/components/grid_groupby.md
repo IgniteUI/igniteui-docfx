@@ -121,6 +121,12 @@ export interface IGroupByRecord {
    - <kbd>DELETE</kbd> - フィールドのグループ解除
    - チップの別の要素をフォーカスでき <kbd>ENTER</kbd> キーでインタラクティブに操作できます。
 
+### Known Limitations
+
+|Limitation|Description|
+|--- |--- |
+|Maximum amount of grouped columns is 10. | If more than 10 columns are grouped an error is thrown.
+
 ### その他のリソース
 <div class="divider--half"></div>
 
