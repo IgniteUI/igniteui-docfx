@@ -18,9 +18,9 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="chip-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-#### Initial Chip State
+#### Initializing Chips
 
-The `IgxChipComponent` is the main class for a chip elemenent and the `IgxChipsAreaComponent` is the main class for the chip area. The IgxChipComponent requires an id to be defined so that the different chips can be easily distinguished.
+The `IgxChipComponent` is the main class for a chip elemenent and the `IgxChipsAreaComponent` is the main class for the chip area, it is used to manage the chips defined inside it. It is used when handling more complex scenarios that require interaction between chips (dragging, selection, navigation and etc.).The IgxChipComponent requires an id to be defined so that the different chips can be easily distinguished.
 
 Example of using `igxChip` with `igxChipArea`:
 
@@ -32,27 +32,11 @@ Example of using `igxChip` with `igxChipArea`:
 </igx-chips-area>
 ```
 
-#### Chip API
+### Features
 
-The `remove button` is part of the chip area as well, but it is not templatable but can be customized. Developers can allow end-users to remove chips, by setting each chip's `removable` property to `true`.
+#### Selection
 
-```html
-<igx-chips-area>
-    <igx-chip *ngFor="let chip of chipList" [removable]="'true'">
-        <label igxLabel>{{chip.text}}</label>
-    </igx-chip>
-</igx-chips-area>
-```
-
-```typescript
-public ngOnInit() {
-    chip-area.forEach((chip) => {
-        column.removable = true;
-    });
-}
-```
-
-Selection is disabled by default, but you can set the `selectable` property to `true`. The chip selection is done by clicking on the chip itself whitout performing moving/dragging or throughout navigation.
+Selection is disabled by default, but can be enabled with an option called `selectable`. The selecting is done by focusing the chip either by clicking of using the `Tab` button and the pressing `Space`. An event is fired when the selection state of the `igxChip` changes. If a chip is already selected it can be deselected by pressing the `Space` button again while the chip is focused.
 
 ```html
 <igx-chips-area>
@@ -70,7 +54,29 @@ public ngOnInit() {
 }
 ```
 
-If you want to allow the end-user to change the position of a chip you can set the `draggable` property to `true`.
+#### Removing
+
+The `remove button` is part of the chip area as well. Developers can allow end-users to remove chips. You can handle the removing of the chips template where the chips are defined. This can be done by binding to the event `onRemove` that each chip provides.
+
+```html
+<igx-chips-area>
+    <igx-chip *ngFor="let chip of chipList" [removable]="'true'">
+        <label igxLabel>{{chip.text}}</label>
+    </igx-chip>
+</igx-chips-area>
+```
+
+```typescript
+public ngOnInit() {
+    chip-area.forEach((chip) => {
+        column.removable = true;
+    });
+}
+```
+
+#### Moving/Dragging
+
+The chip can be dragged in order to change it's position. The moving/dragging is disabled by default. but can be enabled with an option called `draggable`. The user need to handle the actual moving of the chip inside their template themselves.
 
 ```html
 <igx-chips-area>
@@ -88,9 +94,15 @@ public ngOnInit() {
 }
 ```
 
+![Dragging](../images/dragging.gif)
+
 #### Chip Templates
 
-The IgxChipComponent's main structure consists of `label`, `remove button`, `prefix`, `suffix`, `prefix connector` and `suffix connector`. All of those elements are templatable except the the remove button. The `prefix`, `label` and `suffix` are elements inside the actual chip area where they can be templated in any way the user would desire. Each has function defined by its name. The way they can be specified is by respectively using the `IgxPrefix`, `IgxLabel` and `IxgSuffix` directives.
+The `IgxChipComponent`'s main structure consists of chip content, `remove button`, `prefix`, `suffix` and `connector`. All of those elements are templatable except the the `remove button`.
+
+The content of the chip is taken by the content defined inside the chip template except elements that define the `prefix`, `suffix` or `connector` of the chip. The user can define any type of content they need.
+
+The `prefix` and suffix are also elements inside the actual chip area where they can be templated in any way the user would desire. Each has function defined by its name. The way they can be specified is by respectively using the `IgxPrefix` and `IxgSuffix` directives.
 
 Example of using and icon for prefix, text for label and custom icon button for suffix:
 
@@ -101,17 +113,17 @@ Example of using and icon for prefix, text for label and custom icon button for 
     <span igxSuffix *ngIf="removable" igxButton="icon" (click)="onClick()">
         <igx-icon fontSet="material" [name]="'close'"></igx-icon>
     </span>
-</igx-chip
+</igx-chip>
 ```
 
-The `prefix/suffix connectors` of the igxChip are fully templatable and are poistioned outside the chip area. Their purpose is to provite a way to link two chips next to each other with an icon/text or anything the user woud like to use. The prefix connector is defined by using the `IgxPrefixConnector` directive. The suffix connector is defined by using the `IgxSuffixConnector` directive.
+The `connectors` of the `igxChip` are fully templatable and are positioned after each the chip area. Their purpose is to provide a way to link two chips next to each other with an icon/text or anything the user would like to use. The last chip does not have connector applied. They hide while dragging chips around and show again when interactions with the chips have finished. The connector is defined by using the `IgxConnector` directive.
 
 Example of using prefix connector:
 
 ```html
 <igx-chip *ngFor="let chip of chipList" [id]="chip.id">
-    <span igxPrefixConnector> > </span>
     <label igxLabel>{{chip.text}}</label>
+    <span igxConnector> -> </span>
 </igx-chip>
 ```
 
@@ -124,38 +136,27 @@ Example of using suffix connector:
 </igx-chip>
 ```
 
-#### Removing
-
-The `remove button` is part of the chip area as well, but it is not templatable but can be customized. It can be enabled through an option of the `igxChip` itself called `removable`. When enabled the remove button will be position between the `label` and the `suffix` areas.
-
 #### Keyboard Navigation
 
-The chip can be focused using the `Tab` key. Chips can be reordered using keyboard navigation:
+The chip can be focused using the `Tab` key or by clicking on them. Chips can be reordered using keyboard navigation:
 
 - Keyboard controls when the chip is focused:
 
-   - <kbd>LEFT</kbd> - Focuses the previos chip
-   - <kbd>RIGTH</kbd> - Focuses the next chip
-   - <kbd>SPACE</kbd> - Toggles chip selection if it is selectable
-   - <kbd>DELETE</kbd> - Fires the `onRemove` output so the chip deletion can be handled
-   - <kbd>SHIFT</kbd> + <kbd>LEFT</kbd> - Moves the focused chip one position to the left
-   - <kbd>SHIFT</kbd> + <kbd>RIGHT</kbd> - Moves the focused chip one position to the right
+  - <kbd>LEFT</kbd> - Focuses the previos chip
+  - <kbd>RIGTH</kbd> - Focuses the next chip
+  - <kbd>SPACE</kbd> - Toggles chip selection if it is selectable
+  - <kbd>DELETE</kbd> - Fires the `onRemove` output so the chip deletion can be handled
+  - <kbd>SHIFT</kbd> + <kbd>LEFT</kbd> - Moves the focused chip one position to the left
+  - <kbd>SHIFT</kbd> + <kbd>RIGHT</kbd> - Moves the focused chip one position to the right
 
 - Keyboard controls when the remove button is focused:
 
-   - <kbd>SPACE</kbd> or <kbd>ENTER</kbd> Fires the `onRemove` output so the chip deletion can be handled
+  - <kbd>SPACE</kbd> or <kbd>ENTER</kbd> Fires the `onRemove` output so the chip deletion can be handled
 
 ### References
-<div class="divider--half"></div>
-
-* [Material examples](https://material.angular.io/components/chips/examples)
-* [Material catalog](https://material-components.github.io/material-components-web-catalog/#/component/chips)
-* [Material Input Chips](https://material.io/design/components/chips.html#input-chips)
-* [Chip class](https://docs.flutter.io/flutter/material/Chip-class.html)
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
-
+- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
