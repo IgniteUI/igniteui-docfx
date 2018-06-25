@@ -17,6 +17,9 @@
     - name: 並べ替え
       href: grid_sorting.md
       new: false
+    - name: Group By
+      href: grid_groupby.md
+      new: true
     - name: 集計
       href: grid_summaries.md
       new: true

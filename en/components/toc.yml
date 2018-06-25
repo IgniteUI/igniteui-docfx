@@ -17,6 +17,9 @@
     - name: Sorting
       href: grid_sorting.md
       new: false
+    - name: Group By
+      href: grid_groupby.md
+      new: true
     - name: Summaries
       href: grid_summaries.md
       new: true
