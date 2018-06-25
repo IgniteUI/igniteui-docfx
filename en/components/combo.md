@@ -5,8 +5,14 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ---
 
 ## Combo
-<p class="highlight">The igx-combo provides a powerful input, combining features of the basic HTML input, select and the IgniteUI for Angular igx-drop-down controls.
-Control provides easy filtering and selection of multiple items, grouping and adding custom values to the list.</p>
+<p class="highlight">
+The igx-combo component provides a powerful input, combining the features of the basic HTML input, select and the IgniteUI for Angular igx-drop-down components.
+The combo component provides easy filtering and selection of multiple items, grouping and adding custom values to the dropdown list.
+Custom templates could be provided in order to customize different areas of the components, such as items, header, footer, etc.
+The combo component is integrated with the Template Driven and Reactive Forms.
+The igx-combo exposes intiutive keyboard navigation and it is accessibility compliant.
+Drop Down items are virtualized, which guarantees smooth work, even if the igx-combo is bound to data source with a lot of items.
+</p>
 <div class="divider"></div>
 
 ### Combo Demo
@@ -22,7 +28,7 @@ Control provides easy filtering and selection of multiple items, grouping and ad
 > To start using Ignite UI for Angular components in your own projects, make sure you have configured all necessary dependencies and have performed the proper setup of your project. You can learn how to do this in the [**installation**](https://www.infragistics.com/products/ignite-ui-angular/getting-started#installation) topic.
 
 ## Usage
-The `IgxComboComponent` allows you to search and select item from the list. The combo uses the `IgxDropDownComponent` internally as a items container. To get started with the Ignite UI for Angular Combo, let's first import the **IgxComboModule** in our **app.module.ts** file:
+The `IgxComboComponent` allows you to search and select items from the list. The combo uses the `IgxDropDownComponent` internally as a items container. To get started with the Ignite UI for Angular Combo, let's first import the **IgxComboModule** in our **app.module.ts** file:
 
 ```typescript
 // app.module.ts
@@ -38,10 +44,10 @@ import { IgxComboModule } from 'igniteui-angular/main';
 export class AppModule {}
 ```
 
-Then in our template we place the combo:
+Then in the template we place the combo:
 
 ```html
-<igx-combo></igx-combo>
+<igx-combo [data]="localData" [valueKey]="'ProductID'" [displayKey]="'ProductName'"></igx-combo>
 ```
 
 The result is as follows:
@@ -54,6 +60,50 @@ The result is as follows:
 <div class="divider--half"></div>
 
 ## Features
+
+### Data Binding
+
+Basic usage of `igx-combo` bound to a local data source, defining `valueKey` and `displayKey`:
+
+```html
+<igx-combo [data]="localData" [valueKey]="'ProductID'" [displayKey]="'ProductName'"></igx-combo>
+```
+
+> Note: If `displayKey` is omitted them `valueKey` entity will be used instead.
+
+
+Remote binding, defining `valueKey` and `displayKey`, and exposing `onDataPreLoad` that allows to load new chunk of remote data to the combo (see the sample above as a reference):
+
+```html
+<igx-combo [data]="remoteData | async" (onDataPreLoad)="dataLoading($event)" [valueKey]="'ProductID'" [displayKey]="'ProductName'" ></igx-combo>
+```
+
+```typesciprt
+public ngOnInit() {
+    this.remoteData = this.remoteService.remoteData;
+}
+
+public ngAfterViewInit() {
+    this.remoteService.getData(this.combo.virtualizationState, (data) => {
+        this.combo.totalItemCount = data.count;
+    });
+}
+
+public dataLoading(evt) {
+        if (this.prevRequest) {
+            this.prevRequest.unsubscribe();
+        }
+
+        this.prevRequest = this.remoteService.getData(this.combo.virtualizationState, () => {
+            this.cdr.detectChanges();
+            this.combo.triggerCheck();
+        });
+    }
+```
+
+> Note: In order to have combo with remote data, what you need is to have a service that retrives data chunks from a server. 
+What the combo exposes is a `virtualizationState` property that gives state of the combo - first index and the number of items that needs to be loaded.
+The service, should inform the combo for the total items that are on the server - using the `totalItemCount` property.
 
 ### Value Binding
 
@@ -114,8 +164,8 @@ Defining a combo's groupKey option will group the items, according to that key.
 <div class="divider--half"></div>
 
 ### Templates
-Templates for different parts of the control can be defined, including items, header and footer, etc.
-When defining one of the templates below, you need to reference them using the following names:
+Custom templates for different areas of the igx-combo component can be defined, including items, header footer, etc.
+When defining one of the templates below, you need to reference them using the following predifined names:
 
 Defining item template:
 ```html
@@ -271,6 +321,8 @@ When igxCombo is opened, allow custom values are enabled and add item button is 
 |  `valueKey`              | combo value data source property                  | string                      |
 |  `displayKey`            | combo dispaly data source property                | string                      |
 |  `groupKey`              | combo item group                                  | string                      |
+|  `virtualizationState`   | defined he current state of the virtualized data. It contains `startIndex` and `chunkSize`      | `IForOfState`               |
+|  `totalItemCount`        | total count of the virtual data items, when using remote service                                | number                      |
 |  `width `                | defines combo width                               | string                      |
 |  `heigth`                | defines combo height                              | string                      |
 |  `itemsMaxHeight `       | defines drop down height                          | string                      |
@@ -281,6 +333,7 @@ When igxCombo is opened, allow custom values are enabled and add item button is 
 |  `collapsed`             | gets drop down state                              | boolean                     |
 |  `disabled`              | defines whether the control is active or not      | boolean                     |
 |  `ariaLabelledBy`        | defines label ID related to combo                 | boolean                     |
+|  `type`                  | defines type of combo - "line", "box", "border", "search"                                        | string                      |
 
 ### Outputs
 <div class="divider--half"></div>
@@ -290,6 +343,7 @@ When igxCombo is opened, allow custom values are enabled and add item button is 
 | `onSelectionChange` | Emitted when item selection is changing, before the selection completes | true         | { oldSelection: `Array<any>`, newSelection: `Array<any>`, event: Event } |
 | `onSearchInput`     | Emitted when an the search input's input event is triggered             | false        | { searchValue: `string` }               |
 | `onAddition`        | Emitted when an item is being added to the data collection              | false        | { oldCollection: `Array<any>`, addedItem: `<any>`, newCollection: `Array<any>` }|
+| `onDataPreLoad`     | Emitted when new chunk of data is loaded from the virtualization        | false        | { event: Event }                        |
 | `dropDownOpening`   | Emitted before the dropdown is opened                                   | false        | { event: Event }                        |
 | `dropDownOpened`    | Emitted after the dropdown is opened                                    | false        | { event: Event }                        |
 | `dropDownClosing`   | Emitted before the dropdown is closed                                   | false        | { event: Event }                        |
