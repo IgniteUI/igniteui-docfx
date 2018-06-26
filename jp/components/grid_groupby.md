@@ -121,6 +121,12 @@ export interface IGroupByRecord {
    - <kbd>DELETE</kbd> - フィールドのグループ解除
    - チップの別の要素をフォーカスでき <kbd>ENTER</kbd> キーでインタラクティブに操作できます。
 
+### 既知の問題と制限
+
+|制限|説明|
+|--- |--- |
+|グループ列の最大値は 10 です。 | 10 列以上の場合はエラーがスローされます。
+
 ### その他のリソース
 <div class="divider--half"></div>
 
