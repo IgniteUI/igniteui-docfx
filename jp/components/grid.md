@@ -374,7 +374,7 @@ this.grid.deleteRow(this.selectedCell.rowIndex);
 |グリッドの `width` が列幅に依存しない| すべての列の `width` でグリッド自体のスパンは決定しません。親コンテナーのディメンションまたは定義したグリッドの `width` で決定されます。|
 |親コンテナーでネストされた Grid | グリッドの `width` を設定せずに定義済みのディメンションで親コンテナーに配置した場合、グリッドがコンテナーに合わせてスパンします。|
 |Grid `OnPush` ChangeDetectionStrategy |グリッドで `ChangeDetectionStrategy.OnPush` を処理し、カスタム表示されたときにグリッドに発生した変更について通知します。|
-| Columns have a minimum allowed column width. Depending on the `displayDensity` option, they are as follows: <br/>"compact": 24px <br/> "cosy": 32px <br/> "comfortable ": 48px | If width less than the minimum allowed is set it will not affect the rendered elements. They will render with the minimum allowed width for the related display density. This may lead to an unexpected behavior with horizontal virtualization and is therefore not supported.
+| Columns have a minimum allowed column width. Depending on the `displayDensity` option, they are as follows: <br/>"compact": 24px <br/> "cosy": 32px <br/> "comfortable ": 48px | If width less than the minimum allowed is set it will not affect the rendered elements. They will render with the minimum allowed width for the corresponding `displayDensity`. This may lead to an unexpected behavior with horizontal virtualization and is therefore not supported.
 
 ## API
 
