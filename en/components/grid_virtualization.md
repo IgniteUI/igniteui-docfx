@@ -84,6 +84,8 @@ When requesting data, you need to utilize the `IForOfState` interface, which pro
 ### Remote Sorting/Filtering Virtualization
 To provide remote sorting and filtering, you need to subscribe to the `onDataPreLoad`, `onSortingDone`, `onFilteringDone` outputs so that you make the appropriate request based on the arguments received, as well as set the public `igxGrid` property `totalItemCount` with the respective information coming from the service.
 
+Note that when requesting remote data, filtering operation is case-sensitive.
+
 <div class="sample-container loading" style="height:550px">
     <iframe id="grid-remote-filtering-iframe" src='{environment:demosBaseUrl}/grid-remote-filtering' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
