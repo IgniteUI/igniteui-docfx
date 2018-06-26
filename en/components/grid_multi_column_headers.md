@@ -48,7 +48,7 @@ Every `igx-column-group` supports `moving`, `pinning` and `hidding`.
 > [!NOTE]
 > When there is a set of columns and column groups, pinning works only for top level column parents. More specifically pinning per nested `column groups` or `columns` is not allowed. <br />
 > Moving between `columns` and `column groups` is allowed only when they are at the same level in the hierarchy and both are in the same `group`. <br />
-> When `columns/column-groups` are not wrapped by current `group` which means they are **top level**, moving is possible between whole visible columns.
+> When `columns/column-groups` are not wrapped by current `group` which means they are **top level** `columns`, moving is allowed between whole visible columns.
 
 ```html
 <igx-grid [data]="data" height="600px">
@@ -82,6 +82,14 @@ Every `igx-column-group` supports `moving`, `pinning` and `hidding`.
 |`topLevelParent`| IgxColumnGroupComponent | yes | no | Returns the top level parent of the `group`. |
 |`width`| string | yes | no | Returns the `width` of current `column group` determined by the children it contains. |
 |`pinned`| boolean | yes | yes | Get/Sets whether current `column group` is pinned. |
+
+### Methods
+
+|Name|Return Type|Description|
+|--- |--- |--- |
+|`pin(index?): boolean`|boolean|Pins the column. Returns if the operation is successful.|
+|`unpin(index?): boolean`|boolean|Unpins the column. Returns if the operation is successful.|
+
 
 
 <div class="divider--half"></div>
