@@ -41,6 +41,9 @@
     - name: 検索
       href: grid_search.md
       new: true
+    - name: ツールバー
+      href: grid_toolbar.md
+      new: true
     - name: Excel エクスポート
       href: exporter_excel.md
       new: true
