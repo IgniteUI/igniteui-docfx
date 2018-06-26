@@ -41,9 +41,9 @@
     - name: Excel エクスポート
       href: exporter_excel.md
       new: true
-    # - name: 複数列ヘッダー
-    #  href: grid_multi_column_headers.md
-    #  new: true
+    - name: 複数列ヘッダー
+      href: grid_multi_column_headers.md
+      new: true
 - name: List View
   href: list.md
 - name: チャート
