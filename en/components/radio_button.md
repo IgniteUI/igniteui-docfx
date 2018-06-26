@@ -124,11 +124,13 @@ import { IgxRadioModule } from 'igniteui-angular';
     ...
 })
 ```
-To get a started, create an **igxRadioGroup** and add several **igxRadio** components.
+To get a started, create an **igxRadioGroup** and add several **igxRadio** components. 
+
+Note that, setting the **igxRadioGroup** `name` property is **mandatory**.
 
 ```html
 <!--radio-group.component.html-->
-<igx-radio-group name="fruitsRadioGroup" formControlName="favoriteFruit">
+<igx-radio-group name="fruitsRadioGroup">
     <igx-radio class="radio-sample" *ngFor="let fruit of fruits" value="{{fruit}}">
         {{fruit}}
     </igx-radio>
