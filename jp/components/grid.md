@@ -348,7 +348,7 @@ export class MyComponent implements OnInit {
 |`paging`| bool | ページング機能を有効化にします。デフォルト値は _false_ です。 |
 |`perPage`| number | ページごとの表示項目。デフォルト値は 15 です。 |
 |`filteringLogic`|FilteringLogic|グリッドのフィルター ロジック。デフォルト値は _AND_ です。|
-|`filteringExpressions`|Array|グリッドのフィルター状態。|
+|`filteringExpressionsTree`|IFilteringExpressionsTree|グリッドのフィルター状態。|
 |`sortingExpressions`|Array|グリッドの並べ替え状態。|
 |`height`|string|グリッド要素の高さ。`1000px`、`75%` などの値を渡すことができます。|
 |`width`|string|グリッド要素の幅。`1000px`、`75%` などの値を渡すことができます。|
@@ -402,6 +402,10 @@ export class MyComponent implements OnInit {
 |`deleteRow(rowIndex: number)`|行オブジェクトおよび相対するデータ レコードをデータ ソースから削除します。|
 |`updateRow(value: any, rowIndex: number)`|行オブジェクトおよびデータ ソース レコードを渡された値で更新します。|
 |`updateCell(value: any, rowIndex: number, column: string)`|セル オブジェクトおよびデータ ソースのレコード フィールドを更新します。|
+|`filter(name: string, value: any, conditionOrExpressionTree?: IFilteringOperation, ignoreCase?: boolean)`|単一の列をフィルターします。フィルタリング処理はパラメーターとして使用されます。利用可能な[フィルター条件](#フィルター条件)を参照してください。|
+|`filter(name: string, value: any, conditionOrExpressionTree?: IFilteringExpressionsTree, ignoreCase?: boolean)`|単一の列をフィルターします。単一の列をフィルターします。
+フィルタリング式ツリーはパラメーターとして使用されます。|
+|`filterGlobal(value: any, condition?, ignoreCase?)`|同じ条件でグリッドのすべての列をフィルターします。|
 |`filter(column: string, value: any, condition?, ignoreCase?: boolean)`|単一の列をフィルターします。利用可能な[フィルター条件](#フィルター条件)を参照してください。|
 |`filter(expressions: Array)`|グリッド列を提供したフィルター式の配列に基づいてフィルターします。|
 |`filterGlobal(value: any, condition? ignoreCase?)`|グリッドの列をすべてフィルターします。|
@@ -447,7 +451,6 @@ export class MyComponent implements OnInit {
 |`cellClasses`|string|この列のセルに適用される追加の CSS クラス。|
 |`formatter`|Function|列にセル テンプレートを渡さずにセルの値をテンプレート化するために使用される関数。|
 | `index` | string | 列インデックス。 |
-| `filteringCondition` | FilteringCondition | ブール値、日付、文字列、または数値条件。デフォルトは _contains_ 文字列条件です。 |
 |`filteringIgnoreCase`|boolean|フィルタリングが適用される場合に文字列の大文字化を無視します。デフォルトは _true_ です。|
 |`sortingIgnoreCase`|boolean|並べ替えが適用される場合に文字列の大文字化を無視します。デフォルトは _true_ です。|
 |`dataType`|DataType|string、number、boolean、または Date。フィルタリングが有効な場合、フィルター UI 条件は列の `dataType` に基づきます。設定されない場合、デフォルト値は `string` です。`autoGenerate` が有効な場合、グリッドはデータ ソースに基づいて各列の正しいデータ型を解決しようとします。|
@@ -476,15 +479,27 @@ export class MyComponent implements OnInit {
 
 ## フィルター条件
 
-適切な条件タイプを `igniteui-angular` パッケージからインポートする必要があります。
+ 5 つのフィルタリング オペランドを使用できます。
+- `IgxFilteringOperand` は、カスタムフィルタリング条件の定義時に継承できるベース フィルタリング オペランドです。
+- `IgxBooleanFilteringOperand` は、`boolean` 型のすべてのデフォルト フィルタリング条件を定義します。
+- `IgxDateFilteringOperand` は、`Date` 型のすべてのデフォルト フィルタリング条件を定義します。
+- `IgxNumberFilteringOperand` は、`numeric` 型のすべてのデフォルト フィルタリング条件を定義します。
+- `IgxStringFilteringOperand` は、`string` 型のすべてのデフォルト フィルタリング条件を定義します。
 
 ```typescript
 import {
-    STRING_FILTERS,
-    NUMBER_FILTERS,
-    DATE_FILTERS,
-    BOOLEAN_FILTERS
+    IgxBooleanFilteringOperand,
+    IgxDateFilteringOperand,
+    IgxFilteringOperand,
+    IgxNumberFilteringOperand,
+    IgxStringFilteringOperand,
 } from 'igniteui-angular';
+```
+
+```typescript
+public filter(term) {
+    this.grid.filter("ProductName", term, IgxStringFilteringOperand.instance().condition("contains"));
+}
 ```
 
 ### 文字列型

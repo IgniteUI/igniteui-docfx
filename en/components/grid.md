@@ -347,7 +347,7 @@ Below is the list of all inputs that the developers may set to configure the gri
 |`paging`|bool|Enables the paging feature. Defaults to _false_.|
 |`perPage`|number|Visible items per page, default is 15|
 |`filteringLogic`|FilteringLogic|The filtering logic of the grid. Defaults to _AND_.|
-|`filteringExpressions`|Array|The filtering state of the grid.|
+|`filteringExpressionsTree`|IFilteringExpressionsTree|The filtering state of the grid.|
 |`sortingExpressions`|Array|The sorting state of the grid.|
 |`height`|string|The height of the grid element. You can pass values such as `1000px`, `75%`, etc.|
 |`width`|string|The width of the grid element. You can pass values such as `1000px`, `75%`, etc.|
@@ -370,7 +370,7 @@ A list of the events emitted by the **igx-grid**:
 |`onSelection`|Emitted when a cell is selected. Returns the cell object.|
 |`onColumnInit`|Emitted when the grid columns are initialized. Returns the column object.|
 |`onSortingDone`|Emitted when sorting is performed through the UI. Returns the sorting expression.|
-|`onFilteringDone`|Emitted when filtering is performed through the UI. Returns the filtering expression.|
+|`onFilteringDone`|Emitted when filtering is performed through the UI. Returns the filtering expressions tree of the column for which the filtering was performed. |
 |`onPagingDone`|Emitted when paging is performed. Returns an object consisting of the previous and the new page.|
 |`onRowAdded`|Emitted when a row is being added to the grid through the API. Returns the data for the new row object.|
 |`onRowDeleted`|Emitted when a row is deleted through the grid API. Returns the row object being removed.|
@@ -403,9 +403,9 @@ Here is a list of all public methods exposed by **igx-grid**:
 |`deleteRow(rowIndex: number)`|Removes the row object and the corresponding data record from the data source.|
 |`updateRow(value: any, rowIndex: number)`|Updates the row object and the data source record with the passed value.|
 |`updateCell(value: any, rowIndex: number, column: string)`|Updates the cell object and the record field in the data source.|
-|`filter(column: string, value: any, condition?, ignoreCase?: boolean)`|Filters a single column. Check the available [filtering conditions](#filtering-conditions)|
-|`filter(expressions: Array)`|Filters the grid columns based on the provided array of filtering expressions.|
-|`filterGlobal(value: any, condition? ignoreCase?)`|Filters all the columns in the grid.|
+|`filter(name: string, value: any, conditionOrExpressionTree?: IFilteringOperation, ignoreCase?: boolean)`|Filters a single column. A filtering operation is used as parameter. Check the available [filtering conditions](#filtering-conditions).|
+|`filter(name: string, value: any, conditionOrExpressionTree?: IFilteringExpressionsTree, ignoreCase?: boolean)`|Filters a single column. A filtering expressions tree is used as parameter.|
+|`filterGlobal(value: any, condition?, ignoreCase?)`|Filters all the columns in the grid with the same condition.|
 |`clearFilter(name?: string)`|If `name` is provided, clears the filtering state of the corresponding column, otherwise clears the filtering state of all columns.|
 |`sort(name: string, direction, ignorecase)`|Sorts a single column.|
 |`sort(expressions: Array)`|Sorts the grid columns based on the provided array of sorting expressions.|
@@ -448,7 +448,6 @@ Inputs available on the **IgxGridColumnComponent** to define columns:
 |`cellClasses`|string|Additional CSS classes applied to the cells in this column.|
 |`formatter`|Function|A function used to "template" the values of the cells without the need to pass a cell template the column.|
 |`index`|string|Column index|
-|`filteringCondition`|FilteringCondition|Boolean, date, string or number conditions. Default is string _contains_|
 |`filteringIgnoreCase`|boolean|Ignore capitalization of strings when filtering is applied. Defaults to _true_.|
 |`sortingIgnoreCase`|boolean|Ignore capitalization of strings when sorting is applied. Defaults to _true_.|
 |`dataType`|DataType|One of string, number, boolean or Date. When filtering is enabled the filter UI conditions are based on the `dataType` of the column. Defaults to `string` if it is not provided. With `autoGenerate` enabled the grid will try to resolve the correct data type for each column based on the data source.|
@@ -477,15 +476,27 @@ Here is a list of all public methods exposed by **IgxGridColumnComponent**:
 
 ## Filtering Conditions
 
-You will need to import the appropriate condition types from the `igniteui-angular` package.
+ Five filtering operand classes are available:
+- `IgxFilteringOperand` is a base filtering operand, which can be inherited when defining custom filtering conditions.
+- `IgxBooleanFilteringOperand` defines all default filtering conditions for `boolean` type.
+- `IgxDateFilteringOperand` defines all default filtering conditions for `Date` type.
+- `IgxNumberFilteringOperand` defines all default filtering conditions for `numeric` type.
+- `IgxStringFilteringOperand` defines all default filtering conditions for `string` type.
 
 ```typescript
 import {
-    STRING_FILTERS,
-    NUMBER_FILTERS,
-    DATE_FILTERS,
-    BOOLEAN_FILTERS
+    IgxBooleanFilteringOperand,
+    IgxDateFilteringOperand,
+    IgxFilteringOperand,
+    IgxNumberFilteringOperand,
+    IgxStringFilteringOperand,
 } from 'igniteui-angular';
+```
+
+```typescript
+public filter(term) {
+    this.grid.filter("ProductName", term, IgxStringFilteringOperand.instance().condition("contains"));
+}
 ```
 
 ### String types
