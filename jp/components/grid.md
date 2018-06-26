@@ -323,47 +323,6 @@ export class MyComponent implements OnInit {
 
 グリッドは水平および垂直 DOM 仮想化をサポートします。仮想化をアクティブ化するには、グリッドの `height` または `width` プロパティを設定します。
 
-### CRUD 操作
-
-`IgxGridComponent` は基本的な CRUD 操作のための簡易な API を提供します。
-
-#### 新しいレコードの追加
-
-グリッド コンポーネントは、提供したデータをデータ ソースに追加する `addRow` メソッドを公開します。
-
-```typescript
-// Adding a new record
-// Assuming we have a `getNewRecord` method returning the new row data.
-const record = this.getNewRecord();
-this.grid.addRow(record);
-```
-
-#### データをグリッドで更新
-
-グリッドのデータの更新は `updateRow` および `updateCell` メソッドを使用して実行されます。セル値を直接更新するには `update` メソッドを使用できます。
-
-```typescript
-// Updating the whole row
-this.grid.updateRow(newData, this.selectedCell.rowIndex);
-
-// Just a particualr cell through the Grid API
-this.grid.updateCell(newData, this.selectedCell.rowIndex, this.selectedCell.column.field);
-
-// Directly using the cell `update` method
-this.selectedCell.update(newData);
-```
-
-#### グリッドからデータを削除
-
-```typescript
-this.grid.deleteRow(this.selectedCell.rowIndex);
-```
-
-**igx-grid** に関係なく、ボタンのクリックなどのユーザー インタラクションに接続できます。
-
-```html
-<button igxButton igxRipple (click)="deleteRow($event)">行の削除</button>
-```
 
 ## 既知の問題と制限
 
@@ -374,7 +333,7 @@ this.grid.deleteRow(this.selectedCell.rowIndex);
 |グリッドの `width` が列幅に依存しない| すべての列の `width` でグリッド自体のスパンは決定しません。親コンテナーのディメンションまたは定義したグリッドの `width` で決定されます。|
 |親コンテナーでネストされた Grid | グリッドの `width` を設定せずに定義済みのディメンションで親コンテナーに配置した場合、グリッドがコンテナーに合わせてスパンします。|
 |Grid `OnPush` ChangeDetectionStrategy |グリッドで `ChangeDetectionStrategy.OnPush` を処理し、カスタム表示されたときにグリッドに発生した変更について通知します。|
-| Columns have a minimum allowed column width. Depending on the `displayDensity` option, they are as follows: <br/>"compact": 24px <br/> "cosy": 32px <br/> "comfortable ": 48px | If width less than the minimum allowed is set it will not affect the rendered elements. They will render with the minimum allowed width for the corresponding `displayDensity`. This may lead to an unexpected behavior with horizontal virtualization and is therefore not supported.
+| 列には設定可能な最小幅があります。`displayDensity` オプションに基づき、<br/>"最小": 24px <br/> "小": 32px <br/> "標準 ": 48px があります。| 幅が最小幅未満の場合、描画要素には影響せずに対応する表示密度になるよう最小幅で描画します。水平方向の仮想化は予期しない動作を招く場合があるためサポートしていません。
 
 ## API
 

@@ -8,6 +8,9 @@
     - name: 仮想化とパフォーマンス
       href: grid_virtualization.md
       new: false
+    - name: Editing
+      href: grid_editing.md
+      new: true
     - name: ページング
       href: grid_paging.md
       new: false
@@ -17,6 +20,9 @@
     - name: 並べ替え
       href: grid_sorting.md
       new: false
+    - name: グループ化
+      href: grid_groupby.md
+      new: true
     - name: 集計
       href: grid_summaries.md
       new: true
