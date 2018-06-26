@@ -126,7 +126,7 @@ set values(newValues: Array<any>) {
 <div class="divider--half"></div>
 
 ### Filtering
-By default filtering in the combo is enabled. However you can disable it using the following code:
+By default filtering in the combo is enabled. It can be disabled using the following code:
 
 ```html
 <igx-combo [filaterable]="false"></igx-combo>
@@ -137,7 +137,7 @@ By default filtering in the combo is enabled. However you can disable it using t
 <div class="divider--half"></div>
 
 ### Custom Values
-Enabling the custom values will add missing from the list, using the combo's interface.
+If the custom values are enabled, the missing item could be added using the UI of the combo.
 
 ```html
 <igx-combo [allowCustomValues]="true"></igx-combo>
@@ -155,7 +155,7 @@ You can disable combo using the following code:
 <div class="divider--half"></div>
 
 ### Grouping
-Defining a combo's groupKey option will group the items, according to that key.
+Defining a combo's groupKey option will group the items, according to the provided key.
 
 ```html
 <igx-combo [groupKey]="'primaryKey'"></igx-combo>
@@ -164,7 +164,7 @@ Defining a combo's groupKey option will group the items, according to that key.
 <div class="divider--half"></div>
 
 ### Templates
-Custom templates for different areas of the igx-combo component can be defined, including items, header footer, etc.
+Custom templates for different areas of the igx-combo component can be defined, including items, header, footer, empty list and adding button.
 When defining one of the templates below, you need to reference them using the following predifined names:
 
 Defining item template:
