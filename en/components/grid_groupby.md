@@ -120,6 +120,12 @@ The grouping UI supports the following keyboard interactions:
    - <kbd>DELETE</kbd> - ungroups the field
    - The seperate elements of the chip are also focusable and can be interacted with using the <kbd>ENTER</kbd> key.
 
+### Known Limitations
+
+|Limitation|Description|
+|--- |--- |
+|Maximum amount of grouped columns is 10. | If more than 10 columns are grouped an error is thrown.
+
 ### Additional Resources
 <div class="divider--half"></div>
 

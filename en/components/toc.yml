@@ -20,6 +20,9 @@
     - name: Sorting
       href: grid_sorting.md
       new: false
+    - name: Group By
+      href: grid_groupby.md
+      new: true
     - name: Summaries
       href: grid_summaries.md
       new: true
@@ -37,6 +40,9 @@
       new: true
     - name: Searching
       href: grid_search.md
+      new: true
+    - name: Toolbar
+      href: grid_toolbar.md
       new: true
     - name: Export to Excel
       href: exporter_excel.md

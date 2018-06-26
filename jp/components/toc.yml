@@ -20,6 +20,9 @@
     - name: 並べ替え
       href: grid_sorting.md
       new: false
+    - name: グループ化
+      href: grid_groupby.md
+      new: true
     - name: 集計
       href: grid_summaries.md
       new: true
@@ -37,6 +40,9 @@
       new: true
     - name: 検索
       href: grid_search.md
+      new: true
+    - name: ツールバー
+      href: grid_toolbar.md
       new: true
     - name: Excel エクスポート
       href: exporter_excel.md

@@ -1,6 +1,6 @@
 ﻿---
-title: グループ化コンポーネント - ネイティブ  Angular | Ignite UI for Angular
-_description: Ignite UI for Angular グループ化コンポーネントは、特定の列の共通の値に基づいてデータをグループ化します。
+title: グループ化機能 - ネイティブ  Angular | Ignite UI for Angular
+_description: Ignite UI for Angular グループ化機能は、特定の列の共通の値に基づいてデータをグループ化します。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, ネイティブ Angular コンポーネント, Angular Data Grid コンポーネント, Angular Data Grid コントロール, Angular Grid コンポーネント, Angular Grid コントロール, Angular 高パフォーマンス Grid, group by, groupby, グループ化, 列グループ化
 _language: ja
 ---
@@ -120,6 +120,12 @@ export interface IGroupByRecord {
    - <kbd>SPACE</kbd> - 並べ替えの方向を変更します。
    - <kbd>DELETE</kbd> - フィールドのグループ解除
    - チップの別の要素をフォーカスでき <kbd>ENTER</kbd> キーでインタラクティブに操作できます。
+
+### 既知の問題と制限
+
+|制限|説明|
+|--- |--- |
+|グループ列の最大値は 10 です。 | 10 列以上の場合はエラーがスローされます。
 
 ### その他のリソース
 <div class="divider--half"></div>
