@@ -139,7 +139,7 @@ Now let's create our IgxColumnHidingComponent! In our application, we will place
 }
 
 .columnHidingContainer {
-    width: 350px;
+    min-width: 250px;
     height: 560px;
     display: flex;
     flex-direction: column;
@@ -160,9 +160,10 @@ Now let's create our IgxColumnHidingComponent! In our application, we will place
 
 .gridContainer {
     width: 100%;
+    min-width: 200px;
     display: flex;
     flex-direction: column;
-    margin-left: 30px;
+    margin-left: 30px;    
 }
 ```
 
