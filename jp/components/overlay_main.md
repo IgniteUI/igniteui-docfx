@@ -11,6 +11,9 @@ The `IgxOverlayService` is fully integrated in the `IgxToggle` directive. When u
 <div class="divider--half"></div>
 
 ## Overlay Demo
+<p class="highlight">
+The below demo illustrates how the overlay service `overlaySettings` can be manipulated in order to alter the way in which the overlay element is shown.
+</p>
 <div class="sample-container loading" style="height: 600px">
     <iframe id="overlay-sample-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/overlay-sample" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
