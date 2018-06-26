@@ -320,46 +320,6 @@ and in the template of the component:
 
 **Note**: The grid `autoGenerate` property is best to be avoided when binding to remote data for now. It assumes that the data is available in order to inspect it and generate the appropriate columns. This is usually not the case until the remote service responds, and the grid will throw an error. Making `autoGenerate` available, when binding to remote service, is on our roadmap for future versions.
 
-### CRUD operations
-
-The `IgxGridComponent` provides a straigtforward API for basic CRUD operations.
-
-#### Adding a new record
-
-The grid component exposes the `addRow` method which will add the provided data to the data source itself.
-
-```typescript
-// Adding a new record
-// Assuming we have a `getNewRecord` method returning the new row data.
-const record = this.getNewRecord();
-this.grid.addRow(record);
-```
-
-#### Updating data in the grid
-
-Updating data in the grid is achieved through `updateRow` and `updateCell` methods. You can also directly update a cell value through its `update` method.
-
-```typescript
-// Updating the whole row
-this.grid.updateRow(newData, this.selectedCell.rowIndex);
-
-// Just a particualr cell through the Grid API
-this.grid.updateCell(newData, this.selectedCell.rowIndex, this.selectedCell.column.field);
-
-// Directly using the cell `update` method
-this.selectedCell.update(newData);
-```
-
-#### Deleting data from the grid
-
-```typescript
-this.grid.deleteRow(this.selectedCell.rowIndex);
-```
-These can be wired to user interactions, not necessarily related to the **igx-grid**; for example, a button click:
-```html
-<button igxButton igxRipple (click)="deleteRow($event)">Delete Row</button>
-```
-
 ## Known Limitations
 
 |Limitation|Description|
@@ -369,6 +329,7 @@ These can be wired to user interactions, not necessarily related to the **igx-gr
 |Grid `width` does not depend on the column widths | The `width` of all columns does not determine the spanning of the grid itself. It is determined by the parent container dimensions or the defined grid's `width`.|
 |Grid nested in parent container | When grid's `width` is not set and it is placed in a parent container with defined dimensions, the grid spans to this container.|
 |Grid `OnPush` ChangeDetectionStrategy |The grid operates with `ChangeDetectionStrategy.OnPush` so whenever some customization appears make sure that the grid is notified about the changes that happens.|
+| Columns have a minimum allowed column width. Depending on the `displayDensity` option, they are as follows: <br/>"compact": 24px <br/> "cosy": 32px <br/> "comfortable ": 48px | If width less than the minimum allowed is set it will not affect the rendered elements. They will render with the minimum allowed width for the related display density. This may lead to an unexpected behavior with horizontal virtualization and is therefore not supported.
 
 
 <div class="divider--half"></div>
@@ -640,6 +601,7 @@ import {
 * [Filtering](grid_filtering.md)
 * [Sorting](grid_sorting.md)
 * [Summaries](grid_summaries.md)
+* [Column Moving](grid_column_moving.md)
 * [Column Pinning](grid_column_pinning.md)
 * [Column Resizing](grid_column_resizing.md)
 * [Selection](grid_selection.md)

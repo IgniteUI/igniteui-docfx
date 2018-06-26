@@ -81,6 +81,7 @@ public columnPinning(event) {
 * [Filtering](grid_filtering.md)
 * [Sorting](grid_sorting.md)
 * [Summaries](grid_summaries.md)
+* [Column Moving](grid_column_moving.md)
 * [Column Resizing](grid_column_resizing.md)
 * [Selection](grid_selection.md)
 

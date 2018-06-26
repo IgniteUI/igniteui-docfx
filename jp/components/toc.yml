@@ -8,6 +8,9 @@
     - name: 仮想化とパフォーマンス
       href: grid_virtualization.md
       new: false
+    - name: Editing
+      href: grid_editing.md
+      new: true
     - name: ページング
       href: grid_paging.md
       new: false
@@ -17,8 +20,14 @@
     - name: 並べ替え
       href: grid_sorting.md
       new: false
+    - name: グループ化
+      href: grid_groupby.md
+      new: true
     - name: 集計
       href: grid_summaries.md
+      new: true
+    - name: 列移動
+      href: grid_column_moving.md
       new: true
     - name: 列のピン固定
       href: grid_column_pinning.md
@@ -38,9 +47,9 @@
     - name: Excel エクスポート
       href: exporter_excel.md
       new: true
-    - name: Multi Column Headers
-      href: grid_multi_column_headers.md
-      new: true
+    # - name: 複数列ヘッダー
+    #  href: grid_multi_column_headers.md
+    #  new: true
 - name: List View
   href: list.md
 - name: チャート

@@ -8,6 +8,9 @@
     - name: Virtualization and performance
       href: grid_virtualization.md
       new: false
+    - name: Editing
+      href: grid_editing.md
+      new: true
     - name: Paging
       href: grid_paging.md
       new: false
@@ -17,8 +20,14 @@
     - name: Sorting
       href: grid_sorting.md
       new: false
+    - name: Group By
+      href: grid_groupby.md
+      new: true
     - name: Summaries
       href: grid_summaries.md
+      new: true
+    - name: Column moving
+      href: grid_column_moving.md
       new: true
     - name: Column pinning
       href: grid_column_pinning.md
