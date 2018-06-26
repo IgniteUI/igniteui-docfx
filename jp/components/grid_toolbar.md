@@ -7,7 +7,7 @@ _language: ja
 
 ### グリッド ツールバー
 
-Ignite UI for Angular のグリッドは、**UI** 操作のコンテナーとなる **toolbar** 機能をサポートします。ツールバーはグリッドの一番上に配置されグリッドの水平サイズに一致します。ツールバーのコンテナーは、グリッド機能に関連するさまざまな UI コントロール (列の非表示、列ピン固定、エクセル エクスポートなど) をホストします。
+Ignite UI for Angular のグリッドは、**UI** 操作のコンテナーとなる **ツールバー** 機能をサポートします。ツールバーはグリッドの一番上に配置されグリッドの水平サイズに一致します。ツールバーのコンテナーは、グリッド機能に関連するさまざまな UI コントロール (列の非表示、列ピン固定、エクセル エクスポートなど) をホストします。
 
 #### デモ
 
@@ -34,14 +34,14 @@ IgxGrid のツールバーは、さまざまな形式 (MS Excel および CSV) �
 - MS Excel エクスポートは、グリッドの `exportExcel` プロパティを `true` に設定できます。
 - CSV エクスポートは、グリッドの `exportCsv` プロパティを `true` に設定できます。
 
-エクスポート オプションは、ドロップダウンでホストし、ツールバーでメインのエクスポート ボタンが押されたときに表示されます。各ボタン テキストを構成するためのプロパティがあり、以下のAPI セクションに一覧があります。
+エクスポート オプションは、ドロップダウンでホストし、ツールバーでメインのエクスポート ボタンが押されたときに表示されます。各ボタン テキストを構成するためのプロパティがあり、以下の API セクションに一覧があります。
 
 <div class="sample-container loading" style="height:420px">
     <iframe id="grid-toolbar-sample-2-iframe" src='{environment:demosBaseUrl}/grid-toolbar-sample-2' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="grid-toolbar-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="grid-toolbar-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
 </div>
 
 以下のコード スニペットは、ツールバーで MS Excel エクスポートと CSV エクスポートの機能を有効にし、エクスポート ボタンのにタイトルを設定する方法を示します。
@@ -122,14 +122,14 @@ public toolbarExportingHandler(args) {
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="grid-toolbar-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="grid-toolbar-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
 </div>
 
 <div class="divider"></div>
 
 ### API まとめ
 
-以下は、Grid Toolbar サービスのその他の API です。
+以下は、Grid ツールバー サービスのその他の API です。
 
 #### 入力
 
