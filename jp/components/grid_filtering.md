@@ -45,7 +45,7 @@ Ignite UI for Angular Grid コンポーネントは、グリッドにバイン�
 // Single column filtering
 
 // Filter the `ProductName` column for values which `contains` the `myproduct` substring, ignoring case
-this.grid.filter('ProductName', 'myproduct', STRING_FILTERS.contains, true);
+this.grid.filter('ProductName', 'myproduct', IgxStringFilteringOperand.instance().condition("contains"), true);
 ```
 
 必要なパラメーターは列フィールド キーおよびフィルター条件です。条件および大文字と小文字の区別を設定しない場合、列プロパティで推測されます。フィルターが複数ある場合、このメソッドはフィルター式の配列を受け取ります。
@@ -56,17 +56,36 @@ this.grid.filter('ProductName', 'myproduct', STRING_FILTERS.contains, true);
 ```typescript
 // Multi column filtering
 
-this.grid.filter([
-    { fieldName: 'ProductName', searchVal: 'myproduct' condition: STRING_FILTERS.contains, ignoreCase: true},
-    { fieldName: 'Price', searchVal: 55, condition: NUMBER_FILTERS.greaterThan }
-]);
+const gridFilteringExpressionsTree = new FilteringExpressionsTree(FilteringLogic.And);
+const productFilteringExpressionsTree = new FilteringExpressionsTree(FilteringLogic.And, "ProductName");
+const productExpression = {
+    condition: IgxStringFilteringOperand.instance().condition("contains"),
+    fieldName: "ProductName",
+    ignoreCase: true,
+    searchVal: "ch"
+};
+productFilteringExpressionsTree.filteringOperands.push(productExpression);
+gridFilteringExpressionsTree.filteringOperands.push(productFilteringExpressionsTree);
+
+const priceFilteringExpressionsTree = new FilteringExpressionsTree(FilteringLogic.And, "Price");
+const priceExpression = {
+    condition: IgxNumberFilteringOperand.instance().condition("greaterThan"),
+    fieldName: "UnitPrice",
+    ignoreCase: true,
+    searchVal: 20
+};
+priceFilteringExpressionsTree.filteringOperands.push(priceExpression);
+gridFilteringExpressionsTree.filteringOperands.push(priceFilteringExpressionsTree);
+
+this.grid.filteringExpressionsTree = gridFilteringExpressionsTree;
 ```
 
 *   `filterGlobal` - 既存フィルターをクリアして新しいフィルター条件をすべてのグリッド列に適用します。
 
 ```typescript
 // Filter all cells for a value which contains `myproduct`
-this.grid.filterGlobal('myproduct', STRING.contains, true);
+this.grid.filteringLogic = FilteringLogic.Or;
+this.grid.filterGlobal("myproduct", IgxStringFilteringOperand.instance().condition("contains"), false);
 ```
 
 *   `clearFilter` - 対象列から適用されたフィルターを削除します。引数がない場合、すべての列のフィルターをクリアします。
@@ -85,10 +104,18 @@ this.grid.clearFilter();
 
 ```typescript
 public ngOnInit() {
-    this.grid.filteringExpressions = [
-        { fieldName: 'ProductName', searchVal: 'myproduct' condition: STRING_FILTERS.contains, ignoreCase: true},
-        { fieldName: 'Price', searchVal: 55, condition: NUMBER_FILTERS.greaterThan }
-    ];
+    const gridFilteringExpressionsTree = new FilteringExpressionsTree(FilteringLogic.And);
+    const productFilteringExpressionsTree = new FilteringExpressionsTree(FilteringLogic.And, "ProductName");
+    const productExpression = {
+        condition: IgxStringFilteringOperand.instance().condition("contains"),
+        fieldName: "ProductName",
+        ignoreCase: true,
+        searchVal: "c"
+    };
+    productFilteringExpressionsTree.filteringOperands.push(productExpression);
+    gridFilteringExpressionsTree.filteringOperands.push(productFilteringExpressionsTree);
+
+    this.grid.filteringExpressionsTree = gridFilteringExpressionsTree;
 }
 ```
 
