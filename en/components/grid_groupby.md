@@ -11,10 +11,9 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 #### Demo
 
-<div class="sample-container loading" style="height:550px">
+<div class="sample-container loading" style="height:605px">
     <iframe id="grid-sample-pinning-iframe" src='{environment:demosBaseUrl}/grid-groupby' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
-<br/>
 <div>
 <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="grid-sample-groupby-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
