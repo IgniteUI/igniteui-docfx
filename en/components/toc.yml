@@ -59,54 +59,54 @@
   header: true
 - name: Category Chart
   href: categorychart.md
-  new: true
+  new: false
   items:
     - name: Explore Chart Types
       href: categorychart_explore_chart_types.md
-      new: true
+      new: false
     - name: Real Time Data
       href: categorychart_real_time_data.md
-      new: true
+      new: false
     - name: High Volume Data
       href: categorychart_high_volume_data.md
-      new: true
+      new: false
     - name: Configuration Options
       href: categorychart_configuration_options.md
-      new: true
+      new: false
     - name: Custom Tooltips
       href: categorychart_custom_tooltips.md
-      new: true
+      new: false
 - name: Financial Chart
   href: financialchart.md
-  new: true
+  new: false
   items:
     - name: Explore Chart Types
       href: financialchart_explore_chart_types.md
-      new: true
+      new: false
     - name: Real Time Data
       href: financialchart_real_time_data.md
-      new: true
+      new: false
     - name: High Volume Data
       href: financialchart_high_volume_data.md
-      new: true
+      new: false
     - name: Performance
       href: financialchart_performance.md
-      new: true
+      new: false
     - name: Binding to Multiple Data Sources
       href: financialchart_binding_to_multiple_data.md
-      new: true
+      new: false
     - name: Panes
       href: financialchart_panes.md
-      new: true
+      new: false
     - name: Configuration Options
       href: financialchart_configuration_options.md
-      new: true
+      new: false
     - name: Custom Indicators
       href: financialchart_custom_indicators.md
-      new: true
+      new: false
     - name: Custom Tooltips
       href: financialchart_custom_tooltips.md
-      new: true
+      new: false
 - name: Styling & Themes
   header: true
 - name: Themes
@@ -133,15 +133,15 @@
   href: switch.md
 - name: Radio & Radio Group
   href: radio_button.md
-  new: true
+  new: false
 - name: Label & Input
   href: label_input.md
 - name: Input Group
   href: input_group.md
-  new: true
+  new: false
 - name: Mask
   href: mask.md
-  new: true
+  new: false
 - name: Badge
   href: badge.md
 - name: Icon
@@ -178,7 +178,7 @@
   href: tabbar.md
 - name: Tabs
   href: tabs.md
-  new: true
+  new: false
 - name: Card
   href: card.md
 - name: Avatar
@@ -197,12 +197,12 @@
   href: date_picker.md
 - name: Time Picker
   href: time_picker.md
-  new: true
+  new: false
 - name: Services
   header: true
 - name: CSV Exporter
   href: exporter_csv.md
-  new: true
+  new: false
 - name: Excel Exporter
   href: exporter_excel.md
-  new: true
+  new: false
