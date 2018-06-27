@@ -12,7 +12,7 @@ _language: ja
 
 #### デモ
 
-<div class="sample-container loading" style="height:605px">
+<div class="sample-container loading" style="height:550px">
     <iframe id="grid-sample-pinning-iframe" src='{environment:demosBaseUrl}/grid-groupby' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
