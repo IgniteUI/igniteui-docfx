@@ -1,7 +1,7 @@
 ﻿---
 title: グリッド ツールバー コンポーネント - ネイティブ Angular | Ignite UI for Angular
-_description: Ignite UI for Angular Grid Toolbar コンポーネントは、IgxGrid 機能 UI コントロールを一元管理できます。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, ネイティブ Angular コンポーネント, Angular Grid, Angular Data Grid コンポーネント, Angular Data Grid コントロール, Angular Grid コンポーネント, Angular Grid コントロール, Angular 高いパフォーマンス Grid, Angular Data Grid Toolbar, Grid Toolbar, Angular Grid Toolbar, excel エクスポート, グリッド列非表示選択, グリッド列ピン固定選択
+_description: Ignite UI for Angular Grid ツールバー コンポーネントは、IgxGrid 機能 UI コントロールを一元管理できます。
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, ネイティブ Angular コンポーネント, Angular Grid, Angular Data Grid コンポーネント, Angular Data Grid コントロール, Angular Grid コンポーネント, Angular Grid コントロール, Angular 高いパフォーマンス Grid, Angular Data Grid ツールバー, Grid ツールバー, Angular Grid ツールバー, excel エクスポート, グリッド列非表示選択, グリッド列ピン固定選択
 _language: ja
 ---
 
