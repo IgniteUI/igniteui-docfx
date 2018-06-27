@@ -25,7 +25,7 @@
       new: true
     - name: Summaries
       href: grid_summaries.md
-      new: true
+      new: false
     - name: Column moving
       href: grid_column_moving.md
       new: true
@@ -37,7 +37,7 @@
       new: true
     - name: Selection
       href: grid_selection.md
-      new: true
+      new: false
     - name: Searching
       href: grid_search.md
       new: true
@@ -46,7 +46,7 @@
       new: true
     - name: Export to Excel
       href: exporter_excel.md
-      new: true
+      new: false
     - name: Multi Column Headers
       href: grid_multi_column_headers.md
       new: true

@@ -25,7 +25,7 @@
       new: true
     - name: 集計
       href: grid_summaries.md
-      new: true
+      new: false
     - name: 列移動
       href: grid_column_moving.md
       new: true
@@ -37,7 +37,7 @@
       new: true
     - name: 選択
       href: grid_selection.md
-      new: true
+      new: false
     - name: 検索
       href: grid_search.md
       new: true
@@ -46,7 +46,7 @@
       new: true
     - name: Excel エクスポート
       href: exporter_excel.md
-      new: true
+      new: false
     - name: 複数列ヘッダー
       href: grid_multi_column_headers.md
       new: true
