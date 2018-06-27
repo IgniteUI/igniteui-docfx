@@ -190,7 +190,7 @@ import {
     IgxIconModule,
     IgxRippleModule,
     IgxButtonModule    
-} from 'igniteui-angular/main';
+} from 'igniteui-angular';
 
 @NgModule({
     ...
@@ -325,6 +325,7 @@ public clearSearch() {
 * [ページング](grid_paging.md)
 * [並べ替え](grid_sorting.md)
 * [集計](grid_summaries.md)
+* [列移動](grid_column_moving.md)
 * [列のピン固定](grid_column_pinning.md)
 * [列のサイズ変更](grid_column_resizing.md)
 * [選択](grid_selection.md)

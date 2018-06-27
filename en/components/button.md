@@ -26,7 +26,7 @@ inside your `AppModule`:
 ```typescript
 // app.module.ts
 
-import { IgxButtonModule } from 'igniteui-angular/main';
+import { IgxButtonModule } from 'igniteui-angular';
 
 @NgModule({
     imports: [

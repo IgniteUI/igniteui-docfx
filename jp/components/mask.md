@@ -29,7 +29,7 @@ _language: ja
 // app.module.ts
 
 ...
-import { IgxMaskModule, IgxInputGroupModule } from 'igniteui-angular/main';
+import { IgxMaskModule, IgxInputGroupModule } from 'igniteui-angular';
 
 @NgModule({
     ...

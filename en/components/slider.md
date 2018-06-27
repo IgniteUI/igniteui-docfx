@@ -27,7 +27,7 @@ To get started with the Ignite UI for Angular Slider, let's first import the **I
 // app.module.ts
 
 ...
-import { IgxSliderModule } from 'igniteui-angular/main';
+import { IgxSliderModule } from 'igniteui-angular';
 
 @NgModule({
     ...

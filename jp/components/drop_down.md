@@ -28,7 +28,7 @@ Ignite UI for Angular Drop Down コンポーネントを初期化する前に **
 // app.module.ts
 
 ...
-import { IgxDropDownModule } from 'igniteui-angular/main';
+import { IgxDropDownModule } from 'igniteui-angular';
 
 @NgModule({
     ...
@@ -49,7 +49,7 @@ export class AppModule {}
 import {
     IgxDropDownModule,
     IgxToggleModule
-} from 'igniteui-angular/main';
+} from 'igniteui-angular';
 
 @NgModule({
     ...
@@ -63,7 +63,7 @@ export class AppModule {}
 <!-- dropdown.component.html -->
 
 <div class="sample-wrapper drop-down-wrapper">
-    <button igxButton="raised" (click)="toggleDropDown()">Options</button>
+    <button igxButton="raised" (click)="toggleDropDown($event)">Options</button>
     <igx-drop-down>
         <igx-drop-down-item *ngFor="let item of items">
             {{ item.field }}
@@ -80,18 +80,27 @@ export class AppModule {}
 
     public items: any[] = [];
 
-    constructor() {
+    private _positionSettings = {
+        horizontalStartPoint: HorizontalAlignment.Left,
+        verticalStartPoint: VerticalAlignment.Bottom
+    };
+    private _overlaySettings = {
+      closeOnOutsideClick: true,
+      modal: false,
+      positionStrategy: new ConnectedPositioningStrategy(this._positionSettings),
+      scrollStrategy: new CloseScrollStrategy()
+  };
+
+    public ngOnInit() {
         for (let i = 1; i < 4; i ++) {
             const item = { field: "Option " + i };
             this.items.push(item);
         }
     }
 
-    public ngOnInit() {
-    }
-
-    public toggleDropDown() {
-        this.igxDropDown.toggle();
+    public toggleDropDown(eventArgs) {
+        this._overlaySettings.positionStrategy.settings.target = eventArgs.target;
+        this.igxDropDown.toggle(this._overlaySettings);
     }
 
 ```
@@ -115,7 +124,7 @@ export class AppModule {}
 <!-- dropdown.component.html -->
 
 <div class="sample-wrapper drop-down-wrapper">
-    <button igxButton="raised" (click)="toggleDropDown()">Options</button>
+    <button igxButton="raised" (click)="toggleDropDown($event)">Options</button>
     <igx-drop-down (onOpening)="onOpening($event)">
         <igx-drop-down-item *ngFor="let item of items">
             {{ item.field }}
@@ -132,22 +141,28 @@ export class AppModule {}
 
     public items: any[] = [];
 
-    constructor() {
+    private _positionSettings = {
+        horizontalStartPoint: HorizontalAlignment.Left,
+        verticalStartPoint: VerticalAlignment.Bottom
+    };
+
+    private _overlaySettings = {
+      closeOnOutsideClick: true,
+      modal: false,
+      positionStrategy: new ConnectedPositioningStrategy(this._positionSettings),
+      scrollStrategy: new CloseScrollStrategy()
+  };
+
+    public ngOnInit() {
         for (let i = 1; i < 4; i ++) {
             const item = { field: "Option " + i };
             this.items.push(item);
         }
     }
 
-    public ngOnInit() {
-    }
-
-    public toggleDropDown() {
-        this.igxDropDown.toggle();
-    }
-
-    public onOpening(ev) {
-        this.igxDropDown.setSelectedItem(0);
+    public toggleDropDown(eventArgs) {
+        this._overlaySettings.positionStrategy.settings.target = eventArgs.target;
+        this.igxDropDown.toggle(this._overlaySettings);
     }
 
 ```
@@ -162,15 +177,15 @@ export class AppModule {}
 
 <div class="divider--half"></div>
 
-`isHeader` を使用して意味的なグループ化や `isDisabled` を使用して非インタラクティブな項目を表示するなど、有用なビジュアル情報を提供できます。
+`isHeader` を使用して意味的なグループ化や `disabled` を使用して非インタラクティブな項目を表示するなど、有用なビジュアル情報を提供できます。
 
 ```html
 <!-- dropdown.component.html -->
 
 <div class="sample-wrapper drop-down-wrapper">
-    <button igxButton="raised" (click)="toggleDropDown()">Countries</button>
+    <button igxButton="raised" (click)="toggleDropDown($event)">Countries</button>
     <igx-drop-down>
-        <igx-drop-down-item *ngFor="let item of items" isDisabled={{item.disabled}} isHeader={{item.header}}>
+        <igx-drop-down-item *ngFor="let item of items" disabled={{item.disabled}} isHeader={{item.header}}>
             {{ item.field }}
         </igx-drop-down-item>
     </igx-drop-down>
@@ -190,14 +205,21 @@ export class AppModule {}
         { field: "Bulgaria" },
         { field: "UK", disabled: true }];
 
-    constructor() {
-    }
+    private _positionSettings = {
+        horizontalStartPoint: HorizontalAlignment.Left,
+        verticalStartPoint: VerticalAlignment.Bottom
+    };
 
-    public ngOnInit() {
-    }
+    private _overlaySettings = {
+      closeOnOutsideClick: true,
+      modal: false,
+      positionStrategy: new ConnectedPositioningStrategy(this._positionSettings),
+      scrollStrategy: new CloseScrollStrategy()
+  };
 
-    public toggleDropDown() {
-        this.igxDropDown.toggle();
+    public toggleDropDown(eventArgs) {
+        this._overlaySettings.positionStrategy.settings.target = eventArgs.target;
+        this.igxDropDown.toggle(this._overlaySettings);
     }
 
 ```
@@ -266,7 +288,7 @@ export class AppModule {}
 | 名前 | 型 | 説明 |
 | :--- | :--- | :--- |
 | `isHeader` | ブール値| 項目がグループ ヘッダーかどうかを定義します。 |
-| `isDisabled` | ブール値| 指定した項目を無効にします。 |
+| `disabled` | boolean| Gets if given item is disabled. |
 | `isFocused` | ブール値| 指定した項目がフォーカスされるかどうかを定義します。|
 
 #### ゲッター

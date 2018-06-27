@@ -30,7 +30,7 @@ Ignite UI for Angular Checkbox を初期化する前に、**IgxCheckboxModule** 
 // app.module.ts
 
 ...
-import { IgxCheckboxModule } from 'igniteui-angular/main';
+import { IgxCheckboxModule } from 'igniteui-angular';
 
 @NgModule({
     ...

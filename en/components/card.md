@@ -28,7 +28,7 @@ To get started with the Ignite UI for Angular Card, let's first import the **Igx
 ```typescript
 // app.module.ts
 ...
-import { IgxCardModule } from 'igniteui-angular/main';
+import { IgxCardModule } from 'igniteui-angular';
 
 @NgModule({
     ...
@@ -73,7 +73,7 @@ Yes, Brad Stanley is popular, but maybe we want to make his card a bit more inte
 import {
     IgxCardModule,
     IgxAvatarModule
-} from 'igniteui-angular/main';
+} from 'igniteui-angular';
 
 @NgModule({
     ...
@@ -126,7 +126,7 @@ import {
     IgxAvatarModule,
     IgxIconModule,
     IgxButtonModule
-} from 'igniteui-angular/main';
+} from 'igniteui-angular';
 
 @NgModule({
     ...

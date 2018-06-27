@@ -31,7 +31,7 @@ Ignite UI for Angular Badge を初期化する前に、**IgxBadgeModule** を **
 // app.module.ts
 
 ...
-import { IgxBadgeModule } from 'igniteui-angular/main';
+import { IgxBadgeModule } from 'igniteui-angular';
 
 @NgModule({
     ...
@@ -53,7 +53,7 @@ import {
     IgxListModule,
     IgxAvatarModule,
     IgxBadgeModule
-} from 'igniteui-angular/main';
+} from 'igniteui-angular';
 
 @NgModule({
     ...

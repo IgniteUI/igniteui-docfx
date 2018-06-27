@@ -27,7 +27,7 @@ The grid is exported as as an `NgModule`, thus all you need to do in your applic
 ```typescript
 // app.module.ts
 
-import { IgxGridModule } from 'igniteui-angular/main';
+import { IgxGridModule } from 'igniteui-angular';
 // Or
 import { IgxGridModule } from 'igniteui-angular/grid';
 
@@ -46,7 +46,7 @@ Each of the components, directives and helper classes in the _IgxGridModule_ can
 ```typescript
 import { IgxGridComponent } from 'igniteui-angular/grid/';
 // Or
-import { IgxGridComponent } from 'igniteui-angular/main'
+import { IgxGridComponent } from 'igniteui-angular'
 ...
 
 @ViewChild('myGrid', { read: IgxGridComponent })
@@ -320,45 +320,17 @@ and in the template of the component:
 
 **Note**: The grid `autoGenerate` property is best to be avoided when binding to remote data for now. It assumes that the data is available in order to inspect it and generate the appropriate columns. This is usually not the case until the remote service responds, and the grid will throw an error. Making `autoGenerate` available, when binding to remote service, is on our roadmap for future versions.
 
-### CRUD operations
+## Known Limitations
 
-The `IgxGridComponent` provides a straigtforward API for basic CRUD operations.
+|Limitation|Description|
+|--- |--- |
+|Column widths set in `percentage` and `px`|Currently we do not support mixing of column widths with `%` and `px`.|
+|When trying to filter a column of type `number`|If a value different than `number` is entered into the filtering input, `NaN` is returned due to an incorrect cast.|
+|Grid `width` does not depend on the column widths | The `width` of all columns does not determine the spanning of the grid itself. It is determined by the parent container dimensions or the defined grid's `width`.|
+|Grid nested in parent container | When grid's `width` is not set and it is placed in a parent container with defined dimensions, the grid spans to this container.|
+|Grid `OnPush` ChangeDetectionStrategy |The grid operates with `ChangeDetectionStrategy.OnPush` so whenever some customization appears make sure that the grid is notified about the changes that happens.|
+| Columns have a minimum allowed column width. Depending on the `displayDensity` option, they are as follows: <br/>"compact": 24px <br/> "cosy": 32px <br/> "comfortable ": 48px | If width less than the minimum allowed is set it will not affect the rendered elements. They will render with the minimum allowed width for the corresponding `displayDensity`. This may lead to an unexpected behavior with horizontal virtualization and is therefore not supported.
 
-#### Adding a new record
-
-The grid component exposes the `addRow` method which will add the provided data to the data source itself.
-
-```typescript
-// Adding a new record
-// Assuming we have a `getNewRecord` method returning the new row data.
-const record = this.getNewRecord();
-this.grid.addRow(record);
-```
-
-#### Updating data in the grid
-
-Updating data in the grid is achieved through `updateRow` and `updateCell` methods. You can also directly update a cell value through its `update` method.
-
-```typescript
-// Updating the whole row
-this.grid.updateRow(newData, this.selectedCell.rowIndex);
-
-// Just a particualr cell through the Grid API
-this.grid.updateCell(newData, this.selectedCell.rowIndex, this.selectedCell.column.field);
-
-// Directly using the cell `update` method
-this.selectedCell.update(newData);
-```
-
-#### Deleting data from the grid
-
-```typescript
-this.grid.deleteRow(this.selectedCell.rowIndex);
-```
-These can be wired to user interactions, not necessarily related to the **igx-grid**; for example, a button click:
-```html
-<button igxButton igxRipple (click)="deleteRow($event)">Delete Row</button>
-```
 
 <div class="divider--half"></div>
 
@@ -375,7 +347,7 @@ Below is the list of all inputs that the developers may set to configure the gri
 |`paging`|bool|Enables the paging feature. Defaults to _false_.|
 |`perPage`|number|Visible items per page, default is 15|
 |`filteringLogic`|FilteringLogic|The filtering logic of the grid. Defaults to _AND_.|
-|`filteringExpressions`|Array|The filtering state of the grid.|
+|`filteringExpressionsTree`|IFilteringExpressionsTree|The filtering state of the grid.|
 |`sortingExpressions`|Array|The sorting state of the grid.|
 |`height`|string|The height of the grid element. You can pass values such as `1000px`, `75%`, etc.|
 |`width`|string|The width of the grid element. You can pass values such as `1000px`, `75%`, etc.|
@@ -398,7 +370,7 @@ A list of the events emitted by the **igx-grid**:
 |`onSelection`|Emitted when a cell is selected. Returns the cell object.|
 |`onColumnInit`|Emitted when the grid columns are initialized. Returns the column object.|
 |`onSortingDone`|Emitted when sorting is performed through the UI. Returns the sorting expression.|
-|`onFilteringDone`|Emitted when filtering is performed through the UI. Returns the filtering expression.|
+|`onFilteringDone`|Emitted when filtering is performed through the UI. Returns the filtering expressions tree of the column for which the filtering was performed. |
 |`onPagingDone`|Emitted when paging is performed. Returns an object consisting of the previous and the new page.|
 |`onRowAdded`|Emitted when a row is being added to the grid through the API. Returns the data for the new row object.|
 |`onRowDeleted`|Emitted when a row is deleted through the grid API. Returns the row object being removed.|
@@ -431,9 +403,9 @@ Here is a list of all public methods exposed by **igx-grid**:
 |`deleteRow(rowIndex: number)`|Removes the row object and the corresponding data record from the data source.|
 |`updateRow(value: any, rowIndex: number)`|Updates the row object and the data source record with the passed value.|
 |`updateCell(value: any, rowIndex: number, column: string)`|Updates the cell object and the record field in the data source.|
-|`filter(column: string, value: any, condition?, ignoreCase?: boolean)`|Filters a single column. Check the available [filtering conditions](#filtering-conditions)|
-|`filter(expressions: Array)`|Filters the grid columns based on the provided array of filtering expressions.|
-|`filterGlobal(value: any, condition? ignoreCase?)`|Filters all the columns in the grid.|
+|`filter(name: string, value: any, conditionOrExpressionTree?: IFilteringOperation, ignoreCase?: boolean)`|Filters a single column. A filtering operation is used as parameter. Check the available [filtering conditions](#filtering-conditions).|
+|`filter(name: string, value: any, conditionOrExpressionTree?: IFilteringExpressionsTree, ignoreCase?: boolean)`|Filters a single column. A filtering expressions tree is used as parameter.|
+|`filterGlobal(value: any, condition?, ignoreCase?)`|Filters all the columns in the grid with the same condition.|
 |`clearFilter(name?: string)`|If `name` is provided, clears the filtering state of the corresponding column, otherwise clears the filtering state of all columns.|
 |`sort(name: string, direction, ignorecase)`|Sorts a single column.|
 |`sort(expressions: Array)`|Sorts the grid columns based on the provided array of sorting expressions.|
@@ -476,7 +448,6 @@ Inputs available on the **IgxGridColumnComponent** to define columns:
 |`cellClasses`|string|Additional CSS classes applied to the cells in this column.|
 |`formatter`|Function|A function used to "template" the values of the cells without the need to pass a cell template the column.|
 |`index`|string|Column index|
-|`filteringCondition`|FilteringCondition|Boolean, date, string or number conditions. Default is string _contains_|
 |`filteringIgnoreCase`|boolean|Ignore capitalization of strings when filtering is applied. Defaults to _true_.|
 |`sortingIgnoreCase`|boolean|Ignore capitalization of strings when sorting is applied. Defaults to _true_.|
 |`dataType`|DataType|One of string, number, boolean or Date. When filtering is enabled the filter UI conditions are based on the `dataType` of the column. Defaults to `string` if it is not provided. With `autoGenerate` enabled the grid will try to resolve the correct data type for each column based on the data source.|
@@ -505,15 +476,27 @@ Here is a list of all public methods exposed by **IgxGridColumnComponent**:
 
 ## Filtering Conditions
 
-You will need to import the appropriate condition types from the `igniteui-angular` package.
+ Five filtering operand classes are available:
+- `IgxFilteringOperand` is a base filtering operand, which can be inherited when defining custom filtering conditions.
+- `IgxBooleanFilteringOperand` defines all default filtering conditions for `boolean` type.
+- `IgxDateFilteringOperand` defines all default filtering conditions for `Date` type.
+- `IgxNumberFilteringOperand` defines all default filtering conditions for `numeric` type.
+- `IgxStringFilteringOperand` defines all default filtering conditions for `string` type.
 
 ```typescript
 import {
-    STRING_FILTERS,
-    NUMBER_FILTERS,
-    DATE_FILTERS,
-    BOOLEAN_FILTERS
-} from 'igniteui-angular/main';
+    IgxBooleanFilteringOperand,
+    IgxDateFilteringOperand,
+    IgxFilteringOperand,
+    IgxNumberFilteringOperand,
+    IgxStringFilteringOperand,
+} from 'igniteui-angular';
+```
+
+```typescript
+public filter(term) {
+    this.grid.filter("ProductName", term, IgxStringFilteringOperand.instance().condition("contains"));
+}
 ```
 
 ### String types
@@ -621,7 +604,6 @@ import {
 |--- |--- |--- |
 |`update(val: any)`|void|Emits the `onEditDone` event and updates the appropriate record in the data source.|
 
-
 ### Additional Resources
 <div class="divider--half"></div>
 
@@ -630,6 +612,7 @@ import {
 * [Filtering](grid_filtering.md)
 * [Sorting](grid_sorting.md)
 * [Summaries](grid_summaries.md)
+* [Column Moving](grid_column_moving.md)
 * [Column Pinning](grid_column_pinning.md)
 * [Column Resizing](grid_column_resizing.md)
 * [Selection](grid_selection.md)

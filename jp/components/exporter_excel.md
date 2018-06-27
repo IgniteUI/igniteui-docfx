@@ -40,6 +40,8 @@ import { IgxExcelExporterService } from "igniteui-angular/services/index";
 export class AppModule {}
 ```
 
+> 注: Excel Exporter サービスは JSZip にピア依存関係があります。JSZip ライブラリは Excel Exporter の使用時にインストールしてください。
+
 エクスポート処理の開始は、コンポーネントのテンプレートでボタンのハンドラーを使用します。
 
 ```html

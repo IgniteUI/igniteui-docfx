@@ -25,7 +25,7 @@ To get started with the Ignite UI for Angular Checkbox import the **IgxCheckboxM
 // app.module.ts
 
 ...
-import { IgxCheckboxModule } from 'igniteui-angular/main';
+import { IgxCheckboxModule } from 'igniteui-angular';
 
 @NgModule({
     ...

@@ -31,7 +31,7 @@ This is done via the `sortable` input. With the grid sorting, you can also set t
 You can sort any column or a combination of columns through the grid API using the grid `sort` method:
 
 ```typescript
-import { SortingDirection } from 'igniteui-angular/main';
+import { SortingDirection } from 'igniteui-angular';
 
 // Perform a case insensitive ascending sort on the ProductName column.
 this.grid.sort('ProductName', SortingDirection.Asc, true);
@@ -82,6 +82,7 @@ public ngOnInit() {
 * [Paging](grid_paging.md)
 * [Filtering](grid_filtering.md)
 * [Summaries](grid_summaries.md)
+* [Column Moving](grid_column_moving.md)
 * [Column Pinning](grid_column_pinning.md)
 * [Column Resizing](grid_column_resizing.md)
 * [Selection](grid_selection.md)

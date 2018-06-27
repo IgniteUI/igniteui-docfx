@@ -20,7 +20,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ### Dependencies
 To started with all needed dependencies you can use the `IgxNavigationDrawerModule` and import it in your application's `AppModule`:
 ```typescript
-import { IgxNavigationDrawerModule } from 'igniteui-angular/main';
+import { IgxNavigationDrawerModule } from 'igniteui-angular';
 ```
 or
 ```typescript

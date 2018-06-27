@@ -95,6 +95,7 @@ The following output is available for **column resizing**:
 * [Filtering](grid_filtering.md)
 * [Sorting](grid_sorting.md)
 * [Summaries](grid_summaries.md)
+* [Column Moving](grid_column_moving.md)
 * [Column Pinning](grid_column_pinning.md)
 * [Selection](grid_selection.md)
 

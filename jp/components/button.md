@@ -27,7 +27,7 @@ Button ディレクティブは `NgModule` としてエクスポートされる�
 ```typescript
 // app.module.ts
 
-import { IgxButtonModule } from 'igniteui-angular/main';
+import { IgxButtonModule } from 'igniteui-angular';
 
 @NgModule({
     imports: [

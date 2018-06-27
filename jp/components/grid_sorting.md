@@ -32,7 +32,7 @@ Ignite UI for Angular では、列レベルでの**並べ替え**が可能です
 グリッドの `sort` メソッドを使用し、列または複数の列をグリッド API で並べ替えできます。
 
 ```typescript
-import { SortingDirection } from 'igniteui-angular/main';
+import { SortingDirection } from 'igniteui-angular';
 
 // Perform a case insensitive ascending sort on the ProductName column.
 this.grid.sort('ProductName', SortingDirection.Asc, true);
@@ -83,6 +83,7 @@ public ngOnInit() {
 * [ページング](grid_paging.md)
 * [フィルタリング](grid_filtering.md)
 * [集計](grid_summaries.md)
+* [列移動](grid_column_moving.md)
 * [列のピン固定](grid_column_pinning.md)
 * [列のサイズ変更](grid_column_resizing.md)
 * [選択](grid_selection.md)
