@@ -1,34 +1,33 @@
----
-title: Combo Component
-_description: The igx-combo provides a powerful input, combining features of the basic HTML input, select and the IgniteUI for Angular igx-drop-down controls.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Combo components, Angular Combo controls
+﻿---
+title: Combo コンポーネント
+_description: igx-combo は、基本的な HTML input 要素、select 要素、および IgniteUI for Angular igx-drop-down コントロールの機能を組み合わされています。
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Combo コンポーネント, Angular Combo コントロール
+_language: ja
 ---
 
-## Combo
+## コンボ
 <p class="highlight">
-The igx-combo component provides a powerful input, combining the features of the basic HTML input, select and the IgniteUI for Angular igx-drop-down components.
-The combo component provides easy filtering and selection of multiple items, grouping and adding custom values to the dropdown list.
-Custom templates could be provided in order to customize different areas of the components, such as items, header, footer, etc.
-The combo component is integrated with the Template Driven and Reactive Forms.
-The igx-combo exposes intiutive keyboard navigation and it is accessibility compliant.
-Drop Down items are virtualized, which guarantees smooth work, even if the igx-combo is bound to data source with a lot of items.
+igx-combo コンポーネントは、基本 HTML input 要素、select 要素、および IgniteUI for Angular igx-drop-down コンポーネントの機能を組み合わされています。
+Combo コンポーネントは、フィルタリング、複数の項目の選択、グループ化、ドロップダウン リストにカスタム値の追加などの機能を提供します。項目、ヘッダー、フッターなどのコンポーネントの領域をカスタマイズするためにカスタム テンプレートを設定できます。Combo コンポーネントは Template Driven および Reactive Forms と統合されます。
+igx-combo はキーボード ナビゲーションを公開しており、アクセシビリティ規格にも対応しています。
+igx-combo はキーボード ナビゲーションを公開しており、アクセシビリティ規格にも対応しています。
 </p>
 <div class="divider"></div>
 
-### Combo Demo
+### Combo デモ
 <div class="sample-container loading" style="height: 540px;">
     <iframe id="combo-features-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/combo-features" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="combo-features-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="combo-features-sample" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
 </div>
 <div class="divider--half"></div>
 
 > [!WARNING]
-> To start using Ignite UI for Angular components in your own projects, make sure you have configured all necessary dependencies and have performed the proper setup of your project. You can learn how to do this in the [**installation**](https://www.infragistics.com/products/ignite-ui-angular/getting-started#installation) topic.
+> Ignite UI for Angular コンポーネントをプロジェクトに追加する前に、必要なすべての依存関係を構成し、プロジェクトのセットアップが正しく完了したことを確認してください。[**インストール**](https://jp.infragistics.com/products/ignite-ui-angular/getting-started#installation) のトピックで手順を確認できます。
 
-## Usage
-The `IgxComboComponent` allows you to search and select items from the list. The combo uses the `IgxDropDownComponent` internally as a items container. To get started with the Ignite UI for Angular Combo, let's first import the **IgxComboModule** in our **app.module.ts** file:
+## 使用方法
+`IgxComboComponent` はリストの項目を検索して選択する機能があります。コンボは内部に項目コンテナーとして ` を使用します。Ignite UI for Angular Combo を初期化する前に **IgxComboModule** を **app.module.ts** ファイルにインポートします。
 
 ```typescript
 // app.module.ts
@@ -44,35 +43,35 @@ import { IgxComboModule } from 'igniteui-angular/main';
 export class AppModule {}
 ```
 
-Then in the template we place the combo:
+テンプレートにコンボを追加します。
 
 ```html
 <igx-combo [data]="localData" [valueKey]="'ProductID'" [displayKey]="'ProductName'"></igx-combo>
 ```
 
-The result is as follows:
+以下は結果です。
 <div class="sample-container loading" style="height: 540px;">
     <iframe id="combo-features-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/combo-features" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="combo-features-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="combo-features-sample" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
 </div>
 <div class="divider--half"></div>
 
-## Features
+## 機能
 
-### Data Binding
+### データ バインディング
 
-Basic usage of `igx-combo` bound to a local data source, defining `valueKey` and `displayKey`:
+以下は、`valueKey` および `displayKey`　を定義してローカル データ ソースにバインドされた `igx-combo` の基本的な使用方法です。
 
 ```html
 <igx-combo [data]="localData" [valueKey]="'ProductID'" [displayKey]="'ProductName'"></igx-combo>
 ```
 
-> Note: If `displayKey` is omitted them `valueKey` entity will be used instead.
+> 注: `displayKey` が設定されない場合、`valueKey` 設定が使用されます。
 
 
-Remote binding, defining `valueKey` and `displayKey`, and exposing `onDataPreLoad` that allows to load new chunk of remote data to the combo (see the sample above as a reference):
+リモート バインディング、`valueKey` および `displayKey` の定義、`onDataPreLoad` の公開により、コンボにリモート データの新規データを読み込めるようになります。以下の例でこの機能を紹介します。
 
 ```html
 <igx-combo [data]="remoteData | async" (onDataPreLoad)="dataLoading($event)" [valueKey]="'ProductID'" [displayKey]="'ProductName'" ></igx-combo>
@@ -101,13 +100,13 @@ public dataLoading(evt) {
     }
 ```
 
-> Note: In order to have combo with remote data, what you need is to have a service that retrives data chunks from a server. 
-What the combo exposes is a `virtualizationState` property that gives state of the combo - first index and the number of items that needs to be loaded.
-The service, should inform the combo for the total items that are on the server - using the `totalItemCount` property.
+> 注: コンボをリモート データにバインドするには、サーバーからデータ部分を取得するサービスが必要です。
+コンボは、コンボの状態 (最初のインデックスおよび読み込む項目の数) を指定する `virtualizationState` プロパティを公開します。
+サービスが `totalItemCount` プロパティを使用してサーバーにある項目の数をコンボに通知する必要があります。
 
-### Value Binding
+### 値バインディング
 
-If we want to use a two-way data-binding, we could just use `ngModule` like this:
+TwoWay データ バインディングを使用するには、 `ngModule` を以下のように使用します。
 
 ```html
 <igx-combo #combo [(ngModel)]="values"></igx-combo>
@@ -125,8 +124,8 @@ set values(newValues: Array<any>) {
 
 <div class="divider--half"></div>
 
-### Filtering
-By default filtering in the combo is enabled. It can be disabled using the following code:
+### フィルタリング
+コンボのフィルタリング機能はデフォルトで有効にされます。ただし、以下のコードによって無効にできます。
 
 ```html
 <igx-combo [filaterable]="false"></igx-combo>
@@ -136,17 +135,16 @@ By default filtering in the combo is enabled. It can be disabled using the follo
 
 <div class="divider--half"></div>
 
-### Custom Values
-If the custom values are enabled, the missing item could be added using the UI of the combo.
-
+### カスタム値
+カスタム値の有効化は、コンボのインターフェイスからリストに含まらない項目の追加を許可します。
 ```html
 <igx-combo [allowCustomValues]="true"></igx-combo>
 ```
 
 <div class="divider--half"></div>
 
-### Disabled
-You can disable combo using the following code:
+### 無効化
+以下のコードによってコンボを無効にできます。
 
 ```html
 <igx-combo [disabled]="true"></igx-combo>
@@ -154,8 +152,8 @@ You can disable combo using the following code:
 
 <div class="divider--half"></div>
 
-### Grouping
-Defining a combo's groupKey option will group the items, according to the provided key.
+### グループ化
+コンボの groupKey オプションを定義すると、そのキーに基づいて項目をグループ化します。
 
 ```html
 <igx-combo [groupKey]="'primaryKey'"></igx-combo>
@@ -163,11 +161,10 @@ Defining a combo's groupKey option will group the items, according to the provid
 
 <div class="divider--half"></div>
 
-### Templates
-Custom templates for different areas of the igx-combo component can be defined, including items, header, footer, empty list and adding button.
-When defining one of the templates below, you need to reference them using the following predifined names:
+### テンプレート
+igx-combo コンポーネントの項目、ヘッダー、フッター、空のリスト、および追加ボタンなどの領域にカスタム テンプレートを定義できます。以下のテンプレートの定義で、以下の定義済み名前を使用して参照します。
 
-Defining item template:
+項目テンプレートの定義:
 ```html
 <igx-combo>
 	<ng-template #itemTemplate let-display let-key="valueKey">
@@ -179,7 +176,7 @@ Defining item template:
 </igx-combo>
 ```
 
-Defining header template:
+ヘッダー テンプレートの定義:
 
 ```html
 <igx-combo>
@@ -190,7 +187,7 @@ Defining header template:
 </igx-combo>
 ```
 
-Defining footer template:
+ヘッダー テンプレートの定義:
 
 ```html
 <igx-combo>
@@ -201,7 +198,7 @@ Defining footer template:
 </igx-combo>
 ```
 
-Defining empty template:
+空のテンプレートの定義:
 
 ```html
 <igx-combo>
@@ -211,7 +208,7 @@ Defining empty template:
 </igx-combo>
 ```
 
-Defining add template:
+追加のテンプレートの定義:
 
 ```html
 <igx-combo>
@@ -222,7 +219,7 @@ Defining add template:
 ```
 <div class="divider--half"></div>
 
-### Integration with Template Driven and Reactive Forms
+### Template Driven および Reactive Forms との統合
 
 Template Forms:
 ```html
@@ -278,114 +275,114 @@ onSubmitReactive() {
 
 ```
 
-## Cascading Scenario
+## カスケード シナリオ
 
-The following sample demonstrates cascading igx-drop-down and igx-combo components
+以下のサンプルはカスケードする igx-drop-down および igx-combo コンポーネントを紹介します。
 
 <div class="sample-container loading" style="height: 540px;">
     <iframe id="cascading-combos-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/cascading-combos" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="cascading-combos-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="cascading-combos-sample" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
 </div>
 <div class="divider--half"></div>
 
 
-## Keyboard Navigation
+## キーボード ナビゲーション
 
-When igxCombo is closed and focused:
-- `ArrowDown` or `Alt` + `ArrowDown` will open the combo drop down and will move focus to the search input.
+igxCombo が閉じてフォーカスされる場合:
+- `ArrowDown` または `Alt` + `ArrowDown` コンボのドロップダウンを開いて、フォーカスを検索入力に移動します。
 
-When igxCombo is opened and search input is focused:
-- `ArrowUp` or `Alt` + `ArrowUp` will close the combo drop down and will move focus to the closed combo.
-- `ArrowDown` will move focus from the search input to the first list item.If list is empty and custom values are enabled will move it to the Add new item button.
-  > Note: Any other key stroke will be handled by the input.
+igxCombo が開いて検索入力がフォーカスされる場合:
+- `ArrowUp` または `Alt` + `ArrowUp` はコンボのドロップダウンを閉じて、フォーカスを閉じたコンボに移動します。
+- `ArrowDown` はフォーカスを検索入力から最初のリスト項目に移動します。リストが空でカスタム値が有効にされた場合、「新しい項目の追加」ボタンに移動します。
+  > 注: その他のキーストロークは入力によって処理されます。
 
-When igxCombo is opened and list item is focued:
-- `ArrowDown` will move to next list item. If the active item is the last one in hte list and custom values are enabled then focus will be moved to the Add item button.
+igxCombo が開いてリスト項目がフォーカスされる場合:
+- `ArrowDown` は次のリスト項目に移動します。アクティブ項目がリストの最後の項目で、カスタム値が有効にされた場合、フォーカスは「項目の追加」ボタンに移動します。
 
-- `ArrowUp` will move to previous list item. If the active item is the first one in the list then focus will be moved back to the search input.
+- `ArrowUp` は以前のリスト項目に移動します。アクティブ項目がリストの最初の項目の場合、フォーカスは検索入力に移動します。
 
-- `End` will move to last list item.
+- `End` は最後のリスト項目に移動します。
 
-- `Home` will move to first list item.
+- `Home` は最初のリスト項目に移動します。
 
-- `Space` will select/deselect active list item.
+- `Space` はアクティブなリスト項目を選択/選択解除します。
 
-- `Enter` will confirm the already selected items and will close the list.
+- `Enter` は選択した項目を保存してリストを閉じます。
 
-- `Esc` will close the list.
+- `Esc` はリストを閉じます。
 
-When igxCombo is opened, allow custom values are enabled and add item button is focused:
+igxCombo が開いて、カスタム値が有効で、「項目の追加」ボタンがフォーカスされる場合:
 
-- `Space` and `Enter` will add new item with valueKey and displayKey equal to the text in the search input and will select the new item.
+- `Space` および `Enter` は新しい項目を追加し、valueKey および displayKey を検索入力のテキストに設定して、新しい項目を選択します。
 
-- `ArrowUp` focus will be moved back to the last list item or if list is empty will be moved to the search input.
+- `ArrowUp` はフォーカスを以前のリスト項目に移動します。リストが空の場合、フォーカスを検索入力に移動します。
 
 ## API
 
-### Inputs
+### 入力
 <div class="divider--half"></div>
 
-| Name                     | Description                                       | Type                        |
+| 説明                     　| 説明                                   　　　　　　　　　   | 型　　　                       |
 |--------------------------|---------------------------------------------------|-----------------------------|
-|  `data`                  | combo data source                                 | any                         |
-|  `value`                 | combo value                                       | string                      |
-|  `allowCustomValue`      | enable/disables combo custom value                | boolean                     |
-|  `valueKey`              | combo value data source property                  | string                      |
-|  `displayKey`            | combo dispaly data source property                | string                      |
-|  `groupKey`              | combo item group                                  | string                      |
-|  `virtualizationState`   | defined he current state of the virtualized data. It contains `startIndex` and `chunkSize`      | `IForOfState`               |
-|  `totalItemCount`        | total count of the virtual data items, when using remote service                                | number                      |
-|  `width `                | defines combo width                               | string                      |
-|  `heigth`                | defines combo height                              | string                      |
-|  `itemsMaxHeight `       | defines drop down height                          | string                      |
-|  `itemsMaxWidth `        | defines drop down width                           | string                      |
-|  `itemHeight `           | defines drop down item height                     | string                      |
-|  `placeholder `          | defines the "empty value" text                    | string                      |
-|  `searchPlaceholder `    | defines the placeholder text for search input     | string                      |
-|  `collapsed`             | gets drop down state                              | boolean                     |
-|  `disabled`              | defines whether the control is active or not      | boolean                     |
-|  `ariaLabelledBy`        | defines label ID related to combo                 | boolean                     |
-|  `type`                  | defines type of combo - "line", "box", "border", "search"                                        | string                      |
+|  `data`                  | コンボのデータ ソース                                      | any                        |
+|  `value`                 | コンボの値                                            | string                      |
+|  `allowCustomValue`      | コンボのカスタム値を有効/無効にします。                          | boolean                     |
+|  `valueKey`              | コンボの値データ ソース プロパティ                              | string                      |
+|  `displayKey`            | コンボの表示データ ソース プロパティ                            | string                      |
+|  `groupKey`              | コンボの項目グループ                                      | string                      |
+|  `virtualizationState`   | 仮想化されたデータの現在の状態を定義します。`startIndex` および `chunkSize` を含みます。 | `IForOfState`                |
+|  `totalItemCount`        | リモート サービスを使用する場合、仮想データ項目の合計数。              | number                      |
+|  `width `                | コンボの幅を定義します。                                    | string                      |
+|  `heigth`                | コンボの高さを定義します。                                   | string                      |
+|  `itemsMaxHeight `       | ドロップダウンの高さを定義します。                               | string                      |
+|  `itemsMaxWidth `        | ドロップダウンの幅を定義します。                                | string                      |
+|  `itemHeight `           | ドロップダウン項目の高さを定義します。                            | string                      |
+|  `placeholder `          | 空の値のテキストを定義します。                                | string                      |
+|  `searchPlaceholder `    | 検索入力のプレースホルダー テキストを定義します。                    | string                      |
+|  `collapsed`             | ドロップダウン状態を取得します。                                | boolean                     |
+|  `disabled`              | コントロールがアクティブかどうかを定義します。                         | boolean                     |
+|  `ariaLabelledBy`        | コンボに相対するラベル ID を定義します。                         | boolean                     |
+|  `type`                  | コンボの型 ("line"、"box"、"border"、または "search" ) を定義します。| string                   |
 
-### Outputs
+### 出力
 <div class="divider--half"></div>
 
-| Name                | Description                                                             | Cancelable   | Parameters                              |
+| 名前                | 説明                                                             | キャンセル可能   | パラメーター                             |
 |------------------   |-------------------------------------------------------------------------|------------- |-----------------------------------------|
-| `onSelectionChange` | Emitted when item selection is changing, before the selection completes | true         | { oldSelection: `Array<any>`, newSelection: `Array<any>`, event: Event } |
-| `onSearchInput`     | Emitted when an the search input's input event is triggered             | false        | { searchValue: `string` }               |
-| `onAddition`        | Emitted when an item is being added to the data collection              | false        | { oldCollection: `Array<any>`, addedItem: `<any>`, newCollection: `Array<any>` }|
-| `onDataPreLoad`     | Emitted when new chunk of data is loaded from the virtualization        | false        | { event: Event }                        |
-| `dropDownOpening`   | Emitted before the dropdown is opened                                   | false        | { event: Event }                        |
-| `dropDownOpened`    | Emitted after the dropdown is opened                                    | false        | { event: Event }                        |
-| `dropDownClosing`   | Emitted before the dropdown is closed                                   | false        | { event: Event }                        |
-| `dropDownClosed`    | Emitted after the dropdown is closed                                    | false        | { event: Event }                        |
+| `onSelectionChange` | 選択を完了する前に項目選択が変更されるときに発生されます。 | true         | { oldSelection: `Array<any>`, newSelection: `Array<any>`, event: Event } |
+| `onSearchInput`     | 検索入力の input イベントがトリガーされたときに発生されます。             | false        | { searchValue: `string` }               |
+| `onAddition`        | 項目がデータ コレクションに追加されるときに発生されます。              | false        | { oldCollection: `Array<any>`, addedItem: `<any>`, newCollection: `Array<any>` }|
+| `onDataPreLoad`     | データの新しい部分が仮想化から読み込んだときに発生されます。        | false        | { event: Event }                        |
+| `dropDownOpening`   | ドロップダウンが開かれる前に発生されます。                                   | false        | { event: Event }                        |
+| `dropDownOpened`    | ドロップダウンが開かれた後に発生されます。                                   | false        | { event: Event }                        |
+| `dropDownClosing`   | ドロップダウンが閉じられる前に発生されます。                                   | false        | { event: Event }                        |
+| `dropDownClosed`    | ドロップダウンが閉じられた後に発生されます。                                    | false        | { event: Event }                        |
 
-### Methods
+### メソッド
 <div class="divider--half"></div>
 
-| Name             | Description                 | Return type          | Parameters                  |
+| 名前             | 説明                 | 戻り型          | パラメーター                  |
 |----------------- |-----------------------------|----------------------|-----------------------------|
-| `open`           | Opens drop down             | `void`               | `None`                      |
-| `close`          | Closes drop down            | `void`               | `None`                      |
-| `toggle`         | Toggles drop down           | `void`               | `None`                      |
-| `selectedItems`  | Get current selection state | `Array<any>`         | `None`                      |
-| `selectItems`    | Select defined items        | `void`               | items: `Array<any>`, clearCurrentSelection: `boolean` |
-| `deselectItems`  | Deselect defined items      | `void`               | items: `Array<any>`         |
-| `selectAllItems` | Select all (filtered) items | `void`               | ignoreFilter?: `boolean` - if `true` selects **all** values |
-| `deselectAllItems` | Deselect (filtered) all items | `void`           | ignoreFilter?: `boolean` - if `true` deselects **all** values |
+| `open`           | ドロップダウンを開きます。             | `void`               | `None`                      |
+| `close`          | ドロップダウンを閉じます。            | `void`               | `None`                      |
+| `toggle`         | ドロップダウンを切り替えます。         | `void`               | `None`                      |
+| `selectedItems`  | 現在の選択状態を取得します。 | `Array<any>`         | `None`                      |
+| `selectItems`    | 定義した項目を選択します。        | `void`               | items: `Array<any>`, clearCurrentSelection: `boolean` |
+| `deselectItems`  | 定義した項目を選択解除します。      | `void`               | items: `Array<any>`         |
+| `selectAllItems` | フィルターされた項目をすべて選択します。 | `void`               | ignoreFilter?: `boolean` - `true` の場合、**すべて** の値を選択します。 |
+| `deselectAllItems` | フィルターされた項目をすべて選択解除します。 | `void`           | ignoreFilter?: `boolean` - `true` の場合、**すべて** の値を選択解除します。 |
 
-## Known Issues
+## 既知の問題
 
-- Combo input that displays the selected items is not editable, however due to a browser specifics in IE and FireFox the cursor is visible
-- Backspace works in disabled combo in IE
+- 選択した項目を表示するコンボ入力は編集可能ではありませんが、IE および Firefox でカーソルが表示
+- IE で無効なコンボで BackSpace キーが使用できる問題。
 
-## Additional Resources
+## その他のリソース
 
 <div class="divider--half"></div>
-Our community is active and always welcoming to new ideas.
+コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+* [Ignite UI for Angular **Forums** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
