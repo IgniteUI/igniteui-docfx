@@ -118,11 +118,11 @@ Now let's create our IgxColumnHidingComponent! In our application, we will place
 <!--columnHiding.component.html-->
 
 <div class="columnHidingContainer">
-    <igx-column-hiding #columnHidingUI id="columnHidingUI" [columns]="grid.columns">
+    <igx-column-hiding #columnHidingUI [columns]="grid.columns">
     </igx-column-hiding>
 </div>
 <div class="gridContainer">
-    <igx-grid #grid id="grid" [data]="data" [autoGenerate]="false" width="100%" height="500px" columnWidth="200px">
+    <igx-grid #grid [data]="data" [autoGenerate]="false" width="100%" height="500px" columnWidth="200px">
         ...
     </igx-grid>
 </div>
@@ -175,7 +175,7 @@ A couple more things we can do in order to enrich the user experience of our col
 <!--columnHiding.component.html-->
 
 <div class="columnHidingContainer">
-    <igx-column-hiding #columnHidingUI id="columnHidingUI" [columns]="grid.columns"
+    <igx-column-hiding #columnHidingUI [columns]="grid.columns"
                        title="Column Hiding" filterColumnsPrompt="Type here to search">
     </igx-column-hiding>
 </div>
@@ -220,12 +220,12 @@ public columnsOrder = ColumnDisplayOrder;
 <div class="columnHidingContainer">
     ...
     <div class="columnsOrderOptionsContainer">
-        <igx-radio [checked]="columnHidingUI.columnDisplayOrder === columnsOrder.Alphabetical"
-                   (click)="columnHidingUI.columnDisplayOrder = columnsOrder.Alphabetical">
+        <igx-radio [checked]="columnHidingUI.columnDisplayOrder === 'Alphabetical'"
+                   (click)="columnHidingUI.columnDisplayOrder = 'Alphabetical'">
             Alphabetical order
         </igx-radio>
-        <igx-radio [checked]="columnHidingUI.columnDisplayOrder === columnsOrder.DisplayOrder"
-                   (click)="columnHidingUI.columnDisplayOrder = columnsOrder.DisplayOrder">
+        <igx-radio [checked]="columnHidingUI.columnDisplayOrder === 'DisplayOrder'"
+                   (click)="columnHidingUI.columnDisplayOrder = 'DisplayOrder'">
             Display order
         </igx-radio>
     </div>
