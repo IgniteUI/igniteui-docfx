@@ -288,7 +288,7 @@ export class AppModule {}
 | 名前 | 型 | 説明 |
 | :--- | :--- | :--- |
 | `isHeader` | ブール値| 項目がグループ ヘッダーかどうかを定義します。 |
-| `disabled` | boolean| Gets if given item is disabled. |
+| `disabled` | boolean| 項目が無効かどうかを取得します。|
 | `isFocused` | ブール値| 指定した項目がフォーカスされるかどうかを定義します。|
 
 #### ゲッター
