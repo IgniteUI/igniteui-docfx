@@ -131,7 +131,7 @@
   href: checkbox.md
 - name: Switch
   href: switch.md
-- name: Radio Button
+- name: Radio および Radio Group
   href: radio_button.md
 - name: Label および Input
   href: label_input.md
