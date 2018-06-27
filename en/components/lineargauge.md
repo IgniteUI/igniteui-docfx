@@ -42,16 +42,14 @@ export class AppModule {}
 
 ### Usage
 
-The following code demonstrates how create a linear gauge containing a needle and three comparative ranges on the scale while also setting a title and subtitle.
+The following code demonstrates how create a linear gauge containing a needle and three comparative ranges on the scale.
 
 ```html
  <igx-linear-gauge width="70px"
                    height="300px"
                    minimumValue = "5"
                    maximumValue = "55"
-                   value = "43"
-                   title="Temperature"
-                   subtitle="Celsius">
+                   value = "43">
     <igx-linear-gauge.ranges>
         <igx-linear-graph-range startValue="0"
                                 endValue="15"
@@ -70,26 +68,22 @@ The following code demonstrates how create a linear gauge containing a needle an
 
 ## Logical Areas
 
-The user-visible area of the linear gauge control is logically divided into the following areas: Title area, Reserved area, and Graph area.
+The user-visible area of the linear gauge control is logically divided into the following areas: Reserved area, and Graph area.
 
-INSERT IMAGE
+![](../images/Linear_Gauge_1.png)
  
 Each of the areas serves different purpose related to some of the visual elements of the control.
-
-**Title area** (0) - The Title area is the area in which the title/subtitle of the linear gauge are displayed. This area cannot overlap the scale (i.e. the Reserved area and the Graph area).
-Not set by default, when the linear gauge is oriented horizontally, the Title area configures its width automatically to fit the title and/or subtitle (whichever is longer). In addition to that, you can set the width of the Title area explicitly, a capability which comes handy when you have several linear gauge controls placed on top of each other and you want their Title areas to have the same widths for a well-aligned look-and-feel.
 
 **Reserved area** (1)
 
 This area spreads:
- 
-* Along the scale – the Reserved area begins either at the edge of the control (when no Title area exists) or at the edge of the Title area (as in the pictures above) and ends at the edge of the control.
+
 * Across the scale -
     * In horizontal orientation: the Reserved area begins at the bottom edge of the control and spreads upward as much as the height of the numbering labels is (depending on the size and the other formatting of the font used in the labels)
 
     * In vertical orientation: the Reserved area begins at the left edge of the control and spreads to the right as much as the width of the numbering labels is (depending on how large the numbers of the measurements of the scale are and the size and the other formatting of the font used in the labels).
 
-The main purpose of the Reserved area is to provide enough space for the numbering labels of the scale at any orientation – horizontal or vertical (The Reserved area automatically re-sizes when the orientation changes in order to accommodate the specific space requirements for displaying the numbering labels in each of the orientations.
+The main purpose of the Reserved area is to provide enough space for the numbering labels of the scale at any orientation – horizontal or vertical. The Reserved area automatically re-sizes when the orientation changes in order to accommodate the specific space requirements for displaying the numbering labels in each of the orientations.
 
 **Graph area** (2)  
 
@@ -97,19 +91,23 @@ The area for displaying the needle, the tick marks, the ranges, and, optionally,
 
 Spread of the Graph area:
 
-**Along the scale** – the Graph area begins either at the edge of the control (when no Title area exists) or at the edge of the Title area (as in the pictures above) and ends at the edge of the control. Both the starting and ending positions of the scale are measured against the starting edge of the Graph area (the left edge at horizontal orientation or bottom edge at vertical orientation).
+**Along the scale** – Both the starting and ending positions of the scale are measured against the starting edge of the Graph area (the left edge at horizontal orientation or bottom edge at vertical orientation).
 
 **Across the scale** – the Graph area begins at the edge of the Reserved area (this is the bottom edge of the Graph area at horizontal orientation or its left edge at vertical orientation). The edge of the Graph area that borders with the Reserved area serves as reference point for the extent-related properties of some of the visual elements of the scale (for positioning these elements across the scale).
 
 ## Configurable visual elements
 The linear gauge control features the following visual elements (See the picture below.)
  
+ ![](../images/Linear_Gauge_2.png)
+
 **Needle** (3) – This is the primary measure displayed by the control and is visualized as a bar.
 
 **Comparative range(s)** (4) – The ranges are visual elements that highlight a specified range of values on a scale. Their purpose is to visually communicate the qualitative state of the performance bar measure, illustrating at the same times the degree to which it resides within that state.
 
 **Tick marks** (5) –The tick marks serve as a visual division of the scale into intervals in order to increase the readability of the linear gauge.
+
 Major tick marks – The major tick marks are used as primary delimiters on the scale. The frequency they appear at, their extents and style can be controlled by setting the corresponding properties.
+
 Minor tick marks – The minor tick marks represent helper tick marks, which might be used to additionally improve the readability of the scale and can be customized in a way similar to the major ones.
 
 **Scale labels** (6) – The labels indicate the measures on the scale.
@@ -117,8 +115,6 @@ Minor tick marks – The minor tick marks represent helper tick marks, which mig
 **Border** (7) – The line visually delimiting the dimensions of the control.
 
 **Background** (8) – The background on which visual elements is placed is configurable in terms of pattern and color.
-
-**Title/subtitle** (9) – Title of the graph and additional details in the form of a subtitle. Both elements are displayed in the Title Area and their position on the control is adjusted against it.
  
 **Tooltips** – show the values used to create the needle or the values, corresponding to the different ranges respectively.
 

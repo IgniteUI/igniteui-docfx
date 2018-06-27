@@ -71,16 +71,11 @@ The following code walks through creating a bullet graph control, and configurin
 
 ## Logical Areas 
 
-The user-visible area of the XamBulletGraph control is logically divided into the following areas: Title area, Reserved area, and Graph area.
+The user-visible area of the XamBulletGraph control is logically divided into the following areas: Reserved area, and Graph area.
 
-
-INSERT IMAGE
+ ![](../images/Bullet_Graph_1.png)
 
 Each of them serves different purpose related to some of the visual elements of the bullet graph control.
-
-**Title area** (0) - The Title area is the area in which the title/subtitle of the bullet graph are displayed. This area cannot overlap the scale (i.e. the Reserved area and the Graph area).
-
-Not set by default, when the bullet graph is oriented horizontally, the Title area configures its width automatically to fit the title and/or subtitle (whichever is longer). In addition to that, you can set the width of the Title area explicitly, a capability which comes handy when you have several bullet graph controls placed on top of each other and you want their Title areas to have the same widths for a well-aligned look-and-feel.
 
 **Reserved area** (1) – This area spreads:
 
@@ -90,14 +85,11 @@ Not set by default, when the bullet graph is oriented horizontally, the Title ar
 In horizontal orientation: the Reserved area begins at the bottom edge of the control and spreads upward as much as the height of the numbering labels is (depending on the size and the other formatting of the font used in the labels)
 In vertical orientation: the Reserved area begins at the left edge of the control and spreads to the right as much as the width of the numbering labels is (depending on how large the numbers of the measurements of the scale are and the size and the other formatting of the font used in the labels).
 
-
 **Graph area** (2) – The area for displaying the performance bar, the tick marks, the ranges, and, optionally, the numbering labels of the bullet graph. All extent-related properties for these visual elements (except for labels) are measured against its edges. The Graph area serves not as a placeholder but as a frame of reference for positioning the scale inside the control (More precisely, for positioning the visual elements of the scale).
 
-Spread of the Graph area:
-- Along the scale – the Graph area begins either at the edge of the control (when no Title area exists) or at the edge of the Title area (as in the pictures above) and ends at the edge of the control. Both the starting and ending positions of the scale are measured against the starting edge of the Graph area (the left edge at horizontal orientation or bottom edge at vertical orientation).
-- Across the scale – the Graph area begins at the edge of the Reserved area (this is the bottom edge of the Graph area at horizontal orientation or its left edge at vertical orientation). The edge of the Graph area that borders with the Reserved area serves as reference point for the extent-related properties of some of the visual elements of the scale (for positioning these elements across the scale).
-
 ### Configurable Visual Elements Summary
+ ![](../images/Bullet_Graph_2.png)
+
 **Performance bar** (3) – This is the primary measure displayed by the control and is visualized as a bar.
 
 **Comparative marker** (4) – A measure which the performance bar measure compares against. It is visualized as a marker that runs perpendicular to the orientation of the performance bar.
@@ -113,7 +105,5 @@ Spread of the Graph area:
 **Border** (8) – The line visually delimiting the dimensions of the control.
 
 **Background** (9) – The background on which visual elements is placed is configurable in terms of pattern and color.
-
-**Title/subtitle** (10) – Title of the graph and additional details in the form of a subtitle. Both elements are displayed in the Title Area and their position on the control is adjusted against it.
  
 **Tooltips** – show the values used to create the performance bar, the target value or the values, corresponding to the different ranges respectively.
