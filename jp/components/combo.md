@@ -15,7 +15,7 @@ igx-combo はキーボード ナビゲーションを公開しており、アク
 <div class="divider"></div>
 
 ### Combo デモ
-<div class="sample-container loading" style="height: 540px;">
+<div class="sample-container loading" style="height: 370px;">
     <iframe id="combo-features-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/combo-features" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -50,7 +50,7 @@ export class AppModule {}
 ```
 
 以下は結果です。
-<div class="sample-container loading" style="height: 540px;">
+<div class="sample-container loading" style="height: 370px;">
     <iframe id="combo-features-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/combo-features" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -279,7 +279,7 @@ onSubmitReactive() {
 
 以下のサンプルはカスケードする igx-drop-down および igx-combo コンポーネントを紹介します。
 
-<div class="sample-container loading" style="height: 540px;">
+<div class="sample-container loading" style="height: 260px;">
     <iframe id="cascading-combos-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/cascading-combos" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
