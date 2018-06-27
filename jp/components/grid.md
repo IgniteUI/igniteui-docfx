@@ -28,7 +28,7 @@ _language: ja
 ```typescript
 // app.module.ts
 
-import { IgxGridModule } from 'igniteui-angular/main';
+import { IgxGridModule } from 'igniteui-angular';
 // Or
 import { IgxGridModule } from 'igniteui-angular/grid';
 
@@ -47,7 +47,7 @@ _IgxGridModule_ の各コンポーネント、ディレクティブ、および�
 ```typescript
 import { IgxGridComponent } from 'igniteui-angular/grid/';
 // Or
-import { IgxGridComponent } from 'igniteui-angular/main';
+import { IgxGridComponent } from 'igniteui-angular';
 ...
 
 @ViewChild('myGrid', { read: IgxGridComponent })
@@ -323,47 +323,17 @@ export class MyComponent implements OnInit {
 
 グリッドは水平および垂直 DOM 仮想化をサポートします。仮想化をアクティブ化するには、グリッドの `height` または `width` プロパティを設定します。
 
-### CRUD 操作
 
-`IgxGridComponent` は基本的な CRUD 操作のための簡易な API を提供します。
+## 既知の問題と制限
 
-#### 新しいレコードの追加
-
-グリッド コンポーネントは、提供したデータをデータ ソースに追加する `addRow` メソッドを公開します。
-
-```typescript
-// Adding a new record
-// Assuming we have a `getNewRecord` method returning the new row data.
-const record = this.getNewRecord();
-this.grid.addRow(record);
-```
-
-#### データをグリッドで更新
-
-グリッドのデータの更新は `updateRow` および `updateCell` メソッドを使用して実行されます。セル値を直接更新するには `update` メソッドを使用できます。
-
-```typescript
-// Updating the whole row
-this.grid.updateRow(newData, this.selectedCell.rowIndex);
-
-// Just a particualr cell through the Grid API
-this.grid.updateCell(newData, this.selectedCell.rowIndex, this.selectedCell.column.field);
-
-// Directly using the cell `update` method
-this.selectedCell.update(newData);
-```
-
-#### グリッドからデータを削除
-
-```typescript
-this.grid.deleteRow(this.selectedCell.rowIndex);
-```
-
-**igx-grid** に関係なく、ボタンのクリックなどのユーザー インタラクションに接続できます。
-
-```html
-<button igxButton igxRipple (click)="deleteRow($event)">行の削除</button>
-```
+|制限|説明|
+|--- |--- |
+|`percentage` および `px` で設定した列幅|列に `%` と `px` を組み合わせて使用することはできません。|
+|`number` 型の列をフィルターする場合|フィルター入力に入力された値が `number` と異なる場合、キャストが正しくないため `NaN` が返されます。|
+|グリッドの `width` が列幅に依存しない| すべての列の `width` でグリッド自体のスパンは決定しません。親コンテナーのディメンションまたは定義したグリッドの `width` で決定されます。|
+|親コンテナーでネストされた Grid | グリッドの `width` を設定せずに定義済みのディメンションで親コンテナーに配置した場合、グリッドがコンテナーに合わせてスパンします。|
+|Grid `OnPush` ChangeDetectionStrategy |グリッドで `ChangeDetectionStrategy.OnPush` を処理し、カスタム表示されたときにグリッドに発生した変更について通知します。|
+| 列には設定可能な最小幅があります。`displayDensity` オプションに基づき、<br/>"最小": 24px <br/> "小": 32px <br/> "標準 ": 48px があります。| 幅が最小幅未満の場合、描画要素には影響せずに対応する`displayDensity` に合わせて最小幅で描画します。水平方向の仮想化は予期しない動作を招く場合があるためサポートしていません。
 
 ## API
 
@@ -378,7 +348,7 @@ this.grid.deleteRow(this.selectedCell.rowIndex);
 |`paging`| bool | ページング機能を有効化にします。デフォルト値は _false_ です。 |
 |`perPage`| number | ページごとの表示項目。デフォルト値は 15 です。 |
 |`filteringLogic`|FilteringLogic|グリッドのフィルター ロジック。デフォルト値は _AND_ です。|
-|`filteringExpressions`|Array|グリッドのフィルター状態。|
+|`filteringExpressionsTree`|IFilteringExpressionsTree|グリッドのフィルター状態。|
 |`sortingExpressions`|Array|グリッドの並べ替え状態。|
 |`height`|string|グリッド要素の高さ。`1000px`、`75%` などの値を渡すことができます。|
 |`width`|string|グリッド要素の幅。`1000px`、`75%` などの値を渡すことができます。|
@@ -432,6 +402,10 @@ this.grid.deleteRow(this.selectedCell.rowIndex);
 |`deleteRow(rowIndex: number)`|行オブジェクトおよび相対するデータ レコードをデータ ソースから削除します。|
 |`updateRow(value: any, rowIndex: number)`|行オブジェクトおよびデータ ソース レコードを渡された値で更新します。|
 |`updateCell(value: any, rowIndex: number, column: string)`|セル オブジェクトおよびデータ ソースのレコード フィールドを更新します。|
+|`filter(name: string, value: any, conditionOrExpressionTree?: IFilteringOperation, ignoreCase?: boolean)`|単一の列をフィルターします。フィルタリング処理はパラメーターとして使用されます。利用可能な[フィルター条件](#フィルター条件)を参照してください。|
+|`filter(name: string, value: any, conditionOrExpressionTree?: IFilteringExpressionsTree, ignoreCase?: boolean)`|単一の列をフィルターします。単一の列をフィルターします。
+フィルタリング式ツリーはパラメーターとして使用されます。|
+|`filterGlobal(value: any, condition?, ignoreCase?)`|同じ条件でグリッドのすべての列をフィルターします。|
 |`filter(column: string, value: any, condition?, ignoreCase?: boolean)`|単一の列をフィルターします。利用可能な[フィルター条件](#フィルター条件)を参照してください。|
 |`filter(expressions: Array)`|グリッド列を提供したフィルター式の配列に基づいてフィルターします。|
 |`filterGlobal(value: any, condition? ignoreCase?)`|グリッドの列をすべてフィルターします。|
@@ -477,7 +451,6 @@ this.grid.deleteRow(this.selectedCell.rowIndex);
 |`cellClasses`|string|この列のセルに適用される追加の CSS クラス。|
 |`formatter`|Function|列にセル テンプレートを渡さずにセルの値をテンプレート化するために使用される関数。|
 | `index` | string | 列インデックス。 |
-| `filteringCondition` | FilteringCondition | ブール値、日付、文字列、または数値条件。デフォルトは _contains_ 文字列条件です。 |
 |`filteringIgnoreCase`|boolean|フィルタリングが適用される場合に文字列の大文字化を無視します。デフォルトは _true_ です。|
 |`sortingIgnoreCase`|boolean|並べ替えが適用される場合に文字列の大文字化を無視します。デフォルトは _true_ です。|
 |`dataType`|DataType|string、number、boolean、または Date。フィルタリングが有効な場合、フィルター UI 条件は列の `dataType` に基づきます。設定されない場合、デフォルト値は `string` です。`autoGenerate` が有効な場合、グリッドはデータ ソースに基づいて各列の正しいデータ型を解決しようとします。|
@@ -506,15 +479,27 @@ this.grid.deleteRow(this.selectedCell.rowIndex);
 
 ## フィルター条件
 
-適切な条件タイプを `igniteui-angular` パッケージからインポートする必要があります。
+ 5 つのフィルタリング オペランドを使用できます。
+- `IgxFilteringOperand` は、カスタムフィルタリング条件の定義時に継承できるベース フィルタリング オペランドです。
+- `IgxBooleanFilteringOperand` は、`boolean` 型のすべてのデフォルト フィルタリング条件を定義します。
+- `IgxDateFilteringOperand` は、`Date` 型のすべてのデフォルト フィルタリング条件を定義します。
+- `IgxNumberFilteringOperand` は、`numeric` 型のすべてのデフォルト フィルタリング条件を定義します。
+- `IgxStringFilteringOperand` は、`string` 型のすべてのデフォルト フィルタリング条件を定義します。
 
 ```typescript
 import {
-    STRING_FILTERS,
-    NUMBER_FILTERS,
-    DATE_FILTERS,
-    BOOLEAN_FILTERS
-} from 'igniteui-angular/main';
+    IgxBooleanFilteringOperand,
+    IgxDateFilteringOperand,
+    IgxFilteringOperand,
+    IgxNumberFilteringOperand,
+    IgxStringFilteringOperand,
+} from 'igniteui-angular';
+```
+
+```typescript
+public filter(term) {
+    this.grid.filter("ProductName", term, IgxStringFilteringOperand.instance().condition("contains"));
+}
 ```
 
 ### 文字列型
@@ -630,6 +615,7 @@ import {
 * [フィルタリング](grid_filtering.md)
 * [並べ替え](grid_sorting.md)
 * [集計](grid_summaries.md)
+* [列の移動](grid_column_moving.md)
 * [列のピン固定](grid_column_pinning.md)
 * [列のサイズ変更](grid_column_resizing.md)
 * [選択](grid_selection.md)

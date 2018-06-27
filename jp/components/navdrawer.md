@@ -25,7 +25,7 @@ _language: ja
 必要となるすべての依存関係を含むために `IgxNavigationDrawerModule` を使用してアプリケーションの `AppModule` にインポートします。
 
 ```typescript
-import { IgxNavigationDrawerModule } from 'igniteui-angular/main';
+import { IgxNavigationDrawerModule } from 'igniteui-angular';
 ```
 
 または

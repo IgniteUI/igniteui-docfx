@@ -28,7 +28,7 @@ To get started with the Ignite UI for Angular Toast, let's first import the **Ig
 // app.module.ts
 
 ...
-import { IgxToastModule } from 'igniteui-angular/main';
+import { IgxToastModule } from 'igniteui-angular';
 
 @NgModule({
     ...
@@ -102,7 +102,7 @@ Use `position` to configure where the toast appears. By default, the toast is di
 ```typescript
 // sample.component.ts
 
-import { IgxToastPosition } from "igniteui-angular/main";
+import { IgxToastPosition } from 'igniteui-angular';
 
 ...
 public toastPosition: IgxToastPosition;

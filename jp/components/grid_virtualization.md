@@ -49,24 +49,30 @@ Ignite UI for Angular `igxGrid` コントロールは `igxForOf` ディレクテ
 この機能を使用するには、取得した引数に基づいて適切な要求を実行するために `onDataPreLoad` 出力にサブスクライブし、サービスから送信される相対する情報とパブリック `igxGrid` の `totalItemCount` プロパティを設定する必要があります。
 
 ```html
-<igx-grid #grid1 [data]="remoteData | async" (onDataPreLoad)="dataLoading($event)" >
-    <igx-column *ngFor="let c of columns" [field]="c.field" [header]="c.header">
-    </igx-column>
+<igx-grid #grid [data]="remoteData | async" [height]="'500px'" [width]="'100%'" [autoGenerate]='false' (onDataPreLoad)="processData(false)"
+    (onSortingDone)="processData(true)">
+    <igx-column [field]="'ID'" [sortable]="true"></igx-column>
+    <igx-column [field]="'ProductName'" [sortable]="true"></igx-column>
+    <igx-column [field]="'CategoryName'" [sortable]="true"></igx-column>
+    ...
 </igx-grid>
 ```
 
 ```typescript
 public ngAfterViewInit() {
-    this.remoteService.getData(this.grid.virtualizationState, (data) => {
-        this.grid.totalItemCount = data["@odata.count"];
+    this._remoteService.getData(this.grid.virtualizationState, this.grid.sortingExpressions[0], true, (data) => {
+        this.grid.totalItemCount = data.Count;
     });
 }
 
-public dataLoading(evt) {
+public processData() {
     if (this.prevRequest) {
         this.prevRequest.unsubscribe();
     }
-    this.prevRequest = this.remoteService.getData(evt, () => {
+
+    this._prevRequest = this._remoteService.getData(this.grid.virtualizationState,
+        this.grid.sortingExpressions[0], reset, () => {
+        ...
         this.cdr.detectChanges();
     });
 }
@@ -76,34 +82,18 @@ public dataLoading(evt) {
 
 **注:** 最初の `chunkSize` は常に 0 で、特定のアプリケーション シナリオに基づいて設定する必要があります。
 
-```typescript
-public getData(data?: IForOfState, cb?: (any) => void): any {
-    const dataState = data;
-    return this.http
-        .get(this.buildUrl(dataState))
-        .subscribe((d: any) => {
-            this._remoteData.next(d.value);
-            if (cb) {
-                cb(d);
-            }
-        });
-}
+### リモートの並べ替え/フィルタリングの仮想化
+リモートの並べ替えおよびフィルタリングは、`onDataPreLoad`, `onSortingDone`, `onFilteringDone` 出力にサブスクライブし、パブリック `igxGrid` プロパティの `totalItemCount` をサービスから送信される個々の情報とともに設定し、受け取った引数に基づいて適切な要求を作成します。
 
-private buildUrl(dataState: IForOfState): string {
-    let qS: string = "?";
-    let requiredChunkSize: number;
-    if (dataState) {
-        const skip = dataState.startIndex;
+リモート データを要求時にフィルター処理で大文字と小文字が区別されることに注意してください。
 
-        requiredChunkSize = dataState.chunkSize === 0 ?
-            // Set initial chunk size, the best value is igxForContainerSize divided on igxForItemSize
-            10 : dataState.chunkSize;
-        const top = requiredChunkSize;
-        qS += `$skip=${skip}&$top=${top}&$count=true`;
-    }
-    return `${this.url}${qS}`;
-}
-```
+<div class="sample-container loading" style="height:550px">
+    <iframe id="grid-remote-filtering-iframe" src='{environment:demosBaseUrl}/grid-remote-filtering' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="grid-remote-filtering-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
+</div>
 
 ### 仮想化の制限
 
@@ -127,6 +117,7 @@ private buildUrl(dataState: IForOfState): string {
 * [フィルタリング](grid_filtering.md)
 * [並べ替え](grid_sorting.md)
 * [集計](grid_summaries.md)
+* [列移動](grid_column_moving.md)
 * [列のピン固定](grid_column_pinning.md)
 * [列のサイズ変更](grid_column_resizing.md)
 * [選択](grid_selection.md)

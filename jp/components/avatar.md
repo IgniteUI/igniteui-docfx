@@ -28,7 +28,7 @@ Ignite UI for Angular Avatar を初期化する前に、**IgxAvatarModule** を 
 // app.module.ts
 
 ...
-import { IgxAvatarModule } from 'igniteui-angular/main';
+import { IgxAvatarModule } from 'igniteui-angular';
 
 @NgModule({
     ...

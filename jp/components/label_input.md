@@ -32,7 +32,7 @@ Ignite UI for Angular Label および Input を初期化する前に、**IgxInpu
 // app.module.ts
 
 ...
-import { IgxInputGroup } from 'igniteui-angular/main';
+import { IgxInputGroup } from 'igniteui-angular';
 
 @NgModule({
     ...

@@ -45,28 +45,33 @@ Explicitly setting column widths in percentages (%) will, in most cases, create 
 <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="grid-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-
 To utilize this feature, you need to subscribe to the `onDataPreLoad` output so that you make the appropriate request based on the arguments received, as well as set the public `igxGrid` property `totalItemCount` with the respective information coming from the service. 
 
 ```html
-<igx-grid #grid1 [data]="remoteData | async" (onDataPreLoad)="dataLoading($event)" >
-    <igx-column *ngFor="let c of columns" [field]="c.field" [header]="c.header">
-    </igx-column>
+<igx-grid #grid [data]="remoteData | async" [height]="'500px'" [width]="'100%'" [autoGenerate]='false' (onDataPreLoad)="processData(false)"
+    (onSortingDone)="processData(true)">
+    <igx-column [field]="'ID'" [sortable]="true"></igx-column>
+    <igx-column [field]="'ProductName'" [sortable]="true"></igx-column>
+    <igx-column [field]="'CategoryName'" [sortable]="true"></igx-column>
+    ...
 </igx-grid>
 ```
 
 ```typescript
 public ngAfterViewInit() {
-    this.remoteService.getData(this.grid.virtualizationState, (data) => {
-        this.grid.totalItemCount = data["@odata.count"];
+    this._remoteService.getData(this.grid.virtualizationState, this.grid.sortingExpressions[0], true, (data) => {
+        this.grid.totalItemCount = data.Count;
     });
 }
 
-public dataLoading(evt) {
+public processData() {
     if (this.prevRequest) {
         this.prevRequest.unsubscribe();
     }
-    this.prevRequest = this.remoteService.getData(evt, () => {
+
+    this._prevRequest = this._remoteService.getData(this.grid.virtualizationState,
+        this.grid.sortingExpressions[0], reset, () => {
+        ...
         this.cdr.detectChanges();
     });
 }
@@ -76,34 +81,18 @@ When requesting data, you need to utilize the `IForOfState` interface, which pro
 
 ***Note:*** The first `chunkSize` will always be 0 and should be determined by you based on the specific application scenario.
 
-```typescript
-public getData(data?: IForOfState, cb?: (any) => void): any {
-    const dataState = data;
-    return this.http
-        .get(this.buildUrl(dataState))
-        .subscribe((d: any) => {
-            this._remoteData.next(d.value);
-            if (cb) {
-                cb(d);
-            }
-        });
-}
+### Remote Sorting/Filtering Virtualization
+To provide remote sorting and filtering, you need to subscribe to the `onDataPreLoad`, `onSortingDone`, `onFilteringDone` outputs so that you make the appropriate request based on the arguments received, as well as set the public `igxGrid` property `totalItemCount` with the respective information coming from the service.
 
-private buildUrl(dataState: IForOfState): string {
-    let qS: string = "?";
-    let requiredChunkSize: number;
-    if (dataState) {
-        const skip = dataState.startIndex;
+Note that when requesting remote data, filtering operation is case-sensitive.
 
-        requiredChunkSize = dataState.chunkSize === 0 ?
-            // Set initial chunk size, the best value is igxForContainerSize divided on igxForItemSize
-            10 : dataState.chunkSize;
-        const top = requiredChunkSize;
-        qS += `$skip=${skip}&$top=${top}&$count=true`;
-    }
-    return `${this.url}${qS}`;
-}
-```
+<div class="sample-container loading" style="height:550px">
+    <iframe id="grid-remote-filtering-iframe" src='{environment:demosBaseUrl}/grid-remote-filtering' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="grid-remote-filtering-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
 
 ### Virtualization Limitations
 
@@ -127,6 +116,7 @@ Without information about the sizes of the container and the items before render
 * [Filtering](grid_filtering.md)
 * [Sorting](grid_sorting.md)
 * [Summaries](grid_summaries.md)
+* [Column Moving](grid_column_moving.md)
 * [Column Pinning](grid_column_pinning.md)
 * [Column Resizing](grid_column_resizing.md)
 * [Selection](grid_selection.md)

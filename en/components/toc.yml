@@ -1,4 +1,5 @@
 - name: Grids & Lists
+  href: grids_and_lists.md
   header: true
 - name: Data Grid
   href: grid.md
@@ -7,35 +8,53 @@
     - name: Virtualization and performance
       href: grid_virtualization.md
       new: false
+    - name: Editing
+      href: grid_editing.md
+      new: true
     - name: Paging
       href: grid_paging.md
       new: false
     - name: Filtering
       href: grid_filtering.md
-      new: false
+      new: true
     - name: Sorting
       href: grid_sorting.md
       new: false
+    - name: Group By
+      href: grid_groupby.md
+      new: true
     - name: Summaries
       href: grid_summaries.md
+      new: false
+    - name: Column moving
+      href: grid_column_moving.md
       new: true
     - name: Column pinning
       href: grid_column_pinning.md
-      new: true
+      new: false
     - name: Column resizing
       href: grid_column_resizing.md
       new: true
     - name: Selection
       href: grid_selection.md
-      new: true
+      new: false
     - name: Searching
       href: grid_search.md
       new: true
+    - name: Toolbar
+      href: grid_toolbar.md
+      new: true
     - name: Export to Excel
       href: exporter_excel.md
+      new: false
+    - name: Multi Column Headers
+      href: grid_multi_column_headers.md
       new: true
 - name: List View
   href: list.md
+- name: Combo
+  href: combo.md
+  new: true
 - name: Charts
   header: true
 - name: Category Chart
@@ -43,49 +62,48 @@
   items:
     - name: Explore Chart Types
       href: categorychart_explore_chart_types.md
-      new: true
+      new: false
     - name: Real Time Data
       href: categorychart_real_time_data.md
-      new: true
+      new: false
     - name: High Volume Data
       href: categorychart_high_volume_data.md
-      new: true
+      new: false
     - name: Configuration Options
       href: categorychart_configuration_options.md
-      new: true
+      new: false
     - name: Custom Tooltips
       href: categorychart_custom_tooltips.md
-      new: true
+      new: false
 - name: Financial Chart
   href: financialchart.md
   items:
     - name: Explore Chart Types
       href: financialchart_explore_chart_types.md
-      new: true
+      new: false
     - name: Real Time Data
       href: financialchart_real_time_data.md
-      new: true
+      new: false
     - name: High Volume Data
       href: financialchart_high_volume_data.md
-      new: true
+      new: false
     - name: Performance
       href: financialchart_performance.md
-      new: true
+      new: false
     - name: Binding to Multiple Data Sources
       href: financialchart_binding_to_multiple_data.md
-      new: true
+      new: false
     - name: Panes
       href: financialchart_panes.md
-      new: true
+      new: false
     - name: Configuration Options
       href: financialchart_configuration_options.md
-      new: true
+      new: false
     - name: Custom Indicators
       href: financialchart_custom_indicators.md
-      new: true
+      new: false
     - name: Custom Tooltips
       href: financialchart_custom_tooltips.md
-      new: true
 - name: Gauges
   header: true
   new: true
@@ -111,9 +129,9 @@
   href: shadows.md
 - name: Data Entry & Display
   header: true
-# - name: Drop Down
-#   href: drop_down.md
-#   new: true
+- name: Drop Down
+  href: drop_down.md
+  new: true
 - name: Button
   href: button.md
 - name: Button Group
@@ -122,16 +140,17 @@
   href: checkbox.md
 - name: Switch
   href: switch.md
-- name: Radio Button
+- name: Radio & Radio Group
   href: radio_button.md
+  new: false
 - name: Label & Input
   href: label_input.md
 - name: Input Group
   href: input_group.md
-  new: true
+  new: false
 - name: Mask
   href: mask.md
-  new: true
+  new: false
 - name: Badge
   href: badge.md
 - name: Icon
@@ -152,6 +171,16 @@
   href: ripple.md
 - name: Toggle
   href: toggle.md
+- name: Overlay
+  href: overlay_main.md
+  new: true
+  items: 
+  - name: Positioning Strategies
+    href: overlay_position.md
+    new: true
+  - name: Scrolling Strategies
+    href: overlay_scroll.md
+    new: true
 - name: Menus
   header: true
 - name: Navigation Drawer
@@ -168,7 +197,7 @@
   href: tabbar.md
 - name: Tabs
   href: tabs.md
-  new: true
+  new: false
 - name: Card
   href: card.md
 - name: Avatar
@@ -187,12 +216,12 @@
   href: date_picker.md
 - name: Time Picker
   href: time_picker.md
-  new: true
+  new: false
 - name: Services
   header: true
 - name: CSV Exporter
   href: exporter_csv.md
-  new: true
+  new: false
 - name: Excel Exporter
   href: exporter_excel.md
-  new: true
+  new: false

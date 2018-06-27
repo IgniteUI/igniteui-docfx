@@ -28,7 +28,7 @@ Icon コンポーネントが `NgModule` としてエクスポートされるた
 ```typescript
 // app.module.ts
 
-import { IgxIconModule } from 'igniteui-angular/main';
+import { IgxIconModule } from 'igniteui-angular';
 
 @NgModule({
     imports: [
@@ -60,7 +60,7 @@ export class AppModule {}
 <igx-icon name="volume_off" isActive="false"></igx-icon>
 ```
 
-Setting icon with content projection.
+コンテンツ プロジェクションでアイコンを設定します。
 ```html
 <igx-icon color="red">bluetooth</igx-icon>
 ```

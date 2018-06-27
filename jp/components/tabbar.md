@@ -34,7 +34,7 @@ _language: ja
 // app.module.ts
 
 ...
-import { IgxBottomNavModule } from 'igniteui-angular/main';
+import { IgxBottomNavModule } from 'igniteui-angular';
 
 @NgModule({
     ...
@@ -198,10 +198,10 @@ IgxBottomNavComponent および IgxListComponent コンポーネントを "app.m
 // app.module.ts
 
 ...
-import { IgxAvatarModule } from 'igniteui-angular/main';
-import { IgxIconModule } from 'igniteui-angular/main';
-import { IgxListModule } from 'igniteui-angular/main';
-import { IgxBottomNavModule } from 'igniteui-angular/main';
+import { IgxAvatarModule } from 'igniteui-angular';
+import { IgxIconModule } from 'igniteui-angular';
+import { IgxListModule } from 'igniteui-angular';
+import { IgxBottomNavModule } from 'igniteui-angular';
 
 @NgModule({
     ...

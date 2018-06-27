@@ -29,7 +29,7 @@ Ignite UI for Angular Tabs コンポーネントを初期化する前に **IgxTa
 // app.module.ts
 
 ...
-import { IgxTabsModule } from 'igniteui-angular/main';
+import { IgxTabsModule } from 'igniteui-angular';
 
 @NgModule({
     ...
@@ -250,6 +250,15 @@ export class AppModule {}
 | `isSelected` | boolean | タブが選択されているかどうかを取得します。 |
 | `index` | number | タブ コレクションのタブのインデックスを取得します。 |
 | `relatedGroup` | IgxTabsGroupComponent | タブに関連付けられているグループを取得します。 |
+
+<div class="divider"></div>
+
+
+#### メソッド
+以下のメソッドは **igx-tabs-group** コンポーネントで利用できます。
+| 名前 | 説明 |
+| :--- | :--- | 
+| `select()` | 関連する IgxTabsGroupComponent 選択します。 |
 
 <div class="divider"></div>
 

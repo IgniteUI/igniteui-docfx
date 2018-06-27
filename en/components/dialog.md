@@ -25,7 +25,7 @@ To get started with the Ignite UI for Angular Dialog Window, let's first import 
 // app.module.ts
 
 ...
-import { IgxDialogModule } from 'igniteui-angular/main';
+import { IgxDialogModule } from 'igniteui-angular';
 
 @NgModule({
     ...

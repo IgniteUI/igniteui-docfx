@@ -28,7 +28,7 @@ To get started with the Ignite UI for Angular Tabs component, let's first import
 // app.module.ts
 
 ...
-import { IgxTabsModule } from 'igniteui-angular/main';
+import { IgxTabsModule } from 'igniteui-angular';
 
 @NgModule({
     ...
@@ -246,6 +246,15 @@ The following getters are available on the **igx-tab-item** component:
 | `isSelected` | boolean | Gets whether the tab is selected. |
 | `index` | number | Gets the index of the tab in the tab collection. |
 | `relatedGroup` | IgxTabsGroupComponent | Gets the group associated with the tab. |
+
+<div class="divider--half"></div>
+
+
+#### Methods
+The following method is available on the **igx-tabs-group** component:
+| Name | Description |
+| :--- | :--- | 
+| `select()` | Selects the related IgxTabsGroupComponent. |
 
 <div class="divider"></div>
 

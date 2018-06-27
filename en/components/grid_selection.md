@@ -117,6 +117,7 @@ public handleRowSelectionChange(args) {
 * [Filtering](grid_filtering.md)
 * [Sorting](grid_sorting.md)
 * [Summaries](grid_summaries.md)
+* [Column Moving](grid_column_moving.md)
 * [Column Pinning](grid_column_pinning.md)
 * [Column Resizing](grid_column_resizing.md)
 * [Virtualization and Performance](grid_virtualization.md)

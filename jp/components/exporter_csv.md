@@ -39,13 +39,15 @@ import { IgxCsvExporterService } from "igniteui-angular/services/index";
 export class AppModule {}
 ```
 
+> 注: CSV Exporter サービスは JSZip にピア依存関係があります。 JSZip ライブラリは CSV Exporter 使用時にインストールしてください。
+
 エクスポート処理を開始するためにコンポーネントのテンプレートでボタンのハンドラーを使用できます。
 
 ```html
 <button (click)="exportButtonHandler()">Export Data to CSV</button>
 ```
 
-エクスポーター サービスにアクセスするには、コンポーネントのコンストラクターで `IgxCsvExporterService` 型の引数を定義します。Angular フレームワークはサービスのインスタンスを提供します。データを CSV 形式でエクスポートするには、エクスポーター サービスの `exportData` メソッドを起動します。このメソッドで、エクスポートするデータは最初の引数です。2 番目の引数は `IgxCsvExporterOptions` 型で、エクスポート処理の構成を許可します。
+Exporter サービスにアクセスするには、コンポーネントのコンストラクターで `IgxCsvExporterService` 型の引数を定義します。Angular フレームワークはサービスのインスタンスを提供します。データを CSV 形式でエクスポートするには、エクスポーター サービスの `exportData` メソッドを起動します。このメソッドで、エクスポートするデータは最初の引数です。2 番目の引数は `IgxCsvExporterOptions` 型で、エクスポート処理の構成を許可します。
 
 以下のコードはコンポーネントの typescript ファイルでエクスポート処理を実行します。
 
