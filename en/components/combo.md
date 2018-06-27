@@ -30,7 +30,7 @@ Drop Down items are virtualized, which guarantees smooth work, even if the igx-c
 ## Usage
 The `IgxComboComponent` allows you to search and select items from the list. The combo uses the `IgxDropDownComponent` internally as a items container. To get started with the Ignite UI for Angular Combo, let's first import the **IgxComboModule** in our **app.module.ts** file:
 
-```typescript
+```ts
 // app.module.ts
 
 ...
@@ -78,7 +78,7 @@ Remote binding, defining `valueKey` and `displayKey`, and exposing `onDataPreLoa
 <igx-combo [data]="remoteData | async" (onDataPreLoad)="dataLoading($event)" [valueKey]="'ProductID'" [displayKey]="'ProductName'" ></igx-combo>
 ```
 
-```typesciprt
+```ts
 public ngOnInit() {
     this.remoteData = this.remoteService.remoteData;
 }
@@ -101,7 +101,7 @@ public dataLoading(evt) {
     }
 ```
 
-> Note: In order to have combo with remote data, what you need is to have a service that retrieves data chunks from a server. 
+> Note: In order to have combo with remote data, what you need is to have a service that retrieves data chunks from a server.
 What the combo exposes is a `virtualizationState` property that gives state of the combo - first index and the number of items that needs to be loaded.
 The service, should inform the combo for the total items that are on the server - using the `totalItemCount` property.
 
@@ -113,7 +113,7 @@ If we want to use a two-way data-binding, we could just use `ngModel` like this:
 <igx-combo #combo [(ngModel)]="values"></igx-combo>
 ```
 
-```typescript
+```ts
 @ViewChild('combo', { read: IgxComboComponent }) public combo: IgxComboComponent;
 get values() {
     return this.combo.selectedItems();
