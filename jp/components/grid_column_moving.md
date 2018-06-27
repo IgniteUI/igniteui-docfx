@@ -62,9 +62,18 @@ public onColumnMovingEnd(event) {
 
 | 名前 | 型 | 説明 |
 | :--- | :--- | :--- |
-|`onColumnMoving`| 列が移動されたときに発生されます。ソースとターゲットの列オブジェクトを返します。このイベントはキャンセルできます。|
+|`onColumnMoving`| EventEmitter |列が移動されたときに発生されます。ソースとターゲットの列オブジェクトを返します。このイベントはキャンセルできます。|
 |`onColumnMovingEnd`| EventEmitter |列移動が終了したときに発生されます。ソースとターゲットの列オブジェクトを返します。このイベントはキャンセルできます。|
 |`onColumnMovingStart`| EventEmitter |列移動を開始したときに発生されます。移動した列オブジェクトを返します。|
+
+<div class="divider--half"></div>
+
+#### メソッド
+以下は、**列移動** に関連する `IgxGridComponent` メソッドです。
+
+| 名前 | 説明 |
+| :--- | :--- |
+|`moveColumn(column: IgxColumnComponent, dropTarget: IgxColumnComponent)` | API を使用して指定したドロップ ターゲットに列を移動する方法を提供します。 |
 
 <div class="divider--half"></div>
 
