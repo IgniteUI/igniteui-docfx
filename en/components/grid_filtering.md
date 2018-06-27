@@ -19,7 +19,7 @@ The Grid component in Ignite UI for Angular provides extensive filtering API thr
 </div>
 <div class="divider--half"></div>
 
-There's a default filtering strategy provided out of the box, as well as all the standard filtering conditions, which the developer can replace with their own implementation. In addition, we've provided a way to easily plug in your own custom filtering conditions. The Grid currently provides not only a simplistic filtering UI but also more complex filtering options. Depending on the set `dataType` of the column the correct set of [**filtering conditions**](grid.md#filtering-conditions) will be loaded inside the filter UI dropdown. Additionally, you can set the `filteringIgnoreCase` and the initial `filteringCondition` property of the column.
+There's a default filtering strategy provided out of the box, as well as all the standard filtering conditions, which the developer can replace with their own implementation. In addition, we've provided a way to easily plug in your own custom filtering conditions. The Grid currently provides not only a simplistic filtering UI but also more complex filtering options. Depending on the set `dataType` of the column, the correct set of [**filtering operations**](grid.md#filtering-conditions) is loaded inside the filter UI dropdown. Additionally, you can set the `ignoreCase` and the initial `condition` properties.
 
 ```html
 <igx-column field="ProductName" filterable="true" dataType="string"></igx-column>
@@ -29,18 +29,25 @@ There's a default filtering strategy provided out of the box, as well as all the
 > [!NOTE]
 > If values of type `string` are used by column of dataType `Date`, the grid won't parse it to `Date` objects and using filtering conditions won't be possible. If you want to use `string` objects, additional logic should be implemented on the application level, in order to parse the values to `Date` object.
 
-You can filter any column or a combination of columns through the grid API. The grid exposes two methods for this task:
+You can filter any column or a combination of columns through the grid API. The grid exposes several methods for this task - `filter`, `filterGlobal ` and `clearFilter`.
 
 *   `filter` - filter a single column or a combination of columns.
+
+There are five filtering operand classes exposed:
+   - `IgxFilteringOperand`: this is a base filtering operand, which can be inherited when defining custom filtering conditions.
+   - `IgxBooleanFilteringOperand` defines all default filtering conditions for `boolean` type.
+   - `IgxNumberFilteringOperand` defines all default filtering conditions for `numeric` type.
+   - `IgxStringFilteringOperand` defines all default filtering conditions for `string` type.
+   - `IgxDateFilteringOperand` defines all default filtering conditions for `Date` type.
 
 ```typescript
 // Single column filtering
 
 // Filter the `ProductName` column for values which `contains` the `myproduct` substring, ignoring case
-this.grid.filter('ProductName', 'myproduct', STRING_FILTERS.contains, true);
+this.grid.filter('ProductName', 'myproduct', IgxStringFilteringOperand.instance().condition("contains"), true);
 ```
 
-The only required parameters are the column field and the filtering term. Both the condition and the case sensitivity will be inferred from the column properties if not provided. In the case of multiple filtering, the method accepts an array of filtering expressions.
+The only required parameters are the column field key and the filtering term. Both the condition and the case sensitivity will be inferred from the column properties if not provided. In the case of multiple filtering, the method accepts an array of filtering expressions.
 
 > [!NOTE]
 > The filtering operation **DOES NOT** change the underlying data source of the grid.
@@ -48,17 +55,36 @@ The only required parameters are the column field and the filtering term. Both t
 ```typescript
 // Multi column filtering
 
-this.grid.filter([
-    { fieldName: 'ProductName', searchVal: 'myproduct' condition: STRING_FILTERS.contains, ignoreCase: true},
-    { fieldName: 'Price', searchVal: 55, condition: NUMBER_FILTERS.greaterThan }
-]);
+const gridFilteringExpressionsTree = new FilteringExpressionsTree(FilteringLogic.And);
+const productFilteringExpressionsTree = new FilteringExpressionsTree(FilteringLogic.And, "ProductName");
+const productExpression = {
+    condition: IgxStringFilteringOperand.instance().condition("contains"),
+    fieldName: "ProductName",
+    ignoreCase: true,
+    searchVal: "ch"
+};
+productFilteringExpressionsTree.filteringOperands.push(productExpression);
+gridFilteringExpressionsTree.filteringOperands.push(productFilteringExpressionsTree);
+
+const priceFilteringExpressionsTree = new FilteringExpressionsTree(FilteringLogic.And, "Price");
+const priceExpression = {
+    condition: IgxNumberFilteringOperand.instance().condition("greaterThan"),
+    fieldName: "UnitPrice",
+    ignoreCase: true,
+    searchVal: 20
+};
+priceFilteringExpressionsTree.filteringOperands.push(priceExpression);
+gridFilteringExpressionsTree.filteringOperands.push(priceFilteringExpressionsTree);
+
+this.grid.filteringExpressionsTree = gridFilteringExpressionsTree;
 ```
 
-*   `filterGlobal` - filter all the columns in the grid
+*   `filterGlobal` - clears all existing filters and applies the new filtering condition to all grid's columns.
 
 ```typescript
 // Filter all cells for a value which contains `myproduct`
-this.grid.filterGlobal('myproduct', STRING.contains, true);
+this.grid.filteringLogic = FilteringLogic.Or;
+this.grid.filterGlobal("myproduct", IgxStringFilteringOperand.instance().condition("contains"), false);
 ```
 
 *   `clearFilter` - removes any applied filtering from the target column. If called with no arguments it will clear the filtering of all columns.
@@ -73,14 +99,22 @@ this.grid.clearFilter();
 
 #### Initial filtered state
 
-It is possible to set the initial filtering state of the grid by an array of expressions to the `filteringExpressions` property of the grid.
+To set the initial filtering state of the grid, set the IgxGridComponent `filteringExpressionsTree` property to an array of IFilteringExpressionsTree for each column to be filtered.
 
 ```typescript
 public ngOnInit() {
-    this.grid.filteringExpressions = [
-        { fieldName: 'ProductName', searchVal: 'myproduct' condition: STRING_FILTERS.contains, ignoreCase: true},
-        { fieldName: 'Price', searchVal: 55, condition: NUMBER_FILTERS.greaterThan }
-    ];
+    const gridFilteringExpressionsTree = new FilteringExpressionsTree(FilteringLogic.And);
+    const productFilteringExpressionsTree = new FilteringExpressionsTree(FilteringLogic.And, "ProductName");
+    const productExpression = {
+        condition: IgxStringFilteringOperand.instance().condition("contains"),
+        fieldName: "ProductName",
+        ignoreCase: true,
+        searchVal: "c"
+    };
+    productFilteringExpressionsTree.filteringOperands.push(productExpression);
+    gridFilteringExpressionsTree.filteringOperands.push(productFilteringExpressionsTree);
+
+    this.grid.filteringExpressionsTree = gridFilteringExpressionsTree;
 }
 ```
 
@@ -98,6 +132,21 @@ this.grid.filteringLogic = FilteringLogic.OR;
 The default value of `AND` returns only the rows that match all the currently applied filtering expressions. Following the example above, a row will be returned when both the 'ProductName' cell value contains 'myproduct' and the 'Price' cell value is greater than 55.
 
 When set to `OR`, a row will be returned when either the 'ProductName' cell value contains 'myproduct' or the 'Price' cell value is greater than 55.
+
+<div class="divider--half"></div>
+
+#### Breaking Changes in 6.1.0
+* IgxGridComponent `filteringExpressions` property is removed. Use `filteringExpressionsTree` instead.
+* `filter_multiple` method is removed. Use `filter` method and `filteringExpressionsTree` property instead.
+* The `filter` method has new signature. It now accepts the following parameters:
+  * `name` - the name of the column to be filtered.
+  * `value` - the value to be used for filtering.
+  * `conditionOrExpressionTree` (optional) - this parameter accepts object of type `IFilteringOperation` or `IFilteringExpressionsTree`. If only simple filtering is needed, a filtering operation could be passed as an argument. In case of advanced filtering, an expressions tree containing complex filtering logic could be passed as an argument.
+  * `ignoreCase` (optional) - whether the filtering is case sensitive or not.
+* `onFilteringDone` event now have only one parameter of type `IFilteringExpressionsTree` which contains the filtering state of the filtered column.
+* filtering operands: `IFilteringExpression` condition property is no longer a direct reference to a filtering condition method, instead it's a reference to an `IFilteringOperation`.
+* `IgxColumnComponent` now exposes a `filters` property, which takes an `IgxFilteringOperand` class reference.
+* Custom filters can be provided to the grid columns by populating the `operations` property of the `IgxFilteringOperand` with operations of `IFilteringOperation` type.
 
 <div class="divider--half"></div>
 

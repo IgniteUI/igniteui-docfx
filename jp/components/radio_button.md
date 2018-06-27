@@ -1,7 +1,7 @@
 ﻿---
-title: Radio コンポーネント
-_description: Ignite UI for Angular Radio Button コントロールは、選択可能なオプションのリストを表示します。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Radio Button コンポーネント, Angular Radio Button コントロール
+title: Radio と Radio Group
+_description: Ignite UI for Angular Radio Button コントロールおよび Radio Group コントロールは、テンプレート主導およびリアクティブ フォームで選択可能なオプションのリストを表示します。
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Radio Button コンポーネント, Angular Radio Button コントロール, Angular Radio Group コンポーネント, Angular Radio Group コントロール
 _language: ja
 ---
 
@@ -20,7 +20,7 @@ _language: ja
 </div>
 <div class="divider--half"></div>
 
-### 使用方法
+### Radio Button の使用
 
 ラジオ ボタン コンポーネントはオプションの単一選択を許可します。デフォルト スタイル設定はマテリアル デザイン ガイドラインの選択コントロールの仕様に基づきます。
 
@@ -55,7 +55,7 @@ export class AppModule {
     <iframe src='{environment:demosBaseUrl}/radio-sample-1' width="100%" height="100%" seamless frameBorder="0"></iframe>
 </div>
 
-### プロパティ
+### Radio Button プロパティ
 
 ラジオ ボタンをグループに追加します。上記のコードにラジオ ボタンを 4 つ追加し、各ボタンに特定の背景色を適用します。更に含まれる div 要素の backgroundColor プロパティをコンポーネントの selectedColor プロパティにバインドし、selectedColor に NgModel ディレクティブによって双方向バインディングを設定します。これによりユーザーが他のラジオ ボタン (色) を選択したときに値が更新されます。
 
@@ -103,9 +103,55 @@ public selectedColor: string = this.colors[3].hex;
     <iframe src='{environment:demosBaseUrl}/radio-sample-2' width="100%" height="100%" seamless frameBorder="0"></iframe>
 </div>
 
+## Radio Group
+<p class="highlight">Ignite UI for Angular Radio Group ディレクティブは、子 `igxRadio` コンポーネントをより詳細に制御ができ、テンプレート主導やリアクティブ フォームをサポートするグルーピング コンテナーを提供します。</p>
+<div class="divider"></div>
+
+### Radio Group デモ
+<div class="sample-container" style="height: 300px">
+    <iframe id="radio-group-sample-iframe" src='{environment:demosBaseUrl}/radio-group-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="radio-group-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
+
+### Radio Group の使用
+
+Radio Group ディレクティブが NgModule としてエクスポートされるため、アプリケーションで **app.module.ts** ファイルの **IgxRadioModule** をインポートする必要があります。
+
+```typescript
+// app.module.ts
+...
+import { IgxRadioModule } from 'igniteui-angular';
+
+@NgModule({
+    ...
+    imports: [..., IgxRadioModule],
+    ...
+})
+```
+はじめに RadioGroup** を作成して **igxRadio** コンポーネントを追加します。
+
+**igxRadioGroup** `name` プロパティの設定は**必須**であることに注意してください。
+
+```html
+<!--radio-group.component.html-->
+<igx-radio-group name="fruitsRadioGroup">
+    <igx-radio class="radio-sample" *ngFor="let fruit of fruits" value="{{fruit}}">
+        {{fruit}}
+    </igx-radio>
+</igx-radio-group>
+```
+
+```typescript
+// radio-group.component.ts
+public fruits = ["Apple", "Mango", "Banana", "Orange"];
+```
+
 ### API まとめ
 
-#### 入力
+#### Radio Button 入力
 
 以下の入力は **igx-radio** コンポーネントで利用できます。
 
@@ -125,7 +171,7 @@ public selectedColor: string = this.colors[3].hex;
 
 <div class="divider"></div>
 
-#### 出力
+#### Radio Button 出力
 
 以下の出力は **igx-radio** コンポーネントで利用できます。
 
@@ -134,13 +180,33 @@ public selectedColor: string = this.colors[3].hex;
 | `@Output()` change | EventEmitter<IChangeRadioEventArgs> | ラジオ ボタンの checked 値が変更するときに発生します。 |
 <div class="divider"></div>
 
-#### メソッド
+#### Radio Button メソッド
 
 以下のメソッドは **igx-radio** コンポーネントで利用できます。
 
 | 名前 | 説明|
 | :--- | :--- |
 | select | ラジオ ボタンを選択します。 |
+<div class="divider"></div>
+
+### Radio Group の入力
+以下の入力は **igx-radio-group** コンポーネントで利用できます。
+| 名前 | 型 | 説明 |
+| :--- | :--- | :--- |
+| `@Input()` name |  string | ラジオ グループに使用される `name` 属性。すべての子ラジオボタンはこの名前を継承します。 |
+| `@Input()` value | any | すべての子ラジオボタンはこの名前を継承します。 |
+| `@Input()` required | boolean | ラジオ グループが必要かどうかを指定します。デフォルト値は `false` です。 |
+| `@Input()` disabled | boolean | ラジオ グループが無効かどうかを指定します。ラジオ グループが無効かどうかを指定します。|
+| `@Input()` labelPosition | string or enum RadioLabelPosition | 子ラジオ ボタンに対するテキスト ラベルの位置を指定します。 使用可能な値は  "before" と "after" でデフォルト値は `after` です。 |
+| `@Input()` selected | IgxRadioComponent | 選択した子ラジオ ボタンを指定します。 |
+
+<div class="divider"></div>
+
+### Radio Group 出力
+以下の出力は **igx-radio-group** コンポーネントで利用できます。
+| 名前 | 型 | 説明 |
+| :--- | :--- | :--- |
+| `@Output()` change | EventEmitter<IChangeRadioEventArgs> | ラジオ グループ  `value` が変更された後に発生されます。 |
 <div class="divider"></div>
 
 ### 追加のリソース

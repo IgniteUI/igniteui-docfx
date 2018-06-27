@@ -16,7 +16,7 @@
       new: false
     - name: フィルタリング
       href: grid_filtering.md
-      new: false
+      new: true
     - name: 並べ替え
       href: grid_sorting.md
       new: false
@@ -25,13 +25,13 @@
       new: true
     - name: 集計
       href: grid_summaries.md
-      new: true
+      new: false
     - name: 列移動
       href: grid_column_moving.md
       new: true
     - name: 列のピン固定
       href: grid_column_pinning.md
-      new: true
+      new: false
     - name: 列のサイズ変更
       href: grid_column_resizing.md
       new: true
@@ -40,70 +40,76 @@
       new: true
     - name: 選択
       href: grid_selection.md
-      new: true
+      new: false
     - name: 検索
       href: grid_search.md
       new: true
+    - name: ツールバー
+      href: grid_toolbar.md
+      new: true
     - name: Excel エクスポート
       href: exporter_excel.md
+      new: false
+    - name: 複数列ヘッダー
+      href: grid_multi_column_headers.md
       new: true
-    # - name: 複数列ヘッダー
-    #  href: grid_multi_column_headers.md
-    #  new: true
 - name: List View
   href: list.md
+- name: コンボ
+  href: combo.md
+  new: true
 - name: チャート
   header: true
 - name: Category Chart
   href: categorychart.md
-  new: true
+  new: false
   items:
     - name: チャートのタイプの選択
       href: categorychart_explore_chart_types.md
-      new: true
+      new: false
     - name: リアルタイム データ
       href: categorychart_real_time_data.md
-      new: true
+      new: false
     - name: 大量なデータの処理
       href: categorychart_high_volume_data.md
-      new: true
+      new: false
     - name: 構成オプション
       href: categorychart_configuration_options.md
-      new: true
+      new: false
     - name: カスタム ツールチップ
       href: categorychart_custom_tooltips.md
-      new: true
+      new: false
 - name: Financial Chart
   href: financialchart.md
-  new: true
+  new: false
   items:
     - name: チャートのタイプの選択
       href: financialchart_explore_chart_types.md
-      new: true
+      new: false
     - name: リアルタイム データ
       href: financialchart_real_time_data.md
-      new: true
+      new: false
     - name: 大量なデータの処理
       href: financialchart_high_volume_data.md
-      new: true
+      new: false
     - name: パフォーマンス
       href: financialchart_performance.md
-      new: true
+      new: false
     - name: 複数データ ソースへのバインド
       href: financialchart_binding_to_multiple_data.md
-      new: true
+      new: false
     - name: ペイン
       href: financialchart_panes.md
-      new: true
+      new: false
     - name: 構成オプション
       href: financialchart_configuration_options.md
-      new: true
+      new: false
     - name: カスタム インジケーター
       href: financialchart_custom_indicators.md
-      new: true
+      new: false
     - name: カスタム ツールチップ
       href: financialchart_custom_tooltips.md
-      new: true
+      new: false
 - name: スタイルとテーマ
   header: true
 - name: Themes
@@ -117,9 +123,9 @@
   href: shadows.md
 - name: データ入力と表示
   header: true
-# - name: Drop Down
-#   href: drop_down.md
-#   new: true
+- name: Drop Down
+  href: drop_down.md
+  new: true
 - name: Button
   href: button.md
 - name: Button Group
@@ -128,16 +134,16 @@
   href: checkbox.md
 - name: Switch
   href: switch.md
-- name: Radio Button
+- name: Radio および Radio Group
   href: radio_button.md
 - name: Label および Input
   href: label_input.md
 - name: Input Group
   href: input_group.md
-  new: true
+  new: false
 - name: Mask
   href: mask.md
-  new: true
+  new: false
 - name: Badge
   href: badge.md
 - name: Icon
@@ -158,6 +164,16 @@
   href: ripple.md
 - name: Toggle
   href: toggle.md
+- name: Overlay
+  href: overlay_main.md
+  new: true
+  items: 
+  - name: Positioning Strategies
+    href: overlay_position.md
+    new: true
+  - name: Scrolling Strategies
+    href: overlay_scroll.md
+    new: true
 - name: メニュー
   header: true
 - name: Navigation Drawer
@@ -174,7 +190,7 @@
   href: tabbar.md
 - name: Tabs
   href: tabs.md
-  new: true
+  new: false
 - name: Card
   href: card.md
 - name: Avatar
@@ -193,12 +209,12 @@
   href: date_picker.md
 - name: Time Picker
   href: time_picker.md
-  new: true
+  new: false
 - name: サービス
   header: true
 - name: CSV Exporter
   href: exporter_csv.md
-  new: true
+  new: false
 - name: Excel Exporter
   href: exporter_excel.md
-  new: true
+  new: false
