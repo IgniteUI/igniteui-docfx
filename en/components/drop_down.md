@@ -63,7 +63,7 @@ Having all set up, let's show all the options in the [**IgxDropDownComponent**](
 <!-- dropdown.component.html -->
 
 <div class="sample-wrapper drop-down-wrapper">
-    <button igxButton="raised" (click)="toggleDropDown()">Options</button>
+    <button igxButton="raised" (click)="toggleDropDown($event)">Options</button>
     <igx-drop-down>
         <igx-drop-down-item *ngFor="let item of items">
             {{ item.field }}
@@ -80,20 +80,28 @@ Having all set up, let's show all the options in the [**IgxDropDownComponent**](
 
     public items: any[] = [];
 
-    constructor() {
+    private _positionSettings = {
+        horizontalStartPoint: HorizontalAlignment.Left,
+        verticalStartPoint: VerticalAlignment.Bottom
+    };
+    private _overlaySettings = {
+      closeOnOutsideClick: true,
+      modal: false,
+      positionStrategy: new ConnectedPositioningStrategy(this._positionSettings),
+      scrollStrategy: new CloseScrollStrategy()
+  };
+
+    public ngOnInit() {
         for (let i = 1; i < 4; i ++) {
             const item = { field: "Option " + i };
             this.items.push(item);
         }
     }
 
-    public ngOnInit() {
+    public toggleDropDown(eventArgs) {
+        this._overlaySettings.positionStrategy.settings.target = eventArgs.target;
+        this.igxDropDown.toggle(this._overlaySettings);
     }
-
-    public toggleDropDown() {
-        this.igxDropDown.toggle();
-    }
-
 ```
 
 
@@ -115,7 +123,7 @@ Let's say we want to have a predefined selected item. To do this, handle **igx-d
 <!-- dropdown.component.html -->
 
 <div class="sample-wrapper drop-down-wrapper">
-    <button igxButton="raised" (click)="toggleDropDown()">Options</button>
+    <button igxButton="raised" (click)="toggleDropDown($event)">Options</button>
     <igx-drop-down (onOpening)="onOpening($event)">
         <igx-drop-down-item *ngFor="let item of items">
             {{ item.field }}
@@ -132,18 +140,28 @@ Let's say we want to have a predefined selected item. To do this, handle **igx-d
 
     public items: any[] = [];
 
-    constructor() {
+    private _positionSettings = {
+        horizontalStartPoint: HorizontalAlignment.Left,
+        verticalStartPoint: VerticalAlignment.Bottom
+    };
+
+    private _overlaySettings = {
+      closeOnOutsideClick: true,
+      modal: false,
+      positionStrategy: new ConnectedPositioningStrategy(this._positionSettings),
+      scrollStrategy: new CloseScrollStrategy()
+  };
+
+    public ngOnInit() {
         for (let i = 1; i < 4; i ++) {
             const item = { field: "Option " + i };
             this.items.push(item);
         }
     }
 
-    public ngOnInit() {
-    }
-
-    public toggleDropDown() {
-        this.igxDropDown.toggle();
+    public toggleDropDown(eventArgs) {
+        this._overlaySettings.positionStrategy.settings.target = eventArgs.target;
+        this.igxDropDown.toggle(this._overlaySettings);
     }
 
     public onOpening(ev) {
@@ -162,15 +180,15 @@ Let's say we want to have a predefined selected item. To do this, handle **igx-d
 
 <div class="divider--half"></div>
 
-To provide more useful visual information, use `isHeader` to group items semantically or `isDisabled` to display an item as non-interactive.
+To provide more useful visual information, use `isHeader` to group items semantically or `disabled` to display an item as non-interactive.
 
 ```html
 <!-- dropdown.component.html -->
 
 <div class="sample-wrapper drop-down-wrapper">
-    <button igxButton="raised" (click)="toggleDropDown()">Countries</button>
+    <button igxButton="raised" (click)="toggleDropDown($event)">Countries</button>
     <igx-drop-down>
-        <igx-drop-down-item *ngFor="let item of items" isDisabled={{item.disabled}} isHeader={{item.header}}>
+        <igx-drop-down-item *ngFor="let item of items" disabled={{item.disabled}} isHeader={{item.header}}>
             {{ item.field }}
         </igx-drop-down-item>
     </igx-drop-down>
@@ -194,14 +212,21 @@ To provide more useful visual information, use `isHeader` to group items semanti
         { field: "USA" },
         { field: "Mexico" }];
 
-    constructor() {
-    }
+    private _positionSettings = {
+        horizontalStartPoint: HorizontalAlignment.Left,
+        verticalStartPoint: VerticalAlignment.Bottom
+    };
 
-    public ngOnInit() {
-    }
+    private _overlaySettings = {
+      closeOnOutsideClick: true,
+      modal: false,
+      positionStrategy: new ConnectedPositioningStrategy(this._positionSettings),
+      scrollStrategy: new CloseScrollStrategy()
+  };
 
-    public toggleDropDown() {
-        this.igxDropDown.toggle();
+    public toggleDropDown(eventArgs) {
+        this._overlaySettings.positionStrategy.settings.target = eventArgs.target;
+        this.igxDropDown.toggle(this._overlaySettings);
     }
 
 ```
@@ -272,7 +297,7 @@ The following inputs are available in the **igx-drop-down-item** component:
 | Name | Type | Description |
 | :--- | :--- | :--- |
 | `isHeader` | boolean| Defines if the item is a group header. |
-| `isDisabled` | boolean| Disables the given item. |
+| `disabled` | boolean| Gets if given item is disabled. |
 | `isFocused` | boolean| Defines if the given item is focused. |
 
 #### Getters
