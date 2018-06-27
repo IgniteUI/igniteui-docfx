@@ -7,24 +7,26 @@ _language: ja
 # ポジション ストラテジー
 
 ポジション ストラテジーは、IgxOverlayService のコンポーネントを表示する位置を決定する方法が 3 通りあります。
+
 1. **Global** - `positionSettings`を介して渡される方向に基づいて要素を配置します。`verticalDirection` には Top/Middle/Bottom、 `horizontalDirection` には Left/Center/Right があります。
 
-| horizontalDirection        | verticalDirection        |
-|:---------------------------|:-------------------------|
-| HorizontalAlignment.Center | VerticalAlignment.Middle |
-
+    | horizontalDirection        | verticalDirection        |
+    |:---------------------------|:-------------------------|
+    | HorizontalAlignment.Center | VerticalAlignment.Middle |
+<br/>
 
 2. **Connected** - `positionSettings` を介して渡される方向と開始点に基づいて要素を配置します。開始ポイント (type `Point`) または配置ベースとして `HTMLElement` を渡すことができます。以下はデフォルトの設定です。
 
-| target          | horizontalDirection       |  verticalDirection       | horizontalStartPoint     | verticalStartPoint       |
-|:----------------|:--------------------------|:-------------------------|:-------------------------|:-------------------------|
-| new Point(0, 0) | HorizontalAlignment.Right | VerticalAlignment.Bottom | HorizontalAlignment.Left | VerticalAlignment.Bottom |
+    | target          | horizontalDirection       |  verticalDirection       | horizontalStartPoint     | verticalStartPoint       |
+    |:----------------|:--------------------------|:-------------------------|:-------------------------|:-------------------------|
+    | new Point(0, 0) | HorizontalAlignment.Right | VerticalAlignment.Bottom | HorizontalAlignment.Left | VerticalAlignment.Bottom |
+<br/>
 
 3. **Auto** - **Connected** ポジション ストラテジーとして要素を配置し、要素が表示外となった場合はビューポート (異なる開始ポイントを算出) に要素を再配置します。以下はデフォルトの設定です。
 
-| target          | horizontalDirection       |  verticalDirection       | horizontalStartPoint     | verticalStartPoint       |
-|:----------------|:--------------------------|:-------------------------|:-------------------------|:-------------------------|
-| new Point(0, 0) | HorizontalAlignment.Right | VerticalAlignment.Bottom | HorizontalAlignment.Left | VerticalAlignment.Bottom |
+    | target          | horizontalDirection       |  verticalDirection       | horizontalStartPoint     | verticalStartPoint       |
+    |:----------------|:--------------------------|:-------------------------|:-------------------------|:-------------------------|
+    | new Point(0, 0) | HorizontalAlignment.Right | VerticalAlignment.Bottom | HorizontalAlignment.Left | VerticalAlignment.Bottom |
 
 *注*: HorziontalDirection = Center / VericalDirection = Middle を使用している場合、要素を再配置を試みません。
 

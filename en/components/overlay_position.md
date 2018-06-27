@@ -6,24 +6,26 @@ _description: Explanation and example about the Overlay Service's IPositionStrat
 # Position strategies
 
 Position strategies determine where to display the component in the provided IgxOverlayService. There are three position strategies:
+
 1. **Global** - Positions the element based on the directions passed in through `positionSettings`. These are Top/Middle/Bottom for `verticalDirection` and Left/Center/Right for `horizontalDirection`. Defaults to:
 
-| horizontalDirection        | verticalDirection        |
-|:---------------------------|:-------------------------|
-| HorizontalAlignment.Center | VerticalAlignment.Middle |
-
+    | horizontalDirection        | verticalDirection        |
+    |:---------------------------|:-------------------------|
+    | HorizontalAlignment.Center | VerticalAlignment.Middle |
+<br/>
 
 2. **Connected** - Positions the element based on the directions and start point passed in through `positionSettings`. It is possible to either pass a start point (type `Point`) or an `HTMLElement` as a positioning base. Defaults to:
 
-| target          | horizontalDirection       |  verticalDirection       | horizontalStartPoint     | verticalStartPoint       |
-|:----------------|:--------------------------|:-------------------------|:-------------------------|:-------------------------|
-| new Point(0, 0) | HorizontalAlignment.Right | VerticalAlignment.Bottom | HorizontalAlignment.Left | VerticalAlignment.Bottom |
+    | target          | horizontalDirection       |  verticalDirection       | horizontalStartPoint     | verticalStartPoint       |
+    |:----------------|:--------------------------|:-------------------------|:-------------------------|:-------------------------|
+    | new Point(0, 0) | HorizontalAlignment.Right | VerticalAlignment.Bottom | HorizontalAlignment.Left | VerticalAlignment.Bottom |
+<br/>
 
 3. **Auto** - Positions the element as in **Connected** positioning strategy and re-positions the element in the view port (calculating a different start point) in case the element is partially out of view. Defaults to:
 
-| target          | horizontalDirection       |  verticalDirection       | horizontalStartPoint     | verticalStartPoint       |
-|:----------------|:--------------------------|:-------------------------|:-------------------------|:-------------------------|
-| new Point(0, 0) | HorizontalAlignment.Right | VerticalAlignment.Bottom | HorizontalAlignment.Left | VerticalAlignment.Bottom |
+    | target          | horizontalDirection       |  verticalDirection       | horizontalStartPoint     | verticalStartPoint       |
+    |:----------------|:--------------------------|:-------------------------|:-------------------------|:-------------------------|
+    | new Point(0, 0) | HorizontalAlignment.Right | VerticalAlignment.Bottom | HorizontalAlignment.Left | VerticalAlignment.Bottom |
 
 *Note*: Will not try to reposition the element if the strategy is using  HorziontalDirection = Center / VericalDirection = Middle.
 
