@@ -16,7 +16,7 @@ Drop Down items are virtualized, which guarantees smooth work, even if the igx-c
 <div class="divider"></div>
 
 ### Combo Demo
-<div class="sample-container loading" style="height: 370px;">
+<div class="sample-container loading" style="height: 540px;">
     <iframe id="combo-features-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/combo-features" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -51,7 +51,7 @@ Then in the template we place the combo:
 ```
 
 The result is as follows:
-<div class="sample-container loading" style="height: 370px;">
+<div class="sample-container loading" style="height: 540px;">
     <iframe id="combo-features-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/combo-features" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -282,7 +282,7 @@ onSubmitReactive() {
 
 The following sample demonstrates cascading igx-drop-down and igx-combo components
 
-<div class="sample-container loading" style="height: 260px;">
+<div class="sample-container loading" style="height: 540px;">
     <iframe id="cascading-combos-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/cascading-combos" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
