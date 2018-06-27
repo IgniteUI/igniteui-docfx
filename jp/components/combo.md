@@ -29,7 +29,7 @@ igx-combo はキーボード ナビゲーションを公開しており、アク
 ## 使用方法
 `IgxComboComponent` はリストの項目を検索して選択する機能があります。コンボは内部に項目コンテナーとして ` を使用します。Ignite UI for Angular Combo を初期化する前に **IgxComboModule** を **app.module.ts** ファイルにインポートします。
 
-```typescript
+```ts
 // app.module.ts
 
 ...
@@ -77,7 +77,7 @@ export class AppModule {}
 <igx-combo [data]="remoteData | async" (onDataPreLoad)="dataLoading($event)" [valueKey]="'ProductID'" [displayKey]="'ProductName'" ></igx-combo>
 ```
 
-```typesciprt
+```ts
 public ngOnInit() {
     this.remoteData = this.remoteService.remoteData;
 }
@@ -112,7 +112,7 @@ TwoWay データ バインディングを使用するには、 `ngModule` を以
 <igx-combo #combo [(ngModel)]="values"></igx-combo>
 ```
 
-```typescript
+```ts
 @ViewChild('combo', { read: IgxComboComponent }) public combo: IgxComboComponent;
 get values() {
     return this.combo.selectedItems();
