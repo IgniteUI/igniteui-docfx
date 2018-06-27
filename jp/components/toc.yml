@@ -16,7 +16,7 @@
       new: false
     - name: フィルタリング
       href: grid_filtering.md
-      new: false
+      new: true
     - name: 並べ替え
       href: grid_sorting.md
       new: false
@@ -31,7 +31,7 @@
       new: true
     - name: 列のピン固定
       href: grid_column_pinning.md
-      new: true
+      new: false
     - name: 列のサイズ変更
       href: grid_column_resizing.md
       new: true

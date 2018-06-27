@@ -16,7 +16,7 @@
       new: false
     - name: Filtering
       href: grid_filtering.md
-      new: false
+      new: true
     - name: Sorting
       href: grid_sorting.md
       new: false
@@ -31,7 +31,7 @@
       new: true
     - name: Column pinning
       href: grid_column_pinning.md
-      new: true
+      new: false
     - name: Column resizing
       href: grid_column_resizing.md
       new: true
