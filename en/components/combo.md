@@ -10,7 +10,7 @@ The igx-combo component provides a powerful input, combining the features of the
 The combo component provides easy filtering and selection of multiple items, grouping and adding custom values to the dropdown list.
 Custom templates could be provided in order to customize different areas of the components, such as items, header, footer, etc.
 The combo component is integrated with the Template Driven and Reactive Forms.
-The igx-combo exposes intiutive keyboard navigation and it is accessibility compliant.
+The igx-combo exposes intuitive keyboard navigation and it is accessibility compliant.
 Drop Down items are virtualized, which guarantees smooth work, even if the igx-combo is bound to data source with a lot of items.
 </p>
 <div class="divider"></div>
@@ -101,13 +101,13 @@ public dataLoading(evt) {
     }
 ```
 
-> Note: In order to have combo with remote data, what you need is to have a service that retrives data chunks from a server. 
+> Note: In order to have combo with remote data, what you need is to have a service that retrieves data chunks from a server. 
 What the combo exposes is a `virtualizationState` property that gives state of the combo - first index and the number of items that needs to be loaded.
 The service, should inform the combo for the total items that are on the server - using the `totalItemCount` property.
 
 ### Value Binding
 
-If we want to use a two-way data-binding, we could just use `ngModule` like this:
+If we want to use a two-way data-binding, we could just use `ngModel` like this:
 
 ```html
 <igx-combo #combo [(ngModel)]="values"></igx-combo>
@@ -129,7 +129,7 @@ set values(newValues: Array<any>) {
 By default filtering in the combo is enabled. It can be disabled using the following code:
 
 ```html
-<igx-combo [filaterable]="false"></igx-combo>
+<igx-combo [filterable]="false"></igx-combo>
 ```
 
 <div class="divider--half"></div>
@@ -165,7 +165,7 @@ Defining a combo's groupKey option will group the items, according to the provid
 
 ### Templates
 Custom templates for different areas of the igx-combo component can be defined, including items, header, footer, empty list and adding button.
-When defining one of the templates below, you need to reference them using the following predifined names:
+When defining one of the templates below, you need to reference them using the following predefined names:
 
 Defining item template:
 ```html
@@ -301,8 +301,8 @@ When igxCombo is opened and search input is focused:
 - `ArrowDown` will move focus from the search input to the first list item.If list is empty and custom values are enabled will move it to the Add new item button.
   > Note: Any other key stroke will be handled by the input.
 
-When igxCombo is opened and list item is focued:
-- `ArrowDown` will move to next list item. If the active item is the last one in hte list and custom values are enabled then focus will be moved to the Add item button.
+When igxCombo is opened and list item is focused:
+- `ArrowDown` will move to next list item. If the active item is the last one in the list and custom values are enabled then focus will be moved to the Add item button.
 
 - `ArrowUp` will move to previous list item. If the active item is the first one in the list then focus will be moved back to the search input.
 
@@ -333,9 +333,9 @@ When igxCombo is opened, allow custom values are enabled and add item button is 
 |  `value`                 | combo value                                       | string                      |
 |  `allowCustomValue`      | enable/disables combo custom value                | boolean                     |
 |  `valueKey`              | combo value data source property                  | string                      |
-|  `displayKey`            | combo dispaly data source property                | string                      |
+|  `displayKey`            | combo display data source property                | string                      |
 |  `groupKey`              | combo item group                                  | string                      |
-|  `virtualizationState`   | defined he current state of the virtualized data. It contains `startIndex` and `chunkSize`      | `IForOfState`               |
+|  `virtualizationState`   | defines he current state of the virtualized data. It contains `startIndex` and `chunkSize`      | `IForOfState`               |
 |  `totalItemCount`        | total count of the virtual data items, when using remote service                                | number                      |
 |  `width `                | defines combo width                               | string                      |
 |  `heigth`                | defines combo height                              | string                      |
@@ -355,7 +355,7 @@ When igxCombo is opened, allow custom values are enabled and add item button is 
 | Name                | Description                                                             | Cancelable   | Parameters                              |
 |------------------   |-------------------------------------------------------------------------|------------- |-----------------------------------------|
 | `onSelectionChange` | Emitted when item selection is changing, before the selection completes | true         | { oldSelection: `Array<any>`, newSelection: `Array<any>`, event: Event } |
-| `onSearchInput`     | Emitted when an the search input's input event is triggered             | false        | { searchValue: `string` }               |
+| `onSearchInput`     | Emitted when the search input's event is triggered             | false        | { searchValue: `string` }               |
 | `onAddition`        | Emitted when an item is being added to the data collection              | false        | { oldCollection: `Array<any>`, addedItem: `<any>`, newCollection: `Array<any>` }|
 | `onDataPreLoad`     | Emitted when new chunk of data is loaded from the virtualization        | false        | { event: Event }                        |
 | `dropDownOpening`   | Emitted before the dropdown is opened                                   | false        | { event: Event }                        |
