@@ -1,30 +1,31 @@
 ---
-title: Overlay Service
-_description: Provides a service which enables developers to position content above all other component/html content of the page. Comes with a robust API allowing for precise configuration of the service.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Overlay Service component
+title: Overlay サービス
+_description: ページのその他すべてのコンポーネント/HTML コンテンツの上にコンテンツを配置するサービスを提供します。サービスの構成には堅牢な API が利用できます。
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular オーバーレイ サービス コンポーネント
+_language: ja
 ---
 
-## Overlay Description
+## Overlay の概要
 <p class="highlight">
-The `IgxOverlayService` is fully integrated in the `IgxToggle` directive. When using the toggle directive, a developer can provide an optional `overlaySettings` parameter to the toggle's `toggle()` method in order to change the way the toggled content if rendered.
+The `IgxOverlayService` は、`IgxToggle` ディレクティブに完全に統合されています。toggle ディレクティブを使用する場合、`overlaySettings` パラメーターを toggle の toggle の `toggle()` メソッドに設定してコンテンツが描画された場合の切り替え方法を変更できます。
 </p>
 <div class="divider--half"></div>
 
-## Overlay Demo
+## Overlay デモ
 <p class="highlight">
-The below demo illustrates how the overlay service `overlaySettings` can be manipulated in order to alter the way in which the overlay element is shown.
+以下のデモは、オーバーレイ要素の表示方法を変更するためにオーバーレイ サービス `overlaySettings` を扱う方法を示します。
 </p>
 <div class="sample-container loading" style="height: 600px">
     <iframe id="overlay-sample-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/overlay-sample" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="overlay-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="overlay-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
 </div>
 <div class="divider--half"></div>
 
-## Usage
+## 使用方法
 
-If *no* `overlaySettings` are configured, the toggled element falls back to *default display settings*:
+`overlaySettings` を設定*しない*場合、toggle 要素は*デフォルトの表示設定*に戻ります。
 ```typescript
 defaultOverlaySettings = {
         positionStrategy: new GlobalPositionStrategy(),
@@ -34,7 +35,7 @@ defaultOverlaySettings = {
     };
 ```
 
-An example of how to pass configuration settings to the toggle's method is shown below:
+以下は、toggle メソッドの設定を渡す方法の例です。
 ```html
 <!-- In example.component.html -->
 <div class='example-div--container' style='width: 400px; height; 120px'>
@@ -74,87 +75,87 @@ export class ExampleComponent {
 
 ## API
 
-### Properties
+### プロパティ
 
  `IPositionStrategy`
 
-   | Name               | Description                                         | Type                                |
+   | 名前               | 説明                                         | 型                                |
    |--------------------|-----------------------------------------------------|-------------------------------------|
-   |positionSettings    | Settings to apply to this position strategy         | PositionSettings                    |
+   |positionSettings    | この配置方法を適用する設定。         | PositionSettings                    |
 
 
  `OverlaySettings`
 
-   | Name               | Description                                         | Type                                |
+   | 名前               | 説明                                         | 型                                |
    |--------------------|-----------------------------------------------------|-------------------------------------|
-   |positionStrategy    | Position strategy to use with this settings         | IPositionStrategy                   |
-   |scrollStrategy      | Scroll strategy to use with this settings           | IScrollStrategy                     |
-   |modal               | Set if the overlay should be in modal mode          | boolean                             |
-   |closeOnOutsideClick | Set if the overlay should closed on outside click   | boolean                             |
+   |positionStrategy    | この設定で使用するための配置方法。       | IPositionStrategy                   |
+   |scrollStrategy      | この設定で使用するためのスクロール方法。          | IScrollStrategy                     |
+   |modal               | オーバーレイがモーダルモードであるかどうかを設定。         | boolean                             |
+   |closeOnOutsideClick | オーバーレイがアウトサイド クリックで閉じるかどうかを設定。  | boolean                             |
 
 
  `PositionSettings`
 
-   | Name               | Description                                         | Type                                |
+   | 名前               | 説明                                        | 型                                |
    |--------------------|-----------------------------------------------------|-------------------------------------|
-   |target              | Attaching target for the component to show          | Point | HTMLElement                 |
-   |horizontalDirection | Direction in which the component should show        | HorizontalAlignment                 |
-   |verticalDirection   | Direction in which the component should show        | VerticalAlignment                   |
-   |horizontalStartPoint| Target's starting point                             | HorizontalAlignment                 |
-   |verticalStartPoint  | Target's starting point                             | VerticalAlignment                   |
-   |openAnimation       | Animation applied while overlay opens               | AnimationReferenceMetadata          |
-   |closeAnimation      | Animation applied while overlay closes              | AnimationReferenceMetadata          |
+   |target              | 表示するターゲットのアタッチ ターゲット。         | Point | HTMLElement                 |
+   |horizontalDirection | コンポーネントが表示される方向。       | HorizontalAlignment                 |
+   |verticalDirection   | コンポーネントが表示される方向。       | VerticalAlignment                   |
+   |horizontalStartPoint| ターゲットの開始ポイント。                             | HorizontalAlignment                 |
+   |verticalStartPoint  | ターゲットの開始ポイント。                             | VerticalAlignment                   |
+   |openAnimation       | オーバーレイが開いている間に適用されるアニメーション。             | AnimationReferenceMetadata          |
+   |closeAnimation      | オーバーレイが閉じている間に適用されるアニメーション。            | AnimationReferenceMetadata          |
 
-### Methods
+### メソッド
 
 `IgxOverlayService`
 
-   | Name            | Description                                                                     | Parameters |
+   | 名前           | 説明                                                                     | パラメーター |
    |-----------------|---------------------------------------------------------------------------------|------------|
-   |show             | Shows the provided component on the overlay                                     |component, id?, overlaySettings?|
-   |hide             | Remove the provided native element of for the component with provided id        |id          |
-   |hideAll          | Remove the all native elements and hides the overlay                            |-           |
-   |reposition       | Repositions the native element of the component with provided id                |id          |
+   |show             | オーバーレイで指定したコンポーネントを表示します。                                     |component, id?, overlaySettings?|
+   |hide             | 指定 ID のコンポーネントのネイティブ要素を削除します。        |id          |
+   |hideAll          | すべてのネイティブ要素を削除してオーバーレイを非表示にします。                        |-           |
+   |reposition       | 指定 ID のコンポーネントのネイティブ要素を再配置します。                |id          |
 
 
  `IPositionStrategy`
 
-   | Name            | Description                                                                     | Parameters |
+   | 名前            | 説明                                                                    | パラメーター |
    |-----------------|---------------------------------------------------------------------------------|------------|
-   |position         | Positions provided element                                                      |element     |
+   |position         | 指定した要素を配置します。                                                      |element     |
 
 
  `IScrollStrategy`
 
-   | Name            | Description                                                                     | Parameters |
+   | 名前            | 説明                                                                     | パラメーター |
    |-----------------|---------------------------------------------------------------------------------|------------|
-   |initialize       | Initialize the strategy. Should be called once                                  |document, overlayService, id|
-   |attach           | Attaches the strategy                                                           |-           |
-   |detach           | Detaches the strategy                                                           |-           |
+   |initialize       | ストラテジーを初期化します。1 度のみ呼び出します。                                 |document, overlayService, id|
+   |attach           | ストラテジーをアタッチします。                                                    |-           |
+   |detach           | ストラテジーをデタッチします。                                                          |-           |
 
 
  `static methods`
 
-   | Name                        | Description                                                         | Parameters |
+   | 名前                        | 説明                                                         | パラメーター |
    |-----------------------------|---------------------------------------------------------------------|------------|
-   |getPointFromPositionsSettings| Calculates the point from which the overlay should start showing    |settings    |
+   |getPointFromPositionsSettings| オーバーレイの表示を開始するポイントを計算します。    |settings    |
 
-### Events
+### イベント
 
 
 `IgxOverlayService`
 
-   | Name        | Description                        | Cancelable | Parameters |
+   | 名前        | 説明                        | キャンセル可能 | パラメーター |
    |-------------|------------------------------------|------------|------------|
-   |onOpening    | Emitted on before overlay shows    | false      |            |
-   |onOpened     | Emitted after overlay shows        | false      |            |
-   |onClosing    | Emitted before overlay hides       | false      |            |
-   |onClosed     | Emitted after  overlay hides       | false      |            |
+   |onOpening    | オーバーレイを表示する前に発生されます。    | false      |            |
+   |onOpened     | オーバーレイを表示した後に発生されます。       | false      |            |
+   |onClosing    | オーバーレイを非表示にする前に発生されます。       | false      |            |
+   |onClosed     | オーバーレイを非表示にした後に発生されます。       | false      |            |
 
 
-## Assumptions and Limitations</a>
-Up to now there are no known limitations.
+## 前提事項と制限</a>
+既知の制限はありません。
 
-## Additional Resources
-* [Position strategies](overlay_position.md)
-* [Scroll strategies](overlay_scroll.md)
+## その他のリソース
+* [配置方法](overlay_position.md)
+* [スクロール方法](overlay_scroll.md)

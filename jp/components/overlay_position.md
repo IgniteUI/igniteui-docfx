@@ -1,34 +1,35 @@
 ---
-title: Overlay Service - Positioning Strategies
-_description: Explanation and example about the Overlay Service's IPositionStrategy interface and the classes that implement it.
+title: Overlay サービス - スクロール ストラテジー
+_description: オーバレイ サービスの IPositionStrategy インターフェイスと実装するクラスについての説明とその例です。
+_language: ja
 ---
 
-# Position strategies
+# ポジション ストラテジー
 
-Position strategies determine where to display the component in the provided IgxOverlayService. There are three position strategies:
-1. **Global** - Positions the element based on the directions passed in through `positionSettings`. These are Top/Middle/Bottom for `verticalDirection` and Left/Center/Right for `horizontalDirection`. Defaults to:
+ポジション ストラテジーは、IgxOverlayService のコンポーネントを表示する位置を決定する方法が 3 通りあります。
+1. **Global** - `positionSettings`を介して渡される方向に基づいて要素を配置します。`verticalDirection` には Top/Middle/Bottom、 `horizontalDirection` には Left/Center/Right があります。
 
 | horizontalDirection        | verticalDirection        |
 |:---------------------------|:-------------------------|
 | HorizontalAlignment.Center | VerticalAlignment.Middle |
 
 
-2. **Connected** - Positions the element based on the directions and start point passed in through `positionSettings`. It is possible to either pass a start point (type `Point`) or an `HTMLElement` as a positioning base. Defaults to:
+2. **Connected** - `positionSettings` を介して渡される方向と開始点に基づいて要素を配置します。開始ポイント (type `Point`) または配置ベースとして `HTMLElement` を渡すことができます。以下はデフォルトの設定です。
 
 | target          | horizontalDirection       |  verticalDirection       | horizontalStartPoint     | verticalStartPoint       |
 |:----------------|:--------------------------|:-------------------------|:-------------------------|:-------------------------|
 | new Point(0, 0) | HorizontalAlignment.Right | VerticalAlignment.Bottom | HorizontalAlignment.Left | VerticalAlignment.Bottom |
 
-3. **Auto** - Positions the element as in **Connected** positioning strategy and re-positions the element in the view port (calculating a different start point) in case the element is partially out of view. Defaults to:
+3. **Auto** - **Connected** ポジション ストラテジーとして要素を配置し、要素が表示外となった場合はビューポート (異なる開始ポイントを算出) に要素を再配置します。以下はデフォルトの設定です。
 
 | target          | horizontalDirection       |  verticalDirection       | horizontalStartPoint     | verticalStartPoint       |
 |:----------------|:--------------------------|:-------------------------|:-------------------------|:-------------------------|
 | new Point(0, 0) | HorizontalAlignment.Right | VerticalAlignment.Bottom | HorizontalAlignment.Left | VerticalAlignment.Bottom |
 
-*Note*: Will not try to reposition the element if the strategy is using  HorziontalDirection = Center / VericalDirection = Middle.
+*注*: HorziontalDirection = Center / VericalDirection = Middle を使用している場合、要素を再配置を試みません。
 
-## Usage
-Position an element based on an existing button as a target, so it's start point is the button's Bottom/Left corner.
+## 使用方法
+ターゲットとする既存ボタンに基づいて要素を配置し、開始点をボタンの下角または左角にします。
 ```typescript
 const positionSettings: PositionSettings = {
     target: buttonElement.nativeElement,
@@ -42,8 +43,8 @@ const strategy =  new ConnectedPositioningStrategy(positionSettings);
 strategy.position(contentWrapper, size);
 ```
 
-## Getting Started
-The position strategy is passed as a property in the `overlaySettings` parameter when the `overlay.show()` method is called:
+## 作業の開始
+ポジション ストラテジーは、`overlay.show()` メソッドが呼ばれたときに `overlaySettings` パラメーターのプロパティとして渡されます。
 ```typescript
     // Initializing and using overlay settings
     const overlaySettings: OverlaySettings = {
@@ -54,7 +55,7 @@ The position strategy is passed as a property in the `overlaySettings` parameter
     }
     overlay.show(dummyElement, overlaySettings); 
 ``` 
-To change the position strategy used by the overlay, override the `positionStrategy` property of the `overlaySettings` object passed to the overlay:
+オーバーレイで使用するポジション ストラテジーの変更は、オーバーレイに渡される `overlaySettings` オブジェクトの `positionStrategy` プロパティをオーバーライドします。
 ```typescript
     // overlaySettings is an existing object of type OverlaySettings
     // to override the position strategy
@@ -64,7 +65,7 @@ To change the position strategy used by the overlay, override the `positionStrat
     })
     overlay.show(dummyElement, newOverlaySettings); 
 ```
-To change the position settings an already existing strategy is using, override any of the settings of that strategy:
+既存の配置設定を変更するには、変更したいストラテジーの設定をオーバーライドします。
 ```typescript
     // overlaySettings is an existing object of type OverlaySettings
     // overlaySettings.positionStrategy is an existing PositionStrategy with settings of type PositionSettings
@@ -79,9 +80,9 @@ To change the position settings an already existing strategy is using, override 
     // and will align itself to the left
 ```
 
-### Dependencies
+### 依存関係
 
-Import the desired position strategy if needed like:
+必要に応じてポジション ストラテジーをインポートできます。
 
 ```typescript
 import {AutoPositionStrategy, GlobalPositionStrategy, ConnectedPositioningStrategy } from './position/global-position-strategy';
@@ -89,20 +90,20 @@ import {AutoPositionStrategy, GlobalPositionStrategy, ConnectedPositioningStrate
 
 ## API
 
-##### Methods
-| Position Strategy | Name                                         | Description                                     |
+##### メソッド
+| ポジション ストラテジー | 名前                                         | 説明                                     |
 |:------------------|:---------------------------------------------|:------------------------------------------------|
-| Global            | `position(contentElement)`                   | Positions the element, based on the horizontal and vertical directions. |
-| Connected         | `position(contentElement, size{})`           | Positions the element, based on the position strategy used and the size passed in.|
-| Auto              | `position(contentElement, size{}, document?)`| Positions the element, based on the position strategy used and the size passed in.|
+| Global            | `position(contentElement)`                   | 水平および垂直の方向に基づいて要素を配置します。|
+| Connected         | `position(contentElement, size{})`           | 使用するポジション ストラテジーと渡されたサイズに基づいて要素を配置します。|
+| Auto              | `position(contentElement, size{}, document?)`| 使用するポジション ストラテジーと渡されたサイズに基づいて要素を配置します。|
 
 ###### PositionSettings
-| Name               | Type                        | Description |
+| 名前               | 型                        | 説明 |
 | :----------------- | :-------------------------- | :---------- |
-|target              | Point | HTMLElement         | Attaching target for the component to show          |
-|horizontalDirection | HorizontalAlignment         | Direction in which the component should show        |
-|verticalDirection   | VerticalAlignment           | Direction in which the component should show        |
-|horizontalStartPoint| HorizontalAlignment         | Target's starting point                             |
-|verticalStartPoint  | VerticalAlignment           | Target's starting point                             |
-|openAnimation       | AnimationReferenceMetadata  | Animation applied while overlay opens               |
-|closeAnimation      | AnimationReferenceMetadata  | Animation applied while overlay closes              |
+|target              | Point | HTMLElement         | 使用するポジション ストラテジーと渡されたサイズに基づいて要素を配置します。          |
+|horizontalDirection | HorizontalAlignment         | コンポーネントが表示される方向。       |
+|verticalDirection   | VerticalAlignment           |　コンポーネントが表示される方向。        |
+|horizontalStartPoint| HorizontalAlignment         | ターゲットの開始ポイント。                             |
+|verticalStartPoint  | VerticalAlignment           | ターゲットの開始ポイント。　　　　                             |
+|openAnimation       | AnimationReferenceMetadata  | オーバーレイが開いている間に適用されるアニメーション。               |
+|closeAnimation      | AnimationReferenceMetadata  | オーバーレイが閉じている間に適用されるアニメーション。              |

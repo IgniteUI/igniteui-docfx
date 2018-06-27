@@ -1,17 +1,18 @@
 ---
-title: Overlay Service - Scroll Strategies
-_description: Explanation and example about the Overlay Service's IScrollStrategy interface and the classes that implement it.
+title: Overlay サービス - スクロール ストラテジー
+_description: オーバレイ サービスの IScrollStrategy インターフェイスと実装するクラスについての説明とその例です。
+_language: ja
 ---
 
-# Scroll strategies
+# スクロール ストラテジー
 
-Scroll strategies determines how the scrolling will be handled in the provided IgxOverlayService. There are four scroll strategies:
-1. **NoOperation** - does nothing. 
-2. **Block** - the component do not scroll with the window. The event is canceled. No scrolling happens.
-3. **Close** - uses a tolerance and closes an expanded component upon scrolling if the tolerance is exceeded.
-4. **Absolute** - scrolls everything.
+スクロール ストラテジーは、IgxOverlayService でスクロールが処理される方法を決定する以下の 4 つがあります。
+1. **NoOperation** -  何もしません。
+2. **Block** - コンポーネントはウィンドウでスクロールしません。イベントはキャンセルされてスクロールは発生しません。
+3. **Close** - 許容値を使用して許容範囲を超えた場合にスクロールで展開したコンポーネントを閉じます。
+4. **Absolute** - すべてをスクロールします。
 
-## Usage
+## 使用方法
 
 ```typescript
 this.scrollStrategy.initialize(document, overlayService, id);
@@ -19,8 +20,8 @@ this.scrollStrategy.attach();
 this.scrollStrategy.detach();
 ```
 
-## Getting Started
-The position strategy is passed as a property in the `overlaySettings` parameter when the `overlay.show()` method is called:
+## 作業の開始
+ポジション ストラテジーは、`overlay.show()` メソッドが呼ばれたときに `overlaySettings` パラメーターのプロパティとして渡されます。
 ```typescript
     // Initializing and using overlay settings
     const overlaySettings: OverlaySettings = {
@@ -31,7 +32,7 @@ The position strategy is passed as a property in the `overlaySettings` parameter
     }
     overlay.show(dummyElement, overlaySettings); 
 ``` 
-To change the scroll strategy used by the overlay, override the `scrollStrategy` property of the `overlaySettings` object passed to the overlay:
+オーバーレイで使用するスクロール方法の変更は、オーバーレイに渡される `overlaySettings` オブジェクトの `scrollStrategy`プロパティをオーバーライドします。
 ```typescript
     // overlaySettings is an existing object of type OverlaySettings
     // to override the scroll strategy
@@ -41,9 +42,9 @@ To change the scroll strategy used by the overlay, override the `scrollStrategy`
     })
     overlay.show(dummyElement, newOverlaySettings); 
 ```
-### Dependencies
+### 依存関係
 
-To use the any of the scroll strategies import it like this:
+以下は、スクロール ストラテジーをインポートする方法です。
 
 ```typescript
 import { NoOpScrollStrategy } from "./scroll/NoOpScrollStrategy";
@@ -51,12 +52,12 @@ import { NoOpScrollStrategy } from "./scroll/NoOpScrollStrategy";
 
 ## API
 
-##### Methods
+##### メソッド
 
 ###### IScrollStrategy
 
-| Name            | Description                                                                     | Parameters |
+| 名前            | 説明                                                                     | パラメーター |
 |-----------------|---------------------------------------------------------------------------------|------------|
-|initialize       | Initialize the strategy. Should be called once                                  |document, overlayService, id|
-|attach           | Attaches the strategy                                                           |-           |
-|detach           | Detaches the strategy                                                           |-           |
+|initialize       | ストラテジーを初期化します。1 度のみ呼び出します。                                  |document, overlayService, id|
+|attach           | ストラテジーをアタッチします。                                                           |-           |
+|detach           | ストラテジーをデタッチします。                                                         |-           |
