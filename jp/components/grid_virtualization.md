@@ -85,6 +85,8 @@ public processData() {
 ### リモートの並べ替え/フィルタリングの仮想化
 リモートの並べ替えおよびフィルタリングは、`onDataPreLoad`, `onSortingDone`, `onFilteringDone` 出力にサブスクライブし、パブリック `igxGrid` プロパティの `totalItemCount` をサービスから送信される個々の情報とともに設定し、受け取った引数に基づいて適切な要求を作成します。
 
+リモート データを要求時にフィルター処理で大文字と小文字が区別されることに注意してください。
+
 <div class="sample-container loading" style="height:550px">
     <iframe id="grid-remote-filtering-iframe" src='{environment:demosBaseUrl}/grid-remote-filtering' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
