@@ -1,12 +1,12 @@
 ---
-title: 列の非表示 - ネイティブ | Ignite UI for Angular
+title: 列の非表示 - ネイティブ Angular | Ignite UI for Angular
 _description: Ignite UI for Angular 列非表示機能を使用すると、データ グリッドの定義済み UI で列を非表示/表示できます。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, ネイティブ Angular コンポーネント, Angular Data Grid コンポーネント, Angular Data Grid コントロール, Angular Grid コンポーネント, Angular Grid コントロール, Angular 高パフォーマンス Grid, Grid 列非表示, 列非表示, Angular Grid 列非表示, Angular 列非表示
 ---
 
 ### グリッドの列非表示
 
-Ignite UI for Angular Data Grid に列非表示機能があります。この機能は UI で列の表示/非表示オプションを提供します。Data Grid に定義済みの列非表示 UI があります。この UI はグリッドのツールバーからアクセスできます。また、列非表示 UI を別のコンポーネントとして定義して、位置を変更することもできます。
+Ignite UI for Angular Data Grid に**列非表示**機能があります。この機能は **UI** で列の表示/非表示オプションを提供します。Data Grid に定義済みの列非表示 UI があります。この UI はグリッドのツールバーからアクセスできます。また、列非表示 UI を別のコンポーネントとして定義して、位置を変更することもできます。
 
 #### デモ
 
@@ -78,7 +78,7 @@ Ignite UI for Angular Data Grid に列非表示機能があります。この機
 </div>
 ```
 
-列非表示 UI の columnsAreaMaxHeight プロパティを使用すると、列を含む領域の最大の高さを設定します。列が多すぎてコンテナにすべて収まらない場合、スクロールバーが表示されます。スクロールバーを使用して任意の列に移動できます。検索入力は上にピン固定されて、[すべて表示]/[すべて非表示] ボタンが下にピン固定されます。
+列非表示 UI の `columnsAreaMaxHeight` プロパティを使用すると、列を含む領域の最大の高さを設定します。列が多すぎてコンテナにすべて収まらない場合、スクロールバーが表示されます。スクロールバーを使用して任意の列に移動できます。検索入力は上にピン固定されて、[すべて表示]/[すべて非表示] ボタンが下にピン固定されます。
 
 ```typescript
 // columnHiding.component.ts
@@ -90,7 +90,7 @@ public ngAfterViewInit() {
 
 列非表示 UI の機能セットを使用するには、列非表示 UI コンポーネントへの参照を返すツールバーの `columnHidingUI` プロパティを使用します。相対する API にアクセスし、アプリケーションの要件に基づいて使用できます。
 
-このトピックのはじめにあるコードの結果を「列非表示デモ」セクションで確認できます。
+このトピックのはじめにあるコードの結果を「[列非表示デモ](#demo)」セクションで確認できます。
 
 ### カスタム列の非表示 UI
 
@@ -169,7 +169,7 @@ IgxColumnHidingComponent を作成します。アプリケーションでグリ�
 
 #### タイトルおよびフィルター プロンプトの追加
 
-列非表示コンポーネント機能を拡張するために `title` および `filterColumnsPrompt` プロパティを設定します。title は一番上に表示され、`filterColumnsPrompt` は列非表示 UI のフィルター入力に表示されるプロンプト テキストです。
+列非表示コンポーネント機能を拡張するために `title` および `filterColumnsPrompt` プロパティを設定します。`title` は一番上に表示され、`filterColumnsPrompt` は列非表示 UI のフィルター入力に表示されるプロンプト テキストです。
 
 ```html
 <!--columnHiding.component.html-->
@@ -183,7 +183,7 @@ IgxColumnHidingComponent を作成します。アプリケーションでグリ�
 
 #### 列の表示順序オプションの追加
 
-列非表示 UI で列の表示順序を選択する機能も追加します。このため、columnDisplayOrder プロパティを使用します。列挙型のプロパティで、以下のオプションがあります。
+列非表示 UI で列の表示順序を選択する機能も追加します。このため、`columnDisplayOrder` プロパティを使用します。列挙型のプロパティで、以下のオプションがあります。
 
 - **Alphabetical** (列をアルファベット順で並べ替え)
 - **DisplayOrder** (列をグリッドで表示される順序によって並べ替え)
@@ -262,7 +262,7 @@ public columnsOrder = ColumnDisplayOrder;
 
 ### API まとめ
 
-このトピックでは、グリッドのツールバーの定義済みの列非表示 UI の使用方法を説明し、別のコンポーネントとして定義する方法についても説明しました。その他の列順序から選択する機能を提供する UI を実装し、カスタム タイトルおよびフィルター プロンプト テキストを設定しました。IgxRadio ボタンのその他の Ignite UI for Angular コンポーネントも使用しています。
+このトピックでは、グリッドのツールバーの定義済みの列非表示 UI の使用方法を説明し、別のコンポーネントとして定義する方法についても説明しました。その他の列順序から選択する機能を提供する UI を実装し、カスタム タイトルおよびフィルター プロンプト テキストを設定しました。**IgxRadio** ボタンのその他の Ignite UI for Angular コンポーネントも使用しています。
 以下は、列非表示 UI のその他の API です。
 
 
@@ -271,7 +271,7 @@ public columnsOrder = ColumnDisplayOrder;
 | 名前 | 型 | 説明 |
 | :--- | :--- | :--- |
 | `columns` | Object Array | 操作されるグリッド列の配列。 |
-| `columnDisplayOrder` | ColumnDisplayOrder enumeration | 列がアルファベット順で並べ替えるか、グリッドの順序で表示されるかどうか。|
+| `columnDisplayOrder` | ColumnDisplayOrder 列挙体 | 列がアルファベット順で並べ替えるか、グリッドの順序で表示されるかどうか。|
 | `title` | string | 表示されるタイトル。 |
 | `filterColumnsPrompt` | string | フィルター入力に表示されるプロンプト。 |
 | `filterCriteria` | string | 列リストのフィルター値。 |
@@ -329,14 +329,14 @@ public columnsOrder = ColumnDisplayOrder;
 以下の出力は **IgxColumnHidingComponent** で使用できます。
 |名前|説明|
 |--- |--- |
-| `onColumnVisibilityChanged` | 列の表示状態を変更するときに発生されます。`{ column: any, newValue: boolean }` |
+| `onColumnVisibilityChanged` | 列の表示状態を変更するときに発生されます。Args: `{ column: any, newValue: boolean }` |
 
 <div class="divider"></div>
 
 以下の出力は **IgxGridComponent** で使用できます。
 |名前|説明|
 |--- |--- |
-| `onColumnVisibilityChanged` | 列の表示状態を変更するときに発生されます。`{ column: any, newValue: boolean }` |
+| `onColumnVisibilityChanged` | 列の表示状態を変更するときに発生されます。Args: `{ column: any, newValue: boolean }` |
 
 
 ### その他のリソース
