@@ -87,7 +87,7 @@ public ngAfterViewInit() {
 }
 ```
 
-列非表示 UI の機能セットを使用するには、列非表示 UI コンポーネントへの参照を返すツールバーの columnHidingUI プロパティを使用します。相対する API にアクセスし、アプリケーションの要件に基づいて使用できます。
+列非表示 UI の機能セットを使用するには、列非表示 UI コンポーネントへの参照を返すツールバーの `columnHidingUI` プロパティを使用します。相対する API にアクセスし、アプリケーションの要件に基づいて使用できます。
 
 このトピックのはじめにあるコードの結果を「列非表示デモ」セクションで確認できます。
 
@@ -111,7 +111,7 @@ import {
 export class AppModule {}
 ```
 
-IgxColumnHidingComponent を作成します。アプリケーションでグリッドの隣に配置します。これはツールバーの列非表示 UI と異なります。ツールバーの場合、コンポーネントはドロップダウンに含まれます。コンポーネントの columns プロパティをグリッドの列に設定し、更にカスタム スタイルも追加します。
+IgxColumnHidingComponent を作成します。アプリケーションでグリッドの隣に配置します。これはツールバーの列非表示 UI と異なります。ツールバーの場合、コンポーネントはドロップダウンに含まれます。コンポーネントの `columns` プロパティをグリッドの列に設定し、更にカスタム スタイルも追加します。
 
 ```html
 <!--columnHiding.component.html-->
@@ -168,13 +168,13 @@ IgxColumnHidingComponent を作成します。アプリケーションでグリ�
 
 #### タイトルおよびフィルター プロンプトの追加
 
-列非表示コンポーネント機能を拡張するために title および filterColumnsPrompt プロパティを設定します。title は一番上に表示され、filterColumnsPrompt は列非表示 UI のフィルター入力に表示されるプロンプト テキストです。
+列非表示コンポーネント機能を拡張するために `title` および `filterColumnsPrompt` プロパティを設定します。title は一番上に表示され、`filterColumnsPrompt` は列非表示 UI のフィルター入力に表示されるプロンプト テキストです。
 
 ```html
 <!--columnHiding.component.html-->
 
 <div class="columnHidingContainer">
-    <igx-column-hiding #columnHidingUI id="columnHidingUI" [columns]="grid.columns"
+    <igx-column-hiding #columnHidingUI [columns]="grid.columns"
                        title="Column Hiding" filterColumnsPrompt="Type here to search">
     </igx-column-hiding>
 </div>
@@ -205,7 +205,7 @@ import {
 export class AppModule {}
 ```
 
-ColumnDisplayOrder 列挙体と同じ型である enum プロパティを作成し、両方のラジオ ボタンの checked プロパティを条件にバインドして、click イベントを処理します。
+ColumnDisplayOrder 列挙体と同じ型である enum プロパティを作成し、両方のラジオ ボタンの **checked** プロパティを条件にバインドして、click イベントを処理します。
 
 ```typescript
 // columnHiding.component.ts
@@ -219,12 +219,12 @@ public columnsOrder = ColumnDisplayOrder;
 <div class="columnHidingContainer">
     ...
     <div class="columnsOrderOptionsContainer">
-        <igx-radio [checked]="columnHidingUI.columnDisplayOrder === columnsOrder.Alphabetical"
-                   (click)="columnHidingUI.columnDisplayOrder = columnsOrder.Alphabetical">
+        <igx-radio [checked]="columnHidingUI.columnDisplayOrder === 'Alphabetical'"
+                   (click)="columnHidingUI.columnDisplayOrder = 'Alphabetical'">
             Alphabetical order
         </igx-radio>
-        <igx-radio [checked]="columnHidingUI.columnDisplayOrder === columnsOrder.DisplayOrder"
-                   (click)="columnHidingUI.columnDisplayOrder = columnsOrder.DisplayOrder">
+        <igx-radio [checked]="columnHidingUI.columnDisplayOrder === 'DisplayOrder'"
+                   (click)="columnHidingUI.columnDisplayOrder = 'DisplayOrder'">
             Display order
         </igx-radio>
     </div>
