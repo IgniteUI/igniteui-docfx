@@ -2,6 +2,7 @@
 title: 列の非表示 - ネイティブ Angular | Ignite UI for Angular
 _description: Ignite UI for Angular 列非表示機能を使用すると、データ グリッドの定義済み UI で列を非表示/表示できます。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, ネイティブ Angular コンポーネント, Angular Data Grid コンポーネント, Angular Data Grid コントロール, Angular Grid コンポーネント, Angular Grid コントロール, Angular 高パフォーマンス Grid, Grid 列非表示, 列非表示, Angular Grid 列非表示, Angular 列非表示
+_language: ja
 ---
 
 ### グリッドの列非表示
