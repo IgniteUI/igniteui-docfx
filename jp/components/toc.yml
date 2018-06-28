@@ -35,7 +35,7 @@
     - name: 列のサイズ変更
       href: grid_column_resizing.md
       new: true
-    - name: Column hiding
+    - name: 列の非表示
       href: grid_column_hiding.md
       new: true
     - name: 選択
