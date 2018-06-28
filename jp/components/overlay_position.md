@@ -4,7 +4,7 @@ _description: オーバレイ サービスの IPositionStrategy インターフ�
 _language: ja
 ---
 
-# ポジション ストラテジー
+## ポジション ストラテジー
 
 ポジション ストラテジーは、IgxOverlayService のコンポーネントを表示する位置を決定する方法が 3 通りあります。
 
@@ -30,7 +30,7 @@ _language: ja
 
 *注*: HorizontalDirection = Center / VerticalDirection = Middle を使用している場合、要素を再配置を試みません。
 
-## 使用方法
+### 使用方法
 ターゲットとする既存ボタンに基づいて要素を配置し、開始点をボタンの下角または左角にします。
 ```typescript
 const positionSettings: PositionSettings = {
@@ -45,7 +45,7 @@ const strategy =  new ConnectedPositioningStrategy(positionSettings);
 strategy.position(contentWrapper, size);
 ```
 
-## 作業の開始
+### 作業の開始
 ポジション ストラテジーは、`overlay.show()` メソッドが呼ばれたときに `overlaySettings` パラメーターのプロパティとして渡されます。
 ```typescript
     // Initializing and using overlay settings
@@ -90,7 +90,7 @@ strategy.position(contentWrapper, size);
 import {AutoPositionStrategy, GlobalPositionStrategy, ConnectedPositioningStrategy } from './position/global-position-strategy';
 ```
 
-## API
+### API
 
 ##### メソッド
 | ポジション ストラテジー | 名前                                         | 説明                                     |
@@ -99,7 +99,7 @@ import {AutoPositionStrategy, GlobalPositionStrategy, ConnectedPositioningStrate
 | Connected         | `position(contentElement, size{})`           | 使用するポジション ストラテジーと渡されたサイズに基づいて要素を配置します。|
 | Auto              | `position(contentElement, size{}, document?)`| 使用するポジション ストラテジーと渡されたサイズに基づいて要素を配置します。|
 
-##### PositionSettings
+#### PositionSettings
 | 名前               | 型                        | 説明 |
 | :----------------- | :-------------------------- | :---------- |
 |target              | Point | HTMLElement         | 使用するポジション ストラテジーと渡されたサイズに基づいて要素を配置します。          |

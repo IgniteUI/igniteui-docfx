@@ -4,7 +4,7 @@ _description: オーバレイ サービスの IScrollStrategy インターフェ
 _language: ja
 ---
 
-# スクロール ストラテジー
+## スクロール ストラテジー
 
 スクロール ストラテジーは、IgxOverlayService でスクロールが処理される方法を決定する以下の 4 つがあります。
 1. **NoOperation** -  何もしません。
@@ -12,7 +12,7 @@ _language: ja
 3. **Close** - 許容値を使用して許容範囲を超えた場合にスクロールで展開したコンポーネントを閉じます。
 4. **Absolute** - すべてをスクロールします。
 
-## 使用方法
+### 使用方法
 
 ```typescript
 this.scrollStrategy.initialize(document, overlayService, id);
@@ -20,7 +20,7 @@ this.scrollStrategy.attach();
 this.scrollStrategy.detach();
 ```
 
-## 作業の開始
+### 作業の開始
 ポジション ストラテジーは、`overlay.show()` メソッドが呼ばれたときに `overlaySettings` パラメーターのプロパティとして渡されます。
 ```typescript
     // Initializing and using overlay settings
@@ -50,11 +50,11 @@ this.scrollStrategy.detach();
 import { NoOpScrollStrategy } from "./scroll/NoOpScrollStrategy";
 ```
 
-## API
+### API
 
-##### メソッド
+#### メソッド
 
-###### IScrollStrategy
+##### IScrollStrategy
 
 | 名前            | 説明                                                                     | パラメーター |
 |-----------------|---------------------------------------------------------------------------------|------------|
