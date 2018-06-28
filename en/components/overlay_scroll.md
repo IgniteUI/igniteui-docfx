@@ -3,7 +3,7 @@ title: Overlay Service - Scroll Strategies
 _description: Explanation and example about the Overlay Service's IScrollStrategy interface and the classes that implement it.
 ---
 
-# Scroll strategies
+## Scroll strategies
 
 Scroll strategies determines how the scrolling will be handled in the provided IgxOverlayService. There are four scroll strategies:
 1. **NoOperation** - does nothing. 
@@ -11,7 +11,7 @@ Scroll strategies determines how the scrolling will be handled in the provided I
 3. **Close** - uses a tolerance and closes an expanded component upon scrolling if the tolerance is exceeded.
 4. **Absolute** - scrolls everything.
 
-## Usage
+### Usage
 
 ```typescript
 this.scrollStrategy.initialize(document, overlayService, id);
@@ -19,7 +19,7 @@ this.scrollStrategy.attach();
 this.scrollStrategy.detach();
 ```
 
-## Getting Started
+### Getting Started
 The position strategy is passed as a property in the `overlaySettings` parameter when the `overlay.show()` method is called:
 ```typescript
     // Initializing and using overlay settings
@@ -49,11 +49,11 @@ To use the any of the scroll strategies import it like this:
 import { NoOpScrollStrategy } from "./scroll/NoOpScrollStrategy";
 ```
 
-## API
+### API
 
-##### Methods
+#### Methods
 
-###### IScrollStrategy
+##### IScrollStrategy
 
 | Name            | Description                                                                     | Parameters |
 |-----------------|---------------------------------------------------------------------------------|------------|
