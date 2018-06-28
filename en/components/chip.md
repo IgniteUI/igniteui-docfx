@@ -11,7 +11,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 #### Demo
 
 <div class="sample-container loading" style="height:625px">
-    <iframe id="chip-iframe" src='{environment:demosBaseUrl}/chip-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="chip-sample-iframe" src='{environment:demosBaseUrl}/chip-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
