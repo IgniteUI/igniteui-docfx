@@ -136,7 +136,7 @@
   href: switch.md
 - name: Radio & Radio Group
   href: radio_button.md
-  new: false
+  new: true
 - name: Label & Input
   href: label_input.md
 - name: Input Group
