@@ -27,7 +27,7 @@ Position strategies determine where to display the component in the provided Igx
     |:----------------|:--------------------------|:-------------------------|:-------------------------|:-------------------------|
     | new Point(0, 0) | HorizontalAlignment.Right | VerticalAlignment.Bottom | HorizontalAlignment.Left | VerticalAlignment.Bottom |
 
-*Note*: Will not try to reposition the element if the strategy is using  HorziontalDirection = Center / VericalDirection = Middle.
+*Note*: Will not try to reposition the element if the strategy is using  HorizontalDirection = Center / VerticalDirection = Middle.
 
 ## Usage
 Position an element based on an existing button as a target, so it's start point is the button's Bottom/Left corner.
