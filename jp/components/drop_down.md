@@ -47,13 +47,12 @@ export class AppModule {}
 
 ...
 import {
-    IgxDropDownModule,
-    IgxToggleModule
+    IgxDropDownModule
 } from 'igniteui-angular';
 
 @NgModule({
     ...
-    imports: [..., IgxDropDownModule, IgxToggleModule],
+    imports: [..., IgxDropDownModule],
 })
 export class AppModule {}
 ```　
