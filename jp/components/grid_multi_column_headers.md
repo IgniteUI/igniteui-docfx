@@ -6,7 +6,7 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 
 ## 複数列ヘッダー
 
-`igxGrid` supports `multi-column headers` which allows you to group columns by placing them under a common header. Every `column group` could be a representation of combinations between other groups or columns.
+`igxGrid` は、列ヘッダーの下に行を配置した行のグループ化が可能な `multi-column headers` をサポートします。各 `column group` は、その他のグループや列を組み合わせて表示できます。
 
 ## デモ
 
@@ -44,7 +44,7 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 </igx-grid>
 ```
 
-各 `igx-column-group` は、`moving`、`pinning`、`hidding` をサポートします。
+各 `igx-column-group` は、`moving`、`pinning`、`hiding` をサポートします。
 > [!NOTE]
 > 列セットと列グループがある場合、ピン固定は一番上の列にのみ可能です。ネストされた各 `column groups` または `columns` のピン固定はできません。<br />
 > `columns` と `column groups` 間の移動は、階層の同じレベルで同じ `group` の場合のみ可能です。<br />
@@ -65,23 +65,23 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 ### IgxColumnGroupComponent
 
 #### 入力
-| 名前 | タイプ | 説明 |
+| 名前 | 型 | 説明 |
 | :--- | :--- | :---|
 |`searchable`| boolean | 列が検索に含まれるかどうかを決定します。 false (デフォルトは true) に設定した場合、この列のセル値はグリッドの検索 API の結果に含まれません。|
 |`hidden`| boolean | 列の表示状態。 |
 |`movable`| boolean | 現在の `column group` が移動可能かどうかを決定します。 |
 
 #### Getters/Setters
-|名前|型|Getter|Setter|説明|
+|名前|型|ゲッター|セッター|説明|
 |--- |--- |--- |--- |--- |
-|`allChildren`| IgxColumnComponent[] | yes | no |  `column groups` を含むすべての子の `flatten` データを返します。|
-|`columnGroup`| boolean | yes | no | 現在の列が column group` かどうかを返します。|
-|`level`| number | yes | no | ヘッダー階層内の `column group` のレベルを返します。|
-|`parent`| IgxColumnGroupComponent|IgxColumnComponent | yes | no | ヘッダー階層内の `column group` のレベルを返します。|
-|`children`| IgxColumnComponent[] | yes | no | `column group` の直接の子を返します。 |
-|`topLevelParent`| IgxColumnGroupComponent | yes | no | `group` の最上位の親を返します。 |
-|`width`| string | yes | no | グループに含まれる子によって決定される現在の列グループの `width` を返します。 |
-|`pinned`| boolean | yes | yes | 現在の `column group` がピン固定されているかどうかを取得または設定します。 |
+|`allChildren`| IgxColumnComponent[] | はい | いいえ |  `column groups` を含むすべての子の `flatten` データを返します。|
+|`columnGroup`| boolean | はい | いいえ | 現在の列が column group` かどうかを返します。|
+|`level`| number | はい | いいえ | ヘッダー階層内の `column group` のレベルを返します。|
+|`parent`| IgxColumnGroupComponent|IgxColumnComponent | はい | いいえ | ヘッダー階層内の `column group` のレベルを返します。|
+|`children`| IgxColumnComponent[] | はい | いいえ | `column group` の直接の子を返します。 |
+|`topLevelParent`| IgxColumnGroupComponent | はい | いいえ | `group` の最上位の親を返します。 |
+|`width`| string | はい | いいえ | グループに含まれる子によって決定される現在の列グループの `width` を返します。 |
+|`pinned`| boolean | はい | はい | 現在の `column group` がピン固定されているかどうかを取得または設定します。 |
 
 ### Methods
 
@@ -108,5 +108,5 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **Forums** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
 * [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
