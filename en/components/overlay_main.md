@@ -10,19 +10,51 @@ The `IgxOverlayService` is fully integrated in the `IgxToggle` directive. When u
 </p>
 <div class="divider--half"></div>
 
-## Overlay Demo
-<p class="highlight">
-The below demo illustrates how the overlay service `overlaySettings` can be manipulated in order to alter the way in which the overlay element is shown.
-</p>
+## Usage
+
+### Getting Started
+
+To use the `IgxOverlayService` it needs to be imported in the component. `Inject` a reference to it in the components `constructor`:
+```typescript
+import { IgxOverlayService } from `igniteui-angular`;
+
+...
+
+export class MyOverlayComponent {
+    constructor(
+        @Inject(IgxOverlayService) private overlayService: IgxOverlayService
+    )
+}
+
+...
+```
+The `IgxOverlayService` can be used to dynamically display a `HTMLNode` or even an Angular Component by attaching it to the overlay DOM.
+
+
+### Demo - Dynamic attach - Component
+In the below demo, we can pass the IgxCard [demo](https://www.infragistics.com/products/ignite-ui-angular/angular/components/card.html#card-demo) through the overlay service `show()` method to dynamically attach it to the DOM in a modal container.
+
+
 <div class="sample-container loading" style="height: 600px">
-    <iframe id="overlay-sample-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/overlay-sample" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="overlay-sample-main-1-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/overlay-sample-main-1" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="overlay-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="overlay-sample-main-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz</button>
 </div>
 <div class="divider--half"></div>
 
-## Usage
+### Demo - Dynamic attach - Settings
+
+Using the `overlaySettings` parameter of the `show()` method, we can change how the content is shown - e.g. where the content is positioned, how the scroll should behave, is the container modal or not
+
+<div class="sample-container loading" style="height: 600px">
+    <iframe id="overlay-sample-main-2-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/overlay-sample-main-2" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="overlay-sample-main-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz</button>
+</div>
+<div class="divider--half"></div>
+
 
 If *no* `overlaySettings` are configured, the toggled element falls back to *default display settings*:
 ```typescript

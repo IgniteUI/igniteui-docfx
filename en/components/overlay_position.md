@@ -88,6 +88,31 @@ Import the desired position strategy if needed like:
 ```typescript
 import {AutoPositionStrategy, GlobalPositionStrategy, ConnectedPositioningStrategy } from './position/global-position-strategy';
 ```
+## Demos 
+
+### Horizontal and Vertical Direction
+Changing the horizontal and/or vertical direction of the positioning settings determined where the content will align itself. Depending on the positioning strategy chosen, the content will either align relative to the target's container (`AutoPositionStrategy` and `ConnectedPositioningStrategy`) or the body of the document (`GlobalPositioningStrategy`)
+
+<div class="sample-container loading" style="height: 600px">
+    <iframe id="overlay-position-sample-1-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/overlay-position-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="overlay-position-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz</button>
+</div>
+<div class="divider--half"></div>
+
+### Horizontal and Vertical Start Point
+Changing the horizontal and/or vertical start point of the positioning settings determines where the content will try to start from. Start point has effect only if the `target` passed in the `positionSettings` is an `HTMLElement` and works only for `AutoPositionStrategy` and `ConnectedPositioningStrategy`.
+In the demo below, the overlay element will position itself starting from the target element depending on the start point chosen. Directions are always `HorizontalAlignment.Right` and `VerticalAlignment.Bottom`:
+
+<div class="sample-container loading" style="height: 600px">
+    <iframe id="overlay-position-sample-2-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/overlay-position-sample-2" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="overlay-position-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz</button>
+</div>
+<div class="divider--half"></div>
+
 
 ## API
 

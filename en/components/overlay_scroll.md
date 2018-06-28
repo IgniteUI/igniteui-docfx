@@ -49,6 +49,31 @@ To use the any of the scroll strategies import it like this:
 import { NoOpScrollStrategy } from "./scroll/NoOpScrollStrategy";
 ```
 
+## Demos 
+
+### Scroll Strategies
+The scroll strategies can be passed through the `overlaySettings` object in order to determine how the overlay should handle scrolling.
+The demo below illustrates the difference between the separate `scrollStrategies`:
+<div class="sample-container loading" style="height: 600px">
+    <iframe id="overlay-scroll-sample-1-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/overlay-scroll-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="overlay-scroll-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz</button>
+</div>
+<div class="divider--half"></div>
+
+### Modal
+The `overlaySettings` object also allows a boolean property, `modal`, to be passed. This controls how the overlay will be display:
+If the `modal` property is `false`, the element will be attached to the DOM foreground but everything will still be active and interactable - e.g. scrolling, clicking, etc.
+If the `modal` property is `true`, the element will be attached to the DOM foreground and an overlay blocked will wrap behind it, stopping propagation of all events:
+
+<div class="sample-container loading" style="height: 600px">
+    <iframe id="overlay-scroll-sample-2-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/overlay-scroll-sample-2" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="overlay-scroll-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz</button>
+</div>
+<div class="divider--half"></div>
 ## API
 
 ##### Methods
