@@ -163,7 +163,7 @@ The chip can be focused using the `Tab` key or by clicking on them. Chips can be
 - Keyboard controls when the chip is focused:
 
   - <kbd>LEFT</kbd> - Focuses the chip on the left
-  - <kbd>RIGTH</kbd> - Focuses the chip on the right
+  - <kbd>RIGHT</kbd> - Focuses the chip on the right
   - <kbd>SPACE</kbd> - Toggles chip selection if it is selectable
   - <kbd>DELETE</kbd> - Fires the `onRemove` output so the chip deletion can be handled manually
   - <kbd>SHIFT</kbd> + <kbd>LEFT</kbd> - Moves the focused chip one position to the left
