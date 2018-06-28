@@ -8,7 +8,7 @@
     - name: 仮想化とパフォーマンス
       href: grid_virtualization.md
       new: false
-    - name: Editing
+    - name: 編集
       href: grid_editing.md
       new: true
     - name: ページング
