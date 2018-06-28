@@ -333,7 +333,7 @@ export class MyComponent implements OnInit {
 |グリッドの `width` が列幅に依存しない| すべての列の `width` でグリッド自体のスパンは決定しません。親コンテナーのディメンションまたは定義したグリッドの `width` で決定されます。|
 |親コンテナーでネストされた Grid | グリッドの `width` を設定せずに定義済みのディメンションで親コンテナーに配置した場合、グリッドがコンテナーに合わせてスパンします。|
 |Grid `OnPush` ChangeDetectionStrategy |グリッドで `ChangeDetectionStrategy.OnPush` を処理し、カスタム表示されたときにグリッドに発生した変更について通知します。|
-| 列には設定可能な最小幅があります。`displayDensity` オプションに基づき、<br/>"最小": 24px <br/> "小": 32px <br/> "標準 ": 48px があります。| 幅が最小幅未満の場合、描画要素には影響せずに対応する`displayDensity` に合わせて最小幅で描画します。水平方向の仮想化は予期しない動作を招く場合があるためサポートしていません。
+| 列には設定可能な最小幅があります。`displayDensity` オプションに基づき、<br/>"compact": 24px <br/> "cosy": 32px <br/> "comfortable": 48px があります。| 幅が最小幅未満の場合、描画要素には影響せずに対応する `displayDensity` に合わせて最小幅で描画します。水平方向の仮想化は予期しない動作を招く場合があるためサポートしていません。
 
 ## API
 
@@ -403,8 +403,7 @@ export class MyComponent implements OnInit {
 |`updateRow(value: any, rowIndex: number)`|行オブジェクトおよびデータ ソース レコードを渡された値で更新します。|
 |`updateCell(value: any, rowIndex: number, column: string)`|セル オブジェクトおよびデータ ソースのレコード フィールドを更新します。|
 |`filter(name: string, value: any, conditionOrExpressionTree?: IFilteringOperation, ignoreCase?: boolean)`|単一の列をフィルターします。フィルタリング処理はパラメーターとして使用されます。利用可能な[フィルター条件](#フィルター条件)を参照してください。|
-|`filter(name: string, value: any, conditionOrExpressionTree?: IFilteringExpressionsTree, ignoreCase?: boolean)`|単一の列をフィルターします。単一の列をフィルターします。
-フィルタリング式ツリーはパラメーターとして使用されます。|
+|`filter(name: string, value: any, conditionOrExpressionTree?: IFilteringExpressionsTree, ignoreCase?: boolean)`|単一の列をフィルターします。フィルタリング式ツリーはパラメーターとして使用されます。|
 |`filterGlobal(value: any, condition?, ignoreCase?)`|同じ条件でグリッドのすべての列をフィルターします。|
 |`filter(column: string, value: any, condition?, ignoreCase?: boolean)`|単一の列をフィルターします。利用可能な[フィルター条件](#フィルター条件)を参照してください。|
 |`filter(expressions: Array)`|グリッド列を提供したフィルター式の配列に基づいてフィルターします。|

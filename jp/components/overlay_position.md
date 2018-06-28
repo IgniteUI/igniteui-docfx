@@ -15,7 +15,7 @@ _language: ja
     | HorizontalAlignment.Center | VerticalAlignment.Middle |
 <br/>
 
-2. **Connected** - `positionSettings` を介して渡される方向と開始点に基づいて要素を配置します。開始ポイント (type `Point`) または配置ベースとして `HTMLElement` を渡すことができます。以下はデフォルトの設定です。
+2. **Connected** - `positionSettings` を介して渡される方向と開始点に基づいて要素を配置します。開始ポイント (`Point` 型) または配置ベースとして `HTMLElement` を渡すことができます。以下はデフォルトの設定です。
 
     | target          | horizontalDirection       |  verticalDirection       | horizontalStartPoint     | verticalStartPoint       |
     |:----------------|:--------------------------|:-------------------------|:-------------------------|:-------------------------|
@@ -28,7 +28,7 @@ _language: ja
     |:----------------|:--------------------------|:-------------------------|:-------------------------|:-------------------------|
     | new Point(0, 0) | HorizontalAlignment.Right | VerticalAlignment.Bottom | HorizontalAlignment.Left | VerticalAlignment.Bottom |
 
-*注*: HorziontalDirection = Center / VericalDirection = Middle を使用している場合、要素を再配置を試みません。
+*注*: HorizontalDirection = Center / VerticalDirection = Middle を使用している場合、要素を再配置を試みません。
 
 ## 使用方法
 ターゲットとする既存ボタンに基づいて要素を配置し、開始点をボタンの下角または左角にします。
@@ -99,7 +99,7 @@ import {AutoPositionStrategy, GlobalPositionStrategy, ConnectedPositioningStrate
 | Connected         | `position(contentElement, size{})`           | 使用するポジション ストラテジーと渡されたサイズに基づいて要素を配置します。|
 | Auto              | `position(contentElement, size{}, document?)`| 使用するポジション ストラテジーと渡されたサイズに基づいて要素を配置します。|
 
-###### PositionSettings
+##### PositionSettings
 | 名前               | 型                        | 説明 |
 | :----------------- | :-------------------------- | :---------- |
 |target              | Point | HTMLElement         | 使用するポジション ストラテジーと渡されたサイズに基づいて要素を配置します。          |
