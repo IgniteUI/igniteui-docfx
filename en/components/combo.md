@@ -30,7 +30,7 @@ Drop Down items are virtualized, which guarantees smooth work, even if the igx-c
 ## Usage
 The `IgxComboComponent` allows you to search and select items from the list. The combo uses the `IgxDropDownComponent` internally as a items container. To get started with the Ignite UI for Angular Combo, let's first import the **IgxComboModule** in our **app.module.ts** file:
 
-```ts
+```typescript
 // app.module.ts
 
 ...
@@ -78,7 +78,7 @@ Remote binding, defining `valueKey` and `displayKey`, and exposing `onDataPreLoa
 <igx-combo [data]="remoteData | async" (onDataPreLoad)="dataLoading($event)" [valueKey]="'ProductID'" [displayKey]="'ProductName'" ></igx-combo>
 ```
 
-```ts
+```typescript
 public ngOnInit() {
     this.remoteData = this.remoteService.remoteData;
 }
@@ -113,7 +113,7 @@ If we want to use a two-way data-binding, we could just use `ngModel` like this:
 <igx-combo #combo [(ngModel)]="values"></igx-combo>
 ```
 
-```ts
+```typescript
 @ViewChild('combo', { read: IgxComboComponent }) public combo: IgxComboComponent;
 get values() {
     return this.combo.selectedItems();
@@ -225,58 +225,25 @@ Defining add template:
 ### Integration with Template Driven and Reactive Forms
 
 Template Forms:
-```html
-<form #templateBased="ngForm" (ngSubmit)="onSubmitTemplateBased()">
-    <igx-combo #comboTemplate [(ngModel)]="valuesTemplate" name="comboTemplate"
-        [data]="towns" [displayKey]="'townName'" [valueKey]="'postCode'" [groupKey]="'province'"
-        [allowCustomValues]="true" placeholder="Town(s)" searchPlaceholder="Search town..." [width]="'100%'"></igx-combo>
-</form>
-```
 
-```ts
-@ViewChild('comboTemplate', { read: IgxComboComponent }) public comboTemplate: IgxComboComponent;
-
-get valuesTemplate() {
-    return this.comboTemplate.selectedItems();
-}
-set valuesTemplate(values: Array<any>) {
-    this.comboTemplate.selectItems(values);
-}
-
-onSubmitTemplateBased() {
-    console.log('template-driven form submitted');
-    console.log(this.reactiveForm);
-}
-```
+<div class="sample-container loading" style="height: 540px;">
+    <iframe id="input-group-sample-6-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/input-group-sample-6" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="input-group-sample-6-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
 
 
 Reactive Forms:
 
-```html
-<form [formGroup]="reactiveForm" (ngSubmit)="onSubmitReactive()">
-    <igx-combo #comboReactive formControlName="townCombo"
-        [data]="towns" [displayKey]="'townName'" [valueKey]="'postCode'" [groupKey]="'province'"
-        [allowCustomValues]="true" placeholder="Town(s)" searchPlaceholder="Search town..." [width]="'100%'"></igx-combo>
-</form>
-```
-
-```ts
-reactiveForm: FormGroup;
-
-constructor(fb: FormBuilder) {
-    this.reactiveForm = fb.group({
-        'firstName': new FormControl('', Validators.required),
-        'password': ['', Validators.required],
-        'townCombo': [{ value: [this.towns[0]], disabled: true }, Validators.required]
-    });
-}
-
-onSubmitReactive() {
-    console.log('model-based form submitted');
-    console.log(this.reactiveForm);
-}
-
-```
+<div class="sample-container loading" style="height: 540px;">
+    <iframe id="reactive-forms-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/reactive-forms" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="reactive-forms-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
 
 ## Cascading Scenario
 
@@ -329,6 +296,7 @@ When igxCombo is opened, allow custom values are enabled and add item button is 
 
 | Name                     | Description                                       | Type                        |
 |--------------------------|---------------------------------------------------|-----------------------------|
+|  `id`                    | combo id                                          | string                      |
 |  `data`                  | combo data source                                 | any                         |
 |  `value`                 | combo value                                       | string                      |
 |  `allowCustomValue`      | enable/disables combo custom value                | boolean                     |
@@ -348,6 +316,8 @@ When igxCombo is opened, allow custom values are enabled and add item button is 
 |  `disabled`              | defines whether the control is active or not      | boolean                     |
 |  `ariaLabelledBy`        | defines label ID related to combo                 | boolean                     |
 |  `type`                  | defines type of combo - "line", "box", "border", "search"                                        | string                      |
+|  `valid`                 | gets if control is valid, when used in a form     | boolean                     |
+
 
 ### Outputs
 <div class="divider--half"></div>
