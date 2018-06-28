@@ -42,7 +42,8 @@ Ignite UI for Angular Data Grid に列非表示機能があります。この機
 ### ツールバーの列非表示 UI
 
 定義済みの列非表示 UI はグリッドのツールバーで `IgxDropDownComponent` に配置されます。列非表示の UI をこのドロップダウンを使用して表示/非表示にできます。
-このため、グリッドの `showToolbar` および `columnHiding` プロパティを true に設定します。ツールバーが有効でない場合、`columnHiding` プロパティが有効かどうかは影響しません。ツールバーにタイトルを追加するには、`toolbarTitle` プロパティを設定し、グリッドのラッパーにカスタム スタイルを設定します。
+このため、グリッドの `showToolbar` および `columnHiding` プロパティを true に設定します。ツールバーが有効でない場合、`columnHiding` プロパティが有効かどうかは影響しません。
+ツールバーにタイトルを追加するには、`toolbarTitle` プロパティを設定し、グリッドのラッパーにカスタム スタイルを設定します。
 
 ```html
 <!--columnHiding.component.html-->
