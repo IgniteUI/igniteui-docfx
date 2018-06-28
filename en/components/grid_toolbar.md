@@ -139,6 +139,7 @@ The Grid Toolbar service has a few more APIs to explore, which are listed below.
 The following inputs are available on the **IgxGrid** component:
 | Name | Type | Description |
 | :--- | :--- | :--- |
+| `toolbar` | IgxGridToolbarComponent | A reference to the toolbar component. |
 | `showToolbar` | boolean | Show or hide the grid's toolbar. |
 | `toolbarTitle` | string | Sets the toolbar title. |
 | `columnHiding` | boolean | Show or hide the column hiding feature. |
@@ -152,6 +153,13 @@ The following inputs are available on the **IgxGrid** component:
 | `exportText` | string | Sets the textual content for the main export button. |
 | `exportExcelText` | string | Sets the textual content for the MS Excel export button. |
 | `exportCsvText` | string | Sets the textual content for the CSV export button. |
+
+<div class="divider"></div>
+
+The following inputs are available on the **IgxGridToolbarComponent** component:
+| Name | Type | Description |
+| :--- | :--- | :--- |
+| `dropDownsMaxHeight` | string | Sets or gets the height for the toolbar's drop down panels. For example: '100px' or '50%'. |
 
 <div class="divider"></div>
 
