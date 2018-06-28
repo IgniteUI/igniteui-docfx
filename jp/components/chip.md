@@ -36,7 +36,7 @@ Example of using `igxChip` with `igxChipArea`:
 
 #### Selection
 
-Selection is disabled by default, but can be enabled with an option called `selectable`. The selecting is done by clicking on the chip itself or either by focusing the chip either by using the `Tab` key and then pressing the `Space` key. An event `onSelection` is fired when the selection state of the `igxChip` changes. If a chip is already selected it can be deselected by pressing the `Space` key again while the chip is focused or by clicking on it.
+Selection is disabled by default, but can be enabled with an option called `selectable`. The selecting is done by clicking on the chip itself or either by focusing the chip by using the `Tab` key and then pressing the `Space` key. An event `onSelection` is fired when the selection state of the `igxChip` changes. If a chip is already selected it can be deselected by pressing the `Space` key again while the chip is focused or by clicking on it.
 
 ```html
 <igx-chips-area #chipsArea>
