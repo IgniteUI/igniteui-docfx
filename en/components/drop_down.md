@@ -46,13 +46,12 @@ To continue, include all needed modules and import them in the **app.module.ts**
 
 ...
 import {
-    IgxDropDownModule,
-    IgxToggleModule
+    IgxDropDownModule
 } from 'igniteui-angular';
 
 @NgModule({
     ...
-    imports: [..., IgxDropDownModule, IgxToggleModule],
+    imports: [..., IgxDropDownModule],
 })
 export class AppModule {}
 ```
