@@ -29,7 +29,7 @@ igx-combo はキーボード ナビゲーションを公開しており、アク
 ## 使用方法
 `IgxComboComponent` はリストの項目を検索して選択する機能があります。コンボは内部に項目コンテナーとして ` を使用します。Ignite UI for Angular Combo を初期化する前に **IgxComboModule** を **app.module.ts** ファイルにインポートします。
 
-```ts
+```typescript
 // app.module.ts
 
 ...
@@ -77,7 +77,7 @@ export class AppModule {}
 <igx-combo [data]="remoteData | async" (onDataPreLoad)="dataLoading($event)" [valueKey]="'ProductID'" [displayKey]="'ProductName'" ></igx-combo>
 ```
 
-```ts
+```typescript
 public ngOnInit() {
     this.remoteData = this.remoteService.remoteData;
 }
@@ -112,7 +112,7 @@ TwoWay データ バインディングを使用するには、 `ngModel` を以�
 <igx-combo #combo [(ngModel)]="values"></igx-combo>
 ```
 
-```ts
+```typescript
 @ViewChild('combo', { read: IgxComboComponent }) public combo: IgxComboComponent;
 get values() {
     return this.combo.selectedItems();
@@ -225,58 +225,24 @@ igx-combo コンポーネントの項目、ヘッダー、フッター、空の�
 
 Template Forms:
 
-```html
-<form #templateBased="ngForm" (ngSubmit)="onSubmitTemplateBased()">
-    <igx-combo #comboTemplate [(ngModel)]="valuesTemplate" name="comboTemplate"
-        [data]="towns" [displayKey]="'townName'" [valueKey]="'postCode'" [groupKey]="'province'"
-        [allowCustomValues]="true" placeholder="Town(s)" searchPlaceholder="Search town..." [width]="'100%'"></igx-combo>
-</form>
-```
-
-```ts
-@ViewChild('comboTemplate', { read: IgxComboComponent }) public comboTemplate: IgxComboComponent;
-
-get valuesTemplate() {
-    return this.comboTemplate.selectedItems();
-}
-set valuesTemplate(values: Array<any>) {
-    this.comboTemplate.selectItems(values);
-}
-
-onSubmitTemplateBased() {
-    console.log('template-driven form submitted');
-    console.log(this.reactiveForm);
-}
-```
+<div class="sample-container loading" style="height: 540px;">
+    <iframe id="input-group-sample-6-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/input-group-sample-6" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="input-group-sample-6-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
 
 
 Reactive Forms:
 
-```html
-<form [formGroup]="reactiveForm" (ngSubmit)="onSubmitReactive()">
-    <igx-combo #comboReactive formControlName="townCombo"
-        [data]="towns" [displayKey]="'townName'" [valueKey]="'postCode'" [groupKey]="'province'"
-        [allowCustomValues]="true" placeholder="Town(s)" searchPlaceholder="Search town..." [width]="'100%'"></igx-combo>
-</form>
-```
-
-```ts
-reactiveForm: FormGroup;
-
-constructor(fb: FormBuilder) {
-    this.reactiveForm = fb.group({
-        'firstName': new FormControl('', Validators.required),
-        'password': ['', Validators.required],
-        'townCombo': [{ value: [this.towns[0]], disabled: true }, Validators.required]
-    });
-}
-
-onSubmitReactive() {
-    console.log('model-based form submitted');
-    console.log(this.reactiveForm);
-}
-
-```
+<div class="sample-container loading" style="height: 540px;">
+    <iframe id="reactive-forms-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/reactive-forms" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="reactive-forms-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
 
 ## カスケード シナリオ
 
@@ -329,6 +295,7 @@ igxCombo が開いて、カスタム値が有効で、「項目の追加」ボ�
 
 | 説明                     　| 説明                                   　　　　　　　　　   | 型　　　                       |
 |--------------------------|---------------------------------------------------|-----------------------------|
+|  `id`                    | combo id                                          | string                      |
 |  `data`                  | コンボのデータ ソース                                      | any                        |
 |  `value`                 | コンボの値                                            | string                      |
 |  `allowCustomValue`      | コンボのカスタム値を有効/無効にします。                          | boolean                     |
@@ -338,7 +305,7 @@ igxCombo が開いて、カスタム値が有効で、「項目の追加」ボ�
 |  `virtualizationState`   | 仮想化されたデータの現在の状態を定義します。`startIndex` および `chunkSize` を含みます。 | `IForOfState`                |
 |  `totalItemCount`        | リモート サービスを使用する場合、仮想データ項目の合計数。              | number                      |
 |  `width `                | コンボの幅を定義します。                                    | string                      |
-|  `heigth`                | コンボの高さを定義します。                                   | string                      |
+|  `height`                | コンボの高さを定義します。                                   | string                      |
 |  `itemsMaxHeight `       | ドロップダウンの高さを定義します。                               | string                      |
 |  `itemsMaxWidth `        | ドロップダウンの幅を定義します。                                | string                      |
 |  `itemHeight `           | ドロップダウン項目の高さを定義します。                            | string                      |
@@ -348,6 +315,7 @@ igxCombo が開いて、カスタム値が有効で、「項目の追加」ボ�
 |  `disabled`              | コントロールがアクティブかどうかを定義します。                         | boolean                     |
 |  `ariaLabelledBy`        | コンボに相対するラベル ID を定義します。                         | boolean                     |
 |  `type`                  | コンボの型 ("line"、"box"、"border"、または "search" ) を定義します。| string                   |
+|  `valid`                 | gets if control is valid, when used in a form     | boolean                     |
 
 ### 出力
 <div class="divider--half"></div>
