@@ -36,7 +36,7 @@ Example of using `igxChip` with `igxChipArea`:
 
 #### Selection
 
-Selection is disabled by default, but can be enabled with an option called `selectable`. The selecting is done by clicking on the chip itself or by focusing the chip either by using the `Tab` key and then pressing the `Space` key. An event `onSelection` is fired when the selection state of the `igxChip` changes. If a chip is already selected it can be deselected by pressing the `Space` key again while the chip is focused.
+Selection is disabled by default, but can be enabled with an option called `selectable`. The selecting is done by clicking on the chip itself or either by focusing the chip either by using the `Tab` key and then pressing the `Space` key. An event `onSelection` is fired when the selection state of the `igxChip` changes. If a chip is already selected it can be deselected by pressing the `Space` key again while the chip is focused or by clicking on it.
 
 ```html
 <igx-chips-area #chipsArea>
@@ -69,7 +69,7 @@ The `remove button` is part of the chip as well. You can control the remove butt
 ```ts
 public ngOnInit() {
     chipsArea.forEach((chip) => {
-        column.removable = true;
+        chip.removable = true;
     });
 }
 
@@ -77,7 +77,7 @@ public chipRemoved(event) {
     this.chipList = this.chipList.filter((item) => {
         return item.id !== event.owner.id;
     });
-    this.chipsArea.cdr.detectChanges();
+    this.cdr.detectChanges();
 }
 ```
 
@@ -96,7 +96,7 @@ The chip can be dragged by the end-user in order to change it's position. The mo
 ```ts
 public ngOnInit() {
     chipArea.forEach((chip) => {
-        column.draggable = true;
+        chip.draggable = true;
     });
 }
 
