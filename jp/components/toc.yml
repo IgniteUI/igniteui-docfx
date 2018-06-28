@@ -55,7 +55,7 @@
       new: true
 - name: List View
   href: list.md
-- name: コンボ
+- name: Combo
   href: combo.md
   new: true
 - name: チャート

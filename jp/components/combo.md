@@ -5,12 +5,12 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 _language: ja
 ---
 
-## コンボ
+## Combo
 <p class="highlight">
 igx-combo コンポーネントは、基本 HTML input 要素、select 要素、および IgniteUI for Angular igx-drop-down コンポーネントの機能を組み合わされています。
 Combo コンポーネントは、フィルタリング、複数の項目の選択、グループ化、ドロップダウン リストにカスタム値の追加などの機能を提供します。項目、ヘッダー、フッターなどのコンポーネントの領域をカスタマイズするためにカスタム テンプレートを設定できます。Combo コンポーネントは Template Driven および Reactive Forms と統合されます。
 igx-combo はキーボード ナビゲーションを公開しており、アクセシビリティ規格にも対応しています。
-igx-combo はキーボード ナビゲーションを公開しており、アクセシビリティ規格にも対応しています。
+ドロップダウン項目は仮想化されます。igx-combo が大量の項目を持つデータ ソースにバインドしてもスクロールはスムーズになります。
 </p>
 <div class="divider"></div>
 
@@ -106,7 +106,7 @@ public dataLoading(evt) {
 
 ### 値バインディング
 
-TwoWay データ バインディングを使用するには、 `ngModule` を以下のように使用します。
+TwoWay データ バインディングを使用するには、 `ngModel` を以下のように使用します。
 
 ```html
 <igx-combo #combo [(ngModel)]="values"></igx-combo>
@@ -128,7 +128,7 @@ set values(newValues: Array<any>) {
 コンボのフィルタリング機能はデフォルトで有効にされます。ただし、以下のコードによって無効にできます。
 
 ```html
-<igx-combo [filaterable]="false"></igx-combo>
+<igx-combo [filterable]="false"></igx-combo>
 ```
 
 <div class="divider--half"></div>
@@ -137,6 +137,7 @@ set values(newValues: Array<any>) {
 
 ### カスタム値
 カスタム値の有効化は、コンボのインターフェイスからリストに含まらない項目の追加を許可します。
+
 ```html
 <igx-combo [allowCustomValues]="true"></igx-combo>
 ```
@@ -165,6 +166,7 @@ set values(newValues: Array<any>) {
 igx-combo コンポーネントの項目、ヘッダー、フッター、空のリスト、および追加ボタンなどの領域にカスタム テンプレートを定義できます。以下のテンプレートの定義で、以下の定義済み名前を使用して参照します。
 
 項目テンプレートの定義:
+
 ```html
 <igx-combo>
 	<ng-template #itemTemplate let-display let-key="valueKey">
@@ -222,6 +224,7 @@ igx-combo コンポーネントの項目、ヘッダー、フッター、空の�
 ### Template Driven および Reactive Forms との統合
 
 Template Forms:
+
 ```html
 <form #templateBased="ngForm" (ngSubmit)="onSubmitTemplateBased()">
     <igx-combo #comboTemplate [(ngModel)]="valuesTemplate" name="comboTemplate"
@@ -384,5 +387,5 @@ igxCombo が開いて、カスタム値が有効で、「項目の追加」ボ�
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **Forums** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
 * [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
