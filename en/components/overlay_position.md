@@ -3,7 +3,7 @@ title: Overlay Service - Positioning Strategies
 _description: Explanation and example about the Overlay Service's IPositionStrategy interface and the classes that implement it.
 ---
 
-# Position strategies
+## Position strategies
 
 Position strategies determine where to display the component in the provided IgxOverlayService. There are three position strategies:
 
@@ -27,9 +27,9 @@ Position strategies determine where to display the component in the provided Igx
     |:----------------|:--------------------------|:-------------------------|:-------------------------|:-------------------------|
     | new Point(0, 0) | HorizontalAlignment.Right | VerticalAlignment.Bottom | HorizontalAlignment.Left | VerticalAlignment.Bottom |
 
-*Note*: Will not try to reposition the element if the strategy is using  HorziontalDirection = Center / VericalDirection = Middle.
+*Note*: Will not try to reposition the element if the strategy is using  HorizontalDirection = Center / VerticalDirection = Middle.
 
-## Usage
+### Usage
 Position an element based on an existing button as a target, so it's start point is the button's Bottom/Left corner.
 ```typescript
 const positionSettings: PositionSettings = {
@@ -44,7 +44,7 @@ const strategy =  new ConnectedPositioningStrategy(positionSettings);
 strategy.position(contentWrapper, size);
 ```
 
-## Getting Started
+### Getting Started
 The position strategy is passed as a property in the `overlaySettings` parameter when the `overlay.show()` method is called:
 ```typescript
     // Initializing and using overlay settings
@@ -89,7 +89,7 @@ Import the desired position strategy if needed like:
 import {AutoPositionStrategy, GlobalPositionStrategy, ConnectedPositioningStrategy } from './position/global-position-strategy';
 ```
 
-## API
+### API
 
 ##### Methods
 | Position Strategy | Name                                         | Description                                     |
@@ -98,7 +98,7 @@ import {AutoPositionStrategy, GlobalPositionStrategy, ConnectedPositioningStrate
 | Connected         | `position(contentElement, size{})`           | Positions the element, based on the position strategy used and the size passed in.|
 | Auto              | `position(contentElement, size{}, document?)`| Positions the element, based on the position strategy used and the size passed in.|
 
-###### PositionSettings
+##### PositionSettings
 | Name               | Type                        | Description |
 | :----------------- | :-------------------------- | :---------- |
 |target              | Point | HTMLElement         | Attaching target for the component to show          |

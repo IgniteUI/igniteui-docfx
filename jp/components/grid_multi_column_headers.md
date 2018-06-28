@@ -1,24 +1,24 @@
 ---
-title: Column Group Component - Native Angular | Ignite UI for Angular
-_description: Multi-column headers allow grouping columns by placing them under a common header. Every column group could be a representation of combination between  other groups or columns.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Data Grid component, Angular Data Grid control, Native Angular Components, Angular Grid component, Angular Grid control, Angular High Performance Grid, Multi Column Headers, Deferred Multi Column Headers, Grid Multi Column Headers, Angular Grid Multi Column Headers, Angular column
+title: Column Group コンポーネント - ネイティブ Angular | Ignite UI for Angular
+_description: 複数列ヘッダーは、共通ヘッダーの下に配置して列をグループ化できます。各列グループにその他のグループや列を組み合わせて表示できます。
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular データグリッド コンポーネント, Angular データグリッド コントロール, ネイティブ Angular コンポーネント, Angular Grid コンポーネント, Angular Grid コントロール, Angular 高パフォーマンス Grid, 複数列ヘッダー, 遅延複数列ヘッダー, グリッド複数列ヘッダー, Angular グリッド複数列ヘッダー, Angular 列
 ---
 
-## Multi Column Headers
+## 複数列ヘッダー
 
-`igxGrid` supports `multi-column headers` which allows you to group columns by placing them under a common header. Every `column group` could be a representation of combinations between other groups or columns.
+`igxGrid` は、列ヘッダーの下に行を配置した行のグループ化が可能な `multi-column headers` をサポートします。各 `column group` は、その他のグループや列を組み合わせて表示できます。
 
-## Demo
+## デモ
 
 <div class="sample-container loading" style="height:550px">
     <iframe id="grid-multi-column-headers-iframe" src='{environment:demosBaseUrl}/multi-column-headers' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="grid-multi-column-headers-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="grid-multi-column-headers-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
 </div>
 
-The declaration of `Multi column header` could be achieved by wrapping a set of columns into `igx-column-group` component with `header` title passed.
+`Multi column header` の宣言は列セットを `igx-column-group` コンポーネントに `header` タイトルを渡してラップします。
 
 ```html
 <igx-grid [data]="data" height="600px">
@@ -30,7 +30,7 @@ The declaration of `Multi column header` could be achieved by wrapping a set of 
 </igx-grid>
 ```
 
-For achieving `n-th` level of nested headers, the declaration above should be followed. So by nesting `igx-column-group` leads to the desired result.
+ネスト ヘッダーの `n-th` レベルは、上記の宣言に従います。つまり `igx-column-group` をネストします。
 
 ```html
 <igx-grid [data]="data" height="600px">
@@ -44,11 +44,11 @@ For achieving `n-th` level of nested headers, the declaration above should be fo
 </igx-grid>
 ```
 
-Every `igx-column-group` supports `moving`, `pinning` and `hidding`.
+各 `igx-column-group` は、`moving`、`pinning`、`hiding` をサポートします。
 > [!NOTE]
-> When there is a set of columns and column groups, pinning works only for top level column parents. More specifically pinning per nested `column groups` or `columns` is not allowed. <br />
-> Moving between `columns` and `column groups` is allowed only when they are at the same level in the hierarchy and both are in the same `group`. <br />
-> When `columns/column-groups` are not wrapped by current `group` which means they are **top level** `columns`, moving is allowed between whole visible columns.
+> 列セットと列グループがある場合、ピン固定は一番上の列にのみ可能です。ネストされた各 `column groups` または `columns` のピン固定はできません。<br />
+> `columns` と `column groups` 間の移動は、階層の同じレベルで同じ `group` の場合のみ可能です。<br />
+> `columns/column-groups` が現在の `group` でラップされていない場合 ( **最上位** の `columns` の場合、移動は表示列間のみ可能です。
 
 ```html
 <igx-grid [data]="data" height="600px">
@@ -61,52 +61,52 @@ Every `igx-column-group` supports `moving`, `pinning` and `hidding`.
 </igx-grid>
 ```
 
-## API Summary
+## API まとめ
 ### IgxColumnGroupComponent
 
-#### Inputs
-| Name | Type | Description |
+#### 入力
+| 名前 | 型 | 説明 |
 | :--- | :--- | :---|
-|`searchable`| boolean | Determines whether the column is included in the search. If set to false, the cell values for this column will not be included in the results of the search API of the grid (defaults to true). |
-|`hidden`| boolean | Visibility of the column. |
-|`movable`| boolean | Determins whether current `column group` is movable. |
+|`searchable`| boolean | 列が検索に含まれるかどうかを決定します。 false (デフォルトは true) に設定した場合、この列のセル値はグリッドの検索 API の結果に含まれません。|
+|`hidden`| boolean | 列の表示状態。 |
+|`movable`| boolean | 現在の `column group` が移動可能かどうかを決定します。 |
 
 #### Getters/Setters
-|Name|Type|Getter|Setter|Description|
+|名前|型|ゲッター|セッター|説明|
 |--- |--- |--- |--- |--- |
-|`allChildren`| IgxColumnComponent[] | yes | no | Returns `flatten` data of all children including the `column groups` too.|
-|`columnGroup`| boolean | yes | no | Returns whether current column is `column group`.|
-|`level`| number | yes | no | Returns the level of the `column group` positioned within the headers hierarchy.|
-|`parent`| IgxColumnGroupComponent|IgxColumnComponent | yes | no | Returns the direct parent of the `column group`.|
-|`children`| IgxColumnComponent[] | yes | no | Returns the direct children of the `column group`. |
-|`topLevelParent`| IgxColumnGroupComponent | yes | no | Returns the top level parent of the `group`. |
-|`width`| string | yes | no | Returns the `width` of current `column group` determined by the children it contains. |
-|`pinned`| boolean | yes | yes | Get/Sets whether current `column group` is pinned. |
+|`allChildren`| IgxColumnComponent[] | はい | いいえ |  `column groups` を含むすべての子の `flatten` データを返します。|
+|`columnGroup`| boolean | はい | いいえ | 現在の列が column group` かどうかを返します。|
+|`level`| number | はい | いいえ | ヘッダー階層内の `column group` のレベルを返します。|
+|`parent`| IgxColumnGroupComponent|IgxColumnComponent | はい | いいえ | ヘッダー階層内の `column group` のレベルを返します。|
+|`children`| IgxColumnComponent[] | はい | いいえ | `column group` の直接の子を返します。 |
+|`topLevelParent`| IgxColumnGroupComponent | はい | いいえ | `group` の最上位の親を返します。 |
+|`width`| string | はい | いいえ | グループに含まれる子によって決定される現在の列グループの `width` を返します。 |
+|`pinned`| boolean | はい | はい | 現在の `column group` がピン固定されているかどうかを取得または設定します。 |
 
 ### Methods
 
-|Name|Return Type|Description|
+|名前|戻り値の型|説明|
 |--- |--- |--- |
-|`pin(index?): boolean`|boolean|Pins the column. Returns if the operation is successful.|
-|`unpin(index?): boolean`|boolean|Unpins the column. Returns if the operation is successful.|
+|`pin(index?): boolean`|boolean|列をピン固定します。操作が成功したかどうかを返します。|
+|`unpin(index?): boolean`|boolean|列のピン固定を解除します。操作が成功したかどうかを返します。|
 
 <div class="divider--half"></div>
 
-### Additional Resources
+### その他のリソース
 <div class="divider--half"></div>
 
-* [Grid overview](grid.md)
-* [Virtualization and Performance](grid_virtualization.md)
-* [Paging](grid_paging.md)
-* [Filtering](grid_filtering.md)
-* [Sorting](grid_sorting.md)
-* [Summaries](grid_summaries.md)
-* [Column Resizing](grid_column_resizing.md)
-* [Selection](grid_selection.md)
-* [Group by](grid_groupby.md)
+* [Grid の概要](grid.md)
+* [仮想化とパフォーマンス](grid_virtualization.md)
+* [ページング](grid_paging.md)
+* [フィルタリング](grid_filtering.md)
+* [並べ替え](grid_sorting.md)
+* [集計](grid_summaries.md)
+* [列のサイズ変更](grid_column_resizing.md)
+* [選択](grid_selection.md)
+* [グループ化](grid_groupby.md)
 
 <div class="divider--half"></div>
-Our community is active and always welcoming to new ideas.
+コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

@@ -1,52 +1,52 @@
 ---
-title: Grid Editing - Native Angular | Ignite UI for Angular
-_description: The Ignite UI for Angular Data Grid control provides default cell templates for editable columns which are based on the data type of the column.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Component, Angular Grid, Angular Data Grid component, Angular Data Grid control, Angular Grid component, Angular Grid control, Angular High Performance Grid, Cell Editing
+title: Grid 編集 - ネイティブ Angular | Ignite UI for Angular
+_description: Ignite UI for Angular Data Grid コントロールは、列のデータ型に基づいて編集可能な列にデフォルト セル テンプレートを提供します。
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, ネイティブ Angular コンポーネント, Angular Grid, Angular Data Grid コンポーネント, Angular Data Grid コントロール, Angular Grid コンポーネント, Angular Grid コントロール, Angular 高パフォーマンス グリッド, セル編集
 ---
 
-### Grid Editing
+### Grid 編集
 
-The Grid component in Ignite UI for Angular provides you a default cell templates for editable columns which are based on the data type of the column. In addition you can define your own custom templates for editable columns and override default behaviour for commiting and discarding changes in the cell value .
+Ignite UI for Angular の Grid コンポーネントは、列のデータ型に基づいて編集可能な列にデフォルト セル テンプレートを提供します。更に編集可能な列にカスタムテンプレートを定義でき、セル値の変更の確定や破棄でデフォルトの動作をオーバーライドできます。
 
-#### Demo
+#### デモ
 
 <div class="sample-container loading" style="height:650px">
     <iframe id="grid-summary-sample-iframe" src='{environment:demosBaseUrl}/grid-editing' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="grid-editing-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="grid-editing-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
 </div>
 <div class="divider--half"></div>
 
-In order to be able to enter edit mode for specific cell, you should first set the column to be **editable**. If you want to use a data type specific *edit templates*, you should specify the column **dataType** property. So let's now see what are the default templates for each type:
+特定のセルで編集モードに入るには、最初に列を**編集可能**にする必要があります。データ型固有の編集テンプレートを使用する場合は、列 **dataType** プロパティを指定してください。以下は各型のデフォルト テンプレートです。
 
- - For `string` data type, default template is using **igxInput**
- - For `number` data type, default template is using **igxInput type="number"**, so if you try to update cell to a value which can not be parsed to a number your change is going to be discarded, and the value in the cell will be set to **0**.
- - For `date` data type, default template is using **igx-datePicker**
- - For `boolean` data type, default template is using **igx-checkbox**
+ - `string` データ型のデフォルトのテンプレートは **igxInput** を使用します。
+ - `number` データ型のデフォルト テンプレートは、**igxInput type="number"** を使用し、セルを数値に解析できない値に更新した場合は変更が破棄され、セル値は **0** に設定されます。
+ - `date`データ型のデフォルトのテンプレートは  **igx-datePicker** を使用します。
+ - `boolean` データ型のデフォルトのテンプレートは **igx-checkbox** を使用します。
 
-You can enter edit mode for specific cell, when an editable cell is focused in one of the following ways:
- - on double click;
- - on single click - Single click will enter edit mode only if the previously selected cell was in edit mode and currently selected cell is editable. If the previously selected cell was not in edit mode, single click will select the cell without entering edit mode;
- - on key press `Enter`;
- - on key press `F2`;
+以下のいずれかの方法でセルがフォーカスされている場合、編集モードに入ることができます。
+ - ダブル クリック
+ - シングル クリック - 以前選択したセルが編集モードで現在選択したセルが編集可能な場合のみシングル クリックで編集モードに入ります。以前選択したセルが編集モードでない場合、シングルクリックは編集モードに入らずにセルが選択されるのみです。;
+ - `Enter` キーの押下;
+ - `F2` キーの押下;
 
-You can exit edit mode **without commiting** the changes in one of the following ways:
- - on key press `Escape`;
- - when you perform *sorting*, *filtering*, *searching* and *hiding* operations;
+以下のいずれかの方法で変更を**確定せずに**編集モードを終了します。
+ - `Escape` キーの押下;
+ - 並べ替え、フィルタリング、検索、非表示の操作時
 
-You can exit edit mode and **commit** the changes in one of the following ways:
- - on key press `Enter`;
- - on key press `F2`;
- - on key press `Tab`;
- - on single click to another cell - when you click on another cell in the grid, your changes will be submitted.
- - when you perform 'moving' and 'pinning' operations;
+編集モードを終了して以下のいずれかの方法で変更を**確定**します。  
+ - `Enter` キーの押下;
+ - `F2` キーの押下;
+ - `Tab` キーの押下;
+ - その他のセルをシングル クリック - グリッドのその他のセルをクリックした際に変更が提出されます。
+ - 'moving' および 'pinning' 操作時
 
 > [!NOTE]
-> The cell remains in edit mode when you scroll vertically or horizontally, click outside the grid, resize column, pin column or go to another page.
+> セルは、水平方向または垂直方向へスクロール、グリッド以外をクリック、列のサイズ変更、列のピン固定、またはその他のページへ移動した場合も編集モードのままです。
 
-You can also modify the cell value through the IgxGrid API:
+IgxGrid API でセル値を変更することもできます。
 
 ```typescript
 ...
@@ -55,9 +55,9 @@ You can also modify the cell value through the IgxGrid API:
     }
 ...
 ```
-Please notice that if the cell you want to update is outside grid's display container the new value will not be submitted.
+更新したいセルがグリッド表示コンテナ以外の場合、新しい値は提出されません。
 
-Another way to update cell is directly through `update` method of IgxCellComponent:
+セル更新のその他の方法として IgxCellComponent の `update` メソッドがあります。
 
 ```typescript
 ...
@@ -67,18 +67,18 @@ Another way to update cell is directly through `update` method of IgxCellCompone
     }
 ...
 ```
-If you want to define a custom template which will be applied when the cell is edit mode, you can see the documentation for [Grid Columns configuration](grid.md#columns-configuration).
+セルが編集モードの際に適用するカスタム テンプレートを定義する方法については、[Grid 列の構成](grid.md#columns-configuration)をご覧ください。
 
-### CRUD operations
+### CRUD 操作
 
 > [!NOTE]
-> Please keep in mind that when you perform some **CRUD operation** all of the applied pipes like **filtering**, **sorting** and **grouping** will be re-applied and your view will be automatically updated.
+> **CRUD 操作**を実行する場合、**フィルタリング**、**並べ替え**、**グループ化**など適用したすべてのパイプは再度適用されて表示が自動的に更新されます。
 
-The `IgxGridComponent` provides a straigtforward API for basic CRUD operations.
+`IgxGridComponent` は基本的な CRUD 操作のための簡易な API を提供します。
 
-#### Adding a new record
+#### 新しいレコードの追加
 
-The grid component exposes the `addRow` method which will add the provided data to the data source itself.
+グリッド コンポーネントは、提供したデータをデータ ソースに追加する `addRow` メソッドを公開します。
 
 ```typescript
 // Adding a new record
@@ -87,9 +87,9 @@ const record = this.getNewRecord();
 this.grid.addRow(record);
 ```
 
-#### Updating data in the grid
+#### グリッド データの更新
 
-Updating data in the grid is achieved through `updateRow` and `updateCell` methods. You can also directly update a cell value through its `update` method.
+グリッドでデータの更新は `updateRow` および `updateCell` メソッドを使用して実行されます。セル値を直接更新するには `update` メソッドを使用できます。
 
 ```typescript
 // Updating the whole row
@@ -102,28 +102,28 @@ this.grid.updateCell(newData, this.selectedCell.rowIndex, this.selectedCell.colu
 this.selectedCell.update(newData);
 ```
 
-#### Deleting data from the grid
+#### グリッド データの削除
 
 ```typescript
 this.grid.deleteRow(this.selectedCell.rowIndex);
 ```
-These can be wired to user interactions, not necessarily related to the **igx-grid**; for example, a button click:
+**igx-grid**　に関係なく、ボタンのクリックなどのユーザー インタラクションに接続できます。
 ```html
 <button igxButton igxRipple (click)="deleteRow($event)">Delete Row</button>
 ```
 
 <div class="divider--half"></div>
 
-### Additional Resources
+### その他のリソース
 <div class="divider--half"></div>
 
-* [Grid overview](grid.md)
-* [Virtualization and Performance](grid_virtualization.md)
-* [Paging](grid_paging.md)
-* [Filtering](grid_filtering.md)
-* [Sorting](grid_sorting.md)
-* [Summaries](grid_summaries.md)
-* [Column Pinning](grid_column_pinning.md)
-* [Column Resizing](grid_column_resizing.md)
-* [Selection](grid_selection.md)
-* [Searching](grid_search.md)
+* [Grid の概要](grid.md)
+* [仮想化とパフォーマンス](grid_virtualization.md)
+* [ページング](grid_paging.md)
+* [フィルタリング](grid_filtering.md)
+* [並べ替え](grid_sorting.md)
+* [集計](grid_summaries.md)
+* [列のピン固定](grid_column_pinning.md)
+* [列のサイズ変更](grid_column_resizing.md)
+* [選択](grid_selection.md)
+* [検索](grid_search.md)

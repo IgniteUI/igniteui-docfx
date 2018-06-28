@@ -8,7 +8,7 @@
     - name: 仮想化とパフォーマンス
       href: grid_virtualization.md
       new: false
-    - name: Editing
+    - name: 編集
       href: grid_editing.md
       new: true
     - name: ページング
@@ -34,7 +34,7 @@
       new: false
     - name: 列のサイズ変更
       href: grid_column_resizing.md
-      new: true
+      new: false
     - name: 列の非表示
       href: grid_column_hiding.md
       new: true
@@ -136,6 +136,7 @@
   href: switch.md
 - name: Radio および Radio Group
   href: radio_button.md
+  new: true
 - name: Label および Input
   href: label_input.md
 - name: Input Group
@@ -168,10 +169,10 @@
   href: overlay_main.md
   new: true
   items: 
-  - name: Positioning Strategies
+  - name: ポジション ストラテジー
     href: overlay_position.md
     new: true
-  - name: Scrolling Strategies
+  - name: スクロール ストラテジー
     href: overlay_scroll.md
     new: true
 - name: メニュー

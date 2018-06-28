@@ -112,7 +112,7 @@ public selectedColor: string = this.colors[3].hex;
     <iframe id="radio-group-sample-iframe" src='{environment:demosBaseUrl}/radio-group-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="radio-group-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="radio-group-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
@@ -131,7 +131,7 @@ import { IgxRadioModule } from 'igniteui-angular';
     ...
 })
 ```
-はじめに RadioGroup** を作成して **igxRadio** コンポーネントを追加します。
+はじめに **igxRadioGroup** を作成して **igxRadio** コンポーネントを追加します。
 
 **igxRadioGroup** `name` プロパティの設定は**必須**であることに注意してください。
 
@@ -197,7 +197,7 @@ public fruits = ["Apple", "Mango", "Banana", "Orange"];
 | `@Input()` value | any | すべての子ラジオボタンはこの名前を継承します。 |
 | `@Input()` required | boolean | ラジオ グループが必要かどうかを指定します。デフォルト値は `false` です。 |
 | `@Input()` disabled | boolean | ラジオ グループが無効かどうかを指定します。ラジオ グループが無効かどうかを指定します。|
-| `@Input()` labelPosition | string or enum RadioLabelPosition | 子ラジオ ボタンに対するテキスト ラベルの位置を指定します。 使用可能な値は  "before" と "after" でデフォルト値は `after` です。 |
+| `@Input()` labelPosition | string または enum RadioLabelPosition | 子ラジオ ボタンに対するテキスト ラベルの位置を指定します。 使用可能な値は  "before" と "after" でデフォルト値は `after` です。 |
 | `@Input()` selected | IgxRadioComponent | 選択した子ラジオ ボタンを指定します。 |
 
 <div class="divider"></div>

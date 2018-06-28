@@ -143,9 +143,9 @@ this.grid.filteringLogic = FilteringLogic.OR;
   * `name` - フィルターする列の名前。
   * `value` - フィルタリングに使用する値。
   * `conditionOrExpressionTree`  (オプション) - このパラメーターは、`IFilteringOperation` または `IFilteringExpressionsTree` 型のオブジェクトを受け付けます。簡単なフィルタリングが必要な場合、フィルタリング処理を引数として渡すことができます。高度なフィルタリングの場合、複雑なフィルタリング ロジックを含む式ツリーが引数として渡すことができます。
-  * `ignoreCase` (オプション) - フィルタリングで大文字と小文字を区別するかどうか。
+* `ignoreCase` (オプション) - フィルタリングで大文字と小文字を区別するかどうか。
 * `onFilteringDone` イベントは、フィルター列のフィルタリング状態を含む型 `IFilteringExpressionsTree` の 1 パラメーターのみになりました。
-* filtering operands: `IFilteringExpression` 条件プロパティは、フィルタリング状態メソッドに直接参照せずに `IFilteringOperation` を参照するようになりました。
+* フィルタリング オペランド: `IFilteringExpression` 条件プロパティは、フィルタリング状態メソッドに直接参照せずに `IFilteringOperation` を参照するようになりました。
 * `IgxColumnComponent` は、`IgxFilteringOperand` クラス参照を取得する `filters` プロパティを公開しました。
 * カスタム フィルターは、`IFilteringOperation` 型の演算で `IgxFilteringOperand` の`operations` プロパティを生成してグリッド列に提供されます。
 
