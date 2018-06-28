@@ -305,7 +305,7 @@ igxCombo が開いて、カスタム値が有効で、「項目の追加」ボ�
 |  `virtualizationState`   | 仮想化されたデータの現在の状態を定義します。`startIndex` および `chunkSize` を含みます。 | `IForOfState`                |
 |  `totalItemCount`        | リモート サービスを使用する場合、仮想データ項目の合計数。              | number                      |
 |  `width `                | コンボの幅を定義します。                                    | string                      |
-|  `heigth`                | コンボの高さを定義します。                                   | string                      |
+|  `height`                | コンボの高さを定義します。                                   | string                      |
 |  `itemsMaxHeight `       | ドロップダウンの高さを定義します。                               | string                      |
 |  `itemsMaxWidth `        | ドロップダウンの幅を定義します。                                | string                      |
 |  `itemHeight `           | ドロップダウン項目の高さを定義します。                            | string                      |
