@@ -168,10 +168,10 @@
   href: overlay_main.md
   new: true
   items: 
-  - name: Positioning Strategies
+  - name: ポジション ストラテジー
     href: overlay_position.md
     new: true
-  - name: Scrolling Strategies
+  - name: スクロール ストラテジー
     href: overlay_scroll.md
     new: true
 - name: メニュー
