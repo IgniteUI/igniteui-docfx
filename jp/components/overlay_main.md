@@ -7,7 +7,7 @@ _language: ja
 
 ## Overlay の概要
 <p class="highlight">
-The `IgxOverlayService` は、`IgxToggle` ディレクティブに完全に統合されています。toggle ディレクティブを使用する場合、`overlaySettings` パラメーターを toggle の toggle の `toggle()` メソッドに設定してコンテンツが描画された場合の切り替え方法を変更できます。
+`IgxOverlayService` は、`IgxToggle` ディレクティブに完全に統合されています。toggle ディレクティブを使用する場合、`overlaySettings` パラメーターを toggle の toggle の `toggle()` メソッドに設定してコンテンツが描画された場合の切り替え方法を変更できます。
 </p>
 <div class="divider--half"></div>
 
