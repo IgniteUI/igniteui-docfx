@@ -73,6 +73,35 @@ If all went great, this is how our empty list should look like:
 <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-sample-5-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
+Sometimes there may be a delay in your data loading. In this case you can set the list's `isLoading` property to `true` and a default template will inform the user regarding the ongoing data loading process. You can also provide your own loading template using the `igxDataLoading` directive:
+
+```html
+<!--contacts.component.html-->
+
+<igx-list>
+    <ng-template igxDataLoading>
+        <p class="loading">Patience, we are currently loading your data...</p>
+    </ng-template>
+</igx-list>
+```
+```css
+/* contacts.component.css */
+
+.loading {
+    color: rgba(255, 153, 0, 1);
+    font-size: 25px;
+    font-weight: 600;
+    text-shadow: 2px 1px 2px rgba(150, 150, 150, 1);
+}
+```
+
+<div class="sample-container loading" style="height: 300px">
+<iframe id="list-sample-6-iframe" src='{environment:demosBaseUrl}/list-sample-6' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-sample-6-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+
 #### Add List Items
 
 It's nice having a template for when the list is empty, but now let's add some items! We can add the following code to get a simple list of items:
