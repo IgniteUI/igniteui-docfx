@@ -539,7 +539,7 @@ public filter(term) {
 
 |名前|構文|説明|
 |--- |--- |--- |
-|`all`|`(target: boolean)`|Returns all rows.|
+|`all`|`(target: boolean)`|すべての行を返します。|
 |`true`|`(target: boolean)`|`target` が truthy の場合、true を返します。|
 |`false`|`(target: boolean)`|`target` が falsy の場合、true を返します。|
 |`null`|`(target: any)`|`target` が `null` の場合、true を返します。|
