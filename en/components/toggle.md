@@ -114,6 +114,8 @@ export class AppModule {}
 </div>
 ```
 
+igxToggle uses overlay service do sho so when calling open method you can pass overlay settings as parameter. If omitted the default overlay settings are used. For more information related about the overlay settings you can refer Overlay 
+
 ```typescript
 // template.component.ts
 

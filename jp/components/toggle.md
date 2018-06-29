@@ -118,6 +118,8 @@ export class AppModule {}
 </div>
 ```
 
+The `igxToggle` uses the [**IgxOverlayService**](https://www.infragistics.com/products/ignite-ui-angular/angular/components/overlay_main.html) and the `open` and `toggle` methods accept optional overlay settings to control how content is displayed. If omitted, default overlay settings are used as seen in the previous sample.
+
 ```typescript
 // template.component.ts
 
