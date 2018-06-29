@@ -119,11 +119,11 @@ public chipsOrderChanged(event) {
 
 #### Chip テンプレート
 
-`IgxChipComponent` の構造は主にチップのコンテンツ、削除ボタン、prefix、suffix、`connector` です。削除ボタン以外の要素をテンプレート化できます。
+`IgxChipComponent` の構造は主にチップのコンテンツ、削除ボタン、`prefix`、`suffix`、`connector` です。削除ボタン以外の要素をテンプレート化できます。
 
 チップのコンテンツは、チップの `prefix`、`suffix`、または `connector` を定義する要素以外のテンプレートに定義されるコンテンツです。コンテンツは任意のタイプを定義できます。
 
-`prefix` および `suffix` は実際のチップ領域にある要素で、テンプレート化できます。テンプレートを指定するには、IgxPrefix および IgxSuffix ディレクティブを使用します。
+`prefix` および `suffix` は実際のチップ領域にある要素で、テンプレート化できます。テンプレートを指定するには、`IgxPrefix` および `IgxSuffix` ディレクティブを使用します。
 以下は、`prefix` にアイコン、`label` にテキスト、`suffix` にカスタム アイコン ボタンを使用した例です。
 
 ```html
@@ -163,7 +163,7 @@ public chipsOrderChanged(event) {
 - チップがフォーカスされた場合のキーボード コントロール:
 
   - <kbd>LEFT</kbd> - 左側にあるチップをフォーカスします。
-  - <kbd>RIGTH</kbd> - 右側にあるチップをフォーカスします。
+  - <kbd>RIGHT</kbd> - 右側にあるチップをフォーカスします。
   - <kbd>SPACE</kbd> - チップが選択可能な場合、選択状態を切り替えます。
   - <kbd>DELETE</kbd> - チップの削除を手動的に処理するために `onRemove` 出力を発生します。
   - <kbd>SHIFT</kbd> + <kbd>LEFT</kbd> - フォーカスされたチップの位置を 1 つ左に移動します。
@@ -178,5 +178,5 @@ public chipsOrderChanged(event) {
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
 
-- [Ignite UI for Angular **フォーカス** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
 - [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
