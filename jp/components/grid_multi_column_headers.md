@@ -2,6 +2,7 @@
 title: Column Group コンポーネント - ネイティブ Angular | Ignite UI for Angular
 _description: 複数列ヘッダーは、共通ヘッダーの下に配置して列をグループ化できます。各列グループにその他のグループや列を組み合わせて表示できます。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular データグリッド コンポーネント, Angular データグリッド コントロール, ネイティブ Angular コンポーネント, Angular Grid コンポーネント, Angular Grid コントロール, Angular 高パフォーマンス Grid, 複数列ヘッダー, 遅延複数列ヘッダー, グリッド複数列ヘッダー, Angular グリッド複数列ヘッダー, Angular 列
+_language: ja
 ---
 
 ## 複数列ヘッダー
@@ -71,7 +72,7 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 |`hidden`| boolean | 列の表示状態。 |
 |`movable`| boolean | 現在の `column group` が移動可能かどうかを決定します。 |
 
-#### Getters/Setters
+#### ゲッター/セッター
 |名前|型|ゲッター|セッター|説明|
 |--- |--- |--- |--- |--- |
 |`allChildren`| IgxColumnComponent[] | はい | いいえ |  `column groups` を含むすべての子の `flatten` データを返します。|
@@ -83,7 +84,7 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 |`width`| string | はい | いいえ | グループに含まれる子によって決定される現在の列グループの `width` を返します。 |
 |`pinned`| boolean | はい | はい | 現在の `column group` がピン固定されているかどうかを取得または設定します。 |
 
-### Methods
+### メソッド
 
 |名前|戻り値の型|説明|
 |--- |--- |--- |

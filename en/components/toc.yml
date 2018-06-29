@@ -34,7 +34,7 @@
       new: false
     - name: Column resizing
       href: grid_column_resizing.md
-      new: true
+      new: false
     - name: Column hiding
       href: grid_column_hiding.md
       new: true
@@ -155,6 +155,9 @@
   href: circular_progress.md
 - name: Virtual For Directive
   href: for_of.md
+- name: Chip
+  href: chip.md
+  new: true
 - name: Interactions
   header: true
 - name: Dialog Window

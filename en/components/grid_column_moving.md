@@ -8,6 +8,8 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 The Grid component in Ignite UI for Angular provides **column moving** to allow columns reordering via standard drag/drop mouse or touch gestures.
 
+Column moving works as well with pinned columns. Dragging an unpinned column and dropping it inside the pinned area makes that column pinned and vice versa, dragging a pinned column and dropping it outside the pinned area makes that column unpinned.
+
 #### Demo
 
 <div class="sample-container loading" style="height:630px">
@@ -25,6 +27,9 @@ The Grid component in Ignite UI for Angular provides **column moving** to allow 
 ```html
 <igx-column [field]="'Category'" [movable]="true"></igx-column>
 ```
+
+> [!NOTE]
+> If the pinned area exceeds its maximum allowed width (80% of the total grid width), a visual clue notifies the end user that the drop operation is forbidden and pinning is not possible. This means you won't be allowed to drop a column in the pinned area.
 
 #### Events
 There are several events related to the column moving to provide a means of tapping into the columns' drag and drop operations. These are `onColumnMovingStart`, `onColumnMoving` and `onColumnMovingEnd`. 
