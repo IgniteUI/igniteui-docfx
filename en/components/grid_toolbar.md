@@ -27,13 +27,15 @@ The IgxGrid's toolbar is shown using the grid's `showToolbar` property - just se
 </igx-grid>
 ```
 
-#### Exporting
+#### Features
 
-The IgxGrid's toolbar can be configured to allow IgxGrid's data exporting in different formats - MS Excel and CSV. You can enable each exporting format independently by setting its dedicated boolean property to true:
+The IgxGrid's toolbar can be configured to allow columns hiding, columns pinning and exporting data to MS Excel and CSV. You can enable each feature independently by setting its dedicated boolean property to true:
+- for column hiding set `columnHiding` to `true`
+- for column pinning set `columnPinning` to `true`
 - for MS Excel export set the grid's `exportExcel` property to `true`
-- for CSV export set the grid's `exportCsv` property to `true`
+- for CSV export set the grid's `exportCsv` property to `true`.
 
-The available export options are hosted in a drop down which is shown when the main export button on the toolbar is pressed. There are properties for configuring each button's text and they are listed in the API section below.
+There are also properties for configuring each button's text and they are listed in the API section below.
 
 <div class="sample-container loading" style="height:420px">
     <iframe id="grid-toolbar-sample-2-iframe" src='{environment:demosBaseUrl}/grid-toolbar-sample-2' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -43,12 +45,14 @@ The available export options are hosted in a drop down which is shown when the m
 <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="grid-toolbar-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-The following code snippet demonstrates how to enable the MS Excel export and CSV export features on the toolbar and also set titles for the exporting buttons:
+The following code snippet demonstrates how to enable all features of the toolbar:
 
 ```html
 <igx-grid [data]="data" [autoGenerate]="true" height="400px" width="600px"
     [showToolbar]="true"
     toolbarTitle="Grid Title"
+    [columnHiding]="true"
+    [columnPinning]="true"
     [exportExcel]="true"
     [exportCsv]="true"
     exportText="Export"
@@ -74,10 +78,10 @@ export class AppModule {}
 
 #### Customizing the Export
 
-When the user initiates an export process the IgxGrid's `onToolbarExporting` event is emitted. This event exposes both the export options and the exporter itself. This allows you to configure the export process.
+In addition to simply switching on and off the toolbar features, the export process can be further configured in the `onToolbarExporting` event which is emitted when the user initiates the export process. This event exposes both the exporter and the exporter's options.
 
 > [!NOTE]
-> By default when eporting to CSV the exporter exports using a comma separator and uses a '.csv' extension for the output file.
+> By default when exporting to CSV the exporter exports using a comma separator and uses a '.csv' extension for the output file.
 > You can customize these exporting parameters by subscribing to events of the exporter or changing the values of the exporter options fields.
 > You can also cancel the export process by setting the cancel field of the event args to true.
 
@@ -135,13 +139,27 @@ The Grid Toolbar service has a few more APIs to explore, which are listed below.
 The following inputs are available on the **IgxGrid** component:
 | Name | Type | Description |
 | :--- | :--- | :--- |
+| `toolbar` | IgxGridToolbarComponent | A reference to the toolbar component. |
 | `showToolbar` | boolean | Show or hide the grid's toolbar. |
 | `toolbarTitle` | string | Sets the toolbar title. |
+| `columnHiding` | boolean | Show or hide the column hiding feature. |
+| `columnHidingTitle` | string | Sets the column hiding popup title's text. |
+| `hiddenColumnsText` | string | Sets the column hiding feature button's text. |
+| `columnPinning` | boolean | Show or hide the column pinning feature. |
+| `columnPinningTitle` | string | Sets the column pinning popup title's text. |
+| `pinnedColumnsText` | string | Sets the column pinning feature button's text. |
 | `exportExcel` | boolean | Show or hide the option for exporting to MS Excel. |
 | `exportCsv` | boolean | Show or hide the option for exporting to CSV. |
 | `exportText` | string | Sets the textual content for the main export button. |
 | `exportExcelText` | string | Sets the textual content for the MS Excel export button. |
 | `exportCsvText` | string | Sets the textual content for the CSV export button. |
+
+<div class="divider"></div>
+
+The following inputs are available on the **IgxGridToolbarComponent** component:
+| Name | Type | Description |
+| :--- | :--- | :--- |
+| `dropDownsMaxHeight` | string | Sets or gets the height for the toolbar's drop down panels. For example: '100px' or '50%'. |
 
 <div class="divider"></div>
 
