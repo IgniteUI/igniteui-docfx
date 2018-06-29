@@ -6,7 +6,8 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ## Overlay Description
 <p class="highlight">
-The `IgxOverlayService` is fully integrated in the `IgxToggle` directive. When using the toggle directive, a developer can provide an optional `overlaySettings` parameter to the toggle's `toggle()` method in order to change the way the toggled content if rendered.
+The `IgxOverlayService` provides an easy and quick way to dynamically render content in the foreground of an app. The content to be rendered as well as the way it is renders (e.g. placement, animations, scroll and click behaviors) are highly configurable and able to match all of the possible scenarios. 
+The `IgxOverlayService` is fully integrated in the `IgxToggle` directive.
 </p>
 <div class="divider--half"></div>
 
@@ -14,7 +15,7 @@ The `IgxOverlayService` is fully integrated in the `IgxToggle` directive. When u
 
 ### Getting Started
 
-To use the `IgxOverlayService` it needs to be imported in the component. `Inject` a reference to it in the components `constructor`:
+To use the `IgxOverlayService` it needs to be imported in the component. `Inject` a reference to it in the component's `constructor`:
 ```typescript
 import { IgxOverlayService } from `igniteui-angular`;
 
@@ -28,9 +29,47 @@ export class MyOverlayComponent {
 
 ...
 ```
+
+### Displaying overlay content
 The `IgxOverlayService` can be used to dynamically display a `HTMLNode` or even an Angular Component by attaching it to the overlay DOM.
 
+After a reference to the Overlay service is established, it can be used to dynamically show/hide content. For example, we can pass an Angular Component in the show function:
 
+```typescript
+
+// in my-overlay-component.component.ts
+import { MyDynamicComponent } from './my-dynamic-component.component.ts';
+
+export class MyOverlayComponent {
+
+    ... 
+    // a reference to the OverlayService is defined via @Inject in the constructor
+    // under this.overlayService
+
+    public showInOverlay() {
+        this.overlayService.show(MyDynamicComponent);
+    }
+}
+```
+
+```HTML
+<!-- in my-overlay-component.component.html -->
+<div class='content'>
+...
+<button (click)="showInOverlay()">Show Overlay</button>
+</div>
+
+```
+
+The `IgxOverlayService.show()` method accepts 2 arguments, the first one being the content that should be rendered in the overlay. There are a couple of different scenarios how the content can be passes:
+  - A component definition (illustrated in the sample above) - When passing a component in as the first argument, the `OverlayService` creates a new instance of that component and dynamically attaches it to the `overlay` DOM.
+  - An existing piece of DOM - Any view that is already rendered on the page can be passed through the `OverlayService` and be rendered in the `overlay` DOM. Using this approach will:
+    - Get the reference to the passed view from the Angular 
+    - Detach the view from the DOM and leave an anchor in its place
+    - Re-attach the view to the overlay, using the `show()` method settings or falling back to the default overlay settings
+    - On close, will re-attach the view back to the original location in the DOM
+  - A newly created HTML node - for instance, an HTMLElement created by `document.createElement()` can be passed to the `show()` method an be dynamically created in the `overlay` DOM.
+ 
 ### Demo - Dynamic attach - Component
 In the below demo, we can pass the IgxCard [demo](https://www.infragistics.com/products/ignite-ui-angular/angular/components/card.html#card-demo) through the overlay service `show()` method to dynamically attach it to the DOM in a modal container.
 
@@ -43,6 +82,70 @@ In the below demo, we can pass the IgxCard [demo](https://www.infragistics.com/p
 </div>
 <div class="divider--half"></div>
 
+### Configuring overlay settings
+
+The `IgxOverlayService.show()` method also accepts an object of the `OverlaySettings` type which configures the way the conent is shown. If no such object is provided, the Overlay service will use its default settings to render the passed content.
+
+For example, if we want the content to be positioned relative to an element, we can pass a diffrenet `positioningStrategy` for the overlay's `show()` method, e.g. `ConnectedPositioningStrategy`. In order to configure how the component is shown, we need to first create an `OverlaySettings` object:
+```typescript
+// in my-overlay-component.component.ts
+export class MyOverlayComponent {
+
+    @ViewChild(`myAnchorButton`)
+    private myAnchorButton: ElementRef;
+
+    public showInOverlay() {
+        this.overlayService.show(MyDynamicComponent, {
+            positionStrategy: new ConnectedPositioningStrategy({ target: this.myAnchorButton })
+        });
+    }
+}
+```
+```HTML
+<!-- in my-overlay-component.component.html -->
+<div class='content'>
+...
+<button #myAnchorButton (click)="showInOverlay()">Show Overlay</button>
+</div>
+
+```
+Clicking on the button will now show `MyDynamicComponent` positioned relative to the button.
+
+### Hiding the overlay
+
+The `IgxOverlayService.hide()` method removes the content from the overlay and, if applicable, re-attaches it to the original location in the DOM. 
+
+All of the elements rendered by the overlay service have a unique ID assigned to them by the service. The `IgxOverlayService.show()` method return the identifier of the rendered content. In order to remove content from the overlay, that ID needs to be passed to the overlay's `hide()` method.
+
+We can modify the previously defined overlay method to not only show but also hide the overlay element
+```typescript
+// in my-overlay-component.component.ts
+export class MyOverlayComponent {
+    private _overlayId = ''; // The unique identifier assigned to the component by the Overlay service
+    private _overlayShown = false; // Is the component rendered in the Overlay?
+
+    @ViewChild(`myAnchorButton`)
+    private myAnchorButton: ElementRef;
+
+    public toggleOverlay() {
+        if (!this._overlayShown) { // If the element is not visible, show it
+            this._overlayId = this.overlayService.show(MyDynamicComponent, {
+                positionStrategy: new ConnectedPositioningStrategy({ target: this.myAnchorButton })
+            }); // The show method returns an ID that can be used to reference the shown content
+        } else { // If the element is not visible, hide it
+            this.overlayService.hind(this._overlayId); // Find and remove the component from the overlay container
+        }
+        this._overlayShown = !this._overlayShown;
+    }
+}
+```
+```HTML
+<!-- in my-overlay-component.component.html -->
+<div class='content'>
+...
+<button #myAnchorButton (click)="toggleOverlay()">Toggle Overlay</button>
+</div>
+```
 ### Demo - Dynamic attach - Settings
 
 Using the `overlaySettings` parameter of the `show()` method, we can change how the content is shown - e.g. where the content is positioned, how the scroll should behave, is the container modal or not
@@ -65,6 +168,9 @@ defaultOverlaySettings = {
         closeOnOutsideClick: true
     };
 ```
+
+### Integration with igxToggle 
+The `IgxToggleDirective` is fully integrated with the `IgxOverlayService`. As such, the toggle's `toggle()` method allows for custom overlay settings to be passed when toggling content.
 
 An example of how to pass configuration settings to the toggle's method is shown below:
 ```html
