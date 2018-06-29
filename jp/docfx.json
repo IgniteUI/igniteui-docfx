@@ -24,7 +24,7 @@
         ],
         "resource": [
             {
-                "files": ["images/**", "resources-ja.json"],
+                "files": ["images/**"],
                 "exclude": ["obj/**", "_site/**"]
             }
         ],
