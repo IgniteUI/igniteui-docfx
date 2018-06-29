@@ -36,7 +36,7 @@ IgxGrid のツールバーは、列の非表示、列のピン固定、データ
 - MS Excel エクスポートは、グリッドの `exportExcel` プロパティを `true` に設定
 - CSV エクスポートは、グリッドの `exportCsv` プロパティを `true` に設定
 
-エクスポート オプションは、ドロップダウンでホストし、ツールバーでメインのエクスポート ボタンが押されたときに表示されます。各ボタン テキストを構成するためのプロパティがあり、以下の API セクションに一覧があります。
+各ボタン テキストを設定するプロパティについては、以下の API セクションをご確認ください。
 
 <div class="sample-container loading" style="height:420px">
     <iframe id="grid-toolbar-sample-2-iframe" src='{environment:demosBaseUrl}/grid-toolbar-sample-2' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -79,7 +79,7 @@ export class AppModule {}
 
 #### エクスポートをカスタマイズ
 
-エクスポート処理を開始する際に IgxGrid の `onToolbarExporting` イベントが発生されます。このイベントはエクスポート オプションとエクスポーターを公開し、エクスポート処理を構成できます。
+更にツールバー機能は簡単にオン/オフすることができます。エクスポート処理は、エクスポート処理初期化する際に発生される  `onToolbarExporting` イベントで詳細設定することができます。このイベント、エクスポーターおよびエクスポーターのはオプションで公開できます。エクスポート処理を設定できます。
 
 > [!NOTE]
 > デフォルトで CSV にエクスポートした際にエクスポーターがカンマ区切りセパレーターを使用してエクスポートし、出力ファイルに .csv 拡張しを使用します。
