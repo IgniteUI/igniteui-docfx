@@ -295,7 +295,7 @@ igxCombo が開いて、カスタム値が有効で、「項目の追加」ボ�
 
 | 説明                     　| 説明                                   　　　　　　　　　   | 型　　　                       |
 |--------------------------|---------------------------------------------------|-----------------------------|
-|  `id`                    | combo id                                          | string                      |
+|  `id`                    | コンボ id                                          | string                      |
 |  `data`                  | コンボのデータ ソース                                      | any                        |
 |  `value`                 | コンボの値                                            | string                      |
 |  `allowCustomValue`      | コンボのカスタム値を有効/無効にします。                          | boolean                     |
@@ -315,7 +315,7 @@ igxCombo が開いて、カスタム値が有効で、「項目の追加」ボ�
 |  `disabled`              | コントロールがアクティブかどうかを定義します。                         | boolean                     |
 |  `ariaLabelledBy`        | コンボに相対するラベル ID を定義します。                         | boolean                     |
 |  `type`                  | コンボの型 ("line"、"box"、"border"、または "search" ) を定義します。| string                   |
-|  `valid`                 | gets if control is valid, when used in a form     | boolean                     |
+|  `valid`                 | フォームで使用時のコントロールが有効化どうかを取得します。     | boolean                     |
 
 ### 出力
 <div class="divider--half"></div>
