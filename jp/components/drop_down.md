@@ -63,7 +63,7 @@ export class AppModule {}
 
 <div class="sample-wrapper drop-down-wrapper">
     <button igxButton="raised" (click)="toggleDropDown($event)">Options</button>
-    <igx-drop-down>
+    <igx-drop-down igxDropDownItemNavigation>
         <igx-drop-down-item *ngFor="let item of items">
             {{ item.field }}
         </igx-drop-down-item>
@@ -124,7 +124,7 @@ export class AppModule {}
 
 <div class="sample-wrapper drop-down-wrapper">
     <button igxButton="raised" (click)="toggleDropDown($event)">Options</button>
-    <igx-drop-down (onOpening)="onOpening($event)">
+    <igx-drop-down igxDropDownItemNavigation (onOpening)="onOpening($event)">
         <igx-drop-down-item *ngFor="let item of items">
             {{ item.field }}
         </igx-drop-down-item>
@@ -183,7 +183,7 @@ export class AppModule {}
 
 <div class="sample-wrapper drop-down-wrapper">
     <button igxButton="raised" (click)="toggleDropDown($event)">Countries</button>
-    <igx-drop-down>
+    <igx-drop-down igxDropDownItemNavigation>
         <igx-drop-down-item *ngFor="let item of items" disabled={{item.disabled}} isHeader={{item.header}}>
             {{ item.field }}
         </igx-drop-down-item>
