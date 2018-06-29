@@ -212,7 +212,7 @@ export class AppModule {}
 ```html
 <!--template.component.html-->
 <button igxToggleAction="toggleId" [closeOnOutsideClick]="true" class="toggle-button"  igxButton="raised">Toggle</button>
-<div igxToggle id="toggleId" class="toggle-content" [collapsed]="false">
+<div igxToggle id="toggleId" class="toggle-content">
     <section class="toggle-section">
     <h3>Click 
         <br/> Out of the Box</h3>
@@ -241,7 +241,6 @@ export class AppModule {}
 以下の入力は **igxToggle** ディレクティブで利用できます。
 | 名前 | 型 | 説明 |
 | :--- | :--- | :--- |
-| `collapsed` | Boolean | トグルが開くか閉じるかを決定します。 |
 | `id` | Boolean | **igxNavigationService** に登録される識別子。 |
 
 <div class="divider"></div>

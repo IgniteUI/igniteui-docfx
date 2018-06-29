@@ -114,7 +114,7 @@ export class AppModule {}
 </div>
 ```
 
-igxToggle uses overlay service do sho so when calling open method you can pass overlay settings as parameter. If omitted the default overlay settings are used. For more information related about the overlay settings you can refer Overlay 
+The `igxToggle` uses the [**IgxOverlayService**](https://www.infragistics.com/products/ignite-ui-angular/angular/components/overlay_main.html) and the `open` and `toggle` methods accept optional overlay settings to control how content is displayed. If omitted, default overlay settings are used as seen in the previous sample.
 
 ```typescript
 // template.component.ts
@@ -208,7 +208,7 @@ export class AppModule {}
 ```html
 <!--template.component.html-->
 <button igxToggleAction="toggleId" [closeOnOutsideClick]="true" class="toggle-button"  igxButton="raised">Toggle</button>
-<div igxToggle id="toggleId" class="toggle-content" collapsed="false">
+<div igxToggle id="toggleId" class="toggle-content">
     <section class="toggle-section">
     <h3>Click 
         <br/> Out of the Box</h3>
@@ -236,7 +236,6 @@ Furthermore we added another helping directive which controls automatically this
 The following inputs are available on the **igxToggle** directive:
 | Name | Type | Description |
 | :--- | :--- | :--- |
-| `collapsed` | Boolean | Determines whether the toggle is open or closed. |
 | `id` | Boolean | Identifier which is registered into **igxNavigationService**. |
 
 <div class="divider"></div>
