@@ -4,10 +4,10 @@ _description: Provides a service which enables developers to position content ab
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Overlay Service component
 ---
 
-## Overlay Description
+## Overlay
 <p class="highlight">
-The `IgxOverlayService` provides an easy and quick way to dynamically render content in the foreground of an app. The content to be rendered as well as the way it is renders (e.g. placement, animations, scroll and click behaviors) are highly configurable and able to match all of the possible scenarios. 
-The `IgxOverlayService` is fully integrated in the `IgxToggle` directive.
+The overlay service provides an easy and quick way to dynamically render content in the foreground of an app. The content to be rendered as well as the way it is renders (e.g. placement, animations, scroll and click behaviors) are highly configurable and able to match all of the possible scenarios. 
+The overlay service is fully integrated in the toggle directive.
 </p>
 <div class="divider--half"></div>
 
@@ -31,7 +31,8 @@ export class MyOverlayComponent {
 ```
 
 ### Displaying overlay content
-The `IgxOverlayService` can be used to dynamically display a `HTMLNode` or even an Angular Component by attaching it to the overlay DOM.
+
+The overlay service can be used to dynamically display a `HTMLNode` or even an Angular Component by attaching it to the overlay DOM.
 
 After a reference to the Overlay service is established, it can be used to dynamically show/hide content. For example, we can pass an Angular Component in the show function:
 
@@ -60,21 +61,23 @@ export class MyOverlayComponent {
 </div>
 
 ```
+<div class="divider--half"></div>
 
-The `IgxOverlayService.show()` method accepts 2 arguments, the first one being the content that should be rendered in the overlay. There are a couple of different scenarios how the content can be passes:
-  - A component definition (illustrated in the sample above) - When passing a component in as the first argument, the `OverlayService` creates a new instance of that component and dynamically attaches it to the `overlay` DOM.
-  - An existing piece of DOM - Any view that is already rendered on the page can be passed through the `OverlayService` and be rendered in the `overlay` DOM. Using this approach will:
+The overlay service `show()` method accepts 2 arguments, the first one being the content that should be rendered in the overlay. There are a couple of different scenarios how the content can be passes:
+  - A component definition (illustrated in the sample above) - When passing a component in as the first argument, the overlay service creates a new instance of that component and dynamically attaches it to the `overlay` DOM.
+  - An existing piece of DOM - Any view that is already rendered on the page can be passed through the overlay service and be rendered in the overlay DOM. Using this approach will:
     - Get the reference to the passed view from the Angular 
     - Detach the view from the DOM and leave an anchor in its place
     - Re-attach the view to the overlay, using the `show()` method settings or falling back to the default overlay settings
     - On close, will re-attach the view back to the original location in the DOM
-  - A newly created HTML node - for instance, an HTMLElement created by `document.createElement()` can be passed to the `show()` method an be dynamically created in the `overlay` DOM.
- 
+  - A newly created HTML node - for instance, an HTMLElement created by `document.createElement()` can be passed to the `show()` method an be dynamically created in the overlay DOM.
+<div class="divider--half"></div>
+
 ### Demo - Dynamic attach - Component
 In the below demo, we can pass the IgxCard [demo](https://www.infragistics.com/products/ignite-ui-angular/angular/components/card.html#card-demo) through the overlay service `show()` method to dynamically attach it to the DOM in a modal container.
 
 
-<div class="sample-container loading" style="height: 600px">
+<div class="sample-container loading" style="height: 400px">
     <iframe id="overlay-sample-main-1-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/overlay-sample-main-1" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -84,9 +87,9 @@ In the below demo, we can pass the IgxCard [demo](https://www.infragistics.com/p
 
 ### Configuring overlay settings
 
-The `IgxOverlayService.show()` method also accepts an object of the `OverlaySettings` type which configures the way the conent is shown. If no such object is provided, the Overlay service will use its default settings to render the passed content.
+The overlay service `show()` method also accepts an object of the `OverlaySettings` type which configures the way the conent is shown. If no such object is provided, the Overlay service will use its default settings to render the passed content.
 
-For example, if we want the content to be positioned relative to an element, we can pass a diffrenet `positioningStrategy` for the overlay's `show()` method, e.g. `ConnectedPositioningStrategy`. In order to configure how the component is shown, we need to first create an `OverlaySettings` object:
+For example, if we want the content to be positioned relative to an element, we can pass a different `positioningStrategy` for the overlay's `show()` method, e.g. `ConnectedPositioningStrategy`. In order to configure how the component is shown, we need to first create an `OverlaySettings` object:
 ```typescript
 // in my-overlay-component.component.ts
 export class MyOverlayComponent {
@@ -110,12 +113,13 @@ export class MyOverlayComponent {
 
 ```
 Clicking on the button will now show `MyDynamicComponent` positioned relative to the button.
+<div class="divider--half"></div>
 
 ### Hiding the overlay
 
 The `IgxOverlayService.hide()` method removes the content from the overlay and, if applicable, re-attaches it to the original location in the DOM. 
 
-All of the elements rendered by the overlay service have a unique ID assigned to them by the service. The `IgxOverlayService.show()` method return the identifier of the rendered content. In order to remove content from the overlay, that ID needs to be passed to the overlay's `hide()` method.
+All of the elements rendered by the overlay service have a unique ID assigned to them by the service. The `IgxOverlayService.show()` method returns the identifier of the rendered content. In order to remove content from the overlay, that ID needs to be passed to the overlay's `hide()` method.
 
 We can modify the previously defined overlay method to not only show but also hide the overlay element
 ```typescript
@@ -150,7 +154,7 @@ export class MyOverlayComponent {
 
 Using the `overlaySettings` parameter of the `show()` method, we can change how the content is shown - e.g. where the content is positioned, how the scroll should behave, is the container modal or not
 
-<div class="sample-container loading" style="height: 600px">
+<div class="sample-container loading" style="height: 400px">
     <iframe id="overlay-sample-main-2-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/overlay-sample-main-2" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -168,6 +172,7 @@ defaultOverlaySettings = {
         closeOnOutsideClick: true
     };
 ```
+<div class="divider--half"></div>
 
 ### Integration with igxToggle 
 The `IgxToggleDirective` is fully integrated with the `IgxOverlayService`. As such, the toggle's `toggle()` method allows for custom overlay settings to be passed when toggling content.
@@ -219,7 +224,7 @@ export class ExampleComponent {
    | Name               | Description                                         | Type                                |
    |--------------------|-----------------------------------------------------|-------------------------------------|
    |positionSettings    | Settings to apply to this position strategy         | PositionSettings                    |
-
+<div class="divider"></div>
 
  `OverlaySettings`
 
@@ -229,7 +234,7 @@ export class ExampleComponent {
    |scrollStrategy      | Scroll strategy to use with this settings           | IScrollStrategy                     |
    |modal               | Set if the overlay should be in modal mode          | boolean                             |
    |closeOnOutsideClick | Set if the overlay should closed on outside click   | boolean                             |
-
+<div class="divider--half"></div>
 
  `PositionSettings`
 
@@ -253,14 +258,14 @@ export class ExampleComponent {
    |hide             | Remove the provided native element of for the component with provided id        |id          |
    |hideAll          | Remove the all native elements and hides the overlay                            |-           |
    |reposition       | Repositions the native element of the component with provided id                |id          |
-
+<div class="divider"></div>
 
  `IPositionStrategy`
 
    | Name            | Description                                                                     | Parameters |
    |-----------------|---------------------------------------------------------------------------------|------------|
    |position         | Positions provided element                                                      |element     |
-
+<div class="divider"></div>
 
  `IScrollStrategy`
 
@@ -269,13 +274,14 @@ export class ExampleComponent {
    |initialize       | Initialize the strategy. Should be called once                                  |document, overlayService, id|
    |attach           | Attaches the strategy                                                           |-           |
    |detach           | Detaches the strategy                                                           |-           |
-
+<div class="divider"></div>
 
  `static methods`
 
    | Name                        | Description                                                         | Parameters |
    |-----------------------------|---------------------------------------------------------------------|------------|
    |getPointFromPositionsSettings| Calculates the point from which the overlay should start showing    |settings    |
+<div class="divider"></div>
 
 ### Events
 
@@ -288,7 +294,7 @@ export class ExampleComponent {
    |onOpened     | Emitted after overlay shows        | false      |            |
    |onClosing    | Emitted before overlay hides       | false      |            |
    |onClosed     | Emitted after  overlay hides       | false      |            |
-
+<div class="divider--half"></div>
 
 ## Assumptions and Limitations</a>
 Up to now there are no known limitations.

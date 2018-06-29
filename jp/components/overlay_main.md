@@ -16,10 +16,10 @@ The `IgxOverlayService` は、`IgxToggle` ディレクティブに完全に統�
 以下のデモは、オーバーレイ要素の表示方法を変更するためにオーバーレイ サービス `overlaySettings` を扱う方法を示します。
 </p>
 <div class="sample-container loading" style="height: 600px">
-    <iframe id="overlay-sample-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/overlay-sample" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="overlay-sample-main-1-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/overlay-sample" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="overlay-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="overlay-sample-main-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
 </div>
 <div class="divider--half"></div>
 
