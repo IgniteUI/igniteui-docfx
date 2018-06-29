@@ -132,7 +132,7 @@
   href: circular_progress.md
 - name: Virtual For Directive
   href: for_of.md
-- name: Chip
+- name: チップ
   href: chip.md
   new: true
 - name: インタラクション

@@ -1,28 +1,29 @@
 ---
-title: Chip Component - Native Angular | Ignite UI for Angular
-_description: The Ignite UI for Angular Chip component provide compact elements that represent an input, attribute, or action.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Components, Chip, Chip Component, ChipArea, ChipArea Component
+title: Chip コンポーネント - ネイティブ Angular | Ignite UI for Angular
+_description: Ignite UI for Angular Chip コンポーネントは入力、属性、または操作を表す小さい要素を提供します。
+_keywords: ジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, ネイティブ Angular コンポーネント, Chip, Chip コンポーネント, ChipArea, ChipArea コンポーネント
 ---
 
 ### Chip
 
-`igxChip` is a compact visual component that displays information in an ellipse. Chip can be templated, deleted, and selected. Multiple chips can be reordered and visually connected to each other. Chips reside in a container called chips area which is responsible for managing the interactions between the chips.  
+`igxChip` は情報を楕円内に表示する小さい視覚的なコンポーネントです。Chip をテンプレート化、削除、または選択できます。複数の Chip を順序変更し、視覚的に接続できます。Chip は「チップ領域」と呼ばれるコンテナーに配置されます。このコンテナーは Chip の間の操作を管理します。
 
-#### Demo
+#### デモ
 
 <div class="sample-container loading" style="height:625px">
     <iframe id="chip-sample-iframe  " src='{environment:demosBaseUrl}/chip-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="chip-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="chip-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
 </div>
 
-#### Initializing Chips
+#### Chip の初期化
 
-The `IgxChipComponent` is the main class for a chip elemenent and the `IgxChipsAreaComponent` is the main class for the chip area. The chip area is used when handling more complex scenarios that require interaction between chips (dragging, selection, navigation and etc.). The `IgxChipComponent` requires an `id` to be defined so that the different chips can be easily distinguished.
+The `IgxChipComponent` はチップ要素のメイン クラスで、`IgxChipsAreaComponent`はチップ領域のメイン クラスです。
+チップ領域はチップの間の操作 (ドラッグ、選択、ナビゲーションなど) が必要の複雑なシナリオの処理で使用されます。別の要素を識別するために `IgxChipComponent` で `id` を定義する必要があります。
 
-Example of using `igxChip` with `igxChipArea`:
+`igxChip` を `igxChipArea` と使用した例:
 
 ```html
 <igx-chips-area>
@@ -32,11 +33,11 @@ Example of using `igxChip` with `igxChipArea`:
 </igx-chips-area>
 ```
 
-### Features
+### 機能
 
-#### Selection
+#### 選択
 
-Selection is disabled by default, but can be enabled with an option called `selectable`. The selecting is done by clicking on the chip itself or either by focusing the chip by using the `Tab` key and then pressing the `Space` key. An event `onSelection` is fired when the selection state of the `igxChip` changes. If a chip is already selected it can be deselected by pressing the `Space` key again while the chip is focused or by clicking on it.
+選択はデフォルトで無効ですが、`selectable` オプションを使用して有効にできます。チップをクリックするか、チップを `Tab` キーによってフォーカスして `Space` キーを押すと選択できます。`igxChip` の選択状態が変更すると、`onSelection` イベントは発生されます。選択されたチップをクリックするか、チップがフォーカスされる場合に `Space` キーを押すと選択解除できます。
 
 ```html
 <igx-chips-area #chipsArea>
@@ -54,9 +55,9 @@ public ngOnInit() {
 }
 ```
 
-#### Removing
+#### 削除
 
-The `remove button` is part of the chip as well. You can control the remove button visibility by the `removable` boolean option. An event `onRemove` is fired when the end-user deletes a chip.
+`remove button` はチップの部分です。削除ボタンの表示状態を `removable` ブール値オプションによって制御できます。ユーザーがチップを削除するときに `onRemove` イベントが発生されます。
 
 ```html
 <igx-chips-area #chipsArea>
@@ -81,9 +82,9 @@ public chipRemoved(event) {
 }
 ```
 
-#### Moving/Dragging
+#### 移動/ドラッグ
 
-The chip can be dragged by the end-user in order to change it's position. The moving/dragging is disabled by default, but can be enabled with an option called `draggable`. You need to handle the actual moving of the chip in the data source manually.
+チップの位置を変更するためにユーザーによってドラッグできます。移動/ドラグ機能はデフォルトで無効ですが、`draggable` オプションを使用して有効にできます。データソースでチップの移動を手動的に処理する必要があります。
 
 ```html
 <igx-chips-area #chipArea (onReorder)="chipsOrderChanged($event)">
@@ -116,15 +117,14 @@ public chipsOrderChanged(event) {
 
 ![Dragging](../images/dragging.gif)
 
-#### Chip Templates
+#### Chip テンプレート
 
-The `IgxChipComponent`'s main structure consists of chip content, `remove button`, `prefix`, `suffix` and `connector`. All of those elements are templatable except the `remove button`.
+`IgxChipComponent` の構造は主にチップのコンテンツ、削除ボタン、prefix、suffix、`connector` です。削除ボタン以外の要素をテンプレート化できます。
 
-The content of the chip is taken by the content defined inside the chip template except elements that define the `prefix`, `suffix` or `connector` of the chip. You can define any type of content you need.
+チップのコンテンツは、チップの `prefix`、`suffix`、または `connector` を定義する要素以外のテンプレートに定義されるコンテンツです。コンテンツは任意のタイプを定義できます。
 
-The `prefix` and `suffix` are also elements inside the actual chip area where they can be templated by your preference. The way they can be specified is by respectively using the `IgxPrefix` and `IxgSuffix` directives.
-
-Example of using an icon for `prefix`, a text for `label` and a custom icon button for `suffix`:
+`prefix` および `suffix` は実際のチップ領域にある要素で、テンプレート化できます。テンプレートを指定するには、IgxPrefix および IgxSuffix ディレクティブを使用します。
+以下は、`prefix` にアイコン、`label` にテキスト、`suffix` にカスタム アイコン ボタンを使用した例です。
 
 ```html
 <igx-chip *ngFor="let chip of chipList" [id]="chip.id">
@@ -136,9 +136,9 @@ Example of using an icon for `prefix`, a text for `label` and a custom icon butt
 </igx-chip>
 ```
 
-The `connectors` of the `igxChip` are fully templatable and are positioned after each chip. Their purpose is to provide a way to link two chips next to each other with an icon/text or anything you would like to use. The last chip (most right) does not have connector applied. Connectors hide while dragging chips around and show again when interactions with the chips have finished. The connector is defined by using the `IgxConnector` directive.
+`igxChip` の `connectors` はテンプレート化が可能で、各チップの後に配置して隣り合わせたチップをアイコンやテキストなどとリンクします。最後のチップ (右端) に connector はありません。コネクターはチップのドラッグ操作で非表示し、チップとの操作が完了した後に表示します。connector は `IgxConnector` ディレクティブによって定義されます。
 
-Example of using prefix connector:
+プレフィックス コネクターの例:
 
 ```html
 <igx-chip *ngFor="let chip of chipList" [id]="chip.id">
@@ -147,7 +147,7 @@ Example of using prefix connector:
 </igx-chip>
 ```
 
-Example of using suffix connector:
+サフィックス コネクターの例:
 
 ```html
 <igx-chip *ngFor="let chip of chipList" [id]="chip.id">
@@ -156,27 +156,27 @@ Example of using suffix connector:
 </igx-chip>
 ```
 
-#### Keyboard Navigation
+#### キーボード ナビゲーション
 
-The chip can be focused using the `Tab` key or by clicking on them. Chips can be reordered using keyboard navigation:
+チップをフォーカスするには `Tab` キーを押すか、それをクリックします。チップを順序変更するにはキーボード ナビゲーションを使用します。
 
-- Keyboard controls when the chip is focused:
+- チップがフォーカスされた場合のキーボード コントロール:
 
-  - <kbd>LEFT</kbd> - Focuses the chip on the left
-  - <kbd>RIGTH</kbd> - Focuses the chip on the right
-  - <kbd>SPACE</kbd> - Toggles chip selection if it is selectable
-  - <kbd>DELETE</kbd> - Fires the `onRemove` output so the chip deletion can be handled manually
-  - <kbd>SHIFT</kbd> + <kbd>LEFT</kbd> - Moves the focused chip one position to the left
-  - <kbd>SHIFT</kbd> + <kbd>RIGHT</kbd> - Moves the focused chip one position to the right
+  - <kbd>LEFT</kbd> - 左側にあるチップをフォーカスします。
+  - <kbd>RIGTH</kbd> - 右側にあるチップをフォーカスします。
+  - <kbd>SPACE</kbd> - チップが選択可能な場合、選択状態を切り替えます。
+  - <kbd>DELETE</kbd> - チップの削除を手動的に処理するために `onRemove` 出力を発生します。
+  - <kbd>SHIFT</kbd> + <kbd>LEFT</kbd> - フォーカスされたチップの位置を 1 つ左に移動します。
+  - <kbd>SHIFT</kbd> + <kbd>RIGHT</kbd> - フォーカスされたチップの位置を 1 つ右に移動します。
 
-- Keyboard controls when the remove button is focused:
+- 削除ボタンがフォーカスされた場合のキーボード コントロール:
 
-  - <kbd>SPACE</kbd> or <kbd>ENTER</kbd> Fires the `onRemove` output so the chip deletion can be handled manually
+  - <kbd>SPACE</kbd> または <kbd>ENTER</kbd> チップの削除を手動的に処理するために `onRemove` 出力を発生します。
 
-### References
+### 参照
 
 <div class="divider--half"></div>
-Our community is active and always welcoming to new ideas.
+コミュニティに参加して新しいアイデアをご提案ください。
 
-- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーカス** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
