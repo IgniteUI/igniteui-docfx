@@ -34,8 +34,8 @@
       new: false
     - name: 列のサイズ変更
       href: grid_column_resizing.md
-      new: true
-    - name: Column hiding
+      new: false
+    - name: 列の非表示
       href: grid_column_hiding.md
       new: true
     - name: 選択
@@ -136,6 +136,7 @@
   href: switch.md
 - name: Radio および Radio Group
   href: radio_button.md
+  new: true
 - name: Label および Input
   href: label_input.md
 - name: Input Group
@@ -154,6 +155,9 @@
   href: circular_progress.md
 - name: Virtual For Directive
   href: for_of.md
+- name: チップ
+  href: chip.md
+  new: true
 - name: インタラクション
   header: true
 - name: Dialog Windows

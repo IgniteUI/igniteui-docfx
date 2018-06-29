@@ -22,7 +22,7 @@
             }
         ],
         "resource": [{
-            "files": ["images/**", "resources-en.json"],
+            "files": ["images/**"],
             "exclude": ["obj/**", "_site/**"]
         }],
         "overwrite": [{

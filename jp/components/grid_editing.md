@@ -11,7 +11,7 @@ Ignite UI for Angular の Grid コンポーネントは、列のデータ型に�
 #### デモ
 
 <div class="sample-container loading" style="height:650px">
-    <iframe id="grid-summary-sample-iframe" src='{environment:demosBaseUrl}/grid-editing' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="grid-editing-sample-iframe" src='{environment:demosBaseUrl}/grid-editing' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
@@ -36,7 +36,7 @@ Ignite UI for Angular の Grid コンポーネントは、列のデータ型に�
  - `Escape` キーの押下;
  - 並べ替え、フィルタリング、検索、非表示の操作時
 
-編集モードを終了して以下のいずれかの方法で変更を**確定**します。  
+編集モードを終了して以下のいずれかの方法で変更を**確定**します。
  - `Enter` キーの押下;
  - `F2` キーの押下;
  - `Tab` キーの押下;
@@ -67,7 +67,7 @@ IgxGrid API でセル値を変更することもできます。
     }
 ...
 ```
-セルが編集モードの際に適用するカスタム テンプレートを定義する方法については、[Grid 列の構成](grid.md#columns-configuration)をご覧ください。
+セルが編集モードの際に適用するカスタム テンプレートを定義する方法については、[Grid 列の構成](grid.md#列の構成)をご覧ください。
 
 ### CRUD 操作
 

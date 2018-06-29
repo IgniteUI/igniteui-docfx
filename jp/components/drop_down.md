@@ -47,13 +47,12 @@ export class AppModule {}
 
 ...
 import {
-    IgxDropDownModule,
-    IgxToggleModule
+    IgxDropDownModule
 } from 'igniteui-angular';
 
 @NgModule({
     ...
-    imports: [..., IgxDropDownModule, IgxToggleModule],
+    imports: [..., IgxDropDownModule],
 })
 export class AppModule {}
 ```　
@@ -64,8 +63,8 @@ export class AppModule {}
 
 <div class="sample-wrapper drop-down-wrapper">
     <button igxButton="raised" (click)="toggleDropDown($event)">Options</button>
-    <igx-drop-down>
-        <igx-drop-down-item *ngFor="let item of items">
+    <igx-drop-down #dropdown1>
+        <igx-drop-down-item [igxDropDownItemNavigation]="dropdown1" *ngFor="let item of items">
             {{ item.field }}
         </igx-drop-down-item>
     </igx-drop-down>
@@ -125,8 +124,8 @@ export class AppModule {}
 
 <div class="sample-wrapper drop-down-wrapper">
     <button igxButton="raised" (click)="toggleDropDown($event)">Options</button>
-    <igx-drop-down (onOpening)="onOpening($event)">
-        <igx-drop-down-item *ngFor="let item of items">
+    <igx-drop-down #dropdown2 (onOpening)="onOpening($event)">
+        <igx-drop-down-item [igxDropDownItemNavigation]="dropdown2" *ngFor="let item of items">
             {{ item.field }}
         </igx-drop-down-item>
     </igx-drop-down>
@@ -184,8 +183,8 @@ export class AppModule {}
 
 <div class="sample-wrapper drop-down-wrapper">
     <button igxButton="raised" (click)="toggleDropDown($event)">Countries</button>
-    <igx-drop-down>
-        <igx-drop-down-item *ngFor="let item of items" disabled={{item.disabled}} isHeader={{item.header}}>
+    <igx-drop-down #dropdown3>
+        <igx-drop-down-item [igxDropDownItemNavigation]="dropdown3" *ngFor="let item of items" disabled={{item.disabled}} isHeader={{item.header}}>
             {{ item.field }}
         </igx-drop-down-item>
     </igx-drop-down>
@@ -287,9 +286,9 @@ export class AppModule {}
 
 | 名前 | 型 | 説明 |
 | :--- | :--- | :--- |
-| `isHeader` | ブール値| 項目がグループ ヘッダーかどうかを定義します。 |
+| `isHeader` | boolean| 項目がグループ ヘッダーかどうかを定義します。 |
 | `disabled` | boolean| 項目が無効かどうかを取得します。|
-| `isFocused` | ブール値| 指定した項目がフォーカスされるかどうかを定義します。|
+| `isFocused` | boolean| 指定した項目がフォーカスされるかどうかを定義します。|
 
 #### ゲッター
 以下のゲッターは **igx-drop-down-item** コンポーネントで利用できます。
