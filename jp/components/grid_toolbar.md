@@ -52,6 +52,8 @@ IgxGrid のツールバーは、列の非表示、列のピン固定、データ
 <igx-grid [data]="data" [autoGenerate]="true" height="400px" width="600px"
     [showToolbar]="true"
     toolbarTitle="Grid Title"
+	[columnHiding]="true"
+    [columnPinning]="true"
     [exportExcel]="true"
     [exportCsv]="true"
     exportText="Export"
@@ -142,11 +144,11 @@ public toolbarExportingHandler(args) {
 | `showToolbar` | boolean | グリッドのツールバーを表示または非表示にします。 |
 | `toolbarTitle` | string | ツールバーのタイトルを設定します。 |
 | `columnHiding` | boolean | 列の非表示機能を表示または非表示にします。 |
-| `hiddenColumnsText` | string | 列の非表示機能ボタンのテキストを設定します。 |
 | `columnHidingTitle` | string | 列の非表示ポップアップ タイトルのテキストを設定します。 |
+| `hiddenColumnsText` | string | 列の非表示機能ボタンのテキストを設定します。 |
 | `columnPinning` | boolean | 列のピン固定機能を表示または非表示にします。 |
-| `pinnedColumnsText` | string | 列のピン固定機能ボタンのテキストを設定します。 |
 | `columnPinningTitle` | string | 列のピン固定ポップアップ タイトルのテキストを設定します。 |
+| `pinnedColumnsText` | string | 列のピン固定機能ボタンのテキストを設定します。 |
 | `exportExcel` | boolean | MS Excel エクスポートするオプションを表示または非表示にします。|
 | `exportCsv` | boolean | MS CSV エクスポートするオプションを表示または非表示にします。 |
 | `exportText` | string | エクスポート ボタンのテキスト コンテンツを設定します。 |
