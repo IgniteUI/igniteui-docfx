@@ -2,6 +2,7 @@
 title: Chip コンポーネント - ネイティブ Angular | Ignite UI for Angular
 _description: Ignite UI for Angular Chip コンポーネントは入力、属性、または操作を表す小さい要素を提供します。
 _keywords: ジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, ネイティブ Angular コンポーネント, Chip, Chip コンポーネント, ChipArea, ChipArea コンポーネント
+_language: ja
 ---
 
 ### Chip
