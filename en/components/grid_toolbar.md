@@ -78,7 +78,7 @@ export class AppModule {}
 
 #### Customizing the Export
 
-In addition to simply switching on and off the toolbar features, the export process can be further configured in the `onToolbarExporting` event which is emitted when the user initiates the export process. This event exposes both the exporter and the exporter's options. This allows you to configure the export process.
+In addition to simply switching on and off the toolbar features, the export process can be further configured in the `onToolbarExporting` event which is emitted when the user initiates the export process. This event exposes both the exporter and the exporter's options.
 
 > [!NOTE]
 > By default when exporting to CSV the exporter exports using a comma separator and uses a '.csv' extension for the output file.
