@@ -84,6 +84,67 @@ If all went well, you should see the following in your browser:
     </button>
 </div>
 
+In the next sample we'll use different positioning strategy so the content is displayed below the button. 
+
+```typescript
+// app.module.ts
+
+...
+import { IgxToggleModule, IgxButtonModule } from 'igniteui-angular'
+
+@NgModule({
+    ...
+    imports: [..., IgxToggleModule, IgxButtonModule]
+    ...
+})
+export class AppModule {}
+```
+
+```html
+<!--template.component.html-->
+<div class="sample-wrapper">
+  <article class="sample-column">
+    <button class="toggle-button" #button igxButton="raised" (click)="toggle()">Toggle</button>
+    <div class="toggle-content" igxToggle #toggleRef="toggle">
+      <section class="toggle-section">
+          <h2>Box</h2>
+      </section>
+    </div>
+  </article>
+</div>
+```
+
+```typescript
+// template.component.ts
+
+...
+    @ViewChild(IgxToggleDirective) public igxToggle: IgxToggleDirective;
+    @ViewChild("button") public igxButton: ElementRef;
+    public _positionSettings = {
+        horizontalStartPoint: HorizontalAlignment.Left,
+        verticalStartPoint: VerticalAlignment.Bottom
+    };
+    public _overlaySettings = {
+        closeOnOutsideClick: true,
+        modal: false,
+        positionStrategy: new ConnectedPositioningStrategy(this._positionSettings),
+        scrollStrategy: new CloseScrollStrategy()
+    };
+    public toggle() {
+        this._overlaySettings.positionStrategy.settings.target = this.igxButton.nativeElement;
+        this.igxToggle.toggle(this._overlaySettings);
+    }
+```
+
+
+<div class="sample-container loading" style="height: 370px">
+    <iframe id="toggle-iframe-1" src='{environment:demosBaseUrl}/toggle' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="toggle-iframe-1" data-demos-base-url="{environment:demosBaseUrl}">                       view on stackblitz
+    </button>
+</div>
+
 ### Automatic toggle actions
 
 In order to prevent this invocation of these methods there is a directive which has `onClick` handler and changes the state to the toggle we are referred to. So let's dive in. If we would like to take advantage of this functionality we will have to use **IgxToggleActionDirective** Which is comming from the same **IgxToggleModule**.
@@ -145,7 +206,7 @@ export class AppModule {}
 ```html
 <!--template.component.html-->
 <button igxToggleAction="toggleId" [closeOnOutsideClick]="true" class="toggle-button"  igxButton="raised">Toggle</button>
-<div igxToggle id="toggleId" class="toggle-content" [collapsed]="false">
+<div igxToggle id="toggleId" class="toggle-content" collapsed="false">
     <section class="toggle-section">
     <h3>Click 
         <br/> Out of the Box</h3>
