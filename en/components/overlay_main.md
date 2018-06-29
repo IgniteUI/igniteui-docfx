@@ -11,9 +11,7 @@ The overlay service is fully integrated in the toggle directive.
 </p>
 <div class="divider--half"></div>
 
-## Usage
-
-### Getting Started
+## Getting Started
 
 To use the `IgxOverlayService` it needs to be imported in the component. `Inject` a reference to it in the component's `constructor`:
 ```typescript
@@ -30,7 +28,7 @@ export class MyOverlayComponent {
 ...
 ```
 
-### Displaying overlay content
+## Displaying overlay content
 
 The overlay service can be used to dynamically display a `HTMLNode` or even an Angular Component by attaching it to the overlay DOM.
 
@@ -63,17 +61,17 @@ export class MyOverlayComponent {
 ```
 <div class="divider--half"></div>
 
-The overlay service `show()` method accepts 2 arguments, the first one being the content that should be rendered in the overlay. There are a couple of different scenarios how the content can be passes:
+The overlay service `show()` method accepts 2 arguments, the first one being the content that should be rendered in the overlay. There are a couple of different scenarios how the content can be passed:
   - A component definition (illustrated in the sample above) - When passing a component in as the first argument, the overlay service creates a new instance of that component and dynamically attaches it to the `overlay` DOM.
   - An existing piece of DOM - Any view that is already rendered on the page can be passed through the overlay service and be rendered in the overlay DOM. Using this approach will:
-    - Get the reference to the passed view from the Angular 
+    - Get the reference to the passed view from Angular 
     - Detach the view from the DOM and leave an anchor in its place
     - Re-attach the view to the overlay, using the `show()` method settings or falling back to the default overlay settings
     - On close, will re-attach the view back to the original location in the DOM
   - A newly created HTML node - for instance, an HTMLElement created by `document.createElement()` can be passed to the `show()` method an be dynamically created in the overlay DOM.
 <div class="divider--half"></div>
 
-### Demo - Dynamic attach - Component
+## Demo - Dynamic attach - Component
 In the below demo, we can pass the IgxCard [demo](https://www.infragistics.com/products/ignite-ui-angular/angular/components/card.html#card-demo) through the overlay service `show()` method to dynamically attach it to the DOM in a modal container.
 
 
@@ -85,7 +83,7 @@ In the below demo, we can pass the IgxCard [demo](https://www.infragistics.com/p
 </div>
 <div class="divider--half"></div>
 
-### Configuring overlay settings
+## Configuring overlay settings
 
 The overlay service `show()` method also accepts an object of the `OverlaySettings` type which configures the way the conent is shown. If no such object is provided, the Overlay service will use its default settings to render the passed content.
 
@@ -115,7 +113,7 @@ export class MyOverlayComponent {
 Clicking on the button will now show `MyDynamicComponent` positioned relative to the button.
 <div class="divider--half"></div>
 
-### Hiding the overlay
+## Hiding the overlay
 
 The `IgxOverlayService.hide()` method removes the content from the overlay and, if applicable, re-attaches it to the original location in the DOM. 
 
@@ -137,7 +135,7 @@ export class MyOverlayComponent {
                 positionStrategy: new ConnectedPositioningStrategy({ target: this.myAnchorButton })
             }); // The show method returns an ID that can be used to reference the shown content
         } else { // If the element is not visible, hide it
-            this.overlayService.hind(this._overlayId); // Find and remove the component from the overlay container
+            this.overlayService.hide(this._overlayId); // Find and remove the component from the overlay container
         }
         this._overlayShown = !this._overlayShown;
     }
@@ -174,7 +172,7 @@ defaultOverlaySettings = {
 ```
 <div class="divider--half"></div>
 
-### Integration with igxToggle 
+## Integration with igxToggle 
 The `IgxToggleDirective` is fully integrated with the `IgxOverlayService`. As such, the toggle's `toggle()` method allows for custom overlay settings to be passed when toggling content.
 
 An example of how to pass configuration settings to the toggle's method is shown below:
