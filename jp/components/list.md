@@ -73,6 +73,35 @@ export class AppModule {}
 <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-sample-5-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
+データの読み込みで遅延が発生した場合、リストの `isLoading` プロパティを `true` に設定し、デフォルト テンプレートで処理中のデータ読み込み処理についてユーザーに通知できます。`igxDataLoading` ディレクティブを使用してカスタムの読み込みテンプレートを提供できます。
+
+```html
+<!--contacts.component.html-->
+
+<igx-list>
+    <ng-template igxDataLoading>
+        <p class="loading">Patience, we are currently loading your data...</p>
+    </ng-template>
+</igx-list>
+```
+```css
+/* contacts.component.css */
+
+.loading {
+    color: rgba(255, 153, 0, 1);
+    font-size: 25px;
+    font-weight: 600;
+    text-shadow: 2px 1px 2px rgba(150, 150, 150, 1);
+}
+```
+
+<div class="sample-container loading" style="height: 300px">
+<iframe id="list-sample-6-iframe" src='{environment:demosBaseUrl}/list-sample-6' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-sample-6-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+</div>
+
 #### リスト項目の追加
 
 リストが空の場合にテンプレートは便利ですが、次は項目を追加します。以下のコードを追加すると項目の簡易なリストを作成できます。
