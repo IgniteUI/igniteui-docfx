@@ -9,6 +9,8 @@ _language: ja
 
 Ignite UI for Angular の Grid コンポーネントは、標準ドラッグ/ドロップのマウス ジェスチャで**列移動**を使用して列の並び替えができます。
 
+固定列で列を移動することもできます。ピン固定していない列をドラッグしてピン固定領域内にドロップして列をピンを固定したり、ピン固定領域内から列をドラッグして非固定領域にドロップしてピン固定の解除ができます。
+
 #### デモ
 
 <div class="sample-container loading" style="height:630px">
@@ -26,6 +28,8 @@ Ignite UI for Angular の Grid コンポーネントは、標準ドラッグ/ド
 ```html
 <igx-column [field]="'Category'" [movable]="true"></igx-column>
 ```
+> [!NOTE]
+> ピン固定領域が最大幅 (グリッド幅合計の 80 %)を超えた場合、ドロップ操作が禁止されていてピン固定ができないことをヒントの表示でエンドユーザーに通知します。つまり、ピン固定領域に列をドロップできないということです。
 
 #### イベント
 列のドラッグアンドドロップ操作をカスタマイズするための列移動に関連するイベントが複数あります。`onColumnMovingStart`、`onColumnMoving`、`onColumnMovingEnd` があります。
