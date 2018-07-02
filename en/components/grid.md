@@ -407,7 +407,7 @@ Here is a list of all public methods exposed by **igx-grid**:
 |`filter(name: string, value: any, conditionOrExpressionTree?: IFilteringExpressionsTree, ignoreCase?: boolean)`|Filters a single column. A filtering expressions tree is used as parameter.|
 |`filterGlobal(value: any, condition?, ignoreCase?)`|Filters all the columns in the grid with the same condition.|
 |`clearFilter(name?: string)`|If `name` is provided, clears the filtering state of the corresponding column, otherwise clears the filtering state of all columns.|
-|`sort(name: string, direction, ignorecase)`|Sorts a single column.|
+|`sort(expression: ISortingExpression)`|Sorts a single column.|
 |`sort(expressions: Array)`|Sorts the grid columns based on the provided array of sorting expressions.|
 |`clearSort(name?: string)`|If `name` is provided, clears the sorting state of the corresponding column, otherwise clears the sorting state of all columns.|
 |`enableSummaries(fieldName: string, customSummary?: any)`|Enable summaries for the specified column and apply your `customSummary`. If you do not provide the `customSummary`, then the default summary for the column data type will be applied.|

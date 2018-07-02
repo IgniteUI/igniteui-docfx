@@ -35,7 +35,7 @@ Ignite UI for Angular では、列レベルでの**並べ替え**が可能です
 import { SortingDirection } from 'igniteui-angular';
 
 // Perform a case insensitive ascending sort on the ProductName column.
-this.grid.sort('ProductName', SortingDirection.Asc, true);
+this.grid.sort({fieldName: 'ProductName', dir: SortingDirection.Asc, ignoreCase: true});
 
 // Perform sorting on both the ProductName and Price columns.
 this.grid.sort([

@@ -409,7 +409,7 @@ export class MyComponent implements OnInit {
 |`filter(expressions: Array)`|グリッド列を提供したフィルター式の配列に基づいてフィルターします。|
 |`filterGlobal(value: any, condition? ignoreCase?)`|グリッドの列をすべてフィルターします。|
 |`clearFilter(name?: string)`|`name` が提供された場合、相対する列のフィルター状態をクリアします。それ以外の場合、すべての列のフィルター状態をクリアします。|
-|`sort(name: string, direction, ignorecase)`|単一の列を並べ替えます。|
+|`sort(expression: ISortingExpression)`|単一の列を並べ替えます。|
 |`sort(expressions: Array)`|グリッド列を提供した並べ替え式の配列に基づいて並べ替えます。|
 |`clearSort(name?: string)`|`name` が提供された場合、相対する列の並べ替え状態をクリアします。それ以外の場合、すべての列の並べ替え状態をクリアします。|
 |`enableSummaries(fieldName: string, customSummary?: any)`|指定した列で集計を有効にし、`customSummary` を適用します。`customSummary` を設定しない場合、列のデータ型のデフォルト集計が適用されます。|
