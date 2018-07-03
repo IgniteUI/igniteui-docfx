@@ -46,12 +46,12 @@ You can exit edit mode and **commit** the changes in one of the following ways:
 > [!NOTE]
 > The cell remains in edit mode when you scroll vertically or horizontally, click outside the grid, resize column, pin column or go to another page.
 
-You can also modify the cell value through the IgxGrid API:
+You can also modify the cell value through the IgxGrid API but only if primary is defined:
 
 ```typescript
 ...
     public updateCell() {
-        this.grid1.updateCell(70, 0, 'ReorderLevel');
+        this.grid1.updateCell(newValue, rowID, 'ReorderLevel');
     }
 ...
 ```
@@ -62,7 +62,9 @@ Another way to update cell is directly through `update` method of IgxCellCompone
 ```typescript
 ...
     public updateCell() {
-        const cell = this.grid1.getCellByColumn(0, 'ReorderLevel');
+        const cell = this.grid1.getCellByColumn(rowIndex, 'ReorderLevel');
+        // You can also get cell by rowID if primary key is defined
+        // cell = this.grid1.getCellByKey(rowID, 'ReorderLevel');
         cell.update(70);
     }
 ...
@@ -89,23 +91,33 @@ this.grid.addRow(record);
 
 #### Updating data in the grid
 
-Updating data in the grid is achieved through `updateRow` and `updateCell` methods. You can also directly update a cell value through its `update` method.
+Updating data in the grid is achieved through `updateRow` and `updateCell` methods but **only if primary key for the grid is defined**. You can also directly update a cell and row value through their `update` method.
 
 ```typescript
 // Updating the whole row
-this.grid.updateRow(newData, this.selectedCell.rowIndex);
+this.grid.updateRow(newData, this.selectedCell.cellID.rowID);
 
 // Just a particualr cell through the Grid API
-this.grid.updateCell(newData, this.selectedCell.rowIndex, this.selectedCell.column.field);
+this.grid.updateCell(newData, this.selectedCell.cellID.rowID, this.selectedCell.column.field);
 
 // Directly using the cell `update` method
 this.selectedCell.update(newData);
+
+// Directly using the row `update` method
+const row = this.grid.getRowByKey(rowID);
+row.update(newData);
 ```
 
 #### Deleting data from the grid
 
+Please keep in mind that `deleteRow()` method will remove the specified row only if primary key is defined.
+
 ```typescript
-this.grid.deleteRow(this.selectedCell.rowIndex);
+// Delete row through Grid API
+this.grid.deleteRow(this.selectedCell.cellID.rowID);
+// Delete row through row object
+const row = this.grid.getRowByIndex(rowIndex);
+row.delete();
 ```
 These can be wired to user interactions, not necessarily related to the **igx-grid**; for example, a button click:
 ```html
