@@ -398,10 +398,13 @@ export class MyComponent implements OnInit {
 |--- |--- |
 |`getColumnByName(name: string)`|`name` と等しいフィールド プロパティを持つ列オブジェクトを返します。このような列がない場合は `undefined` を返します。|
 |`getCellByColumn(rowIndex: number, columnField: string)`|列が `columnField` で、行が `rowIndex` である列のセル オブジェクトを返します。ない場合は `undefined` を返します。|
+|`getCellByKey(rowSelector: any, columnField: string)`|Returns cell object **only if primary key is specified in the grid**, `rowSelector` match any rowID and columnField exists in the grid, else returns undefined.|
+|`getRowByIndex(index: number)`|Returns row object if the specified rowIndex exist and is currently in the display area of the grid.|
+|`getRowByKey(keyValue: any)`|Returns row object **only if primary key is specified in the grid** and the specified keyValue exist as a rowID in the grid.|
 |`addRow(data: any)`|新しい行オブジェクトを作成し、データ レコードをデータ ソースの終了に追加します。|
-|`deleteRow(rowIndex: number)`|行オブジェクトおよび相対するデータ レコードをデータ ソースから削除します。|
-|`updateRow(value: any, rowIndex: number)`|行オブジェクトおよびデータ ソース レコードを渡された値で更新します。|
-|`updateCell(value: any, rowIndex: number, column: string)`|セル オブジェクトおよびデータ ソースのレコード フィールドを更新します。|
+|`deleteRow(rowSelector: any)`|Removes the row object and the corresponding data record from the data source **only if primary key is specified in the grid**. The method accept `rowSelector` as a parameter, which is the rowID.|
+|`updateRow(value: any, rowSelector: any)`|Updates the row object, which is specified by `rowSelector` parameter /`rowSelector` parameter correspond to rowID/ and the data source record with the passed value. **This method will apply requested update only if primary key is specified in the grid.**|
+|`updateCell(value: any, rowSelector: any, column: string)`|Updates the cell object and the record field in the data source. The method accept 3 parameters - `value` - the new value which is to be set, and the other two params `rowSelector` and `column` identify the cell which is going to be updated. `rowSelector` corresponds to rowID and `column` to column field. **This method will apply requested update only if primary key is specified in the grid.**|
 |`filter(name: string, value: any, conditionOrExpressionTree?: IFilteringOperation, ignoreCase?: boolean)`|単一の列をフィルターします。フィルタリング処理はパラメーターとして使用されます。利用可能な[フィルター条件](#フィルター条件)を参照してください。|
 |`filter(name: string, value: any, conditionOrExpressionTree?: IFilteringExpressionsTree, ignoreCase?: boolean)`|単一の列をフィルターします。フィルタリング式ツリーはパラメーターとして使用されます。|
 |`filterGlobal(value: any, condition?, ignoreCase?)`|同じ条件でグリッドのすべての列をフィルターします。|
@@ -583,6 +586,12 @@ public filter(term) {
 |`cells`|QueryList|はい|いいえ|行コンポーネントの描画されるセル。|
 |`grid`|IgxGridComponent|はい|いいえ|行を含むグリッドへの参照。|
 |`nativeElement`|HTMLElement|はい|いいえ|行を表すネイティブ DOM 要素。特定の環境で `null` 値が可能です。|
+
+### Methods
+|Signature|Description|
+|--- |--- |
+|`update(value: any)`|Updates the specified row object and the data source record with the passed value. This method emits `onEditDone` event.|
+|`delete()`|Removes the specified row from the grid's data source. This method emits `onRowDeleted` event.|
 
 <div class="divider--half"></div>
 
