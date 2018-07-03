@@ -404,7 +404,7 @@ export class MyComponent implements OnInit {
 |`addRow(data: any)`|新しい行オブジェクトを作成し、データ レコードをデータ ソースの終了に追加します。|
 |`deleteRow(rowSelector: any)`|Removes the row object and the corresponding data record from the data source **only if primary key is specified in the grid**. The method accept `rowSelector` as a parameter, which is the rowID.|
 |`updateRow(value: any, rowSelector: any)`|Updates the row object, which is specified by `rowSelector` parameter /`rowSelector` parameter correspond to rowID/ and the data source record with the passed value. **This method will apply requested update only if primary key is specified in the grid.**|
-|`updateCell(value: any, rowSelector: any, column: string)`|Updates the cell object and the record field in the data source. The method accept 3 parameters - `value` - the new value which is to be set, and the other two params `rowSelector` and `column` identify the cell which going to be updated. `rowSelector` corresponds to rowID and `column` to column field. **This method will apply requested update only if primary key is specified in the grid.**|
+|`updateCell(value: any, rowSelector: any, column: string)`|Updates the cell object and the record field in the data source. The method accept 3 parameters - `value` - the new value which is to be set, and the other two params `rowSelector` and `column` identify the cell which is going to be updated. `rowSelector` corresponds to rowID and `column` to column field. **This method will apply requested update only if primary key is specified in the grid.**|
 |`filter(name: string, value: any, conditionOrExpressionTree?: IFilteringOperation, ignoreCase?: boolean)`|単一の列をフィルターします。フィルタリング処理はパラメーターとして使用されます。利用可能な[フィルター条件](#フィルター条件)を参照してください。|
 |`filter(name: string, value: any, conditionOrExpressionTree?: IFilteringExpressionsTree, ignoreCase?: boolean)`|単一の列をフィルターします。フィルタリング式ツリーはパラメーターとして使用されます。|
 |`filterGlobal(value: any, condition?, ignoreCase?)`|同じ条件でグリッドのすべての列をフィルターします。|
@@ -591,7 +591,7 @@ public filter(term) {
 |Signature|Description|
 |--- |--- |
 |`update(value: any)`|Updates the specified row object and the data source record with the passed value. This method emits `onEditDone` event.|
-|`delete()`|Removes the specied row from the grid's data source. This method emits `onRowDeleted` event.|
+|`delete()`|Removes the specified row from the grid's data source. This method emits `onRowDeleted` event.|
 
 <div class="divider--half"></div>
 

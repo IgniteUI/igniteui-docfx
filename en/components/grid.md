@@ -405,7 +405,7 @@ Here is a list of all public methods exposed by **igx-grid**:
 |`addRow(data: any)`|Creates a new row object and adds the `data` record to the end of the data source.|
 |`deleteRow(rowSelector: any)`|Removes the row object and the corresponding data record from the data source **only if primary key is specified in the grid**. The method accept `rowSelector` as a parameter, which is the rowID.|
 |`updateRow(value: any, rowSelector: any)`|Updates the row object, which is specified by `rowSelector` parameter /`rowSelector` parameter correspond to rowID/ and the data source record with the passed value. **This method will apply requested update only if primary key is specified in the grid.**|
-|`updateCell(value: any, rowSelector: any, column: string)`|Updates the cell object and the record field in the data source. The method accept 3 parameters - `value` - the new value which is to be set, and the other two params `rowSelector` and `column` identify the cell which going to be updated. `rowSelector` corresponds to rowID and `column` to column field. **This method will apply requested update only if primary key is specified in the grid.**|
+|`updateCell(value: any, rowSelector: any, column: string)`|Updates the cell object and the record field in the data source. The method accept 3 parameters - `value` - the new value which is to be set, and the other two params `rowSelector` and `column` identify the cell which is going to be updated. `rowSelector` corresponds to rowID and `column` to column field. **This method will apply requested update only if primary key is specified in the grid.**|
 |`filter(name: string, value: any, conditionOrExpressionTree?: IFilteringOperation, ignoreCase?: boolean)`|Filters a single column. A filtering operation is used as parameter. Check the available [filtering conditions](#filtering-conditions).|
 |`filter(name: string, value: any, conditionOrExpressionTree?: IFilteringExpressionsTree, ignoreCase?: boolean)`|Filters a single column. A filtering expressions tree is used as parameter.|
 |`filterGlobal(value: any, condition?, ignoreCase?)`|Filters all the columns in the grid with the same condition.|
@@ -589,7 +589,7 @@ public filter(term) {
 |Signature|Description|
 |--- |--- |
 |`update(value: any)`|Updates the specified row object and the data source record with the passed value. This method emits `onEditDone` event.|
-|`delete()`|Removes the specied row from the grid's data source. This method emits `onRowDeleted` event.|
+|`delete()`|Removes the specified row from the grid's data source. This method emits `onRowDeleted` event.|
 
 <div class="divider--half"></div>
 
