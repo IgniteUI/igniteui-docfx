@@ -98,7 +98,7 @@ export class ExampleComponent {
 
    | 名前               | 説明                                        | 型                                |
    |--------------------|-----------------------------------------------------|-------------------------------------|
-   |target              | 表示するターゲットのアタッチ ターゲット。         | Point | HTMLElement                 |
+   |target              | 表示するターゲットのアタッチ ターゲット。         | Point \| HTMLElement                 |
    |horizontalDirection | コンポーネントが表示される方向。       | HorizontalAlignment                 |
    |verticalDirection   | コンポーネントが表示される方向。       | VerticalAlignment                   |
    |horizontalStartPoint| ターゲットの開始ポイント。                             | HorizontalAlignment                 |
@@ -112,7 +112,7 @@ export class ExampleComponent {
 
    | 名前           | 説明                                                                     | パラメーター |
    |-----------------|---------------------------------------------------------------------------------|------------|
-   |show             | オーバーレイで指定したコンポーネントを表示します。                                     |component, id?, overlaySettings?|
+   |show             | オーバーレイで指定したコンポーネントを表示します。                                     |component, overlaySettings?|
    |hide             | 指定 ID のコンポーネントのネイティブ要素を削除します。        |id          |
    |hideAll          | すべてのネイティブ要素を削除してオーバーレイを非表示にします。                        |-           |
    |reposition       | 指定 ID のコンポーネントのネイティブ要素を再配置します。                |id          |

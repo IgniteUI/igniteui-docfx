@@ -102,7 +102,7 @@ import {AutoPositionStrategy, GlobalPositionStrategy, ConnectedPositioningStrate
 #### PositionSettings
 | 名前               | 型                        | 説明 |
 | :----------------- | :-------------------------- | :---------- |
-|target              | Point | HTMLElement         | 使用するポジション ストラテジーと渡されたサイズに基づいて要素を配置します。          |
+|target              | Point \| HTMLElement         | 使用するポジション ストラテジーと渡されたサイズに基づいて要素を配置します。          |
 |horizontalDirection | HorizontalAlignment         | コンポーネントが表示される方向。       |
 |verticalDirection   | VerticalAlignment           |　コンポーネントが表示される方向。        |
 |horizontalStartPoint| HorizontalAlignment         | ターゲットの開始ポイント。                             |
