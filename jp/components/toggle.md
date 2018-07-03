@@ -88,7 +88,7 @@ export class Class {
     </button>
 </div>
 
-In the next sample we'll use different positioning strategy so the content is displayed below the button. 
+次のサンプルでは、さまざまな配置方法を使用してコンテンツをボタンの下に表示します。
 
 ```typescript
 // app.module.ts
@@ -118,7 +118,7 @@ export class AppModule {}
 </div>
 ```
 
-The `igxToggle` uses the [**IgxOverlayService**](https://www.infragistics.com/products/ignite-ui-angular/angular/components/overlay_main.html) and the `open` and `toggle` methods accept optional overlay settings to control how content is displayed. If omitted, default overlay settings are used as seen in the previous sample.
+`igxToggle` は、[**IgxOverlayService**](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/overlay_main.html) を使用し、コンテンツの表示方法を制御するために `open` および `toggle` メソッドが任意のオーバーレイ設定を受け取ります。省略した場合は、上のサンプルのようにデフォルトのオーバーレイ設定が使用されます。
 
 ```typescript
 // template.component.ts
@@ -147,7 +147,7 @@ The `igxToggle` uses the [**IgxOverlayService**](https://www.infragistics.com/pr
     <iframe id="toggle-iframe-1" src='{environment:demosBaseUrl}/toggle' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="toggle-iframe-1" data-demos-base-url="{environment:demosBaseUrl}">                       view on stackblitz
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="toggle-iframe-1" data-demos-base-url="{environment:demosBaseUrl}">                       StackBlitz で表示
     </button>
 </div>
 
