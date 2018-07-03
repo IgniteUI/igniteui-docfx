@@ -30,8 +30,9 @@ _language: ja
 <div class="divider"></div>
 *注*: HorizontalDirection = Center / VerticalDirection = Middle を使用している場合、要素を再配置を試みません。
 
-### 使用方法
+## 使用方法
 ターゲットとする既存ボタンに基づいて要素を配置し、開始点をボタンの下角または左角にします。
+
 ```typescript
 const positionSettings: PositionSettings = {
     target: buttonElement.nativeElement,
@@ -47,6 +48,7 @@ strategy.position(contentWrapper, size);
 
 ### 作業の開始
 ポジション ストラテジーは、`overlay.show()` メソッドが呼ばれたときに `overlaySettings` パラメーターのプロパティとして渡されます。
+
 ```typescript
     // Initializing and using overlay settings
     const overlaySettings: OverlaySettings = {
@@ -60,6 +62,7 @@ strategy.position(contentWrapper, size);
 <div class="divider"></div>
 
 オーバーレイで使用するポジション ストラテジーの変更は、オーバーレイに渡される `overlaySettings` オブジェクトの `positionStrategy` プロパティをオーバーライドします。
+
 ```typescript
     // overlaySettings is an existing object of type OverlaySettings
     // to override the position strategy
@@ -69,6 +72,7 @@ strategy.position(contentWrapper, size);
 <div class="divider"></div>
 
 既存の配置設定を変更するには、変更したいストラテジーの設定をオーバーライドします。
+
 ```typescript
     // overlaySettings is an existing object of type OverlaySettings
     // overlaySettings.positionStrategy is an existing PositionStrategy with settings of type PositionSettings
