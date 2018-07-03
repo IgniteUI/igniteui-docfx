@@ -63,12 +63,11 @@ export class MyOverlayComponent {
 
 The overlay service `show()` method accepts 2 arguments, the first one being the content that should be rendered in the overlay. There are a couple of different scenarios how the content can be passed:
   - A component definition (illustrated in the sample above) - When passing a component in as the first argument, the overlay service creates a new instance of that component and dynamically attaches it to the `overlay` DOM.
-  - An existing piece of DOM - Any view that is already rendered on the page can be passed through the overlay service and be rendered in the overlay DOM. Using this approach will:
+  - An `ElementRef` to an existing DOM element - Any view that is already rendered on the page can be passed through the overlay service and be rendered in the overlay DOM. Using this approach will:
     - Get the reference to the passed view from Angular 
     - Detach the view from the DOM and leave an anchor in its place
     - Re-attach the view to the overlay, using the `show()` method settings or falling back to the default overlay settings
     - On close, will re-attach the view back to the original location in the DOM
-  - A newly created HTML node - for instance, an HTMLElement created by `document.createElement()` can be passed to the `show()` method an be dynamically created in the overlay DOM.
 <div class="divider--half"></div>
 
 ### Demo - Dynamic attach - Component
@@ -238,7 +237,7 @@ export class ExampleComponent {
 
    | Name               | Description                                         | Type                                |
    |--------------------|-----------------------------------------------------|-------------------------------------|
-   |target              | Attaching target for the component to show          | Point | HTMLElement                 |
+   |target              | Attaching target for the component to show          | Point \| HTMLElement                |
    |horizontalDirection | Direction in which the component should show        | HorizontalAlignment                 |
    |verticalDirection   | Direction in which the component should show        | VerticalAlignment                   |
    |horizontalStartPoint| Target's starting point                             | HorizontalAlignment                 |
@@ -252,7 +251,7 @@ export class ExampleComponent {
 
    | Name            | Description                                                                     | Parameters |
    |-----------------|---------------------------------------------------------------------------------|------------|
-   |show             | Shows the provided component on the overlay                                     |component, id?, overlaySettings?|
+   |show             | Shows the provided component on the overlay                                     |component, overlaySettings?|
    |hide             | Remove the provided native element of for the component with provided id        |id          |
    |hideAll          | Remove the all native elements and hides the overlay                            |-           |
    |reposition       | Repositions the native element of the component with provided id                |id          |
