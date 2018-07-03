@@ -128,7 +128,7 @@ In the demo below, the overlay element will position itself starting from the ta
 ### PositionSettings
 | Name               | Type                        | Description |
 | :----------------- | :-------------------------- | :---------- |
-|target              | Point | HTMLElement         | Attaching target for the component to show          |
+|target              | Point \| HTMLElement         | Attaching target for the component to show          |
 |horizontalDirection | HorizontalAlignment         | Direction in which the component should show        |
 |verticalDirection   | VerticalAlignment           | Direction in which the component should show        |
 |horizontalStartPoint| HorizontalAlignment         | Target's starting point                             |
