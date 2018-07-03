@@ -14,7 +14,7 @@ _language: ja
 
 ## 使用方法
 
-IgxOverlayService を使用するには、コンポーネントにインポートします。 `Inject` a reference to it in the component's `constructor`:
+IgxOverlayService を使用するには、コンポーネントにインポートします。 サービスへの参照をコンポーネントの `constructor` に注入します。
 ```typescript
 import { IgxOverlayService } from `igniteui-angular`;
 
@@ -31,7 +31,7 @@ export class MyOverlayComponent {
 
 ### オーバーレイ コンテンツの表示
 
-オーバーレイ サービスでオーバーレイ DOM にアタッチすると HTMLNode または Angular コンポーネントを動的に表示できます。
+オーバーレイ サービスでオーバーレイ DOM にアタッチすると `HTMLNode` または Angular コンポーネントを動的に表示できます。
 
 Overlay サービスへの参照を追加した後、コンテンツを動的に表示/非表示できます。たとえば、Angular コンポーネントを show 関数で渡せます。
 
@@ -62,26 +62,26 @@ export class MyOverlayComponent {
 ```
 <div class="divider--half"></div>
 
-オーバーレイ サービスの show() メソッドは 2 つの引数を受け取ります。最初の引数はオーバーレイに描画するコンテンツです。
+オーバーレイ サービスの `show()` メソッドは 2 つの引数を受け取ります。最初の引数はオーバーレイに描画するコンテンツです。
   - 上記の例などのコンポーネント定義 - コンポーネントを最初の引数として渡す場合、オーバーレイ サービスがそのコンポーネントの新しいインスタンスを作成し、動的にオーバーレイ DOM にアタッチします。
   - DOM の既存の要素 - ページで描画されるビューをオーバーレイ サービスに渡す場合、オーバーレイ DOM に描画されます。この方法を使用する場合:
     - Angular から渡されるビューへの参照を取得します。
     - ビューを DOM からデタッチし、そこにアンカーを追加します。
-    - show() メソッド設定またはデフォルトのオーバーレイ設定を使用してビューをオーバーレイにアタッチします。
+    - `show()` メソッド設定またはデフォルトのオーバーレイ設定を使用してビューをオーバーレイにアタッチします。
     - 閉じた後、ビューを DOM にある元の位置にアタッチします。
     -  新しく作成した HTML ノード - たとえば、`document.createElement()` によって作成した HTMLElement を `show()` メソッドに渡すと、その要素が動的にオーバーレイ DOM に作成されます。
 
 <div class="divider--half"></div>
 
 ### デモ - 動的なアタッチ - コンポーネント
-以下のデモで、IgxCard [デモ](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/card.html#card-demo) をオーバーレイ サービスの show() メソッドに渡して、モーダル コンテナーで DOM に動的にアタッチします。
+以下のデモで、IgxCard [デモ](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/card.html#card-デモ) をオーバーレイ サービスの show() メソッドに渡して、モーダル コンテナーで DOM に動的にアタッチします。
 
 
 <div class="sample-container loading" style="height: 400px">
     <iframe id="overlay-sample-main-1-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/overlay-sample-main-1" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="overlay-sample-main-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz</button>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="overlay-sample-main-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
 </div>
 <div class="divider--half"></div>
 
@@ -153,16 +153,17 @@ export class MyOverlayComponent {
 ### デモ - 動的なアタッチ - 設定
 
 `show()` メソッドの `overlaySettings` パラメーターを使用すると、コンテンツの表示方法を変更できます。たとえば、コンテンツの配置、スクロールの動作、およびコンテナーがモーダルかどうかを設定できます。
+
 <div class="sample-container loading" style="height: 400px">
     <iframe id="overlay-sample-main-2-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/overlay-sample-main-2" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="overlay-sample-main-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz</button>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="overlay-sample-main-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
 </div>
 <div class="divider--half"></div>
 
+`overlaySettings` が指定されていない場合、切り替えた要素はデフォルト表示設定を使用します。
 
-If *no* `overlaySettings` are configured, the toggled element falls back to *default display settings*:
 ```typescript
 defaultOverlaySettings = {
         positionStrategy: new GlobalPositionStrategy(),
@@ -176,8 +177,8 @@ defaultOverlaySettings = {
 ### igxToggle との統合
 `IgxToggleDirective` は `IgxOverlayService` と完全に統合されます。コンテンツの切り替えでトグルの `toggle()` メソッドにカスタム オーバーレイ設定を渡すことができます。
 
+構成設定をトグルのメソッドに渡す方法は以下の例で紹介されます。
 
-An example of how to pass configuration settings to the toggle's method is shown below:
 ```html
 <!-- In example.component.html -->
 <div class='example-div--container' style='width: 400px; height; 120px'>

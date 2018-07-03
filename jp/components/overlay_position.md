@@ -93,26 +93,26 @@ import {AutoPositionStrategy, GlobalPositionStrategy, ConnectedPositioningStrate
 ## デモ 
 
 ### 水平方向または垂直方向
-配置設定で水平方向または垂直方向を設定すると、コンテンツの配置を決定します。配置に基づいて、コンテンツがターゲットのコンテナー (AutoPositionStrategy および ConnectedPositioningStrategy) に相対して配置するか、ドキュメントの本体 (GlobalPositioningStrategy) に相対して配置します。
+配置設定で水平方向または垂直方向を設定すると、コンテンツの配置を決定します。配置に基づいて、コンテンツがターゲットのコンテナー (`AutoPositionStrategy` および `ConnectedPositioningStrategy`) に相対して配置するか、ドキュメントの本体 (`GlobalPositioningStrategy`) に相対して配置します。
 
 <div class="sample-container loading" style="height: 400px">
     <iframe id="overlay-position-sample-1-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/overlay-position-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="overlay-position-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz</button>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="overlay-position-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
 </div>
 <div class="divider"></div>
 
 ### 水平または垂直開始点
 配置設定で水平開始点または垂直開始点を設定すると、コンテンツの開始位置を決定します。
-開始点は、`positionSettings` に渡された target が `HTMLElement` で、`AutoPositionStrategy` または `ConnectedPositioningStrategy` が設定された場合のみに影響します。
+開始点は、`positionSettings` に渡された `target` が `HTMLElement` で、`AutoPositionStrategy` または `ConnectedPositioningStrategy` が設定された場合のみに影響します。
 以下のデモで、オーバーレイ要素は選択した開始点に基づいてターゲット要素に配置します。方向は常に `HorizontalAlignment.Right` および `VerticalAlignment.Bottom` です。
 
 <div class="sample-container loading" style="height: 400px">
     <iframe id="overlay-position-sample-2-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/overlay-position-sample-2" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="overlay-position-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz</button>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="overlay-position-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
 </div>
 <div class="divider"></div>
 
