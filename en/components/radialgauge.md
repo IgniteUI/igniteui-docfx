@@ -32,7 +32,7 @@ The radial gauge exported as an `NgModule`, you need to import the _IgxRadialGau
 
 ```typescript
 // app.module.ts
-import { IgxRadialGaugeModule } from '@infragistics/ignite-ui-xplatform-for-angular/Debug/ES5/igx-radialgauge-module';
+import { IgxRadialGaugeModule } from 'ignite-angular-gauges/ES5/igx-radial-gauge-module';
 
 @NgModule({
     imports: [
@@ -54,18 +54,16 @@ The following code demonstrates how create a radial gauge containing a needle an
  <igx-radial-gauge value = "50"
                    scaleStartExtent = "0"
                    scaleEndExtent = "100">
-    <igx-radial-gauge.ranges>
-        <igx-radial-graph-range startValue="0"
-                                endValue="30"
-                                brush="red"/>
-        <igx-radial-graph-range startValue="30"
-                                endValue="60"
-                                brush="yellow"/>
-        <igx-radial-graph-range startValue="60"
-                                endValue="100"
-                                brush="green"/>
-    </igx-radial-gauge.ranges>         
- </igx-radial-gauge>
+    <igx-radial-graph-range startValue="0"
+                            endValue="30"
+                            brush="red"/>
+    <igx-radial-graph-range startValue="30"
+                            endValue="60"
+                            brush="yellow"/>
+    <igx-radial-graph-range startValue="60"
+                            endValue="100"
+                            brush="green"/>
+</igx-radial-gauge>
 ```
 
 <div class="divider--half"></div>
@@ -88,7 +86,7 @@ The supported needle shapes and caps are set using the `needleShape` and `needle
 A range highlights a set of continuous values bound by a specified minimum and maximum value on a gauge scale. You can add multiple ranges to a scale, specifying different brushes, along with starting and ending values. 
 
 ### Scale
-Used to represent the values of the gauge visually, a scale defines a range of values in the XamRadialGauge control. The tick marks and ranges are all the elements that can be added to a scale.
+Used to represent the values of the gauge visually, a scale defines a range of values in the radial gauge control. The tick marks and ranges are all the elements that can be added to a scale.
 
 ### Tick Marks
 The radial gauge tick marks are visual elements displayed as lines at specified intervals on the gauge.
