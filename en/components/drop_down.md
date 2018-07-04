@@ -250,8 +250,8 @@ The following inputs are available in the **igx-drop-down** component:
 
 | Name | Type | Description |
 | :--- | :--- | :--- |
-| `width` | string | Sets the tab width of the control. |
-| `height` | string | Sets the tab height of the control. |
+| `width` | string | Sets the width of the control. |
+| `height` | string | Sets the height of the control. |
 | `allowItemsFocus` | boolean | Allows items to take focus. |
 
 <div class="divider--half"></div>
