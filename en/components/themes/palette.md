@@ -14,7 +14,7 @@ To get started with our first color palette, create an _scss_ file that would be
 
 ```scss
 // Import the IgniteUI themes library first
-@import "~igniteui-angular/core/styles/themes/index";
+@import "~igniteui-angular/lib/core/styles/themes/index";
 
 $company-color: #2ab759; // Some green shade I like
 $secondary-color: #f96a88; // Watermelon pink

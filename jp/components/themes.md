@@ -40,7 +40,7 @@ Ignite UI for Angular はコンポーネントのデザインを**<a href="https
 
 ```scss
 // Import the IgniteUI themes library first
-@import "~igniteui-angular/core/styles/themes/index";
+@import "~igniteui-angular/lib/core/styles/themes/index";
 
 $company-color: #2ab759; // Some green shade I like
 $secondary-color: #f96a88; // Watermelon pink
@@ -109,7 +109,7 @@ $my-primary-800-text: igx-contrast-color($my-palette, "primary", 600);
 
 ```scss
 // Import the IgniteUI themes library first
-@import "~igniteui-angular/core/styles/themes/index";
+@import "~igniteui-angular/lib/core/styles/themes/index";
 
 $company-color: #2ab759; // Some green shade I like
 $secondary-color: #f96a88; // Watermelon pink
@@ -140,7 +140,7 @@ $my-color-palette: igx-palette(
 
 ```scss
 // Import the IgniteUI themes library first
-@import "~igniteui-angular/core/styles/themes/index";
+@import "~igniteui-angular/lib/core/styles/themes/index";
 // IMPORTANT: Make sure you always include igx-core first!
 @include igx-core();
 @include igx-theme($default-palette);

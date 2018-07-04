@@ -26,7 +26,7 @@ Let's create a custom global theme that will use the primary and secondary color
 
 ```scss
 // Import the IgniteUI themes library first
-@import "~igniteui-angular/core/styles/themes/index";
+@import "~igniteui-angular/lib/core/styles/themes/index";
 
 $primary-color: #2ab759; // Some green shade I like
 $secondary-color: #f96a88; // Watermelon pink
