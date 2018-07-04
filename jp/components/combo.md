@@ -313,7 +313,7 @@ igxCombo が開いて、カスタム値が有効で、「項目の追加」ボ�
 |  `searchPlaceholder `    | 検索入力のプレースホルダー テキストを定義します。                    | string                      |
 |  `collapsed`             | ドロップダウン状態を取得します。                                | boolean                     |
 |  `disabled`              | コントロールがアクティブかどうかを定義します。                         | boolean                     |
-|  `ariaLabelledBy`        | コンボに相対するラベル ID を定義します。                         | boolean                     |
+|  `ariaLabelledBy`        | コンボに相対するラベル ID を定義します。                         | string                     |
 |  `type`                  | コンボの型 ("line"、"box"、"border"、または "search" ) を定義します。| string                   |
 |  `valid`                 | フォームで使用時のコントロールが有効化どうかを取得します。     | boolean                     |
 
