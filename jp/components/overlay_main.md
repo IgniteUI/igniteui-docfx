@@ -7,7 +7,7 @@ _language: ja
 
 ## Overlay の概要
 <p class="highlight">
-The `IgxOverlayService` は、`IgxToggle` ディレクティブに完全に統合されています。toggle ディレクティブを使用する場合、`overlaySettings` パラメーターを toggle の toggle の `toggle()` メソッドに設定してコンテンツが描画された場合の切り替え方法を変更できます。
+`IgxOverlayService` は、`IgxToggle` ディレクティブに完全に統合されています。toggle ディレクティブを使用する場合、`overlaySettings` パラメーターを toggle の toggle の `toggle()` メソッドに設定してコンテンツが描画された場合の切り替え方法を変更できます。
 </p>
 <div class="divider--half"></div>
 
@@ -16,10 +16,10 @@ The `IgxOverlayService` は、`IgxToggle` ディレクティブに完全に統�
 以下のデモは、オーバーレイ要素の表示方法を変更するためにオーバーレイ サービス `overlaySettings` を扱う方法を示します。
 </p>
 <div class="sample-container loading" style="height: 600px">
-    <iframe id="overlay-sample-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/overlay-sample" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="overlay-sample-main-1-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/overlay-sample" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="overlay-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="overlay-sample-main-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
 </div>
 <div class="divider--half"></div>
 
@@ -98,7 +98,7 @@ export class ExampleComponent {
 
    | 名前               | 説明                                        | 型                                |
    |--------------------|-----------------------------------------------------|-------------------------------------|
-   |target              | 表示するターゲットのアタッチ ターゲット。         | Point | HTMLElement                 |
+   |target              | 表示するターゲットのアタッチ ターゲット。         | Point \| HTMLElement                 |
    |horizontalDirection | コンポーネントが表示される方向。       | HorizontalAlignment                 |
    |verticalDirection   | コンポーネントが表示される方向。       | VerticalAlignment                   |
    |horizontalStartPoint| ターゲットの開始ポイント。                             | HorizontalAlignment                 |
@@ -112,7 +112,7 @@ export class ExampleComponent {
 
    | 名前           | 説明                                                                     | パラメーター |
    |-----------------|---------------------------------------------------------------------------------|------------|
-   |show             | オーバーレイで指定したコンポーネントを表示します。                                     |component, id?, overlaySettings?|
+   |show             | オーバーレイで指定したコンポーネントを表示します。                                     |component, overlaySettings?|
    |hide             | 指定 ID のコンポーネントのネイティブ要素を削除します。        |id          |
    |hideAll          | すべてのネイティブ要素を削除してオーバーレイを非表示にします。                        |-           |
    |reposition       | 指定 ID のコンポーネントのネイティブ要素を再配置します。                |id          |

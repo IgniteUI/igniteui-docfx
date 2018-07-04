@@ -46,12 +46,12 @@ Ignite UI for Angular の Grid コンポーネントは、列のデータ型に�
 > [!NOTE]
 > セルは、水平方向または垂直方向へスクロール、グリッド以外をクリック、列のサイズ変更、列のピン固定、またはその他のページへ移動した場合も編集モードのままです。
 
-IgxGrid API でセル値を変更することもできます。
+You can also modify the cell value through the IgxGrid API but only if primary is defined:
 
 ```typescript
 ...
     public updateCell() {
-        this.grid1.updateCell(70, 0, 'ReorderLevel');
+        this.grid1.updateCell(newValue, rowID, 'ReorderLevel');
     }
 ...
 ```
@@ -62,7 +62,9 @@ IgxGrid API でセル値を変更することもできます。
 ```typescript
 ...
     public updateCell() {
-        const cell = this.grid1.getCellByColumn(0, 'ReorderLevel');
+        const cell = this.grid1.getCellByColumn(rowIndex, 'ReorderLevel');
+        // You can also get cell by rowID if primary key is defined
+        // cell = this.grid1.getCellByKey(rowID, 'ReorderLevel');
         cell.update(70);
     }
 ...
@@ -89,23 +91,33 @@ this.grid.addRow(record);
 
 #### グリッド データの更新
 
-グリッドでデータの更新は `updateRow` および `updateCell` メソッドを使用して実行されます。セル値を直接更新するには `update` メソッドを使用できます。
+Updating data in the grid is achieved through `updateRow` and `updateCell` methods but **only if primary key for the grid is defined**. You can also directly update a cell and row value through their `update` method.
 
 ```typescript
 // Updating the whole row
-this.grid.updateRow(newData, this.selectedCell.rowIndex);
+this.grid.updateRow(newData, this.selectedCell.cellID.rowID);
 
 // Just a particualr cell through the Grid API
-this.grid.updateCell(newData, this.selectedCell.rowIndex, this.selectedCell.column.field);
+this.grid.updateCell(newData, this.selectedCell.cellID.rowID, this.selectedCell.column.field);
 
 // Directly using the cell `update` method
 this.selectedCell.update(newData);
+
+// Directly using the row `update` method
+const row = this.grid.getRowByKey(rowID);
+row.update(newData);
 ```
 
 #### グリッド データの削除
 
+Please keep in mind that `deleteRow()` method will remove the specified row only if primary key is defined.
+
 ```typescript
-this.grid.deleteRow(this.selectedCell.rowIndex);
+// Delete row through Grid API
+this.grid.deleteRow(this.selectedCell.cellID.rowID);
+// Delete row through row object
+const row = this.grid.getRowByIndex(rowIndex);
+row.delete();
 ```
 **igx-grid**　に関係なく、ボタンのクリックなどのユーザー インタラクションに接続できます。
 ```html

@@ -88,6 +88,69 @@ export class Class {
     </button>
 </div>
 
+次のサンプルでは、さまざまな配置方法を使用してコンテンツをボタンの下に表示します。
+
+```typescript
+// app.module.ts
+
+...
+import { IgxToggleModule, IgxButtonModule } from 'igniteui-angular'
+
+@NgModule({
+    ...
+    imports: [..., IgxToggleModule, IgxButtonModule]
+    ...
+})
+export class AppModule {}
+```
+
+```html
+<!--template.component.html-->
+<div class="sample-wrapper">
+  <article class="sample-column">
+    <button class="toggle-button" #button igxButton="raised" (click)="toggle()">Toggle</button>
+    <div class="toggle-content" igxToggle #toggleRef="toggle">
+      <section class="toggle-section">
+          <h2>Box</h2>
+      </section>
+    </div>
+  </article>
+</div>
+```
+
+`igxToggle` は、[**IgxOverlayService**](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/overlay_main.html) を使用し、コンテンツの表示方法を制御するために `open` および `toggle` メソッドが任意のオーバーレイ設定を受け取ります。省略した場合は、上のサンプルのようにデフォルトのオーバーレイ設定が使用されます。
+
+```typescript
+// template.component.ts
+
+...
+    @ViewChild(IgxToggleDirective) public igxToggle: IgxToggleDirective;
+    @ViewChild("button") public igxButton: ElementRef;
+    public _positionSettings = {
+        horizontalStartPoint: HorizontalAlignment.Left,
+        verticalStartPoint: VerticalAlignment.Bottom
+    };
+    public _overlaySettings = {
+        closeOnOutsideClick: true,
+        modal: false,
+        positionStrategy: new ConnectedPositioningStrategy(this._positionSettings),
+        scrollStrategy: new CloseScrollStrategy()
+    };
+    public toggle() {
+        this._overlaySettings.positionStrategy.settings.target = this.igxButton.nativeElement;
+        this.igxToggle.toggle(this._overlaySettings);
+    }
+```
+
+
+<div class="sample-container loading" style="height: 370px">
+    <iframe id="toggle-iframe-1" src='{environment:demosBaseUrl}/toggle' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="toggle-iframe-1" data-demos-base-url="{environment:demosBaseUrl}">                       StackBlitz で表示
+    </button>
+</div>
+
 ### トグル自動操作
 
 このメソッドの呼び出しを回避するための `onClick` ハンドラーを含む、参照トグルの状態を変更できるディレクティブがあります。この機能を使用するには、同じ **IgxToggleModule** にある **IgxToggleActionDirective** を使用します。
@@ -149,7 +212,7 @@ export class AppModule {}
 ```html
 <!--template.component.html-->
 <button igxToggleAction="toggleId" [closeOnOutsideClick]="true" class="toggle-button"  igxButton="raised">Toggle</button>
-<div igxToggle id="toggleId" class="toggle-content" [collapsed]="false">
+<div igxToggle id="toggleId" class="toggle-content">
     <section class="toggle-section">
     <h3>Click 
         <br/> Out of the Box</h3>
@@ -178,7 +241,6 @@ export class AppModule {}
 以下の入力は **igxToggle** ディレクティブで利用できます。
 | 名前 | 型 | 説明 |
 | :--- | :--- | :--- |
-| `collapsed` | Boolean | トグルが開くか閉じるかを決定します。 |
 | `id` | Boolean | **igxNavigationService** に登録される識別子。 |
 
 <div class="divider"></div>
