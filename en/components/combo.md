@@ -71,7 +71,7 @@ Basic usage of `igx-combo` bound to a local data source, defining `valueKey` and
 
 > Note: If `displayKey` is omitted then `valueKey` entity will be used instead.
 
-
+<!-- 
 Remote binding, defining `valueKey` and `displayKey`, and exposing `onDataPreLoad` that allows to load new chunk of remote data to the combo (see the sample above as a reference):
 
 ```html
@@ -103,7 +103,7 @@ public dataLoading(evt) {
 
 > Note: In order to have combo with remote data, what you need is to have a service that retrieves data chunks from a server.
 What the combo exposes is a `virtualizationState` property that gives state of the combo - first index and the number of items that needs to be loaded.
-The service, should inform the combo for the total items that are on the server - using the `totalItemCount` property.
+The service, should inform the combo for the total items that are on the server - using the `totalItemCount` property. -->
 
 ### Value Binding
 
