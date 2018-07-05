@@ -202,7 +202,6 @@ private isSSNValid(ssn) {
 private notify(snackbar, message, input) {
     snackbar.message = message;
     snackbar.show();
-    input.focus();
 }
 ```
 
