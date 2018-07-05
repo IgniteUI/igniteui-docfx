@@ -299,7 +299,8 @@ When igxCombo is opened, allow custom values are enabled and add item button is 
 |  `id`                    | combo id                                          | string                      |
 |  `data`                  | combo data source                                 | any                         |
 |  `value`                 | combo value                                       | string                      |
-|  `allowCustomValue`      | enable/disables combo custom value                | boolean                     |
+|  `allowCustomValue`      | enables/disables combo custom value                | boolean                     |
+|  `filterable`            | enables/disables combo drop down filtering - enabled by default                  | boolean                     |
 |  `valueKey`              | combo value data source property                  | string                      |
 |  `displayKey`            | combo display data source property                | string                      |
 |  `groupKey`              | combo item group                                  | string                      |
