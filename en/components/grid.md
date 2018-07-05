@@ -22,7 +22,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ### Dependencies
 
-The grid is exported as as an `NgModule`, thus all you need to do in your application is to import the _IgxGridModule_ inside your `AppModule`:
+The grid is exported as an `NgModule`, thus all you need to do in your application is to import the _IgxGridModule_ inside your `AppModule`:
 
 ```typescript
 // app.module.ts
