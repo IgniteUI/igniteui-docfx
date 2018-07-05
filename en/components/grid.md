@@ -339,6 +339,7 @@ and in the template of the component:
 ### Inputs
 
 Below is the list of all inputs that the developers may set to configure the grid look/behavior:
+
 |Name|Type|Description|
 |--- |--- |--- |
 |`id`|string|Unique identifier of the Grid. If not provided it will be automatically generated.|
@@ -442,6 +443,7 @@ Here is a list of all public methods exposed by **igx-grid**:
 ### Inputs
 
 Inputs available on the **IgxGridColumnComponent** to define columns:
+
 |Name|Type|Description|
 |--- |--- |--- |
 |`field`|string|Column field name|
