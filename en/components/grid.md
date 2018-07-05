@@ -339,6 +339,7 @@ and in the template of the component:
 ### Inputs
 
 Below is the list of all inputs that the developers may set to configure the grid look/behavior:
+
 |Name|Type|Description|
 |--- |--- |--- |
 |`id`|string|Unique identifier of the Grid. If not provided it will be automatically generated.|
@@ -354,6 +355,11 @@ Below is the list of all inputs that the developers may set to configure the gri
 |`evenRowCSS`|string|Additional styling classes applied to all even rows in the grid.|
 |`oddRowCSS`|string|Additional styling classses applied to all odd rows in the grid.|
 |`paginationTemplate`|TemplateRef|You can provide a custom `ng-template` for the pagination part of the grid.|
+|`groupingExpressions`| Array | The group by state of the grid.|
+|`groupingExpansionState`| Array | The list of expansion states of the group rows. Contains the expansion state(expanded: boolean) and an unique identifier for the group row (Array<IGroupByExpandState>) that contains a list of the group row's parents described via their fieldName and value.|
+|`groupsExpanded`| Boolean | Determines whether created groups are rendered expanded or collapsed.| 
+|`groupsRowList`| QueryList<IgxGridGroupByRowComponent> | A list of visible group rows.| 
+|`groupsRecords`| IGroupByRecord[] | All groups in hierarchy reflecting the current groups state. 
 
 
 <div class="divider--half"></div>
@@ -378,6 +384,7 @@ A list of the events emitted by the **igx-grid**:
 |`onColumnResized`|Emitted when a column is resized. Returns the column object, previous and new column width.|
 |`onContextMenu`|Emitted when a cell is right clicked. Returns the cell object.|
 |`onDoubleClick`|Emitted when a cell is double clicked. Returns the cell object.|
+|`onGroupingDone`| Emitted when a a new column is grouped or ungrouped. Returns the `ISortingExpression` related to the grouping operation.
 
 
 <div class="divider--half"></div>
@@ -424,7 +431,14 @@ Here is a list of all public methods exposed by **igx-grid**:
 |`markForCheck()`|Manually triggers a change detection cycle for the grid and its children.|
 |`pinColumn(name: string): boolean`|Pins a column by field name. Returns whether the operation is successful.|
 |`unpinColumn(name: string): boolean`|Unpins a column by field name. Returns whether the operation is successful.|
-
+|`groupBy(expression: ISortingExpression)`| Groups by a new column based on the provided expression or modifies an existing one.
+|`groupBy(expressions: Array)`| Groups columns based on the provided array of sorting expressions.
+|`clearGrouping()`| Clears all grouping in the grid.
+|`clearGrouping(fieldName: string)`| Clear grouping from a particular column.
+|`isExpandedGroup(group: IGroupByRecord )`| Returns if a group is expanded or not.
+|`toggleGroup(group: IGroupByRecord)`| Toggles the expansion state of a group.
+|`getGroup(field: string, value: any)`| Gets a group record by its composite key.
+|`toggleAllGroupRows()`| Toggles the expansion state of all group rows recursively.
 
 <div class="divider--half"></div>
 
@@ -432,6 +446,7 @@ Here is a list of all public methods exposed by **igx-grid**:
 ### Inputs
 
 Inputs available on the **IgxGridColumnComponent** to define columns:
+
 |Name|Type|Description|
 |--- |--- |--- |
 |`field`|string|Column field name|
@@ -455,6 +470,7 @@ Inputs available on the **IgxGridColumnComponent** to define columns:
 |`sortingIgnoreCase`|boolean|Ignore capitalization of strings when sorting is applied. Defaults to _true_.|
 |`dataType`|DataType|One of string, number, boolean or Date. When filtering is enabled the filter UI conditions are based on the `dataType` of the column. Defaults to `string` if it is not provided. With `autoGenerate` enabled the grid will try to resolve the correct data type for each column based on the data source.|
 |`pinned`|boolean|Set column to be pinned or not|
+|`groupable`|boolean| Determines whether the column may be grouped via the UI.|
 
 ### Methods
 Here is a list of all public methods exposed by **IgxGridColumnComponent**:
