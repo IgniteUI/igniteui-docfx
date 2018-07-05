@@ -69,7 +69,7 @@ Financial Chart は、シンプルな API を使用して複雑なファイナ�
 
 ```typescript
 // app.module.ts
-import {IgxFinancialChartModule} from '@infragistics/igniteui-angular-charts/ES5/ig-financialchart-module'
+import {IgxFinancialChartModule} from 'ignite-angular-charts/ES5/igx-financialchart-module'
 
 @NgModule({
     imports: [
