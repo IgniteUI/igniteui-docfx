@@ -354,9 +354,11 @@ Below is the list of all inputs that the developers may set to configure the gri
 |`evenRowCSS`|string|Additional styling classes applied to all even rows in the grid.|
 |`oddRowCSS`|string|Additional styling classses applied to all odd rows in the grid.|
 |`paginationTemplate`|TemplateRef|You can provide a custom `ng-template` for the pagination part of the grid.|
-|`groupingExpressions`| Array | The group by state of the grid.
-|`groupingExpansionState`| Array | The list of expansion states of the group rows. Contains the expansion state(expanded: boolean) and an unique identifier for the group row (Array<IGroupByExpandState>) that contains a list of the group row's parents described via their fieldName and value.
-|`groupsExpanded`| Boolean | Determines whether created groups are rendered expanded or collapsed.  | 
+|`groupingExpressions`| Array | The group by state of the grid.|
+|`groupingExpansionState`| Array | The list of expansion states of the group rows. Contains the expansion state(expanded: boolean) and an unique identifier for the group row (Array<IGroupByExpandState>) that contains a list of the group row's parents described via their fieldName and value.|
+|`groupsExpanded`| Boolean | Determines whether created groups are rendered expanded or collapsed.| 
+|`groupsRowList`| QueryList<IgxGridGroupByRowComponent> | A list of visible group rows.| 
+|`groupsRecords`| IGroupByRecord[] | All groups in hierarchy reflecting the current groups state. 
 
 
 <div class="divider--half"></div>
@@ -431,6 +433,7 @@ Here is a list of all public methods exposed by **igx-grid**:
 |`clearGrouping(fieldName: string)`| Clear grouping from a particular column.
 |`isExpandedGroup(group: IGroupByRecord )`| Returns if a group is expanded or not.
 |`toggleGroup(group: IGroupByRecord)`| Toggles the expansion state of a group.
+|`getGroup(field: string, value: any)`| Gets a group record by its composite key.
 |`toggleAllGroupRows()`| Toggles the expansion state of all group rows recursively.
 
 <div class="divider--half"></div>
