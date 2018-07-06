@@ -401,7 +401,9 @@ toggleFavorite(item: IgxListItem) {
 | :--- | :--- | :--- |
 | `allowLeftPanning` | Boolean | 項目の左パンニングが許可されるかどうかを決定します。 |
 | `allowRightPanning` | Boolean | 項目の右パンニングが許可されるかどうかを決定します。 |
-| `emptyListTemplate` | IgxEmptyListTemplateDirective | リストが空の場合に使用するカスタム テンプレート。 |
+| `isLoading` | Boolean | true の場合、読み込みテンプレートが使用されます。false の場合、空のリスト テンプレートが使用されます。 |
+| `dataLoadingTemplate` | IgxDataLoadingTemplateDirective | リストが空で、isLoading が true の場合に使用するカスタム テンプレート。|
+| `emptyListTemplate` | IgxEmptyListTemplateDirective | リストが空で、isLoading が false の場合に使用するカスタム テンプレート。|
 
 <div class="divider"></div>
 
