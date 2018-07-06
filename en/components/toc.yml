@@ -113,12 +113,16 @@
 - name: Styling & Themes
   header: true
 - name: Themes
-  href: themes.md
+  href: themes/index.md
   items:
     - name: Palettes
-      href: colors.md
+      href: themes/palette.md
+    - name: Global Themes
+      href: themes/global-theme.md
+    - name: Componenent Themes
+      href: themes/component-themes.md
     - name: Typography
-      href: typography.md
+      href: themes/typography.md
 - name: Shadows
   href: shadows.md
 - name: Data Entry & Display

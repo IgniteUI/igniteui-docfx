@@ -15,7 +15,7 @@ const DOCFX_BASE = {
     en: './en',
     jp: './jp'
 };
-const DOCFX_PATH =`${DOCFX_BASE[LANG]}`;
+const DOCFX_PATH = `${DOCFX_BASE[LANG]}`;
 const DOCFX_CONF = `${DOCFX_PATH}/docfx.json`;
 const DOCFX_TEMPLATE = path.join(__dirname, `./node_modules/igniteui-docfx-template`);
 const DOCFX_SITE = `${DOCFX_PATH}/_site`;
@@ -45,7 +45,7 @@ gulp.task('serve', ['build'], () => {
     });
 
     gulp.watch(`${DOCFX_TEMPLATE}/**/*`, ['watch']);
-    gulp.watch([`${DOCFX_PATH}/**/*.md`, `${DOCFX_ARTICLES}/**/*`], ['build']);
+    gulp.watch([`${DOCFX_PATH}/**/*.md`, `${DOCFX_ARTICLES}/**`], ['build']);
 });
 
 gulp.task('styles', () => {
@@ -75,7 +75,8 @@ gulp.task('post-processor-configs', ['cleanup'], () => {
 
     environmentVariablesConfig.variables =
         environmentVariablesConfig.variables[LANG.toLowerCase().trim()][
-            environmentVariablesConfig.environment];
+            environmentVariablesConfig.environment
+        ];
 
     if (!fs.existsSync(`${DOCFX_SITE}`)) {
         fs.mkdirSync(`${DOCFX_SITE}`);
