@@ -1,7 +1,8 @@
----
+﻿---
 title: コンポーネント テーマ
-_description: Ignite UI for Angular Data Grid コントロールは、タッチ レスポンシブなデータ グリッドです。階層およびリスト ビューなどの機能があります。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Data Grid コンポーネント, Angular Data Grid コントロール, Angular Grid コンポーネント, Angular Grid コントロール, Angular 高パフォーマンス Grid
+_description: Ignite UI for Angular Theming コンポーネントは SASS で開発されます。使用が簡単な API は単一のコンポーネント、複数のコンポーネント、またはスイート全体のスタイル変更を適用できます。
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, ネイティブ Angular コンポーネント, Angular Theming コンポーネント, Angular テーマ
+_language: ja
 ---
 
 ## コンポーネント テーマ
@@ -23,12 +24,12 @@ Ignite UI for Angular でコンポーネント テーマを設定する方法、
 
 コンポーネント テーマは複数のパーツで構成されます。
 
-- **コンポーネント テーマ関数** - Sass 関数は、渡した引数を正規化してコンポーネントmixin でテーマを作成します。
+- **コンポーネント テーマ関数** - Sass 関数は、渡した引数を正規化してコンポーネント mixin でテーマを作成します。
 - **コンポーネント mixin** - コンポーネント テーマを使用し、特定コンポーネントのスタイルに使用される CSS ルールを生成する Sass mixin。
 - **CSS 変数 mixin** - コンポーネント テーマを使用し、特定コンポーネントのスタイルに使用される CSS 変数を生成する Sass mixin。
 
-アバターのデフォルトテーマに設定するテーマと異なる背景色を持つ新規のグローバル アバター テーマを作成する場合、[**概要セクション**](#概要) のようにコンポーネント テーマを作成する 2 つの一般的な方法があります。
-コンポーネントテーマを体系化し、スコープする方法があります。最も簡単な方法は、[**グローバル テーマ**](./global-theme.md) を定義した同じファイルで行う方法です。
+アバターのデフォルトテーマに設定するテーマと異なる背景色を持つ新規のグローバル アバター テーマを作成する場合、[**概要セクション**](#概要)のようにコンポーネント テーマを作成する 2 つの一般的な方法があります。
+コンポーネントテーマを体系化し、スコープする方法があります。最も簡単な方法は、[**グローバル テーマ**](global-theme.md) を定義した同じファイルで行う方法です。
 
 アバター テーマの定義:
 
@@ -85,7 +86,7 @@ $another-avatar-theme: igx-avatar-theme(
 }
 ```
 
-In a component template:
+コンポーネント テンプレート:
 
 ```html
 <div class="avatar-royalblue">
@@ -101,12 +102,11 @@ In a component template:
 ### 表示のカプセル化
 <div class="divider--half"></div>
 
-グローバルにスコープし、単一の `Sass ファイルに含まれるテーマを作成する方法について説明しました。ただし最適な方法ではないため、Sass ファイルを特定アプリのコンポーネントにバインドした方がよい場合があります。この場合、表示のカプセル化、特に Angular で発生させる方法を考慮する必要があります。
+グローバルにスコープし、単一の Sass ファイルに含まれるテーマを作成する方法について説明しました。ただし最適な方法ではないため、Sass ファイルを特定アプリのコンポーネントにバインドした方がよい場合があります。この場合、表示のカプセル化、特に Angular で発生させる方法を考慮する必要があります。
 
 Angular では、表示のカプセル化に 3 つの方法 Emulated (デフォルト)、Native、None を採用しています。 各方法の詳細については、 [Angular ヘルプ](https://angular.io/api/core/ViewEncapsulation) をご覧ください。表示をカプセルかした親コンポーネントの一部である Ignite UI for Angular コンポーネントのテーマを処理する方法について詳しく説明します。
 
-
-インナー セクターをターゲットにした表示のカプセル化コンポーネントのスタイルシートに追加したスタイルのルールは、ホスト要素の固有な属性を参照しないため適用しません。このカプセル化を 'penetrate' するには、表示のカプセル化ペネトレーション ストラテジーをいくつか使用する必要があります。現在の Angular でこのストラテジーは `::ng-deep` です。ホスト要素でカプセル化されたインナー セレクターをターゲットにできます。
+`Emulated` 表示のカプセル化とは？このタイプの View Encapsulation は、Shadow DOM 仕様の利点を享受しませんが、ホスト要素に適用された固有な属性識別子を使用してコンポーネントとその子のスタイルをバインドする方法を利用します。インナー セクターをターゲットにした表示のカプセル化コンポーネントのスタイルシートに追加したスタイルのルールは、ホスト要素の固有な属性を参照しないため適用しません。このカプセル化を 'penetrate' するには、表示のカプセル化ペネトレーション ストラテジーをいくつか使用する必要があります。現在の Angular でこのストラテジーは `::ng-deep` です。ホスト要素でカプセル化されたインナー セレクターをターゲットにできます。
 
 実際の例を見てみましょう。特定の親コンポーネントにバインドするアバター テーマを作成します。
 
@@ -148,7 +148,7 @@ $avatar-theme: igx-avatar-theme($initials-background: royalblue);
 ### CSS 変数
 <div class="divider--half"></div>
 
-[概要](#概要) セクションの説明のように、`$igx-legacy-support` グローバル変数を `false` に設定して `CSS 変数をコンポーネントのスタイル設定に使用できます。`igx-theme` mixin を使用して `false` の値と `$legacy-support` を渡した場合、`$igx-legacy-support` を`false` に設定します。これによって特別な mixin `igx-css-vars` を使用してスタイルが重複することなく Ignite UI for Angular コンポーネントをスタイル設定できます。
+[概要](#概要)セクションの説明のように、`$igx-legacy-support` グローバル変数を `false` に設定して CSS 変数をコンポーネントのスタイル設定に使用できます。`igx-theme` mixin を使用して `false` の値と `$legacy-support` を渡した場合、`$igx-legacy-support` を `false` に設定します。これによって特別な mixin `igx-css-vars` を使用してスタイルが重複することなく Ignite UI for Angular コンポーネントをスタイル設定できます。
 
 `igx-css-vars` mixin は、引数 (コンポーネント テーマ) を 1 つ受け取ります。
 
@@ -179,7 +179,7 @@ $badge-theme: igx-badge-theme($background-color: white);
 
 #### カプセル化した表示の使用
 
-以下のサンプルは、[表示のカプセル化](#表示のカプセル化) セクションのサンプルを開始点として使用しています。
+以下のサンプルは、[表示のカプセル化](#表示のカプセル化)セクションのサンプルを開始点として使用しています。
 
 ```scss
 @import "~igniteui-angular/lib/core/styles/themes/utilities";
@@ -214,7 +214,7 @@ $avatar-theme: igx-avatar-theme($initials-background: royalblue);
 
 グローバル テーマの設定方法:
 
-* [グローバル テーマ](./global-theme.md)
+* [グローバル テーマ](global-theme.md)
 
 コミュニティに参加して新しいアイデアをご提案ください。
 

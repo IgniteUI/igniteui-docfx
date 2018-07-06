@@ -1,7 +1,8 @@
----
+﻿---
 title: テーマ
 _description: Ignite UI for Angular Theming コンポーネントは SASS で開発されます。使用が簡単な API は単一のコンポーネント、複数のコンポーネント、またはスイート全体のスタイル変更を適用できます。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, ネイティブ Angular コンポーネント, Angular Theming コンポーネント, Angular テーマ
+_language: ja
 ---
 
 ## テーマ
@@ -19,7 +20,6 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 ### パレット
 <div class="divider--half"></div>
 
-パレット
 最初の概念は色パレットです。ビジュアル ツールでは、アプリケーションを差別化する色があります。マテリアル デザイン ガイドラインでは基本色の色合いおよび輝度の範囲がある定義済みの色パレットを規定しています。それによって、色が調和し、背景色および前景のテキスト色とコントラストを保つことができます。ただし色が制限されるため、ブランド化と一致するカスタム パレットを使用することはできません。この問題を回避するため、ユーザーが提供する基本色からマテリアル デザインのようなパレットを生成するアルゴリズムが使用できます。更にパレットで各色合いにコントラスト テキスト色を生成します。
 
 <div class="divider--half"></div>
@@ -40,8 +40,8 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 
 グローバル テーマの設定方法::
 
-* [グローバル テーマ](./global-theme.md)
-* [コンポーネント テーマ](./component-themes.md)
+* [グローバル テーマ](global-theme.md)
+* [コンポーネント テーマ](component-themes.md)
 
 コミュニティに参加して新しいアイデアをご提案ください。
 
