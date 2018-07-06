@@ -427,14 +427,14 @@ export class MyComponent implements OnInit {
 |`markForCheck()`|グリッドおよびすべての子要素に変更検出サイクルを手動的にトリガーします。|
 |`pinColumn(name: string): boolean`|列をフィールド名によってピン固定します。操作が成功したかどうかを返します。|
 |`unpinColumn(name: string): boolean`|列をフィールド名によってピン固定解除します。操作が成功したかどうかを返します。|
-|`groupBy(expression: ISortingExpression)`| 新しい列を提供された式によってグループ化するか、既存の式を変更します。
-|`groupBy(expressions: Array)`| 列を提供した並べ替え式の配列に基づいてグループ化します。
-|`clearGrouping()`| グリッドのグループ化をすべてクリアします。
-|`clearGrouping(fieldName: string)`| グループ化を特定の列からクリアします。
-|`isExpandedGroup(group: IGroupByRecord )`| グループが展開されているかどうかを返します。
-|`toggleGroup(group: IGroupByRecord)`| グループの展開状態を切り替えます。
-|`getGroup(field: string, value: any)`| グループ化レコードを複合キーによって取得します。
-|`toggleAllGroupRows()`| すべてのグループ行の展開状態を再帰的に切り替えます。
+|`groupBy(expression: ISortingExpression)`| 新しい列を提供された式によってグループ化するか、既存の式を変更します。|
+|`groupBy(expressions: Array)`| 列を提供した並べ替え式の配列に基づいてグループ化します。|
+|`clearGrouping()`| グリッドのグループ化をすべてクリアします。|
+|`clearGrouping(fieldName: string)`| グループ化を特定の列からクリアします。|
+|`isExpandedGroup(group: IGroupByRecord )`| グループが展開されているかどうかを返します。|
+|`toggleGroup(group: IGroupByRecord)`| グループの展開状態を切り替えます。|
+|`getGroup(field: string, value: any)`| グループ化レコードを複合キーによって取得します。|
+|`toggleAllGroupRows()`| すべてのグループ行の展開状態を再帰的に切り替えます。|
 
 <div class="divider--half"></div>
 
