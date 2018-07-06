@@ -1,11 +1,11 @@
 ﻿---
-title: グリッドのフィルタリング
+title: グリッド フィルタリング
 _description: Ignite UI for Angular Data Grid コントロールは、タッチ レスポンシブなデータ グリッドです。階層およびリスト ビューなどの機能があります。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Data Grid コンポーネント, Angular Data Grid コントロール, Angular Grid コンポーネント, Angular Grid コントロール, Angular 高いパフォーマンス Grid, フィルタリング, フィルター
 _language: ja
 ---
 
-### グリッドのフィルタリング
+### グリッド フィルタリング
 
 Ignite UI for Angular Grid コンポーネントは、グリッドにバインドされるデータ コンテナーにフィルタリング API を提供します。
 
@@ -20,7 +20,7 @@ Ignite UI for Angular Grid コンポーネントは、グリッドにバイン�
 </div>
 <div class="divider--half"></div>
 
-デフォルトの定義済みフィルタリングおよび標準のフィルタリング条件があり、カスタム実装で置き換えることも可能です。また、カスタム フィルタリング条件を追加することもできます。Grid には、簡易なフィルター UI および詳細なフィルター オプションがあります。列で設定された `dataType` に基づいて、[**フィルター条件**](grid.md#フィルター条件)の正しいセットがフィルター UI ドロップダウンに読み込まれます。また、列の `ignoreCase` および最初の `condition` プロパティを設定できます。
+デフォルトの定義済みフィルタリングおよび標準のフィルタリング条件があり、カスタム実装で置き換えることも可能です。また、カスタム フィルタリング条件を追加することもできます。Grid には、簡易なフィルター UI や詳細なフィルター オプションがあります。列で設定された `dataType` に基づいて、適切な[**フィルター条件**](grid.md#フィルター条件)のセットがフィルター UI ドロップダウンに読み込まれます。また、列の `ignoreCase` および最初の `condition` プロパティを設定できます。
 
 ```html
 <igx-column field="ProductName" filterable="true" dataType="string"></igx-column>
@@ -30,11 +30,11 @@ Ignite UI for Angular Grid コンポーネントは、グリッドにバイン�
 > [!NOTE]
 > `string` 型の値が `Date` dataType の列で使用される場合、グリッドは値を `Date` オブジェクトに解析しないためフィルター条件は使用できません。`string` オブジェクトを使用する場合、値を `Date` オブジェクトに解析するためのロジックをアプリケーション レベルで実装する必要があります。
 
-列または複数の列をグリッド API でフィルターできます。グリッドはフィルターのための 2 つのメソッドを公開します。
+列または複数の列はグリッド API でフィルターできます。グリッドはフィルター メソッド (`filter`、`filterGlobal `、`clearFilter`) を公開します。
 
 *   `filter` - 単一の列または複数の列をフィルターします。
 
-5 つのフィルタリング オペランド クラスが公開されます。
+以下の 5 つのフィルタリング オペランド クラスが公開されます。
    - `IgxFilteringOperand`: カスタムフィルタリング条件の定義時に継承できるベース フィルタリング オペランドです。
    - `IgxBooleanFilteringOperand` は、`boolean` 型のすべてのデフォルト フィルタリング条件を定義します。
    - `IgxNumberFilteringOperand` は、`numeric` 型のすべてのデフォルト フィルタリング条件を定義します。

@@ -7,7 +7,7 @@ _language: ja
 
 ## Radio Button
 
-<p class="highlight">Ignite UI for Angular Radio Button コンポーネントを使用すると、隣に表示されるオプションのセットから単一のオプションを選択する機能を提供します。</p>
+<p class="highlight">Ignite UI for Angular Radio Button コンポーネントを使用すると、隣に表示されるオプションのセットから単一のオプションを選択する機能をサポートします。</p>
 <div class="divider"></div>
 
 ### Radio Button デモ
@@ -22,9 +22,9 @@ _language: ja
 
 ### Radio Button の使用
 
-ラジオ ボタン コンポーネントはオプションの単一選択を許可します。デフォルト スタイル設定はマテリアル デザイン ガイドラインの選択コントロールの仕様に基づきます。
+ラジオ ボタン コンポーネントはオプションの単一選択を可能にします。デフォルト スタイル設定はマテリアル デザイン ガイドラインの選択コントロールの仕様に基づきます。
 
-Ignite UI for Angular Radio を初期化する前に、**IgxRadioModule** を **app.module.ts** ファイルにインポートします。
+Ignite UI for Angular Radio を初期化する前に **IgxRadioModule** を **app.module.ts** ファイルにインポートします。
 
 ```typescript
 // app.module.ts
@@ -42,7 +42,7 @@ export class AppModule {
 }
 ```
 
-ラジオ ボタンを作成するには、コンポーネントのテンプレートで以下のコードを追加します。
+ラジオ ボタンの作成は、コンポーネントのテンプレートで以下のコードを追加します。
 
 ```html
 <igx-radio [(ngModel)]="selected" value="option1">Option 1</igx-radio>
@@ -95,7 +95,7 @@ public selectedColor: string = this.colors[3].hex;
 <div class="box" [style.background-color]="selectedColor"></div>
 ```
 
-双方向バインディングで ngModel ディレクティブを使用する前に、FormsModule をインポートし、NgModule の imports リストに追加する必要があります。
+双方向バインディングで ngModel ディレクティブを使用する前に、FormsModule をインポートして NgModule の imports リストに追加する必要があります。
 
 以上を実行すると以下のような結果になります。
 
