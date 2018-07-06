@@ -28,7 +28,7 @@ Drop Down items are virtualized, which guarantees smooth work, even if the igx-c
 > To start using Ignite UI for Angular components in your own projects, make sure you have configured all necessary dependencies and have performed the proper setup of your project. You can learn how to do this in the [**installation**](https://www.infragistics.com/products/ignite-ui-angular/getting-started#installation) topic.
 
 ## Usage
-The `IgxComboComponent` allows you to search and select items from the list. The combo uses the `IgxDropDownComponent` internally as a items container. To get started with the Ignite UI for Angular Combo, let's first import the **IgxComboModule** in our **app.module.ts** file:
+The `IgxComboComponent` allows you to search and select items from the list. The combo uses the `IgxDropDownComponent` internally as an item container. To get started with the Ignite UI for Angular Combo, let's first import the **IgxComboModule** in our **app.module.ts** file:
 
 ```typescript
 // app.module.ts
@@ -69,9 +69,9 @@ Basic usage of `igx-combo` bound to a local data source, defining `valueKey` and
 <igx-combo [data]="localData" [valueKey]="'ProductID'" [displayKey]="'ProductName'"></igx-combo>
 ```
 
-> Note: If `displayKey` is omitted them `valueKey` entity will be used instead.
+> Note: If `displayKey` is omitted then `valueKey` entity will be used instead.
 
-
+<!-- 
 Remote binding, defining `valueKey` and `displayKey`, and exposing `onDataPreLoad` that allows to load new chunk of remote data to the combo (see the sample above as a reference):
 
 ```html
@@ -103,7 +103,7 @@ public dataLoading(evt) {
 
 > Note: In order to have combo with remote data, what you need is to have a service that retrieves data chunks from a server.
 What the combo exposes is a `virtualizationState` property that gives state of the combo - first index and the number of items that needs to be loaded.
-The service, should inform the combo for the total items that are on the server - using the `totalItemCount` property.
+The service, should inform the combo for the total items that are on the server - using the `totalItemCount` property. -->
 
 ### Value Binding
 
@@ -285,7 +285,7 @@ When igxCombo is opened and list item is focused:
 
 When igxCombo is opened, allow custom values are enabled and add item button is focused:
 
-- `Space` and `Enter` will add new item with valueKey and displayKey equal to the text in the search input and will select the new item.
+- `Enter` will add new item with valueKey and displayKey equal to the text in the search input and will select the new item.
 
 - `ArrowUp` focus will be moved back to the last list item or if list is empty will be moved to the search input.
 
@@ -299,11 +299,12 @@ When igxCombo is opened, allow custom values are enabled and add item button is 
 |  `id`                    | combo id                                          | string                      |
 |  `data`                  | combo data source                                 | any                         |
 |  `value`                 | combo value                                       | string                      |
-|  `allowCustomValue`      | enable/disables combo custom value                | boolean                     |
+|  `allowCustomValue`      | enables/disables combo custom value                | boolean                     |
+|  `filterable`            | enables/disables combo drop down filtering - enabled by default                  | boolean                     |
 |  `valueKey`              | combo value data source property                  | string                      |
 |  `displayKey`            | combo display data source property                | string                      |
 |  `groupKey`              | combo item group                                  | string                      |
-|  `virtualizationState`   | defines he current state of the virtualized data. It contains `startIndex` and `chunkSize`      | `IForOfState`               |
+|  `virtualizationState`   | defines the current state of the virtualized data. It contains `startIndex` and `chunkSize`      | `IForOfState`               |
 |  `totalItemCount`        | total count of the virtual data items, when using remote service                                | number                      |
 |  `width `                | defines combo width                               | string                      |
 |  `height`                | defines combo height                              | string                      |
@@ -314,7 +315,7 @@ When igxCombo is opened, allow custom values are enabled and add item button is 
 |  `searchPlaceholder `    | defines the placeholder text for search input     | string                      |
 |  `collapsed`             | gets drop down state                              | boolean                     |
 |  `disabled`              | defines whether the control is active or not      | boolean                     |
-|  `ariaLabelledBy`        | defines label ID related to combo                 | boolean                     |
+|  `ariaLabelledBy`        | defines label ID related to combo                 | string                      |
 |  `type`                  | defines type of combo - "line", "box", "border", "search"                                        | string                      |
 |  `valid`                 | gets if control is valid, when used in a form     | boolean                     |
 

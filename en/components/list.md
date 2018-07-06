@@ -404,7 +404,9 @@ The following inputs are available on the **igx-list** component:
 | :--- | :--- | :--- |
 | `allowLeftPanning` | Boolean | Determines whether the left panning of an item is allowed. |
 | `allowRightPanning` | Boolean | Determines whether the right panning of an item is allowed. |
-| `emptyListTemplate` | IgxEmptyListTemplateDirective | The custom template to be used when the list is empty. |
+| `isLoading` | Boolean | If `true` the loading template will be used, if `false` the empty list template will be used. |
+| `dataLoadingTemplate` | IgxDataLoadingTemplateDirective | The custom template to be used when the list is empty and `isLoading` is `true`. |
+| `emptyListTemplate` | IgxEmptyListTemplateDirective | The custom template to be used when the list is empty and `isLoading` is `false`. |
 
 <div class="divider"></div>
 
