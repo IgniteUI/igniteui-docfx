@@ -110,7 +110,7 @@ row.update(newData);
 
 #### グリッド データの削除
 
-Please keep in mind that `deleteRow()` method will remove the specified row only if primary key is defined.
+`deleteRow()` メソッドは、プライマリキーが定義されている場合に指定した行のみを削除することに注意してください。
 
 ```typescript
 // Delete row through Grid API
