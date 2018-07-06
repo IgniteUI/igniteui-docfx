@@ -87,6 +87,7 @@ strategy.position(contentWrapper, size);
     // and will align itself to the left
 ```
 <div class="divider--half"></div>
+
 ### 依存関係
 
 必要に応じてポジション ストラテジーをインポートできます。
@@ -94,9 +95,11 @@ strategy.position(contentWrapper, size);
 ```typescript
 import {AutoPositionStrategy, GlobalPositionStrategy, ConnectedPositioningStrategy } from './position/global-position-strategy';
 ```
-## デモ 
+
+## デモ
 
 ### 水平方向または垂直方向
+
 配置設定で水平方向または垂直方向を設定すると、コンテンツの配置を決定します。配置に基づいて、コンテンツがターゲットのコンテナー (`AutoPositionStrategy` および `ConnectedPositioningStrategy`) に相対して配置するか、ドキュメントの本体 (`GlobalPositioningStrategy`) に相対して配置します。
 
 <div class="sample-container loading" style="height: 400px">
@@ -134,7 +137,7 @@ import {AutoPositionStrategy, GlobalPositionStrategy, ConnectedPositioningStrate
 | :----------------- | :-------------------------- | :---------- |
 |target              | Point \| HTMLElement         | 使用するポジション ストラテジーと渡されたサイズに基づいて要素を配置します。          |
 |horizontalDirection | HorizontalAlignment         | コンポーネントが表示される方向。       |
-|verticalDirection   | VerticalAlignment           |　コンポーネントが表示される方向。        |
+|verticalDirection   | VerticalAlignment           | コンポーネントが表示される方向。        |
 |horizontalStartPoint| HorizontalAlignment         | ターゲットの開始ポイント。                             |
 |verticalStartPoint  | VerticalAlignment           | ターゲットの開始ポイント。　　　　                             |
 |openAnimation       | AnimationReferenceMetadata  | オーバーレイが開いている間に適用されるアニメーション。               |
