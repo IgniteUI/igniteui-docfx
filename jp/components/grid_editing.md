@@ -46,7 +46,7 @@ Ignite UI for Angular の Grid コンポーネントは、列のデータ型に�
 > [!NOTE]
 > セルは、水平方向または垂直方向へスクロール、グリッド以外をクリック、列のサイズ変更、列のピン固定、またはその他のページへ移動した場合も編集モードのままです。
 
-You can also modify the cell value through the IgxGrid API but only if primary is defined:
+プライマリキーが定義されている場合のみ IgxGrid API でもセル値を変更することができます。
 
 ```typescript
 ...
@@ -91,7 +91,7 @@ this.grid.addRow(record);
 
 #### グリッド データの更新
 
-Updating data in the grid is achieved through `updateRow` and `updateCell` methods but **only if primary key for the grid is defined**. You can also directly update a cell and row value through their `update` method.
+グリッド データの更新は、**グリッドでプライマリキーが定義されている場合のみ** `updateRow` と `updateCell` メソッドで行うことができます。セルおよび行の値を直接更新するには `update` メソッドを使用できます。
 
 ```typescript
 // Updating the whole row
@@ -110,7 +110,7 @@ row.update(newData);
 
 #### グリッド データの削除
 
-Please keep in mind that `deleteRow()` method will remove the specified row only if primary key is defined.
+`deleteRow()` メソッドは、プライマリキーが定義されている場合に指定した行のみを削除することに注意してください。
 
 ```typescript
 // Delete row through Grid API
