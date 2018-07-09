@@ -393,7 +393,7 @@ The following getters are available on the **igx-bottom-nav** component:
 The following getters are available on the **igx-tab-panel** component:
 | Name | Type | Description |
 | :--- | :--- | :--- |
-| `isDisabled` | Boolean | Determines whether the panel is disabled. |
+| `disabled` | Boolean | Determines whether the panel is disabled. |
 | `isSelected` | Boolean | Determines whether the panel is selected. |
 | `index` | Number | Gets the index of a panel in the panel collection. |
 | `relatedTab` | IgxTab | Gets the tab associated with the panel. |

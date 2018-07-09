@@ -233,7 +233,7 @@ The following getters are available in the **igx-tabs** component:
 The following getters are available on the **igx-tabs-group** component:
 | Name | Type | Description |
 | :--- | :--- | :--- |
-| `isDisabled` | boolean | Gets whether the group is disabled. |
+| `disabled` | boolean | Gets whether the group is disabled. |
 | `index` | number | Gets the group index in the groups collection. |
 | `relatedTab` | IgxTabItemComponent | Gets the tab associated with the group. |
 

@@ -236,7 +236,7 @@ export class AppModule {}
 
 | 名前 | 型 | 説明 |
 | :--- | :--- | :--- |
-| `isDisabled` | boolean | グループが無効かどうかを取得します。 |
+| `disabled` | boolean | グループが無効かどうかを取得します。 |
 | `index` | number | グループ コレクションのグループ インデックスを取得します。 |
 | `relatedTab` | IgxTabItemComponent | グループに関連付けられたタブを取得します。 |
 
