@@ -1,16 +1,17 @@
----
-title: Palettes
+﻿---
+title: パレット
 _description: 
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library 
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ
+_language: ja
 ---
 
-## Palettes
+## パレット
 
-### Overview
+### 概要
 
-Our palettes accept arguments for `primary`, `secondary`, `info`, `success`, `warn`, and `error` colors. The primary color is the one that will be the more prominent color throughout your application. The secondary color is the one used on elements that are actionable, such as buttons, switches, sliders, etc. The only required arguments we require, though, are the ones for `primary` and `secondary` colors. We default the ones for `info`, `success`, `warn`, and `error` to a predefined set of our choosing.
+パレットは `primary`、`secondary`、`info`、`success`、`warn`、および `error` 色の引数を受け取ります。primary 色はアプリケーションでよく使用される原色です。secondary 色は、ボタン、スイッチ、スライダーなどの操作可能な要素で使用される二次色です。`primary` および `secondary` 色は必須の引数です。`info`、`success`、`warn`、および `error` 色引数のデフォルト値は定義済みのセットからの値です。
 
-To get started with our first color palette, create an _scss_ file that would be the base file for your global theme. I will call mine _"my-app-theme.scss"_.
+色パレットを作成するには、グローバル テーマの基本ファイルになる _scss_ ファイルを作成します。_"my-app-theme.scss"_ と名前付けます。
 
 ```scss
 // Import the IgniteUI themes library first
@@ -25,18 +26,19 @@ $my-color-palette: igx-palette(
 );
 ```
 
-Now we have a palette, that contains exactly 74 colors! Whoa, wait, what? How did that happen? You provided 2 and got 74? Where did the other 72 colors come from?
-Let's stop here to explain what just happened as it's quite important. When you provided `primary` and `secondary` colors, we took those and generated shades and accent colors for each one. Basically now in your palette you have 2 sub-palettes for `primary` and `secondary` colors. Each sub-palette contains 12 additional color variations based on the original color. 4 of the 12 colors are lighter shades of your original color, and 4 are darker. The remaining 4 colors are more exaggerated 'accent' versions of the original color. With the original color that makes for a total of 13 colors in each palette.
+生成されたパレットには 74 色が含まれています。2 色のみを指定して 74 色が設定されました。その他の 72 色はどのように決定されるのでしょうか？
 
-With so many colors in each sub-palette you may be wondering, how on Earth will I know which one is which, right? It's quite simple, really. Each of the colors in the sub-palette has a number. We assign the number `500` to the original color. The lighter shades start from `100` and range to `400`. The darker shades start from `600` and range to `900`. The accent colors have string names `A100`, `A200`, `A400`, and `A700`, respectively. Okay, but now that's only 26 out of 72. Don't worry, there's another sub-palette we give you. One that consists of gray 'colors', called `grays`. It's just like the other two color sub-palettes, but doesn't include any accent variations. Good, now we're up to 26 + 9 for a total of 35 colors. That is still a long way from 74. Where do the other 39 colors come from? Let's solve the final puzzle. Remember you can also have 4 additional colors for `info`, `success`, `warn` and `error`. So that leaves another 35 colors unaccounted for. Remember the count for the `primary`, `secondary`, and `grays` sub-palettes was exactly 35? The other 35 remaining colors are contrast text colors for each of the colors in the `primary`, `secondary`, and `grays` sub-palettes.
+重要な色の生成方法を更に詳しく説明します。`primary` および `secondary` 色を提供した後、その色のシェードおよびアクセント色を生成しました。パレットに `primary` および `secondary` 色のための 2 つのサブパレットが生成されます。各サブパレットには、原色に基づいた 12 色のバリエーションがあり、12 色中 4 色は原色より明るいシェードで、4 はより暗い色です。残りの 4 色は原色の「アクセント」バージョンで各パレットに原色を含む 13 色があります。
 
-Got it? Good! But how does one access any of the colors in the palette?
+各サブパレットには多くの色があるため、適切な色を選択するための数値システムがあります。原色は `500`、明るいシェードは `100` ～ `400`、より暗いシェードは `600` ～ `900` です。アクセント色は `A100`、`A200`、`A400`、および `A700` の文字列名があります。以上で色は 72 色中 26 色ですが、他にグレー色で構成される `grays` と呼ばれるサブパレットがあります。他の色サブパレットと同じですが、アクセント バリエーションは含まれません。26 色と 9 色で合計 35 色となり、全 74 色中まだ 39 色が残っています。残りの色には、`info`、`success`、`warn`、および `error` の 4 色があります。その他 35 色があり、`primary`、`secondary`、および `grays` サブパレットの色数が 35 です。その他の 35 色は `primary`、`secondary`、および `grays` サブパレットの色のコントラスト テキスト色です。
+
+一方、パレットの任意の色にどのようにアクセスするのでしょうか。
 
 <div class="divider"></div>
 
-### Sub-Palette Colors
+### サブパレット色
 
-We provide a function that is easy to remember and use `igx-color`. It takes three arguments - `palette`, `color`, and `variant`;
+`igx-color` 関数を提供します。関数は、`palette`、`color`、および `variant` の 3 つの引数を受け取ります。
 
 ```scss
 $my-primary-600: igx-color($my-palette, "primary", 600);
@@ -56,9 +58,9 @@ $my-warning-color: igx-color($my-palette, "warn");
 
 <div class="divider"></div>
 
-### Contrast Text Colors
+### コントラスト テキスト色の取得
 
-Similar to how we get sub-palette colors, there's a way to get the contrast text color for each of the colors in the sub-palettes.
+サブパレット色の取得と同じように、サブパレットの色のコントラスト テキスト色を取得できます。
 
 ```scss
 $my-primary-800: igx-color($my-palette, "primary", 600);
@@ -71,11 +73,9 @@ $my-primary-800-text: igx-contrast-color($my-palette, "primary", 600);
 }
 ```
 
-### Color Classes
+### デフォルト色
 
-### Default Colors
-
-#### Base Colors
+#### 基本色
 <article class="row">
     <div class="col-md-4 col-sm-12">
         <div class="color-container primary-color">
@@ -108,7 +108,7 @@ $my-primary-800-text: igx-contrast-color($my-palette, "primary", 600);
 
 <div class="divider"></div>
 
-#### Supporting Colors
+#### サポート カラー
 <article class="row">
     <div class="col-md-4 col-sm-12">
         <div class="color-container success-color">
@@ -141,7 +141,7 @@ $my-primary-800-text: igx-contrast-color($my-palette, "primary", 600);
 
 <div class="divider"></div>
 
-#### Color Palettes
+#### カラー パレット
 <article class="color-palettes row">
     <div class="color-palette col-md-6 col-sm-12">
         <div class="color-container primary-color">

@@ -112,16 +112,16 @@
       new: false
 - name: スタイルとテーマ
   header: true
-- name: Themes
+- name: テーマ
   href: themes/index.md
   items:
-    - name: Palettes
+    - name: パレット
       href: themes/palette.md
-    - name: Global Themes
+    - name: グローバル テーマ
       href: themes/global-theme.md
-    - name: Componenent Themes
+    - name: コンポーネント テーマ
       href: themes/component-themes.md
-    - name: Typography
+    - name: タイポグラフィ
       href: themes/typography.md
 - name: Shadows
   href: shadows.md

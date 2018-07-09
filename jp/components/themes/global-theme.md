@@ -1,7 +1,8 @@
----
+﻿---
 title: グローバル テーマ
 _description: Ignite UI for Angular Theming コンポーネントは SASS で開発されます。使用が簡単な API は単一のコンポーネント、複数のコンポーネント、またはスイート全体のスタイル変更を適用できます。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, ネイティブ Angular コンポーネント, Angular Theming コンポーネント, Angular テーマ
+_language: ja
 ---
 
 ## グローバル テーマ
@@ -11,7 +12,7 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 ### 概要
 アプリケーション プロジェクトに _`igniteui-angular.css`_ ファイルを追加した場合、削除してください。_`My-app-theme.scss`_ ファイルを使用してアプリケーションのすべてのコンポーネント用にグローバル テーマを生成します。
 
-Ignite UI for Angular** は、コンポーネント全体のテーマにグローバル テーマをデフォルトで使用します。アプリでユース ケースに合わせてコンポーネントにスコープしたテーマを作成できます。ここでは 1 ファイルにすべてのテーマを含みます。グローバル テーマを生成するために 2 つの mixins `igx-core` と `igx-theme` を含みます。`igx-core` は引数を受け取りません。`igx-theme` は数個受け取ります。
+**Ignite UI for Angular** は、コンポーネント全体のテーマにグローバル テーマをデフォルトで使用します。アプリでユース ケースに合わせてコンポーネントにスコープしたテーマを作成できます。ここでは 1 ファイルにすべてのテーマを含みます。グローバル テーマを生成するために 2 つの mixins `igx-core` と `igx-theme` を含みます。`igx-core` は引数を受け取りません。`igx-theme` は数個受け取ります。
 
 | 名前              |  型   | デフォルト            | 説明                                                                           |
 | :---------------: | :-----: | :---------------:  | :-----------------------------------------------------------------------------------: |
@@ -21,7 +22,7 @@ Ignite UI for Angular** は、コンポーネント全体のテーマにグロ�
 
 <div class="divider"></div>
 
-テーマ設定の方法を決定 - false に設定し、テーマは CSS 変数で設定します。
+企業のプライマリおよびセカンダリの色を使用するカスタム グローバル テーマを作成します。
 
 ```scss
 // Import the IgniteUI themes library first
@@ -44,7 +45,7 @@ $my-color-palette: igx-palette(
 次に `igx-core` と `igx-theme` mixins について説明します。`igx-core` mixin は、グローバル エレベーション、グローバル タイポグラフィなどすべての必須パーツを読み込みます。`igx-theme`は、グローバル変数 `$default-palette` をパレット マップに設定します。また、グローバル変数` $igx-legacy-support` を `$legacy-support` の値に設定します。`igx-theme` mixin は、コンポーネントの `$exclude` リストに載っていない各コンポーネント スタイルも含みます。 
 
 > [!IMPORTANT]
-> `Igx-theme` の前に `Igx-core` を含むと効果的です。`Igx-core` は `igx-theme` に必要なすべての基本定義を提供します。
+> `igx-theme` の前に `igx-core` を含むと効果的です。`igx-core` は `igx-theme` に必要なすべての基本定義を提供します。
 
 ### コンポーネントの除外
 <div class="divider--half"></div>
@@ -72,7 +73,7 @@ $unnecessary: (igx-avatar, igx-badge);
 
 コンポーネント テーマの作成方法:
 
-* [コンポーネント テーマ](./component-themes.md)
+* [コンポーネント テーマ](component-themes.md)
 
 コミュニティに参加して新しいアイデアをご提案ください。
 
