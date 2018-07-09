@@ -2,6 +2,7 @@
 title: Grid 編集 - ネイティブ Angular | Ignite UI for Angular
 _description: Ignite UI for Angular Data Grid コントロールは、列のデータ型に基づいて編集可能な列にデフォルト セル テンプレートを提供します。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, ネイティブ Angular コンポーネント, Angular Grid, Angular Data Grid コンポーネント, Angular Data Grid コントロール, Angular Grid コンポーネント, Angular Grid コントロール, Angular 高パフォーマンス グリッド, セル編集
+_language: ja
 ---
 
 ### Grid 編集
@@ -29,11 +30,11 @@ Ignite UI for Angular の Grid コンポーネントは、列のデータ型に�
 以下のいずれかの方法でセルがフォーカスされている場合、編集モードに入ることができます。
  - ダブル クリック
  - シングル クリック - 以前選択したセルが編集モードで現在選択したセルが編集可能な場合のみシングル クリックで編集モードに入ります。以前選択したセルが編集モードでない場合、シングルクリックは編集モードに入らずにセルが選択されるのみです。
- - `Enter` キーの押下;
- - `F2` キーの押下;
+ - `Enter` キーの押下
+ - `F2` キーの押下
 
 以下のいずれかの方法で変更を**確定せずに**編集モードを終了します。
- - `Escape` キーの押下;
+ - `Escape` キーの押下
  - 並べ替え、フィルタリング、検索、非表示の操作時
 
 編集モードを終了して以下のいずれかの方法で変更を**確定**します。
@@ -120,7 +121,7 @@ this.grid.deleteRow(this.selectedCell.cellID.rowID);
 const row = this.grid.getRowByIndex(rowIndex);
 row.delete();
 ```
-**igx-grid**　に関係なく、ボタンのクリックなどのユーザー インタラクションに接続できます。
+**igx-grid** に関係なく、ボタンのクリックなどのユーザー インタラクションに接続できます。
 ```html
 <button igxButton igxRipple (click)="deleteRow($event)">Delete Row</button>
 ```
