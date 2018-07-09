@@ -246,7 +246,7 @@ export class AppModule {}
 
 | 名前 | 型 | 説明 |
 | :--- | :--- | :--- |
-| `isDisabled` | boolean | タブが無効かどうかを取得します。 |
+| `disabled` | boolean | タブが無効かどうかを取得します。 |
 | `isSelected` | boolean | タブが選択されているかどうかを取得します。 |
 | `index` | number | タブ コレクションのタブのインデックスを取得します。 |
 | `relatedGroup` | IgxTabsGroupComponent | タブに関連付けられているグループを取得します。 |

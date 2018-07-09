@@ -242,7 +242,7 @@ The following getters are available on the **igx-tabs-group** component:
 The following getters are available on the **igx-tab-item** component:
 | Name | Type | Description |
 | :--- | :--- | :--- |
-| `isDisabled` | boolean | Gets whether the tab is disabled. |
+| `disabled` | boolean | Gets whether the tab is disabled. |
 | `isSelected` | boolean | Gets whether the tab is selected. |
 | `index` | number | Gets the index of the tab in the tab collection. |
 | `relatedGroup` | IgxTabsGroupComponent | Gets the group associated with the tab. |
