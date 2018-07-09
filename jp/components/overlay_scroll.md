@@ -18,11 +18,13 @@ _language: ja
  - `initialize` - スクロール方法を初期化します。ドキュメントへの参照、オーバーレイ サービスへの参照、および描画されるコンポーネントの id が必要です。
  - `attach` - スクロール方法を指定した要素またはドキュメントにアタッチします。
  - `detach` - スクロール方法をデタッチします。
+
 ```typescript
 this.scrollStrategy.initialize(document, overlayService, id);
 this.scrollStrategy.attach();
 this.scrollStrategy.detach();
 ```
+
 <div class="divider--half"></div>
 
 ### 作業の開始
@@ -60,7 +62,7 @@ import { NoOpScrollStrategy } from "./scroll/NoOpScrollStrategy";
 ```
 
 ## デモ
-#### スクロール方法
+### スクロール方法
 オーバーレイのスクロールの処理方法を決定するためにスクロール方法を `overlaySettings` オブジェクトによって渡すことができます。
 以下のデモは複数の `scrollStrategies` を紹介します。
 <div class="sample-container loading" style="height: 400px">

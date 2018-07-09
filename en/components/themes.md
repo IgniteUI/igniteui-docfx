@@ -39,7 +39,7 @@ To get started with our first color palette, create an _scss_ file that would be
 
 ```scss
 // Import the IgniteUI themes library first
-@import "~igniteui-angular/core/styles/themes/index";
+@import "~igniteui-angular/lib/core/styles/themes/index";
 
 $company-color: #2ab759; // Some green shade I like
 $secondary-color: #f96a88; // Watermelon pink
@@ -107,7 +107,7 @@ Let's start from our very first example on this page. This time, though, we're g
 
 ```scss
 // Import the IgniteUI themes library first
-@import "~igniteui-angular/core/styles/themes/index";
+@import "~igniteui-angular/lib/core/styles/themes/index";
 
 $company-color: #2ab759; // Some green shade I like
 $secondary-color: #f96a88; // Watermelon pink
@@ -138,7 +138,7 @@ To customize the typography use the `igx-typography` mixin. It takes exactly one
 
 ```scss
 // Import the IgniteUI themes library first
-@import "~igniteui-angular/core/styles/themes/index";
+@import "~igniteui-angular/lib/core/styles/themes/index";
 // IMPORTANT: Make sure you always include igx-core first!
 @include igx-core();
 @include igx-theme($default-palette);

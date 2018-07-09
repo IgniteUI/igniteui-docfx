@@ -71,7 +71,7 @@ export class AppModule {}
 > 注: `displayKey` が設定されない場合、`valueKey` 設定が使用されます。
 
 
-リモート バインディング、`valueKey` および `displayKey` の定義、`onDataPreLoad` の公開により、コンボにリモート データの新規データを読み込めるようになります。以下の例でこの機能を紹介します。
+<!-- リモート バインディング、`valueKey` および `displayKey` の定義、`onDataPreLoad` の公開により、コンボにリモート データの新規データを読み込めるようになります。以下の例でこの機能を紹介します。
 
 ```html
 <igx-combo [data]="remoteData | async" (onDataPreLoad)="dataLoading($event)" [valueKey]="'ProductID'" [displayKey]="'ProductName'" ></igx-combo>
@@ -102,7 +102,7 @@ public dataLoading(evt) {
 
 > 注: コンボをリモート データにバインドするには、サーバーからデータ部分を取得するサービスが必要です。
 コンボは、コンボの状態 (最初のインデックスおよび読み込む項目の数) を指定する `virtualizationState` プロパティを公開します。
-サービスが `totalItemCount` プロパティを使用してサーバーにある項目の数をコンボに通知する必要があります。
+サービスが `totalItemCount` プロパティを使用してサーバーにある項目の数をコンボに通知する必要があります。 -->
 
 ### 値バインディング
 
@@ -284,7 +284,7 @@ igxCombo が開いてリスト項目がフォーカスされる場合:
 
 igxCombo が開いて、カスタム値が有効で、「項目の追加」ボタンがフォーカスされる場合:
 
-- `Space` および `Enter` は新しい項目を追加し、valueKey および displayKey を検索入力のテキストに設定して、新しい項目を選択します。
+- `Enter` は新しい項目を追加し、valueKey および displayKey を検索入力のテキストに設定して、新しい項目を選択します。
 
 - `ArrowUp` はフォーカスを以前のリスト項目に移動します。リストが空の場合、フォーカスを検索入力に移動します。
 
@@ -299,11 +299,11 @@ igxCombo が開いて、カスタム値が有効で、「項目の追加」ボ�
 |  `data`                  | コンボのデータ ソース                                      | any                        |
 |  `value`                 | コンボの値                                            | string                      |
 |  `allowCustomValue`      | コンボのカスタム値を有効/無効にします。                          | boolean                     |
+|  `filterable`            | コンボのドロップダウンのフィルタリングを有効/無効にします。デフォルトは有効です。                 | boolean                     |
 |  `valueKey`              | コンボの値データ ソース プロパティ                              | string                      |
 |  `displayKey`            | コンボの表示データ ソース プロパティ                            | string                      |
 |  `groupKey`              | コンボの項目グループ                                      | string                      |
 |  `virtualizationState`   | 仮想化されたデータの現在の状態を定義します。`startIndex` および `chunkSize` を含みます。 | `IForOfState`                |
-|  `totalItemCount`        | リモート サービスを使用する場合、仮想データ項目の合計数。              | number                      |
 |  `width `                | コンボの幅を定義します。                                    | string                      |
 |  `height`                | コンボの高さを定義します。                                   | string                      |
 |  `itemsMaxHeight `       | ドロップダウンの高さを定義します。                               | string                      |
