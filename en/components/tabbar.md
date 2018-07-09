@@ -403,7 +403,7 @@ The following getters are available on the **igx-tab-panel** component:
 The following getters are available on the **igx-tab** component:
 | Name | Type | Description |
 | :--- | :--- | :--- |
-| `isDisabled` | Boolean | Determines whether the tab is disabled. |
+| `disabled` | Boolean | Determines whether the tab is disabled. |
 | `isSelected` | Boolean | Determines whether the tab is selected. |
 | `index` | Number | Gets the index of the tab in the tab collection. |
 | `relatedPanel` | IgxTabPanel | Gets the panel associated with the tab. |
