@@ -378,6 +378,7 @@ export class MyComponent implements OnInit {
 |`onColumnResized`|列がサイズ変更されたときに発生されます。列オブジェクト、以前の列幅、および新しい列幅を返します。|
 |`onContextMenu`|セルが右クリックされたときに発生されます。セル オブジェクトを返します。|
 |`onDoubleClick`|セルがダブルクリックされたときに発生します。セル オブジェクトを返します。|
+|`onGroupingDone`| 新しい列がグループ化、またはグループ化解除されたときに発生されます。グループ操作に関連する ISortingExpression を返します。|
 
 <div class="divider--half"></div>
 
@@ -426,6 +427,14 @@ export class MyComponent implements OnInit {
 |`markForCheck()`|グリッドおよびすべての子要素に変更検出サイクルを手動的にトリガーします。|
 |`pinColumn(name: string): boolean`|列をフィールド名によってピン固定します。操作が成功したかどうかを返します。|
 |`unpinColumn(name: string): boolean`|列をフィールド名によってピン固定解除します。操作が成功したかどうかを返します。|
+|`groupBy(expression: ISortingExpression)`| 新しい列を提供された式によってグループ化するか、既存の式を変更します。|
+|`groupBy(expressions: Array)`| 列を提供した並べ替え式の配列に基づいてグループ化します。|
+|`clearGrouping()`| グリッドのグループ化をすべてクリアします。|
+|`clearGrouping(fieldName: string)`| グループ化を特定の列からクリアします。|
+|`isExpandedGroup(group: IGroupByRecord )`| グループが展開されているかどうかを返します。|
+|`toggleGroup(group: IGroupByRecord)`| グループの展開状態を切り替えます。|
+|`getGroup(field: string, value: any)`| グループ化レコードを複合キーによって取得します。|
+|`toggleAllGroupRows()`| すべてのグループ行の展開状態を再帰的に切り替えます。|
 
 <div class="divider--half"></div>
 
@@ -457,6 +466,7 @@ export class MyComponent implements OnInit {
 |`sortingIgnoreCase`|boolean|並べ替えが適用される場合に文字列の大文字化を無視します。デフォルトは _true_ です。|
 |`dataType`|DataType|string、number、boolean、または Date。フィルタリングが有効な場合、フィルター UI 条件は列の `dataType` に基づきます。設定されない場合、デフォルト値は `string` です。`autoGenerate` が有効な場合、グリッドはデータ ソースに基づいて各列の正しいデータ型を解決しようとします。|
 |`pinned`|boolean|列がピン固定かどうかを設定します。|
+|`groupable`|boolean| 列を UI でグループ化できるかどうかを決定します。|
 
 ### メソッド
 **IgxGridColumnComponent** によって公開されるすべてのパブリック メソッドのリスト:
@@ -587,11 +597,11 @@ public filter(term) {
 |`grid`|IgxGridComponent|はい|いいえ|行を含むグリッドへの参照。|
 |`nativeElement`|HTMLElement|はい|いいえ|行を表すネイティブ DOM 要素。特定の環境で `null` 値が可能です。|
 
-### Methods
-|Signature|Description|
+### メソッド
+|シグネチャ|説明|
 |--- |--- |
-|`update(value: any)`|Updates the specified row object and the data source record with the passed value. This method emits `onEditDone` event.|
-|`delete()`|Removes the specified row from the grid's data source. This method emits `onRowDeleted` event.|
+|`update(value: any)`|指定した行オブジェクトおよびデータ ソース レコードを渡された値で更新します。このメソッドは `onEditDone` イベントを発生します。|
+|`delete()`|グリッドのデータソースから指定した行を削除します。このメソッドは `onRowDeleted` イベントを発生します。|
 
 <div class="divider--half"></div>
 
