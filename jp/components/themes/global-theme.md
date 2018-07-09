@@ -42,7 +42,7 @@ $my-color-palette: igx-palette(
 @include igx-theme($my-color-palette);
 ```
 
-次に `igx-core` と `igx-theme` mixins について説明します。`igx-core` mixin は、グローバル エレベーション、グローバル タイポグラフィなどすべての必須パーツを読み込みます。`igx-theme`は、グローバル変数 `$default-palette` をパレット マップに設定します。また、グローバル変数` $igx-legacy-support` を `$legacy-support` の値に設定します。`igx-theme` mixin は、コンポーネントの `$exclude` リストに載っていない各コンポーネント スタイルも含みます。 
+次に `igx-core` と `igx-theme` mixins について説明します。`igx-core` mixin は、グローバル エレベーション、グローバル タイポグラフィなどすべての必須パーツを読み込みます。`igx-theme` は、グローバル変数 `$default-palette` をパレット マップに設定します。また、グローバル変数 `$igx-legacy-support` を `$legacy-support` の値に設定します。`igx-theme` mixin は、コンポーネントの `$exclude` リストに載っていない各コンポーネント スタイルも含みます。 
 
 > [!IMPORTANT]
 > `igx-theme` の前に `igx-core` を含むと効果的です。`igx-core` は `igx-theme` に必要なすべての基本定義を提供します。
@@ -50,7 +50,7 @@ $my-color-palette: igx-palette(
 ### コンポーネントの除外
 <div class="divider--half"></div>
 
-`igx-theme` mixin は、グローバル テーマ スタイルから除外されるコンポーネント名のリストを提供します。例えば、igx-avatar` および `igx-badge` に含まれるすべてのスタイルを完全に削除してカスタム スタイルを提供したい場合、コンポーネントのリストを渡して達成することができます。
+`igx-theme` mixin は、グローバル テーマ スタイルから除外されるコンポーネント名のリストを提供します。例えば、`igx-avatar` および `igx-badge` に含まれるすべてのスタイルを完全に削除してカスタム スタイルを提供したい場合、コンポーネントのリストを渡して達成することができます。
 
 ```scss
 // ...
