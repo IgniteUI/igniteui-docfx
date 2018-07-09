@@ -7,8 +7,8 @@ _language: ja
 
 ## Overlay
 <p class="highlight">
-オーバーレイ サービスはアプリケーションの前景にコンテンツを動的に描画する方法を提供します。描画するコンテンツおよび描画方法 (配置、アニメーション、スクロールおよびクリック動作など) を構成できます。
-オーバーレイ サービスは Toggle ディレクティブと完全に組み合わせます。
+オーバーレイ サービスはアプリケーションの前景にコンテンツを動的な描画をサポートします。描画するコンテンツおよび描画方法 (配置、アニメーション、スクロールおよびクリック動作など) を構成できます。
+このオーバーレイ サービスは Toggle ディレクティブと完全に統合されています。
 </p>
 <div class="divider--half"></div>
 
@@ -115,9 +115,9 @@ export class MyOverlayComponent {
 
 ### オーバーレイの非表示
 
-`IgxOverlayService.hide()`メソッドはコンテンツをオーバーレイからコンテンツを削除し、DOM の元の位置に再アタッチします。
+`IgxOverlayService.hide()`メソッドはコンテンツをオーバーレイからコンテンツを削除し、DOM の元の位置に再度アタッチします。
 
-すべてのオーバーレイ サービスで描画される要素がサービスによって割り当てられた一意の ID があります。`IgxOverlayService.show()` メソッドは描画されるコンテンツの識別子を返します。オーバーレイからコンテンツを削除するには、その ID をオーバーレイの `hide()` メソッドに渡します。
+すべてのオーバーレイ サービスで描画される要素にサービスによって割り当てられた一意の ID があります。`IgxOverlayService.show()` メソッドは描画されるコンテンツの識別子を返します。オーバーレイからコンテンツを削除するには、その ID をオーバーレイの `hide()` メソッドに渡します。
 
 以前に定義されたオーバーレイ メソッドをオーバーレイ要素を表示して非表示するために変更できます。
 ```typescript
@@ -150,7 +150,7 @@ export class MyOverlayComponent {
 ```
 ### デモ - 動的なアタッチ - 設定
 
-`show()` メソッドの `overlaySettings` パラメーターを使用すると、コンテンツの表示方法を変更できます。たとえば、コンテンツの配置、スクロールの動作、およびコンテナーがモーダルかどうかを設定できます。
+`show()` メソッドの `overlaySettings` パラメーターを使用してコンテンツの表示方法を変更できます。たとえば、コンテンツの配置、スクロールの動作、およびコンテナーがモーダルかどうかを設定できます。
 
 <div class="sample-container loading" style="height: 400px">
     <iframe id="overlay-sample-main-2-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/overlay-sample-main-2" onload="onSampleIframeContentLoaded(this);"></iframe>
