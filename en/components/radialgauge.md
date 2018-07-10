@@ -30,7 +30,7 @@ This gauge supports only one scale, one needle, one set of tick marks and one se
 ### Dependencies
 When installing the gauges package, the core package must also be installed.
 
-**npm install ignite-angular-gauges, ignite-angular-core**
+**npm install ignite-angular-gauges ignite-angular-core**
 
 The radial gauge exported as an `NgModule`, you need to import the _IgxRadialGaugeModule_ inside your `AppModule`:
 

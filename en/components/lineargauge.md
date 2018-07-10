@@ -24,7 +24,7 @@ The features of the linear gauge component include configurable orientation and 
 ### Dependencies
 When installing the gauges package, the core package must also be installed.
 
-**npm install ignite-angular-gauges, ignite-angular-core**
+**npm install ignite-angular-gauges ignite-angular-core**
 
 The linear gauge exported as an `NgModule`, you need to import the _IgxLinearGaugeModule_ inside your `AppModule`:
 

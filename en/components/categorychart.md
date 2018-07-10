@@ -40,7 +40,7 @@ Another example of the intuitive behavior of the Category Chart control is that 
 ### Dependencies
 When installing the chart package, the core package must also be installed.
 
-**npm install ignite-angular-charts, ignite-angular-core**
+**npm install ignite-angular-charts ignite-angular-core**
 
 The category chart is exported as an `NgModule`, you need to import the _IgxCategoryChartModule_ inside your `AppModule`:
 
