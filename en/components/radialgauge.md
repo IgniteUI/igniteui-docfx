@@ -28,6 +28,10 @@ Gauge needles are available in one of the several predefined shapes. The needle 
 This gauge supports only one scale, one needle, one set of tick marks and one set of labels. Practically all the changes made to the radial gauge control are animation enhancements. This animation is highly customizable by setting the `transitionDuration` property. You can achieve numerous needle shapes by fine tuning its shape parameters.
 
 ### Dependencies
+When installing the gauges package, the core package must also be installed.
+
+**npm install ignite-angular-gauges, ignite-angular-core**
+
 The radial gauge exported as an `NgModule`, you need to import the _IgxRadialGaugeModule_ inside your `AppModule`:
 
 ```typescript
@@ -69,27 +73,36 @@ The following code demonstrates how create a radial gauge containing a needle an
 <div class="divider--half"></div>
 
 ## Configurable Elements 
-### Background
+The radial gauge component features the following visual elements (See the picture below.)
+![](../images/Radial_Gauge_2.png)
+
+**Background** (1,2)
 Displayed as a circle, the background section of the radial gauge control is where all the different elements such as needles and tick marks are added to the gauge.
 
 This area can be customized to be either circular or fitted by setting the `backingShape` property. A circular shape creates a 360 degree circle gauge while a fitted shape creates a filled arc segment encompassing the scale.
 
-### Labels
+**Labels** (3)
 The gauge labels are visual elements displaying numeric values at a specified interval on the scale.
 
-### Needles
+**Tick Marks** (4, 10)
+The radial gauge tick marks are visual elements displayed as lines at specified intervals on the gauge.
+There are two types of tick marks, major and minor. Use the MinorTickCount property to specify the number of minor tick marks displayed between each major tick mark.
+
+**Ranges** (5)
+A range highlights a set of continuous values bound by a specified minimum and maximum value on a gauge scale. You can add multiple ranges to a scale, specifying different brushes, along with starting and ending values. 
+
+**Scale** (6)
+Used to represent the values of the gauge visually, a scale defines a range of values in the radial gauge control. The tick marks and ranges are all the elements that can be added to a scale.
+
+**Needles** (7,8,9)
 A gauge needle is a visual element used to signify a gauge set value and consists of needle cap overlays or underlays; the gauge needle’s pivot point.
 
 The supported needle shapes and caps are set using the `needleShape` and `needlePivotShape` properties. 
 
-### Ranges
-A range highlights a set of continuous values bound by a specified minimum and maximum value on a gauge scale. You can add multiple ranges to a scale, specifying different brushes, along with starting and ending values. 
 
-### Scale
-Used to represent the values of the gauge visually, a scale defines a range of values in the radial gauge control. The tick marks and ranges are all the elements that can be added to a scale.
 
-### Tick Marks
-The radial gauge tick marks are visual elements displayed as lines at specified intervals on the gauge.
-There are two types of tick marks, major and minor. Use the MinorTickCount property to specify the number of minor tick marks displayed between each major tick mark.
+
+
+
 
 

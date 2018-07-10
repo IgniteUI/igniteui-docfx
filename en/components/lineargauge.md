@@ -22,6 +22,10 @@ In Ignite UI for Angular, use the Linear Gauge component to see a simple display
 The features of the linear gauge component include configurable orientation and direction, configurable visual elements, and more. The component has also a built-in support for animated transitions.
 
 ### Dependencies
+When installing the gauges package, the core package must also be installed.
+
+**npm install ignite-angular-gauges, ignite-angular-core**
+
 The linear gauge exported as an `NgModule`, you need to import the _IgxLinearGaugeModule_ inside your `AppModule`:
 
 ```typescript
