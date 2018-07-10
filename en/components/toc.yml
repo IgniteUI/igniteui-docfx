@@ -62,7 +62,6 @@
   header: true
 - name: Category Chart
   href: categorychart.md
-  new: false
   items:
     - name: Explore Chart Types
       href: categorychart_explore_chart_types.md
@@ -81,7 +80,6 @@
       new: false
 - name: Financial Chart
   href: financialchart.md
-  new: false
   items:
     - name: Explore Chart Types
       href: financialchart_explore_chart_types.md
@@ -109,7 +107,18 @@
       new: false
     - name: Custom Tooltips
       href: financialchart_custom_tooltips.md
-      new: false
+- name: Gauges
+  header: true
+  new: true
+- name: Bullet Graph
+  href: bulletgraph.md
+  new: true
+- name: Linear Gauge
+  href: lineargauge.md
+  new: true
+- name: Radial Gauge
+  href: radialgauge.md
+  new: true
 - name: Styling & Themes
   header: true
 - name: Themes

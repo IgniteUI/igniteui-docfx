@@ -41,31 +41,17 @@ Refer to the [Financial Chart Panes](financialchart_panes.md) topics for  inform
  </igx-financial-chart>
 ```
 
-### Toolbar
-A toolbar is displayed at the top of the financial chart. This allows your end users to change various details about the data being displayed, and also displays different panes. The toolbar consists of the following selectors:
-- Indicator Type Selector - Allows users to select multiple types of financial indicators. These indicators are displayed below the price pane in their own panes because they do not share the same Y-Axis scale with the prices or other indicators.
-- Overlay Type Selector - Allows users to select different types of financial overlays. These overlays are displayed together with the financial prices series because they share the same y-axis scale. There are two types of overlays the `BollingerBands` and `PriceChannel`.
-- Trendline Type Selector - Allows users to select different types of trendlines. The trendline is displayed in a trendline layer over the price pane and the volume pane.
-- Date Range Selector - Allows users to select different range presets to view the data. Note that some buttons will not be functional if your data range is less 1 year.
-- Chart Type Selector - Allows users to select chart types for the financial chart. These are displayed in the price pane.
-- Volume Type Selector -  Allows users to view the stock volume data in the Volume Pane. Users can choose between None, Column, Line, and Area chart types.
-
-Note that depending on the width of the financial chart, the toolbar might not may or may not contain all of the elements discussed in above section. Increasing width of the financial chart and its container will cause the toolbar to display more of these selectors.
-
-Also, you can hide the toolbar if you wish to maximize vertical space for the chart panes. The following code show how to hide the toolbar:
-
-```html
- <igx-financial-chart
-    isToolbarVisible="false">
- </igx-financial-chart>
-```
-
 ### Dependencies
+
+When installing the chart package, the core package must also be installed.
+
+**npm install ignite-angular-charts ignite-angular-core**
+
 The financial chart is exported as an `NgModule`, you need to import the _IgxFinancialChartModule_ inside your `AppModule`:
 
 ```typescript
 // app.module.ts
-import {IgxFinancialChartModule} from '@infragistics/igniteui-angular-charts/ES5/ig-financialchart-module'
+import {IgxFinancialChartModule} from 'ignite-angular-charts/ES5/igx-financialchart-module'
 
 @NgModule({
     imports: [
@@ -110,4 +96,21 @@ The following code demonstrates how to bind the financial chart to the above dat
  </igx-financial-chart>
 ```
 
+### Toolbar
+A toolbar is displayed at the top of the financial chart. This allows your end users to change various details about the data being displayed, and also displays different panes. The toolbar consists of the following selectors:
+- Indicator Type Selector - Allows users to select multiple types of financial indicators. These indicators are displayed below the price pane in their own panes because they do not share the same Y-Axis scale with the prices or other indicators.
+- Overlay Type Selector - Allows users to select different types of financial overlays. These overlays are displayed together with the financial prices series because they share the same y-axis scale. There are two types of overlays the `BollingerBands` and `PriceChannel`.
+- Trendline Type Selector - Allows users to select different types of trendlines. The trendline is displayed in a trendline layer over the price pane and the volume pane.
+- Date Range Selector - Allows users to select different range presets to view the data. Note that some buttons will not be functional if your data range is less 1 year.
+- Chart Type Selector - Allows users to select chart types for the financial chart. These are displayed in the price pane.
+- Volume Type Selector -  Allows users to view the stock volume data in the Volume Pane. Users can choose between None, Column, Line, and Area chart types.
 
+Note that depending on the width of the financial chart, the toolbar might not may or may not contain all of the elements discussed in above section. Increasing width of the financial chart and its container will cause the toolbar to display more of these selectors.
+
+Also, you can hide the toolbar if you wish to maximize vertical space for the chart panes. The following code show how to hide the toolbar:
+
+```html
+ <igx-financial-chart
+    isToolbarVisible="false">
+ </igx-financial-chart>
+```

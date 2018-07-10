@@ -110,6 +110,18 @@
     - name: カスタム ツールチップ
       href: financialchart_custom_tooltips.md
       new: false
+- name: ゲージ
+  header: true
+  new: true
+- name: Bullet Graph
+  href: bulletgraph.md
+  new: true
+- name: Linear Gauge
+  href: lineargauge.md
+  new: true
+- name: Radial Gauge
+  href: radialgauge.md
+  new: true
 - name: スタイルとテーマ
   header: true
 - name: テーマ
