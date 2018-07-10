@@ -34,7 +34,7 @@ Ignite UI for Angular の Radial Gauge コンポーネントは、針、目盛�
 
 ```typescript
 // app.module.ts
-import { IgxRadialGaugeModule } from '@infragistics/igniteui-angular-gauges/ES5/igx-radial-gauge-module';
+import { IgxRadialGaugeModule } from 'ignite-angular-gauges/ES5/igx-radial-gauge-module';
 
 @NgModule({
     imports: [

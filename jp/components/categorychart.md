@@ -44,7 +44,7 @@ Category Chart はカテゴリ データを可視化するチャート コンポ
 
 ```typescript
 // app.module.ts
-import { IgxCategoryChartModule } from '@infragistics/ignite-ui-xplatform-for-angular/Debug/ES5/ig-categorychart-module';
+import { IgxCategoryChartModule } from 'ignite-angular-charts/ES5/igx-categorychart-module';
 
 @NgModule({
     imports: [
