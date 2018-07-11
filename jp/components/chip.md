@@ -21,7 +21,7 @@ _language: ja
 
 #### Chip の初期化
 
-The `IgxChipComponent` はチップ要素のメイン クラスで、`IgxChipsAreaComponent`はチップ領域のメイン クラスです。
+`IgxChipComponent` はチップ要素のメイン クラスで、`IgxChipsAreaComponent`はチップ領域のメイン クラスです。
 チップ領域はチップの間の操作 (ドラッグ、選択、ナビゲーションなど) が必要の複雑なシナリオの処理で使用されます。別の要素を識別するために `IgxChipComponent` で `id` を定義する必要があります。
 
 `igxChip` を `igxChipArea` と使用した例:
