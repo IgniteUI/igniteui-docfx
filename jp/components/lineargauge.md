@@ -23,6 +23,10 @@ Ignite UI for Angular の Linear Gauge コンポーネントを使用すると�
 リニア ゲージの機能には構成可能な向きや方向、視覚要素などがあります。このコンポーネントは、アニメーション トランジションがサポートされます。
 
 ### 依存関係
+gauges パッケージをインストールするときに core パッケージもインストールする必要があります。
+
+`npm install ignite-angular-gauges ignite-angular-core`
+
 リニア ゲージが `NgModule` としてエクスポートされるため、アプリケーションで `AppModule` に _IgxLinearGaugeModule_ をインポートする必要があります。
 
 ```typescript

@@ -40,6 +40,10 @@ Category Chart はカテゴリ データを可視化するチャート コンポ
 
 ### 依存関係
 
+chart パッケージをインストールするときに core パッケージもインストールする必要があります。
+
+`npm install ignite-angular-charts ignite-angular-core`
+
 カテゴリ チャートが `NgModule` としてエクスポートされるため、アプリケーションで `AppModule` に `IgxCategoryChartModule` をインポートする必要があります。
 
 ```typescript

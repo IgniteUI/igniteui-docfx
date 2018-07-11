@@ -25,6 +25,10 @@ Ignite UI for Angular の Bullet Graph コンポーネントはスケールに�
 ブレット グラフの機能には構成可能な向きや方向、視覚要素などがあります。このコントロールには、アニメーション化されたトランジションのサポートも組み込まれています。
 
 ### 依存関係
+gauges パッケージをインストールするときに core パッケージもインストールする必要があります。
+
+`npm install ignite-angular-gauges ignite-angular-core`
+
 ブレット グラフが `NgModule` としてエクスポートされるため、アプリケーションで `AppModule` に _IgxBulletGraphModule_ をインポートする必要があります。
 
 ```typescript

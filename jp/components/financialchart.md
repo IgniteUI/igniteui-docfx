@@ -42,6 +42,28 @@ Financial Chart は、シンプルな API を使用して複雑なファイナ�
 </igx-financial-chart>
 ```
 
+### 依存関係
+
+chart パッケージをインストールするときに core パッケージもインストールする必要があります。
+
+`npm install ignite-angular-charts ignite-angular-core`
+
+ファイナンシャル チャートが `NgModule` としてエクスポートされるため、アプリケーションで `AppModule` に `IgxFinancialChartModule` をインポートする必要があります。
+
+```typescript
+// app.module.ts
+import {IgxFinancialChartModule} from 'ignite-angular-charts/ES5/igx-financialchart-module'
+
+@NgModule({
+    imports: [
+        ...
+        IgxFinancialChartModule,
+        ...
+    ]
+})
+export class AppModule {}
+```
+
 ### ツールバー
 
 ファイナンシャル チャートの上にツールバーが表示されます。チャートで表示されるデータの詳細を変更でき、複数のペインの表示も可能です。ツールバーには次のセレクターが含まれます:
@@ -61,24 +83,6 @@ Financial Chart は、シンプルな API を使用して複雑なファイナ�
 <igx-financial-chart
    isToolbarVisible="false">
 </igx-financial-chart>
-```
-
-### 依存関係
-
-ファイナンシャル チャートが `NgModule` としてエクスポートされるため、アプリケーションで `AppModule` に `IgxFinancialChartModule` をインポートする必要があります。
-
-```typescript
-// app.module.ts
-import {IgxFinancialChartModule} from 'ignite-angular-charts/ES5/igx-financialchart-module'
-
-@NgModule({
-    imports: [
-        ...
-        IgxFinancialChartModule,
-        ...
-    ]
-})
-export class AppModule {}
 ```
 
 <div class="divider--half"></div>
