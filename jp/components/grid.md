@@ -355,6 +355,7 @@ export class MyComponent implements OnInit {
 |`evenRowCSS`|string|グリッドですべての偶数行に適用される追加のスタイル設定クラス。|
 |`oddRowCSS`|string|グリッドですべての奇数行に適用される追加のスタイル設定クラス。|
 |`paginationTemplate`|TemplateRef|グリッドのページングのためにカスタム `ng-template` を提供できます。|
+|`displayDensity`| DisplayDensity or string | Define the display density of the grid. Can be set to `compact`, `cosy` or `comfortable`.|
 
 <div class="divider--half"></div>
 
