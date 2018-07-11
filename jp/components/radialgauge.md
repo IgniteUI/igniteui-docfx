@@ -32,7 +32,7 @@ Ignite UI for Angular の Radial Gauge コンポーネントは、針、目盛�
 
 gauges パッケージをインストールするときに core パッケージもインストールする必要があります。
 
-`npm install ignite-angular-gauges, ignite-angular-core`
+`npm install ignite-angular-gauges ignite-angular-core`
 
 ラジアル ゲージが `NgModule` としてエクスポートされるため、アプリケーションで `AppModule` に _IgxRadialGaugeModule_ をインポートする必要があります。
 
