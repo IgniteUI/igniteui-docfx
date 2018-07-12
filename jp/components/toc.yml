@@ -53,6 +53,9 @@
     - name: 複数列ヘッダー
       href: grid_multi_column_headers.md
       new: true
+    - name: Display Density
+      href: grid_displayDensity.md
+      new: true
 - name: List View
   href: list.md
 - name: Combo
@@ -187,7 +190,7 @@
 - name: Overlay
   href: overlay_main.md
   new: true
-  items: 
+  items:
   - name: ポジション ストラテジー
     href: overlay_position.md
     new: true

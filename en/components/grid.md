@@ -357,9 +357,10 @@ Below is the list of all inputs that the developers may set to configure the gri
 |`paginationTemplate`|TemplateRef|You can provide a custom `ng-template` for the pagination part of the grid.|
 |`groupingExpressions`| Array | The group by state of the grid.|
 |`groupingExpansionState`| Array | The list of expansion states of the group rows. Contains the expansion state(expanded: boolean) and an unique identifier for the group row (Array<IGroupByExpandState>) that contains a list of the group row's parents described via their fieldName and value.|
-|`groupsExpanded`| Boolean | Determines whether created groups are rendered expanded or collapsed.| 
-|`groupsRowList`| QueryList<IgxGridGroupByRowComponent> | A list of visible group rows.| 
-|`groupsRecords`| IGroupByRecord[] | All groups in hierarchy reflecting the current groups state. 
+|`groupsExpanded`| Boolean | Determines whether created groups are rendered expanded or collapsed.|
+|`groupsRowList`| QueryList<IgxGridGroupByRowComponent> | A list of visible group rows.|
+|`groupsRecords`| IGroupByRecord[] | All groups in hierarchy reflecting the current groups state. |
+|`displayDensity`| DisplayDensity or string | Define the display density of the grid. Can be set to `compact`, `cosy` or `comfortable`.|
 
 
 <div class="divider--half"></div>
