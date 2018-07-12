@@ -10,13 +10,14 @@ Since **Igx-Grid** component is based on [Material Design Guidelines](https://ma
 
 #### Demo
 
-<div class="sample-container loading" style="height:720px">
+<div class="sample-container loading" style="height:620px">
     <iframe id="grid-displayDensity-sample-iframe" src='{environment:demosBaseUrl}/grid-displayDensity' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
 <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="grid-displayDensity-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
+
 <div class="divider--half"></div>
 
 ### Usage
@@ -51,7 +52,7 @@ But let's now continue with our sample and see in action how the `displayDensity
 
 ```typescript
     @ViewChild(IgxButtonGroupComponent) public buttonGroup: IgxButtonGroupComponent;
-    public density = "comfortable";
+    public density = "compact";
     public displayDensities;
 
     public ngOnInit() {
@@ -80,7 +81,7 @@ And now we can add and the grid markup.
 <div class="density-chooser">
     <igx-buttongroup [values]="displayDensities" (onSelect)="selectDensity($event)"></igx-buttongroup>
 </div>
-<igx-grid #grid [data]="data" [displayDensity]="density" width="100%" height="650px">
+<igx-grid #grid [data]="data" [displayDensity]="density" width="100%" height="550px">
     <igx-column-group  header="Customer Information">
     <igx-column field="CustomerName" header="Customer Name" [dataType]="'string'" [sortable]="true" [hasSummary]="true" [filterable]="true">
     </igx-column>
