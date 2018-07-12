@@ -6,7 +6,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ### Grid Display Density
 
-**Igx-Grid** component is based on [Material Design Guidelines](https://material.io/guidelines/material-design/introduction.html). We currently provide an option to choose between predefined set of display [density](https://material.io/design/layout/density.html#usage) options. By selecting the right density for your use case you can significantly improve the user experience when interacting with large amounts of content.
+**Igx-Grid** design is based on [Material Design Guidelines](https://material.io/guidelines/material-design/introduction.html). We currently provide an option to choose between predefined set of display [density](https://material.io/design/layout/density.html#usage) options. By selecting the right density for your use case you can significantly improve the user experience when interacting with large amounts of content.
 
 #### Demo
 
