@@ -6,7 +6,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ### Grid Display Density
 
-Since **Igx-Grid** component is based on [Material Design Guidelines](https://material.io/guidelines/material-design/introduction.html) we currently provide for you an option to choose between predefined set of display [density](https://material.io/design/layout/density.html#usage) options. By selecting the right density for your use case you can significantly improve the user experience when interacting with large amounts of content.
+**Igx-Grid** component is based on [Material Design Guidelines](https://material.io/guidelines/material-design/introduction.html). We currently provide an option to choose between predefined set of display [density](https://material.io/design/layout/density.html#usage) options. By selecting the right density for your use case you can significantly improve the user experience when interacting with large amounts of content.
 
 #### Demo
 
@@ -21,7 +21,7 @@ Since **Igx-Grid** component is based on [Material Design Guidelines](https://ma
 <div class="divider--half"></div>
 
 ### Usage
-As you have seen in the demo below **Igx-Grid** provides you a three density options: **compact**, **cosy** and **comfortable**. You can set a `displayDensity` in one of the following ways:
+As you can see in the demo above, the **Igx-Grid** provides three density options: **compact**, **cosy** and **comfortable**. The code snippet below shows how to set `displayDensity`:
 
 ```html
 <igx-grid #grid [data]="data" [displayDensity]="'cosy'" >
@@ -29,20 +29,20 @@ As you have seen in the demo below **Igx-Grid** provides you a three density opt
 ```
 or
 ```typescript
-    ...
-    this.grid.displayDensity = "cosy";
-    ...
+...
+this.grid.displayDensity = "cosy";
+...
 ```
 
-And now let's see in details how each option reflect on the grid component. When you switch between different density options the height of each grid element and the correcponding paddings are changed.
- - **comfortable** - this is default grid display density with the lowest intence and the row height is `50px`, left and right paddings are `24px`;
- - **cosy** - this is the middle intence density and the row height is `40px`, left and right paddings are `16px`;
- - **compact** - this is the density with heighest intence and the row height is `32px`, left and right paddings are `12px`;
+And now let's see in details how each option reflect on the grid component. When you switch between different density options the height of each grid element and the correcponding paddings will be changed.
+ - **comfortable** - this is the default grid display density with the lowest intence and row height equal to `50px`. Left and Right paddings are `24px`;
+ - **cosy** - this is the middle intence density with `40px` row height. Left and Right paddings are `16px`;
+ - **compact** - this is the density with heighest intence and `32px` row height. left and Right paddings are `12px`;
 
 > [!NOTE]
-> Please keep in mind that currently you can **not** override this sizes.
+> Please keep in mind that currently you **cannot** override any of the sizes.
 
-But let's now continue with our sample and see in action how the `displayDensity` is applied. Let's first add a button which will help us to switch between each density:
+Let's now continue with our sample and see in action how the `displayDensity` is applied. Let's first add a button which will help us to switch between each density:
 
 ```html
 <div class="density-chooser">
@@ -51,31 +51,33 @@ But let's now continue with our sample and see in action how the `displayDensity
 ```
 
 ```typescript
-    @ViewChild(IgxButtonGroupComponent) public buttonGroup: IgxButtonGroupComponent;
-    public density = "compact";
-    public displayDensities;
+@ViewChild(IgxButtonGroupComponent) public buttonGroup: IgxButtonGroupComponent;
+public density = "compact";
+public displayDensities;
 
-    public ngOnInit() {
-        this.displayDensities = [
-            {
-                label: "compact",
-                selected: this.density === "compact",
-                togglable: true
-            },
-            {
-                label: "cosy",
-                selected: this.density === "cosy",
-                togglable: true
-            },
-            {
-                label: "comfortable",
-                selected: this.density === "comfortable",
-                togglable: true
-            }
-        ];
-    }
+public ngOnInit() {
+    this.displayDensities = [
+        {
+            label: "compact",
+            selected: this.density === "compact",
+            togglable: true
+        },
+        {
+            label: "cosy",
+            selected: this.density === "cosy",
+            togglable: true
+        },
+        {
+            label: "comfortable",
+            selected: this.density === "comfortable",
+            togglable: true
+        }
+    ];
+}
 ```
-And now we can add and the grid markup.
+
+Now we can add the markup.
+
 
 ```html
 <div class="density-chooser">
@@ -131,16 +133,17 @@ And now we can add and the grid markup.
     </igx-column-group>
 </igx-grid>
 ```
-Finally, let's provide the necessary logic in order to actually apply the density in the grid:
+
+Finally, let's provide the necessary logic in order to actually apply the density:
 
 ```typescript
-    @ViewChild("grid", { read: IgxGridComponent })
-    public grid: IgxGridComponent;
-    .....
-    public selectDensity(event) {
-        this.density = this.displayDensities[event.index].label;
+@ViewChild("grid", { read: IgxGridComponent })
+public grid: IgxGridComponent;
+.....
+public selectDensity(event) {
+    this.density = this.displayDensities[event.index].label;
 
-    }
+}
 ```
 
 <div class="divider--half"></div>
