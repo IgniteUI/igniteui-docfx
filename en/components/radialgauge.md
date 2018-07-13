@@ -9,7 +9,7 @@ The Radial Gauge component in Ignite UI for Angular provides a number of visual 
 
 ### Demo
 
-<div class="sample-container" style="height: 550px">
+<div class="sample-container" style="height: 450px">
     <iframe id="radial-gauge-sample-iframe" src='{environment:demosBaseUrl}/radial-gauge-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -55,9 +55,12 @@ export class AppModule {}
 The following code demonstrates how create a radial gauge containing a needle and three comparative ranges on the scale.
 
 ```html
- <igx-radial-gauge value = "50"
-                   scaleStartExtent = "0"
-                   scaleEndExtent = "100">
+ <igx-radial-gauge height="400px"
+    width="400px"
+    value=25
+    interval=5
+    minimumValue=0
+    maximumValue=50>
     <igx-radial-graph-range startValue="0"
                             endValue="30"
                             brush="red"/>
@@ -73,36 +76,112 @@ The following code demonstrates how create a radial gauge containing a needle an
 <div class="divider--half"></div>
 
 ## Configurable Elements 
-The radial gauge component features the following visual elements (See the picture below.)
-![](../images/Radial_Gauge_2.png)
 
-**Background** (1,2)
+**Background** 
 Displayed as a circle, the background section of the radial gauge control is where all the different elements such as needles and tick marks are added to the gauge.
 
 This area can be customized to be either circular or fitted by setting the `backingShape` property. A circular shape creates a 360 degree circle gauge while a fitted shape creates a filled arc segment encompassing the scale.
 
-**Labels** (3)
+```html
+<igx-radial-gauge   
+    height="400px"
+    width="400px"
+    value=25
+    minimumValue=0
+    maximumValue=50
+    backingShape="fitted">
+</igx-radial-gauge>
+```
+**Labels** 
 The gauge labels are visual elements displaying numeric values at a specified interval on the scale.
 
-**Tick Marks** (4, 10)
+```html
+<igx-radial-gauge   
+    height="400px"
+    width="400px"
+    value=25
+    minimumValue=0
+    maximumValue=50
+    labelInterval=5>
+</igx-radial-gauge>
+```
+
+**Tick Marks** 
 The radial gauge tick marks are visual elements displayed as lines at specified intervals on the gauge.
 There are two types of tick marks, major and minor. Use the MinorTickCount property to specify the number of minor tick marks displayed between each major tick mark.
 
-**Ranges** (5)
+```html
+<igx-radial-gauge   
+    height="400px"
+    width="400px"
+    value=25
+    minimumValue=0
+    maximumValue=50
+    minorTickCount=1
+    minorTickEndExtent=.65
+    minorTickStartExtent=.625
+    minorTickStrokeThickness=1
+    tickStartExtent=.6
+    tickEndExtent=.65
+    tickStrokeThickness=1.75>
+</igx-radial-gauge>
+```
+
+**Ranges** 
 A range highlights a set of continuous values bound by a specified minimum and maximum value on a gauge scale. You can add multiple ranges to a scale, specifying different brushes, along with starting and ending values. 
 
-**Scale** (6)
+```html
+<igx-radial-gauge 
+   height="400px"
+   width="400px"
+   value=25
+   interval=5
+   minimumValue=0
+   maximumValue=50>
+   <igx-radial-gauge-range
+       startValue=5  endValue=15 brush="red">
+   </igx-radial-gauge-range>
+   <igx-radial-gauge-range
+       startValue=15  endValue=35 brush="yellow">
+   </igx-radial-gauge-range>
+   <igx-radial-gauge-range
+       startValue=35  endValue=45 brush="green">
+   </igx-radial-gauge-range>
+</igx-radial-gauge>
+```
+
+**Scale** 
 Used to represent the values of the gauge visually, a scale defines a range of values in the radial gauge control. The tick marks and ranges are all the elements that can be added to a scale.
 
-**Needles** (7,8,9)
+```html
+<igx-radial-gauge   
+    height="400px"
+    width="400px"
+    value=25
+    minimumValue=0
+    maximumValue=50
+    scaleStartAngle=120
+    scaleEndAngle=60
+    scaleBrush="#d6d6d6">
+</igx-radial-gauge>
+```
+
+**Needles** 
 A gauge needle is a visual element used to signify a gauge set value and consists of needle cap overlays or underlays; the gauge needle’s pivot point.
 
 The supported needle shapes and caps are set using the `needleShape` and `needlePivotShape` properties. 
 
-
-
-
-
-
-
-
+```html
+<igx-radial-gauge 
+    height="400px"
+    width="400px"
+    value=25
+    minimumValue=0
+    maximumValue=50
+    needleShape="Triangle"
+    needlePivotShape="CircleOverlay"
+    needleBrush="#79797a"
+    needlePivotBrush="#79797a"
+    isNeedleDraggingEnabled=true>
+</igx-radial-gauge>
+```

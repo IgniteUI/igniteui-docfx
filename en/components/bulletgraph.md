@@ -9,7 +9,7 @@ The Bullet Graph Component in Ignite UI for Angular allows for a linear and conc
 
 ### Demo
 
-<div class="sample-container" style="height: 550px">
+<div class="sample-container" style="height: 125px">
     <iframe id="bullet-graph-sample-iframe" src='{environment:demosBaseUrl}/bullet-graph-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -72,40 +72,104 @@ The following code walks through creating a bullet graph component, and configur
 
 <div class="divider--half"></div>
 
-## Logical Areas 
-
-The user-visible area of the bullet graph component is logically divided into the following areas: Reserved area, and Graph area.
-
- ![](../images/Bullet_Graph_1.png)
-
-Each of them serves different purpose related to some of the visual elements of the bullet graph component.
-
-**Reserved area** (1) – This area spreads:
-
-- Along the scale – the Reserved area begins either at the edge of the component (when no Title area exists) or at the edge of the Title area (as in the pictures above) and ends at the edge of the component.
-
-- Across the scale –
-In horizontal orientation: the Reserved area begins at the bottom edge of the component and spreads upward as much as the height of the numbering labels is (depending on the size and the other formatting of the font used in the labels)
-In vertical orientation: the Reserved area begins at the left edge of the component and spreads to the right as much as the width of the numbering labels is (depending on how large the numbers of the measurements of the scale are and the size and the other formatting of the font used in the labels).
-
-**Graph area** (2) – The area for displaying the performance bar, the tick marks, the ranges, and, optionally, the numbering labels of the bullet graph. All extent-related properties for these visual elements (except for labels) are measured against its edges. The Graph area serves not as a placeholder but as a frame of reference for positioning the scale inside the control (More precisely, for positioning the visual elements of the scale).
-
 ### Configurable Visual Elements Summary
- ![](../images/Bullet_Graph_2.png)
 
-**Performance bar** (3) – This is the primary measure displayed by the component and is visualized as a bar.
+**Performance bar** – This is the primary measure displayed by the component and is visualized as a bar.
 
-**Comparative marker** (4) – A measure which the performance bar measure compares against. It is visualized as a marker that runs perpendicular to the orientation of the performance bar.
+```html
+<igx-bullet-graph
+    height="80px"
+    width="400px"
+    minimumValue = 0
+    maximumValue = 120
+    valueBrush = "black"
+    value = 70>
+</igx-bullet-graph>
+```
 
-**Comparative range(s)** (5) – The ranges are visual elements that highlight a specified range of values on a scale. Their purpose is to visually communicate the qualitative state of the performance bar measure, illustrating at the same times the degree to which it resides within that state.
+**Comparative marker** – A measure which the performance bar measure compares against. It is visualized as a marker that runs perpendicular to the orientation of the performance bar.
 
-**Tick marks** (6) – The tick marks serve as a visual division of the scale into intervals in order to increase the readability of the bullet graph.
+```html
+<igx-bullet-graph
+    height="80px"
+    width="400px"
+    minimumValue = 0
+    maximumValue = 120
+    targetValueBrush = "#4286f4"
+    targetValue = 90
+    targetValueBreadth = 10>
+</igx-bullet-graph>
+```
+
+**Comparative range(s)** – The ranges are visual elements that highlight a specified range of values on a scale. Their purpose is to visually communicate the qualitative state of the performance bar measure, illustrating at the same times the degree to which it resides within that state.
+
+```html
+<igx-bullet-graph
+    height="80px"
+    width="400px"
+    minimumValue = 0
+    maximumValue = 120
+    valueBrush = "black"
+    value = 70
+    targetValueBrush = "black"
+    targetValue = 90>
+    <igx-linear-graph-range
+        startValue=20 endValue=40 brush="red">
+    </igx-linear-graph-range>
+    <igx-linear-graph-range
+        startValue=40 endValue=80 brush="yellow">
+    </igx-linear-graph-range>
+    <igx-linear-graph-range
+        startValue=80 endValue=120 brush="green">
+    </igx-linear-graph-range>
+</igx-bullet-graph>
+```
+**Tick marks** – The tick marks serve as a visual division of the scale into intervals in order to increase the readability of the bullet graph.
 - Major tick marks – The major tick marks are used as primary delimiters on the scale. The frequency they appear at, their extents and style can be controlled by setting the corresponding properties.
 - Minor tick marks – The minor tick marks represent helper tick marks, which might be used to additionally improve the readability of the scale and can be customized in a way similar to the major ones.
 
-**Scale labels** (7) – The labels indicate the measures on the scale.
+```html
+<igx-bullet-graph
+    height="80px"
+    width="400px"
+    minimumValue = 0
+    maximumValue = 120
+    valueBrush = "#4286f4"
+    value = 70
+    interval = 5
+    minorTickEndExtent = 0.10
+    minorTickStartExtent = 0.20
+    tickStartExtent = 0.25
+    tickEndExtent = 0.05
+    tickStrokeThickness = 2>
+</igx-bullet-graph>
+```
 
-**Border** (8) – The line visually delimiting the dimensions of the component.
+**Scale labels** (5) – The labels indicate the measures on the scale.
+```html
+<igx-bullet-graph
+    height="80px"
+    width="400px"
+    minimumValue = 0
+    maximumValue = 120
+    valueBrush = "#4286f4"
+    value = 70
+    targetValue = 90
+    labelInterval = 10>
+</igx-bullet-graph>
+```
 
-**Background** (9) – The background on which visual elements is placed is configurable in terms of pattern and color.
+**Background** – The background on which visual elements is placed is configurable in terms of pattern and color.
 
+```html
+<igx-bullet-graph
+    height="80px"
+    width="400px"
+    minimumValue = 0
+    maximumValue = 120
+    value = 70
+    targetValue = 90
+    backingBrush = "black"
+    backingOutline = "black">
+</igx-bullet-graph>
+```
