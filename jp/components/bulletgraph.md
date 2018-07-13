@@ -10,7 +10,7 @@ Ignite UI for Angular の Bullet Graph コンポーネントは、目盛り上�
 
 ### デモ
 
-<div class="sample-container" style="height: 550px">
+<div class="sample-container" style="height: 125px">
     <iframe id="bullet-graph-sample-iframe" src='{environment:demosBaseUrl}/bullet-graph-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -73,40 +73,106 @@ export class AppModule {}
 
 <div class="divider--half"></div>
 
-## 論理領域
-
-ブレット グラフの表示領域は、論理的に予約領域とグラフ領域に区別されます。
-
-![](../images/Bullet_Graph_1.png)
-
-各領域はブレット グラフ コンポーネントの一部の視覚要素に関連した異なる目的があります。
-
-**予約領域** (1) - この領域は以下のように拡張します。
-
-- スケールに沿った方向 - 予約領域はタイトル領域が存在しない場合に、コンポーネントの端または上の図に示すようにタイトル領域の端のいずれかより開始され、コンポーネントの端で終了します。
-
-- スケール全域 - 
-水平方向: 予約領域がコンポーネントの下端から開始され、ラベルのフォントのサイズなどの書式設定に従い、番号ラベルと同じ高さまで上に拡張します。
-垂直方向: 予約領域がコンポーネントの左端から開始され、スケール測定番号の大きさおよびラベルのフォントのサイズなどの書式設定に従って番号ラベルと同じ幅まで右に拡張します。
-
-**グラフ領域** (2) - ブレット グラフのパフォーマンス バー、目盛、範囲、オプションで番号ラベルを表示する領域です。ラベルを除く視覚要素の範囲関連のプロパティはすべてその端に対して測定されます。グラフ領域は、プレースホルダーではなくコントロール内部にスケールを配置する (正確にはスケールの視覚要素を配置) 参照フレームとして役割を果たします。
-
 ### 構成可能な視覚要素の概要
 
-![](../images/Bullet_Graph_2.png)
+**パフォーマンス バー** - コンポーネントにより表示される主要なメジャーで、バーとして可視化されます。
 
-**パフォーマンス バー** (3) - コンポーネントにより表示される主要なメジャーで、バーとして可視化されます。
+```html
+<igx-bullet-graph
+    height="80px"
+    width="400px"
+    minimumValue = 0
+    maximumValue = 120
+    valueBrush = "black"
+    value = 70>
+</igx-bullet-graph>
+```
 
-**比較マーカー** (4) – パフォーマンス バー メジャーの比較評価。パフォーマンス バーの向きに対して直角に交わるマーカーとして表示されます。
+**比較マーカー** – パフォーマンス バー メジャーの比較評価。パフォーマンス バーの向きに対して直角に交わるマーカーとして表示されます。
 
-**比較範囲** (5) - 範囲は、スケール上で指定した値の領域を強調表示する視覚的な要素です。その目的は、パフォーマンス バー メジャーの質的状態を視覚で伝えると同時に、その状態をレベルとして示すことにあります。
+```html
+<igx-bullet-graph
+    height="80px"
+    width="400px"
+    minimumValue = 0
+    maximumValue = 120
+    targetValueBrush = "#4286f4"
+    targetValue = 90
+    targetValueBreadth = 10>
+</igx-bullet-graph>
+```
 
-**目盛** (6) - 目盛は、ブレット グラフを読み取りやすくするために目盛の間隔でスケールを分割して見せる役割を果たします。
+**比較範囲** - 範囲は、スケール上で指定した値の領域を強調表示する視覚的な要素です。その目的は、パフォーマンス バー メジャーの質的状態を視覚で伝えると同時に、その状態をレベルとして示すことにあります。
+
+```html
+<igx-bullet-graph
+    height="80px"
+    width="400px"
+    minimumValue = 0
+    maximumValue = 120
+    valueBrush = "black"
+    value = 70
+    targetValueBrush = "black"
+    targetValue = 90>
+    <igx-linear-graph-range
+        startValue=20 endValue=40 brush="red">
+    </igx-linear-graph-range>
+    <igx-linear-graph-range
+        startValue=40 endValue=80 brush="yellow">
+    </igx-linear-graph-range>
+    <igx-linear-graph-range
+        startValue=80 endValue=120 brush="green">
+    </igx-linear-graph-range>
+</igx-bullet-graph>
+```
+
+**目盛** - 目盛は、ブレット グラフを読み取りやすくするために目盛の間隔でスケールを分割して見せる役割を果たします。
 - 主目盛 - 主目盛は、スケールの主要な区切りとして使用されます。表示間隔、範囲、およびスタイルは、対応するプロパティを設定し制御できます。
 - 補助目盛 - 補助目盛は主目盛を補助し、スケールの数値を読み取りやすくするために追加して使用します。主目盛と同じ方法でカスタマイズできます。
 
-**スケール ラベル** (7) - スケールのメジャーを示します。
+```html
+<igx-bullet-graph
+    height="80px"
+    width="400px"
+    minimumValue = 0
+    maximumValue = 120
+    valueBrush = "#4286f4"
+    value = 70
+    interval = 5
+    minorTickEndExtent = 0.10
+    minorTickStartExtent = 0.20
+    tickStartExtent = 0.25
+    tickEndExtent = 0.05
+    tickStrokeThickness = 2>
+</igx-bullet-graph>
+```
 
-**境界線** (8) - コンポーネントのディメンションを視覚的に区切る線です。
+**スケール ラベル** - スケールのメジャーを示します。
 
-**背景** (9) – 視覚要素が配置された背景のパターンおよび色を設定できます。
+```html
+<igx-bullet-graph
+    height="80px"
+    width="400px"
+    minimumValue = 0
+    maximumValue = 120
+    valueBrush = "#4286f4"
+    value = 70
+    targetValue = 90
+    labelInterval = 10>
+</igx-bullet-graph>
+```
+
+**背景** – 視覚要素が配置された背景のパターンおよび色を設定できます。
+
+```html
+<igx-bullet-graph
+    height="80px"
+    width="400px"
+    minimumValue = 0
+    maximumValue = 120
+    value = 70
+    targetValue = 90
+    backingBrush = "black"
+    backingOutline = "black">
+</igx-bullet-graph>
+```

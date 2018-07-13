@@ -10,7 +10,7 @@ Ignite UI for Angular の Linear Gauge コンポーネントは、値とスケ�
 
 ### デモ
 
-<div class="sample-container" style="height: 550px">
+<div class="sample-container" style="height: 125px">
     <iframe id="linear-gauge-sample-iframe" src='{environment:demosBaseUrl}/linear-gauge-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -69,53 +69,93 @@ export class AppModule {}
 
 <div class="divider--half"></div>
 
-## 論理領域
-
-リニア ゲージ コンポーネントの表示領域は、論理的に予約領域とグラフ領域に区別されます。
-
-![](../images/Linear_Gauge_1.png)
- 
-各領域はコンポーネントの一部の視覚要素に関連した異なる目的があります。
-
-**予約領域** (1)
-
-この領域は以下のように拡張します。
-
-* スケール全域 -
-    * 水平方向: 予約領域がコンポーネントの下端から開始され、ラベルのフォントのサイズなどの書式設定に従い、番号ラベルと同じ高さまで上に広がります。
-
-    * 垂直方向: 予約領域がコンポーネントの左端から開始され、スケール測定番号の大きさおよびラベルのフォントのサイズなどの書式設定に従い、番号ラベルと同じ幅まで右に広がります。
-
-予約領域は水平方向または垂直方向でスケールのラベルに表示するスペースを提供します。予約領域は方向に基づいて自動的にサイズ変更し、方向によってラベルを表示するスペース要件が変更されます。
-
-**グラフ領域** (2)  
-
-リニア ゲージの針、目盛、範囲、オプションで番号ラベルを表示する領域です。ラベルを除く視覚要素の範囲関連のプロパティはすべてその端に対して測定されます。
-
-グラフ領域のスプレッド:
-
-**スケールに沿った方向** - スケールの開始位置および終了位置は、両方ともグラフ領域の始点側の端 (水平方向の左端または垂直方向の下端) に対して測定されます。
-
-**スケール全域** - グラフ領域は、予約領域の端 (水平方向でグラフ領域の下端または垂直方向でグラフ領域の左端) から開始されます。予約領域の境界線で接しているグラフ領域の端は、スケールの一部の視覚要素の範囲関連プロパティに対する、スケール全域に視覚要素を配置するための参照点としての役割を果たします。
-
 ## 構成可能な視覚要素
-リニア ゲージ コンポーネントは、以下の視覚要素が特徴です(下の図を参照)。
- 
-![](../images/Linear_Gauge_2.png)
 
-**針** (3) - コンポーネントにより表示される主要なメジャーで、バーとして可視化されます。
+**針** - コンポーネントにより表示される主要なメジャーで、バーとして可視化されます。
 
-**比較範囲** (4) - 範囲は、スケール上で指定した値の領域を強調表示する視覚的な要素です。パフォーマンス バー メジャーの質的状態を視覚で伝えると同時に、その状態をレベルとして示すことにあります。
+```html
+ <igx-linear-gauge
+    height="80px"
+    width="400px"
+    minimumValue = 0
+    maximumValue = 100
+    value = 50
+    needleShape = "Needle"
+    needleBrush = "red">
+</igx-linear-gauge>
+```
 
-**目盛** (5) - 目盛は、リニア ゲージを読み取りやすくするために目盛の間隔でスケールを分割して見せる役割を果たします。
+**比較範囲** - 範囲は、スケール上で指定した値の領域を強調表示する視覚的な要素です。パフォーマンス バー メジャーの質的状態を視覚で伝えると同時に、その状態をレベルとして示すことにあります。
+
+```html
+<igx-linear-gauge
+    height="80px"
+    width="400px"
+    minimumValue = 0
+    maximumValue = 100
+    value = 50 >
+    <igx-linear-graph-range
+        startValue=0 endValue=30
+        brush="red">
+    </igx-linear-graph-range>
+    <igx-linear-graph-range
+        startValue=30 endValue=70
+        brush="yellow">
+    </igx-linear-graph-range>
+    <igx-linear-graph-range
+        startValue=70 endValue=100
+        brush="green">
+    </igx-linear-graph-range>
+</igx-linear-gauge>
+```
+
+**目盛** - 目盛は、リニア ゲージを読み取りやすくするために目盛の間隔でスケールを分割して見せる役割を果たします。
 
 主目盛 - 主目盛は、スケールの主要な区切りとして使用されます。表示間隔、範囲、スタイルは、対応するプロパティを設定し制御できます。
 
 補助目盛 - 補助目盛は主目盛を補助し、スケールの数値を読み取りやすくするために追加して使用します。主目盛と同じ方法でカスタマイズできます。
 
-**スケール ラベル** (6) - スケールのメジャーを示します。
+```html
+<igx-linear-gauge
+    height="80px"
+    width="400px"
+    minimumValue = 0
+    maximumValue = 100
+    value = 50
+    minorTickEndExtent = 0.10
+    minorTickStartExtent = 0.20
+    tickStartExtent = 0.25
+    tickEndExtent = 0.05
+    tickStrokeThickness = 2>
+</igx-linear-gauge>
+```
 
-**境界線** (7) - コンポーネントのディメンションを視覚的に区切る線です。
+**ラベル** - スケールのメジャーを示します。
 
-**背景** (8) – 視覚要素が配置された背景のパターンおよび色を設定できます。
+```html
+<igx-linear-gauge
+    height="80px"
+    width="400px"
+    minimumValue = 0
+    maximumValue = 100
+    value = 50
+    interval = 10
+    labelInterval = 10>
+</igx-linear-gauge>
+```
+
+**背景** – 視覚要素が配置された背景のパターンおよび色を設定できます。
+
+```html
+<igx-linear-gauge
+    height="80px"
+    width="400px"
+    minimumValue = 0
+    maximumValue = 100
+    value = 50
+    backingBrush = "#ffffff"
+    backingOutline = "#d1d1d1"
+    backingStrokeThickness = 0>
+</igx-linear-gauge>
+```
 

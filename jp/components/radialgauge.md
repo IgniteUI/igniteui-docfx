@@ -10,7 +10,7 @@ Ignite UI for Angular の Radial Gauge コンポーネントは、針、目盛�
 
 ### デモ
 
-<div class="sample-container" style="height: 550px">
+<div class="sample-container" style="height: 450px">
     <iframe id="radial-gauge-sample-iframe" src='{environment:demosBaseUrl}/radial-gauge-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -57,9 +57,12 @@ export class AppModule {}
 以下のコードは針およびスケールで 3 つの比較範囲を含むラジアル ゲージを作成する方法を紹介します。
 
 ```html
- <igx-radial-gauge value = "50"
-                   scaleStartExtent = "0"
-                   scaleEndExtent = "100">
+<igx-radial-gauge height="400px"
+    width="400px"
+    value=25
+    interval=5
+    minimumValue=0
+    maximumValue=50>
     <igx-radial-graph-range startValue="0"
                             endValue="30"
                             brush="red"/>
@@ -76,29 +79,118 @@ export class AppModule {}
 
 ## 構成可能な要素
 
-ラジアル ゲージ コンポーネントでは、以下の視覚要素が特徴です。(下図を参照)。
+**背景**
 
-![](../images/Radial_Gauge_2.png)
-
-**背景** (1, 2)
 円で表示されるラジアル ゲージ コントロールの背景セクションには、ゲージに追加される針や目盛など、さまざまな要素があります。
 
 この領域は、`backingShape` プロパティの設定で円形またフィットのいずれかにカスタマイズできます。円形の場合は 360 度の円形のゲージが作成されますが、一方フィット図形の場合はスケールの範囲を円弧として塗りつぶされた円のセグメントが作成されます。
 
-**ラベル** (3)
+```html
+<igx-radial-gauge   
+    height="400px"
+    width="400px"
+    value=25
+    minimumValue=0
+    maximumValue=50
+    backingShape="fitted">
+</igx-radial-gauge>
+```
+
+**ラベル**
+
 ゲージ ラベルはスケールで指定された間隔で数値を表示する視覚要素です。
 
-**目盛** (4, 10)
+```html
+<igx-radial-gauge   
+    height="400px"
+    width="400px"
+    value=25
+    minimumValue=0
+    maximumValue=50
+    labelInterval=5>
+</igx-radial-gauge>
+```
+
+**目盛**
+
 ラジアル ゲージの目盛は、指定された間隔の線でゲージに表示される視覚要素です。
 目盛には、主目盛および副目盛の 2 種類があります。MinorTickCount プロパティを使用して、隣接する 2 つの主目盛間の副目盛の数を指定します。
 
-**範囲** (5)
+```html
+<igx-radial-gauge   
+    height="400px"
+    width="400px"
+    value=25
+    minimumValue=0
+    maximumValue=50
+    minorTickCount=1
+    minorTickEndExtent=.65
+    minorTickStartExtent=.625
+    minorTickStrokeThickness=1
+    tickStartExtent=.6
+    tickEndExtent=.65
+    tickStrokeThickness=1.75>
+</igx-radial-gauge>
+```
+
+**範囲**
+
 範囲は、ゲージ スケール上の指定された最小値と最大値によってバインドされた、連続した値のセットを強調表示します。複数のブラシを指定し、開始と終了の値に沿って複数の範囲をスケールに追加できます。
 
-**スケール** (6)
+```html
+<igx-radial-gauge 
+   height="400px"
+   width="400px"
+   value=25
+   interval=5
+   minimumValue=0
+   maximumValue=50>
+   <igx-radial-gauge-range
+       startValue=5  endValue=15 brush="red">
+   </igx-radial-gauge-range>
+   <igx-radial-gauge-range
+       startValue=15  endValue=35 brush="yellow">
+   </igx-radial-gauge-range>
+   <igx-radial-gauge-range
+       startValue=35  endValue=45 brush="green">
+   </igx-radial-gauge-range>
+</igx-radial-gauge>
+```
+
+**スケール**
+
 スケールはゲージの値を視覚的に示すために使用され、ラジアル ゲージで値の範囲を定義します。目盛と範囲はすべて要素で、スケールに追加できます。
 
-**針** (7, 8, 9)
+```html
+<igx-radial-gauge   
+    height="400px"
+    width="400px"
+    value=25
+    minimumValue=0
+    maximumValue=50
+    scaleStartAngle=120
+    scaleEndAngle=60
+    scaleBrush="#d6d6d6">
+</igx-radial-gauge>
+```
+
+**針**
+
 ゲージの針は、ゲージの設定値を表すために使用される視覚要素で、針キャップのオーバーレイまたはアンダーレイなどのゲージの針のピボット ポイントで構成されます。
 
 サポートされている針の図形とキャップは、`needleShape` と `needlePivotShape` プロパティで設定します。
+
+```html
+<igx-radial-gauge 
+    height="400px"
+    width="400px"
+    value=25
+    minimumValue=0
+    maximumValue=50
+    needleShape="Triangle"
+    needlePivotShape="CircleOverlay"
+    needleBrush="#79797a"
+    needlePivotBrush="#79797a"
+    isNeedleDraggingEnabled=true>
+</igx-radial-gauge>
+```
