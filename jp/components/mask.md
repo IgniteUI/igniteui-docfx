@@ -10,7 +10,7 @@ _language: ja
 **テキスト入力フィールド**に `igxMask` ディレクティブを適用し、構成可能なマスク ルールに基づいてユーザー入力を制御して表示される値を書式設定できます。入力オプションも構成できます。
 
 ### Mask デモ
-<div class="sample-container loading" style="height: 280px">
+<div class="sample-container loading" style="height: 300px">
     <iframe id="mask-sample-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/mask-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
