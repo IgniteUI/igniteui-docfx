@@ -108,7 +108,7 @@ public selectedColor: string = this.colors[3].hex;
 <div class="divider"></div>
 
 ### Radio Group デモ
-<div class="sample-container" style="height: 300px">
+<div class="sample-container" style="height: 320px">
     <iframe id="radio-group-sample-iframe" src='{environment:demosBaseUrl}/radio-group-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
