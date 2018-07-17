@@ -1,48 +1,52 @@
+﻿---
+title:  Grid の表示密度 - ネイティブ Angular|Ignite UI for Angular
+_description: Ignite UI for Angular Data Grid コントロールは、列のデータ型に基づいて編集可能な列のデフォルト セル テンプレートを提供します。
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, ネイティブ Angular コンポーネント, Angular Grid, Angular Data Grid コンポーネント, Angular Data Grid コントロール, Angular Grid コンポーネント, Angular Grid コントロール, Angular 高パフォーマンス Grid, Grid 表示密度
+_language: ja
 ---
-title:  Grid Display Density - Native Angular | Ignite UI for Angular
-_description: The Ignite UI for Angular Data Grid control provides default cell templates for editable columns which are based on the data type of the column.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Component, Angular Grid, Angular Data Grid component, Angular Data Grid control, Angular Grid component, Angular Grid control, Angular High Performance Grid, Grid Display Density
----
 
-### Grid Display Density
+### Grid の表示密度
 
-**Igx-Grid** design is based on [Material Design Guidelines](https://material.io/guidelines/material-design/introduction.html). We currently provide an option to choose between predefined set of display [density](https://material.io/design/layout/density.html#usage) options. By selecting the right density for your use case you can significantly improve the user experience when interacting with large amounts of content.
+**Igx-Grid** デザインは[マテリアル デザイン ガイドライン](https://material.io/guidelines/material-design/introduction.html)に基づきます。表示[密度](https://material.io/design/layout/density.html#usage)オプションの定義済みセットから選択するオプションを提供します。正しい密度を選択すると、コンテンツの大量との相互作用でユーザー エクスペリエンスを向上できます。
 
-#### Demo
+#### デモ
 
 <div class="sample-container loading" style="height:620px">
     <iframe id="grid-displayDensity-sample-iframe" src='{environment:demosBaseUrl}/grid-displayDensity' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="grid-displayDensity-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="grid-displayDensity-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
 </div>
 
 <div class="divider--half"></div>
 
-### Usage
-As you can see in the demo above, the **Igx-Grid** provides three density options: **compact**, **cosy** and **comfortable**. The code snippet below shows how to set `displayDensity`:
+### 使用方法
+
+以上のデモで表示されるように、**Igx-Grid** は 3 つの密度オプションを提供します: **compact**、**cosy**、および **comfortable**。以下のコード スニペットは、`displayDensity` を設定する方法を示します。
 
 ```html
 <igx-grid #grid [data]="data" [displayDensity]="'cosy'" >
 </igx-grid>
 ```
-or
+
+または
+
 ```typescript
 ...
 this.grid.displayDensity = "cosy";
 ...
 ```
 
-And now let's see in details how each option reflect on the grid component. When you switch between different density options the height of each grid element and the correcponding paddings will be changed.
- - **comfortable** - this is the default grid display density with the lowest intence and row height equal to `50px`. Left and Right paddings are `24px`;
- - **cosy** - this is the middle intence density with `40px` row height. Left and Right paddings are `16px`;
- - **compact** - this is the density with heighest intence and `32px` row height. left and Right paddings are `12px`;
+各オプションがグリッドに影響する方法を紹介します。表示密度オプションの間に切り替えるとき、各グリッド要素の高さおよび相対するパッディングが変更されます。
+ - **comfortable** - これはデフォルトのグリッド表示密度です。密度が最も低く、行の高さが `50px` です。Left および Right パッディングは `24px` です。
+ - **cosy** - 中密度で、行の高さが `40px` です。Left および Right パッディングは `16px` です。
+ - **compact** - 密度が最も高く、行の高さが `32px` で、Left および Right パッディングは `12px` です。
 
 > [!NOTE]
-> Please keep in mind that currently you **cannot** override any of the sizes.
+> 注: 現在サイズはオーバーライド**できません**。
 
-Let's now continue with our sample and see in action how the `displayDensity` is applied. Let's first add a button which will help us to switch between each density:
+引き続きサンプルを使用して `displayDensity` の適用方法を紹介します。各密度の間に切り替えるボタンを追加します。
 
 ```html
 <div class="density-chooser">
@@ -76,7 +80,7 @@ public ngOnInit() {
 }
 ```
 
-Now we can add the markup.
+マークアップを追加します。
 
 
 ```html
@@ -134,7 +138,7 @@ Now we can add the markup.
 </igx-grid>
 ```
 
-Finally, let's provide the necessary logic in order to actually apply the density:
+最後に、密度を適用するロジックを実装します。
 
 ```typescript
 @ViewChild("grid", { read: IgxGridComponent })
@@ -148,16 +152,16 @@ public selectDensity(event) {
 
 <div class="divider--half"></div>
 
-### Additional Resources
+### その他のリソース
 
-* [Grid overview](grid.md)
-* [Virtualization and Performance](grid_virtualization.md)
-* [Editing](grid_editing.md)
-* [Paging](grid_paging.md)
-* [Filtering](grid_filtering.md)
-* [Sorting](grid_sorting.md)
-* [Summaries](grid_summaries.md)
-* [Column Pinning](grid_column_pinning.md)
-* [Column Resizing](grid_column_resizing.md)
-* [Selection](grid_selection.md)
-* [Searching](grid_search.md)
+* [Grid の概要](grid.md)
+* [仮想化とパフォーマンス](grid_virtualization.md)
+* [編集](grid_editing.md)
+* [ページング](grid_paging.md)
+* [フィルタリング](grid_filtering.md)
+* [並べ替え](grid_sorting.md)
+* [集計](grid_summaries.md)
+* [列のピン固定](grid_column_pinning.md)
+* [列のサイズ変更](grid_column_resizing.md)
+* [選択](grid_selection.md)
+* [検索](grid_search.md)
