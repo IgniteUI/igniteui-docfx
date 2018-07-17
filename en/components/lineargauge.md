@@ -12,10 +12,10 @@ In Ignite UI for Angular, use the Linear Gauge component to see a simple display
 This gauge supports only one scale, one set of tick marks and one set of labels. However, all the changes made to the gauge have animation enhancements. This animation is easily customizable by setting the `transitionDuration` property. You can achieve numerous needle shapes by fine tuning its shape parameters. The following sample demonstrates how setting multiple properties on the same gauge can transform it to completely different gauge.
 
 <div class="sample-container" style="height: 125px">
-    <iframe id="linear-gauge-animation-iframe" src='{environment:demosBaseUrl}/linear-gauge-animation' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="linear-gauge-sample-iframe" src='{environment:demosBaseUrl}/linear-gauge-animation' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="linear-gauge-animation-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="linear-gauge-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
     </button>
 </div>
 
@@ -98,14 +98,14 @@ This is the primary measure displayed by the component and is visualized as a ba
 </igx-linear-gauge>
 ```
 <div class="sample-container" style="height: 125px">
-    <iframe id="linear-gauge-needle-iframe" src='{environment:demosBaseUrl}/linear-gauge-needle' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="linear-gauge-sample-iframe" src='{environment:demosBaseUrl}/linear-gauge-needle' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="linear-gauge-needle-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="linear-gauge-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
     </button>
 </div>
 
-### Comparative Ranges
+### Ranges
 The ranges are visual elements that highlight a specified range of values on a scale. Their purpose is to visually communicate the qualitative state of the performance bar measure, illustrating at the same times the degree to which it resides within that state.
 
 ```html
@@ -129,10 +129,10 @@ The ranges are visual elements that highlight a specified range of values on a s
 </igx-linear-gauge>
 ```
 <div class="sample-container" style="height: 125px">
-    <iframe id="linear-gauge-ranges-iframe" src='{environment:demosBaseUrl}/linear-gauge-ranges' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="linear-gauge-sample-iframe" src='{environment:demosBaseUrl}/linear-gauge-ranges' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="linear-gauge-ranges-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="linear-gauge-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
     </button>
 </div>
 
@@ -164,10 +164,10 @@ Minor tick marks – The minor tick marks represent helper tick marks, which mig
 </igx-linear-gauge>
 ```
 <div class="sample-container" style="height: 125px">
-    <iframe id="linear-gauge-tickmarks-iframe" src='{environment:demosBaseUrl}/linear-gauge-tickmarks' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="linear-gauge-sample-iframe" src='{environment:demosBaseUrl}/linear-gauge-tickmarks' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="linear-gauge-tickmarks-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="linear-gauge-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
     </button>
 </div>
 
@@ -189,10 +189,10 @@ The labels indicate the measures on the scale.
 </igx-linear-gauge>
 ```
 <div class="sample-container" style="height: 125px">
-    <iframe id="linear-gauge-labels-iframe" src='{environment:demosBaseUrl}/linear-gauge-labels' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="linear-gauge-sample-iframe" src='{environment:demosBaseUrl}/linear-gauge-labels' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="linear-gauge-labels-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="linear-gauge-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
     </button>
 </div>
 
@@ -213,10 +213,10 @@ The backing element represents background and border of the bullet graph control
 </igx-linear-gauge>
 ```
 <div class="sample-container" style="height: 125px">
-    <iframe id="linear-gauge-backing-iframe" src='{environment:demosBaseUrl}/linear-gauge-backing' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="linear-gauge-sample-iframe" src='{environment:demosBaseUrl}/linear-gauge-backing' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="linear-gauge-backing-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="linear-gauge-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
     </button>
 </div>
 
@@ -240,9 +240,9 @@ The scale is visual element that highlights full range of values in the gauge. Y
 </igx-linear-gauge>
 ```
 <div class="sample-container" style="height: 125px">
-    <iframe id="linear-gauge-scale-iframe" src='{environment:demosBaseUrl}/linear-gauge-scale' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="linear-gauge-sample-iframe" src='{environment:demosBaseUrl}/linear-gauge-scale' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="linear-gauge-scale-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="linear-gauge-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
     </button>
 </div>
