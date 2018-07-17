@@ -55,6 +55,23 @@ Setting icon with content projection.
 <igx-icon color="red">bluetooth</igx-icon>
 ```
 
+You can set the icon's size through CSS. Create a custom CSS class, for example you can name it *custom-size*. The icon's size is changed by the **font-size** property, additionally to center it you will also have to set the **width** and the **height** with the same value.
+```html
+<igx-icon name="home" class="custom-size" isActive="true"></igx-icon>
+```
+```css
+<!-- icon-sample2.component.scss -->
+
+.custom-size{
+    font-size: 56px;
+    width: 56px;
+    height: 56px;
+}
+```
+<div class="sample-container" style="height: 80px; width: 360px">
+    <iframe id="icon-sample2-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/icon-sample2"  onload="onSampleIframeContentLoaded(this);">
+</div>
+
 <div class="divider--half"></div>
 
 ### API Summary
