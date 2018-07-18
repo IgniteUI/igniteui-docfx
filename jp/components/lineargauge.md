@@ -10,8 +10,10 @@ Ignite UI for Angular の Linear Gauge コンポーネントは、値とスケ�
 
 ### デモ
 
+このゲージは、スケール、針、目盛 (1 組)、ラベル (1 組) をサポートします。またゲージのすべての変更でアニメーションの機能が強化されています。アニメーションは、`transitionDuration` プロパティの設定で簡単にカスタマイズできます。針の図形パラメータを微調整して、多数の形状の針を作ることができます。以下のサンプルは、同じゲージでいくつかのプロパティを設定して全く異なるゲージにする方法を示します。
+
 <div class="sample-container" style="height: 125px">
-    <iframe id="linear-gauge-sample-iframe" src='{environment:demosBaseUrl}/linear-gauge-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="linear-gauge-sample-iframe" src='{environment:demosBaseUrl}/linear-gauge-animation' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="linear-gauge-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
@@ -69,93 +71,179 @@ export class AppModule {}
 
 <div class="divider--half"></div>
 
-## 構成可能な視覚要素
+## 構成可能な要素
 
-**針** - コンポーネントにより表示される主要なメジャーで、バーとして可視化されます。
+### 針
+これは、コンポーネントで表示されるプライマリ メジャーでバーで可視化されます。あるいは以下で示す図形のほとんどすべてをカスタマイズすることもできます。
 
 ```html
  <igx-linear-gauge
-    height="80px"
-    width="400px"
-    minimumValue = 0
-    maximumValue = 100
-    value = 50
-    needleShape = "Needle"
-    needleBrush = "red">
+    height="80px" width="400px"
+    minimumValue=0 value=50
+    maximumValue=100 interval=10
+
+    isNeedleDraggingEnabled=true
+    needleShape="Custom"
+    needleBrush="DodgerBlue"
+    needleOutline="DodgerBlue"
+    needleStrokeThickness=1
+    needleBreadth=15
+    needleInnerExtent=0.35
+    needleOuterExtent=0.65
+    needleOuterPointExtent=0.8
+    needleInnerPointExtent=0.325
+    needleInnerPointWidth=0
+    needleOuterPointWidth=0.3
+    needleInnerBaseWidth=0
+    needleOuterBaseWidth=0.07>
 </igx-linear-gauge>
 ```
+<div class="sample-container" style="height: 125px">
+    <iframe id="linear-gauge-sample-iframe" src='{environment:demosBaseUrl}/linear-gauge-needle' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="linear-gauge-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
+    </button>
+</div>
 
-**比較範囲** - 範囲は、スケール上で指定した値の領域を強調表示する視覚的な要素です。パフォーマンス バー メジャーの質的状態を視覚で伝えると同時に、その状態をレベルとして示すことにあります。
+### 範囲
+範囲はスケールで指定した値の範囲を強調表示する視覚的な要素です。その目的は、パフォーマンス バー メジャーの質的状態を視覚で伝えると同時に、その状態をレベルとして示すことにあります。
 
 ```html
 <igx-linear-gauge
-    height="80px"
-    width="400px"
-    minimumValue = 0
-    maximumValue = 100
-    value = 50 >
+    height="80px" width="400px"
+    minimumValue=0 value=50
+    maximumValue=100 interval=10
+
+    rangeBrushes="#a4bd29, #F86232"
+    rangeOutlines="#a4bd29, #F86232" >
     <igx-linear-graph-range
-        startValue=0 endValue=30
-        brush="red">
+        startValue=0 endValue=50
+        innerStartExtent=0.075 innerEndExtent=0.075
+        outerStartExtent=0.25 outerEndExtent=0.4>
     </igx-linear-graph-range>
     <igx-linear-graph-range
-        startValue=30 endValue=70
-        brush="yellow">
-    </igx-linear-graph-range>
-    <igx-linear-graph-range
-        startValue=70 endValue=100
-        brush="green">
+        startValue=50 endValue=100
+        innerStartExtent=0.075 innerEndExtent=0.075
+        outerStartExtent=0.4 outerEndExtent=0.55>
     </igx-linear-graph-range>
 </igx-linear-gauge>
 ```
+<div class="sample-container" style="height: 125px">
+    <iframe id="linear-gauge-sample-iframe" src='{environment:demosBaseUrl}/linear-gauge-ranges' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="linear-gauge-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
+    </button>
+</div>
 
-**目盛** - 目盛は、リニア ゲージを読み取りやすくするために目盛の間隔でスケールを分割して見せる役割を果たします。
+### 目盛
+目盛は、リニア ゲージを読み取りやすくするために、目盛の間隔でスケールを分割して見せる役割を果たします。
 
-主目盛 - 主目盛は、スケールの主要な区切りとして使用されます。表示間隔、範囲、スタイルは、対応するプロパティを設定し制御できます。
+主目盛 - 主目盛は、スケールの主要な区切りとして使用されます。表示間隔、範囲、およびスタイルは、対応するプロパティを設定し制御できます。
 
 補助目盛 - 補助目盛は主目盛を補助し、スケールの数値を読み取りやすくするために追加して使用します。主目盛と同じ方法でカスタマイズできます。
 
 ```html
 <igx-linear-gauge
-    height="80px"
-    width="400px"
-    minimumValue = 0
-    maximumValue = 100
-    value = 50
-    minorTickEndExtent = 0.10
-    minorTickStartExtent = 0.20
-    tickStartExtent = 0.25
-    tickEndExtent = 0.05
-    tickStrokeThickness = 2>
+    height="80px" width="400px"
+    minimumValue=0 value=50
+    maximumValue=100 interval=10
+
+    tickBrush="DodgerBlue"
+    ticksPreTerminal=0
+    ticksPostInitial=0
+    tickStrokeThickness=2
+    tickStartExtent=0.25
+    tickEndExtent=0.05
+
+    minorTickCount=4
+    minorTickBrush="DarkViolet"
+    minorTickEndExtent=0.05
+    minorTickStartExtent=0.15
+    minorTickStrokeThickness=1>
 </igx-linear-gauge>
 ```
+<div class="sample-container" style="height: 125px">
+    <iframe id="linear-gauge-sample-iframe" src='{environment:demosBaseUrl}/linear-gauge-tickmarks' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="linear-gauge-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
+    </button>
+</div>
 
-**ラベル** - スケールのメジャーを示します。
+### ラベル
+ラベルはスケールのメジャーを示します。
 
 ```html
 <igx-linear-gauge
-    height="80px"
-    width="400px"
-    minimumValue = 0
-    maximumValue = 100
-    value = 50
-    interval = 10
-    labelInterval = 10>
+    height="80px" width="400px"
+    minimumValue=0 value=50
+    maximumValue=100 interval=10
+
+    labelInterval=10
+    labelExtent=0.025
+    labelsPreTerminal=0
+    labelsPostInitial=0
+    fontBrush="DodgerBlue"
+    font="11px Verdana">
 </igx-linear-gauge>
 ```
+<div class="sample-container" style="height: 125px">
+    <iframe id="linear-gauge-sample-iframe" src='{environment:demosBaseUrl}/linear-gauge-labels' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="linear-gauge-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
+    </button>
+</div>
 
-**背景** – 視覚要素が配置された背景のパターンおよび色を設定できます。
+### バッキング
+バッキング要素はブレット グラフ コントロールの背景と境界線を表します。常に最初に描画される要素でラベルやメモリなどの残りの要素はその上のオーバーレイです。
 
 ```html
 <igx-linear-gauge
-    height="80px"
-    width="400px"
-    minimumValue = 0
-    maximumValue = 100
-    value = 50
-    backingBrush = "#ffffff"
-    backingOutline = "#d1d1d1"
-    backingStrokeThickness = 0>
+    height="80px" width="400px"
+    minimumValue=0 value=50
+    maximumValue=100 interval=10
+
+    backingBrush="#bddcfc"
+    backingOutline="DodgerBlue"
+    backingStrokeThickness=4
+    backingInnerExtent=0
+    backingOuterExtent=1>
 </igx-linear-gauge>
 ```
+<div class="sample-container" style="height: 125px">
+    <iframe id="linear-gauge-sample-iframe" src='{environment:demosBaseUrl}/linear-gauge-backing' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="linear-gauge-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
+    </button>
+</div>
 
+### スケール
+スケールはゲージで値の全範囲を強調表示する視覚的な要素です。外観やスケールの図形のカスタマイズ、更にスケールの反転 (`isScaleInverted` プロパティを使用) を設定して、すべてのラベルを左から右ではなく、右から左へ描画することもできます。
+
+```html
+<igx-linear-gauge
+    height="80px" width="400px"
+    minimumValue=0 value=50
+    maximumValue=100 interval=10
+
+    isScaleInverted=false
+    scaleBrush="DodgerBlue"
+    scaleOutline="DarkViolet"
+    scaleStrokeThickness=1
+    scaleInnerExtent=0.05
+    scaleOuterExtent=0.65
+    scaleStartExtent=0.05
+    scaleEndExtent=0.95>
+</igx-linear-gauge>
+```
+<div class="sample-container" style="height: 125px">
+    <iframe id="linear-gauge-sample-iframe" src='{environment:demosBaseUrl}/linear-gauge-scale' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="linear-gauge-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
+    </button>
+</div>

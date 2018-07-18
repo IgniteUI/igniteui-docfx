@@ -10,8 +10,10 @@ Ignite UI for Angular の Bullet Graph コンポーネントは、目盛り上�
 
 ### デモ
 
+This gauge supports only one scale, one set of tick marks and one set of labels. However, all the changes made to the bullet graph control have animation enhancements. This animation is easily customizable by setting the `transitionDuration` property. You can achieve numerous needle shapes by fine tuning its shape parameters. The following sample demonstrates how setting multiple properties on the same gauge can transform it to completely different gauge.
+
 <div class="sample-container" style="height: 125px">
-    <iframe id="bullet-graph-sample-iframe" src='{environment:demosBaseUrl}/bullet-graph-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="bullet-graph-sample-iframe" src='{environment:demosBaseUrl}/bullet-graph-animation' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="bullet-graph-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
@@ -51,7 +53,6 @@ export class AppModule {}
 
 以下のコードは、ブレット グラフ コンポーネントを作成し、パフォ―マンス バーと比較目盛マーカー、および 3 つの比較範囲をスケールに構成します。
 
-
 ```html
  <igx-bullet-graph height="100"
                    width="300"
@@ -73,106 +74,185 @@ export class AppModule {}
 
 <div class="divider--half"></div>
 
-### 構成可能な視覚要素の概要
+### 構成可能な要素
 
-**パフォーマンス バー** - コンポーネントにより表示される主要なメジャーで、バーとして可視化されます。
+### 比較メジャー
+The bullet graph can show two measures: performance value and target value.
 
-```html
-<igx-bullet-graph
-    height="80px"
-    width="400px"
-    minimumValue = 0
-    maximumValue = 120
-    valueBrush = "black"
-    value = 70>
-</igx-bullet-graph>
-```
-
-**比較マーカー** – パフォーマンス バー メジャーの比較評価。パフォーマンス バーの向きに対して直角に交わるマーカーとして表示されます。
+ブレットグラフは、パフォーマンス値とターゲット値の 2 つのメジャーを表示できます。パフォーマンス値は、コンポーネントで表示されるプライマリ メジャーでグラフ全体の長さに沿って拡張するバーとして表示されます。ターゲット値は、パフォーマンス値が比較の対象とするメジャーです。ターゲット値は、パフォーマンス バーの向きに対して直角に交わる小さなブロックとして表示されます。
 
 ```html
 <igx-bullet-graph
-    height="80px"
-    width="400px"
-    minimumValue = 0
-    maximumValue = 120
-    targetValueBrush = "#4286f4"
-    targetValue = 90
-    targetValueBreadth = 10>
+    value=50
+    valueBrush="DodgerBlue"
+    valueStrokeThickness=1
+    valueInnerExtent=0.5
+    valueOuterExtent=0.65
+
+    targetValue=80
+    targetValueBreadth=10
+    targetValueBrush="LimeGreen"
+    targetValueOutline="LimeGreen"
+    targetValueStrokeThickness=1
+    targetValueInnerExtent=0.3
+    targetValueOuterExtent=0.85
+
+    height="80px" width="400px"
+    minimumValue=0 value=50
+    maximumValue=100>
 </igx-bullet-graph>
 ```
 
-**比較範囲** - 範囲は、スケール上で指定した値の領域を強調表示する視覚的な要素です。その目的は、パフォーマンス バー メジャーの質的状態を視覚で伝えると同時に、その状態をレベルとして示すことにあります。
+<div class="sample-container" style="height: 125px">
+    <iframe id="bullet-graph-sample-iframe" src='{environment:demosBaseUrl}/bullet-graph-measures' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="bullet-graph-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
+    </button>
+</div>
+
+### 比較範囲
+範囲はスケールで指定した値の範囲を強調表示する視覚的な要素です。その目的は、パフォーマンス バー メジャーの質的状態を視覚で伝えると同時に、その状態をレベルとして示すことにあります。
 
 ```html
 <igx-bullet-graph
-    height="80px"
-    width="400px"
-    minimumValue = 0
-    maximumValue = 120
-    valueBrush = "black"
-    value = 70
-    targetValueBrush = "black"
-    targetValue = 90>
+    height="80px" width="400px"
+    minimumValue=0 value=80 interval=10
+    maximumValue=100 targetValue=90
+
+    rangeBrushes ="#C62828, #F96232, #FF9800"
+    rangeOutlines="#C62828, #F96232, #FF9800">
     <igx-linear-graph-range
-        startValue=20 endValue=40 brush="red">
+        startValue=0 endValue=40
+        innerStartExtent=0.075 innerEndExtent=0.075
+        outerStartExtent=0.95 outerEndExtent=0.95>
     </igx-linear-graph-range>
     <igx-linear-graph-range
-        startValue=40 endValue=80 brush="yellow">
+        startValue=40 endValue=70
+        innerStartExtent=0.075 innerEndExtent=0.075
+        outerStartExtent=0.95 outerEndExtent=0.95>
     </igx-linear-graph-range>
     <igx-linear-graph-range
-        startValue=80 endValue=120 brush="green">
+        startValue=70 endValue=100
+        innerStartExtent=0.075 innerEndExtent=0.075
+        outerStartExtent=0.95 outerEndExtent=0.95>
     </igx-linear-graph-range>
 </igx-bullet-graph>
 ```
 
-**目盛** - 目盛は、ブレット グラフを読み取りやすくするために目盛の間隔でスケールを分割して見せる役割を果たします。
+<div class="sample-container" style="height: 125px">
+    <iframe id="bullet-graph-sample-iframe" src='{environment:demosBaseUrl}/bullet-graph-ranges' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="bullet-graph-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
+    </button>
+</div>
+
+### 目盛
+目盛は、ブレット グラフを読み取りやすくするために、目盛の間隔でスケールを分割して見せる役割を果たします。
 - 主目盛 - 主目盛は、スケールの主要な区切りとして使用されます。表示間隔、範囲、およびスタイルは、対応するプロパティを設定し制御できます。
 - 補助目盛 - 補助目盛は主目盛を補助し、スケールの数値を読み取りやすくするために追加して使用します。主目盛と同じ方法でカスタマイズできます。
 
 ```html
 <igx-bullet-graph
-    height="80px"
-    width="400px"
-    minimumValue = 0
-    maximumValue = 120
-    valueBrush = "#4286f4"
-    value = 70
-    interval = 5
-    minorTickEndExtent = 0.10
-    minorTickStartExtent = 0.20
-    tickStartExtent = 0.25
-    tickEndExtent = 0.05
-    tickStrokeThickness = 2>
+    height="80px" width="400px"
+    minimumValue=0 value=70 interval=10
+    maximumValue=100 targetValue=90
+
+    tickBrush="DodgerBlue"
+    ticksPreTerminal=0
+    ticksPostInitial=0
+    tickStrokeThickness=2
+    tickStartExtent=0.2
+    tickEndExtent=0.075
+
+    minorTickCount=4
+    minorTickBrush="DarkViolet"
+    minorTickEndExtent=0.1
+    minorTickStartExtent=0.2
+    minorTickStrokeThickness=1>
 </igx-bullet-graph>
 ```
 
-**スケール ラベル** - スケールのメジャーを示します。
+<div class="sample-container" style="height: 125px">
+    <iframe id="bullet-graph-sample-iframe" src='{environment:demosBaseUrl}/bullet-graph-tickmarks' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="bullet-graph-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
+    </button>
+</div>
+
+### ラベル
+ラベルはスケールのメジャーを示します。
+```html
+<igx-bullet-graph
+    height="80px" width="400px"
+    minimumValue=0 value=70 interval=10
+    maximumValue=100 targetValue=90
+
+    labelInterval=10
+    labelExtent=0.025
+    labelsPreTerminal=0
+    labelsPostInitial=0
+    fontBrush="DodgerBlue"
+    font="11px Verdana">
+</igx-bullet-graph>
+```
+
+<div class="sample-container" style="height: 125px">
+    <iframe id="bullet-graph-sample-iframe" src='{environment:demosBaseUrl}/bullet-graph-labels' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="bullet-graph-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
+    </button>
+</div>
+
+### バッキング
+バッキング要素はブレット グラフ コントロールの背景と境界線を表します。常に最初に描画される要素でラベルやメモリなどの残りの要素はその上のオーバーレイです。
 
 ```html
 <igx-bullet-graph
-    height="80px"
-    width="400px"
-    minimumValue = 0
-    maximumValue = 120
-    valueBrush = "#4286f4"
-    value = 70
-    targetValue = 90
-    labelInterval = 10>
+    height="80px" width="400px"
+    minimumValue=0 value=70 interval=10
+    maximumValue=100 targetValue=90
+
+    backingBrush="#bddcfc"
+    backingOutline="DodgerBlue"
+    backingStrokeThickness=4
+    backingInnerExtent=0
+    backingOuterExtent=1>
 </igx-bullet-graph>
 ```
 
-**背景** – 視覚要素が配置された背景のパターンおよび色を設定できます。
+<div class="sample-container" style="height: 125px">
+    <iframe id="bullet-graph-sample-iframe" src='{environment:demosBaseUrl}/bullet-graph-background' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="bullet-graph-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
+    </button>
+</div>
+
+### スケール
+スケールはゲージで値の全範囲を強調表示する視覚的な要素です。外観やスケールの図形のカスタマイズ、更にスケールの反転 (`isScaleInverted` プロパティを使用) を設定して、すべてのラベルを左から右ではなく、右から左へ描画することもできます。
 
 ```html
 <igx-bullet-graph
-    height="80px"
-    width="400px"
-    minimumValue = 0
-    maximumValue = 120
-    value = 70
-    targetValue = 90
-    backingBrush = "black"
-    backingOutline = "black">
+    height="80px" width="400px"
+    minimumValue=0 value=70 interval=10
+    maximumValue=100 targetValue=90
+
+    isScaleInverted=false
+    scaleBackgroundBrush="DodgerBlue"
+    scaleBackgroundOutline="DarkViolet"
+    scaleBackgroundThickness=2
+    scaleStartExtent=0.05
+    scaleEndExtent=0.95>
 </igx-bullet-graph>
 ```
+<div class="sample-container" style="height: 125px">
+    <iframe id="bullet-graph-sample-iframe" src='{environment:demosBaseUrl}/bullet-graph-scale' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="bullet-graph-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
+    </button>
+</div>
