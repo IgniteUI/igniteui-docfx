@@ -23,7 +23,7 @@ _language: ja
 
 ### 使用方法
 
-以上のデモで表示されるように、**Igx-Grid** は 3 つの密度オプションを提供します: **compact**、**cosy**、および **comfortable**。以下のコード スニペットは、`displayDensity` を設定する方法を示します。
+上記デモで示されるように、**Igx-Grid** は 3 つの密度オプション (**compact**、**cosy**、**comfortable**) を提供します。以下のコード スニペットは、`displayDensity` を設定する方法を示します。
 
 ```html
 <igx-grid #grid [data]="data" [displayDensity]="'cosy'" >
@@ -38,15 +38,15 @@ this.grid.displayDensity = "cosy";
 ...
 ```
 
-各オプションがグリッドに影響する方法を紹介します。表示密度オプションの間に切り替えるとき、各グリッド要素の高さおよび相対するパッディングが変更されます。
- - **comfortable** - これはデフォルトのグリッド表示密度です。密度が最も低く、行の高さが `50px` です。Left および Right パッディングは `24px` です。
+各オプションをグリッドに反映する方法を紹介します。表示密度オプション間で切り替える際に各グリッド要素の高さとそのパッディングが変更されます。
+ - **comfortable** - デフォルトのグリッド表示密度です。密度が最も低く、行の高さが `50px` です。Left および Right パッディングは `24px` です。
  - **cosy** - 中密度で、行の高さが `40px` です。Left および Right パッディングは `16px` です。
  - **compact** - 密度が最も高く、行の高さが `32px` で、Left および Right パッディングは `12px` です。
 
 > [!NOTE]
 > 注: 現在サイズはオーバーライド**できません**。
 
-引き続きサンプルを使用して `displayDensity` の適用方法を紹介します。各密度の間に切り替えるボタンを追加します。
+引き続きサンプルを使用して `displayDensity` の適用方法について説明します。最初に各密度を切り替えるボタンを追加します。
 
 ```html
 <div class="density-chooser">
@@ -138,7 +138,7 @@ public ngOnInit() {
 </igx-grid>
 ```
 
-最後に、密度を適用するロジックを実装します。
+最後に密度を適用するためのロジックを実装します。
 
 ```typescript
 @ViewChild("grid", { read: IgxGridComponent })
