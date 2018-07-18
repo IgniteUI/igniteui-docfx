@@ -10,7 +10,7 @@ Ignite UI for Angular の Bullet Graph コンポーネントは、目盛り上�
 
 ### デモ
 
-This gauge supports only one scale, one set of tick marks and one set of labels. However, all the changes made to the bullet graph control have animation enhancements. This animation is easily customizable by setting the `transitionDuration` property. You can achieve numerous needle shapes by fine tuning its shape parameters. The following sample demonstrates how setting multiple properties on the same gauge can transform it to completely different gauge.
+このゲージは、スケール、針、目盛 (1 組)、ラベル (1 組) をサポートします。またゲージのすべての変更でアニメーションの機能が強化されています。アニメーションは、`transitionDuration` プロパティの設定で簡単にカスタマイズできます。針の図形パラメータを微調整して、多数の形状の針を作ることができます。以下のサンプルは、同じゲージでいくつかのプロパティを設定して全く異なるゲージにする方法を示します。
 
 <div class="sample-container" style="height: 125px">
     <iframe id="bullet-graph-sample-iframe" src='{environment:demosBaseUrl}/bullet-graph-animation' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
