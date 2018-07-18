@@ -13,10 +13,10 @@ Ignite UI for Angular の Bullet Graph コンポーネントは、目盛り上�
 このゲージは、スケール、針、目盛 (1 組)、ラベル (1 組) をサポートします。またゲージのすべての変更でアニメーションの機能が強化されています。アニメーションは、`transitionDuration` プロパティの設定で簡単にカスタマイズできます。針の図形パラメータを微調整して、多数の形状の針を作ることができます。以下のサンプルは、同じゲージでいくつかのプロパティを設定して全く異なるゲージにする方法を示します。
 
 <div class="sample-container" style="height: 125px">
-    <iframe id="bullet-graph-sample-iframe" src='{environment:demosBaseUrl}/bullet-graph-animation' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="bullet-graph-animation-iframe" src='{environment:demosBaseUrl}/bullet-graph-animation' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="bullet-graph-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
+    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="bullet-graph-animation-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
     </button>
 </div>
 
@@ -77,9 +77,10 @@ export class AppModule {}
 ### 構成可能な要素
 
 ### 比較メジャー
-The bullet graph can show two measures: performance value and target value.
 
-ブレットグラフは、パフォーマンス値とターゲット値の 2 つのメジャーを表示できます。パフォーマンス値は、コンポーネントで表示されるプライマリ メジャーでグラフ全体の長さに沿って拡張するバーとして表示されます。ターゲット値は、パフォーマンス値が比較の対象とするメジャーです。ターゲット値は、パフォーマンス バーの向きに対して直角に交わる小さなブロックとして表示されます。
+ブレットグラフは、パフォーマンス値とターゲット値の 2 つのメジャーを表示できます。
+
+パフォーマンス値は、コンポーネントで表示されるプライマリ メジャーでグラフ全体の長さに沿って拡張するバーとして表示されます。ターゲット値は、パフォーマンス値が比較の対象とするメジャーです。ターゲット値は、パフォーマンス バーの向きに対して直角に交わる小さなブロックとして表示されます。
 
 ```html
 <igx-bullet-graph
@@ -104,10 +105,10 @@ The bullet graph can show two measures: performance value and target value.
 ```
 
 <div class="sample-container" style="height: 125px">
-    <iframe id="bullet-graph-sample-iframe" src='{environment:demosBaseUrl}/bullet-graph-measures' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="bullet-graph-measures-iframe" src='{environment:demosBaseUrl}/bullet-graph-measures' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="bullet-graph-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
+    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="bullet-graph-measures-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
     </button>
 </div>
 
@@ -141,10 +142,10 @@ The bullet graph can show two measures: performance value and target value.
 ```
 
 <div class="sample-container" style="height: 125px">
-    <iframe id="bullet-graph-sample-iframe" src='{environment:demosBaseUrl}/bullet-graph-ranges' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="bullet-graph-ranges-iframe" src='{environment:demosBaseUrl}/bullet-graph-ranges' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="bullet-graph-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
+    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="bullet-graph-ranges-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
     </button>
 </div>
 
@@ -175,15 +176,16 @@ The bullet graph can show two measures: performance value and target value.
 ```
 
 <div class="sample-container" style="height: 125px">
-    <iframe id="bullet-graph-sample-iframe" src='{environment:demosBaseUrl}/bullet-graph-tickmarks' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="bullet-graph-tickmarks-iframe" src='{environment:demosBaseUrl}/bullet-graph-tickmarks' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="bullet-graph-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
+    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="bullet-graph-tickmarks-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
     </button>
 </div>
 
 ### ラベル
 ラベルはスケールのメジャーを示します。
+
 ```html
 <igx-bullet-graph
     height="80px" width="400px"
@@ -200,10 +202,10 @@ The bullet graph can show two measures: performance value and target value.
 ```
 
 <div class="sample-container" style="height: 125px">
-    <iframe id="bullet-graph-sample-iframe" src='{environment:demosBaseUrl}/bullet-graph-labels' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="bullet-graph-labels-iframe" src='{environment:demosBaseUrl}/bullet-graph-labels' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="bullet-graph-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
+    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="bullet-graph-labels-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
     </button>
 </div>
 
@@ -225,10 +227,10 @@ The bullet graph can show two measures: performance value and target value.
 ```
 
 <div class="sample-container" style="height: 125px">
-    <iframe id="bullet-graph-sample-iframe" src='{environment:demosBaseUrl}/bullet-graph-background' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="bullet-graph-background-iframe" src='{environment:demosBaseUrl}/bullet-graph-background' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="bullet-graph-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
+    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="bullet-graph-background-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
     </button>
 </div>
 
@@ -250,9 +252,9 @@ The bullet graph can show two measures: performance value and target value.
 </igx-bullet-graph>
 ```
 <div class="sample-container" style="height: 125px">
-    <iframe id="bullet-graph-sample-iframe" src='{environment:demosBaseUrl}/bullet-graph-scale' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="bullet-graph-scale-iframe" src='{environment:demosBaseUrl}/bullet-graph-scale' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="bullet-graph-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
+    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="bullet-graph-scale-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
     </button>
 </div>
