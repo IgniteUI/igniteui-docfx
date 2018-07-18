@@ -355,6 +355,11 @@ export class MyComponent implements OnInit {
 |`evenRowCSS`|string|グリッドですべての偶数行に適用される追加のスタイル設定クラス。|
 |`oddRowCSS`|string|グリッドですべての奇数行に適用される追加のスタイル設定クラス。|
 |`paginationTemplate`|TemplateRef|グリッドのページングのためにカスタム `ng-template` を提供できます。|
+|`groupingExpressions`| Array | グリッドのグループ化状態。|
+|`groupingExpansionState`| Array | グループ行の展開状態のリスト。グループ行の展開状態 (expanded: boolean) および fieldName および value によって説明されるグループ行の親のリストを含む一意識別子 (Array<IGroupByExpandState>) を含みます。|
+|`groupsExpanded`| Boolean | 作成したグループを展開または縮小として描画されるかどうかを決定します。|
+|`groupsRowList`| QueryList<IgxGridGroupByRowComponent> | 表示されるグループ行のリスト。|
+|`groupsRecords`| IGroupByRecord[] | 現在のグループの状態に基づいて階層のすべてのグループ。|
 |`displayDensity`| DisplayDensity または string | グリッドの表示密度を定義します。`compact`、`cosy`、または `comfortable` に設定できます。|
 
 <div class="divider--half"></div>
