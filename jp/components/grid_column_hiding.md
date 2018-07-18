@@ -150,7 +150,7 @@ IgxColumnHidingComponent を作成します。アプリケーションでグリ�
     border-radius: 10px;
     box-shadow: 1px 1px 2px 2px rgba(50, 50, 50, 0.25);
     igx-column-hiding {
-        height: 100%;
+        height: 460px;
     }
 }
 
@@ -207,13 +207,7 @@ import {
 export class AppModule {}
 ```
 
-ColumnDisplayOrder 列挙体と同じ型である enum プロパティを作成し、両方のラジオ ボタンの **checked** プロパティを条件にバインドして、click イベントを処理します。
-
-```typescript
-// columnHiding.component.ts
-
-public columnsOrder = ColumnDisplayOrder;
-```
+次に両方のラジオ ボタンの **checked** プロパティを異なる条件に個々にバインドして、click イベントを処理します。
 
 ```html
 <!--columnHiding.component.html-->
