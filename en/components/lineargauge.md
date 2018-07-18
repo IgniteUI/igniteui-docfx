@@ -9,7 +9,9 @@ In Ignite UI for Angular, use the Linear Gauge component to see a simple display
 
 ### Demo
 
-This gauge supports only one scale, one set of tick marks and one set of labels. However, all the changes made to the gauge have animation enhancements. This animation is easily customizable by setting the `transitionDuration` property. You can achieve numerous needle shapes by fine tuning its shape parameters. The following sample demonstrates how setting multiple properties on the same gauge can transform it to completely different gauge.
+The linear gauge component allows for visualizing data in the form of a linear gauge. It provides a simple and concise view of a value compared against a scale and one or more ranges. It supports one scale, one set of tick marks and one set of labels. The component has also a built-in support for animated transitions. This animation is easily customizable by setting the `transitionDuration` property. The features of the linear gauge component include configurable orientation and direction, configurable visual elements such as the needle, and more.
+
+The following sample demonstrates how setting multiple properties on the same gauge can transform it to completely different gauge.
 
 <div class="sample-container" style="height: 125px">
     <iframe id="linear-gauge-sample-iframe" src='{environment:demosBaseUrl}/linear-gauge-animation' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -20,8 +22,6 @@ This gauge supports only one scale, one set of tick marks and one set of labels.
 </div>
 
 <div class="divider--half"></div>
-
-The features of the linear gauge component include configurable orientation and direction, configurable visual elements, and more. The component has also a built-in support for animated transitions.
 
 ### Dependencies
 When installing the gauges package, the core package must also be installed.
@@ -73,14 +73,13 @@ The following code demonstrates how create a linear gauge containing a needle an
 ## Configurable Elements
 
 ### Needle
-This is the primary measure displayed by the component and is visualized as a bar or you can customize it show almost any shape as is it demonstrated below.
+This is the primary measure displayed by the component and is visualized as a bar or you can customize it to show almost any shape as is demonstrated below.
 
 ```html
  <igx-linear-gauge
     height="80px" width="400px"
     minimumValue=0 value=50
     maximumValue=100 interval=10
-
     isNeedleDraggingEnabled=true
     needleShape="Custom"
     needleBrush="DodgerBlue"
@@ -113,7 +112,6 @@ The ranges are visual elements that highlight a specified range of values on a s
     height="80px" width="400px"
     minimumValue=0 value=50
     maximumValue=100 interval=10
-
     rangeBrushes="#a4bd29, #F86232"
     rangeOutlines="#a4bd29, #F86232" >
     <igx-linear-graph-range
@@ -139,7 +137,7 @@ The ranges are visual elements that highlight a specified range of values on a s
 ### Tick Marks
 The tick marks serve as a visual division of the scale into intervals in order to increase the readability of the linear gauge.
 
-Major tick marks – The major tick marks are used as primary delimiters on the scale. The frequency they appear at, their extents and style can be controlled by setting the corresponding properties.
+Major tick marks – The major tick marks are used as primary delimiters on the scale. The frequency they appear at, their extents and style can be controlled by setting their corresponding properties.
 
 Minor tick marks – The minor tick marks represent helper tick marks, which might be used to additionally improve the readability of the scale and can be customized in a way similar to the major ones.
 
@@ -148,14 +146,12 @@ Minor tick marks – The minor tick marks represent helper tick marks, which mig
     height="80px" width="400px"
     minimumValue=0 value=50
     maximumValue=100 interval=10
-
     tickBrush="DodgerBlue"
     ticksPreTerminal=0
     ticksPostInitial=0
     tickStrokeThickness=2
     tickStartExtent=0.25
     tickEndExtent=0.05
-
     minorTickCount=4
     minorTickBrush="DarkViolet"
     minorTickEndExtent=0.05
@@ -179,7 +175,6 @@ The labels indicate the measures on the scale.
     height="80px" width="400px"
     minimumValue=0 value=50
     maximumValue=100 interval=10
-
     labelInterval=10
     labelExtent=0.025
     labelsPreTerminal=0
@@ -197,14 +192,13 @@ The labels indicate the measures on the scale.
 </div>
 
 ### Backing
-The backing element represents background and border of the bullet graph control. It is always the first element rendered and all the rest of elements such as labels, and tick marks are overlay on top of it.
+The backing element represents background and border of the bullet graph control. It is always the first element rendered and all the rest of elements such as labels, and tick marks are overlaid on top of it.
 
 ```html
 <igx-linear-gauge
     height="80px" width="400px"
     minimumValue=0 value=50
     maximumValue=100 interval=10
-
     backingBrush="#bddcfc"
     backingOutline="DodgerBlue"
     backingStrokeThickness=4
@@ -221,14 +215,13 @@ The backing element represents background and border of the bullet graph control
 </div>
 
 ### Scale
-The scale is visual element that highlights full range of values in the gauge. You can customize appearance and shape of the scale and even change if the scale should be inverted (using `isScaleInverted` property) and all labels will be rendered from right-to-left instead of left-to-right.
+The scale is a visual element that highlights the full range of values in the gauge. You can customize the appearance and the shape of the scale. It can also be inverted (using `isScaleInverted` property) and all labels will be rendered from right-to-left instead of left-to-right.
 
 ```html
 <igx-linear-gauge
     height="80px" width="400px"
     minimumValue=0 value=50
     maximumValue=100 interval=10
-
     isScaleInverted=false
     scaleBrush="DodgerBlue"
     scaleOutline="DarkViolet"

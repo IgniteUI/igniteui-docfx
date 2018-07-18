@@ -9,7 +9,9 @@ The Bullet Graph Component in Ignite UI for Angular allows for a linear and conc
 
 ### Demo
 
-This gauge supports only one scale, one set of tick marks and one set of labels. However, all the changes made to the bullet graph control have animation enhancements. This animation is easily customizable by setting the `transitionDuration` property. You can achieve numerous needle shapes by fine tuning its shape parameters. The following sample demonstrates how setting multiple properties on the same gauge can transform it to completely different gauge.
+The bullet graph component provides you with the ability to create attractive data presentations, replacing meters and gauges that are used on dashboards with simple yet straightforward and clear bar charts. A bullet graph is one of the most effective and efficient ways to present progress towards goals, good/better/best ranges, or compare multiple measurements in as little horizontal or vertical space as possible.
+
+The following sample demonstrates how setting multiple properties on the same gauge can transform it to completely different gauge.
 
 <div class="sample-container" style="height: 125px">
     <iframe id="bullet-graph-sample-iframe" src='{environment:demosBaseUrl}/bullet-graph-animation' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -21,9 +23,8 @@ This gauge supports only one scale, one set of tick marks and one set of labels.
 
 <div class="divider--half"></div>
 
-The bullet graph component provides you with the ability to create attractive data presentations, replacing meters and gauges that are used on dashboards with simple yet straightforward and clear bar charts. A bullet graph is one of the most effective and efficient ways to present progress towards goals, good/better/best ranges, or compare multiple measurements in as little horizontal or vertical space as possible.
-
-The features of the bullet graph include configurable orientation and direction, configurable visual elements, and more. The control has also a built-in support for animated transitions.
+This gauge supports one scale, one set of tick marks and one set of labels. The component also has built-in support for animated transitions. This animation is easily customizable by setting the `transitionDuration` property. 
+The features of the bullet graph include configurable orientation and direction, configurable visual elements such as the needle, and more. 
 
 ### Dependencies
 When installing the gauges package, the core package must also be installed.
@@ -79,7 +80,7 @@ The following code walks through creating a bullet graph component, and configur
 ### Comparative Measures
 The bullet graph can show two measures: performance value and target value.
 
-Performance value is the primary measure displayed by the component and it is visualized as a bar that stretches along the length of the whole graph. The target value is a measure which the performance value compares against. The target value is displayed as a small block that runs perpendicular to the orientation of the performance bar.
+Performance value is the primary measure displayed by the component and it is visualized as a bar that stretches along the length of the whole graph. The target value is a measure which the performance value compares against. It is displayed as a small block that runs perpendicular to the orientation of the performance bar.
 
 ```html
 <igx-bullet-graph
@@ -88,7 +89,6 @@ Performance value is the primary measure displayed by the component and it is vi
     valueStrokeThickness=1
     valueInnerExtent=0.5
     valueOuterExtent=0.65
-
     targetValue=80
     targetValueBreadth=10
     targetValueBrush="LimeGreen"
@@ -96,7 +96,6 @@ Performance value is the primary measure displayed by the component and it is vi
     targetValueStrokeThickness=1
     targetValueInnerExtent=0.3
     targetValueOuterExtent=0.85
-
     height="80px" width="400px"
     minimumValue=0 value=50
     maximumValue=100>
@@ -112,14 +111,13 @@ Performance value is the primary measure displayed by the component and it is vi
 </div>
 
 ### Comparative Ranges
-The ranges are visual elements that highlight a specified range of values on a scale. Their purpose is to visually communicate the qualitative state of the performance bar measure, illustrating at the same times the degree to which it resides within that state.
+The ranges are visual elements that highlight a specified range of values on a scale. Their purpose is to visually communicate the qualitative state of the performance bar measure, illustrating at the same time the degree to which it resides within that state.
 
 ```html
 <igx-bullet-graph
     height="80px" width="400px"
     minimumValue=0 value=80 interval=10
     maximumValue=100 targetValue=90
-
     rangeBrushes ="#C62828, #F96232, #FF9800"
     rangeOutlines="#C62828, #F96232, #FF9800">
     <igx-linear-graph-range
@@ -150,7 +148,7 @@ The ranges are visual elements that highlight a specified range of values on a s
 
 ### Tick Marks
 The tick marks serve as a visual division of the scale into intervals in order to increase the readability of the bullet graph.
-- Major tick marks – The major tick marks are used as primary delimiters on the scale. The frequency they appear at, their extents and style can be controlled by setting the corresponding properties.
+- Major tick marks – The major tick marks are used as primary delimiters on the scale. The frequency they appear at, their extents and style can be controlled by setting their corresponding properties.
 - Minor tick marks – The minor tick marks represent helper tick marks, which might be used to additionally improve the readability of the scale and can be customized in a way similar to the major ones.
 
 ```html
@@ -158,14 +156,12 @@ The tick marks serve as a visual division of the scale into intervals in order t
     height="80px" width="400px"
     minimumValue=0 value=70 interval=10
     maximumValue=100 targetValue=90
-
     tickBrush="DodgerBlue"
     ticksPreTerminal=0
     ticksPostInitial=0
     tickStrokeThickness=2
     tickStartExtent=0.2
     tickEndExtent=0.075
-
     minorTickCount=4
     minorTickBrush="DarkViolet"
     minorTickEndExtent=0.1
@@ -184,12 +180,12 @@ The tick marks serve as a visual division of the scale into intervals in order t
 
 ### Labels
 The labels indicate the measures on the scale.
+
 ```html
 <igx-bullet-graph
     height="80px" width="400px"
     minimumValue=0 value=70 interval=10
     maximumValue=100 targetValue=90
-
     labelInterval=10
     labelExtent=0.025
     labelsPreTerminal=0
@@ -208,14 +204,13 @@ The labels indicate the measures on the scale.
 </div>
 
 ### Backing
-The backing element represents background and border of the bullet graph control. It is always the first element rendered and all the rest of elements such as labels, and tick marks are overlay on top of it.
+The backing element represents background and border of the bullet graph control. It is always the first element rendered and all the rest of elements such as labels, and tick marks are overlaid on top of it.
 
 ```html
 <igx-bullet-graph
     height="80px" width="400px"
     minimumValue=0 value=70 interval=10
     maximumValue=100 targetValue=90
-
     backingBrush="#bddcfc"
     backingOutline="DodgerBlue"
     backingStrokeThickness=4
@@ -233,14 +228,13 @@ The backing element represents background and border of the bullet graph control
 </div>
 
 ### Scale
-The scale is visual element that highlights full range of values in the gauge. You can customize appearance and shape of the scale and even change if the scale should be inverted (using `isScaleInverted` property) and all labels will be rendered from right-to-left instead of left-to-right.
+The scale is visual element that highlights the full range of values in the gauge. You can customize appearance and shape of the scale. The scale can also be inverted (using `isScaleInverted` property) and all labels will be rendered from right-to-left instead of left-to-right.
 
 ```html
 <igx-bullet-graph
     height="80px" width="400px"
     minimumValue=0 value=70 interval=10
     maximumValue=100 targetValue=90
-
     isScaleInverted=false
     scaleBackgroundBrush="DodgerBlue"
     scaleBackgroundOutline="DarkViolet"
