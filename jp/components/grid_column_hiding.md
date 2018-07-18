@@ -207,7 +207,7 @@ import {
 export class AppModule {}
 ```
 
-Now all we have to do is bind the **checked** property of both radio buttons respectively with different conditions and handle their click events.
+次に両方のラジオ ボタンの **checked** プロパティを異なる条件に個々にバインドして、click イベントを処理します。
 
 ```html
 <!--columnHiding.component.html-->
