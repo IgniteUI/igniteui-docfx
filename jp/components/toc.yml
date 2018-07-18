@@ -53,7 +53,7 @@
     - name: 複数列ヘッダー
       href: grid_multi_column_headers.md
       new: true
-    - name: Display Density
+    - name: 表示密度
       href: grid_displayDensity.md
       new: true
 - name: List View
