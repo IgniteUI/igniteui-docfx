@@ -57,7 +57,7 @@ Setting icon with content projection.
 
 You can set the icon's size through CSS. Create a custom CSS class and name it *custom-size*. The icon's size is changed by the **font-size** property. Additionally to center it, set the **width** and the **height** to the same value.
 ```html
-<igx-icon name="sentiment_very_satisfied" class="custom-size"></igx-icon>
+<igx-icon name="phone_iphone" color="#0375be" class="custom-size"></igx-icon>
 ```
 ```css
 <!-- icon-sample2.component.scss -->
@@ -78,7 +78,7 @@ You can set the icon's size through CSS. Create a custom CSS class and name it *
 
 In this article we covered the Icon component. Here are a few more APIs to explore, which are listed below.
 
-####Atributes
+####Attributes
 You can set all properties of the icon component with the following `attributes`:
 | Name   |       Example      |  Description |
 |:----------|:-------------:|:------|
