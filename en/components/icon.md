@@ -43,11 +43,11 @@ export class AppModule {}
 
 Using `igx-icon` to set an `active` home icon with magenta `color`.
 ```html
-<igx-icon name="home" color="magenta" isActive="true"></igx-icon>
+<igx-icon name="home" color="magenta" [isActive]="true"></igx-icon>
 ```
 Setting an `inactive` icon.
 ```html
-<igx-icon name="volume_off" isActive="false"></igx-icon>
+<igx-icon name="volume_off" [isActive]="false"></igx-icon>
 ```
 
 Setting icon with content projection.
@@ -55,9 +55,9 @@ Setting icon with content projection.
 <igx-icon color="red">bluetooth</igx-icon>
 ```
 
-You can set the icon's size through CSS. Create a custom CSS class, for example you can name it *custom-size*. The icon's size is changed by the **font-size** property, additionally to center it you will also have to set the **width** and the **height** with the same value.
+You can set the icon's size through CSS. Create a custom CSS class and name it *custom-size*. The icon's size is changed by the **font-size** property. Additionally to center it, set the **width** and the **height** to the same value.
 ```html
-<igx-icon name="home" class="custom-size" isActive="true"></igx-icon>
+<igx-icon name="home" class="custom-size" [isActive]="true"></igx-icon>
 ```
 ```css
 <!-- icon-sample2.component.scss -->
@@ -83,7 +83,7 @@ You can set all properties of the icon component with the following `attributes`
 | Name   |       Example      |  Description |
 |:----------|:-------------:|:------|
 | `name` |  `name="home"` | Set the icon by providing its name from the official [material icons set](https://material.io/icons/) . |
-| `active` |  `isActive="true"` | Set the icon to active/inactive (default is true). |
+| `active` |  `[isActive]="true"` | Set the icon to active/inactive (default is true). |
 | `color` |  `color="#474747"` | Set the icon color by providing a string value. |
 <div class="divider--half"></div>
 
