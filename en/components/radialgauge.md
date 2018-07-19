@@ -9,7 +9,7 @@ The Radial Gauge component in Ignite UI for Angular provides a number of visual 
 
 ### Demo
 
-The radial gauge component is a data visualization tool capable of displaying a gauge containing a number of visual elements, such as a scale with tick marks and labels, a needle, and a number of ranges. The component also has built-in support for animated transitions. This animation is easily customizable by setting the `transitionDuration` property. 
+The radial gauge component is a data visualization tool capable of displaying a gauge containing a number of visual elements, such as a scale with tick marks and labels, a needle, and a number of ranges. The component also has built-in support for animated transitions. This animation is easily customizable by setting the `transitionDuration` property.
 
 The following sample demonstrates how setting multiple properties on the same gauge can transform it to completely different gauge.
 
@@ -74,11 +74,11 @@ The following code demonstrates how create a radial gauge containing a needle an
 
 ### Backing
 
-The gauge comes with a backing shape drawn behind the scale that acts as a background for the gauge. 
+The gauge comes with a backing shape drawn behind the scale that acts as a background for the gauge.
 
 The backing element represents background and border of the radial gauge control. It is always the first element rendered and all the rest of elements such as needle, labels, and tick marks are overlay on top of it.
 
-The backing can be circular or fitted. A circular shape creates a 360 degree circle gauge while a fitted shape creates a filled arc segment encompassing the `scaleStartAngle` and `scaleEndAngle` properties. This can be set by setting the `backingShape` property. 
+The backing can be circular or fitted. A circular shape creates a 360 degree circle gauge while a fitted shape creates a filled arc segment encompassing the `scaleStartAngle` and `scaleEndAngle` properties. This can be set by setting the `backingShape` property.
 
 ```html
 <igx-radial-gauge
@@ -220,6 +220,7 @@ You can enable an interactive mode of the gauge (using `isNeedleDraggingEnabled`
 
 ```html
 <igx-radial-gauge
+    value=50
     isNeedleDraggingEnabled=true
     isNeedleDraggingConstrained=true
     needleShape="NeedleWithBulb"
@@ -233,7 +234,7 @@ You can enable an interactive mode of the gauge (using `isNeedleDraggingEnabled`
     needlePivotWidthRatio=0.2
     needlePivotStrokeThickness=1
     height="300px" width="300px"
-    minimumValue=0 value=50
+    minimumValue=0
     maximumValue=80 interval=10>
 </igx-radial-gauge>
 ```
@@ -244,3 +245,74 @@ You can enable an interactive mode of the gauge (using `isNeedleDraggingEnabled`
     <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="radial-gauge-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
     </button>
 </div>
+
+### Summary
+For your convenience, all above code snippets are combined into one code block below that you can easily copy to your project and see the radial gauge with all features and visuals enabled.
+
+```html
+<igx-radial-gauge
+    height="300px" width="300px"
+    minimumValue=0
+    maximumValue=80
+    scaleStartAngle=135
+    scaleEndAngle=45
+    scaleBrush="#c6c6c6"
+    scaleSweepDirection="Clockwise"
+    scaleOversweep=1
+    scaleOversweepShape="Fitted"
+    scaleStartExtent=0.45
+    scaleEndExtent=0.575
+
+    value=70
+    isNeedleDraggingEnabled=true
+    isNeedleDraggingConstrained=true
+    needleShape="NeedleWithBulb"
+    needleBrush="DodgerBlue"
+    needleOutline="DodgerBlue"
+    needleEndExtent=0.475
+    needleStrokeThickness=1
+    needlePivotShape="CircleOverlay"
+    needlePivotBrush="#9f9fa0"
+    needlePivotOutline="#9f9fa0"
+    needlePivotWidthRatio=0.2
+    needlePivotStrokeThickness=1
+
+    interval=10
+    tickStartExtent=0.45
+    tickEndExtent=0.575
+    tickStrokeThickness=2
+    tickBrush="Black"
+    minorTickCount=4
+    minorTickEndExtent=0.5
+    minorTickStartExtent=0.575
+    minorTickStrokeThickness=1
+    minorTickBrush="Black"
+
+    labelExtent=0.65
+    labelInterval=10
+    font="11px Verdana"
+    fontBrush="Black"
+
+    backingShape="Fitted"
+    backingBrush="#ededed"
+    backingOutline="Gray"
+    backingOversweep=5
+    backingCornerRadius=10
+    backingStrokeThickness=5
+    backingOuterExtent=0.8
+    backingInnerExtent=0.15
+
+    rangeBrushes ="#a4bd29, #F86232"
+    rangeOutlines="#a4bd29, #F86232">
+    <igx-radial-gauge-range
+        startValue=20 endValue=40
+        innerStartExtent=0.45 innerEndExtent=0.45
+        outerStartExtent=0.57 outerEndExtent=0.57>
+    </igx-radial-gauge-range>
+    <igx-radial-gauge-range
+        startValue=40 endValue=60
+        innerStartExtent=0.45 innerEndExtent=0.45
+        outerStartExtent=0.57 outerEndExtent=0.57>
+    </igx-radial-gauge-range>
+</igx-radial-gauge>
+```

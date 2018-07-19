@@ -23,8 +23,8 @@ The following sample demonstrates how setting multiple properties on the same ga
 
 <div class="divider--half"></div>
 
-This gauge supports one scale, one set of tick marks and one set of labels. The component also has built-in support for animated transitions. This animation is easily customizable by setting the `transitionDuration` property. 
-The features of the bullet graph include configurable orientation and direction, configurable visual elements such as the needle, and more. 
+This gauge supports one scale, one set of tick marks and one set of labels. The component also has built-in support for animated transitions. This animation is easily customizable by setting the `transitionDuration` property.
+The features of the bullet graph include configurable orientation and direction, configurable visual elements such as the needle, and more.
 
 ### Dependencies
 When installing the gauges package, the core package must also be installed.
@@ -154,8 +154,9 @@ The tick marks serve as a visual division of the scale into intervals in order t
 ```html
 <igx-bullet-graph
     height="80px" width="400px"
-    minimumValue=0 value=70 interval=10
+    minimumValue=0 value=70
     maximumValue=100 targetValue=90
+    interval=10
     tickBrush="DodgerBlue"
     ticksPreTerminal=0
     ticksPostInitial=0
@@ -250,3 +251,78 @@ The scale is visual element that highlights the full range of values in the gaug
     <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="bullet-graph-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
     </button>
 </div>
+
+### Summary
+For your convenience, all above code snippets are combined into one code block below that you can easily copy to your project and see the bullet graph with all features and visuals enabled.
+
+```html
+<igx-bullet-graph
+    height="80px" width="400px"
+    minimumValue=0
+    maximumValue=100
+    isScaleInverted=false
+    scaleBackgroundBrush="Gray"
+    scaleBackgroundOutline="Gray"
+    scaleBackgroundThickness=2
+    scaleStartExtent=0.05
+    scaleEndExtent=0.95
+
+    value=50
+    valueBrush="Black"
+    valueStrokeThickness=1
+    valueInnerExtent=0.5
+    valueOuterExtent=0.65
+    targetValue=80
+    targetValueBreadth=7.5
+    targetValueBrush="Black"
+    targetValueOutline="Black"
+    targetValueStrokeThickness=1
+    targetValueInnerExtent=0.3
+    targetValueOuterExtent=0.85
+
+    labelInterval=10
+    labelExtent=0.025
+    labelsPreTerminal=0
+    labelsPostInitial=0
+    fontBrush="Black"
+    font="11px Verdana"
+
+    backingBrush="#cecece"
+    backingOutline="#cecece"
+    backingStrokeThickness=4
+    backingInnerExtent=0
+    backingOuterExtent=1
+
+    interval=10
+    tickBrush="Black"
+    ticksPreTerminal=0
+    ticksPostInitial=0
+    tickStrokeThickness=2
+    tickStartExtent=0.2
+    tickEndExtent=0.075
+
+    minorTickCount=4
+    minorTickBrush="Black"
+    minorTickEndExtent=0.1
+    minorTickStartExtent=0.2
+    minorTickStrokeThickness=1
+
+    rangeBrushes ="#C62828, #F96232, #FF9800"
+    rangeOutlines="#C62828, #F96232, #FF9800">
+    <igx-linear-graph-range
+        startValue=20 endValue=40
+        innerStartExtent=0.25 innerEndExtent=0.25
+        outerStartExtent=0.9 outerEndExtent=0.9>
+    </igx-linear-graph-range>
+    <igx-linear-graph-range
+        startValue=40 endValue=60
+        innerStartExtent=0.25 innerEndExtent=0.25
+        outerStartExtent=0.9 outerEndExtent=0.9>
+    </igx-linear-graph-range>
+    <igx-linear-graph-range
+        startValue=60 endValue=90
+        innerStartExtent=0.25 innerEndExtent=0.25
+        outerStartExtent=0.9 outerEndExtent=0.9>
+    </igx-linear-graph-range>
+</igx-bullet-graph>
+```
