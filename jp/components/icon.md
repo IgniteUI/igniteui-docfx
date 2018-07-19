@@ -43,7 +43,7 @@ export class AppModule {}
 ### 使用方法
 
 ```html
-<igx-icon name=[..options] color=[..options] isActive=[..options]></igx-icon>
+<igx-icon name="home" color="magenta" ></igx-icon>
 ```
 
 ### コード例
@@ -57,13 +57,25 @@ export class AppModule {}
 `inactive` アイコンを設定します。
 
 ```html
-<igx-icon name="volume_off" isActive="false"></igx-icon>
+<igx-icon name="volume_off" [isActive]="false"></igx-icon>
 ```
 
-コンテンツ プロジェクションでアイコンを設定します。
+CSS でアイコン サイズを設定するには、カスタム CSS を作成して名前を *custom-size* とします。アイコン サイズは **font-size** プロパティで変更でき、更に中央揃えにするには、**width** と **height** を同じ値にします。
 ```html
-<igx-icon color="red">bluetooth</igx-icon>
+<igx-icon name="phone_iphone" color="#0375be" class="custom-size"></igx-icon>
 ```
+```css
+<!-- icon-sample2.component.scss -->
+
+.custom-size{
+    font-size: 56px;
+    width: 56px;
+    height: 56px;
+}
+```
+<div class="sample-container" style="height: 80px; width: 300px">
+    <iframe id="icon-sample2-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/icon-sample2"  onload="onSampleIframeContentLoaded(this);">
+</div>
 
 <div class="divider--half"></div>
 
@@ -78,7 +90,7 @@ export class AppModule {}
 | 名前   |       例      |  説明 |
 |:----------|:-------------:|:------|
 | `name` |  `name="home"` | アイコンを設定するには、名前を公式の[マテリアル アイコン セット](https://material.io/icons/)から提供します。 |
-| `active` |  `isActive="true"` | アイコンをアクティブ/非アクティブに設定します。デフォルト値は true です。 |
+| `active` |  `[isActive]="false"` | アイコンをアクティブ/非アクティブ状態に設定します。デフォルト値は true です。 |
 | `color` |  `color="#474747"` | 文字列値を指定してアイコンの色を設定します。 |
 
 <div class="divider--half"></div>
