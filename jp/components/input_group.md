@@ -10,7 +10,7 @@ _language: ja
 Ignite UI for Angular Input Groups は、簡単に使用できるデータ入力フォームを作成できます。データ入力を簡素化し、入力コントロールには検証やエラーの処理機能も提供します。
 
 ### Input Group デモ
-<div class="sample-container" style="height:600px">
+<div class="sample-container" style="height:670px">
 <iframe id="input-group-sample-6-frame" src='{environment:demosBaseUrl}/input-group-sample-6' width="100%" height="100%" seamless frameBorder="0"></iframe>
 </div>
 <div>
