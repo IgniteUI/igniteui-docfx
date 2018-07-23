@@ -149,7 +149,7 @@ Now let's create our IgxColumnHidingComponent! In our application, we will place
     border-radius: 10px;
     box-shadow: 1px 1px 2px 2px rgba(50, 50, 50, 0.25);
     igx-column-hiding {
-        height: 100%;
+        height: 460px;
     }
 }
 
@@ -206,13 +206,7 @@ import {
 export class AppModule {}
 ```
 
-Now by creating an enum property of the same type as the `ColumnDisplayOrder` enumeration, all we have to do is bind the **checked** property of both radio buttons respectively with different conditions and handle their click events.
-
-```typescript
-// columnHiding.component.ts
-
-public columnsOrder = ColumnDisplayOrder;
-```
+Now all we have to do is bind the **checked** property of both radio buttons respectively with different conditions and handle their click events.
 
 ```html
 <!--columnHiding.component.html-->

@@ -42,7 +42,7 @@ Ignite UI for Angular Data Grid に**列非表示**機能があります。こ�
 
 ### ツールバーの列非表示 UI
 
-定義済みの列非表示 UI はグリッドのツールバーで `IgxDropDownComponent` に配置されます。列非表示の UI をこのドロップダウンを使用して表示/非表示にできます。
+定義済みの列非表示 UI はグリッドのツールバーの `IgxDropDownComponent` 内に配置されます。列非表示の UI をこのドロップダウンを使用して表示/非表示にできます。
 このため、グリッドの `showToolbar` および `columnHiding` プロパティを true に設定します。ツールバーが有効でない場合、`columnHiding` プロパティが有効かどうかは影響しません。
 ツールバーにタイトルを追加するには、`toolbarTitle` プロパティを設定し、グリッドのラッパーにカスタム スタイルを設定します。
 
@@ -79,7 +79,7 @@ Ignite UI for Angular Data Grid に**列非表示**機能があります。こ�
 </div>
 ```
 
-列非表示 UI の `columnsAreaMaxHeight` プロパティを使用すると、列を含む領域の最大の高さを設定します。列が多すぎてコンテナにすべて収まらない場合、スクロールバーが表示されます。スクロールバーを使用して任意の列に移動できます。検索入力は上にピン固定されて、[すべて表示]/[すべて非表示] ボタンが下にピン固定されます。
+列非表示 UI の `columnsAreaMaxHeight` プロパティを使用して列を含む領域の最大の高さを設定できます。列が多すぎてコンテナにすべて収まらない場合にスクロールバーが表示されるため、任意の列に移動できます。検索入力は上にピン固定されて、[すべて表示]/[すべて非表示] ボタンが下にピン固定されます。
 
 ```typescript
 // columnHiding.component.ts
@@ -91,11 +91,11 @@ public ngAfterViewInit() {
 
 列非表示 UI の機能セットを使用するには、列非表示 UI コンポーネントへの参照を返すツールバーの `columnHidingUI` プロパティを使用します。相対する API にアクセスし、アプリケーションの要件に基づいて使用できます。
 
-このトピックのはじめにあるコードの結果を「[列非表示デモ](#デモ)」セクションで確認できます。
+このトピックの最初にあるコードの結果は「[列非表示デモ](#デモ)」セクションで確認できます。
 
 ### カスタム列の非表示 UI
 
-**IgxColumnHidingComponent** を手動的に定義してページに配置する方法の手順を説明します。最初は、コンポーネントのインスタンスをマークアップに作成します。このために **IgxColumnHiding** モジュールを追加します。
+**IgxColumnHidingComponent** を手動的に定義してページに配置するには、**IgxColumnHiding** モジュールを追加してコンポーネントのインスタンスをマークアップに作成します。 
 
 ```typescript
 // app.module.ts
@@ -150,7 +150,7 @@ IgxColumnHidingComponent を作成します。アプリケーションでグリ�
     border-radius: 10px;
     box-shadow: 1px 1px 2px 2px rgba(50, 50, 50, 0.25);
     igx-column-hiding {
-        height: 100%;
+        height: 460px;
     }
 }
 
@@ -207,13 +207,7 @@ import {
 export class AppModule {}
 ```
 
-ColumnDisplayOrder 列挙体と同じ型である enum プロパティを作成し、両方のラジオ ボタンの **checked** プロパティを条件にバインドして、click イベントを処理します。
-
-```typescript
-// columnHiding.component.ts
-
-public columnsOrder = ColumnDisplayOrder;
-```
+次に両方のラジオ ボタンの **checked** プロパティを異なる条件に個々にバインドして、click イベントを処理します。
 
 ```html
 <!--columnHiding.component.html-->
@@ -263,7 +257,7 @@ public columnsOrder = ColumnDisplayOrder;
 
 ### API まとめ
 
-このトピックでは、グリッドのツールバーの定義済みの列非表示 UI の使用方法を説明し、別のコンポーネントとして定義する方法についても説明しました。その他の列順序から選択する機能を提供する UI を実装し、カスタム タイトルおよびフィルター プロンプト テキストを設定しました。**IgxRadio** ボタンのその他の Ignite UI for Angular コンポーネントも使用しています。
+このトピックでは、グリッドのツールバーの定義済みの列非表示 UI の使用方法や別のコンポーネントとして定義する方法について説明しました。また、その他の列順序から選択する機能を提供する UI を実装し、カスタム タイトルおよびフィルター プロンプト テキストを設定、**IgxRadio** ボタンのその他の Ignite UI for Angular コンポーネントも使用しました。
 以下は、列非表示 UI のその他の API です。
 
 

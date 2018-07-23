@@ -47,7 +47,7 @@ _language: ja
 
 各 `igx-column-group` は、`moving`、`pinning`、`hiding` をサポートします。
 > [!NOTE]
-> 列セットと列グループがある場合、ピン固定は一番上の列にのみ可能です。ネストされた各 `column groups` または `columns` のピン固定はできません。<br />
+> 列セットと列グループがある場合、ピン固定は一番上の列でのみ可能です。ネストされた各 `column groups` または `columns` のピン固定はできません。<br />
 > `columns` と `column groups` 間の移動は、階層の同じレベルで同じ `group` の場合のみ可能です。<br />
 > `columns/column-groups` が現在の `group` でラップされていない場合 ( **最上位** の `columns` の場合、移動は表示列間のみ可能です。
 

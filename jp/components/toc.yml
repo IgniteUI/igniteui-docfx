@@ -53,6 +53,9 @@
     - name: 複数列ヘッダー
       href: grid_multi_column_headers.md
       new: true
+    - name: 表示密度
+      href: grid_displayDensity.md
+      new: true
 - name: List View
   href: list.md
 - name: Combo
@@ -110,15 +113,31 @@
     - name: カスタム ツールチップ
       href: financialchart_custom_tooltips.md
       new: false
+- name: ゲージ
+  header: true
+  new: true
+- name: Bullet Graph
+  href: bulletgraph.md
+  new: true
+- name: Linear Gauge
+  href: lineargauge.md
+  new: true
+- name: Radial Gauge
+  href: radialgauge.md
+  new: true
 - name: スタイルとテーマ
   header: true
-- name: Themes
-  href: themes.md
+- name: テーマ
+  href: themes/index.md
   items:
-    - name: Palettes
-      href: colors.md
-    - name: Typography
-      href: typography.md
+    - name: パレット
+      href: themes/palette.md
+    - name: グローバル テーマ
+      href: themes/global-theme.md
+    - name: コンポーネント テーマ
+      href: themes/component-themes.md
+    - name: タイポグラフィ
+      href: themes/typography.md
 - name: Shadows
   href: shadows.md
 - name: データ入力と表示
@@ -171,7 +190,7 @@
 - name: Overlay
   href: overlay_main.md
   new: true
-  items: 
+  items:
   - name: ポジション ストラテジー
     href: overlay_position.md
     new: true

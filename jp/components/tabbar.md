@@ -392,7 +392,7 @@ public contactsList: object[] = [{
 以下のゲッターは **igx-tab-panel** コンポーネントで利用できます。
 | 名前 | 型 | 説明 |
 | :--- | :--- | :--- |
-| `isDisabled` | Boolean | パネルが無効されているかどうかを決定します。 |
+| `disabled` | Boolean | パネルが無効されているかどうかを決定します。 |
 | `isSelected` | Boolean | パネルが選択されているかどうかを決定します。 |
 | `index` | Number | パネル コレクションのパネルのインデックスを取得します。|
 | `relatedTab` | IgxTab | パネルに関連付けられたタブを取得します。 |
@@ -402,7 +402,7 @@ public contactsList: object[] = [{
 以下のゲッターは **igx-tab** コンポーネントで利用できます。
 | 名前 | 型 | 説明 |
 | :--- | :--- | :--- |
-| `isDisabled` | Boolean | タブが無効かどうかを決定します。 |
+| `disabled` | Boolean | タブが無効かどうかを決定します。 |
 | `isSelected` | Boolean | タブが選択されているかどうかを決定します。 |
 | `index` | Number | タブ コレクションのタブのインデックスを取得します。 |
 | `relatedPanel` | IgxTabPanel | タブに関連付けられているパネルを取得します。 |

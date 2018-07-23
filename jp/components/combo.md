@@ -7,10 +7,10 @@ _language: ja
 
 ## Combo
 <p class="highlight">
-igx-combo コンポーネントは、基本 HTML input 要素、select 要素、および IgniteUI for Angular igx-drop-down コンポーネントの機能を組み合わされています。
-Combo コンポーネントは、フィルタリング、複数の項目の選択、グループ化、ドロップダウン リストにカスタム値の追加などの機能を提供します。項目、ヘッダー、フッターなどのコンポーネントの領域をカスタマイズするためにカスタム テンプレートを設定できます。Combo コンポーネントは Template Driven および Reactive Forms と統合されます。
-igx-combo はキーボード ナビゲーションを公開しており、アクセシビリティ規格にも対応しています。
-ドロップダウン項目は仮想化されます。igx-combo が大量の項目を持つデータ ソースにバインドしてもスクロールはスムーズになります。
+igx-combo コンポーネントは、基本 HTML input 要素、select 要素、および IgniteUI for Angular igx-drop-down コンポーネントの機能を組み合わせています。
+Combo コンポーネントは、フィルタリング、複数の項目の選択、グループ化、ドロップダウン リストにカスタム値の追加などの機能がサポートされます。項目、ヘッダー、フッターなどのコンポーネントの領域をカスタマイズするためにカスタム テンプレートを設定でき、たとえば Combo コンポーネントは Template Driven および Reactive Forms と統合されています。
+また igx-combo はキーボード ナビゲーションを公開しており、アクセシビリティ規格にも対応しています。
+ドロップダウン項目を仮想化し igx-combo が大量の項目を持つデータ ソースにバインドした場合もスクロールをスムーズに行うことができます。
 </p>
 <div class="divider"></div>
 
@@ -299,7 +299,7 @@ igxCombo が開いて、カスタム値が有効で、「項目の追加」ボ�
 |  `data`                  | コンボのデータ ソース                                      | any                        |
 |  `value`                 | コンボの値                                            | string                      |
 |  `allowCustomValue`      | コンボのカスタム値を有効/無効にします。                          | boolean                     |
-|  `filterable`            | enables/disables combo drop down filtering - enabled by default                  | boolean                     |
+|  `filterable`            | コンボのドロップダウンのフィルタリングを有効/無効にします。デフォルトは有効です。                 | boolean                     |
 |  `valueKey`              | コンボの値データ ソース プロパティ                              | string                      |
 |  `displayKey`            | コンボの表示データ ソース プロパティ                            | string                      |
 |  `groupKey`              | コンボの項目グループ                                      | string                      |

@@ -53,6 +53,9 @@
     - name: Multi Column Headers
       href: grid_multi_column_headers.md
       new: true
+    - name: Display Density
+      href: grid_displayDensity.md
+      new: true
 - name: List View
   href: list.md
 - name: Combo
@@ -62,7 +65,6 @@
   header: true
 - name: Category Chart
   href: categorychart.md
-  new: false
   items:
     - name: Explore Chart Types
       href: categorychart_explore_chart_types.md
@@ -81,7 +83,6 @@
       new: false
 - name: Financial Chart
   href: financialchart.md
-  new: false
   items:
     - name: Explore Chart Types
       href: financialchart_explore_chart_types.md
@@ -109,16 +110,31 @@
       new: false
     - name: Custom Tooltips
       href: financialchart_custom_tooltips.md
-      new: false
+- name: Gauges
+  header: true
+  new: true
+- name: Bullet Graph
+  href: bulletgraph.md
+  new: true
+- name: Linear Gauge
+  href: lineargauge.md
+  new: true
+- name: Radial Gauge
+  href: radialgauge.md
+  new: true
 - name: Styling & Themes
   header: true
 - name: Themes
-  href: themes.md
+  href: themes/index.md
   items:
     - name: Palettes
-      href: colors.md
+      href: themes/palette.md
+    - name: Global Themes
+      href: themes/global-theme.md
+    - name: Componenent Themes
+      href: themes/component-themes.md
     - name: Typography
-      href: typography.md
+      href: themes/typography.md
 - name: Shadows
   href: shadows.md
 - name: Data Entry & Display
@@ -171,7 +187,7 @@
 - name: Overlay
   href: overlay_main.md
   new: true
-  items: 
+  items:
   - name: Positioning Strategies
     href: overlay_position.md
     new: true

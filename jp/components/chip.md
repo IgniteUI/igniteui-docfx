@@ -7,7 +7,7 @@ _language: ja
 
 ### Chip
 
-`igxChip` は情報を楕円内に表示する小さい視覚的なコンポーネントです。Chip をテンプレート化、削除、または選択できます。複数の Chip を順序変更し、視覚的に接続できます。Chip は「チップ領域」と呼ばれるコンテナーに配置されます。このコンテナーは Chip の間の操作を管理します。
+`igxChip` は情報を小さな楕円内に表示する視覚的なコンポーネントです。Chip は、テンプレート化、削除、選択が可能で複数の Chip の順序を変更して視覚的に接続することもできます。Chip は「チップ領域」と呼ばれるコンテナーに配置され、このコンテナーは Chip の間の操作を管理します。
 
 #### デモ
 
@@ -21,7 +21,7 @@ _language: ja
 
 #### Chip の初期化
 
-The `IgxChipComponent` はチップ要素のメイン クラスで、`IgxChipsAreaComponent`はチップ領域のメイン クラスです。
+`IgxChipComponent` はチップ要素のメイン クラスで、`IgxChipsAreaComponent`はチップ領域のメイン クラスです。
 チップ領域はチップの間の操作 (ドラッグ、選択、ナビゲーションなど) が必要の複雑なシナリオの処理で使用されます。別の要素を識別するために `IgxChipComponent` で `id` を定義する必要があります。
 
 `igxChip` を `igxChipArea` と使用した例:
@@ -167,8 +167,8 @@ public chipsOrderChanged(event) {
   - <kbd>RIGHT</kbd> - 右側にあるチップをフォーカスします。
   - <kbd>SPACE</kbd> - チップが選択可能な場合、選択状態を切り替えます。
   - <kbd>DELETE</kbd> - チップの削除を手動的に処理するために `onRemove` 出力を発生します。
-  - <kbd>SHIFT</kbd> + <kbd>LEFT</kbd> - フォーカスされたチップの位置を 1 つ左に移動します。
-  - <kbd>SHIFT</kbd> + <kbd>RIGHT</kbd> - フォーカスされたチップの位置を 1 つ右に移動します。
+  - <kbd>SHIFT</kbd> + <kbd>LEFT</kbd> - フォーカスされたチップの位置を 1 つ左へ移動します。
+  - <kbd>SHIFT</kbd> + <kbd>RIGHT</kbd> - フォーカスされたチップの位置を 1 つ右へ移動します。
 
 - 削除ボタンがフォーカスされた場合のキーボード コントロール:
 

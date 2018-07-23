@@ -169,7 +169,7 @@ public onValidationFailed(timepicker){
 | `okButtonLabel` | string | [OK] ボタンをカスタム テキストで描画します。ボタンは選択した時間を保存し、timePicker 入力の値を設定します。デフォルトで `okButtonLabel` が `OK` に設定されます。|
 | `cancelButtonLabel` | string | [キャンセル] ボタンをカスタム テキストで描画します。ボタンはダイアログを閉じます。デフォルトで `cancelButtonLabel` が `Cancel` に設定されます。 |
 | `value` | Date | timePicker の値を取得または設定します。 |
-| `isDisabled` | boolean | timePicker を無効にします。 |
+| `disabled` | boolean | timePicker を無効にします。 |
 | `itemsDelta`| object | 時および分項目が表示されるデルタを取得または設定します。デフォルトで `itemsDelta` が `{hours:1, minutes:1}` に設定されます。 注:実行時では設定できません。 |
 | `minValue` | string | 最小値を取得または設定します。timePicker の `format` と一致する必要があります。 |
 | `maxValue` | string | 最大値の設定を取得します。timePicker の `format` と一致する必要があります。 |
