@@ -146,13 +146,13 @@ public selectDensity(event) {
 }
 ```
 
-As you may know another option that **IgxGrid** provides for you, in order to be able to change the height of the rows in the grid, is the property `rowHeight`. So let's see in action how this property affects the grid layout along with the `displayDensity` option.
+Another option that **IgxGrid** provides for you, in order to be able to change the height of the rows in the grid, is the property `rowHeight`. So let's see in action how this property affects the grid layout along with the `displayDensity` option.
 
 Please keep in mind the following:
  - `displayDensity` options will have **NO** impact on row height **if there is rowHeight specified**;
  - `displayDensity` will **affect all of the rest elements in the grid**, as it has been described above;
 
-And now we can extend our great sample some more and add `rowHeight` property to the grid:
+And now we can extend our sample and add `rowHeight` property to the grid:
  ```html
  <igx-grid #grid [data]="data" [displayDensity]="density" [rowHeight]="'80px'" width="100%" height="550px">
  ..............
