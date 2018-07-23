@@ -10,7 +10,9 @@ Ignite UI for Angular の Radial Gauge コンポーネントは、針、目盛�
 
 ### デモ
 
-このゲージは、スケール、針、目盛 (1 組)、ラベル (1 組) をサポートします。またラジアル ゲージ コントロールのすべての変更でアニメーションの機能が強化されています。アニメーションは、`transitionDuration` プロパティの設定で簡単にカスタマイズできます。針の図形パラメータを微調整して、多数の形状の針を作ることができます。以下のサンプルは、同じゲージでいくつかのプロパティを設定して全く異なるゲージにする方法を示します。
+ラジアルゲージ コンポーネントは、ゲージを表示するデータ ビジュアライゼーション ツールです。スケール、目盛り、ラベル、針、および範囲などの複数の視覚要素を含むことができます。このコンポーネントには、アニメーション化されたトランジションのサポートも組み込まれています。アニメーションは、`transitionDuration` プロパティの設定で簡単にカスタマイズできます。
+
+以下のサンプルは、同じゲージでいくつかのプロパティを設定して全く異なるゲージにする方法を示します。
 
 <div class="sample-container" style="height: 350px">
     <iframe id="radial-gauge-animation-iframe" src='{environment:demosBaseUrl}/radial-gauge-animation' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -21,12 +23,6 @@ Ignite UI for Angular の Radial Gauge コンポーネントは、針、目盛�
 </div>
 
 <div class="divider--half"></div>
-
-`minimumValue` と `maximumValue` 値を設定してスケールを作成し、`value` プロパティを設定して針の値を設定します。ゲージは、スケールの視覚的な合図である範囲もサポートします。
-
-ゲージには、スケールの後ろ側に描かれた背景図形があり、図形はゲージの背景として動作します。背景を真円やその他の変形した円形にできます。また、スケールをスイープできるように背景を固定することができ、ゲージのスケールの一部の背景にバッキングを提供することもできます。
-
-ゲージの針は、あらかじめ定義されたいくつかの図形の中から選択できます。ゲージの中心に位置されるピボット図形です。またピボット図形は、事前に定義された図形の 1 つを使用します。オーバーレイとアンダーレイを含むピボット図形には、図形に適用する別のピボット ブラシがあります。
 
 ### 依存関係
 
@@ -80,9 +76,11 @@ export class AppModule {}
 
 ### バッキング
 
+ゲージには、スケールの後ろ側に描かれた背景図形があり、図形はゲージの背景として動作します。
+
 バッキング要素はラジアル ゲージ コントロールの背景と境界線を表します。常に最初に描画される要素で針、ラベルやメモリなどの残りの要素はその上のオーバーレイです。
 
-この領域は、`backingShape` プロパティの設定で円形またフィットのいずれかにカスタマイズできます。円形の場合は 360 度の円形のゲージが作成されますが、一方フィット図形の場合は `scaleStartAngle` および `scaleEndAngle` プロパティで円弧部分が塗りつぶされます。
+バッキングは、円形またはフィットにできます。円形の場合は 360 度の円形のゲージが作成されますが、一方フィット図形の場合は `scaleStartAngle` および `scaleEndAngle` プロパティで円弧部分が塗りつぶされます。これには、`backingShape` プロパティを設定します。
 
 ```html
 <igx-radial-gauge
@@ -113,7 +111,7 @@ export class AppModule {}
 
 ### スケール
 
-スケールはゲージで値の全範囲を強調表示する視覚的な要素です。バッキングとともにゲージの全体的な図形を定義します。`scaleStartAngle` と `scaleEndAngle` プロパティは、スケールの円弧の境界線を定義します。`scaleSweepDirection` プロパティが、スケールが時計回りまたは反時計回りのどちらの方向に動くかを指定します。`scaleBrush`、`scaleStartExtent`、`scaleEndExtent` プロパティを設定してスケールの外観をカスタマイズできます。
+スケールは視覚要素で、`minimumValue` と `maximumValue` 値を設定してゲージの値範囲全体を強調表示できます。バッキングとともにゲージの全体的な図形を定義します。`scaleStartAngle` と `scaleEndAngle` プロパティは、スケールの円弧の境界線を定義します。`scaleSweepDirection` プロパティが、スケールが時計回りまたは反時計回りのどちらの方向に動くかを指定します。`scaleBrush`、`scaleStartExtent`、`scaleEndExtent` プロパティを設定してスケールの外観をカスタマイズできます。
 
 ```html
 <igx-radial-gauge
@@ -165,7 +163,7 @@ export class AppModule {}
 </div>
 
 ### 目盛
-目盛は、ラジアル ゲージの中央から放射状に表示される細い線です。目盛には、主目盛および副目盛の 2 種類があります。主目盛りは `minimumValue` と `maximumValue` の間の `interval` に表示されます。`minorTickCount` プロパティを使用して、隣接する 2 つの主目盛間の副目盛の数を指定します。目盛りの長さは、`tickStartExtent`、`tickEndExtent`、 `minorTickStartExtent`、`minorTickEndExtent` に少数値 (0 から 1 の間) を設定して制御できます。
+目盛は、ラジアル ゲージの中央から放射状に表示される細い線です。目盛には、主目盛および副目盛の 2 種類があり、主目盛りは `minimumValue` と `maximumValue` の間の `interval` に表示されます。また`minorTickCount` プロパティは、隣接する 2 つの主目盛間の副目盛の数を指定します。目盛りの長さは、`tickStartExtent`、`tickEndExtent`、 `minorTickStartExtent`、`minorTickEndExtent` に少数値 (0 から 1 の間) を設定して制御できます。
 
 ```html
 <igx-radial-gauge
@@ -226,7 +224,9 @@ export class AppModule {}
 </div>
 
 ### 針
-ゲージの針は、ゲージの設定値を表すために使用される視覚要素で、針キャップのオーバーレイまたはアンダーレイなどのゲージの針のピボット ポイントで構成されます。サポートされている針の形とキャップは、`needleShape` と `needlePivotShape` プロパティで設定します。
+ゲージ針は、ゲージの設定値を示す視覚要素です。針は、あらかじめ定義されたいくつかの図形の中から選択でき、ピボット図形をゲージの中心に配置できます。またピボット図形は、事前に定義された図形の 1 つを使用します。オーバーレイとアンダーレイを含むピボット図形には、図形に適用する別のピボット ブラシがあります。
+
+サポートされている針の形とキャップは、`needleShape` と `needlePivotShape` プロパティで設定します。
 
 ゲージのインタラクティブ モードを有効 (`isNeedleDraggingEnabled` プロパティを使用) にするとユーザーは `minimumValue` と `maximumValue` の値間で針をドラッグして値を変更できるようになります。
 
