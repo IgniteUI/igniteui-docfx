@@ -34,13 +34,13 @@ this.grid.displayDensity = "cosy";
 ...
 ```
 
-And now let's see in details how each option reflect on the grid component. When you switch between different density options the height of each grid element and the correcponding paddings will be changed.
- - **comfortable** - this is the default grid display density with the lowest intence and row height equal to `50px`. Left and Right paddings are `24px`;
- - **cosy** - this is the middle intence density with `40px` row height. Left and Right paddings are `16px`;
- - **compact** - this is the density with heighest intence and `32px` row height. left and Right paddings are `12px`;
+And now let's see in details how each option reflect on the grid component. When you switch between different density options the height of each grid element and the correcponding paddings will be changed. Also if you want to apply custom column **width**, plaese consider the fact that it must be bigger than sum of left and right padding.
+ - **comfortable** - this is the default grid display density with the lowest intence and row height equal to `50px`. Left and Right paddings are `24px`; Minimal column width is `48px`;
+ - **cosy** - this is the middle intence density with `40px` row height. Left and Right paddings are `16px`; Minimal column width is `32px`;
+ - **compact** - this is the density with heighest intence and `32px` row height. left and Right paddings are `12px`; Minimal column width is `24px`;
 
 > [!NOTE]
-> Please keep in mind that currently you **cannot** override any of the sizes.
+> Please keep in mind that currently you **can not** override any of the sizes.
 
 Let's now continue with our sample and see in action how the `displayDensity` is applied. Let's first add a button which will help us to switch between each density:
 
@@ -146,6 +146,19 @@ public selectDensity(event) {
 }
 ```
 
+As you may know another option that **IgxGrid** provides for you, in order to be able to change the height of the rows in the grid, is the property `rowHeight`. So let's see in action how this property affects the grid layout along with the `displayDensity` option.
+
+Please keep in mind the following:
+ - `displayDensity` options will have **NO** impact on row height **if there is rowHeight specified**;
+ - `displayDensity` will **affect all of the rest elements in the grid**, as it has been described above;
+
+And now we can extend our great sample some more and add `rowHeight` property to the grid:
+ ```html
+ <igx-grid #grid [data]="data" [displayDensity]="density" [rowHeight]="'80px'" width="100%" height="550px">
+ ..............
+ </igx-grid>
+
+ ```
 <div class="divider--half"></div>
 
 ### Additional Resources
