@@ -9,7 +9,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 Input groups in the Ignite UI for Angular controls allow developers to create easy-to-use and aesthetic forms. The user experiences simplicity with inputting data, and the inputs also provide mitigation for handling validation and errors.
 
 ### Input Group Demo
-<div class="sample-container" style="height:600px">
+<div class="sample-container" style="height:670px">
 <iframe id="input-group-sample-6-frame" src='{environment:demosBaseUrl}/input-group-sample-6' width="100%" height="100%" seamless frameBorder="0"></iframe>
 </div>
 <div>
