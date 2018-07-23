@@ -232,6 +232,7 @@ export class AppModule {}
 
 ```html
 <igx-radial-gauge
+    value=50
     isNeedleDraggingEnabled=true
     isNeedleDraggingConstrained=true
     needleShape="NeedleWithBulb"
@@ -239,15 +240,13 @@ export class AppModule {}
     needleOutline="DodgerBlue"
     needleEndExtent=0.475
     needleStrokeThickness=1
-
     needlePivotShape="CircleOverlay"
     needlePivotBrush="#9f9fa0"
     needlePivotOutline="#9f9fa0"
     needlePivotWidthRatio=0.2
     needlePivotStrokeThickness=1
-
     height="300px" width="300px"
-    minimumValue=0 value=50
+    minimumValue=0
     maximumValue=80 interval=10>
 </igx-radial-gauge>
 ```
@@ -259,3 +258,74 @@ export class AppModule {}
     <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="radial-gauge-needle-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
     </button>
 </div>
+
+### まとめ
+上記すべてのコード スニペットを以下のコード ブロックにまとめています。プロジェクトに簡単にコピーしてブレットグラフのすべての機能を再現できます。
+
+```html
+<igx-radial-gauge
+    height="300px" width="300px"
+    minimumValue=0
+    maximumValue=80
+    scaleStartAngle=135
+    scaleEndAngle=45
+    scaleBrush="#c6c6c6"
+    scaleSweepDirection="Clockwise"
+    scaleOversweep=1
+    scaleOversweepShape="Fitted"
+    scaleStartExtent=0.45
+    scaleEndExtent=0.575
+
+    value=70
+    isNeedleDraggingEnabled=true
+    isNeedleDraggingConstrained=true
+    needleShape="NeedleWithBulb"
+    needleBrush="DodgerBlue"
+    needleOutline="DodgerBlue"
+    needleEndExtent=0.475
+    needleStrokeThickness=1
+    needlePivotShape="CircleOverlay"
+    needlePivotBrush="#9f9fa0"
+    needlePivotOutline="#9f9fa0"
+    needlePivotWidthRatio=0.2
+    needlePivotStrokeThickness=1
+
+    interval=10
+    tickStartExtent=0.45
+    tickEndExtent=0.575
+    tickStrokeThickness=2
+    tickBrush="Black"
+    minorTickCount=4
+    minorTickEndExtent=0.5
+    minorTickStartExtent=0.575
+    minorTickStrokeThickness=1
+    minorTickBrush="Black"
+
+    labelExtent=0.65
+    labelInterval=10
+    font="11px Verdana"
+    fontBrush="Black"
+
+    backingShape="Fitted"
+    backingBrush="#ededed"
+    backingOutline="Gray"
+    backingOversweep=5
+    backingCornerRadius=10
+    backingStrokeThickness=5
+    backingOuterExtent=0.8
+    backingInnerExtent=0.15
+
+    rangeBrushes ="#a4bd29, #F86232"
+    rangeOutlines="#a4bd29, #F86232">
+    <igx-radial-gauge-range
+        startValue=20 endValue=40
+        innerStartExtent=0.45 innerEndExtent=0.45
+        outerStartExtent=0.57 outerEndExtent=0.57>
+    </igx-radial-gauge-range>
+    <igx-radial-gauge-range
+        startValue=40 endValue=60
+        innerStartExtent=0.45 innerEndExtent=0.45
+        outerStartExtent=0.57 outerEndExtent=0.57>
+    </igx-radial-gauge-range>
+</igx-radial-gauge>
+```
