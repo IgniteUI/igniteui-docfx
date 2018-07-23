@@ -38,10 +38,10 @@ this.grid.displayDensity = "cosy";
 ...
 ```
 
-各オプションをグリッドに反映する方法を紹介します。表示密度オプション間で切り替える際に各グリッド要素の高さとそのパッディングが変更されます。
- - **comfortable** - デフォルトのグリッド表示密度です。密度が最も低く、行の高さが `50px` です。Left および Right パッディングは `24px` です。
- - **cosy** - 中密度で、行の高さが `40px` です。Left および Right パッディングは `16px` です。
- - **compact** - 密度が最も高く、行の高さが `32px` で、Left および Right パッディングは `12px` です。
+各オプションをグリッドに反映する方法を紹介します。表示密度オプション間で切り替える際に各グリッド要素の高さとそのパッディングが変更されます。 Also if you want to apply custom column **width**, plaese consider the fact that it must be bigger than the sum of left and right padding.
+ - **comfortable** - デフォルトのグリッド表示密度です。密度が最も低く、行の高さが `50px` です。Left および Right パッディングは `24px` です。Minimal column width is `48px`;
+ - **cosy** - 中密度で、行の高さが `40px` です。Left および Right パッディングは `16px` です。Minimal column width is `32px`;
+ - **compact** - 密度が最も高く、行の高さが `32px` で、Left および Right パッディングは `12px` です。 Minimal column width is `24px`;
 
 > [!NOTE]
 > 注: 現在サイズはオーバーライド**できません**。

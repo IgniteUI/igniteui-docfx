@@ -34,7 +34,7 @@ this.grid.displayDensity = "cosy";
 ...
 ```
 
-And now let's see in details how each option reflect on the grid component. When you switch between different density options the height of each grid element and the correcponding paddings will be changed. Also if you want to apply custom column **width**, plaese consider the fact that it must be bigger than sum of left and right padding.
+And now let's see in details how each option reflect on the grid component. When you switch between different density options the height of each grid element and the correcponding paddings will be changed. Also if you want to apply custom column **width**, plaese consider the fact that it must be bigger than the sum of left and right padding.
  - **comfortable** - this is the default grid display density with the lowest intence and row height equal to `50px`. Left and Right paddings are `24px`; Minimal column width is `48px`;
  - **cosy** - this is the middle intence density with `40px` row height. Left and Right paddings are `16px`; Minimal column width is `32px`;
  - **compact** - this is the density with heighest intence and `32px` row height. left and Right paddings are `12px`; Minimal column width is `24px`;
