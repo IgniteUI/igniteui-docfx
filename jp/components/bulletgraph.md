@@ -188,10 +188,9 @@ export class AppModule {}
 
 ```html
 <igx-bullet-graph
-    height="80px" width="400px"
+   height="80px" width="400px"
     minimumValue=0 value=70 interval=10
     maximumValue=100 targetValue=90
-
     labelInterval=10
     labelExtent=0.025
     labelsPreTerminal=0
@@ -215,14 +214,20 @@ export class AppModule {}
 ```html
 <igx-bullet-graph
     height="80px" width="400px"
-    minimumValue=0 value=70 interval=10
+    minimumValue=0 value=70
     maximumValue=100 targetValue=90
-
-    backingBrush="#bddcfc"
-    backingOutline="DodgerBlue"
-    backingStrokeThickness=4
-    backingInnerExtent=0
-    backingOuterExtent=1>
+    interval=10
+    tickBrush="DodgerBlue"
+    ticksPreTerminal=0
+    ticksPostInitial=0
+    tickStrokeThickness=2
+    tickStartExtent=0.2
+    tickEndExtent=0.075
+    minorTickCount=4
+    minorTickBrush="DarkViolet"
+    minorTickEndExtent=0.1
+    minorTickStartExtent=0.2
+    minorTickStrokeThickness=1>
 </igx-bullet-graph>
 ```
 
@@ -258,3 +263,78 @@ export class AppModule {}
     <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="bullet-graph-scale-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
     </button>
 </div>
+
+### まとめ
+上記すべてのコード スニペットを以下のコード ブロックにまとめています。プロジェクトに簡単にコピーしてブレットグラフのすべての機能を再現できます。
+
+```html
+<igx-bullet-graph
+    height="80px" width="400px"
+    minimumValue=0
+    maximumValue=100
+    isScaleInverted=false
+    scaleBackgroundBrush="Gray"
+    scaleBackgroundOutline="Gray"
+    scaleBackgroundThickness=2
+    scaleStartExtent=0.05
+    scaleEndExtent=0.95
+
+    value=50
+    valueBrush="Black"
+    valueStrokeThickness=1
+    valueInnerExtent=0.5
+    valueOuterExtent=0.65
+    targetValue=80
+    targetValueBreadth=7.5
+    targetValueBrush="Black"
+    targetValueOutline="Black"
+    targetValueStrokeThickness=1
+    targetValueInnerExtent=0.3
+    targetValueOuterExtent=0.85
+
+    labelInterval=10
+    labelExtent=0.025
+    labelsPreTerminal=0
+    labelsPostInitial=0
+    fontBrush="Black"
+    font="11px Verdana"
+
+    backingBrush="#cecece"
+    backingOutline="#cecece"
+    backingStrokeThickness=4
+    backingInnerExtent=0
+    backingOuterExtent=1
+
+    interval=10
+    tickBrush="Black"
+    ticksPreTerminal=0
+    ticksPostInitial=0
+    tickStrokeThickness=2
+    tickStartExtent=0.2
+    tickEndExtent=0.075
+
+    minorTickCount=4
+    minorTickBrush="Black"
+    minorTickEndExtent=0.1
+    minorTickStartExtent=0.2
+    minorTickStrokeThickness=1
+
+    rangeBrushes ="#C62828, #F96232, #FF9800"
+    rangeOutlines="#C62828, #F96232, #FF9800">
+    <igx-linear-graph-range
+        startValue=20 endValue=40
+        innerStartExtent=0.25 innerEndExtent=0.25
+        outerStartExtent=0.9 outerEndExtent=0.9>
+    </igx-linear-graph-range>
+    <igx-linear-graph-range
+        startValue=40 endValue=60
+        innerStartExtent=0.25 innerEndExtent=0.25
+        outerStartExtent=0.9 outerEndExtent=0.9>
+    </igx-linear-graph-range>
+    <igx-linear-graph-range
+        startValue=60 endValue=90
+        innerStartExtent=0.25 innerEndExtent=0.25
+        outerStartExtent=0.9 outerEndExtent=0.9>
+    </igx-linear-graph-range>
+</igx-bullet-graph>
+```
