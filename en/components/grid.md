@@ -361,6 +361,7 @@ Below is the list of all inputs that the developers may set to configure the gri
 |`groupsRowList`| QueryList<IgxGridGroupByRowComponent> | A list of visible group rows.|
 |`groupsRecords`| IGroupByRecord[] | All groups in hierarchy reflecting the current groups state. |
 |`displayDensity`| DisplayDensity or string | Define the display density of the grid. Can be set to `compact`, `cosy` or `comfortable`.|
+|`rowHeight`|string| Set the height of the rows. The height is always in **pixels**.|
 
 
 <div class="divider--half"></div>
@@ -426,20 +427,21 @@ Here is a list of all public methods exposed by **igx-grid**:
 |`disableSummaries(fieldName: string)`|Disable summaries for the specified column.|
 |`disableSummaries(columns: string[])`|Disable summaries for the listed columns.|
 |`clearSummaryCache()`|Delete all cached summaries and force recalculation.|
+|`recalculateSummaries()`|Triggers the grid to recalculate summaryArea.|
 |`previousPage()`|Goes to the previous page if paging is enabled and the current page is not the first.|
 |`nextPage()`|Goes to the next page if paging is enabled and current page is not the last.|
 |`paginate(page: number)`|Goes to the specified page if paging is enabled. Page indices are 0 based.|
 |`markForCheck()`|Manually triggers a change detection cycle for the grid and its children.|
 |`pinColumn(name: string): boolean`|Pins a column by field name. Returns whether the operation is successful.|
 |`unpinColumn(name: string): boolean`|Unpins a column by field name. Returns whether the operation is successful.|
-|`groupBy(expression: ISortingExpression)`| Groups by a new column based on the provided expression or modifies an existing one.
-|`groupBy(expressions: Array)`| Groups columns based on the provided array of sorting expressions.
-|`clearGrouping()`| Clears all grouping in the grid.
-|`clearGrouping(fieldName: string)`| Clear grouping from a particular column.
-|`isExpandedGroup(group: IGroupByRecord )`| Returns if a group is expanded or not.
-|`toggleGroup(group: IGroupByRecord)`| Toggles the expansion state of a group.
-|`getGroup(field: string, value: any)`| Gets a group record by its composite key.
-|`toggleAllGroupRows()`| Toggles the expansion state of all group rows recursively.
+|`groupBy(expression: ISortingExpression)`| Groups by a new column based on the provided expression or modifies an existing one.|
+|`groupBy(expressions: Array)`| Groups columns based on the provided array of sorting expressions.|
+|`clearGrouping()`| Clears all grouping in the grid.|
+|`clearGrouping(fieldName: string)`| Clear grouping from a particular column.|
+|`isExpandedGroup(group: IGroupByRecord )`| Returns if a group is expanded or not.|
+|`toggleGroup(group: IGroupByRecord)`| Toggles the expansion state of a group.|
+|`getGroup(field: string, value: any)`| Gets a group record by its composite key.|
+|`toggleAllGroupRows()`| Toggles the expansion state of all group rows recursively.|
 
 <div class="divider--half"></div>
 

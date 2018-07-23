@@ -427,6 +427,7 @@ export class MyComponent implements OnInit {
 |`disableSummaries(fieldName: string)`|指定した列で集計を無効にします。|
 |`disableSummaries(columns: string[])`|配列の列で集計を無効にします。|
 |`clearSummaryCache()`|すべてのキャッシュされた集計を削除し、再計算を実行します。|
+|`recalculateSummaries()`|Triggers the grid to recalculate summaryArea.|
 |`previousPage()`|ページングが有効で、現在のページが最初のページではない場合に前のページに移動します。|
 |`nextPage()`|ページングが有効で、現在のページが最後のページではない場合に次のページに移動します。|
 |`paginate(page: number)`|ページングが有効な場合、指定したページに移動します。ページ インデックスは 0 から開始します。|

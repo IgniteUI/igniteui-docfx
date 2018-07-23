@@ -38,10 +38,10 @@ this.grid.displayDensity = "cosy";
 ...
 ```
 
-各オプションをグリッドに反映する方法を紹介します。表示密度オプション間で切り替える際に各グリッド要素の高さとそのパッディングが変更されます。
- - **comfortable** - デフォルトのグリッド表示密度です。密度が最も低く、行の高さが `50px` です。Left および Right パッディングは `24px` です。
- - **cosy** - 中密度で、行の高さが `40px` です。Left および Right パッディングは `16px` です。
- - **compact** - 密度が最も高く、行の高さが `32px` で、Left および Right パッディングは `12px` です。
+各オプションをグリッドに反映する方法を紹介します。表示密度オプション間で切り替える際に各グリッド要素の高さとそのパッディングが変更されます。 Also if you want to apply custom column **width**, plaese consider the fact that it must be bigger than the sum of left and right padding.
+ - **comfortable** - デフォルトのグリッド表示密度です。密度が最も低く、行の高さが `50px` です。Left および Right パッディングは `24px` です。Minimal column width is `48px`;
+ - **cosy** - 中密度で、行の高さが `40px` です。Left および Right パッディングは `16px` です。Minimal column width is `32px`;
+ - **compact** - 密度が最も高く、行の高さが `32px` で、Left および Right パッディングは `12px` です。 Minimal column width is `24px`;
 
 > [!NOTE]
 > 注: 現在サイズはオーバーライド**できません**。
@@ -149,6 +149,20 @@ public selectDensity(event) {
 
 }
 ```
+
+Another option that **IgxGrid** provides for you, in order to be able to change the height of the rows in the grid, is the property `rowHeight`. So let's see in action how this property affects the grid layout along with the `displayDensity` option.
+
+Please keep in mind the following:
+ - `displayDensity` options will have **NO** impact on row height **if there is rowHeight specified**;
+ - `displayDensity` will **affect all of the rest elements in the grid**, as it has been described above;
+
+And now we can extend our sample and add `rowHeight` property to the grid:
+ ```html
+ <igx-grid #grid [data]="data" [displayDensity]="density" [rowHeight]="'80px'" width="100%" height="550px">
+ ..............
+ </igx-grid>
+
+ ```
 
 <div class="divider--half"></div>
 
