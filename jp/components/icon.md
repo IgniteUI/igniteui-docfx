@@ -87,9 +87,9 @@ CSS でアイコン サイズを設定するには、カスタム CSS を作成�
 以下の入力は、**igx-icon** コンポーネントで使用できます。
 | 名前   |       型      |  説明 |
 |:----------|:-------------:|:------|
-| `name` |  string | アイコンを設定するには、名前を公式の[マテリアル アイコン セット]から提供します。(https://material.io/icons/)|
-| `iconName` |  string | アイコンの `glyphName` を設定します。ligature `name` またはグリフ `iconName を使用できますが、同時には使用できません。|
-| `fontSet` |  string | `fontSet` の値を設定します。デフォルトは、"material です。|
+| `name` |  string | アイコンを設定するには、名前を公式の[マテリアル アイコン セット](https://material.io/icons/)から提供します。|
+| `iconName` |  string | アイコンの `glyphName` を設定します。ligature `name` またはグリフ `iconName` を使用できますが、同時には使用できません。|
+| `fontSet` |  string | `fontSet` の値を設定します。デフォルトは、"material" です。|
 | `active` |  boolean | アイコンをアクティブ/非アクティブに設定します。デフォルトは true です。|
 | `color` |  string | 文字列値を指定してアイコンの色を設定します。 |
 <div class="divider--half"></div>
