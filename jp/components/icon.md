@@ -83,38 +83,26 @@ CSS でアイコン サイズを設定するには、カスタム CSS を作成�
 
 この記事で Icon コンポーネントを説明しました。以下は、その他の API のリストです。
 
-#### 属性
-
-次の属性を使用して、アイコン コンポーネントのすべてのプロパティに設定できます。
-
-| 名前   |       例      |  説明 |
+####Inputs
+The following inputs are available on the **igx-icon** component:
+| Name   |       Type      |  Description |
 |:----------|:-------------:|:------|
-| `name` |  `name="home"` | アイコンを設定するには、名前を公式の[マテリアル アイコン セット](https://material.io/icons/)から提供します。 |
-| `active` |  `[isActive]="false"` | アイコンをアクティブ/非アクティブ状態に設定します。デフォルト値は true です。 |
-| `color` |  `color="#474747"` | 文字列値を指定してアイコンの色を設定します。 |
-
+| `name` |  string | Set the icon by providing its name from the official [material icons set](https://material.io/icons/) . |
+| `iconName` |  string | Set the `glyphName` of the icon. You can provide either ligature `name` or glyph `iconName`, but not both at the same time. |
+| `fontSet` |  string | Set the value of the `fontSet`. By default it's "material".
+| `active` |  boolean | Set the icon to active/inactive state (default is true). |
+| `color` |  string | Set the icon color by providing a string value. |
 <div class="divider--half"></div>
 
-#### セッター
-
-アイコンのすべてのプロパティを以下のアイコン セッターによってコードで設定できます。
-
-| 名前 | 型 | 説明 |
+####Getters
+The following getters are available on the **igx-icon** component:
+| Name | Type | Description |
 | :--- | :--- | :--- |
-| `color(color: string)` | string | アイコンの色を設定します。 |
-| `name(icon: string)` | string | アイコンの名前を設定します。 |
-| `isActive(state: boolean)` | boolean | false に設定される場合にアイコン スタイルを非アクティブに設定します。 |
-
-#### ゲッター
-
-アイコンのすべてのプロパティを以下のアイコン ゲッターによってコードで取得できます。
-
-| 名前 | 型 | 説明 |
-| :--- | :--- | :--- |
-| `getIconColor()` | string | アイコンの色を返します。 |
-| `getIconName()` | string | アイコンの名前を返します。 |
-| `getActive()` | boolean | アイコンのアクティブ状態を返します。 |
-
+| `getFontSet()` | string | Returns the icon font. |
+| `getIconColor()` | string | Returns the icon color. |
+| `getIconName()` | string | Returns the icon name. |
+| `getActive()` | boolean | Returns the icon active state. |
+| `getInactive()` | boolean | Returns the icon inactive state. |
 <div class="divider"></div>
 
 ### 追加のリソース
