@@ -6,7 +6,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ## Tabs
 
-The `igxTabs` component in Ignite UI for Angular is used to organize or switch between similar data sets. It functions as a wrapper for `igx-tab-item` and `igx-tabs-group`, as these respectively represent the container for the data and the tab header. The tabs component also places tabs at the top and allows for scrolling when there are multiple tab items on the screen.
+The `igxTabs` component in Ignite UI for Angular is used to organize or switch between similar data sets. It functions as a wrapper for `igx-tab-item` and `igx-tabs-group`, as these respectively represent the container for the data and the tab header. The tabs component places tabs at the top and allows scrolling when there are multiple tab items on the screen.
 
 ### Tabs Demo
 <div class="sample-container loading" style="height: 250px; width: 600px;">
@@ -66,8 +66,8 @@ If the sample is configured properly, the final result should look like that:
 ### Tabs Types
 There are two types of tabs. Set the `tabsType` input to choose between fixed and content-fit tabs.
 - **Content-fit tabs** (default): the width of the tab header depends on the content (label, icon, both) and all tabs have equal padding.
-Nevertheless what type of tabs you have choose, the tab header width is limited by the specified min and max width. 
-- **Fixed tabs**: all tab headers are with equal width and fit in the tabs component. If the provided space is not enough for all items, scroll buttons are displayed.
+Nevertheless what type of tabs you have chosen, the tab header width is limited by the specified min and max width. 
+- **Fixed tabs**: all tab headers are with equal width and fit in the tabs container. If the provided space is not enough for all items, scroll buttons are displayed.
 
 ```html
 <div class="items-wrapper__item items-wrapper__item-small items-wrapper__item--blue">
