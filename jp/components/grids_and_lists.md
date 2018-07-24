@@ -1,4 +1,4 @@
----
+﻿---
 title: Data Grids および Lists コンポーネント
 _description: Ignite UI for Angular は、高速な Angular Data Grid と描画、パワフルな Angular グリッドにマテリアル ベースのコンポーネントです。
 _keywords: Ignite UI for Angular, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular グリッド, Angular データグリッド, Angular グリッドコントロール, Angular グリッドコンポーネント
@@ -193,7 +193,7 @@ _language: ja
   <div class="feature">
     <div class="feature__image feature__image--right">
       <img class="b-lazy" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-lazy-load.png" data-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-groupby-768.jpg" data-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-groupby-480.jpg 480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-groupby-768.jpg 768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-groupby-1100.jpg 1100w" sizes="(min-width: 1800px) 575px,(max-width: 1799px) and (min-width: 1200px) 50vw,(max-width: 1199px) and (min-width: 992px) 33vw,(max-width: 991px) and (min-width: 768px) 50vw, 100vw" alt="Group columns by header in Angular Data Grid">
-      <a href="grid_groupby.md" class="feature__more-details">列グループ化の概要/a>
+      <a href="grid_groupby.md" class="feature__more-details">列グループ化の概要</a>
     </div>
     <div class="feature__details">
       <h3 id="group-by">[グループ化](grid_groupby.md)</h3>
@@ -305,7 +305,7 @@ _language: ja
   <div class="feature">
     <div class="feature__image feature__image--right">
       <img class="b-lazy b-lazy-gifs" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-lazy-load.png" data-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-column-moving-768.jpg" data-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-column-moving-480.jpg 480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-column-moving-768.jpg 768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-column-moving-1100.jpg 1100w" data-gif-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-column-moving-768.gif" data-gif-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-column-moving-480.gif  480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-column-moving-768.gif 768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-column-moving-1100.gif 1100w" sizes="(min-width: 1800px) 575px,(max-width: 1799px) and (min-width: 1200px) 50vw,(max-width: 1199px) and (min-width: 992px) 33vw,(max-width: 991px) and (min-width: 768px) 50vw, 100vw" alt="Move columns in the Angular Data Grid.">
-      <a href="grid_column_moving.md" class="feature__more-details">Column Moving documentation</a>
+      <a href="grid_column_moving.md" class="feature__more-details">列移動のヘルプ</a>
     </div>
     <div class="feature__details">
       <h3 id="column-moving">[列移動](grid_column_moving.md)</h3>
@@ -316,7 +316,7 @@ _language: ja
   <div class="feature">
     <div class="feature__image feature__image--left">
       <img class="b-lazy" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-lazy-load.png" data-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-export-to-excel-768.jpg" data-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-export-to-excel-480.jpg 480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-export-to-excel-768.jpg 768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-export-to-excel-1100.jpg 1100w" sizes="(min-width: 1800px) 575px,(max-width: 1799px) and (min-width: 1200px) 50vw,(max-width: 1199px) and (min-width: 992px) 33vw,(max-width: 991px) and (min-width: 768px) 50vw, 100vw" alt="Data Grid supporting Excel exporting.">
-      <a href="exporter_excel.md" class="feature__more-details">Angular Data Grid のExcel エクスポート</a>
+      <a href="exporter_excel.md" class="feature__more-details">Angular Data Grid の Excel エクスポート</a>
     </div>
     <div class="feature__details">
       <h3 id="column-moving">[Excel/CSV/TSV へエクスポート](exporter_excel.md)</h3>
