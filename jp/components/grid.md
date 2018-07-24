@@ -361,6 +361,8 @@ export class MyComponent implements OnInit {
 |`groupsRowList`| QueryList<IgxGridGroupByRowComponent> | 表示されるグループ行のリスト。|
 |`groupsRecords`| IGroupByRecord[] | 現在のグループの状態に基づいて階層のすべてのグループ。|
 |`displayDensity`| DisplayDensity または string | グリッドの表示密度を定義します。`compact`、`cosy`、または `comfortable` に設定できます。|
+|`rowHeight`|string| 行の高さを設定します。高さは常に**ピクセル**単位です。|
+
 
 <div class="divider--half"></div>
 
@@ -427,7 +429,7 @@ export class MyComponent implements OnInit {
 |`disableSummaries(fieldName: string)`|指定した列で集計を無効にします。|
 |`disableSummaries(columns: string[])`|配列の列で集計を無効にします。|
 |`clearSummaryCache()`|すべてのキャッシュされた集計を削除し、再計算を実行します。|
-|`recalculateSummaries()`|Triggers the grid to recalculate summaryArea.|
+|`recalculateSummaries()`|summaryArea を再計算するためにグリッドをトリガーします。|
 |`previousPage()`|ページングが有効で、現在のページが最初のページではない場合に前のページに移動します。|
 |`nextPage()`|ページングが有効で、現在のページが最後のページではない場合に次のページに移動します。|
 |`paginate(page: number)`|ページングが有効な場合、指定したページに移動します。ページ インデックスは 0 から開始します。|

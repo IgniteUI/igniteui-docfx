@@ -76,7 +76,7 @@ public disableSummary() {
     this.grid1.disableSummaries("ProductName");
 }
 ```
-Note: There is an option to enable or disable summaries for specific column runtime by changing the `hasSummary` property from `false` to `true` or vice versa, but it's necessary to explicitly call the method `recalculateSummaries()`.
+注: `hasSummary` プロパティを `false` から `true` (`true` から `false`) に変更して、特定列の集計をランタイムで有効または無効にするオプションがあります。ただし、`recalculateSummaries()` メソッドを明示的に呼び出す必要があります。
 
 ```html
 <igx-grid #grid1 [data]="data" [autoGenerate]="false" height="800px" width="800px" (onColumnInit)="initColunm($event)" >
