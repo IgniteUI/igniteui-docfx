@@ -38,7 +38,7 @@ import { IgxTabsModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-Then, specify three tabs groups with `label` and content.
+Then, specify several tabs groups with `label` and content.
 
 ```html
 <igx-tabs>
