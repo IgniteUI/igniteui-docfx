@@ -56,7 +56,7 @@ The following code snippet demonstrates how to enable all features of the toolba
     [exportExcel]="true"
     [exportCsv]="true"
     exportText="Export"
-    exportExcelText="Export to Excel"
+    exportExcelText="Integration with Excel"
     exportCsvText="Export to CSV">
 </igx-grid>
 ```

@@ -47,8 +47,8 @@
     - name: Toolbar
       href: grid_toolbar.md
       new: true
-    - name: Export to Excel
-      href: exporter_excel.md
+    - name: Integration with Excel
+      href: integration_excel.md
       new: false
     - name: Multi Column Headers
       href: grid_multi_column_headers.md
@@ -235,6 +235,6 @@
 - name: CSV Exporter
   href: exporter_csv.md
   new: false
-- name: Excel Exporter
-  href: exporter_excel.md
+- name: Integration with Excel
+  href: integration_excel.md
   new: false
