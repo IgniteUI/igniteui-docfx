@@ -213,8 +213,8 @@ The following inputs are available in the **igx-tabs-group** component:
 The following outputs are available on the **igx-tabs** component:
 | Name | Type | Description |
 | :--- | :--- | :--- |
-| `onTabItemSelected` | EventEmitter | Emits an event when a tab item is selected. |
-| `onTabItemDeselected` | EventEmitter | Emits an event when a tab item is deselected. |
+| `onTabItemSelected` | EventEmitter | Emits an event when a tab item is selected. Returns the selected `IgxTabItemComponent` and `IgxTabsGroupComponent`. |
+| `onTabItemDeselected` | EventEmitter | Emits an event when a tab item is deselected. Returns the deselected `IgxTabItemComponent` and `IgxTabsGroupComponent`.|
 
 <div class="divider"></div>
 
