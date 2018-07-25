@@ -1,16 +1,23 @@
 ---
-title: Export to Excel Component - Native Angular | Ignite UI for Angular
-_description: Users can export their data for editing or offline presentation can do so in Excel format with the Export to Excel Ignite UI for Angular component.
+title: Integration with Excel Component - Native Angular | Ignite UI for Angular
+_description: Users can export their data for editing or offline presentation can do so in Excel format with the Integration with Excel Ignite UI for Angular component.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Controls, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Grid, Angular Data Grid, Angular Grid Control, Angular Grid Component, Excel Export, Angular Excel Component, Angular Export Excel
 ---
 
-## Excel Exporter
+## Integration with Excel
+
+<p class="highlight">
+The Ignite UI for Angular `IgxGrid` can read and write data from Microsoft® Excel®. 
+</p>
+<div class="divider"></div>
+
+### Excel Exporter
 
 <p class="highlight">
 The Ignite UI for Angular Excel Exporter service can export data in Microsoft® Excel® format from both raw data (array) or from an `IgxGrid`. The exporting functionality is encapsulated in the `IgxExcelExporterService` class and the data is exported in MS Excel table format. This format allows features like filtering, sorting, etc.</p>
 <div class="divider"></div>
 
-### Excel Exporter Demo
+#### Excel Exporter Demo
 
 <div class="sample-container loading" style="height: 100px;">
     <iframe id="excel-export-sample-iframe" src="{environment:demosBaseUrl}/export-excel"
@@ -22,7 +29,7 @@ The Ignite UI for Angular Excel Exporter service can export data in Microsoft® 
 </div>
 <div class="divider--half"></div>
 
-### Usage
+#### Usage
 
 To start using the IgniteUI Excel Exporter first import the **IgxExcelExporterService** in the **app.module.ts** file and add the service to the `providers` array:
 
@@ -76,7 +83,7 @@ public exportButtonHandler() {
 If all went well, you should see an export button. When pressed, it will trigger the export process and the browser will download a file named "ExportedDataFile.xlsx" which contains the data from the `localData` array in MS Excel format. 
 
 
-### Exporting IgxGrid's Data
+#### Exporting IgxGrid's Data
 
 The Excel Exporter service can also export data in MS Excel format from an `IgxGrid`. The only difference is that you need to invoke the 
 `IgxExcelExporterService`'s `export` method and pass the `IgxGrid` as first argument.
@@ -124,7 +131,7 @@ public exportButtonHandler() {
 
 
 
-### Customizing the Exported Content
+#### Customizing the Exported Content
 
 In the above examples the Excel Exporter service was exporting all available data. There are situations in which you may want to skip exporting a row or even an entire column. To achieve this you may hook to the `onColumnExport` and/or `onRowExport` events which are fired respectively for each column and/or each row and cancel the respective event by setting the event argument object's `cancel` property to `true`.
 
@@ -143,11 +150,11 @@ this.excelExportService.export(this.igxGrid1, new IgxExcelExporterOptions("Expor
 
 When you are exporting data from `IgxGrid` the export process takes in account features like row filtering and column hiding and exports only the data visible in the grid. You can configure the exporter service to include filtered rows or hidden columns by setting properties on the `IgxExcelExporterOptions` object. These properties are described in the table below.
 
-### API Summary
+#### API Summary
 
 The Excel Exporter service has a few more APIs to explore, which are listed below.
 
-#### Inputs
+##### Inputs
 
 The following inputs are available on the **IgxExcelExporterService** component:
 | Name | Type | Description |
@@ -172,7 +179,7 @@ The following inputs are available on the **IgxExcelExporterOptions** component:
 
 <div class="divider"></div>
 
-#### Outputs
+##### Outputs
 
 The following outputs are available on the **IgxExcelExporterService** component:
 | Name | Type | Description |
@@ -182,6 +189,222 @@ The following outputs are available on the **IgxExcelExporterService** component
 | `onExportEnded` | EventEmitter<`IExcelExportEndedEventArgs`> | Emitted when the excel file has been exported. |
 
 <div class="divider"></div>
+
+### Paste from Excel
+
+The Ignite UI for Angular `IgxGrid` can read Excel data that is copied to the clipboard. In this section we will show you how to do this with some custom code.
+
+#### Paste from Excel Demo
+
+This sample demonstrates how to implement pasting from Excel into the `igxGrid`. 
+To work with the sample open up any Excel spreadsheet, copy some rows, and paste it into the grid using the keyboard (Ctrl + V, Shift + Insert, Command + V).
+
+On the top there is a dropdown button with 2 options:
+<ol>
+<li>"Paste data as new rows" – in this mode any data copied from Excel will be appended to the grid as new rows</li>
+<li>"Paste starting from active cell" – in this mode the data in the grid will be overwritten.</li>
+</ol>
+
+The new data after the paste is decorated in Italic.
+
+<div class="sample-container loading" style="height: 550px;">
+    <iframe id="excel-paste-sample-iframe" src="{environment:demosBaseUrl}/grid-paste"
+        width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="excel-paste-sample-iframe"
+    data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider"></div>
+
+#### Usage
+
+You should add the `paste-handler` directive to the `igxGrid` and handle its `onDataProcessed` event.
+
+```html
+<igx-grid #grid1 [data]="data" [width]="'100%'" [height]="'505px'" [autoGenerate]="false" paste-handler (onDataProcessed)="dataPasted($event)" [primaryKey]="'ID'">
+    <igx-column [field]="'ID'" [hidden]="true"></igx-column>
+    <igx-column [field]="'Name'"></igx-column>
+    <igx-column [field]="'Title'"></igx-column>
+    <igx-column [field]="'Phone'"></igx-column>
+    <igx-column [field]="'Country'"></igx-column>
+</igx-grid>
+```
+
+```typescript
+    public dataPasted(processedData) {
+        if (this.pasteMode === "Paste data as new records") {
+            this.addRecords(processedData);
+        } else {
+            this.updateRecords(processedData);
+        }
+    }
+
+    public addRecords(processedData: any[]) {
+        const columns = this.grid1.visibleColumns;
+        const pk = this.grid1.primaryKey;
+        const addedData = [];
+        for (const curentDataRow of processedData) {
+            const rowData = {};
+            for (const col of columns) {
+                rowData[col.field] = curentDataRow[col.visibleIndex];
+            }
+            // generate PK
+            rowData[pk] = this.grid1.data.length + 1;
+            this.grid1.addRow(rowData);
+            addedData.push(rowData);
+            this.grid1.cdr.detectChanges();
+        }
+        // scroll to last added row
+        this.grid1.verticalScrollContainer.scrollTo(this.grid1.data.length);
+
+        this.grid1.verticalScrollContainer.onChunkLoad.pipe(take(1)).subscribe(() => {
+            this.clearStyles();
+            for (const data of addedData) {
+                const row = this.grid1.getRowByKey(data[pk]);
+                if (row) {
+                    row.nativeElement.style["font-style"] = "italic";
+                    row.nativeElement.style.color = "gray";
+                }
+            }
+        });
+    }
+    public updateRecords(processedData: any[]) {
+        const cell = this.grid1.selectedCells[0];
+        const pk = this.grid1.primaryKey;
+        if (!cell) { return; }
+        const rowIndex = cell.row.index;
+        // const rowPkValue = cell.row.rowData[pk];
+        const cellIndex = cell.column.visibleIndex;
+        const columns = this.grid1.visibleColumns;
+        let index = 0;
+        const updatedRecsPK = [];
+        for (const curentDataRow of processedData) {
+            const rowData = {};
+            const dataRec = this.grid1.data[rowIndex + index];
+            const rowPkValue = dataRec ? dataRec[pk] : this.grid1.data.length + 1;
+            rowData[pk] = rowPkValue;
+            for (let j = 0; j < columns.length; j++) {
+                let currentCell;
+                if (j >= cellIndex) {
+                    currentCell = curentDataRow.shift();
+                }
+                const colKey = columns[j].field;
+                rowData[colKey] = currentCell || (!!dataRec ? dataRec[colKey] : null);
+            }
+            if (!dataRec) {
+                // no rec to update, add instead
+                rowData[pk] = rowPkValue;
+                this.grid1.addRow(rowData);
+                continue;
+            }
+            this.grid1.updateRow(rowData, rowPkValue);
+            this.grid1.cdr.detectChanges();
+            updatedRecsPK.push(rowPkValue);
+            index++;
+        }
+
+        this.clearStyles();
+        for (const pkVal of updatedRecsPK) {
+            const row = this.grid1.getRowByKey(pkVal);
+            if (row) {
+            row.nativeElement.style["font-style"] = "italic";
+            row.nativeElement.style.color = "gray";
+            }
+        }
+    }
+
+    protected clearStyles() {
+        for (const row of this.grid1.rowList.toArray()) {
+            row.nativeElement.style["font-style"] = "";
+            row.nativeElement.style.color = "";
+        }
+    }
+```
+<div class="divider"></div>
+
+#### Paste Handler Directive
+
+This is the `paste-handler` implementation.
+
+```typescript
+import { Directive, EventEmitter, HostListener, Output} from "@angular/core";
+
+@Directive({ selector: "[paste-handler]" })
+export class PasteHandler {
+    public textArea;
+
+    @Output()
+    public onDataProcessed = new EventEmitter<any>();
+
+    public ngOnInit(): void {
+        const div = document.createElement("div");
+        const divStyle = div.style;
+        divStyle.position = "fixed";
+        divStyle.top = "-10000px";
+        divStyle.left = "-10000px";
+        document.body.appendChild(div);
+        this.textArea = document.createElement("textarea");
+        const style = this.textArea.style;
+        style.opacity = "0";
+        style.overflow = "hidden";
+        div.appendChild(this.textArea);
+
+        this.textArea.addEventListener("paste", (eventArgs) => { this.onPaste(eventArgs); });
+    }
+
+    @HostListener("focusin", ["$event"])
+    public focusIn(eventArgs) {
+    }
+
+    @HostListener("keydown", ["$event"])
+    public ControlV(eventArgs) {
+        const ctrl = eventArgs.ctrlKey;
+        const key = eventArgs.keyCode;
+        // Ctrl-V || Shift-Ins || Cmd-V
+        if ((ctrl || eventArgs.metaKey) && key === 86 || eventArgs.shiftKey && key === 45) {
+            this.textArea.focus();
+        }
+    }
+
+    public onPaste(eventArgs) {
+    let data;
+    const clData = "clipboardData";
+
+    // get clipboard data - from window.cliboardData for IE or from the original event's argumets.
+    if (window[clData]) {
+        window.event.returnValue = false;
+        data = window[clData].getData("text");
+    } else {
+        data = eventArgs[clData].getData("text/plain");
+    }
+
+    // process the clipboard data
+    const processedData = this.processData(data);
+
+    this.onDataProcessed.emit(processedData);
+    }
+
+    public processData(data) {
+        const pasteData = data.split("\n");
+        for (let i = 0; i < pasteData.length; i++) {
+            pasteData[i] = pasteData[i].split("\t");
+            // Check if last row is a dummy row
+            if (pasteData[pasteData.length - 1].length === 1 && pasteData[pasteData.length - 1][0] === "") {
+                pasteData.pop();
+            }
+            // remove empty data
+            if (pasteData.length === 1 &&
+                 pasteData[0].length === 1 &&
+                  (pasteData[0][0] === "" || pasteData[0][0] === "\r")) {
+                    pasteData.pop();
+            }
+        }
+        return pasteData;
+    }
+}
+
+```
 
 ### Additional Resources
 
