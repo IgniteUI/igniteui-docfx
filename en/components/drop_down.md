@@ -116,7 +116,7 @@ If the sample is configured properly, a dropdown with several options should be 
 
 <div class="divider--half"></div>
 
-Let's say we want to have a predefined selected item. To do this, handle **igx-drop-down**  `onOpening` event of  [**IgxDropDownComponent**](https://www.infragistics.com/products/ignite-ui-angular/angular/components/drop_down.html).
+Let's say we want to have a predefined selected item. One way to do this, is by handling **igx-drop-down**  `onOpening` event of  [**IgxDropDownComponent**](https://www.infragistics.com/products/ignite-ui-angular/angular/components/drop_down.html).
 
 ```html
 <!-- dropdown.component.html -->
@@ -179,7 +179,7 @@ Let's say we want to have a predefined selected item. To do this, handle **igx-d
 
 <div class="divider--half"></div>
 
-To provide more useful visual information, use `isHeader` to group items semantically or `disabled` to display an item as non-interactive.
+To provide more useful visual information, use `isHeader` to group items semantically or `disabled` to display an item as non-interactive. You can also set `isSelected` to a particular item to make it the selected item.
 
 ```html
 <!-- dropdown.component.html -->
@@ -187,7 +187,7 @@ To provide more useful visual information, use `isHeader` to group items semanti
 <div class="sample-wrapper drop-down-wrapper">
     <button igxButton="raised" (click)="toggleDropDown($event)">Countries</button>
     <igx-drop-down #dropdown3>
-        <igx-drop-down-item [igxDropDownItemNavigation]="dropdown3" *ngFor="let item of items" disabled={{item.disabled}} isHeader={{item.header}}>
+        <igx-drop-down-item [igxDropDownItemNavigation]="dropdown3" *ngFor="let item of items" [disabled]="item.disabled" [isHeader]="item.header" [isSelected]="item.selected">
             {{ item.field }}
         </igx-drop-down-item>
     </igx-drop-down>
@@ -204,7 +204,7 @@ To provide more useful visual information, use `isHeader` to group items semanti
     public items: any[] = [
         { field: "EU", header: true },
         { field: "Germany" },
-        { field: "Bulgaria" },
+        { field: "Bulgaria", selected: true },
         { field: "UK", disabled: true },
         { field: "NA", header: true },
         { field: "Canada" },
@@ -230,7 +230,7 @@ To provide more useful visual information, use `isHeader` to group items semanti
 
 ```
 
-If the sample is configured properly, a list  of countries should be displayed as a group under EU header and UK as a non-interactive item.
+If the sample is configured properly, a list  of countries should be displayed as a group under EU header, UK as a non-interactive item, and Bulgaria as selected item.
 
 <div class="sample-container" style="height: 380px">
     <iframe id="dropdown-sample-3-iframe" src='{environment:demosBaseUrl}/dropdown-sample-3' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -288,22 +288,16 @@ The following getters are available on the **igx-drop-down** component:
 
 
 
-The following table summarizes some of the useful **igx-drop-down-item** component inputs, outputs and methods.
+The following table summarizes some of the useful **igx-drop-down-item** component inputs.
 
 #### Inputs
 The following inputs are available in the **igx-drop-down-item** component:
 
 | Name | Type | Description |
 | :--- | :--- | :--- |
-| `isHeader` | boolean| Defines if the item is a group header. |
-| `disabled` | boolean| Gets if given item is disabled. |
-| `isFocused` | boolean| Defines if the given item is focused. |
-
-#### Getters
-The following getters are available on the **igx-drop-down** component:
-
-| Name | Type | Description |
-| :--- | :--- | :--- |
+| `isHeader` | `boolean`| Defines if the item is a group header. |
+| `disabled` | `boolean`| Defines if the given item is disabled. |
+| `isFocused` | `boolean`| Defines if the given item is focused. |
 | `isSelected` | `boolean` | Defines if the given item is selected. |
 
 ###Additional Resources
