@@ -306,9 +306,9 @@ igxCombo が開いて、カスタム値が有効で、「項目の追加」ボ�
 |  `virtualizationState`   | 仮想化されたデータの現在の状態を定義します。`startIndex` および `chunkSize` を含みます。 | `IForOfState`                |
 |  `width `                | コンボの幅を定義します。                                    | string                      |
 |  `height`                | コンボの高さを定義します。                                   | string                      |
-|  `itemsMaxHeight `       | ドロップダウンの高さを定義します。                               | string                      |
-|  `itemsMaxWidth `        | ドロップダウンの幅を定義します。                                | string                      |
-|  `itemHeight `           | ドロップダウン項目の高さを定義します。                            | string                      |
+|  `itemsMaxHeight `       | ドロップダウンの高さを定義します。                               | number                      |
+|  `itemsWidth `           | ドロップダウンの幅を定義します。                                | string                      |
+|  `itemHeight `           | ドロップダウン項目の高さを定義します。                            | number                      |
 |  `placeholder `          | 空の値のテキストを定義します。                                | string                      |
 |  `searchPlaceholder `    | 検索入力のプレースホルダー テキストを定義します。                    | string                      |
 |  `collapsed`             | ドロップダウン状態を取得します。                                | boolean                     |
@@ -326,10 +326,10 @@ igxCombo が開いて、カスタム値が有効で、「項目の追加」ボ�
 | `onSearchInput`     | 検索入力の input イベントがトリガーされたときに発生されます。             | false        | { searchValue: `string` }               |
 | `onAddition`        | 項目がデータ コレクションに追加されるときに発生されます。              | false        | { oldCollection: `Array<any>`, addedItem: `<any>`, newCollection: `Array<any>` }|
 | `onDataPreLoad`     | データの新しい部分が仮想化から読み込んだときに発生されます。        | false        | { event: Event }                        |
-| `dropDownOpening`   | ドロップダウンが開かれる前に発生されます。                                   | false        | { event: Event }                        |
-| `dropDownOpened`    | ドロップダウンが開かれた後に発生されます。                                   | false        | { event: Event }                        |
-| `dropDownClosing`   | ドロップダウンが閉じられる前に発生されます。                                   | false        | { event: Event }                        |
-| `dropDownClosed`    | ドロップダウンが閉じられた後に発生されます。                                    | false        | { event: Event }                        |
+| `onOpening`   | ドロップダウンが開かれる前に発生されます。                                   | false        | { event: Event }                        |
+| `onOpened`    | ドロップダウンが開かれた後に発生されます。                                   | false        | { event: Event }                        |
+| `onClosing`   | ドロップダウンが閉じられる前に発生されます。                                   | false        | { event: Event }                        |
+| `onClosed`    | ドロップダウンが閉じられた後に発生されます。                                    | false        | { event: Event }                        |
 
 ### メソッド
 <div class="divider--half"></div>
