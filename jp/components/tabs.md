@@ -39,7 +39,7 @@ import { IgxTabsModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-`label` およびコンテンツを持つ 3 つのタブ グループを指定します。
+`label` およびコンテンツを持つ複数のタブ グループを指定します。
 
 ```html
 <igx-tabs>
@@ -67,8 +67,8 @@ export class AppModule {}
 ### Tabs タイプ
 2 種類のタブがあります。fixed または contentfit タブを選択するには、`tabsType` 入力を設定します。
 - **contentfit タブ** (デフォルト): タブ ヘッダーの幅はコンテンツ (ラベル、アイコン、両方) に基づいて決定され、すべてのタブのパディングが等しくなります。
-タブのタイプに関係なく、タブ ヘッダーの幅は指定した最小幅および最大幅によって制限されます。
-- **fixed タブ**: すべてのタブ ヘッダーは同じ幅を持ち、Tabs コンポーネントに一致します。提供されたスペースが足りない場合、スクロール ボタンが表示されます。
+選択したタブのタイプに関係なく、タブ ヘッダーの幅は指定した最小幅および最大幅によって制限されます。
+- **fixed タブ**: すべてのタブ ヘッダーは同じ幅を持ち、Tabs コンテナーに一致します。提供されたスペースが足りない場合、スクロール ボタンが表示されます。
 
 ```html
 <div class="items-wrapper__item items-wrapper__item-small items-wrapper__item--blue">
@@ -214,8 +214,8 @@ export class AppModule {}
 
 | 名前 | 型 | 説明 |
 | :--- | :--- | :--- |
-| `onTabItemSelected` | EventEmitter | タブ項目が選択されたときにイベントを発生します。 |
-| `onTabItemDeselected` | EventEmitter | タブ項目が選択解除されたときにイベントを発生します。 |
+| `onTabItemSelected` | EventEmitter | タブ項目が選択されたときにイベントを発生します。選択した `IgxTabItemComponent` と `IgxTabsGroupComponent` を返します。 |
+| `onTabItemDeselected` | EventEmitter | タブ項目が選択解除されたときにイベントを発生します。選択解除した `IgxTabItemComponent` と `IgxTabsGroupComponent` を返します。 |
 
 <div class="divider"></div>
 
