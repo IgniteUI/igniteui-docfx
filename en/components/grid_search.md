@@ -328,7 +328,7 @@ The following properties are available on the **IgxColumnComponent**:
 * [Column Pinning](grid_column_pinning.md)
 * [Column Resizing](grid_column_resizing.md)
 * [Selection](grid_selection.md)
-* [Export to Excel](exporter_excel.md)
+* [Integration with Excel](integration_excel.md)
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.
