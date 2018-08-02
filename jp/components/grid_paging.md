@@ -23,7 +23,7 @@ Ignite UI for Angular で、**ページング**がルート `igx-grid` コンポ
 機能が有効かどうかを制御する paging は Boolean プロパティです。`perPage` プロパティはページごとに表示可能なレコードを制御します。以下のようにグリッドでページングを有効にします。
 
 ```html
-<igx-grid #grid1 [data]="data | async" [paging]="true" [perPage]="20" [autoGenerate]="false"></igx-grid>
+<igx-grid #grid1 [data]="data" [paging]="true" [perPage]="10" [paginationTemplate]="pager" height="500px" width="100%" displayDensity="cosy"></igx-grid>
 ```
 
 ページング領域でテンプレート化がサポートされますが、初期化でテンプレート参照をグリッドに渡す必要があります。以下は、ページングが入力によって制御されるテンプレートの例です。
@@ -64,7 +64,11 @@ this.grid.perPage = 25;
 this.grid.paging = false;
 ```
 
-Paging could also operate with remote data out of the box. So it won't need any additional work instead of passing data which is derived remotly.
+### Remote
+
+#### Paging could also operate with remote data out of the box. So it won't need any additional work instead of passing data which is derived remotly.
+
+<div class="divider--half"></div>
 
 Let firstly declare our service which will be responsible for fetching our data.
 

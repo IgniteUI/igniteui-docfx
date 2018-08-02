@@ -22,7 +22,7 @@ In Ignite UI for Angular, **Paging** is initialized on the root `igx-grid` compo
 Paging is a Boolean property that controls whether the feature is enabled, and the `perPage` property controls the visible records per page. Let’s update our grid to enable paging:
 
 ```html
-<igx-grid #grid1 [data]="data | async" [paging]="true" [perPage]="20" [autoGenerate]="false"></igx-grid>
+<igx-grid #grid1 [data]="data" [paging]="true" [perPage]="10" [paginationTemplate]="pager" height="500px" width="100%" displayDensity="cosy"></igx-grid>
 ```
 
 The paging area supports templating by the user, if a template reference is passed to the grid during initialization. The example below is a template where the pagination is controlled through an input.
@@ -63,7 +63,11 @@ this.grid.perPage = 25;
 this.grid.paging = false;
 ```
 
-Paging could also operate with remote data out of the box. So it won't need any additional work instead of passing data which is derived remotly.
+### Remote
+
+#### Paging could also operate with remote data out of the box. So it won't need any additional work instead of passing data which is derived remotly.
+
+<div class="divider--half"></div>
 
 Let firstly declare our service which will be responsible for fetching our data.
 
@@ -90,9 +94,7 @@ After declaring or service. We need to create our component which will be respon
 
 ```typescript
 export class RemotePagingGridSample implements OnInit, AfterViewInit {
-    public data: Subject<any[]>;
-
-    @ViewChild(IgxGridComponent) private grid: IgxGridComponent;
+    public data: Observable<any[]>;
 
     constructor(private remoteService: RemoteService) {}
 
@@ -123,11 +125,11 @@ After all these changes, the following result should be achieved.
 #### Demo
 
 <div class="sample-container loading" style="height:605px">
-    <iframe id="grid-sample-iframe" src='{environment:demosBaseUrl}/grid-remote-paging' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="grid-paging-sample-iframe" src='{environment:demosBaseUrl}/grid-remote-paging' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="grid-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="grid-paging-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
 
