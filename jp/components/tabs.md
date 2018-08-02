@@ -255,9 +255,9 @@ export class AppModule {}
 
 #### メソッド
 以下のメソッドは **igx-tabs-group** コンポーネントで利用できます。
-| 名前 | 説明 |
-| :--- | :--- | 
-| `select()` | 関連する IgxTabsGroupComponent 選択します。 |
+| Signature | Return Type | Description |
+| :--- | :--- | :--- |
+| `select(focusDelay: number)` | `void` | Selects the related IgxTabsGroupComponent. Default value of `focusDelay` is 50. |
 
 <div class="divider"></div>
 

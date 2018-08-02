@@ -251,9 +251,9 @@ The following getters are available on the **igx-tab-item** component:
 
 #### Methods
 The following method is available on the **igx-tabs-group** component:
-| Name | Description |
-| :--- | :--- | 
-| `select()` | Selects the related IgxTabsGroupComponent. |
+| Signature | Return Type | Description |
+| :--- | :--- | :--- |
+| `select(focusDelay: number)` | `void` | Selects the related IgxTabsGroupComponent. Default value of `focusDelay` is 50. |
 
 <div class="divider"></div>
 
