@@ -207,7 +207,7 @@ On the top there is a dropdown button with 2 options:
 
 The new data after the paste is decorated in Italic.
 
-<div class="sample-container loading" style="height: 550px;">
+<div class="sample-container loading" style="height: 570px;">
     <iframe id="excel-paste-sample-iframe" src="{environment:demosBaseUrl}/grid-paste"
         width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -223,7 +223,6 @@ You should add the `paste-handler` directive to the `igxGrid` and handle its `on
 
 ```html
 <igx-grid #grid1 [data]="data" [width]="'100%'" [height]="'505px'" [autoGenerate]="false" paste-handler (onDataProcessed)="dataPasted($event)" [primaryKey]="'ID'">
-    <igx-column [field]="'ID'" [hidden]="true"></igx-column>
     <igx-column [field]="'Name'"></igx-column>
     <igx-column [field]="'Title'"></igx-column>
     <igx-column [field]="'Phone'"></igx-column>
