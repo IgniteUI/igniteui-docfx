@@ -63,7 +63,7 @@ this.grid.perPage = 25;
 this.grid.paging = false;
 ```
 
-### Remote
+### Remote Data
 
 #### Paging could also operate with remote data out of the box. So it won't need any additional work instead of passing data which is derived remotly.
 
@@ -90,7 +90,7 @@ export class RemoteService {
     }
 }
 ```
-After declaring or service. We need to create our component which will be responsible for the grid construction and data subscription.
+After declaring our service we need to create our component which will be responsible for the grid construction and data subscription.
 
 ```typescript
 export class RemotePagingGridSample implements OnInit, AfterViewInit {
