@@ -5,7 +5,7 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 _language: ja
 ---
 
-## Excel と統合
+## Excel との統合
 
 <p class="highlight">
 Ignite UI for Angular `IgxGrid` は、Microsoft® Excel® データの読み込み、書き込みが可能です。
