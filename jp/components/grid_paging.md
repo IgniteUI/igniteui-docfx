@@ -23,7 +23,7 @@ Ignite UI for Angular で、**ページング**がルート `igx-grid` コンポ
 機能が有効かどうかを制御する paging は Boolean プロパティです。`perPage` プロパティはページごとに表示可能なレコードを制御します。以下のようにグリッドでページングを有効にします。
 
 ```html
-<igx-grid #grid1 [data]="data | async" [paging]="true" [perPage]="20" [autoGenerate]="false"></igx-grid>
+<igx-grid #grid1 [data]="data" [paging]="true" [perPage]="10" [paginationTemplate]="pager" height="500px" width="100%" displayDensity="cosy"></igx-grid>
 ```
 
 ページング領域でテンプレート化がサポートされますが、初期化でテンプレート参照をグリッドに渡す必要があります。以下は、ページングが入力によって制御されるテンプレートの例です。
@@ -63,6 +63,78 @@ this.grid.perPage = 25;
 // Enables/disables paging
 this.grid.paging = false;
 ```
+
+### Remote
+
+#### Paging could also operate with remote data out of the box. So it won't need any additional work instead of passing data which is derived remotly.
+
+<div class="divider--half"></div>
+
+Let firstly declare our service which will be responsible for fetching our data.
+
+```typescript
+@Injectable()
+export class RemoteService {
+    public remoteData: BehaviorSubject<any[]>;
+    private url: string = "https://www.igniteui.com/api/products";
+
+    constructor(private http: HttpClient) {
+        this.remoteData = new BehaviorSubject([]);
+    }
+
+    public getData(): any {
+        return this.http
+            .get(this.url)
+            .subscribe((d: any) => {
+                this.remoteData.next(d.Results ? d.Results : d);
+            });
+    }
+}
+```
+After declaring or service. We need to create our component which will be responsible for the grid construction and data subscription.
+
+```typescript
+export class RemotePagingGridSample implements OnInit, AfterViewInit {
+    public data: Subject<any[]>;
+
+    @ViewChild(IgxGridComponent) private grid: IgxGridComponent;
+
+    constructor(private remoteService: RemoteService) {}
+
+    public ngOnInit() {
+        this.data = this.remoteService.remoteData;
+    }
+
+    public ngAfterViewInit() {
+        this.remoteService.getData();
+    }
+}
+```
+The last step will be to declare our template for the gird.
+
+```html
+<igx-grid [data]="data | async" height="600px" [paging]="true" >
+    <igx-column field="ID"></igx-column>
+    <igx-column field="ProductName"></igx-column>
+    <igx-column field="QuantityPerUnit"></igx-column>
+    <igx-column field="SupplierName"></igx-column>
+    <igx-column field="UnitsInStock"></igx-column>
+    <igx-column field="Rating"></igx-column>
+</igx-grid>
+```
+
+After all these changes, the following result should be achieved.
+
+#### Demo
+
+<div class="sample-container loading" style="height:605px">
+    <iframe id="grid-sample-iframe" src='{environment:demosBaseUrl}/grid-remote-paging' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="grid-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
 
 ### 追加のリソース
 <div class="divider--half"></div>
