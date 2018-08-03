@@ -197,7 +197,7 @@ export class AppModule {}
 | 名前 | 型 | 説明 |
 | :--- | :--- | :--- |
 | `tabsType` | TabsType | タブ ヘッダーのサイズ モードを定義します。有効な設定は `contentfit` (デフォルト) または `fixed` です。 |
-| `selectedIndex` | number | Gets/sets the index of selected tab item. |
+| `selectedIndex` | number | 選択したタブ項目のインデックスを取得または設定します。 |
 
 以下の入力は **igx-tabs-group** コンポーネントで利用できます。
 
@@ -255,9 +255,9 @@ export class AppModule {}
 
 #### メソッド
 以下のメソッドは **igx-tabs-group** コンポーネントで利用できます。
-| Signature | Return Type | Description |
+| シグネチャ | 返却値 | 説明 |
 | :--- | :--- | :--- |
-| `select(focusDelay: number)` | `void` | Selects the related IgxTabsGroupComponent. Default value of `focusDelay` is 50. |
+| `select(focusDelay: number)` | `void` | 関連する gxTabsGroupComponent を選択します。デフォルト値は 50 です。|
 
 <div class="divider"></div>
 
