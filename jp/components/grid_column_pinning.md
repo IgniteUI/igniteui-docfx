@@ -74,6 +74,17 @@ public columnPinning(event) {
 
 <div class="divider--half"></div>
 
+### Troubleshooting
+
+This section will provide you with hints what to do if you are having trouble with the Column Pinning feature.
+
+#### Warnings
+
+* `igxGrid - The pinned area exceeds maximum pinned width. The following columns were unpinned to prevent further issues: ... .` - This warning is thrown when the user has defined too many pinned columns initially. The combined width of the initially pinned columns should not exceed 80% of the grid width. Otherwise the grid by default takes the first columns (in order of their definition) that don't exceed the limit and the rest are unpinned (the columns listed in the warning). You can execute your own logic in order to determine if you want to unpin some columns manually on initialization using the `onColumnInit` event before the grid initializes the pinning. It is triggered for each column.
+
+
+<div class="divider--half"></div>
+
 ### 追加のリソース
 <div class="divider--half"></div>
 
