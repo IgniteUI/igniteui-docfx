@@ -197,7 +197,7 @@ The following input is available in the **igx-tabs** component:
 | Name | Type | Description |
 | :--- | :--- | :--- |
 | `tabsType` | TabsType | Defines the tab header sizing mode - `contentfit` (default) or `fixed`. |
-
+| `selectedIndex` | number | Gets/sets the index of selected tab item. |
 
 The following inputs are available in the **igx-tabs-group** component:
 
@@ -225,7 +225,6 @@ The following getters are available in the **igx-tabs** component:
 | :--- | :--- | :--- |
 | `tabs` | QueryList | Provides an observable collection of all IgxTabItemComponent-s. |
 | `groups` | QueryList | Provides an observable collection of all IgxTabsGroupComponent-s. |
-| `selectedIndex` | number | Gets the index of selected tab item. |
 | `selectedTabItem` | IgxTabItemComponent | Gets the selected IgxTabItemComponent based on `selectedIndex`. |
 
 <div class="divider--half"></div>
@@ -252,9 +251,9 @@ The following getters are available on the **igx-tab-item** component:
 
 #### Methods
 The following method is available on the **igx-tabs-group** component:
-| Name | Description |
-| :--- | :--- | 
-| `select()` | Selects the related IgxTabsGroupComponent. |
+| Signature | Return Type | Description |
+| :--- | :--- | :--- |
+| `select(focusDelay: number)` | `void` | Selects the related IgxTabsGroupComponent. Default value of `focusDelay` is 50. |
 
 <div class="divider"></div>
 
