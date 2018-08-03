@@ -6,7 +6,7 @@ _language: ja
 ---
 ## Bullet Graph
 
-Ignite UI for Angular の Bullet Graph コンポーネントは、目盛り上でリニアと簡潔なメジャーの比較を表示します。
+Ignite UI for Angular の Bullet Graph コンポーネントは、目盛り上でメジャーの比較を簡潔にリニアで表示します。
 
 ### デモ
 
