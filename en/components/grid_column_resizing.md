@@ -59,6 +59,14 @@ You can also configure the minimum and maximum allowable column widths. This is 
 
 Each column can be **auto sized** by double clicking the right side of the header - the column will be sized to the longest currently visible cell value, including the header itself. This behavior is enabled by default, no additional configuration is needed. However, the column will not be autosized in case `maxWidth` is set on that column and the new width exceeds that `maxWidth` value. In this case the column will be sized acccording to preset `maxWidth` value.
 
+You can also autosize a column dynamically using the exposed `autosize()` method on `IgxColumnComponent`.
+```typescript
+@ViewChild('grid') grid: IgxGridComponent;
+
+let column = this.grid.columnList.filter(c => c.field === 'ID')[0];
+column.autosize();
+```
+
 #### Pinned columns resizing
 
 Pinned columns can also be resized. However resizing is limited so that the overall width of the pinned columns container cannot become larger than 80% of the overall grid width.
@@ -85,6 +93,14 @@ The following output is available for **column resizing**:
 |`onColumnResized`|Emitted when a column is resized. Returns the column object, previous and new column width.|
 
 <div class="divider--half"></div>
+
+#### Methods
+The following method is available for **column resizing**:
+| Name | Description |
+| :--- | :--- |
+| `autosize` | Autosize the column to the longest currently visible cell value, including the header cell. |
+
+<div class="divider"></div>
 
 ### Additional Resources
 <div class="divider--half"></div>
