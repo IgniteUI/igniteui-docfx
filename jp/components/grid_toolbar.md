@@ -57,7 +57,7 @@ IgxGrid のツールバーは、列の非表示、列のピン固定、データ
     [exportExcel]="true"
     [exportCsv]="true"
     exportText="Export"
-    exportExcelText="Integration with Excel"
+    exportExcelText="Export to Excel"
     exportCsvText="Export to CSV">
 </igx-grid>
 ```

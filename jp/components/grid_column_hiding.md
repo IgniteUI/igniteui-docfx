@@ -347,7 +347,7 @@ export class AppModule {}
 * [列のサイズ変更](grid_column_resizing.md)
 * [選択](grid_selection.md)
 * [検索](grid_search.md)
-* [Excel へエクスポート](integration_excel.md)
+* [Excel へエクスポート](exporter_excel.md)
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
