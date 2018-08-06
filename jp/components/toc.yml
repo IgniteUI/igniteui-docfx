@@ -153,10 +153,10 @@
   href: checkbox.md
 - name: Switch
   href: switch.md
-- name: Radio および Radio Group
+- name: Radio と Radio Group
   href: radio_button.md
   new: true
-- name: Label および Input
+- name: Label と Input
   href: label_input.md
 - name: Input Group
   href: input_group.md
@@ -238,6 +238,6 @@
 - name: CSV Exporter
   href: exporter_csv.md
   new: false
-- name: Integration with Excel
+- name: Excel との統合
   href: integration_excel.md
   new: false
