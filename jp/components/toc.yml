@@ -50,6 +50,9 @@
     - name: Excel エクスポート
       href: exporter_excel.md
       new: false
+    - name: Paste from Excel
+      href: grid_paste_excel.md
+      new: true
     - name: 複数列ヘッダー
       href: grid_multi_column_headers.md
       new: true

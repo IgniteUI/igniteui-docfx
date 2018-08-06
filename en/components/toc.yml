@@ -50,6 +50,9 @@
     - name: Export to Excel
       href: exporter_excel.md
       new: false
+    - name: Paste from Excel
+      href: grid_paste_excel.md
+      new: true
     - name: Multi Column Headers
       href: grid_multi_column_headers.md
       new: true
