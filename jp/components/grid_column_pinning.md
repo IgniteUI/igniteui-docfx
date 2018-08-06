@@ -74,13 +74,13 @@ public columnPinning(event) {
 
 <div class="divider--half"></div>
 
-### Troubleshooting
+### トラブルシューティング
 
-This section will provide you with hints what to do if you are having trouble with the Column Pinning feature.
+このセクションは、列固定機能で発生した問題を解決するためのトラブルシューティングを提供します。
 
-#### Warnings
+#### 警告
 
-* `igxGrid - The pinned area exceeds maximum pinned width. The following columns were unpinned to prevent further issues: ... .` - This warning is thrown when the user has defined too many pinned columns initially. The combined width of the initially pinned columns should not exceed 80% of the grid width. Otherwise the grid by default takes the first columns (in order of their definition) that don't exceed the limit and the rest are unpinned (the columns listed in the warning). You can execute your own logic in order to determine if you want to unpin some columns manually on initialization using the `onColumnInit` event before the grid initializes the pinning. It is triggered for each column.
+* `igxGrid - ピン固定領域がピン固定可能な最大幅を超過しています。次の列のピン固定は、問題を回避するために解除します。 ... .` - この警告は初期時にユーザーが列のピン固定を過剰に定義した場合にスローされます。初期時にピン固定した列の合計幅は、グリッド幅の 80% を超えないようにしてください。超過した場合は、デフォルトでグリッドの最初の列を取得し、残りの列 (警告にリストされた列) はピン解除されます。グリッドでピン固定を初期化する前に `onColumnInit` イベントを使用して初期化時に手動で列のピン固定解除するかどうかを決定するためのロジックを実行でき、各列でトリガーされます。
 
 
 <div class="divider--half"></div>
