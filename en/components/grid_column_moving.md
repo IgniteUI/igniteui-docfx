@@ -94,7 +94,7 @@ The following `IgxGridComponent` method is related to **column moving**:
 * [Column Resizing](grid_column_resizing.md)
 * [Selection](grid_selection.md)
 * [Searching](grid_search.md)
-* [Excel Exporter](integration_excel.md)
+* [Excel Exporter](exporter_excel.md)
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.

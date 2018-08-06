@@ -329,7 +329,7 @@ public clearSearch() {
 * [列のピン固定](grid_column_pinning.md)
 * [列のサイズ変更](grid_column_resizing.md)
 * [選択](grid_selection.md)
-* [Excel へエクスポート](integration_excel.md)
+* [Excel へエクスポート](exporter_excel.md)
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。

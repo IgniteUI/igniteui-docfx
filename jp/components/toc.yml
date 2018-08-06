@@ -48,8 +48,11 @@
       href: grid_toolbar.md
       new: true
     - name: Excel エクスポート
-      href: integration_excel.md
+      href: exporter_excel.md
       new: false
+    - name: Paste from Excel
+      href: grid_paste_excel.md
+      new: true
     - name: 複数列ヘッダー
       href: grid_multi_column_headers.md
       new: true
@@ -153,10 +156,10 @@
   href: checkbox.md
 - name: Switch
   href: switch.md
-- name: Radio と Radio Group
+- name: Radio および Radio Group
   href: radio_button.md
   new: true
-- name: Label と Input
+- name: Label および Input
   href: label_input.md
 - name: Input Group
   href: input_group.md
@@ -238,6 +241,6 @@
 - name: CSV Exporter
   href: exporter_csv.md
   new: false
-- name: Excel との統合
-  href: integration_excel.md
+- name: Excel Exporter
+  href: exporter_excel.md
   new: false
