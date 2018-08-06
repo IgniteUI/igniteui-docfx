@@ -64,13 +64,13 @@ this.grid.perPage = 25;
 this.grid.paging = false;
 ```
 
-### Remote Data
+### リモート データ
 
-#### Paging could also operate with remote data out of the box. So it won't need any additional work instead of passing data which is derived remotly.
+#### ページングは定義済みのリモート データで処理することもできます。そのため、リモートで送信されるデータを渡すなどの追加の設定は必要はありません。
 
 <div class="divider--half"></div>
 
-Let firstly declare our service which will be responsible for fetching our data.
+最初にサービスを宣言してデータをフェッチします。
 
 ```typescript
 @Injectable()
@@ -91,7 +91,7 @@ export class RemoteService {
     }
 }
 ```
-After declaring our service we need to create our component which will be responsible for the grid construction and data subscription.
+サービスの宣言後、グリッド構成とデータ サブスクリプションのためのコンポーネントを作成します。
 
 ```typescript
 export class RemotePagingGridSample implements OnInit, AfterViewInit {
@@ -110,7 +110,7 @@ export class RemotePagingGridSample implements OnInit, AfterViewInit {
     }
 }
 ```
-The last step will be to declare our template for the gird.
+最後にグリッドのテンプレートを宣言します。
 
 ```html
 <igx-grid [data]="data | async" height="600px" [paging]="true" >
@@ -123,16 +123,16 @@ The last step will be to declare our template for the gird.
 </igx-grid>
 ```
 
-After all these changes, the following result should be achieved.
+すべての設定の完了後、以下のような結果になります。
 
-#### Demo
+#### デモ
 
 <div class="sample-container loading" style="height:605px">
     <iframe id="grid-sample-iframe" src='{environment:demosBaseUrl}/grid-remote-paging' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="grid-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="grid-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
 </div>
 <div class="divider--half"></div>
 
