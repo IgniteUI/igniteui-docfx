@@ -211,7 +211,7 @@ The result is as follows:
 | `todayButtonLabel` | `string` | Renders today button with custom name, which selects today's date from calendar, and fill the datePicker input. |
 | `cancelButtonLabel` | `string` | Renders cancel button with custom name, which closes the calendar. |
 | `formatter` | `function` | Applied custom formatter on the selected or passed date. |
-| `isDisabled` | `boolean` | Disables the datePicker. |
+| `disabled` | `boolean` | Disables the datePicker. |
 | `weekStart`| `Number \| WEEKDAYS` | Sets on which day the week starts. |
 | `locale` | `string` | Sets the locale used for formatting and displaying the dates in the calendar. For more information check out [this](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl) page for valid formats. |
 | `formatOptions` | `Object` | The format options passed along with the `locale` property used for formatting the dates. |
