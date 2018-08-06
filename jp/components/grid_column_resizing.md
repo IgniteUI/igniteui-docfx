@@ -60,7 +60,7 @@ public onResize(event) {
 
 各列ヘッダーの右側をダブルクリックして列を**自動サイズ調整**することができます。列は、現在表示されているヘッダーを含む一番長いセル値にサイズ設定されます。この動作はデフォルトで有効なため、追加で構成する必要はありません。ただし、`maxWidth` がその列に設定され、新しい幅が `maxWidth` 値より大きい場合、列は自動サイズ調整されません。この場合、列が `maxWidth` 値に設定されます。
 
-You can also autosize a column dynamically using the exposed `autosize()` method on `IgxColumnComponent`.
+また `IgxColumnComponent` の `autosize()` メソッドで列を動的に自動サイズ変更できます。
 ```typescript
 @ViewChild('grid') grid: IgxGridComponent;
 
@@ -94,11 +94,11 @@ column.autosize();
 
 <div class="divider--half"></div>
 
-#### Methods
-The following method is available for **column resizing**:
-| Name | Description |
+#### メソッド
+以下のメソッドは**列のサイズ変更**で利用できます。
+| 名前 | 説明 |
 | :--- | :--- |
-| `autosize` | Autosize the column to the longest currently visible cell value, including the header cell. |
+| `autosize` | 列を現在表示中のセル ヘッダーを含むセル値に自動でサイズ変更します。 |
 
 <div class="divider"></div>
 
