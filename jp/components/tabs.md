@@ -257,7 +257,7 @@ export class AppModule {}
 以下のメソッドは **igx-tabs-group** コンポーネントで利用できます。
 | シグネチャ | 返却値 | 説明 |
 | :--- | :--- | :--- |
-| `select(focusDelay: number)` | `void` | 関連する gxTabsGroupComponent を選択します。デフォルト値は 50 です。|
+| `select(focusDelay: number)` | `void` | 関連する IgxTabsGroupComponent を選択します。デフォルト値は 50 です。|
 
 <div class="divider"></div>
 
