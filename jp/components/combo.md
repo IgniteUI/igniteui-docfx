@@ -225,7 +225,7 @@ igx-combo コンポーネントの項目、ヘッダー、フッター、空の�
 
 Template Forms:
 
-<div class="sample-container loading" style="height: 540px;">
+<div class="sample-container loading" style="height: 750px;">
     <iframe id="input-group-sample-6-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/input-group-sample-6" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -236,7 +236,7 @@ Template Forms:
 
 Reactive Forms:
 
-<div class="sample-container loading" style="height: 540px;">
+<div class="sample-container loading" style="height: 750px;">
     <iframe id="reactive-forms-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/reactive-forms" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
