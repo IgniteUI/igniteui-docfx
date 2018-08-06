@@ -10,7 +10,7 @@ The Ignite UI for Angular `IgxGrid` can read Excel data that is copied to the cl
 
 ### Paste from Excel Demo
 
-This sample demonstrates how to implement pasting from Excel into the `igxGrid`. 
+This sample demonstrates how to implement pasting from Excel into the `igxGrid`.
 To work with the sample open up any Excel spreadsheet, copy some rows, and paste it into the grid using the keyboard (Ctrl + V, Shift + Insert, Command + V).
 
 On the top there is a dropdown button with 2 options:
@@ -184,7 +184,7 @@ export class PasteHandler {
     let data;
     const clData = "clipboardData";
 
-    // get clipboard data - from window.cliboardData for IE or from the original event's argumets.
+    // get clipboard data - from window.cliboardData for IE or from the original event's arguments.
     if (window[clData]) {
         window.event.returnValue = false;
         data = window[clData].getData("text");
