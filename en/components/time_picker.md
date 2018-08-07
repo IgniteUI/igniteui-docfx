@@ -162,7 +162,7 @@ The following inputs are available in the **igx-time-picker** component:
 | `okButtonLabel` | string | Renders OK button with custom text, which commits the selected time, and fill the timePicker input. By default `okButtonLabel` is set to `OK`.|
 | `cancelButtonLabel` | string | Renders cancel button with custom text, which closes the dialog. By default `cancelButtonLabel` is set to `Cancel`. |
 | `value` | Date | Gets/Sets the value of the timePicker. |
-| `isDisabled` | boolean | Disable the timePicker. |
+| `disabled` | boolean | Disable the timePicker. |
 | `itemsDelta`| object | Gets/Sets the delta by which hour and minute items would be displayed. By default `itemsDelta` is set to `{hours:1, minutes:1}`. Note! This cannot be set at runtime. |
 | `minValue` | string | Gets/Sets minimum value. It should follow the `format` of the timePicker. |
 | `maxValue` | string | Gets/Sets maximum value. It should follow the `format` of the timePicker. |
