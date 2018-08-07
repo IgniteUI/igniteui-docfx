@@ -126,7 +126,9 @@ Our inputs could be styled differently by using the `type` property of the `igxI
 ## Additional Resources
 Related topics:
 
+* [Reactive Forms Integration](input_group_reactive_forms.md)
 * [Label & Input](label_input.md)
+* [Combo](combo.md)
 <div class="divider--half"></div>
 
 Our community is active and always welcoming to new ideas.

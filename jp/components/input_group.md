@@ -128,7 +128,10 @@ Ignite UI for Angular Hint は、入力の下に配置されるヘルパー テ�
 ## 追加のリソース
 関連トピック:
 
+* [Reactive Forms Integration](input_group_reactive_forms.md)
 * [Label および Input](label_input.md)
+* [Combo](combo.md)
+
 <div class="divider--half"></div>
 
 コミュニティに参加して新しいアイデアをご提案ください。
