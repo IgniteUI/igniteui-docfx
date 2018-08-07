@@ -224,7 +224,7 @@ public getDatePart(val: any, component: any, datePart: string) {
 | `todayButtonLabel` | `string` | [今日] ボタンをカスタム名で描画します。ボタンはカレンダーで今日の日付を選択し、datePicker フィールドに入力します。 |
 | `cancelButtonLabel` | `string` | [キャンセル] ボタンをカスタム名で描画します。ボタンはカレンダーを閉じます。 |
 | `formatter` | `function` | 選択した日付または渡した日付にカスタム書式を適用します。 |
-| `isDisabled` | `boolean` | datePicker を無効にします。 |
+| `disabled` | `boolean` | datePicker を無効にします。 |
 | `weekStart`| `Number` または `WEEKDAYS` | 週の最初の曜日を設定します。 |
 | `locale` | `string` | カレンダーで日付の書式および表示のためのロケールを設定します。有効な書式の詳細については、[このページ](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl)を参照してください。 |
 | `formatOptions` | `Object` | 日付を書式設定するために使用される `locale` プロパティと渡される書式オプション。 |
