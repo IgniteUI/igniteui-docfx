@@ -74,6 +74,8 @@ Let's define the cases, when the igx-combo will need to request new data:
     - when we search in the `igx-combo` then we need to make request to filter remote results.
     - when combo is opened we need to clear results from any previous filter operations.
 
+Below are listed the handlers that listen to the already defined actions and execute requests to the server:
+
 ```typescript
 import { ChangeDetectorRef, Component, OnInit, ViewChild } from "@angular/core";
 import { IgxComboComponent } from "igniteui-angular";

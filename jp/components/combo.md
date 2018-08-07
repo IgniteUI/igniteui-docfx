@@ -8,9 +8,9 @@ _language: ja
 ## Combo
 <p class="highlight">
 The igx-combo component provides a powerful input, combining the features of the basic HTML `input`, select and the IgniteUI for Angular `igx-drop-down` components.<br />
-The combo component provides easy **[filtering](combo_features.md#features)** and **multiple selection** of items, **[grouping](combo_features.md#grouping)** and adding **[custom values](combo_features.md#custom-values)** to the dropdown list.<br />
+The combo component provides easy **[filtering](combo_features.md#filtering)** and **multiple selection** of items, **[grouping](combo_features.md#grouping)** and adding **[custom values](combo_features.md#custom-values)** to the dropdown list.<br />
 **[Custom templates](combo_templates.md)** could be provided in order to customize different areas of the components, such as items, header, footer, etc.<br />
-The `igx-combo` component is integrated with the **[Template Driven](input_group_reactive_forms.md)** and **[Reactive](input_group_reactive_forms.md)** Forms.<br />
+The `igx-combo` component is integrated with the **[Template Driven Forms](input_group.md)** and **[Reactive Forms](input_group_reactive_forms.md)**.<br />
 The `igx-combo` exposes intuitive **keyboard navigation** and it is **accessibility compliant**.<br />
 Drop Down items are **virtualized**, which guarantees smooth work, even if the `igx-combo` is bound to data source with a lot of items.
 </p>
@@ -35,7 +35,7 @@ The `IgxComboComponent` allows you to search and select items from the list. The
 // app.module.ts
 
 ...
-import { IgxComboModule } from 'igniteui-angular/main';
+import { IgxComboModule } from 'igniteui-angular';
 
 @NgModule({
     ...
@@ -73,7 +73,7 @@ Combo control exposes the following features:
     - [Grouping](combo_features.md#grouping)
     - [Custom values](combo_features.md#custom-values)
     - [Templates](combo_templates.md)
-    - Integration with [Template Driven](input_group.md) and [Reactive](input_group_reactive_forms.md) Forms
+    - Integration with [Template Driven Forms](input_group.md) and [Reactive Forms](input_group_reactive_forms.md)
 
 ## キーボード ナビゲーション
 
@@ -82,6 +82,7 @@ igxCombo が閉じてフォーカスされる場合:
 
 igxCombo が開いて検索入力がフォーカスされる場合:
 - `ArrowUp` または `Alt` + `ArrowUp` はコンボのドロップダウンを閉じて、フォーカスを閉じたコンボに移動します。
+
 - `ArrowDown` はフォーカスを検索入力から最初のリスト項目に移動します。リストが空でカスタム値が有効にされた場合、「新しい項目の追加」ボタンに移動します。
   > 注: その他のキーストロークは入力によって処理されます。
 
@@ -172,8 +173,8 @@ igxCombo が開いて、カスタム値が有効で、「項目の追加」ボ�
 
 <div class="divider--half"></div>
 
-* [Combo Remote Binding](combo_remote.md)
 * [Combo Features](combo_features.md)
+* [Combo Remote Binding](combo_remote.md)
 * [Combo Templates](combo_templates.md)
 * [Template Driven Forms Integration](input_group.md)
 * [Reactive Forms Integration](input_group_reactive_forms.md)

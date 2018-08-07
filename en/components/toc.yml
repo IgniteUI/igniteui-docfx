@@ -59,11 +59,11 @@
   href: combo.md
   new: true
   items:
-    - name: Remote Binding
-      href: combo_remote.md
-      new: true
     - name: Features
       href: combo_features.md
+      new: true
+    - name: Remote Binding
+      href: combo_remote.md
       new: true
     - name: Templates
       href: combo_templates.md

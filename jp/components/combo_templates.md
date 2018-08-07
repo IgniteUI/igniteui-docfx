@@ -131,8 +131,8 @@ Use reference name **`addItemTemplate`**:
 ## Additional Resources
 <div class="divider--half"></div>
 
-* [Combo Remote Binding](combo_remote.md)
 * [Combo Features](combo_features.md)
+* [Combo Remote Binding](combo_remote.md)
 * [Template Driven Forms Integration](input_group.md)
 * [Reactive Forms Integration](input_group_reactive_forms.md)
 * [Cascading Scenario](combo_cascading.md)
