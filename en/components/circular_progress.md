@@ -119,6 +119,7 @@ And now if we set up everything correctly we should have the folllowing displaye
 | `value` |  number | Set value that indicates the completed bar position. |
 | `animate` |  boolean | animation on progress bar. |
 | `textVisibility` | boolean | Set the text to be visible. By default it is set to `true`. |
+| `text` | string | Sets the text to displayed inside the circular bar. Defaults to percentage representation of the value if not set. |
 <div class="divider--half"></div>
 
 ### Methods
