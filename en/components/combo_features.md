@@ -22,21 +22,22 @@ The following demo demonstrates some of the combo features that are enabled/disa
 <div class="divider--half"></div>
 
 ### Usage
-To get started with the Ignite UI for Angular Combo import the **IgxComboModule** in the **app.module.ts** file:
+To get started with the Ignite UI for Angular Combo import the **IgxComboModule** in the **app.module.ts** file. For the following sample the `igx-switch` component is used and in addition we will need the **IgxSwitchModule** also:
 
 ```typescript
 // app.module.ts
 
 ...
-import { IgxComboModule } from 'igniteui-angular';
+import { IgxComboModule, IgxSwitchModule } from 'igniteui-angular';
 
 @NgModule({
     ...
-    imports: [..., IgxComboModule],
+    imports: [..., IgxComboModule, IgxSwitchModule],
     ...
 })
 export class AppModule {}
 ```
+
 The demo uses `igx-switch` component to toggle `igx-combo` properties' values. Note that grouping is enabled/disabled by setting `groupKey` to corresponding data source entity or setting it to empty string.
 ```html
 <div class="combo-container">

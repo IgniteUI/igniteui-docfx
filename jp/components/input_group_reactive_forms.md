@@ -26,6 +26,24 @@ Ignite UI for Angular コントロールは簡単にリアクティブ フォー
 
 リアクティブ フォームの使用方法、必要なモジュールについては、Angular [チュートリアル](https://angular.io/guide/reactive-forms) をご覧ください。
 
+To get started import all modules for Ignite UI components and the **ReactiveFormsModule** in order to have working Reactive Form:
+
+```typescript
+// app.module.ts
+
+...
+import { IgxIconModule, IgxInputGroupModule, IgxButtonModule, IgxRippleModule, IgxDatePickerModule, IgxTimePickerModule, IgxComboModule } from "igniteui-angular";
+import { ReactiveFormsModule } from "@angular/forms";
+
+@NgModule({
+    ...
+    imports: [..., IgxIconModule, IgxInputGroupModule, IgxButtonModule, IgxRippleModule, IgxDatePickerModule, IgxTimePickerModule, IgxComboModule, ReactiveFormsModule],
+    ...
+})
+export class AppModule {}
+```
+
+
 リアクティブ フォームに HTML `form` の `formGroup` を使用してモデルを設定し、各モデルのプロパティに対応する `formControlName` を各入力フィールドに設定します。
 
 ```html

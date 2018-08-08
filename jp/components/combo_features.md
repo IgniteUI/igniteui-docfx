@@ -23,21 +23,22 @@ Combo コントロールは、データと値のバインディング、カス�
 <div class="divider--half"></div>
 
 ### 使用方法
-Ignite UI for Angular Combo を初期化する前に、**IgxComboModule** を **app.module.ts** ファイルにインポートします。
+To get started with the Ignite UI for Angular Combo import the **IgxComboModule** in the **app.module.ts** file. For the following sample the `igx-switch` component is used and in addition we will need the **IgxSwitchModule** also:
 
 ```typescript
 // app.module.ts
 
 ...
-import { IgxComboModule } from 'igniteui-angular';
+import { IgxComboModule, IgxSwitchModule } from 'igniteui-angular';
 
 @NgModule({
     ...
-    imports: [..., IgxComboModule],
+    imports: [..., IgxComboModule, IgxSwitchModule],
     ...
 })
 export class AppModule {}
 ```
+
  デモでは、`igx-switch` コンポーネントを使用して `igx-combo` プロパティ値を切り替えます。グループ化は、`groupKey` を対応するデータソース エンティティに設定、または空文字列に設定して有効または無効にできます。
 ```html
 <div class="combo-container">

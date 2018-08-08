@@ -23,17 +23,17 @@ The following sample demonstrates scenario, using two igx-drop-down and igx-comb
 <div class="divider--half"></div>
 
 ### Usage
-To get started with the Ignite UI for Angular Combo import the **IgxComboModule** in the **app.module.ts** file:
+To get started import the **IgxComboModule**, **IgxDropDownModule**, **IgxIconModule**, **IgxInputGroupModule** in the **app.module.ts** file:
 
 ```typescript
 // app.module.ts
 
 ...
-import { IgxComboModule } from 'igniteui-angular';
+import { IgxComboModule, IgxDropDownModule, IgxIconModule, IgxInputGroupModule } from 'igniteui-angular';
 
 @NgModule({
     ...
-    imports: [..., IgxComboModule],
+    imports: [..., IgxComboModule, IgxDropDownModule, IgxIconModule, IgxInputGroupModule],
     ...
 })
 export class AppModule {}

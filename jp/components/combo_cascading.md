@@ -24,17 +24,17 @@ _language: ja
 <div class="divider--half"></div>
 
 ### 使用方法
-Ignite UI for Angular Combo を初期化する前に、**IgxComboModule** を **app.module.ts** ファイルにインポートします。
+To get started import the **IgxComboModule**, **IgxDropDownModule**, **IgxIconModule**, **IgxInputGroupModule** in the **app.module.ts** file:
 
 ```typescript
 // app.module.ts
 
 ...
-import { IgxComboModule } from 'igniteui-angular';
+import { IgxComboModule, IgxDropDownModule, IgxIconModule, IgxInputGroupModule } from 'igniteui-angular';
 
 @NgModule({
     ...
-    imports: [..., IgxComboModule],
+    imports: [..., IgxComboModule, IgxDropDownModule, IgxIconModule, IgxInputGroupModule],
     ...
 })
 export class AppModule {}

@@ -25,6 +25,23 @@ The following demo demonstrates igx-input-group and igx-combo controls being par
 
 Follow the Angular [tutorial](https://angular.io/guide/reactive-forms) for understanding how to work with Reactive Forms and what are the needed modules to include.
 
+To get started import all modules for Ignite UI components and the **ReactiveFormsModule** in order to have working Reactive Form:
+
+```typescript
+// app.module.ts
+
+...
+import { IgxIconModule, IgxInputGroupModule, IgxButtonModule, IgxRippleModule, IgxDatePickerModule, IgxTimePickerModule, IgxComboModule } from "igniteui-angular";
+import { ReactiveFormsModule } from "@angular/forms";
+
+@NgModule({
+    ...
+    imports: [..., IgxIconModule, IgxInputGroupModule, IgxButtonModule, IgxRippleModule, IgxDatePickerModule, IgxTimePickerModule, IgxComboModule, ReactiveFormsModule],
+    ...
+})
+export class AppModule {}
+```
+
 What you need to have Reactive form is to set model of the form, using the `formGroup` property of the HTML `form`, and set `formControlName` to each of the input fields, which will correspond to individual model's properties.
 
 ```html

@@ -10,7 +10,7 @@ _language: ja
 Ignite UI for Angular Input Group は、簡単に使用できるデータ入力フォームを作成できます。データ入力を簡素化し、入力コントロールには検証やエラーの処理機能も提供します。
 
 ### Input Group デモ
-<div class="sample-container" style="height:600px">
+<div class="sample-container" style="height:750px">
 <iframe id="input-group-sample-6-frame" src='{environment:demosBaseUrl}/input-group-sample-6' width="100%" height="100%" seamless frameBorder="0"></iframe>
 </div>
 <div>
@@ -21,17 +21,18 @@ Ignite UI for Angular Input Group は、簡単に使用できるデータ入力�
 ### 使用方法
 Input Group コンポーネントおよびその関連するディレクティブのデフォルト スタイル設定は、マテリアル デザイン [**ガイドライン**](https://material.io/guidelines/components/text-fields.html)のテキスト フィールド仕様を実装します。
 
-Ignite UI for Angular Input Group、Input、Label、Prefix、Suffix、および Hint を初期化する前に **IgxInputGroupModule** を **app.module.ts** ファイルにインポートします:
+To get started import all modules for Ignite UI components and the **FormsModule** in order to have working Template Driven Form:
 
 ```typescript
 // app.module.ts
 
 ...
-import { IgxInputGroupModule } from 'igniteui-angular';
+import { IgxIconModule, IgxInputGroupModule, IgxButtonModule, IgxRippleModule, IgxDatePickerModule, IgxTimePickerModule, IgxComboModule } from "igniteui-angular";
+import { FormsModule } from "@angular/forms";
 
 @NgModule({
     ...
-    imports: [..., IgxInputGroupModule],
+    imports: [..., IgxIconModule, IgxInputGroupModule, IgxButtonModule, IgxRippleModule, IgxDatePickerModule, IgxTimePickerModule, IgxComboModule, FormsModule],
     ...
 })
 export class AppModule {}

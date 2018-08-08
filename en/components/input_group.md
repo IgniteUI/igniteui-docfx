@@ -9,7 +9,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 Input groups in the Ignite UI for Angular controls allow developers to create easy-to-use and aesthetic forms. The user experiences simplicity with inputting data, and the inputs also provide mitigation for handling validation and errors.
 
 ### Input Group Demo
-<div class="sample-container" style="height:600px">
+<div class="sample-container" style="height:750px">
 <iframe id="input-group-sample-6-frame" src='{environment:demosBaseUrl}/input-group-sample-6' width="100%" height="100%" seamless frameBorder="0"></iframe>
 </div>
 <div>
@@ -21,21 +21,23 @@ Input groups in the Ignite UI for Angular controls allow developers to create ea
 The default styling of the Input Group component as well as its complimentary directives follow the text fields specification in the Material Design
 [**guidelines**](https://material.io/guidelines/components/text-fields.html).
 
-To get started with the Ignite UI for Angular Input Group, Input, Label, Prefix, Suffix and Hint let's first import the **IgxInputGroupModule** in our **app.module.ts** file:
+To get started import all modules for Ignite UI components and the **FormsModule** in order to have working Template Driven Form:
 
 ```typescript
 // app.module.ts
 
 ...
-import { IgxInputGroupModule } from 'igniteui-angular';
+import { IgxIconModule, IgxInputGroupModule, IgxButtonModule, IgxRippleModule, IgxDatePickerModule, IgxTimePickerModule, IgxComboModule } from "igniteui-angular";
+import { FormsModule } from "@angular/forms";
 
 @NgModule({
     ...
-    imports: [..., IgxInputGroupModule],
+    imports: [..., IgxIconModule, IgxInputGroupModule, IgxButtonModule, IgxRippleModule, IgxDatePickerModule, IgxTimePickerModule, IgxComboModule, FormsModule],
     ...
 })
 export class AppModule {}
 ```
+
 
 > [!NOTE]
 > To use any of the directives `igxInput`, `igxLabel`, `igxPrefix`, `igxSuffix` or `igxHint`, you have to wrap them in an `<igx-input-group>` container.

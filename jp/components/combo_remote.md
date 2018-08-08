@@ -21,17 +21,18 @@ igx-combo は、コンボをリモートサービスにバインドしてデー�
 </div>
 
 ### 使用方法
-Ignite UI for Angular Combo を初期化する前に、**IgxComboModule** を **app.module.ts** ファイルにインポートします。
+To get started with the Ignite UI for Angular Combo import the **IgxComboModule** in the **app.module.ts** file. In this demo a remote service is used for server requests, that is why in addition we need to include the Angular **HttpClientModule**:
 
 ```typescript
 // app.module.ts
 
 ...
 import { IgxComboModule } from 'igniteui-angular';
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
     ...
-    imports: [..., IgxComboModule],
+    imports: [..., IgxComboModule, HttpClientModule],
     ...
 })
 export class AppModule {}
