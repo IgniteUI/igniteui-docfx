@@ -1,18 +1,19 @@
 ---
-title: Cascading Scenario
-_description: The igx-combo and igx-drop-down exposes events, properties and methods that allows to easily construct cascading scenario using one of the controls or both of them.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Combo components, Angular Combo controls, Angular Cascading Combo, Angular Drop Down, Angular Cascading Scenario
+title: カスケーディング
+_description: igx-combo と igx-drop-down は、簡単にカスケーディングを作成できるイベント、プロパティ、メソッドを公開します。
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Combo コンポーネント, Angular Combo コントロール、Angular カスケーディング Combo, Angular Drop Down, Angular カスケーディング
+_language: ja
 ---
 
-## Cascading Scenario
+## カスケーディング
 <p class="highlight">
-The igx-combo and igx-drop-down exposes events, properties and methods that allows to easily construct cascading scenario, either using one of the controls or both of them.
+ igx-combo と igx-drop-down は、簡単にカスケーディングを作成できるイベント、プロパティ、メソッドを公開します。
 </p>
 <div class="divider"></div>
 
-### Demo
+### デモ
 
-The following sample demonstrates scenario, using two igx-drop-down and igx-combo components:
+以下のサンプルは、2 つの igx-drop-down と igx-combo コンポーネントを使用しています。
 
 <div class="sample-container loading" style="height: 540px;">
     <iframe id="cascading-combos-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/cascading-combos" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -22,8 +23,8 @@ The following sample demonstrates scenario, using two igx-drop-down and igx-comb
 </div>
 <div class="divider--half"></div>
 
-### Usage
-To get started with the Ignite UI for Angular Combo import the **IgxComboModule** in the **app.module.ts** file:
+### 使用方法
+Ignite UI for Angular Combo を初期化する前に、**IgxComboModule** を **app.module.ts** ファイルにインポートします。
 
 ```typescript
 // app.module.ts
@@ -39,7 +40,7 @@ import { IgxComboModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-In the sample below are used an igx-combo and two igx-drop-down components along with corresponding input elements. The API of the both components are used to get selected item from one and load data source for the next either drop down or combo, clear selection or reset data source.
+以下のサンプルは、igx-combo と 2 つの igx-drop-down コンポーネント、それらに対応する入力要素を使用しています。両コンポーネントの API は、選択された項目を取得してドロップダウンまたはコンボのいずれかにデータソースを読み込み、選択をクリアまたはデータソースをリセットします。
 
 ```html
 
@@ -147,18 +148,18 @@ export class CascadingCombos {
     }
 }
 ```
-> Note: The igx-overly position strategy is used to show drop down below input and emulate a single selection combo.
+> 注: igx-overly 配置機能は、入力の下にドロップダウンを表示して単一選択コンボをエミュレートするために使用します。
 
-## Additional Resources
+## その他のリソース
 <div class="divider--half"></div>
 
-* [Combo Features](combo_features.md)
-* [Combo Remote Binding](combo_remote.md)
-* [Combo Templates](combo_templates.md)
-* [Template Driven Forms Integration](input_group.md)
-* [Reactive Forms Integration](input_group_reactive_forms.md)
+* Combo 機能
+* [コンボ リモート バインディング](combo_remote.md)
+* [コンボ テンプレート](combo_templates.md)
+* [テンプレート駆動フォームの統合](input_group.md)
+* [リアクティブ フォームの統合](input_group_reactive_forms.md)
 
-Our community is active and always welcoming to new ideas.
+コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

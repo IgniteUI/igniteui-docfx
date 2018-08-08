@@ -7,7 +7,7 @@ _language: ja
 
 ## Input Group
 
-Ignite UI for Angular Input Groups は、簡単に使用できるデータ入力フォームを作成できます。データ入力を簡素化し、入力コントロールには検証やエラーの処理機能も提供します。
+Ignite UI for Angular Input Group は、簡単に使用できるデータ入力フォームを作成できます。データ入力を簡素化し、入力コントロールには検証やエラーの処理機能も提供します。
 
 ### Input Group デモ
 <div class="sample-container" style="height:600px">
@@ -128,8 +128,8 @@ Ignite UI for Angular Hint は、入力の下に配置されるヘルパー テ�
 ## 追加のリソース
 関連トピック:
 
-* [Reactive Forms Integration](input_group_reactive_forms.md)
-* [Label および Input](label_input.md)
+* [リアクティブ フォームの統合](input_group_reactive_forms.md)
+* [Label と Input](label_input.md)
 * [Combo](combo.md)
 
 <div class="divider--half"></div>

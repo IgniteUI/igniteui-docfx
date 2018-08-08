@@ -1,17 +1,18 @@
 ---
-title: Combo Features
-_description: Combo control exposes several of features including data and value binding, custom values, filtering, grouping, etc. 
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Combo components, Angular Features, Angular Combo Features, Angular Combo Data Binding, Angular Combo Value Binding, Angular Combo Data Filtering, Angular Combo Grouping, Angular Combo Custom Values
+title: Combo 機能
+_description: Combo コントロールは、データと値のバインディング、カスタム値、フィルタリング、グループ化など複数の機能を公開します。 
+_keywords: Ignite UI for Angular, UI コントロール, Angular widgets, web ウィジェット, UI ウィジェット, Angular, Native Angular コンポーネント スイート, Native Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Combo コンポーネント, Angular 機能, Angular Combo 機能, Angular Combo データ バインディング, Angular Combo 値バインディング, Angular Combo データ フィルタリング, Angular Combo グループ化, Angular Combo カスタム値
+_language: ja
 ---
 
-## Combo Features
+## Combo 機能
 <p class="highlight">
-Combo control exposes several features including data and value binding, custom values, filtering, grouping, etc. 
+Combo コントロールは、データと値のバインディング、カスタム値、フィルタリング、グループ化など複数の機能を公開します。 
 </p>
 <div class="divider"></div>
 
-### Demo
-The following demo demonstrates some of the combo features that are enabled/disabled at runtime:
+### デモ
+以下のデモは、ランタイムで有効または無効にできるいくつかのコンボ機能を確認できます。
 
 <div class="sample-container loading" style="height: 440px;">
     <iframe id="combo-features-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/combo-features" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -21,8 +22,8 @@ The following demo demonstrates some of the combo features that are enabled/disa
 </div>
 <div class="divider--half"></div>
 
-### Usage
-To get started with the Ignite UI for Angular Combo import the **IgxComboModule** in the **app.module.ts** file:
+### 使用方法
+Ignite UI for Angular Combo を初期化する前に、**IgxComboModule** を **app.module.ts** ファイルにインポートします。
 
 ```typescript
 // app.module.ts
@@ -37,7 +38,7 @@ import { IgxComboModule } from 'igniteui-angular';
 })
 export class AppModule {}
 ```
-The demo uses `igx-switch` component to toggle `igx-combo` properties' values. Note that grouping is enabled/disabled by setting `groupKey` to corresponding data source entity or setting it to empty string.
+ デモでは、`igx-switch` コンポーネントを使用して `igx-combo` プロパティ値を切り替えます。グループ化は、`groupKey` を対応するデータソース エンティティに設定、または空文字列に設定して有効または無効にできます。
 ```html
 <div class="combo-container">
     <igx-combo #combo [data]="lData" [displayKey]="'field'" [valueKey]="'field'"
@@ -66,9 +67,9 @@ The demo uses `igx-switch` component to toggle `igx-combo` properties' values. N
     }
 ```
 
-## Data Binding
+## データ バインディング
 
-Basic usage of `igx-combo` bound to a local data source, defining `valueKey` and `displayKey`:
+ローカル データソースへバインドする `igx-combo` の基本的な使用は、`valueKey` と `displayKey` を定義します。
 
 ```html
 <igx-combo [data]="lData" [valueKey]="'ProductID'" [displayKey]="'ProductName'"></igx-combo>
@@ -86,14 +87,14 @@ export class ComboDemo implements OnInit {
 }
 ```
 
-> Note: If `displayKey` is omitted then `valueKey` entity will be used instead.
+> 注: `displayKey` が省略された場合、`valueKey` エンティティが項目テキストとして使用されます。
 
 
-Follow this [topic](combo_remote.md) for more details about binding `igx-combo` with remote data.
+詳細については、[`igx-combo` をリモートデータをバインド](combo_remote.md)を参照してください。
 
-## Value Binding
+## 値バインディング
 
-For two-way data-binding, the `ngModel` can be used like shown below:
+双方データ バインディングは、以下のように `ngModel` を使用します。 
 
 ```html
 <igx-combo #combo [(ngModel)]="values"></igx-combo>
@@ -111,8 +112,8 @@ set values(newValues: Array<any>) {
 
 <div class="divider--half"></div>
 
-## Filtering
-By default filtering in the combo is enabled. It can be disabled using the following code:
+## フィルタリング
+コンボのフィルタリングがデフォルトで有効になります。以下のコードで無効にできます。
 
 ```html
 <igx-combo [filterable]="false"></igx-combo>
@@ -122,8 +123,8 @@ By default filtering in the combo is enabled. It can be disabled using the follo
 
 <div class="divider--half"></div>
 
-## Custom Values
-If the custom values are enabled, the missing item could be added using the UI of the combo.
+## カスタム値
+カスタム値が有効な場合、コンボ UI で項目を追加できます。
 
 ```html
 <igx-combo [allowCustomValues]="true"></igx-combo>
@@ -131,8 +132,8 @@ If the custom values are enabled, the missing item could be added using the UI o
 
 <div class="divider--half"></div>
 
-## Disabled
-You can disable combo using the following code:
+## 無効
+以下のコードでコンボを無効にできます。
 
 ```html
 <igx-combo [disabled]="true"></igx-combo>
@@ -140,8 +141,8 @@ You can disable combo using the following code:
 
 <div class="divider--half"></div>
 
-## Grouping
-Defining a combo's groupKey option will group the items, according to the provided key.
+## グループ化
+コンボの groupKey オプションを定義すると、キーに基づいて項目をグループ化します。
 
 ```html
 <igx-combo [groupKey]="'primaryKey'"></igx-combo>
@@ -151,72 +152,72 @@ Defining a combo's groupKey option will group the items, according to the provid
 
 ## API
 
-### Inputs
+### 入力
 <div class="divider--half"></div>
 
-| Name                     | Description                                       | Type                        |
+| 名前|説明|型                        |
 |--------------------------|---------------------------------------------------|-----------------------------|
-|  `id`                    | combo id                                          | string                      |
-|  `data`                  | combo data source                                 | any                         |
-|  `value`                 | combo value                                       | string                      |
-|  `allowCustomValue`      | enables/disables combo custom value                | boolean                     |
-|  `filterable`            | enables/disables combo drop down filtering - enabled by default                  | boolean                     |
-|  `valueKey`              | combo value data source property                  | string                      |
-|  `displayKey`            | combo display data source property                | string                      |
-|  `groupKey`              | combo item group                                  | string                      |
-|  `virtualizationState`   | defines the current state of the virtualized data. It contains `startIndex` and `chunkSize`      | `IForOfState`               |
-|  `width `                | defines combo width                               | string                      |
-|  `height`                | defines combo height                              | string                      |
-|  `itemsMaxHeight `       | defines drop down maximum height                  | number                      |
-|  `itemsWidth `           | defines drop down width                           | string                      |
-|  `itemHeight `           | defines drop down item height                     | number                      |
-|  `placeholder `          | defines the "empty value" text                    | string                      |
-|  `searchPlaceholder `    | defines the placeholder text for search input     | string                      |
-|  `collapsed`             | gets drop down state                              | boolean                     |
-|  `disabled`              | defines whether the control is active or not      | boolean                     |
-|  `ariaLabelledBy`        | defines label ID related to combo                 | string                      |
-|  `type`                  | defines type of combo - "line", "box", "border", "search"                                        | string                      |
-|  `valid`                 | gets if control is valid, when used in a form     | boolean                     |
+|  id|combo id                                          |string                      |
+|  `data`                  |combo data source                                 |any                         |
+|  `value`                 |combo value                                       |string                      |
+|  `allowCustomValue`      |enables/disables combo custom value                |boolean                     |
+|  `filterable`            |コンボのドロップダウンのフィルタリングを有効/無効にします。デフォルトは有効です。|boolean                     |
+|  `valueKey`              |コンボ値データソース プロパティ|string                      |
+|  `displayKey`            |コンボ表示データソース プロパティ|string                      |
+|  `groupKey`              |コンボ項目グループ|string                      |
+|  `virtualizationState`   |仮想化データの現在の状態を定義します。`startIndex` と `chunkSize` を含みます。|`IForOfState`               |
+|  `width `                |コンボの幅を定義します。|string                      |
+|  `height`                |コンボの高さを定義します。|string                      |
+|  `itemsMaxHeight `       |ドロップダウンの最大の高さを定義します。|number                      |
+|  `itemsWidth `           |ドロップダウンの幅を定義します。|string                      |
+|  `itemHeight `           |ドロップダウンの項目の高さを定義します。|number                      |
+|  `placeholder `          |"empty value" のテキストを定義します。|string                      |
+|  `searchPlaceholder `    |検索入力のプレースホルダー テキストを定義します。|string                      |
+|  `collapsed`             |ドロップダウン状態を取得します。|boolean                     |
+|  `disabled`              |コントロールがアクティブかどうかを定義します。|boolean                     |
+|  `ariaLabelledBy`        |コンボに関連するラベル ID を定義します。|string                      |
+|  `type`                  |コンボの型 ("line"、"box"、"border"、"search") を定義します。|string                      |
+|  `valid`                 |フォームで使用時のコントロールが有効化どうかを取得します。|boolean                     |
 
 
-### Outputs
+### 出力
 <div class="divider--half"></div>
 
-| Name                | Description                                                             | Cancelable   | Parameters                              |
+| 名前|説明|キャンセル可能|パラメーター                              |
 |------------------   |-------------------------------------------------------------------------|------------- |-----------------------------------------|
-| `onSelectionChange` | Emitted when item selection is changing, before the selection completes | true         | { oldSelection: `Array<any>`, newSelection: `Array<any>`, event: Event } |
-| `onSearchInput`     | Emitted when the search input's event is triggered             | false        | { searchValue: `string` }               |
-| `onAddition`        | Emitted when an item is being added to the data collection              | false        | { oldCollection: `Array<any>`, addedItem: `<any>`, newCollection: `Array<any>` }|
-| `onDataPreLoad`     | Emitted when new chunk of data is loaded from the virtualization        | false        | { event: Event }                        |
-| `onOpening`   | Emitted before the dropdown is opened                                   | false        | { event: Event }                        |
-| `onOpened`    | Emitted after the dropdown is opened                                    | false        | { event: Event }                        |
-| `onClosing`   | Emitted before the dropdown is closed                                   | false        | { event: Event }                        |
-| `onClosed`    | Emitted after the dropdown is closed                                    | false        | { event: Event }                        |
+| `onSelectionChange` |選択を完了する前にアイテム選択が変更されるときに発生されます。|true         |{ oldSelection: `Array<any>`, newSelection: `Array<any>`, event: Event } |
+| `onSearchInput`     |検索入力のイベントがトリガーされたときに発生されます。|false        |{ searchValue: `string` }               |
+| `onAddition`        |項目がデータ コレクションに追加されているときに発生されます。|false        |{ oldCollection: `Array<any>`, addedItem: `<any>`, newCollection: `Array<any>` }|
+| `onDataPreLoad`     |新しいデータが可視化から読み込まれたときに発生されます。|false|{ event: Event }                        |
+| `onOpening`   |ドロップダウンが開かれる前に発生されます。|false|{ event: Event }                        |
+| `onOpened`    |ドロップダウンが開かれた後に発生されます。|false|{ event: Event }                        |
+| `onClosing`   |ドロップダウンが閉じられる前に発生されます。|false|{ event: Event }                        |
+| `onClosed`    |ドロップダウンが閉じられた後に発生されます。|false|{ event: Event }                        |
 
-### Methods
+### メソッド
 <div class="divider--half"></div>
 
-| Name             | Description                 | Return type          | Parameters                  |
+| 名前|説明|戻り型|パラメーター                  |
 |----------------- |-----------------------------|----------------------|-----------------------------|
-| `open`           | Opens drop down             | `void`               | `None`                      |
-| `close`          | Closes drop down            | `void`               | `None`                      |
-| `toggle`         | Toggles drop down           | `void`               | `None`                      |
-| `selectedItems`  | Get current selection state | `Array<any>`         | `None`                      |
-| `selectItems`    | Select defined items        | `void`               | items: `Array<any>`, clearCurrentSelection: `boolean` |
-| `deselectItems`  | Deselect defined items      | `void`               | items: `Array<any>`         |
-| `selectAllItems` | Select all (filtered) items | `void`               | ignoreFilter?: `boolean` - if `true` selects **all** values |
-| `deselectAllItems` | Deselect (filtered) all items | `void`           | ignoreFilter?: `boolean` - if `true` deselects **all** values |
+| `open`           |Opens drop down             |`void`               |なし                      |
+| `close`          |Closes drop down            |`void`               |`None`                      |
+| `toggle`         |ドロップダウンを切り替えます。|`void`               |`None`                      |
+| `selectedItems`  |現在の選択状態を取得します。|`Array<any>`         |`None`                      |
+| `selectItems`    |定義済みの項目を選択します。|`void`               |項目: `Array<any>`, clearCurrentSelection: `boolean` |
+| `deselectItems`  |定義済みの項目の選択を解除します。|`void`               |項目: `Array<any>`         |
+| `selectAllItems` |Select all (filtered) items |`void`               |ignoreFilter?: `boolean` - `true` の場合、**すべて**の値を選択します。 |
+| `deselectAllItems` |フィルター済みのすべての項目の選択を解除します。|`void`           |ignoreFilter?: `boolean` - `true` の場合、**すべて**の値の選択を解除します。 |
 
-## Additional Resources
+## その他のリソース
 <div class="divider--half"></div>
 
-* [Combo Remote Binding](combo_remote.md)
-* [Combo Templates](combo_templates.md)
-* [Template Driven Forms Integration](input_group.md)
+* [コンボ リモート バインディング](combo_remote.md)
+* [コンボ テンプレート](combo_templates.md)
+* [テンプレート駆動フォームの統合](input_group.md)
 * [Reactive Forms Integration](input_group_reactive_forms.md)
 * [Cascading Scenario](combo_cascading.md)
 
-Our community is active and always welcoming to new ideas.
+コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

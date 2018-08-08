@@ -1,17 +1,18 @@
 ---
-title: Combo Remote Binding
-_description: The igx-combo exposes API that allows to bind a combo to a remote service and retrieve data on demand.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Combo components, Angular Combo controls, Angular Combo Remote Binding
+title: コンボ リモート バインディング
+_description: igx-combo は、コンボをリモートサービスにバインドしてデータをオンデマンドで取得する API を公開します。
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Combo コンポーネント, Angular Combo コントロール, Angular Combo リモート バインディング
+_language: ja
 ---
 
-## Combo Remote Binding
+## コンボ リモート バインディング
 <p class="highlight">
-The igx-combo exposes API that allows to bind a combo to a remote service and retrieve data on demand.
+igx-combo は、コンボをリモートサービスにバインドしてデータをオンデマンドで取得する API を公開します。
 </p>
 <div class="divider"></div>
 
-### Demo
-The sample below demonstrates remote binding using combo API - defining `valueKey` and `displayKey`, and using `onDataPreLoad`to load new chunk of remote data:
+### デモ
+以下のサンプルは、コンボ API を使用したリモートでバインディングを行います。`valueKey` と `displayKey` を定義し、`onDataPreLoad` を使用して新しいリモートデータを読み込みます。
 <div class="sample-container loading" style="height: 400px;">
     <iframe id="combo-remote-sample" frameborder="0" seamless width="700px" height="100%" src="{environment:demosBaseUrl}/combo-remote" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -19,8 +20,8 @@ The sample below demonstrates remote binding using combo API - defining `valueKe
     <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="combo-remote-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-### Usage
-To get started with the Ignite UI for Angular Combo import the **IgxComboModule** in the **app.module.ts** file:
+### 使用方法
+Ignite UI for Angular Combo を初期化する前に、**IgxComboModule** を **app.module.ts** ファイルにインポートします。
 
 ```typescript
 // app.module.ts
@@ -36,8 +37,8 @@ import { IgxComboModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-When binding combo to remote data we need to have available service that will load data on demand from a server. The code below defines a simple service that has a `getData()` method, which receives combo's current state information and returns a data as an observable. What the combo exposes is a `virtualizationState` property that gives current state of the combo - first index and the number of items that needs to be loaded.
-The service, should inform the combo for the total items that are on the server - a value that needs to be set to the `totalItemCount` `igx-combo` property, in order to show properly the scroll size.
+コンボをリモートデータへバインドする際にサーバーからデータをオンデマンドで読み込むための有効なサービスが必要です。以下のコードは、`getData()` メソッドでシンプルなサービスを定義し、コンボの状態を受け取り、observable としてデータを返します。コンボは `virtualizationState` プロパティを公開し、コンボの状態 (最初のインデックスと読み込む必要のある項目数) を提供します。
+サービスはコンボにサーバーにあるすべての項目を通知します。スクロールサイズを表示するために `totalItemCount` `igx-combo` プロパティに設定する必要のある値です。
 
 ```typescript
 // remote.service.ts
@@ -62,19 +63,19 @@ export class RemoteService {
     }
 ```
 
-When the data is returned from the service as an observable, then we can set it to the `igx-combo` using the [`async`](https://angular.io/api/common/AsyncPipe) pipe:
+データがサービスから observable として返されると [`async`](https://angular.io/api/common/AsyncPipe) パイプを使用して `igx-combo` に設定します。
 
 ```html
 <igx-combo [data]="rData | async" [valueKey]="'ProductID'" [displayKey]="'ProductName'" 
     (onDataPreLoad)="dataLoading($event)" (onSearchInput)="searchInput($event)" (onOpening)="searchInput('')"></igx-combo>
 ```
 Let's define the cases, when the igx-combo will need to request new data:
-    - when combo is initialized
-    - when we scroll combo's list. Then combo will emit `onDataPreLoad` along with the new combo `virtualizationState`, which allows to make a new request to the remote service.
-    - when we search in the `igx-combo` then we need to make request to filter remote results.
-    - when combo is opened we need to clear results from any previous filter operations.
+    - コンボが初期化されたとき
+    - コンボのリストをスクロールしたときコンボは、新しいコンボ `virtualizationState` と `onDataPreLoad` を発生し、リモート サービスに新しい要求を送ることができます。
+    - `igx-combo` で検索時にリモート結果のフィルターを要求する必要があります。
+    - コンボが開いたとき以前のフィルター処理の結果をクリアします。
 
-Below are listed the handlers that listen to the already defined actions and execute requests to the server:
+以下は定義済みの操作をリッスンしてサーバーへ要求するハンドラーです。
 
 ```typescript
 import { ChangeDetectorRef, Component, OnInit, ViewChild } from "@angular/core";
@@ -126,20 +127,20 @@ export class ComboRemoteComponent implements OnInit {
 }
 ```
 
-> Note: Anytime new data is loaded, we update `totalItemCount` `igx-combo` property, in order to have proper size of the list's scroll bar. In that case the service returns total size using the property `@odata.count`.
+> 注: 新しいデータが読み込まれた際にスクロールバーが適切なサイズになるよう `totalItemCount` `igx-combo` プロパティを更新します。その際サービスは `@odata.count` プロパティを使用して合計サイズを返します。
 
-> Note: Service needs to be included as a provider.
+> 注: サービスはプロバイダーとして含まれる必要があります。
 
-## Additional Resources
+## その他のリソース
 <div class="divider--half"></div>
 
-* [Combo Features](combo_features.md)
-* [Combo Templates](combo_templates.md)
-* [Template Driven Forms Integration](input_group.md)
-* [Reactive Forms Integration](input_group_reactive_forms.md)
-* [Cascading Scenario](combo_cascading.md)
+* [Combo 機能](combo_features.md)
+* [Combo テンプレート](combo_templates.md)
+* [テンプレート駆動フォームの統合](input_group.md)
+* [リアクティブ フォームの統合](input_group_reactive_forms.md)
+* [カスケーディング](combo_cascading.md)
 
-Our community is active and always welcoming to new ideas.
+コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+* [Ignite UI for Angular** フォーラム (英語)**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub (英語)**](https://github.com/IgniteUI/igniteui-angular)

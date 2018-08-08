@@ -1,16 +1,17 @@
 ---
-title: Combo Templates
-_description: Custom templates for different areas of the igx-combo component can be defined, including items, header, footer, empty list and adding button.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Combo components, Angular Templates, Angular Combo Templates
+title: コンボ テンプレート
+_description: igx-combo コンポーネントの異なる領域 (項目、ヘッダー、フッター、空リスト、ボタンの追加) にカスタム テンプレートを定義できます。
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Combo コンポーネント,  Angular テンプレート, Angular Combo テンプレート
+_language: ja
 ---
 
-## Combo Templates
+## コンボ テンプレート
 <p class="highlight">
-Custom templates for different areas of the igx-combo component can be defined, including items, header, footer, empty list and adding button.
+igx-combo コンポーネントの異なる領域 (項目、ヘッダー、フッター、空リスト、ボタンの追加) にカスタム テンプレートを定義できます。
 </p>
 <div class="divider"></div>
 
-### Demo
+### デモ
 
 <div class="sample-container loading" style="height: 450px;">
     <iframe id="combo-templates-sample" frameborder="0" seamless width="700px" height="100%" src="{environment:demosBaseUrl}/combo-template" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -19,8 +20,8 @@ Custom templates for different areas of the igx-combo component can be defined, 
     <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="combo-templates-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-### Usage
-To get started with the Ignite UI for Angular Combo import the **IgxComboModule** in the **app.module.ts** file:
+### 使用方法
+Ignite UI for Angular Combo を初期化する前に、**IgxComboModule** を **app.module.ts** ファイルにインポートします。
 
 ```typescript
 // app.module.ts
@@ -36,7 +37,7 @@ import { IgxComboModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-Defining templates for item, header, footer and empty one is achieved using predefined reference names (see the topic below for detailed information):
+定義済みの参照名 (詳細については以下を参照) を使用して項目にテンプレート (項目、ヘッダー、フッター、空項目) を定義できます。
 
 ```html
 <igx-combo #templateCombo [data]="lData" [valueKey]="'field'" >
@@ -64,11 +65,11 @@ Defining templates for item, header, footer and empty one is achieved using pred
 </igx-combo>
 ```
 
-## Template types
-When defining one of the templates below, you need to reference them using the following predefined names:
+## テンプレート タイプ
+以下のいずれかのテンプレートを定義した場合、定義済みの名前を使用して参照してください。
 
-### Item template
-Use reference name **`itemTemplate`**:
+### 項目テンプレート
+参照名 **`itemTemplate`** の使用
 
 ```html
 <igx-combo>
@@ -81,8 +82,8 @@ Use reference name **`itemTemplate`**:
 </igx-combo>
 ```
 
-### Header template
-Use reference name **`headerTemplate`**:
+### ヘッダー テンプレート
+参照名 **`headerTemplate`** を使用
 
 ```html
 <igx-combo>
@@ -93,8 +94,8 @@ Use reference name **`headerTemplate`**:
 </igx-combo>
 ```
 
-### Footer template
-Use reference name **`footerTemplate`**:
+### フッター テンプレート
+参照名 **`footerTemplate`** を使用
 
 ```html
 <igx-combo>
@@ -105,8 +106,8 @@ Use reference name **`footerTemplate`**:
 </igx-combo>
 ```
 
-### Empty template
-Use reference name **`emptyTemplate`**:
+### 空のテンプレート
+参照名 **`emptyTemplate`** を使用
 
 ```html
 <igx-combo>
@@ -116,8 +117,8 @@ Use reference name **`emptyTemplate`**:
 </igx-combo>
 ```
 
-### Add template
-Use reference name **`addItemTemplate`**:
+### テンプレートの追加
+参照名 **`addItemTemplate`** を使用
 
 ```html
 <igx-combo>
@@ -128,16 +129,16 @@ Use reference name **`addItemTemplate`**:
 ```
 <div class="divider--half"></div>
 
-## Additional Resources
+## その他のリソース
 <div class="divider--half"></div>
 
-* [Combo Features](combo_features.md)
-* [Combo Remote Binding](combo_remote.md)
-* [Template Driven Forms Integration](input_group.md)
-* [Reactive Forms Integration](input_group_reactive_forms.md)
-* [Cascading Scenario](combo_cascading.md)
+* [コンボ機能](combo_features.md)
+* [コンボ リモート バインディング](combo_remote.md)
+* [テンプレート駆動フォームの統合](input_group.md)
+* [リアクティブ フォームの統合](input_group_reactive_forms.md)
+* [カスケーディング](combo_cascading.md)
 
-Our community is active and always welcoming to new ideas.
+コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+* [Ignite UI for Angular** フォーラム (英語)**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub (英語)**](https://github.com/IgniteUI/igniteui-angular)

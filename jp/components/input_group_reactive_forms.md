@@ -1,17 +1,18 @@
 ---
-title: Reactive Forms Integration
-_description: Ignite UI for Angular controls can be easily integrated in Reactive Forms. 
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Combo components, Angular Reactive Forms, Angular Forms
+title: Reactive フォームの統合
+_description: Ignite UI for Angular コントロールは簡単にリアクティブ フォームに統合できます。 
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Combo コンポーネント,  Angular リアクティブ フォーム, Angular フォーム
+_language: ja
 ---
 
-## Reactive Forms Integration
+## リアクティブ フォームの統合
 <p class="highlight">
-Ignite UI for Angular controls can be easily integrated in Reactive Forms.
+Ignite UI for Angular コントロールは簡単にリアクティブ フォームに統合できます。
 </p>
 <div class="divider"></div>
 
-### Demo
-The following demo demonstrates igx-input-group and igx-combo controls being part of the Reactive Form.
+### デモ
+以下のデモは、igx-input-group と igx-combo コントロールをリアクティブ フォームの一部に使用しています。
 
 <div class="sample-container loading" style="height: 750px;">
     <iframe id="reactive-forms-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/reactive-forms" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -21,11 +22,11 @@ The following demo demonstrates igx-input-group and igx-combo controls being par
 </div>
 <div class="divider--half"></div>
 
-### Usage
+### 使用方法
 
-Follow the Angular [tutorial](https://angular.io/guide/reactive-forms) for understanding how to work with Reactive Forms and what are the needed modules to include.
+リアクティブ フォームの使用方法、必要なモジュールについては、Angular [チュートリアル](https://angular.io/guide/reactive-forms) をご覧ください。
 
-What you need to have Reactive form is to set model of the form, using the `formGroup` property of the HTML `form`, and set `formControlName` to each of the input fields, which will correspond to individual model's properties.
+リアクティブ フォームに HTML `form` の `formGroup` を使用してモデルを設定し、各モデルのプロパティに対応する `formControlName` を各入力フィールドに設定します。
 
 ```html
 <form class="input-group-form" [formGroup]="user" (ngSubmit)="onSubmit()">
@@ -44,7 +45,7 @@ What you need to have Reactive form is to set model of the form, using the `form
     </igx-combo>
     ...
 ```
-The object set to the form's `formGroup` property is the form model and it needs to be of type `FormGroup`. Then, following Angular tutorial for Reactive Forms, in the demo's constructor we need the `FormBuilder` to define and configure different form's fields:
+フォームの `formGroup` プロパティに設定したオブジェクトはフォーム モデルで `formGroup` タイプである必要があります。Angular のリアクティブ フォームのチュートリアルでは、デモのコンストラクターに `FormBuilder` を定義して異なるフォーム フィールドを定義する必要があります。
 
 ```typescript
 export class ReactiveFormsSampleComponent {
@@ -63,15 +64,15 @@ export class ReactiveFormsSampleComponent {
 }
 ```
 
-In that case the full name, email and genres form's fields are required and the form won't be submitted, unless they have values.
+その場合、姓名、メールアドレス、ジャンル フォームのフィールドが必要となり、値がない場合は送信されません。
 
-## Additional Resources
+## その他のリソース
 <div class="divider--half"></div>
 
 * [Combo](combo.md)
-* [Template Driven Forms Integration](input_group.md)
+* [テンプレート駆動フォームの統合](input_group.md)
 
-Our community is active and always welcoming to new ideas.
+コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+* [Ignite UI for Angular** フォーラム (英語)**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub (英語)**](https://github.com/IgniteUI/igniteui-angular)
