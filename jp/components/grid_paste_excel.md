@@ -1,14 +1,14 @@
 ---
-title: Paste from Excel - Native Angular | Ignite UI for Angular
-_description: Users can paste data into igxGrid that is copied from Excel.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Controls, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Grid, Angular Data Grid, Angular Grid Control, Angular Grid Component, Paste from Excel, Angular Paste from Excel
+title: Excel からの貼り付け - ネイティブ Angular | Ignite UI for Angular
+_description: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Grid, Angular Data Grid, Angular Grid コントロール, Angular Grid コンポーネント, Excel から貼り付け, Angular Excel からの貼り付け
+_language: ja
 ---
 
 ### Excel からの貼り付け
 
-Ignite UI for Angular `IgxGrid` は、クリップボードにコピーした Excel データを読み込めます。このセクションは、カスタムコードを使用して実装する方法を説明します。
+Ignite UI for Angular `IgxGrid` は、クリップボードにコピーした Excel データを読み込むことができます。このトピックでは、カスタムコードを使用して実装する方法について説明します。
 
-#### Excel から貼り付けのデモ
+#### Excel からデータを貼り付けるデモ
 
 このサンプルでは、Excel から `igxGrid` の貼り付けを実装する方法を紹介します。
 サンプルは、Excel スプレッドシートを開いて行をコピーし、キーボード (Ctrl + V、Shift + Insert、Command + V) を使用してグリッドに貼り付けます。
@@ -27,13 +27,13 @@ Ignite UI for Angular `IgxGrid` は、クリップボードにコピーした Ex
 </div>
 <div>
 <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="excel-paste-sample-iframe"
-    data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
 </div>
 <div class="divider"></div>
 
 #### 使用方法
 
-You should add the `paste-handler` directive (you can find its code in the next section) to the `igxGrid` and handle its `onDataProcessed` event. The `onDataProcessed` event has one parameter that gives you access to the Excel data in the form of an array. For reference see the `addRecords` and `updateRecords` methods.
+`paste-handler` ディレクティブ (次のセクションにコードがあります) を `igxGrid` に追加して `onDataProcessed` イベントを処理する必要があります。`onDataProcessed` イベントに配列フォームの Excel データへアクセスを与えるパラメーターがあります。詳細については、`addRecords` と `updateRecords` メソッドを参照してください。
 
 ```html
 <igx-grid #grid1 [data]="data" [width]="'100%'" [height]="'505px'" [autoGenerate]="false" paste-handler (onDataProcessed)="dataPasted($event)" [primaryKey]="'ID'">
@@ -138,7 +138,7 @@ You should add the `paste-handler` directive (you can find its code in the next 
 
 #### 貼り付けハンドラー ディレクディブ
 
-This is the `paste-handler` implementation. The code creates a DOM `textarea` element which is used to receive the pasted data from the clipboard. When the data is pasted in the `textarea` the directive parses it into an array and then emits a custom event `onDataProcessed` passing the parsed data.
+`paste-handler` 実装です。 クリップボードから張り付けたデータを受け取るために使用される DOM `textarea` 要素をコードで作成します。データを `textarea` に張り付ける際にディレクティブはそれを配列へ解析し、解析データを渡すカスタム イベント `onDataProcessed` を発生します。
 
 ```typescript
 import { Directive, EventEmitter, HostListener, Output} from "@angular/core";
