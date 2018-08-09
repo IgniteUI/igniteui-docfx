@@ -80,6 +80,15 @@ In the sample below are used an igx-combo and two igx-drop-down components along
 ```
 
 ```typescript
+import { Component, ViewChild } from "@angular/core";
+import { ConnectedPositioningStrategy, IgxComboComponent, IgxDropDownComponent, IgxInputGroupComponent, NoOpScrollStrategy, OverlaySettings } from "igniteui-angular";
+import { data } from "./local-data";
+
+@Component({
+    selector: "app-combo",
+    styleUrls: ["./cascading-combos.component.scss"],
+    templateUrl: "./cascading-combos.component.html"
+})
 export class CascadingCombos {
 
     @ViewChild("inputGroupCountry", { read: IgxInputGroupComponent}) public inputGroupCountry: IgxInputGroupComponent;
