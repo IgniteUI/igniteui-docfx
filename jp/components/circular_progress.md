@@ -125,7 +125,7 @@ export class AppModule {}
 | `value` |  number | 完了した位置を示す値を設定します。 |
 | `animate` |  boolean | 進行状況バーにアニメーションがあるかどうか。 |
 | `textVisibility` | boolean | テキストを表示するかどうかを設定します。デフォルトで `true` に設定されます。 |
-| `text` | string | Sets the text to displayed inside the circular bar. Defaults to percentage representation of the value if not set. |
+| `text` | string | 円形プログレスバー内に表示するテキストを設定します。設定されていない場合、デフォルトでパーセンテージを表示します。 |
 <div class="divider--half"></div>
 
 ### メソッド
