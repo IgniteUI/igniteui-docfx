@@ -26,7 +26,7 @@ Ignite UI for Angular コントロールは簡単にリアクティブ フォー
 
 リアクティブ フォームの使用方法、必要なモジュールについては、Angular [チュートリアル](https://angular.io/guide/reactive-forms) をご覧ください。
 
-To get started import all modules for Ignite UI components and the **ReactiveFormsModule** in order to have working Reactive Form:
+リアクティブ フォームを使用する前に Ignite UI コンポーネントのすべてのモジュールと **ReactiveFormsModule*** をインポートします。
 
 ```typescript
 // app.module.ts

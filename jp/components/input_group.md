@@ -21,7 +21,7 @@ Ignite UI for Angular Input Group は、簡単に使用できるデータ入力�
 ### 使用方法
 Input Group コンポーネントおよびその関連するディレクティブのデフォルト スタイル設定は、マテリアル デザイン [**ガイドライン**](https://material.io/guidelines/components/text-fields.html)のテキスト フィールド仕様を実装します。
 
-To get started import all modules for Ignite UI components and the **FormsModule** in order to have working Template Driven Form:
+テンプレート駆動フォームを使用する前に Ignite UI コンポーネントのすべてのモジュールと **FormsModule** をインポートします。
 
 ```typescript
 // app.module.ts
