@@ -1,50 +1,75 @@
 ---
-title: Combo Component
-_description: The igx-combo provides a powerful input, combining features of the basic HTML input, select and the IgniteUI for Angular igx-drop-down controls.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Combo components, Angular Combo controls
+title: Combo Features
+_description: Combo control exposes several of features including data and value binding, custom values, filtering, grouping, etc. 
+_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Combo components, Angular Features, Angular Combo Features, Angular Combo Data Binding, Angular Combo Value Binding, Angular Combo Data Filtering, Angular Combo Grouping, Angular Combo Custom Values
 ---
 
-## Combo
+## Combo Features
 <p class="highlight">
-The igx-combo component provides a powerful input, combining the features of the basic HTML `input`, select and the IgniteUI for Angular `igx-drop-down` components.<br />
-The combo component provides easy **[filtering](combo_features.md#filtering)** and **multiple selection** of items, **[grouping](combo_features.md#grouping)** and adding **[custom values](combo_features.md#custom-values)** to the dropdown list.<br />
-**[Custom templates](combo_templates.md)** could be provided in order to customize different areas of the components, such as items, header, footer, etc.<br />
-The `igx-combo` component is integrated with the **[Template Driven Forms](input_group.md)** and **[Reactive Forms](input_group_reactive_forms.md)**.<br />
-The `igx-combo` exposes intuitive **keyboard navigation** and it is **accessibility compliant**.<br />
-Drop Down items are **virtualized**, which guarantees smooth work, even if the `igx-combo` is bound to data source with a lot of items.
+Combo control exposes several features including data and value binding, custom values, filtering, grouping, etc. 
 </p>
 <div class="divider"></div>
 
 ### Demo
-<div class="sample-container loading" style="height: 400px;">
-    <iframe id="combo-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/combo" onload="onSampleIframeContentLoaded(this);"></iframe>
+The following demo demonstrates some of the combo features that are enabled/disabled at runtime:
+
+<div class="sample-container loading" style="height: 440px;">
+    <iframe id="combo-features-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/combo-features" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="combo-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="combo-features-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
 
-> [!WARNING]
-> To start using Ignite UI for Angular components in your own projects, make sure you have configured all necessary dependencies and have performed the proper setup of your project. You can learn how to do this in the [**installation**](https://www.infragistics.com/products/ignite-ui-angular/getting-started#installation) topic.
-
 ### Usage
-The `IgxComboComponent` allows you to search and select items from the list. The combo uses the `IgxDropDownComponent` internally as an item container. To get started with the Ignite UI for Angular Combo, let's first import the **IgxComboModule** in our **app.module.ts** file:
+To get started with the Ignite UI for Angular Combo import the **IgxComboModule** in the **app.module.ts** file. For the following sample the `igx-switch` component is used and in addition we will need the **IgxSwitchModule** also:
 
 ```typescript
 // app.module.ts
 
 ...
-import { IgxComboModule } from 'igniteui-angular';
+import { IgxComboModule, IgxSwitchModule } from 'igniteui-angular';
 
 @NgModule({
     ...
-    imports: [..., IgxComboModule],
+    imports: [..., IgxComboModule, IgxSwitchModule],
     ...
 })
 export class AppModule {}
 ```
 
-Then in the template bind the `igx-combo` with some data and define `valueKey` and `displayKey` corresponding to entities from the `localData` data source:
+The demo uses `igx-switch` component to toggle `igx-combo` properties' values. Note that grouping is enabled/disabled by setting `groupKey` to corresponding data source entity or setting it to empty string.
+```html
+<div class="combo-container">
+    <igx-combo #combo [data]="lData" [displayKey]="'field'" [valueKey]="'field'"
+        [allowCustomValues]="customValues"
+        [filterable]="filterable"
+        [disabled]="disabled">
+    </igx-combo>
+</div>
+<div class="switch-container">
+    <igx-switch [(ngModel)]="filterable">Enable Filtering</igx-switch><br />
+    <igx-switch [(ngModel)]="customValues">Allow Custom Values</igx-switch><br />
+    <igx-switch (change)="enableGroups($event)">Enable Grouping</igx-switch><br />
+    <igx-switch [(ngModel)]="disabled">Disabled</igx-switch>
+</div>
+```
+
+```typescript
+    @ViewChild("combo", { read: IgxComboComponent }) public combo: IgxComboComponent;
+
+    public filterable = true;
+    public customValues = true;
+    public disabled = false;
+
+    public enableGroups(event) {
+        this.combo.groupKey = event.checked ? "region" : "";
+    }
+```
+
+## Data Binding
+
+Basic usage of `igx-combo` bound to a local data source, defining `valueKey` and `displayKey`:
 
 ```html
 <igx-combo [data]="lData" [valueKey]="'ProductID'" [displayKey]="'ProductName'"></igx-combo>
@@ -61,49 +86,69 @@ export class ComboDemo implements OnInit {
     }
 }
 ```
-> Note: If `displayKey` is omitted then `valueKey` entity will instead be used as item text.
 
-## Features
-Combo control exposes the following features:
-    - Data Binding - local data and [remote data](combo_remote.md)
-    - [Value Binding](combo_features.md#value-binding)
-    - [Filtering](combo_features.md#filtering)
-    - [Grouping](combo_features.md#grouping)
-    - [Custom values](combo_features.md#custom-values)
-    - [Templates](combo_templates.md)
-    - Integration with [Template Driven Forms](input_group.md) and [Reactive Forms](input_group_reactive_forms.md)
+> Note: If `displayKey` is omitted then `valueKey` entity will be used instead.
 
-## Keyboard Navigation
 
-When igxCombo is closed and focused:
-- `ArrowDown` or `Alt` + `ArrowDown` will open the combo drop down and will move focus to the search input.
+Follow this [topic](combo_remote.md) for more details about binding `igx-combo` with remote data.
 
-When igxCombo is opened and search input is focused:
-- `ArrowUp` or `Alt` + `ArrowUp` will close the combo drop down and will move focus to the closed combo.
+## Value Binding
 
-- `ArrowDown` will move focus from the search input to the first list item. If list is empty and custom values are enabled will move it to the Add new item button.
-  > Note: Any other key stroke will be handled by the input.
+For two-way data-binding, the `ngModel` can be used like shown below:
 
-When igxCombo is opened and list item is focused:
-- `ArrowDown` will move to next list item. If the active item is the last one in the list and custom values are enabled then focus will be moved to the Add item button.
+```html
+<igx-combo #combo [(ngModel)]="values"></igx-combo>
+```
 
-- `ArrowUp` will move to previous list item. If the active item is the first one in the list then focus will be moved back to the search input.
+```typescript
+@ViewChild('combo', { read: IgxComboComponent }) public combo: IgxComboComponent;
+get values() {
+    return this.combo.selectedItems();
+}
+set values(newValues: Array<any>) {
+    this.combo.selectItems(newValues);
+}
+```
 
-- `End` will move to last list item.
+<div class="divider--half"></div>
 
-- `Home` will move to first list item.
+## Filtering
+By default filtering in the combo is enabled. It can be disabled using the following code:
 
-- `Space` will select/deselect active list item.
+```html
+<igx-combo [filterable]="false"></igx-combo>
+```
 
-- `Enter` will confirm the already selected items and will close the list.
+<div class="divider--half"></div>
 
-- `Esc` will close the list.
+<div class="divider--half"></div>
 
-When igxCombo is opened, allow custom values are enabled and add item button is focused:
+## Custom Values
+If the custom values are enabled, the missing item could be added using the UI of the combo.
 
-- `Enter` will add new item with valueKey and displayKey equal to the text in the search input and will select the new item.
+```html
+<igx-combo [allowCustomValues]="true"></igx-combo>
+```
 
-- `ArrowUp` focus will be moved back to the last list item or if list is empty will be moved to the search input.
+<div class="divider--half"></div>
+
+## Disabled
+You can disable combo using the following code:
+
+```html
+<igx-combo [disabled]="true"></igx-combo>
+```
+
+<div class="divider--half"></div>
+
+## Grouping
+Defining a combo's groupKey option will group the items, according to the provided key.
+
+```html
+<igx-combo [groupKey]="'primaryKey'"></igx-combo>
+```
+
+<div class="divider--half"></div>
 
 ## API
 
@@ -163,15 +208,9 @@ When igxCombo is opened, allow custom values are enabled and add item button is 
 | `selectAllItems` | Select all (filtered) items | `void`               | ignoreFilter?: `boolean` - if `true` selects **all** values |
 | `deselectAllItems` | Deselect (filtered) all items | `void`           | ignoreFilter?: `boolean` - if `true` deselects **all** values |
 
-## Known Issues
-
-- Combo input that displays the selected items is not editable, however due to a browser specifics in IE and FireFox the cursor is visible
-- Backspace works in disabled combo in IE
-
-### Additional Resources
+## Additional Resources
 <div class="divider--half"></div>
 
-* [Combo Features](combo_features.md)
 * [Combo Remote Binding](combo_remote.md)
 * [Combo Templates](combo_templates.md)
 * [Template Driven Forms Integration](input_group.md)
