@@ -40,22 +40,6 @@ export class AppModule {}
 
 選択可能な複数のオプション項目を提供するシンプルなドロップダウンを作成します。**igx-drop-down** コンポーネントと **igx-toggle** を使用してドロップダウンの開く/閉じるを有効にします。
 
-次にすべての必要なモジュールを含み、**app.module.ts** ファイルにインポートします。
-
-```typescript
-// app.module.ts
-
-...
-import {
-    IgxDropDownModule
-} from 'igniteui-angular';
-
-@NgModule({
-    ...
-    imports: [..., IgxDropDownModule],
-})
-export class AppModule {}
-```　
 構成の後、すべてのオプションを  [**IgxDropDownComponent**](drop_down.md) コンポーネントに表示します。ドロップダウンは、ドロップダウン項目として複数のオプションを含みます。
 
 ```html
@@ -88,7 +72,7 @@ export class AppModule {}
       modal: false,
       positionStrategy: new ConnectedPositioningStrategy(this._positionSettings),
       scrollStrategy: new CloseScrollStrategy()
-  };
+    };
 
     public ngOnInit() {
         for (let i = 1; i < 4; i ++) {

@@ -37,24 +37,8 @@ import { IgxDropDownModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-Let's create a simple dropdown that provides several options items to choose from. To achieve this, we use the **igx-drop-down** component as well as **igx-toggle** to open/close the dropdown.
+Let's create a simple dropdown that provides several option items to choose from. To achieve this, we use the **igx-drop-down** component as well as **igx-toggle** to open/close the dropdown.
 
-To continue, include all needed modules and import them in the **app.module.ts** file.
-
-```typescript
-// app.module.ts
-
-...
-import {
-    IgxDropDownModule
-} from 'igniteui-angular';
-
-@NgModule({
-    ...
-    imports: [..., IgxDropDownModule],
-})
-export class AppModule {}
-```
 
 Having all set up, let's show all the options in the [**IgxDropDownComponent**](https://www.infragistics.com/products/ignite-ui-angular/angular/components/drop_down.html) component. The dropdown contains several options as dropdown items.
 
@@ -88,7 +72,7 @@ Having all set up, let's show all the options in the [**IgxDropDownComponent**](
       modal: false,
       positionStrategy: new ConnectedPositioningStrategy(this._positionSettings),
       scrollStrategy: new CloseScrollStrategy()
-  };
+    };
 
     public ngOnInit() {
         for (let i = 1; i < 4; i ++) {
