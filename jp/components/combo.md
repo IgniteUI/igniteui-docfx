@@ -7,33 +7,36 @@ _language: ja
 
 ## Combo
 <p class="highlight">
-igx-combo コンポーネントは、基本 HTML input 要素、select 要素、および IgniteUI for Angular igx-drop-down コンポーネントの機能を組み合わせています。
-Combo コンポーネントは、フィルタリング、複数の項目の選択、グループ化、ドロップダウン リストにカスタム値の追加などの機能がサポートされます。項目、ヘッダー、フッターなどのコンポーネントの領域をカスタマイズするためにカスタム テンプレートを設定でき、たとえば Combo コンポーネントは Template Driven および Reactive Forms と統合されています。
-また igx-combo はキーボード ナビゲーションを公開しており、アクセシビリティ規格にも対応しています。
-ドロップダウン項目を仮想化し igx-combo が大量の項目を持つデータ ソースにバインドした場合もスクロールをスムーズに行うことができます。
+igx-combo コンポーネントは、基本的な HTML `input`、選択機能、IgniteUI for Angular igx-drop-down を組み合わせたコンポーネントです。<br />
+Combo コンポーネントは、**[フィルタリング](combo_features.md#フィルタリング)**、項目の**複数選択**、**[グループ化](combo_features.md#グループ化)**、ドロップダウン リストに**[カスタム値](combo_features.md#カスタム値)** の追加などの機能をサポートします。<br />
+**[カスタム テンプレート](combo_templates.md)** は、項目、ヘッダー、フッターなどコンポーネントの異なる領域をカスタマイズするために提供されます。<br />
+The `igx-combo` component is integrated with the **[Template Driven Forms](input_group.md)** and **[Reactive Forms](input_group_reactive_forms.md)**.
+igx-combo` コンポーネントは、**[テンプレート駆動フォーム](input_group.md)** と **[Reactive フォーム](input_group_reactive_forms.md)** を統合したコンポーネントです。<br />
+`igx-combo` は、直感的な **キーボード ナビゲーション**を公開し、**アクセシビリティ規格**に準拠しています。<br />
+ドロップダウン項目を**仮想化*することにより、igx-combo を大量の項目を持つデータ ソースにバインドした場合もスムーズにスクロールを行うことができます。
 </p>
 <div class="divider"></div>
 
-### Combo デモ
-<div class="sample-container loading" style="height: 540px;">
-    <iframe id="combo-features-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/combo-features" onload="onSampleIframeContentLoaded(this);"></iframe>
+### デモ
+<div class="sample-container loading" style="height: 400px;">
+    <iframe id="combo-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/combo" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="combo-features-sample" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="combo-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz で開く</button>
 </div>
 <div class="divider--half"></div>
 
 > [!WARNING]
-> Ignite UI for Angular コンポーネントをプロジェクトに追加する前に、必要なすべての依存関係を構成し、プロジェクトのセットアップが正しく完了したことを確認してください。[**インストール**](https://jp.infragistics.com/products/ignite-ui-angular/getting-started#installation) のトピックで手順を確認できます。
+> Ignite UI for Angular コンポーネントをプロジェクトに追加する前に、必要なすべての依存関係を構成し、プロジェクトのセットアップが正しく完了したことを確認してください。詳細については、[**インストール**](https://jp.infragistics.com/products/ignite-ui-angular/getting-started#installation) トピックをご確認ください。
 
-## 使用方法
-`IgxComboComponent` はリストの項目を検索して選択する機能があります。コンボは内部に項目コンテナーとして ` を使用します。Ignite UI for Angular Combo を初期化する前に **IgxComboModule** を **app.module.ts** ファイルにインポートします。
+### 使用方法
+`IgxComboComponent` は、リストから項目の検索および選択が可能です。コンボは、項目コンテナーとして `IgxDropDownComponent` を内部使用します。Ignite UI for Angular Combo で作業を開始する前に **IgxComboModule** を **app.module.ts** ファイルにインポートします。
 
 ```typescript
 // app.module.ts
 
 ...
-import { IgxComboModule } from 'igniteui-angular/main';
+import { IgxComboModule } from 'igniteui-angular';
 
 @NgModule({
     ...
@@ -43,219 +46,34 @@ import { IgxComboModule } from 'igniteui-angular/main';
 export class AppModule {}
 ```
 
-テンプレートにコンボを追加します。
+次にテンプレートで `igx-combo` をデータにバインドし、localData データソースのエントリに対応する `valueKey` と `displayKey` を定義します。
 
 ```html
-<igx-combo [data]="localData" [valueKey]="'ProductID'" [displayKey]="'ProductName'"></igx-combo>
+<igx-combo [data]="lData" [valueKey]="'ProductID'" [displayKey]="'ProductName'"></igx-combo>
 ```
 
-以下は結果です。
-<div class="sample-container loading" style="height: 540px;">
-    <iframe id="combo-features-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/combo-features" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="combo-features-sample" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
-</div>
-<div class="divider--half"></div>
+```typescript
+import { localData } from "./local-data";
+
+export class ComboDemo implements OnInit {
+    public lData: any[];
+
+    public ngOnInit() {
+        this.lData = localData;
+    }
+}
+```
+> 注: `displayKey` が省略された場合、代わりに `valueKey` エンティティが項目テキストとして使用されます。
 
 ## 機能
-
-### データ バインディング
-
-以下は、`valueKey` および `displayKey`　を定義してローカル データ ソースにバインドされた `igx-combo` の基本的な使用方法です。
-
-```html
-<igx-combo [data]="localData" [valueKey]="'ProductID'" [displayKey]="'ProductName'"></igx-combo>
-```
-
-> 注: `displayKey` が設定されない場合、`valueKey` 設定が使用されます。
-
-
-リモート バインディング、`valueKey` および `displayKey` の定義、`onDataPreLoad` の公開により、コンボにリモート データの新規データを読み込めるようになります。以下の例でこの機能を紹介します。
-
-```html
-<igx-combo [data]="remoteData | async" (onDataPreLoad)="dataLoading($event)" [valueKey]="'ProductID'" [displayKey]="'ProductName'" ></igx-combo>
-```
-
-```typescript
-public ngOnInit() {
-    this.remoteData = this.remoteService.remoteData;
-}
-
-public ngAfterViewInit() {
-    this.remoteService.getData(this.combo.virtualizationState, (data) => {
-        this.combo.totalItemCount = data.count;
-    });
-}
-
-public dataLoading(evt) {
-        if (this.prevRequest) {
-            this.prevRequest.unsubscribe();
-        }
-
-        this.prevRequest = this.remoteService.getData(this.combo.virtualizationState, () => {
-            this.cdr.detectChanges();
-            this.combo.triggerCheck();
-        });
-    }
-```
-
-> 注: コンボをリモート データにバインドするには、サーバーからデータ部分を取得するサービスが必要です。
-コンボは、コンボの状態 (最初のインデックスおよび読み込む項目の数) を指定する `virtualizationState` プロパティを公開します。
-サービスが `totalItemCount` プロパティを使用してサーバーにある項目の数をコンボに通知する必要があります。
-
-### 値バインディング
-
-TwoWay データ バインディングを使用するには、 `ngModel` を以下のように使用します。
-
-```html
-<igx-combo #combo [(ngModel)]="values"></igx-combo>
-```
-
-```typescript
-@ViewChild('combo', { read: IgxComboComponent }) public combo: IgxComboComponent;
-get values() {
-    return this.combo.selectedItems();
-}
-set values(newValues: Array<any>) {
-    this.combo.selectItems(newValues);
-}
-```
-
-<div class="divider--half"></div>
-
-### フィルタリング
-コンボのフィルタリング機能はデフォルトで有効にされます。ただし、以下のコードによって無効にできます。
-
-```html
-<igx-combo [filterable]="false"></igx-combo>
-```
-
-<div class="divider--half"></div>
-
-<div class="divider--half"></div>
-
-### カスタム値
-カスタム値の有効化は、コンボのインターフェイスからリストに含まらない項目の追加を許可します。
-
-```html
-<igx-combo [allowCustomValues]="true"></igx-combo>
-```
-
-<div class="divider--half"></div>
-
-### 無効化
-以下のコードによってコンボを無効にできます。
-
-```html
-<igx-combo [disabled]="true"></igx-combo>
-```
-
-<div class="divider--half"></div>
-
-### グループ化
-コンボの groupKey オプションを定義すると、そのキーに基づいて項目をグループ化します。
-
-```html
-<igx-combo [groupKey]="'primaryKey'"></igx-combo>
-```
-
-<div class="divider--half"></div>
-
-### テンプレート
-igx-combo コンポーネントの項目、ヘッダー、フッター、空のリスト、および追加ボタンなどの領域にカスタム テンプレートを定義できます。以下のテンプレートの定義で、以下の定義済み名前を使用して参照します。
-
-項目テンプレートの定義:
-
-```html
-<igx-combo>
-	<ng-template #itemTemplate let-display let-key="valueKey">
-		<div class="item">
-			<span class="state">State: {{ display[key] }}</span>
-			<span class="region">Region: {{ display.region }}</span>
-		</div>
-	</ng-template>
-</igx-combo>
-```
-
-ヘッダー テンプレートの定義:
-
-```html
-<igx-combo>
-    <ng-template #headerTemplate>
-        <div class="header-class">Custom header</div>
-        <img src=""/>
-    </ng-template>
-</igx-combo>
-```
-
-ヘッダー テンプレートの定義:
-
-```html
-<igx-combo>
-    <ng-template #footerTemplate>
-        <div class="footer-class">Custom footer</div>
-        <img src=""/>
-    </ng-template>
-</igx-combo>
-```
-
-空のテンプレートの定義:
-
-```html
-<igx-combo>
-    <ng-template #emptyTemplate>
-        <span>List is empty</div>
-    </ng-template>
-</igx-combo>
-```
-
-追加のテンプレートの定義:
-
-```html
-<igx-combo>
-    <ng-template #addItemTemplate>
-        <span>Add town</span>
-    </ng-template>
-</igx-combo>
-```
-<div class="divider--half"></div>
-
-### Template Driven および Reactive Forms との統合
-
-Template Forms:
-
-<div class="sample-container loading" style="height: 750px;">
-    <iframe id="input-group-sample-6-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/input-group-sample-6" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="input-group-sample-6-sample" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
-</div>
-<div class="divider--half"></div>
-
-
-Reactive Forms:
-
-<div class="sample-container loading" style="height: 750px;">
-    <iframe id="reactive-forms-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/reactive-forms" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="reactive-forms-sample" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
-</div>
-<div class="divider--half"></div>
-
-## カスケード シナリオ
-
-以下のサンプルはカスケードする igx-drop-down および igx-combo コンポーネントを紹介します。
-
-<div class="sample-container loading" style="height: 540px;">
-    <iframe id="cascading-combos-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/cascading-combos" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="cascading-combos-sample" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
-</div>
-<div class="divider--half"></div>
-
+Combo コンポーネントは以下の機能を公開します。
+    - データ バインディング - ローカル データと [リモート データ](combo_remote.md)
+    - [値のバインディング](combo_features.md#value-binding)
+    - [フィルタリング](combo_features.md#フィルタリング)
+    - [グループ化](combo_features.md#グループ化)
+    - [カスタム値](combo_features.md#カスタム値)
+    - [テンプレート](combo_templates.md)
+    - [テンプレート駆動フォーム](input_group.md) と [Reactive フォーム](input_group_reactive_forms.md) との統合
 
 ## キーボード ナビゲーション
 
@@ -264,6 +82,7 @@ igxCombo が閉じてフォーカスされる場合:
 
 igxCombo が開いて検索入力がフォーカスされる場合:
 - `ArrowUp` または `Alt` + `ArrowUp` はコンボのドロップダウンを閉じて、フォーカスを閉じたコンボに移動します。
+
 - `ArrowDown` はフォーカスを検索入力から最初のリスト項目に移動します。リストが空でカスタム値が有効にされた場合、「新しい項目の追加」ボタンに移動します。
   > 注: その他のキーストロークは入力によって処理されます。
 
@@ -353,6 +172,14 @@ igxCombo が開いて、カスタム値が有効で、「項目の追加」ボ�
 ## その他のリソース
 
 <div class="divider--half"></div>
+
+* [コンボ機能](combo_features.md)
+* [コンボ リモート バインディング](combo_remote.md)
+* [コンボ テンプレート](combo_templates.md)
+* [テンプレート駆動フォームの統合](input_group.md)
+* [Reactive フォームの統合](input_group_reactive_forms.md)
+* [カスケーディング](combo_cascading.md)
+
 コミュニティに参加して新しいアイデアをご提案ください。
 
 * [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)

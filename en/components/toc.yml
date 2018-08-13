@@ -58,6 +58,19 @@
 - name: Combo
   href: combo.md
   new: true
+  items:
+    - name: Features
+      href: combo_features.md
+      new: true
+    - name: Remote Binding
+      href: combo_remote.md
+      new: true
+    - name: Templates
+      href: combo_templates.md
+      new: true
+    - name: Cascading Scenario
+      href: combo_cascading.md
+      new: true
 - name: Charts
   header: true
 - name: Category Chart
@@ -146,6 +159,9 @@
 - name: Input Group
   href: input_group.md
   new: false
+  items:
+    - name: Reactive Forms
+      href: input_group_reactive_forms.md
 - name: Mask
   href: mask.md
   new: false
