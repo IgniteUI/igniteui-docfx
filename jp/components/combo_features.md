@@ -5,7 +5,7 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular widgets, web �
 _language: ja
 ---
 
-## Combo 機能
+## コンボ機能
 <p class="highlight">
 Combo コントロールは、データと値のバインディング、カスタム値、フィルタリング、グループ化など複数の機能を公開します。 
 </p>
@@ -18,7 +18,7 @@ Combo コントロールは、データと値のバインディング、カス�
     <iframe id="combo-features-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/combo-features" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="combo-features-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="combo-features-sample" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
 </div>
 <div class="divider--half"></div>
 
@@ -158,10 +158,10 @@ set values(newValues: Array<any>) {
 
 | 名前|説明|型                        |
 |--------------------------|---------------------------------------------------|-----------------------------|
-|  id|combo id                                          |string                      |
-|  `data`                  |combo data source                                 |any                         |
-|  `value`                 |combo value                                       |string                      |
-|  `allowCustomValue`      |enables/disables combo custom value                |boolean                     |
+|  id|コンボ id                                          |string                      |
+|  `data`                  |コンボ データ ソース                                |any                         |
+|  `value`                 |コンボ値                                       |string                      |
+|  `allowCustomValue`      |コンボのカスタム値を有効/無効にします。               |boolean                     |
 |  `filterable`            |コンボのドロップダウンのフィルタリングを有効/無効にします。デフォルトは有効です。|boolean                     |
 |  `valueKey`              |コンボ値データソース プロパティ|string                      |
 |  `displayKey`            |コンボ表示データソース プロパティ|string                      |
@@ -200,13 +200,13 @@ set values(newValues: Array<any>) {
 
 | 名前|説明|戻り型|パラメーター                  |
 |----------------- |-----------------------------|----------------------|-----------------------------|
-| `open`           |Opens drop down             |`void`               |なし                      |
-| `close`          |Closes drop down            |`void`               |`None`                      |
+| `open`           |ドロップダウンを開きます。             |`void`               |なし                      |
+| `close`          |ドロップダウンを閉じます。        |`void`               |`None`                      |
 | `toggle`         |ドロップダウンを切り替えます。|`void`               |`None`                      |
 | `selectedItems`  |現在の選択状態を取得します。|`Array<any>`         |`None`                      |
 | `selectItems`    |定義済みの項目を選択します。|`void`               |項目: `Array<any>`, clearCurrentSelection: `boolean` |
 | `deselectItems`  |定義済みの項目の選択を解除します。|`void`               |項目: `Array<any>`         |
-| `selectAllItems` |Select all (filtered) items |`void`               |ignoreFilter?: `boolean` - `true` の場合、**すべて**の値を選択します。 |
+| `selectAllItems` |すべての項目 (フィルター済み) を選択します。 |`void`               |ignoreFilter?: `boolean` - `true` の場合、**すべて**の値を選択します。 |
 | `deselectAllItems` |フィルター済みのすべての項目の選択を解除します。|`void`           |ignoreFilter?: `boolean` - `true` の場合、**すべて**の値の選択を解除します。 |
 
 ## その他のリソース
@@ -215,8 +215,8 @@ set values(newValues: Array<any>) {
 * [コンボ リモート バインディング](combo_remote.md)
 * [コンボ テンプレート](combo_templates.md)
 * [テンプレート駆動フォームの統合](input_group.md)
-* [Reactive Forms Integration](input_group_reactive_forms.md)
-* [Cascading Scenario](combo_cascading.md)
+* [リアクティブ フォームの統合](input_group_reactive_forms.md)
+* [カスケーディング](combo_cascading.md)
 
 コミュニティに参加して新しいアイデアをご提案ください。
 

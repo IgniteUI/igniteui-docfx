@@ -17,7 +17,7 @@ igx-combo は、コンボをリモートサービスにバインドしてデー�
     <iframe id="combo-remote-sample" frameborder="0" seamless width="700px" height="100%" src="{environment:demosBaseUrl}/combo-remote" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="combo-remote-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="combo-remote-sample" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
 </div>
 
 ### 使用方法
@@ -70,7 +70,7 @@ export class RemoteService {
 <igx-combo [data]="rData | async" [valueKey]="'ProductID'" [displayKey]="'ProductName'" 
     (onDataPreLoad)="dataLoading($event)" (onSearchInput)="searchInput($event)" (onOpening)="searchInput('')"></igx-combo>
 ```
-Let's define the cases, when the igx-combo will need to request new data:
+以下は、Igx-combo が新しいデータを要求する必要があるケースです。
     - コンボが初期化されたとき
     - コンボのリストをスクロールしたときコンボは、新しいコンボ `virtualizationState` と `onDataPreLoad` を発生し、リモート サービスに新しい要求を送ることができます。
     - `igx-combo` で検索時にリモート結果のフィルターを要求する必要があります。
@@ -135,13 +135,13 @@ export class ComboRemoteComponent implements OnInit {
 ## その他のリソース
 <div class="divider--half"></div>
 
-* [Combo 機能](combo_features.md)
-* [Combo テンプレート](combo_templates.md)
+* [コンボ機能](combo_features.md)
+* [コンボ テンプレート](combo_templates.md)
 * [テンプレート駆動フォームの統合](input_group.md)
 * [リアクティブ フォームの統合](input_group_reactive_forms.md)
 * [カスケーディング](combo_cascading.md)
 
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular** フォーラム (英語)**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub (英語)**](https://github.com/IgniteUI/igniteui-angular)
+* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

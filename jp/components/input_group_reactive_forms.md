@@ -18,7 +18,7 @@ Ignite UI for Angular コントロールは簡単にリアクティブ フォー
     <iframe id="reactive-forms-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/reactive-forms" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="reactive-forms-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="reactive-forms-sample" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
 </div>
 <div class="divider--half"></div>
 
@@ -26,7 +26,7 @@ Ignite UI for Angular コントロールは簡単にリアクティブ フォー
 
 リアクティブ フォームの使用方法、必要なモジュールについては、Angular [チュートリアル](https://angular.io/guide/reactive-forms) をご覧ください。
 
-リアクティブ フォームを使用する前に Ignite UI コンポーネントのすべてのモジュールと **ReactiveFormsModule*** をインポートします。
+リアクティブ フォームを使用する前に Ignite UI コンポーネントのすべてのモジュールと **ReactiveFormsModule** をインポートします。
 
 ```typescript
 // app.module.ts
@@ -92,5 +92,5 @@ export class ReactiveFormsSampleComponent {
 
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular** フォーラム (英語)**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub (英語)**](https://github.com/IgniteUI/igniteui-angular)
+* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
