@@ -133,7 +133,7 @@ statusChanged()
 | toggle | チェックボックスのチェックされた状態を切り替えます。 |
 <div class="divider"></div>
 
-### 追加のリソース
+### その他のリソース
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
