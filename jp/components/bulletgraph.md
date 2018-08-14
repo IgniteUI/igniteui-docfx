@@ -6,11 +6,13 @@ _language: ja
 ---
 ## Bullet Graph
 
-Ignite UI for Angular の Bullet Graph コンポーネントは、目盛り上でリニアと簡潔なメジャーの比較を表示します。
+Ignite UI for Angular の Bullet Graph コンポーネントは、目盛り上でメジャーの比較を簡潔にリニアで表示します。
 
 ### デモ
 
-このゲージは、スケール、針、目盛 (1 組)、ラベル (1 組) をサポートします。またゲージのすべての変更でアニメーションの機能が強化されています。アニメーションは、`transitionDuration` プロパティの設定で簡単にカスタマイズできます。針の図形パラメータを微調整して、多数の形状の針を作ることができます。以下のサンプルは、同じゲージでいくつかのプロパティを設定して全く異なるゲージにする方法を示します。
+ブレット グラフ コンポーネントは、きれいなデータ表現を作成するための多数の機能をサポートします。ブレット グラフは、目標に対する進捗状況、評価の範囲、複数の測定比較を表現する際に最も効率的で効果的なグラフの 1 つです。ブレット グラフは、水平または垂直のわずかな領域で、ゴールに至る進捗、評価の範囲、複数の測定比較を表現するための最も効率的で効果的な方法の 1 つです。
+
+以下のサンプルは、同じゲージでいくつかのプロパティを設定して全く異なるゲージにする方法を示します。
 
 <div class="sample-container" style="height: 125px">
     <iframe id="bullet-graph-animation-iframe" src='{environment:demosBaseUrl}/bullet-graph-animation' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -22,9 +24,8 @@ Ignite UI for Angular の Bullet Graph コンポーネントは、目盛り上�
 
 <div class="divider--half"></div>
 
-ブレット グラフ コンポーネントは、きれいなデータ表現を作成するための多数の機能をサポートします。ダッシュボードで使用されるメーターやゲージをシンプルで直感的な棒チャートに置き換えます。ブレット グラフは、目標に対する進捗状況、評価の範囲、複数の測定比較を表現する際に最も効率的で効果的なグラフの 1 つです。
-
-ブレット グラフの機能には構成可能な向きや方向の設定や視覚要素などがあり、アニメーション化されたトランジションのサポートも組み込まれています。
+このゲージは、スケール、針、目盛 (1 組)、ラベル (1 組) をサポートします。このコンポーネントには、アニメーション化されたトランジションのサポートも組み込まれています。アニメーションは、`transitionDuration` プロパティの設定で簡単にカスタマイズできます。
+ブレット グラフの機能には構成可能な向きや方向、視覚要素やツールチップなどがあります。
 
 ### 依存関係
 gauges パッケージのインストール時に core パッケージもインストールする必要があります。
@@ -74,13 +75,13 @@ export class AppModule {}
 
 <div class="divider--half"></div>
 
-### 構成可能な要素
+## 構成可能な要素
 
 ### 比較メジャー
 
 ブレットグラフは、パフォーマンス値とターゲット値の 2 つのメジャーを表示できます。
 
-パフォーマンス値は、コンポーネントで表示されるプライマリ メジャーでグラフ全体の長さに沿って拡張するバーとして表示されます。ターゲット値は、パフォーマンス値が比較の対象とするメジャーです。ターゲット値は、パフォーマンス バーの向きに対して直角に交わる小さなブロックとして表示されます。
+パフォーマンス値は、コンポーネントで表示されるプライマリ メジャーでグラフ全体の長さに沿って拡張するバーとして表示されます。ターゲット値は、パフォーマンス値が比較の対象とするメジャーでパフォーマンス バーの向きに対して直角に交わる小さなブロックとして表示されます。
 
 ```html
 <igx-bullet-graph
@@ -188,10 +189,9 @@ export class AppModule {}
 
 ```html
 <igx-bullet-graph
-    height="80px" width="400px"
+   height="80px" width="400px"
     minimumValue=0 value=70 interval=10
     maximumValue=100 targetValue=90
-
     labelInterval=10
     labelExtent=0.025
     labelsPreTerminal=0
@@ -210,19 +210,25 @@ export class AppModule {}
 </div>
 
 ### バッキング
-バッキング要素はブレット グラフ コントロールの背景と境界線を表します。常に最初に描画される要素でラベルやメモリなどの残りの要素はその上のオーバーレイです。
+バッキング要素はブレット グラフ コントロールの背景と境界線を表します。常に最初に描画される要素でラベルやメモリなどの残りの要素は互いにオーバーレイします。
 
 ```html
 <igx-bullet-graph
     height="80px" width="400px"
-    minimumValue=0 value=70 interval=10
+    minimumValue=0 value=70
     maximumValue=100 targetValue=90
-
-    backingBrush="#bddcfc"
-    backingOutline="DodgerBlue"
-    backingStrokeThickness=4
-    backingInnerExtent=0
-    backingOuterExtent=1>
+    interval=10
+    tickBrush="DodgerBlue"
+    ticksPreTerminal=0
+    ticksPostInitial=0
+    tickStrokeThickness=2
+    tickStartExtent=0.2
+    tickEndExtent=0.075
+    minorTickCount=4
+    minorTickBrush="DarkViolet"
+    minorTickEndExtent=0.1
+    minorTickStartExtent=0.2
+    minorTickStrokeThickness=1>
 </igx-bullet-graph>
 ```
 
@@ -235,7 +241,7 @@ export class AppModule {}
 </div>
 
 ### スケール
-スケールはゲージで値の全範囲を強調表示する視覚的な要素です。外観やスケールの図形のカスタマイズ、更にスケールの反転 (`isScaleInverted` プロパティを使用) を設定して、すべてのラベルを左から右ではなく、右から左へ描画することもできます。
+スケールはゲージで値の全範囲を強調表示する視覚的な要素です。外観やスケールの図形のカスタマイズ、更にスケールを反転 (`isScaleInverted` プロパティを使用) させて、すべてのラベルを左から右ではなく、右から左へ描画することもできます。
 
 ```html
 <igx-bullet-graph
@@ -258,3 +264,78 @@ export class AppModule {}
     <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="bullet-graph-scale-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
     </button>
 </div>
+
+### まとめ
+上記すべてのコード スニペットを以下のコード ブロックにまとめています。プロジェクトに簡単にコピーしてブレットグラフのすべての機能を再現できます。
+
+```html
+<igx-bullet-graph
+    height="80px" width="400px"
+    minimumValue=0
+    maximumValue=100
+    isScaleInverted=false
+    scaleBackgroundBrush="Gray"
+    scaleBackgroundOutline="Gray"
+    scaleBackgroundThickness=2
+    scaleStartExtent=0.05
+    scaleEndExtent=0.95
+
+    value=50
+    valueBrush="Black"
+    valueStrokeThickness=1
+    valueInnerExtent=0.5
+    valueOuterExtent=0.65
+    targetValue=80
+    targetValueBreadth=7.5
+    targetValueBrush="Black"
+    targetValueOutline="Black"
+    targetValueStrokeThickness=1
+    targetValueInnerExtent=0.3
+    targetValueOuterExtent=0.85
+
+    labelInterval=10
+    labelExtent=0.025
+    labelsPreTerminal=0
+    labelsPostInitial=0
+    fontBrush="Black"
+    font="11px Verdana"
+
+    backingBrush="#cecece"
+    backingOutline="#cecece"
+    backingStrokeThickness=4
+    backingInnerExtent=0
+    backingOuterExtent=1
+
+    interval=10
+    tickBrush="Black"
+    ticksPreTerminal=0
+    ticksPostInitial=0
+    tickStrokeThickness=2
+    tickStartExtent=0.2
+    tickEndExtent=0.075
+
+    minorTickCount=4
+    minorTickBrush="Black"
+    minorTickEndExtent=0.1
+    minorTickStartExtent=0.2
+    minorTickStrokeThickness=1
+
+    rangeBrushes ="#C62828, #F96232, #FF9800"
+    rangeOutlines="#C62828, #F96232, #FF9800">
+    <igx-linear-graph-range
+        startValue=20 endValue=40
+        innerStartExtent=0.25 innerEndExtent=0.25
+        outerStartExtent=0.9 outerEndExtent=0.9>
+    </igx-linear-graph-range>
+    <igx-linear-graph-range
+        startValue=40 endValue=60
+        innerStartExtent=0.25 innerEndExtent=0.25
+        outerStartExtent=0.9 outerEndExtent=0.9>
+    </igx-linear-graph-range>
+    <igx-linear-graph-range
+        startValue=60 endValue=90
+        innerStartExtent=0.25 innerEndExtent=0.25
+        outerStartExtent=0.9 outerEndExtent=0.9>
+    </igx-linear-graph-range>
+</igx-bullet-graph>
+```

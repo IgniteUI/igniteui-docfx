@@ -42,7 +42,7 @@ For `date` data type, the following functions are available:
 
 **Grid summaries** are enabled per-column by setting `hasSummary` property to `true`. It is also important to keep in mind that the summaries for each column are resolved according to the column data type. In the `igx-grid` the default column data type is `string`, so if you want `number` or `date` specific summaries you should specify the `dataType` property as `number` or `date`.
 
-```typescript
+```html
 <igx-grid #grid1 [data]="data" [autoGenerate]="false" height="800px" width="800px" (onColumnInit)="initColunm($event)" >
     <igx-column field="ProductID" header="Product ID" width="200px"  [sortable]="true">
     </igx-column>
@@ -55,7 +55,7 @@ For `date` data type, the following functions are available:
 
 The other way to enable/disable summaries for a specific column or a list of columns is to use the public method `enableSummaries`/`disableSummaries` of the **igx-grid**.
 
-```typescript
+```html
 <igx-grid #grid1 [data]="data" [autoGenerate]="false" height="800px" width="800px" (onColumnInit)="initColunm($event)" >
     <igx-column field="ProductID" header="Product ID" width="200px"  [sortable]="true">
     </igx-column>
@@ -77,6 +77,29 @@ public disableSummary() {
 }
 ```
 
+Note: There is an option to enable or disable summaries for specific column runtime by changing the `hasSummary` property from `false` to `true` or vice versa, but it's necessary to explicitly call the method `recalculateSummaries()`.
+
+```html
+<igx-grid #grid1 [data]="data" [autoGenerate]="false" height="800px" width="800px" (onColumnInit)="initColunm($event)" >
+    <igx-column field="ProductID" header="Product ID" width="200px"  [sortable]="true">
+    </igx-column>
+    <igx-column field="ProductName" header="Product Name" width="200px" [sortable]="true" [hasSummary]="true">
+    </igx-column>
+    <igx-column field="ReorderLevel" width="200px" [editable]="true" [dataType]="'number'" [hasSummary]="false">
+    </igx-column>
+</igx-grid>
+<button (click)="toggleSummary()">Enable Summary</button>
+```
+
+```typescript
+...
+    public toggleSummary() {
+        this.grid1.getColumnByName('ReorderLevel').hasSummary = true;
+        this.grid1.recalculateSummaries();
+    }
+...
+
+```
 If these functions do not fulfill your requirements you can provide a custom summary for the specific columns. In order to achieve this you have to override one of the base classes `IgxSummaryOperand`, `IgxNumberSummaryOperand` or `IgxDateSummaryOperand` according to the column data type and your needs. In this way you can redefine the existing function or you can add new functions. `IgxSummaryOperand`  class provides the default implementation only for `count` method. `IgxNumberSummaryOperand` extends `IgxSummaryOperand` and provides implementation for the `min`, `max`, `sum` and `average`. `IgxDateSummaryOperand` extends `IgxSummaryOperand`and additionally gives you `earliest` and `latest`.
 
 ```typescript
@@ -109,7 +132,7 @@ interface IgxSummaryResult {
 }
 ```
 And now let's add our custom summary to the column `UnitsInStock`. We will achieve that by setting the `summaries` property to the class we create below.
-```typescript
+```html
 <igx-grid #grid1 [data]="data" [autoGenerate]="false" height="800px" width="800px" (onColumnInit)="initColunm($event)" >
     <igx-column field="ProductID" width="200px"  [sortable]="true">
     </igx-column>
@@ -134,7 +157,7 @@ export class GridComponent implements OnInit {
 
 It is good to keep in mind that in order to improve performance, **igx-grid** cache all summaries and recalculate them if you perform CRUD operations over your data. But if your data source is modified outside the **igx-grid**, you need to explicitly force the **igx-grid** to recalculate your summaries by invoking the method `clearSummaryCache()`.
 
-```typescript
+```html
 <igx-grid #grid1 [data]="data" [autoGenerate]="false" height="800px" width="800px" (onColumnInit)="initColunm($event)" >
     <igx-column field="ProductID" width="200px"  [sortable]="true">
     </igx-column>

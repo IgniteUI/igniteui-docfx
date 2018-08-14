@@ -40,22 +40,6 @@ export class AppModule {}
 
 選択可能な複数のオプション項目を提供するシンプルなドロップダウンを作成します。**igx-drop-down** コンポーネントと **igx-toggle** を使用してドロップダウンの開く/閉じるを有効にします。
 
-次にすべての必要なモジュールを含み、**app.module.ts** ファイルにインポートします。
-
-```typescript
-// app.module.ts
-
-...
-import {
-    IgxDropDownModule
-} from 'igniteui-angular';
-
-@NgModule({
-    ...
-    imports: [..., IgxDropDownModule],
-})
-export class AppModule {}
-```　
 構成の後、すべてのオプションを  [**IgxDropDownComponent**](drop_down.md) コンポーネントに表示します。ドロップダウンは、ドロップダウン項目として複数のオプションを含みます。
 
 ```html
@@ -88,7 +72,7 @@ export class AppModule {}
       modal: false,
       positionStrategy: new ConnectedPositioningStrategy(this._positionSettings),
       scrollStrategy: new CloseScrollStrategy()
-  };
+    };
 
     public ngOnInit() {
         for (let i = 1; i < 4; i ++) {
@@ -117,7 +101,7 @@ export class AppModule {}
 
 <div class="divider--half"></div>
 
-選択済みの項目をあらかじめ定義する場合、[**IgxDropDownComponent**](drop_down.md) **igx-drop-down** の `onOpening` イベントを処理します。
+選択済みの項目をあらかじめ定義する場合、[**IgxDropDownComponent**](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/drop_down.html) の **igx-drop-down** `onOpening` イベントを処理します。
 
 ```html
 <!-- dropdown.component.html -->
@@ -184,7 +168,7 @@ export class AppModule {}
 <div class="sample-wrapper drop-down-wrapper">
     <button igxButton="raised" (click)="toggleDropDown($event)">Countries</button>
     <igx-drop-down #dropdown3>
-        <igx-drop-down-item [igxDropDownItemNavigation]="dropdown3" *ngFor="let item of items" disabled={{item.disabled}} isHeader={{item.header}}>
+        <igx-drop-down-item [igxDropDownItemNavigation]="dropdown3" *ngFor="let item of items" [disabled]="item.disabled" [isHeader]="item.header" [isSelected]="item.selected">
             {{ item.field }}
         </igx-drop-down-item>
     </igx-drop-down>
@@ -201,8 +185,12 @@ export class AppModule {}
     public items: any[] = [
         { field: "EU", header: true },
         { field: "Germany" },
-        { field: "Bulgaria" },
-        { field: "UK", disabled: true }];
+         { field: "Bulgaria", selected: true },
+        { field: "UK", disabled: true },
+        { field: "NA", header: true },
+        { field: "Canada" },
+        { field: "USA" },
+        { field: "Mexico" }];
 
     private _positionSettings = {
         horizontalStartPoint: HorizontalAlignment.Left,
@@ -223,7 +211,7 @@ export class AppModule {}
 
 ```
 
-サンプルが正しく構成されると EU ヘッダーの下に国の一覧がグループ形式で表示され、UK は非インタラクティブな項目として表示されます。
+サンプルを正しく構成すると EU ヘッダーの下に国の一覧がグループ形式で表示され、UK は非インタラクティブな項目、そして Bulgaria は選択済みの項目として表示されます。
 
 <div class="sample-container" style="height: 380px">
     <iframe id="dropdown-sample-3-iframe" src='{environment:demosBaseUrl}/dropdown-sample-3' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -279,22 +267,16 @@ export class AppModule {}
 | `headers` | `IgxDropDownItemComponent[]` | ヘッダー項目を取得します。 |
 | `collapsed` | `boolean` | ドロップダウンが閉じたかどうかを取得します。 |
 
-以下の表は、便利な **igx-drop-down-item** コンポーネントの入力、出力、およびメソッドを示します。
+以下の表は、便利な **igx-drop-down-item** コンポーネントの入力を示します。
 
 #### 入力
 以下の入力は **igx-drop-down-item** コンポーネントで利用できます。
 
 | 名前 | 型 | 説明 |
 | :--- | :--- | :--- |
-| `isHeader` | boolean| 項目がグループ ヘッダーかどうかを定義します。 |
-| `disabled` | boolean| 項目が無効かどうかを取得します。|
-| `isFocused` | boolean| 指定した項目がフォーカスされるかどうかを定義します。|
-
-#### ゲッター
-以下のゲッターは **igx-drop-down-item** コンポーネントで利用できます。
-
-| 名前 | 型 | 説明 |
-| :--- | :--- | :--- |
+| `isHeader` | `boolean`| 項目がグループ ヘッダーかどうかを定義します。 |
+| `disabled` | `boolean`| 指定した項目が無効かどうかを定義します。 |
+| `isFocused` | `boolean`| 指定した項目がフォーカスされるかどうかを定義します。 |
 | `isSelected` | `boolean` | 指定した項目が選択されるかどうかを定義します。 |
 
 ###その他のリソース

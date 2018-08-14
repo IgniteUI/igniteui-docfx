@@ -10,7 +10,10 @@ Ignite UI for Angular の Linear Gauge コンポーネントは、値とスケ�
 
 ### デモ
 
-このゲージは、スケール、針、目盛 (1 組)、ラベル (1 組) をサポートします。またゲージのすべての変更でアニメーションの機能が強化されています。アニメーションは、`transitionDuration` プロパティの設定で簡単にカスタマイズできます。針の図形パラメータを微調整して、多数の形状の針を作ることができます。以下のサンプルは、同じゲージでいくつかのプロパティを設定して全く異なるゲージにする方法を示します。
+リニア ゲージ コンポーネントは、データをリニア ゲージ形式で可視化するコントロールです。スケールおよび 1 つ以上の範囲と比較した値をシンプルで簡潔に表示することが可能で、スケール、針、目盛 (1 組)、ラベル (1 組) がサポートされます。このコンポーネントには、アニメーション化されたトランジションのサポートも組み込まれており、アニメーションでは、`transitionDuration` プロパティの設定で簡単にカスタマイズできます。
+また構成可能な向きや方向、視覚要素やツールチップなどがサポートされます。
+
+以下のサンプルは、同じゲージでいくつかのプロパティを設定して全く異なるゲージにする方法を示します。
 
 <div class="sample-container" style="height: 125px">
     <iframe id="linear-gauge-animation-iframe" src='{environment:demosBaseUrl}/linear-gauge-animation' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -21,8 +24,6 @@ Ignite UI for Angular の Linear Gauge コンポーネントは、値とスケ�
 </div>
 
 <div class="divider--half"></div>
-
-リニア ゲージの機能には構成可能な向きや方向、視覚要素などがあります。このコンポーネントは、アニメーション トランジションがサポートされます。
 
 ### 依存関係
 gauges パッケージをインストールするときに core パッケージもインストールする必要があります。
@@ -77,11 +78,11 @@ export class AppModule {}
 これは、コンポーネントで表示されるプライマリ メジャーでバーで可視化されます。あるいは以下で示す図形のほとんどすべてをカスタマイズすることもできます。
 
 ```html
- <igx-linear-gauge
+<igx-linear-gauge
     height="80px" width="400px"
-    minimumValue=0 value=50
+    minimumValue=0
     maximumValue=100 interval=10
-
+    value=50
     isNeedleDraggingEnabled=true
     needleShape="Custom"
     needleBrush="DodgerBlue"
@@ -148,15 +149,14 @@ export class AppModule {}
 <igx-linear-gauge
     height="80px" width="400px"
     minimumValue=0 value=50
-    maximumValue=100 interval=10
-
+    maximumValue=100
+    interval=10
     tickBrush="DodgerBlue"
     ticksPreTerminal=0
     ticksPostInitial=0
     tickStrokeThickness=2
     tickStartExtent=0.25
     tickEndExtent=0.05
-
     minorTickCount=4
     minorTickBrush="DarkViolet"
     minorTickEndExtent=0.05
@@ -199,7 +199,7 @@ export class AppModule {}
 </div>
 
 ### バッキング
-バッキング要素はブレット グラフ コントロールの背景と境界線を表します。常に最初に描画される要素でラベルやメモリなどの残りの要素はその上のオーバーレイです。
+バッキング要素はブレット グラフ コントロールの背景と境界線を表します。常に最初に描画される要素でラベルやメモリなどの残りの要素は互いにオーバーレイします。
 
 ```html
 <igx-linear-gauge
@@ -224,7 +224,7 @@ export class AppModule {}
 </div>
 
 ### スケール
-スケールはゲージで値の全範囲を強調表示する視覚的な要素です。外観やスケールの図形のカスタマイズ、更にスケールの反転 (`isScaleInverted` プロパティを使用) を設定して、すべてのラベルを左から右ではなく、右から左へ描画することもできます。
+スケールはゲージで値の全範囲を強調表示する視覚的な要素です。外観やスケールの図形のカスタマイズ、更にスケールを反転 (`isScaleInverted` プロパティを使用) させて、すべてのラベルを左から右ではなく、右から左へ描画することもできます。
 
 ```html
 <igx-linear-gauge
@@ -250,3 +250,79 @@ export class AppModule {}
     <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="linear-gauge-scale-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
     </button>
 </div>
+
+### まとめ
+上記すべてのコード スニペットを以下のコード ブロックにまとめています。プロジェクトに簡単にコピーしてブレットグラフのすべての機能を再現できます。
+
+```html
+<igx-linear-gauge
+    height="80px" width="400px"
+    minimumValue=0
+    maximumValue=100
+
+    labelInterval=10
+    labelExtent=0.025
+    labelsPreTerminal=0
+    labelsPostInitial=0
+    fontBrush="Black"
+    font="11px Verdana"
+
+    interval=10
+    tickBrush="Black"
+    ticksPreTerminal=0
+    ticksPostInitial=0
+    tickStrokeThickness=2
+    tickStartExtent=0.25
+    tickEndExtent=0.05
+
+    minorTickCount=4
+    minorTickBrush="Black"
+    minorTickEndExtent=0.05
+    minorTickStartExtent=0.15
+    minorTickStrokeThickness=1
+
+    value=50
+    isNeedleDraggingEnabled=true
+    needleShape="Custom"
+    needleBrush="Black"
+    needleOutline="Black"
+    needleStrokeThickness=1
+    needleBreadth=15
+    needleInnerExtent=0.35
+    needleOuterExtent=0.65
+    needleOuterPointExtent=0.8
+    needleInnerPointExtent=0.325
+    needleInnerPointWidth=0
+    needleOuterPointWidth=0.3
+    needleInnerBaseWidth=0
+    needleOuterBaseWidth=0.07
+
+    isScaleInverted=false
+    scaleBrush="Gray"
+    scaleOutline="Gray"
+    scaleStrokeThickness=1
+    scaleInnerExtent=0.05
+    scaleOuterExtent=0.65
+    scaleStartExtent=0.05
+    scaleEndExtent=0.95
+
+    backingBrush="#cecece"
+    backingOutline="#cecece"
+    backingStrokeThickness=4
+    backingInnerExtent=0
+    backingOuterExtent=1
+
+    rangeBrushes ="#C62828, #F96232, #FF9800"
+    rangeOutlines="#C62828, #F96232, #FF9800">
+    <igx-linear-graph-range
+        startValue=0 endValue=50
+        innerStartExtent=0.075 innerEndExtent=0.075
+        outerStartExtent=0.25 outerEndExtent=0.4>
+    </igx-linear-graph-range>
+    <igx-linear-graph-range
+        startValue=50 endValue=100
+        innerStartExtent=0.075 innerEndExtent=0.075
+        outerStartExtent=0.4 outerEndExtent=0.55>
+    </igx-linear-graph-range>
+</igx-linear-gauge>
+```

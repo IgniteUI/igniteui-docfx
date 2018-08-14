@@ -1,4 +1,4 @@
----
+﻿---
 title: Data Grids および Lists コンポーネント
 _description: Ignite UI for Angular は、高速な Angular Data Grid と描画、パワフルな Angular グリッドにマテリアル ベースのコンポーネントです。
 _keywords: Ignite UI for Angular, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular グリッド, Angular データグリッド, Angular グリッドコントロール, Angular グリッドコンポーネント
@@ -47,7 +47,7 @@ _language: ja
       <a href="grid_paging.md" class="feature__more-details">ページング コンポーネント ドキュメント</a>
     </div>
     <div class="feature__details">
-      <h3 id="paging">[Paging](grid_paging.md)</h3>
+      <h3 id="paging">[ページング](grid_paging.md)</h3>
       <p>ページング コンポーネントは、テンプレートやコードによる改ページ機能を有効にするかどうかを制御できます。</p>
     </div>
   </div>
@@ -58,7 +58,7 @@ _language: ja
       <a href="grid_summaries.md" class="feature__more-details">集計コンポーネントについて</a>
     </div>
     <div class="feature__details">
-      <h3 id="summaries">[Summaries](grid_summaries.md)</h3>
+      <h3 id="summaries">[集計](grid_summaries.md)</h3>
       <p>各コンテナの列にデフォルトで定義済みの集計項目を表示</p>
     </div>
   </div>
@@ -69,7 +69,7 @@ _language: ja
       <a href="grid.md" class="feature__more-details">ライブ データとストリーミングのデモ</a>
     </div>
     <div class="feature__details">
-      <h3 id="live-data-streaming">[Live Data &amp; Streaming](grid.md)</h3>
+      <h3 id="live-data-streaming">[ライブデータ &amp; ストリーミング](grid.md)</h3>
       <p>グリッドに直接データをストリーミングします。毎秒数百の更新が可能ですがパフォーマンスには影響がなく、高いユーザー エクスペリエンスを提供できます。</p>
     </div>
   </div>
@@ -100,7 +100,7 @@ _language: ja
       <a href="grid_filtering.md" class="feature__more-details">フィルタリングの概要</a>
     </div>
     <div class="feature__details">
-      <h3 id="column-filtering">[Column Filtering](grid_filtering.md)</h3>
+      <h3 id="column-filtering">[列フィルタリング](grid_filtering.md)</h3>
       <p>グリッド機能は、列ごとのフィルタリング (簡易/高度) を可能にします。</p>
     </div>
   </div>
@@ -121,7 +121,7 @@ _language: ja
       <a href="grid_sorting.md" class="feature__more-details">データ グリッドの並べ替え</a>
     </div>
     <div class="feature__details">
-      <h3 id="sorting">[Sorting](grid_sorting.md)</h3>
+      <h3 id="sorting">[並べ替え](grid_sorting.md)</h3>
       <p>並べ替えを列レベルで実行できるため、グリッドで並べ可能な列と並べ替え無効な列を組み合わせることができます。</p>
     </div>
   </div>
@@ -164,7 +164,7 @@ _language: ja
       <img class="b-lazy" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-lazy-load.png" data-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-aria-support-768.jpg" data-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-aria-support-480.jpg 480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-aria-support-768.jpg 768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-aria-support-1100.jpg 1100w" sizes="(min-width: 1800px) 575px,(max-width: 1799px) and (min-width: 1200px) 50vw,(max-width: 1199px) and (min-width: 992px) 33vw,(max-width: 991px) and (min-width: 768px) 50vw, 100vw" alt="Angular Data Grid の ARIA サポート">
     </div>
     <div class="feature__details">
-      <h3 id="accessibility-and-aria-support">Accessibility and <abbr title="Accessible Rich Internet Applications">ARIA</abbr> Support</h3>
+      <h3 id="accessibility-and-aria-support">アクセシビリティと <abbr title="アクセシブルなリッチインターネットアプリケーション">ARIA</abbr> サポート</h3>
       <p>Angular グリッドは a11y キーボーボード アクセシビリティ、ARIA 対応で色パレットにもアクセスできます。</p>
     </div>
   </div>
@@ -193,11 +193,11 @@ _language: ja
   <div class="feature">
     <div class="feature__image feature__image--right">
       <img class="b-lazy" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-lazy-load.png" data-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-groupby-768.jpg" data-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-groupby-480.jpg 480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-groupby-768.jpg 768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-groupby-1100.jpg 1100w" sizes="(min-width: 1800px) 575px,(max-width: 1799px) and (min-width: 1200px) 50vw,(max-width: 1199px) and (min-width: 992px) 33vw,(max-width: 991px) and (min-width: 768px) 50vw, 100vw" alt="Group columns by header in Angular Data Grid">
-      <a href="grid_groupby.md" class="feature__more-details">列グループ化の概要/a>
+      <a href="grid_groupby.md" class="feature__more-details">列グループ化の概要</a>
     </div>
     <div class="feature__details">
-      <h3 id="group-by">[Group By](grid_groupby.md)</h3>
-      <p>階層グループはデータレコードを可視化します。</p>
+      <h3 id="group-by">[グループ化](grid_groupby.md)</h3>
+      <p>階層グループでデータレコードを可視化します。</p>
     </div>
   </div>
 
@@ -226,10 +226,10 @@ _language: ja
   <div class="feature">
     <div class="feature__image feature__image--left">
       <img class="b-lazy" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-lazy-load.png" data-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-combo-demo-768.jpg" data-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-combo-demo-480.jpg 480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-combo-demo-768.jpg 768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-combo-demo-1100.jpg 1100w" sizes="(min-width: 1800px) 575px,(max-width: 1799px) and (min-width: 1200px) 50vw,(max-width: 1199px) and (min-width: 992px) 33vw,(max-width: 991px) and (min-width: 768px) 50vw, 100vw" alt="Toggle overlay in Angular Data Grid">
-      <a href="combo.md" class="feature__more-details">Setting up the Combo component</a>
+      <a href="combo.md" class="feature__more-details">Combo コンポーネントの設定</a>
     </div>
     <div class="feature__details">
-      <h3 id="combo">[Combo](combo.md)</h3>
+      <h3 id="combo">[コンボ](combo.md)</h3>
       <p>単一/複数の項目を簡単にフィルターや選択できます。ドロップダウン リストのグループ化やカスタム値の追加、リストで仮想化検索が可能で、項目、ヘッダー、フッター、グループ領域のカスタム テンプレートがサポートされます。</p>
     </div>
   </div>
@@ -240,7 +240,7 @@ _language: ja
       <a href="drop_down.md" class="feature__more-details">Dropdown コンポーネントの使用</a>
     </div>
     <div class="feature__details">
-      <h3 id="dropdown">[Dropdown](drop_down.md)</h3>
+      <h3 id="dropdown">[ドロップダウン](drop_down.md)</h3>
       <p>グループ化できる単一選択項目のスクロール可能なリストを表示します。</p>
     </div>
   </div>
@@ -251,7 +251,7 @@ _language: ja
       <a href="overlay_main.md" class="feature__more-details">Overlay コンポーネントを使用した作業の開始</a>
     </div>
     <div class="feature__details">
-      <h3 id="overlay">[Overlay](overlay_main.md)</h3>
+      <h3 id="overlay">[オーバーレイ](overlay_main.md)</h3>
       <p>Overlay コンポーネントを使用した作業の開始</p>
     </div>
   </div>
@@ -259,7 +259,7 @@ _language: ja
   <div class="feature">
     <div class="feature__image feature__image--right">
       <img class="b-lazy b-lazy-gifs" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-lazy-load.png" data-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-filtering-ui-768.jpg" data-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-filtering-ui-480.jpg 480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-filtering-ui-768.jpg 768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-filtering-ui-1100.jpg 1100w" data-gif-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-filtering-ui-768.gif" data-gif-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-filtering-ui-480.gif  480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-filtering-ui-768.gif 768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-filtering-ui-1100.gif 1100w" sizes="(min-width: 1800px) 575px,(max-width: 1799px) and (min-width: 1200px) 50vw,(max-width: 1199px) and (min-width: 992px) 33vw,(max-width: 991px) and (min-width: 768px) 50vw, 100vw" alt="Filtering UI for the Angular Data Grid.">
-      <a href="grid_filtering.md" class="feature__more-details">Filtering UI の使用</a>
+      <a href="grid_filtering.md" class="feature__more-details">UI フィルタリングの使用</a>
     </div>
     <div class="feature__details">
       <h3 id="filtering-ui">[UI フィルタリング](grid_filtering.md)</h3>
@@ -274,7 +274,7 @@ _language: ja
       <a href="chip.md" class="feature__more-details">Chip コンポーネントの使用</a>
     </div>
     <div class="feature__details">
-      <h3 id="chip">[Chip](chip.md)</h3>
+      <h3 id="chip">[チップ](chip.md)</h3>
       <p>選択可能でキーボード アクセスができる値を表示します。</p>
     </div>
   </div>
@@ -305,7 +305,7 @@ _language: ja
   <div class="feature">
     <div class="feature__image feature__image--right">
       <img class="b-lazy b-lazy-gifs" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-lazy-load.png" data-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-column-moving-768.jpg" data-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-column-moving-480.jpg 480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-column-moving-768.jpg 768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-column-moving-1100.jpg 1100w" data-gif-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-column-moving-768.gif" data-gif-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-column-moving-480.gif  480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-column-moving-768.gif 768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-column-moving-1100.gif 1100w" sizes="(min-width: 1800px) 575px,(max-width: 1799px) and (min-width: 1200px) 50vw,(max-width: 1199px) and (min-width: 992px) 33vw,(max-width: 991px) and (min-width: 768px) 50vw, 100vw" alt="Move columns in the Angular Data Grid.">
-      <a href="grid_column_moving.md" class="feature__more-details">Column Moving documentation</a>
+      <a href="grid_column_moving.md" class="feature__more-details">列移動のヘルプ</a>
     </div>
     <div class="feature__details">
       <h3 id="column-moving">[列移動](grid_column_moving.md)</h3>
@@ -316,7 +316,7 @@ _language: ja
   <div class="feature">
     <div class="feature__image feature__image--left">
       <img class="b-lazy" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-lazy-load.png" data-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-export-to-excel-768.jpg" data-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-export-to-excel-480.jpg 480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-export-to-excel-768.jpg 768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-export-to-excel-1100.jpg 1100w" sizes="(min-width: 1800px) 575px,(max-width: 1799px) and (min-width: 1200px) 50vw,(max-width: 1199px) and (min-width: 992px) 33vw,(max-width: 991px) and (min-width: 768px) 50vw, 100vw" alt="Data Grid supporting Excel exporting.">
-      <a href="exporter_excel.md" class="feature__more-details">Angular Data Grid のExcel エクスポーティング</a>
+      <a href="exporter_excel.md" class="feature__more-details">Angular Data Grid の Excel エクスポート</a>
     </div>
     <div class="feature__details">
       <h3 id="column-moving">[Excel/CSV/TSV へエクスポート](exporter_excel.md)</h3>

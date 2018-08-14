@@ -50,6 +50,9 @@
     - name: Excel エクスポート
       href: exporter_excel.md
       new: false
+    - name: Excel からの貼り付け
+      href: grid_paste_excel.md
+      new: true
     - name: 複数列ヘッダー
       href: grid_multi_column_headers.md
       new: true
@@ -61,6 +64,19 @@
 - name: Combo
   href: combo.md
   new: true
+  items:
+    - name: 機能
+      href: combo_features.md
+      new: true
+    - name: リモート バインディング
+      href: combo_remote.md
+      new: true
+    - name: テンプレート
+      href: combo_templates.md
+      new: true
+    - name: カスケーディング
+      href: combo_cascading.md
+      new: true
 - name: チャート
   header: true
 - name: Category Chart
@@ -153,14 +169,17 @@
   href: checkbox.md
 - name: Switch
   href: switch.md
-- name: Radio および Radio Group
+- name: Radio と Radio Group
   href: radio_button.md
   new: true
-- name: Label および Input
+- name: Label と Input
   href: label_input.md
 - name: Input Group
   href: input_group.md
   new: false
+  items:
+    - name: リアクティブ フォーム
+      href: input_group_reactive_forms.md
 - name: Mask
   href: mask.md
   new: false

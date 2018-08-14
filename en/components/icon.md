@@ -78,29 +78,26 @@ You can set the icon's size through CSS. Create a custom CSS class and name it *
 
 In this article we covered the Icon component. Here are a few more APIs to explore, which are listed below.
 
-####Attributes
-You can set all properties of the icon component with the following `attributes`:
-| Name   |       Example      |  Description |
+####Inputs
+The following inputs are available on the **igx-icon** component:
+| Name   |       Type      |  Description |
 |:----------|:-------------:|:------|
-| `name` |  `name="home"` | Set the icon by providing its name from the official [material icons set](https://material.io/icons/) . |
-| `active` |  `[isActive]="false"` | Set the icon to active/inactive state (default is true). |
-| `color` |  `color="#474747"` | Set the icon color by providing a string value. |
+| `name` |  string | Set the icon by providing its name from the official [material icons set](https://material.io/icons/) . |
+| `iconName` |  string | Set the `glyphName` of the icon. You can provide either ligature `name` or glyph `iconName`, but not both at the same time. |
+| `fontSet` |  string | Set the value of the `fontSet`. By default it's "material".
+| `active` |  boolean | Set the icon to active/inactive state (default is true). |
+| `color` |  string | Set the icon color by providing a string value. |
 <div class="divider--half"></div>
 
-####Setters
-You can programmatically set all of the icon properties with the following icon setters: 
-| Name | Type | Description |
-| :--- | :--- | :--- |
-| `color(color: string)` | string | Sets the icon color |
-| `name(icon: string)` | string | Sets the icon name |
-| `isActive(state: boolean)` | boolean | Sets the icon style to inactive if set to false. |
 ####Getters
-You can programmatically get all of the icon properties with the following icon getters: 
+The following getters are available on the **igx-icon** component:
 | Name | Type | Description |
 | :--- | :--- | :--- |
-| `getIconColor()` | string | Returns the icon color |
+| `getFontSet()` | string | Returns the icon font. |
+| `getIconColor()` | string | Returns the icon color. |
 | `getIconName()` | string | Returns the icon name. |
 | `getActive()` | boolean | Returns the icon active state. |
+| `getInactive()` | boolean | Returns the icon inactive state. |
 <div class="divider"></div>
 
 ###Additional Resources

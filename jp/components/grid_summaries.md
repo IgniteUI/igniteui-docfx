@@ -42,7 +42,7 @@ Ignite UI for Angular Grid コンポーネントには、列レベルで制御�
 
 列で `hasSummary` プロパティを `true` に設定すると**グリッド集計**が有効になります。各列の集計は列のデータ型に基づいて解決されます。`igx-grid` でデフォルトの列データ型は `string` のため、`number` または `date` の集計を適用するには、`dataType` プロパティを `number` または `date` に設定します。
 
-```typescript
+```html
 <igx-grid #grid1 [data]="data" [autoGenerate]="false" height="800px" width="800px" (onColumnInit)="initColunm($event)" >
     <igx-column field="ProductID" header="Product ID" width="200px"  [sortable]="true">
     </igx-column>
@@ -55,7 +55,7 @@ Ignite UI for Angular Grid コンポーネントには、列レベルで制御�
 
 特定の列または列のリストで集計を有効/無効にするもう 1 つの方法として **igx-grid** の `enableSummaries`/`disableSummaries` 公開メソッドがあります。
 
-```typescript
+```html
 <igx-grid #grid1 [data]="data" [autoGenerate]="false" height="800px" width="800px" (onColumnInit)="initColunm($event)" >
     <igx-column field="ProductID" header="Product ID" width="200px"  [sortable]="true">
     </igx-column>
@@ -75,6 +75,29 @@ public enableSummary() {
 public disableSummary() {
     this.grid1.disableSummaries("ProductName");
 }
+```
+注: `hasSummary` プロパティを `false` から `true` (`true` から `false`) に変更して、特定列の集計をランタイムで有効または無効にするオプションがあります。ただし、`recalculateSummaries()` メソッドを明示的に呼び出す必要があります。
+
+```html
+<igx-grid #grid1 [data]="data" [autoGenerate]="false" height="800px" width="800px" (onColumnInit)="initColunm($event)" >
+    <igx-column field="ProductID" header="Product ID" width="200px"  [sortable]="true">
+    </igx-column>
+    <igx-column field="ProductName" header="Product Name" width="200px" [sortable]="true" [hasSummary]="true">
+    </igx-column>
+    <igx-column field="ReorderLevel" width="200px" [editable]="true" [dataType]="'number'" [hasSummary]="false">
+    </igx-column>
+</igx-grid>
+<button (click)="toggleSummary()">Enable Summary</button>
+```
+
+```typescript
+...
+    public toggleSummary() {
+        this.grid1.getColumnByName('ReorderLevel').hasSummary = true;
+        this.grid1.recalculateSummaries();
+    }
+...
+
 ```
 
 この関数が要件に合わない場合、指定した列にカスタム集計を提供できます。これを実装するには、列のデータ型に基づいて `IgxSummaryOperand`、`IgxNumberSummaryOperand`、または `IgxDateSummaryOperand` の基本クラスをオーバーライドします。このように既存の関数を変更または新しい関数を追加できます。`IgxSummaryOperand` クラスのデフォルト集計は `count` メソッドのみです。`IgxNumberSummaryOperand` は `IgxSummaryOperand` を拡張し、`min`、`max`、`sum`、および `average` 集計を提供します。`IgxDateSummaryOperand` は `IgxSummaryOperand` を拡張し、`earliest` および `latest` を提供します。
@@ -137,7 +160,7 @@ export class GridComponent implements OnInit {
 
 パフォーマンスを向上するため、**igx-grid** はすべての集計をキャッシュし、データで CRUD 操作を実行する場合に再計算します。データ ソースが **igx-grid** 以外に変更される場合、`clearSummaryCache()` メソッドを呼び出して **igx-grid** の集計の再計算を実行する必要があります。
 
-```typescript
+```html
 <igx-grid #grid1 [data]="data" [autoGenerate]="false" height="800px" width="800px" (onColumnInit)="initColunm($event)" >
     <igx-column field="ProductID" width="200px"  [sortable]="true">
     </igx-column>

@@ -6,7 +6,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ## Tabs
 
-The `igxTabs` component in Ignite UI for Angular is used to organize or switch between similar data sets. It functions as a wrapper for `igx-tab-item` and `igx-tabs-group`, as these respectively represent the container for the data and the tab header. The tabs component also places tabs at the top and allows for scrolling when there are multiple tab items on the screen.
+The `igxTabs` component in Ignite UI for Angular is used to organize or switch between similar data sets. It functions as a wrapper for `igx-tab-item` and `igx-tabs-group`, as these respectively represent the container for the data and the tab header. The tabs component places tabs at the top and allows scrolling when there are multiple tab items on the screen.
 
 ### Tabs Demo
 <div class="sample-container loading" style="height: 250px; width: 600px;">
@@ -38,7 +38,7 @@ import { IgxTabsModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-Then, specify three tabs groups with `label` and content.
+Then, specify several tabs groups with `label` and content.
 
 ```html
 <igx-tabs>
@@ -66,8 +66,8 @@ If the sample is configured properly, the final result should look like that:
 ### Tabs Types
 There are two types of tabs. Set the `tabsType` input to choose between fixed and content-fit tabs.
 - **Content-fit tabs** (default): the width of the tab header depends on the content (label, icon, both) and all tabs have equal padding.
-Nevertheless what type of tabs you have choose, the tab header width is limited by the specified min and max width. 
-- **Fixed tabs**: all tab headers are with equal width and fit in the tabs component. If the provided space is not enough for all items, scroll buttons are displayed.
+Nevertheless what type of tabs you have chosen, the tab header width is limited by the specified min and max width. 
+- **Fixed tabs**: all tab headers are with equal width and fit in the tabs container. If the provided space is not enough for all items, scroll buttons are displayed.
 
 ```html
 <div class="items-wrapper__item items-wrapper__item-small items-wrapper__item--blue">
@@ -197,7 +197,7 @@ The following input is available in the **igx-tabs** component:
 | Name | Type | Description |
 | :--- | :--- | :--- |
 | `tabsType` | TabsType | Defines the tab header sizing mode - `contentfit` (default) or `fixed`. |
-
+| `selectedIndex` | number | Gets/sets the index of selected tab item. |
 
 The following inputs are available in the **igx-tabs-group** component:
 
@@ -213,8 +213,8 @@ The following inputs are available in the **igx-tabs-group** component:
 The following outputs are available on the **igx-tabs** component:
 | Name | Type | Description |
 | :--- | :--- | :--- |
-| `onTabItemSelected` | EventEmitter | Emits an event when a tab item is selected. |
-| `onTabItemDeselected` | EventEmitter | Emits an event when a tab item is deselected. |
+| `onTabItemSelected` | EventEmitter | Emits an event when a tab item is selected. Returns the selected `IgxTabItemComponent` and `IgxTabsGroupComponent`. |
+| `onTabItemDeselected` | EventEmitter | Emits an event when a tab item is deselected. Returns the deselected `IgxTabItemComponent` and `IgxTabsGroupComponent`.|
 
 <div class="divider"></div>
 
@@ -225,7 +225,6 @@ The following getters are available in the **igx-tabs** component:
 | :--- | :--- | :--- |
 | `tabs` | QueryList | Provides an observable collection of all IgxTabItemComponent-s. |
 | `groups` | QueryList | Provides an observable collection of all IgxTabsGroupComponent-s. |
-| `selectedIndex` | number | Gets the index of selected tab item. |
 | `selectedTabItem` | IgxTabItemComponent | Gets the selected IgxTabItemComponent based on `selectedIndex`. |
 
 <div class="divider--half"></div>
@@ -252,9 +251,9 @@ The following getters are available on the **igx-tab-item** component:
 
 #### Methods
 The following method is available on the **igx-tabs-group** component:
-| Name | Description |
-| :--- | :--- | 
-| `select()` | Selects the related IgxTabsGroupComponent. |
+| Signature | Return Type | Description |
+| :--- | :--- | :--- |
+| `select(focusDelay: number)` | `void` | Selects the related IgxTabsGroupComponent. Default value of `focusDelay` is 50. |
 
 <div class="divider"></div>
 
