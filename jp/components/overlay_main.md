@@ -16,6 +16,8 @@ _language: ja
 
 IgxOverlayService を使用するには、コンポーネントにインポートします。 サービスへの参照をコンポーネントの `constructor` に注入します。
 ```typescript
+
+import { Inject } from '@angular/core'
 import { IgxOverlayService } from `igniteui-angular`;
 
 ...
@@ -38,7 +40,7 @@ Overlay サービスへの参照を追加した後、コンテンツを動的に
 ```typescript
 
 // in my-overlay-component.component.ts
-import { MyDynamicComponent } from './my-dynamic-component.component.ts';
+import { MyDynamicComponent } from '../my-dynamic-component/my-dynamic-component.component';
 
 export class MyOverlayComponent {
 
@@ -59,6 +61,31 @@ export class MyOverlayComponent {
 <button (click)="showInOverlay()">Show Overlay</button>
 </div>
 
+```
+
+If we want to pass an already existing `ElementRef` from the page to the `IgxOverlayService`, we can do it as follows:
+
+```HTML
+<!-- in my-overlay-component.component.html -->
+<div class='content'>
+  <button (click)="showInOverlay()">Show Overlay</button>
+</div>
+<div>
+    <img #exampleImage width='200px' src='../assets/example.png' title='Click Me!'>
+</div>
+```
+
+```typescript
+// in my-overlay-component.component.ts
+import { Inject, ViewChild } from '@angular/core'
+export class MyOverlayComponent {
+
+    @ViewChild('exampleImage', {read: ElementRef})
+    private exampleImage: ElementRef;
+    public showInOverlay() {
+        this.overlayService.show(this.exampleImage);
+    }
+}
 ```
 <div class="divider--half"></div>
 
@@ -90,6 +117,9 @@ export class MyOverlayComponent {
 たとえば、コンテンツを要素に相対的に配置するには、オーバーレイの `show()` メソッドに別の `positioningStrategy` (`ConnectedPositioningStrategy` など) を渡します。コンポーネントの表示方法を構成するには、`OverlaySettings` オブジェクトを作成します。
 ```typescript
 // in my-overlay-component.component.ts
+// add an import for the definion of ConnectedPositioningStategy class
+import { ConnectedPositioningStrategy } from 'igniteui-angular';
+...
 export class MyOverlayComponent {
 
     @ViewChild(`myAnchorButton`)
@@ -97,7 +127,7 @@ export class MyOverlayComponent {
 
     public showInOverlay() {
         this.overlayService.show(MyDynamicComponent, {
-            positionStrategy: new ConnectedPositioningStrategy({ target: this.myAnchorButton })
+            positionStrategy: new ConnectedPositioningStrategy({ target: this.myAnchorButton.nativeElement })
         });
     }
 }
@@ -122,6 +152,9 @@ export class MyOverlayComponent {
 以前に定義されたオーバーレイ メソッドをオーバーレイ要素を表示して非表示するために変更できます。
 ```typescript
 // in my-overlay-component.component.ts
+// add an import for the definion of ConnectedPositioningStategy class
+import { ConnectedPositioningStrategy } from 'igniteui-angular';
+...
 export class MyOverlayComponent {
     private _overlayId = ''; // The unique identifier assigned to the component by the Overlay service
     private _overlayShown = false; // Is the component rendered in the Overlay?
@@ -132,7 +165,9 @@ export class MyOverlayComponent {
     public toggleOverlay() {
         if (!this._overlayShown) { // If the element is not visible, show it
             this._overlayId = this.overlayService.show(MyDynamicComponent, {
-                positionStrategy: new ConnectedPositioningStrategy({ target: this.myAnchorButton })
+                positionStrategy: new ConnectedPositioningStrategy({ target: this.myAnchorButton.nativeElement }),
+                closeOnOutsideClick: false, // overlay will not close on outside clicks
+                modal: false // overlay content will not be rendered in a modal dialog
             }); // The show method returns an ID that can be used to reference the shown content
         } else { // If the element is not visible, hide it
             this.overlayService.hide(this._overlayId); // Find and remove the component from the overlay container

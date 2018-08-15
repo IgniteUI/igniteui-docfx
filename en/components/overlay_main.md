@@ -15,6 +15,8 @@ The overlay service is fully integrated in the toggle directive.
 
 To use the `IgxOverlayService` it needs to be imported in the component. `Inject` a reference to it in the component's `constructor`:
 ```typescript
+
+import { Inject } from '@angular/core'
 import { IgxOverlayService } from `igniteui-angular`;
 
 ...
@@ -37,7 +39,7 @@ After a reference to the Overlay service is established, it can be used to dynam
 ```typescript
 
 // in my-overlay-component.component.ts
-import { MyDynamicComponent } from './my-dynamic-component.component.ts';
+import { MyDynamicComponent } from '../my-dynamic-component/my-dynamic-component.component';
 
 export class MyOverlayComponent {
 
@@ -58,6 +60,31 @@ export class MyOverlayComponent {
 <button (click)="showInOverlay()">Show Overlay</button>
 </div>
 
+```
+
+If we want to pass an already existing `ElementRef` from the page to the `IgxOverlayService`, we can do it as follows:
+
+```HTML
+<!-- in my-overlay-component.component.html -->
+<div class='content'>
+  <button (click)="showInOverlay()">Show Overlay</button>
+</div>
+<div>
+    <img #exampleImage width='200px' src='../assets/example.png' title='Click Me!'>
+</div>
+```
+
+```typescript
+// in my-overlay-component.component.ts
+import { Inject, ViewChild } from '@angular/core'
+export class MyOverlayComponent {
+
+    @ViewChild('exampleImage', {read: ElementRef})
+    private exampleImage: ElementRef;
+    public showInOverlay() {
+        this.overlayService.show(this.exampleImage);
+    }
+}
 ```
 <div class="divider--half"></div>
 
@@ -89,6 +116,9 @@ The overlay service `show()` method also accepts an object of the `OverlaySettin
 For example, if we want the content to be positioned relative to an element, we can pass a different `positioningStrategy` for the overlay's `show()` method, e.g. `ConnectedPositioningStrategy`. In order to configure how the component is shown, we need to first create an `OverlaySettings` object:
 ```typescript
 // in my-overlay-component.component.ts
+// add an import for the definion of ConnectedPositioningStategy class
+import { ConnectedPositioningStrategy } from 'igniteui-angular';
+...
 export class MyOverlayComponent {
 
     @ViewChild(`myAnchorButton`)
@@ -96,7 +126,7 @@ export class MyOverlayComponent {
 
     public showInOverlay() {
         this.overlayService.show(MyDynamicComponent, {
-            positionStrategy: new ConnectedPositioningStrategy({ target: this.myAnchorButton })
+            positionStrategy: new ConnectedPositioningStrategy({ target: this.myAnchorButton.nativeElement })
         });
     }
 }
@@ -121,6 +151,9 @@ All of the elements rendered by the overlay service have a unique ID assigned to
 We can modify the previously defined overlay method to not only show but also hide the overlay element
 ```typescript
 // in my-overlay-component.component.ts
+// add an import for the definion of ConnectedPositioningStategy class
+import { ConnectedPositioningStrategy } from 'igniteui-angular';
+...
 export class MyOverlayComponent {
     private _overlayId = ''; // The unique identifier assigned to the component by the Overlay service
     private _overlayShown = false; // Is the component rendered in the Overlay?
@@ -131,7 +164,9 @@ export class MyOverlayComponent {
     public toggleOverlay() {
         if (!this._overlayShown) { // If the element is not visible, show it
             this._overlayId = this.overlayService.show(MyDynamicComponent, {
-                positionStrategy: new ConnectedPositioningStrategy({ target: this.myAnchorButton })
+                positionStrategy: new ConnectedPositioningStrategy({ target: this.myAnchorButton.nativeElement }),
+                closeOnOutsideClick: false, // overlay will not close on outside clicks
+                modal: false // overlay content will not be rendered in a modal dialog
             }); // The show method returns an ID that can be used to reference the shown content
         } else { // If the element is not visible, hide it
             this.overlayService.hide(this._overlayId); // Find and remove the component from the overlay container
