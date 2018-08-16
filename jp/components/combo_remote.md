@@ -70,7 +70,7 @@ export class RemoteService {
 <igx-combo [data]="rData | async" [valueKey]="'ProductID'" [displayKey]="'ProductName'" 
     (onDataPreLoad)="dataLoading($event)" (onSearchInput)="searchInput($event)" (onOpening)="searchInput('')"></igx-combo>
 ```
-以下は、Igx-combo が新しいデータを要求する必要があるケースです。
+以下は、igx-combo が新しいデータを要求する必要があるケースです。
     - コンボが初期化されたとき
     - コンボのリストをスクロールしたときコンボは、新しいコンボ `virtualizationState` と `onDataPreLoad` を発生し、リモート サービスに新しい要求を送ることができます。
     - `igx-combo` で検索時にリモート結果のフィルターを要求する必要があります。
