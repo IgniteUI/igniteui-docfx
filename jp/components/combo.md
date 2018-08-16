@@ -10,8 +10,7 @@ _language: ja
 igx-combo コンポーネントは、基本的な HTML `input`、選択機能、IgniteUI for Angular igx-drop-down を組み合わせたコンポーネントです。<br />
 Combo コンポーネントは、**[フィルタリング](combo_features.md#フィルタリング)**、項目の**複数選択**、**[グループ化](combo_features.md#グループ化)**、ドロップダウン リストに**[カスタム値](combo_features.md#カスタム値)** の追加などの機能をサポートします。<br />
 **[カスタム テンプレート](combo_templates.md)** は、項目、ヘッダー、フッターなどコンポーネントの異なる領域をカスタマイズするために提供されます。<br />
-The `igx-combo` component is integrated with the **[Template Driven Forms](input_group.md)** and **[Reactive Forms](input_group_reactive_forms.md)**.
-igx-combo` コンポーネントは、**[テンプレート駆動フォーム](input_group.md)** と **[Reactive フォーム](input_group_reactive_forms.md)** を統合したコンポーネントです。<br />
+`igx-combo` コンポーネントは、**[テンプレート駆動フォーム](input_group.md)** と **[Reactive フォーム](input_group_reactive_forms.md)** を統合したコンポーネントです。<br />
 `igx-combo` は、直感的な **キーボード ナビゲーション**を公開し、**アクセシビリティ規格**に準拠しています。<br />
 ドロップダウン項目を**仮想化*することにより、igx-combo を大量の項目を持つデータ ソースにバインドした場合もスムーズにスクロールを行うことができます。
 </p>
@@ -22,7 +21,7 @@ igx-combo` コンポーネントは、**[テンプレート駆動フォーム](i
     <iframe id="combo-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/combo" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="combo-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz で開く</button>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="combo-sample" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
 </div>
 <div class="divider--half"></div>
 
@@ -177,7 +176,7 @@ igxCombo が開いて、カスタム値が有効で、「項目の追加」ボ�
 * [コンボ リモート バインディング](combo_remote.md)
 * [コンボ テンプレート](combo_templates.md)
 * [テンプレート駆動フォームの統合](input_group.md)
-* [Reactive フォームの統合](input_group_reactive_forms.md)
+* [リアクティブ フォームの統合](input_group_reactive_forms.md)
 * [カスケーディング](combo_cascading.md)
 
 コミュニティに参加して新しいアイデアをご提案ください。

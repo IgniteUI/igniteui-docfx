@@ -19,7 +19,7 @@ _language: ja
     <iframe id="cascading-combos-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/cascading-combos" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="cascading-combos-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="cascading-combos-sample" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
 </div>
 <div class="divider--half"></div>
 
@@ -157,12 +157,12 @@ export class CascadingCombos {
     }
 }
 ```
-> 注: igx-overly 配置機能は、入力の下にドロップダウンを表示して単一選択コンボをエミュレートするために使用します。
+> 注: igx-overlay 配置機能は、入力の下にドロップダウンを表示して単一選択コンボをエミュレートするために使用します。
 
 ## その他のリソース
 <div class="divider--half"></div>
 
-* Combo 機能
+* [コンボ機能](combo_features.md)
 * [コンボ リモート バインディング](combo_remote.md)
 * [コンボ テンプレート](combo_templates.md)
 * [テンプレート駆動フォームの統合](input_group.md)
