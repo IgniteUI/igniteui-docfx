@@ -193,6 +193,9 @@
 - name: Chip
   href: chip.md
   new: true
+- name: Text Highlight
+  href: texthighlight.md
+  new: true
 - name: Interactions
   header: true
 - name: Dialog Window
