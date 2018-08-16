@@ -7,12 +7,12 @@ _language: ja
 
 ## Combo
 <p class="highlight">
-igx-combo コンポーネントは、基本的な HTML `input`、選択機能、IgniteUI for Angular igx-drop-down を組み合わせたコンポーネントです。<br />
+igx-combo コンポーネントは、基本的な HTML `input`、選択機能、Ignite UI for Angular `igx-drop-down` を組み合わせたコンポーネントです。<br />
 Combo コンポーネントは、**[フィルタリング](combo_features.md#フィルタリング)**、項目の**複数選択**、**[グループ化](combo_features.md#グループ化)**、ドロップダウン リストに**[カスタム値](combo_features.md#カスタム値)** の追加などの機能をサポートします。<br />
 **[カスタム テンプレート](combo_templates.md)** は、項目、ヘッダー、フッターなどコンポーネントの異なる領域をカスタマイズするために提供されます。<br />
 `igx-combo` コンポーネントは、**[テンプレート駆動フォーム](input_group.md)** と **[Reactive フォーム](input_group_reactive_forms.md)** を統合したコンポーネントです。<br />
 `igx-combo` は、直感的な **キーボード ナビゲーション**を公開し、**アクセシビリティ規格**に準拠しています。<br />
-ドロップダウン項目を**仮想化*することにより、igx-combo を大量の項目を持つデータ ソースにバインドした場合もスムーズにスクロールを行うことができます。
+ドロップダウン項目を**仮想化**することにより、`igx-combo` を大量の項目を持つデータ ソースにバインドした場合もスムーズにスクロールを行うことができます。
 </p>
 <div class="divider"></div>
 
@@ -45,7 +45,7 @@ import { IgxComboModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-次にテンプレートで `igx-combo` をデータにバインドし、localData データソースのエントリに対応する `valueKey` と `displayKey` を定義します。
+次にテンプレートで `igx-combo` をデータにバインドし、`localData` データソースのエントリに対応する `valueKey` と `displayKey` を定義します。
 
 ```html
 <igx-combo [data]="lData" [valueKey]="'ProductID'" [displayKey]="'ProductName'"></igx-combo>
