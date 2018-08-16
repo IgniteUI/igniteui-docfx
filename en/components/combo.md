@@ -167,7 +167,7 @@ When igxCombo is opened, allow custom values are enabled and add item button is 
 
 - Combo input that displays the selected items is not editable, however due to a browser specifics in IE and FireFox the cursor is visible
 - Backspace works in disabled combo in IE
-- Setting combo's `height` option will currently not affect the component height. Follow [this issue](https://github.com/IgniteUI/igniteui-angular/issues/2410), in our Ignite UI for Angular repository, for further updates.
+- Setting combo's `height` option will currently not affect the component input height. Follow [this issue](https://github.com/IgniteUI/igniteui-angular/issues/2410), in our Ignite UI for Angular repository, for further updates.
 
 ### Additional Resources
 <div class="divider--half"></div>
