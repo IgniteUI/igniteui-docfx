@@ -62,7 +62,7 @@ _language: ja
 }
 ```
 
-Great, and now let's prepare for the search API of our Data Grid! We can create a few of properties, which can be used for storing the currently searched text and whether the search is case sensitive and/or by an exact match.
+Great, and now let's prepare for the search API of our Data Grid! We can create a few properties, which can be used for storing the currently searched text and whether the search is case sensitive and/or by an exact match.
 
 ```typescript
 // searchgrid.component.ts
