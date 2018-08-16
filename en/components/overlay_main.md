@@ -255,30 +255,30 @@ export class ExampleComponent {
 
    | Name               | Description                                         | Type                                |
    |--------------------|-----------------------------------------------------|-------------------------------------|
-   |positionSettings    | Settings to apply to this position strategy         | PositionSettings                    |
+   |`positionSettings`  | Settings to apply to this position strategy         | `PositionSettings`                  |
 <div class="divider"></div>
 
  `OverlaySettings`
 
-   | Name               | Description                                         | Type                                |
-   |--------------------|-----------------------------------------------------|-------------------------------------|
-   |positionStrategy    | Position strategy to use with this settings         | IPositionStrategy                   |
-   |scrollStrategy      | Scroll strategy to use with this settings           | IScrollStrategy                     |
-   |modal               | Set if the overlay should be in modal mode          | boolean                             |
-   |closeOnOutsideClick | Set if the overlay should closed on outside click   | boolean                             |
+   | Name                | Description                                         | Type                                |
+   |---------------------|-----------------------------------------------------|-------------------------------------|
+   |`positionStrategy`   | Position strategy to use with this settings         | `IPositionStrategy`                 |
+   |`scrollStrategy`     | Scroll strategy to use with this settings           | `IScrollStrategy`                   |
+   |`modal`              | Set if the overlay should be in modal mode          | `boolean`                           |
+   |`closeOnOutsideClick`| Set if the overlay should closed on outside click   | `boolean`                           |
 <div class="divider--half"></div>
 
  `PositionSettings`
 
-   | Name               | Description                                         | Type                                |
-   |--------------------|-----------------------------------------------------|-------------------------------------|
-   |target              | Attaching target for the component to show          | Point \| HTMLElement                |
-   |horizontalDirection | Direction in which the component should show        | HorizontalAlignment                 |
-   |verticalDirection   | Direction in which the component should show        | VerticalAlignment                   |
-   |horizontalStartPoint| Target's starting point                             | HorizontalAlignment                 |
-   |verticalStartPoint  | Target's starting point                             | VerticalAlignment                   |
-   |openAnimation       | Animation applied while overlay opens               | AnimationReferenceMetadata          |
-   |closeAnimation      | Animation applied while overlay closes              | AnimationReferenceMetadata          |
+   | Name                 | Description                                         | Type                                |
+   |----------------------|-----------------------------------------------------|-------------------------------------|
+   |`target`              | Attaching target for the component to show          | `Point` \| `HTMLElement`            |
+   |`horizontalDirection` | Direction in which the component should show        | `HorizontalAlignment`               |
+   |`verticalDirection`   | Direction in which the component should show        | `VerticalAlignment`                 |
+   |`horizontalStartPoint`| Target's starting point                             | `HorizontalAlignment`               |
+   |`verticalStartPoint`  | Target's starting point                             | `VerticalAlignment`                 |
+   |`openAnimation`       | Animation applied while overlay opens               | `AnimationReferenceMetadata`        |
+   |`closeAnimation`      | Animation applied while overlay closes              | `AnimationReferenceMetadata`        |
 
 ### Methods
 
@@ -286,33 +286,33 @@ export class ExampleComponent {
 
    | Name            | Description                                                                     | Parameters |
    |-----------------|---------------------------------------------------------------------------------|------------|
-   |show             | Shows the provided component on the overlay                                     |component, overlaySettings?|
-   |hide             | Remove the provided native element of for the component with provided id        |id          |
-   |hideAll          | Remove the all native elements and hides the overlay                            |-           |
-   |reposition       | Repositions the native element of the component with provided id                |id          |
+   |`show`           | Shows the provided component on the overlay                                     |`component, overlaySettings?`|
+   |`hide`           | Remove the provided native element of for the component with provided id        |`id`        |
+   |`hideAll`        | Remove the all native elements and hides the overlay                            |-           |
+   |`reposition`     | Repositions the native element of the component with provided id                |`id`        |
 <div class="divider"></div>
 
  `IPositionStrategy`
 
    | Name            | Description                                                                     | Parameters |
    |-----------------|---------------------------------------------------------------------------------|------------|
-   |position         | Positions provided element                                                      |element     |
+   |`position`       | Positions provided element                                                      |`element`   |
 <div class="divider"></div>
 
  `IScrollStrategy`
 
    | Name            | Description                                                                     | Parameters |
    |-----------------|---------------------------------------------------------------------------------|------------|
-   |initialize       | Initialize the strategy. Should be called once                                  |document, overlayService, id|
-   |attach           | Attaches the strategy                                                           |-           |
-   |detach           | Detaches the strategy                                                           |-           |
+   |`initialize`     | Initialize the strategy. Should be called once                                  |`document, overlayService, id`|
+   |`attach`         | Attaches the strategy                                                           |-           |
+   |`detach`         | Detaches the strategy                                                           |-           |
 <div class="divider"></div>
 
  `static methods`
 
-   | Name                        | Description                                                         | Parameters |
-   |-----------------------------|---------------------------------------------------------------------|------------|
-   |getPointFromPositionsSettings| Calculates the point from which the overlay should start showing    |settings    |
+   | Name                          | Description                                                         | Parameters |
+   |-------------------------------|---------------------------------------------------------------------|------------|
+   |`getPointFromPositionsSettings`| Calculates the point from which the overlay should start showing    |`settings`  |
 <div class="divider"></div>
 
 ### Events
@@ -320,12 +320,12 @@ export class ExampleComponent {
 
 `IgxOverlayService`
 
-   | Name        | Description                        | Cancelable | Parameters |
-   |-------------|------------------------------------|------------|------------|
-   |onOpening    | Emitted on before overlay shows    | false      |            |
-   |onOpened     | Emitted after overlay shows        | false      |            |
-   |onClosing    | Emitted before overlay hides       | false      |            |
-   |onClosed     | Emitted after  overlay hides       | false      |            |
+   | Name          | Description                        | Cancelable | Parameters |
+   |---------------|------------------------------------|------------|------------|
+   |`onOpening`    | Emitted on before overlay shows    | false      |            |
+   |`onOpened`     | Emitted after overlay shows        | false      |            |
+   |`onClosing`    | Emitted before overlay hides       | false      |            |
+   |`onClosed`     | Emitted after  overlay hides       | false      |            |
 <div class="divider--half"></div>
 
 ## Assumptions and Limitations</a>
