@@ -53,15 +53,8 @@ _language: ja
     font-size: 0.875rem;
 }
 
-.caseSensitiveButton {
-    margin-left: 10px;
-}
-
-.caseSensitiveIcon {
-    width: 1.25rem;
-    height: 1.25rem;
-    font-size: 1.25rem;
-    color: rgba(0, 0, 0, .54);
+.chips {
+    margin-left: 5px;
 }
 
 .searchButtons {    
@@ -69,30 +62,33 @@ _language: ja
 }
 ```
 
-データ グリッドの検索 API を構成します。検索したテキストの保存や検索で大文字小文字を区別するかどうかに使用できるプロパティを作成できます。
+Great, and now let's prepare for the search API of our Data Grid! We can create a few properties, which can be used for storing the currently searched text and whether the search is case sensitive and/or by an exact match.
 
 ```typescript
 // searchgrid.component.ts
 
 public searchText: string = "";
 public caseSensitive: boolean = false;
+public exactMatch: boolean = false;
 ```
 
 #### 検索入力ボックス
 
-検索入力を作成します。**searchText** を ngModel として新しく作成した入力へバインドして ngModelChange イベントにサブスクライブします。ユーザーによるすべての ngModelChange 変更を検出できます。
-これによってグリッドの `findNext` と `findPrev` メソッドを使用して **searchText** のすべての出現を強調し、次へまたは前 (呼び出すメソッドに基づいて) へスクロールできます。
+Now let's create our search input! By binding our **searchText** as ngModel to our newly created input and subscribe to the ngModelChange event, we can detect every single **searchText** modification by the user. This will allow us to use the grid's `findNext` and `findPrev` methods to highlight all the occurrences of the **searchText** and scroll to the next/previous one (depending on which method we have invoked).
 
-`findNext` と `findPrev` メソッドの両方に 2 つの引数があります。
-- **string** 値 (検索テキスト)
-- (オプション) **boolean** 値 (検索は大文字と小文字を区別するかどうか、デフォルト値は false)。
+Both the `findNext` and the `findPrev` methods have three arguments:
+- `text`: **string** (the text we are searching for)
+- (optional) `caseSensitive`: **boolean** (should the search be case sensitive or not, default value is false)
+- (optional) `exactMatch`: **boolean** (should the search be by an exact match or not, default value is false)
 
-上記のメソッドは **number** 値を返します (グリッドで指定した文字列が含まれる回数)。
+When searching by an exact match, the search API will highlight as results only the cell values that match entirely the **searchText** by taking the case sensitivity into account as well. For example the strings '_software_' and '_Software_' are an exact match with a disregard for the case sensitivity.
+
+The methods from above return a **number** value (the number of times the grid contains the given string).
 
 ```html
 <!--searchgrid.component.html-->
 
-<input #search1 id="search1" placeholder="Search" [(ngModel)]="searchText" (ngModelChange)="grid.findNext(searchText, caseSensitive)" />
+<input #search1 id="search1" placeholder="Search" [(ngModel)]="searchText" (ngModelChange)="grid.findNext(searchText, caseSensitive, exactMatch)" />
 ```
 
 #### 検索結果の個数を表示
@@ -122,8 +118,8 @@ public caseSensitive: boolean = false;
 <!--searchgrid.component.html-->
 
 <div class="searchButtons">
-    <input type="button" value="Previous" (click)="grid.findPrev(searchText, caseSensitive)" />
-    <input type="button" value="Next" (click)="grid.findNext(searchText, caseSensitive)" />
+    <input type="button" value="Previous" (click)="grid.findPrev(searchText, caseSensitive, exactMatch)" />
+    <input type="button" value="Next" (click)="grid.findNext(searchText, caseSensitive, exactMatch)" />
 </div>
 ```
 
@@ -134,7 +130,7 @@ public caseSensitive: boolean = false;
 ```html
 <!--searchgrid.component.html-->
 
-<input #search1 id="search1" placeholder="Search" [(ngModel)]="searchText" (ngModelChange)="grid.findNext(searchText, caseSensitive)"
+<input #search1 id="search1" placeholder="Search" [(ngModel)]="searchText" (ngModelChange)="grid.findNext(searchText, caseSensitive, exactMatch)"
        (keydown)="searchKeyDown($event)" />
 ```
 
@@ -144,22 +140,25 @@ public caseSensitive: boolean = false;
 public searchKeyDown(ev) {
     if (ev.key === "Enter" || ev.key === "ArrowDown" || ev.key === "ArrowRight") {
         ev.preventDefault();
-        this.grid.findNext(this.searchText, this.caseSensitive);
+        this.grid.findNext(this.searchText, this.caseSensitive, this.exactMatch);
     } else if (ev.key === "ArrowUp" || ev.key === "ArrowLeft") {
         ev.preventDefault();
-        this.grid.findPrev(this.searchText, this.caseSensitive);
+        this.grid.findPrev(this.searchText, this.caseSensitive, this.exactMatch);
     }
 }
 ```
 
-#### 大文字と小文字の区別
+#### Case sensitive and Exact match
 
-ユーザーが検索で大文字と小文字を区別するかどうかを選択できるようにするには、**caseSensitive** プロパティを **checked** プロパティにバインドしてシンプルなチェックボックス入力を使用し、プロパティを切り替えて **change** イベントを処理し、 `findNext` メソッドを呼び出します。
+Now let's allow the user to choose whether the search should be case sensitive and/or by an exact match. For this purpose we can use simple checkbox inputs by binding our **caseSensitive** and **exactMatch** properties to the inputs' **checked** properties respectively and handle their **change** events by toggling our properties and invoking the `findNext` method.
 ```html
 <!--searchgrid.component.html-->
 
 <span>Case sensitive</span>
 <input type="checkbox" [checked]="caseSensitive" (change)="updateSearch()">
+
+<span>Exact match</span>
+<input type="checkbox" [checked]="exactMatch" (change)="updateExactSearch()">
 ```
 
 ```typescript
@@ -167,7 +166,12 @@ public searchKeyDown(ev) {
 
 public updateSearch() {
     this.caseSensitive = !this.caseSensitive;
-    this.grid.findNext(this.searchText, this.caseSensitive);
+    this.grid.findNext(this.searchText, this.caseSensitive, this.exactMatch);
+}
+
+public updateExactSearch() {
+    this.exactMatch = !this.exactMatch;
+    this.grid.findNext(this.searchText, this.caseSensitive, this.exactMatch);
 }
 ```
 
@@ -177,8 +181,8 @@ public updateSearch() {
 
 #### アイコンの追加
 
-その他のコンポーネントを使用するためにユーザー インターフェイスを作成し、検索バー全体のデザインを向上します。左側には更にデザインが洗練された検索または削除アイコン、右側にはマテリアル デザイン アイコンと Ripple スタイルのボタンを組み合わせた検索オプションとナビゲーションを表示できます。入力グループ内のコンポーネントをラップしてより洗練されたデザインにすることができます。
-[**IgxInputGroup**](input_group.md)、[**IgxIcon**](icon.md)、[**IgxRipple**](ripple.md)、[**IgxButton**](button.md) のモジュールを使用します。
+By using some of our other components, we can create an enriched user interface and improve the overall design of our entire search bar! We can have a nice search or delete icon on the left of the search input, a couple of chips for our search options and some material design icons combined with nice ripple styled buttons for our navigation on the right. We can wrap these components inside an input group for a more refined design.
+To do this, let's go and grab the [**IgxInputGroup**](https://www.infragistics.com/products/ignite-ui-angular/angular/components/input_group.html), [**IgxIcon**](https://www.infragistics.com/products/ignite-ui-angular/angular/components/icon.html),  [**IgxRipple**](https://www.infragistics.com/products/ignite-ui-angular/angular/components/ripple.html), [**IgxButton**](https://www.infragistics.com/products/ignite-ui-angular/angular/components/button.html) and the [**IgxChip**](https://www.infragistics.com/products/ignite-ui-angular/angular/components/chip.html) modules.
 
 ```typescript
 // app.module.ts
@@ -189,12 +193,13 @@ import {
     IgxInputGroupModule,
     IgxIconModule,
     IgxRippleModule,
-    IgxButtonModule    
+    IgxButtonModule,
+    IgxChipsModule
 } from 'igniteui-angular';
 
 @NgModule({
     ...
-    imports: [..., IgxInputGroupModule, IgxIconModule, IgxRippleModule, IgxButtonModule],
+    imports: [..., IgxInputGroupModule, IgxIconModule, IgxRippleModule, IgxButtonModule, IgxChipsModule],
 })
 export class AppModule {}
 ```
@@ -247,17 +252,21 @@ public clearSearch() {
     </div>
     ...
 ```
-- **caseSensitive** プロパティを切り替えるボタンをマテリアル アイコンを含むスタイリッシュなボタンで置き換えました。ボタンがクリックされるとカスタム **updateSearch**  メソッドを再び呼び出して、 **caseSensitive** プロパティの状態に基づいてボタンに異なる背景を設定します。
+- For displaying a couple of chips that toggle the **caseSensitive** and the **exactMatch** properties. We have replaced the checkboxes with two stylish chips that change color based on these properties. Whenever a chip is clicked, we invoke its respective handler - **updateSearch** or **updateExactSearch** depending on which chip has been clicked.
 
 ```html
 <!--searchgrid.component.html-->
 
     ...
-    <div class="caseSensitiveButton">
-        <button igxButton="icon" igxRipple igxRippleCentered="true" (click)="updateSearch()"
-                [igxButtonBackground]="caseSensitive? 'lightgrey' : 'transparent'">
-            <igx-icon class="caseSensitiveIcon" fontSet="material" name="text_fields"></igx-icon>
-        </button>
+    <div class="chips">
+        <igx-chips-area>
+            <igx-chip (click)="updateSearch()" [color]="caseSensitive? 'lightgrey' : 'rgba(0, 0, 0, .04)'">
+                <span>Case Sensitive</span>
+            </igx-chip>
+            <igx-chip (click)="updateExactSearch()" [color]="exactMatch? 'lightgrey' : 'rgba(0, 0, 0, .04)'">
+                <span>Exact Match</span>
+            </igx-chip>
+        </igx-chips-area>
     </div>
     ...
 ```
@@ -268,10 +277,10 @@ public clearSearch() {
 
     ...
     <div class="searchButtons">
-        <button igxButton="icon" igxRipple igxRippleCentered="true" (click)="grid.findPrev(searchText, caseSensitive)">
+        <button igxButton="icon" igxRipple igxRippleCentered="true" (click)="grid.findPrev(searchText, caseSensitive, exactMatch)">
             <igx-icon fontSet="material" name="navigate_before"></igx-icon>
         </button>
-        <button igxButton="icon" igxRipple igxRippleCentered="true" (click)="grid.findNext(searchText, caseSensitive)">
+        <button igxButton="icon" igxRipple igxRippleCentered="true" (click)="grid.findNext(searchText, caseSensitive, exactMatch)">
             <igx-icon fontSet="material" name="navigate_next"></igx-icon>
         </button>
     </div>
@@ -280,14 +289,14 @@ public clearSearch() {
 
 ### API まとめ
 
-検索結果のナビゲーションは、グリッドにカスタムバー機能を追加して実装しました。アイコンや入力などその他の Ignite UI for Angular コンポーネントも使用しています。以下は検索 API です。
+In this article we implemented our own search bar for the grid with some additional functionality when it comes to navigating between the search results. We also used some additional Ignite UI for Angular components like icons, chips and inputs. The search API is listed below.
 
 #### メソッド
 以下のメソッドは **IgxGridComponent** で使用できます。
 | 名前 | 型 | パラメーター |説明 |
 | :--- | :--- | :--- | :--- |
-| `findNext` | number | 検索文字列と検索で大文字と小文字の区別をするかどうか (デフォルトは false)。 | グリッドで文字列の次の出現を検索します。表示されていない場合はセルへスクロールします。グリッドに文字列が何回含まれるかを返します。|
-| `findPrev` | number | 検索文字列と検索で大文字と小文字の区別をするかどうか (デフォルトは false)。 | グリッドで文字列の前の出現を検索します。表示されていない場合はセルへスクロールします。 グリッドに文字列が何回含まれるかを返します。|
+| `findNext` | number | The string to search and, optionally, if the search should be case sensitive and/or an exact match (both default to false). | Finds the next occurrence of a given string in the grid and scrolls to the cell if it isn't visible. Returns how many times the grid contains the string. |
+| `findPrev` | number | The string to search and, optionally, if the search should be case sensitive and/or an exact match (both default to false). | Finds the previous occurrence of a given string in the grid and scrolls to the cell if it isn't visible. Returns how many times the grid contains the string. |
 | `clearSearch` | void | N/A | グリッドのすべての強調表示を削除します。 |
 | `refreshSearch` | number | N/A | 既存の検索を再適用します。グリッドに文字列が何回含まれるかを返します。 |
 
@@ -296,7 +305,7 @@ public clearSearch() {
 以下のメソッドは **IgxGridCellComponent** で使用できます。
 | 名前 | 型 | パラメーター |説明 |
 | :--- | :--- | :--- | :--- |
-| `highlightText` | number | 検索文字列と検索で大文字と小文字の区別をするかどうか (デフォルトは false)。 | セルで文字列のすべての出現を強調表示します。検索文字列がセルに何回含まれるかを返します。 |
+| `highlightText` | number | The string to search and, optionally, if the search should be case sensitive and/or an exact match (both default to false). | Highlights all occurrences of a string in a given cell. Return how many times the searched string is contained in the cell. |
 | `clearHighlight` | void | N/A | セルのすべての強調表示を削除します。 |
 
 <div class="divider"></div>
