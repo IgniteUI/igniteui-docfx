@@ -53,7 +53,7 @@ There are a several mixins and functions that are used to set and retrieve categ
 - `igx-typography` [mixin] - Defines the global application typography styles.
 
 
-Let's take a close look at what each one of the aforementioned mixins and functions do.
+Let's take a closer look at what each one of the aforementioned mixins and functions do.
 
 #### The Type Style
 The `igx-type-style` function is an interface-like function that simply ensures that certain arguments are passed as part of the style set for a scale category. Say, for instance, that we want to define a new set of style rules for the `h1` scale category. To do so, we would simply write:
@@ -72,7 +72,7 @@ $h1-style: igx-type-style(
 
 #### The Type Scale
 
-The type scale is a map of type styles for all 13 scale categories. To generate a new type map all you have to do is write.
+The type scale is a map of type styles for all 13 scale categories. To generate a new type map, all you have to do is write the following Sass:
 
 ```scss
 $my-type-scale: igx-type-scale();
@@ -111,7 +111,7 @@ To overwrite the default typography, include the `igx-typography` mixin anywhere
 ```
 
 ### Custom Type Styles
-The `igx-type-style` mixin can be used to retrieve the style rules for a scale category from a specific type scale. Further, it allows you to add additional style rules.
+The `igx-type-style` mixin can be used to retrieve the style rules for a scale category from a specific type scale. Furthermore, it allows you to add additional style rules.
 
 ```scss
 .my-fancy-h1 {
@@ -158,7 +158,7 @@ $my-type-scale: igx-type-scale($h5: $my-h5);
 
 We no longer include the `igx-typography` mixin by passing it the `$my-type-scale` scale with our modification to the `h5` category. Now all we do is pass the custom scale we created to the `igx-card-typography` mixin. The only component that uses our `$my-type-scale` scale is the card now.
 
-Typography style mixins can be scope to specific selectors. Say we wanted our custom card typography styles to be applied for all `igx-card` components with class name of `my-cool-card`. 
+Typography style mixins can be scoped to specific selectors. Say we wanted our custom card typography styles to be applied for all `igx-card` components with class name of `my-cool-card`. 
 
 ```scss
 //...
@@ -167,7 +167,7 @@ Typography style mixins can be scope to specific selectors. Say we wanted our cu
 }
 ```
 
-The typography component mixins take a second argument - `$categories`. It is used to configure which parts of the component use what typography scale category. For instance, if we wanted the our custom card to use a different scale category for the title than `h5`, we could change it.
+The typography component mixins take a second argument - `$categories`. It is used to configure which parts of the component use what typography scale category. For instance, if we wanted our custom card to use a different scale category for the title than `h5`, we could change it.
 
 ```scss
 @include igx-card-typography(
@@ -182,7 +182,7 @@ Now the card component will use the `overline` scale category to style the title
 
 ### CSS Classes
 
-In addition to adding text styles for all components based on type scale categories, we also style the default h1-h6 and p elements. We also separate semantics from styling. So fo instance, even though the `h1` tag has some default styling that we provide when using `igx-typography`, you can modify it to look like an `h3` by giving it a class of `igx-typography__h3`.
+In addition to adding text styles for all components based on type scale categories, we also style the default h1-h6 and p elements. We also separate semantics from styling. So for instance, even though the `h1` tag has some default styling that we provide when using `igx-typography`, you can modify it to look like an `h3` by giving it a class of `igx-typography__h3`.
 
 ```html
 <h1 class="igx-typography__h3">Some text</h1>
