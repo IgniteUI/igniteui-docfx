@@ -168,7 +168,8 @@ igxCombo が開いて、カスタム値が有効で、「項目の追加」ボ�
 
 - 選択した項目を表示するコンボ入力は編集可能ではありませんが、IE および Firefox でカーソルが表示
 - IE で無効なコンボで BackSpace キーが使用できる問題。
-- Setting combo's `height` option will currently not affect the component height. Follow [this issue](https://github.com/IgniteUI/igniteui-angular/issues/2410), in our Ignite UI for Angular repository, for further updates.
+- コンボの `height` オプションを設定した場合にコンポーネントの高さに影響しません。
+ Ignite UI for Angular レポジトリで[この問題](https://github.com/IgniteUI/igniteui-angular/issues/2410)をフォローして今後のアップデートを確認できます。
 
 ## その他のリソース
 
