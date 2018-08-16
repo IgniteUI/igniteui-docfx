@@ -63,7 +63,7 @@ export class MyOverlayComponent {
 
 ```
 
-If we want to pass an already existing `ElementRef` from the page to the `IgxOverlayService`, we can do it as follows:
+ページの既存の `ElementRef` から `IgxOverlayService` へ渡す場合は以下の手順に従ってください。
 
 ```HTML
 <!-- in my-overlay-component.component.html -->
