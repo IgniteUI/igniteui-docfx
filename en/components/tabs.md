@@ -184,6 +184,144 @@ If changing the tabs' labels and icons is not enough, you can also create your o
 </igx-tabs>
 ```
 
+### Using Tabs and Routing
+
+The following examples demonstrate sample usage of the tabs component and basic routing scenarios. You can learn more about Angular Routing & Navigation <a href="https://angular.io/guide/router" target="_blank">here</a>. 
+
+#### Using igxTab, routerLink Directives and Single router-outlet
+
+In order to implement basic routing with **igx-tabs**, you can re-template the igx-tabs item header using the `igxTab` directive and provide links via `routerLink` in `ng-template`. Views are switched within a single `router-outlet` placed outside the tabs component. Note that `ng-template` content overides the default tabs headers style.
+
+```html
+<igx-tabs #tabs1>
+  <igx-tabs-group *ngFor="let routerLink of routerLinks">
+    <ng-template igxTab>
+      <a routerLink="{{routerLink.link}}">
+        {{routerLink.label}}
+      </a>
+    </ng-template>
+  </igx-tabs-group>
+</igx-tabs>
+
+<div>
+  <router-outlet></router-outlet>
+</div>
+```
+
+```typescript
+this.routerLinks = [
+  {
+    label: 'View 1',
+    link: '/view1',
+    index: 0
+  }, 
+  {
+    label: 'View 2',
+    link: '/view2',
+    index: 1
+  },
+  {
+    label: 'View 3',
+    link: '/view3',
+    index: 2
+  },
+];
+```
+
+In order to handle the back/forward browser buttons in this particular case, add the following code in ngOnInit and use the IgxTabsGroupComponent `select` method to activate the relevant tabs group.
+
+```typescript
+constructor(private router: Router) {}
+
+public ngOnInit() {
+  // Load initial view 
+  this.router.navigate(['view1']);
+
+  // Handle the back/forward browser buttons
+  this.router.events.pipe(filter(event => event instanceof NavigationEnd)).subscribe((args) => {
+    const index = this.routerLinks.indexOf(this.routerLinks.find(tab => tab.link === this.router.url));
+    this.tabs.groups.filter(item => item.index === index)[0].select();
+    });
+  }
+```
+
+<div style="display: flex;">
+  <div style="margin: 0px 10px 0px 0px">
+    <a class="cta-btn" href="https://igxtabsrouterlinks.stackblitz.io" target="_blank" >view sample</a>
+  </div>
+  <div>
+    <a class="cta-btn" href="https://stackblitz.com/edit/igxtabsrouterlinks" target="_blank">view code on stackblitz</a>
+  </div>
+</div>
+
+#### Using Separate router-outlet as Tabs Content
+In order to render views inside the igx-tabs content, use named router outlets. In this case, implement `onTabItemSelected` event handler to navigate and render the specified view.
+
+```html
+<!-- router-outlet inside the tabs items content -->
+<igx-tabs #tabs1 (onTabItemSelected)="navigate($event)">
+  <igx-tabs-group label="Product1" name="product1">
+    <router-outlet name="product1"></router-outlet>
+  </igx-tabs-group>
+  <igx-tabs-group label="Product2" name="product2">
+    <router-outlet name="product2"></router-outlet>
+  </igx-tabs-group>
+  <igx-tabs-group label="Product3" name="product3">
+    <router-outlet name="product3"></router-outlet>
+  </igx-tabs-group>
+</igx-tabs>
+```
+
+```typescript
+public navigate(eventArgs) {
+    const selectedIndex = eventArgs.group.index;
+    switch(selectedIndex) {
+      case 0: {
+        this.router.navigate(['/productDetails',
+          {
+            outlets:
+            {
+              product1: ['product1']
+            }
+          }
+        ]);
+        break;
+    }
+    case 1: {
+      this.router.navigate(['/productDetails',
+        {
+          outlets:
+          {
+            product2: ['product2']
+          }
+        }
+      ]);
+      break;
+    }
+    case 2: {
+      this.router.navigate(['/productDetails',
+          {
+            outlets:
+            {
+              product3: ['product3']
+            }
+          }
+        ]);
+        break;
+      }
+    }
+  }
+```
+
+<div style="display: flex;">
+  <div style="margin: 0px 10px 0px 0px">
+    <a class="cta-btn" href="https://igxtabsrouterlinksoutlets.stackblitz.io" target="_blank" >view sample</a>
+  </div>
+  <div>
+    <a class="cta-btn" href="https://stackblitz.com/edit/igxtabsrouterlinksoutlets" target="_blank">view code on stackblitz</a>
+  </div>
+</div>
+
 <div class="divider"></div>
 
 ### API Summary
