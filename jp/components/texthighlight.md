@@ -9,11 +9,11 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 The `IgxTextHighlight` directive in Ignite UI for Angular is used to highlight parts of a text, providing options for case sensitive searches and to highlight only exact matches. It also allows the developer to keep an active highlight, which can be any of the already highlighted parts.
 
 ### TextHighlight Demo
-<div class="sample-container loading" style="height: 260px; width: 600px;">
-    <iframe id="text-highlight-1" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/text-highlight-1" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 260px;">
+    <iframe id="text-highlight-1-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/text-highlight-1" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="text-highlight-1" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="text-highlight-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
 
@@ -22,23 +22,25 @@ The `IgxTextHighlight` directive in Ignite UI for Angular is used to highlight p
 
 ### Usage
 
-To get started with the Ignite UI for Angular TextHighlight directive, let's first import the **IgxTextHighlightModule** in the **app.module.ts** file.
+To get started with the Ignite UI for Angular TextHighlight directive, let's first import the **IgxTextHighlightModule** in the **app.module.ts** file along with the other Ignute UI for Angular modules we need for our application.
 
 ```typescript
 // app.module.ts
 
 ...
-import { IgxTextHighlightModule } from 'igniteui-angular';
+import { IgxButtonModule, IgxInputGroupModule,
+        IgxIconModule, IgxRippleModule, IgxTextHighlightModule } from 'igniteui-angular';
 
 @NgModule({
     ...
-    imports: [..., IgxTextHighlightModule],
+    imports: [..., IgxButtonModule, IgxInputGroupModule,
+                    IgxIconModule, IgxRippleModule, IgxTextHighlightModule],
     ...
 })
 export class AppModule {}
 ```
 
-Then, lets create a search box which we can use to highlight different parts of the text. We will use IgniteUI for Angular's InputGroup component in which we will add a text input with buttons for clear matches, find next and find previous and a button for specifying whether the search will be case sensitive or not. Also it has a label for how many matches we have found.
+Then, lets create a search box which we can use to highlight different parts of the text. We will use Ignite UI for Angular's [InputGroup](https://www.infragistics.com/products/ignite-ui-angular/angular/components/input_group.html) component in which we will add a text input with buttons for clear matches, find next and find previous and a button for specifying whether the search will be case sensitive or not. Also it has a label for how many matches we have found.
 
 ```html
 <div class="search-container">
@@ -80,7 +82,7 @@ Then, lets create a search box which we can use to highlight different parts of 
     </igx-input-group>
 </div>
 ```
-Then, we will add a paragraph with text and the IgxTextHighlight directive. Note that, since we need to bind the value input to the text in the paragraph, we will also use interpolation for the paragraph's text. The column, row and page inputs are usefull when you have multiple containers and can be left at 0 for our example. Another noteworthy thing is that the search container (in our case the paragraph element) needs to be the only child in its parent container and because of this we need the surrounding div element.
+Then, we will add a paragraph with text and the IgxTextHighlight directive. Note that, since we need to bind the value input to the text in the paragraph, we will also use interpolation for the paragraph's text. The column, row and page inputs are useful when you have multiple containers and can be left at 0 for our example. Another noteworthy thing is that the search container (in our case the paragraph element) needs to be the only child in its parent container and because of this we need the surrounding div element.
 
 ```html
 <div>
@@ -121,7 +123,7 @@ In the .ts file of our component first we need to add the following fields, that
     }
 ```
 
-Then we need to add the following method for allowing the use to apply the highlights for the text they have typed in the searchbox and to move the active highlight around:
+Then we need to add the following methods which will allow the user to apply the highlights for the text they have typed in the searchbox and to move the active highlight around.
 
 ``` typescript
      public searchKeyDown(ev) {
@@ -183,7 +185,7 @@ Then we need to add the following method for allowing the use to apply the highl
 
 If the sample is configured properly, the final result should look like that:
 
-<div class="sample-container loading" style="height: 260px; width: 600px; border: 1px solid gray;">
+<div class="sample-container loading" style="height: 260px;">
     <iframe id="text-highlight-1-iframe" src='{environment:demosBaseUrl}/text-highlight-1' width="100%" height="100%" seamless
         frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -224,7 +226,7 @@ The igxTextHighlight allows you to search across multiple containers and which w
     </div>
 
 ```
-Then in the .ts file we have the firstParagraph and secondParagraph fields, which are bound the the respective value inputs of the text highlight directives. Also we will now use ViewChildren instead of ViewChild to get all the highlights in our template:
+Then in the .ts file we have the firstParagraph and secondParagraph fields, which are bound to the respective value inputs of the text highlight directives. Also we will now use ViewChildren instead of ViewChild to get all the highlights in our template.
 
 ```typescript
     public firstParagraph = `
@@ -244,7 +246,7 @@ On top of the functionality from the previous sample, this sample demonstrates h
     @ViewChildren(IgxTextHighlightDirective)
     public highlights;
 ```
-All the rest of the code in the .ts file is identical to the single container example with the exception of the find method. Changes to this method are necessary since we now have multiple containers, but the code there can be used regardless of the number of TextHighlight directives you have on your page:
+All the rest of the code in the .ts file is identical to the single container example with the exception of the find method. Changes to this method are necessary since we now have multiple containers, but the code there can be used regardless of the number of TextHighlight directives you have on your page.
 
 ```typescript
     private find(increment: number) {
@@ -291,11 +293,11 @@ All the rest of the code in the .ts file is identical to the single container ex
     }
 ```
 
-<div class="sample-container loading" style="height: 400px; width: 600px;">
-    <iframe id="text-highlight-2" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/text-highlight-2" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 400px;">
+    <iframe id="text-highlight-2-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/text-highlight-2" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="text-highlight-2" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="text-highlight-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
 <div class="divider"></div>
@@ -306,7 +308,7 @@ The following tables summarize some of the useful TextHighlight directive inputs
 
 #### Inputs
 
-The following input is available in the **igxTextHighlight** directive:
+The following inputs are available in the **igxTextHighlight** directive:
 
 | Name | Type | Description |
 | :--- | :--- | :--- |
@@ -320,18 +322,20 @@ The following input is available in the **igxTextHighlight** directive:
 
 #### Methods
 
-The following getters are available in the **igxTextHighlight** directive:
+The following methods are available in the **igxTextHighlight** directive.
+
 | Name | Return type | Parameters | Description |
 | :--- | :--- | :--- | :--- |
-| `highlight` | number | The text to highlight and optionally whether the search is case sensitve and should we highlight only exact matches | Highlight the searched string (if it exist in the value input) and returns how many times the value contains the searched highlighted string|
-| 'clearHighlight' | void | none | Clears all existing highlights |
-| 'activateIfNecessary' | void | none | Activates a highlight if it is the current active highlight |
-| 'setActiveHighlight' | void | The groupName and an object implementing an interface with the row, column and page to activate | Activates the highlight from the specified group on the given row, column and page |
-| 'clearActiveHighlight' | void | The group name | Clears the active highlight from the specified group |
+| `highlight` | number | The text to highlight and optionally whether the search is case sensitive and should we highlight only exact matches | Highlights the searched string (if it exists in the value input) and returns how many times the value contains the searched highlighted string|
+| `clearHighlight` | void | none | Clears all existing highlights |
+| `activateIfNecessary` | void | none | Activates a highlight if it is the current active highlight |
+| `setActiveHighlight` | void | The groupName and an object implementing an interface with the row, column and page to activate | Activates the highlight from the specified group on the given row, column and page |
+| `clearActiveHighlight` | void | The group name | Clears the active highlight from the specified group |
 
 <div class="divider"></div>
 
 ### Additional Resources
+* [Grid Search](https://www.infragistics.com/products/ignite-ui-angular/angular/components/grid_search.html)
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.
