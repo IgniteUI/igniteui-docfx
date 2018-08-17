@@ -182,7 +182,7 @@ public updateExactSearch() {
 #### アイコンの追加
 
 その他のコンポーネントを使用するためにユーザー インターフェイスを作成し、検索バー全体のデザインを向上します。検索入力の左側に検索または削除アイコン、検索オプションのチップ、右側にはマテリアル デザイン アイコンと Ripple スタイルのボタンを組み合わせたナビゲーションを表示できます。入力グループ内のコンポーネントをラップしてより洗練されたデザインにすることができます。
-これには [**IgxInputGroup**] を使用します。(https://jp.infragistics.com/products/ignite-ui-angular/angular/components/input_group.html), [**IgxIcon**](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/icon.html),  [**IgxRipple**](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/ripple.html), [**IgxButton**](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/button.html) and the [**IgxChip**](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/chip.html) モジュール。
+これには [**IgxInputGroup**] を使用します。(https://jp.infragistics.com/products/ignite-ui-angular/angular/components/input_group.html)、[**IgxIcon**](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/icon.html)、[**IgxRipple**](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/ripple.html)、[**IgxButton**](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/button.html)、[**IgxChip**](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/chip.html) モジュール。
 
 ```typescript
 // app.module.ts
