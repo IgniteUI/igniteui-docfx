@@ -62,7 +62,7 @@ _language: ja
 }
 ```
 
-Great, and now let's prepare for the search API of our Data Grid! We can create a few properties, which can be used for storing the currently searched text and whether the search is case sensitive and/or by an exact match.
+データグリッドの検索 API を使用します。検索したテキストの保存、また大文字小文字の区別や完全一致 (またはそのいずれか) に使用するプロパティを作成できます。
 
 ```typescript
 // searchgrid.component.ts
@@ -74,16 +74,16 @@ public exactMatch: boolean = false;
 
 #### 検索入力ボックス
 
-Now let's create our search input! By binding our **searchText** as ngModel to our newly created input and subscribe to the ngModelChange event, we can detect every single **searchText** modification by the user. This will allow us to use the grid's `findNext` and `findPrev` methods to highlight all the occurrences of the **searchText** and scroll to the next/previous one (depending on which method we have invoked).
+検索入力を作成します。**searchText** を ngModel として新しく作成した入力へバインドして ngModelChange イベントにサブスクライブします。ユーザーによるすべての ngModelChange 変更を検出できます。これによってグリッドの `findNext` と `findPrev` メソッドを使用して searchText のすべての出現を強調し、次へまたは前 (呼び出すメソッドに基づいて) へスクロールできます。
 
-Both the `findNext` and the `findPrev` methods have three arguments:
-- `text`: **string** (the text we are searching for)
-- (optional) `caseSensitive`: **boolean** (should the search be case sensitive or not, default value is false)
-- (optional) `exactMatch`: **boolean** (should the search be by an exact match or not, default value is false)
+`findNext` と `findPrev` メソッドの両方に 2 つの引数があります。
+- `text`: **string** (検索するテキスト)
+- `caseSensitive` (オプション)`: **boolean** (検索で大文字と小文字を区別するかどうか、デフォルト値は false)。
+- `exactMatch`(オプション): **boolean** (検索は大文字と小文字を区別するかどうか、デフォルト値は false)。
 
-When searching by an exact match, the search API will highlight as results only the cell values that match entirely the **searchText** by taking the case sensitivity into account as well. For example the strings '_software_' and '_Software_' are an exact match with a disregard for the case sensitivity.
+完全一致で検索した場合、検索 API は **searchText** と完全一致 (大文字小文字の区別を含む) するセル値のみ結果として強調表示します。たとえば、文字列 'software' と 'Software' は大文字小文字を区別しない場合は完全一致となります。
 
-The methods from above return a **number** value (the number of times the grid contains the given string).
+上記のメソッドは**数値**を返します (グリッドで指定した文字列が含まれる回数)。
 
 ```html
 <!--searchgrid.component.html-->
@@ -148,9 +148,9 @@ public searchKeyDown(ev) {
 }
 ```
 
-#### Case sensitive and Exact match
+#### 大文字と小文字の区別と完全一致
 
-Now let's allow the user to choose whether the search should be case sensitive and/or by an exact match. For this purpose we can use simple checkbox inputs by binding our **caseSensitive** and **exactMatch** properties to the inputs' **checked** properties respectively and handle their **change** events by toggling our properties and invoking the `findNext` method.
+次に完全一致の検索で大文字と小文字を区別するかどうかをユーザーが選択できるようにします。**caseSensitive** と **exactMatch** プロパティを入力 **checked** プロパティにそれぞれバインドし、プロパティを切り替えて **change** イベントを処理後、`findNext` メソッドを呼び出すことによりシンプルなチェックボックスを使用します。
 ```html
 <!--searchgrid.component.html-->
 
@@ -181,8 +181,8 @@ public updateExactSearch() {
 
 #### アイコンの追加
 
-By using some of our other components, we can create an enriched user interface and improve the overall design of our entire search bar! We can have a nice search or delete icon on the left of the search input, a couple of chips for our search options and some material design icons combined with nice ripple styled buttons for our navigation on the right. We can wrap these components inside an input group for a more refined design.
-To do this, let's go and grab the [**IgxInputGroup**](https://www.infragistics.com/products/ignite-ui-angular/angular/components/input_group.html), [**IgxIcon**](https://www.infragistics.com/products/ignite-ui-angular/angular/components/icon.html),  [**IgxRipple**](https://www.infragistics.com/products/ignite-ui-angular/angular/components/ripple.html), [**IgxButton**](https://www.infragistics.com/products/ignite-ui-angular/angular/components/button.html) and the [**IgxChip**](https://www.infragistics.com/products/ignite-ui-angular/angular/components/chip.html) modules.
+その他のコンポーネントを使用するためにユーザー インターフェイスを作成し、検索バー全体のデザインを向上します。検索入力の左側に検索または削除アイコン、検索オプションのチップ、右側にはマテリアル デザイン アイコンと Ripple スタイルのボタンを組み合わせたナビゲーションを表示できます。入力グループ内のコンポーネントをラップしてより洗練されたデザインにすることができます。
+これには [**IgxInputGroup**] を使用します。(https://jp.infragistics.com/products/ignite-ui-angular/angular/components/input_group.html), [**IgxIcon**](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/icon.html),  [**IgxRipple**](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/ripple.html), [**IgxButton**](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/button.html) and the [**IgxChip**](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/chip.html) モジュール。
 
 ```typescript
 // app.module.ts
@@ -252,7 +252,7 @@ public clearSearch() {
     </div>
     ...
 ```
-- For displaying a couple of chips that toggle the **caseSensitive** and the **exactMatch** properties. We have replaced the checkboxes with two stylish chips that change color based on these properties. Whenever a chip is clicked, we invoke its respective handler - **updateSearch** or **updateExactSearch** depending on which chip has been clicked.
+- 以下は **caseSensitive** と **exactMatch** を切り替えるチップを表示する方法です。プロパティに基づいて色が変わる 2 つのチップでチェックボックスを 置き換えます。チップをクリックすると、どちらのチップがクリックされたかによって各ハンドラー **updateSearch** または **updateExactSearch** を呼び出します。 
 
 ```html
 <!--searchgrid.component.html-->
@@ -289,14 +289,15 @@ public clearSearch() {
 
 ### API まとめ
 
-In this article we implemented our own search bar for the grid with some additional functionality when it comes to navigating between the search results. We also used some additional Ignite UI for Angular components like icons, chips and inputs. The search API is listed below.
+このトピックでは、グリッドにカスタム検索バーを実装し、更に検索結果を移動する際の機能を追加しました。アイコン、チップ、入力などその他の Ignite UI for Angular コンポーネントも使用しています。
+以下は検索 API です。
 
 #### メソッド
 以下のメソッドは **IgxGridComponent** で使用できます。
 | 名前 | 型 | パラメーター |説明 |
 | :--- | :--- | :--- | :--- |
-| `findNext` | number | The string to search and, optionally, if the search should be case sensitive and/or an exact match (both default to false). | Finds the next occurrence of a given string in the grid and scrolls to the cell if it isn't visible. Returns how many times the grid contains the string. |
-| `findPrev` | number | The string to search and, optionally, if the search should be case sensitive and/or an exact match (both default to false). | Finds the previous occurrence of a given string in the grid and scrolls to the cell if it isn't visible. Returns how many times the grid contains the string. |
+| `findNext` | number | 検索文字列、オプションで検索で大文字と小文字の区別と完全一致 (デフォルトは両方とも false) を使用します。| グリッドで文字列の次の出現を検索します。表示されていない場合はセルへスクロールします。 グリッドに文字列が何回含まれるかを返します。|
+| `findPrev` | number | 検索文字列、オプションで検索で大文字と小文字の区別と完全一致 (デフォルトは両方とも false) を使用します。| グリッドで文字列の前の出現を検索します。表示されていない場合はセルへスクロールします。グリッドに文字列が何回含まれるかを返します。|
 | `clearSearch` | void | N/A | グリッドのすべての強調表示を削除します。 |
 | `refreshSearch` | number | N/A | 既存の検索を再適用します。グリッドに文字列が何回含まれるかを返します。 |
 
@@ -305,7 +306,7 @@ In this article we implemented our own search bar for the grid with some additio
 以下のメソッドは **IgxGridCellComponent** で使用できます。
 | 名前 | 型 | パラメーター |説明 |
 | :--- | :--- | :--- | :--- |
-| `highlightText` | number | The string to search and, optionally, if the search should be case sensitive and/or an exact match (both default to false). | Highlights all occurrences of a string in a given cell. Return how many times the searched string is contained in the cell. |
+| `highlightText` | number | 検索文字列、オプションで検索で大文字と小文字の区別と完全一致 (デフォルトは両方とも false) を使用します。 | セルで文字列のすべての一致を強調表示します。検索文字列がセルに何回含まれるかを返します。|
 | `clearHighlight` | void | N/A | セルのすべての強調表示を削除します。 |
 
 <div class="divider"></div>
@@ -321,7 +322,7 @@ In this article we implemented our own search bar for the grid with some additio
 以下のプロパティは **IgxColumnComponent** で使用できます。
 | 名前 | 型 | 説明 |
 | :--- | :--- | :--- |
-| `searchable` | boolean | 列が検索に含まれるかどうかを決定します。false (デフォルトは true) に設定した場合、この列のセル値はグリッドの検索 API の結果に含まれません。 |
+| `searchable` | boolean | 列が検索に含まれるかどうかを決定します。false (デフォルトは true) に設定した場合、この列のセル値はグリッドの検索 API の結果に含まれません。|
 
 <div class="divider"></div>
 
