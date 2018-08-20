@@ -1,28 +1,29 @@
 ---
-title: TextHighlight Directive - Native Angular | Ignite UI for Angular
-_description: The Ignite UI for Angular TextHighlight directive can be used to highlight parts of text and have an active highlight on one of them.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Components, Native Angular Controls, Native Angular Components Library, Angular TextHighlight Directive, IgxTextHighlight Directive
+title: TextHighlight ディレクティブ - ネイティブ Angular | Ignite UI for Angular
+_description: Ignite UI for Angular TextHighlight ディレクティブは、テキスト部分のハイライトやアクティブ ハイライトがあります。
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コンポーネント, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular TextHighlight ディレクティブ, IgxTextHighlight ディレクティブ
+_language: ja
 ---
 
-## TextHighlight Directive
+## TextHighlight ディレクティブ
 
-The `IgxTextHighlight` directive in Ignite UI for Angular is used to highlight parts of a text, providing options for case sensitive searches and to highlight only exact matches. It also allows the developer to keep an active highlight, which can be any of the already highlighted parts.
+Ignite UI for Angular の `IgxTextHighlight` ディレクティブは、テキストのハイライト、大文字と小文字の区別のオプション、完全一致のみのハイライトをサポートします。既にハイライトしている部分を含む、テキストのハイライトをアクティブに保持できます。
 
-### TextHighlight Demo
+### TextHighlight デモ
 <div class="sample-container loading" style="height: 260px;">
     <iframe id="text-highlight-1-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/text-highlight-1" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="text-highlight-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="text-highlight-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
 > [!NOTE]
-> To start using Ignite UI for Angular components in your own projects, make sure you have configured all necessary dependencies and have performed the proper setup of your project. You can learn how to do this in the [**installation**](https://www.infragistics.com/products/ignite-ui-angular/getting-started#installation) topic.
+> Ignite UI for Angular コンポーネントをプロジェクトに追加する前に、必要なすべての依存関係を構成し、プロジェクトのセットアップが正しく完了したことを確認してください。[インストール](https://www.infragistics.com/products/ignite-ui-angular/getting-started#installation)のトピックで手順をご確認ください。
 
-### Usage
+### 使用方法
 
-To get started with the Ignite UI for Angular TextHighlight directive, let's first import the **IgxTextHighlightModule** in the **app.module.ts** file along with the other Ignute UI for Angular modules we need for our application.
+Ignite UI for Angular TextHighlight ディレクティブを使用する前に **app.module.ts** ファイルに **IgxTextHighlightModule** とアプリケーションに必要な他の Ignute UI for Angular モジュールをインポートします。
 
 ```typescript
 // app.module.ts
@@ -40,7 +41,7 @@ import { IgxButtonModule, IgxInputGroupModule,
 export class AppModule {}
 ```
 
-Then, lets create a search box which we can use to highlight different parts of the text. We will use Ignite UI for Angular's [InputGroup](https://www.infragistics.com/products/ignite-ui-angular/angular/components/input_group.html) component in which we will add a text input with buttons for clear matches, find next and find previous and a button for specifying whether the search will be case sensitive or not. Also it has a label for how many matches we have found.
+次にテキストの異なる部分のハイライトに使用できる検索ボックスを作成します。Ignite UI for Angular の [InputGroup](https://www.infragistics.com/products/ignite-ui-angular/angular/components/input_group.html) コンポーネントは、一致のクリア、次の一致、前の一致へ移動するためのボタン、検索で大文字と小文字を区別を指定するボタンを追加します。また一致がいくつ見つかったかをを示すラベルがあります。
 
 ```html
 <div class="search-container">
@@ -82,7 +83,7 @@ Then, lets create a search box which we can use to highlight different parts of 
     </igx-input-group>
 </div>
 ```
-Then, we will add a paragraph with text and the IgxTextHighlight directive. Note that, since we need to bind the value input to the text in the paragraph, we will also use interpolation for the paragraph's text. The column, row and page inputs are useful when you have multiple containers and can be left at 0 for our example. Another noteworthy thing is that the search container (in our case the paragraph element) needs to be the only child in its parent container and because of this we need the surrounding div element.
+テキストの段落と IgxTextHighlight ディレクティブを追加します。値入力を段落のテキストにバインドする必要があることを注意してください。段落のテキストに補間も使用します。複数のコンテナがあり、たとえば 0 の場合に列、行、ページの入力が便利です。その他、検索コンテナは親コンテナーの一意の子である必要があるため、周りに div 要素が必要になります。
 
 ```html
 <div>
@@ -99,7 +100,7 @@ Then, we will add a paragraph with text and the IgxTextHighlight directive. Note
 </div>
 ```
 
-In the .ts file of our component first we need to add the following fields, that are used for bindings in our component's template:
+コンポーネント テンプレートのバインディングに使用する以下のフィールドをコンポーネントの .ts ファイルに追加します。
 
 ``` typescript
     public html = `
@@ -123,7 +124,7 @@ In the .ts file of our component first we need to add the following fields, that
     }
 ```
 
-Then we need to add the following methods which will allow the user to apply the highlights for the text they have typed in the searchbox and to move the active highlight around.
+次に以下のメソッドを追加すると、ユーザーが検索ボックスに入力したテキストにハイライトを適用でき、アクティブ ハイライト間を移動できます。
 
 ``` typescript
      public searchKeyDown(ev) {
@@ -183,7 +184,7 @@ Then we need to add the following methods which will allow the user to apply the
     }
 ```
 
-If the sample is configured properly, the final result should look like that:
+サンプルが正しく構成された場合、以下のような結果になります。
 
 <div class="sample-container loading" style="height: 260px;">
     <iframe id="text-highlight-1-iframe" src='{environment:demosBaseUrl}/text-highlight-1' width="100%" height="100%" seamless
@@ -191,13 +192,13 @@ If the sample is configured properly, the final result should look like that:
 </div>
 <div>
 <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="text-highlight-1-iframe"
-    data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
 </div>
 
 <div class="divider"></div>
 
-### Search across multiple containers
-The igxTextHighlight allows you to search across multiple containers and which would all share one active highlight. This is done by having the same group value across multiple TextHighlight directives which have all separate containers. In order to setup the sample we will reuse the searchbox from the previous sample, but this time we will add two paragraphs. Again, note that they both are in their own containers, but this time the second one has a different row value.
+### 複数コンテナで検索
+igxTextHighlight は、複数のコンテナー内を検索し、アクティブ ハイライトを共有できます。すべて個別のコンテナーを持つ複数の TextHighlight ディレクティブで同じグループ値を持つことにより実行できます。サンプルの設定は、前のサンプルの検索ボックスを再利用しますが、今回は 2 段落追加します。両方ともコンテナにありますが 2 つ目は行に異なる値があります。
 
 ```html
     <div>
@@ -226,7 +227,7 @@ The igxTextHighlight allows you to search across multiple containers and which w
     </div>
 
 ```
-Then in the .ts file we have the firstParagraph and secondParagraph fields, which are bound to the respective value inputs of the text highlight directives. Also we will now use ViewChildren instead of ViewChild to get all the highlights in our template.
+.ts ファイルに firstParagraph と secondParagraph フィールドがあり、テキスト ハイライト ディレクティブの各値入力にバインドします。ViewChild の代わりに ViewChildren を使用してテンプレートのすべてのハイライトを取得します。
 
 ```typescript
     public firstParagraph = `
@@ -246,7 +247,7 @@ On top of the functionality from the previous sample, this sample demonstrates h
     @ViewChildren(IgxTextHighlightDirective)
     public highlights;
 ```
-All the rest of the code in the .ts file is identical to the single container example with the exception of the find method. Changes to this method are necessary since we now have multiple containers, but the code there can be used regardless of the number of TextHighlight directives you have on your page.
+.ts ファイルのコードの残りすべてがシングル コンテナの例 (find メソッドの例外) と同一となります。複数のコンテナがあるため、このメソッドの変更が必要になりますが、TextHighlight ディレクティブの数値に関係なくコードを使用できます。
 
 ```typescript
     private find(increment: number) {
@@ -297,48 +298,48 @@ All the rest of the code in the .ts file is identical to the single container ex
     <iframe id="text-highlight-2-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/text-highlight-2" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="text-highlight-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="text-highlight-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
 </div>
 
 <div class="divider"></div>
 
-### API Summary
+### API まとめ
 
-The following tables summarize some of the useful TextHighlight directive inputs and methods.
+以下の表は TextHighlight ディレクティブの入力とメソッドの概要です。
 
-#### Inputs
+#### 入力
 
-The following inputs are available in the **igxTextHighlight** directive:
+以下の入力は、**igxTextHighlight** ディレクティブで使用できます。
 
-| Name | Type | Description |
+| 名前 | 型 | 説明 |
 | :--- | :--- | :--- |
-| `groupName` | string | Defines the group in which the active highlight will be shared. |
-| `row` | number | Defines the row on which the directive is positioned. |
-| `column` | number | Defines the column on which the directive is positioned. |
-| `page` | number | Defines the page on which the directive is positioned. |
-| `value` | any | Defines the underlying value on which we will perform searches. |
+| `groupName`| string | アクティブ ハイライトが共有されるグループを定義します。 |
+| `row`| number | ディレクティブが配置される行を定義します。 |
+| `column`| number | ディレクティブが配置される列を定義します。 |
+| `page`| number | ディレクティブが配置されるページを定義します。 |
+| `value`| any | 検索を実行する基になる値を定義します。 |
 
 <div class="divider"></div>
 
-#### Methods
+#### メソッド
 
-The following methods are available in the **igxTextHighlight** directive.
+以下のメソッドは、**igxTextHighlight** ディレクティブで使用できます。
 
-| Name | Return type | Parameters | Description |
+| 名前 | 戻り型 | パラメーター | 説明 |
 | :--- | :--- | :--- | :--- |
-| `highlight` | number | The text to highlight and optionally whether the search is case sensitive and should we highlight only exact matches | Highlights the searched string (if it exists in the value input) and returns how many times the value contains the searched highlighted string|
-| `clearHighlight` | void | none | Clears all existing highlights |
-| `activateIfNecessary` | void | none | Activates a highlight if it is the current active highlight |
-| `setActiveHighlight` | void | The groupName and an object implementing an interface with the row, column and page to activate | Activates the highlight from the specified group on the given row, column and page |
-| `clearActiveHighlight` | void | The group name | Clears the active highlight from the specified group |
+| `highlight`| number | テキストをハイライトし、オプションで検索で大文字と小文字を区別するかどうか、また完全一致のみハイライトするかどうか。 | 検索した文字列をハイライトして値に検索済みのハイライトされた文字列をいくつ含むかを返します。|
+| `clearHighlight`| void | なし | 既存のハイライトをすべてクリアします。 |
+| `activateIfNecessary`| void | なし | 現在アクティブなハイライトの場合ハイライトをアクティブ化します。 |
+| `setActiveHighlight`| void | groupName と行、列、ページ、を含むオブジェクト実装インターフェイスをアクティブ化します。 | 行、列、ページで指定したグループのハイライトをアクティブ化します。 |
+| `clearActiveHighlight`| void | グループの名前 | 指定したグループのアクティブ ハイライトをクリアします。 |
 
 <div class="divider"></div>
 
-### Additional Resources
-* [Grid Search](https://www.infragistics.com/products/ignite-ui-angular/angular/components/grid_search.html)
+### その他のリソース
+* [Grid 検索](https://www.infragistics.com/products/ignite-ui-angular/angular/components/grid_search.html)
 
 <div class="divider--half"></div>
-Our community is active and always welcoming to new ideas.
+コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
