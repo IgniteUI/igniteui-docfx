@@ -232,7 +232,7 @@ this.routerLinks = [
 Declare all needed route definitions that map URL path to a specific component:
 
 ```typescript
-// app.routing.module.ts
+// tabs.routing.module.ts
 const routes: Routes = [
     // simple links
     { path: '', redirectTo: 'view1', pathMatch: 'full' },
@@ -243,12 +243,34 @@ const routes: Routes = [
 
 @NgModule({
     imports: [
+        RouterModule.forChild(routes)
+    ],
+    exports: [
+        RouterModule
+    ]
+})
+export class TabsRoutingModule { }
+```
+
+```typescript
+// app.routing.module.ts
+const routes: Routes = [
+  { path: '', redirectTo: '/tabs', pathMatch: 'full' },
+  {
+    path: 'tabs',
+    component: TabsSample1Component
+  },
+];
+
+@NgModule({
+    imports: [
         RouterModule.forRoot(routes)
     ],
     exports: [
         RouterModule
     ]
 })
+export class AppRoutingModule { }
 ```
 
 In order to handle the back/forward browser buttons in this particular case, add the following code in ngOnInit and use the IgxTabsGroupComponent `select` method to activate the relevant tabs group.
@@ -378,7 +400,6 @@ const routes: Routes = [
     <a class="cta-btn" href="https://stackblitz.com/edit/igxtabsrouterlinksoutlets" target="_blank">view code on stackblitz</a>
   </div>
 </div>
-
 
 <div class="divider"></div>
 
