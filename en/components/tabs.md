@@ -193,6 +193,7 @@ The following examples demonstrate sample usage of the tabs component and basic 
 In order to implement basic routing with **igx-tabs**, you can re-template the igx-tabs item header using the `igxTab` directive and provide links via `routerLink` in `ng-template`. Views are switched within a single `router-outlet` placed outside the tabs component. Note that `ng-template` content overides the default tabs headers style.
 
 ```html
+<!-- tabs-sample-1.component.html -->
 <igx-tabs #tabs1>
   <igx-tabs-group *ngFor="let routerLink of routerLinks">
     <ng-template igxTab>
@@ -209,6 +210,7 @@ In order to implement basic routing with **igx-tabs**, you can re-template the i
 ```
 
 ```typescript
+// tabs-sample-1.component.ts
 this.routerLinks = [
   {
     label: 'View 1',
@@ -227,22 +229,44 @@ this.routerLinks = [
   },
 ];
 ```
+Declare all needed route definitions that map URL path to a specific component:
+
+```typescript
+// app.routing.module.ts
+const routes: Routes = [
+    // simple links
+    { path: '', redirectTo: 'view1', pathMatch: 'full' },
+    { path: 'view1', component: View1Component },
+    { path: 'view2', component: View2Component },
+    { path: 'view3', component: View3Component },
+];
+
+@NgModule({
+    imports: [
+        RouterModule.forRoot(routes)
+    ],
+    exports: [
+        RouterModule
+    ]
+})
+```
 
 In order to handle the back/forward browser buttons in this particular case, add the following code in ngOnInit and use the IgxTabsGroupComponent `select` method to activate the relevant tabs group.
 
 ```typescript
+// tabs-sample-1.component.ts
 constructor(private router: Router) {}
 
 public ngOnInit() {
-  // Load initial view 
+  // Initial view loaded
   this.router.navigate(['view1']);
 
   // Handle the back/forward browser buttons
-  this.router.events.pipe(filter(event => event instanceof NavigationEnd)).subscribe((args) => {
-    const index = this.routerLinks.indexOf(this.routerLinks.find(tab => tab.link === this.router.url));
-    this.tabs.groups.filter(item => item.index === index)[0].select();
-    });
-  }
+  this._navigationEndSubscription = this.router.events.pipe(filter(event => event instanceof NavigationEnd)).subscribe((args) => {
+  const index = this.routerLinks.indexOf(this.routerLinks.find(tab => tab.link === this.router.url));
+  (this.tabs.groups.filter(item => item.index === index)[0] as IgxTabsGroupComponent).select();
+  });
+}
 ```
 
 <div style="display: flex;">
@@ -258,6 +282,7 @@ public ngOnInit() {
 In order to render views inside the igx-tabs content, use named router outlets. In this case, implement `onTabItemSelected` event handler to navigate and render the specified view.
 
 ```html
+<!-- tabs-sample-1.component.html -->
 <!-- router-outlet inside the tabs items content -->
 <igx-tabs #tabs1 (onTabItemSelected)="navigate($event)">
   <igx-tabs-group label="Product1" name="product1">
@@ -273,6 +298,7 @@ In order to render views inside the igx-tabs content, use named router outlets. 
 ```
 
 ```typescript
+// tabs-sample-1.component.ts
 public navigate(eventArgs) {
     const selectedIndex = eventArgs.group.index;
     switch(selectedIndex) {
@@ -311,6 +337,37 @@ public navigate(eventArgs) {
       }
     }
   }
+```
+Declare all needed route definitions that map URL path to a specific component:
+
+```typescript
+// app.routing.module.ts
+const routes: Routes = [
+{
+  path: '',
+  redirectTo: '/productDetails',
+  pathMatch: 'full'
+},
+{
+  // children outlets
+  path: 'productDetails',
+  children: [
+    { path: '', redirectTo: 'product1', pathMatch: 'full' },
+    { path: 'product1', component: View1Component, outlet: 'product1' },
+    { path: 'product2', component: View2Component, outlet: 'product2' },
+    { path: 'product3', component: View3Component, outlet: 'product3' },
+  ]
+}
+];
+
+@NgModule({
+    imports: [
+        RouterModule.forRoot(routes)
+    ],
+    exports: [
+        RouterModule
+    ]
+})
 ```
 
 <div style="display: flex;">

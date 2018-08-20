@@ -184,6 +184,202 @@ export class AppModule {}
 </igx-tabs>
 ```
 
+### Using Tabs and Routing
+
+The following examples demonstrate sample usage of the tabs component and basic routing scenarios. You can learn more about Angular Routing & Navigation <a href="https://angular.io/guide/router" target="_blank">here</a>. 
+
+#### Using igxTab, routerLink Directives and Single router-outlet
+
+In order to implement basic routing with **igx-tabs**, you can re-template the igx-tabs item header using the `igxTab` directive and provide links via `routerLink` in `ng-template`. Views are switched within a single `router-outlet` placed outside the tabs component. Note that `ng-template` content overides the default tabs headers style.
+
+```html
+<!-- tabs-sample-1.component.html -->
+<igx-tabs #tabs1>
+  <igx-tabs-group *ngFor="let routerLink of routerLinks">
+    <ng-template igxTab>
+      <a routerLink="{{routerLink.link}}">
+        {{routerLink.label}}
+      </a>
+    </ng-template>
+  </igx-tabs-group>
+</igx-tabs>
+
+<div>
+  <router-outlet></router-outlet>
+</div>
+```
+
+```typescript
+// tabs-sample-1.component.ts
+this.routerLinks = [
+  {
+    label: 'View 1',
+    link: '/view1',
+    index: 0
+  }, 
+  {
+    label: 'View 2',
+    link: '/view2',
+    index: 1
+  },
+  {
+    label: 'View 3',
+    link: '/view3',
+    index: 2
+  },
+];
+```
+Declare all needed route definitions that map URL path to a specific component:
+
+```typescript
+// app.routing.module.ts
+const routes: Routes = [
+    // simple links
+    { path: '', redirectTo: 'view1', pathMatch: 'full' },
+    { path: 'view1', component: View1Component },
+    { path: 'view2', component: View2Component },
+    { path: 'view3', component: View3Component },
+];
+
+@NgModule({
+    imports: [
+        RouterModule.forRoot(routes)
+    ],
+    exports: [
+        RouterModule
+    ]
+})
+```
+
+In order to handle the back/forward browser buttons in this particular case, add the following code in ngOnInit and use the IgxTabsGroupComponent `select` method to activate the relevant tabs group.
+
+```typescript
+// tabs-sample-1.component.ts
+constructor(private router: Router) {}
+
+public ngOnInit() {
+  // Initial view loaded
+  this.router.navigate(['view1']);
+
+  // Handle the back/forward browser buttons
+  this._navigationEndSubscription = this.router.events.pipe(filter(event => event instanceof NavigationEnd)).subscribe((args) => {
+  const index = this.routerLinks.indexOf(this.routerLinks.find(tab => tab.link === this.router.url));
+  (this.tabs.groups.filter(item => item.index === index)[0] as IgxTabsGroupComponent).select();
+  });
+}
+```
+
+<div style="display: flex;">
+  <div style="margin: 0px 10px 0px 0px">
+    <a class="cta-btn" href="https://igxtabsrouterlinks.stackblitz.io" target="_blank" >view sample</a>
+  </div>
+  <div>
+    <a class="cta-btn" href="https://stackblitz.com/edit/igxtabsrouterlinks" target="_blank">view code on stackblitz</a>
+  </div>
+</div>
+
+#### Using Separate router-outlet as Tabs Content
+In order to render views inside the igx-tabs content, use named router outlets. In this case, implement `onTabItemSelected` event handler to navigate and render the specified view.
+
+```html
+<!-- tabs-sample-1.component.html -->
+<!-- router-outlet inside the tabs items content -->
+<igx-tabs #tabs1 (onTabItemSelected)="navigate($event)">
+  <igx-tabs-group label="Product1" name="product1">
+    <router-outlet name="product1"></router-outlet>
+  </igx-tabs-group>
+  <igx-tabs-group label="Product2" name="product2">
+    <router-outlet name="product2"></router-outlet>
+  </igx-tabs-group>
+  <igx-tabs-group label="Product3" name="product3">
+    <router-outlet name="product3"></router-outlet>
+  </igx-tabs-group>
+</igx-tabs>
+```
+
+```typescript
+// tabs-sample-1.component.ts
+public navigate(eventArgs) {
+    const selectedIndex = eventArgs.group.index;
+    switch(selectedIndex) {
+      case 0: {
+        this.router.navigate(['/productDetails',
+          {
+            outlets:
+            {
+              product1: ['product1']
+            }
+          }
+        ]);
+        break;
+    }
+    case 1: {
+      this.router.navigate(['/productDetails',
+        {
+          outlets:
+          {
+            product2: ['product2']
+          }
+        }
+      ]);
+      break;
+    }
+    case 2: {
+      this.router.navigate(['/productDetails',
+          {
+            outlets:
+            {
+              product3: ['product3']
+            }
+          }
+        ]);
+        break;
+      }
+    }
+  }
+```
+Declare all needed route definitions that map URL path to a specific component:
+
+```typescript
+// app.routing.module.ts
+const routes: Routes = [
+{
+  path: '',
+  redirectTo: '/productDetails',
+  pathMatch: 'full'
+},
+{
+  // children outlets
+  path: 'productDetails',
+  children: [
+    { path: '', redirectTo: 'product1', pathMatch: 'full' },
+    { path: 'product1', component: View1Component, outlet: 'product1' },
+    { path: 'product2', component: View2Component, outlet: 'product2' },
+    { path: 'product3', component: View3Component, outlet: 'product3' },
+  ]
+}
+];
+
+@NgModule({
+    imports: [
+        RouterModule.forRoot(routes)
+    ],
+    exports: [
+        RouterModule
+    ]
+})
+```
+
+<div style="display: flex;">
+  <div style="margin: 0px 10px 0px 0px">
+    <a class="cta-btn" href="https://igxtabsrouterlinksoutlets.stackblitz.io" target="_blank" >view sample</a>
+  </div>
+  <div>
+    <a class="cta-btn" href="https://stackblitz.com/edit/igxtabsrouterlinksoutlets" target="_blank">view code on stackblitz</a>
+  </div>
+</div>
+
+
 <div class="divider"></div>
 
 ### API まとめ
