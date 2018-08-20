@@ -74,12 +74,12 @@ public exactMatch: boolean = false;
 
 #### 検索入力ボックス
 
-検索入力を作成します。**searchText** を ngModel として新しく作成した入力へバインドして ngModelChange イベントにサブスクライブします。ユーザーによるすべての ngModelChange 変更を検出できます。これによってグリッドの `findNext` と `findPrev` メソッドを使用して searchText のすべての出現を強調し、次へまたは前 (呼び出すメソッドに基づいて) へスクロールできます。
+検索入力を作成します。**searchText** を ngModel として新しく作成した入力へバインドして ngModelChange イベントにサブスクライブします。ユーザーによるすべての **searchText** 変更を検出できます。これによってグリッドの `findNext` と `findPrev` メソッドを使用して **searchText** のすべての出現を強調し、次へまたは前 (呼び出すメソッドに基づいて) へスクロールできます。
 
 `findNext` と `findPrev` メソッドの両方に 2 つの引数があります。
 - `text`: **string** (検索するテキスト)
 - `caseSensitive` (オプション)`: **boolean** (検索で大文字と小文字を区別するかどうか、デフォルト値は false)。
-- `exactMatch`(オプション): **boolean** (検索は大文字と小文字を区別するかどうか、デフォルト値は false)。
+- `exactMatch`(オプション): **boolean** (検索で完全一致するかどうか、デフォルト値は false)。
 
 完全一致で検索した場合、検索 API は **searchText** と完全一致 (大文字小文字の区別を含む) するセル値のみ結果として強調表示します。たとえば、文字列 'software' と 'Software' は大文字小文字を区別しない場合は完全一致となります。
 
@@ -182,7 +182,7 @@ public updateExactSearch() {
 #### アイコンの追加
 
 その他のコンポーネントを使用するためにユーザー インターフェイスを作成し、検索バー全体のデザインを向上します。検索入力の左側に検索または削除アイコン、検索オプションのチップ、右側にはマテリアル デザイン アイコンと Ripple スタイルのボタンを組み合わせたナビゲーションを表示できます。入力グループ内のコンポーネントをラップしてより洗練されたデザインにすることができます。
-これには [**IgxInputGroup**] を使用します。(https://jp.infragistics.com/products/ignite-ui-angular/angular/components/input_group.html)、[**IgxIcon**](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/icon.html)、[**IgxRipple**](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/ripple.html)、[**IgxButton**](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/button.html)、[**IgxChip**](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/chip.html) モジュール。
+これには、[**IgxInputGroup**](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/input_group.html)、[**IgxIcon**](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/icon.html)、[**IgxRipple**](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/ripple.html)、[**IgxButton**](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/button.html)、[**IgxChip**](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/chip.html) モジュールを使用します。
 
 ```typescript
 // app.module.ts
