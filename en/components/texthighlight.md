@@ -197,7 +197,7 @@ If the sample is configured properly, the final result should look like that:
 <div class="divider"></div>
 
 ### Search across multiple containers
-The igxTextHighlight allows you to search across multiple containers and which would all share one active highlight. This is done by having the same group value across multiple TextHighlight directives which have all separate containers. In order to setup the sample we will reuse the search box from the previous sample, but this time we will add two paragraphs. Again, note that they both are in their own containers, but this time the second one has a different row value.
+The igxTextHighlight allows you to search across multiple containers which all share one active highlight. This is done by having the same group value across multiple TextHighlight directives which have all separate containers. In order to setup the sample we will reuse the search box from the previous sample, but this time we will add two paragraphs. Again, note that they both are in their own containers, but this time the second one has a different row value.
 
 ```html
     <div>
