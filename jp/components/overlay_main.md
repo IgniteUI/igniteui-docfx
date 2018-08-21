@@ -268,6 +268,7 @@ export class ExampleComponent {
    |`scrollStrategy`      | この設定で使用するためのスクロール方法。          | `IScrollStrategy`                     |
    |`modal`               | オーバーレイがモーダルモードであるかどうかを設定。         | `boolean`                             |
    |`closeOnOutsideClick` | オーバーレイがアウトサイド クリックで閉じるかどうかを設定。  | `boolean`                             |
+   |outlet              | オーバーレイをアタッチするアウトレット コンテナを設定 (デフォルトは `body`)。 | IgxOverlayOutletDirective \| ElementRef |
 <div class="divider--half"></div>
 
  `PositionSettings`

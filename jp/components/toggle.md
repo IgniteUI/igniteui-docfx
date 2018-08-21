@@ -230,6 +230,19 @@ export class AppModule {}
     </button>
 </div>
 
+### IgxOverlayOutlet ディレクティブ
+
+**IgxOverlayOutlet** は、コンポーネント テンプレートで要素を `igxOverlay` アウトレット コンテナとしてマークする方法を提供します。ディレクティブ インスタンスは `overlay-outlet` としてエクスポートされるため、テンプレート内で割り当てることができます。
+
+```html
+<div igxOverlayOutlet #outlet="overlay-outlet"></div>
+```
+
+これによって、`Outlet` テンプレート変数をトグル操作の設定として提供できます。
+```html
+<button [igxToggleAction]="reference" [igxToggleOutlet]="outlet">Toggle</button>
+<custom-component #reference></custom-component>
+```
 
 ## API まとめ
 
@@ -249,6 +262,7 @@ export class AppModule {}
 | 名前 | 型 | 説明 |
 | :--- | :--- | :--- |
 | `igxToggleAction` | IgxToggleDirective | 制御するトグルを受け付けます。 |
+| `igxToggleOutlet` | `IgxOverlayOutletDirective` \| `ElementRef`| ターゲット オーバレイ要素をアタッチする場所を決定します。`overlaySettings.outlet` のショートカット。|
 | `closeOnOutsideClick` | IgxToggleDirective | 外をクリックすると、トグルを閉じるかどうかを決定します。 |
 
 <div class="divider"></div>

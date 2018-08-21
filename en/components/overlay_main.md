@@ -266,6 +266,8 @@ export class ExampleComponent {
    |`scrollStrategy`     | Scroll strategy to use with this settings           | `IScrollStrategy`                   |
    |`modal`              | Set if the overlay should be in modal mode          | `boolean`                           |
    |`closeOnOutsideClick`| Set if the overlay should closed on outside click   | `boolean`                           |
+   |outlet              | Set the outlet container to which to attach the overlay (defaults to `body`) | IgxOverlayOutletDirective \| ElementRef |
+
 <div class="divider--half"></div>
 
  `PositionSettings`
