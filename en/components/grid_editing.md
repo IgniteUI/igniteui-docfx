@@ -23,7 +23,7 @@ In order to be able to enter edit mode for specific cell, you should first set t
 
  - For `string` data type, default template is using **igxInput**
  - For `number` data type, default template is using **igxInput type="number"**, so if you try to update cell to a value which can not be parsed to a number your change is going to be discarded, and the value in the cell will be set to **0**.
- - For `date` data type, default template is using **igx-datePicker**
+ - For `date` data type, default template is using **igx-date-picker**
  - For `boolean` data type, default template is using **igx-checkbox**
 
 You can enter edit mode for specific cell, when an editable cell is focused in one of the following ways:
