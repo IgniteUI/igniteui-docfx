@@ -190,7 +190,7 @@ The following examples demonstrate sample usage of the tabs component and basic 
 
 #### Using igxTab, routerLink Directives and Single router-outlet
 
-In order to implement basic routing with **igx-tabs**, you can re-template the igx-tabs item header using the `igxTab` directive and provide links via `routerLink` in `ng-template`. Views are switched within a single `router-outlet` placed outside the tabs component. Note that `ng-template` content overides the default tabs headers style.
+In order to implement basic routing with **igx-tabs**, you can re-template the igx-tabs item header using the `igxTab` directive and provide links via `routerLink` in `ng-template`. Views are switched and displayed after a single `router-outlet` placed outside the tabs component. Note that `ng-template` content overides the default tabs headers style.
 
 ```html
 <!-- tabs-sample-1.component.html -->
@@ -229,16 +229,16 @@ this.routerLinks = [
   },
 ];
 ```
-Declare all needed route definitions that map URL path to a specific component:
+Declare all needed route definitions that map URL path to a specific component. All available child components with their URL paths are listed in a separate routing module named tabs.routing.module.ts which is imported in the main routing module named app.routing.module.ts. Configure the router via the RouterModule.forChild method.
 
 ```typescript
 // tabs.routing.module.ts
 const routes: Routes = [
     // simple links
-    { path: '', redirectTo: 'view1', pathMatch: 'full' },
     { path: 'view1', component: View1Component },
     { path: 'view2', component: View2Component },
     { path: 'view3', component: View3Component },
+    { path: '', redirectTo: 'view1', pathMatch: 'full' }
 ];
 
 @NgModule({
@@ -251,15 +251,16 @@ const routes: Routes = [
 })
 export class TabsRoutingModule { }
 ```
+Configure the main router using RouterModule.forRoot method.
 
 ```typescript
 // app.routing.module.ts
 const routes: Routes = [
-  { path: '', redirectTo: '/tabs', pathMatch: 'full' },
   {
     path: 'tabs',
     component: TabsSample1Component
   },
+  { path: '', redirectTo: '/tabs', pathMatch: 'full' }
 ];
 
 @NgModule({
@@ -365,21 +366,21 @@ Declare all needed route definitions that map URL path to a specific component:
 ```typescript
 // app.routing.module.ts
 const routes: Routes = [
-{
-  path: '',
-  redirectTo: '/productDetails',
-  pathMatch: 'full'
-},
-{
-  // children outlets
-  path: 'productDetails',
-  children: [
-    { path: '', redirectTo: 'product1', pathMatch: 'full' },
-    { path: 'product1', component: View1Component, outlet: 'product1' },
-    { path: 'product2', component: View2Component, outlet: 'product2' },
-    { path: 'product3', component: View3Component, outlet: 'product3' },
-  ]
-}
+  {
+    // children outlets
+    path: 'productDetails',
+    children: [
+      { path: 'product1', component: View1Component, outlet: 'product1' },
+      { path: 'product2', component: View2Component, outlet: 'product2' },
+      { path: 'product3', component: View3Component, outlet: 'product3' },
+      { path: '', redirectTo: 'product1', pathMatch: 'full' }
+    ]
+  },
+  {
+    path: '',
+    redirectTo: '/productDetails',
+    pathMatch: 'full'
+  }
 ];
 
 @NgModule({
