@@ -19,7 +19,7 @@ Ignite UI for Angular の `IgxTextHighlight` ディレクティブは、テキ�
 <div class="divider--half"></div>
 
 > [!NOTE]
-> Ignite UI for Angular コンポーネントをプロジェクトに追加する前に、必要なすべての依存関係を構成し、プロジェクトのセットアップが正しく完了したことを確認してください。[インストール](https://www.infragistics.com/products/ignite-ui-angular/getting-started#installation)のトピックで手順をご確認ください。
+> Ignite UI for Angular コンポーネントをプロジェクトに追加する前に、必要なすべての依存関係を構成し、プロジェクトのセットアップが正しく完了したことを確認してください。[インストール](https://jp.infragistics.com/products/ignite-ui-angular/getting-started#installation)のトピックで手順をご確認ください。
 
 ### 使用方法
 
@@ -41,7 +41,7 @@ import { IgxButtonModule, IgxInputGroupModule,
 export class AppModule {}
 ```
 
-次にテキストの異なる部分のハイライトに使用できる検索ボックスを作成します。Ignite UI for Angular の [InputGroup](https://www.infragistics.com/products/ignite-ui-angular/angular/components/input_group.html) コンポーネントは、一致のクリア、次の一致、前の一致へ移動するためのボタン、検索で大文字と小文字を区別を指定するボタンを追加します。また一致がいくつ見つかったかをを示すラベルがあります。
+次にテキストの異なる部分のハイライトに使用できる検索ボックスを作成します。Ignite UI for Angular の [InputGroup](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/input_group.html) コンポーネントは、一致のクリア、次の一致、前の一致へ移動するためのボタン、検索で大文字と小文字を区別を指定するボタンを追加します。また一致がいくつ見つかったかをを示すラベルがあります。
 
 ```html
 <div class="search-container">
@@ -336,7 +336,7 @@ On top of the functionality from the previous sample, this sample demonstrates h
 <div class="divider"></div>
 
 ### その他のリソース
-* [Grid 検索](https://www.infragistics.com/products/ignite-ui-angular/angular/components/grid_search.html)
+* [Grid 検索](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/grid_search.html)
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
