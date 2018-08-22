@@ -16,6 +16,8 @@ _language: ja
 
 IgxOverlayService を使用するには、コンポーネントにインポートします。 サービスへの参照をコンポーネントの `constructor` に注入します。
 ```typescript
+
+import { Inject } from '@angular/core'
 import { IgxOverlayService } from `igniteui-angular`;
 
 ...
@@ -38,7 +40,7 @@ Overlay サービスへの参照を追加した後、コンテンツを動的に
 ```typescript
 
 // in my-overlay-component.component.ts
-import { MyDynamicComponent } from './my-dynamic-component.component.ts';
+import { MyDynamicComponent } from '../my-dynamic-component/my-dynamic-component.component';
 
 export class MyOverlayComponent {
 
@@ -59,6 +61,31 @@ export class MyOverlayComponent {
 <button (click)="showInOverlay()">Show Overlay</button>
 </div>
 
+```
+
+ページの既存の `ElementRef` から `IgxOverlayService` へ渡す場合は以下の手順に従ってください。
+
+```HTML
+<!-- in my-overlay-component.component.html -->
+<div class='content'>
+  <button (click)="showInOverlay()">Show Overlay</button>
+</div>
+<div>
+    <img #exampleImage width='200px' src='../assets/example.png' title='Click Me!'>
+</div>
+```
+
+```typescript
+// in my-overlay-component.component.ts
+import { Inject, ViewChild } from '@angular/core'
+export class MyOverlayComponent {
+
+    @ViewChild('exampleImage', {read: ElementRef})
+    private exampleImage: ElementRef;
+    public showInOverlay() {
+        this.overlayService.show(this.exampleImage);
+    }
+}
 ```
 <div class="divider--half"></div>
 
@@ -90,6 +117,9 @@ export class MyOverlayComponent {
 たとえば、コンテンツを要素に相対的に配置するには、オーバーレイの `show()` メソッドに別の `positioningStrategy` (`ConnectedPositioningStrategy` など) を渡します。コンポーネントの表示方法を構成するには、`OverlaySettings` オブジェクトを作成します。
 ```typescript
 // in my-overlay-component.component.ts
+// add an import for the definion of ConnectedPositioningStategy class
+import { ConnectedPositioningStrategy } from 'igniteui-angular';
+...
 export class MyOverlayComponent {
 
     @ViewChild(`myAnchorButton`)
@@ -97,7 +127,7 @@ export class MyOverlayComponent {
 
     public showInOverlay() {
         this.overlayService.show(MyDynamicComponent, {
-            positionStrategy: new ConnectedPositioningStrategy({ target: this.myAnchorButton })
+            positionStrategy: new ConnectedPositioningStrategy({ target: this.myAnchorButton.nativeElement })
         });
     }
 }
@@ -122,6 +152,9 @@ export class MyOverlayComponent {
 以前に定義されたオーバーレイ メソッドをオーバーレイ要素を表示して非表示するために変更できます。
 ```typescript
 // in my-overlay-component.component.ts
+// add an import for the definion of ConnectedPositioningStategy class
+import { ConnectedPositioningStrategy } from 'igniteui-angular';
+...
 export class MyOverlayComponent {
     private _overlayId = ''; // The unique identifier assigned to the component by the Overlay service
     private _overlayShown = false; // Is the component rendered in the Overlay?
@@ -132,7 +165,9 @@ export class MyOverlayComponent {
     public toggleOverlay() {
         if (!this._overlayShown) { // If the element is not visible, show it
             this._overlayId = this.overlayService.show(MyDynamicComponent, {
-                positionStrategy: new ConnectedPositioningStrategy({ target: this.myAnchorButton })
+                positionStrategy: new ConnectedPositioningStrategy({ target: this.myAnchorButton.nativeElement }),
+                closeOnOutsideClick: false, // overlay will not close on outside clicks
+                modal: false // overlay content will not be rendered in a modal dialog
             }); // The show method returns an ID that can be used to reference the shown content
         } else { // If the element is not visible, hide it
             this.overlayService.hide(this._overlayId); // Find and remove the component from the overlay container
@@ -222,30 +257,30 @@ export class ExampleComponent {
 
    | 名前               | 説明                                         | 型                                |
    |--------------------|-----------------------------------------------------|-------------------------------------|
-   |positionSettings    | この配置方法を適用する設定。         | PositionSettings                    |
+   |`positionSettings`    | この配置方法を適用する設定。         | `PositionSettings`                    |
 <div class="divider"></div>
 
  `OverlaySettings`
 
    | 名前               | 説明                                         | 型                                |
    |--------------------|-----------------------------------------------------|-------------------------------------|
-   |positionStrategy    | この設定で使用するための配置方法。       | IPositionStrategy                   |
-   |scrollStrategy      | この設定で使用するためのスクロール方法。          | IScrollStrategy                     |
-   |modal               | オーバーレイがモーダルモードであるかどうかを設定。         | boolean                             |
-   |closeOnOutsideClick | オーバーレイがアウトサイド クリックで閉じるかどうかを設定。  | boolean                             |
+   |`positionStrategy`    | この設定で使用するための配置方法。       | `IPositionStrategy`                   |
+   |`scrollStrategy`      | この設定で使用するためのスクロール方法。          | `IScrollStrategy`                     |
+   |`modal`               | オーバーレイがモーダルモードであるかどうかを設定。         | `boolean`                             |
+   |`closeOnOutsideClick` | オーバーレイがアウトサイド クリックで閉じるかどうかを設定。  | `boolean`                             |
 <div class="divider--half"></div>
 
  `PositionSettings`
 
    | 名前               | 説明                                        | 型                                |
    |--------------------|-----------------------------------------------------|-------------------------------------|
-   |target              | 表示するターゲットのアタッチ ターゲット。         | Point \| HTMLElement                 |
-   |horizontalDirection | コンポーネントが表示される方向。       | HorizontalAlignment                 |
-   |verticalDirection   | コンポーネントが表示される方向。       | VerticalAlignment                   |
-   |horizontalStartPoint| ターゲットの開始ポイント。                             | HorizontalAlignment                 |
-   |verticalStartPoint  | ターゲットの開始ポイント。                             | VerticalAlignment                   |
-   |openAnimation       | オーバーレイが開いている間に適用されるアニメーション。             | AnimationReferenceMetadata          |
-   |closeAnimation      | オーバーレイが閉じている間に適用されるアニメーション。            | AnimationReferenceMetadata          |
+   |`target`              | 表示するターゲットのアタッチ ターゲット。         | `Point` \| `HTMLElement`                 |
+   |`horizontalDirection` | コンポーネントが表示される方向。       | `HorizontalAlignment`                 |
+   |`verticalDirection`   | コンポーネントが表示される方向。       | `VerticalAlignment`                   |
+   |`horizontalStartPoint`| ターゲットの開始ポイント。                             | `HorizontalAlignment`                 |
+   |`verticalStartPoint`  | ターゲットの開始ポイント。                             | `VerticalAlignment`                   |
+   |`openAnimation`       | オーバーレイが開いている間に適用されるアニメーション。             | `AnimationReferenceMetadata`          |
+   |`closeAnimation`      | オーバーレイが閉じている間に適用されるアニメーション。            | `AnimationReferenceMetadata`          |
 
 ### メソッド
 
@@ -253,33 +288,33 @@ export class ExampleComponent {
 
    | 名前           | 説明                                                                     | パラメーター |
    |-----------------|---------------------------------------------------------------------------------|------------|
-   |show             | オーバーレイで指定したコンポーネントを表示します。                                     |component, overlaySettings?|
-   |hide             | 指定 ID のコンポーネントのネイティブ要素を削除します。        |id          |
-   |hideAll          | すべてのネイティブ要素を削除してオーバーレイを非表示にします。                        |-           |
-   |reposition       | 指定 ID のコンポーネントのネイティブ要素を再配置します。                |id          |
+   |`show`             | オーバーレイで指定したコンポーネントを表示します。                                     |`component, overlaySettings?`|
+   |`hide`             | 指定 ID のコンポーネントのネイティブ要素を削除します。        |`id`          |
+   |`hideAll`          | すべてのネイティブ要素を削除してオーバーレイを非表示にします。                        |-           |
+   |`reposition`       | 指定 ID のコンポーネントのネイティブ要素を再配置します。                |`id`          |
 <div class="divider"></div>
 
  `IPositionStrategy`
 
    | 名前            | 説明                                                                    | パラメーター |
    |-----------------|---------------------------------------------------------------------------------|------------|
-   |position         | 指定した要素を配置します。                                                      |element     |
+   |`position`         | 指定した要素を配置します。                                                      |`element`     |
 <div class="divider"></div>
 
  `IScrollStrategy`
 
    | 名前            | 説明                                                                     | パラメーター |
    |-----------------|---------------------------------------------------------------------------------|------------|
-   |initialize       | ストラテジーを初期化します。1 度のみ呼び出します。                                 |document, overlayService, id|
-   |attach           | ストラテジーをアタッチします。                                                    |-           |
-   |detach           | ストラテジーをデタッチします。                                                          |-           |
+   |`initialize`       | ストラテジーを初期化します。1 度のみ呼び出します。                                 |`document, overlayService, id`|
+   |`attach`           | ストラテジーをアタッチします。                                                    |-           |
+   |`detach`           | ストラテジーをデタッチします。                                                          |-           |
 <div class="divider"></div>
 
  `static methods`
 
    | 名前                        | 説明                                                         | パラメーター |
    |-----------------------------|---------------------------------------------------------------------|------------|
-   |getPointFromPositionsSettings| オーバーレイの表示を開始するポイントを計算します。    |settings    |
+   |`getPointFromPositionsSettings`| オーバーレイの表示を開始するポイントを計算します。    |`settings`    |
 <div class="divider"></div>
 
 ### イベント
@@ -289,10 +324,10 @@ export class ExampleComponent {
 
    | 名前        | 説明                        | キャンセル可能 | パラメーター |
    |-------------|------------------------------------|------------|------------|
-   |onOpening    | オーバーレイを表示する前に発生されます。    | false      |            |
-   |onOpened     | オーバーレイを表示した後に発生されます。       | false      |            |
-   |onClosing    | オーバーレイを非表示にする前に発生されます。       | false      |            |
-   |onClosed     | オーバーレイを非表示にした後に発生されます。       | false      |            |
+   |`onOpening`    | オーバーレイを表示する前に発生されます。    | `false`      |            |
+   |`onOpened`     | オーバーレイを表示した後に発生されます。       | `false`      |            |
+   |`onClosing`    | オーバーレイを非表示にする前に発生されます。       | `false`      |            |
+   |`onClosed`     | オーバーレイを非表示にした後に発生されます。       | `false`      |            |
 <div class="divider--half"></div>
 
 ## 前提事項と制限</a>

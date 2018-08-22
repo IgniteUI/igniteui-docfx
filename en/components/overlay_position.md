@@ -126,12 +126,12 @@ In the demo below, the overlay element will position itself starting from the ta
 | Auto              | `position(contentElement, size{}, document?)`| Positions the element, based on the position strategy used and the size passed in.|
 
 ### PositionSettings
-| Name               | Type                        | Description |
-| :----------------- | :-------------------------- | :---------- |
-|target              | Point \| HTMLElement         | Attaching target for the component to show          |
-|horizontalDirection | HorizontalAlignment         | Direction in which the component should show        |
-|verticalDirection   | VerticalAlignment           | Direction in which the component should show        |
-|horizontalStartPoint| HorizontalAlignment         | Target's starting point                             |
-|verticalStartPoint  | VerticalAlignment           | Target's starting point                             |
-|openAnimation       | AnimationReferenceMetadata  | Animation applied while overlay opens               |
-|closeAnimation      | AnimationReferenceMetadata  | Animation applied while overlay closes              |
+| Name                 | Type                        | Description |
+| :------------------- | :-------------------------- | :---------- |
+|`target`              | `Point` \| `HTMLElement`    | Attaching target for the component to show          |
+|`horizontalDirection` | `HorizontalAlignment`       | Direction in which the component should show        |
+|`verticalDirection`   | `VerticalAlignment`         | Direction in which the component should show        |
+|`horizontalStartPoint`| `HorizontalAlignment`       | Target's starting point                             |
+|`verticalStartPoint`  | `VerticalAlignment`         | Target's starting point                             |
+|`openAnimation`       | `AnimationReferenceMetadata`| Animation applied while overlay opens               |
+|`closeAnimation`      | `AnimationReferenceMetadata`| Animation applied while overlay closes              |
