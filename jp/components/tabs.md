@@ -184,13 +184,13 @@ export class AppModule {}
 </igx-tabs>
 ```
 
-### Using Tabs and Routing
+### Tabs と Routing の使用
 
-The following examples demonstrate sample usage of the tabs component and basic routing scenarios. You can learn more about Angular Routing & Navigation <a href="https://angular.io/guide/router" target="_blank">here</a>. 
+以下は、Tabs コンポーネントの使用と基本的なルーティングの例です。<a href="https://angular.io/guide/router" target="_blank">Angular Routing と Navigation</a> について説明します。
 
-#### Using igxTab, routerLink Directives and Single router-outlet
+#### igxTab、routerLink ディレクティブ、ルーティング アウトレットの使用
 
-In order to implement basic routing with **igx-tabs**, you can re-template the igx-tabs item header using the `igxTab` directive and provide links via `routerLink` in `ng-template`. Views are switched and displayed after a single `router-outlet` placed outside the tabs component. Note that `ng-template` content overides the default tabs headers style.
+ **igxTab**で基本的なルーティングを実装するには、`igxTab` ディレクティブを使用して igx-tabs の項目ヘッダーを再テンプレート化し、`ng-template` に `router-outlet` でリンクを提供します。`ng-template` コンテンツは、デフォルト タブ ヘッダーのスタイルをオーバーライドすることに注意してください。
 
 ```html
 <!-- tabs-sample-1.component.html -->
@@ -229,7 +229,7 @@ this.routerLinks = [
   },
 ];
 ```
-Declare all needed route definitions that map URL path to a specific component. All available child components with their URL paths are listed in a separate routing module named tabs.routing.module.ts which is imported in the main routing module named app.routing.module.ts. Configure the router via the RouterModule.forChild method.
+URL パスを特定のコンポーネントにマップするために必要となるすべてのルート定義を宣言します。URL パスを含むすべての子コンポーネントは、メインルーティングモジュール app.routing.module.ts にインポートされる別のルーティング モジュールの tabs.routing.module.ts にリストされます。RouterModule.forChild メソッドでルーターを構成します。
 
 ```typescript
 // tabs.routing.module.ts
@@ -251,7 +251,7 @@ const routes: Routes = [
 })
 export class TabsRoutingModule { }
 ```
-Configure the main router using RouterModule.forRoot method.
+メソッドを使用して RouterModule.forRoot メイン ルーターを構成します。
 
 ```typescript
 // app.routing.module.ts
@@ -274,7 +274,7 @@ const routes: Routes = [
 export class AppRoutingModule { }
 ```
 
-In order to handle the back/forward browser buttons in this particular case, add the following code in ngOnInit and use the IgxTabsGroupComponent `select` method to activate the relevant tabs group.
+戻る/次へ ブラウザー ボタンを処理するために ngOnInit に以下のコードを追加し、IgxTabsGroupComponent `select` メソッドを使用して関連性のあるタブ グループをアクティブ化します。
 
 ```typescript
 // tabs-sample-1.component.ts
@@ -294,15 +294,15 @@ public ngOnInit() {
 
 <div style="display: flex;">
   <div style="margin: 0px 10px 0px 0px">
-    <a class="cta-btn" href="https://igxtabsrouterlinks.stackblitz.io" target="_blank" >view sample</a>
+    <a class="cta-btn" href="https://igxtabsrouterlinks.stackblitz.io" target="_blank" >サンプルの表示</a>
   </div>
   <div>
-    <a class="cta-btn" href="https://stackblitz.com/edit/igxtabsrouterlinks" target="_blank">view code on stackblitz</a>
+    <a class="cta-btn" href="https://stackblitz.com/edit/igxtabsrouterlinks" target="_blank">StackBlitz で開く</a>
   </div>
 </div>
 
-#### Using Separate router-outlet as Tabs Content
-In order to render views inside the igx-tabs content, use named router outlets. In this case, implement `onTabItemSelected` event handler to navigate and render the specified view.
+#### 他のルーター アウトレットをTabs コンテンツに使用
+コンテンツ内にビューを描画する場合は、名前付きルーター アウトレットを使用します。`onTabItemSelected` イベント ハンドラーを実装して特定のビューへ移動、描画します。
 
 ```html
 <!-- tabs-sample-1.component.html -->
@@ -361,7 +361,7 @@ public navigate(eventArgs) {
     }
   }
 ```
-Declare all needed route definitions that map URL path to a specific component:
+URL パスを特定のコンポーネントにマップするために必要となるすべてのルート定義を宣言します。
 
 ```typescript
 // app.routing.module.ts
@@ -395,10 +395,10 @@ const routes: Routes = [
 
 <div style="display: flex;">
   <div style="margin: 0px 10px 0px 0px">
-    <a class="cta-btn" href="https://igxtabsrouterlinksoutlets.stackblitz.io" target="_blank" >view sample</a>
+    <a class="cta-btn" href="https://igxtabsrouterlinksoutlets.stackblitz.io" target="_blank" >サンプルの表示</a>
   </div>
   <div>
-    <a class="cta-btn" href="https://stackblitz.com/edit/igxtabsrouterlinksoutlets" target="_blank">view code on stackblitz</a>
+    <a class="cta-btn" href="https://stackblitz.com/edit/igxtabsrouterlinksoutlets" target="_blank">StackBlitz で開く</a>
   </div>
 </div>
 
