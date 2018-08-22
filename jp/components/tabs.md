@@ -184,6 +184,224 @@ export class AppModule {}
 </igx-tabs>
 ```
 
+### Tabs と Routing の使用
+
+以下は、Tabs コンポーネントの使用と基本的なルーティングの例です。<a href="https://angular.io/guide/router" target="_blank">Angular Routing と Navigation</a> について説明します。
+
+#### igxTab、routerLink ディレクティブ、ルーティング アウトレットの使用
+
+ **igxTab**で基本的なルーティングを実装するには、`igxTab` ディレクティブを使用して igx-tabs の項目ヘッダーを再テンプレート化し、`ng-template` に `router-outlet` でリンクを提供します。`ng-template` コンテンツは、デフォルト タブ ヘッダーのスタイルをオーバーライドすることに注意してください。
+
+```html
+<!-- tabs-sample-1.component.html -->
+<igx-tabs #tabs1>
+  <igx-tabs-group *ngFor="let routerLink of routerLinks">
+    <ng-template igxTab>
+      <a routerLink="{{routerLink.link}}">
+        {{routerLink.label}}
+      </a>
+    </ng-template>
+  </igx-tabs-group>
+</igx-tabs>
+
+<div>
+  <router-outlet></router-outlet>
+</div>
+```
+
+```typescript
+// tabs-sample-1.component.ts
+this.routerLinks = [
+  {
+    label: 'View 1',
+    link: '/view1',
+    index: 0
+  }, 
+  {
+    label: 'View 2',
+    link: '/view2',
+    index: 1
+  },
+  {
+    label: 'View 3',
+    link: '/view3',
+    index: 2
+  },
+];
+```
+URL パスを特定のコンポーネントにマップするために必要となるすべてのルート定義を宣言します。URL パスを含むすべての子コンポーネントは、メインルーティングモジュール app.routing.module.ts にインポートされる別のルーティング モジュールの tabs.routing.module.ts にリストされます。RouterModule.forChild メソッドでルーターを構成します。
+
+```typescript
+// tabs.routing.module.ts
+const routes: Routes = [
+    // simple links
+    { path: 'view1', component: View1Component },
+    { path: 'view2', component: View2Component },
+    { path: 'view3', component: View3Component },
+    { path: '', redirectTo: 'view1', pathMatch: 'full' }
+];
+
+@NgModule({
+    imports: [
+        RouterModule.forChild(routes)
+    ],
+    exports: [
+        RouterModule
+    ]
+})
+export class TabsRoutingModule { }
+```
+RouterModule.forRoot メソッドを使用してメイン ルーターを構成します。
+
+```typescript
+// app.routing.module.ts
+const routes: Routes = [
+  {
+    path: 'tabs',
+    component: TabsSample1Component
+  },
+  { path: '', redirectTo: '/tabs', pathMatch: 'full' }
+];
+
+@NgModule({
+    imports: [
+        RouterModule.forRoot(routes)
+    ],
+    exports: [
+        RouterModule
+    ]
+})
+export class AppRoutingModule { }
+```
+
+戻る/次へ ブラウザー ボタンを処理するために ngOnInit に以下のコードを追加し、IgxTabsGroupComponent `select` メソッドを使用して関連性のあるタブ グループをアクティブ化します。
+
+```typescript
+// tabs-sample-1.component.ts
+constructor(private router: Router) {}
+
+public ngOnInit() {
+  // Initial view loaded
+  this.router.navigate(['view1']);
+
+  // Handle the back/forward browser buttons
+  this._navigationEndSubscription = this.router.events.pipe(filter(event => event instanceof NavigationEnd)).subscribe((args) => {
+  const index = this.routerLinks.indexOf(this.routerLinks.find(tab => tab.link === this.router.url));
+  (this.tabs.groups.filter(item => item.index === index)[0] as IgxTabsGroupComponent).select();
+  });
+}
+```
+
+<div style="display: flex;">
+  <div style="margin: 0px 10px 0px 0px">
+    <a class="cta-btn" href="https://igxtabsrouterlinks.stackblitz.io" target="_blank" >サンプルの表示</a>
+  </div>
+  <div>
+    <a class="cta-btn" href="https://stackblitz.com/edit/igxtabsrouterlinks" target="_blank">StackBlitz で開く</a>
+  </div>
+</div>
+
+#### 他のルーター アウトレットを Tabs コンテンツに使用
+コンテンツ内にビューを描画する場合は、名前付きルーター アウトレットを使用します。`onTabItemSelected` イベント ハンドラーを実装して特定のビューへ移動、描画します。
+
+```html
+<!-- tabs-sample-1.component.html -->
+<!-- router-outlet inside the tabs items content -->
+<igx-tabs #tabs1 (onTabItemSelected)="navigate($event)">
+  <igx-tabs-group label="Product1" name="product1">
+    <router-outlet name="product1"></router-outlet>
+  </igx-tabs-group>
+  <igx-tabs-group label="Product2" name="product2">
+    <router-outlet name="product2"></router-outlet>
+  </igx-tabs-group>
+  <igx-tabs-group label="Product3" name="product3">
+    <router-outlet name="product3"></router-outlet>
+  </igx-tabs-group>
+</igx-tabs>
+```
+
+```typescript
+// tabs-sample-1.component.ts
+public navigate(eventArgs) {
+    const selectedIndex = eventArgs.group.index;
+    switch(selectedIndex) {
+      case 0: {
+        this.router.navigate(['/productDetails',
+          {
+            outlets:
+            {
+              product1: ['product1']
+            }
+          }
+        ]);
+        break;
+    }
+    case 1: {
+      this.router.navigate(['/productDetails',
+        {
+          outlets:
+          {
+            product2: ['product2']
+          }
+        }
+      ]);
+      break;
+    }
+    case 2: {
+      this.router.navigate(['/productDetails',
+          {
+            outlets:
+            {
+              product3: ['product3']
+            }
+          }
+        ]);
+        break;
+      }
+    }
+  }
+```
+URL パスを特定のコンポーネントにマップするために必要となるすべてのルート定義を宣言します。
+
+```typescript
+// app.routing.module.ts
+const routes: Routes = [
+  {
+    // children outlets
+    path: 'productDetails',
+    children: [
+      { path: 'product1', component: View1Component, outlet: 'product1' },
+      { path: 'product2', component: View2Component, outlet: 'product2' },
+      { path: 'product3', component: View3Component, outlet: 'product3' },
+      { path: '', redirectTo: 'product1', pathMatch: 'full' }
+    ]
+  },
+  {
+    path: '',
+    redirectTo: '/productDetails',
+    pathMatch: 'full'
+  }
+];
+
+@NgModule({
+    imports: [
+        RouterModule.forRoot(routes)
+    ],
+    exports: [
+        RouterModule
+    ]
+})
+```
+
+<div style="display: flex;">
+  <div style="margin: 0px 10px 0px 0px">
+    <a class="cta-btn" href="https://igxtabsrouterlinksoutlets.stackblitz.io" target="_blank" >サンプルの表示</a>
+  </div>
+  <div>
+    <a class="cta-btn" href="https://stackblitz.com/edit/igxtabsrouterlinksoutlets" target="_blank">StackBlitz で開く</a>
+  </div>
+</div>
+
 <div class="divider"></div>
 
 ### API まとめ
