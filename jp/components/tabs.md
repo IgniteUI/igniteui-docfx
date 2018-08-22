@@ -251,7 +251,7 @@ const routes: Routes = [
 })
 export class TabsRoutingModule { }
 ```
-メソッドを使用して RouterModule.forRoot メイン ルーターを構成します。
+RouterModule.forRoot メソッドを使用してメイン ルーターを構成します。
 
 ```typescript
 // app.routing.module.ts
@@ -301,7 +301,7 @@ public ngOnInit() {
   </div>
 </div>
 
-#### 他のルーター アウトレットをTabs コンテンツに使用
+#### 他のルーター アウトレットを Tabs コンテンツに使用
 コンテンツ内にビューを描画する場合は、名前付きルーター アウトレットを使用します。`onTabItemSelected` イベント ハンドラーを実装して特定のビューへ移動、描画します。
 
 ```html
