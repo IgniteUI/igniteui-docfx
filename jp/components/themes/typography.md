@@ -39,7 +39,7 @@ Ignite UI for Angular は、初期のタイポグラフィのスタイルを設�
 > [!IMPORTANT]
 > デフォルトではタイポグラフィ スタイルを適用しません。アプリケーションでインフラジスティックスのタイポグラフィを使用するには、`igx-typography` CSS をトップ レベルの要素に設定する必要があります。そのすべての子がタイポグラフィ スタイルを使用するようになります。
 
-Ignite UI for Angular のデフォルト フォントは [Titillium Web](https://fonts.google.com/selection?selection.family=Titillium+Web:300,400,600,700)　です。使用にはフォントをホストするか Google フォントからのフォントを含む必要があります。
+Ignite UI for Angular のデフォルト フォントは [Titillium Web](https://fonts.google.com/selection?selection.family=Titillium+Web:300,400,600,700) です。使用にはフォントをホストするか Google フォントからのフォントを含む必要があります。
 
 ```html
 <link href="https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600,700" rel="stylesheet">
