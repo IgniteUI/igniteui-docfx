@@ -16,7 +16,7 @@
         "browser-sync": "^2.24.6",
         "del": "^3.0.0",
         "dotenv": "^4.0.0",
-        "gulp": "^4.0.0",
+        "gulp": "^3.9.1",
         "gulp-autoprefixer": "^5.0.0",
         "gulp-sass": "^4.0.1",
         "gulp-shell": "^0.6.5",
