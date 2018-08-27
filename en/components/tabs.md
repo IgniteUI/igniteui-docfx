@@ -292,13 +292,13 @@ public ngOnInit() {
 }
 ```
 
-<div style="display: flex;">
-  <div style="margin: 0px 10px 0px 0px">
-    <a class="cta-btn" href="https://igxtabsrouterlinks.stackblitz.io" target="_blank" >view sample</a>
-  </div>
-  <div>
-    <a class="cta-btn" href="https://stackblitz.com/edit/igxtabsrouterlinks" target="_blank">view code on stackblitz</a>
-  </div>
+<div class="sample-container loading" >
+    <iframe id="tabs-sample-4-iframe" src='{environment:demosBaseUrl}/tabs-sample-4' seamless
+        frameBorder="0" style="display: none"></iframe>
+</div>
+<div>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="tabs-sample-4-iframe"
+    data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
 #### Using Separate router-outlet as Tabs Content
@@ -364,7 +364,7 @@ public navigate(eventArgs) {
 Declare all needed route definitions that map URL path to a specific component:
 
 ```typescript
-// app.routing.module.ts
+// tabs.routing.module.ts
 const routes: Routes = [
   {
     // children outlets
@@ -382,24 +382,16 @@ const routes: Routes = [
     pathMatch: 'full'
   }
 ];
-
-@NgModule({
-    imports: [
-        RouterModule.forRoot(routes)
-    ],
-    exports: [
-        RouterModule
-    ]
-})
+...
 ```
 
-<div style="display: flex;">
-  <div style="margin: 0px 10px 0px 0px">
-    <a class="cta-btn" href="https://igxtabsrouterlinksoutlets.stackblitz.io" target="_blank" >view sample</a>
-  </div>
-  <div>
-    <a class="cta-btn" href="https://stackblitz.com/edit/igxtabsrouterlinksoutlets" target="_blank">view code on stackblitz</a>
-  </div>
+<div class="sample-container loading" >
+    <iframe id="tabs-sample-5-iframe" src='{environment:demosBaseUrl}/tabs-sample-5' seamless
+        frameBorder="0" style="display: none"></iframe>
+</div>
+<div>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="tabs-sample-5-iframe"
+    data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
 <div class="divider"></div>
