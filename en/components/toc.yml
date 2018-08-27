@@ -149,6 +149,8 @@
       href: themes/global-theme.md
     - name: Componenent Themes
       href: themes/component-themes.md
+    - name: Theming Demo
+      href: themes/theming-demo.md
     - name: Typography
       href: themes/typography.md
 - name: Shadows
