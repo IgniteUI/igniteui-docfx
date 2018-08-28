@@ -1,7 +1,7 @@
 ---
 title: Theming Demo
 _description: Ignite UI for Angular uses SASS functions and mixins to give you the ability of styling easily your entire application or only specific parts of it with only a couple of steps. 
-_keywords: Ignite UI for Angular, Angular Theming Component, Angular Theming, Ignite UI for Angular Components, Ignite for Agular Themes
+_keywords: Ignite UI for Angular, Angular Theming Component, Angular Theming, Ignite UI for Angular Components, Ignite for Agular Themes, Global Theme, Component Theme
 ---
 
 ## Theming Demo
@@ -47,12 +47,12 @@ The result from the above code snippet looks like this:
 </div>
 <div class="divider--half"></div>
 
-In case you have other preferences for the appearance of the components or the **default theme** doesn't match the interior of your application, rather than writing huge amount of CSS files, you can use the  **Ignite UI for Angular Theming** which is much easier, fun and efficient way for styling. 
+In case you have other preferences for the appearance of the components or the **default theme** doesn't match the interior of your application, you can use the  **Ignite UI for Angular Theming**, which is much easier, fun and efficient way for styling, than writing huge amount of CSS files. 
 
 ### Get Started 
 
-To get started, first you have to import the the *theme utilities* where the **SASS functions and mixins** are nested.
-For good code structure it will be helpful to place the **theme logic** in separate directory:
+To get started, you have to import the the *theme utilities*, where the **SASS functions and mixins** are nested.
+For good code structure it will be helpful to place the **theme logic** in a separate directory:
 
 ```scss
 // styles/dark-theme.scss
@@ -99,33 +99,8 @@ Our app will have:
 @import '~igniteui-angular/lib/core/styles//components/input/input-group-theme';
 ...
 ```
-- **Igx-Snackbar**
 
-```scss
-// styles/dark-theme.scss
-...
-// Import grid snackbar and theme styles
-@import '~igniteui-angular/lib/core/styles//components/snackbar/snackbar-component';
-@import '~igniteui-angular/lib/core/styles//components/snackbar/snackbar-theme';
-...
-```
-
-- **Igx-Button** and **Igx-Button-Group**
-
-```scss
-// styles/dark-theme.scss
-...
-// Import button component and theme styles
-@import '~igniteui-angular/lib/core/styles//components/button/button-component';
-@import '~igniteui-angular/lib/core/styles//components/button/button-theme';
-
-// Import button-group component and theme styles
-@import '~igniteui-angular/lib/core/styles//components/button-group/button-group-component';
-@import '~igniteui-angular/lib/core/styles//components/button-group/button-group-theme';
-...
-```
-
-Now we have all the **functions** and **mixins** that are necessary for **theming** our components, we just need to define the **color palettes** that we are going to use:
+Now we have all the functionality, necessary for **theming** our components, we just need to define the **color palettes** that we are going to use:
 
 ```scss
 // Define the primary color
@@ -138,13 +113,14 @@ $orange-color: #FFA500;
 $dark-theme-palette: igx-palette($primary: $dark-color, $secondary: $orange-color);
 ```
 
-Done!! We are now ready to set the new styling of our app.
+Done!! We are ready to set the new styling of our app.
 <div class="divider--half"></div>
 
 ### Theme Setting
 
-The **theme setting** is basically applying different shades of the primary and secondary colors to various component parts. In the [**Ignite UI for Angular Themes**](https://staging.infragistics.local/products/ignite-ui-angular/docs/sass/) documentation you can find the information the component parts that can be styled.
-So, now after we know that, lets get started with the demonstration:
+The **theme setting** is basically applying different shades of the primary and secondary colors to various component parts. In the [**Ignite UI for Angular Themes**](https://staging.infragistics.local/products/ignite-ui-angular/docs/sass/) documentation you can find out which component parts can be styled.
+
+Now lets define our **themes**:
 
 #### Defining Themes
 <div class="divider--half"></div>
@@ -199,51 +175,6 @@ $dark-input-group-theme: igx-input-group-theme(
 ...
 ```
 
-- [**Igx-Snackbar-Theme**](https://staging.infragistics.local/products/ignite-ui-angular/docs/sass/#themes-function-igx-snackbar-theme)
-```scss
-// styles/dark-theme.scss
-...
-// Define dark theme for the snackbar
-$dark-snackbar-theme: igx-snackbar-theme(
-  $palette: $dark-theme-palette,
-  $background: igx-color($dark-theme-palette, "primary", 100),
-  $text-color: igx-color($dark-theme-palette, "secondary", 500)
-);
-...
-```
-
-- [**Igx-Button-Group-Theme**](https://staging.infragistics.local/products/ignite-ui-angular/docs/sass/#themes-function-igx-button-group-theme)
-```scss
-// styles/dark-theme.scss
-...
-// Define dark theme for the button-group
-$dark-button-group: igx-button-group-theme(
-  $palette: $dark-theme-palette,
-  $item-text-color: igx-color($dark-theme-palette, "primary", 500),
-  $item-background: igx-color($dark-theme-palette, "secondary", 500),
-  $item-selected-background: igx-color($dark-theme-palette, "primary", 200),
-  $item-selected-text-color: igx-color($dark-theme-palette, "secondary", 500)
-);
-...
-```
-
-- [**Igx-Button-Theme**](https://staging.infragistics.local/products/ignite-ui-angular/docs/sass/#themes-function-igx-button-theme)
-```scss
-// styles/dark-theme.scss
-...
-// Define dark theme for the button
-$dark-button-theme: igx-button-theme(
-  $palette: $dark-theme-palette,
-  $icon-color: igx-color($dark-theme-palette, "secondary", 700),
-  $icon-hover-color: igx-color($dark-theme-palette, "primary", 500),
-  $icon-hover-background: igx-color($dark-theme-palette, "secondary", 500),
-  $icon-focus-color: igx-color($dark-theme-palette, "primary", 500),
-  $icon-focus-background: igx-color($dark-theme-palette, "secondary", 500),
-  $flat-hover-background: igx-color($dark-theme-palette, "primary", 500),
-  $flat-text-color: igx-color($dark-theme-palette, "secondary", 700)
-);
-...
-```
 
 That's it! 
 
@@ -296,14 +227,15 @@ And the result is:
 </div>
 <div class="divider--half"></div>
 
-Import the mixins and functions, define the colors, define the themes and apply them. These are the small steps for styling your app with **Ignite UI for Angular Theming**. 
+Import the *utilities*, component mixins and the theme functions, define the colors, define the themes and apply them. These are the steps for styling your app with **Ignite UI for Angular Theming**. 
 
 ### Theme Chooser
 In the above sample we set only one theme per component.
 
-If we want to define more themes for a single **Ignite UI for Angular control** with the idea of changing them, we can add a **theme chooser**.
+If we want to define more themes for a single **Ignite UI for Angular Control**, with the idea of changing them, we can add a **theme chooser**.
+
 This can be achieved with few modifications:
-- Create a file and define the classes, which will include the themes:
+- Create a SCSS file and define the classes, which will include the themes:
 
 ```scss
 // // styles/themes-classes.scss
@@ -314,7 +246,7 @@ This can be achieved with few modifications:
     margin: 16px;
     box-shadow: igx-elevation($elevations, 12); 
 
-  //Set the light themes for the components. 
+    // Set the light themes for the components. 
     .light-theme {
       background: $light-color;
       ::ng-deep {   
@@ -328,42 +260,13 @@ This can be achieved with few modifications:
         @include igx-button-group($light-button-group);     
       }
     }
-
-    //Set the dark themes for the components.
-    .dark-theme {
-      background: $dark-color;
-      ::ng-deep {   
-        @include igx-grid($dark-grid);
-        @include igx-snackbar($dark-snackbar);
-        @include igx-input-group($dark-input-group);
-        @include igx-grid-paginator($dark-grid-paginator);
-        @include igx-button($dark-button);
-        @include igx-dialog($dark-dialog);
-        @include igx-grid-filtering($dark-grid-filtering);
-        @include igx-button-group($dark-button-group); 
-      }
-    }
-    
-     //Set the black themes for the components.
-    .black-theme {
-      background: $black-color;
-      ::ng-deep {    
-        @include igx-grid($black-grid);
-        @include igx-snackbar($black-snackbar);
-        @include igx-input-group($black-input-group);
-        @include igx-grid-paginator($black-grid-paginator);
-        @include igx-button($black-button);
-        @include igx-dialog($black-dialog);
-        @include igx-grid-filtering($black-grid-filtering);
-        @include igx-button-group($black-button-group); 
-      }
-    }
+    ...
   }
 ```
 
 <div class="divider--half"></div>
 
-- Set a variable that will reference the wrapper class selector and set an event which triggers the function that manipulates the `class` reference:
+- Bind the wrapper class selector and set an event, which triggers the function that manipulates the `class` reference:
 
 ```html
 <div [class] = "wrapper">
@@ -388,7 +291,7 @@ This can be achieved with few modifications:
 
 <div class="divider--half"></div>
 
-Add data that will represent the **themes classes** and a function to manipulate the `class` reference.
+Add data that will represent the **themes classes** and a function to manipulate the wrapper `class` selector reference.
 
 ```typescript
     ...
