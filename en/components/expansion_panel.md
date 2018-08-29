@@ -265,13 +265,13 @@ The `IgxExpansionPanel` control allows all sort of content to be added inside of
 |Name |Type | Description | Default |
 |:---|:--|:--|:--|
 | `ariaLabelledBy`| `string` | Aria Support. Id of control that labels component | `panel.id` |
-| `disabled` | `boolean` | Should the control respond to user interraction | `false` |
+| `disabled` | `boolean` | Should the control respond to user interaction | `false` |
 | `iconPosition` | `enum ICON_POSITION` | Where should the icon be displayed ('left', 'right' or 'none') | `left` |
 
 #### Outputs
 |Name |Emits | Description |
 |:--|:--|:--|
-| `onInterraction` | `{ event: Event }` | Emitted on user interraction with the component header |
+| `onInteraction` | `{ event: Event }` | Emitted on user interaction with the component header |
 
 #### Directives
 | Name | Selector | Description |
