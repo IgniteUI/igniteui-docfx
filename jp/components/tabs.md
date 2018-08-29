@@ -298,7 +298,7 @@ public ngOnInit() {
 </div>
 <div>
 <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="tabs-sample-4-iframe"
-    data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
 </div>
 
 #### 他のルーター アウトレットを Tabs コンテンツに使用
@@ -391,7 +391,7 @@ const routes: Routes = [
 </div>
 <div>
 <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="tabs-sample-5-iframe"
-    data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
 </div>
 
 
