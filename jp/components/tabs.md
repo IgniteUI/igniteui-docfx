@@ -197,9 +197,8 @@ export class AppModule {}
 <igx-tabs #tabs1>
   <igx-tabs-group *ngFor="let routerLink of routerLinks">
     <ng-template igxTab>
-      <a routerLink="{{routerLink.link}}">
-        {{routerLink.label}}
-      </a>
+      {{routerLink.label}}
+      <a routerLink="{{routerLink.link}}"></a>
     </ng-template>
   </igx-tabs-group>
 </igx-tabs>
