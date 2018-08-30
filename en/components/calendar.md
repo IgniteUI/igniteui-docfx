@@ -235,10 +235,10 @@ Having implemented this conditional templating and date parsing we should get co
 </div>
 
 ### Disabled dates
-This section demonstrates the usage of `disabledDates` functionallity. Different `single dates` or `range` elements of type `DateRangeDescriptor` could be added to Array, and passed to the `disabledDates` descriptor.
+This section demonstrates the usage of `disabledDates` functionallity. Different `single dates` or `range` elements could be added to Array, and passed to the `disabledDates` descriptor.
 
 ```typescript
-this.calendar.disabledDates = [new DateRangeDescriptor(DateRangeType.Between, [
+this.calendar.disabledDates = [{ type: DateRangeType.Between, dateRange: [
     new Date(2018, 8, 2),
     new Date(2018, 8, 8)
 ])];
@@ -261,7 +261,7 @@ export class CalendarSample6Component {
     ];
 
     public ngOnInit() {
-        this.calendar.disabledDates = [new DateRangeDescriptor(DateRangeType.Between, this.range)];
+        this.calendar.disabledDates = [{ type: DateRangeType.Specific, dateRange: this.range }];
     }
 }
 
@@ -296,7 +296,7 @@ export class CalendarSample7Component {
 
     public submitPTOdays(eventArgs) {
         this.calendar.specialDates =
-            [new DateRangeDescriptor(DateRangeType.Specific, this.range)];
+            [{ type: DateRangeType.Specific, dateRange: this.range)];
 
         this.range.forEach((item) => {
             this.calendar.selectDate(item);
@@ -358,8 +358,8 @@ When a day inside the current month is focused:
 | `formatOptions` | `Object` | The format options passed along with the `locale` property used for formatting the dates. Defaults are { day: 'numeric', month: 'short', weekday: 'short', year: 'numeric' }. |
 |`formatViews`| `Object`| Controls whether the date components in the different calendar views should be formatted according to the provided locale and formatOptions. Defaults are { day: false, month: true, year: false }. Does not affect rendering in the header. |
 | `vertical` | `boolean` | Controls the layout of the calendar component. When vertical is set to true the calendar header will be rendered to the side of the calendar body.|
-| `disabledDates` | `DateRangeDescriptor[]` | Gets\Sets the disabled dates descriptors. |
-| `specialDates` | `DateRangeDescriptor[]` | Gets\Sets the special dates descriptors. |
+| `disabledDates` | `array` | Gets\Sets the disabled dates descriptors. |
+| `specialDates` | `array` | Gets\Sets the special dates descriptors. |
 #### Outputs
 <div class="divider--half"></div>
 
