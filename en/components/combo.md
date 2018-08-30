@@ -122,7 +122,6 @@ When igxCombo is opened, allow custom values are enabled and add item button is 
 |  `groupKey`              | combo item group                                  | string                      |
 |  `virtualizationState`   | defines the current state of the virtualized data. It contains `startIndex` and `chunkSize`      | `IForOfState`               |
 |  `width `                | defines combo width                               | string                      |
-|  `height`                | defines combo height                              | string                      |
 |  `itemsMaxHeight `       | defines drop down maximum height                  | number                      |
 |  `itemsWidth `           | defines drop down width                           | string                      |
 |  `itemHeight `           | defines drop down item height                     | number                      |
@@ -167,6 +166,7 @@ When igxCombo is opened, allow custom values are enabled and add item button is 
 
 - Combo input that displays the selected items is not editable, however due to a browser specifics in IE and FireFox the cursor is visible
 - Backspace works in disabled combo in IE
+- Combo is not having input for sizing its height. In the future `IgxInputGroup` will expose an option that allows custom sizing and then `IgxCombo` will use the same functionality for proper styling and better consistency.
 
 ### Additional Resources
 <div class="divider--half"></div>

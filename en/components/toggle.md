@@ -226,6 +226,20 @@ If all went well, it will look like this:
     </button>
 </div>
 
+### IgxOverlayOutlet Directive
+
+The **IgxOverlayOutlet** provides a way to mark an element as an `igxOverlay` outlet container through the component template.
+Directive instance is exported as `overlay-outlet`, so it can be assigned within the template:
+
+```html
+<div igxOverlayOutlet #outlet="overlay-outlet"></div>
+```
+
+This allows to provide the `outlet` templates variable as a setting to the toggle action:
+```html
+<button [igxToggleAction]="reference" [igxToggleOutlet]="outlet">Toggle</button>
+<custom-component #reference></custom-component>
+```
 
 ## API Summary
 
@@ -244,6 +258,7 @@ The following inputs are available on the **igxToggleAction** directive:
 | Name | Type | Description |
 | :--- | :--- | :--- |
 | `igxToggleAction` | IgxToggleDirective | Accepts the toggle that has to be controlled. |
+| `igxToggleOutlet` | `IgxOverlayOutletDirective` \| `ElementRef`| Determines where the target overlay element should be attached. Shortcut for `overlaySettings.outlet`. |
 | `closeOnOutsideClick` | IgxToggleDirective | Determines whether toggle should be closed when you click outside. |
 
 <div class="divider"></div>
