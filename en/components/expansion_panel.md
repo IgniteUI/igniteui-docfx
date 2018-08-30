@@ -30,8 +30,8 @@ export class AppModule {}
 We can now start using `igx-expansion-panel` in the markup. The expansion panel has a simple structure, as you can see below:
 - `igx-expansion-panel` - the component host - stores header and body
     - `igx-expansion-panel-header` - stores the component header. This is always visible. Stores title and description as well as any additional content
-        - `igx-expansion-panel-title` - stores the component title. Has default styling and will always appear at the beginning of the header. Used in aria labels.
-        - `igx-expansion-panel-description` - stores the component description. Can be used to provide a short summary. Will always be displayed second in the headers.
+        - `igx-expansion-panel-title` - stores the component title. Has default styling. Will always appear first in the header content (after icon if `iconPosition === 'left'`). Used in aria labels.
+        - `igx-expansion-panel-description` - stores the component description. Can be used to provide a short summary. Will always appear after the title (if title is set).
     - `igx-expansion-panel-body` - stores the component body. This part is only visible when the component is expanded.
 
 In the below example, we can create a small collapsible component that hold a bit of information about the hummingbird:
