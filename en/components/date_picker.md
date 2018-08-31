@@ -218,6 +218,8 @@ The result is as follows:
 | `formatViews` | `Object` | The format views passed along with the `locale` property used for formatting dates. |
 | `label` | `string` | Changes the default text label. |
 | `labelVisibility` | `string ` | Hide/Show the label. |
+| `disabledDates` | `array` | Gets/Sets the disabled dates descriptors. |
+| `specialDates` | `array` | Gets/Sets the special dates descriptors. |
 
 #### Outputs
 <div class="divider--half"></div>
