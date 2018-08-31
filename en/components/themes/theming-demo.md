@@ -21,7 +21,7 @@ The **Ignite UI for Angular Theming** provides you the ability to customize them
 
 ### Default Theme
 
-The first step is to set the global theme for the application. There is a **default theme** that styles all the components in the **Ignite UI for Angular cotrols** and now we are going to set it in the  `styles.scss` file:
+There is a **default theme** that styles all the components in the **Ignite UI for Angular controls** and the first thing that we are going to do is to set it in the `styles.scss` file: 
 
 ```scss
 // styles.scss
@@ -29,7 +29,7 @@ The first step is to set the global theme for the application. There is a **defa
 // import first the IgniteUI themes library
 @import "~igniteui-angular/lib/core/styles/themes/index";
 
-// NEVER FORGET to include the igx-core first!
+// Don't forget to include the igx-core first
 @include igx-core();
 // the default color palette is passed to the global theme
 @include igx-theme($default-palette);
@@ -37,7 +37,6 @@ The first step is to set the global theme for the application. There is a **defa
 
 The result from the above code snippet looks like this:
 
-<div class="divider--half"></div>
 <div class="sample-container" style="height: 650px">
     <iframe id="default-theme-sample-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/default-theme-sample" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -51,7 +50,7 @@ In case you have other preferences for the appearance of the components or the *
 
 ### Get Started 
 
-To get started, you have to import the the *theme utilities*, where the **SASS functions and mixins** are nested.
+To get started, you have to import the *theme utilities*, where the **SASS functions and mixins** are nested.
 For good code structure it will be helpful to place the **theme logic** in a separate directory:
 
 ```scss
@@ -113,16 +112,16 @@ $orange-color: #FFA500;
 $dark-theme-palette: igx-palette($primary: $dark-color, $secondary: $orange-color);
 ```
 
-Done!! We are ready to set the new styling of our app.
+Done! We are ready to set the new styling of our app.
 <div class="divider--half"></div>
 
 ### Theme Setting
 
 The **theme setting** is basically applying different shades of the primary and secondary colors to various component parts. In the [**Ignite UI for Angular Themes**](https://staging.infragistics.local/products/ignite-ui-angular/docs/sass/) documentation you can find out which component parts can be styled.
 
-Now lets define our **themes**:
+Now lets define the **component themes** that we are going to apply:
 
-#### Defining Themes
+#### Defining Component Themes
 <div class="divider--half"></div>
 
 - [**Igx-Grid-Theme**](https://staging.infragistics.local/products/ignite-ui-angular/docs/sass/#function-igx-grid-theme)
@@ -180,16 +179,17 @@ That's it!
 
 We have now made a theme for each component in our app. The last step is just to apply it.
 
-#### Applying Theme
-Wrap the components with an element.
-```html
-<div class = "dark-theme">
-    <!-- Put the components inside the wrapper element -->
-</div>
+#### Applying Component Themes
+Bind the host element `class` with the **themes class**.  
+```typescript
+...
+  @HostBinding("class")
+  public themesClass = "dark-theme";
+...
 ```
 <div class="divider--half"></div>
 
-After that, in a new SCSS file set the wrapper element `class` to include the components with their themes.
+After that, in a new SCSS file nest the **themes class**, that includes the components with their themes, in the host element.
 
 ```scss
 // styles/dark-themes-class.scss
@@ -200,7 +200,7 @@ After that, in a new SCSS file set the wrapper element `class` to include the co
     margin: 16px;
     box-shadow: igx-elevation($elevations, 12);
 
-    .dark-theme {
+    &.dark-theme {
       background: $dark-color;
         ::ng-deep {   
           @include igx-grid($dark-grid-theme);
@@ -217,7 +217,6 @@ After that, in a new SCSS file set the wrapper element `class` to include the co
 ```
 And the result is:
 
-<div class="divider--half"></div>
 <div class="sample-container" style="height: 650px">
     <iframe id="dark-theme-sample-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/dark-theme-sample" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -232,9 +231,9 @@ Import the *utilities*, component mixins and the theme functions, define the col
 ### Theme Chooser
 In the above sample we set only one theme per component.
 
-If we want to define more themes for a single **Ignite UI for Angular Control**, with the idea of changing them, we can add a **theme chooser**.
+If we want to define more themes for a single **Ignite UI for Angular Component**, with the idea of changing them, we can add a **theme chooser**.
 
-This can be achieved with few modifications:
+This can be achieved in a few modifications:
 - Create a SCSS file and define the classes, which will include the themes:
 
 ```scss
@@ -247,7 +246,7 @@ This can be achieved with few modifications:
     box-shadow: igx-elevation($elevations, 12); 
 
     // Set the light themes for the components. 
-    .light-theme {
+    &.light-theme {
       background: $light-color;
       ::ng-deep {   
         @include igx-grid($light-grid);
@@ -266,10 +265,9 @@ This can be achieved with few modifications:
 
 <div class="divider--half"></div>
 
-- Bind the wrapper class selector and set an event, which triggers the function that manipulates the `class` reference:
+- Set an event, which triggers the function that manipulates the `class` of the host element:
 
 ```html
-<div [class] = "wrapper">
 ...
 <!-- Adding igxButton that triggers a dropdown with the theme options -->
 <div class = "grid_wrapper" igxOverlayOutlet #outlet>
@@ -291,7 +289,7 @@ This can be achieved with few modifications:
 
 <div class="divider--half"></div>
 
-Add data that will represent the **themes classes** and a function to manipulate the wrapper `class` selector reference.
+Add data that will represent the **themes classes** and a function to manipulate the `class` selector of the host element.
 
 ```typescript
     ...
@@ -309,12 +307,13 @@ export enum THEME {
 export class ThemeChooserSampleComponent implements OnInit {
     // Provide a reference to the themes classes
     public THEME: typeof THEME = THEME;
-    // Provide a reference to the wrapper class with a default value
-    public wrapper = THEME.LIGHT;
+    // Bind the host element class with the themes class and set a default value
+    @HostBinding("class")
+    public themesClass: THEME = THEME.LIGHT;
     ...
-    // Provide a function that manipulates the the wrapper class reference
+    // Provide a function that manipulates the the class reference
     public selectTheme(theme: THEME) {
-        this.wrapper = theme;
+        this.themesClass = theme;
     }
     ...
 
