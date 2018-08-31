@@ -244,7 +244,7 @@ this.calendar.disabledDates = [{ type: DateRangeType.Between, dateRange: [
 ])];
 ```
 
-The `DateRangeType` is used to specify the range that is going to be disabled. For example, `DateRangeType.Between` will disable the dates between two specific dates in Array. Code snipped above.
+The `DateRangeType` is used to specify the range that is going to be disabled. For example, `DateRangeType.Between` will disable the dates between two specific dates in Array. Code snippet above.
 Check the API table below for all available `DateRangeType` values.
 
 This feature is covering the situations when we may need to restrict some dates to be selectable and focusable.
@@ -358,8 +358,8 @@ When a day inside the current month is focused:
 | `formatOptions` | `Object` | The format options passed along with the `locale` property used for formatting the dates. Defaults are { day: 'numeric', month: 'short', weekday: 'short', year: 'numeric' }. |
 |`formatViews`| `Object`| Controls whether the date components in the different calendar views should be formatted according to the provided locale and formatOptions. Defaults are { day: false, month: true, year: false }. Does not affect rendering in the header. |
 | `vertical` | `boolean` | Controls the layout of the calendar component. When vertical is set to true the calendar header will be rendered to the side of the calendar body.|
-| `disabledDates` | `array` | Gets\Sets the disabled dates descriptors. |
-| `specialDates` | `array` | Gets\Sets the special dates descriptors. |
+| `disabledDates` | `array` | Gets/Sets the disabled dates descriptors. |
+| `specialDates` | `array` | Gets/Sets the special dates descriptors. |
 #### Outputs
 <div class="divider--half"></div>
 

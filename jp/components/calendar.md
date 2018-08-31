@@ -253,7 +253,7 @@ this.calendar.disabledDates = [new DateRangeDescriptor(DateRangeType.Between, [
 ])];
 ```
 
-The `DateRangeType` is used to specify the range that is going to be disabled. For example, `DateRangeType.Between` will disable the dates between two specific dates in Array. Code snipped above.
+The `DateRangeType` is used to specify the range that is going to be disabled. For example, `DateRangeType.Between` will disable the dates between two specific dates in Array. Code snippet above.
 Check the API table below for all available `DateRangeType` values.
 
 This feature is covering the situations when we may need to restrict some dates to be selectable and focusable.
@@ -370,8 +370,8 @@ Result:
 | `formatOptions` | `Object` | 日付を書式設定するために使用される `locale` プロパティと渡される書式オプション。デフォルト値は { day: 'numeric', month: 'short', weekday: 'short', year: 'numeric' } です。 |
 |`formatViews`| `Object`| カレンダー ビューの日付コンポーネントが提供された locale および formatOptions に基づいて書式設定するかどうかを制御します。デフォルト値は { day: false, month: true, year: false } です。ヘッダーの描画に影響しません。|
 | `vertical` | `boolean` | カレンダー コンポーネントのレイアウトを制御します。`vertical` が true に設定される場合、カレンダー ヘッダーはカレンダーの隣に描画されます。|
-| `disabledDates` | `DateRangeDescriptor[]` | Gets\Sets the disabled dates descriptors. |
-| `specialDates` | `DateRangeDescriptor[]` | Gets\Sets the special dates descriptors. |
+| `disabledDates` | `DateRangeDescriptor[]` | Gets/Sets the disabled dates descriptors. |
+| `specialDates` | `DateRangeDescriptor[]` | Gets/Sets the special dates descriptors. |
 
 #### 出力
 <div class="divider--half"></div>
