@@ -169,7 +169,7 @@ $dark-input-group-theme: igx-input-group-theme(
 アプリの各コンポーネントにテーマを作成しました。最後に適用します。
 
 #### コンポーネント テーマの適用
-ホスト要素の`class` を**テーマ クラス**でバインドします。
+ホスト要素の `class` を**テーマ クラス**でバインドします。
 
 ```typescript
 @HostBinding("class")
