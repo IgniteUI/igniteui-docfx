@@ -231,8 +231,8 @@ public getDatePart(val: any, component: any, datePart: string) {
 | `formatViews` | `Object` | 日付を書式設定するために使用される `locale` プロパティと渡される書式ビュー。 |
 | `label` | `string` | デフォルト テキスト ラベルを変更します。 |
 | `labelVisibility` | `string ` | ラベルを表示または非表示にします。 |
-| `disabledDates` | `DateRangeDescriptor[]` | Gets/Sets the disabled dates descriptors. |
-| `specialDates` | `DateRangeDescriptor[]` | Gets/Sets the special dates descriptors. |
+| `disabledDates` | `DateRangeDescriptor[]` | 無効な日付記述子を取得または設定します。 |
+| `specialDates` | `DateRangeDescriptor[]` | 特別な日付記述子を取得または設定します。 |
 
 #### 出力
 
