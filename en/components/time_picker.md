@@ -151,6 +151,44 @@ And there we have it:
 </div>
 <div class="divider--half"></div>
 
+#### Templating Input Group
+
+We have seen how to make use of the IgxTimePickerComponent API (properties, events, methods) so that we configure the time picker per our requirements and interact with it programatically. Now we want to go further and customize its input group look.
+
+To do that we need to decorate a ng-template inside the time picker with igxTimePickerTemplate directive and use the context returned to customize the way the time picker's input is displayed. You can make use of the `value`, `displayTime` and the `openDialog`.
+
+In the folowing example we modify the default label "Time" add a second icon as suffix and a additional label:
+
+```html
+<igx-time-picker [value]="date">
+    <ng-template igxTimePickerTemplate let-openDialog="openDialog" let-value="value" let-displayTime="displayTime">
+        <igx-input-group (click)="openDialog()">
+            <igx-prefix>
+                <igx-icon>home</igx-icon>
+            </igx-prefix>
+            <label igxLabel>Home Time </label>
+            <input igxInput [value]="displayTime" />
+            <igx-suffix>
+                <igx-icon>access_alarm</igx-icon>
+            </igx-suffix>
+        </igx-input-group>
+        <label>{{value}}</label>
+    </ng-template>
+</igx-time-picker>
+```
+```typescript
+public date: Date = new Date(Date.now());
+```
+
+And there we have it:
+<div class="sample-container loading" style="height: 540px;">
+    <iframe id="time-picker-sample-5" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/timepicker-sample-5" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="time-picker-sample-5" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
+
 ### API Summary
 The following tables summarize some of the useful **igx-time-picker** component inputs, outputs and methods.
 
