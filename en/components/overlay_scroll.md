@@ -90,6 +90,6 @@ If the `modal` property is `true`, the element will be attached to the DOM foreg
 
 | Name            | Description                                                                     | Parameters |
 |-----------------|---------------------------------------------------------------------------------|------------|
-|initialize       | Initialize the strategy. Should be called once                                  |document, overlayService, id|
-|attach           | Attaches the strategy                                                           |-           |
-|detach           | Detaches the strategy                                                           |-           |
+|`initialize`     | Initialize the strategy. Should be called once                                  |`document, overlayService, id`|
+|`attach`         | Attaches the strategy                                                           |-           |
+|`detach`         | Detaches the strategy                                                           |-           |

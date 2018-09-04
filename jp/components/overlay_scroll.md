@@ -92,6 +92,6 @@ import { NoOpScrollStrategy } from "./scroll/NoOpScrollStrategy";
 
 | 名前            | 説明                                                                     | パラメーター |
 |-----------------|---------------------------------------------------------------------------------|------------|
-|initialize       | ストラテジーを初期化します。1 度のみ呼び出します。                                  |document, overlayService, id|
-|attach           | ストラテジーをアタッチします。                                                           |-           |
-|detach           | ストラテジーをデタッチします。                                                         |-           |
+|`initialize`       | ストラテジーを初期化します。1 度のみ呼び出します。                                  |`document, overlayService, id`|
+|`attach`           | ストラテジーをアタッチします。                                                           |-           |
+|`detach`           | ストラテジーをデタッチします。                                                         |-           |

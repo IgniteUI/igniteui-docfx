@@ -120,7 +120,7 @@ Great, we should now have a calendar with customized dates display that also cha
 </div>
 
 ### Events
-Lets build on top of that sample a bit. We will require the user to enter a date range that does not exceed 5 days. We need to change the `selection` mode of the calendar to "range" and prompt the user to correct the selection, if the range is not valid. To do this we will use the `onSelection` event:
+Let's build on top of that sample a bit. We will require the user to enter a date range that does not exceed 5 days. We need to change the `selection` mode of the calendar to "range" and prompt the user to correct the selection, if the range is not valid. To do this we will use the `onSelection` event:
 
 ```html
 <!-- app.component.html -->
@@ -234,6 +234,101 @@ Having implemented this conditional templating and date parsing we should get co
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="calendar-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
+### Disabled dates
+This section demonstrates the usage of `disabledDates` functionallity. Different `single dates` or `range` elements could be added to Array, and passed to the `disabledDates` descriptor.
+
+```typescript
+this.calendar.disabledDates = [{ type: DateRangeType.Between, dateRange: [
+    new Date(2018, 8, 2),
+    new Date(2018, 8, 8)
+])];
+```
+
+The `DateRangeType` is used to specify the range that is going to be disabled. For example, `DateRangeType.Between` will disable the dates between two specific dates in Array. Code snippet above.
+Check the API table below for all available `DateRangeType` values.
+
+This feature is covering the situations when we may need to restrict some dates to be selectable and focusable.
+
+Let's create a sample that is disabling dates within specific range of dates:
+
+```typescript
+export class CalendarSample6Component {
+    @ViewChild("calendar") public calendar: IgxCalendarComponent;
+    public today = new Date(Date.now());
+    public range = [
+        new Date(this.today.getFullYear(), this.today.getMonth(), 3),
+        new Date(this.today.getFullYear(), this.today.getMonth(), 8)
+    ];
+
+    public ngOnInit() {
+        this.calendar.disabledDates = [{ type: DateRangeType.Specific, dateRange: this.range }];
+    }
+}
+
+```
+
+This is the result.
+
+<div class="sample-container" style="height: 480px">
+    <iframe id="calendar-sample-6-iframe" src='{environment:demosBaseUrl}/calendar-sample-6' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="calendar-sample-6-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+
+
+### Special dates
+
+`Special dates` feature is using almost the same configuration principles as `Disabled dates`. The difference here is dates `styling` and `interaction`. You are able to select and focus `Special date`.
+
+Lets add a `Special dates` to our `igxCalendar`, we are going to create a `DateRangeDescriptor` item of type `DateRangeType.Specific` and pass array of dates as `dateRange`:
+
+```typescript
+export class CalendarSample7Component {
+    @ViewChild("calendar") public calendar: IgxCalendarComponent;
+    @ViewChild(IgxSnackbarComponent) public snackbar: IgxSnackbarComponent;
+    public range = [];
+
+    ...
+    public selectPTOdays(dates: Date[]) {
+        this.range = dates;
+    }
+
+    public submitPTOdays(eventArgs) {
+        this.calendar.specialDates =
+            [{ type: DateRangeType.Specific, dateRange: this.range)];
+
+        this.range.forEach((item) => {
+            this.calendar.selectDate(item);
+        });
+
+        ...
+    }
+}
+```
+
+```html
+<article class="sample-column calendar-wrapper">
+    <span>Request Time Off</span>
+    <igx-calendar #calendar
+        selection="multi"
+        (onSelection)="selectPTOdays($event)">
+    </igx-calendar>
+    <button igxButton="raised" (click)="submitPTOdays($event)">Submit Request</button>
+</article>
+```
+
+We are going to use the selected dates array to define `Special dates` descriptor.
+
+Result:
+
+<div class="sample-container" style="height: 540px">
+    <iframe id="calendar-sample-7-iframe" src='{environment:demosBaseUrl}/calendar-sample-7' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="calendar-sample-7-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+
 ### Keyboard navigation
 When the **igxCalendar** component is focused:
 - `PageUp` will move to the previous month.
@@ -263,6 +358,8 @@ When a day inside the current month is focused:
 | `formatOptions` | `Object` | The format options passed along with the `locale` property used for formatting the dates. Defaults are { day: 'numeric', month: 'short', weekday: 'short', year: 'numeric' }. |
 |`formatViews`| `Object`| Controls whether the date components in the different calendar views should be formatted according to the provided locale and formatOptions. Defaults are { day: false, month: true, year: false }. Does not affect rendering in the header. |
 | `vertical` | `boolean` | Controls the layout of the calendar component. When vertical is set to true the calendar header will be rendered to the side of the calendar body.|
+| `disabledDates` | `array` | Gets/Sets the disabled dates descriptors. |
+| `specialDates` | `array` | Gets/Sets the special dates descriptors. |
 #### Outputs
 <div class="divider--half"></div>
 
@@ -276,6 +373,16 @@ When a day inside the current month is focused:
 | Name   | Arguments | Return Type | Description |
 |:----------:|:------|:------|:------|
 | `selectDate` | `date: Date` or `Date[]` | `void` | Change the calendar selection. Calling this method will emit the `onSelection` event. |
+| `isDateDisabled` | `date: Date` | `boolean` | Checks whether a date is disabled. |
+| `isDateSpecial` | `date: Date` | `boolean` | Checks whether a date is special. |
+<div class="divider--half"></div>
+
+#### Enumerations
+<div class="divider--half"></div>
+
+| Name   | Description |
+|:----------:|:------|
+| `DateRangeType ` |  Constants After, Before, Between, Specific, Weekdays, Weekends of type `DateRangeType` |
 <div class="divider--half"></div>
 
 #### Template Context

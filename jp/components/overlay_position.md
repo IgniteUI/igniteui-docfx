@@ -135,10 +135,10 @@ import {AutoPositionStrategy, GlobalPositionStrategy, ConnectedPositioningStrate
 ### PositionSettings
 | 名前               | 型                        | 説明 |
 | :----------------- | :-------------------------- | :---------- |
-|target              | Point \| HTMLElement         | 使用するポジション ストラテジーと渡されたサイズに基づいて要素を配置します。          |
-|horizontalDirection | HorizontalAlignment         | コンポーネントが表示される方向。       |
-|verticalDirection   | VerticalAlignment           | コンポーネントが表示される方向。        |
-|horizontalStartPoint| HorizontalAlignment         | ターゲットの開始ポイント。                             |
-|verticalStartPoint  | VerticalAlignment           | ターゲットの開始ポイント。　　　　                             |
-|openAnimation       | AnimationReferenceMetadata  | オーバーレイが開いている間に適用されるアニメーション。               |
-|closeAnimation      | AnimationReferenceMetadata  | オーバーレイが閉じている間に適用されるアニメーション。              |
+|`target`              | `Point` \| `HTMLElement`         | 使用するポジション ストラテジーと渡されたサイズに基づいて要素を配置します。          |
+|`horizontalDirection` | `HorizontalAlignment`         | コンポーネントが表示される方向。       |
+|`verticalDirection`   | `VerticalAlignment`           | コンポーネントが表示される方向。        |
+|`horizontalStartPoint`| `HorizontalAlignment`         | ターゲットの開始ポイント。                             |
+|`verticalStartPoint`  | `VerticalAlignment`           | ターゲットの開始ポイント。　　　　                             |
+|`openAnimation`       | `AnimationReferenceMetadata`  | オーバーレイが開いている間に適用されるアニメーション。               |
+|`closeAnimation`      | `AnimationReferenceMetadata`  | オーバーレイが閉じている間に適用されるアニメーション。              |

@@ -149,6 +149,8 @@
       href: themes/global-theme.md
     - name: Componenent Themes
       href: themes/component-themes.md
+    - name: Theming Demo
+      href: themes/theming-demo.md
     - name: Typography
       href: themes/typography.md
 - name: Shadows
@@ -192,6 +194,9 @@
   href: for_of.md
 - name: Chip
   href: chip.md
+  new: true
+- name: Text Highlight
+  href: texthighlight.md
   new: true
 - name: Interactions
   header: true

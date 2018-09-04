@@ -50,6 +50,28 @@ The appearance of chart markers is managed through the `markerType`, `markerBrus
 </igx-category-chart>
 ```
 
+### Configuring Chart Titles and Subtitles
+
+The title and subtitle feature of the category chart component allows you to add information to the top section of the chart.
+When adding a title or subtitle to the chart, the content of the chart automatically resizes allowing for the title and subtitle information.
+
+You can customize the look and feel of the category chart’s subtitle and title in many different ways such as applying different font styles, margins, and alignment as demonstrated in the following code example.
+
+
+```html
+<igx-category-chart
+    [dataSource]="data"
+    width="700px"
+    height="500px"
+    chartTitle="Energy Use Per Country"
+    titleTextColor = "Red"
+    titleTextStyle="20pt Verdana"
+    subtitle="Results over a two year periods"
+    subtitleTextColor = "Blue"
+    subtitleTextStyle = "10pt Verdana">
+</igx-category-chart>
+```
+
 ### Transition In Animations
 
 This feature allows you to animate the series as it loads a new data source. The available animation differs depending on the type of series involved. For example, the column series animates by rising from the x-axis, a line series animates by drawing from the y-axis.

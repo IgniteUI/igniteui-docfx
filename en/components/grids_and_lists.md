@@ -8,7 +8,7 @@ _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Nati
   <div class="feature__details">
     <h2 id="the-fastest-data-angular-data-grid">The Fastest Angular Data Grid</h2>
     <p>Ignite UI for Angular’s [Data Grid](grid.md) is built for optimization, speed, high-performance, and smooth handling of large data sets. With an updated virtualization directive and powerful grid features, your data grid is ready for no-lag scrolling through millions of data points.</p>
-    <a class="cta-btn" href="https://www.infragistics.com/products/ignite-ui-angular/getting-started">get started for free</a>
+    <a class="cta-btn" href="https://www.infragistics.com/products/ignite-ui-angular/download">get started for free</a>
   </div>
   <div class="feature__image feature__image--right">
     <img src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid.svg" alt="Ignite UI for Angular's Data Grid optimized for speed and performance.">
@@ -107,9 +107,10 @@ _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Nati
   <div class="feature">
     <div class="feature__image feature__image--right">
       <img class="b-lazy" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-lazy-load.png" data-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-column-hiding-768.jpg" data-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-column-hiding-480.jpg 480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-column-hiding-768.jpg 768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-column-hiding-1100.jpg 1100w" sizes="(min-width: 1800px) 575px,(max-width: 1799px) and (min-width: 1200px) 50vw,(max-width: 1199px) and (min-width: 992px) 33vw,(max-width: 991px) and (min-width: 768px) 50vw, 100vw" alt="Column hiding in the Angular Data Grid.">
+      <a href="grid_column_hiding.md" class="feature__more-details">Setting up Column Hiding in the data grid</a>
     </div>
     <div class="feature__details">
-      <h3 id="cell-hiding">Column Hiding</h3>
+      <h3 id="cell-hiding">[Column Hiding](grid_column_hiding.md)</h3>
       <p>Allows users to hide and show columns directly through the grid UI, via our API, or define the column hiding UI as a separate component and place it anywhere they want on the page. </p>
     </div>
   </div>
