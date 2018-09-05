@@ -125,6 +125,42 @@ Here is the formatted date:
 </div>
 <div class="divider--half"></div>
 
+#### Templating Input Group
+
+The Date Picker's input group look can be customized. To do that we need to decorate a ng-template inside the date picker with `IgxDatePickerTemplate` directive and use the context returned to customize the way the date picker's input is displayed. You can make use of `value`, `displayData` and the `openDialog`.
+
+In the following example we modify the default label "Date" add a second icon as suffix and an additional label:
+
+```html
+<igx-date-picker [value]="date">
+    <ng-template igxDatePickerTemplate let-openDialog="openDialog" let-value="value" let-displayData="displayData">
+        <igx-input-group (click)="openDialog()">
+            <igx-prefix>
+                <igx-icon>favorite</igx-icon>
+            </igx-prefix>
+            <label igxLabel>My Custom Date<</label>
+            <input igxInput [value]="displayData" />
+            <igx-suffix>
+                <igx-icon>today</igx-icon>
+            </igx-suffix>
+        </igx-input-group>
+        <label>{{value}}</label>
+    </ng-template>
+</igx-date-picker>
+```
+```typescript
+public date: Date = new Date(Date.now());
+```
+
+Here is the retemplated input group:
+<div class="sample-container loading" style="height: 540px;">
+    <iframe id="date-picker-sample-6" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/datepicker-sample-6" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="date-picker-sample-6" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
+
 ### Internationalization
 The `IgxDatePickerComponent` supports locales. You can set them using the `locale` input. Using the `IgxCalendarComponent` templates for header (`igxCalendarHeader`) and subheader (`igxCalendarSubheader`), you can specify the look of your header and subheader. More information on how to use these templates you can find in the `IgxCalendarComponent` [documentation](calendar.md). Here is how a date picker with Japanese locale definition would look like:
 
