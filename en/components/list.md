@@ -248,7 +248,7 @@ public contacts = [{
 }];
 ```
 
-Cool, now let's update the template for our contacts list to to show the avatar and icon:
+Cool, now let's update the template for our contacts list to show the avatar and icon:
 
 ```html
 <!--contacts.component.html-->
@@ -331,6 +331,148 @@ And here's the result of all that work:
 </div>
 <div class="divider--half"></div>
 
+#### List Items Panning
+
+Now that we have such a beautiful list with contacts and their phone numbers, why don't we implement an ability to call the contacts or send them a message.
+The **IgxList** has the perfect solution for this - list item panning.
+To do this you have to implement the following steps:
+- Enable the panning using the `allowLeftPanning` and the `allowRightPanning` properties
+- Define templates for the left and right panning
+- Handle the list item's panning events and perform the desired action
+
+Here is an example of how to do this:
+
+```html
+<!-- contacts.component.html -->
+
+<igx-switch [checked]="true" #switchKeepItem style="margin-bottom:20px">Keep Item</igx-switch>
+
+<igx-list [allowLeftPanning]="true" [allowRightPanning]="true"
+  (onLeftPan)="leftPanPerformed($event)" (onRightPan)="rightPanPerformed($event)">
+  <ng-template igxListItemLeftPanning>
+    <div class="listItemLeftPanningStyle">
+      <igx-icon name="sms" [color]="white" style="margin-left:10px"></igx-icon>Message
+    </div>
+  </ng-template>
+  <ng-template igxListItemRightPanning>
+    <div class="listItemRightPanningStyle">
+      <igx-icon name="call" [color]="white" style="margin-right:10px"></igx-icon>Dial
+    </div>
+  </ng-template>
+  <igx-list-item isHeader="true">Contacts</igx-list-item>
+  <igx-list-item #item *ngFor="let contact of contacts">
+    <div class="item-container">
+      <div class="contact">
+        <igx-avatar [src]="contact.photo" roundShape="true"></igx-avatar>
+        <div class="contact__info">
+          <span class="name">{{ contact.name }}</span>
+          <span class="phone">{{ contact.phone }}</span>
+        </div>
+      </div>
+      <igx-icon name="star" [color]="contact.isFavorite ? 'orange' : 'lightgray'"
+        (click)="toggleFavorite(item)"></igx-icon>
+    </div>
+  </igx-list-item>
+</igx-list>
+
+<igx-toast #toast></igx-toast>
+```
+
+The above example is using some CSS styles which may be found here:
+
+```css
+/* contacts.component.css */
+
+igx-icon {
+    cursor: pointer;
+    user-select: none;
+}
+
+.item-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact {
+    display: flex;
+    flex: 1 0 240px;
+    align-items: center;
+}
+
+.contact__info {
+    display: flex;
+    flex-flow: column nowrap;
+    margin-left: 24px;
+}
+
+.name {
+    font-weight: 600;
+}
+
+.phone {
+    font-size: 0.875em;
+}
+
+.listItemLeftPanningStyle {
+    display: flex;
+    flex-direction: row-reverse;
+    background-color:orange;
+    color: white;
+    width: 100%;
+    padding-right: 10px;
+    align-items: center;
+}
+
+.listItemRightPanningStyle {
+    display: flex;
+    flex-direction: row;
+    background-color:limegreen;
+    color: white;
+    width: 100%;
+    padding-left: 10px;
+    align-items: center;
+}
+```
+And finally here is the typescript code:
+
+```typescript
+// contacts.component.ts
+
+...
+@ViewChild("toast")
+public toast: IgxToastComponent;
+
+@ViewChild("switchKeepItem")
+public switchKeepItem: any;
+
+public leftPanPerformed(args) {
+  args.keepItem = this.switchKeepItem.checked;
+  this.toast.message = "Composing message for "  + this.contacts[args.item.index - 1].name;
+  this.toast.show();
+}
+
+public rightPanPerformed(args) {
+  args.keepItem = this.switchKeepItem.checked;
+  this.toast.message = "Calling " + this.contacts[args.item.index - 1].name;
+  this.toast.show();
+}
+...
+```
+
+> [!NOTE]
+> When panning list items there is a threshold which must be reached in order for the panning events to be emitted. You can change the threshold using the **IgxList's** `panEndTriggeringThreshold` property. By default this property has a value of 0.5 which means 50% of list item's width.
+
+Now try panning the list items for yourself:
+
+<div class="sample-container loading" style="height: 477px">
+<iframe id="list-sample-7-final-iframe" src='{environment:demosBaseUrl}/list-sample-7' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-sample-7-final-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
+
 ### Filtering
 
 Our list is looking good, but wouldn't it be even better if we could search for contacts by name? We can easily achieve that by using our filtering pipe.
@@ -407,6 +549,7 @@ The following inputs are available on the **igx-list** component:
 | `isLoading` | Boolean | If `true` the loading template will be used, if `false` the empty list template will be used. |
 | `dataLoadingTemplate` | IgxDataLoadingTemplateDirective | The custom template to be used when the list is empty and `isLoading` is `true`. |
 | `emptyListTemplate` | IgxEmptyListTemplateDirective | The custom template to be used when the list is empty and `isLoading` is `false`. |
+| `panEndTriggeringThreshold` | Number | Specifies the threshold after which a panning event is emitted. By default this property has a value of 0.5 which means 50% of list item's width. |
 
 <div class="divider"></div>
 
@@ -423,8 +566,8 @@ The following outputs are available on the **igx-list** component:
 | Name | Type | Description |
 | :--- | :--- | :--- |
 | `onPanStateChange` | EventEmitter | Emits an event with the current list when pan gesture is executed on list item. |
-| `onLeftPan` | EventEmitter | Emits an event with the current list when left pan gesture is executed on list item. |
-| `onRightPan` | EventEmitter | Emits an event with the current list when right pan gesture is executed on list item. |
+| `onLeftPan` | EventEmitter | Emits an event with the current list when left pan gesture is executed on list item and provides an argument of type `IListItemPanningEventArgs`. |
+| `onRightPan` | EventEmitter | Emits an event with the current list when right pan gesture is executed on list item and provides an argument of type `IListItemPanningEventArgs`. |
 | `onItemClicked` | EventEmitter | Emits an event with the current list when a list item has been clicked. |
 
 <div class="divider"></div>
@@ -445,6 +588,15 @@ The following properties are available on the **igx-list-item** component:
 | `index` | number | Retrieve the index of the list item. |
 | `panState` | IgxListPanState | Retrieve the pan state of the list item. |
 | `list` | IgxListComponent | Retrieve the list that is associated with the list item. |
+
+<div class="divider"></div>
+
+The following properties are available on the `IListItemPanningEventArgs` type:
+| Name | Type | Description |
+| :--- | :--- | :--- |
+| `item` | IgxListItemComponent | A reference to the **igx-list-item** being panned. |
+| `direction` | IgxListPanState | Specifies the direction at which the **igx-list-item** has been panned. |
+| `keepItem` | Boolean | If `true` the list item will be kept in the **IgxList** after it has been panned. If `false` (by default) the list item will be removed form the **IgxList** after it has been panned. |
 
 <div class="divider"></div>
 
