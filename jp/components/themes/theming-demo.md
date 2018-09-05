@@ -111,7 +111,7 @@ $dark-theme-palette: igx-palette($primary: $dark-color, $secondary: $orange-colo
 
 ### テーマの設定
 
-**テーマの設定**は、プライマリおよびセカンダリの色の異なるシェードをコンポーネント パーツに適用します。[**Ignite UI for Angular Themes**](https://staging.infragistics.local/products/ignite-ui-angular/docs/sass/) のヘルプでスタイル設定可能なコンポーネント パーツを確認できます。
+**テーマの設定**は、プライマリおよびセカンダリの色の異なるシェードをコンポーネント パーツに適用します。[**Ignite UI for Angular Themes**](https://www.infragistics.com/products/ignite-ui-angular/docs/sass/) のヘルプでスタイル設定可能なコンポーネント パーツを確認できます。
 
 適用する **コンポーネント テーマ**を定義します。
 
@@ -322,14 +322,14 @@ export class ThemeChooserSampleComponent implements OnInit {
 ### その他のリソース
 <div class="divider--half"></div>
 
-* [グローバル テーマ](global-theme.md)
-* [コンポーネント テーマ](component-themes.md)
-* [カラー パレット](palette.md)
-* [グリッド](grid.md)
-* [ページング](grid_paging.md)
-* [フィルタリング](grid_filtering.md)
-* [ダイアログ](dialog.md)
-* [インプット グループ](input_group.md)
-* [スナックバー](snackbar.md)
-* [ボタン](button.md)
-* [ボタン グループ](button_group.md)
+* [Global Theme](global-theme.md)
+* [Component Themes](component-themes.md)
+* [Color Palette](palette.md)
+* [Grid](grid.md)
+* [Paging](grid_paging.md)
+* [Filtering](grid_filtering.md)
+* [Dialog](dialog.md)
+* [Input Group](input_group.md)
+* [Snackbar](snackbar.md)
+* [Button](button.md)
+* [Button Group](button_group.md)

@@ -282,15 +282,14 @@ export class CalendarSample6Component {
     <iframe id="calendar-sample-6-iframe" src='{environment:demosBaseUrl}/calendar-sample-6' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="calendar-sample-6-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="calendar-sample-6-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
 </div>
 
 
 ### 特定の日付
 
-`Special dates` 機能は、`Disabled dates` とほとんど同じ構成を使用します。違いは、日付の `styling` と `interaction` です。
+`Special dates` 機能は、`Disabled dates` とほとんど同じ構成を使用します。違いは、日付の `styling` と `interaction` です。また `Special date` の選択やフォーカスが可能です。
 
-また `Special date` の選択やフォーカスが可能です。
 `Special dates` を `igxCalendar` に追加し、`DateRangeType.Specific` の `DateRangeDescriptor` 項目を作成して `dateRange` で日付の配列を渡します。
 
 ```typescript
@@ -336,7 +335,7 @@ export class CalendarSample7Component {
     <iframe id="calendar-sample-7-iframe" src='{environment:demosBaseUrl}/calendar-sample-7' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="calendar-sample-7-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="calendar-sample-7-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
 </div>
 
 ### キーボード ナビゲーション
@@ -371,8 +370,8 @@ export class CalendarSample7Component {
 | `formatOptions` | `Object` | 日付を書式設定するために使用される `locale` プロパティと渡される書式オプション。デフォルト値は { day: 'numeric', month: 'short', weekday: 'short', year: 'numeric' } です。 |
 |`formatViews`| `Object`| カレンダー ビューの日付コンポーネントが提供された locale および formatOptions に基づいて書式設定するかどうかを制御します。デフォルト値は { day: false, month: true, year: false } です。ヘッダーの描画に影響しません。|
 | `vertical` | `boolean` | カレンダー コンポーネントのレイアウトを制御します。`vertical` が true に設定される場合、カレンダー ヘッダーはカレンダーの隣に描画されます。|
-| `disabledDates` | `DateRangeDescriptor[]` | Gets/Sets the disabled dates descriptors. |
-| `specialDates` | `DateRangeDescriptor[]` | Gets/Sets the special dates descriptors. |
+| `disabledDates` | `DateRangeDescriptor[]` | 無効な日付記述子を取得または設定します。 |
+| `specialDates` | `DateRangeDescriptor[]` | 特別な日付記述子を取得または設定します。 |
 
 #### 出力
 <div class="divider--half"></div>
