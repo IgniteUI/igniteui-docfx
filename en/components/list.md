@@ -218,7 +218,7 @@ export class AppModule {}
 Next, we need to add some more information to our contact object, like a `photo` source for our avatar and a `isFavorite` property to indicate the contact's favorite status.
 
 ```typescript
-// contacts.comoponent.ts
+// contacts.component.ts
 
 public contacts = [{
     name: 'Terrance Orta',
@@ -596,7 +596,7 @@ The following properties are available on the `IListItemPanningEventArgs` type:
 | :--- | :--- | :--- |
 | `item` | IgxListItemComponent | A reference to the **igx-list-item** being panned. |
 | `direction` | IgxListPanState | Specifies the direction at which the **igx-list-item** has been panned. |
-| `keepItem` | Boolean | If `true` the list item will be kept in the **IgxList** after it has been panned. If `false` (by default) the list item will be removed form the **IgxList** after it has been panned. |
+| `keepItem` | Boolean | If `true` the list item will be kept in the **IgxList** after it has been panned. If `false` (by default) the list item will be removed from the **IgxList** after it has been panned. |
 
 <div class="divider"></div>
 
