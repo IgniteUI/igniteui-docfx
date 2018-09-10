@@ -323,11 +323,11 @@ export class ThemeChooserSampleComponent implements OnInit {
 <div class="divider--half"></div>
 
 * [Global Theme](global-theme.md)
-* [Component Themes](component-themes.md)
-* [Color Palette](palette.md)
+* [コンポーネント テーマ](component-themes.md)
+* [カラー パレット](palette.md)
 * [Grid](grid.md)
-* [Paging](grid_paging.md)
-* [Filtering](grid_filtering.md)
+* [ページング](grid_paging.md)
+* [フィルタリング](grid_filtering.md)
 * [Dialog](dialog.md)
 * [Input Group](input_group.md)
 * [Snackbar](snackbar.md)
