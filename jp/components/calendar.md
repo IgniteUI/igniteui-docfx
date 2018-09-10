@@ -391,12 +391,12 @@ export class CalendarSample7Component {
 | `isDateSpecial` | `date: Date` | `boolean` | 日付が特別かどうかを確認します。 |
 <div class="divider--half"></div>
 
-#### Enumerations
+#### 列挙体
 <div class="divider--half"></div>
 
 | 名前   | 説明 |
 |:----------:|:------|
-| `DateRangeType ` |  型 `DateRangeType` の定数 After、Before, Between、Specific、Weekdays、 Weekends。 |
+| `DateRangeType ` |  型 `DateRangeType` の After、Before, Between、Specific、Weekdays、 Weekends の定数。 |
 
 <div class="divider--half"></div>
 

@@ -1,27 +1,27 @@
----
-title: ƒe[ƒ} ƒfƒ‚
-_description: Ignite UI for Angular ‚ÍASASS ‹@”\‚Æ mixins ‚ÅƒAƒvƒŠƒP[ƒVƒ‡ƒ“‘S‘Ì‚¨‚æ‚Ñ“Á’è•”•ª‚ğÅ¬ŒÀ‚ÌƒR[ƒh‚ÅƒXƒ^ƒCƒ‹İ’è‚Å‚«‚Ü‚·B
-_keywords: Ignite UI for Angular, Angular Theming ƒRƒ“ƒ|[ƒlƒ“ƒg, Angular Theming, Ignite UI for Angular ƒRƒ“ƒ|[ƒlƒ“ƒg, Ignite for Agular Themes, ƒOƒ[ƒoƒ‹ ƒe[ƒ}, ƒRƒ“ƒ|[ƒlƒ“ƒg ƒe[ƒ}
+ï»¿---
+title: ãƒ†ãƒ¼ãƒ ãƒ‡ãƒ¢
+_description: Ignite UI for Angular ã¯ã€SASS æ©Ÿèƒ½ã¨ mixins ã§ã‚¢ãƒ—ãƒªã‚±ãƒ¼ã‚·ãƒ§ãƒ³å…¨ä½“ãŠã‚ˆã³ç‰¹å®šéƒ¨åˆ†ã‚’æœ€å°é™ã®ã‚³ãƒ¼ãƒ‰ã§ã‚¹ã‚¿ã‚¤ãƒ«è¨­å®šã§ãã¾ã™ã€‚
+_keywords: Ignite UI for Angular, Angular Theming ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆ, Angular Theming, Ignite UI for Angular ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆ, Ignite for Agular Themes, ã‚°ãƒ­ãƒ¼ãƒãƒ« ãƒ†ãƒ¼ãƒ, ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆ ãƒ†ãƒ¼ãƒ
 _language: ja
 ---
 
-## ƒe[ƒ} ƒfƒ‚
-**Ignite UI for Angular Theming** ‚ÍAƒOƒ[ƒoƒ‹İ’è‚ÅƒAƒvƒŠƒP[ƒVƒ‡ƒ“‘S‘Ì‚Ìƒe[ƒ}‚ğƒJƒXƒ^ƒ}ƒCƒY‚µ‚Ä‚·‚×‚Ä‚ÌŠù’è‚Ì—v‘f‚É“K—pA‚ ‚é‚¢‚ÍƒRƒ“ƒ|[ƒlƒ“ƒg•Ê‚Éƒe[ƒ}‚ğ‚»‚ê‚¼‚ê“K—p‚·‚é‚±‚Æ‚ª‚Å‚«‚Ü‚·B
+## ãƒ†ãƒ¼ãƒ ãƒ‡ãƒ¢
+**Ignite UI for Angular Theming** ã¯ã€ã‚°ãƒ­ãƒ¼ãƒãƒ«è¨­å®šã§ã‚¢ãƒ—ãƒªã‚±ãƒ¼ã‚·ãƒ§ãƒ³å…¨ä½“ã®ãƒ†ãƒ¼ãƒã‚’ã‚«ã‚¹ã‚¿ãƒã‚¤ã‚ºã—ã¦ã™ã¹ã¦ã®æ—¢å®šã®è¦ç´ ã«é©ç”¨ã€ã‚ã‚‹ã„ã¯ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆåˆ¥ã«ãƒ†ãƒ¼ãƒã‚’ãã‚Œãã‚Œé©ç”¨ã™ã‚‹ã“ã¨ãŒã§ãã¾ã™ã€‚
 
-### ƒfƒ‚
+### ãƒ‡ãƒ¢
 <div class="sample-container" style="height: 650px">
     <iframe id="theme-chooser-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/theme-chooser" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="theme-chooser-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz ‚ÅŠJ‚­
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="theme-chooser-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz ã§é–‹ã
     </button>
 </div>
 <div class="divider--half"></div>
 
 
-### ƒfƒtƒHƒ‹ƒg ƒe[ƒ}
+### ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆ ãƒ†ãƒ¼ãƒ
 
-**ƒfƒtƒHƒ‹ƒg‚Ìƒe[ƒ}**‚ÍA**Ignite UI for Angular ƒRƒ“ƒgƒ[ƒ‹**‚Ì‚·‚×‚Ä‚ÌƒRƒ“ƒ|[ƒlƒ“ƒg‚ÌƒXƒ^ƒCƒ‹‚ğİ’è‚µ‚Ü‚·B‚Í‚¶‚ß‚É `styles.scss` ƒtƒ@ƒCƒ‹‚Éİ’è‚µ‚Ü‚·B
+**ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆã®ãƒ†ãƒ¼ãƒ**ã¯ã€**Ignite UI for Angular ã‚³ãƒ³ãƒˆãƒ­ãƒ¼ãƒ«**ã®ã™ã¹ã¦ã®ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆã®ã‚¹ã‚¿ã‚¤ãƒ«ã‚’è¨­å®šã—ã¾ã™ã€‚ã¯ã˜ã‚ã« `styles.scss` ãƒ•ã‚¡ã‚¤ãƒ«ã«è¨­å®šã—ã¾ã™ã€‚
 
 ```scss
 // import first the IgniteUI themes library
@@ -34,23 +34,23 @@ _language: ja
 @include igx-theme($default-palette);
 ```
 
-ˆÈ‰º‚Íã‹LƒR[ƒh ƒXƒjƒyƒbƒg‚ÌŒ‹‰Ê‚Å‚·B
+ä»¥ä¸‹ã¯ä¸Šè¨˜ã‚³ãƒ¼ãƒ‰ ã‚¹ãƒ‹ãƒšãƒƒãƒˆã®çµæœã§ã™ã€‚
 
 <div class="sample-container" style="height: 650px">
     <iframe id="default-theme-sample-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/default-theme-sample" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="default-theme-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}"> stackblitz ‚ÅŠJ‚­
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="default-theme-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}"> stackblitz ã§é–‹ã
     </button>
 </div>
 <div class="divider--half"></div>
 
-ƒRƒ“ƒ|[ƒlƒ“ƒg‚ÌŠOŠÏ‚ğ•ÏX‚µ‚½‚¢ê‡‚â**ƒfƒtƒHƒ‹ƒg ƒe[ƒ}**‚ªƒAƒvƒŠƒP[ƒVƒ‡ƒ“‚Ì UI ‚É‡‚í‚È‚¢ê‡‚ÍA**Ignite UI for Angular Theming** ‚ğg—p‚µ‚Ä‘½”‚Ì CSS ƒtƒ@ƒCƒ‹‚ğ‘‚©‚¸‚ÉƒXƒ^ƒCƒ‹İ’è‚ªŠÈ’P‚É‚Å‚«‚Ü‚·B
+ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆã®å¤–è¦³ã‚’å¤‰æ›´ã—ãŸã„å ´åˆã‚„**ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆ ãƒ†ãƒ¼ãƒ**ãŒã‚¢ãƒ—ãƒªã‚±ãƒ¼ã‚·ãƒ§ãƒ³ã® UI ã«åˆã‚ãªã„å ´åˆã¯ã€**Ignite UI for Angular Theming** ã‚’ä½¿ç”¨ã—ã¦å¤šæ•°ã® CSS ãƒ•ã‚¡ã‚¤ãƒ«ã‚’æ›¸ã‹ãšã«ã‚¹ã‚¿ã‚¤ãƒ«è¨­å®šãŒç°¡å˜ã«ã§ãã¾ã™ã€‚
 
-### ŠJn
+### é–‹å§‹
 
-‚Í‚¶‚ß‚ÉA**SASS functions ‚Æ mixins** ‚ª“ü‚êq‚É‚È‚Á‚Ä‚¢‚é**ƒe[ƒ} ƒ†[ƒeƒBƒŠƒeƒB**‚ğƒCƒ“ƒ|[ƒg‚µ‚Ü‚·B
-—‘z“I‚ÈƒR[ƒh\¬‚ÍA•ÊX‚ÌƒfƒBƒŒƒNƒgƒŠ**ƒe[ƒ} ƒƒWƒbƒN**‚É”z’u‚·‚é‚±‚Æ‚Å‚·B
+ã¯ã˜ã‚ã«ã€**SASS functions ã¨ mixins** ãŒå…¥ã‚Œå­ã«ãªã£ã¦ã„ã‚‹**ãƒ†ãƒ¼ãƒ ãƒ¦ãƒ¼ãƒ†ã‚£ãƒªãƒ†ã‚£**ã‚’ã‚¤ãƒ³ãƒãƒ¼ãƒˆã—ã¾ã™ã€‚
+ç†æƒ³çš„ãªã‚³ãƒ¼ãƒ‰æ§‹æˆã¯ã€åˆ¥ã€…ã®ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒª**ãƒ†ãƒ¼ãƒ ãƒ­ã‚¸ãƒƒã‚¯**ã«é…ç½®ã™ã‚‹ã“ã¨ã§ã™ã€‚
 
 ```scss
 // styles/dark-theme.scss
@@ -60,10 +60,10 @@ _language: ja
 ```
 <div class="divider--half"></div>
 
-Ÿ‚ÌƒXƒeƒbƒv‚ÍAƒJƒXƒ^ƒ}ƒCƒY‚·‚éƒRƒ“ƒ|[ƒlƒ“ƒg‚Æ‘Î‰‚·‚éƒe[ƒ}‚ğ‚·‚×‚ÄƒCƒ“ƒ|[ƒg‚µ‚Ü‚·B
+æ¬¡ã®ã‚¹ãƒ†ãƒƒãƒ—ã¯ã€ã‚«ã‚¹ã‚¿ãƒã‚¤ã‚ºã™ã‚‹ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆã¨å¯¾å¿œã™ã‚‹ãƒ†ãƒ¼ãƒã‚’ã™ã¹ã¦ã‚¤ãƒ³ãƒãƒ¼ãƒˆã—ã¾ã™ã€‚
 
-ˆÈ‰º‚ªƒAƒvƒŠ‚ÉŠÜ‚Ü‚ê‚Ü‚·B
-- **Igx-Grid** ‚Ì `paging` ‚Æ **ƒtƒBƒ‹ƒ^ƒŠƒ“ƒO**B
+ä»¥ä¸‹ãŒã‚¢ãƒ—ãƒªã«å«ã¾ã‚Œã¾ã™ã€‚
+- **Igx-Grid** ã® `paging` ã¨ **ãƒ•ã‚£ãƒ«ã‚¿ãƒªãƒ³ã‚°**ã€‚
 
 ```scss
 // Import grid component and theme styles
@@ -79,7 +79,7 @@ _language: ja
 @import '~igniteui-angular/lib/core/styles//components/grid-filtering/grid-filtering-theme';
 
 ```
-- **Igx-Dialog** ‚Ì‘g‚İ‚İ `IgxInputGroupComponent`B
+- **Igx-Dialog** ã®çµ„ã¿è¾¼ã¿ `IgxInputGroupComponent`ã€‚
 
 ```scss
 
@@ -93,7 +93,7 @@ _language: ja
 
 ```
 
-ƒRƒ“ƒ|[ƒlƒ“ƒg‚Ìƒe[ƒ}İ’è‚É•K—v‚È‚·‚×‚Ä‚Ì‹@”\‚ª‚ ‚é‚½‚ßAg—p‚·‚é**FƒpƒŒƒbƒg**‚ğ’è‹`‚·‚é‚¾‚¯‚Å‚·B
+ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆã®ãƒ†ãƒ¼ãƒè¨­å®šã«å¿…è¦ãªã™ã¹ã¦ã®æ©Ÿèƒ½ãŒã‚ã‚‹ãŸã‚ã€ä½¿ç”¨ã™ã‚‹**è‰²ãƒ‘ãƒ¬ãƒƒãƒˆ**ã‚’å®šç¾©ã™ã‚‹ã ã‘ã§ã™ã€‚
 
 ```scss
 // Define the primary color
@@ -106,19 +106,19 @@ $orange-color: #FFA500;
 $dark-theme-palette: igx-palette($primary: $dark-color, $secondary: $orange-color);
 ```
 
-Ÿ‚ÉƒAƒvƒŠ‚ÉV‚µ‚¢ƒXƒ^ƒCƒ‹‚ğİ’è‚µ‚Ü‚·B
+æ¬¡ã«ã‚¢ãƒ—ãƒªã«æ–°ã—ã„ã‚¹ã‚¿ã‚¤ãƒ«ã‚’è¨­å®šã—ã¾ã™ã€‚
 <div class="divider--half"></div>
 
-### ƒe[ƒ}‚Ìİ’è
+### ãƒ†ãƒ¼ãƒã®è¨­å®š
 
-**ƒe[ƒ}‚Ìİ’è**‚ÍAƒvƒ‰ƒCƒ}ƒŠ‚¨‚æ‚ÑƒZƒJƒ“ƒ_ƒŠ‚ÌF‚ÌˆÙ‚È‚éƒVƒF[ƒh‚ğƒRƒ“ƒ|[ƒlƒ“ƒg ƒp[ƒc‚É“K—p‚µ‚Ü‚·B[**Ignite UI for Angular Themes**](https://www.infragistics.com/products/ignite-ui-angular/docs/sass/) ‚Ìƒwƒ‹ƒv‚ÅƒXƒ^ƒCƒ‹İ’è‰Â”\‚ÈƒRƒ“ƒ|[ƒlƒ“ƒg ƒp[ƒc‚ğŠm”F‚Å‚«‚Ü‚·B
+**ãƒ†ãƒ¼ãƒã®è¨­å®š**ã¯ã€ãƒ—ãƒ©ã‚¤ãƒãƒªãŠã‚ˆã³ã‚»ã‚«ãƒ³ãƒ€ãƒªã®è‰²ã®ç•°ãªã‚‹ã‚·ã‚§ãƒ¼ãƒ‰ã‚’ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆ ãƒ‘ãƒ¼ãƒ„ã«é©ç”¨ã—ã¾ã™ã€‚[**Ignite UI for Angular Themes**](https://www.infragistics.com/products/ignite-ui-angular/docs/sass/) ã®ãƒ˜ãƒ«ãƒ—ã§ã‚¹ã‚¿ã‚¤ãƒ«è¨­å®šå¯èƒ½ãªã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆ ãƒ‘ãƒ¼ãƒ„ã‚’ç¢ºèªã§ãã¾ã™ã€‚
 
-“K—p‚·‚é **ƒRƒ“ƒ|[ƒlƒ“ƒg ƒe[ƒ}**‚ğ’è‹`‚µ‚Ü‚·B
+é©ç”¨ã™ã‚‹ **ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆ ãƒ†ãƒ¼ãƒ**ã‚’å®šç¾©ã—ã¾ã™ã€‚
 
-#### ƒRƒ“ƒ|[ƒlƒ“ƒg ƒe[ƒ}‚Ì’è‹`
+#### ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆ ãƒ†ãƒ¼ãƒã®å®šç¾©
 <div class="divider--half"></div>
 
-- [**Igx-Grid-Theme**](https://staging.infragistics.local/products/ignite-ui-angular/docs/sass/#function-igx-grid-theme)
+- [**Igx-Grid-Theme**](https://www.infragistics.com/products/ignite-ui-angular/docs/sass/#function-igx-grid-theme)
 
 ```scss
 // Define dark theme for the dialog
@@ -134,7 +134,7 @@ $dark-grid-theme: igx-grid-theme(
 );
 ```
 
-- [**Igx-Dialog-Theme**](https://staging.infragistics.local/products/ignite-ui-angular/docs/sass/#themes-function-igx-dialog-theme)
+- [**Igx-Dialog-Theme**](https://www.infragistics.com/products/ignite-ui-angular/docs/sass/#themes-function-igx-dialog-theme)
 
 ```scss
 
@@ -148,7 +148,7 @@ $dark-dialog-theme: igx-dialog-theme(
 
 ```
 
-- [**Igx-Input-Group-Theme**](https://staging.infragistics.local/products/ignite-ui-angular/docs/sass/#themes-function-igx-input-group-theme)
+- [**Igx-Input-Group-Theme**](https://www.infragistics.com/products/ignite-ui-angular/docs/sass/#themes-function-igx-input-group-theme)
 
 ```scss
 // Define dark theme for the input-group
@@ -164,12 +164,12 @@ $dark-input-group-theme: igx-input-group-theme(
 );
 ```
 
-‚±‚ê‚ÅŠ®—¹‚µ‚Ü‚µ‚½B
+ã“ã‚Œã§å®Œäº†ã—ã¾ã—ãŸã€‚
 
-ƒAƒvƒŠ‚ÌŠeƒRƒ“ƒ|[ƒlƒ“ƒg‚Éƒe[ƒ}‚ğì¬‚µ‚Ü‚µ‚½BÅŒã‚É“K—p‚µ‚Ü‚·B
+ã‚¢ãƒ—ãƒªã®å„ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆã«ãƒ†ãƒ¼ãƒã‚’ä½œæˆã—ã¾ã—ãŸã€‚æœ€å¾Œã«é©ç”¨ã—ã¾ã™ã€‚
 
-#### ƒRƒ“ƒ|[ƒlƒ“ƒg ƒe[ƒ}‚Ì“K—p
-ƒzƒXƒg—v‘f‚Ì `class` ‚ğ**ƒe[ƒ} ƒNƒ‰ƒX**‚ÅƒoƒCƒ“ƒh‚µ‚Ü‚·B
+#### ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆ ãƒ†ãƒ¼ãƒã®é©ç”¨
+ãƒ›ã‚¹ãƒˆè¦ç´ ã® `class` ã‚’**ãƒ†ãƒ¼ãƒ ã‚¯ãƒ©ã‚¹**ã§ãƒã‚¤ãƒ³ãƒ‰ã—ã¾ã™ã€‚
 
 ```typescript
 @HostBinding("class")
@@ -177,7 +177,7 @@ public themesClass = "dark-theme";
 ```
 <div class="divider--half"></div>
 
-Ÿ‚ÉƒzƒXƒg—v‘f‚Å**ƒe[ƒ} ƒNƒ‰ƒX**‚ğƒlƒXƒg‚µ‚½V‚µ‚¢ SCSS ƒtƒ@ƒCƒ‹‚Éƒe[ƒ}‚ğ“K—p‚µ‚½ƒRƒ“ƒ|[ƒlƒ“ƒg‚ğŠÜ‚İ‚Ü‚·B
+æ¬¡ã«ãƒ›ã‚¹ãƒˆè¦ç´ ã§**ãƒ†ãƒ¼ãƒ ã‚¯ãƒ©ã‚¹**ã‚’ãƒã‚¹ãƒˆã—ãŸæ–°ã—ã„ SCSS ãƒ•ã‚¡ã‚¤ãƒ«ã«ãƒ†ãƒ¼ãƒã‚’é©ç”¨ã—ãŸã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆã‚’å«ã¿ã¾ã™ã€‚
 
 ```scss
 // styles/dark-themes-class.scss
@@ -203,26 +203,26 @@ public themesClass = "dark-theme";
     }
 }
 ```
-Œ‹‰Ê‚ÍˆÈ‰º‚Å‚·B
+çµæœã¯ä»¥ä¸‹ã§ã™ã€‚
 
 <div class="sample-container" style="height: 650px">
     <iframe id="dark-theme-sample-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/dark-theme-sample" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="dark-theme-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}"> stackblitz ‚ÅŠJ‚­
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="dark-theme-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}"> stackblitz ã§é–‹ã
     </button>
 </div>
 <div class="divider--half"></div>
 
-*utilities*AƒRƒ“ƒ|[ƒlƒ“ƒg mixins ‚Æƒe[ƒ}ŠÖ”‚ğƒCƒ“ƒ|[ƒg‚µAƒe[ƒ}‚ğ’è‹`‚µ‚Ä“K—p‚µ‚Ü‚·B**Ignite UI for Angular Theming** ‚ÅƒAƒvƒŠ‚ğƒXƒ^ƒCƒ‹İ’è‚·‚é‚½‚ß‚Ìè‡‚ª‚ ‚è‚Ü‚·B
+*utilities*ã€ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆ mixins ã¨ãƒ†ãƒ¼ãƒé–¢æ•°ã‚’ã‚¤ãƒ³ãƒãƒ¼ãƒˆã—ã€ãƒ†ãƒ¼ãƒã‚’å®šç¾©ã—ã¦é©ç”¨ã—ã¾ã™ã€‚**Ignite UI for Angular Theming** ã§ã‚¢ãƒ—ãƒªã‚’ã‚¹ã‚¿ã‚¤ãƒ«è¨­å®šã™ã‚‹ãŸã‚ã®æ‰‹é †ãŒã‚ã‚Šã¾ã™ã€‚
 
-### ƒe[ƒ}‚Ì‘I‘ğ
-ã‹LƒTƒ“ƒvƒ‹‚ÍAŠeƒRƒ“ƒ|[ƒlƒ“ƒg‚É 1 ‚Â‚Ìƒe[ƒ}‚ğİ’è‚µ‚Ü‚µ‚½B
+### ãƒ†ãƒ¼ãƒã®é¸æŠ
+ä¸Šè¨˜ã‚µãƒ³ãƒ—ãƒ«ã¯ã€å„ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆã« 1 ã¤ã®ãƒ†ãƒ¼ãƒã‚’è¨­å®šã—ã¾ã—ãŸã€‚
 
-**Ignite UI for Angular ƒRƒ“ƒ|[ƒlƒ“ƒg**‚É‚»‚Ì‘¼‚Ìƒe[ƒ}‚ğ’è‹`‚·‚éê‡‚ÍA**ƒe[ƒ}**‚ğ’Ç‰Á‚Å‚«‚Ü‚·B
+**Ignite UI for Angular ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆ**ã«ãã®ä»–ã®ãƒ†ãƒ¼ãƒã‚’å®šç¾©ã™ã‚‹å ´åˆã¯ã€**ãƒ†ãƒ¼ãƒ**ã‚’è¿½åŠ ã§ãã¾ã™ã€‚
 
-•ÏX‚ğ­‚µ‰Á‚¦‚é‚¾‚¯‚Å‚·B
-- SCSS ƒtƒ@ƒCƒ‹‚ğì¬‚µ‚Äƒe[ƒ}‚ğŠÜ‚ŞƒNƒ‰ƒX‚ğ’è‹`‚µ‚Ü‚·B
+å¤‰æ›´ã‚’å°‘ã—åŠ ãˆã‚‹ã ã‘ã§ã™ã€‚
+- SCSS ãƒ•ã‚¡ã‚¤ãƒ«ã‚’ä½œæˆã—ã¦ãƒ†ãƒ¼ãƒã‚’å«ã‚€ã‚¯ãƒ©ã‚¹ã‚’å®šç¾©ã—ã¾ã™
 
 ```scss
 // styles/themes-classes.scss
@@ -253,7 +253,7 @@ public themesClass = "dark-theme";
 
 <div class="divider--half"></div>
 
-- ƒzƒXƒg—v‘f‚Ì `class` ‚ğ‘€ì‚·‚éŠÖ”‚ğƒgƒŠƒK[‚·‚éƒCƒxƒ“ƒg‚ğİ’è‚µ‚Ü‚·B
+- ãƒ›ã‚¹ãƒˆè¦ç´ ã® `class` ã‚’æ“ä½œã™ã‚‹é–¢æ•°ã‚’ãƒˆãƒªã‚¬ãƒ¼ã™ã‚‹ã‚¤ãƒ™ãƒ³ãƒˆã‚’è¨­å®šã—ã¾ã™ã€‚
 
 ```html
 <!-- Adding igxButton that triggers a dropdown with the theme options -->
@@ -276,7 +276,7 @@ public themesClass = "dark-theme";
 
 <div class="divider--half"></div>
 
-**ƒe[ƒ} ƒNƒ‰ƒX** ‚ğ•\‚·ƒf[ƒ^‚¨‚æ‚ÑƒzƒXƒg—v‘f‚Ì `class` ƒZƒŒƒNƒ^[‚ğ‘€ì‚·‚éŠÖ”‚ğ’Ç‰Á‚µ‚Ü‚·B
+**ãƒ†ãƒ¼ãƒ ã‚¯ãƒ©ã‚¹**ã‚’è¡¨ã™ãƒ‡ãƒ¼ã‚¿ãŠã‚ˆã³ãƒ›ã‚¹ãƒˆè¦ç´ ã® `class` ã‚»ãƒ¬ã‚¯ã‚¿ãƒ¼ã‚’æ“ä½œã™ã‚‹é–¢æ•°ã‚’è¿½åŠ ã—ã¾ã™ã€‚
 
 ```typescript
 
@@ -309,25 +309,25 @@ export class ThemeChooserSampleComponent implements OnInit {
 ```
 <div class="divider--half"></div>
 
-`click` ƒCƒxƒ“ƒg‚Ì‚İ‚Å’è‹`Ï‚İƒe[ƒ}‚ğŠÈ’P‚É•ÏX‚Å‚«‚Ü‚·B
+`click` ã‚¤ãƒ™ãƒ³ãƒˆã®ã¿ã§å®šç¾©æ¸ˆã¿ãƒ†ãƒ¼ãƒã‚’ç°¡å˜ã«å¤‰æ›´ã§ãã¾ã™ã€‚
 
 <div class="sample-container" style="height: 650px">
     <iframe id="theme-chooser-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/theme-chooser" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="theme-chooser-iframe" data-demos-base-url="{environment:demosBaseUrl}"> stackblitz ‚ÅŠJ‚­
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="theme-chooser-iframe" data-demos-base-url="{environment:demosBaseUrl}"> stackblitz ã§é–‹ã
     </button>
 </div>
 
-### ‚»‚Ì‘¼‚ÌƒŠƒ\[ƒX
+### ãã®ä»–ã®ãƒªã‚½ãƒ¼ã‚¹
 <div class="divider--half"></div>
 
-* [Global Theme](global-theme.md)
-* [ƒRƒ“ƒ|[ƒlƒ“ƒg ƒe[ƒ}](component-themes.md)
-* [ƒJƒ‰[ ƒpƒŒƒbƒg](palette.md)
+* [ã‚°ãƒ­ãƒ¼ãƒãƒ« ãƒ†ãƒ¼ãƒ](global-theme.md)
+* [ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆ ãƒ†ãƒ¼ãƒ](component-themes.md)
+* [ã‚«ãƒ©ãƒ¼ ãƒ‘ãƒ¬ãƒƒãƒˆ](palette.md)
 * [Grid](grid.md)
-* [ƒy[ƒWƒ“ƒO](grid_paging.md)
-* [ƒtƒBƒ‹ƒ^ƒŠƒ“ƒO](grid_filtering.md)
+* [ãƒšãƒ¼ã‚¸ãƒ³ã‚°](grid_paging.md)
+* [ãƒ•ã‚£ãƒ«ã‚¿ãƒªãƒ³ã‚°](grid_filtering.md)
 * [Dialog](dialog.md)
 * [Input Group](input_group.md)
 * [Snackbar](snackbar.md)
