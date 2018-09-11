@@ -13,7 +13,7 @@ _language: ja
     <iframe id="theme-chooser-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/theme-chooser" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="theme-chooser-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="theme-chooser-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く
     </button>
 </div>
 <div class="divider--half"></div>
@@ -40,7 +40,7 @@ _language: ja
     <iframe id="default-theme-sample-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/default-theme-sample" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="default-theme-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}"> stackblitz で開く
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="default-theme-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}"> stackblitz で開く
     </button>
 </div>
 <div class="divider--half"></div>
@@ -209,7 +209,7 @@ public themesClass = "dark-theme";
     <iframe id="dark-theme-sample-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/dark-theme-sample" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="dark-theme-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}"> stackblitz で開く
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dark-theme-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}"> stackblitz で開く
     </button>
 </div>
 <div class="divider--half"></div>
@@ -315,7 +315,7 @@ export class ThemeChooserSampleComponent implements OnInit {
     <iframe id="theme-chooser-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/theme-chooser" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="theme-chooser-iframe" data-demos-base-url="{environment:demosBaseUrl}"> stackblitz で開く
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="theme-chooser-iframe" data-demos-base-url="{environment:demosBaseUrl}"> stackblitz で開く
     </button>
 </div>
 
