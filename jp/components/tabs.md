@@ -296,7 +296,7 @@ public ngOnInit() {
         frameBorder="0" style="display: none"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="tabs-sample-4-iframe"
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tabs-sample-4-iframe"
     data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
 </div>
 
@@ -389,7 +389,7 @@ const routes: Routes = [
         frameBorder="0" style="display: none"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="tabs-sample-5-iframe"
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tabs-sample-5-iframe"
     data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
 </div>
 
