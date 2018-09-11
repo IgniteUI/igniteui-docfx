@@ -135,9 +135,9 @@ public formatter = (date: Date) => {
 
 #### Templating Input Group
 
-The Date Picker's input group look can be customized. To do that we need to decorate a ng-template inside the date picker with `IgxDatePickerTemplate` directive and use the context returned to customize the way the date picker's input is displayed. You can make use of `value`, `displayData` and the `openDialog`.
+The Date Picker's input group look can be customized. To do that we need to decorate the nested ng-template inside the date picker with `IgxDatePickerTemplate` directive. ng-template context exposes the following members: `openDialog` method can be used to open the date picker dialog; `displayData` property contains the formatted value; `value` contains the real value. You could use those by declaring a variables in the ng-template element.
 
-In the following example we modify the default label "Date" add a second icon as suffix and an additional label:
+In the following example we modify the default label "Date" add a second icon as suffix. Bellow the input group we're using a label to display the real date picker value:
 
 ```html
 <igx-date-picker [value]="date">

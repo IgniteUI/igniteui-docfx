@@ -160,9 +160,9 @@ public onValidationFailed(timepicker){
 
 We have seen how to make use of the  API (properties, events, methods) so that we configure the time picker per our requirements and interact with it programatically. Now we want to go further and customize its input group look.
 
-To do that we need to decorate a ng-template inside the time picker with `IgxTimePickerTemplate` directive and use the context returned to customize the way the time picker's input is displayed. You can make use of `value`, `displayTime` and the `openDialog`.
+To do that we need to decorate the nested ng-template inside the time picker with IgxTimePickerTemplate directive. ng-template context exposes the following members: `openDialog` method can be used to open the time picker dialog; `displayValue` property contains the formatted value; `value` contains the real value. You could use those by declaring a variables in the ng-template element.
 
-In the following example we modify the default label "Time" add a second icon as suffix and an additional label:
+In the following example we modify the default label "Time" add a second icon as suffix. Bellow the input group we're using a label to display the real time picker value:
 
 ```html
 <igx-time-picker [value]="date">
