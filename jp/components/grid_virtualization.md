@@ -51,9 +51,9 @@ Ignite UI for Angular `igxGrid` コントロールは `igxForOf` ディレクテ
 ```html
 <igx-grid #grid [data]="remoteData | async" [height]="'500px'" [width]="'100%'" [autoGenerate]='false' (onDataPreLoad)="processData(false)"
     (onSortingDone)="processData(true)">
-    <igx-column [field]="'ID'" [sortable]="true"></igx-column>
+    <igx-column [field]="'ProductID'" [sortable]="true"></igx-column>
     <igx-column [field]="'ProductName'" [sortable]="true"></igx-column>
-    <igx-column [field]="'CategoryName'" [sortable]="true"></igx-column>
+    <igx-column [field]="'UnitPrice'" [dataType]="'number'" [formatter]="formatCurrency" [sortable]="true"></igx-column>
     ...
 </igx-grid>
 ```
@@ -61,7 +61,7 @@ Ignite UI for Angular `igxGrid` コントロールは `igxForOf` ディレクテ
 ```typescript
 public ngAfterViewInit() {
     this._remoteService.getData(this.grid.virtualizationState, this.grid.sortingExpressions[0], true, (data) => {
-        this.grid.totalItemCount = data.Count;
+            this.grid.totalItemCount = data["@odata.count"];
     });
 }
 
