@@ -41,7 +41,7 @@ export class AppModule {}
 テンプレートに日付ピッカーを追加します。
 
 ```html
-<igx-datePicker></igx-datePicker>
+<igx-date-picker></igx-date-picker>
 ```
 
 以下は結果です。
@@ -65,7 +65,7 @@ public date: Date = new Date(Date.now());
 テンプレートで `value` 入力を使用します。
 
 ```html
-<igx-datePicker [value]="date"></igx-datePicker>
+<igx-date-picker [value]="date"></igx-date-picker>
 ```
 
 以下は結果です。
@@ -81,7 +81,7 @@ public date: Date = new Date(Date.now());
 TwoWay データ バインディングを使用するには、`ngModule` を以下のように使用します。
 
 ```html
-<igx-datePicker [(ngModel)]="date"></igx-datePicker>
+<igx-date-picker [(ngModel)]="date"></igx-date-picker>
 ```
 
 #### ボタンの追加
@@ -89,7 +89,7 @@ TwoWay データ バインディングを使用するには、`ngModule` を以�
 `IgxDatePickerComponent` は、カレンダーからの現在の日を選択する [今日] ボタンをサポートします。[キャンセル] ボタンも有効にできます。テンプレートでボタンを有効にするには、以下のコードを使用します。
 
 ```html
-<igx-datePicker cancelButtonLabel="cancel" todayButtonLabel="today" [(ngModel)]="date"></igx-datePicker>
+<igx-date-picker cancelButtonLabel="cancel" todayButtonLabel="today" [(ngModel)]="date"></igx-date-picker>
 ```
 
 ボタンが表示されるサンプル:
@@ -120,7 +120,7 @@ public formatter = (date: Date) => {
 次に `IgxDatePickerComponent` の `formatter` 入力を使用します。
 
 ```html
-<igx-datePicker [value]="date" [formatter]="formatter"></igx-datePicker>
+<igx-date-picker [value]="date" [formatter]="formatter"></igx-date-picker>
 ```
 
 書式設定した日付を表示するサンプル:
@@ -138,7 +138,7 @@ public formatter = (date: Date) => {
 `IgxDatePickerComponent` はロケールをサポートします。`locale` 入力を使用して設定できます。ヘッダー (`igxCalendarHeader`) およびサブヘッダー (`igxCalendarSubheader`) の `IgxCalendarComponent` テンプレートを使用してヘッダーおよびサブヘッダーの外観を設定できます。このテンプレートを使用する方法の詳細については、`IgxCalendarComponent` [ヘルプ](calendar.md)を参照してください。以下は日本ロケール定義を持つ日付ピッカーです。
 
 ```html
-<igx-datePicker locale="ja-JP" [value]="date">
+<igx-date-picker locale="ja-JP" [value]="date">
   <ng-template igxCalendarHeader let-format>
     {{ format.month.combined | titlecase }}{{format.day.combined }}{{ format.weekday.combined }}
   </ng-template>
@@ -146,7 +146,7 @@ public formatter = (date: Date) => {
     <span class="date__el" (click)="format.yearView()">{{ format.year.combined }}</span>
     <span class="date__el" (click)="format.monthView()">{{ format.month.combined | titlecase }}</span>
   </ng-template>
-</igx-datePicker>
+</igx-date-picker>
 ```
 
 > [!NOTE]
@@ -156,7 +156,7 @@ public formatter = (date: Date) => {
 
 ```html
 <!-- app.component.html-->
-<igx-datePicker id="date-picker" locale="ja-JP" [value]="date" #component>
+<igx-date-picker id="date-picker" locale="ja-JP" [value]="date" #component>
     <div *ngIf="formatParts; else parseTemplate">
         <ng-template igxCalendarHeader let-format>
             {{ format.month.combined | titlecase }} {{ format.day.combined }} {{ format.weekday.combined }}
@@ -177,7 +177,7 @@ public formatter = (date: Date) => {
             <span class="date__el" (click)="format.monthView()">{{ getDatePart(format, component, 'month') }}</span>
         </ng-template>
     </ng-template>
-</igx-datePicker>
+</igx-date-picker>
 ```
 
 **ngIf** は、使用するテンプレートを制御するために **formatParts** 式の値を評価します。代わりの **#parseTemplate** テンプレートを参照します。{} にある式は評価された値を返す **getDatePart** メソッドを起動します。この場合、書式設定された日付部分 (年、曜日、月など) を返します。**getDatePart** に渡されたパラメーターは、書式設定が **IgxDatePickerComponent** の locale および format オプションに基づいて設定されるために必要です。
@@ -231,6 +231,8 @@ public getDatePart(val: any, component: any, datePart: string) {
 | `formatViews` | `Object` | 日付を書式設定するために使用される `locale` プロパティと渡される書式ビュー。 |
 | `label` | `string` | デフォルト テキスト ラベルを変更します。 |
 | `labelVisibility` | `string ` | ラベルを表示または非表示にします。 |
+| `disabledDates` | `DateRangeDescriptor[]` | Gets/Sets the disabled dates descriptors. |
+| `specialDates` | `DateRangeDescriptor[]` | Gets/Sets the special dates descriptors. |
 
 #### 出力
 

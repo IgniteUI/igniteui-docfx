@@ -243,6 +243,101 @@ public getDatePart(val: any, component: any, datePart: string) {
     <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="calendar-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
+### Disabled dates
+This section demonstrates the usage of `disabledDates` functionallity. Different `single dates` or `range` elements of type `DateRangeDescriptor` could be added to Array, and passed to the `disabledDates` descriptor.
+
+```typescript
+this.calendar.disabledDates = [new DateRangeDescriptor(DateRangeType.Between, [
+    new Date(2018, 8, 2),
+    new Date(2018, 8, 8)
+])];
+```
+
+The `DateRangeType` is used to specify the range that is going to be disabled. For example, `DateRangeType.Between` will disable the dates between two specific dates in Array. Code snippet above.
+Check the API table below for all available `DateRangeType` values.
+
+This feature is covering the situations when we may need to restrict some dates to be selectable and focusable.
+
+Let's create a sample that is disabling dates within specific range of dates:
+
+```typescript
+export class CalendarSample6Component {
+    @ViewChild("calendar") public calendar: IgxCalendarComponent;
+    public today = new Date(Date.now());
+    public range = [
+        new Date(this.today.getFullYear(), this.today.getMonth(), 3),
+        new Date(this.today.getFullYear(), this.today.getMonth(), 8)
+    ];
+
+    public ngOnInit() {
+        this.calendar.disabledDates = [new DateRangeDescriptor(DateRangeType.Between, this.range)];
+    }
+}
+
+```
+
+This is the result.
+
+<div class="sample-container" style="height: 480px">
+    <iframe id="calendar-sample-6-iframe" src='{environment:demosBaseUrl}/calendar-sample-6' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="calendar-sample-6-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+
+
+### Special dates
+
+`Special dates` feature is using almost the same configuration principles as `Disabled dates`. The difference here is dates `styling` and `interaction`. You are able to select and focus `Special date`.
+
+Let's add a `Special dates` to our `igxCalendar`, we are going to create a `DateRangeDescriptor` item of type `DateRangeType.Specific` and pass array of dates as `dateRange`:
+
+```typescript
+export class CalendarSample7Component {
+    @ViewChild("calendar") public calendar: IgxCalendarComponent;
+    @ViewChild(IgxSnackbarComponent) public snackbar: IgxSnackbarComponent;
+    public range = [];
+
+    ...
+    public selectPTOdays(dates: Date[]) {
+        this.range = dates;
+    }
+
+    public submitPTOdays(eventArgs) {
+        this.calendar.specialDates =
+            [new DateRangeDescriptor(DateRangeType.Specific, this.range)];
+
+        this.range.forEach((item) => {
+            this.calendar.selectDate(item);
+        });
+
+        ...
+    }
+}
+```
+
+```html
+<article class="sample-column calendar-wrapper">
+    <span>Request Time Off</span>
+    <igx-calendar #calendar
+        selection="multi"
+        (onSelection)="selectPTOdays($event)">
+    </igx-calendar>
+    <button igxButton="raised" (click)="submitPTOdays($event)">Submit Request</button>
+</article>
+```
+
+We are going to use the selected dates array to define `Special dates` descriptor.
+
+Result:
+
+<div class="sample-container" style="height: 540px">
+    <iframe id="calendar-sample-7-iframe" src='{environment:demosBaseUrl}/calendar-sample-7' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="calendar-sample-7-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+
 ### キーボード ナビゲーション
 
 **IgxCalendarComponent** コンポーネントがフォーカスを持つ場合:
@@ -275,6 +370,8 @@ public getDatePart(val: any, component: any, datePart: string) {
 | `formatOptions` | `Object` | 日付を書式設定するために使用される `locale` プロパティと渡される書式オプション。デフォルト値は { day: 'numeric', month: 'short', weekday: 'short', year: 'numeric' } です。 |
 |`formatViews`| `Object`| カレンダー ビューの日付コンポーネントが提供された locale および formatOptions に基づいて書式設定するかどうかを制御します。デフォルト値は { day: false, month: true, year: false } です。ヘッダーの描画に影響しません。|
 | `vertical` | `boolean` | カレンダー コンポーネントのレイアウトを制御します。`vertical` が true に設定される場合、カレンダー ヘッダーはカレンダーの隣に描画されます。|
+| `disabledDates` | `DateRangeDescriptor[]` | Gets/Sets the disabled dates descriptors. |
+| `specialDates` | `DateRangeDescriptor[]` | Gets/Sets the special dates descriptors. |
 
 #### 出力
 <div class="divider--half"></div>
@@ -290,6 +387,16 @@ public getDatePart(val: any, component: any, datePart: string) {
 | 名前   | 引数 | 戻り値の型 | 説明 |
 |:----------:|:------|:------|:------|
 | `selectDate` | `date: Date` または `Date[]` | `void` | カレンダーの選択を変更します。このメソッドの呼び出しは `onSelection` イベントを発生させます。 |
+| `isDateDisabled` | `date: Date` | `boolean` | Checks whether a date is disabled. |
+| `isDateSpecial` | `date: Date` | `boolean` | Checks whether a date is special. |
+<div class="divider--half"></div>
+
+#### Enumerations
+<div class="divider--half"></div>
+
+| Name   | Description |
+|:----------:|:------|
+| `DateRangeType ` |  Constants After, Before, Between, Specific, Weekdays, Weekends of type `DateRangeType` |
 
 <div class="divider--half"></div>
 

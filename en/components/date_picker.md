@@ -40,7 +40,7 @@ export class AppModule {}
 Then in our template we place the date picker:
 
 ```html
-<igx-datePicker></igx-datePicker>
+<igx-date-picker></igx-date-picker>
 ```
 
 The result is as follows:
@@ -62,7 +62,7 @@ public date: Date = new Date(Date.now());
 Then use the `value` input in the template:
 
 ```html
-<igx-datePicker [value]="date"></igx-datePicker>
+<igx-date-picker [value]="date"></igx-date-picker>
 ```
 
 And there we have it:
@@ -77,14 +77,14 @@ And there we have it:
 If we want to use a two-way data-binding, we could just use `ngModule` like this:
 
 ```html
-<igx-datePicker [(ngModel)]="date"></igx-datePicker>
+<igx-date-picker [(ngModel)]="date"></igx-date-picker>
 ```
 
 #### Adding buttons
 The `IgxDatePickerComponent` supports a today button which selects the current day from the calendar. Cancel button could be enabled too. Here is how we can enable the buttons in our template:
 
 ```html
-<igx-datePicker cancelButtonLabel="cancel" todayButtonLabel="today" [(ngModel)]="date"></igx-datePicker>
+<igx-date-picker cancelButtonLabel="cancel" todayButtonLabel="today" [(ngModel)]="date"></igx-date-picker>
 ```
 
 Here you can see the buttons:
@@ -113,7 +113,7 @@ public formatter = (date: Date) => {
 And then use the `formatter` input of the `IgxDatePickerComponent`:
 
 ```html
-<igx-datePicker [value]="date" [formatter]="formatter"></igx-datePicker>
+<igx-date-picker [value]="date" [formatter]="formatter"></igx-date-picker>
 ```
 
 Here is the formatted date:
@@ -129,7 +129,7 @@ Here is the formatted date:
 The `IgxDatePickerComponent` supports locales. You can set them using the `locale` input. Using the `IgxCalendarComponent` templates for header (`igxCalendarHeader`) and subheader (`igxCalendarSubheader`), you can specify the look of your header and subheader. More information on how to use these templates you can find in the `IgxCalendarComponent` [documentation](calendar.md). Here is how a date picker with Japanese locale definition would look like:
 
 ```html
-<igx-datePicker locale="ja-JP" [value]="date">
+<igx-date-picker locale="ja-JP" [value]="date">
   <ng-template igxCalendarHeader let-format>
     {{ format.month.combined | titlecase }}{{format.day.combined }}{{ format.weekday.combined }}
   </ng-template>
@@ -137,7 +137,7 @@ The `IgxDatePickerComponent` supports locales. You can set them using the `local
     <span class="date__el" (click)="format.yearView()">{{ format.year.combined }}</span>
     <span class="date__el" (click)="format.monthView()">{{ format.month.combined | titlecase }}</span>
   </ng-template>
-</igx-datePicker>
+</igx-date-picker>
 ```
 
 > [!NOTE]
@@ -147,7 +147,7 @@ To support those browsers we are going to use alternative template using [ngIf](
 
 ```html
 <!-- app.component.html-->
-<igx-datePicker id="date-picker" locale="ja-JP" [value]="date" #component>
+<igx-date-picker id="date-picker" locale="ja-JP" [value]="date" #component>
     <div *ngIf="formatParts; else parseTemplate">
         <ng-template igxCalendarHeader let-format>
             {{ format.month.combined | titlecase }} {{ format.day.combined }} {{ format.weekday.combined }}
@@ -168,7 +168,7 @@ To support those browsers we are going to use alternative template using [ngIf](
             <span class="date__el" (click)="format.monthView()">{{ getDatePart(format, component, 'month') }}</span>
         </ng-template>
     </ng-template>
-</igx-datePicker>
+</igx-date-picker>
 ```
 Note that **ngIf** evaluates the value of the **formatParts** expression to control which template to use. Let's have a look at the alernative **#parseTemplate** template: the expressions in the curly brackets invokes the **getDatePart** method that returns the evaluated value, in our case this is a formatted date part (year, weekday, month, etc.). The parameters passed to the **getDatePart** are necessary so that formatting is based on the **IgxDatePickerComponent** locale and format options:
 
@@ -218,6 +218,8 @@ The result is as follows:
 | `formatViews` | `Object` | The format views passed along with the `locale` property used for formatting dates. |
 | `label` | `string` | Changes the default text label. |
 | `labelVisibility` | `string ` | Hide/Show the label. |
+| `disabledDates` | `array` | Gets/Sets the disabled dates descriptors. |
+| `specialDates` | `array` | Gets/Sets the special dates descriptors. |
 
 #### Outputs
 <div class="divider--half"></div>
