@@ -136,6 +136,11 @@ this.grid.filteringLogic = FilteringLogic.OR;
 
 <div class="divider--half"></div>
 
+#### Remote Filtering
+You can provide grid's remote filtering by subscribing to onDataPreLoad and onFilteringDone outputs. More information on how to use it you can find in the `Grid Virtualization and Performance` [documentation](grid_virtualization.md#remote-sortingfiltering-virtualization).
+
+<div class="divider--half"></div>
+
 #### 6.1.0 Volume 0 の重大な変更
 * IgxGridComponent `filteringExpressions` プロパティは削除されます。代わりに `filteringExpressionsTree` を使用してください。
 * `filter_multiple` メソッドは削除されました。`filter` メソッドおよび`filteringExpressionsTree` プロパティを代わりに使用してください。
