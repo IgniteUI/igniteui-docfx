@@ -76,7 +76,7 @@ public ngOnInit() {
 <div class="divider--half"></div>
 
 #### Remote Sorting
-You can provide grid's remote sorting by subscribing to onDataPreLoad and onSortingDone outputs. More information on how to use it you can find in the `Grid Virtualization and Performance` [documentation](grid_virtualization.md#remote-sortingfiltering-virtualization).
+You can provide grid's remote sorting by subscribing to onDataPreLoad and onSortingDone outputs. More information on how to use it you can find in the `Grid Virtualization and Performance` [documentation](grid_virtualization.md#リモートの並べ替えフィルタリングの仮想化).
 
 <div class="divider--half"></div>
 

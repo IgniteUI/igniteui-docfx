@@ -137,7 +137,7 @@ this.grid.filteringLogic = FilteringLogic.OR;
 <div class="divider--half"></div>
 
 #### Remote Filtering
-You can provide grid's remote filtering by subscribing to onDataPreLoad and onFilteringDone outputs. More information on how to use it you can find in the `Grid Virtualization and Performance` [documentation](grid_virtualization.md#remote-sortingfiltering-virtualization).
+You can provide grid's remote filtering by subscribing to onDataPreLoad and onFilteringDone outputs. More information on how to use it you can find in the `Grid Virtualization and Performance` [documentation](grid_virtualization.md#リモートの並べ替えフィルタリングの仮想化).
 
 <div class="divider--half"></div>
 
