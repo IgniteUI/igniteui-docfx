@@ -46,9 +46,9 @@ Having all set up, let's show all the options in the [**IgxDropDownComponent**](
 <!-- dropdown.component.html -->
 
 <div class="sample-wrapper drop-down-wrapper">
-    <button igxButton="raised" (click)="toggleDropDown($event)">Options</button>
+    <button igxButton="raised" (click)="toggleDropDown($event)" [igxDropDownItemNavigation]="dropdown1">Options</button>
     <igx-drop-down #dropdown1>
-        <igx-drop-down-item [igxDropDownItemNavigation]="dropdown1" *ngFor="let item of items">
+        <igx-drop-down-item *ngFor="let item of items">
             {{ item.field }}
         </igx-drop-down-item>
     </igx-drop-down>
@@ -106,9 +106,9 @@ Let's say we want to have a predefined selected item. One way to do this, is by 
 <!-- dropdown.component.html -->
 
 <div class="sample-wrapper drop-down-wrapper">
-    <button igxButton="raised" (click)="toggleDropDown($event)">Options</button>
+    <button igxButton="raised" (click)="toggleDropDown($event)" [igxDropDownItemNavigation]="dropdown2">Options</button>
     <igx-drop-down #dropdown2 (onOpening)="onOpening($event)">
-        <igx-drop-down-item [igxDropDownItemNavigation]="dropdown2" *ngFor="let item of items">
+        <igx-drop-down-item *ngFor="let item of items">
             {{ item.field }}
         </igx-drop-down-item>
     </igx-drop-down>
@@ -169,9 +169,9 @@ To provide more useful visual information, use `isHeader` to group items semanti
 <!-- dropdown.component.html -->
 
 <div class="sample-wrapper drop-down-wrapper">
-    <button igxButton="raised" (click)="toggleDropDown($event)">Countries</button>
+    <button igxButton="raised" (click)="toggleDropDown($event)" [igxDropDownItemNavigation]="dropdown3">Countries</button>
     <igx-drop-down #dropdown3>
-        <igx-drop-down-item [igxDropDownItemNavigation]="dropdown3" *ngFor="let item of items" [disabled]="item.disabled" [isHeader]="item.header" [isSelected]="item.selected">
+        <igx-drop-down-item *ngFor="let item of items" [disabled]="item.disabled" [isHeader]="item.header" [isSelected]="item.selected">
             {{ item.field }}
         </igx-drop-down-item>
     </igx-drop-down>
@@ -223,6 +223,38 @@ If the sample is configured properly, a list  of countries should be displayed a
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dropdown-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">                view on stackblitz
     </button>
 </div>
+
+### igxDropDownItemNavigation directive
+
+To enable keyboard navigation for the igxDropDown component, the igxDropDownItemNavigation directive should be applied. It's recommended that the directive is applied to the element that is triggering the opening and closing the of the drop down. That element will also have the focus, and when using the directive it will handle all triggered events. By default the focus will always stay on the element that igxDropDownItemNavigation is applied on, and this happens because the igxDropDown doesn't focus its items by default.
+The following sample demonstrates an input that on click opens and closes igxDropDown instance. Applying the igxDropDownItemNavigation on the input itself, will enable keyboard navigation, when using arrow up and arrow down, and in the same the input will not loose the focus during that process.
+
+```
+<igx-input-group #inputGroupProvince (click)="toggleDDProvince()">
+    <input igxInput #inputProvince type="text"
+        [igxDropDownItemNavigation]="dropdownProvince"/>
+    <igx-suffix><igx-icon [name]="arrowProvince"></igx-icon></igx-suffix>
+</igx-input-group>
+<igx-drop-down #dropdownProvince>
+    <igx-drop-down-item *ngFor="let p of provinceData">
+        {{ p }}
+    </igx-drop-down-item>
+</igx-drop-down>
+```
+
+If you want the drop down items to receive focus then you need to explicitly set `allowItemsFocus` property of the igxDropDown to `true`. In that case you can apply the igxDropDownItemNavigation on the drop down itself, however this can also happen on the input again. Applying the directive on the drop down means that you can omit the value, because it is the drop down itself.
+
+```
+<igx-input-group #inputGroupProvince (click)="toggleDDProvince()">
+    <input igxInput #inputProvince type="text"/>
+    <igx-suffix><igx-icon [name]="arrowProvince"></igx-icon></igx-suffix>
+</igx-input-group>
+<igx-drop-down #dropdownProvince [allowItemsFocus]="true" igxDropDownItemNavigation>
+    <igx-drop-down-item *ngFor="let p of provinceData">
+        {{ p }}
+    </igx-drop-down-item>
+</igx-drop-down>
+```
 
 <div class="divider--half"></div>
 
