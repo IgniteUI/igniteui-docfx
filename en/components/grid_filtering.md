@@ -135,6 +135,11 @@ When set to `OR`, a row will be returned when either the 'ProductName' cell valu
 
 <div class="divider--half"></div>
 
+#### Remote Filtering
+You can provide grid's remote filtering by subscribing to onDataPreLoad and onFilteringDone outputs. More information on how to use it you can find in the `Grid Virtualization and Performance` [documentation](grid_virtualization.md#remote-sortingfiltering-virtualization).
+
+<div class="divider--half"></div>
+
 #### Breaking Changes in 6.1.0
 * IgxGridComponent `filteringExpressions` property is removed. Use `filteringExpressionsTree` instead.
 * `filter_multiple` method is removed. Use `filter` method and `filteringExpressionsTree` property instead.

@@ -136,6 +136,11 @@ this.grid.filteringLogic = FilteringLogic.OR;
 
 <div class="divider--half"></div>
 
+#### リモート フィルタリング
+onDataPreLoad と onFilteringDone アウトプットにサブスクライブしてグリッドでリモート フィルタリングができます。詳細については、`グリッドの仮想化とパフォーマンス` [ヘルプ](grid_virtualization.md#リモートの並べ替えフィルタリングの仮想化)をご覧ください。
+
+<div class="divider--half"></div>
+
 #### 6.1.0 Volume 0 の重大な変更
 * IgxGridComponent `filteringExpressions` プロパティは削除されます。代わりに `filteringExpressionsTree` を使用してください。
 * `filter_multiple` メソッドは削除されました。`filter` メソッドおよび`filteringExpressionsTree` プロパティを代わりに使用してください。

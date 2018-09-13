@@ -75,6 +75,11 @@ public ngOnInit() {
 
 <div class="divider--half"></div>
 
+#### リモート並べ替え
+onDataPreLoad と onFilteringDone アウトプットにサブスクライブしてグリッドでリモートの並べ替えができます。詳細については、`グリッドの仮想化とパフォーマンス` [ヘルプ](grid_virtualization.md#リモートの並べ替えフィルタリングの仮想化)をご覧ください。
+
+<div class="divider--half"></div>
+
 ### 追加のリソース
 <div class="divider--half"></div>
 
