@@ -322,16 +322,18 @@ export class ExampleComponent {
 
 `IgxOverlayService`
 
-   | Name          | Description                        | Cancelable | Parameters |
-   |---------------|------------------------------------|------------|------------|
-   |`onOpening`    | Emitted on before overlay shows    | false      |            |
-   |`onOpened`     | Emitted after overlay shows        | false      |            |
-   |`onClosing`    | Emitted before overlay hides       | false      |            |
-   |`onClosed`     | Emitted after  overlay hides       | false      |            |
+   | Name          | Description                         | Cancelable | Parameters |
+   |---------------|-------------------------------------|------------|------------|
+   |`onOpening`    | Emitted before overlay shows        | false      |            |
+   |`onOpened`     | Emitted after overlay shows         | false      |            |
+   |`onClosing`    | Emitted before overlay hides        | false      |            |
+   |`onClosed`     | Emitted after overlay hides         | false      |            |
+   |`onAnimation`  | Emitted before animation is started | false      |            |
 <div class="divider--half"></div>
 
 ## Assumptions and Limitations</a>
-Up to now there are no known limitations.
+If you show the overlay in an outlet, and if the outlet is child of element with transform, perspective or filter css set you will be not able to show modal overlay. The reason for this is when one of above mentioned css properties is set the browser creates a new containing block and the overlay is limited to this containing block, as described [here](https://developer.mozilla.org/en-US/docs/Web/CSS/position#fixed).
+
 
 ## Additional Resources
 * [Position strategies](overlay_position.md)
