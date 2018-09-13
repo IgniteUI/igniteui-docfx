@@ -13,7 +13,7 @@ The Category Chart provides default tooltips for each type of series. The defaul
     <iframe id="category-chart-custom-tooltips-sample-iframe" src='{environment:demosBaseUrl}/category-chart-custom-tooltips-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="category-chart-custom-tooltips-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="category-chart-custom-tooltips-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
     </button>
 </div>
 
