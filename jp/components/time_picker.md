@@ -156,13 +156,13 @@ public onValidationFailed(timepicker){
 </div>
 <div class="divider--half"></div>
 
-#### Templating Input Group
+#### 入力グループのテンプレート化
 
-We have seen how to make use of the  API (properties, events, methods) so that we configure the time picker per our requirements and interact with it programatically. Now we want to go further and customize its input group look.
+API (プロパティ、イベント、メソッド) を使用して要件によってタイムピッカーを構成し、コードで操作する方法を説明しました。次に入力グループの外観をカスタマイズします。
 
-To do that we need to decorate the nested ng-template inside the time picker with IgxTimePickerTemplate directive. ng-template context exposes the following members: `openDialog` method can be used to open the time picker dialog; `displayValue` property contains the formatted value; `value` contains the real value. You could use those by declaring a variables in the ng-template element.
+タイムピッカー内にネストした ng-template を IgxTimePickerTemplate ディレクティブでデコレートする必要があります。ng-template コンテキストは、次のメンバーを公開します。`openDialog` メソッドはタイムピッカーダイアログに使用できます。`displayValue` プロパティは書式設定の値を含みます。 `value` は実際の値を含みます。ng-template 要素で変数を宣言して使用することができます。
 
-In the following example we modify the default label "Time" add a second icon as suffix. Bellow the input group we're using a label to display the real time picker value:
+以下の例では、デフォルトのラベル "Time" を変更して 2 つ目のアイコンをサフィックスとして追加します。ラベルを使用して実際のタイムピッカーの値を表示する入力グループです。
 
 ```html
 <igx-time-picker [value]="date">
@@ -185,12 +185,12 @@ In the following example we modify the default label "Time" add a second icon as
 public date: Date = new Date(Date.now());
 ```
 
-And there we have it:
+以下は結果です。
 <div class="sample-container loading" style="height: 540px;">
     <iframe id="time-picker-sample-5" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/timepicker-sample-5" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="time-picker-sample-5" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="time-picker-sample-5" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
 </div>
 <div class="divider--half"></div>
 

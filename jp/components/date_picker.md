@@ -133,11 +133,11 @@ public formatter = (date: Date) => {
 </div>
 <div class="divider--half"></div>
 
-#### Templating Input Group
+#### 入力グループのテンプレート化
 
-The Date Picker's input group look can be customized. To do that we need to decorate the nested ng-template inside the date picker with `IgxDatePickerTemplate` directive. ng-template context exposes the following members: `openDialog` method can be used to open the date picker dialog; `displayData` property contains the formatted value; `value` contains the real value. You could use those by declaring a variables in the ng-template element.
+Date Picker の入力グループをカスタマイズできます。デートピッカー内にネストした ng-template を `IgxDatePickerTemplate`ディレクティブでデコレートする必要があります。ng-template コンテキストは、次のメンバーを公開します。`openDialog` メソッドはデートピッカーダイアログに使用できます。`displayData`プロパティは書式設定の値を含みます。`value` は実際の値を含みます。ng-template 要素で変数を宣言して使用することができます。
 
-In the following example we modify the default label "Date" add a second icon as suffix. Bellow the input group we're using a label to display the real date picker value:
+以下の例では、デフォルトのラベル "Date" を変更して 2 つ目のアイコンをサフィックスとして追加します。ラベルを使用して実際のデートピッカーの値を表示する入力グループです。
 
 ```html
 <igx-date-picker [value]="date">
@@ -160,12 +160,12 @@ In the following example we modify the default label "Date" add a second icon as
 public date: Date = new Date(Date.now());
 ```
 
-Here is the retemplated input group:
+再テンプレートした入力グループ:
 <div class="sample-container loading" style="height: 540px;">
     <iframe id="date-picker-sample-6" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/datepicker-sample-6" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="date-picker-sample-6" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="date-picker-sample-6" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
 </div>
 <div class="divider--half"></div>
 
