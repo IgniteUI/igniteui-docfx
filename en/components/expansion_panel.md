@@ -230,14 +230,13 @@ The `IgxExpansionPanel` control allows all sort of content to be added inside of
 |Name |Type | Description | Default |
 |:---|:--|:--|:--|
 | `collapsed` | `boolean` | Should the contents of the control be hidden | `true` |
-| `animationSettings` | `{ openAnimation: AnimationMetadata, closeAnimation: AnimationMetadata }` | What animations should be played when expand/collapse is triggered | `{ openAnimation: slideIn, closeAnimation: slideOut }` | 
-| `ariaLabelledBy`| `string` | Aria Support. Id of control that labels component | `""` |
+| `animationSettings` | `{ openAnimation: AnimationMetadata, closeAnimation: AnimationMetadata }` | What animations should be played when expand/collapse is triggered | `{ openAnimation: growVerIn, closeAnimation: growVerOut }` | 
 
 #### Outputs
 |Name |Emits | Description |
 |:--|:--|:--|
-| `onCollapsed` | `{event?: Event}` | Emitted when `collapse()` finishes |
-| `onExpanded` | `{event?: Event}` | Emitted when `expanded()` finishes |
+| `onCollapsed` | `{event?: Event, panel: IgxExpansionPanelComponent }` | Emitted when `collapse()` finishes |
+| `onExpanded` | `{event?: Event, panel: IgxExpansionPanelComponent }` | Emitted when `expanded()` finishes |
 
 #### Methods
 |Name |Signature | Description |
@@ -246,10 +245,9 @@ The `IgxExpansionPanel` control allows all sort of content to be added inside of
 | `expand` | `() => void` | Expands the control |
 | `toggle` | `() => void` | Toggles the control |
 
-#### Directives
+### Directives
 | Name | Selector | Description |
 |:-- |:-- |:-- |
-| `IgxExpansionPanelBody` | `igx-expansion-panel-body` | Marks the content of the component |
 | `IgxExpansionPanelHeader` | `igx-expansion-panel-header` | Marks the header of the component | 
 
 ### IgxExpansionPanelHeader
@@ -263,18 +261,32 @@ The `IgxExpansionPanel` control allows all sort of content to be added inside of
 #### Inputs
 |Name |Type | Description | Default |
 |:---|:--|:--|:--|
-| `ariaLabelledBy`| `string` | Aria Support. Id of control that labels component | `panel.id` |
 | `disabled` | `boolean` | Should the control respond to user interaction | `false` |
 | `iconPosition` | `enum ICON_POSITION` | Where should the icon be displayed ('left', 'right' or 'none') | `left` |
 
 #### Outputs
 |Name |Emits | Description |
 |:--|:--|:--|
-| `onInteraction` | `{ event: Event }` | Emitted on user interaction with the component header |
+| `onInteraction` | `{ event: Event, panel: IgxExpansionPanelComponent }` | Emitted on user interaction with the component header |
 
-#### Directives
+### Directives
 | Name | Selector | Description |
 |:-- |:-- |:-- |
 | `IgxExpansionPanelTitle` | `igx-expansion-panel-title` | Marks the title of the component header |
 | `IgxExpansionPanelDescription` | `igx-expansion-panel-description` | Marks the description of the component header |
 | `IgxExpansionPanelIcon` | `igx-expansion-panel-icon` | Marks the template that should be used as the icon in the collapsible header |
+
+
+### IgxExpansionPanelBody
+
+#### Properties
+|Name |Type | Description | Default |
+|:---|:--|:--|:--|
+| `panel` | `IgxExpansionPanelComponent` | The control the header belongs to | `null` |
+| `role` | `string` | Binds to the host attribute `role` | `region` |
+
+#### Inputs
+|Name |Type | Description | Default |
+|:---|:--|:--|:--|
+| `labelledBy` | `string` | Binds to the host attribute `aria-labelledby` | `panel.title.id` |
+| `label` | `string` | Binds to the host attribute `aria-label` | `''` |
