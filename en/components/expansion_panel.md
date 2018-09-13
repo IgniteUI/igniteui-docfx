@@ -218,6 +218,279 @@ After applying all of the changes to our initial component, here is the final re
 
 The `IgxExpansionPanel` control allows all sort of content to be added inside of the `igx-expansion-panel-body`. It can render `IgxGrid`s, `IgxCombo`, charts and even other expansion panels!
 
+## Using Animations
+### Using specific animation
+It is possible to use other than default animation when expanding and collapsing the component.
+Assuming the igxExpansionPanel is already imported in `app.module.ts` as previously described, you can create a custom animation setting object and set it to be used in the igxExpansionPanel. The approach requires the `useAnimation` method and the specific animations to be used so we start importing these and defining the animation settings like:
+
+```typescript
+// in expansion-panel.component.ts
+import { useAnimation } from "@angular/animations";
+import { IgxExpansionPanelComponent, slideInLeft, slideOutRight } from 'igniteui-angular';
+@Component({
+    ...
+})
+export class ExpansionPanelComponent {
+    @ViewChild(IgxExpansionPanelComponent, {read: IgxExpansionPanelComponent})
+    public panel: IgxExpansionPanelComponent;
+
+    public animationSettingsCustom = {
+    closeAnimation: useAnimation(slideOutRight, {
+            params: {
+                duration: "100ms",
+                toPosition: "translateX(100px)"
+        }
+    }),
+    openAnimation: useAnimation(slideInLeft, {
+            params: {
+                duration: "500ms",
+                endOpacity: 1,
+                fromPosition: "translateX(-50px)",
+                startOpacity: 0.2
+            }
+        })
+    };
+
+    public user = {
+        email: "",
+        fullName: "",
+        phone: ""
+    };
+
+    public collapsed() {
+        return this.panel && this.panel.collapsed;
+    }
+}
+```
+As you can see, we are going to use `slideInLeft` and `slideOutRight` animations from our inbuilt suit of animations to make the component content appear more dramatically from the left side and disappear on the right when collapsing the content. In the process, we override some of the existing parameters with the specific ones we want to use.
+
+The sample shows some user information and the key point here is passing the animation settings to the component like:
+`[animationSettings] = "animationSettingsCustom"`
+
+```html
+<!-- in expansion-panel.component.html -->
+...
+<igx-expansion-panel [animationSettings] = "animationSettingsCustom">
+    <igx-expansion-panel-header [disabled]="false">
+        <igx-expansion-panel-title class="sample-title">Personal Information</igx-expansion-panel-title>
+        <igx-expansion-panel-icon>
+            <igx-icon fontSet="material" [name]="collapsed() ? 'expand_more':'expand_less'"></igx-icon>
+        </igx-expansion-panel-icon>
+    </igx-expansion-panel-header>
+    <igx-expansion-panel-body>
+        <igx-input-group>
+            <input igxInput name="fullName" type="text" [(ngModel)]="user.fullName" required="required" />
+            <label igxLabel for="fullName">Full Name</label>
+            <igx-suffix>
+                <igx-icon name="person"></igx-icon>
+            </igx-suffix>
+        </igx-input-group>
+        <igx-input-group>
+            <igx-prefix>+359</igx-prefix>
+            <label igxLabel for="phone">Phone</label>
+            <input igxInput name="phone" type="text" [(ngModel)]="user.phone" />
+            <igx-suffix>
+                <igx-icon name="phone"></igx-icon>
+            </igx-suffix>
+            <igx-hint position="start">Ex.: +359 555 123 456</igx-hint>
+        </igx-input-group>
+        <igx-input-group>
+            <label igxLabel for="email">Email address</label>
+            <input igxInput name="email" type="email" [(ngModel)]="user.email" required />
+            <igx-suffix>
+                <igx-icon name="email"></igx-icon>
+            </igx-suffix>
+        </igx-input-group>
+    </igx-expansion-panel-body>
+</igx-expansion-panel>
+...
+```
+
+You can see the results below: 
+<div class="sample-container loading" style="height: 200px;">
+    <iframe id="expansion-sample-6-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/expansion-sample-6" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="expansion-sample-6-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+### Implementing accordion like scenario using several igxExpansionPanel components
+In the following example we are going to implement more like app case scenario, where you want to follow a particular workflow showing and requiring more user details on portions. In this sample the default `growVerIn` and `growVerOut` animations from our inbuilt animations suite are used thus there is no need to pass any specific animation settings or import animations. Notice how we do not allow more than one `igxExpansionPanel` to be expanded at a time, handling the `onInteraction` event.
+
+```typescript
+// in expansion-panel.component.ts
+import { Component, QueryList, ViewChildren } from "@angular/core";
+import { IgxExpansionPanelComponent } from "igniteui-angular";
+
+@Component({
+    ...
+})
+export class ExpansionPanelComponent {
+    @ViewChildren(IgxExpansionPanelComponent)
+    public accordion: QueryList<IgxExpansionPanelComponent>;
+
+    public user = {
+        email: "",
+        fullName: "",
+        phone: ""
+    };
+
+    public billingAddress = {
+        address: "",
+        city: "",
+        state: "",
+        zipCode: ""
+    };
+
+    public shippingAddress = {
+        address: "",
+        city: "",
+        state: "",
+        zipCode: ""
+    };
+
+    public collapsed(index: number) {
+         if (!this.accordion) {
+            return true;
+         }
+         return this.accordion.toArray()[index] && this.accordion.toArray()[index].collapsed;
+     }
+
+    public onInteraction(event) {
+        const expandedPanels = this.accordion.filter((panel) => !panel.collapsed);
+        expandedPanels.forEach((expandedPanel) => {
+            if (expandedPanel.elementRef !==  event.event.currentTarget) {
+                expandedPanel.collapse();
+            }
+        });
+    }
+}
+```
+
+```html
+<!-- in expansion-panel.component.html -->
+...
+<igx-expansion-panel class="content__collapsible">
+    <igx-expansion-panel-header (onInteraction)="onInteraction($event)" [disabled]="false">
+        <igx-expansion-panel-title class="sample-title">Personal Information</igx-expansion-panel-title>
+        <igx-expansion-panel-icon>
+            <igx-icon fontSet="material" [name]="collapsed(0) ? 'expand_more':'expand_less'"></igx-icon>
+        </igx-expansion-panel-icon>
+    </igx-expansion-panel-header>
+    <igx-expansion-panel-body class="body">
+        <igx-input-group>
+            <input igxInput name="fullName" type="text" [(ngModel)]="user.fullName" required="required" />
+            <label igxLabel for="fullName">Full Name</label>
+            <igx-suffix>
+                <igx-icon name="person"></igx-icon>
+            </igx-suffix>
+        </igx-input-group>
+        <igx-input-group>
+            <igx-prefix>+359</igx-prefix>
+            <label igxLabel for="phone">Phone</label>
+            <input igxInput name="phone" type="text" [(ngModel)]="user.phone" />
+            <igx-suffix>
+                <igx-icon name="phone"></igx-icon>
+            </igx-suffix>
+            <igx-hint position="start">Ex.: +359 555 123 456</igx-hint>
+        </igx-input-group>
+        <igx-input-group>
+            <label igxLabel for="email">Email address</label>
+            <input igxInput name="email" type="email" [(ngModel)]="user.email" required />
+            <igx-suffix>
+                <igx-icon name="email"></igx-icon>
+            </igx-suffix>
+        </igx-input-group>
+    </igx-expansion-panel-body>
+</igx-expansion-panel>
+
+<igx-expansion-panel class="content__collapsible">
+    <igx-expansion-panel-header (onInteraction)="onInteraction($event)" [disabled]="false">
+        <igx-expansion-panel-title class="sample-title">Billing Address</igx-expansion-panel-title>
+        <igx-expansion-panel-icon>
+            <igx-icon fontSet="material" [name]="collapsed(1) ? 'expand_more':'expand_less'"></igx-icon>
+        </igx-expansion-panel-icon>
+    </igx-expansion-panel-header>
+    <igx-expansion-panel-body class="body">
+        <igx-input-group>
+            <input igxInput name="address" type="text" [(ngModel)]="shippingAddress.address" required="required" />
+            <label igxLabel for="address">Billing Address:</label>
+            <igx-suffix>
+                <igx-icon name="add_location"></igx-icon>
+            </igx-suffix>
+        </igx-input-group>
+        <igx-input-group>
+            <label igxLabel for="city">City:</label>
+            <input igxInput name="city" type="text" [(ngModel)]="shippingAddress.city" required/>
+            <igx-suffix>
+                <igx-icon name="location_city"></igx-icon>
+            </igx-suffix>
+        </igx-input-group>
+        <igx-input-group>
+            <label igxLabel for="state">State:</label>
+            <input igxInput name="email" type="text" [(ngModel)]="shippingAddress.city" required />
+            <igx-suffix>
+                <igx-icon name="terrain"></igx-icon>
+            </igx-suffix>
+        </igx-input-group>
+        <igx-input-group>
+            <label igxLabel for="zipCode">Zip Code:</label>
+            <input igxInput name="zipCode" type="text" [(ngModel)]="shippingAddress.zipCode" required>
+            <igx-suffix>
+                <igx-icon name="mail_outline"></igx-icon>
+            </igx-suffix>
+        </igx-input-group>
+    </igx-expansion-panel-body>
+</igx-expansion-panel>
+
+<igx-expansion-panel class="content__collapsible">
+    <igx-expansion-panel-header (onInteraction)="onInteraction($event)" [disabled]="false">
+        <igx-expansion-panel-title class="sample-title">Shipping Address</igx-expansion-panel-title>
+        <igx-expansion-panel-icon>
+            <igx-icon fontSet="material" [name]="collapsed(2) ? 'expand_more':'expand_less'"></igx-icon>
+        </igx-expansion-panel-icon>
+    </igx-expansion-panel-header>
+    <igx-expansion-panel-body class="body">
+        <igx-input-group>
+            <input igxInput name="address" type="text" [(ngModel)]="billingAddress.address" required="required" />
+            <label igxLabel for="address">Shipping Address:</label>
+            <igx-suffix>
+                <igx-icon name="add_location"></igx-icon>
+            </igx-suffix>
+        </igx-input-group>
+        <igx-input-group>
+            <label igxLabel for="city">City:</label>
+            <input igxInput name="city" type="text" [(ngModel)]="billingAddress.city" required/>
+            <igx-suffix>
+                <igx-icon name="location_city"></igx-icon>
+            </igx-suffix>
+        </igx-input-group>
+        <igx-input-group>
+            <label igxLabel for="state">State:</label>
+            <input igxInput name="email" type="text" [(ngModel)]="billingAddress.city" required />
+            <igx-suffix>
+                <igx-icon name="terrain"></igx-icon>
+            </igx-suffix>
+        </igx-input-group>
+        <igx-input-group>
+            <label igxLabel for="zipCode">Zip Code:</label>
+            <input igxInput name="zipCode" type="text" [(ngModel)]="billingAddress.zipCode" required>
+            <igx-suffix>
+                <igx-icon name="mail_outline"></igx-icon>
+            </igx-suffix>
+        </igx-input-group>
+    </igx-expansion-panel-body>
+</igx-expansion-panel>
+...
+```
+You can see the results below: 
+<div class="sample-container loading" style="height: 200px;">
+    <iframe id="expansion-sample-7-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/expansion-sample-7" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="expansion-sample-7-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+
+
 ## API
 ### IgxExpansionPanel
 #### Properties 
