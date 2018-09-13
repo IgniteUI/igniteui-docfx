@@ -6,7 +6,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ## Expansion Panel
 <p class="highlight">
-The `IgxExpansionPanel` is a lightweigh component which can be rendered in two states - collapsed or expanded. When collapsed, the panel displays a short summary of its content. The collapsed panel can be toggled (via click or keyboard interactions) to display the whole body of the component, containing any additional necessary content.
+The `IgxExpansionPanel` is a lightweigh component which can be rendered in two states - collapsed or expanded. When collapsed, the panel displays a short summary of its content. The collapsed panel can be toggled using mouse click, or keyboard interactions (maybe have link here) to display the body completely, containing any additional necessary content.
 </p>
 <div class="divider--half"></div>
 
@@ -30,9 +30,9 @@ export class AppModule {}
 We can now start using `igx-expansion-panel` in the markup. The expansion panel has a simple structure, as you can see below:
 - `igx-expansion-panel` - the component host - stores header and body
     - `igx-expansion-panel-header` - stores the component header. This is always visible. Stores title and description as well as any additional content
-        - `igx-expansion-panel-title` - stores the component title. Has default styling. Will always appear first in the header content (after icon if `iconPosition === 'left'`). Used in aria labels.
-        - `igx-expansion-panel-description` - stores the component description. Can be used to provide a short summary. Will always appear after the title (if title is set).
-    - `igx-expansion-panel-body` - stores the component body. This part is only visible when the component is expanded.
+        - `igx-expansion-panel-title` - stores the component title. Has default styling. The title will always appear first in the header content (after icon if `iconPosition === 'left'`). Used in aria labels.
+        - `igx-expansion-panel-description` - stores the component description. Can be used to provide a short summary. The description will always appear after the title (if title is set).
+    - `igx-expansion-panel-body` - stores the component body. This part of the component is only visible when the panel is expanded.
 
 In the below example, we can create a small collapsible component that hold a bit of information about the hummingbird:
 ```html
@@ -88,6 +88,7 @@ export class ExpansionPanelComponent {
     public readMore: string = 'https://en.wikipedia.org/wiki/Hummingbird';
 }
 ```
+The following code sample will show the description only when the component is in collapsed state.
 
 ```html
 <!-- in expansion-component.component.html -->
@@ -99,8 +100,6 @@ export class ExpansionPanelComponent {
         </igx-expansion-panel-description>
     </igx-expansion-panel-header>
 ```
-
-This way, the description will only be display when the component is collapsed.
 
 If we want to add more complex functionality depending on the component's state, we could also bind to the event emitters.
 ```typescript
@@ -132,7 +131,7 @@ Below we have the results:
 The `IgxExpansionPanelComponent` allows for easy customization of the header.
 The default icon for the toggle state of the control can be templated. The position of this icon is also configurable - either the start or end of the header. It can also be hidden.
 
-Configuring the position of the header icon can be done through the `iconPosition` input on the `igx-expansion-panel-header`. The posible options for the icon position are **left**, **right** and **none**. Let's configure our components button to go on the *right* side.
+Configuring the position of the header icon can be done through the `iconPosition` input on the `igx-expansion-panel-header`. The posible options for the icon position are **left**, **right** and **none**. The next code sample demonstrates how to configure the component's button to go on the *right* side.
 
 ```html
 <!-- in expansion-component.component.html -->
@@ -183,7 +182,7 @@ NgModule({
     ...
 })
 ```
-Once imported, we can the avatar in the markup:
+Once imported, we can use the avatar in the markup:
 
 ```html
 <!-- in expansion-panel.component.html -->
