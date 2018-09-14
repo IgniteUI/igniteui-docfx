@@ -48,7 +48,7 @@ chart パッケージをインストールするときに core パッケージ�
 
 ```typescript
 // app.module.ts
-import { IgxCategoryChartModule } from 'ignite-angular-charts/ES5/igx-categorychart-module';
+import { IgxCategoryChartModule } from 'ignite-angular-charts/ES5/igx-category-chart-module';
 
 @NgModule({
     imports: [
