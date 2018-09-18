@@ -66,10 +66,10 @@ this.grid.paging = false;
 
 ### Remote Data
 
-Paging could also operate with remote data out of the box. So it won't need any additional work instead of passing data which is derived remotely.
+Paging could also operate with remote data.
 
-Let firstly declare our service that will be responsible for fetching our data and return only data for selected page.
-For the paging, we will need the count of all the data in order to calculate pages count and we need to add it in our service also.
+Lets first declare our service that will be responsible for fetching our data and return only current page data.
+We will need the count of all the data in order to calculate pages count and we have to add it to our service.
 
 ```typescript
 @Injectable()
@@ -105,7 +105,7 @@ export class RemoteService {
     }
 }
 ```
-After declaring our service, we need to create our component, which will be responsible for the grid construction and data subscription.
+After declaring the service, we need to create a component, which will be responsible for the grid construction and data subscription.
 
 ```typescript
 export class RemotePagingGridSample implements OnInit, AfterViewInit {
@@ -123,7 +123,7 @@ export class RemotePagingGridSample implements OnInit, AfterViewInit {
     }
 }
 ```
-We need to create a custom pager template to get the data only for the requested page and to pass the correct skip and top parameters to the remote service according to the selected page and items per page.
+We need to create a custom pager template to get the data only for the requested page and to pass the correct `skip` and `top` parameters to the remote service according to the selected page and `items per page`.
 We also need to take care of the disabling and enabling of the pager buttons.
 
 ```html
@@ -148,63 +148,51 @@ We also need to take care of the disabling and enabling of the pager buttons.
 ```
 
 ```typescript
-    @ViewChild("customPager", { read: TemplateRef })
-    public remotePager: TemplateRef<any>;
+@ViewChild("customPager", { read: TemplateRef })
+public remotePager: TemplateRef<any>;
 
-    public nextPage() {
-        this.firstPage = false;
-        this.page++;
-        const skip = this.page * this.perPage;
-        const top = this.perPage;
-        this.remoteService.getData(skip, top);
-        if (this.page + 1 >= this.totalPages) {
-            this.lastPage = true;
-        }
+public nextPage() {
+    this.firstPage = false;
+    this.page++;
+    const skip = this.page * this.perPage;
+    const top = this.perPage;
+    this.remoteService.getData(skip, top);
+    if (this.page + 1 >= this.totalPages) {
+        this.lastPage = true;
     }
+}
 
-    public previousPage() {
-        this.lastPage = false;
-        this.page--;
-        const skip = this.page * this.perPage;
-        const top = this.perPage;
-        this.remoteService.getData(skip, top);
-        if (this.page <= 0) {
-            this.firstPage = true;
-        }
+public previousPage() {
+    this.lastPage = false;
+    this.page--;
+    const skip = this.page * this.perPage;
+    const top = this.perPage;
+    this.remoteService.getData(skip, top);
+    if (this.page <= 0) {
+        this.firstPage = true;
     }
+}
 
-    public paginate(page: number, recalc: true) {
-        this.page = page;
-        const skip = this.page * this.perPage;
-        const top = this.perPage;
-        if (recalc) {
-            this.totalPages = Math.ceil(this.totalCount / this.perPage);
-        }
-        this.remoteService.getData(skip, top);
-        this.buttonDeselection(this.page, this.totalPages);
+public paginate(page: number, recalc: true) {
+    this.page = page;
+    const skip = this.page * this.perPage;
+    const top = this.perPage;
+    if (recalc) {
+        this.totalPages = Math.ceil(this.totalCount / this.perPage);
     }
+    this.remoteService.getData(skip, top);
+    this.buttonDeselection(this.page, this.totalPages);
+}
 
-    public buttonDeselection(page: number, totalPages: number) {
-        if (totalPages === 1) {
-            this.lastPage = true;
-            this.firstPage = true;
-        } else if (page + 1 >= totalPages) {
-            this.lastPage = true;
-            this.firstPage = false;
-        } else {
-            this.lastPage = false;
-            this.firstPage = true;
-        }
-    }
+public buttonDeselection(page: number, totalPages: number) {
+...
+}
 
-    public parseToInt(val) {
-        return parseInt(val, 10);
-    }
-
-     public ngAfterViewInit() {
-        this.remoteService.getData(0, this.perPage);
-        this.grid1.paginationTemplate = this.remotePager;
-    }
+...
+public ngAfterViewInit() {
+    this.remoteService.getData(0, this.perPage);
+    this.grid1.paginationTemplate = this.remotePager;
+}
 
 ```
 The last step will be to declare our template for the gird.
