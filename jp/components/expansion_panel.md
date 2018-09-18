@@ -47,8 +47,13 @@ In the below example, we can create a small collapsible component that hold a bi
         </igx-expansion-panel-description>
     </igx-expansion-panel-header>
     <igx-expansion-panel-body>
-        Hummingbirds are birds native to the Americas that constitute the family Trochilidae. They are among the smallest of birds, most species measuring 7.5–13 cm (3–5 in) in length. Indeed, the smallest extant bird species is a hummingbird, the 5 cm (2.0 in) bee hummingbird weighing less than 2.0 g (0.07 oz).
-        <a href='https://en.wikipedia.org/wiki/Hummingbird'>Read more</a>
+        <p>
+            Hummingbirds are birds native to the Americas that constitute the family Trochilidae.
+            They are among the smallest of birds, most species measuring 7.5–13 cm (3–5 in) in length.
+            Indeed, the smallest extant bird species is a hummingbird, the 5 cm (2.0 in) bee hummingbird weighing less
+            than 2.0 g (0.07 oz).
+        </p>
+        <a href="https://en.wikipedia.org/wiki/Hummingbird" target="_blank">Read more</a>
     </igx-expansion-panel-body>
 </igx-expansion-panel>
 
@@ -58,11 +63,23 @@ The `IgxExpansionPanelComponent` exposes the `.igx-expansion-panel` class which 
 ```css
 <!-- expansion-panel.component.css -->
 
-.igx-expansion-panel
-{
+.igx-expansion-panel {
     font-family: Verdana;
+    margin: 24px;
+    width: 420px;
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, .26), 0 2px 2px 0 rgba(0, 0, 0, .12), 0 3px 1px -2px rgba(0, 0, 0, .08);
+}
+
+.igx-expansion-panel__header--expanded {
+    border-bottom: 1px dashed rgba(0, 0, 0, .74);
+}
+
+.igx-expansion-panel__body > * {
+    padding: 8px 16px;
 }
 ```
+
+The classes `igx-expansion-panel__header` and `igx-expansion-panel__body` are also exposed for styling the header and body.
 
 You can see the results below: 
 <div class="sample-container loading" style="height: 200px;">
@@ -188,14 +205,18 @@ Once imported, we can use the avatar in the markup:
 <!-- in expansion-panel.component.html -->
 ...
 <igx-expansion-panel-body>
-    <div class='example-body'>
-        <igx-avatar [src]="imgSource" roundShape="true" size="large">
-        </igx-avatar>
-        Hummingbirds are birds native to the Americas that constitute the family Trochilidae. They are among the smallest of birds,
-        most species measuring 7.5–13 cm (3–5 in) in length. Indeed, the smallest extant bird species is a hummingbird,
-        the 5 cm (2.0 in) bee hummingbird weighing less than 2.0 g (0.07 oz).
-        <a [href]="readMore">Read more</a>
-    </div>
+    <div>
+            <igx-avatar [src]="imgSource" roundShape="true" size="large">
+            </igx-avatar>
+        </div>
+        <p>
+            Hummingbirds are birds native to the Americas that constitute the family Trochilidae. They are among
+            the smallest of birds,
+            most species measuring 7.5–13 cm (3–5 in) in length. Indeed, the smallest extant bird species is a
+            hummingbird,
+            the 5 cm (2.0 in) bee hummingbird weighing less than 2.0 g (0.07 oz).
+        </p>
+        <a [href]="readMore" target="_blank">Read more</a>
 </igx-expansion-panel-body>
 ...
 ```
@@ -497,6 +518,7 @@ You can see the results below:
 |:-- |:-- |:-- |:-- |
 | `id` | `string` | The unique id of the control | `igx-expansion-panel-0` |
 | `cssClass` | `string` | If the control applies a css class. Set to \`\` to omit | `igx-expansion-panel` |
+| `header` | `IgxExpansionPanelHeaderComponent` | Reference to the header of the component (if present) | `null` |
 
 #### Input
 |Name |Type | Description | Default |
@@ -526,7 +548,7 @@ You can see the results below:
 #### Properties
 | Name | Type | Description | Default |
 |:-- |:-- |:-- |:-- |
-| `id` | `string` | The unique id of the control | `igx-expansion-panel-0` |
+| `id` | `string` | The unique id of the control | `igx-expansion-panel-0-header` |
 | `panel` | `IgxExpansionPanelComponent` | The control the header belongs to | `null` |
 | `title` | `IgxExpansionPanelTitleDirective` | The title element of the header | `null` |
 
@@ -560,5 +582,5 @@ You can see the results below:
 #### Inputs
 |Name |Type | Description | Default |
 |:---|:--|:--|:--|
-| `labelledBy` | `string` | Binds to the host attribute `aria-labelledby` | `panel.title.id` |
+| `labelledBy` | `string` | Binds to the host attribute `aria-labelledby` | `panel.header.id`  |
 | `label` | `string` | Binds to the host attribute `aria-label` | `''` |
