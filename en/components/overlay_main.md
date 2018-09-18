@@ -15,6 +15,8 @@ The overlay service is fully integrated in the toggle directive.
 
 To use the `IgxOverlayService` it needs to be imported in the component. `Inject` a reference to it in the component's `constructor`:
 ```typescript
+
+import { Inject } from '@angular/core'
 import { IgxOverlayService } from `igniteui-angular`;
 
 ...
@@ -37,7 +39,7 @@ After a reference to the Overlay service is established, it can be used to dynam
 ```typescript
 
 // in my-overlay-component.component.ts
-import { MyDynamicComponent } from './my-dynamic-component.component.ts';
+import { MyDynamicComponent } from '../my-dynamic-component/my-dynamic-component.component';
 
 export class MyOverlayComponent {
 
@@ -59,6 +61,31 @@ export class MyOverlayComponent {
 </div>
 
 ```
+
+If we want to pass an already existing `ElementRef` from the page to the `IgxOverlayService`, we can do it as follows:
+
+```HTML
+<!-- in my-overlay-component.component.html -->
+<div class='content'>
+  <button (click)="showInOverlay()">Show Overlay</button>
+</div>
+<div>
+    <img #exampleImage width='200px' src='../assets/example.png' title='Click Me!'>
+</div>
+```
+
+```typescript
+// in my-overlay-component.component.ts
+import { Inject, ViewChild } from '@angular/core'
+export class MyOverlayComponent {
+
+    @ViewChild('exampleImage', {read: ElementRef})
+    private exampleImage: ElementRef;
+    public showInOverlay() {
+        this.overlayService.show(this.exampleImage);
+    }
+}
+```
 <div class="divider--half"></div>
 
 The overlay service `show()` method accepts 2 arguments, the first one being the content that should be rendered in the overlay. There are a couple of different scenarios how the content can be passed:
@@ -78,7 +105,7 @@ In the below demo, we can pass the IgxCard [demo](https://www.infragistics.com/p
     <iframe id="overlay-sample-main-1-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/overlay-sample-main-1" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="overlay-sample-main-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="overlay-sample-main-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz</button>
 </div>
 <div class="divider--half"></div>
 
@@ -89,6 +116,9 @@ The overlay service `show()` method also accepts an object of the `OverlaySettin
 For example, if we want the content to be positioned relative to an element, we can pass a different `positioningStrategy` for the overlay's `show()` method, e.g. `ConnectedPositioningStrategy`. In order to configure how the component is shown, we need to first create an `OverlaySettings` object:
 ```typescript
 // in my-overlay-component.component.ts
+// add an import for the definion of ConnectedPositioningStategy class
+import { ConnectedPositioningStrategy } from 'igniteui-angular';
+...
 export class MyOverlayComponent {
 
     @ViewChild(`myAnchorButton`)
@@ -96,7 +126,7 @@ export class MyOverlayComponent {
 
     public showInOverlay() {
         this.overlayService.show(MyDynamicComponent, {
-            positionStrategy: new ConnectedPositioningStrategy({ target: this.myAnchorButton })
+            positionStrategy: new ConnectedPositioningStrategy({ target: this.myAnchorButton.nativeElement })
         });
     }
 }
@@ -121,6 +151,9 @@ All of the elements rendered by the overlay service have a unique ID assigned to
 We can modify the previously defined overlay method to not only show but also hide the overlay element
 ```typescript
 // in my-overlay-component.component.ts
+// add an import for the definion of ConnectedPositioningStategy class
+import { ConnectedPositioningStrategy } from 'igniteui-angular';
+...
 export class MyOverlayComponent {
     private _overlayId = ''; // The unique identifier assigned to the component by the Overlay service
     private _overlayShown = false; // Is the component rendered in the Overlay?
@@ -131,7 +164,9 @@ export class MyOverlayComponent {
     public toggleOverlay() {
         if (!this._overlayShown) { // If the element is not visible, show it
             this._overlayId = this.overlayService.show(MyDynamicComponent, {
-                positionStrategy: new ConnectedPositioningStrategy({ target: this.myAnchorButton })
+                positionStrategy: new ConnectedPositioningStrategy({ target: this.myAnchorButton.nativeElement }),
+                closeOnOutsideClick: false, // overlay will not close on outside clicks
+                modal: false // overlay content will not be rendered in a modal dialog
             }); // The show method returns an ID that can be used to reference the shown content
         } else { // If the element is not visible, hide it
             this.overlayService.hide(this._overlayId); // Find and remove the component from the overlay container
@@ -155,7 +190,7 @@ Using the `overlaySettings` parameter of the `show()` method, we can change how 
     <iframe id="overlay-sample-main-2-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/overlay-sample-main-2" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="overlay-sample-main-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="overlay-sample-main-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz</button>
 </div>
 <div class="divider--half"></div>
 
@@ -220,30 +255,32 @@ export class ExampleComponent {
 
    | Name               | Description                                         | Type                                |
    |--------------------|-----------------------------------------------------|-------------------------------------|
-   |positionSettings    | Settings to apply to this position strategy         | PositionSettings                    |
+   |`positionSettings`  | Settings to apply to this position strategy         | `PositionSettings`                  |
 <div class="divider"></div>
 
  `OverlaySettings`
 
-   | Name               | Description                                         | Type                                |
-   |--------------------|-----------------------------------------------------|-------------------------------------|
-   |positionStrategy    | Position strategy to use with this settings         | IPositionStrategy                   |
-   |scrollStrategy      | Scroll strategy to use with this settings           | IScrollStrategy                     |
-   |modal               | Set if the overlay should be in modal mode          | boolean                             |
-   |closeOnOutsideClick | Set if the overlay should closed on outside click   | boolean                             |
+   | Name                | Description                                         | Type                                |
+   |---------------------|-----------------------------------------------------|-------------------------------------|
+   |`positionStrategy`   | Position strategy to use with this settings         | `IPositionStrategy`                 |
+   |`scrollStrategy`     | Scroll strategy to use with this settings           | `IScrollStrategy`                   |
+   |`modal`              | Set if the overlay should be in modal mode          | `boolean`                           |
+   |`closeOnOutsideClick`| Set if the overlay should closed on outside click   | `boolean`                           |
+   |outlet              | Set the outlet container to which to attach the overlay (defaults to `body`) | IgxOverlayOutletDirective \| ElementRef |
+
 <div class="divider--half"></div>
 
  `PositionSettings`
 
-   | Name               | Description                                         | Type                                |
-   |--------------------|-----------------------------------------------------|-------------------------------------|
-   |target              | Attaching target for the component to show          | Point \| HTMLElement                |
-   |horizontalDirection | Direction in which the component should show        | HorizontalAlignment                 |
-   |verticalDirection   | Direction in which the component should show        | VerticalAlignment                   |
-   |horizontalStartPoint| Target's starting point                             | HorizontalAlignment                 |
-   |verticalStartPoint  | Target's starting point                             | VerticalAlignment                   |
-   |openAnimation       | Animation applied while overlay opens               | AnimationReferenceMetadata          |
-   |closeAnimation      | Animation applied while overlay closes              | AnimationReferenceMetadata          |
+   | Name                 | Description                                         | Type                                |
+   |----------------------|-----------------------------------------------------|-------------------------------------|
+   |`target`              | Attaching target for the component to show          | `Point` \| `HTMLElement`            |
+   |`horizontalDirection` | Direction in which the component should show        | `HorizontalAlignment`               |
+   |`verticalDirection`   | Direction in which the component should show        | `VerticalAlignment`                 |
+   |`horizontalStartPoint`| Target's starting point                             | `HorizontalAlignment`               |
+   |`verticalStartPoint`  | Target's starting point                             | `VerticalAlignment`                 |
+   |`openAnimation`       | Animation applied while overlay opens               | `AnimationReferenceMetadata`        |
+   |`closeAnimation`      | Animation applied while overlay closes              | `AnimationReferenceMetadata`        |
 
 ### Methods
 
@@ -251,33 +288,33 @@ export class ExampleComponent {
 
    | Name            | Description                                                                     | Parameters |
    |-----------------|---------------------------------------------------------------------------------|------------|
-   |show             | Shows the provided component on the overlay                                     |component, overlaySettings?|
-   |hide             | Remove the provided native element of for the component with provided id        |id          |
-   |hideAll          | Remove the all native elements and hides the overlay                            |-           |
-   |reposition       | Repositions the native element of the component with provided id                |id          |
+   |`show`           | Shows the provided component on the overlay                                     |`component, overlaySettings?`|
+   |`hide`           | Remove the provided native element of for the component with provided id        |`id`        |
+   |`hideAll`        | Remove the all native elements and hides the overlay                            |-           |
+   |`reposition`     | Repositions the native element of the component with provided id                |`id`        |
 <div class="divider"></div>
 
  `IPositionStrategy`
 
    | Name            | Description                                                                     | Parameters |
    |-----------------|---------------------------------------------------------------------------------|------------|
-   |position         | Positions provided element                                                      |element     |
+   |`position`       | Positions provided element                                                      |`element`   |
 <div class="divider"></div>
 
  `IScrollStrategy`
 
    | Name            | Description                                                                     | Parameters |
    |-----------------|---------------------------------------------------------------------------------|------------|
-   |initialize       | Initialize the strategy. Should be called once                                  |document, overlayService, id|
-   |attach           | Attaches the strategy                                                           |-           |
-   |detach           | Detaches the strategy                                                           |-           |
+   |`initialize`     | Initialize the strategy. Should be called once                                  |`document, overlayService, id`|
+   |`attach`         | Attaches the strategy                                                           |-           |
+   |`detach`         | Detaches the strategy                                                           |-           |
 <div class="divider"></div>
 
  `static methods`
 
-   | Name                        | Description                                                         | Parameters |
-   |-----------------------------|---------------------------------------------------------------------|------------|
-   |getPointFromPositionsSettings| Calculates the point from which the overlay should start showing    |settings    |
+   | Name                          | Description                                                         | Parameters |
+   |-------------------------------|---------------------------------------------------------------------|------------|
+   |`getPointFromPositionsSettings`| Calculates the point from which the overlay should start showing    |`settings`  |
 <div class="divider"></div>
 
 ### Events
@@ -285,12 +322,12 @@ export class ExampleComponent {
 
 `IgxOverlayService`
 
-   | Name        | Description                        | Cancelable | Parameters |
-   |-------------|------------------------------------|------------|------------|
-   |onOpening    | Emitted on before overlay shows    | false      |            |
-   |onOpened     | Emitted after overlay shows        | false      |            |
-   |onClosing    | Emitted before overlay hides       | false      |            |
-   |onClosed     | Emitted after  overlay hides       | false      |            |
+   | Name          | Description                        | Cancelable | Parameters |
+   |---------------|------------------------------------|------------|------------|
+   |`onOpening`    | Emitted on before overlay shows    | false      |            |
+   |`onOpened`     | Emitted after overlay shows        | false      |            |
+   |`onClosing`    | Emitted before overlay hides       | false      |            |
+   |`onClosed`     | Emitted after  overlay hides       | false      |            |
 <div class="divider--half"></div>
 
 ## Assumptions and Limitations</a>

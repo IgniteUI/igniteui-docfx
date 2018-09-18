@@ -14,7 +14,7 @@ The `igxToggle` directive allows the users to open, to interact with, to apply a
     <iframe id="toggle-iframe" src='{environment:demosBaseUrl}/toggle' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="toggle-iframe" data-demos-base-url="{environment:demosBaseUrl}">                       view on stackblitz
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="toggle-iframe" data-demos-base-url="{environment:demosBaseUrl}">                       view on stackblitz
     </button>
 </div>
 
@@ -80,7 +80,7 @@ If all went well, you should see the following in your browser:
     <iframe id="toggle-sample-1-iframe" src='{environment:demosBaseUrl}/toggle-sample-1' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="toggle-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">                       view on stackblitz
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="toggle-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">                       view on stackblitz
     </button>
 </div>
 
@@ -143,7 +143,7 @@ The `igxToggle` uses the [**IgxOverlayService**](https://www.infragistics.com/pr
     <iframe id="toggle-iframe-1" src='{environment:demosBaseUrl}/toggle' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="toggle-iframe-1" data-demos-base-url="{environment:demosBaseUrl}">                       view on stackblitz
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="toggle-iframe-1" data-demos-base-url="{environment:demosBaseUrl}">                       view on stackblitz
     </button>
 </div>
 
@@ -183,7 +183,7 @@ After these changes the toggle should work exactly in the same way.
     <iframe id="toggle-sample-2-iframe" src='{environment:demosBaseUrl}/toggle-sample-2' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="toggle-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">                       view on stackblitz
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="toggle-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">                       view on stackblitz
     </button>
 </div>
 
@@ -222,10 +222,24 @@ If all went well, it will look like this:
     <iframe id="toggle-sample-3-iframe" src='{environment:demosBaseUrl}/toggle-sample-3' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="toggle-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">                       view on stackblitz
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="toggle-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">                       view on stackblitz
     </button>
 </div>
 
+### IgxOverlayOutlet Directive
+
+The **IgxOverlayOutlet** provides a way to mark an element as an `igxOverlay` outlet container through the component template.
+Directive instance is exported as `overlay-outlet`, so it can be assigned within the template:
+
+```html
+<div igxOverlayOutlet #outlet="overlay-outlet"></div>
+```
+
+This allows to provide the `outlet` templates variable as a setting to the toggle action:
+```html
+<button [igxToggleAction]="reference" [igxToggleOutlet]="outlet">Toggle</button>
+<custom-component #reference></custom-component>
+```
 
 ## API Summary
 
@@ -244,6 +258,7 @@ The following inputs are available on the **igxToggleAction** directive:
 | Name | Type | Description |
 | :--- | :--- | :--- |
 | `igxToggleAction` | IgxToggleDirective | Accepts the toggle that has to be controlled. |
+| `igxToggleOutlet` | `IgxOverlayOutletDirective` \| `ElementRef`| Determines where the target overlay element should be attached. Shortcut for `overlaySettings.outlet`. |
 | `closeOnOutsideClick` | IgxToggleDirective | Determines whether toggle should be closed when you click outside. |
 
 <div class="divider"></div>

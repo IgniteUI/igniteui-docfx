@@ -15,7 +15,7 @@ While browsers natively provide search functionality, most of the time the grid 
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="grid-search-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-search-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
 
@@ -52,15 +52,8 @@ Let's start by creating our grid and binding it to our data. We will also add so
     font-size: 0.875rem;
 }
 
-.caseSensitiveButton {
-    margin-left: 10px;
-}
-
-.caseSensitiveIcon {
-    width: 1.25rem;
-    height: 1.25rem;
-    font-size: 1.25rem;
-    color: rgba(0, 0, 0, .54);
+.chips {
+    margin-left: 5px;
 }
 
 .searchButtons {    
@@ -68,29 +61,33 @@ Let's start by creating our grid and binding it to our data. We will also add so
 }
 ```
 
-Great, and now let's prepare for the search API of our Data Grid! We can create a couple of properties, which can be used for storing the currently searched text and whether the search is case sensitive or not.
+Great, and now let's prepare for the search API of our Data Grid! We can create a few properties, which can be used for storing the currently searched text and whether the search is case sensitive and/or by an exact match.
 
 ```typescript
 // searchgrid.component.ts
 
 public searchText: string = "";
 public caseSensitive: boolean = false;
+public exactMatch: boolean = false;
 ```
 
 #### Search input box
 
 Now let's create our search input! By binding our **searchText** as ngModel to our newly created input and subscribe to the ngModelChange event, we can detect every single **searchText** modification by the user. This will allow us to use the grid's `findNext` and `findPrev` methods to highlight all the occurrences of the **searchText** and scroll to the next/previous one (depending on which method we have invoked).
 
-Both the `findNext` and the `findPrev` methods have two arguments:
-- **string** value (the text we are searching for)
-- (optional) **boolean** value (should the search be case sensitive or not, default value is false). 
+Both the `findNext` and the `findPrev` methods have three arguments:
+- `text`: **string** (the text we are searching for)
+- (optional) `caseSensitive`: **boolean** (should the search be case sensitive or not, default value is false)
+- (optional) `exactMatch`: **boolean** (should the search be by an exact match or not, default value is false)
+
+When searching by an exact match, the search API will highlight as results only the cell values that match entirely the **searchText** by taking the case sensitivity into account as well. For example the strings '_software_' and '_Software_' are an exact match with a disregard for the case sensitivity.
 
 The methods from above return a **number** value (the number of times the grid contains the given string).
 
 ```html
 <!--searchgrid.component.html-->
 
-<input #search1 id="search1" placeholder="Search" [(ngModel)]="searchText" (ngModelChange)="grid.findNext(searchText, caseSensitive)" />
+<input #search1 id="search1" placeholder="Search" [(ngModel)]="searchText" (ngModelChange)="grid.findNext(searchText, caseSensitive, exactMatch)" />
 ```
 
 #### Display results count
@@ -120,8 +117,8 @@ In order to freely search and navigate among our search results, let's create a 
 <!--searchgrid.component.html-->
 
 <div class="searchButtons">
-    <input type="button" value="Previous" (click)="grid.findPrev(searchText, caseSensitive)" />
-    <input type="button" value="Next" (click)="grid.findNext(searchText, caseSensitive)" />
+    <input type="button" value="Previous" (click)="grid.findPrev(searchText, caseSensitive, exactMatch)" />
+    <input type="button" value="Next" (click)="grid.findNext(searchText, caseSensitive, exactMatch)" />
 </div>
 ```
 
@@ -132,7 +129,7 @@ We can also allow the users to navigate the results by using the keyboard's arro
 ```html
 <!--searchgrid.component.html-->
 
-<input #search1 id="search1" placeholder="Search" [(ngModel)]="searchText" (ngModelChange)="grid.findNext(searchText, caseSensitive)"
+<input #search1 id="search1" placeholder="Search" [(ngModel)]="searchText" (ngModelChange)="grid.findNext(searchText, caseSensitive, exactMatch)"
        (keydown)="searchKeyDown($event)" />
 ```
 
@@ -142,23 +139,26 @@ We can also allow the users to navigate the results by using the keyboard's arro
 public searchKeyDown(ev) {
     if (ev.key === "Enter" || ev.key === "ArrowDown" || ev.key === "ArrowRight") {
         ev.preventDefault();
-        this.grid.findNext(this.searchText, this.caseSensitive);
+        this.grid.findNext(this.searchText, this.caseSensitive, this.exactMatch);
     } else if (ev.key === "ArrowUp" || ev.key === "ArrowLeft") {
         ev.preventDefault();
-        this.grid.findPrev(this.searchText, this.caseSensitive);
+        this.grid.findPrev(this.searchText, this.caseSensitive, this.exactMatch);
     }
 }
 ```
 
-#### Case sensitive
+#### Case sensitive and Exact match
 
-Now let's allow the user to choose whether the search should be case sensitive or not. For this purpose we can use a simple checkbox input by binding our **caseSensitive** property to its **checked** property and handle the **change** event by toggling our property and invoking the `findNext` method.
+Now let's allow the user to choose whether the search should be case sensitive and/or by an exact match. For this purpose we can use simple checkbox inputs by binding our **caseSensitive** and **exactMatch** properties to the inputs' **checked** properties respectively and handle their **change** events by toggling our properties and invoking the `findNext` method.
 
 ```html
 <!--searchgrid.component.html-->
 
 <span>Case sensitive</span>
 <input type="checkbox" [checked]="caseSensitive" (change)="updateSearch()">
+
+<span>Exact match</span>
+<input type="checkbox" [checked]="exactMatch" (change)="updateExactSearch()">
 ```
 
 ```typescript
@@ -166,7 +166,12 @@ Now let's allow the user to choose whether the search should be case sensitive o
 
 public updateSearch() {
     this.caseSensitive = !this.caseSensitive;
-    this.grid.findNext(this.searchText, this.caseSensitive);
+    this.grid.findNext(this.searchText, this.caseSensitive, this.exactMatch);
+}
+
+public updateExactSearch() {
+    this.exactMatch = !this.exactMatch;
+    this.grid.findNext(this.searchText, this.caseSensitive, this.exactMatch);
 }
 ```
 
@@ -176,8 +181,8 @@ What if we would like to filter and sort our grid or even to add and remove reco
 
 #### Adding icons
 
-By using some of our other components, we can create an enriched user interface and improve the overall design of our entire search bar! We can have a nice search or delete icon on the left of the search input and some material design icons combined with nice ripple styled buttons for our search options and navigation on the right. We can wrap these components inside an input group for a more refined design.
-To do this, let's go and grab the [**IgxInputGroup**](https://www.infragistics.com/products/ignite-ui-angular/angular/components/input_group.html), [**IgxIcon**](https://www.infragistics.com/products/ignite-ui-angular/angular/components/icon.html),  [**IgxRipple**](https://www.infragistics.com/products/ignite-ui-angular/angular/components/ripple.html) and the [**IgxButton**](https://www.infragistics.com/products/ignite-ui-angular/angular/components/button.html) modules.
+By using some of our other components, we can create an enriched user interface and improve the overall design of our entire search bar! We can have a nice search or delete icon on the left of the search input, a couple of chips for our search options and some material design icons combined with nice ripple styled buttons for our navigation on the right. We can wrap these components inside an input group for a more refined design.
+To do this, let's go and grab the [**IgxInputGroup**](https://www.infragistics.com/products/ignite-ui-angular/angular/components/input_group.html), [**IgxIcon**](https://www.infragistics.com/products/ignite-ui-angular/angular/components/icon.html),  [**IgxRipple**](https://www.infragistics.com/products/ignite-ui-angular/angular/components/ripple.html), [**IgxButton**](https://www.infragistics.com/products/ignite-ui-angular/angular/components/button.html) and the [**IgxChip**](https://www.infragistics.com/products/ignite-ui-angular/angular/components/chip.html) modules.
 
 ```typescript
 // app.module.ts
@@ -188,12 +193,13 @@ import {
     IgxInputGroupModule,
     IgxIconModule,
     IgxRippleModule,
-    IgxButtonModule    
+    IgxButtonModule,
+    IgxChipsModule
 } from 'igniteui-angular';
 
 @NgModule({
     ...
-    imports: [..., IgxInputGroupModule, IgxIconModule, IgxRippleModule, IgxButtonModule],
+    imports: [..., IgxInputGroupModule, IgxIconModule, IgxRippleModule, IgxButtonModule, IgxChipsModule],
 })
 export class AppModule {}
 ```
@@ -246,17 +252,21 @@ On the right in our input group, let's create three separate containers with the
     </div>
     ...
 ```
-- For a button that toggles the **caseSensitive** property. We have replaced the checkbox with a more stylish button that contains a material icon. Whenever the button is clicked, we invoke our custom **updateSearch** method again and we set different background to our button depending on the state of the **caseSensitive** property.
+- For displaying a couple of chips that toggle the **caseSensitive** and the **exactMatch** properties. We have replaced the checkboxes with two stylish chips that change color based on these properties. Whenever a chip is clicked, we invoke its respective handler - **updateSearch** or **updateExactSearch** depending on which chip has been clicked.
 
 ```html
 <!--searchgrid.component.html-->
 
     ...
-    <div class="caseSensitiveButton">
-        <button igxButton="icon" igxRipple igxRippleCentered="true" (click)="updateSearch()"
-                [igxButtonBackground]="caseSensitive? 'lightgrey' : 'transparent'">
-            <igx-icon class="caseSensitiveIcon" fontSet="material" name="text_fields"></igx-icon>
-        </button>
+    <div class="chips">
+        <igx-chips-area>
+            <igx-chip (click)="updateSearch()" [color]="caseSensitive? 'lightgrey' : 'rgba(0, 0, 0, .04)'">
+                <span>Case Sensitive</span>
+            </igx-chip>
+            <igx-chip (click)="updateExactSearch()" [color]="exactMatch? 'lightgrey' : 'rgba(0, 0, 0, .04)'">
+                <span>Exact Match</span>
+            </igx-chip>
+        </igx-chips-area>
     </div>
     ...
 ```
@@ -267,10 +277,10 @@ On the right in our input group, let's create three separate containers with the
 
     ...
     <div class="searchButtons">
-        <button igxButton="icon" igxRipple igxRippleCentered="true" (click)="grid.findPrev(searchText, caseSensitive)">
+        <button igxButton="icon" igxRipple igxRippleCentered="true" (click)="grid.findPrev(searchText, caseSensitive, exactMatch)">
             <igx-icon fontSet="material" name="navigate_before"></igx-icon>
         </button>
-        <button igxButton="icon" igxRipple igxRippleCentered="true" (click)="grid.findNext(searchText, caseSensitive)">
+        <button igxButton="icon" igxRipple igxRippleCentered="true" (click)="grid.findNext(searchText, caseSensitive, exactMatch)">
             <igx-icon fontSet="material" name="navigate_next"></igx-icon>
         </button>
     </div>
@@ -279,14 +289,14 @@ On the right in our input group, let's create three separate containers with the
 
 ### API Summary
 
-In this article we implemented our own bar for the grid with some additional functionality when it comes to navigating between the search results. We also used some additional Ignite UI for Angular components like icons and inputs. The search API is listed below.
+In this article we implemented our own search bar for the grid with some additional functionality when it comes to navigating between the search results. We also used some additional Ignite UI for Angular components like icons, chips and inputs. The search API is listed below.
 
 #### Methods
 The following methods are available on the **IgxGridComponent**:
 | Name | Type | Parameters |Description |
 | :--- | :--- | :--- | :--- |
-| `findNext` | number | The string to search and, optionally, if the search should be case sensitive (defaults to false). | Finds the next occurrence of a given string in the grid and scrolls to the cell if it isn't visible. Returns how many times the grid contains the string. |
-| `findPrev` | number | The string to search and, optionally, if the search should be case sensitive (defaults to false). | Finds the previous occurrence of a given string in the grid and scrolls to the cell if it isn't visible. Returns how many times the grid contains the string. |
+| `findNext` | number | The string to search and, optionally, if the search should be case sensitive and/or an exact match (both default to false). | Finds the next occurrence of a given string in the grid and scrolls to the cell if it isn't visible. Returns how many times the grid contains the string. |
+| `findPrev` | number | The string to search and, optionally, if the search should be case sensitive and/or an exact match (both default to false). | Finds the previous occurrence of a given string in the grid and scrolls to the cell if it isn't visible. Returns how many times the grid contains the string. |
 | `clearSearch` | void | N/A | Removes all the highlights in the grid. |
 | `refreshSearch` | number | N/A | Reapplies the existing search. Returns how many times the grid contains the last search. |
 
@@ -295,7 +305,7 @@ The following methods are available on the **IgxGridComponent**:
 The following methods are available on the **IgxGridCellComponent**:
 | Name | Type | Parameters |Description |
 | :--- | :--- | :--- | :--- |
-| `highlightText` | number | The string to search and, optionally, if the search should be case sensitive (defaults to false). | Highlights all occurrences of a string in a given cell. Return how many times the searched string is contained in the cell. |
+| `highlightText` | number | The string to search and, optionally, if the search should be case sensitive and/or an exact match (both default to false). | Highlights all occurrences of a string in a given cell. Return how many times the searched string is contained in the cell. |
 | `clearHighlight` | void | N/A | Removes all the highlights in the cell. |
 
 <div class="divider"></div>

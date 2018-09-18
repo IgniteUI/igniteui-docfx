@@ -18,7 +18,7 @@ Combo コントロールは、データと値のバインディング、カス�
     <iframe id="combo-features-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/combo-features" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="combo-features-sample" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="combo-features-sample" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
 </div>
 <div class="divider--half"></div>
 
@@ -158,7 +158,7 @@ set values(newValues: Array<any>) {
 
 | 名前|説明|型                        |
 |--------------------------|---------------------------------------------------|-----------------------------|
-|  id|コンボ id                                          |string                      |
+|  `id`	                   |コンボ id                                          |string                      |
 |  `data`                  |コンボ データ ソース                                |any                         |
 |  `value`                 |コンボ値                                       |string                      |
 |  `allowCustomValue`      |コンボのカスタム値を有効/無効にします。               |boolean                     |
@@ -200,7 +200,7 @@ set values(newValues: Array<any>) {
 
 | 名前|説明|戻り型|パラメーター                  |
 |----------------- |-----------------------------|----------------------|-----------------------------|
-| `open`           |ドロップダウンを開きます。             |`void`               |なし                      |
+| `open`           |ドロップダウンを開きます。             |`void`               |`None`                      |
 | `close`          |ドロップダウンを閉じます。        |`void`               |`None`                      |
 | `toggle`         |ドロップダウンを切り替えます。|`void`               |`None`                      |
 | `selectedItems`  |現在の選択状態を取得します。|`Array<any>`         |`None`                      |

@@ -7,12 +7,12 @@ _language: ja
 
 ## Combo
 <p class="highlight">
-igx-combo コンポーネントは、基本的な HTML `input`、選択機能、IgniteUI for Angular igx-drop-down を組み合わせたコンポーネントです。<br />
+igx-combo コンポーネントは、基本的な HTML `input`、選択機能、Ignite UI for Angular `igx-drop-down` を組み合わせたコンポーネントです。<br />
 Combo コンポーネントは、**[フィルタリング](combo_features.md#フィルタリング)**、項目の**複数選択**、**[グループ化](combo_features.md#グループ化)**、ドロップダウン リストに**[カスタム値](combo_features.md#カスタム値)** の追加などの機能をサポートします。<br />
 **[カスタム テンプレート](combo_templates.md)** は、項目、ヘッダー、フッターなどコンポーネントの異なる領域をカスタマイズするために提供されます。<br />
 `igx-combo` コンポーネントは、**[テンプレート駆動フォーム](input_group.md)** と **[Reactive フォーム](input_group_reactive_forms.md)** を統合したコンポーネントです。<br />
 `igx-combo` は、直感的な **キーボード ナビゲーション**を公開し、**アクセシビリティ規格**に準拠しています。<br />
-ドロップダウン項目を**仮想化*することにより、igx-combo を大量の項目を持つデータ ソースにバインドした場合もスムーズにスクロールを行うことができます。
+ドロップダウン項目を**仮想化**することにより、`igx-combo` を大量の項目を持つデータ ソースにバインドした場合もスムーズにスクロールを行うことができます。
 </p>
 <div class="divider"></div>
 
@@ -21,7 +21,7 @@ Combo コンポーネントは、**[フィルタリング](combo_features.md#フ
     <iframe id="combo-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/combo" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="combo-sample" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="combo-sample" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
 </div>
 <div class="divider--half"></div>
 
@@ -45,7 +45,7 @@ import { IgxComboModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-次にテンプレートで `igx-combo` をデータにバインドし、localData データソースのエントリに対応する `valueKey` と `displayKey` を定義します。
+次にテンプレートで `igx-combo` をデータにバインドし、`localData` データソースのエントリに対応する `valueKey` と `displayKey` を定義します。
 
 ```html
 <igx-combo [data]="lData" [valueKey]="'ProductID'" [displayKey]="'ProductName'"></igx-combo>
@@ -123,7 +123,6 @@ igxCombo が開いて、カスタム値が有効で、「項目の追加」ボ�
 |  `groupKey`              | コンボの項目グループ                                      | string                      |
 |  `virtualizationState`   | 仮想化されたデータの現在の状態を定義します。`startIndex` および `chunkSize` を含みます。 | `IForOfState`                |
 |  `width `                | コンボの幅を定義します。                                    | string                      |
-|  `height`                | コンボの高さを定義します。                                   | string                      |
 |  `itemsMaxHeight `       | ドロップダウンの高さを定義します。                               | number                      |
 |  `itemsWidth `           | ドロップダウンの幅を定義します。                                | string                      |
 |  `itemHeight `           | ドロップダウン項目の高さを定義します。                            | number                      |
@@ -165,8 +164,9 @@ igxCombo が開いて、カスタム値が有効で、「項目の追加」ボ�
 
 ## 既知の問題
 
-- 選択した項目を表示するコンボ入力は編集可能ではありませんが、IE および Firefox でカーソルが表示
+- 選択した項目を表示するコンボ入力は編集可能ではありませんが、IE および Firefox でカーソルが表示される問題。
 - IE で無効なコンボで BackSpace キーが使用できる問題。
+- Combo は高さのサイズ変更のための入力はありません。 `IgxInputGroup` は、カスタムのサイズ変更オプションを公開し、`IgxCombo` は適切なスタイル設定と外観の統一に同じ機能を使用します。
 
 ## その他のリソース
 

@@ -152,6 +152,8 @@
       href: themes/global-theme.md
     - name: コンポーネント テーマ
       href: themes/component-themes.md
+    - name: テーマのデモ
+      href: themes/theming-demo.md
     - name: タイポグラフィ
       href: themes/typography.md
 - name: Shadows
@@ -195,6 +197,9 @@
   href: for_of.md
 - name: Chip
   href: chip.md
+  new: true
+- name: Text Highlight
+  href: texthighlight.md
   new: true
 - name: インタラクション
   header: true

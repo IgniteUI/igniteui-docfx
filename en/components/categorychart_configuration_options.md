@@ -12,7 +12,7 @@ There are many areas of the category chart that can be customized, such as the m
     <iframe id="category-chart-config-options-sample-iframe" src='{environment:demosBaseUrl}/category-chart-config-options-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="category-chart-config-options-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="category-chart-config-options-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
     </button>
 </div>
 
@@ -47,6 +47,28 @@ The appearance of chart markers is managed through the `markerType`, `markerBrus
     markerType="diamondMarker"
     markerBrushes="red"
     markerOutlines="yellow">
+</igx-category-chart>
+```
+
+### Configuring Chart Titles and Subtitles
+
+The title and subtitle feature of the category chart component allows you to add information to the top section of the chart.
+When adding a title or subtitle to the chart, the content of the chart automatically resizes allowing for the title and subtitle information.
+
+You can customize the look and feel of the category chart’s subtitle and title in many different ways such as applying different font styles, margins, and alignment as demonstrated in the following code example.
+
+
+```html
+<igx-category-chart
+    [dataSource]="data"
+    width="700px"
+    height="500px"
+    chartTitle="Energy Use Per Country"
+    titleTextColor = "Red"
+    titleTextStyle="20pt Verdana"
+    subtitle="Results over a two year periods"
+    subtitleTextColor = "Blue"
+    subtitleTextStyle = "10pt Verdana">
 </igx-category-chart>
 ```
 

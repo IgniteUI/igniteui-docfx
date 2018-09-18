@@ -17,7 +17,7 @@ Ignite UI for Angular では、列レベルでの**並べ替え**が可能です
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="grid-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
 </div>
 <div class="divider--half"></div>
 
@@ -72,6 +72,11 @@ public ngOnInit() {
 
 > [!NOTE]
 > `string` 型の値が `Date` dataType の列で使用される場合、グリッドが値を `Date` オブジェクトに解析しないため igxGrid 並べ替え機能が正しく動作しません。`string` オブジェクトを使用する場合、値を `Date` オブジェクトに解析するためのロジックをアプリケーション レベルで実装する必要があります。
+
+<div class="divider--half"></div>
+
+#### リモート並べ替え
+onDataPreLoad と onFilteringDone アウトプットにサブスクライブしてグリッドでリモートの並べ替えができます。詳細については、`グリッドの仮想化とパフォーマンス` [ヘルプ](grid_virtualization.md#リモートの並べ替えフィルタリングの仮想化)をご覧ください。
 
 <div class="divider--half"></div>
 

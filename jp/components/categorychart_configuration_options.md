@@ -14,7 +14,7 @@ _language: ja
     <iframe id="category-chart-config-options-sample-iframe" src='{environment:demosBaseUrl}/category-chart-config-options-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="category-chart-config-options-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="category-chart-config-options-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
     </button>
 </div>
 
@@ -51,17 +51,38 @@ _language: ja
     markerOutlines="yellow">
 </igx-category-chart>
 ```
+### チャートのタイトルとサブタイトルを構成
 
-### トランジション イン アニメーション
+カテゴリ チャート コンポーネントのタイトルとサブタイトル機能は、チャートの上部セクションに情報を追加できます。
+チャートにタイトルまたはサブタイトルを追加すると、タイトルとサブタイトルの情報に応じて、チャートの内容が自動的にサイズ変更されます。
+
+以下のコード例のようにカテゴリ チャートのサブタイトルとタイトルにさまざまなフォントスタイル、マージン、配置を適用してルックアンドフィールをカスタマイズできます。
+
+
+```html
+<igx-category-chart
+    [dataSource]="data"
+    width="700px"
+    height="500px"
+    chartTitle="Energy Use Per Country"
+    titleTextColor = "Red"
+    titleTextStyle="20pt Verdana"
+    subtitle="Results over a two year periods"
+    subtitleTextColor = "Blue"
+    subtitleTextStyle = "10pt Verdana">
+</igx-category-chart>
+```
+
+### トランジションイン アニメーション
 
 この機能は、新しいデータ ソースを読み込むときのシリーズのアニメーション化を可能にします。利用可能なアニメーションは、シリーズのタイプに基づきます。たとえば、列シリーズは  x 軸が上に上昇するとアニメーションを再生します。折れ線シリーズは y 軸から描画するアニメーションを再生します。
 
 チャートでタイトルおよびサブタイトル情報がサイズ変更できます。
 
 >[!NOTE] 
->デフォルトでトランジション イン アニメーションは無効ですが、`isTransitionInEnabled` オプションを `true` に設定してトランジションイン アニメーションを有効にできます。
+>デフォルトでトランジションイン アニメーションは無効ですが、`isTransitionInEnabled` オプションを `true` に設定してトランジションイン アニメーションを有効にできます。
 
-トランジション イン アニメーションのトランジション タイプ、データ ポイントに相対するスピード、およびイージング関数によって管理されるイージング トランジションを構成できます。
+トランジションイン アニメーションのトランジション タイプ、データ ポイントに相対するスピード、およびイージング関数によって管理されるイージング トランジションを構成できます。
 
 トランジション タイプは、transitionInMode オプションを任意のトランジション名に設定して構成します。プロパティを `Auto` (デフォルト値) に設定し、シリーズ タイプに基づいてトランジション タイプを自動的に選択することもできます。
 

@@ -16,7 +16,7 @@ Ignite UI for Angular の Grid コンポーネントは、列のデータ型に�
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="grid-editing-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-editing-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
 </div>
 <div class="divider--half"></div>
 
@@ -24,7 +24,7 @@ Ignite UI for Angular の Grid コンポーネントは、列のデータ型に�
 
  - `string` データ型のデフォルトのテンプレートは **igxInput** を使用します。
  - `number` データ型のデフォルト テンプレートは、**igxInput type="number"** を使用し、セルを数値に解析できない値に更新した場合は変更が破棄され、セル値は **0** に設定されます。
- - `date`データ型のデフォルトのテンプレートは  **igx-datePicker** を使用します。
+ - `date`データ型のデフォルトのテンプレートは  **igx-date-picker** を使用します。
  - `boolean` データ型のデフォルトのテンプレートは **igx-checkbox** を使用します。
 
 以下のいずれかの方法でセルがフォーカスされている場合、編集モードに入ることができます。

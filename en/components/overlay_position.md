@@ -99,7 +99,7 @@ Changing the horizontal and/or vertical direction of the positioning settings de
     <iframe id="overlay-position-sample-1-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/overlay-position-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="overlay-position-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="overlay-position-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz</button>
 </div>
 <div class="divider"></div>
 
@@ -111,7 +111,7 @@ In the demo below, the overlay element will position itself starting from the ta
     <iframe id="overlay-position-sample-2-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/overlay-position-sample-2" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="overlay-position-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="overlay-position-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz</button>
 </div>
 <div class="divider"></div>
 
@@ -126,12 +126,12 @@ In the demo below, the overlay element will position itself starting from the ta
 | Auto              | `position(contentElement, size{}, document?)`| Positions the element, based on the position strategy used and the size passed in.|
 
 ### PositionSettings
-| Name               | Type                        | Description |
-| :----------------- | :-------------------------- | :---------- |
-|target              | Point \| HTMLElement         | Attaching target for the component to show          |
-|horizontalDirection | HorizontalAlignment         | Direction in which the component should show        |
-|verticalDirection   | VerticalAlignment           | Direction in which the component should show        |
-|horizontalStartPoint| HorizontalAlignment         | Target's starting point                             |
-|verticalStartPoint  | VerticalAlignment           | Target's starting point                             |
-|openAnimation       | AnimationReferenceMetadata  | Animation applied while overlay opens               |
-|closeAnimation      | AnimationReferenceMetadata  | Animation applied while overlay closes              |
+| Name                 | Type                        | Description |
+| :------------------- | :-------------------------- | :---------- |
+|`target`              | `Point` \| `HTMLElement`    | Attaching target for the component to show          |
+|`horizontalDirection` | `HorizontalAlignment`       | Direction in which the component should show        |
+|`verticalDirection`   | `VerticalAlignment`         | Direction in which the component should show        |
+|`horizontalStartPoint`| `HorizontalAlignment`       | Target's starting point                             |
+|`verticalStartPoint`  | `VerticalAlignment`         | Target's starting point                             |
+|`openAnimation`       | `AnimationReferenceMetadata`| Animation applied while overlay opens               |
+|`closeAnimation`      | `AnimationReferenceMetadata`| Animation applied while overlay closes              |
