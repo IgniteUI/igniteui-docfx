@@ -333,25 +333,28 @@ And here's the result of all that work:
 
 #### List Items Panning
 
-Now that we have such a beautiful list with contacts and their phone numbers, why don't we implement an ability to call the contacts or send them a message.
+Now that we have such a beautiful list with contacts and their phone numbers, why don't we implement an ability to call a contact.
 The **IgxList** has the perfect solution for this - list item panning.
 To do this you have to implement the following steps:
-- Enable the panning using the `allowLeftPanning` and the `allowRightPanning` properties
-- Define templates for the left and right panning
-- Handle the list item's panning events and perform the desired action
+- Enable the panning using the `allowLeftPanning` and/or the `allowRightPanning` properties
+- Define template(s) for the left and/or right panning
+- Handle the list item's panning event(s) and perform the desired action
 
-Here is an example of how to do this:
+The following example demonstrates how to handle both left and right panning. The event handler for right panning shows a toast message. The event handler for the left panning deletes an item from the **IgxList**.
+
+> [!NOTE]
+> Please note that the list item removal is an application task. The **IgxList** itself cannot remove items from the data source because the **IgxList** does not have reference to the data source.
+
+Here is the HTML code of the example:
 
 ```html
 <!-- contacts.component.html -->
-
-<igx-switch [checked]="true" #switchKeepItem style="margin-bottom:20px">Keep Item</igx-switch>
 
 <igx-list [allowLeftPanning]="true" [allowRightPanning]="true"
   (onLeftPan)="leftPanPerformed($event)" (onRightPan)="rightPanPerformed($event)">
   <ng-template igxListItemLeftPanning>
     <div class="listItemLeftPanningStyle">
-      <igx-icon name="sms" [color]="white" style="margin-left:10px"></igx-icon>Message
+      <igx-icon name="delete" [color]="white" style="margin-left:10px"></igx-icon>Delete
     </div>
   </ng-template>
   <ng-template igxListItemRightPanning>
@@ -434,7 +437,7 @@ igx-icon {
     align-items: center;
 }
 ```
-And finally here is the typescript code:
+And finally here is the typescript code handling the panning events:
 
 ```typescript
 // contacts.component.ts
@@ -443,20 +446,21 @@ And finally here is the typescript code:
 @ViewChild("toast")
 public toast: IgxToastComponent;
 
-@ViewChild("switchKeepItem")
-public switchKeepItem: any;
+public rightPanPerformed(args) {
+  args.keepItem = true;
+  this.toast.message = "Dialing " + this.contacts[args.item.index - 1].name;
+  this.toast.show();
+}
 
 public leftPanPerformed(args) {
-  args.keepItem = this.switchKeepItem.checked;
-  this.toast.message = "Composing message for "  + this.contacts[args.item.index - 1].name;
-  this.toast.show();
+  args.keepItem = false;
+  setTimeout((idx = args.item.index - 1) => {
+    this.toast.message = "Contact " + this.contacts[idx].name + " removed.";
+    this.toast.show();
+    this.contacts.splice(idx, 1);
+  }, 500);
 }
 
-public rightPanPerformed(args) {
-  args.keepItem = this.switchKeepItem.checked;
-  this.toast.message = "Calling " + this.contacts[args.item.index - 1].name;
-  this.toast.show();
-}
 ...
 ```
 
