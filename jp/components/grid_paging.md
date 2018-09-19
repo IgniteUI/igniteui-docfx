@@ -68,8 +68,8 @@ this.grid.paging = false;
 
 Paging could also operate with remote data.
 
-Lets first declare our service that will be responsible for fetching our data and return only current page data.
-We will need the count of all the data in order to calculate pages count and we have to add it to our service.
+Lets first declare our service that will be responsible for data fetching.
+We will need the count of all the data items in order to calculate pages count and we will add this logic to our service.
 
 ```typescript
 @Injectable()
@@ -208,12 +208,12 @@ The last step will be to declare our template for the gird.
 </igx-grid>
 ```
 
-After all these changes, the following result should be achieved.
+After all the changes above, the following result will be achieved.
 
 #### Demo
 
 <div class="sample-container loading" style="height:605px">
-    <iframe id="grid-paging-sample-iframe" src='{environment:demosBaseUrl}/grid-remote-paging-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="grid-remote-paging-sample-iframe" src='{environment:demosBaseUrl}/grid-remote-paging-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
