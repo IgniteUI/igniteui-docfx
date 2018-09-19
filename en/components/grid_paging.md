@@ -67,7 +67,7 @@ this.grid.paging = false;
 
 Paging could also operate with remote data.
 
-Lets first declare our service, that will be responsible for data fetching.
+Lets first declare our service that will be responsible for data fetching.
 We will need the count of all the data items in order to calculate pages count and we will add this logic to our service.
 
 ```typescript
