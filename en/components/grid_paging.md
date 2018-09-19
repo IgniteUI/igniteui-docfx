@@ -6,7 +6,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ### Grid Paging
 
-In Ignite UI for Angular, **Paging** is initialized on the root `igx-grid` component and is configurable via the `paging` and `perPage` inputs. 
+In Ignite UI for Angular, **Paging** is initialized on the root `igx-grid` component and is configurable via the `paging` and `perPage` inputs.
 
 #### Demo
 
@@ -67,8 +67,8 @@ this.grid.paging = false;
 
 Paging could also operate with remote data.
 
-Lets first declare our service that will be responsible for fetching our data and return only current page data.
-We will need the count of all the data in order to calculate pages count and we have to add it to our service.
+Lets first declare our service, that will be responsible for data fetching.
+We will need the count of all the data items in order to calculate pages count and we will add this logic to our service.
 
 ```typescript
 @Injectable()
@@ -207,7 +207,7 @@ The last step will be to declare our template for the gird.
 </igx-grid>
 ```
 
-After all these changes, the following result should be achieved.
+After all the changes above, the following result will be achieved.
 
 #### Demo
 
