@@ -64,13 +64,12 @@ this.grid.perPage = 25;
 this.grid.paging = false;
 ```
 
-### リモート データ
+### Remote Data
 
-#### ページングは定義済みのリモート データで処理することもできます。そのため、リモートで送信されるデータを渡すなどの追加の設定は必要はありません。
+Paging could also operate with remote data.
 
-<div class="divider--half"></div>
-
-最初にサービスを宣言してデータをフェッチします。
+Lets first declare our service that will be responsible for fetching our data and return only current page data.
+We will need the count of all the data in order to calculate pages count and we have to add it to our service.
 
 ```typescript
 @Injectable()
@@ -82,38 +81,124 @@ export class RemoteService {
         this.remoteData = new BehaviorSubject([]);
     }
 
-    public getData(): any {
-        return this.http
-            .get(this.url)
-            .subscribe((d: any) => {
-                this.remoteData.next(d.Results ? d.Results : d);
-            });
+    public getData(index?: number, perPage?: number): any {
+        let qS = "";
+
+        if (perPage) {
+            qS = `?$skip=${index}&$top=${perPage}&$count=true`;
+        }
+
+        this.http
+            .get(`${this.url + qS}`).pipe(
+                map((data: any) => {
+                    return data;
+                })
+            ).subscribe((data) => this.remoteData.next(data));
+    }
+
+    public getDataLength(): any {
+        return this.http.get(this.url).pipe(
+            map((data: any) => {
+                return data.length;
+            })
+        );
     }
 }
 ```
-サービスの宣言後、グリッド構成とデータ サブスクリプションのためのコンポーネントを作成します。
+After declaring the service, we need to create a component, which will be responsible for the grid construction and data subscription.
 
 ```typescript
 export class RemotePagingGridSample implements OnInit, AfterViewInit {
-    public data: Subject<any[]>;
-
-    @ViewChild(IgxGridComponent) private grid: IgxGridComponent;
+    public data: Observable<any[]>;
 
     constructor(private remoteService: RemoteService) {}
 
-    public ngOnInit() {
-        this.data = this.remoteService.remoteData;
-    }
-
-    public ngAfterViewInit() {
-        this.remoteService.getData();
+     public ngOnInit() {
+        this.data = this.remoteService.remoteData.asObservable();
+        this._dataLengthSubscriber = this.remoteService.getDataLength().subscribe((data) => {
+            this.totalCount = data;
+            this.totalPages = Math.ceil(data / this.perPage);
+            this.buttonDeselection(this.page, this.totalPages);
+        });
     }
 }
 ```
-最後にグリッドのテンプレートを宣言します。
+We need to create a custom pager template to get the data only for the requested page and to pass the correct `skip` and `top` parameters to the remote service according to the selected page and `items per page`.
+We also need to take care of the disabling and enabling of the pager buttons.
 
 ```html
-<igx-grid [data]="data | async" height="600px" [paging]="true" >
+<ng-template #customPager>
+    <button [disabled]="firstPage" (click)="paginate(0, false)" igxButton="icon" igxRipple igxRippleCentered="true">
+        <igx-icon fontSet="material" name="first_page"></igx-icon>
+    </button>
+    <button [disabled]="firstPage" (click)="previousPage()" igxButton="icon" igxRipple igxRippleCentered="true">
+        <igx-icon fontSet="material" name="chevron_left"></igx-icon>
+    </button>
+    <span>{{ page + 1 }} of {{totalPages}}</span>
+    <button [disabled]="lastPage" (click)="nextPage()" igxRipple igxRippleCentered="true" igxButton="icon">
+        <igx-icon fontSet="material" name="chevron_right"></igx-icon>
+    </button>
+    <button [disabled]="lastPage" (click)="paginate(totalPages - 1, false)" igxButton="icon" igxRipple igxRippleCentered="true">
+        <igx-icon fontSet="material" name="last_page"></igx-icon>
+    </button>
+    <select style="margin-left: 1rem;" (change)="perPage = parseToInt($event.target.value);">
+        <option [value]="val" [selected]="perPage == val" *ngFor="let val of [5, 10, 15, 25, 50, 100, 500]">{{ val }}</option>
+    </select>
+</ng-template>
+```
+
+```typescript
+@ViewChild("customPager", { read: TemplateRef })
+public remotePager: TemplateRef<any>;
+
+public nextPage() {
+    this.firstPage = false;
+    this.page++;
+    const skip = this.page * this.perPage;
+    const top = this.perPage;
+    this.remoteService.getData(skip, top);
+    if (this.page + 1 >= this.totalPages) {
+        this.lastPage = true;
+    }
+}
+
+public previousPage() {
+    this.lastPage = false;
+    this.page--;
+    const skip = this.page * this.perPage;
+    const top = this.perPage;
+    this.remoteService.getData(skip, top);
+    if (this.page <= 0) {
+        this.firstPage = true;
+    }
+}
+
+public paginate(page: number, recalc: true) {
+    this.page = page;
+    const skip = this.page * this.perPage;
+    const top = this.perPage;
+    if (recalc) {
+        this.totalPages = Math.ceil(this.totalCount / this.perPage);
+    }
+    this.remoteService.getData(skip, top);
+    this.buttonDeselection(this.page, this.totalPages);
+}
+
+public buttonDeselection(page: number, totalPages: number) {
+...
+}
+
+...
+public ngAfterViewInit() {
+    this.remoteService.getData(0, this.perPage);
+    this.grid1.paginationTemplate = this.remotePager;
+}
+
+```
+The last step will be to declare our template for the gird.
+
+```html
+<igx-grid #grid1 [data]="data | async" width="960px" height="550px" [paging]="true" [perPage]="perPage">
     <igx-column field="ID"></igx-column>
     <igx-column field="ProductName"></igx-column>
     <igx-column field="QuantityPerUnit"></igx-column>
@@ -123,16 +208,16 @@ export class RemotePagingGridSample implements OnInit, AfterViewInit {
 </igx-grid>
 ```
 
-すべての設定の完了後、以下のような結果になります。
+After all these changes, the following result should be achieved.
 
-#### デモ
+#### Demo
 
 <div class="sample-container loading" style="height:605px">
-    <iframe id="grid-sample-iframe" src='{environment:demosBaseUrl}/grid-remote-paging' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="grid-paging-sample-iframe" src='{environment:demosBaseUrl}/grid-remote-paging-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-remote-paging-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
 
