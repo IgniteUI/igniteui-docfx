@@ -6,7 +6,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ## Expansion Panel
 <p class="highlight">
-The `IgxExpansionPanel` is a lightweigh component which can be rendered in two states - collapsed or expanded. When collapsed, the panel displays a short summary of its content. The collapsed panel can be toggled using mouse click, or keyboard interactions (maybe have link here) to display the body completely, containing any additional necessary content.
+The `IgxExpansionPanel` is a lightweight component which can be rendered in two states - collapsed or expanded. When collapsed, the panel displays a short summary of its content. The collapsed panel can be toggled using mouse click, or keyboard interactions (maybe have link here) to display the body completely, containing any additional necessary content.
 </p>
 <div class="divider--half"></div>
 
