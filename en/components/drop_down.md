@@ -226,25 +226,17 @@ If the sample is configured properly, a list  of countries should be displayed a
 
 ### igxDropDownItemNavigation directive
 
-To enable keyboard navigation for the `igxDropDown` component, the `igxDropDownItemNavigation` directive can be applied. The directive should be applied to the active(focused) or a parent container. This will allow the directive to handle all triggered events. By default the the igxDropDown or its items don't take focus, so for example the directive can be placed on a button or input that controls the drop down.
-The `igxDropDownItemNavigation` directive value should be target component that is or extends `IgxDropDownBase` class. This ensures that the target component implements the following methods:
-
-| Name | Description |
-| :--- | :--- |
-| `close` | Closes target component. |
-| `selectItem` | Select the active item in the target component. |
-| `navigateNext` | Navigate to the next item in the target component. |
-| `navigatePrev` | Navigate to the previous item in the target component. |
-| `navigateLast` | Navigate to the last item in the target component. |
-| `navigateFirst` | Navigate to the first item in the target component. |
-
+To enable keyboard navigation for the `igxDropDown` component, the `igxDropDownItemNavigation` directive can be applied. The directive should be applied to the active(focused) element or a parent container. This will allow the directive to handle all triggered events. By default the the igxDropDown or its items don't take focus, so for example the directive can be placed on a button or input that controls the drop down.
+The `igxDropDownItemNavigation` directive value should be target component that is or extends `IgxDropDownBase` class.
 
 
 The following sample demonstrates an input that on click opens and closes igxDropDown instance. Applying the `igxDropDownItemNavigation` on the input itself, will enable keyboard navigation, when using arrow up and arrow down. This relies on the default drop down behavior with `allowItemsFocus` disabled to allow the button input to maintain focus.
 
 
 ```
-<input igxInput type="text" [igxDropDownItemNavigation]="dropdownProvince" (click)="toggleDDProvince()"/>
+<igx-input-group [igxToggleAction]="dropdownProvince">
+    <input igxInput type="text" [igxDropDownItemNavigation]="dropdownProvince">
+</igx-input-group>
 <igx-drop-down #dropdownProvince>
     <igx-drop-down-item *ngFor="let p of provinceData">
         {{ p }}
@@ -266,13 +258,14 @@ Applying the directive will ensure the following actions are executed as a resul
 
 
 
-When `allowItemsFocus` is enabled, drop down items gain tab index and are focused when active. The focused drop down items are the ones that trigger events, during keyboard navigation, which means that the `igxDropDownItemNavigation` should be applied on the individual drop down items, or their parent container element that will handle the bubbled event. For convenience this could be the `igx-drop-down` component.
-In addition, if you apply the `igxDropDownItemNavigation` on the drop down itself, defining directive's value is not necessary, because in that case the target is the `igx-drop-down` component and its value is evaluated internally.
+When `allowItemsFocus` is enabled, drop down items gain tab index and are focused when active. The focused drop down items are the ones that trigger events, during keyboard navigation, which means that the `igxDropDownItemNavigation` should be applied on the individual drop down items.
 
 ```
-<input igxInput type="text" (click)="toggleDDProvince()"/>
-<igx-drop-down [allowItemsFocus]="true" igxDropDownItemNavigation>
-    <igx-drop-down-item *ngFor="let p of provinceData">
+<igx-input-group [igxToggleAction]="dropdownProvince">
+    <input igxInput type="text">
+</igx-input-group>
+<igx-drop-down #dropdownProvince [allowItemsFocus]="true">
+    <igx-drop-down-item *ngFor="let p of provinceData" [igxDropDownItemNavigation]="dropdownProvince">
         {{ p }}
     </igx-drop-down-item>
 </igx-drop-down>
