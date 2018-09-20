@@ -330,21 +330,21 @@ toggleFavorite(item: IgxListItem) {
 </div>
 <div class="divider--half"></div>
 
-#### List Items Panning
+#### リスト項目パンニング
 
-Now that we have such a beautiful list with contacts and their phone numbers, why don't we implement an ability to call a contact.
-The **IgxList** has the perfect solution for this - list item panning.
-To do this you have to implement the following steps:
-- Enable the panning using the `allowLeftPanning` and/or the `allowRightPanning` properties
-- Define template(s) for the left and/or right panning
-- Handle the list item's panning event(s) and perform the desired action
+連絡先や電話番号のリストなどを作成しましたが、次に連絡先に電話を掛ける機能を追加します。
+**IgxList** はリスト項目パンニングに最適です。
+以下の手順に沿って作成します。
+- `allowLeftPanning` と `allowRightPanning` またはそのいずれかを使用してパンニングを有効にします。
+- 右と左またはそのいずれかのテンプレートを定義します。
+- リスト項目のパンニング イベントを処理して必要なアクションを実行します。
 
-The following example demonstrates how to handle both left and right panning. The event handler for right panning shows a toast message. The event handler for the left panning deletes an item from the **IgxList**.
+以下は、右と左両方のパンニングを処理する方法の例です。右パンニングのイベント ハンドラーは、トースト メッセージを表示します。左パンニングのイベント ハンドラーは、**IgxList** から項目を削除します。
 
 > [!NOTE]
-> Please note that the list item removal is an application task. The **IgxList** itself cannot remove items from the data source because the **IgxList** does not have reference to the data source.
+> リスト項目の削除はアプリケーション タスクであることに注意してください。**IgxList** にデータソース参照がないため、**IgxList** は項目をデータソースから削除できません。
 
-Here is the HTML code of the example:
+以下は HTML コードです。
 
 ```html
 <!-- contacts.component.html -->
@@ -436,7 +436,7 @@ igx-icon {
     align-items: center;
 }
 ```
-And finally here is the typescript code handling the panning events:
+最後にパンニング イベントを処理するタイプスクリプト コードを使用します。
 
 ```typescript
 // contacts.component.ts
@@ -464,9 +464,9 @@ public leftPanPerformed(args) {
 ```
 
 > [!NOTE]
-> When panning list items there is a threshold which must be reached in order for the panning events to be emitted. You can change the threshold using the **IgxList's** `panEndTriggeringThreshold` property. By default this property has a value of 0.5 which means 50% of list item's width.
+> リスト項目のパンニング時にパンニング イベントが発生するために達する必要のあるしきい値があります。**IgxList's** `panEndTriggeringThreshold` プロパティを使用するしきい値を変更できます。このプロパティのデフォルトは0.5 でリスト項目幅の 50% を意味します。
 
-Now try panning the list items for yourself:
+次にリスト項目をパンニングします。
 
 <div class="sample-container loading" style="height: 477px">
 <iframe id="list-sample-7-final-iframe" src='{environment:demosBaseUrl}/list-sample-7' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -550,7 +550,7 @@ Now try panning the list items for yourself:
 | `isLoading` | Boolean | true の場合、読み込みテンプレートが使用されます。false の場合、空のリスト テンプレートが使用されます。 |
 | `dataLoadingTemplate` | IgxDataLoadingTemplateDirective | リストが空で、isLoading が true の場合に使用するカスタム テンプレート。|
 | `emptyListTemplate` | IgxEmptyListTemplateDirective | リストが空で、isLoading が false の場合に使用するカスタム テンプレート。|
-| `panEndTriggeringThreshold` | Number | Specifies the threshold after which a panning event is emitted. By default this property has a value of 0.5 which means 50% of list item's width. |
+| `panEndTriggeringThreshold` | Number | パンニング イベントが発生した後のしきい値を指定します。このプロパティのデフォルトは0.5 でリスト項目幅の 50% を意味します。 |
 
 <div class="divider"></div>
 
@@ -568,8 +568,8 @@ Now try panning the list items for yourself:
 | 名前 | 型 | 説明 |
 | :--- | :--- | :--- |
 | `onPanStateChange` | EventEmitter | パンニング ジェスチャがリスト項目に実行されたときに現在のリストを含むイベントを発生します。 |
-| `onLeftPan` | EventEmitter | Emits an event with the current list when left pan gesture is executed on list item and provides an argument of type `IListItemPanningEventArgs`. |
-| `onRightPan` | EventEmitter | Emits an event with the current list when right pan gesture is executed on list item and provides an argument of type `IListItemPanningEventArgs`. |
+| `onLeftPan` | EventEmitter | 左パンニング ジェスチャがリスト項目に実行されたときに現在のリストを含むイベントを発生し、型 `IListItemPanningEventArgs` の引数を提供します。 |
+| `onRightPan` | EventEmitter | 右パンニング ジェスチャがリスト項目に実行されたときに現在のリストを含むイベントを発生し、型 `IListItemPanningEventArgs` の引数を提供します。 |
 | `onItemClicked` | EventEmitter | リスト項目がクリックされたときに現在のリストを含むイベントを発生します。 |
 
 <div class="divider"></div>
@@ -596,12 +596,12 @@ Now try panning the list items for yourself:
 
 <div class="divider"></div>
 
-The following properties are available on the `IListItemPanningEventArgs` type:
-| Name | Type | Description |
+以下のプロパティは `IListItemPanningEventArgs` 型で使用できます。
+| 名前 | 型 | 説明 |
 | :--- | :--- | :--- |
-| `item` | IgxListItemComponent | A reference to the **igx-list-item** being panned. |
-| `direction` | IgxListPanState | Specifies the direction at which the **igx-list-item** has been panned. |
-| `keepItem` | Boolean | If `true` the list item will be kept in the **IgxList** after it has been panned. If `false` (by default) the list item will be removed from the **IgxList** after it has been panned. |
+| `item` | IgxListItemComponent | パンニングされている **igx-list-item** の参照。 |
+| `direction` | IgxListPanState | **Igx-list-item** がパンニングされる方向を指定します。 |
+| `keepItem` | Boolean | `true` の場合、パンニングされた後もリスト項目が **IgxList** に保持されます。`false` (デフォルト) の場合、パンニングされた後にリスト項目が **IgxList** から削除されます。 |
 
 <div class="divider"></div>
 
