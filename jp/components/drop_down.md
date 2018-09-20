@@ -221,13 +221,14 @@ export class AppModule {}
     </button>
 </div>
 
-### igxDropDownItemNavigation directive
+### igxDropDownItemNavigation ディレクティブ
 
-To enable keyboard navigation for the `igxDropDown` component, the `igxDropDownItemNavigation` directive can be applied. The directive should be applied to the active(focused) element or a parent container. This will allow the directive to handle all triggered events. By default the the igxDropDown or its items don't take focus, so for example the directive can be placed on a button or input that controls the drop down.
-The `igxDropDownItemNavigation` directive value should be target component that is or extends `IgxDropDownBase` class.
+igxDropDownItemNavigation ディレクティブ
+`igxDropDown` コンポーネントのキーボード ナビゲーションを有効にするには、`igxDropDownItemNavigation` ディレクティブを適用します。ディレクティブをアクティブ (フォーカスした) 要素または親コンテナに適用することにより、トリガーしたすべてのイベントを処理できるようになります。デフォルトでは、igxDropDown またはその項目にフォーカスが当たらないため、たとえばディレクティブをドロップダウンを制御するボタンや入力に配置できます。
+`igxDropDownItemNavigation` ディレクティブ値は、ターゲット コンポーネントまたは拡張 `IgxDropDownBase` クラスにする必要があります。
 
 
-The following sample demonstrates an input that on click opens and closes igxDropDown instance. Applying the `igxDropDownItemNavigation` on the input itself, will enable keyboard navigation, when using arrow up and arrow down. This relies on the default drop down behavior with `allowItemsFocus` disabled to allow the button input to maintain focus.
+以下のサンプルは、 on click オープンおよびクローズ の igxDropDown インスタンスの例です。入力に `igxDropDownItemNavigation` を適用し、上矢印と下矢印の使用時にキーボード ナビゲーションを有効にします。`allowItemsFocus` が無効のデフォルトのドロップダウン動作に依存し、ボタン入力にフォーカスを維持することが可能です。
 
 
 ```
@@ -241,21 +242,21 @@ The following sample demonstrates an input that on click opens and closes igxDro
 </igx-drop-down>
 ```
 
-Applying the directive will ensure the following actions are executed as a result from the keyboard navigation:
+ディレクティブを適用すると、キーボード ナビゲーションの結果として以下の動作が実行します。
 
-| Name | Description |
+| 名前 | 説明 |
 | :--- | :--- |
-| `Enter` | Select item from the drop down and closes the drop down. |
-| `Space` | Select item from the drop down and closes the drop down. |
-| `Esc` | Closes the drop down. |
-| `Arrow Down` | Navigate to the next item in the target component. |
-| `Arrow Up` | Navigate to the previous item in the target component. |
-| `End` | Navigate to the last item in the target component. |
-| `Home` | Navigate to the first item in the target component. |
+| `Enter` | ドロップダウンから項目の選択後、ドロップダウンを閉じます。 |
+| `Space` | ドロップダウンから項目の選択後、ドロップダウンを閉じます。 |
+| `Esc` | ドロップダウンを閉じます。 |
+| `Arrow Down` | ターゲット コンポーネントの次の項目に移動します。|
+| `Arrow Up` | ターゲット コンポーネントの前の項目に移動します。 |
+| `End` | ターゲット コンポーネントの最後の項目に移動します。 |
+| `Home` | ターゲット コンポーネントの最初の項目に移動します。 |
 
 
 
-When `allowItemsFocus` is enabled, drop down items gain tab index and are focused when active. The focused drop down items are the ones that trigger events, during keyboard navigation, which means that the `igxDropDownItemNavigation` should be applied on the individual drop down items.
+`allowItemsFocus` が有効な場合、ドロップダウン項目がタブ インデックスを取得し、アクティブな時にフォーカスされます。フォーカスされたドロップダウン項目がキーボード ナビゲーション時にイベントをトリガーするため、 `igxDropDownItemNavigation` を各ドロップダウン項目に適用する必要があります。
 
 ```
 <igx-input-group [igxToggleAction]="dropdownProvince">
