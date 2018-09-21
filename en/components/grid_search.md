@@ -287,7 +287,7 @@ On the right in our input group, let's create three separate containers with the
 </igx-suffix>
 ```
 
-## Known Limitations
+### Known Limitations
 
 |Limitation|Description|
 |--- |--- |
