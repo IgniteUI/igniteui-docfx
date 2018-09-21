@@ -223,12 +223,11 @@ export class AppModule {}
 
 ### igxDropDownItemNavigation ディレクティブ
 
-igxDropDownItemNavigation ディレクティブ
 `igxDropDown` コンポーネントのキーボード ナビゲーションを有効にするには、`igxDropDownItemNavigation` ディレクティブを適用します。ディレクティブをアクティブ (フォーカスした) 要素または親コンテナに適用することにより、トリガーしたすべてのイベントを処理できるようになります。デフォルトでは、igxDropDown またはその項目にフォーカスが当たらないため、たとえばディレクティブをドロップダウンを制御するボタンや入力に配置できます。
 `igxDropDownItemNavigation` ディレクティブ値は、ターゲット コンポーネントまたは拡張 `IgxDropDownBase` クラスにする必要があります。
 
 
-以下のサンプルは、 on click オープンおよびクローズ の igxDropDown インスタンスの例です。入力に `igxDropDownItemNavigation` を適用し、上矢印と下矢印の使用時にキーボード ナビゲーションを有効にします。`allowItemsFocus` が無効のデフォルトのドロップダウン動作に依存し、ボタン入力にフォーカスを維持することが可能です。
+以下のサンプルは、クリックによって igxDropDown インスタンスを開いたり閉じたりする例です。入力に `igxDropDownItemNavigation` を適用し、上矢印と下矢印の使用時にキーボード ナビゲーションを有効にします。`allowItemsFocus` が無効のデフォルトのドロップダウン動作に依存し、ボタン入力にフォーカスを維持することが可能です。
 
 
 ```
@@ -268,8 +267,6 @@ igxDropDownItemNavigation ディレクティブ
     </igx-drop-down-item>
 </igx-drop-down>
 ```
-
-<div class="divider--half"></div>
 
 <div class="divider--half"></div>
 
