@@ -13,14 +13,14 @@
     "author": "Infragistics",
     "license": "ISC",
     "dependencies": {
-        "browser-sync": "^2.18.13",
+        "browser-sync": "^2.24.6",
         "del": "^3.0.0",
         "dotenv": "^4.0.0",
         "gulp": "^3.9.1",
         "gulp-autoprefixer": "^5.0.0",
         "gulp-sass": "^4.0.1",
         "gulp-shell": "^0.6.5",
-        "igniteui-docfx-template": "1.0.13",
+        "igniteui-docfx-template": "1.1.1",
         "yargs": "^10.0.3"
     }
 }

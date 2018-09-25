@@ -13,7 +13,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
     <iframe id="time-picker-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/timepicker-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="time-picker-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="time-picker-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
 
@@ -51,7 +51,7 @@ And there we have it:
     <iframe id="timepicker-sample-1-iframe" src='{environment:demosBaseUrl}/timepicker-sample-1' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="timepicker-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="timepicker-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
 
@@ -74,7 +74,7 @@ And there we have it:
     <iframe id="time-picker-sample-2" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/timepicker-sample-2" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="time-picker-sample-2" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="time-picker-sample-2" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
 
@@ -97,7 +97,7 @@ And there we have it:
     <iframe id="time-picker-sample-3" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/timepicker-sample-3" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="time-picker-sample-3" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="time-picker-sample-3" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
 
@@ -147,7 +147,45 @@ And there we have it:
     <iframe id="time-picker-sample-4" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/timepicker-sample-4" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="time-picker-sample-4" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="time-picker-sample-4" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
+
+#### Templating Input Group
+
+We have seen how to make use of the  API (properties, events, methods) so that we configure the time picker per our requirements and interact with it programatically. Now we want to go further and customize its input group look.
+
+To do that we need to decorate the nested ng-template inside the time picker with IgxTimePickerTemplate directive. ng-template context exposes the following members: `openDialog` method can be used to open the time picker dialog; `displayValue` property contains the formatted value; `value` contains the real value. You could use those by declaring a variables in the ng-template element.
+
+In the following example we modify the default label "Time" add a second icon as suffix. Bellow the input group we're using a label to display the real time picker value:
+
+```html
+<igx-time-picker [value]="date">
+    <ng-template igxTimePickerTemplate let-openDialog="openDialog" let-value="value" let-displayTime="displayTime">
+        <igx-input-group (click)="openDialog()">
+            <igx-prefix>
+                <igx-icon>home</igx-icon>
+            </igx-prefix>
+            <label igxLabel>Home Time </label>
+            <input igxInput [value]="displayTime" />
+            <igx-suffix>
+                <igx-icon>access_alarm</igx-icon>
+            </igx-suffix>
+        </igx-input-group>
+        <label>{{value}}</label>
+    </ng-template>
+</igx-time-picker>
+```
+```typescript
+public date: Date = new Date(Date.now());
+```
+
+And there we have it:
+<div class="sample-container loading" style="height: 540px;">
+    <iframe id="time-picker-sample-5" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/timepicker-sample-5" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="time-picker-sample-5" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
 

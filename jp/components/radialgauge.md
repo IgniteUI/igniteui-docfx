@@ -18,7 +18,7 @@ Ignite UI for Angular の Radial Gauge コンポーネントは、針、目盛�
     <iframe id="radial-gauge-animation-iframe" src='{environment:demosBaseUrl}/radial-gauge-animation' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="radial-gauge-animation-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="radial-gauge-animation-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
     </button>
 </div>
 
@@ -105,7 +105,7 @@ export class AppModule {}
     <iframe id="radial-gauge-backing-iframe" src='{environment:demosBaseUrl}/radial-gauge-backing' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="radial-gauge-backing-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="radial-gauge-backing-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
     </button>
 </div>
 
@@ -134,7 +134,7 @@ export class AppModule {}
     <iframe id="radial-gauge-scale-iframe" src='{environment:demosBaseUrl}/radial-gauge-scale' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="radial-gauge-scale-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="radial-gauge-scale-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
     </button>
 </div>
 
@@ -158,7 +158,7 @@ export class AppModule {}
     <iframe id="radial-gauge-labels-iframe" src='{environment:demosBaseUrl}/radial-gauge-labels' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="radial-gauge-labels-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="radial-gauge-labels-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
     </button>
 </div>
 
@@ -188,7 +188,7 @@ export class AppModule {}
     <iframe id="radial-gauge-tickmarks-iframe" src='{environment:demosBaseUrl}/radial-gauge-tickmarks' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="radial-gauge-tickmarks-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="radial-gauge-tickmarks-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
     </button>
 </div>
 
@@ -219,7 +219,7 @@ export class AppModule {}
     <iframe id="radial-gauge-ranges-iframe" src='{environment:demosBaseUrl}/radial-gauge-ranges' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="radial-gauge-ranges-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="radial-gauge-ranges-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
     </button>
 </div>
 
@@ -255,7 +255,7 @@ export class AppModule {}
     <iframe id="radial-gauge-needle-iframe" src='{environment:demosBaseUrl}/radial-gauge-needle' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="radial-gauge-needle-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="radial-gauge-needle-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
     </button>
 </div>
 

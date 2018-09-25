@@ -16,7 +16,7 @@ Additionally there is a custom contextmenu added for sorting using **igx-grid**'
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="grid-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
 
@@ -71,6 +71,11 @@ public ngOnInit() {
 
 > [!NOTE]
 > If values of type `string` are used by column of dataType `Date`, the grid won't parse it to `Date` objects and using igxGrid `sorting` won't work as expected. If you want to use `string` objects, additional logic should be implemented on an application level, in order to parse the values to `Date` object.
+
+<div class="divider--half"></div>
+
+#### Remote Sorting
+You can provide grid's remote sorting by subscribing to onDataPreLoad and onSortingDone outputs. More information on how to use it you can find in the `Grid Virtualization and Performance` [documentation](grid_virtualization.md#remote-sortingfiltering-virtualization).
 
 <div class="divider--half"></div>
 

@@ -13,7 +13,7 @@ The Category Chart is a charting component that makes visualizing category data 
     <iframe id="category-chart-overview-sample-iframe" src='{environment:demosBaseUrl}/category-chart-overview-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="category-chart-overview-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="category-chart-overview-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
     </button>
 </div>
 
@@ -46,7 +46,7 @@ The category chart is exported as an `NgModule`, you need to import the _IgxCate
 
 ```typescript
 // app.module.ts
-import { IgxCategoryChartModule } from 'ignite-angular-charts/ES5/igx-categorychart-module';
+import { IgxCategoryChartModule } from 'ignite-angular-charts/ES5/igx-category-chart-module';
 
 @NgModule({
     imports: [

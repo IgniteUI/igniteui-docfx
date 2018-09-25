@@ -13,7 +13,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
     <iframe id="date-picker-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/datepicker-sample-4" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="date-picker-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="date-picker-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
 
@@ -40,7 +40,7 @@ export class AppModule {}
 Then in our template we place the date picker:
 
 ```html
-<igx-datePicker></igx-datePicker>
+<igx-date-picker></igx-date-picker>
 ```
 
 The result is as follows:
@@ -48,7 +48,7 @@ The result is as follows:
     <iframe id="date-picker-sample-1" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/datepicker-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="date-picker-sample-1" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="date-picker-sample-1" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
 
@@ -62,7 +62,7 @@ public date: Date = new Date(Date.now());
 Then use the `value` input in the template:
 
 ```html
-<igx-datePicker [value]="date"></igx-datePicker>
+<igx-date-picker [value]="date"></igx-date-picker>
 ```
 
 And there we have it:
@@ -70,21 +70,21 @@ And there we have it:
     <iframe id="date-picker-sample-2" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/datepicker-sample-2" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="date-picker-sample-2" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="date-picker-sample-2" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
 
 If we want to use a two-way data-binding, we could just use `ngModule` like this:
 
 ```html
-<igx-datePicker [(ngModel)]="date"></igx-datePicker>
+<igx-date-picker [(ngModel)]="date"></igx-date-picker>
 ```
 
 #### Adding buttons
 The `IgxDatePickerComponent` supports a today button which selects the current day from the calendar. Cancel button could be enabled too. Here is how we can enable the buttons in our template:
 
 ```html
-<igx-datePicker cancelButtonLabel="cancel" todayButtonLabel="today" [(ngModel)]="date"></igx-datePicker>
+<igx-date-picker cancelButtonLabel="cancel" todayButtonLabel="today" [(ngModel)]="date"></igx-date-picker>
 ```
 
 Here you can see the buttons:
@@ -92,7 +92,7 @@ Here you can see the buttons:
     <iframe id="date-picker-sample-3" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/datepicker-sample-3" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="date-picker-sample-3" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="date-picker-sample-3" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
 
@@ -113,7 +113,7 @@ public formatter = (date: Date) => {
 And then use the `formatter` input of the `IgxDatePickerComponent`:
 
 ```html
-<igx-datePicker [value]="date" [formatter]="formatter"></igx-datePicker>
+<igx-date-picker [value]="date" [formatter]="formatter"></igx-date-picker>
 ```
 
 Here is the formatted date:
@@ -121,7 +121,43 @@ Here is the formatted date:
     <iframe id="date-picker-sample-4" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/datepicker-sample-4" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="date-picker-sample-4" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="date-picker-sample-4" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
+
+#### Templating Input Group
+
+The Date Picker's input group look can be customized. To do that we need to decorate the nested ng-template inside the date picker with `IgxDatePickerTemplate` directive. ng-template context exposes the following members: `openDialog` method can be used to open the date picker dialog; `displayData` property contains the formatted value; `value` contains the real value. You could use those by declaring a variables in the ng-template element.
+
+In the following example we modify the default label "Date" add a second icon as suffix. Bellow the input group we're using a label to display the real date picker value:
+
+```html
+<igx-date-picker [value]="date">
+    <ng-template igxDatePickerTemplate let-openDialog="openDialog" let-value="value" let-displayData="displayData">
+        <igx-input-group (click)="openDialog()">
+            <igx-prefix>
+                <igx-icon>favorite</igx-icon>
+            </igx-prefix>
+            <label igxLabel>My Custom Date<</label>
+            <input igxInput [value]="displayData" />
+            <igx-suffix>
+                <igx-icon>today</igx-icon>
+            </igx-suffix>
+        </igx-input-group>
+        <label>{{value}}</label>
+    </ng-template>
+</igx-date-picker>
+```
+```typescript
+public date: Date = new Date(Date.now());
+```
+
+Here is the retemplated input group:
+<div class="sample-container loading" style="height: 540px;">
+    <iframe id="date-picker-sample-6" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/datepicker-sample-6" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="date-picker-sample-6" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
 
@@ -129,7 +165,7 @@ Here is the formatted date:
 The `IgxDatePickerComponent` supports locales. You can set them using the `locale` input. Using the `IgxCalendarComponent` templates for header (`igxCalendarHeader`) and subheader (`igxCalendarSubheader`), you can specify the look of your header and subheader. More information on how to use these templates you can find in the `IgxCalendarComponent` [documentation](calendar.md). Here is how a date picker with Japanese locale definition would look like:
 
 ```html
-<igx-datePicker locale="ja-JP" [value]="date">
+<igx-date-picker locale="ja-JP" [value]="date">
   <ng-template igxCalendarHeader let-format>
     {{ format.month.combined | titlecase }}{{format.day.combined }}{{ format.weekday.combined }}
   </ng-template>
@@ -137,7 +173,7 @@ The `IgxDatePickerComponent` supports locales. You can set them using the `local
     <span class="date__el" (click)="format.yearView()">{{ format.year.combined }}</span>
     <span class="date__el" (click)="format.monthView()">{{ format.month.combined | titlecase }}</span>
   </ng-template>
-</igx-datePicker>
+</igx-date-picker>
 ```
 
 > [!NOTE]
@@ -147,7 +183,7 @@ To support those browsers we are going to use alternative template using [ngIf](
 
 ```html
 <!-- app.component.html-->
-<igx-datePicker id="date-picker" locale="ja-JP" [value]="date" #component>
+<igx-date-picker id="date-picker" locale="ja-JP" [value]="date" #component>
     <div *ngIf="formatParts; else parseTemplate">
         <ng-template igxCalendarHeader let-format>
             {{ format.month.combined | titlecase }} {{ format.day.combined }} {{ format.weekday.combined }}
@@ -168,7 +204,7 @@ To support those browsers we are going to use alternative template using [ngIf](
             <span class="date__el" (click)="format.monthView()">{{ getDatePart(format, component, 'month') }}</span>
         </ng-template>
     </ng-template>
-</igx-datePicker>
+</igx-date-picker>
 ```
 Note that **ngIf** evaluates the value of the **formatParts** expression to control which template to use. Let's have a look at the alernative **#parseTemplate** template: the expressions in the curly brackets invokes the **getDatePart** method that returns the evaluated value, in our case this is a formatted date part (year, weekday, month, etc.). The parameters passed to the **getDatePart** are necessary so that formatting is based on the **IgxDatePickerComponent** locale and format options:
 
@@ -196,7 +232,7 @@ The result is as follows:
     <iframe id="date-picker-sample-5" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/datepicker-sample-5" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="date-picker-sample-5" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="date-picker-sample-5" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
 
@@ -218,6 +254,8 @@ The result is as follows:
 | `formatViews` | `Object` | The format views passed along with the `locale` property used for formatting dates. |
 | `label` | `string` | Changes the default text label. |
 | `labelVisibility` | `string ` | Hide/Show the label. |
+| `disabledDates` | `array` | Gets/Sets the disabled dates descriptors. |
+| `specialDates` | `array` | Gets/Sets the special dates descriptors. |
 
 #### Outputs
 <div class="divider--half"></div>

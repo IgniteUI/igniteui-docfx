@@ -16,7 +16,7 @@ Ignite UI for Angular `igxGrid` コントロールは `igxForOf` ディレクテ
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="grid-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
 </div>
 
 ### 仮想化の有効化
@@ -43,7 +43,7 @@ Ignite UI for Angular `igxGrid` コントロールは `igxForOf` ディレクテ
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="grid-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
 </div>
 
 この機能を使用するには、取得した引数に基づいて適切な要求を実行するために `onDataPreLoad` 出力にサブスクライブし、サービスから送信される相対する情報とパブリック `igxGrid` の `totalItemCount` プロパティを設定する必要があります。
@@ -51,9 +51,9 @@ Ignite UI for Angular `igxGrid` コントロールは `igxForOf` ディレクテ
 ```html
 <igx-grid #grid [data]="remoteData | async" [height]="'500px'" [width]="'100%'" [autoGenerate]='false' (onDataPreLoad)="processData(false)"
     (onSortingDone)="processData(true)">
-    <igx-column [field]="'ID'" [sortable]="true"></igx-column>
+    <igx-column [field]="'ProductID'" [sortable]="true"></igx-column>
     <igx-column [field]="'ProductName'" [sortable]="true"></igx-column>
-    <igx-column [field]="'CategoryName'" [sortable]="true"></igx-column>
+    <igx-column [field]="'UnitPrice'" [dataType]="'number'" [formatter]="formatCurrency" [sortable]="true"></igx-column>
     ...
 </igx-grid>
 ```
@@ -61,7 +61,7 @@ Ignite UI for Angular `igxGrid` コントロールは `igxForOf` ディレクテ
 ```typescript
 public ngAfterViewInit() {
     this._remoteService.getData(this.grid.virtualizationState, this.grid.sortingExpressions[0], true, (data) => {
-        this.grid.totalItemCount = data.Count;
+            this.grid.totalItemCount = data["@odata.count"];
     });
 }
 
@@ -92,7 +92,7 @@ public processData() {
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="grid-remote-filtering-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-remote-filtering-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
 </div>
 
 ### 仮想化の制限

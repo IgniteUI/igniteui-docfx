@@ -54,7 +54,7 @@ export class AppModule {}
     <iframe id="carousel-sample-1-iframe" src='{environment:demosBaseUrl}/carousel-sample-1' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="carousel-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">                StackBlitz で表示
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="carousel-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">                StackBlitz で表示
     </button>
 </div>
 
@@ -114,7 +114,7 @@ a > igx-icon > span{
 <iframe id="carousel-sample-2-iframe" src='{environment:demosBaseUrl}/carousel-sample-2' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="carousel-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">                StackBlitz で表示
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="carousel-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">                StackBlitz で表示
     </button>
 </div>
 
@@ -210,7 +210,7 @@ ul.igx-carousel__indicators {
     <iframe id="carousel-sample-3-iframe" src='{environment:demosBaseUrl}/carousel-sample-3' width="100%" height="100%" seamless frameBorder="0"  onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="carousel-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">                StackBlitz で表示
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="carousel-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">                StackBlitz で表示
     </button>
 </div>
 

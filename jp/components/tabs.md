@@ -14,7 +14,7 @@ Ignite UI for Angular `igxTabs` コンポーネントは、同様なデータ �
     <iframe id="tabs-sample-0" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/tabs-sample-3" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="tabs-sample-0" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tabs-sample-0" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
 </div>
 <div class="divider--half"></div>
 
@@ -58,7 +58,7 @@ export class AppModule {}
         frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="tabs-sample-1-iframe"
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tabs-sample-1-iframe"
     data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
 </div>
 
@@ -103,7 +103,7 @@ export class AppModule {}
         frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="tabs-sample-2-iframe"
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tabs-sample-2-iframe"
     data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
 </div>
 
@@ -163,7 +163,7 @@ export class AppModule {}
         frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="tabs-sample-3-iframe"
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tabs-sample-3-iframe"
     data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
 </div>
 
@@ -197,9 +197,8 @@ export class AppModule {}
 <igx-tabs #tabs1>
   <igx-tabs-group *ngFor="let routerLink of routerLinks">
     <ng-template igxTab>
-      <a routerLink="{{routerLink.link}}">
-        {{routerLink.label}}
-      </a>
+      {{routerLink.label}}
+      <a routerLink="{{routerLink.link}}"></a>
     </ng-template>
   </igx-tabs-group>
 </igx-tabs>
@@ -292,13 +291,13 @@ public ngOnInit() {
 }
 ```
 
-<div style="display: flex;">
-  <div style="margin: 0px 10px 0px 0px">
-    <a class="cta-btn" href="https://igxtabsrouterlinks.stackblitz.io" target="_blank" >サンプルの表示</a>
-  </div>
-  <div>
-    <a class="cta-btn" href="https://stackblitz.com/edit/igxtabsrouterlinks" target="_blank">StackBlitz で開く</a>
-  </div>
+<div class="sample-container loading" >
+    <iframe id="tabs-sample-4-iframe" src='{environment:demosBaseUrl}/tabs-sample-4' seamless
+        frameBorder="0" style="display: none"></iframe>
+</div>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tabs-sample-4-iframe"
+    data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
 </div>
 
 #### 他のルーター アウトレットを Tabs コンテンツに使用
@@ -364,7 +363,7 @@ public navigate(eventArgs) {
 URL パスを特定のコンポーネントにマップするために必要となるすべてのルート定義を宣言します。
 
 ```typescript
-// app.routing.module.ts
+// tabs.routing.module.ts
 const routes: Routes = [
   {
     // children outlets
@@ -382,25 +381,18 @@ const routes: Routes = [
     pathMatch: 'full'
   }
 ];
-
-@NgModule({
-    imports: [
-        RouterModule.forRoot(routes)
-    ],
-    exports: [
-        RouterModule
-    ]
-})
+...
 ```
 
-<div style="display: flex;">
-  <div style="margin: 0px 10px 0px 0px">
-    <a class="cta-btn" href="https://igxtabsrouterlinksoutlets.stackblitz.io" target="_blank" >サンプルの表示</a>
-  </div>
-  <div>
-    <a class="cta-btn" href="https://stackblitz.com/edit/igxtabsrouterlinksoutlets" target="_blank">StackBlitz で開く</a>
-  </div>
+<div class="sample-container loading" >
+    <iframe id="tabs-sample-5-iframe" src='{environment:demosBaseUrl}/tabs-sample-5' seamless
+        frameBorder="0" style="display: none"></iframe>
 </div>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tabs-sample-5-iframe"
+    data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
+</div>
+
 
 <div class="divider"></div>
 

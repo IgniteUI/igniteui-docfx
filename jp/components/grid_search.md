@@ -16,7 +16,7 @@ _language: ja
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="grid-search-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-search-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
 </div>
 <div class="divider--half"></div>
 

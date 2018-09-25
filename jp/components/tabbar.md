@@ -20,7 +20,7 @@ _language: ja
         frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="tabbar-sample-iframe"
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tabbar-sample-iframe"
     data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
@@ -61,7 +61,7 @@ export class AppModule {}
         frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="tabbar-sample-1-iframe"
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tabbar-sample-1-iframe"
     data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
@@ -162,7 +162,7 @@ Bottom Navigation は以下のようになります。
         frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="tabbar-sample-2-iframe"
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tabbar-sample-2-iframe"
     data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 

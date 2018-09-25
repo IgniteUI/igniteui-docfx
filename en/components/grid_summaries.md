@@ -15,7 +15,7 @@ The Grid component in ignite UI for Angular has a **summaries** feature that fun
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="grid-summary-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-summary-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
 

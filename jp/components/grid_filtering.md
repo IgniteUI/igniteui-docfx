@@ -16,7 +16,7 @@ Ignite UI for Angular Grid コンポーネントは、グリッドにバイン�
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="grid-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
 </div>
 <div class="divider--half"></div>
 
@@ -133,6 +133,11 @@ this.grid.filteringLogic = FilteringLogic.OR;
 `AND` のデフォルト値はすべての適用されているフィルター式と一致する行のみを返します。上記の例は、'ProductName セル値が 'myproduct' を含み、'Price' セル値が 55 より大きい場合に行が返されます。
 
 `OR` に設定される場合、'ProductName セル値が 'myproduct' を含むか、'Price' セル値が 55 より大きい場合に行が返されます。
+
+<div class="divider--half"></div>
+
+#### リモート フィルタリング
+onDataPreLoad と onFilteringDone アウトプットにサブスクライブしてグリッドでリモート フィルタリングができます。詳細については、`グリッドの仮想化とパフォーマンス` [ヘルプ](grid_virtualization.md#リモートの並べ替えフィルタリングの仮想化)をご覧ください。
 
 <div class="divider--half"></div>
 

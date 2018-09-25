@@ -13,7 +13,7 @@ The `igxTabs` component in Ignite UI for Angular is used to organize or switch b
     <iframe id="tabs-sample-0" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/tabs-sample-3" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="tabs-sample-0" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tabs-sample-0" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
 
@@ -57,7 +57,7 @@ If the sample is configured properly, the final result should look like that:
         frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="tabs-sample-1-iframe"
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tabs-sample-1-iframe"
     data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
@@ -102,7 +102,7 @@ Nevertheless what type of tabs you have chosen, the tab header width is limited 
         frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="tabs-sample-2-iframe"
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tabs-sample-2-iframe"
     data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
@@ -163,7 +163,7 @@ If the sample is configured properly, the tabs should look like the following ex
         frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="tabs-sample-3-iframe"
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tabs-sample-3-iframe"
     data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
@@ -197,9 +197,8 @@ In order to implement basic routing with **igx-tabs**, you can re-template the i
 <igx-tabs #tabs1>
   <igx-tabs-group *ngFor="let routerLink of routerLinks">
     <ng-template igxTab>
-      <a routerLink="{{routerLink.link}}">
-        {{routerLink.label}}
-      </a>
+      {{routerLink.label}}
+      <a routerLink="{{routerLink.link}}"></a>
     </ng-template>
   </igx-tabs-group>
 </igx-tabs>
@@ -292,13 +291,13 @@ public ngOnInit() {
 }
 ```
 
-<div style="display: flex;">
-  <div style="margin: 0px 10px 0px 0px">
-    <a class="cta-btn" href="https://igxtabsrouterlinks.stackblitz.io" target="_blank" >view sample</a>
-  </div>
-  <div>
-    <a class="cta-btn" href="https://stackblitz.com/edit/igxtabsrouterlinks" target="_blank">view code on stackblitz</a>
-  </div>
+<div class="sample-container loading" >
+    <iframe id="tabs-sample-4-iframe" src='{environment:demosBaseUrl}/tabs-sample-4' seamless
+        frameBorder="0" style="display: none"></iframe>
+</div>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tabs-sample-4-iframe"
+    data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
 #### Using Separate router-outlet as Tabs Content
@@ -364,7 +363,7 @@ public navigate(eventArgs) {
 Declare all needed route definitions that map URL path to a specific component:
 
 ```typescript
-// app.routing.module.ts
+// tabs.routing.module.ts
 const routes: Routes = [
   {
     // children outlets
@@ -382,24 +381,16 @@ const routes: Routes = [
     pathMatch: 'full'
   }
 ];
-
-@NgModule({
-    imports: [
-        RouterModule.forRoot(routes)
-    ],
-    exports: [
-        RouterModule
-    ]
-})
+...
 ```
 
-<div style="display: flex;">
-  <div style="margin: 0px 10px 0px 0px">
-    <a class="cta-btn" href="https://igxtabsrouterlinksoutlets.stackblitz.io" target="_blank" >view sample</a>
-  </div>
-  <div>
-    <a class="cta-btn" href="https://stackblitz.com/edit/igxtabsrouterlinksoutlets" target="_blank">view code on stackblitz</a>
-  </div>
+<div class="sample-container loading" >
+    <iframe id="tabs-sample-5-iframe" src='{environment:demosBaseUrl}/tabs-sample-5' seamless
+        frameBorder="0" style="display: none"></iframe>
+</div>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tabs-sample-5-iframe"
+    data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
 <div class="divider"></div>

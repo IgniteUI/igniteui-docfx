@@ -152,6 +152,8 @@
       href: themes/global-theme.md
     - name: コンポーネント テーマ
       href: themes/component-themes.md
+    - name: テーマのデモ
+      href: themes/theming-demo.md
     - name: タイポグラフィ
       href: themes/typography.md
 - name: Shadows
