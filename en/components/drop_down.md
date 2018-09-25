@@ -46,9 +46,9 @@ Having all set up, let's show all the options in the [**IgxDropDownComponent**](
 <!-- dropdown.component.html -->
 
 <div class="sample-wrapper drop-down-wrapper">
-    <button igxButton="raised" (click)="toggleDropDown($event)">Options</button>
+    <button igxButton="raised" (click)="toggleDropDown($event)" [igxDropDownItemNavigation]="dropdown1">Options</button>
     <igx-drop-down #dropdown1>
-        <igx-drop-down-item [igxDropDownItemNavigation]="dropdown1" *ngFor="let item of items">
+        <igx-drop-down-item *ngFor="let item of items">
             {{ item.field }}
         </igx-drop-down-item>
     </igx-drop-down>
@@ -106,9 +106,9 @@ Let's say we want to have a predefined selected item. One way to do this, is by 
 <!-- dropdown.component.html -->
 
 <div class="sample-wrapper drop-down-wrapper">
-    <button igxButton="raised" (click)="toggleDropDown($event)">Options</button>
+    <button igxButton="raised" (click)="toggleDropDown($event)" [igxDropDownItemNavigation]="dropdown2">Options</button>
     <igx-drop-down #dropdown2 (onOpening)="onOpening($event)">
-        <igx-drop-down-item [igxDropDownItemNavigation]="dropdown2" *ngFor="let item of items">
+        <igx-drop-down-item *ngFor="let item of items">
             {{ item.field }}
         </igx-drop-down-item>
     </igx-drop-down>
@@ -169,9 +169,9 @@ To provide more useful visual information, use `isHeader` to group items semanti
 <!-- dropdown.component.html -->
 
 <div class="sample-wrapper drop-down-wrapper">
-    <button igxButton="raised" (click)="toggleDropDown($event)">Countries</button>
+    <button igxButton="raised" (click)="toggleDropDown($event)" [igxDropDownItemNavigation]="dropdown3">Countries</button>
     <igx-drop-down #dropdown3>
-        <igx-drop-down-item [igxDropDownItemNavigation]="dropdown3" *ngFor="let item of items" [disabled]="item.disabled" [isHeader]="item.header" [isSelected]="item.selected">
+        <igx-drop-down-item *ngFor="let item of items" [disabled]="item.disabled" [isHeader]="item.header" [isSelected]="item.selected">
             {{ item.field }}
         </igx-drop-down-item>
     </igx-drop-down>
@@ -223,6 +223,53 @@ If the sample is configured properly, a list  of countries should be displayed a
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dropdown-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">                view on stackblitz
     </button>
 </div>
+
+### igxDropDownItemNavigation directive
+
+To enable keyboard navigation for the `igxDropDown` component, the `igxDropDownItemNavigation` directive can be applied. The directive should be applied to the active(focused) element or a parent container. This will allow the directive to handle all triggered events. By default the the igxDropDown or its items don't take focus, so for example the directive can be placed on a button or input that controls the drop down.
+The `igxDropDownItemNavigation` directive value should be target component that is or extends `IgxDropDownBase` class.
+
+
+The following sample demonstrates an input that on click opens and closes igxDropDown instance. Applying the `igxDropDownItemNavigation` on the input itself, will enable keyboard navigation, when using arrow up and arrow down. This relies on the default drop down behavior with `allowItemsFocus` disabled to allow the button input to maintain focus.
+
+
+```
+<igx-input-group [igxToggleAction]="dropdownProvince">
+    <input igxInput type="text" [igxDropDownItemNavigation]="dropdownProvince">
+</igx-input-group>
+<igx-drop-down #dropdownProvince>
+    <igx-drop-down-item *ngFor="let p of provinceData">
+        {{ p }}
+    </igx-drop-down-item>
+</igx-drop-down>
+```
+
+Applying the directive will ensure the following actions are executed as a result from the keyboard navigation:
+
+| Name | Description |
+| :--- | :--- |
+| `Enter` | Select item from the drop down and closes the drop down. |
+| `Space` | Select item from the drop down and closes the drop down. |
+| `Esc` | Closes the drop down. |
+| `Arrow Down` | Navigate to the next item in the target component. |
+| `Arrow Up` | Navigate to the previous item in the target component. |
+| `End` | Navigate to the last item in the target component. |
+| `Home` | Navigate to the first item in the target component. |
+
+
+
+When `allowItemsFocus` is enabled, drop down items gain tab index and are focused when active. The focused drop down items are the ones that trigger events, during keyboard navigation, which means that the `igxDropDownItemNavigation` should be applied on the individual drop down items.
+
+```
+<igx-input-group [igxToggleAction]="dropdownProvince">
+    <input igxInput type="text">
+</igx-input-group>
+<igx-drop-down #dropdownProvince [allowItemsFocus]="true">
+    <igx-drop-down-item *ngFor="let p of provinceData" [igxDropDownItemNavigation]="dropdownProvince">
+        {{ p }}
+    </igx-drop-down-item>
+</igx-drop-down>
+```
 
 <div class="divider--half"></div>
 

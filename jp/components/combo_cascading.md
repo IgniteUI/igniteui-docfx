@@ -46,10 +46,11 @@ export class AppModule {}
 
 <div class="combo-container">
     <igx-input-group type="box" #inputGroupCountry style="width: 300px;" (click)="toggleDDCountry()">
-        <input igxInput #inputCountry name="inputCountry" type="text" [(ngModel)]="country" readonly placeholder="Choose Country..."/>
+        <input igxInput #inputCountry name="inputCountry" type="text" [(ngModel)]="country" readonly placeholder="Choose Country..."
+            [igxDropDownItemNavigation]="dropdownCountry"/>
         <igx-suffix><igx-icon [name]="arrowCountry"></igx-icon></igx-suffix>
     </igx-input-group>
-    <igx-drop-down #dropdownCountry igxDropDownItemNavigation width="300px"
+    <igx-drop-down #dropdownCountry width="300px"
         (onSelection)="selectCountry($event)" (onClosed)="onCountryClosed()">
         <igx-drop-down-item *ngFor="let c of countryData">
             {{ c }}
@@ -59,10 +60,11 @@ export class AppModule {}
 
 <div class="combo-container">
     <igx-input-group type="box" #inputGroupProvince style="width: 300px;" (click)="toggleDDProvince()" [disabled]="disabledProvince">
-        <input igxInput #inputProvince name="inputProvince" type="text" [(ngModel)]="province" readonly placeholder="Choose Province..."/>
+        <input igxInput #inputProvince name="inputProvince" type="text" [(ngModel)]="province" readonly placeholder="Choose Province..."
+            [igxDropDownItemNavigation]="dropdownCountry"/>
         <igx-suffix><igx-icon [name]="arrowProvince"></igx-icon></igx-suffix>
     </igx-input-group>
-    <igx-drop-down #dropdownProvince igxDropDownItemNavigation width="300px"
+    <igx-drop-down #dropdownProvince width="300px"
         (onSelection)="selectProvince($event)" (onClosed)="onProvinceClosed()">
         <igx-drop-down-item *ngFor="let p of provinceData">
             {{ p }}
