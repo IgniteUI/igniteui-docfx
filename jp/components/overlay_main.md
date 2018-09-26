@@ -323,16 +323,17 @@ export class ExampleComponent {
 
 `IgxOverlayService`
 
-   | 名前        | 説明                        | キャンセル可能 | パラメーター |
-   |-------------|------------------------------------|------------|------------|
-   |`onOpening`    | オーバーレイを表示する前に発生されます。    | `false`      |            |
-   |`onOpened`     | オーバーレイを表示した後に発生されます。       | `false`      |            |
-   |`onClosing`    | オーバーレイを非表示にする前に発生されます。       | `false`      |            |
-   |`onClosed`     | オーバーレイを非表示にした後に発生されます。       | `false`      |            |
+   | 名前          | Description                         | Cancelable | Parameters |
+   |---------------|-------------------------------------|------------|------------|
+   |`onOpening`    | オーバーレイが表示される前に発生されます。        | false      |            |
+   |`onOpened`     | オーバーレイが表示された後に発生されます。         | false      |            |
+   |`onClosing`    | オーバーレイが非表示になる前に発生されます。       | false      |            |
+   |`onClosed`     | オーバーレイが非表示になった後に発生されます。         | false      |            |
+   |`onAnimation`  | アニメーションを開始する前に発生されます。 | false      |            |
 <div class="divider--half"></div>
 
 ## 前提事項と制限</a>
-既知の制限はありません。
+アウトレットにオーバーレイを表示する際にアウトレットが変換で要素の子、視点、フィルター css の場合、モーダル オーバレイが表示されません。これは、上記いずれかの css プロパティが設定された場合にブラウザーが新しく含まれるブロックを作成して [here] (https://developer.mozilla.org/en-US/docs/Web/CSS/position#fixed) のようにオーバーレイがこのブロックに制限されるためです。
 
 ## その他のリソース
 * [配置方法](overlay_position.md)
