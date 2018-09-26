@@ -211,6 +211,9 @@
   href: ripple.md
 - name: Toggle
   href: toggle.md
+- name: Tooltip
+  href: tooltip.md
+  new: true
 - name: Overlay
   href: overlay_main.md
   new: true
