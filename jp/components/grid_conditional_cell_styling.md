@@ -1,34 +1,35 @@
 ---
-title: Conditional Cell Styling - Native Angular | Ignite UI for Angular
-_description: Conditional Cell Styling feature provides a means for column cells styling based on custom conditions.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Data Grid component, Angular Data Grid control, Native Angular Components, Angular Grid component, Angular Grid control, Cell Styling, Conditional Formatting, Conditional Cell Styling, Angular Grid Conditional Column Styling, Angular Conditional Cell Styling
+title: 条件付きセルのスタイル設定 - ネイティブ Angular|Ignite UI for Angular
+_description: 条件付きセルのスタイル設定機能は、カスタム条件による列のセル スタイルの設定をサポートします。
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Data Grid コンポーネント, Angular Data Grid コントロール, ネイティブ Angular コンポーネント, Angular Grid コンポーネント, Angular Grid コントロール, セルのスタイル設定, 条件付き書式, 条件付きセルのスタイル設定, Angular グリッド条件付き列のスタイル設定, Angular 条件付きセルのスタイル設定
+_language: ja
 ---
 
-### Conditional Cell Styling
-The Grid component in Ignite UI for Angular provides **conditional cell styling** based on custom rules. 
+### 条件付きセルのスタイル設定
+Ignite UI for Angular の Grid コンポーネントは、カスタム条件に基づいた**条件付きセルのスタイル設定**をサポートします。 
 
-This can be achieved by setting the `IgxColumnComponent` input `cellClasses` to an object literal containing key-value pairs. The key is the name of the CSS class, while the value is either a callback function that returns a boolean, or boolean value.
+`IgxColumnComponent` 入力 `cellClasses` をキーと値のペアを含むオブジェクト リテラルに設定します。 キーは CSS クラスの名前です。値はブール値を返すコールバック関数またはブール値です。
 
-#### Demo
+#### デモ
 
 <div class="sample-container loading" style="height:530px">
     <iframe id="cell-styling-sample-iframe" src='{environment:demosBaseUrl}/grid-cell-styling' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="cell-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="cell-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
 </div>
 <div class="divider--half"></div>
 
-#### Overview
-You can conditionally style the igGrid cells by setting the `IgxColumnComponent` `cellClasses` input and defining custom rules.
+#### 概要
+gGrid セルの条件付きスタイル設定は、IgxColumnComponent` `cellClasses`入力を設定してカスタム条件を定義するころによりスタイル設定できます。
 
 ```html
 <!-- sample.component.html -->
 <igx-column field="BeatsPerMinute" dataType="number" [cellClasses]="beatsPerMinuteClasses"></igx-column>
 ```
 
-The `cellClasses` input accepts an object literal, containing key-value pairs, where the key is the name of the CSS class, while the value is either a callback function that returns a boolean, or boolean value.
+`cellClasses` 入力は、キーと値のペアを含むオブジェクト リテラルを受け取ります。キーは CSS クラスの名前です。値はブール値を返すコールバック関数またはブール値です。
 
 ```typescript
 // sample.component.ts
@@ -61,44 +62,44 @@ public beatsPerMinuteClasses = {
 }
 ```
 
-Use ::ng-deep or `ViewEncapsulation.None` to force the custom styles down through the current component and its children.
+::ng-deep または `ViewEncapsulation.None` を使用してカスタム スタイルを現在のコンポーネントとその子コンポーネントに適用します。
 
-### API Summary
+### API まとめ
 
-#### Inputs
-The following `IgxColumnComponent` input is available to configure the **conditional cell styling**:
+#### 入力
+以下の `IgxColumnComponent` 入力は、**条件付きセルのスタイル設定**ができます。
 
-| Name | Type | Description |
+| 名前|型|説明 |
 | :--- | :--- | :--- |
-|`cellClasses`|any|Sets a conditional class selector of the column cells.|
+|`cellClasses`|任意|列セルの条件付きクラス セレクターを設定します。|
 
 <div class="divider--half"></div>
 
-### Additional Resources
+### その他のリソース
 <div class="divider--half"></div>
 
-* [Grid overview](grid.md)
-* [Virtualization and Performance](grid_virtualization.md)
-* [Editing](grid_editing.md)
-* [Paging](grid_paging.md)
-* [Filtering](grid_filtering.md)
-* [Sorting](grid_sorting.md)
-* [Group By](grid_groupby.md)
-* [Summaries](grid_summaries.md)
-* [Column Moving](grid_column_moving.md)
-* [Column Pinning](grid_column_pinning.md)
-* [Column Resizing](grid_column_resizing.md)
-* [Column Hiding](grid_column_hiding.md)
-* [Selection](grid_selection.md)
-* [Searching](grid_search.md)
-* [Toolbar](grid_toolbar.md)
-* [Export to Excel](exporter_excel.md)
-* [Paste from Excel](grid_paste_excel.md)
-* [Multi Column Headers](grid_multi_column_headers.md)
-* [Display Density](grid_displayDensity.md)
+* [Grid の概要](grid.md)
+* [仮想化とパフォーマンス](grid_virtualization.md)
+* [編集](grid_editing.md)
+* [ページング](grid_paging.md)
+* [フィルタリング](grid_filtering.md)
+* [並べ替え](grid_sorting.md)
+* [グループ化](grid_groupby.md)
+* [集計](grid_summaries.md)
+* [列移動](grid_column_moving.md)
+* [列のピン固定](grid_column_pinning.md)
+* [列のサイズ変更](grid_column_resizing.md)
+* [列の非表示](grid_column_hiding.md)
+* [選択](grid_selection.md)
+* [検索](grid_search.md)
+* [ツールバー](grid_toolbar.md)
+* [Excel へエクスポート](exporter_excel.md)
+* [Excel から貼り付け](grid_paste_excel.md)
+* [複数列ヘッダー](grid_multi_column_headers.md)
+* [表示密度](grid_displayDensity.md)
 
 <div class="divider--half"></div>
-Our community is active and always welcoming to new ideas.
+コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

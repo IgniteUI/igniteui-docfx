@@ -59,7 +59,7 @@
     - name: 表示密度
       href: grid_displayDensity.md
       new: true
-    - name: Conditional Cell Styling
+    - name: 条件付きセルのスタイル設定
       href: grid_conditional_cell_styling.md
       new: true
 - name: List View
