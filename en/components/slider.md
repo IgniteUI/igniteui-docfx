@@ -38,7 +38,7 @@ export class AppModule {}
 ```
 
 ####Continuous Slider
-Let's start with a simple continuous slider. First, specify the slider type by setting the `isContinuous` input to true. Next, define the minimum and maximum values using `minValue` and `maxValue`. We also bind the slider `value` to a property in our component called "volume".
+Let's start with a simple continuous slider. First, specify the slider type by setting the [`isContinuous`]({environment:angularApiUrl}/classes/igxslidercomponent.html#iscontinuous) input to true. Next, define the minimum and maximum values using [`minValue`]({environment:angularApiUrl}/classes/igxslidercomponent.html#minvalue) and [`maxValue`]({environment:angularApiUrl}/classes/igxslidercomponent.html#maxvalue). We also bind the slider [`value`]({environment:angularApiUrl}/classes/igxslidercomponent.html#value) to a property in our component called "volume".
 
 > [!NOTE]
 > Continuous slider does not display ticks and bubble label for the current value.
@@ -71,7 +71,7 @@ By default, the Ignite UI for Angular Slider is discrete. Discrete slider provid
 
 You can use a discrete slider with predefined steps to track only meaningful values for the user. For example, the discrete slider can visualize rating from 0 to 5 or completion percentage from 0% to 100%.
 
-In the following example, we define a discrete slider that displays values from 0% to 100%. The `step` is set to 10. We also bind the slider `value` to a property in our component called "completion" to allow two way binding with an input component.
+In the following example, we define a discrete slider that displays values from 0% to 100%. The [`step`]({environment:angularApiUrl}/classes/igxslidercomponent.html#step) is set to 10. We also bind the slider [`value`]({environment:angularApiUrl}/classes/igxslidercomponent.html#value) to a property in our component called "completion" to allow two way binding with an input component.
 
 ```html
 <!--sample.component.html-->
@@ -116,7 +116,7 @@ If the sample is configured properly, dragging the slider thumb should update th
 </div>
 
 ####Range Slider
-To visualize a range filter for example, use a range slider. To achieve this, set the slider `type` to `RANGE`. Next, we bind the slider value to an object of type PriceRange. That object has two properties for lower and upper range values.
+To visualize a range filter for example, use a range slider. To achieve this, set the slider [`type`]({environment:angularApiUrl}/classes/igxslidercomponent.html#type) to [`RANGE`]({environment:angularApiUrl}/enums/slidertype.html#range). Next, we bind the slider value to an object of type PriceRange. That object has two properties for lower and upper range values.
 
 ```html
 <!--sample.component.html-->
@@ -149,7 +149,7 @@ class PriceRange {
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="slide-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-In some cases, values near to the minimum and maximum are not appropriate. You can further provide a useful range to limit the user choice along with setting `minValue` and `maxValue`. This can be done by setting `lowerBound` and `upperBound`. Now, the user will not be able to move the thumb in the range of 0 to 100 and in the range of 900 to 1000.
+In some cases, values near to the minimum and maximum are not appropriate. You can further provide a useful range to limit the user choice along with setting [`minValue`]({environment:angularApiUrl}/classes/igxslidercomponent.html#minvalue) and [`maxValue`]({environment:angularApiUrl}/classes/igxslidercomponent.html#maxvalue). This can be done by setting [`lowerBound`]({environment:angularApiUrl}/classes/igxslidercomponent.html#lowerbound) and [`upperBound`]({environment:angularApiUrl}/classes/igxslidercomponent.html#upperbound). Now, the user will not be able to move the thumb in the range of 0 to 100 and in the range of 900 to 1000.
 
 ```html
 <!--sample.component.html-->
@@ -214,49 +214,12 @@ If the sample is configured properly, the final result should look like that:
 
 <div class="divider"></div>
 
-### API Summary
-The following tables summarize some of the useful **igx-slider** component inputs and outputs.
-
-#### SliderType
-The following slider types are available in the **igx-slider** component:
-
-| Name | Description |
-| :--- | :---------- |
-| `SLIDER` | Specify a slider with a single thumb. |
-| `RANGE` | Specify a range slider with multiple thumbs, which can mark the range. |
+### API References
 <div class="divider--half"></div>
 
-#### IRangeSliderValue
-
-| Name | Type | Description |
-| :--- | :--- | :---------- |
-| `lower` | number | The lower value of the range slider. |
-| `upper` | number | The upper value of the range slider. |
-<div class="divider--half"></div>
-
-#### Inputs
-The following inputs are available in the **igx-slider** component:
-
-| Name | Type | Description |
-| :--- | :--- | :--- |
-| `disabled` | boolean | Disables/enables the interactions with slider. |
-| `isContinuous` | boolean | By default, `isContinuous` is false. When set to true, marks the slider as continuous. |
-| `lowerBound` | number | Specifies the lower boundary of the slider value. If not set, it is the same as the `minValue`. |
-| `maxValue` | number | Specifies the maximum slider value. |
-| `minValue` | number | Specifies the minimum slider value. |
-| `step` | number | Specifies the incremental/decremental step of the value when dragging the thumb. By default, the step is 1, and step should not be less or equal than 0. |
-| `thumbLabelVisibilityDuration` | number | Specifies how long the thumbs labels are visible in milliseconds. By default, the duration is 750 milliseconds. |
-| `type` | [SliderType](#slidertype) | Specifies the slider type - single or range. |
-| `upperBound` | number | Specifies the upper boundary of the slider value. If not set, it is the same as the `maxValue`. |
-| `value` | number\|[IRangeSliderValue](#irangeslidervalue) | Specifies the slider value. If the slider is of type `SLIDER`, the value is number. By default, if not set, the value is the same as `lowerBound`. If the slider type is `RANGE`, the value is an object containing lower and upper properties for the range values. By default, if not set, the lower value is the same as `lowerBound`. By default, if not set, the upper value is the same as `upperBound`.
-<div class="divider--half"></div>
-
-#### Outputs
-The following outputs are available in the **igx-slider** component:
-
-| Name | Description |
-| :--- | :--- |
-| `onValueChange`  | Emits an event when the user has stopped interacting with the thumb and the value has changed.  |
+* [IgxSliderComponent]({environment:angularApiUrl}/classes/igxslidercomponent.html)
+* [SliderType]({environment:angularApiUrl}/enums/slidertype.html)
+* [IRangeSliderValue]({environment:angularApiUrl}/interfaces/irangeslidervalue.html)
 
 ###Additional Resources
 
