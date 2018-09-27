@@ -101,7 +101,7 @@ export class AppModule {}
 
 <div class="divider--half"></div>
 
-選択済みの項目をあらかじめ定義する場合、[**IgxDropDownComponent**](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/drop_down.html) の **igx-drop-down** [onOpening]({environment:angularApiUrl}/classes/igxdropdowncomponent.html#onopening) イベントを処理します。
+選択済みの項目をあらかじめ定義する場合、[IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) の **igx-drop-down** [onOpening]({environment:angularApiUrl}/classes/igxdropdowncomponent.html#onopening) イベントを処理します。
 
 ```html
 <!-- dropdown.component.html -->

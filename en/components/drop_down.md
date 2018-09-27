@@ -40,7 +40,7 @@ export class AppModule {}
 Let's create a simple dropdown that provides several option items to choose from. To achieve this, we use the **igx-drop-down** component as well as [igxToggleAction]({environment:angularApiUrl}/classes/igxtoggleactiondirective.html) to open/close the dropdown.
 
 
-Having all set up, let's show all the options in the [**IgxDropDownComponent**](https://www.infragistics.com/products/ignite-ui-angular/angular/components/drop_down.html) component. The dropdown contains several options as dropdown items.
+Having all set up, let's show all the options in the [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) component. The dropdown contains several options as dropdown items.
 
 ```html
 <!-- dropdown.component.html -->
@@ -100,7 +100,7 @@ If the sample is configured properly, a dropdown with several options should be 
 
 <div class="divider--half"></div>
 
-Let's say we want to have a predefined selected item. One way to do this, is by handling **igx-drop-down** [onOpening]({environment:angularApiUrl}/classes/igxdropdowncomponent.html#onopening) event of [**IgxDropDownComponent**](https://www.infragistics.com/products/ignite-ui-angular/angular/components/drop_down.html).
+Let's say we want to have a predefined selected item. One way to do this, is by handling **igx-drop-down** [onOpening]({environment:angularApiUrl}/classes/igxdropdowncomponent.html#onopening) event of [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html).
 
 ```html
 <!-- dropdown.component.html -->
