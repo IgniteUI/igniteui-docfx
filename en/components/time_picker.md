@@ -19,7 +19,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ### Usage
 
-To get started with the Ignite UI for Angular Time Picker, let's first import the **IgxTimePickerModule** in our **app.module.ts** file. Note that the IgxTimePicker is also dependent on the **BrowserAnimationsModule**, so it needs to be added to the AppModule as well:
+To get started with the Ignite UI for Angular Time Picker, let's first import the [**IgxTimePickerModule**]({environment:angularApiUrl}/classes/igxtimepickermodule.html) in our **app.module.ts** file. Note that the IgxTimePicker is also dependent on the **BrowserAnimationsModule**, so it needs to be added to the AppModule as well:
 
 ```typescript
 // app.module.ts
@@ -46,6 +46,7 @@ To add time picker, in the template of our meeting component we can add the foll
 
 <igx-time-picker ></igx-time-picker>
 ```
+
 And there we have it:
 <div class="sample-container loading" style="height:540px">
     <iframe id="timepicker-sample-1-iframe" src='{environment:demosBaseUrl}/timepicker-sample-1' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -63,7 +64,7 @@ We could set a value using the value input. Just add a date:
 public date: Date = new Date(Date.now());
 ```
 
-Then use the `value` input in the template:
+Then use the [`value`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#value) input in the template:
 
 ```html
 <igx-time-picker [value]="date"></igx-time-picker>
@@ -86,7 +87,7 @@ If we want to use a two-way data-binding, we could just use `ngModel` like this:
 
 #### Change delta and spin mode
 
-If we want to change the delta of the items we should set the `itemsDelta` and for the spin mode we should use the `isSpinLoop`:
+If we want to change the delta of the items we should set the [`itemsDelta`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#itemsdelta) and for the spin mode we should use the [`isSpinLoop`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#isspinloop):
 
 ```html
 <igx-time-picker [isSpinLoop]="false" [itemsDelta]="{hours:1, minutes:5}"></igx-time-picker>
@@ -103,8 +104,7 @@ And there we have it:
 
 #### Validation
 
-We can set `minValue` and `maxValue` to limit the user input. We also should handle the `onInvalidValueSelected` in order to notify the user if an invalid time is selected. Note
-that the min/max values should follow the `format`:
+We can set [`minValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#minvalue) and [`maxValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#maxvalue) to limit the user input. We also should handle the [`onValidationFailed`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#onvalidationfailed) in order to notify the user if an invalid time is selected. Note that the min/max values should follow the [`format`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#format):
 
 ```typescript
 // app.module.ts
@@ -155,9 +155,9 @@ And there we have it:
 
 We have seen how to make use of the  API (properties, events, methods) so that we configure the time picker per our requirements and interact with it programatically. Now we want to go further and customize its input group look.
 
-To do that we need to decorate the nested ng-template inside the time picker with IgxTimePickerTemplate directive. ng-template context exposes the following members: `openDialog` method can be used to open the time picker dialog; `displayValue` property contains the formatted value; `value` contains the real value. You could use those by declaring a variables in the ng-template element.
+To do that we need to decorate the nested ng-template inside the time picker with IgxTimePickerTemplate directive. ng-template context exposes the following members: [`openDialog`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#opendialog) method can be used to open the time picker dialog; `displayValue` property contains the formatted value; `value` contains the real value. You could use those by declaring a variables in the ng-template element.
 
-In the following example we modify the default label "Time" add a second icon as suffix. Bellow the input group we're using a label to display the real time picker value:
+In the following example we modify the default label "Time" add a second icon as suffix. Below the input group we're using a label to display the real time picker value:
 
 ```html
 <igx-time-picker [value]="date">
@@ -189,57 +189,16 @@ And there we have it:
 </div>
 <div class="divider--half"></div>
 
-### API Summary
-The following tables summarize some of the useful **igx-time-picker** component inputs, outputs and methods.
-
-#### Inputs
-The following inputs are available in the **igx-time-picker** component:
-
-| Name | Type | Description |
-| :--- | :--- | :--- |
-| `okButtonLabel` | string | Renders OK button with custom text, which commits the selected time, and fill the timePicker input. By default `okButtonLabel` is set to `OK`.|
-| `cancelButtonLabel` | string | Renders cancel button with custom text, which closes the dialog. By default `cancelButtonLabel` is set to `Cancel`. |
-| `value` | Date | Gets/Sets the value of the timePicker. |
-| `disabled` | boolean | Disable the timePicker. |
-| `itemsDelta`| object | Gets/Sets the delta by which hour and minute items would be displayed. By default `itemsDelta` is set to `{hours:1, minutes:1}`. Note! This cannot be set at runtime. |
-| `minValue` | string | Gets/Sets minimum value. It should follow the `format` of the timePicker. |
-| `maxValue` | string | Gets/Sets maximum value. It should follow the `format` of the timePicker. |
-| `vertical` | boolean | Gets/Sets the orientation of the timePicker. By default `vertical` is set to `false`. |
-| `isSpinLoop` | boolean | Determines the spin behavior. If set to true the hours and minutes spinning will wrap around. By default `isSpinLoop` is set to true. Note! This cannot be set at runtime. |
-| `format` | string | Gets/Sets format of time while timePicker does not have focus. By default `format` is set to `hh:mm tt`. Note! This cannot be set at runtime.<br>List of time-flags:<br> `h` : hours field in 12-hours format without leading zero<br>`hh` : hours field in 12-hours format with leading zero<br>`H` : hours field in 24-hours format without leading zero<br>`HH` : hours field in 24-hours format with leading zero<br>`m` : minutes field without leading zero<br>`mm` : minutes field with leading zero<br>`tt` : 2 character string which represents AM/PM field |
-
-<div class="divider--half"></div>
-
-#### Outputs
-The following outputs are available in the **igx-time-picker** component:
-
-| Name | Description |
-| :--- | :--- |
-| `onValueChanged` | Emitted when selection is made. The event contains the selected value. Returns `{oldValue: Date, newValue: Date}` |
-| `onValidationFailed` | Emitted when an invalid value is being set. Returns `{timePicker: any, currentValue: Date, setThroughUI: boolean}` |
-| `onOpen` | Emitted when a timePicker is being opened. |
-
-#### Methods
-The following methods are available in the **igx-time-picker** component:
-
-| Signature | Return Type | Description |
-| :--- | :--- | :--- |
-| `okButtonClick()` | `boolean` | If current value is valid selects it, closes the dialog and returns true, otherwise returns false. |
-| `cancelButtonClick()` | `void` | Closes the dialog without selecting the current value. |
-| `hoursInView()` | `string[]` | Returns an array of the hours currently in view. |
-| `minutesInView()` | `string[]` | Returns an array of the minutes currently in view. |
-| `ampmInView()` | `string[]` | Returns an array of the AM/PM currently in view. |
-| `scrollHourIntoView(item: string)` | `void` | Scrolls an hour item into view. |
-| `scrollMinuteIntoView(item: string)` | `void` | Scrolls a minute item into view. |
-| `scrollAmPmIntoView(item: string)` | `void` | Scrolls a period item into view. |
-
-
-#### Getters
-The following getters are available on the **igx-time-picker** component:
-
-| Name | Type | Description |
-| :--- | :--- | :--- |
-| `displayTime` | `string` | Returns the displayed time. |
+### API References
+* [IgxIconModule]({environment:angularApiUrl}/classes/igxiconmodule.html)
+* [IgxInputDirective]({environment:angularApiUrl}/classes/igxinputdirective.html)
+* [IgxInputGroupModule]({environment:angularApiUrl}/classes/igxinputgroupmodule.html)
+* [IgxLabelDirective]({environment:angularApiUrl}/classes/igxlabeldirective.html)
+* [IgxPrefixDirective]({environment:angularApiUrl}/classes/igxprefixdirective.html)
+* [IgxSuffixDirective]({environment:angularApiUrl}/classes/igxsuffixdirective.html)
+* [IgxTimePickerComponent]({environment:angularApiUrl}/classes/igxtimepickercomponent.html)
+* [IgxTimePickerModule]({environment:angularApiUrl}/classes/igxtimepickermodule.html)
+* [IgxTimePickerTemplateDirective]({environment:angularApiUrl}/classes/igxtimepickertemplatedirective.html)
 
 ###Additional Resources
 

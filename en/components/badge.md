@@ -21,7 +21,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 > To start using Ignite UI for Angular components in your own projects, make sure you have configured all necessary dependencies and have performed the proper setup of your project. You can learn how to do this in the [**installation**](https://www.infragistics.com/products/ignite-ui-angular/getting-started#installation) topic.
 
 ###Usage
-To get started with the Ignite UI for Angular Badge, let's first import the **IgxBadgeModule** in the **app.module.ts** file:
+To get started with the Ignite UI for Angular Badge, let's first import the [**IgxBadgeModule**]({environment:angularApiUrl}/classes/igxbadgemodule.html) in the **app.module.ts** file:
 
 ```typescript
 // app.module.ts
@@ -37,7 +37,7 @@ import { IgxBadgeModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-Let's create a simple list with contacts similar to those in chat clients. In addition to the contact name, we want to display an avatar and the current state of the contact (online, offline or away). To achieve this, we use the **igx-badge** and **igx-avatar** components. For a container, **igx-list** is used.
+Let's create a simple list with contacts similar to those in chat clients. In addition to the contact name, we want to display an avatar and the current state of the contact (online, offline or away). To achieve this, we use the [`igx-badge`]({environment:angularApiUrl}/classes/igxbadgecomponent.html) and [`igx-avatar`]({environment:angularApiUrl}/classes/igxavatarcomponent.html) components. For a container, [`igx-list`]({environment:angularApiUrl}/classes/igxlistcomponent.html) is used.
 
 To continue, include all needed modules and import them in the **app.module.ts** file.
 
@@ -58,7 +58,7 @@ import {
 export class AppModule {}
 ```
 
-Having all set up, let's show all the contacts in the [**IgxList**](https://www.infragistics.com/products/ignite-ui-angular/angular/components/list.html) component. The list contains the member name and its availability.
+Having all set up, let's show all the contacts in the [`IgxListComponent`]({environment:angularApiUrl}/classes/igxlistcomponent.html) component. The list contains the member name and its availability.
 
 ```html
 <!-- contacts.component.html -->
@@ -132,7 +132,7 @@ If the sample is configured properly, a list with members' name and status shoul
 
 <div class="divider--half"></div>
 
-Let's add an avatar in front of every chat member. To do this, put another div element in the **igx-list-item** containing the [**IgxAvatar**](https://www.infragistics.com/products/ignite-ui-angular/angular/components/avatar.html). Modify the list item content as shown below.
+Let's add an avatar in front of every chat member. To do this, put another div element in the [`igx-list-item`]({environment:angularApiUrl}/classes/igxlistitemcomponent.html) containing the [`IgxAvatarComponent`]({environment:angularApiUrl}/classes/igxavatarcomponent.html). Modify the list item content as shown below.
 
 ```html
 <!-- contacts.component.html -->
@@ -165,11 +165,11 @@ Let's add an avatar in front of every chat member. To do this, put another div e
 
 <div class="divider--half"></div>
 
-Having just a list with names doesn't provide much useful visual information. The last step is to add **igx-badge** to show the contact state notification. Modify the **igx-list-item** content as shown below adding a badge component inside the avatar component.
+Having just a list with names doesn't provide much useful visual information. The last step is to add [`igx-badge`]({environment:angularApiUrl}/classes/igxbadgecomponent.html) to show the contact state notification. Modify the list items content as shown below adding a badge component inside the avatar component.
 
-Notice that the **igx-badge** has `icon` and `type` inputs to configure the badge look. You can set `icon` by providing its name from the official [material icons set](https://material.io/icons/). The badge `type` can be set to either `default`, `info`, `success`, `warning`, or `error`. Depending on the type, a specific background color is applied.
+Notice that the [`igx-badge`]({environment:angularApiUrl}/classes/igxbadgecomponent.html) has [`icon`]({environment:angularApiUrl}/classes/igxbadgecomponent.html#icon) and [`type`]({environment:angularApiUrl}/classes/igxbadgecomponent.html#type) inputs to configure the badge look. You can set the icon by providing its name from the official [material icons set](https://material.io/icons/). The badge type can be set to either [`default`]({environment:angularApiUrl}/enums/type.html#default), [`info`]({environment:angularApiUrl}/enums/type.html#info), [`success`]({environment:angularApiUrl}/enums/type.html#success), [`warning`]({environment:angularApiUrl}/enums/type.html#warning), or [`error`]({environment:angularApiUrl}/enums/type.html#error). Depending on the type, a specific background color is applied.
 
-In our sample, `icon` and `type` are bound to model properties named *icon* and *type*.
+In our sample, [`icon`]({environment:angularApiUrl}/classes/igxbadgecomponent.html#icon) and [`type`]({environment:angularApiUrl}/classes/igxbadgecomponent.html#type) are bound to model properties named *icon* and *type*.
 
 In order to position the badge in its parent container, create a custom css class *badge-style* and define the top and right positions.
 
@@ -218,18 +218,12 @@ If the sample is configured properly, a list of members should be displayed and 
 
 <div class="divider--half"></div>
 
-### API Summary
-The following table summarizes some of the useful **igx-badge** component inputs.
-#### Inputs
-The following inputs are available in the **igx-badge** component:
-
-| Name   |      Type      |  Description |
-|:----------|:-------------:|:------|
-| `icon` | string | Set an icon from the material icons set. The icon will not be displayed if the badge `value` is already set. |
-| `type` | string | Set the badge type to either `default`, `info`, `success`, `warning`, or `error`. Depending on the type, specific background color is set as declared in the default theme. |
-| `value` | string | Set the value displayed inside the badge. |
-
-<div class="divider"></div>
+### API References
+* [IgxAvatarModule]({environment:angularApiUrl}/classes/igxavatarmodule.html)
+* [IgxBadgeComponent]({environment:angularApiUrl}/classes/igxbadgecomponent.html)
+* [IgxBadgeModule]({environment:angularApiUrl}/classes/igxbadgemodule.html)
+* [IgxListModule]({environment:angularApiUrl}/classes/igxlistmodule.html)
+* [Type]({environment:angularApiUrl}/enums/type.html)
 
 ###Additional Resources
 <div class="divider--half"></div>

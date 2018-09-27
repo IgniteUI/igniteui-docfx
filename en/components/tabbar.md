@@ -10,7 +10,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <div class="divider"></div>
 
 > [!NOTE]
-> `igx-tab-bar` selector is deprecated. You could use `igx-bottom-nav` instead. `IgxTabBarComponent` class is renamed to `IgxBottomNavComponent`. `IgxTabBarModule` is renamed to `IgxBottomNavModule`
+> `igx-tab-bar` selector is deprecated. You could use [`igx-bottom-nav`]({environment:angularApiUrl}/classes/igxbottomnavcomponent.html) instead. `IgxTabBarComponent` class is renamed to [`IgxBottomNavComponent`]({environment:angularApiUrl}/classes/igxbottomnavcomponent.html). `IgxTabBarModule` is renamed to [`IgxBottomNavModule`]({environment:angularApiUrl}/classes/igxbottomnavmodule.html).
 
 ### Bottom Navigation Demo
 
@@ -27,7 +27,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ### Usage
 
-To get started with the control, let's first import the **IgxBottomNavModule** in the **app.module.ts** file:
+To get started with the control, let's first import the [**IgxBottomNavModule**]({environment:angularApiUrl}/classes/igxbottomnavmodule.html) in the **app.module.ts** file:
 
 ```typescript
 // app.module.ts
@@ -191,9 +191,9 @@ Here is an example:
 ### Embedding Other Igx Controls
 
 You can combine other Ignite UI for Angular components with the Bottom Navigation to achieve more complex applications.
-For example you may use the IgxListComponent to create a list of contacts in a Bottom Navigation's panel and also visualize each contact using IgxAvatarComponent and IgxIconComponent.
+For example you may use the [`IgxListComponent`]({environment:angularApiUrl}/classes/igxlistcomponent.html) to create a list of contacts in a Bottom Navigation's panel and also visualize each contact using [`IgxAvatarComponent`]({environment:angularApiUrl}/classes/igxavatarcomponent.html) and [`IgxIconComponent`]({environment:angularApiUrl}/classes/igxiconcomponent.html).
 
-This time you will need to include both the IgxBottomNavComponent and IgxListComponent components in your "app.module.ts" file:
+This time you will need to include both the [`IgxBottomNavModule`]({environment:angularApiUrl}/classes/igxbottomnavmodule.html) and [`IgxListModule`]({environment:angularApiUrl}/classes/igxlistmodule.html) in your "app.module.ts" file:
 
 ```typescript
 // app.module.ts
@@ -269,7 +269,7 @@ public contactsList: object[] = [{
 ...
 ```
 
-Edit the component's template markup by adding the following Bottom Navigation with an IgxListComponent in its first panel:
+Edit the component's template markup by adding the following Bottom Navigation with an [`IgxListComponent`]({environment:angularApiUrl}/classes/igxlistcomponent.html) in its first panel:
 
 ```html
 ...
@@ -346,71 +346,16 @@ You can see the result of the code above at the beginning of this article in the
 
 <div class="divider"></div>
 
-### API Summary
+### API References
+* [IgxAvatarModule]({environment:angularApiUrl}/classes/igxavatarmodule.html)
+* [IgxBottomNavComponent]({environment:angularApiUrl}/classes/igxbottomnavcomponent.html)
+* [IgxBottomNavModule]({environment:angularApiUrl}/classes/igxbottomnavmodule.html)
+* [IgxIconModule]({environment:angularApiUrl}/classes/igxiconmodule.html)
+* [IgxListModule]({environment:angularApiUrl}/classes/igxlistmodule.html)
+* [IgxTabComponent]({environment:angularApiUrl}/classes/igxtabcomponent.html)
+* [IgxTabPanelComponent]({environment:angularApiUrl}/classes/igxtabpanelcomponent.html)
 
-The Bottom Navigation component has a few more APIs to explore, which are listed below.
-
-#### Inputs
-
-The following inputs are available on the **igx-tab-panel** component:
-| Name | Type | Description |
-| :--- | :--- | :--- |
-| `label` | String | Defines the label on the associated tab. |
-| `icon` | String | Defines the icon on the associated tab. |
-| `select` | Method | Selects the panel and the associated tab. |
-
-<div class="divider--half"></div>
-
-The following inputs are available on the **igx-tab** component:
-| Name | Type | Description |
-| :--- | :--- | :--- |
-| `select` | Method | Selects the tab and the associated panel. |
-
-<div class="divider"></div>
-
-#### Outputs
-
-The following outputs are available on the **igx-bottom-nav** component:
-| Name | Type | Description |
-| :--- | :--- | :--- |
-| `onTabSelected` | EventEmitter | Emits an event when a new tab is selected. |
-| `onTabDeselected` | EventEmitter | Emits an event when a tab is deselected. |
-
-<div class="divider"></div>
-
-#### Getters
-
-The following getters are available on the **igx-bottom-nav** component:
-| Name | Type | Description |
-| :--- | :--- | :--- |
-| `tabs` | QueryList | Provides an observable collection of all IgxTab view children. |
-| `panels` | QueryList | Provides an observable collection of all IgxTabPanel content children. |
-| `selectedIndex` | Number | Gets the index of selected tab/panel in the respective collection. |
-| `selectedTab` | IgxTab | Gets the selected IgxTab in the tabbar based on `selectedIndex`. |
-
-<div class="divider--half"></div>
-
-The following getters are available on the **igx-tab-panel** component:
-| Name | Type | Description |
-| :--- | :--- | :--- |
-| `disabled` | Boolean | Determines whether the panel is disabled. |
-| `isSelected` | Boolean | Determines whether the panel is selected. |
-| `index` | Number | Gets the index of a panel in the panel collection. |
-| `relatedTab` | IgxTab | Gets the tab associated with the panel. |
-
-<div class="divider--half"></div>
-
-The following getters are available on the **igx-tab** component:
-| Name | Type | Description |
-| :--- | :--- | :--- |
-| `disabled` | Boolean | Determines whether the tab is disabled. |
-| `isSelected` | Boolean | Determines whether the tab is selected. |
-| `index` | Number | Gets the index of the tab in the tab collection. |
-| `relatedPanel` | IgxTabPanel | Gets the panel associated with the tab. |
-
-<div class="divider"></div>
-
-###Additional Resources
+### Additional Resources
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.

@@ -6,7 +6,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ##Mask
 
-By applying `igxMask` directive on a **text input field**, the developer can control user input and format the visible value, based on configurable mask rules. It provides different input options and ease in use and configuration.
+By applying [`igxMask`]({environment:angularApiUrl}/classes/igxmaskdirective.html) directive on a **text input field**, the developer can control user input and format the visible value, based on configurable mask rules. It provides different input options and ease in use and configuration.
 
 ### Mask Demo
 <div class="sample-container loading" style="height: 330px">
@@ -21,8 +21,8 @@ By applying `igxMask` directive on a **text input field**, the developer can con
 > To start using Ignite UI for Angular components in your own projects, make sure you have configured all necessary dependencies and have performed the proper setup of your project. You can learn how to do this in the [**installation**](https://www.infragistics.com/products/ignite-ui-angular/getting-started#installation) topic.
 
 ### Usage
-`igxMask` directive is used on an input of type **text**.
-To get started with the Ignite UI for Angular Mask directive, let's first import the **IgxMaskModule** and **IgxInputGroupModule** in our **app.module.ts** file.
+[`igxMask`]({environment:angularApiUrl}/classes/igxmaskdirective.html) directive is used on an input of type **text**.
+To get started with the Ignite UI for Angular Mask directive, let's first import the [**IgxMaskModule**]({environment:angularApiUrl}/classes/igxmaskmodule.html) and [**IgxInputGroupModule**]({environment:angularApiUrl}/classes/igxinputgroupmodule.html) in our **app.module.ts** file.
 
 ```typescript
 // app.module.ts
@@ -81,7 +81,7 @@ If the sample is configured properly, an input with the applied formatting mask 
 </div>
 
 #### Bind to Formatted/Raw Value
-Use the `includeLiterals` input to configure which input value (formatted or raw) to bind in your form when a specific mask is applied. By default, `includeLiterals` is set to *false* and the raw value is used.
+Use the [`includeLiterals`]({environment:angularApiUrl}/classes/igxmaskdirective.html#includeliterals) input to configure which input value (formatted or raw) to bind in your form when a specific mask is applied. By default, [`includeLiterals`]({environment:angularApiUrl}/classes/igxmaskdirective.html#includeliterals) is set to *false* and the raw value is used.
 
 ```html
 <!--sample.component.html-->
@@ -212,28 +212,13 @@ export class Person {
 }
 ```
 
-### API Summary
-The following tables summarize some of the useful **igxMask** directive inputs and outputs.
-
-<div class="divider--half"></div>
-
-#### Inputs
-The following inputs are available for the **igxMask** directive:
-
-| Name | Type | Description |
-| :--- | :--- | :--- |
-| `igxMask` | string | Specifies the current input mask. |
-| `promptChar` | string | Specifies the character representing a fillable spot in the mask. By default, the prompt char is "_". |
-| `includeLiterals` | boolean | Specifies if the bound value includes the formatting symbols.  |
-
-<div class="divider--half"></div>
-
-#### Outputs
-The following outputs are available for the **igxMask** directive:
-
-| Name | Description |
-| :--- | :--- |
-| `onValueChange`  | Emits an event each time the value changes. The event parameter provides `rawValue` and `formattedValue` properties. |
+### API References
+* [IgxInputDirective]({environment:angularApiUrl}/classes/igxinputdirective.html)
+* [IgxInputGroupModule]({environment:angularApiUrl}/classes/igxinputgroupmodule.html)
+* [IgxLabelDirective]({environment:angularApiUrl}/classes/igxlabeldirective.html)
+* [IgxMaskDirective]({environment:angularApiUrl}/classes/igxmaskdirective.html)
+* [IgxPrefixDirective]({environment:angularApiUrl}/classes/igxprefixdirective.html)
+* [IgxSnackbarModule]({environment:angularApiUrl}/classes/igxsnackbarmodule.html)
 
 ###Additional Resources
 

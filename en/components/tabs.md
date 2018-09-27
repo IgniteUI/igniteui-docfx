@@ -6,7 +6,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ## Tabs
 
-The `igxTabs` component in Ignite UI for Angular is used to organize or switch between similar data sets. It functions as a wrapper for `igx-tab-item` and `igx-tabs-group`, as these respectively represent the container for the data and the tab header. The tabs component places tabs at the top and allows scrolling when there are multiple tab items on the screen.
+The [`igx-tabs`]({environment:angularApiUrl}/classes/igxtabscomponent.html) component in Ignite UI for Angular is used to organize or switch between similar data sets. It functions as a wrapper for [`igx-tab-item`]({environment:angularApiUrl}/classes/igxtabitemcomponent.html) and [`igx-tabs-group`]({environment:angularApiUrl}/classes/igxtabsgroupcomponent.html), as these respectively represent the container for the data and the tab header. The tabs component places tabs at the top and allows scrolling when there are multiple tab items on the screen.
 
 ### Tabs Demo
 <div class="sample-container loading" style="height: 250px; width: 600px;">
@@ -22,7 +22,7 @@ The `igxTabs` component in Ignite UI for Angular is used to organize or switch b
 
 ### Usage
 
-To get started with the Ignite UI for Angular Tabs component, let's first import the **IgxTabsModule** in the **app.module.ts** file.
+To get started with the Ignite UI for Angular Tabs component, let's first import the [**IgxTabsModule**]({environment:angularApiUrl}/classes/igxtabsmodule.html) in the **app.module.ts** file.
 
 ```typescript
 // app.module.ts
@@ -38,7 +38,7 @@ import { IgxTabsModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-Then, specify several tabs groups with `label` and content.
+Then, specify several tabs groups with [`label`]({environment:angularApiUrl}/classes/igxtabsgroupcomponent.html#label) and content.
 
 ```html
 <igx-tabs>
@@ -64,7 +64,7 @@ If the sample is configured properly, the final result should look like that:
 <div class="divider"></div>
 
 ### Tabs Types
-There are two types of tabs. Set the `tabsType` input to choose between fixed and content-fit tabs.
+There are two types of tabs. Set the [`tabsType`]({environment:angularApiUrl}/classes/igxtabscomponent.html#tabstype) input to choose between [`fixed`]({environment:angularApiUrl}/enums/tabstype.html#fixed) and [`contentfit`]({environment:angularApiUrl}/enums/tabstype.html#contentfit) tabs.
 - **Content-fit tabs** (default): the width of the tab header depends on the content (label, icon, both) and all tabs have equal padding.
 Nevertheless what type of tabs you have chosen, the tab header width is limited by the specified min and max width. 
 - **Fixed tabs**: all tab headers are with equal width and fit in the tabs container. If the provided space is not enough for all items, scroll buttons are displayed.
@@ -110,7 +110,7 @@ Nevertheless what type of tabs you have chosen, the tab header width is limited 
 
 ### Customizing Tabs
 
-Let's modify the tabs and make them more appealing by including icons. The Tabs component is compatible with the Material Design
+Let's modify the tabs and make them more appealing by including icons using [`icon`]({environment:angularApiUrl}/classes/igxtabsgroupcomponent.html#icon) input. The Tabs component is compatible with the Material Design
 [**Icons**](https://material.io/icons/) so it will be very easy to adopt them in your application.
 
 First add the Material+Icons import in your 'styles.css' file in the main application folder.
@@ -169,7 +169,7 @@ If the sample is configured properly, the tabs should look like the following ex
 
 <div class="divider--half"></div>
 
-If changing the tabs' labels and icons is not enough, you can also create your own template for each tab header.
+If changing the tabs' labels and icons is not enough, you can also create your own [`IgxTabItemTemplateDirective`]({environment:angularApiUrl}/classes/igxtabitemtemplatedirective.html) for each tab header.
 
 ```html
 <igx-tabs>
@@ -190,7 +190,7 @@ The following examples demonstrate sample usage of the tabs component and basic 
 
 #### Using igxTab, routerLink Directives and Single router-outlet
 
-In order to implement basic routing with **igx-tabs**, you can re-template the igx-tabs item header using the `igxTab` directive and provide links via `routerLink` in `ng-template`. Views are switched and displayed after a single `router-outlet` placed outside the tabs component. Note that `ng-template` content overides the default tabs headers style.
+In order to implement basic routing with [`igx-tabs`]({environment:angularApiUrl}/classes/igxtabscomponent.html), you can re-template the igx-tabs item header using the [`igxTab`]({environment:angularApiUrl}/classes/igxtabitemtemplatedirective.html) directive and provide links via `routerLink` in `ng-template`. Views are switched and displayed after a single `router-outlet` placed outside the tabs component. Note that `ng-template` content overides the default tabs headers style.
 
 ```html
 <!-- tabs-sample-1.component.html -->
@@ -273,7 +273,7 @@ const routes: Routes = [
 export class AppRoutingModule { }
 ```
 
-In order to handle the back/forward browser buttons in this particular case, add the following code in ngOnInit and use the IgxTabsGroupComponent `select` method to activate the relevant tabs group.
+In order to handle the back/forward browser buttons in this particular case, add the following code in ngOnInit and use the [`IgxTabsGroupComponent`]({environment:angularApiUrl}/classes/igxtabsgroupcomponent.html) [`select`]({environment:angularApiUrl}/classes/igxtabsgroupcomponent.html#select) method to activate the relevant tabs group.
 
 ```typescript
 // tabs-sample-1.component.ts
@@ -301,7 +301,7 @@ public ngOnInit() {
 </div>
 
 #### Using Separate router-outlet as Tabs Content
-In order to render views inside the igx-tabs content, use named router outlets. In this case, implement `onTabItemSelected` event handler to navigate and render the specified view.
+In order to render views inside the [`igx-tabs`]({environment:angularApiUrl}/classes/igxtabscomponent.html) content, use named router outlets. In this case, implement [`onTabItemSelected`]({environment:angularApiUrl}/classes/igxtabscomponent.html#ontabitemselected) event handler to navigate and render the specified view.
 
 ```html
 <!-- tabs-sample-1.component.html -->
@@ -395,76 +395,15 @@ const routes: Routes = [
 
 <div class="divider"></div>
 
-### API Summary
-
-The following tables summarize some of the useful Tabs component inputs and outputs.
-
-#### Inputs
-
-The following input is available in the **igx-tabs** component:
-
-| Name | Type | Description |
-| :--- | :--- | :--- |
-| `tabsType` | TabsType | Defines the tab header sizing mode - `contentfit` (default) or `fixed`. |
-| `selectedIndex` | number | Gets/sets the index of selected tab item. |
-
-The following inputs are available in the **igx-tabs-group** component:
-
-| Name | Type | Description |
-| :--- | :--- | :--- |
-| `label` | String | Defines the label of the associated tab header. |
-| `icon` | String | Defines the icon of the associated tab header. |
-
-<div class="divider"></div>
-
-#### Outputs
-
-The following outputs are available on the **igx-tabs** component:
-| Name | Type | Description |
-| :--- | :--- | :--- |
-| `onTabItemSelected` | EventEmitter | Emits an event when a tab item is selected. Returns the selected `IgxTabItemComponent` and `IgxTabsGroupComponent`. |
-| `onTabItemDeselected` | EventEmitter | Emits an event when a tab item is deselected. Returns the deselected `IgxTabItemComponent` and `IgxTabsGroupComponent`.|
-
-<div class="divider"></div>
-
-#### Getters
-
-The following getters are available in the **igx-tabs** component:
-| Name | Type | Description |
-| :--- | :--- | :--- |
-| `tabs` | QueryList | Provides an observable collection of all IgxTabItemComponent-s. |
-| `groups` | QueryList | Provides an observable collection of all IgxTabsGroupComponent-s. |
-| `selectedTabItem` | IgxTabItemComponent | Gets the selected IgxTabItemComponent based on `selectedIndex`. |
-
-<div class="divider--half"></div>
-
-The following getters are available on the **igx-tabs-group** component:
-| Name | Type | Description |
-| :--- | :--- | :--- |
-| `disabled` | boolean | Gets whether the group is disabled. |
-| `index` | number | Gets the group index in the groups collection. |
-| `relatedTab` | IgxTabItemComponent | Gets the tab associated with the group. |
-
-<div class="divider--half"></div>
-
-The following getters are available on the **igx-tab-item** component:
-| Name | Type | Description |
-| :--- | :--- | :--- |
-| `disabled` | boolean | Gets whether the tab is disabled. |
-| `isSelected` | boolean | Gets whether the tab is selected. |
-| `index` | number | Gets the index of the tab in the tab collection. |
-| `relatedGroup` | IgxTabsGroupComponent | Gets the group associated with the tab. |
-
-<div class="divider--half"></div>
-
-
-#### Methods
-The following method is available on the **igx-tabs-group** component:
-| Signature | Return Type | Description |
-| :--- | :--- | :--- |
-| `select(focusDelay: number)` | `void` | Selects the related IgxTabsGroupComponent. Default value of `focusDelay` is 50. |
-
-<div class="divider"></div>
+### API References
+* [IgxAvatarModule]({environment:angularApiUrl}/classes/igxavatarmodule.html)
+* [IgxCardModule]({environment:angularApiUrl}/classes/igxcardmodule.html)
+* [IgxIconModule]({environment:angularApiUrl}/classes/igxiconmodule.html)
+* [IgxNavbarModule]({environment:angularApiUrl}/classes/igxnavbarmodule.html)
+* [IgxTabsModule]({environment:angularApiUrl}/classes/igxtabsmodule.html)
+* [IgxTabsComponent]({environment:angularApiUrl}/classes/igxtabscomponent.html)
+* [IgxTabsGroupComponent]({environment:angularApiUrl}/classes/igxtabsgroupcomponent.html)
+* [IgxTabItemComponent]({environment:angularApiUrl}/classes/igxtabitemcomponent.html)
 
 ### Additional Resources
 

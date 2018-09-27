@@ -22,7 +22,7 @@ Column moving works as well with pinned columns. Dragging an unpinned column and
 <div class="divider--half"></div>
 
 #### Overview
-**Column moving** feature is enabled on a per-column level, meaning that the **igx-grid** can have a mix of movable and immovable columns. This is done via the `movable` input of the `igx-column`.
+**Column moving** feature is enabled on a per-column level, meaning that the [**igx-grid**]({environment:angularApiUrl}/classes/igxgridcomponent.html) can have a mix of movable and immovable columns. This is done via the [`movable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#movable) input of the [`igx-column`]({environment:angularApiUrl}/classes/igxcolumncomponent.html).
 
 ```html
 <igx-column [field]="'Category'" [movable]="true"></igx-column>
@@ -32,8 +32,8 @@ Column moving works as well with pinned columns. Dragging an unpinned column and
 > If the pinned area exceeds its maximum allowed width (80% of the total grid width), a visual clue notifies the end user that the drop operation is forbidden and pinning is not possible. This means you won't be allowed to drop a column in the pinned area.
 
 #### Events
-There are several events related to the column moving to provide a means of tapping into the columns' drag and drop operations. These are `onColumnMovingStart`, `onColumnMoving` and `onColumnMovingEnd`. 
-You can subscribe to the `onColumnMovingEnd` event of the `igx-grid` to implement some custom logic when a column is dropped to a new position. For example, you can cancel dropping the Category after the Change On Year(%) column.
+There are several events related to the column moving to provide a means of tapping into the columns' drag and drop operations. These are [`onColumnMovingStart`]({environment:angularApiUrl}/classes/igxgridcomponent.html#oncolumnmovingstart), [`onColumnMoving`]({environment:angularApiUrl}/classes/igxgridcomponent.html#oncolumnmoving) and [`onColumnMovingEnd`]({environment:angularApiUrl}/classes/igxgridcomponent.html#oncolumnmovingend). 
+You can subscribe to the [`onColumnMovingEnd`]({environment:angularApiUrl}/classes/igxgridcomponent.html#oncolumnmovingend) event of the [`igx-grid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) to implement some custom logic when a column is dropped to a new position. For example, you can cancel dropping the Category after the Change On Year(%) column.
 
 ```html
 <igx-grid #dataGrid [data]="data" [autoGenerate]="false" (onColumnMovingEnd)="onColumnMovingEnd($event)">
@@ -50,36 +50,10 @@ public onColumnMovingEnd(event) {
 }
 ```
 
-### API Summary
-
-#### Inputs
-The following `IgxColumnComponent` input is available to configure the **column moving**:
-
-| Name | Type | Description |
-| :--- | :--- | :--- |
-|`movable`|boolean|Sets column to be movable.|
-
-<div class="divider--half"></div>
-
-#### Outputs
-The following `IgxGridComponent` outputs are available for **column moving**:
-
-| Name | Type | Description |
-| :--- | :--- | :--- |
-|`onColumnMoving`| EventEmitter |Emitted throughout the column moving operation. Returns the source and target columns objects. This event is cancelable.|
-|`onColumnMovingEnd`| EventEmitter |Emitted when column moving ends. Returns the source and target columns objects. This event is cancelable.|
-|`onColumnMovingStart`| EventEmitter |Emitted when column moving starts. Returns the moved column object.|
-
-<div class="divider--half"></div>
-
-#### Methods
-The following `IgxGridComponent` method is related to **column moving**:
-
-| Name | Description |
-| :--- | :--- |
-|`moveColumn(column: IgxColumnComponent, dropTarget: IgxColumnComponent)` | Provides a way to move a column to the specified drop target via API. |
-
-<div class="divider--half"></div>
+### API References
+* [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
+* [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
+* [IgxGridModule]({environment:angularApiUrl}/classes/igxgridmodule.html)
 
 ### Additional Resources
 <div class="divider--half"></div>
