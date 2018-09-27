@@ -7,14 +7,14 @@ _description: Explanation and example about the Overlay Service's IPositionStrat
 
 Position strategies determine where to display the component in the provided IgxOverlayService. There are three position strategies:
 
-1. **Global** - Positions the element based on the directions passed in through [`positionSettings`] ({environment:angularApiUrl}/products/ignite-ui-angular/docs/typescript/interfaces/positionsettings.html). These are Top/Middle/Bottom for [`verticalDirection`] ({environment:angularApiUrl}/products/ignite-ui-angular/docs/typescript/interfaces/positionsettings.html#verticaldirection) and Left/Center/Right for [`horizontalDirection`] ({environment:angularApiUrl}/products/ignite-ui-angular/docs/typescript/interfaces/positionsettings.html#horizontaldirection). Defaults to:
+1. **Global** - Positions the element based on the directions passed in through [`positionSettings`] ({environment:angularApiUrl}/interfaces/positionsettings.html). These are Top/Middle/Bottom for [`verticalDirection`] ({environment:angularApiUrl}/interfaces/positionsettings.html#verticaldirection) and Left/Center/Right for [`horizontalDirection`] ({environment:angularApiUrl}/interfaces/positionsettings.html#horizontaldirection). Defaults to:
 
     | horizontalDirection        | verticalDirection        |
     |:---------------------------|:-------------------------|
     | HorizontalAlignment.Center | VerticalAlignment.Middle |
 <div class="divider"></div>
 
-2. **Connected** - Positions the element based on the directions and start point passed in through [`positionSettings`] ({environment:angularApiUrl}/products/ignite-ui-angular/docs/typescript/interfaces/positionsettings.html). It is possible to either pass a start point (type [`Point`] ({environment:angularApiUrl}/products/ignite-ui-angular/docs/typescript/classes/point.html)) or an `HTMLElement` as a positioning base. Defaults to:
+2. **Connected** - Positions the element based on the directions and start point passed in through [`positionSettings`] ({environment:angularApiUrl}/interfaces/positionsettings.html). It is possible to either pass a start point (type [`Point`] ({environment:angularApiUrl}/classes/point.html)) or an `HTMLElement` as a positioning base. Defaults to:
 
     | target          | horizontalDirection       |  verticalDirection       | horizontalStartPoint     | verticalStartPoint       |
     |:----------------|:--------------------------|:-------------------------|:-------------------------|:-------------------------|
@@ -45,7 +45,7 @@ strategy.position(contentWrapper, size);
 ```
 
 ### Getting Started
-The position strategy is passed as a property in the [`overlaySettings`] ({environment:angularApiUrl}/products/ignite-ui-angular/docs/typescript/interfaces/overlaysettings.html) parameter when the [`overlay.show()`] ({environment:angularApiUrl}/products/ignite-ui-angular/docs/typescript/classes/igxoverlayservice.html#show) method is called:
+The position strategy is passed as a property in the [`overlaySettings`] ({environment:angularApiUrl}/interfaces/overlaysettings.html) parameter when the [`overlay.show()`] ({environment:angularApiUrl}/classes/igxoverlayservice.html#show) method is called:
 ```typescript
     // Initializing and using overlay settings
     const overlaySettings: OverlaySettings = {
@@ -58,7 +58,7 @@ The position strategy is passed as a property in the [`overlaySettings`] ({envir
 ``` 
 <div class="divider"></div>
 
-To change the position strategy used by the overlay, override the [`positionStrategy`] ({environment:angularApiUrl}/products/ignite-ui-angular/docs/typescript/interfaces/ipositionstrategy.html) property of the [`overlaySettings`] ({environment:angularApiUrl}/products/ignite-ui-angular/docs/typescript/interfaces/overlaysettings.html) object passed to the overlay:
+To change the position strategy used by the overlay, override the [`positionStrategy`] ({environment:angularApiUrl}/interfaces/ipositionstrategy.html) property of the [`overlaySettings`] ({environment:angularApiUrl}/interfaces/overlaysettings.html) object passed to the overlay:
 ```typescript
     // overlaySettings is an existing object of type OverlaySettings
     // to override the position strategy
@@ -93,7 +93,7 @@ import {AutoPositionStrategy, GlobalPositionStrategy, ConnectedPositioningStrate
 ## Demos 
 
 ### Horizontal and Vertical Direction
-Changing the horizontal and/or vertical direction of the positioning settings determined where the content will align itself. Depending on the positioning strategy chosen, the content will either align relative to the target's container ([`AutoPositionStrategy`] ({environment:angularApiUrl}/products/ignite-ui-angular/docs/typescript/classes/autopositionstrategy.html) and [`ConnectedPositioningStrategy`] ({environment:angularApiUrl}/products/ignite-ui-angular/docs/typescript/classes/connectedpositioningstrategy.html)) or the body of the document ([`GlobalPositioningStrategy`] ({environment:angularApiUrl}/products/ignite-ui-angular/docs/typescript/classes/globalpositionstrategy.html))
+Changing the horizontal and/or vertical direction of the positioning settings determined where the content will align itself. Depending on the positioning strategy chosen, the content will either align relative to the target's container ([`AutoPositionStrategy`] ({environment:angularApiUrl}/classes/autopositionstrategy.html) and [`ConnectedPositioningStrategy`] ({environment:angularApiUrl}/classes/connectedpositioningstrategy.html)) or the body of the document ([`GlobalPositioningStrategy`] ({environment:angularApiUrl}/classes/globalpositionstrategy.html))
 
 <div class="sample-container loading" style="height: 400px">
     <iframe id="overlay-position-sample-1-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/overlay-position-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -104,8 +104,8 @@ Changing the horizontal and/or vertical direction of the positioning settings de
 <div class="divider"></div>
 
 ### Horizontal and Vertical Start Point
-Changing the horizontal and/or vertical start point of the positioning settings determines where the content will try to start from. Start point has effect only if the [`target`] ({environment:angularApiUrl}/products/ignite-ui-angular/docs/typescript/interfaces/positionsettings.html#target) passed in the [`positionSettings`] ({environment:angularApiUrl}/products/ignite-ui-angular/docs/typescript/interfaces/positionsettings.html) is an `HTMLElement` and works only for [`AutoPositionStrategy`] ({environment:angularApiUrl}/products/ignite-ui-angular/docs/typescript/classes/autopositionstrategy.html) and [`ConnectedPositioningStrategy`] ({environment:angularApiUrl}/products/ignite-ui-angular/docs/typescript/classes/connectedpositioningstrategy.html).
-In the demo below, the overlay element will position itself starting from the target element depending on the start point chosen. Directions are always [`HorizontalAlignment.Right`] ({environment:angularApiUrl}/products/ignite-ui-angular/docs/typescript/enums/horizontalalignment.html#right) and [`VerticalAlignment.Bottom`] ({environment:angularApiUrl}/products/ignite-ui-angular/docs/typescript/enums/verticalalignment.html#bottom):
+Changing the horizontal and/or vertical start point of the positioning settings determines where the content will try to start from. Start point has effect only if the [`target`] ({environment:angularApiUrl}/interfaces/positionsettings.html#target) passed in the [`positionSettings`] ({environment:angularApiUrl}/interfaces/positionsettings.html) is an `HTMLElement` and works only for [`AutoPositionStrategy`] ({environment:angularApiUrl}/classes/autopositionstrategy.html) and [`ConnectedPositioningStrategy`] ({environment:angularApiUrl}/classes/connectedpositioningstrategy.html).
+In the demo below, the overlay element will position itself starting from the target element depending on the start point chosen. Directions are always [`HorizontalAlignment.Right`] ({environment:angularApiUrl}/enums/horizontalalignment.html#right) and [`VerticalAlignment.Bottom`] ({environment:angularApiUrl}/enums/verticalalignment.html#bottom):
 
 <div class="sample-container loading" style="height: 400px">
     <iframe id="overlay-position-sample-2-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/overlay-position-sample-2" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -118,5 +118,5 @@ In the demo below, the overlay element will position itself starting from the ta
 
 ## API
 
-* [`IPositionStrategy`] ({environment:angularApiUrl}/products/ignite-ui-angular/docs/typescript/interfaces/ipositionstrategy.html)
-* [`PositionSettings`] ({environment:angularApiUrl}/products/ignite-ui-angular/docs/typescript/interfaces/positionsettings.html)
+* [`IPositionStrategy`] ({environment:angularApiUrl}/interfaces/ipositionstrategy.html)
+* [`PositionSettings`] ({environment:angularApiUrl}/interfaces/positionsettings.html)

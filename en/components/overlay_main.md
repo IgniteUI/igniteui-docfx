@@ -13,7 +13,7 @@ The overlay service is fully integrated in the toggle directive.
 
 ## Getting Started
 
-To use the [`IgxOverlayService`] ({environment:angularApiUrl}/products/ignite-ui-angular/docs/typescript/classes/igxoverlayservice.html) it needs to be imported in the component. `Inject` a reference to it in the component's [`constructor`] ({environment:angularApiUrl}/products/ignite-ui-angular/docs/typescript/classes/igxoverlayservice.html#constructor):
+To use the [`IgxOverlayService`] ({environment:angularApiUrl}/classes/igxoverlayservice.html) it needs to be imported in the component. `Inject` a reference to it in the component's [`constructor`] ({environment:angularApiUrl}/classes/igxoverlayservice.html#constructor):
 ```typescript
 
 import { Inject } from '@angular/core'
@@ -62,7 +62,7 @@ export class MyOverlayComponent {
 
 ```
 
-If we want to pass an already existing `ElementRef` from the page to the [`IgxOverlayService`] ({environment:angularApiUrl}/products/ignite-ui-angular/docs/typescript/classes/igxoverlayservice.html), we can do it as follows:
+If we want to pass an already existing `ElementRef` from the page to the [`IgxOverlayService`] ({environment:angularApiUrl}/classes/igxoverlayservice.html), we can do it as follows:
 
 ```HTML
 <!-- in my-overlay-component.component.html -->
@@ -88,17 +88,17 @@ export class MyOverlayComponent {
 ```
 <div class="divider--half"></div>
 
-The overlay service [`show()`] ({environment:angularApiUrl}/products/ignite-ui-angular/docs/typescript/classes/igxoverlayservice.html#show) method accepts 2 arguments, the first one being the content that should be rendered in the overlay. There are a couple of different scenarios how the content can be passed:
+The overlay service [`show()`] ({environment:angularApiUrl}/classes/igxoverlayservice.html#show) method accepts 2 arguments, the first one being the content that should be rendered in the overlay. There are a couple of different scenarios how the content can be passed:
   - A component definition (illustrated in the sample above) - When passing a component in as the first argument, the overlay service creates a new instance of that component and dynamically attaches it to the `overlay` DOM.
   - An `ElementRef` to an existing DOM element - Any view that is already rendered on the page can be passed through the overlay service and be rendered in the overlay DOM. Using this approach will:
     - Get the reference to the passed view from Angular 
     - Detach the view from the DOM and leave an anchor in its place
-    - Re-attach the view to the overlay, using the [`show()`] ({environment:angularApiUrl}/products/ignite-ui-angular/docs/typescript/classes/igxoverlayservice.html#show) method settings or falling back to the default overlay settings
+    - Re-attach the view to the overlay, using the [`show()`] ({environment:angularApiUrl}/classes/igxoverlayservice.html#show) method settings or falling back to the default overlay settings
     - On close, will re-attach the view back to the original location in the DOM
 <div class="divider--half"></div>
 
 ### Demo - Dynamic attach - Component
-In the below demo, we can pass the IgxCard [demo](https://www.infragistics.com/products/ignite-ui-angular/angular/components/card.html#card-demo) through the overlay service [`show()`] ({environment:angularApiUrl}/products/ignite-ui-angular/docs/typescript/classes/igxoverlayservice.html#show) method to dynamically attach it to the DOM in a modal container.
+In the below demo, we can pass the IgxCard [demo](https://www.infragistics.com/products/ignite-ui-angular/angular/components/card.html#card-demo) through the overlay service [`show()`] ({environment:angularApiUrl}/classes/igxoverlayservice.html#show) method to dynamically attach it to the DOM in a modal container.
 
 
 <div class="sample-container loading" style="height: 400px">
@@ -111,9 +111,9 @@ In the below demo, we can pass the IgxCard [demo](https://www.infragistics.com/p
 
 ### Configuring overlay settings
 
-The overlay service [`show()`] ({environment:angularApiUrl}/products/ignite-ui-angular/docs/typescript/classes/igxoverlayservice.html#show) method also accepts an object of the [`OverlaySettings`] ({environment:angularApiUrl}/products/ignite-ui-angular/docs/typescript/interfaces/overlaysettings.html) type which configures the way the conent is shown. If no such object is provided, the Overlay service will use its default settings to render the passed content.
+The overlay service [`show()`] ({environment:angularApiUrl}/classes/igxoverlayservice.html#show) method also accepts an object of the [`OverlaySettings`] ({environment:angularApiUrl}/interfaces/overlaysettings.html) type which configures the way the conent is shown. If no such object is provided, the Overlay service will use its default settings to render the passed content.
 
-For example, if we want the content to be positioned relative to an element, we can pass a different [`positioningStrategy`] ({environment:angularApiUrl}/products/ignite-ui-angular/docs/typescript/interfaces/overlaysettings.html#positionstrategy) for the overlay's [`show()`] ({environment:angularApiUrl}/products/ignite-ui-angular/docs/typescript/classes/igxoverlayservice.html#show) method, e.g. [`ConnectedPositioningStrategy`] ({environment:angularApiUrl}/products/ignite-ui-angular/docs/typescript/classes/connectedpositioningstrategy.html) . In order to configure how the component is shown, we need to first create an [`OverlaySettings`] ({environment:angularApiUrl}/products/ignite-ui-angular/docs/typescript/interfaces/overlaysettings.html) object:
+For example, if we want the content to be positioned relative to an element, we can pass a different [`positioningStrategy`] ({environment:angularApiUrl}/interfaces/overlaysettings.html#positionstrategy) for the overlay's [`show()`] ({environment:angularApiUrl}/classes/igxoverlayservice.html#show) method, e.g. [`ConnectedPositioningStrategy`] ({environment:angularApiUrl}/classes/connectedpositioningstrategy.html) . In order to configure how the component is shown, we need to first create an [`OverlaySettings`] ({environment:angularApiUrl}/interfaces/overlaysettings.html) object:
 ```typescript
 // in my-overlay-component.component.ts
 // add an import for the definion of ConnectedPositioningStategy class
@@ -144,9 +144,9 @@ Clicking on the button will now show `MyDynamicComponent` positioned relative to
 
 ### Hiding the overlay
 
-The [`IgxOverlayService.hide()`] ({environment:angularApiUrl}/products/ignite-ui-angular/docs/typescript/classes/igxoverlayservice.html#hide) method removes the content from the overlay and, if applicable, re-attaches it to the original location in the DOM. 
+The [`IgxOverlayService.hide()`] ({environment:angularApiUrl}/classes/igxoverlayservice.html#hide) method removes the content from the overlay and, if applicable, re-attaches it to the original location in the DOM. 
 
-All of the elements rendered by the overlay service have a unique ID assigned to them by the service. The [`IgxOverlayService.show()`] ({environment:angularApiUrl}/products/ignite-ui-angular/docs/typescript/classes/igxoverlayservice.html#show) method returns the identifier of the rendered content. In order to remove content from the overlay, that ID needs to be passed to the overlay's [`hide()`] ({environment:angularApiUrl}/products/ignite-ui-angular/docs/typescript/classes/igxoverlayservice.html#hide) method.
+All of the elements rendered by the overlay service have a unique ID assigned to them by the service. The [`IgxOverlayService.show()`] ({environment:angularApiUrl}/classes/igxoverlayservice.html#show) method returns the identifier of the rendered content. In order to remove content from the overlay, that ID needs to be passed to the overlay's [`hide()`] ({environment:angularApiUrl}/classes/igxoverlayservice.html#hide) method.
 
 We can modify the previously defined overlay method to not only show but also hide the overlay element
 ```typescript
@@ -184,7 +184,7 @@ export class MyOverlayComponent {
 ```
 ### Demo - Dynamic attach - Settings
 
-Using the [`overlaySettings`] ({environment:angularApiUrl}/products/ignite-ui-angular/docs/typescript/interfaces/overlaysettings.html) parameter of the [`show()`] ({environment:angularApiUrl}/products/ignite-ui-angular/docs/typescript/classes/igxoverlayservice.html#show) method, we can change how the content is shown - e.g. where the content is positioned, how the scroll should behave, is the container modal or not
+Using the [`overlaySettings`] ({environment:angularApiUrl}/interfaces/overlaysettings.html) parameter of the [`show()`] ({environment:angularApiUrl}/classes/igxoverlayservice.html#show) method, we can change how the content is shown - e.g. where the content is positioned, how the scroll should behave, is the container modal or not
 
 <div class="sample-container loading" style="height: 400px">
     <iframe id="overlay-sample-main-2-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/overlay-sample-main-2" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -195,7 +195,7 @@ Using the [`overlaySettings`] ({environment:angularApiUrl}/products/ignite-ui-an
 <div class="divider--half"></div>
 
 
-If *no* [`overlaySettings`] ({environment:angularApiUrl}/products/ignite-ui-angular/docs/typescript/interfaces/overlaysettings.html) are configured, the toggled element falls back to *default display settings*:
+If *no* [`overlaySettings`] ({environment:angularApiUrl}/interfaces/overlaysettings.html) are configured, the toggled element falls back to *default display settings*:
 ```typescript
 defaultOverlaySettings = {
         positionStrategy: new GlobalPositionStrategy(),
@@ -207,7 +207,7 @@ defaultOverlaySettings = {
 <div class="divider--half"></div>
 
 ### Integration with igxToggle 
-The [`IgxToggleDirective`] ({environment:angularApiUrl}/products/ignite-ui-angular/docs/typescript/classes/igxtoggledirective.html) is fully integrated with the [`IgxOverlayService`] ({environment:angularApiUrl}/products/ignite-ui-angular/docs/typescript/classes/igxoverlayservice.html). As such, the toggle's [`toggle()`] ({environment:angularApiUrl}/products/ignite-ui-angular/docs/typescript/classes/igxtoggledirective.html#toggle) method allows for custom overlay settings to be passed when toggling content.
+The [`IgxToggleDirective`] ({environment:angularApiUrl}/classes/igxtoggledirective.html) is fully integrated with the [`IgxOverlayService`] ({environment:angularApiUrl}/classes/igxoverlayservice.html). As such, the toggle's [`toggle()`] ({environment:angularApiUrl}/classes/igxtoggledirective.html#toggle) method allows for custom overlay settings to be passed when toggling content.
 
 An example of how to pass configuration settings to the toggle's method is shown below:
 ```html
@@ -249,12 +249,12 @@ export class ExampleComponent {
 
 ## API
 
-* [IgxOverlayService] ({environment:angularApiUrl}/products/ignite-ui-angular/docs/typescript/classes/igxoverlayservice.html)
-* [OverlaySettings] ({environment:angularApiUrl}/products/ignite-ui-angular/docs/typescript/interfaces/overlaysettings.html)
-* [IPositionStrategy] ({environment:angularApiUrl}/products/ignite-ui-angular/docs/typescript/interfaces/ipositionstrategy.html)
-* [PositionSettings] ({environment:angularApiUrl}/products/ignite-ui-angular/docs/typescript/interfaces/positionsettings.html)
-* [IScrollStrategy] ({environment:angularApiUrl}/products/ignite-ui-angular/docs/typescript/classes/iscrollstrategy.html)
-* [IgxToggleDirective] ({environment:angularApiUrl}/products/ignite-ui-angular/docs/typescript/classes/igxtoggledirective.html)
+* [IgxOverlayService] ({environment:angularApiUrl}/classes/igxoverlayservice.html)
+* [OverlaySettings] ({environment:angularApiUrl}/interfaces/overlaysettings.html)
+* [IPositionStrategy] ({environment:angularApiUrl}/interfaces/ipositionstrategy.html)
+* [PositionSettings] ({environment:angularApiUrl}/interfaces/positionsettings.html)
+* [IScrollStrategy] ({environment:angularApiUrl}/classes/iscrollstrategy.html)
+* [IgxToggleDirective] ({environment:angularApiUrl}/classes/igxtoggledirective.html)
 
 ## Assumptions and Limitations</a>
 If you show the overlay in an outlet, and if the outlet is child of element with transform, perspective or filter css set you will be not able to show modal overlay. The reason for this is when one of above mentioned css properties is set the browser creates a new containing block and the overlay is limited to this containing block, as described [here](https://developer.mozilla.org/en-US/docs/Web/CSS/position#fixed).
