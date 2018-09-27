@@ -46,6 +46,8 @@ There are a few questions one can ask, when charting such plan.
 Depending on the set [`dataType`]({environment:angularApiUrl/classes/igxcolumncomponent.html#datatype}) of the column, the correct set of [**filtering operations**](grid.md#filtering-conditions) is loaded inside the filter UI dropdown.
 ```
 
+Example of adding the 
+
 ### 8. Where does one find further help related to the topic of the article?
 
 # <a name='#workflow'>Workflow</a>
