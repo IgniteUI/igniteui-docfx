@@ -59,6 +59,9 @@
     - name: Display Density
       href: grid_displayDensity.md
       new: true
+    - name: Conditional Cell Styling
+      href: grid_conditional_cell_styling.md
+      new: true
 - name: List View
   href: list.md
 - name: Combo
