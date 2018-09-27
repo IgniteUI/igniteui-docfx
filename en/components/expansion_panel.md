@@ -6,13 +6,13 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ## Expansion Panel
 <p class="highlight">
-The [`IgxExpansionPanel`]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxexpansionpanelcomponent.html) is a lightweight component which can be rendered in two states - collapsed or expanded. When collapsed, the panel displays a short summary of its content. The collapsed panel can be toggled using mouse click, or keyboard interactions (maybe have link here) to display the body completely, containing any additional necessary content.
+The [`IgxExpansionPanel`]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html) is a lightweight component which can be rendered in two states - collapsed or expanded. When collapsed, the panel displays a short summary of its content. The collapsed panel can be toggled using mouse click, or keyboard interactions (maybe have link here) to display the body completely, containing any additional necessary content.
 </p>
 <div class="divider--half"></div>
 
 ## Usage
 ### Getting Started
-To use the [`IgxExpansionPanelComponent`]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxexpansionpanelcomponent.html) we need to import the [**IgxExpansionPanelModule**]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxexpansionpanelmodule.html) in our **app.module**: 
+To use the [`IgxExpansionPanelComponent`]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html) we need to import the [**IgxExpansionPanelModule**]({environment:angularApiUrl}/classes/igxexpansionpanelmodule.html) in our **app.module**: 
 ```typescript
 // app.module.ts
 
@@ -58,7 +58,7 @@ In the below example, we can create a small collapsible component that hold a bi
 </igx-expansion-panel>
 
 ```
-The [`IgxExpansionPanelComponent`]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxexpansionpanelcomponent.html) exposes the [`.igx-expansion-panel`]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/sass/index.html#themes-mixin-igx-expansion-panel) class which we can use to style the component:
+The [`IgxExpansionPanelComponent`]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html) exposes the [`.igx-expansion-panel`]({environment:sassApiUrl}/index.html#mixin-igx-expansion-panel) class which we can use to style the component:
 
 ```css
 <!-- expansion-panel.component.css -->
@@ -79,7 +79,7 @@ The [`IgxExpansionPanelComponent`]({environment:infragisticsBaseUrl}/products/ig
 }
 ```
 
-The classes [`igx-expansion-panel__header`]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/sass/index.html#themes-mixin-igx-expansion-panel__header) and [`igx-expansion-panel__body`]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/sass/index.html#themes-mixin-igx-expansion-panel__body) are also exposed for styling the header and body.
+The css classes `.igx-expansion-panel__header` and `.igx-expansion-panel__body` are also exposed for styling the header and body.
 
 You can see the results below: 
 <div class="sample-container loading" style="height: 200px;">
@@ -91,7 +91,7 @@ You can see the results below:
 
 ### Binding to properties and events
 
-We can add some logic to our component to make it show/hide the description depending on the state of the panel. We can do this by binding the description to the controls [`collapsed`]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxexpansionpanelcomponent.html#collapsed) property:
+We can add some logic to our component to make it show/hide the description depending on the state of the panel. We can do this by binding the description to the controls [`collapsed`]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html#collapsed) property:
 
 ```typescript
 // in expansion-panel.component.ts
@@ -145,10 +145,10 @@ Below we have the results:
 </div>
 
 ### Styling the header
-The [`IgxExpansionPanelComponent`]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxexpansionpanelcomponent.html) allows for easy customization of [the header]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxexpansionpanelheadercomponent.html).
+The [`IgxExpansionPanelComponent`]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html) allows for easy customization of [the header]({environment:angularApiUrl}/classes/igxexpansionpanelheadercomponent.html).
 The default icon for the toggle state of the control can be templated. The position of this icon is also configurable - either the start or end of the header. It can also be hidden.
 
-Configuring the position of the header icon can be done through the [`iconPosition`]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxexpansionpanelheadercomponent.html#iconPosition) input on the `igx-expansion-panel-header`. The posible options for the icon position are **left**, **right** and **none**. The next code sample demonstrates how to configure the component's button to go on the *right* side.
+Configuring the position of the header icon can be done through the [`iconPosition`]({environment:angularApiUrl}/classes/igxexpansionpanelheadercomponent.html#iconposition) input on the `igx-expansion-panel-header`. The posible options for the icon position are **left**, **right** and **none**. The next code sample demonstrates how to configure the component's button to go on the *right* side.
 
 ```html
 <!-- in expansion-component.component.html -->
@@ -158,9 +158,9 @@ Configuring the position of the header icon can be done through the [`iconPositi
         </igx-expansion-panel-header>
     </igx-expansion-panel>
 ```
-> Note: The [`iconPosition`]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxexpansionpanelheadercomponent.html#iconPosition) property works with `RTL` - e.g. an icon set to show up in **right** will show in the leftmost part of the header when RTL is on.
+> Note: The [`iconPosition`]({environment:angularApiUrl}/classes/igxexpansionpanelheadercomponent.html#iconposition) property works with `RTL` - e.g. an icon set to show up in **right** will show in the leftmost part of the header when RTL is on.
 
-We can also override the default icon that is used in the control by passing content in an `igx-expansion-panel-icon` tag:
+We can also override the default icon that is used in the control by passing content in an [`igx-expansion-panel-icon`]({environment:angularApiUrl}/classes/igxexpansionpanelicondirective.html) tag:
 ```html
 <!-- in expansion-component.component.html -->
     <igx-expansion-panel>
@@ -184,8 +184,8 @@ We can also override the default icon that is used in the control by passing con
 Our component will now render "Show More" when the panel is collapsed and "Collapse" once it's fully expanded.
 ### Adding content
 
-The `igx-expansion-panel-body` tag of the component accepts all kinds of markup and renders everything with the `ng-content` projection. We can use an [`IgxAvatar`]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxavatarcomponent.html) to freshen up our expansion panel's inner content:
-First, we need to import the [`IgxAvatarModule`]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxavatarmodule.html) in our **app.module.ts**
+The [`igx-expansion-panel-body`](({environment:angularApiUrl}/classes/igxexpansionpanelbodycomponent.html) tag of the component accepts all kinds of markup and renders everything with the `ng-content` projection. We can use an [`IgxAvatar`]({environment:angularApiUrl}/classes/igxavatarcomponent.html) to freshen up our expansion panel's inner content:
+First, we need to import the [`IgxAvatarModule`]({environment:angularApiUrl}/classes/igxavatarmodule.html) in our **app.module.ts**
 ```typescript
 // in app.module.ts
 import { IgxExpansionPanelModule, IgxAvatarModule } from 'igniteui-angular';
@@ -237,7 +237,7 @@ After applying all of the changes to our initial component, here is the final re
     <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="expansion-sample-3-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-The `IgxExpansionPanel` control allows all sort of content to be added inside of the `igx-expansion-panel-body`. It can render `IgxGrid`s, `IgxCombo`, charts and even other expansion panels!
+The `IgxExpansionPanel` control allows all sort of content to be added inside of the `igx-expansion-panel-body`. It can render [`IgxGrid`]({environment:angularApiUrl}/classes/igxcombocomponent.html)s, [`IgxCombo`]({environment:angularApiUrl}/classes/igxcombocomponent.html), charts and even other expansion panels!
 
 ## Using Animations
 ### Using specific animation
@@ -282,7 +282,7 @@ export class ExpansionPanelComponent {
     }
 }
 ```
-As you can see, we are going to use [`slideInLeft`]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/sass/index.html#mixin-slide-in-left) and [`slideOutRight`]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/sass/index.html#mixin-slide-out-right) animations from our inbuilt suit of animations to make the component content appear more dramatically from the left side and disappear on the right when collapsing the content. In the process, we override some of the existing parameters with the specific ones we want to use.
+As you can see, we are going to use [`slideInLeft`]({environment:sassApiUrl}/index.html#mixin-slide-in-left) and [`slideOutRight`]({environment:sassApiUrl}/index.html#mixin-slide-out-right) animations from our inbuilt suit of animations to make the component content appear more dramatically from the left side and disappear on the right when collapsing the content. In the process, we override some of the existing parameters with the specific ones we want to use.
 
 The sample shows some user information and the key point here is passing the animation settings to the component like:
 `[animationSettings] = "animationSettingsCustom"`
@@ -334,8 +334,8 @@ You can see the results below:
     <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="expansion-sample-6-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-### Implementing accordion like scenario using several igxExpansionPanel components
-In the following example we are going to implement more like app case scenario, where you want to follow a particular workflow showing and requiring more user details on portions. In this sample the default [`growVerIn`]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/sass/index.html#grow-ver-in) and [`growVerOut`]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/sass/index.html#grow-ver-out) animations from our inbuilt animations suite are used thus there is no need to pass any specific animation settings or import animations. Notice how we do not allow more than one `igxExpansionPanel` to be expanded at a time, handling the [`onInteraction`]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxexpansionpanelheader.html#onInteraction)  event.
+### Multiple panel scenario
+In the following example we are going to implement more like app case scenario, where you want to follow a particular workflow showing and requiring more user details on portions. In this sample the default [`growVerIn`]({environment:sassApiUrl}/index.html#mixin-grow-ver-in) and [`growVerOut`]({environment:sassApiUrl}/index.html#mixin-grow-ver-out) animations from our inbuilt animations suite are used thus there is no need to pass any specific animation settings or import animations. Notice how we do not allow more than one `igxExpansionPanel` to be expanded at a time, handling the [`onInteraction`]({environment:angularApiUrl}/classes/igxexpansionpanelheadercomponent.html#oninteraction)  event.
 
 ```typescript
 // in expansion-panel.component.ts
@@ -513,11 +513,12 @@ You can see the results below:
 
 
 ## API Reference
-* [IgxExpansionPanel API]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxexpansionpanelcomponent.html)
-* [IgxExpansionPanelHeader API]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxexpansionpanelheadercomponent.html)
-* [IgxExpansionPanelBody API]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxexpansionpanelheadercomponent.html)
-* [IgxAvatar API]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxavatarcomponent.html)
-* [Igx]
+* [IgxExpansionPanel API]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html)
+* [IgxExpansionPanelHeader API]({environment:angularApiUrl}/classes/igxexpansionpanelheadercomponent.html)
+* [IgxExpansionPanelBody API]({environment:angularApiUrl}/classes/igxexpansionpanelbodycomponent.html)
+* [IgxAvatar API]({environment:angularApiUrl}/classes/igxavatarcomponent.html)
+* [IgxGridComponent API]({environment:angularApiUrl}/classes/igxgridcomponent.html)
+* [IgxComboComponent API]({environment:angularApiUrl}/classes/igxcombocomponent.html)
 
-* [IgniteUI for Angular Animation Suite]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/sass/index.html#animations})
-* [IgxExpansionPanel Styles]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/sass/index.html#themes-mixin-igx-expansion-panel)
+* [IgniteUI for Angular Animation Suite]({environment:sassApiUrl}/index.html#animations})
+* [IgxExpansionPanel Styles]({environment:sassApiUrl}/index.html#mixin-igx-expansion-panel)
