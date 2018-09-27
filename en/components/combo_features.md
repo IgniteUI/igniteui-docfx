@@ -6,7 +6,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ## Combo Features
 <p class="highlight">
-Combo control exposes several features including data and value binding, custom values, filtering, grouping, etc. 
+Combo control exposes several features including data and value binding, **[custom values](combo_features.md#custom-values)**, **[filtering](combo_features.md#filtering)**, **[grouping](combo_features.md#grouping)**, etc. 
 </p>
 <div class="divider"></div>
 
@@ -151,62 +151,10 @@ Defining a combo's groupKey option will group the items, according to the provid
 <div class="divider--half"></div>
 
 ## API
-
-### Inputs
 <div class="divider--half"></div>
 
-| Name                     | Description                                       | Type                        |
-|--------------------------|---------------------------------------------------|-----------------------------|
-|  `id`                    | combo id                                          | string                      |
-|  `data`                  | combo data source                                 | any                         |
-|  `value`                 | combo value                                       | string                      |
-|  `allowCustomValue`      | enables/disables combo custom value                | boolean                     |
-|  `filterable`            | enables/disables combo drop down filtering - enabled by default                  | boolean                     |
-|  [valueKey]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombocomponent.html#valuekey)              | combo value data source property                  | string                      |
-|  [displayKey]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombocomponent.html#displaykey)            | combo display data source property                | string                      |
-|  [groupKey]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombocomponent.html#groupkey)              | combo item group                                  | string                      |
-|  `virtualizationState`   | defines the current state of the virtualized data. It contains `startIndex` and `chunkSize`      | `IForOfState`               |
-|  `width `                | defines combo width                               | string                      |
-|  `height`                | defines combo height                              | string                      |
-|  `itemsMaxHeight `       | defines drop down maximum height                  | number                      |
-|  `itemsWidth `           | defines drop down width                           | string                      |
-|  `itemHeight `           | defines drop down item height                     | number                      |
-|  `placeholder `          | defines the "empty value" text                    | string                      |
-|  `searchPlaceholder `    | defines the placeholder text for search input     | string                      |
-|  `collapsed`             | gets drop down state                              | boolean                     |
-|  `disabled`              | defines whether the control is active or not      | boolean                     |
-|  `ariaLabelledBy`        | defines label ID related to combo                 | string                      |
-|  `type`                  | defines type of combo - "line", "box", "border", "search"                                        | string                      |
-|  `valid`                 | gets if control is valid, when used in a form     | boolean                     |
-
-
-### Outputs
-<div class="divider--half"></div>
-
-| Name                | Description                                                             | Cancelable   | Parameters                              |
-|------------------   |-------------------------------------------------------------------------|------------- |-----------------------------------------|
-| `onSelectionChange` | Emitted when item selection is changing, before the selection completes | true         | { oldSelection: `Array<any>`, newSelection: `Array<any>`, event: Event } |
-| `onSearchInput`     | Emitted when the search input's event is triggered             | false        | { searchValue: `string` }               |
-| `onAddition`        | Emitted when an item is being added to the data collection              | false        | { oldCollection: `Array<any>`, addedItem: `<any>`, newCollection: `Array<any>` }|
-| `onDataPreLoad`     | Emitted when new chunk of data is loaded from the virtualization        | false        | { event: Event }                        |
-| `onOpening`   | Emitted before the dropdown is opened                                   | false        | { event: Event }                        |
-| `onOpened`    | Emitted after the dropdown is opened                                    | false        | { event: Event }                        |
-| `onClosing`   | Emitted before the dropdown is closed                                   | false        | { event: Event }                        |
-| `onClosed`    | Emitted after the dropdown is closed                                    | false        | { event: Event }                        |
-
-### Methods
-<div class="divider--half"></div>
-
-| Name             | Description                 | Return type          | Parameters                  |
-|----------------- |-----------------------------|----------------------|-----------------------------|
-| `open`           | Opens drop down             | `void`               | `None`                      |
-| `close`          | Closes drop down            | `void`               | `None`                      |
-| `toggle`         | Toggles drop down           | `void`               | `None`                      |
-| `selectedItems`  | Get current selection state | `Array<any>`         | `None`                      |
-| `selectItems`    | Select defined items        | `void`               | items: `Array<any>`, clearCurrentSelection: `boolean` |
-| `deselectItems`  | Deselect defined items      | `void`               | items: `Array<any>`         |
-| `selectAllItems` | Select all (filtered) items | `void`               | ignoreFilter?: `boolean` - if `true` selects **all** values |
-| `deselectAllItems` | Deselect (filtered) all items | `void`           | ignoreFilter?: `boolean` - if `true` deselects **all** values |
+* IgxComboComponent [**API Reference**]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombocomponent.html) and
+[**Themes Reference**]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/sass/index.html#themes-mixin-igx-combo).
 
 ## Additional Resources
 <div class="divider--half"></div>
@@ -216,6 +164,7 @@ Defining a combo's groupKey option will group the items, according to the provid
 * [Template Driven Forms Integration](input_group.md)
 * [Reactive Forms Integration](input_group_reactive_forms.md)
 * [Cascading Scenario](combo_cascading.md)
+* [IgxSwitch]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxswitchcomponent.html)
 
 Our community is active and always welcoming to new ideas.
 

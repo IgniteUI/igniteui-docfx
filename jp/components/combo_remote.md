@@ -7,12 +7,12 @@ _language: ja
 
 ## コンボ リモート バインディング
 <p class="highlight">
-igx-combo は、コンボをリモートサービスにバインドしてデータをオンデマンドで取得する API を公開します。
+[igx-combo]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombocomponent.html) は、コンボをリモートサービスにバインドしてデータをオンデマンドで取得する API を公開します。
 </p>
 <div class="divider"></div>
 
 ### デモ
-以下のサンプルは、コンボ API を使用したリモートでバインディングを行います。[valueKey]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombocomponent.html#valuekey) と [displayKey]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombocomponent.html#displaykey) を定義し、`onDataPreLoad` を使用して新しいリモートデータを読み込みます。
+以下のサンプルは、コンボ API を使用したリモートでバインディングを行います。[valueKey]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombocomponent.html#valuekey) と [displayKey]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombocomponent.html#displaykey) を定義し、[onDataPreLoad]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombocomponent.html#ondatapreload) を使用して新しいリモートデータを読み込みます。
 <div class="sample-container loading" style="height: 400px;">
     <iframe id="combo-remote-sample" frameborder="0" seamless width="700px" height="100%" src="{environment:demosBaseUrl}/combo-remote" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -70,9 +70,9 @@ export class RemoteService {
 <igx-combo [data]="rData | async" [valueKey]="'ProductID'" [displayKey]="'ProductName'" 
     (onDataPreLoad)="dataLoading($event)" (onSearchInput)="searchInput($event)" (onOpening)="searchInput('')"></igx-combo>
 ```
-以下は、igx-combo が新しいデータを要求する必要があるケースです。
+以下は、[igx-combo]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombocomponent.html) が新しいデータを要求する必要があるケースです。
     - コンボが初期化されたとき
-    - コンボのリストをスクロールしたときコンボは、新しいコンボ `virtualizationState` と `onDataPreLoad` を発生し、リモート サービスに新しい要求を送ることができます。
+    - コンボのリストをスクロールしたときコンボは、新しいコンボ `virtualizationState` と [onDataPreLoad]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombocomponent.html#ondatapreload) を発生し、リモート サービスに新しい要求を送ることができます。
     - [igx-combo]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombocomponent.html) で検索時にリモート結果のフィルターを要求する必要があります。
     - コンボが開いたとき以前のフィルター処理の結果をクリアします。
 

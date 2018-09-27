@@ -7,7 +7,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ## Combo
 <p class="highlight">
 
-The igx-combo component provides a powerful input, combining the features of the basic HTML `input`, select and the IgniteUI for Angular [igx-drop-down]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxdropdowncomponent.html) components.<br />
+The [igx-combo]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombocomponent.html) component provides a powerful input, combining the features of the basic HTML `input`, select and the IgniteUI for Angular [igx-drop-down]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxdropdowncomponent.html) components.<br />
 The combo component provides easy **[filtering](combo_features.md#filtering)** and **multiple selection** of items, **[grouping](combo_features.md#grouping)** and adding **[custom values](combo_features.md#custom-values)** to the dropdown list.<br />
 **[Custom templates](combo_templates.md)** could be provided in order to customize different areas of the components, such as items, header, footer, etc.<br />
 The [igx-combo]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombocomponent.html) component is integrated with the **[Template Driven Forms](input_group.md)** and **[Reactive Forms](input_group_reactive_forms.md)**.<br />
@@ -128,6 +128,7 @@ When igxCombo is opened, allow custom values are enabled and add item button is 
 * [Reactive Forms Integration](input_group_reactive_forms.md)
 * [Cascading Scenario](combo_cascading.md)
 * [IgxDropDownComponent]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxdropdowncomponent.html)
+* [IgxInputGroup]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxinputgroupcomponent.html) 
 
 Our community is active and always welcoming to new ideas.
 

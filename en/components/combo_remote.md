@@ -6,12 +6,12 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ## Combo Remote Binding
 <p class="highlight">
-The igx-combo exposes API that allows to bind a combo to a remote service and retrieve data on demand.
+The [igx-combo]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombocomponent.html) exposes API that allows to bind a combo to a remote service and retrieve data on demand.
 </p>
 <div class="divider"></div>
 
 ### Demo
-The sample below demonstrates remote binding using combo API - defining [valueKey]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombocomponent.html#valuekey) and [displayKey]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombocomponent.html#displaykey), and using `onDataPreLoad`to load new chunk of remote data:
+The sample below demonstrates remote binding using combo API - defining [valueKey]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombocomponent.html#valuekey) and [displayKey]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombocomponent.html#displaykey), and using [onDataPreLoad]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombocomponent.html#ondatapreload) to load new chunk of remote data:
 <div class="sample-container loading" style="height: 400px;">
     <iframe id="combo-remote-sample" frameborder="0" seamless width="700px" height="100%" src="{environment:demosBaseUrl}/combo-remote" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -69,9 +69,9 @@ When the data is returned from the service as an observable, then we can set it 
 <igx-combo [data]="rData | async" [valueKey]="'ProductID'" [displayKey]="'ProductName'" 
     (onDataPreLoad)="dataLoading($event)" (onSearchInput)="searchInput($event)" (onOpening)="searchInput('')"></igx-combo>
 ```
-Let's define the cases, when the igx-combo will need to request new data:
+Let's define the cases, when the [igx-combo]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombocomponent.html) will need to request new data:
     - when combo is initialized
-    - when we scroll combo's list. Then combo will emit `onDataPreLoad` along with the new combo `virtualizationState`, which allows to make a new request to the remote service.
+    - when we scroll combo's list. Then combo will emit [onDataPreLoad]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombocomponent.html#ondatapreload) along with the new combo `virtualizationState`, which allows to make a new request to the remote service.
     - when we search in the [igx-combo]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombocomponent.html) then we need to make request to filter remote results.
     - when combo is opened we need to clear results from any previous filter operations.
 

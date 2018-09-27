@@ -156,58 +156,8 @@ set values(newValues: Array<any>) {
 ### 入力
 <div class="divider--half"></div>
 
-| 名前|説明|型                        |
-|--------------------------|---------------------------------------------------|-----------------------------|
-|  `id`	                   |コンボ id                                          |string                      |
-|  `data`                  |コンボ データ ソース                                |any                         |
-|  `value`                 |コンボ値                                       |string                      |
-|  `allowCustomValue`      |コンボのカスタム値を有効/無効にします。               |boolean                     |
-|  `filterable`            |コンボのドロップダウンのフィルタリングを有効/無効にします。デフォルトは有効です。|boolean                     |
-|  [valueKey]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombocomponent.html#valuekey)              |コンボ値データソース プロパティ|string                      |
-|  [displayKey]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombocomponent.html#displaykey)            |コンボ表示データソース プロパティ|string                      |
-|  [groupKey]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombocomponent.html#groupkey)              |コンボ項目グループ|string                      |
-|  `virtualizationState`   |仮想化データの現在の状態を定義します。`startIndex` と `chunkSize` を含みます。|`IForOfState`               |
-|  `width `                |コンボの幅を定義します。|string                      |
-|  `height`                |コンボの高さを定義します。|string                      |
-|  `itemsMaxHeight `       |ドロップダウンの最大の高さを定義します。|number                      |
-|  `itemsWidth `           |ドロップダウンの幅を定義します。|string                      |
-|  `itemHeight `           |ドロップダウンの項目の高さを定義します。|number                      |
-|  `placeholder `          |"empty value" のテキストを定義します。|string                      |
-|  `searchPlaceholder `    |検索入力のプレースホルダー テキストを定義します。|string                      |
-|  `collapsed`             |ドロップダウン状態を取得します。|boolean                     |
-|  `disabled`              |コントロールがアクティブかどうかを定義します。|boolean                     |
-|  `ariaLabelledBy`        |コンボに関連するラベル ID を定義します。|string                      |
-|  `type`                  |コンボの型 ("line"、"box"、"border"、"search") を定義します。|string                      |
-|  `valid`                 |フォームで使用時のコントロールが有効化どうかを取得します。|boolean                     |
-
-
-### 出力
-<div class="divider--half"></div>
-
-| 名前|説明|キャンセル可能|パラメーター                              |
-|------------------   |-------------------------------------------------------------------------|------------- |-----------------------------------------|
-| `onSelectionChange` |選択を完了する前にアイテム選択が変更されるときに発生されます。|true         |{ oldSelection: `Array<any>`, newSelection: `Array<any>`, event: Event } |
-| `onSearchInput`     |検索入力のイベントがトリガーされたときに発生されます。|false        |{ searchValue: `string` }               |
-| `onAddition`        |項目がデータ コレクションに追加されているときに発生されます。|false        |{ oldCollection: `Array<any>`, addedItem: `<any>`, newCollection: `Array<any>` }|
-| `onDataPreLoad`     |新しいデータが可視化から読み込まれたときに発生されます。|false|{ event: Event }                        |
-| `onOpening`   |ドロップダウンが開かれる前に発生されます。|false|{ event: Event }                        |
-| `onOpened`    |ドロップダウンが開かれた後に発生されます。|false|{ event: Event }                        |
-| `onClosing`   |ドロップダウンが閉じられる前に発生されます。|false|{ event: Event }                        |
-| `onClosed`    |ドロップダウンが閉じられた後に発生されます。|false|{ event: Event }                        |
-
-### メソッド
-<div class="divider--half"></div>
-
-| 名前|説明|戻り型|パラメーター                  |
-|----------------- |-----------------------------|----------------------|-----------------------------|
-| `open`           |ドロップダウンを開きます。             |`void`               |`None`                      |
-| `close`          |ドロップダウンを閉じます。        |`void`               |`None`                      |
-| `toggle`         |ドロップダウンを切り替えます。|`void`               |`None`                      |
-| `selectedItems`  |現在の選択状態を取得します。|`Array<any>`         |`None`                      |
-| `selectItems`    |定義済みの項目を選択します。|`void`               |項目: `Array<any>`, clearCurrentSelection: `boolean` |
-| `deselectItems`  |定義済みの項目の選択を解除します。|`void`               |項目: `Array<any>`         |
-| `selectAllItems` |すべての項目 (フィルター済み) を選択します。 |`void`               |ignoreFilter?: `boolean` - `true` の場合、**すべて**の値を選択します。 |
-| `deselectAllItems` |フィルター済みのすべての項目の選択を解除します。|`void`           |ignoreFilter?: `boolean` - `true` の場合、**すべて**の値の選択を解除します。 |
+* IgxComboComponent [**API Reference**]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombocomponent.html) and
+[**Themes Reference**]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/sass/index.html#themes-mixin-igx-combo).
 
 ## その他のリソース
 <div class="divider--half"></div>
@@ -217,6 +167,7 @@ set values(newValues: Array<any>) {
 * [テンプレート駆動フォームの統合](input_group.md)
 * [リアクティブ フォームの統合](input_group_reactive_forms.md)
 * [カスケーディング](combo_cascading.md)
+* [IgxSwitch]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxswitchcomponent.html)
 
 コミュニティに参加して新しいアイデアをご提案ください。
 
