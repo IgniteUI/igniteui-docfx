@@ -2,7 +2,6 @@
  ### 1. [Writing an article](#writing-an-article)
  ### 2. [Workflow](#workflow)
  ### 3. [StackBlitz configuration](#stackblitz-configuration)
- ### 4. [Linking to API docs (Typescript and Sass)](#api-linking)
 
 # <a name='#writing-an-article'>Writing an article</a>
 
@@ -36,7 +35,11 @@ There are a few questions one can ask, when charting such plan.
 
     Since the product API docs have been made available online, the API tables in the DocFX articles are inapplicable. All API tables should be removed, if there are such in the component topics, and they should be replaced with links to the API for each component mentioned in the article. If such tables are not present, and the article is updated to mention a new component that is not present as an API link, then a link to the component's API should be included.  
 
-    Also any text in the article that mentions a component class, or other class/interface that can be linked to in the API docs, should be accompanied by a link to the corresponding class in the API documentation.
+    Also any text in the article that mentions a component class, or other class/interface that can be linked to in the API docs, should be accompanied by a link to the corresponding class in the API documentation. Example of linking a corresponding item in the article to the API documentation in the grid filtering topic:
+
+```markdown
+Depending on the set [`dataType`]({environment:angularApiUrl/classes/igxcolumncomponent.html#datatype}) of the column, the correct set of [**filtering operations**](grid.md#filtering-conditions) is loaded inside the filter UI dropdown.
+```
 
 ### 8. Where does one find further help related to the topic of the article?
 
@@ -119,12 +122,3 @@ StackBlitz button should be referencing the iframe provided by angular samples r
 Here is an explanation of how the StackBlitz integration works. For each sample (grid-sample-1) a .json file is created (grid-sample-1.json). Each .json file contains the source code of the sample.
 
 All of the `.json` files are located under `/assets/samples` of [igniteui-angular-samples](https://github.com/IgniteUI/igniteui-angular-samples/) project. When you press a StackBlitz button, `igniteui-docfx` consumes a `.json` file from igniteui-angular-samples, creates a hidden `<form>` and submits it to StackBlitz using their [API](https://gist.github.com/EricSimons/72017ec7ba068a5b492ee39f9e3a7f32).
-
-
-# <a name='#api-linking'>Linking to API docs (Typescript and Sass)</a>
-
-Each reference to a given `input`, `output`, `method`, `getter` or `setter` along the article should be linked to the corresponding documentation page in the API docs. Also, in the end of the article a list of all mentioned components should be added, where each list item is also linked to the corresponding documentation page. Example of linking the corresnponding item in the grid filtering topic:
-
-```markdown
-Depending on the set [`dataType`]({environment:angularApiUrl/classes/igxcolumncomponent.html#datatype}) of the column, the correct set of [**filtering operations**](grid.md#filtering-conditions) is loaded inside the filter UI dropdown.
-```
