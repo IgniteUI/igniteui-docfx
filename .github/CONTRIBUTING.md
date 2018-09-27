@@ -33,7 +33,12 @@ There are a few questions one can ask, when charting such plan.
 
 ### 7. Do we have a summary of the article and component APIs?
 
-    Since the product API docs have been made available online, the API tables in the DocFX articles are inapplicable. All API tables should be removed, if there are such in the component topics, and they should be replaced with links to the API for each component mentioned in the article. If such tables are not present, and the article is updated to mention a new component that is not present as an API link, then a link to the component's API should be included.  
+    Since the product API docs have been made available online, the API tables in the DocFX articles are inapplicable. All API tables should be removed, if there are such in the component topics, and they should be replaced with links to the API for each component mentioned in the article. If such tables are not present, and the article is updated to mention a new component that is not present as an API link, then a link to the component's API should be included. Example of listing the mentioned components:
+```markdown
+[IgxGridComponent API]({environment:angularApiUrl}/classes/igxgridcomponent.html)
+[IgxGridComponent Styles]({environment:sassApiUrl}/index.html#mixin-igx-grid)
+[IgxGridRowComponent API]({environment:angularApiUrl}/classes/igxgridrowcomponent.html)
+```
 
     Also any text in the article that mentions a component class, or other class/interface that can be linked to in the API docs, should be accompanied by a link to the corresponding class in the API documentation. Example of linking a corresponding item in the article to the API documentation in the grid filtering topic:
 
