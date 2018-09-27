@@ -23,7 +23,7 @@ With row selection in Ignite UI for Angular, there is a checkbox that precedes a
 
 #### Single Selection
 
-The grid single selection can be easily setup using the grid's [`onSelection`]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxgridcomponent.html#onselection) event. The event emits a reference to the cell component. That cell component has a reference to the row component that is holding it. The row component reference [`rowID`](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/classes/igxgridrowcomponent.html#rowid) getter can be used to pass a unique identifier for the row (using either [`rowData[primaryKey]`]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxgridcomponent.html#primarykey) or the [`rowData`]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxgridrowcomponent.html#rowdata) object itself) to the appropriate list of the selectionAPI. To make sure that only a single row is always selected, we empty the [`selectionAPI`]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxselectionapiservice.html) row selection list beforehand (the second argument in the [`selectRows`]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxgridcomponent.html#selectrows) method call):
+The grid single selection can be easily setup using the grid's [`onSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#onselection) event. The event emits a reference to the cell component. That cell component has a reference to the row component that is holding it. The row component reference [`rowID`](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/classes/igxgridrowcomponent.html#rowid) getter can be used to pass a unique identifier for the row (using either [`rowData[primaryKey]`]({environment:angularApiUrl}/classes/igxgridcomponent.html#primarykey) or the [`rowData`]({environment:angularApiUrl}/classes/igxgridrowcomponent.html#rowdata) object itself) to the appropriate list of the selectionAPI. To make sure that only a single row is always selected, we empty the [`selectionAPI`]({environment:angularApiUrl}/classes/igxselectionapiservice.html) row selection list beforehand (the second argument in the [`selectRows`]({environment:angularApiUrl}/classes/igxgridcomponent.html#selectrows) method call):
 
 ```html
     <!-- in example.component.html -->
@@ -47,21 +47,21 @@ The grid single selection can be easily setup using the grid's [`onSelection`]({
 
 #### Multiple Selection
 
-To enable multiple row selection, the [`igx-grid`]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxgridcomponent.html) exposes the [`rowSelectable`]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxgridcomponent.html#rowselectable) property. Setting `rowSelectable` to `true` enables a select checkbox field on each row and in the grid header. The checkbox allows users to select multiple rows, with the selection persisting through scrolling, paging, and data operations such as sorting and filtering:
+To enable multiple row selection, the [`igx-grid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) exposes the [`rowSelectable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowselectable) property. Setting `rowSelectable` to `true` enables a select checkbox field on each row and in the grid header. The checkbox allows users to select multiple rows, with the selection persisting through scrolling, paging, and data operations such as sorting and filtering:
 
 ```html
     <igx-grid #grid1 [data]="remote | async" [primaryKey]="'ProductID'" [rowSelectable]="selection" (onSelection)="handleRowSelection($event)"
       [width]="'800px'" [height]="'600px'">
 ```
 
-**Note:** In order to have proper row selection and cell selection, while grid has remote virtualization, [`primaryKey`]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxgridcomponent.html#primarykey) should be provided.
+**Note:** In order to have proper row selection and cell selection, while grid has remote virtualization, [`primaryKey`]({environment:angularApiUrl}/classes/igxgridcomponent.html#primarykey) should be provided.
 
-**Note:** If filtering is in place, [`selectAllRows()`]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxgridcomponent.html#selectallrows) and [`deselectAllRows()`]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxgridcomponent.html#deselectallrows) select/deselect all *filtered* rows.
+**Note:** If filtering is in place, [`selectAllRows()`]({environment:angularApiUrl}/classes/igxgridcomponent.html#selectallrows) and [`deselectAllRows()`]({environment:angularApiUrl}/classes/igxgridcomponent.html#deselectallrows) select/deselect all *filtered* rows.
 
 
 **Note:** When grid has remote virtualization then clicking the header checkox will select/deselect all records. But when all records are selected through header checkbox and then a visible row has been deselected, when new data is loaded in the grid on demand, it is a limitation that the newly loaded rows are not selected.
 
-**Note:** Cell selection will trigger [`onSelection`]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxgridcomponent.html#onselection) and not [`onRowSelectionChange`]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxgridcomponent.html#onrowselectionchange).
+**Note:** Cell selection will trigger [`onSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#onselection) and not [`onRowSelectionChange`]({environment:angularApiUrl}/classes/igxgridcomponent.html#onrowselectionchange).
 
 ### Code Snippets
 
@@ -94,12 +94,12 @@ public handleRowSelectionChange(args) {
 }
 ```
 ### API Reference
-* [IgxGridComponent API]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxgridcomponent.html)
-* [IgxGridRowComponent API]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxgridrowcomponent.html)
-* [IgxGridCellComponent API]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxgridcellcomponent.html)
-* [IgxSelectionAPIService]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxselectionapiservice.html)
+* [IgxGridComponent API]({environment:angularApiUrl}/classes/igxgridcomponent.html)
+* [IgxGridRowComponent API]({environment:angularApiUrl}/classes/igxgridrowcomponent.html)
+* [IgxGridCellComponent API]({environment:angularApiUrl}/classes/igxgridcellcomponent.html)
+* [IgxSelectionAPIService]({environment:angularApiUrl}/classes/igxselectionapiservice.html)
 
-* [IgxGridComponent Styles]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/sass/index.html#themes-mixin-igx-grid)
+* [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#mixin-igx-grid)
 
 ### Additional Resources
 <div class="divider--half"></div>

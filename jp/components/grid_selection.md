@@ -24,7 +24,7 @@ Ignite UI for Angular 行選択は、行内のすべての列の前に描画さ�
 
 #### 単一選択
 
-グリッドの単一選択を grid の [`onSelection`]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxgridcomponent.html#onselection) イベントで構成できます。イベントはセル コンポーネントへの参照を発行します。イベントはセル コンポーネントへの参照を発行し、そのセルコンポーネントは含まれる行コンポーネントへの参照を含みます。行コンポーネント参照の [`rowID`](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/classes/igxgridrowcomponent.html#rowid) ゲッターを使用して、[`rowData[primaryKey]`]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxgridcomponent.html#primarykey) または [`rowData`]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxgridrowcomponent.html#rowdata) オブジェクト自身を使用して行の一意識別子を selectionAPI の適切なリストに渡します。単一行のみを選択させるには、[`selectionAPI`]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxselectionapiservice.html) 行選択リストを空にします。これは [`selectRows`]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxgridcomponent.html#selectrows) メソッドの呼び出しの 2 番目の引数です。
+グリッドの単一選択を grid の [`onSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#onselection) イベントで構成できます。イベントはセル コンポーネントへの参照を発行します。イベントはセル コンポーネントへの参照を発行し、そのセルコンポーネントは含まれる行コンポーネントへの参照を含みます。行コンポーネント参照の [`rowID`](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/classes/igxgridrowcomponent.html#rowid) ゲッターを使用して、[`rowData[primaryKey]`]({environment:angularApiUrl}/classes/igxgridcomponent.html#primarykey) または [`rowData`]({environment:angularApiUrl}/classes/igxgridrowcomponent.html#rowdata) オブジェクト自身を使用して行の一意識別子を selectionAPI の適切なリストに渡します。単一行のみを選択させるには、[`selectionAPI`]({environment:angularApiUrl}/classes/igxselectionapiservice.html) 行選択リストを空にします。これは [`selectRows`]({environment:angularApiUrl}/classes/igxgridcomponent.html#selectrows) メソッドの呼び出しの 2 番目の引数です。
 
 ```html
     <!-- in example.component.html -->
@@ -48,20 +48,20 @@ Ignite UI for Angular 行選択は、行内のすべての列の前に描画さ�
 
 #### 複数選択
 
-複数行選択を有効にするには、[`igx-grid`]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxgridcomponent.html) の [`rowSelectable`]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxgridcomponent.html#rowselectable) プロパティを使用します。`rowSelectable` を `true` に設定すると、各行およびグリッド ヘッダーで選択チェックボックス フィールドが有効になります。チェックボックスを使用して複数行を選択でき、スクロール、ページング、および並べ替えとフィルターなどのデータ操作で選択が保持されます。
+複数行選択を有効にするには、[`igx-grid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) の [`rowSelectable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowselectable) プロパティを使用します。`rowSelectable` を `true` に設定すると、各行およびグリッド ヘッダーで選択チェックボックス フィールドが有効になります。チェックボックスを使用して複数行を選択でき、スクロール、ページング、および並べ替えとフィルターなどのデータ操作で選択が保持されます。
 
 ```html
     <igx-grid #grid1 [data]="remote | async" [primaryKey]="'ProductID'" [rowSelectable]="selection" (onSelection)="handleRowSelection($event)"
       [width]="'800px'" [height]="'600px'">
 ```
 
-**注**: グリッドにリモート仮想化がある場合に行選択およびセル選択が正しく動作するには、[`primaryKey`]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxgridcomponent.html#primarykey) を設定します。
+**注**: グリッドにリモート仮想化がある場合に行選択およびセル選択が正しく動作するには、[`primaryKey`]({environment:angularApiUrl}/classes/igxgridcomponent.html#primarykey) を設定します。
 
 **注**: グリッドでリモート仮想化が有効な場合、ヘッダー チェックボックスをクリックすると、すべてのレコードを選択/選択解除できます。すべてのレコードをヘッダー チェックボックスで選択した後に表示行の選択が解除された場合、オンデマンドでグリッドに新しいデータを読み込んだ際に新しく読み込んだ行が選択されない機能制限があります。
 
-**注**: フィルタリング機能が有効にされる場合、[`selectAllRows()`]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxgridcomponent.html#selectallrows) および [`deselectAllRows()`]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxgridcomponent.html#deselectallrows) は**フィルターされた行**のみを選択/選択解除します。
+**注**: フィルタリング機能が有効にされる場合、[`selectAllRows()`]({environment:angularApiUrl}/classes/igxgridcomponent.html#selectallrows) および [`deselectAllRows()`]({environment:angularApiUrl}/classes/igxgridcomponent.html#deselectallrows) は**フィルターされた行**のみを選択/選択解除します。
 
-**注**: セル選択は [`onSelection`]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxgridcomponent.html#onselection) をトリガーしますが、[`onRowSelectionChange`]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxgridcomponent.html#onrowselectionchange) をトリガーしません。
+**注**: セル選択は [`onSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#onselection) をトリガーしますが、[`onRowSelectionChange`]({environment:angularApiUrl}/classes/igxgridcomponent.html#onrowselectionchange) をトリガーしません。
 
 ### コード スニペット
 
@@ -98,13 +98,13 @@ public handleRowSelectionChange(args) {
     args.checked = false; // overwrites the checkbox state
 }
 ```
-### API Reference
-* [IgxGridComponent API]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxgridcomponent.html)
-* [IgxGridRowComponent API]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxgridrowcomponent.html)
-* [IgxGridCellComponent API]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxgridcellcomponent.html)
-* [IgxSelectionAPIService]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxselectionapiservice.html)
+### API 参照
+* [IgxGridComponent API]({environment:angularApiUrl}/classes/igxgridcomponent.html)
+* [IgxGridRowComponent API]({environment:angularApiUrl}/classes/igxgridrowcomponent.html)
+* [IgxGridCellComponent API]({environment:angularApiUrl}/classes/igxgridcellcomponent.html)
+* [IgxSelectionAPIService]({environment:angularApiUrl}/classes/igxselectionapiservice.html)
 
-* [IgxGridComponent Styles]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/sass/index.html#themes-mixin-igx-grid)
+* [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#mixin-igx-grid)
 
 ### 追加のリソース
 <div class="divider--half"></div>
