@@ -6,7 +6,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ### Chip
 
-`igxChip` is a compact visual component that displays information in an obround. Chip can be templated, deleted, and selected. Multiple chips can be reordered and visually connected to each other. Chips reside in a container called chips area which is responsible for managing the interactions between the chips.  
+[`igxChip`]({environment:angularApiUrl}/classes/igxchipcomponent.html) is a compact visual component that displays information in an obround. Chip can be templated, deleted, and selected. Multiple chips can be reordered and visually connected to each other. Chips reside in a container called chips area which is responsible for managing the interactions between the chips.  
 
 #### Demo
 
@@ -20,9 +20,9 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 #### Initializing Chips
 
-The `IgxChipComponent` is the main class for a chip elemenent and the `IgxChipsAreaComponent` is the main class for the chip area. The chip area is used when handling more complex scenarios that require interaction between chips (dragging, selection, navigation and etc.). The `IgxChipComponent` requires an `id` to be defined so that the different chips can be easily distinguished.
+The [`IgxChipComponent`]({environment:angularApiUrl}/classes/igxchipcomponent.html) is the main class for a chip elemenent and the [`IgxChipsAreaComponent`]({environment:angularApiUrl}/classes/igxchipsareacomponent.html) is the main class for the chip area. The chip area is used when handling more complex scenarios that require interaction between chips (dragging, selection, navigation and etc.). The [`IgxChipComponent`]({environment:angularApiUrl}/classes/igxchipcomponent.html) requires an [`id`]({environment:angularApiUrl}/classes/igxchipcomponent.html#id) to be defined so that the different chips can be easily distinguished.
 
-Example of using `igxChip` with `igxChipArea`:
+Example of using [`igxChip`]({environment:angularApiUrl}/classes/igxchipcomponent.html) with [`igxChipArea`]({environment:angularApiUrl}/classes/igxchipsareacomponent.html):
 
 ```html
 <igx-chips-area>
@@ -36,7 +36,7 @@ Example of using `igxChip` with `igxChipArea`:
 
 #### Selection
 
-Selection is disabled by default, but can be enabled with an option called `selectable`. The selecting is done by clicking on the chip itself or either by focusing the chip by using the `Tab` key and then pressing the `Space` key. An event `onSelection` is fired when the selection state of the `igxChip` changes. If a chip is already selected it can be deselected by pressing the `Space` key again while the chip is focused or by clicking on it.
+Selection is disabled by default, but can be enabled with an option called [`selectable`]({environment:angularApiUrl}/classes/igxchipcomponent.html#selectable). The selecting is done by clicking on the chip itself or either by focusing the chip by using the `Tab` key and then pressing the `Space` key. An event [`onSelection`]({environment:angularApiUrl}/classes/igxchipcomponent.html#onselection) is fired when the selection state of the [`igxChip`]({environment:angularApiUrl}/classes/igxchipcomponent.html) changes. If a chip is already selected it can be deselected by pressing the `Space` key again while the chip is focused or by clicking on it.
 
 ```html
 <igx-chips-area #chipsArea>
@@ -56,7 +56,7 @@ public ngOnInit() {
 
 #### Removing
 
-The `remove button` is part of the chip as well. You can control the remove button visibility by the `removable` boolean option. An event `onRemove` is fired when the end-user deletes a chip.
+The `remove button` is part of the chip as well. You can control the remove button visibility by the [`removable`]({environment:angularApiUrl}/classes/igxchipcomponent.html#removable) boolean option. An event [`onRemove`]({environment:angularApiUrl}/classes/igxchipcomponent.html#onremove) is fired when the end-user deletes a chip.
 
 ```html
 <igx-chips-area #chipsArea>
@@ -83,7 +83,7 @@ public chipRemoved(event) {
 
 #### Moving/Dragging
 
-The chip can be dragged by the end-user in order to change it's position. The moving/dragging is disabled by default, but can be enabled with an option called `draggable`. You need to handle the actual moving of the chip in the data source manually.
+The chip can be dragged by the end-user in order to change it's position. The moving/dragging is disabled by default, but can be enabled with an option called [`draggable`]({environment:angularApiUrl}/classes/igxchipcomponent.html#draggable). You need to handle the actual moving of the chip in the data source manually.
 
 ```html
 <igx-chips-area #chipArea (onReorder)="chipsOrderChanged($event)">
@@ -118,13 +118,13 @@ public chipsOrderChanged(event) {
 
 #### Chip Templates
 
-The `IgxChipComponent`'s main structure consists of chip content, `remove button`, `prefix`, `suffix` and `connector`. All of those elements are templatable except the `remove button`.
+The ([`IgxChipComponent`]{environment:angularApiUrl}/classes/igxchipcomponent.html)'s main structure consists of chip content, `remove button`, [`prefix`]({environment:angularApiUrl}/classes/igxprefixdirective.html), [`suffix`]({environment:angularApiUrl}/classes/igxsuffixdirective.html) and [`connector`]({environment:angularApiUrl}/classes/igxconnectordirective.html). All of those elements are templatable except the `remove button`.
 
-The content of the chip is taken by the content defined inside the chip template except elements that define the `prefix`, `suffix` or `connector` of the chip. You can define any type of content you need.
+The content of the chip is taken by the content defined inside the chip template except elements that define the [`prefix`]({environment:angularApiUrl}/classes/igxprefixdirective.html), [`suffix`]({environment:angularApiUrl}/classes/igxsuffixdirective.html) or [`connector`]({environment:angularApiUrl}/classes/igxconnectordirective.html) of the chip. You can define any type of content you need.
 
-The `prefix` and `suffix` are also elements inside the actual chip area where they can be templated by your preference. The way they can be specified is by respectively using the `IgxPrefix` and `IxgSuffix` directives.
+The [`prefix`]({environment:angularApiUrl}/classes/igxprefixdirective.html) and [`suffix`]({environment:angularApiUrl}/classes/igxsuffixdirective.html) are also elements inside the actual chip area where they can be templated by your preference. The way they can be specified is by respectively using the [`IgxPrefix`]({environment:angularApiUrl}/classes/igxprefixdirective.html) and [`IxgSuffix`]({environment:angularApiUrl}/classes/igxsuffixdirective.html) directives.
 
-Example of using an icon for `prefix`, a text for `label` and a custom icon button for `suffix`:
+Example of using an icon for [`prefix`]({environment:angularApiUrl}/classes/igxprefixdirective.html), a text for [`label`]({environment:angularApiUrl}/classes/igxlabeldirective.html) and a custom icon button for [`suffix`]({environment:angularApiUrl}/classes/igxsuffixdirective.html):
 
 ```html
 <igx-chip *ngFor="let chip of chipList" [id]="chip.id">
@@ -136,7 +136,7 @@ Example of using an icon for `prefix`, a text for `label` and a custom icon butt
 </igx-chip>
 ```
 
-The `connectors` of the `igxChip` are fully templatable and are positioned after each chip. Their purpose is to provide a way to link two chips next to each other with an icon/text or anything you would like to use. The last chip (most right) does not have connector applied. Connectors hide while dragging chips around and show again when interactions with the chips have finished. The connector is defined by using the `IgxConnector` directive.
+The [`connectors`]({environment:angularApiUrl}/classes/igxconnectordirective.html) of the ([`igxChip`]{environment:angularApiUrl}/classes/igxchipcomponent.html) are fully templatable and are positioned after each chip. Their purpose is to provide a way to link two chips next to each other with an icon/text or anything you would like to use. The last chip (most right) does not have connector applied. Connectors hide while dragging chips around and show again when interactions with the chips have finished. The connector is defined by using the [`IgxConnector`]({environment:angularApiUrl}/classes/igxconnectordirective.html) directive.
 
 Example of using prefix connector:
 
@@ -165,13 +165,13 @@ The chip can be focused using the `Tab` key or by clicking on them. Chips can be
   - <kbd>LEFT</kbd> - Focuses the chip on the left
   - <kbd>RIGHT</kbd> - Focuses the chip on the right
   - <kbd>SPACE</kbd> - Toggles chip selection if it is selectable
-  - <kbd>DELETE</kbd> - Fires the `onRemove` output so the chip deletion can be handled manually
+  - <kbd>DELETE</kbd> - Fires the [`onRemove`]({environment:angularApiUrl}/classes/igxchipcomponent.html#onremove) output so the chip deletion can be handled manually
   - <kbd>SHIFT</kbd> + <kbd>LEFT</kbd> - Moves the focused chip one position to the left
   - <kbd>SHIFT</kbd> + <kbd>RIGHT</kbd> - Moves the focused chip one position to the right
 
 - Keyboard controls when the remove button is focused:
 
-  - <kbd>SPACE</kbd> or <kbd>ENTER</kbd> Fires the `onRemove` output so the chip deletion can be handled manually
+  - <kbd>SPACE</kbd> or <kbd>ENTER</kbd> Fires the [`onRemove`]({environment:angularApiUrl}/classes/igxchipcomponent.html#onremove) output so the chip deletion can be handled manually
 
 ### References
 
