@@ -62,6 +62,8 @@ Every [`igx-column-group`]({environment:angularApiUrl}/classes/igxcolumngroupcom
 ```
 
 ### API Summary
+<div class="divider--half"></div>
+
 * [IgxColumnGroupComponent]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html)
 
 <div class="divider--half"></div>

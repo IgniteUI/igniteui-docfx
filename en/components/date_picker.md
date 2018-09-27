@@ -21,7 +21,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 > To start using Ignite UI for Angular components in your own projects, make sure you have configured all necessary dependencies and have performed the proper setup of your project. You can learn how to do this in the [**installation**](https://www.infragistics.com/products/ignite-ui-angular/getting-started#installation) topic.
 
 ### Usage
-The [`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) allows you to pick a date from a calendar. The picker uses the [`IgxCalendarComponent`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) internally as a calendar. To get started with the Ignite UI for Angular Date Picker, let's first import the [**IgxDatePickerModule**]({environment:angularApiUrl}/classes/igxdatepickermodule.html) in our **app.module.ts** file:
+The [`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) allows you to pick a date from a calendar. The picker uses the [`IgxCalendarComponent`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) internally as a calendar. To get started with the Ignite UI for Angular Date Picker, let's first import the **IgxDatePickerModule** in our **app.module.ts** file:
 
 ```typescript
 // app.module.ts
@@ -127,7 +127,7 @@ Here is the formatted date:
 
 #### Templating Input Group
 
-The Date Picker's input group look can be customized. To do that we need to decorate the nested ng-template inside the date picker with [`IgxDatePickerTemplate`]({environment:angularApiUrl}/classes/igxdatepickertemplatedirective.html) directive. ng-template context exposes the following members: `openDialog` method can be used to open the date picker dialog; [`displayData`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#displaydata) property contains the formatted value; [`value`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#value) contains the real value. You could use those by declaring a variables in the ng-template element.
+The Date Picker's input group look can be customized. To do that we need to decorate the nested ng-template inside the date picker with `IgxDatePickerTemplate` directive. ng-template context exposes the following members: `openDialog` method can be used to open the date picker dialog; [`displayData`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#displaydata) property contains the formatted value; [`value`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#value) contains the real value. You could use those by declaring a variables in the ng-template element.
 
 In the following example we modify the default label "Date" add a second icon as suffix. Bellow the input group we're using a label to display the real date picker value:
 
@@ -162,7 +162,7 @@ Here is the retemplated input group:
 <div class="divider--half"></div>
 
 ### Internationalization
-The [`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) supports locales. You can set them using the [`locale`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#locale) input. Using the [`IgxCalendarComponent`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) templates for header ([`igxCalendarHeader`]({environment:angularApiUrl}/classes/igxcalendarheadertemplatedirective.html)) and subheader ([`igxCalendarSubheader`]({environment:angularApiUrl}/classes/igxcalendarsubheadertemplatedirective.html)), you can specify the look of your header and subheader. More information on how to use these templates you can find in the [**IgxCalendarComponent**](calendar.md) topic. Here is how a date picker with Japanese locale definition would look like:
+The [`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) supports locales. You can set them using the [`locale`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#locale) input. Using the [`IgxCalendarComponent`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) templates for header (`igxCalendarHeader`) and subheader (`igxCalendarSubheader`), you can specify the look of your header and subheader. More information on how to use these templates you can find in the [**IgxCalendarComponent**](calendar.md) topic. Here is how a date picker with Japanese locale definition would look like:
 
 ```html
 <igx-date-picker locale="ja-JP" [value]="date">
@@ -237,13 +237,10 @@ The result is as follows:
 <div class="divider--half"></div>
 
 ### API References
+<div class="divider--half"></div>
 
 * [IgxDatePickerComponent]({environment:angularApiUrl}/classes/igxdatepickercomponent.html)
-* [IgxDatePickerModule]({environment:angularApiUrl}/classes/igxdatepickermodule.html)
 * [IgxCalendarComponent]({environment:angularApiUrl}/classes/igxcalendarcomponent.html)
-* [IgxDatePickerTemplateDirective]({environment:angularApiUrl}/classes/igxdatepickertemplatedirective.html)
-* [IgxCalendarHeaderTemplateDirective]({environment:angularApiUrl}/classes/igxcalendarheadertemplatedirective.html)
-* [IgxCalendarSubheaderTemplateDirective]({environment:angularApiUrl}/classes/igxcalendarsubheadertemplatedirective.html)
 
 <div class="divider--half"></div>
 
