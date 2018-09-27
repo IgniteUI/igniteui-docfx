@@ -19,7 +19,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
         frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="tabbar-sample-iframe"
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tabbar-sample-iframe"
     data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
@@ -59,7 +59,7 @@ If all went well, you should see the following in your browser:
         frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="tabbar-sample-1-iframe"
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tabbar-sample-1-iframe"
     data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
@@ -162,7 +162,7 @@ After these modifications our Bottom Navigation should look similar to this:
         frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="tabbar-sample-2-iframe"
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tabbar-sample-2-iframe"
     data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 

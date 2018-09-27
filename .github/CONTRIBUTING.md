@@ -33,6 +33,10 @@ There are a few questions one can ask, when charting such plan.
 
 ### 7. Do we have a summary of the article and component APIs?
 
+    Since the product API docs have been made available online, the API tables in the DocFX articles are inapplicable. All API tables should be removed, if there are such in the component topics, and they should be replaced with links to the API for each component mentioned in the article. If such tables are not present, and the article is updated to mention a new component that is not present as an API link, then a link to the component's API should be included.  
+
+    Also any text in the article that mentions a component class, or other class/interface that can be linked to in the API docs, should be accompanied by a link to the corresponding class in the API documentation.
+
 ### 8. Where does one find further help related to the topic of the article?
 
 # <a name='#workflow'>Workflow</a>
@@ -107,7 +111,7 @@ StackBlitz button should be referencing the iframe provided by angular samples r
     <iframe id="list-sample-4-iframe" src='{environment:demosBaseUrl}/list-sample-4' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="list-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 ```
 

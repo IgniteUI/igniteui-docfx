@@ -15,7 +15,7 @@ The Grid component in Ignite UI for Angular provides extensive filtering API thr
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="grid-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
 
@@ -132,6 +132,11 @@ this.grid.filteringLogic = FilteringLogic.OR;
 The default value of `AND` returns only the rows that match all the currently applied filtering expressions. Following the example above, a row will be returned when both the 'ProductName' cell value contains 'myproduct' and the 'Price' cell value is greater than 55.
 
 When set to `OR`, a row will be returned when either the 'ProductName' cell value contains 'myproduct' or the 'Price' cell value is greater than 55.
+
+<div class="divider--half"></div>
+
+#### Remote Filtering
+You can provide grid's remote filtering by subscribing to onDataPreLoad and onFilteringDone outputs. More information on how to use it you can find in the `Grid Virtualization and Performance` [documentation](grid_virtualization.md#remote-sortingfiltering-virtualization).
 
 <div class="divider--half"></div>
 

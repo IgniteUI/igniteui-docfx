@@ -16,7 +16,7 @@ _language: ja
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="grid-search-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-search-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
 </div>
 <div class="divider--half"></div>
 
@@ -286,6 +286,16 @@ public clearSearch() {
     </div>
 </igx-suffix>
 ```
+
+### 既知の問題と制限
+
+|制限|説明|
+|--- |--- |
+|テンプレート付きセルの検索|検索機能がセル テンプレートを div 要素とスパンで置き換えてセル値の検索テキストを強調表示します。
+そのため、テンプレートに関連付けした複数の要素やイベントを含む複雑なテンプレートがある場合に予期しない動作を発生する場合があります。
+列にそのようなテンプレートがある場合、列フォーマッターや列の ` プロパティを false に設定するなど、他の方法を使用してください。|
+|リモート仮想化| リモート仮想化の使用時に検索が正しく動作しない問題|
+|セルのテキストが切れる問題| テキストが大きすぎてセルに収まらない場合、省略記号が表示されてセルへスクロール、更に一致項目としてカウントされますが強調表示はされません。 |
 
 ### API まとめ
 

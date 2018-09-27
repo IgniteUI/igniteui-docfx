@@ -14,7 +14,7 @@ _language: ja
     <iframe id="dropdown-sample-3-iframe" src='{environment:demosBaseUrl}/dropdown-sample-3' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="dropdown-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dropdown-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
 </div>
 <div class="divider--half"></div>
 
@@ -46,9 +46,9 @@ export class AppModule {}
 <!-- dropdown.component.html -->
 
 <div class="sample-wrapper drop-down-wrapper">
-    <button igxButton="raised" (click)="toggleDropDown($event)">Options</button>
+    <button igxButton="raised" (click)="toggleDropDown($event)" [igxDropDownItemNavigation]="dropdown1">Options</button>
     <igx-drop-down #dropdown1>
-        <igx-drop-down-item [igxDropDownItemNavigation]="dropdown1" *ngFor="let item of items">
+        <igx-drop-down-item *ngFor="let item of items">
             {{ item.field }}
         </igx-drop-down-item>
     </igx-drop-down>
@@ -95,7 +95,7 @@ export class AppModule {}
     <iframe id="dropdown-sample-1-iframe" src='{environment:demosBaseUrl}/dropdown-sample-1' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="dropdown-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">                StackBlitz で開く
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="dropdown-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">                StackBlitz で開く
     </button>
 </div>
 
@@ -107,9 +107,9 @@ export class AppModule {}
 <!-- dropdown.component.html -->
 
 <div class="sample-wrapper drop-down-wrapper">
-    <button igxButton="raised" (click)="toggleDropDown($event)">Options</button>
+    <button igxButton="raised" (click)="toggleDropDown($event)" [igxDropDownItemNavigation]="dropdown2">Options</button>
     <igx-drop-down #dropdown2 (onOpening)="onOpening($event)">
-        <igx-drop-down-item [igxDropDownItemNavigation]="dropdown2" *ngFor="let item of items">
+        <igx-drop-down-item *ngFor="let item of items">
             {{ item.field }}
         </igx-drop-down-item>
     </igx-drop-down>
@@ -154,7 +154,7 @@ export class AppModule {}
     <iframe id="dropdown-sample-2-iframe" src='{environment:demosBaseUrl}/dropdown-sample-2' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="dropdown-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">                StackBlitz で開く
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="dropdown-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">                StackBlitz で開く
     </button>
 </div>
 
@@ -166,9 +166,9 @@ export class AppModule {}
 <!-- dropdown.component.html -->
 
 <div class="sample-wrapper drop-down-wrapper">
-    <button igxButton="raised" (click)="toggleDropDown($event)">Countries</button>
+    <button igxButton="raised" (click)="toggleDropDown($event)" [igxDropDownItemNavigation]="dropdown3">Countries</button>
     <igx-drop-down #dropdown3>
-        <igx-drop-down-item [igxDropDownItemNavigation]="dropdown3" *ngFor="let item of items" [disabled]="item.disabled" [isHeader]="item.header" [isSelected]="item.selected">
+        <igx-drop-down-item *ngFor="let item of items" [disabled]="item.disabled" [isHeader]="item.header" [isSelected]="item.selected">
             {{ item.field }}
         </igx-drop-down-item>
     </igx-drop-down>
@@ -217,9 +217,56 @@ export class AppModule {}
     <iframe id="dropdown-sample-3-iframe" src='{environment:demosBaseUrl}/dropdown-sample-3' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="dropdown-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">                StackBlitz で開く
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dropdown-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">                StackBlitz で開く
     </button>
 </div>
+
+### igxDropDownItemNavigation ディレクティブ
+
+`igxDropDown` コンポーネントのキーボード ナビゲーションを有効にするには、`igxDropDownItemNavigation` ディレクティブを適用します。ディレクティブをアクティブ (フォーカスした) 要素または親コンテナに適用することにより、トリガーしたすべてのイベントを処理できるようになります。デフォルトでは、igxDropDown またはその項目にフォーカスが当たらないため、たとえばディレクティブをドロップダウンを制御するボタンや入力に配置できます。
+`igxDropDownItemNavigation` ディレクティブ値は、ターゲット コンポーネントまたは拡張 `IgxDropDownBase` クラスにする必要があります。
+
+
+以下のサンプルは、クリックによって igxDropDown インスタンスを開いたり閉じたりする例です。入力に `igxDropDownItemNavigation` を適用し、上矢印と下矢印の使用時にキーボード ナビゲーションを有効にします。`allowItemsFocus` が無効のデフォルトのドロップダウン動作に依存し、ボタン入力にフォーカスを維持することが可能です。
+
+
+```
+<igx-input-group [igxToggleAction]="dropdownProvince">
+    <input igxInput type="text" [igxDropDownItemNavigation]="dropdownProvince">
+</igx-input-group>
+<igx-drop-down #dropdownProvince>
+    <igx-drop-down-item *ngFor="let p of provinceData">
+        {{ p }}
+    </igx-drop-down-item>
+</igx-drop-down>
+```
+
+ディレクティブを適用すると、キーボード ナビゲーションの結果として以下の動作が実行します。
+
+| 名前 | 説明 |
+| :--- | :--- |
+| `Enter` | ドロップダウンから項目の選択後、ドロップダウンを閉じます。 |
+| `Space` | ドロップダウンから項目の選択後、ドロップダウンを閉じます。 |
+| `Esc` | ドロップダウンを閉じます。 |
+| `Arrow Down` | ターゲット コンポーネントの次の項目に移動します。|
+| `Arrow Up` | ターゲット コンポーネントの前の項目に移動します。 |
+| `End` | ターゲット コンポーネントの最後の項目に移動します。 |
+| `Home` | ターゲット コンポーネントの最初の項目に移動します。 |
+
+
+
+`allowItemsFocus` が有効な場合、ドロップダウン項目がタブ インデックスを取得し、アクティブな時にフォーカスされます。フォーカスされたドロップダウン項目がキーボード ナビゲーション時にイベントをトリガーするため、 `igxDropDownItemNavigation` を各ドロップダウン項目に適用する必要があります。
+
+```
+<igx-input-group [igxToggleAction]="dropdownProvince">
+    <input igxInput type="text">
+</igx-input-group>
+<igx-drop-down #dropdownProvince [allowItemsFocus]="true">
+    <igx-drop-down-item *ngFor="let p of provinceData" [igxDropDownItemNavigation]="dropdownProvince">
+        {{ p }}
+    </igx-drop-down-item>
+</igx-drop-down>
+```
 
 <div class="divider--half"></div>
 

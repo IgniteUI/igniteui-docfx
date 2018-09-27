@@ -15,7 +15,7 @@ While browsers natively provide search functionality, most of the time the grid 
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="grid-search-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-search-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
 
@@ -56,7 +56,7 @@ Let's start by creating our grid and binding it to our data. We will also add so
     margin-left: 5px;
 }
 
-.searchButtons {    
+.searchButtons {
     margin-left: 5px;
 }
 ```
@@ -93,8 +93,8 @@ The methods from above return a **number** value (the number of times the grid c
 #### Display results count
 Let's also display the position of the current occurrence, along with the total results count! We can do this by using the grid's `lastSearchInfo` property. This property is automatically updated when using the **find** methods.
 
-- The `grid.lastSearchInfo.matchInfoCache.length` value will give us the total results count. 
-- The `grid.lastSearchInfo.activeMatchIndex` value will give us the index position of the current occurrence (match). 
+- The `grid.lastSearchInfo.matchInfoCache.length` value will give us the total results count.
+- The `grid.lastSearchInfo.activeMatchIndex` value will give us the index position of the current occurrence (match).
 
 ```html
 <!--searchgrid.component.html-->
@@ -219,7 +219,7 @@ We will wrap all of our components inside an **IgxInputGroup**. On the left we w
 
     <input #search1 id="search1" igxInput placeholder="Search" [(ngModel)]="searchText" (ngModelChange)="grid.findNext(searchText, caseSensitive)"
         (keydown)="searchKeyDown($event)" />
-    
+
     <igx-suffix *ngIf="searchText.length > 0">
         ...
     </igx-suffix>
@@ -286,6 +286,15 @@ On the right in our input group, let's create three separate containers with the
     </div>
 </igx-suffix>
 ```
+
+### Known Limitations
+
+|Limitation|Description|
+|--- |--- |
+|Searching in cells with a template|The search functionality will replace any cell template with a div element and spans which highlight the searched text in the cell value. This means that it can lead to unexpected behavior when you have more complicated templates, containing several elements or events hooked into the template. If you have a column with such template, you should either use alternative approaches, such as a column formatter, or set the `searchable` property on the column to false.|
+|Remote Virtualization| The search will not work properly when using remote virtualization|
+|Cells with cutoff text| When the text in the cell is too large to fit and the text we are looking for is cut off by the ellipsis, we will still scroll to the cell and include it in the match count, but nothing will be highlighted |
+
 
 ### API Summary
 

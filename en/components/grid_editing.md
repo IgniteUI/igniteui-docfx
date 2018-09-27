@@ -15,7 +15,7 @@ The Grid component in Ignite UI for Angular provides you a default cell template
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="grid-editing-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-editing-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
 
@@ -23,7 +23,7 @@ In order to be able to enter edit mode for specific cell, you should first set t
 
  - For `string` data type, default template is using **igxInput**
  - For `number` data type, default template is using **igxInput type="number"**, so if you try to update cell to a value which can not be parsed to a number your change is going to be discarded, and the value in the cell will be set to **0**.
- - For `date` data type, default template is using **igx-datePicker**
+ - For `date` data type, default template is using **igx-date-picker**
  - For `boolean` data type, default template is using **igx-checkbox**
 
 You can enter edit mode for specific cell, when an editable cell is focused in one of the following ways:

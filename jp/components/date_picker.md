@@ -14,7 +14,7 @@ _language: ja
     <iframe id="date-picker-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/datepicker-sample-4" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="date-picker-sample" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="date-picker-sample" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
@@ -41,7 +41,7 @@ export class AppModule {}
 テンプレートに日付ピッカーを追加します。
 
 ```html
-<igx-datePicker></igx-datePicker>
+<igx-date-picker></igx-date-picker>
 ```
 
 以下は結果です。
@@ -50,7 +50,7 @@ export class AppModule {}
     <iframe id="date-picker-sample-1" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/datepicker-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="date-picker-sample-1" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="date-picker-sample-1" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
@@ -65,7 +65,7 @@ public date: Date = new Date(Date.now());
 テンプレートで `value` 入力を使用します。
 
 ```html
-<igx-datePicker [value]="date"></igx-datePicker>
+<igx-date-picker [value]="date"></igx-date-picker>
 ```
 
 以下は結果です。
@@ -74,14 +74,14 @@ public date: Date = new Date(Date.now());
     <iframe id="date-picker-sample-2" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/datepicker-sample-2" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="date-picker-sample-2" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="date-picker-sample-2" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
 TwoWay データ バインディングを使用するには、`ngModule` を以下のように使用します。
 
 ```html
-<igx-datePicker [(ngModel)]="date"></igx-datePicker>
+<igx-date-picker [(ngModel)]="date"></igx-date-picker>
 ```
 
 #### ボタンの追加
@@ -89,7 +89,7 @@ TwoWay データ バインディングを使用するには、`ngModule` を以�
 `IgxDatePickerComponent` は、カレンダーからの現在の日を選択する [今日] ボタンをサポートします。[キャンセル] ボタンも有効にできます。テンプレートでボタンを有効にするには、以下のコードを使用します。
 
 ```html
-<igx-datePicker cancelButtonLabel="cancel" todayButtonLabel="today" [(ngModel)]="date"></igx-datePicker>
+<igx-date-picker cancelButtonLabel="cancel" todayButtonLabel="today" [(ngModel)]="date"></igx-date-picker>
 ```
 
 ボタンが表示されるサンプル:
@@ -98,7 +98,7 @@ TwoWay データ バインディングを使用するには、`ngModule` を以�
     <iframe id="date-picker-sample-3" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/datepicker-sample-3" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="date-picker-sample-3" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="date-picker-sample-3" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
@@ -120,7 +120,7 @@ public formatter = (date: Date) => {
 次に `IgxDatePickerComponent` の `formatter` 入力を使用します。
 
 ```html
-<igx-datePicker [value]="date" [formatter]="formatter"></igx-datePicker>
+<igx-date-picker [value]="date" [formatter]="formatter"></igx-date-picker>
 ```
 
 書式設定した日付を表示するサンプル:
@@ -129,7 +129,43 @@ public formatter = (date: Date) => {
     <iframe id="date-picker-sample-4" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/datepicker-sample-4" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="date-picker-sample-4" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="date-picker-sample-4" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+</div>
+<div class="divider--half"></div>
+
+#### 入力グループのテンプレート化
+
+Date Picker の入力グループをカスタマイズできます。デートピッカー内にネストした ng-template を `IgxDatePickerTemplate`ディレクティブでデコレートする必要があります。ng-template コンテキストは、次のメンバーを公開します。`openDialog` メソッドはデートピッカーダイアログに使用できます。`displayData`プロパティは書式設定の値を含みます。`value` は実際の値を含みます。ng-template 要素で変数を宣言して使用することができます。
+
+以下の例では、デフォルトのラベル "Date" を変更して 2 つ目のアイコンをサフィックスとして追加します。ラベルを使用して実際のデートピッカーの値を表示する入力グループです。
+
+```html
+<igx-date-picker [value]="date">
+    <ng-template igxDatePickerTemplate let-openDialog="openDialog" let-value="value" let-displayData="displayData">
+        <igx-input-group (click)="openDialog()">
+            <igx-prefix>
+                <igx-icon>favorite</igx-icon>
+            </igx-prefix>
+            <label igxLabel>My Custom Date<</label>
+            <input igxInput [value]="displayData" />
+            <igx-suffix>
+                <igx-icon>today</igx-icon>
+            </igx-suffix>
+        </igx-input-group>
+        <label>{{value}}</label>
+    </ng-template>
+</igx-date-picker>
+```
+```typescript
+public date: Date = new Date(Date.now());
+```
+
+再テンプレートした入力グループ:
+<div class="sample-container loading" style="height: 540px;">
+    <iframe id="date-picker-sample-6" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/datepicker-sample-6" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="date-picker-sample-6" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
 </div>
 <div class="divider--half"></div>
 
@@ -138,7 +174,7 @@ public formatter = (date: Date) => {
 `IgxDatePickerComponent` はロケールをサポートします。`locale` 入力を使用して設定できます。ヘッダー (`igxCalendarHeader`) およびサブヘッダー (`igxCalendarSubheader`) の `IgxCalendarComponent` テンプレートを使用してヘッダーおよびサブヘッダーの外観を設定できます。このテンプレートを使用する方法の詳細については、`IgxCalendarComponent` [ヘルプ](calendar.md)を参照してください。以下は日本ロケール定義を持つ日付ピッカーです。
 
 ```html
-<igx-datePicker locale="ja-JP" [value]="date">
+<igx-date-picker locale="ja-JP" [value]="date">
   <ng-template igxCalendarHeader let-format>
     {{ format.month.combined | titlecase }}{{format.day.combined }}{{ format.weekday.combined }}
   </ng-template>
@@ -146,7 +182,7 @@ public formatter = (date: Date) => {
     <span class="date__el" (click)="format.yearView()">{{ format.year.combined }}</span>
     <span class="date__el" (click)="format.monthView()">{{ format.month.combined | titlecase }}</span>
   </ng-template>
-</igx-datePicker>
+</igx-date-picker>
 ```
 
 > [!NOTE]
@@ -156,7 +192,7 @@ public formatter = (date: Date) => {
 
 ```html
 <!-- app.component.html-->
-<igx-datePicker id="date-picker" locale="ja-JP" [value]="date" #component>
+<igx-date-picker id="date-picker" locale="ja-JP" [value]="date" #component>
     <div *ngIf="formatParts; else parseTemplate">
         <ng-template igxCalendarHeader let-format>
             {{ format.month.combined | titlecase }} {{ format.day.combined }} {{ format.weekday.combined }}
@@ -177,7 +213,7 @@ public formatter = (date: Date) => {
             <span class="date__el" (click)="format.monthView()">{{ getDatePart(format, component, 'month') }}</span>
         </ng-template>
     </ng-template>
-</igx-datePicker>
+</igx-date-picker>
 ```
 
 **ngIf** は、使用するテンプレートを制御するために **formatParts** 式の値を評価します。代わりの **#parseTemplate** テンプレートを参照します。{} にある式は評価された値を返す **getDatePart** メソッドを起動します。この場合、書式設定された日付部分 (年、曜日、月など) を返します。**getDatePart** に渡されたパラメーターは、書式設定が **IgxDatePickerComponent** の locale および format オプションに基づいて設定されるために必要です。
@@ -208,7 +244,7 @@ public getDatePart(val: any, component: any, datePart: string) {
     <iframe id="date-picker-sample-5" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/datepicker-sample-5" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="date-picker-sample-5" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="date-picker-sample-5" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
@@ -231,6 +267,8 @@ public getDatePart(val: any, component: any, datePart: string) {
 | `formatViews` | `Object` | 日付を書式設定するために使用される `locale` プロパティと渡される書式ビュー。 |
 | `label` | `string` | デフォルト テキスト ラベルを変更します。 |
 | `labelVisibility` | `string ` | ラベルを表示または非表示にします。 |
+| `disabledDates` | `DateRangeDescriptor[]` | 無効な日付記述子を取得または設定します。 |
+| `specialDates` | `DateRangeDescriptor[]` | 特別な日付記述子を取得または設定します。 |
 
 #### 出力
 

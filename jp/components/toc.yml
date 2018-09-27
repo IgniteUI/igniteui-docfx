@@ -59,6 +59,9 @@
     - name: 表示密度
       href: grid_displayDensity.md
       new: true
+    - name: 条件付きセルのスタイル設定
+      href: grid_conditional_cell_styling.md
+      new: true
 - name: List View
   href: list.md
 - name: Combo
@@ -152,6 +155,8 @@
       href: themes/global-theme.md
     - name: コンポーネント テーマ
       href: themes/component-themes.md
+    - name: テーマのデモ
+      href: themes/theming-demo.md
     - name: タイポグラフィ
       href: themes/typography.md
 - name: Shadows

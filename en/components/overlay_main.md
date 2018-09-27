@@ -105,7 +105,7 @@ In the below demo, we can pass the IgxCard [demo](https://www.infragistics.com/p
     <iframe id="overlay-sample-main-1-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/overlay-sample-main-1" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="overlay-sample-main-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="overlay-sample-main-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz</button>
 </div>
 <div class="divider--half"></div>
 
@@ -190,7 +190,7 @@ Using the `overlaySettings` parameter of the `show()` method, we can change how 
     <iframe id="overlay-sample-main-2-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/overlay-sample-main-2" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="overlay-sample-main-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="overlay-sample-main-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz</button>
 </div>
 <div class="divider--half"></div>
 
@@ -322,16 +322,18 @@ export class ExampleComponent {
 
 `IgxOverlayService`
 
-   | Name          | Description                        | Cancelable | Parameters |
-   |---------------|------------------------------------|------------|------------|
-   |`onOpening`    | Emitted on before overlay shows    | false      |            |
-   |`onOpened`     | Emitted after overlay shows        | false      |            |
-   |`onClosing`    | Emitted before overlay hides       | false      |            |
-   |`onClosed`     | Emitted after  overlay hides       | false      |            |
+   | Name          | Description                         | Cancelable | Parameters |
+   |---------------|-------------------------------------|------------|------------|
+   |`onOpening`    | Emitted before overlay shows        | false      |            |
+   |`onOpened`     | Emitted after overlay shows         | false      |            |
+   |`onClosing`    | Emitted before overlay hides        | false      |            |
+   |`onClosed`     | Emitted after overlay hides         | false      |            |
+   |`onAnimation`  | Emitted before animation is started | false      |            |
 <div class="divider--half"></div>
 
 ## Assumptions and Limitations</a>
-Up to now there are no known limitations.
+If you show the overlay in an outlet, and if the outlet is child of element with transform, perspective or filter css set you will be not able to show modal overlay. The reason for this is when one of above mentioned css properties is set the browser creates a new containing block and the overlay is limited to this containing block, as described [here](https://developer.mozilla.org/en-US/docs/Web/CSS/position#fixed).
+
 
 ## Additional Resources
 * [Position strategies](overlay_position.md)
