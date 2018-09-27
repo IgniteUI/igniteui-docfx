@@ -14,9 +14,10 @@ Scroll strategies determines how the scrolling will be handled in the provided I
 ## Usage
 
 Every scroll strategy has the following method used to :
- - `initialize` - initializes the scroll strategy. It needs a reference to the document, overlay service and the id of the component rendered
- - `attach` - attaches the scroll strategy to the specified element or to the document
- - `detach` - detaches the scroll strategy
+ - [`initialize`] ({environment:angularApiUrl}/products/ignite-ui-angular/docs/typescript/classes/iscrollstrategy.html#initialize) - initializes the scroll strategy. It needs a reference to the document, overlay service and the id of the component rendered
+ - [`attach`] ({environment:angularApiUrl}/products/ignite-ui-angular/docs/typescript/classes/iscrollstrategy.html#attach) - attaches the scroll strategy to the specified element or to the document
+ - [`detach`] ({environment:angularApiUrl}/products/ignite-ui-angular/docs/typescript/classes/iscrollstrategy.html#detach) - detaches the scroll strategy
+
 ```typescript
 this.scrollStrategy.initialize(document, overlayService, id);
 this.scrollStrategy.attach();
@@ -25,7 +26,7 @@ this.scrollStrategy.detach();
 <div class="divider--half"></div>
 
 ### Getting Started
-The position strategy is passed as a property in the `overlaySettings` parameter when the `overlay.show()` method is called:
+The position strategy is passed as a property in the [`overlaySettings`] ({environment:angularApiUrl}/products/ignite-ui-angular/docs/typescript/interfaces/overlaysettings.html) parameter when the [`overlay.show()`] ({environment:angularApiUrl}/products/ignite-ui-angular/docs/typescript/classes/igxoverlayservice.html#show) method is called:
 ```typescript
     // Initializing and using overlay settings
     const overlaySettings: OverlaySettings = {
@@ -38,7 +39,7 @@ The position strategy is passed as a property in the `overlaySettings` parameter
 ``` 
 <div class="divider"></div>
 
-To change the scroll strategy used by the overlay, override the `scrollStrategy` property of the `overlaySettings` object passed to the overlay:
+To change the scroll strategy used by the overlay, override the [`scrollStrategy`] ({environment:angularApiUrl}/products/ignite-ui-angular/docs/typescript/classes/iscrollstrategy.html) property of the [`overlaySettings`] ({environment:angularApiUrl}/products/ignite-ui-angular/docs/typescript/interfaces/overlaysettings.html) object passed to the overlay:
 ```typescript
     // overlaySettings is an existing object of type OverlaySettings
     // to override the scroll strategy
@@ -61,8 +62,8 @@ import { NoOpScrollStrategy } from "./scroll/NoOpScrollStrategy";
 
 ## Demos 
 #### Scroll Strategies
-The scroll strategies can be passed through the `overlaySettings` object in order to determine how the overlay should handle scrolling.
-The demo below illustrates the difference between the separate `scrollStrategies`:
+The scroll strategies can be passed through the [`overlaySettings`] ({environment:angularApiUrl}/products/ignite-ui-angular/docs/typescript/interfaces/overlaysettings.html) object in order to determine how the overlay should handle scrolling.
+The demo below illustrates the difference between the separate [`scrollStrategies`] ({environment:angularApiUrl}/products/ignite-ui-angular/docs/typescript/classes/iscrollstrategy.html):
 <div class="sample-container loading" style="height: 400px">
     <iframe id="overlay-scroll-sample-2-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/overlay-scroll-sample-2" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -72,9 +73,9 @@ The demo below illustrates the difference between the separate `scrollStrategies
 <div class="divider--half"></div>
 
 ### Modal
-The `overlaySettings` object also allows a boolean property, `modal`, to be passed. This controls how the overlay will be display:
-If the `modal` property is `false`, the element will be attached to the DOM foreground but everything will still be active and interactable - e.g. scrolling, clicking, etc.
-If the `modal` property is `true`, the element will be attached to the DOM foreground and an overlay blocked will wrap behind it, stopping propagation of all events:
+The [`overlaySettings`] ({environment:angularApiUrl}/products/ignite-ui-angular/docs/typescript/interfaces/overlaysettings.html) object also allows a boolean property, [`modal`] ({environment:angularApiUrl}/products/ignite-ui-angular/docs/typescript/interfaces/overlaysettings.html#modal), to be passed. This controls how the overlay will be display:
+If the [`modal`] ({environment:angularApiUrl}/products/ignite-ui-angular/docs/typescript/interfaces/overlaysettings.html#modal) property is `false`, the element will be attached to the DOM foreground but everything will still be active and interactable - e.g. scrolling, clicking, etc.
+If the [`modal`] ({environment:angularApiUrl}/products/ignite-ui-angular/docs/typescript/interfaces/overlaysettings.html#modal) property is `true`, the element will be attached to the DOM foreground and an overlay blocked will wrap behind it, stopping propagation of all events:
 
 <div class="sample-container loading" style="height: 400px">
     <iframe id="overlay-scroll-sample-1-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/overlay-scroll-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -86,10 +87,4 @@ If the `modal` property is `true`, the element will be attached to the DOM foreg
 
 ## API
 
-### Methods
-
-| Name            | Description                                                                     | Parameters |
-|-----------------|---------------------------------------------------------------------------------|------------|
-|`initialize`     | Initialize the strategy. Should be called once                                  |`document, overlayService, id`|
-|`attach`         | Attaches the strategy                                                           |-           |
-|`detach`         | Detaches the strategy                                                           |-           |
+* [`IScrollStrategy`] ({environment:angularApiUrl}/products/ignite-ui-angular/docs/typescript/classes/iscrollstrategy.html)
