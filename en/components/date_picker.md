@@ -21,7 +21,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 > To start using Ignite UI for Angular components in your own projects, make sure you have configured all necessary dependencies and have performed the proper setup of your project. You can learn how to do this in the [**installation**](https://www.infragistics.com/products/ignite-ui-angular/getting-started#installation) topic.
 
 ### Usage
-The [`IgxDatePickerComponent`](https://staging.infragistics.local/products/ignite-ui-angular/docs/typescript/classes/igxdatepickercomponent.html) allows you to pick a date from a calendar. The picker uses the [`IgxCalendarComponent`](https://staging.infragistics.local/products/ignite-ui-angular/docs/typescript/classes/igxcalendarcomponent.html) internally as a calendar. To get started with the Ignite UI for Angular Date Picker, let's first import the [**IgxDatePickerModule**](https://staging.infragistics.local/products/ignite-ui-angular/docs/typescript/classes/igxdatepickermodule.html) in our **app.module.ts** file:
+The [`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) allows you to pick a date from a calendar. The picker uses the [`IgxCalendarComponent`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) internally as a calendar. To get started with the Ignite UI for Angular Date Picker, let's first import the [**IgxDatePickerModule**]({environment:angularApiUrl}/classes/igxdatepickermodule.html) in our **app.module.ts** file:
 
 ```typescript
 // app.module.ts
@@ -53,13 +53,13 @@ The result is as follows:
 <div class="divider--half"></div>
 
 #### Setting date
-We could set a date to our [`IgxDatePickerComponent`](https://staging.infragistics.local/products/ignite-ui-angular/docs/typescript/classes/igxdatepickercomponent.html) using the [`value`](https://staging.infragistics.local/products/ignite-ui-angular/docs/typescript/classes/igxdatepickercomponent.html#value) input. Just add a date:
+We could set a date to our [`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) using the [`value`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#value) input. Just add a date:
 
 ```typescript
 public date: Date = new Date(Date.now());
 ```
 
-Then use the [`value`](https://staging.infragistics.local/products/ignite-ui-angular/docs/typescript/classes/igxdatepickercomponent.html#value) input in the template:
+Then use the [`value`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#value) input in the template:
 
 ```html
 <igx-date-picker [value]="date"></igx-date-picker>
@@ -81,7 +81,7 @@ If we want to use a two-way data-binding, we could just use `ngModule` like this
 ```
 
 #### Adding buttons
-The  [`IgxDatePickerComponent`](https://staging.infragistics.local/products/ignite-ui-angular/docs/typescript/classes/igxdatepickercomponent.html) supports a today button which selects the current day from the calendar. Cancel button could be enabled too. Here is how we can enable the buttons in our template:
+The  [`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) supports a today button which selects the current day from the calendar. Cancel button could be enabled too. Here is how we can enable the buttons in our template:
 
 ```html
 <igx-date-picker cancelButtonLabel="cancel" todayButtonLabel="today" [(ngModel)]="date"></igx-date-picker>
@@ -97,7 +97,7 @@ Here you can see the buttons:
 <div class="divider--half"></div>
 
 #### Custom formatting
-By default our date will be formatted based on the [`locale`](https://staging.infragistics.local/products/ignite-ui-angular/docs/typescript/classes/igxdatepickercomponent.html#locale) we set. We could use our own formatter though. To achieve this add a formatter function:
+By default our date will be formatted based on the [`locale`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#locale) we set. We could use our own formatter though. To achieve this add a formatter function:
 
 ```typescript
 public date: Date = new Date(Date.now());
@@ -110,7 +110,7 @@ public formatter = (date: Date) => {
 }
 ```
 
-And then use the [`formatter`](https://staging.infragistics.local/products/ignite-ui-angular/docs/typescript/classes/igxdatepickercomponent.html#formatter) input of the The  [`IgxDatePickerComponent`](https://staging.infragistics.local/products/ignite-ui-angular/docs/typescript/classes/igxdatepickercomponent.html):
+And then use the [`formatter`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#formatter) input of the The  [`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html):
 
 ```html
 <igx-date-picker [value]="date" [formatter]="formatter"></igx-date-picker>
@@ -127,7 +127,7 @@ Here is the formatted date:
 
 #### Templating Input Group
 
-The Date Picker's input group look can be customized. To do that we need to decorate the nested ng-template inside the date picker with [`IgxDatePickerTemplate`](https://staging.infragistics.local/products/ignite-ui-angular/docs/typescript/classes/igxdatepickertemplatedirective.html) directive. ng-template context exposes the following members: `openDialog` method can be used to open the date picker dialog; [`displayData`](https://staging.infragistics.local/products/ignite-ui-angular/docs/typescript/classes/igxdatepickercomponent.html#displaydata) property contains the formatted value; [`value`](https://staging.infragistics.local/products/ignite-ui-angular/docs/typescript/classes/igxdatepickercomponent.html#value) contains the real value. You could use those by declaring a variables in the ng-template element.
+The Date Picker's input group look can be customized. To do that we need to decorate the nested ng-template inside the date picker with [`IgxDatePickerTemplate`]({environment:angularApiUrl}/classes/igxdatepickertemplatedirective.html) directive. ng-template context exposes the following members: `openDialog` method can be used to open the date picker dialog; [`displayData`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#displaydata) property contains the formatted value; [`value`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#value) contains the real value. You could use those by declaring a variables in the ng-template element.
 
 In the following example we modify the default label "Date" add a second icon as suffix. Bellow the input group we're using a label to display the real date picker value:
 
@@ -162,7 +162,7 @@ Here is the retemplated input group:
 <div class="divider--half"></div>
 
 ### Internationalization
-The [`IgxDatePickerComponent`](https://staging.infragistics.local/products/ignite-ui-angular/docs/typescript/classes/igxdatepickercomponent.html) supports locales. You can set them using the [`locale`](https://staging.infragistics.local/products/ignite-ui-angular/docs/typescript/classes/igxdatepickercomponent.html#locale) input. Using the [`IgxCalendarComponent`](https://staging.infragistics.local/products/ignite-ui-angular/docs/typescript/classes/igxcalendarcomponent.html) templates for header ([`igxCalendarHeader`](https://staging.infragistics.local/products/ignite-ui-angular/docs/typescript/classes/igxcalendarheadertemplatedirective.html)) and subheader ([`igxCalendarSubheader`](https://staging.infragistics.local/products/ignite-ui-angular/docs/typescript/classes/igxcalendarsubheadertemplatedirective.html)), you can specify the look of your header and subheader. More information on how to use these templates you can find in the [**IgxCalendarComponent**](calendar.md) topic. Here is how a date picker with Japanese locale definition would look like:
+The [`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) supports locales. You can set them using the [`locale`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#locale) input. Using the [`IgxCalendarComponent`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) templates for header ([`igxCalendarHeader`]({environment:angularApiUrl}/classes/igxcalendarheadertemplatedirective.html)) and subheader ([`igxCalendarSubheader`]({environment:angularApiUrl}/classes/igxcalendarsubheadertemplatedirective.html)), you can specify the look of your header and subheader. More information on how to use these templates you can find in the [**IgxCalendarComponent**](calendar.md) topic. Here is how a date picker with Japanese locale definition would look like:
 
 ```html
 <igx-date-picker locale="ja-JP" [value]="date">
@@ -206,7 +206,7 @@ To support those browsers we are going to use alternative template using [ngIf](
     </ng-template>
 </igx-date-picker>
 ```
-Note that **ngIf** evaluates the value of the **formatParts** expression to control which template to use. Let's have a look at the alernative **#parseTemplate** template: the expressions in the curly brackets invokes the **getDatePart** method that returns the evaluated value, in our case this is a formatted date part (year, weekday, month, etc.). The parameters passed to the **getDatePart** are necessary so that formatting is based on the [**IgxDatePickerComponent**](https://staging.infragistics.local/products/ignite-ui-angular/docs/typescript/classes/igxdatepickercomponent.html) locale and format options:
+Note that **ngIf** evaluates the value of the **formatParts** expression to control which template to use. Let's have a look at the alernative **#parseTemplate** template: the expressions in the curly brackets invokes the **getDatePart** method that returns the evaluated value, in our case this is a formatted date part (year, weekday, month, etc.). The parameters passed to the **getDatePart** are necessary so that formatting is based on the [**IgxDatePickerComponent**]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) locale and format options:
 
 ```typescript
 // app.component.ts
@@ -238,12 +238,12 @@ The result is as follows:
 
 ### API References
 
-* [IgxDatePickerComponent](https://staging.infragistics.local/products/ignite-ui-angular/docs/typescript/classes/igxdatepickercomponent.html)
-* [IgxDatePickerModule](https://staging.infragistics.local/products/ignite-ui-angular/docs/typescript/classes/igxdatepickermodule.html)
-* [IgxCalendarComponent](https://staging.infragistics.local/products/ignite-ui-angular/docs/typescript/classes/igxcalendarcomponent.html)
-* [IgxDatePickerTemplateDirective](https://staging.infragistics.local/products/ignite-ui-angular/docs/typescript/classes/igxdatepickertemplatedirective.html)
-* [IgxCalendarHeaderTemplateDirective](https://staging.infragistics.local/products/ignite-ui-angular/docs/typescript/classes/igxcalendarheadertemplatedirective.html)
-* [IgxCalendarSubheaderTemplateDirective](https://staging.infragistics.local/products/ignite-ui-angular/docs/typescript/classes/igxcalendarsubheadertemplatedirective.html)
+* [IgxDatePickerComponent]({environment:angularApiUrl}/classes/igxdatepickercomponent.html)
+* [IgxDatePickerModule]({environment:angularApiUrl}/classes/igxdatepickermodule.html)
+* [IgxCalendarComponent]({environment:angularApiUrl}/classes/igxcalendarcomponent.html)
+* [IgxDatePickerTemplateDirective]({environment:angularApiUrl}/classes/igxdatepickertemplatedirective.html)
+* [IgxCalendarHeaderTemplateDirective]({environment:angularApiUrl}/classes/igxcalendarheadertemplatedirective.html)
+* [IgxCalendarSubheaderTemplateDirective]({environment:angularApiUrl}/classes/igxcalendarsubheadertemplatedirective.html)
 
 <div class="divider--half"></div>
 
