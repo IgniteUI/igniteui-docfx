@@ -122,16 +122,18 @@ Icon results:
 | `fab` | Floating action button type. Circular with primary theme color for background and white text. |
 | `icon` | This is the simplest of button types. Use it whenever you need to use an icon as button. |
 | `navbar` | Same as the icon button type, albeit optimized for use with the igx-navbar component. |
-<div class="divider--half"></div>
+
 
 ### API References
+<div class="divider--half"></div>
+
 * [IgxButtonModule]({environment:angularApiUrl}/classes/igxbuttonmodule.html)
 * [IgxButtonDirective]({environment:angularApiUrl}/classes/igxbuttondirective.html)
 * [IgxRippleDirective]({environment:angularApiUrl}/classes/igxrippledirective.html)
 
 ### Additional Resources
-
 <div class="divider--half"></div>
+
 Our community is active and always welcoming to new ideas.
 
 * [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)

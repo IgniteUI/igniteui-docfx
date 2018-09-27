@@ -57,7 +57,7 @@ You can also configure the minimum and maximum allowable column widths. This is 
 
 #### Auto-size columns on double click
 
-Each column can be **auto sized** by double clicking the right side of the header - the column will be sized to the longest currently visible cell value, including the header itself. This behavior is enabled by default, no additional configuration is needed. However, the column will not be autosized in case [`maxWidth`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#maxwidth) is set on that column and the new width exceeds that `maxWidth` value. In this case the column will be sized acccording to preset [`maxWidth`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#maxwidth) value.
+Each column can be **auto sized** by double clicking the right side of the header - the column will be sized to the longest currently visible cell value, including the header itself. This behavior is enabled by default, no additional configuration is needed. However, the column will not be autosized in case [`maxWidth`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#maxwidth) is set on that column and the new width exceeds that [`maxWidth`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#maxwidth) value. In this case the column will be sized acccording to preset [`maxWidth`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#maxwidth) value.
 
 You can also autosize a column dynamically using the exposed [`autosize()`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#autosize) method on [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html).
 
@@ -70,10 +70,13 @@ column.autosize();
 
 #### Pinned columns resizing
 
-Pinned columns can also be resized. However resizing is limited so that the overall width of the pinned columns container cannot become larger than 80% of the overall grid width.
+Pinned columns can also be resized. However, resizing is limited so that the overall width of the pinned columns container cannot become larger than 80% of the overall grid width.
 Again, if you try to autosize a pinned column and the new width will cause the pinned columns container to exceed those 80% of the overall grid with, autosizing will be discarded. We just want to make sure that the unpinned columns are always visible and availble to the user!
 
 ### API References
+<div class="divider--half"></div>
+
+* [IColumnResizeEventArgs]({environment:angularApiUrl}/interfaces/icolumnresizeeventargs.html)
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
 * [IgxGridModule]({environment:angularApiUrl}/classes/igxgridmodule.html)

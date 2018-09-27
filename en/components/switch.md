@@ -80,11 +80,14 @@ The final result would be something like that:
 </div>
 
 ### API References
+<div class="divider--half"></div>
+
 * [IgxSwitchComponent]({environment:angularApiUrl}/classes/igxswitchcomponent.html)
 * [IgxSwitchModule]({environment:angularApiUrl}/classes/igxswitchmodule.html)
 
 ###Additional Resources
 <div class="divider--half"></div>
+
 Our community is active and always welcoming to new ideas.
 
 * [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)

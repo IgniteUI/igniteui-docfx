@@ -75,15 +75,15 @@ You can set the icon's size through CSS. Create a custom CSS class and name it *
     <iframe id="icon-sample2-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/icon-sample2"  onload="onSampleIframeContentLoaded(this);">
 </div>
 
+### API References
 <div class="divider--half"></div>
 
-### API References
 * [IgxIconModule]({environment:angularApiUrl}/classes/igxiconmodule.html)
 * [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
 
 ### Additional Resources
-
 <div class="divider--half"></div>
+
 Our community is active and always welcoming to new ideas.
 
 * [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)

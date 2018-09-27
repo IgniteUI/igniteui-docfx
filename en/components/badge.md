@@ -216,17 +216,18 @@ If the sample is configured properly, a list of members should be displayed and 
     </button>
 </div>
 
+### API References
 <div class="divider--half"></div>
 
-### API References
 * [IgxAvatarModule]({environment:angularApiUrl}/classes/igxavatarmodule.html)
 * [IgxBadgeComponent]({environment:angularApiUrl}/classes/igxbadgecomponent.html)
 * [IgxBadgeModule]({environment:angularApiUrl}/classes/igxbadgemodule.html)
 * [IgxListModule]({environment:angularApiUrl}/classes/igxlistmodule.html)
 * [Type]({environment:angularApiUrl}/enums/type.html)
 
-###Additional Resources
+### Additional Resources
 <div class="divider--half"></div>
+
 Our community is active and always welcoming to new ideas.
 * [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
 * [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

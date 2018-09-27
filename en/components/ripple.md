@@ -103,15 +103,16 @@ for other browsers.
 
 > [!NOTE]
 > Use a relatively positioned element for the ripple animation. You can also use [`igxRippleTarget`]({environment:angularApiUrl}/classes/igxrippledirective.html#rippletarget) to target a child element.
-<div class="divider--half"></div>
 
 ### API References
+<div class="divider--half"></div>
+
 * [IgxRippleDirective]({environment:angularApiUrl}/classes/igxrippledirective.html)
 * [IgxRippleModule]({environment:angularApiUrl}/classes/igxripplemodule.html)
 
-###Additional Resources
-
+### Additional Resources
 <div class="divider--half"></div>
+
 Our community is active and always welcoming to new ideas.
 
 * [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)

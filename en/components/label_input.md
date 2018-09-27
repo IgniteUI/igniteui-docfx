@@ -109,7 +109,6 @@ You can read about the Input Group component in a separate topic [here](input_gr
 Related topics:
 
 * [Input Group](input_group.md)
-<div class="divider--half"></div>
 
 Our community is active and always welcoming to new ideas.
 

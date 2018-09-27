@@ -393,9 +393,9 @@ const routes: Routes = [
     data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
+### API References
 <div class="divider"></div>
 
-### API References
 * [IgxAvatarModule]({environment:angularApiUrl}/classes/igxavatarmodule.html)
 * [IgxCardModule]({environment:angularApiUrl}/classes/igxcardmodule.html)
 * [IgxIconModule]({environment:angularApiUrl}/classes/igxiconmodule.html)
@@ -406,8 +406,8 @@ const routes: Routes = [
 * [IgxTabItemComponent]({environment:angularApiUrl}/classes/igxtabitemcomponent.html)
 
 ### Additional Resources
-
 <div class="divider--half"></div>
+
 Our community is active and always welcoming to new ideas.
 
 * [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)

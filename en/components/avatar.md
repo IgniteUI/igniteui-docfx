@@ -102,14 +102,15 @@ Analogically, the avatar can display an icon via the [`icon`]({environment:angul
 </igx-avatar>
 ```
 
+### API References
 <div class="divider--half"></div>
 
-### API References
 * [IgxAvatarModule]({environment:angularApiUrl}/classes/igxavatarmodule.html)
 * [IgxAvatarComponent]({environment:angularApiUrl}/classes/igxavatarcomponent.html)
 
 ### Additional Resources
 <div class="divider--half"></div>
+
 Our community is active and always welcoming to new ideas.
 * [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
 * [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

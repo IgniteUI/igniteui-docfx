@@ -213,6 +213,8 @@ export class Person {
 ```
 
 ### API References
+<div class="divider--half"></div>
+
 * [IgxInputDirective]({environment:angularApiUrl}/classes/igxinputdirective.html)
 * [IgxInputGroupModule]({environment:angularApiUrl}/classes/igxinputgroupmodule.html)
 * [IgxLabelDirective]({environment:angularApiUrl}/classes/igxlabeldirective.html)
@@ -220,9 +222,9 @@ export class Person {
 * [IgxPrefixDirective]({environment:angularApiUrl}/classes/igxprefixdirective.html)
 * [IgxSnackbarModule]({environment:angularApiUrl}/classes/igxsnackbarmodule.html)
 
-###Additional Resources
-
+### Additional Resources
 <div class="divider--half"></div>
+
 Our community is active and always welcoming to new ideas.
 * [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
 * [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

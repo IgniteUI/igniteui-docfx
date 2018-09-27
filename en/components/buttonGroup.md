@@ -20,7 +20,7 @@ The [**igx-buttongroup**]({environment:angularApiUrl}/classes/igxbuttongroupcomp
 
 ### Dependencies
 
-The Button Group is exported as an `NgModule`, thus you will need to import the [**IgxButtonGroupModule**`**]({environment:angularApiUrl}/classes/igxbuttongroupmodule.html) inside your `AppModule`:
+The Button Group is exported as an `NgModule`, thus you will need to import the [**IgxButtonGroupModule**]({environment:angularApiUrl}/classes/igxbuttongroupmodule.html) inside your `AppModule`:
 
 ```typescript
 // app.module.ts
@@ -117,17 +117,17 @@ public ngOnInit() {
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="buttonGroup-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
-<div class="divider--half"></div>
 
 ### API References
+<div class="divider--half"></div>
 
 * [IgxButtonGroupModule]({environment:angularApiUrl}/classes/igxbuttongroupmodule.html)
 * [IgxButtonGroupComponent]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html)
 * [IgxButtonDirective]({environment:angularApiUrl}/classes/igxbuttondirective.html)
 
 ### Additional Resources
-
 <div class="divider--half"></div>
+
 Our community is active and always welcoming to new ideas.
 
 * [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)

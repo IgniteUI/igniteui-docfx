@@ -344,9 +344,9 @@ And don't forget to include the following CSS definitions in order for the appli
 
 You can see the result of the code above at the beginning of this article in the [Bottom Navigation Demo](#bottom-navigation-demo) section.
 
-<div class="divider"></div>
-
 ### API References
+<div class="divider--half"></div>
+
 * [IgxAvatarModule]({environment:angularApiUrl}/classes/igxavatarmodule.html)
 * [IgxBottomNavComponent]({environment:angularApiUrl}/classes/igxbottomnavcomponent.html)
 * [IgxBottomNavModule]({environment:angularApiUrl}/classes/igxbottomnavmodule.html)
@@ -356,8 +356,8 @@ You can see the result of the code above at the beginning of this article in the
 * [IgxTabPanelComponent]({environment:angularApiUrl}/classes/igxtabpanelcomponent.html)
 
 ### Additional Resources
-
 <div class="divider--half"></div>
+
 Our community is active and always welcoming to new ideas.
 
 * [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)

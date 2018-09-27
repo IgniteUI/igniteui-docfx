@@ -95,7 +95,6 @@ Our inputs could be styled differently by using the [`type`]({environment:angula
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="input-group-sample-5-frame" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
-<div class="divider--half"></div>
 
 ## API References
 * [IgxHintDirective]({environment:angularApiUrl}/classes/igxhintdirective.html)
@@ -112,7 +111,6 @@ Related topics:
 * [Reactive Forms Integration](input_group_reactive_forms.md)
 * [Label & Input](label_input.md)
 * [Combo](combo.md)
-<div class="divider--half"></div>
 
 Our community is active and always welcoming to new ideas.
 

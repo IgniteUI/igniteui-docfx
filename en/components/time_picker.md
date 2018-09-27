@@ -187,9 +187,10 @@ And there we have it:
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="time-picker-sample-5" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
-<div class="divider--half"></div>
 
 ### API References
+<div class="divider--half"></div>
+
 * [IgxIconModule]({environment:angularApiUrl}/classes/igxiconmodule.html)
 * [IgxInputDirective]({environment:angularApiUrl}/classes/igxinputdirective.html)
 * [IgxInputGroupModule]({environment:angularApiUrl}/classes/igxinputgroupmodule.html)
@@ -200,9 +201,9 @@ And there we have it:
 * [IgxTimePickerModule]({environment:angularApiUrl}/classes/igxtimepickermodule.html)
 * [IgxTimePickerTemplateDirective]({environment:angularApiUrl}/classes/igxtimepickertemplatedirective.html)
 
-###Additional Resources
-
+### Additional Resources
 <div class="divider--half"></div>
+
 Our community is active and always welcoming to new ideas.
 * [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
 * [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

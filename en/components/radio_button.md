@@ -143,12 +143,15 @@ public fruits = ["Apple", "Mango", "Banana", "Orange"];
 ```
 
 ## API References
+<div class="divider--half"></div>
+
 * [IgxRadioComponent]({environment:angularApiUrl}/classes/igxradiocomponent.html)
 * [IgxRadioGroupDirective]({environment:angularApiUrl}/classes/igxradiogroupdirective.html)
 * [IgxRadioModule]({environment:angularApiUrl}/classes/igxradiomodule.html)
 
 ## Additional Resources
 <div class="divider--half"></div>
+
 Our community is active and always welcoming to new ideas.
 
 * [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)

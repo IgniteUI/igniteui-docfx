@@ -87,14 +87,16 @@ The final result would be something like that:
 </div>
 
 ### API References
+<div class="divider--half"></div>
+
 * [IgxCheckboxModule]({environment:angularApiUrl}/classes/igxcheckboxmodule.html)
 * [IgxCheckboxComponent]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html)
 * [IChangeCheckboxEventArgs]({environment:angularApiUrl}/interfaces/ichangecheckboxeventargs.html)
 * [LabelPosition]({environment:angularApiUrl}/enums/labelposition.html)
 
 ### Additional Resources
-
 <div class="divider--half"></div>
+
 Our community is active and always welcoming to new ideas.
 
 * [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
