@@ -23,7 +23,7 @@ Combo コントロールは、データと値のバインディング、カス�
 <div class="divider--half"></div>
 
 ### 使用方法
-Ignite UI for Angular Combo を使用する前に **IgxComboModule** を **app.module.ts** ファイルにインポートします。以下のサンプルは `igx-switch` を使用していますが、追加で **IgxSwitchModule** も必要です。
+Ignite UI for Angular Combo を使用する前に [IgxComboModule]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombomodule.html) を **app.module.ts** ファイルにインポートします。以下のサンプルは [igx-switch]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxswitchcomponent.html) を使用していますが、追加で [IgxSwitchModule]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxswitchmodule.html) も必要です。
 
 ```typescript
 // app.module.ts
@@ -39,7 +39,7 @@ import { IgxComboModule, IgxSwitchModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
- デモでは、`igx-switch` コンポーネントを使用して `igx-combo` プロパティ値を切り替えます。グループ化は、`groupKey` を対応するデータソース エンティティに設定、または空文字列に設定して有効または無効にできます。
+ デモでは、[igx-switch]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxswitchcomponent.html) コンポーネントを使用して [igx-combo]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombocomponent.html) プロパティ値を切り替えます。グループ化は、[groupKey]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombocomponent.html#groupkey) を対応するデータソース エンティティに設定、または空文字列に設定して有効または無効にできます。
 ```html
 <div class="combo-container">
     <igx-combo #combo [data]="lData" [displayKey]="'field'" [valueKey]="'field'"
@@ -70,7 +70,7 @@ export class AppModule {}
 
 ## データ バインディング
 
-ローカル データソースへバインドする `igx-combo` の基本的な使用は、`valueKey` と `displayKey` を定義します。
+ローカル データソースへバインドする [igx-combo]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombocomponent.html) の基本的な使用は、[valueKey]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombocomponent.html#valuekey) と [displayKey]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombocomponent.html#displaykey) を定義します。
 
 ```html
 <igx-combo [data]="lData" [valueKey]="'ProductID'" [displayKey]="'ProductName'"></igx-combo>
@@ -88,10 +88,10 @@ export class ComboDemo implements OnInit {
 }
 ```
 
-> 注: `displayKey` が省略された場合、`valueKey` エンティティが項目テキストとして使用されます。
+> 注: [displayKey]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombocomponent.html#displaykey) が省略された場合、[valueKey]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombocomponent.html#valuekey) エンティティが項目テキストとして使用されます。
 
 
-詳細については、[`igx-combo` をリモートデータをバインド](combo_remote.md)を参照してください。
+詳細については、[[igx-combo]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombocomponent.html) をリモートデータをバインド](combo_remote.md)を参照してください。
 
 ## 値バインディング
 
@@ -163,9 +163,9 @@ set values(newValues: Array<any>) {
 |  `value`                 |コンボ値                                       |string                      |
 |  `allowCustomValue`      |コンボのカスタム値を有効/無効にします。               |boolean                     |
 |  `filterable`            |コンボのドロップダウンのフィルタリングを有効/無効にします。デフォルトは有効です。|boolean                     |
-|  `valueKey`              |コンボ値データソース プロパティ|string                      |
-|  `displayKey`            |コンボ表示データソース プロパティ|string                      |
-|  `groupKey`              |コンボ項目グループ|string                      |
+|  [valueKey]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombocomponent.html#valuekey)              |コンボ値データソース プロパティ|string                      |
+|  [displayKey]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombocomponent.html#displaykey)            |コンボ表示データソース プロパティ|string                      |
+|  [groupKey]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombocomponent.html#groupkey)              |コンボ項目グループ|string                      |
 |  `virtualizationState`   |仮想化データの現在の状態を定義します。`startIndex` と `chunkSize` を含みます。|`IForOfState`               |
 |  `width `                |コンボの幅を定義します。|string                      |
 |  `height`                |コンボの高さを定義します。|string                      |

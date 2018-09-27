@@ -22,7 +22,7 @@ The following demo demonstrates some of the combo features that are enabled/disa
 <div class="divider--half"></div>
 
 ### Usage
-To get started with the Ignite UI for Angular Combo import the **IgxComboModule** in the **app.module.ts** file. For the following sample the `igx-switch` component is used and in addition we will need the **IgxSwitchModule** also:
+To get started with the Ignite UI for Angular Combo import the [IgxComboModule]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombomodule.html) in the **app.module.ts** file. For the following sample the [igx-switch]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxswitchcomponent.html) component is used and in addition we will need the [IgxSwitchModule]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxswitchmodule.html) also:
 
 ```typescript
 // app.module.ts
@@ -38,7 +38,7 @@ import { IgxComboModule, IgxSwitchModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-The demo uses `igx-switch` component to toggle `igx-combo` properties' values. Note that grouping is enabled/disabled by setting `groupKey` to corresponding data source entity or setting it to empty string.
+The demo uses [igx-switch]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxswitchcomponent.html) component to toggle [igx-combo]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombocomponent.html) properties' values. Note that grouping is enabled/disabled by setting [groupKey]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombocomponent.html#groupkey) to corresponding data source entity or setting it to empty string.
 ```html
 <div class="combo-container">
     <igx-combo #combo [data]="lData" [displayKey]="'field'" [valueKey]="'field'"
@@ -69,7 +69,7 @@ The demo uses `igx-switch` component to toggle `igx-combo` properties' values. N
 
 ## Data Binding
 
-Basic usage of `igx-combo` bound to a local data source, defining `valueKey` and `displayKey`:
+Basic usage of [igx-combo]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombocomponent.html) bound to a local data source, defining [valueKey]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombocomponent.html#valuekey) and [displayKey]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombocomponent.html#displaykey):
 
 ```html
 <igx-combo [data]="lData" [valueKey]="'ProductID'" [displayKey]="'ProductName'"></igx-combo>
@@ -87,10 +87,10 @@ export class ComboDemo implements OnInit {
 }
 ```
 
-> Note: If `displayKey` is omitted then `valueKey` entity will be used instead.
+> Note: If [displayKey]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombocomponent.html#displaykey) is omitted then [valueKey]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombocomponent.html#valuekey) entity will be used instead.
 
 
-Follow this [topic](combo_remote.md) for more details about binding `igx-combo` with remote data.
+Follow this [topic](combo_remote.md) for more details about binding [igx-combo]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombocomponent.html) with remote data.
 
 ## Value Binding
 
@@ -162,9 +162,9 @@ Defining a combo's groupKey option will group the items, according to the provid
 |  `value`                 | combo value                                       | string                      |
 |  `allowCustomValue`      | enables/disables combo custom value                | boolean                     |
 |  `filterable`            | enables/disables combo drop down filtering - enabled by default                  | boolean                     |
-|  `valueKey`              | combo value data source property                  | string                      |
-|  `displayKey`            | combo display data source property                | string                      |
-|  `groupKey`              | combo item group                                  | string                      |
+|  [valueKey]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombocomponent.html#valuekey)              | combo value data source property                  | string                      |
+|  [displayKey]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombocomponent.html#displaykey)            | combo display data source property                | string                      |
+|  [groupKey]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombocomponent.html#groupkey)              | combo item group                                  | string                      |
 |  `virtualizationState`   | defines the current state of the virtualized data. It contains `startIndex` and `chunkSize`      | `IForOfState`               |
 |  `width `                | defines combo width                               | string                      |
 |  `height`                | defines combo height                              | string                      |

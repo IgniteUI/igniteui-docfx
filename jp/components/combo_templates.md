@@ -21,7 +21,7 @@ igx-combo コンポーネントの異なる領域 (項目、ヘッダー、フ�
 </div>
 
 ### 使用方法
-Ignite UI for Angular Combo を初期化する前に、**IgxComboModule** を **app.module.ts** ファイルにインポートします。
+Ignite UI for Angular Combo を初期化する前に、[IgxComboModule]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombomodule.html) を **app.module.ts** ファイルにインポートします。
 
 ```typescript
 // app.module.ts

@@ -7,12 +7,12 @@ _language: ja
 
 ## Combo
 <p class="highlight">
-igx-combo コンポーネントは、基本的な HTML `input`、選択機能、Ignite UI for Angular `igx-drop-down` を組み合わせたコンポーネントです。<br />
+igx-combo コンポーネントは、基本的な HTML `input`、選択機能、Ignite UI for Angular [igx-drop-down]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxdropdowncomponent.html) を組み合わせたコンポーネントです。<br />
 Combo コンポーネントは、**[フィルタリング](combo_features.md#フィルタリング)**、項目の**複数選択**、**[グループ化](combo_features.md#グループ化)**、ドロップダウン リストに**[カスタム値](combo_features.md#カスタム値)** の追加などの機能をサポートします。<br />
 **[カスタム テンプレート](combo_templates.md)** は、項目、ヘッダー、フッターなどコンポーネントの異なる領域をカスタマイズするために提供されます。<br />
-`igx-combo` コンポーネントは、**[テンプレート駆動フォーム](input_group.md)** と **[Reactive フォーム](input_group_reactive_forms.md)** を統合したコンポーネントです。<br />
-`igx-combo` は、直感的な **キーボード ナビゲーション**を公開し、**アクセシビリティ規格**に準拠しています。<br />
-ドロップダウン項目を**仮想化**することにより、`igx-combo` を大量の項目を持つデータ ソースにバインドした場合もスムーズにスクロールを行うことができます。
+[igx-combo]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombocomponent.html) コンポーネントは、**[テンプレート駆動フォーム](input_group.md)** と **[Reactive フォーム](input_group_reactive_forms.md)** を統合したコンポーネントです。<br />
+[igx-combo]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombocomponent.html) は、直感的な **キーボード ナビゲーション**を公開し、**アクセシビリティ規格**に準拠しています。<br />
+ドロップダウン項目を**仮想化**することにより、[igx-combo]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombocomponent.html) を大量の項目を持つデータ ソースにバインドした場合もスムーズにスクロールを行うことができます。
 </p>
 <div class="divider"></div>
 
@@ -29,7 +29,7 @@ Combo コンポーネントは、**[フィルタリング](combo_features.md#フ
 > Ignite UI for Angular コンポーネントをプロジェクトに追加する前に、必要なすべての依存関係を構成し、プロジェクトのセットアップが正しく完了したことを確認してください。詳細については、[**インストール**](https://jp.infragistics.com/products/ignite-ui-angular/getting-started#installation) トピックをご確認ください。
 
 ### 使用方法
-`IgxComboComponent` は、リストから項目の検索および選択が可能です。コンボは、項目コンテナーとして `IgxDropDownComponent` を内部使用します。Ignite UI for Angular Combo で作業を開始する前に **IgxComboModule** を **app.module.ts** ファイルにインポートします。
+[IgxComboComponent]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombocomponent.html) は、リストから項目の検索および選択が可能です。コンボは、項目コンテナーとして [IgxDropDownComponent]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxdropdowncomponent.html) を内部使用します。Ignite UI for Angular Combo で作業を開始する前に [IgxComboModule]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombomodule.html) を **app.module.ts** ファイルにインポートします。
 
 ```typescript
 // app.module.ts
@@ -45,7 +45,7 @@ import { IgxComboModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-次にテンプレートで `igx-combo` をデータにバインドし、`localData` データソースのエントリに対応する `valueKey` と `displayKey` を定義します。
+次にテンプレートで [igx-combo]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombocomponent.html) をデータにバインドし、`localData` データソースのエントリに対応する [valueKey]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombocomponent.html#valuekey) と [displayKey]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombocomponent.html#displaykey) を定義します。
 
 ```html
 <igx-combo [data]="lData" [valueKey]="'ProductID'" [displayKey]="'ProductName'"></igx-combo>
@@ -62,7 +62,7 @@ export class ComboDemo implements OnInit {
     }
 }
 ```
-> 注: `displayKey` が省略された場合、代わりに `valueKey` エンティティが項目テキストとして使用されます。
+> 注: [displayKey]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombocomponent.html#displaykey) が省略された場合、代わりに [valueKey]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombocomponent.html#valuekey) エンティティが項目テキストとして使用されます。
 
 ## 機能
 Combo コンポーネントは以下の機能を公開します。
@@ -118,9 +118,9 @@ igxCombo が開いて、カスタム値が有効で、「項目の追加」ボ�
 |  `value`                 | コンボの値                                            | string                      |
 |  `allowCustomValue`      | コンボのカスタム値を有効/無効にします。                          | boolean                     |
 |  `filterable`            | コンボのドロップダウンのフィルタリングを有効/無効にします。デフォルトは有効です。                 | boolean                     |
-|  `valueKey`              | コンボの値データ ソース プロパティ                              | string                      |
-|  `displayKey`            | コンボの表示データ ソース プロパティ                            | string                      |
-|  `groupKey`              | コンボの項目グループ                                      | string                      |
+|  [valueKey]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombocomponent.html#valuekey)              | コンボの値データ ソース プロパティ                              | string                      |
+|  [displayKey]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombocomponent.html#displaykey)            | コンボの表示データ ソース プロパティ                            | string                      |
+|  [groupKey]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombocomponent.html#groupkey)              | コンボの項目グループ                                      | string                      |
 |  `virtualizationState`   | 仮想化されたデータの現在の状態を定義します。`startIndex` および `chunkSize` を含みます。 | `IForOfState`                |
 |  `width `                | コンボの幅を定義します。                                    | string                      |
 |  `itemsMaxHeight `       | ドロップダウンの高さを定義します。                               | number                      |
@@ -166,7 +166,7 @@ igxCombo が開いて、カスタム値が有効で、「項目の追加」ボ�
 
 - 選択した項目を表示するコンボ入力は編集可能ではありませんが、IE および Firefox でカーソルが表示される問題。
 - IE で無効なコンボで BackSpace キーが使用できる問題。
-- Combo は高さのサイズ変更のための入力はありません。 `IgxInputGroup` は、カスタムのサイズ変更オプションを公開し、`IgxCombo` は適切なスタイル設定と外観の統一に同じ機能を使用します。
+- Combo は高さのサイズ変更のための入力はありません。 [IgxInputGroup]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxinputgroupcomponent.html)  は、カスタムのサイズ変更オプションを公開し、[IgxCombo]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombocomponent.html) は適切なスタイル設定と外観の統一に同じ機能を使用します。
 
 ## その他のリソース
 

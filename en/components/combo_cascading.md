@@ -6,13 +6,13 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ## Cascading Scenario
 <p class="highlight">
-The igx-combo and igx-drop-down exposes events, properties and methods that allows to easily construct cascading scenario, either using one of the controls or both of them.
+The igx-combo and [igx-drop-down]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxdropdowncomponent.html) exposes events, properties and methods that allows to easily construct cascading scenario, either using one of the controls or both of them.
 </p>
 <div class="divider"></div>
 
 ### Demo
 
-The following sample demonstrates scenario, using two igx-drop-down and igx-combo components:
+The following sample demonstrates scenario, using two [igx-drop-down]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxdropdowncomponent.html) and igx-combo components:
 
 <div class="sample-container loading" style="height: 540px;">
     <iframe id="cascading-combos-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/cascading-combos" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -23,7 +23,7 @@ The following sample demonstrates scenario, using two igx-drop-down and igx-comb
 <div class="divider--half"></div>
 
 ### Usage
-To get started import the **IgxComboModule**, **IgxDropDownModule**, **IgxIconModule**, **IgxInputGroupModule** in the **app.module.ts** file:
+To get started import the [IgxComboModule]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombomodule.html), [IgxDropDownModule]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxdropdownmodule.html), [IgxIconModule]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxiconmodule.html), [IgxInputGroupModule]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxinputgroupmodule.html) in the **app.module.ts** file:
 
 ```typescript
 // app.module.ts
@@ -39,7 +39,7 @@ import { IgxComboModule, IgxDropDownModule, IgxIconModule, IgxInputGroupModule }
 export class AppModule {}
 ```
 
-In the sample below are used an igx-combo and two igx-drop-down components along with corresponding input elements. The API of the both components are used to get selected item from one and load data source for the next either drop down or combo, clear selection or reset data source.
+In the sample below are used an igx-combo and two [igx-drop-down]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxdropdowncomponent.html) components along with corresponding input elements. The API of the both components are used to get selected item from one and load data source for the next either drop down or combo, clear selection or reset data source.
 
 ```html
 

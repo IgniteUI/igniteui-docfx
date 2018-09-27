@@ -20,7 +20,7 @@ Custom templates for different areas of the igx-combo component can be defined, 
 </div>
 
 ### Usage
-To get started with the Ignite UI for Angular Combo import the **IgxComboModule** in the **app.module.ts** file:
+To get started with the Ignite UI for Angular Combo import the [IgxComboModule]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombomodule.html) in the **app.module.ts** file:
 
 ```typescript
 // app.module.ts
