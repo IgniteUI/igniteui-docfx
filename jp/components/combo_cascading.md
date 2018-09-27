@@ -7,13 +7,13 @@ _language: ja
 
 ## カスケーディング
 <p class="highlight">
- [igx-combo]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombocomponent.html) と [igx-drop-down]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxdropdowncomponent.html) は、簡単にカスケーディングを作成できるイベント、プロパティ、メソッドを公開します。
+ [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) と [igx-drop-down]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) は、簡単にカスケーディングを作成できるイベント、プロパティ、メソッドを公開します。
 </p>
 <div class="divider"></div>
 
 ### デモ
 
-以下のサンプルは、2 つの [igx-drop-down]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxdropdowncomponent.html) と [igx-combo]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombocomponent.html) コンポーネントを使用しています。
+以下のサンプルは、2 つの [igx-drop-down]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) と [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) コンポーネントを使用しています。
 
 <div class="sample-container loading" style="height: 540px;">
     <iframe id="cascading-combos-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/cascading-combos" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -24,7 +24,7 @@ _language: ja
 <div class="divider--half"></div>
 
 ### 使用方法
-はじめに [IgxComboModule]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombomodule.html), [IgxDropDownModule]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxdropdownmodule.html), [IgxIconModule]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxiconmodule.html), [IgxInputGroupModule]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxinputgroupmodule.html) を **app.module.ts** ファイルにインポートします。
+はじめに [IgxComboModule]({environment:angularApiUrl}/classes/igxcombomodule.html), [IgxDropDownModule]({environment:angularApiUrl}/classes/igxdropdownmodule.html), [IgxIconModule]({environment:angularApiUrl}/classes/igxiconmodule.html), [IgxInputGroupModule]({environment:angularApiUrl}/classes/igxinputgroupmodule.html) を **app.module.ts** ファイルにインポートします。
 
 ```typescript
 // app.module.ts
@@ -40,7 +40,7 @@ import { IgxComboModule, IgxDropDownModule, IgxIconModule, IgxInputGroupModule }
 export class AppModule {}
 ```
 
-以下のサンプルは、[igx-combo]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombocomponent.html) と 2 つの [igx-drop-down]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxdropdowncomponent.html) コンポーネント、それらに対応する入力要素を使用しています。両コンポーネントの API は、選択された項目を取得してドロップダウンまたはコンボのいずれかにデータソースを読み込み、選択をクリアまたはデータソースをリセットします。
+以下のサンプルは、[igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) と 2 つの [igx-drop-down]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) コンポーネント、それらに対応する入力要素を使用しています。両コンポーネントの API は、選択された項目を取得してドロップダウンまたはコンボのいずれかにデータソースを読み込み、選択をクリアまたはデータソースをリセットします。
 
 ```html
 
@@ -159,7 +159,7 @@ export class CascadingCombos {
     }
 }
 ```
-> 注: [igx-overlay]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxoverlayservice.html) 配置機能は、入力の下にドロップダウンを表示して単一選択コンボをエミュレートするために使用します。
+> 注: [igx-overlay]({environment:angularApiUrl}/classes/igxoverlayservice.html) 配置機能は、入力の下にドロップダウンを表示して単一選択コンボをエミュレートするために使用します。
 
 ## その他のリソース
 <div class="divider--half"></div>
@@ -169,7 +169,7 @@ export class CascadingCombos {
 * [コンボ テンプレート](combo_templates.md)
 * [テンプレート駆動フォームの統合](input_group.md)
 * [リアクティブ フォームの統合](input_group_reactive_forms.md)
-* [IgxOverlay]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxoverlayservice.html)
+* [IgxOverlay]({environment:angularApiUrl}/classes/igxoverlayservice.html)
 
 コミュニティに参加して新しいアイデアをご提案ください。
 

@@ -7,7 +7,7 @@ _language: ja
 
 ## コンボ テンプレート
 <p class="highlight">
-[igx-combo]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombocomponent.html) コンポーネントの異なる領域 (項目、ヘッダー、フッター、空リスト、ボタンの追加) にカスタム テンプレートを定義できます。
+[igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) コンポーネントの異なる領域 (項目、ヘッダー、フッター、空リスト、ボタンの追加) にカスタム テンプレートを定義できます。
 </p>
 <div class="divider"></div>
 
@@ -21,7 +21,7 @@ _language: ja
 </div>
 
 ### 使用方法
-Ignite UI for Angular Combo を初期化する前に、[IgxComboModule]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombomodule.html) を **app.module.ts** ファイルにインポートします。
+Ignite UI for Angular Combo を初期化する前に、[IgxComboModule]({environment:angularApiUrl}/classes/igxcombomodule.html) を **app.module.ts** ファイルにインポートします。
 
 ```typescript
 // app.module.ts

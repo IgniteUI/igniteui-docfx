@@ -21,7 +21,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 > To start using Ignite UI for Angular components in your own projects, make sure you have configured all necessary dependencies and have performed the proper setup of your project. You can learn how to do this in the [**installation**](https://www.infragistics.com/products/ignite-ui-angular/getting-started#installation) topic.
 
 ###Usage
-To get started with the Ignite UI for Angular Drop Down, let's first import the [IgxDropDownModule]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxdropdownmodule.html) in the **app.module.ts** file:
+To get started with the Ignite UI for Angular Drop Down, let's first import the [IgxDropDownModule]({environment:angularApiUrl}/classes/igxdropdownmodule.html) in the **app.module.ts** file:
 
 ```typescript
 // app.module.ts
@@ -37,7 +37,7 @@ import { IgxDropDownModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-Let's create a simple dropdown that provides several option items to choose from. To achieve this, we use the **igx-drop-down** component as well as [igxToggleAction]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxtoggleactiondirective.html) to open/close the dropdown.
+Let's create a simple dropdown that provides several option items to choose from. To achieve this, we use the **igx-drop-down** component as well as [igxToggleAction]({environment:angularApiUrl}/classes/igxtoggleactiondirective.html) to open/close the dropdown.
 
 
 Having all set up, let's show all the options in the [**IgxDropDownComponent**](https://www.infragistics.com/products/ignite-ui-angular/angular/components/drop_down.html) component. The dropdown contains several options as dropdown items.
@@ -100,7 +100,7 @@ If the sample is configured properly, a dropdown with several options should be 
 
 <div class="divider--half"></div>
 
-Let's say we want to have a predefined selected item. One way to do this, is by handling **igx-drop-down** [onOpening]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxdropdowncomponent.html#onopening) event of [**IgxDropDownComponent**](https://www.infragistics.com/products/ignite-ui-angular/angular/components/drop_down.html).
+Let's say we want to have a predefined selected item. One way to do this, is by handling **igx-drop-down** [onOpening]({environment:angularApiUrl}/classes/igxdropdowncomponent.html#onopening) event of [**IgxDropDownComponent**](https://www.infragistics.com/products/ignite-ui-angular/angular/components/drop_down.html).
 
 ```html
 <!-- dropdown.component.html -->
@@ -163,7 +163,7 @@ Let's say we want to have a predefined selected item. One way to do this, is by 
 
 <div class="divider--half"></div>
 
-To provide more useful visual information, use [isHeader]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxdropdownitemcomponent.html#isheader) to group items semantically or [disabled]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxdropdownitemcomponent.html#disabled) to display an item as non-interactive. You can also set [isSelected]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxdropdownitemcomponent.html#isselected) to a particular item to make it the selected item.
+To provide more useful visual information, use [isHeader]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html#isheader) to group items semantically or [disabled]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html#disabled) to display an item as non-interactive. You can also set [isSelected]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html#isselected) to a particular item to make it the selected item.
 
 ```html
 <!-- dropdown.component.html -->
@@ -226,11 +226,11 @@ If the sample is configured properly, a list  of countries should be displayed a
 
 ### igxDropDownItemNavigation directive
 
-To enable keyboard navigation for the `igxDropDown` component, the [igxDropDownItemNavigation]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxdropdownitemnavigationdirective.html) directive can be applied. The directive should be applied to the active(focused) element or a parent container. This will allow the directive to handle all triggered events. By default the the igxDropDown or its items don't take focus, so for example the directive can be placed on a button or input that controls the drop down.
-The [igxDropDownItemNavigation]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxdropdownitemnavigationdirective.html) directive value should be target component that is or extends [IgxDropDownBase]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxdropdownbase.html) class.
+To enable keyboard navigation for the `igxDropDown` component, the [igxDropDownItemNavigation]({environment:angularApiUrl}/classes/igxdropdownitemnavigationdirective.html) directive can be applied. The directive should be applied to the active(focused) element or a parent container. This will allow the directive to handle all triggered events. By default the the igxDropDown or its items don't take focus, so for example the directive can be placed on a button or input that controls the drop down.
+The [igxDropDownItemNavigation]({environment:angularApiUrl}/classes/igxdropdownitemnavigationdirective.html) directive value should be target component that is or extends [IgxDropDownBase]({environment:angularApiUrl}/classes/igxdropdownbase.html) class.
 
 
-The following sample demonstrates an input that on click opens and closes igxDropDown instance. Applying the [igxDropDownItemNavigation]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxdropdownitemnavigationdirective.html) on the input itself, will enable keyboard navigation, when using arrow up and arrow down. This relies on the default drop down behavior with [allowItemsFocus]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombodropdowncomponent.html#allowitemsfocus) disabled to allow the button input to maintain focus.
+The following sample demonstrates an input that on click opens and closes igxDropDown instance. Applying the [igxDropDownItemNavigation]({environment:angularApiUrl}/classes/igxdropdownitemnavigationdirective.html) on the input itself, will enable keyboard navigation, when using arrow up and arrow down. This relies on the default drop down behavior with [allowItemsFocus]({environment:angularApiUrl}/classes/igxcombodropdowncomponent.html#allowitemsfocus) disabled to allow the button input to maintain focus.
 
 
 ```
@@ -258,7 +258,7 @@ Applying the directive will ensure the following actions are executed as a resul
 
 
 
-When [allowItemsFocus]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombodropdowncomponent.html#allowitemsfocus) is enabled, drop down items gain tab index and are focused when active. The focused drop down items are the ones that trigger events, during keyboard navigation, which means that the [igxDropDownItemNavigation]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxdropdownitemnavigationdirective.html) should be applied on the individual drop down items.
+When [allowItemsFocus]({environment:angularApiUrl}/classes/igxcombodropdowncomponent.html#allowitemsfocus) is enabled, drop down items gain tab index and are focused when active. The focused drop down items are the ones that trigger events, during keyboard navigation, which means that the [igxDropDownItemNavigation]({environment:angularApiUrl}/classes/igxdropdownitemnavigationdirective.html) should be applied on the individual drop down items.
 
 ```
 <igx-input-group [igxToggleAction]="dropdownProvince">
@@ -274,10 +274,10 @@ When [allowItemsFocus]({environment:infragisticsBaseUrl}/products/ignite-ui-angu
 <div class="divider--half"></div>
 
 ### API Summary
-**igx-drop-down** component [**API Reference**]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxdropdowncomponent.html) and
-[**Themes Reference**]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/sass/index.html#mixin-igx-drop-down).
+**igx-drop-down** component [**API Reference**]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) and
+[**Themes Reference**]({environment:sassApiUrl}/index.html#mixin-igx-drop-down).
 
-**igx-drop-down-item** component [**API Reference**]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxdropdownitemcomponent.html).
+**igx-drop-down-item** component [**API Reference**]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html).
 
 ###Additional Resources
 

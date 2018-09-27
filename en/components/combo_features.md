@@ -22,7 +22,7 @@ The following demo demonstrates some of the combo features that are enabled/disa
 <div class="divider--half"></div>
 
 ### Usage
-To get started with the Ignite UI for Angular Combo import the [IgxComboModule]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombomodule.html) in the **app.module.ts** file. For the following sample the [igx-switch]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxswitchcomponent.html) component is used and in addition we will need the [IgxSwitchModule]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxswitchmodule.html) also:
+To get started with the Ignite UI for Angular Combo import the [IgxComboModule]({environment:angularApiUrl}/classes/igxcombomodule.html) in the **app.module.ts** file. For the following sample the [igx-switch]({environment:angularApiUrl}/classes/igxswitchcomponent.html) component is used and in addition we will need the [IgxSwitchModule]({environment:angularApiUrl}/classes/igxswitchmodule.html) also:
 
 ```typescript
 // app.module.ts
@@ -38,7 +38,7 @@ import { IgxComboModule, IgxSwitchModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-The demo uses [igx-switch]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxswitchcomponent.html) component to toggle [igx-combo]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombocomponent.html) properties' values. Note that grouping is enabled/disabled by setting [groupKey]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombocomponent.html#groupkey) to corresponding data source entity or setting it to empty string.
+The demo uses [igx-switch]({environment:angularApiUrl}/classes/igxswitchcomponent.html) component to toggle [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) properties' values. Note that grouping is enabled/disabled by setting [groupKey]({environment:angularApiUrl}/classes/igxcombocomponent.html#groupkey) to corresponding data source entity or setting it to empty string.
 ```html
 <div class="combo-container">
     <igx-combo #combo [data]="lData" [displayKey]="'field'" [valueKey]="'field'"
@@ -69,7 +69,7 @@ The demo uses [igx-switch]({environment:infragisticsBaseUrl}/products/ignite-ui-
 
 ## Data Binding
 
-Basic usage of [igx-combo]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombocomponent.html) bound to a local data source, defining [valueKey]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombocomponent.html#valuekey) and [displayKey]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombocomponent.html#displaykey):
+Basic usage of [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) bound to a local data source, defining [valueKey]({environment:angularApiUrl}/classes/igxcombocomponent.html#valuekey) and [displayKey]({environment:angularApiUrl}/classes/igxcombocomponent.html#displaykey):
 
 ```html
 <igx-combo [data]="lData" [valueKey]="'ProductID'" [displayKey]="'ProductName'"></igx-combo>
@@ -87,10 +87,10 @@ export class ComboDemo implements OnInit {
 }
 ```
 
-> Note: If [displayKey]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombocomponent.html#displaykey) is omitted then [valueKey]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombocomponent.html#valuekey) entity will be used instead.
+> Note: If [displayKey]({environment:angularApiUrl}/classes/igxcombocomponent.html#displaykey) is omitted then [valueKey]({environment:angularApiUrl}/classes/igxcombocomponent.html#valuekey) entity will be used instead.
 
 
-Follow this [topic](combo_remote.md) for more details about binding [igx-combo]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombocomponent.html) with remote data.
+Follow this [topic](combo_remote.md) for more details about binding [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) with remote data.
 
 ## Value Binding
 
@@ -153,8 +153,8 @@ Defining a combo's groupKey option will group the items, according to the provid
 ## API
 <div class="divider--half"></div>
 
-* IgxComboComponent [**API Reference**]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombocomponent.html) and
-[**Themes Reference**]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/sass/index.html#themes-mixin-igx-combo).
+* IgxComboComponent [**API Reference**]({environment:angularApiUrl}/classes/igxcombocomponent.html) and
+[**Themes Reference**]({environment:sassApiUrl}/index.html#themes-mixin-igx-combo).
 
 ## Additional Resources
 <div class="divider--half"></div>
@@ -164,7 +164,7 @@ Defining a combo's groupKey option will group the items, according to the provid
 * [Template Driven Forms Integration](input_group.md)
 * [Reactive Forms Integration](input_group_reactive_forms.md)
 * [Cascading Scenario](combo_cascading.md)
-* [IgxSwitch]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxswitchcomponent.html)
+* [IgxSwitch]({environment:angularApiUrl}/classes/igxswitchcomponent.html)
 
 Our community is active and always welcoming to new ideas.
 

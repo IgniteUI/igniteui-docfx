@@ -23,7 +23,7 @@ Combo コントロールは、データと値のバインディング、カス�
 <div class="divider--half"></div>
 
 ### 使用方法
-Ignite UI for Angular Combo を使用する前に [IgxComboModule]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombomodule.html) を **app.module.ts** ファイルにインポートします。以下のサンプルは [igx-switch]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxswitchcomponent.html) を使用していますが、追加で [IgxSwitchModule]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxswitchmodule.html) も必要です。
+Ignite UI for Angular Combo を使用する前に [IgxComboModule]({environment:angularApiUrl}/classes/igxcombomodule.html) を **app.module.ts** ファイルにインポートします。以下のサンプルは [igx-switch]({environment:angularApiUrl}/classes/igxswitchcomponent.html) を使用していますが、追加で [IgxSwitchModule]({environment:angularApiUrl}/classes/igxswitchmodule.html) も必要です。
 
 ```typescript
 // app.module.ts
@@ -39,7 +39,7 @@ import { IgxComboModule, IgxSwitchModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
- デモでは、[igx-switch]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxswitchcomponent.html) コンポーネントを使用して [igx-combo]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombocomponent.html) プロパティ値を切り替えます。グループ化は、[groupKey]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombocomponent.html#groupkey) を対応するデータソース エンティティに設定、または空文字列に設定して有効または無効にできます。
+ デモでは、[igx-switch]({environment:angularApiUrl}/classes/igxswitchcomponent.html) コンポーネントを使用して [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) プロパティ値を切り替えます。グループ化は、[groupKey]({environment:angularApiUrl}/classes/igxcombocomponent.html#groupkey) を対応するデータソース エンティティに設定、または空文字列に設定して有効または無効にできます。
 ```html
 <div class="combo-container">
     <igx-combo #combo [data]="lData" [displayKey]="'field'" [valueKey]="'field'"
@@ -70,7 +70,7 @@ export class AppModule {}
 
 ## データ バインディング
 
-ローカル データソースへバインドする [igx-combo]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombocomponent.html) の基本的な使用は、[valueKey]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombocomponent.html#valuekey) と [displayKey]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombocomponent.html#displaykey) を定義します。
+ローカル データソースへバインドする [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) の基本的な使用は、[valueKey]({environment:angularApiUrl}/classes/igxcombocomponent.html#valuekey) と [displayKey]({environment:angularApiUrl}/classes/igxcombocomponent.html#displaykey) を定義します。
 
 ```html
 <igx-combo [data]="lData" [valueKey]="'ProductID'" [displayKey]="'ProductName'"></igx-combo>
@@ -88,10 +88,10 @@ export class ComboDemo implements OnInit {
 }
 ```
 
-> 注: [displayKey]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombocomponent.html#displaykey) が省略された場合、[valueKey]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombocomponent.html#valuekey) エンティティが項目テキストとして使用されます。
+> 注: [displayKey]({environment:angularApiUrl}/classes/igxcombocomponent.html#displaykey) が省略された場合、[valueKey]({environment:angularApiUrl}/classes/igxcombocomponent.html#valuekey) エンティティが項目テキストとして使用されます。
 
 
-詳細については、[[igx-combo]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombocomponent.html) をリモートデータをバインド](combo_remote.md)を参照してください。
+詳細については、[[igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) をリモートデータをバインド](combo_remote.md)を参照してください。
 
 ## 値バインディング
 
@@ -156,8 +156,8 @@ set values(newValues: Array<any>) {
 ### 入力
 <div class="divider--half"></div>
 
-* IgxComboComponent [**API Reference**]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombocomponent.html) and
-[**Themes Reference**]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/sass/index.html#themes-mixin-igx-combo).
+* IgxComboComponent [**API Reference**]({environment:angularApiUrl}/classes/igxcombocomponent.html) and
+[**Themes Reference**]({environment:sassApiUrl}/index.html#themes-mixin-igx-combo).
 
 ## その他のリソース
 <div class="divider--half"></div>
@@ -167,7 +167,7 @@ set values(newValues: Array<any>) {
 * [テンプレート駆動フォームの統合](input_group.md)
 * [リアクティブ フォームの統合](input_group_reactive_forms.md)
 * [カスケーディング](combo_cascading.md)
-* [IgxSwitch]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxswitchcomponent.html)
+* [IgxSwitch]({environment:angularApiUrl}/classes/igxswitchcomponent.html)
 
 コミュニティに参加して新しいアイデアをご提案ください。
 

@@ -6,12 +6,12 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ## Combo Remote Binding
 <p class="highlight">
-The [igx-combo]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombocomponent.html) exposes API that allows to bind a combo to a remote service and retrieve data on demand.
+The [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) exposes API that allows to bind a combo to a remote service and retrieve data on demand.
 </p>
 <div class="divider"></div>
 
 ### Demo
-The sample below demonstrates remote binding using combo API - defining [valueKey]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombocomponent.html#valuekey) and [displayKey]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombocomponent.html#displaykey), and using [onDataPreLoad]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombocomponent.html#ondatapreload) to load new chunk of remote data:
+The sample below demonstrates remote binding using combo API - defining [valueKey]({environment:angularApiUrl}/classes/igxcombocomponent.html#valuekey) and [displayKey]({environment:angularApiUrl}/classes/igxcombocomponent.html#displaykey), and using [onDataPreLoad]({environment:angularApiUrl}/classes/igxcombocomponent.html#ondatapreload) to load new chunk of remote data:
 <div class="sample-container loading" style="height: 400px;">
     <iframe id="combo-remote-sample" frameborder="0" seamless width="700px" height="100%" src="{environment:demosBaseUrl}/combo-remote" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -20,7 +20,7 @@ The sample below demonstrates remote binding using combo API - defining [valueKe
 </div>
 
 ### Usage
-To get started with the Ignite UI for Angular Combo import the [IgxComboModule]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombomodule.html) in the **app.module.ts** file. In this demo a remote service is used for server requests, that is why in addition we need to include the Angular **HttpClientModule**:
+To get started with the Ignite UI for Angular Combo import the [IgxComboModule]({environment:angularApiUrl}/classes/igxcombomodule.html) in the **app.module.ts** file. In this demo a remote service is used for server requests, that is why in addition we need to include the Angular **HttpClientModule**:
 
 ```typescript
 // app.module.ts
@@ -38,7 +38,7 @@ export class AppModule {}
 ```
 
 When binding combo to remote data we need to have available service that will load data on demand from a server. The code below defines a simple service that has a `getData()` method, which receives combo's current state information and returns a data as an observable. What the combo exposes is a `virtualizationState` property that gives current state of the combo - first index and the number of items that needs to be loaded.
-The service, should inform the combo for the total items that are on the server - a value that needs to be set to the `totalItemCount` [igx-combo]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombocomponent.html) property, in order to show properly the scroll size.
+The service, should inform the combo for the total items that are on the server - a value that needs to be set to the `totalItemCount` [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) property, in order to show properly the scroll size.
 
 ```typescript
 // remote.service.ts
@@ -63,16 +63,16 @@ export class RemoteService {
     }
 ```
 
-When the data is returned from the service as an observable, then we can set it to the [igx-combo]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombocomponent.html) using the [`async`](https://angular.io/api/common/AsyncPipe) pipe:
+When the data is returned from the service as an observable, then we can set it to the [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) using the [`async`](https://angular.io/api/common/AsyncPipe) pipe:
 
 ```html
 <igx-combo [data]="rData | async" [valueKey]="'ProductID'" [displayKey]="'ProductName'" 
     (onDataPreLoad)="dataLoading($event)" (onSearchInput)="searchInput($event)" (onOpening)="searchInput('')"></igx-combo>
 ```
-Let's define the cases, when the [igx-combo]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombocomponent.html) will need to request new data:
+Let's define the cases, when the [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) will need to request new data:
     - when combo is initialized
-    - when we scroll combo's list. Then combo will emit [onDataPreLoad]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombocomponent.html#ondatapreload) along with the new combo `virtualizationState`, which allows to make a new request to the remote service.
-    - when we search in the [igx-combo]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombocomponent.html) then we need to make request to filter remote results.
+    - when we scroll combo's list. Then combo will emit [onDataPreLoad]({environment:angularApiUrl}/classes/igxcombocomponent.html#ondatapreload) along with the new combo `virtualizationState`, which allows to make a new request to the remote service.
+    - when we search in the [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) then we need to make request to filter remote results.
     - when combo is opened we need to clear results from any previous filter operations.
 
 Below are listed the handlers that listen to the already defined actions and execute requests to the server:
@@ -127,7 +127,7 @@ export class ComboRemoteComponent implements OnInit {
 }
 ```
 
-> Note: Anytime new data is loaded, we update `totalItemCount` [igx-combo]({environment:infragisticsBaseUrl}/products/ignite-ui-angular/docs/typescript/classes/igxcombocomponent.html) property, in order to have proper size of the list's scroll bar. In that case the service returns total size using the property `@odata.count`.
+> Note: Anytime new data is loaded, we update `totalItemCount` [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) property, in order to have proper size of the list's scroll bar. In that case the service returns total size using the property `@odata.count`.
 
 > Note: Service needs to be included as a provider.
 
