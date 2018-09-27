@@ -123,7 +123,7 @@ All of the `.json` files are located under `/assets/samples` of [igniteui-angula
 
 # <a name='#api-linking'>Linking to API docs (Typescript and Sass)</a>
 
-Each reference to a given `input`, `output`, `method`, `getter` or `setter` along the article should be linked to the corresponding documentation page in the API docs. Also, in the end of the article a list of all mentioned components should be added, where each list item is also linked to the corresponding documentation page. Example of linking the from the grid filtering help topic:
+Each reference to a given `input`, `output`, `method`, `getter` or `setter` along the article should be linked to the corresponding documentation page in the API docs. Also, in the end of the article a list of all mentioned components should be added, where each list item is also linked to the corresponding documentation page. Example of linking the corresnponding item in the grid filtering topic:
 
 ```markdown
 Depending on the set [`dataType`]({environment:angularApiUrl/classes/igxcolumncomponent.html#datatype}) of the column, the correct set of [**filtering operations**](grid.md#filtering-conditions) is loaded inside the filter UI dropdown.
