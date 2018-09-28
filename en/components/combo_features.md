@@ -6,7 +6,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ## Combo Features
 <p class="highlight">
-Combo control exposes several features including data and value binding, custom values, filtering, grouping, etc. 
+Combo control exposes several features including data and value binding, **[custom values](combo_features.md#custom-values)**, **[filtering](combo_features.md#filtering)**, **[grouping](combo_features.md#grouping)**, etc. 
 </p>
 <div class="divider"></div>
 
@@ -22,7 +22,7 @@ The following demo demonstrates some of the combo features that are enabled/disa
 <div class="divider--half"></div>
 
 ### Usage
-To get started with the Ignite UI for Angular Combo import the **IgxComboModule** in the **app.module.ts** file. For the following sample the `igx-switch` component is used and in addition we will need the **IgxSwitchModule** also:
+To get started with the Ignite UI for Angular Combo import the [IgxComboModule]({environment:angularApiUrl}/classes/igxcombomodule.html) in the **app.module.ts** file. For the following sample the [igx-switch]({environment:angularApiUrl}/classes/igxswitchcomponent.html) component is used and in addition we will need the [IgxSwitchModule]({environment:angularApiUrl}/classes/igxswitchmodule.html) also:
 
 ```typescript
 // app.module.ts
@@ -38,7 +38,7 @@ import { IgxComboModule, IgxSwitchModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-The demo uses `igx-switch` component to toggle `igx-combo` properties' values. Note that grouping is enabled/disabled by setting `groupKey` to corresponding data source entity or setting it to empty string.
+The demo uses [igx-switch]({environment:angularApiUrl}/classes/igxswitchcomponent.html) component to toggle [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) properties' values. Note that grouping is enabled/disabled by setting [groupKey]({environment:angularApiUrl}/classes/igxcombocomponent.html#groupkey) to corresponding data source entity or setting it to empty string.
 ```html
 <div class="combo-container">
     <igx-combo #combo [data]="lData" [displayKey]="'field'" [valueKey]="'field'"
@@ -69,7 +69,7 @@ The demo uses `igx-switch` component to toggle `igx-combo` properties' values. N
 
 ## Data Binding
 
-Basic usage of `igx-combo` bound to a local data source, defining `valueKey` and `displayKey`:
+Basic usage of [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) bound to a local data source, defining [valueKey]({environment:angularApiUrl}/classes/igxcombocomponent.html#valuekey) and [displayKey]({environment:angularApiUrl}/classes/igxcombocomponent.html#displaykey):
 
 ```html
 <igx-combo [data]="lData" [valueKey]="'ProductID'" [displayKey]="'ProductName'"></igx-combo>
@@ -87,10 +87,10 @@ export class ComboDemo implements OnInit {
 }
 ```
 
-> Note: If `displayKey` is omitted then `valueKey` entity will be used instead.
+> Note: If [displayKey]({environment:angularApiUrl}/classes/igxcombocomponent.html#displaykey) is omitted then [valueKey]({environment:angularApiUrl}/classes/igxcombocomponent.html#valuekey) entity will be used instead.
 
 
-Follow this [topic](combo_remote.md) for more details about binding `igx-combo` with remote data.
+Follow this [topic](combo_remote.md) for more details about binding [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) with remote data.
 
 ## Value Binding
 
@@ -151,62 +151,10 @@ Defining a combo's groupKey option will group the items, according to the provid
 <div class="divider--half"></div>
 
 ## API
-
-### Inputs
 <div class="divider--half"></div>
 
-| Name                     | Description                                       | Type                        |
-|--------------------------|---------------------------------------------------|-----------------------------|
-|  `id`                    | combo id                                          | string                      |
-|  `data`                  | combo data source                                 | any                         |
-|  `value`                 | combo value                                       | string                      |
-|  `allowCustomValue`      | enables/disables combo custom value                | boolean                     |
-|  `filterable`            | enables/disables combo drop down filtering - enabled by default                  | boolean                     |
-|  `valueKey`              | combo value data source property                  | string                      |
-|  `displayKey`            | combo display data source property                | string                      |
-|  `groupKey`              | combo item group                                  | string                      |
-|  `virtualizationState`   | defines the current state of the virtualized data. It contains `startIndex` and `chunkSize`      | `IForOfState`               |
-|  `width `                | defines combo width                               | string                      |
-|  `height`                | defines combo height                              | string                      |
-|  `itemsMaxHeight `       | defines drop down maximum height                  | number                      |
-|  `itemsWidth `           | defines drop down width                           | string                      |
-|  `itemHeight `           | defines drop down item height                     | number                      |
-|  `placeholder `          | defines the "empty value" text                    | string                      |
-|  `searchPlaceholder `    | defines the placeholder text for search input     | string                      |
-|  `collapsed`             | gets drop down state                              | boolean                     |
-|  `disabled`              | defines whether the control is active or not      | boolean                     |
-|  `ariaLabelledBy`        | defines label ID related to combo                 | string                      |
-|  `type`                  | defines type of combo - "line", "box", "border", "search"                                        | string                      |
-|  `valid`                 | gets if control is valid, when used in a form     | boolean                     |
-
-
-### Outputs
-<div class="divider--half"></div>
-
-| Name                | Description                                                             | Cancelable   | Parameters                              |
-|------------------   |-------------------------------------------------------------------------|------------- |-----------------------------------------|
-| `onSelectionChange` | Emitted when item selection is changing, before the selection completes | true         | { oldSelection: `Array<any>`, newSelection: `Array<any>`, event: Event } |
-| `onSearchInput`     | Emitted when the search input's event is triggered             | false        | { searchValue: `string` }               |
-| `onAddition`        | Emitted when an item is being added to the data collection              | false        | { oldCollection: `Array<any>`, addedItem: `<any>`, newCollection: `Array<any>` }|
-| `onDataPreLoad`     | Emitted when new chunk of data is loaded from the virtualization        | false        | { event: Event }                        |
-| `onOpening`   | Emitted before the dropdown is opened                                   | false        | { event: Event }                        |
-| `onOpened`    | Emitted after the dropdown is opened                                    | false        | { event: Event }                        |
-| `onClosing`   | Emitted before the dropdown is closed                                   | false        | { event: Event }                        |
-| `onClosed`    | Emitted after the dropdown is closed                                    | false        | { event: Event }                        |
-
-### Methods
-<div class="divider--half"></div>
-
-| Name             | Description                 | Return type          | Parameters                  |
-|----------------- |-----------------------------|----------------------|-----------------------------|
-| `open`           | Opens drop down             | `void`               | `None`                      |
-| `close`          | Closes drop down            | `void`               | `None`                      |
-| `toggle`         | Toggles drop down           | `void`               | `None`                      |
-| `selectedItems`  | Get current selection state | `Array<any>`         | `None`                      |
-| `selectItems`    | Select defined items        | `void`               | items: `Array<any>`, clearCurrentSelection: `boolean` |
-| `deselectItems`  | Deselect defined items      | `void`               | items: `Array<any>`         |
-| `selectAllItems` | Select all (filtered) items | `void`               | ignoreFilter?: `boolean` - if `true` selects **all** values |
-| `deselectAllItems` | Deselect (filtered) all items | `void`           | ignoreFilter?: `boolean` - if `true` deselects **all** values |
+* IgxComboComponent [**API Reference**]({environment:angularApiUrl}/classes/igxcombocomponent.html) and
+[**Themes Reference**]({environment:sassApiUrl}/index.html#themes-mixin-igx-combo).
 
 ## Additional Resources
 <div class="divider--half"></div>
@@ -216,6 +164,7 @@ Defining a combo's groupKey option will group the items, according to the provid
 * [Template Driven Forms Integration](input_group.md)
 * [Reactive Forms Integration](input_group_reactive_forms.md)
 * [Cascading Scenario](combo_cascading.md)
+* [IgxSwitch]({environment:angularApiUrl}/classes/igxswitchcomponent.html)
 
 Our community is active and always welcoming to new ideas.
 
