@@ -53,7 +53,7 @@ import {
 export class AppModule {}
 ```
 
-注: **igx-circular-bar** が各段階で `{currentValue: 65, previousValue: 64}` オブジェクトを出力する `onProgressChanged` イベントを発生します。
+注: **igx-circular-bar** が各段階で `{currentValue: 65, previousValue: 64}` オブジェクトを出力する [`onProgressChanged`]({environment:angularApiUrl}/classes/igxcircularprogressbarcomponent.html#onprogresschanged) イベントを発生します。
 
 ```html
 <section class="sample-content">
@@ -119,19 +119,7 @@ export class AppModule {}
 <div class="divider--half"></div>
 
 ### API
-| 名前   |       型      |  説明 |
-|:----------|:-------------:|:------|
-| `max` |  number | 渡すことができる最大値を設定します。デフォルト `max` 値は 100 です。 |
-| `value` |  number | 完了した位置を示す値を設定します。 |
-| `animate` |  boolean | 進行状況バーにアニメーションがあるかどうか。 |
-| `textVisibility` | boolean | テキストを表示するかどうかを設定します。デフォルトで `true` に設定されます。 |
-| `text` | string | 円形プログレスバー内に表示するテキストを設定します。設定されていない場合、デフォルトでパーセンテージを表示します。 |
 <div class="divider--half"></div>
 
-### メソッド
-| 名前   |  説明 |
-|:----------|:------|
-| `getValue()` | 最小値 (0) および最大値の間の進行状況バーに渡された値を返します。 |
-| `getPercentValue()` | 渡された値に基づいてパーセンテージを計算します。 |
-| `onProgressChanged` | 進行状況の変更をトラックするために処理可能な公開イベント。 |
-<div class="divider--half"></div>
+* [IgxCircularProgressBarComponent]({environment:angularApiUrl}/classes/igxcircularprogressbarcomponent.html)
+* [IgxCircularProgressBarComponent Styles]({environment:sassApiUrl}/index.html#function-igx-progress-circular-theme)

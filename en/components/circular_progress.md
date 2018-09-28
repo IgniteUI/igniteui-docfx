@@ -48,7 +48,7 @@ import {
 })
 export class AppModule {}
 ```
-Notice that the **igx-circular-bar** emits `onProgressChanged` event that outputs an object that gives us `{currentValue: 65, previousValue: 64}` on each step.
+Notice that the **igx-circular-bar** emits [`onProgressChanged`]({environment:angularApiUrl}/classes/igxcircularprogressbarcomponent.html#onprogresschanged) event that outputs an object that gives us `{currentValue: 65, previousValue: 64}` on each step.
 
 ```html
 <section class="sample-content">
@@ -113,19 +113,7 @@ And now if we set up everything correctly we should have the folllowing displaye
 <div class="divider--half"></div>
 
 ### API
-| Name   |       Type      |  Description |
-|:----------|:-------------:|:------|
-| `max` |  number | Set maximum value that can be passed. Default `max` value is 100. |
-| `value` |  number | Set value that indicates the completed bar position. |
-| `animate` |  boolean | animation on progress bar. |
-| `textVisibility` | boolean | Set the text to be visible. By default it is set to `true`. |
-| `text` | string | Sets the text to displayed inside the circular bar. Defaults to percentage representation of the value if not set. |
 <div class="divider--half"></div>
 
-### Methods
-| Name   |  Description |
-|:----------|:------|
-| `getValue()` | Return passed value to progress bar to be in range between min(0) and max. |
-| `getPercentValue()` | Calculate the percentage based on passed value. |
-| `onProgressChanged` | Exposed event, which could be handled to track progress changing |
-<div class="divider--half"></div>
+* [IgxCircularProgressBarComponent]({environment:angularApiUrl}/classes/igxcircularprogressbarcomponent.html)
+* [IgxCircularProgressBarComponent Styles]({environment:sassApiUrl}/index.html#function-igx-progress-circular-theme)
