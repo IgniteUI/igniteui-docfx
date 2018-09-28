@@ -177,7 +177,7 @@ const column = this.grid.getColumnByName("User");
 column.bodyTemplate = this.smallView;
 ```
 
-Column properties can also be set in code in the [**initColumns**]({environment:angularApiUrl}/classes/igxgridcomponent.html#oncolumninit) event which is emitted when the columns are initialized in the grid.
+Column properties can also be set in code in the [`initColumns`]({environment:angularApiUrl}/classes/igxgridcomponent.html#oncolumninit) event which is emitted when the columns are initialized in the grid.
 
 ```typescript
 public initColumns(column: IgxGridColumn) {
