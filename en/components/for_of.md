@@ -183,63 +183,6 @@ chunkLoading(evt) {
     });
 }
 ```
-## API
+## API References
 
-### Inputs
-
-Below is the list of all inputs that the developers may set to configure the [`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxforof) look/behavior:
-| Name | Type | Description |
-| :--- |:--- | :--- |
-| `igxForOf` | any[] | The data to be virtualized |
-| `igxForScrollOrientation` | string | Virtualization direction - "horizontal" or "vertical" |
-| `igxForScrollContainer` | any | The container where the vertical and horizontal scrollbars will be created, the is useful when nesting the directive and for cases where the scrolling container is not going to be the direct parent |
-| `igxForContainerSize` | any | Specifies the container size |
-| `igxForItemSize` | any | Specifies the item size, when the virtualization is vertical it is used as height and as width when the virtualization is horizontal. It is mostly used for the vertical direction, because for the horizontal width it is possible to have items with different widhts |
-
-### Accessors
-
-List of public accessors that the developers may use to get information from the [`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxforof):
-| Name | Type | Description |
-| :--- |:--- | :--- |
-| `state`            | IgxForState | The current state of the directive. It contains `startIndex` and `chunkSize` |
-| `state.startIndex` | number      | The index of the item at which the current visible chunk begins   |
-| `state.chunkSize`  | number      | The number of items the current visible chunk holds               |
-| `totalItemCount`   | number      | The total count of the virtual data items, when using remote service     |
-
-
-### Local Variables
-
-List of exported values by the [`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxforof) that can be aliased to local variables:
-| Name        | Type    | Description                                           |
-| :---------- |:------- | :---------------------------------------------------- |
-| `$implicit` | T       | The value of the individual items in the iterable     |
-| `index`     | number  | The index of the current item in the iterable.        |
-
-<div class="divider--half"></div>
-
-### Outputs
-
-A list of the events emitted by the **igx-for**:
-
-| Name              | Description                                                          |
-| :---------------- | :------------------------------------------------------------------- |
-| _Event emitters_  | _Notify for a change_                                                |
-| `OnChunkLoad`      | Used when scrolled to emit the loaded data item                      |
-| `OnChunkPreload`   | Used when scrolled to emit the data item which is about to be loaded |
-
-
-### Methods
-
-Here is a list of all public methods exposed by the **igx-for**:
-
-| Signature       | Description                     |
-| :-------------- | :------------------------------ |
-| `scrollNext()`  | Scrolls by one item into the  appropriate  next direction |
-| `scrollPrev()`  | Scrolls by one item into the  appropriate  previous direction|
-| `scrollTo(index)`  | Scrolls to the specified index |
-
-## Limitations
-
-| Name  | Description | Status |
-| :---- | :---------- | :----- |
-| Content Height Limitation | Browsers currently have height limitation for DOM elements. Because of that the total height of the rows shouldn't exceed the height limitation of the browsers. Otherwise there may be unexpected changes in behavior of [`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxforof). For example Internet Explorer 11 has height limitation of 1 533 916 pixels, which for rows with height 50px means no more than 30 678 rows. | Fix planned |
+* [`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxforof)
