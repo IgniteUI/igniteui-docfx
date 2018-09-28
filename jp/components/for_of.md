@@ -7,7 +7,7 @@ _language: ja
 
 ## Virtual For ディレクティブ
 
-Ignite UI for Angular で、大量データをテンプレート化するために `ngForOf` の代わりに `igxForOf` を使用できます。`igxForOf` は、DOM 描画およびメモリ使用を最適化するために仮想化を使用します。仮想化はページング機能のようにデータをより小さいチャンクに分割します。このチャンクは、ユーザーがデータを水平/垂直にスクロールするときにコンテナー ビューポートで切り替えます。ページングの動作との違いは、仮想化が通常のスクロールバーの動作を装うことです。ディレクティブはスクロール可能なコンテナーを作成して、データの小さい部分を描画します。`igx-grid` で使用され、仮想化された `igx-list` を作成するために使用できます
+Ignite UI for Angular で、大量データをテンプレート化するために [`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxforof) の代わりに [`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxforof) を使用できます。[`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxforof) は、DOM 描画およびメモリ使用を最適化するために仮想化を使用します。仮想化はページング機能のようにデータをより小さいチャンクに分割します。このチャンクは、ユーザーがデータを水平/垂直にスクロールするときにコンテナー ビューポートで切り替えます。ページングの動作との違いは、仮想化が通常のスクロールバーの動作を装うことです。ディレクティブはスクロール可能なコンテナーを作成して、データの小さい部分を描画します。[`igxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) で使用され、仮想化された [`igx-list`]({environment:angularApiUrl}/classes/igxlistcomponent.html) を作成するために使用できます
 
 
 ### デモ
@@ -22,7 +22,7 @@ Ignite UI for Angular で、大量データをテンプレート化するため�
 
 ### 依存関係
 
-`igxFor` ディレクティブが `NgModule` としてエクスポートされるため、アプリケーションで `AppModule` に _IgxForOfModule_ をインポートする必要があります。
+[`igxFor`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxforof) ディレクティブが `NgModule` としてエクスポートされるため、アプリケーションで `AppModule` に _IgxForOfModule_ をインポートする必要があります。
 
 ```typescript
 // app.module.ts
@@ -84,7 +84,7 @@ export class AppModule {}
 </table>
 ```
 
-***注:*** `igxForOf` テンプレートの親コンテナーで関連するディメンション (垂直の場合は `height` で、水平の場合は `width`) を設定し、`overflow: hidden` および `position: relative` の CSS ルールを適用する必要があります。スムーズ スクロール動作が、表示されたままの場合にページのその他の部分に視覚的に影響を与えることが可能なコンテンツ オフセットによって実装されるためです。
+***注:*** [`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxforof) テンプレートの親コンテナーで関連するディメンション (垂直の場合は `height` で、水平の場合は `width`) を設定し、`overflow: hidden` および `position: relative` の CSS ルールを適用する必要があります。スムーズ スクロール動作が、表示されたままの場合にページのその他の部分に視覚的に影響を与えることが可能なコンテンツ オフセットによって実装されるためです。
 
 #### 水平仮想化および垂直仮想化
 
@@ -107,7 +107,7 @@ export class AppModule {}
 ```
 ### リモート サービスにバインドされる igxFor
 
-`igxForOf` ディレクティブはリモート サービスにバインドできます。 `Observeable` プロパティを使用する必要があります。以下の例は `remoteData` プロパティです。また、`chunkLoading` イベントを使用してデータへの要求をトリガーします。
+[`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxforof) ディレクティブはリモート サービスにバインドできます。 `Observeable` プロパティを使用する必要があります。以下の例は `remoteData` プロパティです。また、`chunkLoading` イベントを使用してデータへの要求をトリガーします。
 
 ```html
 <div style='height: 500px; overflow: hidden; position: relative;'>
@@ -122,7 +122,7 @@ export class AppModule {}
 </div>
 ```
 
-また、`totalItemCount` プロパティを `igxForOf` インスタンスに設定する必要があります。
+また、`totalItemCount` プロパティを [`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxforof) インスタンスに設定する必要があります。
 
 ```typescript
 this.virtDirRemote.totalItemCount = data["@odata.count"];
@@ -135,7 +135,7 @@ this.virtDirRemote.totalItemCount = data["@odata.count"];
 public virtDirRemote: IgxForOfDirective<any>;
 ```
 
-最初のチャンクを読み込む要求の後に `totalItemCount` を設定します。
+最初のチャンクを読み込む要求の後に [`totalItemCount`]({environment:angularApiUrl}/classes/igxforofdirective.html#totalitemcount) を設定します。
 
 ```typescript
 public ngAfterViewInit() {
@@ -145,7 +145,7 @@ public ngAfterViewInit() {
 }
 ```
 
-データを要求する際に `startIndex` および `chunkSize` を提供する `IgxForOfState` インターフェイスを使用できます。注: 最初の chunkSize は 0 です。最初に読み込んだ部分のサイズを指定する必要があります。最適な値は `igxForContainerSize` / `igxForItemSize` です。
+データを要求する際に [`startIndex`]({environment:angularApiUrl}/classes/igxforofdirective.html#state.startindex) および [`chunkSize`]({environment:angularApiUrl}/classes/igxforofdirective.html#state.chunksize) を提供する [`IgxForOfState`]({environment:angularApiUrl}/classes/igxforofdirective.html#state) インターフェイスを使用できます。注: 最初の chunkSize は 0 です。最初に読み込んだ部分のサイズを指定する必要があります。最適な値は [`igxForContainerSize`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxforcontainersize) / [`igxForItemSize`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxforitemsize)) です。
 
 ```typescript
 public getData(data?: IForOfState, cb?: (any) => void): any {
@@ -190,67 +190,6 @@ chunkLoading(evt) {
     });
 }
 ```
-## API
+## API References
 
-### 入力
-
-`igxFor` の外観および動作を構成するには、以下の入力を使用します。
-
-| 名前 | 型 | 説明 |
-| :--- |:--- | :--- |
-| `igxForOf` | any[] | 仮想化するデータ |
-| `igxForScrollOrientation` | string | 仮想化の方向 - "horizontal" または "vertical" |
-| `igxForScrollContainer` | any | 垂直および水平スクロールバーが作成されるコンテナー。ディレクティブをネストするか、スクロール コンテナーが直接の親ではない場合に便利です。 |
-| `igxForContainerSize` | any | コンテナー サイズを指定します。 |
-| `igxForItemSize` | any | 項目のサイズを指定します。仮想化が垂直方向の場合、高さのサイズです。仮想化が水平方向の場合、このサイズは幅です。水平方向の場合は項目が異なる幅を持つことが可能なため、通常は垂直方向で使用されます。 |
-
-
-### アクセサー
-
-以下は、`igxForOf` から情報を取得するための公開用アクセサーのリストです。
-
-| 名前 | 型 | 説明 |
-| :--- |:--- | :--- |
-| `state`            | IgxForState | ディレクティブの現在状態。`startIndex` および `chunkSize` を含みます。 |
-| `state.startIndex` | number      | 現在の表示チャンクが開始する項目のインデックス。    |
-| `state.chunkSize`  | number      | 現在の表示チャンクに含まれる項目の数。                |
-| `totalItemCount`   | number      | リモート サービスを使用する場合、仮想データ項目の合計数。               |
-
-
-### ローカル変数
-
-`igxForOf` にエクスポートされる、ローカル変数にエイリアス可能な値のリスト。
-
-| 名前        | 型    | 説明                                           |
-| :---------- |:------- | :---------------------------------------------------- |
-| `$implicit` | T       | 列挙子に含まれる項目の値。     |
-| `index`     | number  | 列挙子の現在項目のインデックス。        |
-
-<div class="divider--half"></div>
-
-### 出力
-
-**igx-for** によって発生されるイベントのリスト:
-
-| 名前              | 説明                                                          |
-| :---------------- | :------------------------------------------------------------------- |
-| イベント発生  | 変更の通知                                                |
-| `OnChunkLoad`      | スクロール時、読み込んだデータ項目を発生します。                     |
-| `OnChunkPreload`   | スクロール時、読み込むデータ項目を発生するために使用されます。 |
-
-
-### メソッド
-
-**igx-for** によって公開されるすべてのパブリック メソッドのリスト:
-
-| 構文       | 説明                     |
-| :-------------- | :------------------------------ |
-| `scrollNext()`  | 「次」の方向に 1 項目スクロールします。 |
-| `scrollPrev()`  | 「前」の方向に 1 項目スクロールします。|
-| `scrollTo(index)`  | 指定されたインデックスへスクロールします。 |
-
-## 制限
-
-| 名前  | 説明 | 状態 |
-| :---- | :---------- | :----- |
-| コンテンツの高さ制限 | ブラウザーは現在 DOM 要素に高さの制限があります。そのため、行の高さの合計をブラウザーの高さの制限より大きくする必要があります。より大きくなる場合、`igxForOf` が正しく動作しない可能性があります。たとえば、Internet Explorer 11 の高さの制限は 1,533,916 ピクセルです。つまり、高さが 50px の行の制限は 30,678 行です。 | 修正予定 |
+* [`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxforof)
