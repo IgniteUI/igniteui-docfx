@@ -19,7 +19,7 @@ The Grid component in Ignite UI for Angular provides you a default cell template
 </div>
 <div class="divider--half"></div>
 
-In order to be able to enter edit mode for specific cell, you should first set the column to be **editable**. If you want to use a data type specific *edit templates*, you should specify the column **dataType** property. So let's now see what are the default templates for each type:
+In order to be able to enter edit mode for specific cell, you should first set the column to be [**editable**]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable). If you want to use a data type specific *edit templates*, you should specify the column [**dataType**]({environment:angularApiUrl}/classes/igxcolumncomponent.html#datatype) property. So let's now see what are the default templates for each type:
 
  - For `string` data type, default template is using **igxInput**
  - For `number` data type, default template is using **igxInput type="number"**, so if you try to update cell to a value which can not be parsed to a number your change is going to be discarded, and the value in the cell will be set to **0**.
@@ -57,7 +57,7 @@ You can also modify the cell value through the IgxGrid API but only if primary i
 ```
 Please notice that if the cell you want to update is outside grid's display container the new value will not be submitted.
 
-Another way to update cell is directly through `update` method of IgxCellComponent:
+Another way to update cell is directly through [`update`]({environment:angularApiUrl}/classes/igxgridcellcomponent.html#update) method of [`IgxGridCellComponent`]({environment:angularApiUrl}/classes/igxgridcellcomponent.html):
 
 ```typescript
 ...
@@ -76,11 +76,11 @@ If you want to define a custom template which will be applied when the cell is e
 > [!NOTE]
 > Please keep in mind that when you perform some **CRUD operation** all of the applied pipes like **filtering**, **sorting** and **grouping** will be re-applied and your view will be automatically updated.
 
-The `IgxGridComponent` provides a straigtforward API for basic CRUD operations.
+The [`IgxGridComponent`]({environment:angularApiUrl}/classes/igxgridcomponent.html) provides a straigtforward API for basic CRUD operations.
 
 #### Adding a new record
 
-The grid component exposes the `addRow` method which will add the provided data to the data source itself.
+The grid component exposes the [`addRow`]({environment:angularApiUrl}/classes/igxgridcomponent.html#addrow) method which will add the provided data to the data source itself.
 
 ```typescript
 // Adding a new record
@@ -91,7 +91,7 @@ this.grid.addRow(record);
 
 #### Updating data in the grid
 
-Updating data in the grid is achieved through `updateRow` and `updateCell` methods but **only if primary key for the grid is defined**. You can also directly update a cell and row value through their `update` method.
+Updating data in the grid is achieved through [`updateRow`]({environment:angularApiUrl}/classes/igxgridcomponent.html#updaterow) and [`updateCell`]({environment:angularApiUrl}/classes/igxgridcomponent.html#updatecell) methods but **only if primary key for the grid is defined**. You can also directly update a cell and row value through their [`update`]({environment:angularApiUrl}/classes/igxgridcellcomponent.html#update) method.
 
 ```typescript
 // Updating the whole row
@@ -110,7 +110,7 @@ row.update(newData);
 
 #### Deleting data from the grid
 
-Please keep in mind that `deleteRow()` method will remove the specified row only if primary key is defined.
+Please keep in mind that [`deleteRow()`]({environment:angularApiUrl}/classes/igxgridcomponent.html#deleterow) method will remove the specified row only if primary key is defined.
 
 ```typescript
 // Delete row through Grid API
@@ -125,6 +125,10 @@ These can be wired to user interactions, not necessarily related to the **igx-gr
 ```
 
 <div class="divider--half"></div>
+
+### API
+* [IgxGridCellComponent]({environment:angularApiUrl}/classes/igxgridcellcomponent.html)
+* [IgxGridRowComponent]({environment:angularApiUrl}/classes/igxgridrowcomponent.html)
 
 ### Additional Resources
 <div class="divider--half"></div>
