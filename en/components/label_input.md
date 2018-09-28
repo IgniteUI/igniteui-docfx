@@ -26,7 +26,7 @@ The default styling of the Label and Input directives follows the text fields sp
 > [!NOTE]
 > To use [`igxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html) and [`igxLabel`]({environment:angularApiUrl}/classes/igxlabeldirective.html), you have to wrap them in an `<igx-input-group>` container.
 
-To get started with the Ignite UI for Angular Label & Input, let's first import the [**IgxInputGroupModule**]({environment:angularApiUrl}/classes/igxinputgroupmodule.html) in our **app.module.ts** file:
+To get started with the Ignite UI for Angular Label & Input, let's first import the [`IgxInputGroupModule`]({environment:angularApiUrl}/classes/igxinputgroupmodule.html) in our **app.module.ts** file:
 
 ```typescript
 // app.module.ts
@@ -102,7 +102,6 @@ You can read about the Input Group component in a separate topic [here](input_gr
 ## API References
 * [IgxInputDirective]({environment:angularApiUrl}/classes/igxinputdirective.html)
 * [IgxLabelDirective]({environment:angularApiUrl}/classes/igxlabeldirective.html)
-* [IgxInputGroupModule]({environment:angularApiUrl}/classes/igxinputgroupmodule.html)
 * [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
 
 ## Additional Resources

@@ -22,7 +22,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ### Usage
 
-To get started with the Ignite UI for Angular Avatar, let's first import the [**IgxAvatarModule**]({environment:angularApiUrl}/classes/igxavatarmodule.html) in the **app.module.ts** file:
+To get started with the Ignite UI for Angular Avatar, let's first import the [`IgxAvatarModule`]({environment:angularApiUrl}/classes/igxavatarmodule.html) in the **app.module.ts** file:
 
 ```typescript
 // app.module.ts
@@ -105,8 +105,8 @@ Analogically, the avatar can display an icon via the [`icon`]({environment:angul
 ### API References
 <div class="divider--half"></div>
 
-* [IgxAvatarModule]({environment:angularApiUrl}/classes/igxavatarmodule.html)
 * [IgxAvatarComponent]({environment:angularApiUrl}/classes/igxavatarcomponent.html)
+* [IgxAvatarComponent Styles]({environment:sassApiUrl}/index.html#function-igx-avatar-theme)
 
 ### Additional Resources
 <div class="divider--half"></div>

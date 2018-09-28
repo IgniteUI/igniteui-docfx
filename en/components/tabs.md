@@ -22,7 +22,7 @@ The [`igx-tabs`]({environment:angularApiUrl}/classes/igxtabscomponent.html) comp
 
 ### Usage
 
-To get started with the Ignite UI for Angular Tabs component, let's first import the [**IgxTabsModule**]({environment:angularApiUrl}/classes/igxtabsmodule.html) in the **app.module.ts** file.
+To get started with the Ignite UI for Angular Tabs component, let's first import the [`IgxTabsModule`]({environment:angularApiUrl}/classes/igxtabsmodule.html) in the **app.module.ts** file.
 
 ```typescript
 // app.module.ts
@@ -396,12 +396,12 @@ const routes: Routes = [
 ### API References
 <div class="divider"></div>
 
-* [IgxAvatarModule]({environment:angularApiUrl}/classes/igxavatarmodule.html)
-* [IgxCardModule]({environment:angularApiUrl}/classes/igxcardmodule.html)
-* [IgxIconModule]({environment:angularApiUrl}/classes/igxiconmodule.html)
-* [IgxNavbarModule]({environment:angularApiUrl}/classes/igxnavbarmodule.html)
-* [IgxTabsModule]({environment:angularApiUrl}/classes/igxtabsmodule.html)
+* [IgxAvatarComponent]({environment:angularApiUrl}/classes/igxavatarcomponent.html)
+* [IgxCardComponent]({environment:angularApiUrl}/classes/igxcardcomponent.html)
+* [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
+* [IgxNavbarComponent]({environment:angularApiUrl}/classes/igxnavbarcomponent.html)
 * [IgxTabsComponent]({environment:angularApiUrl}/classes/igxtabscomponent.html)
+* [IgxTabsComponent Styles]({environment:sassApiUrl}/index.html#function-igx-tabs-theme)
 * [IgxTabsGroupComponent]({environment:angularApiUrl}/classes/igxtabsgroupcomponent.html)
 * [IgxTabItemComponent]({environment:angularApiUrl}/classes/igxtabitemcomponent.html)
 

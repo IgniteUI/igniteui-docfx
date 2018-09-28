@@ -22,7 +22,7 @@ By applying [`igxMask`]({environment:angularApiUrl}/classes/igxmaskdirective.htm
 
 ### Usage
 [`igxMask`]({environment:angularApiUrl}/classes/igxmaskdirective.html) directive is used on an input of type **text**.
-To get started with the Ignite UI for Angular Mask directive, let's first import the [**IgxMaskModule**]({environment:angularApiUrl}/classes/igxmaskmodule.html) and [**IgxInputGroupModule**]({environment:angularApiUrl}/classes/igxinputgroupmodule.html) in our **app.module.ts** file.
+To get started with the Ignite UI for Angular Mask directive, let's first import the [`IgxMaskModule`]({environment:angularApiUrl}/classes/igxmaskmodule.html) and [`IgxInputGroupModule`]({environment:angularApiUrl}/classes/igxinputgroupmodule.html) in our **app.module.ts** file.
 
 ```typescript
 // app.module.ts
@@ -216,11 +216,11 @@ export class Person {
 <div class="divider--half"></div>
 
 * [IgxInputDirective]({environment:angularApiUrl}/classes/igxinputdirective.html)
-* [IgxInputGroupModule]({environment:angularApiUrl}/classes/igxinputgroupmodule.html)
+* [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
 * [IgxLabelDirective]({environment:angularApiUrl}/classes/igxlabeldirective.html)
 * [IgxMaskDirective]({environment:angularApiUrl}/classes/igxmaskdirective.html)
 * [IgxPrefixDirective]({environment:angularApiUrl}/classes/igxprefixdirective.html)
-* [IgxSnackbarModule]({environment:angularApiUrl}/classes/igxsnackbarmodule.html)
+* [IgxSnackbarComponent]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html)
 
 ### Additional Resources
 <div class="divider--half"></div>

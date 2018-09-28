@@ -58,7 +58,6 @@ public onColumnMovingEnd(event) {
 * [IColumnMovingStartEventArgs]({environment:angularApiUrl}/interfaces/icolumnmovingstarteventargs.html)
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
-* [IgxGridModule]({environment:angularApiUrl}/classes/igxgridmodule.html)
 
 ### Additional Resources
 <div class="divider--half"></div>

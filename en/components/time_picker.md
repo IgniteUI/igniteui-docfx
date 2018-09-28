@@ -19,7 +19,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ### Usage
 
-To get started with the Ignite UI for Angular Time Picker, let's first import the [**IgxTimePickerModule**]({environment:angularApiUrl}/classes/igxtimepickermodule.html) in our **app.module.ts** file. Note that the IgxTimePicker is also dependent on the **BrowserAnimationsModule**, so it needs to be added to the AppModule as well:
+To get started with the Ignite UI for Angular Time Picker, let's first import the [`IgxTimePickerModule`]({environment:angularApiUrl}/classes/igxtimepickermodule.html) in our **app.module.ts** file. Note that the IgxTimePicker is also dependent on the **BrowserAnimationsModule**, so it needs to be added to the AppModule as well:
 
 ```typescript
 // app.module.ts
@@ -191,14 +191,14 @@ And there we have it:
 ### API References
 <div class="divider--half"></div>
 
-* [IgxIconModule]({environment:angularApiUrl}/classes/igxiconmodule.html)
+* [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
 * [IgxInputDirective]({environment:angularApiUrl}/classes/igxinputdirective.html)
-* [IgxInputGroupModule]({environment:angularApiUrl}/classes/igxinputgroupmodule.html)
+* [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
 * [IgxLabelDirective]({environment:angularApiUrl}/classes/igxlabeldirective.html)
 * [IgxPrefixDirective]({environment:angularApiUrl}/classes/igxprefixdirective.html)
 * [IgxSuffixDirective]({environment:angularApiUrl}/classes/igxsuffixdirective.html)
 * [IgxTimePickerComponent]({environment:angularApiUrl}/classes/igxtimepickercomponent.html)
-* [IgxTimePickerModule]({environment:angularApiUrl}/classes/igxtimepickermodule.html)
+* [IgxTimePickerComponent Styles]({environment:sassApiUrl}/index.html#function-igx-time-picker-theme)
 * [IgxTimePickerTemplateDirective]({environment:angularApiUrl}/classes/igxtimepickertemplatedirective.html)
 
 ### Additional Resources

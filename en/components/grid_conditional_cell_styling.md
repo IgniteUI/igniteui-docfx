@@ -68,7 +68,6 @@ Use **::ng-deep** or **`ViewEncapsulation.None`** to force the custom styles dow
 
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
-* [IgxGridModule]({environment:angularApiUrl}/classes/igxgridmodule.html)
 
 ### Additional Resources
 <div class="divider--half"></div>

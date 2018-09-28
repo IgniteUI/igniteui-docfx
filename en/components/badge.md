@@ -21,7 +21,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 > To start using Ignite UI for Angular components in your own projects, make sure you have configured all necessary dependencies and have performed the proper setup of your project. You can learn how to do this in the [**installation**](https://www.infragistics.com/products/ignite-ui-angular/getting-started#installation) topic.
 
 ###Usage
-To get started with the Ignite UI for Angular Badge, let's first import the [**IgxBadgeModule**]({environment:angularApiUrl}/classes/igxbadgemodule.html) in the **app.module.ts** file:
+To get started with the Ignite UI for Angular Badge, let's first import the [`IgxBadgeModule`]({environment:angularApiUrl}/classes/igxbadgemodule.html) in the **app.module.ts** file:
 
 ```typescript
 // app.module.ts
@@ -219,10 +219,11 @@ If the sample is configured properly, a list of members should be displayed and 
 ### API References
 <div class="divider--half"></div>
 
-* [IgxAvatarModule]({environment:angularApiUrl}/classes/igxavatarmodule.html)
+* [IgxAvatarComponent]({environment:angularApiUrl}/classes/igxavatarcomponent.html)
 * [IgxBadgeComponent]({environment:angularApiUrl}/classes/igxbadgecomponent.html)
-* [IgxBadgeModule]({environment:angularApiUrl}/classes/igxbadgemodule.html)
-* [IgxListModule]({environment:angularApiUrl}/classes/igxlistmodule.html)
+* [IgxBadgeComponent Styles]({environment:sassApiUrl}/index.html#function-igx-badge-theme)
+* [IgxListComponent]({environment:angularApiUrl}/classes/igxlistcomponent.html)
+* [IgxListItemComponent]({environment:angularApiUrl}/classes/igxlistitemcomponent.html)
 * [Type]({environment:angularApiUrl}/enums/type.html)
 
 ### Additional Resources

@@ -20,7 +20,7 @@ The [**igx-buttongroup**]({environment:angularApiUrl}/classes/igxbuttongroupcomp
 
 ### Dependencies
 
-The Button Group is exported as an `NgModule`, thus you will need to import the [**IgxButtonGroupModule**]({environment:angularApiUrl}/classes/igxbuttongroupmodule.html) inside your `AppModule`:
+The Button Group is exported as an `NgModule`, thus you will need to import the [`IgxButtonGroupModule`]({environment:angularApiUrl}/classes/igxbuttongroupmodule.html) inside your `AppModule`:
 
 ```typescript
 // app.module.ts
@@ -121,9 +121,9 @@ public ngOnInit() {
 ### API References
 <div class="divider--half"></div>
 
-* [IgxButtonGroupModule]({environment:angularApiUrl}/classes/igxbuttongroupmodule.html)
-* [IgxButtonGroupComponent]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html)
 * [IgxButtonDirective]({environment:angularApiUrl}/classes/igxbuttondirective.html)
+* [IgxButtonGroupComponent]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html)
+* [IgxButtonGroup Styles]({environment:sassApiUrl}/index.html#function-igx-button-group-theme)
 
 ### Additional Resources
 <div class="divider--half"></div>

@@ -19,7 +19,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ### Dependencies
 
-The Ripple Directive is exported as an `NgModule`, thus all you need to do in your application is to import the [**IgxRippleModule**]({environment:angularApiUrl}/classes/igxripplemodule.html) inside your `AppModule`:
+The Ripple Directive is exported as an `NgModule`, thus all you need to do in your application is to import the [`IgxRippleModule`]({environment:angularApiUrl}/classes/igxripplemodule.html) inside your `AppModule`:
 
 ```typescript
 // app.module.ts
@@ -108,7 +108,7 @@ for other browsers.
 <div class="divider--half"></div>
 
 * [IgxRippleDirective]({environment:angularApiUrl}/classes/igxrippledirective.html)
-* [IgxRippleModule]({environment:angularApiUrl}/classes/igxripplemodule.html)
+* [IgxRipple Styles]({environment:sassApiUrl}/index.html#function-igx-ripple-theme)
 
 ### Additional Resources
 <div class="divider--half"></div>

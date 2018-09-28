@@ -27,7 +27,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ### Usage
 
-To get started with the control, let's first import the [**IgxBottomNavModule**]({environment:angularApiUrl}/classes/igxbottomnavmodule.html) in the **app.module.ts** file:
+To get started with the control, let's first import the [`IgxBottomNavModule`]({environment:angularApiUrl}/classes/igxbottomnavmodule.html) in the **app.module.ts** file:
 
 ```typescript
 // app.module.ts
@@ -347,11 +347,12 @@ You can see the result of the code above at the beginning of this article in the
 ### API References
 <div class="divider--half"></div>
 
-* [IgxAvatarModule]({environment:angularApiUrl}/classes/igxavatarmodule.html)
+* [IgxAvatarComponent]({environment:angularApiUrl}/classes/igxavatarcomponent.html)
 * [IgxBottomNavComponent]({environment:angularApiUrl}/classes/igxbottomnavcomponent.html)
-* [IgxBottomNavModule]({environment:angularApiUrl}/classes/igxbottomnavmodule.html)
-* [IgxIconModule]({environment:angularApiUrl}/classes/igxiconmodule.html)
-* [IgxListModule]({environment:angularApiUrl}/classes/igxlistmodule.html)
+* [IgxBottomNavComponent Styles]({environment:sassApiUrl}/index.html#function-igx-bottom-nav-theme)
+* [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
+* [IgxListComponent]({environment:angularApiUrl}/classes/igxlistcomponent.html)
+* [IgxListItemComponent]({environment:angularApiUrl}/classes/igxlistitemcomponent.html)
 * [IgxTabComponent]({environment:angularApiUrl}/classes/igxtabcomponent.html)
 * [IgxTabPanelComponent]({environment:angularApiUrl}/classes/igxtabpanelcomponent.html)
 

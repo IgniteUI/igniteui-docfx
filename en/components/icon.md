@@ -22,7 +22,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ### Dependencies
 
-The Icon component is exported as an `NgModule`, thus all you need to do in your application is to import the [**IgxIconModule**]({environment:angularApiUrl}/classes/igxiconmodule.html) inside your `AppModule`:
+The Icon component is exported as an `NgModule`, thus all you need to do in your application is to import the [`IgxIconModule`]({environment:angularApiUrl}/classes/igxiconmodule.html) inside your `AppModule`:
 
 ```typescript
 // app.module.ts
@@ -78,8 +78,8 @@ You can set the icon's size through CSS. Create a custom CSS class and name it *
 ### API References
 <div class="divider--half"></div>
 
-* [IgxIconModule]({environment:angularApiUrl}/classes/igxiconmodule.html)
 * [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
+* [IgxIconComponent Styles]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
 
 ### Additional Resources
 <div class="divider--half"></div>
