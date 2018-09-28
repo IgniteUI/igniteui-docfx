@@ -57,7 +57,7 @@ export class AppModule {}
 </div>
 ```
 
-このコンテンツを表示/非表示にするには、open または close メソッドを呼び出します。
+このコンテンツを表示/非表示にするには、[open]({environment:angularApiUrl}/classes/igxtoggledirective.html#open) または [close]({environment:angularApiUrl}/classes/igxtoggledirective.html#close) メソッドを呼び出します。
 
 ```typescript
 import { IgxToggleDirective } from 'igniteui-angular'
@@ -118,7 +118,7 @@ export class AppModule {}
 </div>
 ```
 
-`igxToggle` は、[**IgxOverlayService**](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/overlay_main.html) を使用し、コンテンツの表示方法を制御するために `open` および `toggle` メソッドが任意のオーバーレイ設定を受け取ります。省略した場合は、上のサンプルのようにデフォルトのオーバーレイ設定が使用されます。
+`igxToggle` は、[**IgxOverlayService**](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/overlay_main.html) を使用し、コンテンツの表示方法を制御するために [`open`]({environment:angularApiUrl}/classes/igxtoggledirective.html#open) および [`toggle`]({environment:angularApiUrl}/classes/igxtoggledirective.html#toggle) メソッドが任意のオーバーレイ設定を受け取ります。省略した場合は、上のサンプルのようにデフォルトのオーバーレイ設定が使用されます。
 
 ```typescript
 // template.component.ts
@@ -153,7 +153,7 @@ export class AppModule {}
 
 ### トグル自動操作
 
-このメソッドの呼び出しを回避するための `onClick` ハンドラーを含む、参照トグルの状態を変更できるディレクティブがあります。この機能を使用するには、同じ **IgxToggleModule** にある **IgxToggleActionDirective** を使用します。
+このメソッドの呼び出しを回避するための `onClick` ハンドラーを含む、参照トグルの状態を変更できるディレクティブがあります。この機能を使用するには、同じ **IgxToggleModule** にある [**IgxToggleActionDirective**]({environment:angularApiUrl}/classes/igxtoggleactiondirective.html) を使用します。
 
 ```typescript
 // app.module.ts
@@ -169,7 +169,7 @@ import { IgxToggleModule, IgxButtonModule } from 'igniteui-angular'
 export class AppModule {}
 ```
 
-次にテンプレートで **IgxToggleDirective** を割り当てて **IgxToggleActionDirective** を宣言します。トリガー (トグル) として使用する要素で **IgxToggleActionDirective** を宣言します。
+次にテンプレートで [**IgxToggleDirective**]({environment:angularApiUrl}/classes/igxtoggledirective.html) を割り当てて [**IgxToggleActionDirective**]({environment:angularApiUrl}/classes/igxtoggleactiondirective.html) を宣言します。トリガー (トグル) として使用する要素で [**IgxToggleActionDirective**]({environment:angularApiUrl}/classes/igxtoggleactiondirective.html) を宣言します。
 
 ```html
 <!--template.component.html-->
@@ -232,7 +232,7 @@ export class AppModule {}
 
 ### IgxOverlayOutlet ディレクティブ
 
-**IgxOverlayOutlet** は、コンポーネント テンプレートで要素を `igxOverlay` アウトレット コンテナとしてマークする方法を提供します。ディレクティブ インスタンスは `overlay-outlet` としてエクスポートされるため、テンプレート内で割り当てることができます。
+[**IgxOverlayOutlet**]({environment:angularApiUrl}/classes/igxoverlayoutletdirective.html) は、コンポーネント テンプレートで要素を `igxOverlay` アウトレット コンテナとしてマークする方法を提供します。ディレクティブ インスタンスは `overlay-outlet` としてエクスポートされるため、テンプレート内で割り当てることができます。
 
 ```html
 <div igxOverlayOutlet #outlet="overlay-outlet"></div>
@@ -244,47 +244,13 @@ export class AppModule {}
 <custom-component #reference></custom-component>
 ```
 
-## API まとめ
-
-このトピックでは Toggle ディレクティブの使用方法について紹介しました。この動作を決定するコードでメソッドを呼び出して表示または非表示にすることができるコンテンツを作成しました。
-
-さらに適切なトグル参照を使用して同じ動作を自動的に制御するその他のディレクティブを追加しました。最後に、ヘルパー **igxToggleAction** ディレクティブに提供された ID を使用して、**igxToggle** ディレクティブを **igxNavigationService** プロバイダーに登録しました。
-
-### 入力
-以下の入力は **igxToggle** ディレクティブで利用できます。
-| 名前 | 型 | 説明 |
-| :--- | :--- | :--- |
-| `id` | Boolean | **igxNavigationService** に登録される識別子。 |
+### API まとめ
 
 <div class="divider"></div>
 
-以下の入力は **igxToggleAction** ディレクティブで利用できます。
-| 名前 | 型 | 説明 |
-| :--- | :--- | :--- |
-| `igxToggleAction` | IgxToggleDirective | 制御するトグルを受け付けます。 |
-| `igxToggleOutlet` | `IgxOverlayOutletDirective` \| `ElementRef`| ターゲット オーバレイ要素をアタッチする場所を決定します。`overlaySettings.outlet` のショートカット。|
-| `closeOnOutsideClick` | IgxToggleDirective | 外をクリックすると、トグルを閉じるかどうかを決定します。 |
-
-<div class="divider"></div>
-
-#### 出力
-以下の出力は **igxToggle** ディレクティブで利用できます。
-| 名前 | 型 | 説明 |
-| :--- | :--- | :--- |
-| `onOpening` | EventEmitter | トグル コンテナーが開く前にイベントを発生します。 |
-| `onOpened` | EventEmitter | トグル コンテナーが開いた後にイベントを発生します。 |
-| `onClosing` | EventEmitter | トグル コンテナーが閉じる前にイベントを発生します。 |
-| `onClosed` | EventEmitter | トグル コンテナーが閉じた後にイベントを発生します。 |
-
-<div class="divider"></div>
-
-#### メソッド
-以下のメソッドは **igxToggle** ディレクティブで利用できます。
-| 名前 | 型 | 説明 |
-| :--- | :--- | :--- |
-| `open` | void | トグルを開きます。 |
-| `close` | void | トグルを閉じます。 |
-| `toggle` | void | 状態によってトグルを開くか、閉じます。 |
+* [IgxToggleDirective]({environment:angularApiUrl}/classes/igxtoggledirective.html)
+* [IgxToggleActionDirective]({environment:angularApiUrl}/classes/igxtoggleactiondirective.html)
+* [IgxOverlayOutletDirective]({environment:angularApiUrl}/classes/igxoverlayoutletdirective.html)
 
 <div class="divider"></div>
 

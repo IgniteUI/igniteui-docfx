@@ -83,7 +83,7 @@ export class AppModule {}
   }
 ```
 
-次に `igx-slide` に ngFor ディレクティブを追加して HTML コンテンツを提供します。各スライドに画像も追加します。
+次に [`igx-slide`]({environment:angularApiUrl}/classes/igxslidecomponent.html) に ngFor ディレクティブを追加して HTML コンテンツを提供します。各スライドに画像も追加します。
 
 ```html
 <!-- app.component.html -->
@@ -129,7 +129,7 @@ a > igx-icon > span{
 </igx-carousel>
 ```
 
-上記のスニペットで、[プロパティ バインディング](https://angular.io/guide/template-syntax#property-binding)を使用して `loop` および `pause` 要素プロパティに値を設定します。オプションのプロパティには、スライド変更の間隔をミリ秒単位で設定する `transition` があります。コンテンツがカルーセルに自動的に変更される代わりに、ユーザーの操作によって変更されるために、このプロパティを設定しません。コンポーネントのプロパティ値が以下のコードによって設定されます。注: 自動再生を無効にするには、カルーセルの `stop` メソッドを呼び出します。
+上記のスニペットで、[プロパティ バインディング](https://angular.io/guide/template-syntax#property-binding)を使用して [`loop`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#loop) および [`pause`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#pause) 要素プロパティに値を設定します。オプションのプロパティには、スライド変更の間隔をミリ秒単位で設定する [`interval`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#interval) があります。コンテンツがカルーセルに自動的に変更される代わりに、ユーザーの操作によって変更されるために、このプロパティを設定しません。コンポーネントのプロパティ値が以下のコードによって設定されます。注: 自動再生を無効にするには、カルーセルの [`stop`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#stop) メソッドを呼び出します。
 
 ```typescript
   // app.component.ts
@@ -145,14 +145,14 @@ a > igx-icon > span{
   }
 ```
 
-プロパティを構成した後、ユーザーはカルーセルのコンテンツを変更できます。次にナビゲーションをカスタマイズし、カルーセルのインジケーターをプログレス バーと置き換えます。`onSlideChanged` イベントを処理し、**IgxLinearProgressBar** コンポーネントを使用して進行状況を示す UI を追加します。最初、**IgxLinearProgressBar** モジュールをインポートします。
+プロパティを構成した後、ユーザーはカルーセルのコンテンツを変更できます。次にナビゲーションをカスタマイズし、カルーセルのインジケーターをプログレス バーと置き換えます。[`onSlideChanged`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#onslidechanged) イベントを処理し、[**IgxLinearProgressBar**]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html) コンポーネントを使用して進行状況を示す UI を追加します。最初、**IgxLinearProgressBar** モジュールをインポートします。
 
 ```typescript
 // app.component.ts
 import { Direction, IgxCarousel, IgxLinearProgressBar } from 'igniteui-angular';
 ```
 
-モジュールをインポートした後、**IgxLinearProgressBar** をテンプレートに追加します。`max` プロパティを **app.component.ts** ファイルで定義される `total` プロパティの値に設定します。`onSlideChanged` イベントのハンドラーを追加し、進行状況のテキストを追加します。
+モジュールをインポートした後、[**IgxLinearProgressBar**]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html) をテンプレートに追加します。[`max`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#max) プロパティを **app.component.ts** ファイルで定義される [`total`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#total) プロパティの値に設定します。[`onSlideChanged`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#onslidechanged) イベントのハンドラーを追加し、進行状況のテキストを追加します。
 
 ```html
 <!-- app.component.html -->
@@ -167,7 +167,7 @@ import { Direction, IgxCarousel, IgxLinearProgressBar } from 'igniteui-angular';
 </igx-carousel>
 ```
 
-`total` および `current` プロパティの値を **ngOnInit** で更新し、リニア バーの値を `onSlideChanged` イベント ハンドラーで更新します。
+[`total`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#total) および [`current`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#current) プロパティの値を **ngOnInit** で更新し、リニア バーの値を [`onSlideChanged`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#onslidechanged) イベント ハンドラーで更新します。
 
 ```typescript
 // app.component.ts
@@ -215,7 +215,7 @@ ul.igx-carousel__indicators {
 </div>
 
 ### タップ / クリックでのアクション
-カルーセルがホーム ページ コンテンツを表示しています。ただし、スライドとのユーザー インタラクション ハンドラーを実装する必要があります。ユーザーがスライドにクリック/タップしたとき、カルーセルが新しいページまたはビューに移動することが予期されます。これには、移動するルートを設定します。ヘッダーを IgxButton と置き換え、ボタンのクリック イベントにイベント ハンドラーを追加します。
+カルーセルがホーム ページ コンテンツを表示しています。ただし、スライドとのユーザー インタラクション ハンドラーを実装する必要があります。ユーザーがスライドにクリック/タップしたとき、カルーセルが新しいページまたはビューに移動することが予期されます。これには、移動するルートを設定します。ヘッダーを [`IgxButton`]({environment:angularApiUrl}/classes/igxbuttondirective.html) と置き換え、ボタンのクリック イベントにイベント ハンドラーを追加します。
 
 ```html
 <!-- app.component.html-->
@@ -251,43 +251,12 @@ ul.igx-carousel__indicators {
 </div>
 
 ###API
-
 <div class="divider--half"></div>
 
-#### Carousel (igx-carousel)
-
-<div class="divider--half"></div>
-
-| 名前                                            |          型          | 説明                                                                                       |
-| :---------------------------------------------- | :------------------: | :----------------------------------------------------------------------------------------- |
-| `loop`                                          |       boolean        | カルーセルが最後のスライドから最初のスライドに移動するかどうか。デフォルトは `true` です。 |
-| `pause`                                         |       boolean        | カルーセルがユーザー操作の後に再生を中止するかどうか。デフォルトは `true` です。           |
-| `interval`                                      |        number        | スライド トランジション間の間隔 (ミリ秒)。                                                 |
-| `navigation`                                    |       boolean        | カルーセルに左/右のナビゲーション ボタンを描画するかどうか。デフォルトは `true` です。     |
-| `total`                                         |        number        | カルーセルが持つスライドの数。                                                             |
-| `current`                                       |        number        | 表示しているスライドのインデックス。                                                       |
-| `isPlaying`                                     |       boolean        | カルーセルが一時停止されているか、再生しているかを返します。                               |
-| `isDestroyed`                                   |       boolean        | カルーセルが破棄された (`ngOnDestroy` が呼び出された) かどうか。                           |
-| `onSlideChanged`                                |        event         | スライドの変更で発生します。                                                               |
-| `onSlideAdded`                                  |        event         | スライドがカルーセルに追加される時に発生します。                                           |
-| `onSlideRemoved`                                |        event         | スライドがカルーセルから削除される時に発生します。                                         |
-| `onCarouselPaused`                              |        event         | カルーセルが一時停止されているときに発生します。                                           |
-| `onCarouselPlaying`                             |        event         | カルーセルが再生されているときに発生します。                                               |
-| `play()`                                        |         void         | `onCarouselPlaying` イベントを発生し、スライド間のトランジションを開始します。             |
-| `stop()`                                        |         void         | `onCarouselPaused` イベントを発生し、スライド間のトランジションを中止します。              |
-| `prev()`                                        |         void         | 前のスライドに移動します。`onSlideChanged` イベントを発生します。                          |
-| `next()`                                        |         void         | 次のスライドに移動します。`onSlideChanged` イベントを発生します。                          |
-| `add(slide: IgxSlide)`                          |         void         | カルーセルにスライドを追加します。`onSlideAdded` イベントを発生します。                    |
-| `remove(slide: IgxSlide)`                       |         void         | 既存のスライドをカルーセルから削除します。`onSlideRemoved` イベントを発生します。          |
-| `get(index: Number)`                            | IgxSlide または void | 所定のインデックスのスライドまたは null を返します。                                       |
-| `select(slide: IgxSlide, direction: Direction)` |         void         | スライドおよびトランジション方向を選択します。`onSlideChanged` イベントを発生します。      |
-
-#### Slide (igx-slide)
-
-<div class="divider--half"></div>
-
-| 名前        |    型     | 説明                                                                              |
-| :---------- | :-------: | :-------------------------------------------------------------------------------- |
-| `index`     |  number   | カルーセル内のスライドのインデックス。                                            |
-| `direction` | Direction | スライドのトランジション方向。設定可能な値は `NONE`、`NEXT`、および `PREV` です。 |
-| `active`    |  boolean  | 現在のスライドがアクティブ、つまりカルーセルに表示されているかどうか。            |
+* [IgxCarouselComponent]({environment:angularApiUrl}/classes/igxcarouselcomponent.html)
+* [IgxCarouselComponent Styles]({environment:sassApiUrl}/index.html#function-igx-carousel-theme)
+* [IgxSlideComponent]({environment:angularApiUrl}/classes/igxslidecomponent.html)
+* [IgxLinearProgressBarComponent]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html)
+* [IgxLinearProgressBarComponent Styles]({environment:sassApiUrl}/index.html#function-igx-progress-linear-theme)
+* [IgxButtonDirective]({environment:angularApiUrl}/classes/igxbuttondirective.html)
+* [IgxButton Styles]({environment:sassApiUrl}/index.html#function-igx-button-theme)
