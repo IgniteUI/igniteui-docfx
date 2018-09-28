@@ -22,7 +22,7 @@ _language: ja
 > Ignite UI for Angular コンポーネントをプロジェクトに追加する前に、必要なすべての依存関係を構成し、プロジェクトのセットアップが正しく完了したことを確認してください。[**インストール**](https://jp.infragistics.com/products/ignite-ui-angular/getting-started#installation) のトピックで手順を確認できます。
 
 ###使用方法
-Ignite UI for Angular Drop Down コンポーネントを初期化する前に **IgxDropDownModule** を **app.module.ts** ファイルにインポートします。
+Ignite UI for Angular Drop Down コンポーネントを初期化する前に [IgxDropDownModule]({environment:angularApiUrl}/classes/igxdropdownmodule.html) を **app.module.ts** ファイルにインポートします。
 
 ```typescript
 // app.module.ts
@@ -38,7 +38,7 @@ import { IgxDropDownModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-選択可能な複数のオプション項目を提供するシンプルなドロップダウンを作成します。**igx-drop-down** コンポーネントと **igx-toggle** を使用してドロップダウンの開く/閉じるを有効にします。
+選択可能な複数のオプション項目を提供するシンプルなドロップダウンを作成します。**igx-drop-down** コンポーネントと [igxToggleAction]({environment:angularApiUrl}/classes/igxtoggleactiondirective.html) を使用してドロップダウンの開く/閉じるを有効にします。
 
 構成の後、すべてのオプションを  [**IgxDropDownComponent**](drop_down.md) コンポーネントに表示します。ドロップダウンは、ドロップダウン項目として複数のオプションを含みます。
 
@@ -46,9 +46,9 @@ export class AppModule {}
 <!-- dropdown.component.html -->
 
 <div class="sample-wrapper drop-down-wrapper">
-    <button igxButton="raised" (click)="toggleDropDown($event)">Options</button>
+    <button igxButton="raised" (click)="toggleDropDown($event)" [igxDropDownItemNavigation]="dropdown1">Options</button>
     <igx-drop-down #dropdown1>
-        <igx-drop-down-item [igxDropDownItemNavigation]="dropdown1" *ngFor="let item of items">
+        <igx-drop-down-item *ngFor="let item of items">
             {{ item.field }}
         </igx-drop-down-item>
     </igx-drop-down>
@@ -101,15 +101,15 @@ export class AppModule {}
 
 <div class="divider--half"></div>
 
-選択済みの項目をあらかじめ定義する場合、[**IgxDropDownComponent**](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/drop_down.html) の **igx-drop-down** `onOpening` イベントを処理します。
+選択済みの項目をあらかじめ定義する場合、[IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) の **igx-drop-down** [onOpening]({environment:angularApiUrl}/classes/igxdropdowncomponent.html#onopening) イベントを処理します。
 
 ```html
 <!-- dropdown.component.html -->
 
 <div class="sample-wrapper drop-down-wrapper">
-    <button igxButton="raised" (click)="toggleDropDown($event)">Options</button>
+    <button igxButton="raised" (click)="toggleDropDown($event)" [igxDropDownItemNavigation]="dropdown2">Options</button>
     <igx-drop-down #dropdown2 (onOpening)="onOpening($event)">
-        <igx-drop-down-item [igxDropDownItemNavigation]="dropdown2" *ngFor="let item of items">
+        <igx-drop-down-item *ngFor="let item of items">
             {{ item.field }}
         </igx-drop-down-item>
     </igx-drop-down>
@@ -160,15 +160,15 @@ export class AppModule {}
 
 <div class="divider--half"></div>
 
-`isHeader` を使用して意味的なグループ化や `disabled` を使用して非インタラクティブな項目を表示するなど、有用なビジュアル情報を提供できます。
+[isHeader]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html#isheader) を使用して意味的なグループ化や [disabled]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html#disabled) を使用して非インタラクティブな項目を表示するなど、有用なビジュアル情報を提供できます。You can also set [isSelected]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html#isselected) to a particular item to make it the selected item.
 
 ```html
 <!-- dropdown.component.html -->
 
 <div class="sample-wrapper drop-down-wrapper">
-    <button igxButton="raised" (click)="toggleDropDown($event)">Countries</button>
+    <button igxButton="raised" (click)="toggleDropDown($event)" [igxDropDownItemNavigation]="dropdown3">Countries</button>
     <igx-drop-down #dropdown3>
-        <igx-drop-down-item [igxDropDownItemNavigation]="dropdown3" *ngFor="let item of items" [disabled]="item.disabled" [isHeader]="item.header" [isSelected]="item.selected">
+        <igx-drop-down-item *ngFor="let item of items" [disabled]="item.disabled" [isHeader]="item.header" [isSelected]="item.selected">
             {{ item.field }}
         </igx-drop-down-item>
     </igx-drop-down>
@@ -221,64 +221,61 @@ export class AppModule {}
     </button>
 </div>
 
+### igxDropDownItemNavigation ディレクティブ
+
+`igxDropDown` コンポーネントのキーボード ナビゲーションを有効にするには、[igxDropDownItemNavigation]({environment:angularApiUrl}/classes/igxdropdownitemnavigationdirective.html) ディレクティブを適用します。ディレクティブをアクティブ (フォーカスした) 要素または親コンテナに適用することにより、トリガーしたすべてのイベントを処理できるようになります。デフォルトでは、igxDropDown またはその項目にフォーカスが当たらないため、たとえばディレクティブをドロップダウンを制御するボタンや入力に配置できます。
+[igxDropDownItemNavigation]({environment:angularApiUrl}/classes/igxdropdownitemnavigationdirective.html) ディレクティブ値は、ターゲット コンポーネントまたは拡張 [IgxDropDownBase]({environment:angularApiUrl}/classes/igxdropdownbase.html) クラスにする必要があります。
+
+
+以下のサンプルは、クリックによって igxDropDown インスタンスを開いたり閉じたりする例です。入力に [igxDropDownItemNavigation]({environment:angularApiUrl}/classes/igxdropdownitemnavigationdirective.html) を適用し、上矢印と下矢印の使用時にキーボード ナビゲーションを有効にします。[allowItemsFocus]({environment:angularApiUrl}/classes/igxcombodropdowncomponent.html#allowitemsfocus) が無効のデフォルトのドロップダウン動作に依存し、ボタン入力にフォーカスを維持することが可能です。
+
+
+```
+<igx-input-group [igxToggleAction]="dropdownProvince">
+    <input igxInput type="text" [igxDropDownItemNavigation]="dropdownProvince">
+</igx-input-group>
+<igx-drop-down #dropdownProvince>
+    <igx-drop-down-item *ngFor="let p of provinceData">
+        {{ p }}
+    </igx-drop-down-item>
+</igx-drop-down>
+```
+
+ディレクティブを適用すると、キーボード ナビゲーションの結果として以下の動作が実行します。
+
+| 名前 | 説明 |
+| :--- | :--- |
+| `Enter` | ドロップダウンから項目の選択後、ドロップダウンを閉じます。 |
+| `Space` | ドロップダウンから項目の選択後、ドロップダウンを閉じます。 |
+| `Esc` | ドロップダウンを閉じます。 |
+| `Arrow Down` | ターゲット コンポーネントの次の項目に移動します。|
+| `Arrow Up` | ターゲット コンポーネントの前の項目に移動します。 |
+| `End` | ターゲット コンポーネントの最後の項目に移動します。 |
+| `Home` | ターゲット コンポーネントの最初の項目に移動します。 |
+
+
+
+[allowItemsFocus]({environment:angularApiUrl}/classes/igxcombodropdowncomponent.html#allowitemsfocus) が有効な場合、ドロップダウン項目がタブ インデックスを取得し、アクティブな時にフォーカスされます。フォーカスされたドロップダウン項目がキーボード ナビゲーション時にイベントをトリガーするため、 [igxDropDownItemNavigation]({environment:angularApiUrl}/classes/igxdropdownitemnavigationdirective.html) を各ドロップダウン項目に適用する必要があります。
+
+```
+<igx-input-group [igxToggleAction]="dropdownProvince">
+    <input igxInput type="text">
+</igx-input-group>
+<igx-drop-down #dropdownProvince [allowItemsFocus]="true">
+    <igx-drop-down-item *ngFor="let p of provinceData" [igxDropDownItemNavigation]="dropdownProvince">
+        {{ p }}
+    </igx-drop-down-item>
+</igx-drop-down>
+```
+
 <div class="divider--half"></div>
 
 ### API まとめ
-以下の表は、便利な **igx-drop-down**  コンポーネントの入力、出力、およびメソッドを示します。
 
-#### 入力
-以下の入力は **igx-drop-down** コンポーネントで利用できます。
+**igx-drop-down** component [**API Reference**]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) and
+[**Themes Reference**]({environment:sassApiUrl}/index.html#mixin-igx-drop-down).
 
-| 名前 | 型 | 説明 |
-| :--- | :--- | :--- |
-| `width` | string | コントロールの幅を設定します。 |
-| `height` | string | コントロールの高さを設定します。 |
-| `allowItemsFocus` | boolean | フォーカスを取得する項目を許可します。 |
-
-<div class="divider--half"></div>
-
-#### 出力
-以下の出力は **igx-drop-down** コンポーネントで利用できます。
-
-| 名前 | キャンセル可 | 説明 | パラメーター
-| :--- | :--- | :--- | :--- |
-| `onSelection` | false | 選択を完了する前にアイテム選択が変更されるときに発生されます。| ISelectionEventArgs |
-| `onOpening` | false | ドロップダウンが開かれる前に発生されます。 |
-| `onOpened` | false | ドロップダウンが開いているときに発生します。 |
-| `onClosed` | false | ドロップダウンが閉じているときに発生します。 |
-
-#### メソッド
-以下のメソッドは **igx-drop-down** コンポーネントで利用できます。
-
-| シグネチャ | 説明 |
-| :--- | :--- | :--- |
-| `toggle()` | ドロップダウンの開く/閉じるを切り替えます。 |
-| `setSelectedItem(index: number)` |ドロップダウン項目をインデックスで選択します。 |
-| `open()` | ドロップダウンを開きます。|
-| `close()` | ドロップダウンを閉じます。 |
-
-#### ゲッター
-以下のゲッターは **igx-drop-down** コンポーネントで利用できます。
-
-| 名前 | 型 | 説明 |
-| :--- | :--- | :--- |
-| `selectedItem` | `number` | 選択項目を取得します。|
-| `items` | `IgxDropDownItemComponent[]` | ヘッダー以外のすべての項目を取得します。 |
-| `headers` | `IgxDropDownItemComponent[]` | ヘッダー項目を取得します。 |
-| `collapsed` | `boolean` | ドロップダウンが閉じたかどうかを取得します。 |
-
-以下の表は、便利な **igx-drop-down-item** コンポーネントの入力を示します。
-
-#### 入力
-以下の入力は **igx-drop-down-item** コンポーネントで利用できます。
-
-| 名前 | 型 | 説明 |
-| :--- | :--- | :--- |
-| `isHeader` | `boolean`| 項目がグループ ヘッダーかどうかを定義します。 |
-| `disabled` | `boolean`| 指定した項目が無効かどうかを定義します。 |
-| `isFocused` | `boolean`| 指定した項目がフォーカスされるかどうかを定義します。 |
-| `isSelected` | `boolean` | 指定した項目が選択されるかどうかを定義します。 |
-
+**igx-drop-down-item** component [**API Reference**]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html).
 ###その他のリソース
 
 <div class="divider--half"></div>
