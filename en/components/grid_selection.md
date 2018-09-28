@@ -97,7 +97,6 @@ public handleRowSelectionChange(args) {
 * [IgxGridComponent API]({environment:angularApiUrl}/classes/igxgridcomponent.html)
 * [IgxGridRowComponent API]({environment:angularApiUrl}/classes/igxgridrowcomponent.html)
 * [IgxGridCellComponent API]({environment:angularApiUrl}/classes/igxgridcellcomponent.html)
-
 * [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#mixin-igx-grid)
 
 ### Additional Resources
