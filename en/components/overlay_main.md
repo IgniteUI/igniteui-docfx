@@ -250,11 +250,6 @@ export class ExampleComponent {
 ## API
 
 * [IgxOverlayService] ({environment:angularApiUrl}/classes/igxoverlayservice.html)
-* [OverlaySettings] ({environment:angularApiUrl}/interfaces/overlaysettings.html)
-* [IPositionStrategy] ({environment:angularApiUrl}/interfaces/ipositionstrategy.html)
-* [PositionSettings] ({environment:angularApiUrl}/interfaces/positionsettings.html)
-* [IScrollStrategy] ({environment:angularApiUrl}/classes/iscrollstrategy.html)
-* [IgxToggleDirective] ({environment:angularApiUrl}/classes/igxtoggledirective.html)
 
 ## Assumptions and Limitations</a>
 If you show the overlay in an outlet, and if the outlet is child of element with transform, perspective or filter css set you will be not able to show modal overlay. The reason for this is when one of above mentioned css properties is set the browser creates a new containing block and the overlay is limited to this containing block, as described [here](https://developer.mozilla.org/en-US/docs/Web/CSS/position#fixed).

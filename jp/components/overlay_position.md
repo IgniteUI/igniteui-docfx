@@ -126,4 +126,3 @@ import {AutoPositionStrategy, GlobalPositionStrategy, ConnectedPositioningStrate
 ## API
 
 * [`IPositionStrategy`] ({environment:angularApiUrl}/interfaces/ipositionstrategy.html)
-* [`PositionSettings`] ({environment:angularApiUrl}/interfaces/positionsettings.html)

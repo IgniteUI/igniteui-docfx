@@ -252,11 +252,6 @@ export class ExampleComponent {
 ## API
 
 * [IgxOverlayService] ({environment:angularApiUrl}/classes/igxoverlayservice.html)
-* [OverlaySettings] ({environment:angularApiUrl}/interfaces/overlaysettings.html)
-* [IPositionStrategy] ({environment:angularApiUrl}/interfaces/ipositionstrategy.html)
-* [PositionSettings] ({environment:angularApiUrl}/interfaces/positionsettings.html)
-* [IScrollStrategy] ({environment:angularApiUrl}/classes/iscrollstrategy.html)
-* [IgxToggleDirective] ({environment:angularApiUrl}/classes/igxtoggledirective.html)
 
 ## 前提事項と制限</a>
 既知の制限はありません。

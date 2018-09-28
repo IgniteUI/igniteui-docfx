@@ -119,4 +119,3 @@ In the demo below, the overlay element will position itself starting from the ta
 ## API
 
 * [`IPositionStrategy`] ({environment:angularApiUrl}/interfaces/ipositionstrategy.html)
-* [`PositionSettings`] ({environment:angularApiUrl}/interfaces/positionsettings.html)
