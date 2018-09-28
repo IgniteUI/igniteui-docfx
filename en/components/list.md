@@ -397,7 +397,7 @@ Finally, we need to apply the filtering pipe to our contacts data before we can 
 ### Chat Component
 The following sample demonstrates how to create a simple chat component using **IgxList**.
 
-<div class="sample-container loading" style="height: 500px">
+<div class="sample-container loading" style="height: 650px">
 <iframe id="list-chat-sample-iframe" src='{environment:demosBaseUrl}/list-chat-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
