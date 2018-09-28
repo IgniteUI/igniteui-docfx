@@ -7,12 +7,12 @@ _language: ja
 
 ## コンボ リモート バインディング
 <p class="highlight">
-igx-combo は、コンボをリモートサービスにバインドしてデータをオンデマンドで取得する API を公開します。
+[igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) は、コンボをリモートサービスにバインドしてデータをオンデマンドで取得する API を公開します。
 </p>
 <div class="divider"></div>
 
 ### デモ
-以下のサンプルは、コンボ API を使用したリモートでバインディングを行います。`valueKey` と `displayKey` を定義し、`onDataPreLoad` を使用して新しいリモートデータを読み込みます。
+以下のサンプルは、コンボ API を使用したリモートでバインディングを行います。[valueKey]({environment:angularApiUrl}/classes/igxcombocomponent.html#valuekey) と [displayKey]({environment:angularApiUrl}/classes/igxcombocomponent.html#displaykey) を定義し、[onDataPreLoad]({environment:angularApiUrl}/classes/igxcombocomponent.html#ondatapreload) を使用して新しいリモートデータを読み込みます。
 <div class="sample-container loading" style="height: 400px;">
     <iframe id="combo-remote-sample" frameborder="0" seamless width="700px" height="100%" src="{environment:demosBaseUrl}/combo-remote" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -21,7 +21,7 @@ igx-combo は、コンボをリモートサービスにバインドしてデー�
 </div>
 
 ### 使用方法
-Ignite UI for Angular Combo を使用する前に **IgxComboModule** を **app.module.ts** ファイルにインポートします。デモではサーバー要求にリモート サービスを使用しているため、追加で Angular **HttpClientModule** を含む必要があります。
+Ignite UI for Angular Combo を使用する前に [IgxComboModule]({environment:angularApiUrl}/classes/igxcombomodule.html) を **app.module.ts** ファイルにインポートします。デモではサーバー要求にリモート サービスを使用しているため、追加で Angular **HttpClientModule** を含む必要があります。
 
 ```typescript
 // app.module.ts
@@ -39,7 +39,7 @@ export class AppModule {}
 ```
 
 コンボをリモートデータへバインドする際にサーバーからデータをオンデマンドで読み込むための有効なサービスが必要です。以下のコードは、`getData()` メソッドでシンプルなサービスを定義し、コンボの状態を受け取り、observable としてデータを返します。コンボは `virtualizationState` プロパティを公開し、コンボの状態 (最初のインデックスと読み込む必要のある項目数) を提供します。
-サービスはコンボにサーバーにあるすべての項目を通知します。スクロールサイズを表示するために `totalItemCount` `igx-combo` プロパティに設定する必要のある値です。
+サービスはコンボにサーバーにあるすべての項目を通知します。スクロールサイズを表示するために `totalItemCount` [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) プロパティに設定する必要のある値です。
 
 ```typescript
 // remote.service.ts
@@ -64,16 +64,16 @@ export class RemoteService {
     }
 ```
 
-データがサービスから observable として返されると [`async`](https://angular.io/api/common/AsyncPipe) パイプを使用して `igx-combo` に設定します。
+データがサービスから observable として返されると [`async`](https://angular.io/api/common/AsyncPipe) パイプを使用して [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) に設定します。
 
 ```html
 <igx-combo [data]="rData | async" [valueKey]="'ProductID'" [displayKey]="'ProductName'" 
     (onDataPreLoad)="dataLoading($event)" (onSearchInput)="searchInput($event)" (onOpening)="searchInput('')"></igx-combo>
 ```
-以下は、igx-combo が新しいデータを要求する必要があるケースです。
+以下は、[igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) が新しいデータを要求する必要があるケースです。
     - コンボが初期化されたとき
-    - コンボのリストをスクロールしたときコンボは、新しいコンボ `virtualizationState` と `onDataPreLoad` を発生し、リモート サービスに新しい要求を送ることができます。
-    - `igx-combo` で検索時にリモート結果のフィルターを要求する必要があります。
+    - コンボのリストをスクロールしたときコンボは、新しいコンボ `virtualizationState` と [onDataPreLoad]({environment:angularApiUrl}/classes/igxcombocomponent.html#ondatapreload) を発生し、リモート サービスに新しい要求を送ることができます。
+    - [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) で検索時にリモート結果のフィルターを要求する必要があります。
     - コンボが開いたとき以前のフィルター処理の結果をクリアします。
 
 以下は定義済みの操作をリッスンしてサーバーへ要求するハンドラーです。
@@ -128,7 +128,7 @@ export class ComboRemoteComponent implements OnInit {
 }
 ```
 
-> 注: 新しいデータが読み込まれた際にスクロールバーが適切なサイズになるよう `totalItemCount` `igx-combo` プロパティを更新します。その際サービスは `@odata.count` プロパティを使用して合計サイズを返します。
+> 注: 新しいデータが読み込まれた際にスクロールバーが適切なサイズになるよう `totalItemCount` [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) プロパティを更新します。その際サービスは `@odata.count` プロパティを使用して合計サイズを返します。
 
 > 注: サービスはプロバイダーとして含まれる必要があります。
 
