@@ -10,7 +10,7 @@ _language: ja
 Ignite UI for Angular では、列レベルでの**並べ替え**が可能です。つまり、`igx-grid` に並べ替え可能な列および並べ替え不可の列の両方を含むことができます。
 
 #### デモ
-以下のデモは、**igx-grid** の `onContextMenu` 出力を使用してカスタム コンテキスト メニューを追加しています。
+以下のデモは、**igx-grid** の [`onContextMenu`]({environment:angularApiUrl}/classes/igxgridcomponent.html#oncontextmenu) 出力を使用してカスタム コンテキスト メニューを追加しています。
 
 <div class="sample-container loading" style="height:550px">
     <iframe id="grid-sample-iframe" src='{environment:demosBaseUrl}/grid-sorting-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -21,15 +21,15 @@ Ignite UI for Angular では、列レベルでの**並べ替え**が可能です
 </div>
 <div class="divider--half"></div>
 
-以下のように `sortable` 入力を使用します。グリッド フィルター同様、`sortingIgnoreCase` プロパティを設定して大文字と小文字を区別する並べ替えを実行できます。
+以下のように [`sortable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#sortable) 入力を使用します。グリッド フィルター同様、[`sortingIgnoreCase`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#sortingignorecase) プロパティを設定して大文字と小文字を区別する並べ替えを実行できます。
 
 ```html
-<igx-column field="ProductName" header="Product Name" [dataType]="'string'" sortable="true"></igx-column>
+<igx-column field="ProductName" header="Product Name" dataType="'string'" sortable="true"></igx-column>
 ```
 
 #### API での並べ替え
 
-グリッドの `sort` メソッドを使用し、列または複数の列をグリッド API で並べ替えできます。
+グリッドの [`sort`]({environment:angularApiUrl}/classes/igxgridcomponent.html#sort) メソッドを使用し、列または複数の列をグリッド API で並べ替えできます。
 
 ```typescript
 import { SortingDirection } from 'igniteui-angular';
@@ -44,7 +44,7 @@ this.grid.sort([
 ]);
 ```
 
-フィルター動作と同様に、並べ替え状態をクリアするには `clearSort` メソッドを使用します。
+フィルター動作と同様に、並べ替え状態をクリアするには [`clearSort`]({environment:angularApiUrl}/classes/igxgridcomponent.html#clearsort) メソッドを使用します。
 
 ```typescript
 // Removes the sorting state from the ProductName column
@@ -59,11 +59,11 @@ this.grid.clearSort();
 
 #### 初期の並べ替え状態
 
-グリッドの初期の並べ替え状態を設定するには、並べ替え式の配列をグリッドの `sortingExpressions` プロパティに渡します。
+グリッドの初期の並べ替え状態を設定するには、並べ替え式の配列をグリッドの [`sortingExpressions`]({environment:angularApiUrl}/classes/igxgridcomponent.html#sortingexpressions)` プロパティに渡します。
 
 ```typescript
 public ngOnInit() {
-    this.grid.sortingExpressions = [
+    this.grid.[`sortingExpressions`]({environment:angularApiUrl}/classes/igxgridcomponent.html#sortingexpressions) = [
         { fieldName: 'ProductName' dir: SortingDirection.Asc, ignoreCase: true },
         { fieldName: 'Price', dir: SortingDirection.Desc }
     ];
@@ -71,14 +71,18 @@ public ngOnInit() {
 ```
 
 > [!NOTE]
-> `string` 型の値が `Date` dataType の列で使用される場合、グリッドが値を `Date` オブジェクトに解析しないため igxGrid 並べ替え機能が正しく動作しません。`string` オブジェクトを使用する場合、値を `Date` オブジェクトに解析するためのロジックをアプリケーション レベルで実装する必要があります。
+> `string` 型の値が `Date` [`dataType`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#datatype) の列で使用される場合、グリッドが値を `Date` オブジェクトに解析しないため igxGrid 並べ替え機能が正しく動作しません。`string` オブジェクトを使用する場合、値を `Date` オブジェクトに解析するためのロジックをアプリケーション レベルで実装する必要があります。
 
 <div class="divider--half"></div>
 
 #### リモート並べ替え
-onDataPreLoad と onFilteringDone アウトプットにサブスクライブしてグリッドでリモートの並べ替えができます。詳細については、`グリッドの仮想化とパフォーマンス` [ヘルプ](grid_virtualization.md#リモートの並べ替えフィルタリングの仮想化)をご覧ください。
+[`onDataPreLoad`]({environment:angularApiUrl}/classes/igxgridcomponent.html#ondatapreload) と [`onSortingDone`]({environment:angularApiUrl}/classes/igxgridcomponent.html#onsortingdone) アウトプットにサブスクライブしてグリッドでリモートの並べ替えができます。詳細については、`グリッドの仮想化とパフォーマンス` [ヘルプ](grid_virtualization.md#リモートの並べ替えフィルタリングの仮想化)をご覧ください。
 
 <div class="divider--half"></div>
+
+### API
+* [IgxGridComponent API]({environment:angularApiUrl}/classes/igxgridcomponent.html)
+* [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#mixin-igx-grid)
 
 ### 追加のリソース
 <div class="divider--half"></div>

@@ -23,7 +23,7 @@ _language: ja
 
 ### 依存関係
 
-グリッドは `NgModule` としてエクスポートされるため、アプリケーションで `AppModule` に _IgxGridModule_ をインポートする必要があります。
+グリッドは `NgModule` としてエクスポートされるため、アプリケーションで `AppModule` に [`IgxGridModule`]({environment:angularApiUrl}/classes/igxgridmodule.html) をインポートする必要があります。
 
 ```typescript
 // app.module.ts
@@ -42,7 +42,7 @@ import { IgxGridModule } from 'igniteui-angular/grid';
 export class AppModule {}
 ```
 
-_IgxGridModule_ の各コンポーネント、ディレクティブ、およびヘルパー クラスは _grid_ または _igniteui-angular_ のメイン バンドルでインポートできます。グリッドをインスタンス化して使用するためにすべての機能をインポートする必要はありませんが、グリッド API の一部である型を宣言する場合はインポート (またはエディターで自動的にインポート) します。
+[`IgxGridModule`]({environment:angularApiUrl}/classes/igxgridmodule.html) の各コンポーネント、ディレクティブ、およびヘルパー クラスは _grid_ または _igniteui-angular_ のメイン バンドルでインポートできます。グリッドをインスタンス化して使用するためにすべての機能をインポートする必要はありませんが、グリッド API の一部である型を宣言する場合はインポート (またはエディターで自動的にインポート) します。
 
 ```typescript
 import { IgxGridComponent } from 'igniteui-angular/grid/';
@@ -63,13 +63,13 @@ public grid: IgxGridComponent;
 ```
 **id** プロパティは文字列値で、設定されない場合に自動生成されるグリッドの一意識別子です。**data** はグリッドをローカル データにバインドします。
 
-**autoGenerate** プロパティは **igx-grid** にデータ ソース フィールドに基づいてグリッドの `IgxColumnComponent` を自動生成します。列の適切なデータ型の決定を試みます。それ以外の場合、開発者は列およびデータ ソース フィールドへのマッピングを明示的に定義する必要があります。
+[`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#autogenerate) プロパティは **igx-grid** にデータ ソース フィールドに基づいてグリッドの [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) を自動生成します。列の適切なデータ型の決定を試みます。それ以外の場合、開発者は列およびデータ ソース フィールドへのマッピングを明示的に定義する必要があります。
 
 ### 列の構成
 
-**IgxGridColumnComponent** は、グリッドの _columns_ コレクションを定義し、**フィルタリング**、**並べ替え**、**ページング**など、列ごとの機能を有効にするために使用します。セル、ヘッダー、およびフッター テンプレートも利用できます。
+[`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) は、グリッドの _columns_ コレクションを定義し、**フィルタリング**、**並べ替え**、**ページング**など、列ごとの機能を有効にするために使用します。セル、ヘッダー、およびフッター テンプレートも利用できます。
 
-**autoGenerate** プロパティを無効にし、マークアップで列コレクションを定義します。
+[`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#autogenerate) プロパティを無効にし、マークアップで列コレクションを定義します。
 
 ```html
 <igx-grid #grid1 [data]="data | async" [autoGenerate]="false" [paging]="true" [perPage]="6" (onColumnInit)="initColumns($event)"
@@ -110,7 +110,7 @@ public grid: IgxGridComponent;
 ...
 ```
 
-上記のスニペットで暗示的に提供されたセル値への参照を取得します。データを表示し、セルの値にカスタム スタイル設定およびパイプ変換を適用する場合に使用します。ただし、`IgxGridCellComponent` オブジェクトを以下のように使用するとより効果的です。
+上記のスニペットで暗示的に提供されたセル値への参照を取得します。データを表示し、セルの値にカスタム スタイル設定およびパイプ変換を適用する場合に使用します。ただし、[`IgxGridCellComponent`]({environment:angularApiUrl}/classes/igxgridcellcomponent.html) オブジェクトを以下のように使用するとより効果的です。
 
 ```html
 <igx-grid #grid [data]="data">
@@ -129,7 +129,7 @@ public grid: IgxGridComponent;
 <igx-grid>
 ```
 
-列は、セルが編集モードにある場合に使用されるテンプレートを使用します。その他の列テンプレートと同じように、提供されたコンテキスト オブジェクトはセル値およびセル オブジェクトです。編集モード テンプレートをユーザー アクセス可能にするには、`IgxColumnComponent` の `editable` プロパティを `true` に設定します。
+列は、セルが編集モードにある場合に使用されるテンプレートを使用します。その他の列テンプレートと同じように、提供されたコンテキスト オブジェクトはセル値およびセル オブジェクトです。編集モード テンプレートをユーザー アクセス可能にするには、[`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) の [`editable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable) プロパティを `true` に設定します。
 
 ```html
 <igx-column dataType="number" editable="true" field="Price">
@@ -142,9 +142,9 @@ public grid: IgxGridComponent;
 </igx-column>
 ```
 
-テンプレートで使用可能なプロパティの詳細については、[IgxGridCellComponent](#igxgridcellcomponent) の API を参照してください。
+テンプレートで使用可能なプロパティの詳細については、[`IgxGridCellComponent`]({environment:angularApiUrl}/classes/igxgridcellcomponent.html) の API を参照してください。
 
-各列テンプレートが `IgxColumnComponent` オブジェクトでコードによって変更可能です。以下のコード例で、ユーザー データの 2 つのテンプレートを宣言しました。TypeScript コードでテンプレートへの参照を取得し、条件に基づいてアプリケーションで列の適切なテンプレートを描画します。
+各列テンプレートが [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) オブジェクトでコードによって変更可能です。以下のコード例で、ユーザー データの 2 つのテンプレートを宣言しました。TypeScript コードでテンプレートへの参照を取得し、条件に基づいてアプリケーションで列の適切なテンプレートを描画します。
 
 ```html
 <igx-grid>
@@ -176,7 +176,7 @@ const column = this.grid.getColumnByName("User");
 column.bodyTemplate = this.smallView;
 ```
 
-列プロパティもグリッドで列が初期化されるときに発生される **initColumns** イベントのコードで設定できます。
+列プロパティもグリッドで列が初期化されるときに発生される [`initColumns`]({environment:angularApiUrl}/classes/igxgridcomponent.html#oncolumninit) イベントのコードで設定できます。
 
 ```typescript
 public initColumns(column: IgxGridColumn) {
@@ -317,7 +317,7 @@ export class MyComponent implements OnInit {
 </igx-grid>
 ```
 
-**注**: リモート データにバインドする場合、グリッドの `autoGenerate` プロパティは使用しないことをお勧めします。データを検証して適切な列を生成するためにデータが利用可能である必要があります。リモート サービスの応答が完了するまでデータが利用できないため、グリッドはエラーを発生します。リモート サービスへバインド時に `autoGenerate` を使用する機能は今後追加予定です。
+**注**: リモート データにバインドする場合、グリッドの [`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#autogenerate) プロパティは使用しないことをお勧めします。データを検証して適切な列を生成するためにデータが利用可能である必要があります。リモート サービスの応答が完了するまでデータが利用できないため、グリッドはエラーを発生します。リモート サービスへバインド時に [`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#autogenerate) を使用する機能は今後追加予定です。
 
 ### 仮想化
 
@@ -330,310 +330,17 @@ export class MyComponent implements OnInit {
 |--- |--- |
 |`percentage` および `px` で設定した列幅|列に `%` と `px` を組み合わせて使用することはできません。|
 |`number` 型の列をフィルターする場合|フィルター入力に入力された値が `number` と異なる場合、キャストが正しくないため `NaN` が返されます。|
-|グリッドの `width` が列幅に依存しない| すべての列の `width` でグリッド自体のスパンは決定しません。親コンテナーのディメンションまたは定義したグリッドの `width` で決定されます。|
-|親コンテナーでネストされた Grid | グリッドの `width` を設定せずに定義済みのディメンションで親コンテナーに配置した場合、グリッドがコンテナーに合わせてスパンします。|
+|グリッドの [`width`]({environment:angularApiUrl}/classes/igxgridcomponent.html#width) が列幅に依存しない| すべての列の [`width`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#width) でグリッド自体のスパンは決定しません。親コンテナーのディメンションまたは定義したグリッドの [`width`]({environment:angularApiUrl}/classes/igxgridcomponent.html#width) で決定されます。|
+|親コンテナーでネストされた Grid | グリッドの [`width`]({environment:angularApiUrl}/classes/igxgridcomponent.html#width) を設定せずに定義済みのディメンションで親コンテナーに配置した場合、グリッドがコンテナーに合わせてスパンします。|
 |Grid `OnPush` ChangeDetectionStrategy |グリッドで `ChangeDetectionStrategy.OnPush` を処理し、カスタム表示されたときにグリッドに発生した変更について通知します。|
-| 列には設定可能な最小幅があります。`displayDensity` オプションに基づき、<br/>"compact": 24px <br/> "cosy": 32px <br/> "comfortable": 48px があります。| 幅が最小幅未満の場合、描画要素には影響せずに対応する `displayDensity` に合わせて最小幅で描画します。水平方向の仮想化は予期しない動作を招く場合があるためサポートしていません。
+| 列には設定可能な最小幅があります。[`displayDensity`]({environment:angularApiUrl}/classes/igxgridcomponent.html#displaydensity) オプションに基づき、<br/>"compact": 24px <br/> "cosy": 32px <br/> "comfortable": 48px があります。| 幅が最小幅未満の場合、描画要素には影響せずに対応する [`displayDensity`]({environment:angularApiUrl}/classes/igxgridcomponent.html#displaydensity) に合わせて最小幅で描画します。水平方向の仮想化は予期しない動作を招く場合があるためサポートしていません。
 
 ## API
-
-### 入力
-
-グリッドの外観および動作を構成するには、以下の入力を使用します。
-| 名前 | 型 | 説明 |
-| :--- |:--- | :--- |
-|`id`| string | グリッドの一意識別子。提供されていない場合、自動的に生成されます。 |
-|`data`|Array|グリッドのデータソース。|
-|`autoGenerate`|boolean|グリッドの列を自動生成します。デフォルト値は _false_ です。|
-|`paging`| bool | ページング機能を有効化にします。デフォルト値は _false_ です。 |
-|`perPage`| number | ページごとの表示項目。デフォルト値は 15 です。 |
-|`filteringLogic`|FilteringLogic|グリッドのフィルター ロジック。デフォルト値は _AND_ です。|
-|`filteringExpressionsTree`|IFilteringExpressionsTree|グリッドのフィルター状態。|
-|`sortingExpressions`|Array|グリッドの並べ替え状態。|
-|`height`|string|グリッド要素の高さ。`1000px`、`75%` などの値を渡すことができます。|
-|`width`|string|グリッド要素の幅。`1000px`、`75%` などの値を渡すことができます。|
-|`evenRowCSS`|string|グリッドですべての偶数行に適用される追加のスタイル設定クラス。|
-|`oddRowCSS`|string|グリッドですべての奇数行に適用される追加のスタイル設定クラス。|
-|`paginationTemplate`|TemplateRef|グリッドのページングのためにカスタム `ng-template` を提供できます。|
-|`groupingExpressions`| Array | グリッドのグループ化状態。|
-|`groupingExpansionState`| Array | グループ行の展開状態のリスト。グループ行の展開状態 (expanded: boolean) および fieldName および value によって説明されるグループ行の親のリストを含む一意識別子 (Array<IGroupByExpandState>) を含みます。|
-|`groupsExpanded`| Boolean | 作成したグループを展開または縮小として描画されるかどうかを決定します。|
-|`groupsRowList`| QueryList<IgxGridGroupByRowComponent> | 表示されるグループ行のリスト。|
-|`groupsRecords`| IGroupByRecord[] | 現在のグループの状態に基づいて階層のすべてのグループ。|
-|`displayDensity`| DisplayDensity または string | グリッドの表示密度を定義します。`compact`、`cosy`、または `comfortable` に設定できます。|
-|`rowHeight`|string| 行の高さを設定します。高さは常に**ピクセル**単位です。|
-
-
-<div class="divider--half"></div>
-
-### 出力
-
-**igx-grid** によって発生されるイベントのリスト:
-
-|名前|説明|
-|--- |--- |
-|イベント発生|変更の通知  |
-|`onEditDone`|セル値を変更するときに発生されます。`{ currentValue: any, newValue: any }` を返します。|
-|`onCellClick`|セルがクリックされたときに発生されます。セル オブジェクトを返します。|
-|`onSelection`|セルが選択されたときに発生されます。セル オブジェクトを返します。|
-|`onColumnInit`|グリッド列が初期化されるときに発生されます。列オブジェクトを返します。|
-|`onSortingDone`|並べ替えが UI で実行されたときに発生されます。並べ替え式を返します。|
-|`onFilteringDone`|フィルタリングが UI で実行されたときに発生されます。フィルター式を返します。|
-|`onPagingDone`|ページングが実行されたときに発生されます。前のページおよび新しいページを含むオブジェクトを返します。|
-|`onRowAdded`|行が API によってグリッドに追加されている間に発生されます。新しい行オブジェクトのデータを返します。|
-|`onRowDeleted`|行がグリッド API によって削除されたときに発生されます。削除されている行オブジェクトを返します。|
-|`onColumnPinning`|列がグリッド API によってピン固定されたときに発生されます。列に挿入するインデックスは `insertAtIndex` プロパティによって変更できます。|
-|`onColumnResized`|列がサイズ変更されたときに発生されます。列オブジェクト、以前の列幅、および新しい列幅を返します。|
-|`onContextMenu`|セルが右クリックされたときに発生されます。セル オブジェクトを返します。|
-|`onDoubleClick`|セルがダブルクリックされたときに発生します。セル オブジェクトを返します。|
-|`onGroupingDone`| 新しい列がグループ化、またはグループ化解除されたときに発生されます。グループ操作に関連する ISortingExpression を返します。|
-
-<div class="divider--half"></div>
-
-このイベント発生のハンドラーは宣言的なイベント バインディングで定義されます。
-
-```html
-<igx-grid #grid1 [data]="data | async" [autoGenerate]="false"
- (onColumnInit)="initColumns($event)" (onSelection)="selectCell($event)"></igx-grid>
-```
-
-<div class="divider--half"></div>
-
-### メソッド
-
-**igx-grid** によって公開されるすべてのパブリック メソッドのリスト:
-
-|構文|説明 |
-|--- |--- |
-|`getColumnByName(name: string)`|`name` と等しいフィールド プロパティを持つ列オブジェクトを返します。このような列がない場合は `undefined` を返します。|
-|`getCellByColumn(rowIndex: number, columnField: string)`|列が `columnField` で、行が `rowIndex` である列のセル オブジェクトを返します。ない場合は `undefined` を返します。|
-|`getCellByKey(rowSelector: any, columnField: string)`|`rowSelector` がいずれかの rowID に一致して columnField がグリッドに存在し、**プライマリキーがグリッドで指定されている場合のみ**セル オブジェクトを返します。それ以外は undefined を返します。|
-|`getRowByIndex(index: number)`|指定した rowIndex が存在し、現在グリッドの表示領域にある場合、行オブジェクトを返します。|
-|`getRowByKey(keyValue: any)`|指定した keyValue がグリッドに rowID として存在し、**プライマリキーがグリッドで指定されている場合のみ**行オブジェクトを返します。|
-|`addRow(data: any)`|新しい行オブジェクトを作成し、データ レコードをデータ ソースの終了に追加します。|
-|`deleteRow(rowSelector: any)`|**プライマリキーをグリッドで指定した場合のみ**行オブジェクトと対応するデータレコード データソースからを削除します。メソッドは、rowID である `rowSelector` をパラメーターとして受け取ります。|
-|`updateRow(value: any, rowSelector: any)`|rowID/渡された値のあるデータソース レコードに対応する `rowSelector` パラメーター /`rowSelector` パラメーターで指定されている行オブジェクトを更新します。**このメソッドは、プライマリキーがグリッドで指定されている場合のみ要求した更新を適用します。**|
-|`updateCell(value: any, rowSelector: any, column: string)`|セル オブジェクトおよびデータ ソースのレコード フィールドを更新します。メソッドは 3 パラメーターを受け取ります。- `value` - 設定される新しい値、その他 2 つのパラメーター `rowSelector` と `column` は更新されるセルを識別します。`rowSelector` は、rowID、 `column` は列フィールドに対応します。**このメソッドは、プライマリキーがグリッドで指定されている場合のみ要求した更新を適用します。**|
-|`filter(name: string, value: any, conditionOrExpressionTree?: IFilteringOperation, ignoreCase?: boolean)`|単一の列をフィルターします。フィルタリング処理はパラメーターとして使用されます。利用可能な[フィルター条件](#フィルター条件)を参照してください。|
-|`filter(name: string, value: any, conditionOrExpressionTree?: IFilteringExpressionsTree, ignoreCase?: boolean)`|単一の列をフィルターします。フィルタリング式ツリーはパラメーターとして使用されます。|
-|`filterGlobal(value: any, condition?, ignoreCase?)`|同じ条件でグリッドのすべての列をフィルターします。|
-|`filter(column: string, value: any, condition?, ignoreCase?: boolean)`|単一の列をフィルターします。利用可能な[フィルター条件](#フィルター条件)を参照してください。|
-|`filter(expressions: Array)`|グリッド列を提供したフィルター式の配列に基づいてフィルターします。|
-|`filterGlobal(value: any, condition? ignoreCase?)`|グリッドの列をすべてフィルターします。|
-|`clearFilter(name?: string)`|`name` が提供された場合、相対する列のフィルター状態をクリアします。それ以外の場合、すべての列のフィルター状態をクリアします。|
-|`sort(expression: ISortingExpression)`|単一の列を並べ替えます。|
-|`sort(expressions: Array)`|グリッド列を提供した並べ替え式の配列に基づいて並べ替えます。|
-|`clearSort(name?: string)`|`name` が提供された場合、相対する列の並べ替え状態をクリアします。それ以外の場合、すべての列の並べ替え状態をクリアします。|
-|`enableSummaries(fieldName: string, customSummary?: any)`|指定した列で集計を有効にし、`customSummary` を適用します。`customSummary` を設定しない場合、列のデータ型のデフォルト集計が適用されます。|
-|`enableSummaries(expressions: Array)`|列で集計を有効にし、提供される場合に `customSummary` を適用します。|
-|`disableSummaries(fieldName: string)`|指定した列で集計を無効にします。|
-|`disableSummaries(columns: string[])`|配列の列で集計を無効にします。|
-|`clearSummaryCache()`|すべてのキャッシュされた集計を削除し、再計算を実行します。|
-|`recalculateSummaries()`|summaryArea を再計算するためにグリッドをトリガーします。|
-|`previousPage()`|ページングが有効で、現在のページが最初のページではない場合に前のページに移動します。|
-|`nextPage()`|ページングが有効で、現在のページが最後のページではない場合に次のページに移動します。|
-|`paginate(page: number)`|ページングが有効な場合、指定したページに移動します。ページ インデックスは 0 から開始します。|
-|`markForCheck()`|グリッドおよびすべての子要素に変更検出サイクルを手動的にトリガーします。|
-|`pinColumn(name: string): boolean`|列をフィールド名によってピン固定します。操作が成功したかどうかを返します。|
-|`unpinColumn(name: string): boolean`|列をフィールド名によってピン固定解除します。操作が成功したかどうかを返します。|
-|`groupBy(expression: ISortingExpression)`| 新しい列を提供された式によってグループ化するか、既存の式を変更します。|
-|`groupBy(expressions: Array)`| 列を提供した並べ替え式の配列に基づいてグループ化します。|
-|`clearGrouping()`| グリッドのグループ化をすべてクリアします。|
-|`clearGrouping(fieldName: string)`| グループ化を特定の列からクリアします。|
-|`isExpandedGroup(group: IGroupByRecord )`| グループが展開されているかどうかを返します。|
-|`toggleGroup(group: IGroupByRecord)`| グループの展開状態を切り替えます。|
-|`getGroup(field: string, value: any)`| グループ化レコードを複合キーによって取得します。|
-|`toggleAllGroupRows()`| すべてのグループ行の展開状態を再帰的に切り替えます。|
-
-<div class="divider--half"></div>
-
-## IgxColumnComponent
-
-### 入力
-
-**IgxGridColumnComponent** で列を定義するために利用可能な入力:
-| 名前 | 型 | 説明 |
-| --- |--- | --- |
-| `field` | string | 列フィールド名。 |
-| `header` | string | 列ヘッダー テキスト。 |
-| `sortable` | boolean | 列が並べ替え可能かどうかを設定します。 |
-| `editable` | boolean | 列値を編集可能に設定します。 |
-| `filterable` | boolean | 列値をフィルター可能に設定します。 |
-|`hasSummary`| boolean  |特定の列に集計が有効化されるかどうかを設定します。|
-|`summaries`| IgxSummaryOperand |指定した列にカスタム集計を設定します。|
-| `hidden` | boolean | 列の表示状態。 |
-| `movable` | boolean | 列移動。 |
-|`resizable`|boolean|列をサイズ変更可能に設定します。|
-| `width` | string | 列幅。 |
-|`minWidth`|string|列の最小幅|
-|`maxWidth`|string|列の最大幅|
-|`headerClasses`|string|ヘッダー要素に適用される追加の CSS クラス。|
-|`cellClasses`|string|この列のセルに適用される追加の CSS クラス。|
-|`formatter`|Function|列にセル テンプレートを渡さずにセルの値をテンプレート化するために使用される関数。|
-| `index` | string | 列インデックス。 |
-|`filteringIgnoreCase`|boolean|フィルタリングが適用される場合に文字列の大文字化を無視します。デフォルトは _true_ です。|
-|`sortingIgnoreCase`|boolean|並べ替えが適用される場合に文字列の大文字化を無視します。デフォルトは _true_ です。|
-|`dataType`|DataType|string、number、boolean、または Date。フィルタリングが有効な場合、フィルター UI 条件は列の `dataType` に基づきます。設定されない場合、デフォルト値は `string` です。`autoGenerate` が有効な場合、グリッドはデータ ソースに基づいて各列の正しいデータ型を解決しようとします。|
-|`pinned`|boolean|列がピン固定かどうかを設定します。|
-|`groupable`|boolean| 列を UI でグループ化できるかどうかを決定します。|
-
-### メソッド
-**IgxGridColumnComponent** によって公開されるすべてのパブリック メソッドのリスト:
-
-|構文|説明|
-|--- |--- |
-|`pin(): boolean`|列をピン固定します。操作が成功したかどうかを返します。|
-|`unpin(): boolean`|列をピン固定解除します。操作が成功したかどうかを返します。|
-
-<div class="divider--half"></div>
-
-### ゲッター/セッター
-
-|名前|型|ゲッター|セッター|説明|
-|--- |--- |--- |--- |--- |
-|`bodyTemplate`|TemplateRef|はい|はい|列のセルに適用されるテンプレートへの参照を取得または設定します。|
-|`headerTemplate`|TemplateRef|はい|はい|列ヘッダーに適用されるテンプレートへの参照を取得または設定します。|
-|`footerTemplate`|TemplateRef|はい|はい|列フッターに適用されるテンプレートへの参照を取得または設定します。|
-|`inlineEditorTemplate`|TemplateRef|はい|はい|セルが編集モードに入るときに適用されるテンプレートへの参照を取得または設定します。|
-
-<div class="divider--half"></div>
-
-## フィルター条件
-
- 5 つのフィルタリング オペランドを使用できます。
-- `IgxFilteringOperand` は、カスタムフィルタリング条件の定義時に継承できるベース フィルタリング オペランドです。
-- `IgxBooleanFilteringOperand` は、`boolean` 型のすべてのデフォルト フィルタリング条件を定義します。
-- `IgxDateFilteringOperand` は、`Date` 型のすべてのデフォルト フィルタリング条件を定義します。
-- `IgxNumberFilteringOperand` は、`numeric` 型のすべてのデフォルト フィルタリング条件を定義します。
-- `IgxStringFilteringOperand` は、`string` 型のすべてのデフォルト フィルタリング条件を定義します。
-
-```typescript
-import {
-    IgxBooleanFilteringOperand,
-    IgxDateFilteringOperand,
-    IgxFilteringOperand,
-    IgxNumberFilteringOperand,
-    IgxStringFilteringOperand,
-} from 'igniteui-angular';
-```
-
-```typescript
-public filter(term) {
-    this.grid.filter("ProductName", term, IgxStringFilteringOperand.instance().condition("contains"));
-}
-```
-
-### 文字列型
-
-|名前|構文|説明|
-|--- |--- |--- |
-|`contains`|`(target: string, searchVal: string, ignoreCase?: boolean)`|`target` が `searchVal` を含む場合 true を返します。|
-|`startsWith`|`(target: string, searchVal: string, ignoreCase?: boolean)`|`target` が `searchVal` で開始する場合 true を返します。|
-|`endsWith`|`(target: string, searchVal: string, ignoreCase?: boolean)`|`target` が `searchVal` で終了する場合 true を返します。|
-|`doesNotContain`|`(target: string, searchVal: string, ignoreCase?: boolean)`|`searchVal` が `target` にない場合、true を返します。|
-|`equals`|`(target: string, searchVal: string, ignoreCase?: boolean)`|`searchVal` が `target` と一致する場合、true を返します。|
-|`doesNotEqual`|`(target: string, searchVal: string, ignoreCase?: boolean)`|`searchVal` が `target` と一致しない場合、true を返します。|
-|`null`|`(target: any)`|`target` が `null` の場合、true を返します。|
-|`notNull`|`(target: any)`|`target` が `null` ではない場合、true を返します。|
-|`empty`|`(target: any)`|`target` が `null`、`undefined`、または 0 長さの文字列の場合、true を返します。|
-|`notEmpty`|`(target: any)`|`target` が `null`、`undefined`、または 0 長さの文字列ではない場合、true を返します。|
-
-<div class="divider--half"></div>
-
-### 数値型
-
-|名前|構文|説明|
-|--- |--- |--- |
-|`equals`|`(target: number, searchVal: number)`|`target` が `searchVal` に等しい場合、true を返します。|
-|`doesNotEqual`|`(target: number, searchVal: number)`|`target` が `searchVal` に等しくない場合、true を返します。|
-|`doesNotEqual`|`(target: number, searchVal: number)`|`target` が `searchVal` より大きい場合、true を返します。|
-|`lessThan`|`(target: number, searchVal: number)`|`target` が `searchVal` より小さい場合、true を返します。|
-|`greaterThanOrEqualTo`|`(target: number, searchVal: number)`|`target` が `searchVal` 以上の場合、true を返します。|
-|`lessThanOrEqualTo`|`(target: number, searchVal: number)`|`target` が `searchVal` 以下の場合、true を返します。|
-|`null`|`(target: any)`|`target` が `null` の場合、true を返します。|
-|`notNull`|`(target: any)`|`target` が `null` ではない場合、true を返します。|
-|`empty`|`(target: any)`|`target` が `null`、`undefined`、または `NaN` の場合、true を返します。|
-|`notEmpty`|`(target: any)`|`target` が `null`、`undefined`、または `NaN` ではない場合、true を返します。|
-
-<div class="divider--half"></div>
-
-### ブール値型
-
-|名前|構文|説明|
-|--- |--- |--- |
-|`all`|`(target: boolean)`|すべての行を返します。|
-|`true`|`(target: boolean)`|`target` が truthy の場合、true を返します。|
-|`false`|`(target: boolean)`|`target` が falsy の場合、true を返します。|
-|`null`|`(target: any)`|`target` が `null` の場合、true を返します。|
-|`notNull`|`(target: any)`|`target` が `null` ではない場合、true を返します。|
-|`empty`|`(target: any)`|`target` が `null` または `undefined` の場合、true を返します。|
-|`notEmpty`|`(target: any)`|`target` が `null` または `undefined` ではない場合、true を返します。|
-
-<div class="divider--half"></div>
-
-### 日付型
-
-|名前|構文|説明|
-|--- |--- |--- |
-|`equals`|`(target: Date, searchVal: Date)`|`target` が `searchVal` に等しい場合、`true` を返します。|
-|`doesNotEqual`|`(target: Date, searchVal: Date)`|`target` が `searchVal` に等しくない場合、`true` を返します。|
-|`before`|`(target: Date, searchVal: Date)`|`target` が `searchVal` より早い場合、`true` を返します。|
-|`after`|`(target: Date, searchVal: Date)`|`target` が `searchVal` より遅い場合、`true` を返します。|
-|`today`|`(target: Date)`|`target` が現在の日付の場合、`true` を返します。|
-|`yesterday`|`(target: Date)`|`target` が現在の日付の前の日の場合、`true` を返します。|
-|`thisMonth`|`(target: Date)`|`target` が現在の月に含まれる場合、`true` を返します。|
-|`lastMonth`|`(target: Date)`|`target` が現在の月の前の月に含まれる場合、`true` を返します。|
-|`nextMonth`|`(target: Date)`|`target` が現在の月の後の月に含まれる場合、`true` を返します。|
-|`thisYear`|`(target: Date)`|`target` が現在の年に含まれる場合、`true` を返します。|
-|`lastYear`|`(target: Date)`|`target` が現在の年の前の年に含まれる場合、`true` を返します。|
-|`nextYear`|`(target: Date)`|`target` が現在の年の後の年に含まれる場合、`true` を返します。|
-|`null`|`(target: any)`|`target` が `null` の場合、`true` を返します。|
-|`notNull`|`(target: any)`|`target` が `null` ではない場合、`true` を返します。|
-|`empty`|`(target: any)`|`target` が `null` または `undefined` の場合、`true` を返します。|
-|`notEmpty`|`(target: any)`|`target` が `null` または `undefined` ではない場合、`true` を返します。|
-
-<div class="divider--half"></div>
-
-## IgxGridRowComponent
-
-### ゲッター/セッター
-
-|名前|型|ゲッター|セッター|説明|
-|--- |--- |--- |--- |--- |
-|`rowData`|Array|はい|いいえ|行コンポーネントに渡されるデータ。|
-|`index`|number|はい|いいえ|行のインデックス。|
-|`cells`|QueryList|はい|いいえ|行コンポーネントの描画されるセル。|
-|`grid`|IgxGridComponent|はい|いいえ|行を含むグリッドへの参照。|
-|`nativeElement`|HTMLElement|はい|いいえ|行を表すネイティブ DOM 要素。特定の環境で `null` 値が可能です。|
-
-### メソッド
-|シグネチャ|説明|
-|--- |--- |
-|`update(value: any)`|指定した行オブジェクトおよびデータ ソース レコードを渡された値で更新します。このメソッドは `onEditDone` イベントを発生します。|
-|`delete()`|グリッドのデータソースから指定した行を削除します。このメソッドは `onRowDeleted` イベントを発生します。|
-
-<div class="divider--half"></div>
-
-## IgxGridCellComponent
-
-### ゲッター/セッター
-
-|名前|型|ゲッター|セッター|説明|
-|--- |--- |--- |--- |--- |
-|`column`|IgxColumnComponent|はい|いいえ|セルが属する列。|
-|`row`|IgxGridRowComponent|はい|いいえ|セルが属する行。|
-|`value`|any|はい|いいえ|セルの値。|
-|`rowIndex`|number|はい|いいえ|このセルが属する行のインデックス。|
-|`columnIndex`|number|はい|いいえ|このセルが属する列のインデックス。|
-|`grid`|IgxGridComponent|はい|いいえ|グリッド コンポーネント。|
-|`inEditMode`|boolean|はい|はい|セルが編集モードにあるかどうかを取得または設定します。|
-|`nativeElement`|HTMLElement|はい|いいえ|セルを表すネイティブ DOM 要素。特定の環境で `null` 値か可能です。|
-
-### メソッド
-
-|名前|戻り値の型|説明|
-|--- |--- |--- |
-|`update(val: any)`|void|`onEditDone` イベントを発生し、データ ソースで適切なレコードを更新します。|
+* [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
+* [IgxGridComponent Styles]({environment:sassApiUrl}/#function-igx-grid-theme)
+* [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
+* [IgxGridRowComponent]({environment:angularApiUrl}/classes/igxgridrowcomponent.html)
+* [IgxGridCellComponent]({environment:angularApiUrl}/classes/igxgridcellcomponent.html)
 
 ### 追加のリソース
 <div class="divider--half"></div>
