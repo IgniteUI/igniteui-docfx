@@ -20,7 +20,7 @@ Ignite UI for Angular の Grid コンポーネントは、列のデータ型に�
 </div>
 <div class="divider--half"></div>
 
-特定のセルで編集モードに入るには、最初に列を**編集可能**にする必要があります。データ型固有の編集テンプレートを使用する場合は、列 **dataType** プロパティを指定してください。以下は各型のデフォルト テンプレートです。
+特定のセルで編集モードに入るには、最初に列を**編集可能**にする必要があります。データ型固有の編集テンプレートを使用する場合は、列 [`dataType`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#datatype) プロパティを指定してください。以下は各型のデフォルト テンプレートです。
 
  - `string` データ型のデフォルトのテンプレートは **igxInput** を使用します。
  - `number` データ型のデフォルト テンプレートは、**igxInput type="number"** を使用し、セルを数値に解析できない値に更新した場合は変更が破棄され、セル値は **0** に設定されます。
@@ -58,7 +58,7 @@ Ignite UI for Angular の Grid コンポーネントは、列のデータ型に�
 ```
 更新したいセルがグリッド表示コンテナ以外の場合、新しい値は提出されません。
 
-セル更新のその他の方法として IgxCellComponent の `update` メソッドがあります。
+セル更新のその他の方法として [`IgxGridCellComponent`]({environment:angularApiUrl}/classes/igxgridcellcomponent.html) の [`update`]({environment:angularApiUrl}/classes/igxgridcellcomponent.html#update) メソッドがあります。
 
 ```typescript
 ...
@@ -77,11 +77,11 @@ Ignite UI for Angular の Grid コンポーネントは、列のデータ型に�
 > [!NOTE]
 > **CRUD 操作**を実行する場合、**フィルタリング**、**並べ替え**、**グループ化**など適用したすべてのパイプは再度適用されて表示が自動的に更新されます。
 
-`IgxGridComponent` は基本的な CRUD 操作のための簡易な API を提供します。
+[`IgxGridComponent`]({environment:angularApiUrl}/classes/igxgridcomponent.html) は基本的な CRUD 操作のための簡易な API を提供します。
 
 #### 新しいレコードの追加
 
-グリッド コンポーネントは、提供したデータをデータ ソースに追加する `addRow` メソッドを公開します。
+グリッド コンポーネントは、提供したデータをデータ ソースに追加する [`addRow`]({environment:angularApiUrl}/classes/igxgridcomponent.html#addrow) メソッドを公開します。
 
 ```typescript
 // Adding a new record
@@ -92,7 +92,7 @@ this.grid.addRow(record);
 
 #### グリッド データの更新
 
-グリッド データの更新は、**グリッドでプライマリキーが定義されている場合のみ** `updateRow` と `updateCell` メソッドで行うことができます。セルおよび行の値を直接更新するには `update` メソッドを使用できます。
+グリッド データの更新は、**グリッドでプライマリキーが定義されている場合のみ** [`updateRow`]({environment:angularApiUrl}/classes/igxgridcomponent.html#updaterow) と [`updateCell`]({environment:angularApiUrl}/classes/igxgridcomponent.html#updatecell) メソッドで行うことができます。セルおよび行の値を直接更新するには [`update`]({environment:angularApiUrl}/classes/igxgridcellcomponent.html#update) メソッドを使用できます。
 
 ```typescript
 // Updating the whole row
@@ -111,7 +111,7 @@ row.update(newData);
 
 #### グリッド データの削除
 
-`deleteRow()` メソッドは、プライマリキーが定義されている場合に指定した行のみを削除することに注意してください。
+[`deleteRow()`]({environment:angularApiUrl}/classes/igxgridcomponent.html#deleterow) メソッドは、プライマリキーが定義されている場合に指定した行のみを削除することに注意してください。
 
 
 ```typescript
@@ -125,6 +125,12 @@ row.delete();
 ```html
 <button igxButton igxRipple (click)="deleteRow($event)">Delete Row</button>
 ```
+
+<div class="divider--half"></div>
+
+### API
+* [`IgxGridCellComponent`]({environment:angularApiUrl}/classes/igxgridcellcomponent.html)
+* [`IgxGridRowComponent`]({environment:angularApiUrl}/classes/igxgridrowcomponent.html)
 
 <div class="divider--half"></div>
 
