@@ -118,7 +118,7 @@ public chipsOrderChanged(event) {
 
 #### Chip Templates
 
-The ([`IgxChipComponent`]{environment:angularApiUrl}/classes/igxchipcomponent.html)'s main structure consists of chip content, `remove button`, [`prefix`]({environment:angularApiUrl}/classes/igxprefixdirective.html), [`suffix`]({environment:angularApiUrl}/classes/igxsuffixdirective.html) and [`connector`]({environment:angularApiUrl}/classes/igxconnectordirective.html). All of those elements are templatable except the `remove button`.
+The [`IgxChipComponent`]({environment:angularApiUrl}/classes/igxchipcomponent.html)'s main structure consists of chip content, `remove button`, [`prefix`]({environment:angularApiUrl}/classes/igxprefixdirective.html), [`suffix`]({environment:angularApiUrl}/classes/igxsuffixdirective.html) and [`connector`]({environment:angularApiUrl}/classes/igxconnectordirective.html). All of those elements are templatable except the `remove button`.
 
 The content of the chip is taken by the content defined inside the chip template except elements that define the [`prefix`]({environment:angularApiUrl}/classes/igxprefixdirective.html), [`suffix`]({environment:angularApiUrl}/classes/igxsuffixdirective.html) or [`connector`]({environment:angularApiUrl}/classes/igxconnectordirective.html) of the chip. You can define any type of content you need.
 
@@ -136,7 +136,7 @@ Example of using an icon for [`prefix`]({environment:angularApiUrl}/classes/igxp
 </igx-chip>
 ```
 
-The [`connectors`]({environment:angularApiUrl}/classes/igxconnectordirective.html) of the ([`igxChip`]{environment:angularApiUrl}/classes/igxchipcomponent.html) are fully templatable and are positioned after each chip. Their purpose is to provide a way to link two chips next to each other with an icon/text or anything you would like to use. The last chip (most right) does not have connector applied. Connectors hide while dragging chips around and show again when interactions with the chips have finished. The connector is defined by using the [`IgxConnector`]({environment:angularApiUrl}/classes/igxconnectordirective.html) directive.
+The [`connectors`]({environment:angularApiUrl}/classes/igxconnectordirective.html) of the [`igxChip`]({environment:angularApiUrl}/classes/igxchipcomponent.html) are fully templatable and are positioned after each chip. Their purpose is to provide a way to link two chips next to each other with an icon/text or anything you would like to use. The last chip (most right) does not have connector applied. Connectors hide while dragging chips around and show again when interactions with the chips have finished. The connector is defined by using the [`IgxConnector`]({environment:angularApiUrl}/classes/igxconnectordirective.html) directive.
 
 Example of using prefix connector:
 

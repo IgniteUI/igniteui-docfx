@@ -7,7 +7,7 @@ _language: ja
 
 ### Chip
 
-`igxChip` は情報を小さな楕円内に表示する視覚的なコンポーネントです。Chip は、テンプレート化、削除、選択が可能で複数の Chip の順序を変更して視覚的に接続することもできます。Chip は「チップ領域」と呼ばれるコンテナーに配置され、このコンテナーは Chip の間の操作を管理します。
+[`IgxChip`]({environment:angularApiUrl}/classes/igxchipcomponent.html) は情報を小さな楕円内に表示する視覚的なコンポーネントです。Chip は、テンプレート化、削除、選択が可能で複数の Chip の順序を変更して視覚的に接続することもできます。Chip は「チップ領域」と呼ばれるコンテナーに配置され、このコンテナーは Chip の間の操作を管理します。
 
 #### デモ
 
@@ -21,10 +21,10 @@ _language: ja
 
 #### Chip の初期化
 
-`IgxChipComponent` はチップ要素のメイン クラスで、`IgxChipsAreaComponent`はチップ領域のメイン クラスです。
-チップ領域はチップの間の操作 (ドラッグ、選択、ナビゲーションなど) が必要の複雑なシナリオの処理で使用されます。別の要素を識別するために `IgxChipComponent` で `id` を定義する必要があります。
+[`IgxChipComponent`]({environment:angularApiUrl}/classes/igxchipcomponent.html) はチップ要素のメイン クラスで、[`IgxChipsAreaComponent`]({environment:angularApiUrl}/classes/igxchipsareacomponent.html) はチップ領域のメイン クラスです。
+チップ領域はチップの間の操作 (ドラッグ、選択、ナビゲーションなど) が必要の複雑なシナリオの処理で使用されます。別の要素を識別するために [`IgxChipComponent`]({environment:angularApiUrl}/classes/igxchipcomponent.html) で [`id`]({environment:angularApiUrl}/classes/igxchipcomponent.html#id) を定義する必要があります。
 
-`igxChip` を `igxChipArea` と使用した例:
+[`igxChip`]({environment:angularApiUrl}/classes/igxchipcomponent.html) を [`igxChipArea`]({environment:angularApiUrl}/classes/igxchipsareacomponent.html) と使用した例:
 
 ```html
 <igx-chips-area>
@@ -38,7 +38,7 @@ _language: ja
 
 #### 選択
 
-選択はデフォルトで無効ですが、`selectable` オプションを使用して有効にできます。チップをクリックするか、チップを `Tab` キーによってフォーカスして `Space` キーを押すと選択できます。`igxChip` の選択状態が変更すると、`onSelection` イベントは発生されます。選択されたチップをクリックするか、チップがフォーカスされる場合に `Space` キーを押すと選択解除できます。
+選択はデフォルトで無効ですが、[`selectable`]({environment:angularApiUrl}/classes/igxchipcomponent.html#selectable) オプションを使用して有効にできます。チップをクリックするか、チップを `Tab` キーによってフォーカスして `Space` キーを押すと選択できます。[`igxChip`]({environment:angularApiUrl}/classes/igxchipcomponent.html) の選択状態が変更すると、[`onSelection`]({environment:angularApiUrl}/classes/igxchipcomponent.html#onselection) イベントは発生されます。選択されたチップをクリックするか、チップがフォーカスされる場合に `Space` キーを押すと選択解除できます。
 
 ```html
 <igx-chips-area #chipsArea>
@@ -58,7 +58,7 @@ public ngOnInit() {
 
 #### 削除
 
-`remove button` はチップの部分です。削除ボタンの表示状態を `removable` ブール値オプションによって制御できます。ユーザーがチップを削除するときに `onRemove` イベントが発生されます。
+`remove button` はチップの部分です。削除ボタンの表示状態を [`removable`]({environment:angularApiUrl}/classes/igxchipcomponent.html#removable) ブール値オプションによって制御できます。ユーザーがチップを削除するときに [`onRemove`]({environment:angularApiUrl}/classes/igxchipcomponent.html#onremove) イベントが発生されます。
 
 ```html
 <igx-chips-area #chipsArea>
@@ -85,7 +85,7 @@ public chipRemoved(event) {
 
 #### 移動/ドラッグ
 
-チップの位置を変更するためにユーザーによってドラッグできます。移動/ドラグ機能はデフォルトで無効ですが、`draggable` オプションを使用して有効にできます。データソースでチップの移動を手動的に処理する必要があります。
+チップの位置を変更するためにユーザーによってドラッグできます。移動/ドラグ機能はデフォルトで無効ですが、[`draggable`]({environment:angularApiUrl}/classes/igxchipcomponent.html#draggable) オプションを使用して有効にできます。データソースでチップの移動を手動的に処理する必要があります。
 
 ```html
 <igx-chips-area #chipArea (onReorder)="chipsOrderChanged($event)">
@@ -120,12 +120,12 @@ public chipsOrderChanged(event) {
 
 #### Chip テンプレート
 
-`IgxChipComponent` の構造は主にチップのコンテンツ、削除ボタン、`prefix`、`suffix`、`connector` です。削除ボタン以外の要素をテンプレート化できます。
+[`IgxChipComponent`]({environment:angularApiUrl}/classes/igxchipcomponent.html) の構造は主にチップのコンテンツ、削除ボタン、[`prefix`]({environment:angularApiUrl}/classes/igxprefixdirective.html)、[`suffix`]({environment:angularApiUrl}/classes/igxsuffixdirective.html)、[`connector`]({environment:angularApiUrl}/classes/igxconnectordirective.html) です。削除ボタン以外の要素をテンプレート化できます。
 
-チップのコンテンツは、チップの `prefix`、`suffix`、または `connector` を定義する要素以外のテンプレートに定義されるコンテンツです。コンテンツは任意のタイプを定義できます。
+チップのコンテンツは、チップの [`prefix`]({environment:angularApiUrl}/classes/igxprefixdirective.html)、[`suffix`]({environment:angularApiUrl}/classes/igxsuffixdirective.html)、または [`connector`]({environment:angularApiUrl}/classes/igxconnectordirective.html) を定義する要素以外のテンプレートに定義されるコンテンツです。コンテンツは任意のタイプを定義できます。
 
-`prefix` および `suffix` は実際のチップ領域にある要素で、テンプレート化できます。テンプレートを指定するには、`IgxPrefix` および `IgxSuffix` ディレクティブを使用します。
-以下は、`prefix` にアイコン、`label` にテキスト、`suffix` にカスタム アイコン ボタンを使用した例です。
+[`prefix`]({environment:angularApiUrl}/classes/igxprefixdirective.html) および [`suffix`]({environment:angularApiUrl}/classes/igxsuffixdirective.html) は実際のチップ領域にある要素で、テンプレート化できます。テンプレートを指定するには、[`IgxPrefix`]({environment:angularApiUrl}/classes/igxprefixdirective.html) および [`IgxSuffix`]({environment:angularApiUrl}/classes/igxsuffixdirective.html) ディレクティブを使用します。
+以下は、[`prefix`]({environment:angularApiUrl}/classes/igxprefixdirective.html) にアイコン、[`label`]({environment:angularApiUrl}/classes/igxlabeldirective.html) にテキスト、[`suffix`]({environment:angularApiUrl}/classes/igxsuffixdirective.html) にカスタム アイコン ボタンを使用した例です。
 
 ```html
 <igx-chip *ngFor="let chip of chipList" [id]="chip.id">
@@ -137,7 +137,7 @@ public chipsOrderChanged(event) {
 </igx-chip>
 ```
 
-`igxChip` の `connectors` はテンプレート化が可能で、各チップの後に配置して隣り合わせたチップをアイコンやテキストなどとリンクします。最後のチップ (右端) に connector はありません。コネクターはチップのドラッグ操作で非表示し、チップとの操作が完了した後に表示します。connector は `IgxConnector` ディレクティブによって定義されます。
+[`igxChip`]({environment:angularApiUrl}/classes/igxchipcomponent.html) の [`connectors`]({environment:angularApiUrl}/classes/igxconnectordirective.html) はテンプレート化が可能で、各チップの後に配置して隣り合わせたチップをアイコンやテキストなどとリンクします。最後のチップ (右端) に connector はありません。コネクターはチップのドラッグ操作で非表示し、チップとの操作が完了した後に表示します。connector は [`IgxConnector`]({environment:angularApiUrl}/classes/igxconnectordirective.html) ディレクティブによって定義されます。
 
 プレフィックス コネクターの例:
 
@@ -166,13 +166,13 @@ public chipsOrderChanged(event) {
   - <kbd>LEFT</kbd> - 左側にあるチップをフォーカスします。
   - <kbd>RIGHT</kbd> - 右側にあるチップをフォーカスします。
   - <kbd>SPACE</kbd> - チップが選択可能な場合、選択状態を切り替えます。
-  - <kbd>DELETE</kbd> - チップの削除を手動的に処理するために `onRemove` 出力を発生します。
+  - <kbd>DELETE</kbd> - チップの削除を手動的に処理するために [`onRemove`]({environment:angularApiUrl}/classes/igxchipcomponent.html#onremove) 出力を発生します。
   - <kbd>SHIFT</kbd> + <kbd>LEFT</kbd> - フォーカスされたチップの位置を 1 つ左へ移動します。
   - <kbd>SHIFT</kbd> + <kbd>RIGHT</kbd> - フォーカスされたチップの位置を 1 つ右へ移動します。
 
 - 削除ボタンがフォーカスされた場合のキーボード コントロール:
 
-  - <kbd>SPACE</kbd> または <kbd>ENTER</kbd> チップの削除を手動的に処理するために `onRemove` 出力を発生します。
+  - <kbd>SPACE</kbd> または <kbd>ENTER</kbd> チップの削除を手動的に処理するために [`onRemove`]({environment:angularApiUrl}/classes/igxchipcomponent.html#onremove) 出力を発生します。
 
 ### 参照
 
