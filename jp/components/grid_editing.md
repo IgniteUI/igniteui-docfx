@@ -20,7 +20,7 @@ Ignite UI for Angular の Grid コンポーネントは、列のデータ型に�
 </div>
 <div class="divider--half"></div>
 
-特定のセルで編集モードに入るには、最初に列を**編集可能**にする必要があります。データ型固有の編集テンプレートを使用する場合は、列 [**dataType**]({environment:angularApiUrl}/classes/igxcolumncomponent.html#datatype) プロパティを指定してください。以下は各型のデフォルト テンプレートです。
+特定のセルで編集モードに入るには、最初に列を**編集可能**にする必要があります。データ型固有の編集テンプレートを使用する場合は、列 [`dataType`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#datatype) プロパティを指定してください。以下は各型のデフォルト テンプレートです。
 
  - `string` データ型のデフォルトのテンプレートは **igxInput** を使用します。
  - `number` データ型のデフォルト テンプレートは、**igxInput type="number"** を使用し、セルを数値に解析できない値に更新した場合は変更が破棄され、セル値は **0** に設定されます。

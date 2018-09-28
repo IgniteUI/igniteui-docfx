@@ -23,7 +23,7 @@ _language: ja
 
 ### 依存関係
 
-グリッドは `NgModule` としてエクスポートされるため、アプリケーションで `AppModule` に [`_IgxGridModule_`]({environment:angularApiUrl}/classes/igxgridmodule.html) をインポートする必要があります。
+グリッドは `NgModule` としてエクスポートされるため、アプリケーションで `AppModule` に [`IgxGridModule`]({environment:angularApiUrl}/classes/igxgridmodule.html) をインポートする必要があります。
 
 ```typescript
 // app.module.ts
@@ -42,7 +42,7 @@ import { IgxGridModule } from 'igniteui-angular/grid';
 export class AppModule {}
 ```
 
-[_IgxGridModule_]({environment:angularApiUrl}/classes/igxgridmodule.html) の各コンポーネント、ディレクティブ、およびヘルパー クラスは _grid_ または _igniteui-angular_ のメイン バンドルでインポートできます。グリッドをインスタンス化して使用するためにすべての機能をインポートする必要はありませんが、グリッド API の一部である型を宣言する場合はインポート (またはエディターで自動的にインポート) します。
+[`IgxGridModule`]({environment:angularApiUrl}/classes/igxgridmodule.html) の各コンポーネント、ディレクティブ、およびヘルパー クラスは _grid_ または _igniteui-angular_ のメイン バンドルでインポートできます。グリッドをインスタンス化して使用するためにすべての機能をインポートする必要はありませんが、グリッド API の一部である型を宣言する場合はインポート (またはエディターで自動的にインポート) します。
 
 ```typescript
 import { IgxGridComponent } from 'igniteui-angular/grid/';
@@ -63,13 +63,13 @@ public grid: IgxGridComponent;
 ```
 **id** プロパティは文字列値で、設定されない場合に自動生成されるグリッドの一意識別子です。**data** はグリッドをローカル データにバインドします。
 
-[**autoGenerate**]({environment:angularApiUrl}/classes/igxgridcomponent.html#autogenerate) プロパティは **igx-grid** にデータ ソース フィールドに基づいてグリッドの [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) を自動生成します。列の適切なデータ型の決定を試みます。それ以外の場合、開発者は列およびデータ ソース フィールドへのマッピングを明示的に定義する必要があります。
+[`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#autogenerate) プロパティは **igx-grid** にデータ ソース フィールドに基づいてグリッドの [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) を自動生成します。列の適切なデータ型の決定を試みます。それ以外の場合、開発者は列およびデータ ソース フィールドへのマッピングを明示的に定義する必要があります。
 
 ### 列の構成
 
-[**IgxColumnComponent**]({environment:angularApiUrl}/classes/igxcolumncomponent.html) は、グリッドの _columns_ コレクションを定義し、**フィルタリング**、**並べ替え**、**ページング**など、列ごとの機能を有効にするために使用します。セル、ヘッダー、およびフッター テンプレートも利用できます。
+[`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) は、グリッドの _columns_ コレクションを定義し、**フィルタリング**、**並べ替え**、**ページング**など、列ごとの機能を有効にするために使用します。セル、ヘッダー、およびフッター テンプレートも利用できます。
 
-[**autoGenerate**]({environment:angularApiUrl}/classes/igxgridcomponent.html#autogenerate) プロパティを無効にし、マークアップで列コレクションを定義します。
+[`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#autogenerate) プロパティを無効にし、マークアップで列コレクションを定義します。
 
 ```html
 <igx-grid #grid1 [data]="data | async" [autoGenerate]="false" [paging]="true" [perPage]="6" (onColumnInit)="initColumns($event)"
@@ -176,7 +176,7 @@ const column = this.grid.getColumnByName("User");
 column.bodyTemplate = this.smallView;
 ```
 
-列プロパティもグリッドで列が初期化されるときに発生される [**initColumns**]({environment:angularApiUrl}/classes/igxgridcomponent.html#oncolumninit) イベントのコードで設定できます。
+列プロパティもグリッドで列が初期化されるときに発生される [`initColumns`]({environment:angularApiUrl}/classes/igxgridcomponent.html#oncolumninit) イベントのコードで設定できます。
 
 ```typescript
 public initColumns(column: IgxGridColumn) {

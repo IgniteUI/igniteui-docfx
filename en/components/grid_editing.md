@@ -19,7 +19,7 @@ The Grid component in Ignite UI for Angular provides you a default cell template
 </div>
 <div class="divider--half"></div>
 
-In order to be able to enter edit mode for specific cell, you should first set the column to be [**editable**]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable). If you want to use a data type specific *edit templates*, you should specify the column [**dataType**]({environment:angularApiUrl}/classes/igxcolumncomponent.html#datatype) property. So let's now see what are the default templates for each type:
+In order to be able to enter edit mode for specific cell, you should first set the column to be [`editable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable). If you want to use a data type specific *edit templates*, you should specify the column [`dataType`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#datatype) property. So let's now see what are the default templates for each type:
 
  - For `string` data type, default template is using **igxInput**
  - For `number` data type, default template is using **igxInput type="number"**, so if you try to update cell to a value which can not be parsed to a number your change is going to be discarded, and the value in the cell will be set to **0**.
