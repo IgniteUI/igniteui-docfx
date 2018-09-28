@@ -23,7 +23,7 @@ Combo コントロールは、データと値のバインディング、カス�
 <div class="divider--half"></div>
 
 ### 使用方法
-Ignite UI for Angular Combo を使用する前に **IgxComboModule** を **app.module.ts** ファイルにインポートします。以下のサンプルは `igx-switch` を使用していますが、追加で **IgxSwitchModule** も必要です。
+Ignite UI for Angular Combo を使用する前に [IgxComboModule]({environment:angularApiUrl}/classes/igxcombomodule.html) を **app.module.ts** ファイルにインポートします。以下のサンプルは [igx-switch]({environment:angularApiUrl}/classes/igxswitchcomponent.html) を使用していますが、追加で [IgxSwitchModule]({environment:angularApiUrl}/classes/igxswitchmodule.html) も必要です。
 
 ```typescript
 // app.module.ts
@@ -39,7 +39,7 @@ import { IgxComboModule, IgxSwitchModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
- デモでは、`igx-switch` コンポーネントを使用して `igx-combo` プロパティ値を切り替えます。グループ化は、`groupKey` を対応するデータソース エンティティに設定、または空文字列に設定して有効または無効にできます。
+ デモでは、[igx-switch]({environment:angularApiUrl}/classes/igxswitchcomponent.html) コンポーネントを使用して [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) プロパティ値を切り替えます。グループ化は、[groupKey]({environment:angularApiUrl}/classes/igxcombocomponent.html#groupkey) を対応するデータソース エンティティに設定、または空文字列に設定して有効または無効にできます。
 ```html
 <div class="combo-container">
     <igx-combo #combo [data]="lData" [displayKey]="'field'" [valueKey]="'field'"
@@ -70,7 +70,7 @@ export class AppModule {}
 
 ## データ バインディング
 
-ローカル データソースへバインドする `igx-combo` の基本的な使用は、`valueKey` と `displayKey` を定義します。
+ローカル データソースへバインドする [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) の基本的な使用は、[valueKey]({environment:angularApiUrl}/classes/igxcombocomponent.html#valuekey) と [displayKey]({environment:angularApiUrl}/classes/igxcombocomponent.html#displaykey) を定義します。
 
 ```html
 <igx-combo [data]="lData" [valueKey]="'ProductID'" [displayKey]="'ProductName'"></igx-combo>
@@ -88,10 +88,10 @@ export class ComboDemo implements OnInit {
 }
 ```
 
-> 注: `displayKey` が省略された場合、`valueKey` エンティティが項目テキストとして使用されます。
+> 注: [displayKey]({environment:angularApiUrl}/classes/igxcombocomponent.html#displaykey) が省略された場合、[valueKey]({environment:angularApiUrl}/classes/igxcombocomponent.html#valuekey) エンティティが項目テキストとして使用されます。
 
 
-詳細については、[`igx-combo` をリモートデータをバインド](combo_remote.md)を参照してください。
+詳細については、[[igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) をリモートデータをバインド](combo_remote.md)を参照してください。
 
 ## 値バインディング
 
@@ -156,58 +156,8 @@ set values(newValues: Array<any>) {
 ### 入力
 <div class="divider--half"></div>
 
-| 名前|説明|型                        |
-|--------------------------|---------------------------------------------------|-----------------------------|
-|  `id`	                   |コンボ id                                          |string                      |
-|  `data`                  |コンボ データ ソース                                |any                         |
-|  `value`                 |コンボ値                                       |string                      |
-|  `allowCustomValue`      |コンボのカスタム値を有効/無効にします。               |boolean                     |
-|  `filterable`            |コンボのドロップダウンのフィルタリングを有効/無効にします。デフォルトは有効です。|boolean                     |
-|  `valueKey`              |コンボ値データソース プロパティ|string                      |
-|  `displayKey`            |コンボ表示データソース プロパティ|string                      |
-|  `groupKey`              |コンボ項目グループ|string                      |
-|  `virtualizationState`   |仮想化データの現在の状態を定義します。`startIndex` と `chunkSize` を含みます。|`IForOfState`               |
-|  `width `                |コンボの幅を定義します。|string                      |
-|  `height`                |コンボの高さを定義します。|string                      |
-|  `itemsMaxHeight `       |ドロップダウンの最大の高さを定義します。|number                      |
-|  `itemsWidth `           |ドロップダウンの幅を定義します。|string                      |
-|  `itemHeight `           |ドロップダウンの項目の高さを定義します。|number                      |
-|  `placeholder `          |"empty value" のテキストを定義します。|string                      |
-|  `searchPlaceholder `    |検索入力のプレースホルダー テキストを定義します。|string                      |
-|  `collapsed`             |ドロップダウン状態を取得します。|boolean                     |
-|  `disabled`              |コントロールがアクティブかどうかを定義します。|boolean                     |
-|  `ariaLabelledBy`        |コンボに関連するラベル ID を定義します。|string                      |
-|  `type`                  |コンボの型 ("line"、"box"、"border"、"search") を定義します。|string                      |
-|  `valid`                 |フォームで使用時のコントロールが有効化どうかを取得します。|boolean                     |
-
-
-### 出力
-<div class="divider--half"></div>
-
-| 名前|説明|キャンセル可能|パラメーター                              |
-|------------------   |-------------------------------------------------------------------------|------------- |-----------------------------------------|
-| `onSelectionChange` |選択を完了する前にアイテム選択が変更されるときに発生されます。|true         |{ oldSelection: `Array<any>`, newSelection: `Array<any>`, event: Event } |
-| `onSearchInput`     |検索入力のイベントがトリガーされたときに発生されます。|false        |{ searchValue: `string` }               |
-| `onAddition`        |項目がデータ コレクションに追加されているときに発生されます。|false        |{ oldCollection: `Array<any>`, addedItem: `<any>`, newCollection: `Array<any>` }|
-| `onDataPreLoad`     |新しいデータが可視化から読み込まれたときに発生されます。|false|{ event: Event }                        |
-| `onOpening`   |ドロップダウンが開かれる前に発生されます。|false|{ event: Event }                        |
-| `onOpened`    |ドロップダウンが開かれた後に発生されます。|false|{ event: Event }                        |
-| `onClosing`   |ドロップダウンが閉じられる前に発生されます。|false|{ event: Event }                        |
-| `onClosed`    |ドロップダウンが閉じられた後に発生されます。|false|{ event: Event }                        |
-
-### メソッド
-<div class="divider--half"></div>
-
-| 名前|説明|戻り型|パラメーター                  |
-|----------------- |-----------------------------|----------------------|-----------------------------|
-| `open`           |ドロップダウンを開きます。             |`void`               |`None`                      |
-| `close`          |ドロップダウンを閉じます。        |`void`               |`None`                      |
-| `toggle`         |ドロップダウンを切り替えます。|`void`               |`None`                      |
-| `selectedItems`  |現在の選択状態を取得します。|`Array<any>`         |`None`                      |
-| `selectItems`    |定義済みの項目を選択します。|`void`               |項目: `Array<any>`, clearCurrentSelection: `boolean` |
-| `deselectItems`  |定義済みの項目の選択を解除します。|`void`               |項目: `Array<any>`         |
-| `selectAllItems` |すべての項目 (フィルター済み) を選択します。 |`void`               |ignoreFilter?: `boolean` - `true` の場合、**すべて**の値を選択します。 |
-| `deselectAllItems` |フィルター済みのすべての項目の選択を解除します。|`void`           |ignoreFilter?: `boolean` - `true` の場合、**すべて**の値の選択を解除します。 |
+* IgxComboComponent [**API Reference**]({environment:angularApiUrl}/classes/igxcombocomponent.html) and
+[**Themes Reference**]({environment:sassApiUrl}/index.html#themes-mixin-igx-combo).
 
 ## その他のリソース
 <div class="divider--half"></div>
@@ -217,6 +167,7 @@ set values(newValues: Array<any>) {
 * [テンプレート駆動フォームの統合](input_group.md)
 * [リアクティブ フォームの統合](input_group_reactive_forms.md)
 * [カスケーディング](combo_cascading.md)
+* [IgxSwitch]({environment:angularApiUrl}/classes/igxswitchcomponent.html)
 
 コミュニティに参加して新しいアイデアをご提案ください。
 
