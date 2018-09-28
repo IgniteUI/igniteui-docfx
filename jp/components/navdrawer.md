@@ -62,7 +62,7 @@ export class AppModule {
 ```
 
 Drawer のコンテンツを `igxDrawer` ディレクティブでデコレートした `<ng-template>` で設定します。
-任意のコンテンツをテンプレートに設定できますが、`igxDrawerItem` ディレクティブ ([項目のスタイル設定](#項目のスタイル)を参照) が定義済みのスタイル設定を項目に適用します。[`igxRipple`](ripple.md) ディレクティブはルックアンドフィールを向上します。
+任意のコンテンツをテンプレートに設定できますが、[`igxDrawerItem`]({environment:angularApiUrl}/classes/igxnavdraweritemdirective.html) ディレクティブ ([項目のスタイル設定](#項目のスタイル)を参照) が定義済みのスタイル設定を項目に適用します。[`igxRipple`](ripple.md) ディレクティブはルックアンドフィールを向上します。
 
 ```html
 <!-- app.component.html -->
@@ -225,7 +225,7 @@ Drawer は `flex-basis` をホスト要素に適用すると、残りのコン�
 
 ### 項目のスタイル
 
-Navigation Drawer のコンテンツをテンプレートに設定します。ナビゲーション項目の規格リストを使用するシナリオの場合、スタイル設定するためにオプションの `igxDrawerItem` ディレクティブを使用できます。項目にデフォルト スタイル設定およびパターン、さらに適切なテーマ色を適用します。
+Navigation Drawer のコンテンツをテンプレートに設定します。ナビゲーション項目の規格リストを使用するシナリオの場合、スタイル設定するためにオプションの [`igxDrawerItem`]({environment:angularApiUrl}/classes/igxnavdraweritemdirective.html) ディレクティブを使用できます。項目にデフォルト スタイル設定およびパターン、さらに適切なテーマ色を適用します。
 
 このディレクティブに 2 つの `@Input` プロパティがあります。
 - `active` - 項目を選択済みとしてスタイル設定します。
@@ -245,7 +245,7 @@ Navigation Drawer のコンテンツをテンプレートに設定します。�
 
 #### 事例: Angular ルーターでデフォルト項目スタイルの使用
 
-項目をスタイル設定するために `igxDrawerItem` ディレクティブを使用するには、`active` 入力を標準に設定しますが、ルーティングの場合、その状態が外部に制御されます。
+項目をスタイル設定するために [`igxDrawerItem`]({environment:angularApiUrl}/classes/igxnavdraweritemdirective.html) ディレクティブを使用するには、`active` 入力を標準に設定しますが、ルーティングの場合、その状態が外部に制御されます。
 
 `app.component.ts` に定義される以下の項目があります。
 
@@ -300,16 +300,4 @@ export class AppComponent {
 <div class="divider--half"></div>
 
 ### API 参照
-* [IgxRipple API]({environment:angularApiUrl}/classes/igxrippledirective.html)
-
-* [IgxLayout API]({environment:angularApiUrl}/classes/igxlayoutdirective.html)
-
-* [IgxFlex API]({environment:angularApiUrl}/classes/igxflexdirective.html)
-
-* [IgxNavigationService API]({environment:angularApiUrl/classes/igxnavigationservice.html)
-
-* [IgxToggleActionDirective API]({environment:angularApiUrl/classes/igxtoggleactiondirective.html)
-
-* [IgxButtonDirective API]({environment:angularApiUrl/classes/igxbuttondirective.html)
-
-* [IgxDrawerItem API]({environment:angularApiUrl/classes/igxnavdraweritemdirective.html)
+* [IgxNavigationDrawerComponent]({environment:angularApiUrl/classes/igxnavigationdrawercomponent.html)

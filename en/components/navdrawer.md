@@ -44,7 +44,7 @@ With the dependencies imported, the Navigation Drawer can be defined in the app 
 </igx-nav-drawer>
 ```
 The content for the drawer should be provided via `<ng-template>` decorated with `igxDrawer` directive.
-While any content can be provided in the template, the `igxDrawerItem` directive (see [Item styling](#item-styling)) is available to apply out-of-the-box styling to items. The [`igxRipple`](ripple.md) directive completes the look and feel:
+While any content can be provided in the template, the [`igxDrawerItem`]({environment:angularApiUrl}/classes/igxnavdraweritemdirective.html) directive (see [Item styling](#item-styling)) is available to apply out-of-the-box styling to items. The [`igxRipple`](ripple.md) directive completes the look and feel:
 ```html
 <!-- app.component.html -->
 <div class="content-wrap">
@@ -196,7 +196,7 @@ The mini variant is commonly used in a persistent setup, so we've set `pin` and 
 
 ### Item Styling
 
-The content of the Navigation Drawer can be anything provided by the template, however for scenarios using the standard list of navigation items the optional `igxDrawerItem` directive can be used to style them. This will apply default styles and patterns to your items as well as the appropriate theme colors.
+The content of the Navigation Drawer can be anything provided by the template, however for scenarios using the standard list of navigation items the optional [`igxDrawerItem`]({environment:angularApiUrl}/classes/igxnavdraweritemdirective.html) directive can be used to style them. This will apply default styles and patterns to your items as well as the appropriate theme colors.
 
 The directive has two `@Input` properties:
 - `active` to style an item as selected.
@@ -214,7 +214,7 @@ The directive is exported both from the main `IgxNavigationDrawerModule` and sep
 <div class="divider--half"></div>
 
 #### Example: Use default item styles with Angular Router
-To make use of the `igxDrawerItem` directive to style items normally the `active` input should be set, however with routing that state is controlled externally.
+To make use of the [`igxDrawerItem`]({environment:angularApiUrl}/classes/igxnavdraweritemdirective.html) directive to style items normally the `active` input should be set, however with routing that state is controlled externally.
 
 Take the following items defined in `app`typescript
 export class AppComponent {
@@ -264,16 +264,4 @@ This approach, of course, does not affect the actual directive active state and 
 <div class="divider--half"></div>
 
 ### API Reference
-* [IgxRipple API]({environment:angularApiUrl}/classes/igxrippledirective.html)
-
-* [IgxLayout API]({environment:angularApiUrl}/classes/igxlayoutdirective.html)
-
-* [IgxFlex API]({environment:angularApiUrl}/classes/igxflexdirective.html)
-
-* [IgxNavigationService API]({environment:angularApiUrl/classes/igxnavigationservice.html)
-
-* [IgxToggleActionDirective API]({environment:angularApiUrl/classes/igxtoggleactiondirective.html)
-
-* [IgxButtonDirective API]({environment:angularApiUrl/classes/igxbuttondirective.html)
-
-* [IgxDrawerItem API]({environment:angularApiUrl/classes/igxnavdraweritemdirective.html)
+* [IgxNavigationDrawerComponent]({environment:angularApiUrl/classes/igxnavigationdrawercomponent.html)
