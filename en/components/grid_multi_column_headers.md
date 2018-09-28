@@ -61,11 +61,11 @@ Every [`igx-column-group`]({environment:angularApiUrl}/classes/igxcolumngroupcom
 </igx-grid>
 ```
 
-### API Summary
+### API References
 <div class="divider--half"></div>
 
 * [IgxColumnGroupComponent]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html)
-
+* [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 <div class="divider--half"></div>
 
 ### Additional Resources

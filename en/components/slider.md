@@ -218,6 +218,7 @@ If the sample is configured properly, the final result should look like that:
 <div class="divider--half"></div>
 
 * [IgxSliderComponent]({environment:angularApiUrl}/classes/igxslidercomponent.html)
+* [IgxSliderComponent Styles]({environment:sassApiUrl}/index.html#function-igx-slider-theme)
 * [SliderType]({environment:angularApiUrl}/enums/slidertype.html)
 * [IRangeSliderValue]({environment:angularApiUrl}/interfaces/irangeslidervalue.html)
 
