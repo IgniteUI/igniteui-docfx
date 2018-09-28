@@ -7,7 +7,7 @@ _language: ja
 
 ### グリッドのグループ化
 
-`igxGrid` は、列グループ値に基づいて階層グループのデータ レコードを可視化できる列グループをサポートします。グループは展開または縮小でき、グループの順序は UI または API で変更できます。
+[`igxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) は、列グループ値に基づいて階層グループのデータ レコードを可視化できる列グループをサポートします。グループは展開または縮小でき、グループの順序は UI または API で変更できます。
 
 
 #### デモ
@@ -33,11 +33,11 @@ public ngOnInit() {
 }
 ```
 
-グループ式は、`ISortingExpression` インターフェイスを実装します。
+グループ式は、[`ISortingExpression`]({environment:angularApiUrl}/interfaces/isortingexpression.html) インターフェイスを実装します。
 
 #### グループ化 API
 
-グループ化は、UI およびグリッド コンポーネントで公開された API で実行できます。各列の `groupable` プロパティを `true`に設定してエンドユーザーは特定の列でグリッド データをグループ化できます。
+グループ化は、UI およびグリッド コンポーネントで公開された API で実行できます。各列の [`groupable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#groupable) プロパティを `true`に設定してエンドユーザーは特定の列でグリッド データをグループ化できます。
 
 ```html
 <igx-grid [data]="data">
@@ -54,15 +54,15 @@ public ngOnInit() {
 }
 ```
 
-ランタイムの式は `groupingExpressions` プロパティから取得または設定できます。既存の式を追加または変更する必要がある場合、`ISortingExpression` の単一または配列 の `groupBy` メソッドを使用してください。
+ランタイムの式は [`groupingExpressions`]({environment:angularApiUrl}/classes/igxgridcomponent.html#groupingexpressions) プロパティから取得または設定できます。既存の式を追加または変更する必要がある場合、[`ISortingExpression`]({environment:angularApiUrl}/interfaces/isortingexpression.html) の単一または配列 の [`groupBy`]({environment:angularApiUrl}/classes/igxgridcomponent.html#groupby) メソッドを使用してください。
 
 ```typescript
 grid.groupBy({ fieldName: 'ProductName', dir: SortingDirection.Desc, ignoreCase: true });
 ```
 
-グループ化は、並べ替えおよびグループ式が列がグループ化されずに並べ替えられた場合も並べ替えされた列として適用される場合に可能です。グループ式は `sortingExpression` プロパティにあり、グループ列の式が常に最初になるよう並べ替えます。並べ替え API は、グループ化された列の式を変更した場合にグルーピングに影響があります。グループ式 (列グループ解除) を削除して並べ替えを解除します。
+グループ化は、並べ替えおよびグループ式が列がグループ化されずに並べ替えられた場合も並べ替えされた列として適用される場合に可能です。グループ式は [`sortingExpression`]({environment:angularApiUrl}/classes/igxgridcomponent.html#sortingexpressions) プロパティにあり、グループ列の式が常に最初になるよう並べ替えます。並べ替え API は、グループ化された列の式を変更した場合にグルーピングに影響があります。グループ式 (列グループ解除) を削除して並べ替えを解除します。
 
-グループ式の他にグループ行の展開も制御できます。`igxGrid` コンポーネント `groupingExpansionState` の別のプロパティに保存されます。グループ行は、作成されたフィールド名とグループ化の各レベルを表す値に基づいて識別されます。以下は展開状態のインターフェイスのシグネチャです。
+グループ式の他にグループ行の展開も制御できます。[`igxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) コンポーネント [`groupingExpansionState`]({environment:angularApiUrl}/classes/igxgridcomponent.html#groupingexpansionstate) の別のプロパティに保存されます。グループ行は、作成されたフィールド名とグループ化の各レベルを表す値に基づいて識別されます。以下は展開状態のインターフェイスのシグネチャです。
 
 ```typescript
 export interface IGroupByKey {
@@ -76,14 +76,14 @@ export interface IGroupByExpandState {
 }
 ```
 
-`groupingExpression` で `IGroupByExpandState` のリストを直接 `groupingExpansionState` に設定すると展開が変更されます。`igxGrid` はグループ レコード インスタンスでトグルするメソッドを公開します。
+[`groupingExpressions`]({environment:angularApiUrl}/classes/igxgridcomponent.html#groupingexpressions) で [`IGroupByExpandState`]({environment:angularApiUrl}/interfaces/igroupbyexpandstate.html) のリストを直接 [`groupingExpansionState`]({environment:angularApiUrl}/classes/igxgridcomponent.html#groupingexpansionstate) に設定すると展開が変更されます。[`igxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) はグループ レコード インスタンスでトグルするメソッドを公開します。
 
 ```typescript
     const groupRow = grid.getGroupRow([{ fieldName: 'Category', value: 'soft drinks' }]);
     grid.toggleGroup(groupRow);
 ```
 
-グループは展開済み (***デフォルト***) または縮小済みに作成でき、展開状態は一般的にデフォルト動作の反対の状態のみ含みます。グループを作成して展開するかどうか、または `groupsExpanded` プロパティを介すかどうかを制御できます。
+グループは展開済み (***デフォルト***) または縮小済みに作成でき、展開状態は一般的にデフォルト動作の反対の状態のみ含みます。グループを作成して展開するかどうか、または [`groupsExpanded`]({environment:angularApiUrl}/classes/igxgridcomponent.html#groupsexpanded) プロパティを介すかどうかを制御できます。
 
 #### グループ行テンプレート
 
@@ -114,7 +114,7 @@ export interface IGroupByRecord {
 - グループ行 (行または展開/縮小セルにフォーカス)
    - <kbd>SPACE</kbd> - グループの切り替え
 
-- グループ領域の `igxChip` コンポーネントのグループ化 (チップにフォーカス)
+- グループ領域の [`igxChip`]({environment:angularApiUrl}/classes/igxchipcomponent.html) コンポーネントのグループ化 (チップにフォーカス)
    - <kbd>SHIFT</kbd> + <kbd>LEFT</kbd> - フォーカスしたチップの左へ移動し、可能な場合はグループ順序を変更します。
    - <kbd>SHIFT</kbd> + <kbd>RIGHT</kbd> - フォーカスしたチップの右へ移動し、可能な場合はグループ順序を変更します。
    - <kbd>SPACE</kbd> - 並べ替えの方向を変更します。
