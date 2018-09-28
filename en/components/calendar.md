@@ -30,7 +30,7 @@ import { IgxCalendarModule } from 'igniteui-angular';
 })
 export class AppModule {}
 ```
-You will usually also import the **IgxCalendarComponent** in the AppComponent file (or your editor will auto-import them for you) when declaring types that are part of the calendar API:
+You will usually also import the [**IgxCalendarComponent**]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) in the AppComponent file (or your editor will auto-import them for you) when declaring types that are part of the calendar API:
 
 ```typescript
 import { IgxCalendarComponent } from 'igniteui-angular';
@@ -40,11 +40,11 @@ import { IgxCalendarComponent } from 'igniteui-angular';
 ```
 
 > [!WARNING]
-> Note that the **igxCalendarComponent** uses the [Intl](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat) WebAPI for localization and formatting of dates.
+> Note that the [**IgxCalendarComponent**]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) uses the [Intl](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat) WebAPI for localization and formatting of dates.
 > Consider using the [appropriate polyfills](https://github.com/andyearnshaw/Intl.js/) if your target platform does not support them.
 
 ### Selection
-Instantiating the **IgxCalendarComponent** is as easy as placing its selector element in the template. This will display the current month in the calendar and use single selection mode. We switch to any of the other selection modes - `multi` and `range`, by setting the `selection` property:
+Instantiating the [**IgxCalendarComponent**]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) is as easy as placing its selector element in the template. This will display the current month in the calendar and use single selection mode. We switch to any of the other selection modes - `multi` and `range`, by setting the [`selection`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#selection) property:
 ```html
 <!-- app.component.html -->
 <!-- Single selection mode -->
@@ -64,17 +64,11 @@ Notice that the calendar header is not rendered when the selection is either `mu
 
 ###Localization and formatting
 
-Due to their very nature, localization and formatting are essential to any calendar. In the **IgxCalendarComponent** those are controlled and customized through the following properties - `locale`, `formatOptions`, `formatViews`:
-
-| Name | Description |
-|:--:|:---|:---|
-| `locale` | Controls the locale used for formatting and displaying the dates in the calendar. The expected string value should be a [BCP 47 language tag](https://tools.ietf.org/html/rfc5646) and if not set defaults to "en". |
-| `formatOptions` | Controls the date-time components to use in formatted output, and their desired representations ([Аdditional information](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat)). The default values are { day: 'numeric', month: 'short', weekday: 'short', year: 'numeric' }. |
-| `formatViews` | Controls whether the date parts in the different calendar views should be formatted according to the provided locale and formatOptions. defaults are { day: false, month: true, year: false }. For the properties set to false, the views will display the corresponding `Date.getFullYear()` \ `Date.getDate()` \  `Date.getMonth()` value. |
+Due to their very nature, localization and formatting are essential to any calendar. In the [**IgxCalendarComponent**]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) those are controlled and customized through the following properties - [`locale`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#locale), [`formatOptions`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#formatoptions), [`formatViews`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#formatviews).
 <br>
-Let's go ahead and try those along with other customizations from the **IgxCalendarComponent** API. Say we are having visitors on our page coming from countries from EFTA (European Free Trade Association) countries, so we need to display the calendar in the corresponding culture. First thing we need to set is the `weekstart`, which controls the starting day of the week. It defaults to 0, which corresponds to Sunday, so we set a value of 1.
+Let's go ahead and try those along with other customizations from the [**IgxCalendarComponent**]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) API. Say we are having visitors on our page coming from countries from EFTA (European Free Trade Association) countries, so we need to display the calendar in the corresponding culture. First thing we need to set is the [`weekstart`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#weekstart), which controls the starting day of the week. It defaults to 0, which corresponds to Sunday, so we set a value of 1.
 
-In the markup below we are also binding the `formatOptions` and `formatViews` properties to customize the display formatting. Finally we are binding the `locale` property to a value, based on the user's location choice:
+In the markup below we are also binding the [`formatOptions`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#formatoptions) and [`formatViews`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#formatviews) properties to customize the display formatting. Finally we are binding the [`locale`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#locale) property to a value, based on the user's location choice:
 
 ```html
 <!-- app.component.html -->
@@ -120,7 +114,7 @@ Great, we should now have a calendar with customized dates display that also cha
 </div>
 
 ### Events
-Let's build on top of that sample a bit. We will require the user to enter a date range that does not exceed 5 days. We need to change the `selection` mode of the calendar to "range" and prompt the user to correct the selection, if the range is not valid. To do this we will use the `onSelection` event:
+Let's build on top of that sample a bit. We will require the user to enter a date range that does not exceed 5 days. We need to change the [`selection`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#selection) mode of the calendar to "range" and prompt the user to correct the selection, if the range is not valid. To do this we will use the [`onSelection`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#onselection) event:
 
 ```html
 <!-- app.component.html -->
@@ -131,7 +125,7 @@ Let's build on top of that sample a bit. We will require the user to enter a dat
 </igx-calendar>
 ```
 
-The value passed in the `onSelection` event is the collection of dates selected, so we can read its length to base our logic upon it. If we alert the user for the invalid selection, we also reset the selection to contain only the first date from the range using the `selectDate` method:
+The value passed in the [`onSelection`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#onselection) event is the collection of dates selected, so we can read its length to base our logic upon it. If we alert the user for the invalid selection, we also reset the selection to contain only the first date from the range using the [`selectDate`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#selectdate) method:
 
 ```typescript
 // app.component.ts
@@ -204,7 +198,7 @@ To support those browsers we are going to use alternative template using [ngIf](
     </ng-template>
 </igx-calendar>
 ```
-Note that **ngIf** evaluates the value of the **formatParts** expression to control which template to use. Let's have a look at the alernative **#parseTemplate** template: the expressions in the curly brackets invokes the **getDatePart** method that returns the evaluated value, in our case this is a formatted date part (year, weekday, month, etc.). The parameters passed to the **getDatePart** are necessary so that formatting is based on the **IgxCalendarComponent** locale and format options:
+Note that **ngIf** evaluates the value of the **formatParts** expression to control which template to use. Let's have a look at the alernative **#parseTemplate** template: the expressions in the curly brackets invokes the **getDatePart** method that returns the evaluated value, in our case this is a formatted date part (year, weekday, month, etc.). The parameters passed to the **getDatePart** are necessary so that formatting is based on the [**IgxCalendarComponent**]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) locale and format options:
 
 ```typescript
 // app.component.ts
@@ -235,7 +229,7 @@ Having implemented this conditional templating and date parsing we should get co
 </div>
 
 ### Disabled dates
-This section demonstrates the usage of `disabledDates` functionallity. Different `single dates` or `range` elements could be added to Array, and passed to the `disabledDates` descriptor.
+This section demonstrates the usage of [`disabledDates`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#disableddates) functionallity. Different `single dates` or `range` elements could be added to Array, and passed to the [`disabledDates`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#disableddates) descriptor.
 
 ```typescript
 this.calendar.disabledDates = [{ type: DateRangeType.Between, dateRange: [
@@ -244,8 +238,8 @@ this.calendar.disabledDates = [{ type: DateRangeType.Between, dateRange: [
 ])];
 ```
 
-The `DateRangeType` is used to specify the range that is going to be disabled. For example, `DateRangeType.Between` will disable the dates between two specific dates in Array. Code snippet above.
-Check the API table below for all available `DateRangeType` values.
+The [`DateRangeType`]({environment:angularApiUrl}/enums/daterangetype.html) is used to specify the range that is going to be disabled. For example, `DateRangeType.Between` will disable the dates between two specific dates in Array. Code snippet above.
+Check the API table below for all available [`DateRangeType`]({environment:angularApiUrl}/enums/daterangetype.html) values.
 
 This feature is covering the situations when we may need to restrict some dates to be selectable and focusable.
 
@@ -279,9 +273,9 @@ This is the result.
 
 ### Special dates
 
-`Special dates` feature is using almost the same configuration principles as `Disabled dates`. The difference here is dates `styling` and `interaction`. You are able to select and focus `Special date`.
+[`Special dates`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#specialdates) feature is using almost the same configuration principles as [`Disabled dates`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#disableddates). The difference here is dates `styling` and `interaction`. You are able to select and focus [`Special dates`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#specialdates).
 
-Lets add a `Special dates` to our `igxCalendar`, we are going to create a `DateRangeDescriptor` item of type `DateRangeType.Specific` and pass array of dates as `dateRange`:
+Lets add a [`Special dates`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#specialdates) to our `igxCalendar`, we are going to create a [`DateRangeDescriptor`]({environment:angularApiUrl}/interfaces/daterangedescriptor.html) item of type `DateRangeType.Specific` and pass array of dates as `dateRange`:
 
 ```typescript
 export class CalendarSample7Component {
@@ -344,60 +338,10 @@ When a day inside the current month is focused:
 <div class="divider--half"></div>
 
 ### API
-
-#### Inputs
 <div class="divider--half"></div>
 
-| Name       |      Type      |  Description |
-|:----------:|:-------------|:------|
-| `weekStart`| `Number` or `WEEKDAYS` | Sets which day the week will start. |
-| `locale` | `string` | Sets the locale used for formatting and displaying the dates in the calendar. For more information check out [this](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl) page for valid formats. |
-| `selection` | `string` | Sets the type of selection in the calendar. Valid values are `single` (default), `multi` and `range` |
-| `viewDate` | `Date` | Sets the year/month that will be presented in the default view when the calendar renders. By default it is the current year/month.   |
-| `value` | `Date` or `Date[]` | Gets/Sets the current value of the calendar widget. Both multi-selection and range selection return an array of selected dates. |
-| `formatOptions` | `Object` | The format options passed along with the `locale` property used for formatting the dates. Defaults are { day: 'numeric', month: 'short', weekday: 'short', year: 'numeric' }. |
-|`formatViews`| `Object`| Controls whether the date components in the different calendar views should be formatted according to the provided locale and formatOptions. Defaults are { day: false, month: true, year: false }. Does not affect rendering in the header. |
-| `vertical` | `boolean` | Controls the layout of the calendar component. When vertical is set to true the calendar header will be rendered to the side of the calendar body.|
-| `disabledDates` | `array` | Gets/Sets the disabled dates descriptors. |
-| `specialDates` | `array` | Gets/Sets the special dates descriptors. |
-#### Outputs
-<div class="divider--half"></div>
-
-| Name | Return Type | Description |
-|:--:|:---|:---|
-| `onSelection` | `Date` or `Date[]` | Fired when selection is made in the calendar. The event contains the selected value(s) based on the type of selection the component is set to |
-
-#### Methods
-<div class="divider--half"></div>
-
-| Name   | Arguments | Return Type | Description |
-|:----------:|:------|:------|:------|
-| `selectDate` | `date: Date` or `Date[]` | `void` | Change the calendar selection. Calling this method will emit the `onSelection` event. |
-| `isDateDisabled` | `date: Date` | `boolean` | Checks whether a date is disabled. |
-| `isDateSpecial` | `date: Date` | `boolean` | Checks whether a date is special. |
-<div class="divider--half"></div>
-
-#### Enumerations
-<div class="divider--half"></div>
-
-| Name   | Description |
-|:----------:|:------|
-| `DateRangeType ` |  Constants After, Before, Between, Specific, Weekdays, Weekends of type `DateRangeType` |
-<div class="divider--half"></div>
-
-#### Template Context
-<div class="divider--half"></div>
-
-| Name | Return Type | Description |
-|:--:|:---|:---|
-| `date` | `Date` | The date object in the context of the template. |
-| `full` | `string` | The full date representation returned after applying the formatOptions. |
-| `monthView` | `function` | A function which when called puts the calendar in month view. |
-| `yearView` | `function` | A function which when called puts the calendar in year view. |
-| `era` | `object` | The era date component (if applicable) formatted to the supplied locale. |
-| `year` | `object` | The year date component (if applicable) formatted to the supplied locale. |
-| `month` | `object` | The month date component (if applicable) formatted to the supplied locale. |
-| `day` | `object` | The day date component (if applicable) formatted to the supplied locale. |
-| `weekday` | `object` | The weekday date component (if applicable) formatted to the supplied locale. |
-<div class="divider--half"></div>
+* [IgxCalendarComponent]({environment:angularApiUrl}/classes/igxcalendarcomponent.html)
+* [IgxCalendarComponent Styles]({environment:sassApiUrl}/index.html#function-igx-calendar-theme)
+* [DateRangeType]({environment:angularApiUrl}/enums/daterangetype.html)
+* [DateRangeDescriptor]({environment:angularApiUrl}/interfaces/daterangedescriptor.html)
 
