@@ -74,7 +74,7 @@ In addition, we will define some custom styles for our elements!
     display: inline-block;
 }
 
-.switchContainer {
+.bottomMargin {
     margin-bottom: 50px;
 }
 ```
@@ -153,16 +153,16 @@ Now we can define our sliders and switch controls in the template of the compone
 
 ...
 <div>
-    <div class="switchContainer">
+    <div class="bottomMargin">
         <igx-switch [(ngModel)]="target.tooltipDisabled">Disable tooltip</igx-switch>
     </div>
-    <div>
-        <igx-slider minValue="0" maxValue="3000" [step]="100" [(ngModel)]="target.showDelay"></igx-slider>
+    <div class="bottomMargin">
         <span>Show Delay: {{target.showDelay}} ms</span>
+        <igx-slider minValue="0" maxValue="3000" [step]="100" [(ngModel)]="target.showDelay"></igx-slider>                
     </div>
     <div>
-        <igx-slider minValue="0" maxValue="3000" [step]="100" [(ngModel)]="target.hideDelay"></igx-slider>
         <span>Hide Delay: {{target.hideDelay}} ms</span>
+        <igx-slider minValue="0" maxValue="3000" [step]="100" [(ngModel)]="target.hideDelay"></igx-slider>                
     </div>
 </div>
 ```
