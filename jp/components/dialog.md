@@ -39,7 +39,7 @@ export class AppModule {}
 
 #### 警告
 
-通知を追加するには、メール コンポーネントのテンプレートで、以下のコードを追加すると通知ダイアログが作成されます。`title`、 `message`、`leftButtonLabel` を設定し、`onLeftButtonSelect` イベントを処理します。
+通知を追加するには、メール コンポーネントのテンプレートで、以下のコードを追加すると通知ダイアログが作成されます。[`title`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#title)、 [`message`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#message)、[`leftButtonLabel`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#leftbuttonlabel) を設定し、[`onLeftButtonSelect`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#onleftbuttonselect) イベントを処理します。
 
 ```html
 <!--email.component.html-->
@@ -62,7 +62,7 @@ export class AppModule {}
 
 #### 標準ダイアログ
 
-規格のダイアログを追加するには、ファイル マネージャー コンポーネントのテンプレートで、以下のコードを追加すると規格のダイアログが作成されます。`title`、 `message`、`leftButtonLabel`、`rightButtonLabel` を設定し、`onLeftButtonSelect` および `onRightButtonSelect` イベントを処理します。
+規格のダイアログを追加するには、ファイル マネージャー コンポーネントのテンプレートで、以下のコードを追加すると規格のダイアログが作成されます。[`title`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#title)、 [`message`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#message)、[`leftButtonLabel`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#leftbuttonlabel)、[`rightButtonLabel`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#rightbuttonlabel) を設定し、[`onLeftButtonSelect`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#onleftbuttonselect) および [`onRightButtonSelect`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#onrightbuttonselect) イベントを処理します。
 
 ```html
 <!--file-manager.component.html-->
@@ -86,7 +86,7 @@ export class AppModule {}
 
 #### カスタム ダイアログ
 
-カスタム ダイアログを追加するには、サインイン コンポーネントのテンプレートで、以下のコードを追加するとカスタム ダイアログが作成されます。`title`、`leftButtonLabel`、`rightButtonLabel`、`closeOnOutsideSelect` を設定し、`onLeftButtonSelect` および `onRightButtonSelect` イベントを処理します。
+カスタム ダイアログを追加するには、サインイン コンポーネントのテンプレートで、以下のコードを追加するとカスタム ダイアログが作成されます。[`title`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#title)、[`leftButtonLabel`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#leftbuttonlabel)、[`rightButtonLabel`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#rightbuttonlabel)、[`closeOnOutsideSelect`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#closeonoutsideselect) を設定し、[`onLeftButtonSelect`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#onleftbuttonselect) および [`onRightButtonSelect`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#onrightbuttonselect) イベントを処理します。
 また、[**igxLabel**](input_group.md) および [**igxInput**](input_group.md) ディレクティブでデコレートされるラベルおよび入力の 2 つのグループを追加できます。
 
 ```html
@@ -126,57 +126,10 @@ export class AppModule {}
 <div class="divider--half"></div>
 
 ### API まとめ
-以下の表は便利な **igx-dialog** コンポーネントの入力、出力、およびメソッドを説明します。
-
-#### 入力
-以下の入力が **igx-dialog** コンポーネントで利用できます。
-
-| 名前 | 型 | 説明 |
-| :--- | :--- | :--- |
-| `id` | string | ダイアログの一意識別子。 |
-| `title` | string | ダイアログのタイトルを指定します。 |
-| `message` | string | ダイアログのメッセージを指定します。 |
-| `leftButtonLabel` | string | true に設定すると、左ボタンを表示します。 |
-| `leftButtonType` | string | 左ボタンの [**type**](button.md#button-タイプ) を指定します。デフォルト値は flat です。 |
-| `leftButtonColor` | string | 左ボタンのテキスト色を指定します。 |
-| `leftButtonBackgroundColor` | string | 左ボタンの背景色を指定します。 |
-| `leftButtonRipple` | string | 左ボタンの [**ripple**](ripple.md) エフェクトを指定します。 |
-| `rightButtonLabel` | string | true に設定すると、右ボタンを表示します。 |
-| `rightButtonType` | string | 右ボタンの [**type**](button.md#button-タイプ) を指定します。デフォルト値は flat です。 |
-| `rightButtonColor` | string | 右ボタンのテキスト色を指定します。 |
-| `rightButtonBackgroundColor` | string | 右ボタンの背景色を指定します。|
-| `rightButtonRipple` | string | 右ボタンの [**ripple**](ripple.md) エフェクトを指定します。 |
-| `closeOnOutsideSelect` | boolean | true に設定する場合、外にクリックするとダイアログを閉じます。デフォルトは false です。 |
 <div class="divider--half"></div>
 
-#### 出力
-以下の出力は **igx-dialog** コンポーネントで利用できます。
-
-| 名前 | 説明 |
-| :--- | :--- |
-| `onOpen`  | ユーザーがダイアログを開くときにイベントを発生します。 |
-| `onClose`  | ユーザーがダイアログを閉じるときにイベントを発生します。 |
-| `onLeftButtonSelect`  | ユーザーが左ボタンをクリックするときにイベントを発生します。 |
-| `onRightButtonSelect`  | ユーザーが右ボタンをクリックするときにイベントを発生します。 |
-
-#### メソッド
-以下のメソッドが **igx-dialog** コンポーネントで利用できます。
-
-| 構文 | 説明 |
-| :--- | :--- |
-| `open`  | ダイアログを開きます。 |
-| `close`  | ダイアログを閉じます。 |
-| `toggle`  | ダイアログの状態を変更します。 |
-
-#### ゲッター
-以下のゲッターが **igx-dialog** コンポーネントで利用できます。
-
-| 名前 | 型 | 説明 |
-| :--- | :--- | :--- |
-| `state` | string | ダイアログの状態を返します。 |
-| `isOpen` | boolean | ダイアログが開いた場合は true、閉じた場合は false を返します。 |
-| `role` | string | ダイアログのタイプを返します。 |
-| `titleId` | string | ダイアログのタイトルの一意の ID を返します。 |
+* [IgxDialogComponent]({environment:angularApiUrl}/classes/igxdialogcomponent.html)
+* [IgxDialogComponent Styles]({environment:sassApiUrl}/index.html#function-igx-dialog-theme)
 
 ### 追加のリソース
 
