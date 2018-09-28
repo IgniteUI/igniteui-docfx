@@ -34,7 +34,7 @@ export class AppModule {}
 ```
 
 And now let's create a simple example in which we are going to simulate a continuous process, that is triggered on button click. In addition you can notice
-that the speed of loading depends on the `max` attribute that we have set to our `igx-linear-bar`. In the first case our max value is set to 200 and loads slower than in the second where it is set to 100 (default value). So let's see the code...
+that the speed of loading depends on the [`max`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#max) attribute that we have set to our `igx-linear-bar`. In the first case our max value is set to 200 and loads slower than in the second where it is set to 100 (default value). So let's see the code...
 
 ```html
 ...
@@ -163,7 +163,7 @@ So if we set up everything correctly, let's see what happened in the browser:
 </div>
 <div class="divider--half"></div>
 
-Finally let's make our sample even more exciting and good as we set the following attributes: `textAlign`, `textVisibility`, `textTop` and `text`.
+Finally let's make our sample even more exciting and good as we set the following attributes: [`textAlign`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#textalign), [`textVisibility`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#textvisibility), [`textTop`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#texttop) and [`text`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#text).
 And now let's see how our code looks:
 ```html
 ...
@@ -199,7 +199,7 @@ And now let's see how our code looks:
 ...
 ```
 
-And do not forget to first import `IgxTextAlign` in your component.
+And do not forget to first import [`IgxTextAlign`]({environment:angularApiUrl}/enums/igxtextalign.html) in your component.
 
 ```typescript
 import { ..., IgxTextAlign } from 'igniteui-angular';
@@ -258,23 +258,8 @@ And now let's see it in the browser:
 <div class="divider--half"></div>
 
 ### API
-| Name   |       Type      |  Description |
-|:----------|:-------------:|:------|
-| `max` |  number | Set maximum value that can be passed. By default it is set to 100. |
-| `type` |  string | Set type of the linear bar. Possible options - `default`, `success`, `info`, `warning`, and `danger`. |
-| `value` |  number | Set value that indicates the completed bar position. |
-| `striped` |  boolean | Set bar to have striped style. |
-| `animate` |  boolean | animation on progress bar. |
-| `textAlign` | enum | Set the position that defines where the text is aligned. Possible options - `IgxTextAlign.START` (default), `IgxTextAlign.CENTER`, `IgxTextAlign.END`. |
-| `textVisibility` | boolean | Set the text to be visible. By default it is set to `true`. |
-| `textTop` | boolean | Set the position that defines if the text should be aligned above the progress line. By default is set to `false`. |
-| `text` | string | Set a custom text that is displayed according to the defined position. |
 <div class="divider--half"></div>
 
-### Methods
-| Name   |  Description |
-|:----------|:------|
-| `getValue()` | Return passed value to progress bar to be in range between min(0) and max. |
-| `getPercentValue()` | Calculate the percentage based on passed value. |
-| `onProgressChanged` | Exposed event, which could be handled to track progress changing |
-<div class="divider--half"></div>
+* [IgxLinearProgressBarComponent]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html)
+* [IgxLinearProgressBarComponent Styles]({environment:sassApiUrl}/index.html#function-igx-progress-linear-theme)
+* [IgxTextAlign]({environment:angularApiUrl}/enums/igxtextalign.html)
