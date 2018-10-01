@@ -19,7 +19,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ### Usage
 
-To get started with the Ignite UI for Angular Dialog Window, let's first import the **IgxDialogModule** in our **app.module.ts** file:
+To get started with the Ignite UI for Angular Dialog Window, let's first import the [**IgxDialogModule**]({environment:angularApiUrl}/classes/igxdialogmodule.html) in our **app.module.ts** file:
 
 ```typescript
 // app.module.ts
@@ -38,8 +38,8 @@ export class AppModule {}
 
 #### Alert
 
-To add alert, in the template of our email component we can add the following code to get the notification dialog. We have to set the `title`, `message`, 
-`leftButtonLabel` and handle `onLeftButtonSelect` event:
+To add alert, in the template of our email component we can add the following code to get the notification dialog. We have to set the [`title`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#title), [`message`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#message), 
+[`leftButtonLabel`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#leftbuttonlabel) and handle [`onLeftButtonSelect`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#onleftbuttonselect) event:
 
 ```html
 <!--email.component.html-->
@@ -62,8 +62,8 @@ To add alert, in the template of our email component we can add the following co
 
 ####Standard Dialog
 
-To add standard dialog, in the template of our file manager component we can add the following code to get the standard dialog. We have to set the `title`, `message`, 
-`leftButtonLabel`, `rightButtonLabel`, and handle `onLeftButtonSelect` and `onRightButtonSelect` events:
+To add standard dialog, in the template of our file manager component we can add the following code to get the standard dialog. We have to set the [`title`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#title), [`message`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#message), 
+[`leftButtonLabel`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#leftbuttonlabel), [`rightButtonLabel`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#rightbuttonlabel), and handle [`onLeftButtonSelect`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#onleftbuttonselect) and [`onRightButtonSelect`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#onrightbuttonselect) events:
 
 ```html
 <!--file-manager.component.html-->
@@ -87,7 +87,7 @@ To add standard dialog, in the template of our file manager component we can add
 
 ####Custom Dialog
 
-To add custom dialog, in the template of our sign in component we can add the following code to get the custom dialog. We have to set the `title`,`leftButtonLabel`, `rightButtonLabel`, `closeOnOutsideSelect` and handle `onLeftButtonSelect` and `onRightButtonSelect` event.
+To add custom dialog, in the template of our sign in component we can add the following code to get the custom dialog. We have to set the [`title`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#title),[`leftButtonLabel`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#leftbuttonlabel), [`rightButtonLabel`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#rightbuttonlabel), [`closeOnOutsideSelect`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#closeonoutsideselect) and handle [`onLeftButtonSelect`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#onleftbuttonselect) and [`onRightButtonSelect`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#onrightbuttonselect) event.
 Also we can add two groups of label and input decorated with the [**igxLabel**](input_group.md) and [**igxInput**](input_group.md) directives.
 
 ```html
@@ -127,57 +127,10 @@ Also we can add two groups of label and input decorated with the [**igxLabel**](
 <div class="divider--half"></div>
 
 ### API Summary
-The following tables summarize some of the useful **igx-dialog** component inputs, outputs and methods.
-
-#### Inputs
-The following inputs are available in the **igx-dialog** component:
-
-| Name | Type | Description |
-| :--- | :--- | :--- |
-| `id` | string | Unique identifier of the dialog. |
-| `title` | string | Specifies the title of the dialog. |
-| `message` | string | Specifies the message of the dialog. |
-| `leftButtonLabel` | string | When set, the left button becomes visible. |
-| `leftButtonType` | string | Specifies the left button [**type**](button.md#button-types). Default value is flat. |
-| `leftButtonColor` | string | Specifies the left button text color. |
-| `leftButtonBackgroundColor` | string | Specifies the left button background color. |
-| `leftButtonRipple` | string | Specifies the left button [**ripple**](ripple.md) effect. |
-| `rightButtonLabel` | string | When set, the right button becomes visible. |
-| `rightButtonType` | string | Specifies the right button [**type**](button.md#button-types). Default value is flat. |
-| `rightButtonColor` | string | Specifies the right button text color. |
-| `rightButtonBackgroundColor` | string | Specifies the right button background color. |
-| `rightButtonRipple` | string | Specifies the right button [**ripple**](ripple.md) effect. |
-| `closeOnOutsideSelect` | boolean | When set to true the dialog closes when clicking outside. Default value is false. |
 <div class="divider--half"></div>
 
-#### Outputs
-The following outputs are available in the **igx-dialog** component:
-
-| Name | Description |
-| :--- | :--- |
-| `onOpen`  | Emits an event when the user open the dialog. |
-| `onClose`  | Emits an event when the user close the dialog. |
-| `onLeftButtonSelect`  | Emits an event when the user click on the left button. |
-| `onRightButtonSelect`  | Emits an event when the user click on the right button. |
-
-#### Methods
-The following methods are available in the **igx-dialog** component:
-
-| Signature | Description |
-| :--- | :--- |
-| `open`  | Opens the dialog. |
-| `close`  | Closes the dialog. |
-| `toggle`  | Changes the state of the dialog. |
-
-#### Getters
-The following getters are available on the **igx-dialog** component:
-
-| Name | Type | Description |
-| :--- | :--- | :--- |
-| `state` | string | Returns the state of the dialog. |
-| `isOpen` | boolean | Returns true if the the dialog is open and false if it is closed. |
-| `role` | string | Returns the type of the dialog. |
-| `titleId` | string | Returns the unique id of the dialog's title. |
+* [IgxDialogComponent]({environment:angularApiUrl}/classes/igxdialogcomponent.html)
+* [IgxDialogComponent Styles]({environment:sassApiUrl}/index.html#function-igx-dialog-theme)
 
 ###Additional Resources
 

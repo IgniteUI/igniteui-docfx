@@ -15,7 +15,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 
 ### Usage
-The carousel can be used as a full-screen element or situated inside another component. Also, the slides may feature any valid html content inside, including other Angular components. To get started with the **Ignite UI for Angular Carousel**, let's first import the **IgxCarouselModule** in our **app.module.ts** file:
+The carousel can be used as a full-screen element or situated inside another component. Also, the slides may feature any valid html content inside, including other Angular components. To get started with the **Ignite UI for Angular Carousel**, let's first import the [**IgxCarouselModule**]({environment:angularApiUrl}/classes/igxcarouselmodule.html) in our **app.module.ts** file:
 ```typescript
 // app.module.ts
 ...
@@ -77,7 +77,7 @@ A real world scenario would include dynamically loading the slides and not decla
       );
   }
 ```
-And now we are ready to add the ngFor directive to the `igx-slide` and provide our html inside as usual. We are also adding an image to each slide:
+And now we are ready to add the ngFor directive to the [`igx-slide`]({environment:angularApiUrl}/classes/igxslidecomponent.html) and provide our html inside as usual. We are also adding an image to each slide:
 
 ```html
 <!-- app.component.html -->
@@ -123,7 +123,7 @@ As mentioned navigation and transition are the most important carousel features.
 ...
 </igx-carousel>
 ```
-In the above snippet we are setting values to the `loop` and `pause` element properties using [property binding](https://angular.io/guide/template-syntax#property-binding). Another optional property to set is the `transition`, which sets the amount of time in milliseconds between slides transition. We are skipping this as we do not want our carousel to transition the content by itself, but want it to be entirely controlled by the user. The component properties values are provided via code below. Notice that to disable the automatic playing we need to call the `stop` method exposed by the carousel:
+In the above snippet we are setting values to the [`loop`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#loop) and [`pause`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#pause) element properties using [property binding](https://angular.io/guide/template-syntax#property-binding). Another optional property to set is the [`interval`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#interval), which sets the amount of time in milliseconds between slides transition. We are skipping this as we do not want our carousel to transition the content by itself, but want it to be entirely controlled by the user. The component properties values are provided via code below. Notice that to disable the automatic playing we need to call the [`stop`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#stop) method exposed by the carousel:
 
 ```typescript
   // app.component.ts
@@ -138,13 +138,13 @@ In the above snippet we are setting values to the `loop` and `pause` element pro
      this.carousel.stop();
   }
 ```
-Having those configured this way, we empowered the user to have full control over the carousel. What we want to do now is customize the navigation further and replace the carousel indicators with a nice looking progress bar. Hooking up on the `onSlideChanged` event and using the **IgxLinearProgressBar** component we will add adittional UI indicating the progress made. First we need to import the **IgxLinearProgressBar** module:
+Having those configured this way, we empowered the user to have full control over the carousel. What we want to do now is customize the navigation further and replace the carousel indicators with a nice looking progress bar. Hooking up on the [`onSlideChanged`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#onslidechanged) event and using the [**IgxLinearProgressBar**]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html) component we will add adittional UI indicating the progress made. First we need to import the **IgxLinearProgressBar** module:
 
 ```typescript
 // app.component.ts
 import { Direction, IgxCarousel, IgxLinearProgressBar } from 'igniteui-angular';
 ```
-Once we have the module imported, we can continue with adding the **IgxLinearProgressBar** in our template. Notice that we set the `max` property to bind to the `total` property value, which will be defined in the **app.component.ts** file. Also, we add a handler for the `onSlideChanged` event and an indicator text in adittion to the progress bar:
+Once we have the module imported, we can continue with adding the [**IgxLinearProgressBar**]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html) in our template. Notice that we set the [`max`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#max) property to bind to the [`total`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#total) property value, which will be defined in the **app.component.ts** file. Also, we add a handler for the [`onSlideChanged`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#onslidechanged) event and an indicator text in adittion to the progress bar:
 
 ```html
 <!-- app.component.html -->
@@ -159,7 +159,7 @@ Once we have the module imported, we can continue with adding the **IgxLinearPro
 </igx-carousel>
 ```
 
-We update the `total` and `current` properties values in the **ngOnInit** and the linear bar value in the `onSlideChanged` event handler:
+We update the [`total`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#total) and [`current`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#current) properties values in the **ngOnInit** and the linear bar value in the [`onSlideChanged`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#onslidechanged) event handler:
 
 ```typescript
 // app.component.ts
@@ -206,7 +206,7 @@ Following all the steps above brings us a nice and functional carousel that the 
 </div>
 
 ### Actions on tap/click
-Our carousel now displays nicely the home page content. What it is missing is defining actions that will follow the user interactions with the slides. Once the user made a choice and clicked/tapped on the slide, it is expected that the carousel will transfer the user to a new page/view. Let's see how to do this by setting a route to navigate to - we will replace the heading with an IgxButton and  add an event handler for the button click event:
+Our carousel now displays nicely the home page content. What it is missing is defining actions that will follow the user interactions with the slides. Once the user made a choice and clicked/tapped on the slide, it is expected that the carousel will transfer the user to a new page/view. Let's see how to do this by setting a route to navigate to - we will replace the heading with an [`IgxButton`]({environment:angularApiUrl}/classes/igxbuttondirective.html) and  add an event handler for the button click event:
 
 ```html
 <!-- app.component.html-->
@@ -239,41 +239,13 @@ Given this configuration, the router matches that URL to the given route path **
     <iframe src='{environment:demosBaseUrl}/carousel-sample-4' width="100%" height="100%" seamless frameBorder="0"></iframe>
 </div>
 
-###API
+###API References
 <div class="divider--half"></div>
 
-#### Carousel (igx-carousel)
-<div class="divider--half"></div>
-
-| Name   |      Type      |  Description |
-|:----------|:-------------:|:------|
-| `loop` |  boolean | Should the carousel wrap back to the first slide after it reaches the last. Defaults to `true`. |
-| `pause` | boolean | Should the carousel stop playing on user interaction. Defaults to `true`.  |
-| `interval` | number | The amount of time in milliseconds between slides transition. |
-| `navigation` | boolean | Controls should the carousel render the left/right navigation buttons. Defaults to `true`. |
-| `total` | number | The number of slides the carousel currently has.  |
-| `current` | number | The index of the slide currently showing. |
-| `isPlaying` | boolean | Returns whether the carousel is paused/playing. |
-| `isDestroyed` | boolean | If the carousel is destroyed (`ngOnDestroy` was called) |
-| `onSlideChanged` | event | Emitted on slide change |
-| `onSlideAdded` | event | Emitted when a slide is being added to the carousel |
-| `onSlideRemoved`| event | Emitted whe a slide is being removed from the carousel |
-| `onCarouselPaused` | event | Emitted when the carousel is pausing. |
-| `onCarouselPlaying`| event | Emitted when the carousel starts/resumes playing. |
-| `play()` | void | Emits `onCarouselPlaying` event and starts the transition between slides. |
-| `stop()` | void | Emits `onCarouselPaused` event and stops the transition between slides. |
-| `prev()` | void | Switches to the previous slide. Emits `onSlideChanged` event. |
-| `next()` | void | Switches to the next slide. Emits `onSlideChanged` event. |
-| `add(slide: IgxSlide)` | void | Adds a slide to the carousel. Emits `onSlideAdded` event. |
-| `remove(slide: IgxSlide)` | void | Removes an existing slide from the carousel. Emits `onSlideRemoved` event. |
-| `get(index: Number)` | IgxSlide or void | Returns the slide with the given index or null. |
-| `select(slide: IgxSlide, direction: Direction)`| void | Selects the slide and the direction to transition to. Emits `onSlideChanged` event. |
-
-#### Slide (igx-slide)
-<div class="divider--half"></div>
-
-| Name   |      Type      |  Description |
-|:----------|:-------------:|:------|
-| `index` |  number | The index of the slide inside the carousel. |
-| `direction` |  Direction | The direction in which the slide should transition. Possibly values are `NONE`, `NEXT`, `PREV` |
-| `active`| boolean | Whether the current slide is active, i.e. the one being currently displayed by the carousel. |
+* [IgxCarouselComponent]({environment:angularApiUrl}/classes/igxcarouselcomponent.html)
+* [IgxCarouselComponent Styles]({environment:sassApiUrl}/index.html#function-igx-carousel-theme)
+* [IgxSlideComponent]({environment:angularApiUrl}/classes/igxslidecomponent.html)
+* [IgxLinearProgressBarComponent]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html)
+* [IgxLinearProgressBarComponent Styles]({environment:sassApiUrl}/index.html#function-igx-progress-linear-theme)
+* [IgxButtonDirective]({environment:angularApiUrl}/classes/igxbuttondirective.html)
+* [IgxButton Styles]({environment:sassApiUrl}/index.html#function-igx-button-theme)

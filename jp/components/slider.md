@@ -23,7 +23,7 @@ _language: ja
 
 ### 使用方法
 
-Ignite UI for Angular Slider を初期化する前に、**IgxSliderModule** を **app.module.ts** ファイルにインポートします。
+Ignite UI for Angular Slider を初期化する前に、[**IgxSliderModule**]({environment:angularApiUrl}/classes/igxslidermodule.html) を **app.module.ts** ファイルにインポートします。
 
 ```typescript
 // app.module.ts
@@ -40,7 +40,7 @@ export class AppModule {}
 ```
 
 #### 連続スライダー
-簡易な連続スライダーを使用します。最初に、`isContinuous` プロパティを true に設定し、スライダー タイプを指定します。次に、`minValue` および `maxValue` プロパティを設定し、最小値および最大値を定義します。また、スライダーの `value` をコンポーネントの "volume" プロパティにバインドします。
+簡易な連続スライダーを使用します。最初に、[`isContinuous`]({environment:angularApiUrl}/classes/igxslidercomponent.html#iscontinuous) プロパティを true に設定し、スライダー タイプを指定します。次に、[`minValue`]({environment:angularApiUrl}/classes/igxslidercomponent.html#minvalue) および [`maxValue`]({environment:angularApiUrl}/classes/igxslidercomponent.html#maxvalue) プロパティを設定し、最小値および最大値を定義します。また、スライダーの [`value`]({environment:angularApiUrl}/classes/igxslidercomponent.html#value) をコンポーネントの "volume" プロパティにバインドします。
 
 > [!NOTE]
 > 連続スライダーは、現在の値に目盛りおよびバブル ラベルを表示しません。
@@ -74,7 +74,7 @@ public volume = 20;
 
 定義済みステップを持つ不連続スライダーを使用すると、有意な値のみを選択可能にすることができます。たとえば、不連続スライダーは 0 から 5 までの評価、または 0% から 100% までの進行状況を可視化できます。
 
-次の例では、0% から 100% までの値を表示する不連続スライダーを定義します。`step` は 10 に設定されます。スライダーの `value` をコンポーネントの "completion" プロパティにバインドすると、入力コンポーネントと双方向バインディングを設定します。
+次の例では、0% から 100% までの値を表示する不連続スライダーを定義します。[`step`]({environment:angularApiUrl}/classes/igxslidercomponent.html#step) は 10 に設定されます。スライダーの [`value`]({environment:angularApiUrl}/classes/igxslidercomponent.html#value) をコンポーネントの "completion" プロパティにバインドすると、入力コンポーネントと双方向バインディングを設定します。
 
 ```html
 <!--sample.component.html-->
@@ -120,7 +120,7 @@ class Task {
 
 #### 範囲スライダー
 
-範囲フィルターなどを可視化する場合、範囲スライダーを使用します。スライダーの `type` を `RANGE` に設定します。次にスライダー値を PriceRange 型のオブジェクトにバインドします。そのオブジェクトに上限および下限のプロパティがあります。
+範囲フィルターなどを可視化する場合、範囲スライダーを使用します。スライダーの [`type`]({environment:angularApiUrl}/classes/igxslidercomponent.html#type) を [`RANGE`]({environment:angularApiUrl}/enums/slidertype.html#range) に設定します。次にスライダー値を PriceRange 型のオブジェクトにバインドします。そのオブジェクトに上限および下限のプロパティがあります。
 
 ```html
 <!--sample.component.html-->
@@ -153,7 +153,7 @@ class PriceRange {
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="slide-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
-最大値および最小値に近い値が適切でない場合があります。`minValue` と `maxValue` の設定以外に、ユーザー選択を更に制限するための範囲も設定できます。これは、`lowerBound` および `upperBound` プロパティで設定します。この設定により、0 ～ 100 および 900 ～ 1000 の範囲でつまみを移動できなくなります。
+最大値および最小値に近い値が適切でない場合があります。[`minValue`]({environment:angularApiUrl}/classes/igxslidercomponent.html#minvalue) と [`maxValue`]({environment:angularApiUrl}/classes/igxslidercomponent.html#maxvalue) の設定以外に、ユーザー選択を更に制限するための範囲も設定できます。これは、[`lowerBound`]({environment:angularApiUrl}/classes/igxslidercomponent.html#lowerbound) および [`upperBound`]({environment:angularApiUrl}/classes/igxslidercomponent.html#upperbound) プロパティで設定します。この設定により、0 ～ 100 および 900 ～ 1000 の範囲でつまみを移動できなくなります。
 
 ```html
 <!--sample.component.html-->
@@ -221,53 +221,12 @@ public updatePriceRange(event) {
 <div class="divider"></div>
 
 ### API まとめ
-
-以下の表は便利な **igx-slider** コンポーネントの入力および出力を説明します。
-
-#### SliderType
-
-以下のスライダー タイプは **igx-slider** コンポーネントで利用できます。
-
-| 名前 | 説明 |
-| :--- | :---------- |
-| `SLIDER` | 単一のつまみを持つスライダーを指定します。 |
-| `RANGE` | 範囲を定義する複数のつまみを持つ範囲スライダーを指定します。 |
 <div class="divider--half"></div>
 
-#### IRangeSliderValue
-
-| 名前    | 型     | 説明                   |
-| :------ | :----- | :--------------------- |
-| `lower` | number | 範囲スライダーの低値。 |
-| `upper` | number | 範囲スライダーの高値。 |
-
-<div class="divider--half"></div>
-
-#### 入力
-
-以下の入力は **igx-slider** コンポーネントで利用できます。
-
-| 名前 | 型 | 説明 |
-| :--- | :--- | :--- |
-| `disabled` | boolean | スライダーとのインタラクションを有効/無効にします。 |
-| `isContinuous` | boolean | デフォルトで `isContinuous` は false です。true に設定した場合、スライダーは連続になります。 |
-| `lowerBound` | number | スライダー値の下方境界を指定します。設定しない場合、`minValue` と同じです。 |
-| `maxValue` | number | スライダーの最大値を指定します。 |
-| `minValue` | number | スライダーの最小値を指定します。 |
-| `step` | number | つまみドラッグ時の値を増加/減少する段階を指定します。デフォルトの段階は 1 です。段階を 0 以下に設定しないでください。 |
-| `thumbLabelVisibilityDuration` | number | つまみのラベルが表示される期間をミリ秒で指定します。デフォルトの期間は 750 ミリ秒です。 |
-| `type` | [SliderType](#slidertype) | スライダー タイプを単一または範囲に指定します。 |
-| `upperBound` | number | スライダー値の上方境界を指定します。設定しない場合、`maxValue` と同じです。 |
-| `value` | number\|[IRangeSliderValue](#irangeslidervalue) | スライダーの値を指定します。スライダーのタイプが `SLIDER` の場合、値は数値です。デフォルトで、設定しない場合の値は `lowerBound` と同じです。 スライダーのタイプが `RANGE` の場合、値は範囲値の lower および upper プロパティを含むオブジェクトです。デフォルトで、設定しない場合、下値は `lowerBound` と同じです。デフォルトで、設定しない場合、上値は `upperBound` と同じです。|
-<div class="divider--half"></div>
-
-#### 出力
-
-以下の出力は **igx-slider** コンポーネントで利用できます。
-
-| 名前 | 説明 |
-| :--- | :--- |
-| `onValueChange`  | ユーザーがつまみの操作を完了し、値が変更されたときにイベントを発生します。  |
+* [IgxSliderComponent]({environment:angularApiUrl}/classes/igxslidercomponent.html)
+* [IgxSliderComponent Styles]({environment:sassApiUrl}/index.html#function-igx-slider-theme)
+* [SliderType]({environment:angularApiUrl}/enums/slidertype.html)
+* [IRangeSliderValue]({environment:angularApiUrl}/interfaces/irangeslidervalue.html)
 
 ### 追加のリソース
 

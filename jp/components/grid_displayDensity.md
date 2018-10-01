@@ -23,7 +23,7 @@ _language: ja
 
 ### 使用方法
 
-上記デモで示されるように、**Igx-Grid** は 3 つの密度オプション (**compact**、**cosy**、**comfortable**) を提供します。以下のコード スニペットは、`displayDensity` を設定する方法を示します。
+上記デモで示されるように、[**Igx-Grid**]({environment:angularApiUrl}/classes/igxgridcomponent.html) は 3 つの密度オプション (**compact**、**cosy**、**comfortable**) を提供します。以下のコード スニペットは、[`displayDensity`]({environment:angularApiUrl}/classes/igxgridcomponent.html#displaydensity) を設定する方法を示します。
 
 ```html
 <igx-grid #grid [data]="data" [displayDensity]="'cosy'" >
@@ -46,7 +46,7 @@ this.grid.displayDensity = "cosy";
 > [!NOTE]
 > 注: 現在サイズはオーバーライド**できません**。
 
-引き続きサンプルを使用して `displayDensity` の適用方法について説明します。最初に各密度を切り替えるボタンを追加します。
+引き続きサンプルを使用して [`displayDensity`]({environment:angularApiUrl}/classes/igxgridcomponent.html#displaydensity) の適用方法について説明します。最初に各密度を切り替えるボタンを追加します。
 
 ```html
 <div class="density-chooser">
@@ -150,19 +150,28 @@ public selectDensity(event) {
 }
 ```
 
-**IgxGrid** でグリッド行の高さを変更するその他のオプションとして、`rowHeight` プロパティがあります。のプロパティと `displayDensity` オプションがグリッドレイアウトにどのように動作に影響するかを以下で確認できます。
+[**Igx-Grid**]({environment:angularApiUrl}/classes/igxgridcomponent.html) でグリッド行の高さを変更するその他のオプションとして、[`rowHeight`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowheight) プロパティがあります。のプロパティと [`displayDensity`]({environment:angularApiUrl}/classes/igxgridcomponent.html#displaydensity) オプションがグリッドレイアウトにどのように動作に影響するかを以下で確認できます。
 
 以下を確認してください。
- - **rowHeight を指定** した場合、`displayDensity` オプションは行の高さに影響**しません**。
- - `displayDensity` は、上記の理由により**残りすべてのグリッド要素に影響します。**。
+ - **[rowHeight]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowheight) を指定** した場合、[`displayDensity`]({environment:angularApiUrl}/classes/igxgridcomponent.html#displaydensity) オプションは行の高さに影響**しません**。
+ - [`displayDensity`]({environment:angularApiUrl}/classes/igxgridcomponent.html#displaydensity) は、上記の理由により**残りすべてのグリッド要素に影響します。**。
 
-サンプル機能を拡張して `rowHeight` プロパティをグリッドに追加します。 
+サンプル機能を拡張して [`rowHeight`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowheight) プロパティをグリッドに追加します。 
  ```html
  <igx-grid #grid [data]="data" [displayDensity]="density" [rowHeight]="'80px'" width="100%" height="550px">
  ..............
  </igx-grid>
 
  ```
+
+<div class="divider--half"></div>
+
+### API
+<div class="divider--half"></div>
+
+* [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
+* [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [IgxColumnComponent](https://staging.infragistics.local/products/ignite-ui-angular/docs/typescript/classes/igxcolumncomponent.html)
 
 <div class="divider--half"></div>
 
