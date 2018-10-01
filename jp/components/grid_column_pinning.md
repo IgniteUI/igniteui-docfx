@@ -21,7 +21,7 @@ _language: ja
 
 #### 列のピン固定 API
 
-ピン固定領域の幅がグリッドより大きくならない限り各列をピン固定できます。列のピン固定は `igx-column` の `pinned` 入力によって制御されます。ピン固定列は常にグリッドの左側に描画され、グリッド本体のピン固定されていない列の水平スクロールで固定されます。
+ピン固定領域の幅がグリッドより大きくならない限り各列をピン固定できます。列のピン固定は [`igx-column`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) の [`pinned`]({environment:angularApiUrl}/igxcolumncomponent.html#pinned) 入力によって制御されます。ピン固定列は常にグリッドの左側に描画され、グリッド本体のピン固定されていない列の水平スクロールで固定されます。
 
 ```html
 <igx-grid #grid1 [data]="data | async" [width]="700px" [autoGenerate]="false" [paging]="true" [perPage]="6" (onColumnInit)="initColumns($event)"
@@ -32,14 +32,14 @@ _language: ja
 </igx-grid>
 ```
 
-グリッドの `IgxGridComponent` の `pinColumn` または `unpinColumn` メソッドを使用してフィールド名によって列をピン固定またはピン固定解除できます。
+グリッドの [`IgxGridComponent`]({environment:angularApiUrl}/classes/igxgridcomponent.html) の [`pinColumn`]({environment:angularApiUrl}/classes/igxgridcomponent.html#pincolumn) または [`unpinColumn`]({environment:angularApiUrl}/classes/igxgridcomponent.html#unpincolumn) メソッドを使用してフィールド名によって列をピン固定またはピン固定解除できます。
 
 ```typescript
 this.grid.pinColumn("AthleteNumber");
 this.grid.unpinColumn("Name");
 ```
 
-両方のメソッドは操作に成功したかどうかを示すブール値を返します。よくある失敗原因に列が既にその状態である場合があります。`pinColumn` は、ピン固定領域がグリッドのサイズ以上である場合も失敗します。以下はその例です。
+両方のメソッドは操作に成功したかどうかを示すブール値を返します。よくある失敗原因に列が既にその状態である場合があります。[`pinColumn`]({environment:angularApiUrl}/classes/igxgridcomponent.html#pincolumn) は、ピン固定領域がグリッドのサイズ以上である場合も失敗します。以下はその例です。
 
 ```html
 <igx-grid #grid1 [data]="data | async" [width]="300px" [autoGenerate]="false">
@@ -54,7 +54,7 @@ var succeed = this.grid.pinColumn("AthleteNumber"); // pinning fails and succeed
 
 `AthleteNumber` 列をピン固定すると、ピン固定領域がグリッドの幅より大きくなります。
 
-列をピン固定すると、一番右に配置されたピン固定列の右にピン固定されます。ピン固定列の順序を変更するには、`onColumnPinning` イベントでイベント引数の `insertAtIndex` プロパティを適切な位置インデックスに変更します。
+列をピン固定すると、一番右に配置されたピン固定列の右にピン固定されます。ピン固定列の順序を変更するには、[`onColumnPinning`]({environment:angularApiUrl}/classes/igxgridcomponent.html#oncolumnpinning) イベントでイベント引数の [`insertAtIndex`]({environment:angularApiUrl}/interfaces/ipincolumneventargs.html#insertatindex) プロパティを適切な位置インデックスに変更します。
 
 ```html
 <igx-grid #grid1 [data]="data | async" [autoGenerate]="true" (onColumnPinning)="columnPinning($event)"></igx-grid>
@@ -80,7 +80,7 @@ public columnPinning(event) {
 
 #### 警告
 
-* `igxGrid - ピン固定領域がピン固定可能な最大幅を超過しています。次の列のピン固定は、問題を回避するために解除します。 ... .` - この警告は初期時にユーザーが列のピン固定を過剰に定義した場合にスローされます。初期時にピン固定した列の合計幅は、グリッド幅の 80% を超えないようにしてください。超過した場合は、デフォルトでグリッドの最初の列を取得し、残りの列 (警告にリストされた列) はピン解除されます。グリッドでピン固定を初期化する前に `onColumnInit` イベントを使用して初期化時に手動で列のピン固定解除するかどうかを決定するためのロジックを実行でき、各列でトリガーされます。
+* `igxGrid - ピン固定領域がピン固定可能な最大幅を超過しています。次の列のピン固定は、問題を回避するために解除します。 ... .` - この警告は初期時にユーザーが列のピン固定を過剰に定義した場合にスローされます。初期時にピン固定した列の合計幅は、グリッド幅の 80% を超えないようにしてください。超過した場合は、デフォルトでグリッドの最初の列を取得し、残りの列 (警告にリストされた列) はピン解除されます。グリッドでピン固定を初期化する前に [`onColumnInit`]({environment:angularApiUrl}/classes/igxgridcomponent.html#oncolumninit) イベントを使用して初期化時に手動で列のピン固定解除するかどうかを決定するためのロジックを実行でき、各列でトリガーされます。
 
 
 <div class="divider--half"></div>
