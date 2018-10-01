@@ -64,12 +64,12 @@ this.grid.perPage = 25;
 this.grid.paging = false;
 ```
 
-### Remote Data
+### リモート データ
 
-Paging could also operate with remote data.
+ページングはリモート データで処理することもできます。
 
-Lets first declare our service that will be responsible for data fetching.
-We will need the count of all the data items in order to calculate pages count and we will add this logic to our service.
+はじめにデータをフェッチして現在のページ データのみを返すサービスを宣言します。
+ページ カウントを計算するためにすべてのデータのカウントをサービスに追加する必要があります。
 
 ```typescript
 @Injectable()
@@ -105,7 +105,7 @@ export class RemoteService {
     }
 }
 ```
-After declaring the service, we need to create a component, which will be responsible for the grid construction and data subscription.
+サービスの宣言後、グリッド構成とデータ サブスクリプションのためのコンポーネントを作成します。
 
 ```typescript
 export class RemotePagingGridSample implements OnInit, AfterViewInit {
@@ -123,8 +123,8 @@ export class RemotePagingGridSample implements OnInit, AfterViewInit {
     }
 }
 ```
-We need to create a custom pager template to get the data only for the requested page and to pass the correct `skip` and `top` parameters to the remote service according to the selected page and items [`perPage`]({environment:angularApiUrl}/classes/igxgridcomponent.html#perpage).
-We also need to take care of the disabling and enabling of the pager buttons.
+要求されたページのデータのみを取得し、選択したページと`ページごとの項目`に基づいて `skip` と `top` パラメーターをリモート サービスに渡すためのカスタム ページャー テンプレートを作成します。
+更にページ ボタンの有効化および無効化も設定します。
 
 ```html
 <ng-template #customPager>
@@ -195,7 +195,7 @@ public ngAfterViewInit() {
 }
 
 ```
-The last step will be to declare our template for the gird.
+最後にグリッドのテンプレートを宣言します。
 
 ```html
 <igx-grid #grid1 [data]="data | async" width="960px" height="550px" [paging]="true" [perPage]="perPage">
@@ -208,24 +208,25 @@ The last step will be to declare our template for the gird.
 </igx-grid>
 ```
 
-After all the changes above, the following result will be achieved.
 
-#### Demo
+すべての設定を完了すると以下のような結果になります。
+
+#### デモ
 
 <div class="sample-container loading" style="height:605px">
     <iframe id="grid-remote-paging-sample-iframe" src='{environment:demosBaseUrl}/grid-remote-paging-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-remote-paging-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-remote-paging-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
 </div>
 <div class="divider--half"></div>
 
 ### API
 * [IgxGridComponent API]({environment:angularApiUrl}/classes/igxgridcomponent.html)
-* [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#mixin-igx-grid)
+* [IgxGridComponent スタイル]({environment:sassApiUrl}/index.html#mixin-igx-grid)
 
-### 追加のリソース
+### その他のリソース
 <div class="divider--half"></div>
 
 * [グリッドの概要](grid.md)
