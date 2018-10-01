@@ -22,15 +22,15 @@ _language: ja
 
 ### 使用方法
 
-[**igxLayout**]({environment:angularApiUrl}/classes/igxlayoutdirective.html) ディレクティブをコンテナー要素に適用して子要素のレイアウト方向を指定します。水平方向は `igxLayoutDir="row"`、垂直方向は `igxLayoutDir="column"` です。
+[**igxLayout**]({environment:angularApiUrl}/classes/igxlayoutdirective.html) ディレクティブをコンテナー要素に適用して子要素のレイアウト方向を指定します。水平方向は [`igxLayoutDir`]({environment:angularApiUrl}/classes/igxlayoutdirective.html#dir)`="row"`、垂直方向は [`igxLayoutDir`]({environment:angularApiUrl}/classes/igxlayoutdirective.html#dir)`="column"` です。
 
-**注**: `igxLayout` ディレクティブはそのコンテナーの**直下**の子のフロー方向に影響します。
+**注**: [`igxLayout`]({environment:angularApiUrl}/classes/igxlayoutdirective.html) ディレクティブはそのコンテナーの**直下**の子のフロー方向に影響します。
 
 <div class="divider--half"></div>
 
 ### ネスト
 
-[`igxFlex`]({environment:angularApiUrl}/classes/igxflexdirective.html) ディレクティブを `igxLayout` 親内の要素に使用して、特定のフレックスボックス プロパティを制御します。
+[`igxFlex`]({environment:angularApiUrl}/classes/igxflexdirective.html) ディレクティブを [`igxLayout`]({environment:angularApiUrl}/classes/igxlayoutdirective.html) 親内の要素に使用して、特定のフレックスボックス プロパティを制御します。
 <div class="divider--half"></div>
 
 ### API

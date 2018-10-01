@@ -19,15 +19,15 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ###Usage
 Use the [**igxLayout**]({environment:angularApiUrl}/classes/igxlayoutdirective.html) directive on a container element to specify the layout
-direction for its children: horizontally with `igxLayoutDir="row"` or vertically with
-`igxLayoutDir="column"`.
+direction for its children: horizontally with [`igxLayoutDir`]({environment:angularApiUrl}/classes/igxlayoutdirective.html#dir)`="row"` or vertically with
+[`igxLayoutDir`]({environment:angularApiUrl}/classes/igxlayoutdirective.html#dir)`="column"`.
 
-**Note**: the `igxLayout` directive affects the flow directions for that
+**Note**: the [`igxLayout`]({environment:angularApiUrl}/classes/igxlayoutdirective.html) directive affects the flow directions for that
 container's **immediate** children.
 <div class="divider--half"></div>
 
 ### Nesting
-Use the [`igxFlex`]({environment:angularApiUrl}/classes/igxflexdirective.html) directive for elements inside an `igxLayout` parent to control specific flexbox properties.
+Use the [`igxFlex`]({environment:angularApiUrl}/classes/igxflexdirective.html) directive for elements inside an [`igxLayout`]({environment:angularApiUrl}/classes/igxlayoutdirective.html) parent to control specific flexbox properties.
 <div class="divider--half"></div>
 
 

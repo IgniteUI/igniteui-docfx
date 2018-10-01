@@ -7,7 +7,7 @@ _language: ja
 
 ## Toggle
 
-`igxToggle` ディレクティブを使用すると、トグル コンテナーを開く、操作、アニメーションに適用、および閉じることができます。すべてのトグル コンポーネントは `igxToggle` または `igxToggleAction` を内部に実装します。`igxToggleAction` ディレクティブがその他のコンポーネントを制御する間にドロップダウンなどのトグルに基づくコンポーネントおよびビューを実装できます。
+[`igxToggle`]({environment:angularApiUrl}/classes/igxtoggledirective.html) ディレクティブを使用すると、トグル コンテナーを開く、操作、アニメーションに適用、および閉じることができます。すべてのトグル コンポーネントは [`igxToggle`]({environment:angularApiUrl}/classes/igxtoggledirective.html) または `igxToggleAction` を内部に実装します。`igxToggleAction` ディレクティブがその他のコンポーネントを制御する間にドロップダウンなどのトグルに基づくコンポーネントおよびビューを実装できます。
 
 ### Toggle デモ
 
@@ -23,7 +23,7 @@ _language: ja
 
 Toggle は、簡単に開いたり、閉じたりできるボックスにコンテンツをラップします。
 
-Ignite UI for Angular Toggle を初期化する前に、**IgxToggleModule** を **app.module.ts** ファイルにインポートします。また、**igxButton** ディレクティブを使用するため、**IgxButtonModule** も **app.module.ts** にインポートする必要があります。
+Ignite UI for Angular Toggle を初期化する前に、[**IgxToggleModule**]({environment:angularApiUrl}/classes/igxtogglemodule.html) を **app.module.ts** ファイルにインポートします。また、[**igxButton**]({environment:angularApiUrl}/classes/igxbuttondirective.html) ディレクティブを使用するため、[**IgxButtonModule**]({environment:angularApiUrl}/classes/igxbuttonmodule.html) も **app.module.ts** にインポートする必要があります。
 
 ```typescript
 // app.module.ts
@@ -118,7 +118,7 @@ export class AppModule {}
 </div>
 ```
 
-`igxToggle` は、[**IgxOverlayService**](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/overlay_main.html) を使用し、コンテンツの表示方法を制御するために [`open`]({environment:angularApiUrl}/classes/igxtoggledirective.html#open) および [`toggle`]({environment:angularApiUrl}/classes/igxtoggledirective.html#toggle) メソッドが任意のオーバーレイ設定を受け取ります。省略した場合は、上のサンプルのようにデフォルトのオーバーレイ設定が使用されます。
+[`igxToggle`]({environment:angularApiUrl}/classes/igxtoggledirective.html) は、[**IgxOverlayService**](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/overlay_main.html) を使用し、コンテンツの表示方法を制御するために [`open`]({environment:angularApiUrl}/classes/igxtoggledirective.html#open) および [`toggle`]({environment:angularApiUrl}/classes/igxtoggledirective.html#toggle) メソッドが任意のオーバーレイ設定を受け取ります。省略した場合は、上のサンプルのようにデフォルトのオーバーレイ設定が使用されます。
 
 ```typescript
 // template.component.ts
@@ -153,7 +153,7 @@ export class AppModule {}
 
 ### トグル自動操作
 
-このメソッドの呼び出しを回避するための `onClick` ハンドラーを含む、参照トグルの状態を変更できるディレクティブがあります。この機能を使用するには、同じ **IgxToggleModule** にある [**IgxToggleActionDirective**]({environment:angularApiUrl}/classes/igxtoggleactiondirective.html) を使用します。
+このメソッドの呼び出しを回避するための `onClick` ハンドラーを含む、参照トグルの状態を変更できるディレクティブがあります。この機能を使用するには、同じ [**IgxToggleModule**]({environment:angularApiUrl}/classes/igxtogglemodule.html) にある [**IgxToggleActionDirective**]({environment:angularApiUrl}/classes/igxtoggleactiondirective.html) を使用します。
 
 ```typescript
 // app.module.ts
@@ -193,7 +193,7 @@ export class AppModule {}
 
 ### サービス プロバイダーを使用するトグル自動操作
 
-状態を保持し、**igxToggle** をコマンドするには、**igxNavigationService** プロパイダーを使用します。アプリケーションで状態を追跡する場合に便利です。**igxToggle** ディレクティブの識別子を設定すると、サービスの登録が処理されます。この状態を自動的に制御するには、この識別子をヘルパー **igxToggleActionDirective** に渡します。
+状態を保持し、[**igxToggle**]({environment:angularApiUrl}/classes/igxtoggledirective.html) をコマンドするには、**igxNavigationService** プロパイダーを使用します。アプリケーションで状態を追跡する場合に便利です。[**igxToggle**]({environment:angularApiUrl}/classes/igxtoggledirective.html) ディレクティブの識別子を設定すると、サービスの登録が処理されます。この状態を自動的に制御するには、この識別子をヘルパー **igxToggleActionDirective** に渡します。
 
 ```typescript
 // app.module.ts

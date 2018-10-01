@@ -153,7 +153,7 @@ public selectDensity(event) {
 [**Igx-Grid**]({environment:angularApiUrl}/classes/igxgridcomponent.html) でグリッド行の高さを変更するその他のオプションとして、[`rowHeight`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowheight) プロパティがあります。のプロパティと [`displayDensity`]({environment:angularApiUrl}/classes/igxgridcomponent.html#displaydensity) オプションがグリッドレイアウトにどのように動作に影響するかを以下で確認できます。
 
 以下を確認してください。
- - **rowHeight を指定** した場合、[`displayDensity`]({environment:angularApiUrl}/classes/igxgridcomponent.html#displaydensity) オプションは行の高さに影響**しません**。
+ - **[rowHeight]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowheight) を指定** した場合、[`displayDensity`]({environment:angularApiUrl}/classes/igxgridcomponent.html#displaydensity) オプションは行の高さに影響**しません**。
  - [`displayDensity`]({environment:angularApiUrl}/classes/igxgridcomponent.html#displaydensity) は、上記の理由により**残りすべてのグリッド要素に影響します。**。
 
 サンプル機能を拡張して [`rowHeight`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowheight) プロパティをグリッドに追加します。 
@@ -171,6 +171,7 @@ public selectDensity(event) {
 
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
 * [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [IgxColumnComponent](https://staging.infragistics.local/products/ignite-ui-angular/docs/typescript/classes/igxcolumncomponent.html)
 
 <div class="divider--half"></div>
 

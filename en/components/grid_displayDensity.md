@@ -34,10 +34,10 @@ this.grid.displayDensity = "cosy";
 ...
 ```
 
-And now let's see in details how each option reflect on the grid component. When you switch between different density options the height of each grid element and the correcponding paddings will be changed. Also if you want to apply custom column **width**, plaese consider the fact that it must be bigger than the sum of left and right padding.
- - **comfortable** - this is the default grid display density with the lowest intence and row height equal to `50px`. Left and Right paddings are `24px`; Minimal column width is `48px`;
- - **cosy** - this is the middle intence density with `40px` row height. Left and Right paddings are `16px`; Minimal column width is `32px`;
- - **compact** - this is the density with heighest intence and `32px` row height. left and Right paddings are `12px`; Minimal column width is `24px`;
+And now let's see in details how each option reflect on the grid component. When you switch between different density options the height of each grid element and the correcponding paddings will be changed. Also if you want to apply custom column [**width**]({environment:angularApiUrl}/classes/igxcolumncomponent.html#width), plaese consider the fact that it must be bigger than the sum of left and right padding.
+ - **comfortable** - this is the default grid display density with the lowest intence and row height equal to `50px`. Left and Right paddings are `24px`; Minimal column [`width`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#width) is `48px`;
+ - **cosy** - this is the middle intence density with `40px` row height. Left and Right paddings are `16px`; Minimal column [`width`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#width) is `32px`;
+ - **compact** - this is the density with heighest intence and `32px` row height. left and Right paddings are `12px`; Minimal column [`width`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#width) is `24px`;
 
 > [!NOTE]
 > Please keep in mind that currently you **can not** override any of the sizes.
@@ -149,7 +149,7 @@ public selectDensity(event) {
 Another option that [**Igx-Grid**]({environment:angularApiUrl}/classes/igxgridcomponent.html) provides for you, in order to be able to change the height of the rows in the grid, is the property [`rowHeight`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowheight). So let's see in action how this property affects the grid layout along with the [`displayDensity`]({environment:angularApiUrl}/classes/igxgridcomponent.html#displaydensity) option.
 
 Please keep in mind the following:
- - [`displayDensity`]({environment:angularApiUrl}/classes/igxgridcomponent.html#displaydensity) options will have **NO** impact on row height **if there is rowHeight specified**;
+ - [`displayDensity`]({environment:angularApiUrl}/classes/igxgridcomponent.html#displaydensity) options will have **NO** impact on row height **if there is [rowHeight]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowheight) specified**;
  - [`displayDensity`]({environment:angularApiUrl}/classes/igxgridcomponent.html#displaydensity) will **affect all of the rest elements in the grid**, as it has been described above;
 
 And now we can extend our sample and add [`rowHeight`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowheight) property to the grid:
@@ -166,6 +166,7 @@ And now we can extend our sample and add [`rowHeight`]({environment:angularApiUr
 
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
 * [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [IgxColumnComponent](https://staging.infragistics.local/products/ignite-ui-angular/docs/typescript/classes/igxcolumncomponent.html)
 
 <div class="divider--half"></div>
 
