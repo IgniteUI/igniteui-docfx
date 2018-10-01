@@ -18,7 +18,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <div class="divider--half"></div>
 
 ### Usage
-To get started with the Ignite UI for Angular Linear Progress, we should first import the **IgxProgressBarModule** in the **app.module.ts** file:
+To get started with the Ignite UI for Angular Linear Progress, we should first import the [**IgxProgressBarModule**]({environment:angularApiUrl}/classes/igxprogressbarmodule.html) in the **app.module.ts** file:
 ```typescript
 // app.module.ts
 
@@ -34,7 +34,7 @@ export class AppModule {}
 ```
 
 And now let's create a simple example in which we are going to simulate a continuous process, that is triggered on button click. In addition you can notice
-that the speed of loading depends on the [`max`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#max) attribute that we have set to our `igx-linear-bar`. In the first case our max value is set to 200 and loads slower than in the second where it is set to 100 (default value). So let's see the code...
+that the speed of loading depends on the [`max`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#max) attribute that we have set to our `igx-linear-bar`. In the first case our [`max`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#max) value is set to 200 and loads slower than in the second where it is set to 100 (default value). So let's see the code...
 
 ```html
 ...

@@ -18,7 +18,7 @@ _language: ja
 
 ### 使用方法
 
-カルーセルを全画面要素またはコンポーネントの子に設定できます。また、スライドに有効な HTML コンテンツ、その他の Angular コンポーネントなども含めることができます。**Ignite UI for Angular Carousel** を初期化する前に、**IgxCarouselModule** を **app.module.ts** ファイルにインポートします。 
+カルーセルを全画面要素またはコンポーネントの子に設定できます。また、スライドに有効な HTML コンテンツ、その他の Angular コンポーネントなども含めることができます。**Ignite UI for Angular Carousel** を初期化する前に、[**IgxCarouselModule**]({environment:angularApiUrl}/classes/igxcarouselmodule.html) を **app.module.ts** ファイルにインポートします。 
 
 ```typescript
 // app.module.ts

@@ -19,7 +19,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ### Usage
 
-To get started with the Ignite UI for Angular Dialog Window, let's first import the **IgxDialogModule** in our **app.module.ts** file:
+To get started with the Ignite UI for Angular Dialog Window, let's first import the [**IgxDialogModule**]({environment:angularApiUrl}/classes/igxdialogmodule.html) in our **app.module.ts** file:
 
 ```typescript
 // app.module.ts
