@@ -7,20 +7,20 @@ _language: ja
 
 ### グリッドのページング
 
-Ignite UI for Angular では、**ページング**がルート `igx-grid` コンポーネントで初期化され、`paging` および `perPage` 入力によって構成できます。
+Ignite UI for Angular で、**ページング**がルート `igx-grid` コンポーネントで初期化され、[`paging`]({environment:angularApiUrl}/classes/igxgridcomponent.html#paging) および [`perPage`]({environment:angularApiUrl}/classes/igxgridcomponent.html#perpage) 入力によって構成できます。
 
 #### デモ
 
 <div class="sample-container loading" style="height:605px">
-    <iframe id="grid-sample-iframe" src='{environment:demosBaseUrl}/grid-paging-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="grid-paging-sample-iframe" src='{environment:demosBaseUrl}/grid-paging-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-paging-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
 </div>
 <div class="divider--half"></div>
 
-機能が有効かどうかを制御する paging は Boolean プロパティです。`perPage` プロパティはページごとに表示可能なレコードを制御します。以下のようにグリッドでページングを有効にします。
+機能が有効かどうかを制御する paging は Boolean プロパティです。[`perPage`]({environment:angularApiUrl}/classes/igxgridcomponent.html#perpage) プロパティはページごとに表示可能なレコードを制御します。以下のようにグリッドでページングを有効にします。
 
 ```html
 <igx-grid #grid1 [data]="data" [paging]="true" [perPage]="10" [paginationTemplate]="pager" height="500px" width="100%" displayDensity="cosy"></igx-grid>
@@ -40,7 +40,7 @@ Ignite UI for Angular では、**ページング**がルート `igx-grid` コン
 </igx-grid>
 ```
 
-ページングも Grid API を使用してコードで設定できます。
+Paging can also be done programmatically through the Grid API, using the [`paginate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#paginate), [`previousPage`]({environment:angularApiUrl}/classes/igxgridcomponent.html#previouspage), [`nextPage`]({environment:angularApiUrl}/classes/igxgridcomponent.html#nextpage) methods:
 
 ```typescript
 // Go to page 6
@@ -213,7 +213,7 @@ public ngAfterViewInit() {
 #### デモ
 
 <div class="sample-container loading" style="height:605px">
-    <iframe id="grid-paging-sample-iframe" src='{environment:demosBaseUrl}/grid-remote-paging-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="grid-remote-paging-sample-iframe" src='{environment:demosBaseUrl}/grid-remote-paging-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
@@ -221,7 +221,11 @@ public ngAfterViewInit() {
 </div>
 <div class="divider--half"></div>
 
-### その他のリソース
+### API
+* [IgxGridComponent API]({environment:angularApiUrl}/classes/igxgridcomponent.html)
+* [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#mixin-igx-grid)
+
+### 追加のリソース
 <div class="divider--half"></div>
 
 * [グリッドの概要](grid.md)
