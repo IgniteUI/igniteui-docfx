@@ -100,7 +100,7 @@ public disableSummary() {
 
 ```
 
-この関数が要件に合わない場合、指定した列にカスタム集計を提供できます。これを実装するには、列のデータ型に基づいて [`IgxSummaryOperand`]({environment:angularApiUrl}/classes/igxsummaryoperand.html)、[`IgxNumberSummaryOperand`]({environment:angularApiUrl}/classes/igxnumbersummaryoperand.html)、または [`IgxDateSummaryOperand`]({environment:angularApiUrl}/classes/igxdatesummaryoperand.html) の基本クラスをオーバーライドします。このように既存の関数を変更または新しい関数を追加できます。[`IgxSummaryOperand`]({environment:angularApiUrl}/classes/igxsummaryoperand.html) クラスのデフォルト集計は `count` メソッドのみです。[`IgxNumberSummaryOperand`]({environment:angularApiUrl}/classes/igxnumbersummaryoperand.html) は [`IgxSummaryOperand`]({environment:angularApiUrl}/classes/igxsummaryoperand.html) を拡張し、`min`、`max`、`sum`、および `average` 集計を提供します。[`IgxDateSummaryOperand`]({environment:angularApiUrl}/classes/igxdatesummaryoperand.html) は [`IgxSummaryOperand`]({environment:angularApiUrl}/classes/igxsummaryoperand.html) を拡張し、`earliest` および `latest` を提供します。
+この関数が要件に合わない場合、指定した列にカスタム集計を提供できます。これを実装するには、列のデータ型に基づいて [`IgxSummaryOperand`]({environment:angularApiUrl}/classes/igxsummaryoperand.html)、[`IgxNumberSummaryOperand`]({environment:angularApiUrl}/classes/igxnumbersummaryoperand.html)、または [`IgxDateSummaryOperand`]({environment:angularApiUrl}/classes/igxdatesummaryoperand.html) の基本クラスをオーバーライドします。このように既存の関数を変更または新しい関数を追加できます。[`IgxSummaryOperand`]({environment:angularApiUrl}/classes/igxsummaryoperand.html) クラスのデフォルト集計は `count` メソッドのみです。[`IgxNumberSummaryOperand`]({environment:angularApiUrl}/classes/igxnumbersummaryoperand.html) は [`IgxSummaryOperand`]({environment:angularApiUrl}/classes/igxsummaryoperand.html) を拡張し、`min`、`max`、`sum`、および `average` 集計を提供します。[`IgxDateSummaryOperand`]({environment:angularApiUrl}/classes/igxdatesummaryoperand.html) は [`IgxSummaryOperand`]({environment:angularApiUrl}/classes/igxsummaryoperand.html) を拡張し、[`earliest`]({environment:angularApiUrl}/classes/igxdatesummaryoperand.html#earliest) および [`latest`]({environment:angularApiUrl}/classes/igxdatesummaryoperand.html#latest) を提供します。
 
 ```typescript
 import { IgxSummaryResult, IgxSummaryOperand, IgxNumberSummaryOperand, IgxDateSummaryOperand } from 'igniteui-angular/grid/grid-summary';
@@ -123,7 +123,7 @@ class MySummary extends IgxNumberSummaryOperand {
 }
 ```
 
-以下のコードで、[`operate`]({environment:angularApiUrl}/classes/igxsummaryoperand.html#operate) メソッドはインターフェイスである `IgxSummaryResult` のリストを返します。
+以下のコードで、[`operate`]({environment:angularApiUrl}/classes/igxsummaryoperand.html#operate) メソッドはインターフェイスである [`IgxSummaryResult`]({environment:angularApiUrl}/interfaces/igxsummaryresult.html) のリストを返します。
 
 ```typescript
 interface IgxSummaryResult {
