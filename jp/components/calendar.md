@@ -17,7 +17,7 @@ _language: ja
 </div>
 
 ### 使用方法
-Ignite UI for Angular Calendar を初期化する前に、**IgxCalendarModule** をアプリケーションの AppModule (**app.module.ts** ファイル) にインポートします。注: **IgxCalendar** に **BrowserAnimationsModule** の依存関係があるため、それを AppModule に追加する必要もあります。
+Ignite UI for Angular Calendar を初期化する前に、[**IgxCalendarModule**]({environment:angularApiUrl}/classes/igxcalendarmodule.html) をアプリケーションの AppModule (**app.module.ts** ファイル) にインポートします。注: [**IgxCalendar**]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) に **BrowserAnimationsModule** の依存関係があるため、それを AppModule に追加する必要もあります。
 
 ```typescript
 // app.module.ts
@@ -32,7 +32,7 @@ import { IgxCalendarModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-カレンダー API の型を宣言する前に [**IgxCalendarComponent**]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) を AppComponent ファイルにインポートします。エディターが自動的にインポートすることが可能です。
+カレンダー API の型を宣言する前に [`IgxCalendarComponent`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) を AppComponent ファイルにインポートします。エディターが自動的にインポートすることが可能です。
 
 ```typescript
 import { IgxCalendarComponent } from 'igniteui-angular';
@@ -42,11 +42,11 @@ import { IgxCalendarComponent } from 'igniteui-angular';
 ```
 
 > [!WARNING]
-> 注: [**IgxCalendarComponent**]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) が日付のローカライズおよび書式設定のために [Intl](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat) WebAPI を使用します。
+> 注: [`IgxCalendarComponent`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) が日付のローカライズおよび書式設定のために [Intl](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat) WebAPI を使用します。
 > 対象プラットフォームがその API をサポートしない場合、[適切なポリフィル](https://github.com/andyearnshaw/Intl.js/)を使用してください。
 
 ### 選択
-[**IgxCalendarComponent**]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) をインスタンス化するには、セレクター要素をテンプレートに追加します。カレンダーで現在の月が表示され、単一選択モードが使用されます。その他の選択モードに変更するには、[`selection`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#selection) プロパティを `multi` または `range` に設定します。
+[`IgxCalendarComponent`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) をインスタンス化するには、セレクター要素をテンプレートに追加します。カレンダーで現在の月が表示され、単一選択モードが使用されます。その他の選択モードに変更するには、[`selection`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#selection) プロパティを `multi` または `range` に設定します。
 
 ```html
 <!-- app.component.html -->
@@ -69,9 +69,9 @@ import { IgxCalendarComponent } from 'igniteui-angular';
 
 ### ローカライズおよび書式設定
 
-カレンダーにおいてローカライズおよび書式設定はとても重要な要素です。[**IgxCalendarComponent**]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) では、その機能が [`locale`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#locale)、[`formatOptions`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#formatoptions)、および [`formatViews`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#formatviews) プロパティによって制御してカスタマイズ化されます。
+カレンダーにおいてローカライズおよび書式設定はとても重要な要素です。[`IgxCalendarComponent`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) では、その機能が [`locale`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#locale)、[`formatOptions`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#formatoptions)、および [`formatViews`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#formatviews) プロパティによって制御してカスタマイズ化されます。
 <br>
-これらの設定に加え、[**IgxCalendarComponent**]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) API のその他のカスタマイズ機能も使用できます。EFTA (欧州自由貿易連合) 国内からページへアクセスする場合、カレンダーを対応するカルチャで表示する必要があります。最初に週の開始日を制御する [`weekstart`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#weekstart) を設定し、デフォルト値が 0 (日曜日) であるため、値を 1 に設定します。
+これらの設定に加え、[`IgxCalendarComponent`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) API のその他のカスタマイズ機能も使用できます。EFTA (欧州自由貿易連合) 国内からページへアクセスする場合、カレンダーを対応するカルチャで表示する必要があります。最初に週の開始日を制御する [`weekstart`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#weekstart) を設定し、デフォルト値が 0 (日曜日) であるため、値を 1 に設定します。
 
 以下のマークアップで表示書式設定をカスタマイズするには [`formatOptions`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#formatoptions) および [`formatViews`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#formatviews) プロパティもバインドしています。最後に、[`locale`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#locale) プロパティをユーザーの場所選択に基づいて値にバインドします。
 
@@ -155,7 +155,7 @@ public verifyRange(dates: Date[]) {
 
 ### テンプレート
 
-**IgxCalendarComponent** API (プロパティ、イベント、メソッド) を使用して要件によってカレンダーを構成し、コードで操作する方法を説明しました。次にヘッダーおよびサブヘッダーのテンプレート機能を使用して外観をカスタマイズします。
+[`IgxCalendarComponent`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) API (プロパティ、イベント、メソッド) を使用して要件によってカレンダーを構成し、コードで操作する方法を説明しました。次にヘッダーおよびサブヘッダーのテンプレート機能を使用して外観をカスタマイズします。
 
 カスタマイズは、カレンダーの ng-template を **igxCalendarHeader** または **igxCalendarSubheader** ディレクティブでデコレートし、返されたコンテキストを使用して日付の表示をカスタマイズします。
 **igxCalendarHeader** ディレクティブでデコレートされるテンプレートは、カレンダーの選択が単一に設定された場合のみ描画されます。**igxCalendarSubheader** はすべての選択モードで利用可能です。
@@ -207,7 +207,7 @@ public verifyRange(dates: Date[]) {
 </igx-calendar>
 ```
 
-**ngIf** は、使用するテンプレートを制御するために **formatParts** 式の値を評価します。代わりの **#parseTemplate** テンプレートを参照します。{} にある式は評価された値を返す **getDatePart** メソッドを起動します。この場合、書式設定された日付部分 (年、曜日、月など) を返します。**getDatePart** に渡されたパラメーターは、書式設定が [**IgxCalendarComponent**]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) の locale および format オプションに基づいて設定されるために必要です。
+**ngIf** は、使用するテンプレートを制御するために **formatParts** 式の値を評価します。代わりの **#parseTemplate** テンプレートを参照します。{} にある式は評価された値を返す **getDatePart** メソッドを起動します。この場合、書式設定された日付部分 (年、曜日、月など) を返します。**getDatePart** に渡されたパラメーターは、書式設定が [`IgxCalendarComponent`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) の locale および format オプションに基づいて設定されるために必要です。
 
 ```typescript
 // app.component.ts
@@ -247,7 +247,7 @@ this.calendar.disabledDates = [new DateRangeDescriptor(DateRangeType.Between, [
 ])];
 ```
 
-[`DateRangeType`]({environment:angularApiUrl}/enums/daterangetype.html) は無効にする範囲を指定するために使用します。たとえば、`DateRangeType.Between` は配列の特定の 2 つの日付間を無効にします。上記のコード スニペット。
+[`DateRangeType`]({environment:angularApiUrl}/enums/daterangetype.html) は無効にする範囲を指定するために使用します。たとえば、[`DateRangeType.Between`]({environment:angularApiUrl}/enums/daterangetype.html#between) は配列の特定の 2 つの日付間を無効にします。上記のコード スニペット。
 以下の API の表は、使用可能なすべての [`DateRangeType`]({environment:angularApiUrl}/enums/daterangetype.html) 値です。
 
 この機能は、選択およびフォーカスが可能な日付を制限する必要がある場合に使用します。
@@ -284,7 +284,7 @@ export class CalendarSample6Component {
 
 [`Special dates`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#specialdates) 機能は、[`Disabled dates`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#disableddates) とほとんど同じ構成を使用します。違いは、日付の `styling` と `interaction` です。また [`Special dates`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#specialdates) の選択やフォーカスが可能です。
 
-[`Special dates`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#specialdates) を `igxCalendar` に追加し、`DateRangeType.Specific` の [`DateRangeDescriptor`]({environment:angularApiUrl}/interfaces/daterangedescriptor.html) 項目を作成して `dateRange` で日付の配列を渡します。
+[`Special dates`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#specialdates) を [`igxCalendar`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) に追加し、[`DateRangeType.Specific`]({environment:angularApiUrl}/enums/daterangetype.html#specific) の [`DateRangeDescriptor`]({environment:angularApiUrl}/interfaces/daterangedescriptor.html) 項目を作成して [`dateRange`]({environment:angularApiUrl}/classes/daterangedescriptor.html#daterange) で日付の配列を渡します。
 
 ```typescript
 export class CalendarSample7Component {
@@ -334,7 +334,7 @@ export class CalendarSample7Component {
 
 ### キーボード ナビゲーション
 
-**IgxCalendarComponent** コンポーネントがフォーカスを持つ場合:
+[`IgxCalendarComponent`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) コンポーネントがフォーカスを持つ場合:
 
 * `PageUp` は前の月へ移動します。
 * `PageDown` は次の月へ移動します。

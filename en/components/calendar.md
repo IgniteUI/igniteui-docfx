@@ -16,7 +16,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 </div>
 
 ### Usage
-To get started with the **Ignite UI for Angular Calendar**, let's first import the **IgxCalendarModule** in the application's AppModule, typically this is the **app.module.ts** file. Note that the **IgxCalendar** is also dependent on the **BrowserAnimationsModule**, so it needs to be added to the AppModule as well:
+To get started with the **Ignite UI for Angular Calendar**, let's first import the [**IgxCalendarModule**]({environment:angularApiUrl}/classes/igxcalendarmodule.html) in the application's AppModule, typically this is the **app.module.ts** file. Note that the [**IgxCalendar**]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) is also dependent on the **BrowserAnimationsModule**, so it needs to be added to the AppModule as well:
 
 ```typescript
 // app.module.ts
@@ -30,7 +30,7 @@ import { IgxCalendarModule } from 'igniteui-angular';
 })
 export class AppModule {}
 ```
-You will usually also import the [**IgxCalendarComponent**]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) in the AppComponent file (or your editor will auto-import them for you) when declaring types that are part of the calendar API:
+You will usually also import the [`IgxCalendarComponent`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) in the AppComponent file (or your editor will auto-import them for you) when declaring types that are part of the calendar API:
 
 ```typescript
 import { IgxCalendarComponent } from 'igniteui-angular';
@@ -40,11 +40,11 @@ import { IgxCalendarComponent } from 'igniteui-angular';
 ```
 
 > [!WARNING]
-> Note that the [**IgxCalendarComponent**]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) uses the [Intl](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat) WebAPI for localization and formatting of dates.
+> Note that the [`IgxCalendarComponent`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) uses the [Intl](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat) WebAPI for localization and formatting of dates.
 > Consider using the [appropriate polyfills](https://github.com/andyearnshaw/Intl.js/) if your target platform does not support them.
 
 ### Selection
-Instantiating the [**IgxCalendarComponent**]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) is as easy as placing its selector element in the template. This will display the current month in the calendar and use single selection mode. We switch to any of the other selection modes - `multi` and `range`, by setting the [`selection`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#selection) property:
+Instantiating the [`IgxCalendarComponent`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) is as easy as placing its selector element in the template. This will display the current month in the calendar and use single selection mode. We switch to any of the other selection modes - `multi` and `range`, by setting the [`selection`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#selection) property:
 ```html
 <!-- app.component.html -->
 <!-- Single selection mode -->
@@ -64,9 +64,9 @@ Notice that the calendar header is not rendered when the selection is either `mu
 
 ###Localization and formatting
 
-Due to their very nature, localization and formatting are essential to any calendar. In the [**IgxCalendarComponent**]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) those are controlled and customized through the following properties - [`locale`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#locale), [`formatOptions`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#formatoptions), [`formatViews`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#formatviews).
+Due to their very nature, localization and formatting are essential to any calendar. In the [`IgxCalendarComponent`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) those are controlled and customized through the following properties - [`locale`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#locale), [`formatOptions`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#formatoptions), [`formatViews`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#formatviews).
 <br>
-Let's go ahead and try those along with other customizations from the [**IgxCalendarComponent**]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) API. Say we are having visitors on our page coming from countries from EFTA (European Free Trade Association) countries, so we need to display the calendar in the corresponding culture. First thing we need to set is the [`weekstart`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#weekstart), which controls the starting day of the week. It defaults to 0, which corresponds to Sunday, so we set a value of 1.
+Let's go ahead and try those along with other customizations from the [`IgxCalendarComponent`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) API. Say we are having visitors on our page coming from countries from EFTA (European Free Trade Association) countries, so we need to display the calendar in the corresponding culture. First thing we need to set is the [`weekstart`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#weekstart), which controls the starting day of the week. It defaults to 0, which corresponds to Sunday, so we set a value of 1.
 
 In the markup below we are also binding the [`formatOptions`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#formatoptions) and [`formatViews`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#formatviews) properties to customize the display formatting. Finally we are binding the [`locale`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#locale) property to a value, based on the user's location choice:
 
@@ -148,7 +148,7 @@ Let's try this out by playing around with selecting ranges:
 
 ### Templating
 
-We have seen how to make use of the **IgxCalendarComponents** API (properties, events, methods) so that we configure the calendar per our requirements and interact with it programatically. Now we want to go further and customize its look, benefiting from the header and subheader templating capabilities.
+We have seen how to make use of the [`IgxCalendarComponent`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) API (properties, events, methods) so that we configure the calendar per our requirements and interact with it programatically. Now we want to go further and customize its look, benefiting from the header and subheader templating capabilities.
 
 To do that we need to decorate a ng-template inside the calendar with **igxCalendarHeader** or **igxCalendarSubheader** directive and use the context returned to customize the way the date is displayed.
 The template decorated with the **igxCalendarHeader** directive is rendered only when the calendar selection is set to single. The **igxCalendarSubheader** is available in all selection modes.
@@ -169,7 +169,7 @@ In our example we slightly modify the default template and will make the header 
 </igx-calendar>
 ```
 > [!NOTE]
-> Keep in mind that for Internet Explorer and Edge browsers the date parts will be empty strings, because both browsers don't implement the Intl API providing this functionality. (See [formatToParts](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat/formatToParts))
+> Keep in mind that for Internet Explorer and Edge browsers the date parts will be empty strings, because neither implement the Intl API providing this functionality. (See [formatToParts](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat/formatToParts))
 
 To support those browsers we are going to use alternative template using [ngIf](https://angular.io/api/common/NgIf#using-non-inlined-then-template) directive:
 
@@ -198,7 +198,7 @@ To support those browsers we are going to use alternative template using [ngIf](
     </ng-template>
 </igx-calendar>
 ```
-Note that **ngIf** evaluates the value of the **formatParts** expression to control which template to use. Let's have a look at the alernative **#parseTemplate** template: the expressions in the curly brackets invokes the **getDatePart** method that returns the evaluated value, in our case this is a formatted date part (year, weekday, month, etc.). The parameters passed to the **getDatePart** are necessary so that formatting is based on the [**IgxCalendarComponent**]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) locale and format options:
+Note that **ngIf** evaluates the value of the **formatParts** expression to control which template to use. Let's have a look at the alernative **#parseTemplate** template: the expressions in the curly brackets invokes the **getDatePart** method that returns the evaluated value, in our case this is a formatted date part (year, weekday, month, etc.). The parameters passed to the **getDatePart** are necessary so that formatting is based on the [`IgxCalendarComponent`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) locale and format options:
 
 ```typescript
 // app.component.ts
@@ -238,7 +238,7 @@ this.calendar.disabledDates = [{ type: DateRangeType.Between, dateRange: [
 ])];
 ```
 
-The [`DateRangeType`]({environment:angularApiUrl}/enums/daterangetype.html) is used to specify the range that is going to be disabled. For example, `DateRangeType.Between` will disable the dates between two specific dates in Array. Code snippet above.
+The [`DateRangeType`]({environment:angularApiUrl}/enums/daterangetype.html) is used to specify the range that is going to be disabled. For example, [`DateRangeType.Between`]({environment:angularApiUrl}/enums/daterangetype.html#between) will disable the dates between two specific dates in Array. Code snippet above.
 Check the API table below for all available [`DateRangeType`]({environment:angularApiUrl}/enums/daterangetype.html) values.
 
 This feature is covering the situations when we may need to restrict some dates to be selectable and focusable.
@@ -275,7 +275,7 @@ This is the result.
 
 [`Special dates`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#specialdates) feature is using almost the same configuration principles as [`Disabled dates`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#disableddates). The difference here is dates `styling` and `interaction`. You are able to select and focus [`Special dates`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#specialdates).
 
-Lets add a [`Special dates`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#specialdates) to our `igxCalendar`, we are going to create a [`DateRangeDescriptor`]({environment:angularApiUrl}/interfaces/daterangedescriptor.html) item of type `DateRangeType.Specific` and pass array of dates as `dateRange`:
+Lets add a [`Special dates`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#specialdates) to our [`igxCalendar`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html), we are going to create a [`DateRangeDescriptor`]({environment:angularApiUrl}/interfaces/daterangedescriptor.html) item of type [`DateRangeType.Specific`]({environment:angularApiUrl}/enums/daterangetype.html#specific) and pass array of dates as [`dateRange`]({environment:angularApiUrl}/classes/daterangedescriptor.html#daterange):
 
 ```typescript
 export class CalendarSample7Component {
@@ -324,7 +324,7 @@ Result:
 </div>
 
 ### Keyboard navigation
-When the **igxCalendar** component is focused:
+When the [**igxCalendar**]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) component is focused:
 - `PageUp` will move to the previous month.
 - `PageDown` will move to the next month.
 - `Shift + PageUp` will move to the previous year.
