@@ -22,30 +22,19 @@ _language: ja
 
 ### 使用方法
 
-**igxLayout** ディレクティブをコンテナー要素に適用して子要素のレイアウト方向を指定します。水平方向は `igxLayoutDir="row"`、垂直方向は `igxLayoutDir="column"` です。
+[**igxLayout**]({environment:angularApiUrl}/classes/igxlayoutdirective.html) ディレクティブをコンテナー要素に適用して子要素のレイアウト方向を指定します。水平方向は [`igxLayoutDir`]({environment:angularApiUrl}/classes/igxlayoutdirective.html#dir)`="row"`、垂直方向は [`igxLayoutDir`]({environment:angularApiUrl}/classes/igxlayoutdirective.html#dir)`="column"` です。
 
-**注**: `igxLayout` ディレクティブはそのコンテナーの**直下**の子のフロー方向に影響します。
+**注**: [`igxLayout`]({environment:angularApiUrl}/classes/igxlayoutdirective.html) ディレクティブはそのコンテナーの**直下**の子のフロー方向に影響します。
 
 <div class="divider--half"></div>
 
 ### ネスト
 
-`igxFlex` ディレクティブを `igxLayout` 親内の要素に使用して、特定のフレックスボックス プロパティを制御します。
-
-| 名前            |   型   | 説明                                                                                                                 |
-| :-------------- | :----: | :------------------------------------------------------------------------------------------------------------------- |
-| `igxFlexOrder`  | number | フレックス コンテナーで要素の配置順序を制御します。デフォルト値は `0` です。                                         |
-| `igxFlexGrow`   | number | 項目がフレックス コンテナー内のピアに対して大きくなるかどうかを設定します。デフォルト値は `1` です。                 |
-| `igxFlexShrink` | number | 項目がフレックス コンテナー内にピアに対して小さくなるかどうかを設定します。デフォルト値は `1` で、負の数は無効です。 |
-
+[`igxFlex`]({environment:angularApiUrl}/classes/igxflexdirective.html) ディレクティブを [`igxLayout`]({environment:angularApiUrl}/classes/igxlayoutdirective.html) 親内の要素に使用して、特定のフレックスボックス プロパティを制御します。
 <div class="divider--half"></div>
 
 ### API
+<div class="divider--half"></div>
 
-| 名前                 |   型    | 説明                                                                                                                                                                       |
-| :------------------- | :-----: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `igxLayoutDir`       | string  | コンテナーの子要素のデフォルト フロー方向を設定します。デフォルト値は `rows` です。                                                                                        |
-| `igxLayoutReverse`   | boolean | フレックス子要素がフレックス コンテナーに配置される方向を定義します。`true` に設定される場合、`rows` は右から左へ、`columns` は下から上への方向になります。                |
-| `igxLayoutWrap`      | string  | デフォルトで直下の子は単一行に配置されます。`nowrap` のデフォルト値でこの動作を設定します。その他の値は `wrap` および `wrap-reverse` です。                                |
-| `igxLayoutJustify`   | string  | 主軸での配置を定義します。デフォルト値は開始線の近くに子要素を配置する `flex-start` です。その他の値は `flex-end`、`center`、`space-between`、および `space-around` です。 |
-| `igxLayoutItemAlign` | string  | 現在の行の交差軸に子要素が配置されるデフォルト動作を定義します。デフォルト値は `flex-start` です。その他の値は `flex-end`、`center`、`baseline`、および `stretch` です。   |
+* [IgxLayoutDirective]({environment:angularApiUrl}/classes/igxlayoutdirective.html)
+* [IgxFlexDirective]({environment:angularApiUrl}/classes/igxflexdirective.html)

@@ -20,7 +20,7 @@ _language: ja
 
 ### 使用方法
 
-Ignite UI for Angular Linear Progress を初期化する前に、**IgxProgressBarModule** を **app.module.ts** ファイルにインポートします。
+Ignite UI for Angular Linear Progress を初期化する前に、[**IgxProgressBarModule**]({environment:angularApiUrl}/classes/igxprogressbarmodule.html) を **app.module.ts** ファイルにインポートします。
 
 ```typescript
 // app.module.ts
@@ -36,7 +36,7 @@ import { IgxProgressBarModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-ボタン クリックでトリガーされる連続プロセスをシミュレートする実例を作成します。また、読み込むスピードは `igx-linear-bar` に設定される `max` 属性に基づきます。最初の場合、`max` 値が 200 に設定されるため、100 (デフォルト値) に設定される第 2 の場合より遅く読み込みます。コードは以下です。
+ボタン クリックでトリガーされる連続プロセスをシミュレートする実例を作成します。また、読み込むスピードは `igx-linear-bar` に設定される [`max`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#max) 属性に基づきます。最初の場合、[`max`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#max) 値が 200 に設定されるため、100 (デフォルト値) に設定される第 2 の場合より遅く読み込みます。コードは以下です。
 
 ```html
 ...
@@ -172,7 +172,7 @@ export class AppModule {}
 </div>
 <div class="divider--half"></div>
 
-最後に、`textAlign`、`textVisibility`、`textTop`、および `text` の属性を設定します。以下はコード例です。
+最後に、[`textAlign`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#textalign)、[`textVisibility`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#textvisibility)、[`textTop`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#texttop)、および [`text`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#text) の属性を設定します。以下はコード例です。
 
 ```html
 ...
@@ -208,7 +208,7 @@ export class AppModule {}
 ...
 ```
 
-最初に `IgxTextAlign` をコンポーネントにインポートする必要があります。
+最初に [`IgxTextAlign`]({environment:angularApiUrl}/enums/igxtextalign.html) をコンポーネントにインポートする必要があります。
 
 ```typescript
 import { ..., IgxTextAlign } from 'igniteui-angular';
@@ -267,23 +267,8 @@ export class LinearProgressbarSample2Component implements OnInit {
 <div class="divider--half"></div>
 
 ### API
-| 名前   |       型      |  説明 |
-|:----------|:-------------:|:------|
-| `max` |  number | 渡すことができる最大値を設定します。デフォルトで 100 に設定されます。 |
-| `type` |  string | リニア棒のタイプを設定します。オプションは `default`、`success`、`info`、`warning`、または `danger` です。|
-| `value` |  number | 完了した位置を示す値を設定します。 |
-| `striped` |  boolean | 棒をストライプ スタイルに設定します。 |
-| `animate` |  boolean | 進行状況バーにアニメーションがあるかどうか。 |
-| `textAlign` | enum | テキスト配置を定義する位置を設定します。オプションは `IgxTextAlign.START` (デフォルト値)、`IgxTextAlign.CENTER`、および `IgxTextAlign.END` です。 |
-| `textVisibility` | boolean | テキストを表示するかどうかを設定します。デフォルトで `true` に設定されます。 |
-| `textTop` | boolean | テキストをイナズマ線の上に配置するかどうかを定義する位置を設定します。デフォルトで `false` に設定されます。 |
-| `text` | string | 定義された位置に基づいて表示されるカスタム テキストを設定します。 |
 <div class="divider--half"></div>
 
-### メソッド
-| 名前   |  説明 |
-|:----------|:------|
-| `getValue()` | 最小値 (0) および最大値の間の進行状況バーに渡された値を返します。|
-| `getPercentValue()` | 渡された値に基づいてパーセンテージを計算します。 |
-| `onProgressChanged` | 進行状況の変更をトラックするための公開イベント。 |
-<div class="divider--half"></div>
+* [IgxLinearProgressBarComponent]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html)
+* [IgxLinearProgressBarComponent Styles]({environment:sassApiUrl}/index.html#function-igx-progress-linear-theme)
+* [IgxTextAlign]({environment:angularApiUrl}/enums/igxtextalign.html)
