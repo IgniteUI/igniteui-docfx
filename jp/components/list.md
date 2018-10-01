@@ -380,7 +380,7 @@ toggleFavorite(item: IgxListItem) {
 <igx-toast #toast></igx-toast>
 ```
 
-The above example is using some CSS styles which may be found here:
+上記の例は、CSS スタイルを使用しています。
 
 ```css
 /* contacts.component.css */
@@ -472,7 +472,7 @@ public leftPanPerformed(args) {
 <iframe id="list-sample-7-final-iframe" src='{environment:demosBaseUrl}/list-sample-7' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-sample-7-final-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-sample-7-final-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
 </div>
 <div class="divider--half"></div>
 
@@ -600,7 +600,7 @@ public leftPanPerformed(args) {
 | 名前 | 型 | 説明 |
 | :--- | :--- | :--- |
 | `item` | IgxListItemComponent | パンニングされている **igx-list-item** の参照。 |
-| `direction` | IgxListPanState | **Igx-list-item** がパンニングされる方向を指定します。 |
+| `direction` | IgxListPanState | **igx-list-item** がパンニングされる方向を指定します。 |
 | `keepItem` | Boolean | `true` の場合、パンニングされた後もリスト項目が **IgxList** に保持されます。`false` (デフォルト) の場合、パンニングされた後にリスト項目が **IgxList** から削除されます。 |
 
 <div class="divider"></div>
