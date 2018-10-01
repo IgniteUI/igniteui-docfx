@@ -59,6 +59,9 @@
     - name: 表示密度
       href: grid_displayDensity.md
       new: true
+    - name: 条件付きセルのスタイル設定
+      href: grid_conditional_cell_styling.md
+      new: true
 - name: List View
   href: list.md
 - name: Combo
@@ -242,6 +245,9 @@
   href: card.md
 - name: Avatar
   href: avatar.md
+- name: Expansion Panel
+  href: expansion_panel.md
+  new: true
 - name: 通知
   header: true
 - name: Snackbar

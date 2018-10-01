@@ -18,7 +18,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-multi-column-headers-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-The declaration of `Multi column header` could be achieved by wrapping a set of columns into `igx-column-group` component with `header` title passed.
+The declaration of `Multi column header` could be achieved by wrapping a set of columns into [`igx-column-group`]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html) component with [`header`]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html#header) title passed.
 
 ```html
 <igx-grid [data]="data" height="600px">
@@ -30,7 +30,7 @@ The declaration of `Multi column header` could be achieved by wrapping a set of 
 </igx-grid>
 ```
 
-For achieving `n-th` level of nested headers, the declaration above should be followed. So by nesting `igx-column-group` leads to the desired result.
+For achieving `n-th` level of nested headers, the declaration above should be followed. So by nesting [`igx-column-group`]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html) leads to the desired result.
 
 ```html
 <igx-grid [data]="data" height="600px">
@@ -44,7 +44,7 @@ For achieving `n-th` level of nested headers, the declaration above should be fo
 </igx-grid>
 ```
 
-Every `igx-column-group` supports `moving`, `pinning` and `hidding`.
+Every [`igx-column-group`]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html) supports [`moving`](grid_column_moving.md), [`pinning`](grid_column_pinning.md) and [`hiding`](grid_column_hiding.md).
 > [!NOTE]
 > When there is a set of columns and column groups, pinning works only for top level column parents. More specifically pinning per nested `column groups` or `columns` is not allowed. <br />
 > Moving between `columns` and `column groups` is allowed only when they are at the same level in the hierarchy and both are in the same `group`. <br />
@@ -61,37 +61,11 @@ Every `igx-column-group` supports `moving`, `pinning` and `hidding`.
 </igx-grid>
 ```
 
-## API Summary
-### IgxColumnGroupComponent
+### API References
+<div class="divider--half"></div>
 
-#### Inputs
-| Name | Type | Description |
-| :--- | :--- | :---|
-|`searchable`| boolean | Determines whether the column is included in the search. If set to false, the cell values for this column will not be included in the results of the search API of the grid (defaults to true). |
-|`hidden`| boolean | Visibility of the column. |
-|`movable`| boolean | Determins whether current `column group` is movable. |
-
-#### Getters/Setters
-|Name|Type|Getter|Setter|Description|
-|--- |--- |--- |--- |--- |
-|`allChildren`| IgxColumnComponent[] | yes | no | Returns `flatten` data of all children including the `column groups` too.|
-|`columnGroup`| boolean | yes | no | Returns whether current column is `column group`.|
-|`level`| number | yes | no | Returns the level of the `column group` positioned within the headers hierarchy.|
-|`parent`| IgxColumnGroupComponent|IgxColumnComponent | yes | no | Returns the direct parent of the `column group`.|
-|`children`| IgxColumnComponent[] | yes | no | Returns the direct children of the `column group`. |
-|`topLevelParent`| IgxColumnGroupComponent | yes | no | Returns the top level parent of the `group`. |
-|`width`| string | yes | no | Returns the `width` of current `column group` determined by the children it contains. |
-|`pinned`| boolean | yes | yes | Get/Sets whether current `column group` is pinned. |
-
-### Methods
-
-|Name|Return Type|Description|
-|--- |--- |--- |
-|`pin(index?): boolean`|boolean|Pins the column. Returns if the operation is successful.|
-|`unpin(index?): boolean`|boolean|Unpins the column. Returns if the operation is successful.|
-
-
-
+* [IgxColumnGroupComponent]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html)
+* [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 <div class="divider--half"></div>
 
 ### Additional Resources

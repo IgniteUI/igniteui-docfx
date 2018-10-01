@@ -18,29 +18,21 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <div class="divider--half"></div>
 
 ###Usage
-Use the **igxLayout** directive on a container element to specify the layout
-direction for its children: horizontally with `igxLayoutDir="row"` or vertically with
-`igxLayoutDir="column"`.
+Use the [**igxLayout**]({environment:angularApiUrl}/classes/igxlayoutdirective.html) directive on a container element to specify the layout
+direction for its children: horizontally with [`igxLayoutDir`]({environment:angularApiUrl}/classes/igxlayoutdirective.html#dir)`="row"` or vertically with
+[`igxLayoutDir`]({environment:angularApiUrl}/classes/igxlayoutdirective.html#dir)`="column"`.
 
-**Note**: the `igxLayout` directive affects the flow directions for that
+**Note**: the [`igxLayout`]({environment:angularApiUrl}/classes/igxlayoutdirective.html) directive affects the flow directions for that
 container's **immediate** children.
 <div class="divider--half"></div>
 
 ### Nesting
-Use the `igxFlex` directive for elements inside an `igxLayout` parent to control specific flexbox properties.
-
-| Name   |      Type      |  Description |
-|:----------|:-------------:|:------|
-| `igxFlexOrder` | number | Controls in what order are the elements laid out in the flex container. Defaults to `0`. |
-| `igxFlexGrow` | number | Sets whether an item should grow in a proportion to its peers inside the flex container. Defaults to `1`. |
-| `igxFlexShrink` | number | Sets whether an items should shrink in a proportion to its peers. Defaults to `1` and negative number are not accepted. |
+Use the [`igxFlex`]({environment:angularApiUrl}/classes/igxflexdirective.html) directive for elements inside an [`igxLayout`]({environment:angularApiUrl}/classes/igxlayoutdirective.html) parent to control specific flexbox properties.
 <div class="divider--half"></div>
 
-### API
-| Name   |      Type      |  Description |
-|:----------|:-------------:|:------|
-| `igxLayoutDir` |  string | Sets the default flow direction of the container's children. Defaults to `rows`. |
-| `igxLayoutReverse` |    boolean   | Defines the direction flex children are placed in the flex container. When set to `true`, the `rows` direction goes right to left and `columns` goes bottom to top.    |
-| `igxLayoutWrap` | string | By default the immediate children will all try to fit onto one line. The default value `nowrap` sets this behavior. Other accepted values are `wrap` and `wrap-reverse`|
-| `igxLayoutJustify` | string | Defines the alignment along the main axis. Defaults to `flex-start` which packs the children toward the start line. Other possible values are `flex-end`, `center`, `space-between`, `space-around`|
-| `igxLayoutItemAlign` | string | Defines the default behavior for how children are laid out along the corss axis of the current line. Defaults to `flex-start`. Other possible values are `flex-end`, `center`, `baseline`, and `stretch` |
+
+### API References
+<div class="divider--half"></div>
+
+* [IgxLayoutDirective]({environment:angularApiUrl}/classes/igxlayoutdirective.html)
+* [IgxFlexDirective]({environment:angularApiUrl}/classes/igxflexdirective.html)

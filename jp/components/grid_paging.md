@@ -208,6 +208,7 @@ public ngAfterViewInit() {
 </igx-grid>
 ```
 
+
 すべての設定を完了すると以下のような結果になります。
 
 #### デモ
@@ -223,9 +224,9 @@ public ngAfterViewInit() {
 
 ### API
 * [IgxGridComponent API]({environment:angularApiUrl}/classes/igxgridcomponent.html)
-* [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#mixin-igx-grid)
+* [IgxGridComponent スタイル]({environment:sassApiUrl}/index.html#mixin-igx-grid)
 
-### 追加のリソース
+### その他のリソース
 <div class="divider--half"></div>
 
 * [グリッドの概要](grid.md)

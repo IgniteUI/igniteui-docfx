@@ -6,20 +6,20 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ### Grid Paging
 
-In Ignite UI for Angular, **Paging** is initialized on the root `igx-grid` component and is configurable via the `paging` and `perPage` inputs.
+In Ignite UI for Angular, **Paging** is initialized on the root `igx-grid` component and is configurable via the [`paging`]({environment:angularApiUrl}/classes/igxgridcomponent.html#paging) and [`perPage`]({environment:angularApiUrl}/classes/igxgridcomponent.html#perpage) inputs.
 
 #### Demo
 
 <div class="sample-container loading" style="height:605px">
-    <iframe id="grid-sample-iframe" src='{environment:demosBaseUrl}/grid-paging-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="grid-paging-sample-iframe" src='{environment:demosBaseUrl}/grid-paging-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-paging-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
 
-Paging is a Boolean property that controls whether the feature is enabled, and the `perPage` property controls the visible records per page. Let’s update our grid to enable paging:
+Paging is a Boolean property that controls whether the feature is enabled, and the [`perPage`]({environment:angularApiUrl}/classes/igxgridcomponent.html#perpage) property controls the visible records per page. Let’s update our grid to enable paging:
 
 ```html
 <igx-grid #grid1 [data]="data" [paging]="true" [perPage]="10" [paginationTemplate]="pager" height="500px" width="100%" displayDensity="cosy"></igx-grid>
@@ -39,7 +39,7 @@ The paging area supports templating by the user, if a template reference is pass
 </igx-grid>
 ```
 
-Paging can also be done programmatically through the Grid API:
+Paging can also be done programmatically through the Grid API, using the [`paginate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#paginate), [`previousPage`]({environment:angularApiUrl}/classes/igxgridcomponent.html#previouspage), [`nextPage`]({environment:angularApiUrl}/classes/igxgridcomponent.html#nextpage) methods:
 
 ```typescript
 // Go to page 6
@@ -122,7 +122,7 @@ export class RemotePagingGridSample implements OnInit, AfterViewInit {
     }
 }
 ```
-We need to create a custom pager template to get the data only for the requested page and to pass the correct `skip` and `top` parameters to the remote service according to the selected page and `items per page`.
+We need to create a custom pager template to get the data only for the requested page and to pass the correct `skip` and `top` parameters to the remote service according to the selected page and items [`perPage`]({environment:angularApiUrl}/classes/igxgridcomponent.html#perpage).
 We also need to take care of the disabling and enabling of the pager buttons.
 
 ```html
@@ -212,13 +212,17 @@ After all the changes above, the following result will be achieved.
 #### Demo
 
 <div class="sample-container loading" style="height:605px">
-    <iframe id="grid-paging-sample-iframe" src='{environment:demosBaseUrl}/grid-remote-paging-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="grid-remote-paging-sample-iframe" src='{environment:demosBaseUrl}/grid-remote-paging-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-remote-paging-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
+
+### API
+* [IgxGridComponent API]({environment:angularApiUrl}/classes/igxgridcomponent.html)
+* [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#mixin-igx-grid)
 
 ### Additional Resources
 <div class="divider--half"></div>
