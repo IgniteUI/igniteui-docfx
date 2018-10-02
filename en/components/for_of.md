@@ -185,5 +185,5 @@ chunkLoading(evt) {
 ```
 ## API References
 
-* [`IgxForOfDirective`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxforof)
+* [IgxForOfDirective]({environment:angularApiUrl}/classes/igxforofdirective.html)
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
