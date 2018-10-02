@@ -540,6 +540,18 @@ Finally, we need to apply the filtering pipe to our contacts data before we can 
 
 <div class="divider"></div>
 
+### Chat Component
+The following sample demonstrates how to create a simple chat component using **IgxList**.
+
+<div class="sample-container loading" style="height: 650px">
+<iframe id="list-chat-sample-iframe" src='{environment:demosBaseUrl}/list-chat-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-chat-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+
+<div class="divider"></div>
+
 ### API Summary
 
 In this article we covered a lot of ground with the list component. We created a list of contact items. Used some additional Ignite UI for Angular components inside our list items, like avatars and icons. Created some custom item layout and styled it. Finally, we added list filtering. The list component has a few more APIs to explore, which are listed below.
