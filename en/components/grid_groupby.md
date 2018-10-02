@@ -20,7 +20,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 #### Initial Grouping State
 
-It is possible to set the initial grouping of the grid by an array of expressions to the [`groupingExpressions`]({environment:angularApiUrl} property of the grid.
+It is possible to set the initial grouping of the grid by an array of expressions to the [`groupingExpressions`]({environment:angularApiUrl}/classes/igxgridcomponent.html#groupingexpressions) property of the grid.
 
 ```typescript
 public ngOnInit() {
@@ -124,6 +124,13 @@ The grouping UI supports the following keyboard interactions:
 |Limitation|Description|
 |--- |--- |
 |Maximum amount of grouped columns is 10. | If more than 10 columns are grouped an error is thrown.
+
+### API
+
+* [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
+* [ISortingExpression]({environment:angularApiUrl}/interfaces/isortingexpression.html)
+* [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
+* [IGroupByExpandState]({environment:angularApiUrl}/interfaces/igroupbyexpandstate.html)
 
 ### Additional Resources
 <div class="divider--half"></div>

@@ -22,7 +22,7 @@ _language: ja
 
 #### 初期のグループ化状態
 
-グリッドの初期のグループ化状態を設定するには、式の配列をグリッドの filteringExpressions プロパティに設定します。
+グリッドの初期のグループ化状態を設定するには、式の配列をグリッドの [`groupingExpressions`]({environment:angularApiUrl}/classes/igxgridcomponent.html#groupingexpressions) プロパティに設定します。
 
 ```typescript
 public ngOnInit() {
@@ -126,6 +126,13 @@ export interface IGroupByRecord {
 |制限|説明|
 |--- |--- |
 |グループ列の最大値は 10 です。 | 10 列以上の場合はエラーがスローされます。
+
+### API
+
+* [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
+* [ISortingExpression]({environment:angularApiUrl}/interfaces/isortingexpression.html)
+* [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
+* [IGroupByExpandState]({environment:angularApiUrl}/interfaces/igroupbyexpandstate.html)
 
 ### その他のリソース
 <div class="divider--half"></div>
