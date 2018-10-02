@@ -388,14 +388,14 @@ toggleFavorite(item: IgxListItem) {
 </igx-list-item>
 ```
 
-### Chat Component
-The following sample demonstrates how to create a simple chat component using **IgxList**.
+### Chat コンポーネント
+以下のサンプルは、**IgxList** を使用して作成したシンプルなチャットです。
 
 <div class="sample-container loading" style="height: 500px">
 <iframe id="list-chat-sample-iframe" src='{environment:demosBaseUrl}/list-chat-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-chat-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-chat-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
 </div>
 
 <div class="divider"></div>
