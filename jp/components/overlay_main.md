@@ -323,7 +323,7 @@ export class ExampleComponent {
 
 `IgxOverlayService`
 
-   | 名前          | Description                         | Cancelable | Parameters |
+   | 名前          | 説明                       | キャンセル可能 | パラメーター |
    |---------------|-------------------------------------|------------|------------|
    |`onOpening`    | オーバーレイが表示される前に発生されます。        | false      |            |
    |`onOpened`     | オーバーレイが表示された後に発生されます。         | false      |            |
