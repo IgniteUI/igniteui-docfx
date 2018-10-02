@@ -174,6 +174,15 @@ public chipsOrderChanged(event) {
 
   - <kbd>SPACE</kbd> または <kbd>ENTER</kbd> チップの削除を手動的に処理するために [`onRemove`]({environment:angularApiUrl}/classes/igxchipcomponent.html#onremove) 出力を発生します。
 
+### API
+
+* [IgxChipComponent]({environment:angularApiUrl}/classes/igxchipcomponent.html)
+* [IgxChipsAreaComponent]({environment:angularApiUrl}/classes/igxchipsareacomponent.html)
+* [IgxPrefixDirective]({environment:angularApiUrl}/classes/igxprefixdirective.html)
+* [IgxSuffixDirective]({environment:angularApiUrl}/classes/igxsuffixdirective.html)
+* [IgxConnectorDirective]({environment:angularApiUrl}/classes/igxconnectordirective.html)
+* [IgxLabelDirective]({environment:angularApiUrl}/classes/igxlabeldirective.html)
+
 ### 参照
 
 <div class="divider--half"></div>

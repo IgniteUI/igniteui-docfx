@@ -173,6 +173,15 @@ The chip can be focused using the `Tab` key or by clicking on them. Chips can be
 
   - <kbd>SPACE</kbd> or <kbd>ENTER</kbd> Fires the [`onRemove`]({environment:angularApiUrl}/classes/igxchipcomponent.html#onremove) output so the chip deletion can be handled manually
 
+### API
+
+* [IgxChipComponent]({environment:angularApiUrl}/classes/igxchipcomponent.html)
+* [IgxChipsAreaComponent]({environment:angularApiUrl}/classes/igxchipsareacomponent.html)
+* [IgxPrefixDirective]({environment:angularApiUrl}/classes/igxprefixdirective.html)
+* [IgxSuffixDirective]({environment:angularApiUrl}/classes/igxsuffixdirective.html)
+* [IgxConnectorDirective]({environment:angularApiUrl}/classes/igxconnectordirective.html)
+* [IgxLabelDirective]({environment:angularApiUrl}/classes/igxlabeldirective.html)
+
 ### References
 
 <div class="divider--half"></div>
