@@ -109,6 +109,14 @@ public processData() {
 
 描画する前にコンテナーおよび項目のサイズの情報がない場合にグリッドでランダムな位置にスクロールすると、スクロールバーの幅や高さの設定、表示項目の決定で誤りが発生します。ディメンションの推測がスクロールバーの誤操作となり、ユーザー エクスペリエンスを低下させます。そのため、仮想化を有効化する際は、関連するディメンションを設定することをお勧めします。
 
+<div class="divider--half"></div>
+
+### API
+* [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
+* [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
+* [IgxForOfDirective]({environment:angularApiUrl}/classes/igxforofdirective.html)
+* [IForOfState]({environment:angularApiUrl}/interfaces/iforofstate.html)
+
 ### 追加のリソース
 <div class="divider--half"></div>
 
