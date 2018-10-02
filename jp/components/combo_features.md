@@ -152,12 +152,10 @@ set values(newValues: Array<any>) {
 <div class="divider--half"></div>
 
 ## API
-
-### 入力
 <div class="divider--half"></div>
 
-* IgxComboComponent [**API Reference**]({environment:angularApiUrl}/classes/igxcombocomponent.html) and
-[**Themes Reference**]({environment:sassApiUrl}/index.html#themes-mixin-igx-combo).
+* IgxComboComponent [**API 参照**]({environment:angularApiUrl}/classes/igxcombocomponent.html) と
+[**テーマの参照**]({environment:sassApiUrl}/index.html#themes-mixin-igx-combo)。
 
 ## その他のリソース
 <div class="divider--half"></div>

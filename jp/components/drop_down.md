@@ -272,10 +272,10 @@ export class AppModule {}
 
 ### API まとめ
 
-**igx-drop-down** component [**API Reference**]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) and
-[**Themes Reference**]({environment:sassApiUrl}/index.html#mixin-igx-drop-down).
+**igx-drop-down** コンポーネント [**API 参照**]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) と
+[**テーマの参照**]({environment:sassApiUrl}/index.html#mixin-igx-drop-down)。
 
-**igx-drop-down-item** component [**API Reference**]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html).
+**igx-drop-down-item** コンポーネント [**API 参照**]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html)。
 ###その他のリソース
 
 <div class="divider--half"></div>
