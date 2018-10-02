@@ -1,15 +1,16 @@
 ---
-title: Tooltip - Native Angular | Ignite UI for Angular
-_description: The Ignite UI for Angular Tooltip and Tooltip Target directives feature the ability to create a tooltip and attach it to an element.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Tooltip directives, Angular Tooltip controls, Angular Tooltip, tooltip, tooltip target
+title: Tooltip - ネイティブ Angular | Ignite UI for Angular
+_description: Ignite UI for Angular Tooltip and Tooltip Target ディクティブは、ツールチップを作成する機能と要素へアタッチする機能が含まれます。
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular ツールチップ ディレクティブ, Angular ツールチップ コントロール, Angular ツールチップ, ツールチップ ターゲット
+_language: ja
 ---
 
-## Tooltip
+## ツールチップ
 
-The [`igxTooltip`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) and the [`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) directives provide us with the ability to create a fully customizable tooltip and attach it to any element on our page.
-While most tooltips have a limited number of available positions, with the [`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) directive we can specify any position we want on the page while keeping it in relation to the target (anchor) and provide various other overlay settings like scroll strategies and custom animations!
+[`igxTooltip`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) と [`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) ディレクティブは、完全なカスタマイズが可能なツールチップをサポートし、ページのあらゆる要素にアタッチできます。
+ツールチップは、[`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html)ディレクティブで使用できる場所の数が限られています。ターゲット (アンカー) と関連つけてページで任意の配置を指定でき、スクロールやカスタム アニメーションなどのその他のオーバーレイ設定をサポートします。
 
-### Demo
+### デモ
 
 <div class="sample-container loading" style="height:450px">
     <iframe id="tooltip-simple-iframe" src='{environment:demosBaseUrl}/tooltip-simple' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -20,9 +21,9 @@ While most tooltips have a limited number of available positions, with the [`igx
 </div>
 <div class="divider--half"></div>
 
-### Setup
+### 設定
 
-To get started with the Ignite UI for Angular Tooltip and Tooltip Target, let's first import the [`IgxTooltipModule`]({environment:angularApiUrl}/classes/igxtooltipmodule.html) in the app.module.ts file.
+Ignite UI for Angular ツールチップ、ヒント および ツールチップ、ヒントターゲットを初期化する前に、app.module.ts ファイルに[`IgxTooltipModule`]({environment:angularApiUrl}/classes/igxtooltipmodule.html) をインポートします。
 
 ```typescript
 // app.module.ts
@@ -39,9 +40,9 @@ import {
 export class AppModule {}
 ```
 
-### Simple tooltip
+### シンプルなツールチップ
 
-Let's say we want to create a simple text tooltip for an element on our page. In our case, let's use our awesome [**IgxAvatar**](avatar.md) as the element in question by importing the [`IgxAvatarModule`]({environment:angularApiUrl}/classes/igxavatarmodule.html) first.
+ページの要素にシンプルなテキスト ツールチップを作成します。[`IgxAvatarModule`]({environment:angularApiUrl}/classes/igxavatarmodule.html) をインポートして要素として [**IgxAvatar**](avatar.md) を使用します。
 
 ```typescript
 // app.module.ts
@@ -59,7 +60,7 @@ import {
 export class AppModule {}
 ```
 
-In addition, we will define some custom styles for our elements!
+更に要素にカスタム スタイルを定義します。
 
 
 ```css
@@ -79,11 +80,11 @@ In addition, we will define some custom styles for our elements!
 }
 ```
 
-#### Tooltip target
-The avatar will be our target and all we have to do is set the [`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) directive on it, which basically marks our element as one that has a tooltip.
+#### ツールチップ ターゲット
+avatar をターゲットにして、[`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) ディレクティブを設定し、ツールチップを持つ要素としてマークします。
 
-- The [`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) directive extends the [`igxToggleAction`]({environment:angularApiUrl}/classes/igxtoggleactiondirective.html) directive.
-- The [`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) directive is exported with the name **tooltipTarget**.
+- [`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) ディレクティブは [`igxToggleAction`] ディレクティブを拡張します。
+- [`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) ディレクティブは、名前 **tooltipTarget** でエクスポートされます。
 
 ```html
 <!--simpleTooltip.component.html-->
@@ -93,11 +94,11 @@ The avatar will be our target and all we have to do is set the [`igxTooltipTarge
 </igx-avatar>
 ```
 
-#### Tooltip
-Now let's create the tooltip element itself! Since we want a simple text tooltip, we will define an ordinary div element with text inside and set the [`igxTooltip`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) directive on it, which marks it as a tooltip.
+#### ツールチップ
+ツールチップ要素を作成します。シンプルなテキスト ツールチップを作成するためテキストを含む標準 div 要素を定義し、ツールチップとしてマークされる [`igxTooltip`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) ディレクティブを設定します。
 
-- The [`igxTooltip`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) directive extends the [`igxToggle`]({environment:angularApiUrl}/classes/igxtoggledirective.html) directive.
-- The [`igxTooltip`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) directive is exported with the name **tooltip**.
+- [`igxTooltip`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) ディレクティブは [`igxToggle`] ディレクティブを拡張します。
+- [`igxTooltip`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) ディレクティブは、名前 **tooltip** でエクスポートされます。
 
 ```html
 <!--simpleTooltip.component.html-->
@@ -107,8 +108,8 @@ Now let's create the tooltip element itself! Since we want a simple text tooltip
 </div>
 ```
 
-#### Attach tooltip to target
-Now that we have both our target and tooltip defined, all that's left for us to do is assign the tooltip's reference to the [`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) selector of the target.
+#### ツールチップをターゲットにアタッチします。
+ここまででターゲットとツールチップを定義しました。 ツールチップ参照を [`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) セレクターに割り当てます。
 
 ```html
 <!--simpleTooltip.component.html-->
@@ -122,12 +123,12 @@ Now that we have both our target and tooltip defined, all that's left for us to 
 </div>
 ```
 
-#### Show/Hide delay settings
-What if we want to control the amount of time that should pass before showing and hiding the tooltip? For this purpose we can use the [`showDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#showdelay) and the [`hideDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#hidedelay) properties of the [`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) directive. Both properties are of type **number** and take time span in milliseconds.
+#### 設定の表示/非表示
+ツールチップを表示または非表示にするまでの時間を制御する場合は、[`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) ディレクティブの [`showDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#showdelay) と [`hideDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#hidedelay) プロパティを使用します。両プロパティは型 **number** でミリセカンドでタイムスパンを取得できます。
 
-Now let's add a couple of [**IgxSlider**](slider.md) elements to control the [`showDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#showdelay) and the [`hideDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#hidedelay). In addition, we will also use the [**IgxSwitch**](switch.md) to enable/disable the user interaction over the tooltip target by using the [`tooltipDisabled`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#tooltipdisabled) property of the target.
+次に [**IgxSlider**](slider.md) 要素をいくつか [`showDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#showdelay) と [`hideDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#hidedelay) に追加します。更にターゲットの [`tooltipDisabled`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#tooltipdisabled) プロパティを使用してツールチップ ターゲットでユーザー インタラクションを有効/無効にする [**IgxSwitch**](switch.md) を使用します。
 
-We will go ahead and get the [`IgxSliderModule`]({environment:angularApiUrl}/classes/igxslidermodule.html) and the [`IgxSwitchModule`]({environment:angularApiUrl}/classes/igxswitchmodule.html).
+[`IgxSliderModule`]({environment:angularApiUrl}/classes/igxslidermodule.html) と [`IgxSwitchModule`] を取得します。
 ```typescript
 // app.module.ts
 
@@ -146,7 +147,7 @@ import {
 export class AppModule {}
 ```
 
-Now we can define our sliders and switch controls in the template of the component! Then all we have to do is bind the [`showDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#showdelay) and the [`hideDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#hidedelay) properties as **ngModels** to the two sliders respectively and then bind the [`tooltipDisabled`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#tooltipdisabled) property of the target to the switch control in the same manner.
+Slider と Switch コントロールをコンポーネントのテンプレートに定義できます。[`showDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#showdelay) と [`hideDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#hidedelay) プロパティを **ngModels** としてそれぞれ 2 つのスライダーにバインドし、同様に [`tooltipDisabled`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#tooltipdisabled) を Switch コントロールにバインドします。
 
 ```html
 <!--simpleTooltip.component.html-->
@@ -167,16 +168,17 @@ Now we can define our sliders and switch controls in the template of the compone
 </div>
 ```
 
-You can see the result of the code from above at the beginning of this article in the [Tooltip Demo](#demo) section.
+このトピックのはじめにあるコードの結果は「ツールチップ、ヒント表示デモ」で確認できます。
 
 > [!NOTE]
-> The built-in UI interaction behavior of the [`IgxTooltipTargetDirective`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) and its respective API methods work by taking [`showDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#showdelay) and [`hideDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#hidedelay) property values into account. Showing and hiding the tooltip through the API of the [`IgxTooltipDirective`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) does not take the [`showDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#showdelay) and [`hideDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#hidedelay) property values into account. If necessary, such logic would have to be implemented manually according to the application's specifics.
+> ビルトイン UI インタラクションの動作と `IgxTooltipTargetDirective`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) および [`showDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#showdelay) と [`hideDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#hidedelay) プロパティ値を考慮します。[`IgxTooltipDirective`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) の API によるツールチップを表示および非表示は、[`showDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#showdelay) and [`hideDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#hidedelay) プロパティ値を考慮しません。必要な場合、ロジックはアプリケーションの仕様を手動で実装する必要があります。
 
-### Rich tooltip
+### 高機能なツールチップ
 
-Customizing and styling the content of our tooltip has never been easier with the [`igxTooltip`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) directive! Since the tooltip itself is an ordinary element in our markup, we can basically improve its content by adding any elements we need and have the ability to style them accordingly!
+コンテンツのカスタマイズやスタイル設定が [`igxTooltip`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) ディレクティブで簡単にできます。
+ツールチップはマークアップの標準要素であるため、必要な要素を追加してコンテンツを改善や状況に応じたスタイル設定が可能です。
 
-Let's expand on the use of the [`igxTooltip`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) and use it to provide more details for a specific location on a map! In order to make our application look even better, we will use the [**IgxCard**](card.md) to represent our map, the [**IgxAvatar**](avatar.md) for a logo in our tooltip, the [**IgxIcon**](icon.md) for the location icon on our map and the [**IgxButton**](button.md) for some card actions! For this purpose, we will get their respective modules.
+[`igxTooltip`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) の使用を拡張し、マップの特定の場所について詳細な情報を提供します。アプリケーションの UI を更にきれいにするために[**IgxCard**](card.md)を使用してマップを表示し、ツールチップのロゴに [**IgxAvatar**](avatar.md)、マップの場所アイコンに[**IgxIcon**](icon.md)、カード動作に[**IgxButton**](button.md) を使用します。これには各モジュールを取得する必要があります。
 
 ```typescript
 // app.module.ts
@@ -197,7 +199,7 @@ import {
 export class AppModule {}
 ```
 
-We will also use the following styles for our application:
+アプリケーションには以下のスタイルを使用します。
 
 ```css
 /* richTooltip.component.css */
@@ -244,7 +246,7 @@ We will also use the following styles for our application:
 }
 ```
 
-Let's start by creating our card and setting its content to be an element that has a map background image! In addition, we will add an icon that will indicate the position of our location! Since we want to provide more details for this location, our icon will obviously be the tooltip target.
+カードを作成してコンテンツをマップの背景画像のある要素にすることから始めます。更に場所の位置を示すアイコンを追加します。場所の詳細を提供するためにアイコンがツールチップのターゲットになります。
 
 ```html
 <!--richTooltip.component.html-->
@@ -258,7 +260,7 @@ Let's start by creating our card and setting its content to be an element that h
 </igx-card>
 ```
 
-Now for the tooltip! For its content, we will create a container that will be populated with some text information elements and an avatar. Then we will simply attach the tooltip to the target and include some nice css styling!
+次にツールチップを作成します。コンテンツは、テキスト情報要素とアバターで構成されるコンテナを作成します。ツールチップをターゲットにアタッチして CSS スタイルを使用します。
 
 ```html
 <!--richTooltip.component.html-->
@@ -283,7 +285,7 @@ Now for the tooltip! For its content, we will create a container that will be po
 </igx-card>
 ```
 
-As a finishing touch, we will add a couple of button icons as card actions at the bottom.
+最後にボタンアイコンをカード アクションとして追加します。
 
 ```html
 <!--richTooltip.component.html-->
@@ -305,7 +307,7 @@ As a finishing touch, we will add a couple of button icons as card actions at th
 </igx-card>
 ```
 
-If all went well, this is how our location and tooltip should look like:
+上記をすべて完了すると場所とツールチップは以下のようになります。
 
 <div class="sample-container loading" style="height:400px">
     <iframe id="tooltip-rich-iframe" src='{environment:demosBaseUrl}/tooltip-rich' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -316,33 +318,33 @@ If all went well, this is how our location and tooltip should look like:
 </div>
 <div class="divider--half"></div>
 
-### Overlay configuration
-Both the [`igxTooltip`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) and [`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) directives use the [**IgxOverlayService**](overlay_main.md) to open and close the respective tooltip element.
+### オーバーレイ構成
+[`igxTooltip`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) および [`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) ディレクティブは、[**IgxOverlayService**](overlay_main.md) を使用して各ツールチップ要素を開くか閉じるかします。
 
-The [`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) directive exposes an [`overlaySettings`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#overlaysettings) property (inherited from the [`igxToggleAction`]({environment:angularApiUrl}/classes/igxtoggleactiondirective.html)), which can be used to customize the animations of our tooltip, its position in the UI and a lot more! If this property is not set, then default overlay settings will be used.
+[`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) ディレクティブは、[`overlaySettings`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#overlaysettings) プロパティ (inherited from the [`igxToggleAction`]({environment:angularApiUrl}/classes/igxtoggleactiondirective.html)) を公開し、ツールチップ アニメーション、UI 状の配置などのカスタマイズが可能です。プロパティを設定しない場合は、デフォルト オーバーレイ設定が使用されます。
 
 > [!NOTE]
-> Any property that is set through the [`overlaySettings`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#overlaysettings) will override the same property from the default overlay settings and will have a direct impact on the tooltip.
+> `overlaySettings`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#overlaysettings) で設定したプロパティは、デフォルト オーバーレイ設定の同じプロパティをオーバーライドし、ツールチップに直接影響があります。
 
 
-### Accessibility
+### ユーザー補助
 
-Elements with the [`igxTooltip`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) directive have an autogenerated [`id`]({environment:angularApiUrl}/classes/igxtooltipdirective.html#id) property (if not set by the developer), a tooltip [`role`]({environment:angularApiUrl}/classes/igxtooltipdirective.html#role) and the **aria-hidden** attribute that is automatically updated depending on whether the tooltip is visible or not. By setting the **aria-describedby** attribute of the target to its respective tooltip's [`id`]({environment:angularApiUrl}/classes/igxtooltipdirective.html#id), a reference will be provided to the tooltip element. This provides screenreaders the information needed to read out the tooltip's contents when the end-user triggers the tooltip.
+[`igxTooltip`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) ディレクティブの要素には、ツールチップの表示状態に基づいて自動的に更新、自動生成された ({environment:angularApiUrl}/classes/igxtooltipdirective.html#id) プロパティ (開発者が設定しない場合)、ツールチップ [`role`]({environment:angularApiUrl}/classes/igxtooltipdirective.html#role)、**aria-hidden** 属性が含まれます。ターゲットの **aria-describedby** 属性を各ツールチップの[`id`]({environment:angularApiUrl}/classes/igxtooltipdirective.html#id) に設定すると、参照がツールチップ要素に提供されます。エンドユーザーがツールチップへアクセスしたときにツールチップのコンテンツにアクセスするために必要な情報であるスクリーン リーダーを提供します。 
 
-Extra care should be taken in the following scenarios:
-- The tooltip's content is too complex to be automatically interpreted.
-- The tooltip is used with a manually implemented behavior (e.g. manually show/hide) instead of the built-in one.
-- The target element is unfocusable.
+以下の状況では十分な注意が必要です。
+- ツールチップのコンテンツは非常に複雑なため自動翻訳できません。
+- ツールチップは、ビルトインではなく手動で実装された動作とともに使用されます (手動による表示/非表示など)。
+- ターゲット要素はフォーカスできません。
 
-### API References
+### API リファレンス
 
-In this article we learned how to create, configure and style awesome tooltips for the elements on our page! We also used some additional Ignite UI for Angular components like icons, avatars and cards to improve on the design of our application! The respective APIs are listed below:
+このトピックでは、ページ要素にツールチップを作成する方法について説明しました。また、アプリケーションのデザインには icons, avatars and cards などの Ignite UI for Angular コンポーネントも追加で使用しました。以下は、各 API です。
 
 * [IgxTooltipModule]({environment:angularApiUrl}/classes/igxtooltipmodule.html)
 * [IgxTooltipDirective]({environment:angularApiUrl}/classes/igxtooltipdirective.html)
 * [IgxTooltipTargetDirective]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html)
 
-Additional components and/or directives that were used:
+使用したその他のコンポーネントとディレクティブ:
 
 * [IgxAvatarComponent]({environment:angularApiUrl}/classes/igxavatarcomponent.html)
 * [IgxButtonDirective]({environment:angularApiUrl}/classes/igxbuttondirective.html)
@@ -355,10 +357,10 @@ Additional components and/or directives that were used:
 
 <div class="divider"></div>
 
-### Additional Resources
+### その他のリソース
 
 <div class="divider--half"></div>
-Our community is active and always welcoming to new ideas.
+コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+* [Ignite UI for Angular** フォーラム** (英語) ](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub** (英語) ](https://github.com/IgniteUI/igniteui-angular)
