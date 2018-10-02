@@ -108,6 +108,14 @@ Note that when requesting remote data, filtering operation is case-sensitive.
 
 Without information about the sizes of the container and the items before rendering them setting the width or height of a scrollbar or determining which of the items should be in the view when you scroll to a random location in the grid is erroneous. Any assumptions on what the actual dimensions might be could lead to unnatural behavior of the scrollbar and ultimately suboptimal experience for the end-user. This is why setting the related dimensions is enforced in order for virtualization to take affect.
 
+<div class="divider--half"></div>
+
+### API
+* [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
+* [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
+* [IgxForOfDirective]({environment:angularApiUrl}/classes/igxforofdirective.html)
+* [IForOfState]({environment:angularApiUrl}/interfaces/iforofstate.html)
+
 ### Additional Resources
 <div class="divider--half"></div>
 
