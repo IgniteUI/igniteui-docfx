@@ -33,7 +33,7 @@ Ignite UI for Angular [`IgxGrid`]({environment:angularApiUrl}/classes/igxgridcom
 
 #### 使用方法
 
-`paste-handler` ディレクティブ (次のセクションにコードがあります) を [`IgxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) に追加して `onDataProcessed` イベントを処理する必要があります。`onDataProcessed` イベントに配列フォームの Excel データへアクセスを与えるパラメーターがあります。詳細については、[`addRecords`]({environment:angularApiUrl}/classes/datacontainer.html#addrecord) と [`updateRecords`]({environment:angularApiUrl}/classes/datacontainer.html#updaterecordbyindex) メソッドを参照してください。
+`paste-handler` ディレクティブ (次のセクションにコードがあります) を [`IgxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) に追加して `onDataProcessed` イベントを処理する必要があります。`onDataProcessed` イベントに配列フォームの Excel データへアクセスを与えるパラメーターがあります。詳細については、`addRecords` と `updateRecords` メソッドを参照してください。
 
 ```html
 <igx-grid #grid1 [data]="data" [width]="'100%'" [height]="'505px'" [autoGenerate]="false" paste-handler (onDataProcessed)="dataPasted($event)" [primaryKey]="'ID'">
@@ -218,6 +218,9 @@ export class PasteHandler {
 }
 
 ```
+
+### API
+* [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
 
 ### 追加のリソース
 
