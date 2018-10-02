@@ -260,7 +260,6 @@ export class AppModule {}
 このトピックでは、グリッドのツールバーの定義済みの列非表示 UI の使用方法や別のコンポーネントとして定義する方法について説明しました。また、その他の列順序から選択する機能を提供する UI を実装し、カスタム タイトルおよびフィルター プロンプト テキストを設定、[**IgxRadio**](radio_button.md) ボタンのその他の Ignite UI for Angular コンポーネントも使用しました。
 以下は、列非表示 UI のその他の API です。
 
-* [`IgxColumnHidingModule`]({environment:angularApiUrl}/classes/igxcolumnhidingmodule.html)
 * [`IgxColumnHidingComponent`]({environment:angularApiUrl}/classes/igxcolumnhidingcomponent.html)
 
 Additional components and/or directives with relative APIs that were used:

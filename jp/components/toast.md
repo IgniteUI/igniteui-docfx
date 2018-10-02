@@ -135,7 +135,6 @@ public show(toast) {
 
 In this article we learned how to use and configure the [`IgxToastComponent`]({environment:angularApiUrl}/classes/igxtoastcomponent.html). For more details in regards its API, take a look at the links below:
 
-* [`IgxToastModule`]({environment:angularApiUrl}/classes/igxtoastmodule.html)
 * [`IgxToastComponent`]({environment:angularApiUrl}/classes/igxtoastcomponent.html)
 
 ### 追加のリソース

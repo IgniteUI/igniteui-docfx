@@ -259,7 +259,6 @@ If all went well, this is how our column hiding UI component should look like:
 In this article we learned how to use the built-in column hiding UI in the grid's toolbar and we defined it as a separate component as well. We introduced a UI that allows the user to choose between different column orders and we set our own custom title and filter prompt texts. We also used an additional Ignite UI for Angular component - the [**IgxRadio**](radio_button.md) button.
 The column hiding UI has a few more APIs to explore, which are listed below.
 
-* [`IgxColumnHidingModule`]({environment:angularApiUrl}/classes/igxcolumnhidingmodule.html)
 * [`IgxColumnHidingComponent`]({environment:angularApiUrl}/classes/igxcolumnhidingcomponent.html)
 
 Additional components and/or directives with relative APIs that were used:
