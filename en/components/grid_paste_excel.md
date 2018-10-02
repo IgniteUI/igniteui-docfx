@@ -33,7 +33,7 @@ The new data after the paste is decorated in Italic.
 
 ### Usage
 
-You should add the `paste-handler` directive (you can find its code in the next section) to the [`igxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) and handle its `onDataProcessed` event. The `onDataProcessed` event has one parameter that gives you access to the Excel data in the form of an array. For reference see the [`addRecords`]({environment:angularApiUrl}/classes/datacontainer.html#addrecord) and [`updateRecords`]({environment:angularApiUrl}/classes/datacontainer.html#updaterecordbyindex) methods.
+You should add the `paste-handler` directive (you can find its code in the next section) to the [`igxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) and handle its `onDataProcessed` event. The `onDataProcessed` event has one parameter that gives you access to the Excel data in the form of an array. For reference see the `addRecords` and `updateRecords` methods.
 
 ```html
 <igx-grid #grid1 [data]="data" [width]="'100%'" [height]="'505px'" [autoGenerate]="false" paste-handler (onDataProcessed)="dataPasted($event)" [primaryKey]="'ID'">
@@ -218,6 +218,9 @@ export class PasteHandler {
 }
 
 ```
+
+## API
+* [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
 
 ## Additional Resources
 <div class="divider--half"></div>
