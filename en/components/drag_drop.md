@@ -51,4 +51,8 @@ The `igxDrop` directive can be applied to any DOM element just like the `igxDrag
 ````html
 <div igxDrop>Drop here</div>
 ````
-One element can have both `igxDrag` and `igxDrop` directives applied, but then it is recommended to use custom logic when another element is being dropped on to it by canceling the `onDrop` event of the `igxDrop` directive. 
+One element can have both `igxDrag` and `igxDrop` directives applied, but then it is recommended to use custom logic when another element is being dropped on to it by canceling the `onDrop` event of the `igxDrop` directive.
+
+### API
+* [IgxDragDirective]({environment:angularApiUrl}/classes/igxdragdirective.html)
+* [IgxDropDirective]({environment:angularApiUrl}/classes/igxdropdirective.html)
