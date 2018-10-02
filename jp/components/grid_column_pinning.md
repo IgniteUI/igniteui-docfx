@@ -85,6 +85,10 @@ public columnPinning(event) {
 
 <div class="divider--half"></div>
 
+### API
+* [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
+* [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
+
 ### 追加のリソース
 <div class="divider--half"></div>
 
