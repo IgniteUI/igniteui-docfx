@@ -83,6 +83,10 @@ This section will provide you with hints what to do if you are having trouble wi
 
 <div class="divider--half"></div>
 
+### API
+* [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
+* [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
+
 ### Additional Resources
 <div class="divider--half"></div>
 
