@@ -128,9 +128,12 @@ The grouping UI supports the following keyboard interactions:
 ### API
 
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
+* [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 * [ISortingExpression]({environment:angularApiUrl}/interfaces/isortingexpression.html)
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 * [IGroupByExpandState]({environment:angularApiUrl}/interfaces/igroupbyexpandstate.html)
+* [IgxChipComponent]({environment:angularApiUrl}/classes/igxchipcomponent.html)
+* [IgxChipComponent Styles]({environment:sassApiUrl}/index.html#function-igx-chip-theme)
 
 ### Additional Resources
 <div class="divider--half"></div>
