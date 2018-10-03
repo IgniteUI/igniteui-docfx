@@ -83,6 +83,9 @@
   href: categorychart.md
   new: false
   items:
+    - name: 注釈とオーバーレイ
+      href: categorychart_annotation_layers.md
+      new: true
     - name: チャートのタイプの選択
       href: categorychart_explore_chart_types.md
       new: false
@@ -102,6 +105,9 @@
   href: financialchart.md
   new: false
   items:
+    - name: 注釈とオーバーレイ
+      href: financialchart_annotation_layers.md
+      new: true
     - name: チャートのタイプの選択
       href: financialchart_explore_chart_types.md
       new: false
