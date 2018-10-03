@@ -14,7 +14,7 @@ _language: ja
 
 ## 使用方法
 
-IgxOverlayService を使用するには、コンポーネントにインポートします。 サービスへの参照をコンポーネントの `constructor` に注入します。
+[`IgxOverlayService`] ({environment:angularApiUrl}/classes/igxoverlayservice.html) を使用するには、コンポーネントにインポートします。 サービスへの参照をコンポーネントの [`constructor`] ({environment:angularApiUrl}/classes/igxoverlayservice.html#constructor) に注入します。
 ```typescript
 
 import { Inject } from '@angular/core'
@@ -63,7 +63,7 @@ export class MyOverlayComponent {
 
 ```
 
-ページの既存の `ElementRef` から `IgxOverlayService` へ渡す場合は以下の手順に従ってください。
+ページの既存の `ElementRef` から [`IgxOverlayService`] ({environment:angularApiUrl}/classes/igxoverlayservice.html) へ渡す場合は以下の手順に従ってください。
 
 ```HTML
 <!-- in my-overlay-component.component.html -->
@@ -89,12 +89,12 @@ export class MyOverlayComponent {
 ```
 <div class="divider--half"></div>
 
-オーバーレイ サービスの `show()` メソッドは 2 つの引数を受け取ります。最初の引数はオーバーレイに描画するコンテンツです。
+オーバーレイ サービスの [`show()`] ({environment:angularApiUrl}/classes/igxoverlayservice.html#show) メソッドは 2 つの引数を受け取ります。最初の引数はオーバーレイに描画するコンテンツです。
   - 上記の例などのコンポーネント定義 - コンポーネントを最初の引数として渡す場合、オーバーレイ サービスがそのコンポーネントの新しいインスタンスを作成し、動的にオーバーレイ DOM にアタッチします。
   - 既存 DOM 要素へ `ElementRef` - ページで描画されるビューをオーバーレイ サービスに渡す場合、オーバーレイ DOM に描画されます。この方法を使用する場合:
     - Angular から渡されるビューへの参照を取得します。
     - ビューを DOM からデタッチし、そこにアンカーを追加します。
-    - `show()` メソッド設定またはデフォルトのオーバーレイ設定を使用してビューをオーバーレイにアタッチします。
+    - [`show()`] ({environment:angularApiUrl}/classes/igxoverlayservice.html#show) メソッド設定またはデフォルトのオーバーレイ設定を使用してビューをオーバーレイにアタッチします。
     - 閉じた後、ビューを DOM にある元の位置にアタッチします。
 <div class="divider--half"></div>
 
@@ -112,9 +112,9 @@ export class MyOverlayComponent {
 
 ### オーバーレイ設定の構成
 
-オーバーレイ サービスの `show()` メソッドは `OverlaySettings` 型のオブジェクトを受け取ります。このオブジェクトはコンテンツの表示方法を構成します。このオブジェクトが指定されていない場合、Overlay サービスは渡されたコンテンツを描画するためにデフォルト設定を使用します。
+オーバーレイ サービスの [`show()`] ({environment:angularApiUrl}/classes/igxoverlayservice.html#show) メソッドは [`OverlaySettings`] ({environment:angularApiUrl}/interfaces/overlaysettings.html) 型のオブジェクトを受け取ります。このオブジェクトはコンテンツの表示方法を構成します。このオブジェクトが指定されていない場合、Overlay サービスは渡されたコンテンツを描画するためにデフォルト設定を使用します。
 
-たとえば、コンテンツを要素に相対的に配置するには、オーバーレイの `show()` メソッドに別の `positioningStrategy` (`ConnectedPositioningStrategy` など) を渡します。コンポーネントの表示方法を構成するには、`OverlaySettings` オブジェクトを作成します。
+たとえば、コンテンツを要素に相対的に配置するには、オーバーレイの [`show()`] ({environment:angularApiUrl}/classes/igxoverlayservice.html#show) メソッドに別の [`positioningStrategy`] ({environment:angularApiUrl}/interfaces/overlaysettings.html#positionstrategy) ([`ConnectedPositioningStrategy`] ({environment:angularApiUrl}/classes/connectedpositioningstrategy.html) など) を渡します。コンポーネントの表示方法を構成するには、[`OverlaySettings`] ({environment:angularApiUrl}/interfaces/overlaysettings.html) オブジェクトを作成します。
 ```typescript
 // in my-overlay-component.component.ts
 // add an import for the definion of ConnectedPositioningStategy class
@@ -145,9 +145,9 @@ export class MyOverlayComponent {
 
 ### オーバーレイの非表示
 
-`IgxOverlayService.hide()`メソッドはコンテンツをオーバーレイからコンテンツを削除し、DOM の元の位置に再度アタッチします。
+[`IgxOverlayService.hide()`] ({environment:angularApiUrl}/classes/igxoverlayservice.html#hide)メソッドはコンテンツをオーバーレイからコンテンツを削除し、DOM の元の位置に再度アタッチします。
 
-すべてのオーバーレイ サービスで描画される要素にサービスによって割り当てられた一意の ID があります。`IgxOverlayService.show()` メソッドは描画されるコンテンツの識別子を返します。オーバーレイからコンテンツを削除するには、その ID をオーバーレイの `hide()` メソッドに渡します。
+すべてのオーバーレイ サービスで描画される要素にサービスによって割り当てられた一意の ID があります。[`IgxOverlayService.show()`] ({environment:angularApiUrl}/classes/igxoverlayservice.html#show) メソッドは描画されるコンテンツの識別子を返します。オーバーレイからコンテンツを削除するには、その ID をオーバーレイの [`hide()`] ({environment:angularApiUrl}/classes/igxoverlayservice.html#hide) メソッドに渡します。
 
 以前に定義されたオーバーレイ メソッドをオーバーレイ要素を表示して非表示するために変更できます。
 ```typescript
@@ -185,7 +185,7 @@ export class MyOverlayComponent {
 ```
 ### デモ - 動的なアタッチ - 設定
 
-`show()` メソッドの `overlaySettings` パラメーターを使用してコンテンツの表示方法を変更できます。たとえば、コンテンツの配置、スクロールの動作、およびコンテナーがモーダルかどうかを設定できます。
+[`show()`] ({environment:angularApiUrl}/classes/igxoverlayservice.html#show) メソッドの [`overlaySettings`] ({environment:angularApiUrl}/interfaces/overlaysettings.html) パラメーターを使用してコンテンツの表示方法を変更できます。たとえば、コンテンツの配置、スクロールの動作、およびコンテナーがモーダルかどうかを設定できます。
 
 <div class="sample-container loading" style="height: 400px">
     <iframe id="overlay-sample-main-2-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/overlay-sample-main-2" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -195,7 +195,7 @@ export class MyOverlayComponent {
 </div>
 <div class="divider--half"></div>
 
-`overlaySettings` が指定されていない場合、切り替えた要素はデフォルト表示設定を使用します。
+[`overlaySettings`] ({environment:angularApiUrl}/interfaces/overlaysettings.html) が指定されていない場合、切り替えた要素はデフォルト表示設定を使用します。
 
 ```typescript
 defaultOverlaySettings = {
@@ -208,7 +208,7 @@ defaultOverlaySettings = {
 <div class="divider--half"></div>
 
 ### igxToggle との統合
-`IgxToggleDirective` は `IgxOverlayService` と完全に統合されます。コンテンツの切り替えでトグルの `toggle()` メソッドにカスタム オーバーレイ設定を渡すことができます。
+[`IgxToggleDirective`] ({environment:angularApiUrl}/classes/igxtoggledirective.html) は [`IgxOverlayService`] ({environment:angularApiUrl}/classes/igxoverlayservice.html) と完全に統合されます。コンテンツの切り替えでトグルの [`toggle()`] ({environment:angularApiUrl}/classes/igxtoggledirective.html#toggle) メソッドにカスタム オーバーレイ設定を渡すことができます。
 
 構成設定をトグルのメソッドに渡す方法は以下の例で紹介されます。
 
@@ -323,16 +323,17 @@ export class ExampleComponent {
 
 `IgxOverlayService`
 
-   | 名前        | 説明                        | キャンセル可能 | パラメーター |
-   |-------------|------------------------------------|------------|------------|
-   |`onOpening`    | オーバーレイを表示する前に発生されます。    | `false`      |            |
-   |`onOpened`     | オーバーレイを表示した後に発生されます。       | `false`      |            |
-   |`onClosing`    | オーバーレイを非表示にする前に発生されます。       | `false`      |            |
-   |`onClosed`     | オーバーレイを非表示にした後に発生されます。       | `false`      |            |
+   | 名前          | 説明                       | キャンセル可能 | パラメーター |
+   |---------------|-------------------------------------|------------|------------|
+   |`onOpening`    | オーバーレイが表示される前に発生されます。        | false      |            |
+   |`onOpened`     | オーバーレイが表示された後に発生されます。         | false      |            |
+   |`onClosing`    | オーバーレイが非表示になる前に発生されます。       | false      |            |
+   |`onClosed`     | オーバーレイが非表示になった後に発生されます。         | false      |            |
+   |`onAnimation`  | アニメーションを開始する前に発生されます。 | false      |            |
 <div class="divider--half"></div>
 
 ## 前提事項と制限</a>
-既知の制限はありません。
+アウトレットにオーバーレイを表示する際にアウトレットが変換で要素の子、視点、フィルター css の場合、モーダル オーバレイが表示されません。これは、上記いずれかの css プロパティが設定された場合にブラウザーが新しく含まれるブロックを作成して [here] (https://developer.mozilla.org/en-US/docs/Web/CSS/position#fixed) のようにオーバーレイがこのブロックに制限されるためです。
 
 ## その他のリソース
 * [配置方法](overlay_position.md)

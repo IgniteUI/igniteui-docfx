@@ -217,7 +217,7 @@ export class AppModule {}
 連絡先オブジェクトにアバターの `photo` ソースおよび連絡先のお気に入り状態を示す `isFavorite` プロパティを追加します。
 
 ```typescript
-// contacts.comoponent.ts
+// contacts.component.ts
 
 public contacts = [{
     name: 'Terrance Orta',
@@ -330,6 +330,152 @@ toggleFavorite(item: IgxListItem) {
 </div>
 <div class="divider--half"></div>
 
+#### リスト項目パンニング
+
+連絡先や電話番号のリストなどを作成しましたが、次に連絡先に電話を掛ける機能を追加します。
+**IgxList** はリスト項目パンニングに最適です。
+以下の手順に沿って作成します。
+- `allowLeftPanning` と `allowRightPanning` またはそのいずれかを使用してパンニングを有効にします。
+- 右と左またはそのいずれかのテンプレートを定義します。
+- リスト項目のパンニング イベントを処理して必要なアクションを実行します。
+
+以下は、右と左両方のパンニングを処理する方法の例です。右パンニングのイベント ハンドラーは、トースト メッセージを表示します。左パンニングのイベント ハンドラーは、**IgxList** から項目を削除します。
+
+> [!NOTE]
+> リスト項目の削除はアプリケーション タスクであることに注意してください。**IgxList** にデータソース参照がないため、**IgxList** は項目をデータソースから削除できません。
+
+以下は HTML コードです。
+
+```html
+<!-- contacts.component.html -->
+
+<igx-list [allowLeftPanning]="true" [allowRightPanning]="true"
+  (onLeftPan)="leftPanPerformed($event)" (onRightPan)="rightPanPerformed($event)">
+  <ng-template igxListItemLeftPanning>
+    <div class="listItemLeftPanningStyle">
+      <igx-icon name="delete" [color]="white" style="margin-left:10px"></igx-icon>Delete
+    </div>
+  </ng-template>
+  <ng-template igxListItemRightPanning>
+    <div class="listItemRightPanningStyle">
+      <igx-icon name="call" [color]="white" style="margin-right:10px"></igx-icon>Dial
+    </div>
+  </ng-template>
+  <igx-list-item isHeader="true">Contacts</igx-list-item>
+  <igx-list-item #item *ngFor="let contact of contacts">
+    <div class="item-container">
+      <div class="contact">
+        <igx-avatar [src]="contact.photo" roundShape="true"></igx-avatar>
+        <div class="contact__info">
+          <span class="name">{{ contact.name }}</span>
+          <span class="phone">{{ contact.phone }}</span>
+        </div>
+      </div>
+      <igx-icon name="star" [color]="contact.isFavorite ? 'orange' : 'lightgray'"
+        (click)="toggleFavorite(item)"></igx-icon>
+    </div>
+  </igx-list-item>
+</igx-list>
+
+<igx-toast #toast></igx-toast>
+```
+
+上記の例は、CSS スタイルを使用しています。
+
+```css
+/* contacts.component.css */
+
+igx-icon {
+    cursor: pointer;
+    user-select: none;
+}
+
+.item-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact {
+    display: flex;
+    flex: 1 0 240px;
+    align-items: center;
+}
+
+.contact__info {
+    display: flex;
+    flex-flow: column nowrap;
+    margin-left: 24px;
+}
+
+.name {
+    font-weight: 600;
+}
+
+.phone {
+    font-size: 0.875em;
+}
+
+.listItemLeftPanningStyle {
+    display: flex;
+    flex-direction: row-reverse;
+    background-color:orange;
+    color: white;
+    width: 100%;
+    padding-right: 10px;
+    align-items: center;
+}
+
+.listItemRightPanningStyle {
+    display: flex;
+    flex-direction: row;
+    background-color:limegreen;
+    color: white;
+    width: 100%;
+    padding-left: 10px;
+    align-items: center;
+}
+```
+最後にパンニング イベントを処理するタイプスクリプト コードを使用します。
+
+```typescript
+// contacts.component.ts
+
+...
+@ViewChild("toast")
+public toast: IgxToastComponent;
+
+public rightPanPerformed(args) {
+  args.keepItem = true;
+  this.toast.message = "Dialing " + this.contacts[args.item.index - 1].name;
+  this.toast.show();
+}
+
+public leftPanPerformed(args) {
+  args.keepItem = false;
+  setTimeout((idx = args.item.index - 1) => {
+    this.toast.message = "Contact " + this.contacts[idx].name + " removed.";
+    this.toast.show();
+    this.contacts.splice(idx, 1);
+  }, 500);
+}
+
+...
+```
+
+> [!NOTE]
+> リスト項目のパンニング時にパンニング イベントが発生するために達する必要のあるしきい値があります。**IgxList's** `panEndTriggeringThreshold` プロパティを使用するしきい値を変更できます。このプロパティのデフォルトは0.5 でリスト項目幅の 50% を意味します。
+
+次にリスト項目をパンニングします。
+
+<div class="sample-container loading" style="height: 477px">
+<iframe id="list-sample-7-final-iframe" src='{environment:demosBaseUrl}/list-sample-7' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-sample-7-final-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
+</div>
+<div class="divider--half"></div>
+
 ### フィルタリング
 リストで連絡先を名前によって検索する機能を追加します。これはフィルタリング パイプを使用して実装できます。
 コンポーネント テンプレートの上側に入力フィールドを追加し、コンポーネントの _searchContact_ プロパティにバインドします:
@@ -388,6 +534,16 @@ toggleFavorite(item: IgxListItem) {
 </igx-list-item>
 ```
 
+### Chat コンポーネント
+以下のサンプルは、**IgxList** を使用して作成したシンプルなチャットです。
+
+<div class="sample-container loading" style="height: 500px">
+<iframe id="list-chat-sample-iframe" src='{environment:demosBaseUrl}/list-chat-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-chat-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
+</div>
+
 <div class="divider"></div>
 
 ### API まとめ
@@ -404,6 +560,7 @@ toggleFavorite(item: IgxListItem) {
 | `isLoading` | Boolean | true の場合、読み込みテンプレートが使用されます。false の場合、空のリスト テンプレートが使用されます。 |
 | `dataLoadingTemplate` | IgxDataLoadingTemplateDirective | リストが空で、isLoading が true の場合に使用するカスタム テンプレート。|
 | `emptyListTemplate` | IgxEmptyListTemplateDirective | リストが空で、isLoading が false の場合に使用するカスタム テンプレート。|
+| `panEndTriggeringThreshold` | Number | パンニング イベントが発生した後のしきい値を指定します。このプロパティのデフォルトは0.5 でリスト項目幅の 50% を意味します。 |
 
 <div class="divider"></div>
 
@@ -421,8 +578,8 @@ toggleFavorite(item: IgxListItem) {
 | 名前 | 型 | 説明 |
 | :--- | :--- | :--- |
 | `onPanStateChange` | EventEmitter | パンニング ジェスチャがリスト項目に実行されたときに現在のリストを含むイベントを発生します。 |
-| `onLeftPan` | EventEmitter | 左パンニング ジェスチャがリスト項目に実行されたときに現在のリストを含むイベントを発生します。 |
-| `onRightPan` | EventEmitter | 右パンニング ジェスチャがリスト項目に実行されたときに現在のリストを含むイベントを発生します。 |
+| `onLeftPan` | EventEmitter | 左パンニング ジェスチャがリスト項目に実行されたときに現在のリストを含むイベントを発生し、型 `IListItemPanningEventArgs` の引数を提供します。 |
+| `onRightPan` | EventEmitter | 右パンニング ジェスチャがリスト項目に実行されたときに現在のリストを含むイベントを発生し、型 `IListItemPanningEventArgs` の引数を提供します。 |
 | `onItemClicked` | EventEmitter | リスト項目がクリックされたときに現在のリストを含むイベントを発生します。 |
 
 <div class="divider"></div>
@@ -446,6 +603,15 @@ toggleFavorite(item: IgxListItem) {
 | `index` | number | リスト項目のインデックスを取得します。 |
 | `panState` | IgxListPanState | リスト項目のパンニング状態を取得します。 |
 | `list` | IgxListComponent | リスト項目に関連付けられたリストを取得します。 |
+
+<div class="divider"></div>
+
+以下のプロパティは `IListItemPanningEventArgs` 型で使用できます。
+| 名前 | 型 | 説明 |
+| :--- | :--- | :--- |
+| `item` | IgxListItemComponent | パンニングされている **igx-list-item** の参照。 |
+| `direction` | IgxListPanState | **igx-list-item** がパンニングされる方向を指定します。 |
+| `keepItem` | Boolean | `true` の場合、パンニングされた後もリスト項目が **IgxList** に保持されます。`false` (デフォルト) の場合、パンニングされた後にリスト項目が **IgxList** から削除されます。 |
 
 <div class="divider"></div>
 

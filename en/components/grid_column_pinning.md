@@ -19,7 +19,7 @@ A column or multiple columns can be pinned to the left-hand side of the grid. **
 
 #### Column Pinning API
 
-Each column can be pinned, as long as the pinned area does not become wider than the grid itself. Column pinning is controlled through the pinned input of the `igx-column`. Pinned columns are always rendered on the left side of the grid and stay fixed through horizontal scrolling of the unpinned columns in the grid body.
+Each column can be pinned, as long as the pinned area does not become wider than the grid itself. Column pinning is controlled through the pinned input of the [`igx-column`]({environment:angularApiUrl}/classes/igxcolumncomponent.html). Pinned columns are always rendered on the left side of the grid and stay fixed through horizontal scrolling of the unpinned columns in the grid body.
 
 ```html
 <igx-grid #grid1 [data]="data | async" [width]="700px" [autoGenerate]="false" [paging]="true" [perPage]="6" (onColumnInit)="initColumns($event)"
@@ -30,14 +30,14 @@ Each column can be pinned, as long as the pinned area does not become wider than
 </igx-grid>
 ```
 
-You may also use the grid's `pinColumn` or `unpinColumn` methods of the `IgxGridComponent` to pin or unpin columns by their field name:
+You may also use the grid's [`pinColumn`]({environment:angularApiUrl}/classes/igxgridcomponent.html#pincolumn) or [`unpinColumn`]({environment:angularApiUrl}/classes/igxgridcomponent.html#unpincolumn) methods of the [`IgxGridComponent`]({environment:angularApiUrl}/classes/igxgridcomponent.html) to pin or unpin columns by their field name:
 
 ```typescript
 this.grid.pinColumn("AthleteNumber");
 this.grid.unpinColumn("Name");
 ```
 
-Both methods return a boolean value indicating whether their respective operation is successful or not. Usually the reason they fail is that the column is already in the desired state. `pinColumn` also fails when the result would mean that the pinned area becomes larger than or the same size as the grid itself. Consider the following example:
+Both methods return a boolean value indicating whether their respective operation is successful or not. Usually the reason they fail is that the column is already in the desired state. [`pinColumn`]({environment:angularApiUrl}/classes/igxgridcomponent.html#pincolumn) also fails when the result would mean that the pinned area becomes larger than or the same size as the grid itself. Consider the following example:
 
 ```html
 <igx-grid #grid1 [data]="data | async" [width]="300px" [autoGenerate]="false">
@@ -52,7 +52,7 @@ var succeed = this.grid.pinColumn("AthleteNumber"); // pinning fails and succeed
 
 If pinning the `AthleteNumber` column is allowed the pinned area would exceed the grid's width.
 
-A column is pinned to the right of the rightmost pinned column. Changing the order of the pinned columns can be done by subscribing to the `onColumnPinning` event and changing the `insertAtIndex` property of the event arguments to the desired position index.
+A column is pinned to the right of the rightmost pinned column. Changing the order of the pinned columns can be done by subscribing to the [`onColumnPinning`]({environment:angularApiUrl}/classes/igxgridcomponent.html#oncolumnpinning) event and changing the [`insertAtIndex`]({environment:angularApiUrl}/interfaces/ipincolumneventargs.html#insertatindex) property of the event arguments to the desired position index.
 
 ```html
 <igx-grid #grid1 [data]="data | async" [autoGenerate]="true" (onColumnPinning)="columnPinning($event)"></igx-grid>
@@ -78,10 +78,14 @@ This section will provide you with hints what to do if you are having trouble wi
 
 #### Warnings
 
-* `igxGrid - The pinned area exceeds maximum pinned width. The following columns were unpinned to prevent further issues: ... .` - This warning is thrown when the user has defined too many pinned columns initially. The combined width of the initially pinned columns should not exceed 80% of the grid width. Otherwise the grid by default takes the first columns (in order of their definition) that don't exceed the limit and the rest are unpinned (the columns listed in the warning). You can execute your own logic in order to determine if you want to unpin some columns manually on initialization using the `onColumnInit` event before the grid initializes the pinning. It is triggered for each column.
+* `igxGrid - The pinned area exceeds maximum pinned width. The following columns were unpinned to prevent further issues: ... .` - This warning is thrown when the user has defined too many pinned columns initially. The combined width of the initially pinned columns should not exceed 80% of the grid width. Otherwise the grid by default takes the first columns (in order of their definition) that don't exceed the limit and the rest are unpinned (the columns listed in the warning). You can execute your own logic in order to determine if you want to unpin some columns manually on initialization using the [`onColumnInit`]({environment:angularApiUrl}/classes/igxgridcomponent.html#oncolumninit) event before the grid initializes the pinning. It is triggered for each column.
 
 
 <div class="divider--half"></div>
+
+### API
+* [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
+* [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 
 ### Additional Resources
 <div class="divider--half"></div>

@@ -18,17 +18,9 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <div class="divider--half"></div>
 
 ### Dependencies
-To started with all needed dependencies you can use the `IgxNavigationDrawerModule` and import it in your application's `AppModule`:
-```typescript
-import { IgxNavigationDrawerModule } from 'igniteui-angular';
+To started with all needed dependencies you can use the [`IgxNavigationDrawerModule`]({environment:angularApiUrl}/classes/igxnavigationdrawermodule.html) and import it in your application IgxNavigationDrawerModule } from 'igniteui { IgxNavigationDrawerModule } from 'igniteui-angular/navigation-drawer';
 ```
-or
-```typescript
-import { IgxNavigationDrawerModule } from 'igniteui-angular/navigation-drawer';
-```
-And include it in the app module:
-```typescript
-@NgModule({
+And include it@NgModule({
     imports: [
         IgxNavigationDrawerModule,
         ...
@@ -38,7 +30,7 @@ export class AppModule {
 }
 ```
 
-> Alternatively both barrels export the `IgxNavigationDrawerComponent` and additional directives, so those can be declared/referenced separately if needed.
+> Alternatively both barrels export the [`IgxNavigationDrawerComponent`]({environment:angularApiUrl}/classes/igxnavigationdrawercomponent.html) and additional directives, so those can be declared/referenced separately if needed.
 
 <div class="divider--half"></div>
 
@@ -52,7 +44,7 @@ With the dependencies imported, the Navigation Drawer can be defined in the app 
 </igx-nav-drawer>
 ```
 The content for the drawer should be provided via `<ng-template>` decorated with `igxDrawer` directive.
-While any content can be provided in the template, the `igxDrawerItem` directive (see [Item styling](#item-styling)) is available to apply out-of-the-box styling to items. The [`igxRipple`](ripple.md) directive completes the look and feel:
+While any content can be provided in the template, the [`igxDrawerItem`]({environment:angularApiUrl}/classes/igxnavdraweritemdirective.html) directive (see [Item styling](#item-styling)) is available to apply out-of-the-box styling to items. The [`igxRipple`](ripple.md) directive completes the look and feel:
 ```html
 <!-- app.component.html -->
 <div class="content-wrap">
@@ -93,7 +85,7 @@ There are various ways to open and close the drawer. Input properties can be bou
 ```html
 <button (click)="drawer.toggle()"> Menu </button>
 ```
-The Navigation Drawer also integrates with `igxNavigationService` and can be targeted by id with an [`igxToggleAction`](toggle.md#automatic-toggle-actions) directive.
+The Navigation Drawer also integrates with [`igxNavigationService`]({environment:angularApiUrl}/classes/igxnavigationservice.html) and can be targeted by id with an [`igxToggleAction`](toggle.md#automatic-toggle-actions) directive.
 
 Let's replace the `<main>` in **app.component.html** with the following, adding [`igxButton`](button.md) and [Icon component](icon.md) to style our toggle:
 ```html
@@ -104,7 +96,7 @@ Let's replace the `<main>` in **app.component.html** with the following, adding 
 </main>
 ```
 
-And the final result should look like that:
+And the final result should look like this:
 <div class="sample-container loading" style="height: 500px">
     <iframe id="nav-drawer-simple-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/navigation-drawer-simple" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -121,11 +113,11 @@ Unpinned (elevated above content) mode is the normal behavior where the drawer s
 The drawer can be pinned to take advantage of larger screens, placing it within normal content flow with relative position. Depending on whether the app provides a way to toggle the drawer, the pinned mode can be used to achieve either [permanent or persistent behavior](https://material.io/guidelines/patterns/navigation-drawer.html#navigation-drawer-behavior).
 
 > [!NOTE]
-> By default the Navigation Drawer is responsive, actively changing between unpinned and pinned mode based on screen size. This behavior is controlled by the `pinThreshold` property and can be disabled by setting a falsy value (e.g. 0).
+> By default the Navigation Drawer is responsive, actively changing between unpinned and pinned mode based on screen size. This behavior is controlled by the [`pinThreshold`](https://github.com/IgniteUI/igniteui-docfx/blob/master/en/components/navdrawer.md#api) property and can be disabled by setting a falsy value (e.g. 0).
 
 
 #### Pinned (persistent) setup
-Pin changes the position of the drawer from `fixed` to `relative` to put it on the same flow as content. Therefore, the app styling should account for such layout, especially if the drawer needs to be toggled in this mode. While there's more than one way to achieve such fluid layout (including programmatically), the easiest way is using `igxLayout` and `igxFlex` directives.
+Pin changes the position of the drawer from `fixed` to `relative` to put it on the same flow as content. Therefore, the app styling should account for such layout, especially if the drawer needs to be toggled in this mode. While there's more than one way to achieve such fluid layout (including programmatically), the easiest way is using [`igxLayout`]({environment:angularApiUrl}/classes/igxlayoutdirective.html) and [`igxFlex`]({environment:angularApiUrl}/classes/igxflexdirective.html) directives.
 
 Here's how that would would look applied to the previous example: 
 ```html
@@ -204,7 +196,7 @@ The mini variant is commonly used in a persistent setup, so we've set `pin` and 
 
 ### Item Styling
 
-The content of the Navigation Drawer can be anything provided by the template, however for scenarios using the standard list of navigation items the optional `igxDrawerItem` directive can be used to style them. This will apply default styles and patterns to your items as well as the appropriate theme colors.
+The content of the Navigation Drawer can be anything provided by the template, however for scenarios using the standard list of navigation items the optional [`igxDrawerItem`]({environment:angularApiUrl}/classes/igxnavdraweritemdirective.html) directive can be used to style them. This will apply default styles and patterns to your items as well as the appropriate theme colors.
 
 The directive has two `@Input` properties:
 - `active` to style an item as selected.
@@ -222,11 +214,9 @@ The directive is exported both from the main `IgxNavigationDrawerModule` and sep
 <div class="divider--half"></div>
 
 #### Example: Use default item styles with Angular Router
-To make use of the `igxDrawerItem` directive to style items normally the `active` input should be set, however with routing that state is controlled externally.
+To make use of the [`igxDrawerItem`]({environment:angularApiUrl}/classes/igxnavdraweritemdirective.html) directive to style items normally the `active` input should be set, however with routing that state is controlled externally.
 
-Take the following items defined in `app.component.ts` like:
-
-```typescript
+Take the following items defined in `app`typescript
 export class AppComponent {
     public componentLinks = [
         {
@@ -273,33 +263,5 @@ This approach, of course, does not affect the actual directive active state and 
 
 <div class="divider--half"></div>
 
-### API
-
-#### Inputs
-| Name      | Type|  Description |
-|:----------|:----:|:------|
-| `id`| string | Unique identifier of the Navigation Drawer. ID required to register with provided `IgxNavigationService` to allow directives to target the control from other template files. |
-| `position` | string | Position of the Navigation Drawer. Can be "left"(default) or "right". Only has effect when not pinned.|
-| `enableGestures`| boolean | Enables the use of touch gestures to manipulate the drawer - such as swipe/pan from edge to open, swipe toggle and pan drag. |
-| `isOpen` | boolean | State of the drawer. |
-| `pin` | boolean | When pinned the drawer is relatively positioned instead of sitting above content. May require additional layout styling. |
-| `pinThreshold` | number | Minimum device width required for automatic pin to be toggled. Default is 1024, can be set to a falsy value to disable this behavior. |
-| `width` | string| Width of the drawer in its open state. Defaults to "280px".|
-| `miniWidth` | string | Width of the drawer in its mini variant. Defaults to "60px". |
-
-#### Outputs
-| Name      |  Description |
-|:----------|:------|
-| `pinChange` | Pinned state change output for two-way binding of the pin property. Example `<igx-nav-drawer [(pin)]="drawerState.pin"> ..` |
-| *Event emitters* | *Notify for a change* |
-| `opening` | Event fired as the Navigation Drawer is about to open. |
-| `opened`  | Event fired when the Navigation Drawer has opened. |
-| `closing` | Event fired as the Navigation Drawer is about to close. |
-| `closed`  | Event fired when the Navigation Drawer has closed. |
-
-#### Methods
-| Signature      |  Description |
-|:----------|:------|
-| `open`    | Open the Navigation Drawer. Has no effect if already opened. Returns `Promise` that is resolved once the operation completes. |
-| `close`   | Close the Navigation Drawer. Has no effect if already closed. Returns `Promise` that is resolved once the operation completes. |
-| `toggle`  | Toggle the open state of the Navigation Drawer. Returns `Promise` that is resolved once the operation completes. |
+### API Reference
+* [IgxNavigationDrawerComponent]({environment:angularApiUrl/classes/igxnavigationdrawercomponent.html)

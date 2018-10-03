@@ -8,14 +8,14 @@ _language: ja
 
 ポジション ストラテジーは、IgxOverlayService のコンポーネントを表示する位置を決定する方法が 3 通りあります。
 
-1. **Global** - `positionSettings`を介して渡される方向に基づいて要素を配置します。`verticalDirection` には Top/Middle/Bottom、 `horizontalDirection` には Left/Center/Right があります。
+1. **Global** - [`positionSettings`] ({environment:angularApiUrl}/interfaces/positionsettings.html)を介して渡される方向に基づいて要素を配置します。[`verticalDirection`] ({environment:angularApiUrl}/interfaces/positionsettings.html#verticaldirection) には Top/Middle/Bottom、 [`horizontalDirection`] ({environment:angularApiUrl}/interfaces/positionsettings.html#horizontaldirection) には Left/Center/Right があります。
 
     | horizontalDirection        | verticalDirection        |
     |:---------------------------|:-------------------------|
     | HorizontalAlignment.Center | VerticalAlignment.Middle |
 <div class="divider"></div>
 
-2. **Connected** - `positionSettings` を介して渡される方向と開始点に基づいて要素を配置します。開始ポイント (`Point` 型) または配置ベースとして `HTMLElement` を渡すことができます。以下はデフォルトの設定です。
+2. **Connected** - [`positionSettings`] ({environment:angularApiUrl}/interfaces/positionsettings.html) を介して渡される方向と開始点に基づいて要素を配置します。開始ポイント ([`Point`] ({environment:angularApiUrl}/classes/point.html) 型) または配置ベースとして `HTMLElement` を渡すことができます。以下はデフォルトの設定です。
 
     | target          | horizontalDirection       |  verticalDirection       | horizontalStartPoint     | verticalStartPoint       |
     |:----------------|:--------------------------|:-------------------------|:-------------------------|:-------------------------|
@@ -47,7 +47,7 @@ strategy.position(contentWrapper, size);
 ```
 
 ### 作業の開始
-ポジション ストラテジーは、`overlay.show()` メソッドが呼ばれたときに `overlaySettings` パラメーターのプロパティとして渡されます。
+ポジション ストラテジーは、[`overlay.show()`] ({environment:angularApiUrl}/classes/igxoverlayservice.html#show) メソッドが呼ばれたときに [`overlaySettings`] ({environment:angularApiUrl}/interfaces/overlaysettings.html) パラメーターのプロパティとして渡されます。
 
 ```typescript
     // Initializing and using overlay settings
@@ -61,7 +61,7 @@ strategy.position(contentWrapper, size);
 ``` 
 <div class="divider"></div>
 
-オーバーレイで使用するポジション ストラテジーの変更は、オーバーレイに渡される `overlaySettings` オブジェクトの `positionStrategy` プロパティをオーバーライドします。
+オーバーレイで使用するポジション ストラテジーの変更は、オーバーレイに渡される [`overlaySettings`] ({environment:angularApiUrl}/interfaces/overlaysettings.html) オブジェクトの [`positionStrategy`] ({environment:angularApiUrl}/interfaces/ipositionstrategy.html) プロパティをオーバーライドします。
 
 ```typescript
     // overlaySettings is an existing object of type OverlaySettings
@@ -100,7 +100,7 @@ import {AutoPositionStrategy, GlobalPositionStrategy, ConnectedPositioningStrate
 
 ### 水平方向または垂直方向
 
-配置設定で水平方向または垂直方向を設定すると、コンテンツの配置を決定します。配置に基づいて、コンテンツがターゲットのコンテナー (`AutoPositionStrategy` および `ConnectedPositioningStrategy`) に相対して配置するか、ドキュメントの本体 (`GlobalPositioningStrategy`) に相対して配置します。
+配置設定で水平方向または垂直方向を設定すると、コンテンツの配置を決定します。配置に基づいて、コンテンツがターゲットのコンテナー ([`AutoPositionStrategy`] ({environment:angularApiUrl}/classes/autopositionstrategy.html) および  [`ConnectedPositioningStrategy`] ({environment:angularApiUrl}/classes/connectedpositioningstrategy.html)) に相対して配置するか、ドキュメントの本体 ([`GlobalPositioningStrategy`] ({environment:angularApiUrl}/classes/globalpositionstrategy.html)) に相対して配置します。
 
 <div class="sample-container loading" style="height: 400px">
     <iframe id="overlay-position-sample-1-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/overlay-position-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -112,8 +112,8 @@ import {AutoPositionStrategy, GlobalPositionStrategy, ConnectedPositioningStrate
 
 ### 水平または垂直開始点
 配置設定で水平開始点または垂直開始点を設定すると、コンテンツの開始位置を決定します。
-開始点は、`positionSettings` に渡された `target` が `HTMLElement` で、`AutoPositionStrategy` または `ConnectedPositioningStrategy` が設定された場合のみに影響します。
-以下のデモで、オーバーレイ要素は選択した開始点に基づいてターゲット要素に配置します。方向は常に `HorizontalAlignment.Right` および `VerticalAlignment.Bottom` です。
+開始点は、[`positionSettings`] ({environment:angularApiUrl}/interfaces/positionsettings.html) に渡された [`target`] ({environment:angularApiUrl}/interfaces/positionsettings.html#target) が `HTMLElement` で、[`AutoPositionStrategy`] ({environment:angularApiUrl}/classes/autopositionstrategy.html) または [`ConnectedPositioningStrategy`] ({environment:angularApiUrl}/classes/connectedpositioningstrategy.html) が設定された場合のみに影響します。
+以下のデモで、オーバーレイ要素は選択した開始点に基づいてターゲット要素に配置します。方向は常に [`HorizontalAlignment.Right`] ({environment:angularApiUrl}/enums/horizontalalignment.html#right) および [`VerticalAlignment.Bottom`] ({environment:angularApiUrl}/enums/verticalalignment.html#bottom) です。
 
 <div class="sample-container loading" style="height: 400px">
     <iframe id="overlay-position-sample-2-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/overlay-position-sample-2" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -125,20 +125,4 @@ import {AutoPositionStrategy, GlobalPositionStrategy, ConnectedPositioningStrate
 
 ## API
 
-### メソッド
-| ポジション ストラテジー | 名前                                         | 説明                                     |
-|:------------------|:---------------------------------------------|:------------------------------------------------|
-| Global            | `position(contentElement)`                   | 水平および垂直の方向に基づいて要素を配置します。|
-| Connected         | `position(contentElement, size{})`           | 使用するポジション ストラテジーと渡されたサイズに基づいて要素を配置します。|
-| Auto              | `position(contentElement, size{}, document?)`| 使用するポジション ストラテジーと渡されたサイズに基づいて要素を配置します。|
-
-### PositionSettings
-| 名前               | 型                        | 説明 |
-| :----------------- | :-------------------------- | :---------- |
-|`target`              | `Point` \| `HTMLElement`         | 使用するポジション ストラテジーと渡されたサイズに基づいて要素を配置します。          |
-|`horizontalDirection` | `HorizontalAlignment`         | コンポーネントが表示される方向。       |
-|`verticalDirection`   | `VerticalAlignment`           | コンポーネントが表示される方向。        |
-|`horizontalStartPoint`| `HorizontalAlignment`         | ターゲットの開始ポイント。                             |
-|`verticalStartPoint`  | `VerticalAlignment`           | ターゲットの開始ポイント。　　　　                             |
-|`openAnimation`       | `AnimationReferenceMetadata`  | オーバーレイが開いている間に適用されるアニメーション。               |
-|`closeAnimation`      | `AnimationReferenceMetadata`  | オーバーレイが閉じている間に適用されるアニメーション。              |
+* [`IPositionStrategy`] ({environment:angularApiUrl}/interfaces/ipositionstrategy.html)

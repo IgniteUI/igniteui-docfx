@@ -214,6 +214,9 @@
   href: ripple.md
 - name: Toggle
   href: toggle.md
+- name: Tooltip
+  href: tooltip.md
+  new: true
 - name: Overlay
   href: overlay_main.md
   new: true
@@ -245,6 +248,9 @@
   href: card.md
 - name: Avatar
   href: avatar.md
+- name: Expansion Panel
+  href: expansion_panel.md
+  new: true
 - name: 通知
   header: true
 - name: Snackbar

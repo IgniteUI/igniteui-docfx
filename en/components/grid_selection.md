@@ -23,7 +23,7 @@ With row selection in Ignite UI for Angular, there is a checkbox that precedes a
 
 #### Single Selection
 
-The grid single selection can be easily setup using the grid's `onSelection` event. The event emits a reference to the cell component. That cell component has a reference to the row component that is holding it. The row component reference `rowID` getter can be used to pass a unique identifier for the row (using either `rowData[primaryKey]` or the `rowData` object itself) to the appropriate list of the selectionAPI. To make sure that only a single row is always selected, we empty the `selectionAPI` row selection list beforehand (the second argument in the `selectRows` method call):
+The grid single selection can be easily setup using the grid's [`onSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#onselection) event. The event emits a reference to the cell component. That cell component has a reference to the row component that is holding it. The row component reference [`rowID`](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/classes/igxgridrowcomponent.html#rowid) getter can be used to pass a unique identifier for the row (using either [`rowData[primaryKey]`]({environment:angularApiUrl}/classes/igxgridcomponent.html#primarykey) or the [`rowData`]({environment:angularApiUrl}/classes/igxgridrowcomponent.html#rowdata) object itself) to the appropriate list of the selectionAPI. To make sure that only a single row is always selected, we empty the [`selectionAPI`]({environment:angularApiUrl}/classes/igxselectionapiservice.html) row selection list beforehand (the second argument in the [`selectRows`]({environment:angularApiUrl}/classes/igxgridcomponent.html#selectrows) method call):
 
 ```html
     <!-- in example.component.html -->
@@ -47,36 +47,21 @@ The grid single selection can be easily setup using the grid's `onSelection` eve
 
 #### Multiple Selection
 
-To enable multiple row selection, the `igx-grid` exposes the `rowSelectable` property. Setting `rowSelectable` to `true` enables a select checkbox field on each row and in the grid header. The checkbox allows users to select multiple rows, with the selection persisting through scrolling, paging, and data operations such as sorting and filtering:
+To enable multiple row selection, the [`igx-grid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) exposes the [`rowSelectable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowselectable) property. Setting `rowSelectable` to `true` enables a select checkbox field on each row and in the grid header. The checkbox allows users to select multiple rows, with the selection persisting through scrolling, paging, and data operations such as sorting and filtering:
 
 ```html
     <igx-grid #grid1 [data]="remote | async" [primaryKey]="'ProductID'" [rowSelectable]="selection" (onSelection)="handleRowSelection($event)"
       [width]="'800px'" [height]="'600px'">
 ```
 
-*Note:* In order to have proper row selection and cell selection, while grid has remote virtualization, `primaryKey` should be provided.
-*Note:* When grid has remote virtualization then clicking the header checkox will select/deselect all records. But when all records are selected through header checkbox and then a visible row has been deselected, when new data is loaded in the grid on demand, it is a limitation that the newly loaded rows are not selected.
+**Note:** In order to have proper row selection and cell selection, while grid has remote virtualization, [`primaryKey`]({environment:angularApiUrl}/classes/igxgridcomponent.html#primarykey) should be provided.
 
-### Methods
+**Note:** If filtering is in place, [`selectAllRows()`]({environment:angularApiUrl}/classes/igxgridcomponent.html#selectallrows) and [`deselectAllRows()`]({environment:angularApiUrl}/classes/igxgridcomponent.html#deselectallrows) select/deselect all *filtered* rows.
 
-#### IgxGridComponent
 
-   | Name     | Description                | Return type                                       | Parameters           |
-   |----------|----------------------------|---------------------------------------------------|----------------------|
-   | selectedRows | Get current selection state    | `Array<any>`- array with selected rows' ID (primaryKey or rowData)| |
-   | selectRows   | Select specified rows by ID      | `void`- does not return anything | `Array<any>`, clearCurrentSelection: `boolean`    |
-   | deselectRows | Deselect specified rows by ID    | `void`- does not return anything | `Array<any>` |
-   | selectAllRows | Select all rows            | `void`- does not return anything |    N/A                    |
-   | deselectAllRows | Select all rows          | `void`- does not return anything |    N/A                    |
+**Note:** When grid has remote virtualization then clicking the header checkox will select/deselect all records. But when all records are selected through header checkbox and then a visible row has been deselected, when new data is loaded in the grid on demand, it is a limitation that the newly loaded rows are not selected.
 
-*Note:* If filtering is in place, `selectAllRows()` and `deselectAllRows()` select/deselect all *filtered* rows.
-
-### Events
-|Name|Description|Parameters|
-|--|--|--|
-| onRowSelectionChange | Emitted when selection is changing. | { selection: `Array<any>`, row: IgxRowComponent, rowID: any|
-
-*Note:* Cell selection will trigger onSelection and not onRowSelection.
+**Note:** Cell selection will trigger [`onSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#onselection) and not [`onRowSelectionChange`]({environment:angularApiUrl}/classes/igxgridcomponent.html#onrowselectionchange).
 
 ### Code Snippets
 
@@ -108,6 +93,11 @@ public handleRowSelectionChange(args) {
     args.checked = false; // overwrites the checkbox state
 }
 ```
+### API Reference
+* [IgxGridComponent API]({environment:angularApiUrl}/classes/igxgridcomponent.html)
+* [IgxGridRowComponent API]({environment:angularApiUrl}/classes/igxgridrowcomponent.html)
+* [IgxGridCellComponent API]({environment:angularApiUrl}/classes/igxgridcellcomponent.html)
+* [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#mixin-igx-grid)
 
 ### Additional Resources
 <div class="divider--half"></div>
