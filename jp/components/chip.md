@@ -177,6 +177,7 @@ public chipsOrderChanged(event) {
 ### API
 
 * [IgxChipComponent]({environment:angularApiUrl}/classes/igxchipcomponent.html)
+* [IgxChipComponent Styles]({environment:sassApiUrl}/index.html#function-igx-chip-theme)
 * [IgxChipsAreaComponent]({environment:angularApiUrl}/classes/igxchipsareacomponent.html)
 * [IgxPrefixDirective]({environment:angularApiUrl}/classes/igxprefixdirective.html)
 * [IgxSuffixDirective]({environment:angularApiUrl}/classes/igxsuffixdirective.html)
