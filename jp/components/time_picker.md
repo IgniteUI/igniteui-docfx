@@ -20,7 +20,7 @@ _language: ja
 
 ### 使用方法
 
-Ignite UI for Angular Time Picker を初期化する前に、**IgxTimePickerModule** を **app.module.ts** ファイルにインポートします。注: IgxTimePicker に **BrowserAnimationsModule** の依存関係があるため、AppModule にも追加する必要があります。
+Ignite UI for Angular Time Picker を初期化する前に、[`IgxTimePickerModule`]({environment:angularApiUrl}/classes/igxtimepickermodule.html) を **app.module.ts** ファイルにインポートします。注: IgxTimePicker に **BrowserAnimationsModule** の依存関係があるため、AppModule にも追加する必要があります。
 
 ```typescript
 // app.module.ts
@@ -66,7 +66,7 @@ export class AppModule {}
 public date: Date = new Date(Date.now());
 ```
 
-テンプレートで `value` 入力を使用します。
+テンプレートで [`value`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#value) 入力を使用します。
 
 ```html
 <igx-time-picker [value]="date"></igx-time-picker>
@@ -90,7 +90,7 @@ TwoWay データ バインディングを使用するには、`ngModel` を以�
 
 #### デルタおよびスピン モードの変更
 
-項目のデルタを変更するには、`itemsDelta` を設定します。スピン モードを変更するには、`isSpinLoop` を使用します。
+項目のデルタを変更するには、[`itemsDelta`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#itemsdelta) を設定します。スピン モードを変更するには、[`isSpinLoop`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#isspinloop) を使用します。
 
 ```html
 <igx-time-picker [isSpinLoop]="false" [itemsDelta]="{hours:1, minutes:5}"></igx-time-picker>
@@ -108,7 +108,7 @@ TwoWay データ バインディングを使用するには、`ngModel` を以�
 
 #### 検証
 
-ユーザー入力を制限するために `minValue` および `maxValue` を設定できます。`onInvalidValueSelected` を処理して、無効な時間が選択された場合にユーザーを通知できます。注: 最小値/最大値が `format` と一致する必要があります。
+ユーザー入力を制限するために [`minValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#minvalue) および [`maxValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#maxvalue) を設定できます。[`onValidationFailed`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#onvalidationfailed) を処理して、無効な時間が選択された場合にユーザーを通知できます。注: 最小値/最大値が [`format`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#format) と一致する必要があります。
 
 ```typescript
 // app.module.ts
@@ -160,7 +160,7 @@ public onValidationFailed(timepicker){
 
 API (プロパティ、イベント、メソッド) を使用して要件によってタイムピッカーを構成し、コードで操作する方法を説明しました。次に入力グループの外観をカスタマイズします。
 
-タイムピッカー内にネストした ng-template を IgxTimePickerTemplate ディレクティブでデコレートする必要があります。ng-template コンテキストは、次のメンバーを公開します。`openDialog` メソッドはタイムピッカーダイアログに使用できます。`displayValue` プロパティは書式設定の値を含みます。 `value` は実際の値を含みます。ng-template 要素で変数を宣言して使用することができます。
+タイムピッカー内にネストした ng-template を IgxTimePickerTemplate ディレクティブでデコレートする必要があります。ng-template コンテキストは、次のメンバーを公開します。[`openDialog`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#opendialog) メソッドはタイムピッカーダイアログに使用できます。[`displayTime`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#displaytime) プロパティは書式設定の値を含みます。 [`value`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#value) は実際の値を含みます。ng-template 要素で変数を宣言して使用することができます。
 
 以下の例では、デフォルトのラベル "Time" を変更して 2 つ目のアイコンをサフィックスとして追加します。ラベルを使用して実際のタイムピッカーの値を表示する入力グループです。
 
@@ -192,64 +192,19 @@ public date: Date = new Date(Date.now());
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="time-picker-sample-5" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
 </div>
+
+### API References
 <div class="divider--half"></div>
 
-### API まとめ
-
-以下の表は便利な **igx-time-picker** コンポーネントの入力、出力、およびメソッドを示します。
-
-#### 入力
-
-以下の入力は **igx-time-picker** コンポーネントで利用できます。
-
-| 名前 | 型 | 説明 |
-| :--- | :--- | :--- |
-| `okButtonLabel` | string | [OK] ボタンをカスタム テキストで描画します。ボタンは選択した時間を保存し、timePicker 入力の値を設定します。デフォルトで `okButtonLabel` が `OK` に設定されます。|
-| `cancelButtonLabel` | string | [キャンセル] ボタンをカスタム テキストで描画します。ボタンはダイアログを閉じます。デフォルトで `cancelButtonLabel` が `Cancel` に設定されます。 |
-| `value` | Date | timePicker の値を取得または設定します。 |
-| `disabled` | boolean | timePicker を無効にします。 |
-| `itemsDelta`| object | 時および分項目が表示されるデルタを取得または設定します。デフォルトで `itemsDelta` が `{hours:1, minutes:1}` に設定されます。 注:実行時では設定できません。 |
-| `minValue` | string | 最小値を取得または設定します。timePicker の `format` と一致する必要があります。 |
-| `maxValue` | string | 最大値の設定を取得します。timePicker の `format` と一致する必要があります。 |
-| `vertical` | boolean | timePicker の方向を取得または設定します。デフォルトで、`vertical` は `false` に設定されます。 |
-| `isSpinLoop` | boolean | スピン動作を決定します。true に設定した場合、時および分のスピンが折り返されます。デフォルトで `isSpinLoop` が true に設定されます。注:実行時では設定できません。 |
-| `format` | string | timePicker がフォーカスを持っていないときの時間書式を取得または設定します。デフォルトの `format` は `hh:mm tt` です。注:実行時では設定できません。<br>時間フラグのリスト。<br> `h` : 先行するゼロがない 12 時間形式の時フィールド。<br>`hh` : 先行するゼロがある 12 時間形式の時フィールド。<br>`H` : 先行するゼロがない 24 時間形式の時フィールド。<br>`HH` : 先行するゼロがある 24 時間形式の時フィールド。<br>`m` : 先行するゼロがない分フィールド。<br>`mm` : 先行するゼロがある分フィールド。<br>`tt` : AM/PM フィールドを表す 2 文字の文字列。 |
-
-<div class="divider--half"></div>
-
-#### 出力
-
-以下の出力は **igx-time-picker** コンポーネントで利用できます。
-
-| 名前 | 説明 |
-| :--- | :--- |
-| `onValueChanged` | 選択が実行されたときに発生します。イベントは選択済みの値を含みます。`{oldValue: Date, newValue: Date}` を返します。 |
-| `onValidationFailed` | 無効な値が設定されているときに発生します。`{timePicker: any, currentValue: Date, setThroughUI: boolean}` を返します。 |
-| `onOpen` | timePicker が開いているときに発生します。 |
-
-#### メソッド
-
-以下のメソッドは **igx-time-picker** コンポーネントで利用できます。
-
-| 構文 | 戻り値の型 | 説明 |
-| :--- | :--- | :--- |
-| `okButtonClick()` | `boolean` | 現在の値が有効な場合、その値を選択し、ダイアログを閉じて true を返します。それ以外の場合は false を返します。 |
-| `cancelButtonClick()` | `void` | 現在の値を選択しないでダイアログを閉じます。 |
-| `hoursInView()` | `string[]` | 現在表示されている時の配列を返します。 |
-| `minutesInView()` | `string[]` | 現在表示されている分の配列を返します。 |
-| `ampmInView()` | `string[]` | 現在表示されている AM/PM の配列を返します。 |
-| `scrollHourIntoView(item: string)` | `void` | 時項目を表示可能領域にスクロールします。 |
-| `scrollMinuteIntoView(item: string)` | `void` | 分項目を表示可能領域にスクロールします。 |
-| `scrollAmPmIntoView(item: string)` | `void` | AM/PM 項目を表示可能領域にスクロールします。 |
-
-
-#### ゲッター
-
-以下のゲッターは **igx-time-picker** コンポーネントで利用できます。
-
-| 名前 | 型 | 説明 |
-| :--- | :--- | :--- |
-| `displayTime` | `string` | 表示されている時間を返します。 |
+* [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
+* [IgxInputDirective]({environment:angularApiUrl}/classes/igxinputdirective.html)
+* [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
+* [IgxLabelDirective]({environment:angularApiUrl}/classes/igxlabeldirective.html)
+* [IgxPrefixDirective]({environment:angularApiUrl}/classes/igxprefixdirective.html)
+* [IgxSuffixDirective]({environment:angularApiUrl}/classes/igxsuffixdirective.html)
+* [IgxTimePickerComponent]({environment:angularApiUrl}/classes/igxtimepickercomponent.html)
+* [IgxTimePickerComponent Styles]({environment:sassApiUrl}/index.html#function-igx-time-picker-theme)
+* [IgxTimePickerTemplateDirective]({environment:angularApiUrl}/classes/igxtimepickertemplatedirective.html)
 
 ### 追加のリソース
 

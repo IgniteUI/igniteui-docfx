@@ -7,7 +7,7 @@ _language: ja
 
 ## Button Group
 
-Ignite UI for Angular **igx-ButtonGroup** コンポーネントは、ボタン グループの機能、さらに水平/垂直の配置、単一/複数の選択、および切り替え機能を提供します。igx-ButtonGroup コンポーネントは、[igxButton ディレクティブ](button.md)を使用します。
+Ignite UI for Angular [**igx-buttongroup**]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html) コンポーネントは、ボタン グループの機能、さらに水平/垂直の配置、単一/複数の選択、および切り替え機能を提供します。igx-ButtonGroup コンポーネントは、[igxButton ディレクティブ](button.md)を使用します。
 
 ### Button Group デモ
 
@@ -21,7 +21,7 @@ Ignite UI for Angular **igx-ButtonGroup** コンポーネントは、ボタン �
 
 ### 依存関係
 
-Button Group が `NgModule` としてエクスポートされるため、アプリケーションで `AppModule` に _IgxButtonGroupModule_ をインポートする必要があります。
+Button Group が `NgModule` としてエクスポートされるため、アプリケーションで `AppModule` に [`IgxButtonGroupModule`]({environment:angularApiUrl}/classes/igxbuttongroupmodule.html) をインポートする必要があります。
 
 ```typescript
 // app.module.ts
@@ -39,7 +39,7 @@ export class AppModule {}
 ```
 ### コード例
 
-`igx-ButtonGroup` を使用して、ボタンを Angular スタイルのボタン グループに配置します。
+[`igx-buttongroup`]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html) を使用して、ボタンを Angular スタイルのボタン グループに配置します。
 
 ```typescript
 //sample.component.ts
@@ -120,40 +120,13 @@ public ngOnInit() {
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="buttonGroup-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
+
+### API References
 <div class="divider--half"></div>
 
-### API まとめ
-#### 入力
-
-以下の入力が **igx-ButtonGroup** コンポーネントで利用できます。
-
-| 名前   |      型      |  説明 |
-|:----------|:-------------:|:------|
-| `multiSelection` |  boolean | ボタンの複数選択を有効にします。デフォルトで `multiselection` は false です。
-| `alignment` |    enum   |   ボタン グループの配置を設定します。利用可能なオプションは、`ButtonGroupAlignment.horizontal` （デフォルト) と `ButtonGroupAlignment.vertical` です。 |
-| `disabled` | boolean | igxButtonGroup コンポーネントを無効にします。デフォルトで false です。 |
-
-#### 出力
-
-**igx-ButtonGroup** によって発生されるイベントのリスト:
-
-| 名前   | 説明 |
-|:----------|:-------------:|
-| `onSelect` | ボタンが選択されたときに発生します。 |
-| `onUnselect` | ボタンが選択解除されたときに発生します。 |
-| `onClick` | ボタンがクリックされたときに発生します。 |
-
-#### メソッド
-
-**igx-ButtonGroup** によって公開されるパブリック メソッドのリスト:
-
-| 名前   | 説明 |
-|:----------|:------|
-| `selectButton(index: number)` | インデックスでボタンを選択します。  |
-| `deselectButton(index: number)` | インデックスでボタンを選択解除します。 |
-| `selectedButtons()` | 選択済みのボタンを取得します。 |
-
-
+* [IgxButtonDirective]({environment:angularApiUrl}/classes/igxbuttondirective.html)
+* [IgxButtonGroupComponent]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html)
+* [IgxButtonGroup Styles]({environment:sassApiUrl}/index.html#function-igx-button-group-theme)
 
 ### 追加のリソース
 

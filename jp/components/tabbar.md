@@ -11,7 +11,7 @@ _language: ja
 <div class="divider"></div>
 
 > [!NOTE]
-> `igx-tab-bar` セレクターは非推奨です。代わりに `igx-bottom-nav` を使用してください。`IgxTabBarComponent` クラスは `IgxBottomNavComponent` に名前変更しました。`IgxTabBarModule` は `IgxBottomNavModule` に名前変更しました。
+> `igx-tab-bar` セレクターは非推奨です。代わりに [`igx-bottom-nav`]({environment:angularApiUrl}/classes/igxbottomnavcomponent.html) を使用してください。`IgxTabBarComponent` クラスは [`IgxBottomNavComponent`]({environment:angularApiUrl}/classes/igxbottomnavcomponent.html) に名前変更しました。`IgxTabBarModule` は [`IgxBottomNavModule`]({environment:angularApiUrl}/classes/igxbottomnavmodule.html) に名前変更しました。
 
 ### Bottom Navigation デモ
 
@@ -28,7 +28,7 @@ _language: ja
 
 ### 使用方法
 
-コントロールを初期化する前に、**IgxBottomNavModule** を **app.module.ts** ファイルにインポートします。
+コントロールを初期化する前に、[`IgxBottomNavModule`]({environment:angularApiUrl}/classes/igxbottomnavmodule.html) を **app.module.ts** ファイルにインポートします。
 
 ```typescript
 // app.module.ts
@@ -190,9 +190,9 @@ Bottom Navigation は以下のようになります。
 ### その他の Igx コントロールの使用
 
 その他 Ignite UI for Angular コンポーネントを Bottom Navigation と使用し、より高度なアプリケーションを実装できます。
-たとえば、Bottom Navigation のパネルの連絡先リストの作成には IgxListComponent、各連絡先の可視化は、IgxAvatarComponent や IgxIconComponent を使用できます。
+たとえば、Bottom Navigation のパネルの連絡先リストの作成には [`IgxListComponent`]({environment:angularApiUrl}/classes/igxlistcomponent.html)、各連絡先の可視化は、[`IgxAvatarComponent`]({environment:angularApiUrl}/classes/igxavatarcomponent.html) や [`IgxIconComponent`]({environment:angularApiUrl}/classes/igxiconcomponent.html) を使用できます。
 
-IgxBottomNavComponent および IgxListComponent コンポーネントを "app.module.ts" ファイルにインポートします。
+[`IgxBottomNavModule`]({environment:angularApiUrl}/classes/igxbottomnavmodule.html) および [`IgxListModule`]({environment:angularApiUrl}/classes/igxlistmodule.html) コンポーネントを "app.module.ts" ファイルにインポートします。
 
 ```typescript
 // app.module.ts
@@ -268,7 +268,7 @@ public contactsList: object[] = [{
 ...
 ```
 
-コンポーネントのテンプレート マークアップに最初のパネルにある IgxListComponent を含む Bottom Navigation を追加して編集します。
+コンポーネントのテンプレート マークアップに最初のパネルにある [`IgxListComponent`]({environment:angularApiUrl}/classes/igxlistcomponent.html) を含む Bottom Navigation を追加して編集します。
 
 ```html
 ...
@@ -343,71 +343,17 @@ public contactsList: object[] = [{
 
 このトピックの [Bottom Navigation デモ](#bottom-navigation-デモ) セクションで結果を確認できます。
 
-<div class="divider"></div>
-
-### API まとめ
-
-以下は、Bottom Navigation コンポーネントのその他の API です。
-
-#### 入力
-
-以下の入力は **igx-tab-panel** コンポーネントで利用できます。
-| 名前 | 型 | 説明 |
-| :--- | :--- | :--- |
-| `label` | String | 関連付けられているタブのラベルを定義します。 |
-| `icon` | String | 関連付けられているタブのアイコンを定義します。 |
-| `select` | Method | パネルおよび関連付けられているタブを選択します。 |
-
+### API References
 <div class="divider--half"></div>
 
-以下の入力は **igx-tab** コンポーネントで利用できます。
-| 名前 | 型 | 説明 |
-| :--- | :--- | :--- |
-| `select` | Method | タブおよび関連付けられているパネルを選択します。 |
-
-<div class="divider"></div>
-
-#### 出力
-
-以下の出力は **igx-bottom-nav** コンポーネントで利用できます。
-| 名前 | 型 | 説明 |
-| :--- | :--- | :--- |
-| `onTabSelected` | EventEmitter | 新しいタブが選択されたときにイベントを発生します。 |
-| `onTabDeselected` | EventEmitter | タブが選択解除されたときにイベントを発生します。 |
-
-<div class="divider"></div>
-
-#### ゲッター
-
-以下のゲッターは **igx-bottom-nav** コンポーネントで利用できます。
-| 名前 | 型 | 説明 |
-| :--- | :--- | :--- |
-| `tabs` | QueryList | すべての IgxTab ビューの子要素の Observable コレクションを提供します。 |
-| `panels` | QueryList | すべての IgxTabPanel コンテンツの子要素の Observable コレクションを提供します。 |
-| `selectedIndex` | Number | 各コレクションの選択済みのタブまたはパネルのインデックスを取得します。 |
-| `selectedTab` | IgxTab | Tab Bar で選択済みの IgxTab を `selectedIndex` に基づいて取得します。 |
-
-<div class="divider--half"></div>
-
-以下のゲッターは **igx-tab-panel** コンポーネントで利用できます。
-| 名前 | 型 | 説明 |
-| :--- | :--- | :--- |
-| `disabled` | Boolean | パネルが無効されているかどうかを決定します。 |
-| `isSelected` | Boolean | パネルが選択されているかどうかを決定します。 |
-| `index` | Number | パネル コレクションのパネルのインデックスを取得します。|
-| `relatedTab` | IgxTab | パネルに関連付けられたタブを取得します。 |
-
-<div class="divider--half"></div>
-
-以下のゲッターは **igx-tab** コンポーネントで利用できます。
-| 名前 | 型 | 説明 |
-| :--- | :--- | :--- |
-| `disabled` | Boolean | タブが無効かどうかを決定します。 |
-| `isSelected` | Boolean | タブが選択されているかどうかを決定します。 |
-| `index` | Number | タブ コレクションのタブのインデックスを取得します。 |
-| `relatedPanel` | IgxTabPanel | タブに関連付けられているパネルを取得します。 |
-
-<div class="divider"></div>
+* [IgxAvatarComponent]({environment:angularApiUrl}/classes/igxavatarcomponent.html)
+* [IgxBottomNavComponent]({environment:angularApiUrl}/classes/igxbottomnavcomponent.html)
+* [IgxBottomNavComponent Styles]({environment:sassApiUrl}/index.html#function-igx-bottom-nav-theme)
+* [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
+* [IgxListComponent]({environment:angularApiUrl}/classes/igxlistcomponent.html)
+* [IgxListItemComponent]({environment:angularApiUrl}/classes/igxlistitemcomponent.html)
+* [IgxTabComponent]({environment:angularApiUrl}/classes/igxtabcomponent.html)
+* [IgxTabPanelComponent]({environment:angularApiUrl}/classes/igxtabpanelcomponent.html)
 
 ### 追加のリソース
 

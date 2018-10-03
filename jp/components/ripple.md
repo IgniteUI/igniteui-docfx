@@ -22,7 +22,7 @@ _language: ja
 
 ### 依存関係
 
-Ripple ディレクティブが `NgModule` としてエクスポートされるため、アプリケーションで `AppModule` に _IgxRippleModule_ をインポートする必要があります。
+Ripple ディレクティブが `NgModule` としてエクスポートされるため、アプリケーションで `AppModule` に [`IgxRippleModule`]({environment:angularApiUrl}/classes/igxripplemodule.html) をインポートする必要があります。
 
 ```typescript
 // app.module.ts
@@ -42,7 +42,7 @@ export class AppModule {}
 ### 使用方法
 #### リップル エフェクトの追加
 
-`igxRipple` を使用して指定した要素にリップル効果を追加します。デフォルト色のリップル エフェクトを追加します。
+[`igxRipple`]({environment:angularApiUrl}/classes/igxrippledirective.html) を使用して指定した要素にリップル効果を追加します。デフォルト色のリップル エフェクトを追加します。
 
 ```html
 <button igxButton="raised" igxRipple>Click Me</button>
@@ -54,7 +54,7 @@ export class AppModule {}
 
 #### カスタム色
 
-`igxRipple` でリップル色を設定できます。このサンプルでは、リップルに白色を設定します。
+[`igxRipple`]({environment:angularApiUrl}/classes/igxrippledirective.html) でリップル色を設定できます。このサンプルでは、リップルに白色を設定します。
 
 ```html
 <button igxButton="raised" igxRipple="white">White</button>
@@ -66,7 +66,7 @@ export class AppModule {}
 
 #### 中央揃えのリップル エフェクト
 
-リップル エフェクトはクリック イベントの位置から開始します。この動作で要素の中点を原点に変更するには、`igxRippleCentered` を使用できます。
+リップル エフェクトはクリック イベントの位置から開始します。この動作で要素の中点を原点に変更するには、[`igxRippleCentered`]({environment:angularApiUrl}/classes/igxrippledirective.html#centered) を使用できます。
 
 ```html
 <button igxButton="raised" igxRipple="white" igxRippleCentered="true">Centered</button>
@@ -78,7 +78,7 @@ export class AppModule {}
 
 #### リップルの対象要素
 
-`igxRippleTarget` を使用して親要素内の特定の要素にリップル エフェクトをアタッチします。
+[`igxRippleTarget`]({environment:angularApiUrl}/classes/igxrippledirective.html#rippletarget) を使用して親要素内の特定の要素にリップル エフェクトをアタッチします。
 
 ```html
 <div class="parent-div" igxRipple="blue" igxRippleTarget=".child-div" igxRippleCentered="true">
@@ -97,7 +97,7 @@ export class AppModule {}
 
 #### リップルの期間
 
-`igxRippleDuration` を使用するとリップル アニメーションの期間を変更できます。デフォルト値は 600 ミリ秒です。このサンプルで `igxRippleDuration` は 2000 ミリ秒に設定されます。
+[`igxRippleDuration`]({environment:angularApiUrl}/classes/igxrippledirective.html#rippleduration) を使用するとリップル アニメーションの期間を変更できます。デフォルト値は 600 ミリ秒です。このサンプルで [`igxRippleDuration`]({environment:angularApiUrl}/classes/igxrippledirective.html#rippleduration) は 2000 ミリ秒に設定されます。
 
 ```html
 <div class="ripple-sample dark" [igxRippleDuration]=2000 igxRipple="white">
@@ -109,23 +109,16 @@ export class AppModule {}
     <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/ripple-sample-4" onload="onSampleIframeContentLoaded(this);">
 </div>
 
-`igxRipple` は Web Animation API を使用し、[サポートされるブラウザー](http://caniuse.com/#feat=web-animation)でネイティブに実行します。その他のブラウザーで `web-animations.min.js` [ポリフィル](https://github.com/web-animations/web-animations-js)を使用します。
+[`igxRipple`]({environment:angularApiUrl}/classes/igxrippledirective.html) は Web Animation API を使用し、[サポートされるブラウザー](http://caniuse.com/#feat=web-animation)でネイティブに実行します。その他のブラウザーで `web-animations.min.js` [ポリフィル](https://github.com/web-animations/web-animations-js)を使用します。
 
 > [!NOTE]
-> リップル アニメーションで相対的な位置を持つ要素を使用します。また、`igxRippleTarget` を使用して子要素を対象にすることもできます。
+> リップル アニメーションで相対的な位置を持つ要素を使用します。また、[`igxRippleTarget`]({environment:angularApiUrl}/classes/igxrippledirective.html#rippletarget) を使用して子要素を対象にすることもできます。
 
+### API References
 <div class="divider--half"></div>
 
-### API
-
-| 名前                |   型    | 説明                                                                                                                                      |
-| :------------------ | :-----: | :---------------------------------------------------------------------------------------------------------------------------------------- |
-| `igxRipple`         | string  | リップル アニメーションの色。                                                                                                             |
-| `igxRippleTarget`   | string  | `igxRipple` の親で子要素にリップルをアクティブ化することを設定します。CSS セレクターを受け取ります。デフォルト値は `igxRipple` の親です。 |
-| `igxRippleCentered` | boolean | true の場合、リップル アニメーションはクリック イベントの位置の代わりに要素の中央から再生します。                                         |
-| `igxRippleDuration` | number  | リップル アニメーションの期間。デフォルト値は 600 ミリ秒です。                                                                            |
-
-<div class="divider--half"></div>
+* [IgxRippleDirective]({environment:angularApiUrl}/classes/igxrippledirective.html)
+* [IgxRipple Styles]({environment:sassApiUrl}/index.html#function-igx-ripple-theme)
 
 ### 追加のリソース
 

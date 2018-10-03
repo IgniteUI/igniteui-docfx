@@ -76,9 +76,9 @@ Again, if you try to autosize a pinned column and the new width will cause the p
 ### API References
 <div class="divider--half"></div>
 
-* [IColumnResizeEventArgs]({environment:angularApiUrl}/interfaces/icolumnresizeeventargs.html)
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
+* [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#mixin-igx-grid)
 
 ### Additional Resources
 <div class="divider--half"></div>

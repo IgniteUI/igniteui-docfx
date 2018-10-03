@@ -24,9 +24,9 @@ Ignite UI for Angular Input および Label ディレクティブを使用する
 Label および Input ディレクティブのデフォルト スタイル設定はマテリアル デザイン [**ガイドライン**](https://material.io/guidelines/components/text-fields.html)のテキスト フィールド仕様を実装します。
 
 > [!NOTE]
-> `igxInput` および `igxLabel` を使用するには、`<igx-input-group>` コンテナーにラップする必要があります。
+> [`igxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html) および [`igxLabel`]({environment:angularApiUrl}/classes/igxlabeldirective.html) を使用するには、`<igx-input-group>` コンテナーにラップする必要があります。
 
-Ignite UI for Angular Label および Input を初期化する前に、**IgxInputGroup** を **app.module.ts** ファイルにインポートします。
+Ignite UI for Angular Label および Input を初期化する前に、[`IgxInputGroupModule`]({environment:angularApiUrl}/classes/igxinputgroupmodule.html) を **app.module.ts** ファイルにインポートします。
 
 ```typescript
 // app.module.ts
@@ -43,7 +43,7 @@ export class AppModule {}
 ```
 
 ### Label および Input
-HTML ラベルおよび入力は HTML フォームの基本要素です。`igxLabel` および `igxInput` ディレクティブの使用例:
+HTML ラベルおよび入力は HTML フォームの基本要素です。[`igxLabel`]({environment:angularApiUrl}/classes/igxlabeldirective.html) および [`igxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html) ディレクティブの使用例:
 
 ```html
 <igx-input-group>
@@ -59,10 +59,10 @@ HTML ラベルおよび入力は HTML フォームの基本要素です。`igxLa
 </div>
 <div class="divider--half"></div>
 
-`igxInput` ディレクティブを `<input>` および `<textarea>` HTML 要素に適用できます。単一行および複数行テキスト フィールドをサポートします。
+[`igxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html) ディレクティブを `<input>` および `<textarea>` HTML 要素に適用できます。単一行および複数行テキスト フィールドをサポートします。
 
 #### 検証
-Ignite UI for Angular Input ディレクティブで検証が有効な場合にマテリアルに基づくスタイル設定を提供します。入力に `required` 属性を追加します。
+Ignite UI for Angular Input ディレクティブで検証が有効な場合にマテリアルに基づくスタイル設定を提供します。入力に [`required`]({environment:angularApiUrl}/classes/igxinputdirective.html#required) 属性を追加します。
 
 ```html
 <igx-input-group>
@@ -100,23 +100,10 @@ public user = {
 ### Input Group
 Input Group コンポーネントの詳細については[ここ](input_group.md)を参照してください。
 
-## Input API
-
-### 入力
-
-|名前|型|説明|
-|--- |--- |--- |
-|`value`|any|入力の値。|
-<div class="divider--half"></div>
-
-### ゲッター/セッター
-
-|名前|型|ゲッター|セッター|説明|
-|--- |--- |--- |--- |--- |
-|`valid`|IgxInputState|はい|いいえ|入力の検証状態。有効な値は `IgxInputState.INITIAL`、`IgxInputState.VALID`、および `IgxInputState.INVALID` です。|
-|`disabled`|boolean|はい|はい|入力の `disabled` プロパティを取得または設定します。|
-|`focused`|boolean|はい|いいえ|入力がフォーカスを持つかどうかを取得します。|
-<div class="divider--half"></div>
+## API References
+* [IgxInputDirective]({environment:angularApiUrl}/classes/igxinputdirective.html)
+* [IgxLabelDirective]({environment:angularApiUrl}/classes/igxlabeldirective.html)
+* [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
 
 ## 追加のリソース
 関連トピック:

@@ -23,7 +23,7 @@ _language: ja
 
 ### 依存関係
 
-Icon コンポーネントが `NgModule` としてエクスポートされるため、アプリケーションで `AppModule` への _IgxIconModule_ のインポートのみが必要になります。
+Icon コンポーネントが `NgModule` としてエクスポートされるため、アプリケーションで `AppModule` への [`IgxIconModule`]({environment:angularApiUrl}/classes/igxiconmodule.html) のインポートのみが必要になります。
 
 ```typescript
 // app.module.ts
@@ -48,7 +48,7 @@ export class AppModule {}
 
 ### コード例
 
-`igx-icon` を使用して `active` ホーム アイコンをマゼンタ `color` に設定します。
+[`igx-icon`]({environment:angularApiUrl}/classes/igxiconcomponent.html) を使用して [`active`]({environment:angularApiUrl}/classes/igxiconcomponent.html#active) ホーム アイコンをマゼンタ [`color`]({environment:angularApiUrl}/classes/igxiconcomponent.html#iconcolor) に設定します。
 
 ```html
 <igx-icon name="home" color="magenta" isActive="true"></igx-icon>
@@ -77,33 +77,11 @@ CSS でアイコン サイズを設定するには、カスタム CSS を作成�
     <iframe id="icon-sample2-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/icon-sample2"  onload="onSampleIframeContentLoaded(this);">
 </div>
 
+### API References
 <div class="divider--half"></div>
 
-### API まとめ
-
-この記事で Icon コンポーネントを説明しました。以下は、その他の API のリストです。
-
-####入力
-以下の入力は、**igx-icon** コンポーネントで使用できます。
-| 名前   |       型      |  説明 |
-|:----------|:-------------:|:------|
-| `name` |  string | アイコンを設定するには、名前を公式の[マテリアル アイコン セット](https://material.io/icons/)から提供します。|
-| `iconName` |  string | アイコンの `glyphName` を設定します。ligature `name` またはグリフ `iconName` を使用できますが、同時には使用できません。|
-| `fontSet` |  string | `fontSet` の値を設定します。デフォルトは、"material" です。|
-| `active` |  boolean | アイコンをアクティブ/非アクティブに設定します。デフォルトは true です。|
-| `color` |  string | 文字列値を指定してアイコンの色を設定します。 |
-<div class="divider--half"></div>
-
-####ゲッター
-以下のゲッターは、**igx-icon** コンポーネントで使用できます。
-| 名前 | 型 | 説明 |
-| :--- | :--- | :--- |
-| `getFontSet()` | string | アイコンのフォントを返します。 |
-| `getIconColor()` | string | アイコンの色を返します。 |
-| `getIconName()` | string | アイコンの名前を返します。 |
-| `getActive()` | boolean | アイコンのアクティブ状態を返します。 |
-| `getInactive()` | boolean | アイコンのインアクティブ状態を返します。 |
-<div class="divider"></div>
+* [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
+* [IgxIconComponent Styles]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
 
 ### 追加のリソース
 

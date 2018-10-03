@@ -90,7 +90,6 @@ The final result would be something like that:
 <div class="divider--half"></div>
 
 * [IgxCheckboxComponent]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html)
-* [IChangeCheckboxEventArgs]({environment:angularApiUrl}/interfaces/ichangecheckboxeventargs.html)
 * [IgxCheckboxComponent Styles]({environment:sassApiUrl}/index.html#function-igx-checkbox-theme)
 * [LabelPosition]({environment:angularApiUrl}/enums/labelposition.html)
 

@@ -20,14 +20,14 @@ _language: ja
 </div>
 <div class="divider--half"></div>
 
-**列のサイズ変更**も列レベルで有効にできます。つまり、**igx-grid** にサイズ変更可能な列およびサイズ変更不可の列の両方を含むことが可能で `igx-column` の `resizable` 入力によって制御されます。
+**列のサイズ変更**も列レベルで有効にできます。つまり、[**igx-grid**]({environment:angularApiUrl}/classes/igxgridcomponent.html) にサイズ変更可能な列およびサイズ変更不可の列の両方を含むことが可能で [`igx-column`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) の [`resizable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#resizable) 入力によって制御されます。
 
 ```html
     <igx-column [field]="Name" [width]="'200px'" [resizable]="true"></igx-column>
     <igx-column [field]="AthleteNumber" [width]="'200px'"></igx-column>
 ```
 
-`igx-grid` の `onColumnResized` イベントを処理し、列がサイズ変更されたときにカスタム ロジックを実装できます。以前の列幅、新しい列幅、および `IgxColumnComponent` オブジェクトがイベント引数で公開されます。
+[`igx-grid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) の [`onColumnResized`]({environment:angularApiUrl}/classes/igxgridcomponent.html#oncolumnresized) イベントを処理し、列がサイズ変更されたときにカスタム ロジックを実装できます。以前の列幅、新しい列幅、および [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) オブジェクトがイベント引数で公開されます。
 
 ```html
 <igx-grid [data]="data" (onColumnResized)="onResize($event)" [autoGenerate]="false">
@@ -46,7 +46,7 @@ public onResize(event) {
 
 #### 列のサイズ変更の制限
 
-列の最小幅および最大幅の構成も可能です。`igx-column` の `minWidth` および `maxWidth` 入力によって制御されます。この場合、サイズ変更インジケーターのドラッグ操作が制限されます。列が `minWidth` および `maxWidth` によって定義される範囲以外にサイズ変更できないことをユーザーに通知します。
+列の最小幅および最大幅の構成も可能です。[`igx-column`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) の [`minWidth`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#minwidth) および [`maxWidth`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#maxwidth) 入力によって制御されます。この場合、サイズ変更インジケーターのドラッグ操作が制限されます。列が [`minWidth`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#minwidth) および [`maxWidth`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#maxwidth) によって定義される範囲以外にサイズ変更できないことをユーザーに通知します。
 
 ```html
     <igx-column [field]="Name" [width]="'150px'" [resizable]="true" [minWidth]="'60px'"
@@ -54,13 +54,14 @@ public onResize(event) {
 ```
 
 > [!NOTE]
-> `minWidth` がその値より小さい値に設定されても、列を **88px** より小さくサイズ変更することができません。
+> [`minWidth`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#minwidth) がその値より小さい値に設定されても、列を **88px** より小さくサイズ変更することができません。
 
 #### ダブルクリックで列の自動サイズ調整
 
-各列ヘッダーの右側をダブルクリックして列を**自動サイズ調整**することができます。列は、現在表示されているヘッダーを含む一番長いセル値にサイズ設定されます。この動作はデフォルトで有効なため、追加で構成する必要はありません。ただし、`maxWidth` がその列に設定され、新しい幅が `maxWidth` 値より大きい場合、列は自動サイズ調整されません。この場合、列が `maxWidth` 値に設定されます。
+各列ヘッダーの右側をダブルクリックして列を**自動サイズ調整**することができます。列は、現在表示されているヘッダーを含む一番長いセル値にサイズ設定されます。この動作はデフォルトで有効なため、追加で構成する必要はありません。ただし、[`maxWidth`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#maxwidth) がその列に設定され、新しい幅が [`maxWidth`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#maxwidth) 値より大きい場合、列は自動サイズ調整されません。この場合、列が [`maxWidth`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#maxwidth) 値に設定されます。
 
-また `IgxColumnComponent` の `autosize()` メソッドで列を動的に自動サイズ変更できます。
+また [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) の [`autosize()`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#autosize) メソッドで列を動的に自動サイズ変更できます。
+
 ```typescript
 @ViewChild('grid') grid: IgxGridComponent;
 
@@ -72,35 +73,12 @@ column.autosize();
 
 ピン固定列もサイズ変更できます。ただし、ピン固定される列のコンテナーがグリッド全体の幅の 80% より大きくできないためサイズ変更が制限されます。ピン固定列の自動サイズ調整で、新しい幅がピン固定列コンテナーがグリッド全体の幅の 80% より大きい場合、自動サイズ調整操作は無視されます。これは、ピン固定されていない列を常にユーザーに表示して利用可能にするためです。
 
-### API まとめ
-
-#### 入力
-以下の入力は**列のサイズ変更**で利用できます。
-
-| 名前 | 型 | 説明 |
-| :--- | :--- | :--- |
-|`resizable`|boolean|列をサイズ変更可能に設定します。|
-|`minWidth`|string|列の最小幅|
-|`maxWidth`|string|列の最大幅|
-
+### API References
 <div class="divider--half"></div>
 
-#### 出力
-以下の出力は**列のサイズ変更**で利用できます。
-
-| 名前 | 説明 |
-| :--- | :--- |
-|`onColumnResized`|列がサイズ変更されたときに発生されます。列オブジェクト、以前の列幅、および新しい列幅を返します。|
-
-<div class="divider--half"></div>
-
-#### メソッド
-以下のメソッドは**列のサイズ変更**で利用できます。
-| 名前 | 説明 |
-| :--- | :--- |
-| `autosize` | 列を現在表示中のセル ヘッダーを含むセル値に自動でサイズ変更します。 |
-
-<div class="divider"></div>
+* [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
+* [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
+* [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#mixin-igx-grid)
 
 ### 追加のリソース
 <div class="divider--half"></div>

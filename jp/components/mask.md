@@ -7,7 +7,7 @@ _language: ja
 
 ## Mask
 
-**テキスト入力フィールド**に `igxMask` ディレクティブを適用し、構成可能なマスク ルールに基づいてユーザー入力を制御して表示される値を書式設定できます。入力オプションも構成できます。
+**テキスト入力フィールド**に [`igxMask`]({environment:angularApiUrl}/classes/igxmaskdirective.html) ディレクティブを適用し、構成可能なマスク ルールに基づいてユーザー入力を制御して表示される値を書式設定できます。入力オプションも構成できます。
 
 ### Mask デモ
 <div class="sample-container loading" style="height: 330px">
@@ -23,7 +23,7 @@ _language: ja
 
 ### 使用方法
 
-`igxMask` ディレクティブは **text** 型の入力に使用します。Ignite UI for Angular Mask ディレクティブを初期化する前に、**IgxMaskModule** および **IgxInputGroupModule** を **app.module.ts** ファイルにインポートします。**igxMask** ディレクティブを任意の Angular 入力コントロールと使用できます。
+[`igxMask`]({environment:angularApiUrl}/classes/igxmaskdirective.html) ディレクティブは **text** 型の入力に使用します。Ignite UI for Angular Mask ディレクティブを初期化する前に、[`IgxMaskModule`]({environment:angularApiUrl}/classes/igxmaskmodule.html) および [`IgxInputGroupModule`]({environment:angularApiUrl}/classes/igxinputgroupmodule.html) を **app.module.ts** ファイルにインポートします。**igxMask** ディレクティブを任意の Angular 入力コントロールと使用できます。
 
 ```typescript
 // app.module.ts
@@ -84,7 +84,7 @@ export class AppModule {}
 
 #### 書式設定付き/Raw 値にバインド
 
-`includeLiterals` 入力を使用して、指定したマスクが適用される場合にフォームにバインドする入力値 (書式設定付きまたは Raw) を構成します。デフォルトで `includeLiterals` が *false* に設定し、Raw 値が使用されます。
+[`includeLiterals`]({environment:angularApiUrl}/classes/igxmaskdirective.html#includeliterals) 入力を使用して、指定したマスクが適用される場合にフォームにバインドする入力値 (書式設定付きまたは Raw) を構成します。デフォルトで [`includeLiterals`]({environment:angularApiUrl}/classes/igxmaskdirective.html#includeliterals) が *false* に設定し、Raw 値が使用されます。
 
 ```html
 <!--sample.component.html-->
@@ -217,32 +217,15 @@ export class Person {
 }
 ```
 
-### API まとめ
-
-以下の表は便利な **igxMask** ディレクティブの入力および出力を説明します。
-
+### API References
 <div class="divider--half"></div>
 
-#### 入力
-
-以下の入力は **igxMask** ディレクティブで利用できます。
-
-| 名前 | 型 | 説明 |
-| :--- | :--- | :--- |
-| `igxMask` | string | 現在の入力マスクを指定します。 |
-| `promptChar` | string | マスクで入力可能な文字を表すキャラクターを指定します。デフォルトでプロンプト文字は "_" です。 |
-| `includeLiterals` | boolean | バインドされた値が書式設定記号を含むかどうかを指定します。  |
-
-<div class="divider--half"></div>
-
-#### 出力
-
-以下の出力は **igxMask** ディレクティブで利用できます。
-
-| 名前 | 説明 |
-| :--- | :--- |
-| `onValueChange`  | 値が変更されたときにイベントを発生します。イベント パラメーターは `rawValue` および `formattedValue` プロパティを提供します。 |
-
+* [IgxInputDirective]({environment:angularApiUrl}/classes/igxinputdirective.html)
+* [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
+* [IgxLabelDirective]({environment:angularApiUrl}/classes/igxlabeldirective.html)
+* [IgxMaskDirective]({environment:angularApiUrl}/classes/igxmaskdirective.html)
+* [IgxPrefixDirective]({environment:angularApiUrl}/classes/igxprefixdirective.html)
+* [IgxSnackbarComponent]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html)
 
 ### 追加のリソース
 

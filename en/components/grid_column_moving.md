@@ -53,11 +53,9 @@ public onColumnMovingEnd(event) {
 ### API References
 <div class="divider--half"></div>
 
-* [IColumnMovingEndEventArgs]({environment:angularApiUrl}/interfaces/icolumnmovingendeventargs.html)
-* [IColumnMovingEventArgs]({environment:angularApiUrl}/interfaces/icolumnmovingeventargs.html)
-* [IColumnMovingStartEventArgs]({environment:angularApiUrl}/interfaces/icolumnmovingstarteventargs.html)
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
+* [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#mixin-igx-grid)
 
 ### Additional Resources
 <div class="divider--half"></div>

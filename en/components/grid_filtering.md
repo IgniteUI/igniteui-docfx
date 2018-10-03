@@ -19,7 +19,7 @@ The Grid component in Ignite UI for Angular provides extensive filtering API thr
 </div>
 <div class="divider--half"></div>
 
-There's a default filtering strategy provided out of the box, as well as all the standard filtering conditions, which the developer can replace with their own implementation. In addition, we've provided a way to easily plug in your own custom filtering conditions. The Grid currently provides not only a simplistic filtering UI but also more complex filtering options. Depending on the set [`dataType`](https://staging.infragistics.local/products/ignite-ui-angular/docs/typescript/classes/igxcolumncomponent.html#datatype) of the column, the correct set of [**filtering operations**](grid.md#filtering-conditions) is loaded inside the filter UI dropdown. Additionally, you can set the [`ignoreCase`](https://staging.infragistics.local/products/ignite-ui-angular/docs/typescript/interfaces/ifilteringexpression.html) and the initial [`condition`](https://staging.infragistics.local/products/ignite-ui-angular/docs/typescript/interfaces/ifilteringexpression.html#condition) properties.
+There's a default filtering strategy provided out of the box, as well as all the standard filtering conditions, which the developer can replace with their own implementation. In addition, we've provided a way to easily plug in your own custom filtering conditions. The Grid currently provides not only a simplistic filtering UI but also more complex filtering options. Depending on the set [`dataType`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#datatype) of the column, the correct set of [**filtering operations**](grid.md#filtering-conditions) is loaded inside the filter UI dropdown. Additionally, you can set the [`ignoreCase`]({environment:angularApiUrl}/interfaces/ifilteringexpression.html) and the initial [`condition`]({environment:angularApiUrl}/interfaces/ifilteringexpression.html#condition) properties.
 
 ```html
 <igx-column field="ProductName" filterable="true" dataType="string"></igx-column>
@@ -29,16 +29,16 @@ There's a default filtering strategy provided out of the box, as well as all the
 > [!NOTE]
 > If values of type `string` are used by column of dataType `Date`, the grid won't parse it to `Date` objects and using filtering conditions won't be possible. If you want to use `string` objects, additional logic should be implemented on the application level, in order to parse the values to `Date` object.
 
-You can filter any column or a combination of columns through the grid API. The grid exposes several methods for this task - [`filter`](https://staging.infragistics.local/products/ignite-ui-angular/docs/typescript/classes/igxgridcomponent.html#filter), [`filterGlobal`](https://staging.infragistics.local/products/ignite-ui-angular/docs/typescript/classes/igxgridcomponent.html#filterglobal) and [`clearFilter`](https://staging.infragistics.local/products/ignite-ui-angular/docs/typescript/classes/igxgridcomponent.html#clearfilter).
+You can filter any column or a combination of columns through the grid API. The grid exposes several methods for this task - [`filter`]({environment:angularApiUrl}/classes/igxgridcomponent.html#filter), [`filterGlobal`]({environment:angularApiUrl}/classes/igxgridcomponent.html#filterglobal) and [`clearFilter`]({environment:angularApiUrl}/classes/igxgridcomponent.html#clearfilter).
 
-*   [`filter`]([`filter`](https://staging.infragistics.local/products/ignite-ui-angular/docs/typescript/classes/igxgridcomponent.html#filter)) - filter a single column or a combination of columns.
+*   [`filter`]({environment:angularApiUrl}/classes/igxgridcomponent.html#filter) - filter a single column or a combination of columns.
 
 There are five filtering operand classes exposed:
-   - [`IgxFilteringOperand`](https://staging.infragistics.local/products/ignite-ui-angular/docs/typescript/classes/igxfilteringoperand.html): this is a base filtering operand, which can be inherited when defining custom filtering conditions.
-   - [`IgxBooleanFilteringOperand`](https://staging.infragistics.local/products/ignite-ui-angular/docs/typescript/classes/igxbooleanfilteringoperand.html) defines all default filtering conditions for `boolean` type.
-   - [`IgxNumberFilteringOperand`](https://staging.infragistics.local/products/ignite-ui-angular/docs/typescript/classes/igxnumberfilteringoperand.html) defines all default filtering conditions for `numeric` type.
-   - [`IgxStringFilteringOperand`](https://staging.infragistics.local/products/ignite-ui-angular/docs/typescript/classes/igxstringfilteringoperand.html) defines all default filtering conditions for `string` type.
-   - [`IgxDateFilteringOperand`](https://staging.infragistics.local/products/ignite-ui-angular/docs/typescript/classes/igxdatefilteringoperand.html) defines all default filtering conditions for `Date` type.
+   - [`IgxFilteringOperand`]({environment:angularApiUrl}/classes/igxfilteringoperand.html): this is a base filtering operand, which can be inherited when defining custom filtering conditions.
+   - [`IgxBooleanFilteringOperand`]({environment:angularApiUrl}/classes/igxbooleanfilteringoperand.html) defines all default filtering conditions for `boolean` type.
+   - [`IgxNumberFilteringOperand`]({environment:angularApiUrl}/classes/igxnumberfilteringoperand.html) defines all default filtering conditions for `numeric` type.
+   - [`IgxStringFilteringOperand`]({environment:angularApiUrl}/classes/igxstringfilteringoperand.html) defines all default filtering conditions for `string` type.
+   - [`IgxDateFilteringOperand`]({environment:angularApiUrl}/classes/igxdatefilteringoperand.html) defines all default filtering conditions for `Date` type.
 
 ```typescript
 // Single column filtering
@@ -79,7 +79,7 @@ gridFilteringExpressionsTree.filteringOperands.push(priceFilteringExpressionsTre
 this.grid.filteringExpressionsTree = gridFilteringExpressionsTree;
 ```
 
-*   [`filterGlobal`](https://staging.infragistics.local/products/ignite-ui-angular/docs/typescript/classes/igxgridcomponent.html#filterglobal) - clears all existing filters and applies the new filtering condition to all grid's columns.
+*   [`filterGlobal`]({environment:angularApiUrl}/classes/igxgridcomponent.html#filterglobal) - clears all existing filters and applies the new filtering condition to all grid's columns.
 
 ```typescript
 // Filter all cells for a value which contains `myproduct`
@@ -87,7 +87,7 @@ this.grid.filteringLogic = FilteringLogic.Or;
 this.grid.filterGlobal("myproduct", IgxStringFilteringOperand.instance().condition("contains"), false);
 ```
 
-*   [`clearFilter`](https://staging.infragistics.local/products/ignite-ui-angular/docs/typescript/classes/igxgridcomponent.html#clearfilter) - removes any applied filtering from the target column. If called with no arguments it will clear the filtering of all columns.
+*   [`clearFilter`]({environment:angularApiUrl}/classes/igxgridcomponent.html#clearfilter) - removes any applied filtering from the target column. If called with no arguments it will clear the filtering of all columns.
 
 ```typescript
 // Remove the filtering state from the ProductName column
@@ -99,7 +99,7 @@ this.grid.clearFilter();
 
 #### Initial filtered state
 
-To set the initial filtering state of the grid, set the [`IgxGridComponent`](https://staging.infragistics.local/products/ignite-ui-angular/docs/typescript/classes/igxgridcomponent.html) [`filteringExpressionsTree`](https://staging.infragistics.local/products/ignite-ui-angular/docs/typescript/classes/igxgridcomponent.html#filteringexpressionstree) property to an array of [`IFilteringExpressionsTree`](https://staging.infragistics.local/products/ignite-ui-angular/docs/typescript/interfaces/ifilteringexpressionstree.html) for each column to be filtered.
+To set the initial filtering state of the grid, set the [`IgxGridComponent`]({environment:angularApiUrl}/classes/igxgridcomponent.html) [`filteringExpressionsTree`]({environment:angularApiUrl}/classes/igxgridcomponent.html#filteringexpressionstree) property to an array of [`IFilteringExpressionsTree`]({environment:angularApiUrl}/interfaces/ifilteringexpressionstree.html) for each column to be filtered.
 
 ```typescript
 public ngOnInit() {
@@ -120,7 +120,7 @@ public ngOnInit() {
 
 #### Filtering logic
 
-The [`filteringLogic`](https://staging.infragistics.local/products/ignite-ui-angular/docs/typescript/classes/igxgridcomponent.html#filteringlogic) property of the grid controls how filtering multiple columns will resolve in the grid. You can change it at any time through the grid API or through the grid input property.
+The [`filteringLogic`]({environment:angularApiUrl}/classes/igxgridcomponent.html#filteringlogic) property of the grid controls how filtering multiple columns will resolve in the grid. You can change it at any time through the grid API or through the grid input property.
 
 ```typescript
 import { FilteringLogic } from 'igniteui-angular';
@@ -129,31 +129,38 @@ import { FilteringLogic } from 'igniteui-angular';
 this.grid.filteringLogic = FilteringLogic.OR;
 ```
 
-The default value of [`AND`](https://staging.infragistics.local/products/ignite-ui-angular/docs/typescript/enums/filteringlogic.html#and) returns only the rows that match all the currently applied filtering expressions. Following the example above, a row will be returned when both the 'ProductName' cell value contains 'myproduct' and the 'Price' cell value is greater than 55.
+The default value of [`AND`]({environment:angularApiUrl}/enums/filteringlogic.html#and) returns only the rows that match all the currently applied filtering expressions. Following the example above, a row will be returned when both the 'ProductName' cell value contains 'myproduct' and the 'Price' cell value is greater than 55.
 
-When set to [`OR`](https://staging.infragistics.local/products/ignite-ui-angular/docs/typescript/enums/filteringlogic.html#or), a row will be returned when either the 'ProductName' cell value contains 'myproduct' or the 'Price' cell value is greater than 55.
+When set to [`OR`]({environment:angularApiUrl}/enums/filteringlogic.html#or), a row will be returned when either the 'ProductName' cell value contains 'myproduct' or the 'Price' cell value is greater than 55.
 
 <div class="divider--half"></div>
 
 #### Remote Filtering
-You can provide grid's remote filtering by subscribing to [`onDataPreLoad`](https://staging.infragistics.local/products/ignite-ui-angular/docs/typescript/classes/igxgridcomponent.html#ondatapreload) and [`onFilteringDone`](https://staging.infragistics.local/products/ignite-ui-angular/docs/typescript/classes/igxgridcomponent.html#onfilteringdone) outputs. More information on how to use it you can find in the `Grid Virtualization and Performance` [documentation](grid_virtualization.md#remote-sortingfiltering-virtualization).
+You can provide grid's remote filtering by subscribing to [`onDataPreLoad`]({environment:angularApiUrl}/classes/igxgridcomponent.html#ondatapreload) and [`onFilteringDone`]({environment:angularApiUrl}/classes/igxgridcomponent.html#onfilteringdone) outputs. More information on how to use it you can find in the `Grid Virtualization and Performance` [documentation](grid_virtualization.md#remote-sortingfiltering-virtualization).
 
 <div class="divider--half"></div>
 
 #### Breaking Changes in 6.1.0
-* IgxGridComponent `filteringExpressions` property is removed. Use [`filteringExpressionsTree`](https://staging.infragistics.local/products/ignite-ui-angular/docs/typescript/classes/igxgridcomponent.html#filteringexpressionstree) instead.
-* `filter_multiple` method is removed. Use [`filter`](https://staging.infragistics.local/products/ignite-ui-angular/docs/typescript/classes/igxgridcomponent.html#filter) method and [`filteringExpressionsTree`](https://staging.infragistics.local/products/ignite-ui-angular/docs/typescript/classes/igxgridcomponent.html#filteringexpressionstree) property instead.
-* The [`filter`](https://staging.infragistics.local/products/ignite-ui-angular/docs/typescript/classes/igxgridcomponent.html#filter) method has new signature. It now accepts the following parameters:
+* IgxGridComponent `filteringExpressions` property is removed. Use [`filteringExpressionsTree`]({environment:angularApiUrl}/classes/igxgridcomponent.html#filteringexpressionstree) instead.
+* `filter_multiple` method is removed. Use [`filter`]({environment:angularApiUrl}/classes/igxgridcomponent.html#filter) method and [`filteringExpressionsTree`]({environment:angularApiUrl}/classes/igxgridcomponent.html#filteringexpressionstree) property instead.
+* The [`filter`]({environment:angularApiUrl}/classes/igxgridcomponent.html#filter) method has new signature. It now accepts the following parameters:
   * `name` - the name of the column to be filtered.
   * `value` - the value to be used for filtering.
-  * `conditionOrExpressionTree` (optional) - this parameter accepts object of type [`IFilteringOperation`](https://staging.infragistics.local/products/ignite-ui-angular/docs/typescript/interfaces/ifilteringoperation.html) or [`IFilteringExpressionsTree`](https://staging.infragistics.local/products/ignite-ui-angular/docs/typescript/interfaces/ifilteringexpressionstree.html). If only simple filtering is needed, a filtering operation could be passed as an argument. In case of advanced filtering, an expressions tree containing complex filtering logic could be passed as an argument.
+  * `conditionOrExpressionTree` (optional) - this parameter accepts object of type [`IFilteringOperation`]({environment:angularApiUrl}/interfaces/ifilteringoperation.html) or [`IFilteringExpressionsTree`]({environment:angularApiUrl}/interfaces/ifilteringexpressionstree.html). If only simple filtering is needed, a filtering operation could be passed as an argument. In case of advanced filtering, an expressions tree containing complex filtering logic could be passed as an argument.
   * `ignoreCase` (optional) - whether the filtering is case sensitive or not.
-* [`onFilteringDone`](https://staging.infragistics.local/products/ignite-ui-angular/docs/typescript/classes/igxgridcomponent.html#onfilteringdone) event now have only one parameter of type [`IFilteringExpressionsTree`](https://staging.infragistics.local/products/ignite-ui-angular/docs/typescript/interfaces/ifilteringexpressionstree.html) which contains the filtering state of the filtered column.
-* filtering operands: [`IFilteringExpression`](https://staging.infragistics.local/products/ignite-ui-angular/docs/typescript/interfaces/ifilteringexpression.html) condition property is no longer a direct reference to a filtering condition method, instead it's a reference to an [`IFilteringOperation`](https://staging.infragistics.local/products/ignite-ui-angular/docs/typescript/interfaces/ifilteringoperation.html).
-* [`IgxColumnComponent`](https://staging.infragistics.local/products/ignite-ui-angular/docs/typescript/classes/igxcolumncomponent.html) now exposes a [`filters`](https://staging.infragistics.local/products/ignite-ui-angular/docs/typescript/classes/igxcolumncomponent.html#filters) property, which takes an [`IgxFilteringOperand`](https://staging.infragistics.local/products/ignite-ui-angular/docs/typescript/classes/igxfilteringoperand.html) class reference.
-* Custom filters can be provided to the grid columns by populating the [`operations`](https://staging.infragistics.local/products/ignite-ui-angular/docs/typescript/classes/igxfilteringoperand.html#operations) property of the [`IgxFilteringOperand`](https://staging.infragistics.local/products/ignite-ui-angular/docs/typescript/classes/igxfilteringoperand.html) with operations of [`IFilteringOperation`](https://staging.infragistics.local/products/ignite-ui-angular/docs/typescript/interfaces/ifilteringoperation.html) type.
+* [`onFilteringDone`]({environment:angularApiUrl}/classes/igxgridcomponent.html#onfilteringdone) event now have only one parameter of type [`IFilteringExpressionsTree`]({environment:angularApiUrl}/interfaces/ifilteringexpressionstree.html) which contains the filtering state of the filtered column.
+* filtering operands: [`IFilteringExpression`]({environment:angularApiUrl}/interfaces/ifilteringexpression.html) condition property is no longer a direct reference to a filtering condition method, instead it's a reference to an [`IFilteringOperation`]({environment:angularApiUrl}/interfaces/ifilteringoperation.html).
+* [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) now exposes a [`filters`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#filters) property, which takes an [`IgxFilteringOperand`]({environment:angularApiUrl}/classes/igxfilteringoperand.html) class reference.
+* Custom filters can be provided to the grid columns by populating the [`operations`]({environment:angularApiUrl}/classes/igxfilteringoperand.html#operations) property of the [`IgxFilteringOperand`]({environment:angularApiUrl}/classes/igxfilteringoperand.html) with operations of [`IFilteringOperation`]({environment:angularApiUrl}/interfaces/ifilteringoperation.html) type.
 
 <div class="divider--half"></div>
+
+### API References
+<div class="divider--half"></div>
+
+* [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
+* [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
+* [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#mixin-igx-grid)
 
 ### Additional Resources
 <div class="divider--half"></div>

@@ -38,7 +38,7 @@ export class AppModule {}
 ```
 ### Examples
 
-Use [`igx-buttonGroup`](({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html)) to organize buttons into an Angular styled button group.
+Use [`igx-buttongroup`]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html) to organize buttons into an Angular styled button group.
 
 ```typescript
 //sample.component.ts

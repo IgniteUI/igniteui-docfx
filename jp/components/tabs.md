@@ -7,7 +7,7 @@ _language: ja
 
 ## Tabs
 
-Ignite UI for Angular `igxTabs` コンポーネントは、同様なデータ セットの体系化や切り替えに使用します。`igx-tab-item` および `igx-tabs-group` のラッパーとして機能し、データのコンテナーおよびタブ ヘッダーを表します。Tabs コンポーネントは、タブを上側に配置して複数のタブ項目がある場合にスクロールを許可します。
+Ignite UI for Angular [`igx-tabs`]({environment:angularApiUrl}/classes/igxtabscomponent.html) コンポーネントは、同様なデータ セットの体系化や切り替えに使用します。[`igx-tab-item`]({environment:angularApiUrl}/classes/igxtabitemcomponent.html) および [`igx-tabs-group`]({environment:angularApiUrl}/classes/igxtabsgroupcomponent.html) のラッパーとして機能し、データのコンテナーおよびタブ ヘッダーを表します。Tabs コンポーネントは、タブを上側に配置して複数のタブ項目がある場合にスクロールを許可します。
 
 ### Tabs デモ
 <div class="sample-container loading" style="height: 250px; width: 600px;">
@@ -23,7 +23,7 @@ Ignite UI for Angular `igxTabs` コンポーネントは、同様なデータ �
 
 ### 使用方法
 
-Ignite UI for Angular Tabs コンポーネントを初期化する前に **IgxTabsModule** を **app.module.ts** ファイルにインポートします。
+Ignite UI for Angular Tabs コンポーネントを初期化する前に [`IgxTabsModule`]({environment:angularApiUrl}/classes/igxtabsmodule.html) を **app.module.ts** ファイルにインポートします。
 
 ```typescript
 // app.module.ts
@@ -39,7 +39,7 @@ import { IgxTabsModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-`label` およびコンテンツを持つ複数のタブ グループを指定します。
+[`label`]({environment:angularApiUrl}/classes/igxtabsgroupcomponent.html#label) およびコンテンツを持つ複数のタブ グループを指定します。
 
 ```html
 <igx-tabs>
@@ -65,7 +65,7 @@ export class AppModule {}
 <div class="divider"></div>
 
 ### Tabs タイプ
-2 種類のタブがあります。fixed または contentfit タブを選択するには、`tabsType` 入力を設定します。
+2 種類のタブがあります。[`fixed`]({environment:angularApiUrl}/enums/tabstype.html#fixed) または [`contentfit`]({environment:angularApiUrl}/enums/tabstype.html#contentfit) タブを選択するには、[`tabsType`]({environment:angularApiUrl}/classes/igxtabscomponent.html#tabstype) 入力を設定します。
 - **contentfit タブ** (デフォルト): タブ ヘッダーの幅はコンテンツ (ラベル、アイコン、両方) に基づいて決定され、すべてのタブのパディングが等しくなります。
 選択したタブのタイプに関係なく、タブ ヘッダーの幅は指定した最小幅および最大幅によって制限されます。
 - **fixed タブ**: すべてのタブ ヘッダーは同じ幅を持ち、Tabs コンテナーに一致します。提供されたスペースが足りない場合、スクロール ボタンが表示されます。
@@ -190,7 +190,7 @@ export class AppModule {}
 
 #### igxTab、routerLink ディレクティブ、ルーティング アウトレットの使用
 
- **igxTab**で基本的なルーティングを実装するには、`igxTab` ディレクティブを使用して igx-tabs の項目ヘッダーを再テンプレート化し、`ng-template` に `router-outlet` でリンクを提供します。`ng-template` コンテンツは、デフォルト タブ ヘッダーのスタイルをオーバーライドすることに注意してください。
+ **igxTab**で基本的なルーティングを実装するには、[`igxTab`]({environment:angularApiUrl}/classes/igxtabitemtemplatedirective.html) ディレクティブを使用して igx-tabs の項目ヘッダーを再テンプレート化し、`ng-template` に `router-outlet` でリンクを提供します。`ng-template` コンテンツは、デフォルト タブ ヘッダーのスタイルをオーバーライドすることに注意してください。
 
 ```html
 <!-- tabs-sample-1.component.html -->
@@ -273,7 +273,7 @@ const routes: Routes = [
 export class AppRoutingModule { }
 ```
 
-戻る/次へ ブラウザー ボタンを処理するために ngOnInit に以下のコードを追加し、IgxTabsGroupComponent `select` メソッドを使用して関連性のあるタブ グループをアクティブ化します。
+戻る/次へ ブラウザー ボタンを処理するために ngOnInit に以下のコードを追加し、[`IgxTabsGroupComponent`]({environment:angularApiUrl}/classes/igxtabsgroupcomponent.html) [`select`]({environment:angularApiUrl}/classes/igxtabsgroupcomponent.html#select) メソッドを使用して関連性のあるタブ グループをアクティブ化します。
 
 ```typescript
 // tabs-sample-1.component.ts
@@ -301,7 +301,7 @@ public ngOnInit() {
 </div>
 
 #### 他のルーター アウトレットを Tabs コンテンツに使用
-コンテンツ内にビューを描画する場合は、名前付きルーター アウトレットを使用します。`onTabItemSelected` イベント ハンドラーを実装して特定のビューへ移動、描画します。
+コンテンツ内にビューを描画する場合は、名前付きルーター アウトレットを使用します。[`onTabItemSelected`]({environment:angularApiUrl}/classes/igxtabscomponent.html#ontabitemselected) イベント ハンドラーを実装して特定のビューへ移動、描画します。
 
 ```html
 <!-- tabs-sample-1.component.html -->
@@ -393,83 +393,17 @@ const routes: Routes = [
     data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
 </div>
 
-
+### API References
 <div class="divider"></div>
 
-### API まとめ
-
-以下の表は便利な Tabs コンポーネントの入力および出力を説明します。
-
-#### 入力
-
-以下の入力は **igx-tabs** コンポーネントで利用できます。
-
-| 名前 | 型 | 説明 |
-| :--- | :--- | :--- |
-| `tabsType` | TabsType | タブ ヘッダーのサイズ モードを定義します。有効な設定は `contentfit` (デフォルト) または `fixed` です。 |
-| `selectedIndex` | number | 選択したタブ項目のインデックスを取得または設定します。 |
-
-以下の入力は **igx-tabs-group** コンポーネントで利用できます。
-
-| 名前 | 型 | 説明 |
-| :--- | :--- | :--- |
-| `label` | String | 関連付けられているタブ ヘッダーのラベルを定義します。 |
-| `icon` | String | 関連付けられているタブ ヘッダーのアイコンを定義します。 |
-
-<div class="divider"></div>
-
-#### 出力
-
-以下の出力は **igx-tabs** コンポーネントで利用できます。
-
-| 名前 | 型 | 説明 |
-| :--- | :--- | :--- |
-| `onTabItemSelected` | EventEmitter | タブ項目が選択されたときにイベントを発生します。選択した `IgxTabItemComponent` と `IgxTabsGroupComponent` を返します。 |
-| `onTabItemDeselected` | EventEmitter | タブ項目が選択解除されたときにイベントを発生します。選択解除した `IgxTabItemComponent` と `IgxTabsGroupComponent` を返します。 |
-
-<div class="divider"></div>
-
-#### ゲッター
-
-以下のゲッターは **igx-tabs** コンポーネントで利用できます。
-
-| 名前 | 型 | 説明 |
-| :--- | :--- | :--- |
-| `tabs` | QueryList | すべての IgxTabItemComponent の監視可能コレクションを提供します。 |
-| `groups` | QueryList | すべての IgxTabsGroupComponent の監視可能コレクションを提供します。 |
-| `selectedTabItem` | IgxTabItemComponent | 選択済みの IgxTabItemComponent を `selectedIndex` に基づいて取得します。 |
-
-<div class="divider--half"></div>
-
-以下のゲッターは **igx-tabs-group** コンポーネントで利用できます。
-
-| 名前 | 型 | 説明 |
-| :--- | :--- | :--- |
-| `disabled` | boolean | グループが無効かどうかを取得します。 |
-| `index` | number | グループ コレクションのグループ インデックスを取得します。 |
-| `relatedTab` | IgxTabItemComponent | グループに関連付けられたタブを取得します。 |
-
-<div class="divider--half"></div>
-
-以下のゲッターは **igx-tab-item** コンポーネントで利用できます。
-
-| 名前 | 型 | 説明 |
-| :--- | :--- | :--- |
-| `disabled` | boolean | タブが無効かどうかを取得します。 |
-| `isSelected` | boolean | タブが選択されているかどうかを取得します。 |
-| `index` | number | タブ コレクションのタブのインデックスを取得します。 |
-| `relatedGroup` | IgxTabsGroupComponent | タブに関連付けられているグループを取得します。 |
-
-<div class="divider"></div>
-
-
-#### メソッド
-以下のメソッドは **igx-tabs-group** コンポーネントで利用できます。
-| シグネチャ | 返却値 | 説明 |
-| :--- | :--- | :--- |
-| `select(focusDelay: number)` | `void` | 関連する IgxTabsGroupComponent を選択します。デフォルト値は 50 です。|
-
-<div class="divider"></div>
+* [IgxAvatarComponent]({environment:angularApiUrl}/classes/igxavatarcomponent.html)
+* [IgxCardComponent]({environment:angularApiUrl}/classes/igxcardcomponent.html)
+* [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
+* [IgxNavbarComponent]({environment:angularApiUrl}/classes/igxnavbarcomponent.html)
+* [IgxTabsComponent]({environment:angularApiUrl}/classes/igxtabscomponent.html)
+* [IgxTabsComponent Styles]({environment:sassApiUrl}/index.html#function-igx-tabs-theme)
+* [IgxTabsGroupComponent]({environment:angularApiUrl}/classes/igxtabsgroupcomponent.html)
+* [IgxTabItemComponent]({environment:angularApiUrl}/classes/igxtabitemcomponent.html)
 
 ### 追加のリソース
 
