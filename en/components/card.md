@@ -5,7 +5,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ---
 
 ##Card
-<p class="highlight">The Ignite UI for Angular Card component displays text, images, icons, and buttons in a visually rich presentation that can serve as an entry point to more detailed information. Cards can be used to create a multimedia dashboard. The Card component supports pagination using the same component as the Ignite UI for Angular Grid, with some custom coding required.</p>
+<p class="highlight">The Ignite UI for Angular [`IgxCardComponent`]({environment:angularApiUrl}/classes/igxcardcomponent.html) displays text, images, icons, and buttons in a visually rich presentation that can serve as an entry point to more detailed information. Cards can be used to create a multimedia dashboard. The Card component supports pagination using the same component as the Ignite UI for Angular Grid, with some custom coding required.</p>
 <div class="divider"></div>
 
 ###Card Demo
@@ -23,7 +23,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 Cards allow you to easily display content composed of different types of objects or similar objects whose size and supported actions can vary.
 
 ####Getting Started
-To get started with the Ignite UI for Angular Card, let's first import the **IgxCardModule** inside our **app.module.ts** file:
+To get started with the Ignite UI for Angular Card, let's first import the [`IgxCardModule`]({environment:angularApiUrl}/classes/igxcardmodule.html) inside our **app.module.ts** file:
 
 ```typescript
 // app.module.ts
@@ -65,7 +65,7 @@ If all went well, you should see the following card in your browser:
 
 ####Adding Avatar and Images
 
-Yes, Brad Stanley is popular, but maybe we want to make his card a bit more interesting. We can add a nice picture avatar to the left of his name and a larger Audi TT image. To do that let's grab the [**IgxAvatar**](https://www.infragistics.com/products/ignite-ui-angular/angular/components/avatar.html) module and import it in our **app.module.ts** file.
+Yes, Brad Stanley is popular, but maybe we want to make his card a bit more interesting. We can add a nice picture avatar to the left of his name and a larger Audi TT image. To do that let's grab the [**IgxAvatar**](avatar.md) module and import it in our **app.module.ts** file.
 ```typescript
 // app.module.ts
 
@@ -115,7 +115,7 @@ At this point the card should look similar to the following:
 ####Adding Actions
 
 Now, we have a rich and very informative card, but it does seem like it is missing something, right? The good news is we can use some of our other components to enrich the experience and add some functionality.
-Let's put a few options to directly access social media from within the card. To do that we will grab two other modules - the [**IgxIcon**](https://www.infragistics.com/products/ignite-ui-angular/angular/components/icon.html) and the [**IgxButton**](https://www.infragistics.com/products/ignite-ui-angular/angular/components/button.html), and import them in our **app.module.ts** file.
+Let's put a few options to directly access social media from within the card. To do that we will grab two other modules - the [**IgxIcon**](icon.md) and the [**IgxButton**](button.md), and import them in our **app.module.ts** file.
 
 ```typescript
 // app.module.ts
@@ -162,7 +162,7 @@ Next, we need to update the template for our card to show these action buttons:
 </igx-card>
 ```
 
-We added two icons from the official [**material icons set**](https://material.io/icons/) by setting **igx-icon** component's fontSet property to "material". The list of these two icons is defined in our **infocard.component.ts** file as follows:
+We added two icons from the official [**material icons set**](https://material.io/icons/) by setting [`IgxIconComponent`]({environment:angularApiUrl}/classes/igxiconcomponent.html)'s [`fontSet`]({environment:angularApiUrl}/classes/igxiconcomponent.html#font) property to "material". The list of these two icons is defined in our **infocard.component.ts** file as follows:
 
 ```typescript
 // infocard.comoponent.ts
@@ -183,24 +183,26 @@ Easy, right? Let's see how it turned out in the browser:
 
 <div class="divider--half"></div>
 
-<!--### API Summary-->
-#### Styles
-The following built-in CSS classes helped us achieve this card layout:
-| Name | Description |
-| :--- | :--- |
-| `igx-card-header` | Makes the header a flexible container which stacks its child items in a row from left to right and wraps them if necessary. Each item is centered and occupies the whole width of the container which results into displaying the title and subtitle one above the other. |
-| `igx-card-header__title` | Extends the header element class with margin, color and font-size values specific to title elements. |
-| `igx-card-header__subtitle` | Extends the header element class with margin, color and font-size values specific to subtitle elements. |
-| `igx-card-content` | Makes the content area a flexible container which stacks its child items in a row from left to right and wraps them if necessary. |
-| `igx-card-content__text` | Extends the content element class with margin, color and font-size values specific to text elements. |
-| `igx-card-actions__igroup` | Makes the group a flexible container with a specific max-height, which stacks its child items in a row but does not wrap them. All items are of equal size and color, and do not shrink during resizing. |
-| `igx-card-actions__igroup--start` | Aligns the items to the left. |
-
-
 ####Summary
 In this article we covered a lot of ground with the card component. First, we created a very simple card with text content only. Then added some images to make the card a bit more appealing. Finally, we used some additional Ignite UI for Angular components inside our card, like avatars, buttons and icons, to enrich the experience and add some functionality. The card component is capable of displaying more different layouts worth exploring in the Card Demo in the beginning of this article.
 
+### API and Style References
+
+For more detailed information regarding the card's API, refer to the following links:
+* [`IgxCardComponent API`]({environment:angularApiUrl}/classes/igxcardcomponent.html)
+
+The following built-in CSS styles helped us achieve this card layout:
+
+* [`IgxCardComponent Styles`]({environment:sassApiUrl}/index.html#mixin-igx-card)
+
+Additional components and/or directives that were used:
+
+* [`IgxAvatarComponent`]({environment:angularApiUrl}/classes/igxavatarcomponent.html)
+* [`IgxIconComponent`]({environment:angularApiUrl}/classes/igxiconcomponent.html)
+* [`IgxButtonDirective`]({environment:angularApiUrl}/classes/igxbuttondirective.html)
+
 <div class="divider"></div>
+
 ###Additional Resources
 
 <div class="divider--half"></div>
