@@ -20,7 +20,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 > To start using Ignite UI for Angular components in your own projects, make sure you have configured all necessary dependencies and have performed the proper setup of your project. You can learn how to do this in the [**installation**](https://www.infragistics.com/products/ignite-ui-angular/getting-started#installation) topic.
 
 ### Usage
-To get started with the Ignite UI for Angular Snack Bar, let's first import the **IgxSnackbarModule** in our **app.module.ts** file:
+To get started with the Ignite UI for Angular Snack Bar, let's first import the [`IgxSnackbarModule`]({environment:angularApiUrl}/classes/igxsnackbarmodule.html) in our **app.module.ts** file:
 
 ```typescript
 // app.module.ts
@@ -36,7 +36,7 @@ import { IgxSnackbarModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 #### Show Snackbar
-In order to display the snackbar component, use its `show()` method and call it on a button click. Use the `message` input to set a text message.
+In order to display the snackbar component, use its [`show()`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#show) method and call it on a button click. Use the [`message`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#message) input to set a text message.
 
 ```html
 <!--sample.component.html-->
@@ -54,7 +54,7 @@ If the sample is configured properly, a snackbar appears displaying a text messa
 </div>
 
 #### Hide/Auto Hide
-Once opened, the snackbar disappears after a period specified by the `displayTime` input which is set initially to 4000 milliseconds. This behavior is enabled by default but you can change this by setting `autoHide` to **false**. In this way, the snackbar will remain visible. Using the snackbar `hide()` method, you can close the component in the code.
+Once opened, the snackbar disappears after a period specified by the [`displayTime`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#displaytime) input which is set initially to 4000 milliseconds. This behavior is enabled by default but you can change this by setting [`autoHide`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#autohide) to **false**. In this way, the snackbar will remain visible. Using the snackbar [`hide()`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#hide) method, you can close the component in the code.
 
 ```html
 <!--sample.component.html-->
@@ -80,7 +80,7 @@ If the sample is configured properly, a snackbar appears when the button is clic
 </div>
 
 #### Display Time
-Use `displayTime` and set it to an interval in milliseconds to configure how long the snackbar component is visible. 
+Use [`displayTime`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#displaytime) and set it to an interval in milliseconds to configure how long the snackbar component is visible. 
 
 ```html
 <!--sample.component.html-->
@@ -183,38 +183,10 @@ public restore() {
 
 <div class="divider--half"></div>
 
-### API Summary
-The following tables summarize some of the useful **igx-snackbar** component inputs, outputs and methods.
-#### Inputs
-The following inputs are available in the **igx-snackbar** component:
+### API References
+In this article we learned how to use and configure the [`IgxSnackbarComponent`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html). For more details in regards its API, take a look at the links below:
 
-| Name | Type | Description |
-| :--- | :--- | :--- |
-| `actionText` | string | Specifies the text to display for the action button.
-| `autoHide` | boolean | Specifies whether the snackbar should be automatically hidden after `displayTime`. By default, `autoHide` is set to **true**. |
-| `displayTime` | number | Specifies the interval in milliseconds in which the snackbar is visible. By default, `displayTime` is set to 4000 milliseconds. |
-| `isVisible` | boolean | Specifies the component visual state. By default, `isVisible` is set to **false**.|
-| `message` | string | Specifies the displayed message. |
-
-<div class="divider--half"></div>
-
-#### Outputs
-The following events are available in the **igx-snackbar** component:
-
-| Name | Description |
-| :--- | :--- |
-| `animationStarted`  | Emits an event when the snackbar animation starts. |
-| `animationDone`  | Emits an event when the snackbar animation ends. |
-| `onAction`  | Emits an event when an action is executed and provides a reference to the snackbar component as argument. |
-
-#### Methods
-
-The following methods are available for the **igx-snackbar** component:
-
-| Signature       | Description                     |
-| :-------------- | :------------------------------ |
-| `show()`  | Shows the snackbar component and hides it after `displayTime` if `autoHide` is set to **true**. |
-| `hide()`  | Hides the snackbar component. |
+* [`IgxSnackbarComponent`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html)
 
 ###Additional Resources
 
