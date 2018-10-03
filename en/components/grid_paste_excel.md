@@ -6,11 +6,11 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ## Paste from Excel
 
-The Ignite UI for Angular `IgxGrid` can read Excel data that is copied to the clipboard. In this section we will show you how to do this with some custom code.
+The Ignite UI for Angular [`IgxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) can read Excel data that is copied to the clipboard. In this section we will show you how to do this with some custom code.
 
 ### Paste from Excel Demo
 
-This sample demonstrates how to implement pasting from Excel into the `igxGrid`.
+This sample demonstrates how to implement pasting from Excel into the [`igxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html).
 To work with the sample open up any Excel spreadsheet, copy some rows, and paste it into the grid using the keyboard (Ctrl + V, Shift + Insert, Command + V).
 
 On the top there is a dropdown button with 2 options:
@@ -33,7 +33,7 @@ The new data after the paste is decorated in Italic.
 
 ### Usage
 
-You should add the `paste-handler` directive (you can find its code in the next section) to the `igxGrid` and handle its `onDataProcessed` event. The `onDataProcessed` event has one parameter that gives you access to the Excel data in the form of an array. For reference see the `addRecords` and `updateRecords` methods.
+You should add the `paste-handler` directive (you can find its code in the next section) to the [`igxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) and handle its `onDataProcessed` event. The `onDataProcessed` event has one parameter that gives you access to the Excel data in the form of an array. For reference see the `addRecords` and `updateRecords` methods.
 
 ```html
 <igx-grid #grid1 [data]="data" [width]="'100%'" [height]="'505px'" [autoGenerate]="false" paste-handler (onDataProcessed)="dataPasted($event)" [primaryKey]="'ID'">
@@ -218,6 +218,9 @@ export class PasteHandler {
 }
 
 ```
+
+## API
+* [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
 
 ## Additional Resources
 <div class="divider--half"></div>
