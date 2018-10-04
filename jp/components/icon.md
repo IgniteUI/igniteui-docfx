@@ -104,12 +104,12 @@ public ngOnInit() {
     <iframe id="svg-icon-sample-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/svg-icon-sample"  onload="onSampleIframeContentLoaded(this);">
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="svg-icon-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">                view on stackblitz
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="svg-icon-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">                view on stackblitz
     </button>
 </div>
 
 ### Breaking Changes in 6.2.0
-* `glyphName` property is removed from [`IgxIconComponent`]({environment:angularApiUrl}/classes/igxiconcomponent.html). This means that the icon name should be explicitly defined between the opening and closing tags.
+* The [`IgxIconComponent`]({environment:angularApiUrl}/classes/igxiconcomponent.html) `iconName` property is deprecated. To set the icon name for 'material' icons, place the name of the icon between the opening and closing tags. For 'Font Awesome' and SVG icons, use the `name` property.
 
 ### API リファレンス
 <div class="divider--half"></div>
