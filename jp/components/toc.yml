@@ -224,6 +224,9 @@
   - name: スクロール ストラテジー
     href: overlay_scroll.md
     new: true
+- name: Drag and Drop Directives
+  href: drag_drop.md
+  new: true
 - name: メニュー
   header: true
 - name: Navigation Drawer
