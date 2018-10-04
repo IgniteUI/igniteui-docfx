@@ -43,12 +43,12 @@ export class AppModule {}
 Using [`igx-icon`]({environment:angularApiUrl}/classes/igxiconcomponent.html) to set an [`active`]({environment:angularApiUrl}/classes/igxiconcomponent.html#active) home icon with magenta [`color`]({environment:angularApiUrl}/classes/igxiconcomponent.html#iconcolor).
 
 ```html
-<igx-icon name="home" color="magenta" ></igx-icon>
+<igx-icon color="magenta">home</igx-icon>
 ```
 
 Setting an inactive icon.
 ```html
-<igx-icon name="volume_off" [isActive]="false"></igx-icon>
+<igx-icon [isActive]="false">volume_off</igx-icon>
 ```
 
 Setting icon with content projection.
@@ -59,7 +59,7 @@ Setting icon with content projection.
 
 You can set the icon's size through CSS. Create a custom CSS class and name it *custom-size*. The icon's size is changed by the **font-size** property. Additionally to center it, set the **width** and the **height** to the same value.
 ```html
-<igx-icon name="phone_iphone" color="#0375be" class="custom-size"></igx-icon>
+<igx-icon color="#0375be" class="custom-size">phone_iphone</igx-icon>
 ```
 
 ```css
@@ -74,6 +74,40 @@ You can set the icon's size through CSS. Create a custom CSS class and name it *
 <div class="sample-container" style="height: 80px; width: 300px">
     <iframe id="icon-sample2-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/icon-sample2"  onload="onSampleIframeContentLoaded(this);">
 </div>
+
+You can also use SVG image as an icon. First, you need to inject [`IgxIconService`]({environment:angularApiUrl}/classes/igxiconservice.html) dependency in a component's constructor. Use the [`addSvgIcon`]({environment:angularApiUrl}/classes/igxiconservice.html#addsvgicon) method to import the SVG file in cache. Icon name and file URL path are method's mandatory parameters, you can specify font-set ase well. After that, you can use the SVG files in the HTML markup. Alternatively, you can use the `addSvgIconFromText` method to import the SVG file providing the SVG text content instead of the file URL.
+
+* Have in mind that if there are two icons with the same name and the same font-set - SVG icon will be displayed with priority.
+* It is better not to provide image width and height in the SVG file.
+* You may need additional polyfill scripts ("polyfills") for the browsers that you must support.
+
+```typescript
+// svg-icon-sample.ts
+
+constructor(private iconService: IgxIconService) { }
+
+public ngOnInit() {
+    // register custom SVG icons
+    this.iconService.addSvgIcon("contains", "/assets/images/svg/contains.svg", "filter-icons");
+}
+```
+
+```html
+<!-- svg-icon-sample.html -->
+
+<igx-icon name="contains" fontSet="filter-icons"></igx-icon>
+```
+
+<div class="sample-container" style="height: 50px">
+    <iframe id="svg-icon-sample-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/svg-icon-sample"  onload="onSampleIframeContentLoaded(this);">
+</div>
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="svg-icon-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">                view on stackblitz
+    </button>
+</div>
+
+### Breaking Changes in 6.2.0
+* `glyphName` property is removed from [`IgxIconComponent`]({environment:angularApiUrl}/classes/igxiconcomponent.html). This means that the icon name should be explicitly defined between the opening and closing tags.
 
 ### API References
 <div class="divider--half"></div>
