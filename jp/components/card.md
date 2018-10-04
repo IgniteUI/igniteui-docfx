@@ -7,7 +7,7 @@ _language: ja
 
 ## Card
 
-<p class="highlight">The Ignite UI for Angular [`IgxCardComponent`]({environment:angularApiUrl}/classes/igxcardcomponent.html) displays text, images, icons, and buttons in a visually rich presentation that can serve as an entry point to more detailed information. Cards can be used to create a multimedia dashboard. The Card component supports pagination using the same component as the Ignite UI for Angular Grid, with some custom coding required.</p>
+<p class="highlight">Ignite UI for Angular [`IgxCardComponent`]({environment:angularApiUrl}/classes/igxcardcomponent.html) は、テキスト、画像、アイコン、およびボタンを表示します。この要素は詳細情報のエントリ ポイントになります。Card を使用してマルチメディア ダッシュボードを作成できます。Card コンポーネントは、Ignite UI for Angular Grid と同じコンポーネントを使用してページングをサポートします。ただし、カスタム コードが必要です。</p>
 <div class="divider"></div>
 
 ### Card デモ
@@ -179,19 +179,19 @@ public icons = ['add', 'star'];
 
 <div class="divider--half"></div>
 
-####Summary
-In this article we covered a lot of ground with the card component. First, we created a very simple card with text content only. Then added some images to make the card a bit more appealing. Finally, we used some additional Ignite UI for Angular components inside our card, like avatars, buttons and icons, to enrich the experience and add some functionality. The card component is capable of displaying more different layouts worth exploring in the Card Demo in the beginning of this article.
+####まとめ
+このトピックでは Card コンポーネントの詳細について説明しました。テキスト コンテンツのみを含むベーシックなカードを作成し、次に画像、最後に他の Ignite UI for Angular コンポーネントをカードで使用してアバター、ボタン、およびアイコンを追加して機能を改善しました。カード コンポーネントはその他のレイアウトも表示できます。詳細については、このトピックの最初の部分の Card デモを参照してください。
 
-### API and Style References
+### API と スタイル リファレンス
 
-For more detailed information regarding the card's API, refer to the following links:
+カード API に関する詳細な情報は、以下のリンクのトピックを参照してください。
 * [`IgxCardComponent API`]({environment:angularApiUrl}/classes/igxcardcomponent.html)
 
-The following built-in CSS styles helped us achieve this card layout:
+以下の定義済み CSS スタイルを使用してカード レイアウトを構成しました。
 
 * [`IgxCardComponent Styles`]({environment:sassApiUrl}/index.html#mixin-igx-card)
 
-Additional components and/or directives that were used:
+使用したその他のコンポーネントとディレクティブ:
 
 * [`IgxAvatarComponent`]({environment:angularApiUrl}/classes/igxavatarcomponent.html)
 * [`IgxIconComponent`]({environment:angularApiUrl}/classes/igxiconcomponent.html)
@@ -199,7 +199,7 @@ Additional components and/or directives that were used:
 
 <div class="divider"></div>
 
-### 追加のリソース
+### その他のリソース
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。

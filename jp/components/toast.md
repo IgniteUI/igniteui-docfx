@@ -131,13 +131,13 @@ public show(toast) {
 
 <div class="divider--half"></div>
 
-### API References
+### API リファレンス
 
-In this article we learned how to use and configure the [`IgxToastComponent`]({environment:angularApiUrl}/classes/igxtoastcomponent.html). For more details in regards its API, take a look at the links below:
+このトピックでは、[`IgxToastComponent`]({environment:angularApiUrl}/classes/igxtoastcomponent.html) を使用と構成方法を説明しました。API の詳細については以下のリンク先を参照してください。
 
 * [`IgxToastComponent`]({environment:angularApiUrl}/classes/igxtoastcomponent.html)
 
-### 追加のリソース
+### その他のリソース
 
 コミュニティに参加して新しいアイデアをご提案ください。
 * [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)

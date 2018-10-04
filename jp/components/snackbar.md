@@ -194,13 +194,13 @@ public restore() {
 
 <div class="divider--half"></div>
 
-### API References
+### API リファレンス
 
-In this article we learned how to use and configure the [`IgxSnackbarComponent`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html). For more details in regards its API, take a look at the links below:
+このトピックでは、[`IgxSnackbarComponent`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html) を使用と構成方法を説明しました。API の詳細については以下のリンク先を参照してください。
 
 * [`IgxSnackbarComponent`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html)
 
-### 追加のリソース
+### その他のリソース
 
 <div class="divider--half"></div>
 

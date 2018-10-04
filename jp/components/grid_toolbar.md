@@ -131,9 +131,9 @@ public toolbarExportingHandler(args) {
 
 <div class="divider"></div>
 
-### API References
+### API リファレンス
 
-以下は、Grid ツールバー サービスのその他の API です。
+以下は、Grid ツールバー サービスのその他の API のリンクです。
 
 [`IgxGridToolbarComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html)
 
