@@ -97,7 +97,7 @@ Ignite UI for Angular Hint は、入力の下に配置されるヘルパー テ�
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="input-group-sample-5-frame" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
 </div>
 
-## API References
+## API リファレンス
 * [IgxHintDirective]({environment:angularApiUrl}/classes/igxhintdirective.html)
 * [IgxInputDirective]({environment:angularApiUrl}/classes/igxinputdirective.html)
 * [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
@@ -106,7 +106,7 @@ Ignite UI for Angular Hint は、入力の下に配置されるヘルパー テ�
 * [IgxPrefixDirective]({environment:angularApiUrl}/classes/igxprefixdirective.html)
 * [IgxSuffixDirective]({environment:angularApiUrl}/classes/igxsuffixdirective.html)
 
-## 追加のリソース
+## その他のリソース
 関連トピック:
 
 * [リアクティブ フォームの統合](input_group_reactive_forms.md)

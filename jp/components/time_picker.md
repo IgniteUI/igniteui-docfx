@@ -193,7 +193,7 @@ public date: Date = new Date(Date.now());
     <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="time-picker-sample-5" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
 </div>
 
-### API References
+### API リファレンス
 <div class="divider--half"></div>
 
 * [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
@@ -206,7 +206,7 @@ public date: Date = new Date(Date.now());
 * [IgxTimePickerComponent Styles]({environment:sassApiUrl}/index.html#function-igx-time-picker-theme)
 * [IgxTimePickerTemplateDirective]({environment:angularApiUrl}/classes/igxtimepickertemplatedirective.html)
 
-### 追加のリソース
+### その他のリソース
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。

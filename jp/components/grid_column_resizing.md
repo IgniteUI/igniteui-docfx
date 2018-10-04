@@ -73,14 +73,14 @@ column.autosize();
 
 ピン固定列もサイズ変更できます。ただし、ピン固定される列のコンテナーがグリッド全体の幅の 80% より大きくできないためサイズ変更が制限されます。ピン固定列の自動サイズ調整で、新しい幅がピン固定列コンテナーがグリッド全体の幅の 80% より大きい場合、自動サイズ調整操作は無視されます。これは、ピン固定されていない列を常にユーザーに表示して利用可能にするためです。
 
-### API References
+### API リファレンス
 <div class="divider--half"></div>
 
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
 * [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#mixin-igx-grid)
 
-### 追加のリソース
+### その他のリソース
 <div class="divider--half"></div>
 
 * [Grid の概要](grid.md)

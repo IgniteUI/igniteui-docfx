@@ -108,15 +108,15 @@ Avatar の形式は四角または丸で、3 つのサイズ オプション (�
 </igx-avatar>
 ```
 
-### API References
+### API リファレンス
 <div class="divider--half"></div>
 
 * [IgxAvatarComponent]({environment:angularApiUrl}/classes/igxavatarcomponent.html)
 * [IgxAvatarComponent Styles]({environment:sassApiUrl}/index.html#function-igx-avatar-theme)
 
-### Additional Resources
+### その他のリソース
 <div class="divider--half"></div>
+コミュニティに参加して新しいアイデアをご提案ください。
 
-Our community is active and always welcoming to new ideas.
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

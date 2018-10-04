@@ -217,7 +217,7 @@ export class Person {
 }
 ```
 
-### API References
+### API リファレンス
 <div class="divider--half"></div>
 
 * [IgxInputDirective]({environment:angularApiUrl}/classes/igxinputdirective.html)
@@ -227,7 +227,7 @@ export class Person {
 * [IgxPrefixDirective]({environment:angularApiUrl}/classes/igxprefixdirective.html)
 * [IgxSnackbarComponent]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html)
 
-### 追加のリソース
+### その他のリソース
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。

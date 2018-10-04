@@ -85,13 +85,13 @@ export class AppModule {}
 　　　　<iframe src='{environment:demosBaseUrl}/switch-sample-2' width="100%" height="100%" seamless frameBorder="0"></iframe>
 </div>
 
-### API References
+### API リファレンス
 <div class="divider--half"></div>
 
 * [IgxSwitchComponent]({environment:angularApiUrl}/classes/igxswitchcomponent.html)
 * [IgxSwitchComponent Styles]({environment:sassApiUrl}/index.html#function-igx-switch-theme)
 
-### 追加のリソース
+### その他のリソース
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。

@@ -100,12 +100,12 @@ public user = {
 ### Input Group
 Input Group コンポーネントの詳細については[ここ](input_group.md)を参照してください。
 
-## API References
+## API リファレンス
 * [IgxInputDirective]({environment:angularApiUrl}/classes/igxinputdirective.html)
 * [IgxLabelDirective]({environment:angularApiUrl}/classes/igxlabeldirective.html)
 * [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
 
-## 追加のリソース
+## その他のリソース
 関連トピック:
 
 * [Input Group](input_group.md)

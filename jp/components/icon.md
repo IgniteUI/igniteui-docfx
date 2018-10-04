@@ -77,13 +77,13 @@ CSS でアイコン サイズを設定するには、カスタム CSS を作成�
     <iframe id="icon-sample2-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/icon-sample2"  onload="onSampleIframeContentLoaded(this);">
 </div>
 
-### API References
+### API リファレンス
 <div class="divider--half"></div>
 
 * [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
 * [IgxIconComponent Styles]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
 
-### 追加のリソース
+### その他のリソース
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。

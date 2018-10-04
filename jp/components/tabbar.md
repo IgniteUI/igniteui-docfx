@@ -343,7 +343,7 @@ public contactsList: object[] = [{
 
 このトピックの [Bottom Navigation デモ](#bottom-navigation-デモ) セクションで結果を確認できます。
 
-### API References
+### API リファレンス
 <div class="divider--half"></div>
 
 * [IgxAvatarComponent]({environment:angularApiUrl}/classes/igxavatarcomponent.html)
@@ -355,7 +355,7 @@ public contactsList: object[] = [{
 * [IgxTabComponent]({environment:angularApiUrl}/classes/igxtabcomponent.html)
 * [IgxTabPanelComponent]({environment:angularApiUrl}/classes/igxtabpanelcomponent.html)
 
-### 追加のリソース
+### その他のリソース
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。

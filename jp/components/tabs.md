@@ -393,7 +393,7 @@ const routes: Routes = [
     data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
 </div>
 
-### API References
+### API リファレンス
 <div class="divider"></div>
 
 * [IgxAvatarComponent]({environment:angularApiUrl}/classes/igxavatarcomponent.html)
@@ -405,7 +405,7 @@ const routes: Routes = [
 * [IgxTabsGroupComponent]({environment:angularApiUrl}/classes/igxtabsgroupcomponent.html)
 * [IgxTabItemComponent]({environment:angularApiUrl}/classes/igxtabitemcomponent.html)
 
-### 追加のリソース
+### その他のリソース
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。

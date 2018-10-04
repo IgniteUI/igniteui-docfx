@@ -121,14 +121,14 @@ public ngOnInit() {
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="buttonGroup-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
-### API References
+### API リファレンス
 <div class="divider--half"></div>
 
 * [IgxButtonDirective]({environment:angularApiUrl}/classes/igxbuttondirective.html)
 * [IgxButtonGroupComponent]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html)
 * [IgxButtonGroup Styles]({environment:sassApiUrl}/index.html#function-igx-button-group-theme)
 
-### 追加のリソース
+### その他のリソース
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。

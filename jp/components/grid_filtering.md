@@ -154,14 +154,14 @@ this.grid.filteringLogic = FilteringLogic.OR;
 * [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) は、[`IgxFilteringOperand`]({environment:angularApiUrl}/classes/igxfilteringoperand.html) クラス参照を取得する [`filters`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#filters) プロパティを公開しました。
 * カスタム フィルターは、[`IFilteringOperation`]({environment:angularApiUrl}/interfaces/ifilteringoperation.html) 型の演算で [`IgxFilteringOperand`]({environment:angularApiUrl}/classes/igxfilteringoperand.html) の[`operations`]({environment:angularApiUrl}/classes/igxfilteringoperand.html#operations) プロパティを生成してグリッド列に提供されます。
 
-### API References
+### API リファレンス
 <div class="divider--half"></div>
 
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
 * [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#mixin-igx-grid)
 
-### 追加のリソース
+### その他のリソース
 <div class="divider--half"></div>
 
 * [グリッドの概要](grid.md)

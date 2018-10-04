@@ -62,9 +62,9 @@ public beatsPerMinuteClasses = {
 }
 ```
 
-::ng-deep または `ViewEncapsulation.None` を使用してカスタム スタイルを現在のコンポーネントとその子コンポーネントに適用します。
+::ng-deep または **`ViewEncapsulation.None`** を使用してカスタム スタイルを現在のコンポーネントとその子コンポーネントに適用します。
 
-### API References
+### API リファレンス
 <div class="divider--half"></div>
 
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)

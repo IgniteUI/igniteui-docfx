@@ -138,14 +138,14 @@ raised ボタンを作成できます。　
 | `icon`     |        最もシンプルなボタン タイプ。アイコンをボタンとして使用する場合に使用します。         |
 | `navbar`   |     icon ボタン タイプと同じですが、igx-navbar コンポーネントで使用するために最適化されています。      |
 
-### API References
+### API リファレンス
 <div class="divider--half"></div>
 
 * [IgxButtonDirective]({environment:angularApiUrl}/classes/igxbuttondirective.html)
 * [IgxButton Styles]({environment:sassApiUrl}/index.html#function-igx-button-theme)
 * [IgxRippleDirective]({environment:angularApiUrl}/classes/igxrippledirective.html)
 
-### 追加のリソース
+### その他のリソース
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。

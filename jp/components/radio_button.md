@@ -149,14 +149,14 @@ import { IgxRadioModule } from 'igniteui-angular';
 public fruits = ["Apple", "Mango", "Banana", "Orange"];
 ```
 
-## API References
+## API リファレンス
 <div class="divider--half"></div>
 
 * [IgxRadioComponent]({environment:angularApiUrl}/classes/igxradiocomponent.html)
 * [IgxRadioGroupDirective]({environment:angularApiUrl}/classes/igxradiogroupdirective.html)
 * [IgxRadioComponent Styles]({environment:sassApiUrl}/index.html#function-igx-radio-theme)
 
-### 追加のリソース
+### その他のリソース
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。

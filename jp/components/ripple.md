@@ -114,13 +114,13 @@ export class AppModule {}
 > [!NOTE]
 > リップル アニメーションで相対的な位置を持つ要素を使用します。また、[`igxRippleTarget`]({environment:angularApiUrl}/classes/igxrippledirective.html#rippletarget) を使用して子要素を対象にすることもできます。
 
-### API References
+### API リファレンス
 <div class="divider--half"></div>
 
 * [IgxRippleDirective]({environment:angularApiUrl}/classes/igxrippledirective.html)
 * [IgxRipple Styles]({environment:sassApiUrl}/index.html#function-igx-ripple-theme)
 
-### 追加のリソース
+### その他のリソース
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
