@@ -544,7 +544,7 @@ public leftPanPerformed(args) {
 * [IgxListComponent Styles]({environment:sassApiUrl}/index.html#mixin-igx-list)
 * [IgxListItemComponent API]({environment:angularApiUrl}/classes/igxlistitemcomponent.html)
 
-Additional components that were used:
+使用したその他のコンポーネント:
 
 * [IgxAvatarComponent API]({environment:angularApiUrl}/classes/igxavatarcomponent.html)
 * [IgxIconComponent API]({environment:angularApiUrl}/classes/igxiconcomponent.html)

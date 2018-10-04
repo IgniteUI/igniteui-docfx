@@ -166,7 +166,7 @@ this.csvExportService.export(this.igxGrid1, new IgxCsvExporterOptions("ExportedD
 * [IgxCsvExporterService API]({environment:angularApiUrl}/classes/igxcsvexporterservice.html)
 * [IgxCsvExporterOptions API]({environment:angularApiUrl}/classes/igxcsvexporteroptions.html)
 
-Additional components that were used:
+使用したその他のコンポーネント:
 
 * [**IgxGrid**](grid.md)
 

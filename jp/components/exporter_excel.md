@@ -159,7 +159,7 @@ The Excel Exporter service has a few more APIs to explore, which are listed belo
 * [`IgxExcelExporterService API`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html)
 * [`IgxExcelExporterOptions API`]({environment:angularApiUrl}/classes/igxexcelexporteroptions.html)
 
-Additional components that were used:
+使用したその他のコンポーネント:
 
 * [**IgxGrid**](grid.md)
 
