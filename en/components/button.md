@@ -78,7 +78,7 @@ You can create a rased button.
 A floating action button and use an icon to display:
 ```html
 <button igxButton="fab" igxButtonColor="#FBB13C" igxButtonBackground="#340068" igxRipple="#FBB13C">
-  <igx-icon fontSet="material" name="edit"></igx-icon>
+  <igx-icon fontSet="material">edit</igx-icon>
 </button>
 ```
 <div class="sample-container" style="height: 74px">
@@ -88,12 +88,12 @@ A floating action button and use an icon to display:
 Or use icons as buttons:
 ```html
 <button igxButton="icon" igxRipple igxRippleCentered="true">
-  <igx-icon fontSet="material" name="search"></igx-icon>
+  <igx-icon fontSet="material">search</igx-icon>
 </button>
 ```
 ```html
 <button igxButton="icon" igxRipple igxButtonColor="#E41C77" igxRippleCentered="true">
-  <igx-icon fontSet="material" name="favorite"></igx-icon>
+  <igx-icon fontSet="material">favorite</igx-icon>
 </button>
 ```
 Icon results:

@@ -129,10 +129,10 @@ public chipsOrderChanged(event) {
 
 ```html
 <igx-chip *ngFor="let chip of chipList" [id]="chip.id">
-    <igx-icon igxPrefix fontSet="material" [name]="'drag_indicator'"></igx-icon>
+    <igx-icon igxPrefix fontSet="material">drag_indicator</igx-icon>
     <span #label [class]="'igx-chip__text'">{{chip.text}}</span>
     <span igxSuffix *ngIf="removable" igxButton="icon" (click)="onClick()">
-        <igx-icon fontSet="material" [name]="'close'"></igx-icon>
+        <igx-icon fontSet="material">close</igx-icon>
     </span>
 </igx-chip>
 ```

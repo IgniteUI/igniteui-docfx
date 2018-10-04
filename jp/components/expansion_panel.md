@@ -295,7 +295,7 @@ export class ExpansionPanelComponent {
     <igx-expansion-panel-header [disabled]="false">
         <igx-expansion-panel-title class="sample-title">Personal Information</igx-expansion-panel-title>
         <igx-expansion-panel-icon>
-            <igx-icon fontSet="material" [name]="collapsed() ? 'expand_more':'expand_less'"></igx-icon>
+            <igx-icon fontSet="material">{{collapsed() ? 'expand_more':'expand_less'}}</igx-icon>
         </igx-expansion-panel-icon>
     </igx-expansion-panel-header>
     <igx-expansion-panel-body class="body">
@@ -303,7 +303,7 @@ export class ExpansionPanelComponent {
             <input igxInput name="fullName" type="text" [(ngModel)]="user.fullName"/>
             <label igxLabel for="fullName">Full Name</label>
             <igx-suffix>
-                <igx-icon name="person"></igx-icon>
+                <igx-icon>person</igx-icon>
             </igx-suffix>
         </igx-input-group>
         <igx-input-group class="group">
@@ -311,7 +311,7 @@ export class ExpansionPanelComponent {
             <label igxLabel for="phone">Phone</label>
             <input igxInput name="phone" type="text" [(ngModel)]="user.phone" />
             <igx-suffix>
-                <igx-icon name="phone"></igx-icon>
+                <igx-icon>phone</igx-icon>
             </igx-suffix>
             <igx-hint position="start">Ex.: +359 555 123 456</igx-hint>
         </igx-input-group>
@@ -319,7 +319,7 @@ export class ExpansionPanelComponent {
             <label igxLabel for="email">Email address</label>
             <input igxInput name="email" type="email" [(ngModel)]="user.email"/>
             <igx-suffix>
-                <igx-icon name="email"></igx-icon>
+                <igx-icon>email</igx-icon>
             </igx-suffix>
         </igx-input-group>
     </igx-expansion-panel-body>
@@ -395,7 +395,7 @@ export class ExpansionPanelComponent {
     <igx-expansion-panel-header (onInteraction)="onInteraction($event)" [disabled]="false">
         <igx-expansion-panel-title class="sample-title">Personal Information</igx-expansion-panel-title>
         <igx-expansion-panel-icon>
-            <igx-icon fontSet="material" [name]="collapsed(0) ? 'expand_more':'expand_less'"></igx-icon>
+            <igx-icon fontSet="material">{{collapsed(0) ? 'expand_more':'expand_less'}}</igx-icon>
         </igx-expansion-panel-icon>
     </igx-expansion-panel-header>
     <igx-expansion-panel-body class="body">
@@ -403,7 +403,7 @@ export class ExpansionPanelComponent {
             <input igxInput name="fullName" type="text" [(ngModel)]="user.fullName"/>
             <label igxLabel for="fullName">Full Name</label>
             <igx-suffix>
-                <igx-icon name="person"></igx-icon>
+                <igx-icon>person</igx-icon>
             </igx-suffix>
         </igx-input-group>
         <igx-input-group class="group">
@@ -411,7 +411,7 @@ export class ExpansionPanelComponent {
             <label igxLabel for="phone">Phone</label>
             <input igxInput name="phone" type="text" [(ngModel)]="user.phone" />
             <igx-suffix>
-                <igx-icon name="phone"></igx-icon>
+                <igx-icon>phone</igx-icon>
             </igx-suffix>
             <igx-hint position="start">Ex.: +359 555 123 456</igx-hint>
         </igx-input-group>
@@ -419,7 +419,7 @@ export class ExpansionPanelComponent {
             <label igxLabel for="email">Email address</label>
             <input igxInput name="email" type="email" [(ngModel)]="user.email"/>
             <igx-suffix>
-                <igx-icon name="email"></igx-icon>
+                <igx-icon>email</igx-icon>
             </igx-suffix>
         </igx-input-group>
     </igx-expansion-panel-body>
@@ -429,7 +429,7 @@ export class ExpansionPanelComponent {
     <igx-expansion-panel-header (onInteraction)="onInteraction($event)" [disabled]="false">
         <igx-expansion-panel-title class="sample-title">Billing Address</igx-expansion-panel-title>
         <igx-expansion-panel-icon>
-            <igx-icon fontSet="material" [name]="collapsed(1) ? 'expand_more':'expand_less'"></igx-icon>
+            <igx-icon fontSet="material">{{collapsed(1) ? 'expand_more':'expand_less'}}</igx-icon>
         </igx-expansion-panel-icon>
     </igx-expansion-panel-header>
     <igx-expansion-panel-body class="body">
@@ -437,28 +437,28 @@ export class ExpansionPanelComponent {
             <input igxInput name="address" type="text" [(ngModel)]="shippingAddress.address"/>
             <label igxLabel for="address">Billing Address:</label>
             <igx-suffix>
-                <igx-icon name="add_location"></igx-icon>
+                <igx-icon>add_location</igx-icon>
             </igx-suffix>
         </igx-input-group>
         <igx-input-group class="group">
             <label igxLabel for="city">City:</label>
             <input igxInput name="city" type="text" [(ngModel)]="shippingAddress.city"/>
             <igx-suffix>
-                <igx-icon name="location_city"></igx-icon>
+                <igx-icon>location_city</igx-icon>
             </igx-suffix>
         </igx-input-group>
         <igx-input-group class="group">
             <label igxLabel for="state">State:</label>
             <input igxInput name="state" type="text" [(ngModel)]="shippingAddress.state"/>
             <igx-suffix>
-                <igx-icon name="terrain"></igx-icon>
+                <igx-icon>terrain</igx-icon>
             </igx-suffix>
         </igx-input-group>
         <igx-input-group class="group">
             <label igxLabel for="zipCode">Zip Code:</label>
             <input igxInput name="zipCode" type="text" [(ngModel)]="shippingAddress.zipCode">
             <igx-suffix>
-                <igx-icon name="mail_outline"></igx-icon>
+                <igx-icon>mail_outline</igx-icon>
             </igx-suffix>
         </igx-input-group>
     </igx-expansion-panel-body>
@@ -468,7 +468,7 @@ export class ExpansionPanelComponent {
     <igx-expansion-panel-header (onInteraction)="onInteraction($event)" [disabled]="false">
         <igx-expansion-panel-title class="sample-title">Shipping Address</igx-expansion-panel-title>
         <igx-expansion-panel-icon>
-            <igx-icon fontSet="material" [name]="collapsed(2) ? 'expand_more':'expand_less'"></igx-icon>
+            <igx-icon fontSet="material">{{collapsed(2) ? 'expand_more':'expand_less'}}</igx-icon>
         </igx-expansion-panel-icon>
     </igx-expansion-panel-header>
     <igx-expansion-panel-body class="body">
@@ -476,28 +476,28 @@ export class ExpansionPanelComponent {
             <input igxInput name="address" type="text" [(ngModel)]="billingAddress.address"/>
             <label igxLabel for="address">Shipping Address:</label>
             <igx-suffix>
-                <igx-icon name="add_location"></igx-icon>
+                <igx-icon>add_location</igx-icon>
             </igx-suffix>
         </igx-input-group>
         <igx-input-group class="group">
             <label igxLabel for="city">City:</label>
             <input igxInput name="city" type="text" [(ngModel)]="billingAddress.city"/>
             <igx-suffix>
-                <igx-icon name="location_city"></igx-icon>
+                <igx-icon>location_city</igx-icon>
             </igx-suffix>
         </igx-input-group>
         <igx-input-group class="group">
             <label igxLabel for="state">State:</label>
             <input igxInput name="state" type="text" [(ngModel)]="billingAddress.state"/>
             <igx-suffix>
-                <igx-icon name="terrain"></igx-icon>
+                <igx-icon>terrain</igx-icon>
             </igx-suffix>
         </igx-input-group>
         <igx-input-group class="group">
             <label igxLabel for="zipCode">Zip Code:</label>
             <input igxInput name="zipCode" type="text" [(ngModel)]="billingAddress.zipCode">
             <igx-suffix>
-                <igx-icon name="mail_outline"></igx-icon>
+                <igx-icon>mail_outline</igx-icon>
             </igx-suffix>
         </igx-input-group>
     </igx-expansion-panel-body>

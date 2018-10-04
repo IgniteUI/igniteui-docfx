@@ -284,7 +284,7 @@ public contactsList: object[] = [{
                         <p class="name">{{contact.text}}</p>
                         <span class="phone">{{contact.phone}}</span>
                     </div>
-                    <igx-icon name="phone"></igx-icon>
+                    <igx-icon>phone</igx-icon>
                 </div>
             </igx-list-item>
         </igx-list>
