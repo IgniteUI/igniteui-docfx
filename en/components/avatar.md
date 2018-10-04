@@ -22,7 +22,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ### Usage
 
-To get started with the Ignite UI for Angular Avatar, let's first import the **IgxAvatarModule** in the **app.module.ts** file:
+To get started with the Ignite UI for Angular Avatar, let's first import the [`IgxAvatarModule`]({environment:angularApiUrl}/classes/igxavatarmodule.html) in the **app.module.ts** file:
 
 ```typescript
 // app.module.ts
@@ -40,13 +40,13 @@ export class AppModule {}
 The Avatar can be either square or circular, with three size options (small, medium and large). It can be used for displaying initials, images or icons.
 
 ####Avatar displaying initials
-To get a simple avatar with initials (i.e. JS  for  'Jack Sock'), add the following code inside the component template:
+To get a simple avatar with [`initials`]({environment:angularApiUrl}/classes/igxavatarcomponent.html#initials) (i.e. JS  for  'Jack Sock'), add the following code inside the component template:
 
 ```html
 <igx-avatar initials="JS">
 </igx-avatar>
 ```
-Let's enhance our avatar by making it circular and bigger in size. We can also change the background through the `bgColor` property or set a color on the initials through the `color` property. All of these are input properties and can be bound to some component properties.
+Let's enhance our avatar by making it circular and bigger in size. We can also change the background through the [`bgColor`]({environment:angularApiUrl}/classes/igxavatarcomponent.html#bgcolor) property or set a color on the initials through the [`color`]({environment:angularApiUrl}/classes/igxavatarcomponent.html#color) property. All of these are input properties and can be bound to some component properties.
 
 ```html
 <igx-avatar initials="JS" 
@@ -71,7 +71,7 @@ If all went well, you should see something like the following in the browser:
 </div>
 
 ####Avatar displaying image
-To get an avatar that dispalays an image, all you have to do is setting the image source via the `src` property.
+To get an avatar that dispalays an image, all you have to do is setting the image source via the [`src`]({environment:angularApiUrl}/classes/igxavatarcomponent.html#src) property.
 
 ```html
 <igx-avatar [src]="imgSource"
@@ -93,7 +93,7 @@ If all went well, you should see something like the following in the browser:
 </div>
 
 ####Avatar displaying icon
-Analogically the avatar can display an icon via the `icon` property. Currently all icons from the material icon set are supported.
+Analogically, the avatar can display an icon via the [`icon`]({environment:angularApiUrl}/classes/igxavatarcomponent.html#icon) property. Currently all icons from the material icon set are supported.
 
 ```html
 <igx-avatar icon="phone"
@@ -102,17 +102,15 @@ Analogically the avatar can display an icon via the `icon` property. Currently a
 </igx-avatar>
 ```
 
+### API References
 <div class="divider--half"></div>
 
-### API
+* [IgxAvatarComponent]({environment:angularApiUrl}/classes/igxavatarcomponent.html)
+* [IgxAvatarComponent Styles]({environment:sassApiUrl}/index.html#function-igx-avatar-theme)
 
-| Name         |  Type   | Description                                                                                                                              |
-| :----------- | :-----: | :--------------------------------------------------------------------------------------------------------------------------------------- |
-| `src`        | string  | Set the image source of the avatar.                                                                                                      |
-| `initials`   | string  | Set the initials of the avatar.                                                                                                          |
-| `icon`       | string  | Set the icon of the avatar. Currently all icons from the material icon set are supported. Not applicable for initials and image avatars. |
-| `bgColor`    | string  | Set the background color of initials or icon avatars.                                                                                    |
-| `color`      | string  | Set the color of initials or icon avatars. (optional)                                                                                    |
-| `roundShape` | boolean | Set the shape of the avatar to circle. The default shape is square.                                                                      |
-| `size`       | string  | Set the size of the avatar to either small, medium, or large.                                                                            |
+### Additional Resources
+<div class="divider--half"></div>
 
+Our community is active and always welcoming to new ideas.
+* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

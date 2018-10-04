@@ -24,26 +24,26 @@ The default styling of the Label and Input directives follows the text fields sp
 [**guidelines**](https://material.io/guidelines/components/text-fields.html).
 
 > [!NOTE]
-> To use `igxInput` and `igxLabel`, you have to wrap them in an `<igx-input-group>` container.
+> To use [`igxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html) and [`igxLabel`]({environment:angularApiUrl}/classes/igxlabeldirective.html), you have to wrap them in an `<igx-input-group>` container.
 
-To get started with the Ignite UI for Angular Label & Input, let's first import the **IgxInputGroup** in our **app.module.ts** file:
+To get started with the Ignite UI for Angular Label & Input, let's first import the [`IgxInputGroupModule`]({environment:angularApiUrl}/classes/igxinputgroupmodule.html) in our **app.module.ts** file:
 
 ```typescript
 // app.module.ts
 
 ...
-import { IgxInputGroup } from 'igniteui-angular';
+import { IgxInputGroupModule } from 'igniteui-angular';
 
 @NgModule({
     ...
-    imports: [..., IgxInputGroup],
+    imports: [..., IgxInputGroupModule],
     ...
 })
 export class AppModule {}
 ```
 
 ### Label & Input
-HTML labels and inputs are the core building blocks of the HTML forms. Here is how you can use the `igxLabel` and `igxInput` directives:
+HTML labels and inputs are the core building blocks of the HTML forms. Here is how you can use the [`igxLabel`]({environment:angularApiUrl}/classes/igxlabeldirective.html) and [`igxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html) directives:
 
 ```html
 <igx-input-group>
@@ -58,10 +58,10 @@ And the result is:
 </div>
 <div class="divider--half"></div>
 
-The `igxInput` directive could be applied to `<input>` and `<textarea>` HTML elements. We support both single-line and multi-line text fields.
+The [`igxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html) directive could be applied to `<input>` and `<textarea>` HTML elements. We support both single-line and multi-line text fields.
 
 #### Validation
-Ignite UI for Angular Input directive provides a Material-based styling when you have validation. Let's add `required` attribute to our input:
+Ignite UI for Angular Input directive provides a Material-based styling when you have validation. Let's add [`required`]({environment:angularApiUrl}/classes/igxinputdirective.html#required) attribute to our input:
 
 ```html
 <igx-input-group>
@@ -99,29 +99,15 @@ and in our markup:
 ### Input Group
 You can read about the Input Group component in a separate topic [here](input_group.md).
 
-## Input API
-
-### Inputs
-
-|Name|Type|Description|
-|--- |--- |--- |
-|`value`|any|The value of the input.|
-<div class="divider--half"></div>
-
-### Getters/Setters
-
-|Name|Type|Getter|Setter|Description|
-|--- |--- |--- |--- |--- |
-|`valid`|IgxInputState|Yes|No|Gets the input validation state. The possible values could be `IgxInputState.INITIAL`, `IgxInputState.VALID`, `IgxInputState.INVALID`.
-|`disabled`|boolean|Yes|Yes|Gets/Sets the disabled property of the input.|
-|`focused`|boolean|Yes|No|Gets whether the input is currently in focus.|
-<div class="divider--half"></div>
+## API References
+* [IgxInputDirective]({environment:angularApiUrl}/classes/igxinputdirective.html)
+* [IgxLabelDirective]({environment:angularApiUrl}/classes/igxlabeldirective.html)
+* [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
 
 ## Additional Resources
 Related topics:
 
 * [Input Group](input_group.md)
-<div class="divider--half"></div>
 
 Our community is active and always welcoming to new ideas.
 

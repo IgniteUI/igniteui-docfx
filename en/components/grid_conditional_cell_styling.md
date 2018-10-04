@@ -7,7 +7,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ### Conditional Cell Styling
 The Grid component in Ignite UI for Angular provides **conditional cell styling** based on custom rules. 
 
-This can be achieved by setting the `IgxColumnComponent` input `cellClasses` to an object literal containing key-value pairs. The key is the name of the CSS class, while the value is either a callback function that returns a boolean, or boolean value.
+This can be achieved by setting the [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) input [`cellClasses`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#cellclasses) to an object literal containing key-value pairs. The key is the name of the CSS class, while the value is either a callback function that returns a boolean, or boolean value.
 
 #### Demo
 
@@ -21,14 +21,14 @@ This can be achieved by setting the `IgxColumnComponent` input `cellClasses` to 
 <div class="divider--half"></div>
 
 #### Overview
-You can conditionally style the igGrid cells by setting the `IgxColumnComponent` `cellClasses` input and defining custom rules.
+You can conditionally style the igGrid cells by setting the [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) [`cellClasses`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#cellclasses) input and defining custom rules.
 
 ```html
 <!-- sample.component.html -->
 <igx-column field="BeatsPerMinute" dataType="number" [cellClasses]="beatsPerMinuteClasses"></igx-column>
 ```
 
-The `cellClasses` input accepts an object literal, containing key-value pairs, where the key is the name of the CSS class, while the value is either a callback function that returns a boolean, or boolean value.
+The [`cellClasses`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#cellclasses) input accepts an object literal, containing key-value pairs, where the key is the name of the CSS class, while the value is either a callback function that returns a boolean, or boolean value.
 
 ```typescript
 // sample.component.ts
@@ -61,18 +61,14 @@ public beatsPerMinuteClasses = {
 }
 ```
 
-Use ::ng-deep or `ViewEncapsulation.None` to force the custom styles down through the current component and its children.
+Use **::ng-deep** or **`ViewEncapsulation.None`** to force the custom styles down through the current component and its children.
 
-### API Summary
-
-#### Inputs
-The following `IgxColumnComponent` input is available to configure the **conditional cell styling**:
-
-| Name | Type | Description |
-| :--- | :--- | :--- |
-|`cellClasses`|any|Sets a conditional class selector of the column cells.|
-
+### API References
 <div class="divider--half"></div>
+
+* [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
+* [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
+* [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#mixin-igx-grid)
 
 ### Additional Resources
 <div class="divider--half"></div>

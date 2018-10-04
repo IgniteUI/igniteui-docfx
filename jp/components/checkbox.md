@@ -24,7 +24,7 @@ _language: ja
 
 チェックボックス コンポーネントは、選択/選択解除の状態の選択ができます。デフォルト スタイル設定はマテリアル デザイン ガイドラインの選択コントロールの仕様に基づきます。
 
-Ignite UI for Angular Checkbox を初期化する前に、**IgxCheckboxModule** を **app.module.ts** ファイルにインポートします。
+Ignite UI for Angular Checkbox を初期化する前に、[`IgxCheckboxModule`]({environment:angularApiUrl}/classes/igxcheckboxmodule.html) を **app.module.ts** ファイルにインポートします。
 
 ```typescript
 // app.module.ts
@@ -56,9 +56,9 @@ export class AppModule {}
 
 #### Checkbox プロパティ
 
-チェックボックス プロパティをデータにバインドし、上記のコードを拡張します。たとえば、description および done の 2 つのプロパティを持つタスク オブジェクトの配列がある場合では、チェックボックス コンポーネントの checked プロパティをその元となるタスク オブジェクトの done プロパティにバインドできます。同様に、value プロパティを description にバインドします。
+チェックボックス プロパティをデータにバインドし、上記のコードを拡張します。たとえば、description および done の 2 つのプロパティを持つタスク オブジェクトの配列がある場合では、チェックボックス コンポーネントの [`checked`]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html#checked) プロパティをその元となるタスク オブジェクトの done プロパティにバインドできます。同様に、[`value`]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html#value) プロパティを description にバインドします。
 
-オプションに change イベントをバインドし、イベント ハンドラー メソッドでカスタム ロジックを追加できます。
+オプションに [`change`]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html#change) イベントをバインドし、イベント ハンドラー メソッドでカスタム ロジックを追加できます。
 
 ```typescript
 // tasks.component.ts
@@ -92,46 +92,12 @@ statusChanged()
 <iframe src='{environment:demosBaseUrl}/checkbox-sample-2' width="100%" height="100%" seamless frameBorder="0"></iframe>
 </div>
 
-### API まとめ
+### API リファレンス
+<div class="divider--half"></div>
 
-#### 入力
-
-以下の入力が **igx-checkbox** コンポーネントで利用できます。
-
-| 名前 | 型 | 説明 |
-| :--- | :--- | :--- |
-| `@Input()` id |    string   | チェックボックスに使用される一意の `id` 属性。値を設定しない場合、自動生成されます。 |
-| `@Input()` labelId |    string   | チェックボックス ラベルに使用される一意の `id` 属性。値を設定しない場合、自走生成されます。 |
-| `@Input()` name |  string | チェックボックスに使用される `name` 属性。|
-| `@Input()` value | any | チェックボックスに設定する値。 |
-| `@Input()` tabindex | number | チェックボックスのタブ順序を指定します。 |
-| `@Input()` checked | boolean | チェックボックスのチェックされた状態を指定します。|
-| `@Input()` indeterminate | boolean | チェックボックスの不確定状態を指定します。 |
-| `@Input()` required | boolean | チェックボックスの必須状態を指定します。 |
-| `@Input()` disabled | boolean | チェックボックスの無効状態を指定します。 |
-| `@Input()` disableRipple | boolean | リップル エフェクトをチェックボックスで無効にするかどうかを指定します。 |
-| `@Input()` labelPosition | string または enum LabelPosition | チェックボックス要素に対するテキスト ラベルの位置を指定します。 |
-| `@Input("aria-labelledby")` ariaLabelledBy | string | チェックボックスのラベルに使用される外部の要素を id によって指定します。 |
-
-<div class="divider"></div>
-
-#### 出力
-
-以下の出力が **igx-checkbox** コンポーネントで利用できます。
-
-| 名前 | 型 | 説明 |
-| :--- | :--- | :--- |
-| `@Output()` change | EventEmitter<IChangeCheckboxEventArgs> | チェックボックスの checked 値が変更するときに発生します。 |
-<div class="divider"></div>
-
-#### メソッド
-
-以下のメソッドは **igx-checkbox** コンポーネントで利用できます。
-
-| 名前 | 説明|
-| :--- | :--- |
-| toggle | チェックボックスのチェックされた状態を切り替えます。 |
-<div class="divider"></div>
+* [IgxCheckboxComponent]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html)
+* [IgxCheckboxComponent Styles]({environment:sassApiUrl}/index.html#function-igx-checkbox-theme)
+* [LabelPosition]({environment:angularApiUrl}/enums/labelposition.html)
 
 ### その他のリソース
 
