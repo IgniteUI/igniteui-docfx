@@ -24,7 +24,7 @@ _language: ja
 
 ラジオ ボタン コンポーネントはオプションの単一選択を可能にします。デフォルト スタイル設定はマテリアル デザイン ガイドラインの選択コントロールの仕様に基づきます。
 
-Ignite UI for Angular Radio を初期化する前に **IgxRadioModule** を **app.module.ts** ファイルにインポートします。
+Ignite UI for Angular Radio を初期化する前に [`IgxRadioModule`]({environment:angularApiUrl}/classes/igxradiomodule.html) を **app.module.ts** ファイルにインポートします。
 
 ```typescript
 // app.module.ts
@@ -104,7 +104,7 @@ public selectedColor: string = this.colors[3].hex;
 </div>
 
 ## Radio Group
-<p class="highlight">Ignite UI for Angular Radio Group ディレクティブは、子 `igxRadio` コンポーネントをより詳細に制御ができ、テンプレート主導やリアクティブ フォームをサポートするグルーピング コンテナーを提供します。</p>
+<p class="highlight">Ignite UI for Angular Radio Group ディレクティブは、子 [`igxRadio`]({environment:angularApiUrl}/classes/igxradiocomponent.html) コンポーネントをより詳細に制御ができ、テンプレート主導やリアクティブ フォームをサポートするグルーピング コンテナーを提供します。</p>
 <div class="divider"></div>
 
 ### Radio Group デモ
@@ -118,7 +118,7 @@ public selectedColor: string = this.colors[3].hex;
 
 ### Radio Group の使用
 
-Radio Group ディレクティブが NgModule としてエクスポートされるため、アプリケーションで **app.module.ts** ファイルの **IgxRadioModule** をインポートする必要があります。
+Radio Group ディレクティブが NgModule としてエクスポートされるため、アプリケーションで **app.module.ts** ファイルの [`IgxRadioModule`]({environment:angularApiUrl}/classes/igxradiomodule.html) をインポートする必要があります。
 
 ```typescript
 // app.module.ts
@@ -131,9 +131,9 @@ import { IgxRadioModule } from 'igniteui-angular';
     ...
 })
 ```
-はじめに **igxRadioGroup** を作成して **igxRadio** コンポーネントを追加します。
+はじめに [**igxRadioGroup**]({environment:angularApiUrl}/classes/igxradiogroupdirective.html) を作成して [**igxRadio**]({environment:angularApiUrl}/classes/igxradiocomponent.html) コンポーネントを追加します。
 
-**igxRadioGroup** `name` プロパティの設定は**必須**であることに注意してください。
+[`igx-radio-group`]({environment:angularApiUrl}/classes/igxradiogroupdirective.html) [`name`]({environment:angularApiUrl}/classes/igxradiogroupdirective.html#name) プロパティの設定は**必須**であることに注意してください。
 
 ```html
 <!--radio-group.component.html-->
@@ -149,67 +149,14 @@ import { IgxRadioModule } from 'igniteui-angular';
 public fruits = ["Apple", "Mango", "Banana", "Orange"];
 ```
 
-### API まとめ
+## API リファレンス
+<div class="divider--half"></div>
 
-#### Radio Button 入力
+* [IgxRadioComponent]({environment:angularApiUrl}/classes/igxradiocomponent.html)
+* [IgxRadioGroupDirective]({environment:angularApiUrl}/classes/igxradiogroupdirective.html)
+* [IgxRadioComponent Styles]({environment:sassApiUrl}/index.html#function-igx-radio-theme)
 
-以下の入力は **igx-radio** コンポーネントで利用できます。
-
-| 名前 | 型 | 説明 |
-| :--- | :--- | :--- |
-| `@Input()` id |    string   | ラジオ ボタンに使用される一意の `id` 属性。値を設定しない場合、自走生成されます。 |
-| `@Input()` labelId |    string   | ラジオ ボタン ラベルに使用される一意の `id` 属性。値を設定しない場合、自走生成されます。 |
-| `@Input()` name |  string | ラジオ ボタンに使用される `name` 属性。 |
-| `@Input()` value | any | ラジオ ボタンに設定する値。 |
-| `@Input()` tabindex | number | ラジオ ボタンのタブ順序を指定します。 |
-| `@Input()` checked | boolean | ラジオ ボタンのチェックされた状態を指定します。 |
-| `@Input()` required | boolean | ラジオ ボタンの必須状態を指定します。 |
-| `@Input()` disabled | boolean | ラジオ ボタンの無効状態を指定します。 |
-| `@Input()` disableRipple | boolean | リップル エフェクトをラジオ ボタンで無効にするかどうかを指定します。 |
-| `@Input()` labelPosition | string または enum RadioLabelPosition | ラジオ ボタン要素に対するテキスト ラベルの位置を指定します。可能となる値は  "before" と "after" です。 |
-| `@Input("aria-labelledby")` ariaLabelledBy | string | ラジオ ボタンのラベルに使用される外部の要素を id によって指定します。 |
-
-<div class="divider"></div>
-
-#### Radio Button 出力
-
-以下の出力は **igx-radio** コンポーネントで利用できます。
-
-| 名前 | 型 | 説明 |
-| :--- | :--- | :--- |
-| `@Output()` change | EventEmitter<IChangeRadioEventArgs> | ラジオ ボタンの checked 値が変更するときに発生します。 |
-<div class="divider"></div>
-
-#### Radio Button メソッド
-
-以下のメソッドは **igx-radio** コンポーネントで利用できます。
-
-| 名前 | 説明|
-| :--- | :--- |
-| select | ラジオ ボタンを選択します。 |
-<div class="divider"></div>
-
-### Radio Group の入力
-以下の入力は **igx-radio-group** コンポーネントで利用できます。
-| 名前 | 型 | 説明 |
-| :--- | :--- | :--- |
-| `@Input()` name |  string | ラジオ グループに使用される `name` 属性。すべての子ラジオボタンはこの名前を継承します。 |
-| `@Input()` value | any | すべての子ラジオボタンはこの名前を継承します。 |
-| `@Input()` required | boolean | ラジオ グループが必要かどうかを指定します。デフォルト値は `false` です。 |
-| `@Input()` disabled | boolean | ラジオ グループが無効かどうかを指定します。ラジオ グループが無効かどうかを指定します。|
-| `@Input()` labelPosition | string または enum RadioLabelPosition | 子ラジオ ボタンに対するテキスト ラベルの位置を指定します。 使用可能な値は  "before" と "after" でデフォルト値は `after` です。 |
-| `@Input()` selected | IgxRadioComponent | 選択した子ラジオ ボタンを指定します。 |
-
-<div class="divider"></div>
-
-### Radio Group 出力
-以下の出力は **igx-radio-group** コンポーネントで利用できます。
-| 名前 | 型 | 説明 |
-| :--- | :--- | :--- |
-| `@Output()` change | EventEmitter<IChangeRadioEventArgs> | ラジオ グループ  `value` が変更された後に発生されます。 |
-<div class="divider"></div>
-
-### 追加のリソース
+### その他のリソース
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。

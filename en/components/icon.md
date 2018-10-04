@@ -22,8 +22,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ### Dependencies
 
-The Icon component is exported as an `NgModule`, thus all you need to do in your application is to import the _IgxIconModule_
-inside your `AppModule`:
+The Icon component is exported as an `NgModule`, thus all you need to do in your application is to import the [`IgxIconModule`]({environment:angularApiUrl}/classes/igxiconmodule.html) inside your `AppModule`:
 
 ```typescript
 // app.module.ts
@@ -41,16 +40,19 @@ export class AppModule {}
 ```
 ### Examples
 
-Using `igx-icon` to set an `active` home icon with magenta `color`.
+Using [`igx-icon`]({environment:angularApiUrl}/classes/igxiconcomponent.html) to set an [`active`]({environment:angularApiUrl}/classes/igxiconcomponent.html#active) home icon with magenta [`color`]({environment:angularApiUrl}/classes/igxiconcomponent.html#iconcolor).
+
 ```html
 <igx-icon name="home" color="magenta" ></igx-icon>
 ```
-Setting an `inactive` icon.
+
+Setting an inactive icon.
 ```html
 <igx-icon name="volume_off" [isActive]="false"></igx-icon>
 ```
 
 Setting icon with content projection.
+
 ```html
 <igx-icon color="red">bluetooth</igx-icon>
 ```
@@ -59,6 +61,7 @@ You can set the icon's size through CSS. Create a custom CSS class and name it *
 ```html
 <igx-icon name="phone_iphone" color="#0375be" class="custom-size"></igx-icon>
 ```
+
 ```css
 <!-- icon-sample2.component.scss -->
 
@@ -72,37 +75,15 @@ You can set the icon's size through CSS. Create a custom CSS class and name it *
     <iframe id="icon-sample2-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/icon-sample2"  onload="onSampleIframeContentLoaded(this);">
 </div>
 
+### API References
 <div class="divider--half"></div>
 
-### API Summary
+* [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
+* [IgxIconComponent Styles]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
 
-In this article we covered the Icon component. Here are a few more APIs to explore, which are listed below.
-
-####Inputs
-The following inputs are available on the **igx-icon** component:
-| Name   |       Type      |  Description |
-|:----------|:-------------:|:------|
-| `name` |  string | Set the icon by providing its name from the official [material icons set](https://material.io/icons/) . |
-| `iconName` |  string | Set the `glyphName` of the icon. You can provide either ligature `name` or glyph `iconName`, but not both at the same time. |
-| `fontSet` |  string | Set the value of the `fontSet`. By default it's "material".
-| `active` |  boolean | Set the icon to active/inactive state (default is true). |
-| `color` |  string | Set the icon color by providing a string value. |
+### Additional Resources
 <div class="divider--half"></div>
 
-####Getters
-The following getters are available on the **igx-icon** component:
-| Name | Type | Description |
-| :--- | :--- | :--- |
-| `getFontSet()` | string | Returns the icon font. |
-| `getIconColor()` | string | Returns the icon color. |
-| `getIconName()` | string | Returns the icon name. |
-| `getActive()` | boolean | Returns the icon active state. |
-| `getInactive()` | boolean | Returns the icon inactive state. |
-<div class="divider"></div>
-
-###Additional Resources
-
-<div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.
 
 * [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)

@@ -23,7 +23,7 @@ Ignite UI for Angular の Grid コンポーネントは、標準ドラッグ/ド
 <div class="divider--half"></div>
 
 #### 概要
-**列移動**は各列レベルで有効にできます。つまり、**igx-grid** に移動可能な列と移動不可の列の両方を含むことができます。`igx-column` の `movable` 入力によって制御されます。
+**列移動**は各列レベルで有効にできます。つまり、[**igx-grid**]({environment:angularApiUrl}/classes/igxgridcomponent.html) に移動可能な列と移動不可の列の両方を含むことができます。[`igx-column`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) の [`movable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#movable) 入力によって制御されます。
 
 ```html
 <igx-column [field]="'Category'" [movable]="true"></igx-column>
@@ -32,8 +32,8 @@ Ignite UI for Angular の Grid コンポーネントは、標準ドラッグ/ド
 > ピン固定領域が最大幅 (グリッド幅合計の 80 %)を超えた場合、ドロップ操作が禁止されていてピン固定ができないことをヒントの表示でエンドユーザーに通知します。つまり、ピン固定領域に列をドロップできません。
 
 #### イベント
-列のドラッグアンドドロップ操作をカスタマイズするための列移動に関連するイベントが複数あります。`onColumnMovingStart`、`onColumnMoving`、`onColumnMovingEnd` があります。
-igx-grid の `onColumnMovingEnd` イベントを処理し、列が新しい位置にドロップされたときにカスタム ロジックを実装できます。たとえば、Change On Year(%) 列の後に Category のドロップをキャンセルできます。
+列のドラッグアンドドロップ操作をカスタマイズするための列移動に関連するイベントが複数あります。[`onColumnMovingStart`]({environment:angularApiUrl}/classes/igxgridcomponent.html#oncolumnmovingstart)、[`onColumnMoving`]({environment:angularApiUrl}/classes/igxgridcomponent.html#oncolumnmoving)、[`onColumnMovingEnd`]({environment:angularApiUrl}/classes/igxgridcomponent.html#oncolumnmovingend) があります。
+[`igx-grid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) の [`onColumnMovingEnd`]({environment:angularApiUrl}/classes/igxgridcomponent.html#oncolumnmovingend) イベントを処理し、列が新しい位置にドロップされたときにカスタム ロジックを実装できます。たとえば、Change On Year(%) 列の後に Category のドロップをキャンセルできます。
 
 ```html
 <igx-grid #dataGrid [data]="data" [autoGenerate]="false" (onColumnMovingEnd)="onColumnMovingEnd($event)">
@@ -50,36 +50,12 @@ public onColumnMovingEnd(event) {
 }
 ```
 
-### API まとめ
-
-#### 入力
-以下の `IgxColumnComponent` 入力は、**列移動**の構成に使用できます。
-
-| 名前 | 型 | 説明 |
-| :--- | :--- | :--- |
-|`movable`|boolean|列を移動可能に設定します。|
-
+### API References
 <div class="divider--half"></div>
 
-#### 出力
-以下の `IgxGridComponent` 出力は**列移動**で使用できます。
-
-| 名前 | 型 | 説明 |
-| :--- | :--- | :--- |
-|`onColumnMoving`| EventEmitter |列が移動されたときに発生されます。ソースとターゲットの列オブジェクトを返します。このイベントはキャンセルできます。|
-|`onColumnMovingEnd`| EventEmitter |列移動が終了したときに発生されます。ソースとターゲットの列オブジェクトを返します。このイベントはキャンセルできます。|
-|`onColumnMovingStart`| EventEmitter |列移動を開始したときに発生されます。移動した列オブジェクトを返します。|
-
-<div class="divider--half"></div>
-
-#### メソッド
-以下は、**列移動** に関連する `IgxGridComponent` メソッドです。
-
-| 名前 | 説明 |
-| :--- | :--- |
-|`moveColumn(column: IgxColumnComponent, dropTarget: IgxColumnComponent)` | API を使用して指定したドロップ ターゲットに列を移動する方法を提供します。 |
-
-<div class="divider--half"></div>
+* [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
+* [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
+* [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#mixin-igx-grid)
 
 ### その他のリソース
 <div class="divider--half"></div>

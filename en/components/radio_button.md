@@ -20,7 +20,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ### Radio Button Usage
 
 At its core the radio button component allows for a single option selection. The default styling is done according to the selection controls specification as per the Material Design guidelines.
-To get started with the Ignite UI for Angular Radio, let's first import the **IgxRadioModule** in the **app.module.ts** file:
+To get started with the Ignite UI for Angular Radio, let's first import the [`IgxRadioModule`]({environment:angularApiUrl}/classes/igxradiomodule.html) in the **app.module.ts** file:
 
 ```typescript
 // app.module.ts
@@ -97,7 +97,7 @@ Try it! The final result would be something like that:
 </div>
 
 ## Radio Group
-<p class="highlight">The Ignite UI for Angular Radio Group directive provides a grouping container that allows better control over the child `igxRadio` components and supports template-driven and reactive forms.</p>
+<p class="highlight">The Ignite UI for Angular Radio Group directive provides a grouping container that allows better control over the child [`igxRadio`]({environment:angularApiUrl}/classes/igxradiocomponent.html) components and supports template-driven and reactive forms.</p>
 <div class="divider"></div>
 
 ### Radio Group Demo
@@ -111,7 +111,7 @@ Try it! The final result would be something like that:
 
 ### Radio Group Usage
 
-The Radio Group Directive is exported as an `NgModule`, thus all you need to do in your application is to import the **IgxRadioModule** in the **app.module.ts** file:
+The Radio Group Directive is exported as an `NgModule`, thus all you need to do in your application is to import the [`IgxRadioModule`]({environment:angularApiUrl}/classes/igxradiomodule.html) in the **app.module.ts** file:
 
 ```typescript
 // app.module.ts
@@ -124,9 +124,9 @@ import { IgxRadioModule } from 'igniteui-angular';
     ...
 })
 ```
-To get a started, create an **igxRadioGroup** and add several **igxRadio** components. 
+To get a started, create an [**igxRadioGroup**]({environment:angularApiUrl}/classes/igxradiogroupdirective.html) and add several [**igxRadio**]({environment:angularApiUrl}/classes/igxradiocomponent.html) components. 
 
-Note that, setting the **igxRadioGroup** `name` property is **mandatory**.
+Note that, setting the [`igx-radio-group`]({environment:angularApiUrl}/classes/igxradiogroupdirective.html) [`name`]({environment:angularApiUrl}/classes/igxradiogroupdirective.html#name) property is **mandatory**.
 
 ```html
 <!--radio-group.component.html-->
@@ -142,61 +142,16 @@ Note that, setting the **igxRadioGroup** `name` property is **mandatory**.
 public fruits = ["Apple", "Mango", "Banana", "Orange"];
 ```
 
-## API Summary
+## API References
+<div class="divider--half"></div>
 
-### Radio Button Inputs
-The following inputs are available on the **igx-radio** component:
-| Name | Type | Description |
-| :--- | :--- | :--- |
-| `@Input()` id |    string   | The unique `id` attribute to be used for the radio button. If you do not provide a value, it will be auto-generated. |
-| `@Input()` labelId |    string   | The unique `id` attribute to be used for the radio button label. If you do not provide a value, it will be auto-generated. |
-| `@Input()` name |  string | The `name` attribute to be used for the radio button. |
-| `@Input()` value | any | The value to be set for the radio button. |
-| `@Input()` tabindex | number | Specifies the tabbing order of the radio button. |
-| `@Input()` checked | boolean | Specifies the checked state of the radio button. |
-| `@Input()` required | boolean | Specifies the required state of the radio button. |
-| `@Input()` disabled | boolean | Specifies the disabled state of the radio button. |
-| `@Input()` disableRipple | boolean | Specifies the whether the ripple effect should be disabled for the radio button. |
-| `@Input()` labelPosition | string or enum RadioLabelPosition | Specifies the position of the text label relative to the radio button element. Possible values are "before" and "after". |
-| `@Input("aria-labelledby")` ariaLabelledBy | string | Specify an external element by id to be used as label for the radio button. |
-<div class="divider"></div>
-
-### Radio Button Outputs
-The following outputs are available on the **igx-radio** component:
-| Name | Type | Description |
-| :--- | :--- | :--- |
-| `@Output()` change | EventEmitter<IChangeRadioEventArgs> | Emitted when the radio button checked value changes. |
-<div class="divider"></div>
-
-### Radio Button Methods
-The following methods are available on the **igx-radio** component:
-| Name | Description|
-| :--- | :--- |
-| select | Selects the radio button. |
-<div class="divider"></div>
-
-### Radio Group Inputs
-The following inputs are available on the **igx-radio-group** component:
-| Name | Type | Description |
-| :--- | :--- | :--- |
-| `@Input()` name |  string | The `name` attribute to be used for the radio group. All child radio buttons inherits this name. |
-| `@Input()` value | any | The value of the currently selected radio button inside the group. |
-| `@Input()` required | boolean | Specifies whether the radio group is required. Default value is `false`. |
-| `@Input()` disabled | boolean | Specifies whether the radio group is disabled. Default value is `false`.|
-| `@Input()` labelPosition | string or enum RadioLabelPosition | Specifies the position of the text label relative to the child radio buttons. Possible values are "before" and "after". Default value is `after`. |
-| `@Input()` selected | IgxRadioComponent | Specifies the selected child radio button. |
-
-<div class="divider"></div>
-
-### Radio Group Outputs
-The following outputs are available on the **igx-radio-group** component:
-| Name | Type | Description |
-| :--- | :--- | :--- |
-| `@Output()` change | EventEmitter<IChangeRadioEventArgs> | Emitted after the radio group `value` has changed. |
-<div class="divider"></div>
+* [IgxRadioComponent]({environment:angularApiUrl}/classes/igxradiocomponent.html)
+* [IgxRadioGroupDirective]({environment:angularApiUrl}/classes/igxradiogroupdirective.html)
+* [IgxRadioComponent Styles]({environment:sassApiUrl}/index.html#function-igx-radio-theme)
 
 ## Additional Resources
 <div class="divider--half"></div>
+
 Our community is active and always welcoming to new ideas.
 
 * [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)

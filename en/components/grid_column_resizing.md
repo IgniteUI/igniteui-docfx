@@ -19,14 +19,14 @@ With deferred column resizing, the user will see a temporary resize indicator wh
 </div>
 <div class="divider--half"></div>
 
-**Column resizing** is also enabled per-column level, meaning that the **igx-grid** can have a mix of resizable and non-resizable columns. This is done via the `resizable` input of the `igx-column`.
+**Column resizing** is also enabled per-column level, meaning that the [**igx-grid**]({environment:angularApiUrl}/classes/igxgridcomponent.html) can have a mix of resizable and non-resizable columns. This is done via the [`resizable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#resizable) input of the [`igx-column`]({environment:angularApiUrl}/classes/igxcolumncomponent.html).
 
 ```html
 <igx-column [field]="'ID'" width="100px" [resizable]="true"></igx-column>
 <igx-column [field]="'CompanyName'" width="100px" [resizable]="true"></igx-column>
 ```
 
-You can subscribe to the `onColumnResized` event of the `igx-grid` to implement some custom logic when a column is resized. Both, previous and new column widths, as well as the `IgxColumnComponent` object, are exposed through the event arguments.
+You can subscribe to the [`onColumnResized`]({environment:angularApiUrl}/classes/igxgridcomponent.html#oncolumnresized) event of the [`igx-grid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) to implement some custom logic when a column is resized. Both, previous and new column widths, as well as the [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) object, are exposed through the event arguments.
 
 ```html
 <igx-grid [data]="data" (onColumnResized)="onResize($event)" [autoGenerate]="false">
@@ -45,7 +45,7 @@ public onResize(event) {
 
 #### Restrict column resizing
 
-You can also configure the minimum and maximum allowable column widths. This is done via the `minWidth` and `maxWidth` inputs of the `igx-column`. In this case the resize indicator drag operation is restricted to notify the user that the column cannot be resized outside the bounderies defined by `minWidth` and `maxWidth`.
+You can also configure the minimum and maximum allowable column widths. This is done via the [`minWidth`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#minwidth) and [`maxWidth`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#maxwidth) inputs of the [`igx-column`]({environment:angularApiUrl}/classes/igxcolumncomponent.html). In this case the resize indicator drag operation is restricted to notify the user that the column cannot be resized outside the bounderies defined by [`minWidth`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#minwidth) and [`maxWidth`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#maxwidth).
 
 ```html
 <igx-column [field]="'ContactName'" width="100px" [resizable]="true"
@@ -53,13 +53,14 @@ You can also configure the minimum and maximum allowable column widths. This is 
 ```
 
 > [!NOTE]
-> Resizing a column below **88px** is not possible, even when `minWidth` is set to a value less than that.
+> Resizing a column below **88px** is not possible, even when [`minWidth`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#minwidth) is set to a value less than that.
 
 #### Auto-size columns on double click
 
-Each column can be **auto sized** by double clicking the right side of the header - the column will be sized to the longest currently visible cell value, including the header itself. This behavior is enabled by default, no additional configuration is needed. However, the column will not be autosized in case `maxWidth` is set on that column and the new width exceeds that `maxWidth` value. In this case the column will be sized acccording to preset `maxWidth` value.
+Each column can be **auto sized** by double clicking the right side of the header - the column will be sized to the longest currently visible cell value, including the header itself. This behavior is enabled by default, no additional configuration is needed. However, the column will not be autosized in case [`maxWidth`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#maxwidth) is set on that column and the new width exceeds that [`maxWidth`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#maxwidth) value. In this case the column will be sized acccording to preset [`maxWidth`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#maxwidth) value.
 
-You can also autosize a column dynamically using the exposed `autosize()` method on `IgxColumnComponent`.
+You can also autosize a column dynamically using the exposed [`autosize()`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#autosize) method on [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html).
+
 ```typescript
 @ViewChild('grid') grid: IgxGridComponent;
 
@@ -69,38 +70,15 @@ column.autosize();
 
 #### Pinned columns resizing
 
-Pinned columns can also be resized. However resizing is limited so that the overall width of the pinned columns container cannot become larger than 80% of the overall grid width.
+Pinned columns can also be resized. However, resizing is limited so that the overall width of the pinned columns container cannot become larger than 80% of the overall grid width.
 Again, if you try to autosize a pinned column and the new width will cause the pinned columns container to exceed those 80% of the overall grid with, autosizing will be discarded. We just want to make sure that the unpinned columns are always visible and availble to the user!
 
-### API Summary
-
-#### Inputs
-The following inputs are available for **column resizing**:
-
-| Name | Type | Description |
-| :--- | :--- | :--- |
-|`resizable`|boolean|Set column to be resizable|
-|`minWidth`|string|Columns minimal width|
-|`maxWidth`|string|Columns miximum width|
-
+### API References
 <div class="divider--half"></div>
 
-#### Outputs
-The following output is available for **column resizing**:
-
-| Name | Description |
-| :--- | :--- |
-|`onColumnResized`|Emitted when a column is resized. Returns the column object, previous and new column width.|
-
-<div class="divider--half"></div>
-
-#### Methods
-The following method is available for **column resizing**:
-| Name | Description |
-| :--- | :--- |
-| `autosize` | Autosize the column to the longest currently visible cell value, including the header cell. |
-
-<div class="divider"></div>
+* [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
+* [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
+* [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#mixin-igx-grid)
 
 ### Additional Resources
 <div class="divider--half"></div>

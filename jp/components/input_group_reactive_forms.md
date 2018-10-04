@@ -12,7 +12,7 @@ Ignite UI for Angular コントロールは簡単にリアクティブ フォー
 <div class="divider"></div>
 
 ### デモ
-以下のデモは、igx-input-group と igx-combo コントロールをリアクティブ フォームの一部に使用しています。
+以下のデモは、[`igx-input-group`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) と [`igx-combo`]({environment:angularApiUrl}/classes/igxcombocomponent.html) コントロールをリアクティブ フォームの一部に使用しています。
 
 <div class="sample-container loading" style="height: 750px;">
     <iframe id="reactive-forms-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/reactive-forms" onload="onSampleIframeContentLoaded(this);"></iframe>

@@ -8,7 +8,7 @@ _language: ja
 ### 条件付きセルのスタイル設定
 Ignite UI for Angular の Grid コンポーネントは、カスタム条件に基づいた**条件付きセルのスタイル設定**をサポートします。 
 
-`IgxColumnComponent` 入力 `cellClasses` をキーと値のペアを含むオブジェクト リテラルに設定します。 キーは CSS クラスの名前です。値はブール値を返すコールバック関数またはブール値です。
+[`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) 入力 [`cellClasses`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#cellclasses) をキーと値のペアを含むオブジェクト リテラルに設定します。 キーは CSS クラスの名前です。値はブール値を返すコールバック関数またはブール値です。
 
 #### デモ
 
@@ -22,14 +22,14 @@ Ignite UI for Angular の Grid コンポーネントは、カスタム条件に�
 <div class="divider--half"></div>
 
 #### 概要
-gGrid セルの条件付きスタイル設定は、IgxColumnComponent` `cellClasses`入力を設定してカスタム条件を定義するころによりスタイル設定できます。
+gGrid セルの条件付きスタイル設定は、[`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) [`cellClasses`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#cellclasses)入力を設定してカスタム条件を定義するころによりスタイル設定できます。
 
 ```html
 <!-- sample.component.html -->
 <igx-column field="BeatsPerMinute" dataType="number" [cellClasses]="beatsPerMinuteClasses"></igx-column>
 ```
 
-`cellClasses` 入力は、キーと値のペアを含むオブジェクト リテラルを受け取ります。キーは CSS クラスの名前です。値はブール値を返すコールバック関数またはブール値です。
+[`cellClasses`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#cellclasses) 入力は、キーと値のペアを含むオブジェクト リテラルを受け取ります。キーは CSS クラスの名前です。値はブール値を返すコールバック関数またはブール値です。
 
 ```typescript
 // sample.component.ts
@@ -62,18 +62,14 @@ public beatsPerMinuteClasses = {
 }
 ```
 
-::ng-deep または `ViewEncapsulation.None` を使用してカスタム スタイルを現在のコンポーネントとその子コンポーネントに適用します。
+::ng-deep または **`ViewEncapsulation.None`** を使用してカスタム スタイルを現在のコンポーネントとその子コンポーネントに適用します。
 
-### API まとめ
-
-#### 入力
-以下の `IgxColumnComponent` 入力は、**条件付きセルのスタイル設定**ができます。
-
-| 名前|型|説明 |
-| :--- | :--- | :--- |
-|`cellClasses`|任意|列セルの条件付きクラス セレクターを設定します。|
-
+### API リファレンス
 <div class="divider--half"></div>
+
+* [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
+* [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
+* [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#mixin-igx-grid)
 
 ### その他のリソース
 <div class="divider--half"></div>
