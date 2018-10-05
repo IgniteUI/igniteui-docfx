@@ -161,7 +161,8 @@ The Excel Exporter service has a few more APIs to explore, which are listed belo
 
 使用したその他のコンポーネント:
 
-* [**IgxGrid**](grid.md)
+* [IgxGridComponent API]({environment:angularApiUrl}/classes/igxgridcomponent.html)
+* [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 
 <div class="divider"></div>
 

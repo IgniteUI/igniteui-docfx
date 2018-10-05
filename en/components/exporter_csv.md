@@ -168,7 +168,8 @@ The CSV Exporter service has a few more APIs to explore, which are listed below.
 
 Additional components that were used:
 
-* [**IgxGrid**](grid.md)
+* [IgxGridComponent API]({environment:angularApiUrl}/classes/igxgridcomponent.html)
+* [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 
 <div class="divider"></div>
 
