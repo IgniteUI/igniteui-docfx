@@ -6,7 +6,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ### Grid Group By
 
-`igxGrid` supports column grouping that allows for visualizing data records in hierarchical groups according to the column group values. Groups can be expanded or collapsed and the order of grouping may be changed through the UI or API.
+[`igxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) supports column grouping that allows for visualizing data records in hierarchical groups according to the column group values. Groups can be expanded or collapsed and the order of grouping may be changed through the UI or API.
 
 
 #### Demo
@@ -20,7 +20,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 #### Initial Grouping State
 
-It is possible to set the initial grouping of the grid by an array of expressions to the `groupingExpressions` property of the grid.
+It is possible to set the initial grouping of the grid by an array of expressions to the [`groupingExpressions`]({environment:angularApiUrl}/classes/igxgridcomponent.html#groupingexpressions) property of the grid.
 
 ```typescript
 public ngOnInit() {
@@ -31,11 +31,11 @@ public ngOnInit() {
 }
 ```
 
-Grouping expressions implement the `ISortingExpression` interface.
+Grouping expressions implement the [`ISortingExpression`]({environment:angularApiUrl}/interfaces/isortingexpression.html) interface.
 
 #### Group By API
 
-Grouping is available through the UI and through a robust API exposed by the grid component. Developers can allow end-users to group the grid data by certain columns, by setting each column's `groupable` property to `true`.
+Grouping is available through the UI and through a robust API exposed by the grid component. Developers can allow end-users to group the grid data by certain columns, by setting each column's [`groupable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#groupable) property to `true`.
 
 ```html
 <igx-grid [data]="data">
@@ -52,15 +52,15 @@ public ngOnInit() {
 }
 ```
 
-During runtime the expressions are gettable and settable from the `groupingExpressions` property. If you need to just add or change an existing expression you may also use the `groupBy` method with either a single or an array of `ISortingExpression`.
+During runtime the expressions are gettable and settable from the [`groupingExpressions`]({environment:angularApiUrl}/classes/igxgridcomponent.html#groupingexpressions) property. If you need to just add or change an existing expression you may also use the [`groupBy`]({environment:angularApiUrl}/classes/igxgridcomponent.html#groupby) method with either a single or an array of [`ISortingExpression`]({environment:angularApiUrl}/interfaces/isortingexpression.html).
 
 ```typescript
 grid.groupBy({ fieldName: 'ProductName', dir: SortingDirection.Desc, ignoreCase: true });
 ```
 
-Grouping works in conjunction with sorting and grouping expressions are applied as sorting ones even though columns may be sorted without being grouped. You will always find the grouping expressions in the `sortingExpression` property, sorted in a way that grouped columns' expressions are always first. The sorting API will affect grouping if it changes the expression for a column that is grouped. Removing a grouping expression (ungrouping a column) also unsorts it.
+Grouping works in conjunction with sorting and grouping expressions are applied as sorting ones even though columns may be sorted without being grouped. You will always find the grouping expressions in the [`sortingExpression`]({environment:angularApiUrl}/classes/igxgridcomponent.html#sortingexpressions) property, sorted in a way that grouped columns' expressions are always first. The sorting API will affect grouping if it changes the expression for a column that is grouped. Removing a grouping expression (ungrouping a column) also unsorts it.
 
-In addition to grouping expressions you can also control the expansion states for group rows. They are stored in a separate property of the `igxGrid` component `groupingExpansionState`. A group row is uniquely identified based on the field name it is created for and the value it represents for each level of grouping. This means that the signature of an expansion state interface is the following:
+In addition to grouping expressions you can also control the expansion states for group rows. They are stored in a separate property of the [`igxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) component [`groupingExpansionState`]({environment:angularApiUrl}/classes/igxgridcomponent.html#groupingexpansionstate). A group row is uniquely identified based on the field name it is created for and the value it represents for each level of grouping. This means that the signature of an expansion state interface is the following:
 
 ```typescript
 export interface IGroupByKey {
@@ -74,14 +74,14 @@ export interface IGroupByExpandState {
 }
 ```
 
-As with `groupingExpression`, setting a list of `IGroupByExpandState` directly to the `groupingExpansionState` will change the expansion accordingly. Additionally `igxGrid` exposes a method that toggles a group by the group record instance.
+As with [`groupingExpressions`]({environment:angularApiUrl}/classes/igxgridcomponent.html#groupingexpressions), setting a list of [`IGroupByExpandState`]({environment:angularApiUrl}/interfaces/igroupbyexpandstate.html) directly to the [`groupingExpansionState`]({environment:angularApiUrl}/classes/igxgridcomponent.html#groupingexpansionstate) will change the expansion accordingly. Additionally [`igxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) exposes a method that toggles a group by the group record instance.
 
 ```typescript
     const groupRow = grid.getGroupRow([{ fieldName: 'Category', value: 'soft drinks' }]);
     grid.toggleGroup(groupRow);
 ```
 
-Groups can be created expanded (***default***) or collapsed and the expansion states would generally only contain the state opposite to the default behavior. You can control whether groups should be created expanded or not through the `groupsExpanded` property
+Groups can be created expanded (***default***) or collapsed and the expansion states would generally only contain the state opposite to the default behavior. You can control whether groups should be created expanded or not through the [`groupsExpanded`]({environment:angularApiUrl}/classes/igxgridcomponent.html#groupsexpanded) property
 
 #### Group Row Templates
 
@@ -112,7 +112,7 @@ The grouping UI supports the following keyboard interactions:
 - For group rows (focus should be on the row or the expand/collapse cell)
    - <kbd>SPACE</kbd> - toggles the group
 
-- For group `igxChip` components in the group by area (focus should be on the chip)
+- For group [`igxChip`]({environment:angularApiUrl}/classes/igxchipcomponent.html) components in the group by area (focus should be on the chip)
    - <kbd>SHIFT</kbd> + <kbd>LEFT</kbd> - moves the focused chip left, changing the grouping order, if possible
    - <kbd>SHIFT</kbd> + <kbd>RIGHT</kbd> - moves the focused chip right, changing the grouping order, if possible
    - <kbd>SPACE</kbd> - changes the sorting direction
@@ -124,6 +124,16 @@ The grouping UI supports the following keyboard interactions:
 |Limitation|Description|
 |--- |--- |
 |Maximum amount of grouped columns is 10. | If more than 10 columns are grouped an error is thrown.
+
+### API
+
+* [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
+* [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [ISortingExpression]({environment:angularApiUrl}/interfaces/isortingexpression.html)
+* [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
+* [IGroupByExpandState]({environment:angularApiUrl}/interfaces/igroupbyexpandstate.html)
+* [IgxChipComponent]({environment:angularApiUrl}/classes/igxchipcomponent.html)
+* [IgxChipComponent Styles]({environment:sassApiUrl}/index.html#function-igx-chip-theme)
 
 ### Additional Resources
 <div class="divider--half"></div>

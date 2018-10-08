@@ -24,7 +24,7 @@ _language: ja
 
 中核となるスイッチ コンポーネントはオン/オフ状態の切り替えが可能です。デフォルト スタイル設定はマテリアル デザイン ガイドラインの選択コントロールの仕様に基づきます。
 
-Ignite UI for Angular Switch を初期化する前に、**IgxSwitchModule** を **app.module.ts** ファイルにインポートします。
+Ignite UI for Angular Switch を初期化する前に、[`IgxSwitchModule`]({environment:angularApiUrl}/classes/igxswitchmodule.html) を **app.module.ts** ファイルにインポートします。
 
 ```typescript
 // app.module.ts
@@ -56,7 +56,7 @@ export class AppModule {}
 
 #### Switch プロパティ
 
-上記のコードを拡張するには、スイッチ プロパティをデータにバインドします。name および state の 2 つのプロパティを持つ設定オブジェクトの配列があるとしましょう。スイッチ コンポーネントの checked プロパティを基本の設定オブジェクトの state プロパティにバインドします。同じように、value プロパティを name にバインドします。
+上記のコードを拡張するには、スイッチ プロパティをデータにバインドします。name および state の 2 つのプロパティを持つ設定オブジェクトの配列があるとしましょう。スイッチ コンポーネントの [`checked`]({environment:angularApiUrl}/classes/igxswitchcomponent.html#checked) プロパティを基本の設定オブジェクトの state プロパティにバインドします。同じように、value プロパティを name にバインドします。
 
 ```typescript
 // toggle.component.ts
@@ -85,47 +85,13 @@ export class AppModule {}
 　　　　<iframe src='{environment:demosBaseUrl}/switch-sample-2' width="100%" height="100%" seamless frameBorder="0"></iframe>
 </div>
 
-### API まとめ
+### API リファレンス
+<div class="divider--half"></div>
 
-#### 入力
+* [IgxSwitchComponent]({environment:angularApiUrl}/classes/igxswitchcomponent.html)
+* [IgxSwitchComponent Styles]({environment:sassApiUrl}/index.html#function-igx-switch-theme)
 
-以下の入力が **igx-switch** コンポーネントで利用できます。
-
-| 名前 | 型 | 説明 |
-| :--- | :--- | :--- |
-| `@Input()` id |   string   | スイッチに使用される一意の `id` 属性。値を設定しない場合、自走生成されます。 |
-| `@Input()` labelId |    string   | スイッチ ラベルに使用される一意の `id` 属性。値を設定しない場合、自走生成されます。 |
-| `@Input()` name |  string | スイッチに使用される `name` 属性。 |
-| `@Input()` value | any | スイッチに設定する値。 |
-| `@Input()` tabindex | number | スイッチのタブ順序を指定します。 |
-| `@Input()` checked | boolean | スイッチのチェックされた状態を指定します。 |
-| `@Input()` required | boolean | スイッチの必須状態を指定します。 |
-| `@Input()` disabled | boolean | スイッチの無効状態を指定します。 |
-| `@Input()` disableRipple | boolean | リップル エフェクトがスイッチで無効にするかどうかを指定します。 |
-| `@Input()` labelPosition | string または enum LabelPosition | スイッチ要素に対するテキスト ラベルの位置を指定します。 |
-| `@Input("aria-labelledby")` ariaLabelledBy | string | スイッチのラベルに使用される外部の要素を id によって指定します。 |
-
-<div class="divider"></div>
-
-#### 出力
-
-以下の出力が **igx-switch** コンポーネントで利用できます。
-
-| 名前 | 型 | 説明 |
-| :--- | :--- | :--- |
-| `@Output()` change | EventEmitter<IChangeCheckboxEventArgs> | スイッチの checked 値が変更するときに発生します。 |
-<div class="divider"></div>
-
-#### メソッド
-
-以下のメソッドは **igx-switch** コンポーネントで利用できます。
-
-| 名前 | 説明 |
-| :--- | :--- |
-| toggle | スイッチのチェックされた状態を切り替えます。 |
-<div class="divider"></div>
-
-### 追加のリソース
+### その他のリソース
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。

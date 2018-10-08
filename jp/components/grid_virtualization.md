@@ -7,7 +7,7 @@ _language: ja
 
 ### グリッドの仮想化とパフォーマンス
 
-Ignite UI for Angular `igxGrid` コントロールは `igxForOf` ディレクティブを使用します。コンテンツを垂直方向 (データ レコード) および水平方向 (列) に仮想化します。
+Ignite UI for Angular [`IgxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) コントロールは [`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxforof) ディレクティブを使用します。コンテンツを垂直方向 (データ レコード) および水平方向 (列) に仮想化します。
 
 #### デモ
 
@@ -21,7 +21,7 @@ Ignite UI for Angular `igxGrid` コントロールは `igxForOf` ディレクテ
 
 ### 仮想化の有効化
 
-`igxForOf` ディレクティブは、ビューポートに表示されているデータのみを描画し、ユーザーがスクロール時に表示データを切り替えた際に Data Grid が DOM 描画およびメモリ使用を最適化します。`igxGrid` の `width` および `height` のデフォルト値は 100% です。コンテンツが利用可能なスペースにフィットせず、垂直方向または水平方向にスクロールバーが必要な場合に仮想化が有効になります。ただし、グリッドの `width` または `height` を明示的に `null` 値に設定できます。つまり、関連するディメンションが項目の合計サイズに基づいて決定されます。スクロールバーが表示されず、すべての項目が相対するディメンション (`width` が `null` 値の場合は列で、`height` が `null` 値の場合は行) に描画されます。
+[`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxforof) ディレクティブは、ビューポートに表示されているデータのみを描画し、ユーザーがスクロール時に表示データを切り替えた際に Data Grid が DOM 描画およびメモリ使用を最適化します。[`IgxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) の [`width`]({environment:angularApiUrl}/classes/igxgridcomponent.html#width) および [`height`]({environment:angularApiUrl}/classes/igxgridcomponent.html#height) のデフォルト値は 100% です。コンテンツが利用可能なスペースにフィットせず、垂直方向または水平方向にスクロールバーが必要な場合に仮想化が有効になります。ただし、グリッドの [`width`]({environment:angularApiUrl}/classes/igxgridcomponent.html#width) または [`height`]({environment:angularApiUrl}/classes/igxgridcomponent.html#height) を明示的に `null` 値に設定できます。つまり、関連するディメンションが項目の合計サイズに基づいて決定されます。スクロールバーが表示されず、すべての項目が相対するディメンション ([`width`]({environment:angularApiUrl}/classes/igxgridcomponent.html#width) が `null` 値の場合は列で、[`height`]({environment:angularApiUrl}/classes/igxgridcomponent.html#height) が `null` 値の場合は行) に描画されます。
 
 データ部分のサイズは以下によって決定されます。
 
@@ -34,7 +34,7 @@ Ignite UI for Angular `igxGrid` コントロールは `igxForOf` ディレクテ
 
 ### リモート仮想化
 
-`igxGrid` は、データ部分がリモート サービスから要求されたシナリオをサポートします。このシナリオは内部に使用される `igxForOf` で実装される動作を公開します。
+[`IgxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) は、データ部分がリモート サービスから要求されたシナリオをサポートします。このシナリオは内部に使用される [`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxforof) で実装される動作を公開します。
 
 ### Grid リモート仮想化デモ
 
@@ -46,7 +46,7 @@ Ignite UI for Angular `igxGrid` コントロールは `igxForOf` ディレクテ
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
 </div>
 
-この機能を使用するには、取得した引数に基づいて適切な要求を実行するために `onDataPreLoad` 出力にサブスクライブし、サービスから送信される相対する情報とパブリック `igxGrid` の `totalItemCount` プロパティを設定する必要があります。
+この機能を使用するには、取得した引数に基づいて適切な要求を実行するために [`onDataPreLoad`]({environment:angularApiUrl}/classes/igxgridcomponent.html#ondatapreload) 出力にサブスクライブし、サービスから送信される相対する情報とパブリック [`IgxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) の [`totalItemCount`]({environment:angularApiUrl}/classes/igxgridcomponent.html#totalitemcount) プロパティを設定する必要があります。
 
 ```html
 <igx-grid #grid [data]="remoteData | async" [height]="'500px'" [width]="'100%'" [autoGenerate]='false' (onDataPreLoad)="processData(false)"
@@ -78,12 +78,12 @@ public processData() {
 }
 ```
 
-データを要求する際に `startIndex` および `chunkSize` プロパティを提供する `IForOfState` インターフェイスを使用できます。
+データを要求する際に [`startIndex`]({environment:angularApiUrl}/interfaces/iforofstate.html#startindex) および [`chunkSize`]({environment:angularApiUrl}/interfaces/iforofstate.html#chunksize) プロパティを提供する [`IForOfState`]({environment:angularApiUrl}/interfaces/iforofstate.html) インターフェイスを使用できます。
 
-**注:** 最初の `chunkSize` は常に 0 で、特定のアプリケーション シナリオに基づいて設定する必要があります。
+**注:** 最初の [`chunkSize`]({environment:angularApiUrl}/interfaces/iforofstate.html#chunksize) は常に 0 で、特定のアプリケーション シナリオに基づいて設定する必要があります。
 
 ### リモートの並べ替え/フィルタリングの仮想化
-リモートの並べ替えおよびフィルタリングは、`onDataPreLoad`, `onSortingDone`, `onFilteringDone` 出力にサブスクライブし、パブリック `igxGrid` プロパティの `totalItemCount` をサービスから送信される個々の情報とともに設定し、受け取った引数に基づいて適切な要求を作成します。
+リモートの並べ替えおよびフィルタリングは、[`onDataPreLoad`]({environment:angularApiUrl}/classes/igxgridcomponent.html#ondatapreload), [`onSortingDone`]({environment:angularApiUrl}/classes/igxgridcomponent.html#onsortingdone), [`onFilteringDone`]({environment:angularApiUrl}/classes/igxgridcomponent.html#onfilteringdone) 出力にサブスクライブし、パブリック [`IgxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) プロパティの [`totalItemCount`]({environment:angularApiUrl}/classes/igxgridcomponent.html#totalitemcount) をサービスから送信される個々の情報とともに設定し、受け取った引数に基づいて適切な要求を作成します。
 
 リモート データを要求時にフィルター処理で大文字と小文字が区別されることに注意してください。
 
@@ -99,7 +99,7 @@ public processData() {
 
 *   行の高さの変更はサポートされません。すべての行を同じ高さに設定する必要があります。
 *   行/列の指定したディメンションが実際の描画された要素と一致する必要があります。たとえば、グリッド セルに行の高さを高くするテンプレートまたはクラスを定義した際に指定した `rowHeight` 値と一致しない場合、垂直仮想化は正しく動作しません。仮想項目数は DOM の実際要素と一致しなくなり、列およびその幅も同様になります。
-*   ブラウザーは現在 DOM 要素に高さの制限があります。そのため、行の高さの合計をブラウザーの高さの制限より大きくする必要があります。より大きくなる場合、`igxGrid` が正しく動作しない可能性があります。たとえば、Internet Explorer 11 の高さの制限は 1,533,916 ピクセルです。つまり、高さが 50px の行の制限は 30,678 行です。
+*   ブラウザーは現在 DOM 要素に高さの制限があります。そのため、行の高さの合計をブラウザーの高さの制限より大きくする必要があります。より大きくなる場合、[`IgxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) が正しく動作しない可能性があります。たとえば、Internet Explorer 11 の高さの制限は 1,533,916 ピクセルです。つまり、高さが 50px の行の制限は 30,678 行です。
 *   グリッドにレスポンシブな幅または高さがあり、ブラウザーのウィンドウまたはその他の要素のサイズに合わせてサイズ変更する場合、スクロール位置は 0 にリセットされます。スクロールバーの位置およびサイズ変更については、今後のリリースで機能拡張が予定されています。
 *   Mac OS で 「Show scrollbars only when scrolling」システム オプションを true (デフォルト値) に設定した場合、水平スクロールバーが表示されません。これは、グリッドの行コンテナーで、overflow が hidden に設定されているためです。オプションを "Always" に設定すると、スクロールバーが表示されます。
 
@@ -108,6 +108,14 @@ public processData() {
 #### 仮想化のためにグリッドでディメンションを設定する必要があるのはなぜですか?
 
 描画する前にコンテナーおよび項目のサイズの情報がない場合にグリッドでランダムな位置にスクロールすると、スクロールバーの幅や高さの設定、表示項目の決定で誤りが発生します。ディメンションの推測がスクロールバーの誤操作となり、ユーザー エクスペリエンスを低下させます。そのため、仮想化を有効化する際は、関連するディメンションを設定することをお勧めします。
+
+<div class="divider--half"></div>
+
+### API
+* [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
+* [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
+* [IgxForOfDirective]({environment:angularApiUrl}/classes/igxforofdirective.html)
+* [IForOfState]({environment:angularApiUrl}/interfaces/iforofstate.html)
 
 ### 追加のリソース
 <div class="divider--half"></div>

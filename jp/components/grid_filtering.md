@@ -20,7 +20,7 @@ Ignite UI for Angular Grid コンポーネントは、グリッドにバイン�
 </div>
 <div class="divider--half"></div>
 
-デフォルトの定義済みフィルタリングおよび標準のフィルタリング条件があり、カスタム実装で置き換えることも可能です。また、カスタム フィルタリング条件を追加することもできます。Grid には、簡易なフィルター UI や詳細なフィルター オプションがあります。列で設定された `dataType` に基づいて、適切な[**フィルター条件**](grid.md#フィルター条件)のセットがフィルター UI ドロップダウンに読み込まれます。また、列の `ignoreCase` および最初の `condition` プロパティを設定できます。
+デフォルトの定義済みフィルタリングおよび標準のフィルタリング条件があり、カスタム実装で置き換えることも可能です。また、カスタム フィルタリング条件を追加することもできます。Grid には、簡易なフィルター UI や詳細なフィルター オプションがあります。列で設定された [`dataType`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#datatype) に基づいて、適切な[**フィルター条件**](grid.md#フィルター条件)のセットがフィルター UI ドロップダウンに読み込まれます。また、列の [`ignoreCase`]({environment:angularApiUrl}/interfaces/ifilteringexpression.html) および最初の [`condition`]({environment:angularApiUrl}/interfaces/ifilteringexpression.html#condition) プロパティを設定できます。
 
 ```html
 <igx-column field="ProductName" filterable="true" dataType="string"></igx-column>
@@ -30,16 +30,16 @@ Ignite UI for Angular Grid コンポーネントは、グリッドにバイン�
 > [!NOTE]
 > `string` 型の値が `Date` dataType の列で使用される場合、グリッドは値を `Date` オブジェクトに解析しないためフィルター条件は使用できません。`string` オブジェクトを使用する場合、値を `Date` オブジェクトに解析するためのロジックをアプリケーション レベルで実装する必要があります。
 
-列または複数の列はグリッド API でフィルターできます。グリッドはフィルター メソッド (`filter`、`filterGlobal `、`clearFilter`) を公開します。
+列または複数の列はグリッド API でフィルターできます。グリッドはフィルター メソッド ([`filter`]({environment:angularApiUrl}/classes/igxgridcomponent.html#filter)、[`filterGlobal`]({environment:angularApiUrl}/classes/igxgridcomponent.html#filterglobal)、[`clearFilter`]({environment:angularApiUrl}/classes/igxgridcomponent.html#clearfilter)) を公開します。
 
-*   `filter` - 単一の列または複数の列をフィルターします。
+*   [`filter`]({environment:angularApiUrl}/classes/igxgridcomponent.html#filter) - 単一の列または複数の列をフィルターします。
 
 以下の 5 つのフィルタリング オペランド クラスが公開されます。
-   - `IgxFilteringOperand`: カスタムフィルタリング条件の定義時に継承できるベース フィルタリング オペランドです。
-   - `IgxBooleanFilteringOperand` は、`boolean` 型のすべてのデフォルト フィルタリング条件を定義します。
-   - `IgxNumberFilteringOperand` は、`numeric` 型のすべてのデフォルト フィルタリング条件を定義します。
-   - `IgxStringFilteringOperand` は、`string` 型のすべてのデフォルト フィルタリング条件を定義します。
-   - `IgxDateFilteringOperand` は、`Date` 型のすべてのデフォルト フィルタリング条件を定義します。
+   - [`IgxFilteringOperand`]({environment:angularApiUrl}/classes/igxfilteringoperand.html): カスタムフィルタリング条件の定義時に継承できるベース フィルタリング オペランドです。
+   - [`IgxBooleanFilteringOperand`]({environment:angularApiUrl}/classes/igxbooleanfilteringoperand.html) は、`boolean` 型のすべてのデフォルト フィルタリング条件を定義します。
+   - [`IgxNumberFilteringOperand`]({environment:angularApiUrl}/classes/igxnumberfilteringoperand.html) は、`numeric` 型のすべてのデフォルト フィルタリング条件を定義します。
+   - [`IgxStringFilteringOperand`]({environment:angularApiUrl}/classes/igxstringfilteringoperand.html) は、`string` 型のすべてのデフォルト フィルタリング条件を定義します。
+   - [`IgxDateFilteringOperand`]({environment:angularApiUrl}/classes/igxdatefilteringoperand.html) は、`Date` 型のすべてのデフォルト フィルタリング条件を定義します。
 
 ```typescript
 // Single column filtering
@@ -80,7 +80,7 @@ gridFilteringExpressionsTree.filteringOperands.push(priceFilteringExpressionsTre
 this.grid.filteringExpressionsTree = gridFilteringExpressionsTree;
 ```
 
-*   `filterGlobal` - 既存フィルターをクリアして新しいフィルター条件をすべてのグリッド列に適用します。
+*   [`filterGlobal`]({environment:angularApiUrl}/classes/igxgridcomponent.html#filterglobal) - 既存フィルターをクリアして新しいフィルター条件をすべてのグリッド列に適用します。
 
 ```typescript
 // Filter all cells for a value which contains `myproduct`
@@ -88,7 +88,7 @@ this.grid.filteringLogic = FilteringLogic.Or;
 this.grid.filterGlobal("myproduct", IgxStringFilteringOperand.instance().condition("contains"), false);
 ```
 
-*   `clearFilter` - 対象列から適用されたフィルターを削除します。引数がない場合、すべての列のフィルターをクリアします。
+*   [`clearFilter`]({environment:angularApiUrl}/classes/igxgridcomponent.html#clearfilter) - 対象列から適用されたフィルターを削除します。引数がない場合、すべての列のフィルターをクリアします。
 
 ```typescript
 // Remove the filtering state from the ProductName column
@@ -100,7 +100,7 @@ this.grid.clearFilter();
 
 #### 初期のフィルター状態
 
-グリッドの初期フィルタリング状態の設定は、IgxGridComponent `filteringExpressionsTree` プロパティを IFilteringExpressionsTree の配列に設定して各列をフィルターします。
+グリッドの初期フィルタリング状態の設定は、[`IgxGridComponent`]({environment:angularApiUrl}/classes/igxgridcomponent.html) [`filteringExpressionsTree`]({environment:angularApiUrl}/classes/igxgridcomponent.html#filteringexpressionstree) プロパティを [`IFilteringExpressionsTree`]({environment:angularApiUrl}/interfaces/ifilteringexpressionstree.html) の配列に設定して各列をフィルターします。
 
 ```typescript
 public ngOnInit() {
@@ -121,7 +121,7 @@ public ngOnInit() {
 
 #### フィルター ロジック
 
-グリッドの `filteringLogic` プロパティはグリッドで複数の列のフィルターが解決する方法を制御します。グリッド API またはグリッドの入力プロパティによって変更できます。
+グリッドの [`filteringLogic`]({environment:angularApiUrl}/classes/igxgridcomponent.html#filteringlogic) プロパティはグリッドで複数の列のフィルターが解決する方法を制御します。グリッド API またはグリッドの入力プロパティによって変更できます。
 
 ```typescript
 import { FilteringLogic } from 'igniteui-angular';
@@ -130,33 +130,38 @@ import { FilteringLogic } from 'igniteui-angular';
 this.grid.filteringLogic = FilteringLogic.OR;
 ```
 
-`AND` のデフォルト値はすべての適用されているフィルター式と一致する行のみを返します。上記の例は、'ProductName セル値が 'myproduct' を含み、'Price' セル値が 55 より大きい場合に行が返されます。
+[`AND`]({environment:angularApiUrl}/enums/filteringlogic.html#and) のデフォルト値はすべての適用されているフィルター式と一致する行のみを返します。上記の例は、'ProductName セル値が 'myproduct' を含み、'Price' セル値が 55 より大きい場合に行が返されます。
 
-`OR` に設定される場合、'ProductName セル値が 'myproduct' を含むか、'Price' セル値が 55 より大きい場合に行が返されます。
+[`OR`]({environment:angularApiUrl}/enums/filteringlogic.html#or) に設定される場合、'ProductName セル値が 'myproduct' を含むか、'Price' セル値が 55 より大きい場合に行が返されます。
 
 <div class="divider--half"></div>
 
 #### リモート フィルタリング
-onDataPreLoad と onFilteringDone アウトプットにサブスクライブしてグリッドでリモート フィルタリングができます。詳細については、`グリッドの仮想化とパフォーマンス` [ヘルプ](grid_virtualization.md#リモートの並べ替えフィルタリングの仮想化)をご覧ください。
+[`onDataPreLoad`]({environment:angularApiUrl}/classes/igxgridcomponent.html#ondatapreload) と [`onFilteringDone`]({environment:angularApiUrl}/classes/igxgridcomponent.html#onfilteringdone) アウトプットにサブスクライブしてグリッドでリモート フィルタリングができます。詳細については、`グリッドの仮想化とパフォーマンス` [ヘルプ](grid_virtualization.md#リモートの並べ替えフィルタリングの仮想化)をご覧ください。
 
 <div class="divider--half"></div>
 
 #### 6.1.0 Volume 0 の重大な変更
-* IgxGridComponent `filteringExpressions` プロパティは削除されます。代わりに `filteringExpressionsTree` を使用してください。
-* `filter_multiple` メソッドは削除されました。`filter` メソッドおよび`filteringExpressionsTree` プロパティを代わりに使用してください。
-* `filter` メソッドに新しいシグネチャがあり、以下のパラメーターを受け付けます。
+* IgxGridComponent `filteringExpressions` プロパティは削除されます。代わりに [`filteringExpressionsTree`]({environment:angularApiUrl}/classes/igxgridcomponent.html#filteringexpressionstree) を使用してください。
+* `filter_multiple` メソッドは削除されました。[`filter`]({environment:angularApiUrl}/classes/igxgridcomponent.html#filter) メソッドおよび [`filteringExpressionsTree`]({environment:angularApiUrl}/classes/igxgridcomponent.html#filteringexpressionstree) プロパティを代わりに使用してください。
+* [`filter`]({environment:angularApiUrl}/classes/igxgridcomponent.html#filter) メソッドに新しいシグネチャがあり、以下のパラメーターを受け付けます。
   * `name` - フィルターする列の名前。
   * `value` - フィルタリングに使用する値。
-  * `conditionOrExpressionTree`  (オプション) - このパラメーターは、`IFilteringOperation` または `IFilteringExpressionsTree` 型のオブジェクトを受け付けます。簡単なフィルタリングが必要な場合、フィルタリング処理を引数として渡すことができます。高度なフィルタリングの場合、複雑なフィルタリング ロジックを含む式ツリーが引数として渡すことができます。
-* `ignoreCase` (オプション) - フィルタリングで大文字と小文字を区別するかどうか。
-* `onFilteringDone` イベントは、フィルター列のフィルタリング状態を含む型 `IFilteringExpressionsTree` の 1 パラメーターのみになりました。
-* フィルタリング オペランド: `IFilteringExpression` 条件プロパティは、フィルタリング状態メソッドに直接参照せずに `IFilteringOperation` を参照するようになりました。
-* `IgxColumnComponent` は、`IgxFilteringOperand` クラス参照を取得する `filters` プロパティを公開しました。
-* カスタム フィルターは、`IFilteringOperation` 型の演算で `IgxFilteringOperand` の`operations` プロパティを生成してグリッド列に提供されます。
+  * `conditionOrExpressionTree`  (オプション) - このパラメーターは、[`IFilteringOperation`]({environment:angularApiUrl}/interfaces/ifilteringoperation.html) または [`IFilteringExpressionsTree`]({environment:angularApiUrl}/interfaces/ifilteringexpressionstree.html) 型のオブジェクトを受け付けます。簡単なフィルタリングが必要な場合、フィルタリング処理を引数として渡すことができます。高度なフィルタリングの場合、複雑なフィルタリング ロジックを含む式ツリーが引数として渡すことができます。
+* [`ignoreCase`]({environment:angularApiUrl}/interfaces/ifilteringexpression.html) (オプション) - フィルタリングで大文字と小文字を区別するかどうか。
+* [`onFilteringDone`]({environment:angularApiUrl}/classes/igxgridcomponent.html#onfilteringdone) イベントは、フィルター列のフィルタリング状態を含む型 [`IFilteringExpressionsTree`]({environment:angularApiUrl}/interfaces/ifilteringexpressionstree.html) の 1 パラメーターのみになりました。
+* フィルタリング オペランド: [`IFilteringExpression`]({environment:angularApiUrl}/interfaces/ifilteringexpression.html) 条件プロパティは、フィルタリング状態メソッドに直接参照せずに [`IFilteringOperation`]({environment:angularApiUrl}/interfaces/ifilteringoperation.html) を参照するようになりました。
+* [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) は、[`IgxFilteringOperand`]({environment:angularApiUrl}/classes/igxfilteringoperand.html) クラス参照を取得する [`filters`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#filters) プロパティを公開しました。
+* カスタム フィルターは、[`IFilteringOperation`]({environment:angularApiUrl}/interfaces/ifilteringoperation.html) 型の演算で [`IgxFilteringOperand`]({environment:angularApiUrl}/classes/igxfilteringoperand.html) の[`operations`]({environment:angularApiUrl}/classes/igxfilteringoperand.html#operations) プロパティを生成してグリッド列に提供されます。
 
+### API リファレンス
 <div class="divider--half"></div>
 
-### 追加のリソース
+* [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
+* [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
+* [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#mixin-igx-grid)
+
+### その他のリソース
 <div class="divider--half"></div>
 
 * [グリッドの概要](grid.md)

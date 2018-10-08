@@ -22,7 +22,7 @@ _language: ja
 
 ### 使用方法
 
-Ignite UI for Angular Avatar を初期化する前に、**IgxAvatarModule** を **app.module.ts** ファイルにインポートします。
+Ignite UI for Angular Avatar を初期化する前に、[`IgxAvatarModule`]({environment:angularApiUrl}/classes/igxavatarmodule.html) を **app.module.ts** ファイルにインポートします。
 
 ```typescript
 // app.module.ts
@@ -49,7 +49,7 @@ Avatar の形式は四角または丸で、3 つのサイズ オプション (�
 </igx-avatar>
 ```
 
-アバターを丸形に設定し、サイズを大きくします。`bgColor` プロパティを使用して背景色を変更できます。また、`color` プロパティを使用してイニシャルの色を設定します。これは入力プロパティで、コンポーネントのプロパティにバインドできます。
+アバターを丸形に設定し、サイズを大きくします。[`bgColor`]({environment:angularApiUrl}/classes/igxavatarcomponent.html#bgcolor) プロパティを使用して背景色を変更できます。また、[`color`]({environment:angularApiUrl}/classes/igxavatarcomponent.html#color) プロパティを使用してイニシャルの色を設定します。これは入力プロパティで、コンポーネントのプロパティにバインドできます。
 
 ```html
 <igx-avatar initials="JS" 
@@ -76,7 +76,7 @@ Avatar の形式は四角または丸で、3 つのサイズ オプション (�
 
 #### 画像を表示するアバター
 
-画像を表示するアバターを作成するには、`src` プロパティで画像ソースを設定します。
+画像を表示するアバターを作成するには、[`src`]({environment:angularApiUrl}/classes/igxavatarcomponent.html#src) プロパティで画像ソースを設定します。
 
 ```html
 <igx-avatar [src]="imgSource"
@@ -99,7 +99,7 @@ Avatar の形式は四角または丸で、3 つのサイズ オプション (�
 
 #### アイコンを表示するアバター
 
-アバターでアイコンを表示するには、`icon` プロパティを設定します。現在、マテリアル アイコン セットのすべてのアイコンがサポートされます。
+アバターでアイコンを表示するには、[`icon`]({environment:angularApiUrl}/classes/igxavatarcomponent.html#icon) プロパティを設定します。現在、マテリアル アイコン セットのすべてのアイコンがサポートされます。
 
 ```html
 <igx-avatar icon="phone"
@@ -108,16 +108,15 @@ Avatar の形式は四角または丸で、3 つのサイズ オプション (�
 </igx-avatar>
 ```
 
+### API リファレンス
 <div class="divider--half"></div>
 
-### API
+* [IgxAvatarComponent]({environment:angularApiUrl}/classes/igxavatarcomponent.html)
+* [IgxAvatarComponent Styles]({environment:sassApiUrl}/index.html#function-igx-avatar-theme)
 
-| 名前         |   型    | 説明                                                                                                                                             |
-| :----------- | :-----: | :----------------------------------------------------------------------------------------------------------------------------------------------- |
-| `src`        | string  | アバターの画像ソースを設定します。                                                                                                               |
-| `initials`   | string  | アバターのイニシャルを設定します。                                                                                                               |
-| `icon`       | string  | アバターのアイコンを設定します。現在、マテリアル アイコン セットのすべてのアイコンがサポートされます。イニシャルおよび画像アバターは適用外です。 |
-| `bgColor`    | string  | イニシャルまたはアイコン アバターの背景色を設定します。                                                                                          |
-| `color`      | string  | イニシャルまたはアイコン アバターの色を設定します。(オプション)                                                                                  |
-| `roundShape` | boolean | アバターの図形を丸に設定します。既定の図形は四角です。                                                                                           |
-| `size`       | string  | アバターのサイズを小、中、大に設定します。                                                                                                       |
+### その他のリソース
+<div class="divider--half"></div>
+コミュニティに参加して新しいアイデアをご提案ください。
+
+* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

@@ -25,7 +25,7 @@ _language: ja
 
 ### 使用方法
 
-Ignite UI for Angular Badge を初期化する前に、**IgxBadgeModule** を **app.module.ts** ファイルにインポートします。
+Ignite UI for Angular Badge を初期化する前に、[`IgxBadgeModule`]({environment:angularApiUrl}/classes/igxbadgemodule.html) を **app.module.ts** ファイルにインポートします。
 
 ```typescript
 // app.module.ts
@@ -41,7 +41,7 @@ import { IgxBadgeModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-チャット クライアントのような連絡先リストを作成します。連絡先の名前を表示し、アバターおよび連絡先の現在状態 (オンライン、オフライン、退席中) を表示します。これを実装するために **igx-badge** および **igx-avatar** コンポーネントを使用します。コンテナーのために **igx-list** を使用します。
+チャット クライアントのような連絡先リストを作成します。連絡先の名前を表示し、アバターおよび連絡先の現在状態 (オンライン、オフライン、退席中) を表示します。これを実装するために [`igx-badge`]({environment:angularApiUrl}/classes/igxbadgecomponent.html) および [`igx-avatar`]({environment:angularApiUrl}/classes/igxavatarcomponent.html) コンポーネントを使用します。コンテナーのために [`igx-list`]({environment:angularApiUrl}/classes/igxlistcomponent.html) を使用します。
 
 すべての必要なモジュールを含み、**app.module.ts** ファイルにインポートします。
 
@@ -136,7 +136,7 @@ class Member {
 
 <div class="divider--half"></div>
 
-各チャット メンバーの前にアバターを追加します。そのため、[**IgxAvatar**](avatar.md) を含む **igx-list-item** に div 要素を追加します。リスト項目コンテンツを以下のように変更します。
+各チャット メンバーの前にアバターを追加します。そのため、[**IgxAvatar**](avatar.md) を含む [`igx-list-item`]({environment:angularApiUrl}/classes/igxlistitemcomponent.html) に div 要素を追加します。リスト項目コンテンツを以下のように変更します。
 
 ```html
 <!-- contacts.component.html -->
@@ -169,11 +169,11 @@ class Member {
 
 <div class="divider--half"></div>
 
-名前のみのリストはそれほど有用な情報を表示しません。最後に、**igx-badge** を追加し、連絡先の状態通知を表示します。バッジ コンポーネントをアバター コンポーネントに追加し、**igx-list-item** コンテンツを以下のコードのように変更します。
+名前のみのリストはそれほど有用な情報を表示しません。最後に、[`igx-badge`]({environment:angularApiUrl}/classes/igxbadgecomponent.html) を追加し、連絡先の状態通知を表示します。バッジ コンポーネントをアバター コンポーネントに追加し、[`igx-list-item`]({environment:angularApiUrl}/classes/igxlistitemcomponent.html) コンテンツを以下のコードのように変更します。
 
-**igx-badge** には、バッジの外観を構成するための `icon` および `type` 入力があります。`icon` を設定するには、名前を公式の[マテリアル アイコン セット](https://material.io/icons/)から提供します。バッジの `type` を `default`、`info`、`success`、`warning`、または `error` に設定します。その型により、特定の背景色が適用されます。
+[`igx-badge`]({environment:angularApiUrl}/classes/igxbadgecomponent.html) には、バッジの外観を構成するための [`icon`]({environment:angularApiUrl}/classes/igxbadgecomponent.html#icon) および [`type`]({environment:angularApiUrl}/classes/igxbadgecomponent.html#type) 入力があります。[`icon`]({environment:angularApiUrl}/classes/igxbadgecomponent.html#icon) を設定するには、名前を公式の[マテリアル アイコン セット](https://material.io/icons/)から提供します。バッジの [`type`]({environment:angularApiUrl}/classes/igxbadgecomponent.html#type) を [`default`]({environment:angularApiUrl}/enums/type.html#default)、[`info`]({environment:angularApiUrl}/enums/type.html#info)、[`success`]({environment:angularApiUrl}/enums/type.html#success)、[`warning`]({environment:angularApiUrl}/enums/type.html#warning)、または [`error`]({environment:angularApiUrl}/enums/type.html#error) に設定します。その型により、特定の背景色が適用されます。
 
-このサンプルで、`icon` および `type` が *icon* および *type* のモデル プロパティにバインドされます。
+このサンプルで、[`icon`]({environment:angularApiUrl}/classes/igxbadgecomponent.html#icon) および [`type`]({environment:angularApiUrl}/classes/igxbadgecomponent.html#type) が *icon* および *type* のモデル プロパティにバインドされます。
 
 バッジを親コンテナーに配置するには、*badge-style* のカスタム CSS クラスを作成し、bottom および right 位置を定義します。
 
@@ -220,23 +220,16 @@ class Member {
     </button>
 </div>
 
+
+### API References
 <div class="divider--half"></div>
 
-### API 概要
-
-以下の表は **igx-badge** コンポーネントの便利な入力を説明します。
-
-#### 入力
-
-以下の入力が **igx-badge** コンポーネントで利用できます。
-
-| 名前 | 型 |説明 |
-| :--------- | :----: | :------- |
-| `icon` | string | マテリアル アイコン セットからバッジのアイコンを設定します。バッジの `value` が既に設定されている場合は表示されません。 |
-| `type` | string | バッジの型を `default`、`info`、`success`、`warning`、または `error` に設定します。型により、デフォルトのテーマで宣言されている特定の背景色が設定さます。 |
-| `value` | string | バッジで表示する値を設定します。 |
-
-<div class="divider--half"></div>
+* [IgxAvatarComponent]({environment:angularApiUrl}/classes/igxavatarcomponent.html)
+* [IgxBadgeComponent]({environment:angularApiUrl}/classes/igxbadgecomponent.html)
+* [IgxBadgeComponent Styles]({environment:sassApiUrl}/index.html#function-igx-badge-theme)
+* [IgxListComponent]({environment:angularApiUrl}/classes/igxlistcomponent.html)
+* [IgxListItemComponent]({environment:angularApiUrl}/classes/igxlistitemcomponent.html)
+* [Type]({environment:angularApiUrl}/enums/type.html)
 
 ### 追加のリソース
 <div class="divider--half"></div>

@@ -19,8 +19,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ### Dependencies
 
-The Ripple Directive is exported as an `NgModule`, thus all you need to do in your application is to import the _IgxRippleModule_
-inside your `AppModule`:
+The Ripple Directive is exported as an `NgModule`, thus all you need to do in your application is to import the [`IgxRippleModule`]({environment:angularApiUrl}/classes/igxripplemodule.html) inside your `AppModule`:
 
 ```typescript
 // app.module.ts
@@ -39,7 +38,8 @@ export class AppModule {}
 ### Usage
 #### Adding Ripple Effect
 
-Use `igxRipple` to add a ripple effect to the specified element. It will add a ripple effect with the default color.
+Use [`igxRipple`]({environment:angularApiUrl}/classes/igxrippledirective.html) to add a ripple effect to the specified element. It will add a ripple effect with the default color.
+
 ```html
 <button igxButton="raised" igxRipple>Click Me</button>
 ```
@@ -49,7 +49,8 @@ Use `igxRipple` to add a ripple effect to the specified element. It will add a r
 
 #### Custom Color
 
-You can set the ripple color using `igxRipple`. In this sample, we set white color to the ripple.
+You can set the ripple color using [`igxRipple`]({environment:angularApiUrl}/classes/igxrippledirective.html). In this sample, we set white color to the ripple.
+
 ```html
 <button igxButton="raised" igxRipple="white">White</button>
 ```
@@ -58,7 +59,8 @@ You can set the ripple color using `igxRipple`. In this sample, we set white col
 </div>
 
 #### Centered Ripple Effect 
-The ripple effect starts from the position of the click event. You can change this behavior using `igxRippleCentered` and setting the center of the element as origin.
+The ripple effect starts from the position of the click event. You can change this behavior using [`igxRippleCentered`]({environment:angularApiUrl}/classes/igxrippledirective.html#centered) and setting the center of the element as origin.
+
 ```html
 <button igxButton="raised" igxRipple="white" igxRippleCentered="true">Centered</button>
 ```
@@ -67,7 +69,8 @@ The ripple effect starts from the position of the click event. You can change th
 </div>
 
 #### Ripple Target
-Use `igxRippleTarget` to attach a ripple effect to a specific element inside a parent element.
+Use [`igxRippleTarget`]({environment:angularApiUrl}/classes/igxrippledirective.html#rippletarget) to attach a ripple effect to a specific element inside a parent element.
+
 ```html
 <div class="parent-div" igxRipple="blue" igxRippleTarget=".child-div" igxRippleCentered="true">
   Parent Div
@@ -82,7 +85,8 @@ Notice that if you click on the parent or the child divs the ripple effect will 
 </div>
 
 #### Ripple Duration
-Use `igxRippleDuration` to change the duration of the ripple animation. The default is 600 miliseconds. In this sample the `igxRippleDuration` is set to 2000 miliseconds.
+Use [`igxRippleDuration`]({environment:angularApiUrl}/classes/igxrippledirective.html#rippleduration) to change the duration of the ripple animation. The default is 600 miliseconds. In this sample the [`igxRippleDuration`]({environment:angularApiUrl}/classes/igxrippledirective.html#rippleduration) is set to 2000 miliseconds.
+
 ```html
 <div [igxRippleDuration]=2000 igxRipple="white">
   <p>Long Ripple Animation</p>
@@ -92,27 +96,23 @@ Use `igxRippleDuration` to change the duration of the ripple animation. The defa
     <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/ripple-sample-4" onload="onSampleIframeContentLoaded(this);">
 </div>
 
-The `igxRipple` uses the Web Animation API and runs natively on
+The [`igxRipple`]({environment:angularApiUrl}/classes/igxrippledirective.html) uses the Web Animation API and runs natively on
 [browsers that support it.](http://caniuse.com/#feat=web-animation)
 The `web-animations.min.js` polyfill is [available](https://github.com/web-animations/web-animations-js)
 for other browsers.
 
 > [!NOTE]
-> Use a relatively positioned element for the ripple animation. You can also use `igxRippleTarget` to target a child element.
+> Use a relatively positioned element for the ripple animation. You can also use [`igxRippleTarget`]({environment:angularApiUrl}/classes/igxrippledirective.html#rippletarget) to target a child element.
+
+### API References
 <div class="divider--half"></div>
 
-### API
-| Name   |      Type      |  Description |
-|:----------|:-------------:|:------|
-| `igxRipple` |  string | The color of the ripple animation |
-| `igxRippleTarget` |    string   |   Set the ripple to activate on a child element inside the parent of the `igxRipple`. Accepts a CSS selector. Defaults to the parent of the `igxRipple`.  |
-| `igxRippleCentered` | boolean | If true, the ripple animation originates from the center of the element rather than the location of the click event. |
-| `igxRippleDuration` | number | The duration of the ripple animation. Defaults to 600 milliseconds. |
+* [IgxRippleDirective]({environment:angularApiUrl}/classes/igxrippledirective.html)
+* [IgxRipple Styles]({environment:sassApiUrl}/index.html#function-igx-ripple-theme)
+
+### Additional Resources
 <div class="divider--half"></div>
 
-###Additional Resources
-
-<div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.
 
 * [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)

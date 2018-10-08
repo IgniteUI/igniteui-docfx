@@ -39,13 +39,13 @@ export class AppModule {}
 ```
 
 > [!NOTE]
-> `igxInput`、`igxLabel`、`igxPrefix`、`igxSuffix`、または `igxHint` ディレクティブを使用するには、`<igx-input-group>` コンテナーにラップする必要があります。
+> [`igxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html)、[`igxLabel`]({environment:angularApiUrl}/classes/igxlabeldirective.html)、[`igx-prefix`]({environment:angularApiUrl}/classes/igxprefixdirective.html)、[`igx-suffix`]({environment:angularApiUrl}/classes/igxsuffixdirective.html)、または [`igx-hint`]({environment:angularApiUrl}/classes/igxhintdirective.html) ディレクティブを使用するには、`<igx-input-group>` コンテナーにラップする必要があります。
 
 ### Label および Input
-`igxLabel` および `igxInput` ディレクティブとその検証、データ バインディング、API については、[このトピック](label_input.md)を参照してください。
+[`igxLabel`]({environment:angularApiUrl}/classes/igxlabeldirective.html) および [`igxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html) ディレクティブとその検証、データ バインディング、API については、[このトピック](label_input.md)を参照してください。
 
 ### Prefix と Suffix
-Ignite UI for Angular Prefix または Suffix を使用して入力のプレフィックスまたはサフィックスを追加できます。両方のディレクティブに HTML 要素、文字列、またはその他のコンポーネントを含むことができます。文字列 **prefix** (`+359`) および igxIcon **suffix** (`<igx-icon name="phone"></igx-icon>`) を持つ新しい入力フィールドを追加します。
+Ignite UI for Angular Prefix または Suffix を使用して入力のプレフィックスまたはサフィックスを追加できます。両方のディレクティブに HTML 要素、文字列、またはその他のコンポーネントを含むことができます。文字列 **prefix** (`+359`) および [`igx-icon`]({environment:angularApiUrl}/classes/igxiconcomponent.html) **suffix** (`<igx-icon>phone</igx-icon>`) を持つ新しい入力フィールドを追加します。
 
 ```html
 <igx-input-group>
@@ -53,7 +53,7 @@ Ignite UI for Angular Prefix または Suffix を使用して入力のプレフ�
     <label igxLabel for="phone">Phone</label>
     <input igxInput name="phone" type="text" [(ngModel)]="user.phone" />
     <igx-suffix>
-        <igx-icon name="phone"></igx-icon>
+        <igx-icon>phone</igx-icon>
     </igx-suffix>
 </igx-input-group>
 ```
@@ -66,7 +66,7 @@ Ignite UI for Angular Prefix または Suffix を使用して入力のプレフ�
 <div class="divider--half"></div>
 
 ### Hint
-Ignite UI for Angular Hint は、入力の下に配置されるヘルパー テキストを提供します。ヒントは入力の開始または終了に配置できます。`igxHint` の位置は `position` プロパティを使用して設定します。以下は phone 入力にヒントを追加します。
+Ignite UI for Angular Hint は、入力の下に配置されるヘルパー テキストを提供します。ヒントは入力の開始または終了に配置できます。[`igx-hint`]({environment:angularApiUrl}/classes/igxhintdirective.html) の位置は [`position`]({environment:angularApiUrl}/classes/igxhintdirective.html#position) プロパティを使用して設定します。以下は phone 入力にヒントを追加します。
 
 ```html
 <igx-input-group>
@@ -74,7 +74,7 @@ Ignite UI for Angular Hint は、入力の下に配置されるヘルパー テ�
     <label igxLabel for="phone">Phone</label>
     <input igxInput name="phone" type="text" [(ngModel)]="user.phone" />
     <igx-suffix>
-        <igx-icon name="phone"></igx-icon>
+        <igx-icon>phone</igx-icon>
     </igx-suffix>
     <igx-hint position="start">Ex.: +359 888 123 456</igx-hint>
 </igx-input-group>
@@ -88,7 +88,7 @@ Ignite UI for Angular Hint は、入力の下に配置されるヘルパー テ�
 <div class="divider--half"></div>
 
 ### スタイル設定
-入力にスタイルを適用するには、`igxInputGroup` コンポーネントの `type` プロパティを使用します。現在 line (デフォルト)、box、border、および search のスタイル設定をサポートします。スタイル設定の結果:
+入力にスタイルを適用するには、[`igxInputGroup`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) コンポーネントの [`type`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html#type) プロパティを使用します。現在 line (デフォルト)、box、border、および search のスタイル設定をサポートします。スタイル設定の結果:
 
 <div class="sample-container" style="height:520px">
 <iframe id="input-group-sample-5-frame" src='{environment:demosBaseUrl}/input-group-sample-5' width="100%" height="100%" seamless frameBorder="0"></iframe>
@@ -96,37 +96,17 @@ Ignite UI for Angular Hint は、入力の下に配置されるヘルパー テ�
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="input-group-sample-5-frame" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
 </div>
-<div class="divider--half"></div>
 
-## Input Group API
+## API リファレンス
+* [IgxHintDirective]({environment:angularApiUrl}/classes/igxhintdirective.html)
+* [IgxInputDirective]({environment:angularApiUrl}/classes/igxinputdirective.html)
+* [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
+* [IgxInputGroupComponent Styles]({environment:sassApiUrl}/index.html#function-igx-input-group-theme)
+* [IgxLabelDirective]({environment:angularApiUrl}/classes/igxlabeldirective.html)
+* [IgxPrefixDirective]({environment:angularApiUrl}/classes/igxprefixdirective.html)
+* [IgxSuffixDirective]({environment:angularApiUrl}/classes/igxsuffixdirective.html)
 
-### 入力
-
-|名前|型|説明|
-|--- |--- |--- |
-|`type`|string|入力のスタイル方法。有効な値は `line`、`box`、`border`、および `search` です。デフォルト値は `line` です。|
-<div class="divider--half"></div>
-
-### メソッド
-
-|構文|説明|
-|--- |--- |
-|`isTypeLine()`|`igxInputGroup` の `type` が `line` かどうか。|
-|`isTypeBox()`|`igxInputGroup` の `type` が `box` かどうか。|
-|`isTypeBorder()`|`igxInputGroup` の `type` が `border` かどうか。|
-|`isTypeSearch()`|`igxInputGroup` の `type` が `search` かどうか。|
-<div class="divider--half"></div>
-
-## Hint API
-
-### 入力
-
-|名前|型|説明|
-|--- |--- |--- |
-|`position`|string|ヒントの配置。有効な値は `start` および `end` です。デフォルト値は `start` です。|
-<div class="divider--half"></div>
-
-## 追加のリソース
+## その他のリソース
 関連トピック:
 
 * [リアクティブ フォームの統合](input_group_reactive_forms.md)

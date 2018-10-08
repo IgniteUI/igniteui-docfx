@@ -1,18 +1,19 @@
 ---
-title: Expansion Panel
-_description: Provides an easily configurable component with two states - collapsed and expanded.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Collapsible component, IgxExpansionPanel, Ignite UI Expansion Panel
+title: 展開パネル
+_description: 2 つのステート (縮小と展開) をサポートする簡単に構成できるコンポーネントです。
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ,, Angular 縮小可能なコンポーネント, IgxExpansionPanel, Ignite UI  展開パネル
+_language: ja
 ---
 
-## Expansion Panel
+## 展開パネル
 <p class="highlight">
-The [`IgxExpansionPanel`]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html) is a lightweight component which can be rendered in two states - collapsed or expanded. When collapsed, the panel displays a short summary of its content. The collapsed panel can be toggled using mouse click, or keyboard interactions (maybe have link here) to display the body completely, containing any additional necessary content.
+[`IgxExpansionPanel`]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html) は軽量なコンポーネントで 2 つのステート (縮小と展開) で描画できます。縮小時はパネルでコンテンツの短い概要を表示します。縮小パネルはマウスクリックで切り替えできます。またはキーボード インタラクションで必要なコンテンツを含むボディを完全に表示します。
 </p>
 <div class="divider--half"></div>
 
-## Usage
-### Getting Started
-To use the [`IgxExpansionPanelComponent`]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html) we need to import the [**IgxExpansionPanelModule**]({environment:angularApiUrl}/classes/igxexpansionpanelmodule.html) in our **app.module**: 
+## 使用方法
+### はじめに
+`IgxExpansionPanelComponent`]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html) を使用する場合、[**IgxExpansionPanelModule**]({environment:angularApiUrl}/classes/igxexpansionpanelmodule.html) を **app.module** にインポートする必要があります。 
 ```typescript
 // app.module.ts
 
@@ -27,14 +28,14 @@ import { IgxExpansionPanelModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-We can now start using `igx-expansion-panel` in the markup. The expansion panel has a simple structure, as you can see below:
-- `igx-expansion-panel` - the component host - stores header and body
-    - `igx-expansion-panel-header` - stores the component header. This is always visible. Stores title and description as well as any additional content
-        - `igx-expansion-panel-title` - stores the component title. Has default styling. The title will always appear first in the header content (after icon if `iconPosition === 'left'`). Used in aria labels.
-        - `igx-expansion-panel-description` - stores the component description. Can be used to provide a short summary. The description will always appear after the title (if title is set).
-    - `igx-expansion-panel-body` - stores the component body. This part of the component is only visible when the panel is expanded.
+次にマークアップの `Igx-expansion-panel` を使用します。展開パネルは以下のようにシンプルな構造です。
+- `Igx-expansion-panel` - ヘッダーとボディを格納するコンポーネント ホスト。
+    - `igx-expansion-panel-header` - コンポーネントヘッダーを格納。常に表示されます。タイトルと説明、追加のコンテンツを保存します。
+        - `igx-expansion-panel-title` - コンポーネントのタイトルを保存します。デフォルトスタイルを持つ。タイトルは常に最初にヘッダー コンテンツに表示されます (`iconPosition === 'left'` の場合はアイコンの後)。Aria ラベルで使用。
+        - `igx-expansion-panel-description` - コンポーネントの概要を保存します。短い概要を提供するために使用できます。説明は常にタイトルの後に表示されます (タイトルを設定した場合)。
+    - `igx-expansion-panel-body` - コンポーネントのボディを保存します。コンポーネントのこの部分は、パネルの展開時のみ表示されます。
 
-In the below example, we can create a small collapsible component that hold a bit of information about the hummingbird:
+以下の例では、hummingbird についての情報を保持する縮小可能なコンポーネントを作成できます。
 ```html
 <!-- expansible-panel.component.html -->
 <igx-expansion-panel>
@@ -58,7 +59,7 @@ In the below example, we can create a small collapsible component that hold a bi
 </igx-expansion-panel>
 
 ```
-The [`IgxExpansionPanelComponent`]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html) exposes the [`.igx-expansion-panel`]({environment:sassApiUrl}/index.html#mixin-igx-expansion-panel) class which we can use to style the component:
+[`IgxExpansionPanelComponent`]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html)  は、コンポーネントにスタイル設定できる [`.igx-expansion-panel`]({environment:sassApiUrl}/index.html#mixin-igx-expansion-panel) クラスを公開します。
 
 ```css
 <!-- expansion-panel.component.css -->
@@ -79,9 +80,9 @@ The [`IgxExpansionPanelComponent`]({environment:angularApiUrl}/classes/igxexpans
 }
 ```
 
-The css classes `.igx-expansion-panel__header` and `.igx-expansion-panel__body` are also exposed for styling the header and body.
+css クラスの `.igx-expansion-panel__ ヘッダーと `.igx-expansion-panel__body` は、ヘッダーとボディのスタイル設定を公開します。
 
-You can see the results below: 
+以下は結果です。 
 <div class="sample-container loading" style="height: 200px;">
     <iframe id="expansion-sample-1-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/expansion-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -89,9 +90,9 @@ You can see the results below:
     <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="expansion-sample-1-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-### Binding to properties and events
+### プロパティとイベントへバインドします。
 
-We can add some logic to our component to make it show/hide the description depending on the state of the panel. We can do this by binding the description to the controls [`collapsed`]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html#collapsed) property:
+ロジックをコンポーネントに追加してパネルの状態に基づいて説明を表示/非表示にします。これには、説明をコントロール [`collapsed`]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html#collapsed) へバインドします。
 
 ```typescript
 // in expansion-panel.component.ts
@@ -105,7 +106,7 @@ export class ExpansionPanelComponent {
     public readMore: string = 'https://en.wikipedia.org/wiki/Hummingbird';
 }
 ```
-The following code sample will show the description only when the component is in collapsed state.
+以下のコード サンプルは、コンポーネントが縮小状態の場合のみ説明を表示します。
 
 ```html
 <!-- in expansion-component.component.html -->
@@ -118,7 +119,7 @@ The following code sample will show the description only when the component is i
     </igx-expansion-panel-header>
 ```
 
-If we want to add more complex functionality depending on the component's state, we could also bind to the event emitters.
+コンポーネントの状態に応じてより複雑な機能を追加する場合、イベント エミッターにバインドすることもできます。
 ```typescript
 // in expansion-panel.component.ts
 
@@ -136,7 +137,7 @@ export class ExpansionPanelComponent {
     </igx-expansion-panel>
 ```
 
-Below we have the results:
+以下は結果です。
 <div class="sample-container loading" style="height: 200px;">
     <iframe id="expansion-sample-2-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/expansion-sample-2" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -144,11 +145,11 @@ Below we have the results:
     <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="expansion-sample-2-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-### Styling the header
-The [`IgxExpansionPanelComponent`]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html) allows for easy customization of [the header]({environment:angularApiUrl}/classes/igxexpansionpanelheadercomponent.html).
-The default icon for the toggle state of the control can be templated. The position of this icon is also configurable - either the start or end of the header. It can also be hidden.
+### ヘッダーのスタイル設定
+[`IgxExpansionPanelComponent`]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html) は、簡単にカスタマイズできます。
+コントロールのトグル状態のデフォルト アイコンをテンプレート化できます。このアイコンの位置は、ヘッダーの開始または終了に設定可能です。非表示にすることもできます。
 
-Configuring the position of the header icon can be done through the [`iconPosition`]({environment:angularApiUrl}/classes/igxexpansionpanelheadercomponent.html#iconposition) input on the `igx-expansion-panel-header`. The posible options for the icon position are **left**, **right** and **none**. The next code sample demonstrates how to configure the component's button to go on the *right* side.
+ヘッダー アイコンの位置設定は、[`iconPosition`]({environment:angularApiUrl}/classes/igxexpansionpanelheadercomponent.html#iconposition) input on the `igx-expansion-panel-header` でできます。アイコンの配置に使用可能なオプションは、**left**、**right**、**none** です。次のコード サンプルは、コンポーネントのボタンを右側に設定する方法です。
 
 ```html
 <!-- in expansion-component.component.html -->
@@ -158,9 +159,9 @@ Configuring the position of the header icon can be done through the [`iconPositi
         </igx-expansion-panel-header>
     </igx-expansion-panel>
 ```
-> Note: The [`iconPosition`]({environment:angularApiUrl}/classes/igxexpansionpanelheadercomponent.html#iconposition) property works with `RTL` - e.g. an icon set to show up in **right** will show in the leftmost part of the header when RTL is on.
+> [`iconPosition`]({environment:angularApiUrl}/classes/igxexpansionpanelheadercomponent.html#iconposition) プロパティは、`RTL` で使用できます。たとえば、**right**に表示するよう設定したアイコンは、RTL 設定時にヘッダーの左端に表示されます。
 
-We can also override the default icon that is used in the control by passing content in an [`igx-expansion-panel-icon`]({environment:angularApiUrl}/classes/igxexpansionpanelicondirective.html) tag:
+コンテンツを渡してコントロールで使用するデフォルト アイコンは、[`igx-expansion-panel-icon`]({environment:angularApiUrl}/classes/igxexpansionpanelicondirective.html) タグでをオーバーライドできます。
 ```html
 <!-- in expansion-component.component.html -->
     <igx-expansion-panel>
@@ -181,11 +182,11 @@ We can also override the default icon that is used in the control by passing con
     font-weight: 600px;
 }
 ```
-Our component will now render "Show More" when the panel is collapsed and "Collapse" once it's fully expanded.
-### Adding content
+このコンポーネントは、パネルの縮小時と完全に展開した後に「更に表示」を描画します。
+### コンテキストの追加
 
-The [`igx-expansion-panel-body`](({environment:angularApiUrl}/classes/igxexpansionpanelbodycomponent.html) tag of the component accepts all kinds of markup and renders everything with the `ng-content` projection. We can use an [`IgxAvatar`]({environment:angularApiUrl}/classes/igxavatarcomponent.html) to freshen up our expansion panel's inner content:
-First, we need to import the [`IgxAvatarModule`]({environment:angularApiUrl}/classes/igxavatarmodule.html) in our **app.module.ts**
+コンポーネントの [`igx-expansion-panel-body`](({environment:angularApiUrl}/classes/igxexpansionpanelbodycomponent.htm タグはすべてのマークアップを受け取り、`ng-content` プロジェクションですべてを描画します。[`IgxAvatar`]({environment:angularApiUrl}/classes/igxavatarcomponent.html) を使用して展開パネルのインナー コンテンツを更新できます。
+はじめに [`IgxAvatarModule`]({environment:angularApiUrl}/classes/igxavatarmodule.html) を **app.module.ts** にインポートします。
 ```typescript
 // in app.module.ts
 import { IgxExpansionPanelModule, IgxAvatarModule } from 'igniteui-angular';
@@ -199,7 +200,7 @@ NgModule({
     ...
 })
 ```
-Once imported, we can use the avatar in the markup:
+インポート後、マークアップでアバターを使用できます。
 
 ```html
 <!-- in expansion-panel.component.html -->
@@ -220,7 +221,7 @@ Once imported, we can use the avatar in the markup:
 </igx-expansion-panel-body>
 ...
 ```
-We just need to add the image source to the component definition, so it can be easily changed
+画像ソースを追加する必要があります。
 ```typescript
 // in expansion-panel.component.html
 export class ExpansionPanelComponent {
@@ -228,8 +229,8 @@ export class ExpansionPanelComponent {
     public imgSource = 'https://upload.wikimedia.org/wikipedia/commons/4/46/Purple-throated_carib_hummingbird_feeding.jpg';
 }
 ```
-### Summary
-After applying all of the changes to our initial component, here is the final result:
+### まとめ
+以下は、すべての変更を初期コンポーネントに適用後の最終的な結果です。
 <div class="sample-container loading" style="height: 200px;">
     <iframe id="expansion-sample-3-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/expansion-sample-3" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -237,12 +238,12 @@ After applying all of the changes to our initial component, here is the final re
     <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="expansion-sample-3-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-The `IgxExpansionPanel` control allows all sort of content to be added inside of the `igx-expansion-panel-body`. It can render [`IgxGrid`]({environment:angularApiUrl}/classes/igxcombocomponent.html)s, [`IgxCombo`]({environment:angularApiUrl}/classes/igxcombocomponent.html), charts and even other expansion panels!
+`IgxExpansionPanel` コントロールは、すべてのコンテンツの並べ替え[`IgxGrid`]({environment:angularApiUrl}/classes/igxcombocomponent.html)、[`IgxCombo`]({environment:angularApiUrl}/classes/igxcombocomponent.html)、チャート、更に他の展開パネルも描画できます。
 
-## Using Animations
-### Using specific animation
-It is possible to use other than default animation when expanding and collapsing the component.
-Assuming the igxExpansionPanel is already imported in `app.module.ts` as previously described, you can create a custom animation setting object and set it to be used in the igxExpansionPanel. The approach requires the [`useAnimation`](https://angular.io/api/animations/useAnimation) method and the specific animations to be used so we start importing these and defining the animation settings like:
+## アニメーションの使用
+### 特定のアニメーションの使用
+コンポーネントの展開や縮小時にデフォルトのアニメーション以外を使用することも可能です。
+上記のように igxExpansionPanel がすでに `app.module.ts` にインポートされていると仮定した場合、カスタム アニメーション設定オブジェクトを作成して igxExpansionPanel で使用するために設定します。[`useAnimation`](https://angular.io/api/animations/useAnimation) メソッドと特定のアニメーションが必要でアニメーションの設定をインポートして次のようなアニメーションの設定を定義します。
 
 ```typescript
 // in expansion-panel.component.ts
@@ -282,9 +283,9 @@ export class ExpansionPanelComponent {
     }
 }
 ```
-As you can see, we are going to use [`slideInLeft`]({environment:sassApiUrl}/index.html#mixin-slide-in-left) and [`slideOutRight`]({environment:sassApiUrl}/index.html#mixin-slide-out-right) animations from our [**inbuilt suite of animations**]({environment:sassApiUrl}/index.html#animations) to make the component content appear more dramatically from the left side and disappear on the right when collapsing the content. In the process, we override some of the existing parameters with the specific ones we want to use.
+[**inbuilt suite of animations**]({environment:sassApiUrl}/index.html#animations) の [`slideInLeft`]({environment:sassApiUrl}/index.html#mixin-slide-in-left) と [`slideOutRight`]({environment:sassApiUrl}/index.html#mixin-slide-out-right) アニメーションを使用し、コンポーネントのコンテンツを左側から動的に表示してコンテンツを縮小したときに右側で消えるようにします。既存のパラメーターを使用したい特定のパラメーターでオーバーライドします。
 
-The sample shows some user information and the key point here is passing the animation settings to the component like:
+サンプルは、ユーザー情報とキー ポイントをここに表示してアニメーション設定をコンポーネントに渡します。
 `[animationSettings] = "animationSettingsCustom"`
 
 ```html
@@ -294,7 +295,7 @@ The sample shows some user information and the key point here is passing the ani
     <igx-expansion-panel-header [disabled]="false">
         <igx-expansion-panel-title class="sample-title">Personal Information</igx-expansion-panel-title>
         <igx-expansion-panel-icon>
-            <igx-icon fontSet="material" [name]="collapsed() ? 'expand_more':'expand_less'"></igx-icon>
+            <igx-icon fontSet="material">{{collapsed() ? 'expand_more':'expand_less'}}</igx-icon>
         </igx-expansion-panel-icon>
     </igx-expansion-panel-header>
     <igx-expansion-panel-body class="body">
@@ -302,7 +303,7 @@ The sample shows some user information and the key point here is passing the ani
             <input igxInput name="fullName" type="text" [(ngModel)]="user.fullName"/>
             <label igxLabel for="fullName">Full Name</label>
             <igx-suffix>
-                <igx-icon name="person"></igx-icon>
+                <igx-icon>person</igx-icon>
             </igx-suffix>
         </igx-input-group>
         <igx-input-group class="group">
@@ -310,7 +311,7 @@ The sample shows some user information and the key point here is passing the ani
             <label igxLabel for="phone">Phone</label>
             <input igxInput name="phone" type="text" [(ngModel)]="user.phone" />
             <igx-suffix>
-                <igx-icon name="phone"></igx-icon>
+                <igx-icon>phone</igx-icon>
             </igx-suffix>
             <igx-hint position="start">Ex.: +359 555 123 456</igx-hint>
         </igx-input-group>
@@ -318,7 +319,7 @@ The sample shows some user information and the key point here is passing the ani
             <label igxLabel for="email">Email address</label>
             <input igxInput name="email" type="email" [(ngModel)]="user.email"/>
             <igx-suffix>
-                <igx-icon name="email"></igx-icon>
+                <igx-icon>email</igx-icon>
             </igx-suffix>
         </igx-input-group>
     </igx-expansion-panel-body>
@@ -326,7 +327,7 @@ The sample shows some user information and the key point here is passing the ani
 ...
 ```
 
-You can see the results below: 
+以下は結果です。 
 <div class="sample-container loading" style="height: 350px;">
     <iframe id="expansion-sample-6-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/expansion-sample-6" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -334,8 +335,8 @@ You can see the results below:
     <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="expansion-sample-6-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-### Multiple panel scenario
-In the following example we are going to implement more like app case scenario, where you want to follow a particular workflow showing and requiring more user details on portions. In this sample the default [`growVerIn`]({environment:sassApiUrl}/index.html#mixin-grow-ver-in) and [`growVerOut`]({environment:sassApiUrl}/index.html#mixin-grow-ver-out) animations from our inbuilt animations suite are used thus there is no need to pass any specific animation settings or import animations. Notice how we do not allow more than one `igxExpansionPanel` to be expanded at a time, handling the [`onInteraction`]({environment:angularApiUrl}/classes/igxexpansionpanelheadercomponent.html#oninteraction)  event.
+### 複数パネルの場合
+以下の例は、アプリのようなシナリオを実装します。ユーザーの詳細を表示または要求するような特定のワークフローに従います。このサンプルは、インビルト アニメーションのデフォルトの [`growVerIn`]({environment:sassApiUrl}/index.html#mixin-grow-ver-in) と [`growVerOut`]({environment:sassApiUrl}/index.html#mixin-grow-ver-out) アニメーションを使用するため、特定のアニメーション設定を渡したり、アニメーションをインポートしたりする必要はありません。複数の `igxExpansionPanel` は一度に展開して[`onInteraction`]({environment:angularApiUrl}/classes/igxexpansionpanelheadercomponent.html#oninteraction) イベントを処理することはできません。
 
 ```typescript
 // in expansion-panel.component.ts
@@ -394,7 +395,7 @@ export class ExpansionPanelComponent {
     <igx-expansion-panel-header (onInteraction)="onInteraction($event)" [disabled]="false">
         <igx-expansion-panel-title class="sample-title">Personal Information</igx-expansion-panel-title>
         <igx-expansion-panel-icon>
-            <igx-icon fontSet="material" [name]="collapsed(0) ? 'expand_more':'expand_less'"></igx-icon>
+            <igx-icon fontSet="material">{{collapsed(0) ? 'expand_more':'expand_less'}}</igx-icon>
         </igx-expansion-panel-icon>
     </igx-expansion-panel-header>
     <igx-expansion-panel-body class="body">
@@ -402,7 +403,7 @@ export class ExpansionPanelComponent {
             <input igxInput name="fullName" type="text" [(ngModel)]="user.fullName"/>
             <label igxLabel for="fullName">Full Name</label>
             <igx-suffix>
-                <igx-icon name="person"></igx-icon>
+                <igx-icon>person</igx-icon>
             </igx-suffix>
         </igx-input-group>
         <igx-input-group class="group">
@@ -410,7 +411,7 @@ export class ExpansionPanelComponent {
             <label igxLabel for="phone">Phone</label>
             <input igxInput name="phone" type="text" [(ngModel)]="user.phone" />
             <igx-suffix>
-                <igx-icon name="phone"></igx-icon>
+                <igx-icon>phone</igx-icon>
             </igx-suffix>
             <igx-hint position="start">Ex.: +359 555 123 456</igx-hint>
         </igx-input-group>
@@ -418,7 +419,7 @@ export class ExpansionPanelComponent {
             <label igxLabel for="email">Email address</label>
             <input igxInput name="email" type="email" [(ngModel)]="user.email"/>
             <igx-suffix>
-                <igx-icon name="email"></igx-icon>
+                <igx-icon>email</igx-icon>
             </igx-suffix>
         </igx-input-group>
     </igx-expansion-panel-body>
@@ -428,7 +429,7 @@ export class ExpansionPanelComponent {
     <igx-expansion-panel-header (onInteraction)="onInteraction($event)" [disabled]="false">
         <igx-expansion-panel-title class="sample-title">Billing Address</igx-expansion-panel-title>
         <igx-expansion-panel-icon>
-            <igx-icon fontSet="material" [name]="collapsed(1) ? 'expand_more':'expand_less'"></igx-icon>
+            <igx-icon fontSet="material">{{collapsed(1) ? 'expand_more':'expand_less'}}</igx-icon>
         </igx-expansion-panel-icon>
     </igx-expansion-panel-header>
     <igx-expansion-panel-body class="body">
@@ -436,28 +437,28 @@ export class ExpansionPanelComponent {
             <input igxInput name="address" type="text" [(ngModel)]="shippingAddress.address"/>
             <label igxLabel for="address">Billing Address:</label>
             <igx-suffix>
-                <igx-icon name="add_location"></igx-icon>
+                <igx-icon>add_location</igx-icon>
             </igx-suffix>
         </igx-input-group>
         <igx-input-group class="group">
             <label igxLabel for="city">City:</label>
             <input igxInput name="city" type="text" [(ngModel)]="shippingAddress.city"/>
             <igx-suffix>
-                <igx-icon name="location_city"></igx-icon>
+                <igx-icon>location_city</igx-icon>
             </igx-suffix>
         </igx-input-group>
         <igx-input-group class="group">
             <label igxLabel for="state">State:</label>
             <input igxInput name="state" type="text" [(ngModel)]="shippingAddress.state"/>
             <igx-suffix>
-                <igx-icon name="terrain"></igx-icon>
+                <igx-icon>terrain</igx-icon>
             </igx-suffix>
         </igx-input-group>
         <igx-input-group class="group">
             <label igxLabel for="zipCode">Zip Code:</label>
             <input igxInput name="zipCode" type="text" [(ngModel)]="shippingAddress.zipCode">
             <igx-suffix>
-                <igx-icon name="mail_outline"></igx-icon>
+                <igx-icon>mail_outline</igx-icon>
             </igx-suffix>
         </igx-input-group>
     </igx-expansion-panel-body>
@@ -467,7 +468,7 @@ export class ExpansionPanelComponent {
     <igx-expansion-panel-header (onInteraction)="onInteraction($event)" [disabled]="false">
         <igx-expansion-panel-title class="sample-title">Shipping Address</igx-expansion-panel-title>
         <igx-expansion-panel-icon>
-            <igx-icon fontSet="material" [name]="collapsed(2) ? 'expand_more':'expand_less'"></igx-icon>
+            <igx-icon fontSet="material">{{collapsed(2) ? 'expand_more':'expand_less'}}</igx-icon>
         </igx-expansion-panel-icon>
     </igx-expansion-panel-header>
     <igx-expansion-panel-body class="body">
@@ -475,35 +476,35 @@ export class ExpansionPanelComponent {
             <input igxInput name="address" type="text" [(ngModel)]="billingAddress.address"/>
             <label igxLabel for="address">Shipping Address:</label>
             <igx-suffix>
-                <igx-icon name="add_location"></igx-icon>
+                <igx-icon>add_location</igx-icon>
             </igx-suffix>
         </igx-input-group>
         <igx-input-group class="group">
             <label igxLabel for="city">City:</label>
             <input igxInput name="city" type="text" [(ngModel)]="billingAddress.city"/>
             <igx-suffix>
-                <igx-icon name="location_city"></igx-icon>
+                <igx-icon>location_city</igx-icon>
             </igx-suffix>
         </igx-input-group>
         <igx-input-group class="group">
             <label igxLabel for="state">State:</label>
             <input igxInput name="state" type="text" [(ngModel)]="billingAddress.state"/>
             <igx-suffix>
-                <igx-icon name="terrain"></igx-icon>
+                <igx-icon>terrain</igx-icon>
             </igx-suffix>
         </igx-input-group>
         <igx-input-group class="group">
             <label igxLabel for="zipCode">Zip Code:</label>
             <input igxInput name="zipCode" type="text" [(ngModel)]="billingAddress.zipCode">
             <igx-suffix>
-                <igx-icon name="mail_outline"></igx-icon>
+                <igx-icon>mail_outline</igx-icon>
             </igx-suffix>
         </igx-input-group>
     </igx-expansion-panel-body>
 </igx-expansion-panel>
 ...
 ```
-You can see the results below: 
+以下は結果です。 
 <div class="sample-container loading" style="height: 500px;">
     <iframe id="expansion-sample-5-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/expansion-sample-5" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -512,8 +513,9 @@ You can see the results below:
 </div>
 
 
-## API Reference
+## API リファレンス
 * [IgxExpansionPanel API]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html)
 * [IgxExpansionPanelHeader API]({environment:angularApiUrl}/classes/igxexpansionpanelheadercomponent.html)
 * [IgxExpansionPanelBody API]({environment:angularApiUrl}/classes/igxexpansionpanelbodycomponent.html)
-* [IgxExpansionPanel Styles]({environment:sassApiUrl}/index.html#mixin-igx-expansion-panel)
+* [IgxExpansionPanel スタイル]({environment:sassApiUrl}/index.html#mixin-igx-expansion-panel)
+

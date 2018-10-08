@@ -6,11 +6,11 @@ _language: ja
 
 ### Excel からの貼り付け
 
-Ignite UI for Angular `IgxGrid` は、クリップボードにコピーした Excel データを読み込むことができます。このトピックでは、カスタムコードを使用して実装する方法について説明します。
+Ignite UI for Angular [`IgxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) は、クリップボードにコピーした Excel データを読み込むことができます。このトピックでは、カスタムコードを使用して実装する方法について説明します。
 
 #### Excel からデータを貼り付けるデモ
 
-このサンプルでは、Excel から `igxGrid` の貼り付けを実装する方法を紹介します。
+このサンプルでは、Excel から [`IgxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) の貼り付けを実装する方法を紹介します。
 サンプルは、Excel スプレッドシートを開いて行をコピーし、キーボード (Ctrl + V、Shift + Insert、Command + V) を使用してグリッドに貼り付けます。
 
 上部に2 つのオプションとドロップダウン ボタンがあります。
@@ -33,7 +33,7 @@ Ignite UI for Angular `IgxGrid` は、クリップボードにコピーした Ex
 
 #### 使用方法
 
-`paste-handler` ディレクティブ (次のセクションにコードがあります) を `igxGrid` に追加して `onDataProcessed` イベントを処理する必要があります。`onDataProcessed` イベントに配列フォームの Excel データへアクセスを与えるパラメーターがあります。詳細については、`addRecords` と `updateRecords` メソッドを参照してください。
+`paste-handler` ディレクティブ (次のセクションにコードがあります) を [`IgxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) に追加して `onDataProcessed` イベントを処理する必要があります。`onDataProcessed` イベントに配列フォームの Excel データへアクセスを与えるパラメーターがあります。詳細については、`addRecords` と `updateRecords` メソッドを参照してください。
 
 ```html
 <igx-grid #grid1 [data]="data" [width]="'100%'" [height]="'505px'" [autoGenerate]="false" paste-handler (onDataProcessed)="dataPasted($event)" [primaryKey]="'ID'">
@@ -218,6 +218,9 @@ export class PasteHandler {
 }
 
 ```
+
+### API
+* [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
 
 ### 追加のリソース
 

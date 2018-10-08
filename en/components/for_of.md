@@ -6,7 +6,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ## Virtual For Directive
 
-In Ignite UI for Angular, `igxForOf` is an alternative to `ngForOf` for templating large amounts of data. The `igxForOf` uses virtualization behind the scenes to optimize DOM rendering and memory consumption. Virtualization works similarly to Paging by slicing the data into smaller chucks which are swapped from a container viewport while the user scrolls the data horizontally/vertically. The difference with the Paging is that virtualization mimics the natural behavior of the scrollbar. The directive is creating scrollable containers and renders small chunks of the data. It is used inside `igx-grid` and it can be used to build virtual `igx-list`.
+In Ignite UI for Angular, [`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxforof) is an alternative to `ngForOf` for templating large amounts of data. The [`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxforof) uses virtualization behind the scenes to optimize DOM rendering and memory consumption. Virtualization works similarly to Paging by slicing the data into smaller chucks which are swapped from a container viewport while the user scrolls the data horizontally/vertically. The difference with the Paging is that virtualization mimics the natural behavior of the scrollbar. The directive is creating scrollable containers and renders small chunks of the data. It is used inside [`igxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) and it can be used to build virtual [`igx-list`]({environment:angularApiUrl}/classes/igxlistcomponent.html).
 
 ### Demo
 
@@ -20,7 +20,7 @@ In Ignite UI for Angular, `igxForOf` is an alternative to `ngForOf` for templati
 
 ### Dependencies
 
-The `igxFor` directive is exported as an `NgModule`, thus all you need to do in your application is to import the _IgxForOfModule_
+The [`igxFor`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxforof) directive is exported as an `NgModule`, thus all you need to do in your application is to import the _IgxForOfModule_
 inside your `AppModule`:
 
 ```typescript
@@ -40,7 +40,7 @@ export class AppModule {}
 
 ### Usage
 
-Now that we have the `igxForOf` module imported, let’s get started with a basic configuration of the **igxFor** that binds to local data:
+Now that we have the [`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxforof) module imported, let’s get started with a basic configuration of the **igxFor** that binds to local data:
 
 ```html
 <span #container>
@@ -85,7 +85,7 @@ The directive can be used to virtualize the data in vertical, horizontal or both
 </table>
 ```
 
-***Note:*** It is strongly advised that the parent container of the `igxForOf` template for has the related dimension set (`height` for vertical and `width` for horizontal),  `overflow: hidden` and `position: relative` CSS rules applied. This is because the smooth scrolling behavior is achieved through content offsets that could visually affect other parts of the page if they remain visible.
+***Note:*** It is strongly advised that the parent container of the [`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxforof) template for has the related dimension set (`height` for vertical and `width` for horizontal),  `overflow: hidden` and `position: relative` CSS rules applied. This is because the smooth scrolling behavior is achieved through content offsets that could visually affect other parts of the page if they remain visible.
 
 ### Horizontal and vertical virtualization
 
@@ -108,7 +108,7 @@ The directive can be used to virtualize the data in vertical, horizontal or both
 ```
 ### igxFor bound to remote service
 
-The `igxForOf` directive can be bound to remote service. You need to use `Observable` property - `remoteData`(in the following case). Also the `chunkLoading` event should be utilized to trigger the requests to the data.
+The [`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxforof) directive can be bound to remote service. You need to use `Observable` property - `remoteData`(in the following case). Also the `chunkLoading` event should be utilized to trigger the requests to the data.
 
 ```html
 <div style='height: 500px; overflow: hidden; position: relative;'>
@@ -123,7 +123,7 @@ The `igxForOf` directive can be bound to remote service. You need to use `Observ
 </div>
 ```
 
-Also there is a requirement to set the `totalItemCount` property in the instance of `igxForOf`.
+Also there is a requirement to set the [`totalItemCount`]({environment:angularApiUrl}/classes/igxforofdirective.html#totalitemcount) property in the instance of [`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxforof).
 ```typescript
 this.virtDirRemote.totalItemCount = data["@odata.count"];
 ```
@@ -133,7 +133,7 @@ In order access the directive instance from the component it should be marked as
 @ViewChild("virtDirRemote", { read: IgxForOfDirective })
 public virtDirRemote: IgxForOfDirective<any>;
 ```
-And after the request to load the first chunk, the `totalItemCount` can be set:
+And after the request to load the first chunk, the [`totalItemCount`]({environment:angularApiUrl}/classes/igxforofdirective.html#totalitemcount) can be set:
 ```typescript
 public ngAfterViewInit() {
     this.remoteService.getData(this.virtDirRemote.state, (data) => {
@@ -141,7 +141,7 @@ public ngAfterViewInit() {
     });
 }
 ```
-When requesting data you can take advantage of `IgxForOfState` interface, which provides the `startIndex` and `chunkSize`. But note, that initialy the chunkSize will be 0, so you have to specify the size of the first loaded chunk(the best value is `igxForContainerSize` initially divided by `igxForItemSize`).
+When requesting data you can take advantage of [`IgxForOfState`]({environment:angularApiUrl}/classes/igxforofdirective.html#state) interface, which provides the [`startIndex`]({environment:angularApiUrl}/classes/igxforofdirective.html#state.startindex) and [`chunkSize`]({environment:angularApiUrl}/classes/igxforofdirective.html#state.chunksize). But note, that initialy the chunkSize will be 0, so you have to specify the size of the first loaded chunk(the best value is [`igxForContainerSize`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxforcontainersize) initially divided by [`igxForItemSize`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxforitemsize)).
 ```typescript
 public getData(data?: IForOfState, cb?: (any) => void): any {
     var dataState = data;
@@ -172,7 +172,7 @@ private buildUrl(dataState: any): string {
     return `${this.url}${qS}`;
 }
 ```
-And every time the `onChunkPreload` event is thrown the new chunk of data should be requested:
+And every time the [`onChunkPreload`]({environment:angularApiUrl}/classes/igxforofdirective.html#onchunkpreload) event is thrown the new chunk of data should be requested:
 ```typescript
 chunkLoading(evt) {
     if(this.prevRequest){
@@ -183,63 +183,7 @@ chunkLoading(evt) {
     });
 }
 ```
-## API
+## API References
 
-### Inputs
-
-Below is the list of all inputs that the developers may set to configure the `igxFor` look/behavior:
-| Name | Type | Description |
-| :--- |:--- | :--- |
-| `igxForOf` | any[] | The data to be virtualized |
-| `igxForScrollOrientation` | string | Virtualization direction - "horizontal" or "vertical" |
-| `igxForScrollContainer` | any | The container where the vertical and horizontal scrollbars will be created, the is useful when nesting the directive and for cases where the scrolling container is not going to be the direct parent |
-| `igxForContainerSize` | any | Specifies the container size |
-| `igxForItemSize` | any | Specifies the item size, when the virtualization is vertical it is used as height and as width when the virtualization is horizontal. It is mostly used for the vertical direction, because for the horizontal width it is possible to have items with different widhts |
-
-### Accessors
-
-List of public accessors that the developers may use to get information from the `igxForOf`:
-| Name | Type | Description |
-| :--- |:--- | :--- |
-| `state`            | IgxForState | The current state of the directive. It contains `startIndex` and `chunkSize` |
-| `state.startIndex` | number      | The index of the item at which the current visible chunk begins   |
-| `state.chunkSize`  | number      | The number of items the current visible chunk holds               |
-| `totalItemCount`   | number      | The total count of the virtual data items, when using remote service     |
-
-
-### Local Variables
-
-List of exported values by the `igxForOf` that can be aliased to local variables:
-| Name        | Type    | Description                                           |
-| :---------- |:------- | :---------------------------------------------------- |
-| `$implicit` | T       | The value of the individual items in the iterable     |
-| `index`     | number  | The index of the current item in the iterable.        |
-
-<div class="divider--half"></div>
-
-### Outputs
-
-A list of the events emitted by the **igx-for**:
-
-| Name              | Description                                                          |
-| :---------------- | :------------------------------------------------------------------- |
-| _Event emitters_  | _Notify for a change_                                                |
-| `OnChunkLoad`      | Used when scrolled to emit the loaded data item                      |
-| `OnChunkPreload`   | Used when scrolled to emit the data item which is about to be loaded |
-
-
-### Methods
-
-Here is a list of all public methods exposed by the **igx-for**:
-
-| Signature       | Description                     |
-| :-------------- | :------------------------------ |
-| `scrollNext()`  | Scrolls by one item into the  appropriate  next direction |
-| `scrollPrev()`  | Scrolls by one item into the  appropriate  previous direction|
-| `scrollTo(index)`  | Scrolls to the specified index |
-
-## Limitations
-
-| Name  | Description | Status |
-| :---- | :---------- | :----- |
-| Content Height Limitation | Browsers currently have height limitation for DOM elements. Because of that the total height of the rows shouldn't exceed the height limitation of the browsers. Otherwise there may be unexpected changes in behavior of `igxForOf`. For example Internet Explorer 11 has height limitation of 1 533 916 pixels, which for rows with height 50px means no more than 30 678 rows. | Fix planned |
+* [IgxForOfDirective]({environment:angularApiUrl}/classes/igxforofdirective.html)
+* [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)

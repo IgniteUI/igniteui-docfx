@@ -153,7 +153,7 @@ export class AppModule {}
     <igx-card-actions >
         <div class="igx-card-actions__igroup--start">
             <span igxButton="icon" igxRipple igxRippleCentered="true" *ngFor="let icon of icons">
-                <igx-icon fontSet="material" [name]="icon"></igx-icon>
+                <igx-icon fontSet="material">{{icon}}</igx-icon>
             </span>
         </div>
         <button igxButton igxRipple >Follow</button>

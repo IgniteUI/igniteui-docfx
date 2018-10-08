@@ -265,7 +265,7 @@ public contacts = [{
           <span class="phone">{{ contact.phone }}</span>
         </div>
       </div>
-      <igx-icon name="star" [color]="contact.isFavorite ? 'orange' : 'lightgray'" (click)="toggleFavorite(item)"></igx-icon>
+      <igx-icon [color]="contact.isFavorite ? 'orange' : 'lightgray'" (click)="toggleFavorite(item)">star</igx-icon>
     </div>
   </igx-list-item>
 </igx-list>
@@ -353,12 +353,12 @@ toggleFavorite(item: IgxListItem) {
   (onLeftPan)="leftPanPerformed($event)" (onRightPan)="rightPanPerformed($event)">
   <ng-template igxListItemLeftPanning>
     <div class="listItemLeftPanningStyle">
-      <igx-icon name="delete" [color]="white" style="margin-left:10px"></igx-icon>Delete
+      <igx-icon [color]="white" style="margin-left:10px">delete</igx-icon>Delete
     </div>
   </ng-template>
   <ng-template igxListItemRightPanning>
     <div class="listItemRightPanningStyle">
-      <igx-icon name="call" [color]="white" style="margin-right:10px"></igx-icon>Dial
+      <igx-icon [color]="white" style="margin-right:10px">call</igx-icon>Dial
     </div>
   </ng-template>
   <igx-list-item isHeader="true">Contacts</igx-list-item>
@@ -371,8 +371,8 @@ toggleFavorite(item: IgxListItem) {
           <span class="phone">{{ contact.phone }}</span>
         </div>
       </div>
-      <igx-icon name="star" [color]="contact.isFavorite ? 'orange' : 'lightgray'"
-        (click)="toggleFavorite(item)"></igx-icon>
+      <igx-icon [color]="contact.isFavorite ? 'orange' : 'lightgray'"
+        (click)="toggleFavorite(item)">star</igx-icon>
     </div>
   </igx-list-item>
 </igx-list>
@@ -533,6 +533,16 @@ public leftPanPerformed(args) {
     ...
 </igx-list-item>
 ```
+
+### Chat コンポーネント
+以下のサンプルは、**IgxList** を使用して作成したシンプルなチャットです。
+
+<div class="sample-container loading" style="height: 500px">
+<iframe id="list-chat-sample-iframe" src='{environment:demosBaseUrl}/list-chat-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-chat-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
+</div>
 
 <div class="divider"></div>
 

@@ -22,7 +22,7 @@ Ignite UI for Angular Button ディレクティブを任意の button、span、d
 
 ### 依存関係
 
-Button ディレクティブは `NgModule` としてエクスポートされるため、アプリケーションで `AppModule` に _IgxButtonModule_ をインポートする必要があります。
+Button ディレクティブは `NgModule` としてエクスポートされるため、アプリケーションで `AppModule` に [`IgxButtonModule`]({environment:angularApiUrl}/classes/igxbuttonmodule.html) をインポートする必要があります。
 
 ```typescript
 // app.module.ts
@@ -47,7 +47,7 @@ export class AppModule {}
 
 ### コード例
 
-シンプルな `igxButton` を設定します。タイプを選択しない場合、デフォルト値は `flat` です。
+シンプルな [`igxButton`]({environment:angularApiUrl}/classes/igxbuttondirective.html) を設定します。タイプを選択しない場合、デフォルト値は `flat` です。
 
 ```html
 <button igxButton="flat">Flat</button>
@@ -71,7 +71,7 @@ export class AppModule {}
     <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/buttons-sample-3">
 </div>
 
-`igxButton` を使用して span 要素を Ignite UI for Angular のスタイル設定済みボタンにします。
+[`igxButton`]({environment:angularApiUrl}/classes/igxbuttondirective.html) を使用して span 要素を Ignite UI for Angular のスタイル設定済みボタンにします。
 
 ```html
 <span igxButton="raised" igxButtonColor="yellow" igxButtonBackground="#000" igxRipple="yellow">クリック</span>
@@ -97,7 +97,7 @@ raised ボタンを作成できます。　
 
 ```html
 <button igxButton="fab" igxButtonColor="#FBB13C" igxButtonBackground="#340068" igxRipple="#FBB13C">
-  <igx-icon fontSet="material" name="edit"></igx-icon>
+  <igx-icon fontSet="material">edit</igx-icon>
 </button>
 ```
 
@@ -109,13 +109,13 @@ raised ボタンを作成できます。　
 
 ```html
 <button igxButton="icon" igxRipple igxRippleCentered="true">
-  <igx-icon fontSet="material" name="search"></igx-icon>
+  <igx-icon fontSet="material">search</igx-icon>
 </button>
 ```
 
 ```html
 <button igxButton="icon" igxRipple igxButtonColor="#E41C77" igxRippleCentered="true">
-  <igx-icon fontSet="material" name="favorite"></igx-icon>
+  <igx-icon fontSet="material">favorite</igx-icon>
 </button>
 ```
 
@@ -138,27 +138,14 @@ raised ボタンを作成できます。　
 | `icon`     |        最もシンプルなボタン タイプ。アイコンをボタンとして使用する場合に使用します。         |
 | `navbar`   |     icon ボタン タイプと同じですが、igx-navbar コンポーネントで使用するために最適化されています。      |
 
+### API リファレンス
 <div class="divider--half"></div>
 
-### API まとめ
+* [IgxButtonDirective]({environment:angularApiUrl}/classes/igxbuttondirective.html)
+* [IgxButton Styles]({environment:sassApiUrl}/index.html#function-igx-button-theme)
+* [IgxRippleDirective]({environment:angularApiUrl}/classes/igxrippledirective.html)
 
-このトピックではさまざまなボタン タイプについて説明しました。以下は、Button ディレクティブのその他の API です。
-
-#### 入力
-
-以下の入力は **igxButton** ディレクティブで利用できます。
-
-| 名前                  |   型   | 説明                                                                  |
-| :-------------------- | :----: | :-------------------------------------------------------------------- |
-| `igxButton`           | string | 使用される igxButton のタイプを設定します。デフォルト値は flat です。 |
-| `igxButtonColor`      | string | ボタンのテキスト色を設定します。任意の有効な CSS 色値を使用できます。 |
-| `igxButtonBackground` | string | ボタンの背景色を設定します。任意の有効な CSS 色値を使用できます。     |
-
-<div class="divider--half"></div>
-
-<div class="divider"></div>
-
-### 追加のリソース
+### その他のリソース
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
