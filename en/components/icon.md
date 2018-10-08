@@ -75,11 +75,13 @@ You can set the icon's size through CSS. Create a custom CSS class and name it *
     <iframe id="icon-sample2-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/icon-sample2"  onload="onSampleIframeContentLoaded(this);">
 </div>
 
-You can also use SVG image as an icon. First, you need to inject [`IgxIconService`]({environment:angularApiUrl}/classes/igxiconservice.html) dependency in a component's constructor. Use the [`addSvgIcon`]({environment:angularApiUrl}/classes/igxiconservice.html#addsvgicon) method to import the SVG file in cache. Icon name and file URL path are method's mandatory parameters, you can specify font-set ase well. After that, you can use the SVG files in the HTML markup. Alternatively, you can use the `addSvgIconFromText` method to import the SVG file providing the SVG text content instead of the file URL.
+You can also use a SVG image as an icon. First, inject [`IgxIconService`]({environment:angularApiUrl}/classes/igxiconservice.html) dependency. In this example [`IgxIconService`]({environment:angularApiUrl}/classes/igxiconservice.html) dependency is injected in a component's constructor but you can use it wherever it is needed in your code. 
+
+Use the [`addSvgIcon`]({environment:angularApiUrl}/classes/igxiconservice.html#addsvgicon) method to import the SVG file in cache. When the SVG is cached, it can be used anywhere in the application. Icon name and file URL path are method's mandatory parameters, you can specify font-set ase well. After that, you can use the SVG files in the HTML markup. Alternatively, you can use the `addSvgIconFromText` method to import the SVG file providing the SVG text content instead of the file URL.
 
 * Have in mind that if there are two icons with the same name and the same font-set - SVG icon will be displayed with priority.
 * It is better not to provide image width and height in the SVG file.
-* You may need additional polyfill scripts ("polyfills") for the browsers that you must support.
+* You may need additional polyfill scripts ("polyfills") for Internet Explorer.
 
 ```typescript
 // svg-icon-sample.ts
