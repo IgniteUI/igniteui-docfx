@@ -22,10 +22,10 @@ Ignite UI for Angular の Grid コンポーネントは、列のデータ型に�
 
 特定のセルで編集モードに入るには、最初に列を**編集可能**にする必要があります。データ型固有の編集テンプレートを使用する場合は、列 [`dataType`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#datatype) プロパティを指定してください。以下は各型のデフォルト テンプレートです。
 
- - `string` データ型のデフォルトのテンプレートは **igxInput** を使用します。
- - `number` データ型のデフォルト テンプレートは、**igxInput type="number"** を使用し、セルを数値に解析できない値に更新した場合は変更が破棄され、セル値は **0** に設定されます。
- - `date`データ型のデフォルトのテンプレートは  **igx-date-picker** を使用します。
- - `boolean` データ型のデフォルトのテンプレートは **igx-checkbox** を使用します。
+ - `string` データ型のデフォルトのテンプレートは [**igxInput**]({environment:angularApiUrl}/classes/igxinputdirective.html) を使用します。
+ - `number` データ型のデフォルト テンプレートは、**[igxInput]({environment:angularApiUrl}/classes/igxinputdirective.html) type="number"** を使用し、セルを数値に解析できない値に更新した場合は変更が破棄され、セル値は **0** に設定されます。
+ - `date`データ型のデフォルトのテンプレートは  [**igx-date-picker**]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) を使用します。
+ - `boolean` データ型のデフォルトのテンプレートは [**igx-checkbox**]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html) を使用します。
 
 以下のいずれかの方法でセルがフォーカスされている場合、編集モードに入ることができます。
  - ダブル クリック
@@ -129,8 +129,14 @@ row.delete();
 <div class="divider--half"></div>
 
 ### API
-* [`IgxGridCellComponent`]({environment:angularApiUrl}/classes/igxgridcellcomponent.html)
-* [`IgxGridRowComponent`]({environment:angularApiUrl}/classes/igxgridrowcomponent.html)
+* [IgxGridCellComponent]({environment:angularApiUrl}/classes/igxgridcellcomponent.html)
+* [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [IgxGridRowComponent]({environment:angularApiUrl}/classes/igxgridrowcomponent.html)
+* [IgxInputDirective]({environment:angularApiUrl}/classes/igxinputdirective.html)
+* [IgxDatePickerComponent]({environment:angularApiUrl}/classes/igxdatepickercomponent.html)
+* [IgxDatePickerComponent Styles]({environment:sassApiUrl}/index.html#function-igx-date-picker-theme)
+* [IgxCheckboxComponent]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html)
+* [IgxCheckboxComponent Styles]({environment:sassApiUrl}/index.html#function-igx-checkbox-theme)
 
 <div class="divider--half"></div>
 
