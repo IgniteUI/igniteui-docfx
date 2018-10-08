@@ -222,7 +222,8 @@ After all the changes above, the following result will be achieved.
 
 ### API
 * [IgxGridComponent API]({environment:angularApiUrl}/classes/igxgridcomponent.html)
-* [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#mixin-igx-grid)
+* [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [IgxGridPaginator Styles]({environment:sassApiUrl}/index.html#function-igx-grid-paginator-theme)
 
 ### Additional Resources
 <div class="divider--half"></div>
