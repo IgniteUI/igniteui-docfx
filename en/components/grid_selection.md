@@ -47,7 +47,7 @@ The grid single selection can be easily setup using the grid's [`onSelection`]({
 
 #### Multiple Selection
 
-To enable multiple row selection, the [`igx-grid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) exposes the [`rowSelectable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowselectable) property. Setting `rowSelectable` to `true` enables a select checkbox field on each row and in the grid header. The checkbox allows users to select multiple rows, with the selection persisting through scrolling, paging, and data operations such as sorting and filtering:
+To enable multiple row selection, the [`igx-grid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) exposes the [`rowSelectable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowselectable) property. Setting [`rowSelectable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowselectable) to `true` enables a select checkbox field on each row and in the grid header. The checkbox allows users to select multiple rows, with the selection persisting through scrolling, paging, and data operations such as sorting and filtering:
 
 ```html
     <igx-grid #grid1 [data]="remote | async" [primaryKey]="'ProductID'" [rowSelectable]="selection" (onSelection)="handleRowSelection($event)"
@@ -66,7 +66,7 @@ To enable multiple row selection, the [`igx-grid`]({environment:angularApiUrl}/c
 ### Code Snippets
 
 #### Select rows programatically
-The below code example can be used to select one or multiple rows simultaniously (via `primaryKey`):
+The below code example can be used to select one or multiple rows simultaniously (via [`primaryKey`]({environment:angularApiUrl}/classes/igxgridcomponent.html#primarykey)):
 ```html
 <!-- in component.html -->
 <igx-grid ... [primaryKey]="'ID'">
@@ -97,7 +97,7 @@ public handleRowSelectionChange(args) {
 * [IgxGridComponent API]({environment:angularApiUrl}/classes/igxgridcomponent.html)
 * [IgxGridRowComponent API]({environment:angularApiUrl}/classes/igxgridrowcomponent.html)
 * [IgxGridCellComponent API]({environment:angularApiUrl}/classes/igxgridcellcomponent.html)
-* [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#mixin-igx-grid)
+* [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 
 ### Additional Resources
 <div class="divider--half"></div>
