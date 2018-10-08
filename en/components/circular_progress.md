@@ -68,7 +68,7 @@ Notice that the **igx-circular-bar** emits [`onProgressChanged`]({environment:an
 <div class="button-container">
     <p>Press the button to start updating the bar</p>
     <button igxButton="fab" igxButtonBackground="#333" igxRipple="white" (click)="tick()">
-        <igx-icon fontSet="material" [name]="changeIcon()"></igx-icon>
+        <igx-icon fontSet="material">{{changeIcon()}}</igx-icon>
     </button>
 </div>
 ```

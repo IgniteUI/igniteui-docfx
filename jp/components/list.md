@@ -265,7 +265,7 @@ public contacts = [{
           <span class="phone">{{ contact.phone }}</span>
         </div>
       </div>
-      <igx-icon name="star" [color]="contact.isFavorite ? 'orange' : 'lightgray'" (click)="toggleFavorite(item)"></igx-icon>
+      <igx-icon [color]="contact.isFavorite ? 'orange' : 'lightgray'" (click)="toggleFavorite(item)">star</igx-icon>
     </div>
   </igx-list-item>
 </igx-list>
@@ -353,12 +353,12 @@ toggleFavorite(item: IgxListItem) {
   (onLeftPan)="leftPanPerformed($event)" (onRightPan)="rightPanPerformed($event)">
   <ng-template igxListItemLeftPanning>
     <div class="listItemLeftPanningStyle">
-      <igx-icon name="delete" [color]="white" style="margin-left:10px"></igx-icon>Delete
+      <igx-icon [color]="white" style="margin-left:10px">delete</igx-icon>Delete
     </div>
   </ng-template>
   <ng-template igxListItemRightPanning>
     <div class="listItemRightPanningStyle">
-      <igx-icon name="call" [color]="white" style="margin-right:10px"></igx-icon>Dial
+      <igx-icon [color]="white" style="margin-right:10px">call</igx-icon>Dial
     </div>
   </ng-template>
   <igx-list-item isHeader="true">Contacts</igx-list-item>
@@ -371,8 +371,8 @@ toggleFavorite(item: IgxListItem) {
           <span class="phone">{{ contact.phone }}</span>
         </div>
       </div>
-      <igx-icon name="star" [color]="contact.isFavorite ? 'orange' : 'lightgray'"
-        (click)="toggleFavorite(item)"></igx-icon>
+      <igx-icon [color]="contact.isFavorite ? 'orange' : 'lightgray'"
+        (click)="toggleFavorite(item)">star</igx-icon>
     </div>
   </igx-list-item>
 </igx-list>

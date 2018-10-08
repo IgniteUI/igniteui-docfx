@@ -91,7 +91,7 @@ Let's replace the `<main>` in **app.component.html** with the following, adding 
 ```html
 <main>
   <span igxButton="icon" igxToggleAction="navigation" [closeOnOutsideClick]="false">
-    <igx-icon fontSet="material" name="menu"></igx-icon>
+    <igx-icon fontSet="material">menu</igx-icon>
   </span>
 </main>
 ```
@@ -173,13 +173,13 @@ The mini variant is commonly used in a persistent setup, so we've set `pin` and 
   <ng-template igxDrawer>
       <span igxDrawerItem [isHeader]="true"> Header </span>
       <span igxDrawerItem igxRipple> 
-          <igx-icon fontSet="material" name="home"></igx-icon>
+          <igx-icon fontSet="material">home</igx-icon>
           <span>Home</span>
       </span>
   </ng-template>
   <ng-template igxDrawerMini>
       <span igxDrawerItem igxRipple> 
-          <igx-icon fontSet="material" name="home"></igx-icon>
+          <igx-icon fontSet="material">home</igx-icon>
       </span>
   </ng-template>
 </igx-nav-drawer>

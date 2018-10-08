@@ -97,9 +97,9 @@ export class AppModule {}
 <!--navbar.component.html-->
 
  <igx-navbar title="Sample App" actionButtonIcon="menu">
-    <igx-icon name="search"></igx-icon>
-    <igx-icon name="favorite"></igx-icon>
-    <igx-icon name="more_vert"></igx-icon>
+    <igx-icon>search</igx-icon>
+    <igx-icon>favorite</igx-icon>
+    <igx-icon>more_vert</igx-icon>
 </igx-navbar>
 ```
 

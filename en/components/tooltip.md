@@ -252,7 +252,7 @@ Let's start by creating our card and setting its content to be an element that h
 <igx-card>
     <igx-card-content style="padding: 0px;">
         <div class="location">
-            <igx-icon class="cursorHover" color="blue" fontSet="material" name="location_on" igxTooltipTarget></igx-icon>
+            <igx-icon class="cursorHover" color="blue" fontSet="material" igxTooltipTarget>location_on</igx-icon>
         </div>
     </igx-card-content>
 </igx-card>
@@ -266,7 +266,7 @@ Now for the tooltip! For its content, we will create a container that will be po
 <igx-card>
     <igx-card-content style="padding: 0px;">
         <div class="location">
-            <igx-icon class="cursorHover" color="blue" fontSet="material" name="location_on" [igxTooltipTarget]="locationTooltip"></igx-icon>
+            <igx-icon class="cursorHover" color="blue" fontSet="material" [igxTooltipTarget]="locationTooltip">location_on</igx-icon>
 
             <div class="locationTooltip" #locationTooltip="tooltip" igxTooltip>
                 <div class="locationTooltipContent">
@@ -295,10 +295,10 @@ As a finishing touch, we will add a couple of button icons as card actions at th
     <igx-card-actions>
         <div class="igx-card-actions__igroup--start">
             <span igxButton="icon">
-                <igx-icon fontSet="material" name="favorite"></igx-icon>
+                <igx-icon fontSet="material">favorite</igx-icon>
             </span>
             <span igxButton="icon">
-                <igx-icon fontSet="material" name="share"></igx-icon>
+                <igx-icon fontSet="material">share</igx-icon>
             </span>
         </div>
     </igx-card-actions>

@@ -116,7 +116,7 @@ Navigation Drawer は [`igxNavigationService`]({environment:angularApiUrl}/class
 ```html
 <main>
   <span igxButton="icon" igxToggleAction="navigation" [closeOnOutsideClick]="false">
-    <igx-icon fontSet="material" name="menu"></igx-icon>
+    <igx-icon fontSet="material">menu</igx-icon>
   </span>
 </main>
 ```
@@ -202,13 +202,13 @@ Drawer は `flex-basis` をホスト要素に適用すると、残りのコン�
   <ng-template igxDrawer>
       <span igxDrawerItem [isHeader]="true"> Header </span>
       <span igxDrawerItem igxRipple> 
-          <igx-icon fontSet="material" name="home"></igx-icon>
+          <igx-icon fontSet="material">home</igx-icon>
           <span>Home</span>
       </span>
   </ng-template>
   <ng-template igxDrawerMini>
       <span igxDrawerItem igxRipple> 
-          <igx-icon fontSet="material" name="home"></igx-icon>
+          <igx-icon fontSet="material">home</igx-icon>
       </span>
   </ng-template>
 </igx-nav-drawer>

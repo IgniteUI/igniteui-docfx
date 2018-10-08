@@ -56,7 +56,7 @@ Then, lets create a search box which we can use to highlight different parts of 
             <div class="caseSensitiveButton">
                 <button igxButton="icon" igxRipple igxRippleCentered="true" (click)="updateSearch()"
                         [igxButtonBackground]="caseSensitive? 'rgb(73, 180, 254)' : 'transparent'">
-                    <igx-icon class="caseSensitiveIcon" fontSet="material" name="text_fields"></igx-icon>
+                    <igx-icon class="caseSensitiveIcon" fontSet="material">text_fields</igx-icon>
                 </button>
             </div>
         </igx-suffix>
@@ -72,10 +72,10 @@ Then, lets create a search box which we can use to highlight different parts of 
             </div>
             <div class="searchButtons">
                 <button igxButton="icon" igxRipple igxRippleCentered="true" (click)="findPrev()" [disabled]="!canMoveHighlight">
-                    <igx-icon fontSet="material" name="navigate_before"></igx-icon>
+                    <igx-icon fontSet="material">navigate_before</igx-icon>
                 </button>
                 <button igxButton="icon" igxRipple igxRippleCentered="true" (click)="findNext()" [disabled]="!canMoveHighlight">
-                    <igx-icon fontSet="material" name="navigate_next"></igx-icon>
+                    <igx-icon fontSet="material">navigate_next</igx-icon>
                 </button>
             </div>
         </igx-suffix>

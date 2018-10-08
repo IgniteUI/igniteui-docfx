@@ -55,7 +55,7 @@ export class AppModule {}
 <div class="button-container">
     <p>Press the button to start updating the bars</p>
     <button igxButton="fab" igxButtonBackground="#333" igxRipple="white" (click)="tick()">
-        <igx-icon fontSet="material" [name]="changeIcon()"></igx-icon>
+        <igx-icon fontSet="material">{{changeIcon()}}</igx-icon>
     </button>
 </div>
 ...
@@ -115,13 +115,13 @@ export class AppModule {}
 <div class="button-container">
     <p>Press the button to start updating the bars</p>
     <button igxButton="fab" igxButtonBackground="#333" igxRipple="white" (click)="tick()">
-        <igx-icon fontSet="material" [name]="changeIcon()"></igx-icon>
+        <igx-icon fontSet="material">{{changeIcon()}}</igx-icon>
     </button>
 </div>
 <div class="button-container">
     <p>Press the button to reset the bars</p>
     <button igxButton="fab" igxButtonBackground="#333" igxRipple="white" (click)="reset()" [disabled]="disable">
-        <igx-icon name="replay" color="white" isActive="true" ></igx-icon>
+        <igx-icon color="white" isActive="true">{{replay}}</igx-icon>
     </button>
 </div>
 ...
@@ -196,13 +196,13 @@ export class AppModule {}
 <div class="button-container">
     <p>Press the button to start updating the bars</p>
     <button igxButton="fab" igxButtonBackground="#333" igxRipple="white" (click)="tick()">
-        <igx-icon fontSet="material" [name]="changeIcon()"></igx-icon>
+        <igx-icon fontSet="material">{{changeIcon()}}</igx-icon>
     </button>
 </div>
 <div class="button-container">
     <p>Press the button to reset the bars</p>
     <button igxButton="fab" igxButtonBackground="#333" igxRipple="white" (click)="reset()" [disabled]="disable">
-        <igx-icon name="replay" color="white" isActive="true" ></igx-icon>
+        <igx-icon color="white" isActive="true" >{{replay}}</igx-icon>
     </button>
 </div>
 ...

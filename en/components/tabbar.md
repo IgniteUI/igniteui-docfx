@@ -285,7 +285,7 @@ Edit the component's template markup by adding the following Bottom Navigation w
                         <p class="name">{{contact.text}}</p>
                         <span class="phone">{{contact.phone}}</span>
                     </div>
-                    <igx-icon name="phone"></igx-icon>
+                    <igx-icon>phone</igx-icon>
                 </div>
             </igx-list-item>
         </igx-list>

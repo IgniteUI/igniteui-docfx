@@ -97,7 +97,7 @@ raised ボタンを作成できます。　
 
 ```html
 <button igxButton="fab" igxButtonColor="#FBB13C" igxButtonBackground="#340068" igxRipple="#FBB13C">
-  <igx-icon fontSet="material" name="edit"></igx-icon>
+  <igx-icon fontSet="material">edit</igx-icon>
 </button>
 ```
 
@@ -109,13 +109,13 @@ raised ボタンを作成できます。　
 
 ```html
 <button igxButton="icon" igxRipple igxRippleCentered="true">
-  <igx-icon fontSet="material" name="search"></igx-icon>
+  <igx-icon fontSet="material">search</igx-icon>
 </button>
 ```
 
 ```html
 <button igxButton="icon" igxRipple igxButtonColor="#E41C77" igxRippleCentered="true">
-  <igx-icon fontSet="material" name="favorite"></igx-icon>
+  <igx-icon fontSet="material">favorite</igx-icon>
 </button>
 ```
 

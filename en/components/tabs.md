@@ -73,8 +73,8 @@ Nevertheless what type of tabs you have chosen, the tab header width is limited 
 <div class="items-wrapper__item items-wrapper__item-small items-wrapper__item--blue">
   <h4 class="sample-title">CONTENT-FIT TABS</h4>
   <igx-navbar title="Contacts" actionButtonIcon="menu">
-    <igx-icon name="search"></igx-icon>
-    <igx-icon name="more_vert"></igx-icon>
+    <igx-icon>search</igx-icon>
+    <igx-icon>more_vert</igx-icon>
   </igx-navbar>
   <igx-tabs>
     <igx-tabs-group label="HOME">Home content.</igx-tabs-group>
@@ -86,8 +86,8 @@ Nevertheless what type of tabs you have chosen, the tab header width is limited 
 <div class="items-wrapper__item items-wrapper__item-small items-wrapper__item--blue">
   <h4 class="sample-title">FIXED TABS</h4>
   <igx-navbar title="Contacts" actionButtonIcon="menu">
-    <igx-icon name="search"></igx-icon>
-    <igx-icon name="more_vert"></igx-icon>
+    <igx-icon>search</igx-icon>
+    <igx-icon>more_vert</igx-icon>
   </igx-navbar>
   <igx-tabs tabsType="fixed">
     <igx-tabs-group label="HOME">Home content.</igx-tabs-group>

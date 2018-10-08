@@ -53,7 +53,7 @@ export class AppModule {}
         <input igxInput name="fullName" type="text" formControlName="fullName"/>
         <label igxLabel for="fullName">Full Name</label>
         <igx-suffix>
-            <igx-icon name="person"></igx-icon>
+            <igx-icon>person</igx-icon>
         </igx-suffix>
     </igx-input-group>
     ...

@@ -45,7 +45,7 @@ export class AppModule {}
 [`igxLabel`]({environment:angularApiUrl}/classes/igxlabeldirective.html) および [`igxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html) ディレクティブとその検証、データ バインディング、API については、[このトピック](label_input.md)を参照してください。
 
 ### Prefix と Suffix
-Ignite UI for Angular Prefix または Suffix を使用して入力のプレフィックスまたはサフィックスを追加できます。両方のディレクティブに HTML 要素、文字列、またはその他のコンポーネントを含むことができます。文字列 **prefix** (`+359`) および [`igx-icon`]({environment:angularApiUrl}/classes/igxiconcomponent.html) **suffix** (`<igx-icon name="phone"></igx-icon>`) を持つ新しい入力フィールドを追加します。
+Ignite UI for Angular Prefix または Suffix を使用して入力のプレフィックスまたはサフィックスを追加できます。両方のディレクティブに HTML 要素、文字列、またはその他のコンポーネントを含むことができます。文字列 **prefix** (`+359`) および [`igx-icon`]({environment:angularApiUrl}/classes/igxiconcomponent.html) **suffix** (`<igx-icon>phone</igx-icon>`) を持つ新しい入力フィールドを追加します。
 
 ```html
 <igx-input-group>
@@ -53,7 +53,7 @@ Ignite UI for Angular Prefix または Suffix を使用して入力のプレフ�
     <label igxLabel for="phone">Phone</label>
     <input igxInput name="phone" type="text" [(ngModel)]="user.phone" />
     <igx-suffix>
-        <igx-icon name="phone"></igx-icon>
+        <igx-icon>phone</igx-icon>
     </igx-suffix>
 </igx-input-group>
 ```
@@ -74,7 +74,7 @@ Ignite UI for Angular Hint は、入力の下に配置されるヘルパー テ�
     <label igxLabel for="phone">Phone</label>
     <input igxInput name="phone" type="text" [(ngModel)]="user.phone" />
     <igx-suffix>
-        <igx-icon name="phone"></igx-icon>
+        <igx-icon>phone</igx-icon>
     </igx-suffix>
     <igx-hint position="start">Ex.: +359 888 123 456</igx-hint>
 </igx-input-group>
