@@ -7,7 +7,7 @@ _language: ja
 
 ## 複数列ヘッダー
 
-`igxGrid` は、列ヘッダーの下に行を配置した行のグループ化が可能な `multi-column headers` をサポートします。各 `column group` は、その他のグループや列を組み合わせて表示できます。
+[`IgxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) は、列ヘッダーの下に行を配置した行のグループ化が可能な `multi-column headers` をサポートします。各 `column group` は、その他のグループや列を組み合わせて表示できます。
 
 ## デモ
 
@@ -65,8 +65,9 @@ _language: ja
 ### API まとめ
 <div class="divider--half"></div>
 
-* [IgxColumnGroupComponent]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html)
+* [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
 * [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [IgxColumnGroupComponent]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html)
 
 <div class="divider--half"></div>
 
