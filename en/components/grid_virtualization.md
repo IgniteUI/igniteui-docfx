@@ -6,7 +6,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ### Grid Virtualization and Performance
 
-In Ignite UI for Angular, the [`IgxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) control now utilizes the [`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxforof) directive and virtualizes its content both vertically and horizontally.
+In Ignite UI for Angular, the [`IgxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) control now utilizes the [`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html) directive and virtualizes its content both vertically and horizontally.
 
 #### Demo
 
@@ -20,7 +20,7 @@ In Ignite UI for Angular, the [`IgxGrid`]({environment:angularApiUrl}/classes/ig
 
 ### Enabling Virtualization
 
-By utilizing the [`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxforof) directive the Data Grid now optimizes DOM rendering and memory consumption by rendering only what is currently visible in the view port and swapping the displayed data while the user scrolls the data horizontally/vertically. [`IgxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html)'s [`width`]({environment:angularApiUrl}/classes/igxgridcomponent.html#width) and [`height`]({environment:angularApiUrl}/classes/igxgridcomponent.html#height) defaults to `100%` which will enable virtualization if the content displayed cannot fit inside the available space and scrollbars are required either vertically or horizontally. However, it is also possible to explicitly set the grid's [`width`]({environment:angularApiUrl}/classes/igxgridcomponent.html#width) and/or [`height`]({environment:angularApiUrl}/classes/igxgridcomponent.html#height) to `null` which means that the related dimension will be determined by the total size of the items inside. No scrollbar will then be shown and all items will be rendered along the respective dimension (columns if [`width`]({environment:angularApiUrl}/classes/igxgridcomponent.html#width) is `null` and rows if [`height`]({environment:angularApiUrl}/classes/igxgridcomponent.html#height) is `null`).
+By utilizing the [`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html) directive the Data Grid now optimizes DOM rendering and memory consumption by rendering only what is currently visible in the view port and swapping the displayed data while the user scrolls the data horizontally/vertically. [`IgxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html)'s [`width`]({environment:angularApiUrl}/classes/igxgridcomponent.html#width) and [`height`]({environment:angularApiUrl}/classes/igxgridcomponent.html#height) defaults to `100%` which will enable virtualization if the content displayed cannot fit inside the available space and scrollbars are required either vertically or horizontally. However, it is also possible to explicitly set the grid's [`width`]({environment:angularApiUrl}/classes/igxgridcomponent.html#width) and/or [`height`]({environment:angularApiUrl}/classes/igxgridcomponent.html#height) to `null` which means that the related dimension will be determined by the total size of the items inside. No scrollbar will then be shown and all items will be rendered along the respective dimension (columns if [`width`]({environment:angularApiUrl}/classes/igxgridcomponent.html#width) is `null` and rows if [`height`]({environment:angularApiUrl}/classes/igxgridcomponent.html#height) is `null`).
 
 The size of the data chunks is determined by:
 
@@ -33,7 +33,7 @@ Explicitly setting column widths in percentages (%) will, in most cases, create 
 
 ### Remote Virtualization
 
-[`IgxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) supports the scenario in which the data chunks are requested from a remote service, exposing the behavior implemented in the [`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxforof) directive it uses internally.
+[`IgxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) supports the scenario in which the data chunks are requested from a remote service, exposing the behavior implemented in the [`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html) directive it uses internally.
 
 ### Grid Remote Virtualization Demo
 
@@ -112,6 +112,7 @@ Without information about the sizes of the container and the items before render
 
 ### API
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
+*  [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 * [IgxForOfDirective]({environment:angularApiUrl}/classes/igxforofdirective.html)
 * [IForOfState]({environment:angularApiUrl}/interfaces/iforofstate.html)

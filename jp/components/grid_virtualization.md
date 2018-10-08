@@ -7,7 +7,7 @@ _language: ja
 
 ### グリッドの仮想化とパフォーマンス
 
-Ignite UI for Angular [`IgxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) コントロールは [`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxforof) ディレクティブを使用します。コンテンツを垂直方向 (データ レコード) および水平方向 (列) に仮想化します。
+Ignite UI for Angular [`IgxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) コントロールは [`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html) ディレクティブを使用します。コンテンツを垂直方向 (データ レコード) および水平方向 (列) に仮想化します。
 
 #### デモ
 
@@ -21,7 +21,7 @@ Ignite UI for Angular [`IgxGrid`]({environment:angularApiUrl}/classes/igxgridcom
 
 ### 仮想化の有効化
 
-[`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxforof) ディレクティブは、ビューポートに表示されているデータのみを描画し、ユーザーがスクロール時に表示データを切り替えた際に Data Grid が DOM 描画およびメモリ使用を最適化します。[`IgxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) の [`width`]({environment:angularApiUrl}/classes/igxgridcomponent.html#width) および [`height`]({environment:angularApiUrl}/classes/igxgridcomponent.html#height) のデフォルト値は 100% です。コンテンツが利用可能なスペースにフィットせず、垂直方向または水平方向にスクロールバーが必要な場合に仮想化が有効になります。ただし、グリッドの [`width`]({environment:angularApiUrl}/classes/igxgridcomponent.html#width) または [`height`]({environment:angularApiUrl}/classes/igxgridcomponent.html#height) を明示的に `null` 値に設定できます。つまり、関連するディメンションが項目の合計サイズに基づいて決定されます。スクロールバーが表示されず、すべての項目が相対するディメンション ([`width`]({environment:angularApiUrl}/classes/igxgridcomponent.html#width) が `null` 値の場合は列で、[`height`]({environment:angularApiUrl}/classes/igxgridcomponent.html#height) が `null` 値の場合は行) に描画されます。
+[`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html) ディレクティブは、ビューポートに表示されているデータのみを描画し、ユーザーがスクロール時に表示データを切り替えた際に Data Grid が DOM 描画およびメモリ使用を最適化します。[`IgxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) の [`width`]({environment:angularApiUrl}/classes/igxgridcomponent.html#width) および [`height`]({environment:angularApiUrl}/classes/igxgridcomponent.html#height) のデフォルト値は 100% です。コンテンツが利用可能なスペースにフィットせず、垂直方向または水平方向にスクロールバーが必要な場合に仮想化が有効になります。ただし、グリッドの [`width`]({environment:angularApiUrl}/classes/igxgridcomponent.html#width) または [`height`]({environment:angularApiUrl}/classes/igxgridcomponent.html#height) を明示的に `null` 値に設定できます。つまり、関連するディメンションが項目の合計サイズに基づいて決定されます。スクロールバーが表示されず、すべての項目が相対するディメンション ([`width`]({environment:angularApiUrl}/classes/igxgridcomponent.html#width) が `null` 値の場合は列で、[`height`]({environment:angularApiUrl}/classes/igxgridcomponent.html#height) が `null` 値の場合は行) に描画されます。
 
 データ部分のサイズは以下によって決定されます。
 
@@ -34,7 +34,7 @@ Ignite UI for Angular [`IgxGrid`]({environment:angularApiUrl}/classes/igxgridcom
 
 ### リモート仮想化
 
-[`IgxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) は、データ部分がリモート サービスから要求されたシナリオをサポートします。このシナリオは内部に使用される [`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxforof) で実装される動作を公開します。
+[`IgxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) は、データ部分がリモート サービスから要求されたシナリオをサポートします。このシナリオは内部に使用される [`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html) で実装される動作を公開します。
 
 ### Grid リモート仮想化デモ
 
@@ -98,7 +98,7 @@ public processData() {
 ### 仮想化の制限
 
 *   行の高さの変更はサポートされません。すべての行を同じ高さに設定する必要があります。
-*   行/列の指定したディメンションが実際の描画された要素と一致する必要があります。たとえば、グリッド セルに行の高さを高くするテンプレートまたはクラスを定義した際に指定した `rowHeight` 値と一致しない場合、垂直仮想化は正しく動作しません。仮想項目数は DOM の実際要素と一致しなくなり、列およびその幅も同様になります。
+*   行/列の指定したディメンションが実際の描画された要素と一致する必要があります。たとえば、グリッド セルに行の高さを高くするテンプレートまたはクラスを定義した際に指定した [`rowHeight`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowheight) 値と一致しない場合、垂直仮想化は正しく動作しません。仮想項目数は DOM の実際要素と一致しなくなり、列およびその幅も同様になります。
 *   ブラウザーは現在 DOM 要素に高さの制限があります。そのため、行の高さの合計をブラウザーの高さの制限より大きくする必要があります。より大きくなる場合、[`IgxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) が正しく動作しない可能性があります。たとえば、Internet Explorer 11 の高さの制限は 1,533,916 ピクセルです。つまり、高さが 50px の行の制限は 30,678 行です。
 *   グリッドにレスポンシブな幅または高さがあり、ブラウザーのウィンドウまたはその他の要素のサイズに合わせてサイズ変更する場合、スクロール位置は 0 にリセットされます。スクロールバーの位置およびサイズ変更については、今後のリリースで機能拡張が予定されています。
 *   Mac OS で 「Show scrollbars only when scrolling」システム オプションを true (デフォルト値) に設定した場合、水平スクロールバーが表示されません。これは、グリッドの行コンテナーで、overflow が hidden に設定されているためです。オプションを "Always" に設定すると、スクロールバーが表示されます。
@@ -113,6 +113,7 @@ public processData() {
 
 ### API
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
+*  [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 * [IgxForOfDirective]({environment:angularApiUrl}/classes/igxforofdirective.html)
 * [IForOfState]({environment:angularApiUrl}/interfaces/iforofstate.html)
