@@ -155,6 +155,10 @@ The Grid Toolbar service has a few more APIs to explore, which are listed below.
 [`IgxGridComponent`]({environment:angularApiUrl}/classes/igxgridcomponent.html) events:
 * [`onToolbarExporting`]({environment:angularApiUrl}/classes/igxgridcomponent.html#ontoolbarexporting)
 
+Styles:
+
+* [`IgxGridComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+
 ### Additional Resources
 
 <div class="divider--half"></div>

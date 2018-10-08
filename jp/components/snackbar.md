@@ -200,6 +200,10 @@ public restore() {
 
 * [`IgxSnackbarComponent`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html)
 
+Styles:
+
+* [`IgxSnackbarComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-snackbar-theme)
+
 ### その他のリソース
 
 <div class="divider--half"></div>

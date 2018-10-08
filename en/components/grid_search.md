@@ -313,6 +313,25 @@ In this article we implemented our own search bar for the grid with some additio
 [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) properties:
 -   [`searchable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#searchable)
 
+[`ISearchInfo`]({environment:angularApiUrl}/interfaces/isearchinfo.html)
+
+Additional components and/or directives with relative APIs that were used:
+
+* [`IgxInputGroupComponent`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
+* [`IgxIconComponent`]({environment:angularApiUrl}/classes/igxiconcomponent.html)
+* [`IgxRippleDirective`]({environment:angularApiUrl}/classes/igxrippledirective.html)
+* [`IgxButtonDirective`]({environment:angularApiUrl}/classes/igxbuttondirective.html)
+* [`IgxChipComponent`]({environment:angularApiUrl}/classes/igxchipcomponent.html)
+
+Styles:
+
+* [`IgxGridComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [`IgxInputGroupComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-input-group-theme)
+* [`IgxIconComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
+* [`IgxRippleDirective Styles`]({environment:sassApiUrl}/index.html#function-igx-ripple-theme)
+* [`IgxButtonDirective Styles`]({environment:sassApiUrl}/index.html#function-igx-button-theme)
+* [`IgxChipComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-chip-theme)
+
 ### Additional Resources
 <div class="divider--half"></div>
 

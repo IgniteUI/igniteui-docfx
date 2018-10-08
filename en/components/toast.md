@@ -129,6 +129,10 @@ In this article we learned how to use and configure the [`IgxToastComponent`]({e
 
 * [`IgxToastComponent`]({environment:angularApiUrl}/classes/igxtoastcomponent.html)
 
+Styles:
+
+* [`IgxToastComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-toast-theme)
+
 ###Additional Resources
 
 <div class="divider--half"></div>

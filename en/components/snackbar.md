@@ -188,6 +188,10 @@ In this article we learned how to use and configure the [`IgxSnackbarComponent`]
 
 * [`IgxSnackbarComponent`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html)
 
+Styles:
+
+* [`IgxSnackbarComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-snackbar-theme)
+
 ###Additional Resources
 
 <div class="divider--half"></div>

@@ -261,6 +261,7 @@ export class AppModule {}
 以下は、列非表示 UI のその他の API です。
 
 * [`IgxColumnHidingComponent`]({environment:angularApiUrl}/classes/igxcolumnhidingcomponent.html)
+* [`IgxColumnHidingComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-column-hiding-theme)
 
 Additional components and/or directives with relative APIs that were used:
 
@@ -282,6 +283,13 @@ Additional components and/or directives with relative APIs that were used:
 
 [`IgxGridComponent`]({environment:angularApiUrl}/classes/igxgridcomponent.html) events:
 * [`onColumnVisibilityChanged`]({environment:angularApiUrl}/classes/igxgridcomponent.html#oncolumnvisibilitychanged)
+
+[`IgxRadioComponent`]({environment:angularApiUrl}/classes/igxradiocomponent.html)
+
+Styles:
+
+* [`IgxGridComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [`IgxRadioComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-radio-theme)
 
 ### その他のリソース
 <div class="divider--half"></div>

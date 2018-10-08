@@ -156,6 +156,10 @@ public toolbarExportingHandler(args) {
 [`IgxGridComponent`]({environment:angularApiUrl}/classes/igxgridcomponent.html) events:
 * [`onToolbarExporting`]({environment:angularApiUrl}/classes/igxgridcomponent.html#ontoolbarexporting)
 
+Styles:
+
+* [`IgxGridComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+
 ### その他のリソース
 
 <div class="divider--half"></div>

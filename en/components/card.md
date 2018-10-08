@@ -193,13 +193,19 @@ For more detailed information regarding the card's API, refer to the following l
 
 The following built-in CSS styles helped us achieve this card layout:
 
-* [`IgxCardComponent Styles`]({environment:sassApiUrl}/index.html#mixin-igx-card)
+* [`IgxCardComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-card-theme)
 
 Additional components and/or directives that were used:
 
 * [`IgxAvatarComponent`]({environment:angularApiUrl}/classes/igxavatarcomponent.html)
 * [`IgxIconComponent`]({environment:angularApiUrl}/classes/igxiconcomponent.html)
 * [`IgxButtonDirective`]({environment:angularApiUrl}/classes/igxbuttondirective.html)
+
+Styles:
+
+* [`IgxAvatarComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-avatar-theme)
+* [`IgxIconComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
+* [`IgxButtonDirective Styles`]({environment:sassApiUrl}/index.html#function-igx-button-theme)
 
 <div class="divider"></div>
 

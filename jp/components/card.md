@@ -189,13 +189,19 @@ public icons = ['add', 'star'];
 
 以下の定義済み CSS スタイルを使用してカード レイアウトを構成しました。
 
-* [`IgxCardComponent Styles`]({environment:sassApiUrl}/index.html#mixin-igx-card)
+* [`IgxCardComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-card-theme)
 
 使用したその他のコンポーネントとディレクティブ:
 
 * [`IgxAvatarComponent`]({environment:angularApiUrl}/classes/igxavatarcomponent.html)
 * [`IgxIconComponent`]({environment:angularApiUrl}/classes/igxiconcomponent.html)
 * [`IgxButtonDirective`]({environment:angularApiUrl}/classes/igxbuttondirective.html)
+
+Styles:
+
+* [`IgxAvatarComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-avatar-theme)
+* [`IgxIconComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
+* [`IgxButtonDirective Styles`]({environment:sassApiUrl}/index.html#function-igx-button-theme)
 
 <div class="divider"></div>
 

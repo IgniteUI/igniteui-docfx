@@ -137,6 +137,10 @@ public show(toast) {
 
 * [`IgxToastComponent`]({environment:angularApiUrl}/classes/igxtoastcomponent.html)
 
+Styles:
+
+* [`IgxToastComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-toast-theme)
+
 ### その他のリソース
 
 コミュニティに参加して新しいアイデアをご提案ください。

@@ -260,6 +260,7 @@ In this article we learned how to use the built-in column hiding UI in the grid'
 The column hiding UI has a few more APIs to explore, which are listed below.
 
 * [`IgxColumnHidingComponent`]({environment:angularApiUrl}/classes/igxcolumnhidingcomponent.html)
+* [`IgxColumnHidingComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-column-hiding-theme)
 
 Additional components and/or directives with relative APIs that were used:
 
@@ -281,6 +282,13 @@ Additional components and/or directives with relative APIs that were used:
 
 [`IgxGridComponent`]({environment:angularApiUrl}/classes/igxgridcomponent.html) events:
 * [`onColumnVisibilityChanged`]({environment:angularApiUrl}/classes/igxgridcomponent.html#oncolumnvisibilitychanged)
+
+[`IgxRadioComponent`]({environment:angularApiUrl}/classes/igxradiocomponent.html)
+
+Styles:
+
+* [`IgxGridComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [`IgxRadioComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-radio-theme)
 
 ### Additional Resources
 <div class="divider--half"></div>
