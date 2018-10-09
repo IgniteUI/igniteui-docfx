@@ -200,7 +200,7 @@ public restore() {
 
 * [`IgxSnackbarComponent`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html)
 
-Styles:
+スタイル:
 
 * [`IgxSnackbarComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-snackbar-theme)
 

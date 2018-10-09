@@ -105,22 +105,22 @@ export class AppModule {}
 
 <div class="divider"></div>
 
-### API References
+### API リファレンス
 
-In this article we show a few scenarios where the navbar component may come in handy. The APIs, we used to achieve them, are listed in the links below.
+このトピックでは NavBar コンポーネントの使用方法を紹介しました。以下は、使用した API のリンクです。
 
 [`IgxNavbarComponent`]({environment:angularApiUrl}/classes/igxnavbarcomponent.html)
 
-Additional components and/or directives with relative APIs that were used:
+その他のコンポーネントおよびディレクティブ (またはそのいずれか) で使用した API:
 
 [`IgxIconComponent`]({environment:angularApiUrl}/classes/igxiconcomponent.html)
 
-Styles:
+スタイル:
 
 * [`IgxNavbarComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-navbar-theme)
 * [`IgxIconComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
 
-### 追加のリソース
+### その他のリソース
 
 <div class="divider--half"></div>
 

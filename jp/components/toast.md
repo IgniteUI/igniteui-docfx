@@ -137,7 +137,7 @@ public show(toast) {
 
 * [`IgxToastComponent`]({environment:angularApiUrl}/classes/igxtoastcomponent.html)
 
-Styles:
+スタイル:
 
 * [`IgxToastComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-toast-theme)
 

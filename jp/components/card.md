@@ -197,7 +197,7 @@ public icons = ['add', 'star'];
 * [`IgxIconComponent`]({environment:angularApiUrl}/classes/igxiconcomponent.html)
 * [`IgxButtonDirective`]({environment:angularApiUrl}/classes/igxbuttondirective.html)
 
-Styles:
+スタイル:
 
 * [`IgxAvatarComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-avatar-theme)
 * [`IgxIconComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-icon-theme)

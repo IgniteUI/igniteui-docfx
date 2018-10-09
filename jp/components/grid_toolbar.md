@@ -156,7 +156,7 @@ public toolbarExportingHandler(args) {
 [`IgxGridComponent`]({environment:angularApiUrl}/classes/igxgridcomponent.html) events:
 * [`onToolbarExporting`]({environment:angularApiUrl}/classes/igxgridcomponent.html#ontoolbarexporting)
 
-Styles:
+スタイル:
 
 * [`IgxGridComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 

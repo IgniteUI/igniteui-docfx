@@ -302,22 +302,22 @@ public clearSearch() {
 このトピックでは、グリッドにカスタム検索バーを実装し、更に検索結果を移動する際の機能を追加しました。アイコン、チップ、入力などその他の Ignite UI for Angular コンポーネントも使用しています。
 以下は検索 API です。
 
-[`IgxGridComponent`]({environment:angularApiUrl}/classes/igxgridcomponent.html) methods:
+[`IgxGridComponent`]({environment:angularApiUrl}/classes/igxgridcomponent.html) メソッド:
 -   [`findNext`]({environment:angularApiUrl}/classes/igxgridcomponent.html#findnext)
 -   [`findPrev`]({environment:angularApiUrl}/classes/igxgridcomponent.html#findprev)
 -   [`clearSearch`]({environment:angularApiUrl}/classes/igxgridcomponent.html#clearsearch)
 -   [`refreshSearch`]({environment:angularApiUrl}/classes/igxgridcomponent.html#refreshsearch)
 
-[`IgxGridCellComponent`]({environment:angularApiUrl}/classes/igxgridcellcomponent.html) methods:
+[`IgxGridCellComponent`]({environment:angularApiUrl}/classes/igxgridcellcomponent.html) メソッド:
 -   [`highlightText`]({environment:angularApiUrl}/classes/igxgridcellcomponent.html#highlighttext)
 -   [`clearHighlight`]({environment:angularApiUrl}/classes/igxgridcellcomponent.html#clearhighlight)
 
-[`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) properties:
+[`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) プロパティ:
 -   [`searchable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#searchable)
 
 [`ISearchInfo`]({environment:angularApiUrl}/interfaces/isearchinfo.html)
 
-Additional components and/or directives with relative APIs that were used:
+その他のコンポーネントおよびディレクティブ (またはそのいずれか) で使用した API:
 
 * [`IgxInputGroupComponent`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
 * [`IgxIconComponent`]({environment:angularApiUrl}/classes/igxiconcomponent.html)
@@ -325,7 +325,7 @@ Additional components and/or directives with relative APIs that were used:
 * [`IgxButtonDirective`]({environment:angularApiUrl}/classes/igxbuttondirective.html)
 * [`IgxChipComponent`]({environment:angularApiUrl}/classes/igxchipcomponent.html)
 
-Styles:
+スタイル:
 
 * [`IgxGridComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 * [`IgxInputGroupComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-input-group-theme)

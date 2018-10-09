@@ -355,7 +355,7 @@ export class AppModule {}
 * [`IgxToggleDirective`]({environment:angularApiUrl}/classes/igxtoggledirective.html)
 * [`IgxToggleActionDirective`]({environment:angularApiUrl}/classes/igxtoggleactiondirective.html)
 
-Styles:
+スタイル:
 
 * [`IgxTooltipDirective Styles`]({environment:sassApiUrl}/index.html#function-igx-tooltip-theme)
 * [`IgxAvatarComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-avatar-theme)
