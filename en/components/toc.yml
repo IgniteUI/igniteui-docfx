@@ -221,7 +221,7 @@
   - name: Scrolling Strategies
     href: overlay_scroll.md
     new: true
-- name: Drag and Drop Directives
+- name: Drag and Drop
   href: drag_drop.md
   new: true
 - name: Menus

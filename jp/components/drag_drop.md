@@ -1,10 +1,10 @@
 ---
-title: Drag and Drop Directives
+title: Drag and Drop
 _description: Use Ignite UI for Angular Drag and Drop directives to move DOM elements from one place to another.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Drag and Drop directives
 ---
 
-## Drag and Drop Directives
+## Drag and Drop
 <p class="highlight">The Ignite UI for Angular Drag and Drop directives enable dragging of elements around the page.</p>
 
 #### Demo
@@ -53,12 +53,37 @@ After the user releases the mouse/touch the drag ghost element is removed from t
 
 When an element that is being dragged using the [`igxDrag`]({environment:angularApiUrl}/classes/igxdragdirective.html) directive needs to be placed in an area, the [`igxDrop`]({environment:angularApiUrl}/classes/igxdropdirective.html) can be used to achieve this behavior. It provides events that the user can use to determine if element is entering the drop area and if it is being released inside it.
 
-#### Basic configuration
+#### Basic Configuration
 The [`igxDrop`]({environment:angularApiUrl}/classes/igxdropdirective.html) directive can be applied to any DOM element just like the [`igxDrag`]({environment:angularApiUrl}/classes/igxdragdirective.html) directive. 
 
 ````html
 <div igxDrop>Drop here</div>
 ````
+
+By default the [`igxDrop`]({environment:angularApiUrl}/classes/igxdropdirective.html) directive comes with logic that appends the dropped [`igxDrag`]({environment:angularApiUrl}/classes/igxdragdirective.html) element as a child of the element that has instanced the [`igxDrop`]({environment:angularApiUrl}/classes/igxdropdirective.html). It can be overridden by canceling the [`onDrop`]({environment:angularApiUrl}/classes/igxdropdirective.html#ondrop) event of the [`igxDrop`]({environment:angularApiUrl}/classes/igxdropdirective.html) directive. This can be done by setting the `cancel` argument that the [`onDrop`]({environment:angularApiUrl}/classes/igxdropdirective.html#ondrop) event provides.
+
+If you define a custom drop logic and have the [`animateOnRelease`]({environment:angularApiUrl}/classes/igxdragdirective.html#animateonrelease) input of the [`igxDrag`]({environment:angularApiUrl}/classes/igxdragdirective.html) set to `true` it is recommended to also call the [`dropFinished()`]({environment:angularApiUrl}/classes/igxdragdirective.html#dropfinished) method of the [`igxDrag`]({environment:angularApiUrl}/classes/igxdragdirective.html) when you finish with manipulating the DOM. This informs the [`igxDrag`]({environment:angularApiUrl}/classes/igxdragdirective.html) to update its relative position to the new location in the DOM so that it will animate correctly.
+
+Example of cancelling [`onDrop`]({environment:angularApiUrl}/classes/igxdropdirective.html#ondrop) default drop logic:
+
+````html
+<div igxDrop (onDrop)="onElemDrop($event)">Drop here</div>
+````
+
+````ts
+public onElemDrop(event: IgxDropEventArgs) {
+    event.cancel = true; // This cancels the default drop logic
+    // ...
+    // Custom implementation logic
+    // ...
+
+    // This is required to tell the dragged element the dropping has finished, so it can return to the new location/old location.
+    // It can be called anywhere in the code as well.
+    event.drag.dropFinished(); 
+}
+````
+
+#### Advanced Configuration
 One element can have both [`igxDrag`]({environment:angularApiUrl}/classes/igxdragdirective.html) and [`igxDrop`]({environment:angularApiUrl}/classes/igxdropdirective.html) directives applied, but then it is recommended to use custom logic when another element is being dropped on to it by canceling the [`onDrop`]({environment:angularApiUrl}/classes/igxdropdirective.html#ondrop) event of the [`igxDrop`]({environment:angularApiUrl}/classes/igxdropdirective.html) directive.
 
 #### Usage
