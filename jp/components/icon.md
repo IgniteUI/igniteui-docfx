@@ -77,13 +77,13 @@ CSS でアイコン サイズを設定するには、カスタム CSS を作成�
     <iframe id="icon-sample2-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/icon-sample2"  onload="onSampleIframeContentLoaded(this);">
 </div>
 
-You can also use a SVG image as an icon. First, inject [`IgxIconService`]({environment:angularApiUrl}/classes/igxiconservice.html) dependency. In this example [`IgxIconService`]({environment:angularApiUrl}/classes/igxiconservice.html) dependency is injected in a component's constructor but you can use it wherever it is needed in your code. 
+はじめに [`IgxIconService`]({environment:angularApiUrl}/classes/igxiconservice.html) 依存を注入します。この例では、 [`IgxIconService`]({environment:angularApiUrl}/classes/igxiconservice.html) 依存がコンポーネントのコンストラクタに注入されますが、コードで必要な場所に使用できます。
 
-Use the [`addSvgIcon`]({environment:angularApiUrl}/classes/igxiconservice.html#addsvgicon) method to import the SVG file in cache. When the SVG is cached, it can be used anywhere in the application. Icon name and file URL path are method's mandatory parameters, you can specify font-set ase well. After that, you can use the SVG files in the HTML markup. Alternatively, you can use the `addSvgIconFromText` method to import the SVG file providing the SVG text content instead of the file URL.
+[`addSvgIcon`]({environment:angularApiUrl}/classes/igxiconservice.html#addsvgicon) メソッドを SVG ファイルをキャッシュにインポートするために使用します。SVG をキャッシュした場合、アプリケーションのどこでも使用できるようになります。アイコン名とファイル URL がメソッドに必須のパラメーターです。フォントセットも指定できます。HTML マークアップの SVG ファイルを使用できます。または `addSvgIconFromText` メソッドを使用して SVG ファイルをインポートして SVC テキスト コンテンツを使用できます。
 
-* Have in mind that if there are two icons with the same name and the same font-set - SVG icon will be displayed with priority.
-* It is better not to provide image width and height in the SVG file.
-* You may need additional polyfill scripts ("polyfills") for Internet Explorer.
+* 同じ名前のアイコンが 2 つある場合に同じフォント セット SVG アイコンが優先順位に従って表示されます。
+* SVG ファイルの画像の幅と高さは指定しないことをお勧めします。
+* 追加のポリフィル スクリプトがインターネット　エクスプローラーで必要な場合があります。
 
 ```typescript
 // svg-icon-sample.ts
