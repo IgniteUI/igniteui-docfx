@@ -7,7 +7,7 @@ _language: ja
 
 ## Navbar
 
-<p class="highlight">Ignite UI for Angular Navigation Bar コンポーネントは、アプリケーション内の現在位置を示し、ブラウザーの [戻る] ボタンのように戻る機能を提供します。Navigation Bar の検索またはお気に入りなどのリンクによって、ユーザーはアプリケーションでナビゲーションをスムーズに実行できます。バーは、バーが含まれるコンテナーの上に配置されます。</p>
+<p class="highlight">Ignite UI for Angular [`IgxNavbarComponent`]({environment:angularApiUrl}/classes/igxnavbarcomponent.html)、アプリケーション内の現在位置を示し、ブラウザーの [戻る] ボタンのように戻る機能を提供します。Navigation Bar の検索またはお気に入りなどのリンクによって、ユーザーはアプリケーションでナビゲーションをスムーズに実行できます。バーは、バーが含まれるコンテナーの上に配置されます。</p>
 <div class="divider"></div>
 
 ### Navbar デモ
@@ -22,7 +22,7 @@ _language: ja
 
 ### 使用方法
 
-Ignite UI for Angular NavBar コンポーネントを初期化する前に **IgxNavbarModule** を **app.module.ts** ファイルにインポートします。
+Ignite UI for Angular NavBar コンポーネントを初期化する前に [`IgxNavbarModule`]({environment:angularApiUrl}/classes/igxnavbarmodule.html) を **app.module.ts** ファイルにインポートします。
 
 ```typescript
 // app.module.ts
@@ -105,33 +105,22 @@ export class AppModule {}
 
 <div class="divider"></div>
 
-### API まとめ
+### API リファレンス
 
-このトピックでは NavBar コンポーネントの使用例を紹介しました。以下は、使用したコンポーネントの API です。
+このトピックでは NavBar コンポーネントの使用方法を紹介しました。以下は、使用した API のリンクです。
 
-#### 入力
+[`IgxNavbarComponent`]({environment:angularApiUrl}/classes/igxnavbarcomponent.html)
 
-以下の入力が **igx-navbar** コンポーネントで利用できます。
+その他のコンポーネントおよびディレクティブ (またはそのいずれか) で使用した API:
 
-| 名前 | 型 | 説明 |
-| :--- | :--- | :--- |
-| `actionButtonIcon` | String | アクション ボタンに使用するマテリアル アイコンの名前を提供します。 |
-| `isActionButtonVisible` | Boolean | アクション ボタンが表示されるかどうか。 |
-| `title` | String | NavBar に表示されるタイトルを提供します。 |
+[`IgxIconComponent`]({environment:angularApiUrl}/classes/igxiconcomponent.html)
 
-<div class="divider"></div>
+スタイル:
 
-#### 出力
+* [`IgxNavbarComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-navbar-theme)
+* [`IgxIconComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
 
-以下の出力が **igx-navbar** コンポーネントで利用できます。
-
-| 名前 | 型 | 説明 |
-| :--- | :--- | :--- |
-| `onAction` | EventEmitter | アクションが実行されたときにイベントを発生します。 |
-
-<div class="divider"></div>
-
-### 追加のリソース
+### その他のリソース
 
 <div class="divider--half"></div>
 

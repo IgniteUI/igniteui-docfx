@@ -42,9 +42,9 @@ Ignite UI for Angular Data Grid に**列非表示**機能があります。こ�
 
 ### ツールバーの列非表示 UI
 
-定義済みの列非表示 UI はグリッドのツールバーの `IgxDropDownComponent` 内に配置されます。列非表示の UI をこのドロップダウンを使用して表示/非表示にできます。
-このため、グリッドの `showToolbar` および `columnHiding` プロパティを true に設定します。ツールバーが有効でない場合、`columnHiding` プロパティが有効かどうかは影響しません。
-ツールバーにタイトルを追加するには、`toolbarTitle` プロパティを設定し、グリッドのラッパーにカスタム スタイルを設定します。
+定義済みの列非表示 UI はグリッドのツールバーの [`IgxDropDownComponent`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) 内に配置されます。列非表示の UI をこのドロップダウンを使用して表示/非表示にできます。
+このため、グリッドの [`showToolbar`]({environment:angularApiUrl}/classes/igxgridcomponent.html#showtoolbar) および [`columnhiding`]({environment:angularApiUrl}/classes/igxgridcomponent.html#columnhiding) properties of the grid to true. If the toolbar is not enabled, enabling the [`columnhiding`]({environment:angularApiUrl}/classes/igxgridcomponent.html#columnhiding) プロパティを true に設定します。ツールバーが有効でない場合、[`columnhiding`]({environment:angularApiUrl}/classes/igxgridcomponent.html#columnhiding) properties of the grid to true. If the toolbar is not enabled, enabling the [`columnhiding`]({environment:angularApiUrl}/classes/igxgridcomponent.html#columnhiding) プロパティが有効かどうかは影響しません。
+ツールバーにタイトルを追加するには、[`toolbarTitle`]({environment:angularApiUrl}/classes/igxgridcomponent.html#toolbartitle) プロパティを設定し、グリッドのラッパーにカスタム スタイルを設定します。
 
 ```html
 <!--columnHiding.component.html-->
@@ -66,8 +66,8 @@ Ignite UI for Angular Data Grid に**列非表示**機能があります。こ�
 ```
 
 グリッドのツールバーの列非表示 UI に便利なプロパティがあります。
-`columnHidingTitle` および `hiddenColumnsText` プロパティを使用して、ツールバーのドロップダウン ボタンに表示されるタイトルおよびテキストを設定します。`hiddenColumnsText` は列のカウント数の右に表示されます。カウントはデフォルトでボタンに含まれます。
-`hiddenColumnsText` プロパティはローカライズにも使用できます。
+[`columnHidingTitle`]({environment:angularApiUrl}/classes/igxgridcomponent.html#columnhidingtitle) および [`hiddenColumnsText`]({environment:angularApiUrl}/classes/igxgridcomponent.html#hiddencolumnstext) プロパティを使用して、ツールバーのドロップダウン ボタンに表示されるタイトルおよびテキストを設定します。[`hiddenColumnsText`]({environment:angularApiUrl}/classes/igxgridcomponent.html#hiddencolumnstext) は列のカウント数の右に表示されます。カウントはデフォルトでボタンに含まれます。
+[`hiddenColumnsText`]({environment:angularApiUrl}/classes/igxgridcomponent.html#hiddencolumnstext) プロパティはローカライズにも使用できます。
 
 ```html
 <!--columnHiding.component.html-->
@@ -79,7 +79,7 @@ Ignite UI for Angular Data Grid に**列非表示**機能があります。こ�
 </div>
 ```
 
-列非表示 UI の `columnsAreaMaxHeight` プロパティを使用して列を含む領域の最大の高さを設定できます。列が多すぎてコンテナにすべて収まらない場合にスクロールバーが表示されるため、任意の列に移動できます。検索入力は上にピン固定されて、[すべて表示]/[すべて非表示] ボタンが下にピン固定されます。
+列非表示 UI の [`columnsAreaMaxHeight`]({environment:angularApiUrl}/classes/igxcolumnhidingcomponent.html#columnsareamaxheight) プロパティを使用して列を含む領域の最大の高さを設定できます。列が多すぎてコンテナにすべて収まらない場合にスクロールバーが表示されるため、任意の列に移動できます。検索入力は上にピン固定されて、[すべて表示]/[すべて非表示] ボタンが下にピン固定されます。
 
 ```typescript
 // columnHiding.component.ts
@@ -89,13 +89,13 @@ public ngAfterViewInit() {
 }
 ```
 
-列非表示 UI の機能セットを使用するには、列非表示 UI コンポーネントへの参照を返すツールバーの `columnHidingUI` プロパティを使用します。相対する API にアクセスし、アプリケーションの要件に基づいて使用できます。
+列非表示 UI の機能セットを使用するには、列非表示 UI コンポーネントへの参照を返すツールバーの [`columnHidingUI`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html#columnhidingui) プロパティを使用します。相対する API にアクセスし、アプリケーションの要件に基づいて使用できます。
 
 このトピックの最初にあるコードの結果は「[列非表示デモ](#デモ)」セクションで確認できます。
 
 ### カスタム列の非表示 UI
 
-**IgxColumnHidingComponent** を手動的に定義してページに配置するには、**IgxColumnHiding** モジュールを追加してコンポーネントのインスタンスをマークアップに作成します。 
+[`IgxColumnHidingComponent`]({environment:angularApiUrl}/classes/igxcolumnhidingcomponent.html) を手動的に定義してページに配置するには、[`IgxColumnHidingModule`]({environment:angularApiUrl}/classes/igxcolumnhidingmodule.html) モジュールを追加してコンポーネントのインスタンスをマークアップに作成します。 
 
 ```typescript
 // app.module.ts
@@ -113,7 +113,7 @@ import {
 export class AppModule {}
 ```
 
-IgxColumnHidingComponent を作成します。アプリケーションでグリッドの隣に配置します。これはツールバーの列非表示 UI と異なります。ツールバーの場合、コンポーネントはドロップダウンに含まれます。コンポーネントの `columns` プロパティをグリッドの列に設定し、更にカスタム スタイルも追加します。
+[`IgxColumnHidingComponent`]({environment:angularApiUrl}/classes/igxcolumnhidingcomponent.html) を作成します。アプリケーションでグリッドの隣に配置します。これはツールバーの列非表示 UI と異なります。ツールバーの場合、コンポーネントはドロップダウンに含まれます。コンポーネントの [`columns`]({environment:angularApiUrl}/classes/igxcolumnhidingcomponent.html#columns) プロパティをグリッドの列に設定し、更にカスタム スタイルも追加します。
 
 ```html
 <!--columnHiding.component.html-->
@@ -170,7 +170,7 @@ IgxColumnHidingComponent を作成します。アプリケーションでグリ�
 
 #### タイトルおよびフィルター プロンプトの追加
 
-列非表示コンポーネント機能を拡張するために `title` および `filterColumnsPrompt` プロパティを設定します。`title` は一番上に表示され、`filterColumnsPrompt` は列非表示 UI のフィルター入力に表示されるプロンプト テキストです。
+列非表示コンポーネント機能を拡張するために [`title`]({environment:angularApiUrl}/classes/igxcolumnhidingcomponent.html#title) および [`filterColumnsPrompt`]({environment:angularApiUrl}/classes/igxcolumnhidingcomponent.html#filtercolumnsprompt) プロパティを設定します。[`title`]({environment:angularApiUrl}/classes/igxcolumnhidingcomponent.html#title) は一番上に表示され、[`filterColumnsPrompt`]({environment:angularApiUrl}/classes/igxcolumnhidingcomponent.html#filtercolumnsprompt) は列非表示 UI のフィルター入力に表示されるプロンプト テキストです。
 
 ```html
 <!--columnHiding.component.html-->
@@ -184,12 +184,12 @@ IgxColumnHidingComponent を作成します。アプリケーションでグリ�
 
 #### 列の表示順序オプションの追加
 
-列非表示 UI で列の表示順序を選択する機能も追加します。このため、`columnDisplayOrder` プロパティを使用します。列挙型のプロパティで、以下のオプションがあります。
+列非表示 UI で列の表示順序を選択する機能も追加します。このため、[`columnDisplayOrder`]({environment:angularApiUrl}/classes/igxcolumnhidingcomponent.html#columndisplayorder) プロパティを使用します。列挙型のプロパティで、以下のオプションがあります。
 
 - **Alphabetical** (列をアルファベット順で並べ替え)
 - **DisplayOrder** (列をグリッドで表示される順序によって並べ替え)
 
-このオプションにラジオ ボタンを追加します。[**IgxRadio**](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/radio_button.html) モジュールを追加します。 
+このオプションにラジオ ボタンを追加します。[**IgxRadio**](radio_button.md) モジュールを追加します。 
 
 ```typescript
 // app.module.ts
@@ -207,7 +207,7 @@ import {
 export class AppModule {}
 ```
 
-次に両方のラジオ ボタンの **checked** プロパティを異なる条件に個々にバインドして、click イベントを処理します。
+次に両方のラジオ ボタンの [`checked`]({environment:angularApiUrl}/classes/igxradiocomponent.html#checked) プロパティを異なる条件に個々にバインドして、click イベントを処理します。
 
 ```html
 <!--columnHiding.component.html-->
@@ -228,7 +228,7 @@ export class AppModule {}
 ```
 
 #### 列の非表示の無効化
-列の `disableHiding` プロパティを true に設定すると、ユーザーが列非表示 UI によって列を非表示にできません。
+列の [`disableHiding`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#disablehiding) プロパティを true に設定すると、ユーザーが列非表示 UI によって列を非表示にできません。
 
 ```html
 <!--columnHiding.component.html-->
@@ -255,84 +255,41 @@ export class AppModule {}
 <div class="divider--half"></div>
 
 
-### API まとめ
+### API リファレンス
 
-このトピックでは、グリッドのツールバーの定義済みの列非表示 UI の使用方法や別のコンポーネントとして定義する方法について説明しました。また、その他の列順序から選択する機能を提供する UI を実装し、カスタム タイトルおよびフィルター プロンプト テキストを設定、**IgxRadio** ボタンのその他の Ignite UI for Angular コンポーネントも使用しました。
+このトピックでは、グリッドのツールバーの定義済みの列非表示 UI の使用方法や別のコンポーネントとして定義する方法について説明しました。また、その他の列順序から選択する機能を提供する UI を実装し、カスタム タイトルおよびフィルター プロンプト テキストを設定、[**IgxRadio**](radio_button.md) ボタンのその他の Ignite UI for Angular コンポーネントも使用しました。
 以下は、列非表示 UI のその他の API です。
 
+* [`IgxColumnHidingComponent`]({environment:angularApiUrl}/classes/igxcolumnhidingcomponent.html)
+* [`IgxColumnHidingComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-column-hiding-theme)
 
-#### プロパティ
-以下のプロパティは **IgxColumnHidingComponent**　で使用できます。
-| 名前 | 型 | 説明 |
-| :--- | :--- | :--- |
-| `columns` | Object Array | 操作されるグリッド列の配列。 |
-| `columnDisplayOrder` | ColumnDisplayOrder 列挙体 | 列がアルファベット順で並べ替えるか、グリッドの順序で表示されるかどうか。|
-| `title` | string | 表示されるタイトル。 |
-| `filterColumnsPrompt` | string | フィルター入力に表示されるプロンプト。 |
-| `filterCriteria` | string | 列リストのフィルター値。 |
-| `disableHideAll` | boolean | [Hide All] ボタンが無効にされるかどうかを返します。 |
-| `disableShowAll` | boolean | [Show All] ボタンが無効にされるかどうかを返します。 |
-| `showAllText` | string | [Show All] ボタンに表示されるテキスト。 |
-| `hideAllText` | string | [Hide All] ボタンに表示されるテキスト。 |
-| `columnsAreaMaxHeight` | string | 列を含む列非表示 UI の領域の最大の高さ。 |
+その他のコンポーネントおよびディレクティブ (またはそのいずれか) で使用した API:
 
-<div class="divider"></div>
+[`IgxGridComponent`]({environment:angularApiUrl}/classes/igxgridcomponent.html) プロパティ:
+* [`columnHiding`]({environment:angularApiUrl}/classes/igxgridcomponent.html#columnhiding)
+* [`columnHidingTitle`]({environment:angularApiUrl}/classes/igxgridcomponent.html#columnhidingtitle)
+* [`hiddenColumnsCount`]({environment:angularApiUrl}/classes/igxgridcomponent.html#hiddencolumnscount)
+* [`hiddenColumnsText`]({environment:angularApiUrl}/classes/igxgridcomponent.html#hiddencolumnstext)
 
-以下のプロパティは **IgxColumnComponent** で使用できます。
-| 名前 | 型 | 説明 |
-| :--- | :--- | :--- |
-| `columnHiding` | boolean | グリッドの定義済みの列非表示 UI が有効かどうか。 |
-| `columnHidingTitle` | string | 定義済みの列非表示 UI に表示されるタイトル。 |
-| `hiddenColumnsCount` | number | 非表示列の数。 |
-| `hiddenColumnsText` | string | 定義済みの列非表示 UI のトグル ボタンに表示されるテキスト。 |
+[`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) プロパティ:
+* [`disableHiding`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#disablehiding)
 
-<div class="divider"></div>
+[`IgxGridToolbarComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html) プロパティ:
+* [`columnHidingUI`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html#columnhidingui)
+* [`columnHidingDropdown`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html#columnhidingdropdown)
 
-以下のプロパティは **IgxColumnComponent** で使用できます。
-| 名前 | 型 | 説明 |
-| :--- | :--- | :--- |
-| `disableHiding` | boolean | 列が列非表示 UI によって非表示にできないかどうかを決定します。 |
+[`IgxGridToolbarComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html) メソッド:
+* [`toggleColumnHidingUI`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html#togglecolumnhidingui)
 
-<div class="divider"></div>
+[`IgxGridComponent`]({environment:angularApiUrl}/classes/igxgridcomponent.html) イベント:
+* [`onColumnVisibilityChanged`]({environment:angularApiUrl}/classes/igxgridcomponent.html#oncolumnvisibilitychanged)
 
-以下のプロパティは **IgxGridToolbarComponent** で使用できます。
-| 名前 | 型 | 説明 |
-| :--- | :--- | :--- |
-| `columnHidingUI` | IgxColumnHidingComponent | 定義済みの列非表示 UI コンポーネントへの参照。 |
-| `columnHidingDropdown` | IgxDropDownComponent | 定義済みの列非表示 UI コンポーネントを含むドロップダウンへの参照。 |
+[`IgxRadioComponent`]({environment:angularApiUrl}/classes/igxradiocomponent.html)
 
-<div class="divider"></div>
+スタイル:
 
-
-#### メソッド
-以下のメソッドは **IgxColumnHidingComponent** で使用できます。
-| 名前 | 型 | パラメーター |説明 |
-| :--- | :--- | :--- | :--- |
-| `showAllColumns` | void | N/A | グリッドの列をすべて表示します。 |
-| `hideAllColumns` | void | N/A | グリッドの列をすべて非表示します。 |
-
-<div class="divider"></div>
-
-以下のメソッドは **IgxGridToolbarComponent** で使用できます。
-| 名前 | 型 | パラメーター |説明 |
-| :--- | :--- | :--- | :--- |
-| `toggleColumnHidingUI` | void | N/A | 定義済みの列非表示 UI を表示/非表示します。 |
-
-<div class="divider"></div>
-
-#### 出力
-以下の出力は **IgxColumnHidingComponent** で使用できます。
-|名前|説明|
-|--- |--- |
-| `onColumnVisibilityChanged` | 列の表示状態を変更するときに発生されます。Args: `{ column: any, newValue: boolean }` |
-
-<div class="divider"></div>
-
-以下の出力は **IgxGridComponent** で使用できます。
-|名前|説明|
-|--- |--- |
-| `onColumnVisibilityChanged` | 列の表示状態を変更するときに発生されます。Args: `{ column: any, newValue: boolean }` |
-
+* [`IgxGridComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [`IgxRadioComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-radio-theme)
 
 ### その他のリソース
 <div class="divider--half"></div>

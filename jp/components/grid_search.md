@@ -74,9 +74,9 @@ public exactMatch: boolean = false;
 
 #### 検索入力ボックス
 
-検索入力を作成します。**searchText** を ngModel として新しく作成した入力へバインドして ngModelChange イベントにサブスクライブします。ユーザーによるすべての **searchText** 変更を検出できます。これによってグリッドの `findNext` と `findPrev` メソッドを使用して **searchText** のすべての出現を強調し、次へまたは前 (呼び出すメソッドに基づいて) へスクロールできます。
+検索入力を作成します。**searchText** を ngModel として新しく作成した入力へバインドして ngModelChange イベントにサブスクライブします。ユーザーによるすべての **searchText** 変更を検出できます。これによってグリッドの [`findNext`]({environment:angularApiUrl}/classes/igxgridcomponent.html#findnext) と [`findPrev`]({environment:angularApiUrl}/classes/igxgridcomponent.html#findprev) メソッドを使用して **searchText** のすべての出現を強調し、次へまたは前 (呼び出すメソッドに基づいて) へスクロールできます。
 
-`findNext` と `findPrev` メソッドの両方に 2 つの引数があります。
+[`findNext`]({environment:angularApiUrl}/classes/igxgridcomponent.html#findnext) と [`findPrev`]({environment:angularApiUrl}/classes/igxgridcomponent.html#findprev) メソッドの両方に 2 つの引数があります。
 - `text`: **string** (検索するテキスト)
 - `caseSensitive` (オプション)`: **boolean** (検索で大文字と小文字を区別するかどうか、デフォルト値は false)。
 - `exactMatch`(オプション): **boolean** (検索で完全一致するかどうか、デフォルト値は false)。
@@ -112,7 +112,7 @@ public exactMatch: boolean = false;
 
 #### 検索ボタンの追加
 
-ボタンの各クリック イベント ハンドラー内で `findNext` と `findPrev` メソッドを呼び出して検索や検索結果をナビゲーションするためのボタンを作成します。
+ボタンの各クリック イベント ハンドラー内で [`findNext`]({environment:angularApiUrl}/classes/igxgridcomponent.html#findnext) と [`findPrev`]({environment:angularApiUrl}/classes/igxgridcomponent.html#findprev) メソッドを呼び出して検索や検索結果をナビゲーションするためのボタンを作成します。
 
 ```html
 <!--searchgrid.component.html-->
@@ -125,7 +125,7 @@ public exactMatch: boolean = false;
 
 #### キーボード検索の追加
 
-ユーザーは矢印キーと Enter キーで結果を移動できます。 preventDefault() メソッドのデフォルト キャレットの移動を防止する検索入力の  **keydown** イベントを処理し、ユーザーが押したキーに基づいて `findNext`/`findPrev` メソッドを呼び出します。
+ユーザーは矢印キーと Enter キーで結果を移動できます。 preventDefault() メソッドのデフォルト キャレットの移動を防止する検索入力の  **keydown** イベントを処理し、ユーザーが押したキーに基づいて [`findNext`]({environment:angularApiUrl}/classes/igxgridcomponent.html#findnext)/[`findPrev`]({environment:angularApiUrl}/classes/igxgridcomponent.html#findprev) メソッドを呼び出します。
 
 ```html
 <!--searchgrid.component.html-->
@@ -150,7 +150,7 @@ public searchKeyDown(ev) {
 
 #### 大文字と小文字の区別と完全一致
 
-次に完全一致の検索で大文字と小文字を区別するかどうかをユーザーが選択できるようにします。**caseSensitive** と **exactMatch** プロパティを入力 **checked** プロパティにそれぞれバインドし、プロパティを切り替えて **change** イベントを処理後、`findNext` メソッドを呼び出すことによりシンプルなチェックボックスを使用します。
+次に完全一致の検索で大文字と小文字を区別するかどうかをユーザーが選択できるようにします。**caseSensitive** と **exactMatch** プロパティを入力 **checked** プロパティにそれぞれバインドし、プロパティを切り替えて **change** イベントを処理後、[`findNext`]({environment:angularApiUrl}/classes/igxgridcomponent.html#findnext) メソッドを呼び出すことによりシンプルなチェックボックスを使用します。
 ```html
 <!--searchgrid.component.html-->
 
@@ -177,12 +177,12 @@ public updateExactSearch() {
 
 #### 永続化
 
-グリッドのフィルターや並べ替えやレコードの追加または削除などの場合、処理後に現在の検索が自動的に更新されて **searchText** に一致するテキストが保持されます。更に検索がページングで動作し、グリッドの `perPage` プロパティの変更時も強調表示が保持されます。
+グリッドのフィルターや並べ替えやレコードの追加または削除などの場合、処理後に現在の検索が自動的に更新されて **searchText** に一致するテキストが保持されます。更に検索がページングで動作し、グリッドの [`perPage`]({environment:angularApiUrl}/classes/igxgridcomponent.html#perpage) プロパティの変更時も強調表示が保持されます。
 
 #### アイコンの追加
 
 その他のコンポーネントを使用するためにユーザー インターフェイスを作成し、検索バー全体のデザインを向上します。検索入力の左側に検索または削除アイコン、検索オプションのチップ、右側にはマテリアル デザイン アイコンと Ripple スタイルのボタンを組み合わせたナビゲーションを表示できます。入力グループ内のコンポーネントをラップしてより洗練されたデザインにすることができます。
-これには、[**IgxInputGroup**](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/input_group.html)、[**IgxIcon**](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/icon.html)、[**IgxRipple**](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/ripple.html)、[**IgxButton**](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/button.html)、[**IgxChip**](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/chip.html) モジュールを使用します。
+これには、[**IgxInputGroup**](input_group.md)、[**IgxIcon**](icon.md)、[**IgxRipple**](ripple.md)、[**IgxButton**](button.md)、[**IgxChip**](chip.md) モジュールを使用します。
 
 ```typescript
 // app.module.ts
@@ -206,7 +206,7 @@ export class AppModule {}
 
 最後にテンプレートを新しいコンポーネントで更新します。
 
-**IgxInputGroup** 内のすべてのコンポーネントをラップします。左側で検索と削除/クリア アイコンを切り替えます (検索入力が空かどうかに基づきます)。中央に入力を配置します。更に削除アイコンがクリックされたときに **searchText** を更新し、グリッドの `clearSearch` メソッドを呼び出して強調表示をクリアします。
+[**IgxInputGroup**](input_group.md) 内のすべてのコンポーネントをラップします。左側で検索と削除/クリア アイコンを切り替えます (検索入力が空かどうかに基づきます)。中央に入力を配置します。更に削除アイコンがクリックされたときに **searchText** を更新し、グリッドの [`clearSearch`]({environment:angularApiUrl}/classes/igxgridcomponent.html#clearsearch) メソッドを呼び出して強調表示をクリアします。
 
 ```html
 <!--searchgrid.component.html-->
@@ -270,7 +270,7 @@ public clearSearch() {
     </div>
     ...
 ```
-- 検索ナビゲーション ボタンは、マテリアルアイコンを使用して入力を Ripple スタイルボタンにします。click イベントのハンドラーはそのままで `findNext`/`findPrev` メソッドを呼び出します。
+- 検索ナビゲーション ボタンは、マテリアルアイコンを使用して入力を Ripple スタイルボタンにします。click イベントのハンドラーはそのままで [`findNext`]({environment:angularApiUrl}/classes/igxgridcomponent.html#findnext)/[`findPrev`]({environment:angularApiUrl}/classes/igxgridcomponent.html#findprev) メソッドを呼び出します。
 
 ```html
 <!--searchgrid.component.html-->
@@ -297,44 +297,42 @@ public clearSearch() {
 |リモート仮想化| リモート仮想化の使用時に検索が正しく動作しない問題|
 |セルのテキストが切れる問題| テキストが大きすぎてセルに収まらない場合、省略記号が表示されてセルへスクロール、更に一致項目としてカウントされますが強調表示はされません。 |
 
-### API まとめ
+### API リファレンス
 
 このトピックでは、グリッドにカスタム検索バーを実装し、更に検索結果を移動する際の機能を追加しました。アイコン、チップ、入力などその他の Ignite UI for Angular コンポーネントも使用しています。
 以下は検索 API です。
 
-#### メソッド
-以下のメソッドは **IgxGridComponent** で使用できます。
-| 名前 | 型 | パラメーター |説明 |
-| :--- | :--- | :--- | :--- |
-| `findNext` | number | 検索文字列、オプションで検索で大文字と小文字の区別と完全一致 (デフォルトは両方とも false) を使用します。| グリッドで文字列の次の出現を検索します。表示されていない場合はセルへスクロールします。 グリッドに文字列が何回含まれるかを返します。|
-| `findPrev` | number | 検索文字列、オプションで検索で大文字と小文字の区別と完全一致 (デフォルトは両方とも false) を使用します。| グリッドで文字列の前の出現を検索します。表示されていない場合はセルへスクロールします。グリッドに文字列が何回含まれるかを返します。|
-| `clearSearch` | void | N/A | グリッドのすべての強調表示を削除します。 |
-| `refreshSearch` | number | N/A | 既存の検索を再適用します。グリッドに文字列が何回含まれるかを返します。 |
+[`IgxGridComponent`]({environment:angularApiUrl}/classes/igxgridcomponent.html) メソッド:
+-   [`findNext`]({environment:angularApiUrl}/classes/igxgridcomponent.html#findnext)
+-   [`findPrev`]({environment:angularApiUrl}/classes/igxgridcomponent.html#findprev)
+-   [`clearSearch`]({environment:angularApiUrl}/classes/igxgridcomponent.html#clearsearch)
+-   [`refreshSearch`]({environment:angularApiUrl}/classes/igxgridcomponent.html#refreshsearch)
 
-<div class="divider"></div>
+[`IgxGridCellComponent`]({environment:angularApiUrl}/classes/igxgridcellcomponent.html) メソッド:
+-   [`highlightText`]({environment:angularApiUrl}/classes/igxgridcellcomponent.html#highlighttext)
+-   [`clearHighlight`]({environment:angularApiUrl}/classes/igxgridcellcomponent.html#clearhighlight)
 
-以下のメソッドは **IgxGridCellComponent** で使用できます。
-| 名前 | 型 | パラメーター |説明 |
-| :--- | :--- | :--- | :--- |
-| `highlightText` | number | 検索文字列、オプションで検索で大文字と小文字の区別と完全一致 (デフォルトは両方とも false) を使用します。 | セルで文字列のすべての一致を強調表示します。検索文字列がセルに何回含まれるかを返します。|
-| `clearHighlight` | void | N/A | セルのすべての強調表示を削除します。 |
+[`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) プロパティ:
+-   [`searchable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#searchable)
 
-<div class="divider"></div>
+[`ISearchInfo`]({environment:angularApiUrl}/interfaces/isearchinfo.html)
 
-#### プロパティ
-以下のプロパティは **IgxGridComponent** で使用できます。
-| 名前 | 型 | 説明 |
-| :--- | :--- | :--- |
-| `lastSearchInfo` | ISearchInfo | 最後に実行された検索についての情報を含みます。 |
+その他のコンポーネントおよびディレクティブ (またはそのいずれか) で使用した API:
 
-<div class="divider"></div>
+* [`IgxInputGroupComponent`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
+* [`IgxIconComponent`]({environment:angularApiUrl}/classes/igxiconcomponent.html)
+* [`IgxRippleDirective`]({environment:angularApiUrl}/classes/igxrippledirective.html)
+* [`IgxButtonDirective`]({environment:angularApiUrl}/classes/igxbuttondirective.html)
+* [`IgxChipComponent`]({environment:angularApiUrl}/classes/igxchipcomponent.html)
 
-以下のプロパティは **IgxColumnComponent** で使用できます。
-| 名前 | 型 | 説明 |
-| :--- | :--- | :--- |
-| `searchable` | boolean | 列が検索に含まれるかどうかを決定します。false (デフォルトは true) に設定した場合、この列のセル値はグリッドの検索 API の結果に含まれません。|
+スタイル:
 
-<div class="divider"></div>
+* [`IgxGridComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [`IgxInputGroupComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-input-group-theme)
+* [`IgxIconComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
+* [`IgxRippleDirective Styles`]({environment:sassApiUrl}/index.html#function-igx-ripple-theme)
+* [`IgxButtonDirective Styles`]({environment:sassApiUrl}/index.html#function-igx-button-theme)
+* [`IgxChipComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-chip-theme)
 
 ### その他のリソース
 <div class="divider--half"></div>

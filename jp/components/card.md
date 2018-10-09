@@ -7,7 +7,7 @@ _language: ja
 
 ## Card
 
-<p class="highlight">Ignite UI for Angular Card コンポーネントはテキスト、画像、アイコン、およびボタンを表示します。この要素は詳細情報のエントリ ポイントになります。Card を使用してマルチメディア ダッシュボードを作成できます。Card コンポーネントは、Ignite UI for Angular Grid と同じコンポーネントを使用してページングをサポートします。ただし、カスタム コードが必要です。</p>
+<p class="highlight">Ignite UI for Angular [`IgxCardComponent`]({environment:angularApiUrl}/classes/igxcardcomponent.html) は、テキスト、画像、アイコン、およびボタンを表示します。この要素は詳細情報のエントリ ポイントになります。Card を使用してマルチメディア ダッシュボードを作成できます。Card コンポーネントは、Ignite UI for Angular Grid と同じコンポーネントを使用してページングをサポートします。ただし、カスタム コードが必要です。</p>
 <div class="divider"></div>
 
 ### Card デモ
@@ -23,7 +23,7 @@ _language: ja
 Card コンポーネントは、様々なオブジェクト タイプ、サイズやサポートされる操作が異なる同様のオブジェクトから成るコンテンツを表示できます。
 
 #### はじめに
-Ignite UI for Angular Card を初期化する前に、**IgxCardModule** を **app.module.ts** ファイルにインポートします:
+Ignite UI for Angular Card を初期化する前に、[`IgxCardModule`]({environment:angularApiUrl}/classes/igxcardmodule.html) を **app.module.ts** ファイルにインポートします:
 
 ```typescript
 // app.module.ts
@@ -179,25 +179,33 @@ public icons = ['add', 'star'];
 
 <div class="divider--half"></div>
 
-#### スタイル
-以下の定義済み CSS クラスを使用してカード レイアウトを構成しました。
-| 名前 | 説明 |
-| :--- | :--- |
-| `igx-card-header` | 子項目を左から右へ連続で並べ、必要に応じて折り返す柔軟性のあるコンテナーとしてヘッダーを構成します。各項目が中央揃えでコンテナーの幅全体を使用するため、タイトルはサブタイトルの上に表示されます。 |
-| `igx-card-header__title` | ヘッダー要素クラスをタイトル要素に固有な余白、色、およびフォント サイズ値で拡張します。 |
-| `igx-card-header__subtitle` | ヘッダー要素クラスをサブタイトル要素に固有な余白、色、およびフォント サイズ値で拡張します。 |
-| `igx-card-content` | 子項目を左から右へ連続で並べ、必要に応じて折り返す柔軟性のあるコンテナーとしてコンテンツ領域を構成します。 |
-| `igx-card-content__text` | コンテンツ要素クラスをテキスト要素に固有な余白、色、およびフォント サイズ値で拡張します。 |
-| `igx-card-actions__igroup` | グループを最大の高さに指定し、子項目を連続で並べますが、項目は折り返さないフレキシブル コンテナーとして構成します。すべての項目を同じサイズおよび色に設定し、サイズ変更で縮小しません。 |
-| `igx-card-actions__igroup--start` | 項目を左揃えにします。 |
+####まとめ
+このトピックでは Card コンポーネントの詳細について説明しました。テキスト コンテンツのみを含むベーシックなカードを作成し、次に画像、最後に他の Ignite UI for Angular コンポーネントをカードで使用してアバター、ボタン、およびアイコンを追加して機能を改善しました。カード コンポーネントはその他のレイアウトも表示できます。詳細については、このトピックの最初の部分の Card デモを参照してください。
 
+### API と スタイル リファレンス
 
-#### まとめ
+カード API に関する詳細な情報は、以下のリンクのトピックを参照してください。
+* [`IgxCardComponent API`]({environment:angularApiUrl}/classes/igxcardcomponent.html)
 
-このトピックでは Card コンポーネントについて説明しました。 テキスト コンテンツのみを含むベーシックなカードを作成して画像を追加、最後に他の Ignite UI for Angular コンポーネントでアバター、ボタン、およびアイコンをカードに追加して機能性を向上しました。カード コンポーネントはその他のレイアウトも表示できます。詳細については、このトピックの最初の部分の Card デモを参照してください。
+以下の定義済み CSS スタイルを使用してカード レイアウトを構成しました。
+
+* [`IgxCardComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-card-theme)
+
+使用したその他のコンポーネントとディレクティブ:
+
+* [`IgxAvatarComponent`]({environment:angularApiUrl}/classes/igxavatarcomponent.html)
+* [`IgxIconComponent`]({environment:angularApiUrl}/classes/igxiconcomponent.html)
+* [`IgxButtonDirective`]({environment:angularApiUrl}/classes/igxbuttondirective.html)
+
+スタイル:
+
+* [`IgxAvatarComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-avatar-theme)
+* [`IgxIconComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
+* [`IgxButtonDirective Styles`]({environment:sassApiUrl}/index.html#function-igx-button-theme)
 
 <div class="divider"></div>
-### 追加のリソース
+
+### その他のリソース
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
