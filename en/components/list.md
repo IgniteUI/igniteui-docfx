@@ -6,7 +6,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ## List View
 
-<p class="highlight">The Ignite UI for Angular List component displays rows of items and supports one or more header items as well as search and filtering of list items. Each list item is completely templateable and will support any valid HTML or Angular component. </p>
+<p class="highlight">The Ignite UI for Angular List component displays rows of items and supports one or more header items as well as search and filtering of list items. Each list item is completely templatable and will support any valid HTML or Angular component. </p>
 <div class="divider"></div>
 
 ### List Demo
@@ -15,13 +15,13 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <iframe id="list-sample-4-iframe" src='{environment:demosBaseUrl}/list-sample-4' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="list-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
 
 ### Usage
 At its core the list component allows you to easily display a vertical list of items. The default styling of the items is done according to the single-line list specification as per the Material Design [**guidelines**](https://material.io/guidelines/components/lists.html).
-To get started with the Ignite UI for Angular List, let's first import the **IgxListModule** in our **app.module.ts** file:
+To get started with the Ignite UI for Angular List, let's first import the [`IgxListModule`]({environment:angularApiUrl}/classes/igxlistmodule.html) in our app.module.ts file:
 
 ```typescript
 // app.module.ts
@@ -39,7 +39,7 @@ export class AppModule {}
 
 Then in the template of our contacts component we can create our list, but what if currently (or at some point in the future) we have no items in it?
 In this case, the list provides us with a default template that is used when the list is empty.
-We can always provide our own template for the look of our empty list by simply using the `igxEmptyList` directive. In this case, the default template will not be used:
+We can always provide our own template for the look of our empty list by simply using the [`igxEmptyList`]({environment:angularApiUrl}/classes/igxemptylisttemplatedirective.html) directive. In this case, the default template will not be used:
 
 ```html
 <!--contacts.component.html-->
@@ -70,10 +70,10 @@ If all went great, this is how our empty list should look like:
 <iframe id="list-sample-5-iframe" src='{environment:demosBaseUrl}/list-sample-5' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="list-sample-5-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-sample-5-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-Sometimes there may be a delay in your data loading. In this case you can set the list's `isLoading` property to `true` and a default template will inform the user regarding the ongoing data loading process. You can also provide your own loading template using the `igxDataLoading` directive:
+Sometimes there may be a delay in your data loading. In this case you can set the list's [`isLoading`]({environment:angularApiUrl}/classes/igxlistcomponent.html#isloading) property to `true` and a default template will inform the user regarding the ongoing data loading process. You can also provide your own loading template using the [`igxDataLoading`]({environment:angularApiUrl}/classes/igxdataloadingtemplatedirective.html) directive:
 
 ```html
 <!--contacts.component.html-->
@@ -99,7 +99,7 @@ Sometimes there may be a delay in your data loading. In this case you can set th
 <iframe id="list-sample-6-iframe" src='{environment:demosBaseUrl}/list-sample-6' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="list-sample-6-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-sample-6-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
 #### Add List Items
@@ -123,7 +123,7 @@ If all went well, you should see the following in your browser:
 <iframe id="list-sample-2-iframe" src='{environment:demosBaseUrl}/list-sample-2' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="list-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
 #### Custom List Items
@@ -191,12 +191,12 @@ After all that our list should now look like that:
 <iframe id="list-sample-3-iframe" src='{environment:demosBaseUrl}/list-sample-3' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="list-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
 #### Adding Avatar and Icons
 
-We can use some of our other components in conjunction with the [**IgxList**](https://www.infragistics.com/products/ignite-ui-angular/angular/components/list.html) component to enrich the experience and add some functionality. We can have a nice picture avatar to the left of the name and phone values. Additionally, we can add a star icon to the right of them to allow the user to favorite a contact. To do that let's grab the [**IgxAvatar**](https://www.infragistics.com/products/ignite-ui-angular/angular/components/avatar.html) and [**IgxIcon**](https://www.infragistics.com/products/ignite-ui-angular/angular/components/icon.html) modules and import them in our **app.module.ts** file.
+We can use some of our other components in conjunction with the [`IgxList`]({environment:angularApiUrl}/classes/igxlistcomponent.html) component to enrich the experience and add some functionality. We can have a nice picture avatar to the left of the name and phone values. Additionally, we can add a star icon to the right of them to allow the user to favorite a contact. To do that let's grab the [**IgxAvatar**](avatar.html) and [**IgxIcon**](icon.html) modules and import them in our app.module.ts file.
 
 ```typescript
 // app.module.ts
@@ -272,7 +272,7 @@ Cool, now let's update the template for our contacts list to show the avatar and
 </igx-list>
 ```
 
-First we wrap all our elements in an item container to allow us to style the flow a bit easier. Then we add our IgxAvatar component alongside our contact info in a contact wrapper. Lastly, we include the IgxIcon component. Let's update the css stylesheet to reflect the changes made to our markup:
+First we wrap all our elements in an item container to allow us to style the flow a bit easier. Then we add our [**IgxAvatar**](avatar.html) component alongside our contact info in a contact wrapper. Lastly, we include the [**IgxIcon**](icon.html) component. Let's update the css stylesheet to reflect the changes made to our markup:
 
 ```css
 /* contacts.component.css */
@@ -309,7 +309,7 @@ igx-icon {
 }
 ```
 
-We then listen for a click event on the IgxIcon component to toggle the _isFavorite_ property in our contact object.
+We then listen for a click event on the [**IgxIcon**](icon.html) component to toggle the _isFavorite_ property in our contact object.
 
 ```typescript
 // contacts.component.ts
@@ -327,23 +327,23 @@ And here's the result of all that work:
 <iframe id="list-sample-4-final-iframe" src='{environment:demosBaseUrl}/list-sample-4' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="list-sample-4-final-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-sample-4-final-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
 
 #### List Items Panning
 
 Now that we have such a beautiful list with contacts and their phone numbers, why don't we implement an ability to call a contact.
-The **IgxList** has the perfect solution for this - list item panning.
+The [`IgxList`]({environment:angularApiUrl}/classes/igxlistcomponent.html) has the perfect solution for this - list item panning.
 To do this you have to implement the following steps:
-- Enable the panning using the `allowLeftPanning` and/or the `allowRightPanning` properties
+- Enable the panning using the [`allowLeftPanning`]({environment:angularApiUrl}/classes/igxlistcomponent.html#allowleftpanning) and/or the [`allowRightPanning`]({environment:angularApiUrl}/classes/igxlistcomponent.html#allowrightpanning) properties
 - Define template(s) for the left and/or right panning
 - Handle the list item's panning event(s) and perform the desired action
 
-The following example demonstrates how to handle both left and right panning. The event handler for right panning shows a toast message. The event handler for the left panning deletes an item from the **IgxList**.
+The following example demonstrates how to handle both left and right panning. The event handler for right panning shows a toast message. The event handler for the left panning deletes an item from the [`IgxList`]({environment:angularApiUrl}/classes/igxlistcomponent.html).
 
 > [!NOTE]
-> Please note that the list item removal is an application task. The **IgxList** itself cannot remove items from the data source because the **IgxList** does not have reference to the data source.
+> Please note that the list item removal is an application task. The [`IgxList`]({environment:angularApiUrl}/classes/igxlistcomponent.html) itself cannot remove items from the data source because the [`IgxList`]({environment:angularApiUrl}/classes/igxlistcomponent.html) does not have reference to the data source.
 
 Here is the HTML code of the example:
 
@@ -465,7 +465,7 @@ public leftPanPerformed(args) {
 ```
 
 > [!NOTE]
-> When panning list items there is a threshold which must be reached in order for the panning events to be emitted. You can change the threshold using the **IgxList's** `panEndTriggeringThreshold` property. By default this property has a value of 0.5 which means 50% of list item's width.
+> When panning list items there is a threshold which must be reached in order for the panning events to be emitted. You can change the threshold using the [`IgxList`]({environment:angularApiUrl}/classes/igxlistcomponent.html)'s [`panEndTriggeringThreshold`]({environment:angularApiUrl}/classes/igxlistcomponent.html#panendtriggeringthreshold) property. By default this property has a value of 0.5 which means 50% of list item's width.
 
 Now try panning the list items for yourself:
 
@@ -498,7 +498,7 @@ Let's add an input field to the top in our component template first and bind it 
 </igx-input-group>
 ```
 
-It's time to import the **IgxFilterModule** and the **IgxInputGroupModule** in our **app.module.ts** file and **IgxFilterOptions** in our contacts component:
+It's time to import the [`IgxFilterModule`]({environment:angularApiUrl}/classes/igxfiltermodule.html) and the [`IgxInputGroupModule`]({environment:angularApiUrl}/classes/igxinputgroupmodule.html) in our app.module.ts file and [`IgxFilterOptions`]({environment:angularApiUrl}/classes/igxfilteroptions.html) in our contacts component:
 
 ```typescript
     // app.module.ts
@@ -526,7 +526,7 @@ It's time to import the **IgxFilterModule** and the **IgxInputGroupModule** in o
     }
 ```
 
-After importing the `IgxFilterOptions`, we need to register a new getter method that will return the filtering options to be used by the pipe each time the `searchContact` property gets updated. For the filter to work we need to register a `key` to filter the contact object by. In our case that would be the `name` of each contact. The second property that has to be registered on the `IgxFilterOptions` object is the value that we should check against when comparing our contact name. This would be the `searchContact` property that we bound to the input field above our contacts list.
+After importing the [`IgxFilterOptions`]({environment:angularApiUrl}/classes/igxfilteroptions.html), we need to register a new getter method that will return the filtering options to be used by the pipe each time the `searchContact` property gets updated. For the filter to work we need to register a `key` to filter the contact object by. In our case that would be the `name` of each contact. The second property that has to be registered on the [`IgxFilterOptions`]({environment:angularApiUrl}/classes/igxfilteroptions.html) object is the value that we should check against when comparing our contact name. This would be the `searchContact` property that we bound to the input field above our contacts list.
 
 Finally, we need to apply the filtering pipe to our contacts data before we can use it. So in our template we simply add:
 
@@ -540,79 +540,20 @@ Finally, we need to apply the filtering pipe to our contacts data before we can 
 
 <div class="divider"></div>
 
-### Chat Component
-The following sample demonstrates how to create a simple chat component using **IgxList**.
-
-<div class="sample-container loading" style="height: 650px">
-<iframe id="list-chat-sample-iframe" src='{environment:demosBaseUrl}/list-chat-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-<div>
-<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-chat-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
-
-<div class="divider"></div>
-
 ### API Summary
 
 In this article we covered a lot of ground with the list component. We created a list of contact items. Used some additional Ignite UI for Angular components inside our list items, like avatars and icons. Created some custom item layout and styled it. Finally, we added list filtering. The list component has a few more APIs to explore, which are listed below.
 
-#### Inputs
-The following inputs are available on the **igx-list** component:
-| Name | Type | Description |
-| :--- | :--- | :--- |
-| `allowLeftPanning` | Boolean | Determines whether the left panning of an item is allowed. |
-| `allowRightPanning` | Boolean | Determines whether the right panning of an item is allowed. |
-| `isLoading` | Boolean | If `true` the loading template will be used, if `false` the empty list template will be used. |
-| `dataLoadingTemplate` | IgxDataLoadingTemplateDirective | The custom template to be used when the list is empty and `isLoading` is `true`. |
-| `emptyListTemplate` | IgxEmptyListTemplateDirective | The custom template to be used when the list is empty and `isLoading` is `false`. |
-| `panEndTriggeringThreshold` | Number | Specifies the threshold after which a panning event is emitted. By default this property has a value of 0.5 which means 50% of list item's width. |
+* [IgxListComponent API]({environment:angularApiUrl}/classes/igxlistcomponent.html)
+* [IgxListComponent Styles]({environment:sassApiUrl}/index.html#function-igx-list-theme)
+* [IgxListItemComponent API]({environment:angularApiUrl}/classes/igxlistitemcomponent.html)
 
-<div class="divider"></div>
+Additional components that were used:
 
-The following inputs are available on the **igx-list-item** component:
-| Name | Type | Description |
-| :--- | :--- | :--- |
-| `isHeader` | Boolean | Sets the current list item as list header. |
-| `hidden` | Boolean | Determines whether the item should be displayed. |
-
-<div class="divider"></div>
-
-#### Outputs
-The following outputs are available on the **igx-list** component:
-| Name | Type | Description |
-| :--- | :--- | :--- |
-| `onPanStateChange` | EventEmitter | Emits an event with the current list when pan gesture is executed on list item. |
-| `onLeftPan` | EventEmitter | Emits an event with the current list when left pan gesture is executed on list item and provides an argument of type `IListItemPanningEventArgs`. |
-| `onRightPan` | EventEmitter | Emits an event with the current list when right pan gesture is executed on list item and provides an argument of type `IListItemPanningEventArgs`. |
-| `onItemClicked` | EventEmitter | Emits an event with the current list when a list item has been clicked. |
-
-<div class="divider"></div>
-
-#### Properties
-The following properties are available on the **igx-list** component:
-| Name | Type | Description |
-| :--- | :--- | :--- |
-| `children` | QueryList | Returns a collection of all IListChild components: items and headers. |
-| `items` | IgxListItemComponent[] | Returns an array of all list items excluding item headers. |
-| `headers` | IgxListItemComponent[] | Returns an array of all list headers. |
-
-<div class="divider"></div>
-
-The following properties are available on the **igx-list-item** component:
-| Name | Type | Description |
-| :--- | :--- | :--- |
-| `index` | number | Retrieve the index of the list item. |
-| `panState` | IgxListPanState | Retrieve the pan state of the list item. |
-| `list` | IgxListComponent | Retrieve the list that is associated with the list item. |
-
-<div class="divider"></div>
-
-The following properties are available on the `IListItemPanningEventArgs` type:
-| Name | Type | Description |
-| :--- | :--- | :--- |
-| `item` | IgxListItemComponent | A reference to the **igx-list-item** being panned. |
-| `direction` | IgxListPanState | Specifies the direction at which the **igx-list-item** has been panned. |
-| `keepItem` | Boolean | If `true` the list item will be kept in the **IgxList** after it has been panned. If `false` (by default) the list item will be removed from the **IgxList** after it has been panned. |
+* [IgxAvatarComponent API]({environment:angularApiUrl}/classes/igxavatarcomponent.html)
+* [IgxAvatarComponent Styles]({environment:sassApiUrl}/index.html#function-igx-avatar-theme)
+* [IgxIconComponent API]({environment:angularApiUrl}/classes/igxiconcomponent.html)
+* [IgxIconComponent Styles]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
 
 <div class="divider"></div>
 
