@@ -11,7 +11,7 @@ Enabling row editing in the grid will allow you to edit several row's cells, bef
 
 ### Demo
 
-The following demo demonstrates how to enable row editing in the grid. Changing a cell value and then clicking or navigating to another cell from the same row will not update row value until confirmed, using the Done button, or discarded, using the Cancel one.
+The following demo demonstrates how to enable row editing in the grid. Changing a cell value and then clicking or navigating to another cell on the same row will not update its value until confirmed, using the Done button, or discarded, using the Cancel one.
 
 <div class="sample-container loading" style="height:650px">
     <iframe id="grid-row-editing-sample-iframe" src='{environment:demosBaseUrl}/grid-row-editing' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -21,7 +21,7 @@ The following demo demonstrates how to enable row editing in the grid. Changing 
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-row-editing-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-Note: When row is in edit mode, then clicking on a cell from another row will act like the Done button is pressed - submit all the changes of the previous row. If the new cell that is on focus is editable, then the new row also enters edit mode, while if cell is not editable, then only the previous row exits edit mode.
+Note: When a row is in edit mode, then clicking on a cell on another row will act like the Done button is pressed - submit all the changes of the previous row. If the new cell that is on focus is editable, then the new row also enters edit mode, while if the cell is not editable, then only the previous row exits edit mode.
 
 <div class="divider--half"></div>
 
@@ -93,7 +93,7 @@ export class GridRowEditSampleComponent {
 
 ## Navigation
 
-When row is in edit mode, then clicking on a cell from another row will act like the Done button is pressed - submit all the changes of the previous row. If the new cell that is gets focus is editable, then the new row also enters edit mode, while if cell is not editable, then only the previous row exits edit mode.
+When a row is in edit mode, then clicking on a cell on another row will act like the Done button is pressed - submit all the changes of the previous row. If the new cell thay gets focused is editable, then the new row also enters edit mode, while if the cell is not editable, then only the previous row exits edit mode.
 
 
 ### Keyboard Navigation

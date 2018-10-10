@@ -6,12 +6,12 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ## Grid Transactions
 
-The grid can use `Transaction` provider, which accumulates pending changes, that are not directly applied to the data source, and later to submit them at once. The `Transaction` works with both cell editing and row editing. The transaction for the cell edit is added when cell exits edit mode. For row transaction is created, when row exits edit mode. But in both cases state of the grid edits consist of all updated, added and deleted rows and their last states.
+The grid can use `Transaction` provider, which accumulates pending changes, that are not directly applied to the data source, and later to submit them at once. The `Transaction` works with both cell editing and row editing. The transaction for the cell edit is added when the cell exits edit mode. For row transaction is created, when the row exits edit mode. But in both cases the state of the grid edits consist of all updated, added and deleted rows and their last states.
 This is done in order to be able to easily send and accept on the server all the modified row information.
 
 ### Demo
 
-The following sample demonstrates scenario, where grid has the Transaction as provider and has row editing enabled. This will ensure that transaction will be added after the entire row edit is confirmed.
+The following sample demonstrates a scenario, where the grid has the Transaction as provider and has row editing enabled. This will ensure that transaction will be added after the entire row edit is confirmed.
 
 <div class="sample-container loading" style="height:650px">
     <iframe id="grid-transaction-sample-iframe" src='{environment:demosBaseUrl}/grid-transaction' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -22,7 +22,7 @@ The following sample demonstrates scenario, where grid has the Transaction as pr
 </div>
 <div class="divider--half"></div>
 
-You can see that the transaction state is consisting of all the updated, added and deleted rows and their last states.
+You can see that the transaction state consists of all the updated, added and deleted rows and their last states.
 
 ## Usage
 To get started import the [IgxGridModule]({environment:angularApiUrl}/classes/igxgridmodule.html) in the **app.module.ts** file:
@@ -78,7 +78,7 @@ Then define a grid with bound data source and [`rowEditable`]({environment:angul
 </app-grid-with-transactions>
 ```
 
-The following code demonstrate the usage of the [transactions]({environment:angularApiUrl}/classes/igxgridrowcomponent.html#transactions) API - undo, redo, commit.
+The following code demonstrates the usage of the [transactions]({environment:angularApiUrl}/classes/igxgridrowcomponent.html#transactions) API - undo, redo, commit.
 
 ```typescript
 import { Component, ViewChild } from "@angular/core";
