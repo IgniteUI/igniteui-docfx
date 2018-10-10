@@ -83,7 +83,7 @@ export class AppModule {}
 css クラスの `.igx-expansion-panel__ ヘッダーと `.igx-expansion-panel__body` は、ヘッダーとボディのスタイル設定を公開します。
 
 以下は結果です。 
-<div class="sample-container loading" style="height: 200px;">
+<div class="sample-container loading" style="height: 400px;">
     <iframe id="expansion-sample-1-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/expansion-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -138,7 +138,7 @@ export class ExpansionPanelComponent {
 ```
 
 以下は結果です。
-<div class="sample-container loading" style="height: 200px;">
+<div class="sample-container loading" style="height: 400px;">
     <iframe id="expansion-sample-2-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/expansion-sample-2" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -231,7 +231,7 @@ export class ExpansionPanelComponent {
 ```
 ### まとめ
 以下は、すべての変更を初期コンポーネントに適用後の最終的な結果です。
-<div class="sample-container loading" style="height: 200px;">
+<div class="sample-container loading" style="height: 500px;">
     <iframe id="expansion-sample-3-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/expansion-sample-3" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -505,13 +505,114 @@ export class ExpansionPanelComponent {
 ...
 ```
 以下は結果です。 
-<div class="sample-container loading" style="height: 500px;">
+<div class="sample-container loading" style="height: 550px;">
     <iframe id="expansion-sample-5-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/expansion-sample-5" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="expansion-sample-5-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
+## Weather Forecast Sample
+
+The following is an illustration of using the [`IgxExpansionPanelComponent`]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html) in combination with several other components like [`IgxCard`]({environment:angularApiUrl}/classes/igxcardcomponent.html) and [`IgxIcon`]({environment:angularApiUrl}/classes/igxiconcomponent.html) to achieve a particular task. In this case - creating a weather component capable of showing both current day temperature and conditions as well as forecast details. If needed, the user can expand more and see the upcoming days weather conditions.
+
+```typescript
+// in weather-forecast.component.ts
+import { Component, ViewChild } from "@angular/core";
+import { IgxExpansionPanelComponent } from "igniteui-angular";
+import { data as weatherData } from "./weather-data";
+
+@Component({
+    ...
+})
+export class WeatherForecast {
+
+    @ViewChild(IgxExpansionPanelComponent)
+    public panel: IgxExpansionPanelComponent;
+    public data = weatherData;
+
+    public toggleDetails() {
+        this.panel.toggle();
+    }
+}
+```
+
+```html
+<!-- in weather-forecast.component.html -->
+<div class="sample-wrapper">
+  <igx-card>
+    <igx-card-header>
+      <h3 class="igx-card-header__title">{{data.city}}</h3>
+      <h5 class="igx-card-header__subtitle">{{data.dateTime}}, {{data.today.description}}</h5>
+    </igx-card-header>
+    <igx-card-content>
+      <div class="weather__main" *ngIf=data>
+        <div class="weather__main-temp">
+          <div>{{data.today.tempMax}}°<sup>C</sup></div>
+          <div class="right"><igx-icon color="orange" fontSet="fas" name="fa-sun"></igx-icon></div>
+        </div>
+        <div class="weather__main-hum">
+          <div><igx-icon color="blue" fontSet="fas" name="fa-umbrella"></igx-icon>{{data.precipitation}} Precipitation </div>
+          <div class="right"><igx-icon color="aqua-blue" fontSet="fas" name="fa-tint"></igx-icon>{{data.humidity}} Humidity </div>
+        </div>
+      </div>
+      <button igxButton igxRipple (click)="toggleDetails()">Forecast Details</button>
+      <igx-expansion-panel>
+        <igx-expansion-panel-body>
+          <div class="forecast__container" *ngIf=data>
+            <div *ngFor="let day of data.daysOfWeek" class="forecast__day">
+              <div>{{day.name}}</div>
+              <div class="right">
+                <igx-icon [color]="day.iconColor" fontSet="fas" [name]="day.iconName" font-size="1em"></igx-icon>
+                {{day.tempMin}}°/{{day.tempMax}}°
+              </div>
+            </div>
+          </div>
+        </igx-expansion-panel-body>
+      </igx-expansion-panel>
+    </igx-card-content>
+  </igx-card>
+</div>
+```
+
+```typescript
+// in weather-data.ts
+export const data = {
+  city: "Sofia",
+  humidity: "44%",
+  precipitation: "5%",
+  windSpeed: 279,
+  dateTime: "10/7/2018, 14:35:00 PM",
+  today: {
+    name: "Sunday",
+    tempMax: 25,
+    tempMin: 15,
+    description: "Sunday",
+    iconColor: "gray",
+    iconName: "fa-cloud"
+  },
+  daysOfWeek: [
+    {
+      name: "Monday",
+      tempMax: 22,
+      tempMin: 15,
+      description: "Sunny",
+      iconColor: "orange",
+      iconName: "fa-sun"
+    },
+    //...
+  ]
+};
+
+```
+
+以下は結果です。 
+<div class="sample-container loading" style="height: 600px;">
+    <iframe id="expansion-sample-7-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/expansion-sample-7" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="expansion-sample-7-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
 
 ## API リファレンス
 * [IgxExpansionPanel API]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html)
