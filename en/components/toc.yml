@@ -10,7 +10,14 @@
       new: false
     - name: Editing
       href: grid_editing.md
-      new: true
+      new: false
+      items:
+        - name: Row Editing
+          href: grid_row_editing.md
+          new: true
+        - name: Transactions
+          href: grid_transactions.md
+          new: true
     - name: Paging
       href: grid_paging.md
       new: false
