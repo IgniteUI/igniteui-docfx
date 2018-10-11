@@ -44,7 +44,7 @@ export class AppModule {}
 ```html
 <!--template.component.html-->
 <button class="toggle-button"  igxButton="raised" (click)="toggleContent()">Toggle</button>
-<div class="toggle-content" igxToggle #toggleRef="toggle">
+<div class="toggle-content" igxToggle>
     <section class="toggle-section">
         <ul>
             <li>Bananas</li>
