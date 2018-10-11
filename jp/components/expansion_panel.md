@@ -1,4 +1,4 @@
----
+﻿---
 title: 展開パネル
 _description: 2 つのステート (縮小と展開) をサポートする簡単に構成できるコンポーネントです。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ,, Angular 縮小可能なコンポーネント, IgxExpansionPanel, Ignite UI  展開パネル
@@ -512,9 +512,9 @@ export class ExpansionPanelComponent {
     <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="expansion-sample-5-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-## Weather Forecast Sample
+## 天気予報のサンプル
 
-The following is an illustration of using the [`IgxExpansionPanelComponent`]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html) in combination with several other components like [`IgxCard`]({environment:angularApiUrl}/classes/igxcardcomponent.html) and [`IgxIcon`]({environment:angularApiUrl}/classes/igxiconcomponent.html) to achieve a particular task. In this case - creating a weather component capable of showing both current day temperature and conditions as well as forecast details. If needed, the user can expand more and see the upcoming days weather conditions.
+以下のサンプルは、[`IgxExpansionPanelComponent`]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html) に加え、[`IgxCard`]({environment:angularApiUrl}/classes/igxcardcomponent.html) や [`IgxIcon`]({environment:angularApiUrl}/classes/igxiconcomponent.html) など、その他複数のコンポーネントを使用しています。ここでは、今日の気温や天気の状態、更に予報の詳細を表示する天気のコンポーネントを作成します。必要に応じてユーザーが更に展開でき、次の数日間の天気を表示できます。
 
 ```typescript
 // in weather-forecast.component.ts
