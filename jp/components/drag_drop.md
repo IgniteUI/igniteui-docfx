@@ -1,15 +1,16 @@
 ---
-title: Drag and Drop
-_description: Use Ignite UI for Angular Drag and Drop directives to move DOM elements from one place to another.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Drag and Drop directives
+title: ドラッグ アンド ドロップ
+_description: Ignite UI for Angular Drag and Drop ディレクティブを使用して DOM 要素の位置を移動できます。
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Scrollbar コンポーネント,  Angular Drag and Drop ディレクティブ
+_language: ja
 ---
 
-## Drag and Drop
-<p class="highlight">The Ignite UI for Angular Drag and Drop directives enable dragging of elements around the page.</p>
+## ドラッグ アンド ドロップ
+<p class="highlight">Ignite UI for Angular Drag and Drop ディレクティブは、ページの要素のドラッグを有効にします。</p>
 
-#### Demo
+#### デモ
 
-Drag and drop the tiles to solve the puzzle.
+タイトルをドラッグアンドドロップするパズル
 
 <div class="sample-container loading" style="height:325px">
     <iframe id="drag-drop-sample-iframe" src='{environment:demosBaseUrl}/drag-drop-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -20,51 +21,51 @@ Drag and drop the tiles to solve the puzzle.
 </div>
 <div class="divider--half"></div>
 
-### Drag Directive
+### Drag ディレクティブ
 
-When an element inside your Angular application needs to be dragged from one place to another the [`igxDrag`]({environment:angularApiUrl}/classes/igxdragdirective.html) directive can be used to achieve this behavior. In combination with the [`igxDrop`]({environment:angularApiUrl}/classes/igxdropdirective.html) directive the placing of the dragged element can be done as well to have fully interactive application.
+Angular アプリケーション内の要素をある場所から他の場所へドラッグするには、[`igxDrag`]({environment:angularApiUrl}/classes/igxdragdirective.html) ディレクティブを使用します。[`igxDrop`]({environment:angularApiUrl}/classes/igxdropdirective.html) ディレクティブと組み合わせてドラッグした要素の配置やインタラクティブなアプリケーションを作成できます。
 
-#### Basic configuration
+#### 基本構成
 
-The [`igxDrag`]({environment:angularApiUrl}/classes/igxdragdirective.html) directive can be applied on any DOM element by just adding it to its template.
+[`igxDrag`]({environment:angularApiUrl}/classes/igxdragdirective.html) ディレクティブは、テンプレートに追加して DOM 要素に適用できます。
 
 ```html
 <div igxDrag>Drag me</div>
 ```
 
-#### DOM Behavior
+#### DOM 動作
 
-By default a drag operation starts when the end user swipes at least 5 px in any direction. Otherwise the interaction is considered as a click and the [`dragClicked`]({environment:angularApiUrl}/classes/igxdragdirective.html#dragclicked) event is emitted.
+ユーザーが 5px いずれかの方向へスワイプするとデフォルトでドラッグ操作を開始します。そうでない場合は、インタラクションがクリックとして見なされ、[`dragClicked`]({environment:angularApiUrl}/classes/igxdragdirective.html#dragclicked) イベントが発生します。
 
-When dragging occurs a drag ghost element is spawned and moves along with the mouse cursor or touch interaction. The original element is still present, but it can be hidden automatically when dragging starts with the [`hideBaseOnDrag`]({environment:angularApiUrl}/classes/igxdragdirective.html#hidebaseondrag) input.
+ドラッグ時にドラッグ ゴースト要素が発生し、マウスカーソルまたはタッチインタラクションと共に移動します。元の要素は表示されたままですが、[`hideBaseOnDrag`]({environment:angularApiUrl}/classes/igxdragdirective.html#hidebaseondrag) でドラッグ開始時に自動的に非表示にできます。
 
-The dragging can be canceled by setting the [`cancel`]({environment:angularApiUrl}/interfaces/idragstarteventargs.html#cancel) property of the [`dragStart`]({environment:angularApiUrl}/classes/igxdragdirective.html#dragstart) event to `true`. This will cancel the default dragging logic.
+ドラッグは、[`dragStart`]({environment:angularApiUrl}/classes/igxdragdirective.html#dragstart) イベントの [`cancel`]({environment:angularApiUrl}/interfaces/idragstarteventargs.html#cancel) プロパティを true に設定してキャンセルできます。デフォルトのドラッグ ロジックをキャンセルします。
 
-After the user releases the mouse/touch the drag ghost element is removed from the DOM and if the [`hideBaseOnDrag`]({environment:angularApiUrl}/classes/igxdragdirective.html#hidebaseondrag) is enabled it will make the original element visible again and the [`dragEnd`]({environment:angularApiUrl}/classes/igxdragdirective.html#dragend) event will be emitted. If the [`animateOnRelease`]({environment:angularApiUrl}/classes/igxdragdirective.html#animateonrelease) input is set to `true` all this will execute after the default animation of the drag ghost is finished which consist of returning it from the last dragged position to the position of the original element. Then the drag ghost will be removed and the [`returnMoveEnd`]({environment:angularApiUrl}/classes/igxdragdirective.html#returnmoveend) event will be emitted.
+ユーザーがリリースした後、マウス/タッチ ドラッグ ゴースト要素が DOM から削除され、[`hideBaseOnDrag`]({environment:angularApiUrl}/classes/igxdragdirective.html#hidebaseondrag) が有効な場合、元の要素が再び表示されて [`dragEnd`]({environment:angularApiUrl}/classes/igxdragdirective.html#dragend) が発生されます。[`animateOnRelease`]({environment:angularApiUrl}/classes/igxdragdirective.html#animateonrelease) 入力を `true` に設定すると、最後にドラッグした位置から元の要素の位置へ戻すドラッグ ゴーストのデフォルト アニメーションの完了後に実行します。ドラッグ ゴーストは削除され、[`returnMoveEnd`]({environment:angularApiUrl}/classes/igxdragdirective.html#returnmoveend) イベントが発生されます。
 
-#### Usage
+#### 使用方法
 ```html
 <div igxDrag [hideBaseOnDrag]="true" [animateOnRelease]="true" *ngFor="let elem of draggableElems" >
     <span [style.margin]="'auto'">{{elem.label}}</span>
 </div>
 ```
 
-### Drop Directive
+### Drop ディレクティブ
 
-When an element that is being dragged using the [`igxDrag`]({environment:angularApiUrl}/classes/igxdragdirective.html) directive needs to be placed in an area, the [`igxDrop`]({environment:angularApiUrl}/classes/igxdropdirective.html) can be used to achieve this behavior. It provides events that the user can use to determine if element is entering the drop area and if it is being released inside it.
+[`igxDrag`]({environment:angularApiUrl}/classes/igxdragdirective.html) ディレクティブを使用してドラッグされている要素を領域に配置する場合、[`igxDrop`]({environment:angularApiUrl}/classes/igxdropdirective.html) を使用します。要素がドロップ領域に入ったかどうか、その後領域内でリリースされているかを決定するためにユーザーが使用できるイベントを提供します。
 
-#### Basic Configuration
-The [`igxDrop`]({environment:angularApiUrl}/classes/igxdropdirective.html) directive can be applied to any DOM element just like the [`igxDrag`]({environment:angularApiUrl}/classes/igxdragdirective.html) directive. 
+#### 基本構成
+[`igxDrop`]({environment:angularApiUrl}/classes/igxdropdirective.html) ディレクティブは [`igxDrag` と同様に DOM 要素に適用できます。 
 
 ````html
 <div igxDrop>Drop here</div>
 ````
 
-By default the [`igxDrop`]({environment:angularApiUrl}/classes/igxdropdirective.html) directive comes with logic that appends the dropped [`igxDrag`]({environment:angularApiUrl}/classes/igxdragdirective.html) element as a child of the element that has instanced the [`igxDrop`]({environment:angularApiUrl}/classes/igxdropdirective.html). It can be overridden by canceling the [`onDrop`]({environment:angularApiUrl}/classes/igxdropdirective.html#ondrop) event of the [`igxDrop`]({environment:angularApiUrl}/classes/igxdropdirective.html) directive. This can be done by setting the [`cancel`]({environment:angularApiUrl}/classes/igxdropeventargs.html#cancel) argument that the [`onDrop`]({environment:angularApiUrl}/classes/igxdropdirective.html#ondrop) event provides.
+[`igxDrop`]({environment:angularApiUrl}/classes/igxdropdirective.html) ディレクティブにドロップした [`igxDrag`]({environment:angularApiUrl}/classes/igxdragdirective.html) 要素は、インスタンス化した [`igxDrop`]({environment:angularApiUrl}/classes/igxdropdirective.html) を持つ要素の子として付け加えるロジックがデフォルトで提供されます。[`igxDrop`]({environment:angularApiUrl}/classes/igxdropdirective.html) ディレクティブの [`onDrop`]({environment:angularApiUrl}/classes/igxdropdirective.html#ondrop) イベントをキャンセルしてオーバーライドできます。[`onDrop`]({environment:angularApiUrl}/classes/igxdropdirective.html#ondrop) イベントが提供する [`cancel`]({environment:angularApiUrl}/classes/igxdropeventargs.html#cancel) 引数を設定して行うことができます。
 
-If you define a custom drop logic and have the [`animateOnRelease`]({environment:angularApiUrl}/classes/igxdragdirective.html#animateonrelease) input of the [`igxDrag`]({environment:angularApiUrl}/classes/igxdragdirective.html) set to `true` it is recommended to also call the [`dropFinished()`]({environment:angularApiUrl}/classes/igxdragdirective.html#dropfinished) method of the [`igxDrag`]({environment:angularApiUrl}/classes/igxdragdirective.html) when you finish with manipulating the DOM. This informs the [`igxDrag`]({environment:angularApiUrl}/classes/igxdragdirective.html) to update its relative position to the new location in the DOM so that it will animate correctly.
+ドロップ ロジックを定義し、[`igxDrag`]({environment:angularApiUrl}/classes/igxdragdirective.html) の [`animateOnRelease`]({environment:angularApiUrl}/classes/igxdragdirective.html#animateonrelease) 入力を true に設定した場合、DOM 操作完了後に [`igxDrag`]({environment:angularApiUrl}/classes/igxdragdirective.html) の [`dropFinished()`]({environment:angularApiUrl}/classes/igxdragdirective.html#dropfinished) メソッドも呼び出すことが推奨されます。[`igxDrag`]({environment:angularApiUrl}/classes/igxdragdirective.html) に通知して関連する配置を DOM の新しい位置に更新することにより、正しくアニメーション化します。
 
-Example of cancelling [`onDrop`]({environment:angularApiUrl}/classes/igxdropdirective.html#ondrop) default drop logic:
+[`onDrop`]({environment:angularApiUrl}/classes/igxdropdirective.html#ondrop) デフォルトのドロップ ロジックをキャンセルの例。
 
 ````html
 <div igxDrop (onDrop)="onElemDrop($event)">Drop here</div>
@@ -83,10 +84,10 @@ public onElemDrop(event: IgxDropEventArgs) {
 }
 ````
 
-#### Advanced Configuration
-One element can have both [`igxDrag`]({environment:angularApiUrl}/classes/igxdragdirective.html) and [`igxDrop`]({environment:angularApiUrl}/classes/igxdropdirective.html) directives applied, but then it is recommended to use custom logic when another element is being dropped on to it by canceling the [`onDrop`]({environment:angularApiUrl}/classes/igxdropdirective.html#ondrop) event of the [`igxDrop`]({environment:angularApiUrl}/classes/igxdropdirective.html) directive.
+#### 高度な設定
+1 つの要素に [`igxDrag`]({environment:angularApiUrl}/classes/igxdragdirective.html) と [`igxDrop`]({environment:angularApiUrl}/classes/igxdropdirective.html) 両方のディレクティブを使用できます。ただし、他の要素が [`igxDrop`]({environment:angularApiUrl}/classes/igxdropdirective.html) ディレクティブの [`onDrop`]({environment:angularApiUrl}/classes/igxdropdirective.html#ondrop) イベントをキャンセルしてドロップされているときはカスタム ロジックを使用してください。
 
-#### Usage
+#### 使用方法
 ````html
 <div class="dropArea" igxDrop (onEnter)="onAreaEnter()" (onLeave)="onAreaLeave()">
     <span *ngIf="!elementInsideArea">Drag here.</span>
@@ -112,10 +113,10 @@ public onAreaLeave() {
 * [IgxDragDirective]({environment:angularApiUrl}/classes/igxdragdirective.html)
 * [IgxDropDirective]({environment:angularApiUrl}/classes/igxdropdirective.html)
 
-### References
+### リファレンス
 
 <div class="divider--half"></div>
-Our community is active and always welcoming to new ideas.
+コミュニティに参加して新しいアイデアをご提案ください。
 
-- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular** フォーラム** (英語) ](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語) ](https://github.com/IgniteUI/igniteui-angular)
