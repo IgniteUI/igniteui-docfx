@@ -6,7 +6,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ## Overlay
 <p class="highlight">
-The overlay service provides an easy and quick way to dynamically render content in the foreground of an app. The content to be rendered as well as the way it is renders (e.g. placement, animations, scroll and click behaviors) are highly configurable and able to match all of the possible scenarios. 
+The overlay service provides an easy and quick way to dynamically render content in the foreground of an app. The content to be rendered as well as the way it renders (e.g. placement, animations, scroll and click behaviors) are highly configurable and able to match all of the possible scenarios. 
 The overlay service is fully integrated in the toggle directive.
 </p>
 <div class="divider--half"></div>
@@ -168,7 +168,7 @@ export class MyOverlayComponent {
                 closeOnOutsideClick: false, // overlay will not close on outside clicks
                 modal: false // overlay content will not be rendered in a modal dialog
             }); // The show method returns an ID that can be used to reference the shown content
-        } else { // If the element is not visible, hide it
+        } else { // If the element is visible, hide it
             this.overlayService.hide(this._overlayId); // Find and remove the component from the overlay container
         }
         this._overlayShown = !this._overlayShown;
