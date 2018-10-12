@@ -26,9 +26,9 @@ The Crosshair Layer provides crossing lines that meet at the actual value of eve
 ```html
 <igx-category-chart
     [dataSource]="data"
-    displayCrosshairs="Horizontal"
-    snapCrosshairsToData="true"
-    displayCrosshairAxisAnnotations="true">
+    crosshairsDisplayMode="Horizontal"
+    crosshairsSnapToData="true"
+    crosshairsAnnotationEnabled="true">
 </igx-category-chart>
 ```
 
@@ -39,7 +39,7 @@ The Category Tool Tip Layer displays grouped tooltips for series using a categor
 ```html
 <igx-category-chart
     [dataSource]="data"
-    tooltipType="Category">
+    toolTipType="Category">
 </igx-category-chart>
 ```
 
@@ -50,7 +50,7 @@ The Item Tool Tip Layer displays tooltips for all target series individually.
 ```html
 <igx-category-chart
     [dataSource]="data"
-    tooltipType="Item">
+    toolTipType="Item">
 </igx-category-chart>
 ```
 
@@ -61,7 +61,7 @@ The Category Item Highlight Layer highlights items in a series that use a catego
 ```html
 <igx-category-chart
     [dataSource]="data"
-    highlightItemUnderCursor="true">
+    isCategoryHighlightingEnabled="true">
 </igx-category-chart>
 ```
 
@@ -72,7 +72,7 @@ The Category Highlight Layer targets a category axis, or all category axes in th
 ```html
 <igx-category-chart
     [dataSource]="data"
-    highlightCategoryUnderCursor="true">
+    isItemHighlightingEnabled="true">
 </igx-category-chart>
 ```
 
@@ -85,7 +85,7 @@ The Final Value Layer provides a quick view along the axis of the ending value d
 ```html
 <igx-category-chart
     [dataSource]="data"
-    displayFinalValueAnnotation="true">
+    finalValueAnnotationsVisible="true">
 </igx-category-chart>
 ```
 
@@ -93,16 +93,16 @@ The Final Value Layer provides a quick view along the axis of the ending value d
 
 The Callout Layer displays a callout at X/Y positions. It can show a label and some extra content as a tooltip when hovering over the annotation.
 
-> Note: When using a Category axis, the `eventsXMemberPath` should point to the numeric index or the time value for a time axis.
+> Note: When using a Category axis, the `calloutsXMemberPath` should point to the numeric index or the time value for a time axis.
 
 ```html
 <igx-category-chart
     [dataSource]="data"
-    displayEventAnnotations="true"
-    [eventsDataSource]="calloutData"
-    eventsXMemberPath="index"
-    eventsYMemberPath="yValue"
-    eventsTitleMemberPath="title"
-    eventsContentMemberPath="content">
+    calloutsVisible="true"
+    [calloutsDataSource]="calloutData"
+    calloutsXMemberPath="index"
+    calloutsYMemberPath="yValue"
+    calloutsLabelMemberPath="title"
+    calloutssContentMemberPath="content">
 </igx-category-chart>
 ```
