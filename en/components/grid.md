@@ -330,7 +330,7 @@ and in the template of the component:
 |Grid nested in parent container | When grid's [`width`]({environment:angularApiUrl}/classes/igxgridcomponent.html#width) is not set and it is placed in a parent container with defined dimensions, the grid spans to this container.|
 |Grid `OnPush` ChangeDetectionStrategy |The grid operates with `ChangeDetectionStrategy.OnPush` so whenever some customization appears make sure that the grid is notified about the changes that happens.|
 | Columns have a minimum allowed column width. Depending on the [`displayDensity`]({environment:angularApiUrl}/classes/igxgridcomponent.html#displaydensity) option, they are as follows: <br/>"compact": 24px <br/> "cosy": 32px <br/> "comfortable ": 48px | If width less than the minimum allowed is set it will not affect the rendered elements. They will render with the minimum allowed width for the corresponding [`displayDensity`]({environment:angularApiUrl}/classes/igxgridcomponent.html#displaydensity). This may lead to an unexpected behavior with horizontal virtualization and is therefore not supported.
-| Row height is not affected by the height of cells that are not currently rendered in view. | In case a custom column template that changes the cell height is defined but is not currently in view the row height will not be affected. The row will be affected only while the related column is scrolled in view.
+| Row height is not affected by the height of cells that are not currently rendered in view. | Because of virtualization a column with custom template that changes the cell height that is not into view will not affect the row height. The row height will be affected only while the related column is scrolled in view.
 
 <div class="divider--half"></div>
 
