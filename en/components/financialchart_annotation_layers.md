@@ -28,9 +28,9 @@ The Crosshair Layer provides crossing lines that meet at the actual value of eac
     [dataSource]="data"
     width="850px"
     height="600px"
-    showCrosshairs="Horizontal"
-    snapCrosshairsToData="true"
-    displayCrosshairAxisAnnotations="true">
+    crosshairsDisplayMode="Horizontal"
+    crosshairsSnapToData="true"
+    crosshairsAnnotationEnabled="true">
 </igx-financial-chart>
 ```
 
@@ -43,7 +43,7 @@ The Category Tool Tip Layer displays grouped tooltips for series using a categor
     [dataSource]="data"
     width="850px"
     height="600px"
-    tooltipType="Category">
+    toolTipType="Category">
 </igx-financial-chart>
 ```
 
@@ -56,7 +56,7 @@ The Item Tool Tip Layer displays tooltips for all target series individually.
     [dataSource]="data"
     width="850px"
     height="600px"
-    tooltipType="Item">
+    toolTipType="Item">
 </igx-financial-chart>
 ```
 
@@ -71,7 +71,7 @@ The Final Value Layer provides a quick view along the axis of the ending value d
     [dataSource]="data"
     width="850px"
     height="600px"
-    displayFinalValueAnnotation="true">
+    finalValueAnnotationsVisible="true">
 </igx-financial-chart>
 ```
 
@@ -79,18 +79,18 @@ The Final Value Layer provides a quick view along the axis of the ending value d
 
 The Callout Layer displays a callout at X/Y positions. It can show a label and some extra content as a tooltip when hovering over the annotation.
 
-> Note: When using the ordinal X axis mode, the `eventsXMemberPath` should point to the numeric index of the item, otherwise `eventsXMemberPath` should point to the time value.
+> Note: When using the ordinal X axis mode, the `calloutsXMemberPath` should point to the numeric index of the item, otherwise `calloutsXMemberPath` should point to the time value.
 
 ```html
 <igx-financial-chart
     [dataSource]="data"
     width="850px"
     height="600px"
-    displayEventAnnotations="true"
-    [eventsDataSource]="calloutData"
-    eventsXMemberPath="index"
-    eventsYMemberPath="yValue"
-    eventsTitleMemberPath="title"
-    eventsContentMemberPath="content">
+    calloutsVisible="true"
+    [calloutsDataSource]="calloutData"
+    calloutsXMemberPath="index"
+    calloutsYMemberPath="yValue"
+    calloutsLabelMemberPath="title"
+    calloutsContentMemberPath="content">
 </igx-financial-chart>
 ```
