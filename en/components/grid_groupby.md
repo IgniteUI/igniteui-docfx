@@ -93,7 +93,8 @@ export interface IGroupByRecord {
     level: number;
     records: GroupedRecords;
     value: any;
-    __groupParent: IGroupByRecord;
+    groupParent: IGroupByRecord;
+    groups?: IGroupByRecord[];
 }
 ```
 
