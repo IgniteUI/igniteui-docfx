@@ -77,9 +77,7 @@ export interface IGroupByExpandState {
 As with [`groupingExpressions`]({environment:angularApiUrl}/classes/igxgridcomponent.html#groupingexpressions), setting a list of [`IGroupByExpandState`]({environment:angularApiUrl}/interfaces/igroupbyexpandstate.html) directly to the [`groupingExpansionState`]({environment:angularApiUrl}/classes/igxgridcomponent.html#groupingexpansionstate) will change the expansion accordingly. Additionally [`igxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) exposes a method that toggles a group by the group record instance.
 
 ```typescript
-    const groupRow = this.grid.groupsRecords.find(function (record) {
-        return record.value === "France";
-    });
+    const groupRow = this.grid.groupsRecords.find(r => r.value === "France");
     grid.toggleGroup(groupRow);
 ```
 
