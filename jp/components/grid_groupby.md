@@ -79,7 +79,7 @@ export interface IGroupByExpandState {
 [`groupingExpressions`]({environment:angularApiUrl}/classes/igxgridcomponent.html#groupingexpressions) で [`IGroupByExpandState`]({environment:angularApiUrl}/interfaces/igroupbyexpandstate.html) のリストを直接 [`groupingExpansionState`]({environment:angularApiUrl}/classes/igxgridcomponent.html#groupingexpansionstate) に設定すると展開が変更されます。[`igxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) はグループ レコード インスタンスでトグルするメソッドを公開します。
 
 ```typescript
-    const groupRow = grid.getGroupRow([{ fieldName: 'Category', value: 'soft drinks' }]);
+    const groupRow = this.grid.groupsRecords.find(r => r.value === "France");
     grid.toggleGroup(groupRow);
 ```
 
@@ -95,7 +95,8 @@ export interface IGroupByRecord {
     level: number;
     records: GroupedRecords;
     value: any;
-    __groupParent: IGroupByRecord;
+    groupParent: IGroupByRecord;
+    groups?: IGroupByRecord[];
 }
 ```
 
