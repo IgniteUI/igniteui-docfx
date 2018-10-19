@@ -195,7 +195,7 @@ public contacts = [{
 
 #### アバターおよびアイコンの追加
 
-その他のコンポーネントを [`IgxList`]({environment:angularApiUrl}/classes/igxlistcomponent.html) と共に使用してエクスペリエンスの向上や機能拡張が可能です。名前や電話番号の値の左に画像のアバターを表示できます。また、連絡先をお気に入りに追加するための星アイコンを右側に追加できます。要素を追加するには、[**IgxAvatar**](avatar.html) および [**IgxIcon**](icon.html) モジュールを app.module.ts ファイルにインポートします。
+その他のコンポーネントを [`IgxList`]({environment:angularApiUrl}/classes/igxlistcomponent.html) と共に使用してエクスペリエンスの向上や機能拡張が可能です。名前や電話番号の値の左に画像のアバターを表示できます。また、連絡先をお気に入りに追加するための星アイコンを右側に追加できます。要素を追加するには、[**IgxAvatar**](avatar.md) および [**IgxIcon**](icon.md) モジュールを app.module.ts ファイルにインポートします。
 
 ```typescript
 // app.module.ts
@@ -271,7 +271,7 @@ public contacts = [{
 </igx-list>
 ```
 
-すべての要素を項目コンテナーにラップしてフローをスタイル設定できます。次に [**IgxAvatar**](avatar.html) コンポーネントを連絡先ラッパーに連絡先情報と共に追加し、最後に [**IgxIcon**](icon.html) コンポーネントを追加します。マークアップの変更に基づいて css スタイルシートを更新します。
+すべての要素を項目コンテナーにラップしてフローをスタイル設定できます。次に [**IgxAvatar**](avatar.md) コンポーネントを連絡先ラッパーに連絡先情報と共に追加し、最後に [**IgxIcon**](icon.md) コンポーネントを追加します。マークアップの変更に基づいて css スタイルシートを更新します。
 
 ```css
 /* contacts.component.css */
@@ -308,7 +308,7 @@ igx-icon {
 }
 ```
 
-連絡先オブジェクトの _isFavorite_ プロパティを切り替えるために [**IgxIcon**](icon.html) コンポーネントでクリック イベントをリッスンします。
+連絡先オブジェクトの _isFavorite_ プロパティを切り替えるために [**IgxIcon**](icon.md) コンポーネントでクリック イベントをリッスンします。
 
 ```typescript
 // contacts.component.ts
