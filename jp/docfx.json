@@ -42,7 +42,6 @@
         "postProcessors": ["SetEnvironmentVariables"],
         "noLangKeyword": false,
         "keepFileLink": false,
-        "cleanupCacheHistory": false,
-        "disableGitFeatures": true
+        "cleanupCacheHistory": false
     }
 }

@@ -33,10 +33,10 @@ _language: ja
  <div class="feature">
     <div class="feature__image feature__image--left">
       <img class="b-lazy b-lazy-gifs" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-lazy-load.png" data-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-remote-data-load-on-demand-768.jpg" data-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-remote-data-load-on-demand-480.jpg 480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-remote-data-load-on-demand-768.jpg 768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-remote-data-load-on-demand-1100.jpg 1100w" data-gif-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-remote-data-load-on-demand-768.gif" data-gif-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-remote-data-load-on-demand-480.gif 480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-remote-data-load-on-demand-768.gif 768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-remote-data-load-on-demand-1100.gif 1100w" sizes="(min-width: 1800px) 575px,(max-width: 1799px) and (min-width: 1200px) 50vw,(max-width: 1199px) and (min-width: 992px) 33vw,(max-width: 991px) and (min-width: 768px) 50vw, 100vw" alt="Grid virtualization and remote data loading for the Angular Data Grid. ">
-      <a href="grid_virtualization.md#リモート仮想化" class="feature__more-details">仮想化でリモート ソースを使用</a>
+      <a href="grid_virtualization.md#remote-virtualization" class="feature__more-details">仮想化でリモート ソースを使用</a>
     </div>
     <div class="feature__details">
-      <h3 id="remote-data-load-on-demand">[リモート データのロードオンデマンド](grid_virtualization.md#リモート仮想化)</h3>
+      <h3 id="remote-data-load-on-demand">[リモート データのロードオンデマンド](grid_virtualization.md#remote-virtualization)</h3>
       <p>無制限のスクロールが可能でリモート サービスからグリッドのスクロールに合わせてデータを取得するため、あらゆるリモート データ サイズで高いパフォーマンスを発揮します。</p>
     </div>
   </div>

@@ -67,7 +67,7 @@ export class ComboDemo implements OnInit {
 ## 機能
 Combo コンポーネントは以下の機能を公開します。
     - データ バインディング - ローカル データと [リモート データ](combo_remote.md)
-    - [値のバインディング](combo_features.md#値バインディング)
+    - [値のバインディング](combo_features.md#value-binding)
     - [フィルタリング](combo_features.md#フィルタリング)
     - [グループ化](combo_features.md#グループ化)
     - [カスタム値](combo_features.md#カスタム値)
