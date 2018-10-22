@@ -1,15 +1,15 @@
----
-title: Grid Editing - Native Angular | Ignite UI for Angular
-_description: The Ignite UI for Angular Data Grid control provides default cell templates for editable columns which are based on the data type of the column.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Component, Angular Grid, Angular Data Grid component, Angular Data Grid control, Angular Grid component, Angular Grid control, Angular High Performance Grid, Cell Editing
+﻿---
+title: 그리드 편집- 네이티브 Angular | Ignite UI for Angular
+_description: Ignite UI for Angular 데이터 그리드 컨트롤은 열의 데이터 유형을 기반으로 하는 편집 가능한 열의 기본 셀 템플릿을 제공합니다.
+_keywords: Ignite UI for Angular, UI 컨트롤, Angular 위젯, 웹 위젯, UI 위젯, Angular, 네이티브 Angular 컴포넌트 세트, 네이티브 Angular 컨트롤, 네이티브 Angular 컴포넌트 라이브러리, 네이티브 Angular 컴포넌트, Angular 그리드, Angular 데이터 그리드 컴포넌트, Angular 데이터 그리드 컨트롤, Angular 그리드 컴포넌트, Angular 그리드 컨트롤, Angular 고성능 그리드, 셀 편집
 _language: kr
 ---
 
-### Grid Editing
+### 그리드 편집
 
-The Grid component in Ignite UI for Angular provides you a default cell templates for editable columns which are based on the data type of the column. In addition you can define your own custom templates for editable columns and override default behaviour for commiting and discarding changes in the cell value .
+Ignite UI for Angular 그리드 컴포넌트는 열의 데이터 유형을 기반으로 편집 가능한 열에 기본 셀 템플릿을 제공합니다. 또한, 편집 가능한 열에 사용자 템플릿을 정의할 수 있고 셀 값의 변경 확정 및 취소로 기본 동작을 무효로 할 수 있습니다.
 
-#### Demo
+#### 데모
 
 <div class="sample-container loading" style="height:650px">
     <iframe id="grid-editing-sample-iframe" src='{environment:demosBaseUrl}/grid-editing' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -20,34 +20,34 @@ The Grid component in Ignite UI for Angular provides you a default cell template
 </div>
 <div class="divider--half"></div>
 
-In order to be able to enter edit mode for specific cell, you should first set the column to be [`editable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable). If you want to use a data type specific *edit templates*, you should specify the column [`dataType`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#datatype) property. So let's now see what are the default templates for each type:
+특정 셀에서 편집 모드에 들어가려면 먼저 열을 **편집 가능**으로 설정해야 합니다. 데이터 유형별 *편집 템플릿*을 사용하려면 열 **dataType** 속성을 지정해야 합니다. 이제 각 유형의 기본 템플릿이 무엇인지 살펴 보겠습니다.
 
- - For `string` data type, default template is using [**igxInput**]({environment:angularApiUrl}/classes/igxinputdirective.html)
- - For `number` data type, default template is using **[igxInput]({environment:angularApiUrl}/classes/igxinputdirective.html) type="number"**, so if you try to update cell to a value which can not be parsed to a number your change is going to be discarded, and the value in the cell will be set to **0**.
- - For `date` data type, default template is using [**igx-date-picker**]({environment:angularApiUrl}/classes/igxdatepickercomponent.html)
- - For `boolean` data type, default template is using [**igx-checkbox**]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html)
+ - `string` 데이터 형식의 경우 기본 템플릿은 **igxInput**을 사용합니다
+ - `number` 데이터 유형의 경우 기본 템플릿은 **igxInput type="number"**를 사용하며, 숫자로 분석할 수 없는 값으로 셀을 업데이트한 경우에는 변경이 취소되고 셀 값은 **0**으로 설정됩니다.
+ - `data` 데이터 형식의 경우 기본 템플릿은 **igx-date-picker**를 사용합니다
+ - `boolean` 데이터 형식의 경우 기본 템플릿은 **igx-checkbox**를 사용합니다
 
-You can enter edit mode for specific cell, when an editable cell is focused in one of the following ways:
- - on double click;
- - on single click - Single click will enter edit mode only if the previously selected cell was in edit mode and currently selected cell is editable. If the previously selected cell was not in edit mode, single click will select the cell without entering edit mode;
- - on key press `Enter`;
- - on key press `F2`;
+편집 가능한 셀이 다음 중 하나의 방법으로 포커스되어 있는 경우, 특정 셀에서 편집 모드로 들어갈 수 있습니다:
+ - 더블 클릭;
+ - 원클릭 - 이전에 선택한 셀이 편집 모드이고 현재 선택한 셀이 편집 가능한 경우에만 원클릭으로 편집 모드에 들어갑니다. 이전에 선택한 셀이 편집 모드에 있지 않은 경우, 원클릭을 하면 편집 모드에 들어가지 않고 셀이 선택됩니다.
+ - `Enter` 키를 누름;
+ - `F2` 키를 누름;
 
-You can exit edit mode **without commiting** the changes in one of the following ways:
- - on key press `Escape`;
- - when you perform *sorting*, *filtering*, *searching* and *hiding* operations;
+다음 방법 중 하나를 사용하여 변경을 **확정하지 않고** 편집 모드를 종료할 수 있습니다:
+ - `Escape` 키를 누름;
+ - *정렬*, *필터링*, *검색*, *숨기기* 조작을 실행할 때;
 
-You can exit edit mode and **commit** the changes in one of the following ways:
- - on key press `Enter`;
- - on key press `F2`;
- - on key press `Tab`;
- - on single click to another cell - when you click on another cell in the grid, your changes will be submitted.
- - when you perform 'moving' and 'pinning' operations;
+다음 방법 중 하나를 사용하여 편집 모드를 종료하고 변경을 **확정**할 수 있습니다:
+ - `Enter` 키를 누름;
+ - `F2` 키를 누름;
+ - `Tab` 키를 누름;
+ - 다른 셀을 원클릭 - 그리드의 다른 셀을 클릭하면 변경이 제출됩니다.
+ - '이동' 및 '고정' 조작을 실행할 때;
 
 > [!NOTE]
-> The cell remains in edit mode when you scroll vertically or horizontally, click outside the grid, resize column, pin column or go to another page.
+> 세로 또는 가로로 스크롤하거나, 그리드 이외를 클릭하거나, 열의 크기를 조정하거나, 열을 핀 고정하거나 다른 페이지로 이동한 경우에는 셀은 편집 모드로 유지됩니다.
 
-You can also modify the cell value through the IgxGrid API but only if primary is defined:
+프라이머리가 정의되어 있는 경우에만 IgxGrid API를 통해 셀 값을 수정할 수도 있습니다.
 
 ```typescript
 ...
@@ -56,9 +56,9 @@ You can also modify the cell value through the IgxGrid API but only if primary i
     }
 ...
 ```
-Please notice that if the cell you want to update is outside grid's display container the new value will not be submitted.
+업데이트하려는 셀이 그리드의 표시 컨테이너 외부에 있는 경우 새로운 값이 제출되지 않습니다.
 
-Another way to update cell is directly through [`update`]({environment:angularApiUrl}/classes/igxgridcellcomponent.html#update) method of [`IgxGridCellComponent`]({environment:angularApiUrl}/classes/igxgridcellcomponent.html):
+셀을 업데이트하는 또 다른 방법은 IgxCellComponent의 `update` 메소드를 직접 호출하는 것입니다:
 
 ```typescript
 ...
@@ -70,18 +70,18 @@ Another way to update cell is directly through [`update`]({environment:angularAp
     }
 ...
 ```
-If you want to define a custom template which will be applied when the cell is edit mode, you can see the documentation for [Grid Columns configuration](grid.md#columns-configuration).
+셀이 편집 모드일 때 적용될 사용자 템플릿을 정의하는 방법에 대해서는 [그리드 열 구성](grid.md#columns-configuration)에 대한 문서를 참조하십시오.
 
-### CRUD operations
+### CRUD 조작
 
 > [!NOTE]
-> Please keep in mind that when you perform some **CRUD operation** all of the applied pipes like **filtering**, **sorting** and **grouping** will be re-applied and your view will be automatically updated.
+> **CRUD 조작**을 실행할 경우에는 **필터링**, **정렬**, **그룹화** 등 적용된 모든 파이프는 다시 적용되고 표시가 자동으로 업데이트된다는 점에 유의하십시오.
 
-The [`IgxGridComponent`]({environment:angularApiUrl}/classes/igxgridcomponent.html) provides a straigtforward API for basic CRUD operations.
+`IgxGridComponent`는 기본적인 CRUD 조작을 위한 간단한 API를 제공합니다.
 
-#### Adding a new record
+#### 새로운 레코드 추가
 
-The grid component exposes the [`addRow`]({environment:angularApiUrl}/classes/igxgridcomponent.html#addrow) method which will add the provided data to the data source itself.
+그리드 컴포넌트는 제공된 데이터를 데이터 소스 자체에 추가하는 `addRow` 메소드를 제공합니다.
 
 ```typescript
 // Adding a new record
@@ -90,9 +90,9 @@ const record = this.getNewRecord();
 this.grid.addRow(record);
 ```
 
-#### Updating data in the grid
+#### 그리드 데이터 업데이트
 
-Updating data in the grid is achieved through [`updateRow`]({environment:angularApiUrl}/classes/igxgridcomponent.html#updaterow) and [`updateCell`]({environment:angularApiUrl}/classes/igxgridcomponent.html#updatecell) methods but **only if primary key for the grid is defined**. You can also directly update a cell and row value through their [`update`]({environment:angularApiUrl}/classes/igxgridcellcomponent.html#update) method.
+그리드 데이터 업데이트는 `updateRow` 및 `updateCell` 메소드를 통해 이루어지며 **그리드의 기본 키가 정의되어 있는 경우에만** 실행됩니다. 또한, `update` 메소드를 통해 셀 및 행 값을 직접 업데이트할 수 있습니다.
 
 ```typescript
 // Updating the whole row
@@ -109,9 +109,9 @@ const row = this.grid.getRowByKey(rowID);
 row.update(newData);
 ```
 
-#### Deleting data from the grid
+#### 그리드에서 데이터 삭제
 
-Please keep in mind that [`deleteRow()`]({environment:angularApiUrl}/classes/igxgridcomponent.html#deleterow) method will remove the specified row only if primary key is defined.
+`deleteRow()` 메소드는 기본 키가 정의 된 경우에만 지정된 행을 제거합니다.
 
 ```typescript
 // Delete row through Grid API
@@ -120,34 +120,23 @@ this.grid.deleteRow(this.selectedCell.cellID.rowID);
 const row = this.grid.getRowByIndex(rowIndex);
 row.delete();
 ```
-These can be wired to user interactions, not necessarily related to the **igx-grid**; for example, a button click:
+**igx-grid**와 관계 없이 예를 들면 버튼 클릭 등의 사용자 상호 작용에 연결할 수 있습니다:
 ```html
 <button igxButton igxRipple (click)="deleteRow($event)">Delete Row</button>
 ```
 
 <div class="divider--half"></div>
 
-### API
-* [IgxGridCellComponent]({environment:angularApiUrl}/classes/igxgridcellcomponent.html)
-* [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
-* [IgxGridRowComponent]({environment:angularApiUrl}/classes/igxgridrowcomponent.html)
-* [IgxInputDirective]({environment:angularApiUrl}/classes/igxinputdirective.html)
-* [IgxDatePickerComponent]({environment:angularApiUrl}/classes/igxdatepickercomponent.html)
-* [IgxDatePickerComponent Styles]({environment:sassApiUrl}/index.html#function-igx-date-picker-theme)
-* [IgxCheckboxComponent]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html)
-* [IgxCheckboxComponent Styles]({environment:sassApiUrl}/index.html#function-igx-checkbox-theme) 
-
-
-### Additional Resources
+### 추가 리소스
 <div class="divider--half"></div>
 
-* [Grid overview](grid.md)
-* [Virtualization and Performance](grid_virtualization.md)
-* [Paging](grid_paging.md)
-* [Filtering](grid_filtering.md)
-* [Sorting](grid_sorting.md)
-* [Summaries](grid_summaries.md)
-* [Column Pinning](grid_column_pinning.md)
-* [Column Resizing](grid_column_resizing.md)
-* [Selection](grid_selection.md)
-* [Searching](grid_search.md)
+* [그리드 개요](grid.md)
+* [가상화 및 성능](grid_virtualization.md)
+* [페이징](grid_paging.md)
+* [필터링](grid_filtering.md)
+* [정렬](grid_sorting.md)
+* [요약](grid_summaries.md)
+* [열 핀 고정](grid_column_pinning.md)
+* [열 크기 조정](grid_column_resizing.md)
+* [선택](grid_selection.md)
+* [검색](grid_search.md)

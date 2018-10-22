@@ -1,15 +1,15 @@
----
-title: Grid Toolbar Component - Native Angular | Ignite UI for Angular
-_description: With the Ignite UI for Angular Grid Toolbar component you can have a centralized location for IgxGrid features UI controls.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Component, Angular Grid, Angular Data Grid component, Angular Data Grid control, Angular Grid component, Angular Grid control, Angular High Performance Grid, Angular Data Grid Toolbar, Grid Toolbar, Angular Grid Toolbar, excel export, grid column hiding chooser, grid column pinning chooser
+﻿---
+title: 그리드 도구 모음 컴포넌트- 네이티브 Angular | Ignite UI for Angular
+_description: Ignite UI for Angular 그리드 도구 모음 컴포넌트를 사용하면 IgxGrid 기능 UI 컨트롤의 중앙 위치를 지정할 수 있습니다.
+_keywords: Ignite UI for Angular, UI 컨트롤, Angular 위젯, 웹 위젯, UI 위젯, Angular, 네이티브 Angular 컴포넌트 세트, 네이티브 Angular 컨트롤, 네이티브 Angular 컴포넌트 라이브러리, 네이티브 Angular 컴포넌트, Angular 그리드, Angular 데이터 그리드 컴포넌트, Angular 데이터 그리드 컨트롤, Angular 그리드 컴포넌트, Angular 그리드 컨트롤, Angular 고성능 그리드, Angular 데이터 그리드 도구 모음, 그리드 도구 모음, Angular 그리드 도구 모음, Excel 내보내기, 그리드 열 숨기기 선택기, 그리드 열 핀 고정 선택기
 _language: kr
 ---
 
-### Grid Toolbar
+### 그리드 도구 모음
 
-The Grid in Ignite UI for Angular provides an [`IgxGridToolbarComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html) which is essentially a container for **UI** operations. The toolbar is located at the top of the grid and it matches the grid's horizontal size. The toolbar container hosts different UI controls which are related to some of the grid's features - column hiding, column pinning, excel exporting, etc.
+Ignite UI for Angular 그리드는 기본적으로 **UI** 작업을 위한 컨테이너인 **toolbar** 기능을 지원합니다. 도구 모음은 그리드 상단에 있으며 그리드의 가로 크기와 일치합니다. 도구 모음 컨테이너는 열 숨기기, 열 핀 고정, Excel 내보내기 등 그리드 기능과 관련된 다양한 UI 컨트롤을 제공합니다.
 
-#### Demo
+#### 데모
 
 <div class="sample-container loading" style="height:420px">
     <iframe id="grid-toolbar-sample-1-iframe" src='{environment:demosBaseUrl}/grid-toolbar-sample-1' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -19,7 +19,7 @@ The Grid in Ignite UI for Angular provides an [`IgxGridToolbarComponent`]({envir
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-toolbar-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-The IgxGrid's toolbar is shown using the grid's [`showToolbar`]({environment:angularApiUrl}/classes/igxgridcomponent.html#showtoolbar) property - just set it to **true**. The toolbar supports a textual title which is left aligned and its content is set using the grid's [`toolbarTitle`]({environment:angularApiUrl}/classes/igxgridcomponent.html#toolbartitle) property. The following code snippet demonstrates how to enable a toolbar and set its title:
+그리드의 `showToolbar` 속성을 사용하여 IgxGrid의 도구 모음을 표시하려면 `true`로 설정합니다. 도구 모음은 텍스트 제목의 왼쪽 정렬을 지원하며 그리드의 `toolbarTitle` 속성을 사용하여 내용을 설정합니다. 다음의 코드 조각은 도구 모음을 활성화하고 제목을 설정하는 방법을 보여줍니다:
 
 ```html
 <igx-grid [data]="data" [autoGenerate]="true" height="400px" width="600px"
@@ -28,15 +28,15 @@ The IgxGrid's toolbar is shown using the grid's [`showToolbar`]({environment:ang
 </igx-grid>
 ```
 
-#### Features
+#### 기능
 
-The IgxGrid's toolbar can be configured to allow columns hiding, columns pinning and exporting data to MS Excel and CSV. You can enable each feature independently by setting its dedicated boolean property to true:
-- for column hiding set [`columnHiding`]({environment:angularApiUrl}/classes/igxgridcomponent.html#columnhiding) to **true**
-- for column pinning set [`columnPinning`]({environment:angularApiUrl}/classes/igxgridcomponent.html#columnpinning) to **true**
-- for MS Excel export set the grid's [`exportExcel`]({environment:angularApiUrl}/classes/igxgridcomponent.html#exportexcel) property to **true**
-- for CSV export set the grid's [`exportCsv`]({environment:angularApiUrl}/classes/igxgridcomponent.html#exportcsv) property to **true**
+IgxGrid의 도구 모음은 열 숨기기, 열 핀 고정, 데이터를 MS Excel 및 CSV로 내보내기 할 수 있도록 구성할 수 있습니다. 대응하는 불 속성을 true로 설정하여 각 기능을 독립적으로 활성화할 수 있습니다:
+- 열 숨기기는 `columnHiding`을 `true`로 설정
+- 열 핀 고정은 `columnPinning`을 `true`로 설정
+- MS Excel 내보내기는 그리드의 `exportExcel` 속성을 `true`로 설정
+- CSV 내보내기는 그리드의 `exportCsv` 속성을 `true`로 설정.
 
-There are also properties for configuring each button's text and they are listed in the API section below.
+각 버튼의 텍스트를 설정하는 속성에 대해서는 이하의 API 부분에 열거되어 있습니다.
 
 <div class="sample-container loading" style="height:420px">
     <iframe id="grid-toolbar-sample-2-iframe" src='{environment:demosBaseUrl}/grid-toolbar-sample-2' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -46,7 +46,7 @@ There are also properties for configuring each button's text and they are listed
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-toolbar-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-The following code snippet demonstrates how to enable all features of the toolbar:
+다음 코드 조각은 도구 모음의 모든 기능을 활성화하는 방법을 보여줍니다:
 
 ```html
 <igx-grid [data]="data" [autoGenerate]="true" height="400px" width="600px"
@@ -62,7 +62,7 @@ The following code snippet demonstrates how to enable all features of the toolba
 </igx-grid>
 ```
 
-The export to MS Excel and the export to CSV features are using respectively the [`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html) and [`IgxCsvExporterService`]({environment:angularApiUrl}/classes/igxcsvexporterservice.html) as providers. If you need to use any of them you should specify them in the **providers** array of your **app.module.ts** file. For example the following code snippet demonstrates how to include all exporter services:
+MS Excel로 내보내기 및 CSV로 내보내기 기능은 공급자로 각각 `IgxExcelExporterService` 및 `IgxCsvExporterService`를 사용합니다. 이들 중 하나를 사용해야 하는 경우에는 'app.module.ts' 파일의 '공급자' 배열에서 지정해야 합니다. 예를 들면, 다음의 코드 조각은 모든 내보내기 서비스를 포함하는 방법을 보여줍니다:
 
 ```typescript
 // app.module.ts
@@ -77,16 +77,16 @@ import { IgxExcelExporterService, IgxCsvExporterService } from "igniteui-angular
 export class AppModule {}
 ```
 
-#### Customizing the Export
+#### 내보내기 사용자 정의
 
-In addition to simply switching on and off the toolbar features, the export process can be further configured in the [`onToolbarExporting`]({environment:angularApiUrl}/classes/igxgridcomponent.html#ontoolbarexporting) event which is emitted when the user initiates the export process. This event exposes both the exporter and the exporter's options.
+단순히 도구 모음 기능을 켜거나 끄는 것 외에도 내보내기 처리는 사용자가 내보내기 처리를 초기화할 때 생성되는 `onToolbarExporting` 이벤트에서 상세 설정할 수 있습니다. 이 이벤트는 내보내기와 내보내기 옵션을 모두 보여줍니다.
 
 > [!NOTE]
-> By default when exporting to CSV the exporter exports using a comma separator and uses a '.csv' extension for the output file.
-> You can customize these exporting parameters by subscribing to events of the exporter or changing the values of the exporter options fields.
-> You can also cancel the export process by setting the cancel field of the event args to true.
+> 기본적으로 CSV로 내보내기를 할 때 내보내기는 쉼표 구분 기호를 사용하여 내보내기를 하며 출력 파일에는 '.csv' 확장자를 사용합니다.
+> 내보내기 이벤트에 서브스크라이브하거나 내보내기 옵션 필드 값을 변경하여 내보내기 매개 변수를 사용자 정의할 수 있습니다.
+> 또한, 이벤트 인수의 취소 필드를 true로 설정하여 내보내기 처리를 취소할 수 있습니다.
 
-The following code snippet demonstrates how to subscribe to the [`onToolbarExporting`]({environment:angularApiUrl}/classes/igxgridcomponent.html#ontoolbarexporting) event and cancel the default exporting process.
+다음 코드 조각은 `onToolbarExporting` 이벤트에 서브스크라이브하는 방법과 기본 내보내기 처리를 취소하는 방법을 보여줍니다.
 
 ```html
 <igx-grid ... (onToolbarExporting)="toolbarExportingHandler($event)"></igx-grid>
@@ -119,7 +119,7 @@ public toolbarExportingHandler(args) {
 }
 ```
 
-The following sample demonstrates how to customize the exported files:
+다음 샘플에서는 내보내기 파일을 사용자 지정하는 방법을 보여줍니다.
 
 <div class="sample-container loading" style="height:420px">
     <iframe id="grid-toolbar-sample-3-iframe" src='{environment:demosBaseUrl}/grid-toolbar-sample-3' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -131,39 +131,62 @@ The following sample demonstrates how to customize the exported files:
 
 <div class="divider"></div>
 
-### API References
+### API 요약
 
-The Grid Toolbar service has a few more APIs to explore, which are listed below.
+그리드 도구 모음 서비스에는 아래에 나열된 몇 가지 API가 추가로 포함되어 있습니다.
 
-[`IgxGridToolbarComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html)
+#### 입력
 
-[`IgxGridComponent`]({environment:angularApiUrl}/classes/igxgridcomponent.html) properties:
-* [`toolbar`]({environment:angularApiUrl}/classes/igxgridcomponent.html#toolbar)
-* [`showToolbar`]({environment:angularApiUrl}/classes/igxgridcomponent.html#showtoolbar)
-* [`toolbarTitle`]({environment:angularApiUrl}/classes/igxgridcomponent.html#toolbartitle)
-* [`columnHiding`]({environment:angularApiUrl}/classes/igxgridcomponent.html#columnhiding)
-* [`columnHidingTitle`]({environment:angularApiUrl}/classes/igxgridcomponent.html#columnhidingtitle)
-* [`hiddenColumnsText`]({environment:angularApiUrl}/classes/igxgridcomponent.html#hiddencolumnstext)
-* [`columnPinning`]({environment:angularApiUrl}/classes/igxgridcomponent.html#columnpinning)
-* [`columnPinningTitle`]({environment:angularApiUrl}/classes/igxgridcomponent.html#columnpinningtitle)
-* [`pinnedColumnsText`]({environment:angularApiUrl}/classes/igxgridcomponent.html#pinnedcolumnstext)
-* [`exportExcel`]({environment:angularApiUrl}/classes/igxgridcomponent.html#exportexcel)
-* [`exportCsv`]({environment:angularApiUrl}/classes/igxgridcomponent.html#exportcsv)
-* [`exportText`]({environment:angularApiUrl}/classes/igxgridcomponent.html#exporttext)
-* [`exportExcelText`]({environment:angularApiUrl}/classes/igxgridcomponent.html#exportexceltext)
-* [`exportCsvText`]({environment:angularApiUrl}/classes/igxgridcomponent.html#exportcsvtext)
+**IgxGrid** 컴포넌트에서 다음 입력을 사용할 수 있습니다:
+| 이름 | 형식 | 설명 |
+| :--- | :--- | :--- |
+| `toolbar` | IgxGridToolbarComponent | 도구 모음 컴포넌트에 대한 참조입니다. |
+| `showToolbar` | boolean | 그리드 도구 모음을 표시하거나 숨깁니다. |
+| `toolbarTitle` | string | 도구 모음 제목을 설정합니다. |
+| `columnHiding` | boolean | 열 숨기기 기능을 표시하거나 숨깁니다. |
+| `columnHidingTitle` | string | 열 숨기기 팝업 제목의 텍스트를 설정합니다. |
+| `hiddenColumnsText` | string | 열 숨기기 기능 버튼의 텍스트를 설정합니다. |
+| `columnPinning` | boolean | 열 핀 고정 기능을 표시하거나 숨깁니다. |
+| `columnPinningTitle` | string | 열 핀 고정 팝업 제목의 텍스트를 설정합니다. |
+| `pinnedColumnsText` | string | 열 핀 고정 기능 버튼의 텍스트를 설정합니다. |
+| `exportExcel` | boolean | MS Excel로 내보내기 옵션을 표시하거나 숨깁니다. |
+| `exportCsv` | boolean | CSV로 내보내기 옵션을 표시하거나 숨깁니다. |
+| `exportText` | string | 기본 내보내기 버튼의 텍스트 내용을 설정합니다. |
+| `exportExcelText` | string | MS Excel로 내보내기 버튼의 텍스트 내용을 설정합니다. |
+| `exportCsvText` | string | CSV로 내보내기 버튼의 텍스트 내용을 설정합니다. |
 
-[`IgxGridComponent`]({environment:angularApiUrl}/classes/igxgridcomponent.html) events:
-* [`onToolbarExporting`]({environment:angularApiUrl}/classes/igxgridcomponent.html#ontoolbarexporting)
+<div class="divider"></div>
 
-Styles:
+**IgxGridToolbarComponent** 컴포넌트에서 다음 입력을 사용할 수 있습니다:
+| 이름 | 형식 | 설명 |
+| :--- | :--- | :--- |
+| `dropDownsMaxHeight` | string | 도구 모음의 드롭다운 패널 높이를 설정하거나 가져옵니다. 예: '100px' 또는 '50%'. |
 
-* [`IgxGridComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+<div class="divider"></div>
 
-### Additional Resources
+#### 출력
+
+**IgxGrid** 컴포넌트에서 다음 출력을 사용할 수 있습니다:
+| 이름 | 형식 | 설명 |
+| :--- | :--- | :--- |
+| `onToolbarExporting` | EventEmitter<`IGridToolbarExportEventArgs`> | 사용자가 내보내기 처리를 시작하면 발생합니다. |
+
+<div class="divider"></div>
+
+#### 이벤트 인수
+
+다음의 필드는 **IGridToolbarExportEventArgs** 이벤트 객체에서 사용할 수 있습니다:
+| 이름 | 형식 | 설명 |
+| :--- | :--- | :--- |
+| `grid` | `IgxGridComponent` | 내보내기 하는 그리드 컴포넌트에 대한 참조입니다. |
+| `exporter` | `IgxBaseExporter` | 내보내기 처리에 사용되는 내보내기 객체에 대한 참조입니다. |
+| `options` | `IgxExporterOptionsBase` | 내보내기 옵션에 대한 참조입니다. |
+| `cancel` | `boolean` | 이 필드는 기본적으로 `false`로 설정되어 있습니다. 이 매개 변수를 `true`로 설정하면 기본 매개 변수로 내보내기 처리가 시작되지 않기 때문에 사용자 정의 내보내기를 할 수 있도록 제공합니다. |
+
+### 추가 리소스
 
 <div class="divider--half"></div>
-Our community is active and always welcoming to new ideas.
+커뮤니티는 활동적이고 새로운 아이디어를 항상 환영합니다.
 
 * [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
 * [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

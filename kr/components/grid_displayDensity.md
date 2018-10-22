@@ -1,15 +1,15 @@
----
-title:  Grid Display Density - Native Angular | Ignite UI for Angular
-_description: The Ignite UI for Angular Data Grid control provides default cell templates for editable columns which are based on the data type of the column.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Component, Angular Grid, Angular Data Grid component, Angular Data Grid control, Angular Grid component, Angular Grid control, Angular High Performance Grid, Grid Display Density
+﻿---
+title:  그리드 표시 밀도- 네이티브 Angular | Ignite UI for Angular
+_description: Ignite UI for Angular 데이터 그리드 컨트롤은 열의 데이터 유형을 기반으로 하는 편집 가능한 열의 기본 셀 템플릿을 제공합니다.
+_keywords: Ignite UI for Angular, UI 컨트롤, Angular 위젯, 웹 위젯, UI 위젯, Angular, 네이티브 Angular 컴포넌트 세트, 네이티브 Angular 컨트롤, 네이티브 Angular 컴포넌트 라이브러리, 네이티브 Angular 컴포넌트, Angular 그리드, Angular 데이터 그리드 컴포넌트, Angular 데이터 그리드 컨트롤, Angular 그리드 컴포넌트, Angular 그리드 컨트롤, Angular 고성능 그리드, 그리드 표시 밀도
 _language: kr
 ---
 
-### Grid Display Density
+### 그리드 표시 밀도
 
-**Igx-Grid** design is based on [Material Design Guidelines](https://material.io/guidelines/material-design/introduction.html). We currently provide an option to choose between predefined set of display [density](https://material.io/design/layout/density.html#usage) options. By selecting the right density for your use case you can significantly improve the user experience when interacting with large amounts of content.
+**Igx-Grid** 디자인은 [머티리얼 디자인 가이드라인](https://material.io/guidelines/material-design/introduction.html)을 기반으로 합니다. 현재 사전 정의된 표시 [밀도](https://material.io/design/layout/density.html#usage) 옵션 중에서 선택할 수 있는 옵션을 제공합니다. 사용에 적합한 밀도를 선택하면 대량의 콘텐츠와의 상호 작용으로 사용자 경험을 크게 향상시킬 수 있습니다.
 
-#### Demo
+#### 데모
 
 <div class="sample-container loading" style="height:620px">
     <iframe id="grid-displayDensity-sample-iframe" src='{environment:demosBaseUrl}/grid-displayDensity' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -21,29 +21,29 @@ _language: kr
 
 <div class="divider--half"></div>
 
-### Usage
-As you can see in the demo above, the [**Igx-Grid**]({environment:angularApiUrl}/classes/igxgridcomponent.html) provides three density options: **compact**, **cosy** and **comfortable**. The code snippet below shows how to set [`displayDensity`]({environment:angularApiUrl}/classes/igxgridcomponent.html#displaydensity):
+### 사용 방법
+상기의 데모에서 볼 수 있듯이 **Igx-Grid**는 세 가지 밀도 옵션을 제공합니다: **compact**, **cosy** 및 **comfortable**. 아래의 코드는 `displayDensity`를 설정하는 방법을 보여줍니다:
 
 ```html
 <igx-grid #grid [data]="data" [displayDensity]="'cosy'" >
 </igx-grid>
 ```
-or
+또는
 ```typescript
 ...
 this.grid.displayDensity = "cosy";
 ...
 ```
 
-And now let's see in details how each option reflect on the grid component. When you switch between different density options the height of each grid element and the correcponding paddings will be changed. Also if you want to apply custom column [**width**]({environment:angularApiUrl}/classes/igxcolumncomponent.html#width), plaese consider the fact that it must be bigger than the sum of left and right padding.
- - **comfortable** - this is the default grid display density with the lowest intence and row height equal to `50px`. Left and Right paddings are `24px`; Minimal column [`width`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#width) is `48px`;
- - **cosy** - this is the middle intence density with `40px` row height. Left and Right paddings are `16px`; Minimal column [`width`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#width) is `32px`;
- - **compact** - this is the density with heighest intence and `32px` row height. left and Right paddings are `12px`; Minimal column [`width`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#width) is `24px`;
+이제 각 옵션을 그리드 컴포넌트에 반영하는 방법을 자세하게 살펴 보겠습니다. 서로 다른 표시 밀도 옵션 사이에서 전환하면 각 그리드 요소의 높이 및 해당 패딩이 변경됩니다. 또한, 사용자 열 **너비**를 적용하는 경우 왼쪽 및 오른쪽 패딩 합계보다 커야 함에 주의하십시오.
+ - **comfortable** - 이것은 밀도가 가장 낮고 행 높이가 `50px`인 기본 그리드 표시 밀도입니다. 왼쪽 및 오른쪽 패딩은 `24px`임; 최소 열 너비는 `48px`임;
+ - **cosy** - 이것은 행 높이가 `40px`인 중간 밀도입니다. 왼쪽 및 오른쪽 패딩은 `16px`임; 최소 열 너비는 `32px`임;
+ - **compact** - 이것은 밀도가 가장 높고 행 높이가 `32px`로 왼쪽 및 오른쪽 패딩은 `12px`; 최소 열 너비는 `24px`임;
 
 > [!NOTE]
-> Please keep in mind that currently you **can not** override any of the sizes.
+> 현재 크기는 무효화할 수 **없습니다**.
 
-Let's now continue with our sample and see in action how the [`displayDensity`]({environment:angularApiUrl}/classes/igxgridcomponent.html#displaydensity) is applied. Let's first add a button which will help us to switch between each density:
+계속하여 샘플을 사용해 `displayDensity`의 적용 방법을 살펴 보겠습니다. 먼저 각 밀도를 전환하는데 도움이 되는 버튼을 추가해 보겠습니다:
 
 ```html
 <div class="density-chooser">
@@ -77,7 +77,7 @@ public ngOnInit() {
 }
 ```
 
-Now we can add the markup.
+이제 마크업을 추가할 수 있습니다.
 
 
 ```html
@@ -135,7 +135,7 @@ Now we can add the markup.
 </igx-grid>
 ```
 
-Finally, let's provide the necessary logic in order to actually apply the density:
+마지막으로 밀도를 실제로 적용하기 위해 필요한 논리를 실행합니다:
 
 ```typescript
 @ViewChild("grid", { read: IgxGridComponent })
@@ -147,13 +147,13 @@ public selectDensity(event) {
 }
 ```
 
-Another option that [**Igx-Grid**]({environment:angularApiUrl}/classes/igxgridcomponent.html) provides for you, in order to be able to change the height of the rows in the grid, is the property [`rowHeight`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowheight). So let's see in action how this property affects the grid layout along with the [`displayDensity`]({environment:angularApiUrl}/classes/igxgridcomponent.html#displaydensity) option.
+**IgxGrid**에서 그리드 행 높이를 변경할 수 있도록 제공하는 그 밖의 옵션은 `rowHeight` 속성입니다. 이 속성이 `displayDensity` 옵션과 함께 그리드 레이아웃에 어떻게 영향을 미치는지 살펴 보겠습니다.
 
-Please keep in mind the following:
- - [`displayDensity`]({environment:angularApiUrl}/classes/igxgridcomponent.html#displaydensity) options will have **NO** impact on row height **if there is [rowHeight]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowheight) specified**;
- - [`displayDensity`]({environment:angularApiUrl}/classes/igxgridcomponent.html#displaydensity) will **affect all of the rest elements in the grid**, as it has been described above;
+다음 사항에 유의하십시오:
+ - **rowHeight가 지정된 경우** `displayDensity` 옵션은 행 높이에 영향을 주지 **않습니다**;
+ - `displayDensity`는 상기의 설명대로 **그리드의 나머지 요소에 모두 영향을 줍니다**;
 
-And now we can extend our sample and add [`rowHeight`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowheight) property to the grid:
+이제 샘플을 확장하고 그리드에 `rowHeight` 속성을 추가할 수 있습니다:
  ```html
  <igx-grid #grid [data]="data" [displayDensity]="density" [rowHeight]="'80px'" width="100%" height="550px">
  ..............
@@ -162,25 +162,16 @@ And now we can extend our sample and add [`rowHeight`]({environment:angularApiUr
  ```
 <div class="divider--half"></div>
 
-### API
-<div class="divider--half"></div>
+### 추가 리소스
 
-* [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
-* [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
-* [IgxColumnComponent](https://staging.infragistics.local/products/ignite-ui-angular/docs/typescript/classes/igxcolumncomponent.html)
-
-<div class="divider--half"></div>
-
-### Additional Resources
-
-* [Grid overview](grid.md)
-* [Virtualization and Performance](grid_virtualization.md)
-* [Editing](grid_editing.md)
-* [Paging](grid_paging.md)
-* [Filtering](grid_filtering.md)
-* [Sorting](grid_sorting.md)
-* [Summaries](grid_summaries.md)
-* [Column Pinning](grid_column_pinning.md)
-* [Column Resizing](grid_column_resizing.md)
-* [Selection](grid_selection.md)
-* [Searching](grid_search.md)
+* [그리드 개요](grid.md)
+* [가상화 및 성능](grid_virtualization.md)
+* [편집](grid_editing.md)
+* [페이징](grid_paging.md)
+* [필터링](grid_filtering.md)
+* [정렬](grid_sorting.md)
+* [요약](grid_summaries.md)
+* [열 핀 고정](grid_column_pinning.md)
+* [열 크기 조정](grid_column_resizing.md)
+* [선택](grid_selection.md)
+* [검색](grid_search.md)

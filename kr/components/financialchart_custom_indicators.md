@@ -1,14 +1,14 @@
----
-title: Financial Chart - Custom Indicators
-_description: The Ignite UI for Angular Financial Chart component is easily configured to display financial data using a simple and intuitive API, as once the user binds the data, the chart offers multiple ways in which the data can then be visualized and interpreted.
-_keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Chart Control, Angular Chart Example, Angular Grid Component, Angular Chart Component, Angular Financial Chart
+﻿---
+title: 금융 차트-사용자 인디케이터
+_description: Ignite UI for Angular 금융 차트 컴포넌트는 간단하고 직관적인 API를 사용하여 재무 데이터를 표시하도록 쉽게 구성되어 있으며, 사용자가 데이터를 바인딩하면 차트는 데이터를 시각화하고 해석할 수 있는 다양한 방법을 제공합니다.
+_keywords: Ignite UI for Angular, Angular, 네이티브 Angular 컴포넌트 세트, 네이티브 Angular 컨트롤, 네이티브 Angular 컴포넌트, 네이티브 Angular 컴포넌트 라이브러리, Angular 차트, Angular 차트 컨트롤, Angular 차트 예제, Angular 그리드 컴포넌트, Angular 차트 컴포넌트, Angular 금융 차트
 _language: kr
 ---
-## Custom Indicators
+## 사용자 인디케이터
 
-The `igx-financial-chart` control allows you to define custom financial indicators to display in the Indicator Pane.
+`igx-financial-chart` 컨트롤을 사용하면 인디케이터 창에 표시하는 사용자 금융지표를 정의할 수 있습니다.
 
-### Demo
+### 데모
 
 <div class="sample-container" style="height: 550px">
     <iframe id="financial-chart-custom-indicators-iframe" src='{environment:demosBaseUrl}/financial-chart-custom-indicators' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -20,9 +20,9 @@ The `igx-financial-chart` control allows you to define custom financial indicato
 
 <div class="divider--half"></div>
 
-In the `igx-financial-chart`, you can enable custom financial indicators by adding names for them to the `customIndicatorNames` property and performing calculations for them in the `applyCustomIndicators` event.
+`igx-financial-chart`에서 사용자 금융지표를 사용하려면 `customIndicatorNames` 속성에 이름을 추가하고 `applyCustomIndicators` 이벤트에서 해당 값의 계산을 실행합니다.
 
-The following code example shows how to set up and calculate two custom indicators, one featuring the Simple Moving Average (SMA) and one displaying random values.
+다음의 코드 예제는 단순 이동 평균(SMA) 및 임의 값을 표시하는 두 가지 사용자 인디케이터를 설정하고 계산하는 방법을 보여줍니다.
 
 ```html
  <igx-financial-chart

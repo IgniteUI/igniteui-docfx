@@ -1,14 +1,14 @@
----
-title: Configuration Options
-_description: The Ignite UI for Category Chart component simplifies the complexities of the data visualization domain into manageable API so that a user can bind a collection of data, a group of collections, and a data property, and let the charting control do the rest.
-_keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Chart Control, Angular Chart Example, Angular Grid Component, Angular Chart Component, Angular Category Chart
+﻿---
+title: 컨피규레이터 옵션
+_description: Ignite UI for  카테고리 차트 컴포넌트는 데이터 시각화 도메인의 복잡성을 관리 가능한 API로 단순화하여 사용자가 데이터 수집, 그룹 수집, 데이터 속성을 바인딩하고 나머지는 차트 컨트롤이 실행할 수 있도록 합니다.
+_keywords: Ignite UI for Angular, Angular, 네이티브 Angular 컴포넌트 세트, 네이티브 Angular 컨트롤, 네이티브 Angular 컴포넌트, 네이티브 Angular 컴포넌트 라이브러리, Angular 차트, Angular 차트 컨트롤, Angular 차트 예제, Angular 그리드 컴포넌트, Angular 차트 컴포넌트, Angular 카테고리 차트
 _language: kr
 ---
-## Configuration Options
+## 컨피규레이터 옵션
 
-There are many areas of the category chart that can be customized, such as the markers, chart titles and subtitles, and the chart types.
+마커, 차트 제목 및 부제, 차트 유형 등 카테고리 차트를 사용자 지정이 가능합니다.
 
-### Demo
+### 데모
 <div class="sample-container" style="height: 550px">
     <iframe id="category-chart-config-options-sample-iframe" src='{environment:demosBaseUrl}/category-chart-config-options-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -17,9 +17,9 @@ There are many areas of the category chart that can be customized, such as the m
     </button>
 </div>
 
-### Configuring Chart Visuals
+### 차트 비주얼 구성
 
-As shown in the above demo, the brushes for the chart types can be configured. The following code example sets the chart type to waterfall and changes the default color of the brushes.
+상기의 데모와 같이 차트 유형에 브러시를 구성할 수 있습니다. 다음의 코드 예제는 차트 유형을 워터폴로 설정하고 브러시의 기본 색상을 변경합니다.
 
 ```html
  <igx-category-chart
@@ -34,11 +34,11 @@ As shown in the above demo, the brushes for the chart types can be configured. T
 </igx-category-chart>
 ```
 
-### Configuring Chart Markers
+### 차트 마커 구성
 
-Markers are visual elements that display the values of data points in the Category Chart control's plot area. Markers help your end-users immediately identify a data point's value even if the value falls between major or minor grid lines.
+마커는 카테고리 차트 컨트롤의 플롯 영역의 데이터 점 값을 표시하는 시각적 요소입니다. 마커를 사용하면 최종 주 그리드 선과 보조 그리드 선 사이에 값이 있더라도 지정한 데이터 점 값을 즉시 사용자가 식별할 수 있습니다.
 
-The appearance of chart markers is managed through the `markerType`, `markerBrushes`, `markerOutlines` properties of the Category Chart, as demonstrated in the following code example.
+차트 마커의 모양은 다음의 코드 예제와 같이 카테고리 차트의 `markerType`, `markerBrushes`, `markerOutlines` 속성에 의해 처리됩니다.
 
 ```html
 <igx-category-chart
@@ -51,12 +51,12 @@ The appearance of chart markers is managed through the `markerType`, `markerBrus
 </igx-category-chart>
 ```
 
-### Configuring Chart Titles and Subtitles
+### 차트 제목 및 부제 구성
 
-The title and subtitle feature of the category chart component allows you to add information to the top section of the chart.
-When adding a title or subtitle to the chart, the content of the chart automatically resizes allowing for the title and subtitle information.
+카테고리 차트 컴포넌트의 제목 및 부제 기능을 사용하면 차트의 상단 부분에 정보를 추가할 수 있습니다.
+차트에 제목 또는 부제를 추가하면 제목 및 부제 정보에 대해 자동으로 차트 내용의 크기가 조정되도록 허용됩니다.
 
-You can customize the look and feel of the category chart’s subtitle and title in many different ways such as applying different font styles, margins, and alignment as demonstrated in the following code example.
+다음의 코드 예제와 같이 다른 글꼴 스타일, 여백 및 정렬을 적용하는 등 다양한 방법으로 카테고리 차트의 부제 및 제목의 모양과 느낌을 사용자 지정할 수 있습니다.
 
 
 ```html
@@ -73,19 +73,19 @@ You can customize the look and feel of the category chart’s subtitle and title
 </igx-category-chart>
 ```
 
-### Transition In Animations
+### 애니메이션 변환
 
-This feature allows you to animate the series as it loads a new data source. The available animation differs depending on the type of series involved. For example, the column series animates by rising from the x-axis, a line series animates by drawing from the y-axis.
+이 기능을 사용하면 새로운 데이터 소스를 로드할 때 시리즈에 애니메이션을 적용할 수 있습니다. 사용 가능한 애니메이션은 관련 시리즈의 유형에 따라 다릅니다. 예를 들면, X축이 상승하면 열 시리즈가 애니메이션을 재생하고, 선 시리즈는 Y축에서 드로잉하는 애니메이션을 재생합니다.
 
-The chart resizes allowing for the title and subtitle information.
+제목 및 부제 정보에 대한 차트 크기가 조정되도록 허용됩니다.
 
-By default, transition in animations are disabled and you can enable transition-in animations by setting the `isTransitionInEnabled` option to “true”.
+기본적으로 애니메이션 변환은 비활성화이며, `isTransitionInEnabled` 옵션을 “true”로 설정하여 애니메이션 변환을 활성화할 수 있습니다.
 
-Transition in animations can be configured in terms of transition type, speed of the individual data points relative to each other, and the easing transition (managed by an easing function).
+애니메이션 변환은 변환 유형, 데이터 점에 대한 속도 및 이징 변환(이징 함수로 관리)을 구성할 수 있습니다.
 
-The transition type is configured by setting the transitionInMode option to the desired transition name. Automatic selection of the transition type based on the series type is possible, too, by setting the property to `Auto` (default).
+변환 유형은 transitionInMode 옵션을 원하는 변환 이름으로 설정하여 구성합니다. 속성을 `Auto`(기본값)로 설정하면 시리즈 유형에 따라 변환 유형을 자동으로 선택할 수도 있습니다.
 
-The following code example demonstrates how to enable transition in animations and have the chart accordion in from the right.
+다음의 코드 예제는 애니메이션 변환을 활성화하고 차트를 오른쪽에 아코디언 표시하는 방법을 보여줍니다.
 
 ```html
  <igx-category-chart

@@ -1,26 +1,26 @@
----
-title: Paste from Excel - Native Angular | Ignite UI for Angular
-_description: Users can paste data into igxGrid that is copied from Excel.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Controls, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Grid, Angular Data Grid, Angular Grid Control, Angular Grid Component, Paste from Excel, Angular Paste from Excel
+﻿---
+title: Excel에서 붙여넣기 - 네이티브 Angular | Ignite UI for Angular
+_description: 사용자는 Excel에서 복사한 데이터를 igxGrid에 붙여넣을 수 있습니다.
+_keywords: Ignite UI for Angular, UI 컨트롤, Angular 위젯, 웹 위젯, UI 위젯, Angular, 네이티브 Angular 컨트롤, 네이티브 Angular 컴포넌트 세트, 네이티브 Angular 컨트롤, 네이티브 Angular 컴포넌트 라이브러리, Angular 그리드, Angular 데이터 그리드, Angular 그리드 컨트롤, Angular 그리드 컴포넌트, Excel에서 붙여넣기, Angular Excel에서 붙여넣기
 _language: kr
 ---
 
-## Paste from Excel
+## Excel에서 붙여넣기
 
-The Ignite UI for Angular [`IgxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) can read Excel data that is copied to the clipboard. In this section we will show you how to do this with some custom code.
+Ignite UI for Angular `IgxGrid`는 클립보드에 복사된 Excel 데이터를 읽어올 수 있습니다. 이 부분에서는 몇 가지 사용자 코드를 사용하여 실행하는 방법을 설명합니다.
 
-### Paste from Excel Demo
+### Excel에서 붙여넣기 데모
 
-This sample demonstrates how to implement pasting from Excel into the [`igxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html).
-To work with the sample open up any Excel spreadsheet, copy some rows, and paste it into the grid using the keyboard (Ctrl + V, Shift + Insert, Command + V).
+이 샘플은 Excel에서 `igxGrid`로 붙여넣기를 실행하는 방법을 보여줍니다.
+샘플을 실행하려면, Excel 스프레드 시트를 열고 행을 복사한 후 키보드(Ctrl+V, Shift+Insert, Command+V)를 사용하여 그리드에 붙여넣기를 합니다.
 
-On the top there is a dropdown button with 2 options:
+상단에는 두 가지 옵션이 있는 드롭다운 버튼이 있습니다.
 <ol>
 <li>"Paste data as new rows" – in this mode any data copied from Excel will be appended to the grid as new rows</li>
 <li>"Paste starting from active cell" – in this mode the data in the grid will be overwritten.</li>
 </ol>
 
-The new data after the paste is decorated in Italic.
+붙여넣기 후 새로운 데이터는 기울임꼴로 됩니다.
 
 <div class="sample-container loading" style="height: 570px;">
     <iframe id="excel-paste-sample-iframe" src="{environment:demosBaseUrl}/grid-paste"
@@ -32,9 +32,9 @@ The new data after the paste is decorated in Italic.
 </div>
 <div class="divider"></div>
 
-### Usage
+### 사용 방법
 
-You should add the `paste-handler` directive (you can find its code in the next section) to the [`igxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) and handle its `onDataProcessed` event. The `onDataProcessed` event has one parameter that gives you access to the Excel data in the form of an array. For reference see the `addRecords` and `updateRecords` methods.
+`paste-handler` 지시문(다음 섹션에 코드가 있음)을 `igxGrid`에 추가하고 `onDataProcessed` 이벤트를 처리해야 합니다. `onDataProcessed` 이벤트에 배열 형식의 Excel 데이터에 액세스를 제공하는 하나의 매개 변수가 있습니다. 상세한 것은 `addRecords` 및 `updateRecords` 메소드를 참조하십시오.
 
 ```html
 <igx-grid #grid1 [data]="data" [width]="'100%'" [height]="'505px'" [autoGenerate]="false" paste-handler (onDataProcessed)="dataPasted($event)" [primaryKey]="'ID'">
@@ -137,9 +137,9 @@ You should add the `paste-handler` directive (you can find its code in the next 
 ```
 <div class="divider"></div>
 
-### Paste Handler Directive
+### 붙여넣기 핸들러 지시문
 
-This is the `paste-handler` implementation. The code creates a DOM `textarea` element which is used to receive the pasted data from the clipboard. When the data is pasted in the `textarea` the directive parses it into an array and then emits a custom event `onDataProcessed` passing the parsed data.
+이것은 `paste-handler` 실행입니다. 클립보드에서 붙여넣은 데이터를 받는데 사용되는 DOM `textarea` 요소를 코드로 작성합니다. 데이터를 `textarea`에 붙여넣기 할 때 지시문은 이것을 배열에 분석하고 분석 데이터를 전달하는 사용자 이벤트 `onDataProcessed`를 내보냅니다.
 
 ```typescript
 import { Directive, EventEmitter, HostListener, Output} from "@angular/core";
@@ -220,16 +220,13 @@ export class PasteHandler {
 
 ```
 
-## API
-* [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
-
-## Additional Resources
+## 추가 리소스
 <div class="divider--half"></div>
 
-* [Excel Exporter](exporter_excel.md)
+* [Excel 내보내기](exporter_excel.md)
 
 <div class="divider--half"></div>
-Our community is active and always welcoming to new ideas.
+커뮤니티는 활동적이고 새로운 아이디어를 항상 환영합니다.
 
 * [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
 * [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

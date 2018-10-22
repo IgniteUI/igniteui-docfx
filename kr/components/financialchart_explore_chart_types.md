@@ -1,14 +1,14 @@
----
-title: Financial Chart - Explore Chart Types
-_description: The Ignite UI for Angular Financial Chart component is easily configured to display financial data using a simple and intuitive API, as once the user binds the data, the chart offers multiple ways in which the data can then be visualized and interpreted.
-_keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Chart Control, Angular Chart Example, Angular Grid Component, Angular Chart Component, Angular Financial Chart
+﻿---
+title: 금융 차트 - 차트 유형 탐색
+_description: Ignite UI for Angular 금융 차트 컴포넌트는 간단하고 직관적인 API를 사용하여 재무 데이터를 표시하도록 쉽게 구성되어 있으며, 사용자가 데이터를 바인딩하면 차트는 데이터를 시각화하고 해석할 수 있는 다양한 방법을 제공합니다.
+_keywords: Ignite UI for Angular, Angular, 네이티브 Angular 컴포넌트 세트, 네이티브 Angular 컨트롤, 네이티브 Angular 컴포넌트, 네이티브 Angular 컴포넌트 라이브러리, Angular 차트, Angular 차트 컨트롤, Angular 차트 예제, Angular 그리드 컴포넌트, Angular 차트 컴포넌트, Angular 금융 차트
 _language: kr
 ---
-## Explore Chart Types
+## 차트 유형 탐색
 
-In the `igx-financial-chart` control, an axis provides base properties for specifying appearance of axis main lines, tickmarks, titles, and axis labels.
+`igx-financial-chart` 컨트롤에서는 축은 축 기본 선, 눈금 표시, 제목 및 축 레이블의 모양을 설정하는 기본 속성을 제공합니다.
 
-### Demo
+### 데모
 
 <div class="sample-container" style="height: 550px">
     <iframe id="financial-chart-axis-types-iframe" src='{environment:demosBaseUrl}/financial-chart-axis-types' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -20,12 +20,12 @@ In the `igx-financial-chart` control, an axis provides base properties for speci
 
 <div class="divider--half"></div>
 
-By default, you do not need to explicitly set the labels. The Financial Chart will use the first appropriate property that it finds within the data you provided and will use that for the labels.
+기본적으로 레이블을 명시적으로 설정할 필요는 없습니다. 금융 차트는 제공한 데이터 내에서 최초의 적절한 속성을 사용하고 이를 레이블에 사용합니다.
 
-### Axis Interval
-In the Financial Chart control, the `yAxisInterval` property specifies how frequently major gridlines and axis labels are rendered on an axis. Similarly, the `yAxisMinorInterval` property specifies how frequently minor gridlines are rendered on an axis.
+### 축 간격
+금융 차트 컨트롤에서 `yAxisInterval` 속성은 주 격자선 및 축 레이블이 축에 렌더링되는 빈도를 지정합니다. 마찬가지로 `yAxisMinorInterval` 속성은 축에 부 격자선이 렌더링되는 빈도를 지정합니다.
 
-The following code snippet demonstrates how to configure intervals on the y-axis.
+다음 코드 조각은 Y축의 간격을 설정하는 방법을 보여줍니다.
 
 ```html
  <igx-financial-chart
@@ -42,10 +42,10 @@ The following code snippet demonstrates how to configure intervals on the y-axis
 ```
 <div class="divider--half"></div>
 
-### Axis Labels
-The Financial Chart control allows you full control over configuring and formatting the labels displayed on your chart. You can change the rotation angle, margin, horizontal/vertical alignment, opacity, padding and visibility.
+### 축 레이블
+금융 차트 컨트롤을 사용하면 차트에 표시되는 레이블의 구성 및 서식을 완전히 제어할 수 있습니다. 회전 각도, 여백, 수평/수직 정렬, 불투명도, 패딩, 표시 상태를 변경할 수 있습니다.
 
-The following code example shows how to style labels on the x-axis using style properties:
+다음 코드 예제에서는 스타일 속성을 사용하여 X축에 레이블을 스타일하는 방법을 보여줍니다.
 
 ```html
 <igx-financial-chart
@@ -64,17 +64,17 @@ The following code example shows how to style labels on the x-axis using style p
 ```
 <div class="divider--half"></div>
 
-### Axis Modes
-The `igx-financial-chart` control allows you to set different modes on the x-axis and the y-axis.
-For the x-axis you can choose between the following modes:
-- Time - This mode will render space along the x-axis for gaps in data, for example no stock trading on weekends or holidays.
-- Ordinal - This mode will collapse date areas where data does not exist. This the default value.
+### 축 모드
+`igx-financial-chart` 컨트롤을 사용하면 X축 및 Y축에 다른 모드를 설정할 수 있습니다.
+X축의 경우 다음 모드 중에서 선택할 수 있습니다:
+- Time - 이 모드는 데이터의 갭을 X축에 스페이스를 사용해 렌더링하는데 예를 들면, 주간이나 공휴일에 주식 거래가 없음을 나타냅니다.
+- Ordinal - 이 모드는 데이터가 없는 날짜 영역을 축소합니다. 이것이 기본값입니다.
 
-For the y-axis you can choose between the following modes:
-- Numeric - This mode will be charted with the exact value of the data. This is the default value.
-- PercentChange - The mode will the display the data as a percentage change relative to the first data point provided.
+Y축의 경우 다음 모드 중에서 선택할 수 있습니다:
+- Numeric - 이 모드는 데이터의 정확한 값을 차트화합니다. 이것이 기본값입니다.
+- PercentChange - 이 모드는 제공된 최초의 데이터 포인트에 상대되는 백분율 변화로 데이터를 표시합니다.
 
-The following code example shows how to set the modes for the axes:
+다음의 코드 예제는 축의 모드를 설정하는 방법을 보여줍니다:
 
 ```html
 <igx-financial-chart
@@ -87,10 +87,10 @@ The following code example shows how to set the modes for the axes:
 ```
 <div class="divider--half"></div>
 
-### Axis Range
-In the Financial Chart control, the range on numeric axes is the difference in numeric values from the beginning of the axis to the end or from the smallest to largest values in the data. The range minimum is the lowest value of the axis. The range maximum is the highest value of the axis. By default, the Financial Chart control will calculate the minimum and maximum values for the y-axis range based on the lowest and highest data points in order to maximize the chart plot area. The automatic calculation of an axis' minimum and maximum values may not be appropriate for your set of data points. For example, if your data has a minimum value of 850, you may want to set the minimum value of the axis using y-axis’s `yAxisMinimumValue` property to 800 so that there will be a space value of 50 between the axis minimum and the lowest value of data points. The same can be applied to the axis maximum value and the highest value of data points using y-axis’s `yAxisMaximumValue` property.
+### 축 범위
+금융 차트 컨트롤에서 숫자 축의 범위는 축 시작부터 끝까지이며 데이터의 최소값에서 최대값까지의 수치 값의 차이입니다. 범위 최소값은 축의 최소값입니다. 범위 최대값은 축의 최대값입니다. 기본적으로 금융 차트 컨트롤은 차트 플롯 영역을 최대화하기 위해 최저 및 최고 데이터 점을 기준으로 Y축 범위의 최소값 및 최대값을 계산합니다. 축의 최소값과 최대값을 자동으로 계산하면 데이터 점의 세트에 적합하지 않을 수 있습니다. 예를 들면, 데이터의 최소값이 850인 경우, Y축의 `yAxisMinimumValue` 속성을 사용하여 축의 최소값을 800으로 설정하면 축의 최소값과 데이터 점의 최소값 사이에 50의 스페이스 값이 생깁니다. Y축의 `yAxisMaximumValue` 속성을 사용하여 축의 최대값과 데이터 점의 최대값에도 동일하게 적용할 수 있습니다.
 
-The following sample code demonstrates how to change the axis range on the y-axis.
+다음 예제 코드는 Y축의 축 범위를 변경하는 방법을 보여줍니다.
 
 ```html
  <igx-financial-chart
@@ -103,13 +103,13 @@ The following sample code demonstrates how to change the axis range on the y-axi
 ```
 <div class="divider--half"></div>
 
-### Axis Scale
-In the Financial Chart control, you can control if the data in the chart is mapped logarithmically along the y-axis, this is done by setting the following properties:
-- `yAxisIsLogarithmic` - This specifies if the y-axis should use a logarithmic scale instead of a linear one. By default this property is set to false.
-- `yAxisLogarithmBase` - The base value to use in the log function when mapping the position of data items along the y-axis.
-This is effective only when yAxisIsLogarithmic is true.
+### 축 축척
+금융 차트 컨트롤에서 차트의 데이터가 Y축에 대해 대수적으로 매핑되는지 여부를 제어할 수 있는데 이 작업은 다음의 속성을 설정하여 실행합니다:
+- `yAxisIsLogarithmic` - Y축이 선형 축적 대신에 대수 축적을 사용하는지 여부를 지정합니다. 기본적으로 이 속성은 false로 설정됩니다.
+- `yAxisLogarithmBase` - Y축에 데이터 항목의 위치를 매핑할 때 로그 함수에 사용하는 기준값입니다.
+yAxisIsLogarithmic이 true인 경우에만 유효합니다.
 
-The following code snippet demonstrates how to set the color, length and thickness of the tickmark on the x-axis.
+다음의 코드 조각은 X축에서 눈금 표시의 색상, 길이, 두께를 설정하는 방법을 보여줍니다.
 
 ```html
  <igx-financial-chart
@@ -122,10 +122,10 @@ The following code snippet demonstrates how to set the color, length and thickne
 ```
 <div class="divider--half"></div>
 
-### Axis Tickmarks
-Tick marks display points on the axes. They represent a certain numeric point on a scale or the value of the category in a category axis. You can change the length, thickness and color of the x-axis and y-axis labels.
+### 축 눈금
+눈금 표시는 축에 점을 표시합니다. 축적의 특정 수치 점 또는 카테고리 축의 카테고리 값을 나타냅니다. X축 및 Y축 레이블의 길이, 두께, 색상을 변경할 수 있습니다.
 
-The following code snippet demonstrates how to set the color, length and thickness of the tickmark on the x-axis.
+다음의 코드 조각은 X축에서 눈금 표시의 색상, 길이, 두께를 설정하는 방법을 보여줍니다.
 
 ```html
  <igx-financial-chart
@@ -139,10 +139,10 @@ The following code snippet demonstrates how to set the color, length and thickne
 ```
 <div class="divider--half"></div>
 
-### Axis Titles
-The axis title feature of the Financial Chart control allows you to add contextual information to the x and y axes of the chart. You can customize the look and feel of the Financial Chart's x-axis and y-axis titles in many different ways such as applying different font styles, margins, and alignment.
+### 축 제목
+금융 차트 컨트롤의 축 제목 기능을 사용하면 차트의 X축 및 Y축에 맥락 정보를 추가할 수 있습니다. 금융 차트는 X축 및 Y축 제목의 글꼴 스타일, 여백, 정렬 등을 다양하게 변경하여 룩 앤드 필을 사용자 정의할 수 있습니다.
 
-The following code example shows how to set and customize the titles on the x-axis and y-axis:
+다음의 코드 예제는 X축 및 Y축의 제목을 설정하고 사용자 지정하는 방법을 보여줍니다.
 
 ```html
 <igx-financial-chart

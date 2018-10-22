@@ -1,14 +1,14 @@
----
-title: Financial Chart - Binding to Multiple Data Sources
-_description: The Ignite UI for Angular Financial Chart component is easily configured to display financial data using a simple and intuitive API, as once the user binds the data, the chart offers multiple ways in which the data can then be visualized and interpreted.
-_keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Chart Control, Angular Chart Example, Angular Grid Component, Angular Chart Component, Angular Financial Chart
+﻿---
+title: 금융 차트-복수 데이터 소스 바인딩
+_description: Ignite UI for Angular 금융 차트 컴포넌트는 간단하고 직관적인 API를 사용하여 재무 데이터를 표시하도록 쉽게 구성되어 있으며, 사용자가 데이터를 바인딩하면 차트는 데이터를 시각화하고 해석할 수 있는 다양한 방법을 제공합니다.
+_keywords: Ignite UI for Angular, Angular, 네이티브 Angular 컴포넌트 세트, 네이티브 Angular 컨트롤, 네이티브 Angular 컴포넌트, 네이티브 Angular 컴포넌트 라이브러리, Angular 차트, Angular 차트 컨트롤, Angular 차트 예제, Angular 그리드 컴포넌트, Angular 차트 컴포넌트, Angular 금융 차트
 _language: kr
 ---
-## Binding Financial Chart to Multiple Data Sources
+## 금융 차트를 복수의 데이터 소스에 바인딩
 
-The `igx-financial-chart` control can bind easily to multiple data sources, as shown in the following demo.
+`igx-financial-chart` 컨트롤은 다음 데모에서처럼 복수의 데이터 소스에 간단히 바인딩할 수 있습니다.
 
-### Demo
+### 데모
 <div class="sample-container" style="height: 550px">
     <iframe id="financial-chart-multiple-data-iframe" src='{environment:demosBaseUrl}/financial-chart-multiple-data' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -18,7 +18,7 @@ The `igx-financial-chart` control can bind easily to multiple data sources, as s
 </div>
 <div class="divider--half"></div>
 
-The financial chart can plot multiple data sources as long as your each data source is added to an array. The following code snippet demonstrates how to create a multiple data sources.
+각 데이터 소스를 배열에 추가하여 금융 차트에서 복수의 데이터 소스를 작성할 수 있습니다. 다음의 코드 조작은 복수의 데이터 소스를 작성하는 방법을 보여줍니다.
 
 
 ```typescript
@@ -43,7 +43,7 @@ let data: any = [ dataSource1, dataSource2 ]
 
 ```
 
-The following code demonstrates how to bind the financial chart to the above data.
+다음의 코드는 금융 차트를 상기의 데이터에 바인딩하는 방법을 보여줍니다.
 
 ```html
  <igx-financial-chart
@@ -53,9 +53,9 @@ The following code demonstrates how to bind the financial chart to the above dat
 
 <div class="divider--half"></div>
 
-### Additional Resources
+### 추가 리소스
 <div class="divider--half"></div>
 
-* [Chart Performance](financialchart_performance.md)
-* [Binding Real-Time Data](financialchart_real_time_data.md)
-* [Binding High Volume Data](financialchart_high_volume_data.md)
+* [차트 퍼포먼스](financialchart_performance.md)
+* [실시간 데이터 바인딩](financialchart_real_time_data.md)
+* [대량의 데이터 바인딩](financialchart_high_volume_data.md)

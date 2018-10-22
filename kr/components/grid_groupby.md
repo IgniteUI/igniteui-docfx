@@ -1,16 +1,16 @@
----
-title: Group By Component – Native Angular | Ignite UI for Angular
-_description: The Ignite UI for Angular Group By component allows users to group data based on common values for particular columns.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Components, Angular Data Grid component, Angular Data Grid control, Angular Grid component, Angular Grid control, Angular High Performance Grid, group by, groupby, grouping, column grouping
+﻿---
+title: 컴포넌트별 그룹화 - 네이티브 Angular | Ignite UI for Angular
+_description: Ignite UI for Angular 컴포넌트별 그룹화를 사용하면 특정 열에 대한 공통 값을 기준으로 데이터를 그룹화할 수 있습니다.
+_keywords: Ignite UI for Angular, UI 컨트롤, Angular 위젯, 웹 위젯, UI 위젯, Angular, 네이티브 Angular 컴포넌트 세트, 네이티브 Angular 컨트롤, 네이티브 Angular 컴포넌트 라이브러리, 네이티브 Angular 컴포넌트, Angular 데이터 그리드 컴포넌트, Angular 데이터 그리드 컨트롤, Angular 그리드 컴포넌트, Angular 그리드 컨트롤, Angular 고성능 그리드, 별 그룹화, 별 그룹, 그룹화, 열 그룹화
 _language: kr
 ---
 
-### Grid Group By
+### 그리드의 그룹화
 
-[`igxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) supports column grouping that allows for visualizing data records in hierarchical groups according to the column group values. Groups can be expanded or collapsed and the order of grouping may be changed through the UI or API.
+`igxGrid` supports column grouping that allows for visualizing data records in hierarchical groups according to the column group values. Groups can be expanded or collapsed and the order of grouping may be changed through the UI or API.
 
 
-#### Demo
+#### 데모
 
 <div class="sample-container loading" style="height:605px">
     <iframe id="grid-sample-groupby-iframe" src='{environment:demosBaseUrl}/grid-groupby' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -19,9 +19,9 @@ _language: kr
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-groupby-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-#### Initial Grouping State
+#### 초기 그룹화 상태
 
-It is possible to set the initial grouping of the grid by an array of expressions to the [`groupingExpressions`]({environment:angularApiUrl}/classes/igxgridcomponent.html#groupingexpressions) property of the grid.
+그리드의 초기 그룹화를 설정하려면 식 배열을 그리드의 `groupingExpressions` 속성에 설정합니다.
 
 ```typescript
 public ngOnInit() {
@@ -32,11 +32,11 @@ public ngOnInit() {
 }
 ```
 
-Grouping expressions implement the [`ISortingExpression`]({environment:angularApiUrl}/interfaces/isortingexpression.html) interface.
+그룹화 식은 `ISortingExpression` 인터페이스를 구현합니다.
 
-#### Group By API
+#### 그룹화 API
 
-Grouping is available through the UI and through a robust API exposed by the grid component. Developers can allow end-users to group the grid data by certain columns, by setting each column's [`groupable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#groupable) property to `true`.
+그룹화는 UI 및 그리드 컴포넌트에서 공개된 강력한 API를 통해 실행할 수 있습니다. 개발자는 각 열의 `groupable` 속성을 `true`로 설정하여 최종 사용자가 특정 열별로 그리드 데이터를 그룹화할 수 있습니다.
 
 ```html
 <igx-grid [data]="data">
@@ -53,15 +53,15 @@ public ngOnInit() {
 }
 ```
 
-During runtime the expressions are gettable and settable from the [`groupingExpressions`]({environment:angularApiUrl}/classes/igxgridcomponent.html#groupingexpressions) property. If you need to just add or change an existing expression you may also use the [`groupBy`]({environment:angularApiUrl}/classes/igxgridcomponent.html#groupby) method with either a single or an array of [`ISortingExpression`]({environment:angularApiUrl}/interfaces/isortingexpression.html).
+런타임 중에 식은 `groupingExpressions` 속성으로부터 얻거나 설정할 수 있습니다. 기존 식을 추가하거나 변경해야 하는 경우, `ISortingExpression`의 단일 또는 배열의 `groupBy` 메소드를 사용할 수도 있습니다.
 
 ```typescript
 grid.groupBy({ fieldName: 'ProductName', dir: SortingDirection.Desc, ignoreCase: true });
 ```
 
-Grouping works in conjunction with sorting and grouping expressions are applied as sorting ones even though columns may be sorted without being grouped. You will always find the grouping expressions in the [`sortingExpression`]({environment:angularApiUrl}/classes/igxgridcomponent.html#sortingexpressions) property, sorted in a way that grouped columns' expressions are always first. The sorting API will affect grouping if it changes the expression for a column that is grouped. Removing a grouping expression (ungrouping a column) also unsorts it.
+그룹화 작업은 정렬 및 그룹화 식이 열이 그룹화되지 않고 정렬된 경우에도 정렬된 열로서 적용되는 경우에 가능합니다. 그룹화 식은 항상 `sortingExpression` 속성에 있으며 그룹화된 열의 식이 항상 처음이 되도록 정렬됩니다. 정렬 API는 그룹화된 열의 식을 변경한 경우에 그룹화에 영향을 미칩니다. 그룹화 식(열 그룹 해제)을 제거하면 정렬도 제거됩니다.
 
-In addition to grouping expressions you can also control the expansion states for group rows. They are stored in a separate property of the [`igxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) component [`groupingExpansionState`]({environment:angularApiUrl}/classes/igxgridcomponent.html#groupingexpansionstate). A group row is uniquely identified based on the field name it is created for and the value it represents for each level of grouping. This means that the signature of an expansion state interface is the following:
+식을 그룹화하는 것 외에도 그룹 행의 전개 상태도 제어할 수 있습니다. 이들은 `igxGrid` 컴포넌트 `groupingExpansionState`의 별도 속성에 저장됩니다. 그룹 행은 작성된 필드 이름과 각 그룹화 수준을 나타내는 값에 따라 고유하게 식별됩니다. 전개 상태 인터페이스의 구문은 다음과 같습니다:
 
 ```typescript
 export interface IGroupByKey {
@@ -75,18 +75,18 @@ export interface IGroupByExpandState {
 }
 ```
 
-As with [`groupingExpressions`]({environment:angularApiUrl}/classes/igxgridcomponent.html#groupingexpressions), setting a list of [`IGroupByExpandState`]({environment:angularApiUrl}/interfaces/igroupbyexpandstate.html) directly to the [`groupingExpansionState`]({environment:angularApiUrl}/classes/igxgridcomponent.html#groupingexpansionstate) will change the expansion accordingly. Additionally [`igxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) exposes a method that toggles a group by the group record instance.
+`groupingExpression`으로 `IGroupByExpandState`의 목록을 직접 `groupingExpansionState`에 설정하면 전개가 변경됩니다. 또한, `igxGrid`는 그룹 레코드 인스턴스별로 그룹을 토글하는 메소드를 공개합니다.
 
 ```typescript
-    const groupRow = this.grid.groupsRecords.find(r => r.value === "France");
+    const groupRow = grid.getGroupRow([{ fieldName: 'Category', value: 'soft drinks' }]);
     grid.toggleGroup(groupRow);
 ```
 
-Groups can be created expanded (***default***) or collapsed and the expansion states would generally only contain the state opposite to the default behavior. You can control whether groups should be created expanded or not through the [`groupsExpanded`]({environment:angularApiUrl}/classes/igxgridcomponent.html#groupsexpanded) property
+그룹은 전개(***기본값***) 또는 축소된 상태로 작성할 수 있으며, 전개 상태에는 일반적으로 기본 동작과 반대되는 상태만 포함됩니다. `groupsExpanded` 속성을 통해 그룹을 전개할지 여부를 제어할 수 있습니다
 
-#### Group Row Templates
+#### 그룹 행 템플릿
 
-The group row without its expand/collapse UI is fully templatable. By default it renders a grouping icon and displays the field name and value it represents. The grouping record the template is rendered against has the following signature:
+전개/축소 UI가 없는 그룹 행은 완전한 템플릿이 가능합니다. 기본적으로 그룹화 아이콘을 렌더링하고 필드 이름과 값을 표시합니다. 템플릿이 렌더링되는 레코드 그룹화에는 다음과 같은 구문이 있습니다:
 
 ```typescript
 export interface IGroupByRecord {
@@ -94,12 +94,11 @@ export interface IGroupByRecord {
     level: number;
     records: GroupedRecords;
     value: any;
-    groupParent: IGroupByRecord;
-    groups?: IGroupByRecord[];
+    __groupParent: IGroupByRecord;
 }
 ```
 
-As an example, the following template would make the group rows summary more verbose:
+예를 들면, 다음의 템플릿은 그룹 행 요약을 더욱 상세하게 표시하도록 합니다:
 
 ```html
 <ng-template igxGroupByRow let-groupRow>
@@ -107,51 +106,41 @@ As an example, the following template would make the group rows summary more ver
 </ng-template>
 ```
 
-#### Keyboard Navigation
+#### 키보드 탐색
 
-The grouping UI supports the following keyboard interactions:
+그룹화 UI는 다음과 같은 키보드 상호 작용을 지원합니다:
 
-- For group rows (focus should be on the row or the expand/collapse cell)
-   - <kbd>SPACE</kbd> - toggles the group
+- 그룹 행(행 또는 전개/축소 셀에 포커스)
+   - <kbd>SPACE</kbd> - 그룹을 토글
 
-- For group [`igxChip`]({environment:angularApiUrl}/classes/igxchipcomponent.html) components in the group by area (focus should be on the chip)
-   - <kbd>SHIFT</kbd> + <kbd>LEFT</kbd> - moves the focused chip left, changing the grouping order, if possible
-   - <kbd>SHIFT</kbd> + <kbd>RIGHT</kbd> - moves the focused chip right, changing the grouping order, if possible
-   - <kbd>SPACE</kbd> - changes the sorting direction
-   - <kbd>DELETE</kbd> - ungroups the field
-   - The seperate elements of the chip are also focusable and can be interacted with using the <kbd>ENTER</kbd> key.
+- 그룹 영역의 `igxChip` 컴포넌트의 그룹화(칩에 포커스)
+   - <kbd>SHIFT</kbd> + <kbd>LEFT</kbd> - 포커스를 맞춘 칩의 왼쪽으로 이동하고 가능한 경우 그룹화 순서를 변경
+   - <kbd>SHIFT</kbd> + <kbd>RIGHT</kbd> - 포커스를 맞춘 칩의 오른쪽으로 이동하고 가능한 경우 그룹화 순서를 변경
+   - <kbd>SPACE</kbd> - 정렬 방향을 변경
+   - <kbd>DELETE</kbd> - 필드의 그룹을 해제
+   - 칩의 개별 요소를 포커스할 수 있으며 <kbd>ENTER</kbd> 키를 사용하여 상호 작용할 수 있습니다.
 
-### Known Limitations
+### 알려진 제한 사항
 
-|Limitation|Description|
+|제한 사항|설명|
 |--- |--- |
-|Maximum amount of grouped columns is 10. | If more than 10 columns are grouped an error is thrown.
+|그룹화된 열의 최대값은 10입니다. | 10개 이상의 열이 그룹화되면 오류가 발생합니다.
 
-### API
-
-* [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
-* [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
-* [ISortingExpression]({environment:angularApiUrl}/interfaces/isortingexpression.html)
-* [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
-* [IGroupByExpandState]({environment:angularApiUrl}/interfaces/igroupbyexpandstate.html)
-* [IgxChipComponent]({environment:angularApiUrl}/classes/igxchipcomponent.html)
-* [IgxChipComponent Styles]({environment:sassApiUrl}/index.html#function-igx-chip-theme)
-
-### Additional Resources
+### 추가 리소스
 <div class="divider--half"></div>
 
-* [Grid overview](grid.md)
-* [Virtualization and Performance](grid_virtualization.md)
-* [Paging](grid_paging.md)
-* [Filtering](grid_filtering.md)
-* [Sorting](grid_sorting.md)
-* [Column Moving](grid_column_moving.md)
-* [Summaries](grid_summaries.md)
-* [Column Resizing](grid_column_resizing.md)
-* [Selection](grid_selection.md)
+* [그리드 개요](grid.md)
+* [가상화 및 성능](grid_virtualization.md)
+* [페이징](grid_paging.md)
+* [필터링](grid_filtering.md)
+* [정렬](grid_sorting.md)
+* [열 이동](grid_column_moving.md)
+* [요약](grid_summaries.md)
+* [열 크기 조정](grid_column_resizing.md)
+* [선택](grid_selection.md)
 
 <div class="divider--half"></div>
-Our community is active and always welcoming to new ideas.
+커뮤니티는 활동적이고 새로운 아이디어를 항상 환영합니다.
 
 * [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
 * [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

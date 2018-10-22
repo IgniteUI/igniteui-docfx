@@ -1,15 +1,15 @@
----
-title: Grid paging
-_description: The Ignite UI for Angular Data Grid control features the fastest, touch-responsive data-rich grid with popular features, including hierarchical and list views.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Data Grid component, Angular Data Grid control, Angular Grid component, Angular Grid control, Angular High Performance Grid, Paging, Pagination, Page
+﻿---
+title: 그리드 페이징
+_description: Ignite UI for Angular 데이터 그리드 컨트롤은 신속하며, 계층 및 목록 보기를 포함하여 널리 사용되는 기능으로 풍부한 터치 반응 데이터 그리드를 제공합니다.
+_keywords: Ignite UI for Angular, UI 컨트롤, Angular 위젯, 웹 위젯, UI 위젯, Angular, 네이티브 Angular 컴포넌트 세트, 네이티브 Angular 컨트롤, 네이티브 Angular 컴포넌트 라이브러리, Angular 데이터 그리드 컴포넌트, Angular 데이터 그리드 컨트롤, Angular 그리드 컴포넌트, Angular 그리드 컨트롤, Angular 고성능 그리드, 페이징, 페이지 매김, 페이지
 _language: kr
 ---
 
-### Grid Paging
+### 그리드 페이징
 
-In Ignite UI for Angular, **Paging** is initialized on the root `igx-grid` component and is configurable via the [`paging`]({environment:angularApiUrl}/classes/igxgridcomponent.html#paging) and [`perPage`]({environment:angularApiUrl}/classes/igxgridcomponent.html#perpage) inputs.
+Ignite UI for Angular에서 **페이징**이 루트 `igx-grid` 컴포넌트에서 초기화되며 `paging` 및 `perPage`입력을 통해 구성할 수 있습니다.
 
-#### Demo
+#### 데모
 
 <div class="sample-container loading" style="height:605px">
     <iframe id="grid-paging-sample-iframe" src='{environment:demosBaseUrl}/grid-paging-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -20,13 +20,13 @@ In Ignite UI for Angular, **Paging** is initialized on the root `igx-grid` compo
 </div>
 <div class="divider--half"></div>
 
-Paging is a Boolean property that controls whether the feature is enabled, and the [`perPage`]({environment:angularApiUrl}/classes/igxgridcomponent.html#perpage) property controls the visible records per page. Let’s update our grid to enable paging:
+페이징은 해당 기능이 사용되는지 여부를 제어하는 불 속성이며 `perPage` 속성은 페이지당 표시할 수 있는 레코드를 제어합니다. 페이징을 활성화하기 위해 그리드를 업데이트합니다:
 
 ```html
 <igx-grid #grid1 [data]="data" [paging]="true" [perPage]="10" [paginationTemplate]="pager" height="500px" width="100%" displayDensity="cosy"></igx-grid>
 ```
 
-The paging area supports templating by the user, if a template reference is passed to the grid during initialization. The example below is a template where the pagination is controlled through an input.
+페이징 영역은 초기화 중에 템플릿 참조가 그리드에 전달되는 경우 사용자가 템플릿화를 할 수 있습니다. 아래 예제는 페이징이 입력을 통해 제어되는 템플릿입니다.
 
 ```html
 <ng-template #myTemplate let-grid>
@@ -40,7 +40,7 @@ The paging area supports templating by the user, if a template reference is pass
 </igx-grid>
 ```
 
-Paging can also be done programmatically through the Grid API, using the [`paginate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#paginate), [`previousPage`]({environment:angularApiUrl}/classes/igxgridcomponent.html#previouspage), [`nextPage`]({environment:angularApiUrl}/classes/igxgridcomponent.html#nextpage) methods:
+페이징은 Grid API를 사용해 프로그래밍 방식으로도 실행할 수 있습니다:
 
 ```typescript
 // Go to page 6
@@ -64,12 +64,12 @@ this.grid.perPage = 25;
 this.grid.paging = false;
 ```
 
-### Remote Data
+### 원격 데이터
 
-Paging could also operate with remote data.
+페이징은 원격 데이터에서도 작동할 수 있습니다.
 
-Lets first declare our service that will be responsible for data fetching.
-We will need the count of all the data items in order to calculate pages count and we will add this logic to our service.
+먼저 서비스를 선언하여 데이터 가져오기를 실행합니다.
+페이지 수를 계산하기 위해 모든 데이터 항목 수가 필요하며 이 논리를 서비스에 추가할 것입니다.
 
 ```typescript
 @Injectable()
@@ -105,7 +105,7 @@ export class RemoteService {
     }
 }
 ```
-After declaring the service, we need to create a component, which will be responsible for the grid construction and data subscription.
+서비스를 선언 한 후에는 그리드 생성 및 데이터 서브스크립션을 위한 컴포넌트를 작성해야 합니다.
 
 ```typescript
 export class RemotePagingGridSample implements OnInit, AfterViewInit {
@@ -123,23 +123,23 @@ export class RemotePagingGridSample implements OnInit, AfterViewInit {
     }
 }
 ```
-We need to create a custom pager template to get the data only for the requested page and to pass the correct `skip` and `top` parameters to the remote service according to the selected page and items [`perPage`]({environment:angularApiUrl}/classes/igxgridcomponent.html#perpage).
-We also need to take care of the disabling and enabling of the pager buttons.
+요청된 페이지에 대한 데이터만 가져오고 선택된 페이지 및 `items per page`에 따라 정확한 `skip` 및 `top` 매개 변수를 원격 서비스에 전달하려면 사용자 호출 템플릿을 생성해야 합니다.
+또한, 호출 버튼의 비활성화 및 활성화도 관리해야 합니다.
 
 ```html
 <ng-template #customPager>
     <button [disabled]="firstPage" (click)="paginate(0, false)" igxButton="icon" igxRipple igxRippleCentered="true">
-        <igx-icon fontSet="material">first_page</igx-icon>
+        <igx-icon fontSet="material" name="first_page"></igx-icon>
     </button>
     <button [disabled]="firstPage" (click)="previousPage()" igxButton="icon" igxRipple igxRippleCentered="true">
-        <igx-icon fontSet="material">chevron_left</igx-icon>
+        <igx-icon fontSet="material" name="chevron_left"></igx-icon>
     </button>
     <span>{{ page + 1 }} of {{totalPages}}</span>
     <button [disabled]="lastPage" (click)="nextPage()" igxRipple igxRippleCentered="true" igxButton="icon">
-        <igx-icon fontSet="material">chevron_right</igx-icon>
+        <igx-icon fontSet="material" name="chevron_right"></igx-icon>
     </button>
     <button [disabled]="lastPage" (click)="paginate(totalPages - 1, false)" igxButton="icon" igxRipple igxRippleCentered="true">
-        <igx-icon fontSet="material">last_page</igx-icon>
+        <igx-icon fontSet="material" name="last_page"></igx-icon>
     </button>
     <select style="margin-left: 1rem;" (change)="perPage = parseToInt($event.target.value);">
         <option [value]="val" [selected]="perPage == val" *ngFor="let val of [5, 10, 15, 25, 50, 100, 500]">{{ val }}</option>
@@ -195,7 +195,7 @@ public ngAfterViewInit() {
 }
 
 ```
-The last step will be to declare our template for the gird.
+마지막 단계는 그리드의 템플릿을 선언하는 것입니다.
 
 ```html
 <igx-grid #grid1 [data]="data | async" width="960px" height="550px" [paging]="true" [perPage]="perPage">
@@ -208,9 +208,9 @@ The last step will be to declare our template for the gird.
 </igx-grid>
 ```
 
-After all the changes above, the following result will be achieved.
+상기의 모든 변경 후 다음과 같은 결과가 됩니다.
 
-#### Demo
+#### 데모
 
 <div class="sample-container loading" style="height:605px">
     <iframe id="grid-remote-paging-sample-iframe" src='{environment:demosBaseUrl}/grid-remote-paging-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -221,26 +221,21 @@ After all the changes above, the following result will be achieved.
 </div>
 <div class="divider--half"></div>
 
-### API
-* [IgxGridComponent API]({environment:angularApiUrl}/classes/igxgridcomponent.html)
-* [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
-* [IgxGridPaginator Styles]({environment:sassApiUrl}/index.html#function-igx-grid-paginator-theme)
-
-### Additional Resources
+### 추가 리소스
 <div class="divider--half"></div>
 
-* [Grid overview](grid.md)
-* [Virtualization and Performance](grid_virtualization.md)
-* [Filtering](grid_filtering.md)
-* [Sorting](grid_sorting.md)
-* [Summaries](grid_summaries.md)
-* [Column Moving](grid_column_moving.md)
-* [Column Pinning](grid_column_pinning.md)
-* [Column Resizing](grid_column_resizing.md)
-* [Selection](grid_selection.md)
+* [그리드 개요](grid.md)
+* [가상화 및 성능](grid_virtualization.md)
+* [필터링](grid_filtering.md)
+* [정렬](grid_sorting.md)
+* [요약](grid_summaries.md)
+* [열 이동](grid_column_moving.md)
+* [열 핀 고정](grid_column_pinning.md)
+* [열 크기 조정](grid_column_resizing.md)
+* [선택](grid_selection.md)
 
 <div class="divider--half"></div>
-Our community is active and always welcoming to new ideas.
+커뮤니티는 활동적이고 새로운 아이디어를 항상 환영합니다.
 
 * [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
 * [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

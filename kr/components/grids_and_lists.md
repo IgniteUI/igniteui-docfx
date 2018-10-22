@@ -1,7 +1,7 @@
----
-title: Data Grids and Lists Components
-_description: Ignite UI for Angular provides the fastest Angular Data Grid, high-speed rendering, and Material-based components for a powerful Angular grid and features. 
-_keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Grid, Angular Data Grid, Angular Grid Control, Angular Grid Component
+﻿---
+title: 데이터 그리드 및 목록 컴포넌트
+_description: Ignite UI for Angular는 고속 Angular 데이터 그리드, 고속 렌더링, 머티리얼 디자인의 컴포넌트를 제공하여 강력한 Angular 그리드 및 기능을 실행합니다. 
+_keywords: Ignite UI for Angular, Angular, 네이티브 Angular 컴포넌트 세트, 네이티브 Angular 컨트롤, 네이티브 Angular 컴포넌트, 네이티브 Angular 컴포넌트 라이브러리, Angular 그리드, Angular 데이터 그리드, Angular 그리드 컨트롤, Angular 그리드 컴포넌트
 _language: kr
 ---
 

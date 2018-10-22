@@ -1,15 +1,15 @@
----
-title: Column Resizing Component - Native Angular | Ignite UI for Angular
-_description: With deferred column resizing, see a temporary resize indicator while the drag operation is in effect with using the Ignite UI for Angular Column Resizing Component.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Data Grid component, Angular Data Grid control, Native Angular Components, Angular Grid component, Angular Grid control, Angular High Performance Grid, Column Resizing, Deferred Column Reszing, Grid Column Resizing, Angular Grid Column Resizing, Angular column
+﻿---
+title: 열 크기 조정 컴포넌트- 네이티브 Angular | Ignite UI for Angular
+_description: 열 크기 조정의 지연에서는 Ignite UI for Angular 열 크기 조정 컴포넌트를 사용하면 드래그 조작의 실행 중에 크기 조정 인디케이터가 일시적으로 표시됩니다.
+_keywords: Ignite UI for Angular, UI 컨트롤, Angular 위젯, 웹 위젯, UI 위젯, Angular, 네이티브 Angular 컴포넌트 세트, 네이티브 Angular 컨트롤, 네이티브 Angular 컴포넌트 라이브러리, Angular 데이터 그리드 컴포넌트, Angular 데이터 그리드 컨트롤, 네이티브 Angular 컴포넌트, Angular 그리드 컴포넌트, Angular 그리드 컨트롤, Angular 고성능 그리드, 열 크기 조정, 지연된 열 크기 조정, 그리드 열 크기 조정, Angular 그리드 크기 조정, Angular 열
 _language: kr
 ---
 
-### Grid Column Resizing
+### 그리드 열 크기 조정
 
-With deferred column resizing, the user will see a temporary resize indicator while the drag operation is in effect. The new column size is only put into its place once the drag operation has ended.
+열 크기 조정의 지연에서는 드래그 조작의 실행 중에 크기 조정 인디케이터가 일시적으로 표시됩니다. 드래그 조작이 완료되면 새로운 열 크기가 적용됩니다.
 
-#### Grid Column Resizing Demo
+#### 그리드 열 크기 조정 데모
 
 <div class="sample-container loading" style="height:550px">
     <iframe id="grid-resizing-sample-iframe" src='{environment:demosBaseUrl}/grid-resizing-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -20,14 +20,14 @@ With deferred column resizing, the user will see a temporary resize indicator wh
 </div>
 <div class="divider--half"></div>
 
-**Column resizing** is also enabled per-column level, meaning that the [**igx-grid**]({environment:angularApiUrl}/classes/igxgridcomponent.html) can have a mix of resizable and non-resizable columns. This is done via the [`resizable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#resizable) input of the [`igx-column`]({environment:angularApiUrl}/classes/igxcolumncomponent.html).
+**열 크기 조정**은 열 단위 수준에서도 사용할 수 있는데 즉, **igx-grid**에 크기를 조정 가능한 열 및 크기를 조정할 수 없는 열을 혼합하여 사용할 수 있습니다. 이는 `igx-column`의 `resizable` 입력을 통해 제어할 수 있습니다.
 
 ```html
 <igx-column [field]="'ID'" width="100px" [resizable]="true"></igx-column>
 <igx-column [field]="'CompanyName'" width="100px" [resizable]="true"></igx-column>
 ```
 
-You can subscribe to the [`onColumnResized`]({environment:angularApiUrl}/classes/igxgridcomponent.html#oncolumnresized) event of the [`igx-grid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) to implement some custom logic when a column is resized. Both, previous and new column widths, as well as the [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) object, are exposed through the event arguments.
+`Igx-grid`의 `onColumnResized` 이벤트를 처리하고 열의 크기를 조정할 때 일부 사용자 논리를 구현할 수 있습니다. `IgxColumnComponent` 객체뿐 아니라 이전 및 새로운 열 너비는 이벤트 인수를 통해 공개됩니다.
 
 ```html
 <igx-grid [data]="data" (onColumnResized)="onResize($event)" [autoGenerate]="false">
@@ -44,9 +44,9 @@ public onResize(event) {
 }
 ```
 
-#### Restrict column resizing
+#### 열 크기 조정 제한
 
-You can also configure the minimum and maximum allowable column widths. This is done via the [`minWidth`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#minwidth) and [`maxWidth`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#maxwidth) inputs of the [`igx-column`]({environment:angularApiUrl}/classes/igxcolumncomponent.html). In this case the resize indicator drag operation is restricted to notify the user that the column cannot be resized outside the bounderies defined by [`minWidth`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#minwidth) and [`maxWidth`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#maxwidth).
+최소 및 최대 허용 열 너비를 구성할 수도 있습니다. 이는 `igx-column`의 `minWidth` 및 `maxWidth` 입력을 통해 제어할 수 있습니다. 이 경우, 크기 조정 인디케이터의 드래그 조작은 열이 `minWidth` 및 `maxWidth`에 의해 정의된 범위 이외로 크기를 조정할 수 없음을 사용자에게 알리도록 제한됩니다.
 
 ```html
 <igx-column [field]="'ContactName'" width="100px" [resizable]="true"
@@ -54,14 +54,13 @@ You can also configure the minimum and maximum allowable column widths. This is 
 ```
 
 > [!NOTE]
-> Resizing a column below **88px** is not possible, even when [`minWidth`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#minwidth) is set to a value less than that.
+> `minWidth`가 그보다 작은 값으로 설정된 경우에도 열 크기를 **88px** 미만으로 조정할 수 없습니다.
 
-#### Auto-size columns on double click
+#### 더블 클릭으로 자동 크기 열 조정
 
-Each column can be **auto sized** by double clicking the right side of the header - the column will be sized to the longest currently visible cell value, including the header itself. This behavior is enabled by default, no additional configuration is needed. However, the column will not be autosized in case [`maxWidth`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#maxwidth) is set on that column and the new width exceeds that [`maxWidth`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#maxwidth) value. In this case the column will be sized acccording to preset [`maxWidth`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#maxwidth) value.
+각 열은 헤더의 오른쪽을 더블 클릭하여 **자동 크기 조정**을 할 수 있는데, 열은 현재 표시되어있는 헤더를 포함하여 가장 긴 셀 값에 크기를 설정합니다. 이 동작은 기본적으로 사용되며 추가 구성이 필요하지 않습니다. 그러나, 해당 열에 `maxWidth`가 설정되고 새로운 너비가 `maxWidth` 값을 초과하는 경우, 열이 자동 크기 조정되지 않습니다. 이 경우, 열은 사전 설정된 `maxWidth` 값에 따라 크기가 조정됩니다.
 
-You can also autosize a column dynamically using the exposed [`autosize()`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#autosize) method on [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html).
-
+또한, `IgxColumnComponent`의 `autosize()` 메소드를 사용하여 동적으로 열 크기를 자동 조정할 수 있습니다.
 ```typescript
 @ViewChild('grid') grid: IgxGridComponent;
 
@@ -69,33 +68,56 @@ let column = this.grid.columnList.filter(c => c.field === 'ID')[0];
 column.autosize();
 ```
 
-#### Pinned columns resizing
+#### 핀 고정된 열 크기 조정
 
-Pinned columns can also be resized. However, resizing is limited so that the overall width of the pinned columns container cannot become larger than 80% of the overall grid width.
-Again, if you try to autosize a pinned column and the new width will cause the pinned columns container to exceed those 80% of the overall grid with, autosizing will be discarded. We just want to make sure that the unpinned columns are always visible and availble to the user!
+핀 고정된 열 크기를 조정할 수도 있습니다. 그러나, 핀 고정된 열 컨테이너의 전체 너비가 그리드 전체 너비의 80%보다 크게 할 수 없기 때문에 크기 조정이 제한됩니다.
+다시 말하면, 핀 고정 열을 자동 크기 조정에서 새로운 너비로 인해 핀 고정 열 컨테이너가 그리드 전체 너비의 80%를 초과하는 경우, 자동 크기 조정이 무시됩니다. 이는 핀 고정되어 있지 않은 열을 항상 표시하여 사용자가 사용할 수 있도록 하기 위함입니다.
 
-### API References
-<div class="divider--half"></div>
+### API 요약
 
-* [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
-* [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
-* [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#mixin-igx-grid)
+#### 입력
+**열 크기 조정**에서 다음의 입력을 사용할 수 있습니다:
 
-### Additional Resources
-<div class="divider--half"></div>
-
-* [Grid overview](grid.md)
-* [Virtualization and Performance](grid_virtualization.md)
-* [Paging](grid_paging.md)
-* [Filtering](grid_filtering.md)
-* [Sorting](grid_sorting.md)
-* [Summaries](grid_summaries.md)
-* [Column Moving](grid_column_moving.md)
-* [Column Pinning](grid_column_pinning.md)
-* [Selection](grid_selection.md)
+| 이름 | 형식 | 설명 |
+| :--- | :--- | :--- |
+|`resizable`|boolean|열을 크기 조정할 수 있도록 설정|
+|`minWidth`|string|열 최소 너비|
+|`maxWidth`|string|열 최대 너비|
 
 <div class="divider--half"></div>
-Our community is active and always welcoming to new ideas.
+
+#### 출력
+**열 크기 조정**에서 다음의 출력을 사용할 수 있습니다:
+
+| 이름 | 설명 |
+| :--- | :--- |
+|`onColumnResized`|열의 크기가 변경될 때마다 발생합니다. 열 객체, 이전 및 새 열 너비를 반환합니다.|
+
+<div class="divider--half"></div>
+
+#### 메소드
+**열 크기 조정**에서 다음의 메소드를 사용할 수 있습니다:
+| 이름 | 설명 |
+| :--- | :--- |
+| `autosize` | 헤더 셀을 포함하여 현재 표시되어 있는 가장 긴 셀 값으로 열을 자동 크기 조정합니다. |
+
+<div class="divider"></div>
+
+### 추가 리소스
+<div class="divider--half"></div>
+
+* [그리드 개요](grid.md)
+* [가상화 및 성능](grid_virtualization.md)
+* [페이징](grid_paging.md)
+* [필터링](grid_filtering.md)
+* [정렬](grid_sorting.md)
+* [요약](grid_summaries.md)
+* [열 이동](grid_column_moving.md)
+* [열 핀 고정](grid_column_pinning.md)
+* [선택](grid_selection.md)
+
+<div class="divider--half"></div>
+커뮤니티는 활동적이고 새로운 아이디어를 항상 환영합니다.
 
 * [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
 * [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
