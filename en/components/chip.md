@@ -103,7 +103,7 @@ public chipRemoved(event: IBaseChipEventArgs) {
 
 ![Dragging](../images/chip/dragging.gif)
 
-The chip can be dragged by the end-user in order to change it's position. The moving/dragging is disabled by default, but can be enabled with an option called [`draggable`]({environment:angularApiUrl}/classes/igxchipcomponent.html#draggable). You need to handle the actual moving of the chip in the data source manually.
+The chip can be dragged by the end-user in order to change it's position. The moving/dragging is disabled by default, but can be enabled with an option called [`draggable`]({environment:angularApiUrl}/classes/igxchipcomponent.html#draggable). You need to handle the actual moving of the chip in the template manually. This is where the chip area comes in handy since it provides [`onReorder`]({environment:angularApiUrl}/classes/igxchipsareacomponent.html#onreorder) event that returns the new order if a chip is dragged over another chip to take its place.
 
 ```html
 <igx-chips-area (onReorder)="chipsOrderChanged($event)">
