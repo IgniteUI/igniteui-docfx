@@ -158,20 +158,22 @@ Define the element that you want ot set a shadow on:
 
 ```html
 ...
-    <div>
-        <div class="elevation-sample elevate">
-            <p class="variable">
-                $elevate-8
-            </p>
-            <p class="css">
+<div class="wrapper">
+    <div class="elevation-sample">
+        <p class="variable">
+            $elevate-8
+        </p>
+        <pre class="formatter">
+            <code class ="css">
                 box-shadow:
-                <br>0 5px 5px -3px palette(gray, 400),
-                <br>0 8px 10px 1px palette(gray, 300),
-                <br>0 3px 14px 2px palette(gray, 200)
-                <br>The are the default elevation colors 
-            </p>
-        </div>
+                0 5px 5px -3px palette(gray, 400),
+                0 8px 10px 1px palette(gray, 300),
+                0 3px 14px 2px palette(gray, 200)
+            </code>
+                These are the default elevation colors            
+        </pre>
     </div>
+</div>
 ```
 
 Then apply the [igx-elevation]({environment:sassApiUrl}/index.html#function-igx-elevation) to the `scss` class of the element:
@@ -181,7 +183,7 @@ Then apply the [igx-elevation]({environment:sassApiUrl}/index.html#function-igx-
 @import '~igniteui-angular/lib/core/styles/themes/utilities';
 
     //Apply the elevation level
-.elevation-sample.elevate{
+.elevation-sample {
     box-shadow: igx-elevation($elevations, 8);
 }
 ```
@@ -200,15 +202,15 @@ Now lets change the shadow color and the elevation level:
  ```scss
 ...
 //Define the 3 elevation colors
-$color-1:#99BFAA;
-$color-2:#5C868D;
-$color-3:#5C3D46;    
+$color-1: #99BFAA;
+$color-2: #5C868D;
+$color-3: #5C3D46; 
 
 //Define the shadow elevations
-$shadow-elevations: igx-elevations($color-1,$color-2,$color-3);
+$shadow-elevations: igx-elevations($color-1, $color-2, $color-3);
 
 //Apply the custom shadow elevations and change the elevation level 
-.elevation-sample.elevate{
+.elevation-sample {
     box-shadow: igx-elevation($shadow-elevations, 24);
 }
 ```
