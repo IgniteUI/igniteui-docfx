@@ -221,7 +221,7 @@ export class AppModule {}
     </button>
 </div>
 
-You can configure the [`igxDropDown`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) to behave as a menu. To do this, set the [`ISelectionEventArgs`]({environment:angularApiUrl}/interfaces/iselectioneventargs.html) [`cancel`]({environment:angularApiUrl}/interfaces/iselectioneventargs.html#cancel) member to *true* in the [`onSelection`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html#onselection) event handler. Thus, the selected item is not preserved on menu opening and selection is invalidated. Still, you can get the clicked item throught the [`ISelectionEventArgs`]({environment:angularApiUrl}/interfaces/iselectioneventargs.html) [`newSelection`]({environment:angularApiUrl}/interfaces/iselectioneventargs.html#newselection) member value.
+You can configure the [`igxDropDown`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) to behave as a menu. To do this, set the [`ISelectionEventArgs`]({environment:angularApiUrl}/interfaces/iselectioneventargs.html) [`cancel`]({environment:angularApiUrl}/interfaces/iselectioneventargs.html#cancel) member to *true* in the [`onSelection`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html#onselection) event handler. Thus, the selected item is not preserved on menu opening and selection is invalidated. Still, you can get the clicked item through the [`ISelectionEventArgs`]({environment:angularApiUrl}/interfaces/iselectioneventargs.html) [`newSelection`]({environment:angularApiUrl}/interfaces/iselectioneventargs.html#newselection) member value.
 
 ```html
 <!-- dropdown.component.html -->

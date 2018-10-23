@@ -224,7 +224,7 @@ If the sample is configured properly, a list  of countries should be displayed a
     </button>
 </div>
 
-You can configure the [`igxDropDown`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) to behave as a menu. To do this, set the [`ISelectionEventArgs`]({environment:angularApiUrl}/interfaces/iselectioneventargs.html) [`cancel`]({environment:angularApiUrl}/interfaces/iselectioneventargs.html#cancel) member to *true* in the [`onSelection`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html#onselection) event handler. Thus, the selected item is not preserved on menu opening and selection is invalidated. Still, you can get the clicked item throught the [`ISelectionEventArgs`]({environment:angularApiUrl}/interfaces/iselectioneventargs.html) [`newSelection`]({environment:angularApiUrl}/interfaces/iselectioneventargs.html#newselection) member value.
+You can configure the [`igxDropDown`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) to behave as a menu. To do this, set the [`ISelectionEventArgs`]({environment:angularApiUrl}/interfaces/iselectioneventargs.html) [`cancel`]({environment:angularApiUrl}/interfaces/iselectioneventargs.html#cancel) member to *true* in the [`onSelection`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html#onselection) event handler. Thus, the selected item is not preserved on menu opening and selection is invalidated. Still, you can get the clicked item through the [`ISelectionEventArgs`]({environment:angularApiUrl}/interfaces/iselectioneventargs.html) [`newSelection`]({environment:angularApiUrl}/interfaces/iselectioneventargs.html#newselection) member value.
 
 ```html
 <!-- dropdown.component.html -->
@@ -298,7 +298,7 @@ public toggleMenu(eventArgs) {
 
 ### igxDropDownItemNavigation directive
 
-To enable keyboard navigation for the `igxDropDown` component, the [igxDropDownItemNavigation]({environment:angularApiUrl}/classes/igxdropdownitemnavigationdirective.html) directive can be applied. The directive should be applied to the active(focused) element or a parent container. This will allow the directive to handle all triggered events. By default the the igxDropDown or its items don't take focus, so for example the directive can be placed on a button or input that controls the drop down.
+To enable keyboard navigation for the `igxDropDown` component, the [igxDropDownItemNavigation]({environment:angularApiUrl}/classes/igxdropdownitemnavigationdirective.html) directive can be applied. The directive should be applied to the active(focused) element or a parent container. This will allow the directive to handle all triggered events. By default, igxDropDown or its items don't take focus, so for example the directive can be placed on a button or input that controls the drop down.
 The [igxDropDownItemNavigation]({environment:angularApiUrl}/classes/igxdropdownitemnavigationdirective.html) directive value should be target component that is or extends [IgxDropDownBase]({environment:angularApiUrl}/classes/igxdropdownbase.html) class.
 
 
