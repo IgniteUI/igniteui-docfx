@@ -6,7 +6,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ## TextHighlight Directive
 
-The `IgxTextHighlight` directive in Ignite UI for Angular is used to highlight parts of a text, providing options for case sensitive searches and to highlight only exact matches. It also allows the developer to keep an active highlight, which can be any of the already highlighted parts.
+The [`IgxTextHighlight`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html) directive in Ignite UI for Angular is used to highlight parts of a text, providing options for case sensitive searches and to highlight only exact matches. It also allows the developer to keep an active highlight, which can be any of the already highlighted parts.
 
 ### TextHighlight Demo
 <div class="sample-container loading" style="height: 260px;">
@@ -22,7 +22,7 @@ The `IgxTextHighlight` directive in Ignite UI for Angular is used to highlight p
 
 ### Usage
 
-To get started with the Ignite UI for Angular TextHighlight directive, let's first import the **IgxTextHighlightModule** in the **app.module.ts** file along with the other Ignite UI for Angular modules we need for our application.
+To get started with the Ignite UI for Angular TextHighlight directive, let's first import the [`IgxTextHighlightModule`]({environment:angularApiUrl}/classes/igxtexthighlightmodule.html) in the **app.module.ts** file along with the other Ignite UI for Angular modules we need for our application.
 
 ```typescript
 // app.module.ts
@@ -40,7 +40,7 @@ import { IgxButtonModule, IgxInputGroupModule,
 export class AppModule {}
 ```
 
-Then, lets create a search box which we can use to highlight different parts of the text. We will use Ignite UI for Angular's [InputGroup](https://www.infragistics.com/products/ignite-ui-angular/angular/components/input_group.html) component in which we will add a text input with buttons for clear matches, find next and find previous and a button for specifying whether the search will be case sensitive or not. Also it has a label for how many matches we have found.
+Then, lets create a search box which we can use to highlight different parts of the text. We will use Ignite UI for Angular's [InputGroup](input_group.md) component in which we will add a text input with buttons for clear matches, find next and find previous and a button for specifying whether the search will be case sensitive or not. Also it has a label for how many matches we have found.
 
 ```html
 <div class="search-container">
@@ -197,7 +197,7 @@ If the sample is configured properly, the final result should look like that:
 <div class="divider"></div>
 
 ### Search across multiple containers
-The igxTextHighlight allows you to search across multiple containers which all share one active highlight. This is done by having the same group value across multiple TextHighlight directives which have all separate containers. In order to setup the sample we will reuse the search box from the previous sample, but this time we will add two paragraphs. Again, note that they both are in their own containers, but this time the second one has a different row value.
+The [`igxTextHighlight`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html) allows you to search across multiple containers which all share one active highlight. This is done by having the same group value across multiple TextHighlight directives which have all separate containers. In order to setup the sample we will reuse the search box from the previous sample, but this time we will add two paragraphs. Again, note that they both are in their own containers, but this time the second one has a different row value.
 
 ```html
     <div>
@@ -302,36 +302,14 @@ All the rest of the code in the .ts file is identical to the single container ex
 
 <div class="divider"></div>
 
-### API Summary
+### API and Style References
 
-The following tables summarize some of the useful TextHighlight directive inputs and methods.
+For more detailed information regarding the TextHighlight directive's API, refer to the following link:
+* [`IgxTextHighlight API`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html)
 
-#### Inputs
+Additional components that were used:
 
-The following inputs are available in the **igxTextHighlight** directive:
-
-| Name | Type | Description |
-| :--- | :--- | :--- |
-| `groupName` | string | Defines the group in which the active highlight will be shared. |
-| `row` | number | Defines the row on which the directive is positioned. |
-| `column` | number | Defines the column on which the directive is positioned. |
-| `page` | number | Defines the page on which the directive is positioned. |
-| `value` | any | Defines the underlying value on which we will perform searches. |
-
-<div class="divider"></div>
-
-#### Methods
-
-The following methods are available in the **igxTextHighlight** directive.
-
-| Name | Return type | Parameters | Description |
-| :--- | :--- | :--- | :--- |
-| `highlight` | number | The text to highlight and optionally whether the search is case sensitive and should we highlight only exact matches | Highlights the searched string (if it exists in the value input) and returns how many times the value contains the searched highlighted string|
-| `clearHighlight` | void | none | Clears all existing highlights |
-| `activateIfNecessary` | void | none | Activates a highlight if it is the current active highlight |
-| `setActiveHighlight` | void | The groupName and an object implementing an interface with the row, column and page to activate | Activates the highlight from the specified group on the given row, column and page |
-| `clearActiveHighlight` | void | The group name | Clears the active highlight from the specified group |
-
+* [`IgxInputGroupComponent`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
 <div class="divider"></div>
 
 ### Additional Resources
