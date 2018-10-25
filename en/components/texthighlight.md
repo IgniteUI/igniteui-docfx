@@ -314,7 +314,7 @@ Additional components that were used:
 <div class="divider"></div>
 
 ### Additional Resources
-* [Grid Search](https://www.infragistics.com/products/ignite-ui-angular/angular/components/grid_search.html)
+* [Grid Search](grid_search.md)
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.
