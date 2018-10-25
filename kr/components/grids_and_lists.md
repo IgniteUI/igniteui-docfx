@@ -1,4 +1,4 @@
-﻿---
+---
 title: 데이터 그리드 및 목록 컴포넌트
 _description: Ignite UI for Angular는 고속 Angular 데이터 그리드, 고속 렌더링, 머티리얼 디자인의 컴포넌트를 제공하여 강력한 Angular 그리드 및 기능을 실행합니다. 
 _keywords: Ignite UI for Angular, Angular, 네이티브 Angular 컴포넌트 세트, 네이티브 Angular 컨트롤, 네이티브 Angular 컴포넌트, 네이티브 Angular 컴포넌트 라이브러리, Angular 그리드, Angular 데이터 그리드, Angular 그리드 컨트롤, Angular 그리드 컴포넌트
@@ -7,12 +7,12 @@ _language: kr
 
 <div class="feature feature--hero">
   <div class="feature__details">
-    <h2 id="the-fastest-data-angular-data-grid">The Fastest Angular Data Grid</h2>
-    <p>Ignite UI for Angular’s [Data Grid](grid.md) is built for optimization, speed, high-performance, and smooth handling of large data sets. With an updated virtualization directive and powerful grid features, your data grid is ready for no-lag scrolling through millions of data points.</p>
-    <a class="cta-btn" href="https://www.infragistics.com/products/ignite-ui-angular/download">get started for free</a>
+    <h2 id="the-fastest-data-angular-data-grid">고속 Angular 데이터 그리드</h2>
+    <p>Ignite UI for Angular의 데이터 그리드는 대규모 데이터 세트의 최적화, 고속 및 고성능 처리를 위해 제작되었습니다.업데이트된 가상화 지시문 및 강력한 그리드 기능으로 수백만 개의 데이터 점을 지연 시간 없이 스크롤할 수 있습니다.</p>
+    <a class="cta-btn" href="https://www.infragistics.com/products/ignite-ui-angular/download">무료로 시작하기</a>
   </div>
   <div class="feature__image feature__image--right">
-    <img src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid.svg" alt="Ignite UI for Angular's Data Grid optimized for speed and performance.">
+    <img src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid.svg" alt="Ignite UI for Angular의 데이터 그리드는 속도 및 성능에 최적화되어 있습니다.">
   </div>
 </div>
 <hr />
@@ -21,307 +21,307 @@ _language: kr
 <section class="feature__container">
   <div class="feature">
     <div class="feature__image feature__image--right">
-      <img class="b-lazy b-lazy-gifs" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-lazy-load.png" data-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-virtualization-performance-768.jpg" data-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-virtualization-performance-480.jpg 480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-virtualization-performance-768.jpg 768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-virtualization-performance-1100.jpg 1100w" data-gif-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-virtualization-performance-768.gif" data-gif-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-virtualization-performance-480.gif 480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-virtualization-performance-768.gif 768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-virtualization-performance-1100.gif 1100w" sizes="(min-width: 1800px) 575px,(max-width: 1799px) and (min-width: 1200px) 50vw,(max-width: 1199px) and (min-width: 992px) 33vw,(max-width: 991px) and (min-width: 768px) 50vw, 100vw" alt="The virtualization directive brings smooth scrolling to the Angular Data Grid">
-      <a href="grid_virtualization.md" class="feature__more-details">Virtualization Directive Walkthrough</a>
+      <img class="b-lazy b-lazy-gifs" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-lazy-load.png" data-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-virtualization-performance-768.jpg" data-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-virtualization-performance-480.jpg 480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-virtualization-performance-768.jpg 768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-virtualization-performance-1100.jpg 1100w" data-gif-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-virtualization-performance-768.gif" data-gif-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-virtualization-performance-480.gif 480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-virtualization-performance-768.gif 768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-virtualization-performance-1100.gif 1100w" sizes="(min-width: 1800px) 575px,(max-width: 1799px) and (min-width: 1200px) 50vw,(max-width: 1199px) and (min-width: 992px) 33vw,(max-width: 991px) and (min-width: 768px) 50vw, 100vw" alt="가상화 지시문으로 Angular Data Grid에 부드럽게 스크롤할 수 있습니다.">
+      <a href="grid_virtualization.md" class="feature__more-details">가상화 및 성능</a>
     </div>
     <div class="feature__details">
-      <h3 id="virtualization-and-performance">[Virtualization and Performance](grid_virtualization.md)</h3>
-      <p>Seamlessly scroll unlimited rows and columns in your Angular grid with the data grid’s column and row level virtualization.  Your users will experience Excel-like scrolling performance - no lag, screen flicker or visual delay – giving you the best user experience with no compromise in performance.</p>
+      <h3 id="virtualization-and-performance">[가상화 및 성능](grid_virtualization.md)</h3>
+      <p>데이터 그리드의 열 및 행 수준 가상화로 Angular 그리드의 행 및 열을 무제한으로 원활하게 스크롤할 수 있습니다.사용자는 시간 지연, 화면 깜박임 또는 시각적 지연 없이 Excel과 같은 스크롤 성능을 체감할 수 있어 성능 저하 없이 최고의 사용자 환경을 제공합니다.</p>
     </div>
   </div>
 
   <div class="feature">
     <div class="feature__image feature__image--left">
-      <img class="b-lazy b-lazy-gifs" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-lazy-load.png" data-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-remote-data-load-on-demand-768.jpg" data-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-remote-data-load-on-demand-480.jpg 480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-remote-data-load-on-demand-768.jpg 768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-remote-data-load-on-demand-1100.jpg 1100w" data-gif-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-remote-data-load-on-demand-768.gif" data-gif-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-remote-data-load-on-demand-480.gif 480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-remote-data-load-on-demand-768.gif 768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-remote-data-load-on-demand-1100.gif 1100w" sizes="(min-width: 1800px) 575px,(max-width: 1799px) and (min-width: 1200px) 50vw,(max-width: 1199px) and (min-width: 992px) 33vw,(max-width: 991px) and (min-width: 768px) 50vw, 100vw" alt="Grid virtualization and remote data loading for the Angular Data Grid. ">
-      <a href="grid_virtualization.md#remote-virtualization" class="feature__more-details">Working with Remote Sources for Virtualization</a>
+      <img class="b-lazy b-lazy-gifs" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-lazy-load.png" data-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-remote-data-load-on-demand-768.jpg" data-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-remote-data-load-on-demand-480.jpg 480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-remote-data-load-on-demand-768.jpg 768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-remote-data-load-on-demand-1100.jpg 1100w" data-gif-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-remote-data-load-on-demand-768.gif" data-gif-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-remote-data-load-on-demand-480.gif 480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-remote-data-load-on-demand-768.gif 768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-remote-data-load-on-demand-1100.gif 1100w" sizes="(min-width: 1800px) 575px,(max-width: 1799px) and (min-width: 1200px) 50vw,(max-width: 1199px) and (min-width: 992px) 33vw,(max-width: 991px) and (min-width: 768px) 50vw, 100vw" alt="Angular 데이터 그리드의 그리드 가상화 및 원격 데이터 로드.">
+      <a href="grid_virtualization.md#remote-virtualization" class="feature__more-details">가상화를 위한 원격 소스 작업</a>
     </div>
     <div class="feature__details">
-      <h3 id="remote-data-load-on-demand">[Remote Data Load on Demand](grid_virtualization.md#remote-virtualization)</h3>
-      <p>Enable unlimited scrolling experience with load-on-demand grid virtualization.  Get data chunks from a remote service as the grid is scrolled, giving your grid blazing performance for any remote data size.</p>
+      <h3 id="remote-data-load-on-demand">[요청 시 원격 데이터 로드](grid_virtualization.md#remote-virtualization)</h3>
+      <p>로드 온디맨드 그리드 가상화를 통해 무제한 스크롤 환경을 가능하게 합니다.그리드를 스크롤할 때 원격 서비스에서 데이터 청크를 가져와 모든 원격 데이터 크기에 맞는 높은 성능을 제공합니다.</p>
     </div>
   </div>
 
   <div class="feature">
     <div class="feature__image feature__image--right">
-      <img class="b-lazy" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-lazy-load.png" data-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-paging-768.gif" data-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-paging-480.gif 480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-paging-768.gif 768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-paging-1100.gif 1100w" sizes="(min-width: 1800px) 575px,(max-width: 1799px) and (min-width: 1200px) 50vw,(max-width: 1199px) and (min-width: 992px) 33vw,(max-width: 991px) and (min-width: 768px) 50vw, 100vw" alt="Paging component allows for programmatic pagination">
-      <a href="grid_paging.md" class="feature__more-details">Paging Component Documentation</a>
+      <img class="b-lazy" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-lazy-load.png" data-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-paging-768.gif" data-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-paging-480.gif 480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-paging-768.gif 768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-paging-1100.gif 1100w" sizes="(min-width: 1800px) 575px,(max-width: 1799px) and (min-width: 1200px) 50vw,(max-width: 1199px) and (min-width: 992px) 33vw,(max-width: 991px) and (min-width: 768px) 50vw, 100vw" alt="페이징 컴포넌트는 프로그래밍 방식의 페이징이 가능.">
+      <a href="grid_paging.md" class="feature__more-details">페이징 컴포넌트 문서</a>
     </div>
     <div class="feature__details">
-      <h3 id="paging">[Paging](grid_paging.md)</h3>
-      <p>Controlling whether a feature is enabled, the paging component allows for templated and programmatic pagination.</p>
+      <h3 id="paging">[페이징](grid_paging.md)</h3>
+      <p>페이징 컴포넌트는 기능 사용 여부를 제어하여 템플릿 및 프로그래밍 방식의 페이징이 가능합니다.</p>
     </div>
   </div>
 
   <div class="feature">
     <div class="feature__image feature__image--left">
-      <img class="b-lazy" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-lazy-load.png" data-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-cell-summaries-768.jpg" data-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-cell-summaries-480.jpg 480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-cell-summaries-768.jpg 768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-cell-summaries-1100.jpg 1100w" sizes="(min-width: 1800px) 575px,(max-width: 1799px) and (min-width: 1200px) 50vw,(max-width: 1199px) and (min-width: 992px) 33vw,(max-width: 991px) and (min-width: 768px) 50vw, 100vw" alt="The Summaries component shows summary items in separate container">
-      <a href="grid_summaries.md" class="feature__more-details">Summaries Component Explained</a>
+      <img class="b-lazy" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-lazy-load.png" data-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-cell-summaries-768.jpg" data-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-cell-summaries-480.jpg 480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-cell-summaries-768.jpg 768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-cell-summaries-1100.jpg 1100w" sizes="(min-width: 1800px) 575px,(max-width: 1799px) and (min-width: 1200px) 50vw,(max-width: 1199px) and (min-width: 992px) 33vw,(max-width: 991px) and (min-width: 768px) 50vw, 100vw" alt="요약 컴포넌트는 각 컨테이너에 요약 항목을 표시합니다.">
+      <a href="grid_summaries.md" class="feature__more-details">요약 컴포넌트 설명</a>
     </div>
     <div class="feature__details">
-      <h3 id="summaries">[Summaries](grid_summaries.md)</h3>
-      <p>See predefined default summary items for a column in a separate container.</p>
+      <h3 id="summaries">[요약](grid_summaries.md)</h3>
+      <p>각 컨테이너의 열에 대한 미리 정의된 기본 요약 항목을 표시합니다.</p>
     </div>
   </div>
 
   <div class="feature">
     <div class="feature__image feature__image--right">
-      <img class="b-lazy b-lazy-gifs" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-lazy-load.png" data-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-live-update-768.jpg" data-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-live-update-480.jpg 480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-live-update-768.jpg 768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-live-update-1100.jpg 1100w" data-gif-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-live-update-768.gif" data-gif-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-live-update-480.gif  480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-live-update-768.gif 768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-live-update-1100.gif 1100w" sizes="(min-width: 1800px) 575px,(max-width: 1799px) and (min-width: 1200px) 50vw,(max-width: 1199px) and (min-width: 992px) 33vw,(max-width: 991px) and (min-width: 768px) 50vw, 100vw" alt="Real-time Angular Grid updates for Grid edits and changes">
-      <a href="grid.md" class="feature__more-details">See Live Data and Streaming Demo</a>
+      <img class="b-lazy b-lazy-gifs" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-lazy-load.png" data-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-live-update-768.jpg" data-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-live-update-480.jpg 480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-live-update-768.jpg 768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-live-update-1100.jpg 1100w" data-gif-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-live-update-768.gif" data-gif-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-live-update-480.gif  480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-live-update-768.gif 768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-live-update-1100.gif 1100w" sizes="(min-width: 1800px) 575px,(max-width: 1799px) and (min-width: 1200px) 50vw,(max-width: 1199px) and (min-width: 992px) 33vw,(max-width: 991px) and (min-width: 768px) 50vw, 100vw" alt="그리드 편집 및 변경을 위한 실시간 Angular 그리드 업데이트">
+      <a href="grid.md" class="feature__more-details">실시간 데이터 및 스트리밍 데모 보기</a>
     </div>
     <div class="feature__details">
-      <h3 id="live-data-streaming">[Live Data &amp; Streaming](grid.md)</h3>
-      <p>Stream live data directly into the grid – with cell-level update capability allowing for hundreds of updates per second with zero impact on the user experience of grid – delivering real-time data needs for the most demanding Angular apps.</p>
+      <h3 id="live-data-streaming">[실시간 데이터 및 스트리밍](grid.md)</h3>
+      <p>실시간 데이터를 그리드에 직접 스트리밍 -셀 수준의 업데이트 기능으로 초당 수백 건의 업데이트가 가능하여 그리드 사용자 환경에 전혀 영향을 미치지 않음- 가장 까다로운 Angular 어플리케이션을 위해 실시간 데이터를 제공합니다.</p>
     </div>
   </div>
 
   <div class="feature">
     <div class="feature__image feature__image--left">
-      <img class="b-lazy" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-lazy-load.png" data-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-cell-selection-768.jpg" data-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-cell-selection-480.jpg 480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-cell-selection-768.jpg 768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-cell-selection-1100.jpg 1100w"  sizes="(min-width: 1800px) 575px,(max-width: 1799px) and (min-width: 1200px) 50vw,(max-width: 1199px) and (min-width: 992px) 33vw,(max-width: 991px) and (min-width: 768px) 50vw, 100vw" alt="Cell selection for the Angular Data Grid.">
+      <img class="b-lazy" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-lazy-load.png" data-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-cell-selection-768.jpg" data-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-cell-selection-480.jpg 480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-cell-selection-768.jpg 768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-cell-selection-1100.jpg 1100w"  sizes="(min-width: 1800px) 575px,(max-width: 1799px) and (min-width: 1200px) 50vw,(max-width: 1199px) and (min-width: 992px) 33vw,(max-width: 991px) and (min-width: 768px) 50vw, 100vw" alt="Angular 데이터 그리드의 셀 선택.">
     </div>
     <div class="feature__details">
-      <h3 id="cell-selection">Cell Selection</h3>
-      <p>Select or deselect data cells individually.</p>
+      <h3 id="cell-selection">셀 선택</h3>
+      <p>데이터 셀을 개별적으로 선택하거나 선택 취소할 수 있습니다.</p>
     </div>
   </div>
 
   <div class="feature">
     <div class="feature__image feature__image--right">
-      <img class="b-lazy" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-lazy-load.png" data-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-cell-styling-768.gif" data-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-cell-styling-480.gif 480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-cell-styling-768.gif 768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-cell-styling-1100.gif 1100w" sizes="(min-width: 1800px) 575px,(max-width: 1799px) and (min-width: 1200px) 50vw,(max-width: 1199px) and (min-width: 992px) 33vw,(max-width: 991px) and (min-width: 768px) 50vw, 100vw" alt="Apply styles and templates to cells in the Angular Data Grid.">
+      <img class="b-lazy" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-lazy-load.png" data-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-cell-styling-768.gif" data-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-cell-styling-480.gif 480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-cell-styling-768.gif 768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-cell-styling-1100.gif 1100w" sizes="(min-width: 1800px) 575px,(max-width: 1799px) and (min-width: 1200px) 50vw,(max-width: 1199px) and (min-width: 992px) 33vw,(max-width: 991px) and (min-width: 768px) 50vw, 100vw" alt="Angular 데이터 그리드의 셀에 스타일과 템플릿을 적용합니다.">
     </div>
     <div class="feature__details">
-      <h3 id="cell-styling-and-templating">Cell Styling and Templating</h3>
-      <p>Customize cell appearance with CSS or re-template any cell with ng-template to give any cell render appearance.</p>
+      <h3 id="cell-styling-and-templating">셀 스타일 및 템플릿</h3>
+      <p>CSS로 셀 모양을 사용자 지정하거나 ng-template로 모든 셀을 다시 템플릿하여 셀 렌더 모양을 지정할 수 있습니다.</p>
     </div>
   </div>
 
   <div class="feature">
     <div class="feature__image feature__image--left">
-      <img class="b-lazy" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-lazy-load.png" data-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-filtering-768.jpg" data-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-filtering-480.jpg 480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-filtering-768.jpg 768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-filtering-1100.jpg 1100w" sizes="(min-width: 1800px) 575px,(max-width: 1799px) and (min-width: 1200px) 50vw,(max-width: 1199px) and (min-width: 992px) 33vw,(max-width: 991px) and (min-width: 768px) 50vw, 100vw" alt="Per-column filtering to filter in the Angular Data Grid">
-      <a href="grid_filtering.md" class="feature__more-details">Filtering Explained</a>
+      <img class="b-lazy" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-lazy-load.png" data-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-filtering-768.jpg" data-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-filtering-480.jpg 480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-filtering-768.jpg 768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-filtering-1100.jpg 1100w" sizes="(min-width: 1800px) 575px,(max-width: 1799px) and (min-width: 1200px) 50vw,(max-width: 1199px) and (min-width: 992px) 33vw,(max-width: 991px) and (min-width: 768px) 50vw, 100vw" alt="Angular 데이터 그리드에서 필터링할 열 단위 필터링">
+      <a href="grid_filtering.md" class="feature__more-details">필터링 설명</a>
     </div>
     <div class="feature__details">
-      <h3 id="column-filtering">[Column Filtering](grid_filtering.md)</h3>
-      <p>The grid features both a simplistic and complex per-column filtering UI.</p>
+      <h3 id="column-filtering">[열 필터링](grid_filtering.md)</h3>
+      <p>그리드는 단순하고 복잡한 열 단위 필터링 UI 모두를 갖추고 있습니다.</p>
     </div>
   </div>
 
   <div class="feature">
     <div class="feature__image feature__image--right">
-      <img class="b-lazy" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-lazy-load.png" data-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-column-hiding-768.jpg" data-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-column-hiding-480.jpg 480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-column-hiding-768.jpg 768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-column-hiding-1100.jpg 1100w" sizes="(min-width: 1800px) 575px,(max-width: 1799px) and (min-width: 1200px) 50vw,(max-width: 1199px) and (min-width: 992px) 33vw,(max-width: 991px) and (min-width: 768px) 50vw, 100vw" alt="Column hiding in the Angular Data Grid.">
+      <img class="b-lazy" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-lazy-load.png" data-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-column-hiding-768.jpg" data-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-column-hiding-480.jpg 480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-column-hiding-768.jpg 768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-column-hiding-1100.jpg 1100w" sizes="(min-width: 1800px) 575px,(max-width: 1799px) and (min-width: 1200px) 50vw,(max-width: 1199px) and (min-width: 992px) 33vw,(max-width: 991px) and (min-width: 768px) 50vw, 100vw" alt="Angular 데이터 그리드의 열 숨기기.">
       <a href="grid_column_hiding.md" class="feature__more-details">Setting up Column Hiding in the data grid</a>
     </div>
     <div class="feature__details">
-      <h3 id="cell-hiding">[Column Hiding](grid_column_hiding.md)</h3>
-      <p>Allows users to hide and show columns directly through the grid UI, via our API, or define the column hiding UI as a separate component and place it anywhere they want on the page. </p>
+      <h3 id="cell-hiding">[열 숨기기](grid_column_hiding.md)</h3>
+      <p>사용자가 그리드 UI에서 API를 거쳐 직접 열을 숨기고 표시하거나 열 숨김 UI를 각 컴포넌트로 정의하고 페이지에서 원하는 위치에 배치할 수 있습니다. </p>
     </div>
   </div>
 
   <div class="feature">
     <div class="feature__image feature__image--left">
-      <img class="b-lazy" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-lazy-load.png" data-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-sorting-768.gif" data-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-sorting-480.gif 480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-sorting-768.gif 768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-sorting-1100.gif 1100w" sizes="(min-width: 1800px) 575px,(max-width: 1799px) and (min-width: 1200px) 50vw,(max-width: 1199px) and (min-width: 992px) 33vw,(max-width: 991px) and (min-width: 768px) 50vw, 100vw" alt="Sort columns in the Angular Data Grid.">
-      <a href="grid_sorting.md" class="feature__more-details">Sorting with the Data Grid</a>
+      <img class="b-lazy" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-lazy-load.png" data-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-sorting-768.gif" data-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-sorting-480.gif 480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-sorting-768.gif 768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-sorting-1100.gif 1100w" sizes="(min-width: 1800px) 575px,(max-width: 1799px) and (min-width: 1200px) 50vw,(max-width: 1199px) and (min-width: 992px) 33vw,(max-width: 991px) and (min-width: 768px) 50vw, 100vw" alt="Angular 데이터 그리드의 열 정렬.">
+      <a href="grid_sorting.md" class="feature__more-details">데이터 그리드로 정렬</a>
     </div>
     <div class="feature__details">
-      <h3 id="sorting">[Sorting](grid_sorting.md)</h3>
-      <p>The grid supports a mix of non-sortable and sortable columns, since Grid Sorting is on a per-column level.</p>
+      <h3 id="sorting">[정렬](grid_sorting.md)</h3>
+      <p>그리드 정렬은 열 단위 수준이므로 그리드는 정렬할 수 없는 열과 정렬할 수 있는 열을 조합할 수 있습니다.</p>
     </div>
   </div>
 
   <div class="feature">
     <div class="feature__image feature__image--right">
-      <img class="b-lazy" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-lazy-load.png" data-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-filtering-768.jpg" data-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-filtering-480.jpg 480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-filtering-768.jpg 768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-filtering-1100.jpg 1100w" sizes="(min-width: 1800px) 575px,(max-width: 1799px) and (min-width: 1200px) 50vw,(max-width: 1199px) and (min-width: 992px) 33vw,(max-width: 991px) and (min-width: 768px) 50vw, 100vw" alt="Text filter columns in the Angular Data Grid.">
-      <a href="grid_filtering.md" class="feature__more-details">Column Text Filtering via the Filtering API</a>
+      <img class="b-lazy" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-lazy-load.png" data-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-filtering-768.jpg" data-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-filtering-480.jpg 480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-filtering-768.jpg 768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-filtering-1100.jpg 1100w" sizes="(min-width: 1800px) 575px,(max-width: 1799px) and (min-width: 1200px) 50vw,(max-width: 1199px) and (min-width: 992px) 33vw,(max-width: 991px) and (min-width: 768px) 50vw, 100vw" alt="Angular 데이터 그리드의 텍스트 필터 열.">
+      <a href="grid_filtering.md" class="feature__more-details">필터링 API를 통한 열 텍스트 필터링</a>
     </div>
     <div class="feature__details">
-      <h3 id="column-text-filter">[Column Text Filter](grid_filtering.md)</h3>
-      <p>Use text to filter on a per-column level to quickly find information.</p>
+      <h3 id="column-text-filter">[열 텍스트 필터](grid_filtering.md)</h3>
+      <p>텍스트를 사용해 열 단위 수준으로 필터링하여 정보를 빠르게 찾을 수 있습니다.</p>
     </div>
   </div>
 
   <div class="feature">
     <div class="feature__image feature__image--left">
-      <img class="b-lazy" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-lazy-load.png" data-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-cell-virtual-scrolling-768.jpg" data-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-cell-virtual-scrolling-480.jpg 480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-cell-virtual-scrolling-768.jpg 768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-cell-virtual-scrolling-1100.jpg 1100w" sizes="(min-width: 1800px) 575px,(max-width: 1799px) and (min-width: 1200px) 50vw,(max-width: 1199px) and (min-width: 992px) 33vw,(max-width: 991px) and (min-width: 768px) 50vw, 100vw" alt="Virtual row rendering for scrolling in Angular Data Grid.">
-      <a href="grid_virtualization.md" class="feature__more-details">Virual Row Implementation</a>
+      <img class="b-lazy" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-lazy-load.png" data-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-cell-virtual-scrolling-768.jpg" data-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-cell-virtual-scrolling-480.jpg 480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-cell-virtual-scrolling-768.jpg 768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-cell-virtual-scrolling-1100.jpg 1100w" sizes="(min-width: 1800px) 575px,(max-width: 1799px) and (min-width: 1200px) 50vw,(max-width: 1199px) and (min-width: 992px) 33vw,(max-width: 991px) and (min-width: 768px) 50vw, 100vw" alt="Angular 데이터 그리드의 스크롤을 위한 가상 행 렌더링.">
+      <a href="grid_virtualization.md" class="feature__more-details">가상 행 구현</a>
     </div>
     <div class="feature__details">
-      <h3 id="virtual-row">[Virtual Row](grid_virtualization.md)</h3>
-      <p>Quickly navigate through on-screen rows with the rest rendering immediately upon scrolling.</p>
+      <h3 id="virtual-row">[가상 행](grid_virtualization.md)</h3>
+      <p>스크롤 즉시 나머지가 렌더링되어 화면에 표시된 행을 빠르게 탐색할 수 있습니다.</p>
     </div>
   </div>
 
   <div class="feature">
     <div class="feature__image feature__image--right">
-      <img class="b-lazy" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-lazy-load.png" data-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-cell-virtual-scrolling-768.jpg" data-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-cell-virtual-scrolling-480.jpg 480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-cell-virtual-scrolling-768.jpg 768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-cell-virtual-scrolling-1100.jpg 1100w" sizes="(min-width: 1800px) 575px,(max-width: 1799px) and (min-width: 1200px) 50vw,(max-width: 1199px) and (min-width: 992px) 33vw,(max-width: 991px) and (min-width: 768px) 50vw, 100vw" alt="Virtual column rendering for scrolling in Angular Data Grid.">
-      <a href="grid_virtualization.md" class="feature__more-details">Virual Column Implementation</a>
+      <img class="b-lazy" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-lazy-load.png" data-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-cell-virtual-scrolling-768.jpg" data-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-cell-virtual-scrolling-480.jpg 480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-cell-virtual-scrolling-768.jpg 768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-cell-virtual-scrolling-1100.jpg 1100w" sizes="(min-width: 1800px) 575px,(max-width: 1799px) and (min-width: 1200px) 50vw,(max-width: 1199px) and (min-width: 992px) 33vw,(max-width: 991px) and (min-width: 768px) 50vw, 100vw" alt="Angular 데이터 그리드의 스크롤을 위한 가상 열 렌더링.">
+      <a href="grid_virtualization.md" class="feature__more-details">가상 열 구현</a>
     </div>
     <div class="feature__details">
-      <h3 id="virtual-column">[Virtual Column](grid_virtualization.md)</h3>
-      <p>Easily navigate through on-screen columns with the rest rendering immediately upon scrolling.</p>
+      <h3 id="virtual-column">[가상 열](grid_virtualization.md)</h3>
+      <p>스크롤 즉시 나머지가 렌더링되어 화면에 표시된 열을 쉽게 탐색할 수 있습니다.</p>
     </div>
   </div>
 
   <div class="feature">
     <div class="feature__image feature__image--left">
-      <img class="b-lazy" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-lazy-load.png" data-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-aria-support-768.jpg" data-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-aria-support-480.jpg 480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-aria-support-768.jpg 768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-aria-support-1100.jpg 1100w" sizes="(min-width: 1800px) 575px,(max-width: 1799px) and (min-width: 1200px) 50vw,(max-width: 1199px) and (min-width: 992px) 33vw,(max-width: 991px) and (min-width: 768px) 50vw, 100vw" alt="ARIA support for Angular Data Grid.">
+      <img class="b-lazy" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-lazy-load.png" data-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-aria-support-768.jpg" data-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-aria-support-480.jpg 480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-aria-support-768.jpg 768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-aria-support-1100.jpg 1100w" sizes="(min-width: 1800px) 575px,(max-width: 1799px) and (min-width: 1200px) 50vw,(max-width: 1199px) and (min-width: 992px) 33vw,(max-width: 991px) and (min-width: 768px) 50vw, 100vw" alt="Angular 데이터 그리드의 ARIA 지원.">
     </div>
     <div class="feature__details">
-      <h3 id="accessibility-and-aria-support">Accessibility and <abbr title="Accessible Rich Internet Applications">ARIA</abbr> Support</h3>
-      <p>The Angular grid is fully accessible with a11y Keyboard accessibility, ARIA &amp; accessible color palette.</p>
+      <h3 id="accessibility-and-aria-support">접근성 및 <abbr title="Accessible Rich Internet Applications">ARIA</abbr> 지원</h3>
+      <p>Angular 그리드는 a11y 키보드 접근성, ARIA & 접근성 컬러 팔레트로 완벽하게 접근할 수 있습니다.</p>
     </div>
   </div>
 
   <div class="feature">
     <div class="feature__image feature__image--right">
-      <img class="b-lazy" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-lazy-load.png" data-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-row-deletion-768.jpg" data-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-row-deletion-480.jpg 480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-row-deletion-768.jpg 768w,  https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-row-deletion-1100.jpg 1100w" sizes="(min-width: 1800px) 575px,(max-width: 1799px) and (min-width: 1200px) 50vw,(max-width: 1199px) and (min-width: 992px) 33vw,(max-width: 991px) and (min-width: 768px) 50vw, 100vw" alt="Remove rows from the Angular Data Grid.">
+      <img class="b-lazy" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-lazy-load.png" data-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-row-deletion-768.jpg" data-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-row-deletion-480.jpg 480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-row-deletion-768.jpg 768w,  https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-row-deletion-1100.jpg 1100w" sizes="(min-width: 1800px) 575px,(max-width: 1799px) and (min-width: 1200px) 50vw,(max-width: 1199px) and (min-width: 992px) 33vw,(max-width: 991px) and (min-width: 768px) 50vw, 100vw" alt="Angular 데이터 그리드에서 행 제거">
     </div>
     <div class="feature__details">
-      <h3 id="row-deletion">Row Deletion</h3>
-      <p>Easily remove rows of data.</p>
+      <h3 id="row-deletion">행 삭제</h3>
+      <p>데이터의 행을 쉽게 제거할 수 있습니다.</p>
     </div>
   </div>
 
   <div class="feature">
     <div class="feature__image feature__image--left">
-      <img class="b-lazy" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-lazy-load.png" data-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-multi-column-headers-768.jpg" data-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-multi-column-headers-480.jpg 480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-multi-column-headers-768.jpg 768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-multi-column-headers-1100.jpg 1100w" sizes="(min-width: 1800px) 575px,(max-width: 1799px) and (min-width: 1200px) 50vw,(max-width: 1199px) and (min-width: 992px) 33vw,(max-width: 991px) and (min-width: 768px) 50vw, 100vw" alt="Group columns by header in Angular Data Grid">
-      <a href="grid_multi_column_headers.md" class="feature__more-details">Setting up multi-column headers with the data grid</a>
+      <img class="b-lazy" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-lazy-load.png" data-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-multi-column-headers-768.jpg" data-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-multi-column-headers-480.jpg 480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-multi-column-headers-768.jpg 768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-multi-column-headers-1100.jpg 1100w" sizes="(min-width: 1800px) 575px,(max-width: 1799px) and (min-width: 1200px) 50vw,(max-width: 1199px) and (min-width: 992px) 33vw,(max-width: 991px) and (min-width: 768px) 50vw, 100vw" alt="Angular 데이터 그리드의 헤더로 열 그룹화">
+      <a href="grid_multi_column_headers.md" class="feature__more-details">데이터 그리드로 복수 열 헤더 설정</a>
     </div>
     <div class="feature__details">
-      <h3 id="multi-column-headers">[Multi-Column Headers](grid_multi_column_headers.md)</h3>
-      <p>Enable multi-column headers allowing you to group columns under a common header. Every column group could be a representation of combinations between other groups or columns, with full support for column pinning, interactive column moving within groups, sorting and hiding groups.</p>
+      <h3 id="multi-column-headers">[복수 열 헤더](grid_multi_column_headers.md)</h3>
+      <p>공통 헤더 아래에 열을 그룹화할 수 있도록 복수 열 헤더를 활성화합니다.모든 열 그룹은 열 핀 고정, 그룹 내 대화형 열 이동, 그룹 정렬 및 숨기기를 완벽하게 지원하여 다른 그룹 또는 열 사이의 조합이 가능합니다.</p>
     </div>
   </div>
 
   <div class="feature">
     <div class="feature__image feature__image--right">
-      <img class="b-lazy" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-lazy-load.png" data-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-groupby-768.jpg" data-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-groupby-480.jpg 480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-groupby-768.jpg 768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-groupby-1100.jpg 1100w" sizes="(min-width: 1800px) 575px,(max-width: 1799px) and (min-width: 1200px) 50vw,(max-width: 1199px) and (min-width: 992px) 33vw,(max-width: 991px) and (min-width: 768px) 50vw, 100vw" alt="Group columns by header in Angular Data Grid">
-      <a href="grid_groupby.md" class="feature__more-details">Column Grouping explained</a>
+      <img class="b-lazy" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-lazy-load.png" data-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-groupby-768.jpg" data-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-groupby-480.jpg 480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-groupby-768.jpg 768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-groupby-1100.jpg 1100w" sizes="(min-width: 1800px) 575px,(max-width: 1799px) and (min-width: 1200px) 50vw,(max-width: 1199px) and (min-width: 992px) 33vw,(max-width: 991px) and (min-width: 768px) 50vw, 100vw" alt="Angular 데이터 그리드의 헤더로 열 그룹화">
+      <a href="grid_groupby.md" class="feature__more-details">열 그룹 설명</a>
     </div>
     <div class="feature__details">
-      <h3 id="group-by">[Group By](grid_groupby.md)</h3>
-      <p>Visualize your data records in hierarchical groups.</p>
+      <h3 id="group-by">[그룹화](grid_groupby.md)</h3>
+      <p>계층 그룹으로 데이터 레코드를 시각화합니다.</p>
     </div>
   </div>
 
   <div class="feature">
     <div class="feature__image feature__image--left">
-      <img class="b-lazy" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-lazy-load.png" data-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-toolbar-768.jpg" data-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-toolbar-480.jpg 480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-toolbar-768.jpg 768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-toolbar-1100.jpg 1100w" sizes="(min-width: 1800px) 575px,(max-width: 1799px) and (min-width: 1200px) 50vw,(max-width: 1199px) and (min-width: 992px) 33vw,(max-width: 991px) and (min-width: 768px) 50vw, 100vw" alt="Group columns by header in Angular Data Grid">
-      <a href="grid_toolbar.md" class="feature__more-details">How to implement the Grid Toolbar</a>
+      <img class="b-lazy" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-lazy-load.png" data-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-toolbar-768.jpg" data-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-toolbar-480.jpg 480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-toolbar-768.jpg 768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-toolbar-1100.jpg 1100w" sizes="(min-width: 1800px) 575px,(max-width: 1799px) and (min-width: 1200px) 50vw,(max-width: 1199px) and (min-width: 992px) 33vw,(max-width: 991px) and (min-width: 768px) 50vw, 100vw" alt="Angular 데이터 그리드의 헤더로 열 그룹화">
+      <a href="grid_toolbar.md" class="feature__more-details">그리드 도구 모음을 구현하는 방법</a>
     </div>
     <div class="feature__details">
-      <h3 id="grid-toolbar">[Grid Toolbar](grid_toolbar.md)</h3>
-      <p>The toolbar is a container for UI operations located at the top of the grid which can host different interactive controls like column hiding, column pinning, excel exporting, and more.</p>
+      <h3 id="grid-toolbar">[그리드 도구 모음](grid_toolbar.md)</h3>
+      <p>그리드 상단에 있는 도구 모음은 열 숨기기, 열 핀 고정, Excel 내보내기 등과 같은 다양한 대화형 컨트롤을 관리할 수 있는 UI 작업을 위한 컨테이너입니다.</p>
     </div>
   </div>
 
   <div class="feature">
     <div class="feature__image feature__image--right">
-      <img class="b-lazy b-lazy-gifs" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-lazy-load.png" data-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-global-search-768.jpg" data-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-global-search-480.jpg 480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-global-search-768.jpg 768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-global-search-1100.jpg 1100w" data-gif-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-global-search-768.gif" data-gif-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-global-search-480.gif  480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-global-search-768.gif 768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-global-search-1100.gif 1100w" sizes="(min-width: 1800px) 575px,(max-width: 1799px) and (min-width: 1200px) 50vw,(max-width: 1199px) and (min-width: 992px) 33vw,(max-width: 991px) and (min-width: 768px) 50vw, 100vw" alt="Find information in a global search for the Angular Data Grid.">
-      <a href="grid_search.md" class="feature__more-details">Global Search in the Data Grid</a>
+      <img class="b-lazy b-lazy-gifs" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-lazy-load.png" data-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-global-search-768.jpg" data-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-global-search-480.jpg 480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-global-search-768.jpg 768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-global-search-1100.jpg 1100w" data-gif-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-global-search-768.gif" data-gif-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-global-search-480.gif  480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-global-search-768.gif 768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-global-search-1100.gif 1100w" sizes="(min-width: 1800px) 575px,(max-width: 1799px) and (min-width: 1200px) 50vw,(max-width: 1199px) and (min-width: 992px) 33vw,(max-width: 991px) and (min-width: 768px) 50vw, 100vw" alt="Angular 데이터 그리드에 대한 정보는 글로벌 검색에서 찾아볼 수 있습니다.">
+      <a href="grid_search.md" class="feature__more-details">데이터 그리드의 글로벌 검색</a>
     </div>
     <div class="feature__details">
-      <h3 id="grid-global-search">[Grid Global Search](grid_search.md)</h3>
-      <p>Give a Gmail-like global search option with the global search textbox that can search all grid columns and highlight search results instantly.</p>
+      <h3 id="grid-global-search">[그리드 글로벌 검색](grid_search.md)</h3>
+      <p>모든 그리드 열을 검색하고 검색 결과를 즉시 강조 표시 할 수 있는 글로벌 검색 텍스트 상자가 있는 Gmail과 같은 글로벌 검색 옵션을 제공합니다.</p>
     </div>
   </div>
 
   <div class="feature">
     <div class="feature__image feature__image--left">
-      <img class="b-lazy" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-lazy-load.png" data-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-combo-demo-768.jpg" data-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-combo-demo-480.jpg 480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-combo-demo-768.jpg 768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-combo-demo-1100.jpg 1100w" sizes="(min-width: 1800px) 575px,(max-width: 1799px) and (min-width: 1200px) 50vw,(max-width: 1199px) and (min-width: 992px) 33vw,(max-width: 991px) and (min-width: 768px) 50vw, 100vw" alt="Toggle overlay in Angular Data Grid">
-      <a href="combo.md" class="feature__more-details">Setting up the Combo component</a>
+      <img class="b-lazy" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-lazy-load.png" data-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-combo-demo-768.jpg" data-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-combo-demo-480.jpg 480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-combo-demo-768.jpg 768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-combo-demo-1100.jpg 1100w" sizes="(min-width: 1800px) 575px,(max-width: 1799px) and (min-width: 1200px) 50vw,(max-width: 1199px) and (min-width: 992px) 33vw,(max-width: 991px) and (min-width: 768px) 50vw, 100vw" alt="Angular 데이터 그리드의 오버레이 토글">
+      <a href="combo.md" class="feature__more-details">콤보 컴포넌트 설정</a>
     </div>
     <div class="feature__details">
-      <h3 id="combo">[Combo](combo.md)</h3>
-      <p>Easily filter and select single or multiple items, with support for grouping and adding custom values to the dropdown list, and virtualized searching within the list.  Provide custom templates for items, header, footer, grouped area.</p>
+      <h3 id="combo">[콤보](combo.md)</h3>
+      <p>드롭다운 목록에 그룹화 및 사용자 값 추가, 목록 안에서 가상 검색을 지원하여 단일 또는 복수 항목을 쉽게 필터링하고 선택할 수 있습니다.항목, 헤더, 푸터, 그룹화 영역에 대한 사용자 템플릿을 제공합니다.</p>
     </div>
   </div>
 
   <div class="feature">
     <div class="feature__image feature__image--right">
-      <img class="b-lazy" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-lazy-load.png" data-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-dropdown-768.jpg" data-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-dropdown-480.jpg 480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-dropdown-768.jpg 768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-dropdown-1100.jpg 1100w" sizes="(min-width: 1800px) 575px,(max-width: 1799px) and (min-width: 1200px) 50vw,(max-width: 1199px) and (min-width: 992px) 33vw,(max-width: 991px) and (min-width: 768px) 50vw, 100vw" alt="Navigate selections with the dropdown in Angular Data Grid">
-      <a href="drop_down.md" class="feature__more-details">Working with the Dropdown component</a>
+      <img class="b-lazy" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-lazy-load.png" data-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-dropdown-768.jpg" data-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-dropdown-480.jpg 480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-dropdown-768.jpg 768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-dropdown-1100.jpg 1100w" sizes="(min-width: 1800px) 575px,(max-width: 1799px) and (min-width: 1200px) 50vw,(max-width: 1199px) and (min-width: 992px) 33vw,(max-width: 991px) and (min-width: 768px) 50vw, 100vw" alt="Angular 데이터 그리드의 드롭다운으로 선택 항목 탐색">
+      <a href="drop_down.md" class="feature__more-details">드롭다운 컴포넌트로 작업</a>
     </div>
     <div class="feature__details">
-      <h3 id="dropdown">[Dropdown](drop_down.md)</h3>
-      <p>Display a scrollable list of single-select items which can be visually grouped.</p>
+      <h3 id="dropdown">[드롭다운](drop_down.md)</h3>
+      <p>시각적으로 그룹화할 수 있는 단일 선택 항목의 스크롤 가능한 목록을 표시합니다.</p>
     </div>
   </div>
 
   <div class="feature">
     <div class="feature__image feature__image--left">
-      <img class="b-lazy" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-lazy-load.png" data-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-overlays-768.jpg" data-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-overlays-480.jpg 480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-overlays-768.jpg 768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-overlays-1100.jpg 1100w" sizes="(min-width: 1800px) 575px,(max-width: 1799px) and (min-width: 1200px) 50vw,(max-width: 1199px) and (min-width: 992px) 33vw,(max-width: 991px) and (min-width: 768px) 50vw, 100vw" alt="Toggle overlay in Angular Data Grid">
-      <a href="overlay_main.md" class="feature__more-details">Getting started with the Overlay component</a>
+      <img class="b-lazy" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-lazy-load.png" data-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-overlays-768.jpg" data-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-overlays-480.jpg 480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-overlays-768.jpg 768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-overlays-1100.jpg 1100w" sizes="(min-width: 1800px) 575px,(max-width: 1799px) and (min-width: 1200px) 50vw,(max-width: 1199px) and (min-width: 992px) 33vw,(max-width: 991px) and (min-width: 768px) 50vw, 100vw" alt="Angular 데이터 그리드의 오버레이 토글">
+      <a href="overlay_main.md" class="feature__more-details">오버레이 컴포넌트로 시작하기</a>
     </div>
     <div class="feature__details">
-      <h3 id="overlay">[Overlay](overlay_main.md)</h3>
-      <p>Change content rendering with various overlay parameters.</p>
+      <h3 id="overlay">[오버레이](overlay_main.md)</h3>
+      <p>다양한 오버레이 매개 변수로 콘텐츠 렌더링을 변경합니다.</p>
     </div>
   </div>
 
   <div class="feature">
     <div class="feature__image feature__image--right">
-      <img class="b-lazy b-lazy-gifs" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-lazy-load.png" data-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-filtering-ui-768.jpg" data-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-filtering-ui-480.jpg 480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-filtering-ui-768.jpg 768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-filtering-ui-1100.jpg 1100w" data-gif-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-filtering-ui-768.gif" data-gif-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-filtering-ui-480.gif  480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-filtering-ui-768.gif 768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-filtering-ui-1100.gif 1100w" sizes="(min-width: 1800px) 575px,(max-width: 1799px) and (min-width: 1200px) 50vw,(max-width: 1199px) and (min-width: 992px) 33vw,(max-width: 991px) and (min-width: 768px) 50vw, 100vw" alt="Filtering UI for the Angular Data Grid.">
-      <a href="grid_filtering.md" class="feature__more-details">Working with the Filtering UI</a>
+      <img class="b-lazy b-lazy-gifs" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-lazy-load.png" data-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-filtering-ui-768.jpg" data-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-filtering-ui-480.jpg 480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-filtering-ui-768.jpg 768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-filtering-ui-1100.jpg 1100w" data-gif-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-filtering-ui-768.gif" data-gif-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-filtering-ui-480.gif  480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-filtering-ui-768.gif 768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-filtering-ui-1100.gif 1100w" sizes="(min-width: 1800px) 575px,(max-width: 1799px) and (min-width: 1200px) 50vw,(max-width: 1199px) and (min-width: 992px) 33vw,(max-width: 991px) and (min-width: 768px) 50vw, 100vw" alt="Angular 데이터 그리드의 필터링 UI.">
+      <a href="grid_filtering.md" class="feature__more-details">필터링 UI로 작업</a>
     </div>
     <div class="feature__details">
-      <h3 id="filtering-ui">[Filtering UI](grid_filtering.md)</h3>
-      <p>Add custom and complex filtering options to filter data by your needs. </p>
+      <h3 id="filtering-ui">[필터링 UI](grid_filtering.md)</h3>
+      <p>사용자 정의 및 복잡한 필터링 옵션을 추가하여 필요에 따라 데이터를 필터링합니다.</p>
     </div>
   </div>
 
 <!-- Need 1100 JPG -->
   <div class="feature">
     <div class="feature__image feature__image--left">
-      <img class="b-lazy b-lazy-gifs" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-lazy-load.png" data-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-chip-768.jpg" data-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-chip-480.jpg 480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-chip-768.jpg 768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-chip-1100.jpg 1100w" data-gif-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-chip-768.gif" data-gif-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-chip-480.gif  480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-chip-768.gif 768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-chip-1100.gif 1100w" sizes="(min-width: 1800px) 575px,(max-width: 1799px) and (min-width: 1200px) 50vw,(max-width: 1199px) and (min-width: 992px) 33vw,(max-width: 991px) and (min-width: 768px) 50vw, 100vw" alt=" Chip in Angular Data Grid.">
-      <a href="chip.md" class="feature__more-details">Using the Chip component</a>
+      <img class="b-lazy b-lazy-gifs" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-lazy-load.png" data-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-chip-768.jpg" data-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-chip-480.jpg 480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-chip-768.jpg 768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-chip-1100.jpg 1100w" data-gif-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-chip-768.gif" data-gif-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-chip-480.gif  480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-chip-768.gif 768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-chip-1100.gif 1100w" sizes="(min-width: 1800px) 575px,(max-width: 1799px) and (min-width: 1200px) 50vw,(max-width: 1199px) and (min-width: 992px) 33vw,(max-width: 991px) and (min-width: 768px) 50vw, 100vw" alt=" Angular 데이터 그리드의 칩">
+      <a href="chip.md" class="feature__more-details">칩 컴포넌트 사용</a>
     </div>
     <div class="feature__details">
-      <h3 id="chip">[Chip](chip.md)</h3>
-      <p>Display selectable and keyboard accessible values.</p>
+      <h3 id="chip">[칩](chip.md)</h3>
+      <p>선택 가능하고 키보드 접속 가능한 값을 표시합니다.</p>
     </div>
   </div>
 
   <div class="feature">
     <div class="feature__image feature__image--right">
-      <img class="b-lazy" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-lazy-load.png" data-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-cell-copy-paste-768.jpg" data-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-cell-copy-paste-480.jpg 480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-cell-copy-paste-768.jpg 768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-cell-copy-paste-1100.jpg 1100w" sizes="(min-width: 1800px) 575px,(max-width: 1799px) and (min-width: 1200px) 50vw,(max-width: 1199px) and (min-width: 992px) 33vw,(max-width: 991px) and (min-width: 768px) 50vw, 100vw" alt="Copy and Paste support for cells using the Angular Grid">
-      <a href="grid_editing.md" class="feature__more-details">More on Editing the Angular Data Grid</a>
+      <img class="b-lazy" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-lazy-load.png" data-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-cell-copy-paste-768.jpg" data-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-cell-copy-paste-480.jpg 480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-cell-copy-paste-768.jpg 768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-cell-copy-paste-1100.jpg 1100w" sizes="(min-width: 1800px) 575px,(max-width: 1799px) and (min-width: 1200px) 50vw,(max-width: 1199px) and (min-width: 992px) 33vw,(max-width: 991px) and (min-width: 768px) 50vw, 100vw" alt="Angular 그리드를 사용하여 셀의 복사 및 붙여넣기 지원">
+      <a href="grid_editing.md" class="feature__more-details">Angular 데이터 그리드 편집 더 보기</a>
     </div>
     <div class="feature__details">
-      <h3 id="cell-copying-and-pasting">[Cell Copying and Pasting](grid_editing.md)</h3>
-      <p>Easily copy and paste information among individual cells and cell ranges.  </p>
+      <h3 id="cell-copying-and-pasting">[셀 복사 및 붙여넣기](grid_editing.md)</h3>
+      <p>각 셀 및 셀 범위에 정보를 쉽게 복사 및 붙여넣기할 수 있습니다. </p>
     </div>
   </div>
 
   <div class="feature">
     <div class="feature__image feature__image--left">
-      <img class="b-lazy" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-lazy-load.png" data-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-keyboard-navigation-768.gif" data-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-keyboard-navigation-480.gif 480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-keyboard-navigation-768.gif 768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-keyboard-navigation-1100.gif 1100w" sizes="(min-width: 1800px) 575px,(max-width: 1799px) and (min-width: 1200px) 50vw,(max-width: 1199px) and (min-width: 992px) 33vw,(max-width: 991px) and (min-width: 768px) 50vw, 100vw" alt="Angular Grid with keyboard navigation for keyboard, touch, and mouse">
-      <a href="grid.md#data-grid" class="feature__more-details">Improve accessibility for your Grid with Keyboard Navigation</a>
+      <img class="b-lazy" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-lazy-load.png" data-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-keyboard-navigation-768.gif" data-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-keyboard-navigation-480.gif 480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-keyboard-navigation-768.gif 768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-keyboard-navigation-1100.gif 1100w" sizes="(min-width: 1800px) 575px,(max-width: 1799px) and (min-width: 1200px) 50vw,(max-width: 1199px) and (min-width: 992px) 33vw,(max-width: 991px) and (min-width: 768px) 50vw, 100vw" alt="키보드, 터치 및 마우스를 위한 키보드 탐색 기능이 있는 Angular 그리드">
+      <a href="grid.md#data-grid" class="feature__more-details">키보드 탐색으로 사용자 그리드에 대한 접근성 향상</a>
     </div>
     <div class="feature__details">
-      <h3 id="keyboard-navigation">[Keyboard Navigation](grid.md#data-grid)</h3>
-      <p>Supporting keyboard, touch, and mouse navigation, the grid is scrollable on both axes using the igx-scroll functionalities.</p>
+      <h3 id="keyboard-navigation">[키보드 탐색](grid.md#data-grid)</h3>
+      <p>키보드, 터치 및 마우스 탐색을 지원하는 그리드는 igx-scroll 기능을 사용하여 양쪽 축에서 스크롤할 수 있습니다.</p>
     </div>
   </div>
 
 
   <div class="feature">
     <div class="feature__image feature__image--right">
-      <img class="b-lazy b-lazy-gifs" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-lazy-load.png" data-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-column-moving-768.jpg" data-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-column-moving-480.jpg 480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-column-moving-768.jpg 768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-column-moving-1100.jpg 1100w" data-gif-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-column-moving-768.gif" data-gif-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-column-moving-480.gif  480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-column-moving-768.gif 768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-column-moving-1100.gif 1100w" sizes="(min-width: 1800px) 575px,(max-width: 1799px) and (min-width: 1200px) 50vw,(max-width: 1199px) and (min-width: 992px) 33vw,(max-width: 991px) and (min-width: 768px) 50vw, 100vw" alt="Move columns in the Angular Data Grid.">
-      <a href="grid_column_moving.md" class="feature__more-details">Column Moving documentation</a>
+      <img class="b-lazy b-lazy-gifs" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-lazy-load.png" data-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-column-moving-768.jpg" data-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-column-moving-480.jpg 480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-column-moving-768.jpg 768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-column-moving-1100.jpg 1100w" data-gif-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-column-moving-768.gif" data-gif-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-column-moving-480.gif  480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-column-moving-768.gif 768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-column-moving-1100.gif 1100w" sizes="(min-width: 1800px) 575px,(max-width: 1799px) and (min-width: 1200px) 50vw,(max-width: 1199px) and (min-width: 992px) 33vw,(max-width: 991px) and (min-width: 768px) 50vw, 100vw" alt="Angular 데이터 그리드의 열 이동.">
+      <a href="grid_column_moving.md" class="feature__more-details">열 이동 문서</a>
     </div>
     <div class="feature__details">
-      <h3 id="column-moving">[Column Moving](grid_column_moving.md)</h3>
-      <p>Move, reorder, drag, and organize your columns with ease.</p>
+      <h3 id="column-moving">[열 이동](grid_column_moving.md)</h3>
+      <p>간단히 열을 이동, 정렬, 드래그 및 구성할 수 있습니다.p>
     </div>
   </div>
 
   <div class="feature">
     <div class="feature__image feature__image--left">
-      <img class="b-lazy" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-lazy-load.png" data-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-export-to-excel-768.jpg" data-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-export-to-excel-480.jpg 480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-export-to-excel-768.jpg 768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-export-to-excel-1100.jpg 1100w" sizes="(min-width: 1800px) 575px,(max-width: 1799px) and (min-width: 1200px) 50vw,(max-width: 1199px) and (min-width: 992px) 33vw,(max-width: 991px) and (min-width: 768px) 50vw, 100vw" alt="Data Grid supporting Excel exporting.">
-      <a href="exporter_excel.md" class="feature__more-details">Excel Exporting with the Angular Data Grid</a>
+      <img class="b-lazy" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-lazy-load.png" data-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-export-to-excel-768.jpg" data-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-export-to-excel-480.jpg 480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-export-to-excel-768.jpg 768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-export-to-excel-1100.jpg 1100w" sizes="(min-width: 1800px) 575px,(max-width: 1799px) and (min-width: 1200px) 50vw,(max-width: 1199px) and (min-width: 992px) 33vw,(max-width: 991px) and (min-width: 768px) 50vw, 100vw" alt="Excel 내보내기를 지원하는 데이터 그리드.">
+      <a href="exporter_excel.md" class="feature__more-details">Angular 데이터 그리드로 Excel 내보내기</a>
     </div>
     <div class="feature__details">
-      <h3 id="column-moving">[Export to Excel/CSV/TSV](exporter_excel.md)</h3>
-      <p>Export your Grid to Excel in XLSX, TSV or CSV format, with API support to include or exclude columns and to customize the output.</p>
+      <h3 id="column-moving">[Excel/CSV/TSV로 내보내기](exporter_excel.md)</h3>
+      <p>열을 포함하거나 제외하고 출력을 사용자 정의할 수 있는 API를 지원하여 그리드를 XLSX, TSV 또는 CSV 형식으로 Excel로 내보내기를 할 수 있습니다.</p>
     </div>
   </div>
   
