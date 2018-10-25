@@ -11,7 +11,7 @@ Enabling row editing in the grid will allow you to edit several row's cells, bef
 
 ### Demo
 
-The following demo demonstrates how to enable row editing in the grid. Changing a cell value and then clicking or navigating to another cell from the same row will not update row value until confirmed, using the Done button, or discarded, using the Cancel one.
+The following sample demonstrates how to enable row editing in the grid. Changing a cell value and then clicking or navigating to another cell on the same row will not update row value until confirmed, using the Done button, or discarded, using the Cancel one.
 
 <div class="sample-container loading" style="height:650px">
     <iframe id="grid-row-editing-sample-iframe" src='{environment:demosBaseUrl}/grid-row-editing' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -21,7 +21,8 @@ The following demo demonstrates how to enable row editing in the grid. Changing 
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-row-editing-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-Note: When row is in edit mode, then clicking on a cell from another row will act like the Done button is pressed - submit all the changes of the previous row. If the new cell that is on focus is editable, then the new row also enters edit mode, while if cell is not editable, then only the previous row exits edit mode.
+> [!NOTE]
+> When a row is in edit mode, then clicking on a cell on another row will act like the Done button is pressed - submit all the changes of the previous row. If the new cell that gets focus is editable, then the new row also enters edit mode, while if the cell is not editable, then only the previous row exits edit mode.
 
 <div class="divider--half"></div>
 
@@ -63,7 +64,10 @@ Then define a grid with bound data source and [`rowEditable`]({environment:angul
 </div>
 ```
 
-Note: It's not needed to enable editing for individual columns. Using the [`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowEditable) will mean that all rows are editable. If you want to disable editing for specific column, then you set the [`editable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable) column's input to `false`.
+> [!NOTE]
+> It's not needed to enable editing for individual columns. Using the [`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowEditable) will mean that all rows are editable. If you want to disable editing for specific column, then you set the [`editable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable) column's input to `false`.
+> [!NOTE]
+> The column marked as the grid's [`primaryKey`]({environment:angularApiUrl}/classes/igxgridcomponent.html#primarykey) ***will not*** be automatically marked as `editable` when enabling `rowEditable`.
 
 ```typescript
 
@@ -89,17 +93,18 @@ export class GridRowEditSampleComponent {
 
 ```
 
-*Note: The grid uses internally a provider [`IgxBaseTransactionService`]({environment:angularApiUrl}/classes/igxbasetransactionservice) that holds pending transactions, until submitted or cancelled.
+> [!NOTE]
+> The grid uses internally a provider [`IgxBaseTransactionService`]({environment:angularApiUrl}/classes/igxbasetransactionservice) that holds pending transactions, until submitted or cancelled.
 
 ## Navigation
 
-When row is in edit mode, then clicking on a cell from another row will act like the Done button is pressed - submit all the changes of the previous row. If the new cell that is gets focus is editable, then the new row also enters edit mode, while if cell is not editable, then only the previous row exits edit mode.
+When a row is in edit mode, then clicking on a cell on another row will act like the Done button is pressed - submit all the changes of the previous row. If the new cell that gets focus is editable, then the new row also enters edit mode, while if the cell is not editable, then only the previous row exits edit mode.
 
 
 ### Keyboard Navigation
 
  - `Enter` and `F2` enters row edit mode
- - `Esc` exits row edit mode and doesn't submit any of the cell changes, during the row was in edit mode.
+ - `Esc` exits row edit mode and doesn't submit any of the cell changes, made while the row was in edit mode.
  - `Tab` move focus from one editable cell in the row to the next and from the right-most editable cell to the CANCEL and DONE buttons. From the DONE button to the left-most editable cell within the currently edited row.
  
 
