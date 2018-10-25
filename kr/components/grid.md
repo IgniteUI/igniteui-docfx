@@ -416,7 +416,7 @@ export class MyComponent implements OnInit {
 |`deleteRow(rowSelector: any)`|**그리드에 기본 키가 지정되어 있는 경우에만** 데이터 소스에서 행 객체와 해당 데이터 레코드를 제거합니다. 이 메소드는 rowID인 `rowSelector`를 매개 변수로 받아들입니다.|
 |`updateRow(value: any, rowSelector: any)`|rowID/ 전달된 데이터 소스 레코드에 대응하는 `rowSelector` 매개 변수/`rowSelector` 매개 변수에 지정된 행 객체를 업데이트합니다. **이 메소드는 기본 키가 그리드에 지정되어 있는 경우에만 요청된 업데이트를 적용합니다.**|
 |`updateCell(value: any, rowSelector: any, column: string)`|셀 객체 및 데이터 소스의 레코드 필드를 업데이트합니다. 메소드는 3개의 파라미터 즉 - `value` - 설정되는 새로운 값, 그 밖의 새로운 2개의 파라미터 `rowSelector` 및 `column`은 갱신되는 셀을 식별합니다. `rowSelector`  rowID, `column`은 열 필드에 해당합니다. **이 메소드는 기본 키가 그리드에 지정되어 있는 경우에만 요청된 업데이트를 적용합니다.**|
-|`filter(name: string, value: any, conditionOrExpressionTree?: IFilteringOperation, ignoreCase?: boolean)`|단일 열을 필터링합니다. 필터링 처리는 매개 변수로서 사용됩니다. 사용 가능한 [필터링 조건](#filtering-conditions)을 확인하십시오.|
+|`filter(name: string, value: any, conditionOrExpressionTree?: IFilteringOperation, ignoreCase?: boolean)`|단일 열을 필터링합니다. 필터링 처리는 매개 변수로서 사용됩니다. 사용 가능한 [필터링 조건](#필터링-조건)을 확인하십시오.|
 |`filter(name: string, value: any, conditionOrExpressionTree?: IFilteringExpressionsTree, ignoreCase?: boolean)`|단일 열을 필터링합니다. 필터링식 트리는 매개 변수로서 사용됩니다.|
 |`filterGlobal(value: any, condition?, ignoreCase?)`|동일한 조건으로 그리드의 모든 열을 필터링합니다.|
 |`clearFilter(name?: string)`|`name`이 제공된 경우, 해당 열의 필터링 상태를 지우며 그렇지 않은 경우에는 모든 열의 필터링 상태를 지웁니다.|

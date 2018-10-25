@@ -33,10 +33,10 @@ _language: kr
   <div class="feature">
     <div class="feature__image feature__image--left">
       <img class="b-lazy b-lazy-gifs" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-lazy-load.png" data-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-remote-data-load-on-demand-768.jpg" data-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-remote-data-load-on-demand-480.jpg 480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-remote-data-load-on-demand-768.jpg 768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-remote-data-load-on-demand-1100.jpg 1100w" data-gif-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-remote-data-load-on-demand-768.gif" data-gif-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-remote-data-load-on-demand-480.gif 480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-remote-data-load-on-demand-768.gif 768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-remote-data-load-on-demand-1100.gif 1100w" sizes="(min-width: 1800px) 575px,(max-width: 1799px) and (min-width: 1200px) 50vw,(max-width: 1199px) and (min-width: 992px) 33vw,(max-width: 991px) and (min-width: 768px) 50vw, 100vw" alt="Angular 데이터 그리드의 그리드 가상화 및 원격 데이터 로드.">
-      <a href="grid_virtualization.md#remote-virtualization" class="feature__more-details">가상화를 위한 원격 소스 작업</a>
+      <a href="grid_virtualization.md#원격-가상화" class="feature__more-details">가상화를 위한 원격 소스 작업</a>
     </div>
     <div class="feature__details">
-      <h3 id="remote-data-load-on-demand">[요청 시 원격 데이터 로드](grid_virtualization.md#remote-virtualization)</h3>
+      <h3 id="remote-data-load-on-demand">[요청 시 원격 데이터 로드](grid_virtualization.md#원격-가상화)</h3>
       <p>로드 온디맨드 그리드 가상화를 통해 무제한 스크롤 환경을 가능하게 합니다.그리드를 스크롤할 때 원격 서비스에서 데이터 청크를 가져와 모든 원격 데이터 크기에 맞는 높은 성능을 제공합니다.</p>
     </div>
   </div>
@@ -294,10 +294,10 @@ _language: kr
   <div class="feature">
     <div class="feature__image feature__image--left">
       <img class="b-lazy" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-lazy-load.png" data-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-keyboard-navigation-768.gif" data-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-keyboard-navigation-480.gif 480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-keyboard-navigation-768.gif 768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-keyboard-navigation-1100.gif 1100w" sizes="(min-width: 1800px) 575px,(max-width: 1799px) and (min-width: 1200px) 50vw,(max-width: 1199px) and (min-width: 992px) 33vw,(max-width: 991px) and (min-width: 768px) 50vw, 100vw" alt="키보드, 터치 및 마우스를 위한 키보드 탐색 기능이 있는 Angular 그리드">
-      <a href="grid.md#data-grid" class="feature__more-details">키보드 탐색으로 사용자 그리드에 대한 접근성 향상</a>
+      <a href="grid.md#데이터-그리드" class="feature__more-details">키보드 탐색으로 사용자 그리드에 대한 접근성 향상</a>
     </div>
     <div class="feature__details">
-      <h3 id="keyboard-navigation">[키보드 탐색](grid.md#data-grid)</h3>
+      <h3 id="keyboard-navigation">[키보드 탐색](grid.md#데이터-그리드)</h3>
       <p>키보드, 터치 및 마우스 탐색을 지원하는 그리드는 igx-scroll 기능을 사용하여 양쪽 축에서 스크롤할 수 있습니다.</p>
     </div>
   </div>

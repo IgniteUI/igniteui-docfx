@@ -76,7 +76,7 @@ public ngOnInit() {
 <div class="divider--half"></div>
 
 #### 원격 정렬
-onDataPreLoad 및 onSortingDone 출력에 서브스크라이브하여 그리드의 원격 정렬을 제공할 수 있습니다. 이것을 사용하는 방법에 대한 자세한 것은 `그리드 가상화 및 성능` [documentation](grid_virtualization.md#remote-sortingfiltering-virtualization)을 참조하십시오.
+onDataPreLoad 및 onSortingDone 출력에 서브스크라이브하여 그리드의 원격 정렬을 제공할 수 있습니다. 이것을 사용하는 방법에 대한 자세한 것은 `그리드 가상화 및 성능` [documentation](grid_virtualization.md#원격-정렬필터링-가상화)을 참조하십시오.
 
 <div class="divider--half"></div>
 

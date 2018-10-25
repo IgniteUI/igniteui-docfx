@@ -20,7 +20,7 @@ Ignite UI for Angular 그리드 컴포넌트는 그리드가 바인딩되는 데
 </div>
 <div class="divider--half"></div>
 
-기본적으로 제공되는 기본 필터링 및 표준 필터링 조건이 있으며 개발자가 사용자 구현으로 대체 할 수도 있습니다. 또한, 사용자 필터링 조건을 간단히 플러그인할 수 있습니다. 그리드는 현재 단순한 필터링 UI뿐만 아니라 보다 복잡한 필터링 옵션을 제공합니다. 열에서 설정된 `dataType`에 따라 적절한 [**필터 작업**](grid.md#filtering-conditions) 세트가 필터 UI 드롭다운에 로드됩니다. 또한, `ignoreCase` 및 초기 `condition` 속성을 설정할 수 있습니다.
+기본적으로 제공되는 기본 필터링 및 표준 필터링 조건이 있으며 개발자가 사용자 구현으로 대체 할 수도 있습니다. 또한, 사용자 필터링 조건을 간단히 플러그인할 수 있습니다. 그리드는 현재 단순한 필터링 UI뿐만 아니라 보다 복잡한 필터링 옵션을 제공합니다. 열에서 설정된 `dataType`에 따라 적절한 [**필터 작업**](grid.md#필터링-조건) 세트가 필터 UI 드롭다운에 로드됩니다. 또한, `ignoreCase` 및 초기 `condition` 속성을 설정할 수 있습니다.
 
 ```html
 <igx-column field="ProductName" filterable="true" dataType="string"></igx-column>
@@ -137,7 +137,7 @@ this.grid.filteringLogic = FilteringLogic.OR;
 <div class="divider--half"></div>
 
 #### 원격 필터링
-onDataPreLoad 및 onFilteringDone 출력에 서브스크라이브하여 그리드의 원격 필터링을 제공할 수 있습니다. 이것을 사용하는 방법에 대한 자세한 것은 `그리드 가상화 및 성능` [documentation](grid_virtualization.md#remote-sortingfiltering-virtualization)을 참조하십시오.
+onDataPreLoad 및 onFilteringDone 출력에 서브스크라이브하여 그리드의 원격 필터링을 제공할 수 있습니다. 이것을 사용하는 방법에 대한 자세한 것은 `그리드 가상화 및 성능` [documentation](grid_virtualization.md#원격-정렬필터링-가상화)을 참조하십시오.
 
 <div class="divider--half"></div>
 
