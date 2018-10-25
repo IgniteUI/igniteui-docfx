@@ -164,6 +164,8 @@
       href: themes/typography.md
 - name: Shadows
   href: shadows.md
+- name: Display Density
+  href: display_density.md
 - name: Data Entry & Display
   header: true
 - name: Drop Down
