@@ -1,0 +1,42 @@
+{
+    "metadata": [{
+        "src": [{
+            "files": ["src/**.csproj"],
+            "exclude": ["**/obj/**", "**/bin/**", "_site/**"]
+        }],
+        "dest": "api"
+    }],
+    "build": {
+        "content": [{
+                "files": ["api/**.yml", "api/index.md"]
+            },
+            {
+                "files": [
+                    "components/**.md",
+                    "components/**/toc.yml",
+                    "components/themes/**.md",
+                    "toc.yml",
+                    "*.md"
+                ],
+                "exclude": ["obj/**", "_site/**"]
+            }
+        ],
+        "resource": [{
+            "files": ["images/**"],
+            "exclude": ["obj/**", "_site/**"]
+        }],
+        "overwrite": [{
+            "files": ["apidoc/**.md"],
+            "exclude": ["obj/**", "_site/**"]
+        }],
+        "dest": "_site",
+        "globalMetadataFiles": ["global.json"],
+        "fileMetadataFiles": [],
+        "template": ["../node_modules/igniteui-docfx-template"],
+        "postProcessors": ["SetEnvironmentVariables"],
+        "noLangKeyword": false,
+        "keepFileLink": false,
+        "cleanupCacheHistory": false,
+        "disableGitFeatures": true
+    }
+}
