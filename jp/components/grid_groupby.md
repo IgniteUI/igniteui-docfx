@@ -60,7 +60,7 @@ public ngOnInit() {
 grid.groupBy({ fieldName: 'ProductName', dir: SortingDirection.Desc, ignoreCase: true });
 ```
 
-グループ化は、並べ替えおよびグループ式が列がグループ化されずに並べ替えられた場合も並べ替えされた列として適用される場合に可能です。グループ式は [`sortingExpression`]({environment:angularApiUrl}/classes/igxgridcomponent.html#sortingexpressions) プロパティにあり、グループ列の式が常に最初になるよう並べ替えます。並べ替え API は、グループ化された列の式を変更した場合にグルーピングに影響があります。グループ式 (列グループ解除) を削除して並べ替えを解除します。
+グループ化は、並べ替えおよびグループ式が列がグループ化されずに並べ替えられた場合も並べ替えされた列として適用される場合に可能です。グループ式は [`sortingExpressions`]({environment:angularApiUrl}/classes/igxgridcomponent.html#sortingexpressions) プロパティにあり、グループ列の式が常に最初になるよう並べ替えます。並べ替え API は、グループ化された列の式を変更した場合にグルーピングに影響があります。グループ式 (列グループ解除) を削除して並べ替えを解除します。
 
 グループ式の他にグループ行の展開も制御できます。[`igxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) コンポーネント [`groupingExpansionState`]({environment:angularApiUrl}/classes/igxgridcomponent.html#groupingexpansionstate) の別のプロパティに保存されます。グループ行は、作成されたフィールド名とグループ化の各レベルを表す値に基づいて識別されます。以下は展開状態のインターフェイスのシグネチャです。
 
@@ -113,7 +113,9 @@ export interface IGroupByRecord {
 グループ UI は、以下のキーボード インタラクションをサポートします。
 
 - グループ行 (行または展開/縮小セルにフォーカス)
-   - <kbd>SPACE</kbd> - グループの切り替え
+   - <kbd>RIGHT</kbd> - グループの展開
+   - <kbd>LEFT</kbd> - グループの縮小
+
 
 - グループ領域の [`igxChip`]({environment:angularApiUrl}/classes/igxchipcomponent.html) コンポーネントのグループ化 (チップにフォーカス)
    - <kbd>SHIFT</kbd> + <kbd>LEFT</kbd> - フォーカスしたチップの左へ移動し、可能な場合はグループ順序を変更します。

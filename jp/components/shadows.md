@@ -149,3 +149,84 @@ Shadows は、Document Object Model ツリーの間に境界線を描画し、�
 <div class="elevate-image">
     <img width="100%" height="100%" src="../images/whatismaterial_3d_elevation2.jpg" alt="Shadows Usage">
 </div>
+
+###Elevations Setting
+
+The following section demonstrates how to set various elevations to elements.
+
+Define the element that you want ot set a shadow on:
+
+```html
+...
+<div class="wrapper">
+    <div class="elevation-sample">
+        <p class="variable">
+            $elevate-8
+        </p>
+        <pre class="formatter">
+            <code class ="css">
+                box-shadow:
+                0 5px 5px -3px palette(gray, 400),
+                0 8px 10px 1px palette(gray, 300),
+                0 3px 14px 2px palette(gray, 200)
+            </code>
+                These are the default elevation colors            
+        </pre>
+    </div>
+</div>
+```
+
+Then apply the [igx-elevation]({environment:sassApiUrl}/index.html#function-igx-elevation) to the `scss` class of the element:
+
+```scss
+    // First you have to import the utilities!
+@import '~igniteui-angular/lib/core/styles/themes/utilities';
+
+    //Apply the elevation level
+.elevation-sample {
+    box-shadow: igx-elevation($elevations, 8);
+}
+```
+The result from the above code snippets is:
+
+<div class="sample-container loading" style="height: 350px">
+    <iframe id="shadows-sample-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/shadows-sample" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="shadows-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz</button>
+</div>
+<div class="divider--half"></div>
+
+Now lets change the shadow color and the elevation level:
+
+ ```scss
+...
+//Define the 3 elevation colors
+$color-1: #99BFAA;
+$color-2: #5C868D;
+$color-3: #5C3D46; 
+
+//Define the shadow elevations
+$shadow-elevations: igx-elevations($color-1, $color-2, $color-3);
+
+//Apply the custom shadow elevations and change the elevation level 
+.elevation-sample {
+    box-shadow: igx-elevation($shadow-elevations, 24);
+}
+```
+
+And you get
+
+<div class="sample-container loading" style="height: 350px">
+    <iframe id="shadows-sample-2-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/shadows-sample-2" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="shadows-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz</button>
+</div>
+<div class="divider--half"></div>
+
+
+### API References
+
+* [IGX-ELEVATION]({environment:sassApiUrl}/idnex.html#function-igx-elevation)
+* [IGX-ELEVATIONS]({environment:sassApiUrl}/idnex.html#function-igx-elevations)
