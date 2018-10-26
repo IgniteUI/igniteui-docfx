@@ -26,7 +26,7 @@ Using the [DisplayDensityToken]({environment:angularApiUrl}/index.html#displayde
 
 **Setting display density on an application/component level**
 
-To set the display density, use the the [DisplayDensityToken]({environment:angularApiUrl}/index.html#displaydensitytoken) injection token to create a DI provider.
+To set the display density, use the [DisplayDensityToken]({environment:angularApiUrl}/index.html#displaydensitytoken) injection token to create a DI provider.
 
 ```typescript
 providers: [{ provide: DisplayDensityToken, useValue: { displayDensity: DisplayDensity.compact } }],
