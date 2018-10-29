@@ -45,7 +45,7 @@ import { IgxGridModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-Then define a grid with bound data source and [`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowEditable) set to true:
+Then define a grid with bound data source and [`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditable) set to true:
 
 ```html
 <div class="sample-wrapper">
@@ -68,7 +68,7 @@ Then define a grid with bound data source and [`rowEditable`]({environment:angul
 > [!NOTE]
 > Setting primary key is mandatory for editing operations, including row editing.
 > [!NOTE]
-> It's not needed to enable editing for individual columns. Using the [`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowEditable) property in the grid, will mean that all rows, with defined `field` property, excluding primary one, will be editable. If you want to disable editing for specific column, then you set the [`editable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable) column's input to `false`.
+> It's not needed to enable editing for individual columns. Using the [`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditable) property in the grid, will mean that all rows, with defined `field` property, excluding primary one, will be editable. If you want to disable editing for specific column, then you set the [`editable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable) column's input to `false`.
 
 
 ```typescript
@@ -96,7 +96,7 @@ export class GridRowEditSampleComponent {
 ```
 
 > [!NOTE]
-> The grid uses internally a provider [`IgxBaseTransactionService`]({environment:angularApiUrl}/classes/igxbasetransactionservice) that holds pending cell changes, until row state submitted or cancelled.
+> The grid uses internally a provider [`IgxBaseTransactionService`]({environment:angularApiUrl}/classes/igxbasetransactionservice.html) that holds pending cell changes, until row state submitted or cancelled.
 
 ## Positioning
 
@@ -162,22 +162,16 @@ export class GridRowEditSampleComponent {
 
 ### igxGrid Inputs
 
-* [rowEditable]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowEditable)
+* [rowEditable]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditable)
 
 ### igxGrid Outputs
 
-* [onRowEditDone]({environment:angularApiUrl}/classes/igxgridrowcomponent.html#onRowEditDone)
-* [onRowEditCancel]({environment:angularApiUrl}/classes/igxgridrowcomponent.html#onRowEditCancel)
+* [onRowEditDone]({environment:angularApiUrl}/classes/igxgridcomponent.html#onroweditdone)
+* [onRowEditCancel]({environment:angularApiUrl}/classes/igxgridcomponent.html#onroweditcancel)
 
 ### igxGrid Methods
 
-* [endRowEdit]({environment:angularApiUrl}/classes/igxgridrowcomponent.html#endRowEdit)
-
-### Row Editing Overlay Directives
-
-* [igxRowEditText]({environment:angularApiUrl}/classes/igxgridrowcomponent.html#igxRowEditText)
-* [igxRowEditActions]({environment:angularApiUrl}/classes/igxgridrowcomponent.html#igxRowEditActions)
-* [igxRowEditTabStop]({environment:angularApiUrl}/classes/igxgridrowcomponent.html#igxRowEditTabStop)
+* [endRowEdit]({environment:angularApiUrl}/classes/igxgridcomponent.html#endrowedit)
 
 
 ### Additional Resources
