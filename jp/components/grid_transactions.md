@@ -6,9 +6,9 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ## Grid Transactions
 
-`TransactionService` is an injectable middleware that a component can use to accumulate changes without affecting the underlying data. The provider exposes API to access, manipulate changes (undo and redo) and discard or commit all to the data.
+[`TransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) is an injectable middleware that a component can use to accumulate changes without affecting the underlying data. The provider exposes API to access, manipulate changes (undo and redo) and discard or commit all to the data.
 
-The `TransactionService` works with both cell editing and row editing. The transaction for the cell edit is added when the cell exits edit mode, while row transaction is created, when the row exits edit mode. But in both cases the state of the grid edits consist of all updated, added and deleted rows and their last states. Those can later be inspected, manipulated and submitted at once. Changes are collected for individual cells or rows, depending on editing mode, and accumulated per data row/record.
+The [`TransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) works with both cell editing and row editing. The transaction for the cell edit is added when the cell exits edit mode, while row transaction is created, when the row exits edit mode. But in both cases the state of the grid edits consist of all updated, added and deleted rows and their last states. Those can later be inspected, manipulated and submitted at once. Changes are collected for individual cells or rows, depending on editing mode, and accumulated per data row/record.
 
 ### Demo
 
@@ -27,7 +27,7 @@ The following sample demonstrates a scenario, where the grid has the Transaction
 > Transaction state consists of all the updated, added and deleted rows and their last states.
 
 ## Usage
-To get started import the [IgxGridModule]({environment:angularApiUrl}/classes/igxgridmodule.html) in the **app.module.ts** file:
+To get started import the [`IgxGridModule`]({environment:angularApiUrl}/classes/igxgridmodule.html) in the **app.module.ts** file:
 
 ```typescript
 // app.module.ts
@@ -60,7 +60,7 @@ export class GridWithTransactionsComponent { }
 
 Note: `IgxGridTransaction` is injection token defined by the grid.
 
-Then define a grid with bound data source and [`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowEditable) set to true:
+Then define a grid with bound data source and [`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditable) set to true:
 
 ```html
 <app-grid-with-transactions>
@@ -80,7 +80,7 @@ Then define a grid with bound data source and [`rowEditable`]({environment:angul
 </app-grid-with-transactions>
 ```
 
-The following code demonstrates the usage of the [transactions]({environment:angularApiUrl}/classes/igxgridrowcomponent.html#transactions) API - undo, redo, commit.
+The following code demonstrates the usage of the [`transactions`]({environment:angularApiUrl}/classes/igxtransactionservice.html) API - undo, redo, commit.
 
 ```typescript
 import { Component, ViewChild } from "@angular/core";
@@ -159,26 +159,24 @@ export class GridTransactionSampleComponent {
 
 ```
 > [!NOTE]
-> Disabling `rowEditable` property will modify grid to create transactions on cell change.
+> Disabling [`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditable) property will modify grid to create transactions on cell change.
 
 ## API
 
+* [`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html)
+
 ### Methods
 
-#### IgxGridComponent
-* [transactions]({environment:angularApiUrl}/classes/igxgridrowcomponent.html#transactions)
 
-#### Transaction
-
-* [`aggregatedState`]({environment:angularApiUrl}/classes/igxtransaction.html#aggregatedState)
-* [`getAggregatedValue`]({environment:angularApiUrl}/classes/igxtransaction.html#getAggregatedValue)
-* [`hasState`]({environment:angularApiUrl}/classes/igxtransaction.html#hasState)
-* [`add`]({environment:angularApiUrl}/classes/igxtransaction.html#add)
-* [`getTransactionLog`]({environment:angularApiUrl}/classes/igxtransaction.html#getTransactionLog)
-* [`hasTransactions`]({environment:angularApiUrl}/classes/igxtransaction.html#hasTransactions)
-* [`commit`]({environment:angularApiUrl}/classes/igxtransaction.html#commit)
-* [`undo`]({environment:angularApiUrl}/classes/igxtransaction.html#undo)
-* [`redo`]({environment:angularApiUrl}/classes/igxtransaction.html#redo)
+* [`aggregatedState`]({environment:angularApiUrl}/classes/igxtransactionservice.html#aggregatedstate)
+* [`getAggregatedValue`]({environment:angularApiUrl}/classes/igxtransactionservice.html#getaggregatedvalue)
+* [`getState`]({environment:angularApiUrl}/classes/igxtransactionservice.html#getstate)
+* [`add`]({environment:angularApiUrl}/classes/igxtransactionservice.html#add)
+* [`getTransactionLog`]({environment:angularApiUrl}/classes/igxtransactionservice.html#gettransactionlog)
+* [`clear`]({environment:angularApiUrl}/classes/igxtransactionservice.html#clear)
+* [`commit`]({environment:angularApiUrl}/classes/igxtransactionservice.html#commit)
+* [`undo`]({environment:angularApiUrl}/classes/igxtransactionservice.html#undo)
+* [`redo`]({environment:angularApiUrl}/classes/igxtransactionservice.html#redo)
 
 ### Additional Resources
 
