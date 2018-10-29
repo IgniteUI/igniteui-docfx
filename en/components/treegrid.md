@@ -205,6 +205,7 @@ Here is the template of the component which demonstrates how to configure the tr
 
 ```html
 <!--treeGridSample.component.html-->
+
 <igx-tree-grid #treeGrid [data]="data" primaryKey="ID" foreignKey="ParentID"
     [autoGenerate]="false">
     <igx-column field="ID" dataType="number"></igx-column>
@@ -219,6 +220,7 @@ In addition we will enable the row selection feature of the tree grid by using t
 
 ```html
 <!--treeGridSample.component.html-->
+
 <igx-tree-grid #treeGrid [data]="data" primaryKey="ID" foreignKey="ParentID"
     [autoGenerate]="false" [rowSelectable]="true" (onColumnInit)="initColumns($event)">
     <igx-column field="ID" dataType="number"></igx-column>
@@ -243,7 +245,7 @@ public initColumn(column: IgxColumnComponent) {
 
 And here is the final result:
 
-<div class="sample-container loading" style="height:550px">
+<div class="sample-container loading" style="height:400px">
     <iframe id="treegrid-primaryforeignkey-iframe" src='{environment:demosBaseUrl}/treegrid-primaryforeignkey' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
