@@ -139,17 +139,22 @@ export class GridRowEditSampleComponent {
 - Expanding and collapsing grouped rows will not terminate editing for the current row.
 
 
- ## Customizing Row Editing Overlay
+## Customizing Row Editing Overlay
 
- ### Customizing Text
+### Customizing Text
 
- ```html
+Customizing the text of the row editing overlay is possible using the `igxRowEditTextDirective`.
+The `rowChangesCount` property is exposed and it holds the count of the changed cells.
+
+```html
 <ng-template igxRowEditText let-rowChangesCount>
 	Changes: {{rowChangesCount}}
 </ng-template>
  ```
 
  ### Customizing Buttons
+Customizing the buttons of the row editing overlay is possible using the `igxRowEditActionsDirective`.
+If you want the buttons to be part of the keyboard navigation, then each on of them should have the `igxRowEditTabStopDirective`.
 
  ```typescript
  <ng-template igxRowEditActions let-endRowEdit>
