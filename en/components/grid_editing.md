@@ -69,7 +69,7 @@ Another way to update cell is directly through [`update`]({environment:angularAp
     }
 ...
 ```
-If you want to define a custom template which will be applied when the cell is edit mode, you can see the documentation for [Grid Columns configuration](grid.md#columns-configuration).
+If you want to define a custom template which will be applied when the cell is in edit mode, you can see the documentation for [Grid Columns configuration](grid.md#columns-configuration).
 
 ### CRUD operations
 
