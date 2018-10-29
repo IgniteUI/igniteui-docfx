@@ -135,6 +135,12 @@
       new: false
     - name: Custom Tooltips
       href: financialchart_custom_tooltips.md
+- name: Doughnut Chart
+  href: doughnutchart.md
+  new: true
+- name: Pie Chart
+  href: piechart.md
+  new: true
 - name: Frameworks
   header: true
 - name: Excel Library
