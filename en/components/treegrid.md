@@ -168,7 +168,7 @@ When we are using the **primary and foreign keys** option, every data object con
 The following is an example of a component which contains a flat collection defined with primary and foreign keys relation:
 
 ```typescript
-// my.component.ts
+// treeGridSample.component.ts
 
 @Component({
     ...
@@ -197,38 +197,40 @@ export class MyComponent implements OnInit {
 }
 ```
 
-In the sample data above all records a described with an ID, Parent ID and some other records related fields. As mentioned the ID of the records must be unique. The ParentID contains the ID of the parent node or "-1" if this is a root level node (node with no parent).
+In the sample data above, all records are described with an ID, Parent ID and some other records related fields. As mentioned the ID of the records must be unique. The ParentID contains the ID of the parent node or "-1" if this is a root level node (node with no parent).
 
-The parent-child relation is configured using the TreeGrid's [`primaryKey`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#primarykey) and [`foreignKey`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#foreignkey) properties.
+The parent-child relation is configured using the tree grid's [`primaryKey`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#primarykey) and [`foreignKey`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#foreignkey) properties.
 
-Here is the template of the component which demonstrates how to configure the TreeGrid to display the date defined in the above flat collection:
+Here is the template of the component which demonstrates how to configure the tree grid to display the date defined in the above flat collection:
 
 ```html
-    <igx-tree-grid #treeGrid [data]="data" primaryKey="ID" foreignKey="ParentID"
-        width="500px" height="300px" [autoGenerate]="false">
-        <igx-column field="ID" dataType="number"></igx-column>
-        <igx-column field="ParentID" dataType="number"></igx-column>
-        <igx-column field="Name" dataType="string"></igx-column>
-        <igx-column field="JobTitle" dataType="string"></igx-column>
-        <igx-column field="Age" dataType="number"></igx-column>
-    </igx-tree-grid>
+<!--treeGridSample.component.html-->
+<igx-tree-grid #treeGrid [data]="data" primaryKey="ID" foreignKey="ParentID"
+    [autoGenerate]="false">
+    <igx-column field="ID" dataType="number"></igx-column>
+    <igx-column field="ParentID" dataType="number"></igx-column>
+    <igx-column field="Name" dataType="string"></igx-column>
+    <igx-column field="JobTitle" dataType="string"></igx-column>
+    <igx-column field="Age" dataType="number"></igx-column>
+</igx-tree-grid>
 ```
 
 In addition we will enable the row selection feature of the tree grid by using the [`rowSelectable`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#rowselectable) and also the filtering, sorting, editing, moving and resizing features for each of our columns by handling the [`onColumnInit`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#oncolumninit) event of the tree grid and set the respective column's properties.
 
 ```html
-    <igx-tree-grid #treeGrid [data]="data" primaryKey="ID" foreignKey="ParentID"
-        width="500px" height="300px" [autoGenerate]="false"
-        [rowSelectable]="true" (onColumnInit)="initColumns($event)">
-        <igx-column field="ID" dataType="number"></igx-column>
-        <igx-column field="ParentID" dataType="number"></igx-column>
-        <igx-column field="Name" dataType="string"></igx-column>
-        <igx-column field="JobTitle" dataType="string"></igx-column>
-        <igx-column field="Age" dataType="number"></igx-column>
-    </igx-tree-grid>
+<!--treeGridSample.component.html-->
+<igx-tree-grid #treeGrid [data]="data" primaryKey="ID" foreignKey="ParentID"
+    [autoGenerate]="false" [rowSelectable]="true" (onColumnInit)="initColumns($event)">
+    <igx-column field="ID" dataType="number"></igx-column>
+    <igx-column field="ParentID" dataType="number"></igx-column>
+    <igx-column field="Name" dataType="string"></igx-column>
+    <igx-column field="JobTitle" dataType="string"></igx-column>
+    <igx-column field="Age" dataType="number"></igx-column>
+</igx-tree-grid>
 ```
+
 ```typescript
-// my.component.ts
+// treeGridSample.component.ts
 
 public initColumn(column: IgxColumnComponent) {
     column.filterable = true;
