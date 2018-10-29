@@ -16,7 +16,7 @@ _language: kr
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-search-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-search-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
 </div>
 <div class="divider--half"></div>
 
@@ -57,7 +57,7 @@ _language: kr
     margin-left: 5px;
 }
 
-.searchButtons {    
+.searchButtons {
     margin-left: 5px;
 }
 ```
@@ -74,12 +74,12 @@ public exactMatch: boolean = false;
 
 #### 검색 입력 상자
 
-이제 검색 입력을 작성합니다! **searchText**를 ngModel로서 새로 생성된 입력에 바인딩하고 ngModelChange 이벤트에 서브스크라이브시킴으로써 사용자가 모든 **searchText** 변경을 검출할 수 있습니다. 이렇게 하면 그리드의 `findNext` 및 `findPrev` 메소드를 사용하여 **searchText**의 모든 항목을 강조 표시하고 다음/이전 항목(호출한 메소드에 따라 다름)으로 스크롤할 수 있습니다.
+이제 검색 입력을 작성합니다! **searchText**를 ngModel로서 새로 생성된 입력에 바인딩하고 ngModelChange 이벤트에 서브스크라이브시킴으로써 사용자가 모든 **searchText** 변경을 검출할 수 있습니다. 이렇게 하면 그리드의 [`findNext`]({environment:angularApiUrl}/classes/igxgridcomponent.html#findnext) 및 [`findPrev`]({environment:angularApiUrl}/classes/igxgridcomponent.html#findprev) 메소드를 사용하여 **searchText**의 모든 항목을 강조 표시하고 다음/이전 항목(호출한 메소드에 따라 다름)으로 스크롤할 수 있습니다.
 
-`findNext` 및 `findPrev` 메소드는 모두 3개의 인수가 있습니다:
+[`findNext`]({environment:angularApiUrl}/classes/igxgridcomponent.html#findnext) 및 [`findPrev`]({environment:angularApiUrl}/classes/igxgridcomponent.html#findprev) 메소드는 모두 3개의 인수가 있습니다:
 - `text`: **string** (검색 텍스트)
 - (옵션) `caseSensitive`: **boolean** (대소문자의 구분 여부, 기본값은 false임)
-- (옵션)  `exactMatch`: **boolean** (검색이 정확히 일치하는지 여부, 기본값은 false임)
+- (옵션) `exactMatch`: **boolean** (검색이 정확히 일치하는지 여부, 기본값은 false임)
 
 정확한 일치로 검색할 때 검색 API는 대소문자 구분을 고려하여 **searchText**와 완전히 일치하는 셀 값만 결과로 강조 표시합니다. 예를 들면, 문자열 '_software_' 및 '_Software_'는 대소문자 구분을 무시한 것과 정확히 일치합니다.
 
@@ -94,8 +94,8 @@ public exactMatch: boolean = false;
 #### 결과 수 표시
 총 결과 수와 함께 현재 검색 위치를 표시합니다! 그리드의 `lastSearchInfo` 속성을 사용하여 이것을 실행할 수 있습니다. 이 속성은 **find** 메소드를 사용할 때 자동으로 업데이트됩니다.
 
-- `grid.lastSearchInfo.matchInfoCache.length` 값은 총 결과 수입니다. 
-- `grid.lastSearchInfo.activeMatchIndex` 값은 현재 검색(일치)의 인덱스 위치입니다. 
+- `grid.lastSearchInfo.matchInfoCache.length` 값은 총 결과 수입니다.
+- `grid.lastSearchInfo.activeMatchIndex` 값은 현재 검색(일치)의 인덱스 위치입니다.
 
 ```html
 <!--searchgrid.component.html-->
@@ -112,7 +112,7 @@ public exactMatch: boolean = false;
 
 #### 검색 버튼 추가
 
-버튼의 각 클릭 이벤트 핸들러 내에서 `findNext` 및 `findPrev` 메소드를 호출하여 검색 결과를 자유롭게 검색하고 탐색하기 위해 두 개의 버튼을 작성합니다.
+버튼의 각 클릭 이벤트 핸들러 내에서 [`findNext`]({environment:angularApiUrl}/classes/igxgridcomponent.html#findnext) 및 [`findPrev`]({environment:angularApiUrl}/classes/igxgridcomponent.html#findprev) 메소드를 호출하여 검색 결과를 자유롭게 검색하고 탐색하기 위해 두 개의 버튼을 작성합니다.
 
 ```html
 <!--searchgrid.component.html-->
@@ -125,7 +125,7 @@ public exactMatch: boolean = false;
 
 #### 키보드 검색 추가
 
-키보드의 화살표 키와 Enter 키로 사용자가 결과를 탐색할 수도 있습니다. preventDefault() 메소드의 기본 캐럿 이동을 방지하는 검색 입력의 **keydown** 이벤트를 처리하고 사용자가 누른 키에 따라 `findNext`/`findPrev` 메서드를 호출합니다.
+키보드의 화살표 키와 Enter 키로 사용자가 결과를 탐색할 수도 있습니다. preventDefault() 메소드의 기본 캐럿 이동을 방지하는 검색 입력의 **keydown** 이벤트를 처리하고 사용자가 누른 키에 따라 [`findNext`]({environment:angularApiUrl}/classes/igxgridcomponent.html#findnext)/[`findPrev`]({environment:angularApiUrl}/classes/igxgridcomponent.html#findprev) 메소드를 호출합니다.
 
 ```html
 <!--searchgrid.component.html-->
@@ -150,7 +150,7 @@ public searchKeyDown(ev) {
 
 #### 대소문자 구분 및 정확한 일치
 
-사용자가 검색에서 대소문자의 구분 여부를 선택하고/ 또는 정확히 일치하는지 여부를 선택할 수 있습니다. 이를 위해 **caseSensitive** 및 **exactMatch** 속성을 입력 **checked** 속성에 각각 바인딩하고 간단한 체크 박스 입력을 사용해 속성을 전환하고 **change** 이벤트를 처리하며 `findNext` 메소드를 호출합니다.
+사용자가 검색에서 대소문자의 구분 여부를 선택하고/ 또는 정확히 일치하는지 여부를 선택할 수 있습니다. 이를 위해 **caseSensitive** 및 **exactMatch** 속성을 입력 **checked** 속성에 각각 바인딩하고 간단한 체크 박스 입력을 사용해 속성을 전환하고 **change** 이벤트를 처리하며 [`findNext`]({environment:angularApiUrl}/classes/igxgridcomponent.html#findnext) 메소드를 호출합니다.
 
 ```html
 <!--searchgrid.component.html-->
@@ -178,12 +178,12 @@ public updateExactSearch() {
 
 #### 지속성
 
-그리드를 필터링하고 정렬하거나 레코드를 추가하고 제거하려는 경우 어떻게 해야 합니까? 이러한 처리가 끝나면 현재 검색의 강조 표시가 자동으로 업데이트되고 **searchText**와 일치하는 텍스트가 유지됩니다! 또한, 검색이 페이징으로 작동하며 그리드의 `perPage` 속성 변경 시에도 강조 표시가 유지됩니다.
+그리드를 필터링하고 정렬하거나 레코드를 추가하고 제거하려는 경우 어떻게 해야 합니까? 이러한 처리가 끝나면 현재 검색의 강조 표시가 자동으로 업데이트되고 **searchText**와 일치하는 텍스트가 유지됩니다! 또한, 검색이 페이징으로 작동하며 그리드의 [`perPage`]({environment:angularApiUrl}/classes/igxgridcomponent.html#perpage) 속성 변경 시에도 강조 표시가 유지됩니다.
 
 #### 아이콘 추가
 
 다른 컴포넌트 중 일부를 사용하여 사용자 인터페이스를 작성하고 전체 검색 줄의 전반적인 디자인을 향상시킬 수 있습니다! 검색 입력의 왼쪽에는 멋진 검색 또는 삭제 아이콘, 오른쪽에는 소재 디자인 아이콘 및 리플 스타일의 버튼과 결합된 검색 옵션 및 탐색을 표시합니다. 입력 그룹 내의 컴포넌트를 래핑하여 보다 세련된 디자인으로 할 수 있습니다.
-이를 위해 [**IgxInputGroup**](https://www.infragistics.com/products/ignite-ui-angular/angular/components/input_group.html), [**IgxIcon**](https://www.infragistics.com/products/ignite-ui-angular/angular/components/icon.html),  [**IgxRipple**](https://www.infragistics.com/products/ignite-ui-angular/angular/components/ripple.html), [**IgxButton**](https://www.infragistics.com/products/ignite-ui-angular/angular/components/button.html), [**IgxChip**](https://www.infragistics.com/products/ignite-ui-angular/angular/components/chip.html) 모듈을 사용합니다.
+이를 위해 [**IgxInputGroup**](input_group.md), [**IgxIcon**](icon.md),  [**IgxRipple**](ripple.md), [**IgxButton**](button.md), [**IgxChip**](chip.md) 모듈을 사용합니다.
 
 ```typescript
 // app.module.ts
@@ -207,7 +207,7 @@ export class AppModule {}
 
 마지막으로 템플릿을 새로운 컴포넌트로 업데이트합니다!
 
-**IgxInputGroup** 내의 모든 컴포넌트를 래핑합니다. 왼쪽에서 검색과 삭제/지우기 아이콘을 전환합니다(검색 입력이 비었는지 여부에 따라). 중앙에 입력 위치를 지정합니다. 또한, 삭제 아이콘을 클릭할 때마다 **searchText**를 업데이트하고 그리드의 `clearSearch` 메소드를 호출하여 강조 표시를 지웁니다.
+[**IgxInputGroup**](input_group.md) 내의 모든 컴포넌트를 래핑합니다. 왼쪽에서 검색과 삭제/지우기 아이콘을 전환합니다(검색 입력이 비었는지 여부에 따라). 중앙에 입력 위치를 지정합니다. 또한, 삭제 아이콘을 클릭할 때마다 **searchText**를 업데이트하고 그리드의 [`clearSearch`]({environment:angularApiUrl}/classes/igxgridcomponent.html#clearsearch) 메소드를 호출하여 강조 표시를 지웁니다.
 
 ```html
 <!--searchgrid.component.html-->
@@ -220,7 +220,7 @@ export class AppModule {}
 
     <input #search1 id="search1" igxInput placeholder="Search" [(ngModel)]="searchText" (ngModelChange)="grid.findNext(searchText, caseSensitive)"
         (keydown)="searchKeyDown($event)" />
-    
+
     <igx-suffix *ngIf="searchText.length > 0">
         ...
     </igx-suffix>
@@ -271,7 +271,7 @@ public clearSearch() {
     </div>
     ...
 ```
-- 검색 탐색 버튼의 경우 재료 아이콘을 사용해 입력을 리플 스타일 버튼으로 변환했습니다. 클릭 이벤트의 핸들러는 그대로 유지되며 `findNext`/`findPrev` 메소드를 호출합니다.
+- 검색 탐색 버튼의 경우 재료 아이콘을 사용해 입력을 리플 스타일 버튼으로 변환했습니다. 클릭 이벤트의 핸들러는 그대로 유지되며 [`findNext`]({environment:angularApiUrl}/classes/igxgridcomponent.html#findnext)/[`findPrev`]({environment:angularApiUrl}/classes/igxgridcomponent.html#findprev) 메소드를 호출합니다.
 
 ```html
 <!--searchgrid.component.html-->
@@ -279,52 +279,59 @@ public clearSearch() {
     ...
     <div class="searchButtons">
         <button igxButton="icon" igxRipple igxRippleCentered="true" (click)="grid.findPrev(searchText, caseSensitive, exactMatch)">
-            <igx-icon fontSet="material" name="navigate_before"></igx-icon>
+            <igx-icon fontSet="material">navigate_before</igx-icon>
         </button>
         <button igxButton="icon" igxRipple igxRippleCentered="true" (click)="grid.findNext(searchText, caseSensitive, exactMatch)">
-            <igx-icon fontSet="material" name="navigate_next"></igx-icon>
+            <igx-icon fontSet="material">navigate_next</igx-icon>
         </button>
     </div>
 </igx-suffix>
 ```
 
-### API 요약
+### 알려진 제한 사항
+
+|제한 사항|설명|
+|--- |--- |
+|템플릿으로 셀 검색|검색 기능은 모든 셀 템플릿을 div 요소 및 셀 값에서 검색된 텍스트를 강조 표시하는 범위를 바꿉니다. 즉, 템플릿에 여러 요소 또는 이벤트가 포함된 복잡한 템플릿이 있는 경우, 예기치 않은 동작이 발생할 수 있습니다. 이러한 템플릿을 가진 열이 있는 경우, 열 형식과 같은 다른 방법을 사용하거나 열의 [`searchable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#searchable) 속성을 false로 설정해야 합니다.|
+|원격 가상화| 원격 가상화를 사용할 경우 검색이 제대로 작동하지 않습니다|
+|컷오프 텍스트가 있는 셀| 셀의 텍스트가 너무 커서 텍스트에 맞지 않을 경우, 찾고 있는 텍스트가 생략되어 컷오프된 경우, 셀로 스크롤하여 매치 카운트에 포함시켜도 아무 것도 강조 표시되지 않습니다 |
+
+
+### API 참조
 
 검색 결과의 탐색은 그리드에 사용자 검색 줄 기능을 추가하여 구현했습니다. 또한 아이콘, 칩, 입력 등의 Ignite UI for Angular 컴포넌트를 추가로 사용했습니다. 검색 API는 다음과 같습니다.
 
-#### 메소드
-**IgxGridComponent**에서 다음 메소드를 사용할 수 있습니다:
-| 이름 | 형식 | 매개 변수 |설명 |
-| :--- | :--- | :--- | :--- |
-| `findNext` | number | 검색할 문자열 및 검색에서 대소문자의 구분 여부 및/또는 정확하게 일치하는지 여부를 설정(기본값은 모두 false임). | 그리드에서 지정된 문자열의 다음 항목을 검색하고 보이지 않으면 셀로 스크롤합니다. 그리드에 문자열이 포함된 횟수를 반환합니다. |
-| `findPrev` | number | 검색할 문자열 및 검색에서 대소문자의 구분 여부 및/또는 정확하게 일치하는지 여부를 설정(기본값은 모두 false임). | 그리드에서 지정된 문자열의 이전 항목을 검색하고 보이지 않으면 셀로 스크롤합니다. 그리드에 문자열이 포함된 횟수를 반환합니다. |
-| `clearSearch` | void | N/A | 그리드의 모든 강조 표시를 제거합니다. |
-| `refreshSearch` | number | N/A | 기존 검색을 다시 적용합니다. 그리드에 마지막 검색이 포함된 횟수를 반환합니다. |
+[`IgxGridComponent`]({environment:angularApiUrl}/classes/igxgridcomponent.html) methods:
+-   [`findNext`]({environment:angularApiUrl}/classes/igxgridcomponent.html#findnext)
+-   [`findPrev`]({environment:angularApiUrl}/classes/igxgridcomponent.html#findprev)
+-   [`clearSearch`]({environment:angularApiUrl}/classes/igxgridcomponent.html#clearsearch)
+-   [`refreshSearch`]({environment:angularApiUrl}/classes/igxgridcomponent.html#refreshsearch)
 
-<div class="divider"></div>
+[`IgxGridCellComponent`]({environment:angularApiUrl}/classes/igxgridcellcomponent.html) methods:
+-   [`highlightText`]({environment:angularApiUrl}/classes/igxgridcellcomponent.html#highlighttext)
+-   [`clearHighlight`]({environment:angularApiUrl}/classes/igxgridcellcomponent.html#clearhighlight)
 
-**IgxGridCellComponent**에서 다음 메소드를 사용할 수 있습니다:
-| 이름 | 형식 | 매개 변수 |설명 |
-| :--- | :--- | :--- | :--- |
-| `highlightText` | number | 검색할 문자열 및 검색에서 대소문자의 구분 여부 및/또는 정확하게 일치하는지 여부를 설정(기본값은 모두 false임). | 주어진 셀에서 문자열의 모든 항목을 강조 표시합니다. 검색된 문자열이 셀에 포함된 횟수를 반환합니다. |
-| `clearHighlight` | void | N/A | 셀의 모든 강조 표시를 제거합니다. |
+[`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) properties:
+-   [`searchable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#searchable)
 
-<div class="divider"></div>
+[`ISearchInfo`]({environment:angularApiUrl}/interfaces/isearchinfo.html)
 
-#### 속성
-**IgxGridComponent**에서 다음 속성을 사용할 수 있습니다:
-| 이름 | 형식 | 설명 |
-| :--- | :--- | :--- |
-| `lastSearchInfo` | ISearchInfo | 마지막으로 실행한 검색에 대한 정보가 포함되어 있습니다. |
+사용된 상대 API가 있는 추가 컴포넌트 및/또는 지시문:
 
-<div class="divider"></div>
+* [`IgxInputGroupComponent`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
+* [`IgxIconComponent`]({environment:angularApiUrl}/classes/igxiconcomponent.html)
+* [`IgxRippleDirective`]({environment:angularApiUrl}/classes/igxrippledirective.html)
+* [`IgxButtonDirective`]({environment:angularApiUrl}/classes/igxbuttondirective.html)
+* [`IgxChipComponent`]({environment:angularApiUrl}/classes/igxchipcomponent.html)
 
-**IgxColumnComponent**에서 다음 속성을 사용할 수 있습니다:
-| 이름 | 형식 | 설명 |
-| :--- | :--- | :--- |
-| `searchable` | boolean | 열이 검색에 포함되는지 여부를 결정합니다. false로 설정한 경우, 이 열의 셀 값이 그리드의 검색 API 결과에 포함되지 않습니다(기본값은 true). |
+스타일:
 
-<div class="divider"></div>
+* [`IgxGridComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [`IgxInputGroupComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-input-group-theme)
+* [`IgxIconComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
+* [`IgxRippleDirective Styles`]({environment:sassApiUrl}/index.html#function-igx-ripple-theme)
+* [`IgxButtonDirective Styles`]({environment:sassApiUrl}/index.html#function-igx-button-theme)
+* [`IgxChipComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-chip-theme)
 
 ### 추가 리소스
 <div class="divider--half"></div>

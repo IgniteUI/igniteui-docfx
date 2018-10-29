@@ -1,5 +1,5 @@
 ﻿---
-title:  그리드 표시 밀도- 네이티브 Angular | Ignite UI for Angular
+title:  그리드 표시 밀도- 네이티브 Angular| Ignite UI for Angular
 _description: Ignite UI for Angular 데이터 그리드 컨트롤은 열의 데이터 유형을 기반으로 하는 편집 가능한 열의 기본 셀 템플릿을 제공합니다.
 _keywords: Ignite UI for Angular, UI 컨트롤, Angular 위젯, 웹 위젯, UI 위젯, Angular, 네이티브 Angular 컴포넌트 세트, 네이티브 Angular 컨트롤, 네이티브 Angular 컴포넌트 라이브러리, 네이티브 Angular 컴포넌트, Angular 그리드, Angular 데이터 그리드 컴포넌트, Angular 데이터 그리드 컨트롤, Angular 그리드 컴포넌트, Angular 그리드 컨트롤, Angular 고성능 그리드, 그리드 표시 밀도
 _language: kr
@@ -16,13 +16,13 @@ _language: kr
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-displayDensity-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-displayDensity-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
 </div>
 
 <div class="divider--half"></div>
 
 ### 사용 방법
-상기의 데모에서 볼 수 있듯이 **Igx-Grid**는 세 가지 밀도 옵션을 제공합니다: **compact**, **cosy** 및 **comfortable**. 아래의 코드는 `displayDensity`를 설정하는 방법을 보여줍니다:
+위의 데모에서 볼 수 있듯이 [**Igx-Grid**]({environment:angularApiUrl}/classes/igxgridcomponent.html)는 3가지 밀도 옵션을 제공합니다: **소**, **중**, **대**. 아래의 코드 조각은 [`displayDensity`]({environment:angularApiUrl}/classes/igxgridcomponent.html#displaydensity)를 설정하는 방법을 보여줍니다:
 
 ```html
 <igx-grid #grid [data]="data" [displayDensity]="'cosy'" >
@@ -35,15 +35,15 @@ this.grid.displayDensity = "cosy";
 ...
 ```
 
-이제 각 옵션을 그리드 컴포넌트에 반영하는 방법을 자세하게 살펴 보겠습니다. 서로 다른 표시 밀도 옵션 사이에서 전환하면 각 그리드 요소의 높이 및 해당 패딩이 변경됩니다. 또한, 사용자 열 **너비**를 적용하는 경우 왼쪽 및 오른쪽 패딩 합계보다 커야 함에 주의하십시오.
- - **comfortable** - 이것은 밀도가 가장 낮고 행 높이가 `50px`인 기본 그리드 표시 밀도입니다. 왼쪽 및 오른쪽 패딩은 `24px`임; 최소 열 너비는 `48px`임;
- - **cosy** - 이것은 행 높이가 `40px`인 중간 밀도입니다. 왼쪽 및 오른쪽 패딩은 `16px`임; 최소 열 너비는 `32px`임;
- - **compact** - 이것은 밀도가 가장 높고 행 높이가 `32px`로 왼쪽 및 오른쪽 패딩은 `12px`; 최소 열 너비는 `24px`임;
+이제 각 옵션을 그리드 컴포넌트에 반영하는 방법을 자세하게 살펴 보겠습니다. 서로 다른 표시 밀도 옵션 사이에서 전환하면 각 그리드 요소의 높이 및 해당 패딩이 변경됩니다. 또한, 사용자 열  [**너비**]({environment:angularApiUrl}/classes/igxcolumncomponent.html#width)를 적용하려면 왼쪽 및 오른쪽 패딩 합계보다 커야 함을 고려해야 합니다.
+ - **comfortable** - 이것은 밀도가 가장 낮고 행 높이가 `50px`인 기본 그리드 표시 밀도입니다. 왼쪽 및 오른쪽 패딩은 `24픽셀`이며, 최소 열 [`너비`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#width)는 `48픽셀`임,
+ - **cosy** - 이것은 행 높이가 `40px`인 중간 밀도입니다. 왼쪽 및 오른쪽 패딩은 `16픽셀`이며, 최소 열 [`너비`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#width)는 `32픽셀`임,
+ - **소** - 밀도가 가장 높고 행 높이가 `32px`, 왼쪽 및 오른쪽 패딩은 `12px`이며, 최소 열 [`너비`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#width)는 `24픽셀`임,
 
 > [!NOTE]
 > 현재 크기는 무효화할 수 **없습니다**.
 
-계속하여 샘플을 사용해 `displayDensity`의 적용 방법을 살펴 보겠습니다. 먼저 각 밀도를 전환하는데 도움이 되는 버튼을 추가해 보겠습니다:
+이제 샘플을 계속 진행하여 [`displayDensity`]({environment:angularApiUrl}/classes/igxgridcomponent.html#displaydensity)가 어떻게 적용되는지 살펴 보겠습니다. 먼저 각 밀도를 전환하는데 도움이 되는 버튼을 추가해 보겠습니다:
 
 ```html
 <div class="density-chooser">
@@ -147,19 +147,28 @@ public selectDensity(event) {
 }
 ```
 
-**IgxGrid**에서 그리드 행 높이를 변경할 수 있도록 제공하는 그 밖의 옵션은 `rowHeight` 속성입니다. 이 속성이 `displayDensity` 옵션과 함께 그리드 레이아웃에 어떻게 영향을 미치는지 살펴 보겠습니다.
+그리드의 행 높이를 변경할 수 있도록 [**Igx-Grid**]({environment:angularApiUrl}/classes/igxgridcomponent.html)가 제공하는 또 다른 옵션은 [`rowHeight`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowheight)속성입니다. 이제 이 속성이 [`displayDensity`]({environment:angularApiUrl}/classes/igxgridcomponent.html#displaydensity) 옵션과 함께 그리드 레이아웃에 어떤 영향을 미치는지 살펴 보겠습니다.
 
 다음 사항에 유의하십시오:
- - **rowHeight가 지정된 경우** `displayDensity` 옵션은 행 높이에 영향을 주지 **않습니다**;
- - `displayDensity`는 상기의 설명대로 **그리드의 나머지 요소에 모두 영향을 줍니다**;
+ - [`displayDensity`]({environment:angularApiUrl}/classes/igxgridcomponent.html#displaydensity)옵션은 **[rowHeight]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowheight)가 지정된 경우**,  행 높이에 영향을 주지 **않습니다**;
+ - [`displayDensity`]({environment:angularApiUrl}/classes/igxgridcomponent.html#displaydensity)는 위에서 설명한 대로 **그리드의 나머지 요소에 모두 영향을 미칩니다**;
 
-이제 샘플을 확장하고 그리드에 `rowHeight` 속성을 추가할 수 있습니다:
+이제 샘플을 확장하고 [`rowHeight`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowheight) 속성을 그리드에 추가할 수 있습니다:
  ```html
  <igx-grid #grid [data]="data" [displayDensity]="density" [rowHeight]="'80px'" width="100%" height="550px">
  ..............
  </igx-grid>
 
  ```
+<div class="divider--half"></div>
+
+### API
+<div class="divider--half"></div>
+
+* [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
+* [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [IgxColumnComponent](https://staging.infragistics.local/products/ignite-ui-angular/docs/typescript/classes/igxcolumncomponent.html)
+
 <div class="divider--half"></div>
 
 ### 추가 리소스

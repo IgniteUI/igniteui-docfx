@@ -1,5 +1,5 @@
 ﻿---
-title: 요약 컴포넌트- 네이티브 Angular | Ignite UI for Angular
+title: 요약 컴포넌트- 네이티브 Angular| Ignite UI for Angular
 _description: Ignite UI for Angular 요약 컴포넌트는 열의 데이터 유형에 따라 사전 정의된 기본 요약 항목 세트를 가진 별도의 컨테이너에서 열 정보를 표시할 수 있습니다.
 _keywords: Ignite UI for Angular, UI 컨트롤, Angular 위젯, 웹 위젯, UI 위젯, Angular, 네이티브 Angular 컴포넌트 세트, 네이티브 Angular 컨트롤, 네이티브 Angular 컴포넌트 라이브러리, 네이티브 Angular 컴포넌트, Angular 그리드, Angular 데이터 그리드 컴포넌트, Angular 데이터 그리드 컨트롤, Angular 그리드 컴포넌트, Angular 그리드 컨트롤, Angular 고성능 그리드, 요약, 개요
 _language: kr
@@ -16,7 +16,7 @@ Ignite UI for Angular 그리드 컴포넌트에는 열 단위 수준에서 작�
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-summary-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-summary-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
 </div>
 <div class="divider--half"></div>
 
@@ -26,7 +26,7 @@ Ignite UI for Angular 그리드 컴포넌트에는 열 단위 수준에서 작�
 사용자는 열의 데이터 유형에 따라 사전 정의된 기본 요약 항목 세트를 가진 별도의 컨테이너에서 열 정보를 표시할 수 있습니다. Ignite UI for Angular에서 **Grid summaries**을 열 단위 수준으로 활성화하고 필요한 열에 대해서만 활성화할 수 있습니다. 그리드 요약은 열의 데이터 유형에 따라 사전 정의된 기본 요약 세트를 제공하므로 시간을 절약할 수 있습니다.
 
 
-`string` 및 `boolean` 데이터 유형의 경우 다음의 함수를 사용할 수 있습니다:
+`string` 및 `boolean` [`data types`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#datatype)의 경우 다음의 함수를 사용할 수 있습니다:
  - count
 
 `number` 데이터 유형의 경우 다음의 함수를 사용할 수 있습니다:
@@ -41,7 +41,7 @@ Ignite UI for Angular 그리드 컴포넌트에는 열 단위 수준에서 작�
  - earliest
  - latest
 
-**열 요약**은 `hasSummary` 속성을 `true`로 설정하여 열 단위로 활성화됩니다. 또한, 각 열의 요약은 열 데이터 형식에 따라 해결되는 것에 유의하십시오. `igx-grid` 에서 기본 열 데이터 유형은 `string`이므로 `number` 또는 `date`별 요약을 원하는 경우 `dataType` 속성을 `number` 또는 `date`로 설정해야 합니다.
+**열 요약**은 [`hasSummary`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#hassummary) 속성을 `true`로 설정하여 열 단위로 활성화됩니다. 또한, 각 열의 요약은 열 데이터 형식에 따라 해결되는 것에 유의하십시오. `igx-grid`에서 기본 열 데이터 유형은 `string`이므로 `number` 또는 `date`별 요약을 원하는 경우 [`dataType`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#datatype) 속성을 `number` 또는 `date`로 설정해야 합니다.
 
 ```html
 <igx-grid #grid1 [data]="data" [autoGenerate]="false" height="800px" width="800px" (onColumnInit)="initColunm($event)" >
@@ -54,7 +54,7 @@ Ignite UI for Angular 그리드 컴포넌트에는 열 단위 수준에서 작�
 </igx-grid>
 ```
 
-특정 열 또는 열 목록에서 요약을 활성화/비활성화하는 또 다른 방법은 **igx-grid**의 공개 메소드 `enableSummaries`/`disableSummaries`를 사용하는 것입니다.
+특정 열 또는 열 목록에서 요약을 활성화/비활성화하는 또 다른 방법은 **igx-grid**의 공개 메소드 [`enableSummaries`]({environment:angularApiUrl}/classes/igxgridcomponent.html#enablesummaries)/[`disableSummaries`]({environment:angularApiUrl}/classes/igxgridcomponent.html#disablesummaries)를 사용하는 것입니다.
 
 ```html
 <igx-grid #grid1 [data]="data" [autoGenerate]="false" height="800px" width="800px" (onColumnInit)="initColunm($event)" >
@@ -78,7 +78,7 @@ public disableSummary() {
 }
 ```
 
-참고: `hasSummary` 속성을 `false`에서 `true`로 또는 그 반대로 변경하여 특정 열 요약을 런타임으로 활성화 또는 비활성화하는 옵션이 있지만 `recalculateSummaries()` 메소드를 명시적으로 호출해야 합니다.
+참고: [`hasSummary`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#hassummary) 속성을 `false`에서 `true`로 또는 그 반대로 변경하여 특정 열 요약을 런타임으로 활성화 또는 비활성화하는 옵션이 있지만 [`recalculateSummaries`]({environment:angularApiUrl}/classes/igxgridcomponent.html#recalculatesummaries) 메소드를 명시적으로 호출해야 합니다.
 
 ```html
 <igx-grid #grid1 [data]="data" [autoGenerate]="false" height="800px" width="800px" (onColumnInit)="initColunm($event)" >
@@ -101,7 +101,7 @@ public disableSummary() {
 ...
 
 ```
-이러한 함수가 요구 사항을 충족시키지 못하면 특정 열에 대한 사용자 요약을 제공할 수 있습니다. 이를 실행하려면 열 데이터 유형 및 필요에 따라 기본 클래스인 `IgxSummaryOperand`, `IgxNumberSummaryOperand` 또는 `IgxDateSummaryOperand` 중에서 하나를 무효화해야 합니다. 이 방법으로 기존 함수를 다시 정의하거나 새로운 함수를 추가할 수 있습니다. `IgxSummaryOperand` 클래스는 `count` 메소드에 대해서만 기본 실행을 제공합니다. `IgxNumberSummaryOperand`는 `IgxSummaryOperand`를 확장하고 `min`, `max`, `sum` 및 `average`의 구현을 제공합니다. `IgxDateSummaryOperand`는 `IgxSummaryOperand`를 확장하며 `earliest` 및 `latest`를 제공합니다.
+이러한 함수가 요구 사항을 충족시키지 못하면 특정 열에 대한 사용자 요약을 제공할 수 있습니다. 이를 실행하려면 열 데이터 유형 및 필요에 따라 기본 클래스인 [`IgxSummaryOperand`]({environment:angularApiUrl}/classes/igxsummaryoperand.html), [`IgxNumberSummaryOperand`]({environment:angularApiUrl}/classes/igxnumbersummaryoperand.html) 또는 [`IgxDateSummaryOperand`]({environment:angularApiUrl}/classes/igxdatesummaryoperand.html) 중에서 하나를 무효화해야 합니다. 이 방법으로 기존 함수를 다시 정의하거나 새로운 함수를 추가할 수 있습니다. [`IgxSummaryOperand`]({environment:angularApiUrl}/classes/igxsummaryoperand.html) 클래스는 [`count`]({environment:angularApiUrl}/classes/igxsummaryoperand.html#count) 메소드에 대해서만 기본 실행을 제공합니다. [`IgxNumberSummaryOperand`]({environment:angularApiUrl}/classes/igxnumbersummaryoperand.html)는 [`IgxSummaryOperand`]({environment:angularApiUrl}/classes/igxsummaryoperand.html)를 확장하고 [`min`]({environment:angularApiUrl}/classes/igxnumbersummaryoperand.html#min), [`max`]({environment:angularApiUrl}/classes/igxnumbersummaryoperand.html#max), [`sum`]({environment:angularApiUrl}/classes/igxnumbersummaryoperand.html#sum) 및 [`average`]({environment:angularApiUrl}/classes/igxnumbersummaryoperand.html#average)의 구현을 제공합니다. [`IgxDateSummaryOperand`]({environment:angularApiUrl}/classes/igxdatesummaryoperand.html)는 [`IgxSummaryOperand`]({environment:angularApiUrl}/classes/igxsummaryoperand.html)를 확장하며 [`earliest`]({environment:angularApiUrl}/classes/igxdatesummaryoperand.html#earliest) 및 [`latest`]({environment:angularApiUrl}/classes/igxdatesummaryoperand.html#latest)를 제공합니다.
 
 ```typescript
 import { IgxSummaryResult, IgxSummaryOperand, IgxNumberSummaryOperand, IgxDateSummaryOperand } from 'igniteui-angular/grid/grid-summary';
@@ -124,7 +124,7 @@ class MySummary extends IgxNumberSummaryOperand {
 }
 ```
 
-아래의 코드에서 메소드 **operate**은 인터페이스인 **IgxSummaryResult**의 목록을 반환하는 것을 볼 수 있습니다.
+아래의 코드에서 메소드 [`operate`]({environment:angularApiUrl}/classes/igxsummaryoperand.html#operate)은 인터페이스인 [`IgxSummaryResult`]({environment:angularApiUrl}/interfaces/igxsummaryresult.html)의 목록을 반환하는 것을 볼 수 있습니다.
 ```typescript
 interface IgxSummaryResult {
     key: string;
@@ -132,7 +132,7 @@ interface IgxSummaryResult {
     summaryResult: any;
 }
 ```
-이제 `UnitsInStock` 열에 사용자 요약을 추가해 보겠습니다. `summaries` 속성을 아래에서 작성하는 클래스로 설정하면 됩니다.
+이제 `UnitsInStock` 열에 사용자 요약을 추가해 보겠습니다. [`summaries`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#summaries) 속성을 아래에서 작성하는 클래스로 설정하면 됩니다.
 ```html
 <igx-grid #grid1 [data]="data" [autoGenerate]="false" height="800px" width="800px" (onColumnInit)="initColunm($event)" >
     <igx-column field="ProductID" width="200px"  [sortable]="true">
@@ -193,6 +193,16 @@ this.http.get<any[]>('/assets/data.json')
     this.grid1.clearSummaryCache();
 });
 ```
+### API
+
+* [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
+* [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [IgxGridSummaries Styles]({environment:sassApiUrl}/index.html#function-igx-grid-summary-theme)
+* [IgxSummaryOperand]({environment:angularApiUrl}/classes/igxsummaryoperand.html)
+* [IgxNumberSummaryOperand]({environment:angularApiUrl}/classes/igxnumbersummaryoperand.html)
+* [IgxDateSummaryOperand]({environment:angularApiUrl}/classes/igxdatesummaryoperand.html)
+* [IgxColumnGroupComponent]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html)
+* [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 
 ### 추가 리소스
 <div class="divider--half"></div>

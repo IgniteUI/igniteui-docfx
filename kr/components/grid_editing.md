@@ -1,5 +1,5 @@
 ﻿---
-title: 그리드 편집- 네이티브 Angular | Ignite UI for Angular
+title: 그리드 편집- 네이티브 Angular| Ignite UI for Angular
 _description: Ignite UI for Angular 데이터 그리드 컨트롤은 열의 데이터 유형을 기반으로 하는 편집 가능한 열의 기본 셀 템플릿을 제공합니다.
 _keywords: Ignite UI for Angular, UI 컨트롤, Angular 위젯, 웹 위젯, UI 위젯, Angular, 네이티브 Angular 컴포넌트 세트, 네이티브 Angular 컨트롤, 네이티브 Angular 컴포넌트 라이브러리, 네이티브 Angular 컴포넌트, Angular 그리드, Angular 데이터 그리드 컴포넌트, Angular 데이터 그리드 컨트롤, Angular 그리드 컴포넌트, Angular 그리드 컨트롤, Angular 고성능 그리드, 셀 편집
 _language: kr
@@ -16,16 +16,16 @@ Ignite UI for Angular 그리드 컴포넌트는 열의 데이터 유형을 기�
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-editing-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-editing-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
 </div>
 <div class="divider--half"></div>
 
-특정 셀에서 편집 모드에 들어가려면 먼저 열을 **편집 가능**으로 설정해야 합니다. 데이터 유형별 *편집 템플릿*을 사용하려면 열 **dataType** 속성을 지정해야 합니다. 이제 각 유형의 기본 템플릿이 무엇인지 살펴 보겠습니다.
+특정 셀에 대해 편집 모드를 시작하려면 먼저 열을 [`편집 가능`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable)으로 설정해야 합니다. 데이터 유형별 *편집 템플릿*을 사용하려면 열 [`dataType`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#datatype)속성을 지정해야 합니다. 이제 각 유형의 기본 템플릿이 무엇인지 살펴 보겠습니다.
 
- - `string` 데이터 형식의 경우 기본 템플릿은 **igxInput**을 사용합니다
- - `number` 데이터 유형의 경우 기본 템플릿은 **igxInput type="number"**를 사용하며, 숫자로 분석할 수 없는 값으로 셀을 업데이트한 경우에는 변경이 취소되고 셀 값은 **0**으로 설정됩니다.
- - `data` 데이터 형식의 경우 기본 템플릿은 **igx-date-picker**를 사용합니다
- - `boolean` 데이터 형식의 경우 기본 템플릿은 **igx-checkbox**를 사용합니다
+ - `string` 문자열 데이터 유형의 경우, 기본 템플릿은 [**igxInput**]({environment:angularApiUrl}/classes/igxinputdirective.html)을 사용함
+ - `number` 데이터 유형의 경우, 기본 템플릿은 **[igxInput]({environment:angularApiUrl}/classes/igxinputdirective.html) type="number"**를 사용하므로 셀을 숫자로 구문 분석할 수 없는 값으로 업데이트하려고 하면 변경 내용이 삭제되고 셀 값이 **0**으로 설정됩니다.
+ - `date` 데이터 유형의 경우, 기본 템플릿은 [**igx-date-picker**]({environment:angularApiUrl}/classes/igxdatepickercomponent.html)을 사용함
+ - `boolean` 데이터 유형의 경우, 기본 템플릿은 [**igx-checkbox**]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html)을 사용함
 
 편집 가능한 셀이 다음 중 하나의 방법으로 포커스되어 있는 경우, 특정 셀에서 편집 모드로 들어갈 수 있습니다:
  - 더블 클릭;
@@ -58,7 +58,7 @@ Ignite UI for Angular 그리드 컴포넌트는 열의 데이터 유형을 기�
 ```
 업데이트하려는 셀이 그리드의 표시 컨테이너 외부에 있는 경우 새로운 값이 제출되지 않습니다.
 
-셀을 업데이트하는 또 다른 방법은 IgxCellComponent의 `update` 메소드를 직접 호출하는 것입니다:
+또한, 셀을 직접 업데이트하는 또 다른 방법은[`IgxGridCellComponent`]({environment:angularApiUrl}/classes/igxgridcellcomponent.html)의 [`update`]({environment:angularApiUrl}/classes/igxgridcellcomponent.html#update) 메소드입니다:
 
 ```typescript
 ...
@@ -70,18 +70,18 @@ Ignite UI for Angular 그리드 컴포넌트는 열의 데이터 유형을 기�
     }
 ...
 ```
-셀이 편집 모드일 때 적용될 사용자 템플릿을 정의하는 방법에 대해서는 [그리드 열 구성](grid.md#열-구성)에 대한 문서를 참조하십시오.
+셀이 편집 모드일 때 적용될 사용자 템플릿을 정의하는 방법에 대해서는 [그리드 열 구성](grid.md#columns-configuration)에 대한 문서를 참조하십시오.
 
 ### CRUD 조작
 
 > [!NOTE]
 > **CRUD 조작**을 실행할 경우에는 **필터링**, **정렬**, **그룹화** 등 적용된 모든 파이프는 다시 적용되고 표시가 자동으로 업데이트된다는 점에 유의하십시오.
 
-`IgxGridComponent`는 기본적인 CRUD 조작을 위한 간단한 API를 제공합니다.
+[`IgxGridComponent`]({environment:angularApiUrl}/classes/igxgridcomponent.html) 는 기본 CRUD 작업을 위한 명확한 API를 제공합니다.
 
 #### 새로운 레코드 추가
 
-그리드 컴포넌트는 제공된 데이터를 데이터 소스 자체에 추가하는 `addRow` 메소드를 제공합니다.
+그리드 컴포넌트는 제공된 데이터를 데이터 소스 자체에 추가하는 [`addRow`]({environment:angularApiUrl}/classes/igxgridcomponent.html#addrow) 메소드를 노출합니다.
 
 ```typescript
 // Adding a new record
@@ -92,7 +92,7 @@ this.grid.addRow(record);
 
 #### 그리드 데이터 업데이트
 
-그리드 데이터 업데이트는 `updateRow` 및 `updateCell` 메소드를 통해 이루어지며 **그리드의 기본 키가 정의되어 있는 경우에만** 실행됩니다. 또한, `update` 메소드를 통해 셀 및 행 값을 직접 업데이트할 수 있습니다.
+그리드의 데이터 업데이트는 [`updateRow`]({environment:angularApiUrl}/classes/igxgridcomponent.html#updaterow) 및 [`updateCell`]({environment:angularApiUrl}/classes/igxgridcomponent.html#updatecell) 메소드를 통해 실시할 수 있지만 **그리드에 기본 키가 정의된 경우에만 가능합니다**. [`update`]({environment:angularApiUrl}/classes/igxgridcellcomponent.html#update) 메소드를 통해 셀 및 행 값을 직접 업데이트 할 수도 있습니다.
 
 ```typescript
 // Updating the whole row
@@ -111,7 +111,7 @@ row.update(newData);
 
 #### 그리드에서 데이터 삭제
 
-`deleteRow()` 메소드는 기본 키가 정의 된 경우에만 지정된 행을 제거합니다.
+[`deleteRow()`]({environment:angularApiUrl}/classes/igxgridcomponent.html#deleterow) 메소드는 기본 키가 정의된 경우에만 지정된 행을 제거합니다.
 
 ```typescript
 // Delete row through Grid API
@@ -126,6 +126,17 @@ row.delete();
 ```
 
 <div class="divider--half"></div>
+
+### API
+* [IgxGridCellComponent]({environment:angularApiUrl}/classes/igxgridcellcomponent.html)
+* [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [IgxGridRowComponent]({environment:angularApiUrl}/classes/igxgridrowcomponent.html)
+* [IgxInputDirective]({environment:angularApiUrl}/classes/igxinputdirective.html)
+* [IgxDatePickerComponent]({environment:angularApiUrl}/classes/igxdatepickercomponent.html)
+* [IgxDatePickerComponent Styles]({environment:sassApiUrl}/index.html#function-igx-date-picker-theme)
+* [IgxCheckboxComponent]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html)
+* [IgxCheckboxComponent Styles]({environment:sassApiUrl}/index.html#function-igx-checkbox-theme) 
+
 
 ### 추가 리소스
 <div class="divider--half"></div>
