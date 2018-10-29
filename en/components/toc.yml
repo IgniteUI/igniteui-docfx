@@ -10,7 +10,7 @@
       new: false
     - name: Editing
       href: grid_editing.md
-      new: false
+      new: true
       items:
         - name: Row Editing
           href: grid_row_editing.md

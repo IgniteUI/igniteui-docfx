@@ -6,8 +6,6 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ## Grid Editing
 
-[Grid Transactions](grid_transactions.md) topic.
-
 Row editing - allows modification of several cells in the row, before submitting, at once, all those changes to the grid's data source. Leverages the pending changes functionality of the new transaction provider.
 
 
@@ -68,7 +66,7 @@ Then define a grid with bound data source and [`rowEditable`]({environment:angul
 ```
 
 > [!NOTE]
-> Setting primary key is mandatory for editing operation, including row editing.
+> Setting primary key is mandatory for editing operations, including row editing.
 > [!NOTE]
 > It's not needed to enable editing for individual columns. Using the [`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowEditable) property in the grid, will mean that all rows, with defined `field` property, excluding primary one, will be editable. If you want to disable editing for specific column, then you set the [`editable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable) column's input to `false`.
 
@@ -98,40 +96,47 @@ export class GridRowEditSampleComponent {
 ```
 
 > [!NOTE]
-> The grid uses internally a provider [`IgxBaseTransactionService`]({environment:angularApiUrl}/classes/igxbasetransactionservice) that holds pending cell changes, until submitted or cancelled.
+> The grid uses internally a provider [`IgxBaseTransactionService`]({environment:angularApiUrl}/classes/igxbasetransactionservice) that holds pending cell changes, until row state submitted or cancelled.
 
-## Behavior, Navigation and integration with other igxGrid features
-
-### Overlay position
+## Positioning
 
 - Default position of the overlay will be below the row that is in edit mode
      
-- If there is no space - in that case it will appear above the row.
+- If there is no space below the row then overlay will appear above the row.
      
 - Once shown - top or bottom, overlay will maintain this position during scrolling, until the overlay is closed.
 
-### Overlay closing
+## Behavior
 
-- If row is in edit mode, then editing will continue if a cell from the same row is clicked.
+- If row is in edit mode, then editing will continue, if a cell from the same row is clicked.
 
-- If row is in edit mode, then clicking a cell from another row will finish the current row edit and will submit new row changes. If the new cell that gets focus is editable, then the new row also enters edit mode, while if the cell is not editable, then only the previous row exits edit mode.
+- Clicking "Done" button will finish row editing and will submit changes either to the data source, or to a transaction if available. In addition row will exit edit mode.
+
+- Clicking "Cancel" button will revert all current changes in the row and row will exit edit mode.
+
+- If row is in edit mode, then clicking a cell from another row will finish the current row edit and will submit new row changes (the same behavior clicking "Done" button). If the new cell that gets focus is editable, then the new row also enters edit mode, while if the cell is not editable, then only the previous row exits edit mode.
 
 - If row is in edit mode and grid is scrolled so that row goes outside the visible area, the latter will be still in edit mode. When grid is scrolled, so that the row is visible again, the row will be still in edit mode.
 
+- Each modified cell gets edited style until row edit is finished. This is the behavior, when grid is not provided with transactions. When transactions are available - then cell edit style is applied until all the changes are committed.
 
-### Keyboard Navigation
+
+## Keyboard Navigation
 
 - `Enter` and `F2` enters row edit mode
- - `Esc` exits row edit mode and doesn't submit any of the cell changes, made while the row was in edit mode.
- - `Tab` move focus from one editable cell in the row to the next and from the right-most editable cell to the CANCEL and DONE buttons. Navigation from DONE button goes to the left-most editable cell within the currently edited row.
 
- ### Feature Integration
+- `Esc` exits row edit mode and doesn't submit any of the cell changes, made while the row was in edit mode.
 
-- Any data chaning operation will terminate row editing operations and will submit current row changes. This will include operations like sorting, changing grouping and filtering criteria, paging, etc.
+- `Tab` move focus from one editable cell in the row to the next and from the right-most editable cell to the CANCEL and DONE buttons. Navigation from DONE button goes to the left-most editable cell within the currently edited row.
 
-- Summaries will be updated after row edit is done.
 
-- Expanding and collapsing grouped rows will not terminate row that is currently in edit.
+## Feature Integration
+
+- Any data changing operation will terminate row editing operations and will submit current row changes. This will include operations like sorting, changing grouping and filtering criteria, paging, etc.
+
+- Summaries will be updated after row edit is finished. Same is valid for the other features like sorting, filtering, etc.
+
+- Expanding and collapsing grouped rows will not terminate editing for the current row.
 
 
  ## Customizing Row Editing Overlay
