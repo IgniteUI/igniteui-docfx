@@ -171,7 +171,7 @@ export class GridRowEditSampleComponent {
 
 ### igxGrid Methods
 
-[endRowEdit]({environment:angularApiUrl}/classes/igxgridrowcomponent.html#endRowEdit)
+* [endRowEdit]({environment:angularApiUrl}/classes/igxgridrowcomponent.html#endRowEdit)
 
 ### Row Editing Overlay Directives
 
