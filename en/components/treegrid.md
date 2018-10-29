@@ -6,7 +6,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ## Tree Grid
 
-<p class="highlight">Displays and manipulate hierarchical data with consistent schema formatted as a table and provides a line of advanced features such as sorting, filtering, editing, column pinning, paging, column moving and hiding.</p>
+<p class="highlight">Displays and manipulates hierarchical data with consistent schema formatted as a table and provides a line of advanced features such as sorting, filtering, editing, column pinning, paging, column moving and hiding.</p>
 <div class="divider"></div>
 
 ### Demo
@@ -16,7 +16,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="ttreegrid-childdatakey-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-childdatakey-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
 
@@ -53,6 +53,10 @@ Regardless of which option is used for building the tree grid's hierarchy (child
 
 > [!NOTE]
 > Each row can have only one tree cell, but it can have multiple (or none) ordinary cells.
+
+#### Initial Expand Depth
+
+Initially the tree grid will expand all node levels and show them. This behavior can be configured using the [`expandedLevels`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#expandedlevels) property. By default its value is `Infinity` which means all node levels will be expanded. You may control the initial expanded levels by setting this property to a numeric value. For example `0` will show only root level nodes, `1` will show root level nodes and their child nodes and so on...
 
 #### Child collection
 When we are using the **child collection** option, every data object contains a child collection, that is populated with items of the same type as the parent data object. This way every record in our tree grid will have a direct reference to any of its children. In this case the [`data`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#data) property of our tree grid that contains the original data source will be a hierarchically defined collection.
@@ -115,7 +119,7 @@ In addition, we will disable the automatic generating of the columns and define 
 ```
 
 We will now enable the row selection and paging features of the tree grid by using the [`rowSelectable`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#rowselectable) and the [`paging`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#paging) properties.
-We will also enable the filtering, sorting, editing, moving and resizing features for each of our columns by handling the [`onColumnInit`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#onColumnInit) event of the tree grid and set the respective column's properties.
+We will also enable the filtering, sorting, editing, moving and resizing features for each of our columns by handling the [`onColumnInit`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#oncolumninit) event of the tree grid and set the respective column's properties.
 
 ```html
 <!--treeGridSample.component.html-->
@@ -160,6 +164,91 @@ You can see the result of the code from above at the beginning of this article i
 
 #### Primary and Foreign keys
 When we are using the **primary and foreign keys** option, every data object contains a primary key and a foreign key. The primary key is the unique identifier of the current data object and the foreign key is the unique identifier of its parent. In this case the [`data`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#data) property of our tree grid that contains the original data source will be a flat collection.
+
+The following is an example of a component which contains a flat collection defined with primary and foreign keys relation:
+
+```typescript
+// my.component.ts
+
+@Component({
+    ...
+})
+export class MyComponent implements OnInit {
+
+    public data: any[];
+
+    constructor() { }
+
+    public ngOnInit() {
+        // Primary and Foreign keys sample data
+        this.data = [
+            { ID: 1, ParentID: -1, Name: "Casey Houston", JobTitle: "Vice President", Age: 32 },
+            { ID: 2, ParentID: 1, Name: "Gilberto Todd", JobTitle: "Director", Age: 41 },
+            { ID: 3, ParentID: 2, Name: "Tanya Bennett", JobTitle: "Director", Age: 29 },
+            { ID: 4, ParentID: 2, Name: "Jack Simon", JobTitle: "Software Developer", Age: 33 },
+            { ID: 5, ParentID: 8, Name: "Celia Martinez", JobTitle: "Senior Software Developer", Age: 44 },
+            { ID: 6, ParentID: -1, Name: "Erma Walsh", JobTitle: "CEO", Age: 52 },
+            { ID: 7, ParentID: 2, Name: "Debra Morton", JobTitle: "Associate Software Developer", Age: 35 },
+            { ID: 8, ParentID: 10, Name: "Erika Wells", JobTitle: "Software Development Team Lead", Age: 50 },
+            { ID: 9, ParentID: 8, Name: "Leslie Hansen", JobTitle: "Associate Software Developer", Age: 28 },
+            { ID: 10, ParentID: -1, Name: "Eduardo Ramirez", JobTitle: "Development Manager", Age: 53 }
+        ];
+    }
+}
+```
+
+In the sample data above all records a described with an ID, Parent ID and some other records related fields. As mentioned the ID of the records must be unique. The ParentID contains the ID of the parent node or "-1" if this is a root level node (node with no parent).
+
+The parent-child relation is configured using the TreeGrid's [`primaryKey`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#primarykey) and [`foreignKey`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#foreignkey) properties.
+
+Here is the template of the component which demonstrates how to configure the TreeGrid to display the date defined in the above flat collection:
+
+```html
+    <igx-tree-grid #treeGrid [data]="data" primaryKey="ID" foreignKey="ParentID"
+        width="500px" height="300px" [autoGenerate]="false">
+        <igx-column field="ID" dataType="number"></igx-column>
+        <igx-column field="ParentID" dataType="number"></igx-column>
+        <igx-column field="Name" dataType="string"></igx-column>
+        <igx-column field="JobTitle" dataType="string"></igx-column>
+        <igx-column field="Age" dataType="number"></igx-column>
+    </igx-tree-grid>
+```
+
+In addition we will enable the row selection feature of the tree grid by using the [`rowSelectable`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#rowselectable) and also the filtering, sorting, editing, moving and resizing features for each of our columns by handling the [`onColumnInit`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#oncolumninit) event of the tree grid and set the respective column's properties.
+
+```html
+    <igx-tree-grid #treeGrid [data]="data" primaryKey="ID" foreignKey="ParentID"
+        width="500px" height="300px" [autoGenerate]="false"
+        [rowSelectable]="true" (onColumnInit)="initColumns($event)">
+        <igx-column field="ID" dataType="number"></igx-column>
+        <igx-column field="ParentID" dataType="number"></igx-column>
+        <igx-column field="Name" dataType="string"></igx-column>
+        <igx-column field="JobTitle" dataType="string"></igx-column>
+        <igx-column field="Age" dataType="number"></igx-column>
+    </igx-tree-grid>
+```
+```typescript
+// my.component.ts
+
+public initColumn(column: IgxColumnComponent) {
+    column.filterable = true;
+    column.sortable = true;
+    column.editable = true;
+    column.movable = true;
+    column.resizable = true;
+}
+```
+
+And here is the final result:
+
+<div class="sample-container loading" style="height:550px">
+    <iframe id="treegrid-primaryforeignkey-iframe" src='{environment:demosBaseUrl}/treegrid-primaryforeignkey' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-primaryforeignkey-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
 
 #### Persistence and Integration
 
