@@ -196,7 +196,7 @@ After all that our list should now look like that:
 
 #### Adding Avatar and Icons
 
-We can use some of our other components in conjunction with the [`IgxList`]({environment:angularApiUrl}/classes/igxlistcomponent.html) component to enrich the experience and add some functionality. We can have a nice picture avatar to the left of the name and phone values. Additionally, we can add a star icon to the right of them to allow the user to favorite a contact. To do that let's grab the [**IgxAvatar**](avatar.html) and [**IgxIcon**](icon.html) modules and import them in our app.module.ts file.
+We can use some of our other components in conjunction with the [`IgxList`]({environment:angularApiUrl}/classes/igxlistcomponent.html) component to enrich the experience and add some functionality. We can have a nice picture avatar to the left of the name and phone values. Additionally, we can add a star icon to the right of them to allow the user to favorite a contact. To do that let's grab the [**IgxAvatar**](avatar.md) and [**IgxIcon**](icon.md) modules and import them in our app.module.ts file.
 
 ```typescript
 // app.module.ts
@@ -272,7 +272,7 @@ Cool, now let's update the template for our contacts list to show the avatar and
 </igx-list>
 ```
 
-First we wrap all our elements in an item container to allow us to style the flow a bit easier. Then we add our [**IgxAvatar**](avatar.html) component alongside our contact info in a contact wrapper. Lastly, we include the [**IgxIcon**](icon.html) component. Let's update the css stylesheet to reflect the changes made to our markup:
+First we wrap all our elements in an item container to allow us to style the flow a bit easier. Then we add our [**IgxAvatar**](avatar.md) component alongside our contact info in a contact wrapper. Lastly, we include the [**IgxIcon**](icon.md) component. Let's update the css stylesheet to reflect the changes made to our markup:
 
 ```css
 /* contacts.component.css */
@@ -309,7 +309,7 @@ igx-icon {
 }
 ```
 
-We then listen for a click event on the [**IgxIcon**](icon.html) component to toggle the _isFavorite_ property in our contact object.
+We then listen for a click event on the [**IgxIcon**](icon.md) component to toggle the _isFavorite_ property in our contact object.
 
 ```typescript
 // contacts.component.ts
