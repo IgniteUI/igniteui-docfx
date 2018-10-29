@@ -1,5 +1,5 @@
 ﻿---
-title: 카테고리 차트 컴포넌트- 네이티브 Angular | Ignite UI for Angular
+title: 카테고리 차트 컴포넌트- 네이티브 Angular| Ignite UI for Angular
 _description: Ignite UI for 카테고리 차트 컴포넌트는 데이터 시각화 도메인의 복잡성을 관리 가능한 API로 단순화하여 사용자가 데이터 수집, 그룹 수집, 데이터 속성을 바인딩하고 나머지는 차트 컨트롤이 실행할 수 있도록 합니다.
 _keywords: Ignite UI for Angular, Angular, 네이티브 Angular 컴포넌트 세트, 네이티브 Angular 컨트롤, 네이티브 Angular 컴포넌트, 네이티브 Angular 컴포넌트 라이브러리, Angular 차트, Angular 차트 컨트롤, Angular 차트 예제, Angular 그리드 컴포넌트, Angular 차트 컴포넌트, Angular 카테고리 차트
 _language: kr
@@ -14,13 +14,13 @@ _language: kr
     <iframe id="category-chart-overview-sample-iframe" src='{environment:demosBaseUrl}/category-chart-overview-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="category-chart-overview-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="category-chart-overview-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기
     </button>
 </div>
 
 <div class="divider--half"></div>
 
- 사용자가 데이터 수집 및 수집 그룹에 바인딩하여 데이터를 지정하는 속성을 설정하면 차트 컨트롤이 나머지 작업을 실행합니다. 컴포넌트는 데이터를 분석한 후 데이터를 표시하기 위한 최적의 시리즈를 자동으로 선택합니다. 또한, 사용자가 `chartType` 속성을 설정하여 다음과 같은 미리 정의된 차트 유형에서 선택할 수 있습니다: 선, 영역, 기둥, 점, 스플라인, 스플라인 영역, 스텝 영역, 스텝 선, 워터폴.
+ 사용자가 데이터 수집 및 수집 그룹에 바인딩하여 데이터를 지정하는 속성을 설정하면 차트 컨트롤이 나머지 작업을 실행합니다. 컴포넌트는 데이터를 분석한 후 데이터를 표시하기 위한 최적의 시리즈를 자동으로 선택합니다. 또한, 사용자는 선, 영역, 기둥, 점, 스플라인, 스플라인 영역, 스텝 영역, 스텝 선 및 워터폴 등과 같은 사전 정의된 차트에서 선택하는 `chartType` 속성 대신에 설정할 수 있습니다.
 
 스마트 데이터 어댑터를 사용하여 데이터를 분석하여 적절한 비주얼라이제이션을 렌더링합니다. 예를 들면, `chartType` 속성이 `Auto`로 설정된 경우, 컨트롤은 작은 데이터 세트를 위해 세로막대형 차트를 사용하거나 더 큰 데이터 세트를 위해 선형 차트를 사용합니다.
 

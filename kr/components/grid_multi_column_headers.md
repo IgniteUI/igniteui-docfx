@@ -1,5 +1,5 @@
 ﻿---
-title: 열 그룹 컴포넌트- 네이티브 Angular | Ignite UI for Angular
+title: 열 그룹 컴포넌트- 네이티브 Angular| Ignite UI for Angular
 _description: 복수 열 헤더를 사용하면 열을 공통 헤더 아래에 배치하여 그룹화할 수 있습니다. 모든 열 그룹은 다른 그룹 또는 열의 조합을 표시할 수 있습니다.
 _keywords: Ignite UI for Angular, UI 컨트롤, Angular 위젯, 웹 위젯, UI 위젯, Angular, 네이티브 Angular 컴포넌트 세트, 네이티브 Angular 컨트롤, 네이티브 Angular 컴포넌트 라이브러리, Angular 데이터 그리드 컴포넌트, Angular 데이터 그리드 컨트롤, 네이티브 Angular 컴포넌트, Angular 그리드 컴포넌트, Angular 그리드 컨트롤, Angular 고성능 그리드, 복수 열 헤더, 지연된 복수 열 헤더, 그리드 복수 열 헤더, Angular 그리드 복수 열 헤더, Angular 열
 _language: kr
@@ -7,7 +7,7 @@ _language: kr
 
 ## 복수 열 헤더
 
-`igxGrid` supports `multi-column headers` which allows you to group columns by placing them under a common header. Every `column group` could be a representation of combinations between other groups or columns.
+[`IgxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) supports `multi-column headers` which allows you to group columns by placing them under a common header. Every `column group` could be a representation of combinations between other groups or columns.
 
 ## 데모
 
@@ -16,10 +16,10 @@ _language: kr
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-multi-column-headers-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-multi-column-headers-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
 </div>
 
-`Multi column header`의 선언은 열 집합을 `igx-column-group` 컴포넌트에 `header` 제목을 전달하여 래핑합니다.
+`Multi column header` 선언은 [`header`]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html#header) 제목이 전달된 [`igx-column-group`]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html) 컴포넌트에 열 집합을 래핑하여 실행할 수있습니다.
 
 ```html
 <igx-grid [data]="data" height="600px">
@@ -31,7 +31,7 @@ _language: kr
 </igx-grid>
 ```
 
-중첩 헤더의 `n-th` 수준을 달성하려면 상기의 선언을 따라야 실행합니다. 즉, `igx-column-group` 을 중첩하면 원하는 결과를 얻을 수 있습니다.
+중첩 헤더의 `n-th` 수준을 달성하려면 상기의 선언을 따라야 실행합니다. [`igx-column-group`]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html)를 중첩함으로써 원하는 결과를 얻을 수 있습니다.
 
 ```html
 <igx-grid [data]="data" height="600px">
@@ -45,7 +45,7 @@ _language: kr
 </igx-grid>
 ```
 
-모든 `igx-column-group`은 `moving`, `pinning`, `hidding`을 지원합니다..
+모든 [`igx-column-group`]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html)는 [`이동`](grid_column_moving.md), [`핀 고정`](grid_column_pinning.md) 및 [`숨기기`](grid_column_hiding.md)를 지원합니다.
 > [!NOTE]
 > 열 집합과 열 그룹이 있는 경우 가장 위의 상위 열에 대해서만 핀 고정이 가능합니다. 더 구체적으로 중첩된 `column groups` 또는 `columns`의 핀 고정은 허용되지 않습니다. <br />
 > `columns`과 `column groups` 사이의 이동은 계층에서 같은 수준이고 같은 `group`인 경우에만 허용됩니다. <br />
@@ -62,37 +62,12 @@ _language: kr
 </igx-grid>
 ```
 
-## API 요약
-### IgxColumnGroupComponent
+### API 참조
+<div class="divider--half"></div>
 
-#### 입력
-| 이름 | 형식 | 설명 |
-| :--- | :--- | :---|
-|`searchable`| boolean | 열이 검색에 포함되는지 여부를 결정합니다. false로 설정한 경우, 이 열의 셀 값이 그리드의 검색 API 결과에 포함되지 않습니다(기본값은 true). |
-|`hidden`| boolean | 열의 표시 상태. |
-|`movable`| boolean | 현재 `column group`이 이동 가능한지 여부를 결정합니다. |
-
-#### 게터/세터
-|이름|형식|게터|세터|설명|
-|--- |--- |--- |--- |--- |
-|`allChildren`| IgxColumnComponent[] | 예 | 아니요 | `column groups`을 포함한 모든 하위의 `flatten` 데이터를 반환합니다.|
-|`columnGroup`| boolean | 예 | 아니요 | 현재 열이 `column group`인지 여부를 반환합니다.|
-|`level`| number | 예 | 아니요 | 헤더 계층 내에 있는 `column group` 수준을 반환합니다.|
-|`parent`| IgxColumnGroupComponent|IgxColumnComponent | 예 | 아니요 | `column group`의 직접적인 상위를 반환합니다.|
-|`children`| IgxColumnComponent[] | 예 | 아니요 | `column group`의 직접적인 하위를 반환합니다. |
-|`topLevelParent`| IgxColumnGroupComponent | 예 | 아니요 | `group`의 최상위를 반환합니다. |
-|`width`| string | 예 | 아니요 | 그룹에 포함되는 하위에 의해 결정되는 현재 `column group`의 `width`를 반환합니다. |
-|`pinned`| boolean | 예 | 예 | 현재 `column group`이 핀 고정되어 있는지 여부를 가져오기/설정합니다. |
-
-### 메소드
-
-|이름|반환 유형|설명|
-|--- |--- |--- |
-|`pin(index?): boolean`|boolean|열을 핀 고정합니다. 작업이 성공하면 반환합니다.|
-|`unpin(index?): boolean`|boolean|열을 핀 고정 해제합니다. 작업이 성공하면 반환합니다.|
-
-
-
+* [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
+* [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [IgxColumnGroupComponent]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html)
 <div class="divider--half"></div>
 
 ### 추가 리소스

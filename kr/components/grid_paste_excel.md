@@ -1,5 +1,5 @@
 ﻿---
-title: Excel에서 붙여넣기 - 네이티브 Angular | Ignite UI for Angular
+title: Excel에서 붙여넣기 - 네이티브 Angular| Ignite UI for Angular
 _description: 사용자는 Excel에서 복사한 데이터를 igxGrid에 붙여넣을 수 있습니다.
 _keywords: Ignite UI for Angular, UI 컨트롤, Angular 위젯, 웹 위젯, UI 위젯, Angular, 네이티브 Angular 컨트롤, 네이티브 Angular 컴포넌트 세트, 네이티브 Angular 컨트롤, 네이티브 Angular 컴포넌트 라이브러리, Angular 그리드, Angular 데이터 그리드, Angular 그리드 컨트롤, Angular 그리드 컴포넌트, Excel에서 붙여넣기, Angular Excel에서 붙여넣기
 _language: kr
@@ -7,11 +7,11 @@ _language: kr
 
 ## Excel에서 붙여넣기
 
-Ignite UI for Angular `IgxGrid`는 클립보드에 복사된 Excel 데이터를 읽어올 수 있습니다. 이 부분에서는 몇 가지 사용자 코드를 사용하여 실행하는 방법을 설명합니다.
+Ignite UI for Angular [`IgxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html)는 클립보드에 복사된 Excel 데이터를 읽어올 수 있습니다. 이 부분에서는 몇 가지 사용자 코드를 사용하여 실행하는 방법을 설명합니다.
 
 ### Excel에서 붙여넣기 데모
 
-이 샘플은 Excel에서 `igxGrid`로 붙여넣기를 실행하는 방법을 보여줍니다.
+이 샘플은 Excel에서 [`igxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html)로 붙여넣기를 실행하는 방법을 보여줍니다.
 샘플을 실행하려면, Excel 스프레드 시트를 열고 행을 복사한 후 키보드(Ctrl+V, Shift+Insert, Command+V)를 사용하여 그리드에 붙여넣기를 합니다.
 
 상단에는 두 가지 옵션이 있는 드롭다운 버튼이 있습니다.
@@ -28,13 +28,13 @@ Ignite UI for Angular `IgxGrid`는 클립보드에 복사된 Excel 데이터를 
 </div>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="excel-paste-sample-iframe"
-    data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
 </div>
 <div class="divider"></div>
 
 ### 사용 방법
 
-`paste-handler` 지시문(다음 섹션에 코드가 있음)을 `igxGrid`에 추가하고 `onDataProcessed` 이벤트를 처리해야 합니다. `onDataProcessed` 이벤트에 배열 형식의 Excel 데이터에 액세스를 제공하는 하나의 매개 변수가 있습니다. 상세한 것은 `addRecords` 및 `updateRecords` 메소드를 참조하십시오.
+`paste-handler` 지시문(다음 섹션에 코드가 있음)을 [`igxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html)에 추가하고 `onDataProcessed` 이벤트를 처리해야 합니다. `onDataProcessed` 이벤트에 배열 형식의 Excel 데이터에 액세스를 제공하는 하나의 매개 변수가 있습니다. 상세한 것은 `addRecords` 및 `updateRecords` 메소드를 참조하십시오.
 
 ```html
 <igx-grid #grid1 [data]="data" [width]="'100%'" [height]="'505px'" [autoGenerate]="false" paste-handler (onDataProcessed)="dataPasted($event)" [primaryKey]="'ID'">
@@ -219,6 +219,9 @@ export class PasteHandler {
 }
 
 ```
+
+## API
+* [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
 
 ## 추가 리소스
 <div class="divider--half"></div>

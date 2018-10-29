@@ -7,7 +7,7 @@ _language: kr
 
 ### 그리드 페이징
 
-Ignite UI for Angular에서 **페이징**이 루트 `igx-grid` 컴포넌트에서 초기화되며 `paging` 및 `perPage`입력을 통해 구성할 수 있습니다.
+Ignite UI for Angular에서 **Paging**은 루트 `igx-grid` 컴포넌트에서 초기화되며 [`paging`]({environment:angularApiUrl}/classes/igxgridcomponent.html#paging) 및 [`perPage`]({environment:angularApiUrl}/classes/igxgridcomponent.html#perpage) 입력을 통해 구성할 수 있습니다.
 
 #### 데모
 
@@ -16,11 +16,11 @@ Ignite UI for Angular에서 **페이징**이 루트 `igx-grid` 컴포넌트에�
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-paging-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-paging-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
 </div>
 <div class="divider--half"></div>
 
-페이징은 해당 기능이 사용되는지 여부를 제어하는 불 속성이며 `perPage` 속성은 페이지당 표시할 수 있는 레코드를 제어합니다. 페이징을 활성화하기 위해 그리드를 업데이트합니다:
+페이징은 해당 기능이 사용되는지 여부를 제어하는 불 속성이며 [`perPage`]({environment:angularApiUrl}/classes/igxgridcomponent.html#perpage) 속성은 페이지당 표시할 수 있는 레코드를 제어합니다. 페이징을 활성화하기 위해 그리드를 업데이트합니다:
 
 ```html
 <igx-grid #grid1 [data]="data" [paging]="true" [perPage]="10" [paginationTemplate]="pager" height="500px" width="100%" displayDensity="cosy"></igx-grid>
@@ -40,7 +40,7 @@ Ignite UI for Angular에서 **페이징**이 루트 `igx-grid` 컴포넌트에�
 </igx-grid>
 ```
 
-페이징은 Grid API를 사용해 프로그래밍 방식으로도 실행할 수 있습니다:
+[`paginate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#paginate), [`previousPage`]({environment:angularApiUrl}/classes/igxgridcomponent.html#previouspage), [`nextPage`]({environment:angularApiUrl}/classes/igxgridcomponent.html#nextpage) 메소드를 사용하여 페이징은 Grid API를 사용해 프로그래밍 방식으로도 실행할 수 있습니다:
 
 ```typescript
 // Go to page 6
@@ -123,23 +123,23 @@ export class RemotePagingGridSample implements OnInit, AfterViewInit {
     }
 }
 ```
-요청된 페이지에 대한 데이터만 가져오고 선택된 페이지 및 `items per page`에 따라 정확한 `skip` 및 `top` 매개 변수를 원격 서비스에 전달하려면 사용자 호출 템플릿을 생성해야 합니다.
+요청된 페이지에 대한 데이터만 가져오고 선택된 페이지 및 항목 [`perPage`]({environment:angularApiUrl}/classes/igxgridcomponent.html#perpage)에 따라 정확한 `skip` 및 `top` 매개 변수를 원격 서비스에 전달하려면 사용자 호출 템플릿을 생성해야 합니다.
 또한, 호출 버튼의 비활성화 및 활성화도 관리해야 합니다.
 
 ```html
 <ng-template #customPager>
     <button [disabled]="firstPage" (click)="paginate(0, false)" igxButton="icon" igxRipple igxRippleCentered="true">
-        <igx-icon fontSet="material" name="first_page"></igx-icon>
+        <igx-icon fontSet="material">first_page</igx-icon>
     </button>
     <button [disabled]="firstPage" (click)="previousPage()" igxButton="icon" igxRipple igxRippleCentered="true">
-        <igx-icon fontSet="material" name="chevron_left"></igx-icon>
+        <igx-icon fontSet="material">chevron_left</igx-icon>
     </button>
     <span>{{ page + 1 }} of {{totalPages}}</span>
     <button [disabled]="lastPage" (click)="nextPage()" igxRipple igxRippleCentered="true" igxButton="icon">
-        <igx-icon fontSet="material" name="chevron_right"></igx-icon>
+        <igx-icon fontSet="material">chevron_right</igx-icon>
     </button>
     <button [disabled]="lastPage" (click)="paginate(totalPages - 1, false)" igxButton="icon" igxRipple igxRippleCentered="true">
-        <igx-icon fontSet="material" name="last_page"></igx-icon>
+        <igx-icon fontSet="material">last_page</igx-icon>
     </button>
     <select style="margin-left: 1rem;" (change)="perPage = parseToInt($event.target.value);">
         <option [value]="val" [selected]="perPage == val" *ngFor="let val of [5, 10, 15, 25, 50, 100, 500]">{{ val }}</option>
@@ -220,6 +220,11 @@ public ngAfterViewInit() {
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-remote-paging-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
+
+### API
+* [IgxGridComponent API]({environment:angularApiUrl}/classes/igxgridcomponent.html)
+* [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [IgxGridPaginator Styles]({environment:sassApiUrl}/index.html#function-igx-grid-paginator-theme)
 
 ### 추가 리소스
 <div class="divider--half"></div>
