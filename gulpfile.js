@@ -7,13 +7,13 @@ const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
 const argv = require('yargs').argv;
 const fs = require('fs');
-const env = require('dotenv').config();
 const environmentVariablesPreConfig = require('./node_modules/igniteui-docfx-template/post-processors/PostProcessors/EnvironmentVariables/preconfig.json');
 
 const LANG = argv.lang === undefined ? "en" : argv.lang;
 const DOCFX_BASE = {
     en: './en',
-    jp: './jp'
+    jp: './jp',
+    kr: './kr'
 };
 const DOCFX_PATH = `${DOCFX_BASE[LANG]}`;
 const DOCFX_CONF = `${DOCFX_PATH}/docfx.json`;

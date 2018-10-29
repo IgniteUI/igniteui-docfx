@@ -81,7 +81,7 @@ You can provide grid's remote sorting by subscribing to [`onDataPreLoad`]({envir
 
 ### API
 * [IgxGridComponent API]({environment:angularApiUrl}/classes/igxgridcomponent.html)
-* [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#mixin-igx-grid)
+* [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 
 ### Additional Resources
 <div class="divider--half"></div>

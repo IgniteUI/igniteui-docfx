@@ -40,7 +40,7 @@ Then in the template of our component we can apply the directive on the element 
 ```html
 <!--template.component.html-->
 <button class="toggle-button"  igxButton="raised" (click)="toggleContent()">Toggle</button>
-<div class="toggle-content" igxToggle #toggleRef="toggle">
+<div class="toggle-content" igxToggle>
     <section class="toggle-section">
         <ul>
             <li>Bananas</li>
@@ -105,7 +105,7 @@ export class AppModule {}
 <div class="sample-wrapper">
   <article class="sample-column">
     <button class="toggle-button" #button igxButton="raised" (click)="toggle()">Toggle</button>
-    <div class="toggle-content" igxToggle #toggleRef="toggle">
+    <div class="toggle-content" igxToggle>
       <section class="toggle-section">
           <h2>Box</h2>
       </section>

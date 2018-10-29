@@ -16,14 +16,14 @@ _language: ja
 <iframe id="list-sample-4-iframe" src='{environment:demosBaseUrl}/list-sample-4' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="list-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
 ### 使用方法
 
 List コンポーネントは項目の垂直リストを表示します。項目のデフォルト スタイル設定はマテリアル デザイン [**ガイドライン**](https://material.io/guidelines/components/lists.html)の単一行リストの仕様に基づきます。
-Ignite UI for Angular List を初期化する前に、最初に **IgxListModule** を **app.module.ts** ファイルにインポートします:
+Ignite UI for Angular List を初期化する前に、最初に [`IgxListModule`]({environment:angularApiUrl}/classes/igxlistmodule.html) を app.module.ts ファイルにインポートします:
 
 ```typescript
 // app.module.ts
@@ -39,7 +39,7 @@ import { IgxListModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-連絡先コンポーネントのテンプレートでリストを作成できます。項目がない場合は、空のリストのデフォルト テンプレートを使用できます。`igxEmptyList` ディレクティブを使用して空のリストの外観をカスタマイズするためにカスタム テンプレートを設定できます。この場合、デフォルト テンプレートは使用されません。
+連絡先コンポーネントのテンプレートでリストを作成できます。項目がない場合は、空のリストのデフォルト テンプレートを使用できます。[`igxEmptyList`]({environment:angularApiUrl}/classes/igxemptylisttemplatedirective.html) ディレクティブを使用して空のリストの外観をカスタマイズするためにカスタム テンプレートを設定できます。この場合、デフォルト テンプレートは使用されません。
 
 ```html
 <!--contacts.component.html-->
@@ -70,10 +70,10 @@ export class AppModule {}
 <iframe id="list-sample-5-iframe" src='{environment:demosBaseUrl}/list-sample-5' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="list-sample-5-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-sample-5-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
-データの読み込みで遅延が発生した場合、リストの `isLoading` プロパティを `true` に設定し、デフォルト テンプレートで処理中のデータ読み込み処理についてユーザーに通知できます。`igxDataLoading` ディレクティブを使用してカスタムの読み込みテンプレートを提供できます。
+データの読み込みで遅延が発生した場合、リストの [`isLoading`]({environment:angularApiUrl}/classes/igxlistcomponent.html#isloading) プロパティを `true` に設定し、デフォルト テンプレートで処理中のデータ読み込み処理についてユーザーに通知できます。[`igxDataLoading`]({environment:angularApiUrl}/classes/igxdataloadingtemplatedirective.html) ディレクティブを使用してカスタムの読み込みテンプレートを提供できます。
 
 ```html
 <!--contacts.component.html-->
@@ -99,7 +99,7 @@ export class AppModule {}
 <iframe id="list-sample-6-iframe" src='{environment:demosBaseUrl}/list-sample-6' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="list-sample-6-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-sample-6-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
 #### リスト項目の追加
@@ -123,7 +123,7 @@ export class AppModule {}
 <iframe id="list-sample-2-iframe" src='{environment:demosBaseUrl}/list-sample-2' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="list-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
 #### カスタム リスト項目
@@ -190,12 +190,12 @@ public contacts = [{
 <iframe id="list-sample-3-iframe" src='{environment:demosBaseUrl}/list-sample-3' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="list-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
 #### アバターおよびアイコンの追加
 
-その他のコンポーネントを [**IgxList**](list.md) と共に使用してエクスペリエンスの向上や機能拡張が可能です。名前や電話番号の値の左に画像のアバターを表示できます。また、連絡先をお気に入りに追加するための星アイコンを右側に追加できます。要素を追加するには、[**IgxAvatar**](avatar.md) および [**IgxIcon**](icon.md) モジュールを **app.module.ts** ファイルにインポートします。
+その他のコンポーネントを [`IgxList`]({environment:angularApiUrl}/classes/igxlistcomponent.html) と共に使用してエクスペリエンスの向上や機能拡張が可能です。名前や電話番号の値の左に画像のアバターを表示できます。また、連絡先をお気に入りに追加するための星アイコンを右側に追加できます。要素を追加するには、[**IgxAvatar**](avatar.md) および [**IgxIcon**](icon.md) モジュールを app.module.ts ファイルにインポートします。
 
 ```typescript
 // app.module.ts
@@ -271,7 +271,7 @@ public contacts = [{
 </igx-list>
 ```
 
-すべての要素を項目コンテナーにラップしてフローをスタイル設定できます。次に IgxAvatar コンポーネントを連絡先ラッパーに連絡先情報と共に追加し、最後に IgxIcon コンポーネントを追加します。マークアップの変更に基づいて css スタイルシートを更新します。
+すべての要素を項目コンテナーにラップしてフローをスタイル設定できます。次に [**IgxAvatar**](avatar.md) コンポーネントを連絡先ラッパーに連絡先情報と共に追加し、最後に [**IgxIcon**](icon.md) コンポーネントを追加します。マークアップの変更に基づいて css スタイルシートを更新します。
 
 ```css
 /* contacts.component.css */
@@ -308,7 +308,7 @@ igx-icon {
 }
 ```
 
-連絡先オブジェクトの _isFavorite_ プロパティを切り替えるために IgxIcon コンポーネントでクリック イベントをリッスンします。
+連絡先オブジェクトの _isFavorite_ プロパティを切り替えるために [**IgxIcon**](icon.md) コンポーネントでクリック イベントをリッスンします。
 
 ```typescript
 // contacts.component.ts
@@ -326,23 +326,23 @@ toggleFavorite(item: IgxListItem) {
 <iframe id="list-sample-4-final-iframe" src='{environment:demosBaseUrl}/list-sample-4' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="list-sample-4-final-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-sample-4-final-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
 #### リスト項目パンニング
 
 連絡先や電話番号のリストなどを作成しましたが、次に連絡先に電話を掛ける機能を追加します。
-**IgxList** はリスト項目パンニングに最適です。
+[`IgxList`]({environment:angularApiUrl}/classes/igxlistcomponent.html) はリスト項目パンニングに最適です。
 以下の手順に沿って作成します。
-- `allowLeftPanning` と `allowRightPanning` またはそのいずれかを使用してパンニングを有効にします。
+- [`allowLeftPanning`]({environment:angularApiUrl}/classes/igxlistcomponent.html#allowleftpanning) と [`allowRightPanning`]({environment:angularApiUrl}/classes/igxlistcomponent.html#allowrightpanning) またはそのいずれかを使用してパンニングを有効にします。
 - 右と左またはそのいずれかのテンプレートを定義します。
 - リスト項目のパンニング イベントを処理して必要なアクションを実行します。
 
-以下は、右と左両方のパンニングを処理する方法の例です。右パンニングのイベント ハンドラーは、トースト メッセージを表示します。左パンニングのイベント ハンドラーは、**IgxList** から項目を削除します。
+以下は、右と左両方のパンニングを処理する方法の例です。右パンニングのイベント ハンドラーは、トースト メッセージを表示します。左パンニングのイベント ハンドラーは、[`IgxList`]({environment:angularApiUrl}/classes/igxlistcomponent.html) から項目を削除します。
 
 > [!NOTE]
-> リスト項目の削除はアプリケーション タスクであることに注意してください。**IgxList** にデータソース参照がないため、**IgxList** は項目をデータソースから削除できません。
+> リスト項目の削除はアプリケーション タスクであることに注意してください。[`IgxList`]({environment:angularApiUrl}/classes/igxlistcomponent.html) にデータソース参照がないため、[`IgxList`]({environment:angularApiUrl}/classes/igxlistcomponent.html) は項目をデータソースから削除できません。
 
 以下は HTML コードです。
 
@@ -380,7 +380,7 @@ toggleFavorite(item: IgxListItem) {
 <igx-toast #toast></igx-toast>
 ```
 
-上記の例は、CSS スタイルを使用しています。
+The above example is using some CSS styles which may be found here:
 
 ```css
 /* contacts.component.css */
@@ -464,7 +464,7 @@ public leftPanPerformed(args) {
 ```
 
 > [!NOTE]
-> リスト項目のパンニング時にパンニング イベントが発生するために達する必要のあるしきい値があります。**IgxList's** `panEndTriggeringThreshold` プロパティを使用するしきい値を変更できます。このプロパティのデフォルトは0.5 でリスト項目幅の 50% を意味します。
+> リスト項目のパンニング時にパンニング イベントが発生するために達する必要のあるしきい値があります。[`IgxList`]({environment:angularApiUrl}/classes/igxlistcomponent.html) [`panEndTriggeringThreshold`]({environment:angularApiUrl}/classes/igxlistcomponent.html#panendtriggeringthreshold) プロパティを使用するしきい値を変更できます。このプロパティのデフォルトは0.5 でリスト項目幅の 50% を意味します。
 
 次にリスト項目をパンニングします。
 
@@ -472,7 +472,7 @@ public leftPanPerformed(args) {
 <iframe id="list-sample-7-final-iframe" src='{environment:demosBaseUrl}/list-sample-7' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-sample-7-final-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-sample-7-final-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
 
@@ -494,7 +494,7 @@ public leftPanPerformed(args) {
 </igx-input-group>
 ```
 
-**IgxFilterModule** および **IgxInputGroupModule** を **app.module.ts** ファイルにインポートし、**IgxFilterOptions** を連絡先コンポーネントにインポートします。
+[`IgxFilterModule`]({environment:angularApiUrl}/classes/igxfiltermodule.html) および [`IgxInputGroupModule`]({environment:angularApiUrl}/classes/igxinputgroupmodule.html) を app.module.ts ファイルにインポートし、[`IgxFilterOptions`]({environment:angularApiUrl}/classes/igxfilteroptions.html) を連絡先コンポーネントにインポートします。
 
 ```typescript
     // app.module.ts
@@ -522,7 +522,7 @@ public leftPanPerformed(args) {
     }
 ```
 
-`IgxFilterOptions` をインポートした後、`searchContact` プロパティの更新でパイプによって使用されるフィルタリング オプションを返すゲッター メソッドを登録します。フィルターが機能するために連絡先オブジェクトのフィルター `key` を登録します。この場合、各連絡先の `name` です。`IgxFilterOptions` オブジェクトで登録する 2 番目のプロパティは連絡先の名前を比較する値です。連絡先リストの上の入力フィールドにバインドした `searchContact` プロパティです。
+[`IgxFilterOptions`]({environment:angularApiUrl}/classes/igxfilteroptions.html) をインポートした後、`searchContact` プロパティの更新でパイプによって使用されるフィルタリング オプションを返すゲッター メソッドを登録します。フィルターが機能するために連絡先オブジェクトのフィルター `key` を登録します。この場合、各連絡先の `name` です。[`IgxFilterOptions`]({environment:angularApiUrl}/classes/igxfilteroptions.html) オブジェクトで登録する 2 番目のプロパティは連絡先の名前を比較する値です。連絡先リストの上の入力フィールドにバインドした `searchContact` プロパティです。
 
 フィルタリング パイプを連絡先のデータに適用します。テンプレートで以下のコードを追加します:
 
@@ -534,84 +534,22 @@ public leftPanPerformed(args) {
 </igx-list-item>
 ```
 
-### Chat コンポーネント
-以下のサンプルは、**IgxList** を使用して作成したシンプルなチャットです。
-
-<div class="sample-container loading" style="height: 500px">
-<iframe id="list-chat-sample-iframe" src='{environment:demosBaseUrl}/list-chat-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-<div>
-<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-chat-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
-</div>
-
 <div class="divider"></div>
 
 ### API まとめ
 
 この記事では List コンポーネントについて説明しました。アバターおよびアイコンの Ignite UI for Angular コンポーネントを使用して連絡先項目のリストを作成し、カスタム項目レイアウトを作成してスタイル設定、更にリスト フィルタリングを追加しました。以下は、List コンポーネントのその他の API です。
 
-#### 入力
+* [IgxListComponent API]({environment:angularApiUrl}/classes/igxlistcomponent.html)
+* [IgxListComponent Styles]({environment:sassApiUrl}/index.html#function-igx-list-theme)
+* [IgxListItemComponent API]({environment:angularApiUrl}/classes/igxlistitemcomponent.html)
 
-以下の入力は **igx-list** コンポーネントで利用できます。
-| 名前 | 型 | 説明 |
-| :--- | :--- | :--- |
-| `allowLeftPanning` | Boolean | 項目の左パンニングが許可されるかどうかを決定します。 |
-| `allowRightPanning` | Boolean | 項目の右パンニングが許可されるかどうかを決定します。 |
-| `isLoading` | Boolean | true の場合、読み込みテンプレートが使用されます。false の場合、空のリスト テンプレートが使用されます。 |
-| `dataLoadingTemplate` | IgxDataLoadingTemplateDirective | リストが空で、isLoading が true の場合に使用するカスタム テンプレート。|
-| `emptyListTemplate` | IgxEmptyListTemplateDirective | リストが空で、isLoading が false の場合に使用するカスタム テンプレート。|
-| `panEndTriggeringThreshold` | Number | パンニング イベントが発生した後のしきい値を指定します。このプロパティのデフォルトは0.5 でリスト項目幅の 50% を意味します。 |
+使用したその他のコンポーネント:
 
-<div class="divider"></div>
-
-以下の入力は **igx-list-item** コンポーネントで利用できます。
-| 名前 | 型 | 説明 |
-| :--- | :--- | :--- |
-| `isHeader` | Boolean | 現在のリスト項目をリスト ヘッダーに設定します。 |
-| `hidden` | Boolean | 項目が表示されるかどうかを決定します。 |
-
-<div class="divider"></div>
-
-#### 出力
-
-以下の出力は **igx-list** コンポーネントで利用できます。
-| 名前 | 型 | 説明 |
-| :--- | :--- | :--- |
-| `onPanStateChange` | EventEmitter | パンニング ジェスチャがリスト項目に実行されたときに現在のリストを含むイベントを発生します。 |
-| `onLeftPan` | EventEmitter | 左パンニング ジェスチャがリスト項目に実行されたときに現在のリストを含むイベントを発生し、型 `IListItemPanningEventArgs` の引数を提供します。 |
-| `onRightPan` | EventEmitter | 右パンニング ジェスチャがリスト項目に実行されたときに現在のリストを含むイベントを発生し、型 `IListItemPanningEventArgs` の引数を提供します。 |
-| `onItemClicked` | EventEmitter | リスト項目がクリックされたときに現在のリストを含むイベントを発生します。 |
-
-<div class="divider"></div>
-
-#### プロパティ
-
-以下のプロパティは **igx-list** コンポーネントで利用できます。
-
-| 名前 | 型 | 説明 |
-| :--- | :--- | :--- |
-| `children` | QueryList | 項目およびヘッダーのすべての IListChild コンポーネントのコレクションを返します。 |
-| `items` | IgxListItemComponent[] | 項目ヘッダーを含まないすべてのリスト項目の配列を返します。 |
-| `headers` | IgxListItemComponent[] | すべてのリスト ヘッダーの配列を返します。 |
-
-<div class="divider"></div>
-
-以下のプロパティは **igx-list-item** コンポーネントで利用できます。
-
-| 名前 | 型 | 説明 |
-| :--- | :--- | :--- |
-| `index` | number | リスト項目のインデックスを取得します。 |
-| `panState` | IgxListPanState | リスト項目のパンニング状態を取得します。 |
-| `list` | IgxListComponent | リスト項目に関連付けられたリストを取得します。 |
-
-<div class="divider"></div>
-
-以下のプロパティは `IListItemPanningEventArgs` 型で使用できます。
-| 名前 | 型 | 説明 |
-| :--- | :--- | :--- |
-| `item` | IgxListItemComponent | パンニングされている **igx-list-item** の参照。 |
-| `direction` | IgxListPanState | **igx-list-item** がパンニングされる方向を指定します。 |
-| `keepItem` | Boolean | `true` の場合、パンニングされた後もリスト項目が **IgxList** に保持されます。`false` (デフォルト) の場合、パンニングされた後にリスト項目が **IgxList** から削除されます。 |
+* [IgxAvatarComponent API]({environment:angularApiUrl}/classes/igxavatarcomponent.html)
+* [IgxAvatarComponent Styles]({environment:sassApiUrl}/index.html#function-igx-avatar-theme)
+* [IgxIconComponent API]({environment:angularApiUrl}/classes/igxiconcomponent.html)
+* [IgxIconComponent Styles]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
 
 <div class="divider"></div>
 

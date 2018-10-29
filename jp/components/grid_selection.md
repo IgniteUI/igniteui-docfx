@@ -48,7 +48,7 @@ Ignite UI for Angular 行選択は、行内のすべての列の前に描画さ�
 
 #### 複数選択
 
-複数行選択を有効にするには、[`igx-grid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) の [`rowSelectable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowselectable) プロパティを使用します。`rowSelectable` を `true` に設定すると、各行およびグリッド ヘッダーで選択チェックボックス フィールドが有効になります。チェックボックスを使用して複数行を選択でき、スクロール、ページング、および並べ替えとフィルターなどのデータ操作で選択が保持されます。
+複数行選択を有効にするには、[`igx-grid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) の [`rowSelectable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowselectable) プロパティを使用します。[`rowSelectable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowselectable) を `true` に設定すると、各行およびグリッド ヘッダーで選択チェックボックス フィールドが有効になります。チェックボックスを使用して複数行を選択でき、スクロール、ページング、および並べ替えとフィルターなどのデータ操作で選択が保持されます。
 
 ```html
     <igx-grid #grid1 [data]="remote | async" [primaryKey]="'ProductID'" [rowSelectable]="selection" (onSelection)="handleRowSelection($event)"
@@ -67,7 +67,7 @@ Ignite UI for Angular 行選択は、行内のすべての列の前に描画さ�
 
 #### コードで行を選択
 
-以下のコード例は `primaryKey` を使用して単一または複数行を選択します。
+以下のコード例は [`primaryKey`]({environment:angularApiUrl}/classes/igxgridcomponent.html#primarykey) を使用して単一または複数行を選択します。
 
 ```html
 <!-- in component.html -->
@@ -102,7 +102,7 @@ public handleRowSelectionChange(args) {
 * [IgxGridComponent API]({environment:angularApiUrl}/classes/igxgridcomponent.html)
 * [IgxGridRowComponent API]({environment:angularApiUrl}/classes/igxgridrowcomponent.html)
 * [IgxGridCellComponent API]({environment:angularApiUrl}/classes/igxgridcellcomponent.html)
-* [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#mixin-igx-grid)
+* [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 
 ### 追加のリソース
 <div class="divider--half"></div>

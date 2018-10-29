@@ -171,6 +171,8 @@
       href: themes/typography.md
 - name: Shadows
   href: shadows.md
+- name: Display Density
+  href: display_density.md
 - name: Data Entry & Display
   header: true
 - name: Drop Down
@@ -237,6 +239,9 @@
   - name: Scrolling Strategies
     href: overlay_scroll.md
     new: true
+- name: Drag and Drop
+  href: drag_drop.md
+  new: true
 - name: Menus
   header: true
 - name: Navigation Drawer

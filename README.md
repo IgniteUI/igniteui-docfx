@@ -67,20 +67,32 @@ for Japansese:
 npm start -- --lang jp
 ```
 
-The command takes an adittional argument --lang [ en | jp ] to serve either the English or Japanese version.
+for Korean:
+
+```
+npm start -- --lang kr
+```
+
+The command takes an adittional argument --lang [ en | jp | kr ] to serve English, Japanese or Korean version.
 
 ## Building the Static Site
 
-For instance, for English:
+For English:
 
 ```
 npm run build -- --lang en
 ```
 
-For the Japanese version:
+For Japanese:
 
 ```
 npm run build -- --lang jp
+```
+
+For Korean:
+
+```
+npm run build -- --lang kr
 ```
 
 The build script produces a folder called \_site at the root of the respective project.

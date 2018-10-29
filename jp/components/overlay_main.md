@@ -169,7 +169,7 @@ export class MyOverlayComponent {
                 closeOnOutsideClick: false, // overlay will not close on outside clicks
                 modal: false // overlay content will not be rendered in a modal dialog
             }); // The show method returns an ID that can be used to reference the shown content
-        } else { // If the element is not visible, hide it
+        } else { // If the element is visible, hide it
             this.overlayService.hide(this._overlayId); // Find and remove the component from the overlay container
         }
         this._overlayShown = !this._overlayShown;

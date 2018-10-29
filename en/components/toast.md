@@ -22,7 +22,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ###Usage
 
-To get started with the Ignite UI for Angular Toast, let's first import the **IgxToastModule** in our **app.module.ts** file:
+To get started with the Ignite UI for Angular Toast, let's first import the [`IgxToastModule`]({environment:angularApiUrl}/classes/igxtoastmodule.html) in our **app.module.ts** file:
 
 ```typescript
 // app.module.ts
@@ -38,7 +38,7 @@ import { IgxToastModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 #### Show Toast
-In order to display the toast component, use its `show()` method and call it on a button click. Use the `message` input to set a notification.
+In order to display the toast component, use its [`show()`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#show) method and call it on a button click. Use the [`message`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#message) input to set a notification.
 
 ```html
 <!--sample.component.html-->
@@ -54,7 +54,7 @@ If the sample is configured properly, a toast appears displaying a notification 
 </div>
 
 #### Hide/Auto Hide
-Once opened, the toast disappears after a period specified by the `displayTime` input which is set initially to 4000 milliseconds. This behavior is enabled by default but you can change this by setting `autoHide` to **false**. In this way, the toast remains visible. Using the toast `hide()` method, you can close the component.
+Once opened, the toast disappears after a period specified by the [`displayTime`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#displaytime) input which is set initially to 4000 milliseconds. This behavior is enabled by default but you can change this by setting [`autoHide`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#autohide) to **false**. In this way, the toast remains visible. Using the toast [`hide()`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#hide) method, you can close the component.
 
 ```html
 <!--sample.component.html-->
@@ -71,7 +71,7 @@ If the sample is configured properly, the toast appears when the 'SHOW' button i
 </div>
 
 #### Display Time
-Use `displayTime` and set it to an interval in milliseconds to configure how long the toast component is visible. 
+Use [`displayTime`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#displaytime) and set it to an interval in milliseconds to configure how long the toast component is visible. 
 
 ```html
 <!--sample.component.html-->
@@ -87,7 +87,7 @@ If the sample is configured properly, the toast auto hides faster.
 </div>
 
 #### Positioning
-Use `position` to configure where the toast appears. By default, the toast is displayed at the bottom of the page. In the sample below, we set notification to appear at the top position.
+Use [`position`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#position) to configure where the toast appears. By default, the toast is displayed at the bottom of the page. In the sample below, we set notification to appear at the top position.
 
 ```html
 <!--sample.component.html-->
@@ -124,42 +124,14 @@ public show(toast) {
 
 <div class="divider--half"></div>
 
-### API Summary
-The following tables summarize some of the useful **igx-toast** component inputs, outputs and methods.
+### API References
+In this article we learned how to use and configure the [`IgxToastComponent`]({environment:angularApiUrl}/classes/igxtoastcomponent.html). For more details in regards its API, take a look at the links below:
 
-<div class="divider--half"></div>
+* [`IgxToastComponent`]({environment:angularApiUrl}/classes/igxtoastcomponent.html)
 
-#### Inputs
-The following inputs are available in the **igx-toast** component:
+Styles:
 
-| Name | Type | Description |
-| :--- | :--- | :--- |
-| `autoHide` | boolean | Specifies whether the toast is automatically hidden after `displayTime`. By default, `autoHide` is set to **true**. |
-| `displayTime` | number | Specifies the interval in milliseconds in which the toast is visible. By default, `displayTime` is set to 4000 milliseconds. |
-| `isVisible` | boolean | Specifies the component visual state. By default, `isVisible` is set to **false**. |
-| `message` | string | Specifies the displayed message. |
-| `position` | `IgxToastPosition` | Specifies the toast position. Possible options are `IgxToastPosition.Top`, `IgxToastPosition.Middle`, `IgxToastPosition.Bottom`. By default, `position` is set to `IgxToastPosition.Bottom`. |
-
-<div class="divider--half"></div>
-
-#### Outputs
-The following outputs are available in the **igx-toast** component:
-
-| Name | Description |
-| :--- | :--- |
-| `onShowing`  | Emits an event prior to the toast being shown. |
-| `onShown`  | Emits an event when the toast is shown. |
-| `onHiding`  | Emits an event prior to the toast being hidden. |
-| `onHidden`  | Emits an event when the toast is hidden. |
-
-#### Methods
-The following methods are available for the **igx-toast** component:
-
-| Name | Description |
-| :--- | :--- |
-| `show()`  | Shows the toast component and hides it after `displayTime` if `autoHide` is set to **true**. |
-| `hide()`  | Hides the toast component. |
-
+* [`IgxToastComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-toast-theme)
 
 ###Additional Resources
 

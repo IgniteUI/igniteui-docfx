@@ -338,20 +338,30 @@ Extra care should be taken in the following scenarios:
 
 In this article we learned how to create, configure and style awesome tooltips for the elements on our page! We also used some additional Ignite UI for Angular components like icons, avatars and cards to improve on the design of our application! The respective APIs are listed below:
 
-* [IgxTooltipModule]({environment:angularApiUrl}/classes/igxtooltipmodule.html)
-* [IgxTooltipDirective]({environment:angularApiUrl}/classes/igxtooltipdirective.html)
-* [IgxTooltipTargetDirective]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html)
+* [`IgxTooltipModule`]({environment:angularApiUrl}/classes/igxtooltipmodule.html)
+* [`IgxTooltipDirective`]({environment:angularApiUrl}/classes/igxtooltipdirective.html)
+* [`IgxTooltipTargetDirective`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html)
 
 Additional components and/or directives that were used:
 
-* [IgxAvatarComponent]({environment:angularApiUrl}/classes/igxavatarcomponent.html)
-* [IgxButtonDirective]({environment:angularApiUrl}/classes/igxbuttondirective.html)
-* [IgxCardComponent]({environment:angularApiUrl}/classes/igxcardcomponent.html)
-* [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
-* [IgxSliderComponent]({environment:angularApiUrl}/classes/igxslidercomponent.html)
-* [IgxSwitchComponent]({environment:angularApiUrl}/classes/igxswitchcomponent.html)
-* [IgxToggleDirective]({environment:angularApiUrl}/classes/igxtoggledirective.html)
-* [IgxToggleActionDirective]({environment:angularApiUrl}/classes/igxtoggleactiondirective.html)
+* [`IgxAvatarComponent`]({environment:angularApiUrl}/classes/igxavatarcomponent.html)
+* [`IgxButtonDirective`]({environment:angularApiUrl}/classes/igxbuttondirective.html)
+* [`IgxCardComponent`]({environment:angularApiUrl}/classes/igxcardcomponent.html)
+* [`IgxIconComponent`]({environment:angularApiUrl}/classes/igxiconcomponent.html)
+* [`IgxSliderComponent`]({environment:angularApiUrl}/classes/igxslidercomponent.html)
+* [`IgxSwitchComponent`]({environment:angularApiUrl}/classes/igxswitchcomponent.html)
+* [`IgxToggleDirective`]({environment:angularApiUrl}/classes/igxtoggledirective.html)
+* [`IgxToggleActionDirective`]({environment:angularApiUrl}/classes/igxtoggleactiondirective.html)
+
+Styles:
+
+* [`IgxTooltipDirective Styles`]({environment:sassApiUrl}/index.html#function-igx-tooltip-theme)
+* [`IgxAvatarComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-avatar-theme)
+* [`IgxButtonDirective Styles`]({environment:sassApiUrl}/index.html#function-igx-button-theme)
+* [`IgxCardComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-card-theme)
+* [`IgxIconComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
+* [`IgxSliderComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-slider-theme)
+* [`IgxSwitchComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-switch-theme)
 
 <div class="divider"></div>
 

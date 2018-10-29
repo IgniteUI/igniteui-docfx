@@ -5,7 +5,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ---
 
 ##Navbar
-<p class="highlight">The Ignite UI for Angular Navigation Bar component informs the user of their current position in an app, and helps them move back (much like the “back” button in a browser). The Navigation Bar can also provide links to quick actions such as search or favorite, helping users navigate smoothly through an application without trying to move to invalid routes or states. The bar sits at the top of the container it is placed in.</p>
+<p class="highlight">The Ignite UI for Angular [`IgxNavbarComponent`]({environment:angularApiUrl}/classes/igxnavbarcomponent.html) informs the user of their current position in an app, and helps them move back (much like the “back” button in a browser). The Navigation Bar can also provide links to quick actions such as search or favorite, helping users navigate smoothly through an application without trying to move to invalid routes or states. The bar sits at the top of the container it is placed in.</p>
 <div class="divider"></div>
 
 ### Navbar Demo
@@ -18,7 +18,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <div class="divider--half"></div>
 
 ###Usage
-To get started with the Ignite UI for Angular NavBar component, let's first import the **IgxNavbarModule** in our **app.module.ts** file:
+To get started with the Ignite UI for Angular NavBar component, let's first import the [`IgxNavbarModule`]({environment:angularApiUrl}/classes/igxnavbarmodule.html) in our **app.module.ts** file:
 
 ```typescript
 // app.module.ts
@@ -66,7 +66,7 @@ If all went well, you should see the following in your browser:
 
 #### Adding Icons
 
-Now that our app has its menu in place, we can make it a little more functional by adding options for searching, favorites and more. To do that let's grab the [**IgxIcon**](https://www.infragistics.com/products/ignite-ui-angular/angular/components/icon.html) module and import it in our **app.module.ts** file.
+Now that our app has its menu in place, we can make it a little more functional by adding options for searching, favorites and more. To do that let's grab the [**IgxIcon**](icon.md) module and import it in our **app.module.ts** file.
 ```typescript
 // app.module.ts
 
@@ -97,27 +97,20 @@ Next, we need to update our template with an icon for each of the options we wan
 
 <div class="divider"></div>
 
-### API Summary
+### API References
 
-In this article we show a few scenarios where the navbar component may come in handy. The APIs, we used to achieve them, are listed below.
+In this article we show a few scenarios where the navbar component may come in handy. The APIs, we used to achieve them, are listed in the links below.
 
-####Inputs
-The following inputs are available on the **igx-navbar** component:
-| Name | Type | Description |
-| :--- | :--- | :--- |
-| `actionButtonIcon` | String | Provide the name of the material icon to be used in the action button. |
-| `isActionButtonVisible` | Boolean | Whether the action button should be displayed. |
-| `title` | String | Provide the title the navbar should display. |
+[`IgxNavbarComponent`]({environment:angularApiUrl}/classes/igxnavbarcomponent.html)
 
-<div class="divider"></div>
+Additional components and/or directives with relative APIs that were used:
 
-####Outputs
-The following outputs are available on the **igx-navbar** component:
-| Name | Type | Description |
-| :--- | :--- | :--- |
-| `onAction` | EventEmitter | Emits an event when the action is executed. |
+[`IgxIconComponent`]({environment:angularApiUrl}/classes/igxiconcomponent.html)
 
-<div class="divider"></div>
+Styles:
+
+* [`IgxNavbarComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-navbar-theme)
+* [`IgxIconComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
 
 ###Additional Resources
 

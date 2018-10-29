@@ -25,7 +25,7 @@ _language: ja
 
 ### 使用方法
 
-Ignite UI for Angular Toast を初期化する前に、最初に **IgxToastModule** を **app.module.ts** ファイルにインポートします:
+Ignite UI for Angular Toast を初期化する前に、最初に [`IgxToastModule`]({environment:angularApiUrl}/classes/igxtoastmodule.html) を **app.module.ts** ファイルにインポートします:
 
 ```typescript
 // app.module.ts
@@ -43,7 +43,7 @@ export class AppModule {}
 
 #### Toast の表示
 
-Toast コンポーネントを表示するには、ボタン クリックで `show()` メソッドを呼び出します。`message` 入力を使用して通知を設定します。
+Toast コンポーネントを表示するには、ボタン クリックで [`show()`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#show) メソッドを呼び出します。[`message`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#message) 入力を使用して通知を設定します。
 
 ```html
 <!--sample.component.html-->
@@ -60,7 +60,7 @@ Toast コンポーネントを表示するには、ボタン クリックで `sh
 
 #### 非表示/自動的に隠す
 
-開いた後は、`displayTime` 入力によって指定した期間遅延後に非表示になります。デフォルト値は 4000 ミリ秒です。この動作はデフォルトで有効ですが、`autoHide` を **false** に設定して変更できます。この場合、Toast は非表示になりません。Toast の `hide()` メソッドを使用して、コンポーネントを閉じることができます。
+開いた後は、[`displayTime`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#displaytime) 入力によって指定した期間遅延後に非表示になります。デフォルト値は 4000 ミリ秒です。この動作はデフォルトで有効ですが、[`autoHide`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#autohide) を **false** に設定して変更できます。この場合、Toast は非表示になりません。Toast の [`hide()`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#hide) メソッドを使用して、コンポーネントを閉じることができます。
 
 ```html
 <!--sample.component.html-->
@@ -78,7 +78,7 @@ Toast コンポーネントを表示するには、ボタン クリックで `sh
 
 #### 表示期間
 
-`displayTime` でミリ秒間隔に設定し、Toast コンポーネントが表示される期間を構成します。
+[`displayTime`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#displaytime) でミリ秒間隔に設定し、Toast コンポーネントが表示される期間を構成します。
 
 ```html
 <!--sample.component.html-->
@@ -95,7 +95,7 @@ Toast コンポーネントを表示するには、ボタン クリックで `sh
 
 ### 配置
 
-`position` を使用すると、Toast の表示位置を構成します。デフォルトで、Toast はページの下に表示されます。以下のサンプルで、通知が上位置に表示されます。
+[`position`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#position) を使用すると、Toast の表示位置を構成します。デフォルトで、Toast はページの下に表示されます。以下のサンプルで、通知が上位置に表示されます。
 
 ```html
 <!--sample.component.html-->
@@ -131,47 +131,17 @@ public show(toast) {
 
 <div class="divider--half"></div>
 
-### API まとめ
+### API リファレンス
 
-以下の表は便利な **igx-toast** コンポーネントの入力、出力、およびメソッドを示します。
+このトピックでは、[`IgxToastComponent`]({environment:angularApiUrl}/classes/igxtoastcomponent.html) を使用と構成方法を説明しました。API の詳細については以下のリンク先を参照してください。
 
-<div class="divider--half"></div>
+* [`IgxToastComponent`]({environment:angularApiUrl}/classes/igxtoastcomponent.html)
 
-#### 入力
+スタイル:
 
-以下の入力は **igx-toast** コンポーネントで利用できます。
+* [`IgxToastComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-toast-theme)
 
-| 名前 | 型 | 説明 |
-| :--- | :--- | :--- |
-| `autoHide` | boolean | `displayTime` 後、Toast を自動的に隠すかどうかを指定します。デフォルトで、`autoHide` は **true** に設定されます。 |
-| `displayTime` | number | Toast が表示される間隔をミリ秒で指定します。デフォルトでは、`displayTime` が 4000 ミリ秒に設定されます。 |
-| `isVisible` | boolean | コンポーネントのビジュアル ステートを指定します。デフォルトで、`isVisible` は **false** に設定されます。 |
-| `message` | string | 表示されるメッセージを指定します。 |
-| `position` | `IgxToastPosition` | Toast の位置を指定します。オプションは `IgxToastPosition.Top`、`IgxToastPosition.Middle`、および `IgxToastPosition.Bottom` です。デフォルトでは、`position` は `IgxToastPosition.Bottom` に設定されます。 |
-
-<div class="divider--half"></div>
-
-#### 出力
-
-以下の出力は **igx-toast** コンポーネントで利用できます。
-
-| 名前 | 説明 |
-| :--- | :--- |
-| `onShowing`  | Toast が表示される前にイベントを発生します。  |
-| `onShown`  | Toast が表示されたときにイベントを発生します。 |
-| `onHiding`  | Toast が非表示される前にイベントを発生します。 |
-| `onHidden`  | Toast が非表示にされたときにイベントを発生します。 |
-
-#### メソッド
-
-以下のメソッドが **igx-toast** コンポーネントで利用できます。
-
-| 名前 | 説明 |
-| :--- | :--- |
-| `show()`  | `autoHide` を **true** に設定した場合、Toast コンポーネントを表示し、`displayTime` 後に非表示にします。 |
-| `hide()`  | Toast コンポーネントを非表示にします。 |
-
-### 追加のリソース
+### その他のリソース
 
 コミュニティに参加して新しいアイデアをご提案ください。
 * [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
