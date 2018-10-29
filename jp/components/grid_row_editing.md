@@ -1,12 +1,15 @@
 ---
 title: Grid Row Editing - Native Angular | Ignite UI for Angular
-_description: Enabling row editing in the grid will allow you to edit several row's cells, before submitting all the changes to the grid at once.
+_description: Row editing - allows modification of several cells in the row, before submitting, at once, all those changes to the grid's data source. Leverages the pending changes functionality of the new transaction provider.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Component, Angular Grid, Angular Data Grid component, Angular Data Grid control, Angular Grid component, Angular Grid control, Angular High Performance Grid, Cell Editing
 ---
 
 ## Grid Editing
 
-Enabling row editing in the grid will allow you to edit several row's cells, before submitting all the changes to the grid at once. If the transaction provider is available for the grid, then all the row changes will be submitted to the pending transactions instead of directly to the data. For more information follow the [Grid Transactions](grid_transactions.md) topic.
+[Grid Transactions](grid_transactions.md) topic.
+
+Row editing - allows modification of several cells in the row, before submitting, at once, all those changes to the grid's data source. Leverages the pending changes functionality of the new transaction provider.
+
 
 
 ### Demo
@@ -65,9 +68,10 @@ Then define a grid with bound data source and [`rowEditable`]({environment:angul
 ```
 
 > [!NOTE]
-> It's not needed to enable editing for individual columns. Using the [`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowEditable) will mean that all rows are editable. If you want to disable editing for specific column, then you set the [`editable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable) column's input to `false`.
+> Setting primary key is mandatory for editing operation, including row editing.
 > [!NOTE]
-> The column marked as the grid's [`primaryKey`]({environment:angularApiUrl}/classes/igxgridcomponent.html#primarykey) ***will not*** be automatically marked as `editable` when enabling `rowEditable`.
+> It's not needed to enable editing for individual columns. Using the [`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowEditable) property in the grid, will mean that all rows, with defined `field` property, excluding primary one, will be editable. If you want to disable editing for specific column, then you set the [`editable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable) column's input to `false`.
+
 
 ```typescript
 
@@ -94,38 +98,82 @@ export class GridRowEditSampleComponent {
 ```
 
 > [!NOTE]
-> The grid uses internally a provider [`IgxBaseTransactionService`]({environment:angularApiUrl}/classes/igxbasetransactionservice) that holds pending transactions, until submitted or cancelled.
+> The grid uses internally a provider [`IgxBaseTransactionService`]({environment:angularApiUrl}/classes/igxbasetransactionservice) that holds pending cell changes, until submitted or cancelled.
 
-## Navigation
+## Behavior, Navigation and integration with other igxGrid features
 
-When a row is in edit mode, then clicking on a cell on another row will act like the Done button is pressed - submit all the changes of the previous row. If the new cell that gets focus is editable, then the new row also enters edit mode, while if the cell is not editable, then only the previous row exits edit mode.
+### Overlay position
+
+- Default position of the overlay will be below the row that is in edit mode
+     
+- If there is no space - in that case it will appear above the row.
+     
+- Once shown - top or bottom, overlay will maintain this position during scrolling, until the overlay is closed.
+
+### Overlay closing
+
+- If row is in edit mode, then editing will continue if a cell from the same row is clicked.
+
+- If row is in edit mode, then clicking a cell from another row will finish the current row edit and will submit new row changes. If the new cell that gets focus is editable, then the new row also enters edit mode, while if the cell is not editable, then only the previous row exits edit mode.
+
+- If row is in edit mode and grid is scrolled so that row goes outside the visible area, the latter will be still in edit mode. When grid is scrolled, so that the row is visible again, the row will be still in edit mode.
 
 
 ### Keyboard Navigation
 
- - `Enter` and `F2` enters row edit mode
+- `Enter` and `F2` enters row edit mode
  - `Esc` exits row edit mode and doesn't submit any of the cell changes, made while the row was in edit mode.
- - `Tab` move focus from one editable cell in the row to the next and from the right-most editable cell to the CANCEL and DONE buttons. From the DONE button to the left-most editable cell within the currently edited row.
- 
+ - `Tab` move focus from one editable cell in the row to the next and from the right-most editable cell to the CANCEL and DONE buttons. Navigation from DONE button goes to the left-most editable cell within the currently edited row.
+
+ ### Feature Integration
+
+- Any data chaning operation will terminate row editing operations and will submit current row changes. This will include operations like sorting, changing grouping and filtering criteria, paging, etc.
+
+- Summaries will be updated after row edit is done.
+
+- Expanding and collapsing grouped rows will not terminate row that is currently in edit.
+
+
+ ## Customizing Row Editing Overlay
+
+ ### Customizing Text
+
+ ```html
+<ng-template igxRowEditText let-rowChangesCount>
+	Changes: {{rowChangesCount}}
+</ng-template>
+ ```
+
+ ### Customizing Buttons
+
+ ```typescript
+ <ng-template igxRowEditActions let-endRowEdit>
+	<button igxButton igxRowEditTabStop (click)="endRowEdit(false)">Cancel</button>
+	<button igxButton igxRowEditTabStop (click)="endRowEdit(true)">Apply</button>
+</ng-template>
+ ```
 
 ## API
 
-### Inputs
-
-#### IgxGridComponent
+### igxGrid Inputs
 
 * [rowEditable]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowEditable)
-* [rowEditMessage]({environment:angularApiUrl}/classes/igxgridrowcomponent.html#rowEditMessage)
-* [rowEditButtonDone]({environment:angularApiUrl}/classes/igxgridrowcomponent.html#rowEditButtonCommit)
-* [rowEditButtonCancel]({environment:angularApiUrl}/classes/igxgridrowcomponent.html#rowEditButtonDiscard)
 
-### Outputs
+### igxGrid Outputs
 
-#### IgxGridComponent
 * [onRowEditDone]({environment:angularApiUrl}/classes/igxgridrowcomponent.html#onRowEditDone)
 * [onRowEditCancel]({environment:angularApiUrl}/classes/igxgridrowcomponent.html#onRowEditCancel)
 
-## Known Issues
+### igxGrid Methods
+
+[endRowEdit]({environment:angularApiUrl}/classes/igxgridrowcomponent.html#endRowEdit)
+
+### Row Editing Overlay Directives
+
+* [igxRowEditText]({environment:angularApiUrl}/classes/igxgridrowcomponent.html#igxRowEditText)
+* [igxRowEditActions]({environment:angularApiUrl}/classes/igxgridrowcomponent.html#igxRowEditActions)
+* [igxRowEditTabStop]({environment:angularApiUrl}/classes/igxgridrowcomponent.html#igxRowEditTabStop)
+
 
 ### Additional Resources
 <div class="divider--half"></div>
