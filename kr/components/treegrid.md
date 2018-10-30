@@ -240,6 +240,14 @@ The indentation of the **tree cells** persists across other tree grid features l
 
 <div class="divider--half"></div>
 
+### Known Limitations
+
+|Limitation|Description|
+|--- |--- |
+|Templating Tree Cells|When templating a tree cell, content that spans outside the boundaries of the cell will not be shown unless positioned in an overlay.|
+
+<div class="divider--half"></div>
+
 ### API References
 
 * [`IgxTreeGridModule`]({environment:angularApiUrl}/classes/igxtreegridmodule.html)
