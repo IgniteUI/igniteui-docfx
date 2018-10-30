@@ -201,7 +201,7 @@ In the sample data above, all records are described with an ID, Parent ID and so
 
 The parent-child relation is configured using the tree grid's [`primaryKey`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#primarykey) and [`foreignKey`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#foreignkey) properties.
 
-Here is the template of the component which demonstrates how to configure the tree grid to display the date defined in the above flat collection:
+Here is the template of the component which demonstrates how to configure the tree grid to display the data defined in the above flat collection:
 
 ```html
 <!--treeGridSample.component.html-->
@@ -216,7 +216,7 @@ Here is the template of the component which demonstrates how to configure the tr
 </igx-tree-grid>
 ```
 
-In addition we will enable the row selection feature of the tree grid by using the [`rowSelectable`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#rowselectable) and also the filtering, sorting, editing, moving and resizing features for each of our columns by handling the [`onColumnInit`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#oncolumninit) event of the tree grid and set the respective column's properties.
+In addition we will enable the row selection feature of the tree grid by using the [`rowSelectable`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#rowselectable) property and also the filtering, sorting, editing, moving and resizing features for each of our columns by handling the [`onColumnInit`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#oncolumninit) event of the tree grid and set the respective column's properties.
 
 ```html
 <!--treeGridSample.component.html-->
