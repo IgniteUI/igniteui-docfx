@@ -62,7 +62,7 @@ var data = [
 The following code demonstrates how to bind the pie chart to the above data.
 
 ```html
- <igx-pie-chart [itemsSource]="data"
+ <igx-pie-chart [dataSource]="data"
                 width="700px"
                 height="500px"
                 labelMemberPath="Label"
@@ -81,7 +81,14 @@ In order to display a legend next to the pie chart an ItemLegend needs to be cre
 Additionally you can use the `legendItemTemplate` and `legendItemBadgeTemplate` properties and the various font properties on ItemLegend to further customize the look of the legend items. 
 
 ```html
-TO DO
+ <igx-pie-chart [dataSource]="data" 
+                width="700px"
+                height="500px"
+                valueMemberPath="Value" 
+                labelMemberPath="Label" 
+                legendLabelMemberPath="Label"
+                [legend]="PieChartLegend">
+        </igx-pie-chart>
 ```
 
 <div class="sample-container" style="height: 320px">
@@ -103,7 +110,7 @@ If you set `othersCategoryType` to Percent, then `othersCategoryThreshold` will 
 
 
 ```html
- <igx-pie-chart [itemsSource]="data"
+ <igx-pie-chart [dataSource]="data"
                 width="700px"
                 height="500px"
                 labelMemberPath="Label"
@@ -126,12 +133,11 @@ If you set `othersCategoryType` to Percent, then `othersCategoryThreshold` will 
 The pie chart supports explosion of individual pie slices as well as a 'sliceClick' event that allows you to modify selection states and implement custom logic
 
 ```html
-<igx-pie-chart
-    [itemsSource]="data"
-    width="700px"
-    height="500px"
-    allowSliceExplosion="true"
-    sliceClick="piechart_SliceClick">
+<igx-pie-chart [dataSource]="data"
+               width="700px"
+               height="500px"
+               allowSliceExplosion="true"
+               sliceClick="piechart_SliceClick">
 </igx-pie-chart>
 ```
 <div class="sample-container" style="height: 320px">
@@ -164,11 +170,10 @@ For scenarios where you click on the Others slice, the pie chart will return an 
 
 
 ```html
-<igx-pie-chart
-    [itemsSource]="data"
-    width="700px"
-    height="500px"
-    selectionMode="multiple">
+<igx-pie-chart [dataSource]="data"
+               width="700px"
+               height="500px"
+               selectionMode="multiple">
 </igx-pie-chart>
 ```
 <div class="sample-container" style="height: 320px">
