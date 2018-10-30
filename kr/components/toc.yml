@@ -11,6 +11,13 @@
     - name: 그리드 편집
       href: grid_editing.md
       new: true
+      items:
+        - name: Row Editing
+          href: grid_row_editing.md
+          new: true
+        - name: Transactions
+          href: grid_transactions.md
+          new: true
     - name: 그리드 페이징
       href: grid_paging.md
       new: false

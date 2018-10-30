@@ -47,7 +47,7 @@ Ignite UI for Angular の Grid コンポーネントは、列のデータ型に�
 > [!NOTE]
 > セルは、水平方向または垂直方向へスクロール、グリッド以外をクリック、列のサイズ変更、列のピン固定、またはその他のページへ移動した場合も編集モードのままです。
 
-プライマリキーが定義されている場合のみ IgxGrid API でもセル値を変更することができます。
+You can also modify the cell value through the IgxGrid API but only if primary key is defined:
 
 ```typescript
 ...
