@@ -1,7 +1,7 @@
 ---
 title: Tree Grid Component
 _description: The Ignite UI for Angular Tree Grid control features the fastest, touch-responsive data-rich grid with popular features.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Tree Grid component, Angular Tree Grid control, Angular Tree Grid component, Angular Tree Grid control, Angular High Performance Tree Grid
+_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Tree Grid component, Angular Tree Grid control, Angular Tree Grid component, Angular High Performance Tree Grid, Tree Grid
 ---
 
 ## Tree Grid
@@ -103,8 +103,8 @@ Now let's start by importing our data collection and binding it to the [`data`](
 </igx-tree-grid>
 ```
 
-In order for the IgxTreeGridComponent to build the hierarchy, we will have to set its [`childDataKey`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#data) property to the name of the child collection that is used in each of our data objects. In our case that will be the **Employees** collection.
-In addition, we will disable the automatic generating of the columns and define our columns manually by matching them to the actual properties of our data objects. (The **Employees** collection will be automatically used for the hierarchy, so there is no need to include it in the columns' definitions.)
+In order for the IgxTreeGridComponent to build the hierarchy, we will have to set its [`childDataKey`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#childdatakey) property to the name of the child collection that is used in each of our data objects. In our case that will be the **Employees** collection.
+In addition, we will disable the automatic column generation and define them manually by matching them to the actual properties of our data objects. (The **Employees** collection will be automatically used for the hierarchy, so there is no need to include it in the columns' definitions.)
 
 ```html
 <!--treeGridSample.component.html-->
@@ -185,7 +185,7 @@ export class MyComponent implements OnInit {
 }
 ```
 
-In the sample data above, all records are described with an ID, Parent ID and some other records related fields. As mentioned the ID of the records must be unique. The ParentID contains the ID of the parent node or "-1" if this is a root level node (node with no parent).
+In the sample data above, all records have an ID, a ParentID and some additional properties like Name, JobTitle and Age. As mentioned previously, the ID of the records must be unique. The ParentID contains the ID of the parent node or **-1** if this is a root level node (node without a parent).
 
 The parent-child relation is configured using the tree grid's [`primaryKey`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#primarykey) and [`foreignKey`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#foreignkey) properties.
 
@@ -247,7 +247,6 @@ The indentation of the **tree cells** persists across other tree grid features l
 * [`IgxTreeGridComponent Styles`]({environment:sassApiUrl}/#function-igx-tree-grid-theme)
 * [`IgxTreeGridCellComponent`]({environment:angularApiUrl}/classes/igxtreegridcellcomponent.html)
 * [`IgxTreeGridRowComponent`]({environment:angularApiUrl}/classes/igxtreegridrowcomponent.html)
-* [`IgxGridRowComponent`]({environment:angularApiUrl}/classes/igxgridrowcomponent.html)
 * [`IgxGridComponent`]({environment:angularApiUrl}/classes/igxgridcomponent.html)
 * [`IgxGridComponent Styles`]({environment:sassApiUrl}/#function-igx-grid-theme)
 * [`IgxGridCellComponent`]({environment:angularApiUrl}/classes/igxgridcellcomponent.html)
