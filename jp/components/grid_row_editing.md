@@ -163,7 +163,7 @@ If you want the buttons to be part of the keyboard navigation, then each on of t
 </ng-template>
  ```
 
-## API Reference
+## API References
 
 ### igxGrid Inputs
 

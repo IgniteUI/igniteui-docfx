@@ -117,7 +117,7 @@ export class GridBatchEditingSampleComponent {
 > [!NOTE]
 > Disabling [`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditable) property will modify grid to create transactions on cell change and will not expose row editing overlay in the UI.
 
-## API Reference
+## API References
 
 * [`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html)
 
