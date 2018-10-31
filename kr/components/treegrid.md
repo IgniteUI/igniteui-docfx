@@ -49,14 +49,14 @@ In order to achieve this, the [`IgxTreeGridComponent`]({environment:angularApiUr
 Regardless of which option is used for building the tree grid's hierarchy (child collection or primary & foreign keys), the tree grid's rows are constructed of two types of cells:
 
 - [`IgxGridCellComponent`]({environment:angularApiUrl}/classes/igxgridcellcomponent.html) - Ordinary cell that contains a value.
-- [`IgxTreeGridCellComponent`]({environment:angularApiUrl}/classes/igxtreegridcellcomponent.html) - Tree cell that contains a value, an expand/collapse indicator and an indentation div element, which is based on the indentation level of the cell/row. Both the tree cell and its respective tree row expose an [`indentation`]({environment:angularApiUrl}/classes/igxtreegridcellcomponent.html#indentation) property that returns the level of indentation.
+- [`IgxTreeGridCellComponent`]({environment:angularApiUrl}/classes/igxtreegridcellcomponent.html) - Tree cell that contains a value, an expand/collapse indicator and an indentation div element, which is based on the level of the cell's row. The level of a row component can be accessed through the [`level`]({environment:angularApiUrl}/interfaces/itreegridrecord.html#level) property of its inner [`treeRow`]({environment:angularApiUrl}/classes/igxtreegridrowcomponent.html#treerow).
 
 > [!NOTE]
 > Each row can have only one tree cell, but it can have multiple (or none) ordinary cells.
 
-#### Initial Expand Depth
+#### Initial Expansion Depth
 
-Initially the tree grid will expand all node levels and show them. This behavior can be configured using the [`expandedLevels`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#expandedlevels) property. By default its value is `Infinity` which means all node levels will be expanded. You may control the initial expanded levels by setting this property to a numeric value. For example `0` will show only root level nodes, `1` will show root level nodes and their child nodes and so on...
+Initially the tree grid will expand all node levels and show them. This behavior can be configured using the [`expansionDepth`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#expansiondepth) property. By default its value is **Infinity** which means all node levels will be expanded. You may control the initial expansion depth by setting this property to a numeric value. For example **0** will show only root level nodes, **1** will show root level nodes and their child nodes and so on.
 
 #### Child collection
 When we are using the **child collection** option, every data object contains a child collection, that is populated with items of the same type as the parent data object. This way every record in our tree grid will have a direct reference to any of its children. In this case the [`data`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#data) property of our tree grid that contains the original data source will be a hierarchically defined collection.
