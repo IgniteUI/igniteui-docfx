@@ -11,13 +11,12 @@
     - name: 編集
       href: grid_editing.md
       new: true
-      items:
-        - name: Row Editing
-          href: grid_row_editing.md
-          new: true
-        - name: Transactions
-          href: grid_transactions.md
-          new: true
+    - name: Row Editing
+      href: grid_row_editing.md
+      new: true
+    - name: Batch Editing
+      href: grid_batch_editing.md
+      new: true
     - name: ページング
       href: grid_paging.md
       new: false
