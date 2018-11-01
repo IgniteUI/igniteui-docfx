@@ -61,13 +61,12 @@ var data = [
 The following code demonstrates how to bind the doughnut chart to the above data.
 
 ```html
- <igx-doughnut-chart width="700px"
+<igx-doughnut-chart width="700px"
                      height="500px">
-    <igx-doughnut-chart-series>
-        <igx-ring-series  [itemsSource]="data"        
-                labelMemberPath="Label"
-                valueMemberPath="Value">
-    </igx-doughnut-chart-series>
+    <igx-ring-series  [dataSource]="data"        
+                      labelMemberPath="Label"
+                      valueMemberPath="Value">
+    </igx-ring-series>
  </igx-doughnut-chart>
 ```
 
@@ -78,13 +77,22 @@ The following code demonstrates how to bind the doughnut chart to the above data
 Multiple Rings
 The XamDoughnutChart can display multiple rings at the same time with each of the rings capable of being bound to a different collection, or they can share a common data source.
 
-
-
 ### Slice Selection
 
 The doughnut chart component exposes the API for setting the state of one or more slices to selected. Optionally, you may apply a single custom visual style to the selected slices.
 
-### Selection Demo
+
+- **Enable/disable slice selection** - You can enable (default setting) or disable slice selection in the doughnut chart by setting the `allowSliceSection` property.
+
+- **Configuring the look of the selected slices** - You can define how the selected slices will look by defining a style with a `targetType` of Slice and assigning it to the `selectedStyle` property of the doughnut chart.
+
+- **Changing the selection state upon slice click** - If you attach an event handler for the `sliceClick` event, it supplies a reference to the clicked slice in the event arguments allowing you to modify its selection state. The doughnut chart exposes a `selectedStyle` property that determines the look of the selected slices. By default, no style is applied, and selecting a slice will not alter its appearance in any way. In order to apply your own style to the selected slices you need to define a Style with `targetType` of Slice and set it as the value of the `selectedStyle` property.
+
+- **Setting the IsSelected property** - The doughnut chart holds references to all the slices allowing you to modify their `isSelected` property directly. The doughnut chart exposes a `sliceClick` event used to change the selected/unselected state of a slice. 
+
+- **Modifying the contents of the SelectedSlices collection** - You can change the selected slice by changing the contents of the `selectedSlices` collection. The doughnut chart holds references to all the slices allowing you to modify their `isSelected` property directly to the Slice objects.
+
+### Slice Selection Demo
 
 <div class="sample-container" style="height: 550px">
     <iframe id="doughnut-chart-selection-sample-iframe" src='{environment:demosBaseUrl}/doughnut-chart-selection-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -96,26 +104,19 @@ The doughnut chart component exposes the API for setting the state of one or mor
 
 <div class="divider--half"></div>
 
-**Enable/disable slice selection**
-
-You can enable or disable the ability to select slices or not. You can enable (default setting) or disable slice selection in the doughnut chart by setting the `allowSliceSection` property.
-
-**Configuring the look of the selected slices**
-You can define how the selected slices will look by defining a style with a `targetType` of Slice and assigning it to the `selectedStyle` property of the doughnut chart .
-
-**Changing the selection state upon slice click**
-If you attach an event handler for the `sliceClick` event, it supplies a reference to the clicked slice in the event arguments allowing you to modify its selection state. The doughnut chart exposes a `selectedStyle` property that determines the look of the selected slices. By default, no style is applied, and selecting a slice will not alter its appearance in any way. In order to apply your own style to the selected slices you need to define a Style with `targetType` of Slice and set it as the value of the `selectedStyle` property.
-
-**Setting the IsSelected property**
-The doughnut chart holds references to all the slices allowing you to modify their `isSelected` property directly. The doughnut chart exposes a `sliceClick` event used to change the selected/unselected state of a slice. 
-
-**Modifying the contents of the SelectedSlices collection**
-You can change the selected slice by changing the contents of the `selectedSlices` collection. The doughnut chart holds references to all the slices allowing you to modify their `isSelected` property directly to the Slice objects.
 
 ### Slice Explosion
 The doughnut chart slices explode either programmatically or by user interaction.
 
-### Explosion Demo
+- **Enable/disable slice explosion** - You can enable or disable the ability to explode slices by setting the `allowSliceExplosion` property.
+
+- **Changing the exploded state of a slice upon slice click** - If you attach an event handler for the `sliceClick` event, a reference to the clicked slice is supplied in the event arguments and you can modify its exploded state.
+
+- **Setting the IsExploded property** - The doughnut chart holds references to all the slices allowing you to modify their `isExploded` property directly.
+
+- **Modifying the contents of the ExplodedSlices collection** - You can change the exploded slices by changing the contents of the `explodedSlices` collection.
+
+### Slice Explosion Demo
 
 <div class="sample-container" style="height: 550px">
     <iframe id="doughnut-chart-explosion-sample-iframe" src='{environment:demosBaseUrl}/doughnut-chart-explosion-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -126,18 +127,3 @@ The doughnut chart slices explode either programmatically or by user interaction
 </div>
 
 <div class="divider--half"></div>
-
-**Enable/disable slice explosion**
-You can enable or disable the ability to explode slices by setting the `allowSliceExplosion` property.
-
-**Changing the exploded state of a slice upon slice click**
-If you attach an event handler for the `sliceClick` event, a reference to the clicked slice is supplied in the event arguments and you can modify its exploded state.
-
-**Setting the IsExploded property**
-The doughnut chart holds references to all the slices allowing you to modify their `isExploded` property directly.
-
-**Modifying the contents of the ExplodedSlices collection**
-You can change the exploded slices by changing the contents of the `explodedSlices` collection.
-
-
-
