@@ -46,7 +46,7 @@ In order to achieve this, the [`IgxTreeGridComponent`]({environment:angularApiUr
 
 #### Tree cells
 
-Regardless of which option is used for building the tree grid's hierarchy (child collection or primary & foreign keys), the tree grid's rows are constructed of two types of cells:
+Regardless of which option is used for building the tree grid's hierarchy (child collection or primary and foreign keys), the tree grid's rows are constructed of two types of cells:
 
 - [`IgxGridCellComponent`]({environment:angularApiUrl}/classes/igxgridcellcomponent.html) - Ordinary cell that contains a value.
 - [`IgxTreeGridCellComponent`]({environment:angularApiUrl}/classes/igxtreegridcellcomponent.html) - Tree cell that contains a value, an expand/collapse indicator and an indentation div element, which is based on the level of the cell's row. The level of a row component can be accessed through the [`level`]({environment:angularApiUrl}/interfaces/itreegridrecord.html#level) property of its inner [`treeRow`]({environment:angularApiUrl}/classes/igxtreegridrowcomponent.html#treerow).
@@ -249,6 +249,8 @@ The indentation of the **tree cells** persists across other tree grid features l
 <div class="divider--half"></div>
 
 ### API References
+
+<div class="divider--half"></div>
 
 * [`IgxTreeGridModule`]({environment:angularApiUrl}/classes/igxtreegridmodule.html)
 * [`IgxTreeGridComponent`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html)
