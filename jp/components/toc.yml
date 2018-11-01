@@ -65,6 +65,13 @@
 - name: Tree Grid
   href: treegrid.md
   new: true
+  items:
+  - name: Row Editing
+    href: treegrid_row_editing.md
+    new: true
+  - name: Batch Editing
+    href: treegrid_batch_editing.md
+    new: true
 - name: List View
   href: list.md
 - name: Combo
