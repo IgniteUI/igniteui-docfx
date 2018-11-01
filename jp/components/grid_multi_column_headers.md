@@ -22,11 +22,11 @@ _language: ja
 `Multi column header` の宣言は列セットを [`igx-column-group`]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html) コンポーネントに [`header`]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html#header) タイトルを渡してラップします。
 
 ```html
-<igx-grid [data]="data" height="600px">
+<igx-grid [data]="data" height="600px" [allowFiltering]="true">
     <igx-column-group header="Contact Information">
-        <igx-column filterable="true" sortable="true" resizable="true" field="Phone"></igx-column>
-        <igx-column filterable="true" sortable="true" resizable="true" field="Fax"></igx-column>
-        <igx-column filterable="true" sortable="true" resizable="true" field="PostalCode"></igx-column>
+        <igx-column sortable="true" resizable="true" field="Phone"></igx-column>
+        <igx-column sortable="true" resizable="true" field="Fax"></igx-column>
+        <igx-column sortable="true" resizable="true" field="PostalCode"></igx-column>
     </igx-column-group>
 </igx-grid>
 ```
@@ -34,12 +34,12 @@ _language: ja
 ネスト ヘッダーの `n-th` レベルは、上記の宣言に従います。つまり [`igx-column-group`]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html) をネストします。
 
 ```html
-<igx-grid [data]="data" height="600px">
+<igx-grid [data]="data" height="600px" [allowFiltering]="true">
     <igx-column-group header="General Information">
-        <igx-column [movable]="true" filterable="true" sortable="true" resizable="true" field="CompanyName"></igx-column>
+        <igx-column [movable]="true" sortable="true" resizable="true" field="CompanyName"></igx-column>
         <igx-column-group [movable]="true" header="Person Details">
-            <igx-column [movable]="true" [pinned]="false" filterable="true" sortable="true" resizable="true" field="ContactName"></igx-column>
-            <igx-column [movable]="true" filterable="true" sortable="true" resizable="true" field="ContactTitle"></igx-column>
+            <igx-column [movable]="true" [pinned]="false" sortable="true" resizable="true" field="ContactName"></igx-column>
+            <igx-column [movable]="true" sortable="true" resizable="true" field="ContactTitle"></igx-column>
         </igx-column-group>
     </igx-column-group>
 </igx-grid>
@@ -52,13 +52,13 @@ _language: ja
 > `columns/column-groups` が現在の `group` でラップされていない場合 ( **最上位** の `columns` の場合、移動は表示列間のみ可能です。
 
 ```html
-<igx-grid [data]="data" height="600px">
+<igx-grid [data]="data" height="600px" [allowFiltering]="true">
     <igx-column-group  [movable]="true" [pinned]="true" header="General Information">
-        <igx-column [movable]="true" filterable="true" sortable="true" resizable="true" field="CompanyName"></igx-column>
+        <igx-column [movable]="true" sortable="true" resizable="true" field="CompanyName"></igx-column>
     </igx-column-group>
-    <igx-column filterable="true" sortable="true" resizable="true" field="Phone"></igx-column>
-    <igx-column filterable="true" sortable="true" resizable="true" field="Fax"></igx-column>
-    <igx-column filterable="true" sortable="true" resizable="true" field="PostalCode"></igx-column>
+    <igx-column sortable="true" resizable="true" field="Phone"></igx-column>
+    <igx-column sortable="true" resizable="true" field="Fax"></igx-column>
+    <igx-column sortable="true" resizable="true" field="PostalCode"></igx-column>
 </igx-grid>
 ```
 
