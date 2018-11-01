@@ -5,7 +5,7 @@ _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Nati
 ---
 ## About Infragistics Excel Library
 
-Using the Infragistics Excel Engine allows you to work with spreadsheet data using familiar Microsoft® Excel® spreadsheet objects like [**Worbooks**]({environment:angularApiUrl}/classes/Workbook.html), [**Worksheets**]({environment:angularApiUrl}/classes/Worksheet.html), [**Cells**]({environment:angularApiUrl}/classes/Cell.html), [**Formulas**]({environment:angularApiUrl}/classes/Formula.html) and many more. The Infragistics Excel Engine makes it easy for you to represent the data of your application in an Excel spreadsheet as well as transfer data from Excel into your application.
+Using the Infragistics Excel Engine allows you to work with spreadsheet data using familiar Microsoft® Excel® spreadsheet objects like **Worbooks**, **Worksheets**, **Cells**, **Formulas** and many more. The Infragistics Excel Engine makes it easy for you to represent the data of your application in an Excel spreadsheet as well as transfer data from Excel into your application.
 
 **Supported Versions of Microsoft Excel
 The following is a list of the supported versions of Excel.**
