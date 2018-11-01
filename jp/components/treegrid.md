@@ -221,7 +221,7 @@ In addition we will enable the row selection feature of the tree grid by using t
  
 And here is the final result:
 
-<div class="sample-container loading" style="height:400px">
+<div class="sample-container loading" style="height:450px">
     <iframe id="treegrid-primaryforeignkey-iframe" src='{environment:demosBaseUrl}/treegrid-primaryforeignkey' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
