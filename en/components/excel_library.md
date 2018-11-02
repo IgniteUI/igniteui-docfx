@@ -20,8 +20,6 @@ TODO add when in a sample is in Samples Browser
 
 <div class="divider--half"></div>
 
-TODO info about loading type of data models/files
-
 ### Dependencies
 When installing the excel package, the core package must also be installed.
 
