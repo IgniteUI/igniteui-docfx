@@ -164,6 +164,8 @@ If you want the buttons to be part of the keyboard navigation, then each on of t
 </ng-template>
  ```
 
+> [!NOTE]
+> Currently the Batch Editing functionality is planed for the upcoming releases.
 
 ### API References
 

@@ -162,7 +162,10 @@ If you want the buttons to be part of the keyboard navigation, then each on of t
     <button igxButton igxRowEditTabStop (click)="endRowEdit(false)">Cancel</button>
     <button igxButton igxRowEditTabStop (click)="endRowEdit(true)">Apply</button>
 </ng-template>
- ```
+  ```
+
+> [!NOTE]
+> Currently the Batch Editing functionality is planed for the upcoming releases.
 
 
 ### API References
