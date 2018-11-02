@@ -19,7 +19,7 @@ This topic provides conceptual information about the tooltip types available on 
 
 ### Tooltip Types
 
-The IgxCategoryChart can be configured to display Tooltips in four ways, as Default, Item, Category, or None.
+The IgxCategoryChart can be configured to display Tooltips in the following ways:
 
 1. `Default` tooltips will display a tooltip for a single item when the pointer is positioned over it.
 1. `Item` tooltips will display a tooltip for each data item in the category that the pointer is positioned over.
