@@ -3,9 +3,9 @@ title: Financial Chart Annotations
 _description: The Ignite UI for Angular Financial Chart component is easily configured to display financial data using a simple and intuitive API, as once the user binds the data, the chart offers multiple ways in which the data can then be visualized and interpreted.
 _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Chart Control, Angular Chart Example, Angular Grid Component, Angular Chart Component, Angular Financial Chart
 ---
-## Financial Chart Annotations
+## Annotations
 
-This topic provides conceptual information about the annotations and overlay interactions available on the `igx-financial-chart`.
+This topic provides conceptual information about the annotations available on the `igx-financial-chart`.
 
 ### Demo
 <div class="sample-container" style="height: 550px">
@@ -19,7 +19,7 @@ This topic provides conceptual information about the annotations and overlay int
 
 ### Crosshair Layer
 
-The Crosshair Layer provides crossing lines that meet at the actual value of each targeted series.  Crosshair types include: Horizontal, Vertical, and Both.
+The Crosshair Layer provides crossing lines that meet at the actual value of every targeted series.  Crosshair types include: Horizontal, Vertical, and Both.  The Crosshairs can also be configured to snap to data points by setting the `crosshairsSnapToData` property to true, otherwise the crosshairs will be interpolated between data points.  Annotations can also be enabled to display the crosshair's value along the axis.
 
 ```html
 <igx-financial-chart
