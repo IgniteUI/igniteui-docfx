@@ -112,7 +112,6 @@ In addition, we will disable the automatic column generation and define them man
 <igx-tree-grid #treeGrid [data]="localData" childDataKey="Employees"
                [autoGenerate]="false">
     <igx-column field="Name" dataType="string"></igx-column>
-    <igx-column field="ID" dataType="number"></igx-column>
     <igx-column field="HireDate" dataType="date"></igx-column>
     <igx-column field="Age" dataType="number"></igx-column>
 </igx-tree-grid>
@@ -127,7 +126,6 @@ We will also enable the filtering, sorting, editing, moving and resizing feature
 <igx-tree-grid #treeGrid [data]="localData" childDataKey="Employees"
                [autoGenerate]="false" [rowSelectable]="true" [paging]="true">
     <igx-column field="Name" dataType="string" [filterable]="true" [sortable]="true" [editable]="true" [movable]="true" [resizable]="true"></igx-column>
-    <igx-column field="ID" dataType="number" [filterable]="true" [sortable]="true" [editable]="true" [movable]="true" [resizable]="true"></igx-column>
     <igx-column field="HireDate" dataType="date" [filterable]="true" [sortable]="true" [editable]="true" [movable]="true" [resizable]="true"></igx-column>
     <igx-column field="Age" dataType="number" [filterable]="true" [sortable]="true" [editable]="true" [movable]="true" [resizable]="true"></igx-column>
 </igx-tree-grid>
@@ -142,7 +140,6 @@ Finally, we will enable the toolbar of our tree grid, along with the column hidi
                [autoGenerate]="false" [rowSelectable]="true" [paging]="true"
                [showToolbar]="true" toolbarTitle="Employees" [columnHiding]="true" [columnPinning]="true">
     <igx-column field="Name" dataType="string" [filterable]="true" [sortable]="true" [editable]="true" [movable]="true" [resizable]="true"></igx-column>
-    <igx-column field="ID" dataType="number" [filterable]="true" [sortable]="true" [editable]="true" [movable]="true" [resizable]="true"></igx-column>
     <igx-column field="HireDate" dataType="date" [filterable]="true" [sortable]="true" [editable]="true" [movable]="true" [resizable]="true"></igx-column>
     <igx-column field="Age" dataType="number" [filterable]="true" [sortable]="true" [editable]="true" [movable]="true" [resizable]="true"></igx-column>
 </igx-tree-grid>
@@ -196,8 +193,6 @@ Here is the template of the component which demonstrates how to configure the tr
 
 <igx-tree-grid #treeGrid [data]="data" primaryKey="ID" foreignKey="ParentID"
     [autoGenerate]="false">
-    <igx-column field="ID" dataType="number"></igx-column>
-    <igx-column field="ParentID" dataType="number"></igx-column>
     <igx-column field="Name" dataType="string"></igx-column>
     <igx-column field="JobTitle" dataType="string"></igx-column>
     <igx-column field="Age" dataType="number"></igx-column>
@@ -211,8 +206,6 @@ In addition we will enable the row selection feature of the tree grid by using t
 
 <igx-tree-grid #treeGrid [data]="data" primaryKey="ID" foreignKey="ParentID"
     [autoGenerate]="false" [rowSelectable]="true">
-    <igx-column field="ID" dataType="number" [filterable]="true" [sortable]="true" [editable]="true" [movable]="true" [resizable]="true"></igx-column>
-    <igx-column field="ParentID" dataType="number" [filterable]="true" [sortable]="true" [editable]="true" [movable]="true" [resizable]="true"></igx-column>
     <igx-column field="Name" dataType="string" [filterable]="true" [sortable]="true" [editable]="true" [movable]="true" [resizable]="true"></igx-column>
     <igx-column field="JobTitle" dataType="string" [filterable]="true" [sortable]="true" [editable]="true" [movable]="true" [resizable]="true"></igx-column>
     <igx-column field="Age" dataType="number" [filterable]="true" [sortable]="true" [editable]="true" [movable]="true" [resizable]="true"></igx-column>
