@@ -119,7 +119,7 @@
 - name: Financial Chart
   href: financialchart.md
   items:
-    - name: Annotations and Overlays
+    - name: Annotations
       href: financialchart_annotation_layers.md
       new: true
     - name: Explore Chart Types
@@ -146,8 +146,11 @@
     - name: Custom Indicators
       href: financialchart_custom_indicators.md
       new: false
-    - name: Custom Tooltips
-      href: financialchart_custom_tooltips.md
+    - name: Tooltip Types
+      href: financialchart_tooltip_types.md
+      new: true
+    - name: Tooltip Templates
+      href: financialchart_tooltip_templates.md
 - name: Doughnut Chart
   href: doughnutchart.md
   new: true
