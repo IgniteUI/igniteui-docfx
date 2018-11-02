@@ -5,7 +5,7 @@ _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Nati
 ---
 ## Excel Library
 
-The Infragistics Excel Engine allows you to work with spreadsheet data using familiar Microsoft® Excel® spreadsheet objects like Workbooks, Worksheets, Cells, Formulas and many more. The Infragistics Excel Engine makes it easy for you to represent the data of your application in an Excel spreadsheet as well as transfer data from Excel into your application.
+The Infragistics Excel Library allows you to work with spreadsheet data using familiar Microsoft® Excel® spreadsheet objects like Workbooks, Worksheets, Cells, Formulas and many more. The Infragistics Excel Library makes it easy for you to represent the data of your application in an Excel spreadsheet as well as transfer data from Excel into your application.
 
 ### Demo
 
@@ -81,4 +81,4 @@ The following is a list of the supported versions of Excel.**
 -  Microsoft Excel 2016
 
 > [!NOTE]
-> The Excel Engine does not support the Excel Binary Workbook (.xlsb) format at this time.
+> The Excel Library does not support the Excel Binary Workbook (.xlsb) format at this time.
