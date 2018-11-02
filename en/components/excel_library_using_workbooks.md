@@ -33,23 +33,23 @@ normalFont.height = 16 * 20;
 
 Microsoft® Excel® document properties provide information to help organize and keep track of your documents. You can use the Infragistics Excel Library to set these properties using the `Workbook` object’s `DocumentProperties` property. The available properties are:
 
-- Author
+- author
 
-- Title
+- title
 
-- Subject
+- subject
 
-- Keywords
+- keywords
 
-- Category
+- category
 
-- Status
+- status
 
-- Comments
+- comments
 
-- Company
+- company
 
-- Manager
+- manager
 
 The following code demonstrates how to create a workbook and set its Title and Status document properties.
 
