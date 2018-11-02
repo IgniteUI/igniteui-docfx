@@ -1,9 +1,9 @@
 ---
-title: Financial Chart Annotations and Overlays
+title: Financial Chart Annotations
 _description: The Ignite UI for Angular Financial Chart component is easily configured to display financial data using a simple and intuitive API, as once the user binds the data, the chart offers multiple ways in which the data can then be visualized and interpreted.
 _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Chart Control, Angular Chart Example, Angular Grid Component, Angular Chart Component, Angular Financial Chart
 ---
-## Financial Chart Annotations and Overlays
+## Financial Chart Annotations
 
 This topic provides conceptual information about the annotations and overlay interactions available on the `igx-financial-chart`.
 
@@ -16,8 +16,6 @@ This topic provides conceptual information about the annotations and overlay int
     </button>
 </div>
 <div class="divider--half"></div>
-
-## Overlay Types
 
 ### Crosshair Layer
 
@@ -33,34 +31,6 @@ The Crosshair Layer provides crossing lines that meet at the actual value of eac
     crosshairsAnnotationEnabled="true">
 </igx-financial-chart>
 ```
-
-### Category Tool Tip Layer
-
-The Category Tool Tip Layer displays grouped tooltips for series using a category axis.
-
-```html
-<igx-financial-chart
-    [dataSource]="data"
-    width="850px"
-    height="600px"
-    toolTipType="Category">
-</igx-financial-chart>
-```
-
-### Item Tool Tip Layer
-
-The Item Tool Tip Layer displays tooltips for all target series individually.
-
-```html
-<igx-financial-chart
-    [dataSource]="data"
-    width="850px"
-    height="600px"
-    toolTipType="Item">
-</igx-financial-chart>
-```
-
-## Annotation Types
 
 ### Final Value Layer
 
