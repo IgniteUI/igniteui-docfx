@@ -40,24 +40,13 @@ import { IgxExcelModule } from "igniteui-angular-excel/ES5/igx-excel-module";
 export class AppModule {}
 ```
 
-<div class="divider--half"></div>
+### Modules – The Excel Library contains 5 modules 
 
-### Load and Save Workbooks
-Now that the Excel Library module is imported, next step is to load a workbook.
-
-In order to load and save `Workbook` object, you can utilize the load and save methods Excel. The following code is a class that exposes various methods such as load and save.
-
-```typescript
-import { Workbook } from "igniteui-angular-excel/ES5/Workbook";
-import { WorkbookSaveOptions } from "igniteui-angular-excel/ES5/WorkbookSaveOptions";
-import { WorkbookFormat } from "igniteui-angular-excel/ES5/WorkbookFormat";
-
-Workbook.load("ExcelWorkbook.xlsx", null, null);
-Workbook.save(workbook, "ExcelWorkbook.xlsx);
-
-}
-
-```
+-	**IgxExcelCoreModule** – This contains the object model and much of the excel infrastructure
+-	**IgxExcelFunctionsModule** – This contains the majority of the custom functions for formula evaluations, such as Sum, Average, Min, Max, SumIfs, Ifs, etc. The absence of this module won’t cause any issues with formula parsing If the formula is to be calculated (e.g. you apply a formula like “=SUM(A1:A5)” and ask for the Value of the cell) then you would get a #NAME! error returned. (Note that’s not an exception throw – it’s an object that represents a particular error since formulas can result in errors).
+-	**IgxExcelXlsModule** – This contains the load and save logic for xls (and related) type files – namely the Excel97to2003 related WorkbookFormats.
+-	**IgxExcelXlsxModule** – This contains the load and save logic for xlsx (and related) type files – namely the Excel2007 related and StrictOpenXml WorkbookFormats.
+-	**IgxExcelModule** – This references the other 4 modules and so basically ensures that all the functionality is loaded/available.
 
 <div class="divider--half"></div>
 
@@ -82,3 +71,53 @@ The following is a list of the supported versions of Excel.**
 
 > [!NOTE]
 > The Excel Library does not support the Excel Binary Workbook (.xlsb) format at this time.
+
+### Load and Save Workbooks
+Now that the Excel Library module is imported, next step is to load a workbook.
+
+In order to load and save `Workbook` object, you can utilize the load and save methods Excel. The following code is a class that exposes various methods such as load and save.
+
+```typescript
+import { Workbook } from "igniteui-angular-excel/ES5/Workbook";
+import { WorkbookSaveOptions } from "igniteui-angular-excel/ES5/WorkbookSaveOptions";
+import { WorkbookFormat } from "igniteui-angular-excel/ES5/WorkbookFormat";
+
+Workbook.load("ExcelWorkbook.xlsx", null, null);
+Workbook.save(workbook, "ExcelWorkbook.xlsx);
+
+```
+
+<div class="divider--half"></div>
+ 
+### Managing Heap
+
+Due to the size of the Excel Library, it's recommended to disable the source map generation.
+
+Modify `angular.json`:
+
+```typescript
+...
+    "architect": {
+        "build": {
+          "builder": "...",
+          "options": {
+            "vendorSourceMap": false,
+            "outputPath": "dist",
+            "index": "src/index.html",
+            "main": "src/main.ts",
+            "tsConfig": "src/tsconfig.app.json",
+                  ...
+          },
+              ...
+        },
+        "serve": {
+          "builder": "...",
+          "options": {
+            "vendorSourceMap": false,
+            "browserTarget": "my-app:build"
+          },
+              ...
+        },
+        ...
+      }
+```
