@@ -1,17 +1,17 @@
 ---
-title: Export to Excel Component - Native Angular | Ignite UI for Angular
+title: Excel로 내보내기 컴포넌트 - 네이티브 Angular| Ignite UI for Angular
 _description: Users can export their data for editing or offline presentation can do so in Excel format with the Export to Excel Ignite UI for Angular component.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Controls, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Grid, Angular Data Grid, Angular Grid Control, Angular Grid Component, Excel Export, Angular Excel Component, Angular Export Excel
 _language: kr
 ---
 
-## Excel Exporter
+## Excel 내보내기
 
 <p class="highlight">
-The Ignite UI for Angular Excel Exporter service can export data in Microsoft® Excel® format from both raw data (array) or from an [**IgxGrid**](grid.md). The exporting functionality is encapsulated in the [`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html) class and the data is exported in MS Excel table format. This format allows features like filtering, sorting, etc.</p>
+Ignite UI for Angular의 Excel 내보내기 서비스는 원시 데이터(배열) 또는 [**IgxGrid**](grid.md) 에서 Microsoft® Excel® 형식으로 데이터를 내보내기할 수 있습니다. 내보내기 기능은 [`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html) 클래스에 캡슐화되며 데이터는 MS Excel 표 형식으로 내보내기가 됩니다. 이 형식은 필터링, 정렬 등과 같은 기능을 사용할 수 있습니다.</p>
 <div class="divider"></div>
 
-### Excel Exporter Demo
+### Excel 내보내기 데모
 
 <div class="sample-container loading" style="height: 100px;">
     <iframe id="excel-export-sample-iframe" src="{environment:demosBaseUrl}/export-excel"
@@ -19,13 +19,13 @@ The Ignite UI for Angular Excel Exporter service can export data in Microsoft® 
 </div>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="excel-export-sample-iframe"
-    data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
 </div>
 <div class="divider--half"></div>
 
-### Usage
+### 사용 방법
 
-To start using the IgniteUI Excel Exporter first import the [`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html) in the app.module.ts file and add the service to the `providers` array:
+IgniteUI Excel 내보내기를 사용하려면 먼저 app.module.ts 파일에서 [`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html) 를 가져와서 providers 배열에 서비스를 추가합니다:
 
 ```typescript
 // app.module.ts
@@ -40,17 +40,17 @@ import { IgxExcelExporterService } from "igniteui-angular/services/index";
 export class AppModule {}
 ```
 
-> Note: The Excel Exporter service has a peer dependency on the JSZip library. The JSZip library should be installed when using the Excel Exporter.
+> 참고: Excel 내보내기 서비스는 JSZip 라이브러리에 피어 종속됩니다. Excel 내보내기를 사용할 경우에는 JSZip 라이브러리를 설치해야 합니다.
 
-To initiate an export process you may use the handler of a button in your component's template.
+내보내기 처리를 시작하려면 컴포넌트 템플릿에 있는 버튼 핸들러를 사용해야 합니다.
 
 ```html
 <button (click)="exportButtonHandler()">Export Data to Excel</button>
 ```
 
-You may access the exporter service by defining an argument of type [`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html) in the component's constructor and the Angular framework will provide an instance of the service. To export some data in MS Excel format you need to invoke the exporter service's [`exportData`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html#exportdata) method. This method accepts as a first argument the data you want to export and the second argument is of type [`IgxExcelExporterOptions`]({environment:angularApiUrl}/classes/igxexcelexporteroptions.html) and allows you to configure the export process.
+컴포넌트 생성자에서 [`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html) 형식의 인수를 정의하여 내보내기 서비스에 액세스할 수 있으며 Angular 프레임워크는 서비스 인스턴스를 제공합니다. 일부 데이터를 MS Excel 형식으로 내보내기 하려면 내보내기 서비스의 [`exportData`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html#exportdata) 메소드를 호출해야 합니다. 이 메소드는 첫 번째 인수로 내보내기 하는 데이터를 받고, 두 번째 인수는 [`IgxExcelExporterOptions`]({environment:angularApiUrl}/classes/igxexcelexporteroptions.html) 형식으로 내보내기 처리를 구성할 수 있습니다.
 
-Here is the code which will execute the export process in the component's typescript file:
+다음은 컴포넌트의 typescript 파일에서 내보내기 처리를 실행하는 코드입니다:
 
 ```typescript
 // component.ts
@@ -74,15 +74,15 @@ public exportButtonHandler() {
 
 ```
 
-If all went well, you should see an export button. When pressed, it will trigger the export process and the browser will download a file named "ExportedDataFile.xlsx" which contains the data from the `localData` array in MS Excel format. 
+모두 정상으로 진행되면 내보내기 버튼이 표시됩니다. 버튼을 누르면 내보내기 처리가 트리거되고 브라우저는 파일을 MS Excel 형식의 `localData` 배열 데이터가 포함된 “ExportedDataFile.xlsx” 파일을 다운로드합니다. 
 
 
-### Exporting IgxGrid's Data
+### IgxGrid's 데이터 내보내기
 
-The Excel Exporter service can also export data in MS Excel format from an [**IgxGrid**](grid.md). The only difference is that you need to invoke the 
+Excel 내보내기 서비스는 [**IgxGrid**](grid.md)에서 MS Excel 형식으로 데이터를 내보내기 할 수도 있습니다. 유일한 차이점은 
 [`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html)'s [`export`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html#export) method and pass the [**IgxGrid**](grid.md) as first argument.
 
-Here is an example:
+다음은 그 예입니다:
 
 ```html
 <igx-grid #igxGrid1 [data]="localData" [autoGenerate]="true"></igx-grid>
@@ -120,16 +120,16 @@ public exportButtonHandler() {
 </div>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="excel-export-sample-iframe2"
-    data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
 </div>
 
 
 
-### Customizing the Exported Content
+### 내보내기를 하는 콘텐츠의 사용자 정의
 
-In the above examples the Excel Exporter service was exporting all available data. There are situations in which you may want to skip exporting a row or even an entire column. To achieve this you may hook to the [`onColumnExport`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html#oncolumnexport) and/or [`onRowExport`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html#onrowexport) events which are fired respectively for each column and/or each row and cancel the respective event by setting the event argument object's [`cancel`]({environment:angularApiUrl}/interfaces/irowexportingeventargs.html#cancel) property to `true`.
+위의 예에서 Excel 내보내기 서비스는 사용 가능한 모든 데이터를 내보내기 했습니다. 행 또는 전체 열 내보내기를 하지 말아야 하는 상황이 있을 수 있습니다. To achieve this you may hook to the [`onColumnExport`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html#oncolumnexport) and/or [`onRowExport`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html#onrowexport) events which are fired respectively for each column and/or each row and cancel the respective event by setting the event argument object's [`cancel`]({environment:angularApiUrl}/interfaces/irowexportingeventargs.html#cancel) property to `true`.
 
-The following example will exclude a column from the export if its header is "Age" and if its index is 1:
+다음 예에서는 헤더가 “Age”이고 인덱스가 1인 경우, 내보내기에서 열을 제외합니다.
 
 ```typescript
 // component.ts
@@ -142,26 +142,26 @@ this.excelExportService.onColumnExport.subscribe((args: IColumnExportingEventArg
 this.excelExportService.export(this.igxGrid1, new IgxExcelExporterOptions("ExportedDataFile"));
 ```
 
-When you are exporting data from [**IgxGrid**](grid.md) the export process takes in account features like row filtering and column hiding and exports only the data visible in the [**IgxGrid**](grid.md). You can configure the exporter service to include filtered rows or hidden columns by setting properties on the [`IgxExcelExporterOptions`]({environment:angularApiUrl}/classes/igxexcelexporteroptions.html) object. These properties are described in the table below.
+[**IgxGrid**](grid.md) 에서 데이터를 내보내기 할 때 내보내기 처리는 행 필터링 및 열 숨기기 등의 기능을 사용하고 [**IgxGrid**](grid.md) 에 표시되는 데이터만 내보내기를 합니다. [`IgxExcelExporterOptions`]({environment:angularApiUrl}/classes/igxexcelexporteroptions.html) 객체의 속성을 설정하여 필터링된 행 또는 숨겨진 열을 포함하도록 내보내기 서비스를 구성할 수 있습니다. 이러한 속성은 아래 표에 설명되어 있습니다.
 
-### API Summary
+### API 요약
 
-The Excel Exporter service has a few more APIs to explore, which are listed below.
+Excel 내보내기 서비스에는 아래의 몇 가지 API가 추가로 포함되어 있습니다.
 
 * [`IgxExcelExporterService API`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html)
 * [`IgxExcelExporterOptions API`]({environment:angularApiUrl}/classes/igxexcelexporteroptions.html)
 
-Additional components that were used:
+사용된 추가 컴포넌트:
 
 * [IgxGridComponent API]({environment:angularApiUrl}/classes/igxgridcomponent.html)
 * [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 
 <div class="divider"></div>
 
-### Additional Resources
+### 추가 리소스
 
 <div class="divider--half"></div>
-Our community is active and always welcoming to new ideas.
+커뮤니티는 활동적이고 새로운 아이디어를 항상 환영합니다.
 
 * [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
 * [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
