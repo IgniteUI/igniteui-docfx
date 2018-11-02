@@ -147,7 +147,7 @@
       href: financialchart_custom_indicators.md
       new: false
     - name: Custom Tooltips
-      href: financialchart_custom_tooltips.md
+      href: financialchart_tooltip_templates.md
 - name: Doughnut Chart
   href: doughnutchart.md
   new: true
