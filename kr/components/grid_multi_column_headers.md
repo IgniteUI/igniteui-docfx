@@ -1,4 +1,4 @@
-﻿---
+---
 title: 열 그룹 컴포넌트- 네이티브 Angular| Ignite UI for Angular
 _description: 복수 열 헤더를 사용하면 열을 공통 헤더 아래에 배치하여 그룹화할 수 있습니다. 모든 열 그룹은 다른 그룹 또는 열의 조합을 표시할 수 있습니다.
 _keywords: Ignite UI for Angular, UI 컨트롤, Angular 위젯, 웹 위젯, UI 위젯, Angular, 네이티브 Angular 컴포넌트 세트, 네이티브 Angular 컨트롤, 네이티브 Angular 컴포넌트 라이브러리, Angular 데이터 그리드 컴포넌트, Angular 데이터 그리드 컨트롤, 네이티브 Angular 컴포넌트, Angular 그리드 컴포넌트, Angular 그리드 컨트롤, Angular 고성능 그리드, 복수 열 헤더, 지연된 복수 열 헤더, 그리드 복수 열 헤더, Angular 그리드 복수 열 헤더, Angular 열
@@ -7,7 +7,7 @@ _language: kr
 
 ## 복수 열 헤더
 
-[`IgxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) supports `multi-column headers` which allows you to group columns by placing them under a common header. Every `column group` could be a representation of combinations between other groups or columns.
+[`IgxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) 는 복수 열 헤더를 지원하여 열을 공통 헤더 아래에 배치하여 그룹화할 수 있습니다.모든 열 그룹은 다른 그룹 또는 열의 조합을 표시할 수 있습니다.
 
 ## 데모
 
