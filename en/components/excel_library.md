@@ -45,7 +45,7 @@ export class AppModule {}
 ### Load and Save Workbooks
 Now that the Excel Library module is imported, next step is to load a workbook.
 
-In order to load and save `Workbook` object, you can utilize to load and save methods Excel. The following code is a class that exposes various methods such as load and save.
+In order to load and save `Workbook` object, you can utilize the load and save methods Excel. The following code is a class that exposes various methods such as load and save.
 
 ```typescript
 import { Workbook } from "igniteui-angular-excel/ES5/Workbook";
