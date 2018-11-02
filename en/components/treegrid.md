@@ -252,7 +252,6 @@ The indentation of the **tree cells** persists across other tree grid features l
 
 * [`IgxTreeGridModule`]({environment:angularApiUrl}/classes/igxtreegridmodule.html)
 * [`IgxTreeGridComponent`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html)
-* [`IgxTreeGridComponent Styles`]({environment:sassApiUrl}/#function-igx-tree-grid-theme)
 * [`IgxTreeGridCellComponent`]({environment:angularApiUrl}/classes/igxtreegridcellcomponent.html)
 * [`IgxTreeGridRowComponent`]({environment:angularApiUrl}/classes/igxtreegridrowcomponent.html)
 * [`IgxGridComponent`]({environment:angularApiUrl}/classes/igxgridcomponent.html)
