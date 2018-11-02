@@ -19,11 +19,12 @@ This topic provides conceptual information about the tooltip types available on 
 
 ### Tooltip Types
 
-The IgxFinancialChart can display Tooltips in three ways, as Default, Item, or Category.
+The IgxFinancialChart can be configured to display Tooltips in the following ways:
 
 1. `Default` tooltips will display a tooltip for a single item when the pointer is positioned over it.
 1. `Item` tooltips will display a tooltip for each data item in the category that the pointer is positioned over.
 1. `Category` tooltips will display a grouped tooltip for all data points in the category that the pointer is positioned over.
+1. `None` will prevent tooltips from displaying.
 
 ```html
 <igx-financial-chart
