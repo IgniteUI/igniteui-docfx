@@ -129,8 +129,8 @@ You can set title and subtitle that will be displayed between chart's toolbar an
  </igx-financial-chart>
 ```
 
-### Configuring Legned
-By default the legend is not displayed. The following code demonstrates how to enable the legend.
+### Configuring Legend
+The legend is not displayed be default. The following code demonstrates how to enable the legend.
 
 ```html
  <igx-financial-chart
