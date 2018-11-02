@@ -5,7 +5,7 @@ _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Nati
 ---
 ## Configuration Options
 
-The `igx-financial-chart` control provides many visuals that can be customized, such as the navigation behavior, trendline layers, overlays, legned, chart titles and subtitles.
+The `igx-financial-chart` control provides many visuals that can be customized, such as the navigation behavior, trendline layers, overlays, legend, chart titles and subtitles.
 
 ### Demo
 
