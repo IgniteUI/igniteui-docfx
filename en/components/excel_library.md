@@ -9,7 +9,6 @@ The Infragistics Excel Engine allows you to work with spreadsheet data using fam
 
 ### Demo
 
-TODO add when in a sample is in Samples Browser
 <!-- <div class="sample-container" style="height: 550px">
     <iframe id="excel-library-overview-sample-iframe" src='{environment:demosBaseUrl}/excel-library-overview-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -40,8 +39,6 @@ import { IgxExcelModule } from "igniteui-angular-excel/ES5/igx-excel-module";
 })
 export class AppModule {}
 ```
-
-It's also possible to load a more minimal configuration of Excel Library whereby it can only load a subset of the possible ... TODO
 
 <div class="divider--half"></div>
 
