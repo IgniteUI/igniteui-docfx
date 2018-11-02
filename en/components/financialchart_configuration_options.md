@@ -5,7 +5,7 @@ _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Nati
 ---
 ## Configuration Options
 
-The `igx-financial-chart` control provides many visuals that can be customized, such as the navigation behavior, trendline layers, overlays, chart titles and subtitles.
+The `igx-financial-chart` control provides many visuals that can be customized, such as the navigation behavior, trendline layers, overlays, legned, chart titles and subtitles.
 
 ### Demo
 
@@ -126,5 +126,17 @@ You can set title and subtitle that will be displayed between chart's toolbar an
     height="600px"
     chartTitle="Stock Prices"
     subtitle="Between 2000 and 2015">
+ </igx-financial-chart>
+```
+
+### Configuring Legned
+By default the legend is not displayed. The following code demonstrates how to enable the legend.
+
+```html
+ <igx-financial-chart
+    [dataSource]="data"
+    width="850px"
+    height="600px"
+    isLegendVisible="true">
  </igx-financial-chart>
 ```
