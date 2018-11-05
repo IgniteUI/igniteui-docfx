@@ -4,7 +4,7 @@ _description: Row editing - allows modification of several cells in the row, bef
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Component, Angular Grid, Angular Data Grid component, Angular Data Grid control, Angular Grid component, Angular Grid control, Angular High Performance Grid, Cell Editing
 ---
 
-## Grid Editing
+## Grid Row Editing
 
 Row editing - allows modification of several cells in the row, before submitting, at once, all those changes to the grid's data source. Leverages the pending changes functionality of the new transaction provider.
 
@@ -14,7 +14,7 @@ Row editing - allows modification of several cells in the row, before submitting
 
 The following sample demonstrates how to enable row editing in the grid. Changing a cell value and then clicking or navigating to another cell on the same row will not update row value until confirmed, using the Done button, or discarded, using the Cancel one.
 
-<div class="sample-container loading" style="height:650px">
+<div class="sample-container loading" style="height:550px">
     <iframe id="grid-row-editing-sample-iframe" src='{environment:demosBaseUrl}/grid-row-editing' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
@@ -163,7 +163,7 @@ If you want the buttons to be part of the keyboard navigation, then each on of t
 </ng-template>
  ```
 
-## API
+## API References
 
 ### igxGrid Inputs
 

@@ -28,13 +28,13 @@ _language: ja
 ```html
 <!--searchgrid.component.html-->
 
-    <igx-grid #grid1 id="grid1" [data]="data" [autoGenerate]="false">
-        <igx-column [field]="'IndustrySector'" dataType="string" [filterable]="true" [sortable]="true"></igx-column>
-        <igx-column [field]="'IndustryGroup'" dataType="string" [filterable]="true" [sortable]="true"></igx-column>
-        <igx-column [field]="'SectorType'" dataType="string" [filterable]="true" [sortable]="true"></igx-column>
-        <igx-column [field]="'KRD'" dataType="number" [filterable]="true" [sortable]="true"></igx-column>
-        <igx-column [field]="'MarketNotion'" dataType="number" [filterable]="true" [sortable]="true"></igx-column>
-        <igx-column [field]="'Date'" dataType="date" [filterable]="true" [sortable]="true"></igx-column>
+    <igx-grid #grid1 id="grid1" [data]="data" [autoGenerate]="false" [allowFiltering]="true">
+        <igx-column [field]="'IndustrySector'" dataType="string" [sortable]="true"></igx-column>
+        <igx-column [field]="'IndustryGroup'" dataType="string" [sortable]="true"></igx-column>
+        <igx-column [field]="'SectorType'" dataType="string" [sortable]="true"></igx-column>
+        <igx-column [field]="'KRD'" dataType="number" [sortable]="true"></igx-column>
+        <igx-column [field]="'MarketNotion'" dataType="number" [sortable]="true"></igx-column>
+        <igx-column [field]="'Date'" dataType="date" [sortable]="true"></igx-column>
     </igx-grid>
 ```
 

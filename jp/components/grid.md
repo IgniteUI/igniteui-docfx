@@ -73,10 +73,10 @@ public grid: IgxGridComponent;
 
 ```html
 <igx-grid #grid1 [data]="data | async" [autoGenerate]="false" [paging]="true" [perPage]="6" (onColumnInit)="initColumns($event)"
-    (onSelection)="selectCell($event)">
-    <igx-column field="Name" [sortable]="true" header=" " [filterable]="true"></igx-column>
-    <igx-column field="AthleteNumber" [sortable]="true" header="選手番号"></igx-column>
-    <igx-column field="TrackProgress" header="進捗状況">
+    (onSelection)="selectCell($event)" [allowFiltering]="true">
+    <igx-column field="Name" [sortable]="true" header=" " ></igx-column>
+    <igx-column field="AthleteNumber" [sortable]="true" header="選手番号" [filterable]="false"></igx-column>
+    <igx-column field="TrackProgress" header="進捗状況" [filterable]="false">
         <ng-template igxCell let-value>
             <igx-linear-bar [stripped]="false" [value]="value" [max]="100"></igx-linear-bar>
         </ng-template>
@@ -182,7 +182,6 @@ column.bodyTemplate = this.smallView;
 public initColumns(column: IgxGridColumn) {
     const column: IgxColumnComponent = column;
      if (column.field === 'ProductName') {
-        column.filterable = true;
         column.sortable = true;
         column.editable = true;
      }

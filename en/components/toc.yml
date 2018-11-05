@@ -11,13 +11,12 @@
     - name: Editing
       href: grid_editing.md
       new: true
-      items:
-        - name: Row Editing
-          href: grid_row_editing.md
-          new: true
-        - name: Transactions
-          href: grid_transactions.md
-          new: true
+    - name: Row Editing
+      href: grid_row_editing.md
+      new: true
+    - name: Batch Editing
+      href: grid_batch_editing.md
+      new: true
     - name: Paging
       href: grid_paging.md
       new: false
@@ -69,6 +68,9 @@
     - name: Conditional Cell Styling
       href: grid_conditional_cell_styling.md
       new: true
+- name: Tree Grid
+  href: treegrid.md
+  new: true
 - name: List View
   href: list.md
 - name: Combo
@@ -92,7 +94,7 @@
 - name: Category Chart
   href: categorychart.md
   items:
-    - name: Annotations and Overlays
+    - name: Annotations
       href: categorychart_annotation_layers.md
       new: true
     - name: Explore Chart Types
@@ -107,13 +109,19 @@
     - name: Configuration Options
       href: categorychart_configuration_options.md
       new: false
-    - name: Custom Tooltips
-      href: categorychart_custom_tooltips.md
+    - name: Highlighting
+      href: categorychart_highlighting.md
+      new: true
+    - name: Tooltip Types
+      href: categorychart_tooltip_types.md
+      new: true
+    - name: Tooltip Templates
+      href: categorychart_tooltip_templates.md
       new: false
 - name: Financial Chart
   href: financialchart.md
   items:
-    - name: Annotations and Overlays
+    - name: Annotations
       href: financialchart_annotation_layers.md
       new: true
     - name: Explore Chart Types
@@ -140,8 +148,11 @@
     - name: Custom Indicators
       href: financialchart_custom_indicators.md
       new: false
-    - name: Custom Tooltips
-      href: financialchart_custom_tooltips.md
+    - name: Tooltip Types
+      href: financialchart_tooltip_types.md
+      new: true
+    - name: Tooltip Templates
+      href: financialchart_tooltip_templates.md
 - name: Doughnut Chart
   href: doughnutchart.md
   new: true
@@ -196,7 +207,7 @@
       href: themes/palette.md
     - name: Global Themes
       href: themes/global-theme.md
-    - name: Componenent Themes
+    - name: Component Themes
       href: themes/component-themes.md
     - name: Theming Demo
       href: themes/theming-demo.md

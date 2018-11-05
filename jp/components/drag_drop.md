@@ -1,16 +1,16 @@
----
-title: ƒhƒ‰ƒbƒO ƒAƒ“ƒh ƒhƒƒbƒv
-_description: Ignite UI for Angular Drag and Drop ƒfƒBƒŒƒNƒeƒBƒu‚ğg—p‚µ‚Ä DOM —v‘f‚ÌˆÊ’u‚ğˆÚ“®‚Å‚«‚Ü‚·B
-_keywords: Ignite UI for Angular, UI ƒRƒ“ƒgƒ[ƒ‹, Angular ƒEƒBƒWƒFƒbƒg, web ƒEƒBƒWƒFƒbƒg, UI ƒEƒBƒWƒFƒbƒg, Angular, ƒlƒCƒeƒBƒu Angular ƒRƒ“ƒ|[ƒlƒ“ƒg ƒXƒC[ƒg, ƒlƒCƒeƒBƒu Angular ƒRƒ“ƒgƒ[ƒ‹, ƒlƒCƒeƒBƒu Angular ƒRƒ“ƒ|[ƒlƒ“ƒg ƒ‰ƒCƒuƒ‰ƒŠ, Angular Scrollbar ƒRƒ“ƒ|[ƒlƒ“ƒg,  Angular Drag and Drop ƒfƒBƒŒƒNƒeƒBƒu
+ï»¿---
+title: ãƒ‰ãƒ©ãƒƒã‚° ã‚¢ãƒ³ãƒ‰ ãƒ‰ãƒ­ãƒƒãƒ—
+_description: Ignite UI for Angular Drag and Drop ãƒ‡ã‚£ãƒ¬ã‚¯ãƒ†ã‚£ãƒ–ã‚’ä½¿ç”¨ã—ã¦ DOM è¦ç´ ã®ä½ç½®ã‚’ç§»å‹•ã§ãã¾ã™ã€‚
+_keywords: Ignite UI for Angular, UI ã‚³ãƒ³ãƒˆãƒ­ãƒ¼ãƒ«, Angular ã‚¦ã‚£ã‚¸ã‚§ãƒƒãƒˆ, web ã‚¦ã‚£ã‚¸ã‚§ãƒƒãƒˆ, UI ã‚¦ã‚£ã‚¸ã‚§ãƒƒãƒˆ, Angular, ãƒã‚¤ãƒ†ã‚£ãƒ– Angular ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆ ã‚¹ã‚¤ãƒ¼ãƒˆ, ãƒã‚¤ãƒ†ã‚£ãƒ– Angular ã‚³ãƒ³ãƒˆãƒ­ãƒ¼ãƒ«, ãƒã‚¤ãƒ†ã‚£ãƒ– Angular ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆ ãƒ©ã‚¤ãƒ–ãƒ©ãƒª, Angular Scrollbar ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆ,  Angular Drag and Drop ãƒ‡ã‚£ãƒ¬ã‚¯ãƒ†ã‚£ãƒ–
 _language: ja
 ---
 
-## ƒhƒ‰ƒbƒO ƒAƒ“ƒh ƒhƒƒbƒv
-<p class="highlight">Ignite UI for Angular Drag and Drop ƒfƒBƒŒƒNƒeƒBƒu‚ÍAƒy[ƒW‚Ì—v‘f‚Ìƒhƒ‰ƒbƒO‚ğ—LŒø‚É‚µ‚Ü‚·B</p>
+## ãƒ‰ãƒ©ãƒƒã‚° ã‚¢ãƒ³ãƒ‰ ãƒ‰ãƒ­ãƒƒãƒ—
+<p class="highlight">Ignite UI for Angular Drag and Drop ãƒ‡ã‚£ãƒ¬ã‚¯ãƒ†ã‚£ãƒ–ã¯ã€ãƒšãƒ¼ã‚¸ã®è¦ç´ ã®ãƒ‰ãƒ©ãƒƒã‚°ã‚’æœ‰åŠ¹ã«ã—ã¾ã™ã€‚</p>
 
-#### ƒfƒ‚
+#### ãƒ‡ãƒ¢
 
-ƒ^ƒCƒgƒ‹‚ğƒhƒ‰ƒbƒOƒAƒ“ƒhƒhƒƒbƒv‚·‚éƒpƒYƒ‹
+ã‚¿ã‚¤ãƒˆãƒ«ã‚’ãƒ‰ãƒ©ãƒƒã‚°ã‚¢ãƒ³ãƒ‰ãƒ‰ãƒ­ãƒƒãƒ—ã™ã‚‹ãƒ‘ã‚ºãƒ«
 
 <div class="sample-container loading" style="height:325px">
     <iframe id="drag-drop-sample-iframe" src='{environment:demosBaseUrl}/drag-drop-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -21,51 +21,51 @@ _language: ja
 </div>
 <div class="divider--half"></div>
 
-### Drag ƒfƒBƒŒƒNƒeƒBƒu
+### Drag ãƒ‡ã‚£ãƒ¬ã‚¯ãƒ†ã‚£ãƒ–
 
-Angular ƒAƒvƒŠƒP[ƒVƒ‡ƒ““à‚Ì—v‘f‚ğ‚ ‚éêŠ‚©‚ç‘¼‚ÌêŠ‚Öƒhƒ‰ƒbƒO‚·‚é‚É‚ÍA[`igxDrag`]({environment:angularApiUrl}/classes/igxdragdirective.html) ƒfƒBƒŒƒNƒeƒBƒu‚ğg—p‚µ‚Ü‚·B[`igxDrop`]({environment:angularApiUrl}/classes/igxdropdirective.html) ƒfƒBƒŒƒNƒeƒBƒu‚Æ‘g‚İ‡‚í‚¹‚Äƒhƒ‰ƒbƒO‚µ‚½—v‘f‚Ì”z’u‚âƒCƒ“ƒ^ƒ‰ƒNƒeƒBƒu‚ÈƒAƒvƒŠƒP[ƒVƒ‡ƒ“‚ğì¬‚Å‚«‚Ü‚·B
+Angular ã‚¢ãƒ—ãƒªã‚±ãƒ¼ã‚·ãƒ§ãƒ³å†…ã®è¦ç´ ã‚’ã‚ã‚‹å ´æ‰€ã‹ã‚‰ä»–ã®å ´æ‰€ã¸ãƒ‰ãƒ©ãƒƒã‚°ã™ã‚‹ã«ã¯ã€[`igxDrag`]({environment:angularApiUrl}/classes/igxdragdirective.html) ãƒ‡ã‚£ãƒ¬ã‚¯ãƒ†ã‚£ãƒ–ã‚’ä½¿ç”¨ã—ã¾ã™ã€‚[`igxDrop`]({environment:angularApiUrl}/classes/igxdropdirective.html) ãƒ‡ã‚£ãƒ¬ã‚¯ãƒ†ã‚£ãƒ–ã¨çµ„ã¿åˆã‚ã›ã¦ãƒ‰ãƒ©ãƒƒã‚°ã—ãŸè¦ç´ ã®é…ç½®ã‚„ã‚¤ãƒ³ã‚¿ãƒ©ã‚¯ãƒ†ã‚£ãƒ–ãªã‚¢ãƒ—ãƒªã‚±ãƒ¼ã‚·ãƒ§ãƒ³ã‚’ä½œæˆã§ãã¾ã™ã€‚
 
-#### Šî–{\¬
+#### åŸºæœ¬æ§‹æˆ
 
-[`igxDrag`]({environment:angularApiUrl}/classes/igxdragdirective.html) ƒfƒBƒŒƒNƒeƒBƒu‚ÍAƒeƒ“ƒvƒŒ[ƒg‚É’Ç‰Á‚µ‚Ä DOM —v‘f‚É“K—p‚Å‚«‚Ü‚·B
+[`igxDrag`]({environment:angularApiUrl}/classes/igxdragdirective.html) ãƒ‡ã‚£ãƒ¬ã‚¯ãƒ†ã‚£ãƒ–ã¯ã€ãƒ†ãƒ³ãƒ—ãƒ¬ãƒ¼ãƒˆã«è¿½åŠ ã—ã¦ DOM è¦ç´ ã«é©ç”¨ã§ãã¾ã™ã€‚
 
 ```html
 <div igxDrag>Drag me</div>
 ```
 
-#### DOM “®ì
+#### DOM å‹•ä½œ
 
-ƒ†[ƒU[‚ª 5px ‚¢‚¸‚ê‚©‚Ì•ûŒü‚ÖƒXƒƒCƒv‚·‚é‚ÆƒfƒtƒHƒ‹ƒg‚Åƒhƒ‰ƒbƒO‘€ì‚ğŠJn‚µ‚Ü‚·B‚»‚¤‚Å‚È‚¢ê‡‚ÍAƒCƒ“ƒ^ƒ‰ƒNƒVƒ‡ƒ“‚ªƒNƒŠƒbƒN‚Æ‚µ‚ÄŒ©‚È‚³‚êA[`dragClicked`]({environment:angularApiUrl}/classes/igxdragdirective.html#dragclicked) ƒCƒxƒ“ƒg‚ª”­¶‚µ‚Ü‚·B
+ãƒ¦ãƒ¼ã‚¶ãƒ¼ãŒ 5px ã„ãšã‚Œã‹ã®æ–¹å‘ã¸ã‚¹ãƒ¯ã‚¤ãƒ—ã™ã‚‹ã¨ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆã§ãƒ‰ãƒ©ãƒƒã‚°æ“ä½œã‚’é–‹å§‹ã—ã¾ã™ã€‚ãã†ã§ãªã„å ´åˆã¯ã€ã‚¤ãƒ³ã‚¿ãƒ©ã‚¯ã‚·ãƒ§ãƒ³ãŒã‚¯ãƒªãƒƒã‚¯ã¨ã—ã¦è¦‹ãªã•ã‚Œã€[`dragClicked`]({environment:angularApiUrl}/classes/igxdragdirective.html#dragclicked) ã‚¤ãƒ™ãƒ³ãƒˆãŒç™ºç”Ÿã—ã¾ã™ã€‚
 
-ƒhƒ‰ƒbƒO‚Éƒhƒ‰ƒbƒO ƒS[ƒXƒg—v‘f‚ª”­¶‚µAƒ}ƒEƒXƒJ[ƒ\ƒ‹‚Ü‚½‚Íƒ^ƒbƒ`ƒCƒ“ƒ^ƒ‰ƒNƒVƒ‡ƒ“‚Æ‹¤‚ÉˆÚ“®‚µ‚Ü‚·BŒ³‚Ì—v‘f‚Í•\¦‚³‚ê‚½‚Ü‚Ü‚Å‚·‚ªA[`hideBaseOnDrag`]({environment:angularApiUrl}/classes/igxdragdirective.html#hidebaseondrag) ‚Åƒhƒ‰ƒbƒOŠJn‚É©“®“I‚É”ñ•\¦‚É‚Å‚«‚Ü‚·B
+ãƒ‰ãƒ©ãƒƒã‚°æ™‚ã«ãƒ‰ãƒ©ãƒƒã‚° ã‚´ãƒ¼ã‚¹ãƒˆè¦ç´ ãŒç™ºç”Ÿã—ã€ãƒã‚¦ã‚¹ã‚«ãƒ¼ã‚½ãƒ«ã¾ãŸã¯ã‚¿ãƒƒãƒã‚¤ãƒ³ã‚¿ãƒ©ã‚¯ã‚·ãƒ§ãƒ³ã¨å…±ã«ç§»å‹•ã—ã¾ã™ã€‚å…ƒã®è¦ç´ ã¯è¡¨ç¤ºã•ã‚ŒãŸã¾ã¾ã§ã™ãŒã€[`hideBaseOnDrag`]({environment:angularApiUrl}/classes/igxdragdirective.html#hidebaseondrag) ã§ãƒ‰ãƒ©ãƒƒã‚°é–‹å§‹æ™‚ã«è‡ªå‹•çš„ã«éè¡¨ç¤ºã«ã§ãã¾ã™ã€‚
 
-ƒhƒ‰ƒbƒO‚ÍA[`dragStart`]({environment:angularApiUrl}/classes/igxdragdirective.html#dragstart) ƒCƒxƒ“ƒg‚Ì [`cancel`]({environment:angularApiUrl}/interfaces/idragstarteventargs.html#cancel) ƒvƒƒpƒeƒB‚ğ true ‚Éİ’è‚µ‚ÄƒLƒƒƒ“ƒZƒ‹‚Å‚«‚Ü‚·BƒfƒtƒHƒ‹ƒg‚Ìƒhƒ‰ƒbƒO ƒƒWƒbƒN‚ğƒLƒƒƒ“ƒZƒ‹‚µ‚Ü‚·B
+ãƒ‰ãƒ©ãƒƒã‚°ã¯ã€[`dragStart`]({environment:angularApiUrl}/classes/igxdragdirective.html#dragstart) ã‚¤ãƒ™ãƒ³ãƒˆã® [`cancel`]({environment:angularApiUrl}/interfaces/idragstarteventargs.html#cancel) ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã‚’ true ã«è¨­å®šã—ã¦ã‚­ãƒ£ãƒ³ã‚»ãƒ«ã§ãã¾ã™ã€‚ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆã®ãƒ‰ãƒ©ãƒƒã‚° ãƒ­ã‚¸ãƒƒã‚¯ã‚’ã‚­ãƒ£ãƒ³ã‚»ãƒ«ã—ã¾ã™ã€‚
 
-ƒ†[ƒU[‚ªƒŠƒŠ[ƒX‚µ‚½ŒãAƒ}ƒEƒX/ƒ^ƒbƒ` ƒhƒ‰ƒbƒO ƒS[ƒXƒg—v‘f‚ª DOM ‚©‚çíœ‚³‚êA[`hideBaseOnDrag`]({environment:angularApiUrl}/classes/igxdragdirective.html#hidebaseondrag) ‚ª—LŒø‚Èê‡AŒ³‚Ì—v‘f‚ªÄ‚Ñ•\¦‚³‚ê‚Ä [`dragEnd`]({environment:angularApiUrl}/classes/igxdragdirective.html#dragend) ‚ª”­¶‚³‚ê‚Ü‚·B[`animateOnRelease`]({environment:angularApiUrl}/classes/igxdragdirective.html#animateonrelease) “ü—Í‚ğ `true` ‚Éİ’è‚·‚é‚ÆAÅŒã‚Éƒhƒ‰ƒbƒO‚µ‚½ˆÊ’u‚©‚çŒ³‚Ì—v‘f‚ÌˆÊ’u‚Ö–ß‚·ƒhƒ‰ƒbƒO ƒS[ƒXƒg‚ÌƒfƒtƒHƒ‹ƒg ƒAƒjƒ[ƒVƒ‡ƒ“‚ÌŠ®—¹Œã‚ÉÀs‚µ‚Ü‚·Bƒhƒ‰ƒbƒO ƒS[ƒXƒg‚Ííœ‚³‚êA[`returnMoveEnd`]({environment:angularApiUrl}/classes/igxdragdirective.html#returnmoveend) ƒCƒxƒ“ƒg‚ª”­¶‚³‚ê‚Ü‚·B
+ãƒ¦ãƒ¼ã‚¶ãƒ¼ãŒãƒªãƒªãƒ¼ã‚¹ã—ãŸå¾Œã€ãƒã‚¦ã‚¹/ã‚¿ãƒƒãƒ ãƒ‰ãƒ©ãƒƒã‚° ã‚´ãƒ¼ã‚¹ãƒˆè¦ç´ ãŒ DOM ã‹ã‚‰å‰Šé™¤ã•ã‚Œã€[`hideBaseOnDrag`]({environment:angularApiUrl}/classes/igxdragdirective.html#hidebaseondrag) ãŒæœ‰åŠ¹ãªå ´åˆã€å…ƒã®è¦ç´ ãŒå†ã³è¡¨ç¤ºã•ã‚Œã¦ [`dragEnd`]({environment:angularApiUrl}/classes/igxdragdirective.html#dragend) ãŒç™ºç”Ÿã•ã‚Œã¾ã™ã€‚[`animateOnRelease`]({environment:angularApiUrl}/classes/igxdragdirective.html#animateonrelease) å…¥åŠ›ã‚’ `true` ã«è¨­å®šã™ã‚‹ã¨ã€æœ€å¾Œã«ãƒ‰ãƒ©ãƒƒã‚°ã—ãŸä½ç½®ã‹ã‚‰å…ƒã®è¦ç´ ã®ä½ç½®ã¸æˆ»ã™ãƒ‰ãƒ©ãƒƒã‚° ã‚´ãƒ¼ã‚¹ãƒˆã®ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆ ã‚¢ãƒ‹ãƒ¡ãƒ¼ã‚·ãƒ§ãƒ³ã®å®Œäº†å¾Œã«å®Ÿè¡Œã—ã¾ã™ã€‚ãƒ‰ãƒ©ãƒƒã‚° ã‚´ãƒ¼ã‚¹ãƒˆã¯å‰Šé™¤ã•ã‚Œã€[`returnMoveEnd`]({environment:angularApiUrl}/classes/igxdragdirective.html#returnmoveend) ã‚¤ãƒ™ãƒ³ãƒˆãŒç™ºç”Ÿã•ã‚Œã¾ã™ã€‚
 
-#### g—p•û–@
+#### ä½¿ç”¨æ–¹æ³•
 ```html
 <div igxDrag [hideBaseOnDrag]="true" [animateOnRelease]="true" *ngFor="let elem of draggableElems" >
     <span [style.margin]="'auto'">{{elem.label}}</span>
 </div>
 ```
 
-### Drop ƒfƒBƒŒƒNƒeƒBƒu
+### Drop ãƒ‡ã‚£ãƒ¬ã‚¯ãƒ†ã‚£ãƒ–
 
-[`igxDrag`]({environment:angularApiUrl}/classes/igxdragdirective.html) ƒfƒBƒŒƒNƒeƒBƒu‚ğg—p‚µ‚Äƒhƒ‰ƒbƒO‚³‚ê‚Ä‚¢‚é—v‘f‚ğ—Ìˆæ‚É”z’u‚·‚éê‡A[`igxDrop`]({environment:angularApiUrl}/classes/igxdropdirective.html) ‚ğg—p‚µ‚Ü‚·B—v‘f‚ªƒhƒƒbƒv—Ìˆæ‚É“ü‚Á‚½‚©‚Ç‚¤‚©A‚»‚ÌŒã—Ìˆæ“à‚ÅƒŠƒŠ[ƒX‚³‚ê‚Ä‚¢‚é‚©‚ğŒˆ’è‚·‚é‚½‚ß‚Éƒ†[ƒU[‚ªg—p‚Å‚«‚éƒCƒxƒ“ƒg‚ğ’ñ‹Ÿ‚µ‚Ü‚·B
+[`igxDrag`]({environment:angularApiUrl}/classes/igxdragdirective.html) ãƒ‡ã‚£ãƒ¬ã‚¯ãƒ†ã‚£ãƒ–ã‚’ä½¿ç”¨ã—ã¦ãƒ‰ãƒ©ãƒƒã‚°ã•ã‚Œã¦ã„ã‚‹è¦ç´ ã‚’é ˜åŸŸã«é…ç½®ã™ã‚‹å ´åˆã€[`igxDrop`]({environment:angularApiUrl}/classes/igxdropdirective.html) ã‚’ä½¿ç”¨ã—ã¾ã™ã€‚è¦ç´ ãŒãƒ‰ãƒ­ãƒƒãƒ—é ˜åŸŸã«å…¥ã£ãŸã‹ã©ã†ã‹ã€ãã®å¾Œé ˜åŸŸå†…ã§ãƒªãƒªãƒ¼ã‚¹ã•ã‚Œã¦ã„ã‚‹ã‹ã‚’æ±ºå®šã™ã‚‹ãŸã‚ã«ãƒ¦ãƒ¼ã‚¶ãƒ¼ãŒä½¿ç”¨ã§ãã‚‹ã‚¤ãƒ™ãƒ³ãƒˆã‚’æä¾›ã—ã¾ã™ã€‚
 
-#### Šî–{\¬
-[`igxDrop`]({environment:angularApiUrl}/classes/igxdropdirective.html) ƒfƒBƒŒƒNƒeƒBƒu‚Í [`igxDrag` ‚Æ“¯—l‚É DOM —v‘f‚É“K—p‚Å‚«‚Ü‚·B 
+#### åŸºæœ¬æ§‹æˆ
+[`igxDrop`]({environment:angularApiUrl}/classes/igxdropdirective.html) ãƒ‡ã‚£ãƒ¬ã‚¯ãƒ†ã‚£ãƒ–ã¯ [`igxDrag` ã¨åŒæ§˜ã« DOM è¦ç´ ã«é©ç”¨ã§ãã¾ã™ã€‚ 
 
 ````html
 <div igxDrop>Drop here</div>
 ````
 
-[`igxDrop`]({environment:angularApiUrl}/classes/igxdropdirective.html) ƒfƒBƒŒƒNƒeƒBƒu‚Éƒhƒƒbƒv‚µ‚½ [`igxDrag`]({environment:angularApiUrl}/classes/igxdragdirective.html) —v‘f‚ÍAƒCƒ“ƒXƒ^ƒ“ƒX‰»‚µ‚½ [`igxDrop`]({environment:angularApiUrl}/classes/igxdropdirective.html) ‚ğ‚Â—v‘f‚Ìq‚Æ‚µ‚Ä•t‚¯‰Á‚¦‚éƒƒWƒbƒN‚ªƒfƒtƒHƒ‹ƒg‚Å’ñ‹Ÿ‚³‚ê‚Ü‚·B[`igxDrop`]({environment:angularApiUrl}/classes/igxdropdirective.html) ƒfƒBƒŒƒNƒeƒBƒu‚Ì [`onDrop`]({environment:angularApiUrl}/classes/igxdropdirective.html#ondrop) ƒCƒxƒ“ƒg‚ğƒLƒƒƒ“ƒZƒ‹‚µ‚ÄƒI[ƒo[ƒ‰ƒCƒh‚Å‚«‚Ü‚·B[`onDrop`]({environment:angularApiUrl}/classes/igxdropdirective.html#ondrop) ƒCƒxƒ“ƒg‚ª’ñ‹Ÿ‚·‚é [`cancel`]({environment:angularApiUrl}/classes/igxdropeventargs.html#cancel) ˆø”‚ğİ’è‚µ‚Äs‚¤‚±‚Æ‚ª‚Å‚«‚Ü‚·B
+[`igxDrop`]({environment:angularApiUrl}/classes/igxdropdirective.html) ãƒ‡ã‚£ãƒ¬ã‚¯ãƒ†ã‚£ãƒ–ã«ãƒ‰ãƒ­ãƒƒãƒ—ã—ãŸ [`igxDrag`]({environment:angularApiUrl}/classes/igxdragdirective.html) è¦ç´ ã¯ã€ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹åŒ–ã—ãŸ [`igxDrop`]({environment:angularApiUrl}/classes/igxdropdirective.html) ã‚’æŒã¤è¦ç´ ã®å­ã¨ã—ã¦ä»˜ã‘åŠ ãˆã‚‹ãƒ­ã‚¸ãƒƒã‚¯ãŒãƒ‡ãƒ•ã‚©ãƒ«ãƒˆã§æä¾›ã•ã‚Œã¾ã™ã€‚[`igxDrop`]({environment:angularApiUrl}/classes/igxdropdirective.html) ãƒ‡ã‚£ãƒ¬ã‚¯ãƒ†ã‚£ãƒ–ã® [`onDrop`]({environment:angularApiUrl}/classes/igxdropdirective.html#ondrop) ã‚¤ãƒ™ãƒ³ãƒˆã‚’ã‚­ãƒ£ãƒ³ã‚»ãƒ«ã—ã¦ã‚ªãƒ¼ãƒãƒ¼ãƒ©ã‚¤ãƒ‰ã§ãã¾ã™ã€‚[`onDrop`]({environment:angularApiUrl}/classes/igxdropdirective.html#ondrop) ã‚¤ãƒ™ãƒ³ãƒˆãŒæä¾›ã™ã‚‹ [`cancel`]({environment:angularApiUrl}/classes/igxdropeventargs.html#cancel) å¼•æ•°ã‚’è¨­å®šã—ã¦è¡Œã†ã“ã¨ãŒã§ãã¾ã™ã€‚
 
-ƒhƒƒbƒv ƒƒWƒbƒN‚ğ’è‹`‚µA[`igxDrag`]({environment:angularApiUrl}/classes/igxdragdirective.html) ‚Ì [`animateOnRelease`]({environment:angularApiUrl}/classes/igxdragdirective.html#animateonrelease) “ü—Í‚ğ true ‚Éİ’è‚µ‚½ê‡ADOM ‘€ìŠ®—¹Œã‚É [`igxDrag`]({environment:angularApiUrl}/classes/igxdragdirective.html) ‚Ì [`dropFinished()`]({environment:angularApiUrl}/classes/igxdragdirective.html#dropfinished) ƒƒ\ƒbƒh‚àŒÄ‚Ño‚·‚±‚Æ‚ª„§‚³‚ê‚Ü‚·B[`igxDrag`]({environment:angularApiUrl}/classes/igxdragdirective.html) ‚É’Ê’m‚µ‚ÄŠÖ˜A‚·‚é”z’u‚ğ DOM ‚ÌV‚µ‚¢ˆÊ’u‚ÉXV‚·‚é‚±‚Æ‚É‚æ‚èA³‚µ‚­ƒAƒjƒ[ƒVƒ‡ƒ“‰»‚µ‚Ü‚·B
+ãƒ‰ãƒ­ãƒƒãƒ— ãƒ­ã‚¸ãƒƒã‚¯ã‚’å®šç¾©ã—ã€[`igxDrag`]({environment:angularApiUrl}/classes/igxdragdirective.html) ã® [`animateOnRelease`]({environment:angularApiUrl}/classes/igxdragdirective.html#animateonrelease) å…¥åŠ›ã‚’ true ã«è¨­å®šã—ãŸå ´åˆã€DOM æ“ä½œå®Œäº†å¾Œã« [`igxDrag`]({environment:angularApiUrl}/classes/igxdragdirective.html) ã® [`dropFinished()`]({environment:angularApiUrl}/classes/igxdragdirective.html#dropfinished) ãƒ¡ã‚½ãƒƒãƒ‰ã‚‚å‘¼ã³å‡ºã™ã“ã¨ãŒæ¨å¥¨ã•ã‚Œã¾ã™ã€‚[`igxDrag`]({environment:angularApiUrl}/classes/igxdragdirective.html) ã«é€šçŸ¥ã—ã¦é–¢é€£ã™ã‚‹é…ç½®ã‚’ DOM ã®æ–°ã—ã„ä½ç½®ã«æ›´æ–°ã™ã‚‹ã“ã¨ã«ã‚ˆã‚Šã€æ­£ã—ãã‚¢ãƒ‹ãƒ¡ãƒ¼ã‚·ãƒ§ãƒ³åŒ–ã—ã¾ã™ã€‚
 
-[`onDrop`]({environment:angularApiUrl}/classes/igxdropdirective.html#ondrop) ƒfƒtƒHƒ‹ƒg‚Ìƒhƒƒbƒv ƒƒWƒbƒN‚ğƒLƒƒƒ“ƒZƒ‹‚Ì—áB
+[`onDrop`]({environment:angularApiUrl}/classes/igxdropdirective.html#ondrop) ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆã®ãƒ‰ãƒ­ãƒƒãƒ— ãƒ­ã‚¸ãƒƒã‚¯ã‚’ã‚­ãƒ£ãƒ³ã‚»ãƒ«ã®ä¾‹ã€‚
 
 ````html
 <div igxDrop (onDrop)="onElemDrop($event)">Drop here</div>
@@ -84,10 +84,10 @@ public onElemDrop(event: IgxDropEventArgs) {
 }
 ````
 
-#### ‚“x‚Èİ’è
-1 ‚Â‚Ì—v‘f‚É [`igxDrag`]({environment:angularApiUrl}/classes/igxdragdirective.html) ‚Æ [`igxDrop`]({environment:angularApiUrl}/classes/igxdropdirective.html) —¼•û‚ÌƒfƒBƒŒƒNƒeƒBƒu‚ğg—p‚Å‚«‚Ü‚·B‚½‚¾‚µA‘¼‚Ì—v‘f‚ª [`igxDrop`]({environment:angularApiUrl}/classes/igxdropdirective.html) ƒfƒBƒŒƒNƒeƒBƒu‚Ì [`onDrop`]({environment:angularApiUrl}/classes/igxdropdirective.html#ondrop) ƒCƒxƒ“ƒg‚ğƒLƒƒƒ“ƒZƒ‹‚µ‚Äƒhƒƒbƒv‚³‚ê‚Ä‚¢‚é‚Æ‚«‚ÍƒJƒXƒ^ƒ€ ƒƒWƒbƒN‚ğg—p‚µ‚Ä‚­‚¾‚³‚¢B
+#### é«˜åº¦ãªè¨­å®š
+1 ã¤ã®è¦ç´ ã« [`igxDrag`]({environment:angularApiUrl}/classes/igxdragdirective.html) ã¨ [`igxDrop`]({environment:angularApiUrl}/classes/igxdropdirective.html) ä¸¡æ–¹ã®ãƒ‡ã‚£ãƒ¬ã‚¯ãƒ†ã‚£ãƒ–ã‚’ä½¿ç”¨ã§ãã¾ã™ã€‚ãŸã ã—ã€ä»–ã®è¦ç´ ãŒ [`igxDrop`]({environment:angularApiUrl}/classes/igxdropdirective.html) ãƒ‡ã‚£ãƒ¬ã‚¯ãƒ†ã‚£ãƒ–ã® [`onDrop`]({environment:angularApiUrl}/classes/igxdropdirective.html#ondrop) ã‚¤ãƒ™ãƒ³ãƒˆã‚’ã‚­ãƒ£ãƒ³ã‚»ãƒ«ã—ã¦ãƒ‰ãƒ­ãƒƒãƒ—ã•ã‚Œã¦ã„ã‚‹ã¨ãã¯ã‚«ã‚¹ã‚¿ãƒ  ãƒ­ã‚¸ãƒƒã‚¯ã‚’ä½¿ç”¨ã—ã¦ãã ã•ã„ã€‚
 
-#### g—p•û–@
+#### ä½¿ç”¨æ–¹æ³•
 ````html
 <div class="dropArea" igxDrop (onEnter)="onAreaEnter()" (onLeave)="onAreaLeave()">
     <span *ngIf="!elementInsideArea">Drag here.</span>
@@ -113,10 +113,10 @@ public onAreaLeave() {
 * [IgxDragDirective]({environment:angularApiUrl}/classes/igxdragdirective.html)
 * [IgxDropDirective]({environment:angularApiUrl}/classes/igxdropdirective.html)
 
-### ƒŠƒtƒ@ƒŒƒ“ƒX
+### ãƒªãƒ•ã‚¡ãƒ¬ãƒ³ã‚¹
 
 <div class="divider--half"></div>
-ƒRƒ~ƒ…ƒjƒeƒB‚ÉQ‰Á‚µ‚ÄV‚µ‚¢ƒAƒCƒfƒA‚ğ‚²’ñˆÄ‚­‚¾‚³‚¢B
+ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ã«å‚åŠ ã—ã¦æ–°ã—ã„ã‚¢ã‚¤ãƒ‡ã‚¢ã‚’ã”ææ¡ˆãã ã•ã„ã€‚
 
-- [Ignite UI for Angular** ƒtƒH[ƒ‰ƒ€** (‰pŒê) ](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-- [Ignite UI for Angular **GitHub** (‰pŒê) ](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular** ãƒ•ã‚©ãƒ¼ãƒ©ãƒ ** (è‹±èª) ](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (è‹±èª) ](https://github.com/IgniteUI/igniteui-angular)

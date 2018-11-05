@@ -22,9 +22,15 @@ Ignite UI for Angular Grid コンポーネントは、グリッドにバイン�
 
 デフォルトの定義済みフィルタリングおよび標準のフィルタリング条件があり、カスタム実装で置き換えることも可能です。また、カスタム フィルタリング条件を追加することもできます。Grid には、簡易なフィルター UI や詳細なフィルター オプションがあります。列で設定された [`dataType`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#datatype) に基づいて、適切な[**フィルター条件**]({environment:angularApiUrl}/interfaces/ifilteringoperation.html)のセットがフィルター UI ドロップダウンに読み込まれます。また、列の [`ignoreCase`]({environment:angularApiUrl}/interfaces/ifilteringexpression.html) および最初の [`condition`]({environment:angularApiUrl}/interfaces/ifilteringexpression.html#condition) プロパティを設定できます。
 
+Filtering feature is enabled for the igxGrid component by setting the [`allowFiltering`]({environment:angularApiUrl}/classes/igxgridcomponent.html#allowfiltering) input to `true`. To disable this feature for a certain column – set the [`filterable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#filterable) input to `false`.
+
 ```html
-<igx-column field="ProductName" filterable="true" dataType="string"></igx-column>
-<igx-column field="Price" filterable="true" dataType="number"></igx-column>
+<igx-grid #grid1 [data]="data" [autoGenerate]="false" [allowFiltering]="true">
+    <igx-column field="ProductName" dataType="string"></igx-column>
+    <igx-column field="Price" dataType="number"></igx-column>
+    ...
+    <igx-column field="Discontinued" [dataType]="'boolean'" [filterable]="false">
+</igx-grid>
 ```
 
 > [!NOTE]
@@ -103,7 +109,7 @@ this.grid.clearFilter();
 グリッドの初期フィルタリング状態の設定は、[`IgxGridComponent`]({environment:angularApiUrl}/classes/igxgridcomponent.html) [`filteringExpressionsTree`]({environment:angularApiUrl}/classes/igxgridcomponent.html#filteringexpressionstree) プロパティを [`IFilteringExpressionsTree`]({environment:angularApiUrl}/interfaces/ifilteringexpressionstree.html) の配列に設定して各列をフィルターします。
 
 ```typescript
-public ngOnInit() {
+public ngAfterViewInit() {
     const gridFilteringExpressionsTree = new FilteringExpressionsTree(FilteringLogic.And);
     const productFilteringExpressionsTree = new FilteringExpressionsTree(FilteringLogic.And, "ProductName");
     const productExpression = {
