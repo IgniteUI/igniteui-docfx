@@ -14,7 +14,7 @@ The [`TransactionService`]({environment:angularApiUrl}/classes/igxtransactionser
 
 The following sample demonstrates a scenario, where the grid has the Transaction as provider and has row editing enabled. This will ensure that transaction will be added after the entire row edit is confirmed.
 
-<div class="sample-container loading" style="height:650px">
+<div class="sample-container loading" style="height:550px">
     <iframe id="grid-transaction-sample-iframe" src='{environment:demosBaseUrl}/grid-transaction' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>

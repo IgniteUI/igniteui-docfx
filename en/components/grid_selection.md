@@ -10,7 +10,7 @@ With row selection in Ignite UI for Angular, there is a checkbox that precedes a
 
 #### Demo
 
-<div class="sample-container loading" style="height:730px">
+<div class="sample-container loading" style="height:700px">
     <iframe id="grid-selection-iframe" src='{environment:demosBaseUrl}/grid-selection' width="100%" height="90%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -29,7 +29,7 @@ The grid single selection can be easily setup using the grid's [`onSelection`]({
     <!-- in example.component.html -->
     ...
     <igx-grid #grid1 [data]="remote | async" [rowSelectable]="false" (onSelection)="handleRowSelection($event)"
-      [width]="'800px'" [height]="'600px'">
+      [width]="'800px'" [height]="'600px'" [allowFiltering]="true">
             ...
     </igx-grid>
     ...
@@ -51,7 +51,7 @@ To enable multiple row selection, the [`igx-grid`]({environment:angularApiUrl}/c
 
 ```html
     <igx-grid #grid1 [data]="remote | async" [primaryKey]="'ProductID'" [rowSelectable]="selection" (onSelection)="handleRowSelection($event)"
-      [width]="'800px'" [height]="'600px'">
+      [width]="'800px'" [height]="'600px'" [allowFiltering]="true">
 ```
 
 **Note:** In order to have proper row selection and cell selection, while grid has remote virtualization, [`primaryKey`]({environment:angularApiUrl}/classes/igxgridcomponent.html#primarykey) should be provided.
