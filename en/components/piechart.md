@@ -7,9 +7,9 @@ _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Nati
 
 The Pie Chart is a specialized component that renders a pie chart, consisting of a circular area divided into sections. Each section has arc length proportional to its underlying data value.
 
-### Demo
+This control is used for representing categorical data. It is most effective when there are only a few categories, and when each category makes up a relatively large percentage of the data as a whole.
 
-The Pie Chart is used for representing categorical data. It is most effective when there are only a few categories, and when each category makes up a relatively large percentage of the data as a whole.
+### Demo
 
 <div class="sample-container" style="height: 350px">
     <iframe id="pie-chart-data-sample-iframe" src='{environment:demosBaseUrl}/pie-chart-data-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -88,7 +88,7 @@ Additionally you can use the `legendItemTemplate` and `legendItemBadgeTemplate` 
                 labelMemberPath="Label" 
                 legendLabelMemberPath="Label"
                 [legend]="PieChartLegend">
-        </igx-pie-chart>
+</igx-pie-chart>
 ```
 
 <div class="sample-container" style="height: 320px">
