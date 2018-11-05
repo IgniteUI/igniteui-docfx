@@ -164,7 +164,7 @@ export class GridRowEditSampleComponent {
 </ng-template>
  ```
 
-## API
+## API References
 
 ### igxGrid 入力
 

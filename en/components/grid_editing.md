@@ -126,7 +126,8 @@ These can be wired to user interactions, not necessarily related to the **igx-gr
 
 <div class="divider--half"></div>
 
-### API
+## API References
+
 * [IgxGridCellComponent]({environment:angularApiUrl}/classes/igxgridcellcomponent.html)
 * [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 * [IgxGridRowComponent]({environment:angularApiUrl}/classes/igxgridrowcomponent.html)
