@@ -1,19 +1,19 @@
----
-title: Grid ƒgƒ‰ƒ“ƒUƒNƒVƒ‡ƒ“ - ƒlƒCƒeƒBƒu Angular | Ignite UI for Angular
-_description: TransactionService ‚Íƒ~ƒhƒ‹ƒEƒFƒAƒvƒƒoƒCƒ_[‚ÍAƒf[ƒ^‚ÌƒAƒNƒZƒXA•ÏX‚Ì‘€ì (undo ‚Æ redo)A‚·‚×‚Ä”jŠü‚Ü‚½‚ÍŠm’è‚Ì‚½‚ß‚Ì API ‚ğŒöŠJ‚µ‚Ü‚·B 
+ï»¿---
+title: Grid ãƒˆãƒ©ãƒ³ã‚¶ã‚¯ã‚·ãƒ§ãƒ³ - ãƒã‚¤ãƒ†ã‚£ãƒ– Angular | Ignite UI for Angular
+_description: TransactionService ã¯ãƒŸãƒ‰ãƒ«ã‚¦ã‚§ã‚¢ãƒ—ãƒ­ãƒã‚¤ãƒ€ãƒ¼ã¯ã€ãƒ‡ãƒ¼ã‚¿ã®ã‚¢ã‚¯ã‚»ã‚¹ã€å¤‰æ›´ã®æ“ä½œ (undo ã¨ redo)ã€ã™ã¹ã¦ç ´æ£„ã¾ãŸã¯ç¢ºå®šã®ãŸã‚ã® API ã‚’å…¬é–‹ã—ã¾ã™ã€‚ 
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Component, Angular Grid, Angular Data Grid component, Angular Data Grid control, Angular Grid component, Angular Grid control, Angular High Performance Grid, Cell Editing, Row Editing, Batch Updating, Batch Editing, Transactions
 _language: ja
 ---
 
-## Grid ƒgƒ‰ƒ“ƒUƒNƒVƒ‡ƒ“
+## Grid ãƒˆãƒ©ãƒ³ã‚¶ã‚¯ã‚·ãƒ§ãƒ³
 
 [`TransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) is an injectable middleware that a component can use to accumulate changes without affecting the underlying data. The provider exposes API to access, manipulate changes (undo and redo) and discard or commit all to the data.
 
-[`TransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) ‚ÍƒZƒ‹•ÒW‚Æs•ÒW‚Ì—¼•û‚Æ“®ì‚µ‚Ü‚·Bs•ÒW‚ÌI—¹‚Ésƒgƒ‰ƒ“ƒUƒNƒVƒ‡ƒ“‚ª’Ç‰Á‚³‚ê‚½ê‡AƒZƒ‹•ÒW‚Ìƒgƒ‰ƒ“ƒUƒNƒVƒ‡ƒ“‚ÍƒZƒ‹‚ª•ÒWƒ‚[ƒh‚ğI—¹‚µ‚½‚Æ‚«‚É’Ç‰Á‚³‚ê‚Ü‚·BƒOƒŠƒbƒh•ÒW‚ÌƒXƒe[ƒg‚ÍA‚·‚×‚Ä‚Ìs‚ğ•ÒWÏ‚İA’Ç‰ÁÏ‚İAíœÏ‚İA‚»‚µ‚ÄÅŒã‚ÌƒXƒe[ƒg‚Å\¬‚³‚ê‚Ü‚·B‚±‚ê‚ç‚ÍŒã‚ÅƒCƒ“ƒXƒyƒNƒgA‘€ìAƒTƒuƒ~ƒbƒg‚ğˆê“x‚És‚¢‚Ü‚·BŒÂX‚ÌƒZƒ‹‚Ü‚½‚Ís‚Ì•ÏX‚ğW‚ß‚ÄA•ÒWƒ‚[ƒh‚ÉŠî‚Ã‚¢‚Äƒf[ƒ^s/ƒŒƒR[ƒh‚²‚Æ‚É’~Ï‚µ‚Ü‚·B
+[`TransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) ã¯ã‚»ãƒ«ç·¨é›†ã¨è¡Œç·¨é›†ã®ä¸¡æ–¹ã¨å‹•ä½œã—ã¾ã™ã€‚è¡Œç·¨é›†ã®çµ‚äº†æ™‚ã«è¡Œãƒˆãƒ©ãƒ³ã‚¶ã‚¯ã‚·ãƒ§ãƒ³ãŒè¿½åŠ ã•ã‚ŒãŸå ´åˆã€ã‚»ãƒ«ç·¨é›†ã®ãƒˆãƒ©ãƒ³ã‚¶ã‚¯ã‚·ãƒ§ãƒ³ã¯ã‚»ãƒ«ãŒç·¨é›†ãƒ¢ãƒ¼ãƒ‰ã‚’çµ‚äº†ã—ãŸã¨ãã«è¿½åŠ ã•ã‚Œã¾ã™ã€‚ã‚°ãƒªãƒƒãƒ‰ç·¨é›†ã®ã‚¹ãƒ†ãƒ¼ãƒˆã¯ã€ã™ã¹ã¦ã®è¡Œã‚’ç·¨é›†æ¸ˆã¿ã€è¿½åŠ æ¸ˆã¿ã€å‰Šé™¤æ¸ˆã¿ã€ãã—ã¦æœ€å¾Œã®ã‚¹ãƒ†ãƒ¼ãƒˆã§æ§‹æˆã•ã‚Œã¾ã™ã€‚ã“ã‚Œã‚‰ã¯å¾Œã§ã‚¤ãƒ³ã‚¹ãƒšã‚¯ãƒˆã€æ“ä½œã€ã‚µãƒ–ãƒŸãƒƒãƒˆã‚’ä¸€åº¦ã«è¡Œã„ã¾ã™ã€‚å€‹ã€…ã®ã‚»ãƒ«ã¾ãŸã¯è¡Œã®å¤‰æ›´ã‚’é›†ã‚ã¦ã€ç·¨é›†ãƒ¢ãƒ¼ãƒ‰ã«åŸºã¥ã„ã¦ãƒ‡ãƒ¼ã‚¿è¡Œ/ãƒ¬ã‚³ãƒ¼ãƒ‰ã”ã¨ã«è“„ç©ã—ã¾ã™ã€‚
 
-### ƒfƒ‚
+### ãƒ‡ãƒ¢
 
-ˆÈ‰º‚ÌƒTƒ“ƒvƒ‹‚ÍAƒOƒŠƒbƒh‚ÉƒvƒƒoƒCƒ_[‚Ìƒgƒ‰ƒ“ƒUƒNƒVƒ‡ƒ“‚ª‚ ‚èAs•ÒW‚ª—LŒø‚³‚ê‚Ä‚¢‚Ü‚·Bs•ÒW‘S‘Ì‚ğŠm’èŒã‚Éƒgƒ‰ƒ“ƒUƒNƒVƒ‡ƒ“‚ª’Ç‰Á‚³‚ê‚é‚æ‚¤‚É‚µ‚Ü‚·B
+ä»¥ä¸‹ã®ã‚µãƒ³ãƒ—ãƒ«ã¯ã€ã‚°ãƒªãƒƒãƒ‰ã«ãƒ—ãƒ­ãƒã‚¤ãƒ€ãƒ¼ã®ãƒˆãƒ©ãƒ³ã‚¶ã‚¯ã‚·ãƒ§ãƒ³ãŒã‚ã‚Šã€è¡Œç·¨é›†ãŒæœ‰åŠ¹ã•ã‚Œã¦ã„ã¾ã™ã€‚è¡Œç·¨é›†å…¨ä½“ã‚’ç¢ºå®šå¾Œã«ãƒˆãƒ©ãƒ³ã‚¶ã‚¯ã‚·ãƒ§ãƒ³ãŒè¿½åŠ ã•ã‚Œã‚‹ã‚ˆã†ã«ã—ã¾ã™ã€‚
 
 <div class="sample-container loading" style="height:650px">
     <iframe id="grid-transaction-sample-iframe" src='{environment:demosBaseUrl}/grid-transaction' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -25,10 +25,10 @@ _language: ja
 <div class="divider--half"></div>
 
 > [!NOTE]
-> ƒgƒ‰ƒ“ƒUƒNƒVƒ‡ƒ“ ƒXƒe[ƒg‚ÍA‚·‚×‚Ä‚ÌXVA’Ç‰ÁAíœ‚³‚ê‚½sA‚»‚µ‚ÄÅŒã‚ÌƒXƒe[ƒg‚Å\¬‚³‚ê‚Ü‚·B
+> ãƒˆãƒ©ãƒ³ã‚¶ã‚¯ã‚·ãƒ§ãƒ³ ã‚¹ãƒ†ãƒ¼ãƒˆã¯ã€ã™ã¹ã¦ã®æ›´æ–°ã€è¿½åŠ ã€å‰Šé™¤ã•ã‚ŒãŸè¡Œã€ãã—ã¦æœ€å¾Œã®ã‚¹ãƒ†ãƒ¼ãƒˆã§æ§‹æˆã•ã‚Œã¾ã™ã€‚
 
-## g—p•û–@
-**app.module.ts** ƒtƒ@ƒCƒ‹‚Ì [`IgxGridModule`]({environment:angularApiUrl}/classes/igxgridmodule.html) ‚ğƒCƒ“ƒ|[ƒg‚µ‚Ü‚·B
+## ä½¿ç”¨æ–¹æ³•
+**app.module.ts** ãƒ•ã‚¡ã‚¤ãƒ«ã® [`IgxGridModule`]({environment:angularApiUrl}/classes/igxgridmodule.html) ã‚’ã‚¤ãƒ³ãƒãƒ¼ãƒˆã—ã¾ã™ã€‚
 
 ```typescript
 // app.module.ts
@@ -44,7 +44,7 @@ import { IgxGridModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-ƒOƒŠƒbƒh‚É igxTransactionService ’è‹`‚·‚é•K—v‚ª‚ ‚è‚Ü‚·B
+ã‚°ãƒªãƒƒãƒ‰ã« igxTransactionService å®šç¾©ã™ã‚‹å¿…è¦ãŒã‚ã‚Šã¾ã™ã€‚
 
 ```typescript
 import { Component } from "@angular/core";
@@ -59,9 +59,9 @@ export class GridWithTransactionsComponent { }
 
 ```
 
-’: `IgxGridTransaction` ‚ÍƒOƒŠƒbƒh‚Å’è‹`‚³‚ê‚½ƒCƒ“ƒWƒFƒNƒVƒ‡ƒ“ ƒg[ƒNƒ“‚Å‚·B
+æ³¨: `IgxGridTransaction` ã¯ã‚°ãƒªãƒƒãƒ‰ã§å®šç¾©ã•ã‚ŒãŸã‚¤ãƒ³ã‚¸ã‚§ã‚¯ã‚·ãƒ§ãƒ³ ãƒˆãƒ¼ã‚¯ãƒ³ã§ã™ã€‚
 
-ƒf[ƒ^ƒ\[ƒX‚ÉƒoƒCƒ“ƒh‚·‚éƒOƒŠƒbƒh‚ğ’è‹`‚ğ‚µ‚Ä [`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditable) ‚ğ true ‚Éİ’è‚µ‚Ü‚·B
+ãƒ‡ãƒ¼ã‚¿ã‚½ãƒ¼ã‚¹ã«ãƒã‚¤ãƒ³ãƒ‰ã™ã‚‹ã‚°ãƒªãƒƒãƒ‰ã‚’å®šç¾©ã‚’ã—ã¦ [`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditable) ã‚’ true ã«è¨­å®šã—ã¾ã™ã€‚
 
 ```html
 <app-grid-with-transactions>
@@ -81,7 +81,7 @@ export class GridWithTransactionsComponent { }
 </app-grid-with-transactions>
 ```
 
-ˆÈ‰º‚ÌƒR[ƒh—á‚ÍA[`transactions`]({environment:angularApiUrl}/classes/igxtransactionservice.html) API (undo, redo, commit) ‚Ìg—p•û–@‚ğ¦‚µ‚Ü‚·B
+ä»¥ä¸‹ã®ã‚³ãƒ¼ãƒ‰ä¾‹ã¯ã€[`transactions`]({environment:angularApiUrl}/classes/igxtransactionservice.html) API (undo, redo, commit) ã®ä½¿ç”¨æ–¹æ³•ã‚’ç¤ºã—ã¾ã™ã€‚
 
 ```typescript
 import { Component, ViewChild } from "@angular/core";
@@ -160,13 +160,13 @@ export class GridTransactionSampleComponent {
 
 ```
 > [!NOTE]
-> [`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditable) ƒvƒƒpƒeƒB‚ğ–³Œø‚É‚·‚é‚ÆƒOƒŠƒbƒh‚ğ•ÏX‚µ‚ÄƒZƒ‹•ÏX‚Åƒgƒ‰ƒ“ƒUƒNƒVƒ‡ƒ“‚ğì¬‚µ‚Ü‚·B
+> [`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditable) ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã‚’ç„¡åŠ¹ã«ã™ã‚‹ã¨ã‚°ãƒªãƒƒãƒ‰ã‚’å¤‰æ›´ã—ã¦ã‚»ãƒ«å¤‰æ›´ã§ãƒˆãƒ©ãƒ³ã‚¶ã‚¯ã‚·ãƒ§ãƒ³ã‚’ä½œæˆã—ã¾ã™ã€‚
 
 ## API
 
 * [`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html)
 
-### ƒƒ\ƒbƒh
+### ãƒ¡ã‚½ãƒƒãƒ‰
 
 
 * [`aggregatedState`]({environment:angularApiUrl}/classes/igxtransactionservice.html#aggregatedstate)
@@ -179,8 +179,8 @@ export class GridTransactionSampleComponent {
 * [`undo`]({environment:angularApiUrl}/classes/igxtransactionservice.html#undo)
 * [`redo`]({environment:angularApiUrl}/classes/igxtransactionservice.html#redo)
 
-### ‚»‚Ì‘¼‚ÌƒŠƒ\[ƒX
+### ãã®ä»–ã®ãƒªã‚½ãƒ¼ã‚¹
 
-* [Grid ‚ÌŠT—v](grid.md)
-* [Grid •ÒW](grid_editing.md)
-* [ƒOƒŠƒbƒh‚Ìs•ÒWƒeƒ“ƒvƒŒ[ƒg](grid_row_editing.md)
+* [Grid ã®æ¦‚è¦](grid.md)
+* [Grid ç·¨é›†](grid_editing.md)
+* [ã‚°ãƒªãƒƒãƒ‰ã®è¡Œç·¨é›†ãƒ†ãƒ³ãƒ—ãƒ¬ãƒ¼ãƒˆ](grid_row_editing.md)

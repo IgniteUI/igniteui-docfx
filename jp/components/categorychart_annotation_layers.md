@@ -1,28 +1,28 @@
----
-title: ƒJƒeƒSƒŠ ƒ`ƒƒ[ƒg’Žß‚ÆƒI[ƒo[ƒŒƒC
-_description: Ignite UI for Angular Category Chart ƒRƒ“ƒ|[ƒlƒ“ƒg‚Í•¡ŽG‚Èƒf[ƒ^ ƒrƒWƒ…ƒAƒ‰ƒCƒ[[ƒVƒ‡ƒ“‚ð API ‚É‚æ‚Á‚ÄŠÈ‘f‰»‚Å‚«‚Ü‚·Bƒ†[ƒU[‚ªƒf[ƒ^‚ÌƒRƒŒƒNƒVƒ‡ƒ“‚Ü‚½‚ÍƒRƒŒƒNƒVƒ‡ƒ“‚ÌƒOƒ‹[ƒv‚ÉƒoƒCƒ“ƒh‚µAƒf[ƒ^‚ðŽw’è‚·‚éƒvƒƒpƒeƒB‚ðÝ’èŒãAƒ`ƒƒ[ƒg ƒRƒ“ƒgƒ[ƒ‹‚ªŽc‚è‚Ìì‹Æ‚ðˆ—‚µ‚Ü‚·B
-_keywords: Ignite UI for Angular, Angular, ƒlƒCƒeƒBƒu Angular ƒRƒ“ƒ|[ƒlƒ“ƒg ƒXƒC[ƒg, ƒlƒCƒeƒBƒu Angular ƒRƒ“ƒgƒ[ƒ‹, ƒlƒCƒeƒBƒu Angular ƒRƒ“ƒ|[ƒlƒ“ƒg, ƒlƒCƒeƒBƒu Angular ƒRƒ“ƒ|[ƒlƒ“ƒg ƒ‰ƒCƒuƒ‰ƒŠ, Angular ƒ`ƒƒ[ƒg, Angular ƒ`ƒƒ[ƒg ƒRƒ“ƒgƒ[ƒ‹, Angular ƒ`ƒƒ[ƒg—á, Angular Grid ƒRƒ“ƒ|[ƒlƒ“ƒg, Angular Chart ƒRƒ“ƒ|[ƒlƒ“ƒg, Angular Category Chart
+ï»¿---
+title: ã‚«ãƒ†ã‚´ãƒª ãƒãƒ£ãƒ¼ãƒˆæ³¨é‡ˆã¨ã‚ªãƒ¼ãƒãƒ¼ãƒ¬ã‚¤
+_description: Ignite UI for Angular Category Chart ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆã¯è¤‡é›‘ãªãƒ‡ãƒ¼ã‚¿ ãƒ“ã‚¸ãƒ¥ã‚¢ãƒ©ã‚¤ã‚¼ãƒ¼ã‚·ãƒ§ãƒ³ã‚’ API ã«ã‚ˆã£ã¦ç°¡ç´ åŒ–ã§ãã¾ã™ã€‚ãƒ¦ãƒ¼ã‚¶ãƒ¼ãŒãƒ‡ãƒ¼ã‚¿ã®ã‚³ãƒ¬ã‚¯ã‚·ãƒ§ãƒ³ã¾ãŸã¯ã‚³ãƒ¬ã‚¯ã‚·ãƒ§ãƒ³ã®ã‚°ãƒ«ãƒ¼ãƒ—ã«ãƒã‚¤ãƒ³ãƒ‰ã—ã€ãƒ‡ãƒ¼ã‚¿ã‚’æŒ‡å®šã™ã‚‹ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã‚’è¨­å®šå¾Œã€ãƒãƒ£ãƒ¼ãƒˆ ã‚³ãƒ³ãƒˆãƒ­ãƒ¼ãƒ«ãŒæ®‹ã‚Šã®ä½œæ¥­ã‚’å‡¦ç†ã—ã¾ã™ã€‚
+_keywords: Ignite UI for Angular, Angular, ãƒã‚¤ãƒ†ã‚£ãƒ– Angular ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆ ã‚¹ã‚¤ãƒ¼ãƒˆ, ãƒã‚¤ãƒ†ã‚£ãƒ– Angular ã‚³ãƒ³ãƒˆãƒ­ãƒ¼ãƒ«, ãƒã‚¤ãƒ†ã‚£ãƒ– Angular ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆ, ãƒã‚¤ãƒ†ã‚£ãƒ– Angular ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆ ãƒ©ã‚¤ãƒ–ãƒ©ãƒª, Angular ãƒãƒ£ãƒ¼ãƒˆ, Angular ãƒãƒ£ãƒ¼ãƒˆ ã‚³ãƒ³ãƒˆãƒ­ãƒ¼ãƒ«, Angular ãƒãƒ£ãƒ¼ãƒˆä¾‹, Angular Grid ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆ, Angular Chart ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆ, Angular Category Chart
 _language: ja
 ---
-## ƒJƒeƒSƒŠ ƒ`ƒƒ[ƒg’Žß‚ÆƒI[ƒo[ƒŒƒC
+## ã‚«ãƒ†ã‚´ãƒª ãƒãƒ£ãƒ¼ãƒˆæ³¨é‡ˆã¨ã‚ªãƒ¼ãƒãƒ¼ãƒ¬ã‚¤
 
-‚±‚ÌƒgƒsƒbƒN‚Å‚ÍA`igx-category-chart` ‚Ì’Žß‚âƒCƒ“ƒ^ƒ‰ƒNƒVƒ‡ƒ“‚É‚Â‚¢‚Äà–¾‚µ‚Ü‚·B
+ã“ã®ãƒˆãƒ”ãƒƒã‚¯ã§ã¯ã€`igx-category-chart` ã®æ³¨é‡ˆã‚„ã‚¤ãƒ³ã‚¿ãƒ©ã‚¯ã‚·ãƒ§ãƒ³ã«ã¤ã„ã¦èª¬æ˜Žã—ã¾ã™ã€‚
 
-### ƒfƒ‚
+### ãƒ‡ãƒ¢
 <div class="sample-container" style="height: 550px">
     <iframe id="category-chart-annotations-and-overlays-iframe" src='{environment:demosBaseUrl}/category-chart-annotations-and-overlays' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="category-chart-annotations-and-overlays-iframe" data-demos-base-url="{environment:demosBaseUrl}"> StackBlitz ‚ÅŠJ‚­
+    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="category-chart-annotations-and-overlays-iframe" data-demos-base-url="{environment:demosBaseUrl}"> StackBlitz ã§é–‹ã
     </button>
 </div>
 <div class="divider--half"></div>
 
-## ƒI[ƒo[ƒŒƒC ƒ^ƒCƒv
+## ã‚ªãƒ¼ãƒãƒ¼ãƒ¬ã‚¤ ã‚¿ã‚¤ãƒ—
 
-### \ŽšüƒŒƒCƒ„[
+### åå­—ç·šãƒ¬ã‚¤ãƒ¤ãƒ¼
 
-Crosshair Layer ‚ÍAŠeƒ^[ƒQƒbƒg ƒVƒŠ[ƒY‚ÌŽÀÛ‚Ì’l‚Éˆê’v‚·‚é\Žšü‚ð’ñ‹Ÿ‚µ‚Ü‚·BCrosshair ƒ^ƒCƒv‚ÍAHorizontalAVerticalABoth ‚ª‚ ‚è‚Ü‚·B
+Crosshair Layer ã¯ã€å„ã‚¿ãƒ¼ã‚²ãƒƒãƒˆ ã‚·ãƒªãƒ¼ã‚ºã®å®Ÿéš›ã®å€¤ã«ä¸€è‡´ã™ã‚‹åå­—ç·šã‚’æä¾›ã—ã¾ã™ã€‚Crosshair ã‚¿ã‚¤ãƒ—ã¯ã€Horizontalã€Verticalã€Both ãŒã‚ã‚Šã¾ã™ã€‚
 
 ```html
 <igx-category-chart
@@ -33,9 +33,9 @@ Crosshair Layer ‚ÍAŠeƒ^[ƒQƒbƒg ƒVƒŠ[ƒY‚ÌŽÀÛ‚Ì’l‚Éˆê’v‚·‚é\Žšü‚ð’ñ‹Ÿ‚µ‚Ü‚·
 </igx-category-chart>
 ```
 
-### ƒJƒeƒSƒŠ ƒc[ƒ‹ƒ`ƒbƒv ƒŒƒCƒ„[
+### ã‚«ãƒ†ã‚´ãƒª ãƒ„ãƒ¼ãƒ«ãƒãƒƒãƒ— ãƒ¬ã‚¤ãƒ¤ãƒ¼
 
-ƒJƒeƒSƒŠ ƒc[ƒ‹ƒ`ƒbƒv ƒŒƒCƒ„[‚ÍAƒJƒeƒSƒŠŽ²‚ðŽg—p‚·‚éƒVƒŠ[ƒY—p‚ÉƒOƒ‹[ƒv‰»‚³‚ê‚½ƒc[ƒ‹ƒ`ƒbƒv‚ð•\Ž¦‚µ‚Ü‚·B
+ã‚«ãƒ†ã‚´ãƒª ãƒ„ãƒ¼ãƒ«ãƒãƒƒãƒ— ãƒ¬ã‚¤ãƒ¤ãƒ¼ã¯ã€ã‚«ãƒ†ã‚´ãƒªè»¸ã‚’ä½¿ç”¨ã™ã‚‹ã‚·ãƒªãƒ¼ã‚ºç”¨ã«ã‚°ãƒ«ãƒ¼ãƒ—åŒ–ã•ã‚ŒãŸãƒ„ãƒ¼ãƒ«ãƒãƒƒãƒ—ã‚’è¡¨ç¤ºã—ã¾ã™ã€‚
 
 ```html
 <igx-category-chart
@@ -44,9 +44,9 @@ Crosshair Layer ‚ÍAŠeƒ^[ƒQƒbƒg ƒVƒŠ[ƒY‚ÌŽÀÛ‚Ì’l‚Éˆê’v‚·‚é\Žšü‚ð’ñ‹Ÿ‚µ‚Ü‚·
 </igx-category-chart>
 ```
 
-### ƒAƒCƒeƒ€ ƒc[ƒ‹ƒ`ƒbƒv ƒŒƒCƒ„[
+### ã‚¢ã‚¤ãƒ†ãƒ  ãƒ„ãƒ¼ãƒ«ãƒãƒƒãƒ— ãƒ¬ã‚¤ãƒ¤ãƒ¼
 
-ƒAƒCƒeƒ€ ƒc[ƒ‹ƒ`ƒbƒv ƒŒƒCƒ„[‚ÍA‚·‚×‚Ä‚Ìƒ^[ƒQƒbƒg ƒVƒŠ[ƒY‚Éƒc[ƒ‹ƒ`ƒbƒv‚ð•\‚µ‚Ü‚·B
+ã‚¢ã‚¤ãƒ†ãƒ  ãƒ„ãƒ¼ãƒ«ãƒãƒƒãƒ— ãƒ¬ã‚¤ãƒ¤ãƒ¼ã¯ã€ã™ã¹ã¦ã®ã‚¿ãƒ¼ã‚²ãƒƒãƒˆ ã‚·ãƒªãƒ¼ã‚ºã«ãƒ„ãƒ¼ãƒ«ãƒãƒƒãƒ—ã‚’è¡¨ã—ã¾ã™ã€‚
 
 ```html
 <igx-category-chart
@@ -55,9 +55,9 @@ Crosshair Layer ‚ÍAŠeƒ^[ƒQƒbƒg ƒVƒŠ[ƒY‚ÌŽÀÛ‚Ì’l‚Éˆê’v‚·‚é\Žšü‚ð’ñ‹Ÿ‚µ‚Ü‚·
 </igx-category-chart>
 ```
 
-### ƒJƒeƒSƒŠ€–Ú‹­’²•\Ž¦ƒŒƒCƒ„[
+### ã‚«ãƒ†ã‚´ãƒªé …ç›®å¼·èª¿è¡¨ç¤ºãƒ¬ã‚¤ãƒ¤ãƒ¼
 
-Category Item Highlight Layer ƒŒƒCƒ„[‚ÍA‚»‚ÌˆÊ’u‚ÅŽÈ–Í—lƒVƒFƒCƒv‚Ü‚½‚Íƒ}[ƒJ[‚ð•`‰æ‚·‚é‚±‚Æ‚É‚æ‚èAƒJƒeƒSƒŠŽ²‚ðŽg—p‚·‚éƒVƒŠ[ƒY“à‚Ì€–Ú‚ð‹­’²•\Ž¦‚µ‚Ü‚·B
+Category Item Highlight Layer ãƒ¬ã‚¤ãƒ¤ãƒ¼ã¯ã€ãã®ä½ç½®ã§ç¸žæ¨¡æ§˜ã‚·ã‚§ã‚¤ãƒ—ã¾ãŸã¯ãƒžãƒ¼ã‚«ãƒ¼ã‚’æç”»ã™ã‚‹ã“ã¨ã«ã‚ˆã‚Šã€ã‚«ãƒ†ã‚´ãƒªè»¸ã‚’ä½¿ç”¨ã™ã‚‹ã‚·ãƒªãƒ¼ã‚ºå†…ã®é …ç›®ã‚’å¼·èª¿è¡¨ç¤ºã—ã¾ã™ã€‚
 
 ```html
 <igx-category-chart
@@ -66,9 +66,9 @@ Category Item Highlight Layer ƒŒƒCƒ„[‚ÍA‚»‚ÌˆÊ’u‚ÅŽÈ–Í—lƒVƒFƒCƒv‚Ü‚½‚Íƒ}[ƒJ[
 </igx-category-chart>
 ```
 
-### ƒJƒeƒSƒŠ‹­’²•\Ž¦ƒŒƒCƒ„[
+### ã‚«ãƒ†ã‚´ãƒªå¼·èª¿è¡¨ç¤ºãƒ¬ã‚¤ãƒ¤ãƒ¼
 
-ƒJƒeƒSƒŠŽ²‚Ü‚½‚Íƒ`ƒƒ[ƒg“à‚Ì‚·‚×‚Ä‚ÌƒJƒeƒSƒŠŽ²‚É‘Î‚·‚é’ŽßƒŒƒCƒ„[‚ð•\‚µ‚Ü‚·BƒJ[ƒ\ƒ‹ˆÊ’u‚ÉÅ‚à‹ß‚¢Ž²‚ÌƒGƒŠƒA‚ðÆ‚ç‚·ƒVƒFƒCƒv‚ð•`‰æ‚µ‚Ü‚·B
+ã‚«ãƒ†ã‚´ãƒªè»¸ã¾ãŸã¯ãƒãƒ£ãƒ¼ãƒˆå†…ã®ã™ã¹ã¦ã®ã‚«ãƒ†ã‚´ãƒªè»¸ã«å¯¾ã™ã‚‹æ³¨é‡ˆãƒ¬ã‚¤ãƒ¤ãƒ¼ã‚’è¡¨ã—ã¾ã™ã€‚ã‚«ãƒ¼ã‚½ãƒ«ä½ç½®ã«æœ€ã‚‚è¿‘ã„è»¸ã®ã‚¨ãƒªã‚¢ã‚’ç…§ã‚‰ã™ã‚·ã‚§ã‚¤ãƒ—ã‚’æç”»ã—ã¾ã™ã€‚
 
 ```html
 <igx-category-chart
@@ -77,11 +77,11 @@ Category Item Highlight Layer ƒŒƒCƒ„[‚ÍA‚»‚ÌˆÊ’u‚ÅŽÈ–Í—lƒVƒFƒCƒv‚Ü‚½‚Íƒ}[ƒJ[
 </igx-category-chart>
 ```
 
-## ’Žßƒ^ƒCƒv
+## æ³¨é‡ˆã‚¿ã‚¤ãƒ—
 
-### ÅI’lƒŒƒCƒ„[
+### æœ€çµ‚å€¤ãƒ¬ã‚¤ãƒ¤ãƒ¼
 
-ÅI’lƒŒƒCƒ„[‚ÍAƒVƒŠ[ƒY‚É•\Ž¦‚³‚ê‚½ÅI’l‚ÌŽ²‚É‰ˆ‚Á‚½ƒNƒCƒbƒNƒrƒ…[‚ðƒTƒ|[ƒg‚µ‚Ü‚·B
+æœ€çµ‚å€¤ãƒ¬ã‚¤ãƒ¤ãƒ¼ã¯ã€ã‚·ãƒªãƒ¼ã‚ºã«è¡¨ç¤ºã•ã‚ŒãŸæœ€çµ‚å€¤ã®è»¸ã«æ²¿ã£ãŸã‚¯ã‚¤ãƒƒã‚¯ãƒ“ãƒ¥ãƒ¼ã‚’ã‚µãƒãƒ¼ãƒˆã—ã¾ã™ã€‚
 
 ```html
 <igx-category-chart
@@ -90,11 +90,11 @@ Category Item Highlight Layer ƒŒƒCƒ„[‚ÍA‚»‚ÌˆÊ’u‚ÅŽÈ–Í—lƒVƒFƒCƒv‚Ü‚½‚Íƒ}[ƒJ[
 </igx-category-chart>
 ```
 
-### ƒR[ƒ‹ƒAƒEƒg ƒŒƒCƒ„[
+### ã‚³ãƒ¼ãƒ«ã‚¢ã‚¦ãƒˆ ãƒ¬ã‚¤ãƒ¤ãƒ¼
 
-Callout Layer ‚ÍAX/Y ˆÊ’u‚ÉƒR[ƒ‹ƒAƒEƒg‚ð•\Ž¦‚µ‚Ü‚·B’Žß‚Éƒzƒo[‚µ‚½Û‚Éƒ‰ƒxƒ‹‚Æ’Ç‰ÁƒRƒ“ƒeƒ“ƒc‚ðƒc[ƒ‹ƒ`ƒbƒv‚Å•\Ž¦‚Å‚«‚Ü‚·B
+Callout Layer ã¯ã€X/Y ä½ç½®ã«ã‚³ãƒ¼ãƒ«ã‚¢ã‚¦ãƒˆã‚’è¡¨ç¤ºã—ã¾ã™ã€‚æ³¨é‡ˆã«ãƒ›ãƒãƒ¼ã—ãŸéš›ã«ãƒ©ãƒ™ãƒ«ã¨è¿½åŠ ã‚³ãƒ³ãƒ†ãƒ³ãƒ„ã‚’ãƒ„ãƒ¼ãƒ«ãƒãƒƒãƒ—ã§è¡¨ç¤ºã§ãã¾ã™ã€‚
 
-> ’:  Category Ž²Žg—pŽž‚Í `eventsXMemberPath` ‚ª”’lƒCƒ“ƒfƒbƒNƒX‚Ü‚½‚ÍŽžŠÔŽ²‚ÌŽžŠÔ’l‚ðƒ|ƒCƒ“ƒg‚·‚é•K—v‚ª‚ ‚è‚Ü‚·B
+> æ³¨:  Category è»¸ä½¿ç”¨æ™‚ã¯ `eventsXMemberPath` ãŒæ•°å€¤ã‚¤ãƒ³ãƒ‡ãƒƒã‚¯ã‚¹ã¾ãŸã¯æ™‚é–“è»¸ã®æ™‚é–“å€¤ã‚’ãƒã‚¤ãƒ³ãƒˆã™ã‚‹å¿…è¦ãŒã‚ã‚Šã¾ã™ã€‚
 
 ```html
 <igx-category-chart

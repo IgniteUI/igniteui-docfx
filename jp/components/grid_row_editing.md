@@ -1,19 +1,19 @@
----
-title: Grid �s�̕ҏW - �l�C�e�B�u Angular | Ignite UI for Angular
-_description: �s�ҏW - �O���b�h �f�[�^�\�[�X�ɕύX���T�u�~�b�g����O�ɍs�̕����Z������x�ɕύX���邱�Ƃ��\�ł��B�V�����g�����U�N�V���� �v���o�C�_�[�ۗ̕����̕ύX�𗘗p�ł��܂��B
+﻿---
+title: Grid 行の編集 - ネイティブ Angular | Ignite UI for Angular
+_description: 行編集 - グリッド データソースに変更をサブミットする前に行の複数セルを一度に変更することが可能です。新しいトランザクション プロバイダーの保留中の変更を利用できます。
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Component, Angular Grid, Angular Data Grid component, Angular Data Grid control, Angular Grid component, Angular Grid control, Angular High Performance Grid, Cell Editing
 _language: ja
 ---
 
-## �O���b�h�ҏW
+## グリッド編集
 
-�s�ҏW - �O���b�h �f�[�^�\�[�X�ɕύX���T�u�~�b�g����O�ɍs�̕����Z������x�ɕύX���邱�Ƃ��\�ł��B�V�����g�����U�N�V���� �v���o�C�_�[�ۗ̕����̕ύX�𗘗p�ł��܂��B
+行編集 - グリッド データソースに変更をサブミットする前に行の複数セルを一度に変更することが可能です。新しいトランザクション プロバイダーの保留中の変更を利用できます。
 
 
 
-### �f��
+### デモ
 
-�ȉ��̎菇�ł́A�O���b�h�ōs�ҏW��L���ɂ�����@�������܂��B�Z���l��ύX���Ă��瓯���s�̑��̃Z�����N���b�N�܂��̓i�r�Q�[�V���������ꍇ�� Done �{�^�����g�p���Ċm�肷��܂ōs�l���X�V���܂���B�܂��� Cancel �{�^�����g�p���Ĕj�����܂��B
+以下の手順では、グリッドで行編集を有効にする方法を示します。セル値を変更してから同じ行の他のセルをクリックまたはナビゲーションした場合も Done ボタンを使用して確定するまで行値を更新しません。または Cancel ボタンを使用して破棄します。
 
 <div class="sample-container loading" style="height:650px">
     <iframe id="grid-row-editing-sample-iframe" src='{environment:demosBaseUrl}/grid-row-editing' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -24,13 +24,13 @@ _language: ja
 </div>
 
 > [!NOTE]
-> �s���ҏW���[�h�ɂ���ꍇ�A���̍s�̃Z�����N���b�N����� Done �{�^���������ꂽ�悤�ɓ��삵�A�O�̍s�̕ύX�����ׂĂ̕ύX���T�u�~�b�g���܂��B�t�H�[�J�X�̂���V�����Z�����ҏW�\���ǂ����A�V�����s���ҏW���[�h�ɓ��邩�ǂ����A�Z�����ҏW�ł��Ȃ��ꍇ�͑O�̍s�̂ݕҏW���[�h���I�����܂��B
+> 行が編集モードにある場合、他の行のセルをクリックすると Done ボタンが押されたように動作し、前の行の変更をすべての変更をサブミットします。フォーカスのある新しいセルが編集可能かどうか、新しい行が編集モードに入るかどうか、セルが編集できない場合は前の行のみ編集モードを終了します。
 
 <div class="divider--half"></div>
 
-## �g�p���@
+## 使用方法
 
-[IgxGridModule]({environment:angularApiUrl}/classes/igxgridmodule.html) in the **app.module.ts** �t�@�C�����C���|�[�g���܂��B
+[IgxGridModule]({environment:angularApiUrl}/classes/igxgridmodule.html) in the **app.module.ts** ファイルをインポートします。
 
 ```typescript
 // app.module.ts
@@ -46,7 +46,7 @@ import { IgxGridModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-�f�[�^�\�[�X�Ƀo�C���h����O���b�h���`������ [`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditable) �� true �ɐݒ肵�܂��B
+データソースにバインドするグリッドを定義をして [`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditable) を true に設定します。
 
 ```html
 <div class="sample-wrapper">
@@ -67,9 +67,9 @@ export class AppModule {}
 ```
 
 > [!NOTE]
-> �s�ҏW���܂ޕҏW����Ńv���C�}���L�[�̐ݒ�͕K�{�ł��B
+> 行編集を含む編集操作でプライマリキーの設定は必須です。
 > [!NOTE]
-> �e��̕ҏW��L���ɂ���K�v�͂���܂���B�O���b�h�� [`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditable) �v���p�e�B���g�p����ƃv���C�}���s�ȊO `field` �v���p�e�B���`�������ׂĂ̍s���ҏW�\�ɂȂ�܂��B����̗�̕ҏW�𖳌��ɂ���ꍇ�A[`editable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable) ��̓��͂� false �ɐݒ肵�܂��B
+> 各列の編集を有効にする必要はありません。グリッドで [`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditable) プロパティを使用するとプライマリ行以外 `field` プロパティを定義したすべての行が編集可能になります。特定の列の編集を無効にする場合、[`editable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable) 列の入力を false に設定します。
 
 
 ```typescript
@@ -97,55 +97,55 @@ export class GridRowEditSampleComponent {
 ```
 
 > [!NOTE]
-> �O���b�h�́A�ۗ����̃Z���ύX��ێ�����v���o�C�_�[ [`IgxBaseTransactionService`]({environment:angularApiUrl}/classes/igxbasetransactionservice.html) ���s�X�e�[�g���T�u�~�b�g�܂��̓L�����Z������܂œ����g�p���܂��B
+> グリッドは、保留中のセル変更を保持するプロバイダー [`IgxBaseTransactionService`]({environment:angularApiUrl}/classes/igxbasetransactionservice.html) を行ステートをサブミットまたはキャンセルするまで内部使用します。
 
-## �z�u
+## 配置
 
-- �I�[�o�[���C�̃f�t�H���g�̈ʒu�͕ҏW���[�h�ōs�̉��ɂ���܂��B
+- オーバーレイのデフォルトの位置は編集モードで行の下にあります。
      
-- �s�̉��ɃX�y�[�X���Ȃ��ꍇ�A�I�[�o�[���C���s�̏�ɕ\������܂��B
+- 行の下にスペースがない場合、オーバーレイが行の上に表示されます。
      
-- ��ԏ�܂��͉��ɕ\�������ƁA�I�[�o�[���C�͕�����܂ŃX�N���[�����ɂ��̈ʒu��ێ����܂��B
+- 一番上または下に表示されると、オーバーレイは閉じられるまでスクロール時にこの位置を保持します。
 
-## ����
+## 動作
 
-- �s���ҏW���[�h�̏ꍇ�A�ҏW���p�����܂��B�����s�̃Z�����N���b�N���ꂽ���ǂ����B
+- 行が編集モードの場合、編集が継続します。同じ行のセルがクリックされたかどうか。
 
-- Done �{�^�����N���b�N����ƍs�ҏW���������A�ύX���f�[�^�\�[�X�܂��̓g�����U�N�V�����փT�u�~�b�g���܂��B�X�ɍs���ҏW���[�h���������܂��B
+- Done ボタンをクリックすると行編集を完了し、変更をデータソースまたはトランザクションへサブミットします。更に行が編集モードを完了します。
 
-- Cancel �{�^�������N���b�N����ƌ��݂̍s�̂��ׂĂ̕ύX�����ɖ߂��A�s�ҏW���[�h���I�����܂��B
+- Cancel ボタンがをクリックすると現在の行のすべての変更を元に戻し、行編集モードを終了します。
 
-- �s���ҏW���[�h�ɂ���ꍇ�A���̍s�̃Z�����N���b�N����ƌ��݂̍s�ҏW���I�����A�s�̐V�K�̕ύX���T�u�~�b�g (Done �{�^�����N���b�N�����ꍇ�Ɠ���) ���܂��B�t�H�[�J�X�̂���V�����Z�����ҏW�\���ǂ����A�V�����s���ҏW���[�h�ɓ��邩�ǂ����A�Z�����ҏW�ł��Ȃ��ꍇ�͑O�̍s�̂ݕҏW���[�h���I�����܂��B
+- 行が編集モードにある場合、他の行のセルをクリックすると現在の行編集を終了し、行の新規の変更をサブミット (Done ボタンをクリックした場合と同じ) します。フォーカスのある新しいセルが編集可能かどうか、新しい行が編集モードに入るかどうか、セルが編集できない場合は前の行のみ編集モードを終了します。
 
-- �s���ҏW���[�h�̎��ɃO���b�h���X�N���[�������ƍs���\���̈�O�ɂȂ�܂����A�O���b�h�͕ҏW���[�h�̂܂܂ł��B�O���b�h���X�N���[������ƍs���Ăѕ\������čs�͕ҏW���[�h�̂܂܂ɂȂ�܂��B
+- 行が編集モードの時にグリッドがスクロールされると行が表示領域外になりますが、グリッドは編集モードのままです。グリッドをスクロールすると行が再び表示されて行は編集モードのままになります。
 
-- �ҏW�����e�Z���͍s�ҏW���I������܂ŕύX�X�^�C�����擾���܂��B�O���b�h���g�����U�N�V�����Œ񋟂���Ȃ��ꍇ�̓���ł��B�g�����U�N�V�������L���ȏꍇ�A���ׂĂ̕ύX���R�~�b�g�����܂ŃZ���ҏW�X�^�C�����K�p����܂��B
-
-
-## �L�[�{�[�h �i�r�Q�[�V����
-
-- `Enter` and `F2` ���s�ҏW���[�h�ɓ���܂��B
-
-- `Esc` ���s�ҏW���[�h���I�����A�s�̕ҏW���[�h���ɕύX���ꂽ������̃Z���̕ύX���T�u�~�b�g���܂���B
-
-- `Tab` �͍s�̕ҏW�\�ȃZ�����玟�̃Z���փt�H�[�J�X���ړ��A�E�[�̕ҏW�\�ȃZ������ CANCEL �� Done �{�^���ֈړ����܂��BDONE �{�^������̃i�r�Q�[�V�����͌��݂̕ҏW�s���ŕҏW�\�ȃZ���ֈړ����܂��B
+- 編集した各セルは行編集が終了するまで変更スタイルを取得します。グリッドがトランザクションで提供されない場合の動作です。トランザクションが有効な場合、すべての変更がコミットされるまでセル編集スタイルが適用されます。
 
 
-## �@�\�̓���
+## キーボード ナビゲーション
 
-- ���ׂẴf�[�^�ύX����͍s�ύX������I�����A���݂̍s�̕ύX���T�u�~�b�g���܂��B���בւ��A�O���[�v�̕ύX�A�t�B���^�����O�����A�y�[�W���O�Ȃǂ��܂܂�܂��B
+- `Enter` and `F2` が行編集モードに入ります。
 
-- �s�ҏW���I��������ɏW�v���X�V����܂��B���l�ɕ��בւ���t�B���^�����O�Ȃǂ̑��̋@�\���L���ɂȂ�܂��B
+- `Esc` が行編集モードを終了し、行の編集モード時に変更されたいずれのセルの変更もサブミットしません。
 
-- �O���[�v�s�̓W�J�Ək���͌��݂̍s�̕ҏW���I�����܂���B
+- `Tab` は行の編集可能なセルから次のセルへフォーカスを移動、右端の編集可能なセルから CANCEL と Done ボタンへ移動します。DONE ボタンからのナビゲーションは現在の編集行内で編集可能なセルへ移動します。
 
 
-## �s�ҏW�I�[�o�[���C�̃J�X�^�}�C�Y
+## 機能の統合
 
-### �e�L�X�g�̃J�X�^�}�C�Y
+- すべてのデータ変更操作は行変更操作を終了し、現在の行の変更をサブミットします。並べ替え、グループの変更、フィルタリング条件、ページングなどが含まれます。
 
-`igxRowEditTextDirective` ���g�p�����s�ҏW�I�[�o�[���C�̃e�L�X�g�̃J�X�^�}�C�Y���\�ł��B
-`rowChangesCount` �v���p�e�B�����J����ĕύX���ꂽ�Z���̃J�E���g��ێ����܂��B
+- 行編集が終了した後に集計が更新されます。同様に並べ替えやフィルタリングなどの他の機能が有効になります。
+
+- グループ行の展開と縮小は現在の行の編集を終了しません。
+
+
+## 行編集オーバーレイのカスタマイズ
+
+### テキストのカスタマイズ
+
+`igxRowEditTextDirective` を使用した行編集オーバーレイのテキストのカスタマイズが可能です。
+`rowChangesCount` プロパティが公開されて変更されたセルのカウントを保持します。
 
 ```html
 <ng-template igxRowEditText let-rowChangesCount>
@@ -153,9 +153,9 @@ export class GridRowEditSampleComponent {
 </ng-template>
  ```
 
- ### �{�^���̃J�X�^�}�C�Y
-`igxRowEditActionsDirective` ���g�p���čs�ҏW�I�[�o�[���C�̃{�^���̃J�X�^�}�C�Y���\�ł��B
-�L�[�{�[�h �i�r�Q�[�V�����Ƀ{�^�����܂߂�ꍇ�A�e�{�^���� `igxRowEditTabStopDirective` ���K�v�ł��B
+ ### ボタンのカスタマイズ
+`igxRowEditActionsDirective` を使用して行編集オーバーレイのボタンのカスタマイズが可能です。
+キーボード ナビゲーションにボタンを含める場合、各ボタンに `igxRowEditTabStopDirective` が必要です。
 
  ```typescript
  <ng-template igxRowEditActions let-endRowEdit>
@@ -166,23 +166,23 @@ export class GridRowEditSampleComponent {
 
 ## API
 
-### igxGrid ����
+### igxGrid 入力
 
 * [rowEditable]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditable)
 
-### igxGrid �o��
+### igxGrid 出力
 
 * [onRowEditDone]({environment:angularApiUrl}/classes/igxgridcomponent.html#onroweditdone)
 * [onRowEditCancel]({environment:angularApiUrl}/classes/igxgridcomponent.html#onroweditcancel)
 
-### igxGrid ���\�b�h
+### igxGrid メソッド
 
 * [endRowEdit]({environment:angularApiUrl}/classes/igxgridcomponent.html#endrowedit)
 
 
-### ���̑��̃��\�[�X
+### その他のリソース
 <div class="divider--half"></div>
 
-* [Grid �̊T�v](grid.md)
-* [Grid �ҏW](grid_editing.md)
-* [Grid �g�����U�N�V����](grid_transactions.md)
+* [Grid の概要](grid.md)
+* [Grid 編集](grid_editing.md)
+* [Grid トランザクション](grid_transactions.md)
