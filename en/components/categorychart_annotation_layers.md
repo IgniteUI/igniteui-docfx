@@ -45,8 +45,6 @@ The Final Value Layer provides a quick view along the axis of the ending value d
 
 The Callout Layer displays a text callout at X/Y positions given in the data.
 
-> Note: When using a Category axis, the `calloutsXMemberPath` should point to the numeric index or the time value for a time axis.
-
 ```html
 <igx-category-chart
     [dataSource]="data"
