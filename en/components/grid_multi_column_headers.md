@@ -21,11 +21,11 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 The declaration of `Multi column header` could be achieved by wrapping a set of columns into [`igx-column-group`]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html) component with [`header`]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html#header) title passed.
 
 ```html
-<igx-grid [data]="data" height="600px">
+<igx-grid [data]="data" height="600px" [allowFiltering]="true">
     <igx-column-group header="Contact Information">
-        <igx-column filterable="true" sortable="true" resizable="true" field="Phone"></igx-column>
-        <igx-column filterable="true" sortable="true" resizable="true" field="Fax"></igx-column>
-        <igx-column filterable="true" sortable="true" resizable="true" field="PostalCode"></igx-column>
+        <igx-column sortable="true" resizable="true" field="Phone"></igx-column>
+        <igx-column sortable="true" resizable="true" field="Fax"></igx-column>
+        <igx-column sortable="true" resizable="true" field="PostalCode"></igx-column>
     </igx-column-group>
 </igx-grid>
 ```
@@ -33,12 +33,12 @@ The declaration of `Multi column header` could be achieved by wrapping a set of 
 For achieving `n-th` level of nested headers, the declaration above should be followed. So by nesting [`igx-column-group`]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html) leads to the desired result.
 
 ```html
-<igx-grid [data]="data" height="600px">
+<igx-grid [data]="data" height="600px" [allowFiltering]="true">
     <igx-column-group header="General Information">
-        <igx-column [movable]="true" filterable="true" sortable="true" resizable="true" field="CompanyName"></igx-column>
+        <igx-column [movable]="true" sortable="true" resizable="true" field="CompanyName"></igx-column>
         <igx-column-group [movable]="true" header="Person Details">
-            <igx-column [movable]="true" [pinned]="false" filterable="true" sortable="true" resizable="true" field="ContactName"></igx-column>
-            <igx-column [movable]="true" filterable="true" sortable="true" resizable="true" field="ContactTitle"></igx-column>
+            <igx-column [movable]="true" [pinned]="false" sortable="true" resizable="true" field="ContactName"></igx-column>
+            <igx-column [movable]="true" sortable="true" resizable="true" field="ContactTitle"></igx-column>
         </igx-column-group>
     </igx-column-group>
 </igx-grid>
@@ -51,13 +51,13 @@ Every [`igx-column-group`]({environment:angularApiUrl}/classes/igxcolumngroupcom
 > When `columns/column-groups` are not wrapped by current `group` which means they are **top level** `columns`, moving is allowed between whole visible columns.
 
 ```html
-<igx-grid [data]="data" height="600px">
+<igx-grid [data]="data" height="600px" [allowFiltering]="true">
     <igx-column-group  [movable]="true" [pinned]="true" header="General Information">
-        <igx-column [movable]="true" filterable="true" sortable="true" resizable="true" field="CompanyName"></igx-column>
+        <igx-column [movable]="true" sortable="true" resizable="true" field="CompanyName"></igx-column>
     </igx-column-group>
-    <igx-column filterable="true" sortable="true" resizable="true" field="Phone"></igx-column>
-    <igx-column filterable="true" sortable="true" resizable="true" field="Fax"></igx-column>
-    <igx-column filterable="true" sortable="true" resizable="true" field="PostalCode"></igx-column>
+    <igx-column sortable="true" resizable="true" field="Phone"></igx-column>
+    <igx-column sortable="true" resizable="true" field="Fax"></igx-column>
+    <igx-column sortable="true" resizable="true" field="PostalCode"></igx-column>
 </igx-grid>
 ```
 

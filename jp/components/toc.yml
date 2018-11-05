@@ -11,6 +11,13 @@
     - name: 編集
       href: grid_editing.md
       new: true
+      items:
+        - name: 行編集
+          href: grid_row_editing.md
+          new: true
+        - name: トランザクション
+          href: grid_transactions.md
+          new: true
     - name: ページング
       href: grid_paging.md
       new: false
@@ -174,6 +181,8 @@
       href: themes/typography.md
 - name: Shadows
   href: shadows.md
+- name: Display Density
+  href: display_density.md
 - name: データ入力と表示
   header: true
 - name: Drop Down

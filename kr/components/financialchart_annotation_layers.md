@@ -1,28 +1,28 @@
----
-title: Financial Chart Annotations and Overlays
-_description: The Ignite UI for Angular Financial Chart component is easily configured to display financial data using a simple and intuitive API, as once the user binds the data, the chart offers multiple ways in which the data can then be visualized and interpreted.
-_keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Chart Control, Angular Chart Example, Angular Grid Component, Angular Chart Component, Angular Financial Chart
+﻿---
+title: 금융 차트 주석 및 오버레이
+_description: Ignite UI for Angular 금융 차트 컴포넌트는 간단하고 직관적인 API를 사용하여 재무 데이터를 표시하도록 쉽게 구성되어 있으며, 사용자가 데이터를 바인딩하면 차트는 데이터를 시각화하고 해석할 수 있는 다양한 방법을 제공합니다.
+_keywords: Ignite UI for Angular, Angular, 네이티브 Angular 컴포넌트 세트, 네이티브 Angular 컨트롤, 네이티브 Angular 컴포넌트, 네이티브 Angular 컴포넌트 라이브러리, Angular 차트, Angular 차트 컨트롤, Angular 차트 예제, Angular 그리드 컴포넌트, Angular 차트 컴포넌트, Angular 금융 차트
 _language: kr
 ---
-## Financial Chart Annotations and Overlays
+## 금융 차트 주석 및 오버레이
 
-This topic provides conceptual information about the annotations and overlay interactions available on the `igx-financial-chart`.
+이 항목에서는 `igx-category-chart`에서 사용할 수 있는 주석 및 오버레이 상호 작용에 대한 개념 정보를 제공합니다.
 
-### Demo
+### 데모
 <div class="sample-container" style="height: 550px">
     <iframe id="financial-chart-annotations-and-overlays-iframe" src='{environment:demosBaseUrl}/financial-chart-annotations-and-overlays' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="financial-chart-annotations-and-overlays-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="financial-chart-annotations-and-overlays-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기
     </button>
 </div>
 <div class="divider--half"></div>
 
-## Overlay Types
+## 오버레이 유형
 
-### Crosshair Layer
+### 십자형 레이어
 
-The Crosshair Layer provides crossing lines that meet at the actual value of each targeted series.  Crosshair types include: Horizontal, Vertical, and Both.
+십자형 레이어는 각 대상 시리즈의 실제 값과 만나는 교차 선을 제공합니다.  십자형 유형: 수평, 수직, 양쪽 모두가 포함.
 
 ```html
 <igx-financial-chart
@@ -35,9 +35,9 @@ The Crosshair Layer provides crossing lines that meet at the actual value of eac
 </igx-financial-chart>
 ```
 
-### Category Tool Tip Layer
+### 카테고리 도구 힌트 레이어
 
-The Category Tool Tip Layer displays grouped tooltips for series using a category axis.
+카테고리 도구 힌트 레이어는 카테고리 축을 사용하여 시리즈에 대한 그룹화된 도구 힌트를 표시합니다.
 
 ```html
 <igx-financial-chart
@@ -48,9 +48,9 @@ The Category Tool Tip Layer displays grouped tooltips for series using a categor
 </igx-financial-chart>
 ```
 
-### Item Tool Tip Layer
+### 항목 도구 힌트 레이어
 
-The Item Tool Tip Layer displays tooltips for all target series individually.
+항목 도구 힌트 레이어는 모든 대상 시리즈에 대한 도구 힌트를 개별적으로 표시합니다.
 
 ```html
 <igx-financial-chart
@@ -61,11 +61,11 @@ The Item Tool Tip Layer displays tooltips for all target series individually.
 </igx-financial-chart>
 ```
 
-## Annotation Types
+## 주석 유형
 
-### Final Value Layer
+### 최종값 레이어
 
-The Final Value Layer provides a quick view along the axis of the ending value displayed in a series.
+최종값 레이어는 시리즈에 표시된 종료값 축을 따라 빠른 보기를 제공합니다.
 
 ```html
 <igx-financial-chart
@@ -76,11 +76,11 @@ The Final Value Layer provides a quick view along the axis of the ending value d
 </igx-financial-chart>
 ```
 
-### Callout Layer
+### 콜아웃 레이어
 
-The Callout Layer displays a callout at X/Y positions. It can show a label and some extra content as a tooltip when hovering over the annotation.
+콜아웃 레이어는 X/Y 위치에서 콜아웃을 표시합니다. 주석 위로 마우스를 가져 가면 레이블과 일부 추가 콘텐츠를 도구 힌트처럼 표시할 수 있습니다.
 
-> Note: When using the ordinal X axis mode, the `calloutsXMemberPath` should point to the numeric index of the item, otherwise `calloutsXMemberPath` should point to the time value.
+> 참고: 서수 X 축 모드를 사용하는 경우에는 `calloutsXMemberPath`는 항목의 수치 인덱스를 가리켜야 하거나 그렇지 않으면 `calloutsXMemberPath`가 시간 값을 가리켜야 합니다.
 
 ```html
 <igx-financial-chart

@@ -1,28 +1,28 @@
----
-title: Category Chart Annotations and Overlays
-_description: The Ignite UI for Category Chart component simplifies the complexities of the data visualization domain into manageable API so that a user can bind a collection of data, a group of collections, and a data property, and let the charting control do the rest.
-_keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Chart Control, Angular Chart Example, Angular Grid Component, Angular Chart Component, Angular Category Chart
+﻿---
+title: 카테고리 차트 주석 및 오버레이
+_description: Ignite UI for 카테고리 차트 컴포넌트는 데이터 시각화 도메인의 복잡성을 관리 가능한 API로 단순화하여 사용자가 데이터 수집, 그룹 수집, 데이터 속성을 바인딩하고 나머지는 차트 컨트롤이 실행할 수 있도록 합니다.
+_keywords: Ignite UI for Angular, Angular, 네이티브 Angular 컴포넌트 세트, 네이티브 Angular 컨트롤, 네이티브 Angular 컴포넌트, 네이티브 Angular 컴포넌트 라이브러리, Angular 차트, Angular 차트 컨트롤, Angular 차트 예제, Angular 그리드 컴포넌트, Angular 차트 컴포넌트, Angular 카테고리 차트
 _language: kr
 ---
-## Category Chart Annotations and Overlays
+## 카테고리 차트 주석 및 오버레이
 
-This topic provides conceptual information about the annotations and overlay interactions available on the `igx-category-chart`.
+이 항목에서는 `igx-category-chart`에서 사용할 수 있는 주석 및 오버레이 상호 작용에 대한 개념 정보를 제공합니다.
 
-### Demo
+### 데모
 <div class="sample-container" style="height: 550px">
     <iframe id="category-chart-annotations-and-overlays-iframe" src='{environment:demosBaseUrl}/category-chart-annotations-and-overlays' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="category-chart-annotations-and-overlays-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="category-chart-annotations-and-overlays-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기
     </button>
 </div>
 <div class="divider--half"></div>
 
-## Overlay Types
+## 오버레이 유형
 
-### Crosshair Layer
+### 십자형 레이어
 
-The Crosshair Layer provides crossing lines that meet at the actual value of every targeted series.  Crosshair types include: Horizontal, Vertical, and Both.
+십자형 레이어는 모든 대상 시리즈의 실제 값과 만나는 교차 선을 제공합니다.  십자형 유형: 수평, 수직, 양쪽 모두가 포함.
 
 ```html
 <igx-category-chart
@@ -33,9 +33,9 @@ The Crosshair Layer provides crossing lines that meet at the actual value of eve
 </igx-category-chart>
 ```
 
-### Category Tool Tip Layer
+### 카테고리 도구 힌트 레이어
 
-The Category Tool Tip Layer displays grouped tooltips for series using a category axis.
+카테고리 도구 힌트 레이어는 카테고리 축을 사용하여 시리즈에 대한 그룹화된 도구 힌트를 표시합니다.
 
 ```html
 <igx-category-chart
@@ -44,9 +44,9 @@ The Category Tool Tip Layer displays grouped tooltips for series using a categor
 </igx-category-chart>
 ```
 
-### Item Tool Tip Layer
+### 항목 도구 힌트 레이어
 
-The Item Tool Tip Layer displays tooltips for all target series individually.
+항목 도구 힌트 레이어는 모든 대상 시리즈에 대한 도구 힌트를 개별적으로 표시합니다.
 
 ```html
 <igx-category-chart
@@ -55,9 +55,9 @@ The Item Tool Tip Layer displays tooltips for all target series individually.
 </igx-category-chart>
 ```
 
-### Category Item Highlight Layer
+### 카테고리 항목 강조 표시 레이어
 
-The Category Item Highlight Layer highlights items in a series that use a category axis either by drawing a banded shape at their position or by rendering a marker at their position.
+카테고리 항목 강조 표시 레이어는 밴드 모양을 해당 위치에 그리거나 해당 위치에 마커를 렌더링하여 카테고리 축을 사용하는 시리즈의 항목을 강조 표시합니다.
 
 ```html
 <igx-category-chart
@@ -66,9 +66,9 @@ The Category Item Highlight Layer highlights items in a series that use a catego
 </igx-category-chart>
 ```
 
-### Category Highlight Layer
+### 카테고리 강조 표시 레이어
 
-The Category Highlight Layer targets a category axis, or all category axes in the chart. They draw a shape that illuminates the area of the axis closest to the cursor position.
+카테고리 강조 표시 레이어는 카테고리 축 또는 차트의 모든 카테고리 축을 대상으로 합니다. 커서 위치에 가장 가까운 축의 영역을 밝게 하는 모양을 그립니다.
 
 ```html
 <igx-category-chart
@@ -77,11 +77,11 @@ The Category Highlight Layer targets a category axis, or all category axes in th
 </igx-category-chart>
 ```
 
-## Annotation Types
+## 주석 유형
 
-### Final Value Layer
+### 최종값 레이어
 
-The Final Value Layer provides a quick view along the axis of the ending value displayed in a series.
+최종값 레이어는 시리즈에 표시된 종료값 축을 따라 빠른 보기를 제공합니다.
 
 ```html
 <igx-category-chart
@@ -90,11 +90,11 @@ The Final Value Layer provides a quick view along the axis of the ending value d
 </igx-category-chart>
 ```
 
-### Callout Layer
+### 콜아웃 레이어
 
-The Callout Layer displays a callout at X/Y positions. It can show a label and some extra content as a tooltip when hovering over the annotation.
+콜아웃 레이어는 X/Y 위치에서 콜아웃을 표시합니다. 주석 위로 마우스를 가져 가면 레이블과 일부 추가 콘텐츠를 도구 힌트처럼 표시할 수 있습니다.
 
-> Note: When using a Category axis, the `calloutsXMemberPath` should point to the numeric index or the time value for a time axis.
+> 참고: 카테고리 축을 사용하는 경우에는 `calloutsXMemberPath`는 수치 인덱스 또는 시간 축의 시간 값을 가리켜야 합니다.
 
 ```html
 <igx-category-chart

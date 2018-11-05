@@ -46,7 +46,7 @@ In order to achieve this, the [`IgxTreeGridComponent`]({environment:angularApiUr
 
 #### Tree cells
 
-Regardless of which option is used for building the tree grid's hierarchy (child collection or primary & foreign keys), the tree grid's rows are constructed of two types of cells:
+Regardless of which option is used for building the tree grid's hierarchy (child collection or primary and foreign keys), the tree grid's rows are constructed of two types of cells:
 
 - [`IgxGridCellComponent`]({environment:angularApiUrl}/classes/igxgridcellcomponent.html) - Ordinary cell that contains a value.
 - [`IgxTreeGridCellComponent`]({environment:angularApiUrl}/classes/igxtreegridcellcomponent.html) - Tree cell that contains a value, an expand/collapse indicator and an indentation div element, which is based on the level of the cell's row. The level of a row component can be accessed through the [`level`]({environment:angularApiUrl}/interfaces/itreegridrecord.html#level) property of its inner [`treeRow`]({environment:angularApiUrl}/classes/igxtreegridrowcomponent.html#treerow).
@@ -112,7 +112,6 @@ In addition, we will disable the automatic column generation and define them man
 <igx-tree-grid #treeGrid [data]="localData" childDataKey="Employees"
                [autoGenerate]="false">
     <igx-column field="Name" dataType="string"></igx-column>
-    <igx-column field="ID" dataType="number"></igx-column>
     <igx-column field="HireDate" dataType="date"></igx-column>
     <igx-column field="Age" dataType="number"></igx-column>
 </igx-tree-grid>
@@ -127,7 +126,6 @@ We will also enable the filtering, sorting, editing, moving and resizing feature
 <igx-tree-grid #treeGrid [data]="localData" childDataKey="Employees"
                [autoGenerate]="false" [rowSelectable]="true" [paging]="true">
     <igx-column field="Name" dataType="string" [filterable]="true" [sortable]="true" [editable]="true" [movable]="true" [resizable]="true"></igx-column>
-    <igx-column field="ID" dataType="number" [filterable]="true" [sortable]="true" [editable]="true" [movable]="true" [resizable]="true"></igx-column>
     <igx-column field="HireDate" dataType="date" [filterable]="true" [sortable]="true" [editable]="true" [movable]="true" [resizable]="true"></igx-column>
     <igx-column field="Age" dataType="number" [filterable]="true" [sortable]="true" [editable]="true" [movable]="true" [resizable]="true"></igx-column>
 </igx-tree-grid>
@@ -142,7 +140,6 @@ Finally, we will enable the toolbar of our tree grid, along with the column hidi
                [autoGenerate]="false" [rowSelectable]="true" [paging]="true"
                [showToolbar]="true" toolbarTitle="Employees" [columnHiding]="true" [columnPinning]="true">
     <igx-column field="Name" dataType="string" [filterable]="true" [sortable]="true" [editable]="true" [movable]="true" [resizable]="true"></igx-column>
-    <igx-column field="ID" dataType="number" [filterable]="true" [sortable]="true" [editable]="true" [movable]="true" [resizable]="true"></igx-column>
     <igx-column field="HireDate" dataType="date" [filterable]="true" [sortable]="true" [editable]="true" [movable]="true" [resizable]="true"></igx-column>
     <igx-column field="Age" dataType="number" [filterable]="true" [sortable]="true" [editable]="true" [movable]="true" [resizable]="true"></igx-column>
 </igx-tree-grid>
@@ -185,7 +182,7 @@ export class MyComponent implements OnInit {
 }
 ```
 
-In the sample data above, all records have an ID, a ParentID and some additional properties like Name, JobTitle and Age. As mentioned previously, the ID of the records must be unique. The ParentID contains the ID of the parent node or **-1** if this is a root level node (node without a parent).
+In the sample data above, all records have an ID, a ParentID and some additional properties like Name, JobTitle and Age. As mentioned previously, the ID of the records must be unique. The ParentID contains the ID of the parent node. If a row has a ParentID that does not match any row in the tree grid, then that means this row is a root row.
 
 The parent-child relation is configured using the tree grid's [`primaryKey`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#primarykey) and [`foreignKey`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#foreignkey) properties.
 
@@ -196,8 +193,6 @@ Here is the template of the component which demonstrates how to configure the tr
 
 <igx-tree-grid #treeGrid [data]="data" primaryKey="ID" foreignKey="ParentID"
     [autoGenerate]="false">
-    <igx-column field="ID" dataType="number"></igx-column>
-    <igx-column field="ParentID" dataType="number"></igx-column>
     <igx-column field="Name" dataType="string"></igx-column>
     <igx-column field="JobTitle" dataType="string"></igx-column>
     <igx-column field="Age" dataType="number"></igx-column>
@@ -211,8 +206,6 @@ In addition we will enable the row selection feature of the tree grid by using t
 
 <igx-tree-grid #treeGrid [data]="data" primaryKey="ID" foreignKey="ParentID"
     [autoGenerate]="false" [rowSelectable]="true">
-    <igx-column field="ID" dataType="number" [filterable]="true" [sortable]="true" [editable]="true" [movable]="true" [resizable]="true"></igx-column>
-    <igx-column field="ParentID" dataType="number" [filterable]="true" [sortable]="true" [editable]="true" [movable]="true" [resizable]="true"></igx-column>
     <igx-column field="Name" dataType="string" [filterable]="true" [sortable]="true" [editable]="true" [movable]="true" [resizable]="true"></igx-column>
     <igx-column field="JobTitle" dataType="string" [filterable]="true" [sortable]="true" [editable]="true" [movable]="true" [resizable]="true"></igx-column>
     <igx-column field="Age" dataType="number" [filterable]="true" [sortable]="true" [editable]="true" [movable]="true" [resizable]="true"></igx-column>
@@ -245,14 +238,20 @@ The indentation of the **tree cells** persists across other tree grid features l
 |Limitation|Description|
 |--- |--- |
 |Templating Tree Cells|When templating a tree cell, content that spans outside the boundaries of the cell will not be shown unless positioned in an overlay.|
+|Summaries|Summaries are currently not supported for the tree grid.|
+|Search API|Search API is currently not supported for the tree grid.|
+|Export|Exporting is currently not supported for the tree grid.|
+|Group By|Group By feature is not supported, because it is inherent to the tree grid.|
+
 
 <div class="divider--half"></div>
 
 ### API References
 
+<div class="divider--half"></div>
+
 * [`IgxTreeGridModule`]({environment:angularApiUrl}/classes/igxtreegridmodule.html)
 * [`IgxTreeGridComponent`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html)
-* [`IgxTreeGridComponent Styles`]({environment:sassApiUrl}/#function-igx-tree-grid-theme)
 * [`IgxTreeGridCellComponent`]({environment:angularApiUrl}/classes/igxtreegridcellcomponent.html)
 * [`IgxTreeGridRowComponent`]({environment:angularApiUrl}/classes/igxtreegridrowcomponent.html)
 * [`IgxGridComponent`]({environment:angularApiUrl}/classes/igxgridcomponent.html)

@@ -1,35 +1,35 @@
----
-title: Conditional Cell Styling - Native Angular | Ignite UI for Angular
-_description: Conditional Cell Styling feature provides a means for column cells styling based on custom conditions.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Data Grid component, Angular Data Grid control, Native Angular Components, Angular Grid component, Angular Grid control, Cell Styling, Conditional Formatting, Conditional Cell Styling, Angular Grid Conditional Column Styling, Angular Conditional Cell Styling
+﻿---
+title: 조건부 셀 스타일 - 네이티브 Angular| Ignite UI for Angular
+_description: 조건부 셀 스타일 기능은 사용자 조건에 따라 열 셀 스타일을 지정하는 방법을 제공합니다.
+_keywords: Ignite UI for Angular, UI 컨트롤, Angular 위젯, 웹 위젯, UI 위젯, Angular, 네이티브 Angular 컴포넌트 세트 네이티브 Angular 컨트롤, 네이티브 Angular 컴포넌트 라이브러리, Angular 데이터 그리드 컴포넌트, Angular 데이터 그리드 컨트롤, 네이티브 Angular 컴포넌트, Angular 그리드 컴포넌트, Angular 그리드 컨트롤, 셀 스타일, 조건부 서식, 조건부 셀 스타일, Angular 그리드 조건부 열 스타일, Angular 조건부 셀 스타일
 _language: kr
 ---
 
-### Conditional Cell Styling
-The Grid component in Ignite UI for Angular provides **conditional cell styling** based on custom rules. 
+### 조건부 셀 스타일
+Ignite UI for Angular의 그리드 컴포넌트는 사용자 규칙을 기반으로 **조건부 셀 스타일**을 제공합니다. 
 
-This can be achieved by setting the [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) input [`cellClasses`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#cellclasses) to an object literal containing key-value pairs. The key is the name of the CSS class, while the value is either a callback function that returns a boolean, or boolean value.
+이것은 [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) 입력 [`cellClasses`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#cellclasses)를 키 값 쌍이 포함된 객체 리터럴로 설정하면 됩니다. 키는 CSS 클래스의 이름이며 값은 불 값을 반환하는 콜백 함수 또는 불 값입니다.
 
-#### Demo
+#### 데모
 
 <div class="sample-container loading" style="height:530px">
     <iframe id="cell-styling-sample-iframe" src='{environment:demosBaseUrl}/grid-cell-styling' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="cell-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="cell-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
 </div>
 <div class="divider--half"></div>
 
-#### Overview
-You can conditionally style the igGrid cells by setting the [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) [`cellClasses`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#cellclasses) input and defining custom rules.
+#### 개요
+[`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) [`cellClasses`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#cellclasses) 입력 및 사용자 규칙을 설정하여 igGrid 셀의 조건부 스타일을 지정할 수 있습니다.
 
 ```html
 <!-- sample.component.html -->
 <igx-column field="BeatsPerMinute" dataType="number" [cellClasses]="beatsPerMinuteClasses"></igx-column>
 ```
 
-The [`cellClasses`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#cellclasses) input accepts an object literal, containing key-value pairs, where the key is the name of the CSS class, while the value is either a callback function that returns a boolean, or boolean value.
+[`cellClasses`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#cellclasses) 입력은 키 값 쌍을 포함하는 객체 리터럴을 허용하며 여기서 키는 CSS 클래스의 이름이고 값은 불 또는 불 값을 반환하는 콜백 함수입니다.
 
 ```typescript
 // sample.component.ts
@@ -62,40 +62,40 @@ public beatsPerMinuteClasses = {
 }
 ```
 
-Use **::ng-deep** or **`ViewEncapsulation.None`** to force the custom styles down through the current component and its children.
+**::ng-deep** 또는 **`ViewEncapsulation.None`**을 사용하여 사용자 스타일을 현재 컴포넌트와 그 하위 요소를 통해 강제로 적용할 수 있습니다.
 
-### API References
+### API 참조
 <div class="divider--half"></div>
 
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
 * [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#mixin-igx-grid)
 
-### Additional Resources
+### 추가 리소스
 <div class="divider--half"></div>
 
-* [Grid overview](grid.md)
-* [Virtualization and Performance](grid_virtualization.md)
-* [Editing](grid_editing.md)
-* [Paging](grid_paging.md)
-* [Filtering](grid_filtering.md)
-* [Sorting](grid_sorting.md)
-* [Group By](grid_groupby.md)
-* [Summaries](grid_summaries.md)
-* [Column Moving](grid_column_moving.md)
-* [Column Pinning](grid_column_pinning.md)
-* [Column Resizing](grid_column_resizing.md)
-* [Column Hiding](grid_column_hiding.md)
-* [Selection](grid_selection.md)
-* [Searching](grid_search.md)
-* [Toolbar](grid_toolbar.md)
-* [Export to Excel](exporter_excel.md)
-* [Paste from Excel](grid_paste_excel.md)
-* [Multi Column Headers](grid_multi_column_headers.md)
-* [Display Density](grid_displayDensity.md)
+* [그리드 개요](grid.md)
+* [가상화 및 성능](grid_virtualization.md)
+* [편집](grid_editing.md)
+* [페이징](grid_paging.md)
+* [필터링](grid_filtering.md)
+* [정렬](grid_sorting.md)
+* [그룹화](grid_groupby.md)
+* [요약](grid_summaries.md)
+* [열 이동](grid_column_moving.md)
+* [열 핀 고정](grid_column_pinning.md)
+* [열 크기 조정](grid_column_resizing.md)
+* [열 숨기기](grid_column_hiding.md)
+* [선택](grid_selection.md)
+* [검색](grid_search.md)
+* [도구 모음](grid_toolbar.md)
+* [Excel로 내보내기](exporter_excel.md)
+* [Excel에서 붙여넣기](grid_paste_excel.md)
+* [복수 열 헤더](grid_multi_column_headers.md)
+* [표시 밀도](grid_displayDensity.md)
 
 <div class="divider--half"></div>
-Our community is active and always welcoming to new ideas.
+커뮤니티는 활동적이고 새로운 아이디어를 항상 환영합니다.
 
 * [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
 * [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

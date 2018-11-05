@@ -7,7 +7,7 @@ _language: ja
 
 ## TextHighlight ディレクティブ
 
-Ignite UI for Angular の `IgxTextHighlight` ディレクティブは、テキストのハイライト、大文字と小文字の区別のオプション、完全一致のみのハイライトをサポートします。既にハイライトしている部分を含む、テキストのハイライトをアクティブに保持できます。
+Ignite UI for Angular の [`IgxTextHighlight`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html) ディレクティブは、テキストのハイライト、大文字と小文字の区別のオプション、完全一致のみのハイライトをサポートします。既にハイライトしている部分を含む、テキストのハイライトをアクティブに保持できます。
 
 ### TextHighlight デモ
 <div class="sample-container loading" style="height: 260px;">
@@ -23,7 +23,7 @@ Ignite UI for Angular の `IgxTextHighlight` ディレクティブは、テキ�
 
 ### 使用方法
 
-Ignite UI for Angular TextHighlight ディレクティブを使用する前に **app.module.ts** ファイルに **IgxTextHighlightModule** とアプリケーションに必要な他の Ignute UI for Angular モジュールをインポートします。
+Ignite UI for Angular TextHighlight ディレクティブを使用する前に **app.module.ts** ファイルに [`IgxTextHighlightModule`]({environment:angularApiUrl}/classes/igxtexthighlightmodule.html) とアプリケーションに必要な他の Ignute UI for Angular モジュールをインポートします。
 
 ```typescript
 // app.module.ts
@@ -41,7 +41,7 @@ import { IgxButtonModule, IgxInputGroupModule,
 export class AppModule {}
 ```
 
-次にテキストの異なる部分のハイライトに使用できる検索ボックスを作成します。Ignite UI for Angular の [InputGroup](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/input_group.html) コンポーネントは、一致のクリア、次の一致、前の一致へ移動するためのボタン、検索で大文字と小文字を区別を指定するボタンを追加します。また一致がいくつ見つかったかをを示すラベルがあります。
+次にテキストの異なる部分のハイライトに使用できる検索ボックスを作成します。Ignite UI for Angular の [InputGroup](input_group.md) コンポーネントは、一致のクリア、次の一致、前の一致へ移動するためのボタン、検索で大文字と小文字を区別を指定するボタンを追加します。また一致がいくつ見つかったかをを示すラベルがあります。
 
 ```html
 <div class="search-container">
@@ -198,7 +198,7 @@ export class AppModule {}
 <div class="divider"></div>
 
 ### 複数コンテナで検索
-igxTextHighlight は、1 つのアクティブ ハイライトを共有する複数のコンテナ内を検索できます。個々にコンテナを持つ複数の TextHighlight ディレクティブで同じグループ値を持つことにより可能になります。サンプルの設定は、前のサンプルの検索ボックスを再利用しますが、今回は 2 段落追加します。両方ともコンテナにありますが 2 つ目は行に異なる値があります。
+[`igxTextHighlight`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html) は、1 つのアクティブ ハイライトを共有する複数のコンテナ内を検索できます。個々にコンテナを持つ複数の TextHighlight ディレクティブで同じグループ値を持つことにより可能になります。サンプルの設定は、前のサンプルの検索ボックスを再利用しますが、今回は 2 段落追加します。両方ともコンテナにありますが 2 つ目は行に異なる値があります。
 
 ```html
     <div>
@@ -303,40 +303,20 @@ On top of the functionality from the previous sample, this sample demonstrates h
 
 <div class="divider"></div>
 
-### API まとめ
+### API とスタイルのリファレンス
 
-以下の表は TextHighlight ディレクティブの入力とメソッドの概要です。
+TextHighlight ディレクティブの API に関する詳細な情報は、以下のリンクのトピックを参照してください。
+* [`IgxTextHighlight API`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html)
 
-#### 入力
+使用したその他のコンポーネント:
 
-以下の入力は、**igxTextHighlight** ディレクティブで使用できます。
-
-| 名前 | 型 | 説明 |
-| :--- | :--- | :--- |
-| `groupName`| string | アクティブ ハイライトが共有されるグループを定義します。 |
-| `row`| number | ディレクティブが配置される行を定義します。 |
-| `column`| number | ディレクティブが配置される列を定義します。 |
-| `page`| number | ディレクティブが配置されるページを定義します。 |
-| `value`| any | 検索を実行する基になる値を定義します。 |
-
-<div class="divider"></div>
-
-#### メソッド
-
-以下のメソッドは、**igxTextHighlight** ディレクティブで使用できます。
-
-| 名前 | 戻り型 | パラメーター | 説明 |
-| :--- | :--- | :--- | :--- |
-| `highlight`| number | テキストをハイライトし、オプションで検索で大文字と小文字を区別するかどうか、また完全一致のみハイライトするかどうか。 | 検索した文字列をハイライトして値に検索済みのハイライトされた文字列をいくつ含むかを返します。|
-| `clearHighlight`| void | なし | 既存のハイライトをすべてクリアします。 |
-| `activateIfNecessary`| void | なし | 現在アクティブなハイライトの場合ハイライトをアクティブ化します。 |
-| `setActiveHighlight`| void | groupName と行、列、ページ、を含むオブジェクト実装インターフェイスをアクティブ化します。 | 行、列、ページで指定したグループのハイライトをアクティブ化します。 |
-| `clearActiveHighlight`| void | グループの名前 | 指定したグループのアクティブ ハイライトをクリアします。 |
+* [`IgxInputGroupComponent`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
+* [`IgxInputGroupComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-input-group-theme)
 
 <div class="divider"></div>
 
 ### その他のリソース
-* [Grid 検索](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/grid_search.html)
+* [Grid 検索](grid_search.md)
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。

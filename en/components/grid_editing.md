@@ -46,7 +46,7 @@ You can exit edit mode and **commit** the changes in one of the following ways:
 > [!NOTE]
 > The cell remains in edit mode when you scroll vertically or horizontally, click outside the grid, resize column, pin column or go to another page.
 
-You can also modify the cell value through the IgxGrid API but only if primary is defined:
+You can also modify the cell value through the IgxGrid API but only if primary key is defined:
 
 ```typescript
 ...
@@ -69,7 +69,7 @@ Another way to update cell is directly through [`update`]({environment:angularAp
     }
 ...
 ```
-If you want to define a custom template which will be applied when the cell is edit mode, you can see the documentation for [Grid Columns configuration](grid.md#columns-configuration).
+If you want to define a custom template which will be applied when the cell is in edit mode, you can see the documentation for [Grid Columns configuration](grid.md#columns-configuration).
 
 ### CRUD operations
 
@@ -126,7 +126,8 @@ These can be wired to user interactions, not necessarily related to the **igx-gr
 
 <div class="divider--half"></div>
 
-### API
+## API References
+
 * [IgxGridCellComponent]({environment:angularApiUrl}/classes/igxgridcellcomponent.html)
 * [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 * [IgxGridRowComponent]({environment:angularApiUrl}/classes/igxgridrowcomponent.html)

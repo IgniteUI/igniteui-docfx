@@ -26,17 +26,17 @@ Ignite UI for Angular Data Grid に**列非表示**機能があります。こ�
 ```html
 <!--columnHiding.component.html-->
 
-<igx-grid #grid id="grid" [data]="data" [autoGenerate]="false" width="100%" height="560px" columnWidth="200px">
-    <igx-column [field]="'ID'" dataType="string" [filterable]="true" [sortable]="true"></igx-column>
-    <igx-column [field]="'ContactName'" dataType="string" [filterable]="true" [sortable]="true"></igx-column>
-    <igx-column [field]="'ContactTitle'" dataType="string" [filterable]="true" [sortable]="true"></igx-column>
-    <igx-column [field]="'City'" dataType="string" [filterable]="true" [sortable]="true"></igx-column>
-    <igx-column [field]="'CompanyName'" dataType="string" [filterable]="true" [sortable]="true"></igx-column>
-    <igx-column [field]="'Fax'" dataType="string" [filterable]="true" [sortable]="true"></igx-column>
-    <igx-column [field]="'Address'" dataType="string" [filterable]="true" [sortable]="true"></igx-column>
-    <igx-column [field]="'PostalCode'" dataType="string" [filterable]="true" [sortable]="true"></igx-column>
-    <igx-column [field]="'Country'" dataType="string" [filterable]="true" [sortable]="true"></igx-column>
-    <igx-column [field]="'Phone'" dataType="string" [filterable]="true" [sortable]="true"></igx-column>
+<igx-grid #grid id="grid" [data]="data" [autoGenerate]="false" width="100%" height="560px" columnWidth="200px" [allowFiltering]="true">
+    <igx-column [field]="'ID'" dataType="string" [sortable]="true"></igx-column>
+    <igx-column [field]="'ContactName'" dataType="string" [sortable]="true"></igx-column>
+    <igx-column [field]="'ContactTitle'" dataType="string" [sortable]="true"></igx-column>
+    <igx-column [field]="'City'" dataType="string" [sortable]="true"></igx-column>
+    <igx-column [field]="'CompanyName'" dataType="string" [sortable]="true"></igx-column>
+    <igx-column [field]="'Fax'" dataType="string" [sortable]="true"></igx-column>
+    <igx-column [field]="'Address'" dataType="string" [sortable]="true"></igx-column>
+    <igx-column [field]="'PostalCode'" dataType="string" [sortable]="true"></igx-column>
+    <igx-column [field]="'Country'" dataType="string" [sortable]="true"></igx-column>
+    <igx-column [field]="'Phone'" dataType="string" [sortable]="true"></igx-column>
 </igx-grid>
 ```
 
@@ -236,8 +236,8 @@ export class AppModule {}
 <div class="gridContainer">
     <igx-grid ... >
         ...
-        <igx-column [field]="'ContactName'" dataType="string" [filterable]="true" [sortable]="true" [disableHiding]="true"></igx-column>
-        <igx-column [field]="'ContactTitle'" dataType="string" [filterable]="true" [sortable]="true" [disableHiding]="true"></igx-column>
+        <igx-column [field]="'ContactName'" dataType="string" [sortable]="true" [disableHiding]="true"></igx-column>
+        <igx-column [field]="'ContactTitle'" dataType="string" [sortable]="true" [disableHiding]="true"></igx-column>
         ...
     </igx-grid>
 </div>

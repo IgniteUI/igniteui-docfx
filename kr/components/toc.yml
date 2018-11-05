@@ -5,66 +5,69 @@
   href: grid.md
   new: true
   items:
-    - name: Virtualization and performance
+    - name: 그리드 가상화 및 성능
       href: grid_virtualization.md
       new: false
-    - name: Editing
+    - name: 그리드 편집
       href: grid_editing.md
       new: true
-    - name: Paging
+    - name: Row Editing
+      href: grid_row_editing.md
+      new: true
+    - name: Batch Editing
+      href: grid_batch_editing.md
+      new: true
+    - name: 그리드 페이징
       href: grid_paging.md
       new: false
-    - name: Filtering
+    - name: 그리드 필터링
       href: grid_filtering.md
       new: true
-    - name: Sorting
+    - name: 그리드 정렬
       href: grid_sorting.md
       new: false
-    - name: Group By
+    - name: 그리드의 그룹화
       href: grid_groupby.md
       new: true
-    - name: Summaries
+    - name: 그리드 요약
       href: grid_summaries.md
       new: false
-    - name: Column moving
+    - name: 그리드 열 이동
       href: grid_column_moving.md
       new: true
-    - name: Column pinning
+    - name: 그리드 열 핀 고정
       href: grid_column_pinning.md
       new: false
-    - name: Column resizing
+    - name: 그리드 열 크기 조정
       href: grid_column_resizing.md
       new: false
-    - name: Column hiding
+    - name: 그리드 열 숨기기
       href: grid_column_hiding.md
       new: true
-    - name: Selection
+    - name: 데이터 그리드 행 선택
       href: grid_selection.md
       new: false
-    - name: Searching
+    - name: 그리드 검색
       href: grid_search.md
       new: true
-    - name: Toolbar
+    - name: 그리드 도구 모음
       href: grid_toolbar.md
       new: true
     - name: Export to Excel
       href: exporter_excel.md
       new: false
-    - name: Paste from Excel
+    - name: Excel에서 붙여넣기
       href: grid_paste_excel.md
       new: true
-    - name: Multi Column Headers
+    - name: 복수 열 헤더
       href: grid_multi_column_headers.md
       new: true
-    - name: Display Density
+    - name: 그리드 표시 밀도
       href: grid_displayDensity.md
       new: true
-    - name: Conditional Cell Styling
+    - name: 조건부 셀 스타일
       href: grid_conditional_cell_styling.md
       new: true
-- name: Tree Grid
-  href: treegrid.md
-  new: true
   items:
   - name: Row Editing
     href: treegrid_row_editing.md
@@ -92,55 +95,55 @@
 - name: Category Chart
   href: categorychart.md
   items:
-    - name: Annotations and Overlays
+    - name: 카테고리 차트 주석 및 오버레이
       href: categorychart_annotation_layers.md
       new: true
-    - name: Explore Chart Types
+    - name: 차트 유형 탐색
       href: categorychart_explore_chart_types.md
       new: false
-    - name: Real Time Data
+    - name: 실시간 데이터
       href: categorychart_real_time_data.md
       new: false
-    - name: High Volume Data
+    - name: 대용량 데이터
       href: categorychart_high_volume_data.md
       new: false
-    - name: Configuration Options
+    - name: 컨피규레이터 옵션
       href: categorychart_configuration_options.md
       new: false
-    - name: Custom Tooltips
+    - name: 사용자 도구 설명
       href: categorychart_custom_tooltips.md
       new: false
 - name: Financial Chart
   href: financialchart.md
   items:
-    - name: Annotations and Overlays
+    - name: 주석 및 오버레이
       href: financialchart_annotation_layers.md
       new: true
-    - name: Explore Chart Types
+    - name: 차트 유형 탐색
       href: financialchart_explore_chart_types.md
       new: false
-    - name: Real Time Data
+    - name: 실시간 데이터 바인딩
       href: financialchart_real_time_data.md
       new: false
-    - name: High Volume Data
+    - name: 대용량 데이터
       href: financialchart_high_volume_data.md
       new: false
-    - name: Performance
+    - name: 퍼포먼스
       href: financialchart_performance.md
       new: false
-    - name: Binding to Multiple Data Sources
+    - name: 금융 차트를 복수의 데이터 소스에 바인딩
       href: financialchart_binding_to_multiple_data.md
       new: false
-    - name: Panes
+    - name: 금융 차트 창
       href: financialchart_panes.md
       new: false
-    - name: Configuration Options
+    - name: 컨피규레이터 옵션
       href: financialchart_configuration_options.md
       new: false
-    - name: Custom Indicators
+    - name: 사용자 인디케이터
       href: financialchart_custom_indicators.md
       new: false
-    - name: Custom Tooltips
+    - name: 사용자 도구 설명
       href: financialchart_custom_tooltips.md
 - name: Gauges
   header: true
@@ -171,6 +174,8 @@
       href: themes/typography.md
 - name: Shadows
   href: shadows.md
+- name: Display Density
+  href: display_density.md
 - name: Data Entry & Display
   header: true
 - name: Drop Down
