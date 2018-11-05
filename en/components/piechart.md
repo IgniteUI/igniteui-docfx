@@ -105,8 +105,7 @@ Sometimes, the underlying data for the Pie Chart component will contain many ite
 
 In the sample below, the `othersCategoryThreshold` is set to 2, and `othersCategoryType` is set to Number. Therefore, items with value less than or equal to 2 will be assigned to the “Others” category.
 
- [!NOTE]
-If you set `othersCategoryType` to Percent, then `othersCategoryThreshold` will be interpreted as a percentage rather than as a value, i.e. items whose values are less than 2% of the sum of all item values would be assigned to the Others category. You can use whichever `othersCategoryType` is most appropriate for your application.
+> Note: If you set `othersCategoryType` to Percent, then `othersCategoryThreshold` will be interpreted as a percentage rather than as a value, i.e. items whose values are less than 2% of the sum of all item values would be assigned to the Others category. You can use whichever `othersCategoryType` is most appropriate for your application.
 
 
 ```html
