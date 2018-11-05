@@ -303,12 +303,12 @@ On top of the functionality from the previous sample, this sample demonstrates h
 
 <div class="divider"></div>
 
-### API and Style References
+### API とスタイルのリファレンス
 
-For more detailed information regarding the TextHighlight directive's API, refer to the following link:
+TextHighlight ディレクティブの API に関する詳細な情報は、以下のリンクのトピックを参照してください。
 * [`IgxTextHighlight API`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html)
 
-Additional components that were used:
+使用したその他のコンポーネント:
 
 * [`IgxInputGroupComponent`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
 * [`IgxInputGroupComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-input-group-theme)
