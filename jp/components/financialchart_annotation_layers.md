@@ -1,28 +1,28 @@
----
-title: ƒJƒeƒSƒŠ ƒ`ƒƒ[ƒg’Žß‚ÆƒI[ƒo[ƒŒƒC
-_description: Ignite UI for Angular Financial Chart ƒRƒ“ƒ|[ƒlƒ“ƒg‚ÍAƒVƒ“ƒvƒ‹‚Å’¼Š´“I‚È API ‚ðŽg—p‚µ‚Äƒtƒ@ƒCƒiƒ“ƒVƒƒƒ‹ ƒf[ƒ^‚ð•\Ž¦‚µ‚Ü‚·Bƒ†[ƒU[‚ªƒf[ƒ^‚ÉƒoƒCƒ“ƒhŒãAƒ`ƒƒ[ƒg‚Íƒf[ƒ^‚Ì‰ÂŽ‹‰»ƒIƒvƒVƒ‡ƒ“‚ð•¡”’ñ‹Ÿ‚µ‚Ü‚·B
-_keywords: Ignite UI for Angular, Angular, ƒlƒCƒeƒBƒu Angular ƒRƒ“ƒ|[ƒlƒ“ƒg ƒXƒC[ƒg, ƒlƒCƒeƒBƒu Angular ƒRƒ“ƒgƒ[ƒ‹, ƒlƒCƒeƒBƒu Angular ƒRƒ“ƒ|[ƒlƒ“ƒg, ƒlƒCƒeƒBƒu Angular ƒRƒ“ƒ|[ƒlƒ“ƒg ƒ‰ƒCƒuƒ‰ƒŠ, Angular ƒ`ƒƒ[ƒg, Angular ƒ`ƒƒ[ƒg ƒRƒ“ƒgƒ[ƒ‹, Angular ƒ`ƒƒ[ƒg—á, Angular Grid ƒRƒ“ƒ|[ƒlƒ“ƒg, Angular Chart ƒRƒ“ƒ|[ƒlƒ“ƒg, Angular Financial Chart
+ï»¿---
+title: ã‚«ãƒ†ã‚´ãƒª ãƒãƒ£ãƒ¼ãƒˆæ³¨é‡ˆã¨ã‚ªãƒ¼ãƒãƒ¼ãƒ¬ã‚¤
+_description: Ignite UI for Angular Financial Chart ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆã¯ã€ã‚·ãƒ³ãƒ—ãƒ«ã§ç›´æ„Ÿçš„ãª API ã‚’ä½¿ç”¨ã—ã¦ãƒ•ã‚¡ã‚¤ãƒŠãƒ³ã‚·ãƒ£ãƒ« ãƒ‡ãƒ¼ã‚¿ã‚’è¡¨ç¤ºã—ã¾ã™ã€‚ãƒ¦ãƒ¼ã‚¶ãƒ¼ãŒãƒ‡ãƒ¼ã‚¿ã«ãƒã‚¤ãƒ³ãƒ‰å¾Œã€ãƒãƒ£ãƒ¼ãƒˆã¯ãƒ‡ãƒ¼ã‚¿ã®å¯è¦–åŒ–ã‚ªãƒ—ã‚·ãƒ§ãƒ³ã‚’è¤‡æ•°æä¾›ã—ã¾ã™ã€‚
+_keywords: Ignite UI for Angular, Angular, ãƒã‚¤ãƒ†ã‚£ãƒ– Angular ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆ ã‚¹ã‚¤ãƒ¼ãƒˆ, ãƒã‚¤ãƒ†ã‚£ãƒ– Angular ã‚³ãƒ³ãƒˆãƒ­ãƒ¼ãƒ«, ãƒã‚¤ãƒ†ã‚£ãƒ– Angular ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆ, ãƒã‚¤ãƒ†ã‚£ãƒ– Angular ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆ ãƒ©ã‚¤ãƒ–ãƒ©ãƒª, Angular ãƒãƒ£ãƒ¼ãƒˆ, Angular ãƒãƒ£ãƒ¼ãƒˆ ã‚³ãƒ³ãƒˆãƒ­ãƒ¼ãƒ«, Angular ãƒãƒ£ãƒ¼ãƒˆä¾‹, Angular Grid ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆ, Angular Chart ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆ, Angular Financial Chart
 _language: ja
 ---
-## ƒJƒeƒSƒŠ ƒ`ƒƒ[ƒg’Žß‚ÆƒI[ƒo[ƒŒƒC
+## ã‚«ãƒ†ã‚´ãƒª ãƒãƒ£ãƒ¼ãƒˆæ³¨é‡ˆã¨ã‚ªãƒ¼ãƒãƒ¼ãƒ¬ã‚¤
 
-‚±‚ÌƒgƒsƒbƒN‚Å‚ÍA`igx-financial-chart` ‚Ì’Žß‚âƒCƒ“ƒ^ƒ‰ƒNƒVƒ‡ƒ“‚É‚Â‚¢‚Äà–¾‚µ‚Ü‚·B
+ã“ã®ãƒˆãƒ”ãƒƒã‚¯ã§ã¯ã€`igx-financial-chart` ã®æ³¨é‡ˆã‚„ã‚¤ãƒ³ã‚¿ãƒ©ã‚¯ã‚·ãƒ§ãƒ³ã«ã¤ã„ã¦èª¬æ˜Žã—ã¾ã™ã€‚
 
-### ƒfƒ‚
+### ãƒ‡ãƒ¢
 <div class="sample-container" style="height: 550px">
     <iframe id="financial-chart-annotations-and-overlays-iframe" src='{environment:demosBaseUrl}/financial-chart-annotations-and-overlays' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="financial-chart-annotations-and-overlays-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz ‚Å•\Ž¦ŠJ‚­
+    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="financial-chart-annotations-and-overlays-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz ã§è¡¨ç¤ºé–‹ã
     </button>
 </div>
 <div class="divider--half"></div>
 
-## ƒI[ƒo[ƒŒƒC ƒ^ƒCƒv
+## ã‚ªãƒ¼ãƒãƒ¼ãƒ¬ã‚¤ ã‚¿ã‚¤ãƒ—
 
-### \ŽšüƒŒƒCƒ„[
+### åå­—ç·šãƒ¬ã‚¤ãƒ¤ãƒ¼
 
-Crosshair Layer ‚ÍAŠeƒ^[ƒQƒbƒg ƒVƒŠ[ƒY‚ÌŽÀÛ‚Ì’l‚Éˆê’v‚·‚é\Žšü‚ð’ñ‹Ÿ‚µ‚Ü‚·BCrosshair ƒ^ƒCƒv‚ÍAHorizontalAVerticalABoth ‚ª‚ ‚è‚Ü‚·B
+Crosshair Layer ã¯ã€å„ã‚¿ãƒ¼ã‚²ãƒƒãƒˆ ã‚·ãƒªãƒ¼ã‚ºã®å®Ÿéš›ã®å€¤ã«ä¸€è‡´ã™ã‚‹åå­—ç·šã‚’æä¾›ã—ã¾ã™ã€‚Crosshair ã‚¿ã‚¤ãƒ—ã¯ã€Horizontalã€Verticalã€Both ãŒã‚ã‚Šã¾ã™ã€‚
 
 ```html
 <igx-financial-chart
@@ -35,9 +35,9 @@ Crosshair Layer ‚ÍAŠeƒ^[ƒQƒbƒg ƒVƒŠ[ƒY‚ÌŽÀÛ‚Ì’l‚Éˆê’v‚·‚é\Žšü‚ð’ñ‹Ÿ‚µ‚Ü‚·
 </igx-financial-chart>
 ```
 
-### ƒJƒeƒSƒŠ ƒc[ƒ‹ƒ`ƒbƒv ƒŒƒCƒ„[
+### ã‚«ãƒ†ã‚´ãƒª ãƒ„ãƒ¼ãƒ«ãƒãƒƒãƒ— ãƒ¬ã‚¤ãƒ¤ãƒ¼
 
-ƒJƒeƒSƒŠ ƒc[ƒ‹ƒ`ƒbƒv ƒŒƒCƒ„[‚ÍAƒJƒeƒSƒŠŽ²‚ðŽg—p‚·‚éƒVƒŠ[ƒY—p‚ÉƒOƒ‹[ƒv‰»‚³‚ê‚½ƒc[ƒ‹ƒ`ƒbƒv‚ð•\Ž¦‚µ‚Ü‚·B
+ã‚«ãƒ†ã‚´ãƒª ãƒ„ãƒ¼ãƒ«ãƒãƒƒãƒ— ãƒ¬ã‚¤ãƒ¤ãƒ¼ã¯ã€ã‚«ãƒ†ã‚´ãƒªè»¸ã‚’ä½¿ç”¨ã™ã‚‹ã‚·ãƒªãƒ¼ã‚ºç”¨ã«ã‚°ãƒ«ãƒ¼ãƒ—åŒ–ã•ã‚ŒãŸãƒ„ãƒ¼ãƒ«ãƒãƒƒãƒ—ã‚’è¡¨ç¤ºã—ã¾ã™ã€‚
 
 ```html
 <igx-financial-chart
@@ -48,9 +48,9 @@ Crosshair Layer ‚ÍAŠeƒ^[ƒQƒbƒg ƒVƒŠ[ƒY‚ÌŽÀÛ‚Ì’l‚Éˆê’v‚·‚é\Žšü‚ð’ñ‹Ÿ‚µ‚Ü‚·
 </igx-financial-chart>
 ```
 
-### ƒAƒCƒeƒ€ ƒc[ƒ‹ƒ`ƒbƒv ƒŒƒCƒ„[
+### ã‚¢ã‚¤ãƒ†ãƒ  ãƒ„ãƒ¼ãƒ«ãƒãƒƒãƒ— ãƒ¬ã‚¤ãƒ¤ãƒ¼
 
-ƒAƒCƒeƒ€ ƒc[ƒ‹ƒ`ƒbƒv ƒŒƒCƒ„[‚ÍA‚·‚×‚Ä‚Ìƒ^[ƒQƒbƒg ƒVƒŠ[ƒY‚Éƒc[ƒ‹ƒ`ƒbƒv‚ð•\‚µ‚Ü‚·B
+ã‚¢ã‚¤ãƒ†ãƒ  ãƒ„ãƒ¼ãƒ«ãƒãƒƒãƒ— ãƒ¬ã‚¤ãƒ¤ãƒ¼ã¯ã€ã™ã¹ã¦ã®ã‚¿ãƒ¼ã‚²ãƒƒãƒˆ ã‚·ãƒªãƒ¼ã‚ºã«ãƒ„ãƒ¼ãƒ«ãƒãƒƒãƒ—ã‚’è¡¨ã—ã¾ã™ã€‚
 
 ```html
 <igx-financial-chart
@@ -61,11 +61,11 @@ Crosshair Layer ‚ÍAŠeƒ^[ƒQƒbƒg ƒVƒŠ[ƒY‚ÌŽÀÛ‚Ì’l‚Éˆê’v‚·‚é\Žšü‚ð’ñ‹Ÿ‚µ‚Ü‚·
 </igx-financial-chart>
 ```
 
-## ’Žßƒ^ƒCƒv
+## æ³¨é‡ˆã‚¿ã‚¤ãƒ—
 
-### ÅI’lƒŒƒCƒ„[
+### æœ€çµ‚å€¤ãƒ¬ã‚¤ãƒ¤ãƒ¼
 
-ÅI’lƒŒƒCƒ„[‚ÍAƒVƒŠ[ƒY‚É•\Ž¦‚³‚ê‚½ÅI’l‚ÌŽ²‚É‰ˆ‚Á‚½ƒNƒCƒbƒNƒrƒ…[‚ðƒTƒ|[ƒg‚µ‚Ü‚·B
+æœ€çµ‚å€¤ãƒ¬ã‚¤ãƒ¤ãƒ¼ã¯ã€ã‚·ãƒªãƒ¼ã‚ºã«è¡¨ç¤ºã•ã‚ŒãŸæœ€çµ‚å€¤ã®è»¸ã«æ²¿ã£ãŸã‚¯ã‚¤ãƒƒã‚¯ãƒ“ãƒ¥ãƒ¼ã‚’ã‚µãƒãƒ¼ãƒˆã—ã¾ã™ã€‚
 
 ```html
 <igx-financial-chart
@@ -76,11 +76,11 @@ Crosshair Layer ‚ÍAŠeƒ^[ƒQƒbƒg ƒVƒŠ[ƒY‚ÌŽÀÛ‚Ì’l‚Éˆê’v‚·‚é\Žšü‚ð’ñ‹Ÿ‚µ‚Ü‚·
 </igx-financial-chart>
 ```
 
-### ƒR[ƒ‹ƒAƒEƒg ƒŒƒCƒ„[
+### ã‚³ãƒ¼ãƒ«ã‚¢ã‚¦ãƒˆ ãƒ¬ã‚¤ãƒ¤ãƒ¼
 
-ƒR[ƒ‹ƒAƒEƒg ƒŒƒCƒ„[‚ÍAX/Y ˆÊ’u‚ÉƒR[ƒ‹ƒAƒEƒg‚ð•\Ž¦‚µ‚Ü‚·B’Žß‚Éƒzƒo[‚µ‚½Û‚Éƒ‰ƒxƒ‹‚Æ’Ç‰ÁƒRƒ“ƒeƒ“ƒc‚ðƒc[ƒ‹ƒ`ƒbƒv‚Å•\Ž¦‚Å‚«‚Ü‚·B
+ã‚³ãƒ¼ãƒ«ã‚¢ã‚¦ãƒˆ ãƒ¬ã‚¤ãƒ¤ãƒ¼ã¯ã€X/Y ä½ç½®ã«ã‚³ãƒ¼ãƒ«ã‚¢ã‚¦ãƒˆã‚’è¡¨ç¤ºã—ã¾ã™ã€‚æ³¨é‡ˆã«ãƒ›ãƒãƒ¼ã—ãŸéš›ã«ãƒ©ãƒ™ãƒ«ã¨è¿½åŠ ã‚³ãƒ³ãƒ†ãƒ³ãƒ„ã‚’ãƒ„ãƒ¼ãƒ«ãƒãƒƒãƒ—ã§è¡¨ç¤ºã§ãã¾ã™ã€‚
 
-> ’: X Ž²ƒ‚[ƒh‚ðŽg—p‚·‚éÛ‚É `eventsXMemberPath` ‚Í”’lƒCƒ“ƒfƒbƒNƒX‚ðƒ|ƒCƒ“ƒg‚·‚é•K—v‚ª‚ ‚è‚Ü‚·B‚ ‚é‚¢‚ÍA`eventsXMemberPath` ‚ðŽžŠÔ’l‚Éƒ|ƒCƒ“ƒg‚µ‚Ä‚­‚¾‚³‚¢B
+> æ³¨: X è»¸ãƒ¢ãƒ¼ãƒ‰ã‚’ä½¿ç”¨ã™ã‚‹éš›ã« `eventsXMemberPath` ã¯æ•°å€¤ã‚¤ãƒ³ãƒ‡ãƒƒã‚¯ã‚¹ã‚’ãƒã‚¤ãƒ³ãƒˆã™ã‚‹å¿…è¦ãŒã‚ã‚Šã¾ã™ã€‚ã‚ã‚‹ã„ã¯ã€`eventsXMemberPath` ã‚’æ™‚é–“å€¤ã«ãƒã‚¤ãƒ³ãƒˆã—ã¦ãã ã•ã„ã€‚
 
 ```html
 <igx-financial-chart
