@@ -1,18 +1,19 @@
 ---
-title: Grid Transactions - Native Angular | Ignite UI for Angular
-_description: TransactionService is an injectable middleware that a component can use to accumulate changes without affecting the underlying data. The provider exposes API to access, manipulate changes (undo and redo) and discard or commit all to the data.
+title: Grid トランザクション - ネイティブ Angular | Ignite UI for Angular
+_description: TransactionService はミドルウェアプロバイダーは、データのアクセス、変更の操作 (undo と redo)、すべて破棄または確定のための API を公開します。 
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Component, Angular Grid, Angular Data Grid component, Angular Data Grid control, Angular Grid component, Angular Grid control, Angular High Performance Grid, Cell Editing, Row Editing, Batch Updating, Batch Editing, Transactions
+_language: ja
 ---
 
-## Grid Transactions
+## Grid トランザクション
 
 [`TransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) is an injectable middleware that a component can use to accumulate changes without affecting the underlying data. The provider exposes API to access, manipulate changes (undo and redo) and discard or commit all to the data.
 
-The [`TransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) works with both cell editing and row editing. The transaction for the cell edit is added when the cell exits edit mode, while row transaction is created, when the row exits edit mode. But in both cases the state of the grid edits consist of all updated, added and deleted rows and their last states. Those can later be inspected, manipulated and submitted at once. Changes are collected for individual cells or rows, depending on editing mode, and accumulated per data row/record.
+[`TransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) はセル編集と行編集の両方と動作します。行編集の終了時に行トランザクションが追加された場合、セル編集のトランザクションはセルが編集モードを終了したときに追加されます。グリッド編集のステートは、すべての行を編集済み、追加済み、削除済み、そして最後のステートで構成されます。これらは後でインスペクト、操作、サブミットを一度に行います。個々のセルまたは行の変更を集めて、編集モードに基づいてデータ行/レコードごとに蓄積します。
 
-### Demo
+### デモ
 
-The following sample demonstrates a scenario, where the grid has the Transaction as provider and has row editing enabled. This will ensure that transaction will be added after the entire row edit is confirmed.
+以下のサンプルは、グリッドにプロバイダーのトランザクションがあり、行編集が有効されています。行編集全体を確定後にトランザクションが追加されるようにします。
 
 <div class="sample-container loading" style="height:650px">
     <iframe id="grid-transaction-sample-iframe" src='{environment:demosBaseUrl}/grid-transaction' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -24,10 +25,10 @@ The following sample demonstrates a scenario, where the grid has the Transaction
 <div class="divider--half"></div>
 
 > [!NOTE]
-> Transaction state consists of all the updated, added and deleted rows and their last states.
+> トランザクション ステートは、すべての更新、追加、削除された行、そして最後のステートで構成されます。
 
-## Usage
-To get started import the [`IgxGridModule`]({environment:angularApiUrl}/classes/igxgridmodule.html) in the **app.module.ts** file:
+## 使用方法
+**app.module.ts** ファイルの [`IgxGridModule`]({environment:angularApiUrl}/classes/igxgridmodule.html) をインポートします。
 
 ```typescript
 // app.module.ts
@@ -43,7 +44,7 @@ import { IgxGridModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-Then you need to define the igxTransactionService as provider for the grid:
+グリッドに igxTransactionService 定義する必要があります。
 
 ```typescript
 import { Component } from "@angular/core";
@@ -58,9 +59,9 @@ export class GridWithTransactionsComponent { }
 
 ```
 
-Note: `IgxGridTransaction` is injection token defined by the grid.
+注: `IgxGridTransaction` はグリッドで定義されたインジェクション トークンです。
 
-Then define a grid with bound data source and [`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditable) set to true:
+データソースにバインドするグリッドを定義をして [`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditable) を true に設定します。
 
 ```html
 <app-grid-with-transactions>
@@ -80,7 +81,7 @@ Then define a grid with bound data source and [`rowEditable`]({environment:angul
 </app-grid-with-transactions>
 ```
 
-The following code demonstrates the usage of the [`transactions`]({environment:angularApiUrl}/classes/igxtransactionservice.html) API - undo, redo, commit.
+以下のコード例は、[`transactions`]({environment:angularApiUrl}/classes/igxtransactionservice.html) API (undo, redo, commit) の使用方法を示します。
 
 ```typescript
 import { Component, ViewChild } from "@angular/core";
@@ -159,13 +160,13 @@ export class GridTransactionSampleComponent {
 
 ```
 > [!NOTE]
-> Disabling [`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditable) property will modify grid to create transactions on cell change.
+> [`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditable) プロパティを無効にするとグリッドを変更してセル変更でトランザクションを作成します。
 
 ## API
 
 * [`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html)
 
-### Methods
+### メソッド
 
 
 * [`aggregatedState`]({environment:angularApiUrl}/classes/igxtransactionservice.html#aggregatedstate)
@@ -178,8 +179,8 @@ export class GridTransactionSampleComponent {
 * [`undo`]({environment:angularApiUrl}/classes/igxtransactionservice.html#undo)
 * [`redo`]({environment:angularApiUrl}/classes/igxtransactionservice.html#redo)
 
-### Additional Resources
+### その他のリソース
 
-* [Grid Overview](grid.md)
-* [Grid Editing](grid_editing.md)
-* [Grid Row Editing](grid_row_editing.md)
+* [Grid の概要](grid.md)
+* [Grid 編集](grid_editing.md)
+* [グリッドの行編集テンプレート](grid_row_editing.md)
