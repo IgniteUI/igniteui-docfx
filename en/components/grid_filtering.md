@@ -108,7 +108,7 @@ this.grid.clearFilter();
 To set the initial filtering state of the grid, set the [`IgxGridComponent`]({environment:angularApiUrl}/classes/igxgridcomponent.html) [`filteringExpressionsTree`]({environment:angularApiUrl}/classes/igxgridcomponent.html#filteringexpressionstree) property to an array of [`IFilteringExpressionsTree`]({environment:angularApiUrl}/interfaces/ifilteringexpressionstree.html) for each column to be filtered.
 
 ```typescript
-public ngOnInit() {
+public ngAfterViewInit() {
     const gridFilteringExpressionsTree = new FilteringExpressionsTree(FilteringLogic.And);
     const productFilteringExpressionsTree = new FilteringExpressionsTree(FilteringLogic.And, "ProductName");
     const productExpression = {
