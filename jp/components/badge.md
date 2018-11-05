@@ -221,7 +221,7 @@ class Member {
 </div>
 
 
-### API References
+### API リファレンス
 <div class="divider--half"></div>
 
 * [IgxAvatarComponent]({environment:angularApiUrl}/classes/igxavatarcomponent.html)
