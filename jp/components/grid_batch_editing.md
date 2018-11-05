@@ -1,19 +1,19 @@
 ---
-title: Grid �g�����U�N�V���� - �l�C�e�B�u Angular | Ignite UI for Angular
-_description: TransactionService �̓~�h���E�F�A�v���o�C�_�[�́A�f�[�^�̃A�N�Z�X�A�ύX�̑��� (undo �� redo)�A���ׂĔj���܂��͊m��̂��߂� API ����J���܂��B 
+title: Grid トランザクション - ネイティブ Angular | Ignite UI for Angular
+_description: TransactionService はミドルウェアプロバイダーは、データのアクセス、変更の操作 (undo と redo)、すべて破棄または確定のための API を公開します。 
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Component, Angular Grid, Angular Data Grid component, Angular Data Grid control, Angular Grid component, Angular Grid control, Angular High Performance Grid, Cell Editing, Row Editing, Batch Updating, Batch Editing, Transactions
 _language: ja
 ---
 
-## Grid �g�����U�N�V����
+## Grid トランザクション
 
 [`TransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) is an injectable middleware that a component can use to accumulate changes without affecting the underlying data. The provider exposes API to access, manipulate changes (undo and redo) and discard or commit all to the data.
 
-[`TransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) �̓Z���ҏW�ƍs�ҏW�̗����Ɠ��삵�܂��B�s�ҏW�̏I�����ɍs�g�����U�N�V�������ǉ����ꂽ�ꍇ�A�Z���ҏW�̃g�����U�N�V�����̓Z�����ҏW���[�h��I�������Ƃ��ɒǉ�����܂��B�O���b�h�ҏW�̃X�e�[�g�́A���ׂĂ̍s��ҏW�ς݁A�ǉ��ς݁A�폜�ς݁A�����čŌ�̃X�e�[�g�ō\������܂��B�����͌�ŃC���X�y�N�g�A����A�T�u�~�b�g���x�ɍs���܂��B�X�̃Z���܂��͍s�̕ύX��W�߂āA�ҏW���[�h�Ɋ�Â��ăf�[�^�s/���R�[�h���Ƃɒ~�ς��܂��B
+[`TransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) はセル編集と行編集の両方と動作します。行編集の終了時に行トランザクションが追加された場合、セル編集のトランザクションはセルが編集モードを終了したときに追加されます。グリッド編集のステートは、すべての行を編集済み、追加済み、削除済み、そして最後のステートで構成されます。これらは後でインスペクト、操作、サブミットを一度に行います。個々のセルまたは行の変更を集めて、編集モードに基づいてデータ行/レコードごとに蓄積します。
 
-### �f��
+### デモ
 
-�ȉ��̃T���v���́A�O���b�h�Ƀv���o�C�_�[�̃g�����U�N�V����������A�s�ҏW���L������Ă��܂��B�s�ҏW�S�̂�m���Ƀg�����U�N�V�������ǉ������悤�ɂ��܂��B
+以下のサンプルは、グリッドにプロバイダーのトランザクションがあり、行編集が有効されています。行編集全体を確定後にトランザクションが追加されるようにします。
 
 <div class="sample-container loading" style="height:650px">
     <iframe id="grid-transaction-sample-iframe" src='{environment:demosBaseUrl}/grid-transaction' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -25,10 +25,10 @@ _language: ja
 <div class="divider--half"></div>
 
 > [!NOTE]
-> �g�����U�N�V���� �X�e�[�g�́A���ׂĂ̍X�V�A�ǉ��A�폜���ꂽ�s�A�����čŌ�̃X�e�[�g�ō\������܂��B
+> トランザクション ステートは、すべての更新、追加、削除された行、そして最後のステートで構成されます。
 
-## �g�p���@
-**app.module.ts** �t�@�C���� [`IgxGridModule`]({environment:angularApiUrl}/classes/igxgridmodule.html) ��C���|�[�g���܂��B
+## 使用方法
+**app.module.ts** ファイルの [`IgxGridModule`]({environment:angularApiUrl}/classes/igxgridmodule.html) をインポートします。
 
 ```typescript
 // app.module.ts
@@ -44,7 +44,7 @@ import { IgxGridModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-�O���b�h�� igxTransactionService ��`����K�v������܂��B
+グリッドに igxTransactionService 定義する必要があります。
 
 ```typescript
 import { Component } from "@angular/core";
@@ -59,9 +59,9 @@ export class GridWithTransactionsComponent { }
 
 ```
 
-��: `IgxGridTransaction` �̓O���b�h�Œ�`���ꂽ�C���W�F�N�V���� �g�[�N���ł��B
+注: `IgxGridTransaction` はグリッドで定義されたインジェクション トークンです。
 
-�f�[�^�\�[�X�Ƀo�C���h����O���b�h���`��� [`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditable) �� true �ɐݒ肵�܂��B
+データソースにバインドするグリッドを定義をして [`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditable) を true に設定します。
 
 ```html
 <app-grid-with-transactions>
@@ -81,7 +81,7 @@ export class GridWithTransactionsComponent { }
 </app-grid-with-transactions>
 ```
 
-�ȉ��̃R�[�h��́A[`transactions`]({environment:angularApiUrl}/classes/igxtransactionservice.html) API (undo, redo, commit) �̎g�p���@����܂��B
+以下のコード例は、[`transactions`]({environment:angularApiUrl}/classes/igxtransactionservice.html) API (undo, redo, commit) の使用方法を示します。
 
 ```typescript
 import { Component, ViewChild } from "@angular/core";
@@ -160,13 +160,13 @@ export class GridTransactionSampleComponent {
 
 ```
 > [!NOTE]
-> [`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditable) �v���p�e�B�𖳌��ɂ���ƃO���b�h��ύX���ăZ���ύX�Ńg�����U�N�V������쐬���܂��B
+> [`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditable) プロパティを無効にするとグリッドを変更してセル変更でトランザクションを作成します。
 
 ## API
 
 * [`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html)
 
-### ���\�b�h
+### メソッド
 
 
 * [`aggregatedState`]({environment:angularApiUrl}/classes/igxtransactionservice.html#aggregatedstate)
@@ -179,8 +179,8 @@ export class GridTransactionSampleComponent {
 * [`undo`]({environment:angularApiUrl}/classes/igxtransactionservice.html#undo)
 * [`redo`]({environment:angularApiUrl}/classes/igxtransactionservice.html#redo)
 
-### ���̑��̃��\�[�X
+### その他のリソース
 
-* [Grid �̊T�v](grid.md)
-* [Grid �ҏW](grid_editing.md)
-* [�O���b�h�̍s�ҏW�e���v���[�g](grid_row_editing.md)
+* [Grid の概要](grid.md)
+* [Grid 編集](grid_editing.md)
+* [グリッドの行編集テンプレート](grid_row_editing.md)
