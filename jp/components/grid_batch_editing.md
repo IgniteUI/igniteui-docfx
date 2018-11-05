@@ -1,33 +1,34 @@
 ---
-title: Grid Batch Editing - Native Angular | Ignite UI for Angular
-_description: TransactionService is an injectable middleware that a component can use to accumulate changes without affecting the underlying data. The provider exposes API to access, manipulate changes (undo and redo) and discard or commit all to the data.
+title: Grid �g�����U�N�V���� - �l�C�e�B�u Angular | Ignite UI for Angular
+_description: TransactionService �̓~�h���E�F�A�v���o�C�_�[�́A�f�[�^�̃A�N�Z�X�A�ύX�̑��� (undo �� redo)�A���ׂĔj���܂��͊m��̂��߂� API ����J���܂��B 
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Component, Angular Grid, Angular Data Grid component, Angular Data Grid control, Angular Grid component, Angular Grid control, Angular High Performance Grid, Cell Editing, Row Editing, Batch Updating, Batch Editing, Transactions
+_language: ja
 ---
 
-## Grid Batch Editing
+## Grid �g�����U�N�V����
 
 [`TransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) is an injectable middleware that a component can use to accumulate changes without affecting the underlying data. The provider exposes API to access, manipulate changes (undo and redo) and discard or commit all to the data.
 
-The [`TransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) works with both cell editing and row editing. The transaction for the cell edit is added when the cell exits edit mode, while row transaction is created, when the row exits edit mode. But in both cases the state of the grid edits consist of all updated, added and deleted rows and their last states. Those can later be inspected, manipulated and submitted at once. Changes are collected for individual cells or rows, depending on editing mode, and accumulated per data row/record.
+[`TransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) �̓Z���ҏW�ƍs�ҏW�̗����Ɠ��삵�܂��B�s�ҏW�̏I�����ɍs�g�����U�N�V�������ǉ����ꂽ�ꍇ�A�Z���ҏW�̃g�����U�N�V�����̓Z�����ҏW���[�h��I�������Ƃ��ɒǉ�����܂��B�O���b�h�ҏW�̃X�e�[�g�́A���ׂĂ̍s��ҏW�ς݁A�ǉ��ς݁A�폜�ς݁A�����čŌ�̃X�e�[�g�ō\������܂��B�����͌�ŃC���X�y�N�g�A����A�T�u�~�b�g���x�ɍs���܂��B�X�̃Z���܂��͍s�̕ύX��W�߂āA�ҏW���[�h�Ɋ�Â��ăf�[�^�s/���R�[�h���Ƃɒ~�ς��܂��B
 
-### Demo
+### �f��
 
-The following sample demonstrates a scenario, where the grid has the Transaction as provider and has row editing enabled. The latter will ensure that transaction will be added after the entire row edit is confirmed.
+�ȉ��̃T���v���́A�O���b�h�Ƀv���o�C�_�[�̃g�����U�N�V����������A�s�ҏW���L������Ă��܂��B�s�ҏW�S�̂�m���Ƀg�����U�N�V�������ǉ������悤�ɂ��܂��B
 
 <div class="sample-container loading" style="height:650px">
-    <iframe id="grid-batch-editing-sample-iframe" src='{environment:demosBaseUrl}/grid-batch-editing' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="grid-transaction-sample-iframe" src='{environment:demosBaseUrl}/grid-transaction' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-batch-editing-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-transaction-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
 
 > [!NOTE]
-> Transaction state consists of all the updated, added and deleted rows and their last states.
+> �g�����U�N�V���� �X�e�[�g�́A���ׂĂ̍X�V�A�ǉ��A�폜���ꂽ�s�A�����čŌ�̃X�e�[�g�ō\������܂��B
 
-## Usage
-To get started import the [`IgxGridModule`]({environment:angularApiUrl}/classes/igxgridmodule.html) in the **app.module.ts** file:
+## �g�p���@
+**app.module.ts** �t�@�C���� [`IgxGridModule`]({environment:angularApiUrl}/classes/igxgridmodule.html) ��C���|�[�g���܂��B
 
 ```typescript
 // app.module.ts
@@ -43,7 +44,7 @@ import { IgxGridModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-Then you need to define the igxTransactionService as provider for the grid on some of its parent components:
+�O���b�h�� igxTransactionService ��`����K�v������܂��B
 
 ```typescript
 import { Component } from "@angular/core";
@@ -57,74 +58,129 @@ import { IgxGridTransaction, IgxTransactionService } from "igniteui-angular";
 export class GridWithTransactionsComponent { }
 
 ```
-> [!NOTE]
-> IgxGridTransaction` is injection token defined by the grid.
 
+��: `IgxGridTransaction` �̓O���b�h�Œ�`���ꂽ�C���W�F�N�V���� �g�[�N���ł��B
 
-Then define a grid with bound data source and [`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditable) set to true and bind:
+�f�[�^�\�[�X�Ƀo�C���h����O���b�h���`��� [`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditable) �� true �ɐݒ肵�܂��B
 
 ```html
 <app-grid-with-transactions>
     <igx-grid #gridRowEditTransaction [data]="data" [primaryKey]="'ProductID'" width="100%" height="500px"
         [rowEditable]="true">
-        ...
+        <igx-column field="ProductID" header="Product ID" editable="false"></igx-column>
+        <igx-column field="ReorderLevel" header="ReorderLever" [dataType]="'number'"></igx-column>
+        <igx-column field="ProductName" header="ProductName" [dataType]="'string'"></igx-column>
+        <igx-column field="UnitsInStock" header="UnitsInStock" [dataType]="'number'">
+            <ng-template igxCellEditor let-cell="cell">
+                <input name="units" [(ngModel)]="cell.value" style="color: black" />
+            </ng-template>
+        </igx-column>
+        <igx-column field="OrderDate" [dataType]="'date'"></igx-column>
+        <igx-column field="Discontinued" header="Discontinued" [dataType]="'boolean'"></igx-column>
     </igx-grid>
 </app-grid-with-transactions>
-...
-<button igxButton [disabled]="!undoEnabled" (click)="undo()">Undo</button>
-<button igxButton [disabled]="!redoEnabled" (click)="redo()">Redo</button>
-...
-<button igxButton (click)="commit()">Commit</button>
-<button igxButton (click)="discard()">Discard</button>
-...
-
 ```
 
-The following code demonstrates the usage of the [`transactions`]({environment:angularApiUrl}/classes/igxtransactionservice.html#) API - undo, redo, commit.
+�ȉ��̃R�[�h��́A[`transactions`]({environment:angularApiUrl}/classes/igxtransactionservice.html) API (undo, redo, commit) �̎g�p���@����܂��B
 
 ```typescript
-...
-export class GridBatchEditingSampleComponent {
+import { Component, ViewChild } from "@angular/core";
+import { data } from "./data";
+
+import { IgxGridComponent, IgxToggleDirective, Transaction } from "igniteui-angular";
+
+@Component({
+    selector: "app-grid-row-edit",
+    styleUrls: [`grid-transaction-sample.component.css`],
+    templateUrl: "grid-transaction-sample.component.html"
+})
+export class GridTransactionSampleComponent {
     @ViewChild("gridRowEditTransaction", { read: IgxGridComponent }) public gridRowEditTransaction: IgxGridComponent;
-    ...
-    public get undoEnabled(): boolean {
-        return this.gridRowEditTransaction.transactions.canUndo;
+    @ViewChild(IgxToggleDirective) public toggle: IgxToggleDirective;
+
+    public currentActiveGrid: { id: string, transactions: any[] } = { id: "", transactions: [] };
+
+    public data: any[];
+    private addProductId: number;
+
+    constructor() {
+        this.data = data;
+        this.addProductId = this.data.length + 1;
     }
 
-    public get redoEnabled(): boolean {
-        return this.gridRowEditTransaction.transactions.canRedo;
+    public addRow(gridID) {
+        const currentGrid: IgxGridComponent = this.gridRowEditTransaction;
+        currentGrid.addRow({
+            CategoryID: this.getRandomInt(1, 10),
+            Discontinued: this.getRandomInt(1, 10) % 2 === 0,
+            OrderDate: new Date(this.getRandomInt(2000, 2050), this.getRandomInt(0, 11), this.getRandomInt(1, 25))
+            .toISOString().slice(0, 10),
+            ProductID: this.addProductId++,
+            ProductName: "Product with index " + this.getRandomInt(0, 20),
+            QuantityPerUnit: (this.getRandomInt(1, 10) * 10).toString() + " pcs.",
+            ReorderLevel: this.getRandomInt(10, 20),
+            SupplierID: this.getRandomInt(1, 20),
+            UnitPrice: this.getRandomInt(10, 1000),
+            UnitsInStock: this.getRandomInt(1, 100),
+            UnitsOnOrder: this.getRandomInt(1, 20)
+        });
+        this.refresh();
     }
 
-    public undo() {
+    public deleteRow(event, gridID, rowID) {
+        this.gridRowEditTransaction.deleteRow(rowID);
+    }
+
+    public undo(gridID) {
         this.gridRowEditTransaction.transactions.undo();
+        this.refresh();
     }
 
-    public redo() {
+    public redo(gridID) {
         this.gridRowEditTransaction.transactions.redo();
+        this.refresh();
     }
 
+    public openCommitDialog(gridID) {
+        this.toggle.open();
+    }
     public commit() {
         this.gridRowEditTransaction.transactions.commit(this.data);
         this.toggle.close();
     }
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
 
-    public discard() {
-        this.gridRowEditTransaction.transactions.clear();
+    private refresh(): void {
+        const grid = this.gridRowEditTransaction;
+        (grid as any)._pipeTrigger++;
+        (grid as any).cdr.markForCheck();
     }
 }
 
 ```
 > [!NOTE]
-> Disabling [`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditable) property will modify grid to create transactions on cell change and will not expose row editing overlay in the UI.
+> [`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditable) �v���p�e�B�𖳌��ɂ���ƃO���b�h��ύX���ăZ���ύX�Ńg�����U�N�V������쐬���܂��B
 
-## API References
+## API
 
 * [`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html)
 
-### Methods
+### ���\�b�h
 
-### Additional Resources
 
-* [Grid Overview](grid.md)
-* [Grid Editing](grid_editing.md)
-* [Grid Row Editing](grid_row_editing.md)
+* [`aggregatedState`]({environment:angularApiUrl}/classes/igxtransactionservice.html#aggregatedstate)
+* [`getAggregatedValue`]({environment:angularApiUrl}/classes/igxtransactionservice.html#getaggregatedvalue)
+* [`getState`]({environment:angularApiUrl}/classes/igxtransactionservice.html#getstate)
+* [`add`]({environment:angularApiUrl}/classes/igxtransactionservice.html#add)
+* [`getTransactionLog`]({environment:angularApiUrl}/classes/igxtransactionservice.html#gettransactionlog)
+* [`clear`]({environment:angularApiUrl}/classes/igxtransactionservice.html#clear)
+* [`commit`]({environment:angularApiUrl}/classes/igxtransactionservice.html#commit)
+* [`undo`]({environment:angularApiUrl}/classes/igxtransactionservice.html#undo)
+* [`redo`]({environment:angularApiUrl}/classes/igxtransactionservice.html#redo)
+
+### ���̑��̃��\�[�X
+
+* [Grid �̊T�v](grid.md)
+* [Grid �ҏW](grid_editing.md)
+* [�O���b�h�̍s�ҏW�e���v���[�g](grid_row_editing.md)

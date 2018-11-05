@@ -1,50 +1,51 @@
 ---
-title: Display Density | Ignite UI for Angular 
-_description: The Ignite UI for Angular provides a way of setting display density property on application or component level. 
+title: 密度の表示 | Ignite UI for Angular 
+_description: Ignite UI for Angular は、アプリケーションまたはコンポーネント レベルで density プロパティの表示を設定できます。 
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Components, Native Angular Controls, Native Angular Components Library, density, display density
+_language: ja
 ---
 
-## Display Density
+## 密度の表示
 
-Display density configuration can significantly improve the visual representation of large amount of data. In Ignite UI for Angular, we provide a pre-defined set of options – comfortable, compact and cosy.
+密度設定の表示は、大規模データセットのビジュアル表示を大きく改善します。Ignite UI for Angular は、
 
-Using the [DisplayDensityToken]({environment:angularApiUrl}/index.html#displaydensitytoken) injection token, you can configure the display density on an application and/or on a component level. 
+[DisplayDensityToken]({environment:angularApiUrl}/index.html#displaydensitytoken) インジェクション トークンを使用し、アプリケーションやコンポーネントの表示密度を設定できます。 
 
-### Display Density Demo
+### 密度表示のデモ
 <div class="sample-container loading" style="height: 250px; width: 600px;">
     <iframe id="density-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/density" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="density-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="density-sample" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
 </div>
 <div class="divider--half"></div>
 
 > [!NOTE]
-> To start using Ignite UI for Angular components in your own projects, make sure you have configured all necessary dependencies and have performed the proper setup of your project. You can learn how to do this in the [**installation**](https://www.infragistics.com/products/ignite-ui-angular/getting-started#installation) topic.
+> Ignite UI for Angular コンポーネントをプロジェクトに追加する前に、必要なすべての依存関係を構成し、プロジェクトのセットアップが正しく完了したことを確認してください。[インストール](https://www.infragistics.com/products/ignite-ui-angular/getting-started#installation)のトピックで手順をご確認ください。
 
-### Usage
+### 使用方法
 
-**Setting display density on an application/component level**
+**アプリケーションやコンポーネントのレベルで表示密度を設定**
 
-To set the display density, use the [DisplayDensityToken]({environment:angularApiUrl}/index.html#displaydensitytoken) injection token to create a DI provider.
+表示密度の設定は、[DisplayDensityToken]({environment:angularApiUrl}/index.html#displaydensitytoken) インジェクショントークンを使用して DI プロバイダーを作成します。
 
 ```typescript
 providers: [{ provide: DisplayDensityToken, useValue: { displayDensity: DisplayDensity.compact } }],
 ```
 
-You can set the display density's default value through `useValue` or `useFactory`.
+表示密度のデフォルト値は `useValue` または `useFactory` で設定できます。
 
-Depending on the required scope, you can apply the created provider for the entire application or to a component.
+必要なスコープに基づいてアプリケーション全体あるいはコンポーネントに作成したプロバイダーを適用できます。
 
-**Setting control display density explicitly**
+**コントロールの表示密度を明示的に設定**
 
-To set the display density explicitly for a control, use the [`displayDensity`]({environment:angularApiUrl}/classes/displaydensitybase.html#displaydensity) input.
+表示密度を明示的に設定する場合、[`displayDensity`]({environment:angularApiUrl}/classes/displaydensitybase.html#displaydensity) を使用します。
 
 ```html
 <igx-input-group [displayDensity]="'cosy'"> ... </igx-input-group>
 ```
 
-### API References
+### API リファレンス
 <div class="divider"></div>
 
 * [DisplayDensity]({environment:angularApiUrl}/enums/displaydensity.html)
@@ -52,10 +53,10 @@ To set the display density explicitly for a control, use the [`displayDensity`](
 * [IDisplayDensity]({environment:angularApiUrl}/interfaces/idisplaydensity.html)
 * [DisplayDensityToken]({environment:angularApiUrl}/index.html#displaydensitytoken)
 
-### Additional Resources
+### その他のリソース
 <div class="divider--half"></div>
 
-Our community is active and always welcoming to new ideas.
+コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+* [Ignite UI for Angular** フォーラム** (英語) ](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub** (英語) ](https://github.com/IgniteUI/igniteui-angular)

@@ -1,4 +1,4 @@
-﻿---
+---
 title: 컴포넌트별 그룹화 - 네이티브 Angular| Ignite UI for Angular
 _description: Ignite UI for Angular 컴포넌트별 그룹화를 사용하면 특정 열에 대한 공통 값을 기준으로 데이터를 그룹화할 수 있습니다.
 _keywords: Ignite UI for Angular, UI 컨트롤, Angular 위젯, 웹 위젯, UI 위젯, Angular, 네이티브 Angular 컴포넌트 세트, 네이티브 Angular 컨트롤, 네이티브 Angular 컴포넌트 라이브러리, 네이티브 Angular 컴포넌트, Angular 데이터 그리드 컴포넌트, Angular 데이터 그리드 컨트롤, Angular 그리드 컴포넌트, Angular 그리드 컨트롤, Angular 고성능 그리드, 별 그룹화, 별 그룹, 그룹화, 열 그룹화
@@ -7,7 +7,7 @@ _language: kr
 
 ### 그리드의 그룹화
 
-[`igxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) supports column grouping that allows for visualizing data records in hierarchical groups according to the column group values. Groups can be expanded or collapsed and the order of grouping may be changed through the UI or API.
+[`igxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) 는 열 그룹 값에 따라 계층 그룹의 데이터 레코드를 시각화할 수 있는 열 그룹화를 지원합니다.그룹을 확장하거나 축소할 수 있으며 UI 또는 API를 통해 그룹화 순서를 변경할 수 있습니다.
 
 
 #### 데모

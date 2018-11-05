@@ -150,11 +150,11 @@ Shadows は、Document Object Model ツリーの間に境界線を描画し、�
     <img width="100%" height="100%" src="../images/whatismaterial_3d_elevation2.jpg" alt="Shadows Usage">
 </div>
 
-###Elevations Setting
+###エレベーション設定
 
-The following section demonstrates how to set various elevations to elements.
+以下は、エレベーションを設定する方法を示します。
 
-Define the element that you want ot set a shadow on:
+シャドウを設定する要素を定義します。
 
 ```html
 ...
@@ -176,7 +176,7 @@ Define the element that you want ot set a shadow on:
 </div>
 ```
 
-Then apply the [igx-elevation]({environment:sassApiUrl}/index.html#function-igx-elevation) to the `scss` class of the element:
+次に要素の igx-elevation]({environment:sassApiUrl}/index.html#function-igx-elevation) を scss クラスに適用します。
 
 ```scss
     // First you have to import the utilities!
@@ -187,7 +187,7 @@ Then apply the [igx-elevation]({environment:sassApiUrl}/index.html#function-igx-
     box-shadow: igx-elevation($elevations, 8);
 }
 ```
-The result from the above code snippets is:
+以下は上記コード スニペットの結果です。
 
 <div class="sample-container loading" style="height: 350px">
     <iframe id="shadows-sample-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/shadows-sample" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -197,7 +197,7 @@ The result from the above code snippets is:
 </div>
 <div class="divider--half"></div>
 
-Now lets change the shadow color and the elevation level:
+シャドウの色とエレベーション レベルを変更します。
 
  ```scss
 ...
@@ -215,7 +215,7 @@ $shadow-elevations: igx-elevations($color-1, $color-2, $color-3);
 }
 ```
 
-And you get
+結果は以下のようになります。
 
 <div class="sample-container loading" style="height: 350px">
     <iframe id="shadows-sample-2-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/shadows-sample-2" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -226,7 +226,7 @@ And you get
 <div class="divider--half"></div>
 
 
-### API References
+### API リファレンス
 
 * [IGX-ELEVATION]({environment:sassApiUrl}/idnex.html#function-igx-elevation)
 * [IGX-ELEVATIONS]({environment:sassApiUrl}/idnex.html#function-igx-elevations)

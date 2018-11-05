@@ -1,18 +1,19 @@
 ---
-title: Grid Row Editing - Native Angular | Ignite UI for Angular
+title: 그리드 행 편집- 네이티브 Angular| Ignite UI for Angular
 _description: Row editing - allows modification of several cells in the row, before submitting, at once, all those changes to the grid's data source. Leverages the pending changes functionality of the new transaction provider.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Component, Angular Grid, Angular Data Grid component, Angular Data Grid control, Angular Grid component, Angular Grid control, Angular High Performance Grid, Cell Editing
+_language: kr
 ---
 
-## Grid Row Editing
+## 그리드 편집
 
-Row editing - allows modification of several cells in the row, before submitting, at once, all those changes to the grid's data source. Leverages the pending changes functionality of the new transaction provider.
+행 편집 - 그리드의 데이터 소스에 대한 모든 변경 사항을 제출하기 전에 즉시 행의 여러 셀을 수정할 수 있습니다. 새로운 트랜잭션 공급자의 보류 중인 변경 기능을 활용합니다.
 
 
 
-### Demo
+### 데모
 
-The following sample demonstrates how to enable row editing in the grid. Changing a cell value and then clicking or navigating to another cell on the same row will not update row value until confirmed, using the Done button, or discarded, using the Cancel one.
+다음 샘플에서는 그리드에서 행 편집을 활성화하는 방법을 보여줍니다. 셀 값을 변경한 다음 동일한 행의 다른 셀을 클릭하거나 탐색하면 확인될 때까지 행 값이 업데이트되지 않으며, 종료 버튼을 사용하거나 취소 버튼을 사용하여 취소합니다.
 
 <div class="sample-container loading" style="height:650px">
     <iframe id="grid-row-editing-sample-iframe" src='{environment:demosBaseUrl}/grid-row-editing' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -23,13 +24,13 @@ The following sample demonstrates how to enable row editing in the grid. Changin
 </div>
 
 > [!NOTE]
-> When a row is in edit mode, then clicking on a cell on another row will act like the Done button is pressed - submit all the changes of the previous row. If the new cell that gets focus is editable, then the new row also enters edit mode, while if the cell is not editable, then only the previous row exits edit mode.
+> 행이 편집 모드에 있는 경우, 다른 행의 셀을 클릭하면 종료 버튼을 누른 것처럼 작동하며, 이전 행의 모든 변경 사항을 제출합니다. 포커스를 받은 새로운 셀을 편집할 수 있는 경우에는 새로운 행도 편집 모드로 전환되며, 셀을 편집 할 수 없는 경우에는 이전 행만 편집 모드를 종료합니다.
 
 <div class="divider--half"></div>
 
-## Usage
+## 사용 방법
 
-To get started import the [IgxGridModule]({environment:angularApiUrl}/classes/igxgridmodule.html) in the **app.module.ts** file:
+시작하려면 **app.module.ts** 파일에서 [IgxGridModule]({environment:angularApiUrl}/classes/igxgridmodule.html) 을 가져옵니다:
 
 ```typescript
 // app.module.ts
@@ -45,7 +46,7 @@ import { IgxGridModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-Then define a grid with bound data source and [`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditable) set to true:
+그런 다음 바인딩된 데이터 소스 및 [`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditable)({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditable)이 true로 설정된 그리드를 정의합니다:
 
 ```html
 <div class="sample-wrapper">
@@ -66,9 +67,9 @@ Then define a grid with bound data source and [`rowEditable`]({environment:angul
 ```
 
 > [!NOTE]
-> Setting primary key is mandatory for editing operations, including row editing.
+> 행 편집을 포함한 편집 작업에는 기본 키를 설정해야 합니다.
 > [!NOTE]
-> It's not needed to enable editing for individual columns. Using the [`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditable) property in the grid, will mean that all rows, with defined `field` property, excluding primary one, will be editable. If you want to disable editing for specific column, then you set the [`editable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable) column's input to `false`.
+> 개별 열에 대해 편집할 필요가 없습니다. 그리드에서 [`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditable)({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditable) 속성을 사용하면 기본 필드를 제외한 모든 `field` 속성이 편집 가능함을 의미합니다. 특정 열에 대한 편집을 비활성화하려면 [`editable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable)({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable) 열의 입력을 false로 설정합니다.
 
 
 ```typescript
@@ -96,55 +97,55 @@ export class GridRowEditSampleComponent {
 ```
 
 > [!NOTE]
-> The grid uses internally a provider [`IgxBaseTransactionService`]({environment:angularApiUrl}/classes/igxbasetransactionservice.html) that holds pending cell changes, until row state submitted or cancelled.
+> 그리드는 행 상태가 제출되거나 취소될 때까지 보류 중인 셀 변경을 보유한 공급자 [`IgxBaseTransactionService`]({environment:angularApiUrl}/classes/igxbasetransactionservice.html)({environment:angularApiUrl}/classes/igxbasetransactionservice.html)를 내부적으로 사용합니다.
 
-## Positioning
+## 포지셔닝
 
-- Default position of the overlay will be below the row that is in edit mode
+- 오버레이의 기본 위치는 편집 모드의 행 아래에 위치합니다.
      
-- If there is no space below the row then overlay will appear above the row.
+- 행 아래에 공간이 없으면 행 위에 오버레이가 표시됩니다.
      
-- Once shown - top or bottom, overlay will maintain this position during scrolling, until the overlay is closed.
+- 상단 또는 하단에 표시된 후 오버레이는 오버레이가 닫히기 전까지 이 위치를 유지합니다.
 
-## Behavior
+## 비헤이비어
 
-- If row is in edit mode, then editing will continue, if a cell from the same row is clicked.
+- 행이 편집 모드에 있는 경우, 동일한 행의 셀을 클릭하면 편집이 계속됩니다.
 
-- Clicking "Done" button will finish row editing and will submit changes either to the data source, or to a transaction if available. In addition row will exit edit mode.
+- “종료” 버튼을 클릭하면 행 편집이 종료되고 사용 가능한 경우 데이터 소스 또는 트랜잭션에 변경이 제출됩니다. 또한 행은 편집 모드를 종료합니다.
 
-- Clicking "Cancel" button will revert all current changes in the row and row will exit edit mode.
+- “취소” 버튼을 클릭하면 행의 모든 현재 변경이 되돌려지고 행은 편집 모드를 종료합니다.
 
-- If row is in edit mode, then clicking a cell from another row will finish the current row edit and will submit new row changes (the same behavior clicking "Done" button). If the new cell that gets focus is editable, then the new row also enters edit mode, while if the cell is not editable, then only the previous row exits edit mode.
+- 행이 편집 모드에 있는 경우, 다른 행의 셀을 클릭하면 현재 행 편집이 종료되고 새로운 행 변경이 제출됩니다(동일한 비헤이비어는 “종료” 버튼을 클릭). 포커스를 받은 새로운 셀을 편집할 수 있는 경우에는 새로운 행도 편집 모드로 전환되며, 셀을 편집 할 수 없는 경우에는 이전 행만 편집 모드를 종료합니다.
 
-- If row is in edit mode and grid is scrolled so that row goes outside the visible area, the latter will be still in edit mode. When grid is scrolled, so that the row is visible again, the row will be still in edit mode.
+- 행이 편집 모드이고 행이 표시된 영역 밖으로 이동하도록 그리드를 스크롤한 경우에도 행은 여전히 편집 모드에 있습니다. 그리드를 스크롤하여 행이 다시 표시되도록 하면 행은 여전히 편집 모드에 있습니다.
 
-- Each modified cell gets edited style until row edit is finished. This is the behavior, when grid is not provided with transactions. When transactions are available - then cell edit style is applied until all the changes are committed.
-
-
-## Keyboard Navigation
-
-- `Enter` and `F2` enters row edit mode
-
-- `Esc` exits row edit mode and doesn't submit any of the cell changes, made while the row was in edit mode.
-
-- `Tab` move focus from one editable cell in the row to the next and from the right-most editable cell to the CANCEL and DONE buttons. Navigation from DONE button goes to the left-most editable cell within the currently edited row.
+- 수정된 각 셀은 행 편집이 종료될 때까지 편집된 스타일을 가집니다. 그리드가 트랜잭션과 함께 제공되지 않는 경우의 비헤이비어입니다. 트랜잭션을 사용할 수 있는 경우, 모든 변경이 확정될 때까지 셀 편집 스타일이 적용됩니다.
 
 
-## Feature Integration
+## 키보드 탐색
 
-- Any data changing operation will terminate row editing operations and will submit current row changes. This will include operations like sorting, changing grouping and filtering criteria, paging, etc.
+- `Enter` 와 `F2` 행 편집 모드로 들어갑니다.
 
-- Summaries will be updated after row edit is finished. Same is valid for the other features like sorting, filtering, etc.
+- `Esc` 행 편집 모드를 종료하고 행이 편집 모드에 있는 동안 만든 셀 변경은 제출하지 않습니다.
 
-- Expanding and collapsing grouped rows will not terminate editing for the current row.
+- `Tab` 편집 가능한 셀에서 행의 다음 셀로, 오른쪽에서 가장 편집 가능한 셀에서 CANCEL 및 DONE 버튼으로 포커스를 이동합니다. DONE 버튼으로부터의 탐색은 현재 편집된 행 안에서 가장 왼쪽에 있는 편집 가능한 셀로 이동합니다.
 
 
-## Customizing Row Editing Overlay
+## 기능 통합
 
-### Customizing Text
+- 모든 데이터 변경 작업은 행 편집 작업을 종료하고 현재 행 변경을 제출합니다. 여기에는 정렬, 그룹화 및 필터링 기준 변경, 페이징 등의 작업이 포함됩니다.
 
-Customizing the text of the row editing overlay is possible using the `igxRowEditTextDirective`.
-The `rowChangesCount` property is exposed and it holds the count of the changed cells.
+- 행 편집이 종료되면 요약이 업데이트됩니다. 정렬, 필터링 등의 다른 기능의 경우에도 동일합니다.
+
+- 그룹화된 행을 확장하거나 축소해도 현재 행에 대한 편집은 종료되지 않습니다.
+
+
+## 사용자 정의 행 편집 오버레이
+
+### 사용자 정의 텍스트
+
+`igxRowEditTextDirective` 를 사용하여 행 편집 오버레이의 텍스트를 사용자 정의할 수 있습니다.
+`rowChangesCount` 속성이 노출되고 변경된 셀 수를 유지합니다.
 
 ```html
 <ng-template igxRowEditText let-rowChangesCount>
@@ -152,9 +153,9 @@ The `rowChangesCount` property is exposed and it holds the count of the changed 
 </ng-template>
  ```
 
- ### Customizing Buttons
-Customizing the buttons of the row editing overlay is possible using the `igxRowEditActionsDirective`.
-If you want the buttons to be part of the keyboard navigation, then each on of them should have the `igxRowEditTabStopDirective`.
+ ### 사용자 정의 버튼
+`igxRowEditActionsDirective` 를 사용하여 행 편집 오버레이 버튼을 사용자 정의할 수 있습니다.
+버튼을 키보드 탐색의 일부로 사용하려면 각 버튼에 `igxRowEditTabStopDirective` 가 있어야 합니다.
 
  ```typescript
  <ng-template igxRowEditActions let-endRowEdit>
@@ -163,25 +164,25 @@ If you want the buttons to be part of the keyboard navigation, then each on of t
 </ng-template>
  ```
 
-## API References
+## API
 
-### igxGrid Inputs
+### igxGrid 입력
 
 * [rowEditable]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditable)
 
-### igxGrid Outputs
+### igxGrid 출력
 
 * [onRowEditDone]({environment:angularApiUrl}/classes/igxgridcomponent.html#onroweditdone)
 * [onRowEditCancel]({environment:angularApiUrl}/classes/igxgridcomponent.html#onroweditcancel)
 
-### igxGrid Methods
+### igxGrid 메소드
 
 * [endRowEdit]({environment:angularApiUrl}/classes/igxgridcomponent.html#endrowedit)
 
 
-### Additional Resources
+### 추가 리소스
 <div class="divider--half"></div>
 
-* [Grid Overview](grid.md)
-* [Grid Editing](grid_editing.md)
-* [Grid Transactions](grid_transactions.md)
+* [그리드 개요](grid.md)
+* [그리드 편집](grid_editing.md)
+* [그리드 트랜잭션](grid_transactions.md)

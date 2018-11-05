@@ -1,4 +1,4 @@
-﻿---
+---
 title: Excel에서 붙여넣기 - 네이티브 Angular| Ignite UI for Angular
 _description: 사용자는 Excel에서 복사한 데이터를 igxGrid에 붙여넣을 수 있습니다.
 _keywords: Ignite UI for Angular, UI 컨트롤, Angular 위젯, 웹 위젯, UI 위젯, Angular, 네이티브 Angular 컨트롤, 네이티브 Angular 컴포넌트 세트, 네이티브 Angular 컨트롤, 네이티브 Angular 컴포넌트 라이브러리, Angular 그리드, Angular 데이터 그리드, Angular 그리드 컨트롤, Angular 그리드 컴포넌트, Excel에서 붙여넣기, Angular Excel에서 붙여넣기
@@ -16,8 +16,8 @@ Ignite UI for Angular [`IgxGrid`]({environment:angularApiUrl}/classes/igxgridcom
 
 상단에는 두 가지 옵션이 있는 드롭다운 버튼이 있습니다.
 <ol>
-<li>"Paste data as new rows" – in this mode any data copied from Excel will be appended to the grid as new rows</li>
-<li>"Paste starting from active cell" – in this mode the data in the grid will be overwritten.</li>
+<li>“데이터를 새로운 행으로 붙여넣기”-이 모드에서는 Excel에서 복사한 모든 데이터가 새로운 행으로 그리드에 추가됩니다</li>
+<li>“활성 셀에서 붙여넣기 시작”-이 모드에서는 그리드의 데이터를 덮어쓰기 합니다.</li>
 </ol>
 
 붙여넣기 후 새로운 데이터는 기울임꼴로 됩니다.

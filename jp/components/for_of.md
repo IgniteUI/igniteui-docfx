@@ -190,7 +190,7 @@ chunkLoading(evt) {
     });
 }
 ```
-## API References
+## API リファレンス
 
 * [IgxForOfDirective]({environment:angularApiUrl}/classes/igxforofdirective.html)
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
