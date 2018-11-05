@@ -1,4 +1,9 @@
 {
     "_navBarTitle": "Ignite UI for Angular",
-    "_navBarTitleHref": "https://infragistics.com/products/ignite-ui-angular/"
+    "_navBarTitleHref": "https://infragistics.com/products/ignite-ui-angular/",
+    "_currentBaseUrl": "https://www.infragistics.com/products/ignite-ui-angular/angular/",
+    "_hasKRLang": true,
+    "_ENBaseUrl": "https://www.infragistics.com/products/ignite-ui-angular/angular/",
+    "_JABaseUrl": "https://jp.infragistics.com/products/ignite-ui-angular/angular/",
+    "_KRBaseUrl": "https://kr.infragistics.com/products/ignite-ui-angular/angular/"
 }
