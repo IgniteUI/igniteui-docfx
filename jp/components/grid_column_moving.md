@@ -50,7 +50,7 @@ public onColumnMovingEnd(event) {
 }
 ```
 
-### API References
+### API リファレンス
 <div class="divider--half"></div>
 
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
