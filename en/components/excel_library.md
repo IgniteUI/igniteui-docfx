@@ -10,7 +10,7 @@ The Infragistics Excel Library allows you to work with spreadsheet data using fa
 ### Demo
 
 <!-- <div class="sample-container" style="height: 550px">
-    <iframe id="excel-library-overview-sample-iframe" src='{environment:demosBaseUrl}/excel-library-overview-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="excel-library-overview-sample-iframe" src='{environment:demosBaseUrl}/excel-library-operations-on-workbooks' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="excel-library-overview-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
@@ -48,8 +48,6 @@ export class AppModule {}
 -	**IgxExcelXlsxModule** – This contains the load and save logic for xlsx (and related) type files – namely the Excel2007 related and StrictOpenXml WorkbookFormats.
 -	**IgxExcelModule** – This references the other 4 modules and so basically ensures that all the functionality is loaded/available.
 
-<div class="divider--half"></div>
-
 ### Supported Versions of Microsoft Excel
 The following is a list of the supported versions of Excel.**
 
@@ -75,7 +73,7 @@ The following is a list of the supported versions of Excel.**
 ### Load and Save Workbooks
 Now that the Excel Library module is imported, next step is to load a workbook.
 
-In order to load and save `Workbook` object, you can utilize the load and save methods Excel. The following code is a class that exposes various methods such as load and save.
+In order to load and save `Workbook` objects, you can utilize the load and save methods. The following code is a class that exposes various methods such as load and save.
 
 ```typescript
 import { Workbook } from "igniteui-angular-excel/ES5/Workbook";
