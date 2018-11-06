@@ -147,11 +147,89 @@ You can provide grid's remote filtering by subscribing to [`onDataPreLoad`]({env
 <div class="divider--half"></div>
 
 #### Custom Filtering Operands
-You can customize the filtering menu as you add, remove or modify the filtering operands. By default, the filtering menu contains certain operands based on the column’s data type ([`IgxBooleanFilteringOperand`]({environment:angularApiUrl}/classes/igxbooleanfilteringoperand.html), [`IgxDateFilteringOperand`]({environment:angularApiUrl}/classes/igxdatefilteringoperand.html), [`IgxNumberFilteringOperand`]({environment:angularApiUrl}/classes/igxnumberfilteringoperand.html) and [`IgxStringFilteringOperand`]({environment:angularApiUrl}/classes/igxstringfilteringoperand.html)). You can extend these classes or their base class [`IgxFilteringOperand`]({environment:angularApiUrl}/classes/igxfilteringoperand.html) to change the filtering menu items’ behavior.
+You can customize the filtering menu by adding, removing or modifying the filtering operands. By default, the filtering menu contains certain operands based on the column’s data type ([`IgxBooleanFilteringOperand`]({environment:angularApiUrl}/classes/igxbooleanfilteringoperand.html), [`IgxDateFilteringOperand`]({environment:angularApiUrl}/classes/igxdatefilteringoperand.html), [`IgxNumberFilteringOperand`]({environment:angularApiUrl}/classes/igxnumberfilteringoperand.html) and [`IgxStringFilteringOperand`]({environment:angularApiUrl}/classes/igxstringfilteringoperand.html)). You can extend these classes or their base class [`IgxFilteringOperand`]({environment:angularApiUrl}/classes/igxfilteringoperand.html) to change the filtering menu items’ behavior.
 
 In the sample below, inspect the “Product Name” and “Discontinued” columns filters menus. For the “Discontinued” column filter, we have limited the number of operands to All, True and False. For the “Product Name” column filter – we have modified the Contains and Does Not Contain operands logic to perform case sensitive search and added also Empty and Not Empty operands.
 
 To do that, extend the [`IgxStringFilteringOperand`]({environment:angularApiUrl}/classes/igxstringfilteringoperand.html) and [`IgxBooleanFilteringOperand`]({environment:angularApiUrl}/classes/igxbooleanfilteringoperand.html), modify the operations and their logic and set the column [`filters`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#filters) input to the new operands.
+
+```typescript
+// grid-custom-filtering.component.ts
+
+export class GridCustomFilteringComponent implements OnInit {
+    public caseSensitiveFilteringOperand = CaseSensitiveFilteringOperand;
+    public booleanFilteringOperand = BooleanFilteringOperand;
+    ...
+}
+...
+export class CaseSensitiveFilteringOperand extends IgxStringFilteringOperand {
+    private constructor() {
+        super();
+        const customOperations = [
+            {
+                iconName: "contains",
+                isUnary: false,
+                logic: (target: string, searchVal: string, ignoreCase?: boolean) => {
+                    ignoreCase = false;
+                    const search = IgxStringFilteringOperand.applyIgnoreCase(searchVal, ignoreCase);
+                    target = IgxStringFilteringOperand.applyIgnoreCase(target, ignoreCase);
+                    return target.indexOf(search) !== -1;
+                },
+                name: "Contains (case sensitive)"
+            },
+            {
+                iconName: "does_not_contain",
+                isUnary: false,
+                logic: (target: string, searchVal: string, ignoreCase?: boolean) => {
+                    ignoreCase = false;
+                    const search = IgxStringFilteringOperand.applyIgnoreCase(searchVal, ignoreCase);
+                    target = IgxStringFilteringOperand.applyIgnoreCase(target, ignoreCase);
+                    return target.indexOf(search) === -1;
+                },
+                name: "Does Not Contain (case sensitive)"
+            }
+        ];
+
+        const emptyOperators = [
+            // "Empty"
+            this.operations[6],
+            // "Not Empty"
+            this.operations[7]
+        ];
+
+        this.operations = customOperations.concat(emptyOperators);
+    }
+}
+
+export class BooleanFilteringOperand extends IgxBooleanFilteringOperand {
+    private constructor() {
+        super();
+        this.operations = [
+            // "All"
+            this.operations[0],
+            // "TRUE"
+            this.operations[1],
+            // "FALSE"
+            this.operations[2]
+        ];
+    }
+}
+```
+
+```html
+<!-- grid-custom-filtering.component.html -->
+
+ <igx-grid #grid1 [data]="data" [autoGenerate]="false" height="600px" width="100%" [allowFiltering]="true">
+    <igx-column field="ProductName" header="Product Name" [dataType]="'string'" [filters]="caseSensitiveFilteringOperand"></igx-column>
+    <igx-column field="Discontinued" header="Discontinued" [dataType]="'boolean'" [filters]="booleanFilteringOperand">
+        <ng-template igxCell let-cell="cell" let-val>
+            <img *ngIf="val" src="assets/images/grid/active.png" title="Continued" alt="Continued" />
+            <img *ngIf="!val" src="assets/images/grid/expired.png" title="Discontinued" alt="Discontinued" />
+        </ng-template>
+    </igx-column>
+    ...
+</igx-grid>
+```
 
 <div class="sample-container loading" style="height:600px">
     <iframe id="grid-filtering-iframe" src='{environment:demosBaseUrl}/grid-filter-conditions' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
