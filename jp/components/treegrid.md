@@ -1,15 +1,16 @@
 ---
-title: Tree Grid Component
-_description: The Ignite UI for Angular Tree Grid control features the fastest, touch-responsive data-rich grid with popular features.
+title: Tree Grid コンポーネント
+_description: Ignite UI for Angular Tree Grid コントロールは、タッチ レスポンシブなデータ グリッドです。
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Tree Grid component, Angular Tree Grid control, Angular Tree Grid component, Angular High Performance Tree Grid, Tree Grid
+_language: ja
 ---
 
-## Tree Grid
+## ツリー グリッド
 
-<p class="highlight">Displays and manipulates hierarchical data with consistent schema formatted as a table and provides a line of advanced features such as sorting, filtering, editing, column pinning, paging, column moving and hiding.</p>
+<p class="highlight">統一性のあるテーブルとして書式設定されたスキーマで階層型データを表示および操作し、並べ替え、フィルタリング、エディティング、列ピン固定、ページング、列移動、非表示など高度な機能を提供します。</p>
 <div class="divider"></div>
 
-### Demo
+### デモ
 
 <div class="sample-container loading" style="height:550px">
     <iframe id="treegrid-childdatakey-iframe" src='{environment:demosBaseUrl}/treegrid-childdatakey' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -20,9 +21,9 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 </div>
 <div class="divider--half"></div>
 
-### Getting started
+### はじめに
 
-The tree grid is exported as an `NgModule`, thus all you need to do in your application is to import the [`IgxTreeGridModule`]({environment:angularApiUrl}/classes/igxtreegridmodule.html) inside your `AppModule`:
+ツリー グリッドが NgModule としてエクスポートされるため、アプリケーションで `AppModule` に [`IgxTreeGridModule`]({environment:angularApiUrl}/classes/igxtreegridmodule.html)  をインポートする必要があります。
 
 ```typescript
 // app.module.ts
@@ -39,29 +40,29 @@ import { IgxTreeGridModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-### Usage
+### 使用方法
 
-The [`IgxTreeGridComponent`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html) shares a lot of features with the [`IgxGridComponent`]({environment:angularApiUrl}/classes/igxgridcomponent.html), but it also adds the ability to display its data hierarchically.
-In order to achieve this, the [`IgxTreeGridComponent`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html) provides us with a couple of ways to define the relations among our data objects - by using a **child collection** for every data object or by using **primary and foreign keys** for every data object.
+[`IgxTreeGridComponent`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html) は`IgxGridComponent`]({environment:angularApiUrl}/classes/igxgridcomponent.html) と多数の機能を共有しますが、データを階層で表示する機能も追加されています。
+[`IgxTreeGridComponent`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html) は、各データオブジェクトの **child collection** または各データオブジェクトに**主キーまたは外部キー**を使用してデータ オブジェクト内の関係を定義できます。
 
-#### Tree cells
+#### ツリー セル
 
-Regardless of which option is used for building the tree grid's hierarchy (child collection or primary and foreign keys), the tree grid's rows are constructed of two types of cells:
+ツリー グリッド階層の構築に使用するオプション (子コレクションまたは主キーまたは外部キー) にかかわらず、ツリー グリッドの行は 2 タイプのセルで構成されます。 
 
-- [`IgxGridCellComponent`]({environment:angularApiUrl}/classes/igxgridcellcomponent.html) - Ordinary cell that contains a value.
-- [`IgxTreeGridCellComponent`]({environment:angularApiUrl}/classes/igxtreegridcellcomponent.html) - Tree cell that contains a value, an expand/collapse indicator and an indentation div element, which is based on the level of the cell's row. The level of a row component can be accessed through the [`level`]({environment:angularApiUrl}/interfaces/itreegridrecord.html#level) property of its inner [`treeRow`]({environment:angularApiUrl}/classes/igxtreegridrowcomponent.html#treerow).
+- [`IgxGridCellComponent`]({environment:angularApiUrl}/classes/igxgridcellcomponent.html) - 値を含む標準セル。
+- [`IgxTreeGridCellComponent`]({environment:angularApiUrl}/classes/igxtreegridcellcomponent.html) - セル行のレベルに基づいた値、インジケーターの展開/縮小、インデント div 要素を含むツリー セル。インナー [`treeRow`]({environment:angularApiUrl}/classes/igxtreegridrowcomponent.html#treerow) の [`level`]({environment:angularApiUrl}/interfaces/itreegridrecord.html#level) プロパティでアクセスできる行コンポーネント レベル。
 
 > [!NOTE]
-> Each row can have only one tree cell, but it can have multiple (or none) ordinary cells.
+> 各行にはツリー セルを 1 つのみ含むことができますが、標準セルは複数含むことが可能です。
 
-#### Initial Expansion Depth
+#### 初期展開時の深さ
 
-Initially the tree grid will expand all node levels and show them. This behavior can be configured using the [`expansionDepth`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#expansiondepth) property. By default its value is **Infinity** which means all node levels will be expanded. You may control the initial expansion depth by setting this property to a numeric value. For example **0** will show only root level nodes, **1** will show root level nodes and their child nodes and so on.
+初期時のツリーグリッドは、すべてのノード レベルを展開して表示します。この動作は、[`expansionDepth`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#expansiondepth) プロパティを使用して設定できます。デフォルトの値は **Infinity** ですべてのノードが展開されます。初期時の展開の深さは、このプロパティを数値に設定して制御できます。たとえば、 **0** はルート レベルのノードのみを表示し、**1** はルートレベルと子ノードを表示します。
 
-#### Child collection
-When we are using the **child collection** option, every data object contains a child collection, that is populated with items of the same type as the parent data object. This way every record in our tree grid will have a direct reference to any of its children. In this case the [`data`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#data) property of our tree grid that contains the original data source will be a hierarchically defined collection.
+#### 子コレクション
+**child collection** オプションを使用して各データ オブジェクトは子コレクションを含み、親データ オブジェクトとして同じタイプの項目で生成します。これによりツリー グリッドの各レコードがその子への直接の参照を持つことができます。元のデータソースを含むツリー グリッドの [`data`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#data) プロパティが階層が定義されたコレクションになります。
 
-For this sample, let's use the following collection structure:
+このサンプルでは、コレクション ストラクチャを使用します。
 
 ```typescript
 // Sample Employee Data
@@ -94,7 +95,7 @@ export const EMPLOYEE_DATA = [
 ]
 ```
 
-Now let's start by importing our data collection and binding it to the [`data`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#data) input of our tree grid.
+データ コレクションをインポートしてツリーグリッドの [`data`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#data) 入力にバインドします。
 
 ```html
 <!--treeGridSample.component.html-->
@@ -103,8 +104,8 @@ Now let's start by importing our data collection and binding it to the [`data`](
 </igx-tree-grid>
 ```
 
-In order for the IgxTreeGridComponent to build the hierarchy, we will have to set its [`childDataKey`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#childdatakey) property to the name of the child collection that is used in each of our data objects. In our case that will be the **Employees** collection.
-In addition, we will disable the automatic column generation and define them manually by matching them to the actual properties of our data objects. (The **Employees** collection will be automatically used for the hierarchy, so there is no need to include it in the columns' definitions.)
+IgxTreeGridComponent を階層にバインドするには、[`childDataKey`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#childdatakey) プロパティを各データ オブジェクトで使用される子コレクションの名前に設定します。このサンプルでは **Employees** コレクションです。
+更に自動列生成を無効にしてデータ オブジェクトの実際のプロパティとの一致を手動で定義します。**Employees** コレクションが階層で自動的に使用されるため、列定義に含める必要はありません。
 
 ```html
 <!--treeGridSample.component.html-->
@@ -117,8 +118,8 @@ In addition, we will disable the automatic column generation and define them man
 </igx-tree-grid>
 ```
 
-We will now enable the row selection and paging features of the tree grid by using the [`rowSelectable`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#rowselectable) and the [`paging`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#paging) properties.
-We will also enable the filtering, sorting, editing, moving and resizing features for each of our columns.
+[`rowSelectable`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#rowselectable) と [`paging`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#paging) を使用してツリー グリッドの行選択とページング機能を有効にします。
+各列でフィルタリング、並べ替え、編集、サイズ変更機能を有効にします。
 
 ```html
 <!--treeGridSample.component.html-->
@@ -131,7 +132,7 @@ We will also enable the filtering, sorting, editing, moving and resizing feature
 </igx-tree-grid>
 ```
 
-Finally, we will enable the toolbar of our tree grid, along with the column hiding and the column pinning features by using the [`showToolbar`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#showtoolbar), [`columnHiding`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#columnhiding) and [`columnPinning`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#columnpinning) properties respectively.
+最後に[`showToolbar`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#showtoolbar)、[`columnHiding`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#columnhiding)、[`columnPinning`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#columnpinning) を個別に使用して、列非表示と列ピン固定機能を含むツリー グリッドのツールバーを有効にします。
 
 ```html
 <!--treeGridSample.component.html-->
@@ -145,12 +146,12 @@ Finally, we will enable the toolbar of our tree grid, along with the column hidi
 </igx-tree-grid>
 ```
 
-You can see the result of the code from above at the beginning of this article in the [Demo](#demo) section.
+このトピックのはじめにあるコードの結果は、[デモ](#demo)で確認できます。
 
-#### Primary and Foreign keys
-When we are using the **primary and foreign keys** option, every data object contains a primary key and a foreign key. The primary key is the unique identifier of the current data object and the foreign key is the unique identifier of its parent. In this case the [`data`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#data) property of our tree grid that contains the original data source will be a flat collection.
+#### プライマリと外部キー
+**primary and foreign keys**オプションを使用した際に各データオブジェクトはプライマリキーと外部キーを含みます。プライマリキーは現在のデータ オブジェクトの一意識別子、外部キーは親の一意識別子です。元のデータソースを含むツリー グリッドの [`data`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#data) プロパティがフラットコレクションになります。
 
-The following is an example of a component which contains a flat collection defined with primary and foreign keys relation:
+以下は、主と外部キーの関係を定義したフラット コレクションを含むコンポーネントの例です。
 
 ```typescript
 // treeGridSample.component.ts
@@ -182,11 +183,11 @@ export class MyComponent implements OnInit {
 }
 ```
 
-In the sample data above, all records have an ID, a ParentID and some additional properties like Name, JobTitle and Age. As mentioned previously, the ID of the records must be unique. The ParentID contains the ID of the parent node. If a row has a ParentID that does not match any row in the tree grid, then that means this row is a root row.
+上記サンプル データはすべてのレコードに ID (ParentID と Name, JobTitle、Age.などの追加のプロパティ) があります。レコードの ID は一意である必要があります。ParentID は、親ノードの ID を含みます。行にツリーグリッドのいずれの行にも一致しない ParentID がある場合、行がルート行であることを意味します。
 
-The parent-child relation is configured using the tree grid's [`primaryKey`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#primarykey) and [`foreignKey`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#foreignkey) properties.
+親子関係は、ツリーグリッドの  [`primaryKey`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#primarykey) と [`foreignKey`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#foreignkey) プロパティを使用して設定されます。
 
-Here is the template of the component which demonstrates how to configure the tree grid to display the data defined in the above flat collection:
+上記フラット コレクションで定義されたデータを表示するツリーグリッドを設定する方法を示すコンポーネントのテンプレートです。
 
 ```html
 <!--treeGridSample.component.html-->
@@ -199,7 +200,7 @@ Here is the template of the component which demonstrates how to configure the tr
 </igx-tree-grid>
 ```
 
-In addition we will enable the row selection feature of the tree grid by using the [`rowSelectable`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#rowselectable) property and also the filtering, sorting, editing, moving and resizing features for each of our columns.
+更に [`rowSelectable`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#rowselectable) プロパティを使用してツリーグリッドの行選択機能、および各列でフィルタリング、並べ替え、編集、移動、サイズ変更機能を有効にします。
 
 ```html
 <!--treeGridSample.component.html-->
@@ -212,7 +213,7 @@ In addition we will enable the row selection feature of the tree grid by using t
 </igx-tree-grid>
 ```
  
-And here is the final result:
+以下は結果です。
 
 <div class="sample-container loading" style="height:450px">
     <iframe id="treegrid-primaryforeignkey-iframe" src='{environment:demosBaseUrl}/treegrid-primaryforeignkey' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -223,30 +224,30 @@ And here is the final result:
 </div>
 <div class="divider--half"></div>
 
-#### Persistence and Integration
+#### パーシステンスとインテグレーション
 
-The indentation of the **tree cells** persists across other tree grid features like filtering, sorting and paging.
+**ツリー セル** のインデントは、フィルタリング、並べ替え、ページングなど他のツリーグリッド全体の機能で永続化されます。
 
-- When **sorting** is applied on a column, the data rows get sorted by levels. This means that the root level rows will be sorted independently from their respective children. Their respective children collections will each be sorted independently as well and so on.
-- The first column (the one that has a [`visibleIndex`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#visibleindex) of 0) is always the tree column.
-- The column that ends up with a [`visibleIndex`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#visibleindex) of 0 after operations like column pinning, column hiding and column moving becomes the tree column.
+- **並べ替え** が列に適用された際にデータ行がレベルごとに並べ替えられます。ルートレベルの行はそれぞれの子に関係なく個々に並べ替えられます。各子コレクションは個々に並べ替えられます。
+- 最初の列 (the one that has a [`visibleIndex`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#visibleindex) は、常にツリー列です。
+- 列ピン固定、列の非表示、列移動などの処理後に 0 の [`visibleIndex`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#visibleindex) で終わる列はツリー列になります。
 
 <div class="divider--half"></div>
 
-### Known Limitations
+### 既知の問題と制限
 
-|Limitation|Description|
+|制限|説明|
 |--- |--- |
-|Templating Tree Cells|When templating a tree cell, content that spans outside the boundaries of the cell will not be shown unless positioned in an overlay.|
-|Summaries|Summaries are currently not supported for the tree grid.|
-|Search API|Search API is currently not supported for the tree grid.|
-|Export|Exporting is currently not supported for the tree grid.|
-|Group By|Group By feature is not supported, because it is inherent to the tree grid.|
+|ツリー セルのテンプレート化|ツリーセルをテンプレート化する場合、セルの境界外にスパンするコンテンツはオーバレイに配置しない限り表示されません。|
+|集計|集計はツリーグリッドで現在サポートされておりません。|
+|検索 API|検索 API はツリーグリッドで現在サポートされておりません。|
+|エクスポート|エクスポートはツリーグリッドで現在サポートされておりません。|
+|グループ化|グループ化機能は、ツリーグリッドに継承されるためサポートされません。|
 
 
 <div class="divider--half"></div>
 
-### API References
+### API リファレンス
 
 <div class="divider--half"></div>
 
@@ -260,14 +261,14 @@ The indentation of the **tree cells** persists across other tree grid features l
 * [`IgxGridRowComponent`]({environment:angularApiUrl}/classes/igxgridrowcomponent.html)
 
 
-### Additional Resources
+### その他のリソース
 
 <div class="divider--half"></div>
 
 * [Data Grid](grid.md)
 
 <div class="divider--half"></div>
-Our community is active and always welcoming to new ideas.
+コミュニティに参加して新しいアイデアをご提案ください。
 
 * [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
 * [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
