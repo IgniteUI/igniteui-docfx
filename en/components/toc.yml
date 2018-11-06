@@ -11,13 +11,12 @@
     - name: Editing
       href: grid_editing.md
       new: true
-      items:
-        - name: Row Editing
-          href: grid_row_editing.md
-          new: true
-        - name: Transactions
-          href: grid_transactions.md
-          new: true
+    - name: Row Editing
+      href: grid_row_editing.md
+      new: true
+    - name: Batch Editing
+      href: grid_batch_editing.md
+      new: true
     - name: Paging
       href: grid_paging.md
       new: false
@@ -69,6 +68,13 @@
     - name: Conditional Cell Styling
       href: grid_conditional_cell_styling.md
       new: true
+- name: Tree Grid
+  href: treegrid.md
+  new: true
+  items:
+  - name: Row Editing
+    href: treegrid_row_editing.md
+    new: true
 - name: List View
   href: list.md
 - name: Combo
@@ -110,9 +116,9 @@
     - name: Highlighting
       href: categorychart_highlighting.md
       new: true
-    - name: Tooltip Types
-      href: categorychart_tooltip_types.md
-      new: true
+    # - name: Tooltip Types
+    #  href: categorychart_tooltip_types.md
+    #  new: true
     - name: Tooltip Templates
       href: categorychart_tooltip_templates.md
       new: false
@@ -146,9 +152,9 @@
     - name: Custom Indicators
       href: financialchart_custom_indicators.md
       new: false
-    - name: Tooltip Types
-      href: financialchart_tooltip_types.md
-      new: true
+    # - name: Tooltip Types
+    #  href: financialchart_tooltip_types.md
+    #  new: true
     - name: Tooltip Templates
       href: financialchart_tooltip_templates.md
 - name: Doughnut Chart
@@ -157,33 +163,33 @@
 - name: Pie Chart
   href: piechart.md
   new: true
-- name: Frameworks
-  header: true
-- name: Excel Library
-  href: excel_library.md
-  new: true
-  items:
-    - name: Using Cells
-      href: excel_library_using_cells.md
-      new: true
-    - name: Using Tables
-      href: excel_library_using_tables.md
-      new: true
-    - name: Using Workbooks
-      href: excel_library_using_workbooks.md
-      new: true
-    - name: Using Worksheets
-      href: excel_library_using_worksheets.md
-      new: true
-    - name: Working with Charts
-      href: excel_library_working_with_charts.md
-      new: true
-    - name: Working with Grids
-      href: excel_library_working_with_grid.md
-      new: true
-    - name: Working with Sparklines
-      href: excel_library_working_with_sparklines.md
-      new: true
+# - name: Frameworks
+  # header: true
+# - name: Excel Library
+  # href: excel_library.md
+  # new: true
+  # items:
+    # - name: Using Cells
+    #   href: excel_library_using_cells.md
+    #   new: true
+    # - name: Using Tables
+    #   href: excel_library_using_tables.md
+    #   new: true
+    # - name: Using Workbooks
+    #   href: excel_library_using_workbooks.md
+    #   new: true
+    # - name: Using Worksheets
+    #   href: excel_library_using_worksheets.md
+    #   new: true
+    # - name: Working with Charts
+    #  href: excel_library_working_with_charts.md
+    #  new: true
+    # - name: Working with Grids
+    #   href: excel_library_working_with_grid.md
+    #   new: true
+    # - name: Working with Sparklines
+    #  href: excel_library_working_with_sparklines.md
+    #  new: true
 - name: Gauges
   header: true
   new: true
@@ -205,7 +211,7 @@
       href: themes/palette.md
     - name: Global Themes
       href: themes/global-theme.md
-    - name: Componenent Themes
+    - name: Component Themes
       href: themes/component-themes.md
     - name: Theming Demo
       href: themes/theming-demo.md

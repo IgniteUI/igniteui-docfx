@@ -7,11 +7,10 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ## Data Grid
 
 <p class="highlight">Display and manipulate tabular data with the Ignite UI for Angular Data Grid. Quickly bind your data with very little coding or configuration. Features include filtering, sorting, paging, templates, movable columns, and the ability to edit and update data. User actions are easy to understand and can be controlled programmatically.</p>
-<div class="divider"></div>
 
 ### Demo
 
-<div class="sample-container loading" style="height:650px">
+<div class="sample-container loading" style="height:700px">
     <iframe id="grid-sample-iframe" src='{environment:demosBaseUrl}/grid' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
@@ -67,16 +66,16 @@ The [`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#a
 
 ### Columns configuration
 
-[`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) is used to define the grid's [`columns`]({environment:angularApiUrl}/classes/igxgridcomponent.html#columns) collection and to enable features per column like **filtering**, **sorting**, and **paging**. Cell, header, and footer templates are also available.
+[`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) is used to define the grid's [`columns`]({environment:angularApiUrl}/classes/igxgridcomponent.html#columns) collection and to enable features per column like **sorting** and **paging**. Cell, header, and footer templates are also available.
 
 Let's turn the [`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#autogenerate) property off and define the columns collection in the markup:
 
 ```html
 <igx-grid #grid1 [data]="data | async" [autoGenerate]="false" [paging]="true" [perPage]="6" (onColumnInit)="initColumns($event)"
-    (onSelection)="selectCell($event)">
-    <igx-column field="Name" [sortable]="true" header=" " [filterable]="true"></igx-column>
-    <igx-column field="AthleteNumber" [sortable]="true" header="Athlete number"></igx-column>
-    <igx-column field="TrackProgress" header="Track progress">
+    (onSelection)="selectCell($event)" [allowFiltering]="true">
+    <igx-column field="Name" [sortable]="true" header=" "></igx-column>
+    <igx-column field="AthleteNumber" [sortable]="true" header="Athlete number" [filterable]="false"></igx-column>
+    <igx-column field="TrackProgress" header="Track progress" [filterable]="false">
         <ng-template igxCell let-value>
             <igx-linear-bar [stripped]="false" [value]="value" [max]="100"></igx-linear-bar>
         </ng-template>
@@ -183,14 +182,13 @@ Column properties can also be set in code in the [`initColumns`]({environment:an
 public initColumns(column: IgxGridColumn) {
     const column: IgxColumnComponent = column;
     if (column.field === 'ProductName') {
-        column.filterable = true;
         column.sortable = true;
         column.editable = true;
     }
 }
 ```
 
-The code above will make the **ProductName** column filterable, sortable, and editable and will instantiate the corresponding features UI (like inputs for editing, etc.).
+The code above will make the **ProductName** column sortable and editable and will instantiate the corresponding features UI (like inputs for editing, etc.).
 
 ### Data binding
 
@@ -319,6 +317,17 @@ and in the template of the component:
 ```
 
 **Note**: The grid [`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#autogenerate) property is best to be avoided when binding to remote data for now. It assumes that the data is available in order to inspect it and generate the appropriate columns. This is usually not the case until the remote service responds, and the grid will throw an error. Making [`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#autogenerate) available, when binding to remote service, is on our roadmap for future versions.
+
+### Live Updating Demo
+
+This sample demonstrates the `igxGrid` bound to live data. 
+
+<div class="sample-container loading" style="height:915px">
+    <iframe id="grid-sample-finjs-iframe" src='{environment:demosBaseUrl}/finjs-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-finjs-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
 
 ## Known Limitations
 

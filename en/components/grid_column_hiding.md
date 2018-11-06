@@ -10,7 +10,7 @@ The Ignite UI for Angular Data Grid provides an [`IgxColumnHidingComponent`]({en
 
 #### Demo
 
-<div class="sample-container loading" style="height:650px">
+<div class="sample-container loading" style="height:600px">
     <iframe id="grid-column-hiding-toolbar-sample-iframe" src='{environment:demosBaseUrl}/grid-column-hiding-toolbar-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
@@ -25,17 +25,17 @@ Let's start by creating our grid and binding it to our data. We will also enable
 ```html
 <!--columnHiding.component.html-->
 
-<igx-grid #grid id="grid" [data]="data" [autoGenerate]="false" width="100%" height="560px" columnWidth="200px">
-    <igx-column [field]="'ID'" dataType="string" [filterable]="true" [sortable]="true"></igx-column>
-    <igx-column [field]="'ContactName'" dataType="string" [filterable]="true" [sortable]="true"></igx-column>
-    <igx-column [field]="'ContactTitle'" dataType="string" [filterable]="true" [sortable]="true"></igx-column>
-    <igx-column [field]="'City'" dataType="string" [filterable]="true" [sortable]="true"></igx-column>
-    <igx-column [field]="'CompanyName'" dataType="string" [filterable]="true" [sortable]="true"></igx-column>
-    <igx-column [field]="'Fax'" dataType="string" [filterable]="true" [sortable]="true"></igx-column>
-    <igx-column [field]="'Address'" dataType="string" [filterable]="true" [sortable]="true"></igx-column>
-    <igx-column [field]="'PostalCode'" dataType="string" [filterable]="true" [sortable]="true"></igx-column>
-    <igx-column [field]="'Country'" dataType="string" [filterable]="true" [sortable]="true"></igx-column>
-    <igx-column [field]="'Phone'" dataType="string" [filterable]="true" [sortable]="true"></igx-column>
+<igx-grid #grid id="grid" [data]="data" [autoGenerate]="false" width="100%" height="560px" columnWidth="200px" [allowFiltering]="true">
+    <igx-column [field]="'ID'" dataType="string" [sortable]="true"></igx-column>
+    <igx-column [field]="'ContactName'" dataType="string" [sortable]="true"></igx-column>
+    <igx-column [field]="'ContactTitle'" dataType="string" [sortable]="true"></igx-column>
+    <igx-column [field]="'City'" dataType="string" [sortable]="true"></igx-column>
+    <igx-column [field]="'CompanyName'" dataType="string" [sortable]="true"></igx-column>
+    <igx-column [field]="'Fax'" dataType="string" [sortable]="true"></igx-column>
+    <igx-column [field]="'Address'" dataType="string" [sortable]="true"></igx-column>
+    <igx-column [field]="'PostalCode'" dataType="string" [sortable]="true"></igx-column>
+    <igx-column [field]="'Country'" dataType="string" [sortable]="true"></igx-column>
+    <igx-column [field]="'Phone'" dataType="string" [sortable]="true"></igx-column>
 </igx-grid>
 ```
 
@@ -235,8 +235,8 @@ We can easily prevent the user from being able to hide columns through the colum
 <div class="gridContainer">
     <igx-grid ... >
         ...
-        <igx-column [field]="'ContactName'" dataType="string" [filterable]="true" [sortable]="true" [disableHiding]="true"></igx-column>
-        <igx-column [field]="'ContactTitle'" dataType="string" [filterable]="true" [sortable]="true" [disableHiding]="true"></igx-column>
+        <igx-column [field]="'ContactName'" dataType="string" [sortable]="true" [disableHiding]="true"></igx-column>
+        <igx-column [field]="'ContactTitle'" dataType="string" [sortable]="true" [disableHiding]="true"></igx-column>
         ...
     </igx-grid>
 </div>
@@ -244,7 +244,7 @@ We can easily prevent the user from being able to hide columns through the colum
 
 If all went well, this is how our column hiding UI component should look like:
 
-<div class="sample-container loading" style="height:650px">
+<div class="sample-container loading" style="height:600px">
     <iframe id="grid-column-hiding-sample-iframe" src='{environment:demosBaseUrl}/grid-column-hiding-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>

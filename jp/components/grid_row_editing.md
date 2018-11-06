@@ -1,18 +1,19 @@
----
-title: Grid Row Editing - Native Angular | Ignite UI for Angular
-_description: Row editing - allows modification of several cells in the row, before submitting, at once, all those changes to the grid's data source. Leverages the pending changes functionality of the new transaction provider.
+﻿---
+title: Grid 行の編集 - ネイティブ Angular | Ignite UI for Angular
+_description: 行編集 - グリッド データソースに変更をサブミットする前に行の複数セルを一度に変更することが可能です。新しいトランザクション プロバイダーの保留中の変更を利用できます。
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Component, Angular Grid, Angular Data Grid component, Angular Data Grid control, Angular Grid component, Angular Grid control, Angular High Performance Grid, Cell Editing
+_language: ja
 ---
 
-## Grid Editing
+## グリッド編集
 
-Row editing - allows modification of several cells in the row, before submitting, at once, all those changes to the grid's data source. Leverages the pending changes functionality of the new transaction provider.
+行編集 - グリッド データソースに変更をサブミットする前に行の複数セルを一度に変更することが可能です。新しいトランザクション プロバイダーの保留中の変更を利用できます。
 
 
 
-### Demo
+### デモ
 
-The following sample demonstrates how to enable row editing in the grid. Changing a cell value and then clicking or navigating to another cell on the same row will not update row value until confirmed, using the Done button, or discarded, using the Cancel one.
+以下の手順では、グリッドで行編集を有効にする方法を示します。セル値を変更してから同じ行の他のセルをクリックまたはナビゲーションした場合も Done ボタンを使用して確定するまで行値を更新しません。または Cancel ボタンを使用して破棄します。
 
 <div class="sample-container loading" style="height:650px">
     <iframe id="grid-row-editing-sample-iframe" src='{environment:demosBaseUrl}/grid-row-editing' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -23,13 +24,13 @@ The following sample demonstrates how to enable row editing in the grid. Changin
 </div>
 
 > [!NOTE]
-> When a row is in edit mode, then clicking on a cell on another row will act like the Done button is pressed - submit all the changes of the previous row. If the new cell that gets focus is editable, then the new row also enters edit mode, while if the cell is not editable, then only the previous row exits edit mode.
+> 行が編集モードにある場合、他の行のセルをクリックすると Done ボタンが押されたように動作し、前の行の変更をすべての変更をサブミットします。フォーカスのある新しいセルが編集可能かどうか、新しい行が編集モードに入るかどうか、セルが編集できない場合は前の行のみ編集モードを終了します。
 
 <div class="divider--half"></div>
 
-## Usage
+## 使用方法
 
-To get started import the [IgxGridModule]({environment:angularApiUrl}/classes/igxgridmodule.html) in the **app.module.ts** file:
+[IgxGridModule]({environment:angularApiUrl}/classes/igxgridmodule.html) in the **app.module.ts** ファイルをインポートします。
 
 ```typescript
 // app.module.ts
@@ -45,7 +46,7 @@ import { IgxGridModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-Then define a grid with bound data source and [`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditable) set to true:
+データソースにバインドするグリッドを定義をして [`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditable) を true に設定します。
 
 ```html
 <div class="sample-wrapper">
@@ -66,9 +67,9 @@ Then define a grid with bound data source and [`rowEditable`]({environment:angul
 ```
 
 > [!NOTE]
-> Setting primary key is mandatory for editing operations, including row editing.
+> 行編集を含む編集操作でプライマリキーの設定は必須です。
 > [!NOTE]
-> It's not needed to enable editing for individual columns. Using the [`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditable) property in the grid, will mean that all rows, with defined `field` property, excluding primary one, will be editable. If you want to disable editing for specific column, then you set the [`editable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable) column's input to `false`.
+> 各列の編集を有効にする必要はありません。グリッドで [`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditable) プロパティを使用するとプライマリ行以外 `field` プロパティを定義したすべての行が編集可能になります。特定の列の編集を無効にする場合、[`editable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable) 列の入力を false に設定します。
 
 
 ```typescript
@@ -96,55 +97,55 @@ export class GridRowEditSampleComponent {
 ```
 
 > [!NOTE]
-> The grid uses internally a provider [`IgxBaseTransactionService`]({environment:angularApiUrl}/classes/igxbasetransactionservice.html) that holds pending cell changes, until row state submitted or cancelled.
+> グリッドは、保留中のセル変更を保持するプロバイダー [`IgxBaseTransactionService`]({environment:angularApiUrl}/classes/igxbasetransactionservice.html) を行ステートをサブミットまたはキャンセルするまで内部使用します。
 
-## Positioning
+## 配置
 
-- Default position of the overlay will be below the row that is in edit mode
+- オーバーレイのデフォルトの位置は編集モードで行の下にあります。
      
-- If there is no space below the row then overlay will appear above the row.
+- 行の下にスペースがない場合、オーバーレイが行の上に表示されます。
      
-- Once shown - top or bottom, overlay will maintain this position during scrolling, until the overlay is closed.
+- 一番上または下に表示されると、オーバーレイは閉じられるまでスクロール時にこの位置を保持します。
 
-## Behavior
+## 動作
 
-- If row is in edit mode, then editing will continue, if a cell from the same row is clicked.
+- 行が編集モードの場合、編集が継続します。同じ行のセルがクリックされたかどうか。
 
-- Clicking "Done" button will finish row editing and will submit changes either to the data source, or to a transaction if available. In addition row will exit edit mode.
+- Done ボタンをクリックすると行編集を完了し、変更をデータソースまたはトランザクションへサブミットします。更に行が編集モードを完了します。
 
-- Clicking "Cancel" button will revert all current changes in the row and row will exit edit mode.
+- Cancel ボタンがをクリックすると現在の行のすべての変更を元に戻し、行編集モードを終了します。
 
-- If row is in edit mode, then clicking a cell from another row will finish the current row edit and will submit new row changes (the same behavior clicking "Done" button). If the new cell that gets focus is editable, then the new row also enters edit mode, while if the cell is not editable, then only the previous row exits edit mode.
+- 行が編集モードにある場合、他の行のセルをクリックすると現在の行編集を終了し、行の新規の変更をサブミット (Done ボタンをクリックした場合と同じ) します。フォーカスのある新しいセルが編集可能かどうか、新しい行が編集モードに入るかどうか、セルが編集できない場合は前の行のみ編集モードを終了します。
 
-- If row is in edit mode and grid is scrolled so that row goes outside the visible area, the latter will be still in edit mode. When grid is scrolled, so that the row is visible again, the row will be still in edit mode.
+- 行が編集モードの時にグリッドがスクロールされると行が表示領域外になりますが、グリッドは編集モードのままです。グリッドをスクロールすると行が再び表示されて行は編集モードのままになります。
 
-- Each modified cell gets edited style until row edit is finished. This is the behavior, when grid is not provided with transactions. When transactions are available - then cell edit style is applied until all the changes are committed.
-
-
-## Keyboard Navigation
-
-- `Enter` and `F2` enters row edit mode
-
-- `Esc` exits row edit mode and doesn't submit any of the cell changes, made while the row was in edit mode.
-
-- `Tab` move focus from one editable cell in the row to the next and from the right-most editable cell to the CANCEL and DONE buttons. Navigation from DONE button goes to the left-most editable cell within the currently edited row.
+- 編集した各セルは行編集が終了するまで変更スタイルを取得します。グリッドがトランザクションで提供されない場合の動作です。トランザクションが有効な場合、すべての変更がコミットされるまでセル編集スタイルが適用されます。
 
 
-## Feature Integration
+## キーボード ナビゲーション
 
-- Any data changing operation will terminate row editing operations and will submit current row changes. This will include operations like sorting, changing grouping and filtering criteria, paging, etc.
+- `Enter` and `F2` が行編集モードに入ります。
 
-- Summaries will be updated after row edit is finished. Same is valid for the other features like sorting, filtering, etc.
+- `Esc` が行編集モードを終了し、行の編集モード時に変更されたいずれのセルの変更もサブミットしません。
 
-- Expanding and collapsing grouped rows will not terminate editing for the current row.
+- `Tab` は行の編集可能なセルから次のセルへフォーカスを移動、右端の編集可能なセルから CANCEL と Done ボタンへ移動します。DONE ボタンからのナビゲーションは現在の編集行内で編集可能なセルへ移動します。
 
 
-## Customizing Row Editing Overlay
+## 機能の統合
 
-### Customizing Text
+- すべてのデータ変更操作は行変更操作を終了し、現在の行の変更をサブミットします。並べ替え、グループの変更、フィルタリング条件、ページングなどが含まれます。
 
-Customizing the text of the row editing overlay is possible using the `igxRowEditTextDirective`.
-The `rowChangesCount` property is exposed and it holds the count of the changed cells.
+- 行編集が終了した後に集計が更新されます。同様に並べ替えやフィルタリングなどの他の機能が有効になります。
+
+- グループ行の展開と縮小は現在の行の編集を終了しません。
+
+
+## 行編集オーバーレイのカスタマイズ
+
+### テキストのカスタマイズ
+
+`igxRowEditTextDirective` を使用した行編集オーバーレイのテキストのカスタマイズが可能です。
+`rowChangesCount` プロパティが公開されて変更されたセルのカウントを保持します。
 
 ```html
 <ng-template igxRowEditText let-rowChangesCount>
@@ -152,9 +153,9 @@ The `rowChangesCount` property is exposed and it holds the count of the changed 
 </ng-template>
  ```
 
- ### Customizing Buttons
-Customizing the buttons of the row editing overlay is possible using the `igxRowEditActionsDirective`.
-If you want the buttons to be part of the keyboard navigation, then each on of them should have the `igxRowEditTabStopDirective`.
+ ### ボタンのカスタマイズ
+`igxRowEditActionsDirective` を使用して行編集オーバーレイのボタンのカスタマイズが可能です。
+キーボード ナビゲーションにボタンを含める場合、各ボタンに `igxRowEditTabStopDirective` が必要です。
 
  ```typescript
  <ng-template igxRowEditActions let-endRowEdit>
@@ -163,25 +164,26 @@ If you want the buttons to be part of the keyboard navigation, then each on of t
 </ng-template>
  ```
 
-## API
+## API リファレンス
 
-### igxGrid Inputs
+### igxGrid 入力
 
 * [rowEditable]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditable)
 
-### igxGrid Outputs
+### igxGrid 出力
 
-* [onRowEditDone]({environment:angularApiUrl}/classes/igxgridcomponent.html#onroweditdone)
+* [onRowEditEnter]({environment:angularApiUrl}/classes/igxgridcomponent.html#onroweditenter)
+* [onRowEdit]({environment:angularApiUrl}/classes/igxgridcomponent.html#onrowedit)
 * [onRowEditCancel]({environment:angularApiUrl}/classes/igxgridcomponent.html#onroweditcancel)
 
-### igxGrid Methods
+### igxGrid メソッド
 
-* [endRowEdit]({environment:angularApiUrl}/classes/igxgridcomponent.html#endrowedit)
+* [endEdit]({environment:angularApiUrl}/classes/igxgridcomponent.html#endedit)
 
 
-### Additional Resources
+### その他のリソース
 <div class="divider--half"></div>
 
-* [Grid Overview](grid.md)
-* [Grid Editing](grid_editing.md)
-* [Grid Transactions](grid_transactions.md)
+* [Grid の概要](grid.md)
+* [Grid 編集](grid_editing.md)
+* [Grid トランザクション](grid_transactions.md)

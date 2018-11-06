@@ -30,7 +30,7 @@ Ignite UI for Angular 行選択は、行内のすべての列の前に描画さ�
     <!-- in example.component.html -->
     ...
     <igx-grid #grid1 [data]="remote | async" [rowSelectable]="false" (onSelection)="handleRowSelection($event)"
-      [width]="'800px'" [height]="'600px'">
+      [width]="'800px'" [height]="'600px'" [allowFiltering]="true">
             ...
     </igx-grid>
     ...
@@ -52,7 +52,7 @@ Ignite UI for Angular 行選択は、行内のすべての列の前に描画さ�
 
 ```html
     <igx-grid #grid1 [data]="remote | async" [primaryKey]="'ProductID'" [rowSelectable]="selection" (onSelection)="handleRowSelection($event)"
-      [width]="'800px'" [height]="'600px'">
+      [width]="'800px'" [height]="'600px'" [allowFiltering]="true">
 ```
 
 **注**: グリッドにリモート仮想化がある場合に行選択およびセル選択が正しく動作するには、[`primaryKey`]({environment:angularApiUrl}/classes/igxgridcomponent.html#primarykey) を設定します。

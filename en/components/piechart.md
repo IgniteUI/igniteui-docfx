@@ -7,9 +7,9 @@ _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Nati
 
 The Pie Chart is a specialized component that renders a pie chart, consisting of a circular area divided into sections. Each section has arc length proportional to its underlying data value.
 
-### Demo
+This control is used for representing categorical data. It is most effective when there are only a few categories, and when each category makes up a relatively large percentage of the data as a whole.
 
-The Pie Chart is used for representing categorical data. It is most effective when there are only a few categories, and when each category makes up a relatively large percentage of the data as a whole.
+### Demo
 
 <div class="sample-container" style="height: 350px">
     <iframe id="pie-chart-data-sample-iframe" src='{environment:demosBaseUrl}/pie-chart-data-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -88,7 +88,7 @@ Additionally you can use the `legendItemTemplate` and `legendItemBadgeTemplate` 
                 labelMemberPath="Label" 
                 legendLabelMemberPath="Label"
                 [legend]="PieChartLegend">
-        </igx-pie-chart>
+</igx-pie-chart>
 ```
 
 <div class="sample-container" style="height: 320px">
@@ -105,8 +105,7 @@ Sometimes, the underlying data for the Pie Chart component will contain many ite
 
 In the sample below, the `othersCategoryThreshold` is set to 2, and `othersCategoryType` is set to Number. Therefore, items with value less than or equal to 2 will be assigned to the “Others” category.
 
- [!NOTE]
-If you set `othersCategoryType` to Percent, then `othersCategoryThreshold` will be interpreted as a percentage rather than as a value, i.e. items whose values are less than 2% of the sum of all item values would be assigned to the Others category. You can use whichever `othersCategoryType` is most appropriate for your application.
+> Note: If you set `othersCategoryType` to Percent, then `othersCategoryThreshold` will be interpreted as a percentage rather than as a value, i.e. items whose values are less than 2% of the sum of all item values would be assigned to the Others category. You can use whichever `othersCategoryType` is most appropriate for your application.
 
 
 ```html
@@ -183,75 +182,3 @@ For scenarios where you click on the Others slice, the pie chart will return an 
     <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="pie-chart-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
     </button>
 </div>
-
-
-### Summary
-For your convenience, all above code snippets are combined into one code block below that you can easily copy to your project and see the pie chart with all features and visuals enabled.
-
-```html
-<igx-radial-gauge
-    height="300px" width="300px"
-    minimumValue=0
-    maximumValue=80
-    scaleStartAngle=135
-    scaleEndAngle=45
-    scaleBrush="#c6c6c6"
-    scaleSweepDirection="Clockwise"
-    scaleOversweep=1
-    scaleOversweepShape="Fitted"
-    scaleStartExtent=0.45
-    scaleEndExtent=0.575
-
-    value=70
-    isNeedleDraggingEnabled=true
-    isNeedleDraggingConstrained=true
-    needleShape="NeedleWithBulb"
-    needleBrush="DodgerBlue"
-    needleOutline="DodgerBlue"
-    needleEndExtent=0.475
-    needleStrokeThickness=1
-    needlePivotShape="CircleOverlay"
-    needlePivotBrush="#9f9fa0"
-    needlePivotOutline="#9f9fa0"
-    needlePivotWidthRatio=0.2
-    needlePivotStrokeThickness=1
-
-    interval=10
-    tickStartExtent=0.45
-    tickEndExtent=0.575
-    tickStrokeThickness=2
-    tickBrush="Black"
-    minorTickCount=4
-    minorTickEndExtent=0.5
-    minorTickStartExtent=0.575
-    minorTickStrokeThickness=1
-    minorTickBrush="Black"
-
-    labelExtent=0.65
-    labelInterval=10
-    font="11px Verdana"
-    fontBrush="Black"
-
-    backingShape="Fitted"
-    backingBrush="#ededed"
-    backingOutline="Gray"
-    backingOversweep=5
-    backingCornerRadius=10
-    backingStrokeThickness=5
-    backingOuterExtent=0.8
-    backingInnerExtent=0.15
-
-    rangeBrushes ="#a4bd29, #F86232"
-    rangeOutlines="#a4bd29, #F86232">
-    <igx-radial-gauge-range
-        startValue=20 endValue=40
-        innerStartExtent=0.45 innerEndExtent=0.45
-        outerStartExtent=0.57 outerEndExtent=0.57>
-    </igx-radial-gauge-range>
-    <igx-radial-gauge-range
-        startValue=40 endValue=60
-        innerStartExtent=0.45 innerEndExtent=0.45
-        outerStartExtent=0.57 outerEndExtent=0.57>
-    </igx-radial-gauge-range>
-</igx-radial-gauge>
-```

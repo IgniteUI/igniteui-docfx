@@ -11,13 +11,12 @@
     - name: 그리드 편집
       href: grid_editing.md
       new: true
-      items:
-        - name: Row Editing
-          href: grid_row_editing.md
-          new: true
-        - name: Transactions
-          href: grid_transactions.md
-          new: true
+    - name: 그리드 편집
+      href: grid_row_editing.md
+      new: true
+    - name: 그리드 트랜잭션
+      href: grid_batch_editing.md
+      new: true
     - name: 그리드 페이징
       href: grid_paging.md
       new: false
@@ -54,7 +53,7 @@
     - name: 그리드 도구 모음
       href: grid_toolbar.md
       new: true
-    - name: Export to Excel
+    - name: Excel 내보내기
       href: exporter_excel.md
       new: false
     - name: Excel에서 붙여넣기
@@ -69,6 +68,13 @@
     - name: 조건부 셀 스타일
       href: grid_conditional_cell_styling.md
       new: true
+- name: Tree Grid
+  href: treegrid.md
+  new: true
+  items:
+  - name: Row Editing
+    href: treegrid_row_editing.md
+    new: true
 - name: List View
   href: list.md
 - name: Combo

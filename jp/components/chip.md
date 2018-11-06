@@ -21,7 +21,7 @@ _language: ja
 
 #### Chip の初期化
 
-The [`IgxChipComponent`]({environment:angularApiUrl}/classes/igxchipcomponent.html) is the main class for a chip elemenent and the [`IgxChipsAreaComponent`]({environment:angularApiUrl}/classes/igxchipsareacomponent.html) is the main class for a chip area. The chip area is used when handling more complex scenarios that require interaction between chips (dragging, selection, navigation and etc.). The [`IgxChipComponent`]({environment:angularApiUrl}/classes/igxchipcomponent.html) has an an [`id`]({environment:angularApiUrl}/classes/igxchipcomponent.html#id) input so that the different chips can be easily distinguished. If [`id`]({environment:angularApiUrl}/classes/igxchipcomponent.html#id) is not provided it will be automatically generated.
+[`IgxChipComponent`]({environment:angularApiUrl}/classes/igxchipcomponent.html) はチップ要素のメイン クラスで `IgxChipsAreaComponent`]({environment:angularApiUrl}/classes/igxchipsareacomponent.html) はチップ領域のメイン クラスです。チップ領域はチップの間の操作 (ドラッグ、選択、ナビゲーションなど) が必要の複雑なシナリオの処理で使用されます。[`IgxChipComponent`]({environment:angularApiUrl}/classes/igxchipcomponent.html) には、`id`]({environment:angularApiUrl}/classes/igxchipcomponent.html#id) 入力があるため、他のチップと簡単に識別できます。[`id`]({environment:angularApiUrl}/classes/igxchipcomponent.html#id) がない場合は自動的に生成します。
 
 [`igxChip`]({environment:angularApiUrl}/classes/igxchipcomponent.html) を [`igxChipArea`]({environment:angularApiUrl}/classes/igxchipsareacomponent.html) と使用した例:
 
@@ -43,13 +43,13 @@ Chip states:
 
 ![Default Selection](../images/chip/selecting_default.gif)
 
-Selection can be enabled by setting an input called [`selectable`]({environment:angularApiUrl}/classes/igxchipcomponent.html#selectable). The selecting is done either by clicking on the chip itself or by using the `Tab` key to focus the chip and then pressing the `Space` key. If a chip is already selected it can be deselected by pressing the `Space` key again while the chip is focused or by clicking on it.
+セクションは入力 [`selectable`]({environment:angularApiUrl}/classes/igxchipcomponent.html#selectable) を設定して有効にできます。チップをクリックするか、チップを `Tab` キーによってフォーカスして `Space` キーを押すと選択できます。選択されたチップをクリックするか、チップがフォーカスされる場合に `Space` キーを押すと選択解除できます。
 
-An event [`onSelection`]({environment:angularApiUrl}/classes/igxchipcomponent.html#onselection) is fired when the selection state of the [`igxChip`]({environment:angularApiUrl}/classes/igxchipcomponent.html) changes. It provides the new [`selected`]({environment:angularApiUrl}/interfaces/ichipselecteventargs.html#selected) value so you can get the new state and the original event in [`originalEvent`]({environment:angularApiUrl}/interfaces/ichipselecteventargs.html#originalevent) that triggered this selection change. If this is not done through user interaction but instead is done by setting the [`selected`]({environment:angularApiUrl}/interfaces/ichipselecteventargs.html#selected) property programmatically the [`originalEvent`]({environment:angularApiUrl}/interfaces/ichipselecteventargs.html#originalevent) argument has value `null`.
+イベント [`onSelection`]({environment:angularApiUrl}/classes/igxchipcomponent.html#onselection) は、[`igxChip`]({environment:angularApiUrl}/classes/igxchipcomponent.html) 変更の選択ステートが変更されたときに発生されます。新しい [`selected`]({environment:angularApiUrl}/interfaces/ichipselecteventargs.html#selected) 値を提供することにより、新しいステートとこの選択の変更をトリガーした [`originalEvent`]({environment:angularApiUrl}/interfaces/ichipselecteventargs.html#originalevent) の元のイベントを取得できます。インタラクションによって行わない場合は [`selected`]({environment:angularApiUrl}/interfaces/ichipselecteventargs.html#selected) をコードで設定します。[`originalEvent`]({environment:angularApiUrl}/interfaces/ichipselecteventargs.html#originalevent) 引数に値 `null` があります。
 
-Also by default an icon is shown indicating that the chip is being selected. It is fully customizable and can be done through the [`selectIcon`]({environment:angularApiUrl}/classes/igxchipcomponent.html#selecticon) input. It accepts values of type `TemplateRef` and overrides the default icon while retaining the same functionality.
+デフォルトでアイコンがチップが選択されていることを示します。詳細なカスタマイズが可能で [`selectIcon`]({environment:angularApiUrl}/classes/igxchipcomponent.html#selecticon) 入力によって行うことができます。型 `TemplateRef` の値を受け取り、同じ機能を保持する際にデフォルト アイコンをオーバーライドします。
 
-Example of customizing the select icon:
+選択アイコンのカスタマイズ例:
 
 ![Custom Selection](../images/chip/selecting_custom.gif)
 
@@ -69,15 +69,15 @@ Example of customizing the select icon:
 
 ![Removing](../images/chip/removing_default.gif)
 
-Removing can be enabled by setting the [`removable`]({environment:angularApiUrl}/classes/igxchipcomponent.html#removable) input to `true`. When enabled a remove button is rendered at the end of the chip. When the end-users performs any interaction like clicking on the remove button or pressing the `Delete` key while the chip is focused the [`onRemove`]({environment:angularApiUrl}/classes/igxchipcomponent.html#onremove) event is emitted.
+削除は、[`removable`]({environment:angularApiUrl}/classes/igxchipcomponent.html#removable) 入力を `true` に設定して有効にできます。有効な場合は、チップの最後に削除ボタンが描画されます。チップのフォーカス時に削除ボタンのクリックまたは `Delete` キーの押下などエンドユーザーがインタラクションを実行した場合、 [`onRemove`]({environment:angularApiUrl}/classes/igxchipcomponent.html#onremove) イベントが発生されます。 
 
-By default the chip does not remove itself from the template when the user wants to delete a chip. This needs to be handled manually using the [`onRemove`]({environment:angularApiUrl}/classes/igxchipcomponent.html#onremove) event.
+チップはユーザーがチップを削除したい場合に自体をデフォルトでテンプレートから削除しません。[`onRemove`]({environment:angularApiUrl}/classes/igxchipcomponent.html#onremove) イベントを使用して手動で対応する必要があります。
 
-If you need to customize the remove icon you can use the [`removeIcon`]({environment:angularApiUrl}/classes/igxchipcomponent.html#removeicon) input. It takes a value of type `TemplateRef` and renders it instead of the default remove icon. This means that you can customize the remove button in any way while all the handling of it is still handled by the chip itself.
+削除アイコンをカスタマイズする必要がある場合、`removeIcon`]({environment:angularApiUrl}/classes/igxchipcomponent.html#removeicon) 入力を使用できます。型 `TemplateRef` の値を取得してデフォルトの削除アイコンの代わりに描画します。つまり、チップ自体ですべて処理されている際も削除ボタンを自由にカスタマイズできます。
 
 ![Remove icons](../images/chip/remove_icons.jpg)
 
-Example of handling chip removing and custom remove icon:
+チップ削除の処理と削除アイコンのカスタマイズ例:
 
 ```html
 <igx-chips-area #chipsArea>
@@ -130,15 +130,15 @@ public chipsOrderChanged(event) {
 
 #### Chip テンプレート
 
-The [`IgxChipComponent`]({environment:angularApiUrl}/classes/igxchipcomponent.html)'s main structure consists of `select icon`, [`prefix`]({environment:angularApiUrl}/classes/igxprefixdirective.html), `chip content`, [`suffix`]({environment:angularApiUrl}/classes/igxsuffixdirective.html) and `remove button`. All of those elements are templatable.
+[`IgxChipComponent`]({environment:angularApiUrl}/classes/igxchipcomponent.html) の主要な構造は、`select icon`, [`prefix`]({environment:angularApiUrl}/classes/igxprefixdirective.html)、`chip content`、[`suffix`]({environment:angularApiUrl}/classes/igxsuffixdirective.html) と `remove button` で構成されています。すべての要素のテンプレート化できます。
 
-The content of the chip is taken by the content defined inside the chip template except elements that define the [`prefix`]({environment:angularApiUrl}/classes/igxprefixdirective.html) and  [`suffix`]({environment:angularApiUrl}/classes/igxsuffixdirective.html) of the chip. You can define any type of content you need:
+チップのコンテンツは、チップの [`prefix`]({environment:angularApiUrl}/classes/igxprefixdirective.html) および [`suffix`]({environment:angularApiUrl}/classes/igxsuffixdirective.html) を定義する要素以外のテンプレートに定義されるコンテンツです。コンテンツ タイプを定義できます。
 
-The [`prefix`]({environment:angularApiUrl}/classes/igxprefixdirective.html) and [`suffix`]({environment:angularApiUrl}/classes/igxsuffixdirective.html) are also elements inside the actual chip area where they can be templated by your preference. The way they can be specified is by respectively using the [`IgxPrefix`]({environment:angularApiUrl}/classes/igxprefixdirective.html) and [`IxgSuffix`]({environment:angularApiUrl}/classes/igxsuffixdirective.html) directives:
+[`prefix`]({environment:angularApiUrl}/classes/igxprefixdirective.html) と [`suffix`]({environment:angularApiUrl}/classes/igxsuffixdirective.html) は、テンプレート化可能な実際のチップ領域内の要素です。[`IgxPrefix`]({environment:angularApiUrl}/classes/igxprefixdirective.html) と [`IxgSuffix`]({environment:angularApiUrl}/classes/igxsuffixdirective.html) それぞれのディレクティブを使用して指定できます。
 
 ![Prefix and Suffix](../images/chip/prefix_suffix.jpg)
 
-Example of using an icon for both [`prefix`]({environment:angularApiUrl}/classes/igxprefixdirective.html) and [`suffix`]({environment:angularApiUrl}/classes/igxsuffixdirective.html) and a text for `content`:
+[`prefix`]({environment:angularApiUrl}/classes/igxprefixdirective.html) と `suffix`]({environment:angularApiUrl}/classes/igxsuffixdirective.html) 両方のアイコンを使用した例と `content` のテキスト:
 
 ```html
 <igx-chip>
@@ -148,7 +148,7 @@ Example of using an icon for both [`prefix`]({environment:angularApiUrl}/classes
 </igx-chip>
 ```
 
-Chip rendering can be customized so its dimensions can be different using the [`displayDensity`]({environment:angularApiUrl}/classes/igxchipcomponent.html#displaydensity) input. By default it is set to `comfortable`. It can be set to `cosy` or `compact` while everything inside the chip retains its relative positioning:
+チップの描画を [`displayDensity`]({environment:angularApiUrl}/classes/igxchipcomponent.html#displaydensity) してカスタマイズしディメンションを変更できます。デフォルトで `comfortable` に設定されます。チップ内すべてが相対位置を保持する際に `cosy` または `compact` に設定できます。 
 
 ![Density](../images/chip/density.jpg)
 
@@ -165,7 +165,7 @@ Chip rendering can be customized so its dimensions can be different using the [`
 </igx-chip>
 ```
 
-A few examples of how the chip can be even further customized:
+以下はチップを更にカスタマイズした例です。
 
 ![Advanced customizing](../images/chip/advanced_customizing.jpg)
 
@@ -175,20 +175,20 @@ A few examples of how the chip can be even further customized:
 
 - チップがフォーカスされた場合のキーボード コントロール:
 
-  - <kbd>LEFT</kbd> - Moves the focus to the chip on the left.
+  - <kbd>LEFT</kbd> - チップのフォーカスを左へ移動します。
 
     ![Left](../images/chip/arrow_left_key.gif)
 
-  - <kbd>RIGHT</kbd> - Moves the focus to the chip on the right.
+  - <kbd>RIGHT</kbd> - チップのフォーカスを右へ移動します。 
 
     ![Right](../images/chip/arrow_right_key.gif)
 
-  - <kbd>SPACE</kbd> - Toggles chip selection if it is selectable
+  - <kbd>SPACE</kbd> - チップが選択可能な場合、選択を切り替えます。
 
     ![Space](../images/chip/space_key.gif)
-  - <kbd>DELETE</kbd> - Triggers the [`onRemove`]({environment:angularApiUrl}/classes/igxchipcomponent.html#onremove) event for the [`igxChip`]({environment:angularApiUrl}/classes/igxchipcomponent.html) so the chip deletion can be handled manually.
-  - <kbd>SHIFT</kbd> + <kbd>LEFT</kbd> - Triggers [`onReorder`]({environment:angularApiUrl}/classes/igxchipsareacomponent.html#onreorder) event for the [`igxChipArea`]({environment:angularApiUrl}/classes/igxchipsareacomponent.html) when the currently focused chip should move position to the left.
-  - <kbd>SHIFT</kbd> + <kbd>RIGHT</kbd> - Triggers [`onReorder`]({environment:angularApiUrl}/classes/igxchipsareacomponent.html#onreorder) event for the [`igxChipArea`]({environment:angularApiUrl}/classes/igxchipsareacomponent.html) when the currently focused chip should move one position to the right
+  - <kbd>DELETE</kbd> - [`igxChip`]({environment:angularApiUrl}/classes/igxchipcomponent.html) の [`onRemove`]({environment:angularApiUrl}/classes/igxchipcomponent.html#onremove) イベントをトリガーし、チップ削除が手動で処理されます。
+  - <kbd>SHIFT</kbd> + <kbd>LEFT</kbd> - 現在フォーカスされたチップは左に位置を移動した際に [`igxChipArea`]({environment:angularApiUrl}/classes/igxchipsareacomponent.html) の [`onReorder`]({environment:angularApiUrl}/classes/igxchipsareacomponent.html#onreorder) イベントをトリガーします。
+  - <kbd>SHIFT</kbd> + <kbd>RIGHT</kbd> - 現在フォーカスされたチップは右に位置を移動した際に [`igxChipArea`]({environment:angularApiUrl}/classes/igxchipsareacomponent.html) の [`onReorder`]({environment:angularApiUrl}/classes/igxchipsareacomponent.html#onreorder) イベントをトリガーします。
 
 - 削除ボタンがフォーカスされた場合のキーボード コントロール:
 

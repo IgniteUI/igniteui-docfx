@@ -34,7 +34,7 @@ Ignite UI for Angular에서 [`IgxGrid`]({environment:angularApiUrl}/classes/igxg
 
 ### 원격 가상화
 
-[`IgxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) supports the scenario in which the data chunks are requested from a remote service, exposing the behavior implemented in the [`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html) directive it uses internally.
+[`IgxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) 는 원격 서비스에서 데이터 청크를 요청하는 시나리오를 지원하며, 내부적으로 사용하는  [`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html) 지시문에 구현된 동작을 노출합니다.
 
 ### 그리드 원격 가상화 데모
 

@@ -47,7 +47,7 @@ The Final Value Layer provides a quick view along the axis of the ending value d
 
 ### Callout Layer
 
-The Callout Layer displays a callout at X/Y positions. It can show a label and some extra content as a tooltip when hovering over the annotation.
+The Callout Layer displays a callout at X/Y positions. 
 
 > Note: When using the ordinal X axis mode, the `calloutsXMemberPath` should point to the numeric index of the item, otherwise `calloutsXMemberPath` should point to the time value.
 

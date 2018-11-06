@@ -126,8 +126,8 @@ _language: kr
 카테고리 차트 컨트롤의 축 갭 기능을 사용하면 차트 시리즈 간의 갭을 설정할 수 있습니다.
 
 이 속성은 0과 1 사이의 수치 소수값을 허용합니다. 이 값은 시리즈 간의 사용 가능한 픽셀 수에서 갭의 상대 너비를 나타냅니다.
-   0 - no gap is rendered between series;
-   1 - maximum available gap is rendered between series.
+   0 - 시리즈 간에 갭이 렌더링되지 않습니다;
+   1 - 시리즈 간에 사용 가능한 최대 갭이 렌더링됩니다.
 
 `xAxisGap`이 `0.125`인 카테고리 차트를 설정하려면 다음 코드를 사용합니다:
 
