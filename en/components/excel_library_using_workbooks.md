@@ -25,8 +25,9 @@ First create a new instance of `IWorkbookFont`. Next, add the new font to the St
 ```typescript
 var workbook = new Workbook();
 var normalFont: IWorkbookFont;
+normalFont = this.wb.styles().normalStyle.styleFormat.font;
 normalFont.name = "Times New Roman";
-normalFont.height = 16 * 20;
+normalFont.height = 16 * 20;   
 ```
 
 ### Setting Workbook Properties
@@ -59,3 +60,42 @@ workbook.documentProperties.title = "Expense Report";
 workbook.documentProperties.status = "Complete";
 ```
 
+### Workbook Protection
+
+The workbook protection feature allows you to protect (without a password) the following user operations:
+
+- Workbook structure: the ability to add, rename, delete, hide and reorder the worksheets.
+
+> Note, the protection is not enforced via the Infragistics Excel Engine's object model. It is a responsibility of the UI visualizing this object model, to honor these protection settings and allow or restrict the user from performing the corresponding operations.
+
+You can use the Infragistics Excel Library to set these properties using the `Workbook` object. The available properties are:
+
+- protect
+
+Apply workbook protection. When a Workbook is protected without a password, the end user may unprotect the Workbook in Excel without having to supply a password. To programatically unprotect a Workbook, one may use the Unprotect method.
+
+When a Workbook is protected, the values of the properties of the WorkbookProtection instance from this Workbook's Protection property indicate the disabled operations.
+
+Note: If IsProtected is already true, the method will be ignored.
+
+```typescript
+var wb = new Workbook(format);
+wb.protect(false, false);
+```
+- isProtected
+
+Check if a workbook has protection. This read-only property returns true if the workbook has any protection set using the overloads of the Protect method.
+
+```typescript
+var wb = new Workbook(format);
+var i = wb.isProtected;
+```
+
+- protection
+
+This read-only property returns an object of type WorkbookProtection which contains properties for obtaining each protection setting individually.
+
+```typescript
+var wb = new Workbook(format);
+var i = wb.protection;
+```
