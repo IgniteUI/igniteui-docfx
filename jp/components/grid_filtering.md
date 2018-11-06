@@ -147,6 +147,21 @@ this.grid.filteringLogic = FilteringLogic.OR;
 
 <div class="divider--half"></div>
 
+#### Custom Filtering Operands
+You can customize the filtering menu as you add, remove or modify the filtering operands. By default, the filtering menu contains certain operands based on the column’s data type ([`IgxBooleanFilteringOperand`]({environment:angularApiUrl}/classes/igxbooleanfilteringoperand.html), [`IgxDateFilteringOperand`]({environment:angularApiUrl}/classes/igxdatefilteringoperand.html), [`IgxNumberFilteringOperand`]({environment:angularApiUrl}/classes/igxnumberfilteringoperand.html) and [`IgxStringFilteringOperand`]({environment:angularApiUrl}/classes/igxstringfilteringoperand.html)). You can extend these classes or their base class [`IgxFilteringOperand`]({environment:angularApiUrl}/classes/igxfilteringoperand.html) to change the filtering menu items’ behavior.
+
+In the sample below, inspect the “Product Name” and “Discontinued” columns filters menus. For the “Discontinued” column filter, we have limited the number of operands to All, True and False. For the “Product Name” column filter – we have modified the Contains and Does Not Contain operands logic to perform case sensitive search and added also Empty and Not Empty operands.
+
+To do that, extend the [`IgxStringFilteringOperand`]({environment:angularApiUrl}/classes/igxstringfilteringoperand.html) and [`IgxBooleanFilteringOperand`]({environment:angularApiUrl}/classes/igxbooleanfilteringoperand.html), modify the operations and their logic and set the column [`filters`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#filters) input to the new operands.
+
+<div class="sample-container loading" style="height:600px">
+    <iframe id="grid-filtering-iframe" src='{environment:demosBaseUrl}/grid-filter-conditions' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-filtering-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+
 #### 6.1.0 Volume 0 の重大な変更
 * IgxGridComponent `filteringExpressions` プロパティは削除されます。代わりに [`filteringExpressionsTree`]({environment:angularApiUrl}/classes/igxgridcomponent.html#filteringexpressionstree) を使用してください。
 * `filter_multiple` メソッドは削除されました。[`filter`]({environment:angularApiUrl}/classes/igxgridcomponent.html#filter) メソッドおよび [`filteringExpressionsTree`]({environment:angularApiUrl}/classes/igxgridcomponent.html#filteringexpressionstree) プロパティを代わりに使用してください。
