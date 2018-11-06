@@ -171,12 +171,13 @@ If you want the buttons to be part of the keyboard navigation, then each on of t
 
 ### igxGrid Outputs
 
-* [onRowEditDone]({environment:angularApiUrl}/classes/igxgridcomponent.html#onroweditdone)
+* [onRowEditEnter]({environment:angularApiUrl}/classes/igxgridcomponent.html#onroweditenter)
+* [onRowEdit]({environment:angularApiUrl}/classes/igxgridcomponent.html#onrowedit)
 * [onRowEditCancel]({environment:angularApiUrl}/classes/igxgridcomponent.html#onroweditcancel)
 
 ### igxGrid Methods
 
-* [endRowEdit]({environment:angularApiUrl}/classes/igxgridcomponent.html#endrowedit)
+* [endEdit]({environment:angularApiUrl}/classes/igxgridcomponent.html#endedit)
 
 
 ### Additional Resources

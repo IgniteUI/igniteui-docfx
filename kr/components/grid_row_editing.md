@@ -172,12 +172,13 @@ export class GridRowEditSampleComponent {
 
 ### igxGrid 출력
 
-* [onRowEditDone]({environment:angularApiUrl}/classes/igxgridcomponent.html#onroweditdone)
+* [onRowEditEnter]({environment:angularApiUrl}/classes/igxgridcomponent.html#onroweditenter)
+* [onRowEdit]({environment:angularApiUrl}/classes/igxgridcomponent.html#onrowedit)
 * [onRowEditCancel]({environment:angularApiUrl}/classes/igxgridcomponent.html#onroweditcancel)
 
 ### igxGrid 메소드
 
-* [endRowEdit]({environment:angularApiUrl}/classes/igxgridcomponent.html#endrowedit)
+* [endEdit]({environment:angularApiUrl}/classes/igxgridcomponent.html#endedit)
 
 
 ### 추가 리소스

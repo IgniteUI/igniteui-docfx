@@ -164,6 +164,8 @@ export class GridTransactionSampleComponent {
 
 ## API リファレンス
 
+* [`transactions`]({environment:angularApiUrl}/classes/igxgridcomponent.html#transactions)
+
 * [`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html)
 
 ### メソッド
