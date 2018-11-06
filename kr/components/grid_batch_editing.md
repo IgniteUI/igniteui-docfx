@@ -164,6 +164,8 @@ export class GridTransactionSampleComponent {
 
 ## API
 
+* [`transactions`]({environment:angularApiUrl}/classes/igxgridcomponent.html#transactions)
+
 * [`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html)
 
 ### 메소드
