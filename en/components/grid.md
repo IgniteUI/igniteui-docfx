@@ -7,7 +7,6 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ## Data Grid
 
 <p class="highlight">Display and manipulate tabular data with the Ignite UI for Angular Data Grid. Quickly bind your data with very little coding or configuration. Features include filtering, sorting, paging, templates, movable columns, and the ability to edit and update data. User actions are easy to understand and can be controlled programmatically.</p>
-<div class="divider"></div>
 
 ### Demo
 
@@ -318,6 +317,17 @@ and in the template of the component:
 ```
 
 **Note**: The grid [`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#autogenerate) property is best to be avoided when binding to remote data for now. It assumes that the data is available in order to inspect it and generate the appropriate columns. This is usually not the case until the remote service responds, and the grid will throw an error. Making [`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#autogenerate) available, when binding to remote service, is on our roadmap for future versions.
+
+### Live Updating Demo
+
+This sample demonstrates the `igxGrid` bound to live data. 
+
+<div class="sample-container loading" style="height:915px">
+    <iframe id="grid-sample-finjs-iframe" src='{environment:demosBaseUrl}/finjs-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-finjs-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
 
 ## Known Limitations
 
