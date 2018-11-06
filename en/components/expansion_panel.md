@@ -193,7 +193,7 @@ We can also override the default icon that is used in the control by passing con
 Our component will now render "Show More" when the panel is collapsed and "Collapse" once it's fully expanded.
 ### Adding content
 
-The [`igx-expansion-panel-body`](({environment:angularApiUrl}/classes/igxexpansionpanelbodycomponent.html) tag of the component accepts all kinds of markup and renders everything with the `ng-content` projection. We can use an [`IgxAvatar`]({environment:angularApiUrl}/classes/igxavatarcomponent.html) to freshen up our expansion panel's inner content:
+The [`igx-expansion-panel-body`]({environment:angularApiUrl}/classes/igxexpansionpanelbodycomponent.html) tag of the component accepts all kinds of markup and renders everything with the `ng-content` projection. We can use an [`IgxAvatar`]({environment:angularApiUrl}/classes/igxavatarcomponent.html) to freshen up our expansion panel's inner content:
 First, we need to import the [`IgxAvatarModule`]({environment:angularApiUrl}/classes/igxavatarmodule.html) in our **app.module.ts**
 ```typescript
 // in app.module.ts
