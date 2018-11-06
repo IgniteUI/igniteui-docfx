@@ -6,7 +6,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ### Grid Editing
 
-The Grid component in Ignite UI for Angular provides you a default cell templates for editable columns which are based on the data type of the column. In addition you can define your own custom templates for editable columns and override default behaviour for commiting and discarding changes in the cell value .
+The Grid component in Ignite UI for Angular provides you a default cell templates for editable columns which are based on the data type of the column. In addition you can define your own custom templates for editable columns and override default behavior for committing and discarding changes in the cell value .
 
 #### Demo
 
@@ -32,7 +32,7 @@ You can enter edit mode for specific cell, when an editable cell is focused in o
  - on key press `Enter`;
  - on key press `F2`;
 
-You can exit edit mode **without commiting** the changes in one of the following ways:
+You can exit edit mode **without committing** the changes in one of the following ways:
  - on key press `Escape`;
  - when you perform *sorting*, *filtering*, *searching* and *hiding* operations;
 
