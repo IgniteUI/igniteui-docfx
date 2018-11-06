@@ -1,22 +1,22 @@
 ---
-title: Tree Grid Batch Editing - Native Angular | Ignite UI for Angular
-_description:  TransactionService is an injectable middleware that a component can use to accumulate changes without affecting the underlying data. The provider exposes API to access, manipulate changes (undo and redo) and discard or commit all to the data.
+title: Tree Grid 一括編集 - ネイティブ Angular | Ignite UI for Angular
+_description:  TransactionService は、基になるデータに影響せずに変更を蓄積するためにコンポーネントが使用する注入可能なミドルウェアです。プロバイダーは、データのアクセス、変更の操作 (undo と redo)、すべて破棄または確定のための API を公開します。
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Tree Grid component, Angular Tree Grid control, Angular Tree Grid component, Angular High Performance Tree Grid, Tree Grid 
 ---
 
-## Tree Grid Batch Editing
+## Tree Grid 一括編集 
 
-[`TransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) is an injectable middleware that a component can use to accumulate changes without affecting the underlying data. The provider exposes API to access, manipulate changes (undo and redo) and discard or commit all to the data.
+[`TransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) は、基になるデータに影響せずに変更を蓄積するためにコンポーネントが使用する注入可能なミドルウェアです。 プロバイダーは、データのアクセス、変更の操作 (undo と redo)、すべて破棄または確定のための API を公開します。
 
-The [`TransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) works with both cell editing and row editing. The transaction for the cell edit is added when the cell exits edit mode. Respectively a row transaction is created, when the row exits edit mode. But in both cases the state of the grid edits consist of all updated, added and deleted rows and their last states. Those can later be inspected, manipulated and submitted at once. Changes are collected for individual cells or rows, depending on the editing mode in use, and accumulated per data row/record.
+[`TransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) はセル編集と行編集の両方と動作します。行編集の終了時に行トランザクションが追加された場合、セル編集のトランザクションはセルが編集モードを終了したときに追加されます。グリッド編集のステートは、すべての行を編集済み、追加済み、削除済み、そして最後のステートで構成されます。これらは後でインスペクト、操作、サブミットを一度に行います。個々のセルまたは行の変更を集めて、編集モードに基づいてデータ行/レコードごとに蓄積します。
 
-Batch editing allows to **Add/Update/Delete** several records in a chunk and manually commit all of the editing changes at ones. Until the changes are committed, there is a visual representation for each edited record so that the end user will be able to differentiate the updated and deleted ones from the unmodified for example. Additionally, it exposes **Undo/Redo** functionality, that can be used to manage the changes before committing.
+一括編集では、複数レコードの**追加/更新/削除**してすべての変更を一度にコミットすることが可能です。変更がコミットされる前は各編集済みのレコードのビジュアル表示があり、エンドユーザーは更新済みと削除済みの項目を確認できます。更にコミット前の変更を管理する**基に戻す/やり直し**機能を公開します。
 
-In order to be able to use the Batch Editing functionality, it is required to import the [`TransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) from "igniteui-angular". Again Transaction is a provider that accumulates the applied changes as a transaction log and in the same time holds a state for each modified row and its last state.
+一括編集機能を使用するには igniteui-angular から [`TransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) をインポートする必要があります。トランザクションは、適用された変更をトランザクション ログとして蓄積し、各変更済みの行とその状態を保持するプロバイダーです。
 
-### Demo
+### デモ
 
-The following sample illustrates how to enable and use Batch Editing via Transaction as provider and has row editing enabled. The latter will ensure that transaction will be added after the entire row edit is confirmed. The sample uses a flat data source.
+以下は、トランザクションでプロバイダーとして一括編集を有効にし、また行編集を有効にする方法です。行編集全体を確定後にトランザクションが追加されるようにします。サンプルではフラット データソースを使用します。
 
 <div class="sample-container loading" style="height:890px">
     <iframe id="tree-grid-batch-editing-sample-iframe" src='{environment:demosBaseUrl}/treegrid-batch-edit' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -29,11 +29,11 @@ The following sample illustrates how to enable and use Batch Editing via Transac
 
 
 > [!NOTE]
-> Transaction state consists of all the updated, added and deleted rows and their last states.
+> トランザクション ステートは、すべての更新、追加、削除された行、そして最後のステートで構成されます。
 
-## Usage
+## 使用方法
 
-To get started import the [`IgxTreeGridModule`]({environment:angularApiUrl}/classes/igxtreegridmodule.html) in the **app.module.ts** file:
+**app.module.ts** ファイルの [`IgxTreeGridModule`]({environment:angularApiUrl}/classes/igxtreegridmodule.html) をインポートします。
 
 ```typescript
 // app.module.ts
@@ -49,7 +49,7 @@ import { IgxTreeGridModule } from 'igniteui-angular';
 })
 export class AppModule {}
 ```
-Then you need to define the igxTransactionService as provider for the tree grid itself as shown below, OR on some of its parent components:
+igxTransactionService をツリー グリッドのプロバイダーとして、またはその親コンポーネントとして定義する必要があります。
 
 ```typescript
 import { Component, ViewChild } from "@angular/core";
@@ -66,10 +66,10 @@ export class TreeGridBatchEditingSampleComponent {
 
 ```
 > [!NOTE]
-> `IgxGridTransaction` is an injection token defined by the grid.
+> `IgxGridTransaction` はグリッドで定義されたインジェクション トークンです。
 
 
-Then define a tree grid with bound data source and [`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditable) set to true and bind:
+データソースにバインドするツリー グリッドを定義をして [`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditable) を true に設定してバインドします。
 
 ```html
     <igx-tree-grid #treeGrid [data]="data" primaryKey="EmployeID" foreignKey="PID" width ="100%" height ="500px" rowEditable=true rowSelectable=true columnHiding=true>
@@ -83,7 +83,7 @@ Then define a tree grid with bound data source and [`rowEditable`]({environment:
     ...
 ```
 
-The following code demonstrates the usage of the [`transactions`]({environment:angularApiUrl}/classes/igxtransactionservice.html#) API - undo, redo, commit.
+以下のコード例は、[`transactions`]({environment:angularApiUrl}/classes/igxtransactionservice.html#) API (undo, redo, commit) の使用方法を示します。
 
 ```typescript
 
@@ -122,10 +122,10 @@ export class TreeGridBatchEditingSampleComponent {
 ```
 
 > [!NOTE]
-> Disabling [`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditable) property will modify grid to create transactions on cell change and will not expose row editing overlay in the UI.
+> [`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditable) プロパティを無効にするとグリッドを変更してセル変更でトランザクションを作成し、UI で行編集オーバーレイを公開しません。
 
 
-### API References
+### API リファレンス
 
 * [`TransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) 
 * [`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditable)
@@ -134,17 +134,17 @@ export class TreeGridBatchEditingSampleComponent {
 * [`IgxGridComponent`]({environment:angularApiUrl}/classes/igxgridcomponent.html)
 
 
-### Additional Resources
+### その他のリソース
 
 <div class="divider--half"></div>
 
 * [Data Grid](grid.md)
 
 <div class="divider--half"></div>
-Our community is active and always welcoming to new ideas.
+コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+* [Ignite UI for Angular** フォーラム** (英語) ](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub** (英語) ](https://github.com/IgniteUI/igniteui-angular)
 
 
 
