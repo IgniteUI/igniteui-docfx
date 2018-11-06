@@ -112,9 +112,9 @@
     - name: Highlighting
       href: categorychart_highlighting.md
       new: true
-    - name: Tooltip Types
-      href: categorychart_tooltip_types.md
-      new: true
+    # - name: Tooltip Types
+    #  href: categorychart_tooltip_types.md
+    #  new: true
     - name: Tooltip Templates
       href: categorychart_tooltip_templates.md
       new: false
@@ -148,9 +148,9 @@
     - name: Custom Indicators
       href: financialchart_custom_indicators.md
       new: false
-    - name: Tooltip Types
-      href: financialchart_tooltip_types.md
-      new: true
+    # - name: Tooltip Types
+    #  href: financialchart_tooltip_types.md
+    #  new: true
     - name: Tooltip Templates
       href: financialchart_tooltip_templates.md
 - name: Doughnut Chart
@@ -159,12 +159,12 @@
 - name: Pie Chart
   href: piechart.md
   new: true
-- name: Frameworks
-  header: true
-- name: Excel Library
-  href: excel_library.md
-  new: true
-  items:
+# - name: Frameworks
+  # header: true
+# - name: Excel Library
+  # href: excel_library.md
+  # new: true
+  # items:
     # - name: Using Cells
     #   href: excel_library_using_cells.md
     #   new: true
@@ -177,15 +177,15 @@
     # - name: Using Worksheets
     #   href: excel_library_using_worksheets.md
     #   new: true
-    - name: Working with Charts
-      href: excel_library_working_with_charts.md
-      new: true
+    # - name: Working with Charts
+    #  href: excel_library_working_with_charts.md
+    #  new: true
     # - name: Working with Grids
     #   href: excel_library_working_with_grid.md
     #   new: true
-    - name: Working with Sparklines
-      href: excel_library_working_with_sparklines.md
-      new: true
+    # - name: Working with Sparklines
+    #  href: excel_library_working_with_sparklines.md
+    #  new: true
 - name: Gauges
   header: true
   new: true
