@@ -11,6 +11,15 @@ The [`IgxExpansionPanel`]({environment:angularApiUrl}/classes/igxexpansionpanelc
 </p>
 <div class="divider--half"></div>
 
+### Expansion Panel Demo
+<div class="sample-container loading" style="height: 400px;">
+    <iframe id="expansion-sample-1-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/expansion-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="expansion-sample-1-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
+
 ## Usage
 ### Getting Started
 To use the [`IgxExpansionPanelComponent`]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html) we need to import the [**IgxExpansionPanelModule**]({environment:angularApiUrl}/classes/igxexpansionpanelmodule.html) in our **app.module**: 
@@ -185,7 +194,7 @@ We can also override the default icon that is used in the control by passing con
 Our component will now render "Show More" when the panel is collapsed and "Collapse" once it's fully expanded.
 ### Adding content
 
-The [`igx-expansion-panel-body`](({environment:angularApiUrl}/classes/igxexpansionpanelbodycomponent.html) tag of the component accepts all kinds of markup and renders everything with the `ng-content` projection. We can use an [`IgxAvatar`]({environment:angularApiUrl}/classes/igxavatarcomponent.html) to freshen up our expansion panel's inner content:
+The [`igx-expansion-panel-body`]({environment:angularApiUrl}/classes/igxexpansionpanelbodycomponent.html) tag of the component accepts all kinds of markup and renders everything with the `ng-content` projection. We can use an [`IgxAvatar`]({environment:angularApiUrl}/classes/igxavatarcomponent.html) to freshen up our expansion panel's inner content:
 First, we need to import the [`IgxAvatarModule`]({environment:angularApiUrl}/classes/igxavatarmodule.html) in our **app.module.ts**
 ```typescript
 // in app.module.ts

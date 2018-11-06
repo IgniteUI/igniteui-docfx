@@ -11,6 +11,15 @@ _language: ja
 </p>
 <div class="divider--half"></div>
 
+### 展開パネルデモ
+<div class="sample-container loading" style="height: 400px;">
+    <iframe id="expansion-sample-1-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/expansion-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="expansion-sample-1-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
+
 ## 使用方法
 ### はじめに
 `IgxExpansionPanelComponent`]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html) を使用する場合、[**IgxExpansionPanelModule**]({environment:angularApiUrl}/classes/igxexpansionpanelmodule.html) を **app.module** にインポートする必要があります。 
@@ -185,7 +194,7 @@ export class ExpansionPanelComponent {
 このコンポーネントは、パネルの縮小時と完全に展開した後に「更に表示」を描画します。
 ### コンテキストの追加
 
-コンポーネントの [`igx-expansion-panel-body`](({environment:angularApiUrl}/classes/igxexpansionpanelbodycomponent.htm タグはすべてのマークアップを受け取り、`ng-content` プロジェクションですべてを描画します。[`IgxAvatar`]({environment:angularApiUrl}/classes/igxavatarcomponent.html) を使用して展開パネルのインナー コンテンツを更新できます。
+コンポーネントの [`igx-expansion-panel-body`]({environment:angularApiUrl}/classes/igxexpansionpanelbodycomponent.htm タグはすべてのマークアップを受け取り、`ng-content` プロジェクションですべてを描画します。[`IgxAvatar`]({environment:angularApiUrl}/classes/igxavatarcomponent.html) を使用して展開パネルのインナー コンテンツを更新できます。
 はじめに [`IgxAvatarModule`]({environment:angularApiUrl}/classes/igxavatarmodule.html) を **app.module.ts** にインポートします。
 ```typescript
 // in app.module.ts
