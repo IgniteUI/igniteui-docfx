@@ -1,13 +1,14 @@
-﻿---
-title: Excel Library Component - Native Angular | Ignite UI for Angular
-_description: The Ignite UI for Excel Library component with Workbook Operations.
-_keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Excel Library, Angular Excel Library Example, Angular Excel Library Component, Angular Excel Engine, Workbook, Font, Document Properties
 ---
-## Excel Library Using Workbooks
+title: Excel ライブラリ コンポーネント - Native Angular | Ignite UI for Angular
+_description: Ignite UI for Excel Library コンポーネントのワークブック処理
+_keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Excel Library, Angular Excel Library Example, Angular Excel Library Component, Angular Excel Engine, Workbook, Font, Document Properties
+_language: ja
+---
+## ワークブックを使用した Excel Library
 
-The Infragistics Excel Engine enables you to save data to and load data from Microsoft® Excel®. You can create workbooks and worksheets, input data, and export the data to Excel using the library’s various classes. The Infragistics Excel Engine makes it easy to export the data in your application as an Excel spreadsheet as well as import data from Excel into your application. 
+Infragistics Excel Engine は、データを Microsoft® Excel® に保存、また Microsoft® Excel® からの読み込みを可能にします。ライブラリのさまざまなクラスを使用してワークブックやワークシートを作成、データを入力、データを Excel にエクスポートできます。Infragistics Excel Engine は、Excel スプレッドシートでアプリケーションのデータの表示や Excel からアプリケーションへのデータのインポートが簡単にできます。 
 
-### Demo
+### デモ
 <!-- <div class="sample-container" style="height: 550px">
     <iframe id="excel-library-overview-sample-iframe" src='{environment:demosBaseUrl}/excel-library-overview-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -18,9 +19,9 @@ The Infragistics Excel Engine enables you to save data to and load data from Mic
 
 <div class="divider--half"></div>
 
-### Change Default Font
+### 既定のフォントを変更
 
-First create a new instance of `IWorkbookFont`. Next, add the new font to the Styles collection of the Workbook via workbook.styles.apply method. This style contains the default properties for all cells in the workbook, unless otherwise specified on a row, column, or cell. Changing properties of the style will change the default cell format properties in the workbook.
+`IWorkbookFont` の新しいインスタンスを作成します。workbook.styles.apply メソッドでワークブックの Style コレクションに新しいフォントを追加します。このスタイルにはワークブックのすべてのセルのデフォルトのプロパティが含まれています。ただし、行、列またはセルで指定されている場合はその限りではありません。スタイルのプロパティを変更すると、ワークブックのデフォルトのセル書式プロパティが変更します。
 
 ```typescript
 var workbook = new Workbook();
@@ -29,9 +30,9 @@ normalFont.name = "Times New Roman";
 normalFont.height = 16 * 20;
 ```
 
-### Setting Workbook Properties
+### ワークブック プロパティの設定
 
-Microsoft® Excel® document properties provide information to help organize and keep track of your documents. You can use the Infragistics Excel Library to set these properties using the `Workbook` object’s `DocumentProperties` property. The available properties are:
+Microsoft® Excel® ドキュメント プロパティは、ドキュメントの整理やトラッキングを改善するための情報を提供します。`Workbook` オブジェクトの `DocumentProperties` プロパティで Infragistics Excel Library を使用してこれらのプロパティを設定できます。使用可能なプロパティは以下のとおりです。
 
 - author
 
@@ -51,7 +52,7 @@ Microsoft® Excel® document properties provide information to help organize and
 
 - manager
 
-The following code demonstrates how to create a workbook and set its Title and Status document properties.
+以下のコードは、ワークブックを作成し、Title および Status ドキュメント プロパティを設定する方法を示します。
 
 ```typescript
 var workbook = new Workbook();
