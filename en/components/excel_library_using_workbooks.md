@@ -25,7 +25,7 @@ First create a new instance of `IWorkbookFont`. Next, add the new font to the St
 ```typescript
 var workbook = new Workbook();
 var normalFont: IWorkbookFont;
-normalFont = this.wb.styles().normalStyle.styleFormat.font;
+normalFont = wb.styles().normalStyle.styleFormat.font;
 normalFont.name = "Times New Roman";
 normalFont.height = 16 * 20;   
 ```
