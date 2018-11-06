@@ -68,7 +68,7 @@ public grid: IgxGridComponent;
 
 ### 열 구성
 
-[`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) is used to define the grid's [`columns`]({environment:angularApiUrl}/classes/igxgridcomponent.html#columns) collection and to enable features per column like **filtering**, **sorting**, and **paging**. Cell, header, and footer templates are also available.
+[`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) 는 그리드의 [`columns`]({environment:angularApiUrl}/classes/igxgridcomponent.html#columns) 열 집합을 정의하고 필터링, 정렬, 페이징 등의 기능을 열 별로 활성화하는데 사용됩니다.셀, 헤더, 푸터 템플릿도 사용할 수 있습니다.
 
 [`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#autogenerate) 속성을 해제하고 마크업에 열 집합을 정의합니다:
 
@@ -87,7 +87,7 @@ public grid: IgxGridComponent;
 
 그리드의 각 열은 개별적으로 템플릿할 수 있습니다. 열은 그리드 모듈 지시문 중 하나로 이루어진 `ng-template` 태그를 요구합니다.
 
-`igxHeader` targets the column header providing as a context the column object itself.
+`igxHeader` 는 열 객체 자체를 컨텍스트로 제공하는 열 헤더를 대상으로 합니다.
 
 ```html
 ...
@@ -99,7 +99,8 @@ public grid: IgxGridComponent;
 ...
 ```
 
-`igxCell` applies the provided template to all cells in the column. The context object provided in the template consists of the cell value provided implicitly and the cell object itself. It can be used to define a template where the cells can grow according to their content, as in the below example.
+`igxCell` 은 제공된 템플릿을 열의 모든 셀에 적용합니다.
+템플릿에 제공된 컨텍스트 객체는 암시적으로 제공된 셀 값과 셀 객체 자체로 구성됩니다.아래 예와 같이 콘텐츠에 따라 셀이 증가할 수 있는 템플릿을 정의하는데 사용할 수 있습니다.
 
 ```html
 ...

@@ -79,8 +79,7 @@ public exportButtonHandler() {
 
 ### IgxGrid's 데이터 내보내기
 
-Excel 내보내기 서비스는 [**IgxGrid**](grid.md)에서 MS Excel 형식으로 데이터를 내보내기 할 수도 있습니다. 유일한 차이점은 
-[`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html)'s [`export`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html#export) method and pass the [**IgxGrid**](grid.md) as first argument.
+Excel 내보내기 서비스는 [**IgxGrid**](grid.md)에서 MS Excel 형식으로 데이터를 내보내기 할 수도 있습니다.유일한 차이점은 IgxExcelExporterService의 내보내기 메소드를 호출하고 IgxGrid를 첫 번째 인수로 전달해야 한다는 것입니다.
 
 다음은 그 예입니다:
 
@@ -127,7 +126,7 @@ public exportButtonHandler() {
 
 ### 내보내기를 하는 콘텐츠의 사용자 정의
 
-위의 예에서 Excel 내보내기 서비스는 사용 가능한 모든 데이터를 내보내기 했습니다. 행 또는 전체 열 내보내기를 하지 말아야 하는 상황이 있을 수 있습니다. To achieve this you may hook to the [`onColumnExport`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html#oncolumnexport) and/or [`onRowExport`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html#onrowexport) events which are fired respectively for each column and/or each row and cancel the respective event by setting the event argument object's [`cancel`]({environment:angularApiUrl}/interfaces/irowexportingeventargs.html#cancel) property to `true`.
+위의 예에서 Excel 내보내기 서비스는 사용 가능한 모든 데이터를 내보내기 했습니다. 행 또는 전체 열 내보내기를 하지 말아야 하는 상황이 있을 수 있습니다.이를 위해 각 열 및/또는 각 행에서 발생하는 [`onColumnExport`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html#oncolumnexport)  및/또는 [`onRowExport`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html#onrowexport) 이벤트에 연결할 수 있으며 이벤트 인수 객체의  [`cancel`]({environment:angularApiUrl}/interfaces/irowexportingeventargs.html#cancel) 속성을 true로 설정하여 각.
 
 다음 예에서는 헤더가 “Age”이고 인덱스가 1인 경우, 내보내기에서 열을 제외합니다.
 
