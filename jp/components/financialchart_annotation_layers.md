@@ -1,67 +1,37 @@
-﻿---
-title: カテゴリ チャート注釈とオーバーレイ
+---
+title: Financial Chart 注釈
 _description: Ignite UI for Angular Financial Chart コンポーネントは、シンプルで直感的な API を使用してファイナンシャル データを表示します。ユーザーがデータにバインド後、チャートはデータの可視化オプションを複数提供します。
-_keywords: Ignite UI for Angular, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular チャート, Angular チャート コントロール, Angular チャート例, Angular Grid コンポーネント, Angular Chart コンポーネント, Angular Financial Chart
+_keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Chart Control, Angular Chart Example, Angular Grid Component, Angular Chart Component, Angular Financial Chart
 _language: ja
 ---
-## カテゴリ チャート注釈とオーバーレイ
+## 注釈
 
-このトピックでは、`igx-financial-chart` の注釈やインタラクションについて説明します。
+このトピックでは、`igx-financial-chart` の注釈について説明します。
 
 ### デモ
 <div class="sample-container" style="height: 550px">
-    <iframe id="financial-chart-annotations-and-overlays-iframe" src='{environment:demosBaseUrl}/financial-chart-annotations-and-overlays' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="financial-chart-annotations-iframe" src='{environment:demosBaseUrl}/financial-chart-annotations' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="financial-chart-annotations-and-overlays-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示開く
+    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="financial-chart-annotations-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
     </button>
 </div>
 <div class="divider--half"></div>
 
-## オーバーレイ タイプ
-
 ### 十字線レイヤー
 
-Crosshair Layer は、各ターゲット シリーズの実際の値に一致する十字線を提供します。Crosshair タイプは、Horizontal、Vertical、Both があります。
+Crosshair Layer は、各ターゲット シリーズの実際の値に一致する十字線を提供します。  Crosshair タイプは、Horizontal、Vertical、Both があります。  `crosshairsSnapToData` プロパティを true に設定してデータに十字線のスナップできます。十字線がデータ ポイント間で補完されます。  注釈を有効にして軸に沿って十字線の値を表示できます。
 
 ```html
 <igx-financial-chart
     [dataSource]="data"
     width="850px"
     height="600px"
-    showCrosshairs="Horizontal"
-    snapCrosshairsToData="true"
-    displayCrosshairAxisAnnotations="true">
+    crosshairsDisplayMode="Horizontal"
+    crosshairsSnapToData="true"
+    crosshairsAnnotationEnabled="true">
 </igx-financial-chart>
 ```
-
-### カテゴリ ツールチップ レイヤー
-
-カテゴリ ツールチップ レイヤーは、カテゴリ軸を使用するシリーズ用にグループ化されたツールチップを表示します。
-
-```html
-<igx-financial-chart
-    [dataSource]="data"
-    width="850px"
-    height="600px"
-    tooltipType="Category">
-</igx-financial-chart>
-```
-
-### アイテム ツールチップ レイヤー
-
-アイテム ツールチップ レイヤーは、すべてのターゲット シリーズにツールチップを表します。
-
-```html
-<igx-financial-chart
-    [dataSource]="data"
-    width="850px"
-    height="600px"
-    tooltipType="Item">
-</igx-financial-chart>
-```
-
-## 注釈タイプ
 
 ### 最終値レイヤー
 
@@ -72,26 +42,26 @@ Crosshair Layer は、各ターゲット シリーズの実際の値に一致す
     [dataSource]="data"
     width="850px"
     height="600px"
-    displayFinalValueAnnotation="true">
+    finalValueAnnotationsVisible="true">
 </igx-financial-chart>
 ```
 
 ### コールアウト レイヤー
 
-コールアウト レイヤーは、X/Y 位置にコールアウトを表示します。注釈にホバーした際にラベルと追加コンテンツをツールチップで表示できます。
+コールアウト レイヤーは、X/Y 位置にコールアウトを表示します。 
 
-> 注: X 軸モードを使用する際に `eventsXMemberPath` は数値インデックスをポイントする必要があります。あるいは、`eventsXMemberPath` を時間値にポイントしてください。
+> 注: X 軸モードを使用する際に `calloutsXMemberPath` は数値インデックスをポイントする必要があります。あるいは、`calloutsXMemberPath` を時間値にポイントしてください。
 
 ```html
 <igx-financial-chart
     [dataSource]="data"
     width="850px"
     height="600px"
-    displayEventAnnotations="true"
-    [eventsDataSource]="calloutData"
-    eventsXMemberPath="index"
-    eventsYMemberPath="yValue"
-    eventsTitleMemberPath="title"
-    eventsContentMemberPath="content">
+    calloutsVisible="true"
+    [calloutsDataSource]="calloutData"
+    calloutsXMemberPath="index"
+    calloutsYMemberPath="yValue"
+    calloutsLabelMemberPath="title"
+    calloutsContentMemberPath="content">
 </igx-financial-chart>
 ```
