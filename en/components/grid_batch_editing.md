@@ -119,6 +119,8 @@ export class GridBatchEditingSampleComponent {
 
 ## API References
 
+* [`transactions`]({environment:angularApiUrl}/classes/igxgridcomponent.html#transactions)
+
 * [`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html)
 
 ### Additional Resources
