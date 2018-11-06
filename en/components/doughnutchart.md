@@ -1,31 +1,31 @@
 ---
-title: Doughnut Chart コンポーネント - Native Angular | Ignite UI for Angular
-_description: Ignite UI for Angular Doughnut Chart コンポーネントは、複数の変数を同心円状の輪で表示でき、データは他のコレクションや共通データソースにバインドできます。 
+title: Doughnut Chart Component - Native Angular | Ignite UI for Angular
+_description: The Ignite UI for Angular Doughnut Chart component allows user to display multiple variables in concentric rings, and the data can be bound to a different collection or a common data source. 
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Data Grid component, Angular Data Grid control, Angular Doughnut Chart Control, Angular Doughnut Chart Component, Angular data grid Doughnut Chart component example, Angular Doughnut Chart 
-_language: ja
+
 ---
-## ドーナツ型チャート
+## Doughnut Chart
 
-ドーナツ チャート コンポーネントは円チャートと同様、変数の発生を比例的に表示します。ドーナツ型チャート は、複数の変数をコンセントリック リングで表示でき、階層データの可視化を組み込みでサポートします。
+The Doughnut Chart component is similar to the Pie Chart component, proportionally illustrating the occurrences of a variable. The doughnut chart can display multiple variables in concentric rings, and provides built-in support for visualizing hierarchical data.
 
-### デモ
+### Demo
 
 <div class="sample-container" style="height: 550px">
     <iframe id="doughnut-chart-overview-iframe" src='{environment:demosBaseUrl}/doughnut-chart-overview' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="doughnut-chart-overview-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示
+    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="doughnut-chart-overview-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
     </button>
 </div>
 
 <div class="divider--half"></div>
 
- ### 依存関係
-chart パッケージをインストールするときに core パッケージもインストールする必要があります。
+ ### Dependencies
+When installing the charts package, the core package must also be installed.
 
 **npm install ignite-angular-charts ignite-angular-core**
 
-ドーナツ型チャートが `NgModule` としてエクスポートされるため、アプリケーションで `AppModule` に _IgxDoughnutChartModule_ をインポートする必要があります。
+The doughnut chart is exported as an `NgModule`, you need to import the _IgxDoughnutChartModule_ inside your `AppModule`:
 
 ```typescript
 // app.module.ts
@@ -43,10 +43,10 @@ export class AppModule {}
 
 <div class="divider--half"></div>
 
-### 使用方法
+### Usage
 
-ファイナドーナツ型 チャート モジュールをインポートした後、チャートをデータにバインドします。
-Igx-doughnut-chart コンポーネントを作成するには、はじめにデータをバインドする必要があります。以下のコード スニペットは、シンプルなデータソースを作成する方法を示します。
+Now that the doughnut chart module is imported, next step is to bind it to data.
+In order to create an igx-doughnut-chart component, you must first have data to bind it to. The following code snippet demonstrates how to create a simple data source.
 
 ```typescript
 var data = [
@@ -58,7 +58,7 @@ var data = [
 ];
 ```
 
-以下のコードはドーナツ型チャートを上記のデータにバインドします。
+The following code demonstrates how to bind the doughnut chart to the above data.
 
 ```html
  <igx-doughnut-chart width="700px"
@@ -73,60 +73,60 @@ var data = [
 
 <div class="divider--half"></div>
 
-## 構成可能な要素
+## Configurable Elements
 
-### 複数のリング
-xamDoughnutChart は、複数のリングを、異なるコレクションにバインド可能な各リングと同時に表示できます。または共通のデータ ソースを共有できます。
+### Multiple Rings
+The igxDoughnutChart can display multiple rings at the same time with each of the rings capable of being bound to a different collection, or they can share a common data source.
 
-### スライスの選択
+### Slice Selection
 
-ドーナツ型チャート コンポーネントは、1 つ以上のスライスの状態を 選択された状態に設定する API を公開します。任意で、単一のカスタム ビジュアル スタイルを選択済みスライスに適用できます。
+The doughnut chart component exposes the API for setting the state of one or more slices to selected. Optionally, you may apply a single custom visual style to the selected slices.
 
-**スライス選択の有効化/無効化** - `allowSliceSelection` を設定してドーナツ型チャートでスライスの選択を有効または無効にします。 
+**Enable/disable slice selection** - You can enable (default setting) or disable slice selection in the doughnut chart by setting the `allowSliceSelection` property. 
 
-**選択されたスライスのスタイル設定** - スライスの `targetType` で選択されたスライスのスタイルを定義し、ドーナツ型チャートの `selectedStyle` プロパティに割り当てることでスタイル設定できます。 
+**Configuring the look of the selected slices** - You can define how the selected slices will look by defining a style with a `targetType` of Slice and assigning it to the `selectedStyle` property of the doughnut chart. 
  
-**スライスをクリックして選択状態を変更** - `sliceClick` イベントにイベント ハンドラーをアタッチした場合、選択状態を変更するためのイベント引数のクリックしたスライスへの参照を提供します。ドーナツ型チャートは、選択されたスライスのスタイルを決定する `selectedStyle` プロパティを公開します。デフォルトでは、適用されるスタイルはありません。スライスを選択しても、その見た目はどのようにも変わりません。選択されたスライスにカスタム スタイルを適用する場合は、Slice の `targetType` で Style を定義し、`selectedStyle` プロパティの値として設定する必要があります。 
+**Changing the selection state upon slice click** - If you attach an event handler for the `sliceClick` event, it supplies a reference to the clicked slice in the event arguments allowing you to modify its selection state. The doughnut chart exposes a `selectedStyle` property that determines the look of the selected slices. By default, no style is applied, and selecting a slice will not alter its appearance in any way. In order to apply your own style to the selected slices you need to define a Style with `targetType` of Slice and set it as the value of the `selectedStyle` property. 
  
-**Setting the IsSelected property** - ドーナツ型チャートは、`isSelected` プロパティを直接変更できるすべてのスライスへの参照を保持しなす。ドーナツ型チャートは、スライスの選択済み/選択解除の状態の変更に使用する `sliceClick` イベントを公開します。  
+**Setting the IsSelected property** - The doughnut chart holds references to all the slices allowing you to modify their `isSelected` property directly. The doughnut chart exposes a `sliceClick` event used to change the selected/unselected state of a slice.  
 
-**SelectedSlices コレクションのコンテンツを変更** - `selectedSlices` コレクションのコンテンツを変更して選択されたスライスを変更できます。  ドーナツ型チャートは、Slice オブジェクトへに対し IsSelected プロパティを直接修正できるすべてのスライスへの参照を保持します。 
+**Modifying the contents of the SelectedSlices collection** - You can change the selected slice by changing the contents of the `selectedSlices` collection. The doughnut chart holds references to all the slices allowing you to modify their `isSelected` property directly to the Slice objects. 
 
-### スライス選択のデモ
+### Slice Selection Demo
 
 <div class="sample-container" style="height: 550px">
     <iframe id="doughnut-chart-selection-iframe" src='{environment:demosBaseUrl}/doughnut-chart-selection' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="doughnut-chart-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示
+    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="doughnut-chart-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
     </button>
 </div>
 
 <div class="divider--half"></div>
 
 
-### スライスの分割
-ドーナツ型チャートのスライスは、コードまたはユーザー インタラクションによって分割できます。
+### Slice Explosion
+The doughnut chart slices explode either programmatically or by user interaction.
 
-**スライス分割の有効化/無効化**
-`allowSliceExplosion` プロパティを設定してスライスを分割する機能を有効または無効にできます。
+**Enable/disable slice explosion**
+You can enable or disable the ability to explode slices by setting the `allowSliceExplosion` property.
 
-**スライスをクリックして展開状態を変更**
-`sliceClick` イベントにイベント ハンドラーをアタッチした場合、クリックされたスライスへの参照がイベント引数に提供されて展開状態を変更できます。
+**Changing the exploded state of a slice upon slice click**
+If you attach an event handler for the `sliceClick` event, a reference to the clicked slice is supplied in the event arguments and you can modify its exploded state.
 
-**IsExploded プロパティの設定**
-ドーナツ型チャートはすべてのスライスへの参照を保持して `isExploded` プロパティを直接変更できます。
+**Setting the IsExploded property**
+The doughnut chart holds references to all the slices allowing you to modify their `isExploded` property directly.
 
-**ExplodedSlices コレクションのコンテンツの修正**
-`explodedSlices` コレクションのコンテンツを変更することにより公開されたスライスを変更できます。
+**Modifying the contents of the ExplodedSlices collection**
+You can change the exploded slices by changing the contents of the `explodedSlices` collection.
 
-### スライスの分割のデモ
+### Slice Explosion Demo
 
 <div class="sample-container" style="height: 550px">
     <iframe id="doughnut-chart-explosion-iframe" src='{environment:demosBaseUrl}/doughnut-chart-explosion' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="doughnut-chart-explosion-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示
+    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="doughnut-chart-explosion-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
     </button>
 </div>
 
