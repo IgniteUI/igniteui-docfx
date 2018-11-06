@@ -224,6 +224,108 @@ export class MyComponent implements OnInit {
 </div>
 <div class="divider--half"></div>
 
+#### Tree Grid Row Editing
+
+Row editing - allows modification of several cells in the row, before submitting, at once, all those changes to the tree grid's data source. Leverages the pending changes functionality of the new transaction provider.
+
+If [`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditable) is enabled, then all columns that have [field]({environment:angularApiUrl}/classes/igxcolumncomponent.html#field) property defined (excluding a [`primaryKey`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#primarykey) one) will be editable, even though the [`editable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable) property is not defined for them. If you want to disable editing for a specific column, then you set the [`editable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable) column's input to false.
+The following sample illustrates how to enable row editing using the grid's [`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditable) property.
+
+Let's start from scratch. Import the [`IgxTreeGridModule`]({environment:angularApiUrl}/classes/igxtreegridmodule.html) in the **app.module.ts** file:
+
+```typescript
+// app.module.ts
+
+import { IgxTreeGridModule } from 'igniteui-angular';
+
+@NgModule({
+    imports: [
+        ...
+        IgxTreeGridModule,
+        ...
+    ]
+})
+export class AppModule {}
+```
+
+Then define a tree grid with bound data source and [`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditable) set to true:
+
+```html
+    <igx-tree-grid #treeGrid1 [data]="data" primaryKey="EmployeID" foreignKey="PID" width="100%" height="500px" 
+    rowEditable=true rowSelectable=true columnHiding=true>
+        <igx-column *ngFor="let c of columns"
+            [editable]="c.editable"
+            [field]="c.field"
+            [dataType]="c.dataType"
+            [header]="c.label"
+            [movable]="c.movable"
+            [resizable]="c.resizable"
+            [sortable]="c.sortable"
+            [filterable]="c.filterable"
+            >
+        </igx-column>
+    </igx-tree-grid>
+```
+
+> [!NOTE]
+> Setting primary key is mandatory for editing operations, including row editing.
+
+> [!NOTE]
+> It's not needed to enable editing for individual columns. Using the [`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditable) property in the grid, will mean that all rows, with defined [`field`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#field) property, excluding primary one, will be editable. If you want to disable editing for specific column, then you set the [`editable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable) column's input to `false`.
+
+```typescript
+import { Component, OnInit, ViewChild } from "@angular/core";
+import { IgxTreeGridComponent } from "igniteui-angular";
+...
+
+@Component({
+    providers: [],
+    selector: "app-tree-grid-row-editing-sample.component",
+    styleUrls: ["tree-grid-row-editing-sample.component.scss"],
+    templateUrl: "tree-grid-row-editing-sample.component.html"
+})
+export class TreeGridRowEditSampleComponent implements OnInit {
+
+    public data: any[];
+    public columns: any[];
+
+    @ViewChild("treeGrid1") public treeGrid1: IgxTreeGridComponent;
+    public ngOnInit(): void {
+        this.data = FLAT_DATA;
+        this.columns = [
+            { field: "FirstName", label: "First Name", resizable: true, movable: true, sortable: true, filterable: true, editable: true, dataType: "string" },
+            { field: "LastName", label: "Last Name", resizable: false, movable: false, sortable: false, filterable: false, editable: true, dataType: "string" },
+            { field: "Title", label: "Title", resizable: true, movable: true, sortable: true, filterable: true, editable: true, dataType: "string" },
+            { field: "HireDate", label: "Hire Date", resizable: true, movable: true, sortable: true, filterable: true, editable: true, dataType: "date" }
+        ];
+    }
+
+```
+
+> [!NOTE]
+> The grid uses internally a provider [`IgxBaseTransactionService`]({environment:angularApiUrl}/classes/igxbasetransactionservice.html) that holds pending cell changes, until row state submitted or cancelled.
+
+Here is the result: 
+
+<div class="sample-container loading" style="height:590px">
+    <iframe id="tree-grid-row-editing-sample-iframe" src='{environment:demosBaseUrl}/treegrid-row-edit' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-row-editing-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
+
+#### Persistence and Integration
+
+The indentation of the **tree cells** persists across other tree grid features like filtering, sorting and paging.
+
+- When **sorting** is applied on a column, the data rows get sorted by levels. This means that the root level rows will be sorted independently from their respective children. Their respective children collections will each be sorted independently as well and so on.
+- The first column (the one that has a [`visibleIndex`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#visibleindex) of 0) is always the tree column.
+- The column that ends up with a [`visibleIndex`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#visibleindex) of 0 after operations like column pinning, column hiding and column moving becomes the tree column.
+
+<div class="divider--half"></div>
+
 #### パーシステンスとインテグレーション
 
 **ツリー セル** のインデントは、フィルタリング、並べ替え、ページングなど他のツリーグリッド全体の機能で永続化されます。
@@ -259,6 +361,7 @@ export class MyComponent implements OnInit {
 * [`IgxGridComponent Styles`]({environment:sassApiUrl}/#function-igx-grid-theme)
 * [`IgxGridCellComponent`]({environment:angularApiUrl}/classes/igxgridcellcomponent.html)
 * [`IgxGridRowComponent`]({environment:angularApiUrl}/classes/igxgridrowcomponent.html)
+* [`IgxBaseTransactionService`]({environment:angularApiUrl}/classes/igxbasetransactionservice.html)
 
 
 ### その他のリソース
@@ -266,6 +369,7 @@ export class MyComponent implements OnInit {
 <div class="divider--half"></div>
 
 * [Data Grid](grid.md)
+* [Grid Editing](grid_row_editing.md)
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
