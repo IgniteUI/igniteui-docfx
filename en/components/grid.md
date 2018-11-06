@@ -318,6 +318,9 @@ and in the template of the component:
 
 **Note**: The grid [`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#autogenerate) property is best to be avoided when binding to remote data for now. It assumes that the data is available in order to inspect it and generate the appropriate columns. This is usually not the case until the remote service responds, and the grid will throw an error. Making [`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#autogenerate) available, when binding to remote service, is on our roadmap for future versions.
 
+### Keyboard navigation
+Keyboard navigation is available by default in any grid and it aims at covering as many as possible features and scenarios for the end user. More detailed information on the supported interactions is available in the [official keyboard navigation specification](https://github.com/IgniteUI/igniteui-angular/wiki/igxGrid-Specification#kb-navigation).
+
 ### Live Updating Demo
 
 This sample demonstrates the `igxGrid` bound to live data. 

@@ -318,6 +318,9 @@ export class MyComponent implements OnInit {
 
 **注**: リモート データにバインドする場合、グリッドの [`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#autogenerate) プロパティは使用しないことをお勧めします。データを検証して適切な列を生成するためにデータが利用可能である必要があります。リモート サービスの応答が完了するまでデータが利用できないため、グリッドはエラーを発生します。リモート サービスへバインド時に [`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#autogenerate) を使用する機能は今後追加予定です。
 
+### Keyboard navigation
+Keyboard navigation is available by default in any grid and it aims at covering as many as possible features and scenarios for the end user. More detailed information on the supported interactions is available in the [official keyboard navigation specification](https://github.com/IgniteUI/igniteui-angular/wiki/igxGrid-Specification#kb-navigation).
+
 ### 仮想化
 
 グリッドは水平および垂直 DOM 仮想化をサポートします。仮想化をアクティブ化するには、グリッドの `height` または `width` プロパティを設定します。
