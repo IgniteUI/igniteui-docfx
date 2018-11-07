@@ -120,13 +120,13 @@
     - name: 注釈とオーバーレイ
       href: financialchart_annotation_layers.md
       new: true
-    - name: チャートのタイプの選択
+    - name: チャート タイプの選択
       href: financialchart_explore_chart_types.md
       new: false
     - name: リアルタイム データ
       href: financialchart_real_time_data.md
       new: false
-    - name: 大量なデータの処理
+    - name: 大規模なデータの処理
       href: financialchart_high_volume_data.md
       new: false
     - name: パフォーマンス
@@ -194,7 +194,7 @@
   new: true
 - name: スタイルとテーマ
   header: true
-- name: テーマ
+- name: Themes
   href: themes/index.md
   items:
     - name: パレット

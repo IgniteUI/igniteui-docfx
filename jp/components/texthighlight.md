@@ -311,7 +311,7 @@ TextHighlight ディレクティブの API に関する詳細な情報は、以�
 使用したその他のコンポーネント:
 
 * [`IgxInputGroupComponent`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
-* [`IgxInputGroupComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-input-group-theme)
+* [`IgxInputGroupComponent スタイル`]({environment:sassApiUrl}/index.html#function-igx-input-group-theme)
 
 <div class="divider"></div>
 

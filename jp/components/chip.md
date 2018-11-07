@@ -21,7 +21,7 @@ _language: ja
 
 #### Chip の初期化
 
-[`IgxChipComponent`]({environment:angularApiUrl}/classes/igxchipcomponent.html) はチップ要素のメイン クラスで `IgxChipsAreaComponent`]({environment:angularApiUrl}/classes/igxchipsareacomponent.html) はチップ領域のメイン クラスです。チップ領域はチップの間の操作 (ドラッグ、選択、ナビゲーションなど) が必要の複雑なシナリオの処理で使用されます。[`IgxChipComponent`]({environment:angularApiUrl}/classes/igxchipcomponent.html) には、`id`]({environment:angularApiUrl}/classes/igxchipcomponent.html#id) 入力があるため、他のチップと簡単に識別できます。[`id`]({environment:angularApiUrl}/classes/igxchipcomponent.html#id) がない場合は自動的に生成します。
+[`IgxChipComponent`]({environment:angularApiUrl}/classes/igxchipcomponent.html) はチップ要素のメイン クラスで [`IgxChipsAreaComponent`]({environment:angularApiUrl}/classes/igxchipsareacomponent.html) はチップ領域のメイン クラスです。チップ領域はチップの間の操作 (ドラッグ、選択、ナビゲーションなど) が必要の複雑なシナリオの処理で使用されます。[`IgxChipComponent`]({environment:angularApiUrl}/classes/igxchipcomponent.html) には、`id`]({environment:angularApiUrl}/classes/igxchipcomponent.html#id) 入力があるため、他のチップと簡単に識別できます。[`id`]({environment:angularApiUrl}/classes/igxchipcomponent.html#id) がない場合は自動的に生成します。
 
 [`igxChip`]({environment:angularApiUrl}/classes/igxchipcomponent.html) を [`igxChipArea`]({environment:angularApiUrl}/classes/igxchipsareacomponent.html) と使用した例:
 
@@ -73,7 +73,7 @@ Chip states:
 
 チップはユーザーがチップを削除したい場合に自体をデフォルトでテンプレートから削除しません。[`onRemove`]({environment:angularApiUrl}/classes/igxchipcomponent.html#onremove) イベントを使用して手動で対応する必要があります。
 
-削除アイコンをカスタマイズする必要がある場合、`removeIcon`]({environment:angularApiUrl}/classes/igxchipcomponent.html#removeicon) 入力を使用できます。型 `TemplateRef` の値を取得してデフォルトの削除アイコンの代わりに描画します。つまり、チップ自体ですべて処理されている際も削除ボタンを自由にカスタマイズできます。
+削除アイコンをカスタマイズする必要がある場合、[`removeIcon`]({environment:angularApiUrl}/classes/igxchipcomponent.html#removeicon) 入力を使用できます。型 `TemplateRef` の値を取得してデフォルトの削除アイコンの代わりに描画します。つまり、チップ自体ですべて処理されている際も削除ボタンを自由にカスタマイズできます。
 
 ![Remove icons](../images/chip/remove_icons.jpg)
 
@@ -138,7 +138,7 @@ public chipsOrderChanged(event) {
 
 ![Prefix and Suffix](../images/chip/prefix_suffix.jpg)
 
-[`prefix`]({environment:angularApiUrl}/classes/igxprefixdirective.html) と `suffix`]({environment:angularApiUrl}/classes/igxsuffixdirective.html) 両方のアイコンを使用した例と `content` のテキスト:
+[`prefix`]({environment:angularApiUrl}/classes/igxprefixdirective.html) と [`suffix`]({environment:angularApiUrl}/classes/igxsuffixdirective.html) 両方のアイコンを使用した例と `content` のテキスト:
 
 ```html
 <igx-chip>
@@ -197,7 +197,7 @@ public chipsOrderChanged(event) {
 ### API
 
 * [IgxChipComponent]({environment:angularApiUrl}/classes/igxchipcomponent.html)
-* [IgxChipComponent Styles]({environment:sassApiUrl}/index.html#function-igx-chip-theme)
+* [IgxChipComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-chip-theme)
 * [IgxChipsAreaComponent]({environment:angularApiUrl}/classes/igxchipsareacomponent.html)
 * [IgxPrefixDirective]({environment:angularApiUrl}/classes/igxprefixdirective.html)
 * [IgxSuffixDirective]({environment:angularApiUrl}/classes/igxsuffixdirective.html)

@@ -1,11 +1,11 @@
 ﻿---
-title: テーマ デモ
+title: テーマ
 _description: Ignite UI for Angular は、SASS 機能と mixins でアプリケーション全体および特定部分を最小限のコードでスタイル設定できます。
 _keywords: Ignite UI for Angular, Angular Theming コンポーネント, Angular Theming, Ignite UI for Angular コンポーネント, Ignite for Agular Themes, グローバル テーマ, コンポーネント テーマ
 _language: ja
 ---
 
-## テーマ デモ
+## テーマ
 **Ignite UI for Angular Theming** は、グローバル設定でアプリケーション全体のテーマをカスタマイズしてすべての既定の要素に適用、あるいはコンポーネント別にテーマをそれぞれ適用することができます。
 
 ### デモ
@@ -19,7 +19,7 @@ _language: ja
 <div class="divider--half"></div>
 
 
-### デフォルト テーマ
+### デフォルトのテーマ
 
 **デフォルトのテーマ**は、**Ignite UI for Angular コントロール**のすべてのコンポーネントのスタイルを設定します。はじめに `styles.scss` ファイルに設定します。
 
@@ -47,7 +47,7 @@ _language: ja
 
 コンポーネントの外観を変更したい場合や**デフォルト テーマ**がアプリケーションの UI に合わない場合は、**Ignite UI for Angular Theming** を使用して多数の CSS ファイルを書かずにスタイル設定が簡単にできます。
 
-### 開始
+### 作業の開始
 
 はじめに、**SASS functions と mixins** が入れ子になっている**テーマ ユーティリティ**をインポートします。
 理想的なコード構成は、別々のディレクトリ**テーマ ロジック**に配置することです。

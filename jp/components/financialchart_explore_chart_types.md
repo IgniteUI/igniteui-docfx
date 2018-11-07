@@ -1,10 +1,10 @@
 ﻿---
-title: Financial Chart - チャートのタイプの選択
+title: Financial Chart - チャート　タイプの選択
 _description: Ignite UI for Angular Financial Chart コンポーネントは簡易な API を使用してファイナンシャル データを表示できます。ユーザーがデータにバインド後にチャートがデータの可視化オプションを複数提供します。
 _keywords: Ignite UI for Angular, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular チャート, Angular チャート コントロール, Angular チャート例, Angular チャート コンポーネント, Angular Financial Chart
 _language: ja
 ---
-## チャートのタイプの選択
+## チャート　タイプの選択
 
 `igx-financial-chart` コントロールでは、軸は軸線、目盛、タイトル、や軸のラベルの外観を設定する基本プロパティを提供します。
 

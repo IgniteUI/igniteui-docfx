@@ -154,7 +154,7 @@ public fruits = ["Apple", "Mango", "Banana", "Orange"];
 
 * [IgxRadioComponent]({environment:angularApiUrl}/classes/igxradiocomponent.html)
 * [IgxRadioGroupDirective]({environment:angularApiUrl}/classes/igxradiogroupdirective.html)
-* [IgxRadioComponent Styles]({environment:sassApiUrl}/index.html#function-igx-radio-theme)
+* [IgxRadioComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-radio-theme)
 
 ### その他のリソース
 

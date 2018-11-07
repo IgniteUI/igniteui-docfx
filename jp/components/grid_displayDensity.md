@@ -170,7 +170,7 @@ public selectDensity(event) {
 <div class="divider--half"></div>
 
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
-* [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [IgxGridComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 * [IgxColumnComponent](https://staging.infragistics.local/products/ignite-ui-angular/docs/typescript/classes/igxcolumncomponent.html)
 
 <div class="divider--half"></div>

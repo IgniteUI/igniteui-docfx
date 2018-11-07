@@ -137,7 +137,7 @@ public toolbarExportingHandler(args) {
 
 [`IgxGridToolbarComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html)
 
-[`IgxGridComponent`]({environment:angularApiUrl}/classes/igxgridcomponent.html) properties:
+[`IgxGridComponent`]({environment:angularApiUrl}/classes/igxgridcomponent.html) プロパティ:
 * [`toolbar`]({environment:angularApiUrl}/classes/igxgridcomponent.html#toolbar)
 * [`showToolbar`]({environment:angularApiUrl}/classes/igxgridcomponent.html#showtoolbar)
 * [`toolbarTitle`]({environment:angularApiUrl}/classes/igxgridcomponent.html#toolbartitle)
@@ -153,12 +153,12 @@ public toolbarExportingHandler(args) {
 * [`exportExcelText`]({environment:angularApiUrl}/classes/igxgridcomponent.html#exportexceltext)
 * [`exportCsvText`]({environment:angularApiUrl}/classes/igxgridcomponent.html#exportcsvtext)
 
-[`IgxGridComponent`]({environment:angularApiUrl}/classes/igxgridcomponent.html) events:
+[`IgxGridComponent`]({environment:angularApiUrl}/classes/igxgridcomponent.html) イベント:
 * [`onToolbarExporting`]({environment:angularApiUrl}/classes/igxgridcomponent.html#ontoolbarexporting)
 
 スタイル:
 
-* [`IgxGridComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [`IgxGridComponent スタイル`]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 
 ### その他のリソース
 

@@ -42,7 +42,7 @@ export class AppModule {}
 
 ### 使用方法
 
-[`IgxTreeGridComponent`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html) は`IgxGridComponent`]({environment:angularApiUrl}/classes/igxgridcomponent.html) と多数の機能を共有しますが、データを階層で表示する機能も追加されています。
+[`IgxTreeGridComponent`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html) は [`IgxGridComponent`]({environment:angularApiUrl}/classes/igxgridcomponent.html) と多数の機能を共有しますが、データを階層で表示する機能も追加されています。
 [`IgxTreeGridComponent`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html) は、各データオブジェクトの **child collection** または各データオブジェクトに**主キーまたは外部キー**を使用してデータ オブジェクト内の関係を定義できます。
 
 #### ツリー セル
@@ -224,14 +224,14 @@ export class MyComponent implements OnInit {
 </div>
 <div class="divider--half"></div>
 
-#### Tree Grid Row Editing
+#### Tree Grid 行編集
 
-Row editing - allows modification of several cells in the row, before submitting, at once, all those changes to the tree grid's data source. Leverages the pending changes functionality of the new transaction provider.
+行編集 - ツリー グリッド データソースに変更をサブミットする前に行の複数セルを一度に変更することが可能です。新しいトランザクション プロバイダーの保留中の変更を利用できます。
 
-If [`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditable) is enabled, then all columns that have [field]({environment:angularApiUrl}/classes/igxcolumncomponent.html#field) property defined (excluding a [`primaryKey`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#primarykey) one) will be editable, even though the [`editable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable) property is not defined for them. If you want to disable editing for a specific column, then you set the [`editable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable) column's input to false.
-The following sample illustrates how to enable row editing using the grid's [`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditable) property.
+[`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditable) が有効な場合、[`editable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable) プロパティが定義されていない場合も [field]({environment:angularApiUrl}/classes/igxcolumncomponent.html#field) プロパティが定義されたすべての列 ([`primaryKey`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#primarykey) を除く) が編集可能になります。特定の列の編集を無効にする場合、[`editable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable) 列の入力を false に設定します。
+以下の手順では、グリッドの [`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditable) プロパティで行編集を有効にする方法を示します。
 
-Let's start from scratch. Import the [`IgxTreeGridModule`]({environment:angularApiUrl}/classes/igxtreegridmodule.html) in the **app.module.ts** file:
+はじめに [`IgxTreeGridModule`]({environment:angularApiUrl}/classes/igxtreegridmodule.html) を **app.module.ts** ファイルにインポートします。
 
 ```typescript
 // app.module.ts
@@ -248,7 +248,7 @@ import { IgxTreeGridModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-Then define a tree grid with bound data source and [`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditable) set to true:
+データ ソースにバインドしたツリーグリッドを定義して [`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditable) を true に設定します。
 
 ```html
     <igx-tree-grid #treeGrid1 [data]="data" primaryKey="EmployeID" foreignKey="PID" width="100%" height="500px" 
@@ -268,10 +268,9 @@ Then define a tree grid with bound data source and [`rowEditable`]({environment:
 ```
 
 > [!NOTE]
-> Setting primary key is mandatory for editing operations, including row editing.
-
+> 行編集を含む編集操作でプライマリキーの設定は必須です。
 > [!NOTE]
-> It's not needed to enable editing for individual columns. Using the [`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditable) property in the grid, will mean that all rows, with defined [`field`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#field) property, excluding primary one, will be editable. If you want to disable editing for specific column, then you set the [`editable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable) column's input to `false`.
+> 各列の編集を有効にする必要はありません。グリッドで[`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditable) プロパティを使用するとプライマリ行以外 [`field`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#field) プロパティを定義したすべての行が編集可能になります。特定の列の編集を無効にする場合、[`editable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable) 列の入力を false に設定します。
 
 ```typescript
 import { Component, OnInit, ViewChild } from "@angular/core";
@@ -303,35 +302,25 @@ export class TreeGridRowEditSampleComponent implements OnInit {
 ```
 
 > [!NOTE]
-> The grid uses internally a provider [`IgxBaseTransactionService`]({environment:angularApiUrl}/classes/igxbasetransactionservice.html) that holds pending cell changes, until row state submitted or cancelled.
+> グリッドは、保留中のセル変更を保持するプロバイダー [`IgxBaseTransactionService`]({environment:angularApiUrl}/classes/igxbasetransactionservice.html) を行ステートをサブミットまたはキャンセルするまで内部使用します。
 
-Here is the result: 
+以下は結果です。 
 
 <div class="sample-container loading" style="height:590px">
     <iframe id="tree-grid-row-editing-sample-iframe" src='{environment:demosBaseUrl}/treegrid-row-edit' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-row-editing-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-row-editing-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
 </div>
-<div class="divider--half"></div>
-
-#### Persistence and Integration
-
-The indentation of the **tree cells** persists across other tree grid features like filtering, sorting and paging.
-
-- When **sorting** is applied on a column, the data rows get sorted by levels. This means that the root level rows will be sorted independently from their respective children. Their respective children collections will each be sorted independently as well and so on.
-- The first column (the one that has a [`visibleIndex`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#visibleindex) of 0) is always the tree column.
-- The column that ends up with a [`visibleIndex`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#visibleindex) of 0 after operations like column pinning, column hiding and column moving becomes the tree column.
-
 <div class="divider--half"></div>
 
 #### パーシステンスとインテグレーション
 
-**ツリー セル** のインデントは、フィルタリング、並べ替え、ページングなど他のツリーグリッド全体の機能で永続化されます。
+**ツリー セル**のインデントは、フィルタリング、並べ替え、ページングなど他のツリーグリッド全体の機能で永続化されます。
 
-- **並べ替え** が列に適用された際にデータ行がレベルごとに並べ替えられます。ルートレベルの行はそれぞれの子に関係なく個々に並べ替えられます。各子コレクションは個々に並べ替えられます。
-- 最初の列 (the one that has a [`visibleIndex`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#visibleindex) は、常にツリー列です。
+- **sorting**が列に適用された際にデータ行がレベルごとに並べ替えられます。ルートレベルの行はそれぞれの子に関係なく個々に並べ替えられます。各子コレクションは個々に並べ替えられます。
+- 最初の列 [`visibleIndex`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#visibleindex) は、常にツリー列です。
 - 列ピン固定、列の非表示、列移動などの処理後に 0 の [`visibleIndex`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#visibleindex) で終わる列はツリー列になります。
 
 <div class="divider--half"></div>
@@ -374,5 +363,5 @@ The indentation of the **tree cells** persists across other tree grid features l
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

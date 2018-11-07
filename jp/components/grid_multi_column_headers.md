@@ -66,7 +66,7 @@ _language: ja
 <div class="divider--half"></div>
 
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
-* [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [IgxGridComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 * [IgxColumnGroupComponent]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html)
 
 <div class="divider--half"></div>

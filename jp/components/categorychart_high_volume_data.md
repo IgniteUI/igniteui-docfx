@@ -1,10 +1,10 @@
 ﻿---
-title: 大量なデータの処理
+title: 大規模なデータの処理
 _description: Ignite UI for Angular Category Chart コンポーネントは複雑なデータ ビジュアライゼーションを API によって簡素化できます。ユーザーがデータのコレクションまたはコレクションのグループにバインドし、データを指定するプロパティを設定後、チャート コントロールが残りの作業を処理します。
 _keywords: Ignite UI for Angular, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular チャート, Angular チャート コントロール, Angular チャート例, Angular チャート コンポーネント, Angular Category Chart
 _language: ja
 ---
-## 大量なデータの処理
+## 大規模なデータの処理
 
 Category Chart コントロールは、数百万に及ぶデータ ポイントを含む大量のデータを高速で処理できます。
 

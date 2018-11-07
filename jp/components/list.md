@@ -547,9 +547,9 @@ public leftPanPerformed(args) {
 使用したその他のコンポーネント:
 
 * [IgxAvatarComponent API]({environment:angularApiUrl}/classes/igxavatarcomponent.html)
-* [IgxAvatarComponent Styles]({environment:sassApiUrl}/index.html#function-igx-avatar-theme)
+* [IgxAvatarComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-avatar-theme)
 * [IgxIconComponent API]({environment:angularApiUrl}/classes/igxiconcomponent.html)
-* [IgxIconComponent Styles]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
+* [IgxIconComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
 
 <div class="divider"></div>
 

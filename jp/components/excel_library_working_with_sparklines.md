@@ -1,13 +1,14 @@
-﻿---
-title: Excel Library Component - Native Angular | Ignite UI for Angular
+---
+Excel ライブラリ コンポーネント - ネイティブ Angular|Ignite UI for Angular
 _description: The Ignite UI for Excel Library component with Sparkline support.
 _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Excel Library, Angular Excel Library Example, Angular Excel Library Component, Angular Excel Engine, Sparkline
+_language: ja
 ---
-## Excel Library Working with Sparklines
+## Excel Library - スパークライン
 
-This topic demonstrates how to add sparklines to Excel® Worksheet (".xlsx), programmatically, using the Infragistics Excel Library to show visual representations of data trends. Sparklines serve as quick and easy solution to visualize variations in your data. Sparklines are placed in cells that can be positioned anywhere within a worksheet and compliments the data it’s adjacent to. 
+このトピックでは、データ トレンドを視覚的に表すために Infragistics Excel Library を使用して Excel® ワークシート (.xlsx) にスパークラインを追加する方法を表します。スパークラインでデータでの変更を簡単にビジュアル化できます。スパークラインはワークシート内のセル内にどこでも配置できます。 
 
-### Demo
+### デモ
 <!-- <div class="sample-container" style="height: 550px">
     <iframe id="excel-library-overview-sample-iframe" src='{environment:demosBaseUrl}/excel-library-working-with-sparklines' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -18,14 +19,14 @@ This topic demonstrates how to add sparklines to Excel® Worksheet (".xlsx), pro
 
 <div class="divider--half"></div>
 
-### Supported Sparklines
-The following is a list of the supported predefined sparkline types.
+### サポートされるスパークライン
+以下はサポートされる定義済スパークラインのタイプです。
 
--  Line
--  Column
--  Win/Loss
+-  折れ線チャート
+-  柱状チャート
+-  Win/Loss チャート
 
-The following code demonstrates how to programmtically add Sparklines to a Worksheet via the sparklineGroups collection:
+以下のコードは、sparklineGroups コレクションを使用してスパークラインをワークシートへ追加する方法を示します。
 
 ```typescript
 var workbook: Workbook;

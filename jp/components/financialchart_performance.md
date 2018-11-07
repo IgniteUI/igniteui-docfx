@@ -6,7 +6,7 @@ _language: ja
 ---
 ## パフォーマンス 
 
-`igx-financial-chart` コントロールは大量のデータ ポイントの描画で高いパフォーマンスを実現します。以下のデモは 20 年間のデータをバインドし、ローソク足チャートで 1 日間隔の在庫価格を示します。
+`igx-financial-chart` コントロールは多数のデータ ポイントの描画で高いパフォーマンスを実現します。以下のデモは 20 年間のデータをバインドし、ローソク足チャートで 1 日間隔の在庫価格を示します。
 
 ### デモ
 
@@ -98,6 +98,6 @@ export class AppComponent {
 ### 追加のリソース
 <div class="divider--half"></div>
 
-* [大量のデータのバインド](financialchart_high_volume_data.md)
+* [大規模なデータへのバインド](financialchart_high_volume_data.md)
 * [リアルタイム データにバインド](financialchart_real_time_data.md)
 * [複数データ ソースへのバインド](financialchart_binding_to_multiple_data.md)
