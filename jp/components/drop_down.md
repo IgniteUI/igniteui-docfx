@@ -160,7 +160,7 @@ export class AppModule {}
 
 <div class="divider--half"></div>
 
-[isHeader]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html#isheader) を使用して意味的なグループ化や [disabled]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html#disabled) を使用して非インタラクティブな項目を表示するなど、有用なビジュアル情報を提供できます。You can also set [isSelected]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html#isselected) to a particular item to make it the selected item.
+[isHeader]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html#isheader) を使用して意味的なグループ化や [disabled]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html#disabled) を使用して非インタラクティブな項目を表示するなど、有用なビジュアル情報を提供できます。また [isSelected]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html#isselected) は特定の項目に設定して選択項目にできます。
 
 ```html
 <!-- dropdown.component.html -->
@@ -345,9 +345,9 @@ public toggleMenu(eventArgs) {
 ### API まとめ
 
 **igx-drop-down** コンポーネント [**API 参照**]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) と
-[**テーマの参照**]({environment:sassApiUrl}/index.html#mixin-igx-drop-down)。
+[**テーマの参照**]({environment:sassApiUrl}/index.html#mixin-igx-drop-down)
 
-**igx-drop-down-item** コンポーネント [**API 参照**]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html)。
+**igx-drop-down-item** コンポーネント [**API 参照**]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html)
 ###その他のリソース
 
 <div class="divider--half"></div>

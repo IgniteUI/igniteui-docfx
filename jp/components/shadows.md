@@ -176,7 +176,7 @@ Shadows は、Document Object Model ツリーの間に境界線を描画し、�
 </div>
 ```
 
-次に要素の igx-elevation]({environment:sassApiUrl}/index.html#function-igx-elevation) を scss クラスに適用します。
+次に要素の [igx-elevation]({environment:sassApiUrl}/index.html#function-igx-elevation) を scss クラスに適用します。
 
 ```scss
     // First you have to import the utilities!

@@ -1,13 +1,14 @@
 ---
-title: Working with Charts
+チャートでの作業
 _description: The Ignite UI for Excel Library component allows for the addition of charts to show visual representations of data trends across regions of cells in a worksheet.
 _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Excel Library, Angular Excel Library Example, Angular Excel Library Component, Angular Excel Engine, Chart, Angular Excel Chart
+_language: ja
 ---
-## Excel Library Working with Charts
+## Excel Library チャート
 
-This topic demonstrates how to add a worksheet chart to an Excel worksheet (".xlsx) programmatically, using the Angular Excel Library to show visual representations of data trends across regions of cells in a worksheet. For example, if you wanted to see your numeric Excel data visualized as a column or line chart, this feature can help you achieve that.
+このトピックでは、データ トレンドを視覚的に表示するためにコードを使用して Excel ワークシート (.xlsx) にワークシート チャートを追加し、ワークシートのセル領域のデータ トレンドを可視化する方法を表します。たとえば Excel データを柱状チャートや折れ線チャートで可視化する場合この機能は便利です。
 
-### Demo
+### デモ
 
 <!--TODO add when in a sample is in Samples Browser
 <!-- <div class="sample-container" style="height: 550px">
@@ -20,14 +21,14 @@ This topic demonstrates how to add a worksheet chart to an Excel worksheet (".xl
 
 <div class="divider--half"></div>
 
-### Usage
-In order to add a chart to a worksheet, you must use the addChart method of the worksheet's shapes collection. In this method, you can specify the chart type that you wish to use, the top-left cell, the bottom-right cell, and the percentages of those cells that you wish for the chart to take up.
+### 使用方法
+ワークシートを追加するには、ワークシートの Shapes コレクションの addChart メソッドを使用します。このメソッドは、チャート タイプと表示位置を左上のセル、右下のセル、それらのセルのパーセンテージで指定できます。
 
-The addChart method returns the worksheet chart element to be added to the worksheet. Once you have this, you can use the setSourceData method on the chart to set a cell address of the region of worksheet cells that you wish to use as a data source, as well as whether or not you want to switch the mapping of columns and rows to the X and Y axis.
+addChart メソッドはワークシートに追加されるワークシート チャート要素を返します。チャートでメソッドを使用してデータソースとして使用するワークシート セル領域のセルのセル アドレスを設定できます。同様に行列のマッピングを Y と X 軸に切り替えることもできます。
 
-There are over 70 supported chart types, including Line, Area, Column, and Pie.
+折れ線、エリア、柱状、円を含む 70 タイプ以上のチャート タイプがサポートされます。
 
-The following code demonstrates how to use the Excel charting feature:
+以下のコードは、Excel チャート機能を有効にする方法を示します。
 
 ```typescript
 var chart = ws.shapes().addChart(ChartType.ColumnClustered, 
