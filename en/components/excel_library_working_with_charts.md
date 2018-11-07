@@ -9,14 +9,13 @@ This topic demonstrates how to add a worksheet chart to an Excel worksheet (".xl
 
 ### Demo
 
-<!--TODO add when in a sample is in Samples Browser
-<!-- <div class="sample-container" style="height: 550px">
+<div class="sample-container" style="height: 550px">
     <iframe id="excel-library-overview-sample-iframe" src='{environment:demosBaseUrl}/excel-library-overview-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="excel-library-overview-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
     </button>
-</div> -->
+</div> 
 
 <div class="divider--half"></div>
 
