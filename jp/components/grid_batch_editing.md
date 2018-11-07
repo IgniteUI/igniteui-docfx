@@ -9,7 +9,7 @@ _language: ja
 
 [`TransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) は、基になるデータに影響せずに変更を蓄積するためにコンポーネントが使用する注入可能なミドルウェアです。プロバイダーは、データのアクセス、変更の操作 (元に戻す、やり直し)、すべて破棄または確定のための API を公開します。
 
-[`TransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) はセル編集と行編集の両方と動作します。行編集の終了時に行トランザクションが追加された場合、セル編集のトランザクションはセルが編集モードを終了したときに追加されます。グリッド編集のステートは、すべての行を編集https://jp.infragistics.com//angularsite/components/circular_progress.html済み、追加済み、削除済み、そして最後のステートで構成されます。これらは後でインスペクト、操作、サブミットを一度に行います。個々のセルまたは行の変更を集めて、編集モードに基づいてデータ行/レコードごとに蓄積します。
+[`TransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) はセル編集と行編集の両方と動作します。行編集の終了時に行トランザクションが追加された場合、セル編集のトランザクションはセルが編集モードを終了したときに追加されます。グリッド編集のステートは、すべての行を編集済み、追加済み、削除済み、そして最後のステートで構成されます。これらは後でインスペクト、操作、サブミットを一度に行います。個々のセルまたは行の変更を集めて、編集モードに基づいてデータ行/レコードごとに蓄積します。
 
 ### デモ
 

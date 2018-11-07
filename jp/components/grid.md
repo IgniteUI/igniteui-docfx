@@ -318,32 +318,32 @@ export class MyComponent implements OnInit {
 
 **注**: リモート データにバインドする場合、グリッドの [`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#autogenerate) プロパティは使用しないことをお勧めします。データを検証して適切な列を生成するためにデータが利用可能である必要があります。リモート サービスの応答が完了するまでデータが利用できないため、グリッドはエラーを発生します。リモート サービスへバインド時に [`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#autogenerate) を使用する機能は今後追加予定です。
 
-### Keyboard navigation
-Keyboard navigation is available by default in any grid and aims at covering as many as possible features and scenarios for the end user. When you focus a specific cell and press one of the following key combinations, the described behaviour is performed:
+### キーボード ナビゲーション
+キーボード ナビゲーションはすべてのグリッドでデフォルトで有効です。エンドユーザーの要件に合わせて機能を追加できます。以下は、特定のセルをフォーカスして以下のキーの組み合わせを押した場合の動作を示します。
 
- - `Arrow Up` - navigates one cell up (no wrapping)
- - `Arrow Down` - navigates one cell down (no wrapping)
- - `Arrow Left` - navigates one cell left (no wrapping between lines)
- - `Arrow Right` - navigates one cell right (no wrapping between lines)
- - `Ctrl + Arrow Up` - navigates to the first cell in the current column;
- - `Ctrl + Arrow Down` - navigates to the last cell in the current column;
- - `Ctrl + Arrow Left` -  moves to leftmost cell in row
- - `Home` - moves to leftmost cell in row
- - `Ctrl + Home` - moves to leftmost cell in row
- - `Ctrl + Arrow Right` - moves to rightmost cell in row
- - `End` - moves to rightmost cell in row
- - `Ctrl + End` - moves to rightmost cell in row
- - `Page Up` - scrolls one page (view port) up
- - `Page Down` -  scrolls one page (view port) down
- - `Enter` - enters edit mode
- - `F2` - enters edit mode
- - `Esc` - exits edit mode
- - `Tab` - sequentially move the focus over the next cell on the row and if the last cell is reached move to next row; If next row is group row the whole row is focused, if it is data row, move focus over the first cell; When cell is in edit mode, will move the focus to next editable cell in the row, and from the right-most editable cell to the `CANCEL` and `DONE` buttons, and from the `DONE` button to the left-most editable cell within the currently edited row.
- - `Shift + Tab` - sequentially move focus to the previous cell on the row, if the first cell is reached move the focus to the previous row. If previous row is group row focus the whole row or if it is data row, focus the last cell of the row; when cell is in edit mode, will move the focus to the next editable cell in the row, and from the right-most editable cell to the `CANCEL` and `DONE` buttons, and from the `DONE` button to the left-most editable cell within the currently edited row.
- - `Space` -  if the row is selectable, on keydown space triggers row selection
- - `Alt + Arrow Left` over GroupRow \ Tree Grid row - collapses the group row content if the row is not already collapsed;
- - `Alt + Arrow Right` over GroupRow \ Tree Grid Row - expands the group row content if the row is not already expanded;
- - on mouse `wheel` -  blurs the focused element;
+ - `上矢印` - 1 つ上のセルへ移動 (ラッピングなし)
+ - `下矢印` - 1 つ下のセルへ移動 (ラッピングなし)
+ - `左矢印` - 1 つ左のセルへ移動 (行間のラッピングなし)
+ - `右矢印` - 1 つ右のセルへ移動 (行間のラッピングなし)
+ - `Ctrl + 上矢印` - 現在の列の最初のセルへ移動 
+ - `Ctrl + 下矢印` - 現在の列の最後のセルへ移動
+ - `Ctrl + 左矢印` -  行の左端のセルへ移動
+ - `Home` - 行の左端のセルへ移動
+ - `Ctrl + Home` - 行の左端のセルへ移動
+ - `Ctrl + 右矢印` -  行の右端のセルへ移動
+ - `End` - 行の右端のセルへ移動
+ - `Ctrl + End` -  行の右端のセルへ移動
+ - `Page Up` - 1 ページ (ビューポート) 上へスクロール
+ - `Page Down` - 1 ページ (ビューポート) 下へスクロール
+ - `Enter` - 編集モードに入る
+ - `F2` - 編集モードに入る
+ - `Esc` - 編集モードを終了する
+ - `Tab` - フォーカスを行の次のセルへ順番に移動し、最後のセルのあとは次の行へ移動します。次の行がグループ行の場合、行全体がフォーカスされます。データ行の場合、最初のセルにフォーカスを移動します。セルが編集モードの場合、フォーカスを次の編集可能なセルへ移動し、編集可能な一番右のセルから`CANCEL`、`DONE`ボタン、`DONE` から編集可能な一番左のセルへ移動します。
+ - `Shift + Tab` - 行の前のセルへフォーカスを順番に移動し、最初のセルの次に前の行へフォーカスを移動します。前の行がグループ行の場合、行全体をフォーカスします。データ行の場合、最後のセルをフォーカスします。セルが編集モードの場合、フォーカスを次の編集可能なセルへ移動し、編集可能な一番右のセルから`CANCEL`、`DONE`ボタン、`DONE` から編集可能な一番左のセルへ移動します。
+ - `Space` -  行が選択可能な場合、スペースキーを押下すると行選択をトリガーします。
+ - GroupRow \ Tree Grid 行で `Alt + 左矢印` - 行が縮小されていない場合はグループ行コンテンツを縮小します。
+ - GroupRow \ Tree Grid 行で `Alt + 右矢印` - 行が展開されていない場合はグループ行コンテンツを展開します。
+ - マウス`ホイール` - フォーカス要素をぼかします。
 
 
 ### 仮想化
