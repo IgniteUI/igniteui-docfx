@@ -38,7 +38,7 @@ import { FormattedString } from 'igniteui-angular-excel/ES5/FormattedString';
 ### Introduction
 In Microsoft Excel, individual cells, as well as cell regions can have Names assigned to them. The Names are assigned and displayed in the Name Box of the spreadsheet. The Name of a cell or region can be used to reference that cell or region instead of their cell references. The Names of cells and regions can be defined either in Excel or programmatically in code.
 
-The Ultimate UI for WPF product supports the referencing of cells and regions by Name through the GetCell and GetRegion methods of the Worksheet object. You refer to the cell or region using the NamedReference instance that refers to that cell or region.
+The Infragistics Excel Library supports the referencing of cells and regions by Name through the GetCell and GetRegion methods of the Worksheet object. You refer to the cell or region using the NamedReference instance that refers to that cell or region.
 
 #### Requirements
 To be able to access an individual cell or a region of cells, they must be Named, either in MS Excel or programmatically in code.
