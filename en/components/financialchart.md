@@ -51,7 +51,7 @@ The financial chart is exported as an `NgModule`, you need to import the _IgxFin
 
 ```typescript
 // app.module.ts
-import {IgxFinancialChartModule} from 'ignite-angular-charts/ES5/igx-financialchart-module'
+import {IgxFinancialChartModule} from 'ignite-angular-charts/ES5/igx-financial-chart-module'
 
 @NgModule({
     imports: [
