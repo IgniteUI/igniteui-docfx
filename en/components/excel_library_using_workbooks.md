@@ -8,13 +8,15 @@ _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Nati
 The Infragistics Excel Engine enables you to save data to and load data from Microsoft® Excel®. You can create workbooks and worksheets, input data, and export the data to Excel using the library’s various classes. The Infragistics Excel Engine makes it easy to export the data in your application as an Excel spreadsheet as well as import data from Excel into your application. 
 
 ### Demo
-<!-- <div class="sample-container" style="height: 550px">
-    <iframe id="excel-library-overview-sample-iframe" src='{environment:demosBaseUrl}/excel-library-overview-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+
+<div class="sample-container" style="height: 400px">
+    <iframe id="excel-library-overview-sample-iframe" src='{environment:demosBaseUrl}/excel-library-operations-on-workbooks' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="excel-library-overview-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
-    </button>
-</div> -->
+    <!-- TODO uncomment when Stackblitz is ready for EXCEL
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="excel-library-operations-on-workbooks-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+    </button> -->
+</div> 
 
 <div class="divider--half"></div>
 
