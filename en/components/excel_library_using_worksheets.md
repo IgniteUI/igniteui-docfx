@@ -1,4 +1,4 @@
----
+﻿---
 title: Excel Library Using Worksheets
 _description: The Ignite UI for Excel Library component with Worksheet Operations.
 _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Excel Library, Angular Excel Library Example, Angular Excel Library Component, Angular Excel Engine, Worksheet, Conditional Formatting, Sorting, Filtering, Gridlines, Headers, Protection
@@ -7,16 +7,16 @@ _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Nati
 
 The Infragistics Excel Engine's `Worksheet` is where your data is kept. You can input data by working with the Worksheet's rows and cells and setting their corresponding values. The `Worksheet` allows you to filter, sort, and customize the formats of the cells, as shown below.
 
-<!-- ### Demo
+### Demo
 
-<!--TODO add when in a sample is in Samples Browser
-<!-- <div class="sample-container" style="height: 550px">
-    <iframe id="excel-library-overview-sample-iframe" src='{environment:demosBaseUrl}/excel-library-overview-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container" style="height: 400px">
+    <iframe id="excel-library-overview-sample-iframe" src='{environment:demosBaseUrl}/excel-library-operations-on-worksheets' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="excel-library-overview-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
-    </button>
-</div> -->
+    <!-- TODO uncomment when Stackblitz is ready for EXCEL
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="excel-library-operations-on-worksheets-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+    </button> -->
+</div> 
 
 <div class="divider--half"></div>
 
