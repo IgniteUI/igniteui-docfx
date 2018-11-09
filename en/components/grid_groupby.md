@@ -111,8 +111,8 @@ As an example, the following template would make the group rows summary more ver
 The grouping UI supports the following keyboard interactions:
 
 - For group rows (focus should be on the row or the expand/collapse cell)
-   - <kbd>RIGHT</kbd> - Expands the group
-   - <kbd>LEFT</kbd> - Collapses the group
+   - <kbd>ALT</kbd> + <kbd>RIGHT</kbd> - Expands the group
+   - <kbd>ALT</kbd> + <kbd>LEFT</kbd> - Collapses the group
 
 - For group [`igxChip`]({environment:angularApiUrl}/classes/igxchipcomponent.html) components in the group by area (focus should be on the chip)
    - <kbd>SHIFT</kbd> + <kbd>LEFT</kbd> - moves the focused chip left, changing the grouping order, if possible
