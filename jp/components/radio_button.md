@@ -5,12 +5,14 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 _language: ja
 ---
 
-## Radio Button
+## Radio & Radio Group
+
+### Radio Button
 
 <p class="highlight">Ignite UI for Angular Radio Button コンポーネントを使用すると、隣に表示されるオプションのセットから単一のオプションを選択する機能をサポートします。</p>
 <div class="divider"></div>
 
-### Radio Button デモ
+#### Radio Button デモ
 
 <div class="sample-container loading" style="height:384px">
     <iframe id="form-elements-sample-iframe" src='{environment:demosBaseUrl}/radio-sample-2' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -20,7 +22,7 @@ _language: ja
 </div>
 <div class="divider--half"></div>
 
-### Radio Button の使用
+#### Radio Button の使用
 
 ラジオ ボタン コンポーネントはオプションの単一選択を可能にします。デフォルト スタイル設定はマテリアル デザイン ガイドラインの選択コントロールの仕様に基づきます。
 
@@ -55,7 +57,7 @@ export class AppModule {
     <iframe src='{environment:demosBaseUrl}/radio-sample-1' width="100%" height="100%" seamless frameBorder="0"></iframe>
 </div>
 
-### Radio Button プロパティ
+#### Radio Button プロパティ
 
 ラジオ ボタンをグループに追加します。上記のコードにラジオ ボタンを 4 つ追加し、各ボタンに特定の背景色を適用します。更に含まれる div 要素の backgroundColor プロパティをコンポーネントの selectedColor プロパティにバインドし、selectedColor に NgModel ディレクティブによって双方向バインディングを設定します。これによりユーザーが他のラジオ ボタン (色) を選択したときに値が更新されます。
 
@@ -103,11 +105,11 @@ public selectedColor: string = this.colors[3].hex;
     <iframe src='{environment:demosBaseUrl}/radio-sample-2' width="100%" height="100%" seamless frameBorder="0"></iframe>
 </div>
 
-## Radio Group
+### Radio Group
 <p class="highlight">Ignite UI for Angular Radio Group ディレクティブは、子 [`igxRadio`]({environment:angularApiUrl}/classes/igxradiocomponent.html) コンポーネントをより詳細に制御ができ、テンプレート主導やリアクティブ フォームをサポートするグルーピング コンテナーを提供します。</p>
 <div class="divider"></div>
 
-### Radio Group デモ
+#### Radio Group デモ
 <div class="sample-container" style="height: 320px">
     <iframe id="radio-group-sample-iframe" src='{environment:demosBaseUrl}/radio-group-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -116,7 +118,7 @@ public selectedColor: string = this.colors[3].hex;
 </div>
 <div class="divider--half"></div>
 
-### Radio Group の使用
+#### Radio Group の使用
 
 Radio Group ディレクティブが NgModule としてエクスポートされるため、アプリケーションで **app.module.ts** ファイルの [`IgxRadioModule`]({environment:angularApiUrl}/classes/igxradiomodule.html) をインポートする必要があります。
 
@@ -149,7 +151,7 @@ import { IgxRadioModule } from 'igniteui-angular';
 public fruits = ["Apple", "Mango", "Banana", "Orange"];
 ```
 
-## API リファレンス
+### API リファレンス
 <div class="divider--half"></div>
 
 * [IgxRadioComponent]({environment:angularApiUrl}/classes/igxradiocomponent.html)

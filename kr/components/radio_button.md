@@ -5,7 +5,9 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 _language: kr
 ---
 
-## Radio Button
+## Radio & Radio Group
+
+### Radio Button
 <p class="highlight">The Ignite UI for Angular Radio Button component allows the user to select a single option from an available set of options that are listed side by side.</p>
 <div class="divider"></div>
 
@@ -18,7 +20,7 @@ _language: kr
 </div>
 <div class="divider--half"></div>
 
-### Radio Button Usage
+#### Radio Button Usage
 
 At its core the radio button component allows for a single option selection. The default styling is done according to the selection controls specification as per the Material Design guidelines.
 To get started with the Ignite UI for Angular Radio, let's first import the [`IgxRadioModule`]({environment:angularApiUrl}/classes/igxradiomodule.html) in the **app.module.ts** file:
@@ -51,7 +53,7 @@ If all went well, you should see something like the following in the browser:
     <iframe src='{environment:demosBaseUrl}/radio-sample-1' width="100%" height="100%" seamless frameBorder="0"></iframe>
 </div>
 
-### Radio Button Properties
+#### Radio Button Properties
 Radio buttons are only useful when added in a group. Let's enhance the code above by adding four radio buttons, each responsible for applying a certain color as a background. We will bind the backgroundColor property of a div element to the component's selectedColor property. You will notice that selectedColor also participates in a two way binding relation through the NgModel directive, therefore its value is updated each time the user selects a different radio button(color).
 
 ```typescript
@@ -97,11 +99,11 @@ Try it! The final result would be something like that:
     <iframe src='{environment:demosBaseUrl}/radio-sample-2' width="100%" height="100%" seamless frameBorder="0"></iframe>
 </div>
 
-## Radio Group
+### Radio Group
 <p class="highlight">The Ignite UI for Angular Radio Group directive provides a grouping container that allows better control over the child [`igxRadio`]({environment:angularApiUrl}/classes/igxradiocomponent.html) components and supports template-driven and reactive forms.</p>
 <div class="divider"></div>
 
-### Radio Group Demo
+#### Radio Group Demo
 <div class="sample-container" style="height: 320px">
     <iframe id="radio-group-sample-iframe" src='{environment:demosBaseUrl}/radio-group-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -110,7 +112,7 @@ Try it! The final result would be something like that:
 </div>
 <div class="divider--half"></div>
 
-### Radio Group Usage
+#### Radio Group Usage
 
 The Radio Group Directive is exported as an `NgModule`, thus all you need to do in your application is to import the [`IgxRadioModule`]({environment:angularApiUrl}/classes/igxradiomodule.html) in the **app.module.ts** file:
 
@@ -143,14 +145,14 @@ Note that, setting the [`igx-radio-group`]({environment:angularApiUrl}/classes/i
 public fruits = ["Apple", "Mango", "Banana", "Orange"];
 ```
 
-## API References
+### API References
 <div class="divider--half"></div>
 
 * [IgxRadioComponent]({environment:angularApiUrl}/classes/igxradiocomponent.html)
 * [IgxRadioGroupDirective]({environment:angularApiUrl}/classes/igxradiogroupdirective.html)
 * [IgxRadioComponent Styles]({environment:sassApiUrl}/index.html#function-igx-radio-theme)
 
-## Additional Resources
+### Additional Resources
 <div class="divider--half"></div>
 
 Our community is active and always welcoming to new ideas.

@@ -66,7 +66,7 @@ If all went well, you should see the following in your browser:
 
 <div class="divider"></div>
 
-### Customizing Tabs
+#### Customizing Tabs
 
 Let's modify the tabs and make them more appealing by including icons. The Bottom Navigation control is compatible with the Material Design
 [**Icons**](https://material.io/icons/) so it will be very easy for you to adopt them in your application.
@@ -189,7 +189,7 @@ Here is an example:
 
 <div class="divider"></div>
 
-### Embedding Other Igx Controls
+#### Embedding Other Igx Controls
 
 You can combine other Ignite UI for Angular components with the Bottom Navigation to achieve more complex applications.
 For example you may use the [`IgxListComponent`]({environment:angularApiUrl}/classes/igxlistcomponent.html) to create a list of contacts in a Bottom Navigation's panel and also visualize each contact using [`IgxAvatarComponent`]({environment:angularApiUrl}/classes/igxavatarcomponent.html) and [`IgxIconComponent`]({environment:angularApiUrl}/classes/igxiconcomponent.html).
