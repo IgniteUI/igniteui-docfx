@@ -9,7 +9,7 @@ This topic explains, with code examples, how to access cells and regions within 
 
 ### Demo
 
-<div class="sample-container" style="height: 400px">
+<div class="sample-container" style="height: 500px">
     <iframe id="excel-library-overview-sample-iframe" src='{environment:demosBaseUrl}/excel-library-working-with-cells' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
