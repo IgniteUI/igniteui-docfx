@@ -9,7 +9,7 @@ In the `igx-financial-chart` control, an axis provides base properties for speci
 
 ### Demo
 
-<div class="sample-container" style="height: 550px">
+<div class="sample-container" style="height: 500px">
     <iframe id="financial-chart-axis-types-iframe" src='{environment:demosBaseUrl}/financial-chart-axis-types' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>

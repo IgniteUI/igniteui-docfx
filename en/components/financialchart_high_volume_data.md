@@ -8,7 +8,7 @@ _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Nati
 The `igx-financial-chart` control is capable of handling high volumes of data. The following demo binds 20 years of data, with 1 hour intervals and displays the stock prices using line chart type.
 
 ### Demo
-<div class="sample-container" style="height: 550px">
+<div class="sample-container" style="height: 500px">
     <iframe id="financial-chart-high-volume-iframe" src='{environment:demosBaseUrl}/financial-chart-high-volume' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
