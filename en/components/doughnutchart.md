@@ -10,7 +10,7 @@ The Doughnut Chart component is similar to the Pie Chart component, proportional
 
 ### Demo
 
-<div class="sample-container" style="height: 550px">
+<div class="sample-container" style="height: 450px">
     <iframe id="doughnut-chart-overview-iframe" src='{environment:demosBaseUrl}/doughnut-chart-overview' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -94,7 +94,7 @@ The doughnut chart component exposes the API for setting the state of one or mor
 
 ### Slice Selection Demo
 
-<div class="sample-container" style="height: 550px">
+<div class="sample-container" style="height: 450px">
     <iframe id="doughnut-chart-selection-iframe" src='{environment:demosBaseUrl}/doughnut-chart-selection' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -122,7 +122,7 @@ You can change the exploded slices by changing the contents of the `explodedSlic
 
 ### Slice Explosion Demo
 
-<div class="sample-container" style="height: 550px">
+<div class="sample-container" style="height: 450px">
     <iframe id="doughnut-chart-explosion-iframe" src='{environment:demosBaseUrl}/doughnut-chart-explosion' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>

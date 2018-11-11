@@ -91,7 +91,7 @@ Additionally you can use the `legendItemTemplate` and `legendItemBadgeTemplate` 
 </igx-pie-chart>
 ```
 
-<div class="sample-container" style="height: 320px">
+<div class="sample-container" style="height: 350px">
     <iframe id="pie-chart-legend-iframe" src='{environment:demosBaseUrl}/pie-chart-legend' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -120,7 +120,7 @@ In the sample below, the `othersCategoryThreshold` is set to 2, and `othersCateg
  </igx-pie-chart>
 ```
 
-<div class="sample-container" style="height: 320px">
+<div class="sample-container" style="height: 350px">
     <iframe id="pie-chart-others-iframe" src='{environment:demosBaseUrl}/pie-chart-others' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -139,7 +139,7 @@ The pie chart supports explosion of individual pie slices as well as a 'sliceCli
                sliceClick="piechart_SliceClick">
 </igx-pie-chart>
 ```
-<div class="sample-container" style="height: 320px">
+<div class="sample-container" style="height: 350px">
     <iframe id="pie-chart-explosion-iframe" src='{environment:demosBaseUrl}/pie-chart-explosion' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -175,7 +175,7 @@ For scenarios where you click on the Others slice, the pie chart will return an 
                selectionMode="multiple">
 </igx-pie-chart>
 ```
-<div class="sample-container" style="height: 320px">
+<div class="sample-container" style="height: 350px">
     <iframe id="pie-chart-selection-iframe" src='{environment:demosBaseUrl}/pie-chart-selection' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
