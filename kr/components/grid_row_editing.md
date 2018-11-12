@@ -5,7 +5,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 _language: kr
 ---
 
-## 그리드 편집
+## 그리드 행 편집
 
 행 편집 - 그리드의 데이터 소스에 대한 모든 변경 사항을 제출하기 전에 즉시 행의 여러 셀을 수정할 수 있습니다. 새로운 트랜잭션 공급자의 보류 중인 변경 기능을 활용합니다.
 

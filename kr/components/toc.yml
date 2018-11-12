@@ -11,7 +11,7 @@
     - name: 그리드 편집
       href: grid_editing.md
       new: true
-    - name: 그리드 편집
+    - name: 그리드 행 편집
       href: grid_row_editing.md
       new: true
     - name: 그리드 트랜잭션
@@ -68,6 +68,9 @@
     - name: 조건부 셀 스타일
       href: grid_conditional_cell_styling.md
       new: true
+- name: Tree Grid
+  href: treegrid.md
+  new: true
 - name: List View
   href: list.md
 - name: Combo
@@ -106,8 +109,11 @@
     - name: 컨피규레이터 옵션
       href: categorychart_configuration_options.md
       new: false
-    - name: 사용자 도구 설명
-      href: categorychart_custom_tooltips.md
+    - name: Highlighting
+      href: categorychart_highlighting.md
+      new: true
+    - name: 툴팁 템플릿
+      href: categorychart_tooltip_templates.md
       new: false
 - name: Financial Chart
   href: financialchart.md
