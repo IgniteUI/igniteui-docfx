@@ -312,6 +312,9 @@
   new: true
 - name: Notifications
   header: true
+- name: Banner
+  href: banner.md
+  new: true
 - name: Snackbar
   href: snackbar.md
 - name: Toast
