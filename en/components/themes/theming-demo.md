@@ -110,14 +110,14 @@ Done! We are ready to set the new styling of our app.
 
 ### Theme Setting
 
-The **theme setting** is basically applying different shades of the primary and secondary colors to various component parts. In the [**Ignite UI for Angular Themes**](https://staging.infragistics.local/products/ignite-ui-angular/docs/sass/) documentation you can find out which component parts can be styled.
+The **theme setting** is basically applying different shades of the primary and secondary colors to various component parts. In the [**Ignite UI for Angular Themes**](https://www.infragistics.com/products/ignite-ui-angular/docs/sass/) documentation you can find out which component parts can be styled.
 
 Now lets define the **component themes** that we are going to apply:
 
 #### Defining Component Themes
 <div class="divider--half"></div>
 
-- [**Igx-Grid-Theme**](https://staging.infragistics.local/products/ignite-ui-angular/docs/sass/#function-igx-grid-theme)
+- [**Igx-Grid-Theme**](https://www.infragistics.com/products/ignite-ui-angular/docs/sass/#function-igx-grid-theme)
 
 ```scss
 // Define dark theme for the dialog
@@ -133,7 +133,7 @@ $dark-grid-theme: igx-grid-theme(
 );
 ```
 
-- [**Igx-Dialog-Theme**](https://staging.infragistics.local/products/ignite-ui-angular/docs/sass/#themes-function-igx-dialog-theme)
+- [**Igx-Dialog-Theme**](https://www.infragistics.com/products/ignite-ui-angular/docs/sass/#themes-function-igx-dialog-theme)
 
 ```scss
 
@@ -147,7 +147,7 @@ $dark-dialog-theme: igx-dialog-theme(
 
 ```
 
-- [**Igx-Input-Group-Theme**](https://staging.infragistics.local/products/ignite-ui-angular/docs/sass/#themes-function-igx-input-group-theme)
+- [**Igx-Input-Group-Theme**](https://www.infragistics.com/products/ignite-ui-angular/docs/sass/#themes-function-igx-input-group-theme)
 
 ```scss
 // Define dark theme for the input-group
