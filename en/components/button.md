@@ -37,7 +37,7 @@ import { IgxButtonModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-### Examples
+### Usage
 
 Setting a simple [`igxButton`]({environment:angularApiUrl}/classes/igxbuttondirective.html). Note that if you do not choose a type, by default it will be set to `flat`.
 

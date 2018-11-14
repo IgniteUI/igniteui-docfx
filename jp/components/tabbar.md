@@ -26,7 +26,7 @@ _language: ja
 
 <div class="divider--half"></div>
 
-### 使用方法
+#### 使用方法
 
 コントロールを初期化する前に、[`IgxBottomNavModule`]({environment:angularApiUrl}/classes/igxbottomnavmodule.html) を **app.module.ts** ファイルにインポートします。
 
@@ -187,7 +187,7 @@ Bottom Navigation は以下のようになります。
 
 <div class="divider"></div>
 
-### その他の Igx コントロールの使用
+#### その他の Igx コントロールの使用
 
 その他 Ignite UI for Angular コンポーネントを Bottom Navigation と使用し、より高度なアプリケーションを実装できます。
 たとえば、Bottom Navigation のパネルの連絡先リストの作成には [`IgxListComponent`]({environment:angularApiUrl}/classes/igxlistcomponent.html)、各連絡先の可視化は、[`IgxAvatarComponent`]({environment:angularApiUrl}/classes/igxavatarcomponent.html) や [`IgxIconComponent`]({environment:angularApiUrl}/classes/igxiconcomponent.html) を使用できます。

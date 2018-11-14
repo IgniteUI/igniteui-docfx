@@ -41,10 +41,10 @@ export class AppModule {}
 > [!NOTE]
 > [`igxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html)、[`igxLabel`]({environment:angularApiUrl}/classes/igxlabeldirective.html)、[`igx-prefix`]({environment:angularApiUrl}/classes/igxprefixdirective.html)、[`igx-suffix`]({environment:angularApiUrl}/classes/igxsuffixdirective.html)、または [`igx-hint`]({environment:angularApiUrl}/classes/igxhintdirective.html) ディレクティブを使用するには、`<igx-input-group>` コンテナーにラップする必要があります。
 
-### Label および Input
+#### Label および Input
 [`igxLabel`]({environment:angularApiUrl}/classes/igxlabeldirective.html) および [`igxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html) ディレクティブとその検証、データ バインディング、API については、[このトピック](label_input.md)を参照してください。
 
-### Prefix と Suffix
+#### Prefix と Suffix
 Ignite UI for Angular Prefix または Suffix を使用して入力のプレフィックスまたはサフィックスを追加できます。両方のディレクティブに HTML 要素、文字列、またはその他のコンポーネントを含むことができます。文字列 **prefix** (`+359`) および [`igx-icon`]({environment:angularApiUrl}/classes/igxiconcomponent.html) **suffix** (`<igx-icon>phone</igx-icon>`) を持つ新しい入力フィールドを追加します。
 
 ```html
@@ -65,7 +65,7 @@ Ignite UI for Angular Prefix または Suffix を使用して入力のプレフ�
 </div>
 <div class="divider--half"></div>
 
-### Hint
+#### Hint
 Ignite UI for Angular Hint は、入力の下に配置されるヘルパー テキストを提供します。ヒントは入力の開始または終了に配置できます。[`igx-hint`]({environment:angularApiUrl}/classes/igxhintdirective.html) の位置は [`position`]({environment:angularApiUrl}/classes/igxhintdirective.html#position) プロパティを使用して設定します。以下は phone 入力にヒントを追加します。
 
 ```html
@@ -87,7 +87,7 @@ Ignite UI for Angular Hint は、入力の下に配置されるヘルパー テ�
 </div>
 <div class="divider--half"></div>
 
-### スタイル設定
+#### スタイル設定
 入力にスタイルを適用するには、[`igxInputGroup`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) コンポーネントの [`type`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html#type) プロパティを使用します。現在 line (デフォルト)、box、border、および search のスタイル設定をサポートします。スタイル設定の結果:
 
 <div class="sample-container" style="height:520px">
@@ -97,7 +97,7 @@ Ignite UI for Angular Hint は、入力の下に配置されるヘルパー テ�
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="input-group-sample-5-frame" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
 </div>
 
-## API リファレンス
+### API リファレンス
 * [IgxHintDirective]({environment:angularApiUrl}/classes/igxhintdirective.html)
 * [IgxInputDirective]({environment:angularApiUrl}/classes/igxinputdirective.html)
 * [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
@@ -106,7 +106,7 @@ Ignite UI for Angular Hint は、入力の下に配置されるヘルパー テ�
 * [IgxPrefixDirective]({environment:angularApiUrl}/classes/igxprefixdirective.html)
 * [IgxSuffixDirective]({environment:angularApiUrl}/classes/igxsuffixdirective.html)
 
-## その他のリソース
+### その他のリソース
 関連トピック:
 
 * [リアクティブ フォームの統合](input_group_reactive_forms.md)

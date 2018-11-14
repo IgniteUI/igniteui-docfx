@@ -40,7 +40,7 @@ import { IgxIconModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-### 使用方法
+### Usage
 
 ```html
 <igx-icon color="magenta">home</igx-icon>
@@ -76,6 +76,8 @@ CSS でアイコン サイズを設定するには、カスタム CSS を作成�
 <div class="sample-container" style="height: 80px; width: 300px">
     <iframe id="icon-sample2-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/icon-sample2"  onload="onSampleIframeContentLoaded(this);">
 </div>
+
+### SVG Icons
 
 はじめに [`IgxIconService`]({environment:angularApiUrl}/classes/igxiconservice.html) 依存を注入します。この例では、 [`IgxIconService`]({environment:angularApiUrl}/classes/igxiconservice.html) 依存がコンポーネントのコンストラクタに注入されますが、コードで必要な場所に使用できます。
 

@@ -99,12 +99,12 @@ and in our markup:
 ### Input Group
 You can read about the Input Group component in a separate topic [here](input_group.md).
 
-## API References
+### API References
 * [IgxInputDirective]({environment:angularApiUrl}/classes/igxinputdirective.html)
 * [IgxLabelDirective]({environment:angularApiUrl}/classes/igxlabeldirective.html)
 * [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
 
-## Additional Resources
+### Additional Resources
 Related topics:
 
 * [Input Group](input_group.md)
