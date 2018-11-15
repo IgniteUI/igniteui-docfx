@@ -3,7 +3,7 @@ title: Excel Library Component - Native Angular | Ignite UI for Angular
 _description: The Ignite UI for Excel Library component.
 _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Excel Library, Angular Excel Library Example, Angular Excel Library Component, Angular Excel Library
 ---
-## Excel Library Using Cells
+## Using Cells
 
 This topic explains, with code examples, how to access cells and regions within a worksheet in a Microsoft® Excel® workbook by their names or by their named references. For information about how to access cells and regions by their reference strings, refer to the Referencing Cells and Regions topic.
 

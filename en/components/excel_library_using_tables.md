@@ -3,7 +3,7 @@ title: Excel Library Using Tables
 _description: The Ignite UI for Excel Library component Using Tables.
 _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Excel Library, Angular Excel Library Example, Angular Excel Library Component, Angular Excel Engine, Tables, Sorting, Filtering
 ---
-## Excel Library Using Tables
+## Using Tables
 
 The Infragistics Excel Engine's `WorksheetTable` functionality allows you to format your data in rows and columns The data in a worksheet table can be managed independently from the data in the other rows and columns in a `Worksheet`.
 
@@ -62,7 +62,7 @@ Filtering is done by applying a filter on a column in the `WorksheetTable`. When
 
 If the data in the table is subsequently changed or you change the `hidden` property of the rows, the filter conditions will not automatically reevaluate. The filter conditions in a table are only reapplied when table column filters are added, removed, modified, or when the `reapplyFilters` method is called on the table.
 
-The following are the filter types available to the columns of your `WorksheetTable`. They are applied by calling their corresponding `apply` method on the column, as shown in the code snippet below.
+The following are the filter types available to the columns of your `WorksheetTable`:
 
 - `AverageFilter` - Cells can be filtered based on whether they are above or below the average value of all cells in the column.
 - `CustomFilter` - Cells can be filtered based on one or more custom conditions.
@@ -87,7 +87,7 @@ table.columns(0).applyAverageFilter(AverageFilterType.AboveAverage);
 ### Sorting Tables
 Sorting is done by setting a sorting condition on a table column. When a sorting condition is set on a column, all sorting conditions in the table will be reevaluated to determine the order of the cells in the table. When cells need to be moved to meet their sort criteria, the entire row of cells in the table is moved as a unit.
 
-If the data in the tabl is subsequently changed, the sort conditions do not automatically reevaluate. The sort conditions in a table are only reapplied when sort conditions are added, removed, modified, or when the `reapplySortConditions` method is called on the table. When sorting conditions are reevaluated, only the visible cells are sorted. All cells in hidden rows are kept in place.
+If the data in the table is subsequently changed, the sort conditions do not automatically reevaluate. The sort conditions in a table are only reapplied when sort conditions are added, removed, modified, or when the `reapplySortConditions` method is called on the table. When sorting conditions are reevaluated, only the visible cells are sorted. All cells in hidden rows are kept in place.
 
 In addition to accessing sort conditions from the table columns, they are also exposed off the `WorksheetTable`'s `sortSettings` property's `sortConditions` collection. This is an ordered collection of columns/sort condition pairs. The order of this collection is the precedence of the sorting.
 

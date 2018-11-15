@@ -3,7 +3,7 @@ title: Excel Library Component - Native Angular | Ignite UI for Angular
 _description: The Ignite UI for Excel Library component with Sparkline support.
 _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Excel Library, Angular Excel Library Example, Angular Excel Library Component, Angular Excel Engine, Sparkline
 ---
-## Excel Library Working with Sparklines
+## Working with Sparklines
 
 This topic demonstrates how to add sparklines to Excel® Worksheet (".xlsx), programmatically, using the Infragistics Excel Library to show visual representations of data trends. Sparklines serve as quick and easy solution to visualize variations in your data. Sparklines are placed in cells that can be positioned anywhere within a worksheet and compliments the data it’s adjacent to. 
 

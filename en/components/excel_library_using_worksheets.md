@@ -3,7 +3,7 @@ title: Excel Library Using Worksheets
 _description: The Ignite UI for Excel Library component with Worksheet Operations.
 _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Excel Library, Angular Excel Library Example, Angular Excel Library Component, Angular Excel Engine, Worksheet, Conditional Formatting, Sorting, Filtering, Gridlines, Headers, Protection
 ---
-## Excel Library Using Worksheets
+## Using Worksheets
 
 The Infragistics Excel Engine's `Worksheet` is where your data is kept. You can input data by working with the Worksheet's rows and cells and setting their corresponding values. The `Worksheet` allows you to filter, sort, and customize the formats of the cells, as shown below.
 
@@ -65,7 +65,7 @@ var worksheet = workbook.worksheets().add("Sheet1");
 worksheet.protect();
 ```
 
-You can also use the `Worksheet` object's `protect` method to protect a worksheet against structural changes. For more information about the other options of worksheet protection, see the `Worksheet Protection` part of this topic.
+You can also use the `Worksheet` object's `protect` method to protect a worksheet against structural changes.
 
 When protection is set, you can set the `CellFormat` object's `locked` property on individual cells, rows, merged cell regions, or columns to override the worksheet object's protection on those objects. For example, if you need all cells of a worksheet to be read-only except for the cells of one column, you can protect the worksheet and then set the `CellFormat` object's `locked` property to `false` on a specific `WorksheetColumn` object. This will allow your users to edit cells within the column while disabling editing of the other cells in the worksheet.
 
