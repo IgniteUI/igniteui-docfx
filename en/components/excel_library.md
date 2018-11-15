@@ -41,10 +41,10 @@ import { IgxExcelModule } from "igniteui-angular-excel/ES5/igx-excel-module";
 export class AppModule {}
 ```
 
-### Modules – The Excel Library contains 5 modules 
+### The Excel Library Contains 5 Modules 
 
 -	**IgxExcelCoreModule** – This contains the object model and much of the excel infrastructure
--	**IgxExcelFunctionsModule** – This contains the majority of the custom functions for formula evaluations, such as Sum, Average, Min, Max, SumIfs, Ifs, etc. The absence of this module won’t cause any issues with formula parsing If the formula is to be calculated (e.g. you apply a formula like “=SUM(A1:A5)” and ask for the Value of the cell) then you would get a #NAME! error returned. (Note that’s not an exception throw – it’s an object that represents a particular error since formulas can result in errors).
+-	**IgxExcelFunctionsModule** – This contains the majority of the functions for formula evaluations, such as Sum, Average, Min, Max, etc. The absence of this module won’t cause any issues with formula parsing if the formula is to be calculated. For example, if you apply a formula like “=SUM(A1:A5)” and ask for the Value of the cell, then you would get a #NAME! error returned. This is not an exception throw – it’s an object that represents a particular error since formulas can result in errors.
 -	**IgxExcelXlsModule** – This contains the load and save logic for xls (and related) type files – namely the Excel97to2003 related WorkbookFormats.
 -	**IgxExcelXlsxModule** – This contains the load and save logic for xlsx (and related) type files – namely the Excel2007 related and StrictOpenXml WorkbookFormats.
 -	**IgxExcelModule** – This references the other 4 modules and so basically ensures that all the functionality is loaded/available.
@@ -92,7 +92,7 @@ Workbook.save(workbook, "ExcelWorkbook.xlsx);
 
 Due to the size of the Excel Library, it's recommended to disable the source map generation.
 
-Modify `angular.json`:
+Modify `angular.json` by setting the `vendorSourceMap` option under architect => build => options and under serve => options:
 
 ```typescript
 ...
