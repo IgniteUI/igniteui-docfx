@@ -22,39 +22,39 @@ The Infragistics Excel Engine enables you to save data to and load data from Mic
 
 ### Change Default Font
 
-First create a new instance of `IWorkbookFont`. Next, add the new font to the Styles collection of the Workbook via workbook.styles.apply method. This style contains the default properties for all cells in the workbook, unless otherwise specified on a row, column, or cell. Changing properties of the style will change the default cell format properties in the workbook.
+First create a new instance of `IWorkbookFont`. Next, add the new font to the `styles` collection of the `Workbook`. This style contains the default properties for all cells in the workbook, unless otherwise specified on a row, column, or cell. Changing properties of the style will change the default cell format properties in the workbook.
 
 ```typescript
 var workbook = new Workbook();
-var normalFont: IWorkbookFont;
-normalFont = wb.styles().normalStyle.styleFormat.font;
-normalFont.name = "Times New Roman";
-normalFont.height = 16 * 20;   
+var font: IWorkbookFont;
+font = workbook.styles().normalStyle.styleFormat.font;
+font.name = "Times New Roman";
+font.height = 16 * 20;   
 ```
 
 ### Setting Workbook Properties
 
-Microsoft® Excel® document properties provide information to help organize and keep track of your documents. You can use the Infragistics Excel Library to set these properties using the `Workbook` object’s `DocumentProperties` property. The available properties are:
+Microsoft Excel® document properties provide information to help organize and keep track of your documents. You can use the Infragistics Excel Library to set these properties using the `Workbook` object’s `documentProperties` property. The available properties are:
 
-- author
+- `author`
 
-- title
+- `title`
 
-- subject
+- `subject`
 
-- keywords
+- `keywords`
 
-- category
+- `category`
 
-- status
+- `status`
 
-- comments
+- `comments`
 
-- company
+- `company`
 
-- manager
+- `manager`
 
-The following code demonstrates how to create a workbook and set its Title and Status document properties.
+The following code demonstrates how to create a workbook and set its `title` and `status` document properties.
 
 ```typescript
 var workbook = new Workbook();
@@ -64,33 +64,29 @@ workbook.documentProperties.status = "Complete";
 
 ### Workbook Protection
 
-The workbook protection feature allows you to protect (without a password) the following user operations:
+The workbook protection feature allows you to protect the structure of the workbook. That is, the ability for a user to add, rename, delete, hide, and reorder the worksheets in that workbook.
 
-- Workbook structure: the ability to add, rename, delete, hide and reorder the worksheets.
+The protection is not enforced via the Infragistics Excel Engine's object model. It is a responsibility of the UI visualizing this object model to honor these protection settings and allow or restrict the user from performing the corresponding operations.
 
-> Note, the protection is not enforced via the Infragistics Excel Engine's object model. It is a responsibility of the UI visualizing this object model, to honor these protection settings and allow or restrict the user from performing the corresponding operations.
+Protection is applied to a workbook by invoking its `protect` method.
 
-You can use the Infragistics Excel Library to set these properties using the `Workbook` object. The available properties are:
+When a `Workbook` is protected without a password, the end user may unprotect the `Workbook` in Excel without having to supply a password. To programatically unprotect a `Workbook`, one may use the `unprotect` method.
 
-- protect
+When a `Workbook` is protected, the values of the properties of the `WorkbookProtection` instance from this `Workbook`'s `protection` property indicate the disabled operations.
 
-Apply workbook protection. When a Workbook is protected without a password, the end user may unprotect the Workbook in Excel without having to supply a password. To programatically unprotect a Workbook, one may use the Unprotect method.
-
-When a Workbook is protected, the values of the properties of the WorkbookProtection instance from this Workbook's Protection property indicate the disabled operations.
-
-Note: If IsProtected is already true, the method will be ignored.
+If `isProtected` is already true, the `protect` method will be ignored.
 
 ```typescript
-var wb = new Workbook(format);
-wb.protect(false, false);
+var workbook = new Workbook();
+workbook.protect(false, false);
 ```
 - isProtected
 
 Check if a workbook has protection. This read-only property returns true if the workbook has any protection set using the overloads of the Protect method.
 
 ```typescript
-var wb = new Workbook(format);
-var i = wb.isProtected;
+var workbook = new Workbook();
+var protect = workbook.isProtected;
 ```
 
 - protection
@@ -98,6 +94,6 @@ var i = wb.isProtected;
 This read-only property returns an object of type WorkbookProtection which contains properties for obtaining each protection setting individually.
 
 ```typescript
-var wb = new Workbook(format);
-var i = wb.protection;
+var workbook = new Workbook();
+var protection = workbook.protection;
 ```
