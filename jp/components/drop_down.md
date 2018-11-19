@@ -10,7 +10,7 @@ _language: ja
 <div class="divider"></div>
 
 ### Drop Down デモ
-<div class="sample-container" style="height:380px">
+<div class="sample-container" style="height:400px">
     <iframe id="dropdown-sample-3-iframe" src='{environment:demosBaseUrl}/dropdown-sample-3' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -213,7 +213,7 @@ export class AppModule {}
 
 サンプルを正しく構成すると EU ヘッダーの下に国の一覧がグループ形式で表示され、UK は非インタラクティブな項目、そして Bulgaria は選択済みの項目として表示されます。
 
-<div class="sample-container" style="height: 380px">
+<div class="sample-container" style="height: 400px">
     <iframe id="dropdown-sample-3-iframe" src='{environment:demosBaseUrl}/dropdown-sample-3' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
