@@ -5,8 +5,7 @@ _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Nati
 ---
 ## Working with Sparklines
 
-This topic demonstrates how to add sparklines to Excel® Worksheet (".xlsx), programmatically, using the Infragistics Excel Library to show visual representations of data trends. Sparklines serve as quick and easy solution to visualize variations in your data. Sparklines are placed in cells that can be positioned anywhere within a worksheet and compliments the data it’s adjacent to. 
-
+The Infragistics Excel Library has support for adding sparklines to an Excel Worksheet. These can be used to show simple visual representations of data trends across a region of cells of data in your worksheet. For example, if you wanted to see your Excel data across a particular cell region visualized as a simple column or line sparkline chart, this feature can help you to achieve that.
 
 ### Demo
 
@@ -26,7 +25,7 @@ The following is a list of the supported predefined sparkline types.
 
 -  Line
 -  Column
--  Win/Loss
+-  Stacked (Win/Loss)
 
 The following code demonstrates how to programmtically add Sparklines to a Worksheet via the sparklineGroups collection:
 
@@ -34,8 +33,8 @@ The following code demonstrates how to programmtically add Sparklines to a Works
 var workbook: Workbook;
 var sheet1 = workbook.worksheets().add("'Sparklines");
 var sheet2 = workbook.worksheets().add("Data");
-sheet1.sparklineGroups().add($.ig.excel.SparklineType.Line, "Sparklines!A1:A1", "Data!A2:A11"); 
-sheet1.sparklineGroups().add($.ig.excel.SparklineType.Column, "Sparklines!B1:B1", "Data!A2:A11"); 
+sheet1.sparklineGroups().add(SparklineType.Line, "Sparklines!A1:A1", "Data!A2:A11"); 
+sheet1.sparklineGroups().add(SparklineType.Column, "Sparklines!B1:B1", "Data!A2:A11"); 
 workbook.save(workbook, "Sparklines.xlsx");
 
 ```
