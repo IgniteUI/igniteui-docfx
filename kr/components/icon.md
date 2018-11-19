@@ -39,7 +39,7 @@ import { IgxIconModule } from 'igniteui-angular';
 })
 export class AppModule {}
 ```
-### Examples
+### Usage
 
 Using [`igx-icon`]({environment:angularApiUrl}/classes/igxiconcomponent.html) to set an [`active`]({environment:angularApiUrl}/classes/igxiconcomponent.html#active) home icon with magenta [`color`]({environment:angularApiUrl}/classes/igxiconcomponent.html#iconcolor).
 
@@ -75,6 +75,8 @@ You can set the icon's size through CSS. Create a custom CSS class and name it *
 <div class="sample-container" style="height: 80px; width: 300px">
     <iframe id="icon-sample2-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/icon-sample2"  onload="onSampleIframeContentLoaded(this);">
 </div>
+
+### SVG Icons
 
 You can also use a SVG image as an icon. First, inject [`IgxIconService`]({environment:angularApiUrl}/classes/igxiconservice.html) dependency. In this example [`IgxIconService`]({environment:angularApiUrl}/classes/igxiconservice.html) dependency is injected in a component's constructor but you can use it wherever it is needed in your code. 
 

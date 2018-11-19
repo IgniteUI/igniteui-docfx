@@ -37,7 +37,7 @@ import { IgxButtonGroupModule } from 'igniteui-angular';
 })
 export class AppModule {}
 ```
-### コード例
+### Usage
 
 [`igx-buttongroup`]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html) を使用して、ボタンを Angular スタイルのボタン グループに配置します。
 

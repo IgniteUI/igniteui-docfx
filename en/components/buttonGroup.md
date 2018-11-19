@@ -36,7 +36,7 @@ import { IgxButtonGroupModule } from 'igniteui-angular';
 })
 export class AppModule {}
 ```
-### Examples
+### Usage
 
 Use [`igx-buttongroup`]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html) to organize buttons into an Angular styled button group.
 

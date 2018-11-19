@@ -8,7 +8,7 @@ _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Nati
 The `igx-financial-chart` control has multiple panes to display financial data.
 
 ### Demo
-<div class="sample-container" style="height: 550px">
+<div class="sample-container" style="height: 500px">
     <iframe id="financial-chart-panes-iframe" src='{environment:demosBaseUrl}/financial-chart-panes' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>

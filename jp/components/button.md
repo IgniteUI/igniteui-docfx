@@ -39,7 +39,7 @@ import { IgxButtonModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-### 使用方法
+### Usage
 
 ```html
 <target-element igxButton [..options]>クリック</target-element>

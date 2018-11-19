@@ -43,10 +43,10 @@ export class AppModule {}
 > [!NOTE]
 > To use any of the directives [`igxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html), [`igxLabel`]({environment:angularApiUrl}/classes/igxlabeldirective.html), [`igx-prefix`]({environment:angularApiUrl}/classes/igxprefixdirective.html), [`igx-suffix`]({environment:angularApiUrl}/classes/igxsuffixdirective.html) or [`igx-hint`]({environment:angularApiUrl}/classes/igxhintdirective.html), you have to wrap them in an `<igx-input-group>` container.
 
-### Label & Input
+#### Label & Input
 You can read about the [`igxLabel`]({environment:angularApiUrl}/classes/igxlabeldirective.html) and [`igxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html) directives as well as their validation, data binding and API in a separate topic [here](label_input.md).
 
-### Prefix & Suffix
+#### Prefix & Suffix
 If you want to have an input prefix or suffix, you can use Ignite UI for Angular Prefix or Suffix. Both directives can contain html elements, strings, icons or even other components. Let's add a new input field with string **prefix** (`+359`) and [`igx-icon`]({environment:angularApiUrl}/classes/igxiconcomponent.html) **suffix** (`<igx-icon>phone</igx-icon>`):
 
 ```html
@@ -66,7 +66,7 @@ Here is how the sample looks:
 </div>
 <div class="divider--half"></div>
 
-### Hints
+#### Hints
 Ignite UI for Angular Hint provides a helper text placed below the input. The hint can be placed at the start or at the end of the input. The position of the [`igx-hint`]({environment:angularApiUrl}/classes/igxhintdirective.html) can be set using the [`position`]({environment:angularApiUrl}/classes/igxhintdirective.html#position) property. Let's add a hint to our phone input:
 
 ```html
@@ -87,7 +87,7 @@ This is how the phone field with hint looks:
 </div>
 <div class="divider--half"></div>
 
-### Styling
+#### Styling
 Our inputs could be styled differently by using the [`type`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html#type) property of the [`igxInputGroup`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) component. Currently we support four different ways of styling: line (the default one), box, border and search. This is how they look:
 
 <div class="sample-container" style="height:520px">
@@ -97,7 +97,7 @@ Our inputs could be styled differently by using the [`type`]({environment:angula
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="input-group-sample-5-frame" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-## API References
+### API References
 * [IgxHintDirective]({environment:angularApiUrl}/classes/igxhintdirective.html)
 * [IgxInputDirective]({environment:angularApiUrl}/classes/igxinputdirective.html)
 * [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
@@ -106,7 +106,7 @@ Our inputs could be styled differently by using the [`type`]({environment:angula
 * [IgxPrefixDirective]({environment:angularApiUrl}/classes/igxprefixdirective.html)
 * [IgxSuffixDirective]({environment:angularApiUrl}/classes/igxsuffixdirective.html)
 
-## Additional Resources
+### Additional Resources
 Related topics:
 
 * [Reactive Forms Integration](input_group_reactive_forms.md)

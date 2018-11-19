@@ -113,8 +113,8 @@ export interface IGroupByRecord {
 グループ UI は、以下のキーボード インタラクションをサポートします。
 
 - グループ行 (行または展開/縮小セルにフォーカス)
-   - <kbd>RIGHT</kbd> - グループの展開
-   - <kbd>LEFT</kbd> - グループの縮小
+   -  <kbd>ALT</kbd> + <kbd>RIGHT</kbd> - グループの展開
+   -  <kbd>ALT</kbd> + <kbd>LEFT</kbd> - グループの縮小
 
 
 - グループ領域の [`igxChip`]({environment:angularApiUrl}/classes/igxchipcomponent.html) コンポーネントのグループ化 (チップにフォーカス)

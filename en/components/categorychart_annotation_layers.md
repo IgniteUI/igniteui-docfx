@@ -8,7 +8,7 @@ _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Nati
 This topic provides conceptual information about the annotations and overlay interactions available on the `igx-category-chart`.
 
 ### Demo
-<div class="sample-container" style="height: 550px">
+<div class="sample-container" style="height: 500px">
     <iframe id="category-chart-annotations-iframe" src='{environment:demosBaseUrl}/category-chart-annotations' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>

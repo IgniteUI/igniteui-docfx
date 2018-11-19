@@ -43,7 +43,7 @@ Ignite UI for Angular에서 [`IgxGrid`]({environment:angularApiUrl}/classes/igxg
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
 </div>
 
 이 기능을 사용하려면 얻은 인수를 기반으로 적절한 요청을 하기 위해 [`onDataPreLoad`]({environment:angularApiUrl}/classes/igxgridcomponent.html#ondatapreload) 출력에 서브스크라이브하고 서비스에서 제공하는 해당 정보와 공개 [`IgxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) 속성 [`totalItemCount`]({environment:angularApiUrl}/classes/igxgridcomponent.html#totalitemcount) 를 설정해야 합니다.
@@ -92,7 +92,7 @@ public processData() {
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-remote-filtering-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-remote-filtering-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
 </div>
 
 ### 가상화 제한 사항

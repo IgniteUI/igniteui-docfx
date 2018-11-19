@@ -9,7 +9,7 @@ The Financial Chart is a charting component that makes it easy to visualize fina
 
 ### Demo
 
-<div class="sample-container" style="height: 550px">
+<div class="sample-container" style="height: 500px">
     <iframe id="financial-chart-overview-sample-iframe" src='{environment:demosBaseUrl}/financial-chart-overview-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -51,7 +51,7 @@ The financial chart is exported as an `NgModule`, you need to import the _IgxFin
 
 ```typescript
 // app.module.ts
-import {IgxFinancialChartModule} from 'ignite-angular-charts/ES5/igx-financialchart-module'
+import {IgxFinancialChartModule} from 'ignite-angular-charts/ES5/igx-financial-chart-module'
 
 @NgModule({
     imports: [
