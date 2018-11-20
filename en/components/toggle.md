@@ -6,7 +6,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ##Toggle
 
-The [`igxToggle`]({environment:angularApiUrl}/classes/igxtoggledirective.html) directive allows the users to open, to interact with, to apply animations, and to close a toggle container. All toggle components implement the [`igxToggle`]({environment:angularApiUrl}/classes/igxtoggledirective.html) or `igxToggleAction` internally, and users can implement toggle-based components and views, like dropdowns, while the `igxToggleAction` directive controls other components until the toggle umbrella.
+The [`igxToggle`]({environment:angularApiUrl}/classes/igxtoggledirective.html) directive allows the users to open, to interact with, to apply animations, and to close a toggle container. All toggle components implement the [`igxToggle`]({environment:angularApiUrl}/classes/igxtoggledirective.html) or [`igxToggleAction`]({environment:angularApiUrl}/classes/igxtoggleactiondirective.html) internally, and users can implement toggle-based components and views, like dropdowns, while the [`igxToggleAction`]({environment:angularApiUrl}/classes/igxtoggleactiondirective.html) directive controls other components until the toggle umbrella.
 
 ###Toggle Demo
 
@@ -114,7 +114,7 @@ export class AppModule {}
 </div>
 ```
 
-The [`igxToggle`]({environment:angularApiUrl}/classes/igxtoggledirective.html) uses the [**IgxOverlayService**](https://www.infragistics.com/products/ignite-ui-angular/angular/components/overlay_main.html) and the [`open`]({environment:angularApiUrl}/classes/igxtoggledirective.html#open) and [`toggle`]({environment:angularApiUrl}/classes/igxtoggledirective.html#toggle) methods accept optional overlay settings to control how content is displayed. If omitted, default overlay settings are used as seen in the previous sample.
+The [`igxToggle`]({environment:angularApiUrl}/classes/igxtoggledirective.html) uses the [**IgxOverlayService**](overlay_main.md) and the [`open`]({environment:angularApiUrl}/classes/igxtoggledirective.html#open) and [`toggle`]({environment:angularApiUrl}/classes/igxtoggledirective.html#toggle) methods accept optional overlay settings to control how content is displayed. If omitted, default overlay settings are used as seen in the previous sample.
 
 ```typescript
 // template.component.ts
@@ -252,6 +252,7 @@ Furthermore we added another helping directive which controls automatically this
 * [IgxToggleDirective]({environment:angularApiUrl}/classes/igxtoggledirective.html)
 * [IgxToggleActionDirective]({environment:angularApiUrl}/classes/igxtoggleactiondirective.html)
 * [IgxOverlayOutletDirective]({environment:angularApiUrl}/classes/igxoverlayoutletdirective.html)
+* [IgxOverlayService]({environment:angularApiUrl}/classes/igxoverlayservice.html)
 
 <div class="divider"></div>
 

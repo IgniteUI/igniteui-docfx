@@ -7,7 +7,7 @@ _language: ja
 
 ## Toggle
 
-[`igxToggle`]({environment:angularApiUrl}/classes/igxtoggledirective.html) ディレクティブを使用すると、トグル コンテナーを開く、操作、アニメーションに適用、および閉じることができます。すべてのトグル コンポーネントは [`igxToggle`]({environment:angularApiUrl}/classes/igxtoggledirective.html) または `igxToggleAction` を内部に実装します。`igxToggleAction` ディレクティブがその他のコンポーネントを制御する間にドロップダウンなどのトグルに基づくコンポーネントおよびビューを実装できます。
+[`igxToggle`]({environment:angularApiUrl}/classes/igxtoggledirective.html) ディレクティブを使用すると、トグル コンテナーを開く、操作、アニメーションに適用、および閉じることができます。すべてのトグル コンポーネントは [`igxToggle`]({environment:angularApiUrl}/classes/igxtoggledirective.html) または [`igxToggleAction`]({environment:angularApiUrl}/classes/igxtoggleactiondirective.html) を内部に実装します。[`igxToggleAction`]({environment:angularApiUrl}/classes/igxtoggleactiondirective.html) ディレクティブがその他のコンポーネントを制御する間にドロップダウンなどのトグルに基づくコンポーネントおよびビューを実装できます。
 
 ### Toggle デモ
 
@@ -118,7 +118,7 @@ export class AppModule {}
 </div>
 ```
 
-[`igxToggle`]({environment:angularApiUrl}/classes/igxtoggledirective.html) は、[**IgxOverlayService**](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/overlay_main.html) を使用し、コンテンツの表示方法を制御するために [`open`]({environment:angularApiUrl}/classes/igxtoggledirective.html#open) および [`toggle`]({environment:angularApiUrl}/classes/igxtoggledirective.html#toggle) メソッドが任意のオーバーレイ設定を受け取ります。省略した場合は、上のサンプルのようにデフォルトのオーバーレイ設定が使用されます。
+[`igxToggle`]({environment:angularApiUrl}/classes/igxtoggledirective.html) は、[**IgxOverlayService**](overlay_main.md) を使用し、コンテンツの表示方法を制御するために [`open`]({environment:angularApiUrl}/classes/igxtoggledirective.html#open) および [`toggle`]({environment:angularApiUrl}/classes/igxtoggledirective.html#toggle) メソッドが任意のオーバーレイ設定を受け取ります。省略した場合は、上のサンプルのようにデフォルトのオーバーレイ設定が使用されます。
 
 ```typescript
 // template.component.ts
@@ -251,6 +251,7 @@ export class AppModule {}
 * [IgxToggleDirective]({environment:angularApiUrl}/classes/igxtoggledirective.html)
 * [IgxToggleActionDirective]({environment:angularApiUrl}/classes/igxtoggleactiondirective.html)
 * [IgxOverlayOutletDirective]({environment:angularApiUrl}/classes/igxoverlayoutletdirective.html)
+* [IgxOverlayService]({environment:angularApiUrl}/classes/igxoverlayservice.html)
 
 <div class="divider"></div>
 
