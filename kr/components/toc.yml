@@ -5,52 +5,52 @@
   href: grid.md
   new: true
   items:
-    - name: 그리드 가상화 및 성능
+    - name: 가상화 및 성능
       href: grid_virtualization.md
       new: false
-    - name: 그리드 편집
+    - name: 편집
       href: grid_editing.md
       new: true
-    - name: 그리드 행 편집
+    - name: 행 편집
       href: grid_row_editing.md
       new: true
-    - name: 그리드 트랜잭션
+    - name: 트랜잭션
       href: grid_batch_editing.md
       new: true
-    - name: 그리드 페이징
+    - name: 페이징
       href: grid_paging.md
       new: false
-    - name: 그리드 필터링
+    - name: 필터링
       href: grid_filtering.md
       new: true
-    - name: 그리드 정렬
+    - name: 정렬
       href: grid_sorting.md
       new: false
-    - name: 그리드의 그룹화
+    - name: 그룹화
       href: grid_groupby.md
       new: true
-    - name: 그리드 요약
+    - name: 요약
       href: grid_summaries.md
       new: false
-    - name: 그리드 열 이동
+    - name: 열 이동
       href: grid_column_moving.md
       new: true
-    - name: 그리드 열 핀 고정
+    - name: 열 핀 고정
       href: grid_column_pinning.md
       new: false
-    - name: 그리드 열 크기 조정
+    - name: 크기 조정
       href: grid_column_resizing.md
       new: false
-    - name: 그리드 열 숨기기
+    - name: 숨기기
       href: grid_column_hiding.md
       new: true
-    - name: 데이터 그리드 행 선택
+    - name: 행 선택
       href: grid_selection.md
       new: false
-    - name: 그리드 검색
+    - name: 검색
       href: grid_search.md
       new: true
-    - name: 그리드 도구 모음
+    - name: 도구 모음
       href: grid_toolbar.md
       new: true
     - name: Excel 내보내기
@@ -62,7 +62,7 @@
     - name: 복수 열 헤더
       href: grid_multi_column_headers.md
       new: true
-    - name: 그리드 표시 밀도
+    - name: 표시 밀도
       href: grid_displayDensity.md
       new: true
     - name: 조건부 셀 스타일
@@ -94,7 +94,7 @@
 - name: Category Chart
   href: categorychart.md
   items:
-    - name: 카테고리 차트 주석 및 오버레이
+    - name: 주석 및 오버레이
       href: categorychart_annotation_layers.md
       new: true
     - name: 차트 유형 탐색
@@ -133,7 +133,7 @@
     - name: 퍼포먼스
       href: financialchart_performance.md
       new: false
-    - name: 금융 차트를 복수의 데이터 소스에 바인딩
+    - name: 복수의 데이터 소스에 바인딩
       href: financialchart_binding_to_multiple_data.md
       new: false
     - name: 금융 차트 창
@@ -145,8 +145,44 @@
     - name: 사용자 인디케이터
       href: financialchart_custom_indicators.md
       new: false
+    #- name: Tooltip Types
+    #  href: financialchart_tooltip_types.md
+    # new: true
     - name: 사용자 도구 설명
-      href: financialchart_custom_tooltips.md
+      href: financialchart_tooltip_templates.md
+- name: Doughnut Chart
+  href: doughnutchart.md
+  new: true
+- name: Pie Chart
+  href: piechart.md
+  new: true
+    #- name: Frameworks
+    # header: true
+    #- name: Excel Library
+    # href: excel_library.md
+    # new: true
+    # items:
+    #- name: Using Cells
+    #  href: excel_library_using_cells.md
+    #  new: true
+    #- name: Using Tables
+    #  href: excel_library_using_tables.md
+    #  new: true
+    # - name: Using Workbooks
+    #  href: excel_library_using_workbooks.md
+    #  new: true
+    #- name: Using Worksheets
+    #  href: excel_library_using_worksheets.md
+    #  new: true
+    #- name: Working with Charts
+    #  href: excel_library_working_with_charts.md
+    #  new: true
+    # - name: Working with Grids
+    #   href: excel_library_working_with_grid.md
+    #   new: true
+    #- name: Working with Sparklines
+    #  href: excel_library_working_with_sparklines.md
+    #  new: true
 - name: Gauges
   header: true
   new: true
