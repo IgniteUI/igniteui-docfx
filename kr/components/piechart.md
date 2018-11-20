@@ -15,7 +15,7 @@ This control is used for representing categorical data. It is most effective whe
     <iframe id="pie-chart-data-sample-iframe" src='{environment:demosBaseUrl}/pie-chart-data-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="pie-chart-data-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="pie-chart-data-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기
     </button>
 </div>
 
@@ -95,7 +95,7 @@ Additionally you can use the `legendItemTemplate` and `legendItemBadgeTemplate` 
     <iframe id="pie-chart-legend-iframe" src='{environment:demosBaseUrl}/pie-chart-legend' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="pie-chart-legend-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="pie-chart-legend-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기
     </button>
 </div>
 
@@ -124,7 +124,7 @@ In the sample below, the `othersCategoryThreshold` is set to 2, and `othersCateg
     <iframe id="pie-chart-others-iframe" src='{environment:demosBaseUrl}/pie-chart-others' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="pie-chart-others-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="pie-chart-others-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기
     </button>
 </div>
 
@@ -143,7 +143,7 @@ The pie chart supports explosion of individual pie slices as well as a 'sliceCli
     <iframe id="pie-chart-explosion-iframe" src='{environment:demosBaseUrl}/pie-chart-explosion' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="pie-chart-explosion-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="pie-chart-explosion-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기
     </button>
 </div>
 
@@ -179,6 +179,6 @@ For scenarios where you click on the Others slice, the pie chart will return an 
     <iframe id="pie-chart-selection-iframe" src='{environment:demosBaseUrl}/pie-chart-selection' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="pie-chart-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="pie-chart-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기
     </button>
 </div>
