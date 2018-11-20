@@ -62,7 +62,7 @@ For good code structure it will be helpful to place the **theme logic** in a sep
 The next step is to import all the components, that you want to customize, and their corresponding themes.
 
 Our app will have:
-- **Igx-Grid** with `paging` and **filtering**:
+- [**Igx-Grid**](../grid.md) with [**paging**](../grid_paging.md) and [**filtering**](../grid_filtering.md):
 
 ```scss
 // Import grid component and theme styles
@@ -78,7 +78,7 @@ Our app will have:
 @import '~igniteui-angular/lib/core/styles//components/grid-filtering/grid-filtering-theme';
 
 ```
-- **Igx-Dialog** with embedded `IgxInputGroupComponent`:
+- [**Igx-Dialog**](../dialog.md) with embedded [**Igx-Input-Group**](../input_group.md):
 
 ```scss
 
@@ -110,14 +110,14 @@ Done! We are ready to set the new styling of our app.
 
 ### Theme Setting
 
-The **theme setting** is basically applying different shades of the primary and secondary colors to various component parts. In the [**Ignite UI for Angular Themes**](https://staging.infragistics.local/products/ignite-ui-angular/docs/sass/) documentation you can find out which component parts can be styled.
+The **theme setting** is basically applying different shades of the primary and secondary colors to various component parts. In the [**Ignite UI for Angular Themes**]({environment:sassApiUrl}) documentation you can find out which component parts can be styled.
 
 Now lets define the **component themes** that we are going to apply:
 
 #### Defining Component Themes
 <div class="divider--half"></div>
 
-- [**Igx-Grid-Theme**](https://staging.infragistics.local/products/ignite-ui-angular/docs/sass/#function-igx-grid-theme)
+- [**Igx-Grid-Theme**]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 
 ```scss
 // Define dark theme for the dialog
@@ -133,7 +133,7 @@ $dark-grid-theme: igx-grid-theme(
 );
 ```
 
-- [**Igx-Dialog-Theme**](https://staging.infragistics.local/products/ignite-ui-angular/docs/sass/#themes-function-igx-dialog-theme)
+- [**Igx-Dialog-Theme**]({environment:sassApiUrl}/index.html#function-igx-dialog-theme)
 
 ```scss
 
@@ -147,7 +147,7 @@ $dark-dialog-theme: igx-dialog-theme(
 
 ```
 
-- [**Igx-Input-Group-Theme**](https://staging.infragistics.local/products/ignite-ui-angular/docs/sass/#themes-function-igx-input-group-theme)
+- [**Igx-Input-Group-Theme**]({environment:sassApiUrl}/index.html#function-igx-input-group-theme)
 
 ```scss
 // Define dark theme for the input-group
@@ -317,6 +317,15 @@ Now we can easily change our defined themes with only a `click` event:
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="theme-chooser-iframe" data-demos-base-url="{environment:demosBaseUrl}"> view on stackblitz
     </button>
 </div>
+<div class="divider--half"></div>
+
+###API
+
+* [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [IgxGrid Filtering Styles]({environment:sassApiUrl}/index.html#function-igx-grid-filtering-theme)
+* [IgxGrid Paginator Styles]({environment:sassApiUrl}/index.html#function-igx-grid-paginator-theme)
+* [IgxDialogComponent Styles]({environment:sassApiUrl}/index.html#function-igx-dialog-theme)
+* [IgxInputGroupComponent Styles]({environment:sassApiUrl}/index.html#function-igx-input-group-theme) 
 
 ### Additional Resources
 <div class="divider--half"></div>

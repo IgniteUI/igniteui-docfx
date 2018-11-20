@@ -63,7 +63,7 @@ _language: ja
 次のステップは、カスタマイズするコンポーネントと対応するテーマをすべてインポートします。
 
 以下がアプリに含まれます。
-- **Igx-Grid** の `paging` と **フィルタリング**。
+- [**Igx-Grid**](../grid.md) の [**paging**](../grid_paging.md) と [**filtering**](../grid_filtering.md)。
 
 ```scss
 // Import grid component and theme styles
@@ -79,7 +79,7 @@ _language: ja
 @import '~igniteui-angular/lib/core/styles//components/grid-filtering/grid-filtering-theme';
 
 ```
-- **Igx-Dialog** の組み込み `IgxInputGroupComponent`。
+- [**Igx-Dialog**](../dialog.md) の組み込み [**Igx-Input-Group**](../input_group.md)。
 
 ```scss
 
@@ -111,14 +111,14 @@ $dark-theme-palette: igx-palette($primary: $dark-color, $secondary: $orange-colo
 
 ### テーマの設定
 
-**テーマの設定**は、プライマリおよびセカンダリの色の異なるシェードをコンポーネント パーツに適用します。[**Ignite UI for Angular Themes**](https://www.infragistics.com/products/ignite-ui-angular/docs/sass/) のヘルプでスタイル設定可能なコンポーネント パーツを確認できます。
+**テーマの設定**は、プライマリおよびセカンダリの色の異なるシェードをコンポーネント パーツに適用します。[**Ignite UI for Angular Themes**]({environment:sassApiUrl}) のヘルプでスタイル設定可能なコンポーネント パーツを確認できます。
 
 適用する **コンポーネント テーマ**を定義します。
 
 #### コンポーネント テーマの定義
 <div class="divider--half"></div>
 
-- [**Igx-Grid-Theme**](https://www.infragistics.com/products/ignite-ui-angular/docs/sass/#function-igx-grid-theme)
+- [**Igx-Grid-Theme**]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 
 ```scss
 // Define dark theme for the dialog
@@ -134,7 +134,7 @@ $dark-grid-theme: igx-grid-theme(
 );
 ```
 
-- [**Igx-Dialog-Theme**](https://www.infragistics.com/products/ignite-ui-angular/docs/sass/#themes-function-igx-dialog-theme)
+- [**Igx-Dialog-Theme**]({environment:sassApiUrl}/index.html#function-igx-dialog-theme)
 
 ```scss
 
@@ -148,7 +148,7 @@ $dark-dialog-theme: igx-dialog-theme(
 
 ```
 
-- [**Igx-Input-Group-Theme**](https://www.infragistics.com/products/ignite-ui-angular/docs/sass/#themes-function-igx-input-group-theme)
+- [**Igx-Input-Group-Theme**]({environment:sassApiUrl}/index.html#function-igx-input-group-theme)
 
 ```scss
 // Define dark theme for the input-group
@@ -318,6 +318,15 @@ export class ThemeChooserSampleComponent implements OnInit {
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="theme-chooser-iframe" data-demos-base-url="{environment:demosBaseUrl}"> stackblitz で開く
     </button>
 </div>
+<div class="divider--half"></div>
+
+###API
+
+* [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [IgxGrid Filtering Styles]({environment:sassApiUrl}/index.html#function-igx-grid-filtering-theme)
+* [IgxGrid Paginator Styles]({environment:sassApiUrl}/index.html#function-igx-grid-paginator-theme)
+* [IgxDialogComponent Styles]({environment:sassApiUrl}/index.html#function-igx-dialog-theme)
+* [IgxInputGroupComponent Styles]({environment:sassApiUrl}/index.html#function-igx-input-group-theme) 
 
 ### その他のリソース
 <div class="divider--half"></div>
