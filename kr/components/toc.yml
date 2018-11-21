@@ -112,6 +112,9 @@
     - name: Highlighting
       href: categorychart_highlighting.md
       new: true
+    - name: Tooltip Types
+      href: categorychart_tooltip_types.md
+      new: true
     - name: 툴팁 템플릿
       href: categorychart_tooltip_templates.md
       new: false
@@ -145,9 +148,9 @@
     - name: 사용자 인디케이터
       href: financialchart_custom_indicators.md
       new: false
-    #- name: Tooltip Types
-    #  href: financialchart_tooltip_types.md
-    # new: true
+    - name: Tooltip Types
+      href: financialchart_tooltip_types.md
+      new: true
     - name: 사용자 도구 설명
       href: financialchart_tooltip_templates.md
 - name: Doughnut Chart
