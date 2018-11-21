@@ -5,7 +5,7 @@ _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Nati
 ---
 ## Working with Charts
 
-The Infragistics Excel Engine's `WorksheetChart` functionality allows you to add visual charting representations of data trends across regions of cells in a worksheet. For example, if you wanted to see your Excel data in a region of cells visualized as a column, line, or over 70 other chart types, this feature can help you to achieve that.
+The Infragistics Excel Engine's `WorksheetChart` functionality allows you to add visual charting representations of data trends across regions of cells in a worksheet. For example, if you want to see your Excel data in a region of cells visualized as a column, line, or over 70 other chart types, this feature can help you to achieve that.
 
 ### Demo
 
