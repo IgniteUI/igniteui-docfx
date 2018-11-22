@@ -32,15 +32,15 @@ Ignite UI for Angular では、列レベルでの**並べ替え**が可能です
 グリッドの [`sort`]({environment:angularApiUrl}/classes/igxgridcomponent.html#sort) メソッドを使用し、列または複数の列をグリッド API で並べ替えできます。
 
 ```typescript
-import { SortingDirection } from 'igniteui-angular';
+import { SortingDirection, DefaultSortingStrategy } from 'igniteui-angular';
 
 // Perform a case insensitive ascending sort on the ProductName column.
-this.grid.sort({fieldName: 'ProductName', dir: SortingDirection.Asc, ignoreCase: true});
+this.grid.sort({ fieldName: 'ProductName', dir: SortingDirection.Asc, ignoreCase: true, strategy: DefaultSortingStrategy.instance() });
 
 // Perform sorting on both the ProductName and Price columns.
 this.grid.sort([
-    { fieldName: 'ProductName' dir: SortingDirection.Asc, ignoreCase: true },
-    { fieldName: 'Price', dir: SortingDirection.Desc }
+    { fieldName: 'ProductName', dir: SortingDirection.Asc, ignoreCase: true, strategy: DefaultSortingStrategy.instance() },
+    { fieldName: 'Price', dir: SortingDirection.Desc, ignoreCase: false, strategy: DefaultSortingStrategy.instance() }
 ]);
 ```
 
@@ -63,9 +63,9 @@ this.grid.clearSort();
 
 ```typescript
 public ngOnInit() {
-    this.grid.[`sortingExpressions`]({environment:angularApiUrl}/classes/igxgridcomponent.html#sortingexpressions) = [
-        { fieldName: 'ProductName' dir: SortingDirection.Asc, ignoreCase: true },
-        { fieldName: 'Price', dir: SortingDirection.Desc }
+    this.grid.sortingExpressions = [
+        { fieldName: 'ProductName', dir: SortingDirection.Asc, ignoreCase: true, strategy: DefaultSortingStrategy.instance() },
+        { fieldName: 'Price', dir: SortingDirection.Desc, ignoreCase: false, strategy: DefaultSortingStrategy.instance() }
     ];
 }
 ```
@@ -81,7 +81,8 @@ public ngOnInit() {
 <div class="divider--half"></div>
 
 ### API
-* [IgxGridComponent API]({environment:angularApiUrl}/classes/igxgridcomponent.html)
+* [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
+* [ISortingExpression]({environment:angularApiUrl}/interfaces/isortingexpression.html)
 * [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 
 ### 追加のリソース

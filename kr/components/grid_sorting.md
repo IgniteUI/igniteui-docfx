@@ -32,15 +32,15 @@ Ignite UI for Angular에서 **정렬**은 열 단위 수준에서 사용할 수 
 그리드 [`sort`]({environment:angularApiUrl}/classes/igxgridcomponent.html#sort) 메소드를 사용하여 그리드 API를 통해 모든 열 또는 열 조합을 정렬할 수 있습니다:
 
 ```typescript
-import { SortingDirection } from 'igniteui-angular';
+import { SortingDirection, DefaultSortingStrategy } from 'igniteui-angular';
 
 // Perform a case insensitive ascending sort on the ProductName column.
-this.grid.sort({ fieldName: 'ProductName', dir: SortingDirection.Asc, ignoreCase: true});
+this.grid.sort({ fieldName: 'ProductName', dir: SortingDirection.Asc, ignoreCase: true, strategy: DefaultSortingStrategy.instance() });
 
 // Perform sorting on both the ProductName and Price columns.
 this.grid.sort([
-    { fieldName: 'ProductName', dir: SortingDirection.Asc, ignoreCase: true },
-    { fieldName: 'Price', dir: SortingDirection.Desc }
+    { fieldName: 'ProductName', dir: SortingDirection.Asc, ignoreCase: true, strategy: DefaultSortingStrategy.instance() },
+    { fieldName: 'Price', dir: SortingDirection.Desc, ignoreCase: false, strategy: DefaultSortingStrategy.instance() }
 ]);
 ```
 
@@ -64,8 +64,8 @@ this.grid.clearSort();
 ```typescript
 public ngOnInit() {
     this.grid.sortingExpressions = [
-        { fieldName: 'ProductName' dir: SortingDirection.Asc, ignoreCase: true },
-        { fieldName: 'Price', dir: SortingDirection.Desc }
+        { fieldName: 'ProductName', dir: SortingDirection.Asc, ignoreCase: true, strategy: DefaultSortingStrategy.instance() },
+        { fieldName: 'Price', dir: SortingDirection.Desc, ignoreCase: false, strategy: DefaultSortingStrategy.instance() }
     ];
 }
 ```
@@ -81,7 +81,8 @@ public ngOnInit() {
 <div class="divider--half"></div>
 
 ### API
-* [IgxGridComponent API]({environment:angularApiUrl}/classes/igxgridcomponent.html)
+* [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
+* [ISortingExpression]({environment:angularApiUrl}/interfaces/isortingexpression.html)
 * [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 
 ### 추가 리소스

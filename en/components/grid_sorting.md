@@ -31,15 +31,15 @@ This is done via the [`sortable`]({environment:angularApiUrl}/classes/igxcolumnc
 You can sort any column or a combination of columns through the grid API using the grid [`sort`]({environment:angularApiUrl}/classes/igxgridcomponent.html#sort) method:
 
 ```typescript
-import { SortingDirection } from 'igniteui-angular';
+import { SortingDirection, DefaultSortingStrategy } from 'igniteui-angular';
 
 // Perform a case insensitive ascending sort on the ProductName column.
-this.grid.sort({ fieldName: 'ProductName', dir: SortingDirection.Asc, ignoreCase: true});
+this.grid.sort({ fieldName: 'ProductName', dir: SortingDirection.Asc, ignoreCase: true, strategy: DefaultSortingStrategy.instance() });
 
 // Perform sorting on both the ProductName and Price columns.
 this.grid.sort([
-    { fieldName: 'ProductName', dir: SortingDirection.Asc, ignoreCase: true },
-    { fieldName: 'Price', dir: SortingDirection.Desc }
+    { fieldName: 'ProductName', dir: SortingDirection.Asc, ignoreCase: true, strategy: DefaultSortingStrategy.instance() },
+    { fieldName: 'Price', dir: SortingDirection.Desc, ignoreCase: false, strategy: DefaultSortingStrategy.instance() }
 ]);
 ```
 
@@ -63,8 +63,8 @@ It is possible to set the initial sorting state of the grid by passing an array 
 ```typescript
 public ngOnInit() {
     this.grid.sortingExpressions = [
-        { fieldName: 'ProductName' dir: SortingDirection.Asc, ignoreCase: true },
-        { fieldName: 'Price', dir: SortingDirection.Desc }
+        { fieldName: 'ProductName', dir: SortingDirection.Asc, ignoreCase: true, strategy: DefaultSortingStrategy.instance() },
+        { fieldName: 'Price', dir: SortingDirection.Desc, ignoreCase: false, strategy: DefaultSortingStrategy.instance() }
     ];
 }
 ```
@@ -80,7 +80,8 @@ You can provide grid's remote sorting by subscribing to [`onDataPreLoad`]({envir
 <div class="divider--half"></div>
 
 ### API
-* [IgxGridComponent API]({environment:angularApiUrl}/classes/igxgridcomponent.html)
+* [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
+* [ISortingExpression]({environment:angularApiUrl}/interfaces/isortingexpression.html)
 * [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 
 ### Additional Resources
