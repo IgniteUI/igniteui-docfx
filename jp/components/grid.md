@@ -5,7 +5,7 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 _language: ja
 ---
 
-## 
+## Data Grid
 
 <p class="highlight">Ignite UI for Angular Data Grid は、表形式でデータの表示や編集ができます。最小限のコードと構成でデータをすばやくバインドできます。フィルタリング、並べ替え、ページング、テンプレート、移動列、データの編集と更新機能をサポートします。ユーザー操作が簡単に認識できるため、コードで制御できます。</p>
 
@@ -144,7 +144,7 @@ public grid: IgxGridComponent;
 
 テンプレートで使用可能なプロパティの詳細については、[`IgxGridCellComponent`]({environment:angularApiUrl}/classes/igxgridcellcomponent.html) の API を参照してください。
 
-各列テンプレートが [`IgxColumnComponent`] オブジェクトでコードによって変更可能です。以下のコード例で、ユーザー データの 2 つのテンプレートを宣言しました。TypeScript コードでテンプレートへの参照を取得し、条件に基づいてアプリケーションで列の適切なテンプレートを描画します。
+各列テンプレートが [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) オブジェクトでコードによって変更可能です。以下のコード例で、ユーザー データの 2 つのテンプレートを宣言しました。TypeScript コードでテンプレートへの参照を取得し、条件に基づいてアプリケーションで列の適切なテンプレートを描画します。
 
 ```html
 <igx-grid>
@@ -285,7 +285,7 @@ export class AppModule {}
 
 サービスを実装した後、コンポーネントのコンストラクターにインジェクトしてデータを取得するために使用します。`ngOnInit` ライフサイクル フックに最初の要求を追加します。
 
-**注**: 以下のコードでは、サービスに加入する前に _records_ プロパティを空の配列に設定しています。Http 要求は非同期です。完了するまで records プロパティは undefined で、グリッドをプロパティにバインドするときにエラーが発生されます。デフォルト値に初期化するか、`BehaviorSubject` を使用します。
+**注**: 以下のコードでは、サービスに加入する前に records プロパティを空の配列に設定しています。Http 要求は非同期です。完了するまで records プロパティは undefined で、グリッドをプロパティにバインドするときにエラーが発生されます。デフォルト値に初期化、または `BehaviorSubject` を使用します。
 
 ```typescript
 // my.component.ts
