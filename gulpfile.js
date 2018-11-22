@@ -17,7 +17,7 @@ const DOCFX_BASE = {
 };
 const DOCFX_PATH = `${DOCFX_BASE[LANG]}`;
 const DOCFX_CONF = `${DOCFX_PATH}/docfx.json`;
-const DOCFX_TEMPLATE = path.join(__dirname, `./node_modules/igniteui-docfx-template`);
+const DOCFX_TEMPLATE = path.join(__dirname, `./node_modules/igniteui-docfx-template/template`);
 const DOCFX_SITE = `${DOCFX_PATH}/_site`;
 const DOCFX_ARTICLES = `${DOCFX_PATH}/components`;
 
