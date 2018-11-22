@@ -31,7 +31,7 @@ The following code demonstrates how to programmtically add Sparklines to a Works
 
 ```typescript
 var workbook: Workbook;
-var sheet1 = workbook.worksheets().add("'Sparklines");
+var sheet1 = workbook.worksheets().add("Sparklines");
 var sheet2 = workbook.worksheets().add("Data");
 sheet1.sparklineGroups().add(SparklineType.Line, "Sparklines!A1:A1", "Data!A2:A11"); 
 sheet1.sparklineGroups().add(SparklineType.Column, "Sparklines!B1:B1", "Data!A2:A11"); 

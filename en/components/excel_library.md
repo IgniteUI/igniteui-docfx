@@ -23,7 +23,7 @@ The Infragistics Excel Library allows you to work with spreadsheet data using fa
 ### Dependencies
 When installing the excel package, the core package must also be installed.
 
--  **npm install ignite-angular-excel ignite-angular-core**
+-  **npm install ignite-angular-excel ignite-angular-core --save**
 
 The Excel Library is exported as an `NgModule`, you need to import the `IgxExcelModule` inside your `AppModule`:
 
@@ -74,15 +74,16 @@ The following is a list of the supported versions of Excel.**
 ### Load and Save Workbooks
 Now that the Excel Library module is imported, next step is to load a workbook.
 
-In order to load and save `Workbook` objects, you can utilize the load and save methods. The following code is a class that exposes various methods such as load and save.
+In order to load and save `Workbook` objects, you can utilize the save method of the actual `Workbook` object, and the static `Workbook.load` method. In the following code snippet, an external [ExcelUtility](https://github.com/IgniteUI/igniteui-angular-samples/blob/master/src/app/utilities/excel-utility.ts) class is used to save and load a `Workbook`:
 
 ```typescript
 import { Workbook } from "igniteui-angular-excel/ES5/Workbook";
 import { WorkbookSaveOptions } from "igniteui-angular-excel/ES5/WorkbookSaveOptions";
 import { WorkbookFormat } from "igniteui-angular-excel/ES5/WorkbookFormat";
+import { ExcelUtility } from "excel_utility_location";
 
-Workbook.load("ExcelWorkbook.xlsx", null, null);
-Workbook.save(workbook, "ExcelWorkbook.xlsx);
+var workbook = ExcelUtility.load(file);
+ExcelUtility.save(workbook, "fileName");
 
 ```
 
