@@ -26,8 +26,8 @@ _language: kr
 ```typescript
 public ngOnInit() {
     grid.groupingExpressions = [
-        { fieldName: 'ProductName', dir: SortingDirection.Desc },
-        { fieldName: 'Released', dir: SortingDirection.Desc }
+        { fieldName: 'ProductName', dir: SortingDirection.Desc, ignoreCase: true, strategy: DefaultSortingStrategy.instance() },
+        { fieldName: 'Released', dir: SortingDirection.Desc, ignoreCase: false, strategy: DefaultSortingStrategy.instance() }
     ];
 }
 ```
@@ -56,7 +56,7 @@ public ngOnInit() {
 런타임 중에 식은 [`groupingExpressions`]({environment:angularApiUrl}/classes/igxgridcomponent.html#groupingexpressions) 속성에서 가져오고 설정할 수 있습니다. 기존 식을 추가하거나 변경해야 하는 경우, 단일 배열 또는 [`ISortingExpression`]({environment:angularApiUrl}/interfaces/isortingexpression.html)의 배열과 함께 [`groupBy`]({environment:angularApiUrl}/classes/igxgridcomponent.html#groupby) 메소드를 사용할 수도 있습니다.
 
 ```typescript
-grid.groupBy({ fieldName: 'ProductName', dir: SortingDirection.Desc, ignoreCase: true });
+grid.groupBy({ fieldName: 'ProductName', dir: SortingDirection.Desc, ignoreCase: true, strategy: DefaultSortingStrategy.instance() });
 ```
 
 그룹화 작업은 정렬 및 그룹화 식이 열이 그룹화되지 않고 정렬된 경우에도 정렬된 열로서 적용되는 경우에 가능합니다. [`sortingExpression`]({environment:angularApiUrl}/classes/igxgridcomponent.html#sortingexpressions) 속성의 그룹화 식은 항상 그룹화된 열 식이 항상 우선하도록 정렬됩니다. 정렬 API는 그룹화된 열의 식을 변경한 경우에 그룹화에 영향을 미칩니다. 그룹화 식(열 그룹 해제)을 제거하면 정렬도 제거됩니다.
