@@ -205,14 +205,18 @@
   items:
     - name: Palettes
       href: themes/palette.md
+    - name: Schemas
+      href: themes/schemas.md
+      new: true
+    - name: Typography
+      href: themes/typography.md
     - name: Global Themes
       href: themes/global-theme.md
     - name: Component Themes
       href: themes/component-themes.md
-    - name: Theming Demo
-      href: themes/theming-demo.md
-    - name: Typography
-      href: themes/typography.md
+      new: true
+    - name: Examples
+      href: themes/examples.md
 - name: Shadows
   href: shadows.md
 - name: Display Density

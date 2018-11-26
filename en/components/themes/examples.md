@@ -1,13 +1,13 @@
 ---
-title: Theming Demo
+title: Theming Examples
 _description: Ignite UI for Angular uses SASS functions and mixins to give you the ability of styling easily your entire application or only specific parts of it with only a couple of steps.
 _keywords: Ignite UI for Angular, Angular Theming Component, Angular Theming, Ignite UI for Angular Components, Ignite for Agular Themes, Global Theme, Component Theme
 ---
 
-## Theming Demo
+## Theming Examples
 The **Ignite UI for Angular Theming** provides you the ability to customize themes for your application by setting them globally, in order to beautify all non-custom-styled elements, or applying them severally to the components you want to differentiate.
 
-### Demo
+### Demos
 <div class="sample-container" style="height: 650px">
     <iframe id="theme-chooser-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/theme-chooser" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -44,7 +44,7 @@ The result from the above code snippet looks like this:
 </div>
 <div class="divider--half"></div>
 
-In case you have other preferences for the appearance of the components or the **default theme** doesn't match the interior of your application, you can use the  **Ignite UI for Angular Theming**, which is much easier, fun and efficient way for styling, than writing huge amount of CSS files.
+In case you have other preferences for the appearance of the components or the **default theme** doesn't match the interior of your application, you can use the  **Ignite UI for Angular Theming**, which is much easier, fun and efficient way for styling, than writing a huge amount of CSS.
 
 ### Get Started
 
@@ -67,11 +67,11 @@ Our app will have:
 ```scss
 // Import grid component and theme styles
 @import '~igniteui-angular/lib/core/styles/components/grid/grid-component';
-@import '~igniteui-angular/lib/core/styles//components/grid/grid-theme';
+@import '~igniteui-angular/lib/core/styles/components/grid/grid-theme';
 
 // Import grid-paginator component and theme styles
-@import '~igniteui-angular/lib/core/styles//components/grid-paginator/grid-paginator-component';
-@import '~igniteui-angular/lib/core/styles//components/grid-paginator/grid-paginator-theme';
+@import '~igniteui-angular/lib/core/styles/components/grid-paginator/grid-paginator-component';
+@import '~igniteui-angular/lib/core/styles/components/grid-paginator/grid-paginator-theme';
 
 // Import grid-filtering component and theme styles
 @import '~igniteui-angular/lib/core/styles//components/grid-filtering/grid-filtering-component';
