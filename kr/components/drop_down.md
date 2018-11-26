@@ -10,11 +10,11 @@ _language: kr
 <div class="divider"></div>
 
 ### Drop Down Demo
-<div class="sample-container" style="height:400px">
-    <iframe id="dropdown-sample-3-iframe" src='{environment:demosBaseUrl}/dropdown-sample-3' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container" style="height:220px">
+    <iframe id="dropdown-sample-4-iframe" src='{environment:demosBaseUrl}/dropdown-sample-4' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dropdown-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dropdown-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
 </div>
 <div class="divider--half"></div>
 
@@ -101,6 +101,7 @@ If the sample is configured properly, a dropdown with several options should be 
 
 <div class="divider--half"></div>
 
+####Predefined selected item
 Let's say we want to have a predefined selected item. One way to do this, is by handling **igx-drop-down** [onOpening]({environment:angularApiUrl}/classes/igxdropdowncomponent.html#onopening) event of [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html).
 
 ```html
@@ -225,7 +226,80 @@ If the sample is configured properly, a list  of countries should be displayed a
     </button>
 </div>
 
-### igxDropDownItemNavigation directive
+####Drop Down as menu
+You can configure the [`igxDropDown`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) to behave as a menu. To do this, set the [`ISelectionEventArgs`]({environment:angularApiUrl}/interfaces/iselectioneventargs.html) [`cancel`]({environment:angularApiUrl}/interfaces/iselectioneventargs.html#cancel) member to *true* in the [`onSelection`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html#onselection) event handler. Thus, the selected item is not preserved on menu opening and selection is invalidated. Still, you can get the clicked item through the [`ISelectionEventArgs`]({environment:angularApiUrl}/interfaces/iselectioneventargs.html) [`newSelection`]({environment:angularApiUrl}/interfaces/iselectioneventargs.html#newselection) member value.
+
+```html
+<!-- dropdown.component.html -->
+
+<div class="drop-down-wrapper">
+    <igx-navbar title="Contacts">
+        <igx-icon #menu_icon (click)="toggleMenu($event)" [igxDropDownItemNavigation]="menu" tabindex="0">more_vert</igx-icon>
+        <igx-drop-down #menu (onSelection)="onSelection($event)">
+            <igx-drop-down-item *ngFor="let item of items">
+                <div>{{ item.text }}</div>
+            </igx-drop-down-item>
+        </igx-drop-down>
+    </igx-navbar>
+
+    <div class="textContainer">
+        <ng-container *ngIf="text">
+            <label igxLabel>Clicked menu item: {{ text }}</label>
+        </ng-container>
+    </div>
+
+    <div class="overlayOutlet" igxOverlayOutlet #outlet="overlay-outlet"></div>
+</div>
+```
+
+```typescript
+// dropdown.component.ts
+
+...
+@ViewChild(IgxOverlayOutletDirective) public igxOverlayOutlet: IgxOverlayOutletDirective;
+@ViewChild(IgxDropDownComponent) public menu: IgxDropDownComponent;
+
+public items: any[] = [];
+public text;
+
+private positionSettings = {
+    horizontalDirection: HorizontalAlignment.Left,
+    horizontalStartPoint: HorizontalAlignment.Right,
+    verticalStartPoint: VerticalAlignment.Bottom
+};
+
+public ngOnInit() {
+    this.items = [{ text: "Add New Contact" }, { text: "Edit Contact" }, { text: "Refresh" }, { text: "Help" }];
+}
+
+public onSelection(eventArgs) {
+    this.text = eventArgs.newSelection.element.nativeElement.textContent;
+    eventArgs.cancel = true;
+}
+
+public toggleMenu(eventArgs) {
+    const overlaySettings: OverlaySettings = {
+        closeOnOutsideClick: true,
+        modal: false,
+        outlet: this.igxOverlayOutlet,
+        positionStrategy: new ConnectedPositioningStrategy(this.positionSettings),
+        scrollStrategy: new NoOpScrollStrategy()
+    };
+
+    overlaySettings.positionStrategy.settings.target = eventArgs.target;
+    this.menu.toggle(overlaySettings);
+}
+```
+
+<div class="sample-container" style="height: 280px">
+    <iframe id="dropdown-menu-iframe" src='{environment:demosBaseUrl}/dropdown-menu' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dropdown-menu-iframe" data-demos-base-url="{environment:demosBaseUrl}">                view on stackblitz
+    </button>
+</div>
+
+####Navigation directive
 
 To enable keyboard navigation for the `igxDropDown` component, the [igxDropDownItemNavigation]({environment:angularApiUrl}/classes/igxdropdownitemnavigationdirective.html) directive can be applied. The directive should be applied to the active(focused) element or a parent container. This will allow the directive to handle all triggered events. By default the the igxDropDown or its items don't take focus, so for example the directive can be placed on a button or input that controls the drop down.
 The [igxDropDownItemNavigation]({environment:angularApiUrl}/classes/igxdropdownitemnavigationdirective.html) directive value should be target component that is or extends [IgxDropDownBase]({environment:angularApiUrl}/classes/igxdropdownbase.html) class.
@@ -234,16 +308,70 @@ The [igxDropDownItemNavigation]({environment:angularApiUrl}/classes/igxdropdowni
 The following sample demonstrates an input that on click opens and closes igxDropDown instance. Applying the [igxDropDownItemNavigation]({environment:angularApiUrl}/classes/igxdropdownitemnavigationdirective.html) on the input itself, will enable keyboard navigation, when using arrow up and arrow down. This relies on the default drop down behavior with [allowItemsFocus]({environment:angularApiUrl}/classes/igxcombodropdowncomponent.html#allowitemsfocus) disabled to allow the button input to maintain focus.
 
 
+```html
+<!-- input-dropdown.component.html -->
+    <igx-input-group #inputGroup class="input-group" [igxToggleAction]="dropDown">
+        <input #input class="input" type="text" igxInput [igxDropDownItemNavigation]="igxDropDown"
+            readonly= "true"
+            placeholder="choose an option"
+            [(ngModel)]="this.value"
+            (keydown.ArrowDown)="openDropDown()"/>
+
+        <igx-suffix igxButton="icon" class="dropdownToggleButton" igxRipple>
+            <igx-icon *ngIf="igxDropDown.collapsed; else toggleUp" fontSet="material">arrow_drop_down</igx-icon>
+            <ng-template #toggleUp>
+                <igx-icon fontSet="material">arrow_drop_up</igx-icon>
+            </ng-template>
+        </igx-suffix>
+    </igx-input-group>
+
+    <igx-drop-down #dropDown [width]="'160px'" (onSelection)="onSelection($event)">
+        <igx-drop-down-item *ngFor="let item of items">
+            {{ item.field }}
+        </igx-drop-down-item>
+    </igx-drop-down>
 ```
-<igx-input-group [igxToggleAction]="dropdownProvince">
-    <input igxInput type="text" [igxDropDownItemNavigation]="dropdownProvince">
-</igx-input-group>
-<igx-drop-down #dropdownProvince>
-    <igx-drop-down-item *ngFor="let p of provinceData">
-        {{ p }}
-    </igx-drop-down-item>
-</igx-drop-down>
+
+```typescript
+// input-dropdown.component.ts
+    @ViewChild(IgxDropDownComponent) public igxDropDown: IgxDropDownComponent;
+    @ViewChild("inputGroup", { read: IgxInputGroupComponent}) public inputGroup: IgxInputGroupComponent;
+    @ViewChild("input", { read: IgxInputDirective })
+    public input: IgxInputDirective;
+
+    public items: any[] = [];
+    public value: string;
+
+    public ngOnInit() {
+        for (let i = 1; i < 4; i ++) {
+            const item = { field: "Option " + i };
+            this.items.push(item);
+        }
+    }
+
+    public onSelection(eventArgs) {
+        this.value = eventArgs.newSelection.element.nativeElement.textContent;
+    }
+
+    public openDropDown() {
+        if (this.igxDropDown.collapsed) {
+            this.igxDropDown.open({
+                modal: false,
+                positionStrategy: new ConnectedPositioningStrategy({
+                    target: this.inputGroup.element.nativeElement
+                })
+            });
+        }
+    }
 ```
+
+<div class="sample-container" style="height:220px">
+    <iframe id="dropdown-sample-4-iframe" src='{environment:demosBaseUrl}/dropdown-sample-4' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dropdown-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
 
 Applying the directive will ensure the following actions are executed as a result from the keyboard navigation:
 
@@ -262,11 +390,11 @@ Applying the directive will ensure the following actions are executed as a resul
 When [allowItemsFocus]({environment:angularApiUrl}/classes/igxcombodropdowncomponent.html#allowitemsfocus) is enabled, drop down items gain tab index and are focused when active. The focused drop down items are the ones that trigger events, during keyboard navigation, which means that the [igxDropDownItemNavigation]({environment:angularApiUrl}/classes/igxdropdownitemnavigationdirective.html) should be applied on the individual drop down items.
 
 ```
-<igx-input-group [igxToggleAction]="dropdownProvince">
+<igx-input-group [igxToggleAction]="dropDown">
     <input igxInput type="text">
 </igx-input-group>
-<igx-drop-down #dropdownProvince [allowItemsFocus]="true">
-    <igx-drop-down-item *ngFor="let p of provinceData" [igxDropDownItemNavigation]="dropdownProvince">
+<igx-drop-down #dropDown [allowItemsFocus]="true">
+    <igx-drop-down-item *ngFor="let p of provinceData" [igxDropDownItemNavigation]="dropDown">
         {{ p }}
     </igx-drop-down-item>
 </igx-drop-down>
