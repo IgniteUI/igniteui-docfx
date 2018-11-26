@@ -470,7 +470,7 @@ public leftPanPerformed(args) {
 
 Now try panning the list items for yourself:
 
-<div class="sample-container loading" style="height: 477px">
+<div class="sample-container loading" style="height: 500px">
 <iframe id="list-sample-7-final-iframe" src='{environment:demosBaseUrl}/list-sample-7' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
