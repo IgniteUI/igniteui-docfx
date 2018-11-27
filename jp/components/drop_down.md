@@ -232,7 +232,7 @@ export class AppModule {}
     <igx-navbar title="Contacts">
         <igx-icon #menu_icon (click)="toggleMenu($event)" [igxDropDownItemNavigation]="menu" tabindex="0">more_vert</igx-icon>
         <igx-drop-down #menu (onSelection)="onSelection($event)">
-            <igx-drop-down-item *ngFor="let item of items">
+            <igx-drop-down-item *ngFor="let item of items" [value]="item.text">
                 <div>{{ item.text }}</div>
             </igx-drop-down-item>
         </igx-drop-down>
@@ -268,8 +268,8 @@ public ngOnInit() {
     this.items = [{ text: "Add New Contact" }, { text: "Edit Contact" }, { text: "Refresh" }, { text: "Help" }];
 }
 
-public onSelection(eventArgs) {
-    this.text = eventArgs.newSelection.element.nativeElement.textContent;
+public onSelection(eventArgs: ISelectionEventArgs) {
+    this.text = eventArgs.newSelection.value;
     eventArgs.cancel = true;
 }
 
