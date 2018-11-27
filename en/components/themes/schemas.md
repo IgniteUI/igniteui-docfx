@@ -102,10 +102,6 @@ Now we can pass all that to a global theme:
 
 Now each icon avatar in your global theme will have a limegreen background.
 
-The great thing about schemas is that they allow you to modify the global theme without having to define component themes, thus reducing the amount of produced CSS.
-
-Another great feature of theme schemas is that you can have as many as you want and swap them as you wish. **For instance, we provide both light and dark schemas by default. This allows you to switch the entire look of your application.**
-
 Some component schemas, like the button schema, have property definitions for roundness. This means that you can change the default button roundness for all buttons.
 
 Finally, let's see how a component theme can use the schema we created above.
@@ -115,9 +111,18 @@ $my-avatar-theme: igx-avatar-theme(
     $schema: $my-light-schema
 );
 ```
+### Conclusions
+
+Although schemas require more advanced knowledge of our theming engine compared to theme functions and mixins, they present a powerful way for declaring component themes in your application. 
+
+The good thing about schemas is they allow you to modify the global theme before it was built, thus reducing the amount of produced CSS.
+
+Another great feature of theme schemas is that you can have as many as you want and swap them as you wish. **For instance, we use schemas internally to provide both light and dark themes by default. This allows you to switch the entire look of your application.**
+
 ### API Overview
 * [Light Avatar Schema]({environment:sassApiUrl}/index.html#variable-_light-avatar)
 * [Light Components Schema]({environment:sassApiUrl}/index.html#variable-light-schema)
+* [Dark Components Schema]({environment:sassApiUrl}/index.html#variable-dark-schema)
 * [Global Theme]({environment:sassApiUrl}/index.html#mixin-igx-theme)
 * [Avatar Theme]({environment:sassApiUrl}/index.html#function-igx-avatar-theme)
 
