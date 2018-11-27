@@ -5,7 +5,7 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 _language: ja
 ---
 
-##Drop Down
+## Drop Down
 <p class="highlight">Ignite UI for Angular Drop Down は、単一項目の選択が可能なグループ項目をスクロール付きのリストで表示します。項目をクリックまたはタップして選択するとドロップダウンが閉じられます。</p>
 <div class="divider"></div>
 
@@ -21,7 +21,7 @@ _language: ja
 > [!NOTE]
 > Ignite UI for Angular コンポーネントをプロジェクトに追加する前に、必要なすべての依存関係を構成し、プロジェクトのセットアップが正しく完了したことを確認してください。[**インストール**](https://jp.infragistics.com/products/ignite-ui-angular/getting-started#installation) のトピックで手順を確認できます。
 
-###使用方法
+### 使用方法
 Ignite UI for Angular Drop Down コンポーネントを初期化する前に [IgxDropDownModule]({environment:angularApiUrl}/classes/igxdropdownmodule.html) を **app.module.ts** ファイルにインポートします。
 
 ```typescript
@@ -101,7 +101,7 @@ export class AppModule {}
 
 <div class="divider--half"></div>
 
-####Predefined selected item
+#### Predefined selected item
 選択済みの項目をあらかじめ定義する場合、[IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) の **igx-drop-down** [onOpening]({environment:angularApiUrl}/classes/igxdropdowncomponent.html#onopening) イベントを処理します。
 
 ```html
@@ -222,7 +222,7 @@ export class AppModule {}
     </button>
 </div>
 
-####Drop Down as menu
+#### Drop Down as menu
 [`igxDropDown`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) を設定してメニューとして使用できます。[`onSelection`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html#onselection) イベント ハンドラーで [`ISelectionEventArgs`]({environment:angularApiUrl}/interfaces/iselectioneventargs.html) [`cancel`]({environment:angularApiUrl}/interfaces/iselectioneventargs.html#cancel) メンバーを *true* に設定します。そのため選択した項目は開いているメニューに保存されずに選択が無効になります。[`ISelectionEventArgs`]({environment:angularApiUrl}/interfaces/iselectioneventargs.html) [`newSelection`]({environment:angularApiUrl}/interfaces/iselectioneventargs.html#newselection) メンバー値でクリックした項目を取得できます。
 
 ```html
@@ -295,7 +295,7 @@ public toggleMenu(eventArgs) {
     </button>
 </div>
 
-####Navigation directive
+#### Navigation directive
 `igxDropDown` コンポーネントのキーボード ナビゲーションを有効にするには、[igxDropDownItemNavigation]({environment:angularApiUrl}/classes/igxdropdownitemnavigationdirective.html) ディレクティブを適用します。ディレクティブをアクティブ (フォーカスした) 要素または親コンテナに適用することにより、トリガーしたすべてのイベントを処理できるようになります。デフォルトでは、igxDropDown またはその項目にフォーカスが当たらないため、たとえばディレクティブをドロップダウンを制御するボタンや入力に配置できます。
 [igxDropDownItemNavigation]({environment:angularApiUrl}/classes/igxdropdownitemnavigationdirective.html) ディレクティブ値は、ターゲット コンポーネントまたは拡張 [IgxDropDownBase]({environment:angularApiUrl}/classes/igxdropdownbase.html) クラスにする必要があります。
 
@@ -404,7 +404,7 @@ public toggleMenu(eventArgs) {
 [**テーマの参照**]({environment:sassApiUrl}/index.html#mixin-igx-drop-down)
 
 **igx-drop-down-item** コンポーネント [**API 参照**]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html)
-###その他のリソース
+### その他のリソース
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。

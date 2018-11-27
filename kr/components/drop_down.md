@@ -5,7 +5,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 _language: kr
 ---
 
-##Drop Down
+## Drop Down
 <p class="highlight">The Ignite UI for Angular Drop Down displays a scrollable list of items which may be visually grouped and supports selection of a single item. Clicking or tapping an item selects it and closes the Drop Down</p>
 <div class="divider"></div>
 
@@ -21,7 +21,7 @@ _language: kr
 > [!NOTE]
 > To start using Ignite UI for Angular components in your own projects, make sure you have configured all necessary dependencies and have performed the proper setup of your project. You can learn how to do this in the [**installation**](https://www.infragistics.com/products/ignite-ui-angular/getting-started#installation) topic.
 
-###Usage
+### Usage
 To get started with the Ignite UI for Angular Drop Down, let's first import the [IgxDropDownModule]({environment:angularApiUrl}/classes/igxdropdownmodule.html) in the **app.module.ts** file:
 
 ```typescript
@@ -101,7 +101,7 @@ If the sample is configured properly, a dropdown with several options should be 
 
 <div class="divider--half"></div>
 
-####Predefined selected item
+#### Predefined selected item
 Let's say we want to have a predefined selected item. One way to do this, is by handling **igx-drop-down** [onOpening]({environment:angularApiUrl}/classes/igxdropdowncomponent.html#onopening) event of [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html).
 
 ```html
@@ -226,7 +226,7 @@ If the sample is configured properly, a list  of countries should be displayed a
     </button>
 </div>
 
-####Drop Down as menu
+#### Drop Down as menu
 You can configure the [`igxDropDown`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) to behave as a menu. To do this, set the [`ISelectionEventArgs`]({environment:angularApiUrl}/interfaces/iselectioneventargs.html) [`cancel`]({environment:angularApiUrl}/interfaces/iselectioneventargs.html#cancel) member to *true* in the [`onSelection`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html#onselection) event handler. Thus, the selected item is not preserved on menu opening and selection is invalidated. Still, you can get the clicked item through the [`ISelectionEventArgs`]({environment:angularApiUrl}/interfaces/iselectioneventargs.html) [`newSelection`]({environment:angularApiUrl}/interfaces/iselectioneventargs.html#newselection) member value.
 
 ```html
@@ -299,7 +299,7 @@ public toggleMenu(eventArgs) {
     </button>
 </div>
 
-####Navigation directive
+#### Navigation directive
 
 To enable keyboard navigation for the `igxDropDown` component, the [igxDropDownItemNavigation]({environment:angularApiUrl}/classes/igxdropdownitemnavigationdirective.html) directive can be applied. The directive should be applied to the active(focused) element or a parent container. This will allow the directive to handle all triggered events. By default the the igxDropDown or its items don't take focus, so for example the directive can be placed on a button or input that controls the drop down.
 The [igxDropDownItemNavigation]({environment:angularApiUrl}/classes/igxdropdownitemnavigationdirective.html) directive value should be target component that is or extends [IgxDropDownBase]({environment:angularApiUrl}/classes/igxdropdownbase.html) class.
@@ -408,7 +408,7 @@ When [allowItemsFocus]({environment:angularApiUrl}/classes/igxcombodropdowncompo
 
 **igx-drop-down-item** component [**API Reference**]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html).
 
-###Additional Resources
+### Additional Resources
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.
