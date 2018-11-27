@@ -30,9 +30,9 @@
             "exclude": ["obj/**", "_site/**"]
         }],
         "dest": "_site",
-        "globalMetadataFiles": ["global.json"],
+        "globalMetadataFiles": ["global.json", "../node_modules/igniteui-docfx-template/template/bundling.global.json"],
         "fileMetadataFiles": [],
-        "template": ["../node_modules/igniteui-docfx-template"],
+        "template": ["../node_modules/igniteui-docfx-template/template"],
         "postProcessors": ["SetEnvironmentVariables"],
         "noLangKeyword": false,
         "keepFileLink": false,
