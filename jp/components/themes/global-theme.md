@@ -17,6 +17,7 @@ _language: ja
 | 名前              |  型   | デフォルト            | 説明                                                                           |
 | :---------------: | :-----: | :---------------:  | :-----------------------------------------------------------------------------------: |
 | `$palette`        | map     | undefined          | パレット マップは、すべてのコンポーネントのデフォルト テーマで使用されます。             |
+| `$schema`         | map     | $light-schema      | The schema used as basis for styling the components.                                  |
 | `$exclude`        | list    | ( )                | グローバル テーマから除外されるコンポーネント テーマのリスト。                     |
 | `$legacy-support` | boolean | `true`             | テーマ設定の方法を決定 - false に設定し、テーマは CSS 変数で設定します。 |
 
@@ -61,12 +62,40 @@ $unnecessary: (igx-avatar, igx-badge);
 
 更にアプリで使用しないコンポーネントがある場合、`$exclude` のリストに追加して生成される CSS のサイズを縮小することができます。
 
+### Light and Dark Themes
+
+In addition to the more powerful `igx-theme` mixin, we include two additional global theme mixins for fast bootstrapping of *__light__* and *__dark__* themes. Those mixins are `igx-light-theme` and `igx-dark-theme`.
+
+Here's a quick showcase of how you can create a light and dark theme for your application
+
+```scss
+.light-theme {
+    @include igx-light-theme($default-palette);
+}
+
+.dark-theme {
+    background: #333;
+    color: #fff;
+
+    @include igx-dark-theme($default-palette);
+}
+```
+Ideally you would be applying `.light-theme` and `.dark-theme` CSS classes somewhere high in your application DOM tree. Your `app-root` element is a good candidate for that.
+
 ### ブラウザー サポート
 <div class="divider--half"></div>
 
 `$igx-legacy-support` の値は、コンポーネントのテーマが動作する方法を決定するため大変重要です。値を `true` に設定した場合、各コンポーネント スタイルのルールの値がビルド時にテーマで定義されたハード値に設定されます。`$igx-legacy-support` の値を`false` に設定した場合もスタイル ルールは `:root` スコープまたは一番近いブロック スコープで定義された CSS 変数を検索します。
 
 一般的なルールは、Internet Explorer 11 をサポートするかどうかに基づいて `$legacy-support` の値を設定します。IE11 をサポートする場合、`$legacy-support` 値を `true` (デフォルト) に設定します。それ以外の場合、値を `false` に設定すると、テーマで CSS 変数が必要です。
+
+### API Overview
+* [Global Theme]({environment:sassApiUrl}/index.html#mixin-igx-theme)
+* [Light Theme]({environment:sassApiUrl}/index.html#mixin-igx-light-theme)
+* [Dark Theme]({environment:sassApiUrl}/index.html#mixin-igx-dark-theme)
+* [Palette]({environment:sassApiUrl}/index.html#function-igx-palette)
+
+<div class="divider--half"></div>
 
 ### その他のリソース
 <div class="divider--half"></div>

@@ -168,12 +168,8 @@ $avatar-theme: igx-avatar-theme($initials-background: royalblue);
 $avatar-theme: igx-avatar-theme($initials-background: royalblue);
 $badge-theme: igx-badge-theme($background-color: white);
 
-// Make sure you scope your css variables
-// the code bellow will make the changes global
-:root {
-    @include igx-css-vars($avatar-theme);
-    @include igx-css-vars($badge-theme);
-}
+@include igx-css-vars($avatar-theme);
+@include igx-css-vars($badge-theme);
 ```
 <div class="divider"></div>
 

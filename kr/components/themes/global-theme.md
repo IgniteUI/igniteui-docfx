@@ -18,6 +18,7 @@ To generate a global theme we're going to be including two mixins `igx-core` and
 | Name              |  Type   | Default            | Description                                                                           |
 | :---------------: | :-----: | :---------------:  | :-----------------------------------------------------------------------------------: |
 | `$palette`        | map     | undefined          | The palette map to be used to by the default themes of all components.                |
+| `$schema`         | map     | $light-schema      | The schema used as basis for styling the components.                                  |
 | `$exclude`        | list    | ( )                | A list of component themes to be excluded from the global theme.                      |
 | `$legacy-support` | boolean | `true`             | Determines the theming strategy - if set to false, theming is done via CSS variables. |
 
@@ -62,12 +63,40 @@ $unnecessary: (igx-avatar, igx-badge);
 
 Additionally, if you know your app will not be using some of our components, you can list them in the `$exclude` list, thus reducing the overall size of the produced CSS.
 
+### Light and Dark Themes
+
+In addition to the more powerful `igx-theme` mixin, we include two additional global theme mixins for fast bootstrapping of *__light__* and *__dark__* themes. Those mixins are `igx-light-theme` and `igx-dark-theme`.
+
+Here's a quick showcase of how you can create a light and dark theme for your application
+
+```scss
+.light-theme {
+    @include igx-light-theme($default-palette);
+}
+
+.dark-theme {
+    background: #333;
+    color: #fff;
+
+    @include igx-dark-theme($default-palette);
+}
+```
+Ideally you would be applying `.light-theme` and `.dark-theme` CSS classes somewhere high in your application DOM tree. Your `app-root` element is a good candidate for that.
+
 ### Browser Support
 <div class="divider--half"></div>
 
 The value of `$igx-legacy-support` is quite important as it determines how component themes will work. When its value is set to `true`, individual component style rules will have their values set at build time to the hard values defined in their theme. If you set the value of `$igx-legacy-support` to `false`, however, style rules will look for values from CSS variables defined at the `:root` scope, or the nearest block scope.
 
 The general rule of thumb regarding what the value of `$legacy-support` should be is dictated by whether you will be including support for Internet Explorer 11 or not. If you want to include support for IE11 set the `$legacy-support` value to `true` (default), otherwise setting its value to `false` will force CSS variables for theming.
+
+### API Overview
+* [Global Theme]({environment:sassApiUrl}/index.html#mixin-igx-theme)
+* [Light Theme]({environment:sassApiUrl}/index.html#mixin-igx-light-theme)
+* [Dark Theme]({environment:sassApiUrl}/index.html#mixin-igx-dark-theme)
+* [Palette]({environment:sassApiUrl}/index.html#function-igx-palette)
+
+<div class="divider--half"></div>
 
 ### Additional Resources
 <div class="divider--half"></div>
