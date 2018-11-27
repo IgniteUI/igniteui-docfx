@@ -15,7 +15,7 @@ Infragistics Excel Engine の `WorksheetTable` 機能は、行列のデータを
 </div>
 <div>
     <!-- TODO uncomment when Stackblitz is ready for EXCEL
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="excel-library-working-with-tables-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="excel-library-working-with-tables-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示
     </button>
 </div>  -->
 
