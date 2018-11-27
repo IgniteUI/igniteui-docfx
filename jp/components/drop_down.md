@@ -319,9 +319,9 @@ public toggleMenu(eventArgs) {
             </ng-template>
         </igx-suffix>
     </igx-input-group>
-
+    <span>Selected: {{this.value}}</span>
     <igx-drop-down #dropDown [width]="'160px'" (onSelection)="onSelection($event)">
-        <igx-drop-down-item *ngFor="let item of items">
+        <igx-drop-down-item *ngFor="let item of items" [value]="item.field">
             {{ item.field }}
         </igx-drop-down-item>
     </igx-drop-down>
@@ -344,8 +344,8 @@ public toggleMenu(eventArgs) {
         }
     }
 
-    public onSelection(eventArgs) {
-        this.value = eventArgs.newSelection.element.nativeElement.textContent;
+    public onSelection(eventArgs: ISelectionEventArgs) {
+        this.value = eventArgs.newSelection.value;
     }
 
     public openDropDown() {
