@@ -6,7 +6,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ## Banner
 
 <p class="highlight">
-The Ignite UI for Angular Banner Component provides a way to easily display a prominent message to your application's users in a way that is less transient than a banner and less obtrusive than a Dialog. The Banner can also be configured to display custom action buttons and an icon.</p>
+The Ignite UI for Angular Banner Component provides a way to easily display a prominent message to your application's users in a way that is less transient than a snackbar and less obtrusive than a dialog. The Banner can also be configured to display custom action buttons and an icon.</p>
 <div class="divider"></div>
 
 ### Banner Demo
@@ -41,7 +41,7 @@ export class AppModule {}
 ```
 ### Basic banner
 
-In order to display the Banner component, use its [`open()`]({environment:angularApiUrl}/classes/igxbannercomponent.html#open) method and call it on a button click. To configure the banner message, simply pass some text inside of the banner content. The text will show up in the specified banner area and the banner will use it's default template when displaying it
+In order to display the Banner component, use its [`open()`]({environment:angularApiUrl}/classes/igxbannercomponent.html#open) method and call it on a button click. To configure the banner message, simply pass some text inside of the banner content. The text will show up in the specified banner area and the banner will use its default template when displaying it
 
 ```html
 <!--banner.component.html-->
@@ -70,7 +70,7 @@ The [`IgxBannerComponent`]({environment:angularApiUrl}/classes/igxbannercomponen
 
 #### Changing the banner message
 
-Changing the message displayed in the banner is easy - just change the content you are passing the `igx-banner` tag. Below, we will change our 'Connection' banner to a 'Rating' banner:
+Changing the message displayed in the banner is easy - just change the content you are passing to the `igx-banner` tag. Below, we will change our 'Connection' banner to a 'Rating' banner:
 
 ```html
     <!--banner.component.html-->
@@ -83,12 +83,12 @@ Changing the message displayed in the banner is easy - just change the content y
 
 #### Adding an icon
 
-Developers can pass an [`igx-icon`]({environment:angularApiUrl}/classes/igxiconmodule.html) in the banner's content and it will always be positioned at **the start** of the banner message.
+Developers can pass an [`igx-icon`]({environment:angularApiUrl}/classes/igxiconmodule.html) in the banner's content and it will always be positioned at **the beginning** of the banner message.
 
 > [!NOTE]
-> If several `igx-icon` elements are inserted as direct descendants of the banner, the banner will try positioning **all** of them at the start. It is **strongly** advised to only pass one `igx-icon` directly to the banner. If you want to use icons in your banner message, wrap them in a wrapping `span`.
+> If several `igx-icon` elements are inserted as direct descendants of the banner, the banner will try positioning **all** of them at the beginning. It is **strongly** advised to only pass one `igx-icon` directly to the banner. If you want to use icons in your banner message, wrap them in a `span` tag.
 
-To pass an `igx-icon` to you banner, simple insert it in the `igx-banner`s content:
+To pass an `igx-icon` to you banner, simply insert it in the `igx-banner`s content:
 
 ```html
     <!--banner.component.html-->
@@ -101,10 +101,10 @@ To pass an `igx-icon` to you banner, simple insert it in the `igx-banner`s conte
 
 #### Adding custom banner buttons
 
-The [`IgxBannerModule`]({environment:angularApiUrl}/classes/igxbannermodule.html) also exposes a directive for templating the banner buttons - [`IgxBannerActionsDirective`]({environment:angularApiUrl}/classes/igxbanneractionsdirective.html). Using this directive allows you to override the default banner button (`Dismiss`) and add custom actions that you define. As most (but not all) of the time interaction with these elements is required to close the banner, make sure to call the banner's `close()` method in they `click` handlers.
+The [`IgxBannerModule`]({environment:angularApiUrl}/classes/igxbannermodule.html) also exposes a directive for templating the banner buttons - [`IgxBannerActionsDirective`]({environment:angularApiUrl}/classes/igxbanneractionsdirective.html). Using this directive allows you to override the default banner button (`Dismiss`) and add user defined custom actions. As most (but not all) of the button interactions are suposed to close the banner, make sure to call the banner's `close()` method in their `click` handlers.
 
 > [!NOTE]
-> Per Google's [`Material Design` guidelines](https://material.io/design/components/banners.html#anatomy), a banner should have a maximum of 2 buttons present. The `IgxBannerComponent` **does not** explicitly limit developers from passing more than 2 elements under the `igx-banner-actions` tag, but it is strongly advisable, should you choose to adhere to the material design guidelines. 
+> Per Google's [`Material Design` guidelines](https://material.io/design/components/banners.html#anatomy), a banner should have a maximum of 2 buttons present. The `IgxBannerComponent` **does not** explicitly limit developers from passing more than 2 elements under the `igx-banner-actions` tag, but it is strongly advisable to choose to adhere to the material design guidelines. 
 
 To further template the 'Rating' banner, we can pass custom action handles using the `igx-banner-actions` selector:
 
@@ -120,7 +120,7 @@ To further template the 'Rating' banner, we can pass custom action handles using
     </igx-banner>
     ...
 ```
-The dismiss option (`'Nah.'`) does not require any further logic, so it can just call `rateBanner.close()`. The confirm action (`'Yah!'`) requires some additional logic, so we define it in the component definition.
+The dismiss option (`'Nah.'`) does not require any further logic, so it can just call `rateBanner.close()`. The confirm action (`'Yah!'`) requires some additional logic, so we define it in the component.
 
 ```typescript
 // banner.component.ts
@@ -155,9 +155,9 @@ export class MyBannerComponent {
 
 ### Applying custom animations
 
-The banner component also exposes an `Input` property that allows the use of custom entry and exit animations - [`animationSettings`]({environment:angularApiUrl}/classes/igxbannermodule.html#animationsettings). This allows developers to pass custom animations - either separately defined, or ones from our *IgniteUI for Angular animation suite*({environment:sassApiUrl}/index.html). The default animations used by the banner are [`growVerIn`]({environment:sassApiUrl}/index.html#mixin-grow-ver-in) for entry and [`growVerOut`]({environment:sassApiUrl}/index.html#mixin-grow-ver-out) for exiting.
+The banner component also exposes an `Input` property that allows setting custom opening and closing animations in the [`animationSettings`]({environment:angularApiUrl}/classes/igxbannermodule.html#animationsettings). Developers can pass custom animations - either self-defined, or those from our [`IgniteUI for Angular animation suite`]({environment:sassApiUrl}/index.html). The default animations used by the banner are [`growVerIn`]({environment:sassApiUrl}/index.html#mixin-grow-ver-in) for entry and [`growVerOut`]({environment:sassApiUrl}/index.html#mixin-grow-ver-out) for exiting.
 
-Let's change the animations that our banner uses, so that it appears to slide in.
+Let's change the animations that our banner uses, so that it slides in.
 
 ```html
 <!--banner.component.html-->
@@ -191,9 +191,9 @@ export class MyBannerComponent {
 </div>
 
 ### Binding to events
-The banner component emits events when changing its state - [`onOpening`]({environment:angularApiUrl}/classes/igxbannercomponent.html#onopening) and [`onOpened`]({environment:angularApiUrl}/classes/igxbannercomponent.html#onopened) are called when the banner is shown (before and after, resp.), while [`onClosing`]({environment:angularApiUrl}/classes/igxbannercomponent.html#onclosing) and [`onClosed`]({environment:angularApiUrl}/classes/igxbannercomponent.html#onclosed) are emitted when the banner is closed. The *ing* events (`onOpening`, `onClosing`) are cancelable - they make use of the `ICancelEventArgs` interface and the emitted object has a `cancel` property. If the `cancel` property is set to true, the corresponding end action and event will not be triggered - e.g. if we cancel `onOpening`, the banner's `open` method will not finish and the banner will not be shown.
+The banner component emits events when changing its state - [`onOpening`]({environment:angularApiUrl}/classes/igxbannercomponent.html#onopening) and [`onOpened`]({environment:angularApiUrl}/classes/igxbannercomponent.html#onopened) are called when the banner is shown (before and after, resp.), while [`onClosing`]({environment:angularApiUrl}/classes/igxbannercomponent.html#onclosing) and [`onClosed`]({environment:angularApiUrl}/classes/igxbannercomponent.html#onclosed) are emitted when the banner is closed. The *ing* events (`onOpening`, `onClosing`) are cancelable - they use the `ICancelEventArgs` interface and the emitted object has a `cancel` property. If the `cancel` property is set to true, the corresponding end action and event will not be triggered - e.g. if we cancel `onOpening`, the banner's `open` method will not finish and the banner will not be shown.
 
-To cancel an event, bind to the emitted object and set its `cancel` property to be `true`.
+To cancel an event bind it to the emitted object and set its `cancel` property to `true`.
 
 ```html
 <!--banner.component.html-->
@@ -216,6 +216,6 @@ export class MyBannerComponent {
 
 ## API Reference
 
-[`IgxBannerComponent API`]({environment:angularApiUrl}/classes/igxbannercomponent.html)
-[`IgxBannerModule`]({environment:angularApiUrl}/classes/igxbannermodule.html)
-[`IgxBanner Styles`]({environment:sassApiUrl}/index.html#mixin-igx-banner)
+* [`IgxBannerComponent API`]({environment:angularApiUrl}/classes/igxbannercomponent.html)
+* [`IgxBannerModule`]({environment:angularApiUrl}/classes/igxbannermodule.html)
+* [`IgxBanner Styles`]({environment:sassApiUrl}/index.html#mixin-igx-banner)
