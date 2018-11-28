@@ -7,7 +7,7 @@ _language: ja
 
 <div class="feature feature--hero">
   <div class="feature__details">
-    <h2 id="the-fastest-data-angular-data-grid">高速 Angular データ グリッド</h2>
+    <h1 id="the-fastest-data-angular-data-grid" class="h2">高速 Angular データ グリッド</h1>
     <p>Ignite UI for Angular の [Data Grid](grid.md)   は、サイズの大きなデータセットの高速処理など高パフォーマンスに最適化されています。仮想ディレクティブとパワフルなグリッド機能により、数百のデータ ポイントを遅延なしでスクロールできます。</p>
     <a class="cta-btn" href="https://jp.infragistics.com/products/ignite-ui-angular/getting-started">無償版ダウンロード</a>
   </div>
