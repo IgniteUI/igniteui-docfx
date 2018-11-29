@@ -17,7 +17,7 @@ _language: ja
 | 名前              |  型   | デフォルト            | 説明                                                                           |
 | :---------------: | :-----: | :---------------:  | :-----------------------------------------------------------------------------------: |
 | `$palette`        | map     | undefined          | パレット マップは、すべてのコンポーネントのデフォルト テーマで使用されます。             |
-| `$schema`         | map     | $light-schema      | The schema used as basis for styling the components.                                  |
+| `$schema`         | map     | $light-schema      | コンポーネントのスタイル設定に基づいて使用されるスキーマ。                                  |
 | `$exclude`        | list    | ( )                | グローバル テーマから除外されるコンポーネント テーマのリスト。                     |
 | `$legacy-support` | boolean | `true`             | テーマ設定の方法を決定 - false に設定し、テーマは CSS 変数で設定します。 |
 
@@ -27,14 +27,14 @@ _language: ja
 
 ```scss
 // Import the IgniteUI themes library first
-@import "~igniteui-angular/lib/core/styles/themes/index";
+@import '~igniteui-angular/lib/core/styles/themes/index';
 
 $primary-color: #2ab759; // Some green shade I like
 $secondary-color: #f96a88; // Watermelon pink
 
 $my-color-palette: igx-palette(
-  $primary: $primary-color,
-  $secondary: $secondary-color
+    $primary: $primary-color,
+    $secondary: $secondary-color
 );
 
 // IMPORTANT: Make sure you always include igx-core first!
@@ -62,11 +62,11 @@ $unnecessary: (igx-avatar, igx-badge);
 
 更にアプリで使用しないコンポーネントがある場合、`$exclude` のリストに追加して生成される CSS のサイズを縮小することができます。
 
-### Light and Dark Themes
+### Light と Dark テーマ
 
-In addition to the more powerful `igx-theme` mixin, we include two additional global theme mixins for fast bootstrapping of *__light__* and *__dark__* themes. Those mixins are `igx-light-theme` and `igx-dark-theme`.
+`Igx-theme` mixin に加えグローバル テーマ mixins を追加しました。*__light__* and *__dark__* テーマのブート ストラップにグローバル テーマ mixins が含まれます。これらの mixins は `igx-light-theme` と `igx-dark-theme` です。
 
-Here's a quick showcase of how you can create a light and dark theme for your application
+以下は light と dark テーマを作成する方法を示すショーケースです。
 
 ```scss
 .light-theme {
@@ -80,7 +80,7 @@ Here's a quick showcase of how you can create a light and dark theme for your ap
     @include igx-dark-theme($default-palette);
 }
 ```
-Ideally you would be applying `.light-theme` and `.dark-theme` CSS classes somewhere high in your application DOM tree. Your `app-root` element is a good candidate for that.
+アプリケーション DOM ツリーの上位にある `.light-theme` と `.dark-theme` の CSS クラスを適用し、`app-root` 要素が推奨されます。
 
 ### ブラウザー サポート
 <div class="divider--half"></div>
@@ -89,10 +89,10 @@ Ideally you would be applying `.light-theme` and `.dark-theme` CSS classes somew
 
 一般的なルールは、Internet Explorer 11 をサポートするかどうかに基づいて `$legacy-support` の値を設定します。IE11 をサポートする場合、`$legacy-support` 値を `true` (デフォルト) に設定します。それ以外の場合、値を `false` に設定すると、テーマで CSS 変数が必要です。
 
-### API Overview
-* [Global Theme]({environment:sassApiUrl}/index.html#mixin-igx-theme)
-* [Light Theme]({environment:sassApiUrl}/index.html#mixin-igx-light-theme)
-* [Dark Theme]({environment:sassApiUrl}/index.html#mixin-igx-dark-theme)
+### API
+* [Global テーマ]({environment:sassApiUrl}/index.html#mixin-igx-theme)
+* [Light テーマ]({environment:sassApiUrl}/index.html#mixin-igx-light-theme)
+* [Dark テーマ]({environment:sassApiUrl}/index.html#mixin-igx-dark-theme)
 * [Palette]({environment:sassApiUrl}/index.html#function-igx-palette)
 
 <div class="divider--half"></div>
