@@ -144,33 +144,33 @@
     - name: カスタム インジケーター
       href: financialchart_custom_indicators.md
       new: false
-    - name: カスタム ツールチップ
-      href: financialchart_custom_tooltips.md
-      new: false
+    - name: ツールチップ タイプ
+      href: financialchart_tooltip_types.md
+      new: true
 - name: Doughnut Chart
   href: doughnutchart.md
   new: true
 - name: Pie Chart
   href: piechart.md
   new: true
-  #name: Frameworks
-  #header: true
-  #name: Excel Library
-  #href: excel_library.md
-  #new: true
+  name: Frameworks
+  header: true
+  name: Excel Library
+  href: excel_library.md
+  new: true
   items:
-    # - name: Using Cells
-    #   href: excel_library_using_cells.md
-    #   new: true
-    # - name: Using Tables
-    #   href: excel_library_using_tables.md
-    #   new: true
-    # - name: Using Workbooks
-    #   href: excel_library_using_workbooks.md
-    #   new: true
-    # - name: Using Worksheets
-    #   href: excel_library_using_worksheets.md
-    #   new: true
+    - name: Using Cells
+      href: excel_library_using_cells.md
+      new: true
+    - name: Using Tables
+      href: excel_library_using_tables.md
+      new: true
+    - name: Using Workbooks
+      href: excel_library_using_workbooks.md
+      new: true
+    - name: Using Worksheets
+      href: excel_library_using_worksheets.md
+      new: true
     - name: チャートでの作業
       href: excel_library_working_with_charts.md
       new: true
