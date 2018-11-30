@@ -199,7 +199,7 @@
   items:
     - name: パレット
       href: themes/palette.md
-    - name: Schemas
+    - name: スキーマ
       href: themes/schemas.md
       new: true
     - name: タイポグラフィ
@@ -209,7 +209,7 @@
     - name: コンポーネント テーマ
       href: themes/component-themes.md
       new: true
-    - name: テーマのデモ
+    - name: サンプル
       href: themes/examples.md
 - name: Shadows
   href: shadows.md

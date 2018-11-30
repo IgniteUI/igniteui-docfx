@@ -131,9 +131,9 @@ And this is what our Sass stylesheet looks like:
 // app-avatar.component.scss
 
 // Import all required functions and mixins
-@import "~igniteui-angular/lib/core/styles/themes/utilities";
-@import "~igniteui-angular/lib/core/styles/components/avatar-theme";
-@import "~igniteui-angular/lib/core/styles/components/avatar-component";
+@import '~igniteui-angular/lib/core/styles/themes/utilities';
+@import '~igniteui-angular/lib/core/styles/components/avatar-theme';
+@import '~igniteui-angular/lib/core/styles/components/avatar-component';
 
 $avatar-theme: igx-avatar-theme($initials-background: royalblue);
 
@@ -158,7 +158,7 @@ The below example shows how you can style multiple components using just CSS var
 
 ```scss
 // Import the IgniteUI themes library first
-@import "~igniteui-angular/lib/core/styles/themes/index";
+@import '~igniteui-angular/lib/core/styles/themes/index';
 
 @include igx-core();
 @include igx-theme($default-palette, $legacy-support: false);
@@ -178,10 +178,9 @@ $badge-theme: igx-badge-theme($background-color: white);
 The below sample uses the sample from the [View Encapsulation](#view-encapsulation) section as a starting point:
 
 ```scss
-@import "~igniteui-angular/lib/core/styles/themes/utilities";
-@import "~igniteui-angular/lib/core/styles/components/avatar-theme";
-@import "~igniteui-angular/lib/core/styles/components/avatar-component";
-
+@import '~igniteui-angular/lib/core/styles/themes/utilities';
+@import '~igniteui-angular/lib/core/styles/components/avatar-theme';
+@import '~igniteui-angular/lib/core/styles/components/avatar-component'; 
 // Disable legacy support first.
 $igx-legacy-support: false;
 $avatar-theme: igx-avatar-theme($initials-background: royalblue);
@@ -204,6 +203,12 @@ As a bonus, any Ignite UI for Angular theme built with the `$igx-legacy-support`
 }
 ```
 <div class="divider"></div>
+
+### API Overview
+* [Global Theme]({environment:sassApiUrl}/index.html#mixin-igx-theme)
+* [Avatar Theme]({environment:sassApiUrl}/index.html#function-igx-avatar)
+
+<div class="divider--half"></div>
 
 ### Additional Resources
 <div class="divider--half"></div>
