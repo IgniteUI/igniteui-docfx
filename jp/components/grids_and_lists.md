@@ -8,7 +8,7 @@ _language: ja
 <div class="feature feature--hero">
   <div class="feature__details">
     <h1 id="the-fastest-data-angular-data-grid" class="h2">高速 Angular データ グリッド</h1>
-    <p>Ignite UI for Angular の [Data Grid](grid.md)   は、サイズの大きなデータセットの高速処理など高パフォーマンスに最適化されています。仮想ディレクティブとパワフルなグリッド機能により、数百のデータ ポイントを遅延なしでスクロールできます。</p>
+    <p>Ignite UI for Angular の [Data Grid](grid.md) は、大規模なデータセットの高速処理など高パフォーマンスを念頭に最適化されています。仮想ディレクティブとパワフルなグリッド機能により、仮想データグリッドでは数百のデータ ポイントを遅延なしでスクロールできます。</p>
     <a class="cta-btn" href="https://jp.infragistics.com/products/ignite-ui-angular/getting-started">無償版ダウンロード</a>
   </div>
   <div class="feature__image feature__image--right">
@@ -26,7 +26,7 @@ _language: ja
     </div>
     <div class="feature__details">
       <h3 id="virtualization-and-performance">[仮想化とパフォーマンス](grid_virtualization.md)</h3>
-      <p>Angular グリッドのデータ グリッド列やレベルの仮想化機能は、行や列を行数/列数に関係なく無制限に、そしてシームレスにスクロールできます。遅延、画面のちらつきなどのない Excel のようなスクロールをユーザーに提供できます。</p>
+      <p>[Angular グリッドのデータ グリッド](/products/ignite-ui-angular) の列やレベルの仮想化機能は、行や列を行数/列数に関係なく無制限に、そしてシームレスにスクロールできます。遅延や画面のちらつきなどのない Excel のようなスクロールをユーザーに提供できます。</p>
     </div>
   </div>
 
