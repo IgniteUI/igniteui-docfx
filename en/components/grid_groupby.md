@@ -26,7 +26,7 @@ It is possible to set the initial grouping of the grid by an array of expression
 public ngOnInit() {
     grid.groupingExpressions = [
         { fieldName: 'ProductName', dir: SortingDirection.Desc },
-        { fieldName: 'Released', dir: SortingDirection.Desc, ignoreCase: false }
+        { fieldName: 'Released', dir: SortingDirection.Desc }
     ];
 }
 ```
@@ -55,7 +55,7 @@ public ngOnInit() {
 During runtime the expressions are gettable and settable from the [`groupingExpressions`]({environment:angularApiUrl}/classes/igxgridcomponent.html#groupingexpressions) property. If you need to just add or change an existing expression you may also use the [`groupBy`]({environment:angularApiUrl}/classes/igxgridcomponent.html#groupby) method with either a single or an array of [`ISortingExpression`]({environment:angularApiUrl}/interfaces/isortingexpression.html).
 
 ```typescript
-grid.groupBy({ fieldName: 'ProductName', dir: SortingDirection.Desc });
+grid.groupBy({ fieldName: 'ProductName', dir: SortingDirection.Desc, ignoreCase: true });
 ```
 
 Grouping works in conjunction with sorting and grouping expressions are applied as sorting ones even though columns may be sorted without being grouped. You will always find the grouping expressions in the [`sortingExpressions`]({environment:angularApiUrl}/classes/igxgridcomponent.html#sortingexpressions) property, sorted in a way that grouped columns' expressions are always first. The sorting API will affect grouping if it changes the expression for a column that is grouped. Removing a grouping expression (ungrouping a column) also unsorts it.
