@@ -31,17 +31,20 @@ This is done via the [`sortable`]({environment:angularApiUrl}/classes/igxcolumnc
 You can sort any column or a combination of columns through the grid API using the grid [`sort`]({environment:angularApiUrl}/classes/igxgridcomponent.html#sort) method:
 
 ```typescript
-import { SortingDirection, DefaultSortingStrategy } from 'igniteui-angular';
+import { SortingDirection } from 'igniteui-angular';
 
 // Perform a case insensitive ascending sort on the ProductName column.
-this.grid.sort({ fieldName: 'ProductName', dir: SortingDirection.Asc, ignoreCase: true, strategy: DefaultSortingStrategy.instance() });
+this.grid.sort({ fieldName: 'ProductName', dir: SortingDirection.Asc, ignoreCase: true });
 
 // Perform sorting on both the ProductName and Price columns.
 this.grid.sort([
-    { fieldName: 'ProductName', dir: SortingDirection.Asc, ignoreCase: true, strategy: DefaultSortingStrategy.instance() },
-    { fieldName: 'Price', dir: SortingDirection.Desc, ignoreCase: false, strategy: DefaultSortingStrategy.instance() }
+    { fieldName: 'ProductName', dir: SortingDirection.Asc, ignoreCase: true },
+    { fieldName: 'Price', dir: SortingDirection.Desc }
 ]);
 ```
+
+> [!NOTE]
+> Sorting is performed using our [`DefaultSortingStrategy`]({environment:angularApiUrl}/classes/defaultsortingstrategy.html) algorithm. Any [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#sortStrategy) or [`ISortingExpression`]({environment:angularApiUrl}/interfaces/isortingexpression.html#strategy) can use a custom implementation of the [`ISortingStrategy`]({environment:angularApiUrl}/interfaces/isortingstrategy.html) as a substitute algorithm. This is useful when custom sorting needs to be defined for complex template columns, or image columns, for example.
 
 As with the filtering behavior, you can clear sorting state using the [`clearSort`]({environment:angularApiUrl}/classes/igxgridcomponent.html#clearsort) method:
 
@@ -63,8 +66,8 @@ It is possible to set the initial sorting state of the grid by passing an array 
 ```typescript
 public ngOnInit() {
     this.grid.sortingExpressions = [
-        { fieldName: 'ProductName', dir: SortingDirection.Asc, ignoreCase: true, strategy: DefaultSortingStrategy.instance() },
-        { fieldName: 'Price', dir: SortingDirection.Desc, ignoreCase: false, strategy: DefaultSortingStrategy.instance() }
+        { fieldName: 'ProductName', dir: SortingDirection.Asc, ignoreCase: true },
+        { fieldName: 'Price', dir: SortingDirection.Desc }
     ];
 }
 ```

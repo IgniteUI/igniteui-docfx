@@ -27,8 +27,8 @@ _language: ja
 ```typescript
 public ngOnInit() {
     grid.groupingExpressions = [
-        { fieldName: 'ProductName', dir: SortingDirection.Desc, ignoreCase: true, strategy: DefaultSortingStrategy.instance() },
-        { fieldName: 'Released', dir: SortingDirection.Desc, ignoreCase: false, strategy: DefaultSortingStrategy.instance() }
+        { fieldName: 'ProductName', dir: SortingDirection.Desc },
+        { fieldName: 'Released', dir: SortingDirection.Desc, ignoreCase: false }
     ];
 }
 ```
@@ -57,7 +57,7 @@ public ngOnInit() {
 ランタイムの式は [`groupingExpressions`]({environment:angularApiUrl}/classes/igxgridcomponent.html#groupingexpressions) プロパティから取得または設定できます。既存の式を追加または変更する必要がある場合、[`ISortingExpression`]({environment:angularApiUrl}/interfaces/isortingexpression.html) の単一または配列 の [`groupBy`]({environment:angularApiUrl}/classes/igxgridcomponent.html#groupby) メソッドを使用してください。
 
 ```typescript
-grid.groupBy({ fieldName: 'ProductName', dir: SortingDirection.Desc, ignoreCase: true, strategy: DefaultSortingStrategy.instance() });
+grid.groupBy({ fieldName: 'ProductName', dir: SortingDirection.Desc });
 ```
 
 グループ化は、並べ替えおよびグループ式が列がグループ化されずに並べ替えられた場合も並べ替えされた列として適用される場合に可能です。グループ式は [`sortingExpressions`]({environment:angularApiUrl}/classes/igxgridcomponent.html#sortingexpressions) プロパティにあり、グループ列の式が常に最初になるよう並べ替えます。並べ替え API は、グループ化された列の式を変更した場合にグルーピングに影響があります。グループ式 (列グループ解除) を削除して並べ替えを解除します。
