@@ -47,7 +47,7 @@ export class AppModule {}
 
 #### ツリー セル
 
-ツリー グリッド階層の構築に使用するオプション (子コレクションまたは主キーまたは外部キー) にかかわらず、ツリー グリッドの行は 2 タイプのセルで構成されます。 
+ツリー グリッド階層の構築に使用するオプション (子コレクションまたは主キーまたは外部キー) にかかわらず、ツリー グリッドの行は 2 タイプのセルで構成されます。
 
 - [`IgxGridCellComponent`]({environment:angularApiUrl}/classes/igxgridcellcomponent.html) - 値を含む標準セル。
 - [`IgxTreeGridCellComponent`]({environment:angularApiUrl}/classes/igxtreegridcellcomponent.html) - セル行のレベルに基づいた値、インジケーターの展開/縮小、インデント div 要素を含むツリー セル。インナー [`treeRow`]({environment:angularApiUrl}/classes/igxtreegridrowcomponent.html#treerow) の [`level`]({environment:angularApiUrl}/interfaces/itreegridrecord.html#level) プロパティでアクセスできる行コンポーネント レベル。
@@ -68,7 +68,7 @@ export class AppModule {}
 // Sample Employee Data
 
 export const EMPLOYEE_DATA = [
-    {        
+    {
         Name: "Johnathan Winchester",
         ID: 1,
         HireDate: new Date(2008, 3, 20),
@@ -76,7 +76,7 @@ export const EMPLOYEE_DATA = [
         Employees: [
             {
                 Name: "Michael Burke",
-                ID: 3,                
+                ID: 3,
                 HireDate: new Date(2011, 6, 3),
                 Age: 43,
                 Employees: []
@@ -85,13 +85,13 @@ export const EMPLOYEE_DATA = [
                 Name: "Thomas Anderson"
                 ID: 2,
                 HireDate: new Date(2009, 6, 19),
-                Age: 29,                
+                Age: 29,
                 Employees: []
             },
             ...
         ]
     },
-    ...            
+    ...
 ]
 ```
 
@@ -212,7 +212,7 @@ export class MyComponent implements OnInit {
     <igx-column field="Age" dataType="number" [sortable]="true" [editable]="true" [movable]="true" [resizable]="true"></igx-column>
 </igx-tree-grid>
 ```
- 
+
 以下は結果です。
 
 <div class="sample-container loading" style="height:450px">
@@ -251,7 +251,7 @@ export class AppModule {}
 データ ソースにバインドしたツリーグリッドを定義して [`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditable) を true に設定します。
 
 ```html
-    <igx-tree-grid #treeGrid1 [data]="data" primaryKey="EmployeID" foreignKey="PID" width="100%" height="500px" 
+    <igx-tree-grid #treeGrid1 [data]="data" primaryKey="EmployeID" foreignKey="PID" width="100%" height="500px"
     rowEditable=true rowSelectable=true columnHiding=true>
         <igx-column *ngFor="let c of columns"
             [editable]="c.editable"
@@ -304,7 +304,7 @@ export class TreeGridRowEditSampleComponent implements OnInit {
 > [!NOTE]
 > グリッドは、保留中のセル変更を保持するプロバイダー [`IgxBaseTransactionService`]({environment:angularApiUrl}/classes/igxbasetransactionservice.html) を行ステートをサブミットまたはキャンセルするまで内部使用します。
 
-以下は結果です。 
+以下は結果です。
 
 <div class="sample-container loading" style="height:590px">
     <iframe id="tree-grid-row-editing-sample-iframe" src='{environment:demosBaseUrl}/treegrid-row-edit' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -322,6 +322,8 @@ export class TreeGridRowEditSampleComponent implements OnInit {
 - **sorting**が列に適用された際にデータ行がレベルごとに並べ替えられます。ルートレベルの行はそれぞれの子に関係なく個々に並べ替えられます。各子コレクションは個々に並べ替えられます。
 - 最初の列 [`visibleIndex`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#visibleindex) は、常にツリー列です。
 - 列ピン固定、列の非表示、列移動などの処理後に 0 の [`visibleIndex`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#visibleindex) で終わる列はツリー列になります。
+- Exported Excel worksheets reflect the hierarchy by grouping the records as they are grouped in the tree grid itself. All records expanded states would also be persisted and reflected.
+- When exporting to CSV, levels and expanded states are ignored and all data is exported as flat.
 
 <div class="divider--half"></div>
 
@@ -332,7 +334,6 @@ export class TreeGridRowEditSampleComponent implements OnInit {
 |ツリー セルのテンプレート化|ツリーセルをテンプレート化する場合、セルの境界外にスパンするコンテンツはオーバレイに配置しない限り表示されません。|
 |集計|集計はツリーグリッドで現在サポートされておりません。|
 |検索 API|検索 API はツリーグリッドで現在サポートされておりません。|
-|エクスポート|エクスポートはツリーグリッドで現在サポートされておりません。|
 |グループ化|グループ化機能は、ツリーグリッドに継承されるためサポートされません。|
 
 
