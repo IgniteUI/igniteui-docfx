@@ -32,17 +32,20 @@ Ignite UI for Angular では、列レベルでの**並べ替え**が可能です
 グリッドの [`sort`]({environment:angularApiUrl}/classes/igxgridcomponent.html#sort) メソッドを使用し、列または複数の列をグリッド API で並べ替えできます。
 
 ```typescript
-import { SortingDirection, DefaultSortingStrategy } from 'igniteui-angular';
+import { SortingDirection } from 'igniteui-angular';
 
 // Perform a case insensitive ascending sort on the ProductName column.
-this.grid.sort({ fieldName: 'ProductName', dir: SortingDirection.Asc, ignoreCase: true, strategy: DefaultSortingStrategy.instance() });
+this.grid.sort({ fieldName: 'ProductName', dir: SortingDirection.Asc });
 
 // Perform sorting on both the ProductName and Price columns.
 this.grid.sort([
-    { fieldName: 'ProductName', dir: SortingDirection.Asc, ignoreCase: true, strategy: DefaultSortingStrategy.instance() },
-    { fieldName: 'Price', dir: SortingDirection.Desc, ignoreCase: false, strategy: DefaultSortingStrategy.instance() }
+    { fieldName: 'ProductName', dir: SortingDirection.Asc },
+    { fieldName: 'Price', dir: SortingDirection.Desc, ignoreCase: false }
 ]);
 ```
+
+> [!NOTE]
+> Sorting は、[`DefaultSortingStrategy`]({environment:angularApiUrl}/classes/defaultsortingstrategy.html) アルゴリズムを使用して実行されます。[`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#sortStrategy) または [`ISortingExpression`]({environment:angularApiUrl}/interfaces/isortingexpression.html#strategy) は、代替アルゴリズムとして [`ISortingStrategy`]({environment:angularApiUrl}/interfaces/isortingstrategy.html) のカスタム実装を使用できます。たとえば複雑なテンプレート列や画像列にユーザー定義の並べ替えを定義する必要がある場合に便利です。
 
 フィルター動作と同様に、並べ替え状態をクリアするには [`clearSort`]({environment:angularApiUrl}/classes/igxgridcomponent.html#clearsort) メソッドを使用します。
 
@@ -64,8 +67,8 @@ this.grid.clearSort();
 ```typescript
 public ngOnInit() {
     this.grid.sortingExpressions = [
-        { fieldName: 'ProductName', dir: SortingDirection.Asc, ignoreCase: true, strategy: DefaultSortingStrategy.instance() },
-        { fieldName: 'Price', dir: SortingDirection.Desc, ignoreCase: false, strategy: DefaultSortingStrategy.instance() }
+        { fieldName: 'ProductName', dir: SortingDirection.Asc },
+        { fieldName: 'Price', dir: SortingDirection.Desc, ignoreCase: false }
     ];
 }
 ```
