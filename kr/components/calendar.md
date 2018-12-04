@@ -9,7 +9,7 @@ _language: kr
 <p class="highlight">The Ignite UI for Angular Calendar component is developed as a native [Angular component](https://angular.io/guide/architecture#components). Use it to provide your application with three easy and intuitive ways to display date information. Users can select a single date, multiple dates or pick a range of dates.</p>
 
 ### Calendar Demo
-<div class="sample-container loading" style="height: 590px">
+<div class="sample-container loading" style="height: 2000px">
     <iframe id="calendar-sample-5-iframe" src='{environment:demosBaseUrl}/calendar-sample-5' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -56,7 +56,7 @@ Instantiating the [`IgxCalendarComponent`]({environment:angularApiUrl}/classes/i
 <igx-calendar selection="range"></igx-calendar>
 ```
 Notice that the calendar header is not rendered when the selection is either `multi` or `range`:
-<div class="sample-container" style="height: 590px">
+<div class="sample-container" style="height: 2000px">
     <iframe id="calendar-sample-1-iframe" src='{environment:demosBaseUrl}/calendar-sample-1' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
