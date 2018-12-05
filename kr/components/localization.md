@@ -19,16 +19,20 @@ With only a few lines of code, users can easily localize the strings in Ignite U
 ### Usage
 
 #### Localize entire application
-There is a new global function added `changei18n`, which takes an `IResourceStrings` obeject as a parameter and change the global i18n for the igniteui-angular components on an app.module level. To get all available reosource strings there is another global function `getCurrentResourceStrings` which returns an `IResourceStrings` object.
+
+To get all available resource strings, there is a global function `getCurrentResourceStrings`, which returns an `IResourceStrings` object.
+The values could be replaced in order to be localized and then the object can be passed to the `changei18n` function, as a parameter, which will change the global i18n for the igniteui-angular components on an app.module level. The localization can be done anywhere in the app, not only in the app.module.ts
 
 ```typescript
-    const currentRS = getCurrentResourceStrings();
+//app.module.ts
 
-    for (const key of Object.keys(currentRS)) {
-        currentRS[key] = '[Localizable]'+ currentRS[key];
-    }
+const currentRS = getCurrentResourceStrings();
 
-    changei18n(currentRS);
+for (const key of Object.keys(currentRS)) {
+    currentRS[key] = '[Localized]'+ currentRS[key];
+}
+
+changei18n(currentRS);
 ```
 <div>
 <button data-localize="stackblitz" class="stackblitz-btn" data-src="{environment:demosBaseUrl}/localization-sample-2"
@@ -37,12 +41,13 @@ There is a new global function added `changei18n`, which takes an `IResourceStri
 </div>
 
 #### Localize particular strings for all components
-Another approach is to localize/change only particular strings for all `igx-grid` components. There is a new property added - `resourceStrings`, which is of `IGridResourceStrings` type.
+
+Another approach is to localize/change only some of the strings for all components of given type. There is a `resourceStrings` property for the components that could be localized, which is of `IResourceStrings` type.
 
 ```typescript
-    const currentRS = this.grid.resourceStrings;
-    currentRS.igx_grid_filter = '[Localizable]Filter';
-    currentRS.igx_grid_filter_row_close = '[Localizable]Close';
+const currentRS = this.grid.resourceStrings;
+currentRS.igx_grid_filter = '[Localized]Filter';
+currentRS.igx_grid_filter_row_close = '[Localized]Close';
 ```
 
 <div>
@@ -51,35 +56,43 @@ Another approach is to localize/change only particular strings for all `igx-grid
     </button>
 </div>
 
-#### Localize all strings for particular component
-If only a particular `igx-grid` instance should be localized, there is way. The `resourceStrings` proeprty should be used and it should be set to a new instance of `IGridResourceStrings` type.
+#### Localize particular strings for particular instance of a component
+
+If only a single `igx-grid` instance should be localized, there is way. The `resourceStrings` proeprty should be used and it should be set to a new instance of `IGridResourceStrings` type.
 
 ```typescript
-    const currentRS = getCurrentResourceStrings();
+const newGridRes: IGridResourceStrings = {
+    igx_grid_filter: '[Localized]Filter',
+    igx_grid_filter_row_close: '[Localized]Close'
+}
 
-    for (const key of Object.keys(currentRS)) {
-        currentRS[key] = '[Localizable]'+ currentRS[key];
-    }
-
-    this.grid.resourceStrings = currentRS;
+this.grid.resourceStrings = newGridRes;
 ```
 
 <div>
 <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="localization-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-### Get resource strings
+### Load localized resources from npm package
 
-In order to import resource strings for Japanese or Korean you should add the following import to your application:
+Firstly the package that contains the resource strings should be installed:
+
+`npm install igniteui-angular-i18n --save-dev`
+
+Then in order to use Japanese and Korean resource strings, the following imports should be added to the application and the `changei18n` functions should be called:
 
 ```typescript
+//app.module.ts
 
 import { IgxResouceStringsJA } from 'igniteui-angular-i18n';
 import { IgxResouceStringsKR } from 'igniteui-angular-i18n';
+...
 
+changei18n(IgxResouceStringsJA);
 ```
 
 ### Additional Resources
+
 <div class="divider--half"></div>
 
 Our community is active and always welcoming to new ideas.
