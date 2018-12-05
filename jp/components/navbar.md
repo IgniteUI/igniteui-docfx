@@ -47,29 +47,18 @@ export class AppModule {}
 </igx-navbar>
 ```
 
-#### [戻る] ボタンの例
-
-開いたアプリケーションが確認でき、メニューでアプリケーションの機能も表示できます。以下のコードは、アクション ボタンを表示し、ボタンにメニュー アイコンを使用します。
+#### With menu button
+Good, we know which application we have opened. Now, let's see what capabilities it offers us by exploring its menu. To achieve this we will show the action button and make it use a menu icon as follows:
 
 ```html
 <!--navbar.component.html-->
 
-<igx-navbar title="Sample App"
-    actionButtonIcon="menu"
-    [isActionButtonVisible]="true">
+<igx-navbar title="Sample App" actionButtonIcon="menu" [isActionButtonVisible]="true">
 </igx-navbar>
 ```
 
-以下は結果です:
-
-<div class="sample-container loading" style="height: 330px">
-    <iframe id="nav-bar-sample-1-iframe" frameborder="0" seamless width="100%" height="100%" src='{environment:demosBaseUrl}/navbar-sample-1' onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="nav-bar-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
-</div>
-
-<div class="divider--half"></div>
+> [!NOTE]
+> The [`actionButtonIcon`]({environment:angularApiUrl}/classes/igxnavbarcomponent.html#actionbuttonicon) uses the Material fontset by design.
 
 #### アイコンの追加
 
@@ -96,7 +85,7 @@ export class AppModule {}
 ```html
 <!--navbar.component.html-->
 
- <igx-navbar title="Sample App" actionButtonIcon="menu">
+ <igx-navbar title="Sample App" actionButtonIcon="menu" [isActionButtonVisible]="true">
     <igx-icon>search</igx-icon>
     <igx-icon>favorite</igx-icon>
     <igx-icon>more_vert</igx-icon>
@@ -105,11 +94,56 @@ export class AppModule {}
 
 <div class="divider"></div>
 
+#### Custom action icon
+
+What if we want to use a custom action icon for our app navigation instead of the default one that is on the left-most part of the navbar?
+We can easily achieve this by using the [`igx-action-icon`]({environment:angularApiUrl}/classes/igxactionicondirective.html) directive, which will replace the default action icon with the content we have provided. We will do that by using the Font Awesome home icon in combination with a style for it.
+
+```css
+/* navbar.component.css */
+
+@import url("https://unpkg.com/@fortawesome/fontawesome-free-webfonts@^1.0.9/css/fontawesome.css");
+@import url("https://unpkg.com/@fortawesome/fontawesome-free-webfonts@^1.0.9/css/fa-regular.css");
+@import url("https://unpkg.com/@fortawesome/fontawesome-free-webfonts@^1.0.9/css/fa-solid.css");
+
+.customIcon {
+    vertical-align: middle;
+}
+```
+
+```html
+<!--navbar.component.html-->
+
+ <igx-navbar title="Sample App" actionButtonIcon="menu" [isActionButtonVisible]="true">
+    <igx-icon>search</igx-icon>
+    <igx-icon>favorite</igx-icon>
+    <igx-icon>more_vert</igx-icon>
+
+    <igx-action-icon>
+        <igx-icon class="customIcon" fontSet="fa" name="fa-home"></igx-icon>
+    </igx-action-icon>
+</igx-navbar>
+```
+
+> [!NOTE]
+> If [`igx-action-icon`]({environment:angularApiUrl}/classes/igxactionicondirective.html) is provided, the default [`actionButtonIcon`]({environment:angularApiUrl}/classes/igxnavbarcomponent.html#actionbuttonicon) will not be used. 
+
+以下は結果です:
+
+<div class="sample-container loading" style="height: 330px">
+    <iframe id="nav-bar-sample-1-iframe" frameborder="0" seamless width="100%" height="100%" src='{environment:demosBaseUrl}/navbar-sample-1' onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="nav-bar-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+</div>
+<div class="divider--half"></div>
+
 ### API リファレンス
 
 このトピックでは NavBar コンポーネントの使用方法を紹介しました。以下は、使用した API のリンクです。
 
-[`IgxNavbarComponent`]({environment:angularApiUrl}/classes/igxnavbarcomponent.html)
+* [`IgxNavbarComponent`]({environment:angularApiUrl}/classes/igxnavbarcomponent.html)
+* [`IgxActionIconDirective`]({environment:angularApiUrl}/classes/igxactionicondirective.html)
 
 その他のコンポーネントおよびディレクティブ (またはそのいずれか) で使用した API:
 
