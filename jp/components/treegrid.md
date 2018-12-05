@@ -132,14 +132,15 @@ IgxTreeGridComponent を階層にバインドするには、[`childDataKey`]({en
 </igx-tree-grid>
 ```
 
-最後に[`showToolbar`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#showtoolbar)、[`columnHiding`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#columnhiding)、[`columnPinning`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#columnpinning) を個別に使用して、列非表示と列ピン固定機能を含むツリー グリッドのツールバーを有効にします。
+Finally, we will enable the toolbar of our tree grid, along with the column hiding, column pinning and exporting features by using the [`showToolbar`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#showtoolbar), [`columnHiding`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#columnhiding), [`columnPinning`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#columnpinning), [`exportExcel`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#exportexcel) and [`exportCsv`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#exportcsv) properties respectively.
 
 ```html
 <!--treeGridSample.component.html-->
 
 <igx-tree-grid #treeGrid [data]="localData" childDataKey="Employees"
                [autoGenerate]="false" [rowSelectable]="true" [paging]="true" [allowFiltering]="true"
-               [showToolbar]="true" toolbarTitle="Employees" [columnHiding]="true" [columnPinning]="true">
+               [showToolbar]="true" toolbarTitle="Employees" [columnHiding]="true" [columnPinning]="true"
+               [exportExcel]="true" [exportCsv]="true" exportExcelText="To Excel" exportCsvText="To CSV">
     <igx-column field="Name" dataType="string" [sortable]="true" [editable]="true" [movable]="true" [resizable]="true"></igx-column>
     <igx-column field="HireDate" dataType="date" [sortable]="true" [editable]="true" [movable]="true" [resizable]="true"></igx-column>
     <igx-column field="Age" dataType="number" [sortable]="true" [editable]="true" [movable]="true" [resizable]="true"></igx-column>
@@ -231,28 +232,11 @@ export class MyComponent implements OnInit {
 [`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditable) が有効な場合、[`editable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable) プロパティが定義されていない場合も [field]({environment:angularApiUrl}/classes/igxcolumncomponent.html#field) プロパティが定義されたすべての列 ([`primaryKey`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#primarykey) を除く) が編集可能になります。特定の列の編集を無効にする場合、[`editable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable) 列の入力を false に設定します。
 以下の手順では、グリッドの [`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditable) プロパティで行編集を有効にする方法を示します。
 
-はじめに [`IgxTreeGridModule`]({environment:angularApiUrl}/classes/igxtreegridmodule.html) を **app.module.ts** ファイルにインポートします。
-
-```typescript
-// app.module.ts
-
-import { IgxTreeGridModule } from 'igniteui-angular';
-
-@NgModule({
-    imports: [
-        ...
-        IgxTreeGridModule,
-        ...
-    ]
-})
-export class AppModule {}
-```
-
-データ ソースにバインドしたツリーグリッドを定義して [`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditable) を true に設定します。
+Let's start with defining a tree grid with bound data source and [`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditable) set to true:
 
 ```html
     <igx-tree-grid #treeGrid1 [data]="data" primaryKey="EmployeID" foreignKey="PID" width="100%" height="500px"
-    rowEditable=true rowSelectable=true columnHiding=true>
+        rowEditable=true rowSelectable=true>
         <igx-column *ngFor="let c of columns"
             [editable]="c.editable"
             [field]="c.field"
@@ -279,7 +263,7 @@ import { IgxTreeGridComponent } from "igniteui-angular";
 
 @Component({
     providers: [],
-    selector: "app-tree-grid-row-editing-sample.component",
+    selector: "app-tree-grid-row-editing-sample",
     styleUrls: ["tree-grid-row-editing-sample.component.scss"],
     templateUrl: "tree-grid-row-editing-sample.component.html"
 })

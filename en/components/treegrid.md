@@ -131,14 +131,15 @@ We will also enable the filtering, sorting, editing, moving and resizing feature
 </igx-tree-grid>
 ```
 
-Finally, we will enable the toolbar of our tree grid, along with the column hiding and the column pinning features by using the [`showToolbar`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#showtoolbar), [`columnHiding`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#columnhiding) and [`columnPinning`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#columnpinning) properties respectively.
+Finally, we will enable the toolbar of our tree grid, along with the column hiding, column pinning and exporting features by using the [`showToolbar`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#showtoolbar), [`columnHiding`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#columnhiding), [`columnPinning`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#columnpinning), [`exportExcel`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#exportexcel) and [`exportCsv`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#exportcsv) properties respectively.
 
 ```html
 <!--treeGridSample.component.html-->
 
 <igx-tree-grid #treeGrid [data]="localData" childDataKey="Employees"
                [autoGenerate]="false" [rowSelectable]="true" [paging]="true" [allowFiltering]="true"
-               [showToolbar]="true" toolbarTitle="Employees" [columnHiding]="true" [columnPinning]="true">
+               [showToolbar]="true" toolbarTitle="Employees" [columnHiding]="true" [columnPinning]="true"
+               [exportExcel]="true" [exportCsv]="true" exportExcelText="To Excel" exportCsvText="To CSV">
     <igx-column field="Name" dataType="string" [sortable]="true" [editable]="true" [movable]="true" [resizable]="true"></igx-column>
     <igx-column field="HireDate" dataType="date" [sortable]="true" [editable]="true" [movable]="true" [resizable]="true"></igx-column>
     <igx-column field="Age" dataType="number" [sortable]="true" [editable]="true" [movable]="true" [resizable]="true"></igx-column>
@@ -230,28 +231,11 @@ Row editing - allows modification of several cells in the row, before submitting
 If [`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditable) is enabled, then all columns that have [field]({environment:angularApiUrl}/classes/igxcolumncomponent.html#field) property defined (excluding a [`primaryKey`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#primarykey) one) will be editable, even though the [`editable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable) property is not defined for them. If you want to disable editing for a specific column, then you set the [`editable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable) column's input to false.
 The following sample illustrates how to enable row editing using the grid's [`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditable) property.
 
-Let's start from scratch. Import the [`IgxTreeGridModule`]({environment:angularApiUrl}/classes/igxtreegridmodule.html) in the **app.module.ts** file:
-
-```typescript
-// app.module.ts
-
-import { IgxTreeGridModule } from 'igniteui-angular';
-
-@NgModule({
-    imports: [
-        ...
-        IgxTreeGridModule,
-        ...
-    ]
-})
-export class AppModule {}
-```
-
-Then define a tree grid with bound data source and [`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditable) set to true:
+Let's start with defining a tree grid with bound data source and [`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditable) set to true:
 
 ```html
     <igx-tree-grid #treeGrid1 [data]="data" primaryKey="EmployeID" foreignKey="PID" width="100%" height="500px"
-    rowEditable=true rowSelectable=true columnHiding=true>
+        rowEditable=true rowSelectable=true>
         <igx-column *ngFor="let c of columns"
             [editable]="c.editable"
             [field]="c.field"
@@ -279,7 +263,7 @@ import { IgxTreeGridComponent } from "igniteui-angular";
 
 @Component({
     providers: [],
-    selector: "app-tree-grid-row-editing-sample.component",
+    selector: "app-tree-grid-row-editing-sample",
     styleUrls: ["tree-grid-row-editing-sample.component.scss"],
     templateUrl: "tree-grid-row-editing-sample.component.html"
 })
