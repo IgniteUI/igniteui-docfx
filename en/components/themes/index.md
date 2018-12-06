@@ -19,28 +19,41 @@ Our approach to theming is based around several simple concepts.
 ### Palettes
 <div class="divider--half"></div>
 
-The first concept is the one of palettes of colors. As in any visual tool, colors are the main difference between one application and another. The Material Design Guidelines prescribe predefined palettes of colors that range in hue and lightness for a base color. There's a good reason for that. They really want to ensure good color matching and contrast between the background colors and the foreground text colors. This is great, but limiting at the same time. If you wanted to have your own custom palette that matches your branding, you would be out of luck. We recognize this is a problem, so we invented an algorithm that would generate Material-like palettes from base colors you provide. Even more, we also generate contrast text colors for each hue in the palette.
+The first concept is the one of palettes of colors. As in any visual tool, colors are the main differentiating factor between one application and another. The Material Design Guidelines prescribe predefined palettes of colors that range in hue and lightness for a base color. There's a good reason for that. They really want to ensure good color matching and contrast between the background colors and the foreground text colors. This is great, but limiting at the same time. If you wanted to have your own custom palette that matches your branding, you would be out of luck. We recognize this is a problem, so we invented an algorithm that would generate Material-like palettes from base colors you provide. Even more, we also generate contrast text colors for each hue in the palette.
+
+<div class="divider--half"></div>
+
+### Schemas
+<div class="divider--half"></div>
+
+The second important concept revolves around theme schemas. Theme schemas are like recipes for component themes. They give individual component themes information about colors, margins, paddings, etc. For instance, a component scheme tells a component theme that the background color for an element should be the `500` variant from the `primary` palette, without caring what palette the user passes to the component theme.
 
 <div class="divider--half"></div>
 
 ### Themes
 <div class="divider--half"></div>
 
-The second concept is the one of themes. Palettes, wouldn't do much good if they weren't used by a theme. So we have themes for each component, and a global one, that styles the entire application and every component in it. You simply pass your generated palette to the global theme, we take care of the rest. You can, of course, style each component individually to your liking. We will take a closer look at how to do that later in this article.
+Finally, we have component themes. Palettes and Schemas wouldn't do much good on their own if they weren't used by a theme. We have themes for individual component, and a global one, that styles the entire application and every component in it. You simply pass a palette and a schema to the global theme, we take care of the rest. You can, of course, style each component individually to your liking.
 
 ### Typography
 <div class="divider--half"></div>
 
-The last concept revolves around typography. Although we have a default typeface choice, we really want to give you the power to style your application in every single way. Typography is such an important part of that. We provide a method for changing the font family, the sizes and weights for headings, subheadings, buttons, body text, etc. in your app.
+Typography is a separate module in our Sass theming framework, which is decoupled from the component themes. Although we have a default typeface of choice, we really want to give you the power to style your application in every single way. Typography is such an important part of that. We provide a method for changing the font family, the sizes and weights for headings, subheadings, buttons, body text, etc. in your app.
 <div class="divider--half"></div>
 
 ### Additional Resources
 <div class="divider--half"></div>
 
-Learn how to configure a global theme:
+Learn how to create themes:
 
 * [Global Themes](./global-theme.md)
 * [Component Themes](./component-themes.md)
+
+Learn how to create a component schema:
+* [Schemas](./schemas.md)
+
+Learn how to build color palettes:
+* [Palettes](./palette.md)
 
 Our community is active and always welcoming to new ideas.
 

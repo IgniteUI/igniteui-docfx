@@ -17,6 +17,7 @@ _language: ja
 | 名前              |  型   | デフォルト            | 説明                                                                           |
 | :---------------: | :-----: | :---------------:  | :-----------------------------------------------------------------------------------: |
 | `$palette`        | map     | undefined          | パレット マップは、すべてのコンポーネントのデフォルト テーマで使用されます。             |
+| `$schema`         | map     | $light-schema      | コンポーネントのスタイル設定に基づいて使用されるスキーマ。                                  |
 | `$exclude`        | list    | ( )                | グローバル テーマから除外されるコンポーネント テーマのリスト。                     |
 | `$legacy-support` | boolean | `true`             | テーマ設定の方法を決定 - false に設定し、テーマは CSS 変数で設定します。 |
 
@@ -26,14 +27,14 @@ _language: ja
 
 ```scss
 // Import the IgniteUI themes library first
-@import "~igniteui-angular/lib/core/styles/themes/index";
+@import '~igniteui-angular/lib/core/styles/themes/index';
 
 $primary-color: #2ab759; // Some green shade I like
 $secondary-color: #f96a88; // Watermelon pink
 
 $my-color-palette: igx-palette(
-  $primary: $primary-color,
-  $secondary: $secondary-color
+    $primary: $primary-color,
+    $secondary: $secondary-color
 );
 
 // IMPORTANT: Make sure you always include igx-core first!
@@ -61,12 +62,40 @@ $unnecessary: (igx-avatar, igx-badge);
 
 更にアプリで使用しないコンポーネントがある場合、`$exclude` のリストに追加して生成される CSS のサイズを縮小することができます。
 
+### Light と Dark テーマ
+
+`Igx-theme` mixin に加えグローバル テーマ mixins を追加しました。*__light__* and *__dark__* テーマのブート ストラップにグローバル テーマ mixins が含まれます。これらの mixins は `igx-light-theme` と `igx-dark-theme` です。
+
+以下は light と dark テーマを作成する方法を示すショーケースです。
+
+```scss
+.light-theme {
+    @include igx-light-theme($default-palette);
+}
+
+.dark-theme {
+    background: #333;
+    color: #fff;
+
+    @include igx-dark-theme($default-palette);
+}
+```
+アプリケーション DOM ツリーの上位にある `.light-theme` と `.dark-theme` の CSS クラスを適用し、`app-root` 要素が推奨されます。
+
 ### ブラウザー サポート
 <div class="divider--half"></div>
 
 `$igx-legacy-support` の値は、コンポーネントのテーマが動作する方法を決定するため大変重要です。値を `true` に設定した場合、各コンポーネント スタイルのルールの値がビルド時にテーマで定義されたハード値に設定されます。`$igx-legacy-support` の値を`false` に設定した場合もスタイル ルールは `:root` スコープまたは一番近いブロック スコープで定義された CSS 変数を検索します。
 
 一般的なルールは、Internet Explorer 11 をサポートするかどうかに基づいて `$legacy-support` の値を設定します。IE11 をサポートする場合、`$legacy-support` 値を `true` (デフォルト) に設定します。それ以外の場合、値を `false` に設定すると、テーマで CSS 変数が必要です。
+
+### API
+* [Global テーマ]({environment:sassApiUrl}/index.html#mixin-igx-theme)
+* [Light テーマ]({environment:sassApiUrl}/index.html#mixin-igx-light-theme)
+* [Dark テーマ]({environment:sassApiUrl}/index.html#mixin-igx-dark-theme)
+* [Palette]({environment:sassApiUrl}/index.html#function-igx-palette)
+
+<div class="divider--half"></div>
 
 ### その他のリソース
 <div class="divider--half"></div>
