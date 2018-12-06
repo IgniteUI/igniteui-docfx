@@ -7,7 +7,7 @@ _language: kr
 
 <div class="feature feature--hero">
   <div class="feature__details">
-    <h2 id="the-fastest-data-angular-data-grid">고속 Angular 데이터 그리드</h2>
+    <h1 id="the-fastest-data-angular-data-grid" class="h2">고속 Angular 데이터 그리드</h1>
     <p>Ignite UI for Angular의 데이터 그리드는 대규모 데이터 세트의 최적화, 고속 및 고성능 처리를 위해 제작되었습니다.업데이트된 가상화 지시문 및 강력한 그리드 기능으로 수백만 개의 데이터 점을 지연 시간 없이 스크롤할 수 있습니다.</p>
     <a class="cta-btn" href="https://www.infragistics.com/products/ignite-ui-angular/download">무료로 시작하기</a>
   </div>

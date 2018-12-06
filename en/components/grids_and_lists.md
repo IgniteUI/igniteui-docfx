@@ -1,13 +1,13 @@
 ---
-title: Data Grids and Lists Components
-_description: Ignite UI for Angular provides the fastest Angular Data Grid, high-speed rendering, and Material-based components for a powerful Angular grid and features. 
-_keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Grid, Angular Data Grid, Angular Grid Control, Angular Grid Component
+title: Angular Data Grids and Lists Components | DataTable | Ignite UI for Angular | Infragistics
+_description: Find powerful grid features for no-lag scrolling through millions of data points. Ignite UI for Angular’s Data Grid is built for optimization and speed.
+_keywords: angular data grid,infragistics, infragistics.com
 ---
 
 <div class="feature feature--hero">
   <div class="feature__details">
-    <h2 id="the-fastest-data-angular-data-grid">The Fastest Angular Data Grid</h2>
-    <p>Ignite UI for Angular’s [Data Grid](grid.md) is built for optimization, speed, high-performance, and smooth handling of large data sets. With an updated virtualization directive and powerful grid features, your data grid is ready for no-lag scrolling through millions of data points.</p>
+    <h1 id="the-fastest-data-angular-data-grid" class="h2">The Fastest Angular Data Grid</h1>
+    <p>Ignite UI for Angular’s [Data Grid](grid.md) is built for optimization, speed, high-performance, and smooth handling of large data sets. With an updated virtualization directive and powerful grid features, your virtualized data grid is ready for no-lag scrolling through millions of data points.</p>
     <a class="cta-btn" href="https://www.infragistics.com/products/ignite-ui-angular/download">get started for free</a>
   </div>
   <div class="feature__image feature__image--right">
@@ -25,7 +25,7 @@ _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Nati
     </div>
     <div class="feature__details">
       <h3 id="virtualization-and-performance">[Virtualization and Performance](grid_virtualization.md)</h3>
-      <p>Seamlessly scroll unlimited rows and columns in your Angular grid with the data grid’s column and row level virtualization.  Your users will experience Excel-like scrolling performance - no lag, screen flicker or visual delay – giving you the best user experience with no compromise in performance.</p>
+      <p>Seamlessly scroll unlimited rows and columns in your [Angular grid with the data grid’s](/products/ignite-ui-angular/grid) column and row level virtualization.  Your users will experience Excel-like scrolling performance - no lag, screen flicker or visual delay – giving you the best user experience with no compromise in performance.</p>
     </div>
   </div>
 

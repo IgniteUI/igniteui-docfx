@@ -5,23 +5,23 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 _language: ja
 ---
 
-##Drop Down
+## Drop Down
 <p class="highlight">Ignite UI for Angular Drop Down は、単一項目の選択が可能なグループ項目をスクロール付きのリストで表示します。項目をクリックまたはタップして選択するとドロップダウンが閉じられます。</p>
 <div class="divider"></div>
 
 ### Drop Down デモ
-<div class="sample-container" style="height:400px">
-    <iframe id="dropdown-sample-3-iframe" src='{environment:demosBaseUrl}/dropdown-sample-3' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container" style="height:220px">
+    <iframe id="dropdown-sample-4-iframe" src='{environment:demosBaseUrl}/dropdown-sample-4' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dropdown-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dropdown-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
 </div>
 <div class="divider--half"></div>
 
 > [!NOTE]
 > Ignite UI for Angular コンポーネントをプロジェクトに追加する前に、必要なすべての依存関係を構成し、プロジェクトのセットアップが正しく完了したことを確認してください。[**インストール**](https://jp.infragistics.com/products/ignite-ui-angular/getting-started#installation) のトピックで手順を確認できます。
 
-###使用方法
+### 使用方法
 Ignite UI for Angular Drop Down コンポーネントを初期化する前に [IgxDropDownModule]({environment:angularApiUrl}/classes/igxdropdownmodule.html) を **app.module.ts** ファイルにインポートします。
 
 ```typescript
@@ -101,6 +101,7 @@ export class AppModule {}
 
 <div class="divider--half"></div>
 
+#### 選択済み項目の定義
 選択済みの項目をあらかじめ定義する場合、[IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) の **igx-drop-down** [onOpening]({environment:angularApiUrl}/classes/igxdropdowncomponent.html#onopening) イベントを処理します。
 
 ```html
@@ -221,6 +222,7 @@ export class AppModule {}
     </button>
 </div>
 
+#### ドロップダウン メニュー
 [`igxDropDown`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) を設定してメニューとして使用できます。[`onSelection`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html#onselection) イベント ハンドラーで [`ISelectionEventArgs`]({environment:angularApiUrl}/interfaces/iselectioneventargs.html) [`cancel`]({environment:angularApiUrl}/interfaces/iselectioneventargs.html#cancel) メンバーを *true* に設定します。そのため選択した項目は開いているメニューに保存されずに選択が無効になります。[`ISelectionEventArgs`]({environment:angularApiUrl}/interfaces/iselectioneventargs.html) [`newSelection`]({environment:angularApiUrl}/interfaces/iselectioneventargs.html#newselection) メンバー値でクリックした項目を取得できます。
 
 ```html
@@ -230,7 +232,7 @@ export class AppModule {}
     <igx-navbar title="Contacts">
         <igx-icon #menu_icon (click)="toggleMenu($event)" [igxDropDownItemNavigation]="menu" tabindex="0">more_vert</igx-icon>
         <igx-drop-down #menu (onSelection)="onSelection($event)">
-            <igx-drop-down-item *ngFor="let item of items">
+            <igx-drop-down-item *ngFor="let item of items" [value]="item.text">
                 <div>{{ item.text }}</div>
             </igx-drop-down-item>
         </igx-drop-down>
@@ -266,8 +268,8 @@ public ngOnInit() {
     this.items = [{ text: "Add New Contact" }, { text: "Edit Contact" }, { text: "Refresh" }, { text: "Help" }];
 }
 
-public onSelection(eventArgs) {
-    this.text = eventArgs.newSelection.element.nativeElement.textContent;
+public onSelection(eventArgs: ISelectionEventArgs) {
+    this.text = eventArgs.newSelection.value;
     eventArgs.cancel = true;
 }
 
@@ -293,25 +295,79 @@ public toggleMenu(eventArgs) {
     </button>
 </div>
 
-### igxDropDownItemNavigation ディレクティブ
-
-`igxDropDown` コンポーネントのキーボード ナビゲーションを有効にするには、[igxDropDownItemNavigation]({environment:angularApiUrl}/classes/igxdropdownitemnavigationdirective.html) ディレクティブを適用します。ディレクティブをアクティブ (フォーカスした) 要素または親コンテナに適用することにより、トリガーしたすべてのイベントを処理できるようになります。デフォルトでは、igxDropDown またはその項目にフォーカスが当たらないため、たとえばディレクティブをドロップダウンを制御するボタンや入力に配置できます。
+#### Navigation ディレクティブ
+`igxDropDown` コンポーネントのキーボード ナビゲーションを有効にするには、[igxDropDownItemNavigation]({environment:angularApiUrl}/classes/igxdropdownitemnavigationdirective.html) ディレクティブを適用します。ディレクティブをアクティブ (フォーカスした) 要素または親コンテナに適用することにより、トリガーしたすべてのイベントを処理できるようになります。デフォルトでは、igxDropDown またはその項目にフォーカスが当たらないため、たとえばディレクティブをドロップダウンを制御する`ボタン`や`入力`に配置できます。
 [igxDropDownItemNavigation]({environment:angularApiUrl}/classes/igxdropdownitemnavigationdirective.html) ディレクティブ値は、ターゲット コンポーネントまたは拡張 [IgxDropDownBase]({environment:angularApiUrl}/classes/igxdropdownbase.html) クラスにする必要があります。
 
 
 以下のサンプルは、クリックによって igxDropDown インスタンスを開いたり閉じたりする例です。入力に [igxDropDownItemNavigation]({environment:angularApiUrl}/classes/igxdropdownitemnavigationdirective.html) を適用し、上矢印と下矢印の使用時にキーボード ナビゲーションを有効にします。[allowItemsFocus]({environment:angularApiUrl}/classes/igxcombodropdowncomponent.html#allowitemsfocus) が無効のデフォルトのドロップダウン動作に依存し、ボタン入力にフォーカスを維持することが可能です。
 
 
+```html
+<!-- input-dropdown.component.html -->
+    <igx-input-group #inputGroup class="input-group" [igxToggleAction]="dropDown">
+        <input #input class="input" type="text" igxInput [igxDropDownItemNavigation]="igxDropDown"
+            readonly= "true"
+            placeholder="choose an option"
+            [(ngModel)]="this.value"
+            (keydown.ArrowDown)="openDropDown()"/>
+
+        <igx-suffix igxButton="icon" class="dropdownToggleButton" igxRipple>
+            <igx-icon *ngIf="igxDropDown.collapsed; else toggleUp" fontSet="material">arrow_drop_down</igx-icon>
+            <ng-template #toggleUp>
+                <igx-icon fontSet="material">arrow_drop_up</igx-icon>
+            </ng-template>
+        </igx-suffix>
+    </igx-input-group>
+    <span>Selected: {{this.value}}</span>
+    <igx-drop-down #dropDown [width]="'160px'" (onSelection)="onSelection($event)">
+        <igx-drop-down-item *ngFor="let item of items" [value]="item.field">
+            {{ item.field }}
+        </igx-drop-down-item>
+    </igx-drop-down>
 ```
-<igx-input-group [igxToggleAction]="dropdownProvince">
-    <input igxInput type="text" [igxDropDownItemNavigation]="dropdownProvince">
-</igx-input-group>
-<igx-drop-down #dropdownProvince>
-    <igx-drop-down-item *ngFor="let p of provinceData">
-        {{ p }}
-    </igx-drop-down-item>
-</igx-drop-down>
+
+```typescript
+// input-dropdown.component.ts
+    @ViewChild(IgxDropDownComponent) public igxDropDown: IgxDropDownComponent;
+    @ViewChild("inputGroup", { read: IgxInputGroupComponent}) public inputGroup: IgxInputGroupComponent;
+    @ViewChild("input", { read: IgxInputDirective })
+    public input: IgxInputDirective;
+
+    public items: any[] = [];
+    public value: string;
+
+    public ngOnInit() {
+        for (let i = 1; i < 4; i ++) {
+            const item = { field: "Option " + i };
+            this.items.push(item);
+        }
+    }
+
+    public onSelection(eventArgs: ISelectionEventArgs) {
+        this.value = eventArgs.newSelection.value;
+    }
+
+    public openDropDown() {
+        if (this.igxDropDown.collapsed) {
+            this.igxDropDown.open({
+                modal: false,
+                positionStrategy: new ConnectedPositioningStrategy({
+                    target: this.inputGroup.element.nativeElement
+                })
+            });
+        }
+    }
 ```
+
+<div class="sample-container" style="height:220px">
+    <iframe id="dropdown-sample-4-iframe" src='{environment:demosBaseUrl}/dropdown-sample-4' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dropdown-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
+</div>
+<div class="divider--half"></div>
+
 
 ディレクティブを適用すると、キーボード ナビゲーションの結果として以下の動作が実行します。
 
@@ -330,11 +386,11 @@ public toggleMenu(eventArgs) {
 [allowItemsFocus]({environment:angularApiUrl}/classes/igxcombodropdowncomponent.html#allowitemsfocus) が有効な場合、ドロップダウン項目がタブ インデックスを取得し、アクティブな時にフォーカスされます。フォーカスされたドロップダウン項目がキーボード ナビゲーション時にイベントをトリガーするため、 [igxDropDownItemNavigation]({environment:angularApiUrl}/classes/igxdropdownitemnavigationdirective.html) を各ドロップダウン項目に適用する必要があります。
 
 ```
-<igx-input-group [igxToggleAction]="dropdownProvince">
+<igx-input-group [igxToggleAction]="dropDown">
     <input igxInput type="text">
 </igx-input-group>
-<igx-drop-down #dropdownProvince [allowItemsFocus]="true">
-    <igx-drop-down-item *ngFor="let p of provinceData" [igxDropDownItemNavigation]="dropdownProvince">
+<igx-drop-down #dropDown [allowItemsFocus]="true">
+    <igx-drop-down-item *ngFor="let p of provinceData" [igxDropDownItemNavigation]="dropDown">
         {{ p }}
     </igx-drop-down-item>
 </igx-drop-down>
@@ -348,7 +404,7 @@ public toggleMenu(eventArgs) {
 [**テーマの参照**]({environment:sassApiUrl}/index.html#mixin-igx-drop-down)
 
 **igx-drop-down-item** コンポーネント [**API 参照**]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html)
-###その他のリソース
+### その他のリソース
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。

@@ -1,9 +1,10 @@
----
-title: Excel ライブラリ コンポーネント - ネイティブ Angular|Ignite UI for Angular
-_description: The Ignite UI for Excel Library component.
-_keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Excel Library, Angular Excel Library Example, Angular Excel Library Component, Angular Excel Library
+﻿---
+title: Excel ライブラリ コンポーネント - Native Angular | Ignite UI for Angular
+_description: Ignite UI for Excel Library コンポーネント
+_keywords: Ignite UI for Angular, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular Excel ライブラリ, Angular Excel ライブラリ例,  Angular Excel Library コンポーネント, Angular Excel ライブラリ
 _language: ja
 ---
+
 ## セルの使用
 
 Excel ワークシートの `WorksheetCell` オブジェクトは、ワークシートの実際のデータ値を保持するオブジェクトです。このトピックは、名前で領域にアクセス、数式やコメントをセルに追加、結合および書式設定など、セルで実行できる多くの操作について説明します。
@@ -37,7 +38,7 @@ import { FormattedString } from 'igniteui-angular-excel/ES5/FormattedString';
 
 ### セルと領域を参照
 
-`Worksheet` オブジェクトの `getCell` または `getRegion`をそれぞれ呼び出して `WorksheetCell` オブジェクトまたは `WorksheetRegion` オブジェクトへアクセスできます。両メソッドはセルを参照する文字列パラメーターを許容します。書式設定を適用する場合または数式とセルのコンテンツで作業する場合にセル参照を取得すると便利です。
+`Worksheet` オブジェクトの `getCell` または `getRegion` メソッドを呼び出して `WorksheetCell` オブジェクト または `WorksheetRegion` オブジェクトへアクセスできます。両メソッドはセルを参照する文字列パラメーターを許容します。書式設定を適用する場合または数式とセルのコンテンツで作業する場合にセル参照を取得すると便利です。
 
 以下のコード例では、セルと領域を参照する方法を示します。
 
@@ -55,7 +56,8 @@ var region = worksheet.getRegion("G1:G10");
 
 Microsoft Excel では各セルとセル領域に名前が割り当てられています。アドレスの代わりにセルまたは領域の名前を使用してセルまたは領域を参照できます。
 
-Infragistics Excel Library は、`Worksheet` オブジェクトの `GetCell` メソッドと `GetRegion` メソッドによって、名前によるセルおよび領域の参照をサポートします。そのセルまたは領域を参照する `NamedReference` インスタンスを使用してセルまたは領域を参照します。
+Infragistics Excel Library は、Worksheet オブジェクトの `getCell` と `getRegion` メソッドによって、名前によるセルおよび領域の参照をサポートします。そのセルまたは領域を参照する `NamedReference` インスタンスを使用してセルまたは領域を参照します。
+>>>>>>> master
 
 以下のコードスニペットは、セルまたは領域の名前の例です。
 
@@ -65,6 +67,7 @@ var worksheet = workbook.worksheets().add("Sheet1");
 
 var cell_reference = workbook.namedReferences().add("myCell", "=Sheet1:A1");
 var region_reference = workbook.namedReferences().add("myRegion", "=Sheet1!A1:B2");
+
 ```
 
 以下のコードは、"myCell" と "myRegion" 名前付き参照によって参照されたセルと領域を取得する例です。
@@ -93,7 +96,8 @@ worksheet.rows(0).cells(0).comment = cellComment;
 
 ### セルに数式を追加
 
-Infragistics Excel ライブラリは、ワークシートでセルまたはセルのグループに Microsoft Excel の数式を追加できます。`WorksheetCell` オブジェクトの `applyFormula` メソッドを使用、または `applyFormula` オブジェクトを初期化してセルに割り当てることができます。セルに数式を適用する方法に関わらず、`WorksheetCell` オブジェクトのプロパティを使用して `Formula` オブジェクトにアクセスできます。値が必要な場合、セルの `Value` プロパティを使用します。
+Infragistics Excel ライブラリは、ワークシートでセルまたはセルのグループに Microsoft Excel の数式を追加できます。`WorksheetCell` オブジェクトの `applyFormula` メソッドを使用、または `Formula` オブジェクトを初期化してセルに割り当てることができます。セルに数式を適用する方法に関わらず、`WorksheetCell` オブジェクトのプロパティを使用して `Formula` オブジェクトにアクセスできます。値が必要な場合、セルの `Value` プロパティを使用します。
+
 
 以下のコードは、セルに数式を追加する方法を示します。
 
@@ -108,7 +112,9 @@ Infragistics Excel ライブラリは、ワークシートでセルまたはセ�
 ```
 
 ### セル書式のコピー
-セルには背景色、書式文字列、フォント スタイルなどさまざまな書式を持つことができます。以前書式設定したセルと同じ書式を持つようにする場合、`WorksheetCell` object’s `cellFormat` プロパティで公開した各オプションを設定する代わりに `CellFormat` オブジェクトの `setFormatting` メソッドを呼び出して `CellFormat` オブジェクトへ渡してコピーします。これによって最初のセルから 2 番目のセルにすべての書式設定をコピーします。行、結合セル領域、または列でも行うことができます。
+
+セルには背景色、書式文字列、フォント スタイルなどさまざまな書式を持つことができます。以前書式設定したセルと同じ書式を持つようにする場合、`WorksheetCell` オブジェクトの  `cellFormat` プロパティで公開した各オプションを設定する代わりに`CellFormat` オブジェクトの `setFormatting` メソッドを呼び出して `CellFormat` オブジェクトへ渡してコピーします。これによって最初のセルから 2 番目のセルにすべての書式設定をコピーします。行、結合セル領域、または列でも行うことができます。
+
 
 以下のコードは、2 列目の書式を 4 列目にコピーする方法を示します。
 
@@ -126,7 +132,8 @@ worksheet.columns(3).cellFormat.setFormatting(worksheet.columns(1).cellFormat);
 
 ### セルの書式設定
 
-Infragistics Excel Library は、セルの外観と動作をカスタマイズすることができます。`WorksheetCell`、`WorksheetRow`、`WorksheetColumn` または `WorksheetMergedCellsRegion` オブジェクトの `cellFormat` プロパティで公開したプロパティを設定してセルをカスタマイズできます。
+Infragistics Excel Library は、セルの外観と動作をカスタマイズすることができます。`WorksheetCell`、`WorksheetRow`、`WorksheetColumn`、または `WorksheetMergedCellsRegion` オブジェクトの `cellFormat` プロパティで公開したプロパティを設定してセルをカスタマイズできます。
+
 
 セル外観の各アスペクトをカスタマイズできます。セルのフォント、背景、境界線だけでなくテキストの配列と回転を設定できます。セルのテキストで文字ごとに異なる書式を適用することさえ可能です。
 
@@ -149,7 +156,7 @@ worksheet.columns(2).cellFormat.formatString = "\"$\"#,##0.00";
 
 - `noColor` - 色なしの塗りつぶしを表すプロパティ。ワークシートの背景画像がある場合は透けて見えます。
 
-- `createSolidFill` - `Solid` のパターン スタイルと、メソッドで指定された `Color` または `WorkbookColorInfo` に設定された背景色を持つ `CellFillPattern` インスタンスを返します。
+- `createSolidFill` - Solid のパターン スタイルと、メソッドで指定された `Color` または `WorkbookColorInfo` に設定された背景色を持つ `CellFillPattern` インスタンスを返します。
 
 - `createPatternFill` - 指定されたパターン スタイルと、背景とパターンの色に指定された `Color` または `WorkbookColorInfo` 値がある `CellFillPattern` インスタンスを返します。
 
@@ -161,7 +168,7 @@ worksheet.columns(2).cellFormat.formatString = "\"$\"#,##0.00";
 
 - `CellFillPattern` - 色なし、単色、パターン塗りつぶしのセル塗りつぶしを表すパターン。Excel の [セルの書式設定] ダイアログの [塗りつぶし] タブに、カラー セクションに直接対応する背景色の情報とパターンの色があります。
 
-- `CellFillPattern` - 線状グラデーションの塗りつぶしを表します。角度 (左から右の線状グラデーションの時計回りの角度) と、グラデーションの長さに沿って 2 つ以上の色のトランジションを説明するグラデーション境界コレクションがあります。
+- `CellFillLinearGradient` - 線状グラデーションの塗りつぶしを表します。角度 (左から右の線状グラデーションの時計回りの角度) と、グラデーションの長さに沿って 2 つ以上の色のトランジションを説明するグラデーション境界コレクションがあります。
 
 - `CellFillRectangularGradient` - 長方形グラデーションの塗りつぶしを表します。相対座標で、グラデーションが開始し、セルの端で終わる内側の四角形を説明する上、左、右、下の値があります。内側の四角形からセルの端までのパスに沿って 2 つ以上の色のトランジションを説明するグラデーション境界コレクションもあります。
 
@@ -217,7 +224,7 @@ RGB またはテーマの色が使用される場合、色を明るくする、�
 
 色は、シールされた不変クラスである、`WorkbookColorInfo` クラスで定義されます。このクラスには静的な `automatic` プロパティがあり、自動的な色を返します。色またはテーマ値とオプションの濃淡で `WorkbookColorInfo` インスタンスを作成することを可能にするさまざまなコンストラクターがあります。
 
-`WorkbookColorInfo` の `GetResolvedColor` メソッドは、Excel でファイルを開く際にユーザーに実際に表示される色を決定することが可能となります。
+`WorkbookColorInfo` の `getResolvedColor` メソッドは、Excel でファイルを開く際にユーザーに実際に表示される色を決定することが可能となります。
 
 `WorkbookColorInfo` がテーマの色を表す場合、Workbook インストールをこのメソッドに渡す必要があります。これによってテーマの色の RGB 値をワークブックから取得できます。
 
@@ -231,23 +238,23 @@ RGB またはテーマの色が使用される場合、色を明るくする、�
 
 `Workbook` オブジェクトの `styles` コレクションを使用して Microsoft Excel 2007 ビルトイン スタイルにアクセスできます。Excel のスタイル リストは、Microsoft Excel 2007 で [ホーム] タブの [セルのスタイル] ギャラリーにあります。
 
-ワークブックの `styles`コレクションに標準スタイルという特別なタイプのスタイルがあり、コレクションの `normalStyle` プロパティによって、または Normal という名前でコレクションにインデックスしてアクセスできます。
+ワークブックの `styles` コレクションに標準スタイルという特別なタイプのスタイルがあり、コレクションの `normalStyle` プロパティによって、または Normal という名前でコレクションにインデックスしてアクセスできます。
 
 `normalStyle` にはワークブックのすべてのセルのデフォルトのプロパティが含まれています。ただし、行、列またはセルで指定されている場合はその限りではありません。`normalStyle` でプロパティを変更すると、ワークブックのすべてのデフォルトのセル書式プロパティが変更されます。ワークブックの既定のフォント以外に変更したい場合などに便利です。
 
-以下のメソッドを使用して `styles` コレクションのクリア、または `clear` や `reset`メソッドで定義された状態にリセットすることができます。両メソッドはすべてのユーザー定義スタイルを削除しますが `clear` は `styles` コレクション全体をクリアします。
+以下のメソッドを使用して`styles` コレクションのクリア、または `clear` や `reset` メソッドで定義された状態にリセットすることができます。両メソッドはすべてのユーザー定義スタイルを削除しますが `clear` は `styles` コレクション全体をクリアします。
 
 この機能では、`style` プロパティが `CellFormat` オブジェクトに追加されています。これは書式の親スタイルを表す、`WorkbookStyle` インターフェイスへの参照です。スタイルの書式では、このプロパティは常に null です。スタイルが親スタイルを持つことができないためです。行、列およびセル書式には、`style` プロパティが常にデフォルトで `normalStyle` スタイルを返します。
 
-`style` プロパティを null に設定した場合、`CellFormat` スタイルに戻ります。スタイル コレクションで別のスタイルに設定される場合、そのスタイルはセル書式にすべての未設定のプロパティのデフォルトを保持するようになります。
+`style` プロパティを null に設定した場合、`normalStyle` スタイルに戻ります。スタイル コレクションで別のスタイルに設定される場合、そのスタイルはセル書式にすべての未設定のプロパティのデフォルトを保持するようになります。
 
-`style` プロパティをセル書式に設定した場合、`style` に含まれる書式オプションはセル書式から削除されます。すべてのその他のプロパティはそのまま残されます。たとえば、境界線の書式を含むセル スタイルを作成してスタイルをセルの`スタイル`として設定した場合、セル書式の境界線の書式オプションは削除され、セル書式に塗りつぶしの書式のみ含まれます。
+`style` プロパティをセル書式に設定した場合、`style` に含まれる書式オプションはセル書式から削除されます。すべてのその他のプロパティはそのまま残されます。たとえば、境界線の書式を含むセル スタイルを作成してスタイルをセルの `style` として設定した場合、セル書式の境界線の書式オプションは削除され、セル書式に塗りつぶしの書式のみ含まれます。
 
 書式オプション フラグが書式から削除されると、すべての関連付けたプロパティは未設定値にリセットされます。したがってセル書式の罫線プロパティはデフォルト/未設定値に暗黙的にリセットされます。
 
 行、列、セルおよび結合セルを表すクラスで、`getResolvedCellFormat` メソッドを使用することで、セルに実際に何が表示されるかを決定できます。
 
-このメソッドは、ベースとなった関連付けられた `CellFormat` に参照を返す `CellFormat` インスタンスを返します。そのため `CellFormat` プロパティへの以降の変更は、`getResolvedCellFormat` の呼び出しから返されるインスタンスに反映されます。
+このメソッドは、ベースとなった関連付けられた `CellFormat` に参照を返す `cellFormat` インスタンスを返します。そのため `CellFormat` プロパティへの以降の変更は、`getResolvedCellFormat` の呼び出しから返されるインスタンスに反映されます。
 
 ### セルの結合
 
@@ -257,7 +264,7 @@ RGB またはテーマの色が使用される場合、色を明るくする、�
 
 領域または領域内の任意のセルの値（またはセル書式）を設定すると、すべてのセルおよび領域の値を変更します。セルを結合を解除する場合、以前結合したセルすべて結合以前に指定された共有のセル書式を保持します。ただし、領域の左上のセルのみが共有値を保持します。
 
-結合されたセル領域を作成するには、セルの範囲を `Worksheet` オブジェクトの `MergedCellsRegions` コレクションに追加する必要があります。このコレクションは、4 つの整数パラメーターを取得する `add` メソッドを公開します。4 つのパラメーターは、開始する行と列（左上隅のセル）のインデックス、および終了する行と列（右下隅のセル）のインデックスを決定します。
+結合されたセル領域を作成するには、セルの範囲を `Worksheet` オブジェクトの `mergedCellsRegions` コレクションに追加する必要があります。このコレクションは、4 つの整数パラメーターを取得する `add` メソッドを公開します。4 つのパラメーターは、開始する行と列（左上隅のセル）のインデックス、および終了する行と列（右下隅のセル）のインデックスを決定します。
 
 ```typescript
 var workbook = new Workbook();
@@ -279,7 +286,7 @@ mergedRegion1.value = "Day 1";
 worksheet.rows(0).cells(2).cellFormat.alignment = HorizontalCellAlignment.Center;
 ```
 
-### Excel に表示されるセル テキストの取得
+### Excel に表示されるセル テキストを取得 
 
 セルに表示されるテキストは、書式文字列やセルが含まれる列幅など実際のセル値以外の複数の要因に依存します。
 
@@ -297,7 +304,7 @@ worksheet.rows(0).cells(2).cellFormat.alignment = HorizontalCellAlignment.Center
 
 - `指数、5 decimal digits` - 数字は 1.23457E+09 または 1.23457E-04 などの 0.00000E+00 の形式で表示されます。
 
-- `指数、4 decimal digits` - 数字は 1.2346E+09 または 1.23456E-04 などの 0.0000E+00 の形式で表示されます。
+- `指数、4 decimal digits` - 数字は 1.23457E+09 または 1.23457E-04 などの 0.0000E+00 の形式で表示されます。
 
 - `指数、3 decimal digits` - 数字は 1.235E+09 または 1.235E-0 などの 0.000E+00 の形式で表示されます。
 
@@ -319,7 +326,7 @@ worksheet.rows(0).cells(2).cellFormat.alignment = HorizontalCellAlignment.Center
 
 これが該当しない唯一のときは、パディング文字が書式文字列で使用される時です。テキストのために十分な余地がないとき、値はすべてのハッシュ マークとして表示されます。
 
-ワークシートの `displayOptions` `showFormulasInCells` プロパティを設定してセルに結果の代わりに数式を表示できます。書式文字列やセル幅は無視されます。テキスト値は書式文字列が @ であるかのように表示します。整数でない数値は書式文字列が 0.0 であるかのように表示し、整数の数値は書式文字列が 0 のように表示します。
+ワークシートの `displayOptions` の `showFormulasInCells` プロパティを設定してセルに結果の代わりに数式を表示できます。書式文字列やセル幅は無視されます。テキスト値は書式文字列が @ であるかのように表示します。整数でない数値は書式文字列が 0.0 であるかのように表示し、整数の数値は書式文字列が 0 のように表示します。
 
 さらに、値が合わない場合、すべてのハッシュとして表示しません。完全に表示できないとしても、表示テキストはセル テキストとしてフル テキストを今まで通り返します。
 
@@ -331,3 +338,4 @@ var worksheet = this.workbook.worksheets().add("Sheet1");
 
 var cellText = worksheet.rows(0).cells(0).getText();
 ```
+

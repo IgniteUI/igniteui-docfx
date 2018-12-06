@@ -380,7 +380,7 @@ toggleFavorite(item: IgxListItem) {
 <igx-toast #toast></igx-toast>
 ```
 
-The above example is using some CSS styles which may be found here:
+上記の例は、CSS スタイルを使用します。
 
 ```css
 /* contacts.component.css */
@@ -468,7 +468,7 @@ public leftPanPerformed(args) {
 
 次にリスト項目をパンニングします。
 
-<div class="sample-container loading" style="height: 477px">
+<div class="sample-container loading" style="height: 500px">
 <iframe id="list-sample-7-final-iframe" src='{environment:demosBaseUrl}/list-sample-7' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
