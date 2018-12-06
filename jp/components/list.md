@@ -380,7 +380,7 @@ toggleFavorite(item: IgxListItem) {
 <igx-toast #toast></igx-toast>
 ```
 
-The above example is using some CSS styles which may be found here:
+上記の例は、CSS スタイルを使用します。
 
 ```css
 /* contacts.component.css */
