@@ -154,8 +154,6 @@ this.excelExportService.export(this.igxGrid1, new IgxExcelExporterOptions("Expor
 
 以下は、その他の Excel Exporter サービスの API です。
 
-The Excel Exporter service has a few more APIs to explore, which are listed below.
-
 * [`IgxExcelExporterService API`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html)
 * [`IgxExcelExporterOptions API`]({environment:angularApiUrl}/classes/igxexcelexporteroptions.html)
 
