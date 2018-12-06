@@ -132,7 +132,7 @@ IgxTreeGridComponent を階層にバインドするには、[`childDataKey`]({en
 </igx-tree-grid>
 ```
 
-Finally, we will enable the toolbar of our tree grid, along with the column hiding, column pinning and exporting features by using the [`showToolbar`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#showtoolbar), [`columnHiding`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#columnhiding), [`columnPinning`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#columnpinning), [`exportExcel`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#exportexcel) and [`exportCsv`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#exportcsv) properties respectively.
+最後に [`showToolbar`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#showtoolbar)、[`columnHiding`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#columnhiding), [`columnPinning`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#columnpinning)、[`exportExcel`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#exportexcel)、 [`exportCsv`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#exportcsv) プロパティを個別に使用して、列非表示と列ピン固定機能を含むツリー グリッドのツールバーを有効にします。
 
 ```html
 <!--treeGridSample.component.html-->
@@ -232,7 +232,7 @@ export class MyComponent implements OnInit {
 [`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditable) が有効な場合、[`editable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable) プロパティが定義されていない場合も [field]({environment:angularApiUrl}/classes/igxcolumncomponent.html#field) プロパティが定義されたすべての列 ([`primaryKey`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#primarykey) を除く) が編集可能になります。特定の列の編集を無効にする場合、[`editable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable) 列の入力を false に設定します。
 以下の手順では、グリッドの [`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditable) プロパティで行編集を有効にする方法を示します。
 
-Let's start with defining a tree grid with bound data source and [`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditable) set to true:
+ツリー グリッドをバインド データソースで定義して [`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditable) を true に設定します。
 
 ```html
     <igx-tree-grid #treeGrid1 [data]="data" primaryKey="EmployeID" foreignKey="PID" width="100%" height="500px"
@@ -306,8 +306,8 @@ export class TreeGridRowEditSampleComponent implements OnInit {
 - **sorting**が列に適用された際にデータ行がレベルごとに並べ替えられます。ルートレベルの行はそれぞれの子に関係なく個々に並べ替えられます。各子コレクションは個々に並べ替えられます。
 - 最初の列 [`visibleIndex`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#visibleindex) は、常にツリー列です。
 - 列ピン固定、列の非表示、列移動などの処理後に 0 の [`visibleIndex`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#visibleindex) で終わる列はツリー列になります。
-- Exported Excel worksheets reflect the hierarchy by grouping the records as they are grouped in the tree grid itself. All records expanded states would also be persisted and reflected.
-- When exporting to CSV, levels and expanded states are ignored and all data is exported as flat.
+- エクスポートした Excel ワークシートは、ツリー グリッドでグループ化されたレコードをグループ化した階層に反映します。すべてのレコードを展開した状態が保持および反映されます。
+- CSV レベルにエクスポートする際に展開した状態は無視されるため、すべてのデータがフラットでエクスポートされます。
 
 <div class="divider--half"></div>
 
