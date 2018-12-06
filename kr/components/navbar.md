@@ -142,7 +142,7 @@ In this article we show a few scenarios where the navbar component may come in h
 
 Additional components and/or directives with relative APIs that were used:
 
-[`IgxIconComponent`]({environment:angularApiUrl}/classes/igxiconcomponent.html)
+* [`IgxIconComponent`]({environment:angularApiUrl}/classes/igxiconcomponent.html)
 
 Styles:
 

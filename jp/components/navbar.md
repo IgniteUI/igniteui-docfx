@@ -147,7 +147,7 @@ We can easily achieve this by using the [`igx-action-icon`]({environment:angular
 
 その他のコンポーネントおよびディレクティブ (またはそのいずれか) で使用した API:
 
-[`IgxIconComponent`]({environment:angularApiUrl}/classes/igxiconcomponent.html)
+* [`IgxIconComponent`]({environment:angularApiUrl}/classes/igxiconcomponent.html)
 
 スタイル:
 
