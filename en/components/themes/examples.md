@@ -1,27 +1,26 @@
-﻿---
-title: テーマ
-_description: Ignite UI for Angular は、SASS 機能と mixins でアプリケーション全体および特定部分を最小限のコードでスタイル設定できます。
-_keywords: Ignite UI for Angular, Angular Theming コンポーネント, Angular Theming, Ignite UI for Angular コンポーネント, Ignite for Agular Themes, グローバル テーマ, コンポーネント テーマ
-_language: ja
+---
+title: Theming Examples
+_description: Ignite UI for Angular uses SASS functions and mixins to give you the ability of styling easily your entire application or only specific parts of it with only a couple of steps.
+_keywords: Ignite UI for Angular, Angular Theming Component, Angular Theming, Ignite UI for Angular Components, Ignite for Agular Themes, Global Theme, Component Theme
 ---
 
-## テーマ
-**Ignite UI for Angular Theming** は、グローバル設定でアプリケーション全体のテーマをカスタマイズしてすべての既定の要素に適用、あるいはコンポーネント別にテーマをそれぞれ適用することができます。
+## Theming Examples
+The **Ignite UI for Angular Theming** provides you the ability to customize themes for your application by setting them globally, in order to beautify all non-custom-styled elements, or applying them severally to the components you want to differentiate.
 
-### デモ
+### Demos
 <div class="sample-container" style="height: 650px">
     <iframe id="theme-chooser-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/theme-chooser" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="theme-chooser-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="theme-chooser-iframe" data-demos-base-url="{environment:demosBaseUrl}"> view on stackblitz
     </button>
 </div>
 <div class="divider--half"></div>
 
 
-### デフォルトのテーマ
+### Default Theme
 
-**デフォルトのテーマ**は、**Ignite UI for Angular コントロール**のすべてのコンポーネントのスタイルを設定します。はじめに `styles.scss` ファイルに設定します。
+There is a **default theme** that styles all the components in the **Ignite UI for Angular controls** and the first thing that we are going to do is to set it in the `styles.scss` file:
 
 ```scss
 // import first the IgniteUI themes library
@@ -34,23 +33,23 @@ _language: ja
 @include igx-theme($default-palette);
 ```
 
-以下は上記コード スニペットの結果です。
+The result from the above code snippet looks like this:
 
 <div class="sample-container" style="height: 650px">
     <iframe id="default-theme-sample-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/default-theme-sample" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="default-theme-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}"> stackblitz で開く
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="default-theme-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}"> view on stackblitz
     </button>
 </div>
 <div class="divider--half"></div>
 
-コンポーネントの外観を変更したい場合や**デフォルト テーマ**がアプリケーションの UI に合わない場合は、**Ignite UI for Angular Theming** を使用して多数の CSS ファイルを書かずにスタイル設定が簡単にできます。
+In case you have other preferences for the appearance of the components or the **default theme** doesn't match the interior of your application, you can use the  **Ignite UI for Angular Theming**, which is much easier, fun and efficient way for styling, than writing a huge amount of CSS.
 
-### 作業の開始
+### Get Started
 
-はじめに、**SASS functions と mixins** が入れ子になっている**テーマ ユーティリティ**をインポートします。
-理想的なコード構成は、別々のディレクトリ**テーマ ロジック**に配置することです。
+To get started, you have to import the *theme utilities*, where the **SASS functions and mixins** are nested.
+For good code structure it will be helpful to place the **theme logic** in a separate directory:
 
 ```scss
 // styles/dark-theme.scss
@@ -60,26 +59,26 @@ _language: ja
 ```
 <div class="divider--half"></div>
 
-次のステップは、カスタマイズするコンポーネントと対応するテーマをすべてインポートします。
+The next step is to import all the components, that you want to customize, and their corresponding themes.
 
-以下がアプリに含まれます。
-- [**Igx-Grid**](../grid.md) の [**paging**](../grid_paging.md) と [**filtering**](../grid_filtering.md)。
+Our app will have:
+- [**Igx-Grid**](../grid.md) with [**paging**](../grid_paging.md) and [**filtering**](../grid_filtering.md):
 
 ```scss
 // Import grid component and theme styles
 @import '~igniteui-angular/lib/core/styles/components/grid/grid-component';
-@import '~igniteui-angular/lib/core/styles//components/grid/grid-theme';
+@import '~igniteui-angular/lib/core/styles/components/grid/grid-theme';
 
 // Import grid-paginator component and theme styles
-@import '~igniteui-angular/lib/core/styles//components/grid-paginator/grid-paginator-component';
-@import '~igniteui-angular/lib/core/styles//components/grid-paginator/grid-paginator-theme';
+@import '~igniteui-angular/lib/core/styles/components/grid-paginator/grid-paginator-component';
+@import '~igniteui-angular/lib/core/styles/components/grid-paginator/grid-paginator-theme';
 
 // Import grid-filtering component and theme styles
 @import '~igniteui-angular/lib/core/styles//components/grid-filtering/grid-filtering-component';
 @import '~igniteui-angular/lib/core/styles//components/grid-filtering/grid-filtering-theme';
 
 ```
-- [**Igx-Dialog**](../dialog.md) の組み込み [**Igx-Input-Group**](../input_group.md)。
+- [**Igx-Dialog**](../dialog.md) with embedded [**Igx-Input-Group**](../input_group.md):
 
 ```scss
 
@@ -93,7 +92,7 @@ _language: ja
 
 ```
 
-コンポーネントのテーマ設定に必要なすべての機能があるため、使用する**色パレット**を定義するだけです。
+Now we have all the functionality, necessary for **theming** our components, we just need to define the **color palettes** that we are going to use:
 
 ```scss
 // Define the primary color
@@ -106,16 +105,16 @@ $orange-color: #FFA500;
 $dark-theme-palette: igx-palette($primary: $dark-color, $secondary: $orange-color);
 ```
 
-次にアプリに新しいスタイルを設定します。
+Done! We are ready to set the new styling of our app.
 <div class="divider--half"></div>
 
-### テーマの設定
+### Theme Setting
 
-**テーマの設定**は、プライマリおよびセカンダリの色の異なるシェードをコンポーネント パーツに適用します。[**Ignite UI for Angular Themes**]({environment:sassApiUrl}) のヘルプでスタイル設定可能なコンポーネント パーツを確認できます。
+The **theme setting** is basically applying different shades of the primary and secondary colors to various component parts. In the [**Ignite UI for Angular Themes**]({environment:sassApiUrl}) documentation you can find out which component parts can be styled.
 
-適用する **コンポーネント テーマ**を定義します。
+Now lets define the **component themes** that we are going to apply:
 
-#### コンポーネント テーマの定義
+#### Defining Component Themes
 <div class="divider--half"></div>
 
 - [**Igx-Grid-Theme**]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
@@ -164,12 +163,12 @@ $dark-input-group-theme: igx-input-group-theme(
 );
 ```
 
-これで完了しました。
+That's it!
 
-アプリの各コンポーネントにテーマを作成しました。最後に適用します。
+We have now made a theme for each component in our app. The last step is just to apply it.
 
-#### コンポーネント テーマの適用
-ホスト要素の `class` を**テーマ クラス**でバインドします。
+#### Applying Component Themes
+Bind the host element `class` with the **themes class**.
 
 ```typescript
 @HostBinding("class")
@@ -177,7 +176,7 @@ public themesClass = "dark-theme";
 ```
 <div class="divider--half"></div>
 
-次にホスト要素で**テーマ クラス**をネストした新しい SCSS ファイルにテーマを適用したコンポーネントを含みます。
+After that, in a new SCSS file nest the **themes class**, that includes the components with their themes, in the host element.
 
 ```scss
 // styles/dark-themes-class.scss
@@ -203,26 +202,26 @@ public themesClass = "dark-theme";
     }
 }
 ```
-結果は以下です。
+And the result is:
 
 <div class="sample-container" style="height: 650px">
     <iframe id="dark-theme-sample-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/dark-theme-sample" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dark-theme-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}"> stackblitz で開く
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dark-theme-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}"> view on stackblitz
     </button>
 </div>
 <div class="divider--half"></div>
 
-*utilities*、コンポーネント mixins とテーマ関数をインポートし、テーマを定義して適用します。**Ignite UI for Angular Theming** でアプリをスタイル設定するための手順があります。
+Import the *utilities*, component mixins and the theme functions, define the colors, define the themes and apply them. These are the steps for styling your app with **Ignite UI for Angular Theming**.
 
-### テーマの選択
-上記サンプルは、各コンポーネントに 1 つのテーマを設定しました。
+### Theme Chooser
+In the above sample we set only one theme per component.
 
-**Ignite UI for Angular コンポーネント**にその他のテーマを定義する場合は、**テーマ**を追加できます。
+If we want to define more themes for a single **Ignite UI for Angular Component**, with the idea of changing them, we can add a **theme chooser**.
 
-変更を少し加えるだけです。
-- SCSS ファイルを作成してテーマを含むクラスを定義します
+This can be achieved in a few modifications:
+- Create a SCSS file and define the classes, which will include the themes:
 
 ```scss
 // styles/themes-classes.scss
@@ -253,7 +252,7 @@ public themesClass = "dark-theme";
 
 <div class="divider--half"></div>
 
-- ホスト要素の `class` を操作する関数をトリガーするイベントを設定します。
+- Set an event, which triggers the function that manipulates the `class` of the host element:
 
 ```html
 <!-- Adding igxButton that triggers a dropdown with the theme options -->
@@ -276,7 +275,7 @@ public themesClass = "dark-theme";
 
 <div class="divider--half"></div>
 
-**テーマ クラス**を表すデータおよびホスト要素の `class` セレクターを操作する関数を追加します。
+Add data that will represent the **themes classes** and a function to manipulate the `class` selector of the host element.
 
 ```typescript
 
@@ -309,13 +308,13 @@ export class ThemeChooserSampleComponent implements OnInit {
 ```
 <div class="divider--half"></div>
 
-`click` イベントのみで定義済みテーマを簡単に変更できます。
+Now we can easily change our defined themes with only a `click` event:
 
 <div class="sample-container" style="height: 650px">
     <iframe id="theme-chooser-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/theme-chooser" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="theme-chooser-iframe" data-demos-base-url="{environment:demosBaseUrl}"> stackblitz で開く
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="theme-chooser-iframe" data-demos-base-url="{environment:demosBaseUrl}"> view on stackblitz
     </button>
 </div>
 <div class="divider--half"></div>
@@ -328,15 +327,15 @@ export class ThemeChooserSampleComponent implements OnInit {
 * [IgxDialogComponent Styles]({environment:sassApiUrl}/index.html#function-igx-dialog-theme)
 * [IgxInputGroupComponent Styles]({environment:sassApiUrl}/index.html#function-igx-input-group-theme) 
 
-### その他のリソース
+### Additional Resources
 <div class="divider--half"></div>
 
-* [グローバル テーマ](global-theme.md)
-* [コンポーネント テーマ](component-themes.md)
-* [カラー パレット](palette.md)
+* [Global Theme](global-theme.md)
+* [Component Themes](component-themes.md)
+* [Color Palette](palette.md)
 * [Grid](../grid.md)
-* [ページング](../grid_paging.md)
-* [フィルタリング](../grid_filtering.md)
+* [Paging](../grid_paging.md)
+* [Filtering](../grid_filtering.md)
 * [Dialog](../dialog.md)
 * [Input Group](../input_group.md)
 * [Snackbar](../snackbar.md)

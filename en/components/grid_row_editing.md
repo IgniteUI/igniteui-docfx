@@ -116,7 +116,9 @@ export class GridRowEditSampleComponent {
 
 - If row is in edit mode, then clicking a cell from another row will finish the current row edit and will submit new row changes (the same behavior clicking "Done" button). If the new cell that gets focus is editable, then the new row also enters edit mode, while if the cell is not editable, then only the previous row exits edit mode.
 
-- If row is in edit mode and grid is scrolled so that row goes outside the visible area, the latter will be still in edit mode. When grid is scrolled, so that the row is visible again, the row will be still in edit mode.
+- If row is in edit mode and grid is scrolled so that row goes outside the visible area, the latter will be still in edit mode. When grid is scrolled, so that the row is visible again, the row will be still in edit mode. When clicked outside the grid, the cell will also stay in edit mode.
+
+- Any other grid operations like, resize, pin, move, sort column or change page, will exit edit mode and will submit latest value.
 
 - Each modified cell gets edited style until row edit is finished. This is the behavior, when grid is not provided with transactions. When transactions are available - then cell edit style is applied until all the changes are committed.
 

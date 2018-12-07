@@ -41,10 +41,10 @@ You can exit edit mode and **commit** the changes in one of the following ways:
  - on key press `F2`;
  - on key press `Tab`;
  - on single click to another cell - when you click on another cell in the grid, your changes will be submitted.
- - when you perform 'moving' and 'pinning' operations;
+ - operations like, resize, pin, move, sort column or change page, will exit edit mode and changes will be submitted.
 
 > [!NOTE]
-> The cell remains in edit mode when you scroll vertically or horizontally, click outside the grid, resize column, pin column or go to another page.
+> The cell remains in edit mode when you scroll vertically or horizontally or click outside the grid. This is valid for both cell editing and row editing.
 
 You can also modify the cell value through the IgxGrid API but only if primary key is defined:
 
