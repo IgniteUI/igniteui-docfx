@@ -15,7 +15,7 @@ Excel ワークシートの `WorksheetCell` オブジェクトは、ワークシ
 </div>
 <div>
     <!-- TODO uncomment when Stackblitz is ready for EXCEL
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="excel-library-working-with-cells-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="excel-library-working-with-cells-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
     </button> -->
 </div> 
 
@@ -108,6 +108,7 @@ Infragistics Excel ライブラリは、ワークシートでセルまたはセ�
 ```
 
 ### セル書式のコピー
+
 セルには背景色、書式文字列、フォント スタイルなどさまざまな書式を持つことができます。以前書式設定したセルと同じ書式を持つようにする場合、`WorksheetCell` オブジェクトの  `cellFormat` プロパティで公開した各オプションを設定する代わりに`CellFormat` オブジェクトの `setFormatting` メソッドを呼び出して `CellFormat` オブジェクトへ渡してコピーします。これによって最初のセルから 2 番目のセルにすべての書式設定をコピーします。行、結合セル領域、または列でも行うことができます。
 
 以下のコードは、2 列目の書式を 4 列目にコピーする方法を示します。
