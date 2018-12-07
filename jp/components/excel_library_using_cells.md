@@ -4,7 +4,6 @@ _description: Ignite UI for Excel Library コンポーネント
 _keywords: Ignite UI for Angular, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular Excel ライブラリ, Angular Excel ライブラリ例,  Angular Excel Library コンポーネント, Angular Excel ライブラリ
 _language: ja
 ---
-
 ## セルの使用
 
 Excel ワークシートの `WorksheetCell` オブジェクトは、ワークシートの実際のデータ値を保持するオブジェクトです。このトピックは、名前で領域にアクセス、数式やコメントをセルに追加、結合および書式設定など、セルで実行できる多くの操作について説明します。
@@ -57,7 +56,6 @@ var region = worksheet.getRegion("G1:G10");
 Microsoft Excel では各セルとセル領域に名前が割り当てられています。アドレスの代わりにセルまたは領域の名前を使用してセルまたは領域を参照できます。
 
 Infragistics Excel Library は、Worksheet オブジェクトの `getCell` と `getRegion` メソッドによって、名前によるセルおよび領域の参照をサポートします。そのセルまたは領域を参照する `NamedReference` インスタンスを使用してセルまたは領域を参照します。
->>>>>>> master
 
 以下のコードスニペットは、セルまたは領域の名前の例です。
 
@@ -67,7 +65,6 @@ var worksheet = workbook.worksheets().add("Sheet1");
 
 var cell_reference = workbook.namedReferences().add("myCell", "=Sheet1:A1");
 var region_reference = workbook.namedReferences().add("myRegion", "=Sheet1!A1:B2");
-
 ```
 
 以下のコードは、"myCell" と "myRegion" 名前付き参照によって参照されたセルと領域を取得する例です。
@@ -98,7 +95,6 @@ worksheet.rows(0).cells(0).comment = cellComment;
 
 Infragistics Excel ライブラリは、ワークシートでセルまたはセルのグループに Microsoft Excel の数式を追加できます。`WorksheetCell` オブジェクトの `applyFormula` メソッドを使用、または `Formula` オブジェクトを初期化してセルに割り当てることができます。セルに数式を適用する方法に関わらず、`WorksheetCell` オブジェクトのプロパティを使用して `Formula` オブジェクトにアクセスできます。値が必要な場合、セルの `Value` プロパティを使用します。
 
-
 以下のコードは、セルに数式を追加する方法を示します。
 
 ```typescript
@@ -114,7 +110,6 @@ Infragistics Excel ライブラリは、ワークシートでセルまたはセ�
 ### セル書式のコピー
 
 セルには背景色、書式文字列、フォント スタイルなどさまざまな書式を持つことができます。以前書式設定したセルと同じ書式を持つようにする場合、`WorksheetCell` オブジェクトの  `cellFormat` プロパティで公開した各オプションを設定する代わりに`CellFormat` オブジェクトの `setFormatting` メソッドを呼び出して `CellFormat` オブジェクトへ渡してコピーします。これによって最初のセルから 2 番目のセルにすべての書式設定をコピーします。行、結合セル領域、または列でも行うことができます。
-
 
 以下のコードは、2 列目の書式を 4 列目にコピーする方法を示します。
 
@@ -133,7 +128,6 @@ worksheet.columns(3).cellFormat.setFormatting(worksheet.columns(1).cellFormat);
 ### セルの書式設定
 
 Infragistics Excel Library は、セルの外観と動作をカスタマイズすることができます。`WorksheetCell`、`WorksheetRow`、`WorksheetColumn`、または `WorksheetMergedCellsRegion` オブジェクトの `cellFormat` プロパティで公開したプロパティを設定してセルをカスタマイズできます。
-
 
 セル外観の各アスペクトをカスタマイズできます。セルのフォント、背景、境界線だけでなくテキストの配列と回転を設定できます。セルのテキストで文字ごとに異なる書式を適用することさえ可能です。
 
@@ -338,4 +332,3 @@ var worksheet = this.workbook.worksheets().add("Sheet1");
 
 var cellText = worksheet.rows(0).cells(0).getText();
 ```
-

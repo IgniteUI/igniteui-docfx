@@ -4,7 +4,6 @@ _description: Ignite UI for Excel Library コンポーネントのワークシ�
 _keywords: Ignite UI for Angular, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular Excel ライブラリ, Angular Excel ライブラリ例,  Angular Excel Library コンポーネント, Angular Excel Engine、ワークシート, 条件付き書式, Sorting, フィルタリング、グリッド線, ヘッダー, 保護 
 _language: ja
 ---
-
 ## ワークシートの使用
 
 Infragistics Excel Engine の `Worksheet` にデータが保存されます。Worksheet の行やセルにデータを入力でき、対応する値を設定できます。`Worksheet` は、フィルター、並べ替え、セル書式のカスタマイズができます。
@@ -29,8 +28,7 @@ Infragistics Excel Engine の `Worksheet` にデータが保存されます。Wo
 
 ```typescript
 var workbook = new Workbook(WorkbookFormat.Excel2007);
-var worksheet = workbook.worksheets().add("Sheet1");
-    
+var worksheet = workbook.worksheets().add("Sheet1");    
 worksheet.displayOptions.showGridlines = false;
 ```
 
@@ -206,4 +204,3 @@ color.colorString = "Red";
 var format = worksheet.conditionalFormats().addAverageCondition("A1:A10", FormatConditionAboveBelow.AboveAverage);
 format.cellFormat.font.colorInfo = new WorkbookColorInfo(color);
 ```
-

@@ -4,7 +4,6 @@ _description: テーブルを使用した Ignite UI for Excel Library コンポ�
 _keywords: Ignite UI for Angular, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular Excel ライブラリ, Angular Excel ライブラリ例,  Angular Excel Library コンポーネント, Angular Excel Engine, Tables, Sorting, フィルタリング
 _language: ja
 ---
-
 ## テーブルの使用
 
 Infragistics Excel Engine の `WorksheetTable` 機能は、行列のデータを書式設定できます。ワークシート テーブルのデータは他の行や列のデータから個々に管理できます。
