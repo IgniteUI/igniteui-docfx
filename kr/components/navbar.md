@@ -5,7 +5,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 _language: kr
 ---
 
-##Navbar
+## Navbar
 <p class="highlight">The Ignite UI for Angular [`IgxNavbarComponent`]({environment:angularApiUrl}/classes/igxnavbarcomponent.html) informs the user of their current position in an app, and helps them move back (much like the “back” button in a browser). The Navigation Bar can also provide links to quick actions such as search or favorite, helping users navigate smoothly through an application without trying to move to invalid routes or states. The bar sits at the top of the container it is placed in.</p>
 <div class="divider"></div>
 
@@ -18,7 +18,7 @@ _language: kr
 </div>
 <div class="divider--half"></div>
 
-###Usage
+### Usage
 To get started with the Ignite UI for Angular NavBar component, let's first import the [`IgxNavbarModule`]({environment:angularApiUrl}/classes/igxnavbarmodule.html) in our **app.module.ts** file:
 
 ```typescript
@@ -44,26 +44,18 @@ Then in the template of our component we can add the following code to show a ba
 </igx-navbar>
 ```
 
-####With back button
+#### With menu button
 Good, we know which application we have opened. Now, let's see what capabilities it offers us by exploring its menu. To achieve this we will show the action button and make it use a menu icon as follows:
 
 ```html
 <!--navbar.component.html-->
 
-<igx-navbar title="Sample App"
-    actionButtonIcon="menu"
-    [isActionButtonVisible]="true">
+<igx-navbar title="Sample App" actionButtonIcon="menu" [isActionButtonVisible]="true">
 </igx-navbar>
 ```
 
-If all went well, you should see the following in your browser:
-<div class="sample-container loading" style="height: 330px">
-    <iframe id="nav-bar-sample-1-iframe" frameborder="0" seamless width="100%" height="100%" src='{environment:demosBaseUrl}/navbar-sample-1' onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="nav-bar-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
-</div>
-<div class="divider--half"></div>
+> [!NOTE]
+> The [`actionButtonIcon`]({environment:angularApiUrl}/classes/igxnavbarcomponent.html#actionbuttonicon) uses the Material fontset by design.
 
 #### Adding Icons
 
@@ -89,31 +81,83 @@ Next, we need to update our template with an icon for each of the options we wan
 ```html
 <!--navbar.component.html-->
 
- <igx-navbar title="Sample App" actionButtonIcon="menu">
+ <igx-navbar title="Sample App" actionButtonIcon="menu" [isActionButtonVisible]="true">
     <igx-icon>search</igx-icon>
     <igx-icon>favorite</igx-icon>
     <igx-icon>more_vert</igx-icon>
 </igx-navbar>
 ```
 
-<div class="divider"></div>
+If all went well, you should see the following in your browser:
+<div class="sample-container loading" style="height: 330px">
+    <iframe id="nav-bar-sample-1-iframe" frameborder="0" seamless width="100%" height="100%" src='{environment:demosBaseUrl}/navbar-sample-1' onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="nav-bar-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
+</div>
+<div class="divider--half"></div>
+
+#### Custom action icon
+
+What if we want to use a custom action icon for our app navigation instead of the default one that is on the left-most part of the navbar?
+We can easily achieve this by using the [`igx-action-icon`]({environment:angularApiUrl}/classes/igxactionicondirective.html) directive, which will replace the default action icon with the content we have provided. We will do that by using the Font Awesome home icon in combination with a style for it.
+
+```css
+/* navbar.component.css */
+
+@import url("https://unpkg.com/@fortawesome/fontawesome-free-webfonts@^1.0.9/css/fontawesome.css");
+@import url("https://unpkg.com/@fortawesome/fontawesome-free-webfonts@^1.0.9/css/fa-regular.css");
+@import url("https://unpkg.com/@fortawesome/fontawesome-free-webfonts@^1.0.9/css/fa-solid.css");
+
+.customIcon {
+    vertical-align: middle;
+}
+```
+
+```html
+<!--navbar.component.html-->
+
+ <igx-navbar title="Sample App" actionButtonIcon="menu" [isActionButtonVisible]="true">
+    <igx-icon>search</igx-icon>
+    <igx-icon>favorite</igx-icon>
+    <igx-icon>more_vert</igx-icon>
+
+    <igx-action-icon>
+        <igx-icon class="customIcon" fontSet="fa" name="fa-home"></igx-icon>
+    </igx-action-icon>
+</igx-navbar>
+```
+
+Finally, this is how our navbar should look like with its custom action icon:
+
+<div class="sample-container loading" style="height: 330px">
+    <iframe id="nav-bar-sample-2-iframe" frameborder="0" seamless width="100%" height="100%" src='{environment:demosBaseUrl}/navbar-sample-2' onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="nav-bar-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
+</div>
+<div class="divider--half"></div>
+
+> [!NOTE]
+> If [`igx-action-icon`]({environment:angularApiUrl}/classes/igxactionicondirective.html) is provided, the default [`actionButtonIcon`]({environment:angularApiUrl}/classes/igxnavbarcomponent.html#actionbuttonicon) will not be used. 
 
 ### API References
 
 In this article we show a few scenarios where the navbar component may come in handy. The APIs, we used to achieve them, are listed in the links below.
 
-[`IgxNavbarComponent`]({environment:angularApiUrl}/classes/igxnavbarcomponent.html)
+* [`IgxNavbarComponent`]({environment:angularApiUrl}/classes/igxnavbarcomponent.html)
+* [`IgxActionIconDirective`]({environment:angularApiUrl}/classes/igxactionicondirective.html)
 
 Additional components and/or directives with relative APIs that were used:
 
-[`IgxIconComponent`]({environment:angularApiUrl}/classes/igxiconcomponent.html)
+* [`IgxIconComponent`]({environment:angularApiUrl}/classes/igxiconcomponent.html)
 
 Styles:
 
 * [`IgxNavbarComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-navbar-theme)
 * [`IgxIconComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
 
-###Additional Resources
+### Additional Resources
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.
