@@ -15,7 +15,7 @@ Infragistics Excel Engine の `Worksheet` にデータが保存されます。Wo
 </div>
 <div>
     <!-- TODO uncomment when Stackblitz is ready for EXCEL
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="excel-library-operations-on-worksheets-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="excel-library-operations-on-worksheets-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
     </button> -->
 </div> 
 
@@ -28,8 +28,7 @@ Infragistics Excel Engine の `Worksheet` にデータが保存されます。Wo
 
 ```typescript
 var workbook = new Workbook(WorkbookFormat.Excel2007);
-var worksheet = workbook.worksheets().add("Sheet1");
-    
+var worksheet = workbook.worksheets().add("Sheet1");    
 worksheet.displayOptions.showGridlines = false;
 ```
 
@@ -50,7 +49,6 @@ worksheet.displayOptions.gridlineColor = "Red";
 ```typescript
 var workbook = new Workbook(WorkbookFormat.Excel2007);
 var worksheet = workbook.worksheets().add("Sheet1");
-
 worksheet.displayOptions.showRowAndColumnHeaders = false;
 ```
 
