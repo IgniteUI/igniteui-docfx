@@ -7,7 +7,7 @@ _language: ja
 
 ## Navbar
 
-<p class="highlight">Ignite UI for Angular [`IgxNavbarComponent`]({environment:angularApiUrl}/classes/igxnavbarcomponent.html)、アプリケーション内の現在位置を示し、ブラウザーの [戻る] ボタンのように戻る機能を提供します。Navigation Bar の検索またはお気に入りなどのリンクによって、ユーザーはアプリケーションでナビゲーションをスムーズに実行できます。バーは、バーが含まれるコンテナーの上に配置されます。</p>
+<p class="highlight">Ignite UI for Angular [`IgxNavbarComponent`]({environment:angularApiUrl}/classes/igxnavbarcomponent.html)、アプリケーション内の現在位置を示し、ブラウザーの [戻る] ボタンのように戻る機能を提供します。Navigation Bar の検索またはお気に入りなどのリンクによって、ユーザーはアプリケーションでナビゲーションをスムーズに実行できます。バーは、バーが含まれるコンテナ上に配置されます。</p>
 <div class="divider"></div>
 
 ### Navbar デモ
@@ -47,8 +47,8 @@ export class AppModule {}
 </igx-navbar>
 ```
 
-#### With menu button
-Good, we know which application we have opened. Now, let's see what capabilities it offers us by exploring its menu. To achieve this we will show the action button and make it use a menu icon as follows:
+#### メニュー ボタン
+開いたアプリケーションを確認できます。メニューで使用できる機能について説明します。 以下のコードは、アクション ボタンを表示し、ボタンにメニュー アイコンを使用します。
 
 ```html
 <!--navbar.component.html-->
@@ -58,7 +58,7 @@ Good, we know which application we have opened. Now, let's see what capabilities
 ```
 
 > [!NOTE]
-> The [`actionButtonIcon`]({environment:angularApiUrl}/classes/igxnavbarcomponent.html#actionbuttonicon) uses the Material fontset by design.
+> [`actionButtonIcon`]({environment:angularApiUrl}/classes/igxnavbarcomponent.html#actionbuttonicon) は、デザインで Material フォントセットを使用します。
 
 #### アイコンの追加
 
@@ -92,7 +92,7 @@ export class AppModule {}
 </igx-navbar>
 ```
 
-以下は結果です:
+以下は結果です。
 
 <div class="sample-container loading" style="height: 330px">
     <iframe id="nav-bar-sample-1-iframe" frameborder="0" seamless width="100%" height="100%" src='{environment:demosBaseUrl}/navbar-sample-1' onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -102,10 +102,10 @@ export class AppModule {}
 </div>
 <div class="divider--half"></div>
 
-#### Custom action icon
+#### カスタム アクション アイコン
 
-What if we want to use a custom action icon for our app navigation instead of the default one that is on the left-most part of the navbar?
-We can easily achieve this by using the [`igx-action-icon`]({environment:angularApiUrl}/classes/igxactionicondirective.html) directive, which will replace the default action icon with the content we have provided. We will do that by using the Font Awesome home icon in combination with a style for it.
+アプリのナビゲーションで navbar の左端にあるデフォルト アイコンではなくカスタム アクション アイコンを使用したい場合、
+[`igx-action-icon`]({environment:angularApiUrl}/classes/igxactionicondirective.html) ディレクティブを使用してデフォルトの操作アイコンをコンテンツで置き換えます。これには Font Awesome ホーム アイコンを使用します。
 
 ```css
 /* navbar.component.css */
@@ -133,18 +133,18 @@ We can easily achieve this by using the [`igx-action-icon`]({environment:angular
 </igx-navbar>
 ```
 
-Finally, this is how our navbar should look like with its custom action icon:
+以下はカスタム アクション アイコンをした場合の navbar の外観です。
 
 <div class="sample-container loading" style="height: 330px">
     <iframe id="nav-bar-sample-2-iframe" frameborder="0" seamless width="100%" height="100%" src='{environment:demosBaseUrl}/navbar-sample-2' onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="nav-bar-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="nav-bar-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
 </div>
 <div class="divider--half"></div>
 
 > [!NOTE]
-> If [`igx-action-icon`]({environment:angularApiUrl}/classes/igxactionicondirective.html) is provided, the default [`actionButtonIcon`]({environment:angularApiUrl}/classes/igxnavbarcomponent.html#actionbuttonicon) will not be used. 
+> [`igx-action-icon`]({environment:angularApiUrl}/classes/igxactionicondirective.html) の場合、デフォルト [`actionButtonIcon`]({environment:angularApiUrl}/classes/igxnavbarcomponent.html#actionbuttonicon) が使用されます。
 
 ### API リファレンス
 
