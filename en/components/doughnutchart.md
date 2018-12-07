@@ -23,7 +23,7 @@ The Doughnut Chart component is similar to the Pie Chart component, proportional
  ### Dependencies
 When installing the charts package, the core package must also be installed.
 
-**npm install ignite-angular-charts ignite-angular-core**
+**npm install igniteui-angular-charts igniteui-angular-core**
 
 The doughnut chart is exported as an `NgModule`, you need to import the _IgxDoughnutChartModule_ inside your `AppModule`:
 
