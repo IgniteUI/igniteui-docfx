@@ -132,43 +132,33 @@ export class GridComponent implements OnInit {
 }
 ```
 
-It is good to keep in mind that in order to improve performance, **igx-grid** cache all summaries and recalculate them if you perform CRUD operations over your data. But if your data source is modified outside the **igx-grid**, you need to explicitly force the **igx-grid** to recalculate your summaries by invoking the method `clearSummaryCache()`.
+### Summaries with Group By
 
-```html
-<igx-grid #grid1 [data]="data" [autoGenerate]="false" height="800px" width="800px" (onColumnInit)="initColunm($event)" >
-    <igx-column field="ProductID" width="200px"  [sortable]="true">
-    </igx-column>
-    <igx-column field="ProductName" width="200px" [sortable]="true" [hasSummary]="true">
-    </igx-column>
-    <igx-column field="UnitsInStock" width="200px" [dataType]="'number'" [hasSummary]="true" [summaries]="mySummary" [sortable]="true">
-    </igx-column>
-    <igx-column field="ReorderLevel" width="200px" [editable]="true" [dataType]="'number'" [hasSummary]="true">
-    </igx-column>
-</igx-grid>
-<button (click)="updateData()">Update Data</button>
-```
+When you have grouped by columns, the grid allows you to change the summary position and calculation mode using the [`summaryCalculationMode`]({environment:angularApiUrl}/classes/igxgridcomponent.html#summaryCalculationMode) and [`summaryPosition`]({environment:angularApiUrl}/classes/igxgridcomponent.html#summaryPosition) properties.
 
-```typescript
-...
-export class GridComponent implements OnInit {
+The available values of the [`summaryCalculationMode`]({environment:angularApiUrl}/classes/igxgridcomponent.html#summaryCalculationMode) property are:
+ - rootLevelOnly - Summaries are calculate only for the root level.
+ - childLevelsOnly - Summaries are calculated only for the child levels.
+ - rootAndChildLevels - Summaries are calculated for both root and child levels. This is the default value.
 
- updateData() {
-    const d = [].concat(this.data).concat(this.data.slice(0, 15));
-    this.data = d;
-    this.grid1.clearSummaryCache();
-  }
-}
-```
+The available values of the [`summaryPosition`]({environment:angularApiUrl}/classes/igxgridcomponent.html#summaryPosition) property are:
+ - top - The summary row appears before the group by row children.
+ - bottom - The summary row appears after the group by row children. This is the default value.
 
-Same applies for the case when `http` request is made, we should clean up the cache.
+> [!NOTE]
+> The [`summaryPosition`]({environment:angularApiUrl}/classes/igxgridcomponent.html#summaryPosition) property applies only for the child level summaries. The root level summaries appear always fixed at the bottom of the grid.
 
-```typescript
-this.http.get<any[]>('/assets/data.json')
-    .subscribe(data => {
-    this.data = data;
-    this.grid1.clearSummaryCache();
-});
-```
+#### Demo
+
+<div class="sample-container loading" style="height:704px">
+    <iframe id="grid-groupby-summary-iframe" src='{environment:demosBaseUrl}/grid-groupby-summary' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-groupby-summary-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
+
 ### API
 
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
