@@ -2,6 +2,7 @@
 title: Excel Library Component - Native Angular | Ignite UI for Angular
 _description: The Ignite UI for Excel Library component ... TODO.
 _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Excel Library, Angular Excel Library Example, Angular Excel Library Component, Angular Excel Engine
+_language: kr
 ---
 ## Excel Library
 
@@ -14,7 +15,7 @@ The Infragistics Excel Library allows you to work with spreadsheet data using fa
 </div>
 <div>
     <!-- TODO uncomment when Stackblitz is ready for EXCEL
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="excel-library-overview-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="excel-library-overview-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기
     </button> -->
 </div> 
 
@@ -23,7 +24,7 @@ The Infragistics Excel Library allows you to work with spreadsheet data using fa
 ### Dependencies
 When installing the excel package, the core package must also be installed.
 
--  **npm install igniteui-angular-excel igniteui-angular-core --save**
+-  **npm install ignite-angular-excel ignite-angular-core --save**
 
 The Excel Library is exported as an `NgModule`, you need to import the `IgxExcelModule` inside your `AppModule`:
 

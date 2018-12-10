@@ -157,8 +157,8 @@ To do that, extend the [`IgxStringFilteringOperand`]({environment:angularApiUrl}
 // grid-custom-filtering.component.ts
 
 export class GridCustomFilteringComponent implements OnInit {
-    public caseSensitiveFilteringOperand = CaseSensitiveFilteringOperand;
-    public booleanFilteringOperand = BooleanFilteringOperand;
+    public caseSensitiveFilteringOperand = CaseSensitiveFilteringOperand.instance();
+    public booleanFilteringOperand = BooleanFilteringOperand.instance();
     ...
 }
 ...

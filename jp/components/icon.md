@@ -40,7 +40,7 @@ import { IgxIconModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-### Usage
+### 使用方法
 
 ```html
 <igx-icon color="magenta">home</igx-icon>

@@ -112,6 +112,7 @@ Related topics:
 * [Reactive Forms Integration](input_group_reactive_forms.md)
 * [Label & Input](label_input.md)
 * [Combo](combo.md)
+* [Display Density](display_density.md)
 
 Our community is active and always welcoming to new ideas.
 
