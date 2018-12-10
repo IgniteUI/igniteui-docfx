@@ -5,7 +5,7 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 _language: ja
 ---
 
-## Virtual For ディレクティブ
+## 仮想 For ディレクティブ
 
 Ignite UI for Angular で、大量データをテンプレート化するために [`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxforof) の代わりに [`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxforof) を使用できます。[`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxforof) は、DOM 描画およびメモリ使用を最適化するために仮想化を使用します。仮想化はページング機能のようにデータをより小さいチャンクに分割します。このチャンクは、ユーザーがデータを水平/垂直にスクロールするときにコンテナー ビューポートで切り替えます。ページングの動作との違いは、仮想化が通常のスクロールバーの動作を装うことです。ディレクティブはスクロール可能なコンテナーを作成して、データの小さい部分を描画します。[`igxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) で使用され、仮想化された [`igx-list`]({environment:angularApiUrl}/classes/igxlistcomponent.html) を作成するために使用できます
 

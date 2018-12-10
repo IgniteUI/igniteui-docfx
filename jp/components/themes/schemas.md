@@ -1,11 +1,11 @@
 ---
-title: Schemas
+title: スキーマ
 _description: Ignite UI for Angular theming schemas allow you to create recipes for component themes.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library 
 _language: ja
 ---
 
-## Schemas
+## スキーマ
 <p class="highlight">Schemas はシンプルかつ宣言的にコンポーネントテーマで使用する可能性のあるすべてのプロパティをリストします。</p>
 
 <div class="divider--half"></div>
