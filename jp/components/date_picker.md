@@ -78,7 +78,7 @@ public date: Date = new Date(Date.now());
 </div>
 <div class="divider--half"></div>
 
-TwoWay データ バインディングを使用するには、`ngModule` を以下のように使用します。
+以下は、`ngModule` で TwoWay データ バインディングを使用する方法です。
 
 ```html
 <igx-date-picker [(ngModel)]="date"></igx-date-picker>
