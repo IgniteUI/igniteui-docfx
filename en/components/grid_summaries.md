@@ -150,7 +150,7 @@ The available values of the [`summaryPosition`]({environment:angularApiUrl}/clas
 
 #### Demo
 
-<div class="sample-container loading" style="height:704px">
+<div class="sample-container loading" style="height:720px">
     <iframe id="grid-groupby-summary-iframe" src='{environment:demosBaseUrl}/grid-groupby-summary' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
