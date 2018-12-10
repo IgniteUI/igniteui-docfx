@@ -306,6 +306,9 @@
   new: true
 - name: 通知
   header: true
+- name: Banner
+  href: banner.md
+  new: true
 - name: Snackbar
   href: snackbar.md
 - name: Toast
