@@ -6,12 +6,12 @@ _language: kr
 ---
 
 ## Radio & Radio Group
-
-### Radio Button
 <p class="highlight">The Ignite UI for Angular Radio Button component allows the user to select a single option from an available set of options that are listed side by side.</p>
 <div class="divider"></div>
 
-### Radio Button Demo
+### Radio Button
+
+#### Radio Button Demo
 <div class="sample-container" style="height: 384px">
     <iframe id="form-elements-sample-iframe" src='{environment:demosBaseUrl}/radio-sample-2' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
