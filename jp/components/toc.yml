@@ -153,9 +153,9 @@
 - name: Pie Chart
   href: piechart.md
   new: true
-  name: Frameworks
+- name: Frameworks
   header: true
-  name: Excel Library
+- name: Excel Library
   href: excel_library.md
   new: true
   items:
