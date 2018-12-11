@@ -159,25 +159,25 @@
   href: excel_library.md
   new: true
   items:
-    - name: Using Cells
+    - name: セルの使用
       href: excel_library_using_cells.md
       new: true
-    - name: Using Tables
+    - name: テーブルの使用
       href: excel_library_using_tables.md
       new: true
-    - name: Using Workbooks
+    - name: ワークブックの使用
       href: excel_library_using_workbooks.md
       new: true
-    - name: Using Worksheets
+    - name: ワークシートの使用
       href: excel_library_using_worksheets.md
       new: true
-    - name: チャートでの作業
+    - name: チャートの使用
       href: excel_library_working_with_charts.md
       new: true
     # - name: Working with Grids
     #   href: excel_library_working_with_grid.md
     #   new: true
-    - name: スパークラインでの作業
+    - name: スパークラインの使用
       href: excel_library_working_with_sparklines.md
       new: true      
 - name: ゲージ
