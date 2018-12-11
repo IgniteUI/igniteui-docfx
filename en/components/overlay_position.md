@@ -116,7 +116,7 @@ Changing the horizontal and/or vertical direction of the positioning settings de
 </div>
 <div class="divider"></div>
 
-In the above sample, the `overflow` of the displayed element is handled by subscribing to the overlay's [`onOpened`]({environment:angularApiUrl}/classes/igxoverlayservice.html#onopened) and [`onClosed`]({environment:angularApiUrl}/classes/igxoverlayservice.html#onclosed) emitters and applying the appropriate styling when the element is toggled.
+In the above sample, the `overflow` of the displayed element is handled by subscribing to the overlay's [`onOpening`]({environment:angularApiUrl}/classes/igxoverlayservice.html#onopening) and [`onClosed`]({environment:angularApiUrl}/classes/igxoverlayservice.html#onclosed) emitters and applying the appropriate styling when the element is toggled.
 
 ```typescript
 // in overlay.component.ts
@@ -125,13 +125,13 @@ export class MyExampleOverlayComponent {
     // subscribe to overlay toggle emitters
     public ngOnInit() {
         const applyStyle = (overflow) => { this.overlayElement.nativeElement.style.overflow = overflow};
-        this.overlay.onOpened.subscribe(() => {applyStyle('auto')});
-        this.overlay.onClosed.subscribe(() => {applyStyle('')});
+        this.overlay.onOpening.subscribe(() => {applyStyle('auto'); });
+        this.overlay.onClosed.subscribe(() => {applyStyle(''); });
     }
     ...
     // unsub on destroy
     public ngOnDestroy() {
-        this.overlay.onOpened.unsubscribe();
+        this.overlay.onOpening.unsubscribe();
         this.overlay.onClosed.unsubscribe();
     }
 
