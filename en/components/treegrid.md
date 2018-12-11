@@ -327,8 +327,6 @@ In order to be able to use the Batch Editing functionality, it is required to im
 > [!NOTE]
 > Transaction state consists of all the updated, added and deleted rows and their last states.
 
-## Usage
-
 To get started import the [`IgxTreeGridModule`]({environment:angularApiUrl}/classes/igxtreegridmodule.html) in the **app.module.ts** file:
 
 ```typescript
