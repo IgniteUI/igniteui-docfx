@@ -21,7 +21,7 @@ Ignite UI for Angular Banner ƒRƒ“ƒ|[ƒlƒ“ƒg‚ÍAƒXƒiƒbƒNƒo[‚æ‚è’·‚¢ŠÔ‚Ì•\¦‚Åƒ
 <div class="divider--half"></div>
 
 > [!NOTE]
-> Ignite UI for Angular ƒRƒ“ƒ|[ƒlƒ“ƒg‚ğƒvƒƒWƒFƒNƒg‚É’Ç‰Á‚·‚é‘O‚ÉA•K—v‚È‚·‚×‚Ä‚ÌˆË‘¶ŠÖŒW‚ğ\¬‚µAƒvƒƒWƒFƒNƒg‚ÌƒZƒbƒgƒAƒbƒv‚ª³‚µ‚­Š®—¹‚µ‚½‚±‚Æ‚ğŠm”F‚µ‚Ä‚­‚¾‚³‚¢B[ƒCƒ“ƒXƒg[ƒ‹](https://www.infragistics.com/products/ignite-ui-angular/getting-started#installation)‚ÌƒgƒsƒbƒN‚Åè‡‚ğ‚²Šm”F‚­‚¾‚³‚¢B
+> Ignite UI for Angular ƒRƒ“ƒ|[ƒlƒ“ƒg‚ğƒvƒƒWƒFƒNƒg‚É’Ç‰Á‚·‚é‘O‚ÉA•K—v‚È‚·‚×‚Ä‚ÌˆË‘¶ŠÖŒW‚ğ\¬‚µAƒvƒƒWƒFƒNƒg‚ÌƒZƒbƒgƒAƒbƒv‚ª³‚µ‚­Š®—¹‚µ‚½‚±‚Æ‚ğŠm”F‚µ‚Ä‚­‚¾‚³‚¢B[ƒCƒ“ƒXƒg[ƒ‹](https://jp.infragistics.com/products/ignite-ui-angular/getting-started#installation)‚ÌƒgƒsƒbƒN‚Åè‡‚ğ‚²Šm”F‚­‚¾‚³‚¢B
 
 ## g—p•û–@
 
