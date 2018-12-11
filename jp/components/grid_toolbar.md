@@ -131,9 +131,9 @@ public toolbarExportingHandler(args) {
 
 <div class="divider"></div>
 
-#### Custom Content Template
+#### カスタム コンテンツ テンプレート
 
-If you need to add some application specific UI to the toolbar (like custom buttons for example) you may create an ng-template and mark it with the [`igxToolbarCustomContent`]({environment:angularApiUrl}/classes/igxgridtoolbarcustomcontentdirective.html) directive. The following code snippet demonstrates how to define such custom template:
+ツールバーにアプリケーション固有の UI (カスタム ボタンなど) を追加する場合、ng-template を作成して[`igxToolbarCustomContent`]({environment:angularApiUrl}/classes/igxgridtoolbarcustomcontentdirective.html) ディレクティブでマークします。以下のコード スニペットはカスタム テンプレートを定義する方法を示します。
 
 ```html
 <igx-grid [showToolbar]="true" ...>
@@ -150,18 +150,18 @@ If you need to add some application specific UI to the toolbar (like custom butt
 ```
 
 > [!NOTE]
-> The [`igxToolbarCustomContent`]({environment:angularApiUrl}/classes/igxgridtoolbarcustomcontentdirective.html) directive's context contains two properties:
-> `grid` - a reference to the [`IgxGridComponent`]({environment:angularApiUrl}/classes/igxgridcomponent.html) containing the toolbar and
-> `toolbar` - a reference to the [`IgxGridToolbarComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html)
+> [`igxToolbarCustomContent`]({environment:angularApiUrl}/classes/igxgridtoolbarcustomcontentdirective.html) ディレクティブのコンテキストに 2 つのプロパティを含みます。
+> `grid` - ツールバーを含む [`IgxGridComponent`]({environment:angularApiUrl}/classes/igxgridcomponent.html) への参照と
+> `toolbar` -  [`IgxGridToolbarComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html) への参照。
 
-The following sample demonstrates how to add an additional button to the toolbar to clear the sorting set by clicking on the columns' headers:
+以下のサンプルは、列ヘッダーをクリックして並べ替えセットをクリアするためのボタンをツールバーに追加する方法です。
 
 <div class="sample-container loading" style="height:420px">
     <iframe id="grid-toolbar-sample-4-iframe" src='{environment:demosBaseUrl}/grid-toolbar-sample-4' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-toolbar-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-toolbar-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz　で開く</button>
 </div>
 
 <div class="divider"></div>
