@@ -223,7 +223,7 @@ And here is the final result:
 </div>
 <div class="divider--half"></div>
 
-#### Tree Grid Row Editing
+#### Row Editing
 
 Row editing - allows modification of several cells in the row, before submitting, at once, all those changes to the tree grid's data source. Leverages the pending changes functionality of the new transaction provider.
 
@@ -315,7 +315,7 @@ Here is the result:
 </div>
 <div class="divider--half"></div>
 
-#### Tree Grid Batch Editing
+#### Batch Editing
 [`HierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactiondervice.html) is an injectable middleware that a component can use to accumulate changes without affecting the underlying data. The provider exposes API to access, manipulate changes (undo and redo) and discard or commit all to the data.
 
 The [`HierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactiondervice.html) works with both cell editing and row editing. The transaction for the cell edit is added when the cell exits edit mode, while row transaction is created, when the row exits edit mode. In both cases the state of the grid edits consist of all updated, added and deleted rows and their last states. Those can later be inspected, manipulated and submitted at once. Changes are collected for individual cells or rows, depending on the editing mode in use, and accumulated per data row/record.
