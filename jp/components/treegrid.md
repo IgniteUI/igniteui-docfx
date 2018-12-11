@@ -7,7 +7,7 @@ _language: ja
 
 ## ツリー グリッド
 
-<p class="highlight">統一性のあるテーブルとして書式設定されたスキーマで階層型データを表示および操作し、並べ替え、フィルタリング、エディティング、列ピン固定、ページング、列移動、非表示など高度な機能を提供します。</p>
+<p class="highlight">Displays and manipulates hierarchical data with consistent schema formatted as a table and provides a line of advanced features such as sorting, filtering, summaries, editing, column pinning, paging, column moving and hiding.</p>
 <div class="divider"></div>
 
 ### デモ
@@ -119,14 +119,15 @@ IgxTreeGridComponent を階層にバインドするには、[`childDataKey`]({en
 ```
 
 [`rowSelectable`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#rowselectable) と [`paging`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#paging) を使用してツリー グリッドの行選択とページング機能を有効にします。
-各列でフィルタリング、並べ替え、編集、サイズ変更機能を有効にします。
+We will also enable the summaries feature on the first column and the filtering, sorting, editing, moving and resizing features for each of our columns.
 
 ```html
 <!--treeGridSample.component.html-->
 
 <igx-tree-grid #treeGrid [data]="localData" childDataKey="Employees"
                [autoGenerate]="false" [rowSelectable]="true" [paging]="true" [allowFiltering]="true">
-    <igx-column field="Name" dataType="string" [sortable]="true" [editable]="true" [movable]="true" [resizable]="true"></igx-column>
+    <igx-column field="Name" dataType="string" [sortable]="true" [editable]="true" [movable]="true" [resizable]="true"
+                [hasSummary]="true"></igx-column>
     <igx-column field="HireDate" dataType="date" [sortable]="true" [editable]="true" [movable]="true" [resizable]="true"></igx-column>
     <igx-column field="Age" dataType="number" [sortable]="true" [editable]="true" [movable]="true" [resizable]="true"></igx-column>
 </igx-tree-grid>
@@ -316,7 +317,6 @@ export class TreeGridRowEditSampleComponent implements OnInit {
 |制限|説明|
 |--- |--- |
 |ツリー セルのテンプレート化|ツリーセルをテンプレート化する場合、セルの境界外にスパンするコンテンツはオーバレイに配置しない限り表示されません。|
-|集計|集計はツリーグリッドで現在サポートされておりません。|
 |検索 API|検索 API はツリーグリッドで現在サポートされておりません。|
 |グループ化|グループ化機能は、ツリーグリッドに継承されるためサポートされません。|
 

@@ -78,29 +78,6 @@ public disableSummary() {
 }
 ```
 
-참고: [`hasSummary`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#hassummary) 속성을 `false`에서 `true`로 또는 그 반대로 변경하여 특정 열 요약을 런타임으로 활성화 또는 비활성화하는 옵션이 있지만 [`recalculateSummaries`]({environment:angularApiUrl}/classes/igxgridcomponent.html#recalculatesummaries) 메소드를 명시적으로 호출해야 합니다.
-
-```html
-<igx-grid #grid1 [data]="data" [autoGenerate]="false" height="800px" width="800px" (onColumnInit)="initColunm($event)" >
-    <igx-column field="ProductID" header="Product ID" width="200px"  [sortable]="true">
-    </igx-column>
-    <igx-column field="ProductName" header="Product Name" width="200px" [sortable]="true" [hasSummary]="true">
-    </igx-column>
-    <igx-column field="ReorderLevel" width="200px" [editable]="true" [dataType]="'number'" [hasSummary]="false">
-    </igx-column>
-</igx-grid>
-<button (click)="toggleSummary()">Enable Summary</button>
-```
-
-```typescript
-...
-    public toggleSummary() {
-        this.grid1.getColumnByName('ReorderLevel').hasSummary = true;
-        this.grid1.recalculateSummaries();
-    }
-...
-
-```
 이러한 함수가 요구 사항을 충족시키지 못하면 특정 열에 대한 사용자 요약을 제공할 수 있습니다. 이를 실행하려면 열 데이터 유형 및 필요에 따라 기본 클래스인 [`IgxSummaryOperand`]({environment:angularApiUrl}/classes/igxsummaryoperand.html), [`IgxNumberSummaryOperand`]({environment:angularApiUrl}/classes/igxnumbersummaryoperand.html) 또는 [`IgxDateSummaryOperand`]({environment:angularApiUrl}/classes/igxdatesummaryoperand.html) 중에서 하나를 무효화해야 합니다. 이 방법으로 기존 함수를 다시 정의하거나 새로운 함수를 추가할 수 있습니다. [`IgxSummaryOperand`]({environment:angularApiUrl}/classes/igxsummaryoperand.html) 클래스는 [`count`]({environment:angularApiUrl}/classes/igxsummaryoperand.html#count) 메소드에 대해서만 기본 실행을 제공합니다. [`IgxNumberSummaryOperand`]({environment:angularApiUrl}/classes/igxnumbersummaryoperand.html)는 [`IgxSummaryOperand`]({environment:angularApiUrl}/classes/igxsummaryoperand.html)를 확장하고 [`min`]({environment:angularApiUrl}/classes/igxnumbersummaryoperand.html#min), [`max`]({environment:angularApiUrl}/classes/igxnumbersummaryoperand.html#max), [`sum`]({environment:angularApiUrl}/classes/igxnumbersummaryoperand.html#sum) 및 [`average`]({environment:angularApiUrl}/classes/igxnumbersummaryoperand.html#average)의 구현을 제공합니다. [`IgxDateSummaryOperand`]({environment:angularApiUrl}/classes/igxdatesummaryoperand.html)는 [`IgxSummaryOperand`]({environment:angularApiUrl}/classes/igxsummaryoperand.html)를 확장하며 [`earliest`]({environment:angularApiUrl}/classes/igxdatesummaryoperand.html#earliest) 및 [`latest`]({environment:angularApiUrl}/classes/igxdatesummaryoperand.html#latest)를 제공합니다.
 
 ```typescript
@@ -156,43 +133,46 @@ export class GridComponent implements OnInit {
 }
 ```
 
-퍼포먼스를 향상 시키기 위해 **igx-grid**는 모든 요약을 캐시하고, 데이터를 통해 CRUD 조작을 실행하는 경우에 다시 계산합니다. 그러나, 데이터 소스가 **igx-grid** 이외로 변경되는 경우,  `clearSummaryCache()` 메소드를 호출하여 **igx-grid**의 요약을 다시 계산하도록 명시적으로 설정해야 합니다.
+### Summaries with Group By
 
-```html
-<igx-grid #grid1 [data]="data" [autoGenerate]="false" height="800px" width="800px" (onColumnInit)="initColunm($event)" >
-    <igx-column field="ProductID" width="200px"  [sortable]="true">
-    </igx-column>
-    <igx-column field="ProductName" width="200px" [sortable]="true" [hasSummary]="true">
-    </igx-column>
-    <igx-column field="UnitsInStock" width="200px" [dataType]="'number'" [hasSummary]="true" [summaries]="mySummary" [sortable]="true">
-    </igx-column>
-    <igx-column field="ReorderLevel" width="200px" [editable]="true" [dataType]="'number'" [hasSummary]="true">
-    </igx-column>
-</igx-grid>
-<button (click)="updateData()">Update Data</button>
-```
+When you have grouped by columns, the grid allows you to change the summary position and calculation mode using the [`summaryCalculationMode`]({environment:angularApiUrl}/classes/igxgridcomponent.html#summaryCalculationMode) and [`summaryPosition`]({environment:angularApiUrl}/classes/igxgridcomponent.html#summaryPosition) properties.
 
-```typescript
-...
-export class GridComponent implements OnInit {
+The available values of the [`summaryCalculationMode`]({environment:angularApiUrl}/classes/igxgridcomponent.html#summaryCalculationMode) property are:
+ - rootLevelOnly - Summaries are calculate only for the root level.
+ - childLevelsOnly - Summaries are calculated only for the child levels.
+ - rootAndChildLevels - Summaries are calculated for both root and child levels. This is the default value.
 
- updateData() {
-    const d = [].concat(this.data).concat(this.data.slice(0, 15));
-    this.data = d;
-    this.grid1.clearSummaryCache();
-  }
-}
-```
+The available values of the [`summaryPosition`]({environment:angularApiUrl}/classes/igxgridcomponent.html#summaryPosition) property are:
+ - top - The summary row appears before the group by row children.
+ - bottom - The summary row appears after the group by row children. This is the default value.
 
-`http` 요청이 실행된 경우에도 동일하게 적용되므로 캐시를 갱신해야 합니다.
+> [!NOTE]
+> The [`summaryPosition`]({environment:angularApiUrl}/classes/igxgridcomponent.html#summaryPosition) property applies only for the child level summaries. The root level summaries appear always fixed at the bottom of the grid.
 
-```typescript
-this.http.get<any[]>('/assets/data.json')
-    .subscribe(data => {
-    this.data = data;
-    this.grid1.clearSummaryCache();
-});
-```
+#### Demo
+
+<div class="sample-container loading" style="height:720px">
+    <iframe id="grid-groupby-summary-iframe" src='{environment:demosBaseUrl}/grid-groupby-summary' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-groupby-summary-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
+
+#### Keyboard Navigation
+
+The summary rows can be navigated with the following keyboard interactions:
+
+- <kbd>UP</kbd> - navigates one cell up
+- <kbd>DOWN</kbd> - navigates one cell down
+- <kbd>LEFT</kbd> - navigates one cell left
+- <kbd>RIGHT</kbd> - navigates one cell right
+- <kbd>CTRL</kbd> + <kbd>LEFT</kbd> or <kbd>HOME</kbd> - navigates to the leftmost cell
+- <kbd>CTRL</kbd> + <kbd>RIGHT</kbd> or <kbd>END</kbd> - navigates to the rightmost cell
+- <kbd>TAB</kbd> - sequentially navigates to the next cell on the row and if the last cell is reached navigates to the next row
+- <kbd>SHIFT</kbd> + <kbd>TAB</kbd> - sequentially navigates to the previous cell on the row and if the first cell is reached navigates to the previous row
+
 ### API
 
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
