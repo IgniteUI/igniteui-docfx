@@ -7,7 +7,7 @@ _language: kr
 
 ### 그리드 열 숨기기
 
-Ignite UI for Angular 데이터 그리드는 [`IgxColumnHidingComponent`]({environment:angularApiUrl}/classes/igxcolumnhidingcomponent.html)를 제공하여 사용자가 **UI**를 통해 직접 열을 숨기거나 표시할 수 있도록 합니다. 데이터 그리드에 내장된 열 숨기기 UI가 있으며 그리드 도구 모음을 통해 사용할 수 있습니다. 또한, 개발자가 열 숨기기 UI를 별도의 컴포넌트로 정의하여 페이지에서 원하는 위치에 배치할 수 있습니다.
+Ignite UI for Angular 데이터 그리드는 [`IgxColumnHidingComponent`]({environment:angularApiUrl}/classes/igxcolumnhidingcomponent.html)를 제공하여 사용자가 **UI**를 통해 직접 열을 숨기거나 표시할 수 있도록 합니다. 데이터 그리드에 내장된 열 숨기기 UI가 있으며 그리드 툴 모음을 통해 사용할 수 있습니다. 또한, 개발자가 열 숨기기 UI를 별도의 컴포넌트로 정의하여 페이지에서 원하는 위치에 배치할 수 있습니다.
 
 #### 데모
 
@@ -40,11 +40,11 @@ Ignite UI for Angular 데이터 그리드는 [`IgxColumnHidingComponent`]({envir
 </igx-grid>
 ```
 
-### 도구 모음의 열 숨기기 UI
+### 툴 모음의 열 숨기기 UI
 
-내장 열 숨기기 UI는 그리드 도구 모음의 [`IgxDropDownComponent`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) 안에 있습니다. 이 정밀한 드롭 다운을 사용하여 열 숨기기 UI를 표시/비표시할 수 있습니다.
-이를 위해 [`showToolbar`]({environment:angularApiUrl}/classes/igxgridcomponent.html#showtoolbar)와 그리드의 [`columnhiding`]({environment:angularApiUrl}/classes/igxgridcomponent.html#columnhiding) 속성을 모두 true로 설정해야 합니다. 도구 모음이 활성화되어 있지 않은 경우, [`columnhiding`]({environment:angularApiUrl}/classes/igxgridcomponent.html#columnhiding) 속성을 활성화해도 아무런 효과가 없습니다.
-또한, [`toolbarTitle`]({environment:angularApiUrl}/classes/igxgridcomponent.html#toolbartitle) 속성과 그리드 래퍼의 사용자 스타일을 사용하여 도구 모음에 제목을 추가합니다.
+내장 열 숨기기 UI는 그리드 툴 모음의 [`IgxDropDownComponent`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) 안에 있습니다. 이 정밀한 드롭 다운을 사용하여 열 숨기기 UI를 표시/비표시할 수 있습니다.
+이를 위해 [`showToolbar`]({environment:angularApiUrl}/classes/igxgridcomponent.html#showtoolbar)와 그리드의 [`columnhiding`]({environment:angularApiUrl}/classes/igxgridcomponent.html#columnhiding) 속성을 모두 true로 설정해야 합니다. 툴 모음이 활성화되어 있지 않은 경우, [`columnhiding`]({environment:angularApiUrl}/classes/igxgridcomponent.html#columnhiding) 속성을 활성화해도 아무런 효과가 없습니다.
+또한, [`toolbarTitle`]({environment:angularApiUrl}/classes/igxgridcomponent.html#toolbartitle) 속성과 그리드 래퍼의 사용자 스타일을 사용하여 툴 모음에 제목을 추가합니다.
 
 ```html
 <!--columnHiding.component.html-->
@@ -65,8 +65,8 @@ Ignite UI for Angular 데이터 그리드는 [`IgxColumnHidingComponent`]({envir
 
 ```
 
-그리드는 도구 모음의 열 숨기기 UI를 사용할 때 유용한 속성을 제공합니다.
-[`columnHidingTitle`]({environment:angularApiUrl}/classes/igxgridcomponent.html#columnhidingtitle) 및 [`hiddenColumnsText`]({environment:angularApiUrl}/classes/igxgridcomponent.html#hiddencolumnstext) 속성을 사용하여 도구 모음의 드롭다운 버튼 안에 표시되는 제목과 텍스트를 설정합니다. 보다 구체적으로, [`hiddenColumnsText`]({environment:angularApiUrl}/classes/igxgridcomponent.html#hiddencolumnstext)는 기본적으로 버튼에 포함된 열 카운트 수의 바로 옆에 표시됩니다.
+그리드는 툴 모음의 열 숨기기 UI를 사용할 때 유용한 속성을 제공합니다.
+[`columnHidingTitle`]({environment:angularApiUrl}/classes/igxgridcomponent.html#columnhidingtitle) 및 [`hiddenColumnsText`]({environment:angularApiUrl}/classes/igxgridcomponent.html#hiddencolumnstext) 속성을 사용하여 툴 모음의 드롭다운 버튼 안에 표시되는 제목과 텍스트를 설정합니다. 보다 구체적으로, [`hiddenColumnsText`]({environment:angularApiUrl}/classes/igxgridcomponent.html#hiddencolumnstext)는 기본적으로 버튼에 포함된 열 카운트 수의 바로 옆에 표시됩니다.
 [`hiddenColumnsText`]({environment:angularApiUrl}/classes/igxgridcomponent.html#hiddencolumnstext) 속성은 로컬리제이션으로도 사용할 수 있어 매우 유용합니다.
 
 ```html
@@ -89,7 +89,7 @@ public ngAfterViewInit() {
 }
 ```
 
-열 숨김 UI에 확장된 기능 세트를 사용하기 위해 열 숨김 UI 컴포넌트 자체에 대한 참조를 반환하는 도구 모음의 [`columnHidingUI`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html#columnhidingui) 속성을 사용할 수 있습니다. 이렇게 하면 각 API에 접속하여 애플리케이션의 요구에 따라 사용할 수 있습니다.
+열 숨김 UI에 확장된 기능 세트를 사용하기 위해 열 숨김 UI 컴포넌트 자체에 대한 참조를 반환하는 툴 모음의 [`columnHidingUI`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html#columnhidingui) 속성을 사용할 수 있습니다. 이렇게 하면 각 API에 접속하여 애플리케이션의 요구에 따라 사용할 수 있습니다.
 
 이 조항 시작 부분에 있는 코드의 결과는 [열 숨기기 데모](#데모) 부분에서 확인할 수 있습니다.
 
@@ -113,7 +113,7 @@ import {
 export class AppModule {}
 ```
 
-이제 [`IgxColumnHidingComponent`]({environment:angularApiUrl}/classes/igxcolumnhidingcomponent.html)를 생성해 보겠습니다! 이 애플리케이션에서는 그리드 옆에 배치합니다(도구 모음의 열 숨기기 UI와 다르며, 컴포넌트는 디자인에 의해 드롭 다운 안에 있음). 또한 컴포넌트의 [`columns`]({environment:angularApiUrl}/classes/igxcolumnhidingcomponent.html#columns) 속성을 그리드의 열로 설정하고 애플리케이션을 훨씬 더 멋지게 보이도록 사용자 스타일을 포함시킵니다!
+이제 [`IgxColumnHidingComponent`]({environment:angularApiUrl}/classes/igxcolumnhidingcomponent.html)를 생성해 보겠습니다! 이 애플리케이션에서는 그리드 옆에 배치합니다(툴 모음의 열 숨기기 UI와 다르며, 컴포넌트는 디자인에 의해 드롭 다운 안에 있음). 또한 컴포넌트의 [`columns`]({environment:angularApiUrl}/classes/igxcolumnhidingcomponent.html#columns) 속성을 그리드의 열로 설정하고 애플리케이션을 훨씬 더 멋지게 보이도록 사용자 스타일을 포함시킵니다!
 
 ```html
 <!--columnHiding.component.html-->

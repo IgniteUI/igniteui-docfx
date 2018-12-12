@@ -300,4 +300,4 @@ export class AppComponent {
 <div class="divider--half"></div>
 
 ### API 参照
-* [IgxNavigationDrawerComponent]({environment:angularApiUrl/classes/igxnavigationdrawercomponent.html)
+* [IgxNavigationDrawerComponent]({environment:angularApiUrl}/classes/igxnavigationdrawercomponent.html)

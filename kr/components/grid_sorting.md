@@ -32,17 +32,20 @@ Ignite UI for Angular에서 **정렬**은 열 단위 수준에서 사용할 수 
 그리드 [`sort`]({environment:angularApiUrl}/classes/igxgridcomponent.html#sort) 메소드를 사용하여 그리드 API를 통해 모든 열 또는 열 조합을 정렬할 수 있습니다:
 
 ```typescript
-import { SortingDirection, DefaultSortingStrategy } from 'igniteui-angular';
+import { SortingDirection } from 'igniteui-angular';
 
 // Perform a case insensitive ascending sort on the ProductName column.
-this.grid.sort({ fieldName: 'ProductName', dir: SortingDirection.Asc, ignoreCase: true, strategy: DefaultSortingStrategy.instance() });
+this.grid.sort({ fieldName: 'ProductName', dir: SortingDirection.Asc });
 
 // Perform sorting on both the ProductName and Price columns.
 this.grid.sort([
-    { fieldName: 'ProductName', dir: SortingDirection.Asc, ignoreCase: true, strategy: DefaultSortingStrategy.instance() },
-    { fieldName: 'Price', dir: SortingDirection.Desc, ignoreCase: false, strategy: DefaultSortingStrategy.instance() }
+    { fieldName: 'ProductName', dir: SortingDirection.Asc },
+    { fieldName: 'Price', dir: SortingDirection.Desc, ignoreCase: false }
 ]);
 ```
+
+> [!NOTE]
+> Sorting is performed using our [`DefaultSortingStrategy`]({environment:angularApiUrl}/classes/defaultsortingstrategy.html) algorithm. Any [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#sortStrategy) or [`ISortingExpression`]({environment:angularApiUrl}/interfaces/isortingexpression.html#strategy) can use a custom implementation of the [`ISortingStrategy`]({environment:angularApiUrl}/interfaces/isortingstrategy.html) as a substitute algorithm. This is useful when custom sorting needs to be defined for complex template columns, or image columns, for example.
 
 필터링 동작과 마찬가지로 [`clearSort`]({environment:angularApiUrl}/classes/igxgridcomponent.html#clearsort) 메소드를 사용하여 정렬 상태를 해제할 수 있습니다:
 
@@ -64,8 +67,8 @@ this.grid.clearSort();
 ```typescript
 public ngOnInit() {
     this.grid.sortingExpressions = [
-        { fieldName: 'ProductName', dir: SortingDirection.Asc, ignoreCase: true, strategy: DefaultSortingStrategy.instance() },
-        { fieldName: 'Price', dir: SortingDirection.Desc, ignoreCase: false, strategy: DefaultSortingStrategy.instance() }
+        { fieldName: 'ProductName', dir: SortingDirection.Asc },
+        { fieldName: 'Price', dir: SortingDirection.Desc, ignoreCase: false }
     ];
 }
 ```

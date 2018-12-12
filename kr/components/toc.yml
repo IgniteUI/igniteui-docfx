@@ -159,33 +159,33 @@
 - name: Pie Chart
   href: piechart.md
   new: true
-    #- name: Frameworks
-    # header: true
-    #- name: Excel Library
-    # href: excel_library.md
-    # new: true
-    # items:
-    #- name: Using Cells
-    #  href: excel_library_using_cells.md
-    #  new: true
-    #- name: Using Tables
-    #  href: excel_library_using_tables.md
-    #  new: true
-    # - name: Using Workbooks
-    #  href: excel_library_using_workbooks.md
-    #  new: true
-    #- name: Using Worksheets
-    #  href: excel_library_using_worksheets.md
-    #  new: true
-    #- name: Working with Charts
-    #  href: excel_library_working_with_charts.md
-    #  new: true
+- name: Frameworks
+  header: true
+- name: Excel Library
+  href: excel_library.md
+  new: true
+  items:
+    - name: Using Cells
+      href: excel_library_using_cells.md
+      new: true
+    - name: Using Tables
+      href: excel_library_using_tables.md
+      new: true
+    - name: Using Workbooks
+      href: excel_library_using_workbooks.md
+      new: true
+    - name: Using Worksheets
+      href: excel_library_using_worksheets.md
+      new: true
+    - name: Working with Charts
+      href: excel_library_working_with_charts.md
+      new: true
     # - name: Working with Grids
     #   href: excel_library_working_with_grid.md
     #   new: true
-    #- name: Working with Sparklines
-    #  href: excel_library_working_with_sparklines.md
-    #  new: true
+    - name: Working with Sparklines
+      href: excel_library_working_with_sparklines.md
+      new: true
 - name: Gauges
   header: true
   new: true
@@ -205,14 +205,18 @@
   items:
     - name: Palettes
       href: themes/palette.md
-    - name: Global Themes
-      href: themes/global-theme.md
-    - name: Componenent Themes
-      href: themes/component-themes.md
-    - name: Theming Demo
-      href: themes/theming-demo.md
+    - name: Schemas
+      href: themes/schemas.md
+      new: true
     - name: Typography
       href: themes/typography.md
+    - name: Global Themes
+      href: themes/global-theme.md
+    - name: Component Themes
+      href: themes/component-themes.md
+      new: true
+    - name: Examples
+      href: themes/examples.md
 - name: Shadows
   href: shadows.md
 - name: Display Density
@@ -312,6 +316,9 @@
   new: true
 - name: Notifications
   header: true
+- name: Banner
+  href: banner.md
+  new: true
 - name: Snackbar
   href: snackbar.md
 - name: Toast

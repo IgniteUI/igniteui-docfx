@@ -23,7 +23,7 @@ The Infragistics Excel Library allows you to work with spreadsheet data using fa
 ### Dependencies
 When installing the excel package, the core package must also be installed.
 
--  **npm install ignite-angular-excel ignite-angular-core --save**
+-  **npm install igniteui-angular-excel igniteui-angular-core --save**
 
 The Excel Library is exported as an `NgModule`, you need to import the `IgxExcelModule` inside your `AppModule`:
 

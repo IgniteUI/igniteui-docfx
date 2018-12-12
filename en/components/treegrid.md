@@ -67,7 +67,7 @@ For this sample, let's use the following collection structure:
 // Sample Employee Data
 
 export const EMPLOYEE_DATA = [
-    {        
+    {
         Name: "Johnathan Winchester",
         ID: 1,
         HireDate: new Date(2008, 3, 20),
@@ -75,7 +75,7 @@ export const EMPLOYEE_DATA = [
         Employees: [
             {
                 Name: "Michael Burke",
-                ID: 3,                
+                ID: 3,
                 HireDate: new Date(2011, 6, 3),
                 Age: 43,
                 Employees: []
@@ -84,13 +84,13 @@ export const EMPLOYEE_DATA = [
                 Name: "Thomas Anderson"
                 ID: 2,
                 HireDate: new Date(2009, 6, 19),
-                Age: 29,                
+                Age: 29,
                 Employees: []
             },
             ...
         ]
     },
-    ...            
+    ...
 ]
 ```
 
@@ -131,14 +131,15 @@ We will also enable the filtering, sorting, editing, moving and resizing feature
 </igx-tree-grid>
 ```
 
-Finally, we will enable the toolbar of our tree grid, along with the column hiding and the column pinning features by using the [`showToolbar`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#showtoolbar), [`columnHiding`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#columnhiding) and [`columnPinning`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#columnpinning) properties respectively.
+Finally, we will enable the toolbar of our tree grid, along with the column hiding, column pinning and exporting features by using the [`showToolbar`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#showtoolbar), [`columnHiding`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#columnhiding), [`columnPinning`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#columnpinning), [`exportExcel`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#exportexcel) and [`exportCsv`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#exportcsv) properties respectively.
 
 ```html
 <!--treeGridSample.component.html-->
 
 <igx-tree-grid #treeGrid [data]="localData" childDataKey="Employees"
                [autoGenerate]="false" [rowSelectable]="true" [paging]="true" [allowFiltering]="true"
-               [showToolbar]="true" toolbarTitle="Employees" [columnHiding]="true" [columnPinning]="true">
+               [showToolbar]="true" toolbarTitle="Employees" [columnHiding]="true" [columnPinning]="true"
+               [exportExcel]="true" [exportCsv]="true" exportExcelText="To Excel" exportCsvText="To CSV">
     <igx-column field="Name" dataType="string" [sortable]="true" [editable]="true" [movable]="true" [resizable]="true"></igx-column>
     <igx-column field="HireDate" dataType="date" [sortable]="true" [editable]="true" [movable]="true" [resizable]="true"></igx-column>
     <igx-column field="Age" dataType="number" [sortable]="true" [editable]="true" [movable]="true" [resizable]="true"></igx-column>
@@ -211,7 +212,7 @@ In addition we will enable the row selection feature of the tree grid by using t
     <igx-column field="Age" dataType="number" [sortable]="true" [editable]="true" [movable]="true" [resizable]="true"></igx-column>
 </igx-tree-grid>
 ```
- 
+
 And here is the final result:
 
 <div class="sample-container loading" style="height:450px">
@@ -223,35 +224,18 @@ And here is the final result:
 </div>
 <div class="divider--half"></div>
 
-#### Tree Grid Row Editing
+#### Row Editing
 
 Row editing - allows modification of several cells in the row, before submitting, at once, all those changes to the tree grid's data source. Leverages the pending changes functionality of the new transaction provider.
 
 If [`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditable) is enabled, then all columns that have [field]({environment:angularApiUrl}/classes/igxcolumncomponent.html#field) property defined (excluding a [`primaryKey`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#primarykey) one) will be editable, even though the [`editable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable) property is not defined for them. If you want to disable editing for a specific column, then you set the [`editable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable) column's input to false.
 The following sample illustrates how to enable row editing using the grid's [`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditable) property.
 
-Let's start from scratch. Import the [`IgxTreeGridModule`]({environment:angularApiUrl}/classes/igxtreegridmodule.html) in the **app.module.ts** file:
-
-```typescript
-// app.module.ts
-
-import { IgxTreeGridModule } from 'igniteui-angular';
-
-@NgModule({
-    imports: [
-        ...
-        IgxTreeGridModule,
-        ...
-    ]
-})
-export class AppModule {}
-```
-
-Then define a tree grid with bound data source and [`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditable) set to true:
+Let's start with defining a tree grid with bound data source and [`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditable) set to true:
 
 ```html
-    <igx-tree-grid #treeGrid1 [data]="data" primaryKey="EmployeID" foreignKey="PID" width="100%" height="500px" 
-    rowEditable=true rowSelectable=true columnHiding=true>
+    <igx-tree-grid #treeGrid1 [data]="data" primaryKey="EmployeID" foreignKey="PID" width="100%" height="500px"
+        rowEditable=true rowSelectable=true>
         <igx-column *ngFor="let c of columns"
             [editable]="c.editable"
             [field]="c.field"
@@ -279,7 +263,7 @@ import { IgxTreeGridComponent } from "igniteui-angular";
 
 @Component({
     providers: [],
-    selector: "app-tree-grid-row-editing-sample.component",
+    selector: "app-tree-grid-row-editing-sample",
     styleUrls: ["tree-grid-row-editing-sample.component.scss"],
     templateUrl: "tree-grid-row-editing-sample.component.html"
 })
@@ -304,7 +288,7 @@ export class TreeGridRowEditSampleComponent implements OnInit {
 > [!NOTE]
 > The grid uses internally a provider [`IgxBaseTransactionService`]({environment:angularApiUrl}/classes/igxbasetransactionservice.html) that holds pending cell changes, until row state submitted or cancelled.
 
-Here is the result: 
+Here is the result:
 
 <div class="sample-container loading" style="height:590px">
     <iframe id="tree-grid-row-editing-sample-iframe" src='{environment:demosBaseUrl}/treegrid-row-edit' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -315,6 +299,105 @@ Here is the result:
 </div>
 <div class="divider--half"></div>
 
+#### Batch Editing
+[`HierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactiondervice.html) is an injectable middleware that a component can use to accumulate changes without affecting the underlying data. The provider exposes API to access, manipulate changes (undo and redo) and discard or commit all to the data.
+
+The [`HierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactiondervice.html) works with both cell editing and row editing. The transaction for the cell edit is added when the cell exits edit mode, while row transaction is created, when the row exits edit mode. In both cases the state of the grid edits consist of all updated, added and deleted rows and their last states. Those can later be inspected, manipulated and submitted at once. Changes are collected for individual cells or rows, depending on the editing mode in use, and accumulated per data row/record.
+
+Batch editing allows to **Add/Update/Delete** several records in a chunk and manually commit all of the editing changes at ones. Until the changes are committed, there is a visual representation for each edited record so that the end user will be able to differentiate the updated and deleted ones from the unmodified for example. Additionally, it exposes **Undo/Redo** functionality, that can be used to manage the changes before committing.
+
+In order to be able to use the Batch Editing functionality, it is required to import the [`HierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactiondervice.html) from "igniteui-angular". Again Transaction is a provider that accumulates the applied changes as a transaction log and in the same time holds a state for each modified row and its last state.
+
+> [!NOTE]
+> Transaction state consists of all the updated, added and deleted rows and their last states.
+
+To get started import the [`IgxTreeGridModule`]({environment:angularApiUrl}/classes/igxtreegridmodule.html) in the **app.module.ts** file:
+
+```typescript
+// app.module.ts
+
+import { IgxTreeGridModule } from 'igniteui-angular';
+
+@NgModule({
+    imports: [
+        ...
+        IgxTreeGridModule,
+        ...
+    ]
+})
+export class AppModule {}
+```
+Then you need to define the igxTransactionService as provider for the tree grid itself as shown below, OR on some of its parent components:
+
+```typescript
+import { Component, ViewChild } from "@angular/core";
+import { IgxGridComponent, IgxGridTransaction, IgxToggleDirective,
+    IgxTransactionService, IgxTreeGridComponent } from "igniteui-angular";
+
+@Component({
+    providers: [{ provide: IgxGridTransaction, useClass: IgxHierarchicalTransactionService }],
+    selector: "app-tree-grid-batch-editing-sample.component",
+    styleUrls: ["tree-grid-batch-editing-sample.component.scss"],
+    templateUrl: "tree-grid-batch-editing-sample.component.html"
+})
+export class TreeGridBatchEditingSampleComponent {
+
+```
+> [!NOTE]
+> `IgxGridTransaction` is an injection token defined by the grid.
+
+
+Then define a tree grid with bound data source and bind:
+
+```html
+    <igx-tree-grid #treeGrid [data]="data" primaryKey="EmployeID" foreignKey="PID" width ="100%" height ="500px">
+        ...
+    </igx-tree-grid>
+    ...
+        <button igxButton (click)="addRow('treeGrid')">Add Row</button>
+        <button igxButton [disabled]="!undoEnabled" (click)="undo('treeGrid')">Undo</button>
+        <button igxButton [disabled]="!redoEnabled" (click)="redo('treeGrid')">Redo</button>
+        <button igxButton [disabled]="!hasTransactions" (click)="openCommitDialog('treeGrid')">Commit</button>
+    ...
+```
+
+The following code demonstrates the usage of the [`HierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactiondervice.html) API - undo, redo, commit.
+
+```typescript
+
+export class TreeGridBatchEditingSampleComponent {
+    @ViewChild("treeGrid", { read: IgxTreeGridComponent }) public treeGrid: IgxTreeGridComponent;
+    ...
+    public deleteRow(event, gridID, rowID) {
+        this.treeGrid.deleteRow(rowID);
+    }
+
+    public undo(gridID) {
+        this.treeGrid.transactions.undo();
+    }
+
+    public redo(gridID) {
+        this.treeGrid.transactions.redo();
+    }
+
+    public commit() {
+        this.treeGrid.transactions.commit(this.data);
+    }
+
+    public discard() {
+        this.treeGrid.transactions.clear();
+    }
+
+    public get undoEnabled(): boolean {
+        return this.treeGrid.transactions.canUndo;
+    }
+
+    public get redoEnabled(): boolean {
+       return this.treeGrid.transactions.canRedo;
+    }
+
+```
+
 #### Persistence and Integration
 
 The indentation of the **tree cells** persists across other tree grid features like filtering, sorting and paging.
@@ -322,6 +405,8 @@ The indentation of the **tree cells** persists across other tree grid features l
 - When **sorting** is applied on a column, the data rows get sorted by levels. This means that the root level rows will be sorted independently from their respective children. Their respective children collections will each be sorted independently as well and so on.
 - The first column (the one that has a [`visibleIndex`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#visibleindex) of 0) is always the tree column.
 - The column that ends up with a [`visibleIndex`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#visibleindex) of 0 after operations like column pinning, column hiding and column moving becomes the tree column.
+- Exported Excel worksheets reflect the hierarchy by grouping the records as they are grouped in the tree grid itself. All records expanded states would also be persisted and reflected.
+- When exporting to CSV, levels and expanded states are ignored and all data is exported as flat.
 
 <div class="divider--half"></div>
 
@@ -332,7 +417,6 @@ The indentation of the **tree cells** persists across other tree grid features l
 |Templating Tree Cells|When templating a tree cell, content that spans outside the boundaries of the cell will not be shown unless positioned in an overlay.|
 |Summaries|Summaries are currently not supported for the tree grid.|
 |Search API|Search API is currently not supported for the tree grid.|
-|Export|Exporting is currently not supported for the tree grid.|
 |Group By|Group By feature is not supported, because it is inherent to the tree grid.|
 
 

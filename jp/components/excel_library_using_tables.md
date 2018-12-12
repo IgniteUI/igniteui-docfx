@@ -1,4 +1,4 @@
----
+﻿---
 title: テーブルを使用した Excel Library
 _description: テーブルを使用した Ignite UI for Excel Library コンポーネント
 _keywords: Ignite UI for Angular, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular Excel ライブラリ, Angular Excel ライブラリ例,  Angular Excel Library コンポーネント, Angular Excel Engine, Tables, Sorting, フィルタリング
@@ -15,14 +15,15 @@ Infragistics Excel Engine の `WorksheetTable` 機能は、行列のデータを
 </div>
 <div>
     <!-- TODO uncomment when Stackblitz is ready for EXCEL
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="excel-library-working-with-tables-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="excel-library-working-with-tables-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
     </button>
 </div>  -->
 
 <div class="divider--half"></div>
 
 ### テーブルをワークシートに追加
-Infragistics Excel Engine のワークシート テーブルは、`WorksheetTable` オブジェクトとワークシートの `tables` コレクションに追加されます。テーブルを追加するには、このコレクションで `add` メソッドを呼び出す必要があります。このメソッドは、ヘッダーを含むかどうかなどテーブルを追加する領域の追加、オプションでオブジェクトのテーブル スタイルを指定できます。
+
+Infragistics Excel Engine のワークシート テーブルは、`WorksheetTable` オブジェクトで表され、ワークシートの `tables` コレクションに追加されます。テーブルを追加するには、このコレクションで `add` メソッドを呼び出す必要があります。このメソッドは、ヘッダーを含むかどうかなどテーブルを追加する領域の追加、オプションでオブジェクトのテーブル スタイルを指定できます。
 
 以下のコード デモは、ヘッダーを含むテーブルを `Worksheet` の A1 to G10 (A1 to G1 が列ヘッダー) 領域に追加する方法を示します。
 

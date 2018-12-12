@@ -40,7 +40,7 @@ Ignite UI for Angular で、**ページング**がルート `igx-grid` コンポ
 </igx-grid>
 ```
 
-Paging can also be done programmatically through the Grid API, using the [`paginate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#paginate), [`previousPage`]({environment:angularApiUrl}/classes/igxgridcomponent.html#previouspage), [`nextPage`]({environment:angularApiUrl}/classes/igxgridcomponent.html#nextpage) methods:
+ページングは、[`paginate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#paginate)、 [`previousPage`]({environment:angularApiUrl}/classes/igxgridcomponent.html#previouspage)、 [`nextPage`]({environment:angularApiUrl}/classes/igxgridcomponent.html#nextpage) メソッドを使用して Grid API を使用して設定できます。
 
 ```typescript
 // Go to page 6

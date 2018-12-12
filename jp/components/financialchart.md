@@ -4,7 +4,7 @@ _description: Ignite UI for Angular Financial Chart コンポーネントは簡�
 _keywords: Ignite UI for Angular, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular チャート, Angular チャート コントロール, Angular チャート例, Angular チャート コンポーネント, Angular Financial Chart
 _language: ja
 ---
-## ファイナンシャル チャート
+## Financial Chart
 
 Financial Chart は、シンプルな API を使用して複雑なファイナンシャル データを可視化するチャート コンポーネントです。
 

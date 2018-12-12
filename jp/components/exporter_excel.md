@@ -5,20 +5,13 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 _language: ja
 ---
 
-## Excel との統合
-
-<p class="highlight">
-Ignite UI for Angular [**IgxGrid**](grid.md) は、Microsoft® Excel® データの読み込み、書き込みが可能です。
-</p>
-<div class="divider"></div>
-
-### Excel Exporter
+## Excel Exporter
 
 <p class="highlight">
 Ignite UI for Angular Excel Exporter サービスは、Microsoft® Excel® 形式で生データ (配列) または [**IgxGrid**](grid.md) のデータをエクスポートできます。エクスポート機能は、[`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html) クラスでカプセル化され、MS Excel テーブル形式でデータをエクスポートします。この形式では、フィルタリングや並べ替えなどの機能が使用できます。</p>
 <div class="divider"></div>
 
-#### Excel Exporter デモ
+### Excel Exporter デモ
 
 <div class="sample-container loading" style="height: 100px;">
     <iframe id="excel-export-sample-iframe" src="{environment:demosBaseUrl}/export-excel"
@@ -30,7 +23,7 @@ Ignite UI for Angular Excel Exporter サービスは、Microsoft® Excel® 形�
 </div>
 <div class="divider--half"></div>
 
-#### 使用方法
+### 使用方法
 
 Ignite UI Excel Exporter を使用するには、[`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html) を app.module.ts ファイルにインポートし、`providers` 配列にサービスを追加します。
 
@@ -84,7 +77,7 @@ public exportButtonHandler() {
 正しく設定された場合、エクスポート ボタンが表示されます。ボタンが押されるとエクスポート処理をトリガーし、ブラウザーで "ExportedDataFile.csv" ファイルをダウンロードします。このファイルは `localData` 配列のデータを MS Excel 形式で含みます。
 
 
-#### IgxGrid データのエクスポート
+### IgxGrid データのエクスポート
 
 Excel Exporter サービスでも [**IgxGrid**](grid.md) からのデータを MS Excel 形式でエクスポートできますが、[`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html) の [`export`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html#export) メソッドを呼び出し、[**IgxGrid**](grid.md) を最初の引数として渡す必要があります。
 
@@ -131,7 +124,7 @@ public exportButtonHandler() {
 
 
 
-#### エクスポートするコンテンツのカスタマイズ
+### エクスポートするコンテンツのカスタマイズ
 
 上記の例では、Excel Exporter サービスで利用可能なデータをすべてエクスポートしましたが、特定の行や列をエクスポートしない場合の実装は、各列で発生される [`onColumnExport`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html#oncolumnexport) または各行で発生される [`onRowExport`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html#onrowexport) イベントを処理し、イベント引数オブジェクトの [`cancel`]({environment:angularApiUrl}/interfaces/irowexportingeventargs.html#cancel) プロパティを `true` に設定して各イベントをキャンセルします。
 
@@ -150,11 +143,9 @@ this.excelExportService.export(this.igxGrid1, new IgxExcelExporterOptions("Expor
 
 [**IgxGrid**](grid.md) からのデータのエクスポートで、エクスポート処理は行フィルタリングおよび列の非表示などの機能に応じてグリッドで表示されるデータのみをエクスポートします。[`IgxExcelExporterOptions`]({environment:angularApiUrl}/classes/igxexcelexporteroptions.html) オブジェクトのプロパティを設定し、エクスポーター サービスを構成してフィルターした行または非表示の列を含むことができます。このプロパティは以下の表で説明します。
 
-#### API まとめ
+### API まとめ
 
 以下は、その他の Excel Exporter サービスの API です。
-
-The Excel Exporter service has a few more APIs to explore, which are listed below.
 
 * [`IgxExcelExporterService API`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html)
 * [`IgxExcelExporterOptions API`]({environment:angularApiUrl}/classes/igxexcelexporteroptions.html)
@@ -166,7 +157,7 @@ The Excel Exporter service has a few more APIs to explore, which are listed belo
 
 <div class="divider"></div>
 
-### 追加のリソース
+### その他のリソース
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
