@@ -143,7 +143,7 @@ export class GridComponent implements OnInit {
 When you have grouped by columns, the grid allows you to change the summary position and calculation mode using the [`summaryCalculationMode`]({environment:angularApiUrl}/classes/igxgridcomponent.html#summarycalculationmode) and [`summaryPosition`]({environment:angularApiUrl}/classes/igxgridcomponent.html#summaryposition) properties.
 
 The available values of the [`summaryCalculationMode`]({environment:angularApiUrl}/classes/igxgridcomponent.html#summarycalculationmode) property are:
- - rootLevelOnly - Summaries are calculate only for the root level.
+ - rootLevelOnly - Summaries are calculated only for the root level.
  - childLevelsOnly - Summaries are calculated only for the child levels.
  - rootAndChildLevels - Summaries are calculated for both root and child levels. This is the default value.
 
