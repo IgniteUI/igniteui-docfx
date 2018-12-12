@@ -228,5 +228,5 @@ $shadow-elevations: igx-elevations($color-1, $color-2, $color-3);
 
 ### API リファレンス
 
-* [IGX-ELEVATION]({environment:sassApiUrl}/idnex.html#function-igx-elevation)
-* [IGX-ELEVATIONS]({environment:sassApiUrl}/idnex.html#function-igx-elevations)
+* [IGX-ELEVATION]({environment:sassApiUrl}/index.html#function-igx-elevation)
+* [IGX-ELEVATIONS]({environment:sassApiUrl}/index.html#function-igx-elevations)
