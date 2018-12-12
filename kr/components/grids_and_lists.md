@@ -205,11 +205,11 @@ _language: kr
   <div class="feature">
     <div class="feature__image feature__image--left">
       <img class="b-lazy" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-lazy-load.png" data-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-toolbar-768.jpg" data-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-toolbar-480.jpg 480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-toolbar-768.jpg 768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-toolbar-1100.jpg 1100w" sizes="(min-width: 1800px) 575px,(max-width: 1799px) and (min-width: 1200px) 50vw,(max-width: 1199px) and (min-width: 992px) 33vw,(max-width: 991px) and (min-width: 768px) 50vw, 100vw" alt="Angular 데이터 그리드의 헤더로 열 그룹화">
-      <a href="grid_toolbar.md" class="feature__more-details">그리드 도구 모음을 구현하는 방법</a>
+      <a href="grid_toolbar.md" class="feature__more-details">그리드 툴 모음을 구현하는 방법</a>
     </div>
     <div class="feature__details">
-      <h3 id="grid-toolbar">[그리드 도구 모음](grid_toolbar.md)</h3>
-      <p>그리드 상단에 있는 도구 모음은 열 숨기기, 열 핀 고정, Excel 내보내기 등과 같은 다양한 대화형 컨트롤을 관리할 수 있는 UI 작업을 위한 컨테이너입니다.</p>
+      <h3 id="grid-toolbar">[그리드 툴 모음](grid_toolbar.md)</h3>
+      <p>그리드 상단에 있는 툴 모음은 열 숨기기, 열 핀 고정, Excel 내보내기 등과 같은 다양한 대화형 컨트롤을 관리할 수 있는 UI 작업을 위한 컨테이너입니다.</p>
     </div>
   </div>
 
