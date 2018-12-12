@@ -44,7 +44,7 @@ Ignite UI for Angular 그리드 컴포넌트에는 열 단위 수준에서 작�
 **열 요약**은 [`hasSummary`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#hassummary) 속성을 `true`로 설정하여 열 단위로 활성화됩니다. 또한, 각 열의 요약은 열 데이터 형식에 따라 해결되는 것에 유의하십시오. `igx-grid`에서 기본 열 데이터 유형은 `string`이므로 `number` 또는 `date`별 요약을 원하는 경우 [`dataType`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#datatype) 속성을 `number` 또는 `date`로 설정해야 합니다.
 
 ```html
-<igx-grid #grid1 [data]="data" [autoGenerate]="false" height="800px" width="800px" (onColumnInit)="initColunm($event)" >
+<igx-grid #grid1 [data]="data" [autoGenerate]="false" height="800px" width="800px" (onColumnInit)="initColumn($event)" >
     <igx-column field="ProductID" header="Product ID" width="200px"  [sortable]="true">
     </igx-column>
     <igx-column field="ProductName" header="Product Name" width="200px" [sortable]="true" [hasSummary]="true">
@@ -57,7 +57,7 @@ Ignite UI for Angular 그리드 컴포넌트에는 열 단위 수준에서 작�
 특정 열 또는 열 목록에서 요약을 활성화/비활성화하는 또 다른 방법은 **igx-grid**의 공개 메소드 [`enableSummaries`]({environment:angularApiUrl}/classes/igxgridcomponent.html#enablesummaries)/[`disableSummaries`]({environment:angularApiUrl}/classes/igxgridcomponent.html#disablesummaries)를 사용하는 것입니다.
 
 ```html
-<igx-grid #grid1 [data]="data" [autoGenerate]="false" height="800px" width="800px" (onColumnInit)="initColunm($event)" >
+<igx-grid #grid1 [data]="data" [autoGenerate]="false" height="800px" width="800px" (onColumnInit)="initColumn($event)" >
     <igx-column field="ProductID" header="Product ID" width="200px"  [sortable]="true">
     </igx-column>
     <igx-column field="ProductName" header="Product Name" width="200px" [sortable]="true" [hasSummary]="true">
@@ -115,7 +115,7 @@ interface IgxSummaryResult {
 
 이제 `UnitsInStock` 열에 사용자 요약을 추가해 보겠습니다. [`summaries`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#summaries) 속성을 아래에서 작성하는 클래스로 설정하면 됩니다.
 ```html
-<igx-grid #grid1 [data]="data" [autoGenerate]="false" height="800px" width="800px" (onColumnInit)="initColunm($event)" >
+<igx-grid #grid1 [data]="data" [autoGenerate]="false" height="800px" width="800px" (onColumnInit)="initColumn($event)" >
     <igx-column field="ProductID" width="200px"  [sortable]="true">
     </igx-column>
     <igx-column field="ProductName" width="200px" [sortable]="true" [hasSummary]="true">
@@ -139,19 +139,19 @@ export class GridComponent implements OnInit {
 
 ### Summaries with Group By
 
-When you have grouped by columns, the grid allows you to change the summary position and calculation mode using the [`summaryCalculationMode`]({environment:angularApiUrl}/classes/igxgridcomponent.html#summaryCalculationMode) and [`summaryPosition`]({environment:angularApiUrl}/classes/igxgridcomponent.html#summaryPosition) properties.
+When you have grouped by columns, the grid allows you to change the summary position and calculation mode using the [`summaryCalculationMode`]({environment:angularApiUrl}/classes/igxgridcomponent.html#summarycalculationmode) and [`summaryPosition`]({environment:angularApiUrl}/classes/igxgridcomponent.html#summaryposition) properties.
 
-The available values of the [`summaryCalculationMode`]({environment:angularApiUrl}/classes/igxgridcomponent.html#summaryCalculationMode) property are:
+The available values of the [`summaryCalculationMode`]({environment:angularApiUrl}/classes/igxgridcomponent.html#summarycalculationmode) property are:
  - rootLevelOnly - Summaries are calculate only for the root level.
  - childLevelsOnly - Summaries are calculated only for the child levels.
  - rootAndChildLevels - Summaries are calculated for both root and child levels. This is the default value.
 
-The available values of the [`summaryPosition`]({environment:angularApiUrl}/classes/igxgridcomponent.html#summaryPosition) property are:
+The available values of the [`summaryPosition`]({environment:angularApiUrl}/classes/igxgridcomponent.html#summaryposition) property are:
  - top - The summary row appears before the group by row children.
  - bottom - The summary row appears after the group by row children. This is the default value.
 
 > [!NOTE]
-> The [`summaryPosition`]({environment:angularApiUrl}/classes/igxgridcomponent.html#summaryPosition) property applies only for the child level summaries. The root level summaries appear always fixed at the bottom of the grid.
+> The [`summaryPosition`]({environment:angularApiUrl}/classes/igxgridcomponent.html#summaryposition) property applies only for the child level summaries. The root level summaries appear always fixed at the bottom of the grid.
 
 #### Demo
 
@@ -177,7 +177,7 @@ The summary rows can be navigated with the following keyboard interactions:
 - <kbd>TAB</kbd> - sequentially navigates to the next cell on the row and if the last cell is reached navigates to the next row
 - <kbd>SHIFT</kbd> + <kbd>TAB</kbd> - sequentially navigates to the previous cell on the row and if the first cell is reached navigates to the previous row
 
-### API
+### API References
 
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
 * [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
