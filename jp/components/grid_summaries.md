@@ -100,7 +100,7 @@ class MySummary extends IgxNumberSummaryOperand {
 }
 ```
 
-以下のコードで、[`operate`]({environment:angularApiUrl}/classes/igxsummaryoperand.html#operate) メソッドはインターフェイスである [`IgxSummaryResult`]({environment:angularApiUrl}/interfaces/igxsummaryresult.html) のリストを返します。
+In the code above you can see that method [`operate`]({environment:angularApiUrl}/classes/igxsummaryoperand.html#operate) returns a list of [`IgxSummaryResult`]({environment:angularApiUrl}/interfaces/igxsummaryresult.html), which is an interface.
 
 ```typescript
 interface IgxSummaryResult {
@@ -109,6 +109,9 @@ interface IgxSummaryResult {
     summaryResult: any;
 }
 ```
+
+> [!NOTE]
+> In order to calculate the summary row height properly, the grid needs the [`operate`]({environment:angularApiUrl}/classes/igxsummaryoperand.html#operate) method to always return an array of [`IgxSummaryResult`]({environment:angularApiUrl}/interfaces/igxsummaryresult.html) with the proper length even when the data is empty.
 
 `UnitsInStock` 列にカスタム集計を追加します。[`summaries`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#summaries) プロパティを以下に作成するクラスに設定します。
 

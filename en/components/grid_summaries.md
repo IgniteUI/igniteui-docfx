@@ -100,7 +100,7 @@ class MySummary extends IgxNumberSummaryOperand {
 }
 ```
 
-In the code below you can see that method [`operate`]({environment:angularApiUrl}/classes/igxsummaryoperand.html#operate) returns a list of [`IgxSummaryResult`]({environment:angularApiUrl}/interfaces/igxsummaryresult.html), which is an interface.
+In the code above you can see that method [`operate`]({environment:angularApiUrl}/classes/igxsummaryoperand.html#operate) returns a list of [`IgxSummaryResult`]({environment:angularApiUrl}/interfaces/igxsummaryresult.html), which is an interface.
 ```typescript
 interface IgxSummaryResult {
     key: string;
@@ -108,6 +108,10 @@ interface IgxSummaryResult {
     summaryResult: any;
 }
 ```
+
+> [!NOTE]
+> In order to calculate the summary row height properly, the grid needs the [`operate`]({environment:angularApiUrl}/classes/igxsummaryoperand.html#operate) method to always return an array of [`IgxSummaryResult`]({environment:angularApiUrl}/interfaces/igxsummaryresult.html) with the proper length even when the data is empty.
+
 And now let's add our custom summary to the column `UnitsInStock`. We will achieve that by setting the [`summaries`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#summaries) property to the class we create below.
 ```html
 <igx-grid #grid1 [data]="data" [autoGenerate]="false" height="800px" width="800px" (onColumnInit)="initColunm($event)" >

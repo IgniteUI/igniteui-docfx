@@ -101,7 +101,7 @@ class MySummary extends IgxNumberSummaryOperand {
 }
 ```
 
-아래의 코드에서 메소드 [`operate`]({environment:angularApiUrl}/classes/igxsummaryoperand.html#operate)은 인터페이스인 [`IgxSummaryResult`]({environment:angularApiUrl}/interfaces/igxsummaryresult.html)의 목록을 반환하는 것을 볼 수 있습니다.
+In the code above you can see that method [`operate`]({environment:angularApiUrl}/classes/igxsummaryoperand.html#operate) returns a list of [`IgxSummaryResult`]({environment:angularApiUrl}/interfaces/igxsummaryresult.html), which is an interface.
 ```typescript
 interface IgxSummaryResult {
     key: string;
@@ -109,6 +109,10 @@ interface IgxSummaryResult {
     summaryResult: any;
 }
 ```
+
+> [!NOTE]
+> In order to calculate the summary row height properly, the grid needs the [`operate`]({environment:angularApiUrl}/classes/igxsummaryoperand.html#operate) method to always return an array of [`IgxSummaryResult`]({environment:angularApiUrl}/interfaces/igxsummaryresult.html) with the proper length even when the data is empty.
+
 이제 `UnitsInStock` 열에 사용자 요약을 추가해 보겠습니다. [`summaries`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#summaries) 속성을 아래에서 작성하는 클래스로 설정하면 됩니다.
 ```html
 <igx-grid #grid1 [data]="data" [autoGenerate]="false" height="800px" width="800px" (onColumnInit)="initColunm($event)" >
