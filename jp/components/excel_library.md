@@ -15,7 +15,7 @@ Infragistics Excel Library  は、Workbook、Worksheet、Cell、Formula など�
 </div>
 <div>
     <!-- TODO uncomment when Stackblitz is ready for EXCEL
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="excel-library-overview-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="excel-library-overview-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示
     </button> -->
 </div> 
 
