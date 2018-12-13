@@ -6,7 +6,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ## Tree Grid
 
-<p class="highlight">Displays and manipulates hierarchical data with consistent schema formatted as a table and provides a line of advanced features such as sorting, filtering, editing, column pinning, paging, column moving and hiding.</p>
+<p class="highlight">Displays and manipulates hierarchical data with consistent schema formatted as a table and provides a line of advanced features such as sorting, filtering, summaries, editing, column pinning, paging, column moving and hiding.</p>
 <div class="divider"></div>
 
 ### Demo
@@ -118,14 +118,15 @@ In addition, we will disable the automatic column generation and define them man
 ```
 
 We will now enable the row selection and paging features of the tree grid by using the [`rowSelectable`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#rowselectable) and the [`paging`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#paging) properties.
-We will also enable the filtering, sorting, editing, moving and resizing features for each of our columns.
+We will also enable the summaries feature on the first column and the filtering, sorting, editing, moving and resizing features for each of our columns.
 
 ```html
 <!--treeGridSample.component.html-->
 
 <igx-tree-grid #treeGrid [data]="localData" childDataKey="Employees"
                [autoGenerate]="false" [rowSelectable]="true" [paging]="true" [allowFiltering]="true">
-    <igx-column field="Name" dataType="string" [sortable]="true" [editable]="true" [movable]="true" [resizable]="true"></igx-column>
+    <igx-column field="Name" dataType="string" [sortable]="true" [editable]="true" [movable]="true" [resizable]="true"
+                [hasSummary]="true"></igx-column>
     <igx-column field="HireDate" dataType="date" [sortable]="true" [editable]="true" [movable]="true" [resizable]="true"></igx-column>
     <igx-column field="Age" dataType="number" [sortable]="true" [editable]="true" [movable]="true" [resizable]="true"></igx-column>
 </igx-tree-grid>
@@ -224,7 +225,7 @@ And here is the final result:
 </div>
 <div class="divider--half"></div>
 
-#### Tree Grid Row Editing
+#### Row Editing
 
 Row editing - allows modification of several cells in the row, before submitting, at once, all those changes to the tree grid's data source. Leverages the pending changes functionality of the new transaction provider.
 
@@ -299,6 +300,105 @@ Here is the result:
 </div>
 <div class="divider--half"></div>
 
+#### Batch Editing
+[`HierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactiondervice.html) is an injectable middleware that a component can use to accumulate changes without affecting the underlying data. The provider exposes API to access, manipulate changes (undo and redo) and discard or commit all to the data.
+
+The [`HierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactiondervice.html) works with both cell editing and row editing. The transaction for the cell edit is added when the cell exits edit mode, while row transaction is created, when the row exits edit mode. In both cases the state of the grid edits consist of all updated, added and deleted rows and their last states. Those can later be inspected, manipulated and submitted at once. Changes are collected for individual cells or rows, depending on the editing mode in use, and accumulated per data row/record.
+
+Batch editing allows to **Add/Update/Delete** several records in a chunk and manually commit all of the editing changes at ones. Until the changes are committed, there is a visual representation for each edited record so that the end user will be able to differentiate the updated and deleted ones from the unmodified for example. Additionally, it exposes **Undo/Redo** functionality, that can be used to manage the changes before committing.
+
+In order to be able to use the Batch Editing functionality, it is required to import the [`HierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactiondervice.html) from "igniteui-angular". Again Transaction is a provider that accumulates the applied changes as a transaction log and in the same time holds a state for each modified row and its last state.
+
+> [!NOTE]
+> Transaction state consists of all the updated, added and deleted rows and their last states.
+
+To get started import the [`IgxTreeGridModule`]({environment:angularApiUrl}/classes/igxtreegridmodule.html) in the **app.module.ts** file:
+
+```typescript
+// app.module.ts
+
+import { IgxTreeGridModule } from 'igniteui-angular';
+
+@NgModule({
+    imports: [
+        ...
+        IgxTreeGridModule,
+        ...
+    ]
+})
+export class AppModule {}
+```
+Then you need to define the igxTransactionService as provider for the tree grid itself as shown below, OR on some of its parent components:
+
+```typescript
+import { Component, ViewChild } from "@angular/core";
+import { IgxGridComponent, IgxGridTransaction, IgxToggleDirective,
+    IgxTransactionService, IgxTreeGridComponent } from "igniteui-angular";
+
+@Component({
+    providers: [{ provide: IgxGridTransaction, useClass: IgxHierarchicalTransactionService }],
+    selector: "app-tree-grid-batch-editing-sample.component",
+    styleUrls: ["tree-grid-batch-editing-sample.component.scss"],
+    templateUrl: "tree-grid-batch-editing-sample.component.html"
+})
+export class TreeGridBatchEditingSampleComponent {
+
+```
+> [!NOTE]
+> `IgxGridTransaction` is an injection token defined by the grid.
+
+
+Then define a tree grid with bound data source and bind:
+
+```html
+    <igx-tree-grid #treeGrid [data]="data" primaryKey="EmployeID" foreignKey="PID" width ="100%" height ="500px">
+        ...
+    </igx-tree-grid>
+    ...
+        <button igxButton (click)="addRow('treeGrid')">Add Row</button>
+        <button igxButton [disabled]="!undoEnabled" (click)="undo('treeGrid')">Undo</button>
+        <button igxButton [disabled]="!redoEnabled" (click)="redo('treeGrid')">Redo</button>
+        <button igxButton [disabled]="!hasTransactions" (click)="openCommitDialog('treeGrid')">Commit</button>
+    ...
+```
+
+The following code demonstrates the usage of the [`HierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactiondervice.html) API - undo, redo, commit.
+
+```typescript
+
+export class TreeGridBatchEditingSampleComponent {
+    @ViewChild("treeGrid", { read: IgxTreeGridComponent }) public treeGrid: IgxTreeGridComponent;
+    ...
+    public deleteRow(event, gridID, rowID) {
+        this.treeGrid.deleteRow(rowID);
+    }
+
+    public undo(gridID) {
+        this.treeGrid.transactions.undo();
+    }
+
+    public redo(gridID) {
+        this.treeGrid.transactions.redo();
+    }
+
+    public commit() {
+        this.treeGrid.transactions.commit(this.data);
+    }
+
+    public discard() {
+        this.treeGrid.transactions.clear();
+    }
+
+    public get undoEnabled(): boolean {
+        return this.treeGrid.transactions.canUndo;
+    }
+
+    public get redoEnabled(): boolean {
+       return this.treeGrid.transactions.canRedo;
+    }
+
+```
+
 #### Persistence and Integration
 
 The indentation of the **tree cells** persists across other tree grid features like filtering, sorting and paging.
@@ -316,7 +416,6 @@ The indentation of the **tree cells** persists across other tree grid features l
 |Limitation|Description|
 |--- |--- |
 |Templating Tree Cells|When templating a tree cell, content that spans outside the boundaries of the cell will not be shown unless positioned in an overlay.|
-|Summaries|Summaries are currently not supported for the tree grid.|
 |Search API|Search API is currently not supported for the tree grid.|
 |Group By|Group By feature is not supported, because it is inherent to the tree grid.|
 

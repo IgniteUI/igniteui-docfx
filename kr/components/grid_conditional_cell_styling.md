@@ -88,7 +88,7 @@ public beatsPerMinuteClasses = {
 * [열 숨기기](grid_column_hiding.md)
 * [선택](grid_selection.md)
 * [검색](grid_search.md)
-* [도구 모음](grid_toolbar.md)
+* [툴 모음](grid_toolbar.md)
 * [Excel로 내보내기](exporter_excel.md)
 * [Excel에서 붙여넣기](grid_paste_excel.md)
 * [복수 열 헤더](grid_multi_column_headers.md)

@@ -20,6 +20,14 @@ Ignite UI for Angular 그리드 컴포넌트는 그리드가 바인딩되는 데
 </div>
 <div class="divider--half"></div>
 
+###Interaction
+
+In order to open the filter row for a particular column, the 'Filter' chip below its header should be clicked. To add conditions you should choose filter operand using the dropdown on the left of the input and enter value. For `number` and `date` columns 'Equals' is selected by default, for `string` - 'Contains' and for `boolean` - 'All'. Pressing 'Enter' confirms the condition and you are now able to add another one. There is a dropdown, between 'condition' chips, which determines the logical operator between them, 'AND' is selected by default. To remove a condition you can click the 'X' button of the chip, and to edit it you should select the chip and the input will be populated with the chip's data. While filter row is opened you can click on any filterable column's header in order to select it and to be able to add filter conditions for it.
+
+While there are applied conditions for a column and the filter row is closed, you can either remove the conditions by clicking the chip's close button or you can open the filter row by selecting any of the chips. When there is not enough space to show all conditions a filter icon is shown with a badge that indicates how many more conditions there are. It can also be clicked in order to open the filter row.
+
+###Usage
+
 기본적으로 제공되는 기본 필터링 및 표준 필터링 조건이 있으며 개발자가 사용자 구현으로 대체 할 수도 있습니다. 또한, 사용자 필터링 조건을 간단히 플러그인할 수 있습니다. 그리드는 현재 단순한 필터링 UI뿐만 아니라 보다 복잡한 필터링 옵션을 제공합니다. 열의 [`dataType`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#datatype)에 따라 올바른 [**필터링 처리**](grid.md#필터링-조건) 세트가 필터 UI 드롭다운에 로드됩니다. 또한, [`ignoreCase`]({environment:angularApiUrl}/interfaces/ifilteringexpression.html) 및 초기 [`condition`]({environment:angularApiUrl}/interfaces/ifilteringexpression.html#condition) 속성을 설정할 수 있습니다.
 
 ```html
