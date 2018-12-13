@@ -228,7 +228,7 @@ And you get
 
 ### API References
 
-* [IGX-ELEVATION]({environment:sassApiUrl}/idnex.html#function-igx-elevation)
-* [IGX-ELEVATIONS]({environment:sassApiUrl}/idnex.html#function-igx-elevations)
+* [IGX-ELEVATION]({environment:sassApiUrl}/index.html#function-igx-elevation)
+* [IGX-ELEVATIONS]({environment:sassApiUrl}/index.html#function-igx-elevations)
 
 
