@@ -8,11 +8,10 @@ _language: ja
 ## ツリー グリッド
 
 <p class="highlight">Displays and manipulates hierarchical data with consistent schema formatted as a table and provides a line of advanced features such as sorting, filtering, summaries, editing, column pinning, paging, column moving and hiding.</p>
-<div class="divider"></div>
 
 ### デモ
 
-<div class="sample-container loading" style="height:550px">
+<div class="sample-container loading" style="height:850px">
     <iframe id="treegrid-childdatakey-iframe" src='{environment:demosBaseUrl}/treegrid-childdatakey' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
