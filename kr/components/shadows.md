@@ -227,7 +227,7 @@ And you get
 <div class="divider--half"></div>
 
 
-### API References
+### API 참조
 
 * [IGX-ELEVATION]({environment:sassApiUrl}/index.html#function-igx-elevation)
 * [IGX-ELEVATIONS]({environment:sassApiUrl}/index.html#function-igx-elevations)
