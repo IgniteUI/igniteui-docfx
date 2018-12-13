@@ -79,7 +79,7 @@ Bannerは、要素がページ テンプレートに挿入された場所にそ�
         You have lost connection to the internet. This app is offline.
     </igx-banner>
     ...
-    <button igxButton="raised" (click)="rateBanner.toggle()">Toggle Banner</button>
+    <button igxButton="raised" (click)="connectionBanner.toggle()">Toggle Banner</button>
 ```
 
 #### アイコンの追加
@@ -93,7 +93,7 @@ Banner コンテンツに [`igx-icon`]({environment:angularApiUrl}/classes/igxic
 
 ```html
     <!--banner.component.html-->
-    <igx-banner #rateBanner>
+    <igx-banner #connectionBanner>
         <igx-icon>signal_wifi_off</igx-icon>
         You have lost connection to the internet. This app is offline.
     </igx-banner>
@@ -111,7 +111,7 @@ Connection Banner のテンプレート化は、`igx-banner-actions` セレク�
 
 ```html
     <!--banner.component.html-->
-    <igx-banner #rateBanner>
+    <igx-banner #connectionBanner>
         <igx-icon>signal_wifi_off</igx-icon>
         You have lost connection to the internet. This app is offline.
         <igx-banner-actions>
@@ -121,7 +121,9 @@ Connection Banner のテンプレート化は、`igx-banner-actions` セレク�
     </igx-banner>
     ...
 ```
+
 閉じるオプション (`'Continue Offline'`) は詳細なロジックを必要としないため、`connectionBanner.close()` のみの呼び出しが可能です。確認操作 (`‘Turn On Wifi’`) は追加のロジックを必要とするため、コンポーネントで定義します。
+
 
 ```typescript
 // banner.component.ts
@@ -161,11 +163,10 @@ export class MyBannerComponent implements OnInit, OnDestroy {
     }
 }
 ```
-上記のコード スニペットの説明。
- - `onNetworkStateChange` の実装 - 変更をリッスンする `Observable`。
- - `ngOnInit` の新しい Observable にサブスクライブします。`Observable` が発生するごとにメソッドを呼び出します。
- - `ngOnDestroy` は Observable の `complete` メソッドを呼び出してメモリリークを防止します。
- - `refreshBanner` のボディを定義 - WiFi 状態に基づいてBannerを `show()` または `close()` します。
+
+サブスクリプションが `wifiState` に対するすべての変更を発生するため、デモ navbar のバナーが WiFi アイコンを使用して切り替えができるようになります。
+
+以下はテンプレート化したバナーのデモです。
 
 #### デモのテンプレート化
 

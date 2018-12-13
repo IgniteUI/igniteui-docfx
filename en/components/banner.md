@@ -70,7 +70,7 @@ The [`IgxBannerComponent`]({environment:angularApiUrl}/classes/igxbannercomponen
 
 #### Changing the banner message
 
-Changing the message displayed in the banner is easy - just change the content you are passing to the `igx-banner` tag. Below, we will change the content of our 'Connection' banner to a be a bit more descriptive:
+Changing the message displayed in the banner is easy - just change the content you are passing to the `igx-banner` tag. Below, we will change the content of our **Connection** banner to a be a bit more descriptive:
 
 ```html
     <!--banner.component.html-->
@@ -78,7 +78,7 @@ Changing the message displayed in the banner is easy - just change the content y
         You have lost connection to the internet. This app is offline.
     </igx-banner>
     ...
-    <button igxButton="raised" (click)="rateBanner.toggle()">Toggle Banner</button>
+    <button igxButton="raised" (click)="connectionBanner.toggle()">Toggle Banner</button>
 ```
 
 #### Adding an icon
@@ -92,7 +92,7 @@ To pass an `igx-icon` to you banner, simply insert it in the `igx-banner`s conte
 
 ```html
     <!--banner.component.html-->
-    <igx-banner #rateBanner>
+    <igx-banner #connectionBanner>
         <igx-icon>signal_wifi_off</igx-icon>
         You have lost connection to the internet. This app is offline.
     </igx-banner>
@@ -104,13 +104,13 @@ To pass an `igx-icon` to you banner, simply insert it in the `igx-banner`s conte
 The [`IgxBannerModule`]({environment:angularApiUrl}/classes/igxbannermodule.html) also exposes a directive for templating the banner buttons - [`IgxBannerActionsDirective`]({environment:angularApiUrl}/classes/igxbanneractionsdirective.html). Using this directive allows you to override the default banner button (`Dismiss`) and add user defined custom actions. As most (but not all) of the button interactions are suposed to close the banner, make sure to call the banner's `close()` method in their `click` handlers.
 
 > [!NOTE]
-> Per Google's [`Material Design` guidelines](https://material.io/design/components/banners.html#anatomy), a banner should have a maximum of 2 buttons present. The `IgxBannerComponent` **does not** explicitly limit developers from passing more than 2 elements under the `igx-banner-actions` tag, but it is strongly advisable to choose to adhere to the material design guidelines. 
+> Per Google's [`Material Design` guidelines](https://material.io/design/components/banners.html#anatomy), a banner should have a maximum of 2 buttons present. The `IgxBannerComponent` **does not** explicitly limit developers from passing more than 2 elements under the `igx-banner-actions` tag, but it is strongly advised if you choose to adhere to the material design guidelines.
 
 To further template the 'Connection' banner, we can pass custom action handles using the `igx-banner-actions` selector:
 
 ```html
     <!--banner.component.html-->
-    <igx-banner #rateBanner>
+    <igx-banner #connectionBanner>
         <igx-icon>signal_wifi_off</igx-icon>
         You have lost connection to the internet. This app is offline.
         <igx-banner-actions>
@@ -120,7 +120,7 @@ To further template the 'Connection' banner, we can pass custom action handles u
     </igx-banner>
     ...
 ```
-The dismiss option (`'Continue Offline'`) does not require any further logic, so it can just call `connectionBanner.close()`. The confirm action (`'Turn On Wifi'`) requires some additional logic, so we define it in the component.
+The dismiss option (`'Continue Offline'`) does not require any further logic, so it can just call `connectionBanner.close()`. The confirm action (`'Turn On Wifi'`) requires some additional logic, so we define it in the component. We create and subscribe to the `onNetworkStateChange` `Observable` and on each change we call the `refreshBanner` method, which toggles the banner depending on `wifiState`.
 
 ```typescript
 // banner.component.ts
@@ -160,11 +160,9 @@ export class MyBannerComponent implements OnInit, OnDestroy {
     }
 }
 ```
-Some clarification on the above code snippet:
- - implement `onNetworkStateChange` - a `Observable` to which we will listen for chages
- - subscribe to the new Observable in `ngOnInit`, calling out `refreshBanner` method every time the `Observable` emits
- - in `ngOnDestroy` call the `complete` method of the Observable, to prevent memory leaks
- - define the body of `refreshBanner` - depending on the WiFi state, it will either `show()` or `close()` the banner
+As the subscription fires on any change to `wifiState`, the banner can now also be toggled using the WiFi icon in the demo navbar.
+
+The results of the templated banner can be seen in the below demo:
 
 #### Templating Demo
 
