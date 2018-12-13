@@ -1,31 +1,31 @@
 ---
-title: Banner ƒRƒ“ƒ|[ƒlƒ“ƒg
-_description: Ignite UI for Angular Banner ƒRƒ“ƒ|[ƒlƒ“ƒg‚ÍAŠÈ’P‚É”ñN“üŒ^ƒƒbƒZ[ƒW‚ğƒIƒvƒVƒ‡ƒ“‘€ì‚Æ“‡‚Å‚«‚Ü‚·B
-_keywords: Ignite UI for Angular, UI ƒRƒ“ƒgƒ[ƒ‹, Angular ƒEƒBƒWƒFƒbƒg, web ƒEƒBƒWƒFƒbƒg, UI ƒEƒBƒWƒFƒbƒg, Angular, Native Angular ƒRƒ“ƒ|[ƒlƒ“ƒg ƒXƒC[ƒg, Native Angular ƒRƒ“ƒgƒ[ƒ‹, Native Angular ƒRƒ“ƒ|[ƒlƒ“ƒg Library, Angular Banner ƒRƒ“ƒ|[ƒlƒ“ƒg, Angular Banner ƒRƒ“ƒgƒ[ƒ‹
+title: Banner ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆ
+_description: Ignite UI for Angular Banner ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆã¯ã€ç°¡å˜ã«éä¾µå…¥å‹ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚’ã‚ªãƒ—ã‚·ãƒ§ãƒ³æ“ä½œã¨çµ±åˆã§ãã¾ã™ã€‚
+_keywords: Ignite UI for Angular, UI ã‚³ãƒ³ãƒˆãƒ­ãƒ¼ãƒ«, Angular ã‚¦ã‚£ã‚¸ã‚§ãƒƒãƒˆ, web ã‚¦ã‚£ã‚¸ã‚§ãƒƒãƒˆ, UI ã‚¦ã‚£ã‚¸ã‚§ãƒƒãƒˆ, Angular, Native Angular ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆ ã‚¹ã‚¤ãƒ¼ãƒˆ, Native Angular ã‚³ãƒ³ãƒˆãƒ­ãƒ¼ãƒ«, Native Angular ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆ Library, Angular Banner ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆ, Angular Banner ã‚³ãƒ³ãƒˆãƒ­ãƒ¼ãƒ«
 _language: ja
 ---
 ## Banner
 
 <p class="highlight">
-Ignite UI for Angular Banner ƒRƒ“ƒ|[ƒlƒ“ƒg‚ÍAƒXƒiƒbƒNƒo[‚æ‚è’·‚¢ŠÔ‚Ì•\¦‚Åƒ_ƒCƒAƒƒO‚æ‚èT‚¦‚ß‚ÌƒƒbƒZ[ƒW‚ğŠÈ’P‚É•\¦‚Å‚«‚Ü‚·BBanner ‚ÉƒJƒXƒ^ƒ€ ƒAƒNƒVƒ‡ƒ“ ƒ{ƒ^ƒ“‚âƒAƒCƒRƒ“‚Ì•\¦‚ğİ’è‚Å‚«‚Ü‚·B</p>
+Ignite UI for Angular Banner ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆã¯ã€ã‚¹ãƒŠãƒƒã‚¯ãƒãƒ¼ã‚ˆã‚Šé•·ã„æ™‚é–“ã®è¡¨ç¤ºã§ãƒ€ã‚¤ã‚¢ãƒ­ã‚°ã‚ˆã‚Šæ§ãˆã‚ã®ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚’ç°¡å˜ã«è¡¨ç¤ºã§ãã¾ã™ã€‚Banner ã«ã‚«ã‚¹ã‚¿ãƒ  ã‚¢ã‚¯ã‚·ãƒ§ãƒ³ ãƒœã‚¿ãƒ³ã‚„ã‚¢ã‚¤ã‚³ãƒ³ã®è¡¨ç¤ºã‚’è¨­å®šã§ãã¾ã™ã€‚</p>
 <div class="divider"></div>
 
-### Banner ƒfƒ‚
+### Banner ãƒ‡ãƒ¢
 
 <div class="sample-container loading" style="height: 400px">
     <iframe id="banner-sample-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/banner-sample-4" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="banner-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz ‚Å•\¦</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="banner-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz ã§è¡¨ç¤º</button>
 </div>
 <div class="divider--half"></div>
 
 > [!NOTE]
-> Ignite UI for Angular ƒRƒ“ƒ|[ƒlƒ“ƒg‚ğƒvƒƒWƒFƒNƒg‚É’Ç‰Á‚·‚é‘O‚ÉA•K—v‚È‚·‚×‚Ä‚ÌˆË‘¶ŠÖŒW‚ğ\¬‚µAƒvƒƒWƒFƒNƒg‚ÌƒZƒbƒgƒAƒbƒv‚ª³‚µ‚­Š®—¹‚µ‚½‚±‚Æ‚ğŠm”F‚µ‚Ä‚­‚¾‚³‚¢B[ƒCƒ“ƒXƒg[ƒ‹](https://jp.infragistics.com/products/ignite-ui-angular/getting-started#installation)‚ÌƒgƒsƒbƒN‚Åè‡‚ğ‚²Šm”F‚­‚¾‚³‚¢B
+> Ignite UI for Angular ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆã‚’ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆã«è¿½åŠ ã™ã‚‹å‰ã«ã€å¿…è¦ãªã™ã¹ã¦ã®ä¾å­˜é–¢ä¿‚ã‚’æ§‹æˆã—ã€ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆã®ã‚»ãƒƒãƒˆã‚¢ãƒƒãƒ—ãŒæ­£ã—ãå®Œäº†ã—ãŸã“ã¨ã‚’ç¢ºèªã—ã¦ãã ã•ã„ã€‚[ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«](https://jp.infragistics.com/products/ignite-ui-angular/getting-started#installation)ã®ãƒˆãƒ”ãƒƒã‚¯ã§æ‰‹é †ã‚’ã”ç¢ºèªãã ã•ã„ã€‚
 
-## g—p•û–@
+## ä½¿ç”¨æ–¹æ³•
 
-Ignite UI for Angular Banner ‚Ìg—p‚ÍA‚Í‚¶‚ß‚É **app.module.ts** ƒtƒ@ƒCƒ‹‚É [`IgxBannerModule`]({environment:angularApiUrl}/classes/igxbannermodule.html) ‚ğƒCƒ“ƒ|[ƒg‚µ‚Ü‚·B
+Ignite UI for Angular Banner ã®ä½¿ç”¨ã¯ã€ã¯ã˜ã‚ã« **app.module.ts** ãƒ•ã‚¡ã‚¤ãƒ«ã« [`IgxBannerModule`]({environment:angularApiUrl}/classes/igxbannermodule.html) ã‚’ã‚¤ãƒ³ãƒãƒ¼ãƒˆã—ã¾ã™ã€‚
 
 ```typescript
 // app.module.ts
@@ -40,9 +40,9 @@ import { IgxBannerModule } from 'igniteui-angular';
 })
 export class AppModule {}
 ```
-### ƒx[ƒVƒbƒN Banner
+### ãƒ™ãƒ¼ã‚·ãƒƒã‚¯ Banner
 
-Banner ƒRƒ“ƒ|[ƒlƒ“ƒg‚ğ•\¦‚·‚é‚É‚ÍA({environment:angularApiUrl}/classes/igxbannercomponent.html#open) ƒƒ\ƒbƒh‚ğŒÄ‚Ño‚µ‚Äƒ{ƒ^ƒ“ƒNƒŠƒbƒN‚ÅŒÄ‚Ño‚µ‚Ü‚·BBanner ƒƒbƒZ[ƒW‚ğ\¬‚·‚é‚É‚ÍABanner ƒRƒ“ƒeƒ“ƒc“à‚ÌƒeƒLƒXƒg‚ğ“n‚µ‚Ü‚·Bw’è‚µ‚½ Banner —Ìˆæ‚ÉƒeƒLƒXƒg‚ª•\¦‚³‚êA•\¦‚ÉBanner‚ÍƒfƒtƒHƒ‹ƒg ƒeƒ“ƒvƒŒ[ƒg‚ğg—p‚µ‚Ü‚·B
+Banner ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆã‚’è¡¨ç¤ºã™ã‚‹ã«ã¯ã€({environment:angularApiUrl}/classes/igxbannercomponent.html#open) ãƒ¡ã‚½ãƒƒãƒ‰ã‚’å‘¼ã³å‡ºã—ã¦ãƒœã‚¿ãƒ³ã‚¯ãƒªãƒƒã‚¯ã§å‘¼ã³å‡ºã—ã¾ã™ã€‚Banner ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚’æ§‹æˆã™ã‚‹ã«ã¯ã€Banner ã‚³ãƒ³ãƒ†ãƒ³ãƒ„å†…ã®ãƒ†ã‚­ã‚¹ãƒˆã‚’æ¸¡ã—ã¾ã™ã€‚æŒ‡å®šã—ãŸ Banner é ˜åŸŸã«ãƒ†ã‚­ã‚¹ãƒˆãŒè¡¨ç¤ºã•ã‚Œã€è¡¨ç¤ºæ™‚ã«Bannerã¯ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆ ãƒ†ãƒ³ãƒ—ãƒ¬ãƒ¼ãƒˆã‚’ä½¿ç”¨ã—ã¾ã™ã€‚
 
 ```html
 <!--banner.component.html-->
@@ -54,9 +54,9 @@ Banner ƒRƒ“ƒ|[ƒlƒ“ƒg‚ğ•\¦‚·‚é‚É‚ÍA({environment:angularApiUrl}/classes/igxban
 <button igxButton="raised" (click)="connectionBanner.toggle()">Toggle Banner</button>
 ```
 
-Banner‚ÍA—v‘f‚ªƒy[ƒW ƒeƒ“ƒvƒŒ[ƒg‚É‘}“ü‚³‚ê‚½êŠ‚É‚»‚Ì‘¼‚·‚×‚Ä‚ÌƒRƒ“ƒeƒ“ƒc‚ğˆÚ“®‚µ‚Ä•\¦‚³‚ê‚Ü‚·BBanner‚ÍA•Â‚¶‚é‚½‚ß‚ÌÅ¬ŒÀ‚Ìƒ†[ƒU[‘€ì (1-2 ƒNƒŠƒbƒN‚È‚Ç) ‚ğ—v‹‚·‚é”ñN“üŒ^ƒRƒ“ƒeƒ“ƒc•\¦‚µ‚Ü‚·B
+Bannerã¯ã€è¦ç´ ãŒãƒšãƒ¼ã‚¸ ãƒ†ãƒ³ãƒ—ãƒ¬ãƒ¼ãƒˆã«æŒ¿å…¥ã•ã‚ŒãŸå ´æ‰€ã«ãã®ä»–ã™ã¹ã¦ã®ã‚³ãƒ³ãƒ†ãƒ³ãƒ„ã‚’ç§»å‹•ã—ã¦è¡¨ç¤ºã•ã‚Œã¾ã™ã€‚Bannerã¯ã€é–‰ã˜ã‚‹ãŸã‚ã®æœ€å°é™ã®ãƒ¦ãƒ¼ã‚¶ãƒ¼æ“ä½œ (1-2 ã‚¯ãƒªãƒƒã‚¯ãªã©) ã‚’è¦æ±‚ã™ã‚‹éä¾µå…¥å‹ã‚³ãƒ³ãƒ†ãƒ³ãƒ„è¡¨ç¤ºã—ã¾ã™ã€‚
 
-#### ƒx[ƒVƒbƒN Banner ƒfƒ‚
+#### ãƒ™ãƒ¼ã‚·ãƒƒã‚¯ Banner ãƒ‡ãƒ¢
 
 <div class="sample-container loading" style="height: 530px">
     <iframe id="banner-sample-1-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/banner-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -65,13 +65,13 @@ Banner‚ÍA—v‘f‚ªƒy[ƒW ƒeƒ“ƒvƒŒ[ƒg‚É‘}“ü‚³‚ê‚½êŠ‚É‚»‚Ì‘¼‚·‚×‚Ä‚ÌƒRƒ“ƒeƒ“ƒc‚ğˆ
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="banner-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-### Banner ‚Ìƒeƒ“ƒvƒŒ[ƒg‰»
+### Banner ã®ãƒ†ãƒ³ãƒ—ãƒ¬ãƒ¼ãƒˆåŒ–
 
-[`IgxBannerComponent`]({environment:angularApiUrl}/classes/igxbannercomponent.html) ‚ÍAƒ}ƒeƒŠƒAƒ‹ ƒfƒUƒCƒ“ Banner ƒKƒCƒhƒ‰ƒCƒ“‚É‚Å‚«‚é‚©‚¬‚è€‹’‚µ‚È‚ª‚çŠÈ’P‚ÉƒRƒ“ƒeƒ“ƒc‚ğƒeƒ“ƒvƒŒ[ƒg‰»‚µ‚Ü‚·B
+[`IgxBannerComponent`]({environment:angularApiUrl}/classes/igxbannercomponent.html) ã¯ã€ãƒãƒ†ãƒªã‚¢ãƒ« ãƒ‡ã‚¶ã‚¤ãƒ³ Banner ã‚¬ã‚¤ãƒ‰ãƒ©ã‚¤ãƒ³ã«ã§ãã‚‹ã‹ãã‚Šæº–æ‹ ã—ãªãŒã‚‰ç°¡å˜ã«ã‚³ãƒ³ãƒ†ãƒ³ãƒ„ã‚’ãƒ†ãƒ³ãƒ—ãƒ¬ãƒ¼ãƒˆåŒ–ã—ã¾ã™ã€‚
 
-#### Banner ƒƒbƒZ[ƒW‚Ì•ÏX
+#### Banner ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã®å¤‰æ›´
 
-`igx-banner` ƒ^ƒO‚É“n‚³‚ê‚éƒRƒ“ƒeƒ“ƒc‚ğ•ÏX‚µ‚ÄBanner‚É•\¦‚³‚ê‚éƒƒbƒZ[ƒW‚ğ•ÏX‚Å‚«‚Ü‚·BˆÈ‰º‚ÍAfConnection' Banner‚ÌƒRƒ“ƒeƒ“ƒc‚ğ•ÏX‚µ‚Ä‚æ‚è‘½‚­‚Ìî•ñ‚ğ’ñ‹Ÿ‚µ‚Ü‚·B
+`igx-banner` ã‚¿ã‚°ã«æ¸¡ã•ã‚Œã‚‹ã‚³ãƒ³ãƒ†ãƒ³ãƒ„ã‚’å¤‰æ›´ã—ã¦Bannerã«è¡¨ç¤ºã•ã‚Œã‚‹ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚’å¤‰æ›´ã§ãã¾ã™ã€‚ä»¥ä¸‹ã¯ã€â€™Connection' Bannerã®ã‚³ãƒ³ãƒ†ãƒ³ãƒ„ã‚’å¤‰æ›´ã—ã¦ã‚ˆã‚Šå¤šãã®æƒ…å ±ã‚’æä¾›ã—ã¾ã™ã€‚
 
 ```html
     <!--banner.component.html-->
@@ -82,14 +82,14 @@ Banner‚ÍA—v‘f‚ªƒy[ƒW ƒeƒ“ƒvƒŒ[ƒg‚É‘}“ü‚³‚ê‚½êŠ‚É‚»‚Ì‘¼‚·‚×‚Ä‚ÌƒRƒ“ƒeƒ“ƒc‚ğˆ
     <button igxButton="raised" (click)="rateBanner.toggle()">Toggle Banner</button>
 ```
 
-#### ƒAƒCƒRƒ“‚Ì’Ç‰Á
+#### ã‚¢ã‚¤ã‚³ãƒ³ã®è¿½åŠ 
 
-Banner ƒRƒ“ƒeƒ“ƒc‚É [`igx-icon`]({environment:angularApiUrl}/classes/igxiconmodule.html) ‚ğ“n‚·‚±‚Æ‚ª‚Å‚«Aí‚É Banner ƒƒbƒZ[ƒW‚ÌÅ‰‚É”z’u‚³‚ê‚Ü‚·B
+Banner ã‚³ãƒ³ãƒ†ãƒ³ãƒ„ã« [`igx-icon`]({environment:angularApiUrl}/classes/igxiconmodule.html) ã‚’æ¸¡ã™ã“ã¨ãŒã§ãã€å¸¸ã« Banner ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã®æœ€åˆã«é…ç½®ã•ã‚Œã¾ã™ã€‚
 
 > [!NOTE]
-> •¡”‚Ì `igx-icon` —v‘f‚ª Banner ‚Ì’¼Ú‚Ìq‘·‚Æ‚µ‚Ä‘}“ü‚³‚ê‚éê‡ABanner ‚Í‚»‚ê‚ç‚·‚×‚Ä‚ğÅ‰‚É”z’u‚µ‚æ‚¤‚Æ‚µ‚Ü‚·B`igx-icon` ‚Í 1 ‚Â‚Ì‚İA’¼Ú“n‚·‚±‚Æ‚É’ˆÓ‚µ‚Ä‚­‚¾‚³‚¢BBanner ƒƒbƒZ[ƒW‚ÌƒAƒCƒRƒ“‚ğg—p‚·‚éê‡A`span` ƒ^ƒO‚Åƒ‰ƒbƒv‚µ‚Ä‚­‚¾‚³‚¢B
+> è¤‡æ•°ã® `igx-icon` è¦ç´ ãŒ Banner ã®ç›´æ¥ã®å­å­«ã¨ã—ã¦æŒ¿å…¥ã•ã‚Œã‚‹å ´åˆã€Banner ã¯ãã‚Œã‚‰ã™ã¹ã¦ã‚’æœ€åˆã«é…ç½®ã—ã‚ˆã†ã¨ã—ã¾ã™ã€‚`igx-icon` ã¯ 1 ã¤ã®ã¿ã€ç›´æ¥æ¸¡ã™ã“ã¨ã«æ³¨æ„ã—ã¦ãã ã•ã„ã€‚Banner ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã®ã‚¢ã‚¤ã‚³ãƒ³ã‚’ä½¿ç”¨ã™ã‚‹å ´åˆã€`span` ã‚¿ã‚°ã§ãƒ©ãƒƒãƒ—ã—ã¦ãã ã•ã„ã€‚
 
-`Igx-icon` ‚ğ Banner ‚É“n‚·ê‡A`igx-banner` ‚ÌƒRƒ“ƒeƒ“ƒc‚É‘}“ü‚µ‚Ä‚­‚¾‚³‚¢B
+`Igx-icon` ã‚’ Banner ã«æ¸¡ã™å ´åˆã€`igx-banner` ã®ã‚³ãƒ³ãƒ†ãƒ³ãƒ„ã«æŒ¿å…¥ã—ã¦ãã ã•ã„ã€‚
 
 ```html
     <!--banner.component.html-->
@@ -100,14 +100,14 @@ Banner ƒRƒ“ƒeƒ“ƒc‚É [`igx-icon`]({environment:angularApiUrl}/classes/igxiconmodu
     ...
 ```
 
-#### ƒJƒXƒ^ƒ€ Banner ƒ{ƒ^ƒ“‚Ì’Ç‰Á
+#### ã‚«ã‚¹ã‚¿ãƒ  Banner ãƒœã‚¿ãƒ³ã®è¿½åŠ 
 
-[`IgxBannerModule`]({environment:angularApiUrl}/classes/igxbannermodule.html) ‚ÍABanner ƒ{ƒ^ƒ“‚ğƒeƒ“ƒvƒŒ[ƒg‰»‚·‚é‚½‚ß‚ÌƒfƒBƒŒƒNƒeƒBƒu ([`IgxBannerActionsDirective`]({environment:angularApiUrl}/classes/igxbanneractionsdirective.html).) ‚ğŒöŠJ‚µ‚Ü‚·B‚±‚ÌƒfƒBƒŒƒNƒeƒBƒu‚ğg—p‚µ‚ÄƒfƒtƒHƒ‹ƒg Banner ƒ{ƒ^ƒ“ (`Dismiss`) ‚ğƒI[ƒo[ƒ‰ƒCƒh‚µAƒ†[ƒU[’è‹`‚ÌƒJƒXƒ^ƒ€‘€ì‚ğ’Ç‰Á‚µ‚Ü‚·B‚Ù‚Æ‚ñ‚Ç‚Ìƒ{ƒ^ƒ“ ƒCƒ“ƒ^ƒ‰ƒNƒVƒ‡ƒ“‚Í Banner ‚ğ•Â‚¶‚é‚±‚Æ‚Å‚ ‚é‚½‚ßA`click` ƒnƒ“ƒhƒ‰[‚ÅBanner ‚Ì `close()` ƒƒ\ƒbƒh‚ğŒÄ‚Ño‚µ‚Ä‚­‚¾‚³‚¢B
+[`IgxBannerModule`]({environment:angularApiUrl}/classes/igxbannermodule.html) ã¯ã€Banner ãƒœã‚¿ãƒ³ã‚’ãƒ†ãƒ³ãƒ—ãƒ¬ãƒ¼ãƒˆåŒ–ã™ã‚‹ãŸã‚ã®ãƒ‡ã‚£ãƒ¬ã‚¯ãƒ†ã‚£ãƒ– ([`IgxBannerActionsDirective`]({environment:angularApiUrl}/classes/igxbanneractionsdirective.html).) ã‚’å…¬é–‹ã—ã¾ã™ã€‚ã“ã®ãƒ‡ã‚£ãƒ¬ã‚¯ãƒ†ã‚£ãƒ–ã‚’ä½¿ç”¨ã—ã¦ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆ Banner ãƒœã‚¿ãƒ³ (`Dismiss`) ã‚’ã‚ªãƒ¼ãƒãƒ¼ãƒ©ã‚¤ãƒ‰ã—ã€ãƒ¦ãƒ¼ã‚¶ãƒ¼å®šç¾©ã®ã‚«ã‚¹ã‚¿ãƒ æ“ä½œã‚’è¿½åŠ ã—ã¾ã™ã€‚ã»ã¨ã‚“ã©ã®ãƒœã‚¿ãƒ³ ã‚¤ãƒ³ã‚¿ãƒ©ã‚¯ã‚·ãƒ§ãƒ³ã¯ Banner ã‚’é–‰ã˜ã‚‹ã“ã¨ã§ã‚ã‚‹ãŸã‚ã€`click` ãƒãƒ³ãƒ‰ãƒ©ãƒ¼ã§Banner ã® `close()` ãƒ¡ã‚½ãƒƒãƒ‰ã‚’å‘¼ã³å‡ºã—ã¦ãã ã•ã„ã€‚
 
 > [!NOTE]
-> Google ‚Ì [`ƒ}ƒeƒŠƒAƒ‹ ƒfƒUƒCƒ“` ƒKƒCƒhƒ‰ƒCƒ“](https://material.io/design/components/banners.html#anatomy) ‚Å‚ÍABanner ‚É•\¦‚·‚éƒ{ƒ^ƒ“‚Í 2 ‚Â‚Ü‚Å‚Å‚·B`IgxBannerComponent` ‚ÍA`igx-banner-actions` ƒ^ƒO‚Å 2 —v‘fˆÈã“n‚·‚±‚Æ‚ğ–¾¦“I‚É§ŒÀ**‚µ‚Ü‚¹‚ñ**‚ªAƒ}ƒeƒŠƒAƒ‹ ƒfƒUƒCƒ“ ƒKƒCƒh‚É]‚¤‚±‚Æ‚ğ„§‚µ‚Ü‚·B 
+> Google ã® [`ãƒãƒ†ãƒªã‚¢ãƒ« ãƒ‡ã‚¶ã‚¤ãƒ³` ã‚¬ã‚¤ãƒ‰ãƒ©ã‚¤ãƒ³](https://material.io/design/components/banners.html#anatomy) ã§ã¯ã€Banner ã«è¡¨ç¤ºã™ã‚‹ãƒœã‚¿ãƒ³ã¯ 2 ã¤ã¾ã§ã§ã™ã€‚`IgxBannerComponent` ã¯ã€`igx-banner-actions` ã‚¿ã‚°ã§ 2 è¦ç´ ä»¥ä¸Šæ¸¡ã™ã“ã¨ã‚’æ˜ç¤ºçš„ã«åˆ¶é™**ã—ã¾ã›ã‚“**ãŒã€ãƒãƒ†ãƒªã‚¢ãƒ« ãƒ‡ã‚¶ã‚¤ãƒ³ ã‚¬ã‚¤ãƒ‰ã«å¾“ã†ã“ã¨ã‚’æ¨å¥¨ã—ã¾ã™ã€‚ 
 
-Connection Banner ‚Ìƒeƒ“ƒvƒŒ[ƒg‰»‚ÍA`igx-banner-actions` ƒZƒŒƒNƒ^[‚ğg—p‚·‚éƒJƒXƒ^ƒ€ ƒAƒNƒVƒ‡ƒ“ ƒnƒ“ƒhƒ‰[‚ğ“n‚·‚±‚Æ‚ª‚Å‚«‚Ü‚·B
+Connection Banner ã®ãƒ†ãƒ³ãƒ—ãƒ¬ãƒ¼ãƒˆåŒ–ã¯ã€`igx-banner-actions` ã‚»ãƒ¬ã‚¯ã‚¿ãƒ¼ã‚’ä½¿ç”¨ã™ã‚‹ã‚«ã‚¹ã‚¿ãƒ  ã‚¢ã‚¯ã‚·ãƒ§ãƒ³ ãƒãƒ³ãƒ‰ãƒ©ãƒ¼ã‚’æ¸¡ã™ã“ã¨ãŒã§ãã¾ã™ã€‚
 
 ```html
     <!--banner.component.html-->
@@ -121,7 +121,7 @@ Connection Banner ‚Ìƒeƒ“ƒvƒŒ[ƒg‰»‚ÍA`igx-banner-actions` ƒZƒŒƒNƒ^[‚ğg—p‚·‚éƒ
     </igx-banner>
     ...
 ```
-•Â‚¶‚éƒIƒvƒVƒ‡ƒ“ (`'Continue Offline'`) ‚ÍÚ×‚ÈƒƒWƒbƒN‚ğ•K—v‚Æ‚µ‚È‚¢‚½‚ßA`connectionBanner.close()` ‚Ì‚İ‚ÌŒÄ‚Ño‚µ‚ª‰Â”\‚Å‚·BŠm”F‘€ì (`eTurn On Wifif`) ‚Í’Ç‰Á‚ÌƒƒWƒbƒN‚ğ•K—v‚Æ‚·‚é‚½‚ßAƒRƒ“ƒ|[ƒlƒ“ƒg‚Å’è‹`‚µ‚Ü‚·B
+é–‰ã˜ã‚‹ã‚ªãƒ—ã‚·ãƒ§ãƒ³ (`'Continue Offline'`) ã¯è©³ç´°ãªãƒ­ã‚¸ãƒƒã‚¯ã‚’å¿…è¦ã¨ã—ãªã„ãŸã‚ã€`connectionBanner.close()` ã®ã¿ã®å‘¼ã³å‡ºã—ãŒå¯èƒ½ã§ã™ã€‚ç¢ºèªæ“ä½œ (`â€˜Turn On Wifiâ€™`) ã¯è¿½åŠ ã®ãƒ­ã‚¸ãƒƒã‚¯ã‚’å¿…è¦ã¨ã™ã‚‹ãŸã‚ã€ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆã§å®šç¾©ã—ã¾ã™ã€‚
 
 ```typescript
 // banner.component.ts
@@ -161,26 +161,26 @@ export class MyBannerComponent implements OnInit, OnDestroy {
     }
 }
 ```
-ã‹L‚ÌƒR[ƒh ƒXƒjƒyƒbƒg‚Ìà–¾B
- - `onNetworkStateChange` ‚ÌÀ‘• - •ÏX‚ğƒŠƒbƒXƒ“‚·‚é `Observable`B
- - `ngOnInit` ‚ÌV‚µ‚¢ Observable ‚ÉƒTƒuƒXƒNƒ‰ƒCƒu‚µ‚Ü‚·B`Observable` ‚ª”­¶‚·‚é‚²‚Æ‚Éƒƒ\ƒbƒh‚ğŒÄ‚Ño‚µ‚Ü‚·B
- - `ngOnDestroy` ‚Í Observable ‚Ì `complete` ƒƒ\ƒbƒh‚ğŒÄ‚Ño‚µ‚Äƒƒ‚ƒŠƒŠ[ƒN‚ğ–h~‚µ‚Ü‚·B
- - `refreshBanner` ‚Ìƒ{ƒfƒB‚ğ’è‹` - WiFi ó‘Ô‚ÉŠî‚Ã‚¢‚ÄBanner‚ğ `show()` ‚Ü‚½‚Í `close()` ‚µ‚Ü‚·B
+ä¸Šè¨˜ã®ã‚³ãƒ¼ãƒ‰ ã‚¹ãƒ‹ãƒšãƒƒãƒˆã®èª¬æ˜ã€‚
+ - `onNetworkStateChange` ã®å®Ÿè£… - å¤‰æ›´ã‚’ãƒªãƒƒã‚¹ãƒ³ã™ã‚‹ `Observable`ã€‚
+ - `ngOnInit` ã®æ–°ã—ã„ Observable ã«ã‚µãƒ–ã‚¹ã‚¯ãƒ©ã‚¤ãƒ–ã—ã¾ã™ã€‚`Observable` ãŒç™ºç”Ÿã™ã‚‹ã”ã¨ã«ãƒ¡ã‚½ãƒƒãƒ‰ã‚’å‘¼ã³å‡ºã—ã¾ã™ã€‚
+ - `ngOnDestroy` ã¯ Observable ã® `complete` ãƒ¡ã‚½ãƒƒãƒ‰ã‚’å‘¼ã³å‡ºã—ã¦ãƒ¡ãƒ¢ãƒªãƒªãƒ¼ã‚¯ã‚’é˜²æ­¢ã—ã¾ã™ã€‚
+ - `refreshBanner` ã®ãƒœãƒ‡ã‚£ã‚’å®šç¾© - WiFi çŠ¶æ…‹ã«åŸºã¥ã„ã¦Bannerã‚’ `show()` ã¾ãŸã¯ `close()` ã—ã¾ã™ã€‚
 
-#### ƒfƒ‚‚Ìƒeƒ“ƒvƒŒ[ƒg‰»
+#### ãƒ‡ãƒ¢ã®ãƒ†ãƒ³ãƒ—ãƒ¬ãƒ¼ãƒˆåŒ–
 
 <div class="sample-container loading" style="height: 530px">
     <iframe id="banner-sample-2-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/banner-sample-2" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="banner-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz ‚Å•\¦</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="banner-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz ã§è¡¨ç¤º</button>
 </div>
 
-### ƒJƒXƒ^ƒ€ ƒAƒjƒ[ƒVƒ‡ƒ“‚Ì“K—p
+### ã‚«ã‚¹ã‚¿ãƒ  ã‚¢ãƒ‹ãƒ¡ãƒ¼ã‚·ãƒ§ãƒ³ã®é©ç”¨
 
-Banner ƒRƒ“ƒ|[ƒlƒ“ƒg‚ÍA[`animationSettings`]({environment:angularApiUrl}/classes/igxbannermodule.html#animationsettings) ‚ÉƒJƒXƒ^ƒ€ ƒI[ƒvƒ“‚Ìİ’è‚ÆƒAƒjƒ[ƒVƒ‡ƒ“‚ÌƒNƒ[ƒY‚ğ‹–—e‚·‚é `Input` ƒvƒƒpƒeƒB‚ğŒöŠJ‚µ‚Ü‚·BƒJƒXƒ^ƒ€ ƒAƒjƒ[ƒVƒ‡ƒ“‚ÍAƒ†[ƒU[’è‹`‚Ü‚½‚Í [`IgniteUI for Angular animation suite`]({environment:sassApiUrl}/index.html) ‚©‚ç“n‚·‚±‚Æ‚ª‚Å‚«‚Ü‚·BBanner‚Åg—p‚³‚ê‚éƒfƒtƒHƒ‹ƒg ƒAƒjƒ[ƒVƒ‡ƒ“‚ÍA`growVerIn` ‚ªŠJnA`growVerOut` ‚ªI—¹‚Å‚·B
+Banner ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆã¯ã€[`animationSettings`]({environment:angularApiUrl}/classes/igxbannermodule.html#animationsettings) ã«ã‚«ã‚¹ã‚¿ãƒ  ã‚ªãƒ¼ãƒ—ãƒ³ã®è¨­å®šã¨ã‚¢ãƒ‹ãƒ¡ãƒ¼ã‚·ãƒ§ãƒ³ã®ã‚¯ãƒ­ãƒ¼ã‚ºã‚’è¨±å®¹ã™ã‚‹ `Input` ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã‚’å…¬é–‹ã—ã¾ã™ã€‚ã‚«ã‚¹ã‚¿ãƒ  ã‚¢ãƒ‹ãƒ¡ãƒ¼ã‚·ãƒ§ãƒ³ã¯ã€ãƒ¦ãƒ¼ã‚¶ãƒ¼å®šç¾©ã¾ãŸã¯ [`IgniteUI for Angular animation suite`]({environment:sassApiUrl}/index.html) ã‹ã‚‰æ¸¡ã™ã“ã¨ãŒã§ãã¾ã™ã€‚Bannerã§ä½¿ç”¨ã•ã‚Œã‚‹ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆ ã‚¢ãƒ‹ãƒ¡ãƒ¼ã‚·ãƒ§ãƒ³ã¯ã€`growVerIn` ãŒé–‹å§‹ã€`growVerOut` ãŒçµ‚äº†ã§ã™ã€‚
 
-ƒXƒ‰ƒCƒhƒCƒ“‚·‚é‚½‚ß‚ÉBanner‚ªg—p‚·‚éƒAƒjƒ[ƒVƒ‡ƒ“‚ğ•ÏX‚µ‚Ü‚·B
+ã‚¹ãƒ©ã‚¤ãƒ‰ã‚¤ãƒ³ã™ã‚‹ãŸã‚ã«BannerãŒä½¿ç”¨ã™ã‚‹ã‚¢ãƒ‹ãƒ¡ãƒ¼ã‚·ãƒ§ãƒ³ã‚’å¤‰æ›´ã—ã¾ã™ã€‚
 
 ```html
 <!--banner.component.html-->
@@ -204,7 +204,7 @@ export class MyBannerComponent {
 }
 ```
 
-#### ƒAƒjƒ[ƒVƒ‡ƒ“ ƒfƒ‚
+#### ã‚¢ãƒ‹ãƒ¡ãƒ¼ã‚·ãƒ§ãƒ³ ãƒ‡ãƒ¢
 
 <div class="sample-container loading" style="height: 530px">
     <iframe id="banner-sample-3-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/banner-sample-3" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -213,10 +213,10 @@ export class MyBannerComponent {
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="banner-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-### ƒCƒxƒ“ƒg‚ÉƒoƒCƒ“ƒh
-Banner ƒRƒ“ƒ|[ƒlƒ“ƒg‚Íó‘Ô‚Ì•ÏX‚ÉƒCƒxƒ“ƒg‚ğ”­¶‚µ‚Ü‚·B[`onOpening`]({environment:angularApiUrl}/classes/igxbannercomponent.html#onopening) ‚Æ [`onOpened`]({environment:angularApiUrl}/classes/igxbannercomponent.html#onopened) ‚ª Banner ‚ª•\¦‚³‚ê‚é (‘O‚ÆŒã‚É) ‚Æ‚«‚ÉŒÄ‚Ño‚³‚ê‚Ü‚·Bˆê•ûA[`onClosing`]({environment:angularApiUrl}/classes/igxbannercomponent.html#onclosing) ‚Æ [`onClosed`]({environment:angularApiUrl}/classes/igxbannercomponent.html#onclosed) ‚ÍBanner‚ª•Â‚¶‚é‚Æ‚«‚ÉƒGƒ~ƒbƒg‚³‚ê‚Ü‚·B*Ing* ƒCƒxƒ“ƒg (`onOpening`, `onClosing`) ‚ÍƒLƒƒƒ“ƒZƒ‹‰Â”\‚Å‚·B `ICancelEventArgs` ƒCƒ“ƒ^[ƒtƒFƒCƒX‚ğg—p‚µ‚ÄƒIƒuƒWƒFƒNƒg‚Í `cancel` ƒvƒƒpƒeƒB‚ğ‚¿‚Ü‚·B`cancel` ƒvƒƒpƒeƒB‚ğ true ‚Éİ’è‚µ‚Ü‚·B‘Î‰‚·‚éƒGƒ“ƒh‘€ì‚ÆƒCƒxƒ“ƒg‚ÍƒgƒŠƒK[‚³‚ê‚Ü‚¹‚ñB‚½‚Æ‚¦‚ÎA`onOpening` ‚ğƒLƒƒƒ“ƒZƒ‹‚µ‚½ê‡ABanner ‚Ì `open` ƒƒ\ƒbƒh‚ÍŠ®—¹‚¹‚¸‚É Banner ‚ª•\¦‚³‚ê‚Ü‚¹‚ñB
+### ã‚¤ãƒ™ãƒ³ãƒˆã«ãƒã‚¤ãƒ³ãƒ‰
+Banner ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆã¯çŠ¶æ…‹ã®å¤‰æ›´æ™‚ã«ã‚¤ãƒ™ãƒ³ãƒˆã‚’ç™ºç”Ÿã—ã¾ã™ã€‚[`onOpening`]({environment:angularApiUrl}/classes/igxbannercomponent.html#onopening) ã¨ [`onOpened`]({environment:angularApiUrl}/classes/igxbannercomponent.html#onopened) ãŒ Banner ãŒè¡¨ç¤ºã•ã‚Œã‚‹ (å‰ã¨å¾Œã«) ã¨ãã«å‘¼ã³å‡ºã•ã‚Œã¾ã™ã€‚ä¸€æ–¹ã€[`onClosing`]({environment:angularApiUrl}/classes/igxbannercomponent.html#onclosing) ã¨ [`onClosed`]({environment:angularApiUrl}/classes/igxbannercomponent.html#onclosed) ã¯BannerãŒé–‰ã˜ã‚‹ã¨ãã«ã‚¨ãƒŸãƒƒãƒˆã•ã‚Œã¾ã™ã€‚*Ing* ã‚¤ãƒ™ãƒ³ãƒˆ (`onOpening`, `onClosing`) ã¯ã‚­ãƒ£ãƒ³ã‚»ãƒ«å¯èƒ½ã§ã™ã€‚ `ICancelEventArgs` ã‚¤ãƒ³ã‚¿ãƒ¼ãƒ•ã‚§ã‚¤ã‚¹ã‚’ä½¿ç”¨ã—ã¦ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã¯ `cancel` ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã‚’æŒã¡ã¾ã™ã€‚`cancel` ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã‚’ true ã«è¨­å®šã—ã¾ã™ã€‚å¯¾å¿œã™ã‚‹ã‚¨ãƒ³ãƒ‰æ“ä½œã¨ã‚¤ãƒ™ãƒ³ãƒˆã¯ãƒˆãƒªã‚¬ãƒ¼ã•ã‚Œã¾ã›ã‚“ã€‚ãŸã¨ãˆã°ã€`onOpening` ã‚’ã‚­ãƒ£ãƒ³ã‚»ãƒ«ã—ãŸå ´åˆã€Banner ã® `open` ãƒ¡ã‚½ãƒƒãƒ‰ã¯å®Œäº†ã›ãšã« Banner ãŒè¡¨ç¤ºã•ã‚Œã¾ã›ã‚“ã€‚
 
-”­¶‚µ‚½ƒIƒuƒWƒFƒNƒg‚ÖƒoƒCƒ“ƒh‚µ‚½ƒCƒxƒ“ƒg‚ğƒLƒƒƒ“ƒZƒ‹‚·‚é‚½‚ß‚É `cancel` ƒvƒƒpƒeƒB‚É `true` ‚Éİ’è‚µ‚Ü‚·B
+ç™ºç”Ÿã—ãŸã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã¸ãƒã‚¤ãƒ³ãƒ‰ã—ãŸã‚¤ãƒ™ãƒ³ãƒˆã‚’ã‚­ãƒ£ãƒ³ã‚»ãƒ«ã™ã‚‹ãŸã‚ã« `cancel` ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã« `true` ã«è¨­å®šã—ã¾ã™ã€‚
 
 ```html
 <!--banner.component.html-->
@@ -235,9 +235,9 @@ export class MyBannerComponent {
 }
 ```
 > [!NOTE]
-> ã‹L‚ª“K—p‚³‚ê‚é‚ÆƒI[ƒvƒjƒ“ƒO ƒCƒxƒ“ƒg‚ªí‚ÉƒLƒƒƒ“ƒZƒ‹‚³‚ê‚é‚½‚ßABanner ‚ªŠJ‚­‚±‚Æ‚Í‚ ‚è‚Ü‚¹‚ñB
+> ä¸Šè¨˜ãŒé©ç”¨ã•ã‚Œã‚‹ã¨ã‚ªãƒ¼ãƒ—ãƒ‹ãƒ³ã‚° ã‚¤ãƒ™ãƒ³ãƒˆãŒå¸¸ã«ã‚­ãƒ£ãƒ³ã‚»ãƒ«ã•ã‚Œã‚‹ãŸã‚ã€Banner ãŒé–‹ãã“ã¨ã¯ã‚ã‚Šã¾ã›ã‚“ã€‚
 
-## API ƒŠƒtƒ@ƒŒƒ“ƒX
+## API ãƒªãƒ•ã‚¡ãƒ¬ãƒ³ã‚¹
 
 * [`IgxBannerComponent API`]({environment:angularApiUrl}/classes/igxbannercomponent.html)
 * [`IgxBannerModule`]({environment:angularApiUrl}/classes/igxbannermodule.html)
