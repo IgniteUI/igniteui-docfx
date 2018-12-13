@@ -213,7 +213,7 @@ export class Person {
 ```
 
 #### Apply additional formatting on focus and blur
-In addition to the default mask behavior, the user can implement his own custom pipes and take advantage of the `focusedValuePipe` and `displayValuePipe` input properties, to transform the value to a desired output when the input gets or loses focus. This will not affect the underlying model value. Let's demonstarte how this can be achieved!
+In addition to the default mask behavior, the user can implement his own custom pipes and take advantage of the `focusedValuePipe` and `displayValuePipe` input properties, to transform the value to a desired output when the input gets or loses focus. This will not affect the underlying model value. Let's demonstrate how this can be achieved!
 
 Implement two pipes that will append/remove a '%' sign at the end of the displayed value:
 ```typescript
@@ -240,7 +240,7 @@ export class InputFormatPipe implements PipeTransform {
 }
 ```
 
-Pass an instance of each pipe to the `focusedValuePipe` and `displayValuePipe` input porperties as follows:
+Pass an instance of each pipe to the `focusedValuePipe` and `displayValuePipe` input properties as follows:
 ```typescript
     value = 1230;
     displayFormat = new DisplayFormatPipe();
@@ -267,7 +267,7 @@ As a result a '%' sign should be appended to the value on blur (i.e. when the us
 </div>
 
 #### Adding a placeholder
-The user can also take advantage of the `placehodler` input property which serves the pupose of the native input placehodler attribute. If no value is provided for the `placeholder`, the value set for the mask is used.
+The user can also take advantage of the `placeholder` input property, which serves the purpose of the native input placeholder attribute. If no value is provided for the `placeholder`, the value set for the mask is used.
 
 ```typescript
     value = null;
