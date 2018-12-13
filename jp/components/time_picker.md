@@ -6,7 +6,7 @@ _language: ja
 ---
 
 ## Time Picker
-<p class="highlight">Date Picker のデザインや機能と同様 Ignite UI for Angular Time Picker コンポーネントは、ダイアログのスピン ボタンで時間を選択して入力フィールドに値を設定します。</p>
+<p class="highlight">Date Picker のデザインや機能と同様 Ignite UI for Angular Time Picker コンポーネントは、ダイアログのスピン ボタンで時間を選択して入力フィールドに値を設定します。In addition the user can select also or edit a time value, using an editable masked input with a dropdown.</p>
 <div class="divider"></div>
 
 ### Time Picker デモ
@@ -153,6 +153,44 @@ public onValidationFailed(timepicker){
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="time-picker-sample-4" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
+</div>
+<div class="divider--half"></div>
+
+#### Dropdown Mode
+
+When you add the time picker to your project it is set to the Default (dialog) mode. To activate the dropdown mode you will have to include the enum [`InteractionMode`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#InteractionMode):
+
+```typescript
+// timePickerDropdown.component.ts
+
+import { InteractionMode } from 'igniteui-angular';
+...
+
+public mode: InteractionMode = InteractionMode.dropdown;
+```
+
+```html
+<!--timePickerDropdown.component.html-->
+
+<igx-time-picker [mode]="mode"></igx-time-picker>
+```
+The user now will be able to type, edit or delete the time value in the input in both 12- and 24-hour formats. 
+
+**Dropdown Mode with Keyboard Navigation**
+
+The mouse caret can be positioned at the hours, minutes or AM/PM placeholders and after pressing <kbd>Up</kbd> or using `Mouse Wheel Up`, the hours or the minutes will be increased. Pressing <kbd>Down</kbd> or `Mouse Wheel Down` can be used for the reversed operation. *Note* that if the time picker's [`minValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#minvalue) or [`maxValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#maxvalue) are set and [`isSpinLoop`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#isspinloop) is disabled, the time scrolling will break at the specified hour or minute value. In addition, the user can also perform the following operations:
+
+* To `Open`the dropdown click on the *clock icon*, press <kbd>Space</kbd> or combination of <kbd>Alt</kbd> + <kbd>Down</kbd> keys.
+* To `Accept` and `Close` the dropdown press <kbd>Escape</kbd> or <kbd>Enter</kbd> keys.
+* Clicking with the mouse outside of the time picker will also `Accept` the value entered and `Close` the dropdown.
+* If the dropdown is not opened and a new value is typed to `Accept` it click outside of the time picker or press <kbd>Tab</kbd> to move the focus.
+
+And there we have it:
+<div class="sample-container loading" style="height:540px">
+    <iframe id="timepicker-dropdown-sample-iframe" src='{environment:demosBaseUrl}/timepicker-dropdown-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="timepicker-dropdown-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
 

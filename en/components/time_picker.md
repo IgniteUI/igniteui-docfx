@@ -173,7 +173,7 @@ The user now will be able to type, edit or delete the time value in the input in
 
 **Dropdown Mode with Keyboard Navigation**
 
-The mouse caret can be positioned at the hours, minutes or AM/PM placeholders and after pressing <kbd>Up</kbd> or using `Mouse Wheel Up`, the hours or the minutes will be increased. Pressing <kbd>Down</kbd> or `Mouse Wheel Down` can be used for the reversed operation. *Note* that if the time picker's `minValue` or `maxValue` are set and `isspinloop` is disabled, the time scrolling will break at the specified hour or minute value. In addition, the user can also perform the following operations:
+The mouse caret can be positioned at the hours, minutes or AM/PM placeholders and after pressing <kbd>Up</kbd> or using `Mouse Wheel Up`, the hours or the minutes will be increased. Pressing <kbd>Down</kbd> or `Mouse Wheel Down` can be used for the reversed operation. *Note* that if the time picker's [`minValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#minvalue) or [`maxValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#maxvalue) are set and [`isSpinLoop`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#isspinloop) is disabled, the time scrolling will break at the specified hour or minute value. In addition, the user can also perform the following operations:
 
 * To `Open`the dropdown click on the *clock icon*, press <kbd>Space</kbd> or combination of <kbd>Alt</kbd> + <kbd>Down</kbd> keys.
 * To `Accept` and `Close` the dropdown press <kbd>Escape</kbd> or <kbd>Enter</kbd> keys.
