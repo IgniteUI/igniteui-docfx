@@ -340,6 +340,6 @@
 - name: Excel Exporter
   href: exporter_excel.md
   new: false
-  - name: Localization
+- name: Localization
   href: localization.md
   new: true
