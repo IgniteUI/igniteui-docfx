@@ -7,7 +7,7 @@ _language: ja
 
 ## ツリー グリッド
 
-<p class="highlight">Displays and manipulates hierarchical data with consistent schema formatted as a table and provides a line of advanced features such as sorting, filtering, summaries, editing, column pinning, paging, column moving and hiding.</p>
+<p class="highlight">階層型データを統一性のあるテーブルとして書式設定したスキーマで表示、操作し、並べ替え、フィルタリング、集計、編集、列ピン固定、ページング、列移動、非表示など高度な機能をサポートします。</p>
 
 ### デモ
 
@@ -118,7 +118,7 @@ IgxTreeGridComponent を階層にバインドするには、[`childDataKey`]({en
 ```
 
 [`rowSelectable`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#rowselectable) と [`paging`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#paging) を使用してツリー グリッドの行選択とページング機能を有効にします。
-We will also enable the summaries feature on the first column and the filtering, sorting, editing, moving and resizing features for each of our columns.
+最初の列に集計機能、各列にはフィルタリング、並べ替え、編集、サイズ変更機能を有効にします。
 
 ```html
 <!--treeGridSample.component.html-->
