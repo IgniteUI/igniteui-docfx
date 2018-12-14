@@ -217,10 +217,10 @@ export class Person {
 }
 ```
 
-#### Apply additional formatting on focus and blur
-In addition to the default mask behavior, the user can implement his own custom pipes and take advantage of the [`focusedValuePipe`]({environment:angularApiUrl}/classes/igxmaskdirective.html#focusedValuePipe) and [`displayValuePipe`]({environment:angularApiUrl}/classes/igxmaskdirective.html#displayValuePipe) input properties, to transform the value to a desired output when the input gets or loses focus. This will not affect the underlying model value. Let's demonstrate how this can be achieved!
+#### focus と blur に追加の書式を適用
+デフォルトの mask 動作に加え、カスタムパイプを実装して [`focusedValuePipe`]({environment:angularApiUrl}/classes/igxmaskdirective.html#focusedValuePipe) や [`displayValuePipe`]({environment:angularApiUrl}/classes/igxmaskdirective.html#displayValuePipe) 入力プロパティで入力がフォーカスを get または lost した場合に値を必要なアウトプットへ変換できます。基になるモデル値に影響はありません。以下はその方法です。
 
-Implement two pipes that will append/remove a '%' sign at the end of the displayed value:
+ 表示値の最後に '%' サインを追加または削除する 2 つのパイプを実装します。
 ```typescript
 @Pipe({ name: 'displayFormat' })
 export class DisplayFormatPipe implements PipeTransform {
@@ -245,7 +245,7 @@ export class InputFormatPipe implements PipeTransform {
 }
 ```
 
-Pass an instance of each pipe to the [`focusedValuePipe`]({environment:angularApiUrl}/classes/igxmaskdirective.html#focusedValuePipe) and [`displayValuePipe`]({environment:angularApiUrl}/classes/igxmaskdirective.html#displayValuePipe) input properties as follows:
+[`focusedValuePipe`]({environment:angularApiUrl}/classes/igxmaskdirective.html#focusedValuePipe) や [`displayValuePipe`]({environment:angularApiUrl}/classes/igxmaskdirective.html#displayValuePipe) 入力プロパティに各パイプのインスタンスを渡します。
 
 ```typescript
 value = 1230;
@@ -262,7 +262,7 @@ inputFormat = new InputFormatPipe();
 </igx-input-group>
 ```
 
-As a result, a '%' sign should be appended to the value on blur (i.e. when the user clicks outside the input) and will be removed once the input gets focus!
+'%' 記号が blur の値に追加されて (ユーザーが入力以外をクリックした場合など) 入力がフォーカスを取得すると削除されます。
 
 <div class="sample-container loading" style="height: 100px">
     <iframe id="mask-sample4-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/mask-sample-4" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -272,8 +272,8 @@ As a result, a '%' sign should be appended to the value on blur (i.e. when the u
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="mask-sample4-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-#### Adding a placeholder
-The user can also take advantage of the [`placeholder`]({environment:angularApiUrl}/classes/igxmaskdirective.html#placeholder) input property, which serves the purpose of the native input placeholder attribute. If no value is provided for the [`placeholder`]({environment:angularApiUrl}/classes/igxmaskdirective.html#placeholder), the value set for the mask is used.
+#### プレースホルダーの追加
+[`placeholder`]({environment:angularApiUrl}/classes/igxmaskdirective.html#placeholder) プロパティは、ネイティブ プレースホルダー属性として使用できます。[`placeholder`]({environment:angularApiUrl}/classes/igxmaskdirective.html#placeholder) に値が提供されない場合、マスクの値セットが使用されます。
 
 ```typescript
 value = null;
