@@ -28,23 +28,21 @@ _language: ja
     |:----------------|:--------------------------|:-------------------------|:-------------------------|:-------------------------|
     | new Point(0, 0) | HorizontalAlignment.Right | VerticalAlignment.Bottom | HorizontalAlignment.Left | VerticalAlignment.Bottom |
 <div class="divider"></div>
-*注*: HorizontalDirection = Center / VerticalDirection = Middle を使用している場合、要素を再配置を試みません。
 
-## 使用方法
-ターゲットとする既存ボタンに基づいて要素を配置し、開始点をボタンの下角または左角にします。
+> [!NOTE]
+> ストラテジが HorizontalDirection = Center / VerticalDirection = Middle を使用している場合、要素を再配置しないようにします。
 
-```typescript
-const positionSettings: PositionSettings = {
-    target: buttonElement.nativeElement,
-    horizontalDirection: HorizontalAlignment.Right,
-    verticalDirection: VerticalAlignment.Bottom,
-    horizontalStartPoint: HorizontalAlignment.Left,
-    verticalStartPoint: VerticalAlignment.Bottom
-};
+4. **Elastic** - **Connected** 配置ストラテジとして要素を配置し、要素の一部が表示範囲外の場合に要素をサイズ変更してビューポイント内 (幅と高さまたはそのいずれかを再計算) にフィットさせます。 `minSize :{ width: number, height: number}` を `positionSettings` へ渡して要素のディメンションが特定のしきい値以下の場合にサイズ変更します。デフォルト値は:
+    | target          | horizontalDirection       |  verticalDirection       | horizontalStartPoint     | verticalStartPoint       | minSize |
+    |:----------------|:--------------------------|:-------------------------|:-------------------------|:-------------------------|---------|
+    | new Point(0, 0) | HorizontalAlignment.Right | VerticalAlignment.Bottom | HorizontalAlignment.Left | VerticalAlignment.Bottom |`{ width: 0, height: 0 }`|
+<div class="divider"></div>
 
-const strategy =  new ConnectedPositioningStrategy(positionSettings);
-strategy.position(contentWrapper, size);
-```
+> [!NOTE]
+> ストラテジが HorizontalDirection = Center / VerticalDirection = Middle を使用している場合、要素を再配置しないようにします。
+> [!NOTE]
+> オーバーレイ要素はサイズ変更**されます**が配置ストラテジは `overflow` をハンドルしません。たとえば、サイズ変更時の要素に `overflow-y` が必要な場合、適切なスタイルを組み込んで提供します。 
+
 
 ### 作業の開始
 ポジション ストラテジーは、[`overlay.show()`] ({environment:angularApiUrl}/classes/igxoverlayservice.html#show) メソッドが呼ばれたときに [`overlaySettings`] ({environment:angularApiUrl}/interfaces/overlaysettings.html) パラメーターのプロパティとして渡されます。
@@ -99,29 +97,50 @@ import {AutoPositionStrategy, GlobalPositionStrategy, ConnectedPositioningStrate
 ## デモ
 
 ### 水平方向または垂直方向
-
-配置設定で水平方向または垂直方向を設定すると、コンテンツの配置を決定します。配置に基づいて、コンテンツがターゲットのコンテナー ([`AutoPositionStrategy`] ({environment:angularApiUrl}/classes/autopositionstrategy.html),  [`ElasticPositionStrategy`] ({environment:angularApiUrl}/classes/elasticpositionstrategy.html) および  [`ConnectedPositioningStrategy`] ({environment:angularApiUrl}/classes/connectedpositioningstrategy.html)) に相対して配置するか、ドキュメントの本体 ([`GlobalPositioningStrategy`] ({environment:angularApiUrl}/classes/globalpositionstrategy.html)) に相対して配置します。
+配置設定で水平方向または垂直方向を設定すると、コンテンツの配置を決定します。配置方法によってコンテンツは、ターゲット コンテナー ([`AutoPositionStrategy`] ({environment:angularApiUrl}/classes/autopositionstrategy.html)、[`ElasticPositionStrategy`]({environment:angularApiUrl}/classes/elasticpositionstrategy.html)、[`ConnectedPositioningStrategy`]({environment:angularApiUrl}/classes/connectedpositioningstrategy.html))、またはドキュメント ([`GlobalPositioningStrategy`]({environment:angularApiUrl}/classes/globalpositionstrategy.html)) のボディに関連して配列します。
 
 <div class="sample-container loading" style="height: 400px">
     <iframe id="overlay-position-sample-1-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/overlay-position-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="overlay-position-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="overlay-position-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider"></div>
 
+上記サンプルは、表示要素の `overflow` が処理されます。
+
+```typescript
+// in overlay.component.ts
+export class MyExampleOverlayComponent {
+    ... 
+    // subscribe to overlay toggle emitters
+    public ngOnInit() {
+        const applyStyle = (overflow) => { this.overlayElement.nativeElement.style.overflow = overflow};
+        this.overlay.onOpening.subscribe(() => {applyStyle('auto'); });
+        this.overlay.onClosed.subscribe(() => {applyStyle(''); });
+    }
+    ...
+    // unsub on destroy
+    public ngOnDestroy() {
+        this.overlay.onOpening.unsubscribe();
+        this.overlay.onClosed.unsubscribe();
+    }
+
+}
+```
+
 ### 水平または垂直開始点
-配置設定で水平開始点または垂直開始点を設定すると、コンテンツの開始位置を決定します。
-開始点は、[`positionSettings`] ({environment:angularApiUrl}/interfaces/positionsettings.html) に渡された [`target`] ({environment:angularApiUrl}/interfaces/positionsettings.html#target) が `HTMLElement` で、[`AutoPositionStrategy`] ({environment:angularApiUrl}/classes/autopositionstrategy.html), [`ElasticPositionStrategy`] ({environment:angularApiUrl}/classes/elasticpositionstrategy.html) または [`ConnectedPositioningStrategy`] ({environment:angularApiUrl}/classes/connectedpositioningstrategy.html) が設定された場合のみに影響します。
-以下のデモで、オーバーレイ要素は選択した開始点に基づいてターゲット要素に配置します。方向は常に [`HorizontalAlignment.Right`] ({environment:angularApiUrl}/enums/horizontalalignment.html#right) および [`VerticalAlignment.Bottom`] ({environment:angularApiUrl}/enums/verticalalignment.html#bottom) です。
+配置設定で水平開始点または垂直開始点を設定すると、コンテンツの開始位置を決定します。開始ポイントは [`positionSettings`] ({environment:angularApiUrl}/interfaces/positionsettings.html) に渡された [`target`] ({environment:angularApiUrl}/interfaces/positionsettings.html#target) が `HTMLElement` の場合のみ効果があり、[`AutoPositionStrategy`] ({environment:angularApiUrl}/classes/autopositionstrategy.html)、[`ElasticPositionStrategy`] ({environment:angularApiUrl}/classes/elasticpositionstrategy.html)、[`ConnectedPositioningStrategy`] ({environment:angularApiUrl}/classes/connectedpositioningstrategy.html) でのみ使用できます。
+以下のデモで、オーバーレイ要素は選択した開始点に基づいてターゲット要素に配置します。方向は常に [`HorizontalAlignment.Right`] ({environment:angularApiUrl}/enums/horizontalalignment.html#right)、[`VerticalAlignment.Bottom`] ({environment:angularApiUrl}/enums/verticalalignment.html#bottom) です。
 
 <div class="sample-container loading" style="height: 400px">
     <iframe id="overlay-position-sample-2-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/overlay-position-sample-2" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="overlay-position-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="overlay-position-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider"></div>
+
 
 ## API
 
