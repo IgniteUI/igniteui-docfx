@@ -156,9 +156,9 @@ public onValidationFailed(timepicker){
 </div>
 <div class="divider--half"></div>
 
-#### Dropdown Mode
+#### ドロップダウン モード
 
-When you add the time picker to your project it is set to the Default (dialog) mode. To activate the dropdown mode you will have to include the enum [`InteractionMode`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#InteractionMode):
+タイムピッカーをプロジェクトに追加する際にデフォルト (ダイアログ) モードに設定します。ドロップダウン モードをアクティベイトするために enum [`InteractionMode`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#InteractionMode) を含む必要がありなす。
 
 ```typescript
 // timePickerDropdown.component.ts
@@ -174,18 +174,18 @@ public mode: InteractionMode = InteractionMode.dropdown;
 
 <igx-time-picker [mode]="mode"></igx-time-picker>
 ```
-The user now will be able to type, edit or delete the time value in the input in both 12- and 24-hour formats. 
+ユーザーは、12 時間と 24 時間形式で時間値を入力、編集、削除できます。 
 
-**Dropdown Mode with Keyboard Navigation**
+**キーボード ナビゲーションのドロップダウン モード**
 
-The mouse caret can be positioned at the hours, minutes or AM/PM placeholders and after pressing <kbd>Up</kbd> or using `Mouse Wheel Up`, the hours or the minutes will be increased. Pressing <kbd>Down</kbd> or `Mouse Wheel Down` can be used for the reversed operation. *Note* that if the time picker's [`minValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#minvalue) or [`maxValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#maxvalue) are set and [`isSpinLoop`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#isspinloop) is disabled, the time scrolling will break at the specified hour or minute value. In addition, the user can also perform the following operations:
+マウス キャレットは、時、分、AM/PM プレースホルダーに配置できます。<kbd>Up</kbd> の押下またはマウス ホイールアップした後に時または分が増加します。<kbd>Down</kbd> または `マウスホイール ダウン`は反転操作に使用できます。注* タイムピッカーの [`minValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#minvalue) または [`maxValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#maxvalue) を設定して [`isSpinLoop`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#isspinloop) を無効にし、時間スクローリングが指定した時間または分の値でブレークします。追加でユーザーは以下の操作も実行できます。
 
-* To `Open`the dropdown click on the *clock icon*, press <kbd>Space</kbd> or combination of <kbd>Alt</kbd> + <kbd>Down</kbd> keys.
-* To `Accept` and `Close` the dropdown press <kbd>Escape</kbd> or <kbd>Enter</kbd> keys.
-* Clicking with the mouse outside of the time picker will also `Accept` the value entered and `Close` the dropdown.
-* If the dropdown is not opened and a new value is typed to `Accept` it click outside of the time picker or press <kbd>Tab</kbd> to move the focus.
+* ドロップダウンを`開く`には、*クロック アイコン* をクリックし、<kbd>Space</kbd> または <kbd>Alt</kbd> + <kbd>Down</kbd> キーの組み合わせを押します。
+* ドロップダウンを`Accept` や `Close` する場合、<kbd>Escape</kbd> または <kbd>Enter</kbd> キーを押します。
+* マウスでタイムピッカー以外をクリックして入力した値を `Accept` してドロップダウンを `Close` します。
+* ドロップダウンが開いて新しい値が `Accept` にタイプされた場合、タイムピッカーの外側をクリックまたは <kbd>Tab</kbd> を押してフォーカスを移動します。
 
-And there we have it:
+以下は結果です。
 <div class="sample-container loading" style="height:540px">
     <iframe id="timepicker-dropdown-sample-iframe" src='{environment:demosBaseUrl}/timepicker-dropdown-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
