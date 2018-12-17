@@ -1,27 +1,27 @@
 ---
-title: Localization - Native Angular | Ignite UI for Angular
-_description: The Ignite UI for Angular Localization mechanism provides the ability to change/localize strings in the components.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Components
+title: ローカライズ - ネイティブ Angular | Ignite UI for Angular
+_description: Ignite UI for Angular ローカライゼーション メカニズムはコンポーネントの文字列をローカライズ/変更する機能をサポートします。
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ、ネイティブ Angular コンポーネント
 ---
 
-## Localization
+## ローカライズ
 
-With only a few lines of code, users can easily localize the strings in Ignite UI for Angular components.
+最小限のコードで Ignite UI for Angular コンポーネントの文字列を簡単にローカライズできます。
 
 <div class="sample-container loading" style="height:550px">
     <iframe id="localization-sample-1-iframe" src='{environment:demosBaseUrl}/localization-sample-1' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="localization-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="localization-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
 </div>
 
-### Usage
+### 使用方法
 
-#### Localize entire application
+#### アプリケーション全体のローカライズ
 
-To get all available resource strings, there is a global function `getCurrentResourceStrings`, which returns an `IResourceStrings` object.
-The values could be replaced in order to be localized and then the object can be passed to the `changei18n` function, as a parameter, which will change the global i18n for the igniteui-angular components on an app.module level. The localization can be done anywhere in the app, not only in the app.module.ts
+すべてのリソース文字列を取得するには、`IResourceStrings` オブジェクトを返すグローバル関数 `getCurrentResourceStrings` があります。 
+値はローカライズするために置き換えられます。次にオブジェクトはパラメーターとして `changei18n` 関数に渡して app.module レベルでコンポーネントのグローバル i18n を変更します。app.module.ts だけでなくアプリ内どこでもローカライズ可能です。
 
 ```typescript
 //app.module.ts
@@ -36,13 +36,13 @@ changei18n(currentRS);
 ```
 <div>
 <button data-localize="stackblitz" class="stackblitz-btn" date-sample-src="{environment:demosBaseUrl}/localization-sample-2"
-    data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz
+    data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示
 </button>
 </div>
 
-#### Localize particular strings for all components
+#### すべてのコンポーネントの特定の文字列をローカライズ
 
-Another approach is to localize/change only some of the strings for all components of given type. There is a `resourceStrings` property for the components that could be localized, which is of `IResourceStrings` type.
+その他の方法としてすべてのコンポーネントの一部の文字列のみローカライズ/変更します。`IResourceStrings` タイプのローカライズ可能なコンポーネントに `resourceStrings` プロパティがあります。
 
 ```typescript
 const currentRS = this.grid.resourceStrings;
@@ -52,13 +52,13 @@ currentRS.igx_grid_filter_row_close = '[Localized]Close';
 
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn" date-sample-src="{environment:demosBaseUrl}/localization-sample-3" 
-        data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz
+        data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示
     </button>
 </div>
 
-#### Localize particular strings for particular instance of a component
+#### コンポーネントの特定のインスタンスの文字列をローカライズ
 
-If only a single `igx-grid` instance should be localized, there is way. The `resourceStrings` proeprty should be used and it should be set to a new instance of `IGridResourceStrings` type.
+単一の `igx-grid` インスタンスのみをローカライズする方法があります。`resourceStrings` プロパティを使用し `IGridResourceStrings` の新しいインスタンスを設定します。
 
 ```typescript
 const newGridRes: IGridResourceStrings = {
@@ -70,16 +70,16 @@ this.grid.resourceStrings = newGridRes;
 ```
 
 <div>
-<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="localization-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="localization-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
 </div>
 
-### Load localized resources from npm package
+### npm パッケージからローカライズしたリソースを読み込みます。
 
-Firstly the package that contains the resource strings should be installed:
+最初にリソース文字列を含むパッケージをインストールします。
 
 `npm install igniteui-angular-i18n --save-dev`
 
-Then in order to use Japanese and Korean resource strings, the following imports should be added to the application and the `changei18n` functions should be called:
+日本語のリソース文字列を使用するには、以下のインポートをアプリケーションに追加して `changei18n` 関数を呼び出します。
 
 ```typescript
 //app.module.ts
@@ -91,12 +91,12 @@ import { IgxResouceStringsKR } from 'igniteui-angular-i18n';
 changei18n(IgxResouceStringsJA);
 ```
 
-### Additional Resources
+### その他のリソース
 
 <div class="divider--half"></div>
 
-Our community is active and always welcoming to new ideas.
+コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
-* [Ignite UI for Angular **ResourceStrings**](https://github.com/IgniteUI/igniteui-angular-i18n)
+* [Ignite UI for Angular** フォーラム** (英語) ](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub** (英語) ](https://github.com/IgniteUI/igniteui-angular)
+* [Ignite UI for Angular** フォーラム** (英語) ](https://github.com/IgniteUI/igniteui-angular-i18n)
