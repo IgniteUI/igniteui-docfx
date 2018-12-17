@@ -1,4 +1,4 @@
-﻿---
+---
 title: 集計 - ネイティブ Angular | Ignite UI for Angular
 _description: Ignite UI for Angular 集計を使用すると、列のデータ型に基づいて定義済みのデフォルト集計項目を持つ別のコンテナーで列情報を表示します。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, ネイティブ Angular コンポーネント, Angular Grid, Angular Data Grid コンポーネント, Angular Data Grid コントロール, Angular Grid コンポーネント, Angular Grid コントロール, Angular 高いパフォーマンス Grid, 集計機能, 集計
@@ -100,7 +100,7 @@ class MySummary extends IgxNumberSummaryOperand {
 }
 ```
 
-In the code above you can see that method [`operate`]({environment:angularApiUrl}/classes/igxsummaryoperand.html#operate) returns a list of [`IgxSummaryResult`]({environment:angularApiUrl}/interfaces/igxsummaryresult.html), which is an interface.
+以下のコードで、[`operate`]({environment:angularApiUrl}/classes/igxsummaryoperand.html#operate) メソッドはインターフェイスである IgxSummaryResult のリストを返します。
 
 ```typescript
 interface IgxSummaryResult {
@@ -111,7 +111,7 @@ interface IgxSummaryResult {
 ```
 
 > [!NOTE]
-> In order to calculate the summary row height properly, the grid needs the [`operate`]({environment:angularApiUrl}/classes/igxsummaryoperand.html#operate) method to always return an array of [`IgxSummaryResult`]({environment:angularApiUrl}/interfaces/igxsummaryresult.html) with the proper length even when the data is empty.
+> 集計行の高さを正しく計算するためにグリッドで [`operate`]({environment:angularApiUrl}/classes/igxsummaryoperand.html#operate) メソッドがデータが空の場合も常に [`IgxSummaryResult`]({environment:angularApiUrl}/interfaces/igxsummaryresult.html) 配列の正しい長さを返す必要があります。
 
 `UnitsInStock` 列にカスタム集計を追加します。[`summaries`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#summaries) プロパティを以下に作成するクラスに設定します。
 
@@ -138,23 +138,23 @@ export class GridComponent implements OnInit {
 }
 ```
 
-### Summaries with Group By
+### グループ集計
 
-When you have grouped by columns, the grid allows you to change the summary position and calculation mode using the [`summaryCalculationMode`]({environment:angularApiUrl}/classes/igxgridcomponent.html#summarycalculationmode) and [`summaryPosition`]({environment:angularApiUrl}/classes/igxgridcomponent.html#summaryposition) properties.
+グループ列がある場合、[`summaryCalculationMode`]({environment:angularApiUrl}/classes/igxgridcomponent.html#summarycalculationmode) や [`summaryPosition`]({environment:angularApiUrl}/classes/igxgridcomponent.html#summaryposition) でグリッド集計の配置や計算モードを変更できます。
 
-The available values of the [`summaryCalculationMode`]({environment:angularApiUrl}/classes/igxgridcomponent.html#summarycalculationmode) property are:
- - rootLevelOnly - Summaries are calculated only for the root level.
- - childLevelsOnly - Summaries are calculated only for the child levels.
- - rootAndChildLevels - Summaries are calculated for both root and child levels. This is the default value.
+以下は使用できる [`summaryCalculationMode`]({environment:angularApiUrl}/classes/igxgridcomponent.html#summarycalculationmode) プロパティの値です。
+ - rootLevelOnly - ルート レベルのみ集計が計算されます。
+ - childLevelsOnly - 子レベルのみ集計が計算されます。
+ - rootAndChildLevels - ルートと子レベルの両方の集計が計算されます。これがデフォルト値です。
 
-The available values of the [`summaryPosition`]({environment:angularApiUrl}/classes/igxgridcomponent.html#summaryposition) property are:
- - top - The summary row appears before the group by row children.
- - bottom - The summary row appears after the group by row children. This is the default value.
+以下は使用できる [`summaryCalculationMode`]({environment:angularApiUrl}/classes/igxgridcomponent.html#summarycalculationmode) プロパティの値です。
+ - top - 集計行はグループ列の子の前に表示されます。
+ - bottom - 集計行はグループ列の子の後に表示されます。これがデフォルト値です。
 
 > [!NOTE]
-> The [`summaryPosition`]({environment:angularApiUrl}/classes/igxgridcomponent.html#summaryposition) property applies only for the child level summaries. The root level summaries appear always fixed at the bottom of the grid.
+> [`summaryPosition`]({environment:angularApiUrl}/classes/igxgridcomponent.html#summaryposition) プロパティは子レベルの集計のみに適用します。ルートレベルの集計は、常にグリッドの下に固定されます。
 
-#### Demo
+#### デモ
 
 <div class="sample-container loading" style="height:720px">
     <iframe id="grid-groupby-summary-iframe" src='{environment:demosBaseUrl}/grid-groupby-summary' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -165,31 +165,31 @@ The available values of the [`summaryPosition`]({environment:angularApiUrl}/clas
 </div>
 <div class="divider--half"></div>
 
-#### Keyboard Navigation
+#### キーボード ナビゲーション
 
-The summary rows can be navigated with the following keyboard interactions:
+集計行は、以下のキーボード操作でナビゲーションできます。
 
-- <kbd>UP</kbd> - navigates one cell up
-- <kbd>DOWN</kbd> - navigates one cell down
-- <kbd>LEFT</kbd> - navigates one cell left
-- <kbd>RIGHT</kbd> - navigates one cell right
-- <kbd>CTRL</kbd> + <kbd>LEFT</kbd> or <kbd>HOME</kbd> - navigates to the leftmost cell
-- <kbd>CTRL</kbd> + <kbd>RIGHT</kbd> or <kbd>END</kbd> - navigates to the rightmost cell
-- <kbd>TAB</kbd> - sequentially navigates to the next cell on the row and if the last cell is reached navigates to the next row
-- <kbd>SHIFT</kbd> + <kbd>TAB</kbd> - sequentially navigates to the previous cell on the row and if the first cell is reached navigates to the previous row
+- <kbd>UP</kbd> - 1 つ上のセルへ移動。
+- <kbd>DOWN</kbd> - 1 つ下のセルへ移動。
+- <kbd>LEFT</kbd> - 1 つ左のセルへ移動。
+- <kbd>RIGHT</kbd> - 1 つ右のセルへ移動。
+- <kbd>CTRL</kbd> + <kbd>LEFT</kbd> or <kbd>HOME</kbd> - 左端のセルへ移動。
+- <kbd>CTRL</kbd> + <kbd>RIGHT</kbd> または <kbd>END</kbd> - 右端のセルへ移動。
+- <kbd>TAB</kbd> - 行の次のセルへ順番に移動して最後のセルの後は次の行へ移動。
+- <kbd>SHIFT</kbd> + <kbd>TAB</kbd> - 行で前のセルへ順番に移動して最初のセルの後は前の行へ移動。
 
-### API References
+### API リファレンス
 
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
-* [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
-* [IgxGridSummaries Styles]({environment:sassApiUrl}/index.html#function-igx-grid-summary-theme)
+* [IgxGridComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [IgxGridSummaries スタイル]({environment:sassApiUrl}/index.html#function-igx-grid-summary-theme)
 * [IgxSummaryOperand]({environment:angularApiUrl}/classes/igxsummaryoperand.html)
 * [IgxNumberSummaryOperand]({environment:angularApiUrl}/classes/igxnumbersummaryoperand.html)
 * [IgxDateSummaryOperand]({environment:angularApiUrl}/classes/igxdatesummaryoperand.html)
 * [IgxColumnGroupComponent]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html)
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 
-### 追加のリソース
+### その他のリソース
 <div class="divider--half"></div>
 
 * [グリッドの概要](grid.md)

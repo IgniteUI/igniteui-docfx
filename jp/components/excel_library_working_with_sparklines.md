@@ -9,13 +9,14 @@ _language: ja
 このトピックでは、データ トレンドを視覚的に表すために Infragistics Excel Library を使用して Excel® ワークシート (.xlsx) にスパークラインを追加する方法を表します。スパークラインでデータでの変更を簡単にビジュアル化できます。スパークラインはワークシート内のセル内にどこでも配置できます。 
 
 ### デモ
-<!-- <div class="sample-container" style="height: 550px">
+<div class="sample-container" style="height: 500px">
     <iframe id="excel-library-overview-sample-iframe" src='{environment:demosBaseUrl}/excel-library-working-with-sparklines' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="excel-library-overview-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
-    </button>
-</div>--> 
+    <!-- TODO uncomment when Stackblitz is ready for EXCEL
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="excel-library-working-with-sparklines-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示
+    </button> -->
+</div> 
 
 <div class="divider--half"></div>
 
