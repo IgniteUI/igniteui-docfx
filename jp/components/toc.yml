@@ -153,7 +153,7 @@
 - name: Pie Chart
   href: piechart.md
   new: true
-- name: Frameworks
+- name: フレームワーク
   header: true
 - name: Excel Library
   href: excel_library.md
@@ -328,12 +328,12 @@
   new: false
 - name: サービス
   header: true
-- name: CSV Exporter
+- name: CSV エクスポーター
   href: exporter_csv.md
   new: false
-- name: Excel Exporter
+- name: Excel エクスポーター
   href: exporter_excel.md
   new: false
-- name: Localization
+- name: ローカライゼーション
   href: localization.md
   new: true
