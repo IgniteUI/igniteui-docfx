@@ -187,4 +187,4 @@ If you want the buttons to be part of the keyboard navigation, then each on of t
 
 * [Grid Overview](grid.md)
 * [Grid Editing](grid_editing.md)
-* [Grid Transactions](grid_transactions.md)
+* [Grid Transactions](grid_batch_editing.md)
