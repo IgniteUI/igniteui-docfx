@@ -247,7 +247,7 @@ export class ExpansionPanelComponent {
     <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="expansion-sample-3-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-`IgxExpansionPanel` コントロールは、すべてのコンテンツの並べ替え[`IgxGrid`]({environment:angularApiUrl}/classes/igxcombocomponent.html)、[`IgxCombo`]({environment:angularApiUrl}/classes/igxcombocomponent.html)、チャート、更に他の展開パネルも描画できます。
+`IgxExpansionPanel` コントロールは、すべてのコンテンツの並べ替え[`IgxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html)、[`IgxCombo`]({environment:angularApiUrl}/classes/igxcombocomponent.html)、チャート、更に他の展開パネルも描画できます。
 
 ## アニメーションの使用
 ### 特定のアニメーションの使用
@@ -345,7 +345,7 @@ export class ExpansionPanelComponent {
 </div>
 
 ### 複数パネルの場合
-以下の例は、アプリのようなシナリオを実装します。ユーザーの詳細を表示または要求するような特定のワークフローに従います。このサンプルは、インビルト アニメーションのデフォルトの [`growVerIn`]({environment:sassApiUrl}/index.html#mixin-grow-ver-in) と [`growVerOut`]({environment:sassApiUrl}/index.html#mixin-grow-ver-out) アニメーションを使用するため、特定のアニメーション設定を渡したり、アニメーションをインポートしたりする必要はありません。複数の `igxExpansionPanel` は一度に展開して[`onInteraction`]({environment:angularApiUrl}/classes/igxexpansionpanelheadercomponent.html#oninteraction) イベントを処理することはできません。
+以下の例は、アプリのようなシナリオを実装します。ユーザーの詳細を表示または要求するような特定のワークフローに従います。このサンプルは、インビルト アニメーションのデフォルトの `growVerIn` と `growVerOut` アニメーションを使用するため、特定のアニメーション設定を渡したり、アニメーションをインポートしたりする必要はありません。複数の `igxExpansionPanel` は一度に展開して[`onInteraction`]({environment:angularApiUrl}/classes/igxexpansionpanelheadercomponent.html#oninteraction) イベントを処理することはできません。
 
 ```typescript
 // in expansion-panel.component.ts
