@@ -541,7 +541,7 @@ Finally, we need to apply the filtering pipe to our contacts data before we can 
 
 <div class="divider"></div>
 
-### API Summary
+### API References
 
 In this article we covered a lot of ground with the list component. We created a list of contact items. Used some additional Ignite UI for Angular components inside our list items, like avatars and icons. Created some custom item layout and styled it. Finally, we added list filtering. The list component has a few more APIs to explore, which are listed below.
 
