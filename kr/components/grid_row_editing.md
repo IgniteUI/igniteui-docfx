@@ -186,4 +186,4 @@ export class GridRowEditSampleComponent {
 
 * [그리드 개요](grid.md)
 * [그리드 편집](grid_editing.md)
-* [그리드 트랜잭션](grid_transactions.md)
+* [그리드 트랜잭션](grid_batch_editing.md)

@@ -188,4 +188,4 @@ export class GridRowEditSampleComponent {
 
 * [Grid の概要](grid.md)
 * [Grid 編集](grid_editing.md)
-* [Grid トランザクション](grid_transactions.md)
+* [Grid トランザクション](grid_batch_editing.md)
