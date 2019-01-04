@@ -35,6 +35,12 @@ import { IgxRippleModule } from 'igniteui-angular';
 })
 export class AppModule {}
 ```
+
+> [!WARNING]
+> The [`igxRipple`]({environment:angularApiUrl}/classes/igxrippledirective.html) uses the Web Animation API and runs natively on [browsers that support it.](http://caniuse.com/#feat=web-animation)
+The `web-animations.min.js` polyfill is [available](https://github.com/web-animations/web-animations-js)
+for other browsers.
+
 ### Usage
 #### Adding Ripple Effect
 
@@ -95,11 +101,6 @@ Use [`igxRippleDuration`]({environment:angularApiUrl}/classes/igxrippledirective
 <div class="sample-container loading" style="height: 148px">
     <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/ripple-sample-4" onload="onSampleIframeContentLoaded(this);">
 </div>
-
-The [`igxRipple`]({environment:angularApiUrl}/classes/igxrippledirective.html) uses the Web Animation API and runs natively on
-[browsers that support it.](http://caniuse.com/#feat=web-animation)
-The `web-animations.min.js` polyfill is [available](https://github.com/web-animations/web-animations-js)
-for other browsers.
 
 > [!NOTE]
 > Use a relatively positioned element for the ripple animation. You can also use [`igxRippleTarget`]({environment:angularApiUrl}/classes/igxrippledirective.html#rippletarget) to target a child element.
