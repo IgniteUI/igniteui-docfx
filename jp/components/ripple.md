@@ -38,6 +38,8 @@ import { IgxRippleModule } from 'igniteui-angular';
 })
 export class AppModule {}
 ```
+> [!WARNING]
+> [`igxRipple`]({environment:angularApiUrl}/classes/igxrippledirective.html) は Web Animation API を使用し、[サポートされるブラウザー](http://caniuse.com/#feat=web-animation)でネイティブに実行します。その他のブラウザーでは `web-animations.min.js` [ポリフィル](https://github.com/web-animations/web-animations-js)を使用します。
 
 ### 使用方法
 #### リップル エフェクトの追加
@@ -108,8 +110,6 @@ export class AppModule {}
 <div class="sample-container loading" style="height: 148px">
     <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/ripple-sample-4" onload="onSampleIframeContentLoaded(this);">
 </div>
-
-[`igxRipple`]({environment:angularApiUrl}/classes/igxrippledirective.html) は Web Animation API を使用し、[サポートされるブラウザー](http://caniuse.com/#feat=web-animation)でネイティブに実行します。その他のブラウザーで `web-animations.min.js` [ポリフィル](https://github.com/web-animations/web-animations-js)を使用します。
 
 > [!NOTE]
 > リップル アニメーションで相対的な位置を持つ要素を使用します。また、[`igxRippleTarget`]({environment:angularApiUrl}/classes/igxrippledirective.html#rippletarget) を使用して子要素を対象にすることもできます。
