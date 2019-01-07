@@ -1,14 +1,14 @@
 ---
 title: Theming Examples
 _description: Ignite UI for Angular uses SASS functions and mixins to give you the ability of styling easily your entire application or only specific parts of it with only a couple of steps.
-_keywords: Ignite UI for Angular, Angular Theming Component, Angular Theming, Ignite UI for Angular Components, Ignite for Agular Themes, Global Theme, Component Theme
+_keywords: Ignite UI for Angular, Angular Theming Component, Angular Theming, Ignite UI for Angular Components, Ignite for Agular Themes, Global Theme, Component Theme, Schemas
 ---
 
 ## Theming Examples
 The **Ignite UI for Angular Theming** provides you the ability to customize themes for your application by setting them globally, in order to beautify all non-custom-styled elements, or applying them severally to the components you want to differentiate.
 
 ### Demos
-<div class="sample-container" style="height: 650px">
+<div class="sample-container" style="height: 750px">
     <iframe id="theme-chooser-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/theme-chooser" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -35,7 +35,7 @@ There is a **default theme** that styles all the components in the **Ignite UI f
 
 The result from the above code snippet looks like this:
 
-<div class="sample-container" style="height: 650px">
+<div class="sample-container" style="height: 700px">
     <iframe id="default-theme-sample-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/default-theme-sample" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -167,6 +167,66 @@ That's it!
 
 We have now made a theme for each component in our app. The last step is just to apply it.
 
+#### Using Schemas
+
+Another fun approach for styling is the usage of schemas. 
+
+To get started, first you have import the default schemas([light-schema]({environment:sassApiUrl}/index.html#variable-light-schema) and [dark-schema]({environment:sassApiUrl}/index.html#variable-dark-schema)), which are going to be extended later:
+
+```scss
+...
+@import '~igniteui-angular/lib/core/styles/themes/schemas/_index';
+...
+```
+Every component has its own light and dark schema, so if you want to make a custom one, you have to extend one of the components default schemas:
+```scss
+    $_black-grid-schema: extend($_dark-grid,
+            (
+                content-background:  igx-color($black-theme-palette, "primary", 100),
+                header-background: igx-color($black-theme-palette, "secondary", 700),
+                cell-selected-background: igx-color($black-theme-palette, "primary", 500),
+                cell-selected-text-color: igx-color($black-theme-palette, "secondary", 500),
+                row-hover-background: igx-color($black-theme-palette, "secondary", 100),
+                header-border-color: igx-color($black-theme-palette, "primary", 600),
+                content-text-color: white,
+                row-hover-text-color: igx-color($black-theme-palette, "primary", 700),   
+            )
+    );
+
+    $_black-grid-paginator-schema: extend($_dark-grid-pagination,
+        (
+            text-color: igx-color($black-theme-palette, "secondary", 700),
+            background-color: igx-color($black-theme-palette, "primary", 700),
+            border-color: igx-color($black-theme-palette, "secondary", 500)
+        )
+);
+```
+Then set up the schema that you will use in your app, by extending one of the default schemas:
+
+```scss
+    $my-black-schema: extend( $dark-schema, (
+            ...
+            igx-grid: $_black-grid-schema,
+            igx-grid-paginator: $_black-grid-paginator-schema,
+            ...
+        )
+    );
+```
+Finally you have to set the `$schema` property of the components themes with the above defined **app schema**.
+```scss
+...
+$black-grid-theme: igx-grid-theme(
+  $palette: $black-theme-palette,
+  $schema: $my-black-schema
+);
+
+$black-grid-paginator-theme: igx-grid-paginator-theme(
+  $palette: $black-theme-palette,
+  $schema: $my-black-schema  
+);
+...
+```
+
 #### Applying Component Themes
 Bind the host element `class` with the **themes class**.
 
@@ -204,7 +264,7 @@ After that, in a new SCSS file nest the **themes class**, that includes the comp
 ```
 And the result is:
 
-<div class="sample-container" style="height: 650px">
+<div class="sample-container" style="height: 750px">
     <iframe id="dark-theme-sample-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/dark-theme-sample" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -310,7 +370,7 @@ export class ThemeChooserSampleComponent implements OnInit {
 
 Now we can easily change our defined themes with only a `click` event:
 
-<div class="sample-container" style="height: 650px">
+<div class="sample-container" style="height: 750px">
     <iframe id="theme-chooser-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/theme-chooser" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -326,12 +386,17 @@ Now we can easily change our defined themes with only a `click` event:
 * [IgxGrid Paginator Styles]({environment:sassApiUrl}/index.html#function-igx-grid-paginator-theme)
 * [IgxDialogComponent Styles]({environment:sassApiUrl}/index.html#function-igx-dialog-theme)
 * [IgxInputGroupComponent Styles]({environment:sassApiUrl}/index.html#function-igx-input-group-theme) 
+* [Light Components Schema]({environment:sassApiUrl}/index.html#variable-light-schema)
+* [Dark Components Schema]({environment:sassApiUrl}/index.html#variable-dark-schema)
+* [Dark Grid Schema]({environment:sassApiUrl}/index.html#variable-_dark-grid)
+* [Dark Grid Paginator Schema]({environment:sassApiUrl}/index.html#variable-_dark-grid-pagination)
 
 ### Additional Resources
 <div class="divider--half"></div>
 
 * [Global Theme](global-theme.md)
 * [Component Themes](component-themes.md)
+* [Schemas](schemas.md)
 * [Color Palette](palette.md)
 * [Grid](../grid.md)
 * [Paging](../grid_paging.md)
