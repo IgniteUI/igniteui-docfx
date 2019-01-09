@@ -66,7 +66,7 @@ import { NoOpScrollStrategy } from "./scroll/NoOpScrollStrategy";
 オーバーレイのスクロールの処理方法を決定するためにスクロール方法を [`overlaySettings`] ({environment:angularApiUrl}/interfaces/overlaysettings.html) オブジェクトによって渡すことができます。
 以下のデモは複数の [`scrollStrategies`] ({environment:angularApiUrl}/classes/iscrollstrategy.html) を紹介します。
 <div class="sample-container loading" style="height: 400px">
-    <iframe id="overlay-scroll-sample-1-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/overlay-scroll-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="overlay-scroll-sample-1-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/interactions/overlay-scroll-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="overlay-scroll-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
@@ -79,7 +79,7 @@ import { NoOpScrollStrategy } from "./scroll/NoOpScrollStrategy";
 [`modal`] ({environment:angularApiUrl}/interfaces/overlaysettings.html#modal) プロパティが `true` の場合、要素が DOM 前景にアタッチされ、背景の要素が非アクティブなため操作不能となり、すべてのイベントが中止されます。
 
 <div class="sample-container loading" style="height: 400px">
-    <iframe id="overlay-scroll-sample-2-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/overlay-scroll-sample-2" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="overlay-scroll-sample-2-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/interactions/overlay-scroll-sample-2" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="overlay-scroll-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
