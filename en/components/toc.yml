@@ -1,3 +1,8 @@
+- name: General
+  header: true
+- name: Getting started
+  href: getting_started.md
+  new: true
 - name: Grids & Lists
   href: grids_and_lists.md
   header: true

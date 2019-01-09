@@ -1,4 +1,9 @@
-﻿- name: グリッドとリスト
+﻿- name: General
+  header: true
+- name: Getting started
+  href: getting_started.md
+  new: true
+- name: グリッドとリスト
   href: grids_and_lists.md
   header: true
 - name: Data Grid
