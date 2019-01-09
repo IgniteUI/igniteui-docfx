@@ -13,7 +13,7 @@ _language: ja
 ### Snackbar デモ
 
 <div class="sample-container loading" style="height: 350px">
-    <iframe id="snackbar-sample-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/snackbar-sample-4" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="snackbar-sample-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/notifications/snackbar-sample-4" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="snackbar-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
@@ -57,7 +57,7 @@ Snackbar コンポーネントを表示するには、ボタン クリックで 
 サンプルが正しく構成された場合、ボタン クリック時にテキスト メッセージを表示する Snackbar が表示されます。
 
 <div class="sample-container loading" style="height: 170px">
-    <iframe id="snackbar-sample-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/snackbar-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="snackbar-sample-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/notifications/snackbar-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 
 #### 非表示/自動的に隠す
@@ -84,7 +84,7 @@ public close(element) {
 サンプルを正しく構成した後、ボタンをクリックするとメッセージおよびアクション ボタンを含む Snackbar が表示されます。自動的に隠す機能が無効で、[CLOSE] ボタンのクリックで Snackbar が非表示になります。
 
 <div class="sample-container loading" style="height: 170px">
-    <iframe id="snackbar-sample-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/snackbar-sample-2" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="snackbar-sample-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/notifications/snackbar-sample-2" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 
 #### 表示期間
@@ -103,7 +103,7 @@ public close(element) {
 サンプルが正しく構成された場合、Snackbar が自動ですばやく非表示になります。
 
 <div class="sample-container loading" style="height: 170px">
-    <iframe id="snackbar-sample-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/snackbar-sample-3" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="snackbar-sample-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/notifications/snackbar-sample-3" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 
 #### リストの Snackbar
@@ -185,7 +185,7 @@ public restore() {
 ```
 
 <div class="sample-container loading" style="height: 350px">
-    <iframe id="snackbar-sample-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/snackbar-sample-4" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="snackbar-sample-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/notifications/snackbar-sample-4" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 
 <div>

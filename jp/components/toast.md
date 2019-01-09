@@ -13,7 +13,7 @@ _language: ja
 ### Toast デモ
 
 <div class="sample-container loading" style="height: 500px">
-    <iframe id="toast-sample-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/toast-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="toast-sample-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/notifications/toast-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="toast-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
@@ -55,7 +55,7 @@ Toast コンポーネントを表示するには、ボタン クリックで [`s
 サンプルが正しく構成された場合、ボタン クリック時に通知を表示する Toast が表示されます。
 
 <div class="sample-container loading" style="height: 300px">
-    <iframe id="toast-sample-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/toast-sample-2" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="toast-sample-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/notifications/toast-sample-2" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 
 #### 非表示/自動的に隠す
@@ -73,7 +73,7 @@ Toast コンポーネントを表示するには、ボタン クリックで [`s
 サンプルが正しく構成されると、[SHOW] ボタンをクリックしたときに Toast が表示されます。自動的に隠す機能が無効で、[HIDE] ボタンのクリックで Toast が非表示になります。
 
 <div class="sample-container loading" style="height: 300px">
-    <iframe id="toast-sample-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/toast-sample-3" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="toast-sample-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/notifications/toast-sample-3" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 
 #### 表示期間
@@ -90,7 +90,7 @@ Toast コンポーネントを表示するには、ボタン クリックで [`s
 サンプルが正しく構成された場合、Toast が自動ですばやく非表示になります。
 
 <div class="sample-container loading" style="height: 300px">
-    <iframe id="toast-sample-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/toast-sample-4" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="toast-sample-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/notifications/toast-sample-4" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 
 ### 配置
@@ -122,7 +122,7 @@ public show(toast) {
 ```
 
 <div class="sample-container loading" style="height: 300px">
-    <iframe id="toast-sample-5-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/toast-sample-5" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="toast-sample-5-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/notifications/toast-sample-5" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 
 <div>
