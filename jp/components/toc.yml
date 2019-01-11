@@ -1,7 +1,7 @@
 ﻿- name: General
   header: true
 - name: Getting started
-  href: getting_started.md
+  href: general/getting_started.md
   new: true
 - name: グリッドとリスト
   href: grids_and_lists.md

@@ -14,7 +14,7 @@ To get started, you must install both NodeJS and Visual Studio Code on your mach
 
 <div>
     <div style="display:inline-block;width:45%;text-align:center;">
-      <img src="../images/general/nodejs.svg"
+      <img src="../../images/general/nodejs.svg"
            style="display:flex;max-height:100px;margin:auto auto 20px auto;" />
       <a target="_blank" href="https://nodejs.org/en/download/"
          style="color:white;background-color:#09f;text-decoration:none;font-weight:700;font-size:16px;padding: 5px 15px 5px 15px;">
@@ -22,7 +22,7 @@ To get started, you must install both NodeJS and Visual Studio Code on your mach
       </a>
     </div>
     <div style="display:inline-block;width:45%;text-align:center;">
-      <img src="../images/general/vs-code.svg"
+      <img src="../../images/general/vs-code.svg"
            style="display:flex;max-height:100px;margin:auto auto 20px auto;" />
       <a target="_blank" href="https://code.visualstudio.com/download"
          style="color:white;background-color:#09f;text-decoration:none;font-weight:700;font-size:16px;padding: 5px 15px 5px 15px;">
@@ -63,9 +63,9 @@ ig
 ```
 
 <div style="display:inline-block;">
-    <a style="background: url(../images/general/buildCLIapp.gif); display:flex; justify-content:center; min-width:540px; min-height:315px;"
+    <a style="background: url(../../images/general/buildCLIapp.gif); display:flex; justify-content:center; min-width:540px; min-height:315px;"
        href="https://youtu.be/QK_NsdtdA70" target="_blank">
-        <img src="../images/general/play.svg" style="vertical-align: middle;" />
+        <img src="../../images/general/play.svg" style="vertical-align: middle;" />
     </a>
     <p style="text-align:center;">Building Your First Ignite UI CLI App</p>
 </div>
@@ -276,7 +276,7 @@ ng serve
 
 The final result should look something like this:
 
-<img src="../images/general/igniteui-project.png" />
+<img src="../../images/general/igniteui-project.png" />
 
 ## API References
 
