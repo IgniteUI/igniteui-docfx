@@ -9,7 +9,7 @@ There are many areas of the category chart that can be customized, such as the m
 
 ### Demo
 <div class="sample-container" style="height: 500px">
-    <iframe id="category-chart-config-options-sample-iframe" src='{environment:demosBaseUrl}/category-chart-config-options-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="category-chart-config-options-sample-iframe" src='{environment:demosBaseUrl}/charts/category-chart-config-options-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="category-chart-config-options-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
