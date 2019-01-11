@@ -14,7 +14,7 @@ _language: ja
 ### デモ
 以下のサンプルは、コンボ API を使用したリモートでバインディングを行います。[valueKey]({environment:angularApiUrl}/classes/igxcombocomponent.html#valuekey) と [displayKey]({environment:angularApiUrl}/classes/igxcombocomponent.html#displaykey) を定義し、[onDataPreLoad]({environment:angularApiUrl}/classes/igxcombocomponent.html#ondatapreload) を使用して新しいリモートデータを読み込みます。
 <div class="sample-container loading" style="height: 400px;">
-    <iframe id="combo-remote-sample" frameborder="0" seamless width="700px" height="100%" src="{environment:demosBaseUrl}/combo-remote" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="combo-remote-sample" frameborder="0" seamless width="700px" height="100%" src="{environment:demosBaseUrl}/lists/combo-remote" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="combo-remote-sample" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
