@@ -36,7 +36,7 @@ import { IgxSnackbarModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 #### Show Snackbar
-In order to display the snackbar component, use its [`show()`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#show) method and call it on a button click. Use the [`message`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#message) input to set a text message.
+In order to display the snackbar component, use its [`show()`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#show) method and call it on a button click.
 
 ```html
 <!--sample.component.html-->
@@ -98,7 +98,7 @@ If the sample is configured properly, the snackbar auto hides faster.
 </div>
 
 #### Customize Snackbar
-We can also customize the content of the Snackbar to display more complex elements than the default message and button. If we want to show the snackbar while loading a file, for example, a loading animation could be added to its content.
+We can also customize the content of the Snackbar to display more complex elements than a message and a button. If we want to show the snackbar while loading a file, for example, a loading animation could be added to its content.
 
 ```html
 <!--sample.component.html-->
