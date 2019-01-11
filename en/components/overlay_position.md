@@ -96,7 +96,7 @@ import {AutoPositionStrategy, GlobalPositionStrategy, ConnectedPositioningStrate
 Changing the horizontal and/or vertical direction of the positioning settings determined where the content will align itself. Depending on the positioning strategy chosen, the content will either align relative to the target's container ([`AutoPositionStrategy`] ({environment:angularApiUrl}/classes/autopositionstrategy.html) and [`ConnectedPositioningStrategy`] ({environment:angularApiUrl}/classes/connectedpositioningstrategy.html)) or the body of the document ([`GlobalPositioningStrategy`] ({environment:angularApiUrl}/classes/globalpositionstrategy.html))
 
 <div class="sample-container loading" style="height: 400px">
-    <iframe id="overlay-position-sample-1-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/overlay-position-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="overlay-position-sample-1-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/interactions/overlay-position-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="overlay-position-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on Stackblitz</button>
@@ -108,7 +108,7 @@ Changing the horizontal and/or vertical start point of the positioning settings 
 In the demo below, the overlay element will position itself starting from the target element depending on the start point chosen. Directions are always [`HorizontalAlignment.Right`] ({environment:angularApiUrl}/enums/horizontalalignment.html#right) and [`VerticalAlignment.Bottom`] ({environment:angularApiUrl}/enums/verticalalignment.html#bottom):
 
 <div class="sample-container loading" style="height: 400px">
-    <iframe id="overlay-position-sample-2-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/overlay-position-sample-2" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="overlay-position-sample-2-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/interactions/overlay-position-sample-2" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="overlay-position-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on Stackblitz</button>
