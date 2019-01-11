@@ -43,7 +43,7 @@ In order to display the snackbar component, use its [`show()`]({environment:angu
 
 <button igxButton="raised" (click)="snackbar.show()">Delete Message</button>
 <div>
-    <igx-snackbar #snackbar message="Message deleted"></igx-snackbar>
+    <igx-snackbar #snackbar>Message deleted</igx-snackbar>
 </div>
 ```
 
@@ -61,7 +61,7 @@ Once opened, the snackbar disappears after a period specified by the [`displayTi
 
 <button igxButton="raised" (click)="snackbar.show()">Send message</button>
 <div>
-  <igx-snackbar #snackbar message="Message sent" [autoHide]="false" actionText="CLOSE" (onAction)="close(snackbar)"></igx-snackbar>
+  <igx-snackbar #snackbar [autoHide]="false" actionText="CLOSE" (onAction)="close(snackbar)">Message sent</igx-snackbar>
 </div>
 ```
 
@@ -87,7 +87,7 @@ Use [`displayTime`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.htm
 
 <button igxButton="raised" (click)="snackbar.show()">Send message</button>
 <div>
-  <igx-snackbar #snackbar message="Message sent" displayTime="1000"></igx-snackbar>
+  <igx-snackbar #snackbar displayTime="1000">Message sent</igx-snackbar>
 </div>
 ```
 
@@ -104,7 +104,7 @@ We can also customize the content of the Snackbar to display more complex elemen
 <!--sample.component.html-->
 <button igxButton="raised" (click)="snackbar.show()">Load file</button>
 <div>
-  <igx-snackbar #snackbar displayTime="5000" message="File loading">
+  <igx-snackbar #snackbar displayTime="5000">File loading
     <svg id="dots" height="20px">
         <g id="dots" fill="#FFFFFF">
             <circle id="dot1" cx="5" cy="18" r="2"></circle>
@@ -181,7 +181,7 @@ Let’s create a list with contacts that can be deleted. When an item is deleted
 
     </igx-list-item>
 
-    <igx-snackbar message="Contact deleted" actionText="Undo" (onAction)="restore()"></igx-snackbar>
+    <igx-snackbar actionText="Undo" (onAction)="restore()">Contact deleted</igx-snackbar>
 </igx-list>
 ```
 
