@@ -13,7 +13,7 @@ _language: ja
 ### Ripple デモ
 
 <div class="sample-container loading" style="height: 558px">
-    <iframe id="ripple-sample-1-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/ripple-sample-1" onload="onSampleIframeContentLoaded(this);">
+    <iframe id="ripple-sample-1-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/interactions/ripple-sample-1" onload="onSampleIframeContentLoaded(this);">
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="ripple-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
@@ -51,7 +51,7 @@ export class AppModule {}
 ```
 
 <div class="sample-container loading" style="height: 68px">
-    <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/ripple-sample-5" onload="onSampleIframeContentLoaded(this);">
+    <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/interactions/ripple-sample-5" onload="onSampleIframeContentLoaded(this);">
 </div>
 
 #### カスタム色
@@ -63,7 +63,7 @@ export class AppModule {}
 ```
 
 <div class="sample-container loading" style="height: 68px">
-    <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/ripple-sample-6" onload="onSampleIframeContentLoaded(this);">
+    <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/interactions/ripple-sample-6" onload="onSampleIframeContentLoaded(this);">
 </div>
 
 #### 中央揃えのリップル エフェクト
@@ -75,7 +75,7 @@ export class AppModule {}
 ```
 
 <div class="sample-container loading" style="height: 68px">
-    <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/ripple-sample-3" onload="onSampleIframeContentLoaded(this);">
+    <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/interactions/ripple-sample-3" onload="onSampleIframeContentLoaded(this);">
 </div>
 
 #### リップルの対象要素
@@ -94,7 +94,7 @@ export class AppModule {}
 親 div または子 div をクリックすると、リップル エフェクトは子 div 内のみに表示されます。子 div の要素を **relative** に設定する必要があります。
 
 <div class="sample-container loading" style="height: 168px">
-    <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/ripple-sample-2" onload="onSampleIframeContentLoaded(this);">
+    <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/interactions/ripple-sample-2" onload="onSampleIframeContentLoaded(this);">
 </div>
 
 #### リップルの期間
@@ -108,7 +108,7 @@ export class AppModule {}
 ```
 
 <div class="sample-container loading" style="height: 148px">
-    <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/ripple-sample-4" onload="onSampleIframeContentLoaded(this);">
+    <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/interactions/ripple-sample-4" onload="onSampleIframeContentLoaded(this);">
 </div>
 
 > [!NOTE]
