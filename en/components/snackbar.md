@@ -153,6 +153,7 @@ As a result, a message and three loading dots appear in the snackbar.
 
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="snackbar-sample-iframe-1" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+
 </div>
 
 #### Snackbar in list
