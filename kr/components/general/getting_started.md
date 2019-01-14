@@ -36,16 +36,6 @@ To get started, you must install both NodeJS and Visual Studio Code on your mach
 
 Now that we have everything we need, we can start creating/updating our application!
 
-### Add Ignite UI for Angular to an existing application
-
-What if we want to use Ignite UI for Angular in an existing Angular CLI project? We have you covered! All you have to do is execute the command below:
-
-```cmd
-ng add igniteui-angular
-```
-
-This will automatically install the [`igniteui-angular`](https://github.com/IgniteUI/igniteui-angular) package, along with all of its dependencies, font imports and styles references to the existing project. After the installation has finished, we can now execute Ignite UI CLI [`commands`](https://github.com/IgniteUI/igniteui-cli/wiki#available-commands) in our updated application in order to further enrich it by using Ignite UI for Angular components!
-
 ### Create an application by using the Ignite UI CLI
 
 Let's start by opening a preferred terminal and installing the [`Ignite UI CLI`](https://github.com/IgniteUI/igniteui-cli):
@@ -95,80 +85,21 @@ ig start
 
 After executing those simple commands, your new project will be built and served. It will automatically open in your default browser and you will be able to inspect your grid control and to make changes to the project.
 
-### Create an application using the Angular CLI
+### Add Ignite UI for Angular to an existing application
 
-If you do not want to take advantage of the fully-automated process of Ignite UI for Angular projects creation in the Ignite UI CLI, and you prefer creating your project manually, using the [`Angular CLI`](https://github.com/angular/angular-cli) – you can achieve that relatively simply.
-
-#### Install Angular CLI
-
-First we will have to install the Angular CLI itself:
+What if you want to use Ignite UI for Angular in an existing Angular CLI project (one that you have from before or you have just created by using the Angular CLI)? We have you covered! All you have to do is execute the command below:
 
 ```cmd
-npm install -g @angular/cli
+ng add igniteui-angular
 ```
 
-#### Create project
-
-Now we can create our new project:
-
-```cmd
-ng new my-igniteui-project
-cd my-igniteui-project
-```
-
-#### Install Ignite UI for Angular
-
-To install Ignite UI for Angular to our project, we simply run:
-
-```cmd
-npm install igniteui-angular
-```
-
-#### Import styles
-
-After the installation has finished, let's add a reference to the Ignite UI for Angular styles. One way to achieve this is by importing them in the **angular.json** file.
-
-```json
-"styles": [
-        "styles.css",
-        "./node_modules/igniteui-angular/styles/igniteui-angular.css"
-]
-```
-
-#### Install gesture support
-
-Next, we will have to install HammerJs, since Ignite UI for Angular uses it for gestures.
-
-```cmd
-npm install hammerjs
-npm install @types/hammerjs
-```
-
-After both installations have finished, let’s make sure that the project references the HammerJs library. One way to do this is to import it in the **angular.json** file as well:
-
-```json
-"scripts": ["./node_modules/hammerjs/hammer.min.js"], 
-```
-
-#### Import Material Icons
-
-Ignite UI for Angular styles use the Material Icons. In order to import them, an approach we can use is to include both them and some additional fonts in the **index.html** file:
-
-```html
-<!-- index.html -->
-
-<head>
-  ...
-  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-</head>
-```
+This will automatically install the [`igniteui-angular`](https://github.com/IgniteUI/igniteui-angular) package, along with all of its dependencies, font imports and styles references to the existing project. After the installation has finished, we can now execute Ignite UI CLI [`commands`](https://github.com/IgniteUI/igniteui-cli/wiki#available-commands) in our updated application in order to further enrich it by using Ignite UI for Angular components!
 
 ## Using Ignite UI for Angular
 
 We are now ready to start using Ignite UI for Angular components!
 
-### Adding components automatically
+### Add components automatically
 
 #### Import modules and use components
 In order to easily add new components to our application, we can take advantage of the Ignite UI CLI!
@@ -190,7 +121,7 @@ Now let’s run our application with the [`ig start`](https://github.com/IgniteU
 ig start
 ```
 
-### Adding components manually
+### Add components manually
 
 #### Import modules
 
@@ -280,7 +211,7 @@ The final result should look something like this:
 
 ## API References
 
-In this article we learned how to create our own Ignite UI for Angular application from scratch by taking advantage of either the fully-automated process of Ignite UI for Angular projects creation in the Ignite UI CLI or by doing it manually with the Angular CLI. We designed our own page by including the [`IgxGridComponent`]({environment:angularApiUrl}/classes/igxgridcomponent.html) to it, which itself offers some awesome features, which you can take a look at by referring to the navigation menu.
+In this article we learned how to create our own Ignite UI for Angular application from scratch by taking advantage of the fully-automated process of Ignite UI for Angular projects creation in the Ignite UI CLI. We also learned and how to add Ignite UI for Angular to an existing application by using the Angular CLI. We designed our own page by including the [`IgxGridComponent`]({environment:angularApiUrl}/classes/igxgridcomponent.html) to it, which itself offers some awesome features, which you can take a look at by referring to the navigation menu.
 
 * [`IgxGridComponent`]({environment:angularApiUrl}/classes/igxgridcomponent.html)
 * [`IgxGridComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
