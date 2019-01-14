@@ -13,7 +13,7 @@ The [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) expo
 ### Demo
 The sample below demonstrates remote binding using combo API - defining [valueKey]({environment:angularApiUrl}/classes/igxcombocomponent.html#valuekey) and [displayKey]({environment:angularApiUrl}/classes/igxcombocomponent.html#displaykey), and using [onDataPreLoad]({environment:angularApiUrl}/classes/igxcombocomponent.html#ondatapreload) to load new chunk of remote data:
 <div class="sample-container loading" style="height: 400px;">
-    <iframe id="combo-remote-sample" frameborder="0" seamless width="700px" height="100%" src="{environment:demosBaseUrl}/combo-remote" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="combo-remote-sample" frameborder="0" seamless width="700px" height="100%" src="{environment:demosBaseUrl}/lists/combo-remote" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="combo-remote-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
