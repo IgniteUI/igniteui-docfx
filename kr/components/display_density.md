@@ -12,7 +12,7 @@ Using the [DisplayDensityToken]({environment:angularApiUrl}/index.html#displayde
 
 ### Display Density Demo
 <div class="sample-container loading" style="height: 250px; width: 600px;">
-    <iframe id="density-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/density" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="density-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/theming/density" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="density-sample" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
