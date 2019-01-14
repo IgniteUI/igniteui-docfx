@@ -13,7 +13,7 @@ _language: ja
 ### Layout デモ
 
 <div class="sample-container loading" style="height: 2460px">
-    <iframe id="layout-sample-iframe" src='{environment:demosBaseUrl}/layout' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="layout-sample-iframe" src='{environment:demosBaseUrl}/layouts/layout' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="layout-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
