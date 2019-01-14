@@ -15,7 +15,7 @@ Combo コントロールは、データと値のバインディング、カス�
 以下のデモは、ランタイムで有効または無効にできるいくつかのコンボ機能を確認できます。
 
 <div class="sample-container loading" style="height: 440px;">
-    <iframe id="combo-features-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/combo-features" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="combo-features-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/lists/combo-features" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="combo-features-sample" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
