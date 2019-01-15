@@ -15,7 +15,7 @@ The [`TransactionService`]({environment:angularApiUrl}/classes/igxtransactionser
 The following sample demonstrates a scenario, where the grid has the Transaction as provider and has row editing enabled. The latter will ensure that transaction will be added after the entire row edit is confirmed.
 
 <div class="sample-container loading" style="height:650px">
-    <iframe id="grid-batch-editing-sample-iframe" src='{environment:demosBaseUrl}/grid-batch-editing' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="grid-batch-editing-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-batch-editing' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>

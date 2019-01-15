@@ -12,7 +12,7 @@ This can be achieved by setting the [`IgxColumnComponent`]({environment:angularA
 #### Demo
 
 <div class="sample-container loading" style="height:530px">
-    <iframe id="cell-styling-sample-iframe" src='{environment:demosBaseUrl}/grid-cell-styling' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="cell-styling-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-cell-styling' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>

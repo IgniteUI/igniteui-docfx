@@ -12,7 +12,7 @@ In Ignite UI for Angular, **Sorting** is enabled on a per-column level, meaning 
 Additionally there is a custom contextmenu added for sorting using **igx-grid**'s [`onContextMenu`]({environment:angularApiUrl}/classes/igxgridcomponent.html#oncontextmenu) Output.
 
 <div class="sample-container loading" style="height:550px">
-    <iframe id="grid-sample-iframe" src='{environment:demosBaseUrl}/grid-sorting-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="grid-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-sorting-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
