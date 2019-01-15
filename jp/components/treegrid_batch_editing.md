@@ -1,25 +1,25 @@
 ---
-title: Tree Grid ˆêŠ‡•ÒW - ƒlƒCƒeƒBƒu Angular | Ignite UI for Angular
-_description:  TransactionService ‚ÍAŠî‚É‚È‚éƒf[ƒ^‚É‰e‹¿‚¹‚¸‚É•ÏX‚ð’~Ï‚·‚é‚½‚ß‚ÉƒRƒ“ƒ|[ƒlƒ“ƒg‚ªŽg—p‚·‚é’“ü‰Â”\‚Èƒ~ƒhƒ‹ƒEƒFƒA‚Å‚·BƒvƒƒoƒCƒ_[‚ÍAƒf[ƒ^‚ÌƒAƒNƒZƒXA•ÏX‚Ì‘€ì (undo ‚Æ redo)A‚·‚×‚Ä”jŠü‚Ü‚½‚ÍŠm’è‚Ì‚½‚ß‚Ì API ‚ðŒöŠJ‚µ‚Ü‚·B
+title: Tree Grid ï¿½êŠ‡ï¿½ÒW - ï¿½lï¿½Cï¿½eï¿½Bï¿½u Angular | Ignite UI for Angular
+_description:  TransactionService ï¿½ÍAï¿½ï¿½É‚È‚ï¿½fï¿½[ï¿½^ï¿½É‰eï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É•ÏXï¿½ï¿½~ï¿½Ï‚ï¿½ï¿½é‚½ï¿½ß‚ÉƒRï¿½ï¿½ï¿½|ï¿½[ï¿½lï¿½ï¿½ï¿½gï¿½ï¿½ï¿½gï¿½pï¿½ï¿½ï¿½é’ï¿½ï¿½ï¿½Â”\ï¿½Èƒ~ï¿½hï¿½ï¿½ï¿½Eï¿½Fï¿½Aï¿½Å‚ï¿½ï¿½Bï¿½vï¿½ï¿½ï¿½oï¿½Cï¿½_ï¿½[ï¿½ÍAï¿½fï¿½[ï¿½^ï¿½ÌƒAï¿½Nï¿½Zï¿½Xï¿½Aï¿½ÏXï¿½Ì‘ï¿½ï¿½ï¿½ (undo ï¿½ï¿½ redo)ï¿½Aï¿½ï¿½ï¿½×‚Ä”jï¿½ï¿½ï¿½Ü‚ï¿½ï¿½ÍŠmï¿½ï¿½Ì‚ï¿½ï¿½ß‚ï¿½ API ï¿½ï¿½ï¿½ï¿½Jï¿½ï¿½ï¿½Ü‚ï¿½ï¿½B
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Tree Grid component, Angular Tree Grid control, Angular Tree Grid component, Angular High Performance Tree Grid, Tree Grid 
 ---
 
-## Tree Grid ˆêŠ‡•ÒW 
+## Tree Grid ï¿½êŠ‡ï¿½ÒW 
 
-[`TransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) ‚ÍAŠî‚É‚È‚éƒf[ƒ^‚É‰e‹¿‚¹‚¸‚É•ÏX‚ð’~Ï‚·‚é‚½‚ß‚ÉƒRƒ“ƒ|[ƒlƒ“ƒg‚ªŽg—p‚·‚é’“ü‰Â”\‚Èƒ~ƒhƒ‹ƒEƒFƒA‚Å‚·B ƒvƒƒoƒCƒ_[‚ÍAƒf[ƒ^‚ÌƒAƒNƒZƒXA•ÏX‚Ì‘€ì (undo ‚Æ redo)A‚·‚×‚Ä”jŠü‚Ü‚½‚ÍŠm’è‚Ì‚½‚ß‚Ì API ‚ðŒöŠJ‚µ‚Ü‚·B
+[`TransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) ï¿½ÍAï¿½ï¿½É‚È‚ï¿½fï¿½[ï¿½^ï¿½É‰eï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É•ÏXï¿½ï¿½~ï¿½Ï‚ï¿½ï¿½é‚½ï¿½ß‚ÉƒRï¿½ï¿½ï¿½|ï¿½[ï¿½lï¿½ï¿½ï¿½gï¿½ï¿½ï¿½gï¿½pï¿½ï¿½ï¿½é’ï¿½ï¿½ï¿½Â”\ï¿½Èƒ~ï¿½hï¿½ï¿½ï¿½Eï¿½Fï¿½Aï¿½Å‚ï¿½ï¿½B ï¿½vï¿½ï¿½ï¿½oï¿½Cï¿½_ï¿½[ï¿½ÍAï¿½fï¿½[ï¿½^ï¿½ÌƒAï¿½Nï¿½Zï¿½Xï¿½Aï¿½ÏXï¿½Ì‘ï¿½ï¿½ï¿½ (undo ï¿½ï¿½ redo)ï¿½Aï¿½ï¿½ï¿½×‚Ä”jï¿½ï¿½ï¿½Ü‚ï¿½ï¿½ÍŠmï¿½ï¿½Ì‚ï¿½ï¿½ß‚ï¿½ API ï¿½ï¿½ï¿½ï¿½Jï¿½ï¿½ï¿½Ü‚ï¿½ï¿½B
 
-[`TransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) ‚ÍƒZƒ‹•ÒW‚Æs•ÒW‚Ì—¼•û‚Æ“®ì‚µ‚Ü‚·Bs•ÒW‚ÌI—¹Žž‚Ésƒgƒ‰ƒ“ƒUƒNƒVƒ‡ƒ“‚ª’Ç‰Á‚³‚ê‚½ê‡AƒZƒ‹•ÒW‚Ìƒgƒ‰ƒ“ƒUƒNƒVƒ‡ƒ“‚ÍƒZƒ‹‚ª•ÒWƒ‚[ƒh‚ðI—¹‚µ‚½‚Æ‚«‚É’Ç‰Á‚³‚ê‚Ü‚·BƒOƒŠƒbƒh•ÒW‚ÌƒXƒe[ƒg‚ÍA‚·‚×‚Ä‚Ìs‚ð•ÒWÏ‚ÝA’Ç‰ÁÏ‚ÝAíœÏ‚ÝA‚»‚µ‚ÄÅŒã‚ÌƒXƒe[ƒg‚Å\¬‚³‚ê‚Ü‚·B‚±‚ê‚ç‚ÍŒã‚ÅƒCƒ“ƒXƒyƒNƒgA‘€ìAƒTƒuƒ~ƒbƒg‚ðˆê“x‚És‚¢‚Ü‚·BŒÂX‚ÌƒZƒ‹‚Ü‚½‚Ís‚Ì•ÏX‚ðW‚ß‚ÄA•ÒWƒ‚[ƒh‚ÉŠî‚Ã‚¢‚Äƒf[ƒ^s/ƒŒƒR[ƒh‚²‚Æ‚É’~Ï‚µ‚Ü‚·B
+[`TransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) ï¿½ÍƒZï¿½ï¿½ï¿½ÒWï¿½Æsï¿½ÒWï¿½Ì—ï¿½ï¿½ï¿½ï¿½Æ“ï¿½ï¿½ì‚µï¿½Ü‚ï¿½ï¿½Bï¿½sï¿½ÒWï¿½ÌIï¿½ï¿½ï¿½ï¿½ï¿½Ésï¿½gï¿½ï¿½ï¿½ï¿½ï¿½Uï¿½Nï¿½Vï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç‰ï¿½ï¿½ï¿½ï¿½ê‚½ï¿½ê‡ï¿½Aï¿½Zï¿½ï¿½ï¿½ÒWï¿½Ìƒgï¿½ï¿½ï¿½ï¿½ï¿½Uï¿½Nï¿½Vï¿½ï¿½ï¿½ï¿½ï¿½ÍƒZï¿½ï¿½ï¿½ï¿½ï¿½ÒWï¿½ï¿½ï¿½[ï¿½hï¿½ï¿½Iï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ‚ï¿½ï¿½É’Ç‰ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½Bï¿½Oï¿½ï¿½ï¿½bï¿½hï¿½ÒWï¿½ÌƒXï¿½eï¿½[ï¿½gï¿½ÍAï¿½ï¿½ï¿½×‚Ä‚Ìsï¿½ï¿½ÒWï¿½Ï‚ÝAï¿½Ç‰ï¿½ï¿½Ï‚ÝAï¿½íœï¿½Ï‚ÝAï¿½ï¿½ï¿½ï¿½ï¿½ÄÅŒï¿½ÌƒXï¿½eï¿½[ï¿½gï¿½Å\ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½Bï¿½ï¿½ï¿½ï¿½ï¿½ÍŒï¿½ÅƒCï¿½ï¿½ï¿½Xï¿½yï¿½Nï¿½gï¿½Aï¿½ï¿½ï¿½ï¿½Aï¿½Tï¿½uï¿½~ï¿½bï¿½gï¿½ï¿½ï¿½xï¿½Ésï¿½ï¿½ï¿½Ü‚ï¿½ï¿½Bï¿½ÂXï¿½ÌƒZï¿½ï¿½ï¿½Ü‚ï¿½ï¿½Ísï¿½Ì•ÏXï¿½ï¿½Wï¿½ß‚ÄAï¿½ÒWï¿½ï¿½ï¿½[ï¿½hï¿½ÉŠï¿½Ã‚ï¿½ï¿½Äƒfï¿½[ï¿½^ï¿½s/ï¿½ï¿½ï¿½Rï¿½[ï¿½hï¿½ï¿½ï¿½Æ‚É’~ï¿½Ï‚ï¿½ï¿½Ü‚ï¿½ï¿½B
 
-ˆêŠ‡•ÒW‚Å‚ÍA•¡”ƒŒƒR[ƒh‚Ì**’Ç‰Á/XV/íœ**‚µ‚Ä‚·‚×‚Ä‚Ì•ÏX‚ðˆê“x‚ÉƒRƒ~ƒbƒg‚·‚é‚±‚Æ‚ª‰Â”\‚Å‚·B•ÏX‚ªƒRƒ~ƒbƒg‚³‚ê‚é‘O‚ÍŠe•ÒWÏ‚Ý‚ÌƒŒƒR[ƒh‚ÌƒrƒWƒ…ƒAƒ‹•\Ž¦‚ª‚ ‚èAƒGƒ“ƒhƒ†[ƒU[‚ÍXVÏ‚Ý‚ÆíœÏ‚Ý‚Ì€–Ú‚ðŠm”F‚Å‚«‚Ü‚·BX‚ÉƒRƒ~ƒbƒg‘O‚Ì•ÏX‚ðŠÇ—‚·‚é**Šî‚É–ß‚·/‚â‚è’¼‚µ**‹@”\‚ðŒöŠJ‚µ‚Ü‚·B
+ï¿½êŠ‡ï¿½ÒWï¿½Å‚ÍAï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Rï¿½[ï¿½hï¿½ï¿½**ï¿½Ç‰ï¿½/ï¿½Xï¿½V/ï¿½íœ**ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½×‚Ä‚Ì•ÏXï¿½ï¿½ï¿½xï¿½ÉƒRï¿½~ï¿½bï¿½gï¿½ï¿½ï¿½é‚±ï¿½Æ‚ï¿½ï¿½Â”\ï¿½Å‚ï¿½ï¿½Bï¿½ÏXï¿½ï¿½ï¿½Rï¿½~ï¿½bï¿½gï¿½ï¿½ï¿½ï¿½ï¿½Oï¿½ÍŠeï¿½ÒWï¿½Ï‚Ý‚Ìƒï¿½ï¿½Rï¿½[ï¿½hï¿½Ìƒrï¿½Wï¿½ï¿½ï¿½Aï¿½ï¿½ï¿½\ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Aï¿½Gï¿½ï¿½ï¿½hï¿½ï¿½ï¿½[ï¿½Uï¿½[ï¿½ÍXï¿½Vï¿½Ï‚Ý‚Æíœï¿½Ï‚Ý‚Ìï¿½ï¿½Ú‚ï¿½mï¿½Fï¿½Å‚ï¿½ï¿½Ü‚ï¿½ï¿½Bï¿½Xï¿½ÉƒRï¿½~ï¿½bï¿½gï¿½Oï¿½Ì•ÏXï¿½ï¿½Ç—ï¿½ï¿½ï¿½ï¿½ï¿½**ï¿½ï¿½É–ß‚ï¿½/ï¿½ï¿½è’¼ï¿½ï¿½**ï¿½@ï¿½\ï¿½ï¿½ï¿½ï¿½Jï¿½ï¿½ï¿½Ü‚ï¿½ï¿½B
 
-ˆêŠ‡•ÒW‹@”\‚ðŽg—p‚·‚é‚É‚Í igniteui-angular ‚©‚ç [`TransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) ‚ðƒCƒ“ƒ|[ƒg‚·‚é•K—v‚ª‚ ‚è‚Ü‚·Bƒgƒ‰ƒ“ƒUƒNƒVƒ‡ƒ“‚ÍA“K—p‚³‚ê‚½•ÏX‚ðƒgƒ‰ƒ“ƒUƒNƒVƒ‡ƒ“ ƒƒO‚Æ‚µ‚Ä’~Ï‚µAŠe•ÏXÏ‚Ý‚Ìs‚Æ‚»‚Ìó‘Ô‚ð•ÛŽ‚·‚éƒvƒƒoƒCƒ_[‚Å‚·B
+ï¿½êŠ‡ï¿½ÒWï¿½@ï¿½\ï¿½ï¿½gï¿½pï¿½ï¿½ï¿½ï¿½É‚ï¿½ igniteui-angular ï¿½ï¿½ï¿½ï¿½ [`TransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) ï¿½ï¿½Cï¿½ï¿½ï¿½|ï¿½[ï¿½gï¿½ï¿½ï¿½ï¿½Kï¿½vï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½Bï¿½gï¿½ï¿½ï¿½ï¿½ï¿½Uï¿½Nï¿½Vï¿½ï¿½ï¿½ï¿½ï¿½ÍAï¿½Kï¿½pï¿½ï¿½ï¿½ê‚½ï¿½ÏXï¿½ï¿½gï¿½ï¿½ï¿½ï¿½ï¿½Uï¿½Nï¿½Vï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Oï¿½Æ‚ï¿½ï¿½Ä’~ï¿½Ï‚ï¿½ï¿½Aï¿½eï¿½ÏXï¿½Ï‚Ý‚Ìsï¿½Æ‚ï¿½ï¿½Ìï¿½Ô‚ï¿½ÛŽï¿½ï¿½ï¿½ï¿½ï¿½vï¿½ï¿½ï¿½oï¿½Cï¿½_ï¿½[ï¿½Å‚ï¿½ï¿½B
 
-### ƒfƒ‚
+### ï¿½fï¿½ï¿½
 
-ˆÈ‰º‚ÍAƒgƒ‰ƒ“ƒUƒNƒVƒ‡ƒ“‚ÅƒvƒƒoƒCƒ_[‚Æ‚µ‚ÄˆêŠ‡•ÒW‚ð—LŒø‚É‚µA‚Ü‚½s•ÒW‚ð—LŒø‚É‚·‚é•û–@‚Å‚·Bs•ÒW‘S‘Ì‚ðŠm’èŒã‚Éƒgƒ‰ƒ“ƒUƒNƒVƒ‡ƒ“‚ª’Ç‰Á‚³‚ê‚é‚æ‚¤‚É‚µ‚Ü‚·BƒTƒ“ƒvƒ‹‚Å‚Íƒtƒ‰ƒbƒg ƒf[ƒ^ƒ\[ƒX‚ðŽg—p‚µ‚Ü‚·B
+ï¿½È‰ï¿½ï¿½ÍAï¿½gï¿½ï¿½ï¿½ï¿½ï¿½Uï¿½Nï¿½Vï¿½ï¿½ï¿½ï¿½ï¿½Åƒvï¿½ï¿½ï¿½oï¿½Cï¿½_ï¿½[ï¿½Æ‚ï¿½ï¿½ÄˆêŠ‡ï¿½ÒWï¿½ï¿½Lï¿½ï¿½ï¿½É‚ï¿½ï¿½Aï¿½Ü‚ï¿½ï¿½sï¿½ÒWï¿½ï¿½Lï¿½ï¿½ï¿½É‚ï¿½ï¿½ï¿½ï¿½ï¿½@ï¿½Å‚ï¿½ï¿½Bï¿½sï¿½ÒWï¿½Sï¿½Ì‚ï¿½mï¿½ï¿½ï¿½Éƒgï¿½ï¿½ï¿½ï¿½ï¿½Uï¿½Nï¿½Vï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç‰ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½æ‚¤ï¿½É‚ï¿½ï¿½Ü‚ï¿½ï¿½Bï¿½Tï¿½ï¿½ï¿½vï¿½ï¿½ï¿½Å‚Íƒtï¿½ï¿½ï¿½bï¿½g ï¿½fï¿½[ï¿½^ï¿½\ï¿½[ï¿½Xï¿½ï¿½gï¿½pï¿½ï¿½ï¿½Ü‚ï¿½ï¿½B
 
 <div class="sample-container loading" style="height:890px">
-    <iframe id="tree-grid-batch-editing-sample-iframe" src='{environment:demosBaseUrl}/treegrid-batch-edit' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="tree-grid-batch-editing-sample-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-batch-edit' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
@@ -29,11 +29,11 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 
 > [!NOTE]
-> ƒgƒ‰ƒ“ƒUƒNƒVƒ‡ƒ“ ƒXƒe[ƒg‚ÍA‚·‚×‚Ä‚ÌXVA’Ç‰ÁAíœ‚³‚ê‚½sA‚»‚µ‚ÄÅŒã‚ÌƒXƒe[ƒg‚Å\¬‚³‚ê‚Ü‚·B
+> ï¿½gï¿½ï¿½ï¿½ï¿½ï¿½Uï¿½Nï¿½Vï¿½ï¿½ï¿½ï¿½ ï¿½Xï¿½eï¿½[ï¿½gï¿½ÍAï¿½ï¿½ï¿½×‚Ä‚ÌXï¿½Vï¿½Aï¿½Ç‰ï¿½ï¿½Aï¿½íœï¿½ï¿½ï¿½ê‚½ï¿½sï¿½Aï¿½ï¿½ï¿½ï¿½ï¿½ÄÅŒï¿½ÌƒXï¿½eï¿½[ï¿½gï¿½Å\ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½B
 
-## Žg—p•û–@
+## ï¿½gï¿½pï¿½ï¿½ï¿½@
 
-**app.module.ts** ƒtƒ@ƒCƒ‹‚Ì [`IgxTreeGridModule`]({environment:angularApiUrl}/classes/igxtreegridmodule.html) ‚ðƒCƒ“ƒ|[ƒg‚µ‚Ü‚·B
+**app.module.ts** ï¿½tï¿½@ï¿½Cï¿½ï¿½ï¿½ï¿½ [`IgxTreeGridModule`]({environment:angularApiUrl}/classes/igxtreegridmodule.html) ï¿½ï¿½Cï¿½ï¿½ï¿½|ï¿½[ï¿½gï¿½ï¿½ï¿½Ü‚ï¿½ï¿½B
 
 ```typescript
 // app.module.ts
@@ -49,7 +49,7 @@ import { IgxTreeGridModule } from 'igniteui-angular';
 })
 export class AppModule {}
 ```
-igxTransactionService ‚ðƒcƒŠ[ ƒOƒŠƒbƒh‚ÌƒvƒƒoƒCƒ_[‚Æ‚µ‚ÄA‚Ü‚½‚Í‚»‚ÌeƒRƒ“ƒ|[ƒlƒ“ƒg‚Æ‚µ‚Ä’è‹`‚·‚é•K—v‚ª‚ ‚è‚Ü‚·B
+igxTransactionService ï¿½ï¿½cï¿½ï¿½ï¿½[ ï¿½Oï¿½ï¿½ï¿½bï¿½hï¿½Ìƒvï¿½ï¿½ï¿½oï¿½Cï¿½_ï¿½[ï¿½Æ‚ï¿½ï¿½ÄAï¿½Ü‚ï¿½ï¿½Í‚ï¿½ï¿½Ìeï¿½Rï¿½ï¿½ï¿½|ï¿½[ï¿½lï¿½ï¿½ï¿½gï¿½Æ‚ï¿½ï¿½Ä’ï¿½`ï¿½ï¿½ï¿½ï¿½Kï¿½vï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½B
 
 ```typescript
 import { Component, ViewChild } from "@angular/core";
@@ -66,10 +66,10 @@ export class TreeGridBatchEditingSampleComponent {
 
 ```
 > [!NOTE]
-> `IgxGridTransaction` ‚ÍƒOƒŠƒbƒh‚Å’è‹`‚³‚ê‚½ƒCƒ“ƒWƒFƒNƒVƒ‡ƒ“ ƒg[ƒNƒ“‚Å‚·B
+> `IgxGridTransaction` ï¿½ÍƒOï¿½ï¿½ï¿½bï¿½hï¿½Å’ï¿½`ï¿½ï¿½ï¿½ê‚½ï¿½Cï¿½ï¿½ï¿½Wï¿½Fï¿½Nï¿½Vï¿½ï¿½ï¿½ï¿½ ï¿½gï¿½[ï¿½Nï¿½ï¿½ï¿½Å‚ï¿½ï¿½B
 
 
-ƒf[ƒ^ƒ\[ƒX‚ÉƒoƒCƒ“ƒh‚·‚éƒcƒŠ[ ƒOƒŠƒbƒh‚ð’è‹`‚ð‚µ‚Ä [`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditable) ‚ð true ‚ÉÝ’è‚µ‚ÄƒoƒCƒ“ƒh‚µ‚Ü‚·B
+ï¿½fï¿½[ï¿½^ï¿½\ï¿½[ï¿½Xï¿½Éƒoï¿½Cï¿½ï¿½ï¿½hï¿½ï¿½ï¿½ï¿½cï¿½ï¿½ï¿½[ ï¿½Oï¿½ï¿½ï¿½bï¿½hï¿½ï¿½ï¿½`ï¿½ï¿½ï¿½ [`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditable) ï¿½ï¿½ true ï¿½ÉÝ’è‚µï¿½Äƒoï¿½Cï¿½ï¿½ï¿½hï¿½ï¿½ï¿½Ü‚ï¿½ï¿½B
 
 ```html
     <igx-tree-grid #treeGrid [data]="data" primaryKey="EmployeID" foreignKey="PID" width ="100%" height ="500px" rowEditable=true rowSelectable=true columnHiding=true>
@@ -83,7 +83,7 @@ export class TreeGridBatchEditingSampleComponent {
     ...
 ```
 
-ˆÈ‰º‚ÌƒR[ƒh—á‚ÍA[`transactions`]({environment:angularApiUrl}/classes/igxtransactionservice.html#) API (undo, redo, commit) ‚ÌŽg—p•û–@‚ðŽ¦‚µ‚Ü‚·B
+ï¿½È‰ï¿½ï¿½ÌƒRï¿½[ï¿½hï¿½ï¿½ÍA[`transactions`]({environment:angularApiUrl}/classes/igxtransactionservice.html#) API (undo, redo, commit) ï¿½ÌŽgï¿½pï¿½ï¿½ï¿½@ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½B
 
 ```typescript
 
@@ -122,10 +122,10 @@ export class TreeGridBatchEditingSampleComponent {
 ```
 
 > [!NOTE]
-> [`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditable) ƒvƒƒpƒeƒB‚ð–³Œø‚É‚·‚é‚ÆƒOƒŠƒbƒh‚ð•ÏX‚µ‚ÄƒZƒ‹•ÏX‚Åƒgƒ‰ƒ“ƒUƒNƒVƒ‡ƒ“‚ðì¬‚µAUI ‚Ås•ÒWƒI[ƒo[ƒŒƒC‚ðŒöŠJ‚µ‚Ü‚¹‚ñB
+> [`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditable) ï¿½vï¿½ï¿½ï¿½pï¿½eï¿½Bï¿½ð–³Œï¿½ï¿½É‚ï¿½ï¿½ï¿½ÆƒOï¿½ï¿½ï¿½bï¿½hï¿½ï¿½ÏXï¿½ï¿½ï¿½ÄƒZï¿½ï¿½ï¿½ÏXï¿½Åƒgï¿½ï¿½ï¿½ï¿½ï¿½Uï¿½Nï¿½Vï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ì¬ï¿½ï¿½ï¿½AUI ï¿½Åsï¿½ÒWï¿½Iï¿½[ï¿½oï¿½[ï¿½ï¿½ï¿½Cï¿½ï¿½ï¿½ï¿½Jï¿½ï¿½ï¿½Ü‚ï¿½ï¿½ï¿½B
 
 
-### API ƒŠƒtƒ@ƒŒƒ“ƒX
+### API ï¿½ï¿½ï¿½tï¿½@ï¿½ï¿½ï¿½ï¿½ï¿½X
 
 * [`TransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) 
 * [`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditable)
@@ -134,17 +134,17 @@ export class TreeGridBatchEditingSampleComponent {
 * [`IgxGridComponent`]({environment:angularApiUrl}/classes/igxgridcomponent.html)
 
 
-### ‚»‚Ì‘¼‚ÌƒŠƒ\[ƒX
+### ï¿½ï¿½ï¿½Ì‘ï¿½ï¿½Ìƒï¿½ï¿½\ï¿½[ï¿½X
 
 <div class="divider--half"></div>
 
 * [Data Grid](grid.md)
 
 <div class="divider--half"></div>
-ƒRƒ~ƒ…ƒjƒeƒB‚ÉŽQ‰Á‚µ‚ÄV‚µ‚¢ƒAƒCƒfƒA‚ð‚²’ñˆÄ‚­‚¾‚³‚¢B
+ï¿½Rï¿½~ï¿½ï¿½ï¿½jï¿½eï¿½Bï¿½ÉŽQï¿½ï¿½ï¿½ï¿½ï¿½ÄVï¿½ï¿½ï¿½ï¿½ï¿½Aï¿½Cï¿½fï¿½Aï¿½ï¿½ï¿½Ä‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½B
 
-* [Ignite UI for Angular** ƒtƒH[ƒ‰ƒ€** (‰pŒê) ](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (‰pŒê) ](https://github.com/IgniteUI/igniteui-angular)
+* [Ignite UI for Angular** ï¿½tï¿½Hï¿½[ï¿½ï¿½ï¿½ï¿½** (ï¿½pï¿½ï¿½) ](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub** (ï¿½pï¿½ï¿½) ](https://github.com/IgniteUI/igniteui-angular)
 
 
 
