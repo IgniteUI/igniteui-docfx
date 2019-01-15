@@ -4,7 +4,7 @@ _description: Information on updating to a newer version of the Ignite UI for An
 _keywords: Ignite UI for Angular, update, npm package, version, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library
 ---
 
-## Ignite UI for Angular update guide
+# Ignite UI for Angular update guide
 
 From the table below you may select to what version of Ignite UI for Angular you want to update your project.
 
@@ -13,7 +13,7 @@ From the table below you may select to what version of Ignite UI for Angular you
 -   [6.1 to latest](#61)
 -   [6.0 to latest](#61)
 
-#### <a id="70"></a>Updating Ignite UI for Angular from versions 6.2/7.0 to latest
+## <a id="70"></a>Updating Ignite UI for Angular from versions 6.2/7.0 to latest
 
 The first step for update to the ‘Ignite UI for Angular’ latest version is to execute the ‘[**ng update**](https://angular.io/cli/update)’ command to see what updates are available.
 
@@ -38,7 +38,7 @@ Before version 7.1:
 Since version 7.1:
     *summaryResult: data.length ? (IgxDateSummaryOperand.latest(data)).toLocaleDateString() : null*
 
-#### <a id="61"></a>Updating Ignite UI for Angular from versions 6.0/6.1 to latest version
+## <a id="61"></a>Updating Ignite UI for Angular from versions 6.0/6.1 to latest version
 
 The first step for update to the ‘Ignite UI for Angular’ latest version is to execute the ‘[**ng update**](https://angular.io/cli/update)’ command to see what updates are available.
 
