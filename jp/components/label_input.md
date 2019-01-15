@@ -13,7 +13,7 @@ Ignite UI for Angular Input および Label ディレクティブを使用する
 
 ### Label および Input デモ
 <div class="sample-container" style="height:100px">
-<iframe id="input-group-sample-2-frame" src='{environment:demosBaseUrl}/input-group-sample-2' width="100%" height="100%" seamless frameBorder="0"></iframe>
+<iframe id="input-group-sample-2-frame" src='{environment:demosBaseUrl}/data-entries/input-group-sample-2' width="100%" height="100%" seamless frameBorder="0"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="input-group-sample-2-frame" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
@@ -55,7 +55,7 @@ HTML ラベルおよび入力は HTML フォームの基本要素です。[`igxL
 結果は以下です。
 
 <div class="sample-container" style="height:100px">
-<iframe id="input-group-sample-1-frame" src='{environment:demosBaseUrl}/input-group-sample-1' width="100%" height="100%" seamless frameBorder="0"></iframe>
+<iframe id="input-group-sample-1-frame" src='{environment:demosBaseUrl}/data-entries/input-group-sample-1' width="100%" height="100%" seamless frameBorder="0"></iframe>
 </div>
 <div class="divider--half"></div>
 
@@ -74,7 +74,7 @@ Ignite UI for Angular Input ディレクティブで検証が有効な場合に�
 以下のコード例およびデモは、検証に成功または失敗するかどうかに基づいてラベルの隣にあるアスタリスクを表示し、入力が緑または赤くなることを確認できます。
 
 <div class="sample-container" style="height:100px">
-<iframe id="input-group-sample-2-frame" src='{environment:demosBaseUrl}/input-group-sample-2' width="100%" height="100%" seamless frameBorder="0"></iframe>
+<iframe id="input-group-sample-2-frame" src='{environment:demosBaseUrl}/data-entries/input-group-sample-2' width="100%" height="100%" seamless frameBorder="0"></iframe>
 </div>
 <div class="divider--half"></div>
 
