@@ -11,7 +11,7 @@ _language: kr
 ### 데모
 
 <div class="sample-container" style="height: 500px">
-    <iframe id="financial-chart-tooltip-template-iframe" src='{environment:demosBaseUrl}/financial-chart-tooltip-template' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="financial-chart-tooltip-template-iframe" src='{environment:demosBaseUrl}/charts/financial-chart-tooltip-template' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="financial-chart-tooltip-template-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기

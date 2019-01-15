@@ -14,7 +14,7 @@ Ignite UI for Angular Excel Exporter サービスは、Microsoft® Excel® 形�
 ### Excel Exporter デモ
 
 <div class="sample-container loading" style="height: 100px;">
-    <iframe id="excel-export-sample-iframe" src="{environment:demosBaseUrl}/export-excel"
+    <iframe id="excel-export-sample-iframe" src="{environment:demosBaseUrl}/services/export-excel"
         width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -114,7 +114,7 @@ public exportButtonHandler() {
 ```
 
 <div class="sample-container loading" style="height: 300px;">
-    <iframe id="excel-export-sample-iframe2" src="{environment:demosBaseUrl}/export-excel-sample-1"
+    <iframe id="excel-export-sample-iframe2" src="{environment:demosBaseUrl}/services/export-excel-sample-1"
         width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
