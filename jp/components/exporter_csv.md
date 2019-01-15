@@ -15,7 +15,7 @@ Ignite UI CSV Exporter サービスは、文字分割値 (CSV) 形式で生デ�
 ### CSV Exporter デモ
 
 <div class="sample-container loading" style="height: 150px;">
-    <iframe id="csv-export-sample-iframe" src="{environment:demosBaseUrl}/export-csv"
+    <iframe id="csv-export-sample-iframe" src="{environment:demosBaseUrl}/services/export-csv"
         width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -113,7 +113,7 @@ public exportButtonHandler() {
 ```
 
 <div class="sample-container loading" style="height: 300px;">
-    <iframe id="csv-export-sample-iframe2" src="{environment:demosBaseUrl}/export-csv-sample-1"
+    <iframe id="csv-export-sample-iframe2" src="{environment:demosBaseUrl}/services/export-csv-sample-1"
         width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>

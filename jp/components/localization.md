@@ -36,7 +36,7 @@ for (const key of Object.keys(currentRS)) {
 changei18n(currentRS);
 ```
 <div>
-<button data-localize="stackblitz" class="stackblitz-btn" date-sample-src="{environment:demosBaseUrl}/localization-sample-2"
+<button data-localize="stackblitz" class="stackblitz-btn" date-sample-src="{environment:demosBaseUrl}/services/localization-sample-2"
     data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示
 </button>
 </div>
@@ -52,7 +52,7 @@ currentRS.igx_grid_filter_row_close = '[Localized]Close';
 ```
 
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" date-sample-src="{environment:demosBaseUrl}/localization-sample-3" 
+    <button data-localize="stackblitz" class="stackblitz-btn" date-sample-src="{environment:demosBaseUrl}/services/localization-sample-3" 
         data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示
     </button>
 </div>
