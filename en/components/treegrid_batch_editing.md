@@ -19,7 +19,7 @@ In order to be able to use the Batch Editing functionality, it is required to im
 The following sample illustrates how to enable and use Batch Editing via Transaction as provider and has row editing enabled. The latter will ensure that transaction will be added after the entire row edit is confirmed. The sample uses a flat data source.
 
 <div class="sample-container loading" style="height:890px">
-    <iframe id="tree-grid-batch-editing-sample-iframe" src='{environment:demosBaseUrl}/treegrid-batch-edit' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="tree-grid-batch-editing-sample-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-batch-edit' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>

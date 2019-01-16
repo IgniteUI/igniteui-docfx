@@ -15,7 +15,7 @@ The following sample illustrates how to enable row editing using the grid's [`ro
 ### Demo
 
 <div class="sample-container loading" style="height:590px">
-    <iframe id="tree-grid-row-editing-sample-iframe" src='{environment:demosBaseUrl}/treegrid-row-edit' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="tree-grid-row-editing-sample-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-row-edit' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
