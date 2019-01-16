@@ -3,7 +3,7 @@
 - name: Getting started
   href: general/getting_started.md
   new: false
-- name: Ignite UI CLI Overview
+- name: Ignite UI CLI
   href: general/cli-overview.md
   new: false
 - name: Grids & Lists

@@ -1,12 +1,12 @@
 ---
-title: Igniteui CLI Overview
+title: Ignite UI CLI
 _description: The Ignite UI CLI is a tool to initialize, develop, scaffold and maintain applications in a wide variety of frameworks.
 _keywords: Ignite UI for Angular, UI controls, CLI, Templates, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library
 ---
 
-## Ignite UI CLI Overview
+## Ignite UI CLI
 
-[`Ignite UI CLI`](https://github.com/IgniteUI/igniteui-cli) is a tool to initialize, develop, scaffold and maintain applications in a wide variety of frameworks. Ignite UI CLI offers project templates pre-configured for Ignite UI for Angular to get your next app off the ground in record time. A selection of views with Ignite UI for Angular components that can be further added to projects give a boost to productivity.
+[`Ignite UI CLI`](https://github.com/IgniteUI/igniteui-cli) is a command line tool to create and scaffold applications for a variety of frameworks. Ignite UI CLI offers project templates pre-configured for Ignite UI for Angular to get your next app off the ground in record time. A selection of views with Ignite UI for Angular components that can be further added to projects give a boost to productivity.
 
 ### Getting Started
 
@@ -14,10 +14,10 @@ Let's start by opening a preferred terminal and installing the [`Ignite UI CLI`]
 ```cmd
 npm install -g igniteui-cli 
 ```
-Once the  [`Ignite UI CLI`](https://github.com/IgniteUI/igniteui-cli) is installer there are two possible options/modes to start the tool - guided experience and using the commands.
+Once the  [`Ignite UI CLI`](https://github.com/IgniteUI/igniteui-cli) is installed, there are two possible options/modes to start the tool - guided experience and using specific commands.
 
 #### Using guided experience
-The shortest and easiest way to bootstrap an application is to use the Ignite UI CLI [`guided experience`](https://github.com/IgniteUI/igniteui-cli/wiki/step-by-step), which builds a configured app that the developer can get up and running with the ease of a single command. 
+The shortest and easiest way to bootstrap an application is to use the Ignite UI CLI guided [`step by step mode`](https://github.com/IgniteUI/igniteui-cli/wiki/step-by-step), which creates a configured app that can be up and running with the ease of a single command. 
 ```cmd
 ig
 ```
@@ -31,16 +31,17 @@ ig
 </div>
 
 #### Using commands
-We can always use the Ignite UI CLI [`commands`](https://github.com/IgniteUI/igniteui-cli/wiki#available-commands) for generating an Ignite UI project, adding a new component or building and serving the project by ourselves. For that purpose, we can use the following commands:
+We can always use the Ignite UI CLI [commands](#available-commands) for generating an Ignite UI project, adding a new component or building and serving the project by ourselves. For that purpose, we can use the following commands:
 ```cmd
 ig new <project name> --framework=angular --type=igx-ts 
 cd <project name>
 ig add <component/template> <component_name>
 ig start 
 ```
-- The full list of available **component/template** values is [`here`](https://github.com/IgniteUI/igniteui-cli/wiki/add#ignite-ui-for-angular-templates), you can run **ig list** command in your project directory to list all the available templates.
+- The full list of available **component/template** values is [here](https://github.com/IgniteUI/igniteui-cli/wiki/add#ignite-ui-for-angular-templates), you can run [`ig list`](#available-commands) command in your project directory to list all the available templates.
 - Both the **project name** and the **component_name** are custom values, provided by the developer.
 Here is an example of creating a new Ignite UI for Angular project with an igxGrid control:
+
 ```cmd
 ig new newAngularProject --framework=angular --type=igx-ts
 cd newAngularProject
@@ -50,12 +51,9 @@ ig start
 
 After executing those simple commands, your new project will be built and served. It will automatically open in your default browser and you will be able to inspect your grid control and to make changes to the project.
 
-### Command Overview
+### Available commands
 
-A full list of the available Ignite UI CLI commands as well as details on the usage (like passing flags, etc.), can be found at the [Ignite UI CLI](https://github.com/IgniteUI/igniteui-cli/wiki) repository.
-
-#### Available Commands
-
+A full list of the available Ignite UI CLI commands as well as details on the usage (like passing flags, etc.), can be found at the [Ignite UI CLI](https://github.com/IgniteUI/igniteui-cli/wiki) wiki.
 
 | Command | Alias | Description |
 | --- | --- | --- |
