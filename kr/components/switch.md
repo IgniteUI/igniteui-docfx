@@ -11,7 +11,7 @@ _language: kr
 
 ### Switch Demo
 <div class="sample-container" style="height:200px">
-    <iframe id="form-elements-sample-iframe" src='{environment:demosBaseUrl}/switch-sample-2' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="form-elements-sample-iframe" src='{environment:demosBaseUrl}/data-entries/switch-sample-2' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="form-elements-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
@@ -48,7 +48,7 @@ To get a simple switch, add the following code inside the component template:
 If all went well, you should see something like the following in the browser:
 
 <div class="sample-container" style="height: 150px">
-<iframe src='{environment:demosBaseUrl}/switch-sample-1' width="100%" height="100%" seamless frameBorder="0"></iframe>
+<iframe src='{environment:demosBaseUrl}/data-entries/switch-sample-1' width="100%" height="100%" seamless frameBorder="0"></iframe>
 </div>
 
 #### Switch properties
@@ -77,7 +77,7 @@ Enhance the component template by adding a switch for each setting and then bind
 The final result would be something like that:
 
 <div class="sample-container" style="height: 200px">
-    <iframe src='{environment:demosBaseUrl}/switch-sample-2' width="100%" height="100%" seamless frameBorder="0"></iframe>
+    <iframe src='{environment:demosBaseUrl}/data-entries/switch-sample-2' width="100%" height="100%" seamless frameBorder="0"></iframe>
 </div>
 
 ### API References

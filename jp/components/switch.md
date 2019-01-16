@@ -13,7 +13,7 @@ _language: ja
 ### Switch デモ
 
 <div class="sample-container loading" style="height:200px">
-    <iframe id="form-elements-sample-iframe" src='{environment:demosBaseUrl}/switch-sample-2' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="form-elements-sample-iframe" src='{environment:demosBaseUrl}/data-entries/switch-sample-2' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="form-elements-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
@@ -51,7 +51,7 @@ export class AppModule {}
 以下は結果です。
 
 <div class="sample-container" style="height: 150px">
-<iframe src='{environment:demosBaseUrl}/switch-sample-1' width="100%" height="100%" seamless frameBorder="0"></iframe>
+<iframe src='{environment:demosBaseUrl}/data-entries/switch-sample-1' width="100%" height="100%" seamless frameBorder="0"></iframe>
 </div>
 
 #### Switch プロパティ
@@ -82,7 +82,7 @@ export class AppModule {}
 結果は以下のようになります。
 
 <div class="sample-container" style="height: 200px">
-　　　　<iframe src='{environment:demosBaseUrl}/switch-sample-2' width="100%" height="100%" seamless frameBorder="0"></iframe>
+　　　　<iframe src='{environment:demosBaseUrl}/data-entries/switch-sample-2' width="100%" height="100%" seamless frameBorder="0"></iframe>
 </div>
 
 ### API リファレンス

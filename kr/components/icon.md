@@ -12,7 +12,7 @@ _language: kr
 ### Icon Demo
 
 <div class="sample-container" style="height: 384px">
-    <iframe id="icon-sample-1-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/icon-sample-1"  onload="onSampleIframeContentLoaded(this);">
+    <iframe id="icon-sample-1-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/data-display/icon-sample-1"  onload="onSampleIframeContentLoaded(this);">
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="icon-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">                StackBlitz 에서보기
@@ -73,7 +73,7 @@ You can set the icon's size through CSS. Create a custom CSS class and name it *
 }
 ```
 <div class="sample-container" style="height: 80px; width: 300px">
-    <iframe id="icon-sample2-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/icon-sample2"  onload="onSampleIframeContentLoaded(this);">
+    <iframe id="icon-sample2-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/data-display/icon-sample2"  onload="onSampleIframeContentLoaded(this);">
 </div>
 
 ### SVG Icons
@@ -104,7 +104,7 @@ public ngOnInit() {
 ```
 
 <div class="sample-container" style="height: 50px">
-    <iframe id="svg-icon-sample-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/svg-icon-sample"  onload="onSampleIframeContentLoaded(this);">
+    <iframe id="svg-icon-sample-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/data-display/svg-icon-sample"  onload="onSampleIframeContentLoaded(this);">
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="svg-icon-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">                StackBlitz 에서보기
