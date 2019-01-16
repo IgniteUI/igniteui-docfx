@@ -13,7 +13,7 @@ The Ignite UI for Angular Input and Label directives are used to create single-l
 
 ### Label & Input Demo
 <div class="sample-container" style="height:100px">
-<iframe id="input-group-sample-2-frame" src='{environment:demosBaseUrl}/input-group-sample-2' width="100%" height="100%" seamless frameBorder="0"></iframe>
+<iframe id="input-group-sample-2-frame" src='{environment:demosBaseUrl}/data-entries/input-group-sample-2' width="100%" height="100%" seamless frameBorder="0"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="input-group-sample-2-frame" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
@@ -55,7 +55,7 @@ HTML labels and inputs are the core building blocks of the HTML forms. Here is h
 
 And the result is:
 <div class="sample-container" style="height:100px">
-<iframe id="input-group-sample-1-frame" src='{environment:demosBaseUrl}/input-group-sample-1' width="100%" height="100%" seamless frameBorder="0"></iframe>
+<iframe id="input-group-sample-1-frame" src='{environment:demosBaseUrl}/data-entries/input-group-sample-1' width="100%" height="100%" seamless frameBorder="0"></iframe>
 </div>
 <div class="divider--half"></div>
 
@@ -74,7 +74,7 @@ Ignite UI for Angular Input directive provides a Material-based styling when you
 In the demonstration of the code below you can see we receive an asterisk next to the label and the input turns green/red when we write in it depending on whether the validation passes/fails.
 
 <div class="sample-container" style="height:100px">
-<iframe id="input-group-sample-2-frame" src='{environment:demosBaseUrl}/input-group-sample-2' width="100%" height="100%" seamless frameBorder="0"></iframe>
+<iframe id="input-group-sample-2-frame" src='{environment:demosBaseUrl}/data-entries/input-group-sample-2' width="100%" height="100%" seamless frameBorder="0"></iframe>
 </div>
 <div class="divider--half"></div>
 
