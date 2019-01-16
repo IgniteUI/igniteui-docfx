@@ -13,7 +13,7 @@ _language: ja
 #### デモ
 
 <div class="sample-container loading" style="height:605px">
-    <iframe id="grid-sample-groupby-iframe" src='{environment:demosBaseUrl}/grid-groupby' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="grid-sample-groupby-iframe" src='{environment:demosBaseUrl}/grid/grid-groupby' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>

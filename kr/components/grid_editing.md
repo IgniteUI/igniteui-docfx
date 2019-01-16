@@ -12,7 +12,7 @@ Ignite UI for Angular 그리드 컴포넌트는 열의 데이터 유형을 기�
 #### 데모
 
 <div class="sample-container loading" style="height:650px">
-    <iframe id="grid-editing-sample-iframe" src='{environment:demosBaseUrl}/grid-editing' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="grid-editing-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-editing' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
