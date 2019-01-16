@@ -1,22 +1,22 @@
 ---
-title: Tree Grid �ꊇ�ҏW - �l�C�e�B�u Angular | Ignite UI for Angular
-_description:  TransactionService �́A��ɂȂ�f�[�^�ɉe�������ɕύX��~�ς��邽�߂ɃR���|�[�l���g���g�p���钍���\�ȃ~�h���E�F�A�ł��B�v���o�C�_�[�́A�f�[�^�̃A�N�Z�X�A�ύX�̑��� (undo �� redo)�A���ׂĔj���܂��͊m��̂��߂� API ����J���܂��B
+title: Tree Grid 一括編集 - ネイティブ Angular | Ignite UI for Angular
+_description:  TransactionService は、基になるデータに影響せずに変更を蓄積するためにコンポーネントが使用する注入可能なミドルウェアです。プロバイダーは、データのアクセス、変更の操作 (undo と redo)、すべて破棄または確定のための API を公開します。
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Tree Grid component, Angular Tree Grid control, Angular Tree Grid component, Angular High Performance Tree Grid, Tree Grid 
 ---
 
-## Tree Grid �ꊇ�ҏW 
+## Tree Grid 一括編集 
 
-[`TransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) �́A��ɂȂ�f�[�^�ɉe�������ɕύX��~�ς��邽�߂ɃR���|�[�l���g���g�p���钍���\�ȃ~�h���E�F�A�ł��B �v���o�C�_�[�́A�f�[�^�̃A�N�Z�X�A�ύX�̑��� (undo �� redo)�A���ׂĔj���܂��͊m��̂��߂� API ����J���܂��B
+[`TransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) は、基になるデータに影響せずに変更を蓄積するためにコンポーネントが使用する注入可能なミドルウェアです。 プロバイダーは、データのアクセス、変更の操作 (undo と redo)、すべて破棄または確定のための API を公開します。
 
-[`TransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) �̓Z���ҏW�ƍs�ҏW�̗����Ɠ��삵�܂��B�s�ҏW�̏I�����ɍs�g�����U�N�V�������ǉ����ꂽ�ꍇ�A�Z���ҏW�̃g�����U�N�V�����̓Z�����ҏW���[�h��I�������Ƃ��ɒǉ�����܂��B�O���b�h�ҏW�̃X�e�[�g�́A���ׂĂ̍s��ҏW�ς݁A�ǉ��ς݁A�폜�ς݁A�����čŌ�̃X�e�[�g�ō\������܂��B�����͌�ŃC���X�y�N�g�A����A�T�u�~�b�g���x�ɍs���܂��B�X�̃Z���܂��͍s�̕ύX��W�߂āA�ҏW���[�h�Ɋ�Â��ăf�[�^�s/���R�[�h���Ƃɒ~�ς��܂��B
+[`TransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) はセル編集と行編集の両方と動作します。行編集の終了時に行トランザクションが追加された場合、セル編集のトランザクションはセルが編集モードを終了したときに追加されます。グリッド編集のステートは、すべての行を編集済み、追加済み、削除済み、そして最後のステートで構成されます。これらは後でインスペクト、操作、サブミットを一度に行います。個々のセルまたは行の変更を集めて、編集モードに基づいてデータ行/レコードごとに蓄積します。
 
-�ꊇ�ҏW�ł́A�������R�[�h��**�ǉ�/�X�V/�폜**���Ă��ׂĂ̕ύX���x�ɃR�~�b�g���邱�Ƃ��\�ł��B�ύX���R�~�b�g�����O�͊e�ҏW�ς݂̃��R�[�h�̃r�W���A���\��������A�G���h���[�U�[�͍X�V�ς݂ƍ폜�ς݂̍��ڂ�m�F�ł��܂��B�X�ɃR�~�b�g�O�̕ύX��Ǘ�����**��ɖ߂�/��蒼��**�@�\����J���܂��B
+一括編集では、複数レコードの**追加/更新/削除**してすべての変更を一度にコミットすることが可能です。変更がコミットされる前は各編集済みのレコードのビジュアル表示があり、エンドユーザーは更新済みと削除済みの項目を確認できます。更にコミット前の変更を管理する**基に戻す/やり直し**機能を公開します。
 
-�ꊇ�ҏW�@�\��g�p����ɂ� igniteui-angular ���� [`TransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) ��C���|�[�g����K�v������܂��B�g�����U�N�V�����́A�K�p���ꂽ�ύX��g�����U�N�V���� ���O�Ƃ��Ē~�ς��A�e�ύX�ς݂̍s�Ƃ��̏�Ԃ�ێ�����v���o�C�_�[�ł��B
+一括編集機能を使用するには igniteui-angular から [`TransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) をインポートする必要があります。トランザクションは、適用された変更をトランザクション ログとして蓄積し、各変更済みの行とその状態を保持するプロバイダーです。
 
-### �f��
+### デモ
 
-�ȉ��́A�g�����U�N�V�����Ńv���o�C�_�[�Ƃ��Ĉꊇ�ҏW��L���ɂ��A�܂��s�ҏW��L���ɂ�����@�ł��B�s�ҏW�S�̂�m���Ƀg�����U�N�V�������ǉ������悤�ɂ��܂��B�T���v���ł̓t���b�g �f�[�^�\�[�X��g�p���܂��B
+以下は、トランザクションでプロバイダーとして一括編集を有効にし、また行編集を有効にする方法です。行編集全体を確定後にトランザクションが追加されるようにします。サンプルではフラット データソースを使用します。
 
 <div class="sample-container loading" style="height:890px">
     <iframe id="tree-grid-batch-editing-sample-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-batch-edit' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -29,11 +29,11 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 
 > [!NOTE]
-> �g�����U�N�V���� �X�e�[�g�́A���ׂĂ̍X�V�A�ǉ��A�폜���ꂽ�s�A�����čŌ�̃X�e�[�g�ō\������܂��B
+> トランザクション ステートは、すべての更新、追加、削除された行、そして最後のステートで構成されます。
 
-## �g�p���@
+## 使用方法
 
-**app.module.ts** �t�@�C���� [`IgxTreeGridModule`]({environment:angularApiUrl}/classes/igxtreegridmodule.html) ��C���|�[�g���܂��B
+**app.module.ts** ファイルの [`IgxTreeGridModule`]({environment:angularApiUrl}/classes/igxtreegridmodule.html) をインポートします。
 
 ```typescript
 // app.module.ts
@@ -49,7 +49,7 @@ import { IgxTreeGridModule } from 'igniteui-angular';
 })
 export class AppModule {}
 ```
-igxTransactionService ��c���[ �O���b�h�̃v���o�C�_�[�Ƃ��āA�܂��͂��̐e�R���|�[�l���g�Ƃ��Ē�`����K�v������܂��B
+igxTransactionService をツリー グリッドのプロバイダーとして、またはその親コンポーネントとして定義する必要があります。
 
 ```typescript
 import { Component, ViewChild } from "@angular/core";
@@ -66,10 +66,10 @@ export class TreeGridBatchEditingSampleComponent {
 
 ```
 > [!NOTE]
-> `IgxGridTransaction` �̓O���b�h�Œ�`���ꂽ�C���W�F�N�V���� �g�[�N���ł��B
+> `IgxGridTransaction` はグリッドで定義されたインジェクション トークンです。
 
 
-�f�[�^�\�[�X�Ƀo�C���h����c���[ �O���b�h���`��� [`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditable) �� true �ɐݒ肵�ăo�C���h���܂��B
+データソースにバインドするツリー グリッドを定義をして [`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditable) を true に設定してバインドします。
 
 ```html
     <igx-tree-grid #treeGrid [data]="data" primaryKey="EmployeID" foreignKey="PID" width ="100%" height ="500px" rowEditable=true rowSelectable=true columnHiding=true>
@@ -83,7 +83,7 @@ export class TreeGridBatchEditingSampleComponent {
     ...
 ```
 
-�ȉ��̃R�[�h��́A[`transactions`]({environment:angularApiUrl}/classes/igxtransactionservice.html#) API (undo, redo, commit) �̎g�p���@����܂��B
+以下のコード例は、[`transactions`]({environment:angularApiUrl}/classes/igxtransactionservice.html#) API (undo, redo, commit) の使用方法を示します。
 
 ```typescript
 
@@ -122,10 +122,10 @@ export class TreeGridBatchEditingSampleComponent {
 ```
 
 > [!NOTE]
-> [`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditable) �v���p�e�B�𖳌��ɂ���ƃO���b�h��ύX���ăZ���ύX�Ńg�����U�N�V������쐬���AUI �ōs�ҏW�I�[�o�[���C����J���܂���B
+> [`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditable) プロパティを無効にするとグリッドを変更してセル変更でトランザクションを作成し、UI で行編集オーバーレイを公開しません。
 
 
-### API ���t�@�����X
+### API リファレンス
 
 * [`TransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) 
 * [`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditable)
@@ -134,17 +134,17 @@ export class TreeGridBatchEditingSampleComponent {
 * [`IgxGridComponent`]({environment:angularApiUrl}/classes/igxgridcomponent.html)
 
 
-### ���̑��̃��\�[�X
+### その他のリソース
 
 <div class="divider--half"></div>
 
 * [Data Grid](grid.md)
 
 <div class="divider--half"></div>
-�R�~���j�e�B�ɎQ�����ĐV�����A�C�f�A���Ă��������B
+コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular** �t�H�[����** (�p��) ](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (�p��) ](https://github.com/IgniteUI/igniteui-angular)
+* [Ignite UI for Angular** フォーラム** (英語) ](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub** (英語) ](https://github.com/IgniteUI/igniteui-angular)
 
 
 
