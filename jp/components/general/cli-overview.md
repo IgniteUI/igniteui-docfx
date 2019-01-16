@@ -1,3 +1,4 @@
+---
 title: Igniteui CLI Overview
 _description: The Ignite UI CLI is a tool to initialize, develop, scaffold and maintain applications in a wide variety of frameworks.
 _keywords: Ignite UI for Angular, UI controls, CLI, Templates, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library
@@ -5,7 +6,7 @@ _keywords: Ignite UI for Angular, UI controls, CLI, Templates, Angular widgets, 
 
 ## Ignite UI CLI Overview
 
-[`Ignite UI CLI`](https://github.com/IgniteUI/igniteui-cli) a tool to initialize, develop, scaffold and maintain applications in a wide variety of frameworks. Using the Ignite UI CLI, you can also get advantage of the Ignite UI for Angular controls and you can implement them in your. 
+[`Ignite UI CLI`](https://github.com/IgniteUI/igniteui-cli) is a tool to initialize, develop, scaffold and maintain applications in a wide variety of frameworks. Ignite UI CLI offers project templates pre-configured for Ignite UI for Angular to get your next app off the ground in record time. A selection of views with Ignite UI for Angular components that can be further added to projects give a boost to productivity.
 
 ### Getting Started
 
@@ -51,9 +52,10 @@ After executing those simple commands, your new project will be built and served
 
 ### Command Overview
 
-A full list of the available Ignite UI CLI commands as well as details on the usage (like passing flags, etc.), can be found at the Ignite UI CLI repository’s wiki page at https://github.com/IgniteUI/igniteui-cli/wiki.
+A full list of the available Ignite UI CLI commands as well as details on the usage (like passing flags, etc.), can be found at the [Ignite UI CLI](https://github.com/IgniteUI/igniteui-cli/wiki) repository.
 
 #### Available Commands
+
 
 | Command | Alias | Description |
 | --- | --- | --- |

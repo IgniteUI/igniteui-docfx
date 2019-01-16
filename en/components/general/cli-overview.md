@@ -6,7 +6,7 @@ _keywords: Ignite UI for Angular, UI controls, CLI, Templates, Angular widgets, 
 
 ## Ignite UI CLI Overview
 
-[`Ignite UI CLI`](https://github.com/IgniteUI/igniteui-cli) a tool to initialize, develop, scaffold and maintain applications in a wide variety of frameworks. Using the Ignite UI CLI, you can also get advantage of the Ignite UI for Angular controls and you can implement them in your. 
+[`Ignite UI CLI`](https://github.com/IgniteUI/igniteui-cli) is a tool to initialize, develop, scaffold and maintain applications in a wide variety of frameworks. Ignite UI CLI offers project templates pre-configured for Ignite UI for Angular to get your next app off the ground in record time. A selection of views with Ignite UI for Angular components that can be further added to projects give a boost to productivity.
 
 ### Getting Started
 

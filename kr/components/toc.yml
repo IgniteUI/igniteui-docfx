@@ -2,10 +2,10 @@
   header: true
 - name: Getting started
   href: general/getting_started.md
-  new: true
+  new: false
 - name: Ignite UI CLI Overview
   href: general/cli-overview.md
-  new: true
+  new: false
 - name: Grids & Lists
   href: grids_and_lists.md
   header: true
