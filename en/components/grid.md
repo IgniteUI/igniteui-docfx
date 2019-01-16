@@ -64,6 +64,29 @@ The **id** property is a string value and is the unique identifier of the grid w
 
 The [`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#autogenerate) property tells the **igx-grid** to auto generate the grid's [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) based on the data source fields. It will also try to deduce the appropriate data type for the column if possible. Otherwise, the developer needs to explicitly define the columns and the mapping to the data source fields.
 
+
+> [!NOTE]
+> The [**IgxGridComponent**]({environment:angularApiUrl}/classes/igxgridcomponent.html) uses **css grid layout**, which is **not supported in IE without prefixing**, consequently it will not render properly!
+
+> Ignite UI for Angular provides you with prefixed styles, that makes the IgxGrid compatible with all browsers!
+
+**Configuration for Internet Explorer**
+
+ If you work with **Internet Explorer** there is one configuration that you have to make before start using the **igx-grid**.
+
+ In **angular.json** go to the **styles** property and add **igniteui-angular.css** file, which contains all the necessary prefixed styles:
+
+ ```json
+ //angular.json
+ ...
+    "styles": [
+        "src/styles.scss",
+        //Set igniteui-angular.css as a global style for your app  
+        "node_modules/igniteui-angular/styles/igniteui-angular.css"
+    ],
+ ...
+ ``` 
+
 ### Columns configuration
 
 [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) is used to define the grid's [`columns`]({environment:angularApiUrl}/classes/igxgridcomponent.html#columns) collection and to enable features per column like **sorting** and **paging**. Cell, header, and footer templates are also available.
