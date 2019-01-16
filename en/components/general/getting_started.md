@@ -109,7 +109,8 @@ ig add
 ```
 
 > [!NOTE]
-> Please note that the [`ig add`](https://github.com/IgniteUI/igniteui-cli/wiki/add) command is supported only on an existing project created with Ignite UI CLI.
+> Please note that the [`ig add`](https://github.com/IgniteUI/igniteui-cli/wiki/add) command can be used if the application was created by using the Ignite UI CLI or
+> if it was created by using the Angular CLI with Ignite UI for Angular added to it by using the **ng add igniteui-angular** command.
 
 After going through the options of the menu and choosing which component we want to add to our application, we will notice that we have a brand new component in our project, which we can use anywhere on our page!
 
@@ -199,7 +200,15 @@ export class AppComponent {
 
 #### Run application
 
-Finally, we can run our new application by using the command below:
+Finally, we can run our new application by using one of the following commands:
+
+- If the application was created by using the Ignite UI CLI:
+
+```cmd
+ig start
+```
+
+- If the application was created by using the Angular CLI:
 
 ```cmd
 ng serve
