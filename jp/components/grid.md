@@ -227,7 +227,7 @@ const OBJECT_ARRAY = [{
 >[!WARNING]
 >**The key values must not contain neither arrays or other objects!**.
 
->If you use [autoGenerate]({environment:angularApiUrl}/classes/igxgridcomponent.html#autogenerate) columns **the data keys must be identical!**
+>If you use [autoGenerate]({environment:angularApiUrl}/classes/igxgridcomponent.html#autogenerate) columns **the data keys must be identical.**
 
 ### データ バインディング
 
