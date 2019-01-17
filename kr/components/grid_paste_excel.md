@@ -23,7 +23,7 @@ Ignite UI for Angular [`IgxGrid`]({environment:angularApiUrl}/classes/igxgridcom
 붙여넣기 후 새로운 데이터는 기울임꼴로 됩니다.
 
 <div class="sample-container loading" style="height: 570px;">
-    <iframe id="excel-paste-sample-iframe" src="{environment:demosBaseUrl}/grid-paste"
+    <iframe id="excel-paste-sample-iframe" src="{environment:demosBaseUrl}/grid/grid-paste"
         width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>

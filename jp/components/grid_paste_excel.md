@@ -22,7 +22,7 @@ Ignite UI for Angular [`IgxGrid`]({environment:angularApiUrl}/classes/igxgridcom
 貼り付け後の新しいデータはイタリックになります。
 
 <div class="sample-container loading" style="height: 570px;">
-    <iframe id="excel-paste-sample-iframe" src="{environment:demosBaseUrl}/grid-paste"
+    <iframe id="excel-paste-sample-iframe" src="{environment:demosBaseUrl}/grid/grid-paste"
         width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
