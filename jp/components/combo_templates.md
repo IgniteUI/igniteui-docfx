@@ -14,7 +14,7 @@ _language: ja
 ### デモ
 
 <div class="sample-container loading" style="height: 450px;">
-    <iframe id="combo-templates-sample" frameborder="0" seamless width="700px" height="100%" src="{environment:demosBaseUrl}/combo-template" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="combo-templates-sample" frameborder="0" seamless width="700px" height="100%" src="{environment:demosBaseUrl}/lists/combo-template" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="combo-templates-sample" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>

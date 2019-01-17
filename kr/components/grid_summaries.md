@@ -12,7 +12,7 @@ Ignite UI for Angular 그리드 컴포넌트에는 열 단위 수준에서 작�
 #### 데모
 
 <div class="sample-container loading" style="height:650px">
-    <iframe id="grid-summary-sample-iframe" src='{environment:demosBaseUrl}/grid-summary' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="grid-summary-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-summary' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
@@ -156,7 +156,7 @@ The available values of the [`summaryPosition`]({environment:angularApiUrl}/clas
 #### Demo
 
 <div class="sample-container loading" style="height:720px">
-    <iframe id="grid-groupby-summary-iframe" src='{environment:demosBaseUrl}/grid-groupby-summary' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="grid-groupby-summary-iframe" src='{environment:demosBaseUrl}/grid/grid-groupby-summary' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>

@@ -12,7 +12,7 @@ Ignite UI for Angular のグリッドは、**UI** 操作のコンテナーとな
 #### デモ
 
 <div class="sample-container loading" style="height:420px">
-    <iframe id="grid-toolbar-sample-1-iframe" src='{environment:demosBaseUrl}/grid-toolbar-sample-1' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="grid-toolbar-sample-1-iframe" src='{environment:demosBaseUrl}/grid/grid-toolbar-sample-1' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
@@ -39,7 +39,7 @@ IgxGrid のツールバーは、列の非表示、列のピン固定、データ
 各ボタン テキストを設定するプロパティについては、以下の API セクションを確認してください。
 
 <div class="sample-container loading" style="height:420px">
-    <iframe id="grid-toolbar-sample-2-iframe" src='{environment:demosBaseUrl}/grid-toolbar-sample-2' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="grid-toolbar-sample-2-iframe" src='{environment:demosBaseUrl}/grid/grid-toolbar-sample-2' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
@@ -122,7 +122,7 @@ public toolbarExportingHandler(args) {
 以下のサンプルは、エクスポート ファイルをカスタマイズする方法を示します。
 
 <div class="sample-container loading" style="height:420px">
-    <iframe id="grid-toolbar-sample-3-iframe" src='{environment:demosBaseUrl}/grid-toolbar-sample-3' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="grid-toolbar-sample-3-iframe" src='{environment:demosBaseUrl}/grid/grid-toolbar-sample-3' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
@@ -157,7 +157,7 @@ public toolbarExportingHandler(args) {
 以下のサンプルは、列ヘッダーをクリックして並べ替えセットをクリアするためのボタンをツールバーに追加する方法です。
 
 <div class="sample-container loading" style="height:420px">
-    <iframe id="grid-toolbar-sample-4-iframe" src='{environment:demosBaseUrl}/grid-toolbar-sample-4' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="grid-toolbar-sample-4-iframe" src='{environment:demosBaseUrl}/grid/grid-toolbar-sample-4' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>

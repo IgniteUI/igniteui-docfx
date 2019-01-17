@@ -12,7 +12,7 @@ Ignite UI for Angular Grid コンポーネントは、グリッドにバイン�
 #### デモ
 
 <div class="sample-container loading" style="height:600px">
-    <iframe id="grid-sample-iframe" src='{environment:demosBaseUrl}/grid-filtering-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="grid-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-filtering-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
@@ -240,7 +240,7 @@ export class BooleanFilteringOperand extends IgxBooleanFilteringOperand {
 ```
 
 <div class="sample-container loading" style="height:600px">
-    <iframe id="grid-filtering-iframe" src='{environment:demosBaseUrl}/grid-filter-conditions' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="grid-filtering-iframe" src='{environment:demosBaseUrl}/grid/grid-filter-conditions' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>

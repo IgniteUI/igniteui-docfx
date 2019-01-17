@@ -13,7 +13,7 @@ Ignite UI for Angular에서 **정렬**은 열 단위 수준에서 사용할 수 
 또한, **igx-grid**의 [`onContextMenu`]({environment:angularApiUrl}/classes/igxgridcomponent.html#oncontextmenu) 출력을 사용하여 정렬하기 위해 사용자 컨텍스트 메뉴가 추가되어 있습니다.
 
 <div class="sample-container loading" style="height:550px">
-    <iframe id="grid-sample-iframe" src='{environment:demosBaseUrl}/grid-sorting-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="grid-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-sorting-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>

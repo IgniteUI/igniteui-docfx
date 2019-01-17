@@ -13,7 +13,7 @@ Ignite UI for Angular では、列レベルでの**並べ替え**が可能です
 以下のデモは、**igx-grid** の [`onContextMenu`]({environment:angularApiUrl}/classes/igxgridcomponent.html#oncontextmenu) 出力を使用してカスタム コンテキスト メニューを追加しています。
 
 <div class="sample-container loading" style="height:550px">
-    <iframe id="grid-sample-iframe" src='{environment:demosBaseUrl}/grid-sorting-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="grid-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-sorting-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>

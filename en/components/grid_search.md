@@ -11,7 +11,7 @@ While browsers natively provide search functionality, most of the time the grid 
 #### Demo
 
 <div class="sample-container loading" style="height:600px">
-    <iframe id="grid-search-sample-iframe" src='{environment:demosBaseUrl}/grid-search-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="grid-search-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-search-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>

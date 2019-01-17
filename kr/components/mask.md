@@ -11,7 +11,7 @@ By applying [`igxMask`]({environment:angularApiUrl}/classes/igxmaskdirective.htm
 
 ### Mask Demo
 <div class="sample-container loading" style="height: 330px">
-    <iframe id="mask-sample-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/mask-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="mask-sample-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/data-display/mask-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="mask-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
@@ -74,7 +74,7 @@ In the following example, we apply a phone number with an extension mask to an i
 If the sample is configured properly, an input with the applied formatting mask appears.
 
 <div class="sample-container loading" style="height: 100px">
-    <iframe id="mask-sample2-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/mask-sample-2" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="mask-sample2-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/data-display/mask-sample-2" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 
 <div>
@@ -117,7 +117,7 @@ public clear() {
 ```
 
 <div class="sample-container loading" style="height: 160px">
-    <iframe id="mask-sample3-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/mask-sample-3" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="mask-sample3-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/data-display/mask-sample-3" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 
 <div>
@@ -261,7 +261,7 @@ inputFormat = new InputFormatPipe();
 As a result, a '%' sign should be appended to the value on blur (i.e. when the user clicks outside the input) and will be removed once the input gets focus!
 
 <div class="sample-container loading" style="height: 100px">
-    <iframe id="mask-sample4-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/mask-sample-4" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="mask-sample4-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/data-display/mask-sample-4" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 
 <div>
@@ -284,7 +284,7 @@ value = null;
 ```
 
 <div class="sample-container loading" style="height: 100px">
-    <iframe id="mask-sample5-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/mask-sample-5" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="mask-sample5-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/data-display/mask-sample-5" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 
 <div>

@@ -11,7 +11,7 @@ In Ignite UI for Angular, [`igxForOf`]({environment:angularApiUrl}/classes/igxfo
 ### Demo
 
 <div class="sample-container loading" style="height:650px">
-    <iframe id="igx-for-sample-iframe" src='{environment:demosBaseUrl}/igx-for-sample-1' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="igx-for-sample-iframe" src='{environment:demosBaseUrl}/data-display/igx-for-sample-1' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>

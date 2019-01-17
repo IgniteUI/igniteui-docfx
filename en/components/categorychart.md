@@ -10,7 +10,7 @@ The Category Chart is a charting component that makes visualizing category data 
 ### Demo
 
 <div class="sample-container" style="height: 500px">
-    <iframe id="category-chart-overview-sample-iframe" src='{environment:demosBaseUrl}/category-chart-overview-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="category-chart-overview-sample-iframe" src='{environment:demosBaseUrl}/charts/category-chart-overview-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="category-chart-overview-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz

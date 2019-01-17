@@ -11,7 +11,7 @@ _language: ja
 
 ### Mask デモ
 <div class="sample-container loading" style="height: 330px">
-    <iframe id="mask-sample-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/mask-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="mask-sample-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/data-display/mask-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="mask-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
@@ -75,7 +75,7 @@ export class AppModule {}
 サンプルを正しく構成した場合、書式マスクが適用される入力が表示されます。
 
 <div class="sample-container loading" style="height: 100px">
-    <iframe id="mask-sample2-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/mask-sample-2" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="mask-sample2-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/data-display/mask-sample-2" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 
 <div>
@@ -119,7 +119,7 @@ public clear() {
 ```
 
 <div class="sample-container loading" style="height: 160px">
-    <iframe id="mask-sample3-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/mask-sample-3" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="mask-sample3-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/data-display/mask-sample-3" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 
 <div>
@@ -265,7 +265,7 @@ inputFormat = new InputFormatPipe();
 '%' 記号が blur の値に追加されて (ユーザーが入力以外をクリックした場合など) 入力がフォーカスを取得すると削除されます。
 
 <div class="sample-container loading" style="height: 100px">
-    <iframe id="mask-sample4-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/mask-sample-4" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="mask-sample4-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/data-display/mask-sample-4" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 
 <div>
@@ -288,7 +288,7 @@ value = null;
 ```
 
 <div class="sample-container loading" style="height: 100px">
-    <iframe id="mask-sample5-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/mask-sample-5" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="mask-sample5-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/data-display/mask-sample-5" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 
 <div>

@@ -12,7 +12,7 @@ Ignite UI for Angular で、**ページング**がルート `igx-grid` コンポ
 #### デモ
 
 <div class="sample-container loading" style="height:605px">
-    <iframe id="grid-paging-sample-iframe" src='{environment:demosBaseUrl}/grid-paging-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="grid-paging-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-paging-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
@@ -214,7 +214,7 @@ public ngAfterViewInit() {
 #### デモ
 
 <div class="sample-container loading" style="height:605px">
-    <iframe id="grid-remote-paging-sample-iframe" src='{environment:demosBaseUrl}/grid-remote-paging-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="grid-remote-paging-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-remote-paging-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>

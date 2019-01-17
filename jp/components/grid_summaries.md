@@ -12,7 +12,7 @@ Ignite UI for Angular Grid コンポーネントには、列レベルで制御�
 #### デモ
 
 <div class="sample-container loading" style="height:650px">
-    <iframe id="grid-summary-sample-iframe" src='{environment:demosBaseUrl}/grid-summary' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="grid-summary-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-summary' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
@@ -157,7 +157,7 @@ export class GridComponent implements OnInit {
 #### デモ
 
 <div class="sample-container loading" style="height:720px">
-    <iframe id="grid-groupby-summary-iframe" src='{environment:demosBaseUrl}/grid-groupby-summary' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="grid-groupby-summary-iframe" src='{environment:demosBaseUrl}/grid/grid-groupby-summary' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>

@@ -10,7 +10,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ### Carousel Demo
 <div class="sample-container" style="height: 620px">
-    <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/carousel-sample-4"></iframe>
+    <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/layouts/carousel-sample-4"></iframe>
 </div>
 
 
@@ -46,7 +46,7 @@ Then in the template of our carousel component we can add the following markup t
 This is enough to have the carousel instantiated on our page, let's have a look at it:
 
 <div class="sample-container" style="height: 230px">
-    <iframe id="carousel-sample-1-iframe" src='{environment:demosBaseUrl}/carousel-sample-1' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="carousel-sample-1-iframe" src='{environment:demosBaseUrl}/layouts/carousel-sample-1' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="carousel-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">                view on stackblitz
@@ -106,7 +106,7 @@ a > igx-icon > span{
 Let's see what we have now, sure looks better with the arrows standing out clearly on both sides and all the content centered:
 
 <div class="sample-container" style="height: 600px">
-<iframe id="carousel-sample-2-iframe" src='{environment:demosBaseUrl}/carousel-sample-2' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<iframe id="carousel-sample-2-iframe" src='{environment:demosBaseUrl}/layouts/carousel-sample-2' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="carousel-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">                view on stackblitz
@@ -198,7 +198,7 @@ ul.igx-carousel__indicators {
 Following all the steps above brings us a nice and functional carousel that the user has full control over using the navigation arrows. The linear bar provides adittional UI that acts as an indicator of the user progress:
 
 <div class="sample-container" style="height: 550px">
-    <iframe id="carousel-sample-3-iframe" src='{environment:demosBaseUrl}/carousel-sample-3' width="100%" height="100%" seamless frameBorder="0"  onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="carousel-sample-3-iframe" src='{environment:demosBaseUrl}/layouts/carousel-sample-3' width="100%" height="100%" seamless frameBorder="0"  onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="carousel-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">                view on stackblitz
@@ -236,7 +236,7 @@ Don't forget to add the **IgxButtonModule** to the **app.component.ts**. The `go
 Given this configuration, the router matches that URL to the given route path **/details:index** and displays the corresponding page:
 
 <div class="sample-container" style="height: 620px">
-    <iframe src='{environment:demosBaseUrl}/carousel-sample-4' width="100%" height="100%" seamless frameBorder="0"></iframe>
+    <iframe src='{environment:demosBaseUrl}/layouts/carousel-sample-4' width="100%" height="100%" seamless frameBorder="0"></iframe>
 </div>
 
 ###API References

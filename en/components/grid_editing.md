@@ -11,7 +11,7 @@ The Grid component in Ignite UI for Angular provides you a default cell template
 #### Demo
 
 <div class="sample-container loading" style="height:650px">
-    <iframe id="grid-editing-sample-iframe" src='{environment:demosBaseUrl}/grid-editing' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="grid-editing-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-editing' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>

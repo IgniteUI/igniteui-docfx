@@ -12,7 +12,7 @@ _language: ja
 ### デモ
 
 <div class="sample-container loading" style="height:700px">
-    <iframe id="grid-sample-iframe" src='{environment:demosBaseUrl}/grid' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="grid-sample-iframe" src='{environment:demosBaseUrl}/grid/grid' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
@@ -350,7 +350,7 @@ export class MyComponent implements OnInit {
 ライブデータにバインドした `igxGrid` のサンプルです。 
 
 <div class="sample-container loading" style="height:915px">
-    <iframe id="grid-sample-finjs-iframe" src='{environment:demosBaseUrl}/finjs-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="grid-sample-finjs-iframe" src='{environment:demosBaseUrl}/grid/finjs-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-finjs-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>

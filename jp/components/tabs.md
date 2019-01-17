@@ -11,7 +11,7 @@ Ignite UI for Angular [`igx-tabs`]({environment:angularApiUrl}/classes/igxtabsco
 
 ### Tabs デモ
 <div class="sample-container loading" style="height: 250px; width: 600px;">
-    <iframe id="tabs-sample-0" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/tabs-sample-3" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="tabs-sample-0" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/layouts/tabs-sample-3" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tabs-sample-0" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
@@ -54,7 +54,7 @@ export class AppModule {}
 サンプルを構成した後、結果は以下のようになります。
 
 <div class="sample-container loading" style="height: 200px; width: 600px; border: 1px solid gray;">
-    <iframe id="tabs-sample-1-iframe" src='{environment:demosBaseUrl}/tabs-sample-1' width="100%" height="100%" seamless
+    <iframe id="tabs-sample-1-iframe" src='{environment:demosBaseUrl}/layouts/tabs-sample-1' width="100%" height="100%" seamless
         frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -99,7 +99,7 @@ export class AppModule {}
 ```
 
 <div class="sample-container loading" style="height: 450px; width: 800px;">
-    <iframe id="tabs-sample-2-iframe" src='{environment:demosBaseUrl}/tabs-sample-2' width="100%" height="100%" seamless
+    <iframe id="tabs-sample-2-iframe" src='{environment:demosBaseUrl}/layouts/tabs-sample-2' width="100%" height="100%" seamless
         frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -159,7 +159,7 @@ export class AppModule {}
 サンプルを正しく構成した場合、タブは以下の例のようになります。
 
 <div class="sample-container loading" style="height: 250px; width: 600px;">
-    <iframe id="tabs-sample-3-iframe" src='{environment:demosBaseUrl}/tabs-sample-3' width="100%" height="100%" seamless
+    <iframe id="tabs-sample-3-iframe" src='{environment:demosBaseUrl}/layouts/tabs-sample-3' width="100%" height="100%" seamless
         frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -292,7 +292,7 @@ public ngOnInit() {
 ```
 
 <div class="sample-container loading" >
-    <iframe id="tabs-sample-4-iframe" src='{environment:demosBaseUrl}/tabs-sample-4' seamless
+    <iframe id="tabs-sample-4-iframe" src='{environment:demosBaseUrl}/layouts/tabs-sample-4' seamless
         frameBorder="0" style="display: none"></iframe>
 </div>
 <div>
@@ -385,7 +385,7 @@ const routes: Routes = [
 ```
 
 <div class="sample-container loading" >
-    <iframe id="tabs-sample-5-iframe" src='{environment:demosBaseUrl}/tabs-sample-5' seamless
+    <iframe id="tabs-sample-5-iframe" src='{environment:demosBaseUrl}/layouts/tabs-sample-5' seamless
         frameBorder="0" style="display: none"></iframe>
 </div>
 <div>

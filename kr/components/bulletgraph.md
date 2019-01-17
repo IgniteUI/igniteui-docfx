@@ -15,7 +15,7 @@ The bullet graph component provides you with the ability to create attractive da
 The following sample demonstrates how setting multiple properties on the same gauge can transform it to completely different gauge.
 
 <div class="sample-container" style="height: 125px">
-    <iframe id="bullet-graph-sample-iframe" src='{environment:demosBaseUrl}/bullet-graph-animation' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="bullet-graph-sample-iframe" src='{environment:demosBaseUrl}/gauges/bullet-graph-animation' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="bullet-graph-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기
@@ -104,7 +104,7 @@ Performance value is the primary measure displayed by the component and it is vi
 ```
 
 <div class="sample-container" style="height: 125px">
-    <iframe id="bullet-graph-measures-iframe" src='{environment:demosBaseUrl}/bullet-graph-measures' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="bullet-graph-measures-iframe" src='{environment:demosBaseUrl}/gauges/bullet-graph-measures' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="bullet-graph-measures-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기
@@ -140,7 +140,7 @@ The ranges are visual elements that highlight a specified range of values on a s
 ```
 
 <div class="sample-container" style="height: 125px">
-    <iframe id="bullet-graph-ranges-iframe" src='{environment:demosBaseUrl}/bullet-graph-ranges' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="bullet-graph-ranges-iframe" src='{environment:demosBaseUrl}/gauges/bullet-graph-ranges' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="bullet-graph-ranges-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기
@@ -173,7 +173,7 @@ The tick marks serve as a visual division of the scale into intervals in order t
 ```
 
 <div class="sample-container" style="height: 125px">
-    <iframe id="bullet-graph-tickmarks-iframe" src='{environment:demosBaseUrl}/bullet-graph-tickmarks' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="bullet-graph-tickmarks-iframe" src='{environment:demosBaseUrl}/gauges/bullet-graph-tickmarks' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="bullet-graph-tickmarks-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기
@@ -198,7 +198,7 @@ The labels indicate the measures on the scale.
 ```
 
 <div class="sample-container" style="height: 125px">
-    <iframe id="bullet-graph-labels-iframe" src='{environment:demosBaseUrl}/bullet-graph-labels' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="bullet-graph-labels-iframe" src='{environment:demosBaseUrl}/gauges/bullet-graph-labels' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="bullet-graph-labels-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기
@@ -222,7 +222,7 @@ The backing element represents background and border of the bullet graph control
 ```
 
 <div class="sample-container" style="height: 125px">
-    <iframe id="bullet-graph-background-iframe" src='{environment:demosBaseUrl}/bullet-graph-background' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="bullet-graph-background-iframe" src='{environment:demosBaseUrl}/gauges/bullet-graph-background' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="bullet-graph-background-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기
@@ -246,7 +246,7 @@ The scale is visual element that highlights the full range of values in the gaug
 </igx-bullet-graph>
 ```
 <div class="sample-container" style="height: 125px">
-    <iframe id="bullet-graph-scale-iframe" src='{environment:demosBaseUrl}/bullet-graph-scale' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="bullet-graph-scale-iframe" src='{environment:demosBaseUrl}/gauges/bullet-graph-scale' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="bullet-graph-scale-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기

@@ -13,7 +13,7 @@ Ignite UI for Angular의 그리드 컴포넌트는 사용자 규칙을 기반으
 #### 데모
 
 <div class="sample-container loading" style="height:530px">
-    <iframe id="cell-styling-sample-iframe" src='{environment:demosBaseUrl}/grid-cell-styling' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="cell-styling-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-cell-styling' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>

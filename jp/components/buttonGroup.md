@@ -12,7 +12,7 @@ Ignite UI for Angular [**igx-buttongroup**]({environment:angularApiUrl}/classes/
 ### Button Group デモ
 
 <div class="sample-container" style="height: 362px">
-    <iframe id="buttonGroup-sample-1-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/button-group-sample-1" onload="onSampleIframeContentLoaded(this);">
+    <iframe id="buttonGroup-sample-1-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/data-entries/button-group-sample-1" onload="onSampleIframeContentLoaded(this);">
 </div>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="buttonGroup-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
@@ -72,7 +72,7 @@ public alignment = ButtonGroupAlignment.vertical;
 </igx-buttongroup>
 ```
 <div class="sample-container" style="height: 164px">
-    <iframe id="buttonGroup-sample-2-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/button-group-sample-2" onload="onSampleIframeContentLoaded(this);">
+    <iframe id="buttonGroup-sample-2-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/data-entries/button-group-sample-2" onload="onSampleIframeContentLoaded(this);">
 </div>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="buttonGroup-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
@@ -115,7 +115,7 @@ public ngOnInit() {
 ```
 
 <div class="sample-container" style="height: 52px">
-    <iframe id="buttonGroup-sample-3-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/button-group-sample-3" onload="onSampleIframeContentLoaded(this);">
+    <iframe id="buttonGroup-sample-3-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/data-entries/button-group-sample-3" onload="onSampleIframeContentLoaded(this);">
 </div>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="buttonGroup-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
