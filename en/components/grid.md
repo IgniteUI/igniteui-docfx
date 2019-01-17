@@ -190,6 +190,45 @@ public initColumns(column: IgxGridColumn) {
 
 The code above will make the **ProductName** column sortable and editable and will instantiate the corresponding features UI (like inputs for editing, etc.).
 
+### Data structure
+
+The [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html) takes only **flat data**. The data structure specific for rendering is in the form: 
+
+```typescript
+const OBJECT_ARRAY = [{
+        ObjectKey1: value1,
+        ObjectKey2: value2,
+        .
+        .
+        .
+        ObjectKeyN: valueN
+    },
+    {
+        ObjectKey1: value1,
+        ObjectKey2: value2,
+        .
+        .
+        .
+        ObjectKeyN: valueN
+    },
+    .
+    .
+    .,
+    {
+        ObjectKey1: value1,
+        ObjectKey2: value2,
+        .
+        .
+        .
+        ObjectKeyN: valueN 
+    }];
+
+```
+>[!WARNING]
+>**The key values must not contain neither arrays or other objects**.
+
+>If you use [autoGenerate]({environment:angularApiUrl}/classes/igxgridcomponent.html#autogenerate) columns **the data keys must be identical.** 
+
 ### Data binding
 
 Before going any further with the grid we want to change the grid to bind to remote data service, which is the common scenario in large-scale applications. A good practice is to separate all data fetching related logic in a separate data service, so we are going to create a service which will handle the fetching of data from the server.

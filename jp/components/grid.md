@@ -190,6 +190,45 @@ public initColumns(column: IgxGridColumn) {
 
 上記のコードは **ProductName** 列の並べ替えや編集機能を有効にし、対応する機能の UI (編集の入力など) をインスタンス化します。
 
+### Data structure
+
+The [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html) takes only **flat data**. The data structure specific for rendering is in the form: 
+
+```typescript
+const OBJECT_ARRAY = [{
+        ObjectKey1: value1,
+        ObjectKey2: value2,
+        .
+        .
+        .
+        ObjectKeyN: valueN
+    },
+    {
+        ObjectKey1: value1,
+        ObjectKey2: value2,
+        .
+        .
+        .
+        ObjectKeyN: valueN
+    },
+    .
+    .
+    .,
+    {
+        ObjectKey1: value1,
+        ObjectKey2: value2,
+        .
+        .
+        .
+        ObjectKeyN: valueN 
+    }];
+
+```
+>[!WARNING]
+>**The key values must not contain neither arrays or other objects**.
+
+>If you use [autoGenerate]({environment:angularApiUrl}/classes/igxgridcomponent.html#autogenerate) columns **the data keys must be identical.**
+
 ### データ バインディング
 
 はじめにリモート データ サービスにバインドするためにグリッドを変更します。大規模なアプリケーション レベルでは一般的なシナリオです。すべてのデータ取得に関連するロジックを別のデータ サービスに分割することがベスト プラクティスであるため、サーバーからデータの取得を処理するサービスを作成します。
