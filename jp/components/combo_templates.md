@@ -69,11 +69,11 @@ export class AppModule {}
 以下のいずれかのテンプレートを定義した場合、定義済みの名前を使用して参照してください。
 
 ### 項目テンプレート
-参照名 **`itemTemplate`** の使用
+Use selector `[igxComboItem]`:
 
 ```html
 <igx-combo>
-	<ng-template #itemTemplate let-display let-key="valueKey">
+	<ng-template igxComboItem let-display let-key="valueKey">
 		<div class="item">
 			<span class="state">State: {{ display[key] }}</span>
 			<span class="region">Region: {{ display.region }}</span>
@@ -83,11 +83,11 @@ export class AppModule {}
 ```
 
 ### ヘッダー テンプレート
-参照名 **`headerTemplate`** を使用
+Use selector `[igxComboHeader]`:
 
 ```html
 <igx-combo>
-    <ng-template #headerTemplate>
+    <ng-template igxComboHeader>
         <div class="header-class">Custom header</div>
         <img src=""/>
     </ng-template>
@@ -95,11 +95,11 @@ export class AppModule {}
 ```
 
 ### フッター テンプレート
-参照名 **`footerTemplate`** を使用
+Use selector `[igxComboFooter]`:
 
 ```html
 <igx-combo>
-    <ng-template #footerTemplate>
+    <ng-template igxComboFooter>
         <div class="footer-class">Custom footer</div>
         <img src=""/>
     </ng-template>
@@ -107,26 +107,49 @@ export class AppModule {}
 ```
 
 ### 空のテンプレート
-参照名 **`emptyTemplate`** を使用
+Use selector `[igxComboEmpty]`:
 
 ```html
 <igx-combo>
-    <ng-template #emptyTemplate>
+    <ng-template igxComboEmpty>
         <span>List is empty</div>
     </ng-template>
 </igx-combo>
 ```
 
 ### テンプレートの追加
-参照名 **`addItemTemplate`** を使用
+Use selector `[igxComboAddItem]`:
 
 ```html
 <igx-combo>
-    <ng-template #addItemTemplate>
+    <ng-template igxComboAddItem>
         <span>Add town</span>
     </ng-template>
 </igx-combo>
 ```
+
+### Toggle Icon Template
+Use selector `[igxComboToggleIcon]`:
+
+```html
+<igx-combo>
+    <ng-template igxComboToggleIcon let-control>
+        <igx-icon>{{ control.collapsed ? 'remove_circle' : 'remove_circle_outline'}}</igx-icon>
+    </ng-template>
+</igx-combo>
+```
+
+### Clear Icon Template
+Use selector `[igxComboClearIcon]`:
+
+```html
+<igx-combo>
+    <ng-template igxComboClearIcon>
+        <igx-icon>music_off</igx-icon>
+    </ng-template>
+</igx-combo>
+```
+
 <div class="divider--half"></div>
 
 ## その他のリソース
