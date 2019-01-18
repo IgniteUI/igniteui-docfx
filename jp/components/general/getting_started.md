@@ -1,5 +1,5 @@
 ---
-title: はじめに
+title: 作業の開始
 _description: Ignite UI for Angular はネイティブ Angular UI コンポーネントのセットです。機能豊かなマテリアル デザイン アプリケーションをすばやくビルドできます。 
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ
 _language: ja
