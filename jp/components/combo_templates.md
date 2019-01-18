@@ -42,23 +42,23 @@ export class AppModule {}
 ```html
 <igx-combo #templateCombo [data]="lData" [valueKey]="'field'" >
 
-    <ng-template #itemTemplate let-display let-key="valueKey">
+    <ng-template igxComboItem let-display let-key="valueKey">
         <div class="item">
             <span class="state">{{ display[key] }} - </span>
             <span class="region">{{ display.region }}</span>
         </div>
     </ng-template>
 
-    <ng-template #headerTemplate>
+    <ng-template igxComboHeader>
         <div class="header-class">State - Region</div>
     </ng-template>
 
-    <ng-template #footerTemplate>
+    <ng-template igxComboFooter>
         <div class="footer-class">Infragistics 2018</div>
     </ng-template>
 
     <igx-combo>
-        <ng-template #emptyTemplate>
+        <ng-template igxComboEmpty>
             <span class="empty-class">No available states</span>
         </ng-template>
     </igx-combo>
