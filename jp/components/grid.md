@@ -190,9 +190,9 @@ public initColumns(column: IgxGridColumn) {
 
 上記のコードは **ProductName** 列の並べ替えや編集機能を有効にし、対応する機能の UI (編集の入力など) をインスタンス化します。
 
-### Data structure
+### データ構造
 
-The [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html) takes only **flat data**. The data structure specific for rendering is in the form: 
+[IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html) は**フラットデータ**のみ取得します。描画に固有のデータ構造はフォームにあります。 
 
 ```typescript
 const OBJECT_ARRAY = [{
@@ -225,9 +225,9 @@ const OBJECT_ARRAY = [{
 
 ```
 >[!WARNING]
->**The key values must not contain neither arrays or other objects**.
+>**キー値に配列またはその他のオブジェクトを含まないでください。**
 
->If you use [autoGenerate]({environment:angularApiUrl}/classes/igxgridcomponent.html#autogenerate) columns **the data keys must be identical.**
+>[autoGenerate]({environment:angularApiUrl}/classes/igxgridcomponent.html#autogenerate) 列を使用する場合、データキーが同一である必要があります。
 
 ### データ バインディング
 
