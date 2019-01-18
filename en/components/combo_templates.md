@@ -151,6 +151,21 @@ Use selector `[igxComboClearIcon]`:
 
 <div class="divider--half"></div>
 
+### Templating combo input
+The above-mentioned selectors, `[igxComboClearIcon]` and `[igxComboToggleIcon]`, used with templates will change how the respective buttons appear in the combo input. 
+Passing content inside of the `igx-combo` also allows templating of the combo input similar to the way an `igx-input-group` can be templated (using `igx-prefix`, `igx-suffix` and `[igxLabel]`). The code snippet below illustrates how to add an appropriate label and `igx-prefix` to the combo input, as well as changing the `clear` button icon:
+```html
+    <igx-combo [data]="myMusic">
+        ...
+        <label igxLabel>Genres</label>
+        <igx-prefix><igx-icon>music_note</igx-icon></igx-prefix>
+        <ng-template igxComboClearIcon>
+            <igx-icon>music_off</igx-icon>
+        </ng-template>
+        ...
+    </igx-combo>
+```
+
 ## Additional Resources
 <div class="divider--half"></div>
 
