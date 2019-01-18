@@ -1,6 +1,6 @@
-﻿- name: General
+﻿- name: 概要
   header: true
-- name: Getting started
+- name: 作業の開始
   href: general/getting_started.md
   new: false
 - name: Ignite UI CLI

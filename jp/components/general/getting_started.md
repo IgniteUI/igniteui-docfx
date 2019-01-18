@@ -1,16 +1,17 @@
 ---
-title: Getting Started
-_description: Ignite UI for Angular is a complete set of native Angular UI components, which allow you to build fast, feature-rich and Material designed applications!
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library
+title: はじめに
+_description: Ignite UI for Angular はネイティブ Angular UI コンポーネントのセットです。機能豊かなマテリアル デザイン アプリケーションをすばやくビルドできます。 
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ
+_language: ja
 ---
 
-## Getting started with Ignite UI for Angular
+## Ignite UI で作業を開始
 
-[`Ignite UI for Angular`](https://github.com/IgniteUI/igniteui-angular) is a complete set of Material-based UI Widgets, Components & Sketch UI kits and supporting directives for Angular by Infragistics. Ignite UI for Angular is designed to enable developers to build the most modern, high-performance HTML5 & JavaScript apps for modern desktop browsers, mobile experiences and progressive web apps (PWA’s) targeting Google's Angular framework.
+[`Ignite UI for Angular`](https://github.com/IgniteUI/igniteui-angular) は、マテリアルベース UI ウィジェット、コンポーネント & Sketch UI キットでインフラジスティックス Angular のディレクティブをサポートします。Ignite UI for Angular は、デスクトップ ブラウザー向けアプリ、高パフォーマンスな HTML5 や JavaScript アプリ、Google の Angular フレームワークを対象にしたプログレッシブ ウェブアプリ (PWA) を作成できます。
 
-Before you can run Ignite UI for Angular, there are 2 steps to get everything on your machine set up to run any Angular app, including Ignite UI for Angular, and to build Ignite UI for Angular apps.
+Ignite UI for Angular を実行するには、以下の 2 つの手順に従い Ignite UI for Angular を含む Angular アプリをシステムでビルド、実行する準備をしてください。
 
-To get started, you must install both NodeJS and Visual Studio Code on your machine. Modern web development with Angular requires NodeJS, it’s sort of like an ASP.NET app running in the browser and requires ASP.NET runtime deployed on the server. For development, there is nothing better than Visual Studio Code to build Angular apps. Getting started is easy, just download and install both Node.js and Visual Studio Code.
+作業を開始する前にシステムに NodeJS と Visual Studio Code をインストールする必要があります。Angular のモダン ウェブ開発は、ブラウザーで実行する ASP.NET アプリのようなもので サーバーで ASP.NET ランタイム配備が必要です。Angular アプリの開発では、Visual Studio Code が最適です。作業を開始する前に Node.js と Visual Studio Code をインストールします。
 
 <div>
     <div style="display:inline-block;width:45%;text-align:center;">
@@ -32,21 +33,21 @@ To get started, you must install both NodeJS and Visual Studio Code on your mach
 </div>
 <div class="divider--half"></div>
 
-## Installing Ignite UI for Angular
+## Ignite UI for Angular のインストール
 
-Now that we have everything we need, we can start creating/updating our application!
+ここまですべての準備が整いました。アプリケーションを作成しましょう。
 
-### Create an application by using the Ignite UI CLI
+### Ignite UI CLI を使用してアプリケーションを作成
 
-Let's start by opening a preferred terminal and installing the [`Ignite UI CLI`](https://github.com/IgniteUI/igniteui-cli):
+お気に入りのターミナルを開いたら [`Ignite UI CLI`](https://github.com/IgniteUI/igniteui-cli) をインストールします。
 
 ```cmd
 npm install -g igniteui-cli 
 ```
 
-#### Using guided experience
+#### ガイドの使用
 
-The shortest and easiest way to bootstrap an application is to use the Ignite UI CLI [`guided experience`](https://github.com/IgniteUI/igniteui-cli/wiki/step-by-step), which builds a configured app that the developer can get up and running with the ease of a single command. 
+アプリケーションを最短でブートストラップする最も簡単な方法は、Ignite UI CLI [`ガイド エクスペリエンス`](https://github.com/IgniteUI/igniteui-cli/wiki/step-by-step) を使用する方法です。アプリをビルドしたら 1 コマンドで開始できます。 
 
 ```cmd
 ig
@@ -60,9 +61,9 @@ ig
     <p style="text-align:center;">Building Your First Ignite UI CLI App</p>
 </div>
 
-#### Using commands
+#### コマンドの使用
 
-We can always use the Ignite UI CLI [`commands`](https://github.com/IgniteUI/igniteui-cli/wiki#available-commands) for generating an Ignite UI project, adding a new component or building and serving the project by ourselves. For that purpose, we can use the following commands:
+ Ignite UI CLI [`コマンド`](https://github.com/IgniteUI/igniteui-cli/wiki#available-commands)を使用して常に Ignite UI プロジェクトを生成して新しいコンポーネントを作成やプロジェクトを提供できます。以下のコマンドを使用できます。
 
 ```cmd
 ig new <project name> --framework=angular --type=igx-ts 
@@ -71,10 +72,10 @@ ig add <component/template> <component_name>
 ig start 
 ```
 
-- The full list of available **component/template** values is [`here`](https://github.com/IgniteUI/igniteui-cli/wiki/add#ignite-ui-for-angular-templates).
-- Both the **project name** and the **component_name** are custom values, provided by the developer.
+- **Component/template** 値の全リストは[`こちら`](https://github.com/IgniteUI/igniteui-cli/wiki/add#ignite-ui-for-angular-templates)です。
+- 開発者が提供する**プロジェクト名**と**コンポーネント_名**の両方がカスタム値です。
 
-Here is an example of creating a new Ignite UI for Angular project with an igxGrid control:
+igxGrid コントロールで新しい Ignite UI for Angular プロジェクトを作成する例です。
 
 ```cmd
 ig new newAngularProject --framework=angular --type=igx-ts
@@ -83,50 +84,49 @@ ig add grid newGrid
 ig start
 ```
 
-After executing those simple commands, your new project will be built and served. It will automatically open in your default browser and you will be able to inspect your grid control and to make changes to the project.
+シンプルなコマンドの実行した後、新しいプロジェクトがビルドされて提供されます。これによりデフォルト ブラウザーが自動的に開かれ、グリッド コントロールをインスペクトしてプロジェクトに変更を加えることができます。
 
-### Add Ignite UI for Angular to an existing application
+### 既存のアプリケーションに Ignite UI for Angular を追加します。
 
-What if you want to use Ignite UI for Angular in an existing Angular CLI project (one that you have from before or you have just created by using the Angular CLI)? We have you covered! All you have to do is execute the command below:
+既存の Angular CLI プロジェクト (既存プロジェクトまたは Angular CLI を使用して作成したプロジェクト) で Ignite UI for Angular を使用する場合、以下のコマンドを実行します。
 
 ```cmd
 ng add igniteui-angular
 ```
 
-This will automatically install the [`igniteui-angular`](https://github.com/IgniteUI/igniteui-angular) package, along with all of its dependencies, font imports and styles references to the existing project. After the installation has finished, we can now execute Ignite UI CLI [`commands`](https://github.com/IgniteUI/igniteui-cli/wiki#available-commands) in our updated application in order to further enrich it by using Ignite UI for Angular components!
+[`Igniteui-angular`](https://github.com/IgniteUI/igniteui-angular) パッケージを依存関係、フォント、スタイル参照とともに既存プロジェクトへ自動的にインストールします。インストールの完了後、更新したアプリケーションで Ignite UI CLI [`コマンド`](https://github.com/IgniteUI/igniteui-cli/wiki#available-commands)を実行し、Ignite UI for Angular コンポーネントを使用して更にカスタマイズできます。
 
-## Using Ignite UI for Angular
+## Ignite UI for Angular の使用
 
-We are now ready to start using Ignite UI for Angular components!
+ここまでで Ignite UI for Angular コンポーネントを使用する準備ができました。
 
-### Add components automatically
+### コンポーネントを自動的に追加
 
-#### Import modules and use components
-In order to easily add new components to our application, we can take advantage of the Ignite UI CLI!
+#### モジュールのインポートとコンポーネントの使用
+ Ignite UI CLI を使用して簡単に新しいコンポーネントをアプリケーションに追加することができます。
 
 ```cmd
 ig add
 ```
 
 > [!NOTE]
-> Please note that the [`ig add`](https://github.com/IgniteUI/igniteui-cli/wiki/add) command can be used if the application was created by using the Ignite UI CLI or
-> if it was created by using the Angular CLI with Ignite UI for Angular added to it by using the **ng add igniteui-angular** command.
+> アプリケーションを Ignite UI CLI を使用して作成した場合、または **ng add igniteui-angular** コマンドで Ignite UI for Angular を追加した Angular CLI を使用して作成した場合は、[`ig add`](https://github.com/IgniteUI/igniteui-cli/wiki/add) コマンドを使用できます。
 
-After going through the options of the menu and choosing which component we want to add to our application, we will notice that we have a brand new component in our project, which we can use anywhere on our page!
+メニューのオプションを介してアプリケーションに追加するコンポーネントを選択し、新しいコンポーネントをプロジェクトに追加し、ページのどこにでも使用できます。
 
-#### Run application
+#### アプリケーションの実行
 
-Now let’s run our application with the [`ig start`](https://github.com/IgniteUI/igniteui-cli/wiki/start) command to see our awesome page!
+次に [`ig start`](https://github.com/IgniteUI/igniteui-cli/wiki/start) コマンドでアプリケーションを実行してページを確認します。
 
 ```cmd
 ig start
 ```
 
-### Add components manually
+### コンポーネントを自動的に追加
 
-#### Import modules
+#### モジュールのインポート
 
-First we have to import the respective modules of the components we want to use in the **app.module.ts** file. We will go ahead and do this for the [**igxGrid**](../grid.md)! Please note that some components have animations depending on BrowserAnimationsModule, so let’s import that one as well:
+はじめに **app.module.ts** ファイルで使用するコンポーネントの各モジュールをインポートする必要があります。[**igxGrid**](../grid.md) で実行します。BrowserAnimationsModule によってはアニメーションのあるコンポーネントがあることに注意してください。次にインポートします。
 
 ```typescript
 // app.module.ts
@@ -154,9 +154,9 @@ import { IgxGridModule } from 'igniteui-angular';
 export class AppModule { }
 ```
 
-#### Use components
+#### コンポーネントの使用
 
-We are now ready to use the igxGrid in our markup! Let's go ahead and define it in our **app.component.html** file:
+ここまでで igxGrid をマークアップで使用する準備ができました。**app.component.html** ファイルを定義しましょう。
 
 ```html
 <!-- app.component.html -->
@@ -175,7 +175,7 @@ We are now ready to use the igxGrid in our markup! Let's go ahead and define it 
 </div>
 ```
 
-We will also define the data of the grid and the title of our application that are referenced from the **app.component.ts**:
+**app.component.ts** から参照されるグリッド データとアプリケーションのタイトルを定義します。
 
 ```typescript
 // app.component.ts
@@ -198,42 +198,42 @@ export class AppComponent {
 }
 ```
 
-#### Run application
+#### アプリケーションの実行
 
-Finally, we can run our new application by using one of the following commands:
+以下のコマンドを使用して新しいアプリケーションを実行できます。
 
-- If the application was created by using the Ignite UI CLI:
+- Ignite UI CLI を使用してアプリケーションを作成する場合:
 
 ```cmd
 ig start
 ```
 
-- If the application was created by using the Angular CLI:
+- Angular CLI を使用してアプリケーションを作成する場合:
 
 ```cmd
 ng serve
 ```
 
-The final result should look something like this:
+最終的な結果は以下のようになります。
 
 <img src="../../images/general/igniteui-project.png" />
 
-## API References
+## API リファレンス
 
-In this article we learned how to create our own Ignite UI for Angular application from scratch by taking advantage of the fully-automated process of Ignite UI for Angular projects creation in the Ignite UI CLI. We also learned and how to add Ignite UI for Angular to an existing application by using the Angular CLI. We designed our own page by including the [`IgxGridComponent`]({environment:angularApiUrl}/classes/igxgridcomponent.html) to it, which itself offers some awesome features, which you can take a look at by referring to the navigation menu.
+このトピックでは、Ignite UI CLI. で Ignite UI for Angular プロジェクトを作成するプロセスを使用して Ignite UI for Angular アプリケーションを作成する方法について説明しました。また Ignite UI for Angular を Angular CLI を使用して既存のアプリケーションに追加する方法についてもふれました。[`IgxGridComponent`]({environment:angularApiUrl}/classes/igxgridcomponent.html) を含むことにより、カスタムなページをデザインしてナビゲーション メニューを参照して表示できる機能が提供されます。
 
 * [`IgxGridComponent`]({environment:angularApiUrl}/classes/igxgridcomponent.html)
-* [`IgxGridComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [`IgxGridComponent スタイル`]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 
-## Additional Resources
+## その他のリソース
 <div class="divider--half"></div>
 
 * [`Ignite UI CLI`](https://github.com/IgniteUI/igniteui-cli)
-* [`Ignite UI CLI Commands`](https://github.com/IgniteUI/igniteui-cli/wiki#available-commands)
-* [`Grid overview`](../grid.md)
+* [`Ignite UI CLI コマンド`](https://github.com/IgniteUI/igniteui-cli/wiki#available-commands)
+* [Grid の概要](../grid.md)
 
 <div class="divider--half"></div>
-Our community is active and always welcoming to new ideas.
+コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+* [Ignite UI for Angular** フォーラム** (英語) ](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub** (英語) ](https://github.com/IgniteUI/igniteui-angular)
