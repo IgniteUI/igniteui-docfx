@@ -17,7 +17,7 @@ ng update
 ```
 
 > [!NOTE]
-> We recommend commit all your changes before proceed with the update. 
+> We recommend commit all your changes before proceeding with the update. 
 
 To update the **Ignite UI for Angular** package run the following command:
 ```cmd
