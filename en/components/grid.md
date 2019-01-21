@@ -64,26 +64,23 @@ The **id** property is a string value and is the unique identifier of the grid w
 
 The [`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#autogenerate) property tells the **igx-grid** to auto generate the grid's [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) based on the data source fields. It will also try to deduce the appropriate data type for the column if possible. Otherwise, the developer needs to explicitly define the columns and the mapping to the data source fields.
 
-
+### Styling Configuration
 > [!NOTE]
 > The [**IgxGridComponent**]({environment:angularApiUrl}/classes/igxgridcomponent.html) uses **css grid layout**, which is **not supported in IE without prefixing**, consequently it will not render properly!
 
-> Ignite UI for Angular provides you with prefixed styles, that makes the IgxGrid compatible with all browsers!
+In [**Angular**](https://angular.io/) most of the styles are prefixed implicitly thanks to the [Autoprefixer](https://www.npmjs.com/package/autoprefixer) plugin. 
 
-**Configuration for Internet Explorer**
+For prefixing **grid layouts** however, you need to enable the [Autoprefixer](https://www.npmjs.com/package/autoprefixer) **grid property** with the comment `/* autoprefixer grid:on */`.
 
- If you work with **Internet Explorer** there is one configuration that you have to make before start using the **igx-grid**.
+To facilitate your work, apply the comment in the `src/styles.scss` file.
 
- In **angular.json** go to the **styles** property and add **igniteui-angular.css** file, which contains all the necessary prefixed styles:
+ ```scss
+ // src/styles.scss
+    @import '~igniteui-angular/lib/core/styles/themes/index';
+    @include igx-core();
+    @include igx-theme($default-palette);
 
- ```json
- //angular.json
- ...
-    "styles": [
-        "src/styles.scss",
-        //Set igniteui-angular.css as a global style for your app  
-        "node_modules/igniteui-angular/styles/igniteui-angular.css"
-    ],
+    /* autoprefixer grid:on */
  ...
  ``` 
 
