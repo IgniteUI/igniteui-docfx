@@ -1,23 +1,24 @@
 ---
-title: Ignite UI CLI
-_description: The Ignite UI CLI is a tool to initialize, develop, scaffold and maintain applications in a wide variety of frameworks.
-_keywords: Ignite UI for Angular, UI controls, CLI, Templates, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library
+title: Ignite UI CLI を使用
+_description: Ignite UI CLI は、さまざまなフレームワークでアプリケーションの初期化、開発、スキャフォールディング、および処理を可能にするツールです。
+_keywords: Ignite UI for Angular, UI コントロール, CLI, テンプレート, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ
+_language: ja
 ---
 
 ## Ignite UI CLI
 
-[`Ignite UI CLI`](https://github.com/IgniteUI/igniteui-cli) is a command line tool to create and scaffold applications for a variety of frameworks. Ignite UI CLI offers project templates pre-configured for Ignite UI for Angular to get your next app off the ground in record time. A selection of views with Ignite UI for Angular components that can be further added to projects give a boost to productivity.
+[`Ignite UI CLI`](https://github.com/IgniteUI/igniteui-cli) はさまざまなフレームワークのためにアプリケーションを作成して scaffold するコマンドライン ツールです。Ignite UI CLI は、Ignite UI for Angular の定義済みのプロジェクト テンプレートが含まれ、アプリ開発を効率的に行うことができます。Ignite UI for Angular コンポーネントのビュー選択により、生産性を向上します。
 
-### Getting Started
+### 作業の開始
 
-Let's start by opening a preferred terminal and installing the [`Ignite UI CLI`](https://github.com/IgniteUI/igniteui-cli):
+お好みのターミナルを開き、[`Ignite UI CLI`](https://github.com/IgniteUI/igniteui-cli) をインストールします。
 ```cmd
 npm install -g igniteui-cli 
 ```
-Once the  [`Ignite UI CLI`](https://github.com/IgniteUI/igniteui-cli) is installed, there are two possible options/modes to start the tool - guided experience and using specific commands.
+ [`Ignite UI CLI`](https://github.com/IgniteUI/igniteui-cli) のインストール後、ツールを開始する 2 つのオプション/モデル (ガイドまたはコマンド) があります。
 
-#### Using guided experience
-The shortest and easiest way to bootstrap an application is to use the Ignite UI CLI guided [`step by step mode`](https://github.com/IgniteUI/igniteui-cli/wiki/step-by-step), which creates a configured app that can be up and running with the ease of a single command. 
+#### ガイドの使用
+アプリケーションを最短でブートストラップする最も簡単な方法は、Ignite UI CLI [`ガステップバイステップ モード`](https://github.com/IgniteUI/igniteui-cli/wiki/step-by-step) を使用する方法です。アプリをビルドしたあとは 1 コマンドで開始できます。 
 ```cmd
 ig
 ```
@@ -27,20 +28,20 @@ ig
        href="https://youtu.be/QK_NsdtdA70" target="_blank">
         <img src="../../images/general/play.svg" style="vertical-align: middle;" />
     </a>
-    <p style="text-align:center;">Building Your First Ignite UI CLI App</p>
+    <p style="text-align:center;">最初の Ignite UI CLI アプリを作成</p>
 </div>
 
-#### Using commands
-We can always use the Ignite UI CLI [commands](#available-commands) for generating an Ignite UI project, adding a new component or building and serving the project by ourselves. For that purpose, we can use the following commands:
+#### コマンドの使用
+Ignite UI CLI [コマンド](#available-commands)を使用し、Ignite UI プロジェクトを生成、新しいコンポーネントの追加、プロジェクトのビルドができます。以下のコマンドを使用できます。
 ```cmd
 ig new <project name> --framework=angular --type=igx-ts 
 cd <project name>
 ig add <component/template> <component_name>
 ig start 
 ```
-- The full list of available **component/template** values is [here](https://github.com/IgniteUI/igniteui-cli/wiki/add#ignite-ui-for-angular-templates), you can run [`ig list`](#available-commands) command in your project directory to list all the available templates.
-- Both the **project name** and the **component_name** are custom values, provided by the developer.
-Here is an example of creating a new Ignite UI for Angular project with an igxGrid control:
+- **コンポーネント/テンプレート**値の一覧は[こちら](https://github.com/IgniteUI/igniteui-cli/wiki/add#ignite-ui-for-angular-templates)をご覧ください。プロジェクトのディレクトリで[`ig list`](#available-commands) コマンドを実行するとすべての使用可能なテンプレートがリストされます。
+- **プロジェクト名**とコンポーネント名の両方をカスタムに設定できます。
+以下は、igxGrid コントロールで新しい Ignite UI for Angular プロジェクトを作成する例です。
 
 ```cmd
 ig new newAngularProject --framework=angular --type=igx-ts
@@ -49,22 +50,22 @@ ig add grid newGrid
 ig start
 ```
 
-After executing those simple commands, your new project will be built and served. It will automatically open in your default browser and you will be able to inspect your grid control and to make changes to the project.
+シンプルなコマンドの実行した後、新しいプロジェクトがビルドされて提供されます。これによりデフォルト ブラウザーが自動的に開かれ、グリッド コントロールをインスペクトしてプロジェクトに変更を加えることができます。
 
-### Available commands
+### コマンド
 
-A full list of the available Ignite UI CLI commands as well as details on the usage (like passing flags, etc.), can be found at the [Ignite UI CLI](https://github.com/IgniteUI/igniteui-cli/wiki) wiki.
+ Ignite UI CLI コマンドと使用についての詳細は、[Ignite UI CLI](https://github.com/IgniteUI/igniteui-cli/wiki) (英語) をご覧ください。
 
-| Command | Alias | Description |
+| コマンド | エイリアス | 説明 |
 | --- | --- | --- |
-| [ig new](https://github.com/IgniteUI/igniteui-cli/wiki/new) | | Create a new  Angular, jQuery or React application. The application will be configured to use either Ignite UI for Angular, or Ignite UI for JavaScript controls. 
-| [ig add](https://github.com/IgniteUI/igniteui-cli/wiki/add) | | Adds a template by its ID and providing a name to an existing project
-| [ig start](https://github.com/IgniteUI/igniteui-cli/wiki/start) | | Builds the application, starts a web server and opens the application in the default browser.
-| [ig build](https://github.com/IgniteUI/igniteui-cli/wiki/build) | | Builds the application into an output directory
-| [ig generate](https://github.com/IgniteUI/igniteui-cli/wiki/generate) | g | Generates a new custom template for supported frameworks and project types
-| [ig help](https://github.com/IgniteUI/igniteui-cli/wiki/help) | -h | Lists the available commands and provides a brief description of what they do.
-| [ig config](https://github.com/IgniteUI/igniteui-cli/wiki/config) | | Performs read and write operation on the Ignite UI CLI configuration settings.
-| [ig doc](https://github.com/IgniteUI/igniteui-cli/wiki/doc) | | Searches the Infragistics knowledge base for information about a given search term
-| [ig list](https://github.com/IgniteUI/igniteui-cli/wiki/list) | l |  Lists all templates for the specified framework and type. When you run the command within a project folder it will list all templates for the project's framework and type, even if you provide different ones.
-| [ig test](https://github.com/IgniteUI/igniteui-cli/wiki/test) |  | Executes the tests for the current project.
-| ig version | -v | Shows Ignite UI CLI version installed locally, or globally if local is missing |
+| [ig new](https://github.com/IgniteUI/igniteui-cli/wiki/new) | | 新しい Angular、jQuery、React を作成します。アプリケーションを Ignite UI for Angular または Ignite UI for JavaScript で使用するために構成します。
+| [ig add](https://github.com/IgniteUI/igniteui-cli/wiki/add) | | ID でテンプレートを追加し、既存にプロジェクトに名前を付けます。
+| [ig start](https://github.com/IgniteUI/igniteui-cli/wiki/start) | | アプリケーションをビルドしてウェブ サーバーを開始、次にアプリケーションをデフォルト ブラウザーで開きます。
+| [ig build](https://github.com/IgniteUI/igniteui-cli/wiki/build) | | アプリケーションをアプトプット ディレクトリへビルドします。
+| [ig generate](https://github.com/IgniteUI/igniteui-cli/wiki/generate) | g | サポートされるフレームワークおよびプロジェクト タイプのための新しいカスタム テンプレートを生成します。
+| [ig help](https://github.com/IgniteUI/igniteui-cli/wiki/help) | -h | 使用可能なコマンドをリストして手順の簡単な説明を示します。
+| [ig config](https://github.com/IgniteUI/igniteui-cli/wiki/config) | | Ignite UI CLI 構成設定の読み取り / 書き込み操作を実行します。
+| [ig doc](https://github.com/IgniteUI/igniteui-cli/wiki/doc) | | 検索した用語についてインフラジスティックスのサポート情報を検索します。
+| [ig list](https://github.com/IgniteUI/igniteui-cli/wiki/list) | l |  指定したフレームワークとタイプのすべてのテンプレートをリストします。プロジェクト フォルダー内でコマンド実行時にプロジェクトのフレームワークとタイプのテンプレートをすべてリストします。
+| [ig test](https://github.com/IgniteUI/igniteui-cli/wiki/test) |  | 現在のプロジェクトのテストを実行します。
+| ig version | -v | ローカル (ローカルがない場合はグローバル) にインストールされた Ignite UI CLI バージョンを示します。|

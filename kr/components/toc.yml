@@ -3,6 +3,9 @@
 - name: Getting started
   href: general/getting_started.md
   new: false
+- name: Update guide
+  href: general/update_guide.md
+  new: false
 - name: Ignite UI CLI
   href: general/cli-overview.md
   new: false
@@ -18,7 +21,7 @@
       new: false
     - name: 편집
       href: grid_editing.md
-      new: true
+      new: false
     - name: 행 편집
       href: grid_row_editing.md
       new: true
@@ -36,13 +39,13 @@
       new: false
     - name: 그룹화
       href: grid_groupby.md
-      new: true
+      new: false
     - name: 요약
       href: grid_summaries.md
       new: false
     - name: 열 이동
       href: grid_column_moving.md
-      new: true
+      new: false
     - name: 열 핀 고정
       href: grid_column_pinning.md
       new: false
@@ -51,28 +54,28 @@
       new: false
     - name: 숨기기
       href: grid_column_hiding.md
-      new: true
+      new: false
     - name: 행 선택
       href: grid_selection.md
       new: false
     - name: 검색
       href: grid_search.md
-      new: true
+      new: false
     - name: 도구 모음
       href: grid_toolbar.md
-      new: true
+      new: false
     - name: Excel 내보내기
       href: exporter_excel.md
       new: false
     - name: Excel에서 붙여넣기
       href: grid_paste_excel.md
-      new: true
+      new: false
     - name: 복수 열 헤더
       href: grid_multi_column_headers.md
-      new: true
+      new: false
     - name: 표시 밀도
       href: grid_displayDensity.md
-      new: true
+      new: false
     - name: 조건부 셀 스타일
       href: grid_conditional_cell_styling.md
       new: true
@@ -87,13 +90,13 @@
   items:
     - name: Features
       href: combo_features.md
-      new: true
+      new: false
     - name: Remote Binding
       href: combo_remote.md
       new: true
     - name: Templates
       href: combo_templates.md
-      new: true
+      new: false
     - name: Cascading Scenario
       href: combo_cascading.md
       new: true
@@ -104,7 +107,7 @@
   items:
     - name: 주석 및 오버레이
       href: categorychart_annotation_layers.md
-      new: true
+      new: false
     - name: 차트 유형 탐색
       href: categorychart_explore_chart_types.md
       new: false
@@ -119,10 +122,10 @@
       new: false
     - name: Highlighting
       href: categorychart_highlighting.md
-      new: true
+      new: false
     - name: Tooltip Types
       href: categorychart_tooltip_types.md
-      new: true
+      new: false
     - name: 툴팁 템플릿
       href: categorychart_tooltip_templates.md
       new: false
@@ -131,7 +134,7 @@
   items:
     - name: 주석 및 오버레이
       href: financialchart_annotation_layers.md
-      new: true
+      new: false
     - name: 차트 유형 탐색
       href: financialchart_explore_chart_types.md
       new: false
@@ -158,54 +161,54 @@
       new: false
     - name: Tooltip Types
       href: financialchart_tooltip_types.md
-      new: true
+      new: false
     - name: 사용자 도구 설명
       href: financialchart_tooltip_templates.md
 - name: Doughnut Chart
   href: doughnutchart.md
-  new: true
+  new: false
 - name: Pie Chart
   href: piechart.md
-  new: true
+  new: false
 - name: Frameworks
   header: true
 - name: Excel Library
   href: excel_library.md
-  new: true
+  new: false
   items:
     - name: Using Cells
       href: excel_library_using_cells.md
-      new: true
+      new: false
     - name: Using Tables
       href: excel_library_using_tables.md
-      new: true
+      new: false
     - name: Using Workbooks
       href: excel_library_using_workbooks.md
-      new: true
+      new: false
     - name: Using Worksheets
       href: excel_library_using_worksheets.md
-      new: true
+      new: false
     - name: Working with Charts
       href: excel_library_working_with_charts.md
-      new: true
+      new: false
     # - name: Working with Grids
     #   href: excel_library_working_with_grid.md
     #   new: true
     - name: Working with Sparklines
       href: excel_library_working_with_sparklines.md
-      new: true
+      new: false
 - name: Gauges
   header: true
-  new: true
+  new: false
 - name: Bullet Graph
   href: bulletgraph.md
-  new: true
+  new: false
 - name: Linear Gauge
   href: lineargauge.md
-  new: true
+  new: false
 - name: Radial Gauge
   href: radialgauge.md
-  new: true
+  new: false
 - name: Styling & Themes
   header: true
 - name: Themes
@@ -215,14 +218,14 @@
       href: themes/palette.md
     - name: Schemas
       href: themes/schemas.md
-      new: true
+      new: false
     - name: Typography
       href: themes/typography.md
     - name: Global Themes
       href: themes/global-theme.md
     - name: Component Themes
       href: themes/component-themes.md
-      new: true
+      new: false
     - name: Examples
       href: themes/examples.md
 - name: Shadows
@@ -233,7 +236,7 @@
   header: true
 - name: Drop Down
   href: drop_down.md
-  new: true
+  new: false
 - name: Button
   href: button.md
 - name: Button Group
@@ -244,7 +247,7 @@
   href: switch.md
 - name: Radio & Radio Group
   href: radio_button.md
-  new: true
+  new: false
 - name: Label & Input
   href: label_input.md
 - name: Input Group
@@ -268,7 +271,7 @@
   href: for_of.md
 - name: Chip
   href: chip.md
-  new: true
+  new: false
 - name: Text Highlight
   href: texthighlight.md
   new: true
@@ -294,10 +297,10 @@
     new: true
   - name: Scrolling Strategies
     href: overlay_scroll.md
-    new: true
+    new: false
 - name: Drag and Drop
   href: drag_drop.md
-  new: true
+  new: false
 - name: Menus
   header: true
 - name: Navigation Drawer
@@ -350,4 +353,4 @@
   new: false
 - name: Localization
   href: localization.md
-  new: true
+  new: false
