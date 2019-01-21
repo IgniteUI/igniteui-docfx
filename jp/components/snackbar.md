@@ -43,14 +43,14 @@ export class AppModule {}
 
 #### Snackbar の表示
 
-Snackbar コンポーネントを表示するには、ボタン クリックで [`show()`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#show) メソッドを呼び出します。[`message`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#message) 入力を使用してテキスト メッセージを設定します。
+Snackbar コンポーネントを表示するには、ボタン クリックで [`show()`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#show) メソッドを呼び出します。
 
 ```html
 <!--sample.component.html-->
 
 <button igxButton="raised" (click)="snackbar.show()">Delete Message</button>
 <div>
-    <igx-snackbar #snackbar message="Message deleted"></igx-snackbar>
+    <igx-snackbar #snackbar>Message deleted</igx-snackbar>
 </div>
 ```
 
@@ -69,7 +69,7 @@ Snackbar コンポーネントを表示するには、ボタン クリックで 
 
 <button igxButton="raised" (click)="snackbar.show()">Send message</button>
 <div>
-  <igx-snackbar #snackbar message="Message sent" [autoHide]="false" actionText="CLOSE" (onAction)="close(snackbar)"></igx-snackbar>
+  <igx-snackbar #snackbar [autoHide]="false" actionText="CLOSE" (onAction)="close(snackbar)">Message sent</igx-snackbar>
 </div>
 ```
 
@@ -96,7 +96,7 @@ public close(element) {
 
 <button igxButton="raised" (click)="snackbar.show()">Send message</button>
 <div>
-  <igx-snackbar #snackbar message="Message sent" displayTime="1000"></igx-snackbar>
+  <igx-snackbar #snackbar displayTime="1000">Message sent</igx-snackbar>
 </div>
 ```
 
@@ -106,10 +106,69 @@ public close(element) {
     <iframe id="snackbar-sample-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/notifications/snackbar-sample-3" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 
+#### Customize Snackbar
+We can also customize the content of the Snackbar to display more complex elements than a message and a button. If we want to show the snackbar while loading a file, for example, a loading animation could be added to its content.
+
+```html
+<!--sample.component.html-->
+<button igxButton="raised" (click)="snackbar.show()">Load file</button>
+<div>
+  <igx-snackbar #snackbar displayTime="5000">File loading
+    <svg id="dots" height="20px">
+        <g id="dots" fill="#FFFFFF">
+            <circle id="dot1" cx="5" cy="18" r="2"></circle>
+            <circle id="dot2" cx="15" cy="18" r="2"></circle>
+            <circle id="dot3" cx="25" cy="18" r="2"></circle>
+        </g>
+    </svg>
+  </igx-snackbar>
+</div>
+```
+
+```scss
+//sample.component.scss
+#dots #dot1 {
+    animation: load 1s infinite;
+}
+
+#dots #dot2 {
+    animation: load 1s infinite;
+    animation-delay: 0.2s;
+}
+
+#dots #dot3 {
+    animation: load 1s infinite;
+    animation-delay: 0.4s;
+}
+
+@keyframes load {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+}
+```
+
+As a result, a message and three loading dots appear in the snackbar.
+
+<div class="sample-container loading" style="height: 170px">
+    <iframe id="snackbar-sample-iframe-1" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/notifications/snackbar-sample-5" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="snackbar-sample-iframe-1" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+
+</div>
+
 #### リストの Snackbar
 
 Snackbar の主な機能を説明しました。次の例はより複雑なサンプルにコンポーネントを追加します。通知およびアクションの元に戻す機能を提供する Snackbar を作成します。
- 
+
 削除可能な連絡先のリストを作成します。項目を削除後、メッセージおよびアクションを元に戻すボタンを含む Snackbar が表示されます。
 
 ```html
@@ -130,15 +189,15 @@ Snackbar の主な機能を説明しました。次の例はより複雑なサ�
                 <igx-icon color="#ff5252">delete</igx-icon>
             </span>
 		</div>
-		
+
     </igx-list-item>
-	
-    <igx-snackbar message="Contact deleted" actionText="Undo" (onAction)="restore()"></igx-snackbar>
+
+    <igx-snackbar actionText="Undo" (onAction)="restore()">Contact deleted</igx-snackbar>
 </igx-list>
 ```
 
 ```typescript
-//sample.component.ts 
+//sample.component.ts
 
 import { Component, OnInit, ViewChild } from "@angular/core";
 import { IgxSnackbarComponent } from 'igniteui-angular';
@@ -163,7 +222,7 @@ public ngOnInit() {
     {
         avatar: "assets/images/avatar/14.jpg",
         text: "Marianne Taylor"
-    }, 
+    },
     {
         avatar: "assets/images/avatar/17.jpg",
         text: "Ward Riley"
