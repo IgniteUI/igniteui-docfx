@@ -69,7 +69,7 @@ export class AppModule {}
 以下のいずれかのテンプレートを定義した場合、定義済みの名前を使用して参照してください。
 
 ### 項目テンプレート
-Use selector `[igxComboItem]`:
+セレクター `[igxComboItem]` の使用:
 
 ```html
 <igx-combo>
@@ -118,7 +118,7 @@ Use selector `[igxComboEmpty]`:
 ```
 
 ### テンプレートの追加
-Use selector `[igxComboAddItem]`:
+セレクター `[igxComboAddItem]` の使用:
 
 ```html
 <igx-combo>
@@ -128,8 +128,8 @@ Use selector `[igxComboAddItem]`:
 </igx-combo>
 ```
 
-### Toggle Icon Template
-Use selector `[igxComboToggleIcon]`:
+### アイコン テンプレートの切り替え
+セレクター `[igxComboToggleIcon]` の使用:
 
 ```html
 <igx-combo>
@@ -139,8 +139,8 @@ Use selector `[igxComboToggleIcon]`:
 </igx-combo>
 ```
 
-### Clear Icon Template
-Use selector `[igxComboClearIcon]`:
+### アイコン テンプレートのクリア
+セレクター `[igxComboClearIcon]` の使用:
 
 ```html
 <igx-combo>
@@ -152,9 +152,8 @@ Use selector `[igxComboClearIcon]`:
 
 <div class="divider--half"></div>
 
-### Templating combo input
-The above-mentioned selectors, `[igxComboClearIcon]` and `[igxComboToggleIcon]`, used with templates will change how the respective buttons appear in the combo input. 
-Passing content inside of the `igx-combo` also allows templating of the combo input similar to the way an `igx-input-group` can be templated (using `igx-prefix`, `igx-suffix` and `[igxLabel]`). The code snippet below illustrates how to add an appropriate label and `igx-prefix` to the combo input, as well as changing the `clear` button icon:
+### コンボ入力のテンプレート化
+
 ```html
     <igx-combo [data]="myMusic">
         ...
