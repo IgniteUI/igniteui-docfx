@@ -64,6 +64,26 @@ The **id** property is a string value and is the unique identifier of the grid w
 
 The [`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#autogenerate) property tells the **igx-grid** to auto generate the grid's [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) based on the data source fields. It will also try to deduce the appropriate data type for the column if possible. Otherwise, the developer needs to explicitly define the columns and the mapping to the data source fields.
 
+### Styling Configuration
+> [!NOTE]
+> The [**IgxGridComponent**]({environment:angularApiUrl}/classes/igxgridcomponent.html) uses **css grid layout**, which is **not supported in IE without prefixing**, consequently it will not render properly.
+
+In [**Angular**](https://angular.io/) most of the styles are prefixed implicitly thanks to the [Autoprefixer](https://www.npmjs.com/package/autoprefixer) plugin. 
+
+For prefixing **grid layouts** however, you need to enable the [Autoprefixer](https://www.npmjs.com/package/autoprefixer) **grid property** with the comment `/* autoprefixer grid:on */`.
+
+To facilitate your work, apply the comment in the `src/styles.scss` file.
+
+ ```scss
+ // src/styles.scss
+    @import '~igniteui-angular/lib/core/styles/themes/index';
+    @include igx-core();
+    @include igx-theme($default-palette);
+
+    /* autoprefixer grid:on */
+ ...
+ ``` 
+
 ### Columns configuration
 
 [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) is used to define the grid's [`columns`]({environment:angularApiUrl}/classes/igxgridcomponent.html#columns) collection and to enable features per column like **sorting** and **paging**. Cell, header, and footer templates are also available.
