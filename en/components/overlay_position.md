@@ -32,9 +32,10 @@ Position strategies determine where to display the component in the provided Igx
 > Will not try to reposition the element if the strategy is using  HorizontalDirection = Center / VerticalDirection = Middle.
 
 4. **Elastic** - Positions the element as in **Connected** positioning strategy and re-sizes the element to fit inside of the view port (re-calculating width and/or height) in case the element is partially out of view. `minSize :{ width: number, height: number}` can be passed in `positionSettings` to prevent resizing if it would put the element dimensions below a certain threshold. Defaults to:
-    | target          | horizontalDirection       |  verticalDirection       | horizontalStartPoint     | verticalStartPoint       | minSize |
-    |:----------------|:--------------------------|:-------------------------|:-------------------------|:-------------------------|---------|
-    | new Point(0, 0) | HorizontalAlignment.Right | VerticalAlignment.Bottom | HorizontalAlignment.Left | VerticalAlignment.Bottom |`{ width: 0, height: 0 }`|
+
+    | target          | horizontalDirection       |  verticalDirection       | horizontalStartPoint     | verticalStartPoint       | minSize               |
+    |:----------------|:--------------------------|:-------------------------|:-------------------------|:-------------------------|-----------------------|
+    | new Point(0, 0) | HorizontalAlignment.Right | VerticalAlignment.Bottom | HorizontalAlignment.Left | VerticalAlignment.Bottom |{ width: 0, height: 0 }|
 <div class="divider"></div>
 
 > [!NOTE]
