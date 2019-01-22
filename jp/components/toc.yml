@@ -106,11 +106,11 @@
   href: categorychart.md
   new: false
   items:
-    - name: 注釈とオーバーレイ
+    - name: 注釈
       href: categorychart_annotation_layers.md
       new: false
-    - name: チャートのタイプの選択
-      href: categorychart_explore_chart_types.md
+    - name: 軸オプション
+      href: categorychart_axis_options.md
       new: false
     - name: リアルタイム データ
       href: categorychart_real_time_data.md
@@ -121,11 +121,14 @@
     - name: 構成オプション
       href: categorychart_configuration_options.md
       new: false
-    - name: カスタム ツールチップ
-      href: categorychart_custom_tooltips.md
+    - name: ハイライト
+      href: categorychart_highlighting.md
       new: false
     - name: ツールチップ タイプ
       href: categorychart_tooltip_types.md
+      new: false
+    - name: ツールチップ テンプレート
+      href: categorychart_tooltip_templates.md
       new: false
 - name: Financial Chart
   href: financialchart.md
