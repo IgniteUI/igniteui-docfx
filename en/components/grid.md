@@ -66,7 +66,7 @@ The [`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#a
 
 ### Styling Configuration
 > [!NOTE]
-> The [**IgxGridComponent**]({environment:angularApiUrl}/classes/igxgridcomponent.html) uses **css grid layout**, which is **not supported in IE without prefixing**, consequently it will not render properly!
+> The [**IgxGridComponent**]({environment:angularApiUrl}/classes/igxgridcomponent.html) uses **css grid layout**, which is **not supported in IE without prefixing**, consequently it will not render properly.
 
 In [**Angular**](https://angular.io/) most of the styles are prefixed implicitly thanks to the [Autoprefixer](https://www.npmjs.com/package/autoprefixer) plugin. 
 
