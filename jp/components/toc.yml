@@ -124,6 +124,9 @@
     - name: カスタム ツールチップ
       href: categorychart_custom_tooltips.md
       new: false
+    - name: ツールチップ タイプ
+      href: categorychart_tooltip_types.md
+      new: false
 - name: Financial Chart
   href: financialchart.md
   new: false
@@ -158,6 +161,8 @@
     - name: ツールチップ タイプ
       href: financialchart_tooltip_types.md
       new: false
+    - name: ツールチップ テンプレート
+      href: financialchart_tooltip_templates.md
 - name: Doughnut Chart
   href: doughnutchart.md
   new: false
