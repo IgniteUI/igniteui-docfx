@@ -153,8 +153,7 @@ Use selector `[igxComboEmpty]`:
 <div class="divider--half"></div>
 
 ### コンボ入力のテンプレート化
-上記セレクターのテンプレートで使用される `[igxComboClearIcon]` と `[igxComboToggleIcon]` は、コンボ入力の各ボタンの表示を変更するために使用されます。 
-`igx-combo` 内のコンテンツを渡すことにより、`igx-input-group` をテンプレート化する方法と同様のコンボ入力のテンプレート化も可能になります。 (`igx-prefix`、`igx-suffix`、`[igxLabel]`) が可能になります。以下のコード スニペットは、適切なラベルや `igx-prefix` をコンボに追加する方法、ボタン アイコンを変更する方法を示します。
+上記セレクターのテンプレートで使用される `[igxComboClearIcon]` と `[igxComboToggleIcon]` は、コンボ入力の各ボタンの表示を変更するために使用されます。`igx-combo` 内のコンテンツを渡すことにより、`igx-input-group` をテンプレート化する方法と同様のコンボ入力のテンプレート化も可能になります。 (`igx-prefix`、`igx-suffix`、`[igxLabel]`) が可能になります。以下のコード スニペットは、適切なラベルや `igx-prefix` をコンボに追加する方法、ボタン アイコンを変更する方法を示します。
 ```html
     <igx-combo [data]="myMusic">
         ...
