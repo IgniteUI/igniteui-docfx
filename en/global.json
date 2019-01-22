@@ -6,5 +6,6 @@
     "_hasKRLang": true,
     "_ENBaseUrl": "https://www.infragistics.com/products/ignite-ui-angular/angular/",
     "_JABaseUrl": "https://jp.infragistics.com/products/ignite-ui-angular/angular/",
-    "_KRBaseUrl": "https://kr.infragistics.com/products/ignite-ui-angular/angular/"
+    "_KRBaseUrl": "https://kr.infragistics.com/products/ignite-ui-angular/angular/",
+    "_gitHubBtnLbl": "View page on "
 }
