@@ -275,7 +275,7 @@ This is the result.
 
 [`Special dates`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#specialdates) feature is using almost the same configuration principles as [`Disabled dates`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#disableddates). The difference here is dates `styling` and `interaction`. You are able to select and focus [`Special dates`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#specialdates).
 
-Lets add a [`Special dates`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#specialdates) to our [`igxCalendar`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html), we are going to create a [`DateRangeDescriptor`]({environment:angularApiUrl}/interfaces/daterangedescriptor.html) item of type [`DateRangeType.Specific`]({environment:angularApiUrl}/enums/daterangetype.html#specific) and pass array of dates as [`dateRange`]({environment:angularApiUrl}/classes/daterangedescriptor.html#daterange):
+Lets add a [`Special dates`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#specialdates) to our [`igxCalendar`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html), we are going to create a [`DateRangeDescriptor`]({environment:angularApiUrl}/interfaces/daterangedescriptor.html) item of type [`DateRangeType.Specific`]({environment:angularApiUrl}/enums/daterangetype.html#specific) and pass array of dates as [`dateRange`]({environment:angularApiUrl}/interfaces/daterangedescriptor.html#daterange):
 
 ```typescript
 export class CalendarSample7Component {
