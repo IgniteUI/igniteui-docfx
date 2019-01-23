@@ -21,7 +21,7 @@ The [`IgxExpansionPanel`]({environment:angularApiUrl}/classes/igxexpansionpanelc
 
 ## Usage
 ### Getting Started
-To use the [`IgxExpansionPanelComponent`]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html) we need to import the [**IgxExpansionPanelModule**]({environment:angularApiUrl}/classes/igxexpansionpanelmodule.html) in our **app.module**: 
+To use the [`IgxExpansionPanelComponent`]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html) we need to import the **IgxExpansionPanelModule** in our **app.module**:
 ```typescript
 // app.module.ts
 
@@ -90,7 +90,7 @@ The [`IgxExpansionPanelComponent`]({environment:angularApiUrl}/classes/igxexpans
 
 The css classes `.igx-expansion-panel__header` and `.igx-expansion-panel__body` are also exposed for styling the header and body.
 
-You can see the results below: 
+You can see the results below:
 <div class="sample-container loading" style="height: 400px;">
     <iframe id="expansion-sample-1-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/layouts/expansion-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -169,13 +169,13 @@ Configuring the position of the header icon can be done through the [`iconPositi
 ```
 > Note: The [`iconPosition`]({environment:angularApiUrl}/classes/igxexpansionpanelheadercomponent.html#iconposition) property works with `RTL` - e.g. an icon set to show up in **right** will show in the leftmost part of the header when RTL is on.
 
-We can also override the default icon that is used in the control by passing content in an [`igx-expansion-panel-icon`]({environment:angularApiUrl}/classes/igxexpansionpanelicondirective.html) tag:
+We can also override the default icon that is used in the control by passing content in an `igx-expansion-panel-icon` tag:
 ```html
 <!-- in expansion-component.component.html -->
     <igx-expansion-panel>
     ...
         <igx-expansion-panel-header [iconPosition]="'right'">
-        ... 
+        ...
             <igx-expansion-panel-icon>
                 <span class="example-icon" *ngIf="panel.collapsed">Show more</span>
                 <span class="example-icon" *ngIf="!panel.collapsed">Collapse</span>
@@ -335,7 +335,7 @@ The sample shows some user information and the key point here is passing the ani
 ...
 ```
 
-You can see the results below: 
+You can see the results below:
 <div class="sample-container loading" style="height: 350px;">
     <iframe id="expansion-sample-6-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/layouts/expansion-sample-6" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -512,7 +512,7 @@ export class ExpansionPanelComponent {
 </igx-expansion-panel>
 ...
 ```
-You can see the results below: 
+You can see the results below:
 <div class="sample-container loading" style="height: 550px;">
     <iframe id="expansion-sample-5-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/layouts/expansion-sample-5" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -614,7 +614,7 @@ export const data = {
 
 ```
 
-You can see the results below: 
+You can see the results below:
 <div class="sample-container loading" style="height: 600px;">
     <iframe id="expansion-sample-7-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/layouts/expansion-sample-7" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
