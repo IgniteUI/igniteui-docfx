@@ -7,6 +7,7 @@ const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
 const argv = require('yargs').argv;
 const fs = require('fs');
+const gfi = require("gulp-file-insert");
 const environmentVariablesPreConfig = require('./node_modules/igniteui-docfx-template/post-processors/PostProcessors/EnvironmentVariables/preconfig.json');
 
 const LANG = argv.lang === undefined ? "en" : argv.lang;
@@ -20,6 +21,16 @@ const DOCFX_CONF = `${DOCFX_PATH}/docfx.json`;
 const DOCFX_TEMPLATE = path.join(__dirname, `./node_modules/igniteui-docfx-template/template`);
 const DOCFX_SITE = `${DOCFX_PATH}/_site`;
 const DOCFX_ARTICLES = `${DOCFX_PATH}/components`;
+
+gulp.task('fileinsert', function() {
+    gulp.src(`${DOCFX_ARTICLES}/base_grids/grid-sorting.md`)
+    .pipe(gfi({
+        "<!-- #insert demo -->": `${DOCFX_ARTICLES}/tree-grid-docs/demo.md`,
+        "<!-- #insert API references -->": `${DOCFX_ARTICLES}/tree-grid-docs/api-refs.md`,
+        "<!-- #insert Additional resources -->": `${DOCFX_ARTICLES}/tree-grid-docs/additional-resources.md`
+    }))
+    .pipe(gulp.dest(`${DOCFX_ARTICLES}/tree-grid/`));
+});
 
 gulp.task('serve', ['build'], () => {
     browserSync.init({

@@ -79,6 +79,10 @@
 - name: Tree Grid
   href: treegrid.md
   new: true
+  items:
+    - name: Tree Grid Sorting
+      href: tree-grid/grid-sorting.md
+      new: true
 - name: List View
   href: list.md
 - name: Combo
