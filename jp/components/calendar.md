@@ -284,7 +284,7 @@ export class CalendarSample6Component {
 
 [`Special dates`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#specialdates) 機能は、[`Disabled dates`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#disableddates) とほとんど同じ構成を使用します。違いは、日付の `styling` と `interaction` です。また [`Special dates`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#specialdates) の選択やフォーカスが可能です。
 
-[`Special dates`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#specialdates) を [`igxCalendar`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) に追加し、[`DateRangeType.Specific`]({environment:angularApiUrl}/enums/daterangetype.html#specific) の [`DateRangeDescriptor`]({environment:angularApiUrl}/interfaces/daterangedescriptor.html) 項目を作成して [`dateRange`]({environment:angularApiUrl}/classes/daterangedescriptor.html#daterange) で日付の配列を渡します。
+[`Special dates`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#specialdates) を [`igxCalendar`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) に追加し、[`DateRangeType.Specific`]({environment:angularApiUrl}/enums/daterangetype.html#specific) の [`DateRangeDescriptor`]({environment:angularApiUrl}/interfaces/daterangedescriptor.html) 項目を作成して [`dateRange`]({environment:angularApiUrl}/interfaces/daterangedescriptor.html#daterange) で日付の配列を渡します。
 
 ```typescript
 export class CalendarSample7Component {
