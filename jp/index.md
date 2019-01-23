@@ -6,6 +6,6 @@ _language: jp
 <script type="text/javascript">
 (function() {
         let HOST = window.location.href;
-        window.location.href = HOST + 'components/grids_and_lists.html';
+        window.location.href = HOST + 'components/general/getting_started.html';
 })();
 </script>
