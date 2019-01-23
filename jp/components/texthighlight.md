@@ -19,7 +19,7 @@ Ignite UI for Angular の [`IgxTextHighlight`]({environment:angularApiUrl}/class
 <div class="divider--half"></div>
 
 > [!NOTE]
-> Ignite UI for Angular コンポーネントをプロジェクトに追加する前に、必要なすべての依存関係を構成し、プロジェクトのセットアップが正しく完了したことを確認してください。[インストール](https://jp.infragistics.com/products/ignite-ui-angular/getting-started#installation)のトピックで手順をご確認ください。
+> Ignite UI for Angular コンポーネントをプロジェクトに追加する前に、必要なすべての依存関係を構成し、プロジェクトのセットアップが正しく完了したことを確認してください。[インストール](general/getting_started.md)のトピックで手順をご確認ください。
 
 ### 使用方法
 
