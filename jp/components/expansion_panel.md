@@ -22,7 +22,7 @@ _language: ja
 
 ## 使用方法
 ### 作業の開始
-`IgxExpansionPanelComponent`]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html) を使用する場合、**IgxExpansionPanelModule** を **app.module** にインポートする必要があります。
+[`IgxExpansionPanelComponent`]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html) を使用する場合、**IgxExpansionPanelModule** を **app.module** にインポートする必要があります。
 ```typescript
 // app.module.ts
 
