@@ -1,54 +1,54 @@
 ---
-title: �A�b�v�f�[�g �K�C�h
-_description: ���̃g�s�b�N�ł́A�V�����o�[�W������ Ignite UI for Angular ���C�u�����ɃA�b�v�f�[�g������@�ɂ��Ă��Љ�܂��B
-_keywords: Ignite UI for Angular, �A�b�v�f�[�g, npm �p�b�P�[�W, �o�[�W����, UI �R���g���[��, Angular �E�B�W�F�b�g, web �E�B�W�F�b�g, UI �E�B�W�F�b�g, Angular, �l�C�e�B�u Angular �R���|�[�l���g �X�C�[�g, �l�C�e�B�u Angular �R���g���[��, �l�C�e�B�u Angular �R���|�[�l���g ���C�u����
+title: アップデート ガイド
+_description: このトピックでは、新しいバージョンの Ignite UI for Angular ライブラリにアップデートする方法についてご紹介します。
+_keywords: Ignite UI for Angular, アップデート, npm パッケージ, バージョン, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ
 _language: ja
 ---
 
-## �A�b�v�f�[�g �K�C�h
+## アップデート ガイド
 
-Ignite UI for Angular [�o�[�W���j���O](https://github.com/IgniteUI/igniteui-angular/wiki/Ignite-UI-for-Angular-versioning) �́A�ŏ��̐������R�[�h���T�|�[�g���� Angular �̃��W���[ �o�[�W�����ŁA2 �Ԗڂ̐����̓��W���[ �o�[�W���� �����[�X�̐����ł��B�d��ȕύX�̓��W���[ �����[�X�ƃ��W���[ �����[�X�̊ԂɃ����[�X�����ꍇ������܂��B
-**Ignite UI for Angular** �e�����[�X�̂��ׂĂ̕ύX�̈ꗗ�́A���i [CHANGELOG](https://github.com/IgniteUI/igniteui-angular/blob/master/CHANGELOG.md) ���������������B
+Ignite UI for Angular [バージョニング](https://github.com/IgniteUI/igniteui-angular/wiki/Ignite-UI-for-Angular-versioning) は、最初の数字がコードがサポートする Angular のメジャー バージョンで、2 番目の数字はメジャー バージョン リリースの数字です。重大な変更はメジャー リリースとメジャー リリースの間にリリースされる場合があります。
+**Ignite UI for Angular** 各リリースのすべての変更の一覧は、製品 [CHANGELOG](https://github.com/IgniteUI/igniteui-angular/blob/master/CHANGELOG.md) をご覧ください。
 
-Ignite UI for Angular �p�b�P�[�W�� `ng update` Schematics �Ŏ����o�[�W���� �}�C�O���[�V�������T�|�[�g���܂��B����ɂ��A�\���̂��邷�ׂĂ̏d��ȕύX (�Z���N�^�[�̖��O�A�N���X�A@Input/Output �v���p�e�B�̕ύX) ���}�C�O���[�V�������悤�Ƃ��܂��B�������A�}�C�O���[�V�����ł��Ȃ��ύX������ꍇ������܂��B�ʏ킱���̕ύX�̓^�C�v �X�N���v�g �A�v���P�[�V���� ���W�b�N�Ɋ֘A���Ă���A[�ڍ�](#additional-manual-changes)�͈ȉ������m�F���������B
+Ignite UI for Angular パッケージは `ng update` Schematics で自動バージョン マイグレーションをサポートします。これにより、可能性のあるすべての重大な変更 (セレクターの名前、クラス、@Input/Output プロパティの変更) をマイグレーションしようとします。ただし、マイグレーションできない変更がある場合もあります。通常これらの変更はタイプ スクリプト アプリケーション ロジックに関連しており、[詳細](#additional-manual-changes)は以下をご確認ください。
 
-�ŏ��� [**`ng update`**](https://angular.io/cli/update) �R�}���h�����s����
+最初に [**`ng update`**](https://angular.io/cli/update) コマンドを実行して
 ```cmd
 ng update
 ```
 
 > [!NOTE]
-> �A�b�v�f�[�g����O�ɂ��ׂĂ̕ύX���R�~�b�g���邱�Ƃ������߂��܂��B 
+> アップデートする前にすべての変更をコミットすることをお勧めします。 
 
-**Ignite UI for Angular** �p�b�P�[�W���X�V����ɂ́A�ȉ��̃R�}���h�����s���Ă��������B
+**Ignite UI for Angular** パッケージを更新するには、以下のコマンドを実行してください。
 ```cmd
 ng update igniteui-angular
 ```
-`Igniteui-angular` �̍X�V���́A@angular/core`, `@angular/cli` and `igniteui-cli` �p�b�P�[�W����v����o�[�W�����ɃA�b�v�f�[�g���Ă��������B 
-**Ignite UI CLI** �p�b�P�[�W���A�b�v�f�[�g����ꍇ�́A�ȉ��̃R�}���h�����s���Ă��������B
+`Igniteui-angular` の更新時は、@angular/core`, `@angular/cli` and `igniteui-cli` パッケージを一致するバージョンにアップデートしてください。 
+**Ignite UI CLI** パッケージをアップデートする場合は、以下のコマンドを実行してください。
 ```cmd
 ng update igniteui-cli
 ```
-**Angular Core** �p�b�P�[�W���A�b�v�f�[�g����ꍇ�́A�ȉ��̃R�}���h�����s���Ă��������B
+**Angular Core** パッケージをアップデートする場合は、以下のコマンドを実行してください。
 ```cmd
 ng update @angular/core
 ```
-**Angular CLI** �p�b�P�[�W���A�b�v�f�[�g����ɂ́A�ȉ��̃R�}���h���g�p���Ă��������B
+**Angular CLI** パッケージをアップデートするには、以下のコマンドを使用してください。
 ```cmd
 ng update @angular/cli
 ```
 
-## ���̑��̎蓮�̕ύX
+## その他の手動の変更
 
 
-�����I�ɃA�b�v�f�[�g�ł��Ȃ��ύX������܂��B�ȉ��̕ύX�̓o�[�W�����Ŕ������邽�߃Z�N�V�������Ƃɕ�����A�A�b�v�f�[�g���K�v�ȏꍇ�́A���݂̃o�[�W��������J�n���Ă���ȍ~�̃A�b�v�f�[�g��K�p��j�܂��B
+自動的にアップデートできない変更もあります。以下の変更はバージョンで発生するためセクションごとに分かれ、アップデートが必要な場合は、現在のバージョンから開始してそれ以降のアップデートを適用しjます。
 
-��: 6.2.4 ���� 7.1.0 �ɃA�b�v�f�[�g����ꍇ�A[6.x .. ����] �Z�N�V��������n�߂ĕύX��K�p���Ă����܂��B
+例: 6.2.4 から 7.1.0 にアップデートする場合、[6.x .. から] セクションから始めて変更を適用していきます。
 
-### 7.0.x ���� 7.1.x
- * �A�v���P�[�V������ IgxGrid �̏W�v���g�p����ꍇ�A`IgxSummaryOperand.operate()` ���\�b�h������f�[�^�ƂƂ��ɏ��ԂɌĂяo����ďW�v�s�ɕK�v�ȍ������v�Z���܂��B�J�X�^���W�v�I�y�����h�́A���\�b�h����ɓK�؂Ȓ����� IgxSummaryResult �̔z���Ԃ��܂��B
+### 7.0.x から 7.1.x
+ * アプリケーションで IgxGrid の集計を使用する場合、`IgxSummaryOperand.operate()` メソッドがからデータとともに順番に呼び出されて集計行に必要な高さを計算します。カスタム集計オペランドは、メソッドが常に適切な長さの IgxSummaryResult の配列を返します。
 
-	�o�[�W���� 7.1 �ȑO:
+	バージョン 7.1 以前:
 ```typescript	
 export class CustomSummary extends IgxNumberSummaryOperand {
 	public operate(data?: any[]): IgxSummaryResult[] {
@@ -61,7 +61,7 @@ export class CustomSummary extends IgxNumberSummaryOperand {
 }
 ```
 
-	�o�[�W���� 7.1 �ȍ~:
+	バージョン 7.1 以降:
 ```typescript
 export class CustomSummary extends IgxNumberSummaryOperand {
 	public operate(data?: any[]): IgxSummaryResult[] {
@@ -74,6 +74,6 @@ export class CustomSummary extends IgxNumberSummaryOperand {
 }
 ```
 
-### 6.0.x ���� 6.1.x
+### 6.0.x から 6.1.x
 
-* �A�v���P�[�V������ IgxCombo �R���g���[�����g�p����ꍇ�A`itemsMaxWidth` �I�v�V������ݒ肵�A���̃I�v�V������ `itemsWidth` �ɕύX���Ă��������B
+* アプリケーションで IgxCombo コントロールを使用する場合、`itemsMaxWidth` オプションを設定し、このオプションを `itemsWidth` に変更してください。
