@@ -292,6 +292,15 @@ The `igx-drop-down-item-group` displays all of the `igx-drop-down-item`s under i
 
 This disables the `Meats` group, as well as all of the child items inside!
 
+You can see the results in the sample below:
+<div class="sample-container" style="height: 400px">
+    <iframe id="dropdown-sample-5-iframe" src='{environment:demosBaseUrl}/data-entries/dropdown-sample-5' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dropdown-sample-5-iframe" data-demos-base-url="{environment:demosBaseUrl}">                stackblitz で開く
+    </button>
+</div>
+
 #### ドロップダウン メニュー
 [`igxDropDown`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) を設定してメニューとして使用できます。[`onSelection`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html#onselection) イベント ハンドラーで [`ISelectionEventArgs`]({environment:angularApiUrl}/interfaces/iselectioneventargs.html) [`cancel`]({environment:angularApiUrl}/interfaces/iselectioneventargs.html#cancel) メンバーを *true* に設定します。そのため選択した項目は開いているメニューに保存されずに選択が無効になります。[`ISelectionEventArgs`]({environment:angularApiUrl}/interfaces/iselectioneventargs.html) [`newSelection`]({environment:angularApiUrl}/interfaces/iselectioneventargs.html#newselection) メンバー値でクリックした項目を取得できます。
 
