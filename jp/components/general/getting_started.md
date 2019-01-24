@@ -9,7 +9,7 @@ _language: ja
 
 [`Ignite UI for Angular`](https://github.com/IgniteUI/igniteui-angular) は、マテリアルベース UI ウィジェット、コンポーネント & Sketch UI キットでインフラジスティックス Angular のディレクティブをサポートします。Ignite UI for Angular は、デスクトップ ブラウザー向けアプリ、高パフォーマンスな HTML5 や JavaScript アプリ、Google の Angular フレームワークを対象にしたプログレッシブ ウェブアプリ (PWA) を作成できます。
 
-Ignite UI for Angular を実行するには、以下の 2 つの手順に従い Ignite UI for Angular を含む Angular アプリをシステムでビルド、実行する準備をしてください。
+Ignite UI for Angular を実行するには、以下の 2 つの手順に従い Ignite UI for Angular を含む Angular アプリをシステムでビルド、実行する準備を行います。
 
 作業を開始する前にシステムに NodeJS と Visual Studio Code をインストールする必要があります。Angular のモダン ウェブ開発は、ブラウザーで実行する ASP.NET アプリのようなもので サーバーで ASP.NET ランタイム配備が必要です。Angular アプリの開発では、Visual Studio Code が最適です。作業を開始する前に Node.js と Visual Studio Code をインストールします。
 
@@ -35,7 +35,7 @@ Ignite UI for Angular を実行するには、以下の 2 つの手順に従い 
 
 ## Ignite UI for Angular のインストール
 
-ここまですべての準備が整いました。アプリケーションを作成しましょう。
+これですべての準備が整いました。さっそくアプリケーションを作成しましょう。
 
 ### Ignite UI CLI を使用してアプリケーションを作成
 
@@ -63,7 +63,7 @@ ig
 
 #### コマンドの使用
 
- Ignite UI CLI [`コマンド`](https://github.com/IgniteUI/igniteui-cli/wiki#available-commands)を使用して常に Ignite UI プロジェクトを生成して新しいコンポーネントを作成やプロジェクトを提供できます。以下のコマンドを使用できます。
+Ignite UI CLI [`コマンド`](https://github.com/IgniteUI/igniteui-cli/wiki#available-commands) を使用し、Ignite UI プロジェクトを生成して新しいコンポーネントの作成やプロジェクトの提供が可能です。以下のコマンドを使用できます。
 
 ```cmd
 ig new <project name> --framework=angular --type=igx-ts 
@@ -72,8 +72,8 @@ ig add <component/template> <component_name>
 ig start 
 ```
 
-- **Component/template** 値の全リストは[`こちら`](https://github.com/IgniteUI/igniteui-cli/wiki/add#ignite-ui-for-angular-templates)です。
-- 開発者が提供する**プロジェクト名**と**コンポーネント_名**の両方がカスタム値です。
+- **Component/template** 値の完全リストは[`こちら`](https://github.com/IgniteUI/igniteui-cli/wiki/add#ignite-ui-for-angular-templates)です。
+- 開発者は、**プロジェクト名**と**コンポーネント_名**の両方をカスタム値に設定できます。
 
 igxGrid コントロールで新しい Ignite UI for Angular プロジェクトを作成する例です。
 
@@ -84,7 +84,7 @@ ig add grid newGrid
 ig start
 ```
 
-シンプルなコマンドの実行した後、新しいプロジェクトがビルドされて提供されます。これによりデフォルト ブラウザーが自動的に開かれ、グリッド コントロールをインスペクトしてプロジェクトに変更を加えることができます。
+シンプルなコマンドを実行すると、新しいプロジェクトがビルドされます。これによりデフォルト ブラウザーが自動的に開かれ、グリッド コントロールをインスペクトしてプロジェクトに変更を加えることができます。
 
 ### 既存のアプリケーションに Ignite UI for Angular を追加します。
 
@@ -100,7 +100,7 @@ ng add igniteui-angular
 
 ここまでで Ignite UI for Angular コンポーネントを使用する準備ができました。
 
-### コンポーネントを自動的に追加
+### コンポーネントを自動追加
 
 #### モジュールのインポートとコンポーネントの使用
  Ignite UI CLI を使用して簡単に新しいコンポーネントをアプリケーションに追加することができます。
@@ -112,7 +112,7 @@ ig add
 > [!NOTE]
 > アプリケーションを Ignite UI CLI を使用して作成した場合、または **ng add igniteui-angular** コマンドで Ignite UI for Angular を追加した Angular CLI を使用して作成した場合は、[`ig add`](https://github.com/IgniteUI/igniteui-cli/wiki/add) コマンドを使用できます。
 
-メニューのオプションを介してアプリケーションに追加するコンポーネントを選択し、新しいコンポーネントをプロジェクトに追加し、ページのどこにでも使用できます。
+メニューのオプションでアプリケーションに追加するコンポーネントを選択、次に新しいコンポーネントをプロジェクトに追加するとページのどこでも使用できます。
 
 #### アプリケーションの実行
 
@@ -122,7 +122,7 @@ ig add
 ig start
 ```
 
-### コンポーネントを自動的に追加
+### コンポーネントを自動追加
 
 #### モジュールのインポート
 

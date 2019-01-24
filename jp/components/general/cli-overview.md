@@ -11,14 +11,14 @@ _language: ja
 
 ### 作業の開始
 
-お好みのターミナルを開き、[`Ignite UI CLI`](https://github.com/IgniteUI/igniteui-cli) をインストールします。
+ターミナルを開き、[`Ignite UI CLI`](https://github.com/IgniteUI/igniteui-cli) をインストールします。
 ```cmd
 npm install -g igniteui-cli 
 ```
  [`Ignite UI CLI`](https://github.com/IgniteUI/igniteui-cli) のインストール後、ツールを開始する 2 つのオプション/モデル (ガイドまたはコマンド) があります。
 
 #### ガイドの使用
-アプリケーションを最短でブートストラップする最も簡単な方法は、Ignite UI CLI [`ガステップバイステップ モード`](https://github.com/IgniteUI/igniteui-cli/wiki/step-by-step) を使用する方法です。アプリをビルドしたあとは 1 コマンドで開始できます。 
+アプリケーションを最短でブートストラップする最も簡単な方法は、Ignite UI CLI [`ステップバイステップ モード` (英語)](https://github.com/IgniteUI/igniteui-cli/wiki/step-by-step) を使用する方法です。アプリをビルドしたあとは 1 コマンドで開始できます。 
 ```cmd
 ig
 ```
@@ -28,7 +28,7 @@ ig
        href="https://youtu.be/QK_NsdtdA70" target="_blank">
         <img src="../../images/general/play.svg" style="vertical-align: middle;" />
     </a>
-    <p style="text-align:center;">最初の Ignite UI CLI アプリを作成</p>
+    <p style="text-align:center;">はじめての Ignite UI CLI アプリを作成</p>
 </div>
 
 #### コマンドの使用
