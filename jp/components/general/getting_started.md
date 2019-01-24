@@ -9,7 +9,7 @@ _language: ja
 
 [`Ignite UI for Angular`](https://github.com/IgniteUI/igniteui-angular) は、マテリアルベース UI ウィジェット、コンポーネント & Sketch UI キットでインフラジスティックス Angular のディレクティブをサポートします。Ignite UI for Angular は、デスクトップ ブラウザー向けアプリ、高パフォーマンスな HTML5 や JavaScript アプリ、Google の Angular フレームワークを対象にしたプログレッシブ ウェブアプリ (PWA) を作成できます。
 
-Ignite UI for Angular を実行するには、以下の 2 つの手順に従い Ignite UI for Angular を含む Angular アプリをシステムでビルド、実行する準備をしてください。
+Ignite UI for Angular を実行するには、以下の 2 つの手順に従い Ignite UI for Angular を含む Angular アプリをシステムでビルド、実行する準備を行います。
 
 作業を開始する前にシステムに NodeJS と Visual Studio Code をインストールする必要があります。Angular のモダン ウェブ開発は、ブラウザーで実行する ASP.NET アプリのようなもので サーバーで ASP.NET ランタイム配備が必要です。Angular アプリの開発では、Visual Studio Code が最適です。作業を開始する前に Node.js と Visual Studio Code をインストールします。
 
@@ -35,7 +35,7 @@ Ignite UI for Angular を実行するには、以下の 2 つの手順に従い 
 
 ## Ignite UI for Angular のインストール
 
-ここまですべての準備が整いました。アプリケーションを作成しましょう。
+これですべての準備が整いました。さっそくアプリケーションを作成しましょう。
 
 ### Ignite UI CLI を使用してアプリケーションを作成
 
@@ -100,7 +100,7 @@ ng add igniteui-angular
 
 ここまでで Ignite UI for Angular コンポーネントを使用する準備ができました。
 
-### コンポーネントを自動的に追加
+### コンポーネントを自動追加
 
 #### モジュールのインポートとコンポーネントの使用
  Ignite UI CLI を使用して簡単に新しいコンポーネントをアプリケーションに追加することができます。
@@ -122,7 +122,7 @@ ig add
 ig start
 ```
 
-### コンポーネントを自動的に追加
+### コンポーネントを自動追加
 
 #### モジュールのインポート
 
