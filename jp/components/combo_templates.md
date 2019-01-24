@@ -133,8 +133,8 @@ Use selector `[igxComboEmpty]`:
 
 ```html
 <igx-combo>
-    <ng-template igxComboToggleIcon let-control>
-        <igx-icon>{{ control.collapsed ? 'remove_circle' : 'remove_circle_outline'}}</igx-icon>
+    <ng-template igxComboToggleIcon let-collapsed>
+        <igx-icon>{{ collapsed ? 'remove_circle' : 'remove_circle_outline'}}</igx-icon>
     </ng-template>
 </igx-combo>
 ```
