@@ -63,7 +63,7 @@ ig
 
 #### コマンドの使用
 
- Ignite UI CLI [`コマンド`](https://github.com/IgniteUI/igniteui-cli/wiki#available-commands)を使用して常に Ignite UI プロジェクトを生成して新しいコンポーネントを作成やプロジェクトを提供できます。以下のコマンドを使用できます。
+Ignite UI CLI [`コマンド`](https://github.com/IgniteUI/igniteui-cli/wiki#available-commands) を使用し、Ignite UI プロジェクトを生成して新しいコンポーネントの作成やプロジェクトの提供が可能です。以下のコマンドを使用できます。
 
 ```cmd
 ig new <project name> --framework=angular --type=igx-ts 
@@ -72,8 +72,8 @@ ig add <component/template> <component_name>
 ig start 
 ```
 
-- **Component/template** 値の全リストは[`こちら`](https://github.com/IgniteUI/igniteui-cli/wiki/add#ignite-ui-for-angular-templates)です。
-- 開発者が提供する**プロジェクト名**と**コンポーネント_名**の両方がカスタム値です。
+- **Component/template** 値の完全リストは[`こちら`](https://github.com/IgniteUI/igniteui-cli/wiki/add#ignite-ui-for-angular-templates)です。
+- 開発者は、**プロジェクト名**と**コンポーネント_名**の両方をカスタム値に設定できます。
 
 igxGrid コントロールで新しい Ignite UI for Angular プロジェクトを作成する例です。
 
@@ -84,7 +84,7 @@ ig add grid newGrid
 ig start
 ```
 
-シンプルなコマンドの実行した後、新しいプロジェクトがビルドされて提供されます。これによりデフォルト ブラウザーが自動的に開かれ、グリッド コントロールをインスペクトしてプロジェクトに変更を加えることができます。
+シンプルなコマンドを実行すると、新しいプロジェクトがビルドされます。これによりデフォルト ブラウザーが自動的に開かれ、グリッド コントロールをインスペクトしてプロジェクトに変更を加えることができます。
 
 ### 既存のアプリケーションに Ignite UI for Angular を追加します。
 
@@ -112,7 +112,7 @@ ig add
 > [!NOTE]
 > アプリケーションを Ignite UI CLI を使用して作成した場合、または **ng add igniteui-angular** コマンドで Ignite UI for Angular を追加した Angular CLI を使用して作成した場合は、[`ig add`](https://github.com/IgniteUI/igniteui-cli/wiki/add) コマンドを使用できます。
 
-メニューのオプションを介してアプリケーションに追加するコンポーネントを選択し、新しいコンポーネントをプロジェクトに追加し、ページのどこにでも使用できます。
+メニューのオプションでアプリケーションに追加するコンポーネントを選択、次に新しいコンポーネントをプロジェクトに追加するとページのどこでも使用できます。
 
 #### アプリケーションの実行
 
