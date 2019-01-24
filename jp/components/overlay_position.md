@@ -33,6 +33,7 @@ _language: ja
 > ストラテジが HorizontalDirection = Center / VerticalDirection = Middle を使用している場合、要素を再配置しないようにします。
 
 4. **Elastic** - **Connected** 配置ストラテジとして要素を配置し、要素の一部が表示範囲外の場合に要素をサイズ変更してビューポイント内 (幅と高さまたはそのいずれかを再計算) にフィットさせます。 `minSize :{ width: number, height: number}` を `positionSettings` へ渡して要素のディメンションが特定のしきい値以下の場合にサイズ変更します。デフォルト値は:
+    
     | target          | horizontalDirection       |  verticalDirection       | horizontalStartPoint     | verticalStartPoint       | minSize               |
     |:----------------|:--------------------------|:-------------------------|:-------------------------|:-------------------------|-----------------------|
     | new Point(0, 0) | HorizontalAlignment.Right | VerticalAlignment.Bottom | HorizontalAlignment.Left | VerticalAlignment.Bottom |{ width: 0, height: 0 }|
