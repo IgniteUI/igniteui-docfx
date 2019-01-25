@@ -217,7 +217,7 @@ To provide more useful visual information, use [isHeader]({environment:angularAp
 
 If the sample is configured properly, a list  of countries should be displayed as a group under EU header, UK as a non-interactive item, and Bulgaria as selected item.
 
-<div class="sample-container" style="height: 400px">
+<div class="sample-container" style="height: 298px">
     <iframe id="dropdown-sample-3-iframe" src='{environment:demosBaseUrl}/data-entries/dropdown-sample-3' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -296,7 +296,7 @@ The `igx-drop-down-item-group` displays all of the `igx-drop-down-item`s under i
 This disables the `Meats` group, as well as all of the child items inside!
 
 You can see the results in the sample below:
-<div class="sample-container" style="height: 440px">
+<div class="sample-container" style="height: 298px">
     <iframe id="dropdown-sample-5-iframe" src='{environment:demosBaseUrl}/data-entries/dropdown-sample-5' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
