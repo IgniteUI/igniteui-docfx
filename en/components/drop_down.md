@@ -296,7 +296,7 @@ The `igx-drop-down-item-group` displays all of the `igx-drop-down-item`s under i
 This disables the `Meats` group, as well as all of the child items inside!
 
 You can see the results in the sample below:
-<div class="sample-container" style="height: 400px">
+<div class="sample-container" style="height: 440px">
     <iframe id="dropdown-sample-5-iframe" src='{environment:demosBaseUrl}/data-entries/dropdown-sample-5' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
