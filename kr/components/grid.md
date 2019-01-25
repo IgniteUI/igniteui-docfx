@@ -13,7 +13,7 @@ _language: kr
 ### 데모
 
 <div class="sample-container loading" style="height:650px">
-    <iframe id="grid-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-boston-marathon' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="grid-sample-iframe" src='{environment:demosBaseUrl}/grid/grid' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
