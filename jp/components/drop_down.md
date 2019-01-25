@@ -278,7 +278,7 @@ export class MyCustomDropDownComponent {
     </igx-drop-down>
 ```
 
-The `igx-drop-down-item-group` displays all of the `igx-drop-down-item`s under it in a grouped fashion, making it easier for users to differentiate the separate categories of foods in the example. The group also has the additional functionality of disabling `igx-drop-down-item`s inside of its body. For example, lets say we do not the `Meats` food group to be selectable in our drop down. Instead of disabling all of the entries in `Meats` separately, we can do the following:
+`igx-drop-down-item-group` は、グループ形式ですべての `igx-drop-down-item` を表示することにより、ユーザーが食品のカテゴリを区別しやすくなります。更にグループにはボディの `igx-drop-down-item` を無効にする機能があります。たとえば、`Meats` 食品グループのドロップダウン選択を無効にする場合です。すべての `Meats` のエントリすべての個別に無効にする代わりに、以下が可能です。
 
 ```html
     <igx-drop-down>
@@ -290,9 +290,9 @@ The `igx-drop-down-item-group` displays all of the `igx-drop-down-item`s under i
     </igx-drop-down>
 ``` 
 
-This disables the `Meats` group, as well as all of the child items inside!
+これにより `Meats` とすべての子項目が無効になります。
 
-You can see the results in the sample below:
+以下のサンプルで結果を確認できます。
 <div class="sample-container" style="height: 440px">
     <iframe id="dropdown-sample-5-iframe" src='{environment:demosBaseUrl}/data-entries/dropdown-sample-5' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
