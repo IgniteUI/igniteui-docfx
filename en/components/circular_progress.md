@@ -119,7 +119,7 @@ And now if we set up everything correctly we should have the folllowing displaye
 
 #### Indeterminate progress
 
-If you want to track a process, which does not provide predetermined end condition, you can set the [`indeterminate`]({environment:angularApiUrl}/classes/igxcircularprogressbarcomponent.html#indeterminate) input property with `true`.
+If you want to track a process, which does not provide predetermined end condition, you can set the [`indeterminate`]({environment:angularApiUrl}/classes/igxcircularprogressbarcomponent.html#indeterminate) input property to `true`.
 Applying this binding to your progress bar will result:
 
 <div class="sample-container loading" style="height:300px">
