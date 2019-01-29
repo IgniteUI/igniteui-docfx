@@ -84,12 +84,12 @@ _language: ja
 ```scss
 
 // Import dialog-group component and theme styles
-@import '~igniteui-angular/lib/core/styles//components/dialog/dialog-component';
-@import '~igniteui-angular/lib/core/styles//components/dialog/dialog-theme';
+@import '~igniteui-angular/lib/core/styles/components/dialog/dialog-component';
+@import '~igniteui-angular/lib/core/styles/components/dialog/dialog-theme';
 
 // Import input-group component and theme styles
-@import '~igniteui-angular/lib/core/styles//components/input/input-group-component';
-@import '~igniteui-angular/lib/core/styles//components/input/input-group-theme';
+@import '~igniteui-angular/lib/core/styles/components/input/input-group-component';
+@import '~igniteui-angular/lib/core/styles/components/input/input-group-theme';
 
 ```
 
