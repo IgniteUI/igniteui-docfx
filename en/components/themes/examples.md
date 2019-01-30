@@ -379,7 +379,7 @@ Now we can easily change our defined themes with only a `click` event:
 </div>
 <div class="divider--half"></div>
 
-###API
+### API
 
 * [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 * [IgxGrid Filtering Styles]({environment:sassApiUrl}/index.html#function-igx-grid-filtering-theme)
@@ -390,6 +390,7 @@ Now we can easily change our defined themes with only a `click` event:
 * [Dark Components Schema]({environment:sassApiUrl}/index.html#variable-dark-schema)
 * [Dark Grid Schema]({environment:sassApiUrl}/index.html#variable-_dark-grid)
 * [Dark Grid Paginator Schema]({environment:sassApiUrl}/index.html#variable-_dark-grid-pagination)
+* [IgxOverlay Styles]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
 
 ### Additional Resources
 <div class="divider--half"></div>

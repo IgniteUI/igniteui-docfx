@@ -110,8 +110,9 @@ When igxCombo is opened, allow custom values are enabled and add item button is 
 ## API
 <div class="divider--half"></div>
 
-* IgxComboComponent [**API Reference**]({environment:angularApiUrl}/classes/igxcombocomponent.html) and
-[**Themes Reference**]({environment:sassApiUrl}/index.html#themes-mixin-igx-combo).
+* [IgxComboComponent]({environment:angularApiUrl}/classes/igxcombocomponent.html) 
+* [IgxComboComponent Styles]({environment:sassApiUrl}/index.html#themes-mixin-igx-combo)
+* [IgxOverlay Styles]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
 
 ## Known Issues
 
