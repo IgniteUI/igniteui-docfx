@@ -320,13 +320,14 @@ Now we can easily change our defined themes with only a `click` event:
 </div>
 <div class="divider--half"></div>
 
-###API
+### API
 
 * [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 * [IgxGrid Filtering Styles]({environment:sassApiUrl}/index.html#function-igx-grid-filtering-theme)
 * [IgxGrid Paginator Styles]({environment:sassApiUrl}/index.html#function-igx-grid-paginator-theme)
 * [IgxDialogComponent Styles]({environment:sassApiUrl}/index.html#function-igx-dialog-theme)
 * [IgxInputGroupComponent Styles]({environment:sassApiUrl}/index.html#function-igx-input-group-theme) 
+* [IgxOverlay Styles]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
 
 ### Additional Resources
 <div class="divider--half"></div>

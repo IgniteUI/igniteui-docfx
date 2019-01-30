@@ -111,8 +111,9 @@ igxCombo が開いて、カスタム値が有効で、「項目の追加」ボ�
 ### 入力
 <div class="divider--half"></div>
 
-* IgxComboComponent [**API 参照**]({environment:angularApiUrl}/classes/igxcombocomponent.html) と
-[**テーマの参照**]({environment:sassApiUrl}/index.html#themes-mixin-igx-combo)。
+* [IgxComboComponent]({environment:angularApiUrl}/classes/igxcombocomponent.html) 
+* [IgxComboComponent Styles]({environment:sassApiUrl}/index.html#themes-mixin-igx-combo)
+* [IgxOverlay Styles]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
 
 ## 既知の問題
 
