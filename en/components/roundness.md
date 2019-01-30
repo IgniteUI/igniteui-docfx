@@ -36,7 +36,7 @@ So for example, if you set a value of 30px for "flat-border-radius" the theming 
 Let's see how we can change the default values for the buttons from the example above.
 
 ```scss
-// IIn the context of the button the min and max values are 0 - 20px, 
+// In the context of the button the min and max values are 0 - 20px, 
 // For all baseline values see the table at the bottom of the page
 
 $myButtons-theme: (
