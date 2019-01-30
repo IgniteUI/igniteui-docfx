@@ -169,13 +169,13 @@ We have now made a theme for each component in our app. The last step is just to
 
 #### Using Schemas
 
-Another fun approach for styling is the usage of schemas. 
+Creating schemas is listing properties that a theme should have. They are the 'recipes' component themes use when generating theme maps.
 
 To get started, first you have import the default schemas([light-schema]({environment:sassApiUrl}/index.html#variable-light-schema) and [dark-schema]({environment:sassApiUrl}/index.html#variable-dark-schema)), which are going to be extended later:
 
 ```scss
 ...
-@import '~igniteui-angular/lib/core/styles/themes/schemas/_index';
+@import '~igniteui-angular/lib/core/styles/themes/utilities';
 ...
 ```
 Every component has its own light and dark schema, so if you want to make a custom one, you have to extend one of the components default schemas:
