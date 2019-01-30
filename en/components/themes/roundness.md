@@ -29,12 +29,14 @@ The default value for "flat-border-radius" is set to 0.2 which in the end will b
 We decided not to limit You to set just a fraction between the min and max values, but to give you an option to use whatever value you want. 
 
 If you decide to go with a unitless value from 0 to 1, you will automatically be limited by the theming engine to min and max boundary for each component.
-If you pass any kind of unit, px, em, rem, %... you will no longer be restricted to the boundaries for the component. 
+If you pass any kind of unit:, px, em, rem, %... you will no longer be restricted to the boundaries for the component. 
 So for example, if you set a value of 30px the theming engine will ignore the boundaries of maximum 20px and will set the border-radius to 30px.
 
 Let see how we can change the default values for those buttons from the above example.
 
 ```scss
+// In the context of button the min and max values are 0 - 20px
+
 $myButtons-theme: (
     $flat-border-radius: .5, // will resolve to 10px
     $raised-border-radius: 30px, // Will resolve to 30px
@@ -66,10 +68,10 @@ The table shows the default border-radius for each component and its min and max
 | **input(Search)**      | Yes; Yes; Yes; Yes;        | 0 - 20px              | 4px                       |
 | **List**               | Yes; Yes; Yes; Yes;        | 0 - 24px              | 0                         |
 | **List item**          | Yes; Yes; Yes; Yes;        | 0 - 24px              | 0                         |
-| **Navdrawer**          | Yes; Yes; Yes; Yes;        | 0 - 36px              | 0px                       |
+| **Navdrawer**          | Yes; Yes; Yes; Yes;        | 0 - 36px              | 0                      |
 | **Snackbar**           | Yes; Yes; Yes; Yes;        | 0 - 24px              | 4px                       |
 | **Tooltip**            | Yes; Yes; Yes; Yes;        | 0 - 16px              | 4px                       |
-| **Toast**              | Yes; Yes; Yes; Yes;        | 0 - 24px              | 4px                       |
+| **Toast**              | Yes; Yes; Yes; Yes;        | 0 - 26px              | 26px                       |
 
 
 <div class="divider--half"></div>
