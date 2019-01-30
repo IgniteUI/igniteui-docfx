@@ -29,8 +29,6 @@ The default value for "flat-border-radius" is set to 0.2 which in the end will b
 We decided to not limit you to fractions only. You can use whatever unit you want - pixels, relative units like em or rem, etc., allowing you to overwrite the implicit border radius limits.
 
 If you decide to go with a fractions, you will automatically be limited by the theming engine to min and max boundary for each component.
-If you pass any kind of unit: px, em, rem, %... you will no longer be restricted to the boundaries for the component. 
-So for example, if you set a value of 30px for "flat-border-radius" the theming engine will ignore the button boundaries of maximum 20px and will set the border-radius to 30px.
 
 ### How to use?
 Let's see how we can change the default values for the buttons from the example above.
