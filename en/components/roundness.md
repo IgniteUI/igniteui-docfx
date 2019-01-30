@@ -35,7 +35,8 @@ So for example, if you set a value of 30px the theming engine will ignore the bo
 Let see how we can change the default values for those buttons from the above example.
 
 ```scss
-// In the context of button the min and max values are 0 - 20px
+// In the context of button the min and max values are 0 - 20px, 
+// For all baseline values see the table on the bottom of the page
 
 $myButtons-theme: (
     $flat-border-radius: .5, // will resolve to 10px
