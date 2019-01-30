@@ -132,8 +132,8 @@ export class AvatarComponent extends Component {
 
 // Import all required functions and mixins
 @import '~igniteui-angular/lib/core/styles/themes/utilities';
-@import '~igniteui-angular/lib/core/styles/components/avatar-theme';
-@import '~igniteui-angular/lib/core/styles/components/avatar-component';
+@import '~igniteui-angular/lib/core/styles/components/avatar/avatar-theme';
+@import '~igniteui-angular/lib/core/styles/components/avatar/avatar-component';
 
 $avatar-theme: igx-avatar-theme($initials-background: royalblue);
 
@@ -179,8 +179,8 @@ $badge-theme: igx-badge-theme($background-color: white);
 
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/utilities';
-@import '~igniteui-angular/lib/core/styles/components/avatar-theme';
-@import '~igniteui-angular/lib/core/styles/components/avatar-component';
+@import '~igniteui-angular/lib/core/styles/components/avatar/avatar-theme';
+@import '~igniteui-angular/lib/core/styles/components/avatar/avatar-component';
 
 // Disable legacy support first.
 $igx-legacy-support: false;
