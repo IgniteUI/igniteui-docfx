@@ -228,6 +228,8 @@
       new: false
     - name: Examples
       href: themes/examples.md
+    - name: Componets Roundness
+      href: themes/roundness.md
 - name: Shadows
   href: shadows.md
 - name: Display Density
