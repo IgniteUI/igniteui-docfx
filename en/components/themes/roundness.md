@@ -48,7 +48,7 @@ $myButtons-theme: (
 ### Baseline roundness values
 The table shows the default border-radius for each component and its min and max boundaries
 
-|                        | **border-radius: corners** | **Min/Max boundaries** | **Baseline theme values** |
+|                        | **Corners can be shaped?** | **Min/Max boundaries** | **Baseline theme values** |
 |------------------------|----------------------------|-----------------------|---------------------------|
 | **Button(Flat)**       | Yes; Yes; Yes; Yes;        | 0 - 20px              | 4px                       |
 | **Button(Raised)**     | Yes; Yes; Yes; Yes;        | 0 - 20px              | 4px                       |
