@@ -68,15 +68,15 @@ Our app will have:
 ```scss
 // Import grid component and theme styles
 @import '~igniteui-angular/lib/core/styles/components/grid/grid-component';
-@import '~igniteui-angular/lib/core/styles//components/grid/grid-theme';
+@import '~igniteui-angular/lib/core/styles/components/grid/grid-theme';
 
 // Import grid-paginator component and theme styles
-@import '~igniteui-angular/lib/core/styles//components/grid-paginator/grid-paginator-component';
-@import '~igniteui-angular/lib/core/styles//components/grid-paginator/grid-paginator-theme';
+@import '~igniteui-angular/lib/core/styles/components/grid-paginator/grid-paginator-component';
+@import '~igniteui-angular/lib/core/styles/components/grid-paginator/grid-paginator-theme';
 
 // Import grid-filtering component and theme styles
-@import '~igniteui-angular/lib/core/styles//components/grid-filtering/grid-filtering-component';
-@import '~igniteui-angular/lib/core/styles//components/grid-filtering/grid-filtering-theme';
+@import '~igniteui-angular/lib/core/styles/components/grid-filtering/grid-filtering-component';
+@import '~igniteui-angular/lib/core/styles/components/grid-filtering/grid-filtering-theme';
 
 ```
 - [**Igx-Dialog**](../dialog.md) with embedded [**Igx-Input-Group**](../input_group.md):
@@ -84,12 +84,12 @@ Our app will have:
 ```scss
 
 // Import dialog-group component and theme styles
-@import '~igniteui-angular/lib/core/styles//components/dialog/dialog-component';
-@import '~igniteui-angular/lib/core/styles//components/dialog/dialog-theme';
+@import '~igniteui-angular/lib/core/styles/components/dialog/dialog-component';
+@import '~igniteui-angular/lib/core/styles/components/dialog/dialog-theme';
 
 // Import input-group component and theme styles
-@import '~igniteui-angular/lib/core/styles//components/input/input-group-component';
-@import '~igniteui-angular/lib/core/styles//components/input/input-group-theme';
+@import '~igniteui-angular/lib/core/styles/components/input/input-group-component';
+@import '~igniteui-angular/lib/core/styles/components/input/input-group-theme';
 
 ```
 

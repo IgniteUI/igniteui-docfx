@@ -108,8 +108,8 @@
     - name: 주석 및 오버레이
       href: categorychart_annotation_layers.md
       new: false
-    - name: 차트 유형 탐색
-      href: categorychart_explore_chart_types.md
+    - name: Axis Options
+      href: categorychart_axis_options.md
       new: false
     - name: 실시간 데이터
       href: categorychart_real_time_data.md

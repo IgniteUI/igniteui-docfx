@@ -22,7 +22,7 @@ _language: ja
 
 ## 使用方法
 ### 作業の開始
-`IgxExpansionPanelComponent`]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html) を使用する場合、[**IgxExpansionPanelModule**]({environment:angularApiUrl}/classes/igxexpansionpanelmodule.html) を **app.module** にインポートする必要があります。 
+[`IgxExpansionPanelComponent`]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html) を使用する場合、**IgxExpansionPanelModule** を **app.module** にインポートする必要があります。
 ```typescript
 // app.module.ts
 
@@ -91,7 +91,7 @@ export class AppModule {}
 
 css クラスの `.igx-expansion-panel__ ヘッダーと `.igx-expansion-panel__body` は、ヘッダーとボディのスタイル設定を公開します。
 
-以下は結果です。 
+以下は結果です。
 <div class="sample-container loading" style="height: 400px;">
     <iframe id="expansion-sample-1-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/layouts/expansion-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -170,13 +170,13 @@ export class ExpansionPanelComponent {
 ```
 > [`iconPosition`]({environment:angularApiUrl}/classes/igxexpansionpanelheadercomponent.html#iconposition) プロパティは、`RTL` で使用できます。たとえば、**right**に表示するよう設定したアイコンは、RTL 設定時にヘッダーの左端に表示されます。
 
-コンテンツを渡してコントロールで使用するデフォルト アイコンは、[`igx-expansion-panel-icon`]({environment:angularApiUrl}/classes/igxexpansionpanelicondirective.html) タグでをオーバーライドできます。
+コンテンツを渡してコントロールで使用するデフォルト アイコンは、`igx-expansion-panel-icon` タグでをオーバーライドできます。
 ```html
 <!-- in expansion-component.component.html -->
     <igx-expansion-panel>
     ...
         <igx-expansion-panel-header [iconPosition]="'right'">
-        ... 
+        ...
             <igx-expansion-panel-icon>
                 <span class="example-icon" *ngIf="panel.collapsed">Show more</span>
                 <span class="example-icon" *ngIf="!panel.collapsed">Collapse</span>
@@ -336,7 +336,7 @@ export class ExpansionPanelComponent {
 ...
 ```
 
-以下は結果です。 
+以下は結果です。
 <div class="sample-container loading" style="height: 350px;">
     <iframe id="expansion-sample-6-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/layouts/expansion-sample-6" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -513,7 +513,7 @@ export class ExpansionPanelComponent {
 </igx-expansion-panel>
 ...
 ```
-以下は結果です。 
+以下は結果です。
 <div class="sample-container loading" style="height: 550px;">
     <iframe id="expansion-sample-5-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/layouts/expansion-sample-5" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -615,7 +615,7 @@ export const data = {
 
 ```
 
-以下は結果です。 
+以下は結果です。
 <div class="sample-container loading" style="height: 600px;">
     <iframe id="expansion-sample-7-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/layouts/expansion-sample-7" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>

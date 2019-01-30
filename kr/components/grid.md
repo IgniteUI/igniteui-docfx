@@ -12,8 +12,8 @@ _language: kr
 
 ### 데모
 
-<div class="sample-container loading" style="height:650px">
-    <iframe id="grid-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-boston-marathon' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height:700px">
+    <iframe id="grid-sample-iframe" src='{environment:demosBaseUrl}/grid/grid' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
@@ -360,6 +360,17 @@ export class MyComponent implements OnInit {
 ```
 
 **Note**: 그리드 [`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#autogenerate) 속성은 현재 원격 데이터에 바인딩할 때 사용하지 않는 것이 좋습니다. 데이터를 검사하고 적절한 열을 생성하기 위해 데이터를 사용 가능하도록 해야 합니다. 일반적으로 원격 서비스가 응답하기 전까지 그리드는 오류가 발생합니다. 원격 서비스에 바인딩할 때 [`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#autogenerate)을 사용할 수 있도록 설정하는 방법은 향후 버전에 추가될 것입니다
+
+### Live Updating Demo
+
+This sample demonstrates the `igxGrid` bound to live data. 
+
+<div class="sample-container loading" style="height:915px">
+    <iframe id="grid-sample-finjs-iframe" src='{environment:demosBaseUrl}/grid/finjs-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-finjs-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
 
 ## 알려진 제한 사항
 

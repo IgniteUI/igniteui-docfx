@@ -1,53 +1,54 @@
 ---
-title: Update Guide
-_description: Information on updating to a newer version of the Ignite UI for Angular library.
-_keywords: Ignite UI for Angular, update, npm package, version, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library
+title: アップデート ガイド
+_description: このトピックでは、新しいバージョンの Ignite UI for Angular ライブラリにアップデートする方法についてご紹介します。
+_keywords: Ignite UI for Angular, アップデート, npm パッケージ, バージョン, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ
+_language: ja
 ---
 
-## Update Guide
+## アップデート ガイド
 
-In the Ignite UI for Angular [versioning](https://github.com/IgniteUI/igniteui-angular/wiki/Ignite-UI-for-Angular-versioning) the first number always matches the major version of Angular the code supports and the second is dedicated for major version releases. Breaking changes may be introduced between major releases.
-A comprehensive list of changes for each release of **Ignite UI for Angular** can be found in the product [CHANGELOG](https://github.com/IgniteUI/igniteui-angular/blob/master/CHANGELOG.md)
+Ignite UI for Angular [バージョニング](https://github.com/IgniteUI/igniteui-angular/wiki/Ignite-UI-for-Angular-versioning) は、最初の数字がコードでサポートされる Angular のメジャー バージョンで、2 番目の数字はメジャー バージョン リリースの数字です。また重大な変更がメジャー リリース間でリリースされる場合があります。
+**Ignite UI for Angular** 各リリースのすべての変更の一覧は、製品 [CHANGELOG](https://github.com/IgniteUI/igniteui-angular/blob/master/CHANGELOG.md) (英語) をご覧ください。
 
-The Ignite UI for Angular package also supports automatic version migration through `ng update` schematics. Those will attempt to migrate all possible breaking changes (renamed selectors, classes and @Input/Output properties), however there might be still changes that cannot be migrated. Those are usually related to typescript application logic and will be described [additionally below](#additional-manual-changes).
+Ignite UI for Angular パッケージは `ng update` Schematics で自動バージョン マイグレーションをサポートします。これにより、すべての可能性のある重大な変更 (セレクターの名前、クラス、@Input/Output プロパティの変更) をマイグレーションを試みます。ただし、マイグレーションできない変更がある場合もあります。通常これらの変更はタイプ スクリプト アプリケーション ロジックに関連しており、[詳細](#additional-manual-changes)は以下をご確認ください。
 
-First run the [**`ng update`**](https://angular.io/cli/update) command which will analyze your application and available updates for its packages.
+最初に [**`ng update`**](https://angular.io/cli/update) コマンドを実行して
 ```cmd
 ng update
 ```
 
 > [!NOTE]
-> We recommend commit all your changes before proceeding with the update. 
+> アップデートする前にすべての変更をコミットすることをお勧めします。 
 
-To update the **Ignite UI for Angular** package run the following command:
+**Ignite UI for Angular** パッケージを更新するには、以下のコマンドを実行してください。
 ```cmd
 ng update igniteui-angular
 ```
-When you update `igniteui-angular` - it's recommended to update `@angular/core`, `@angular/cli` and `igniteui-cli` packages to their matching versions. 
-To update the **Ignite UI CLI** package run the following command:
+`Igniteui-angular` の更新時は、@angular/core`, `@angular/cli` and `igniteui-cli` パッケージを一致するバージョンにアップデートしてください。 
+**Ignite UI CLI** パッケージをアップデートする場合は、以下のコマンドを実行してください。
 ```cmd
 ng update igniteui-cli
 ```
-To update the **Angular Core** package run the following command:
+**Angular Core** パッケージをアップデートする場合は、以下のコマンドを実行してください。
 ```cmd
 ng update @angular/core
 ```
-To update the **Angular CLI** package use the following command:
+**Angular CLI** パッケージをアップデートするには、以下のコマンドを使用してください。
 ```cmd
 ng update @angular/cli
 ```
 
-## Additional manual changes
+## その他の手動の変更
 
 
-Unfortunately not all changes can be automatically updated. Changes bellow are split into sections as they occur in the versions, so if any updates are required you should star from your current version and apply further updates from bottom to top.
+自動的にアップデートできない変更もあります。以下の変更はバージョンで発生するためセクションごとに分かれ、アップデートが必要な場合は、現在のバージョンから開始してそれ以降のアップデートを適用しjます。
 
-For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from the "From 6.x .." section apply those changes and work your way up:
+例: 6.2.4 から 7.1.0 にアップデートする場合、[6.x .. から] セクションから始めて変更を適用していきます。
 
-### From 7.0.x to 7.1.x
- * If you use an IgxGrid with summaries in your application, you should know that now the `IgxSummaryOperand.operate()` method is called with empty data in order to calculate the necessary height for the summary row. For custom summary operands, the method should always return an array of IgxSummaryResult with proper length.
+### 7.0.x から 7.1.x
+ * アプリケーションで IgxGrid の集計を使用する場合、`IgxSummaryOperand.operate()` メソッドがからデータとともに順番に呼び出されて集計行に必要な高さを計算します。カスタム集計オペランドは、メソッドが常に適切な長さの IgxSummaryResult の配列を返します。
 
-	Before version 7.1:
+	バージョン 7.1 以前:
 ```typescript	
 export class CustomSummary extends IgxNumberSummaryOperand {
 	public operate(data?: any[]): IgxSummaryResult[] {
@@ -60,7 +61,7 @@ export class CustomSummary extends IgxNumberSummaryOperand {
 }
 ```
 
-	Since version 7.1:
+	バージョン 7.1 以降:
 ```typescript
 export class CustomSummary extends IgxNumberSummaryOperand {
 	public operate(data?: any[]): IgxSummaryResult[] {
@@ -73,6 +74,6 @@ export class CustomSummary extends IgxNumberSummaryOperand {
 }
 ```
 
-### From 6.0.x to 6.1.x
+### 6.0.x から 6.1.x
 
-* If you use an IgxCombo control in your application and you have set the `itemsMaxWidth` option, you should change this option to `itemsWidth`
+* アプリケーションで IgxCombo コントロールを使用する場合、`itemsMaxWidth` オプションを設定し、このオプションを `itemsWidth` に変更してください。

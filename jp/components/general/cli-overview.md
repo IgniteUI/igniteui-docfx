@@ -7,18 +7,18 @@ _language: ja
 
 ## Ignite UI CLI
 
-[`Ignite UI CLI`](https://github.com/IgniteUI/igniteui-cli) はさまざまなフレームワークのためにアプリケーションを作成して scaffold するコマンドライン ツールです。Ignite UI CLI は、Ignite UI for Angular の定義済みのプロジェクト テンプレートが含まれ、アプリ開発を効率的に行うことができます。Ignite UI for Angular コンポーネントのビュー選択により、生産性を向上します。
+[`Ignite UI CLI`](https://github.com/IgniteUI/igniteui-cli) はさまざまなフレームワーク用にアプリケーションを作成して scaffold するコマンドライン ツールです。Ignite UI CLI は、Ignite UI for Angular の定義済みのプロジェクト テンプレートが含まれ、アプリ開発を効率的に行うことができます。Ignite UI for Angular コンポーネントのビュー選択により、生産性を向上します。
 
 ### 作業の開始
 
-お好みのターミナルを開き、[`Ignite UI CLI`](https://github.com/IgniteUI/igniteui-cli) をインストールします。
+ターミナルを開き、[`Ignite UI CLI`](https://github.com/IgniteUI/igniteui-cli) をインストールします。
 ```cmd
 npm install -g igniteui-cli 
 ```
  [`Ignite UI CLI`](https://github.com/IgniteUI/igniteui-cli) のインストール後、ツールを開始する 2 つのオプション/モデル (ガイドまたはコマンド) があります。
 
 #### ガイドの使用
-アプリケーションを最短でブートストラップする最も簡単な方法は、Ignite UI CLI [`ガステップバイステップ モード`](https://github.com/IgniteUI/igniteui-cli/wiki/step-by-step) を使用する方法です。アプリをビルドしたあとは 1 コマンドで開始できます。 
+アプリケーションを最短でブートストラップする最も簡単な方法は、Ignite UI CLI [`ステップバイステップ モード` (英語)](https://github.com/IgniteUI/igniteui-cli/wiki/step-by-step) を使用する方法です。アプリをビルドしたあとは 1 コマンドで開始できます。 
 ```cmd
 ig
 ```
@@ -28,11 +28,11 @@ ig
        href="https://youtu.be/QK_NsdtdA70" target="_blank">
         <img src="../../images/general/play.svg" style="vertical-align: middle;" />
     </a>
-    <p style="text-align:center;">最初の Ignite UI CLI アプリを作成</p>
+    <p style="text-align:center;">はじめての Ignite UI CLI アプリを作成</p>
 </div>
 
 #### コマンドの使用
-Ignite UI CLI [コマンド](#available-commands)を使用し、Ignite UI プロジェクトを生成、新しいコンポーネントの追加、プロジェクトのビルドができます。以下のコマンドを使用できます。
+Ignite UI CLI [コマンド](#available-commands)を使用し、Ignite UI プロジェクトを生成、新しいコンポーネントの追加、プロジェクトのビルドが可能です。以下のコマンドを使用できます。
 ```cmd
 ig new <project name> --framework=angular --type=igx-ts 
 cd <project name>
@@ -50,7 +50,7 @@ ig add grid newGrid
 ig start
 ```
 
-シンプルなコマンドの実行した後、新しいプロジェクトがビルドされて提供されます。これによりデフォルト ブラウザーが自動的に開かれ、グリッド コントロールをインスペクトしてプロジェクトに変更を加えることができます。
+シンプルなコマンドを実行後、新しいプロジェクトがビルドされ、提供されます。これによりデフォルト ブラウザーが自動的に開かれ、グリッド コントロールをインスペクトしてプロジェクトに変更を加えることができます。
 
 ### コマンド
 

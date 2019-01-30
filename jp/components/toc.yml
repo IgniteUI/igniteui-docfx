@@ -3,7 +3,7 @@
 - name: 作業の開始
   href: general/getting_started.md
   new: false
-- name: Update guide
+- name: アップデート ガイド
   href: general/update_guide.md
   new: false
 - name: Ignite UI CLI
