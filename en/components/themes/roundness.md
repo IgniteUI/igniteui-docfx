@@ -66,6 +66,7 @@ The table shows the default border-radius for each component and its min and max
 | **input(Search)**      | Yes; Yes; Yes; Yes;        | 0 - 20px              | 4px                       |
 | **List**               | Yes; Yes; Yes; Yes;        | 0 - 24px              | 0                         |
 | **List item**          | Yes; Yes; Yes; Yes;        | 0 - 24px              | 0                         |
+| **Navdrawer**          | Yes; Yes; Yes; Yes;        | 0 - 36px              | 0px                       |
 | **Snackbar**           | Yes; Yes; Yes; Yes;        | 0 - 24px              | 4px                       |
 | **Tooltip**            | Yes; Yes; Yes; Yes;        | 0 - 16px              | 4px                       |
 | **Toast**              | Yes; Yes; Yes; Yes;        | 0 - 24px              | 4px                       |
