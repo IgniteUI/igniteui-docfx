@@ -32,6 +32,7 @@ If you decide to go with a unitless value from 0 to 1, you will automatically be
 If you pass any kind of unit:, px, em, rem, %... you will no longer be restricted to the boundaries for the component. 
 So for example, if you set a value of 30px the theming engine will ignore the boundaries of maximum 20px and will set the border-radius to 30px.
 
+### How to use?
 Let see how we can change the default values for those buttons from the above example.
 
 ```scss
