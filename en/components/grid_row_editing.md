@@ -66,7 +66,7 @@ Then define a grid with bound data source and [`rowEditable`]({environment:angul
 ```
 
 > [!NOTE]
-> Setting primary key is mandatory for editing operations, including row editing.
+> Setting primary key is mandatory for row editing operations.
 > [!NOTE]
 > It's not needed to enable editing for individual columns. Using the [`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditable) property in the grid, will mean that all rows, with defined `field` property, excluding primary one, will be editable. If you want to disable editing for specific column, then you set the [`editable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable) column's input to `false`.
 
