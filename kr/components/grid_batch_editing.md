@@ -28,7 +28,7 @@ _language: kr
 > 트랜잭션 상태는 업데이트, 추가 및 삭제된 행과 마지막 상태로 구성됩니다.
 
 ## 사용 방법
-시작하려면 **app.module.ts** 파일에서 [IgxGridModule]({environment:angularApiUrl}/classes/igxgridmodule.html) 을 가져옵니다:
+시작하려면 **app.module.ts** 파일에서 `IgxGridModule` 을 가져옵니다:
 
 ```typescript
 // app.module.ts

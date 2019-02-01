@@ -29,7 +29,7 @@ The following sample demonstrates how to enable row editing in the grid. Changin
 
 ## Usage
 
-To get started import the [IgxGridModule]({environment:angularApiUrl}/classes/igxgridmodule.html) in the **app.module.ts** file:
+To get started import the `IgxGridModule` in the **app.module.ts** file:
 
 ```typescript
 // app.module.ts
