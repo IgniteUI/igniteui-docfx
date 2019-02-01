@@ -30,7 +30,7 @@ _language: kr
 
 ## 사용 방법
 
-시작하려면 **app.module.ts** 파일에서 [IgxGridModule]({environment:angularApiUrl}/classes/igxgridmodule.html) 을 가져옵니다:
+시작하려면 **app.module.ts** 파일에서 `IgxGridModule` 을 가져옵니다:
 
 ```typescript
 // app.module.ts
