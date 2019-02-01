@@ -160,7 +160,7 @@ $myCard: igx-card-theme(
 
 @include igx-card($myCard);
 
-// This compiles compiled to
+// This compiles to
 
 .igx-card {
   box-shadow: 
@@ -170,7 +170,8 @@ $myCard: igx-card-theme(
 }
 ```
 
-As you can see as it is in the material guidelines, every elevation is composed of three shadows.
+As you can see the shadow is produced according to the material guidelines.
+
 To change the shadows colors use the igx-elevations function to override the defaults:
  ```scss
 ...
@@ -190,7 +191,7 @@ $mySpecialCard: igx-card-theme(
     $resting-shadow: igx-elevation($elevations-color, 10)
 );
 
-// If you want you can scope your costume elevation to a specifics selector
+// If you want you can scope your custom elevation to a specifics selector
 .special-card {
   @include igx-card($mySpecialCard);
 }
@@ -206,7 +207,7 @@ $mySpecialCard: igx-card-theme(
 
 ```
 
-You can also set box-shadow without taking advantage from igx-elevation function: 
+You can also set box-shadow without taking advantage of the igx-elevation function:
 ```scss
 $myboringCard: igx-card-theme(
     $resting-shadow: 0 10px 10px 10px #666
@@ -216,7 +217,7 @@ $myboringCard: igx-card-theme(
   @include igx-card($myboringCard);
 }
 
-// This compiles compiled to
+// This compiles to
 
 .boring-card.igx-card {
   box-shadow: 0 10px 10px 10px #666;
