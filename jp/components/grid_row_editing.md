@@ -67,7 +67,7 @@ export class AppModule {}
 ```
 
 > [!NOTE]
-> 行編集を含む編集操作でプライマリキーの設定は必須です。
+> 行編集の処理でプライマリキーの設定は必須です。
 > [!NOTE]
 > 各列の編集を有効にする必要はありません。グリッドで [`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditable) プロパティを使用するとプライマリ行以外 `field` プロパティを定義したすべての行が編集可能になります。特定の列の編集を無効にする場合、[`editable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable) 列の入力を false に設定します。
 
