@@ -28,7 +28,7 @@ The default value for "flat-border-radius" is set to 0.2 which in the end will b
 
 We decided to not limit you to fractions only. You can use whatever unit you want - pixels, relative units like em or rem, etc., allowing you to overwrite the implicit border radius limits.
 
-If you decide to go with a fractions, you will automatically be limited by the theming engine to min and max boundary for each component.
+If you decide to go with fractions, you will automatically be limited by the theming engine to min and max boundary for each component.
 
 ### How to use?
 Let's see how we can change the default values for the buttons from the example above.
