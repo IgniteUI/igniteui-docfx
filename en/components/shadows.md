@@ -191,14 +191,14 @@ $mySpecialCard: igx-card-theme(
     $resting-shadow: igx-elevation($elevations-color, 10)
 );
 
-// If you want you can scope your custom elevation to a specifics selector
+// If you want you can scope your custom elevation to a specific selector
 .special-card {
   @include igx-card($mySpecialCard);
 }
 
 // This compiles compiled to
 
-.special-card.igx-card {
+.special-card .igx-card {
   box-shadow: 
     0 6px 6px -3px rgb(153, 191, 170),
     0 10px 14px 1px rgb(92, 134, 141),
@@ -219,7 +219,7 @@ $myboringCard: igx-card-theme(
 
 // This compiles to
 
-.boring-card.igx-card {
+.boring-card .igx-card {
   box-shadow: 0 10px 10px 10px #666;
 }
 ```
