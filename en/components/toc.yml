@@ -1,3 +1,11 @@
+- name: TESTING
+  header: true
+- name: Grid filtering
+  href: grid/filtering.md
+- name: TreeGrid filtering
+  href: treeGrid/filtering.md
+- name: HierarchicalGrid filtering
+  href: hierarchicalGrid/filtering.md
 - name: General
   header: true
 - name: Getting started

@@ -8,6 +8,7 @@ const autoprefixer = require('gulp-autoprefixer');
 const argv = require('yargs').argv;
 const fs = require('fs');
 const environmentVariablesPreConfig = require('./node_modules/igniteui-docfx-template/post-processors/PostProcessors/EnvironmentVariables/preconfig.json');
+const fileinclude = require('gulp-file-include');
 
 const LANG = argv.lang === undefined ? "en" : argv.lang;
 const DOCFX_BASE = {
@@ -75,7 +76,7 @@ gulp.task('post-processor-configs', ['cleanup'], () => {
 
     environmentVariablesConfig.variables =
         environmentVariablesConfig.variables[LANG.toLowerCase().trim()][
-            environmentVariablesConfig.environment
+        environmentVariablesConfig.environment
         ];
 
     if (!fs.existsSync(`${DOCFX_SITE}`)) {
@@ -94,9 +95,57 @@ gulp.task('cleanup', () => {
     return del([`${DOCFX_SITE}`]);
 });
 
+gulp.task('generate-grid-topics', () => {
+    const grids = [
+        {
+            path: '/grid',
+            compRef: "grid",
+            component: "Grid",
+            componentName: "IgxGrid",
+            compdoc: "igxgridcomponent",
+            componentSelector: "igx-grid"
+        },
+        {
+            path: '/treeGrid',
+            compRef: "treeGrid",
+            component: "Tree Grid",
+            componentName: "IgxTreeGrid",
+            compdoc: "igxtreegridcomponent",
+            componentSelector: "igx-tree-grid"
+        },
+        {
+            path: '/hierarchicalGrid',
+            compRef: "hierarchicalGrid",
+            component: "Hierarchical Grid",
+            componentName: "IgxHierarchicalGrid",
+            compdoc: "igxhierarchicalgridcomponent",
+            componentSelector: "igx-hierarchical-grid"
+        }
+    ];
+
+    for (let j = 0; j < grids.length; j++) {
+        const grid = grids[j]; // Grid topic to be generated
+
+        gulp.src([DOCFX_ARTICLES + '/grids_templates/*.md'])
+            .pipe(fileinclude({
+                prefix: '@@',
+                basepath: '@file',
+                context: {
+                    "compRef": grid.compRef,
+                    "component": grid.component,
+                    "componentName": grid.componentName,
+                    "compdoc": grid.compdoc,
+                    "componentSelector": grid.componentSelector
+                }
+            }))
+            .pipe(gulp.dest('./en/components' + grid.path));
+    }
+});
+
 gulp.task('build', [
     'styles',
     'cleanup',
     'post-processor-configs',
-    'build-site'
+    'build-site',
+    'generate-grid-topics'
 ]);
