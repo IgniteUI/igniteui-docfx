@@ -97,16 +97,15 @@ Follow this [topic](combo_remote.md) for more details about binding [igx-combo](
 For two-way data-binding, the `ngModel` can be used like shown below:
 
 ```html
-<igx-combo #combo [(ngModel)]="values"></igx-combo>
+<igx-combo #combo [data]="data" [(ngModel)]="values"></igx-combo>
 ```
 
 ```typescript
-@ViewChild('combo', { read: IgxComboComponent }) public combo: IgxComboComponent;
-get values() {
-    return this.combo.selectedItems();
-}
-set values(newValues: Array<any>) {
-    this.combo.selectItems(newValues);
+export class MyExampleComponent {
+    ...
+    public data: ExampleType[] = ...;
+    ...
+    public values: ExampleType[] = ...;
 }
 ```
 

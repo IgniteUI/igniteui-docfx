@@ -28,9 +28,6 @@ _language: ja
 
 <div class="divider--half"></div>
 
-## 使用方法
-
-[IgxGridModule]({environment:angularApiUrl}/classes/igxgridmodule.html) in the **app.module.ts** ファイルをインポートします。
 
 ```typescript
 // app.module.ts
