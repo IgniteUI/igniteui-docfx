@@ -11,7 +11,7 @@ _language: kr
 ### 데모
 
 <div class="sample-container" style="height: 550px">
-    <iframe id="financial-chart-trendlines-iframe" src='{environment:demosBaseUrl}/financial-chart-trendlines' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="financial-chart-trendlines-iframe" src='{environment:demosBaseUrl}/charts/financial-chart-trendlines' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="financial-chart-trendlines-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기
@@ -71,7 +71,7 @@ _language: kr
 ```
 
 ### 인디케이터 구성
-기본적으로 인디케이터 창은 금융 차트에 표시되지 않습니다. 도구 모음을 사용하면 최종 사용자가 런타임 시 표시할 인디케이터를 선택할 수 있습니다. 창을 표시하려면 다음의 코드와 같이 인디케이터 유형을 설정해야 합니다.
+기본적으로 인디케이터 창은 금융 차트에 표시되지 않습니다. 툴 모음을 사용하면 최종 사용자가 런타임 시 표시할 인디케이터를 선택할 수 있습니다. 창을 표시하려면 다음의 코드와 같이 인디케이터 유형을 설정해야 합니다.
 
 ```html
  <igx-financial-chart
@@ -87,7 +87,7 @@ _language: kr
 ```
 
 ### 볼륨 창 구성
-기본적으로 볼륨 창은 금융 차트에 표시되지 않습니다. 그러나, 차트 도구 모음을 사용하여 런타임에 이 창을 사용하거나 다음의 코드와 같이 프로그래밍 방식으로 사용할 수 있습니다.
+기본적으로 볼륨 창은 금융 차트에 표시되지 않습니다. 그러나, 차트 툴 모음을 사용하여 런타임에 이 창을 사용하거나 다음의 코드와 같이 프로그래밍 방식으로 사용할 수 있습니다.
 
 ```html
  <igx-financial-chart
@@ -118,7 +118,7 @@ _language: kr
 ```
 
 ### 제목 구성
-차트 도구 모음 및 금융 차트의 가격 창 사이에 표시될 제목과 부제를 설정할 수 있습니다. 다음의 코드는 제목 및 부제를 설정하는 방법을 보여줍니다.
+차트 툴 모음 및 금융 차트의 가격 창 사이에 표시될 제목과 부제를 설정할 수 있습니다. 다음의 코드는 제목 및 부제를 설정하는 방법을 보여줍니다.
 
 ```html
  <igx-financial-chart

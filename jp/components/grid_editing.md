@@ -12,7 +12,7 @@ Ignite UI for Angular の Grid コンポーネントは、列のデータ型に�
 #### デモ
 
 <div class="sample-container loading" style="height:650px">
-    <iframe id="grid-editing-sample-iframe" src='{environment:demosBaseUrl}/grid-editing' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="grid-editing-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-editing' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
@@ -42,7 +42,7 @@ Ignite UI for Angular の Grid コンポーネントは、列のデータ型に�
  - `F2` キーの押下
  - `Tab` キーの押下
  - その他のセルをシングル クリック - グリッドのその他のセルをクリックした際に変更が提出されます。
- - その他のグリッド操作 (サイズ変更、移動、並べ替え列、ページの変更など、) は、編集モードを終了して最新の値をサブミットします。
+ - ページング、サイズ変更、移動、並べ替え列、ページの変更などの操作は、編集モードを終了して最新の値をサブミットします。
 
 
 > [!NOTE]
@@ -122,7 +122,7 @@ this.grid.deleteRow(this.selectedCell.cellID.rowID);
 const row = this.grid.getRowByIndex(rowIndex);
 row.delete();
 ```
-**igx-grid** に関係なく、ボタンのクリックなどのユーザー インタラクションに接続できます。
+**igx-grid** に関係なく、ボタンのクリックなどのユーザー インタラクションに関連付けできます。
 ```html
 <button igxButton igxRipple (click)="deleteRow($event)">Delete Row</button>
 ```
@@ -131,13 +131,15 @@ row.delete();
 
 ### API リファレンス
 * [IgxGridCellComponent]({environment:angularApiUrl}/classes/igxgridcellcomponent.html)
-* [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [IgxGridComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 * [IgxGridRowComponent]({environment:angularApiUrl}/classes/igxgridrowcomponent.html)
 * [IgxInputDirective]({environment:angularApiUrl}/classes/igxinputdirective.html)
 * [IgxDatePickerComponent]({environment:angularApiUrl}/classes/igxdatepickercomponent.html)
-* [IgxDatePickerComponent Styles]({environment:sassApiUrl}/index.html#function-igx-date-picker-theme)
+* [IgxDatePickerComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-date-picker-theme)
 * [IgxCheckboxComponent]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html)
-* [IgxCheckboxComponent Styles]({environment:sassApiUrl}/index.html#function-igx-checkbox-theme)
+* [IgxCheckboxComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-checkbox-theme)
+* [IgxOverlay]({environment:angularApiUrl}/interfaces/overlaysettings.html)
+* [IgxOverlay Styles]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
 
 <div class="divider--half"></div>
 

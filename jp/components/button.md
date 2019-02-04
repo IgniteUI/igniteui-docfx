@@ -12,7 +12,7 @@ Ignite UI for Angular Button ディレクティブを任意の button、span、d
 ### Button デモ
 
 <div class="sample-container" style="height: 436px">
-    <iframe id="buttons-sample-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/buttons-sample-1" onload="onSampleIframeContentLoaded(this);">
+    <iframe id="buttons-sample-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/data-entries/buttons-sample-1" onload="onSampleIframeContentLoaded(this);">
 </div>
 
 <div>
@@ -39,7 +39,7 @@ import { IgxButtonModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-### Usage
+### 使用方法
 
 ```html
 <target-element igxButton [..options]>クリック</target-element>
@@ -56,7 +56,7 @@ export class AppModule {}
 結果:
 
 <div class="sample-container" style="height: 48px">
-    <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/buttons-sample-2">
+    <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/data-entries/buttons-sample-2">
 </div>
 
 リップル エフェクトを追加できます。色を設定します。 `igxRipple="blue"`。
@@ -68,7 +68,7 @@ export class AppModule {}
 デフォルトのリップル色。カスタム リップル色。
 
 <div class="sample-container" style="height: 48px">
-    <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/buttons-sample-3">
+    <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/data-entries/buttons-sample-3">
 </div>
 
 [`igxButton`]({environment:angularApiUrl}/classes/igxbuttondirective.html) を使用して span 要素を Ignite UI for Angular のスタイル設定済みボタンにします。
@@ -80,7 +80,7 @@ export class AppModule {}
 span は以下のようになります。
 
 <div class="sample-container" style="height: 54px">
-    <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/buttons-sample-4">
+    <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/data-entries/buttons-sample-4">
 </div>
 
 raised ボタンを作成できます。　
@@ -90,7 +90,7 @@ raised ボタンを作成できます。　
 ```
 
 <div class="sample-container" style="height: 54px">
-    <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/buttons-sample-5">
+    <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/data-entries/buttons-sample-5">
 </div>
 
 フローティング アクション ボタンを作成し、表示するアイコンを使用します。
@@ -102,7 +102,7 @@ raised ボタンを作成できます。　
 ```
 
 <div class="sample-container" style="height: 74px">
-    <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/buttons-sample-6">
+    <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/data-entries/buttons-sample-6">
 </div>
 
 また、アイコンをボタンとして使用できます。
@@ -122,7 +122,7 @@ raised ボタンを作成できます。　
 アイコンの結果:
 
 <div class="sample-container" style="height: 54px">
-    <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/buttons-sample-7">
+    <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/data-entries/buttons-sample-7">
 </div>
 
 <div class="divider--half"></div>

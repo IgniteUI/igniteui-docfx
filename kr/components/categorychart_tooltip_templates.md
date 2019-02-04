@@ -6,12 +6,12 @@ _language: kr
 ---
 ## 툴팁 템플릿 
 
-카테고리 차트는 각 시리즈 유형에 기본 도구 설명을 제공합니다. 기본 도구 설명에는 시리즈 제목, 데이터 값, 축 값 등의 특정 시리즈 항목과 관련된 모든 정보가 표시됩니다. 이들은 시리즈의 스타일에 맞게 디자인되어 있습니다. 기본 도구 설명이 충분하지 않은 경우 도구 설명 콘텐츠와 룩 앤드 필을 사용자 정의하여 사용자 도구 설명을 구성할 수 있습니다.
+카테고리 차트는 각 시리즈 유형에 기본 툴 설명을 제공합니다. 기본 툴 설명에는 시리즈 제목, 데이터 값, 축 값 등의 특정 시리즈 항목과 관련된 모든 정보가 표시됩니다. 이들은 시리즈의 스타일에 맞게 디자인되어 있습니다. 기본 툴 설명이 충분하지 않은 경우 툴 설명 콘텐츠와 룩 앤드 필을 사용자 정의하여 사용자 툴 설명을 구성할 수 있습니다.
 
 ### 데모
 
 <div class="sample-container" style="height: 500px">
-    <iframe id="category-chart-tooltip-template-iframe" src='{environment:demosBaseUrl}/category-chart-tooltip-template' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="category-chart-tooltip-template-iframe" src='{environment:demosBaseUrl}/charts/category-chart-tooltip-template' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="category-chart-tooltip-template-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기
@@ -20,7 +20,7 @@ _language: kr
 
 <div class="divider--half"></div>
 
-도구 설명 콘텐츠는 다음의 코드와 같이 도구 설명 템플릿을 생성하여 사용자 정의화됩니다.
+툴 설명 콘텐츠는 다음의 코드와 같이 툴 설명 템플릿을 생성하여 사용자 정의화됩니다.
 
 ```html
 <ng-template let-series="series" let-item="item" #valueTooltip>

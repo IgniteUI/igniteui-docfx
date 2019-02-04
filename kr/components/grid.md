@@ -12,8 +12,8 @@ _language: kr
 
 ### 데모
 
-<div class="sample-container loading" style="height:650px">
-    <iframe id="grid-sample-iframe" src='{environment:demosBaseUrl}/grid' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height:700px">
+    <iframe id="grid-sample-iframe" src='{environment:demosBaseUrl}/grid/grid' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
@@ -194,6 +194,45 @@ public initColumns(column: IgxGridColumn) {
 
 위의 코드는 **ProductName** 열을 필터링, 정렬, 편집할 수 있도록 하며 해당 기능 UI를 인스턴스화합니다(예: 편집용 입력 등).
 
+### Data structure
+
+The [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html) takes only **flat data**. The data structure specific for rendering is in the form: 
+
+```typescript
+const OBJECT_ARRAY = [{
+        ObjectKey1: value1,
+        ObjectKey2: value2,
+        .
+        .
+        .
+        ObjectKeyN: valueN
+    },
+    {
+        ObjectKey1: value1,
+        ObjectKey2: value2,
+        .
+        .
+        .
+        ObjectKeyN: valueN
+    },
+    .
+    .
+    .,
+    {
+        ObjectKey1: value1,
+        ObjectKey2: value2,
+        .
+        .
+        .
+        ObjectKeyN: valueN 
+    }];
+
+```
+>[!WARNING]
+>**The key values must not contain neither arrays or other objects**.
+
+>If you use [autoGenerate]({environment:angularApiUrl}/classes/igxgridcomponent.html#autogenerate) columns **the data keys must be identical**
+
 ### 데이터 바인딩
 
 그리드를 사용하기 전에 그리드를 변경하여 대규모 애플리케이션의 일반적인 시나리오인 원격 데이터 서비스에 바인딩합니다. 별도의 데이터 서비스에서 데이터 가져오기와 관련된 모든 논리를 분리하여 서버에서 데이터 가져오기를 처리하는 서비스를 생성하는 것이 좋습니다.
@@ -321,6 +360,17 @@ export class MyComponent implements OnInit {
 ```
 
 **Note**: 그리드 [`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#autogenerate) 속성은 현재 원격 데이터에 바인딩할 때 사용하지 않는 것이 좋습니다. 데이터를 검사하고 적절한 열을 생성하기 위해 데이터를 사용 가능하도록 해야 합니다. 일반적으로 원격 서비스가 응답하기 전까지 그리드는 오류가 발생합니다. 원격 서비스에 바인딩할 때 [`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#autogenerate)을 사용할 수 있도록 설정하는 방법은 향후 버전에 추가될 것입니다
+
+### Live Updating Demo
+
+This sample demonstrates the `igxGrid` bound to live data. 
+
+<div class="sample-container loading" style="height:915px">
+    <iframe id="grid-sample-finjs-iframe" src='{environment:demosBaseUrl}/finjs-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-finjs-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
 
 ## 알려진 제한 사항
 

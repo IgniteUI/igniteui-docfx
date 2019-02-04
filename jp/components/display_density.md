@@ -13,7 +13,7 @@ _language: ja
 
 ### 密度表示のデモ
 <div class="sample-container loading" style="height: 250px; width: 600px;">
-    <iframe id="density-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/density" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="density-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/theming/density" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="density-sample" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
@@ -21,7 +21,7 @@ _language: ja
 <div class="divider--half"></div>
 
 > [!NOTE]
-> Ignite UI for Angular コンポーネントをプロジェクトに追加する前に、必要なすべての依存関係を構成し、プロジェクトのセットアップが正しく完了したことを確認してください。[インストール](https://www.infragistics.com/products/ignite-ui-angular/getting-started#installation)のトピックで手順をご確認ください。
+> Ignite UI for Angular コンポーネントをプロジェクトに追加する前に、必要なすべての依存関係を構成し、プロジェクトのセットアップが正しく完了したことを確認してください。[インストール](https://www.infragistics.com/products/ignite-ui-angular/getting-started#installation) のトピックで手順をご確認ください。
 
 ### 使用方法
 

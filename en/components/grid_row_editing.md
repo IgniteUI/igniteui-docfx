@@ -15,7 +15,7 @@ Row editing - allows modification of several cells in the row, before submitting
 The following sample demonstrates how to enable row editing in the grid. Changing a cell value and then clicking or navigating to another cell on the same row will not update row value until confirmed, using the Done button, or discarded, using the Cancel one.
 
 <div class="sample-container loading" style="height:550px">
-    <iframe id="grid-row-editing-sample-iframe" src='{environment:demosBaseUrl}/grid-row-editing' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="grid-row-editing-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-row-editing' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
@@ -29,7 +29,7 @@ The following sample demonstrates how to enable row editing in the grid. Changin
 
 ## Usage
 
-To get started import the [IgxGridModule]({environment:angularApiUrl}/classes/igxgridmodule.html) in the **app.module.ts** file:
+To get started import the `IgxGridModule` in the **app.module.ts** file:
 
 ```typescript
 // app.module.ts
@@ -187,4 +187,4 @@ If you want the buttons to be part of the keyboard navigation, then each on of t
 
 * [Grid Overview](grid.md)
 * [Grid Editing](grid_editing.md)
-* [Grid Transactions](grid_transactions.md)
+* [Grid Transactions](grid_batch_editing.md)

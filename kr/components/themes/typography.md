@@ -2,7 +2,7 @@
 title: Typography
 _description:
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library
-_extraFont: https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600,700
+_extraFont: https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600,700 
 _language: kr
 ---
 

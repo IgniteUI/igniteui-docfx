@@ -12,7 +12,7 @@ _language: ja
 ### デモ
 
 <div class="sample-container loading" style="height:700px">
-    <iframe id="grid-sample-iframe" src='{environment:demosBaseUrl}/grid' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="grid-sample-iframe" src='{environment:demosBaseUrl}/grid/grid' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
@@ -64,6 +64,26 @@ public grid: IgxGridComponent;
 **id** プロパティは文字列値で、設定されない場合に自動生成されるグリッドの一意識別子です。**data** はグリッドをローカル データにバインドします。
 
 [`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#autogenerate) プロパティは、データソース フィールドに基づいて **igx-grid** にグリッドの[`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) を自動生成させます。列の適切なデータ型の決定を試みます。それ以外の場合、開発者は列およびデータ ソース フィールドへのマッピングを明示的に定義する必要があります。
+
+### スタイルの構成
+> [!NOTE]
+> [**IgxGridComponent**]({environment:angularApiUrl}/classes/igxgridcomponent.html) は **css グリッド レイアウト**を使用しますが、プレフィックスなしでは IE でサポートされていないため、正しく描画できません。
+
+[**Angular**](https://angular.io/) のほとんどのスタイルは [Autoprefixer](https://www.npmjs.com/package/autoprefixer) プラグインで暗示的にプレフィックスされてます。 
+
+ただし、**グリッド レイアウト**のプレフィックスでは、[Autoprefixer](https://www.npmjs.com/package/autoprefixer) **グリッド プロパティ** をコメント `/* autoprefixer grid:on */` で有効にする必要があります。
+
+作業を容易にするためにコメントを `src/styles.scss` ファイルに適用します。
+
+ ```scss
+ // src/styles.scss
+    @import '~igniteui-angular/lib/core/styles/themes/index';
+    @include igx-core();
+    @include igx-theme($default-palette);
+
+    /* autoprefixer grid:on */
+ ...
+ ``` 
 
 ### 列の構成
 
@@ -189,6 +209,45 @@ public initColumns(column: IgxGridColumn) {
 ```
 
 上記のコードは **ProductName** 列の並べ替えや編集機能を有効にし、対応する機能の UI (編集の入力など) をインスタンス化します。
+
+### データ構造
+
+[IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html) は**フラットデータ**のみ取得します。描画に固有のデータ構造はフォームにあります。 
+
+```typescript
+const OBJECT_ARRAY = [{
+        ObjectKey1: value1,
+        ObjectKey2: value2,
+        .
+        .
+        .
+        ObjectKeyN: valueN
+    },
+    {
+        ObjectKey1: value1,
+        ObjectKey2: value2,
+        .
+        .
+        .
+        ObjectKeyN: valueN
+    },
+    .
+    .
+    .,
+    {
+        ObjectKey1: value1,
+        ObjectKey2: value2,
+        .
+        .
+        .
+        ObjectKeyN: valueN 
+    }];
+
+```
+>[!WARNING]
+>**キー値に配列またはその他のオブジェクトを含まないでください。**
+
+>[autoGenerate]({environment:angularApiUrl}/classes/igxgridcomponent.html#autogenerate) 列を使用する場合、データキーが同一である必要があります。
 
 ### データ バインディング
 

@@ -19,7 +19,7 @@ Drop Down items are **virtualized**, which guarantees smooth work, even if the [
 
 ### Demo
 <div class="sample-container loading" style="height: 400px;">
-    <iframe id="combo-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/combo" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="combo-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/lists/combo" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="combo-sample" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
@@ -110,8 +110,9 @@ When igxCombo is opened, allow custom values are enabled and add item button is 
 ## API
 <div class="divider--half"></div>
 
-* IgxComboComponent [**API Reference**]({environment:angularApiUrl}/classes/igxcombocomponent.html) and
-[**Themes Reference**]({environment:sassApiUrl}/index.html#themes-mixin-igx-combo).
+* [IgxComboComponent]({environment:angularApiUrl}/classes/igxcombocomponent.html) 
+* [IgxComboComponent Styles]({environment:sassApiUrl}/index.html#themes-mixin-igx-combo)
+* [IgxOverlay Styles]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
 
 ## Known Issues
 

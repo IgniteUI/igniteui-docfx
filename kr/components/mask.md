@@ -11,7 +11,7 @@ By applying [`igxMask`]({environment:angularApiUrl}/classes/igxmaskdirective.htm
 
 ### Mask Demo
 <div class="sample-container loading" style="height: 330px">
-    <iframe id="mask-sample-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/mask-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="mask-sample-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/data-display/mask-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="mask-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
@@ -74,7 +74,7 @@ In the following example, we apply a phone number with an extension mask to an i
 If the sample is configured properly, an input with the applied formatting mask appears.
 
 <div class="sample-container loading" style="height: 100px">
-    <iframe id="mask-sample2-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/mask-sample-2" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="mask-sample2-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/data-display/mask-sample-2" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 
 <div>
@@ -117,7 +117,7 @@ public clear() {
 ```
 
 <div class="sample-container loading" style="height: 160px">
-    <iframe id="mask-sample3-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/mask-sample-3" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="mask-sample3-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/data-display/mask-sample-3" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 
 <div>
@@ -212,6 +212,84 @@ export class Person {
       ) {  }
 }
 ```
+
+#### Apply additional formatting on focus and blur
+In addition to the default mask behavior, the user can implement his own custom pipes and take advantage of the [`focusedValuePipe`]({environment:angularApiUrl}/classes/igxmaskdirective.html#focusedValuePipe) and [`displayValuePipe`]({environment:angularApiUrl}/classes/igxmaskdirective.html#displayValuePipe) input properties, to transform the value to a desired output when the input gets or loses focus. This will not affect the underlying model value. Let's demonstrate how this can be achieved!
+
+Implement two pipes that will append/remove a '%' sign at the end of the displayed value:
+```typescript
+@Pipe({ name: 'displayFormat' })
+export class DisplayFormatPipe implements PipeTransform {
+    transform(value: any): string {
+        let val = value;
+        if (val.indexOf('%') === -1) {
+            val += '%';
+        }
+        return val;
+    }
+}
+
+@Pipe({ name: 'inputFormat' })
+export class InputFormatPipe implements PipeTransform {
+    transform(value: any): string {
+        let val = value;
+        if (val.indexOf('%') !== -1) {
+            val = val.replace(new RegExp('%', 'g'), '');
+        }
+        return val;
+    }
+}
+```
+
+Pass an instance of each pipe to the [`focusedValuePipe`]({environment:angularApiUrl}/classes/igxmaskdirective.html#focusedValuePipe) and [`displayValuePipe`]({environment:angularApiUrl}/classes/igxmaskdirective.html#displayValuePipe) input properties as follows:
+
+```typescript
+value = 1230;
+displayFormat = new DisplayFormatPipe();
+inputFormat = new InputFormatPipe();
+```
+```html
+<igx-input-group>
+    <label igxLabel for="email">Increase</label>
+    <input igxInput type="text" [(ngModel)]="value"
+                                [igxMask]="'00.00'"
+                                [focusedValuePipe]="inputFormat"
+                                [displayValuePipe]="displayFormat"/>
+</igx-input-group>
+```
+
+As a result, a '%' sign should be appended to the value on blur (i.e. when the user clicks outside the input) and will be removed once the input gets focus!
+
+<div class="sample-container loading" style="height: 100px">
+    <iframe id="mask-sample4-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/data-display/mask-sample-4" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="mask-sample4-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+
+#### Adding a placeholder
+The user can also take advantage of the [`placeholder`]({environment:angularApiUrl}/classes/igxmaskdirective.html#placeholder) input property, which serves the purpose of the native input placeholder attribute. If no value is provided for the [`placeholder`]({environment:angularApiUrl}/classes/igxmaskdirective.html#placeholder), the value set for the mask is used.
+
+```typescript
+value = null;
+```
+```html
+<igx-input-group>
+    <label igxLabel>Date</label>
+    <input igxInput type="text" [(ngModel)]="value"
+                                [igxMask]="'00/00/0000'"
+                                [placeholder]="'dd/mm/yyyy'"/>
+</igx-input-group>
+```
+
+<div class="sample-container loading" style="height: 100px">
+    <iframe id="mask-sample5-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/data-display/mask-sample-5" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="mask-sample5-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
 
 ### API References
 <div class="divider--half"></div>

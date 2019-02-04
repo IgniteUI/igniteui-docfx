@@ -13,7 +13,7 @@ _language: ja
 ### デモ
 
 <div class="sample-container loading" style="height:450px">
-    <iframe id="tooltip-simple-iframe" src='{environment:demosBaseUrl}/tooltip-simple' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="tooltip-simple-iframe" src='{environment:demosBaseUrl}/interactions/tooltip-simple' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
@@ -310,7 +310,7 @@ export class AppModule {}
 上記をすべて完了すると場所とツールチップは以下のようになります。
 
 <div class="sample-container loading" style="height:400px">
-    <iframe id="tooltip-rich-iframe" src='{environment:demosBaseUrl}/tooltip-rich' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="tooltip-rich-iframe" src='{environment:demosBaseUrl}/interactions/tooltip-rich' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>

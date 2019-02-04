@@ -10,7 +10,7 @@ _language: kr
 
 ### 데모
 <div class="sample-container" style="height: 500px">
-    <iframe id="category-chart-annotations-iframe" src='{environment:demosBaseUrl}/category-chart-annotations' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="category-chart-annotations-iframe" src='{environment:demosBaseUrl}/charts/category-chart-annotations' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="category-chart-annotations-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기
@@ -33,9 +33,9 @@ _language: kr
 </igx-category-chart>
 ```
 
-### 카테고리 도구 힌트 레이어
+### 카테고리 툴 힌트 레이어
 
-카테고리 도구 힌트 레이어는 카테고리 축을 사용하여 시리즈에 대한 그룹화된 도구 힌트를 표시합니다.
+카테고리 툴 힌트 레이어는 카테고리 축을 사용하여 시리즈에 대한 그룹화된 툴 힌트를 표시합니다.
 
 ```html
 <igx-category-chart
@@ -44,9 +44,9 @@ _language: kr
 </igx-category-chart>
 ```
 
-### 항목 도구 힌트 레이어
+### 항목 툴 힌트 레이어
 
-항목 도구 힌트 레이어는 모든 대상 시리즈에 대한 도구 힌트를 개별적으로 표시합니다.
+항목 툴 힌트 레이어는 모든 대상 시리즈에 대한 툴 힌트를 개별적으로 표시합니다.
 
 ```html
 <igx-category-chart
@@ -92,7 +92,7 @@ _language: kr
 
 ### 콜아웃 레이어
 
-콜아웃 레이어는 X/Y 위치에서 콜아웃을 표시합니다. 주석 위로 마우스를 가져 가면 레이블과 일부 추가 콘텐츠를 도구 힌트처럼 표시할 수 있습니다.
+콜아웃 레이어는 X/Y 위치에서 콜아웃을 표시합니다. 주석 위로 마우스를 가져 가면 레이블과 일부 추가 콘텐츠를 툴 힌트처럼 표시할 수 있습니다.
 
 > 참고: 카테고리 축을 사용하는 경우에는 `calloutsXMemberPath`는 수치 인덱스 또는 시간 축의 시간 값을 가리켜야 합니다.
 

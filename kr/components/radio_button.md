@@ -6,14 +6,14 @@ _language: kr
 ---
 
 ## Radio & Radio Group
-
-### Radio Button
 <p class="highlight">The Ignite UI for Angular Radio Button component allows the user to select a single option from an available set of options that are listed side by side.</p>
 <div class="divider"></div>
 
-### Radio Button Demo
+### Radio Button
+
+#### Radio Button Demo
 <div class="sample-container" style="height: 384px">
-    <iframe id="form-elements-sample-iframe" src='{environment:demosBaseUrl}/radio-sample-2' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="form-elements-sample-iframe" src='{environment:demosBaseUrl}/data-entries/radio-sample-2' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="form-elements-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
@@ -50,7 +50,7 @@ To get a started with some radio buttons, add the following code inside the comp
 If all went well, you should see something like the following in the browser:
 
 <div class="sample-container" style="height: 88px">
-    <iframe src='{environment:demosBaseUrl}/radio-sample-1' width="100%" height="100%" seamless frameBorder="0"></iframe>
+    <iframe src='{environment:demosBaseUrl}/data-entries/radio-sample-1' width="100%" height="100%" seamless frameBorder="0"></iframe>
 </div>
 
 #### Radio Button Properties
@@ -96,7 +96,7 @@ Pay attention that before using the ngModel directive in a two-way data binding,
 Try it! The final result would be something like that:
 
 <div class="sample-container" style="height: 384px">
-    <iframe src='{environment:demosBaseUrl}/radio-sample-2' width="100%" height="100%" seamless frameBorder="0"></iframe>
+    <iframe src='{environment:demosBaseUrl}/data-entries/radio-sample-2' width="100%" height="100%" seamless frameBorder="0"></iframe>
 </div>
 
 ### Radio Group
@@ -105,7 +105,7 @@ Try it! The final result would be something like that:
 
 #### Radio Group Demo
 <div class="sample-container" style="height: 320px">
-    <iframe id="radio-group-sample-iframe" src='{environment:demosBaseUrl}/radio-group-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="radio-group-sample-iframe" src='{environment:demosBaseUrl}/data-entries/radio-group-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="radio-group-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>

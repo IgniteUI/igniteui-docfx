@@ -131,9 +131,9 @@ export class AvatarComponent extends Component {
 // app-avatar.component.scss
 
 // Import all required functions and mixins
-@import "~igniteui-angular/lib/core/styles/themes/utilities";
-@import "~igniteui-angular/lib/core/styles/components/avatar-theme";
-@import "~igniteui-angular/lib/core/styles/components/avatar-component";
+@import '~igniteui-angular/lib/core/styles/themes/utilities';
+@import '~igniteui-angular/lib/core/styles/components/avatar/avatar-theme';
+@import '~igniteui-angular/lib/core/styles/components/avatar/avatar-component';
 
 $avatar-theme: igx-avatar-theme($initials-background: royalblue);
 
@@ -158,7 +158,7 @@ $avatar-theme: igx-avatar-theme($initials-background: royalblue);
 
 ```scss
 // Import the IgniteUI themes library first
-@import "~igniteui-angular/lib/core/styles/themes/index";
+@import '~igniteui-angular/lib/core/styles/themes/index';
 
 @include igx-core();
 @include igx-theme($default-palette, $legacy-support: false);
@@ -168,12 +168,8 @@ $avatar-theme: igx-avatar-theme($initials-background: royalblue);
 $avatar-theme: igx-avatar-theme($initials-background: royalblue);
 $badge-theme: igx-badge-theme($background-color: white);
 
-// Make sure you scope your css variables
-// the code bellow will make the changes global
-:root {
-    @include igx-css-vars($avatar-theme);
-    @include igx-css-vars($badge-theme);
-}
+@include igx-css-vars($avatar-theme);
+@include igx-css-vars($badge-theme);
 ```
 <div class="divider"></div>
 
@@ -182,9 +178,9 @@ $badge-theme: igx-badge-theme($background-color: white);
 以下のサンプルは、[表示のカプセル化](#表示のカプセル化)セクションのサンプルを開始点として使用しています。
 
 ```scss
-@import "~igniteui-angular/lib/core/styles/themes/utilities";
-@import "~igniteui-angular/lib/core/styles/components/avatar-theme";
-@import "~igniteui-angular/lib/core/styles/components/avatar-component";
+@import '~igniteui-angular/lib/core/styles/themes/utilities';
+@import '~igniteui-angular/lib/core/styles/components/avatar/avatar-theme';
+@import '~igniteui-angular/lib/core/styles/components/avatar/avatar-component';
 
 // Disable legacy support first.
 $igx-legacy-support: false;
@@ -198,7 +194,7 @@ $avatar-theme: igx-avatar-theme($initials-background: royalblue);
     @include igx-css-vars($avatar-theme);
 }
 ```
-加えて  `$igx-legacy-support` を  `false` に設定してビルドした Ignite UI for Angular テーマは、プロジェクトに Sass を使用せずにコンポーネントのスタイル設定が可能です。たとえば、`--igx-avatar-initials-background` CSS 変数の値を必要な色に設定して達成することができます。
+加えて `$igx-legacy-support` を `false` に設定してビルドした Ignite UI for Angular テーマは、プロジェクトに Sass を使用せずにコンポーネントのスタイル設定が可能です。たとえば、`--igx-avatar-initials-background` CSS 変数の値を必要な色に設定して達成することができます。
 
 ```css
 /* app-avatar.component.css */
@@ -208,6 +204,12 @@ $avatar-theme: igx-avatar-theme($initials-background: royalblue);
 }
 ```
 <div class="divider"></div>
+
+### API
+* [Global テーマ]({environment:sassApiUrl}/index.html#mixin-igx-theme)
+* [Avatar テーマ]({environment:sassApiUrl}/index.html#function-igx-avatar)
+
+<div class="divider--half"></div>
 
 ### その他のリソース
 <div class="divider--half"></div>

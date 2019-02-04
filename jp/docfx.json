@@ -16,7 +16,8 @@
                 "files": [
                     "components/**.md",
                     "components/**/toc.yml",
-					"components/themes/**.md",
+                    "components/themes/**.md",
+                    "components/general/**.md",
                     "toc.yml",
                     "*.md"
                 ],

@@ -10,7 +10,7 @@ The Category Chart is a charting component that makes visualizing category data 
 ### Demo
 
 <div class="sample-container" style="height: 500px">
-    <iframe id="category-chart-overview-sample-iframe" src='{environment:demosBaseUrl}/category-chart-overview-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="category-chart-overview-sample-iframe" src='{environment:demosBaseUrl}/charts/category-chart-overview-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="category-chart-overview-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
@@ -40,7 +40,7 @@ Another example of the intuitive behavior of the Category Chart control is that 
 ### Dependencies
 When installing the chart package, the core package must also be installed.
 
-**npm install ignite-angular-charts ignite-angular-core**
+**npm install igniteui-angular-charts igniteui-angular-core**
 
 The category chart is exported as an `NgModule`, you need to import the _IgxCategoryChartModule_ inside your `AppModule`:
 

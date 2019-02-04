@@ -11,7 +11,7 @@ _language: ja
 
 ### Mask デモ
 <div class="sample-container loading" style="height: 330px">
-    <iframe id="mask-sample-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/mask-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="mask-sample-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/data-display/mask-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="mask-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
@@ -75,7 +75,7 @@ export class AppModule {}
 サンプルを正しく構成した場合、書式マスクが適用される入力が表示されます。
 
 <div class="sample-container loading" style="height: 100px">
-    <iframe id="mask-sample2-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/mask-sample-2" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="mask-sample2-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/data-display/mask-sample-2" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 
 <div>
@@ -119,7 +119,7 @@ public clear() {
 ```
 
 <div class="sample-container loading" style="height: 160px">
-    <iframe id="mask-sample3-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/mask-sample-3" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="mask-sample3-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/data-display/mask-sample-3" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 
 <div>
@@ -216,6 +216,84 @@ export class Person {
       ) {  }
 }
 ```
+
+#### focus と blur に追加の書式を適用
+デフォルトの mask 動作に加え、カスタムパイプを実装して [`focusedValuePipe`]({environment:angularApiUrl}/classes/igxmaskdirective.html#focusedValuePipe) や [`displayValuePipe`]({environment:angularApiUrl}/classes/igxmaskdirective.html#displayValuePipe) 入力プロパティで入力がフォーカスを get または lost した場合に値を必要なアウトプットへ変換できます。基になるモデル値に影響はありません。以下はその方法です。
+
+ 表示値の最後に '%' サインを追加または削除する 2 つのパイプを実装します。
+```typescript
+@Pipe({ name: 'displayFormat' })
+export class DisplayFormatPipe implements PipeTransform {
+    transform(value: any): string {
+        let val = value;
+        if (val.indexOf('%') === -1) {
+            val += '%';
+        }
+        return val;
+    }
+}
+
+@Pipe({ name: 'inputFormat' })
+export class InputFormatPipe implements PipeTransform {
+    transform(value: any): string {
+        let val = value;
+        if (val.indexOf('%') !== -1) {
+            val = val.replace(new RegExp('%', 'g'), '');
+        }
+        return val;
+    }
+}
+```
+
+[`focusedValuePipe`]({environment:angularApiUrl}/classes/igxmaskdirective.html#focusedValuePipe) や [`displayValuePipe`]({environment:angularApiUrl}/classes/igxmaskdirective.html#displayValuePipe) 入力プロパティに各パイプのインスタンスを渡します。
+
+```typescript
+value = 1230;
+displayFormat = new DisplayFormatPipe();
+inputFormat = new InputFormatPipe();
+```
+```html
+<igx-input-group>
+    <label igxLabel for="email">Increase</label>
+    <input igxInput type="text" [(ngModel)]="value"
+                                [igxMask]="'00.00'"
+                                [focusedValuePipe]="inputFormat"
+                                [displayValuePipe]="displayFormat"/>
+</igx-input-group>
+```
+
+'%' 記号が blur の値に追加されて (ユーザーが入力以外をクリックした場合など) 入力がフォーカスを取得すると削除されます。
+
+<div class="sample-container loading" style="height: 100px">
+    <iframe id="mask-sample4-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/data-display/mask-sample-4" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="mask-sample4-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+
+#### プレースホルダーの追加
+[`placeholder`]({environment:angularApiUrl}/classes/igxmaskdirective.html#placeholder) プロパティは、ネイティブ プレースホルダー属性として使用できます。[`placeholder`]({environment:angularApiUrl}/classes/igxmaskdirective.html#placeholder) に値が提供されない場合、マスクの値セットが使用されます。
+
+```typescript
+value = null;
+```
+```html
+<igx-input-group>
+    <label igxLabel>Date</label>
+    <input igxInput type="text" [(ngModel)]="value"
+                                [igxMask]="'00/00/0000'"
+                                [placeholder]="'dd/mm/yyyy'"/>
+</igx-input-group>
+```
+
+<div class="sample-container loading" style="height: 100px">
+    <iframe id="mask-sample5-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/data-display/mask-sample-5" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="mask-sample5-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
 
 ### API リファレンス
 <div class="divider--half"></div>

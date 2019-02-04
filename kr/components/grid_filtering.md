@@ -12,13 +12,21 @@ Ignite UI for Angular 그리드 컴포넌트는 그리드가 바인딩되는 데
 #### 데모
 
 <div class="sample-container loading" style="height:600px">
-    <iframe id="grid-sample-iframe" src='{environment:demosBaseUrl}/grid-filtering-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="grid-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-filtering-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
 </div>
 <div class="divider--half"></div>
+
+###Interaction
+
+In order to open the filter row for a particular column, the 'Filter' chip below its header should be clicked. To add conditions you should choose filter operand using the dropdown on the left of the input and enter value. For `number` and `date` columns 'Equals' is selected by default, for `string` - 'Contains' and for `boolean` - 'All'. Pressing 'Enter' confirms the condition and you are now able to add another one. There is a dropdown, between 'condition' chips, which determines the logical operator between them, 'AND' is selected by default. To remove a condition you can click the 'X' button of the chip, and to edit it you should select the chip and the input will be populated with the chip's data. While filter row is opened you can click on any filterable column's header in order to select it and to be able to add filter conditions for it.
+
+While there are applied conditions for a column and the filter row is closed, you can either remove the conditions by clicking the chip's close button or you can open the filter row by selecting any of the chips. When there is not enough space to show all conditions a filter icon is shown with a badge that indicates how many more conditions there are. It can also be clicked in order to open the filter row.
+
+###Usage
 
 기본적으로 제공되는 기본 필터링 및 표준 필터링 조건이 있으며 개발자가 사용자 구현으로 대체 할 수도 있습니다. 또한, 사용자 필터링 조건을 간단히 플러그인할 수 있습니다. 그리드는 현재 단순한 필터링 UI뿐만 아니라 보다 복잡한 필터링 옵션을 제공합니다. 열의 [`dataType`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#datatype)에 따라 올바른 [**필터링 처리**](grid.md#필터링-조건) 세트가 필터 UI 드롭다운에 로드됩니다. 또한, [`ignoreCase`]({environment:angularApiUrl}/interfaces/ifilteringexpression.html) 및 초기 [`condition`]({environment:angularApiUrl}/interfaces/ifilteringexpression.html#condition) 속성을 설정할 수 있습니다.
 
@@ -140,6 +148,99 @@ this.grid.filteringLogic = FilteringLogic.OR;
 [`onDataPreLoad`]({environment:angularApiUrl}/classes/igxgridcomponent.html#ondatapreload) 및 [`onFilteringDone`]({environment:angularApiUrl}/classes/igxgridcomponent.html#onfilteringdone) 출력을 서브스크라이브하면 그리드의 원격 필터링을 제공할 수 있습니다. 이것을 사용하는 방법에 대한 자세한 것은 `그리드 가상화 및 성능` [documentation](grid_virtualization.md#원격-정렬필터링-가상화)을 참조하십시오.
 
 <div class="divider--half"></div>
+
+#### Custom Filtering Operands
+You can customize the filtering menu by adding, removing or modifying the filtering operands. By default, the filtering menu contains certain operands based on the column’s data type ([`IgxBooleanFilteringOperand`]({environment:angularApiUrl}/classes/igxbooleanfilteringoperand.html), [`IgxDateFilteringOperand`]({environment:angularApiUrl}/classes/igxdatefilteringoperand.html), [`IgxNumberFilteringOperand`]({environment:angularApiUrl}/classes/igxnumberfilteringoperand.html) and [`IgxStringFilteringOperand`]({environment:angularApiUrl}/classes/igxstringfilteringoperand.html)). You can extend these classes or their base class [`IgxFilteringOperand`]({environment:angularApiUrl}/classes/igxfilteringoperand.html) to change the filtering menu items’ behavior.
+
+In the sample below, inspect the “Product Name” and “Discontinued” columns filters menus. For the “Discontinued” column filter, we have limited the number of operands to All, True and False. For the “Product Name” column filter – we have modified the Contains and Does Not Contain operands logic to perform case sensitive search and added also Empty and Not Empty operands.
+
+To do that, extend the [`IgxStringFilteringOperand`]({environment:angularApiUrl}/classes/igxstringfilteringoperand.html) and [`IgxBooleanFilteringOperand`]({environment:angularApiUrl}/classes/igxbooleanfilteringoperand.html), modify the operations and their logic and set the column [`filters`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#filters) input to the new operands.
+
+```typescript
+// grid-custom-filtering.component.ts
+
+export class GridCustomFilteringComponent implements OnInit {
+    public caseSensitiveFilteringOperand = CaseSensitiveFilteringOperand.instance();
+    public booleanFilteringOperand = BooleanFilteringOperand.instance();
+    ...
+}
+...
+export class CaseSensitiveFilteringOperand extends IgxStringFilteringOperand {
+    private constructor() {
+        super();
+        const customOperations = [
+            {
+                iconName: "contains",
+                isUnary: false,
+                logic: (target: string, searchVal: string, ignoreCase?: boolean) => {
+                    ignoreCase = false;
+                    const search = IgxStringFilteringOperand.applyIgnoreCase(searchVal, ignoreCase);
+                    target = IgxStringFilteringOperand.applyIgnoreCase(target, ignoreCase);
+                    return target.indexOf(search) !== -1;
+                },
+                name: "Contains (case sensitive)"
+            },
+            {
+                iconName: "does_not_contain",
+                isUnary: false,
+                logic: (target: string, searchVal: string, ignoreCase?: boolean) => {
+                    ignoreCase = false;
+                    const search = IgxStringFilteringOperand.applyIgnoreCase(searchVal, ignoreCase);
+                    target = IgxStringFilteringOperand.applyIgnoreCase(target, ignoreCase);
+                    return target.indexOf(search) === -1;
+                },
+                name: "Does Not Contain (case sensitive)"
+            }
+        ];
+
+        const emptyOperators = [
+            // "Empty"
+            this.operations[6],
+            // "Not Empty"
+            this.operations[7]
+        ];
+
+        this.operations = customOperations.concat(emptyOperators);
+    }
+}
+
+export class BooleanFilteringOperand extends IgxBooleanFilteringOperand {
+    private constructor() {
+        super();
+        this.operations = [
+            // "All"
+            this.operations[0],
+            // "TRUE"
+            this.operations[1],
+            // "FALSE"
+            this.operations[2]
+        ];
+    }
+}
+```
+
+```html
+<!-- grid-custom-filtering.component.html -->
+
+ <igx-grid #grid1 [data]="data" [autoGenerate]="false" height="600px" width="100%" [allowFiltering]="true">
+    <igx-column field="ProductName" header="Product Name" [dataType]="'string'" [filters]="caseSensitiveFilteringOperand"></igx-column>
+    <igx-column field="Discontinued" header="Discontinued" [dataType]="'boolean'" [filters]="booleanFilteringOperand">
+        <ng-template igxCell let-cell="cell" let-val>
+            <img *ngIf="val" src="assets/images/grid/active.png" title="Continued" alt="Continued" />
+            <img *ngIf="!val" src="assets/images/grid/expired.png" title="Discontinued" alt="Discontinued" />
+        </ng-template>
+    </igx-column>
+    ...
+</igx-grid>
+```
+
+<div class="sample-container loading" style="height:600px">
+    <iframe id="grid-filtering-iframe" src='{environment:demosBaseUrl}/grid/grid-filter-conditions' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-filtering-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
+</div>
 
 #### 6.1.0의 주요 변경 사항
 * IgxGridComponent `filteringExpressions` 속성이 제거되었습니다. 대신에 [`filteringExpressionsTree`]({environment:angularApiUrl}/classes/igxgridcomponent.html#filteringexpressionstree)를 사용합니다.

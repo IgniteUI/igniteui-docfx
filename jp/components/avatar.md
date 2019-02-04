@@ -13,7 +13,7 @@ _language: ja
 ### Avatar デモ
 
 <div class="sample-container loading" style="height:200px">
-    <iframe id="avatar-sample-3-iframe" src='{environment:demosBaseUrl}/avatar-sample-3' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="avatar-sample-3-iframe" src='{environment:demosBaseUrl}/layouts/avatar-sample-3' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="avatar-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
@@ -71,7 +71,7 @@ Avatar の形式は四角または丸で、3 つのサイズ オプション (�
 以下は結果です。
 
 <div class="sample-container loading" style="height:100px">
-    <iframe id="avatar-sample-1-iframe" src='{environment:demosBaseUrl}/avatar-sample-1' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="avatar-sample-1-iframe" src='{environment:demosBaseUrl}/layouts/avatar-sample-1' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 
 #### 画像を表示するアバター
@@ -94,7 +94,7 @@ Avatar の形式は四角または丸で、3 つのサイズ オプション (�
 以下は結果です。
 
 <div class="sample-container loading" style="height:100px">
-    <iframe id="avatar-sample-2-iframe" src='{environment:demosBaseUrl}/avatar-sample-2' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="avatar-sample-2-iframe" src='{environment:demosBaseUrl}/layouts/avatar-sample-2' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 
 #### アイコンを表示するアバター

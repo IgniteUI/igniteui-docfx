@@ -102,7 +102,7 @@ In the below demo, we can pass the IgxCard [demo](https://www.infragistics.com/p
 
 
 <div class="sample-container loading" style="height: 400px">
-    <iframe id="overlay-sample-main-1-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/overlay-sample-main-1" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="overlay-sample-main-1-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/interactions/overlay-sample-main-1" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="overlay-sample-main-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on Stackblitz</button>
@@ -187,7 +187,7 @@ export class MyOverlayComponent {
 Using the [`overlaySettings`] ({environment:angularApiUrl}/interfaces/overlaysettings.html) parameter of the [`show()`] ({environment:angularApiUrl}/classes/igxoverlayservice.html#show) method, we can change how the content is shown - e.g. where the content is positioned, how the scroll should behave, is the container modal or not
 
 <div class="sample-container loading" style="height: 400px">
-    <iframe id="overlay-sample-main-2-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/overlay-sample-main-2" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="overlay-sample-main-2-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/interactions/overlay-sample-main-2" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="overlay-sample-main-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on Stackblitz</button>
@@ -249,7 +249,8 @@ export class ExampleComponent {
 
 ## API
 
-* [IgxOverlayService] ({environment:angularApiUrl}/classes/igxoverlayservice.html)
+* [IgxOverlayService]({environment:angularApiUrl}/classes/igxoverlayservice.html)
+* [IgxOverlay Styles]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
 
 ## Assumptions and Limitations</a>
 If you show the overlay in an outlet, and if the outlet is child of element with transform, perspective or filter css set you will be not able to show modal overlay. The reason for this is when one of above mentioned css properties is set the browser creates a new containing block and the overlay is limited to this containing block, as described [here](https://developer.mozilla.org/en-US/docs/Web/CSS/position#fixed).

@@ -13,7 +13,7 @@ _language: ja
 ### Ripple デモ
 
 <div class="sample-container loading" style="height: 558px">
-    <iframe id="ripple-sample-1-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/ripple-sample-1" onload="onSampleIframeContentLoaded(this);">
+    <iframe id="ripple-sample-1-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/interactions/ripple-sample-1" onload="onSampleIframeContentLoaded(this);">
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="ripple-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
@@ -38,6 +38,8 @@ import { IgxRippleModule } from 'igniteui-angular';
 })
 export class AppModule {}
 ```
+> [!WARNING]
+> [`igxRipple`]({environment:angularApiUrl}/classes/igxrippledirective.html) は Web Animation API を使用し、[サポートされるブラウザー](http://caniuse.com/#feat=web-animation)でネイティブに実行します。その他のブラウザーでは `web-animations.min.js` [ポリフィル](https://github.com/web-animations/web-animations-js)を使用します。
 
 ### 使用方法
 #### リップル エフェクトの追加
@@ -49,7 +51,7 @@ export class AppModule {}
 ```
 
 <div class="sample-container loading" style="height: 68px">
-    <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/ripple-sample-5" onload="onSampleIframeContentLoaded(this);">
+    <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/interactions/ripple-sample-5" onload="onSampleIframeContentLoaded(this);">
 </div>
 
 #### カスタム色
@@ -61,7 +63,7 @@ export class AppModule {}
 ```
 
 <div class="sample-container loading" style="height: 68px">
-    <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/ripple-sample-6" onload="onSampleIframeContentLoaded(this);">
+    <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/interactions/ripple-sample-6" onload="onSampleIframeContentLoaded(this);">
 </div>
 
 #### 中央揃えのリップル エフェクト
@@ -73,7 +75,7 @@ export class AppModule {}
 ```
 
 <div class="sample-container loading" style="height: 68px">
-    <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/ripple-sample-3" onload="onSampleIframeContentLoaded(this);">
+    <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/interactions/ripple-sample-3" onload="onSampleIframeContentLoaded(this);">
 </div>
 
 #### リップルの対象要素
@@ -92,7 +94,7 @@ export class AppModule {}
 親 div または子 div をクリックすると、リップル エフェクトは子 div 内のみに表示されます。子 div の要素を **relative** に設定する必要があります。
 
 <div class="sample-container loading" style="height: 168px">
-    <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/ripple-sample-2" onload="onSampleIframeContentLoaded(this);">
+    <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/interactions/ripple-sample-2" onload="onSampleIframeContentLoaded(this);">
 </div>
 
 #### リップルの期間
@@ -106,10 +108,8 @@ export class AppModule {}
 ```
 
 <div class="sample-container loading" style="height: 148px">
-    <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/ripple-sample-4" onload="onSampleIframeContentLoaded(this);">
+    <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/interactions/ripple-sample-4" onload="onSampleIframeContentLoaded(this);">
 </div>
-
-[`igxRipple`]({environment:angularApiUrl}/classes/igxrippledirective.html) は Web Animation API を使用し、[サポートされるブラウザー](http://caniuse.com/#feat=web-animation)でネイティブに実行します。その他のブラウザーで `web-animations.min.js` [ポリフィル](https://github.com/web-animations/web-animations-js)を使用します。
 
 > [!NOTE]
 > リップル アニメーションで相対的な位置を持つ要素を使用します。また、[`igxRippleTarget`]({environment:angularApiUrl}/classes/igxrippledirective.html#rippletarget) を使用して子要素を対象にすることもできます。

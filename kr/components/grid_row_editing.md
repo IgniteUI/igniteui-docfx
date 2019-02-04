@@ -16,7 +16,7 @@ _language: kr
 다음 샘플에서는 그리드에서 행 편집을 활성화하는 방법을 보여줍니다. 셀 값을 변경한 다음 동일한 행의 다른 셀을 클릭하거나 탐색하면 확인될 때까지 행 값이 업데이트되지 않으며, 종료 버튼을 사용하거나 취소 버튼을 사용하여 취소합니다.
 
 <div class="sample-container loading" style="height:650px">
-    <iframe id="grid-row-editing-sample-iframe" src='{environment:demosBaseUrl}/grid-row-editing' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="grid-row-editing-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-row-editing' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
@@ -30,7 +30,7 @@ _language: kr
 
 ## 사용 방법
 
-시작하려면 **app.module.ts** 파일에서 [IgxGridModule]({environment:angularApiUrl}/classes/igxgridmodule.html) 을 가져옵니다:
+시작하려면 **app.module.ts** 파일에서 `IgxGridModule` 을 가져옵니다:
 
 ```typescript
 // app.module.ts
@@ -186,4 +186,4 @@ export class GridRowEditSampleComponent {
 
 * [그리드 개요](grid.md)
 * [그리드 편집](grid_editing.md)
-* [그리드 트랜잭션](grid_transactions.md)
+* [그리드 트랜잭션](grid_batch_editing.md)

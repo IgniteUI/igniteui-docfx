@@ -1,4 +1,15 @@
-﻿- name: グリッドとリスト
+﻿- name: 概要
+  header: true
+- name: 作業の開始
+  href: general/getting_started.md
+  new: false
+- name: アップデート ガイド
+  href: general/update_guide.md
+  new: false
+- name: Ignite UI CLI
+  href: general/cli-overview.md
+  new: false
+- name: グリッドとリスト
   href: grids_and_lists.md
   header: true
 - name: Data Grid
@@ -10,7 +21,7 @@
       new: false
     - name: 編集
       href: grid_editing.md
-      new: true
+      new: false
     - name: 行編集
       href: grid_row_editing.md
       new: true
@@ -28,13 +39,13 @@
       new: false
     - name: グループ化
       href: grid_groupby.md
-      new: true
+      new: false
     - name: 集計
       href: grid_summaries.md
       new: false
     - name: 列移動
       href: grid_column_moving.md
-      new: true
+      new: false
     - name: 列のピン固定
       href: grid_column_pinning.md
       new: false
@@ -43,28 +54,28 @@
       new: false
     - name: 列の非表示
       href: grid_column_hiding.md
-      new: true
+      new: false
     - name: 選択
       href: grid_selection.md
       new: false
     - name: 検索
       href: grid_search.md
-      new: true
+      new: false
     - name: ツールバー
       href: grid_toolbar.md
-      new: true
+      new: false
     - name: Excel エクスポート
       href: exporter_excel.md
       new: false
     - name: Excel からの貼り付け
       href: grid_paste_excel.md
-      new: true
+      new: false
     - name: 複数列ヘッダー
       href: grid_multi_column_headers.md
-      new: true
+      new: false
     - name: 表示密度
       href: grid_displayDensity.md
-      new: true
+      new: false
     - name: 条件付きセルのスタイル設定
       href: grid_conditional_cell_styling.md
       new: true
@@ -79,13 +90,13 @@
   items:
     - name: 機能
       href: combo_features.md
-      new: true
+      new: false
     - name: リモート バインディング
       href: combo_remote.md
       new: true
     - name: テンプレート
       href: combo_templates.md
-      new: true
+      new: false
     - name: カスケーディング
       href: combo_cascading.md
       new: true
@@ -95,11 +106,11 @@
   href: categorychart.md
   new: false
   items:
-    - name: 注釈とオーバーレイ
+    - name: 注釈
       href: categorychart_annotation_layers.md
-      new: true
-    - name: チャートのタイプの選択
-      href: categorychart_explore_chart_types.md
+      new: false
+    - name: 軸オプション
+      href: categorychart_axis_options.md
       new: false
     - name: リアルタイム データ
       href: categorychart_real_time_data.md
@@ -110,8 +121,14 @@
     - name: 構成オプション
       href: categorychart_configuration_options.md
       new: false
-    - name: カスタム ツールチップ
-      href: categorychart_custom_tooltips.md
+    - name: ハイライト
+      href: categorychart_highlighting.md
+      new: false
+    - name: ツールチップ タイプ
+      href: categorychart_tooltip_types.md
+      new: false
+    - name: ツールチップ テンプレート
+      href: categorychart_tooltip_templates.md
       new: false
 - name: Financial Chart
   href: financialchart.md
@@ -119,7 +136,7 @@
   items:
     - name: 注釈とオーバーレイ
       href: financialchart_annotation_layers.md
-      new: true
+      new: false
     - name: チャート タイプの選択
       href: financialchart_explore_chart_types.md
       new: false
@@ -144,54 +161,56 @@
     - name: カスタム インジケーター
       href: financialchart_custom_indicators.md
       new: false
-    - name: カスタム ツールチップ
-      href: financialchart_custom_tooltips.md
+    - name: ツールチップ タイプ
+      href: financialchart_tooltip_types.md
       new: false
+    - name: ツールチップ テンプレート
+      href: financialchart_tooltip_templates.md
 - name: Doughnut Chart
   href: doughnutchart.md
-  new: true
+  new: false
 - name: Pie Chart
   href: piechart.md
-  new: true
-  #name: Frameworks
-  #header: true
-  #name: Excel Library
-  #href: excel_library.md
-  #new: true
+  new: false
+- name: フレームワーク
+  header: true
+- name: Excel Library
+  href: excel_library.md
+  new: false
   items:
-    # - name: Using Cells
-    #   href: excel_library_using_cells.md
-    #   new: true
-    # - name: Using Tables
-    #   href: excel_library_using_tables.md
-    #   new: true
-    # - name: Using Workbooks
-    #   href: excel_library_using_workbooks.md
-    #   new: true
-    # - name: Using Worksheets
-    #   href: excel_library_using_worksheets.md
-    #   new: true
-    - name: チャートでの作業
+    - name: セルの使用
+      href: excel_library_using_cells.md
+      new: false
+    - name: テーブルの使用
+      href: excel_library_using_tables.md
+      new: false
+    - name: ワークブックの使用
+      href: excel_library_using_workbooks.md
+      new: false
+    - name: ワークシートの使用
+      href: excel_library_using_worksheets.md
+      new: false
+    - name: チャートの使用
       href: excel_library_working_with_charts.md
-      new: true
+      new: false
     # - name: Working with Grids
     #   href: excel_library_working_with_grid.md
     #   new: true
-    - name: スパークラインでの作業
+    - name: スパークラインの使用
       href: excel_library_working_with_sparklines.md
-      new: true      
+      new: false
 - name: ゲージ
   header: true
-  new: true
+  new: false
 - name: Bullet Graph
   href: bulletgraph.md
-  new: true
+  new: false
 - name: Linear Gauge
   href: lineargauge.md
-  new: true
+  new: false
 - name: Radial Gauge
   href: radialgauge.md
-  new: true
+  new: false
 - name: スタイルとテーマ
   header: true
 - name: Themes
@@ -199,14 +218,18 @@
   items:
     - name: パレット
       href: themes/palette.md
+    - name: スキーマ
+      href: themes/schemas.md
+      new: false
+    - name: タイポグラフィ
+      href: themes/typography.md
     - name: グローバル テーマ
       href: themes/global-theme.md
     - name: コンポーネント テーマ
       href: themes/component-themes.md
-    - name: テーマのデモ
-      href: themes/theming-demo.md
-    - name: タイポグラフィ
-      href: themes/typography.md
+      new: false
+    - name: サンプル
+      href: themes/examples.md
 - name: Shadows
   href: shadows.md
 - name: Display Density
@@ -215,7 +238,7 @@
   header: true
 - name: Drop Down
   href: drop_down.md
-  new: true
+  new: false
 - name: Button
   href: button.md
 - name: Button Group
@@ -226,7 +249,7 @@
   href: switch.md
 - name: Radio と Radio Group
   href: radio_button.md
-  new: true
+  new: false
 - name: Label と Input
   href: label_input.md
 - name: Input Group
@@ -250,7 +273,7 @@
   href: for_of.md
 - name: Chip
   href: chip.md
-  new: true
+  new: false
 - name: Text Highlight
   href: texthighlight.md
   new: true
@@ -276,10 +299,10 @@
     new: true
   - name: スクロール ストラテジー
     href: overlay_scroll.md
-    new: true
+    new: false
 - name: Drag and Drop
   href: drag_drop.md
-  new: true
+  new: false
 - name: メニュー
   header: true
 - name: Navigation Drawer
@@ -306,6 +329,9 @@
   new: true
 - name: 通知
   header: true
+- name: Banner
+  href: banner.md
+  new: true
 - name: Snackbar
   href: snackbar.md
 - name: Toast
@@ -321,9 +347,12 @@
   new: false
 - name: サービス
   header: true
-- name: CSV Exporter
+- name: CSV エクスポーター
   href: exporter_csv.md
   new: false
-- name: Excel Exporter
+- name: Excel エクスポーター
   href: exporter_excel.md
+  new: false
+- name: ローカライゼーション
+  href: localization.md
   new: false

@@ -10,7 +10,7 @@ _language: ja
 
 ### デモ
 <div class="sample-container" style="height: 650px">
-    <iframe id="theme-chooser-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/theme-chooser" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="theme-chooser-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/theming/theme-chooser" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="theme-chooser-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く
@@ -37,7 +37,7 @@ _language: ja
 以下は上記コード スニペットの結果です。
 
 <div class="sample-container" style="height: 650px">
-    <iframe id="default-theme-sample-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/default-theme-sample" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="default-theme-sample-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/theming/default-theme-sample" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="default-theme-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}"> stackblitz で開く
@@ -45,7 +45,7 @@ _language: ja
 </div>
 <div class="divider--half"></div>
 
-コンポーネントの外観を変更したい場合や**デフォルト テーマ**がアプリケーションの UI に合わない場合は、**Ignite UI for Angular Theming** を使用して多数の CSS ファイルを書かずにスタイル設定が簡単にできます。
+コンポーネントの外観を変更したい場合や**デフォルト テーマ**がアプリケーションの UI に合わない場合は、**Ignite UI for Angular Theming** を使用して多くの CSS を記述せずにスタイル設定が簡単にできます。
 
 ### 作業の開始
 
@@ -68,15 +68,15 @@ _language: ja
 ```scss
 // Import grid component and theme styles
 @import '~igniteui-angular/lib/core/styles/components/grid/grid-component';
-@import '~igniteui-angular/lib/core/styles//components/grid/grid-theme';
+@import '~igniteui-angular/lib/core/styles/components/grid/grid-theme';
 
 // Import grid-paginator component and theme styles
-@import '~igniteui-angular/lib/core/styles//components/grid-paginator/grid-paginator-component';
-@import '~igniteui-angular/lib/core/styles//components/grid-paginator/grid-paginator-theme';
+@import '~igniteui-angular/lib/core/styles/components/grid-paginator/grid-paginator-component';
+@import '~igniteui-angular/lib/core/styles/components/grid-paginator/grid-paginator-theme';
 
 // Import grid-filtering component and theme styles
-@import '~igniteui-angular/lib/core/styles//components/grid-filtering/grid-filtering-component';
-@import '~igniteui-angular/lib/core/styles//components/grid-filtering/grid-filtering-theme';
+@import '~igniteui-angular/lib/core/styles/components/grid-filtering/grid-filtering-component';
+@import '~igniteui-angular/lib/core/styles/components/grid-filtering/grid-filtering-theme';
 
 ```
 - [**Igx-Dialog**](../dialog.md) の組み込み [**Igx-Input-Group**](../input_group.md)。
@@ -84,12 +84,12 @@ _language: ja
 ```scss
 
 // Import dialog-group component and theme styles
-@import '~igniteui-angular/lib/core/styles//components/dialog/dialog-component';
-@import '~igniteui-angular/lib/core/styles//components/dialog/dialog-theme';
+@import '~igniteui-angular/lib/core/styles/components/dialog/dialog-component';
+@import '~igniteui-angular/lib/core/styles/components/dialog/dialog-theme';
 
 // Import input-group component and theme styles
-@import '~igniteui-angular/lib/core/styles//components/input/input-group-component';
-@import '~igniteui-angular/lib/core/styles//components/input/input-group-theme';
+@import '~igniteui-angular/lib/core/styles/components/input/input-group-component';
+@import '~igniteui-angular/lib/core/styles/components/input/input-group-theme';
 
 ```
 
@@ -206,7 +206,7 @@ public themesClass = "dark-theme";
 結果は以下です。
 
 <div class="sample-container" style="height: 650px">
-    <iframe id="dark-theme-sample-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/dark-theme-sample" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="dark-theme-sample-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/theming/dark-theme-sample" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dark-theme-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}"> stackblitz で開く
@@ -312,7 +312,7 @@ export class ThemeChooserSampleComponent implements OnInit {
 `click` イベントのみで定義済みテーマを簡単に変更できます。
 
 <div class="sample-container" style="height: 650px">
-    <iframe id="theme-chooser-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/theme-chooser" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="theme-chooser-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/theming/theme-chooser" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="theme-chooser-iframe" data-demos-base-url="{environment:demosBaseUrl}"> stackblitz で開く
@@ -320,13 +320,14 @@ export class ThemeChooserSampleComponent implements OnInit {
 </div>
 <div class="divider--half"></div>
 
-###API
+### API
 
 * [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 * [IgxGrid Filtering Styles]({environment:sassApiUrl}/index.html#function-igx-grid-filtering-theme)
 * [IgxGrid Paginator Styles]({environment:sassApiUrl}/index.html#function-igx-grid-paginator-theme)
 * [IgxDialogComponent Styles]({environment:sassApiUrl}/index.html#function-igx-dialog-theme)
 * [IgxInputGroupComponent Styles]({environment:sassApiUrl}/index.html#function-igx-input-group-theme) 
+* [IgxOverlay Styles]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
 
 ### その他のリソース
 <div class="divider--half"></div>

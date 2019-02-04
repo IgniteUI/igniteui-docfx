@@ -10,7 +10,7 @@ _language: kr
 
 ### 데모
 <div class="sample-container" style="height: 570px;">
-    <iframe id="category-chart-high-frequency-sample-iframe" align="center" src='{environment:demosBaseUrl}/category-chart-high-frequency-sample' height="100%" width="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="category-chart-high-frequency-sample-iframe" align="center" src='{environment:demosBaseUrl}/charts/category-chart-high-frequency-sample' height="100%" width="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="category-chart-high-frequency-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기

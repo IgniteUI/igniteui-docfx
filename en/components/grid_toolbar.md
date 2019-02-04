@@ -11,7 +11,7 @@ The Grid in Ignite UI for Angular provides an [`IgxGridToolbarComponent`]({envir
 #### Demo
 
 <div class="sample-container loading" style="height:420px">
-    <iframe id="grid-toolbar-sample-1-iframe" src='{environment:demosBaseUrl}/grid-toolbar-sample-1' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="grid-toolbar-sample-1-iframe" src='{environment:demosBaseUrl}/grid/grid-toolbar-sample-1' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
@@ -38,7 +38,7 @@ The IgxGrid's toolbar can be configured to allow columns hiding, columns pinning
 There are also properties for configuring each button's text and they are listed in the API section below.
 
 <div class="sample-container loading" style="height:420px">
-    <iframe id="grid-toolbar-sample-2-iframe" src='{environment:demosBaseUrl}/grid-toolbar-sample-2' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="grid-toolbar-sample-2-iframe" src='{environment:demosBaseUrl}/grid/grid-toolbar-sample-2' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
@@ -121,11 +121,46 @@ public toolbarExportingHandler(args) {
 The following sample demonstrates how to customize the exported files:
 
 <div class="sample-container loading" style="height:420px">
-    <iframe id="grid-toolbar-sample-3-iframe" src='{environment:demosBaseUrl}/grid-toolbar-sample-3' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="grid-toolbar-sample-3-iframe" src='{environment:demosBaseUrl}/grid/grid-toolbar-sample-3' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-toolbar-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+
+<div class="divider"></div>
+
+#### Custom Content Template
+
+If you need to add some application specific UI to the toolbar (like custom buttons for example) you may create an ng-template and mark it with the [`igxToolbarCustomContent`]({environment:angularApiUrl}/classes/igxgridtoolbarcustomcontentdirective.html) directive. The following code snippet demonstrates how to define such custom template:
+
+```html
+<igx-grid [showToolbar]="true" ...>
+
+    ...
+
+    <ng-template igxToolbarCustomContent let-igxGrid="grid">
+        <button igxButton="flat" igxRipple igxRippleCentered="true" (click)="igxGrid.clearSort()">
+            <igx-icon fontSet="material">clear</igx-icon>
+            Clear Sort
+        </button>
+    </ng-template>
+</igx-grid>
+```
+
+> [!NOTE]
+> The [`igxToolbarCustomContent`]({environment:angularApiUrl}/classes/igxgridtoolbarcustomcontentdirective.html) directive's context contains two properties:
+> `grid` - a reference to the [`IgxGridComponent`]({environment:angularApiUrl}/classes/igxgridcomponent.html) containing the toolbar and
+> `toolbar` - a reference to the [`IgxGridToolbarComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html)
+
+The following sample demonstrates how to add an additional button to the toolbar to clear the sorting set by clicking on the columns' headers:
+
+<div class="sample-container loading" style="height:420px">
+    <iframe id="grid-toolbar-sample-4-iframe" src='{environment:demosBaseUrl}/grid/grid-toolbar-sample-4' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-toolbar-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
 <div class="divider"></div>

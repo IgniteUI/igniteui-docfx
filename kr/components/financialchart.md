@@ -11,7 +11,7 @@ _language: kr
 ### 데모
 
 <div class="sample-container" style="height: 550px">
-    <iframe id="financial-chart-overview-sample-iframe" src='{environment:demosBaseUrl}/financial-chart-overview-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="financial-chart-overview-sample-iframe" src='{environment:demosBaseUrl}/charts/financial-chart-overview-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="financial-chart-overview-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기
@@ -22,7 +22,7 @@ _language: kr
 
 사용자가 데이터를 바인딩하면 차트는 데이터를 시각화하고 해석할 수 있는 다양한 방법을 제공합니다. 가격, 수량, 금융지표를 위한 다양한 표시 모드가 있습니다. 또한, 차트는 레이블 서식 설정을 사용하여 데이터에 컨텍스트를 부여합니다.
 
-금융 차트 컴포넌트는 데이터 열을 분석하고 선택하며, 날짜/시간 열을 X축으로 사용하여 열기, 높음, 낮음, 닫기, 볼륨 열 또는 최초 5개의 수치 열을 Y축으로 사용합니다. 그 밖에도 사용자가 차트 유형을 바, 캔들, 기둥, 선으로 설정할 수 있습니다. 도구 모음, 가격 보기, 볼륨 보기, 인디케이터 보기 및 탐색 보기의 다섯 가지 주요 시각적 요소로 인해 데이터가 더 많이 인식됩니다.
+금융 차트 컴포넌트는 데이터 열을 분석하고 선택하며, 날짜/시간 열을 X축으로 사용하여 열기, 높음, 낮음, 닫기, 볼륨 열 또는 최초 5개의 수치 열을 Y축으로 사용합니다. 그 밖에도 사용자가 차트 유형을 바, 캔들, 기둥, 선으로 설정할 수 있습니다. 툴 모음, 가격 보기, 볼륨 보기, 인디케이터 보기 및 탐색 보기의 다섯 가지 주요 시각적 요소로 인해 데이터가 더 많이 인식됩니다.
 
 `chartType` 속성을 다음 옵션 중 하나에 설정하여 차트 유형을 명시적으로 지정할 수 있습니다:
 
@@ -97,8 +97,8 @@ let data = [
  </igx-financial-chart>
 ```
 
-### 도구 모음
-도구 모음이 금융 차트의 맨 위에 표시됩니다. 최종 사용자가 표시되는 데이터에 대한 다양한 세부 정보를 변경할 수 있고 다른 창을 표시할 수 있습니다. 도구 모음에는 다음의 선택기가 포함되어 있습니다:
+### 툴 모음
+툴 모음이 금융 차트의 맨 위에 표시됩니다. 최종 사용자가 표시되는 데이터에 대한 다양한 세부 정보를 변경할 수 있고 다른 창을 표시할 수 있습니다. 툴 모음에는 다음의 선택기가 포함되어 있습니다:
 - 인디케이터 유형 선택기 - 여러 유형의 금융지표를 선택할 수 있습니다. 가격이나 다른 인디케이터와 동일한 Y축 축척을 공유하지 않기 때문에 이러한 인디케이터는 가격 창 아래의 창에 표시됩니다.
 - 오버레이 유형 선택기 - 사용자가 여러 유형의 금융 오버레이를 선택할 수 있습니다. 이러한 오버레이는 동일한 Y축 축척을 공유하기 때문에 금융 가격 시리즈와 함께 표시됩니다. `BollingerBands` 및 `PriceChannel`의 두 가지 유형의 오버레이가 있습니다.
 - 추세선 유형 선택기 - 사용자가 여러 유형의 추세선을 선택할 수 있습니다. 추세선은 가격 창 및 볼륨 창 위에 추세선 레이어로 표시됩니다.
@@ -106,9 +106,9 @@ let data = [
 - 차트 유형 선택기 - 사용자가 금융 차트의 차트 유형을 선택할 수 있습니다. 이들은 가격 창에 표시됩니다.
 - 볼륨 유형 선택기 - 사용자가 볼륨 창에서 재고 볼륨 데이터를 표시합니다. 사용자는 없음, 기둥, 선, 영역 차트 유형 중에서 선택할 수 있습니다.
 
-금융 차트의 너비에 따라 도구 모음은 상기 부분에서 설명한 요소를 모두 포함하지 않을 수도 있습니다. 금융 차트 및 해당 컨테이너 너비를 늘리면 도구 모음에 더 많은 선택기가 표시됩니다.
+금융 차트의 너비에 따라 툴 모음은 상기 부분에서 설명한 요소를 모두 포함하지 않을 수도 있습니다. 금융 차트 및 해당 컨테이너 너비를 늘리면 툴 모음에 더 많은 선택기가 표시됩니다.
 
-또한, 차트 창의 수직 공간을 최대화하기 위해 도구 막대를 숨길 수 있습니다. 다음의 코드는 도구 막대를 숨기는 방법을 보여줍니다:
+또한, 차트 창의 수직 공간을 최대화하기 위해 툴 막대를 숨길 수 있습니다. 다음의 코드는 툴 막대를 숨기는 방법을 보여줍니다:
 
 ```html
  <igx-financial-chart

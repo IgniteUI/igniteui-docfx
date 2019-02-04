@@ -6,20 +6,20 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ## Tree Grid Batch Editing
 
-[`TransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) is an injectable middleware that a component can use to accumulate changes without affecting the underlying data. The provider exposes API to access, manipulate changes (undo and redo) and discard or commit all to the data.
+[`HierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) is an injectable middleware that a component can use to accumulate changes without affecting the underlying data. The provider exposes API to access, manipulate changes (undo and redo) and discard or commit all to the data.
 
-The [`TransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) works with both cell editing and row editing. The transaction for the cell edit is added when the cell exits edit mode. Respectively a row transaction is created, when the row exits edit mode. But in both cases the state of the grid edits consist of all updated, added and deleted rows and their last states. Those can later be inspected, manipulated and submitted at once. Changes are collected for individual cells or rows, depending on the editing mode in use, and accumulated per data row/record.
+The [`HierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) works with both cell editing and row editing. The transaction for the cell edit is added when the cell exits edit mode, while row transaction is created, when the row exits edit mode. But in both cases the state of the grid edits consist of all updated, added and deleted rows and their last states. Those can later be inspected, manipulated and submitted at once. Changes are collected for individual cells or rows, depending on the editing mode in use, and accumulated per data row/record.
 
 Batch editing allows to **Add/Update/Delete** several records in a chunk and manually commit all of the editing changes at ones. Until the changes are committed, there is a visual representation for each edited record so that the end user will be able to differentiate the updated and deleted ones from the unmodified for example. Additionally, it exposes **Undo/Redo** functionality, that can be used to manage the changes before committing.
 
-In order to be able to use the Batch Editing functionality, it is required to import the [`TransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) from "igniteui-angular". Again Transaction is a provider that accumulates the applied changes as a transaction log and in the same time holds a state for each modified row and its last state.
+In order to be able to use the Batch Editing functionality, it is required to import the [`HierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) from "igniteui-angular". Again Transaction is a provider that accumulates the applied changes as a transaction log and in the same time holds a state for each modified row and its last state.
 
 ### Demo
 
 The following sample illustrates how to enable and use Batch Editing via Transaction as provider and has row editing enabled. The latter will ensure that transaction will be added after the entire row edit is confirmed. The sample uses a flat data source.
 
 <div class="sample-container loading" style="height:890px">
-    <iframe id="tree-grid-batch-editing-sample-iframe" src='{environment:demosBaseUrl}/treegrid-batch-edit' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="tree-grid-batch-editing-sample-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-batch-edit' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
@@ -57,7 +57,7 @@ import { IgxGridComponent, IgxGridTransaction, IgxToggleDirective,
     IgxTransactionService, IgxTreeGridComponent } from "igniteui-angular";
 
 @Component({
-    providers: [{ provide: IgxGridTransaction, useClass: IgxTransactionService }],
+    providers: [{ provide: IgxGridTransaction, useClass: IgxHierarchicalTransactionService }],
     selector: "app-tree-grid-batch-editing-sample.component",
     styleUrls: ["tree-grid-batch-editing-sample.component.scss"],
     templateUrl: "tree-grid-batch-editing-sample.component.html"
@@ -83,7 +83,7 @@ Then define a tree grid with bound data source and [`rowEditable`]({environment:
     ...
 ```
 
-The following code demonstrates the usage of the [`transactions`]({environment:angularApiUrl}/classes/igxtransactionservice.html#) API - undo, redo, commit.
+The following code demonstrates the usage of the [`HierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) API - undo, redo, commit.
 
 ```typescript
 
@@ -127,7 +127,7 @@ export class TreeGridBatchEditingSampleComponent {
 
 ### API References
 
-* [`TransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) 
+* [`HierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) 
 * [`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditable)
 * [`IgxTreeGridModule`]({environment:angularApiUrl}/classes/igxtreegridmodule.html)
 * [`IgxTreeGridComponent`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html)

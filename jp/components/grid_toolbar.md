@@ -12,7 +12,7 @@ Ignite UI for Angular のグリッドは、**UI** 操作のコンテナーとな
 #### デモ
 
 <div class="sample-container loading" style="height:420px">
-    <iframe id="grid-toolbar-sample-1-iframe" src='{environment:demosBaseUrl}/grid-toolbar-sample-1' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="grid-toolbar-sample-1-iframe" src='{environment:demosBaseUrl}/grid/grid-toolbar-sample-1' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
@@ -39,7 +39,7 @@ IgxGrid のツールバーは、列の非表示、列のピン固定、データ
 各ボタン テキストを設定するプロパティについては、以下の API セクションを確認してください。
 
 <div class="sample-container loading" style="height:420px">
-    <iframe id="grid-toolbar-sample-2-iframe" src='{environment:demosBaseUrl}/grid-toolbar-sample-2' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="grid-toolbar-sample-2-iframe" src='{environment:demosBaseUrl}/grid/grid-toolbar-sample-2' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
@@ -122,11 +122,46 @@ public toolbarExportingHandler(args) {
 以下のサンプルは、エクスポート ファイルをカスタマイズする方法を示します。
 
 <div class="sample-container loading" style="height:420px">
-    <iframe id="grid-toolbar-sample-3-iframe" src='{environment:demosBaseUrl}/grid-toolbar-sample-3' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="grid-toolbar-sample-3-iframe" src='{environment:demosBaseUrl}/grid/grid-toolbar-sample-3' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-toolbar-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
+</div>
+
+<div class="divider"></div>
+
+#### カスタム コンテンツ テンプレート
+
+ツールバーにアプリケーション固有の UI (カスタム ボタンなど) を追加する場合、ng-template を作成して[`igxToolbarCustomContent`]({environment:angularApiUrl}/classes/igxgridtoolbarcustomcontentdirective.html) ディレクティブでマークします。以下のコード スニペットはカスタム テンプレートを定義する方法を示します。
+
+```html
+<igx-grid [showToolbar]="true" ...>
+
+    ...
+
+    <ng-template igxToolbarCustomContent let-igxGrid="grid">
+        <button igxButton="flat" igxRipple igxRippleCentered="true" (click)="igxGrid.clearSort()">
+            <igx-icon fontSet="material">clear</igx-icon>
+            Clear Sort
+        </button>
+    </ng-template>
+</igx-grid>
+```
+
+> [!NOTE]
+> [`igxToolbarCustomContent`]({environment:angularApiUrl}/classes/igxgridtoolbarcustomcontentdirective.html) ディレクティブのコンテキストに 2 つのプロパティを含みます。
+> `grid` - ツールバーを含む [`IgxGridComponent`]({environment:angularApiUrl}/classes/igxgridcomponent.html) への参照と
+> `toolbar` -  [`IgxGridToolbarComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html) への参照。
+
+以下のサンプルは、列ヘッダーをクリックして並べ替えセットをクリアするためのボタンをツールバーに追加する方法です。
+
+<div class="sample-container loading" style="height:420px">
+    <iframe id="grid-toolbar-sample-4-iframe" src='{environment:demosBaseUrl}/grid/grid-toolbar-sample-4' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-toolbar-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz　で開く</button>
 </div>
 
 <div class="divider"></div>

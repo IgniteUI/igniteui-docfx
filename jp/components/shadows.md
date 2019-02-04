@@ -190,7 +190,7 @@ Shadows は、Document Object Model ツリーの間に境界線を描画し、�
 以下は上記コード スニペットの結果です。
 
 <div class="sample-container loading" style="height: 350px">
-    <iframe id="shadows-sample-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/shadows-sample" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="shadows-sample-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/theming/shadows-sample" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="shadows-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz</button>
@@ -218,7 +218,7 @@ $shadow-elevations: igx-elevations($color-1, $color-2, $color-3);
 結果は以下のようになります。
 
 <div class="sample-container loading" style="height: 350px">
-    <iframe id="shadows-sample-2-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/shadows-sample-2" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="shadows-sample-2-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/theming/shadows-sample-2" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="shadows-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz</button>
@@ -228,5 +228,5 @@ $shadow-elevations: igx-elevations($color-1, $color-2, $color-3);
 
 ### API リファレンス
 
-* [IGX-ELEVATION]({environment:sassApiUrl}/idnex.html#function-igx-elevation)
-* [IGX-ELEVATIONS]({environment:sassApiUrl}/idnex.html#function-igx-elevations)
+* [IGX-ELEVATION]({environment:sassApiUrl}/index.html#function-igx-elevation)
+* [IGX-ELEVATIONS]({environment:sassApiUrl}/index.html#function-igx-elevations)

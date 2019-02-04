@@ -18,7 +18,7 @@ Combo コンポーネントは、**[フィルタリング](combo_features.md#フ
 
 ### デモ
 <div class="sample-container loading" style="height: 400px;">
-    <iframe id="combo-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/combo" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="combo-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/lists/combo" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="combo-sample" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
@@ -111,8 +111,9 @@ igxCombo が開いて、カスタム値が有効で、「項目の追加」ボ�
 ### 入力
 <div class="divider--half"></div>
 
-* IgxComboComponent [**API 参照**]({environment:angularApiUrl}/classes/igxcombocomponent.html) と
-[**テーマの参照**]({environment:sassApiUrl}/index.html#themes-mixin-igx-combo)。
+* [IgxComboComponent]({environment:angularApiUrl}/classes/igxcombocomponent.html) 
+* [IgxComboComponent Styles]({environment:sassApiUrl}/index.html#themes-mixin-igx-combo)
+* [IgxOverlay Styles]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
 
 ## 既知の問題
 

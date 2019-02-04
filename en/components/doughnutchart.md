@@ -11,7 +11,7 @@ The Doughnut Chart component is similar to the Pie Chart component, proportional
 ### Demo
 
 <div class="sample-container" style="height: 450px">
-    <iframe id="doughnut-chart-overview-iframe" src='{environment:demosBaseUrl}/doughnut-chart-overview' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="doughnut-chart-overview-iframe" src='{environment:demosBaseUrl}/charts/doughnut-chart-overview' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="doughnut-chart-overview-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
@@ -23,7 +23,7 @@ The Doughnut Chart component is similar to the Pie Chart component, proportional
  ### Dependencies
 When installing the charts package, the core package must also be installed.
 
-**npm install ignite-angular-charts ignite-angular-core**
+**npm install igniteui-angular-charts igniteui-angular-core**
 
 The doughnut chart is exported as an `NgModule`, you need to import the _IgxDoughnutChartModule_ inside your `AppModule`:
 
@@ -95,7 +95,7 @@ The doughnut chart component exposes the API for setting the state of one or mor
 ### Slice Selection Demo
 
 <div class="sample-container" style="height: 450px">
-    <iframe id="doughnut-chart-selection-iframe" src='{environment:demosBaseUrl}/doughnut-chart-selection' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="doughnut-chart-selection-iframe" src='{environment:demosBaseUrl}/charts/doughnut-chart-selection' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="doughnut-chart-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
@@ -123,7 +123,7 @@ You can change the exploded slices by changing the contents of the `explodedSlic
 ### Slice Explosion Demo
 
 <div class="sample-container" style="height: 450px">
-    <iframe id="doughnut-chart-explosion-iframe" src='{environment:demosBaseUrl}/doughnut-chart-explosion' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="doughnut-chart-explosion-iframe" src='{environment:demosBaseUrl}/charts/doughnut-chart-explosion' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="doughnut-chart-explosion-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz

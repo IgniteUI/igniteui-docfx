@@ -1,25 +1,25 @@
 {
-    "name": "igniteui-for-angular-docfx",
-    "version": "1.0.0",
-    "description": "Static sample site generator for Ignite UI for Angular.",
-    "main": "index.js",
-    "scripts": {
-        "start": "gulp serve",
-        "build": "gulp build",
-        "build-staging": "set NODE_ENV=staging && gulp build",
-        "build-production": "set NODE_ENV=production && gulp build",
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "author": "Infragistics",
-    "license": "ISC",
-    "dependencies": {
-        "browser-sync": "2.18.13",
-        "del": "^3.0.0",
-        "gulp": "^3.9.1",
-        "gulp-autoprefixer": "^5.0.0",
-        "gulp-sass": "^4.0.1",
-        "gulp-shell": "^0.6.5",
-        "igniteui-docfx-template": "2.0.4",
-        "yargs": "^10.0.3"
-    }
+  "name": "igniteui-for-angular-docfx",
+  "version": "1.0.0",
+  "description": "Static sample site generator for Ignite UI for Angular.",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp serve",
+    "build": "gulp build",
+    "build-staging": "set NODE_ENV=staging && gulp build",
+    "build-production": "set NODE_ENV=production && gulp build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Infragistics",
+  "license": "ISC",
+  "dependencies": {
+    "browser-sync": "2.18.13",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-sass": "^4.0.1",
+    "gulp-shell": "^0.6.5",
+    "igniteui-docfx-template": "2.0.8",
+    "yargs": "^10.0.3"
+  }
 }

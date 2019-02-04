@@ -13,7 +13,7 @@ _language: ja
 
 ### 展開パネルデモ
 <div class="sample-container loading" style="height: 400px;">
-    <iframe id="expansion-sample-1-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/expansion-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="expansion-sample-1-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/layouts/expansion-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="expansion-sample-1-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
@@ -21,8 +21,8 @@ _language: ja
 <div class="divider--half"></div>
 
 ## 使用方法
-### はじめに
-`IgxExpansionPanelComponent`]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html) を使用する場合、[**IgxExpansionPanelModule**]({environment:angularApiUrl}/classes/igxexpansionpanelmodule.html) を **app.module** にインポートする必要があります。 
+### 作業の開始
+[`IgxExpansionPanelComponent`]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html) を使用する場合、**IgxExpansionPanelModule** を **app.module** にインポートする必要があります。
 ```typescript
 // app.module.ts
 
@@ -91,9 +91,9 @@ export class AppModule {}
 
 css クラスの `.igx-expansion-panel__ ヘッダーと `.igx-expansion-panel__body` は、ヘッダーとボディのスタイル設定を公開します。
 
-以下は結果です。 
+以下は結果です。
 <div class="sample-container loading" style="height: 400px;">
-    <iframe id="expansion-sample-1-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/expansion-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="expansion-sample-1-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/layouts/expansion-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="expansion-sample-1-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
@@ -148,7 +148,7 @@ export class ExpansionPanelComponent {
 
 以下は結果です。
 <div class="sample-container loading" style="height: 400px;">
-    <iframe id="expansion-sample-2-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/expansion-sample-2" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="expansion-sample-2-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/layouts/expansion-sample-2" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="expansion-sample-2-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
@@ -170,13 +170,13 @@ export class ExpansionPanelComponent {
 ```
 > [`iconPosition`]({environment:angularApiUrl}/classes/igxexpansionpanelheadercomponent.html#iconposition) プロパティは、`RTL` で使用できます。たとえば、**right**に表示するよう設定したアイコンは、RTL 設定時にヘッダーの左端に表示されます。
 
-コンテンツを渡してコントロールで使用するデフォルト アイコンは、[`igx-expansion-panel-icon`]({environment:angularApiUrl}/classes/igxexpansionpanelicondirective.html) タグでをオーバーライドできます。
+コンテンツを渡してコントロールで使用するデフォルト アイコンは、`igx-expansion-panel-icon` タグでをオーバーライドできます。
 ```html
 <!-- in expansion-component.component.html -->
     <igx-expansion-panel>
     ...
         <igx-expansion-panel-header [iconPosition]="'right'">
-        ... 
+        ...
             <igx-expansion-panel-icon>
                 <span class="example-icon" *ngIf="panel.collapsed">Show more</span>
                 <span class="example-icon" *ngIf="!panel.collapsed">Collapse</span>
@@ -241,13 +241,13 @@ export class ExpansionPanelComponent {
 ### まとめ
 以下は、すべての変更を初期コンポーネントに適用後の最終的な結果です。
 <div class="sample-container loading" style="height: 500px;">
-    <iframe id="expansion-sample-3-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/expansion-sample-3" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="expansion-sample-3-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/layouts/expansion-sample-3" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="expansion-sample-3-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-`IgxExpansionPanel` コントロールは、すべてのコンテンツの並べ替え[`IgxGrid`]({environment:angularApiUrl}/classes/igxcombocomponent.html)、[`IgxCombo`]({environment:angularApiUrl}/classes/igxcombocomponent.html)、チャート、更に他の展開パネルも描画できます。
+`IgxExpansionPanel` コントロールは、すべてのコンテンツの並べ替え[`IgxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html)、[`IgxCombo`]({environment:angularApiUrl}/classes/igxcombocomponent.html)、チャート、更に他の展開パネルも描画できます。
 
 ## アニメーションの使用
 ### 特定のアニメーションの使用
@@ -336,16 +336,16 @@ export class ExpansionPanelComponent {
 ...
 ```
 
-以下は結果です。 
+以下は結果です。
 <div class="sample-container loading" style="height: 350px;">
-    <iframe id="expansion-sample-6-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/expansion-sample-6" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="expansion-sample-6-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/layouts/expansion-sample-6" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="expansion-sample-6-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
 ### 複数パネルの場合
-以下の例は、アプリのようなシナリオを実装します。ユーザーの詳細を表示または要求するような特定のワークフローに従います。このサンプルは、インビルト アニメーションのデフォルトの [`growVerIn`]({environment:sassApiUrl}/index.html#mixin-grow-ver-in) と [`growVerOut`]({environment:sassApiUrl}/index.html#mixin-grow-ver-out) アニメーションを使用するため、特定のアニメーション設定を渡したり、アニメーションをインポートしたりする必要はありません。複数の `igxExpansionPanel` は一度に展開して[`onInteraction`]({environment:angularApiUrl}/classes/igxexpansionpanelheadercomponent.html#oninteraction) イベントを処理することはできません。
+以下の例は、アプリのようなシナリオを実装します。ユーザーの詳細を表示または要求するような特定のワークフローに従います。このサンプルは、インビルト アニメーションのデフォルトの `growVerIn` と `growVerOut` アニメーションを使用するため、特定のアニメーション設定を渡したり、アニメーションをインポートしたりする必要はありません。複数の `igxExpansionPanel` は一度に展開して[`onInteraction`]({environment:angularApiUrl}/classes/igxexpansionpanelheadercomponent.html#oninteraction) イベントを処理することはできません。
 
 ```typescript
 // in expansion-panel.component.ts
@@ -513,9 +513,9 @@ export class ExpansionPanelComponent {
 </igx-expansion-panel>
 ...
 ```
-以下は結果です。 
+以下は結果です。
 <div class="sample-container loading" style="height: 550px;">
-    <iframe id="expansion-sample-5-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/expansion-sample-5" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="expansion-sample-5-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/layouts/expansion-sample-5" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="expansion-sample-5-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
@@ -615,9 +615,9 @@ export const data = {
 
 ```
 
-以下は結果です。 
+以下は結果です。
 <div class="sample-container loading" style="height: 600px;">
-    <iframe id="expansion-sample-7-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/expansion-sample-7" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="expansion-sample-7-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/layouts/expansion-sample-7" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="expansion-sample-7-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>

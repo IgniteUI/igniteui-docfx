@@ -13,7 +13,7 @@ Ignite UI for Angular의 그리드 컴포넌트는 사용자 규칙을 기반으
 #### 데모
 
 <div class="sample-container loading" style="height:530px">
-    <iframe id="cell-styling-sample-iframe" src='{environment:demosBaseUrl}/grid-cell-styling' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="cell-styling-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-cell-styling' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
@@ -88,7 +88,7 @@ public beatsPerMinuteClasses = {
 * [열 숨기기](grid_column_hiding.md)
 * [선택](grid_selection.md)
 * [검색](grid_search.md)
-* [도구 모음](grid_toolbar.md)
+* [툴 모음](grid_toolbar.md)
 * [Excel로 내보내기](exporter_excel.md)
 * [Excel에서 붙여넣기](grid_paste_excel.md)
 * [복수 열 헤더](grid_multi_column_headers.md)

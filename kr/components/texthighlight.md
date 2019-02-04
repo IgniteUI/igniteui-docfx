@@ -11,7 +11,7 @@ The [`IgxTextHighlight`]({environment:angularApiUrl}/classes/igxtexthighlightdir
 
 ### TextHighlight Demo
 <div class="sample-container loading" style="height: 260px;">
-    <iframe id="text-highlight-1-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/text-highlight-1" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="text-highlight-1-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/data-display/text-highlight-1" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="text-highlight-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
@@ -19,7 +19,7 @@ The [`IgxTextHighlight`]({environment:angularApiUrl}/classes/igxtexthighlightdir
 <div class="divider--half"></div>
 
 > [!NOTE]
-> To start using Ignite UI for Angular components in your own projects, make sure you have configured all necessary dependencies and have performed the proper setup of your project. You can learn how to do this in the [**installation**](https://www.infragistics.com/products/ignite-ui-angular/getting-started#installation) topic.
+> To start using Ignite UI for Angular components in your own projects, make sure you have configured all necessary dependencies and have performed the proper setup of your project. You can learn how to do this in the [**installation**](general/getting_started.md) topic.
 
 ### Usage
 
@@ -187,7 +187,7 @@ Then we need to add the following methods which will allow the user to apply the
 If the sample is configured properly, the final result should look like that:
 
 <div class="sample-container loading" style="height: 260px;">
-    <iframe id="text-highlight-1-iframe" src='{environment:demosBaseUrl}/text-highlight-1' width="100%" height="100%" seamless
+    <iframe id="text-highlight-1-iframe" src='{environment:demosBaseUrl}/data-display/text-highlight-1' width="100%" height="100%" seamless
         frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -295,7 +295,7 @@ All the rest of the code in the .ts file is identical to the single container ex
 ```
 
 <div class="sample-container loading" style="height: 400px;">
-    <iframe id="text-highlight-2-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/text-highlight-2" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="text-highlight-2-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/data-display/text-highlight-2" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="text-highlight-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
