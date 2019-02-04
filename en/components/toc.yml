@@ -129,6 +129,105 @@
     - name: Tooltip Templates
       href: categorychart_tooltip_templates.md
       new: false
+- name: Data Chart
+  href: datachart.md
+  items:
+    - name: Axis Types
+      href: datachart_axis_types.md
+      new: true
+    - name: Axis Settings
+      href: datachart_axis_settings.md
+      new: true
+    - name: Axis Scales
+      href: datachart_axis_scales.md
+      new: true
+    - name: Axis Locations
+      href: datachart_axis_locations.md
+      new: true
+    - name: Chart Legends
+      href: datachart_chart_legends.md
+      new: true
+    - name: Chart Navigation
+      href: datachart_chart_navigation.md
+      new: true
+    - name: Chart Performance
+      href: datachart_chart_performance.md
+      new: true
+    - name: Chart Synchronization
+      href: datachart_chart_synchronization.md
+      new: true
+    - name: Chart Titles
+      href: datachart_chart_titles.md
+      new: true
+    - name: Data Sources
+      href: datachart_data_sources.md
+      new: true 
+    - name: Data Triangulation
+      href: datachart_data_triangulation.md
+      new: true
+    - name: Series Animations
+      href: datachart_series_animations.md
+      new: true
+    - name: Series Annotations
+      href: datachart_series_annotations.md
+      new: true
+    - name: Series Error Bars
+      href: datachart_series_errorbars.md
+      new: true
+    - name: Series Highlighting
+      href: datachart_series_highlighting.md
+      new: true
+    - name: Series Markers
+      href: datachart_series_markers.md
+      new: true
+    - name: Series Requirements
+      href: datachart_series_requirements.md
+      new: true
+    - name: Series Tooltips
+      href: datachart_series_tooltips.md
+      new: true
+    - name: Series Trendlines
+      href: datachart_series_trendlines.md
+      new: true
+    - name: Series Types
+      href: datachart_series_types.md
+      new: true
+    - name: Category Series 
+      href: datachart_series_types_category.md
+      new: true
+    - name: Financial Series 
+      href: datachart_series_types_financial.md
+      new: true
+    - name: Polar Series 
+      href: datachart_series_types_polar.md
+      new: true
+    - name: Radial Series 
+      href: datachart_series_types_radial.md
+      new: true
+    - name: Range Series 
+      href: datachart_series_types_range.md
+      new: true
+    - name: Scatter Area Series 
+      href: datachart_series_types_scatter_area.md
+      new: true
+    - name: Scatter Contour Series 
+      href: datachart_series_types_scatter_contour.md
+      new: true
+    - name: Scatter HD Series
+      href: datachart_series_types_scatter_hd.md
+      new: true
+    - name: Scatter Marker Series
+      href: datachart_series_types_scatter_marker.md
+      new: true
+    - name: Shape Series
+      href: datachart_series_types_shape.md
+      new: true
+    - name: Stacked Series
+      href: datachart_series_types_stacked.md
+      new: true
+    - name: Value Overlay
+      href: datachart_series_value_overlay.md
+      new: true           
 - name: Financial Chart
   href: financialchart.md
   items:
