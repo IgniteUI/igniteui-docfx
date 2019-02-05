@@ -95,7 +95,7 @@ gulp.task('cleanup', () => {
     return del([`${DOCFX_SITE}`]);
 });
 
-gulp.task('generate-grid-topics', () => {
+gulp.task('generate-grids-topics', () => {
     const grids = [
         {
             path: '/grid',
@@ -124,7 +124,7 @@ gulp.task('generate-grid-topics', () => {
     ];
 
     for (let j = 0; j < grids.length; j++) {
-        const grid = grids[j]; // Grid topic to be generated
+        const grid = grids[j];
 
         gulp.src([DOCFX_ARTICLES + '/grids_templates/*.md'])
             .pipe(fileinclude({
@@ -138,7 +138,7 @@ gulp.task('generate-grid-topics', () => {
                     "componentSelector": grid.componentSelector
                 }
             }))
-            .pipe(gulp.dest('./en/components' + grid.path));
+            .pipe(gulp.dest(DOCFX_ARTICLES + grid.path));
     }
 });
 
@@ -147,5 +147,5 @@ gulp.task('build', [
     'cleanup',
     'post-processor-configs',
     'build-site',
-    'generate-grid-topics'
+    'generate-grids-topics'
 ]);
