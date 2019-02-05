@@ -24,6 +24,7 @@ There's a default filtering strategy provided out of the box, as well as all the
 
 Filtering feature is enabled for the @@component component by setting the [`allowFiltering`]({environment:angularApiUrl}/classes/@@compdoc.html#allowfiltering) input to `true`. To disable this feature for a certain column – set the [`filterable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#filterable) input to `false`.
 
+@@if (componentName === 'IgxGrid') {
 ```html
 <igx-grid #grid1 [data]="data" [autoGenerate]="false" [allowFiltering]="true">
     <igx-column field="ProductName" dataType="string"></igx-column>
@@ -32,6 +33,21 @@ Filtering feature is enabled for the @@component component by setting the [`allo
     <igx-column field="Discontinued" [dataType]="'boolean'" [filterable]="false">
 </igx-grid>
 ```
+}
+@@if (componentName === 'IgxHierarchicalGrid') {
+```html
+<igx-hierarchical-grid #grid1 [data]="data" [autoGenerate]="false" [allowFiltering]="true">
+    ...
+</igx-hierarchical-grid>
+```
+}
+@@if (componentName === 'IgxTreeGrid') {
+```html
+<igx-tree-grid #grid1 [data]="data" primaryKey="ID" foreignKey="ParentID" [autoGenerate]="false" [allowFiltering]="true">
+    ...
+</igx-tree-grid>
+```
+}
 
 > [!NOTE]
 > If values of type `string` are used by column of dataType `Date`, the component won't parse it to `Date` objects and using filtering conditions won't be possible. If you want to use `string` objects, additional logic should be implemented on the application level, in order to parse the values to `Date` object.
