@@ -1,8 +1,9 @@
-﻿---
+---
 title: Excel Library Component - Native Angular | Ignite UI for Angular
 _description: The Ignite UI for Excel Library component with Workbook Operations.
 _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Excel Library, Angular Excel Library Example, Angular Excel Library Component, Angular Excel Engine, Workbook, Font, Document Properties
 ---
+
 ## Using Workbooks
 
 The Infragistics Excel Engine enables you to save data to and load data from Microsoft® Excel®. You can create workbooks and worksheets, input data, and export the data to Excel using the library’s various classes. The Infragistics Excel Engine makes it easy to export the data in your application as an Excel spreadsheet as well as import data from Excel into your application. 
@@ -10,7 +11,7 @@ The Infragistics Excel Engine enables you to save data to and load data from Mic
 ### Demo
 
 <div class="sample-container" style="height: 500px">
-    <iframe id="excel-library-overview-sample-iframe" src='{environment:demosBaseUrl}/excel-library/operations-on-workbooks' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="excel-library-overview-sample-iframe" src='{environment:demosBaseUrl}/excel-library-operations-on-workbooks' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <!-- TODO uncomment when Stackblitz is ready for EXCEL
@@ -36,23 +37,23 @@ font.height = 16 * 20;
 
 Microsoft Excel® document properties provide information to help organize and keep track of your documents. You can use the Infragistics Excel Library to set these properties using the `Workbook` object’s `documentProperties` property. The available properties are:
 
-- `author`
+-   `author`
 
-- `title`
+-   `title`
 
-- `subject`
+-   `subject`
 
-- `keywords`
+-   `keywords`
 
-- `category`
+-   `category`
 
-- `status`
+-   `status`
 
-- `comments`
+-   `comments`
 
-- `company`
+-   `company`
 
-- `manager`
+-   `manager`
 
 The following code demonstrates how to create a workbook and set its `title` and `status` document properties.
 
@@ -80,7 +81,8 @@ If `isProtected` is already true, the `protect` method will be ignored.
 var workbook = new Workbook();
 workbook.protect(false, false);
 ```
-- isProtected
+
+-   isProtected
 
 Check if a workbook has protection. This read-only property returns true if the workbook has any protection set using the overloads of the Protect method.
 
@@ -89,7 +91,7 @@ var workbook = new Workbook();
 var protect = workbook.isProtected;
 ```
 
-- protection
+-   protection
 
 This read-only property returns an object of type WorkbookProtection which contains properties for obtaining each protection setting individually.
 
