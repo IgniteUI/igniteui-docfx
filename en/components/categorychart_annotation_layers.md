@@ -3,11 +3,13 @@ title: Annotations
 _description: The Ignite UI for Category Chart component simplifies the complexities of the data visualization domain into manageable API so that a user can bind a collection of data, a group of collections, and a data property, and let the charting control do the rest.
 _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Chart Control, Angular Chart Example, Angular Grid Component, Angular Chart Component, Angular Category Chart
 ---
+
 ## Annotations
 
-This topic provides conceptual information about the annotations and overlay interactions available on the `igx-category-chart`.
+This topic provides conceptual information about the annotations and overlay interactions available on the `IgxCategoryChart`.
 
 ### Demo
+
 <div class="sample-container" style="height: 500px">
     <iframe id="category-chart-annotations-iframe" src='{environment:demosBaseUrl}/charts/category-chart-annotations' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>

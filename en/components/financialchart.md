@@ -1,11 +1,12 @@
 ---
 title: Financial Chart Component - Native Angular | Ignite UI for Angular
 _description: The Ignite UI for Angular Financial Chart component is easily configured to display financial data using a simple and intuitive API, as once the user binds the data, the chart offers multiple ways in which the data can then be visualized and interpreted.
-_keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Chart Control, Angular Chart Example, Angular Grid Component, Angular Chart Component, Angular Financial Chart
+_keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Chart Control, Angular Chart Example, Angular Chart Component, Angular Financial Chart
 ---
+
 ## Financial Chart
 
-The Financial Chart is a charting component that makes it easy to visualize financial data by using a simple and intuitive API. 
+The Financial Chart is a charting component that makes it easy to visualize financial data by using a simple and intuitive API.
 
 ### Demo
 
@@ -25,13 +26,13 @@ The financial chart component analyzes and selects data columns - Date/Time colu
 
 You can explicitly specify the chart type by setting the `chartType` property to one of the following options:
 
-Property|Description
----|---
-`bar`|Specifies the bar series with markers at each data point
-`candle`|Specifies the candle series
-`column`|Specifies the column series
-`line`|Specifies the line series
-`auto`|Specifies automatic selection of chart type based on Data Adapter which suggest one of above values based names and number of numeric columns in your data. For example, it will suggest `bar` for data items with Open, High, Low, Close columns.
+| Property | Description                                                                                                                                                                                                                                        |
+| -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `bar`    | Specifies the bar series with markers at each data point                                                                                                                                                                                           |
+| `candle` | Specifies the candle series                                                                                                                                                                                                                        |
+| `column` | Specifies the column series                                                                                                                                                                                                                        |
+| `line`   | Specifies the line series                                                                                                                                                                                                                          |
+| `auto`   | Specifies automatic selection of chart type based on Data Adapter which suggest one of above values based names and number of numeric columns in your data. For example, it will suggest `bar` for data items with Open, High, Low, Close columns. |
 
 Refer to the [Financial Chart Panes](financialchart_panes.md) topics for  information on other chart panes.
 
@@ -45,13 +46,18 @@ Refer to the [Financial Chart Panes](financialchart_panes.md) topics for  inform
 
 When installing the chart package, the core package must also be installed.
 
-**npm install igniteui-angular-charts igniteui-angular-core**
+**npm install igniteui-Angular-charts igniteui-Angular-core**
 
-The financial chart is exported as an `NgModule`, you need to import the _IgxFinancialChartModule_ inside your `AppModule`:
+The financial chart is exported as an `NgModule`, you need to import the _IgxFinancialChartModule_ inside your 
+`AppModule`:
+
+<!-- -->
+
+<!-- -->
 
 ```typescript
 // app.module.ts
-import {IgxFinancialChartModule} from 'ignite-angular-charts/ES5/igx-financial-chart-module'
+import {IgxFinancialChartModule} from 'igniteui-Angular-charts/ES5/igx-financial-chart-module'
 
 @NgModule({
     imports: [
@@ -66,9 +72,10 @@ export class AppModule {}
 <div class="divider--half"></div>
 
 ### Usage
+
 Now that the financial chart module is imported, next step is to bind it to data.
 
-In order to create an `igx-financial-chart` control, you must first have data to bind it to. The following code snippet demonstrates how to create a simple data source.
+In order to create an `IgxFinancialChart` control, you must first have data to bind it to. The following code snippet demonstrates how to create a simple data source.
 
 ```typescript
 let data = [
@@ -97,13 +104,15 @@ The following code demonstrates how to bind the financial chart to the above dat
 ```
 
 ### Toolbar
+
 A toolbar is displayed at the top of the financial chart. This allows your end users to change various details about the data being displayed, and also displays different panes. The toolbar consists of the following selectors:
-- Indicator Type Selector - Allows users to select multiple types of financial indicators. These indicators are displayed below the price pane in their own panes because they do not share the same Y-Axis scale with the prices or other indicators.
-- Overlay Type Selector - Allows users to select different types of financial overlays. These overlays are displayed together with the financial prices series because they share the same y-axis scale. There are two types of overlays the `BollingerBands` and `PriceChannel`.
-- Trendline Type Selector - Allows users to select different types of trendlines. The trendline is displayed in a trendline layer over the price pane and the volume pane.
-- Date Range Selector - Allows users to select different range presets to view the data. Note that some buttons will not be functional if your data range is less 1 year.
-- Chart Type Selector - Allows users to select chart types for the financial chart. These are displayed in the price pane.
-- Volume Type Selector -  Allows users to view the stock volume data in the Volume Pane. Users can choose between None, Column, Line, and Area chart types.
+
+-   Indicator Type Selector - Allows users to select multiple types of financial indicators. These indicators are displayed below the price pane in their own panes because they do not share the same Y-Axis scale with the prices or other indicators.
+-   Overlay Type Selector - Allows users to select different types of financial overlays. These overlays are displayed together with the financial prices series because they share the same y-axis scale. There are two types of overlays the `BollingerBands` and `PriceChannel`.
+-   Trendline Type Selector - Allows users to select different types of trendlines. The trendline is displayed in a trendline layer over the price pane and the volume pane.
+-   Date Range Selector - Allows users to select different range presets to view the data. Note that some buttons will not be functional if your data range is less 1 year.
+-   Chart Type Selector - Allows users to select chart types for the financial chart. These are displayed in the price pane.
+-   Volume Type Selector -  Allows users to view the stock volume data in the Volume Pane. Users can choose between None, Column, Line, and Area chart types.
 
 Note that depending on the width of the financial chart, the toolbar might not may or may not contain all of the elements discussed in above section. Increasing width of the financial chart and its container will cause the toolbar to display more of these selectors.
 
