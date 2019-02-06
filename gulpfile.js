@@ -146,6 +146,6 @@ gulp.task('build', [
     'styles',
     'cleanup',
     'post-processor-configs',
-    'build-site',
-    'generate-grids-topics'
+    'generate-grids-topics',
+    'build-site'
 ]);
