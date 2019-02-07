@@ -99,27 +99,30 @@ gulp.task('generate-grids-topics', () => {
     const grids = [
         {
             igPath: '/grid',
-            igCompRef: "grid",
+            igMainTopic: 'grid',
+            igObjectRef: "grid",
             igComponent: "Grid",
-            igComponentName: "IgxGrid",
-            igComponentDoc: "igxgridcomponent",
-            igComponentSelector: "igx-grid"
+            igxName: "IgxGrid",
+            igTypeDoc: "igxgridcomponent",
+            igSelector: "igx-grid"
         },
         {
             igPath: '/treeGrid',
-            igCompRef: "treeGrid",
+            igMainTopic: 'tree_grid',
+            igObjectRef: "treeGrid",
             igComponent: "Tree Grid",
-            igComponentName: "IgxTreeGrid",
-            igComponentDoc: "igxtreegridcomponent",
-            igComponentSelector: "igx-tree-grid"
+            igxName: "IgxTreeGrid",
+            igTypeDoc: "igxtreegridcomponent",
+            igSelector: "igx-tree-grid"
         },
         {
             igPath: '/hierarchicalGrid',
-            igCompRef: "hierarchicalGrid",
+            igMainTopic: 'hierarchical_grid',
+            igObjectRef: "hierarchicalGrid",
             igComponent: "Hierarchical Grid",
-            igComponentName: "IgxHierarchicalGrid",
-            igComponentDoc: "igxhierarchicalgridcomponent",
-            igComponentSelector: "igx-hierarchical-grid"
+            igxName: "IgxHierarchicalGrid",
+            igTypeDoc: "igxhierarchicalgridcomponent",
+            igSelector: "igx-hierarchical-grid"
         }
     ];
 
@@ -131,11 +134,12 @@ gulp.task('generate-grids-topics', () => {
                 prefix: '@@',
                 basepath: '@file',
                 context: {
-                    "igCompRef": grid.igCompRef,
+                    "igMainTopic": grid.igMainTopic,
+                    "igObjectRef": grid.igObjectRef,
                     "igComponent": grid.igComponent,
-                    "igComponentName": grid.igComponentName,
-                    "igComponentDoc": grid.igComponentDoc,
-                    "igComponentSelector": grid.igComponentSelector
+                    "igxName": grid.igxName,
+                    "igTypeDoc": grid.igTypeDoc,
+                    "igSelector": grid.igSelector
                 }
             }))
             .pipe(gulp.dest(DOCFX_ARTICLES + grid.igPath));
