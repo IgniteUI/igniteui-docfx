@@ -9,7 +9,7 @@ _language: ja
 <p class="highlight">Ignite UI for Angular Calendar コンポーネントは、ネイティブ [Angular コンポーネント](https://angular.io/guide/architecture#components)です。アプリケーションで日付情報を 3 つの方法で表示できます。ユーザーが単一の日付、複数の日付、または日付の範囲を選択できます。</p>
 
 ### Calendar デモ
-<div class="sample-container loading" style="height: 590px">
+<div class="sample-container loading" style="height: 730px">
     <iframe id="calendar-sample-5-iframe" src='{environment:demosBaseUrl}/scheduling/calendar-sample-5' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -60,7 +60,7 @@ import { IgxCalendarComponent } from 'igniteui-angular';
 
 選択が `multi` または `range` の場合、カレンダー ヘッダーは描画されません。
 
-<div class="sample-container" style="height: 590px">
+<div class="sample-container" style="height: 730px">
     <iframe id="calendar-sample-1-iframe" src='{environment:demosBaseUrl}/scheduling/calendar-sample-1' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
