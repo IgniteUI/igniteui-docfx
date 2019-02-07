@@ -13,7 +13,7 @@
   href: grids_and_lists.md
   header: true
 - name: Data Grid
-  href: grid/grid.md
+  href: grid.md
   new: true
   items:
     - name: Virtualization and performance
@@ -80,13 +80,8 @@
       href: grid_conditional_cell_styling.md
       new: true
 - name: Tree Grid
-  href: treeGrid/tree_grid.md
+  href: treegrid.md
   new: true
-  items:
-- name: Hierarchical Grid
-  href: hierarchicalGrid/hierarchical_grid.md
-  new: true
-  items:
 - name: List View
   href: list.md
 - name: Combo
