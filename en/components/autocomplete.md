@@ -48,11 +48,13 @@ export class AppModule {}
 
 ### Keyboard Navigation
 
- - `Arrow Down` - will move to the next drop down item.
- - `Arrow Up` - will move to the previous drop down item.
- - `End` will move to the last drop down item.
- - `Home` will move to the first drop down item.
- - `Enter` will confirm the already selected items and will close the drop down.
+ - `Arrow Down`, `Arrow Up`, `Alt` + `Arrow Down`, `Alt` + `Arrow Up` will open drop down, if closed.
+ - Typing in the input will open drop down, if closed.
+ - `Arrow Down` - will move to next drop down item, if drop down opened.
+ - `Arrow Up` - will move to previous drop down item, if drop down opened.
+ - `End` will move to last drop down item.
+ - `Home` will move to first drop down item.
+ - `Enter` will confirm the already selected item and will close the drop down.
  - `Esc` will close the drop down.
 
 > Note: When the autocomplete is opened, then the first item, in the list, is automatically selected. The same is valid when the list is filtered.
@@ -140,15 +142,13 @@ export class AutocompleteSampleComponent {
             closeAnimation: null,
             openAnimation: null,
             verticalDirection: VerticalAlignment.Top,
-            target: this.inputGroup.element.nativeElement
+            verticalStartPoint: VerticalAlignment.Top
         })
     };
 }
 ```
 
-> Note: The default positioning strategy is `AutoPositionStrategy` and drop down is opened according to the available space - by default below the input.
-
-> Note: When applying custom drop down settings, you need to explicitly set target, which is either the input or if the igxInput is used - the igxInputGroup component. The latter is needed in order for the drop down width to fix input group width. 
+> Note: The default positioning strategy is `AutoPositionStrategy` and drop down is opened according to the available space.
 
 ## Application Scenarios
 ### Autocomplete with grouped items, placed inside Reactive From
