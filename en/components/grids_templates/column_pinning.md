@@ -47,17 +47,19 @@ Each column can be pinned, as long as the pinned area does not become wider than
 ```
 }
 @@if (igxName === 'IgxTreeGrid') {
+```html
 <igx-tree-grid #treeGrid [data]="data" primaryKey="ID" foreignKey="ParentID" [autoGenerate]="false">
     <igx-column [field]="Name" [pinned]="true"></igx-column>
     <igx-column [field]="Title"></igx-column>
     <igx-column [field]="ID"></igx-column>
 </igx-tree-grid>
+```
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 <!-- TODO -->
 }
 
-You may also use the grid's [`pinColumn`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#pincolumn) or [`unpinColumn`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#unpincolumn) methods of the [`@@igxNameComponent`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) to pin or unpin columns by their field name:
+You may also use the @@igComponent's [`pinColumn`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#pincolumn) or [`unpinColumn`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#unpincolumn) methods of the [`@@igxNameComponent`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) to pin or unpin columns by their field name:
 
 @@if (igxName === 'IgxGrid') {
 ```typescript
@@ -67,8 +69,8 @@ this.grid.unpinColumn("Name");
 }
 @@if (igxName === 'IgxTreeGrid') {
 ```typescript
-this.grid.pinColumn("Title");
-this.grid.unpinColumn("Name");
+this.treeGrid.pinColumn("Title");
+this.treeGrid.unpinColumn("Name");
 ```
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -89,7 +91,7 @@ Both methods return a boolean value indicating whether their respective operatio
 var succeed = this.grid.pinColumn("AthleteNumber"); // pinning fails and succeed will be false
 ```
 
-If pinning the `AthleteNumber` column is allowed the pinned area would exceed the grid's width.
+If pinning the `AthleteNumber` column is allowed the pinned area would exceed the @@igComponent's width.
 }
 @@if (igxName === 'IgxTreeGrid') {
 ```html
@@ -100,10 +102,10 @@ If pinning the `AthleteNumber` column is allowed the pinned area would exceed th
 ```
 
 ```typescript
-var succeed = this.grid.pinColumn("Title"); // pinning fails and succeed will be false
+var succeed = this.treeGrid.pinColumn("Title"); // pinning fails and succeed will be false
 ```
 
-If pinning the `Title` column is allowed the pinned area would exceed the grid's width.
+If pinning the `Title` column is allowed the pinned area would exceed the @@igComponent's width.
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 <!-- TODO -->
@@ -153,7 +155,7 @@ This section will provide you with hints what to do if you are having trouble wi
 
 #### Warnings
 
-* `igxTreeGrid - The pinned area exceeds maximum pinned width. The following columns were unpinned to prevent further issues: ... .` - This warning is thrown when the user has defined too many pinned columns initially. The combined width of the initially pinned columns should not exceed 80% of the @@igComponent width. Otherwise the @@igComponent by default takes the first columns (in order of their definition) that don't exceed the limit and the rest are unpinned (the columns listed in the warning). You can execute your own logic in order to determine if you want to unpin some columns manually on initialization using the [`onColumnInit`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#oncolumninit) event before the @@igComponent initializes the pinning. It is triggered for each column.
+* `@@igxName - The pinned area exceeds maximum pinned width. The following columns were unpinned to prevent further issues: ... .` - This warning is thrown when the user has defined too many pinned columns initially. The combined width of the initially pinned columns should not exceed 80% of the @@igComponent width. Otherwise the @@igComponent by default takes the first columns (in order of their definition) that don't exceed the limit and the rest are unpinned (the columns listed in the warning). You can execute your own logic in order to determine if you want to unpin some columns manually on initialization using the [`onColumnInit`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#oncolumninit) event before the @@igComponent initializes the pinning. It is triggered for each column.
 
 <div class="divider--half"></div>
 
