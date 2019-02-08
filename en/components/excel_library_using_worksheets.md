@@ -10,16 +10,26 @@ The Infragistics Excel Engine's `Worksheet` is where your data is kept. You can 
 
 ### Demo
 
-<div class="sample-container" style="height: 100px">
-    <iframe id="excel-library-overview-sample-iframe" src='{environment:demosBaseUrl}/excel-library-operations-on-worksheets' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-<div>
-    <!-- TODO uncomment when Stackblitz is ready for EXCEL
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="excel-library-operations-on-worksheets-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
-    </button> -->
-</div> 
+TODO
 
 <div class="divider--half"></div>
+
+The following code shows the imports needed to use the code-snippets below:
+
+```typescript
+import { Workbook } from "igniteui-angular-excel/ES5/Workbook";
+import { Worksheet } from "igniteui-angular-excel/ES5/Worksheet";
+import { WorkbookFormat } from "igniteui-angular-excel/ES5/WorkbookFormat";
+import { Color } from "igniteui-angular-core/ES5/Color";
+
+import { CustomFilterCondition } from "igniteui-angular-excel/ES5/excel.core";
+import { ExcelComparisonOperator } from "igniteui-angular-excel/ES5/excel.core";
+import { FormatConditionTextOperator } from "igniteui-angular-excel/ES5/excel.core";
+import { OrderedSortCondition } from "igniteui-angular-excel/ES5/excel.core";
+import { RelativeIndex } from "igniteui-angular-excel/ES5/excel.core";
+import { SortDirection } from "igniteui-angular-excel/ES5/excel.core";
+import { WorkbookColorInfo } from "igniteui-angular-excel/ES5/excel.core";
+```
 
 ### Configuring the Gridlines
 

@@ -15,10 +15,10 @@ The `IgxDoughnutChart` component is similar to the Pie Chart component, proporti
 <div class="sample-container" style="height: 450px">
     <iframe id="doughnut-chart-overview-iframe" src='{environment:demosBaseUrl}/charts/doughnut-chart-overview' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
-<!--<div>
+<div>
     <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="doughnut-chart-overview-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
     </button>
-</div>-->
+</div>
 
 <div class="divider--half"></div>
 
