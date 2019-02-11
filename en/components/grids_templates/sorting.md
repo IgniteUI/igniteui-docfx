@@ -20,7 +20,6 @@ Additionally there is a custom contextmenu added for sorting using **@@igSelecto
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
-<div class="divider--half"></div>
 }
 @@if (igxName === 'IgxTreeGrid') {
 <div class="sample-container loading" style="height:550px">
@@ -30,11 +29,12 @@ Additionally there is a custom contextmenu added for sorting using **@@igSelecto
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
-<div class="divider--half"></div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
+    <!-- todo -->
 }
 
+<div class="divider--half"></div>
 
 This is done via the [`sortable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#sortable) input. With the @@igComponent sorting, you can also set the [`sortingIgnoreCase`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#sortingignorecase) property to perform case sensitive sorting:
 
