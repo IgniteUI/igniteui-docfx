@@ -1,7 +1,7 @@
 ---
 title: Column Resizing Component - Native Angular | Ignite UI for Angular
 _description: With deferred column resizing, see a temporary resize indicator while the drag operation is in effect with using the Ignite UI for Angular Column Resizing Component.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Data @@igComponent component, Angular Data @@igComponent control, Native Angular Components, Angular @@igComponent component, Angular @@igComponent control, Angular High Performance @@igComponent, Column Resizing, Deferred Column Reszing, @@igComponent Column Resizing, Angular @@igComponent Column Resizing, Angular column
+_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Data Grid component, Angular Data Grid control, Native Angular Components, Angular Grid component, Angular Grid control, Angular High Performance Grid, Column Resizing, Deferred Column Reszing, Grid Column Resizing, Angular Grid Column Resizing, Angular column
 ---
 
 ### @@igComponent Column Resizing

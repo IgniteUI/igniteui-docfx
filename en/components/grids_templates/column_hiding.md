@@ -1,7 +1,7 @@
 ---
 title: Column Hiding Component – Native Angular | Ignite UI for Angular
-_description: Column hiding with the Ignite UI for Angular Column Hiding component allows the users hide and show columns by using a built-in UI of the Data  @@igComponent.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Components, Angular Data @@igComponent component, Angular Data @@igComponent control, Angular @@igComponent component, Angular @@igComponent control, Angular High Performance @@igComponent, @@igComponent column hiding, column hiding, angular @@igComponent column hiding, angular column hiding
+_description: Column hiding with the Ignite UI for Angular Column Hiding component allows the users hide and show columns by using a built-in UI of the Data Grid.
+_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Components, Angular Data Grid component, Angular Data Grid control, Angular Grid component, Angular Grid control, Angular High Performance Grid, grid column hiding, column hiding, angular grid column hiding, angular column hiding
 ---
 
 ### @@igComponent Column Hiding
