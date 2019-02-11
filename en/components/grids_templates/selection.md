@@ -152,7 +152,7 @@ The below code example can be used to select one or multiple rows simultaniously
 <!-- TODO -->
 }
 
-This will add the rows which correspond to the data entries with IDs 1, 2 and 5 to the grid selection.
+This will add the rows which correspond to the data entries with IDs 1, 2 and 5 to the @@igComponent selection.
 
 #### Cancel selection event
 @@if (igxName === 'IgxGrid' || igxName === 'IgxTreeGrid') {
