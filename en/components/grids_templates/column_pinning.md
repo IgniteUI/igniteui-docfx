@@ -1,7 +1,7 @@
 ---
 title: Column Pinning Component – Native Angular | Ignite UI for Angular
 _description: Pinning with the Ignite UI for Angular Column Pinning component allows the users to always see the pinned columns while horizontally scrolling. 
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Components, Angular @@igComponent component, Angular @@igComponent control, Angular High Performance @@igComponent, column pinning, pinning, pin
+_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Components, Angular Data @@igComponent component, Angular Data @@igComponent control, Angular @@igComponent component, Angular @@igComponent control, Angular High Performance @@igComponent, column pinning, pinning, pin
 ---
 
 ### @@igComponent Column Pinning

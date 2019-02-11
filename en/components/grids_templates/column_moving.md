@@ -1,7 +1,7 @@
 ---
 title: Column Moving - Native Angular | Ignite UI for Angular
 _description: Column moving feature provides a means for reordering columns interactively via a standard drag/drop mouse gesture.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular @@igComponent component, Angular @@igComponent control, Native Angular Components, Angular @@igComponent component, Angular @@igComponent control, Angular High Performance @@igComponent, Column Moving, @@igComponent Column Moving, Angular @@igComponent Column Moving, Angular column moving
+_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Data @@igComponent component, Angular Data @@igComponent control, Native Angular Components, Angular @@igComponent component, Angular @@igComponent control, Angular High Performance @@igComponent, Column Moving, @@igComponent Column Moving, Angular @@igComponent Column Moving, Angular column moving
 ---
 
 ### @@igComponent Column Moving
