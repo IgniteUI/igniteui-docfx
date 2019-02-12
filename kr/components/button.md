@@ -62,6 +62,18 @@ Default ripple color. Custom ripple color:
     <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/data-entries/buttons-sample-3">
 </div>
 
+Outlined button style:
+
+```html
+<button igxButton="outlined">Outlined</button>
+```
+
+Result:
+<div class="sample-container loading" style="height: 48px">
+    <iframe class="lazyload" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-sample-8">
+</div>
+
+
 Using [`igxButton`]({environment:angularApiUrl}/classes/igxbuttondirective.html) to turn a `span` element into a Ignite UI for Angular styled button.
 
 ```html
@@ -113,16 +125,14 @@ Icon results:
 
 <div class="divider--half"></div>
 
-### Button Types
+### Button types
 | Name   | Description |
 |:----------|:-------------:|
-| `flat` | The default button type. Transparent background and primary theme color for text. |
-| `raised` | As the name implies, this button type uses subtle box-shadow. Primary theme color for background and white for text color. |
-| `gradient` | Same as the raised button type. Additionally you can specify a gradient value for background color. |
-| `fab` | Floating action button type. Circular with primary theme color for background and white text. |
+| `flat` | The default button type. Uses transparent background and the secondary theme color from the palette color for the text. |
+| `outlined` |  Very similar to the flat button type but with a thin outline around the edges of the button. |
+| `raised` | As the name implies, this button type features a subtle shadow. Uses the secondary theme color from the palette for background. |
+| `fab` | Floating action button type. Circular with secondary theme color for background. |
 | `icon` | This is the simplest of button types. Use it whenever you need to use an icon as button. |
-| `navbar` | Same as the icon button type, albeit optimized for use with the igx-navbar component. |
-
 
 ### API References
 <div class="divider--half"></div>
