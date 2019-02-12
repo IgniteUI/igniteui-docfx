@@ -36,7 +36,7 @@ export class AppModule {}
 
 In your class you need to have a collection of the items that you want to display when the drop-down opens:
 ```ts
-    public items: string[] = ["Orange", "Apple", "Banana", "Mango"];
+public items: string[] = ["Orange", "Apple", "Banana", "Mango"];
 ```
 
 Then in your template you need to bind it with said items like so:
@@ -82,12 +82,12 @@ When the `igx-drop-down` is opened, you can close it by doing one of the followi
 
 ### Item Selection
 An item from the drop-down list can be selected by:
-- left mouse click
+- Left mouse click
 - `Enter` key when the respective item is focused
 - `Space` key when the respective item is focused
-- setting the value property in the code
-- setting the item's `selected` property
-- using the `selectItem` function which is a part of `igx-select`'s API
+- Setting the value property in the code
+- Setting the item's `selected` property
+- Using the `selectItem` function which is a part of `igx-select`'s API
     - It is a good idea to note that `igx-select` supports *single* selection of items only.
 - The *first* item in the drop-down list is focused if there is no selected item.
 - The input box is populated with the selected item's value.
@@ -263,7 +263,6 @@ Another way to do it would be to simply pass in an array of the items that we wa
 
 Since we are using two-way binding, your class should look something like this:
 ```ts
-@Component({/*...*/})
 export class MyClass {
   public selected: string = "Apple";
 }
@@ -284,7 +283,7 @@ With `igx-select` you are not bound to use any of the [*OverlaySettings*](https:
 
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dropdown-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 
-To do this, you first define your template:
+To do this you first define your template like so:
 ```html
 <igx-select [overlaySettings]="customOverlaySettings">
     <igx-select-item *ngFor="let item of items">
@@ -349,11 +348,9 @@ export class MyClass implements OnInit {
         positionStrategy: new GlobalPositionStrategy(),
         scrollStrategy: new AbsoluteScrollStrategy()
     }
-
     onClick(event: MouseEvent): void {
         this.igxSelect.open(this.otherCustomOverlaySettings)
     }
-
     /* -- */
 }
 ```
@@ -367,20 +364,20 @@ export class MyClass implements OnInit {
 - The IgxSelect's list content should not "flicker" when opening.
 
 ## API Reference
-[**IgxSelectModule**]()  
-[**IgxSelectComponent**]()  
-[**IgxSelectItemComponent**]()  
+[**IgxSelectModule**](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/classes/igxselectmodule.html)  
+[**IgxSelectComponent**](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/classes/igxselectcomponent.html)  
+[**IgxSelectItemComponent**](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/classes/igxselectitemcomponent.html)  
 [**IgxDropDownComponent**](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/classes/igxdropdowncomponent.html)  
 [**IgxDropDownItemComponent**](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/classes/igxdropdownitemcomponent.html)  
 [**OverlaySettings**](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/interfaces/overlaysettings.html)  
 [**ConnectedPositioningStrategy**](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/classes/connectedpositioningstrategy.html)  
 [**GlobalPositionStrategy**](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/classes/globalpositionstrategy.html#constructor)  
-[**SelectPositioningStrategy**]()  
+[**SelectPositioningStrategy**](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/classes/selectpositioningstrategy.html)  
 [**AbsoluteScrollStrategy**](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/classes/absolutescrollstrategy.html)  
 [**PositionSettings**](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/interfaces/positionsettings.html)
 
 ## Additional Resources
-[**Specification**](https://github.com/IgniteUI/igniteui-angular/wiki/IgxSelect-Specification#31-keyboard-navigation)  
-[**NgModel**](https://angular.io/api/forms/NgModel)  
+[**IgxSelect Specification**](https://github.com/IgniteUI/igniteui-angular/wiki/IgxSelect-Specification#31-keyboard-navigation)  
 [**Angular Select**](https://material.angular.io/components/select/overview)  
+[**NgModel**](https://angular.io/api/forms/NgModel)  
 [**ViewChild**](https://angular.io/api/core/ViewChild)
