@@ -45,8 +45,21 @@ gulp.task('serve', ['build'], () => {
         }
     });
 
+    const excluded = [
+        `!${DOCFX_ARTICLES}/grid/**`,
+        `!${DOCFX_ARTICLES}/treeGrid/**`,
+        `!${DOCFX_ARTICLES}/hierarchicalGrid/**`
+    ];
+
+    // All topics that are not auto-generated and are specific to the respective grid, should be here.
+    const included = [
+        `${DOCFX_ARTICLES}/grid/grid.md`,
+        `${DOCFX_ARTICLES}/treeGrid/tree_grid.md`,
+        `${DOCFX_ARTICLES}/hierarchicalGrid/hierarchical_grid.md`
+    ];
+
     gulp.watch(`${DOCFX_TEMPLATE}/**/*`, ['watch']);
-    gulp.watch([`${DOCFX_PATH}/**/*.md`, `${DOCFX_ARTICLES}/**`], ['build']);
+    gulp.watch([`${DOCFX_PATH}/**/*.md`, `${DOCFX_ARTICLES}/**`].concat(excluded).concat(included), ['build']);
 });
 
 gulp.task('styles', () => {
