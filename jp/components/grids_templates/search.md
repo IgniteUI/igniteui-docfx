@@ -206,7 +206,7 @@ export class AppModule {}
 
 最後にテンプレートを新しいコンポーネントで更新します。
 
-[**IgxInputGroup**](input_group.md) 内のすべてのコンポーネントをラップします。左側で検索と削除/クリア アイコンを切り替えます (検索入力が空かどうかに基づきます)。中央に入力を配置します。更に削除アイコンがクリックされたときに **searchText** を更新し、グリッドの [`clearSearch`]({environment:angularApiUrl}/classes/igxgridcomponent.html#clearsearch) メソッドを呼び出して強調表示をクリアします。
+[**IgxInputGroup**](../input_group.md) 内のすべてのコンポーネントをラップします。左側で検索と削除/クリア アイコンを切り替えます (検索入力が空かどうかに基づきます)。中央に入力を配置します。更に削除アイコンがクリックされたときに **searchText** を更新し、グリッドの [`clearSearch`]({environment:angularApiUrl}/classes/igxgridcomponent.html#clearsearch) メソッドを呼び出して強調表示をクリアします。
 
 ```html
 <!--searchgrid.component.html-->
@@ -336,16 +336,16 @@ public clearSearch() {
 <div class="divider--half"></div>
 
 * [Grid の概要](grid.md)
-* [仮想化とパフォーマンス](grid_virtualization.md)
-* [フィルタリング](grid_filtering.md)
-* [ページング](grid_paging.md)
-* [並べ替え](grid_sorting.md)
-* [集計](grid_summaries.md)
-* [列移動](grid_column_moving.md)
-* [列のピン固定](grid_column_pinning.md)
-* [列のサイズ変更](grid_column_resizing.md)
-* [選択](grid_selection.md)
-* [Excel へエクスポート](exporter_excel.md)
+* [仮想化とパフォーマンス](virtualization.md)
+* [フィルタリング](filtering.md)
+* [ページング](paging.md)
+* [並べ替え](sorting.md)
+* [集計](summaries.md)
+* [列移動](column_moving.md)
+* [列のピン固定](column_pinning.md)
+* [列のサイズ変更](column_resizing.md)
+* [選択](selection.md)
+* [Excel へエクスポート](../exporter_excel.md)
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
