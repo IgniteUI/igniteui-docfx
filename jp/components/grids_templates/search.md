@@ -182,7 +182,7 @@ public updateExactSearch() {
 #### アイコンの追加
 
 その他のコンポーネントを使用するためにユーザー インターフェイスを作成し、検索バー全体のデザインを向上します。検索入力の左側に検索または削除アイコン、検索オプションのチップ、右側にはマテリアル デザイン アイコンと Ripple スタイルのボタンを組み合わせたナビゲーションを表示できます。入力グループ内のコンポーネントをラップしてより洗練されたデザインにすることができます。
-これには、[**IgxInputGroup**](input_group.md)、[**IgxIcon**](icon.md)、[**IgxRipple**](ripple.md)、[**IgxButton**](button.md)、[**IgxChip**](chip.md) モジュールを使用します。
+これには、[**IgxInputGroup**](../input_group.md)、[**IgxIcon**](../icon.md)、[**IgxRipple**](../ripple.md)、[**IgxButton**](../button.md)、[**IgxChip**](../chip.md) モジュールを使用します。
 
 ```typescript
 // app.module.ts

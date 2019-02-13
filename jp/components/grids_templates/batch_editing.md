@@ -127,5 +127,5 @@ export class GridBatchEditingSampleComponent {
 ### その他のリソース
 
 * [Grid の概要](grid.md)
-* [Grid 編集](grid_editing.md)
-* [グリッドの行編集テンプレート](grid_row_editing.md)
+* [Grid 編集](editing.md)
+* [グリッドの行編集テンプレート](row_editing.md)

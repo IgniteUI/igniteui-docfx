@@ -93,14 +93,14 @@ public columnPinning(event) {
 <div class="divider--half"></div>
 
 * [グリッドの概要](grid.md)
-* [仮想化とパフォーマンス](grid_virtualization.md)
-* [ページング](grid_paging.md)
-* [フィルタリング](grid_filtering.md)
-* [並べ替え](grid_sorting.md)
-* [集計](grid_summaries.md)
-* [列移動](grid_column_moving.md)
-* [列のサイズ変更](grid_column_resizing.md)
-* [選択](grid_selection.md)
+* [仮想化とパフォーマンス](virtualization.md)
+* [ページング](paging.md)
+* [フィルタリング](filtering.md)
+* [並べ替え](sorting.md)
+* [集計](summaries.md)
+* [列移動](column_moving.md)
+* [列のサイズ変更](column_resizing.md)
+* [選択](selection.md)
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。

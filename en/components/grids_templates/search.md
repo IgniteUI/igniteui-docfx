@@ -40,7 +40,7 @@ Let's start by creating our grid and binding it to our data. We will also add so
 ```css
 /* searchgrid.component.css */
 
-._wrapper {
+.grid__wrapper {
     margin: 15px;
 }
 

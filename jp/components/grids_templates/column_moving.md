@@ -61,15 +61,15 @@ public onColumnMovingEnd(event) {
 <div class="divider--half"></div>
 
 * [Grid の概要](grid.md)
-* [仮想化とパフォーマンス](grid_virtualization.md)
-* [ページング](grid_paging.md)
-* [フィルタリング](grid_filtering.md)
-* [並べ替え](grid_sorting.md)
-* [集計](grid_summaries.md)
-* [列のピン固定](grid_column_pinning.md)
-* [列のサイズ変更](grid_column_resizing.md)
-* [選択](grid_selection.md)
-* [検索](grid_search.md)
+* [仮想化とパフォーマンス](virtualization.md)
+* [ページング](paging.md)
+* [フィルタリング](filtering.md)
+* [並べ替え](sorting.md)
+* [集計](summaries.md)
+* [列のピン固定](column_pinning.md)
+* [列のサイズ変更](column_resizing.md)
+* [選択](selection.md)
+* [検索](search.md)
 * [Excel エクスポーター](exporter_excel.md)
 
 <div class="divider--half"></div>
