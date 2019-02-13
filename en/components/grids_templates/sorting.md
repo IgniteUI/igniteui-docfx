@@ -99,9 +99,9 @@ You can provide @@igComponent's remote sorting by subscribing to [`onDataPreLoad
 <div class="divider--half"></div>
 
 ### API
-* [@@igxName]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
+* [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
+* [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 * [ISortingExpression]({environment:angularApiUrl}/interfaces/isortingexpression.html)
-* [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-@@igSelector-theme)
 
 ### Additional Resources
 <div class="divider--half"></div>
