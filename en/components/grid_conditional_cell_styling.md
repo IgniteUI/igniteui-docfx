@@ -91,7 +91,7 @@ Use **::ng-deep** or **`ViewEncapsulation.None`** to force the custom styles dow
 * [Export to Excel](exporter_excel.md)
 * [Paste from Excel](grid_paste_excel.md)
 * [Multi Column Headers](grid_multi_column_headers.md)
-* [Display Density](grid_displayDensity.md)
+* [Display Density](grid_displaydensity.md)
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.

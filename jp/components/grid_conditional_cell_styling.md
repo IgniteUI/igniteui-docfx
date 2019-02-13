@@ -92,7 +92,7 @@ public beatsPerMinuteClasses = {
 * [Excel へエクスポート](exporter_excel.md)
 * [Excel から貼り付け](grid_paste_excel.md)
 * [複数列ヘッダー](grid_multi_column_headers.md)
-* [表示密度](grid_displayDensity.md)
+* [表示密度](grid_displaydensity.md)
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
