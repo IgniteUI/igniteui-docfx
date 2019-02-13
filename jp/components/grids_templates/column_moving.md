@@ -70,7 +70,7 @@ public onColumnMovingEnd(event) {
 * [列のサイズ変更](column_resizing.md)
 * [選択](selection.md)
 * [検索](search.md)
-* [Excel エクスポーター](exporter_excel.md)
+* [Excel エクスポーター](../exporter_excel.md)
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。

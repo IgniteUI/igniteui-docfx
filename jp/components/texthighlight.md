@@ -316,7 +316,7 @@ TextHighlight ディレクティブの API に関する詳細な情報は、以�
 <div class="divider"></div>
 
 ### その他のリソース
-* [Grid 検索](grid_search.md)
+* [Grid 検索](grid/grid_search.md)
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
