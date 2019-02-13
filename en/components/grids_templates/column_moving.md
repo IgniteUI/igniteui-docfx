@@ -61,16 +61,16 @@ public onColumnMovingEnd(event) {
 <div class="divider--half"></div>
 
 * [Grid overview](grid.md)
-* [Virtualization and Performance](grid_virtualization.md)
-* [Paging](grid_paging.md)
-* [Filtering](grid_filtering.md)
-* [Sorting](grid_sorting.md)
-* [Summaries](grid_summaries.md)
-* [Column Pinning](grid_column_pinning.md)
-* [Column Resizing](grid_column_resizing.md)
-* [Selection](grid_selection.md)
-* [Searching](grid_search.md)
-* [Excel Exporter](exporter_excel.md)
+* [Virtualization and Performance](virtualization.md)
+* [Paging](paging.md)
+* [Filtering](filtering.md)
+* [Sorting](sorting.md)
+* [Summaries](summaries.md)
+* [Column Pinning](column_pinning.md)
+* [Column Resizing](column_resizing.md)
+* [Selection](selection.md)
+* [Searching](search.md)
+* [Excel Exporter](../exporter_excel.md)
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.

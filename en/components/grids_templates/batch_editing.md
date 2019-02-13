@@ -126,5 +126,5 @@ export class GridBatchEditingSampleComponent {
 ### Additional Resources
 
 * [Grid Overview](grid.md)
-* [Grid Editing](grid_editing.md)
-* [Grid Row Editing](grid_row_editing.md)
+* [Grid Editing](editing.md)
+* [Grid Row Editing](row_editing.md)

@@ -188,7 +188,7 @@ We can also allow the user to choose the display order of the columns in the col
 - **Alphabetical** (order the columns alphabetically)
 - **DisplayOrder** (order the columns according to the way they are displayed in the grid)
 
-Let's create a couple of nicely designed radio buttons for our options! We just have to go ahead and get the [**IgxRadio**](radio_button.md) module.
+Let's create a couple of nicely designed radio buttons for our options! We just have to go ahead and get the [**IgxRadio**](../radio_button.md) module.
 
 ```typescript
 // app.module.ts
@@ -256,7 +256,7 @@ If all went well, this is how our column hiding UI component should look like:
 
 ### API References
 
-In this article we learned how to use the built-in column hiding UI in the grid's toolbar and we defined it as a separate component as well. We introduced a UI that allows the user to choose between different column orders and we set our own custom title and filter prompt texts. We also used an additional Ignite UI for Angular component - the [**IgxRadio**](radio_button.md) button.
+In this article we learned how to use the built-in column hiding UI in the grid's toolbar and we defined it as a separate component as well. We introduced a UI that allows the user to choose between different column orders and we set our own custom title and filter prompt texts. We also used an additional Ignite UI for Angular component - the [**IgxRadio**](../radio_button.md) button.
 The column hiding UI has a few more APIs to explore, which are listed below.
 
 * [`IgxColumnHidingComponent`]({environment:angularApiUrl}/classes/igxcolumnhidingcomponent.html)
@@ -294,16 +294,16 @@ Styles:
 <div class="divider--half"></div>
 
 * [Grid overview](grid.md)
-* [Virtualization and Performance](grid_virtualization.md)
-* [Filtering](grid_filtering.md)
-* [Paging](grid_paging.md)
-* [Sorting](grid_sorting.md)
-* [Summaries](grid_summaries.md)
-* [Column Pinning](grid_column_pinning.md)
-* [Column Resizing](grid_column_resizing.md)
-* [Selection](grid_selection.md)
-* [Searching](grid_search.md)
-* [Export to Excel](exporter_excel.md)
+* [Virtualization and Performance](virtualization.md)
+* [Filtering](filtering.md)
+* [Paging](paging.md)
+* [Sorting](sorting.md)
+* [Summaries](summaries.md)
+* [Column Pinning](column_pinning.md)
+* [Column Resizing](column_resizing.md)
+* [Selection](selection.md)
+* [Searching](search.md)
+* [Export to Excel](../exporter_excel.md)
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.

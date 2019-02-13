@@ -78,7 +78,7 @@ public ngOnInit() {
 <div class="divider--half"></div>
 
 #### Remote Sorting
-You can provide grid's remote sorting by subscribing to [`onDataPreLoad`]({environment:angularApiUrl}/classes/igxgridcomponent.html#ondatapreload) and [`onSortingDone`]({environment:angularApiUrl}/classes/igxgridcomponent.html#onsortingdone) outputs. More information on how to use it you can find in the `Grid Virtualization and Performance` [documentation](grid_virtualization.md#remote-sortingfiltering-virtualization).
+You can provide grid's remote sorting by subscribing to [`onDataPreLoad`]({environment:angularApiUrl}/classes/igxgridcomponent.html#ondatapreload) and [`onSortingDone`]({environment:angularApiUrl}/classes/igxgridcomponent.html#onsortingdone) outputs. More information on how to use it you can find in the `Grid Virtualization and Performance` [documentation](virtualization.md#remote-sortingfiltering-virtualization).
 
 <div class="divider--half"></div>
 
@@ -91,14 +91,14 @@ You can provide grid's remote sorting by subscribing to [`onDataPreLoad`]({envir
 <div class="divider--half"></div>
 
 * [Grid overview](grid.md)
-* [Virtualization and Performance](grid_virtualization.md)
-* [Paging](grid_paging.md)
-* [Filtering](grid_filtering.md)
-* [Summaries](grid_summaries.md)
-* [Column Moving](grid_column_moving.md)
-* [Column Pinning](grid_column_pinning.md)
-* [Column Resizing](grid_column_resizing.md)
-* [Selection](grid_selection.md)
+* [Virtualization and Performance](virtualization.md)
+* [Paging](paging.md)
+* [Filtering](filtering.md)
+* [Summaries](summaries.md)
+* [Column Moving](column_moving.md)
+* [Column Pinning](column_pinning.md)
+* [Column Resizing](column_resizing.md)
+* [Selection](selection.md)
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.

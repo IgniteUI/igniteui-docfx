@@ -191,14 +191,14 @@ The summary rows can be navigated with the following keyboard interactions:
 <div class="divider--half"></div>
 
 * [Grid overview](grid.md)
-* [Virtualization and Performance](grid_virtualization.md)
-* [Paging](grid_paging.md)
-* [Filtering](grid_filtering.md)
-* [Sorting](grid_sorting.md)
-* [Column Moving](grid_column_moving.md)
-* [Column Pinning](grid_column_pinning.md)
-* [Column Resizing](grid_column_resizing.md)
-* [Selection](grid_selection.md)
+* [Virtualization and Performance](virtualization.md)
+* [Paging](paging.md)
+* [Filtering](filtering.md)
+* [Sorting](sorting.md)
+* [Column Moving](column_moving.md)
+* [Column Pinning](column_pinning.md)
+* [Column Resizing](column_resizing.md)
+* [Selection](selection.md)
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.

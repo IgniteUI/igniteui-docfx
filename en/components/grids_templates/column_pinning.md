@@ -91,14 +91,14 @@ This section will provide you with hints what to do if you are having trouble wi
 <div class="divider--half"></div>
 
 * [Grid overview](grid.md)
-* [Virtualization and Performance](grid_virtualization.md)
-* [Paging](grid_paging.md)
-* [Filtering](grid_filtering.md)
-* [Sorting](grid_sorting.md)
-* [Summaries](grid_summaries.md)
-* [Column Moving](grid_column_moving.md)
-* [Column Resizing](grid_column_resizing.md)
-* [Selection](grid_selection.md)
+* [Virtualization and Performance](virtualization.md)
+* [Paging](paging.md)
+* [Filtering](filtering.md)
+* [Sorting](sorting.md)
+* [Summaries](summaries.md)
+* [Column Moving](column_moving.md)
+* [Column Resizing](column_resizing.md)
+* [Selection](selection.md)
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.

@@ -141,14 +141,14 @@ The grouping UI supports the following keyboard interactions:
 <div class="divider--half"></div>
 
 * [Grid overview](grid.md)
-* [Virtualization and Performance](grid_virtualization.md)
-* [Paging](grid_paging.md)
-* [Filtering](grid_filtering.md)
-* [Sorting](grid_sorting.md)
-* [Column Moving](grid_column_moving.md)
-* [Summaries](grid_summaries.md)
-* [Column Resizing](grid_column_resizing.md)
-* [Selection](grid_selection.md)
+* [Virtualization and Performance](virtualization.md)
+* [Paging](paging.md)
+* [Filtering](filtering.md)
+* [Sorting](sorting.md)
+* [Column Moving](column_moving.md)
+* [Summaries](summaries.md)
+* [Column Resizing](column_resizing.md)
+* [Selection](selection.md)
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.

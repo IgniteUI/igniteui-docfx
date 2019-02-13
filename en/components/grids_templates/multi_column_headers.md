@@ -44,7 +44,7 @@ For achieving `n-th` level of nested headers, the declaration above should be fo
 </igx-grid>
 ```
 
-Every [`igx-column-group`]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html) supports [`moving`](grid_column_moving.md), [`pinning`](grid_column_pinning.md) and [`hiding`](grid_column_hiding.md).
+Every [`igx-column-group`]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html) supports [`moving`](column_moving.md), [`pinning`](column_pinning.md) and [`hiding`](column_hiding.md).
 > [!NOTE]
 > When there is a set of columns and column groups, pinning works only for top level column parents. More specifically pinning per nested `column groups` or `columns` is not allowed. <br />
 > Moving between `columns` and `column groups` is allowed only when they are at the same level in the hierarchy and both are in the same `group`. <br />
@@ -73,14 +73,14 @@ Every [`igx-column-group`]({environment:angularApiUrl}/classes/igxcolumngroupcom
 <div class="divider--half"></div>
 
 * [Grid overview](grid.md)
-* [Virtualization and Performance](grid_virtualization.md)
-* [Paging](grid_paging.md)
-* [Filtering](grid_filtering.md)
-* [Sorting](grid_sorting.md)
-* [Summaries](grid_summaries.md)
-* [Column Resizing](grid_column_resizing.md)
-* [Selection](grid_selection.md)
-* [Group by](grid_groupby.md)
+* [Virtualization and Performance](virtualization.md)
+* [Paging](paging.md)
+* [Filtering](filtering.md)
+* [Sorting](sorting.md)
+* [Summaries](summaries.md)
+* [Column Resizing](column_resizing.md)
+* [Selection](selection.md)
+* [Group by](groupby.md)
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.

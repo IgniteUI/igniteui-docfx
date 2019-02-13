@@ -40,7 +40,7 @@ Let's start by creating our grid and binding it to our data. We will also add so
 ```css
 /* searchgrid.component.css */
 
-.grid__wrapper {
+._wrapper {
     margin: 15px;
 }
 
@@ -182,7 +182,7 @@ What if we would like to filter and sort our grid or even to add and remove reco
 #### Adding icons
 
 By using some of our other components, we can create an enriched user interface and improve the overall design of our entire search bar! We can have a nice search or delete icon on the left of the search input, a couple of chips for our search options and some material design icons combined with nice ripple styled buttons for our navigation on the right. We can wrap these components inside an input group for a more refined design.
-To do this, let's go and grab the [**IgxInputGroup**](input_group.md), [**IgxIcon**](icon.md),  [**IgxRipple**](ripple.md), [**IgxButton**](button.md) and the [**IgxChip**](chip.md) modules.
+To do this, let's go and grab the [**IgxInputGroup**](../input_group.md), [**IgxIcon**](../icon.md),  [**IgxRipple**](../ripple.md), [**IgxButton**](../button.md) and the [**IgxChip**](../chip.md) modules.
 
 ```typescript
 // app.module.ts
@@ -206,7 +206,7 @@ export class AppModule {}
 
 Finally, let's update our template with the new components!
 
-We will wrap all of our components inside an [**IgxInputGroup**](input_group.md). On the left we will toggle between a search and a delete/clear icon (depending on whether the search input is empty or not). In the center, we will position the input itself. In addition, whenever the delete icon is clicked, we will update our **searchText** and invoke the grid's [`clearSearch`]({environment:angularApiUrl}/classes/igxgridcomponent.html#clearsearch) method to clear the highlights.
+We will wrap all of our components inside an [**IgxInputGroup**](../input_group.md). On the left we will toggle between a search and a delete/clear icon (depending on whether the search input is empty or not). In the center, we will position the input itself. In addition, whenever the delete icon is clicked, we will update our **searchText** and invoke the grid's [`clearSearch`]({environment:angularApiUrl}/classes/igxgridcomponent.html#clearsearch) method to clear the highlights.
 
 ```html
 <!--searchgrid.component.html-->
@@ -336,16 +336,16 @@ Styles:
 <div class="divider--half"></div>
 
 * [Grid overview](grid.md)
-* [Virtualization and Performance](grid_virtualization.md)
-* [Filtering](grid_filtering.md)
-* [Paging](grid_paging.md)
-* [Sorting](grid_sorting.md)
-* [Summaries](grid_summaries.md)
-* [Column Moving](grid_column_moving.md)
-* [Column Pinning](grid_column_pinning.md)
-* [Column Resizing](grid_column_resizing.md)
-* [Selection](grid_selection.md)
-* [Export to Excel](exporter_excel.md)
+* [Virtualization and Performance](virtualization.md)
+* [Filtering](filtering.md)
+* [Paging](paging.md)
+* [Sorting](sorting.md)
+* [Summaries](summaries.md)
+* [Column Moving](column_moving.md)
+* [Column Pinning](column_pinning.md)
+* [Column Resizing](column_resizing.md)
+* [Selection](selection.md)
+* [Export to Excel](../exporter_excel.md)
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.

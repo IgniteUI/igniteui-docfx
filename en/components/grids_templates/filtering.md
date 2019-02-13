@@ -150,7 +150,7 @@ When set to [`OR`]({environment:angularApiUrl}/enums/filteringlogic.html#or), a 
 <div class="divider--half"></div>
 
 #### Remote Filtering
-You can provide grid's remote filtering by subscribing to [`onDataPreLoad`]({environment:angularApiUrl}/classes/igxgridcomponent.html#ondatapreload) and [`onFilteringDone`]({environment:angularApiUrl}/classes/igxgridcomponent.html#onfilteringdone) outputs. More information on how to use it you can find in the `Grid Virtualization and Performance` [documentation](grid_virtualization.md#remote-sortingfiltering-virtualization).
+You can provide grid's remote filtering by subscribing to [`onDataPreLoad`]({environment:angularApiUrl}/classes/igxgridcomponent.html#ondatapreload) and [`onFilteringDone`]({environment:angularApiUrl}/classes/igxgridcomponent.html#onfilteringdone) outputs. More information on how to use it you can find in the `Grid Virtualization and Performance` [documentation](virtualization.md#remote-sortingfiltering-virtualization).
 
 <div class="divider--half"></div>
 
@@ -273,14 +273,14 @@ export class BooleanFilteringOperand extends IgxBooleanFilteringOperand {
 <div class="divider--half"></div>
 
 * [Grid overview](grid.md)
-* [Virtualization and Performance](grid_virtualization.md)
-* [Paging](grid_paging.md)
-* [Sorting](grid_sorting.md)
-* [Summaries](grid_summaries.md)
-* [Column Moving](grid_column_moving.md)
-* [Column Pinning](grid_column_pinning.md)
-* [Column Resizing](grid_column_resizing.md)
-* [Selection](grid_selection.md)
+* [Virtualization and Performance](virtualization.md)
+* [Paging](paging.md)
+* [Sorting](sorting.md)
+* [Summaries](summaries.md)
+* [Column Moving](column_moving.md)
+* [Column Pinning](column_pinning.md)
+* [Column Resizing](column_resizing.md)
+* [Selection](selection.md)
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.

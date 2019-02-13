@@ -440,8 +440,8 @@ The indentation of the **tree cells** persists across other tree grid features l
 
 <div class="divider--half"></div>
 
-* [Data Grid](grid.md)
-* [Grid Editing](grid_row_editing.md)
+* [Data Grid](../grid/grid.md)
+* [Grid Editing](row_editing.md)
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.
