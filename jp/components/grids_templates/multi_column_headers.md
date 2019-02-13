@@ -45,7 +45,7 @@ _language: ja
 </igx-grid>
 ```
 
-各 [`igx-column-group`]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html) は、[`moving`](grid_column_moving.md)、[`pinning`](grid_column_pinning.md)、[`hiding`](grid_column_hiding.md) をサポートします。
+各 [`igx-column-group`]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html) は、[`moving`](column_moving.md)、[`pinning`](column_pinning.md)、[`hiding`](column_hiding.md) をサポートします。
 > [!NOTE]
 > 列セットと列グループがある場合、ピン固定は一番上の列でのみ可能です。ネストされた各 `column groups` または `columns` のピン固定はできません。<br />
 > `columns` と `column groups` 間の移動は、階層の同じレベルで同じ `group` の場合のみ可能です。<br />
@@ -75,14 +75,14 @@ _language: ja
 <div class="divider--half"></div>
 
 * [Grid の概要](grid.md)
-* [仮想化とパフォーマンス](grid_virtualization.md)
-* [ページング](grid_paging.md)
-* [フィルタリング](grid_filtering.md)
-* [並べ替え](grid_sorting.md)
-* [集計](grid_summaries.md)
-* [列のサイズ変更](grid_column_resizing.md)
-* [選択](grid_selection.md)
-* [グループ化](grid_groupby.md)
+* [仮想化とパフォーマンス](virtualization.md)
+* [ページング](paging.md)
+* [フィルタリング](filtering.md)
+* [並べ替え](sorting.md)
+* [集計](summaries.md)
+* [列のサイズ変更](column_resizing.md)
+* [選択](selection.md)
+* [グループ化](groupby.md)
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。

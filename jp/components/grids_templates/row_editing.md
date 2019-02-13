@@ -184,5 +184,5 @@ export class GridRowEditSampleComponent {
 <div class="divider--half"></div>
 
 * [Grid の概要](grid.md)
-* [Grid 編集](grid_editing.md)
-* [Grid トランザクション](grid_batch_editing.md)
+* [Grid 編集](editing.md)
+* [Grid トランザクション](batch_editing.md)

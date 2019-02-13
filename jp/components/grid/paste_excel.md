@@ -226,7 +226,7 @@ export class PasteHandler {
 
 <div class="divider--half"></div>
 
-* [Excel Exporter](exporter_excel.md)
+* [Excel Exporter](../exporter_excel.md)
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。

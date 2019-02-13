@@ -185,5 +185,5 @@ export class GridRowEditSampleComponent {
 <div class="divider--half"></div>
 
 * [그리드 개요](grid.md)
-* [그리드 편집](grid_editing.md)
-* [그리드 트랜잭션](grid_batch_editing.md)
+* [그리드 편집](editing.md)
+* [그리드 트랜잭션](batch_editing.md)

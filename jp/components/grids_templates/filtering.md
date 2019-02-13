@@ -150,7 +150,7 @@ this.grid.filteringLogic = FilteringLogic.OR;
 <div class="divider--half"></div>
 
 #### リモート フィルタリング
-[`onDataPreLoad`]({environment:angularApiUrl}/classes/igxgridcomponent.html#ondatapreload) と [`onFilteringDone`]({environment:angularApiUrl}/classes/igxgridcomponent.html#onfilteringdone) アウトプットにサブスクライブしてグリッドでリモート フィルタリングができます。詳細については、`グリッドの仮想化とパフォーマンス` [ヘルプ](grid_virtualization.md#リモートの並べ替えフィルタリングの仮想化)をご覧ください。
+[`onDataPreLoad`]({environment:angularApiUrl}/classes/igxgridcomponent.html#ondatapreload) と [`onFilteringDone`]({environment:angularApiUrl}/classes/igxgridcomponent.html#onfilteringdone) アウトプットにサブスクライブしてグリッドでリモート フィルタリングができます。詳細については、`グリッドの仮想化とパフォーマンス` [ヘルプ](virtualization.md#リモートの並べ替えフィルタリングの仮想化)をご覧ください。
 
 <div class="divider--half"></div>
 
@@ -271,14 +271,14 @@ export class BooleanFilteringOperand extends IgxBooleanFilteringOperand {
 <div class="divider--half"></div>
 
 * [グリッドの概要](grid.md)
-* [仮想化とパフォーマンス](grid_virtualization.md)
-* [ページング](grid_paging.md)
-* [並べ替え](grid_sorting.md)
-* [集計](grid_summaries.md)
-* [列移動](grid_column_moving.md)
-* [列のピン固定](grid_column_pinning.md)
-* [列のサイズ変更](grid_column_resizing.md)
-* [選択](grid_selection.md)
+* [仮想化とパフォーマンス](virtualization.md)
+* [ページング](paging.md)
+* [並べ替え](sorting.md)
+* [集計](summaries.md)
+* [列移動](column_moving.md)
+* [列のピン固定](column_pinning.md)
+* [列のサイズ変更](column_resizing.md)
+* [選択](selection.md)
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。

@@ -341,8 +341,8 @@ export class TreeGridRowEditSampleComponent implements OnInit {
 
 <div class="divider--half"></div>
 
-* [Data Grid](grid.md)
-* [Grid Editing](grid_row_editing.md)
+* [Data Grid](../grid/grid.md)
+* [Grid Editing](row_editing.md)
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。

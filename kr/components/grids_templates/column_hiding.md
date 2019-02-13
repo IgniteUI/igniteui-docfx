@@ -49,7 +49,7 @@ Ignite UI for Angular 데이터 그리드는 [`IgxColumnHidingComponent`]({envir
 ```html
 <!--columnHiding.component.html-->
 
-<div class="grid__wrapper">
+<div class="_wrapper">
     <igx-grid ... [showToolbar]="true" [columnHiding]="true" toolbarTitle="Employees">
         ...
     </igx-grid>
@@ -59,7 +59,7 @@ Ignite UI for Angular 데이터 그리드는 [`IgxColumnHidingComponent`]({envir
 ```css
 /* columnHiding.component.css */
 
-.grid__wrapper {
+._wrapper {
     margin: 20px 150px 0px 150px;
 }
 
@@ -72,7 +72,7 @@ Ignite UI for Angular 데이터 그리드는 [`IgxColumnHidingComponent`]({envir
 ```html
 <!--columnHiding.component.html-->
 
-<div class="grid__wrapper">
+<div class="_wrapper">
     <igx-grid ... [showToolbar]="true" [columnHiding]="true" toolbarTitle="Employees" columnHidingTitle="Column Hiding" hiddenColumnsText="Hidden">
         ...
     </igx-grid>
@@ -133,7 +133,7 @@ export class AppModule {}
 ```css
 /* columnHiding.component.css */
 
-.grid__wrapper {
+._wrapper {
     margin: 15px;
     display: flex;
     flex-direction: row;
@@ -189,7 +189,7 @@ export class AppModule {}
 - **Alphabetical** (알파벳순으로 열 순서를 정렬)
 - **DisplayOrder** (그리드에 표시되는 순서에 따라 열 순서를 정렬)
 
-이 옵션에 잘 디자인된 두 개의 라디오 버튼을 추가합니다! [**IgxRadio**](radio_button.md) 모듈에 추가하기만 하면 됩니다.
+이 옵션에 잘 디자인된 두 개의 라디오 버튼을 추가합니다! [**IgxRadio**](../radio_button.md) 모듈에 추가하기만 하면 됩니다.
 
 ```typescript
 // app.module.ts
@@ -257,7 +257,7 @@ export class AppModule {}
 
 ### API 참조
 
-이 조항에서는 그리드 툴바에 내장된 열 숨기기 UI를 사용하는 방법과 별도의 컴포넌트로 정의하는 방법을 설명했습니다. 사용자가 다른 열 순서 중에서 선택할 수 있는 기능을 제공하는 UI를 장착하여 사용자 제목 및 필터 프롬프트 텍스트를 설정했습니다. 또한, Ignite UI for Angular 컴포넌트 [**IgxRadio**](radio_button.md) 버튼을 추가로 사용했습니다.
+이 조항에서는 그리드 툴바에 내장된 열 숨기기 UI를 사용하는 방법과 별도의 컴포넌트로 정의하는 방법을 설명했습니다. 사용자가 다른 열 순서 중에서 선택할 수 있는 기능을 제공하는 UI를 장착하여 사용자 제목 및 필터 프롬프트 텍스트를 설정했습니다. 또한, Ignite UI for Angular 컴포넌트 [**IgxRadio**](../radio_button.md) 버튼을 추가로 사용했습니다.
 열 숨기기 UI에는 아래에 나열된 몇 가지 API가 추가로 포함되어 있습니다.
 
 * [`IgxColumnHidingComponent`]({environment:angularApiUrl}/classes/igxcolumnhidingcomponent.html)
@@ -295,16 +295,16 @@ export class AppModule {}
 <div class="divider--half"></div>
 
 * [그리드 개요](grid.md)
-* [가상화 및 성능](grid_virtualization.md)
-* [필터링](grid_filtering.md)
-* [페이징](grid_paging.md)
-* [정렬](grid_sorting.md)
-* [요약](grid_summaries.md)
-* [열 핀 고정](grid_column_pinning.md)
-* [열 크기 조정](grid_column_resizing.md)
-* [선택](grid_selection.md)
-* [검색](grid_search.md)
-* [Excel로 내보내기](exporter_excel.md)
+* [가상화 및 성능](virtualization.md)
+* [필터링](filtering.md)
+* [페이징](paging.md)
+* [정렬](sorting.md)
+* [요약](summaries.md)
+* [열 핀 고정](column_pinning.md)
+* [열 크기 조정](column_resizing.md)
+* [선택](selection.md)
+* [검색](search.md)
+* [Excel로 내보내기](../exporter_excel.md)
 
 <div class="divider--half"></div>
 커뮤니티는 활동적이고 새로운 아이디어를 항상 환영합니다.

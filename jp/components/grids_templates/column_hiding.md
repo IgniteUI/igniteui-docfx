@@ -187,7 +187,7 @@ export class AppModule {}
 - **Alphabetical** (列をアルファベット順で並べ替え)
 - **DisplayOrder** (列をグリッドで表示される順序によって並べ替え)
 
-このオプションにラジオ ボタンを追加します。[**IgxRadio**](radio_button.md) モジュールを追加します。 
+このオプションにラジオ ボタンを追加します。[**IgxRadio**](../radio_button.md) モジュールを追加します。 
 
 ```typescript
 // app.module.ts
@@ -255,7 +255,7 @@ export class AppModule {}
 
 ### API リファレンス
 
-このトピックでは、グリッドのツールバーの定義済みの列非表示 UI の使用方法や別のコンポーネントとして定義する方法について説明しました。また、その他の列順序から選択する機能を提供する UI を実装し、カスタム タイトルおよびフィルター プロンプト テキストを設定、[**IgxRadio**](radio_button.md) ボタンのその他の Ignite UI for Angular コンポーネントも使用しました。
+このトピックでは、グリッドのツールバーの定義済みの列非表示 UI の使用方法や別のコンポーネントとして定義する方法について説明しました。また、その他の列順序から選択する機能を提供する UI を実装し、カスタム タイトルおよびフィルター プロンプト テキストを設定、[**IgxRadio**](../radio_button.md) ボタンのその他の Ignite UI for Angular コンポーネントも使用しました。
 以下は、列非表示 UI のその他の API です。
 
 * [`IgxColumnHidingComponent`]({environment:angularApiUrl}/classes/igxcolumnhidingcomponent.html)
@@ -293,16 +293,16 @@ export class AppModule {}
 <div class="divider--half"></div>
 
 * [Grid の概要](grid.md)
-* [仮想化とパフォーマンス](grid_virtualization.md)
-* [フィルタリング](grid_filtering.md)
-* [ページング](grid_paging.md)
-* [並べ替え](grid_sorting.md)
-* [集計](grid_summaries.md)
-* [列のピン固定](grid_column_pinning.md)
-* [列のサイズ変更](grid_column_resizing.md)
-* [選択](grid_selection.md)
-* [検索](grid_search.md)
-* [Excel へエクスポート](exporter_excel.md)
+* [仮想化とパフォーマンス](virtualization.md)
+* [フィルタリング](filtering.md)
+* [ページング](paging.md)
+* [並べ替え](sorting.md)
+* [集計](summaries.md)
+* [列のピン固定](column_pinning.md)
+* [列のサイズ変更](column_resizing.md)
+* [選択](selection.md)
+* [検索](search.md)
+* [Excel へエクスポート](../exporter_excel.md)
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
