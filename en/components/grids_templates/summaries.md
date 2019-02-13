@@ -151,6 +151,7 @@ export class GridComponent implements OnInit {
 }
 ```
 
+@@if (igxName === 'IgxGrid') {
 ### Summaries with Group By
 
 When you have grouped by columns, the @@igComponent allows you to change the summary position and calculation mode using the [`summaryCalculationMode`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#summarycalculationmode) and [`summaryPosition`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#summaryposition) properties.
@@ -169,7 +170,6 @@ The available values of the [`summaryPosition`]({environment:angularApiUrl}/clas
 
 #### Demo
 
-@@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:720px">
     <iframe id="grid-groupby-summary-iframe" src='{environment:demosBaseUrl}/grid/grid-groupby-summary' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -179,6 +179,22 @@ The available values of the [`summaryPosition`]({environment:angularApiUrl}/clas
 </div>
 }
 @@if (igxName === 'IgxTreeGrid') {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
