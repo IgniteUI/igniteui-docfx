@@ -1,6 +1,6 @@
 ---
 title: Data Chart Component - Native Angular | Ignite UI for Angular
-_description: The Ignite UI for Angular Data Chart component is TODO.
+_description: The Ignite UI for Angular Data Chart is a charting component that provides modular design of axis, markers, series, legend, and annotation layers. With this chart, you can create multiple instances of these visual elements in the same chart plot area in order to create composite chart views.
 _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Chart Control, Angular Chart Example, Angular Chart Component, Angular Data Chart
 ---
 
@@ -12,7 +12,7 @@ Scatter shape series are often used highlight regions in scientific data or they
 
 ### Demo
 
-<div class="sample-container" style="height: 300px">
+<div class="sample-container" style="height: 400px">
     <iframe id="data-chart-type-shape-series-iframe" src='{environment:demosBaseUrl}/charts/data-chart-type-shape-series' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -62,11 +62,27 @@ In order to use scatter shape series, you need to import the following modules i
 
 ```typescript
 // axis' modules:
-TODO Angular
-// category series' modules:
-TODO Angular
+import { IgxNumericYAxis } from "igniteui-angular-charts/ES5/igx-numeric-y-axis";
+import { IgxNumericXAxis } from "igniteui-angular-charts/ES5/igx-numeric-x-axis";
+// series' modules:
+import { IgxScatterPolygonSeries } from "igniteui-angular-charts/ES5/igx-scatter-polygon-series";
+import { IgxScatterPolylineSeries } from "igniteui-angular-charts/ES5/igx-scatter-polyline-series";
 // data chart's modules:
-TODO Angular
+import { IgxDataChartModule } from 'igniteui-angular-charts/ES5/igx-data-chart-module';
+import { IgxDataChartCoreModule } from "igniteui-angular-charts/ES5/igx-data-chart-core-module";
+import { IgxDataChartShapeCoreModule } from "igniteui-angular-charts/ES5/igx-data-chart-shape-core-module";
+import { IgxDataChartShapeModule } from "igniteui-angular-charts/ES5/igx-data-chart-shape-module";
+
+@NgModule({
+    imports: [
+        // ...
+        IgxDataChartModule,
+        IgxDataChartCoreModule,
+        IgxDataChartShapeCoreModule,
+        IgxDataChartShapeModule,
+    ]
+})
+export class AppModule { /* ... */ }
 ```
 
 ### Code Example
@@ -78,9 +94,14 @@ This code demonstrates how to create an instance of data chart with `ShapeColumn
     [dataSource]="dataSource"
     width="700px"
     height="500px">
-
-    TODO
-
+    <igx-numeric-x-axis name="xAxis" />
+    <igx-numeric-y-axis name="yAxis" />
+    <igx-scatter-polygon-series
+     name="series1"
+     shapeMemberPath="Points"
+     title="House Floor Plan"
+     brush="Gray"
+     outline="Black" />
  </igx-data-chart>
 ```
 
@@ -93,5 +114,4 @@ Note that you can also use above code to create `ScatterPolygonSeries` by replac
 -   [Axis Sharing](datachart_axis_sharing.md)
 -   [Chart Legend](datachart_chart_legends.md)
 -   [Series Markers](datachart_series_markers.md)
--   [Series Requirements](datachart_series_requirements.md)
 -   [Series Types](datachart_series_types.md)

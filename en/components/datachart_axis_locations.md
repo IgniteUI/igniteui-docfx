@@ -1,6 +1,6 @@
 ---
 title: Data Chart Component - Native Angular | Ignite UI for Angular
-_description: The Ignite UI for Angular Data Chart component is TODO.
+_description: The Ignite UI for Angular Data Chart is a charting component that provides modular design of axis, markers, series, legend, and annotation layers. With this chart, you can create multiple instances of these visual elements in the same chart plot area in order to create composite chart views.
 _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Chart Control, Angular Chart Example, Angular Chart Component, Angular Data Chart
 ---
 
@@ -11,10 +11,10 @@ _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Nati
 ### Demo
 
 <div class="sample-container" style="height: 300px">
-    <iframe id="data-chart-axis-sharing-iframe" src='{environment:demosBaseUrl}/charts/data-chart--axis-sharing' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="data-chart-axis-locations-iframe" src='{environment:demosBaseUrl}/charts/data-chart-axis-locations' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="financial-chart--axis-sharing-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="financial-chart-axis-locations-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
     </button>
 </div>
 
@@ -30,8 +30,34 @@ This code demonstrates how to create data chart with two `IgxNumericYAxisCompone
     width="700px"
     height="500px">
 
-    TODO
+    <igx-category-x-axis name="xAxisYears"
+    interval="12" labelLocation="OutsideBottom"
+    label="Year"  overlap="1" gap="0.4"  />
+    <igx-category-x-axis name="xAxisMonths"
+    interval="1"  labelLocation="OutsideBottom"
+    label="Month" overlap="1" gap="0.4" />
+    <igx-numeric-y-axis  name="yAxisLeft"
+    title="Expanse | Revenue"
+    minimumValue="-900" labelLocation="OutsideLeft"
+    maximumValue="900"
+    interval="300" />
+    <igx-numeric-y-axis  name="yAxisRight"
+    title="Profit (%)"
+    minimumValue="0"  labelLocation="OutsideRight"
+    maximumValue="100" />
 
+    <igx-column-series name="series1"
+    valueMemberPath="Revenue"
+    xAxisName="xAxisMonths"
+    yAxisName="yAxisLeft" />
+    <igx-column-series name="series3"
+    valueMemberPath="Expanse"
+    xAxisName="xAxisMonths"
+    yAxisName="yAxisLeft" />
+    <igx-column-series name="series2"
+    valueMemberPath="Profit"
+    xAxisName="xAxisYears"
+    yAxisName="yAxisRight" />
  </igx-data-chart>
 ```
 

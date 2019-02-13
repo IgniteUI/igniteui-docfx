@@ -1,10 +1,10 @@
 ---
 title: Data Chart Component - Native Angular | Ignite UI for Angular
-_description: The Ignite UI for Angular Data Chart component is TODO.
+_description: The Ignite UI for Angular Data Chart is a charting component that provides modular design of axis, markers, series, legend, and annotation layers. With this chart, you can create multiple instances of these visual elements in the same chart plot area in order to create composite chart views.
 _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Chart Control, Angular Chart Example, Angular Chart Component, Angular Data Chart
 ---
 
-## Series Highlighting
+## Highlighting
 
 The `IgxDataChart` control allows you to highlight the plotted series in the chart to visualize the item or series that the mouse is hovering over or by using the highlighting layers.
 
@@ -29,13 +29,13 @@ The series highlighting feature of the `IgxDataChart` control allows you to eith
 The following code snippet demonstrates how to enable highlighting on series in the chart:
 
 ```html
-<igx-data-chart #chart 
+<igx-data-chart #chart
     height="400px"
     width="100%"
     [dataSource]="data">
 
     <igx-category-x-axis #xAxis></igx-category-x-axis>
-    <igx-numeric-y-axis #yAxis></igx-numeric-y-axis>   
+    <igx-numeric-y-axis #yAxis></igx-numeric-y-axis>
 
     <igx-column-series name="series1"
         [xAxis]="xAxis"
@@ -64,13 +64,13 @@ You can also change the color of the highlighting area by setting the `Brush` pr
 The following is a code snippet demonstrating how to add a category highlight layer to the chart:
 
 ```html
-<igx-data-chart #chart 
+<igx-data-chart #chart
     height="400px"
     width="100%"
     [dataSource]="data">
 
     <igx-category-x-axis #xAxis></igx-category-x-axis>
-    <igx-numeric-y-axis #yAxis></igx-numeric-y-axis>   
+    <igx-numeric-y-axis #yAxis></igx-numeric-y-axis>
 
     <igx-column-series name="series1"
         [xAxis]="xAxis"
@@ -100,13 +100,13 @@ The default highlight depends on the type of series. For example, the highlight 
 The following code snippet demonstrates how you can add a category item highlight layer to the `IgxDataChart` control:
 
 ```html
-<igx-data-chart #chart 
+<igx-data-chart #chart
     height="400px"
     width="100%"
     [dataSource]="data">
 
     <igx-category-x-axis #xAxis></igx-category-x-axis>
-    <igx-numeric-y-axis #yAxis></igx-numeric-y-axis>   
+    <igx-numeric-y-axis #yAxis></igx-numeric-y-axis>
 
     <igx-column-series name="series1"
         [xAxis]="xAxis"

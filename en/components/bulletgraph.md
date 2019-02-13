@@ -14,7 +14,7 @@ The bullet graph component provides you with the ability to create attractive da
 
 The following sample demonstrates how setting multiple properties on the same gauge can transform it to completely different gauge.
 
-<div class="sample-container" style="height: 125px">
+<div class="sample-container" style="height: 155px">
     <iframe id="bullet-graph-sample-iframe" src='{environment:demosBaseUrl}/gauges/bullet-graph-animation' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -33,7 +33,7 @@ When installing the gauge package, the core package must also be installed.
 
 **npm install igniteui-angular-gauges igniteui-angular-core**
 
-The bullet graph is exported as an `NgModule`, you need to import the 
+The bullet graph is exported as an `NgModule`, you need to import the
 `IgxBulletGraphModule` inside your `AppModule`:
 
 <!-- -->
@@ -47,9 +47,9 @@ import { IgxBulletGraph } from 'igniteui-angular-gauges/ES5/igr-bullet-graph';
 
 @NgModule({
     imports: [
-        ...
+        // ...
         IgxBulletGraphModule,
-        ...
+        // ...
     ]
 })
 export class AppModule {}

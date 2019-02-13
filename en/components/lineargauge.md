@@ -14,7 +14,7 @@ The linear gauge component allows for visualizing data in the form of a linear g
 
 The following sample demonstrates how setting multiple properties on the same gauge can transform it to completely different gauge.
 
-<div class="sample-container" style="height: 125px">
+<div class="sample-container" style="height: 155px">
     <iframe id="linear-gauge-sample-iframe" src='{environment:demosBaseUrl}/gauges/linear-gauge-animation' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -30,7 +30,7 @@ When installing the gauge package, the core package must also be installed.
 
 **npm install igniteui-angular-gauges igniteui-angular-core**
 
-The linear gauge is exported as an `NgModule`, you need to import the 
+The linear gauge is exported as an `NgModule`, you need to import the
 `IgxLinearGaugeModule` inside your `AppModule`:
 
 <!-- -->
@@ -44,19 +44,12 @@ import { IgxLinearGauge } from 'igniteui-angular-gauges/ES5/igx-linear-gauge';
 
 @NgModule({
     imports: [
-        ...
+        // ...
         IgxLinearGaugeModule,
-        ...
+        // ...
     ]
 })
 export class AppModule {}
-```
-
-```typescript
-import { IgrLinearGaugeModule } from 'igniteui-react-gauges/ES5/igr-linear-gauge-module';
-import { IgxLinearGauge } from 'ignite-react-gauges/ES5/igx-linear-gauge';
-
-IgrLinearGaugeModule.register();
 ```
 
 <div class="divider--half"></div>
@@ -211,7 +204,7 @@ The labels indicate the measures on the scale.
 <div class="sample-container" style="height: 125px">
     <iframe id="linear-gauge-labels-iframe" src='{environment:demosBaseUrl}/gauges/linear-gauge-labels' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
-<!--<div>
+<div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="linear-gauge-labels-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
     </button>
 </div>

@@ -46,7 +46,7 @@ When installing the chart package, the core package must also be installed.
 
 **npm install igniteui-angular-charts igniteui-angular-core**
 
-The category chart is exported as an `NgModule`, you need to import the 
+The category chart is exported as an `NgModule`, you need to import the
 `IgxCategoryChartModule` inside your `AppModule`:
 
 <!-- -->
@@ -59,9 +59,9 @@ import { IgxCategoryChartModule } from 'igniteui-angular-charts/ES5/igx-category
 
 @NgModule({
     imports: [
-        ...
+        // ...
         IgxCategoryChartModule,
-        ...
+        // ...
     ]
 })
 export class AppModule {}

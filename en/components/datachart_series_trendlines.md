@@ -1,10 +1,10 @@
 ---
 title: Data Chart Component - Native Angular | Ignite UI for Angular
-_description: The Ignite UI for Angular Data Chart component is TODO.
+_description: The Ignite UI for Angular Data Chart is a charting component that provides modular design of axis, markers, series, legend, and annotation layers. With this chart, you can create multiple instances of these visual elements in the same chart plot area in order to create composite chart views.
 _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Chart Control, Angular Chart Example, Angular Chart Component, Angular Data Chart
 ---
 
-## Series Trendlines
+## Trendlines
 
 The `IgxDataChart` control has support for trendlines, which help to identify a trend in data bound to a series.
 
@@ -48,8 +48,8 @@ The following code snippet demonstrates how to add a trendline to a series in th
 
     <igx-category-x-axis #xAxis></igx-category-x-axis>
     <igx-numeric-y-axis #yAxis></igx-numeric-y-axis>
-    
-    <igx-financial-price-series 
+
+    <igx-financial-price-series
         [xAxis]="xAxis"
         [yAxis]="yAxis"
         highMemberPath="High"
