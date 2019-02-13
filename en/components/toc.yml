@@ -13,75 +13,194 @@
   href: grids_and_lists.md
   header: true
 - name: Data Grid
-  href: grid.md
+  href: grid/grid.md
   new: true
   items:
     - name: Virtualization and performance
-      href: grid_virtualization.md
+      href: grid/virtualization.md
       new: false
     - name: Editing
-      href: grid_editing.md
+      href: grid/editing.md
       new: false
     - name: Row Editing
-      href: grid_row_editing.md
+      href: grid/row_editing.md
       new: true
     - name: Batch Editing
-      href: grid_batch_editing.md
+      href: grid/batch_editing.md
       new: true
     - name: Paging
-      href: grid_paging.md
+      href: grid/paging.md
       new: false
     - name: Filtering
-      href: grid_filtering.md
+      href: grid/filtering.md
       new: true
     - name: Sorting
-      href: grid_sorting.md
+      href: grid/sorting.md
       new: false
     - name: Group By
-      href: grid_groupby.md
+      href: grid/groupby.md
       new: false
     - name: Summaries
-      href: grid_summaries.md
+      href: grid/summaries.md
       new: false
     - name: Column moving
-      href: grid_column_moving.md
+      href: grid/column_moving.md
       new: false
     - name: Column pinning
-      href: grid_column_pinning.md
+      href: grid/column_pinning.md
       new: false
     - name: Column resizing
-      href: grid_column_resizing.md
+      href: grid/column_resizing.md
       new: false
     - name: Column hiding
-      href: grid_column_hiding.md
+      href: grid/column_hiding.md
       new: false
     - name: Selection
-      href: grid_selection.md
+      href: grid/selection.md
       new: false
     - name: Searching
-      href: grid_search.md
+      href: grid/search.md
       new: false
     - name: Toolbar
-      href: grid_toolbar.md
+      href: grid/toolbar.md
       new: false
     - name: Export to Excel
       href: exporter_excel.md
       new: false
     - name: Paste from Excel
-      href: grid_paste_excel.md
+      href: grid/paste_excel.md
       new: false
     - name: Multi Column Headers
-      href: grid_multi_column_headers.md
+      href: grid/multi_column_headers.md
       new: false
     - name: Display Density
-      href: grid_displayDensity.md
+      href: grid/display_density.md
       new: false
     - name: Conditional Cell Styling
-      href: grid_conditional_cell_styling.md
+      href: grid/conditional_cell_styling.md
       new: true
 - name: Tree Grid
-  href: treegrid.md
+  href: treeGrid/tree_grid.md
+  new: false
+  items:
+    - name: Virtualization and performance
+      href: treeGrid/virtualization.md
+      new: false
+    - name: Editing
+      href: treeGrid/editing.md
+      new: false
+    - name: Row Editing
+      href: treeGrid/row_editing.md
+      new: false
+    - name: Batch Editing
+      href: treeGrid/batch_editing.md
+      new: false
+    - name: Paging
+      href: treeGrid/paging.md
+      new: false
+    - name: Filtering
+      href: treeGrid/filtering.md
+      new: false
+    - name: Sorting
+      href: treeGrid/sorting.md
+      new: false
+    - name: Summaries
+      href: treeGrid/summaries.md
+      new: false
+    - name: Column moving
+      href: treeGrid/column_moving.md
+      new: false
+    - name: Column pinning
+      href: treeGrid/column_pinning.md
+      new: false
+    - name: Column resizing
+      href: treeGrid/column_resizing.md
+      new: false
+    - name: Column hiding
+      href: treeGrid/column_hiding.md
+      new: false
+    - name: Selection
+      href: treeGrid/selection.md
+      new: false
+    - name: Searching
+      href: treeGrid/search.md
+      new: true
+    - name: Toolbar
+      href: treeGrid/toolbar.md
+      new: false
+    - name: Export to Excel
+      href: exporter_excel.md
+      new: false
+    - name: Multi Column Headers
+      href: treeGrid/multi_column_headers.md
+      new: false
+    - name: Display Density
+      href: treeGrid/display_density.md
+      new: false
+    - name: Conditional Cell Styling
+      href: treeGrid/conditional_cell_styling.md
+      new: false
+- name: Hierarchical Grid
+  href: hierarchicalGrid/hierarchical_grid.md
   new: true
+  items:
+    - name: Virtualization and performance
+      href: hierarchicalGrid/virtualization.md
+      new: false
+    - name: Editing
+      href: hierarchicalGrid/editing.md
+      new: false
+    - name: Row Editing
+      href: hierarchicalGrid/row_editing.md
+      new: false
+    - name: Batch Editing
+      href: hierarchicalGrid/batch_editing.md
+      new: false
+    - name: Paging
+      href: hierarchicalGrid/paging.md
+      new: false
+    - name: Filtering
+      href: hierarchicalGrid/filtering.md
+      new: false
+    - name: Sorting
+      href: hierarchicalGrid/sorting.md
+      new: false
+    - name: Summaries
+      href: hierarchicalGrid/summaries.md
+      new: false
+    - name: Column moving
+      href: hierarchicalGrid/column_moving.md
+      new: false
+    - name: Column pinning
+      href: hierarchicalGrid/column_pinning.md
+      new: false
+    - name: Column resizing
+      href: hierarchicalGrid/column_resizing.md
+      new: false
+    - name: Column hiding
+      href: hierarchicalGrid/column_hiding.md
+      new: false
+    - name: Selection
+      href: hierarchicalGrid/selection.md
+      new: false
+    - name: Searching
+      href: hierarchicalGrid/search.md
+      new: false
+    - name: Toolbar
+      href: hierarchicalGrid/toolbar.md
+      new: false
+    - name: Export to Excel
+      href: exporter_excel.md
+      new: false
+    - name: Multi Column Headers
+      href: hierarchicalGrid/multi_column_headers.md
+      new: false
+    - name: Display Density
+      href: hierarchicalGrid/display_density.md
+      new: false
+    - name: Conditional Cell Styling
+      href: hierarchicalGrid/conditional_cell_styling.md
+      new: false
 - name: List View
   href: list.md
 - name: Combo
