@@ -42,7 +42,7 @@ import { IgxGridModule } from 'igniteui-angular/grid';
 export class AppModule {}
 ```
 
-[`IgxGridModule`]({environment:angularApiUrl}/classes/igxgridmodule.html)의 각 컴포넌트, 지시문 및 도우미 클래스는 _grid_ 하위 패키지 또는 _igniteui-angular_의 기본 번들을 통해 가져올 수 있습니다. 그리드를 인스턴스화하고 사용하기 위해 모든 항목을 가져올 필요는 없지만 일반적으로 그리드 API의 일부인 유형을 선언할 때 가져옵니다(또는 편집기가 자동으로 가져옵니다).
+[`IgxGridModule`]({environment:angularApiUrl}/classes/igxgridmodule.html)의 각 컴포넌트, 지시문 및 도우미 클래스는 _ 하위 패키지 또는 _igniteui-angular_의 기본 번들을 통해 가져올 수 있습니다. 그리드를 인스턴스화하고 사용하기 위해 모든 항목을 가져올 필요는 없지만 일반적으로 그리드 API의 일부인 유형을 선언할 때 가져옵니다(또는 편집기가 자동으로 가져옵니다).
 
 ```typescript
 import { IgxGridComponent } from 'igniteui-angular/grid/';
@@ -396,15 +396,15 @@ This sample demonstrates the `igxGrid` bound to live data.
 ### 추가 리소스
 <div class="divider--half"></div>
 
-* [가상화 및 성능](grid_virtualization.md)
-* [페이징](grid_paging.md)
-* [필터링](grid_filtering.md)
-* [정렬](grid_sorting.md)
-* [요약](grid_summaries.md)
-* [열 이동](grid_column_moving.md)
-* [열 핀 고정](grid_column_pinning.md)
-* [열 크기 조정](grid_column_resizing.md)
-* [선택](grid_selection.md)
+* [가상화 및 성능](virtualization.md)
+* [페이징](paging.md)
+* [필터링](filtering.md)
+* [정렬](sorting.md)
+* [요약](summaries.md)
+* [열 이동](column_moving.md)
+* [열 핀 고정](column_pinning.md)
+* [열 크기 조정](column_resizing.md)
+* [선택](selection.md)
 
 <div class="divider--half"></div>
 커뮤니티는 활동적이고 새로운 아이디어를 항상 환영합니다.

@@ -128,5 +128,5 @@ export class GridBatchEditingSampleComponent {
 ### 추가 리소스
 
 * [그리드 개요](grid.md)
-* [그리드 편집](grid_editing.md)
-* [그리드 행 편집](grid_row_editing.md)
+* [그리드 편집](editing.md)
+* [그리드 행 편집](row_editing.md)

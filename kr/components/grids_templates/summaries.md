@@ -192,14 +192,14 @@ The summary rows can be navigated with the following keyboard interactions:
 <div class="divider--half"></div>
 
 * [그리드 개요](grid.md)
-* [가상화 및 성능](grid_virtualization.md)
-* [페이징](grid_paging.md)
-* [필터링](grid_filtering.md)
-* [정렬](grid_sorting.md)
-* [열 이동](grid_column_moving.md)
-* [열 핀 고정](grid_column_pinning.md)
-* [열 크기 조정](grid_column_resizing.md)
-* [선택](grid_selection.md)
+* [가상화 및 성능](virtualization.md)
+* [페이징](paging.md)
+* [필터링](filtering.md)
+* [정렬](sorting.md)
+* [열 이동](column_moving.md)
+* [열 핀 고정](column_pinning.md)
+* [열 크기 조정](column_resizing.md)
+* [선택](selection.md)
 
 <div class="divider--half"></div>
 커뮤니티는 활동적이고 새로운 아이디어를 항상 환영합니다.

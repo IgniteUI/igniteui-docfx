@@ -45,7 +45,7 @@ _language: kr
 </igx-grid>
 ```
 
-모든 [`igx-column-group`]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html)는 [`이동`](grid_column_moving.md), [`핀 고정`](grid_column_pinning.md) 및 [`숨기기`](grid_column_hiding.md)를 지원합니다.
+모든 [`igx-column-group`]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html)는 [`이동`](column_moving.md), [`핀 고정`](column_pinning.md) 및 [`숨기기`](column_hiding.md)를 지원합니다.
 > [!NOTE]
 > 열 집합과 열 그룹이 있는 경우 가장 위의 상위 열에 대해서만 핀 고정이 가능합니다. 더 구체적으로 중첩된 `column groups` 또는 `columns`의 핀 고정은 허용되지 않습니다. <br />
 > `columns`과 `column groups` 사이의 이동은 계층에서 같은 수준이고 같은 `group`인 경우에만 허용됩니다. <br />
@@ -74,14 +74,14 @@ _language: kr
 <div class="divider--half"></div>
 
 * [그리드 개요](grid.md)
-* [가상화 및 성능](grid_virtualization.md)
-* [페이징](grid_paging.md)
-* [필터링](grid_filtering.md)
-* [정렬](grid_sorting.md)
-* [요약](grid_summaries.md)
-* [열 크기 조정](grid_column_resizing.md)
-* [선택](grid_selection.md)
-* [그룹화](grid_groupby.md)
+* [가상화 및 성능](virtualization.md)
+* [페이징](paging.md)
+* [필터링](filtering.md)
+* [정렬](sorting.md)
+* [요약](summaries.md)
+* [열 크기 조정](column_resizing.md)
+* [선택](selection.md)
+* [그룹화](groupby.md)
 
 <div class="divider--half"></div>
 커뮤니티는 활동적이고 새로운 아이디어를 항상 환영합니다.

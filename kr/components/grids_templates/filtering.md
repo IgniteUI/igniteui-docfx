@@ -145,7 +145,7 @@ this.grid.filteringLogic = FilteringLogic.OR;
 <div class="divider--half"></div>
 
 #### 원격 필터링
-[`onDataPreLoad`]({environment:angularApiUrl}/classes/igxgridcomponent.html#ondatapreload) 및 [`onFilteringDone`]({environment:angularApiUrl}/classes/igxgridcomponent.html#onfilteringdone) 출력을 서브스크라이브하면 그리드의 원격 필터링을 제공할 수 있습니다. 이것을 사용하는 방법에 대한 자세한 것은 `그리드 가상화 및 성능` [documentation](grid_virtualization.md#원격-정렬필터링-가상화)을 참조하십시오.
+[`onDataPreLoad`]({environment:angularApiUrl}/classes/igxgridcomponent.html#ondatapreload) 및 [`onFilteringDone`]({environment:angularApiUrl}/classes/igxgridcomponent.html#onfilteringdone) 출력을 서브스크라이브하면 그리드의 원격 필터링을 제공할 수 있습니다. 이것을 사용하는 방법에 대한 자세한 것은 `그리드 가상화 및 성능` [documentation](virtualization.md#원격-정렬필터링-가상화)을 참조하십시오.
 
 <div class="divider--half"></div>
 
@@ -268,14 +268,14 @@ export class BooleanFilteringOperand extends IgxBooleanFilteringOperand {
 <div class="divider--half"></div>
 
 * [그리드 개요](grid.md)
-* [가상화 및 성능](grid_virtualization.md)
-* [페이징](grid_paging.md)
-* [정렬](grid_sorting.md)
-* [요약](grid_summaries.md)
-* [열 이동](grid_column_moving.md)
-* [열 핀 고정](grid_column_pinning.md)
-* [열 크기 조정](grid_column_resizing.md)
-* [선택](grid_selection.md)
+* [가상화 및 성능](virtualization.md)
+* [페이징](paging.md)
+* [정렬](sorting.md)
+* [요약](summaries.md)
+* [열 이동](column_moving.md)
+* [열 핀 고정](column_pinning.md)
+* [열 크기 조정](column_resizing.md)
+* [선택](selection.md)
 
 <div class="divider--half"></div>
 커뮤니티는 활동적이고 새로운 아이디어를 항상 환영합니다.
