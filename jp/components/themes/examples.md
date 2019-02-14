@@ -74,10 +74,6 @@ _language: ja
 @import '~igniteui-angular/lib/core/styles/components/grid-paginator/grid-paginator-component';
 @import '~igniteui-angular/lib/core/styles/components/grid-paginator/grid-paginator-theme';
 
-// Import grid-filtering component and theme styles
-@import '~igniteui-angular/lib/core/styles/components/grid-filtering/grid-filtering-component';
-@import '~igniteui-angular/lib/core/styles/components/grid-filtering/grid-filtering-theme';
-
 ```
 - [**Igx-Dialog**](../dialog.md) の組み込み [**Igx-Input-Group**](../input_group.md)。
 

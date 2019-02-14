@@ -303,7 +303,7 @@ To enable keyboard navigation for the `igxDropDown` component, the [igxDropDownI
 The [igxDropDownItemNavigation]({environment:angularApiUrl}/classes/igxdropdownitemnavigationdirective.html) directive value should be target component that is or extends [IgxDropDownBase]({environment:angularApiUrl}/classes/igxdropdownbase.html) class.
 
 
-The following sample demonstrates an input that on click opens and closes igxDropDown instance. Applying the [igxDropDownItemNavigation]({environment:angularApiUrl}/classes/igxdropdownitemnavigationdirective.html) on the input itself, will enable keyboard navigation, when using arrow up and arrow down. This relies on the default drop down behavior with [allowItemsFocus]({environment:angularApiUrl}/classes/igxcombodropdowncomponent.html#allowitemsfocus) disabled to allow the button input to maintain focus.
+The following sample demonstrates an input that on click opens and closes igxDropDown instance. Applying the [igxDropDownItemNavigation]({environment:angularApiUrl}/classes/igxdropdownitemnavigationdirective.html) on the input itself, will enable keyboard navigation, when using arrow up and arrow down. This relies on the default drop down behavior with [allowItemsFocus]({environment:angularApiUrl}/classes/igxdropdowncomponent.html#allowitemsfocus) disabled to allow the button input to maintain focus.
 
 
 ```html
@@ -385,7 +385,7 @@ Applying the directive will ensure the following actions are executed as a resul
 
 
 
-When [allowItemsFocus]({environment:angularApiUrl}/classes/igxcombodropdowncomponent.html#allowitemsfocus) is enabled, drop down items gain tab index and are focused when active. The focused drop down items are the ones that trigger events, during keyboard navigation, which means that the [igxDropDownItemNavigation]({environment:angularApiUrl}/classes/igxdropdownitemnavigationdirective.html) should be applied on the individual drop down items.
+When [allowItemsFocus]({environment:angularApiUrl}/classes/igxdropdowncomponent.html#allowitemsfocus) is enabled, drop down items gain tab index and are focused when active. The focused drop down items are the ones that trigger events, during keyboard navigation, which means that the [igxDropDownItemNavigation]({environment:angularApiUrl}/classes/igxdropdownitemnavigationdirective.html) should be applied on the individual drop down items.
 
 ```
 <igx-input-group [igxToggleAction]="dropDown">
