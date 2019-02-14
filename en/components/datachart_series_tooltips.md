@@ -22,6 +22,12 @@ The `IgxDataChart` control has support for showing tooltips along with a couple 
 
 In order to use tooltips or tooltip layers in the `IgxDataChart` control, you need to import and register the interactivity module. This can be done by using the following code:
 
+```typescript
+import { IgxDataChartInteractivityModule } from "igniteui-angular-charts/ES5/igx-data-chart-interactivity-module";
+
+IgxDataChartInteractivityModule.register();
+```
+
 ### Default Tooltips
 
 The `IgxDataChart` control provides default tooltips for each type of series. The default tooltips display all of the information relevant to the particular series item that is being hovered, including the series title, data values, axis values, etc. They are also styled to match the series' appearance.

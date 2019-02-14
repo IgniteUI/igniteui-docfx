@@ -22,6 +22,12 @@ In the `IgxDataChart` control, navigation is disabled by default. Once enabled, 
 
 In order to use navigation in the chart, you need to import and register the interactivity module. This can be done by using the following code:
 
+```typescript
+import { IgxDataChartInteractivityModule } from "igniteui-angular-charts/ES5/igx-data-chart-interactivity-module";
+
+IgxDataChartInteractivityModule.register();
+```
+
 ### Chart UI Navigation Overview
 
 In order to allow navigation in the UI, you need to set either the `IsHorizontalZoomEnabled` and/or the `IsVerticalZoomEnabled` properties of the chart to true, depending on the direction that you wish to allow zooming. This will allow you to zoom the chart by rolling a mouse wheel over it.

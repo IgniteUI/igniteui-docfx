@@ -22,6 +22,12 @@ The `IgxDataChart` control allows you to highlight the plotted series in the cha
 
 In order to enable highlighting in the `IgxDataChart` control, you need to import and register the interactivity module. This can be done using the following code:
 
+```typescript
+import { IgxDataChartInteractivityModule } from "igniteui-angular-charts/ES5/igx-data-chart-interactivity-module";
+
+IgxDataChartInteractivityModule.register();
+```
+
 ### Highlighting Series Visuals
 
 The series highlighting feature of the `IgxDataChart` control allows you to either highlight single items or entire series. For example, if you are using a line series, the highlighting will highlight the entire shape of the line as it is all one single shape. However, highlights can be applied to each single item in a series such as a column series.
