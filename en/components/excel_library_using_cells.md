@@ -10,6 +10,7 @@ The `WorksheetCell` objects in an Excel worksheet is the object that holds your 
 
 ### Demo
 
+<<<<<<< HEAD
 <div class="sample-container" style="height: 150px">
     <iframe id="excel-library-overview-sample-iframe" 
 	src='{environment:demosBaseUrl}/excel-library/working-with-cells' 
@@ -19,6 +20,9 @@ The `WorksheetCell` objects in an Excel worksheet is the object that holds your 
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="excel-library-working-with-cells-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
     </button>
 </div> 
+=======
+TODO
+>>>>>>> 83d64066fe45d449b95771306c53419fd18904b3
 
 <div class="divider--half"></div>
 

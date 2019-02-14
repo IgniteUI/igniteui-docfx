@@ -10,6 +10,7 @@ The Infragistics Excel Engine's `Worksheet` is where your data is kept. You can 
 
 ### Demo
 
+<<<<<<< HEAD
 <div class="sample-container" style="height: 100px">
     <iframe id="excel-library-overview-sample-iframe" 
 	src='{environment:demosBaseUrl}/excel-library/operations-on-worksheets' 
@@ -19,6 +20,9 @@ The Infragistics Excel Engine's `Worksheet` is where your data is kept. You can 
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="excel-library-operations-on-worksheets-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
     </button> 
 </div> 
+=======
+TODO
+>>>>>>> 83d64066fe45d449b95771306c53419fd18904b3
 
 <div class="divider--half"></div>
 
