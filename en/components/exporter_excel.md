@@ -7,7 +7,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ## Excel Exporter
 
 <p class="highlight">
-The Ignite UI for Angular Excel Exporter service can export data in Microsoft® Excel® format from both raw data (array) or from an [**IgxGrid**](grid.md). The exporting functionality is encapsulated in the [`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html) class and the data is exported in MS Excel table format. This format allows features like filtering, sorting, etc.</p>
+The Ignite UI for Angular Excel Exporter service can export data in Microsoft® Excel® format from both raw data (array) or from an [**IgxGrid**](grid/grid.md). The exporting functionality is encapsulated in the [`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html) class and the data is exported in MS Excel table format. This format allows features like filtering, sorting, etc.</p>
 <div class="divider"></div>
 
 ### Excel Exporter Demo
@@ -78,8 +78,8 @@ If all went well, you should see an export button. When pressed, it will trigger
 
 ### Exporting IgxGrid's Data
 
-The Excel Exporter service can also export data in MS Excel format from an [**IgxGrid**](grid.md). The only difference is that you need to invoke the 
-[`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html)'s [`export`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html#export) method and pass the [**IgxGrid**](grid.md) as first argument.
+The Excel Exporter service can also export data in MS Excel format from an [**IgxGrid**](grid/grid.md). The only difference is that you need to invoke the 
+[`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html)'s [`export`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html#export) method and pass the [**IgxGrid**](grid/grid.md) as first argument.
 
 Here is an example:
 
@@ -141,7 +141,7 @@ this.excelExportService.onColumnExport.subscribe((args: IColumnExportingEventArg
 this.excelExportService.export(this.igxGrid1, new IgxExcelExporterOptions("ExportedDataFile"));
 ```
 
-When you are exporting data from [**IgxGrid**](grid.md) the export process takes in account features like row filtering and column hiding and exports only the data visible in the [**IgxGrid**](grid.md). You can configure the exporter service to include filtered rows or hidden columns by setting properties on the [`IgxExcelExporterOptions`]({environment:angularApiUrl}/classes/igxexcelexporteroptions.html) object. These properties are described in the table below.
+When you are exporting data from [**IgxGrid**](grid/grid.md) the export process takes in account features like row filtering and column hiding and exports only the data visible in the [**IgxGrid**](grid/grid.md). You can configure the exporter service to include filtered rows or hidden columns by setting properties on the [`IgxExcelExporterOptions`]({environment:angularApiUrl}/classes/igxexcelexporteroptions.html) object. These properties are described in the table below.
 
 ### API Summary
 

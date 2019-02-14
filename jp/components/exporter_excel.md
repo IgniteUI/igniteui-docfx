@@ -8,7 +8,7 @@ _language: ja
 ## Excel Exporter
 
 <p class="highlight">
-Ignite UI for Angular Excel Exporter サービスは、Microsoft® Excel® 形式で生データ (配列) または [**IgxGrid**](grid.md) のデータをエクスポートできます。エクスポート機能は、[`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html) クラスでカプセル化され、MS Excel テーブル形式でデータをエクスポートします。この形式では、フィルタリングや並べ替えなどの機能が使用できます。</p>
+Ignite UI for Angular Excel Exporter サービスは、Microsoft® Excel® 形式で生データ (配列) または [**IgxGrid**](grid/grid.md) のデータをエクスポートできます。エクスポート機能は、[`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html) クラスでカプセル化され、MS Excel テーブル形式でデータをエクスポートします。この形式では、フィルタリングや並べ替えなどの機能が使用できます。</p>
 <div class="divider"></div>
 
 ### Excel Exporter デモ
@@ -79,7 +79,7 @@ public exportButtonHandler() {
 
 ### IgxGrid データのエクスポート
 
-Excel Exporter サービスでも [**IgxGrid**](grid.md) からのデータを MS Excel 形式でエクスポートできますが、[`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html) の [`export`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html#export) メソッドを呼び出し、[**IgxGrid**](grid.md) を最初の引数として渡す必要があります。
+Excel Exporter サービスでも [**IgxGrid**](grid/grid.md) からのデータを MS Excel 形式でエクスポートできますが、[`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html) の [`export`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html#export) メソッドを呼び出し、[**IgxGrid**](grid/grid.md) を最初の引数として渡す必要があります。
 
 以下はその例です。
 
@@ -141,7 +141,7 @@ this.excelExportService.onColumnExport.subscribe((args: IColumnExportingEventArg
 this.excelExportService.export(this.igxGrid1, new IgxExcelExporterOptions("ExportedDataFile"));
 ```
 
-[**IgxGrid**](grid.md) からのデータのエクスポートで、エクスポート処理は行フィルタリングおよび列の非表示などの機能に応じてグリッドで表示されるデータのみをエクスポートします。[`IgxExcelExporterOptions`]({environment:angularApiUrl}/classes/igxexcelexporteroptions.html) オブジェクトのプロパティを設定し、エクスポーター サービスを構成してフィルターした行または非表示の列を含むことができます。このプロパティは以下の表で説明します。
+[**IgxGrid**](grid/grid.md) からのデータのエクスポートで、エクスポート処理は行フィルタリングおよび列の非表示などの機能に応じてグリッドで表示されるデータのみをエクスポートします。[`IgxExcelExporterOptions`]({environment:angularApiUrl}/classes/igxexcelexporteroptions.html) オブジェクトのプロパティを設定し、エクスポーター サービスを構成してフィルターした行または非表示の列を含むことができます。このプロパティは以下の表で説明します。
 
 ### API まとめ
 
