@@ -4,14 +4,15 @@ _description: Column moving feature provides a means for reordering columns inte
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Data Grid component, Angular Data Grid control, Native Angular Components, Angular Grid component, Angular Grid control, Angular High Performance Grid, Column Moving, Grid Column Moving, Angular Grid Column Moving, Angular column moving
 ---
 
-### Grid Column Moving
+### @@igComponent Column Moving
 
-The Grid component in Ignite UI for Angular provides **column moving** to allow columns reordering via standard drag/drop mouse or touch gestures.
+The @@igComponent component in Ignite UI for Angular provides **column moving** to allow columns reordering via standard drag/drop mouse or touch gestures.
 
 Column moving works as well with pinned columns. Dragging an unpinned column and dropping it inside the pinned area makes that column pinned and vice versa, dragging a pinned column and dropping it outside the pinned area makes that column unpinned.
 
 #### Demo
 
+@@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:630px">
     <iframe id="column-moving-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-moving-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -20,21 +21,49 @@ Column moving works as well with pinned columns. Dragging an unpinned column and
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="column-moving-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
+}
+@@if (igxName === 'IgxTreeGrid') {
+<div class="sample-container loading" style="height:630px">
+    <iframe id="treegrid-column-moving-sample-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-column-moving' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-column-moving-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+<!-- TODO -->
+}
 
 #### Overview
-**Column moving** feature is enabled on a per-column level, meaning that the [**igx-grid**]({environment:angularApiUrl}/classes/igxgridcomponent.html) can have a mix of movable and immovable columns. This is done via the [`movable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#movable) input of the [`igx-column`]({environment:angularApiUrl}/classes/igxcolumncomponent.html).
 
+**Column moving** feature is enabled on a per-column level, meaning that the [**@@igSelector**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) can have a mix of movable and immovable columns. This is done via the [`movable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#movable) input of the [`igx-column`]({environment:angularApiUrl}/classes/igxcolumncomponent.html).
+
+
+@@if (igxName === 'IgxGrid') {
 ```html
 <igx-column [field]="'Category'" [movable]="true"></igx-column>
 ```
+}
+@@if (igxName === 'IgxTreeGrid') {
+```html
+<igx-column [field]="'Title'" [movable]="true"></igx-column>
+```
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+<!-- TODO -->
+}
 
 > [!NOTE]
-> If the pinned area exceeds its maximum allowed width (80% of the total grid width), a visual clue notifies the end user that the drop operation is forbidden and pinning is not possible. This means you won't be allowed to drop a column in the pinned area.
+> If the pinned area exceeds its maximum allowed width (80% of the total @@igComponent width), a visual clue notifies the end user that the drop operation is forbidden and pinning is not possible. This means you won't be allowed to drop a column in the pinned area.
 
 #### Events
-There are several events related to the column moving to provide a means of tapping into the columns' drag and drop operations. These are [`onColumnMovingStart`]({environment:angularApiUrl}/classes/igxgridcomponent.html#oncolumnmovingstart), [`onColumnMoving`]({environment:angularApiUrl}/classes/igxgridcomponent.html#oncolumnmoving) and [`onColumnMovingEnd`]({environment:angularApiUrl}/classes/igxgridcomponent.html#oncolumnmovingend). 
-You can subscribe to the [`onColumnMovingEnd`]({environment:angularApiUrl}/classes/igxgridcomponent.html#oncolumnmovingend) event of the [`igx-grid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) to implement some custom logic when a column is dropped to a new position. For example, you can cancel dropping the Category after the Change On Year(%) column.
 
+There are several events related to the column moving to provide a means of tapping into the columns' drag and drop operations. These are [`onColumnMovingStart`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#oncolumnmovingstart), [`onColumnMoving`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#oncolumnmoving) and [`onColumnMovingEnd`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#oncolumnmovingend). 
+You can subscribe to the [`onColumnMovingEnd`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#oncolumnmovingend) event of the [`@@igSelector`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) to implement some custom logic when a column is dropped to a new position. For example, you can cancel dropping the Category after the Change On Year(%) column.
+
+@@if (igxName === 'IgxGrid') {
 ```html
 <igx-grid #dataGrid [data]="data" [autoGenerate]="false" (onColumnMovingEnd)="onColumnMovingEnd($event)">
     <igx-column [field]="'Category'" [movable]="true"></igx-column>
@@ -49,18 +78,38 @@ public onColumnMovingEnd(event) {
     }
 }
 ```
+}
+@@if (igxName === 'IgxTreeGrid') {
+```html
+<igx-tree-grid #treeGrid [data]="data" primaryKey="ID" foreignKey="ParentID" [autoGenerate]="false" (onColumnMovingEnd)="onColumnMovingEnd($event)">
+    <igx-column [field]="'Name'" dataType="string" [movable]="true" width="250px"></igx-column>
+    <igx-column [field]="'Title'" dataType="string" [movable]="true" width="250px"></igx-column>
+</igx-tree-grid>
+```
+
+```typescript
+public onColumnMovingEnd(event) {
+    if (event.source.field === "Name" && event.target.field === "Title") {
+        event.cancel = true;
+    }
+}
+```
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+<!-- TODO -->
+}
 
 ### API References
 <div class="divider--half"></div>
-
+ 
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
-* [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
-* [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#mixin-igx-grid)
+* [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
+* [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#mixin-igx-grid)
 
 ### Additional Resources
 <div class="divider--half"></div>
 
-* [Grid overview](grid.md)
+* [@@igComponent overview](@@igMainTopic.md)
 * [Virtualization and Performance](virtualization.md)
 * [Paging](paging.md)
 * [Filtering](filtering.md)
@@ -70,7 +119,7 @@ public onColumnMovingEnd(event) {
 * [Column Resizing](column_resizing.md)
 * [Selection](selection.md)
 * [Searching](search.md)
-* [Excel Exporter](../exporter_excel.md)
+* [Excel Exporter](exporter_excel.md)
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.
