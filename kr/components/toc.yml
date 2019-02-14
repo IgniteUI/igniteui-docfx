@@ -13,74 +13,74 @@
   href: grids_and_lists.md
   header: true
 - name: Data Grid
-  href: grid.md
+  href: grid/grid.md
   new: true
   items:
     - name: 가상화 및 성능
-      href: grid_virtualization.md
+      href: grid/virtualization.md
       new: false
     - name: 편집
-      href: grid_editing.md
+      href: grid/editing.md
       new: false
     - name: 행 편집
-      href: grid_row_editing.md
+      href: grid/row_editing.md
       new: true
     - name: 트랜잭션
-      href: grid_batch_editing.md
+      href: grid/batch_editing.md
       new: true
     - name: 페이징
-      href: grid_paging.md
+      href: grid/paging.md
       new: false
     - name: 필터링
-      href: grid_filtering.md
+      href: grid/filtering.md
       new: true
     - name: 정렬
-      href: grid_sorting.md
+      href: grid/sorting.md
       new: false
     - name: 그룹화
-      href: grid_groupby.md
+      href: grid/groupby.md
       new: false
     - name: 요약
-      href: grid_summaries.md
+      href: grid/summaries.md
       new: false
     - name: 열 이동
-      href: grid_column_moving.md
+      href: grid/column_moving.md
       new: false
     - name: 열 핀 고정
-      href: grid_column_pinning.md
+      href: grid/column_pinning.md
       new: false
     - name: 크기 조정
-      href: grid_column_resizing.md
+      href: grid/column_resizing.md
       new: false
     - name: 숨기기
-      href: grid_column_hiding.md
+      href: grid/column_hiding.md
       new: false
     - name: 행 선택
-      href: grid_selection.md
+      href: grid/selection.md
       new: false
     - name: 검색
-      href: grid_search.md
+      href: grid/search.md
       new: false
     - name: 도구 모음
-      href: grid_toolbar.md
+      href: grid/toolbar.md
       new: false
     - name: Excel 내보내기
       href: exporter_excel.md
       new: false
     - name: Excel에서 붙여넣기
-      href: grid_paste_excel.md
+      href: grid/paste_excel.md
       new: false
     - name: 복수 열 헤더
-      href: grid_multi_column_headers.md
+      href: grid/multi_column_headers.md
       new: false
     - name: 표시 밀도
-      href: grid_displayDensity.md
+      href: grid/display_density.md
       new: false
     - name: 조건부 셀 스타일
-      href: grid_conditional_cell_styling.md
+      href: grid/conditional_cell_styling.md
       new: true
 - name: Tree Grid
-  href: treegrid.md
+  href: treeGrid/tree_grid.md
   new: true
 - name: List View
   href: list.md
