@@ -100,7 +100,7 @@
       new: false
     - name: フィルタリング
       href: treeGrid/filtering.md
-      new: true
+      new: false
     - name: 並べ替え
       href: treeGrid/sorting.md
       new: false
