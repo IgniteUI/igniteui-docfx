@@ -1,10 +1,10 @@
 ---
 title: Data Chart Component - Native Angular | Ignite UI for Angular
-_description: The Ignite UI for Angular Data Chart component is TODO.
+_description: The Ignite UI for Angular Data Chart is a charting component that provides modular design of axis, markers, series, legend, and annotation layers. With this chart, you can create multiple instances of these visual elements in the same chart plot area in order to create composite chart views.
 _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Chart Control, Angular Chart Example, Angular Chart Component, Angular Data Chart
 ---
 
-## Chart Navigation
+## Navigation
 
 In the `IgxDataChart` control, navigation is disabled by default. Once enabled, you are able to zoom and pan the chart either programmatically or in the UI.
 
@@ -28,15 +28,15 @@ In order to allow navigation in the UI, you need to set either the `IsHorizontal
 
 It is also possible to zoom or pan simply by clicking the buttons on the mouse or using touch. The `DefaultInteraction` property of the chart determines what happens on mouse click or touch events. This property defaults to `DragZoom` and when set to this with zooming enabled, clicking and dragging will place a preview rectangle over the plot area that will become the zoomed area of the chart. This `DefaultInteraction` property can also be set to either `DragPan` to allow panning or `None` to prevent these operations.
 
-The following code snippet demonstrates how you can enable base UI navigation in the chart: 
+The following code snippet demonstrates how you can enable base UI navigation in the chart:
 
 ```html
 <igx-data-chart #chart
-    [dataSource]="data"            
+    [dataSource]="data"
     width="100%"
-    height="400px"  
-    isHorizontalZoomEnabled=true
-    isVerticalZoomEnabled=true>
+    height="400px"
+    isHorizontalZoomEnabled="true"
+    isVerticalZoomEnabled="true">
 </igx-data-chart>
 ```
 
@@ -63,14 +63,14 @@ The following code snippet demonstrates how you can enable UI navigation in the 
 
 ```html
 <igx-data-chart #chart
-    [dataSource]="data"            
+    [dataSource]="data"
     width="100%"
     height="400px"
     defaultInteraction="None"
     dragModifier="Shift"
     panModifier="Alt"
-    isHorizontalZoomEnabled=true
-    isVerticalZoomEnabled=true>
+    isHorizontalZoomEnabled="true"
+    isVerticalZoomEnabled="true">
 </igx-data-chart>
 ```
 
@@ -94,7 +94,7 @@ The following code snippet demonstrates how to enable the overview plus detail p
 ```
 
 ```tsx
-<IgrDataChart dataSource={this.data}    
+<IgrDataChart dataSource={this.data}
     width="100%"
     height="400px"
     overviewPlusDetailPaneVisibility="Visible">

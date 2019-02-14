@@ -1,6 +1,6 @@
 ---
 title: Data Chart Component - Native Angular | Ignite UI for Angular
-_description: The Ignite UI for Angular Data Chart component is TODO.
+_description: The Ignite UI for Angular Data Chart is a charting component that provides modular design of axis, markers, series, legend, and annotation layers. With this chart, you can create multiple instances of these visual elements in the same chart plot area in order to create composite chart views.
 _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Chart Control, Angular Chart Example, Angular Chart Component, Angular Data Chart
 ---
 
@@ -10,7 +10,7 @@ This topic explains various types of financial series in the `IgxDataChart` cont
 
 ### Demo
 
-<div class="sample-container" style="height: 300px">
+<div class="sample-container" style="height: 400px">
     <iframe id="data-chart-type-financial-series-iframe" src='{environment:demosBaseUrl}/charts/data-chart-type-financial-series' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -98,11 +98,25 @@ In order to use financial series, you need to import the following modules in yo
 
 ```typescript
 // axis' modules:
-TODO Angular
-// financial series' modules:
-TODO Angular
+import { IgxNumericYAxis } from "igniteui-angular-charts/ES5/igx-numeric-y-axis";
+import { IgxCategoryXAxis } from "igniteui-angular-charts/ES5/igx-category-x-axis";
+// series' modules:
+import { IgxFinancialPriceSeries } from "igniteui-angular-charts/ES5/igx-financial-price-series";
+import { IgxBollingerBandsOverlay } from "igniteui-angular-charts/ES5/igx-bollinger-bands-overlay";
+import { IgxMedianPriceIndicator } from "igniteui-angular-charts/ES5/igx-median-price-indicator";
 // data chart's modules:
-TODO Angular
+import { IgxDataChartModule } from 'igniteui-angular-charts/ES5/igx-data-chart-module';
+import { IgxDataChartCoreModule } from "igniteui-angular-charts/ES5/igx-data-chart-core-module";
+
+// in app.module.ts file
+@NgModule({
+    imports: [
+        // ...
+        IgxDataChartModule,
+        IgxDataChartCoreModule,
+        // ...
+    ]
+})
 ```
 
 ### Code Example
@@ -114,9 +128,39 @@ This code demonstrates how to create an instance of data chart with `IgxFinancia
     [dataSource]="dataSource"
     width="700px"
     height="500px">
+    <igx-category-x-axis name="xAxis" label="Date" />
+    <igx-numeric-y-axis  name="yAxis" />
+    <igx-bollinger-bands-overlay
+        name="series1"
+        xAxisName="xAxis"
+        yAxisName="yAxis"
+        lowMemberPath="Low"
+        highMemberPath="High"
+        openMemberPath="Open"
+        closeMemberPath="Close"
+        volumeMemberPath="Volume" />
 
-    TODO
+    <igx-financial-price-series
+        name="series2"
+        xAxisName="xAxis"
+        yAxisName="yAxis"
+        displayType="Candlestick"
+        lowMemberPath="Low"
+        highMemberPath="High"
+        openMemberPath="Open"
+        closeMemberPath="Close"
+        volumeMemberPath="Volume"  />
 
+    <igx-median-price-indicator
+        name="series3"
+        xAxisName="xAxis"
+        yAxisName="yAxis"
+        displayType="Line"
+        lowMemberPath="Low"
+        highMemberPath="High"
+        openMemberPath="Open"
+        closeMemberPath="Close"
+        volumeMemberPath="Volume" />
  </igx-data-chart>
 ```
 
@@ -127,5 +171,4 @@ This code demonstrates how to create an instance of data chart with `IgxFinancia
 -   [Axis Sharing](datachart_axis_sharing.md)
 -   [Chart Legend](datachart_chart_legends.md)
 -   [Series Markers](datachart_series_markers.md)
--   [Series Requirements](datachart_series_requirements.md)
 -   [Series Types](datachart_series_types.md)

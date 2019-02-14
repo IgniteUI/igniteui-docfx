@@ -1,6 +1,6 @@
 ---
 title: Data Chart Component - Native Angular | Ignite UI for Angular
-_description: The Ignite UI for Angular Data Chart component is TODO.
+_description: The Ignite UI for Angular Data Chart is a charting component that provides modular design of axis, markers, series, legend, and annotation layers. With this chart, you can create multiple instances of these visual elements in the same chart plot area in order to create composite chart views.
 _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Chart Control, Angular Chart Example, Angular Chart Component, Angular Data Chart
 ---
 
@@ -10,7 +10,7 @@ This topic explains various types of radial series in the `IgxDataChart` control
 
 ### Demo
 
-<div class="sample-container" style="height: 300px">
+<div class="sample-container" style="height: 500px">
     <iframe id="data-chart-type-radial-series-iframe" src='{environment:demosBaseUrl}/charts/data-chart-type-radial-series' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -66,11 +66,29 @@ In order to use radial series, you need to import the following modules in your 
 
 ```typescript
 // axis' modules:
-TODO Angular
-// category series' modules:
-TODO Angular
+import { IgxCategoryAngleAxis } from "igniteui-angular-charts/ES5/igx-category-angle-axis";
+import { IgxNumericRadiusAxis } from "igniteui-angular-charts/ES5/igx-numeric-radius-axis";
+// series modules:
+import { IgxRadialAreaSeries } from "igniteui-angular-charts/ES5/igx-radial-area-series";
+import { IgxRadialLineSeries } from "igniteui-angular-charts/ES5/igx-radial-line-series";
+import { IgxRadialPieSeries } from "igniteui-angular-charts/ES5/igx-radial-pie-series";
+import { IgxRadialColumnSeries } from "igniteui-angular-charts/ES5/igx-radial-column-series";
 // data chart's modules:
-TODO Angular
+import { IgxDataChartModule } from 'igniteui-angular-charts/ES5/igx-data-chart-module';
+import { IgxDataChartCoreModule } from "igniteui-angular-charts/ES5/igx-data-chart-core-module";
+import { IgxDataChartRadialCoreModule } from "igniteui-angular-charts/ES5/igx-data-chart-radial-core-module";
+import { IgxDataChartRadialModule } from "igniteui-angular-charts/ES5/igx-data-chart-radial-module";
+
+@NgModule({
+    imports: [
+        // ...
+        IgxDataChartModule,
+        IgxDataChartCoreModule,
+        IgxDataChartRadialCoreModule,
+        IgxDataChartRadialModule,
+        // ...
+    ]
+})
 ```
 
 ### Code Example
@@ -82,9 +100,13 @@ This code demonstrates how to create an instance of data chart with `RadialAreaS
     [dataSource]="dataSource"
     width="700px"
     height="500px">
-
-    TODO
-
+    <igx-category-angle-axis name="angleAxis" label="Department" />
+    <igx-numeric-radius-axis name="radiusAxis" />
+    <igx-radial-pie-series
+        name="series1"
+        valueMemberPath="Budget"
+        valueAxisName="radiusAxis"
+        angleAxisName="angleAxis"/>
  </igx-data-chart>
 ```
 
@@ -97,5 +119,4 @@ Note that you can also use above code to create other type of radial series by r
 -   [Axis Sharing](datachart_axis_sharing.md)
 -   [Chart Legend](datachart_chart_legends.md)
 -   [Series Markers](datachart_series_markers.md)
--   [Series Requirements](datachart_series_requirements.md)
 -   [Series Types](datachart_series_types.md)

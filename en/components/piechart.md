@@ -41,9 +41,9 @@ import { IgxPieChartModule } from 'igniteui-angular-charts/ES5/igx-pie-chart-mod
 
 @NgModule({
     imports: [
-        ...
+        // ...
         IgxPieChartModule,
-        ...
+        // ...
     ]
 })
 export class AppModule {}
@@ -158,7 +158,7 @@ The `IgxPieChart` supports explosion of individual pie slices as well as a `slic
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="pie-chart-explosion-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
     </button>
-</div>-->
+</div>
 
 <div class="divider--half"></div>
 

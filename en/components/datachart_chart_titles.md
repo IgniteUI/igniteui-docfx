@@ -1,10 +1,10 @@
 ---
 title: Data Chart Component - Native Angular | Ignite UI for Angular
-_description: The Ignite UI for Angular Data Chart component is TODO.
+_description: The Ignite UI for Angular Data Chart is a charting component that provides modular design of axis, markers, series, legend, and annotation layers. With this chart, you can create multiple instances of these visual elements in the same chart plot area in order to create composite chart views.
 _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Chart Control, Angular Chart Example, Angular Chart Component, Angular Data Chart
 ---
 
-## Chart Titles
+## Title and Subtitle
 
 The `Title` and `Subtitle` feature of the `IgxDataChart` control allows you to add information to the top section of the chart. When adding a title or subtitle to the chart, the content of the chart automatically resizes allowing for the title and subtitle information that you provide.
 
@@ -23,10 +23,10 @@ The `Title` and `Subtitle` feature of the `IgxDataChart` control allows you to a
 There are properties provided that allow you to style the text color, style, and margins of the titles and subtitles of the chart. The following code-snippet demonstrates how you can set and customize the titles in the chart:
 
 ```html
-<igx-data-chart [dataSource]="data"    
+<igx-data-chart [dataSource]="data"
     height="600px"
     width="100%"
-    chartTitle="Energy Use Per Country" 
+    chartTitle="Energy Use Per Country"
     subtitle="Results over a two year period"
     titleTextColor="Red"
     titleTextStyle="24pt Verdana"

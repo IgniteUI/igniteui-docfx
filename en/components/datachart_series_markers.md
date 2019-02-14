@@ -1,10 +1,10 @@
 ---
 title: Data Chart Component - Native Angular | Ignite UI for Angular
-_description: The Ignite UI for Angular Data Chart component is TODO.
+_description: The Ignite UI for Angular Data Chart is a charting component that provides modular design of axis, markers, series, legend, and annotation layers. With this chart, you can create multiple instances of these visual elements in the same chart plot area in order to create composite chart views.
 _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Chart Control, Angular Chart Example, Angular Chart Component, Angular Data Chart
 ---
 
-## Series Markers
+## Markers
 
 In the `IgxDataChart` control's plot area, markers are visual elements displayed at location of data points. Markers help your end users immediately identify a data point’s even if its values fall between major or minor grid lines.
 
@@ -40,14 +40,10 @@ Above series support 12 shapes of markers that you can change using the `MarkerT
 This code snippet below demonstrate how to change shape and appearance of markers.
 
 ```html
- <igx-data-chart
-    [dataSource]="dataSource"
-    width="700px"
-    height="500px">
-
-    TODO
-
- </igx-data-chart>
+<igx-column-series name="series1"
+    markerType="Square"
+    markerBrush="white"
+    markerOutline="purple" />
 ```
 
 <!-- TODO add this section when we add MarkerTemplate

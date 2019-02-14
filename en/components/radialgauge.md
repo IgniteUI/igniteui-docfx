@@ -14,7 +14,7 @@ The radial gauge component is a data visualization tool capable of displaying a 
 
 The following sample demonstrates how setting multiple properties on the same gauge can transform it to completely different gauge.
 
-<div class="sample-container" style="height: 350px">
+<div class="sample-container" style="height: 375px">
     <iframe id="radial-gauge-sample-iframe" src='{environment:demosBaseUrl}/gauges/radial-gauge-animation' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -30,7 +30,7 @@ When installing the gauge package, the core package must also be installed.
 
 **npm install igniteui-angular-gauges igniteui-angular-core**
 
-The radial gauge is exported as an `NgModule`, you need to import the 
+The radial gauge is exported as an `NgModule`, you need to import the
 `IgxRadialGaugeModule` inside your `AppModule`:
 
 <!-- -->
@@ -44,9 +44,9 @@ import { IgrRadialGaugeModule } from 'igniteui-angular-gauges/ES5/igx-radial-gau
 
 @NgModule({
     imports: [
-        ...
+        // ...
         IgxRadialGaugeModule,
-        ...
+        // ...
     ]
 })
 export class AppModule {}

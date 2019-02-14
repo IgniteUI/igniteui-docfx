@@ -11,12 +11,13 @@ The `WorksheetCell` objects in an Excel worksheet is the object that holds your 
 ### Demo
 
 <div class="sample-container" style="height: 150px">
-    <iframe id="excel-library-overview-sample-iframe" src='{environment:demosBaseUrl}/excel-library-working-with-cells' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="excel-library-overview-sample-iframe" 
+	src='{environment:demosBaseUrl}/excel-library/working-with-cells' 
+	width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <!-- TODO uncomment when Stackblitz is ready for EXCEL
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="excel-library-working-with-cells-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
-    </button> -->
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="excel-library-working-with-cells-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+    </button>
 </div> 
 
 <div class="divider--half"></div>
