@@ -1,6 +1,6 @@
 ---
 title: Data Chart Component - Native Angular | Ignite UI for Angular
-_description: The Ignite UI for Angular Data Chart component is TODO.
+_description: The Ignite UI for Angular Data Chart is a charting component that provides modular design of axis, markers, series, legend, and annotation layers. With this chart, you can create multiple instances of these visual elements in the same chart plot area in order to create composite chart views.
 _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Chart Control, Angular Chart Example, Angular Chart Component, Angular Data Chart
 ---
 
@@ -10,7 +10,7 @@ This topic explains various types of range series in the `IgxDataChart` control.
 
 ### Demo
 
-<div class="sample-container" style="height: 300px">
+<div class="sample-container" style="height: 400px">
     <iframe id="data-chart-type-range-series-iframe" src='{environment:demosBaseUrl}/charts/data-chart-type-range-series' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -60,12 +60,28 @@ this.state = { dataSource: SampleRangeData.create() }
 In order to use range series, you need to import the following modules in your app during load and register data chart modules:
 
 ```typescript
+// in app.module.ts file
+
 // axis' modules:
-TODO Angular
-// category series' modules:
-TODO Angular
+import { IgxCategoryXAxis } from "igniteui-angular-charts/ES5/igx-category-x-axis";
+import { IgxNumericYAxis } from "igniteui-angular-charts/ES5/igx-numeric-y-axis";
+// series' modules:
+import { IgxRangeAreaSeries } from "igniteui-angular-charts/ES5/igx-range-area-series";
+import { IgxRangeColumnSeries } from "igniteui-angular-charts/ES5/igx-range-column-series";
 // data chart's modules:
-TODO Angular
+import { IgxDataChartModule } from 'igniteui-angular-charts/ES5/igx-data-chart-module';
+import { IgxDataChartCoreModule } from 'igniteui-angular-charts/ES5/igx-data-chart-core--module';
+import { IgxDataChartCategoryModule } from 'igniteui-angular-charts/ES5/igx-data-chart-category--module';
+
+@NgModule({
+    imports: [
+        // ...
+        IgxDataChartModule,
+        IgxDataChartCoreModule,
+        IgxDataChartCategoryModule,
+        // ...
+    ]
+})
 ```
 
 ### Code Example
@@ -77,9 +93,14 @@ This code demonstrates how to create an instance of data chart with `IgxRangeCol
     [dataSource]="dataSource"
     width="700px"
     height="500px">
-
-    TODO
-
+    <igx-category-x-axis name="xAxis" label="Year" />
+    <igx-numeric-y-axis  name="yAxis" />
+    <igx-range-column-series
+        name="series1"
+        xAxisName="xAxis"
+        yAxisName="yAxis"
+        highMemberPath="High"
+        lowMemberPath="Low" />
  </igx-data-chart>
 ```
 
@@ -92,5 +113,4 @@ Note that you can also use above code to create `IgxRangeAreaSeriesComponent` by
 -   [Axis Sharing](datachart_axis_sharing.md)
 -   [Chart Legend](datachart_chart_legends.md)
 -   [Series Markers](datachart_series_markers.md)
--   [Series Requirements](datachart_series_requirements.md)
 -   [Series Types](datachart_series_types.md)

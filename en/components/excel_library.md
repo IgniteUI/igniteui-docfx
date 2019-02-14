@@ -11,12 +11,13 @@ The Infragistics Excel Library allows you to work with spreadsheet data using fa
 ### Demo
 
 <div class="sample-container" style="height: 500px">
-    <iframe id="excel-library-overview-sample-iframe" src='{environment:demosBaseUrl}/excel-library-operations-on-workbooks' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="excel-library-overview-sample-iframe" 
+	src='{environment:demosBaseUrl}/excel-library/operations-on-workbooks' 
+	width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <!-- TODO uncomment when Stackblitz is ready for EXCEL
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="excel-library-overview-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
-    </button> -->
+    </button>
 </div> 
 
 <div class="divider--half"></div>
@@ -91,7 +92,7 @@ ExcelUtility.save(workbook, "fileName");
 ```
 
 <div class="divider--half"></div>
- 
+
 ### Managing Heap
 
 Due to the size of the Excel Library, it's recommended to disable the source map generation.
@@ -124,3 +125,5 @@ Modify `angular.json` by setting the `vendorSourceMap` option under architect =>
         ...
       }
 ```
+
+<!-- -->

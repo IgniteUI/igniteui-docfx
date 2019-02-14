@@ -1,10 +1,10 @@
 ---
 title: Data Chart Component - Native Angular | Ignite UI for Angular
-_description: The Ignite UI for Angular Data Chart component is TODO.
+_description: The Ignite UI for Angular Data Chart is a charting component that provides modular design of axis, markers, series, legend, and annotation layers. With this chart, you can create multiple instances of these visual elements in the same chart plot area in order to create composite chart views.
 _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Data Chart, Angular Data Chart Control, Angular Data Chart Example, Angular Data Chart Component, Angular Data Chart
 ---
 
-## Series Types
+## Series
 
 In the `IgxDataChart` control, series are classified into groups of similar series: Category Series, Financial Series, Polar Series, Radial Series, Range Series, Scatter Series, Stacked Series, and Shape Series.
 
@@ -48,27 +48,11 @@ The following list shows all types of the series in each of their groups. Click 
 -   [Scatter Area Series](datachart_series_types_scatter_area.md)
 -   [Scatter Bubble Series](datachart_series_types_scatter_bubble.md)
 -   [Scatter Contour Series](datachart_series_types_scatter_contour.md)
--   [Scatter HD Series](datachart_series_types_scatter_hd.md)
 -   [Scatter Marker Series](datachart_series_types_scatter_marker.md)
 -   [Scatter Line Series](datachart_series_types_scatter_marker.md)
 -   [Scatter Spline Series](datachart_series_types_scatter_marker.md)
 -   [Scatter Polygon Series](datachart_series_types_shape.md)
 -   [Scatter Polyline Series](datachart_series_types_shape.md)
-
-#### Stacked Series
-
--   [Stacked100AreaSeries](datachart_series_types_stacked.md)
--   [Stacked100BarSeries](datachart_series_types_stacked.md)
--   [Stacked100ColumnSeries](datachart_series_types_stacked.md)
--   [Stacked100LineSeries](datachart_series_types_stacked.md)
--   [Stacked100SplineAreaSeries](datachart_series_types_stacked.md)
--   [Stacked100SplineSeries](datachart_series_types_stacked.md)
--   [StackedAreaSeries](datachart_series_types_stacked.md)
--   [StackedBarSeries](datachart_series_types_stacked.md)
--   [StackedColumnSeries](datachart_series_types_stacked.md)
--   [StackedLineSeries](datachart_series_types_stacked.md)
--   [StackedSplineAreaSeries](datachart_series_types_stacked.md)
--   [StackedSplineSeries](datachart_series_types_stacked.md)
 
 #### Financial Series
 

@@ -1,10 +1,10 @@
 ---
 title: Data Chart Component - Native Angular | Ignite UI for Angular
-_description: The Ignite UI for Angular Data Chart component is TODO.
+_description: The Ignite UI for Angular Data Chart is a charting component that provides modular design of axis, markers, series, legend, and annotation layers. With this chart, you can create multiple instances of these visual elements in the same chart plot area in order to create composite chart views.
 _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Chart Control, Angular Chart Example, Angular Chart Component, Angular Data Chart
 ---
 
-## Chart Legends
+## Legends
 
 Legends help end-users identify visuals of chart series with contextual information related to data plotted in the `IgxDataChart` control. Most charts should have at least one legend in order to make it easier to understand data displayed in the plot area, however, it is not a requirement and the chart can render without any legends, as it does by default.
 

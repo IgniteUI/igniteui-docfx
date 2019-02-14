@@ -1,12 +1,12 @@
 ---
 title: Data Chart Component - Native Angular | Ignite UI for Angular
-_description: The Ignite UI for Angular Data Chart component is TODO.
+_description: The Ignite UI for Angular Data Chart is a charting component that provides modular design of axis, markers, series, legend, and annotation layers. With this chart, you can create multiple instances of these visual elements in the same chart plot area in order to create composite chart views.
 _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Chart Control, Angular Chart Example, Angular Chart Component, Angular Data Chart
 ---
 
 ## Axis Settings
 
-In the `IgxDataChart` control, an axis provides base properties for specifying the appearance of axis main lines, tickmarks, titles, and axis labels. 
+In the `IgxDataChart` control, an axis provides base properties for specifying the appearance of axis main lines, tickmarks, titles, and axis labels.
 
 ### Demo
 
@@ -79,7 +79,7 @@ The following code snippet demonstrates changing an axis range in the `IgxDataCh
 <igx-numeric-y-axis #yAxis
     name="yAxis"
     minimumValue=0
-    maximumValue=1000>      
+    maximumValue=1000>
 </igx-numeric-y-axis>
 ```
 
@@ -94,7 +94,7 @@ You can also configure the color and thickness of the intervals on the axes in t
 The following code snippet demonstrates how to configure the intervals on the axes in the chart:
 
 ```html
-<igx-numeric-y-axis #yAxis 
+<igx-numeric-y-axis #yAxis
     name="yAxis"
     interval=100
     majorStroke="black"
@@ -136,7 +136,7 @@ The following code snippet sets the x-axis `Overlap` to 0:
 ```html
 <igx-category-x-axis #xAxis
     name="xAxis"
-    label="Country"    
+    label="Country"
     overlap=0>
 </igx-category-x-axis>
 ```
