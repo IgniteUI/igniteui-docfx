@@ -25,7 +25,7 @@ The following sample demonstrates scenario, using two [igx-drop-down]({environme
 <div class="divider--half"></div>
 
 ### Usage
-To get started import the [IgxComboModule]({environment:angularApiUrl}/classes/igxcombomodule.html), [IgxDropDownModule]({environment:angularApiUrl}/classes/igxdropdownmodule.html), [IgxIconModule]({environment:angularApiUrl}/classes/igxiconmodule.html), [IgxInputGroupModule]({environment:angularApiUrl}/classes/igxinputgroupmodule.html) in the **app.module.ts** file:
+To get started import the `IgxComboModule`, `IgxDropDownModule`, `IgxIconModule`, `IgxInputGroupModule` in the **app.module.ts** file:
 
 ```typescript
 // app.module.ts

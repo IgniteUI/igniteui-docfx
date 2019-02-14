@@ -21,7 +21,7 @@ _language: ja
 </div>
 
 ### 使用方法
-Ignite UI for Angular Combo を使用する前に [IgxComboModule]({environment:angularApiUrl}/classes/igxcombomodule.html) を **app.module.ts** ファイルにインポートします。デモではサーバー要求にリモート サービスを使用しているため、追加で Angular **HttpClientModule** を含む必要があります。
+Ignite UI for Angular Combo を使用する前に `IgxComboModule` を **app.module.ts** ファイルにインポートします。デモではサーバー要求にリモート サービスを使用しているため、追加で Angular **HttpClientModule** を含む必要があります。
 
 ```typescript
 // app.module.ts

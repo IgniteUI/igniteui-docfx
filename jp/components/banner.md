@@ -241,5 +241,4 @@ export class MyBannerComponent {
 ## API リファレンス
 
 * [IgxBannerComponent]({environment:angularApiUrl}/classes/igxbannercomponent.html)
-* [IgxBannerModule]({environment:angularApiUrl}/classes/igxbannermodule.html)
 * [IgxBannerComponent Styles]({environment:sassApiUrl}/index.html#mixin-igx-banner)
