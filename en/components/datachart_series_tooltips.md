@@ -14,13 +14,19 @@ The `IgxDataChart` control has support for showing tooltips along with a couple 
     <iframe id="data-chart-overview-iframe" src='{environment:demosBaseUrl}/charts/data-chart-series-tooltips' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="financial-chart-overview-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-series-tooltips-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
     </button>
 </div>
 
 <div class="divider--half"></div>
 
 In order to use tooltips or tooltip layers in the `IgxDataChart` control, you need to import and register the interactivity module. This can be done by using the following code:
+
+```typescript
+import { IgxDataChartInteractivityModule } from "igniteui-angular-charts/ES5/igx-data-chart-interactivity-module";
+
+IgxDataChartInteractivityModule.register();
+```
 
 ### Default Tooltips
 
