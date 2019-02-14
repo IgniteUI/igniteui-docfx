@@ -10,7 +10,7 @@ The Button directive within Ignite UI for Angular is intended to be used on any 
 
 ### Button Demo
 
-<div class="sample-container" style="height: 436px">
+<div class="sample-container loading" style="height: 436px">
     <iframe id="buttons-sample-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/data-entries/buttons-sample-1" onload="onSampleIframeContentLoaded(this);">
 </div>
 <div>
@@ -46,8 +46,8 @@ Setting a simple [`igxButton`]({environment:angularApiUrl}/classes/igxbuttondire
 ```
 
 Result:
-<div class="sample-container" style="height: 48px">
-    <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/data-entries/buttons-sample-2">
+<div class="sample-container loading" style="height: 48px">
+    <iframe class="lazyload" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-sample-2">
 </div>
 
 You can add a Ripple effect. And also set its color `igxRipple="blue"`.
@@ -57,8 +57,8 @@ You can add a Ripple effect. And also set its color `igxRipple="blue"`.
 ```
 
 Default ripple color. Custom ripple color:
-<div class="sample-container" style="height: 48px">
-    <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/data-entries/buttons-sample-3">
+<div class="sample-container loading" style="height: 48px">
+    <iframe class="lazyload" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-sample-3">
 </div>
 
 Using [`igxButton`]({environment:angularApiUrl}/classes/igxbuttondirective.html) to turn a `span` element into a Ignite UI for Angular styled button.
@@ -68,8 +68,8 @@ Using [`igxButton`]({environment:angularApiUrl}/classes/igxbuttondirective.html)
 ```
 
 The span now looks like:
-<div class="sample-container" style="height: 54px">
-    <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/data-entries/buttons-sample-4">
+<div class="sample-container loading" style="height: 54px">
+    <iframe class="lazyload" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-sample-4">
 </div>
 
 You can create a rased button.
@@ -78,8 +78,8 @@ You can create a rased button.
 <button igxButton="raised" igxRipple="white">Raised</button>
 ```
 
-<div class="sample-container" style="height: 54px">
-    <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/data-entries/buttons-sample-5">
+<div class="sample-container loading" style="height: 54px">
+    <iframe class="lazyload" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-sample-5">
 </div>
 
 A floating action button and use an icon to display:
@@ -89,8 +89,8 @@ A floating action button and use an icon to display:
   <igx-icon fontSet="material">edit</igx-icon>
 </button>
 ```
-<div class="sample-container" style="height: 74px">
-    <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/data-entries/buttons-sample-6">
+<div class="sample-container loading" style="height: 74px">
+    <iframe class="lazyload" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-sample-6">
 </div>
 
 Or use icons as buttons:
@@ -106,8 +106,8 @@ Or use icons as buttons:
 </button>
 ```
 Icon results:
-<div class="sample-container" style="height: 54px">
-    <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/data-entries/buttons-sample-7">
+<div class="sample-container loading" style="height: 54px">
+    <iframe class="lazyload" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-sample-7">
 </div>
 
 <div class="divider--half"></div>
