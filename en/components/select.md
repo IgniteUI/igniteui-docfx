@@ -285,7 +285,7 @@ To do this you first define your template like so:
     </igx-select-item>
 </igx-select>
 ```
-- Where the `overlaySettings` propety is bound to your custom settings.
+- Where the `overlaySettings` property is bound to your custom settings.
 
 Inside of your class you would have something along the lines of:
 ```ts
@@ -362,8 +362,7 @@ export class MyClass implements OnInit {
 [**SelectPositioningStrategy**](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/classes/selectpositioningstrategy.html)  
 [**AbsoluteScrollStrategy**](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/classes/absolutescrollstrategy.html)  
 [**PositionSettings**](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/interfaces/positionsettings.html)
-  
-[*IgxToggleDirective*](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/latest/classes/igxtoggledirective.html)
+
 ## Additional Resources
 [**IgxSelect Specification**](https://github.com/IgniteUI/igniteui-angular/wiki/IgxSelect-Specification#31-keyboard-navigation)  
 [**Angular Select**](https://material.angular.io/components/select/overview)  
