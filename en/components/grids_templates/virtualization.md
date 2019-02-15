@@ -137,7 +137,7 @@ Without information about the sizes of the container and the items before render
 
 <div class="divider--half"></div>
 
-### API
+### API References
 * [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
 *  [@@igComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
