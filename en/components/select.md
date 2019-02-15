@@ -47,10 +47,9 @@ Then in your template you need to bind it with said items like so:
     </igx-select-item>
 </igx-select>
 ```
-Notice that we use an `IgxSelectItemComponent` to display the items that `igx-select` operates on. The `IgxSelectItemComponent` extends the [*IgxDropDownItemComponent*](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/classes/igxdropdownitemcomponent.html) with additional functionality that is specific to the `igx-select`, which in turn allows for a smooth integration with the [*IgxDropdownComponent*](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/classes/igxdropdowncomponent.html).
+Notice that we use an `IgxSelectItemComponent` to display the items that `igx-select` operates on. The `IgxSelectItemComponent` extends the [*IgxDropDownItemComponent*](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/classes/igxdropdownitemcomponent.html) with additional functionality that is specific to the `igx-select-item`.
 
 ## Features
-
 ### IgxSelect Actions
 #### Open
 Focusing with the keyboard on `igx-select` will not cause it to open.
@@ -355,13 +354,6 @@ export class MyClass implements OnInit {
 }
 ```
 - We should mention that if you pass the custom settings both as an argument in the `open` function as well as into the template, `igx-select` will use the ones provided *in the `open` function*. However, if you bind the settings to an internal event, such as `onOpening` or `onOpened` then `igx-select` will use the settings that are provided in the template.
-
-## Manual
-
-- The IgxSelect's list shows/hides in a timely manner with a large amount of items.
-- Focus is changed in a timely manner when navigating via the keyboard.
-- The user may have more than one IgxSelect controls on the same page.
-- The IgxSelect's list content should not "flicker" when opening.
 
 ## API Reference
 [**IgxSelectModule**](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/classes/igxselectmodule.html)  
