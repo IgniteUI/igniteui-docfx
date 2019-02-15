@@ -362,8 +362,7 @@ export class MyClass implements OnInit {
 [**SelectPositioningStrategy**](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/classes/selectpositioningstrategy.html)  
 [**AbsoluteScrollStrategy**](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/classes/absolutescrollstrategy.html)  
 [**PositionSettings**](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/interfaces/positionsettings.html)
-  
-[*IgxToggleDirective*](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/latest/classes/igxtoggledirective.html)
+
 ## Additional Resources
 [**IgxSelect Specification**](https://github.com/IgniteUI/igniteui-angular/wiki/IgxSelect-Specification#31-keyboard-navigation)  
 [**Angular Select**](https://material.angular.io/components/select/overview)  
