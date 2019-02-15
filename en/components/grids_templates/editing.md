@@ -232,7 +232,7 @@ These can be wired to user interactions, not necessarily related to the **@@igSe
 ## API References
 
 * [IgxGridCellComponent]({environment:angularApiUrl}/classes/igxgridcellcomponent.html)
-* [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-@@igSelector-theme)
+* [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 * [IgxGridRowComponent]({environment:angularApiUrl}/classes/igxgridrowcomponent.html)
 * [IgxInputDirective]({environment:angularApiUrl}/classes/igxinputdirective.html)
 * [IgxDatePickerComponent]({environment:angularApiUrl}/classes/igxdatepickercomponent.html)

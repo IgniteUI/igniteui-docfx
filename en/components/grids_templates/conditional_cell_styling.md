@@ -135,18 +135,17 @@ Use **::ng-deep** or **`ViewEncapsulation.None`** to force the custom styles dow
 
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 * [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
-* [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#mixin-@@igSelector)
+* [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#mixin-igx-grid)
 
 ### Additional Resources
 <div class="divider--half"></div>
 
-* [Grid overview](grid.md)
+* [@@igComponent overview](@@igMainTopic.md)
 * [Virtualization and Performance](virtualization.md)
 * [Editing](editing.md)
 * [Paging](paging.md)
 * [Filtering](filtering.md)
 * [Sorting](sorting.md)
-* [Group By](groupby.md)
 * [Summaries](summaries.md)
 * [Column Moving](column_moving.md)
 * [Column Pinning](column_pinning.md)
