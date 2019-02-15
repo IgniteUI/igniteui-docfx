@@ -5,7 +5,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ---
 
 ## Select
-The `IgxSelectComponent` allows you to select a single item from a drop-down list, by using the mouse or the keyboard to quickly navigate through them. Using the `igxSelect` you can also iterate selection through all items based on the input of a specific character or multiple characters.
+The `IgxSelectComponent` allows you to select a single item from a drop-down list by using the mouse or the keyboard to quickly navigate through them. Using `igx-select` you can also iterate selection through all items based on the input of a specific character or multiple characters.
 
 ## Simple Select Demo
 <div class="sample-container loading" style="height: 330px;">
@@ -15,7 +15,7 @@ The `IgxSelectComponent` allows you to select a single item from a drop-down lis
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dropdown-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 
 >[!WARNING]
->To start using Ignite UI for Angular components in your own projects, make sure you have configured all necessary dependencies and have performed the proper setup of your project. You can learn how to do this in the [*installation*](https://www.infragistics.com/products/ignite-ui-angular/getting-started#installation) topic.
+>To start using Ignite UI for Angular components, in your own projects, make sure you have configured all necessary dependencies and have performed the proper setup of your project. You can learn how to do this in the [*installation*](https://www.infragistics.com/products/ignite-ui-angular/getting-started#installation) topic.
 
 
 ## Usage
@@ -53,8 +53,7 @@ Notice that we use an `IgxSelectItemComponent` to display the items that `igx-se
 ### IgxSelect Actions
 #### Open
 Focusing with the keyboard on `igx-select` will not cause it to open.
-With focus set on `igx-select` you can use `Space`, `Enter` or `ALT + Up/Down Arrow` to open it.
-
+With focus set on `igx-select` you can use `Space`, `Enter` or `ALT + Up/Down Arrow` keys to open it.
 - `igx-select` will also open if you left click with your mouse on it or if you left click on the drop-down button.
 
 #### Close
@@ -67,28 +66,26 @@ When the `igx-drop-down` is opened, you can close it by doing one of the followi
 ### Keyboard Navigation
 `igx-select` has intuitive keyboard navigation that makes it easy to select items without having to touch the mouse.
 
-- When the drop-down list is opened you can navigate through the items using the `Up/Down Arrow` keys as long as there are list items.
+- When the drop-down list is opened you can navigate through the items using the `Up/Down Arrow` keys, as long as there are items left in the direction you are trying to navigate to.
 - When the drop-down list is opened you can iteratively navigate through all items that begin with a certain character, by pressing the corresponding key, this is *case insensitive* and will cause the focus to spin between all matches.
 - When the drop-down list is opened you can navigate to a *specific* item by rapidly typing in the first few characters of the item you wish to go to.
     - *Note that the speed at which you type in matters.*
 - When the drop-down list is opened, you can navigate through the items using the `Home` and `End` keys.
-- When the drop-down list is opened, navigation with `Up/Down Arrow` keys starts from the selected item, if any or the first item in the list, otherwise.
+- When the drop-down list is opened, navigation with `Up/Down Arrow` keys starts from the selected item if any. Otherwise, it starts from the first item in the list.
 - When the drop-down list is closed you can cycle between its items using the `Up/Down Arrow` keys.
 - When the drop-down list is closed you can also navigate through all items that begin with a specific character, it works the same as if it was opened.
 - When the drop-down list is closed you can also navigate to a *specific* item by rapidly typing in its first few characters. The behaviour is the same as when the drop-down is opened.
-- Character key navigation, when the dropdown is closed, is case insensitive.
-- Character key navigation, when the dropdown is closed, does not change selection on pressing non-matching characters.
+- When the drop-down is closed character key navigation is case insensitive.
+- When the drop-down is closed character key navigation does not change selection when pressing characters that have no matching item(s).
 
 ### Item Selection
 An item from the drop-down list can be selected by:
-- Left mouse click
-- `Enter` key when the respective item is focused
-- `Space` key when the respective item is focused
-- Setting the value property in the code
-- Setting the item's `selected` property
-- Using the `selectItem` function which is a part of `igx-select`'s API
-    - It is a good idea to note that `igx-select` supports *single* selection of items only.
-- The *first* item in the drop-down list is focused if there is no selected item.
+- Left mouse click.
+- `Enter` key when the respective item is focused.
+- `Space` key when the respective item is focused.
+- Setting the value property in the code.
+- Setting the item's `selected` property.
+- The *first* item in the drop-down list is focused if there is no selected item..=
 - The input box is populated with the selected item's value.
 - The input box's text is updated when the selected item changes.
 - The input box is not populated with the text of an item that is focused but not selected.
@@ -97,6 +94,7 @@ An item from the drop-down list can be selected by:
 - Disabled items are not selectable.
 - Selection is removed if the selected option gets deleted.
 - When there are items with diplicated values, the first one gets selected.
+> It is a good idea to note that `igx-select` supports *single* selection of items only.
 
 ### Event emitting
 Since `igx-select` extends `igx-drop-down`, it also makes good use of its events which include:
@@ -114,7 +112,7 @@ You can make use of the `onOpened` event like so:
 #### Opening/Closing events
 - Emitted on:
     - input click
-    - toggle button click
+    - toggle button click (app scenario)
 - Triggered on:
     - key interaction
 
@@ -130,7 +128,6 @@ The thing about the `onOpening` and `onClosing` events is that they are fired *b
 -  Emitted when an item is selected by a mouse click.
 -  Emitted when an item is selected by `Enter/Space` keys.
 -  Emitted when setting the value property.
--  Emitted when item selection is performed using the API `selectItem` function.
 -  Emitted when setting an item's `selected` property.
 
 ```html
@@ -251,7 +248,7 @@ Then in your template file you can iterate over these objects and access their p
 </igx-select>
 ```
 
-Another way to do it would be to simply pass in an array of the items that we want to display to the [*ngForOf*](https://angular.io/api/common/NgForOf) directive:
+Another way to do it would be to simply pass in a collection of the items that we want to display to the [*ngForOf*](https://angular.io/api/common/NgForOf) directive:
 ```html
 <igx-select [(ngModel)]="selected">
     <igx-select-item *ngFor="let item of items" [value]="item">
@@ -268,10 +265,8 @@ export class MyClass {
 ```
 
 You may also notice that in the above sample we have a *prefix* on the input field, this is because `igx-select` supports both prefixes and suffixes. You can read more about them [*here*](https://www.infragistics.com/products/ignite-ui-angular/angular/components/input_group.html).
-- The items' list default exapansion panel arrow used `IgxSuffix` and it can be changed by the user.
+- The items' list default exapansion panel arrow uses `IgxSuffix` and it can be changed by the user.
 - If more than one `IgxSuffix` is used, the expansion arrow will be displayed always last.
-
-Another thing worth mentioning is that if you were to select an item, using the API `itemSelect` function, then you would immediately see the changes. However, if you pass in an invalid item - null, undefined or an item that does exist in the drop-down then `igx-select` will select the first item.
 
 ### Select With Custom Overlay Settings
 With `igx-select` you are not bound to use any of the [*OverlaySettings*](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/interfaces/overlaysettings.html) that we provide, instead you may create settings of your own and pass them to it.
@@ -325,7 +320,7 @@ You can see that we create a [*PositionSettings*](https://www.infragistics.com/p
 
 - You can set all settings inside of the [*ngOnInit*](https://angular.io/api/core/OnInit) hook and this will automatically affect your template upon the component's generation.
 
-*Note that you can also pass in a customized [OverlaySettings](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/interfaces/overlaysettings.html) object to the `igx-select`'s open function*.  
+> Note that you can also pass in a customized [OverlaySettings](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/interfaces/overlaysettings.html) object to the `igx-select`'s open function.  
 
 With your tempalte looking like this:
 ```html
@@ -367,7 +362,8 @@ export class MyClass implements OnInit {
 [**SelectPositioningStrategy**](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/classes/selectpositioningstrategy.html)  
 [**AbsoluteScrollStrategy**](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/classes/absolutescrollstrategy.html)  
 [**PositionSettings**](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/interfaces/positionsettings.html)
-
+  
+[*IgxToggleDirective*](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/latest/classes/igxtoggledirective.html)
 ## Additional Resources
 [**IgxSelect Specification**](https://github.com/IgniteUI/igniteui-angular/wiki/IgxSelect-Specification#31-keyboard-navigation)  
 [**Angular Select**](https://material.angular.io/components/select/overview)  
