@@ -23,7 +23,7 @@ Combo コントロールは、データと値のバインディング、カス�
 <div class="divider--half"></div>
 
 ### 使用方法
-Ignite UI for Angular Combo を使用する前に [IgxComboModule]({environment:angularApiUrl}/classes/igxcombomodule.html) を **app.module.ts** ファイルにインポートします。以下のサンプルは [igx-switch]({environment:angularApiUrl}/classes/igxswitchcomponent.html) を使用していますが、追加で [IgxSwitchModule]({environment:angularApiUrl}/classes/igxswitchmodule.html) も必要です。
+Ignite UI for Angular Combo を使用する前に `IgxComboModule` を **app.module.ts** ファイルにインポートします。以下のサンプルは [igx-switch]({environment:angularApiUrl}/classes/igxswitchcomponent.html) を使用していますが、追加で `IgxSwitchModule` も必要です。
 
 ```typescript
 // app.module.ts

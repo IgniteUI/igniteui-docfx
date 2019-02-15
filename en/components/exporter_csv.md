@@ -7,7 +7,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ## CSV Exporter
 
 <p class="highlight">
-The IgniteUI CSV Exporter service can export data in a Character Separated Values format from both raw data (array) or from an [**IgxGrid**](grid.md).
+The IgniteUI CSV Exporter service can export data in a Character Separated Values format from both raw data (array) or from an [**IgxGrid**](grid/grid.md).
 The exporting functionality is encapsulated in the [`IgxCsvExporterService`]({environment:angularApiUrl}/classes/igxcsvexporterservice.html) class.</p>
 <div class="divider"></div>
 
@@ -77,8 +77,8 @@ If all went well, you should see an export button. When pressed, it will trigger
 
 ### Exporting IgxGrid's Data
 
-The CSV Exporter service can also export data in CSV format from an [**IgxGrid**](grid.md). The only difference is that you need to invoke the 
-[`IgxCsvExporterService`]({environment:angularApiUrl}/classes/igxcsvexporterservice.html)'s [`export`]({environment:angularApiUrl}/classes/igxcsvexporterservice.html#export) method and pass the [**IgxGrid**](grid.md) as first argument.
+The CSV Exporter service can also export data in CSV format from an [**IgxGrid**](grid/grid.md). The only difference is that you need to invoke the 
+[`IgxCsvExporterService`]({environment:angularApiUrl}/classes/igxcsvexporterservice.html)'s [`export`]({environment:angularApiUrl}/classes/igxcsvexporterservice.html#export) method and pass the [**IgxGrid**](grid/grid.md) as first argument.
 
 Here is an example:
 
@@ -157,7 +157,7 @@ this.csvExportService.onColumnExport.subscribe((args: IColumnExportingEventArgs)
 this.csvExportService.export(this.igxGrid1, new IgxCsvExporterOptions("ExportedDataFile"));
 ```
 
-When you are exporting data from [**IgxGrid**](grid.md) the export process takes in account features like row filtering and column hiding and exports only the data visible in the grid. You can configure the exporter service to include filtered rows or hidden columns by setting properties on the [`IgxCsvExporterOptions`]({environment:angularApiUrl}/classes/igxcsvexporteroptions.html) object. These properties are described in the table below.
+When you are exporting data from [**IgxGrid**](grid/grid.md) the export process takes in account features like row filtering and column hiding and exports only the data visible in the grid. You can configure the exporter service to include filtered rows or hidden columns by setting properties on the [`IgxCsvExporterOptions`]({environment:angularApiUrl}/classes/igxcsvexporteroptions.html) object. These properties are described in the table below.
 
 ### API Summary
 
