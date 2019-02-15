@@ -24,7 +24,7 @@ _language: ja
 <div class="divider--half"></div>
 
 ### 使用方法
-はじめに [IgxComboModule]({environment:angularApiUrl}/classes/igxcombomodule.html), [IgxDropDownModule]({environment:angularApiUrl}/classes/igxdropdownmodule.html), [IgxIconModule]({environment:angularApiUrl}/classes/igxiconmodule.html), [IgxInputGroupModule]({environment:angularApiUrl}/classes/igxinputgroupmodule.html) を **app.module.ts** ファイルにインポートします。
+はじめに `IgxComboModule`, `IgxDropDownModule`, `IgxIconModule`, `IgxInputGroupModule` を **app.module.ts** ファイルにインポートします。
 
 ```typescript
 // app.module.ts

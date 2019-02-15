@@ -21,7 +21,7 @@ _language: ja
 </div>
 
 ### 使用方法
-Ignite UI for Angular Combo を初期化する前に、[IgxComboModule]({environment:angularApiUrl}/classes/igxcombomodule.html) を **app.module.ts** ファイルにインポートします。
+Ignite UI for Angular Combo を初期化する前に、`IgxComboModule` を **app.module.ts** ファイルにインポートします。
 
 ```typescript
 // app.module.ts
