@@ -24,8 +24,10 @@ In order to enable highlighting in the `IgxDataChart` control, you need to impor
 
 ```typescript
 import { IgxDataChartInteractivityModule } from "igniteui-angular-charts/ES5/igx-data-chart-interactivity-module";
+import { IgxDataChartAnnotationModule } from "igniteui-angular-charts/ES5/igx-data-chart-annotation-module";
 
 IgxDataChartInteractivityModule.register();
+IgxDataChartAnnotationModule.register();
 ```
 
 ### Highlighting Series Visuals

@@ -15,10 +15,6 @@ The Infragistics Excel Engine's `Worksheet` is where your data is kept. You can 
 	src='{environment:demosBaseUrl}/excel-library/operations-on-worksheets' 
 	width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="excel-library-operations-on-worksheets-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
-    </button> 
-</div> 
 
 <div class="divider--half"></div>
 
