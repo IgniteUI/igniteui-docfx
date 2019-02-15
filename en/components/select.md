@@ -60,13 +60,13 @@ With focus set on `igx-select` you can use `Space`, `Enter` or `ALT + Up/Down Ar
 When the `igx-drop-down` is opened, you can close it by doing one of the following:
 - select an item from the drop-down list
 - press `ALT + UP/Down Arrow` keys
-- press any of `Enter`, `Space` or `Esc` keys
-    - It is also possible to close the drop-down by left-clicking with the mouse on the drop-down button or if you lef-click outside of the drop-down list.
+- press any of `Enter`, `Space`, `Esc` or `Tab` keys
+- It is also possible to close the drop-down by left-clicking with the mouse on the drop-down button or if you lef-click outside of the drop-down list.
 
 ### Keyboard Navigation
 `igx-select` has intuitive keyboard navigation that makes it easy to select items without having to touch the mouse.
 
-- When the drop-down list is opened you can navigate through the items using the `Up/Down Arrow` keys, as long as there are items left in the direction you are trying to navigate to.
+- When the drop-down list is opened you can navigate through the items using the `Up/Down Arrow` keys, as long as there are items left in the direction you are trying to navigate to. Furthermore, pressing `Home` or `End` will navigate to the first and last items in the list.
 - When the drop-down list is opened you can iteratively navigate through all items that begin with a certain character, by pressing the corresponding key, this is *case insensitive* and will cause the focus to spin between all matches.
 - When the drop-down list is opened you can navigate to a *specific* item by rapidly typing in the first few characters of the item you wish to go to.
     - *Note that the speed at which you type in matters.*
@@ -85,15 +85,15 @@ An item from the drop-down list can be selected by:
 - `Space` key when the respective item is focused.
 - Setting the value property in the code.
 - Setting the item's `selected` property.
-- The *first* item in the drop-down list is focused if there is no selected item..=
+- The *first* enabled item in the drop-down list is focused if there is no selected item.
 - The input box is populated with the selected item's value.
 - The input box's text is updated when the selected item changes.
 - The input box is not populated with the text of an item that is focused but not selected.
 - No text is appended to the input box when no item is selected and value is not set or does not match any item.
-- Selection is unchanged when setting the value property to a non-existing item.
+- Selection is cleared when setting the value property to a non-existing item.
 - Disabled items are not selectable.
 - Selection is removed if the selected option gets deleted.
-- When there are items with diplicated values, the first one gets selected.
+- When there are items with duplicated values, the first one gets selected.
 > It is a good idea to note that `igx-select` supports *single* selection of items only.
 
 ### Event emitting
@@ -112,7 +112,7 @@ You can make use of the `onOpened` event like so:
 #### Opening/Closing events
 - Emitted on:
     - input click
-    - toggle button click (app scenario)
+    - select expand/collapse button click (app scenario)
 - Triggered on:
     - key interaction
 
@@ -126,7 +126,7 @@ The thing about the `onOpening` and `onClosing` events is that they are fired *b
 #### Selection event
 - Emitted when the item selection is changing. It is emitted *before* the selection completes.
 -  Emitted when an item is selected by a mouse click.
--  Emitted when an item is selected by `Enter/Space` keys.
+-  Emitted when an item is selected by `Enter`, `Space` keys.
 -  Emitted when setting the value property.
 -  Emitted when setting an item's `selected` property.
 
