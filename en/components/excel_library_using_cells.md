@@ -15,10 +15,6 @@ The `WorksheetCell` objects in an Excel worksheet is the object that holds your 
 	src='{environment:demosBaseUrl}/excel-library/working-with-cells' 
 	width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="excel-library-working-with-cells-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
-    </button>
-</div> 
 
 <div class="divider--half"></div>
 
