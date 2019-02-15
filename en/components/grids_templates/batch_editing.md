@@ -4,7 +4,7 @@ _description: TransactionService is an injectable middleware that a component ca
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Component, Angular Grid, Angular Data Grid component, Angular Data Grid control, Angular Grid component, Angular Grid control, Angular High Performance Grid, Cell Editing, Row Editing, Batch Updating, Batch Editing, Transactions
 ---
 
-## @@igComponent Batch Editing
+### @@igComponent Batch Editing
 
 @@if (igxName === 'IgxGrid') {
 [`TransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) is an injectable middleware that a component can use to accumulate changes without affecting the underlying data. The provider exposes API to access, manipulate changes (undo and redo) and discard or commit all to the data.
@@ -24,7 +24,7 @@ In order to be able to use the Batch Editing functionality, it is required to im
 <!-- TODO -->
 }
 
-### Demo
+#### Demo
 
 @@if (igxName === 'IgxGrid') {
 The following sample demonstrates a scenario, where the grid has the Transaction as provider and has row editing enabled. The latter will ensure that transaction will be added after the entire row edit is confirmed.
@@ -57,7 +57,7 @@ The following sample illustrates how to enable and use Batch Editing via Transac
 > [!NOTE]
 > Transaction state consists of all the updated, added and deleted rows and their last states.
 
-## Usage
+### Usage
 
 To get started import the `@@igxNameModule` in the **app.module.ts** file:
 
