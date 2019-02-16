@@ -98,7 +98,6 @@ The following code snippet demonstrates how to create scatter `BubbleSeries` and
 ### Additional Resources
 
 -   [Axis Types](datachart_axis_types.md)
--   [Axis Locations](datachart_axis_locations.md)
 -   [Axis Sharing](datachart_axis_sharing.md)
 -   [Axis Settings](datachart_axis_settings.md)
 -   [Chart Legend](datachart_chart_legends.md)
