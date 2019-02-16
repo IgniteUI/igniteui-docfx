@@ -109,7 +109,6 @@ Note that you can also use above code to create `IgxRangeAreaSeriesComponent` by
 ### Additional Resources
 
 -   [Axis Types](datachart_axis_types.md)
--   [Axis Locations](datachart_axis_locations.md)
 -   [Axis Sharing](datachart_axis_sharing.md)
 -   [Chart Legend](datachart_chart_legends.md)
 -   [Series Markers](datachart_series_markers.md)

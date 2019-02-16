@@ -107,6 +107,5 @@ The following table list properties of the `CustomPaletteColorScale` affecting s
 ### Additional Resources
 
 -   [Axis Types](datachart_axis_types.md)
--   [Axis Locations](datachart_axis_locations.md)
 -   [Chart Legend](datachart_chart_legends.md)
 -   [Series Types](datachart_series_types.md)

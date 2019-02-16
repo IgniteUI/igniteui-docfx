@@ -6,7 +6,7 @@ _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Nati
 
 ## Axis Sharing and Multiple Axes
 
- You can share and add multiple axes in the same plot area of the `IgxDataChart` control. For all axes, you can specify [Axis Locations](datachart_axis_sharing.md) in relationship to chart plot area. It a common scenario to use multiple axes when you want to plot many data sources that have wide range of values (e.g. stock prices and stock trade volumes).
+ You can share and add multiple axes in the same plot area of the `IgxDataChart` control. For all axes, you can specify locations in relationship to chart plot area. It a common scenario to use multiple axes when you want to plot many data sources that have wide range of values (e.g. stock prices and stock trade volumes).
 
 ### Demo
 
@@ -62,5 +62,4 @@ This code demonstrates how to create data chart with two `IgxNumericYAxisCompone
 ### Additional Resources
 
 -   [Axis Types](datachart_axis_types.md)
--   [Axis Locations](datachart_axis_locations.md)
 -   [Series Types](datachart_series_types.md)
