@@ -163,26 +163,33 @@ export class AutocompleteSampleComponent {
 ## Application Scenarios
 ### Autocomplete with grouped items, placed inside Reactive From
 
-The following sample demonstrates an autocomplete that allows selecting a movie, where movies are grouped by genres. The drop-down is bound to hierarchical data and is placed inside a Reactive Form:
+The following sample demonstrates an autocomplete that allows selecting a cinema, where movies are grouped by a city:
 
 <div class="sample-container loading" style="height: 800px;">
-    <iframe id="reactive-form-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/data-entries/reactive-forms" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="autocomplete-movie" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/data-entries/movie" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="reactive-form-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="autocomplete-movie" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
 > Note: Follow the [Template Driven Forms Integration](input_group.md) topic to see the same example and an `igxAutocomplete` placed inside a Template Driven Form.
 <div class="divider--half"></div>
 
 In order to use the `igxAutocomplete` with groups, like in the sample above, you need to define your data in the following manner:
-```ts
-// TODO
-```
 
-Then in your template, you would have something along the lines of:
 ```html
-<!--TODO-->
+<igx-input-group>
+    <input igxInput #cinema name="cinema" formControlName="cinema" [igxAutocomplete]='cinemaPanel'/>
+    <label igxLabel for="cinema">City & Cinema</label>
+    <igx-suffix igxRipple><igx-icon fontSet="material">place</igx-icon> </igx-suffix>
+</igx-input-group>
+<igx-drop-down #cinemaPanel maxHeight="350px">
+    <igx-drop-down-item-group *ngFor="let town of towns" [label]="town.name">
+        <igx-drop-down-item *ngFor="let cinema of town.cinemas" [value]="cinema">
+            {{cinema}}
+        </igx-drop-down-item>
+    </igx-drop-down-item-group>
+</igx-drop-down>
 ```
 
 ### Autocomplete bound to remote data
