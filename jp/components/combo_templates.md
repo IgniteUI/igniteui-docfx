@@ -42,23 +42,23 @@ export class AppModule {}
 ```html
 <igx-combo #templateCombo [data]="lData" [valueKey]="'field'" >
 
-    <ng-template #itemTemplate let-display let-key="valueKey">
+    <ng-template igxComboItem let-display let-key="valueKey">
         <div class="item">
             <span class="state">{{ display[key] }} - </span>
             <span class="region">{{ display.region }}</span>
         </div>
     </ng-template>
 
-    <ng-template #headerTemplate>
+    <ng-template igxComboHeader>
         <div class="header-class">State - Region</div>
     </ng-template>
 
-    <ng-template #footerTemplate>
+    <ng-template igxComboFooter>
         <div class="footer-class">Infragistics 2018</div>
     </ng-template>
 
     <igx-combo>
-        <ng-template #emptyTemplate>
+        <ng-template igxComboEmpty>
             <span class="empty-class">No available states</span>
         </ng-template>
     </igx-combo>
@@ -69,11 +69,11 @@ export class AppModule {}
 以下のいずれかのテンプレートを定義した場合、定義済みの名前を使用して参照してください。
 
 ### 項目テンプレート
-参照名 **`itemTemplate`** の使用
+セレクター `[igxComboItem]` の使用:
 
 ```html
 <igx-combo>
-	<ng-template #itemTemplate let-display let-key="valueKey">
+	<ng-template igxComboItem let-display let-key="valueKey">
 		<div class="item">
 			<span class="state">State: {{ display[key] }}</span>
 			<span class="region">Region: {{ display.region }}</span>
@@ -83,11 +83,11 @@ export class AppModule {}
 ```
 
 ### ヘッダー テンプレート
-参照名 **`headerTemplate`** を使用
+Use selector `[igxComboHeader]`:
 
 ```html
 <igx-combo>
-    <ng-template #headerTemplate>
+    <ng-template igxComboHeader>
         <div class="header-class">Custom header</div>
         <img src=""/>
     </ng-template>
@@ -95,11 +95,11 @@ export class AppModule {}
 ```
 
 ### フッター テンプレート
-参照名 **`footerTemplate`** を使用
+Use selector `[igxComboFooter]`:
 
 ```html
 <igx-combo>
-    <ng-template #footerTemplate>
+    <ng-template igxComboFooter>
         <div class="footer-class">Custom footer</div>
         <img src=""/>
     </ng-template>
@@ -107,27 +107,64 @@ export class AppModule {}
 ```
 
 ### 空のテンプレート
-参照名 **`emptyTemplate`** を使用
+Use selector `[igxComboEmpty]`:
 
 ```html
 <igx-combo>
-    <ng-template #emptyTemplate>
+    <ng-template igxComboEmpty>
         <span>List is empty</div>
     </ng-template>
 </igx-combo>
 ```
 
 ### テンプレートの追加
-参照名 **`addItemTemplate`** を使用
+セレクター `[igxComboAddItem]` の使用:
 
 ```html
 <igx-combo>
-    <ng-template #addItemTemplate>
+    <ng-template igxComboAddItem>
         <span>Add town</span>
     </ng-template>
 </igx-combo>
 ```
+
+### アイコン テンプレートの切り替え
+セレクター `[igxComboToggleIcon]` の使用:
+
+```html
+<igx-combo>
+    <ng-template igxComboToggleIcon let-collapsed>
+        <igx-icon>{{ collapsed ? 'remove_circle' : 'remove_circle_outline'}}</igx-icon>
+    </ng-template>
+</igx-combo>
+```
+
+### アイコン テンプレートのクリア
+セレクター `[igxComboClearIcon]` の使用:
+
+```html
+<igx-combo>
+    <ng-template igxComboClearIcon>
+        <igx-icon>music_off</igx-icon>
+    </ng-template>
+</igx-combo>
+```
+
 <div class="divider--half"></div>
+
+### コンボ入力のテンプレート化
+上記セレクターのテンプレートで使用される `[igxComboClearIcon]` と `[igxComboToggleIcon]` は、コンボ入力の各ボタンの表示を変更するために使用されます。`igx-combo` 内のコンテンツを渡すことにより、`igx-input-group` をテンプレート化する方法と同様のコンボ入力のテンプレート化も可能になります。 (`igx-prefix`、`igx-suffix`、`[igxLabel]`) が可能になります。以下のコード スニペットは、適切なラベルや `igx-prefix` をコンボに追加する方法、ボタン アイコンを変更する方法を示します。
+```html
+    <igx-combo [data]="myMusic">
+        ...
+        <label igxLabel>Genres</label>
+        <igx-prefix><igx-icon>music_note</igx-icon></igx-prefix>
+        <ng-template igxComboClearIcon>
+            <igx-icon>music_off</igx-icon>
+        </ng-template>
+        ...
+    </igx-combo>
+```
 
 ## その他のリソース
 <div class="divider--half"></div>
