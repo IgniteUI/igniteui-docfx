@@ -155,7 +155,6 @@ Use **::ng-deep** or **`ViewEncapsulation.None`** to force the custom styles dow
 * [Searching](search.md)
 * [Toolbar](toolbar.md)
 * [Export to Excel](../exporter_excel.md)
-* [Paste from Excel](paste_excel.md)
 * [Multi Column Headers](multi_column_headers.md)
 * [Display Density](display_density.md)
 
