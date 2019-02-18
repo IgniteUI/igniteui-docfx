@@ -127,7 +127,7 @@ The grouping UI supports the following keyboard interactions:
 |--- |--- |
 |Maximum amount of grouped columns is 10. | If more than 10 columns are grouped an error is thrown.
 
-### API
+### API References
 
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
 * [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
