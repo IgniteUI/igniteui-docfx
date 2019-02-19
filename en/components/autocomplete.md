@@ -18,7 +18,7 @@ The [igx-autocomplete]({environment:angularApiUrl}/classes/igxautocompletedirect
 
 ### Demo
 The following sample demonstrates simple use of the `igx-autocomplete` directive, applied on an `igx-input`. The directive is provided with an `igx-drop-down` which has a defined filtering pipe.
-<div class="sample-container loading" style="height: 600px;">
+<div class="sample-container loading" style="height: 400px;">
     <iframe id="autocomplete-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/data-entries/autocomplete" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -190,7 +190,7 @@ export class AutocompleteSampleComponent {
 > Note: The default positioning strategy is `AutoPositionStrategy` and the drop-down is opened according to the available space.
 
 ## Application Scenarios
-### Autocomplete with grouped items, placed inside Reactive From
+### Grouped igxAutocomplete, inside Reactive From
 
 The following sample demonstrates an autocomplete that allows selecting a cinema, where movies are grouped by a city:
 
