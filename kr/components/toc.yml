@@ -65,7 +65,7 @@
       href: grid/toolbar.md
       new: false
     - name: Excel 내보내기
-      href: exporter_excel.md
+      href: grid/export_excel.md
       new: false
     - name: Excel에서 붙여넣기
       href: grid/paste_excel.md
@@ -129,7 +129,7 @@
       href: treeGrid/toolbar.md
       new: false
     - name: Excel 내보내기
-      href: exporter_excel.md
+      href: treeGrid/export_excel.md
       new: false
     - name: 복수 열 헤더
       href: treeGrid/multi_column_headers.md
@@ -190,7 +190,7 @@
       href: hierarchicalGrid/toolbar.md
       new: false
     - name: Excel 내보내기
-      href: exporter_excel.md
+      href: hierarchicalGrid/export_excel.md
       new: false
     - name: 복수 열 헤더
       href: hierarchicalGrid/multi_column_headers.md

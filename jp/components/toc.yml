@@ -65,7 +65,7 @@
       href: grid/toolbar.md
       new: false
     - name: Excel エクスポート
-      href: exporter_excel.md
+      href: grid/export_excel.md
       new: false
     - name: Excel からの貼り付け
       href: grid/paste_excel.md
@@ -129,7 +129,7 @@
       href: treeGrid/toolbar.md
       new: false
     - name: Excel エクスポート
-      href: exporter_excel.md
+      href: treeGrid/export_excel.md
       new: false
     - name: 複数列ヘッダー
       href: treeGrid/multi_column_headers.md
@@ -190,7 +190,7 @@
       href: hierarchicalGrid/toolbar.md
       new: false
     - name: Excel エクスポート
-      href: exporter_excel.md
+      href: hierarchicalGrid/export_excel.md
       new: false
     - name: 複数列ヘッダー
       href: hierarchicalGrid/multi_column_headers.md
