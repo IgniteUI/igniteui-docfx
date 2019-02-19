@@ -12,13 +12,13 @@ The [**igxAutocomplete**]({environment:angularApiUrl}/classes/igxautocompletedir
 The [igx-autocomplete]({environment:angularApiUrl}/classes/igxautocompletedirective.html) suggestions will show once you start typing in the text input. By default, the first item is always highlighted, so that it can be easily selected using the `Enter` key. An other way of selecting an item is to click on it from the list, then the input value will be automatically updated. Also, the drop-down will close. When an item is selected, the `onItemSelected` event is fired, if this event is canceled, the item will not be selected and the drop-down will not close.
 The `igxAutocomplete` directive allows you to navigate through items and at the same time to have focus always on the input. The latter will allow you to continue typing in the input. You can use the `ESC` key to close the drop-down list.
 
-The [igx-autocomplete]({environment:angularApiUrl}/classes/igxautocompletedirective.html) uses the [igx-drop-down]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) as a provider for the available options. This means that the available capabilities of the drop-down component can be used, these include grouping, templates and disabling of items and groups.
+The [igx-autocomplete]({environment:angularApiUrl}/classes/igxautocompletedirective.html) uses the [igx-drop-down]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) as a provider for the available options, which means that the available capabilities of the drop-down component can be used, these include grouping, templates and disabling of items and groups.
 </p>
 <div class="divider"></div>
 
 ### Demo
-The following sample demonstrates simple use of the `igx-autocomplete` directive, applied on an `igx-input`, and provided with an `igx-drop-down` which has a defined filtering pipe.
-<div class="sample-container loading" style="height: 400px;">
+The following sample demonstrates simple use of the `igx-autocomplete` directive, applied on an `igx-input`. The directive is provided with an `igx-drop-down` which has a defined filtering pipe.
+<div class="sample-container loading" style="height: 600px;">
     <iframe id="autocomplete-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/data-entries/autocomplete" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -32,6 +32,7 @@ The following sample demonstrates simple use of the `igx-autocomplete` directive
 ## Usage
 ### Getting Started
 To use the [igx-autocomplete]({environment:angularApiUrl}/classes/igxautocompletedirective.html) we need to import the **IgxAutocompleteModule** and **IgxDropDownModule** in our **app.module**. If the [igx-autocomplete]({environment:angularApiUrl}/classes/igxautocompletedirective.html) is applied on an [igx-input]({environment:angularApiUrl}/classes/igxinputdirective.html), the **igxInputGroupModule** is also required:
+
 ```typescript
 // app.module.ts
 
@@ -54,6 +55,34 @@ import {
     ...
 })
 export class AppModule {}
+```
+
+Then adding the `igxAutocomplete` directive with a value, which is reference to a drop down:
+
+```html
+<igx-input-group>
+    <input igxInput name="towns" type="text"
+        [igxAutocomplete]='townsPanel'/>
+    <label igxLabel for="towns">Towns</label>
+</igx-input-group>
+<igx-drop-down #townsPanel>
+    <igx-drop-down-item *ngFor="let town of towns">
+        {{town}}
+    </igx-drop-down-item>
+</igx-drop-down>
+```
+
+```typescript
+@Component({
+    selector: 'app-autocomplete-sample',
+    styleUrls: ['autocomplete.sample.css'],
+    templateUrl: `autocomplete.sample.html`
+})
+export class AutocompleteSampleComponent {
+    constructor() {
+        this.towns = [ 'Sofia', 'Plovdiv', 'Varna', 'Burgas'];
+    }
+}
 ```
 
 ### Keyboard Navigation
@@ -165,7 +194,7 @@ export class AutocompleteSampleComponent {
 
 The following sample demonstrates an autocomplete that allows selecting a cinema, where movies are grouped by a city:
 
-<div class="sample-container loading" style="height: 800px;">
+<div class="sample-container loading" style="height: 400px;">
     <iframe id="autocomplete-movie" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/data-entries/movie" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
