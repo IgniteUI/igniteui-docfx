@@ -8,7 +8,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 The `IgxSelectComponent` allows you to select a single item from a drop-down list by using the mouse or the keyboard to quickly navigate through them. Using `igx-select` you can also iterate selection through all items based on the input of a specific character or multiple characters.
 
 ## Simple Select Demo
-<div class="sample-container loading" style="height: 330px;">
+<div class="sample-container loading" style="height: 430px;">
     <iframe id="select-sample-1-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/data-entries/select-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 
@@ -206,7 +206,7 @@ Another thing worth mentioning is that `igx-select` uses the `SelectPositioningS
 > You can pass a variety of positioning strategies to the *positionStrategy* property, you can find them [*here*](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/latest/interfaces/ipositionstrategy.html). 
 
 ### Select With Groups
-<div class="sample-container loading" style="height: 330px;">
+<div class="sample-container loading" style="height: 450px;">
     <iframe id="select-sample-2-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/data-entries/select-sample-2" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 
@@ -242,7 +242,7 @@ Then in your template file you can iterate over these objects and access their p
 ```
 
 ### Select In A Form
-<div class="sample-container loading" style="height: 330px;">
+<div class="sample-container loading" style="height: 450px;">
     <iframe id="select-sample-3-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/data-entries/select-sample-3" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 
