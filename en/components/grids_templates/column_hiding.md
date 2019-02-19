@@ -1,4 +1,4 @@
----
+﻿---
 title: Column Hiding Component – Native Angular | Ignite UI for Angular
 _description: Column hiding with the Ignite UI for Angular Column Hiding component allows the users hide and show columns by using a built-in UI of the Data Grid.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Components, Angular Data Grid component, Angular Data Grid control, Angular Grid component, Angular Grid control, Angular High Performance Grid, grid column hiding, column hiding, angular grid column hiding, angular column hiding
@@ -31,7 +31,15 @@ The Ignite UI for Angular @@igComponent provides an [`IgxColumnHidingComponent`]
 <div class="divider--half"></div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-<!-- TODO -->
+<div class="sample-container loading" style="height:600px">
+    <iframe id="hierarchicalgrid-column-hiding-sample-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-hiding' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchicalgrid-column-hiding-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
+
 }
 
 ### @@igComponent setup
@@ -76,18 +84,70 @@ Let's start by creating our @@igComponent and binding it to our data. We will al
 ```
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-<!-- TODO -->
+```html
+<igx-hierarchical-grid class="hgrid" [data]="localdata"
+        [height]="'560px'" [width]="'100%'" columnWidth="200px" [allowFiltering]="true" #hGrid>
+            <igx-column field="Artist" [sortable]="true" [disableHiding]="true"></igx-column>
+            <igx-column field="Photo">
+                <ng-template igxCell let-cell="cell">
+                    <div class="cell__inner_2">
+                        <img [src]="cell.value" class="photo" />
+                    </div>
+                </ng-template>
+            </igx-column>
+            <igx-column field="Debut" [sortable]="true"></igx-column>
+            <igx-column field="Grammy Nominations" [sortable]="true"></igx-column>
+            <igx-column field="Grammy Awards" [sortable]="true"></igx-column>
+
+            <igx-row-island [key]="'Albums'" [autoGenerate]="false" #layout1 >
+                <igx-column field="Album" [sortable]="true"></igx-column>
+                <igx-column field="Launch Date" [sortable]="true"></igx-column>
+                <igx-column field="Billboard Review" [sortable]="true"></igx-column>
+                <igx-column field="US Billboard 200" [sortable]="true"></igx-column>
+            <igx-row-island [key]="'Songs'" [autoGenerate]="false">
+                    <igx-column field="No."></igx-column>
+                    <igx-column field="Title"></igx-column>
+                    <igx-column field="Released"></igx-column>
+                    <igx-column field="Genre"></igx-column>
+            </igx-row-island>
+        </igx-row-island>
+
+        <igx-row-island [key]="'Tours'" [autoGenerate]="false">
+            <igx-column field="Tour"></igx-column>
+            <igx-column field="Started on"></igx-column>
+            <igx-column field="Location"></igx-column>
+            <igx-column field="Headliner"></igx-column>
+        </igx-row-island>
+
+        </igx-hierarchical-grid>
+```
 }
 
 ### Toolbar's Column Hiding UI
 
-@@if (igxName === 'IgxGrid' || igxName === 'IgxTreeGrid') {
 The built-in Column Hiding UI is placed inside an [`IgxDropDownComponent`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) in the @@igComponent's toolbar. We can show/hide the Column Hiding UI by using this exact dropdown.
 For this purpose all we have to do is set both the [`showToolbar`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#showtoolbar) and the [`columnhiding`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#columnhiding) properties of the @@igComponent to true. If the toolbar is not enabled, enabling the [`columnhiding`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#columnhiding) property will have no effect.
 We will also add a title to our toolbar by using the [`toolbarTitle`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#toolbartitle) property and a custom style for our @@igComponent's wrapper.
-}
+
 @@if (igxName === 'IgxHierarchicalGrid') {
-<!-- TODO -->
+```html
+<!--columnHiding.component.html-->
+<div class="hgrid-sample">
+    <igx-hierarchical-grid class="hgrid" [data]="localdata" [showToolbar]="true"[columnHiding]="true" toolbarTitle="Singers">
+    ...
+ </igx-hierarchical-grid>
+</div>
+```
+```css
+/* columnHiding.component.css */
+.photo {
+    vertical-align: middle;
+    max-height: 62px;
+}
+.cell__inner_2 {
+    margin: 1px
+}
+```
 }
 
 @@if (igxName === 'IgxGrid' || igxName === 'IgxTreeGrid') {
@@ -110,9 +170,8 @@ We will also add a title to our toolbar by using the [`toolbarTitle`]({environme
 ```
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-<!-- TODO -->
-}
 
+}
 
 
 The @@igComponent provides us with some useful properties when it comes to using the toolbar's column hiding UI.
@@ -131,12 +190,17 @@ The [`hiddenColumnsText`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#h
 ```
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-<!-- TODO -->
+```html
+<div class="hgrid-sample">
+    <igx-hierarchical-grid class="hgrid" [data]="localdata" [showToolbar]="true"[columnHiding]="true" toolbarTitle="Singers" 
+    columnHidingTitle="Column Hiding" hiddenColumnsText="Hidden">
+ </igx-hierarchical-grid>
+</div>
+```
 }
 
 By using the [`columnsAreaMaxHeight`]({environment:angularApiUrl}/classes/igxcolumnhidingcomponent.html#columnsareamaxheight) property of the column hiding UI, we can set the maximum height of the area that contains the columns. This way if we have a lot of columns and not all of them can fit in the container, a scrollbar will appear, which will allow us to navigate to any column we want by keeping the search input pinned at the top and the show/hide all buttons at the bottom.
 
-@@if (igxName === 'IgxGrid' || igxName === 'IgxTreeGrid') {
 ```typescript
 // columnHiding.component.ts
 
@@ -144,15 +208,12 @@ public ngAfterViewInit() {
     this.@@igObjectRef.toolbar.columnHidingUI.columnsAreaMaxHeight = "200px";
 }
 ```
-}
-@@if (igxName === 'IgxHierarchicalGrid') {
-    <!-- TODO -->
-}
 
 In order to use the expanded set of functionalities for the column hiding UI, we can use the toolbar's [`columnHidingUI`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html#columnhidingui) property, which returns a reference to the column hiding UI component itself. This way we can access its respective API and use it according to our application's requirements.
 
 You can see the result of the code from above at the beginning of this article in the [Column Hiding Demo](#demo) section.
 
+@@if (igxName !== 'IgxHierarchicalGrid') {
 ### Custom Column Hiding UI
 
 Let's say we want to manually define our [`IgxColumnHidingComponent`]({environment:angularApiUrl}/classes/igxcolumnhidingcomponent.html) and put it anywhere we want on our page. This can be easily done by simply creating an instance of the component in our markup. In order to do this, let's first grab the [`IgxColumnHidingModule`]({environment:angularApiUrl}/classes/igxcolumnhidingmodule.html).
@@ -205,10 +266,6 @@ Now let's create our [`IgxColumnHidingComponent`]({environment:angularApiUrl}/cl
 </div>
 ```
 }
-@@if (igxName === 'IgxHierarchicalGrid') {
-    <!-- TODO -->
-}
-
 
 @@if (igxName === 'IgxGrid' || igxName === 'IgxTreeGrid') {
 ```css
@@ -248,9 +305,6 @@ Now let's create our [`IgxColumnHidingComponent`]({environment:angularApiUrl}/cl
     margin-left: 30px;    
 }
 ```
-}
-@@if (igxName === 'IgxHierarchicalGrid') {
-    <!-- TODO -->
 }
 
 #### Add title and filter prompt
@@ -343,9 +397,6 @@ We can easily prevent the user from being able to hide columns through the colum
 </div>
 ```
 }
-@@if (igxName === 'IgxHierarchicalGrid') {
-<!-- TODO -->
-}
 
 If all went well, this is how our column hiding UI component should look like:
 
@@ -369,13 +420,16 @@ If all went well, this is how our column hiding UI component should look like:
 </div>
 <div class="divider--half"></div>
 }
-@@if (igxName === 'IgxHierarchicalGrid') {
-<!-- TODO -->
 }
-
 ### API References
 
+@@if (igxName !== 'IgxHierarchicalGrid') {
 In this article we learned how to use the built-in column hiding UI in the @@igComponent's toolbar and we defined it as a separate component as well. We introduced a UI that allows the user to choose between different column orders and we set our own custom title and filter prompt texts. We also used an additional Ignite UI for Angular component - the [**IgxRadio**](radio_button.md) button.
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+In this article we learned how to use the built-in column hiding UI in the @@igComponent's toolbar.
+}
+
 The column hiding UI has a few more APIs to explore, which are listed below.
 
 * [`IgxColumnHidingComponent`]({environment:angularApiUrl}/classes/igxcolumnhidingcomponent.html)
