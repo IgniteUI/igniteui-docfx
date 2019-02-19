@@ -3,11 +3,13 @@ title: Configuration Options
 _description: The Ignite UI for Category Chart component simplifies the complexities of the data visualization domain into manageable API so that a user can bind a collection of data, a group of collections, and a data property, and let the charting control do the rest.
 _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Chart Control, Angular Chart Example, Angular Grid Component, Angular Chart Component, Angular Category Chart
 ---
+
 ## Configuration Options
 
-There are many areas of the category chart that can be customized, such as the markers, chart titles and subtitles, and the chart types.
+There are many areas of the `IgxCategoryChart` that can be customized, such as the markers, chart titles and subtitles, and the chart types.
 
 ### Demo
+
 <div class="sample-container" style="height: 500px">
     <iframe id="category-chart-config-options-sample-iframe" src='{environment:demosBaseUrl}/charts/category-chart-config-options-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -56,7 +58,6 @@ The title and subtitle feature of the category chart component allows you to add
 When adding a title or subtitle to the chart, the content of the chart automatically resizes allowing for the title and subtitle information.
 
 You can customize the look and feel of the category chart’s subtitle and title in many different ways such as applying different font styles, margins, and alignment as demonstrated in the following code example.
-
 
 ```html
 <igx-category-chart
