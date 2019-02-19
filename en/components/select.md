@@ -116,7 +116,8 @@ You can make use of the `onOpened` event like so:
 - Triggered on:
     - key interaction
 
-The thing about the `onOpening` and `onClosing` events is that they are fired *before* the animation finishes playing, i.e. before the drop-down is fully **opened** or **closed**.
+ The `onOpening` and `onClosing` events are fired *before* the animation finishes playing, i.e. before the drop-down is fully **opened** or **closed**. They can also be canceled by setting the `cancel` property to `true` in the event handler function.
+
 ```html
 <igx-select (onOpening)="handleOpening($event)" (onClosing)="handleClosing($event)">
     <igx-select-item [value]="Apple">Apple</igx-select-item>
@@ -151,11 +152,11 @@ You put all your *handler* functions inside of your *class*:
 ```ts
 export class MyClass {
     /* --- */
-    private handleOpening(event: any): void {
+    private handleOpening(event: CancelableEventArgs): void {
         // do something
     }
     /* --- */
-    private handleSelection(event: any): void {
+    private handleSelection(event: ISelectionEventArgs): void {
         // do something
     }
     /* --- */
@@ -164,20 +165,26 @@ export class MyClass {
         // return something
     }
     /* --- */
+    private handleClosing(event: CancelableEventArgs): void {
+        // Cancel the closing event
+        event.cancel = true;
+    }
+    /* --- */
 }
 ```
 - Please note that the above examples are for demonstration purposes only and are not meant to abide by any code standards.
 
 ### Positioning Strategy
 `igx-select` has its own positioning strategy called the `SelectPositioningStrategy`.
-It extends the [*ConnectedPositioningStrategy*](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/classes/connectedpositioningstrategy.html) and allows `igx-select` to position its drop-down list in different ways, relative to the input field.
+It extends the [*ConnectedPositioningStrategy*](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/classes/connectedpositioningstrategy.html) and allows `igx-select` to position its drop-down list in different ways, relative to the input field. This means that the drop-down will always position itself so that the text in the input is matched by the selected item's text.
 
-In order to use the `SelectPositioningStrategy`, you first have to import it alongside the [*OverlaySettings*](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/interfaces/overlaysettings.html) which are going to use it:
+In the following example we are defining custom overlay settings using the `SelectPositioningStrategy` so you first have to import it alongside the [*OverlaySettings*](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/interfaces/overlaysettings.html):
 ```ts
 import { SelectPositioningStrategy, OverlaySettings } from 'igniteui-angular';
 ```
 
 From there you have to initialize an [*OverlaySettings*](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/interfaces/overlaysettings.html) object and pass in the `SelectPositioningStrategy`. And finally in the positioning strategy's constructor you pass in a [*ViewChild*](https://angular.io/api/core/ViewChild) that references the `IgxSelectComponent` from your template.
+
 All of it looks like this:
 ```ts
 @ViewChild(IgxSelectComponent)
@@ -194,6 +201,9 @@ public customOverlaySettings: OverlaySettings = {
 ```
 As you can see there is also a `scrollStrategy` property that is present in the `customOverlaySettings` object. This ensures that the scrolling functionality of the drop-down works as expected. The scroll will appear every time the total height of all items in the list exceeds the drop-down's height.
 - The `modal` and `closeOnOutsideClick` properties are optional and have default values respectively `false` and `true`.
+
+Another thing worth mentioning is that `igx-select` uses the `SelectPositioningStrategy` by default.
+> You can pass a variety of positioning strategies to the *positionStrategy* property, you can find them [*here*](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/latest/interfaces/ipositionstrategy.html). 
 
 ### Select With Groups
 <div class="sample-container loading" style="height: 330px;">
