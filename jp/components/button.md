@@ -71,13 +71,13 @@ export class AppModule {}
     <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/data-entries/buttons-sample-3">
 </div>
 
-Outlined button style:
+アウトライン付きボタン スタイル:
 
 ```html
 <button igxButton="outlined">Outlined</button>
 ```
 
-Result:
+結果:
 <div class="sample-container loading" style="height: 48px">
     <iframe class="lazyload" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-sample-8">
 </div>
@@ -143,10 +143,10 @@ raised ボタンを作成できます。　
 | 名前       |                                                  説明                                                  |
 | :--------- | :----------------------------------------------------------------------------------------------------: |
 | `flat`     |               デフォルトのボタン タイプ。透明な背景およびプライマリ テーマ色のテキスト。               |
-| `outlined` |  Very similar to the flat button type but with a thin outline around the edges of the button. |
-| `raised`   | このボタン タイプは box-shadow を使用します。プライマリ テーマ色の背景および白いテキスト。 |
-| `fab`      |      フローティング アクションのボタン タイプ。丸形で、プライマリ テーマ色の背景色と白い前景色。       |
-| `icon`     |        最もシンプルなボタン タイプ。アイコンをボタンとして使用する場合に使用します。         |
+| `outlined` |  Flat ボタン タイプに似ていますがボタンの端が細いアウトラインで囲まれます。 |
+| `raised`   | このボタン タイプはわずかなシャドウを使用します。背景のパレットにセカンダリ テーマ色を使用。 |
+| `fab`      |      フローティング アクションのボタン タイプ。背景用のセカンダリ テーマ色で円形。       |
+| `icon`     |        最もシンプルなボタン タイプ。アイコンをボタンとして使用する場合に使用。         |
 
 ### API リファレンス
 <div class="divider--half"></div>
