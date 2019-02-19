@@ -194,7 +194,7 @@ export class AutocompleteSampleComponent {
 
 The following sample demonstrates an autocomplete that allows selecting a cinema, where movies are grouped by a city:
 
-<div class="sample-container loading" style="height: 400px;">
+<div class="sample-container loading" style="height: 600px;">
     <iframe id="autocomplete-movie" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/data-entries/movie" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
