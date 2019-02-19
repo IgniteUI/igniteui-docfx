@@ -201,7 +201,6 @@ The following sample demonstrates an autocomplete that allows selecting a cinema
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="autocomplete-movie" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-> Note: Follow the [Template Driven Forms Integration](input_group.md) topic to see the same example and an `igxAutocomplete` placed inside a Template Driven Form.
 <div class="divider--half"></div>
 
 In order to use the `igxAutocomplete` with groups, like in the sample above, you need to define your data in the following manner:
