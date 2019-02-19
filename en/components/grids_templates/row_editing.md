@@ -1,13 +1,12 @@
 ---
 title: @@igComponent Row Editing - Native Angular | Ignite UI for Angular
-_description: Row editing - allows modification of several cells in the row, before submitting, at once, all those changes to the grid's data source. Leverages the pending changes functionality of the new transaction provider.
+_description: Row editing - allows modification of several cells in the row, before submitting, at once, all those changes to the @@igComponent's data source. Leverages the pending changes functionality of the new transaction provider.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Component, Angular Grid, Angular TreeGrid, Angular Data Grid component, Angular Data TreeGrid component, Angular Data Grid control, Angular Data TreeGrid control, Angular TreeGrid component, Angular Grid component, Angular Grid control, Angular TreeGrid control, Angular High Performance Grid, Cell Editing
 ---
 
 ## @@igComponent Row Editing
 
 Row editing - allows modification of several cells in the row, before submitting, at once, all those changes to the @@igComponent's data source. Leverages the pending changes functionality of the new transaction provider.
-
 
 
 ### Demo

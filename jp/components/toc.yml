@@ -124,7 +124,7 @@
       new: false
     - name: 検索
       href: treeGrid/search.md
-      new: true
+      new: false
     - name: ツールバー
       href: treeGrid/toolbar.md
       new: false
@@ -146,61 +146,61 @@
   items:
     - name: 仮想化とパフォーマンス
       href: hierarchicalGrid/virtualization.md
-      new: false
+      new: true
     - name: 編集
       href: hierarchicalGrid/editing.md
-      new: false
+      new: true
     - name: 行編集
       href: hierarchicalGrid/row_editing.md
-      new: false
+      new: true
     - name: 一括編集
       href: hierarchicalGrid/batch_editing.md
-      new: false
+      new: true
     - name: ページング
       href: hierarchicalGrid/paging.md
-      new: false
+      new: true
     - name: フィルタリング
       href: hierarchicalGrid/filtering.md
-      new: false
+      new: true
     - name: 並べ替え
       href: hierarchicalGrid/sorting.md
-      new: false
+      new: true
     - name: 集計
       href: hierarchicalGrid/summaries.md
-      new: false
+      new: true
     - name: 列移動
       href: hierarchicalGrid/column_moving.md
-      new: false
+      new: true
     - name: 列のピン固定
       href: hierarchicalGrid/column_pinning.md
-      new: false
+      new: true
     - name: 列のサイズ変更
       href: hierarchicalGrid/column_resizing.md
-      new: false
+      new: true
     - name: 列の非表示
       href: hierarchicalGrid/column_hiding.md
-      new: false
+      new: true
     - name: 選択
       href: hierarchicalGrid/selection.md
-      new: false
+      new: true
     - name: 検索
       href: hierarchicalGrid/search.md
-      new: false
+      new: true
     - name: ツールバー
       href: hierarchicalGrid/toolbar.md
-      new: false
+      new: true
     - name: Excel エクスポート
       href: hierarchicalGrid/export_excel.md
-      new: false
+      new: true
     - name: 複数列ヘッダー
       href: hierarchicalGrid/multi_column_headers.md
-      new: false
+      new: true
     - name: 表示密度
       href: hierarchicalGrid/display_density.md
-      new: false
+      new: true
     - name: 条件付きセルのスタイル設定
       href: hierarchicalGrid/conditional_cell_styling.md
-      new: false
+      new: true
 - name: List View
   href: list.md
 - name: Combo
