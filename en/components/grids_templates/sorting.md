@@ -93,10 +93,12 @@ public ngOnInit() {
 
 <div class="divider--half"></div>
 
+@@if (igxName === 'IgxGrid') {
 #### Remote Sorting
 You can provide @@igComponent's remote sorting by subscribing to [`onDataPreLoad`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#ondatapreload) and [`onSortingDone`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onsortingdone) outputs. More information on how to use it you can find in the `@@igComponent Virtualization and Performance` [documentation](virtualization.md#remote-sortingfiltering-virtualization).
 
 <div class="divider--half"></div>
+}
 
 ### API References
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
