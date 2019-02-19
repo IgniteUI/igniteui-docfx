@@ -4,25 +4,42 @@ _description: Users can export their data for editing or offline presentation ca
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Controls, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Grid, Angular Data Grid, Angular Grid Control, Angular Grid Component, Excel Export, Angular Excel Component, Angular Export Excel
 ---
 
-### Excel Exporter
+### @@igComponent Export to Excel
 
 <p class="highlight">
-The Ignite UI for Angular Excel Exporter service can export data in Microsoft® Excel® format from raw data (array) or from the following components: [**IgxGrid**](grid/grid.md), [**IgxTreeGrid**](treeGrid/tree_grid.md) and [**IgxHierarchicalGrid**](hierarchicalGrid/hierarchical_grid.md). The exporting functionality is encapsulated in the [`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html) class and the data is exported in MS Excel table format. This format allows features like filtering, sorting, etc.</p>
+The Excel Exporter service can export data in MS Excel format from the @@igxName. The exporting functionality is encapsulated in the [`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html) class and the data is exported in MS Excel table format. This format allows features like filtering, sorting, etc. To do this you need to invoke the [`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html)'s [`export`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html#export) method and pass the @@igxName component as first argument.</p>
+
 <div class="divider"></div>
 
 #### Excel Exporter Demo
 
-<div class="sample-container loading" style="height: 100px;">
-    <iframe id="excel-export-sample-iframe" src="{environment:demosBaseUrl}/services/export-excel"
+@@if (igxName === 'IgxGrid') {
+<div class="sample-container loading" style="height: 300px;">
+    <iframe id="excel-export-sample-iframe" src="{environment:demosBaseUrl}/services/export-excel-sample-1"
         width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="excel-export-sample-iframe"
     data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
+}
+@@if (igxName === 'IgxTreeGrid') {
+<div class="sample-container loading" style="height: 350px;">
+    <iframe id="excel-export-sample-iframe" src="{environment:demosBaseUrl}/services/export-excel-tree-grid-sample"
+        width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="excel-export-sample-iframe"
+    data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+    <!-- todo -->
+}
+
 <div class="divider--half"></div>
 
-#### Usage
+#### Exporting @@igComponent's Data
 
 To start using the IgniteUI Excel Exporter first import the [`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html) in the app.module.ts file and add the service to the `providers` array:
 
@@ -30,7 +47,7 @@ To start using the IgniteUI Excel Exporter first import the [`IgxExcelExporterSe
 // app.module.ts
 
 ...
-import { IgxExcelExporterService } from "igniteui-angular";
+import { IgxExcelExporterService } from "igniteui-angular/services/index";
 
 @NgModule({
   providers: [ IgxExcelExporterService ]
@@ -44,10 +61,11 @@ export class AppModule {}
 To initiate an export process you may use the handler of a button in your component's template.
 
 ```html
-<button (click)="exportButtonHandler()">Export Data to Excel</button>
+<@@igSelector #@@igObjectRef [data]="localData" [autoGenerate]="true"></@@igSelector>
+<button (click)="exportButtonHandler()">Export @@igxName to Excel</button>
 ```
 
-You may access the exporter service by defining an argument of type [`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html) in the component's constructor and the Angular framework will provide an instance of the service. To export some data in MS Excel format you need to invoke the exporter service's [`exportData`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html#exportdata) method. This method accepts as a first argument the data you want to export and the second argument is of type [`IgxExcelExporterOptions`]({environment:angularApiUrl}/classes/igxexcelexporteroptions.html) and allows you to configure the export process.
+You may access the exporter service by defining an argument of type [`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html) in the component's constructor and the Angular framework will provide an instance of the service. To export some data in MS Excel format you need to invoke the exporter service's [`export`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html#export) method and pass the @@igxName component as first argument.
 
 Here is the code which will execute the export process in the component's typescript file:
 
@@ -56,24 +74,21 @@ Here is the code which will execute the export process in the component's typesc
 
 ...
 import { IgxExcelExporterService, IgxExcelExporterOptions } from "igniteui-angular";
+import { @@igxNameComponent } from "igniteui-angular";
 ...
 
-public localData = [
-  { Name: "Eric Ridley", Age: "26" },
-  { Name: "Alanis Brook", Age: "22" },
-  { Name: "Jonathan Morris", Age: "23" }
-];
+@ViewChild("@@igObjectRef") public @@igObjectRef: IgxGridComponent;
 
 constructor(private excelExportService: IgxExcelExporterService) {
 }
 
 public exportButtonHandler() {
-  this.excelExportService.exportData(this.localData, new IgxExcelExporterOptions("ExportedDataFile"));
+  this.excelExportService.export(this.@@igObjectRef, new IgxExcelExporterOptions("ExportedDataFile"));
 }
 
 ```
 
-If all went well, you should see an export button. When pressed, it will trigger the export process and the browser will download a file named "ExportedDataFile.xlsx" which contains the data from the `localData` array in MS Excel format.
+If all went well, you should see the @@igxName component and a button under it. When pressing the button, it will trigger the export process and the browser will download a file named "ExportedDataFile.xlsx" which contains the data from the @@igComponent component in MS Excel format.
 
 #### Customizing the Exported Content
 
@@ -89,8 +104,11 @@ this.excelExportService.onColumnExport.subscribe((args: IColumnExportingEventArg
       args.cancel = true;
   }
 });
-this.excelExportService.export(this.igxGrid1, new IgxExcelExporterOptions("ExportedDataFile"));
+this.excelExportService.export(this.@@igObjectRef, new IgxExcelExporterOptions("ExportedDataFile"));
 ```
+
+When you are exporting data from the @@igComponent component, the export process takes in account features like row filtering and column hiding and exports only the data visible in the @@igComponent. You can configure the exporter service to include filtered rows or hidden columns by setting properties on the [`IgxExcelExporterOptions`]({environment:angularApiUrl}/classes/igxexcelexporteroptions.html) object. These properties are described in the table below.
+
 #### API References
 
 The Excel Exporter service has a few more APIs to explore, which are listed below.
@@ -98,14 +116,10 @@ The Excel Exporter service has a few more APIs to explore, which are listed belo
 * [`IgxExcelExporterService API`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html)
 * [`IgxExcelExporterOptions API`]({environment:angularApiUrl}/classes/igxexcelexporteroptions.html)
 
-Grids Excel Exporters:
-* [`IgxGrid Excel Exporters`]({grid/export_excel.md})
-* [`IgxTreeGrid Excel Exporters`]({treeGrid/export_excel.md})
-* [`IgxHierarchicalGrid Excel Exporters`]({hierarchicalGrid/export_excel.md})
-
 Additional components that were used:
-* [IgxGridComponent API]({environment:angularApiUrl}/classes/igxgridcomponent.html)
-* [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+
+* [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
+* [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 
 <div class="divider"></div>
 
