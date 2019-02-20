@@ -96,9 +96,7 @@ Note that when requesting remote data, filtering operation is case-sensitive.
 
 ### Virtualization Limitations
 
-*   Variable row heights are not supported. All rows must have the same height.
 *   Specified dimensions for rows/columns should match the actual rendered elements. For instance, if there is a template or class defined for the grid cells, which expand the row heights and they no longer match the specified [`rowHeight`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowheight) value the vertical virtualization will no longer work as expected. The virtual items count will no longer reflect the actual elements in the DOM. The same applies to columns and their widths.
-*   Browsers currently have height limitation for DOM elements. Because of that the total height of the rows shouldn't exceed the height limitation of the browsers. Otherwise there may be unexpected changes in behavior of [`IgxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html). For example Internet Explorer 11 has height limitation of 1 533 916 pixels, which for rows with height 50px means no more than 30 678 rows.
 *   When the grid has responsive width and/or height and responds to size changes of the browser's window or other elements sizes, the scroll position resets to 0. A more natural solution to the changing scrollbar position and size is planned for future releases.
 *   On Mac OS horizontal scrollbar is not visible when "Show scrollbars only when scrolling" system option is set to true (which is the default value). This is because the grid’s row container has an overflow set to hidden. Change the option to "Always" and the scrollbar will appear.
 
