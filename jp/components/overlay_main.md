@@ -251,86 +251,8 @@ export class ExampleComponent {
 
 ## API
 
-### プロパティ
-
- `IPositionStrategy`
-
-   | 名前               | 説明                                         | 型                                |
-   |--------------------|-----------------------------------------------------|-------------------------------------|
-   |`positionSettings`    | この配置方法を適用する設定。         | `PositionSettings`                    |
-<div class="divider"></div>
-
- `OverlaySettings`
-
-   | 名前               | 説明                                         | 型                                |
-   |--------------------|-----------------------------------------------------|-------------------------------------|
-   |`positionStrategy`    | この設定で使用するための配置方法。       | `IPositionStrategy`                   |
-   |`scrollStrategy`      | この設定で使用するためのスクロール方法。          | `IScrollStrategy`                     |
-   |`modal`               | オーバーレイがモーダルモードであるかどうかを設定。         | `boolean`                             |
-   |`closeOnOutsideClick` | オーバーレイがアウトサイド クリックで閉じるかどうかを設定。  | `boolean`                             |
-   |outlet              | オーバーレイをアタッチするアウトレット コンテナを設定 (デフォルトは `body`)。 | IgxOverlayOutletDirective \| ElementRef |
-<div class="divider--half"></div>
-
- `PositionSettings`
-
-   | 名前               | 説明                                        | 型                                |
-   |--------------------|-----------------------------------------------------|-------------------------------------|
-   |`target`              | 表示するターゲットのアタッチ ターゲット。         | `Point` \| `HTMLElement`                 |
-   |`horizontalDirection` | コンポーネントが表示される方向。       | `HorizontalAlignment`                 |
-   |`verticalDirection`   | コンポーネントが表示される方向。       | `VerticalAlignment`                   |
-   |`horizontalStartPoint`| ターゲットの開始ポイント。                             | `HorizontalAlignment`                 |
-   |`verticalStartPoint`  | ターゲットの開始ポイント。                             | `VerticalAlignment`                   |
-   |`openAnimation`       | オーバーレイが開いている間に適用されるアニメーション。             | `AnimationReferenceMetadata`          |
-   |`closeAnimation`      | オーバーレイが閉じている間に適用されるアニメーション。            | `AnimationReferenceMetadata`          |
-
-### メソッド
-
-`IgxOverlayService`
-
-   | 名前           | 説明                                                                     | パラメーター |
-   |-----------------|---------------------------------------------------------------------------------|------------|
-   |`show`             | オーバーレイで指定したコンポーネントを表示します。                                     |`component, overlaySettings?`|
-   |`hide`             | 指定 ID のコンポーネントのネイティブ要素を削除します。        |`id`          |
-   |`hideAll`          | すべてのネイティブ要素を削除してオーバーレイを非表示にします。                        |-           |
-   |`reposition`       | 指定 ID のコンポーネントのネイティブ要素を再配置します。                |`id`          |
-<div class="divider"></div>
-
- `IPositionStrategy`
-
-   | 名前            | 説明                                                                    | パラメーター |
-   |-----------------|---------------------------------------------------------------------------------|------------|
-   |`position`         | 指定した要素を配置します。                                                      |`element`     |
-<div class="divider"></div>
-
- `IScrollStrategy`
-
-   | 名前            | 説明                                                                     | パラメーター |
-   |-----------------|---------------------------------------------------------------------------------|------------|
-   |`initialize`       | ストラテジーを初期化します。1 度のみ呼び出します。                                 |`document, overlayService, id`|
-   |`attach`           | ストラテジーをアタッチします。                                                    |-           |
-   |`detach`           | ストラテジーをデタッチします。                                                          |-           |
-<div class="divider"></div>
-
- `static methods`
-
-   | 名前                        | 説明                                                         | パラメーター |
-   |-----------------------------|---------------------------------------------------------------------|------------|
-   |`getPointFromPositionsSettings`| オーバーレイの表示を開始するポイントを計算します。    |`settings`    |
-<div class="divider"></div>
-
-### イベント
-
-
-`IgxOverlayService`
-
-   | 名前          | 説明                       | キャンセル可能 | パラメーター |
-   |---------------|-------------------------------------|------------|------------|
-   |`onOpening`    | オーバーレイが表示される前に発生されます。        | false      |            |
-   |`onOpened`     | オーバーレイが表示された後に発生されます。         | false      |            |
-   |`onClosing`    | オーバーレイが非表示になる前に発生されます。       | false      |            |
-   |`onClosed`     | オーバーレイが非表示になった後に発生されます。         | false      |            |
-   |`onAnimation`  | アニメーションを開始する前に発生されます。 | false      |            |
-<div class="divider--half"></div>
+* [IgxOverlayService]({environment:angularApiUrl}/classes/igxoverlayservice.html)
+* [IgxOverlay Styles]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
 
 ## 前提事項と制限</a>
 アウトレットにオーバーレイを表示する際にアウトレットが変換で要素の子、視点、フィルター css の場合、モーダル オーバレイが表示されません。これは、上記いずれかの css プロパティが設定された場合にブラウザーが新しく含まれるブロックを作成して [here] (https://developer.mozilla.org/en-US/docs/Web/CSS/position#fixed) のようにオーバーレイがこのブロックに制限されるためです。

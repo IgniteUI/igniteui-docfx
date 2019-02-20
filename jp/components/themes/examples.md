@@ -74,22 +74,18 @@ _language: ja
 @import '~igniteui-angular/lib/core/styles/components/grid-paginator/grid-paginator-component';
 @import '~igniteui-angular/lib/core/styles/components/grid-paginator/grid-paginator-theme';
 
-// Import grid-filtering component and theme styles
-@import '~igniteui-angular/lib/core/styles/components/grid-filtering/grid-filtering-component';
-@import '~igniteui-angular/lib/core/styles/components/grid-filtering/grid-filtering-theme';
-
 ```
 - [**Igx-Dialog**](../dialog.md) の組み込み [**Igx-Input-Group**](../input_group.md)。
 
 ```scss
 
 // Import dialog-group component and theme styles
-@import '~igniteui-angular/lib/core/styles//components/dialog/dialog-component';
-@import '~igniteui-angular/lib/core/styles//components/dialog/dialog-theme';
+@import '~igniteui-angular/lib/core/styles/components/dialog/dialog-component';
+@import '~igniteui-angular/lib/core/styles/components/dialog/dialog-theme';
 
 // Import input-group component and theme styles
-@import '~igniteui-angular/lib/core/styles//components/input/input-group-component';
-@import '~igniteui-angular/lib/core/styles//components/input/input-group-theme';
+@import '~igniteui-angular/lib/core/styles/components/input/input-group-component';
+@import '~igniteui-angular/lib/core/styles/components/input/input-group-theme';
 
 ```
 
@@ -320,13 +316,14 @@ export class ThemeChooserSampleComponent implements OnInit {
 </div>
 <div class="divider--half"></div>
 
-###API
+### API
 
 * [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 * [IgxGrid Filtering Styles]({environment:sassApiUrl}/index.html#function-igx-grid-filtering-theme)
 * [IgxGrid Paginator Styles]({environment:sassApiUrl}/index.html#function-igx-grid-paginator-theme)
 * [IgxDialogComponent Styles]({environment:sassApiUrl}/index.html#function-igx-dialog-theme)
 * [IgxInputGroupComponent Styles]({environment:sassApiUrl}/index.html#function-igx-input-group-theme) 
+* [IgxOverlay Styles]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
 
 ### その他のリソース
 <div class="divider--half"></div>

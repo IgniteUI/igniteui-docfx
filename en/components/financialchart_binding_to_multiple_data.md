@@ -1,13 +1,15 @@
 ---
 title: Financial Chart - Binding to Multiple Data Sources
 _description: The Ignite UI for Angular Financial Chart component is easily configured to display financial data using a simple and intuitive API, as once the user binds the data, the chart offers multiple ways in which the data can then be visualized and interpreted.
-_keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Chart Control, Angular Chart Example, Angular Grid Component, Angular Chart Component, Angular Financial Chart
+_keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Chart Control, Angular Chart Example, Angular Chart Component, Angular Financial Chart
 ---
+
 ## Binding Financial Chart to Multiple Data Sources
 
-The `igx-financial-chart` control can bind easily to multiple data sources, as shown in the following demo.
+The `IgxFinancialChart` control can bind easily to multiple data sources, as shown in the following demo.
 
 ### Demo
+
 <div class="sample-container" style="height: 500px">
     <iframe id="financial-chart-multiple-data-iframe" src='{environment:demosBaseUrl}/charts/financial-chart-multiple-data' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -18,7 +20,6 @@ The `igx-financial-chart` control can bind easily to multiple data sources, as s
 <div class="divider--half"></div>
 
 The financial chart can plot multiple data sources as long as your each data source is added to an array. The following code snippet demonstrates how to create a multiple data sources.
-
 
 ```typescript
 let dataSource1: any = [
@@ -39,7 +40,6 @@ dataSource1.title = "Stock1 Name (Symbol)";
 dataSource2.title = "Stock2 Name (Symbol)";
 
 let data: any = [ dataSource1, dataSource2 ]
-
 ```
 
 The following code demonstrates how to bind the financial chart to the above data.
@@ -53,8 +53,9 @@ The following code demonstrates how to bind the financial chart to the above dat
 <div class="divider--half"></div>
 
 ### Additional Resources
+
 <div class="divider--half"></div>
 
-* [Chart Performance](financialchart_performance.md)
-* [Binding Real-Time Data](financialchart_real_time_data.md)
-* [Binding High Volume Data](financialchart_high_volume_data.md)
+-   [Chart Performance](financialchart_performance.md)
+-   [Binding Real-Time Data](financialchart_real_time_data.md)
+-   [Binding High Volume Data](financialchart_high_volume_data.md)

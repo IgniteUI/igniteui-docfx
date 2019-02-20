@@ -7,7 +7,7 @@ _language: ja
 
 ## Ignite UI CLI
 
-[`Ignite UI CLI`](https://github.com/IgniteUI/igniteui-cli) はさまざまなフレームワークのためにアプリケーションを作成して scaffold するコマンドライン ツールです。Ignite UI CLI は、Ignite UI for Angular の定義済みのプロジェクト テンプレートが含まれ、アプリ開発を効率的に行うことができます。Ignite UI for Angular コンポーネントのビュー選択により、生産性を向上します。
+[`Ignite UI CLI`](https://github.com/IgniteUI/igniteui-cli) はさまざまなフレームワーク用にアプリケーションを作成して scaffold するコマンドライン ツールです。Ignite UI CLI は、Ignite UI for Angular の定義済みのプロジェクト テンプレートが含まれ、アプリ開発を効率的に行うことができます。Ignite UI for Angular コンポーネントのビュー選択により、生産性を向上します。
 
 ### 作業の開始
 
@@ -32,7 +32,7 @@ ig
 </div>
 
 #### コマンドの使用
-Ignite UI CLI [コマンド](#available-commands)を使用し、Ignite UI プロジェクトを生成、新しいコンポーネントの追加、プロジェクトのビルドができます。以下のコマンドを使用できます。
+Ignite UI CLI [コマンド](#available-commands)を使用し、Ignite UI プロジェクトを生成、新しいコンポーネントの追加、プロジェクトのビルドが可能です。以下のコマンドを使用できます。
 ```cmd
 ig new <project name> --framework=angular --type=igx-ts 
 cd <project name>
@@ -50,7 +50,7 @@ ig add grid newGrid
 ig start
 ```
 
-シンプルなコマンドの実行した後、新しいプロジェクトがビルドされて提供されます。これによりデフォルト ブラウザーが自動的に開かれ、グリッド コントロールをインスペクトしてプロジェクトに変更を加えることができます。
+シンプルなコマンドを実行後、新しいプロジェクトがビルドされ、提供されます。これによりデフォルト ブラウザーが自動的に開かれ、グリッド コントロールをインスペクトしてプロジェクトに変更を加えることができます。
 
 ### コマンド
 

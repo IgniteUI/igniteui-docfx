@@ -8,7 +8,7 @@ _language: kr
 ## Excel 내보내기
 
 <p class="highlight">
-Ignite UI for Angular의 Excel 내보내기 서비스는 원시 데이터(배열) 또는 [**IgxGrid**](grid.md) 에서 Microsoft® Excel® 형식으로 데이터를 내보내기할 수 있습니다. 내보내기 기능은 [`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html) 클래스에 캡슐화되며 데이터는 MS Excel 표 형식으로 내보내기가 됩니다. 이 형식은 필터링, 정렬 등과 같은 기능을 사용할 수 있습니다.</p>
+Ignite UI for Angular의 Excel 내보내기 서비스는 원시 데이터(배열) 또는 [**IgxGrid**](grid/grid.md) 에서 Microsoft® Excel® 형식으로 데이터를 내보내기할 수 있습니다. 내보내기 기능은 [`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html) 클래스에 캡슐화되며 데이터는 MS Excel 표 형식으로 내보내기가 됩니다. 이 형식은 필터링, 정렬 등과 같은 기능을 사용할 수 있습니다.</p>
 <div class="divider"></div>
 
 ### Excel 내보내기 데모
@@ -79,7 +79,7 @@ public exportButtonHandler() {
 
 ### IgxGrid's 데이터 내보내기
 
-Excel 내보내기 서비스는 [**IgxGrid**](grid.md)에서 MS Excel 형식으로 데이터를 내보내기 할 수도 있습니다.유일한 차이점은 IgxExcelExporterService의 내보내기 메소드를 호출하고 IgxGrid를 첫 번째 인수로 전달해야 한다는 것입니다.
+Excel 내보내기 서비스는 [**IgxGrid**](grid/grid.md)에서 MS Excel 형식으로 데이터를 내보내기 할 수도 있습니다.유일한 차이점은 IgxExcelExporterService의 내보내기 메소드를 호출하고 IgxGrid를 첫 번째 인수로 전달해야 한다는 것입니다.
 
 다음은 그 예입니다:
 
@@ -141,7 +141,7 @@ this.excelExportService.onColumnExport.subscribe((args: IColumnExportingEventArg
 this.excelExportService.export(this.igxGrid1, new IgxExcelExporterOptions("ExportedDataFile"));
 ```
 
-[**IgxGrid**](grid.md) 에서 데이터를 내보내기 할 때 내보내기 처리는 행 필터링 및 열 숨기기 등의 기능을 사용하고 [**IgxGrid**](grid.md) 에 표시되는 데이터만 내보내기를 합니다. [`IgxExcelExporterOptions`]({environment:angularApiUrl}/classes/igxexcelexporteroptions.html) 객체의 속성을 설정하여 필터링된 행 또는 숨겨진 열을 포함하도록 내보내기 서비스를 구성할 수 있습니다. 이러한 속성은 아래 표에 설명되어 있습니다.
+[**IgxGrid**](grid/grid.md) 에서 데이터를 내보내기 할 때 내보내기 처리는 행 필터링 및 열 숨기기 등의 기능을 사용하고 [**IgxGrid**](grid/grid.md) 에 표시되는 데이터만 내보내기를 합니다. [`IgxExcelExporterOptions`]({environment:angularApiUrl}/classes/igxexcelexporteroptions.html) 객체의 속성을 설정하여 필터링된 행 또는 숨겨진 열을 포함하도록 내보내기 서비스를 구성할 수 있습니다. 이러한 속성은 아래 표에 설명되어 있습니다.
 
 ### API 요약
 

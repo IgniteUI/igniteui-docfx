@@ -19,7 +19,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ### Usage
  Circular Progress Indicator can be used to show a user that he is in a process.
-To get started with the Ignite UI for Angular Circular Progress,  we should first import import the [**IgxProgressBarModule**]({environment:angularApiUrl}/classes/igxprogressbarmodule.html) in the **app.module.ts** file:
+To get started with the Ignite UI for Angular Circular Progress,  we should first import the [**IgxProgressBarModule**]({environment:angularApiUrl}/classes/igxprogressbarmodule.html) in the **app.module.ts** file:
 ```typescript
 // app.module.ts
 
@@ -116,6 +116,18 @@ And now if we set up everything correctly we should have the folllowing displaye
 > The default progress update is **1% of the [`max`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#max) value**, this occurs when the [`step`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#step) value is not defined. For faster progress, the [`step`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#step) value should be defined greater than (**[`max`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#max) * 1%**),  for slower, it should be less than the default progress update.
 
 > When providing a value for the [`step`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#step) input, define this value greater than the [`value`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#value) input, otherwise there will be only one update, which gets **the value that is passed for progress update**.   
+
+#### Indeterminate progress
+
+If you want to track a process, which does not provide predetermined end condition, you can set the [`indeterminate`]({environment:angularApiUrl}/classes/igxcircularprogressbarcomponent.html#indeterminate) input property to `true`.
+Applying this binding to your progress bar will result:
+
+<div class="sample-container loading" style="height:300px">
+    <iframe id="indeterminate-progressbar-sample-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/data-display/circular-indeterminate-progressbar" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="indeterminate-progressbar-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
 <div class="divider--half"></div>
 
 ### API
