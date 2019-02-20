@@ -13,7 +13,7 @@ Column moving works as well with pinned columns. Dragging an unpinned column and
 #### Demo
 
 @@if (igxName === 'IgxGrid') {
-<div class="sample-container loading" style="height:630px">
+<div class="sample-container loading" style="height:650px">
     <iframe id="column-moving-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-moving-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
@@ -23,7 +23,7 @@ Column moving works as well with pinned columns. Dragging an unpinned column and
 <div class="divider--half"></div>
 }
 @@if (igxName === 'IgxTreeGrid') {
-<div class="sample-container loading" style="height:630px">
+<div class="sample-container loading" style="height:650px">
     <iframe id="treegrid-column-moving-sample-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-column-moving' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
@@ -119,7 +119,7 @@ public onColumnMovingEnd(event) {
 * [Column Resizing](column_resizing.md)
 * [Selection](selection.md)
 * [Searching](search.md)
-* [Excel Exporter](exporter_excel.md)
+* [Excel Exporter](export_excel.md)
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.
