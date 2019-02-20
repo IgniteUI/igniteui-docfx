@@ -189,9 +189,6 @@
     - name: 도구 모음
       href: hierarchicalGrid/toolbar.md
       new: true
-    - name: Excel 내보내기
-      href: hierarchicalGrid/export_excel.md
-      new: true
     - name: 복수 열 헤더
       href: hierarchicalGrid/multi_column_headers.md
       new: true
