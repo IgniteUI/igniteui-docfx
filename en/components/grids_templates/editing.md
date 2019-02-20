@@ -210,7 +210,7 @@ const row = this.grid.getRowByIndex(rowIndex);
 row.delete();
 ```
 }
-@@if (igxName === 'IgxGrid') {
+@@if (igxName === 'IgxTreeGrid') {
 ```typescript
 // Delete row through Tree Grid API
 this.treeGrid.deleteRow(this.selectedCell.cellID.rowID);
