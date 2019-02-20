@@ -272,7 +272,7 @@ These can be wired to user interactions, not necessarily related to the **@@igSe
 
 <div class="divider--half"></div>
 
-## API References
+### API References
 
 * [IgxGridCellComponent]({environment:angularApiUrl}/classes/igxgridcellcomponent.html)
 * [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
