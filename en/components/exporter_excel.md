@@ -7,7 +7,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ### Excel Exporter
 
 <p class="highlight">
-The Ignite UI for Angular Excel Exporter service can export data in Microsoft® Excel® format from raw data (array) or from the following components: [**IgxGrid**](grid/grid.md), [**IgxTreeGrid**](treeGrid/tree_grid.md) and [**IgxHierarchicalGrid**](hierarchicalGrid/hierarchical_grid.md). The exporting functionality is encapsulated in the [`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html) class and the data is exported in MS Excel table format. This format allows features like filtering, sorting, etc.</p>
+The Ignite UI for Angular Excel Exporter service can export data in Microsoft® Excel® format from raw data (array) or from the following components: [**IgxGrid**](grid/grid.md) and [**IgxTreeGrid**](treeGrid/tree_grid.md). The exporting functionality is encapsulated in the [`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html) class and the data is exported in MS Excel table format. This format allows features like filtering, sorting, etc.</p>
 <div class="divider"></div>
 
 #### Excel Exporter Demo
@@ -99,9 +99,9 @@ The Excel Exporter service has a few more APIs to explore, which are listed belo
 * [`IgxExcelExporterOptions API`]({environment:angularApiUrl}/classes/igxexcelexporteroptions.html)
 
 Grids Excel Exporters:
-* [`IgxGrid Excel Exporters`]({grid/export_excel.md})
-* [`IgxTreeGrid Excel Exporters`]({treeGrid/export_excel.md})
-* [`IgxHierarchicalGrid Excel Exporters`]({hierarchicalGrid/export_excel.md})
+* [`IgxGrid Excel Exporters`](grid/export_excel.md)
+* [`IgxTreeGrid Excel Exporters`](treeGrid/export_excel.md)
+* [`IgxHierarchicalGrid Excel Exporters`](hierarchicalGrid/export_excel.md)
 
 Additional components that were used:
 * [IgxGridComponent API]({environment:angularApiUrl}/classes/igxgridcomponent.html)

@@ -189,9 +189,6 @@
     - name: ツールバー
       href: hierarchicalGrid/toolbar.md
       new: true
-    - name: Excel エクスポート
-      href: hierarchicalGrid/export_excel.md
-      new: true
     - name: 複数列ヘッダー
       href: hierarchicalGrid/multi_column_headers.md
       new: true

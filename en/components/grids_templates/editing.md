@@ -1,4 +1,4 @@
----
+﻿---
 title: Grid Editing - Native Angular | Ignite UI for Angular
 _description: The Ignite UI for Angular Data Grid control provides default cell templates for editable columns which are based on the data type of the column.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Component, Angular Grid, Angular Data Grid component, Angular Data Grid control, Angular Grid component, Angular Grid control, Angular High Performance Grid, Cell Editing
@@ -20,7 +20,7 @@ The @@igComponent component in Ignite UI for Angular provides you a default cell
 </div>
 }
 @@if (igxName === 'IgxTreeGrid') {
-<div class="sample-container loading" style="height:950px">
+<div class="sample-container loading" style="height:650px">
     <iframe id="treegrid-editing-sample-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-editing' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
@@ -29,7 +29,13 @@ The @@igComponent component in Ignite UI for Angular provides you a default cell
 </div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-<!-- TODO -->
+<div class="sample-container loading" style="height:650px">
+    <iframe id="hierarchical-grid-editing-sample-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-editing' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-editing-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
 }
 <div class="divider--half"></div>
 
@@ -81,7 +87,13 @@ You can also modify the cell value through the @@igxName API but only if primary
 ```
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-<!-- TODO -->
+```typescript
+...
+    public updateCell() {
+        this.hierarchicalGrid.updateCell(newValue, rowID, 'Age');
+    }
+...
+```
 }
 Please notice that if the cell you want to update is outside @@igComponent's display container the new value will not be submitted.
 
@@ -112,15 +124,20 @@ Another way to update cell is directly through [`update`]({environment:angularAp
 ```
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-<!-- TODO -->
+```typescript
+...
+    public updateCell() {
+        const cell = this.hierarchicalGrid.getCellByColumn(rowIndex, 'ReorderLevel');
+        // You can also get cell by rowID if primary key is defined
+        // cell = this.hierarchicalGrid.getCellByKey(rowID, 'ReorderLevel');
+        cell.update(70);
+    }
+...
+```
 }
 
 @@if (igxName === 'IgxGrid') {
 If you want to define a custom template which will be applied when the cell is in edit mode, you can see the documentation for [Grid Columns configuration](grid.md#columns-configuration).
-}
-@@if (igxName === 'IgxHierarchicalGrid') {
-<!-- TODO -->
-<!-- Populate this with the correct link from the hierarchical grid if applicable -->
 }
 
 ### CRUD operations
@@ -154,7 +171,14 @@ public addNewChildRow() {
 ```
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-<!-- TODO -->
+```typescript
+public addRow() {
+    // Adding a new record
+    // Assuming we have a `getNewRecord` method returning the new row data
+    const record = this.getNewRecord();
+    this.hierarchicalGrid.addRow(record, 1);
+    }
+```
 }
 
 #### Updating data in the @@igComponent
@@ -194,7 +218,20 @@ row.update(newData);
 ```
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-<!-- TODO -->
+```typescript
+// Updating the whole row
+this.hierarchicalGrid.updateRow(newData, this.selectedCell.cellID.rowID);
+
+// Just a particular cell through the Grid API
+this.hierarchicalGrid.updateCell(newData, this.selectedCell.cellID.rowID, this.selectedCell.column.field);
+
+// Directly using the cell `update` method
+this.selectedCell.update(newData);
+
+// Directly using the row `update` method
+const row = this.hierarchicalGrid.getRowByKey(rowID);
+row.update(newData);
+```
 }
 
 #### Deleting data from the @@igComponent
@@ -220,7 +257,13 @@ row.delete();
 ```
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-<!-- TODO -->
+```typescript
+// Delete row through Grid API
+this.hierarchicalGrid.deleteRow(this.selectedCell.cellID.rowID);
+// Delete row through row object
+const row = this.hierarchicalGrid.getRowByIndex(rowIndex);
+row.delete();
+```
 }
 These can be wired to user interactions, not necessarily related to the **@@igSelector**; for example, a button click:
 ```html
