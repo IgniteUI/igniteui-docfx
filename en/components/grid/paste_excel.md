@@ -225,7 +225,7 @@ export class PasteHandler {
 ### Additional Resources
 <div class="divider--half"></div>
 
-* [Excel Exporter](../exporter_excel.md)
+* [Excel Exporter](export_excel.md)
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.
