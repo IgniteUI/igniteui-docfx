@@ -124,7 +124,7 @@
       new: false
     - name: 검색
       href: treeGrid/search.md
-      new: true
+      new: false
     - name: 도구 모음
       href: treeGrid/toolbar.md
       new: false
@@ -142,65 +142,65 @@
       new: false
 - name: Hierarchical Grid
   href: hierarchicalGrid/hierarchical_grid.md
-  new: false
+  new: true
   items:
     - name: 가상화 및 성능
       href: hierarchicalGrid/virtualization.md
-      new: false
+      new: true
     - name: 편집
       href: hierarchicalGrid/editing.md
-      new: false
+      new: true
     - name: 행 편집
       href: hierarchicalGrid/row_editing.md
-      new: false
+      new: true
     - name: 트랜잭션
       href: hierarchicalGrid/batch_editing.md
-      new: false
+      new: true
     - name: 페이징
       href: hierarchicalGrid/paging.md
-      new: false
+      new: true
     - name: 필터링
       href: hierarchicalGrid/filtering.md
-      new: false
+      new: true
     - name: 정렬
       href: hierarchicalGrid/sorting.md
-      new: false
+      new: true
     - name: 요약
       href: hierarchicalGrid/summaries.md
-      new: false
+      new: true
     - name: 열 이동
       href: hierarchicalGrid/column_moving.md
-      new: false
+      new: true
     - name: 열 핀 고정
       href: hierarchicalGrid/column_pinning.md
-      new: false
+      new: true
     - name: 크기 조정
       href: hierarchicalGrid/column_resizing.md
-      new: false
+      new: true
     - name: 숨기기
       href: hierarchicalGrid/column_hiding.md
-      new: false
+      new: true
     - name: 행 선택
       href: hierarchicalGrid/selection.md
-      new: false
+      new: true
     - name: 검색
       href: hierarchicalGrid/search.md
-      new: false
+      new: true
     - name: 도구 모음
       href: hierarchicalGrid/toolbar.md
-      new: false
+      new: true
     - name: Excel 내보내기
       href: hierarchicalGrid/export_excel.md
-      new: false
+      new: true
     - name: 복수 열 헤더
       href: hierarchicalGrid/multi_column_headers.md
-      new: false
+      new: true
     - name: 표시 밀도
       href: hierarchicalGrid/display_density.md
-      new: false
+      new: true
     - name: 조건부 셀 스타일
       href: hierarchicalGrid/conditional_cell_styling.md
-      new: false
+      new: true
 - name: List View
   href: list.md
 - name: Combo
