@@ -1,4 +1,4 @@
----
+﻿---
 title: @@igComponent Row Editing - Native Angular | Ignite UI for Angular
 _description: Row editing - allows modification of several cells in the row, before submitting, at once, all those changes to the @@igComponent's data source. Leverages the pending changes functionality of the new transaction provider.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Component, Angular Grid, Angular TreeGrid, Angular Data Grid component, Angular Data TreeGrid component, Angular Data Grid control, Angular Data TreeGrid control, Angular TreeGrid component, Angular Grid component, Angular Grid control, Angular TreeGrid control, Angular High Performance Grid, Cell Editing
@@ -35,7 +35,14 @@ The following sample demonstrates how to enable row editing in the @@igComponent
 <div class="divider--half"></div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-    <!-- TODO: IgxHierarchicalGrid content -->
+   <div class="sample-container loading" style="height:500px">
+    <iframe id="hierarchical-grid-row-editing-sample-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-row-editing' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-row-editing-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
 }
 
 > [!NOTE]
@@ -97,7 +104,38 @@ Then define a @@igComponent with bound data source and [`rowEditable`]({environm
 ```
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-    <!-- TODO: Hierarchical grid -->
+```html
+        <igx-hierarchical-grid #hierarchicalGrid class="hgrid" [data]="localdata" [autoGenerate]="false"
+        [height]="'600px'" [width]="'100%'">
+            <igx-column field="Artist" [editable]="true" [dataType]="'string'"></igx-column>
+            <igx-column field="HasGrammyAward" [editable]="true" [dataType]="'boolean'">
+            </igx-column>
+            <igx-column field="Debut" [editable]="true" [dataType]="'number'"></igx-column>
+            <igx-column field="GrammyNominations" [editable]="true" [dataType]="'number'" [hasSummary]="true"></igx-column>
+            <igx-column field="GrammyAwards" [editable]="true" [dataType]="'number'"
+            [hasSummary]="true"></igx-column>
+            <igx-column width="10%">
+                <ng-template igxCell let-cell="cell">
+                    <button igxButton="icon" (click)="removeRow(cell.cellID.rowIndex)">
+                        <igx-icon>delete</igx-icon>
+                    </button>
+                </ng-template>
+            </igx-column>
+
+        <igx-row-island [key]="'Albums'" #layout1 [autoGenerate]="false">
+            <igx-column field="Album" [editable]="true" [dataType]="'string'"></igx-column>
+            <igx-column field="Launch Date" [editable]="true" [dataType]="'date'"></igx-column>
+            <igx-column field="Billboard Review" [editable]="true" [dataType]="'number'"></igx-column>
+            <igx-column field="US Billboard 200" [editable]="true" [dataType]="'number'"></igx-column>
+            <igx-row-island [key]="'Songs'" [autoGenerate]="false">
+                    <igx-column field="No."></igx-column>
+                    <igx-column field="Title"></igx-column>
+                    <igx-column field="Released"></igx-column>
+                    <igx-column field="Genre"></igx-column>
+            </igx-row-island>
+        </igx-row-island>
+    </igx-hierarchical-grid>
+```
 }
 
 > [!NOTE]
@@ -161,7 +199,31 @@ export class TreeGridRowEditSampleComponent implements OnInit {
 ```
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-    <!-- TODO: Hierarchical grid -->
+```typescript
+import { Component, OnInit, ViewChild } from "@angular/core";
+import { IgxRowIslandComponent, IgxHierarchicalGridComponent } from "igniteui-angular";
+import { SINGERS } from './data';
+
+@Component({
+    selector: "hierarchical-grid-row-editing",
+    styleUrls: ["./hierarchical-grid-row-editing.component.scss"],
+    templateUrl: "hierarchical-grid-row-editing.component.html"
+})
+
+export class HGridRowEditingSampleComponent implements OnInit {
+    public localdata;
+
+    @ViewChild('layout1')
+    layout1: IgxRowIslandComponent;
+
+    @ViewChild('hierarchicalGrid')
+    hierarchicalGrid: IgxHierarchicalGridComponent;
+
+    constructor() {
+        this.localdata = SINGERS;
+    }
+}
+```
 }
 
 > [!NOTE]
