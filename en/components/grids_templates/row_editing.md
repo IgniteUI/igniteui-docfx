@@ -4,12 +4,12 @@ _description: Row editing - allows modification of several cells in the row, bef
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Component, Angular Grid, Angular TreeGrid, Angular Data Grid component, Angular Data TreeGrid component, Angular Data Grid control, Angular Data TreeGrid control, Angular TreeGrid component, Angular Grid component, Angular Grid control, Angular TreeGrid control, Angular High Performance Grid, Cell Editing
 ---
 
-## @@igComponent Row Editing
+### @@igComponent Row Editing
 
 Row editing - allows modification of several cells in the row, before submitting, at once, all those changes to the @@igComponent's data source. Leverages the pending changes functionality of the new transaction provider.
 
 
-### Demo
+#### Demo
 
 The following sample demonstrates how to enable row editing in the @@igComponent. Changing a cell value and then clicking or navigating to another cell on the same row will not update row value until confirmed, using the Done button, or discarded, using the Cancel one.
 
@@ -41,7 +41,7 @@ The following sample demonstrates how to enable row editing in the @@igComponent
 > [!NOTE]
 > When a row is in edit mode, then clicking on a cell on another row will act like the Done button is pressed - submit all the changes of the previous row. If the new cell that gets focus is editable, then the new row also enters edit mode, while if the cell is not editable, then only the previous row exits edit mode.
 
-## Usage
+### Usage
 
 To get started import the `@@igxNameModule` in the **app.module.ts** file:
 
@@ -167,7 +167,7 @@ export class TreeGridRowEditSampleComponent implements OnInit {
 > [!NOTE]
 > The @@igComponent uses internally a provider [`IgxBaseTransactionService`]({environment:angularApiUrl}/classes/igxbasetransactionservice.html) that holds pending cell changes, until row state submitted or cancelled.
 
-## Positioning
+### Positioning
 
 - Default position of the overlay will be below the row that is in edit mode
      
@@ -175,7 +175,7 @@ export class TreeGridRowEditSampleComponent implements OnInit {
      
 - Once shown - top or bottom, overlay will maintain this position during scrolling, until the overlay is closed.
 
-## Behavior
+### Behavior
 
 - If row is in edit mode, then editing will continue, if a cell from the same row is clicked.
 
@@ -192,7 +192,7 @@ export class TreeGridRowEditSampleComponent implements OnInit {
 - Each modified cell gets edited style until row edit is finished. This is the behavior, when @@igComponent is not provided with transactions. When transactions are available - then cell edit style is applied until all the changes are committed.
 
 
-## Keyboard Navigation
+### Keyboard Navigation
 
 - `Enter` and `F2` enters row edit mode
 
@@ -201,7 +201,7 @@ export class TreeGridRowEditSampleComponent implements OnInit {
 - `Tab` move focus from one editable cell in the row to the next and from the right-most editable cell to the CANCEL and DONE buttons. Navigation from DONE button goes to the left-most editable cell within the currently edited row.
 
 
-## Feature Integration
+### Feature Integration
 
 - Any data changing operation will terminate row editing operations and will submit current row changes. This will include operations like sorting, changing grouping and filtering criteria, paging, etc.
 
@@ -210,9 +210,9 @@ export class TreeGridRowEditSampleComponent implements OnInit {
 - Expanding and collapsing grouped rows will not terminate editing for the current row.
 
 
-## Customizing Row Editing Overlay
+### Customizing Row Editing Overlay
 
-### Customizing Text
+#### Customizing Text
 
 Customizing the text of the row editing overlay is possible using the `igxRowEditTextDirective`.
 The `rowChangesCount` property is exposed and it holds the count of the changed cells.
@@ -223,47 +223,28 @@ The `rowChangesCount` property is exposed and it holds the count of the changed 
 </ng-template>
  ```
 
- ### Customizing Buttons
+#### Customizing Buttons
 Customizing the buttons of the row editing overlay is possible using the `igxRowEditActionsDirective`.
 If you want the buttons to be part of the keyboard navigation, then each on of them should have the `igxRowEditTabStopDirective`.
 
- ```typescript
+ ```html
  <ng-template igxRowEditActions let-endRowEdit>
 	<button igxButton igxRowEditTabStop (click)="endRowEdit(false)">Cancel</button>
 	<button igxButton igxRowEditTabStop (click)="endRowEdit(true)">Apply</button>
 </ng-template>
  ```
 
-## API References
+### API References
 
-@@if (igxName === 'IgxGrid') {
-### igxGrid Inputs
-
-* [rowEditable]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditable)
-
-### igxGrid Outputs
-
-* [onRowEditEnter]({environment:angularApiUrl}/classes/igxgridcomponent.html#onroweditenter)
-* [onRowEdit]({environment:angularApiUrl}/classes/igxgridcomponent.html#onrowedit)
-* [onRowEditCancel]({environment:angularApiUrl}/classes/igxgridcomponent.html#onroweditcancel)
-
-### igxGrid Methods
-
-* [endEdit]({environment:angularApiUrl}/classes/igxgridcomponent.html#endedit)
-}
-@@if (igxName === 'IgxTreeGrid') {
-* [`rowEditable`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#roweditable)
-* [`field`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#field)
-* [`editable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable)
-* [`endRowEdit`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#endrowedit)
-* [`primaryKey`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#primarykey)
-* [`IgxTreeGridModule`]({environment:angularApiUrl}/classes/igxtreegridmodule.html)
-* [`IgxTreeGridComponent`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html)
-* [`IgxGridComponent`]({environment:angularApiUrl}/classes/igxgridcomponent.html)
-}
-@@if (igxName === 'IgxHierarchicalGrid') {
-    <!-- TODO: Hierarchical grid -->
-}
+* [rowEditable]({environment:angularApiUrl}/classes/@@igTypeDoc.html#roweditable)
+* [onRowEditEnter]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onroweditenter)
+* [onRowEdit]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onrowedit)
+* [onRowEditCancel]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onroweditcancel)
+* [endEdit]({environment:angularApiUrl}/classes/@@igTypeDoc.html#endedit)
+* [field]({environment:angularApiUrl}/classes/igxcolumncomponent.html#field)
+* [editable]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable)
+* [primaryKey]({environment:angularApiUrl}/classes/@@igTypeDoc.html#primarykey)
+* [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
 
 ### Additional Resources
 <div class="divider--half"></div>
