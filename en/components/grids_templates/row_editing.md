@@ -227,7 +227,7 @@ The `rowChangesCount` property is exposed and it holds the count of the changed 
 Customizing the buttons of the row editing overlay is possible using the `igxRowEditActionsDirective`.
 If you want the buttons to be part of the keyboard navigation, then each on of them should have the `igxRowEditTabStopDirective`.
 
- ```typescript
+ ```html
  <ng-template igxRowEditActions let-endRowEdit>
 	<button igxButton igxRowEditTabStop (click)="endRowEdit(false)">Cancel</button>
 	<button igxButton igxRowEditTabStop (click)="endRowEdit(true)">Apply</button>
@@ -236,34 +236,15 @@ If you want the buttons to be part of the keyboard navigation, then each on of t
 
 ## API References
 
-@@if (igxName === 'IgxGrid') {
-### igxGrid Inputs
-
-* [rowEditable]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditable)
-
-### igxGrid Outputs
-
-* [onRowEditEnter]({environment:angularApiUrl}/classes/igxgridcomponent.html#onroweditenter)
-* [onRowEdit]({environment:angularApiUrl}/classes/igxgridcomponent.html#onrowedit)
-* [onRowEditCancel]({environment:angularApiUrl}/classes/igxgridcomponent.html#onroweditcancel)
-
-### igxGrid Methods
-
-* [endEdit]({environment:angularApiUrl}/classes/igxgridcomponent.html#endedit)
-}
-@@if (igxName === 'IgxTreeGrid') {
-* [`rowEditable`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#roweditable)
-* [`field`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#field)
-* [`editable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable)
-* [`endRowEdit`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#endrowedit)
-* [`primaryKey`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#primarykey)
-* [`IgxTreeGridModule`]({environment:angularApiUrl}/classes/igxtreegridmodule.html)
-* [`IgxTreeGridComponent`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html)
-* [`IgxGridComponent`]({environment:angularApiUrl}/classes/igxgridcomponent.html)
-}
-@@if (igxName === 'IgxHierarchicalGrid') {
-    <!-- TODO: Hierarchical grid -->
-}
+* [rowEditable]({environment:angularApiUrl}/classes/@@igTypeDoc.html#roweditable)
+* [onRowEditEnter]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onroweditenter)
+* [onRowEdit]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onrowedit)
+* [onRowEditCancel]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onroweditcancel)
+* [endEdit]({environment:angularApiUrl}/classes/@@igTypeDoc.html#endedit)
+* [field]({environment:angularApiUrl}/classes/igxcolumncomponent.html#field)
+* [editable]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable)
+* [primaryKey]({environment:angularApiUrl}/classes/@@igTypeDoc.html#primarykey)
+* [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
 
 ### Additional Resources
 <div class="divider--half"></div>
