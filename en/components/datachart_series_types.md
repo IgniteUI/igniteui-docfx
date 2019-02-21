@@ -8,6 +8,8 @@ _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Nati
 
 In the `IgxDataChart` control, series are classified into groups of similar series: Category Series, Financial Series, Polar Series, Radial Series, Range Series, Scatter Series, Stacked Series, and Shape Series.
 
+In addition to these series, you can add [Series Annotations](datachart_series_annotations.md) and [Series Highlighting](datachart_series_highlighting.md) in the `IgxDataChart` control.
+
 The following list shows all types of the series in each of their groups. Click on a name of a series to navigate to a help topic that provides details on how to use a given series in the `IgxDataChart` control.
 
 #### Category Series
