@@ -21,7 +21,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 > To start using Ignite UI for Angular components in your own projects, make sure you have configured all necessary dependencies and have performed the proper setup of your project. You can learn how to do this in the [**installation**](https://www.infragistics.com/products/ignite-ui-angular/getting-started#installation) topic.
 
 ### Usage
-To get started with the Ignite UI for Angular Drop Down, let's first import the [IgxDropDownModule]({environment:angularApiUrl}/classes/igxdropdownmodule.html) in the **app.module.ts** file:
+To get started with the Ignite UI for Angular Drop Down, let's first import the `IgxDropDownModule` in the **app.module.ts** file:
 
 ```typescript
 // app.module.ts
