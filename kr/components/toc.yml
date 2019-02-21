@@ -124,7 +124,7 @@
       new: false
     - name: 검색
       href: treeGrid/search.md
-      new: false
+      new: true
     - name: 도구 모음
       href: treeGrid/toolbar.md
       new: false
