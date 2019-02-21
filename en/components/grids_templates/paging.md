@@ -262,7 +262,7 @@ After all the changes above, the following result will be achieved.
 
 #### Demo
 
-<div class="sample-container loading" style="height:600px">
+<div class="sample-container loading" style="height:650px">
     <iframe id="grid-remote-paging-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-remote-paging-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
