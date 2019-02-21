@@ -476,7 +476,6 @@ Styles:
 * [Column Resizing](column_resizing.md)
 * [Selection](selection.md)
 * [Searching](search.md)
-* [Export to Excel](export_excel.md)
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.
