@@ -4,7 +4,7 @@ _description: The Ignite UI for Angular Hierarchical Grid control features the f
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Hierarchical Grid component, Angular Hierarchical Grid control, Angular High Performance Hierarchical Grid, Hierarchical Grid
 ---
 ## Hierarchical Grid
-<p class="highlight">Display and manipulate hierarchical data with the Ignite UI for Angular Hierarchical Grid. Quickly bind your data with very little coding or configuration. Features include filtering, sorting, paging, templates, column pinning, column moving and column hiding, as well as the ability to edit and update data. User actions are easy to understand and can be controlled programmatically.</p>
+<p class="highlight">Display and manipulate hierarchically structured data with the Ignite UI for Angular Hierarchical Grid. Features include Filtering, Forting, Paging, Templates, Column Pinning, Column Moving and Column Hiding, as well as the ability to edit and update data. The Hierarchical Grid builds upon the Data Grid and extends its functionality by allowing the users to expand or collapse the rows of the parent grid, revealing the according child grid when more detailed information is needed.</p>
 
 ### Demo
 
@@ -18,7 +18,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <div class="divider--half"></div>
 
 ### Dependencies
-The hierarchical grid is exported as an `NgModule` - all you need to do in your application is import the _IgxHierarchicalGridModule_ inside your `AppModule`.
+The Hierarchical Grid is exported as an `NgModule` - all you need to do in your application is import the _IgxHierarchicalGridModule_ inside your `AppModule`.
 
 ```typescript
 // app.module.ts
@@ -35,21 +35,21 @@ import { IgxHierarchicalGridModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-We can obtain a reference to the hierarchical grid in TypeScript the following way:
+We can obtain a reference to the Hierarchical Grid in TypeScript the following way:
 
 ```typescript
 @ViewChild('hgrid1', { read: IgxHierarchicalGridComponent })
 public hgrid1: IgxHierarchicalGridComponent;
 ```
 
-### Usage
+### Data Binding
 
 **igx-hierarchical-grid** derives from **igx-grid** and shares most of its functionality. The main difference is that it allows multiple levels of hierarchy to be defined. They are configured through a separate tag within the definition of **igx-hierarchical-grid**, called **igx-row-island**. The **igx-row-island** component defines the configuration for each child grid for the particular level. Multiple row islands per level are also supported.
-The hierarchical grid supports two ways of binding to data: 
+The Hierarchical Grid supports two ways of binding to data: 
 
 #### 1. Using hierarchical data
 
-If the application loads the whole hierarchical data as an array of objects referencing children arrays of objects, then the hierarchical grid can be configured to read it and bind to it automatically. Each **igx-row-island** should specify the key of the property that holds the children data.
+If the application loads the whole hierarchical data as an array of objects referencing children arrays of objects, then the Hierarchical Grid can be configured to read it and bind to it automatically. Each **igx-row-island** should specify the key of the property that holds the children data.
 
 ```html
 <igx-hierarchical-grid #grid1 [data]="companies" [autoGenerate]="true">
@@ -130,22 +130,21 @@ The following grid features work on a per grid level, which means that each grid
 - Pinning
 - Moving
 - Summaries
+- Search
 
 The Selection and Navigation features work globally for the whole **igx-hierarchical-grid** 
 
 - Selection 
     Selection does not allow selected cells to be present for two different child grids at once.
 - Navigation
-    When navigating up/down if next/prev element is a child grid, navigation will continue in the related child grid, marking the related cell as selected and focused. If the child cell is outside the current visible view port it is scrolled into view so that selected cell is always visible.
+    When navigating up/down, if next/prev element is a child grid, navigation will continue in the related child grid, marking the related cell as selected and focused. If the child cell is outside the current visible view port it is scrolled into view so that selected cell is always visible.
 
 ### Known Limitations
 
 |Limitation|Description|
 |--- |--- |
-|Search API|Search API is currently not supported by the hierarchical grid, it would be available in future versions of Ignite UI for Angular.|
-|Group By|Group By feature is currently not supported by the hierarchical grid.|
+|Group By|Group By feature is not supported by the hierarchical grid.|
 |Export to Excel|Export to Excel is currently not supported by the hierarchical grid, but it would be available in future versions of Ignite UI for Angular.|
-|Paste from Excel|Paste from Excel is currently not supported by the hierarchical grid, but it would be available in future versions of Ignite UI for Angular.|
 
 ### CRUD operations
 

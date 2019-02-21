@@ -101,7 +101,6 @@ The Excel Exporter service has a few more APIs to explore, which are listed belo
 Grids Excel Exporters:
 * [`IgxGrid Excel Exporters`](grid/export_excel.md)
 * [`IgxTreeGrid Excel Exporters`](treeGrid/export_excel.md)
-* [`IgxHierarchicalGrid Excel Exporters`](hierarchicalGrid/export_excel.md)
 
 Additional components that were used:
 * [IgxGridComponent API]({environment:angularApiUrl}/classes/igxgridcomponent.html)

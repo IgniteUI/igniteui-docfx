@@ -12,7 +12,7 @@ With row selection in Ignite UI for Angular, there is a checkbox that precedes a
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:700px">
-    <iframe id="grid-selection-iframe" src='{environment:demosBaseUrl}/grid/grid-selection' width="100%" height="90%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="grid-selection-iframe" src='{environment:demosBaseUrl}/grid/grid-selection' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
@@ -21,7 +21,7 @@ With row selection in Ignite UI for Angular, there is a checkbox that precedes a
 }
 @@if (igxName === 'IgxTreeGrid') {
 <div class="sample-container loading" style="height:700px">
-    <iframe id="treegrid-selection-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-selection' width="100%" height="90%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="treegrid-selection-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-selection' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
@@ -127,15 +127,15 @@ public selection = true;
 **Note:** If filtering is in place, [`selectAllRows()`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#selectallrows) and [`deselectAllRows()`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#deselectallrows) select/deselect all *filtered* rows.
 
 
-**Note:** When @@igComponent has remote virtualization then clicking the header checkox will select/deselect all records. But when all records are selected through header checkbox and then a visible row has been deselected, when new data is loaded in the @@igComponent on demand, it is a limitation that the newly loaded rows are not selected.
+**Note:** When @@igComponent has remote virtualization then clicking the header checkbox will select/deselect all records. But when all records are selected through header checkbox and then a visible row has been deselected, when new data is loaded in the @@igComponent on demand, it is a limitation that the newly loaded rows are not selected.
 
 **Note:** Cell selection will trigger [`onSelection`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onselection) and not [`onRowSelectionChange`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onrowselectionchange).
 
 ### Code Snippets
 
-#### Select rows programatically
+#### Select rows programmatically
 
-The below code example can be used to select one or multiple rows simultaniously (via [`primaryKey`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#primarykey)):
+The below code example can be used to select one or multiple rows simultaneously (via [`primaryKey`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#primarykey)):
 
 @@if (igxName === 'IgxGrid' || igxName === 'IgxTreeGrid') {
 ```html

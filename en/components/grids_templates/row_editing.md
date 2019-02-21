@@ -88,7 +88,7 @@ Then define a @@igComponent with bound data source and [`rowEditable`]({environm
 }
 @@if (igxName === 'IgxTreeGrid') {
 ```html
-<igx-tree-grid #treeGrid1 [data]="data" [primaryKey]="EmployeID" [foreignKey]="PID" width ="100%" 
+<igx-tree-grid #treeGrid [data]="data" [primaryKey]="EmployeID" [foreignKey]="PID" width ="100%" 
                height ="500px" [rowEditable]="true" [rowSelectable]="true" [columnHiding]="true">
     <igx-column *ngFor="let c of columns"
         [editable] ="c.editable"
@@ -184,7 +184,7 @@ export class TreeGridRowEditSampleComponent implements OnInit {
     public data: any[];
     public columns: any[];
 
-    @ViewChild("treeGrid1") public treeGrid1: IgxTreeGridComponent;
+    @ViewChild("treeGrid") public treeGrid: IgxTreeGridComponent;
     public ngOnInit(): void {
         this.data = FLAT_DATA;
 

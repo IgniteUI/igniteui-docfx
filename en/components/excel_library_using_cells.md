@@ -1,8 +1,9 @@
-﻿---
+---
 title: Excel Library Component - Native Angular | Ignite UI for Angular
 _description: The Ignite UI for Excel Library component.
 _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Excel Library, Angular Excel Library Example, Angular Excel Library Component, Angular Excel Library
 ---
+
 ## Using Cells
 
 The `WorksheetCell` objects in an Excel worksheet is the object that holds your actual data values for the worksheet. This topic goes over the many operations that you can perform on these cells, such as accessing them and their regions by name, adding formulas and comments to the cells, and merging and formatting them.
@@ -10,13 +11,10 @@ The `WorksheetCell` objects in an Excel worksheet is the object that holds your 
 ### Demo
 
 <div class="sample-container" style="height: 150px">
-    <iframe id="excel-library-overview-sample-iframe" src='{environment:demosBaseUrl}/excel-library/working-with-cells' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="excel-library-overview-sample-iframe" 
+	src='{environment:demosBaseUrl}/excel-library/working-with-cells' 
+	width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
-<div>
-    <!-- TODO uncomment when Stackblitz is ready for EXCEL
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="excel-library-working-with-cells-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
-    </button> -->
-</div> 
 
 <div class="divider--half"></div>
 
@@ -73,7 +71,7 @@ var cell = worksheet.getCell("myCell");
 var region = worksheet.getRegion("myRegion");
 ```
 
-### Adding a Comment to a Cell 
+### Adding a Comment to a Cell
 
 A comment allows you to display hints or notes for a cell when the end user’s mouse hovers over a cell. The comments display as a tooltip-like callout that contains text. The Infragistics Excel Library allows you to add comments to a cell by setting a `WorksheetCell` object’s `comment` property.
 
@@ -88,7 +86,7 @@ var commentText = new FormattedString("This cell has a comment.");
 cellComment.text = commentText;
 
 worksheet.rows(0).cells(0).comment = cellComment;
-```    
+```
 
 ### Adding a Formula to a Cell
 
@@ -107,6 +105,7 @@ The following code shows you how to add a formula to a cell.
 ```
 
 ### Copying a Cell’s Format
+
 Cells can have different formatting, including background color, format string, and font style. If you need a cell to have the same format as a previously formatted cell, instead of individually setting each option exposed by the `WorksheetCell` object’s `cellFormat` property, you can call the `CellFormat` object’s `setFormatting` method and pass it a `CellFormat` object to copy. This will copy every format setting from the first cell to the second cell. You can also do this for a row, merged cell region, or column.
 
 The following code shows you how to copy the format of the 2nd column to the 4th column:
@@ -146,23 +145,23 @@ The color palette is analogous to the color dialog in Microsoft Excel 2007 UI. Y
 
 You can create all possible fill types using static properties and methods on the `CellFill` class. They are as follows:
 
-- `noColor` - A property that represents a fill with no color, which allows a background image of the worksheet, if any, to show through.
+-   `noColor` - A property that represents a fill with no color, which allows a background image of the worksheet, if any, to show through.
 
-- `createSolidFill` - Returns a `CellFillPattern` instance which has a pattern style of `Solid` and a background color set to the `Color` or `WorkbookColorInfo` specified in the method.
+-   `createSolidFill` - Returns a `CellFillPattern` instance which has a pattern style of `Solid` and a background color set to the `Color` or `WorkbookColorInfo` specified in the method.
 
-- `createPatternFill` - Returns a `CellFillPattern` instance which has the specified pattern style and the `Color` or `WorkbookColorInfo` values, specified for the background and pattern colors.
+-   `createPatternFill` - Returns a `CellFillPattern` instance which has the specified pattern style and the `Color` or `WorkbookColorInfo` values, specified for the background and pattern colors.
 
-- `createLinearGradientFill` - Returns a `CellFillLinearGradient` instance with the specified angle and gradient stops.
+-   `createLinearGradientFill` - Returns a `CellFillLinearGradient` instance with the specified angle and gradient stops.
 
-- `createRectangularGradientFill` - Returns a `CellFillRectangularGradient` instance with the specified left, top, right, and bottom of the inner rectangle and gradient stops. If the inner rectangle values are not specified, the center of the cell is used as the inner rectangle.
+-   `createRectangularGradientFill` - Returns a `CellFillRectangularGradient` instance with the specified left, top, right, and bottom of the inner rectangle and gradient stops. If the inner rectangle values are not specified, the center of the cell is used as the inner rectangle.
 
 The derived types, representing the various fills which can be created, are as follows:
 
-- `CellFillPattern` - A pattern that represents a cell fill of no color, a solid color, or a pattern fill for a cell. It has background color info and a pattern color info which correspond directly to the color sections in the Fill tab of the Format Cells dialog of Excel.
+-   `CellFillPattern` - A pattern that represents a cell fill of no color, a solid color, or a pattern fill for a cell. It has background color info and a pattern color info which correspond directly to the color sections in the Fill tab of the Format Cells dialog of Excel.
 
-- `CellFillLinearGradient` - Represents a linear gradient fill. It has an angle, which is degrees clockwise of the left to right linear gradient, and a gradients stops collection which describes two or more color transitions along the length of the gradient.
+-   `CellFillLinearGradient` - Represents a linear gradient fill. It has an angle, which is degrees clockwise of the left to right linear gradient, and a gradients stops collection which describes two or more color transitions along the length of the gradient.
 
-- `CellFillRectangularGradient` - Represents a rectangular gradient fill. It has top, left, right, and bottom values, which describe, in relative coordinates, the inner rectangle from which the gradient starts and goes out to the cell edges. It also has a gradient stops collection which describes two or more color transitions along the path from the inner rectangle to the cell edges.
+-   `CellFillRectangularGradient` - Represents a rectangular gradient fill. It has top, left, right, and bottom values, which describe, in relative coordinates, the inner rectangle from which the gradient starts and goes out to the cell edges. It also has a gradient stops collection which describes two or more color transitions along the path from the inner rectangle to the cell edges.
 
 The following code snippet demonstrates how to create a solid fill in a `WorksheetCell`:
 
@@ -178,41 +177,41 @@ You can specify a color (the color of Excel cells background, border, etc) using
 
 These are the ways a color can be defined, as follows:
 
-- The automatic color (which is the WindowText system color)
+-   The automatic color (which is the WindowText system color)
 
-- Any user defined RGB color
+-   Any user defined RGB color
 
-- A theme color
+-   A theme color
 
 If an RGB or a theme color is used, an optional tint can be applied to lighten or darken the color. This tint cannot be set directly in Microsoft Excel 2007 UI, but various colors in the color palette displayed to the user are actually theme colors with tints applied.
 
 Each workbook has 12 associated theme colors. They are the following:
 
-- Light 1
+-   Light 1
 
-- Light 2
+-   Light 2
 
-- Dark 1
+-   Dark 1
 
-- Dark 2
+-   Dark 2
 
-- Accent1
+-   Accent1
 
-- Accent2
+-   Accent2
 
-- Accent3
+-   Accent3
 
-- Accent4
+-   Accent4
 
-- Accent5
+-   Accent5
 
-- Accent6
+-   Accent6
 
-- Hyperlink
+-   Hyperlink
 
-- Followed Hyperlink
+-   Followed Hyperlink
 
-- There are default values when a workbook is created, which can be customized via Excel.
+-   There are default values when a workbook is created, which can be customized via Excel.
 
 Colors are defined by the `WorkbookColorInfo` class, which is a sealed immutable class. The class has a static `automatic` property, which returns the automatic color, and there are various constructors which allow you to create a `WorkbookColorInfo` instance with a color or a theme value and an optional tint.
 
@@ -278,7 +277,7 @@ mergedRegion1.value = "Day 1";
 worksheet.rows(0).cells(2).cellFormat.alignment = HorizontalCellAlignment.Center;
 ```
 
-### Retrieving the Cell Text as Displayed in Excel 
+### Retrieving the Cell Text as Displayed in Excel
 
 The text displayed in a cell depends on several factors other than the actual cell value, such as the format string and the width of the column that the cell is contained in.
 
@@ -290,27 +289,27 @@ Displayed text can be different depending on varying column widths.
 
 When displaying numbers and using format string containing “General” or “@”, there are various formats which are tried to find a formatting which fits the cell width. A list of example formats are shown below:
 
-- `Normal Value` - Number is displayed as it would be if there is unlimited amount of space.
+-   `Normal Value` - Number is displayed as it would be if there is unlimited amount of space.
 
-- `Remove decimal digits` - Decimal digits will be removed one at a time until a format is found which fits. For example, a value of 12345.6789 will be reduced to the following formats until one fits: 12345.679, 12345.68, 12345.7, and 12346. This will stop when the first significant digit is the only one left, so for example value like 0.0001234567890 can only be reduced to 0.0001.
+-   `Remove decimal digits` - Decimal digits will be removed one at a time until a format is found which fits. For example, a value of 12345.6789 will be reduced to the following formats until one fits: 12345.679, 12345.68, 12345.7, and 12346. This will stop when the first significant digit is the only one left, so for example value like 0.0001234567890 can only be reduced to 0.0001.
 
-- `Scientific, 5 decimal digits` - Number is displayed in the form of 0.00000E+00, such as 1.23457E+09, or 1.23457E-04
+-   `Scientific, 5 decimal digits` - Number is displayed in the form of 0.00000E+00, such as 1.23457E+09, or 1.23457E-04
 
-- `Scientific, 4 decimal digits` - Number is displayed in the form of 0.0000E+00, such as 1.2346E+09, or 1.23456E-04
+-   `Scientific, 4 decimal digits` - Number is displayed in the form of 0.0000E+00, such as 1.2346E+09, or 1.23456E-04
 
-- `Scientific, 3 decimal digits` - Number is displayed in the form of 0.000E+00, such as 1.235E+09, or 1.235E-0
+-   `Scientific, 3 decimal digits` - Number is displayed in the form of 0.000E+00, such as 1.235E+09, or 1.235E-0
 
-- `Scientific, 2 decimal digits` - Number is displayed in the form of 0.00E+00, such as 1.23E+09, or 1.23E-04
+-   `Scientific, 2 decimal digits` - Number is displayed in the form of 0.00E+00, such as 1.23E+09, or 1.23E-04
 
-- `Scientific, 1 decimal digits` - Number is displayed in the form of 0.0E+00, such as 1.2E+09, or 1.2E-04
+-   `Scientific, 1 decimal digits` - Number is displayed in the form of 0.0E+00, such as 1.2E+09, or 1.2E-04
 
-- `Scientific, 0 decimal digits` - Number is displayed in the form of 0E+00, such as 1E+09, or 1E-04
+-   `Scientific, 0 decimal digits` - Number is displayed in the form of 0E+00, such as 1E+09, or 1E-04
 
-- `Rounded value` - If the first significant digit is in the decimal potion of the number, the value will be rounded to the nearest integer value. For example, for a value 0.0001234567890, it will be rounded to 0, and the displayed text in cell will be 0.
+-   `Rounded value` - If the first significant digit is in the decimal potion of the number, the value will be rounded to the nearest integer value. For example, for a value 0.0001234567890, it will be rounded to 0, and the displayed text in cell will be 0.
 
-- `Hash marks` - If no condensed version of the number can be displayed, hashes (#) will be repeated through the width of the cell.
+-   `Hash marks` - If no condensed version of the number can be displayed, hashes (#) will be repeated through the width of the cell.
 
-- `Empty string` - If no hash marks can fit in the cell, an empty string will be returned as displayed cell text.
+-   `Empty string` - If no hash marks can fit in the cell, an empty string will be returned as displayed cell text.
 
 If the format string for numeric value does not contain General or @, there are only the following stages of resizing: Normal value, Hash marks, Empty string
 
