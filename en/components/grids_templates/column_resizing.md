@@ -1,4 +1,4 @@
----
+﻿---
 title: Column Resizing Component - Native Angular | Ignite UI for Angular
 _description: With deferred column resizing, see a temporary resize indicator while the drag operation is in effect with using the Ignite UI for Angular Column Resizing Component.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Data Grid component, Angular Data Grid control, Native Angular Components, Angular Grid component, Angular Grid control, Angular High Performance Grid, Column Resizing, Deferred Column Reszing, Grid Column Resizing, Angular Grid Column Resizing, Angular column
@@ -31,15 +31,28 @@ With deferred column resizing, the user will see a temporary resize indicator wh
 <div class="divider--half"></div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-<!-- TODO -->
+<div class="sample-container loading" style="height:550px">
+    <iframe id="hierarchical-grid-resizing-sample-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-resizing' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-resizing-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
 }
 
 **Column resizing** is also enabled per-column level, meaning that the [**@@igSelector**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) can have a mix of resizable and non-resizable columns. This is done via the [`resizable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#resizable) input of the [`igx-column`]({environment:angularApiUrl}/classes/igxcolumncomponent.html).
 
+@@if (igxName !== 'IgxHierarchicalGrid') {
 ```html
 <igx-column [field]="'ID'" width="100px" [resizable]="true"></igx-column>
 ```
-
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+```html
+<igx-column [field]="'Artist'" [resizable]="true"></igx-column>
+```
+}
 You can subscribe to the [`onColumnResized`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#oncolumnresized) event of the [`@@igSelector`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) to implement some custom logic when a column is resized. Both, previous and new column widths, as well as the [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) object, are exposed through the event arguments.
 
 @@if (igxName === 'IgxGrid') {
@@ -75,17 +88,38 @@ public onResize(event) {
 ```
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-<!-- TODO -->
+```html
+  <igx-hierarchical-grid class="hgrid" [data]="localdata" (onColumnResized)="onResize($event)" [autoGenerate]="false"
+        [height]="'600px'" [width]="'100%'" #hierarchicalGrid>
+        <igx-column field="Artist" [resizable]="true"></igx-column>
+        ...
+</igx-hierarchical-grid>
+```
+```typescript
+    public onResize(event) {
+        this.col = event.column;
+        this.pWidth = event.prevWidth;
+        this.nWidth = event.newWidth;
+    }
+```
 }
 
 #### Restrict column resizing
 
 You can also configure the minimum and maximum allowable column widths. This is done via the [`minWidth`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#minwidth) and [`maxWidth`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#maxwidth) inputs of the [`igx-column`]({environment:angularApiUrl}/classes/igxcolumncomponent.html). In this case the resize indicator drag operation is restricted to notify the user that the column cannot be resized outside the boundaries defined by [`minWidth`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#minwidth) and [`maxWidth`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#maxwidth).
 
+@@if (igxName !== 'IgxHierarchicalGrid') {
 ```html
 <igx-column [field]="'ID'" width="100px" [resizable]="true"
             [minWidth]="'60px'" [maxWidth]="'230px'"></igx-column>
 ```
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+```html
+<igx-column [field]="'Artist'" width="100px" [resizable]="true"
+            [minWidth]="'60px'" [maxWidth]="'230px'"></igx-column>
+```
+}
 
 > [!NOTE]
 > Resizing a column below **88px** is not possible, even when [`minWidth`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#minwidth) is set to a value less than that.
@@ -96,12 +130,22 @@ Each column can be **auto sized** by double clicking the right side of the heade
 
 You can also autosize a column dynamically using the exposed [`autosize()`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#autosize) method on [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html).
 
+@@if (igxName !== 'IgxHierarchicalGrid') {
 ```typescript
 @ViewChild('@@igObjectRef') @@igObjectRef: @@igxNameComponent;
 
 let column = this.@@igObjectRef.columnList.filter(c => c.field === 'ID')[0];
 column.autosize();
 ```
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+```typescript
+@ViewChild('@@igObjectRef') @@igObjectRef: @@igxNameComponent;
+
+let column = this.@@igObjectRef.columnList.filter(c => c.field === 'Artist')[0];
+column.autosize();
+```
+}
 
 #### Pinned columns resizing
 
