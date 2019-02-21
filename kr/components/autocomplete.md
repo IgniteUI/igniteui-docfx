@@ -203,7 +203,7 @@ export class AutocompleteSampleComponent {
 ## Application Scenarios
 ### Grouped igxAutocomplete, inside Reactive From
 
-The following sample demonstrates an autocomplete that allows selecting a cinema, where movies are grouped by a city:
+The following sample demonstrates an autocomplete that allows selecting a cinema, where movies are grouped by a city. Type in the input or use the `Arrow Down` key to open the list and choose a cinema, then select a movie and its date and time:
 
 <div class="sample-container loading" style="height: 600px;">
     <iframe id="autocomplete-movie" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/data-entries/movie" onload="onSampleIframeContentLoaded(this);"></iframe>
