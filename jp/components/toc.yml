@@ -13,74 +13,74 @@
   href: grids_and_lists.md
   header: true
 - name: Data Grid
-  href: grid.md
+  href: grid/grid.md
   new: true
   items:
     - name: 仮想化とパフォーマンス
-      href: grid_virtualization.md
+      href: grid/virtualization.md
       new: false
     - name: 編集
-      href: grid_editing.md
+      href: grid/editing.md
       new: false
     - name: 行編集
-      href: grid_row_editing.md
+      href: grid/row_editing.md
       new: true
     - name: 一括編集
-      href: grid_batch_editing.md
+      href: grid/batch_editing.md
       new: true
     - name: ページング
-      href: grid_paging.md
+      href: grid/paging.md
       new: false
     - name: フィルタリング
-      href: grid_filtering.md
+      href: grid/filtering.md
       new: true
     - name: 並べ替え
-      href: grid_sorting.md
+      href: grid/sorting.md
       new: false
     - name: グループ化
-      href: grid_groupby.md
+      href: grid/groupby.md
       new: false
     - name: 集計
-      href: grid_summaries.md
+      href: grid/summaries.md
       new: false
     - name: 列移動
-      href: grid_column_moving.md
+      href: grid/column_moving.md
       new: false
     - name: 列のピン固定
-      href: grid_column_pinning.md
+      href: grid/column_pinning.md
       new: false
     - name: 列のサイズ変更
-      href: grid_column_resizing.md
+      href: grid/column_resizing.md
       new: false
     - name: 列の非表示
-      href: grid_column_hiding.md
+      href: grid/column_hiding.md
       new: false
     - name: 選択
-      href: grid_selection.md
+      href: grid/selection.md
       new: false
     - name: 検索
-      href: grid_search.md
+      href: grid/search.md
       new: false
     - name: ツールバー
-      href: grid_toolbar.md
+      href: grid/toolbar.md
       new: false
     - name: Excel エクスポート
       href: exporter_excel.md
       new: false
     - name: Excel からの貼り付け
-      href: grid_paste_excel.md
+      href: grid/paste_excel.md
       new: false
     - name: 複数列ヘッダー
-      href: grid_multi_column_headers.md
+      href: grid/multi_column_headers.md
       new: false
     - name: 表示密度
-      href: grid_displayDensity.md
+      href: grid/display_density.md
       new: false
     - name: 条件付きセルのスタイル設定
-      href: grid_conditional_cell_styling.md
+      href: grid/conditional_cell_styling.md
       new: true
 - name: Tree Grid
-  href: treegrid.md
+  href: treeGrid/tree_grid.md
   new: true
 - name: List View
   href: list.md
@@ -132,103 +132,109 @@
       new: false
 - name: Data Chart
   href: datachart.md
+  new: true
   items:
-    - name: Axis Types
+    - name: Axis
       href: datachart_axis_types.md
       new: true
-    - name: Axis Settings
-      href: datachart_axis_settings.md
+      items:
+        - name: Axis Settings
+          href: datachart_axis_settings.md
+          new: true
+        #- name: Axis Scales
+        #  href: datachart_axis_scales.md
+        #  new: true
+        - name: Axis Locations
+          href: datachart_axis_locations.md
+          new: true
+        - name: Axis Sharing
+          href: datachart_axis_sharing.md
+          new: true
+    - name: Series
+      href: datachart_series_types.md
       new: true
-    - name: Axis Scales
-      href: datachart_axis_scales.md
+      items:
+      #  - name: Requirements
+      #    href: datachart_series_requirements.md
+      #    new: true
+        - name: Category Series 
+          href: datachart_series_types_category.md
+          new: true
+        - name: Financial Series 
+          href: datachart_series_types_financial.md
+          new: true
+        - name: Polar Series 
+          href: datachart_series_types_polar.md
+          new: true
+        - name: Radial Series 
+          href: datachart_series_types_radial.md
+          new: true
+        - name: Range Series 
+          href: datachart_series_types_range.md
+          new: true
+        - name: Scatter Area Series 
+          href: datachart_series_types_scatter_area.md
+          new: true
+        - name: Scatter Contour Series 
+          href: datachart_series_types_scatter_contour.md
+          new: true
+        - name: Scatter Bubble Series 
+          href: datachart_series_types_scatter_bubble.md
+          new: true
+        # - name: Scatter HD Series
+        #  href: datachart_series_types_scatter_hd.md
+        #  new: true
+        - name: Scatter Marker Series
+          href: datachart_series_types_scatter_marker.md
+          new: true
+        - name: Scatter Shape Series
+          href: datachart_series_types_shape.md
+          new: true
+        #- name: Stacked Series
+        #  href: datachart_series_types_stacked.md
+        #  new: true
+    #- name: Animations
+    #  href: datachart_series_animations.md
+    #  new: true
+    - name: Annotations
+      href: datachart_series_annotations.md
       new: true
-    - name: Axis Locations
-      href: datachart_axis_locations.md
+    - name: Highlighting
+      href: datachart_series_highlighting.md
       new: true
-    - name: Chart Legends
+    - name: Legend
       href: datachart_chart_legends.md
       new: true
-    - name: Chart Navigation
+    - name: Markers
+      href: datachart_series_markers.md
+      new: true
+    - name: Navigation
       href: datachart_chart_navigation.md
       new: true
-    - name: Chart Performance
-      href: datachart_chart_performance.md
-      new: true
-    - name: Chart Synchronization
-      href: datachart_chart_synchronization.md
-      new: true
-    - name: Chart Titles
+    #- name: Synchronization
+    #  href: datachart_chart_synchronization.md
+    #  new: true
+    - name: Title and Subtitle
       href: datachart_chart_titles.md
+      new: true
+    - name: Tooltips
+      href: datachart_series_tooltips.md
+      new: true
+    - name: Trendlines
+      href: datachart_series_trendlines.md
       new: true
     - name: Data Sources
       href: datachart_data_sources.md
       new: true 
-    - name: Data Triangulation
-      href: datachart_data_triangulation.md
-      new: true
-    - name: Series Animations
-      href: datachart_series_animations.md
-      new: true
-    - name: Series Annotations
-      href: datachart_series_annotations.md
-      new: true
-    - name: Series Error Bars
-      href: datachart_series_errorbars.md
-      new: true
-    - name: Series Highlighting
-      href: datachart_series_highlighting.md
-      new: true
-    - name: Series Markers
-      href: datachart_series_markers.md
-      new: true
-    - name: Series Requirements
-      href: datachart_series_requirements.md
-      new: true
-    - name: Series Tooltips
-      href: datachart_series_tooltips.md
-      new: true
-    - name: Series Trendlines
-      href: datachart_series_trendlines.md
-      new: true
-    - name: Series Types
-      href: datachart_series_types.md
-      new: true
-    - name: Category Series 
-      href: datachart_series_types_category.md
-      new: true
-    - name: Financial Series 
-      href: datachart_series_types_financial.md
-      new: true
-    - name: Polar Series 
-      href: datachart_series_types_polar.md
-      new: true
-    - name: Radial Series 
-      href: datachart_series_types_radial.md
-      new: true
-    - name: Range Series 
-      href: datachart_series_types_range.md
-      new: true
-    - name: Scatter Area Series 
-      href: datachart_series_types_scatter_area.md
-      new: true
-    - name: Scatter Contour Series 
-      href: datachart_series_types_scatter_contour.md
-      new: true
-    - name: Scatter HD Series
-      href: datachart_series_types_scatter_hd.md
-      new: true
-    - name: Scatter Marker Series
-      href: datachart_series_types_scatter_marker.md
-      new: true
-    - name: Shape Series
-      href: datachart_series_types_shape.md
-      new: true
-    - name: Stacked Series
-      href: datachart_series_types_stacked.md
-      new: true
-    - name: Value Overlay
-      href: datachart_series_value_overlay.md
-      new: true       
+    #- name: Data Triangulation
+    #  href: datachart_data_triangulation.md
+    #  new: true
+    #- name: Series Error Bars
+    #  href: datachart_series_errorbars.md
+    #  new: true
+    #- name: Value Overlay
+    #  href: datachart_series_value_overlay.md
+    #  new: true   
 - name: Financial Chart
   href: financialchart.md
   new: false
@@ -375,6 +381,9 @@
   new: false
 - name: Text Highlight
   href: texthighlight.md
+  new: true
+- name: Select
+  href: select.md
   new: true
 - name: インタラクション
   header: true

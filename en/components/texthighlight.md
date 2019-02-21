@@ -314,7 +314,7 @@ Additional components that were used:
 <div class="divider"></div>
 
 ### Additional Resources
-* [Grid Search](grid_search.md)
+* [Grid Search](grid/search.md)
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.

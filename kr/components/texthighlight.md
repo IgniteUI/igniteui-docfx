@@ -23,7 +23,7 @@ The [`IgxTextHighlight`]({environment:angularApiUrl}/classes/igxtexthighlightdir
 
 ### Usage
 
-To get started with the Ignite UI for Angular TextHighlight directive, let's first import the [`IgxTextHighlightModule`]({environment:angularApiUrl}/classes/igxtexthighlightmodule.html) in the **app.module.ts** file along with the other Ignite UI for Angular modules we need for our application.
+To get started with the Ignite UI for Angular TextHighlight directive, let's first import the `IgxTextHighlightModule` in the **app.module.ts** file along with the other Ignite UI for Angular modules we need for our application.
 
 ```typescript
 // app.module.ts
@@ -315,7 +315,7 @@ Additional components that were used:
 <div class="divider"></div>
 
 ### Additional Resources
-* [Grid Search](grid_search.md)
+* [Grid Search](grid/search.md)
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.

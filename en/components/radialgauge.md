@@ -3,9 +3,10 @@ title: Radial Gauge Component - Native Angular | Ignite UI for Angular
 _description: The Radial Gauge component in Ignite UI for Angular provides a number of visual elements, like a needle, tick marks, ranges, and labels, in order to create a predefined shape and scale.
 _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Data Grid, Angular Chart Control, Angular Grid Component, Angular radial gauge component, Angular radial gauge
 ---
+
 ## Radial Gauge
 
-The Radial Gauge component in Ignite UI for Angular provides a number of visual elements, like a needle, tick marks, ranges, and labels, in order to create a predefined shape and scale.
+The Radial Gauge component provides a number of visual elements, like a needle, tick marks, ranges, and labels, in order to create a predefined shape and scale.
 
 ### Demo
 
@@ -13,7 +14,7 @@ The radial gauge component is a data visualization tool capable of displaying a 
 
 The following sample demonstrates how setting multiple properties on the same gauge can transform it to completely different gauge.
 
-<div class="sample-container" style="height: 350px">
+<div class="sample-container" style="height: 375px">
     <iframe id="radial-gauge-sample-iframe" src='{environment:demosBaseUrl}/gauges/radial-gauge-animation' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -24,21 +25,28 @@ The following sample demonstrates how setting multiple properties on the same ga
 <div class="divider--half"></div>
 
 ### Dependencies
-When installing the gauges package, the core package must also be installed.
+
+When installing the gauge package, the core package must also be installed.
 
 **npm install igniteui-angular-gauges igniteui-angular-core**
 
-The radial gauge exported as an `NgModule`, you need to import the _IgxRadialGaugeModule_ inside your `AppModule`:
+The radial gauge is exported as an `NgModule`, you need to import the
+`IgxRadialGaugeModule` inside your `AppModule`:
+
+<!-- -->
+
+<!-- -->
 
 ```typescript
 // app.module.ts
-import { IgxRadialGaugeModule } from 'ignite-angular-gauges/ES5/igx-radial-gauge-module';
+import { IgxRadialGaugeModule } from 'igniteui-angular-gauges/ES5/igx-radial-gauge-module';
+import { IgrRadialGaugeModule } from 'igniteui-angular-gauges/ES5/igx-radial-gauge';
 
 @NgModule({
     imports: [
-        ...
+        // ...
         IgxRadialGaugeModule,
-        ...
+        // ...
     ]
 })
 export class AppModule {}
@@ -124,6 +132,7 @@ The scale is visual element that highlights full range of values in the gauge wh
     maximumValue=80 interval=10>
 </igx-radial-gauge>
 ```
+
 <div class="sample-container" style="height: 320px">
     <iframe id="radial-gauge-scale-iframe" src='{environment:demosBaseUrl}/gauges/radial-gauge-scale' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -133,6 +142,7 @@ The scale is visual element that highlights full range of values in the gauge wh
 </div>
 
 ### Labels
+
 The gauge labels are visual elements displaying numeric values at a specified interval between values of the `minimumValue` and `maximumValue` properties. You can position labels by setting the `labelExtent` property to a fraction, where 0 represents center of gauge and 1 represents outer extent of the gauge backing. Also, you can customize labels setting various styling properties such as `fontBrush` and `font`.
 
 ```html
@@ -146,6 +156,7 @@ The gauge labels are visual elements displaying numeric values at a specified in
     maximumValue=100 interval=10>
 </igx-radial-gauge>
 ```
+
 <div class="sample-container" style="height: 320px">
     <iframe id="radial-gauge-labels-iframe" src='{environment:demosBaseUrl}/gauges/radial-gauge-labels' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -155,6 +166,7 @@ The gauge labels are visual elements displaying numeric values at a specified in
 </div>
 
 ### Tick Marks
+
 Tick marks are thin lines radiating from the center of the radial gauge. There are two types of tick marks: major and minor. Major tick marks are displayed at the `interval` between the `minimumValue` and `maximumValue` properties. Use the `minorTickCount` property to specify the number of minor tick marks displayed between each major tick mark. You can control the length of tick marks by setting a fraction (beteen 0 and 1) to `tickStartExtent`, `tickEndExtent`, `minorTickStartExtent`, and `minorTickEndExtent` properties.
 
 ```html
@@ -173,6 +185,7 @@ Tick marks are thin lines radiating from the center of the radial gauge. There a
     maximumValue=80 interval=10>
 </igx-radial-gauge>
 ```
+
 <div class="sample-container" style="height: 320px">
     <iframe id="radial-gauge-tickmarks-iframe" src='{environment:demosBaseUrl}/gauges/radial-gauge-tickmarks' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -182,6 +195,7 @@ Tick marks are thin lines radiating from the center of the radial gauge. There a
 </div>
 
 ### Ranges
+
 A range highlights a set of continuous values bound by a specified `minimumValue` and `maximumValue` properties. You can add multiple ranges to the gauge by specifying their starting and ending values. Each range has a few customization properties such as `brush` and `outline`. Alternatively, you can set `rangeBrushes` and `rangeOutlines` properties to a list of colors for the ranges.
 
 ```html
@@ -202,6 +216,7 @@ A range highlights a set of continuous values bound by a specified `minimumValue
    </igx-radial-gauge-range>
 </igx-radial-gauge>
 ```
+
 <div class="sample-container" style="height: 320px">
     <iframe id="radial-gauge-ranges-iframe" src='{environment:demosBaseUrl}/gauges/radial-gauge-ranges' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -238,6 +253,7 @@ You can enable an interactive mode of the gauge (using `isNeedleDraggingEnabled`
     maximumValue=80 interval=10>
 </igx-radial-gauge>
 ```
+
 <div class="sample-container" style="height: 320px">
     <iframe id="radial-gauge-needle-iframe" src='{environment:demosBaseUrl}/gauges/radial-gauge-needle' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -247,6 +263,7 @@ You can enable an interactive mode of the gauge (using `isNeedleDraggingEnabled`
 </div>
 
 ### Summary
+
 For your convenience, all above code snippets are combined into one code block below that you can easily copy to your project and see the radial gauge with all features and visuals enabled.
 
 ```html
