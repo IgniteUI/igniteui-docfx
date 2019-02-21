@@ -296,6 +296,10 @@ The Selection and Navigation features work globally for the whole **igx-hierarch
 - Navigation
     When navigating up/down, if next/prev element is a child grid, navigation will continue in the related child grid, marking the related cell as selected and focused. If the child cell is outside the current visible view port it is scrolled into view so that selected cell is always visible.
 
+The Hierarchical Grid allows the users to conveniently collapse all its currently expanded rows, by pressing the "Collapse All" button at the top left corner. Its icon looks like this: 
+
+![](https://www.materialui.co/materialIcons/navigation/unfold_less_black_144x144.png)
+
 ### Known Limitations
 
 |Limitation|Description|
@@ -314,7 +318,6 @@ Calling CRUD API methods should still be done through each separate grid instanc
 
 * [IgxHierarchicalGridComponent]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html)
 * [IgxRowIslandComponent]({environment:angularApiUrl}/classes/igxrowislandcomponent.html)
-* [IgxHierarchicalTransactionServiceFactory]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservicefactory.html)
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
 * [IgxGridComponent Styles]({environment:sassApiUrl}/#function-igx-grid-theme)
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)

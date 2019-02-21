@@ -241,7 +241,6 @@ The indentation of the **tree cells** persists across other tree grid features l
 |Limitation|Description|
 |--- |--- |
 |Templating Tree Cells|When templating a tree cell, content that spans outside the boundaries of the cell will not be shown unless positioned in an overlay.|
-|Search API|Search API is currently not supported for the tree grid.|
 |Group By|Group By feature is not supported, because it is inherent to the tree grid.|
 
 
@@ -266,7 +265,7 @@ The indentation of the **tree cells** persists across other tree grid features l
 <div class="divider--half"></div>
 
 * [Data Grid](../grid/grid.md)
-* [Grid Editing](row_editing.md)
+* [Row Editing](row_editing.md)
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.
