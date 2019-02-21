@@ -83,8 +83,9 @@ Then adding the `igxAutocomplete` directive with a value, which is reference to 
 })
 export class AutocompleteSampleComponent {
     constructor() {
-        this.towns = [ 'Sofia', 'Plovdiv', 'Varna', 'Burgas', "Ruse", "Stara Zagora",
-            "Pleven", "Dobrich", "Sliven", "Shumen", "Pernik", "Haskovo", "Yambol"];
+        this.towns = [ "New York", "Washington, D.C.", "London", "Berlin", "Sofia", "Rome", "Kiev",
+            "Copenhagen", "Paris", "Barcelona", "Vienna", "Athens", "Dublin", "Yerevan",
+            "Oslo", "Helsinki", "Stockholm", "Prague", "Istanbul", "El Paso", "Florence", "Moscow" ];
     }
 }
 ```
@@ -146,8 +147,9 @@ The following sample defines an [`IgxAutocompleteDisabled`]({environment:angular
 export class AutocompleteSampleComponent {
     disabled;
     constructor() {
-        this.towns = [ 'Sofia', 'Plovdiv', 'Varna', 'Burgas', "Ruse", "Stara Zagora",
-            "Pleven", "Dobrich", "Sliven", "Shumen", "Pernik", "Haskovo", "Yambol"];
+        this.towns = [ "New York", "Washington, D.C.", "London", "Berlin", "Sofia", "Rome", "Kiev",
+            "Copenhagen", "Paris", "Barcelona", "Vienna", "Athens", "Dublin", "Yerevan",
+            "Oslo", "Helsinki", "Stockholm", "Prague", "Istanbul", "El Paso", "Florence", "Moscow" ];
     }
 }
 ```
@@ -179,8 +181,9 @@ The following example displays that the positioning of the drop-down can be set 
 })
 export class AutocompleteSampleComponent {
     constructor() {
-        this.towns = [ 'Sofia', 'Plovdiv', 'Varna', 'Burgas', "Ruse", "Stara Zagora",
-            "Pleven", "Dobrich", "Sliven", "Shumen", "Pernik", "Haskovo", "Yambol"];
+        this.towns = [ "New York", "Washington, D.C.", "London", "Berlin", "Sofia", "Rome", "Kiev",
+            "Copenhagen", "Paris", "Barcelona", "Vienna", "Athens", "Dublin", "Yerevan",
+            "Oslo", "Helsinki", "Stockholm", "Prague", "Istanbul", "El Paso", "Florence", "Moscow" ];
     }
     @ViewChild('inputGroup', { read: IgxInputGroupComponent }) inputGroup: IgxInputGroupComponent;
 
