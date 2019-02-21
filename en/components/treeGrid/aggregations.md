@@ -1,10 +1,10 @@
 ---
-title: TreeGrid Aggregations - Native Angular | Ignite UI for Angular
+title: Tree Grid Aggregations - Native Angular | Ignite UI for Angular
 _description: With the Ignite UI for Angular TreeGrid aggregations, see the data grouped and aggregated.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Component, Angular Grid, Angular Data Grid component, Angular Data Grid control, Angular Grid component, Angular Grid control, Angular High Performance Grid, Summaries, Summary, Aggregate, Aggregations
 ---
 
-## TreeGrid Aggregations
+## Tree Grid Aggregations
 If you have non-hierarchical data and you want to **group by** one or more columns and populate the parent rows with **aggregated values**, you could use the [`IgxTreeGridComponent`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html) and a custom implementation like in the demo below.
 
 ### Demo
