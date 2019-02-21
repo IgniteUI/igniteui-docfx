@@ -198,6 +198,9 @@
     - name: Conditional Cell Styling
       href: hierarchicalGrid/conditional_cell_styling.md
       new: true
+    - name: Load on Demand
+      href: hierarchicalGrid/hierarchical_grid_load_on_demand.md
+      new: true
 - name: List View
   href: list.md
 - name: Combo
