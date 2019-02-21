@@ -1,4 +1,4 @@
----
+﻿---
 title: @@igComponent Filtering
 _description: The Ignite UI for Angular Data Grid control features the fastest, touch-responsive data-rich grid with popular features, including hierarchical and list views.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Data Grid component, Angular Data Grid control, Angular Grid component, Angular Grid control, Angular High Performance Grid, Filtering, filter
@@ -29,7 +29,13 @@ The @@igComponent component in Ignite UI for Angular provides extensive filterin
 </div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-    <!-- todo -->
+<div class="sample-container loading" style="height:600px">
+    <iframe id="hierarchical-grid-sample-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-filtering' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
 }
 
 <div class="divider--half"></div>
@@ -44,8 +50,9 @@ While there are applied conditions for a column and the filter row is closed, yo
 
 There's a default filtering strategy provided out of the box, as well as all the standard filtering conditions, which the developer can replace with their own implementation. In addition, we've provided a way to easily plug in your own custom filtering conditions. The @@igComponent currently provides not only a simplistic filtering UI but also more complex filtering options. Depending on the set [`dataType`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#datatype) of the column, the correct set of [**filtering operations**]({environment:angularApiUrl}/interfaces/ifilteringoperation.html) is loaded inside the filter UI dropdown. Additionally, you can set the [`ignoreCase`]({environment:angularApiUrl}/interfaces/ifilteringexpression.html) and the initial [`condition`]({environment:angularApiUrl}/interfaces/ifilteringexpression.html#condition) properties.
 
-Filtering feature is enabled for the igxGrid component by setting the [`allowFiltering`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#allowfiltering) input to `true`. To disable this feature for a certain column – set the [`filterable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#filterable) input to `false`.
+Filtering feature is enabled for the @@igComponent component by setting the [`allowFiltering`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#allowfiltering) input to `true`. To disable this feature for a certain column – set the [`filterable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#filterable) input to `false`.
 
+@@if (igxName !== 'IgxHierarchicalGrid') {
 ```html
 <@@igSelector #grid1 [data]="data" [autoGenerate]="false" [allowFiltering]="true">
     <igx-column field="ProductName" dataType="string"></igx-column>
@@ -54,6 +61,17 @@ Filtering feature is enabled for the igxGrid component by setting the [`allowFil
     <igx-column field="Discontinued" [dataType]="'boolean'" [filterable]="false">
 </@@igSelector>
 ```
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+```html
+ <igx-hierarchical-grid class="hgrid" [data]="localdata" [autoGenerate]="false" [allowFiltering]='true' [height]="'600px'" 
+ [width]="'100%'" #hierarchicalGrid>
+    <igx-column field="Artist" [filterable]='true'></igx-column>
+    <igx-column field="Photo" [filterable]='false'>
+    ...
+</igx-hierarchical-grid>
+```
+}
 
 > [!NOTE]
 > If values of type `string` are used by column of dataType `Date`, the @@igComponent won't parse it to `Date` objects and using filtering conditions won't be possible. If you want to use `string` objects, additional logic should be implemented on the application level, in order to parse the values to `Date` object.
@@ -240,7 +258,7 @@ export class BooleanFilteringOperand extends IgxBooleanFilteringOperand {
     }
 }
 ```
-
+@@if (igxName !== 'IgxHierarchicalGrid') {
 ```html
 <!-- grid-custom-filtering.component.html -->
 
@@ -255,7 +273,24 @@ export class BooleanFilteringOperand extends IgxBooleanFilteringOperand {
     ...
 </@@igSelector>
 ```
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+```html
+<!-- hierarchical-grid-custom-filtering.component.html -->
 
+  <igx-hierarchical-grid class="hgrid" [data]="localdata" [autoGenerate]="false" [allowFiltering]='true'
+        [height]="'600px'" [width]="'100%'" #hierarchicalGrid>
+        <igx-column field="Artist" [filterable]='true' [dataType]="'string'" [filters]="caseSensitiveFilteringOperand"></igx-column>
+        <igx-column field="HasGrammyAward" [filterable]='true' [dataType]="'boolean'" [filters]="booleanFilteringOperand">
+            <ng-template igxCell let-cell="cell" let-val>
+                <img *ngIf="val" src="https://www.infragistics.com/angular-demos/assets/images/grid/active.png" title="True" alt="True" />
+                <img *ngIf="!val" src="https://www.infragistics.com/angular-demos/assets/images/grid/expired.png" title="False" alt="False" />
+            </ng-template>
+        </igx-column>
+...
+ </igx-hierarchical-grid>
+```
+}
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:600px">
     <iframe id="grid-filtering-iframe" src='{environment:demosBaseUrl}/grid/grid-filter-conditions' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -275,7 +310,13 @@ export class BooleanFilteringOperand extends IgxBooleanFilteringOperand {
 </div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-    <!-- todo -->
+   <div class="sample-container loading" style="height:600px">
+    <iframe id="hierarchical-grid-filtering-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-custom-filtering' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-filtering-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
 }
 
 #### Breaking Changes in 6.1.0
