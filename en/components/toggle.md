@@ -127,7 +127,7 @@ The [`igxToggle`]({environment:angularApiUrl}/classes/igxtoggledirective.html) u
         verticalStartPoint: VerticalAlignment.Bottom
     };
     public _overlaySettings = {
-        closeOnOutsideClick: true,
+        closeOnOutsideClick: false,
         modal: false,
         positionStrategy: new ConnectedPositioningStrategy(this._positionSettings),
         scrollStrategy: new CloseScrollStrategy()
@@ -146,6 +146,8 @@ The [`igxToggle`]({environment:angularApiUrl}/classes/igxtoggledirective.html) u
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="toggle-iframe-1" data-demos-base-url="{environment:demosBaseUrl}">                       view on stackblitz
     </button>
 </div>
+
+***Note***: We have set `closeOnOutsideClick` to `false`. If we set this property to `true` it will not work with `toggle` method. In this case if toggle element is shown and toggle button gets clicked next events will happen. First `ixfToggleDirective` will try to close the element as it detect click outside the element. On second place click event will reach the button and it will call `toggle` method. As close animation has just started `toggle` method will try to open the toggle. As a result element will remain visible. To resolve this either set `closeOnOutsideClick` to `false`, or use `igxToggleActionDirective` as described bellow.
 
 ### Automatic toggle actions
 
@@ -186,6 +188,8 @@ After these changes the toggle should work exactly in the same way.
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="toggle-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">                       view on stackblitz
     </button>
 </div>
+
+***Note***: by default `igxToggleAction` excludes its host element from `closeOnOutsideClick`. In this way if `closeOnOutsideClick` is set to `true` clicking on the host element will close the toggle. Additionally `igxToggleActionDirective` will set its host element as the position strategy target.
 
 ### Automatic toggle actions with service provider
 
