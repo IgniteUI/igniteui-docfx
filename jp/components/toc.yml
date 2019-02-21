@@ -124,7 +124,7 @@
       new: false
     - name: 検索
       href: treeGrid/search.md
-      new: false
+      new: true
     - name: ツールバー
       href: treeGrid/toolbar.md
       new: false
