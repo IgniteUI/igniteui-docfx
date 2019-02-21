@@ -145,7 +145,7 @@ If you want to define a custom template which will be applied when the cell is i
 > [!NOTE]
 > Please keep in mind that when you perform some **CRUD operation** all of the applied pipes like **filtering**, **sorting** and **grouping** will be re-applied and your view will be automatically updated.
 
-The [`@@igxNameComponent`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) provides a straigtforward API for basic CRUD operations.
+The [`@@igxNameComponent`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) provides a straightforward API for basic CRUD operations.
 
 #### Adding a new record
 

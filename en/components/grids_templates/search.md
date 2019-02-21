@@ -331,7 +331,7 @@ On the right in our input group, let's create three separate containers with the
 |--- |--- |
 |Searching in cells with a template|The search functionality will replace any cell template with a div element and spans which highlight the searched text in the cell value. This means that it can lead to unexpected behavior when you have more complicated templates, containing several elements or events hooked into the template. If you have a column with such template, you should either use alternative approaches, such as a column formatter, or set the [`searchable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#searchable) property on the column to false.|
 |Remote Virtualization| The search will not work properly when using remote virtualization|
-|Cells with cutoff text| When the text in the cell is too large to fit and the text we are looking for is cut off by the ellipsis, we will still scroll to the cell and include it in the match count, but nothing will be highlighted |
+|Cells with cut off text| When the text in the cell is too large to fit and the text we are looking for is cut off by the ellipsis, we will still scroll to the cell and include it in the match count, but nothing will be highlighted |
 
 ### API References
 
