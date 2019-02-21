@@ -1,4 +1,4 @@
----
+﻿---
 title: Grid Toolbar Component - Native Angular | Ignite UI for Angular
 _description: With the Ignite UI for Angular Grid Toolbar component you can have a centralized location for IgxGrid features UI controls.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Component, Angular Grid, Angular Data Grid component, Angular Data Grid control, Angular Grid component, Angular Grid control, Angular High Performance Grid, Angular Data Grid Toolbar, Grid Toolbar, Angular Grid Toolbar, excel export, grid column hiding chooser, grid column pinning chooser
@@ -29,7 +29,13 @@ The @@igComponent in Ignite UI for Angular provides an [`IgxGridToolbarComponent
 </div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-<!-- TODO -->
+<div class="sample-container loading" style="height:420px">
+    <iframe id="hierarchical-grid-toolbar-sample-1-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-toolbar-title' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-toolbar-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
 }
 
 The toolbar is shown using the @@igComponent's [`showToolbar`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#showtoolbar) property - just set it to **true**. The toolbar supports a textual title which is left aligned and its content is set using the @@igComponent's [`toolbarTitle`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#toolbartitle) property. The following code snippet demonstrates how to enable a toolbar and set its title:
@@ -51,7 +57,11 @@ The toolbar is shown using the @@igComponent's [`showToolbar`]({environment:angu
 ```
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-<!-- TODO -->
+```html
+<igx-hierarchical-grid #hierarchicalGrid class="hgrid" [data]="localdata" [showToolbar]="true" toolbarTitle="Singers" 
+     [height]="'500px'" [width]="'800px'">
+</igx-hierarchical-grid>
+```
 }
 
 #### Features
@@ -90,7 +100,13 @@ There are also properties for configuring each button's text and they are listed
 </div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-<!-- TODO -->
+<div class="sample-container loading" style="height:420px">
+    <iframe id="hierarchical-grid-toolbar-sample-1-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-toolbar-options' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchica-grid-toolbar-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
 }
 
 The following code snippet demonstrates how to enable all features of the toolbar:
@@ -126,7 +142,12 @@ The following code snippet demonstrates how to enable all features of the toolba
 ```
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-<!-- TODO -->
+```html
+ <igx-hierarchical-grid #hierarchicalGrid class="hgrid" [data]="localdata" [showToolbar]="true" toolbarTitle="Singers" 
+    [columnHiding]="true" [columnPinning]="true" [height]="'500px'" [width]="'100%'">
+...
+</igx-hierarchical-grid>
+```
 }
 
 The export to MS Excel and the export to CSV features are using respectively the [`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html) and [`IgxCsvExporterService`]({environment:angularApiUrl}/classes/igxcsvexporterservice.html) as providers. If you need to use any of them you should specify them in the **providers** array of your **app.module.ts** file. For example the following code snippet demonstrates how to include all exporter services:
@@ -143,7 +164,7 @@ import { IgxExcelExporterService, IgxCsvExporterService } from "igniteui-angular
 
 export class AppModule {}
 ```
-
+@@if (igxName !== 'IgxHierarchicalGrid') {
 #### Customizing the Export
 
 In addition to simply switching on and off the toolbar features, the export process can be further configured in the [`onToolbarExporting`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#ontoolbarexporting) event which is emitted when the user initiates the export process. This event exposes both the exporter and the exporter's options.
@@ -217,10 +238,7 @@ The following sample demonstrates how to customize the exported files:
 </div>
 <div class="divider"></div>
 }
-@@if (igxName === 'IgxHierarchicalGrid') {
-<!-- TODO -->
 }
-
 #### Custom Content Template
 
 If you need to add some application specific UI to the toolbar (like custom buttons for example) you may create an ng-template and mark it with the [`igxToolbarCustomContent`]({environment:angularApiUrl}/classes/igxgridtoolbarcustomcontentdirective.html) directive. The following code snippet demonstrates how to define such custom template:
@@ -267,7 +285,14 @@ The following sample demonstrates how to add an additional button to the toolbar
 <div class="divider"></div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-<!-- TODO -->
+<div class="sample-container loading" style="height:420px">
+    <iframe id="hierarchical-grid-toolbar-sample-3-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-toolbar-custom' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-toolbar-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider"></div>
 }
 
 ### API References
