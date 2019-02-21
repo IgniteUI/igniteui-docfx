@@ -1,4 +1,4 @@
----
+﻿---
 title: Column Moving - Native Angular | Ignite UI for Angular
 _description: Column moving feature provides a means for reordering columns interactively via a standard drag/drop mouse gesture.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Data Grid component, Angular Data Grid control, Native Angular Components, Angular Grid component, Angular Grid control, Angular High Performance Grid, Column Moving, Grid Column Moving, Angular Grid Column Moving, Angular column moving
@@ -33,7 +33,14 @@ Column moving works as well with pinned columns. Dragging an unpinned column and
 <div class="divider--half"></div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-<!-- TODO -->
+<div class="sample-container loading" style="height:650px">
+    <iframe id="hierarchical-grid-column-moving-sample-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-moving' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-column-moving-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
 }
 
 #### Overview
@@ -52,7 +59,9 @@ Column moving works as well with pinned columns. Dragging an unpinned column and
 ```
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-<!-- TODO -->
+```html
+<igx-column #companyname field="CompanyName" [movable]="true" width="150px">
+```
 }
 
 > [!NOTE]
@@ -96,7 +105,20 @@ public onColumnMovingEnd(event) {
 ```
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-<!-- TODO -->
+```html
+<igx-grid #hierarchicalGrid [data]="data" [autoGenerate]="false" (onColumnMovingEnd)="onColumnMovingEnd($event)">
+    <igx-column [field]="'Country'" [movable]="true"></igx-column>
+    <igx-column [field]="'Phone'" [dataType]="'number'" [movable]="true" ></igx-column>
+</igx-grid>
+```
+
+```typescript
+public onColumnMovingEnd(event) {
+    if (event.source.field === "Phone" && event.target.field === "Country") {
+        event.cancel = true;
+    }
+}
+```
 }
 
 ### API References

@@ -4,7 +4,7 @@ _description: The Ignite UI for Angular Hierarchical Grid control features the f
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Hierarchical Grid component, Angular Hierarchical Grid control, Angular High Performance Hierarchical Grid, Hierarchical Grid
 ---
 ## Hierarchical Grid
-<p class="highlight">Display and manipulate hierarchically structured data with the Ignite UI for Angular Hierarchical Grid. Features include Filtering, Forting, Paging, Templates, Column Pinning, Column Moving and Column Hiding, as well as the ability to edit and update data. The Hierarchical Grid builds upon the Data Grid and extends its functionality by allowing the users to expand or collapse the rows of the parent grid, revealing the according child grid when more detailed information is needed.</p>
+<p class="highlight">Display and manipulate hierarchically structured data with the Ignite UI for Angular Hierarchical Grid. Features include Filtering, Sorting, Paging, Templates, Column Pinning, Column Moving and Column Hiding, as well as Updating the visualized data. The Hierarchical Grid builds upon the Data Grid Component and extends its functionality by allowing the users to expand or collapse the rows of the parent grid, revealing the according child grid, when more detailed information is needed.</p>
 
 ### Demo
 
@@ -49,58 +49,215 @@ The Hierarchical Grid supports two ways of binding to data:
 
 #### 1. Using hierarchical data
 
-If the application loads the whole hierarchical data as an array of objects referencing children arrays of objects, then the Hierarchical Grid can be configured to read it and bind to it automatically. Each **igx-row-island** should specify the key of the property that holds the children data.
+If the application loads the whole hierarchical data as an array of objects referencing children arrays of objects, then the Hierarchical Grid can be configured to read it and bind to it automatically. Here is an example of a properly structured hierarchical data source:
+
+```javascript
+export const singers = [{
+  "Artist": "Alicia Stanger",
+  "Photo": "assets/images/hgrid/alicia.png",
+  "Debut": "2010",
+  "Grammy Nominations": 1,
+  "Grammy Awards": 0,
+  "Albums": [{
+   "Album": "Forever alone",
+   "Launch Date": new Date("November 3, 2005"),
+   "Billboard Review": "82",
+   "US Billboard 200": "7",
+   "Artist": "Alicia Stanger"
+  }]
+ },
+ {
+  "Artist": "Naomí Yepes",
+  "Photo": "assets/images/hgrid/naomi.png",
+  "Debut": "2011",
+  "Grammy Nominations": 6,
+  "Grammy Awards": 0,
+  "Tours": [{
+    "Tour": "Faithful Tour",
+    "Started on": "Sep-12",
+    "Location": "Worldwide",
+    "Headliner": "NO",
+    "Toured by": "Naomí Yepes"
+   },
+   {
+    "Tour": "City Jam Sessions",
+    "Started on": "Aug-13",
+    "Location": "North America",
+    "Headliner": "YES",
+    "Toured by": "Naomí Yepes"
+   }
+  ],
+  "Albums": [{
+    "Album": "Initiation",
+    "Launch Date": new Date("September 3, 2013"),
+    "Billboard Review": "86",
+    "US Billboard 200": "1",
+    "Artist": "Naomí Yepes"
+   },
+   {
+    "Album": "Dream Driven",
+    "Launch Date": new Date("August 25, 2014"),
+    "Billboard Review": "81",
+    "US Billboard 200": "1",
+    "Artist": "Naomí Yepes",
+    "Songs": [{
+      "No.": "1",
+      "Title": "Intro",
+      "Released": "*",
+      "Genre": "*",
+      "Album": "Dream Driven"
+     },
+     {
+      "No.": "2",
+      "Title": "Ferocious",
+      "Released": "28-Apr-2014",
+      "Genre": "Dance-pop R&B",
+      "Album": "Dream Driven"
+     }
+    ]
+   },
+   {
+    "Album": "The dragon journey",
+    "Launch Date": new Date("May 20, 2016"),
+    "Billboard Review": "60",
+    "US Billboard 200": "2",
+    "Artist": "Naomí Yepes"
+   },
+   {
+    "Album": "Organic me",
+    "Launch Date": new Date("August 17, 2018"),
+    "Billboard Review": "82",
+    "US Billboard 200": "1",
+    "Artist": "Naomí Yepes",
+    "Songs": [{
+      "No.": "1",
+      "Title": "I Love",
+      "Released": "11-May-2019",
+      "Genre": "Crunk reggaeton",
+      "Album": "Organic me"
+     },
+     {
+      "No.": "2",
+      "Title": "Early Morning Compass",
+      "Released": "15-Jan-2020",
+      "Genre": "mystical parody-bap ",
+      "Album": "Organic me"
+     }
+    ]
+   },
+   {
+    "Album": "Curiosity",
+    "Launch Date": new Date("December 7, 2019"),
+    "Billboard Review": "75",
+    "US Billboard 200": "12",
+    "Artist": "Naomí Yepes"
+   }
+  ]
+ }
+];
+```
+Each **igx-row-island** should specify the key of the property that holds the children data.
 
 ```html
-<igx-hierarchical-grid #grid1 [data]="companies" [autoGenerate]="true">
-    <igx-row-island [key]="'employees'" [autoGenerate]="true">
-    </igx-row-island>
-    <igx-row-island [key]="'products'" [autoGenerate]="true">
-        <igx-row-island [key]="'shipments'" [autoGenerate]="true">
+<igx-hierarchical-grid #hierarchicalGrid [data]="singers" [autoGenerate]="true">
+    <igx-row-island [key]="'Albums'" [autoGenerate]="true">
+        <igx-row-island [key]="'Songs'" [autoGenerate]="true">
         </igx-row-island>
+    </igx-row-island>
+    <igx-row-island [key]="'Tours'" [autoGenerate]="true">
     </igx-row-island>
 </igx-hierarchical-grid>
 ```
 > [!NOTE]
 > Note that instead of `data` the user configures only the `key` that the **igx-hierarchical-grid** needs to read to set the data automatically.
 
-#### 2. Using load-on-demand
+#### 2. Using Load-On-Demand
 
 Most applications are designed to load as little data as possible initially, which results in faster load times. In such cases **igx-hierarchical-grid** may be configured to allow user-created services to feed it with data on demand. The following configuration uses a special `@Output` and a newly introduced loading-in-progress template to provide a fully-featured load-on-demand.
 
 ```html
 <!-- hierarchicalGridSample.component.html -->
 
-<igx-hierarchical-grid #grid1 [isLoading]="true" [data]="remoteData" [autoGenerate]="true">
-    <igx-row-island #rowIsland1 [key]="'Orders'" [isLoading]="true" [autoGenerate]="true"
-    (onGridCreated)="gridCreated($event, rowIsland1)">
-        <igx-row-island #rowIsland2 [key]="'Order_Details'" [autoGenerate]="true"
-        (onGridCreated)="gridCreated($event, rowIsland2)">
+    <igx-hierarchical-grid #hGrid [primaryKey]="'CustomerID'" [autoGenerate]="true" [height]="'600px'" [width]="'100%'">
+        <igx-row-island [key]="'Orders'" [primaryKey]="'OrderID'" [autoGenerate]="true"  (onGridCreated)="gridCreated($event, 'CustomerID')">
+            <igx-row-island [key]="'Order_Details'" [primaryKey]="'ProductID'" [autoGenerate]="true" (onGridCreated)="gridCreated($event, 'OrderID')">
+            </igx-row-island>
         </igx-row-island>
-    </igx-row-island>
-</igx-hierarchical-grid>
+    </igx-hierarchical-grid>
 ```
 
 ```typescript
 //  hierarchicalGridSample.component.ts
 
-    gridCreated(event: IGridCreatedEventArgs, rowIsland: IgxRowIslandComponent) {
-        this.remoteService.getData(
-            {
-                parentID: event.parendID,
-                level: rowIsland.level,
-                key: rowIsland.key
-            }, (data) => {
-                event.grid.data = data['value'];
+export class HierarchicalGridLoDSampleComponent implements AfterViewInit {
+    @ViewChild("hGrid")
+    public hGrid: IgxHierarchicalGridComponent;
+
+    constructor(private remoteService: RemoteLoDService) { }
+
+    public ngAfterViewInit() {
+        this.hGrid.isLoading = true;
+        this.remoteService.getData({ parentID: null, rootLevel: true, key: "Customers" }).subscribe((data) => {
+            this.hGrid.isLoading = false;
+            this.hGrid.data = data;
+            this.hGrid.cdr.detectChanges();
+        });
+    }
+
+    public gridCreated(event: IGridCreatedEventArgs, _parentKey: string) {
+        const dataState = {
+            key: event.owner.key,
+            parentID: event.parentID,
+            parentKey: _parentKey,
+            rootLevel: false
+        };
+        event.grid.isLoading = true;
+        this.remoteService.getData(dataState).subscribe(
+            (data) => {
                 event.grid.isLoading = false;
+                event.grid.data = data;
                 event.grid.cdr.detectChanges();
             }
         );
     }
+}
+```
+
+```typescript
+// remote-load-on-demand.service.ts
+
+@Injectable()
+export class RemoteLoDService {
+    public url = `https://services.odata.org/V4/Northwind/Northwind.svc/`;
+
+    constructor(private http: HttpClient) { }
+
+    public getData(dataState?: any): Observable<any[]> {
+        return this.http.get(this.buildUrl(dataState)).pipe(
+            map((response) => response["value"])
+        );
+    }
+
+    public buildUrl(dataState) {
+        let qS = "";
+        if (dataState) {
+            qS += `${dataState.key}?`;
+
+            if (!dataState.rootLevel) {
+                if (typeof dataState.parentID === "string") {
+                    qS += `$filter=${dataState.parentKey} eq '${dataState.parentID}'`;
+                } else {
+                    qS += `$filter=${dataState.parentKey} eq ${dataState.parentID}`;
+                }
+            }
+        }
+        return `${this.url}${qS}`;
+    }
+}
 ```
 ### Features
 
-The grid features could be enabled and configured through the **igx-row-island** markup - they get applied for every grid that is created for it. Changing options at runtime through the row instance changes them for each of the grids it has spawned. 
+The grid features could be enabled and configured through the **igx-row-island** markup - they get applied for every grid that is created for it. Changing options at runtime through the row island instance changes them for each of the grids it has spawned. 
 
 ```html
 <igx-hierarchical-grid [data]="localData" [displayDensity]="density" [autoGenerate]="false"
@@ -125,7 +282,7 @@ The following grid features work on a per grid level, which means that each grid
 - Sorting
 - Filtering
 - Paging
-- Multi-column headers
+- Multi Column Headers
 - Hiding
 - Pinning
 - Moving
@@ -148,7 +305,8 @@ The Selection and Navigation features work globally for the whole **igx-hierarch
 
 ### CRUD operations
 
-An important difference from the flat grid is that each instance for a given row island has the same transaction service instance and accumulates the same transaction log. In order to enable the CRUD functionality users should inject the `IgxHierarchicalTransactionServiceFactory`.
+> [!NOTE]
+> An important difference from the flat Data Grid is that each instance for a given row island has the same transaction service instance and accumulates the same transaction log. In order to enable the CRUD functionality users should inject the `IgxHierarchicalTransactionServiceFactory`.
 
 Calling CRUD API methods should still be done through each separate grid instance.
 
