@@ -1,13 +1,15 @@
 ---
 title: Financial Chart Annotations
 _description: The Ignite UI for Angular Financial Chart component is easily configured to display financial data using a simple and intuitive API, as once the user binds the data, the chart offers multiple ways in which the data can then be visualized and interpreted.
-_keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Chart Control, Angular Chart Example, Angular Grid Component, Angular Chart Component, Angular Financial Chart
+_keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Chart Control, Angular Chart Example, Angular Chart Component, Angular Financial Chart
 ---
+
 ## Annotations
 
-This topic provides conceptual information about the annotations available on the `igx-financial-chart`.
+This topic provides conceptual information about the annotations available on the `IgxFinancialChart`.
 
 ### Demo
+
 <div class="sample-container" style="height: 500px">
     <iframe id="financial-chart-annotations-iframe" src='{environment:demosBaseUrl}/charts/financial-chart-annotations' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -47,7 +49,7 @@ The Final Value Layer provides a quick view along the axis of the ending value d
 
 ### Callout Layer
 
-The Callout Layer displays a callout at X/Y positions. 
+The Callout Layer displays a callout at X/Y positions.
 
 > Note: When using the ordinal X axis mode, the `calloutsXMemberPath` should point to the numeric index of the item, otherwise `calloutsXMemberPath` should point to the time value.
 

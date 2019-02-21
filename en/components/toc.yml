@@ -259,9 +259,9 @@
         #- name: Axis Scales
         #  href: datachart_axis_scales.md
         #  new: true
-        - name: Axis Locations
-          href: datachart_axis_locations.md
-          new: true
+        # - name: Axis Locations
+        #  href: datachart_axis_locations.md
+        #  new: true
         - name: Axis Sharing
           href: datachart_axis_sharing.md
           new: true
