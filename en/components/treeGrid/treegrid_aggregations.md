@@ -23,7 +23,7 @@ If you have non-hierarchical data and you want to **group by** one or more colum
 
 ### Implementation
 
-In this sample we have created a pipe class called `TreeGridGroupingPipe` which groups the tabular data by the **"Category"**, **"Type"** and **"Contract"** fields. The resulted hierarchy is displayed in the newly created **"Categories"** column. The pipe also calculates aggregated values for the generated parent rows for the **"Price"**, **"Change"** and **"Change(%)"** columns. For more information on how this pipe works you can take a look at the `TreeGridGroupingPipe` class in the `tree-grid-grouping.pipe.ts` file. The pipe is completely configurable so you could copy and re-use it in your own project.
+In this sample we have created a pipe class called `TreeGridGroupingPipe` which groups the tabular data by the **"Category"**, **"Type"** and **"Contract"** fields. The resulting hierarchy is displayed in the newly created **"Categories"** column. The pipe also calculates aggregated values for the generated parent rows for the **"Price"**, **"Change"** and **"Change(%)"** columns. For more information on how this pipe works you can take a look at the `TreeGridGroupingPipe` class in the `tree-grid-grouping.pipe.ts` file. The pipe is completely configurable so you could copy and re-use it in your own project.
 
 Here is an example of how to use the pipe in the template:
 
