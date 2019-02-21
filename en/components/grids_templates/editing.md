@@ -6,7 +6,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ### @@igComponent Editing
 
-The @@igComponent component in Ignite UI for Angular provides you a default cell templates for editable columns which are based on the data type of the column. In addition you can define your own custom templates for editable columns and override default behavior for committing and discarding changes in the cell value .
+The @@igComponent component in Ignite UI for Angular provides you with default cell templates for editable columns which are based on the data type of the column. In addition you can define your own custom templates for editable columns and override default behavior for committing and discarding changes in the cell value.
 
 #### Demo
 
