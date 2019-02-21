@@ -1,4 +1,4 @@
----
+﻿---
 title: Summaries Component - Native Angular | Ignite UI for Angular
 _description: With the Ignite UI for Angular Summaries component, see the column information in a separate container with a predefined set of default summary items, depending on the type of data within the column.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Component, Angular Grid, Angular Data Grid component, Angular Data Grid control, Angular Grid component, Angular Grid control, Angular High Performance Grid, Summaries, Summary
@@ -29,7 +29,13 @@ The @@igComponent component in ignite UI for Angular has a **summaries** feature
 </div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-  <!-- todo -->
+  <div class="sample-container loading" style="height:650px">
+    <iframe id="hierarchical-grid-summary-sample-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-summary' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-summary-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
 }
 
 <div class="divider--half"></div>
@@ -57,6 +63,7 @@ For `date` data type, the following functions are available:
 
 **@@igComponent summaries** are enabled per-column by setting [`hasSummary`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#hassummary) property to `true`. It is also important to keep in mind that the summaries for each column are resolved according to the column data type. In the `@@igSelector` the default column data type is `string`, so if you want `number` or `date` specific summaries you should specify the [`dataType`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#datatype) property as `number` or `date`.
 
+@@if (igxName !== 'IgxHierarchicalGrid') {
 ```html
 <@@igSelector #grid1 [data]="data" [autoGenerate]="false" height="800px" width="800px" (onColumnInit)="initColumn($event)">
     <igx-column field="ProductID" header="Product ID" width="200px"  [sortable]="true">
@@ -67,9 +74,30 @@ For `date` data type, the following functions are available:
     </igx-column>
 </@@igSelector>
 ```
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+```html
+<igx-hierarchical-grid class="hgrid" [data]="localdata" [autoGenerate]="false"
+        [height]="'600px'" [width]="'100%'" #hierarchicalGrid>
+        <igx-column field="Artist" [hasSummary]='true'></igx-column>
+        <igx-column field="Photo">
+            <ng-template igxCell let-cell="cell">
+                <div class="cell__inner_2">
+                    <img [src]="cell.value" class="photo" />
+                </div>
+            </ng-template>
+        </igx-column>
+        <igx-column field="Debut" [hasSummary]='true'></igx-column>
+        <igx-column field="Grammy Nominations" [hasSummary]='true' [dataType]="'number'" [summaries]="mySummary"></igx-column>
+        <igx-column field="Grammy Awards" [hasSummary]='true' [dataType]="'number'"></igx-column>
+        ...
+    </igx-hierarchical-grid> 
 
+```
+}
 The other way to enable/disable summaries for a specific column or a list of columns is to use the public method [`enableSummaries`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#enablesummaries)/[`disableSummaries`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#disablesummaries) of the **@@igSelector**.
 
+@@if (igxName !== 'IgxHierarchicalGrid') {
 ```html
 <@@igSelector #grid1 [data]="data" [autoGenerate]="false" height="800px" width="800px" (onColumnInit)="initColumn($event)" >
     <igx-column field="ProductID" header="Product ID" width="200px"  [sortable]="true">
@@ -93,9 +121,40 @@ public disableSummary() {
     this.grid1.disableSummaries("ProductName");
 }
 ```
-
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+```html
+<@@igSelector #hierarchicalGrid [data]="data" [autoGenerate]="false" height="800px" width="800px" (onColumnInit)="initColumn($event)" >
+  <igx-column field="Artist" [hasSummary]='true'></igx-column>
+        <igx-column field="Photo">
+            <ng-template igxCell let-cell="cell">
+                <div class="cell__inner_2">
+                    <img [src]="cell.value" class="photo" />
+                </div>
+            </ng-template>
+        </igx-column>
+        <igx-column field="Debut" [hasSummary]='true'></igx-column>
+        <igx-column field="Grammy Nominations" [hasSummary]='true' [dataType]="'number'" [summaries]="mySummary"></igx-column>
+        <igx-column field="Grammy Awards" [hasSummary]='true' [dataType]="'number'"></igx-column>
+</@@igSelector>
+<button (click)="enableSummary()">Enable Summary</button>
+<button (click)="disableSummary()">Disable Summary </button>
+```
+```typescript
+public enableSummary() {
+    this.hierarchicalGrid.enableSummaries([
+        {fieldName: "Grammy Nominations", customSummary: this.mySummary},
+        {fieldName: "Artist"}
+    ]);
+}
+public disableSummary() {
+    this.hierarchicalGrid.disableSummaries("Photo");
+}
+```
+}
 If these functions do not fulfill your requirements you can provide a custom summary for the specific columns. In order to achieve this you have to override one of the base classes [`IgxSummaryOperand`]({environment:angularApiUrl}/classes/igxsummaryoperand.html), [`IgxNumberSummaryOperand`]({environment:angularApiUrl}/classes/igxnumbersummaryoperand.html) or [`IgxDateSummaryOperand`]({environment:angularApiUrl}/classes/igxdatesummaryoperand.html) according to the column data type and your needs. In this way you can redefine the existing function or you can add new functions. [`IgxSummaryOperand`]({environment:angularApiUrl}/classes/igxsummaryoperand.html) class provides the default implementation only for [`count`]({environment:angularApiUrl}/classes/igxsummaryoperand.html#count) method. [`IgxNumberSummaryOperand`]({environment:angularApiUrl}/classes/igxnumbersummaryoperand.html) extends [`IgxSummaryOperand`]({environment:angularApiUrl}/classes/igxsummaryoperand.html) and provides implementation for the [`min`]({environment:angularApiUrl}/classes/igxnumbersummaryoperand.html#min), [`max`]({environment:angularApiUrl}/classes/igxnumbersummaryoperand.html#max), [`sum`]({environment:angularApiUrl}/classes/igxnumbersummaryoperand.html#sum) and [`average`]({environment:angularApiUrl}/classes/igxnumbersummaryoperand.html#average). [`IgxDateSummaryOperand`]({environment:angularApiUrl}/classes/igxdatesummaryoperand.html) extends [`IgxSummaryOperand`]({environment:angularApiUrl}/classes/igxsummaryoperand.html) and additionally gives you [`earliest`]({environment:angularApiUrl}/classes/igxdatesummaryoperand.html#earliest) and [`latest`]({environment:angularApiUrl}/classes/igxdatesummaryoperand.html#latest).
 
+@@if (igxName !== 'IgxHierarchicalGrid') {
 ```typescript
 import { IgxSummaryResult, IgxSummaryOperand, IgxNumberSummaryOperand, IgxDateSummaryOperand } from 'igniteui-angular/grid/grid-summary';
 
@@ -116,7 +175,29 @@ class MySummary extends IgxNumberSummaryOperand {
     }
 }
 ```
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+```typescript
+import { IgxRowIslandComponent, IgxHierarchicalGridComponent, IgxNumberSummaryOperand, IgxSummaryResult } from "igniteui-angular";
 
+class MySummary extends IgxNumberSummaryOperand {
+
+    constructor() {
+      super();
+    }
+    public operate(data?: any[]): IgxSummaryResult[] {
+      const result = super.operate(data);
+      result.push({
+        key: "test",
+        label: "More than 5",
+        summaryResult: data.filter((rec) => rec > 5).length
+      });
+  
+      return result;
+    }
+  }
+```
+}
 In the code above you can see that method [`operate`]({environment:angularApiUrl}/classes/igxsummaryoperand.html#operate) returns a list of [`IgxSummaryResult`]({environment:angularApiUrl}/interfaces/igxsummaryresult.html), which is an interface.
 ```typescript
 interface IgxSummaryResult {
@@ -128,7 +209,7 @@ interface IgxSummaryResult {
 
 > [!NOTE]
 > In order to calculate the summary row height properly, the @@igComponent needs the [`operate`]({environment:angularApiUrl}/classes/igxsummaryoperand.html#operate) method to always return an array of [`IgxSummaryResult`]({environment:angularApiUrl}/interfaces/igxsummaryresult.html) with the proper length even when the data is empty.
-
+@@if (igxName !== 'IgxHierarchicalGrid') {
 And now let's add our custom summary to the column `UnitsInStock`. We will achieve that by setting the [`summaries`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#summaries) property to the class we create below.
 ```html
 <@@igSelector #grid1 [data]="data" [autoGenerate]="false" height="800px" width="800px" (onColumnInit)="initColumn($event)" >
@@ -150,7 +231,36 @@ export class GridComponent implements OnInit {
     ....
 }
 ```
+}
 
+@@if (igxName === 'IgxHierarchicalGrid') {
+And now let's add our custom summary to the column `GramyNominations`. We will achieve that by setting the [`summaries`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#summaries) property to the class we create below.
+```html
+ <igx-hierarchical-grid class="hgrid" [data]="localdata" [autoGenerate]="false"
+        [height]="'600px'" [width]="'100%'" #hierarchicalGrid>
+        <igx-column field="Artist" [hasSummary]='true'></igx-column>
+        <igx-column field="Photo">
+            <ng-template igxCell let-cell="cell">
+                <div class="cell__inner_2">
+                    <img [src]="cell.value" class="photo" />
+                </div>
+            </ng-template>
+        </igx-column>
+        <igx-column field="Debut" [hasSummary]='true'></igx-column>
+        <igx-column field="Grammy Nominations" [hasSummary]='true' [dataType]="'number'" [summaries]="mySummary"></igx-column>
+        <igx-column field="Grammy Awards" [hasSummary]='true' [dataType]="'number'"></igx-column>
+...
+</igx-hierarchical-grid>
+```
+
+```typescript
+...
+export class HGridSummarySampleComponent implements OnInit {
+    mySummary = MySummary;
+    ....
+}
+```
+}
 @@if (igxName === 'IgxGrid') {
 ### Summaries with Group By
 
