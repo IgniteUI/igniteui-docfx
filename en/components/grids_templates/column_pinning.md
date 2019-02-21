@@ -1,4 +1,4 @@
----
+﻿---
 title: Column Pinning Component – Native Angular | Ignite UI for Angular
 _description: Pinning with the Ignite UI for Angular Column Pinning component allows the users to always see the pinned columns while horizontally scrolling. 
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Components, Angular Data Grid component, Angular Data Grid control, Angular Grid component, Angular Grid control, Angular High Performance Grid, column pinning, pinning, pin
@@ -28,7 +28,13 @@ A column or multiple columns can be pinned to the left-hand side of the @@igComp
 </div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-<!-- TODO -->
+<div class="sample-container loading" style="height:670px">
+    <iframe id="hierarchical-grid-sample-pinning-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-pinning' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-sample-pinning-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
 }
 
 #### Column Pinning API
@@ -56,7 +62,55 @@ Each column can be pinned, as long as the pinned area does not become wider than
 ```
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-<!-- TODO -->
+```html
+<igx-hierarchical-grid class="hgrid" [data]="localdata" [autoGenerate]="false"
+        [height]="'600px'" [width]="'100%'" #hierarchicalGrid>
+        <igx-column #artist field="Artist" [width]="'180px'">
+            <ng-template igxHeader>
+                <div class="title-inner">
+                    <span style="float:left">Artist</span>
+                    <igx-icon class="pin-icon" fontSet="fas" name="fa-thumbtack" (click)="toggleColumn(artist)"></igx-icon>
+                </div>
+            </ng-template>
+        </igx-column>
+        <igx-column #photo field="Photo">
+                <ng-template igxHeader>
+                        <div class="title-inner">
+                            <span style="float:left">Photo</span>
+                            <igx-icon class="pin-icon" fontSet="fas" name="fa-thumbtack" (click)="toggleColumn(photo)"></igx-icon>
+                        </div>
+                    </ng-template>
+            <ng-template igxCell let-cell="cell">
+                <div class="cell__inner_2">
+                    <img [src]="cell.value" class="photo" />
+                </div>
+            </ng-template>
+        </igx-column>
+        <igx-column #debut field="Debut">
+            <ng-template igxHeader>
+                <div class="title-inner">
+                    <span style="float:left">Debut</span>
+                    <igx-icon class="pin-icon" fontSet="fas" name="fa-thumbtack" (click)="toggleColumn(debut)"></igx-icon>
+                </div>
+            </ng-template>
+        </igx-column>
+        <igx-column #grammynominations field="Grammy Nominations" [width]="'200px'">
+            <ng-template igxHeader>
+                <div class="title-inner">
+                    <span style="float:left">Grammy Nominations</span>
+                    <igx-icon class="pin-icon" fontSet="fas" name="fa-thumbtack" (click)="toggleColumn(grammynominations)"></igx-icon>
+                </div>
+            </ng-template>
+        </igx-column>
+        <igx-column #grammyawards field="Grammy Awards" [width]="'180px'">
+            <ng-template igxHeader>
+                <div class="title-inner">
+                    <span style="float:left">Grammy Awards</span>
+                    <igx-icon class="pin-icon" fontSet="fas" name="fa-thumbtack" (click)="toggleColumn(grammyawards)"></igx-icon>
+                </div>
+            </ng-template>
+        </igx-column>
+```
 }
 
 You may also use the @@igComponent's [`pinColumn`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#pincolumn) or [`unpinColumn`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#unpincolumn) methods of the [`@@igxNameComponent`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) to pin or unpin columns by their field name:
@@ -74,7 +128,10 @@ this.treeGrid.unpinColumn("Name");
 ```
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-<!-- TODO -->
+```typescript
+this.hierarchicalGrid.pinColumn("Artist");
+this.hierarchicalGrid.unpinColumn("Debut");
+```
 }
 
 Both methods return a boolean value indicating whether their respective operation is successful or not. Usually the reason they fail is that the column is already in the desired state. [`pinColumn`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#pincolumn) also fails when the result would mean that the pinned area becomes larger than or the same size as the @@igComponent itself. Consider the following example:
@@ -108,7 +165,19 @@ var succeed = this.treeGrid.pinColumn("Title"); // pinning fails and succeed wil
 If pinning the `Title` column is allowed the pinned area would exceed the @@igComponent's width.
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-<!-- TODO -->
+```html
+<igx-hierarchical-grid class="hgrid" [data]="localdata" [autoGenerate]="false"
+        [height]="'600px'" [width]="'800px'" #hierarchicalGrid>
+    <igx-column [field]="Artist" [width]="200px" [pinned]="true"></igx-column>
+    <igx-column [field]="Debut" [width]="200px"></igx-column>
+</igx-tree-grid>
+```
+
+```typescript
+var succeed = this.hierarchicalGrid.pinColumn("Artist"); // pinning fails and succeed will be false
+```
+
+If pinning the `Artist` column is allowed the pinned area would exceed the @@igComponent's width.
 }
 
 A column is pinned to the right of the rightmost pinned column. Changing the order of the pinned columns can be done by subscribing to the [`onColumnPinning`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#oncolumnpinning) event and changing the [`insertAtIndex`]({environment:angularApiUrl}/interfaces/ipincolumneventargs.html#insertatindex) property of the event arguments to the desired position index.
@@ -140,7 +209,19 @@ public columnPinning(event) {
 ```
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-<!-- TODO -->
+```html
+<igx-hierarchical-grid class="hgrid" [data]="localdata" [autoGenerate]="false"
+        [height]="'600px'" [width]="'800px'" 
+        (onColumnPinning)="columnPinning($event) #hierarchicalGrid></igx-hierarchical-grid> 
+```
+
+```typescript
+public columnPinning(event) {
+    if (event.column.field === "Artist") {
+        event.insertAtIndex = 0;
+    }
+}
+```
 }
 
 ### Pinning Limitations
