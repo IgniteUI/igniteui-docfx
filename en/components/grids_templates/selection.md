@@ -1,4 +1,4 @@
----
+﻿---
 title: Row Selection Component - Native Angular | Ignite UI for Angular
 _description: With the Row Selection component in Ignite UI for Angular, there is a checkbox that precedes all other columns within the row, allowing the row to be either selected or deselected and enabling the user to select multiple rows of data.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Data Grid component, Angular Data Grid control, Angular Grid component, Angular Grid control, Angular High Performance Grid, Angular Grid Row Selection, Angular Row Selection, Angular Grid Selection, Grid Row Selection, Grid Selection
@@ -29,7 +29,13 @@ With row selection in Ignite UI for Angular, there is a checkbox that precedes a
 <div class="divider--half"></div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-<!-- TODO -->
+<div class="sample-container loading" style="height:700px">
+    <iframe id="hierarchical-grid-selection-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-selection' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
 }
 
 ### Setup
@@ -80,7 +86,24 @@ public handleRowSelection(event) {
 ```
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-<!-- TODO -->
+```html
+<igx-hierarchical-grid class="hgrid" [data]="localdata" [autoGenerate]="false"
+        [height]="'600px'" [width]="'100%'" [rowSelectable]="selection"
+        (onSelection)="handleRowSelection($event)" #hierarchicalGrid>
+    ...
+</igx-hierarchical-grid>
+```
+```typescript
+/* selectionExample.component.ts */
+
+    public handleRowSelection(event) {
+        const targetCell = event.cell;
+        if (!this.selection) {
+            this.hGrid.deselectAllRows();
+            this.hGrid.selectRows([targetCell.row.rowID]);
+        }
+    }
+```
 }
 
 #### Multiple Selection
@@ -119,7 +142,18 @@ public selection = true;
 ```
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-<!-- TODO -->
+```html
+<igx-hierarchical-grid class="hgrid" [data]="localdata" [autoGenerate]="false"
+        [height]="'600px'" [width]="'100%'" [rowSelectable]="selection"
+        (onSelection)="handleRowSelection($event)" #hierarchicalGrid>
+    ...
+</igx-hierarchical-grid>
+```
+```typescript
+/* selectionExample.component.ts */
+
+public selection = true;
+```
 }
 
 **Note:** In order to have proper row selection and cell selection, while @@igComponent has remote virtualization, [`primaryKey`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#primarykey) should be provided.
@@ -149,13 +183,20 @@ The below code example can be used to select one or multiple rows simultaneously
 ```
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-<!-- TODO -->
+```html
+<!-- selectionExample.component.html -->
+
+<@@igSelector ... [primaryKey]="'artist'">
+...
+</@@igSelector>
+...
+<button (click)="this.@@igObjectRef.selectRows([1,2,5])">Select 1,2 and 5</button>
+```
 }
 
 This will add the rows which correspond to the data entries with IDs 1, 2 and 5 to the @@igComponent selection.
 
 #### Cancel selection event
-@@if (igxName === 'IgxGrid' || igxName === 'IgxTreeGrid') {
 ```html
 <!-- selectionExample.component.html -->
 
@@ -171,10 +212,6 @@ public handleRowSelectionChange(args) {
     args.checked = false; // overwrites the checkbox state
 }
 ```
-}
-@@if (igxName === 'IgxHierarchicalGrid') {
-<!-- TODO -->
-}
 
 ### API References
 
