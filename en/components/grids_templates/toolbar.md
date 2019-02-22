@@ -209,9 +209,6 @@ public toolbarExportingHandler(args) {
         // Don't export image field
         columnArgs.cancel = columnArgs.header === "Name";
         }
-        @@if (igxName === 'IgxHierarchicalGrid') {
-        // TODO
-        }
     });
 }
 ```

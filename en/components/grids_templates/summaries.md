@@ -313,10 +313,6 @@ The available values of the [`summaryPosition`]({environment:angularApiUrl}/clas
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-child-summary-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 }
-@@if (igxName === 'IgxHierarchicalGrid') {
-  <!-- todo -->
-}
-
 <div class="divider--half"></div>
 
 #### Keyboard Navigation
