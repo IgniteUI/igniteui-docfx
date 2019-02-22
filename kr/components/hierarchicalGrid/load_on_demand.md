@@ -117,22 +117,22 @@ First we will define owr hierarchical grid template with the levels of hierarchy
 
 ```html
 <igx-hierarchical-grid #hGrid [primaryKey]="'CustomerID'" [autoGenerate]="false" [height]="'600px'" [width]="'100%'">
-    <igx-column field="CustomerID"></igx-column>
+    <igx-column field="CustomerID" [hidden]="true"></igx-column>
     <igx-column field="CompanyName"></igx-column>
     <igx-column field="ContactName"></igx-column>
     <igx-column field="ContactTitle"></igx-column>
     <igx-column field="Country"></igx-column>
     <igx-column field="Phone"></igx-column>
     <igx-row-island [key]="'Orders'" [primaryKey]="'OrderID'" [autoGenerate]="false" >
-        <igx-column field="OrderID"></igx-column>
-        <igx-column field="OrderDate"></igx-column>
+        <igx-column field="OrderID" [hidden]="true"></igx-column>
         <igx-column field="ShipCountry"></igx-column>
         <igx-column field="ShipCity"></igx-column>
         <igx-column field="ShipAddress"></igx-column>
+        <igx-column field="OrderDate"></igx-column>
         <igx-row-island [key]="'Order_Details'" [primaryKey]="'ProductID'" [autoGenerate]="false" >
-            <igx-column field="ProductID"></igx-column>
-            <igx-column field="UnitPrice"></igx-column>
+            <igx-column field="ProductID" [hidden]="true"></igx-column>
             <igx-column field="Quantity"></igx-column>
+            <igx-column field="UnitPrice"></igx-column>
             <igx-column field="Discount"></igx-column>
         </igx-row-island>
     </igx-row-island>
@@ -151,22 +151,22 @@ The template file `hierarchical-grid-lod.component.html`, with these changes add
 
 ```html
 <igx-hierarchical-grid #hGrid [primaryKey]="'CustomerID'" [autoGenerate]="false" [height]="'600px'" [width]="'100%'">
-    <igx-column field="CustomerID"></igx-column>
+    <igx-column field="CustomerID" [hidden]="true"></igx-column>
     <igx-column field="CompanyName"></igx-column>
     <igx-column field="ContactName"></igx-column>
     <igx-column field="ContactTitle"></igx-column>
     <igx-column field="Country"></igx-column>
     <igx-column field="Phone"></igx-column>
     <igx-row-island [key]="'Orders'" [primaryKey]="'OrderID'" [autoGenerate]="false" (onGridCreated)="gridCreated($event, 'CustomerID')">
-        <igx-column field="OrderID"></igx-column>
-        <igx-column field="OrderDate"></igx-column>
+        <igx-column field="OrderID" [hidden]="true"></igx-column>
         <igx-column field="ShipCountry"></igx-column>
         <igx-column field="ShipCity"></igx-column>
         <igx-column field="ShipAddress"></igx-column>
+        <igx-column field="OrderDate"></igx-column>
         <igx-row-island [key]="'Order_Details'" [primaryKey]="'ProductID'" [autoGenerate]="false" (onGridCreated)="gridCreated($event, 'OrderID')">
-            <igx-column field="ProductID"></igx-column>
-            <igx-column field="UnitPrice"></igx-column>
+            <igx-column field="ProductID" [hidden]="true"></igx-column>
             <igx-column field="Quantity"></igx-column>
+            <igx-column field="UnitPrice"></igx-column>
             <igx-column field="Discount"></igx-column>
         </igx-row-island>
     </igx-row-island>
@@ -226,7 +226,7 @@ With this, the setup of our application is almost done. The last thing will impr
 
 #### Setup of loading indication
 
-The [`IgxHierarchicalGrid`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html) supports by default loading indicator by setting the [`isLoading`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html#isloading) property to `true` while there is no data. We will need to set it initially for the root grid and when creating a child grid until the data is loaded. We could always set it to `true` in our template, but we want to hide it and display that the grid has no data if the service returns an empty array.
+The [`IgxHierarchicalGrid`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html) supports by default loading indicator by setting the [`isLoading`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html#isloading) property to `true` while there is no data. We will need to set it initially for the root grid and when creating a child grid until the data is loaded. We could always set it to `true` in our template, but we want to hide it and display that the grid has no data if the service returns an empty array by setting it to `false`.
 
 In this case the final version of our `hierarchical-grid-lod.component.ts` would look like this:
 
