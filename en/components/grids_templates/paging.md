@@ -50,7 +50,7 @@ The paging area supports templating by the user, if a template reference is pass
     Total pages: {{ @@igObjectRef.totalPages }}
 </ng-template>
 
-<@@igSelector paging="true" [paginationTemplate]="myTemplate">
+<@@igSelector [paging]="true" [paginationTemplate]="myTemplate">
     ...
 </@@igSelector>
 ```
@@ -286,13 +286,6 @@ After all the changes above, the following result will be achieved.
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-remote-paging-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
-}
-@@if (igxName === 'IgxHierarchicalGrid') {
-    <!-- todo -->
-    <!-- populate this if remote paging is relevant to the hierarchical grid -->
-}
-
-<div class="divider--half"></div>
 
 If you want your sample to look exactly like this one do not forget to apply the custom paging theme:
 
@@ -318,6 +311,13 @@ $custom-button-theme: igx-button-theme(
     @include igx-button($custom-button-theme);
 }
 ```
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+    <!-- todo -->
+    <!-- populate this if remote paging is relevant to the hierarchical grid -->
+}
+
+<div class="divider--half"></div>
 
 ### API References
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
