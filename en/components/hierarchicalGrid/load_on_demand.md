@@ -1,16 +1,16 @@
 ---
 title: Hierarchical Grid load on demand - Native Angular | Ignite UI for Angular
 _description: The Ignite UI for Angular Hierarchical Grid provides the necessary tools to load data on demand for each child grid that is expanded. That way the volume of data would be greatly reduced and can be retrieved only when the user needs it.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Tree Grid component, Angular Tree Grid control, Angular Tree Grid component, Angular High Performance Tree Grid, Hierarchical Grid 
+_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Hierarchical Grid component, Angular Hierarchical Grid control, Angular High Performance Hierarchical Grid, Hierarchical Grid 
 ---
 
-## Hierarchical Grid Load On Demand
+### Hierarchical Grid Load On Demand
 
-The Ignite UI for Angular [`IgxHierarchicalGrid`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html) can be rendered in such way that it would require the minimal amount of data to get from the server so the user could see it as quickly as possible. Then, only after the user expands a row containing a child grid, he would receive the data for that particular child grid. This mechanism, also known as Load on Demand, can be easily configured to work with any remote data.
+The Ignite UI for Angular [`IgxHierarchicalGrid`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html) can be rendered in such way that it requires the minimal amount of data to get from the server so the user could see it as quickly as possible. Then, only after the user expands a row containing a child grid, he will receive the data for that particular child grid. This mechanism, also known as Load on Demand, can be easily configured to work with any remote data.
 
-In this topic we would demonstrate how to achieve Load on Demand, by creating our own Remote Service Provider for the [`IgxHierarchicalGrid`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html), using a remote oData v4 Service that is readily available. Here's the working demo and later we will go through it step by step and describe the process of creating it.
+In this topic we will demonstrate how to achieve Load on Demand, by creating our own Remote Service Provider for the [`IgxHierarchicalGrid`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html), using a remote oData v4 Service that is readily available. Here's the working demo and later we will go through it step by step and describe the process of creating it.
 
-### Demo
+#### Demo
 
 <div class="sample-container loading" style="height:700px">
     <iframe id="hierarchical-grid-lod-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-lod' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -27,7 +27,7 @@ First we will prepare our service provider so we will be ready to get the data w
 
 #### Getting basic data
 
-We will be communicating with our backend service over HTTP protocol using XMLHttpRequest interface the browsers provide. In order to achieve this more easily we will use Angular's [`HttpClient`](https://angular.io/api/common/http/HttpClient) module that offers a simplified client HTTP API. That way in order to get our data we would need this simple method in our service:
+We will be communicating with our backend service over HTTP protocol using XMLHttpRequest interface the browsers provide. In order to achieve this more easily we will use Angular's [`HttpClient`](https://angular.io/api/common/http/HttpClient) module that offers a simplified client HTTP API. That way in order to get our data we will need this simple method in our service:
 
 
 ```typescript
@@ -38,15 +38,15 @@ public getData(dataState: any): Observable<object> {
 }
 ```
 
-As you can see `this.http` would be a reference to our `HttpCLient` module, and `buildUrl()` would be the method that would generate our url based on the data that we have received. We map our response so we get only the value of our result and return an Observable since this is executed asynchronously. That way we can later subscribe to it, process it further in our application and pass it to our grid.
+As you can see `this.http` will be a reference to our `HttpCLient` module, and `buildUrl()` will be the method that will generate our url based on the data that we have received. We map our response so we get only the value of our result and return an Observable since this is executed asynchronously. That way we can later subscribe to it, process it further in our application and pass it to our grid.
 
 #### Building our request url
 
-Next we would define how we would build our URL for the GET request. This is where we would be able to get the data for our main grid but also for any child grid inside it. We would use the `Customers` data from `https://services.odata.org/V4/Northwind/Northwind.svc/` for our root level and use `Order` and `Order_Details` for the lower levels. The model would differ per application but we will use the following one:
+Next we will define how we should build our URL for the GET request. This is where we will be able to get the data for our main grid but also for any child grid inside it. We will use the `Customers` data from `https://services.odata.org/V4/Northwind/Northwind.svc/` for our root level and use `Order` and `Order_Details` for the lower levels. The model will differ per application but we will use the following one:
 
 ![Dragging](../../images/hgrid-database.jpg)
 
- What we would need at first is the `key` of our table to determine from where we would get the data for the desired grid, the primary key of the parent row and its unique ID. An example:
+ What we need at first is the `key` of our table to determine from where we would get the data for the desired grid, the primary key of the parent row and its unique ID. An example:
 
 ```typescript
 public buildUrl(dataState) {
@@ -109,7 +109,7 @@ export class RemoteLoDService {
 
 ### Hierarchical Grid Setup
 
-What we would do next, is setup our hierarchical grid and connect it to our remote service provider.
+What we will do next, is setup our hierarchical grid and connect it to our remote service provider.
 
 #### Template defining
 
@@ -175,7 +175,7 @@ The template file `hierarchical-grid-lod.component.html`, with these changes add
 
 #### Connecting our service
 
-One of our final steps now would be to connect our service, that we created earlier, to our hierarchical grid. Since we defined it as an `Injectable`, we can pass it as a provider to our application. We will get a reference to our root grid as well, by using `ViewChild` query to set its data:
+One of our final steps now will be to connect our service, that we created earlier, to our hierarchical grid. Since we defined it as an `Injectable`, we can pass it as a provider to our application. We will get a reference to our root grid as well, by using `ViewChild` query to set its data:
 
 ````TypeScript
 @Component({
@@ -222,11 +222,11 @@ public gridCreated(event: IGridCreatedEventArgs, _parentKey: string) {
 }
 ````
 
-With this, the setup of our application is almost done. The last thing would improve the user experience, since we would like to inform the user that the data is still loading, and he doesn't look at an empty grid in the meantime. That's why the [`IgxHierarchicalGrid`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html) also supports a loading indicator that is displayed while the data is being empty. If new data comes, the loading indicator would hide and the data would be rendered. 
+With this, the setup of our application is almost done. The last thing will improve the user experience, since we would like to inform the user that the data is still loading, and he doesn't look at an empty grid in the meantime. That's why the [`IgxHierarchicalGrid`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html) also supports a loading indicator that is displayed while the data is being empty. If new data comes, the loading indicator will hide and the data will be rendered. 
 
 #### Setup of loading indication
 
-The [`IgxHierarchicalGrid`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html) supports by default loading indicator by setting the [`isLoading`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html#isloading) property to `true` while there is no data. We would need to set it initially for the root grid and when creating a child grid until the data is loaded. We could always set it to `true` in our template, but we would want to hide it and display that the grid has no data if the service returns an empty array.
+The [`IgxHierarchicalGrid`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html) supports by default loading indicator by setting the [`isLoading`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html#isloading) property to `true` while there is no data. We will need to set it initially for the root grid and when creating a child grid until the data is loaded. We could always set it to `true` in our template, but we want to hide it and display that the grid has no data if the service returns an empty array.
 
 In this case the final version of our `hierarchical-grid-lod.component.ts` would look like this:
 
@@ -295,11 +295,3 @@ Our community is active and always welcoming to new ideas.
 
 * [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
 * [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
-
-
-
-
-
-
-
-
