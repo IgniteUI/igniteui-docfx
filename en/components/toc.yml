@@ -82,6 +82,13 @@
 - name: Tree Grid
   href: treeGrid/tree_grid.md
   new: true
+- name: Hierarchical Grid
+  href: hierarchicalGrid/hierarchical_grid.md
+  new: true
+  items:
+    - name: Batch Editing
+      href: hierarchicalGrid/batch_editing.md
+      new: true
 - name: List View
   href: list.md
 - name: Combo
