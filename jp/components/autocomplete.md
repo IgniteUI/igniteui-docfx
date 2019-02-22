@@ -7,15 +7,11 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ## Autocomplete
 <p class="highlight">
 
-The [**igxAutocomplete**]({environment:angularApiUrl}/classes/igxautocompletedirective.html) directive provides a way to enhance a text input by showing a [igxDropDown]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) with suggested options that are provided by the developer.
+The [**igxAutocomplete**]({environment:angularApiUrl}/classes/igxautocompletedirective.html) directive provides a way to enhance a text input by showing a [igxDropDown]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) with suggested options, provided by the developer. The suggestions will show once you start typing in the text input or use the `Arrow Up`/`Arrow Down` keys.
 
-The [**igxAutocomplete**]({environment:angularApiUrl}/classes/igxautocompletedirective.html) suggestions will show once you start typing in the text input or use the `Arrow Up`/`Arrow Down` keys.
+By default, the first item is always highlighted, which provides an easy way to select it using the `Enter` key. Clicking on the item from the list will select it too, and the input value will be automatically updated, which will result closing of the dropdown. When an item is selected, the `onItemSelected` event is fired. If this event is canceled, the item will not be selected and the drop-down will not close. The [**igxAutocomplete**]({environment:angularApiUrl}/classes/igxautocompletedirective.html) directive allows you to navigate through items and at the same time to have focus always on the input. The latter will allow you to continue typing in the input. You can use the `ESC` key to close the drop-down list.
 
-By default, the first item is always highlighted, which provides an easy way to select it using the `Enter` key. Clicking on the item from the list will select it too, and the input value will be automatically updated, which will result closing of the dropdown. When an item is selected, the `onItemSelected` event is fired. If this event is canceled, the item will not be selected and the drop-down will not close.
-
-The `igxAutocomplete` directive allows you to navigate through items and at the same time to have focus always on the input. The latter will allow you to continue typing in the input. You can use the `ESC` key to close the drop-down list.
-
-The [`igx-autocomplete`]({environment:angularApiUrl}/classes/igxautocompletedirective.html) uses the [igx-drop-down]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) as a provider for the available options, which means the available capabilities of the drop-down component can be used, these include grouping, templates and disabling of items and groups.
+The [`igx-autocomplete`]({environment:angularApiUrl}/classes/igxautocompletedirective.html) uses the [`igx-drop-down`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) as a provider for the available options, which means the available capabilities of the drop-down component can be used, these include grouping, templates and disabling of items and groups.
 </p>
 <div class="divider"></div>
 
@@ -157,7 +153,7 @@ export class AutocompleteSampleComponent {
 ### Drop-down settings
 The `igx-autocomplete` drop-down positioning, scrolling strategy and outlet can be configured using, the [`IgxAutocompleteSettings`]({environment:angularApiUrl}/classes/igxautocompletedirective.html#autocompleteSettings) option. It allows values from type [`AutocompleteOverlaySettings`]({environment:angularApiUrl}/classes/autocompleteoverlaysettings.html).
 
-The following example displays that the positioning of the drop-down can be set to be always above the input, where the directive is applied. It also disables opening and closing animations. For that purpose the `ConnectedPositioningStrategy` is used:
+The following example displays the positioning of the drop-down can be set to be always above the input, where the directive is applied. It also disables opening and closing animations. For the purpose the `ConnectedPositioningStrategy` is used:
 
 ```html
 <igx-input-group #inputGroup>
@@ -203,7 +199,7 @@ export class AutocompleteSampleComponent {
 ## Application Scenarios
 ### Grouped igxAutocomplete, inside Reactive From
 
-The following sample demonstrates an autocomplete that allows selecting a cinema, where movies are grouped by a city. Type in the input or use the `Arrow Down` key to open the list and choose a cinema, then select a movie and its date and time:
+The following sample demonstrates an autocomplete, which allows selecting a cinema, where movies are grouped by a city. Type in the input or use the `Arrow Down` key to open the list and choose a cinema, then select a movie and its date and time:
 
 <div class="sample-container loading" style="height: 600px;">
     <iframe id="autocomplete-movie" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/data-entries/movie" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -232,7 +228,7 @@ In order to use the `igxAutocomplete` with groups, like in the sample above, you
 ```
 
 ### Autocomplete bound to remote data
-The following sample demonstrates an `igxAutocomplete` with a drop-down bound to a remote service. For the purpose of the sample there is a delay, in order to apply a custom template, that will show instead of the drop-down, when data is loading:
+The following sample demonstrates an `igxAutocomplete` with a drop-down bound to a remote service. For the purpose of the sample there is a delay, in order to apply a custom template that will show instead of the drop-down, when data is loading:
 
 <div class="sample-container loading" style="height: 400px;">
     <iframe id="autocomplete-remote-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/data-entries/autocomplete-remote" onload="onSampleIframeContentLoaded(this);"></iframe>
