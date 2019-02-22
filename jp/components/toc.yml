@@ -100,6 +100,9 @@
     - name: カスケーディング
       href: combo_cascading.md
       new: true
+- name: Autocomplete
+  href: autocomplete.md
+  new: true
 - name: チャート
   header: true
 - name: Category Chart
@@ -381,6 +384,9 @@
   new: false
 - name: Text Highlight
   href: texthighlight.md
+  new: true
+- name: Select
+  href: select.md
   new: true
 - name: インタラクション
   header: true

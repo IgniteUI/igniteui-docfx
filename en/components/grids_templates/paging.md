@@ -206,12 +206,63 @@ The last step will be to declare our template for the gird.
     <igx-column field="Rating"></igx-column>
 </igx-grid>
 ```
+This is absolutely enough if we want up and running sample. But we can extend this sample even more by adding an option to change our paging template run time. Let's see how we can achieve that. First we will start by adding one more paging template in our template:
+
+```html
+<ng-template #secCustomPager let-api>
+    <button [disabled]="firstPage" (click)="previousPage()" igxButton="flat" igxButtonColor="#09f">
+        PREV
+    </button>
+    <span *ngIf="shouldShowFirstPage" (click)="paginate(0, false)"><a class="pageNavLinks" [routerLink]=''>{{1}}</a> ...</span>
+    <span *ngFor="let item of pages" (click)="paginate(item, false)">
+        <a class="pageNavLinks {{activePage(item)}}" [routerLink]=''>{{item + 1}}</a>
+    </span>
+    <span *ngIf="shouldShowLastPage" (click)="paginate(totalPages - 1, false)">... <a class="pageNavLinks" [routerLink]=''>{{ totalPages }}</a></span>
+    <button [disabled]="lastPage" (click)="nextPage()"  igxButton="flat" igxButtonColor="#09f">
+        NEXT
+    </button>
+</ng-template>
+```
+
+After that we need to extend the methods that we have already created with some additional logic:
+
+```typescript
+// same applies and for the methods previousPage() and paginate(page: number, recalc: true)
+public nextPage() {
+    ...
+    if (this.grid1.paginationTemplate === this.secondPagerTemplate) {
+        this.setNumberOfPagingItems(this.page, this.totalPages);
+    }
+}
+// creates array with the visible page numbers where the user can navigate according the current page and the total page number
+public setNumberOfPagingItems(currentPage, totalPages) {
+    ....
+}
+```
+And finally we need to add a button which allows the user to change the pager template run time:
+
+```html
+    <button (click)="changeTemplate()" class='changeBtn' igxButton="flat" igxButtonColor="#09f" igxButtonBackground="#dadada"> Change Paging Template</button>
+```
+
+```typescript
+public changeTemplate() {
+    if (this.grid1.paginationTemplate === this.remotePager) {
+        this.grid1.paginationTemplate = this.secondPagerTemplate;
+        this.setNumberOfPagingItems(this.page, this.totalPages);
+    } else {
+        this.pages = [];
+        this.grid1.paginationTemplate = this.remotePager;
+    }
+    this.grid1.cdr.detectChanges();
+}
+```
 
 After all the changes above, the following result will be achieved.
 
 #### Demo
 
-<div class="sample-container loading" style="height:600px">
+<div class="sample-container loading" style="height:650px">
     <iframe id="grid-remote-paging-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-remote-paging-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
@@ -219,6 +270,31 @@ After all the changes above, the following result will be achieved.
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-remote-paging-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
+
+If you want your sample to look exactly like this one do not forget to apply the custom paging theme:
+
+```css
+@import '~igniteui-angular/lib/core/styles/themes/index';
+
+@include igx-core();
+@include igx-theme($default-palette, $legacy-support: true);
+
+
+$custom-paginator-theme: igx-grid-paginator-theme(
+    $text-color: #09f
+);
+$custom-button-theme: igx-button-theme(
+    $icon-color: #09f,
+    $icon-hover-color: #dadada,
+    $icon-focus-color:rgb(0, 119, 255),
+    $icon-focus-background: #aeaeae
+  );
+
+.customPager {
+    @include igx-grid-paginator($custom-paginator-theme);
+    @include igx-button($custom-button-theme);
+}
+```
 
 ### API
 * [IgxGridComponent API]({environment:angularApiUrl}/classes/igxgridcomponent.html)
