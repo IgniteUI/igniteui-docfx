@@ -2,6 +2,7 @@
  ### 1. [Writing an article](#writing-an-article)
  ### 2. [Workflow](#workflow)
  ### 3. [StackBlitz configuration](#stackblitz-configuration)
+ ### 4. [Lazy loading](#lazy-loading)
 
 # <a name='#writing-an-article'>Writing an article</a>
 
@@ -127,3 +128,16 @@ StackBlitz button should be referencing the iframe provided by angular samples r
 Here is an explanation of how the StackBlitz integration works. For each sample (grid-sample-1) a .json file is created (grid-sample-1.json). Each .json file contains the source code of the sample.
 
 All of the `.json` files are located under `/assets/samples` of [igniteui-angular-samples](https://github.com/IgniteUI/igniteui-angular-samples/) project. When you press a StackBlitz button, `igniteui-docfx` consumes a `.json` file from igniteui-angular-samples, creates a hidden `<form>` and submits it to StackBlitz using their [API](https://gist.github.com/EricSimons/72017ec7ba068a5b492ee39f9e3a7f32).
+
+# <a name='#lazy-loading'>Lazy loading of samples in a topic</a>
+Our samples are embedded in the topics with iframes. Some topics have more than one sample and in order to prevent loading delays, we've added lazy loading functionality of [the iframes](https://github.com/IgniteUI/igniteui-docfx-template/issues/75). In order to achieve this we use [lazysizes](https://www.npmjs.com/package/lazysizes#recommendedpossible-markup-patterns) library.
+
+Follow the steps below for lazy loading implementation in a topic ([PR example](https://github.com/IgniteUI/igniteui-docfx/pull/1001/files#diff-52bafd164f6207a20517090ad21d7a6aR13)):
+1. Generally the first sample should not be lazily loaded. Add `loading` class to the sample container and: `onload="onSampleIframeContentLoaded(this);` on the `iframe`.
+2. For all of the sample you'd like to load lazily, add
+- `loading` class to the sample container
+- `lazyload` class to the `iframe`
+- rename the `src` of the iframe to `data-src`
+- you shouldn't have `onload="onSampleIframeContentLoaded(this);"`
+
+
