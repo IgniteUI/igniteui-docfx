@@ -100,6 +100,9 @@
     - name: カスケーディング
       href: combo_cascading.md
       new: true
+- name: Autocomplete
+  href: autocomplete.md
+  new: true
 - name: チャート
   header: true
 - name: Category Chart
