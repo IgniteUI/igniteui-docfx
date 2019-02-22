@@ -217,11 +217,90 @@ To provide more useful visual information, use [isHeader]({environment:angularAp
 
 If the sample is configured properly, a list  of countries should be displayed as a group under EU header, UK as a non-interactive item, and Bulgaria as selected item.
 
-<div class="sample-container" style="height: 400px">
+<div class="sample-container" style="height: 298px">
     <iframe id="dropdown-sample-3-iframe" src='{environment:demosBaseUrl}/data-entries/dropdown-sample-3' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dropdown-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">                view on stackblitz
+    </button>
+</div>
+
+#### Grouping hierarchical data
+
+Items in the `igx-drop-down` can also be grouped using the [`igx-drop-down-item-group`]({environment:angularApiUrl}/classes/igxdropdowngroupcomponent.html). The `igx-drop-down-item-group` accepts `igx-drop-down-item`s as its content and renders them in a grouped fashion.
+In the code snippets below, you can see how you can use the `igx-drop-down-item-group` to display the example `foods` array in a grouped fashion.
+```typescript
+// dropdown.component.ts
+export class MyCustomDropDownComponent {
+    ...
+    public foods: { 
+        name: string,
+        entries: { name: string, refNo: string }[]
+    }[] = [{
+    name: 'Vegetables',
+    entries: [{
+        name: 'Cucumber',
+        refNo: `00000`
+    }, {
+        name: 'Lettuce',
+        refNo: `00001`
+    },
+    ...]
+    }, {
+        name: 'Fruits',
+        entries: [{
+            name: 'Banana',
+            refNo: `10000`
+        }, {
+            name: 'Tomato',
+            refNo: `10001`
+        },
+        ...]
+    }, {
+        name: 'Meats',
+        entries: [{
+            name: 'Chicken',
+            refNo: `20000`
+        }, {
+            name: 'Beef',
+            refNo: `20001`
+        },
+        ...]
+    }];
+
+}
+...
+```
+```html
+    <igx-drop-down>
+        <igx-drop-down-item-group *ngFor="let foodGroup of foods" [label]="foodGroup.name">
+            <igx-drop-down-item *ngFor="let food of foodGroup.entries" [value]='food.refNo'>
+                {{ food.name }}
+            </igx-drop-down-item>
+        </igx-drop-down-item-group>
+    </igx-drop-down>
+```
+
+The `igx-drop-down-item-group` displays all of the `igx-drop-down-item`s under it in a grouped fashion, making it easier for users to differentiate the separate categories of foods in the example. The group also has the additional functionality of disabling `igx-drop-down-item`s inside of its body. For example, lets say we do not the `Meats` food group to be selectable in our drop down. Instead of disabling all of the entries in `Meats` separately, we can do the following:
+
+```html
+    <igx-drop-down>
+        <igx-drop-down-item-group *ngFor="let foodGroup of foods" [label]="foodGroup.name" [disabled]="foodGroup.name === 'Meats'">
+            <igx-drop-down-item *ngFor="let food of foodGroup.entries" [value]='food.refNo'>
+                {{ food.name }}
+            </igx-drop-down-item>
+        </igx-drop-down-item-group>
+    </igx-drop-down>
+``` 
+
+This disables the `Meats` group, as well as all of the child items inside!
+
+You can see the results in the sample below:
+<div class="sample-container" style="height: 298px">
+    <iframe id="dropdown-sample-5-iframe" src='{environment:demosBaseUrl}/data-entries/dropdown-sample-5' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dropdown-sample-5-iframe" data-demos-base-url="{environment:demosBaseUrl}">                view on stackblitz
     </button>
 </div>
 
