@@ -2,7 +2,8 @@
  ### 1. [Writing an article](#writing-an-article)
  ### 2. [Workflow](#workflow)
  ### 3. [StackBlitz configuration](#stackblitz-configuration)
- ### 4. [Lazy loading](#lazy-loading)
+ ### 4. [Lazy loading](#lazy-loading-of-samples-in-a-topic)
+ ### 5. [Creating shared help topics](#creating-shared-help-topics)
 
 # <a name='#writing-an-article'>Writing an article</a>
 
@@ -140,4 +141,5 @@ Follow the steps below for lazy loading implementation in a topic ([PR example](
 - rename the `src` of the iframe to `data-src`
 - you shouldn't have `onload="onSampleIframeContentLoaded(this);"`
 
-
+# <a name='#creating-shared-help-topics'>Creating shared help topics</a>
+[Here](https://github.com/IgniteUI/igniteui-docfx/wiki/Creating-Shared-Help-Topics) you can find the document which describes how to create a shared topic (template) which is used to produce separate topics for a particular features. For example shared templates for IgxGrid, IgxTreeGrid and/or IgxHierarchicalGrid components.
