@@ -214,11 +214,90 @@ export class AppModule {}
 
 サンプルを正しく構成すると EU ヘッダーの下に国の一覧がグループ形式で表示され、UK は非インタラクティブな項目、そして Bulgaria は選択済みの項目として表示されます。
 
-<div class="sample-container" style="height: 400px">
+<div class="sample-container" style="height: 298px">
     <iframe id="dropdown-sample-3-iframe" src='{environment:demosBaseUrl}/data-entries/dropdown-sample-3' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dropdown-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">                StackBlitz で開く
+    </button>
+</div>
+
+#### 階層データのグループ化
+
+`igx-drop-down` の項目は、[`igx-drop-down-item-group`]({environment:angularApiUrl}/classes/igxdropdowngroupcomponent.html) を使用してグループ化することもできます。`igx-drop-down-item-group` は、`igx-drop-down-item` をコンテンツとして許容し、グループ形式で描画します。
+以下のコード スニペットは、`igx-drop-down-item-group` を使用して `foods` 配列の例を表示する方法を示します。
+```typescript
+// dropdown.component.ts
+export class MyCustomDropDownComponent {
+    ...
+    public foods: { 
+        name: string,
+        entries: { name: string, refNo: string }[]
+    }[] = [{
+    name: 'Vegetables',
+    entries: [{
+        name: 'Cucumber',
+        refNo: `00000`
+    }, {
+        name: 'Lettuce',
+        refNo: `00001`
+    },
+    ...]
+    }, {
+        name: 'Fruits',
+        entries: [{
+            name: 'Banana',
+            refNo: `10000`
+        }, {
+            name: 'Tomato',
+            refNo: `10001`
+        },
+        ...]
+    }, {
+        name: 'Meats',
+        entries: [{
+            name: 'Chicken',
+            refNo: `20000`
+        }, {
+            name: 'Beef',
+            refNo: `20001`
+        },
+        ...]
+    }];
+
+}
+...
+```
+```html
+    <igx-drop-down>
+        <igx-drop-down-item-group *ngFor="let foodGroup of foods" [label]="foodGroup.name">
+            <igx-drop-down-item *ngFor="let food of foodGroup.entries" [value]='food.refNo'>
+                {{ food.name }}
+            </igx-drop-down-item>
+        </igx-drop-down-item-group>
+    </igx-drop-down>
+```
+
+`igx-drop-down-item-group` は、グループ形式ですべての `igx-drop-down-item` を表示することにより、ユーザーが食品のカテゴリを区別しやすくなります。更にグループにはボディの `igx-drop-down-item` を無効にする機能があります。たとえば、`Meats` 食品グループのドロップダウン選択を無効にする場合です。すべての `Meats` のエントリすべての個別に無効にする代わりに、以下が可能です。
+
+```html
+    <igx-drop-down>
+        <igx-drop-down-item-group *ngFor="let foodGroup of foods" [label]="foodGroup.name" [disabled]="foodGroup.name === 'Meats'">
+            <igx-drop-down-item *ngFor="let food of foodGroup.entries" [value]='food.refNo'>
+                {{ food.name }}
+            </igx-drop-down-item>
+        </igx-drop-down-item-group>
+    </igx-drop-down>
+``` 
+
+これにより `Meats` とすべての子項目が無効になります。
+
+以下のサンプルで結果を確認できます。
+<div class="sample-container" style="height: 298px">
+    <iframe id="dropdown-sample-5-iframe" src='{environment:demosBaseUrl}/data-entries/dropdown-sample-5' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dropdown-sample-5-iframe" data-demos-base-url="{environment:demosBaseUrl}">                stackblitz で開く
     </button>
 </div>
 

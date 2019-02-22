@@ -126,7 +126,7 @@ ig start
 
 #### モジュールのインポート
 
-はじめに **app.module.ts** ファイルで使用するコンポーネントの各モジュールをインポートする必要があります。[**igxGrid**](../grid.md) で実行します。BrowserAnimationsModule によってはアニメーションのあるコンポーネントがあることに注意してください。さっそくインポートしてみましょう。
+はじめに **app.module.ts** ファイルで使用するコンポーネントの各モジュールをインポートする必要があります。[**igxGrid**](../grid/grid.md) で実行します。BrowserAnimationsModule によってはアニメーションのあるコンポーネントがあることに注意してください。さっそくインポートしてみましょう。
 
 ```typescript
 // app.module.ts
@@ -230,7 +230,7 @@ ng serve
 
 * [`Ignite UI CLI`](https://github.com/IgniteUI/igniteui-cli)
 * [`Ignite UI CLI コマンド`](https://github.com/IgniteUI/igniteui-cli/wiki#available-commands)
-* [Grid の概要](../grid.md)
+* [Grid の概要](../grid/grid.md)
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
