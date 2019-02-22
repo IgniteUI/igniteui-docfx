@@ -62,7 +62,7 @@ For good code structure it will be helpful to place the **theme logic** in a sep
 The next step is to import all the components, that you want to customize, and their corresponding themes.
 
 Our app will have:
-- [**Igx-Grid**](../grid.md) with [**paging**](../grid_paging.md) and [**filtering**](../grid_filtering.md):
+- [**Igx-Grid**](../grid/grid.md) with [**paging**](../grid/paging.md) and [**filtering**](../grid/filtering.md):
 
 ```scss
 // Import grid component and theme styles
@@ -330,9 +330,9 @@ Now we can easily change our defined themes with only a `click` event:
 * [Global Theme](global-theme.md)
 * [Component Themes](component-themes.md)
 * [Color Palette](palette.md)
-* [Grid](../grid.md)
-* [Paging](../grid_paging.md)
-* [Filtering](../grid_filtering.md)
+* [Grid](../grid/grid.md)
+* [Grid Paging](../grid/paging.md)
+* [Grid Filtering](../grid/filtering.md)
 * [Dialog](../dialog.md)
 * [Input Group](../input_group.md)
 * [Snackbar](../snackbar.md)
