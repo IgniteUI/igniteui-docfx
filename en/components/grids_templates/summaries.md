@@ -20,7 +20,7 @@ The @@igComponent component in ignite UI for Angular has a **summaries** feature
 </div>
 }
 @@if (igxName === 'IgxTreeGrid') {
-<div class="sample-container loading" style="height:650px">
+<div class="sample-container loading" style="height:750px">
     <iframe id="treegrid-summary-sample-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-summary' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
