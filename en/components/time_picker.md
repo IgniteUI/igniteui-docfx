@@ -5,7 +5,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ---
 
 ## Time Picker
-<p class="highlight">In following the design and functionality of the Date Picker, Ignite UI for Angular Time Picker component allows the user to select time from a pop-up with spinners, which is then mirrored in the input field. In addition, the user can edit the time value, using an editable masked input with a dropdown.</p>
+<p class="highlight">In following the design and functionality of the Date Picker, Ignite UI for Angular Time Picker component allows the user to select time from a dialog with spinners, which is then mirrored in the input field. In addition, the user can edit the time value, using an editable masked input with a dropdown.</p>
 <div class="divider"></div>
 
 ### Time Picker Demo
@@ -39,11 +39,10 @@ export class AppModule {}
 
 #### Default
 
-In the template of our meeting component, we can add the following code to add the default time picker:
+To add the time picker, use the following code:
 
 ```html
 <!--meeting.component.html-->
-
 <igx-time-picker ></igx-time-picker>
 ```
 
@@ -58,7 +57,7 @@ And there we have it:
 
 #### Setting value
 
-We could set a value using the [`value`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#value) input. Just add a date:
+Set a value using the [`value`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#value) input. Just add a date:
 
 ```typescript
 public date: Date = new Date(Date.now());
@@ -79,7 +78,7 @@ And there we have it:
 </div>
 <div class="divider--half"></div>
 
-If we want to use a two-way data-binding, we could just use `ngModel` like this:
+To create a two-way data-binding, set `ngModel` like this:
 
 ```html
 <igx-time-picker [(ngModel)]="date"></igx-time-picker>
@@ -87,7 +86,7 @@ If we want to use a two-way data-binding, we could just use `ngModel` like this:
 
 #### Change delta and spin mode
 
-If you want to change the delta of the items, set the [`itemsDelta`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#itemsdelta) input. To change the spin mode, use the [`isSpinLoop`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#isspinloop) input:
+To change the delta of the items, set the [`itemsDelta`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#itemsdelta) input. To change the spin mode, use the [`isSpinLoop`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#isspinloop) input:
 
 ```html
 <igx-time-picker [isSpinLoop]="false" [itemsDelta]="{hours:1, minutes:5}"></igx-time-picker>
@@ -104,7 +103,9 @@ And there we have it:
 
 #### Validation
 
-We can set [`minValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#minvalue) and [`maxValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#maxvalue) to limit the user input. We can handle the [`onValidationFailed`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#onvalidationfailed) in order to notify the user if an invalid time is selected. Note that the min/max values should follow the [`format`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#format):
+Set [`minValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#minvalue) and [`maxValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#maxvalue) to limit the user input. You can handle the [`onValidationFailed`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#onvalidationfailed) in order to notify the user if an invalid time is selected. 
+
+>Note that the min/max values should follow the [`format`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#format):
 
 ```typescript
 // app.module.ts
@@ -151,16 +152,16 @@ And there we have it:
 </div>
 <div class="divider--half"></div>
 
-#### Dropdown Mode
+#### Dropdown mode
 
 When you add the time picker to your project, its default mode is read-only dialog mode. To change the time picker mode to editable dropdown mode, set the [`mode`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#mode) input to [`dropdown`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#TimePickerInteractionMode):
 
 ```typescript
 // timePickerDropdown.component.ts
 
-import { InteractionMode } from 'igniteui-angular';
+import { TimePickerInteractionMode } from 'igniteui-angular';
 ...
-public mode: InteractionMode = TimePickerInteractionMode.dropdown;
+public mode: TimePickerInteractionMode = TimePickerInteractionMode.dropdown;
 ```
 
 ```html
@@ -169,13 +170,15 @@ public mode: InteractionMode = TimePickerInteractionMode.dropdown;
 ```
 The user now will be able to type, edit or delete the time value in the input in both 12- and 24-hour formats. 
 
-**Dropdown Mode with Keyboard Navigation**
+**Dropdown Mode Keyboard Navigation**
 
 When the mouse caret is positioned at the hours, minutes or AM/PM placeholders and pressing the <kbd>Up</kbd> arrow key or using `Mouse Wheel Up`, the hours/minutes are increased. Pressing the <kbd>Down</kbd> arrow key or `Mouse Wheel Down` is used for the reversed operation. 
 
-Note that if the time picker's [`minValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#minvalue) or [`maxValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#maxvalue) are set and [`isSpinLoop`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#isspinloop) is set to false, the time scrolling will stop at the specified min/max hour/minute value. In addition, the user can also perform the following operations:
+> Note that if the time picker's [`minValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#minvalue) or [`maxValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#maxvalue) are set and [`isSpinLoop`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#isspinloop) is false, the time scrolling will stop at the specified min/max hour/minute value.
 
-* To `Open`the dropdown, there are the following options - click on the *clock icon*, press <kbd>Space</kbd> or combination of <kbd>Alt</kbd> + <kbd>Down</kbd> keys.
+**Keyboard Operations:**
+
+* To `Open`the dropdown, there are the following options - click on the clock icon, press <kbd>Space</kbd> or combination of <kbd>Alt</kbd> + <kbd>Down</kbd> keys.
 * To `Accept` and `Close` the dropdown press <kbd>Escape</kbd> or <kbd>Enter</kbd> key.
 * Clicking with the mouse outside of the time picker will also `Accept` the value entered and `Close` the dropdown.
 * If the dropdown is not opened and a new value is typed, to `Accept` it - click outside of the time picker or press <kbd>Tab</kbd> to move the focus.

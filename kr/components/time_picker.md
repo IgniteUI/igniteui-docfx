@@ -2,25 +2,24 @@
 title: Time Picker Component - Native Angular | Ignite UI for Angular 
 _description: The Ignite UI for Angular Time Picker component allows the user to select time from a dialog with spinners which is then mirrored in the input field. 
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Components, Angular Time Picker component, Angular Time Picker control, Time Picker, Angular Time Picker
-_language: kr
----
+_language: kr---
 
 ## Time Picker
-<p class="highlight">In following the design and functionality of the Date Picker, Ignite UI for Angular Time Picker component allows the user to select time from a dialog with spinners which is then mirrored in the input field. In addition the user can select also or edit a time value, using an editable masked input with a dropdown.</p>
+<p class="highlight">In following the design and functionality of the Date Picker, Ignite UI for Angular Time Picker component allows the user to select time from a dialog with spinners, which is then mirrored in the input field. In addition, the user can edit the time value, using an editable masked input with a dropdown.</p>
 <div class="divider"></div>
 
 ### Time Picker Demo
-<div class="sample-container loading" style="height: 540px;">
+<div class="sample-container loading" style="height: 600px;">
     <iframe id="time-picker-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/scheduling/timepicker-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="time-picker-sample" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="time-picker-sample" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz ????</button>
 </div>
 <div class="divider--half"></div>
 
 ### Usage
 
-To get started with the Ignite UI for Angular Time Picker, let's first import the [`IgxTimePickerModule`]({environment:angularApiUrl}/classes/igxtimepickermodule.html) in our **app.module.ts** file. Note that the IgxTimePicker is also dependent on the **BrowserAnimationsModule**, so it needs to be added to the AppModule as well:
+To get started with the Ignite UI for Angular Time Picker, let's first import the [`IgxTimePickerModule`]({environment:angularApiUrl}/classes/igxtimepickermodule.html) in the **app.module.ts** file. Note that the IgxTimePicker is also dependent on the **BrowserAnimationsModule**, so it needs to be added to the AppModule as well:
 
 ```typescript
 // app.module.ts
@@ -40,26 +39,25 @@ export class AppModule {}
 
 #### Default
 
-To add time picker, in the template of our meeting component we can add the following code to get the default time picker:
+To add the time picker, use the following code:
 
 ```html
 <!--meeting.component.html-->
-
 <igx-time-picker ></igx-time-picker>
 ```
 
 And there we have it:
-<div class="sample-container loading" style="height:540px">
+<div class="sample-container loading" style="height:600px">
     <iframe id="timepicker-sample-1-iframe" src="{environment:demosBaseUrl}/scheduling/timepicker-sample-1" width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="timepicker-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="timepicker-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz ????</button>
 </div>
 <div class="divider--half"></div>
 
 #### Setting value
 
-We could set a value using the value input. Just add a date:
+Set a value using the [`value`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#value) input. Just add a date:
 
 ```typescript
 public date: Date = new Date(Date.now());
@@ -72,15 +70,15 @@ Then use the [`value`]({environment:angularApiUrl}/classes/igxtimepickercomponen
 ```
 
 And there we have it:
-<div class="sample-container loading" style="height: 540px;">
+<div class="sample-container loading" style="height: 600px;">
     <iframe id="time-picker-sample-2" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/scheduling/timepicker-sample-2" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="time-picker-sample-2" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="time-picker-sample-2" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz ????</button>
 </div>
 <div class="divider--half"></div>
 
-If we want to use a two-way data-binding, we could just use `ngModel` like this:
+To create a two-way data-binding, set `ngModel` like this:
 
 ```html
 <igx-time-picker [(ngModel)]="date"></igx-time-picker>
@@ -88,24 +86,26 @@ If we want to use a two-way data-binding, we could just use `ngModel` like this:
 
 #### Change delta and spin mode
 
-If we want to change the delta of the items we should set the [`itemsDelta`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#itemsdelta) and for the spin mode we should use the [`isSpinLoop`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#isspinloop):
+To change the delta of the items, set the [`itemsDelta`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#itemsdelta) input. To change the spin mode, use the [`isSpinLoop`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#isspinloop) input:
 
 ```html
 <igx-time-picker [isSpinLoop]="false" [itemsDelta]="{hours:1, minutes:5}"></igx-time-picker>
 ```
 
 And there we have it:
-<div class="sample-container loading" style="height: 540px;">
+<div class="sample-container loading" style="height: 600px;">
     <iframe id="time-picker-sample-3" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/scheduling/timepicker-sample-3" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="time-picker-sample-3" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="time-picker-sample-3" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz ????</button>
 </div>
 <div class="divider--half"></div>
 
 #### Validation
 
-We can set [`minValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#minvalue) and [`maxValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#maxvalue) to limit the user input. We also should handle the [`onValidationFailed`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#onvalidationfailed) in order to notify the user if an invalid time is selected. Note that the min/max values should follow the [`format`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#format):
+Set [`minValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#minvalue) and [`maxValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#maxvalue) to limit the user input. You can handle the [`onValidationFailed`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#onvalidationfailed) in order to notify the user if an invalid time is selected. 
+
+>Note that the min/max values should follow the [`format`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#format):
 
 ```typescript
 // app.module.ts
@@ -148,55 +148,57 @@ And there we have it:
     <iframe id="time-picker-sample-4" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/scheduling/timepicker-sample-4" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="time-picker-sample-4" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="time-picker-sample-4" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz ????</button>
 </div>
 <div class="divider--half"></div>
 
-#### Dropdown Mode
+#### Dropdown mode
 
-When you add the time picker to your project it is set to the Default (dialog) mode. To activate the dropdown mode you will have to include the enum [`InteractionMode`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#InteractionMode):
+When you add the time picker to your project, its default mode is read-only dialog mode. To change the time picker mode to editable dropdown mode, set the [`mode`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#mode) input to [`dropdown`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#TimePickerInteractionMode):
 
 ```typescript
 // timePickerDropdown.component.ts
 
-import { InteractionMode } from 'igniteui-angular';
+import { TimePickerInteractionMode } from 'igniteui-angular';
 ...
-
-public mode: InteractionMode = InteractionMode.dropdown;
+public mode: TimePickerInteractionMode = TimePickerInteractionMode.dropdown;
 ```
 
 ```html
 <!--timePickerDropdown.component.html-->
-
 <igx-time-picker [mode]="mode"></igx-time-picker>
 ```
 The user now will be able to type, edit or delete the time value in the input in both 12- and 24-hour formats. 
 
-**Dropdown Mode with Keyboard Navigation**
+**Dropdown Mode Keyboard Navigation**
 
-The mouse caret can be positioned at the hours, minutes or AM/PM placeholders and after pressing <kbd>Up</kbd> or using `Mouse Wheel Up`, the hours or the minutes will be increased. Pressing <kbd>Down</kbd> or `Mouse Wheel Down` can be used for the reversed operation. *Note* that if the time picker's [`minValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#minvalue) or [`maxValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#maxvalue) are set and [`isSpinLoop`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#isspinloop) is disabled, the time scrolling will break at the specified hour or minute value. In addition, the user can also perform the following operations:
+When the mouse caret is positioned at the hours, minutes or AM/PM placeholders and pressing the <kbd>Up</kbd> arrow key or using `Mouse Wheel Up`, the hours/minutes are increased. Pressing the <kbd>Down</kbd> arrow key or `Mouse Wheel Down` is used for the reversed operation. 
 
-* To `Open`the dropdown click on the *clock icon*, press <kbd>Space</kbd> or combination of <kbd>Alt</kbd> + <kbd>Down</kbd> keys.
-* To `Accept` and `Close` the dropdown press <kbd>Escape</kbd> or <kbd>Enter</kbd> keys.
+Note that if the time picker's [`minValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#minvalue) or [`maxValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#maxvalue) are set and [`isSpinLoop`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#isspinloop) is false, the time scrolling will stop at the specified min/max hour/minute value.
+
+**Keyboard Operations:**
+
+* To `Open`the dropdown, there are the following options - click on the clock icon, press <kbd>Space</kbd> or combination of <kbd>Alt</kbd> + <kbd>Down</kbd> keys.
+* To `Accept` and `Close` the dropdown press <kbd>Escape</kbd> or <kbd>Enter</kbd> key.
 * Clicking with the mouse outside of the time picker will also `Accept` the value entered and `Close` the dropdown.
-* If the dropdown is not opened and a new value is typed to `Accept` it click outside of the time picker or press <kbd>Tab</kbd> to move the focus.
+* If the dropdown is not opened and a new value is typed, to `Accept` it - click outside of the time picker or press <kbd>Tab</kbd> to move the focus.
 
 And there we have it:
 <div class="sample-container loading" style="height:540px">
-    <iframe id="timepicker-dropdown-sample-iframe" src='{environment:demosBaseUrl}/timepicker-dropdown-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="timepicker-dropdown-iframe" src='{environment:demosBaseUrl}/scheduling/timepicker-dropdown' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="timepicker-dropdown-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="timepicker-dropdown-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
 
 #### Templating Input Group
 
-We have seen how to make use of the  API (properties, events, methods) so that we configure the time picker per our requirements and interact with it programatically. Now we want to go further and customize its input group look.
+We have seen how to make use of the  API (properties, events, methods) so that we configure the time picker per our requirements and interact with it programmatically. Now we want to go further and customize its input group look.
 
-To do that we need to decorate the nested ng-template inside the time picker with IgxTimePickerTemplate directive. ng-template context exposes the following members: [`openDialog`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#opendialog) method can be used to open the time picker dialog; [`displayTime`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#displaytime) property contains the formatted value; [`value`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#value) contains the real value. You could use those by declaring a variables in the ng-template element.
+To do that, we need to decorate the nested ng-template inside the time picker with IgxTimePickerTemplate directive. ng-template context exposes the following members: [`openDialog`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#opendialog) method can be used to open the time picker dialog; [`displayTime`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#displaytime) property contains the formatted value; [`value`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#value) contains the real value. You could use those by declaring a variables in the ng-template element.
 
-In the following example we modify the default label "Time" add a second icon as suffix. Below the input group we're using a label to display the real time picker value:
+In the following example we modify the default label "Time" and add a second icon as suffix. Below the input group we're using a label to display the real time picker value:
 
 ```html
 <igx-time-picker [value]="date">
@@ -220,11 +222,11 @@ public date: Date = new Date(Date.now());
 ```
 
 And there we have it:
-<div class="sample-container loading" style="height: 540px;">
+<div class="sample-container loading" style="height: 600px;">
     <iframe id="time-picker-sample-5" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/scheduling/timepicker-sample-5" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="time-picker-sample-5" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="time-picker-sample-5" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
 ### API References
@@ -233,12 +235,8 @@ And there we have it:
 * [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
 * [IgxInputDirective]({environment:angularApiUrl}/classes/igxinputdirective.html)
 * [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
-* [IgxLabelDirective]({environment:angularApiUrl}/classes/igxlabeldirective.html)
-* [IgxPrefixDirective]({environment:angularApiUrl}/classes/igxprefixdirective.html)
-* [IgxSuffixDirective]({environment:angularApiUrl}/classes/igxsuffixdirective.html)
 * [IgxTimePickerComponent]({environment:angularApiUrl}/classes/igxtimepickercomponent.html)
 * [IgxTimePickerComponent Styles]({environment:sassApiUrl}/index.html#function-igx-time-picker-theme)
-* [IgxTimePickerTemplateDirective]({environment:angularApiUrl}/classes/igxtimepickertemplatedirective.html)
 * [IgxOverlayService]({environment:angularApiUrl}/classes/igxoverlayservice.html)
 * [IgxOverlay Styles]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
 
