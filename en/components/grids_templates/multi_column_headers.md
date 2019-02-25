@@ -13,6 +13,11 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
+    ---
+title: Column Group Component - Native Angular | Ignite UI for Angular
+_description: Multi-column headers allow grouping columns by placing them under a common header. Every column group could be a representation of combination between  other groups or columns.
+_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Hierarchical Grid, Angular Hierarchical Table, Angular Hierarchical Grid component, Angular Hierarchical Table component, Angular Hierarchical Grid control, Angular Hierarchical Table control, Angular Hierarchical Table control, Angular High Performance Hierarchical Grid, Angular High Performance Hierarchical Table, Multi Column Headers, Deferred Multi Column Headers, Hierarchical Grid Multi Column Headers, Angular Hierarchical Grid Multi Column Headers, Angular Hierarchical Table Multi Column Headers
+---
 }
 
 ### Multi Column Headers

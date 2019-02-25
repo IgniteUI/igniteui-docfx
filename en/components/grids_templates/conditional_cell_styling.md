@@ -13,7 +13,11 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-<!-- TODO -->
+---
+title: Conditional Cell Styling - Native Angular | Ignite UI for Angular
+_description: Conditional Cell Styling feature provides a means for column cells styling based on custom conditions.
+_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Hierarchical Grid, Angular Hierarchical Table, Angular Hierarchical Grid component, Angular Hierarchical Table component, Angular Hierarchical Grid control, Angular Hierarchical Table control, Angular High Performance Hierarchical Grid, Angular High Performance Hierarchical Table, Cell Styling, Conditional Formatting, Conditional Cell Styling, Angular Hierarchical Grid Conditional Column Styling, Angular Hierarchical Table Conditional Column Styling, Angular Conditional Cell Styling
+---
 }
 
 ### Conditional Cell Styling
