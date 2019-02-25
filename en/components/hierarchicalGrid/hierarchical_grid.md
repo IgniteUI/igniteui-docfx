@@ -53,108 +53,33 @@ If the application loads the whole hierarchical data as an array of objects refe
 
 ```javascript
 export const singers = [{
-  "Artist": "Alicia Stanger",
-  "Photo": "assets/images/hgrid/alicia.png",
-  "Debut": "2010",
-  "Grammy Nominations": 1,
-  "Grammy Awards": 0,
-  "Albums": [{
-   "Album": "Forever alone",
-   "Launch Date": new Date("November 3, 2005"),
-   "Billboard Review": "82",
-   "US Billboard 200": "7",
-   "Artist": "Alicia Stanger"
-  }]
- },
- {
-  "Artist": "Naomí Yepes",
-  "Photo": "assets/images/hgrid/naomi.png",
-  "Debut": "2011",
-  "Grammy Nominations": 6,
-  "Grammy Awards": 0,
-  "Tours": [{
-    "Tour": "Faithful Tour",
-    "Started on": "Sep-12",
-    "Location": "Worldwide",
-    "Headliner": "NO",
-    "Toured by": "Naomí Yepes"
-   },
-   {
-    "Tour": "City Jam Sessions",
-    "Started on": "Aug-13",
-    "Location": "North America",
-    "Headliner": "YES",
-    "Toured by": "Naomí Yepes"
-   }
-  ],
-  "Albums": [{
-    "Album": "Initiation",
-    "Launch Date": new Date("September 3, 2013"),
-    "Billboard Review": "86",
-    "US Billboard 200": "1",
-    "Artist": "Naomí Yepes"
-   },
-   {
-    "Album": "Dream Driven",
-    "Launch Date": new Date("August 25, 2014"),
-    "Billboard Review": "81",
-    "US Billboard 200": "1",
     "Artist": "Naomí Yepes",
-    "Songs": [{
-      "No.": "1",
-      "Title": "Intro",
-      "Released": "*",
-      "Genre": "*",
-      "Album": "Dream Driven"
-     },
-     {
-      "No.": "2",
-      "Title": "Ferocious",
-      "Released": "28-Apr-2014",
-      "Genre": "Dance-pop R&B",
-      "Album": "Dream Driven"
-     }
-    ]
-   },
-   {
-    "Album": "The dragon journey",
-    "Launch Date": new Date("May 20, 2016"),
-    "Billboard Review": "60",
-    "US Billboard 200": "2",
-    "Artist": "Naomí Yepes"
-   },
-   {
-    "Album": "Organic me",
-    "Launch Date": new Date("August 17, 2018"),
-    "Billboard Review": "82",
-    "US Billboard 200": "1",
-    "Artist": "Naomí Yepes",
-    "Songs": [{
-      "No.": "1",
-      "Title": "I Love",
-      "Released": "11-May-2019",
-      "Genre": "Crunk reggaeton",
-      "Album": "Organic me"
-     },
-     {
-      "No.": "2",
-      "Title": "Early Morning Compass",
-      "Released": "15-Jan-2020",
-      "Genre": "mystical parody-bap ",
-      "Album": "Organic me"
-     }
-    ]
-   },
-   {
-    "Album": "Curiosity",
-    "Launch Date": new Date("December 7, 2019"),
-    "Billboard Review": "75",
-    "US Billboard 200": "12",
-    "Artist": "Naomí Yepes"
-   }
-  ]
- }
-];
+    "Photo": "assets/images/hgrid/naomi.png",
+    "Debut": "2011",
+    "Grammy Nominations": 6,
+    "Grammy Awards": 0,
+    "Tours": [{
+        "Tour": "Faithful Tour",
+        "Started on": "Sep-12",
+        "Location": "Worldwide",
+        "Headliner": "NO",
+        "Toured by": "Naomí Yepes"
+    }],
+    "Albums": [{
+        "Album": "Dream Driven",
+        "Launch Date": new Date("August 25, 2014"),
+        "Billboard Review": "81",
+        "US Billboard 200": "1",
+        "Artist": "Naomí Yepes",
+        "Songs": [{
+            "No.": "1",
+            "Title": "Intro",
+            "Released": "*",
+            "Genre": "*",
+            "Album": "Dream Driven"
+        }]
+    }]
+}];
 ```
 Each **igx-row-island** should specify the key of the property that holds the children data.
 
