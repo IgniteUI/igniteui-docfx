@@ -1,8 +1,20 @@
-﻿---
+﻿@@if (igxName === 'IgxGrid') {
+---
 title: Column Pinning Component – Native Angular | Ignite UI for Angular
 _description: Pinning with the Ignite UI for Angular Column Pinning component allows the users to always see the pinned columns while horizontally scrolling. 
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Components, Angular Grid, Angular Table, Angular Data Grid component, Angular Data Table component, Angular Data Grid control, Angular Data Table control, Angular Grid component, Angular Table component, Angular Grid control, Angular Table control, Angular High Performance Grid, Angular High Performance Data Table, column pinning, Angular Data Table column pinning, pinning, pin
 ---
+}
+@@if (igxName === 'IgxTreeGrid') {
+---
+title: Column Pinning Component – Native Angular | Ignite UI for Angular
+_description: Pinning with the Ignite UI for Angular Column Pinning component allows the users to always see the pinned columns while horizontally scrolling. 
+_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Components, Angular Tree Grid, Angular Tree Table, Angular Tree Grid component, Angular Tree Table component, Angular Tree Grid control, Angular Tree Table control, Angular Tree Grid component, Angular Tree Table component, Angular Tree Grid control, Angular Tree Table control, Angular High Performance Tree Grid, Angular High Performance Tree Table, column pinning, Angular Tree Table column pinning, pinning, pin
+---
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+<!-- TODO -->
+}
 
 ### @@igComponent Column Pinning
 A column or multiple columns can be pinned to the left-hand side of the @@igComponent. **Column Pinning** in Ignite UI for Angular allows the users to always see the pinned columns while horizontally scrolling. 
