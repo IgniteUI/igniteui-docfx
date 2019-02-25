@@ -318,7 +318,7 @@ export class BooleanFilteringOperand extends IgxBooleanFilteringOperand {
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-filtering-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 }
-
+@@if (igxName !== 'IgxHierarchicalGrid') {
 #### Breaking Changes in 6.1.0
 * @@igxName `filteringExpressions` property is removed. Use [`filteringExpressionsTree`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filteringexpressionstree) instead.
 * `filter_multiple` method is removed. Use [`filter`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filter) method and [`filteringExpressionsTree`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filteringexpressionstree) property instead.
@@ -331,7 +331,7 @@ export class BooleanFilteringOperand extends IgxBooleanFilteringOperand {
 * filtering operands: [`IFilteringExpression`]({environment:angularApiUrl}/interfaces/ifilteringexpression.html) condition property is no longer a direct reference to a filtering condition method, instead it's a reference to an [`IFilteringOperation`]({environment:angularApiUrl}/interfaces/ifilteringoperation.html).
 * [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) now exposes a [`filters`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#filters) property, which takes an [`IgxFilteringOperand`]({environment:angularApiUrl}/classes/igxfilteringoperand.html) class reference.
 * Custom filters can be provided to the @@igComponent columns by populating the [`operations`]({environment:angularApiUrl}/classes/igxfilteringoperand.html#operations) property of the [`IgxFilteringOperand`]({environment:angularApiUrl}/classes/igxfilteringoperand.html) with operations of [`IFilteringOperation`]({environment:angularApiUrl}/interfaces/ifilteringoperation.html) type.
-
+}
 <div class="divider--half"></div>
 
 ### API References
