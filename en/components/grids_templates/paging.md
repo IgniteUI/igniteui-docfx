@@ -45,7 +45,7 @@ In Ignite UI for Angular @@igComponent, **Paging** is initialized on the root `@
 </div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-<div class="sample-container loading" style="height:550px">
+<div class="sample-container loading" style="height:560px">
     <iframe id="hierarchical-grid-paging-sample-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-paging' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
@@ -447,7 +447,7 @@ After all the changes above, the following result will be achieved.
 </div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-<div class="sample-container loading" style="height:650px">
+<div class="sample-container loading" style="height:560px">
     <iframe id="hierarchical-grid-remote-paging-sample-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-remote-paging' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>

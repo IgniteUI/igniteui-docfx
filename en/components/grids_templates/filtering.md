@@ -45,7 +45,7 @@ The @@igComponent component in Ignite UI for Angular provides extensive filterin
 </div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-<div class="sample-container loading" style="height:600px">
+<div class="sample-container loading" style="height:610px">
     <iframe id="hierarchical-grid-sample-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-filtering' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
@@ -326,7 +326,7 @@ export class BooleanFilteringOperand extends IgxBooleanFilteringOperand {
 </div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-   <div class="sample-container loading" style="height:600px">
+   <div class="sample-container loading" style="height:610px">
     <iframe id="hierarchical-grid-filtering-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-custom-filtering' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>

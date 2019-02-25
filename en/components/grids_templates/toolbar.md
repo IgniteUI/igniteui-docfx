@@ -40,7 +40,7 @@ The @@igComponent in Ignite UI for Angular provides an [`IgxGridToolbarComponent
 </div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-<div class="sample-container loading" style="height:420px">
+<div class="sample-container loading" style="height:510px">
     <iframe id="hierarchical-grid-toolbar-sample-1-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-toolbar-title' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
@@ -111,7 +111,7 @@ There are also properties for configuring each button's text and they are listed
 </div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-<div class="sample-container loading" style="height:420px">
+<div class="sample-container loading" style="height:510px">
     <iframe id="hierarchical-grid-toolbar-sample-2-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-toolbar-options' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
@@ -293,7 +293,7 @@ The following sample demonstrates how to add an additional button to the toolbar
 <div class="divider"></div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-<div class="sample-container loading" style="height:420px">
+<div class="sample-container loading" style="height:510px">
     <iframe id="hierarchical-grid-toolbar-sample-3-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-toolbar-custom' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>

@@ -42,7 +42,7 @@ Additionally there is a custom contextmenu added for sorting using **@@igSelecto
 </div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-<div class="sample-container loading" style="height:550px">
+<div class="sample-container loading" style="height:510px">
     <iframe id="hierarchical-grid-sample-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-sorting' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
