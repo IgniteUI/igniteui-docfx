@@ -54,6 +54,8 @@ gulp.task('serve', ['build'], () => {
     // All topics that are not auto-generated and are specific to the respective grid, should be here.
     const included = [
         `${DOCFX_ARTICLES}/grid/grid.md`,
+        `${DOCFX_ARTICLES}/grid/groupby.md`,
+        `${DOCFX_ARTICLES}/grid/paste_excel.md`,
         `${DOCFX_ARTICLES}/treeGrid/tree_grid.md`,
         `${DOCFX_ARTICLES}/hierarchicalGrid/hierarchical_grid.md`
     ];
