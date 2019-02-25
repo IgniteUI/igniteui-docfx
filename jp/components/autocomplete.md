@@ -1,22 +1,23 @@
----
-title: Autocomplete Directive
-_description: The igxAutocomplete directive provides a way to enhance a text input by showing a panel of suggested options provided by the developer.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Autocomplete components, Angular Autocomplete directives, Angular Autocomplete controls
+﻿---
+title: オートコンプリート ディレクティブ
+_description: igxAutocomplete ディレクティブは、候補オプションのパネルを表示することによりテキスト入力を向上する方法を提供します。
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Autocomplete コンポーネント, Angular Autocomplete ディレクティブ, Angular Autocomplete コントロール
+_language: ja
 ---
 
 ## Autocomplete
 <p class="highlight">
 
-The [**igxAutocomplete**]({environment:angularApiUrl}/classes/igxautocompletedirective.html) directive provides a way to enhance a text input by showing a [igxDropDown]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) with suggested options, provided by the developer. The suggestions will show once you start typing in the text input or use the `Arrow Up`/`Arrow Down` keys.
+[**igxAutocomplete**]({environment:angularApiUrl}/classes/igxautocompletedirective.html) ディレクティブは [igxDropDown]  ({environment:angularApiUrl}/classes/igxdropdowncomponent.html) と候補オプションを表示してテキスト入力を向上する方法を提供します。候補は、テキスト入力の開始時、または `上矢印/`下矢印` キーを使用して表示します。
 
-By default, the first item is always highlighted, which provides an easy way to select it using the `Enter` key. Clicking on the item from the list will select it too, and the input value will be automatically updated, which will result closing of the dropdown. When an item is selected, the `onItemSelected` event is fired. If this event is canceled, the item will not be selected and the drop-down will not close. The [**igxAutocomplete**]({environment:angularApiUrl}/classes/igxautocompletedirective.html) directive allows you to navigate through items and at the same time to have focus always on the input. The latter will allow you to continue typing in the input. You can use the `ESC` key to close the drop-down list.
+デフォルトで最初の項目が常にハイライトされ、キーを使用して簡単に選択できる方法を提供します。リストの項目をクリックして選択することもでき、入力値が自動的に更新されてドロップダウンが閉じられます。項目が選択されると、`onItemSelected` イベントが発生します。イベントがキャンセルされると項目は選択されずにドロップダウンも閉じません。[**igxAutocomplete**]({environment:angularApiUrl}/classes/igxautocompletedirective.html) ディレクティブは項目間を移動すると同時に入力が常にフォーカスされます。後者では入力を続行できます。`ESC` キーが使用してドロップダウン リストを閉じます。
 
-The [`igx-autocomplete`]({environment:angularApiUrl}/classes/igxautocompletedirective.html) uses the [`igx-drop-down`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) as a provider for the available options, which means the available capabilities of the drop-down component can be used, these include grouping, templates and disabling of items and groups.
+[`igx-autocomplete`]({environment:angularApiUrl}/classes/igxautocompletedirective.html) は、使用可能なオプションのプロバイダーとして [`igx-drop-down`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) を使用します。つまり、使用可能なグループ化、テンプレート、項目とグループの無効化を含むドロップダウン　コンポーネントの機能が使用されます。
 </p>
 <div class="divider"></div>
 
-### Demo
-The following sample demonstrates simple use of the `igx-autocomplete` directive, applied on an `igx-input`. The directive is provided with an `igx-drop-down` which has a defined filtering pipe.
+### デモ
+以下のサンプルは、`igx-input` に適用される `igx-autocomplete` ディレクティブの簡単な使用方法を示します。ディレクティブは、定義したフィルタリング パイプのある `igx-drop-down` とともに提供されます。 
 <div class="sample-container loading" style="height: 400px;">
     <iframe id="autocomplete-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/data-entries/autocomplete" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -26,11 +27,11 @@ The following sample demonstrates simple use of the `igx-autocomplete` directive
 <div class="divider--half"></div>
 
 > [!WARNING]
-> To start using Ignite UI for Angular components in your own projects, make sure you have configured all necessary dependencies and have performed the proper setup of your project. You can learn how to do this in the [**Getting Started**](general/getting_started.md) topic.
+> Ignite UI for Angular コンポーネントをプロジェクトに追加する前に、必要なすべての依存関係を構成し、プロジェクトのセットアップが正しく完了したことを確認してください。手順は、[はじめに](general/getting_started.md)のトピックをご確認ください。
 
-## Usage
-### Getting Started
-To use the [`igx-autocomplete`]({environment:angularApiUrl}/classes/igxautocompletedirective.html) we need to import the **IgxAutocompleteModule** and **IgxDropDownModule** in our **app.module**. If the [`igx-autocomplete`]({environment:angularApiUrl}/classes/igxautocompletedirective.html) is applied on an [igx-input]({environment:angularApiUrl}/classes/igxinputdirective.html), the **igxInputGroupModule** is also required:
+## 使用方法
+### はじめに
+[`igx-autocomplete`]({environment:angularApiUrl}/classes/igxautocompletedirective.html) を使用するには、**app.module** に **IgxAutocompleteModule** と **IgxDropDownModule** をインポートする必要があります。[`igx-autocomplete`]({environment:angularApiUrl}/classes/igxautocompletedirective.html) を [igx-input]({environment:angularApiUrl}/classes/igxinputdirective.html) に適用した場合は、**igxInputGroupModule** も必要となります。
 
 ```typescript
 // app.module.ts
@@ -56,7 +57,7 @@ import {
 export class AppModule {}
 ```
 
-Then adding the `igxAutocomplete` directive with a value, which is reference to a drop down:
+ドロップダウンの参照となる `igxAutocomplete` ディレクティブと値を追加します。
 
 ```html
 <igx-input-group>
@@ -86,38 +87,38 @@ export class AutocompleteSampleComponent {
 }
 ```
 
-### Keyboard Navigation
+### キーボード ナビゲーション
 
- - `Arrow Down`, `Arrow Up`, `Alt` + `Arrow Down`, `Alt` + `Arrow Up` will open the `drop-down`, if closed.
- - Typing in the input will open the drop-down, if it is closed.
- - `Arrow Down` - will move to the next drop-down item, if it is opened.
- - `Arrow Up` - will move to the previous drop-down item, if it is opened.
- - `End` will move to the last drop-down item.
- - `Home` will move to the first drop-down item.
- - `Enter` will confirm the already selected item and will close the drop-down.
- - `Esc` will close the drop-down.
+ - ドロップダウンが閉じている場合、`Arrow Down`、`Arrow Up`、`Alt` + `Arrow Down`、`Alt` + `Arrow Up` はドロップダウンを開きます。
+ - ドロップダウンが閉じている場合、入力フィールドに入力するとドロップダウンが開きます。
+ - `Arrow Down` - 開いている場合、次のドロップダウン項目へ移動します。
+ - `Arrow Up` - 開いている場合、以前のドロップダウン項目へ移動します。
+ - `End` は最後のドロップダウン項目へ移動します。
+ - `Home` は最初のドロップダウン項目へ移動します。
+ - `Enter` は、すでに選択した項目を確定し、ドロップダウンを閉じます。
+ - `Esc` はドロップダウンを閉じます。
 
-> Note: When the autocomplete is opened, then the first item, in the list, is automatically selected. The same is valid when the list is filtered.
+> 注: オートコンプリートが開いたときにリストの最初の項目が自動的に選択されます。リストがフィルターされたときも同様です。
 
-### Compatibility support
+### 互換性サポート
 
-Applying the `igxAutocomplete` directive will decorate the element with the following ARIA attributes:
- - role="combobox" - role of the element, where the directive is applied.
- - aria-autocomplete="list" - indicates that input completion suggestions are provided in the form of list
- - aria-haspopup="listbox" attribute to indicate that `igxAutocomplete` can pop-up a container to suggest values.
- - aria-expanded="true"/"false" - value depending on the collapsed state of the drop-down.
- - aria-owns="dropDownID" - id of the drop-down used for displaying suggestions.
- - aria-activedescendant="listItemId" - value is set to the id of the current active list element.
+`igxAutocomplete` ディレクティブを適用すると要素を以下の ARIA 属性で装飾します。
+ - role="combobox" - ディレクティブが適用される要素のロール。
+ - aria-autocomplete="list" - 入力完了の候補がリストのフォームに適用されたことを示します。
+ - aria-haspopup="listbox" は、`igxAutocomplete` が値を提案するコンテナをポップアップできることを示すための属性です。
+ - aria-expanded="true"/"false" - ドロップダウンの縮小状態に基づいた値。
+ - aria-owns="dropDownID" - ドロップダウンの id は候補を表示するために使用されます。
+ - aria-activedescendant="listItemId" - 値が現在のアクティブリスト要素の　id に設定されます。
 
-The `drop-down` component, used as provider for suggestions, will expose the following ARIA attributes:
- - role="listbox" - applied on the `igx-drop-down` component container
- - role="group" - applied on the `igx-drop-down-item-group` component container
- - role="option" - applied on the `igx-drop-down-item` component container
- - aria-disabled="true"/"false" applied on `igx-drop-down-item`, `igx-drop-down-item-group` component containers when they are disabled.
+候補に使用される `drop-down` コンポーネントは、以下の ARIA 属性を公開します。 
+ - role="listbox" - `igx-drop-down` コンポーネント カレンダーに適用されます。
+ - role="group" -`igx-drop-down-item-group` コンポーネント コンテナに適用されます。
+ - role="オプション" - `igx-drop-down` -itemコンポーネント コンテナに適用されます。
+ - `Igx-drop-down-item` に適用される aria-disabled="true"/"false」、無効な場合の `igx-drop-down-item-group` コンポーネント コンテナ。
 
-### Enabling/Disabling autocomplete drop-down
+### オートコンプリート ドロップダウンを有効/無効にします。
 
-The following sample defines an [`IgxAutocompleteDisabled`]({environment:angularApiUrl}/classes/igxautocompletedirective.html#disabled), which allows for an automatic enabling and disabling of the autocomplete drop-down.
+以下のサンプルは、[`IgxAutocompleteDisabled`]({environment:angularApiUrl}/classes/igxautocompletedirective.html#disabled) を定義し、オートコンプリート ドロップダウンの有効か無効化を許可します。
 
 ```html
 <igx-input-group>
@@ -150,10 +151,10 @@ export class AutocompleteSampleComponent {
 }
 ```
 
-### Drop-down settings
-The `igx-autocomplete` drop-down positioning, scrolling strategy and outlet can be configured using, the [`IgxAutocompleteSettings`]({environment:angularApiUrl}/classes/igxautocompletedirective.html#autocompleteSettings) option. It allows values from type [`AutocompleteOverlaySettings`]({environment:angularApiUrl}/classes/autocompleteoverlaysettings.html).
+### ドロップダウンの設定
+`igx-autocomplete` ドロップダウンの配置、スクロール ストラテジとアウトレットは、[`IgxAutocompleteSettings`]({environment:angularApiUrl}/classes/igxautocompletedirective.html#autocompleteSettings) オプションを使用して設定できます。タイプ [`AutocompleteOverlaySettings`]({environment:angularApiUrl}/classes/autocompleteoverlaysettings.html) からの値を許可します。
 
-The following example displays the positioning of the drop-down can be set to be always above the input, where the directive is applied. It also disables opening and closing animations. For the purpose the `ConnectedPositioningStrategy` is used:
+以下の例は、ディレクティブが適用される入力の上部に設定可能なドロップダウンの位置を表示します。更に開く、閉じるのアニメーションを無効にします。`ConnectedPositioningStrategy` が使用されます。
 
 ```html
 <igx-input-group #inputGroup>
@@ -194,12 +195,12 @@ export class AutocompleteSampleComponent {
 }
 ```
 
-> Note: The default positioning strategy is `AutoPositionStrategy` and the drop-down is opened according to the available space.
+> 注: デフォルトの配置ストラテジは、空きスペースに基づいて `AutoPositionStrategy` とドロップダウンが開きます。
 
-## Application Scenarios
-### Grouped igxAutocomplete, inside Reactive From
+## アプリケーション シナリオ
+### Reactive From 内でグループ化した igxAutocomplete 
 
-The following sample demonstrates an autocomplete, which allows selecting a cinema, where movies are grouped by a city. Type in the input or use the `Arrow Down` key to open the list and choose a cinema, then select a movie and its date and time:
+以下のサンプルは、オートコンプリートで映画が city でグループ化されている cinema の選択が可能なリストです。インプットの入力または `Arrow Down` キーを使用してリストを開き、cinema を選択します。次に movie と日付を選択します。
 
 <div class="sample-container loading" style="height: 600px;">
     <iframe id="autocomplete-movie" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/data-entries/movie" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -210,7 +211,7 @@ The following sample demonstrates an autocomplete, which allows selecting a cine
 
 <div class="divider--half"></div>
 
-In order to use the `igxAutocomplete` with groups, like in the sample above, you need to define your data in the following manner:
+上記サンプルのようにグループで `igxAutocomplete` を使用するには、以下の方法でデータを定義する必要があります。
 
 ```html
 <igx-input-group>
@@ -227,8 +228,8 @@ In order to use the `igxAutocomplete` with groups, like in the sample above, you
 </igx-drop-down>
 ```
 
-### Autocomplete bound to remote data
-The following sample demonstrates an `igxAutocomplete` with a drop-down bound to a remote service. For the purpose of the sample there is a delay, in order to apply a custom template that will show instead of the drop-down, when data is loading:
+### オートコンプリートをリモートデータにバインド
+以下は、リモートサービスにバインドされたドロップダウンと `igxAutocomplete` のサンプルです。以下は、にデータ ロード時に遅延がある場合、ドロップダウンの代わりにカスタム テンプレートを適用したサンプルです。
 
 <div class="sample-container loading" style="height: 400px;">
     <iframe id="autocomplete-remote-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/data-entries/autocomplete-remote" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -245,17 +246,17 @@ The following sample demonstrates an `igxAutocomplete` with a drop-down bound to
 * [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html)
 * [IgxInputGroup]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
 
-## Known Issues
+## 既知の問題
 
-### Additional Resources
+### その他のリソース
 <div class="divider--half"></div>
 
 * [IgxDropDownComponent](drop_down.md)
 * [IgxInputGroup](input_group.md)
-* [Template Driven Forms Integration](input_group.md)
+* [テンプレート駆動フォームの統合](input_group.md)
 [Reactive Forms Integration](input_group_reactive_forms.md)
 
-Our community is active and always welcoming to new ideas.
+コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+* [Ignite UI for Angular** フォーラム** (英語) ](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub** (英語) ](https://github.com/IgniteUI/igniteui-angular)
