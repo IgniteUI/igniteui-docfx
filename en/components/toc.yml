@@ -43,16 +43,16 @@
     - name: Summaries
       href: grid/summaries.md
       new: false
-    - name: Column moving
+    - name: Column Moving
       href: grid/column_moving.md
       new: false
-    - name: Column pinning
+    - name: Column Pinning
       href: grid/column_pinning.md
       new: false
-    - name: Column resizing
+    - name: Column Resizing
       href: grid/column_resizing.md
       new: false
-    - name: Column hiding
+    - name: Column Hiding
       href: grid/column_hiding.md
       new: false
     - name: Selection
@@ -107,16 +107,16 @@
     - name: Summaries
       href: treeGrid/summaries.md
       new: false
-    - name: Column moving
+    - name: Column Moving
       href: treeGrid/column_moving.md
       new: false
-    - name: Column pinning
+    - name: Column Pinning
       href: treeGrid/column_pinning.md
       new: false
-    - name: Column resizing
+    - name: Column Resizing
       href: treeGrid/column_resizing.md
       new: false
-    - name: Column hiding
+    - name: Column Hiding
       href: treeGrid/column_hiding.md
       new: false
     - name: Selection
@@ -168,16 +168,16 @@
     - name: Summaries
       href: hierarchicalGrid/summaries.md
       new: true
-    - name: Column moving
+    - name: Column Moving
       href: hierarchicalGrid/column_moving.md
       new: true
-    - name: Column pinning
+    - name: Column Pinning
       href: hierarchicalGrid/column_pinning.md
       new: true
-    - name: Column resizing
+    - name: Column Resizing
       href: hierarchicalGrid/column_resizing.md
       new: true
-    - name: Column hiding
+    - name: Column Hiding
       href: hierarchicalGrid/column_hiding.md
       new: true
     - name: Selection
