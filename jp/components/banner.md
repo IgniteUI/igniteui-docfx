@@ -13,7 +13,7 @@ Ignite UI for Angular Banner コンポーネントは、スナックバーより
 ### Banner デモ
 
 <div class="sample-container loading" style="height: 400px">
-    <iframe id="banner-sample-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/banner-sample-4" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="banner-sample-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/notifications/banner-sample-4" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="banner-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
@@ -25,7 +25,7 @@ Ignite UI for Angular Banner コンポーネントは、スナックバーより
 
 ## 使用方法
 
-Ignite UI for Angular Banner の使用は、はじめに **app.module.ts** ファイルに [`IgxBannerModule`]({environment:angularApiUrl}/classes/igxbannermodule.html) をインポートします。
+Ignite UI for Angular Banner の使用は、はじめに **app.module.ts** ファイルに `IgxBannerModule` をインポートします。
 
 ```typescript
 // app.module.ts
@@ -59,7 +59,7 @@ Bannerは、要素がページ テンプレートに挿入された場所にそ�
 #### ベーシック Banner デモ
 
 <div class="sample-container loading" style="height: 530px">
-    <iframe id="banner-sample-1-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/banner-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="banner-sample-1-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/notifications/banner-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="banner-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
@@ -102,7 +102,7 @@ Banner コンテンツに [`igx-icon`]({environment:angularApiUrl}/classes/igxic
 
 #### カスタム Banner ボタンの追加
 
-[`IgxBannerModule`]({environment:angularApiUrl}/classes/igxbannermodule.html) は、Banner ボタンをテンプレート化するためのディレクティブ ([`IgxBannerActionsDirective`]({environment:angularApiUrl}/classes/igxbanneractionsdirective.html).) を公開します。このディレクティブを使用してデフォルト Banner ボタン (`Dismiss`) をオーバーライドし、ユーザー定義のカスタム操作を追加します。ほとんどのボタン インタラクションは Banner を閉じることであるため、`click` ハンドラーでBanner の `close()` メソッドを呼び出してください。
+`IgxBannerModule` は、Banner ボタンをテンプレート化するためのディレクティブ ([`IgxBannerActionsDirective`]({environment:angularApiUrl}/classes/igxbanneractionsdirective.html).) を公開します。このディレクティブを使用してデフォルト Banner ボタン (`Dismiss`) をオーバーライドし、ユーザー定義のカスタム操作を追加します。ほとんどのボタン インタラクションは Banner を閉じることであるため、`click` ハンドラーでBanner の `close()` メソッドを呼び出してください。
 
 > [!NOTE]
 > Google の [`マテリアル デザイン` ガイドライン](https://material.io/design/components/banners.html#anatomy) では、Banner に表示するボタンは 2 つまでです。`IgxBannerComponent` は、`igx-banner-actions` タグで 2 要素以上渡すことを明示的に制限**しません**が、マテリアル デザイン ガイドに従うことを推奨します。 
@@ -171,7 +171,7 @@ export class MyBannerComponent implements OnInit, OnDestroy {
 #### デモのテンプレート化
 
 <div class="sample-container loading" style="height: 530px">
-    <iframe id="banner-sample-2-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/banner-sample-2" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="banner-sample-2-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/notifications/banner-sample-2" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="banner-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
@@ -208,7 +208,7 @@ export class MyBannerComponent {
 #### アニメーション デモ
 
 <div class="sample-container loading" style="height: 530px">
-    <iframe id="banner-sample-3-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/banner-sample-3" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="banner-sample-3-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/notifications/banner-sample-3" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="banner-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
@@ -240,6 +240,5 @@ export class MyBannerComponent {
 
 ## API リファレンス
 
-* [`IgxBannerComponent API`]({environment:angularApiUrl}/classes/igxbannercomponent.html)
-* [`IgxBannerModule`]({environment:angularApiUrl}/classes/igxbannermodule.html)
-* [`IgxBanner Styles`]({environment:sassApiUrl}/index.html#mixin-igx-banner)
+* [IgxBannerComponent]({environment:angularApiUrl}/classes/igxbannercomponent.html)
+* [IgxBannerComponent Styles]({environment:sassApiUrl}/index.html#mixin-igx-banner)

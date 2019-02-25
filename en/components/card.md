@@ -10,7 +10,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ###Card Demo
 <div class="sample-container loading" style="height: 930px">
-    <iframe id="card-sample-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/card"
+    <iframe id="card-sample-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/layouts/card"
         onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -106,7 +106,7 @@ Next, we need to update the template for our card to show a round-shaped avatar 
 
 At this point the card should look similar to the following:
 <div class="sample-container" style="height: 480px">
-    <iframe id="card-sample-2-iframe" src='{environment:demosBaseUrl}/card-sample-2' width="100%" height="100%" seamless frameBorder="0"  onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="card-sample-2-iframe" src='{environment:demosBaseUrl}/layouts/card-sample-2' width="100%" height="100%" seamless frameBorder="0"  onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="card-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
@@ -173,7 +173,7 @@ public icons = ['add', 'star'];
 Easy, right? Let's see how it turned out in the browser:
 
 <div class="sample-container loading" style="height: 400px">
-    <iframe id="card-sample-3-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/card-sample-3"
+    <iframe id="card-sample-3-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/layouts/card-sample-3"
         onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>

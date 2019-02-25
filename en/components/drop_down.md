@@ -10,7 +10,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ### Drop Down Demo
 <div class="sample-container" style="height:220px">
-    <iframe id="dropdown-sample-4-iframe" src='{environment:demosBaseUrl}/dropdown-sample-4' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="dropdown-sample-4-iframe" src='{environment:demosBaseUrl}/data-entries/dropdown-sample-4' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dropdown-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
@@ -21,7 +21,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 > To start using Ignite UI for Angular components in your own projects, make sure you have configured all necessary dependencies and have performed the proper setup of your project. You can learn how to do this in the [**installation**](https://www.infragistics.com/products/ignite-ui-angular/getting-started#installation) topic.
 
 ### Usage
-To get started with the Ignite UI for Angular Drop Down, let's first import the [IgxDropDownModule]({environment:angularApiUrl}/classes/igxdropdownmodule.html) in the **app.module.ts** file:
+To get started with the Ignite UI for Angular Drop Down, let's first import the `IgxDropDownModule` in the **app.module.ts** file:
 
 ```typescript
 // app.module.ts
@@ -91,7 +91,7 @@ Having all set up, let's show all the options in the [IgxDropDownComponent]({env
 If the sample is configured properly, a dropdown with several options should be displayed.
 
 <div class="sample-container" style="height: 200px">
-    <iframe id="dropdown-sample-1-iframe" src='{environment:demosBaseUrl}/dropdown-sample-1' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="dropdown-sample-1-iframe" src='{environment:demosBaseUrl}/data-entries/dropdown-sample-1' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="dropdown-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">                view on stackblitz
@@ -155,7 +155,7 @@ Let's say we want to have a predefined selected item. One way to do this, is by 
 ```
 
 <div class="sample-container" style="height: 200px">
-    <iframe id="dropdown-sample-2-iframe" src='{environment:demosBaseUrl}/dropdown-sample-2' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="dropdown-sample-2-iframe" src='{environment:demosBaseUrl}/data-entries/dropdown-sample-2' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="dropdown-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">                view on stackblitz
@@ -217,11 +217,90 @@ To provide more useful visual information, use [isHeader]({environment:angularAp
 
 If the sample is configured properly, a list  of countries should be displayed as a group under EU header, UK as a non-interactive item, and Bulgaria as selected item.
 
-<div class="sample-container" style="height: 400px">
-    <iframe id="dropdown-sample-3-iframe" src='{environment:demosBaseUrl}/dropdown-sample-3' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container" style="height: 298px">
+    <iframe id="dropdown-sample-3-iframe" src='{environment:demosBaseUrl}/data-entries/dropdown-sample-3' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dropdown-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">                view on stackblitz
+    </button>
+</div>
+
+#### Grouping hierarchical data
+
+Items in the `igx-drop-down` can also be grouped using the [`igx-drop-down-item-group`]({environment:angularApiUrl}/classes/igxdropdowngroupcomponent.html). The `igx-drop-down-item-group` accepts `igx-drop-down-item`s as its content and renders them in a grouped fashion.
+In the code snippets below, you can see how you can use the `igx-drop-down-item-group` to display the example `foods` array in a grouped fashion.
+```typescript
+// dropdown.component.ts
+export class MyCustomDropDownComponent {
+    ...
+    public foods: { 
+        name: string,
+        entries: { name: string, refNo: string }[]
+    }[] = [{
+    name: 'Vegetables',
+    entries: [{
+        name: 'Cucumber',
+        refNo: `00000`
+    }, {
+        name: 'Lettuce',
+        refNo: `00001`
+    },
+    ...]
+    }, {
+        name: 'Fruits',
+        entries: [{
+            name: 'Banana',
+            refNo: `10000`
+        }, {
+            name: 'Tomato',
+            refNo: `10001`
+        },
+        ...]
+    }, {
+        name: 'Meats',
+        entries: [{
+            name: 'Chicken',
+            refNo: `20000`
+        }, {
+            name: 'Beef',
+            refNo: `20001`
+        },
+        ...]
+    }];
+
+}
+...
+```
+```html
+    <igx-drop-down>
+        <igx-drop-down-item-group *ngFor="let foodGroup of foods" [label]="foodGroup.name">
+            <igx-drop-down-item *ngFor="let food of foodGroup.entries" [value]='food.refNo'>
+                {{ food.name }}
+            </igx-drop-down-item>
+        </igx-drop-down-item-group>
+    </igx-drop-down>
+```
+
+The `igx-drop-down-item-group` displays all of the `igx-drop-down-item`s under it in a grouped fashion, making it easier for users to differentiate the separate categories of foods in the example. The group also has the additional functionality of disabling `igx-drop-down-item`s inside of its body. For example, lets say we do not the `Meats` food group to be selectable in our drop down. Instead of disabling all of the entries in `Meats` separately, we can do the following:
+
+```html
+    <igx-drop-down>
+        <igx-drop-down-item-group *ngFor="let foodGroup of foods" [label]="foodGroup.name" [disabled]="foodGroup.name === 'Meats'">
+            <igx-drop-down-item *ngFor="let food of foodGroup.entries" [value]='food.refNo'>
+                {{ food.name }}
+            </igx-drop-down-item>
+        </igx-drop-down-item-group>
+    </igx-drop-down>
+``` 
+
+This disables the `Meats` group, as well as all of the child items inside!
+
+You can see the results in the sample below:
+<div class="sample-container" style="height: 298px">
+    <iframe id="dropdown-sample-5-iframe" src='{environment:demosBaseUrl}/data-entries/dropdown-sample-5' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dropdown-sample-5-iframe" data-demos-base-url="{environment:demosBaseUrl}">                view on stackblitz
     </button>
 </div>
 
@@ -291,7 +370,7 @@ public toggleMenu(eventArgs) {
 ```
 
 <div class="sample-container" style="height: 280px">
-    <iframe id="dropdown-menu-iframe" src='{environment:demosBaseUrl}/dropdown-menu' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="dropdown-menu-iframe" src='{environment:demosBaseUrl}/data-entries/dropdown-menu' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dropdown-menu-iframe" data-demos-base-url="{environment:demosBaseUrl}">                view on stackblitz
@@ -303,7 +382,7 @@ To enable keyboard navigation for the `igxDropDown` component, the [igxDropDownI
 The [igxDropDownItemNavigation]({environment:angularApiUrl}/classes/igxdropdownitemnavigationdirective.html) directive value should be target component that is or extends [IgxDropDownBase]({environment:angularApiUrl}/classes/igxdropdownbase.html) class.
 
 
-The following sample demonstrates an input that on click opens and closes igxDropDown instance. Applying the [igxDropDownItemNavigation]({environment:angularApiUrl}/classes/igxdropdownitemnavigationdirective.html) on the input itself, will enable keyboard navigation, when using arrow up and arrow down. This relies on the default drop down behavior with [allowItemsFocus]({environment:angularApiUrl}/classes/igxcombodropdowncomponent.html#allowitemsfocus) disabled to allow the button input to maintain focus.
+The following sample demonstrates an input that on click opens and closes igxDropDown instance. Applying the [igxDropDownItemNavigation]({environment:angularApiUrl}/classes/igxdropdownitemnavigationdirective.html) on the input itself, will enable keyboard navigation, when using arrow up and arrow down. This relies on the default drop down behavior with [allowItemsFocus]({environment:angularApiUrl}/classes/igxdropdowncomponent.html#allowitemsfocus) disabled to allow the button input to maintain focus.
 
 
 ```html
@@ -364,7 +443,7 @@ The following sample demonstrates an input that on click opens and closes igxDro
 ```
 
 <div class="sample-container" style="height:220px">
-    <iframe id="dropdown-sample-4-iframe" src='{environment:demosBaseUrl}/dropdown-sample-4' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="dropdown-sample-4-iframe" src='{environment:demosBaseUrl}/data-entries/dropdown-sample-4' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dropdown-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
@@ -385,7 +464,7 @@ Applying the directive will ensure the following actions are executed as a resul
 
 
 
-When [allowItemsFocus]({environment:angularApiUrl}/classes/igxcombodropdowncomponent.html#allowitemsfocus) is enabled, drop down items gain tab index and are focused when active. The focused drop down items are the ones that trigger events, during keyboard navigation, which means that the [igxDropDownItemNavigation]({environment:angularApiUrl}/classes/igxdropdownitemnavigationdirective.html) should be applied on the individual drop down items.
+When [allowItemsFocus]({environment:angularApiUrl}/classes/igxdropdowncomponent.html#allowitemsfocus) is enabled, drop down items gain tab index and are focused when active. The focused drop down items are the ones that trigger events, during keyboard navigation, which means that the [igxDropDownItemNavigation]({environment:angularApiUrl}/classes/igxdropdownitemnavigationdirective.html) should be applied on the individual drop down items.
 
 ```
 <igx-input-group [igxToggleAction]="dropDown">
@@ -401,17 +480,15 @@ When [allowItemsFocus]({environment:angularApiUrl}/classes/igxcombodropdowncompo
 <div class="divider--half"></div>
 
 ### API Summary
-**igx-drop-down** component [**API Reference**]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) and
-[**Themes Reference**]({environment:sassApiUrl}/index.html#mixin-igx-drop-down).
-
-**igx-drop-down-item** component [**API Reference**]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html).
+* [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) 
+* [IgxDropDownComponent Styles]({environment:sassApiUrl}/index.html#mixin-igx-drop-down)
+* [IgxDropDownItemComponent]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html).
+* [IgxOverlay]({environment:angularApiUrl}/interfaces/overlaysettings.html)
+* [IgxOverlay Styles]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
 
 ### Additional Resources
 
 <div class="divider--half"></div>
-Our community is active and always welcoming to new ideas.
+Our community is active and always welcoming to new ideas.  
 * [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
 * [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
-
-
-

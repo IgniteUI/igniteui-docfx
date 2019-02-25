@@ -12,7 +12,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ### Avatar Demo
 
 <div class="sample-container loading" style="height:200px">
-    <iframe id="avatar-sample-3-iframe" src='{environment:demosBaseUrl}/avatar-sample-3' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="avatar-sample-3-iframe" src='{environment:demosBaseUrl}/layouts/avatar-sample-3' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="avatar-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">        view on stackblitz
@@ -67,7 +67,7 @@ Let's enhance our avatar by making it circular and bigger in size. We can also c
 If all went well, you should see something like the following in the browser:
 
 <div class="sample-container loading" style="height:100px">
-    <iframe id="avatar-sample-1-iframe" src='{environment:demosBaseUrl}/avatar-sample-1' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="avatar-sample-1-iframe" src='{environment:demosBaseUrl}/layouts/avatar-sample-1' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 
 ####Avatar displaying image
@@ -89,7 +89,7 @@ To get an avatar that dispalays an image, all you have to do is setting the imag
 If all went well, you should see something like the following in the browser:
 
 <div class="sample-container loading" style="height:100px">
-    <iframe id="avatar-sample-2-iframe" src='{environment:demosBaseUrl}/avatar-sample-2' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="avatar-sample-2-iframe" src='{environment:demosBaseUrl}/layouts/avatar-sample-2' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 
 ####Avatar displaying icon

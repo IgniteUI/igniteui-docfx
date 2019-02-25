@@ -1,19 +1,19 @@
 ﻿---
-title: Financial Chart - 大量なデータの処理
+title: Financial Chart - 大規模データの処理
 _description: Ignite UI for Angular Financial Chart コンポーネントは、財務データを表示するタッチ対応、高いパフォーマンス、軽量なチャート コントロールです。
 _keywords: Ignite UI for Angular, データ ビジュアライゼーション, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Chart コンポーネント, Angular Financial Chart コンポーネント, Angular Chart コントロール, Angular Financial Chart コントロール
 _language: ja
 ---
-## 大量なデータの処理
+## 大規模データの処理
 
-`igx-financial-chart` コントロールは大量のデータを処理できます。以下のデモは 20 年にわたるデータをバインドします。折れ線チャートで 1 時間間隔の在庫価格を示します。
+`igx-financial-chart` コントロールは大規模データを処理できます。以下のデモは 20 年にわたるデータをバインドします。折れ線チャートで 1 時間間隔の在庫価格を示します。
 
 <div class="divider"></div>
 
 ### デモ
 
 <div class="sample-container" style="height: 550px">
-    <iframe id="financial-chart-high-volume-iframe" src='{environment:demosBaseUrl}/financial-chart-high-volume' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="financial-chart-high-volume-iframe" src='{environment:demosBaseUrl}/charts/financial-chart-high-volume' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="financial-chart-high-volume-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
@@ -24,9 +24,9 @@ _language: ja
 
 チャートのパフォーマンスに影響を及ぼすチャート機能および Angular 固有の機能があり、アプリケーションのパフォーマンスを最適化する際に検討する必要があります。
 
-* コンポーネントにバインドするプロパティで大量のデータを保存する場合、`@Component` デコレーターで `changeDetection: ChangeDetectionStrategy.OnPush` を設定します。 Angular の各変更検出のサイクルでデータ配列内の変更を確認しないようにする設定です。
+* コンポーネントにバインドするプロパティで大規模データを保存する場合、`@Component` デコレーターで `changeDetection: ChangeDetectionStrategy.OnPush` を設定します。 Angular の各変更検出のサイクルでデータ配列内の変更を確認しないようにする設定です。
 
-以下のコードはファイナンシャル チャートを大量のデータにバインドします。
+以下のコードはファイナンシャル チャートを大規模データにバインドします。
 
 ```typescript
 import { GenerateHourlyPricesService } from "../services/generate-hourly-prices.service";

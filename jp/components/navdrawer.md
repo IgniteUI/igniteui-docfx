@@ -13,7 +13,7 @@ _language: ja
 ### Navigation Drawer デモ
 
 <div class="sample-container loading" style="height: 600px">
-    <iframe id="nav-drawer-sample-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/navigation-drawer" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="nav-drawer-sample-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/menus/navigation-drawer" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="nav-drawer-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
@@ -124,7 +124,7 @@ Navigation Drawer は [`igxNavigationService`]({environment:angularApiUrl}/class
 結果は以下のようになります。
 
 <div class="sample-container loading" style="height: 500px">
-    <iframe id="nav-drawer-simple-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/navigation-drawer-simple" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="nav-drawer-simple-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/menus/navigation-drawer-simple" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="nav-drawer-simple-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
@@ -165,7 +165,7 @@ Navigation Drawer は [`igxNavigationService`]({environment:angularApiUrl}/class
 ```
 
 <div class="sample-container loading" style="height: 500px">
-    <iframe id="nav-drawer-pin-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/navigation-drawer-pin" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="nav-drawer-pin-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/menus/navigation-drawer-pin" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="nav-drawer-pin-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
@@ -215,7 +215,7 @@ Drawer は `flex-basis` をホスト要素に適用すると、残りのコン�
 ```
 
 <div class="sample-container loading" style="height: 400px">
-    <iframe id="nav-drawer-mini-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/navigation-drawer-mini" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="nav-drawer-mini-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/menus/navigation-drawer-mini" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="nav-drawer-mini-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>

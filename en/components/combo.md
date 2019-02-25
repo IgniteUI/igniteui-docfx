@@ -18,7 +18,7 @@ Drop Down items are **virtualized**, which guarantees smooth work, even if the [
 
 ### Demo
 <div class="sample-container loading" style="height: 400px;">
-    <iframe id="combo-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/combo" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="combo-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/lists/combo" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="combo-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
@@ -29,7 +29,7 @@ Drop Down items are **virtualized**, which guarantees smooth work, even if the [
 > To start using Ignite UI for Angular components in your own projects, make sure you have configured all necessary dependencies and have performed the proper setup of your project. You can learn how to do this in the [**installation**](https://www.infragistics.com/products/ignite-ui-angular/getting-started#installation) topic.
 
 ### Usage
-The [IgxComboComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) allows you to search and select items from the list. The combo uses the [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) internally as an item container. To get started with the Ignite UI for Angular Combo, let's first import the [IgxComboModule]({environment:angularApiUrl}/classes/igxcombomodule.html) in our **app.module.ts** file:
+The [IgxComboComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) allows you to search and select items from the list. The combo uses the [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) internally as an item container. To get started with the Ignite UI for Angular Combo, let's first import the `IgxComboModule` in our **app.module.ts** file:
 
 ```typescript
 // app.module.ts
@@ -109,8 +109,9 @@ When igxCombo is opened, allow custom values are enabled and add item button is 
 ## API
 <div class="divider--half"></div>
 
-* IgxComboComponent [**API Reference**]({environment:angularApiUrl}/classes/igxcombocomponent.html) and
-[**Themes Reference**]({environment:sassApiUrl}/index.html#themes-mixin-igx-combo).
+* [IgxComboComponent]({environment:angularApiUrl}/classes/igxcombocomponent.html) 
+* [IgxComboComponent Styles]({environment:sassApiUrl}/index.html#themes-mixin-igx-combo)
+* [IgxOverlay Styles]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
 
 ## Known Issues
 

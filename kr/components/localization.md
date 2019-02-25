@@ -9,7 +9,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 With only a few lines of code, users can easily localize the strings in Ignite UI for Angular components.
 
 <div class="sample-container loading" style="height:550px">
-    <iframe id="localization-sample-1-iframe" src='{environment:demosBaseUrl}/localization-sample-1' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="localization-sample-1-iframe" src='{environment:demosBaseUrl}/services/localization-sample-1' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
@@ -35,7 +35,7 @@ for (const key of Object.keys(currentRS)) {
 changei18n(currentRS);
 ```
 <div>
-<button data-localize="stackblitz" class="stackblitz-btn" date-sample-src="{environment:demosBaseUrl}/localization-sample-2"
+<button data-localize="stackblitz" class="stackblitz-btn" data-sample-src="{environment:demosBaseUrl}/services/localization-sample-2"
     data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz
 </button>
 </div>
@@ -51,7 +51,7 @@ currentRS.igx_grid_filter_row_close = '[Localized]Close';
 ```
 
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" date-sample-src="{environment:demosBaseUrl}/localization-sample-3" 
+    <button data-localize="stackblitz" class="stackblitz-btn" data-sample-src="{environment:demosBaseUrl}/services/localization-sample-3" 
         data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz
     </button>
 </div>

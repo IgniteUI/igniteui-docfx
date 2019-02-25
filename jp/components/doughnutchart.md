@@ -11,7 +11,7 @@ _language: ja
 ### デモ
 
 <div class="sample-container" style="height: 550px">
-    <iframe id="doughnut-chart-overview-iframe" src='{environment:demosBaseUrl}/doughnut-chart-overview' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="doughnut-chart-overview-iframe" src='{environment:demosBaseUrl}/charts/doughnut-chart-overview' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="doughnut-chart-overview-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示
@@ -95,7 +95,7 @@ xamDoughnutChart は、複数のリングを、異なるコレクションにバ
 ### 
 
 <div class="sample-container" style="height: 550px">
-    <iframe id="doughnut-chart-selection-iframe" src='{environment:demosBaseUrl}/doughnut-chart-selection' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="doughnut-chart-selection-iframe" src='{environment:demosBaseUrl}/charts/doughnut-chart-selection' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="doughnut-chart-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示
@@ -123,7 +123,7 @@ xamDoughnutChart は、複数のリングを、異なるコレクションにバ
 ### 
 
 <div class="sample-container" style="height: 550px">
-    <iframe id="doughnut-chart-explosion-iframe" src='{environment:demosBaseUrl}/doughnut-chart-explosion' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="doughnut-chart-explosion-iframe" src='{environment:demosBaseUrl}/charts/doughnut-chart-explosion' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="doughnut-chart-explosion-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示

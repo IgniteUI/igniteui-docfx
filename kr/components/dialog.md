@@ -11,7 +11,7 @@ _language: kr
 
 ### Dialog Demo
 <div class="sample-container loading" style="height:300px">
-    <iframe id="dialog-sample-iframe" src='{environment:demosBaseUrl}/dialog' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="dialog-sample-iframe" src='{environment:demosBaseUrl}/interactions/dialog' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dialog-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
@@ -54,7 +54,7 @@ To add alert, in the template of our email component we can add the following co
 ```
 
 <div class="sample-container loading" style="height:250px">
-    <iframe id="dialog-sample-1-iframe" src='{environment:demosBaseUrl}/dialog-sample-1' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="dialog-sample-1-iframe" src='{environment:demosBaseUrl}/interactions/dialog-sample-1' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dialog-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
@@ -79,7 +79,7 @@ To add standard dialog, in the template of our file manager component we can add
 ```
 
 <div class="sample-container loading" style="height:250px">
-    <iframe id="dialog-sample-2-iframe" src='{environment:demosBaseUrl}/dialog-sample-2' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="dialog-sample-2-iframe" src='{environment:demosBaseUrl}/interactions/dialog-sample-2' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dialog-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
@@ -120,7 +120,7 @@ Also we can add two groups of label and input decorated with the [**igxLabel**](
 ```
 
 <div class="sample-container loading" style="height:300px">
-    <iframe id="dialog-sample-3-iframe" src='{environment:demosBaseUrl}/dialog-sample-3' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="dialog-sample-3-iframe" src='{environment:demosBaseUrl}/interactions/dialog-sample-3' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dialog-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
@@ -132,8 +132,10 @@ Also we can add two groups of label and input decorated with the [**igxLabel**](
 
 * [IgxDialogComponent]({environment:angularApiUrl}/classes/igxdialogcomponent.html)
 * [IgxDialogComponent Styles]({environment:sassApiUrl}/index.html#function-igx-dialog-theme)
+* [IgxOverlay]({environment:angularApiUrl}/interfaces/overlaysettings.html)
+* [IgxOverlay Styles]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
 
-###Additional Resources
+### Additional Resources
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.

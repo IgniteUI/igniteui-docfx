@@ -27,7 +27,21 @@ Position strategies determine where to display the component in the provided Igx
     |:----------------|:--------------------------|:-------------------------|:-------------------------|:-------------------------|
     | new Point(0, 0) | HorizontalAlignment.Right | VerticalAlignment.Bottom | HorizontalAlignment.Left | VerticalAlignment.Bottom |
 <div class="divider"></div>
-*Note*: Will not try to reposition the element if the strategy is using  HorizontalDirection = Center / VerticalDirection = Middle.
+
+> [!NOTE]
+> Will not try to reposition the element if the strategy is using  HorizontalDirection = Center / VerticalDirection = Middle.
+
+4. **Elastic** - Positions the element as in **Connected** positioning strategy and re-sizes the element to fit inside of the view port (re-calculating width and/or height) in case the element is partially out of view. `minSize :{ width: number, height: number}` can be passed in `positionSettings` to prevent resizing if it would put the element dimensions below a certain threshold. Defaults to:
+
+    | target          | horizontalDirection       |  verticalDirection       | horizontalStartPoint     | verticalStartPoint       | minSize               |
+    |:----------------|:--------------------------|:-------------------------|:-------------------------|:-------------------------|-----------------------|
+    | new Point(0, 0) | HorizontalAlignment.Right | VerticalAlignment.Bottom | HorizontalAlignment.Left | VerticalAlignment.Bottom |{ width: 0, height: 0 }|
+<div class="divider"></div>
+
+> [!NOTE]
+> Will not try to reposition the element if the strategy is using  HorizontalDirection = Center / VerticalDirection = Middle.
+> [!NOTE]
+> The overlay element **will be** resized, but the positioning strategy **does not** handle `overflow`. For example, if the element needs to have `overflow-y` when resized, incorporate the appropriate style to provide that. 
 
 ## Usage
 Position an element based on an existing button as a target, so it's start point is the button's Bottom/Left corner.
@@ -45,7 +59,7 @@ strategy.position(contentWrapper, size);
 ```
 
 ### Getting Started
-The position strategy is passed as a property in the [`overlaySettings`] ({environment:angularApiUrl}/interfaces/overlaysettings.html) parameter when the [`overlay.show()`] ({environment:angularApiUrl}/classes/igxoverlayservice.html#show) method is called:
+The position strategy is passed as a property in the [`overlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) parameter when the [`overlay.show()`] ({environment:angularApiUrl}/classes/igxoverlayservice.html#show) method is called:
 ```typescript
     // Initializing and using overlay settings
     const overlaySettings: OverlaySettings = {
@@ -58,7 +72,7 @@ The position strategy is passed as a property in the [`overlaySettings`] ({envir
 ``` 
 <div class="divider"></div>
 
-To change the position strategy used by the overlay, override the [`positionStrategy`] ({environment:angularApiUrl}/interfaces/ipositionstrategy.html) property of the [`overlaySettings`] ({environment:angularApiUrl}/interfaces/overlaysettings.html) object passed to the overlay:
+To change the position strategy used by the overlay, override the [`positionStrategy`]({environment:angularApiUrl}/interfaces/ipositionstrategy.html) property of the [`overlaySettings`] ({environment:angularApiUrl}/interfaces/overlaysettings.html) object passed to the overlay:
 ```typescript
     // overlaySettings is an existing object of type OverlaySettings
     // to override the position strategy
@@ -88,27 +102,49 @@ To change the position settings an already existing strategy is using, override 
 Import the desired position strategy if needed like:
 
 ```typescript
-import {AutoPositionStrategy, GlobalPositionStrategy, ConnectedPositioningStrategy } from './position/global-position-strategy';
+import {AutoPositionStrategy, GlobalPositionStrategy, ConnectedPositioningStrategy, ElasticPositionStrategy } from 'igniteui-angular';
 ```
 ## Demos 
 
 ### Horizontal and Vertical Direction
-Changing the horizontal and/or vertical direction of the positioning settings determined where the content will align itself. Depending on the positioning strategy chosen, the content will either align relative to the target's container ([`AutoPositionStrategy`] ({environment:angularApiUrl}/classes/autopositionstrategy.html) and [`ConnectedPositioningStrategy`] ({environment:angularApiUrl}/classes/connectedpositioningstrategy.html)) or the body of the document ([`GlobalPositioningStrategy`] ({environment:angularApiUrl}/classes/globalpositionstrategy.html))
+Changing the horizontal and/or vertical direction of the positioning settings determined where the content will align itself. Depending on the positioning strategy chosen, the content will either align relative to the target's container ([`AutoPositionStrategy`] ({environment:angularApiUrl}/classes/autopositionstrategy.html), [`ElasticPositionStrategy`]({environment:angularApiUrl}/classes/elasticpositionstrategy.html) and [`ConnectedPositioningStrategy`]({environment:angularApiUrl}/classes/connectedpositioningstrategy.html)) or the body of the document ([`GlobalPositioningStrategy`]({environment:angularApiUrl}/classes/globalpositionstrategy.html))
 
 <div class="sample-container loading" style="height: 400px">
-    <iframe id="overlay-position-sample-1-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/overlay-position-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="overlay-position-sample-1-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/interactions/overlay-position-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="overlay-position-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on Stackblitz</button>
 </div>
 <div class="divider"></div>
 
+In the above sample, the `overflow` of the displayed element is handled by subscribing to the overlay's [`onOpening`]({environment:angularApiUrl}/classes/igxoverlayservice.html#onopening) and [`onClosed`]({environment:angularApiUrl}/classes/igxoverlayservice.html#onclosed) emitters and applying the appropriate styling when the element is toggled.
+
+```typescript
+// in overlay.component.ts
+export class MyExampleOverlayComponent {
+    ... 
+    // subscribe to overlay toggle emitters
+    public ngOnInit() {
+        const applyStyle = (overflow) => { this.overlayElement.nativeElement.style.overflow = overflow};
+        this.overlay.onOpening.subscribe(() => {applyStyle('auto'); });
+        this.overlay.onClosed.subscribe(() => {applyStyle(''); });
+    }
+    ...
+    // unsub on destroy
+    public ngOnDestroy() {
+        this.overlay.onOpening.unsubscribe();
+        this.overlay.onClosed.unsubscribe();
+    }
+
+}
+```
+
 ### Horizontal and Vertical Start Point
-Changing the horizontal and/or vertical start point of the positioning settings determines where the content will try to start from. Start point has effect only if the [`target`] ({environment:angularApiUrl}/interfaces/positionsettings.html#target) passed in the [`positionSettings`] ({environment:angularApiUrl}/interfaces/positionsettings.html) is an `HTMLElement` and works only for [`AutoPositionStrategy`] ({environment:angularApiUrl}/classes/autopositionstrategy.html) and [`ConnectedPositioningStrategy`] ({environment:angularApiUrl}/classes/connectedpositioningstrategy.html).
+Changing the horizontal and/or vertical start point of the positioning settings determines where the content will try to start from. Start point has effect only if the [`target`] ({environment:angularApiUrl}/interfaces/positionsettings.html#target) passed in the [`positionSettings`] ({environment:angularApiUrl}/interfaces/positionsettings.html) is an `HTMLElement` and works only for [`AutoPositionStrategy`] ({environment:angularApiUrl}/classes/autopositionstrategy.html), [`ElasticPositionStrategy`] ({environment:angularApiUrl}/classes/elasticpositionstrategy.html) and [`ConnectedPositioningStrategy`] ({environment:angularApiUrl}/classes/connectedpositioningstrategy.html).
 In the demo below, the overlay element will position itself starting from the target element depending on the start point chosen. Directions are always [`HorizontalAlignment.Right`] ({environment:angularApiUrl}/enums/horizontalalignment.html#right) and [`VerticalAlignment.Bottom`] ({environment:angularApiUrl}/enums/verticalalignment.html#bottom):
 
 <div class="sample-container loading" style="height: 400px">
-    <iframe id="overlay-position-sample-2-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/overlay-position-sample-2" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="overlay-position-sample-2-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/interactions/overlay-position-sample-2" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="overlay-position-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on Stackblitz</button>

@@ -1,75 +1,86 @@
+- name: General
+  header: true
+- name: Getting started
+  href: general/getting_started.md
+  new: false
+- name: Update guide
+  href: general/update_guide.md
+  new: false
+- name: Ignite UI CLI
+  href: general/cli-overview.md
+  new: false
 - name: Grids & Lists
   href: grids_and_lists.md
   header: true
 - name: Data Grid
-  href: grid.md
+  href: grid/grid.md
   new: true
   items:
     - name: 가상화 및 성능
-      href: grid_virtualization.md
+      href: grid/virtualization.md
       new: false
     - name: 편집
-      href: grid_editing.md
-      new: true
+      href: grid/editing.md
+      new: false
     - name: 행 편집
-      href: grid_row_editing.md
+      href: grid/row_editing.md
       new: true
     - name: 트랜잭션
-      href: grid_batch_editing.md
+      href: grid/batch_editing.md
       new: true
     - name: 페이징
-      href: grid_paging.md
+      href: grid/paging.md
       new: false
     - name: 필터링
-      href: grid_filtering.md
+      href: grid/filtering.md
       new: true
     - name: 정렬
-      href: grid_sorting.md
+      href: grid/sorting.md
       new: false
     - name: 그룹화
-      href: grid_groupby.md
-      new: true
+      href: grid/groupby.md
+      new: false
     - name: 요약
-      href: grid_summaries.md
+      href: grid/summaries.md
       new: false
     - name: 열 이동
-      href: grid_column_moving.md
-      new: true
+      href: grid/column_moving.md
+      new: false
     - name: 열 핀 고정
-      href: grid_column_pinning.md
+      href: grid/column_pinning.md
       new: false
     - name: 크기 조정
-      href: grid_column_resizing.md
+      href: grid/column_resizing.md
       new: false
     - name: 숨기기
-      href: grid_column_hiding.md
-      new: true
+      href: grid/column_hiding.md
+      new: false
     - name: 행 선택
-      href: grid_selection.md
+      href: grid/selection.md
       new: false
     - name: 검색
-      href: grid_search.md
-      new: true
+      href: grid/search.md
+      new: false
     - name: 도구 모음
-      href: grid_toolbar.md
-      new: true
+      href: grid/toolbar.md
+      new: false
     - name: Excel 내보내기
       href: exporter_excel.md
       new: false
     - name: Excel에서 붙여넣기
-      href: grid_paste_excel.md
-      new: true
+      href: grid/paste_excel.md
+      new: false
     - name: 복수 열 헤더
-      href: grid_multi_column_headers.md
-      new: true
+      href: grid/multi_column_headers.md
+      new: false
     - name: 표시 밀도
-      href: grid_displayDensity.md
-      new: true
+      href: grid/display_density.md
+      new: false
     - name: 조건부 셀 스타일
-      href: grid_conditional_cell_styling.md
+      href: grid/conditional_cell_styling.md
       new: true
 - name: Tree Grid
-  href: treegrid.md
+  href: treeGrid/tree_grid.md
   new: true
 - name: List View
   href: list.md
@@ -79,16 +90,19 @@
   items:
     - name: Features
       href: combo_features.md
-      new: true
+      new: false
     - name: Remote Binding
       href: combo_remote.md
       new: true
     - name: Templates
       href: combo_templates.md
-      new: true
+      new: false
     - name: Cascading Scenario
       href: combo_cascading.md
       new: true
+- name: Autocomplete
+  href: autocomplete.md
+  new: true
 - name: Charts
   header: true
 - name: Category Chart
@@ -96,9 +110,9 @@
   items:
     - name: 주석 및 오버레이
       href: categorychart_annotation_layers.md
-      new: true
-    - name: 차트 유형 탐색
-      href: categorychart_explore_chart_types.md
+      new: false
+    - name: Axis Options
+      href: categorychart_axis_options.md
       new: false
     - name: 실시간 데이터
       href: categorychart_real_time_data.md
@@ -111,19 +125,124 @@
       new: false
     - name: Highlighting
       href: categorychart_highlighting.md
-      new: true
+      new: false
     - name: Tooltip Types
       href: categorychart_tooltip_types.md
-      new: true
+      new: false
     - name: 툴팁 템플릿
       href: categorychart_tooltip_templates.md
       new: false
+- name: Data Chart
+  href: datachart.md
+  new: true
+  items:
+    - name: Axis
+      href: datachart_axis_types.md
+      new: true
+      items:
+        - name: Axis Settings
+          href: datachart_axis_settings.md
+          new: true
+        #- name: Axis Scales
+        #  href: datachart_axis_scales.md
+        #  new: true
+        - name: Axis Locations
+          href: datachart_axis_locations.md
+          new: true
+        - name: Axis Sharing
+          href: datachart_axis_sharing.md
+          new: true
+    - name: Series
+      href: datachart_series_types.md
+      new: true
+      items:
+      #  - name: Requirements
+      #    href: datachart_series_requirements.md
+      #    new: true
+        - name: Category Series 
+          href: datachart_series_types_category.md
+          new: true
+        - name: Financial Series 
+          href: datachart_series_types_financial.md
+          new: true
+        - name: Polar Series 
+          href: datachart_series_types_polar.md
+          new: true
+        - name: Radial Series 
+          href: datachart_series_types_radial.md
+          new: true
+        - name: Range Series 
+          href: datachart_series_types_range.md
+          new: true
+        - name: Scatter Area Series 
+          href: datachart_series_types_scatter_area.md
+          new: true
+        - name: Scatter Contour Series 
+          href: datachart_series_types_scatter_contour.md
+          new: true
+        - name: Scatter Bubble Series 
+          href: datachart_series_types_scatter_bubble.md
+          new: true
+        # - name: Scatter HD Series
+        #  href: datachart_series_types_scatter_hd.md
+        #  new: true
+        - name: Scatter Marker Series
+          href: datachart_series_types_scatter_marker.md
+          new: true
+        - name: Scatter Shape Series
+          href: datachart_series_types_shape.md
+          new: true
+        #- name: Stacked Series
+        #  href: datachart_series_types_stacked.md
+        #  new: true
+    #- name: Animations
+    #  href: datachart_series_animations.md
+    #  new: true
+    - name: Annotations
+      href: datachart_series_annotations.md
+      new: true
+    - name: Highlighting
+      href: datachart_series_highlighting.md
+      new: true
+    - name: Legend
+      href: datachart_chart_legends.md
+      new: true
+    - name: Markers
+      href: datachart_series_markers.md
+      new: true
+    - name: Navigation
+      href: datachart_chart_navigation.md
+      new: true
+    #- name: Synchronization
+    #  href: datachart_chart_synchronization.md
+    #  new: true
+    - name: Title and Subtitle
+      href: datachart_chart_titles.md
+      new: true
+    - name: Tooltips
+      href: datachart_series_tooltips.md
+      new: true
+    - name: Trendlines
+      href: datachart_series_trendlines.md
+      new: true
+    - name: Data Sources
+      href: datachart_data_sources.md
+      new: true 
+    #- name: Data Triangulation
+    #  href: datachart_data_triangulation.md
+    #  new: true
+    #- name: Series Error Bars
+    #  href: datachart_series_errorbars.md
+    #  new: true
+    #- name: Value Overlay
+    #  href: datachart_series_value_overlay.md
+    #  new: true 
 - name: Financial Chart
   href: financialchart.md
   items:
     - name: 주석 및 오버레이
       href: financialchart_annotation_layers.md
-      new: true
+      new: false
     - name: 차트 유형 탐색
       href: financialchart_explore_chart_types.md
       new: false
@@ -150,54 +269,54 @@
       new: false
     - name: Tooltip Types
       href: financialchart_tooltip_types.md
-      new: true
+      new: false
     - name: 사용자 도구 설명
       href: financialchart_tooltip_templates.md
 - name: Doughnut Chart
   href: doughnutchart.md
-  new: true
+  new: false
 - name: Pie Chart
   href: piechart.md
-  new: true
+  new: false
 - name: Frameworks
   header: true
 - name: Excel Library
   href: excel_library.md
-  new: true
+  new: false
   items:
     - name: Using Cells
       href: excel_library_using_cells.md
-      new: true
+      new: false
     - name: Using Tables
       href: excel_library_using_tables.md
-      new: true
+      new: false
     - name: Using Workbooks
       href: excel_library_using_workbooks.md
-      new: true
+      new: false
     - name: Using Worksheets
       href: excel_library_using_worksheets.md
-      new: true
+      new: false
     - name: Working with Charts
       href: excel_library_working_with_charts.md
-      new: true
+      new: false
     # - name: Working with Grids
     #   href: excel_library_working_with_grid.md
     #   new: true
     - name: Working with Sparklines
       href: excel_library_working_with_sparklines.md
-      new: true
+      new: false
 - name: Gauges
   header: true
-  new: true
+  new: false
 - name: Bullet Graph
   href: bulletgraph.md
-  new: true
+  new: false
 - name: Linear Gauge
   href: lineargauge.md
-  new: true
+  new: false
 - name: Radial Gauge
   href: radialgauge.md
-  new: true
+  new: false
 - name: Styling & Themes
   header: true
 - name: Themes
@@ -207,14 +326,14 @@
       href: themes/palette.md
     - name: Schemas
       href: themes/schemas.md
-      new: true
+      new: false
     - name: Typography
       href: themes/typography.md
     - name: Global Themes
       href: themes/global-theme.md
     - name: Component Themes
       href: themes/component-themes.md
-      new: true
+      new: false
     - name: Examples
       href: themes/examples.md
 - name: Shadows
@@ -225,7 +344,7 @@
   header: true
 - name: Drop Down
   href: drop_down.md
-  new: true
+  new: false
 - name: Button
   href: button.md
 - name: Button Group
@@ -236,7 +355,7 @@
   href: switch.md
 - name: Radio & Radio Group
   href: radio_button.md
-  new: true
+  new: false
 - name: Label & Input
   href: label_input.md
 - name: Input Group
@@ -260,9 +379,12 @@
   href: for_of.md
 - name: Chip
   href: chip.md
-  new: true
+  new: false
 - name: Text Highlight
   href: texthighlight.md
+  new: true
+- name: Select
+  href: select.md
   new: true
 - name: Interactions
   header: true
@@ -286,10 +408,10 @@
     new: true
   - name: Scrolling Strategies
     href: overlay_scroll.md
-    new: true
+    new: false
 - name: Drag and Drop
   href: drag_drop.md
-  new: true
+  new: false
 - name: Menus
   header: true
 - name: Navigation Drawer
@@ -342,4 +464,4 @@
   new: false
 - name: Localization
   href: localization.md
-  new: true
+  new: false

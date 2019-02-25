@@ -8,14 +8,14 @@ _language: ja
 ## CSV Exporter
 
 <p class="highlight">
-Ignite UI CSV Exporter サービスは、文字分割値 (CSV) 形式で生データ (配列) または [**IgxGrid**](grid.md) からデータをエクスポートします。
+Ignite UI CSV Exporter サービスは、文字分割値 (CSV) 形式で生データ (配列) または [**IgxGrid**](grid/grid.md) からデータをエクスポートします。
 エクスポート機能は [`IgxCsvExporterService`]({environment:angularApiUrl}/classes/igxcsvexporterservice.html) クラスにカプセル化されます。</p>
 <div class="divider"></div>
 
 ### CSV Exporter デモ
 
 <div class="sample-container loading" style="height: 150px;">
-    <iframe id="csv-export-sample-iframe" src="{environment:demosBaseUrl}/export-csv"
+    <iframe id="csv-export-sample-iframe" src="{environment:demosBaseUrl}/services/export-csv"
         width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -78,7 +78,7 @@ public exportButtonHandler() {
 
 ### IgxGrid のデータのエクスポート
 
-CSV Exporter サービスも [**IgxGrid**](grid.md) からのデータを CSV 形式でエクスポートできます。[`IgxCsvExporterService`]({environment:angularApiUrl}/classes/igxcsvexporterservice.html) の [`export`]({environment:angularApiUrl}/classes/igxcsvexporterservice.html#export) メソッドを起動し、[**IgxGrid**](grid.md) を最初の引数として渡します。
+CSV Exporter サービスも [**IgxGrid**](grid/grid.md) からのデータを CSV 形式でエクスポートできます。[`IgxCsvExporterService`]({environment:angularApiUrl}/classes/igxcsvexporterservice.html) の [`export`]({environment:angularApiUrl}/classes/igxcsvexporterservice.html#export) メソッドを起動し、[**IgxGrid**](grid/grid.md) を最初の引数として渡します。
 
 以下は例です。
 
@@ -113,7 +113,7 @@ public exportButtonHandler() {
 ```
 
 <div class="sample-container loading" style="height: 300px;">
-    <iframe id="csv-export-sample-iframe2" src="{environment:demosBaseUrl}/export-csv-sample-1"
+    <iframe id="csv-export-sample-iframe2" src="{environment:demosBaseUrl}/services/export-csv-sample-1"
         width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -157,7 +157,7 @@ this.csvExportService.onColumnExport.subscribe((args: IColumnExportingEventArgs)
 this.csvExportService.export(this.igxGrid1, new IgxCsvExporterOptions("ExportedDataFile"));
 ```
 
-[**IgxGrid**](grid.md) からのデータのエクスポートで、エクスポート処理は行フィルタリングおよび列の非表示などの機能に応じてグリッドで表示されるデータのみをエクスポートします。[`IgxCsvExporterOptions`]({environment:angularApiUrl}/classes/igxcsvexporteroptions.html) オブジェクトのプロパティを設定し、エクスポーター サービスを構成してフィルターした行または非表示の列を含むことができます。このプロパティは以下の表で説明します。
+[**IgxGrid**](grid/grid.md) からのデータのエクスポートで、エクスポート処理は行フィルタリングおよび列の非表示などの機能に応じてグリッドで表示されるデータのみをエクスポートします。[`IgxCsvExporterOptions`]({environment:angularApiUrl}/classes/igxcsvexporteroptions.html) オブジェクトのプロパティを設定し、エクスポーター サービスを構成してフィルターした行または非表示の列を含むことができます。このプロパティは以下の表で説明します。
 
 ### API まとめ
 

@@ -1,75 +1,86 @@
-﻿- name: グリッドとリスト
+﻿- name: 概要
+  header: true
+- name: 作業の開始
+  href: general/getting_started.md
+  new: false
+- name: アップデート ガイド
+  href: general/update_guide.md
+  new: false
+- name: Ignite UI CLI
+  href: general/cli-overview.md
+  new: false
+- name: グリッドとリスト
   href: grids_and_lists.md
   header: true
 - name: Data Grid
-  href: grid.md
+  href: grid/grid.md
   new: true
   items:
     - name: 仮想化とパフォーマンス
-      href: grid_virtualization.md
+      href: grid/virtualization.md
       new: false
     - name: 編集
-      href: grid_editing.md
-      new: true
+      href: grid/editing.md
+      new: false
     - name: 行編集
-      href: grid_row_editing.md
+      href: grid/row_editing.md
       new: true
     - name: 一括編集
-      href: grid_batch_editing.md
+      href: grid/batch_editing.md
       new: true
     - name: ページング
-      href: grid_paging.md
+      href: grid/paging.md
       new: false
     - name: フィルタリング
-      href: grid_filtering.md
+      href: grid/filtering.md
       new: true
     - name: 並べ替え
-      href: grid_sorting.md
+      href: grid/sorting.md
       new: false
     - name: グループ化
-      href: grid_groupby.md
-      new: true
+      href: grid/groupby.md
+      new: false
     - name: 集計
-      href: grid_summaries.md
+      href: grid/summaries.md
       new: false
     - name: 列移動
-      href: grid_column_moving.md
-      new: true
+      href: grid/column_moving.md
+      new: false
     - name: 列のピン固定
-      href: grid_column_pinning.md
+      href: grid/column_pinning.md
       new: false
     - name: 列のサイズ変更
-      href: grid_column_resizing.md
+      href: grid/column_resizing.md
       new: false
     - name: 列の非表示
-      href: grid_column_hiding.md
-      new: true
+      href: grid/column_hiding.md
+      new: false
     - name: 選択
-      href: grid_selection.md
+      href: grid/selection.md
       new: false
     - name: 検索
-      href: grid_search.md
-      new: true
+      href: grid/search.md
+      new: false
     - name: ツールバー
-      href: grid_toolbar.md
-      new: true
+      href: grid/toolbar.md
+      new: false
     - name: Excel エクスポート
       href: exporter_excel.md
       new: false
     - name: Excel からの貼り付け
-      href: grid_paste_excel.md
-      new: true
+      href: grid/paste_excel.md
+      new: false
     - name: 複数列ヘッダー
-      href: grid_multi_column_headers.md
-      new: true
+      href: grid/multi_column_headers.md
+      new: false
     - name: 表示密度
-      href: grid_displayDensity.md
-      new: true
+      href: grid/display_density.md
+      new: false
     - name: 条件付きセルのスタイル設定
-      href: grid_conditional_cell_styling.md
+      href: grid/conditional_cell_styling.md
       new: true
 - name: Tree Grid
-  href: treegrid.md
+  href: treeGrid/tree_grid.md
   new: true
 - name: List View
   href: list.md
@@ -79,27 +90,30 @@
   items:
     - name: 機能
       href: combo_features.md
-      new: true
+      new: false
     - name: リモート バインディング
       href: combo_remote.md
       new: true
     - name: テンプレート
       href: combo_templates.md
-      new: true
+      new: false
     - name: カスケーディング
       href: combo_cascading.md
       new: true
+- name: Autocomplete
+  href: autocomplete.md
+  new: true
 - name: チャート
   header: true
 - name: Category Chart
   href: categorychart.md
   new: false
   items:
-    - name: 注釈とオーバーレイ
+    - name: 注釈
       href: categorychart_annotation_layers.md
-      new: true
-    - name: チャートのタイプの選択
-      href: categorychart_explore_chart_types.md
+      new: false
+    - name: 軸オプション
+      href: categorychart_axis_options.md
       new: false
     - name: リアルタイム データ
       href: categorychart_real_time_data.md
@@ -110,16 +124,127 @@
     - name: 構成オプション
       href: categorychart_configuration_options.md
       new: false
-    - name: カスタム ツールチップ
-      href: categorychart_custom_tooltips.md
+    - name: ハイライト
+      href: categorychart_highlighting.md
       new: false
+    - name: ツールチップ タイプ
+      href: categorychart_tooltip_types.md
+      new: false
+    - name: ツールチップ テンプレート
+      href: categorychart_tooltip_templates.md
+      new: false
+- name: Data Chart
+  href: datachart.md
+  new: true
+  items:
+    - name: Axis
+      href: datachart_axis_types.md
+      new: true
+      items:
+        - name: Axis Settings
+          href: datachart_axis_settings.md
+          new: true
+        #- name: Axis Scales
+        #  href: datachart_axis_scales.md
+        #  new: true
+        - name: Axis Locations
+          href: datachart_axis_locations.md
+          new: true
+        - name: Axis Sharing
+          href: datachart_axis_sharing.md
+          new: true
+    - name: Series
+      href: datachart_series_types.md
+      new: true
+      items:
+      #  - name: Requirements
+      #    href: datachart_series_requirements.md
+      #    new: true
+        - name: Category Series 
+          href: datachart_series_types_category.md
+          new: true
+        - name: Financial Series 
+          href: datachart_series_types_financial.md
+          new: true
+        - name: Polar Series 
+          href: datachart_series_types_polar.md
+          new: true
+        - name: Radial Series 
+          href: datachart_series_types_radial.md
+          new: true
+        - name: Range Series 
+          href: datachart_series_types_range.md
+          new: true
+        - name: Scatter Area Series 
+          href: datachart_series_types_scatter_area.md
+          new: true
+        - name: Scatter Contour Series 
+          href: datachart_series_types_scatter_contour.md
+          new: true
+        - name: Scatter Bubble Series 
+          href: datachart_series_types_scatter_bubble.md
+          new: true
+        # - name: Scatter HD Series
+        #  href: datachart_series_types_scatter_hd.md
+        #  new: true
+        - name: Scatter Marker Series
+          href: datachart_series_types_scatter_marker.md
+          new: true
+        - name: Scatter Shape Series
+          href: datachart_series_types_shape.md
+          new: true
+        #- name: Stacked Series
+        #  href: datachart_series_types_stacked.md
+        #  new: true
+    #- name: Animations
+    #  href: datachart_series_animations.md
+    #  new: true
+    - name: Annotations
+      href: datachart_series_annotations.md
+      new: true
+    - name: Highlighting
+      href: datachart_series_highlighting.md
+      new: true
+    - name: Legend
+      href: datachart_chart_legends.md
+      new: true
+    - name: Markers
+      href: datachart_series_markers.md
+      new: true
+    - name: Navigation
+      href: datachart_chart_navigation.md
+      new: true
+    #- name: Synchronization
+    #  href: datachart_chart_synchronization.md
+    #  new: true
+    - name: Title and Subtitle
+      href: datachart_chart_titles.md
+      new: true
+    - name: Tooltips
+      href: datachart_series_tooltips.md
+      new: true
+    - name: Trendlines
+      href: datachart_series_trendlines.md
+      new: true
+    - name: Data Sources
+      href: datachart_data_sources.md
+      new: true 
+    #- name: Data Triangulation
+    #  href: datachart_data_triangulation.md
+    #  new: true
+    #- name: Series Error Bars
+    #  href: datachart_series_errorbars.md
+    #  new: true
+    #- name: Value Overlay
+    #  href: datachart_series_value_overlay.md
+    #  new: true   
 - name: Financial Chart
   href: financialchart.md
   new: false
   items:
     - name: 注釈とオーバーレイ
       href: financialchart_annotation_layers.md
-      new: true
+      new: false
     - name: チャート タイプの選択
       href: financialchart_explore_chart_types.md
       new: false
@@ -146,52 +271,54 @@
       new: false
     - name: ツールチップ タイプ
       href: financialchart_tooltip_types.md
-      new: true
+      new: false
+    - name: ツールチップ テンプレート
+      href: financialchart_tooltip_templates.md
 - name: Doughnut Chart
   href: doughnutchart.md
-  new: true
+  new: false
 - name: Pie Chart
   href: piechart.md
-  new: true
-- name: Frameworks
+  new: false
+- name: フレームワーク
   header: true
 - name: Excel Library
   href: excel_library.md
-  new: true
+  new: false
   items:
     - name: セルの使用
       href: excel_library_using_cells.md
-      new: true
+      new: false
     - name: テーブルの使用
       href: excel_library_using_tables.md
-      new: true
+      new: false
     - name: ワークブックの使用
       href: excel_library_using_workbooks.md
-      new: true
+      new: false
     - name: ワークシートの使用
       href: excel_library_using_worksheets.md
-      new: true
+      new: false
     - name: チャートの使用
       href: excel_library_working_with_charts.md
-      new: true
+      new: false
     # - name: Working with Grids
     #   href: excel_library_working_with_grid.md
     #   new: true
     - name: スパークラインの使用
       href: excel_library_working_with_sparklines.md
-      new: true      
+      new: false
 - name: ゲージ
   header: true
-  new: true
+  new: false
 - name: Bullet Graph
   href: bulletgraph.md
-  new: true
+  new: false
 - name: Linear Gauge
   href: lineargauge.md
-  new: true
+  new: false
 - name: Radial Gauge
   href: radialgauge.md
-  new: true
+  new: false
 - name: スタイルとテーマ
   header: true
 - name: Themes
@@ -201,14 +328,14 @@
       href: themes/palette.md
     - name: スキーマ
       href: themes/schemas.md
-      new: true
+      new: false
     - name: タイポグラフィ
       href: themes/typography.md
     - name: グローバル テーマ
       href: themes/global-theme.md
     - name: コンポーネント テーマ
       href: themes/component-themes.md
-      new: true
+      new: false
     - name: サンプル
       href: themes/examples.md
 - name: Shadows
@@ -219,7 +346,7 @@
   header: true
 - name: Drop Down
   href: drop_down.md
-  new: true
+  new: false
 - name: Button
   href: button.md
 - name: Button Group
@@ -230,7 +357,7 @@
   href: switch.md
 - name: Radio と Radio Group
   href: radio_button.md
-  new: true
+  new: false
 - name: Label と Input
   href: label_input.md
 - name: Input Group
@@ -254,9 +381,12 @@
   href: for_of.md
 - name: Chip
   href: chip.md
-  new: true
+  new: false
 - name: Text Highlight
   href: texthighlight.md
+  new: true
+- name: Select
+  href: select.md
   new: true
 - name: インタラクション
   header: true
@@ -280,10 +410,10 @@
     new: true
   - name: スクロール ストラテジー
     href: overlay_scroll.md
-    new: true
+    new: false
 - name: Drag and Drop
   href: drag_drop.md
-  new: true
+  new: false
 - name: メニュー
   header: true
 - name: Navigation Drawer
@@ -328,12 +458,12 @@
   new: false
 - name: サービス
   header: true
-- name: CSV Exporter
+- name: CSV エクスポーター
   href: exporter_csv.md
   new: false
-- name: Excel Exporter
+- name: Excel エクスポーター
   href: exporter_excel.md
   new: false
-- name: Localization
+- name: ローカライゼーション
   href: localization.md
-  new: true
+  new: false

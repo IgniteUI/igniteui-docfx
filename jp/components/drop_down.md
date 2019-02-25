@@ -11,7 +11,7 @@ _language: ja
 
 ### Drop Down デモ
 <div class="sample-container" style="height:220px">
-    <iframe id="dropdown-sample-4-iframe" src='{environment:demosBaseUrl}/dropdown-sample-4' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="dropdown-sample-4-iframe" src='{environment:demosBaseUrl}/data-entries/dropdown-sample-4' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dropdown-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
@@ -22,7 +22,7 @@ _language: ja
 > Ignite UI for Angular コンポーネントをプロジェクトに追加する前に、必要なすべての依存関係を構成し、プロジェクトのセットアップが正しく完了したことを確認してください。[**インストール**](https://jp.infragistics.com/products/ignite-ui-angular/getting-started#installation) のトピックで手順を確認できます。
 
 ### 使用方法
-Ignite UI for Angular Drop Down コンポーネントを初期化する前に [IgxDropDownModule]({environment:angularApiUrl}/classes/igxdropdownmodule.html) を **app.module.ts** ファイルにインポートします。
+Ignite UI for Angular Drop Down コンポーネントを初期化する前に `IgxDropDownModule` を **app.module.ts** ファイルにインポートします。
 
 ```typescript
 // app.module.ts
@@ -92,7 +92,7 @@ export class AppModule {}
 サンプルを正しく構成すると、複数のオプションを含むドロップダウンが表示されます。
 
 <div class="sample-container" style="height: 200px">
-    <iframe id="dropdown-sample-1-iframe" src='{environment:demosBaseUrl}/dropdown-sample-1' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="dropdown-sample-1-iframe" src='{environment:demosBaseUrl}/data-entries/dropdown-sample-1' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="dropdown-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">                StackBlitz で開く
@@ -152,7 +152,7 @@ export class AppModule {}
 ```
 
 <div class="sample-container" style="height: 200px">
-    <iframe id="dropdown-sample-2-iframe" src='{environment:demosBaseUrl}/dropdown-sample-2' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="dropdown-sample-2-iframe" src='{environment:demosBaseUrl}/data-entries/dropdown-sample-2' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="dropdown-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">                StackBlitz で開く
@@ -214,11 +214,90 @@ export class AppModule {}
 
 サンプルを正しく構成すると EU ヘッダーの下に国の一覧がグループ形式で表示され、UK は非インタラクティブな項目、そして Bulgaria は選択済みの項目として表示されます。
 
-<div class="sample-container" style="height: 400px">
-    <iframe id="dropdown-sample-3-iframe" src='{environment:demosBaseUrl}/dropdown-sample-3' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container" style="height: 298px">
+    <iframe id="dropdown-sample-3-iframe" src='{environment:demosBaseUrl}/data-entries/dropdown-sample-3' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dropdown-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">                StackBlitz で開く
+    </button>
+</div>
+
+#### 階層データのグループ化
+
+`igx-drop-down` の項目は、[`igx-drop-down-item-group`]({environment:angularApiUrl}/classes/igxdropdowngroupcomponent.html) を使用してグループ化することもできます。`igx-drop-down-item-group` は、`igx-drop-down-item` をコンテンツとして許容し、グループ形式で描画します。
+以下のコード スニペットは、`igx-drop-down-item-group` を使用して `foods` 配列の例を表示する方法を示します。
+```typescript
+// dropdown.component.ts
+export class MyCustomDropDownComponent {
+    ...
+    public foods: { 
+        name: string,
+        entries: { name: string, refNo: string }[]
+    }[] = [{
+    name: 'Vegetables',
+    entries: [{
+        name: 'Cucumber',
+        refNo: `00000`
+    }, {
+        name: 'Lettuce',
+        refNo: `00001`
+    },
+    ...]
+    }, {
+        name: 'Fruits',
+        entries: [{
+            name: 'Banana',
+            refNo: `10000`
+        }, {
+            name: 'Tomato',
+            refNo: `10001`
+        },
+        ...]
+    }, {
+        name: 'Meats',
+        entries: [{
+            name: 'Chicken',
+            refNo: `20000`
+        }, {
+            name: 'Beef',
+            refNo: `20001`
+        },
+        ...]
+    }];
+
+}
+...
+```
+```html
+    <igx-drop-down>
+        <igx-drop-down-item-group *ngFor="let foodGroup of foods" [label]="foodGroup.name">
+            <igx-drop-down-item *ngFor="let food of foodGroup.entries" [value]='food.refNo'>
+                {{ food.name }}
+            </igx-drop-down-item>
+        </igx-drop-down-item-group>
+    </igx-drop-down>
+```
+
+`igx-drop-down-item-group` は、グループ形式ですべての `igx-drop-down-item` を表示することにより、ユーザーが食品のカテゴリを区別しやすくなります。更にグループにはボディの `igx-drop-down-item` を無効にする機能があります。たとえば、`Meats` 食品グループのドロップダウン選択を無効にする場合です。すべての `Meats` のエントリすべての個別に無効にする代わりに、以下が可能です。
+
+```html
+    <igx-drop-down>
+        <igx-drop-down-item-group *ngFor="let foodGroup of foods" [label]="foodGroup.name" [disabled]="foodGroup.name === 'Meats'">
+            <igx-drop-down-item *ngFor="let food of foodGroup.entries" [value]='food.refNo'>
+                {{ food.name }}
+            </igx-drop-down-item>
+        </igx-drop-down-item-group>
+    </igx-drop-down>
+``` 
+
+これにより `Meats` とすべての子項目が無効になります。
+
+以下のサンプルで結果を確認できます。
+<div class="sample-container" style="height: 298px">
+    <iframe id="dropdown-sample-5-iframe" src='{environment:demosBaseUrl}/data-entries/dropdown-sample-5' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dropdown-sample-5-iframe" data-demos-base-url="{environment:demosBaseUrl}">                stackblitz で開く
     </button>
 </div>
 
@@ -288,7 +367,7 @@ public toggleMenu(eventArgs) {
 ```
 
 <div class="sample-container" style="height: 280px">
-    <iframe id="dropdown-menu-iframe" src='{environment:demosBaseUrl}/dropdown-menu' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="dropdown-menu-iframe" src='{environment:demosBaseUrl}/data-entries/dropdown-menu' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dropdown-menu-iframe" data-demos-base-url="{environment:demosBaseUrl}">                view on stackblitz
@@ -300,7 +379,7 @@ public toggleMenu(eventArgs) {
 [igxDropDownItemNavigation]({environment:angularApiUrl}/classes/igxdropdownitemnavigationdirective.html) ディレクティブ値は、ターゲット コンポーネントまたは拡張 [IgxDropDownBase]({environment:angularApiUrl}/classes/igxdropdownbase.html) クラスにする必要があります。
 
 
-以下のサンプルは、クリックによって igxDropDown インスタンスを開いたり閉じたりする例です。入力に [igxDropDownItemNavigation]({environment:angularApiUrl}/classes/igxdropdownitemnavigationdirective.html) を適用し、上矢印と下矢印の使用時にキーボード ナビゲーションを有効にします。[allowItemsFocus]({environment:angularApiUrl}/classes/igxcombodropdowncomponent.html#allowitemsfocus) が無効のデフォルトのドロップダウン動作に依存し、ボタン入力にフォーカスを維持することが可能です。
+以下のサンプルは、クリックによって igxDropDown インスタンスを開いたり閉じたりする例です。入力に [igxDropDownItemNavigation]({environment:angularApiUrl}/classes/igxdropdownitemnavigationdirective.html) を適用し、上矢印と下矢印の使用時にキーボード ナビゲーションを有効にします。[allowItemsFocus]({environment:angularApiUrl}/classes/igxdropdowncomponent.html#allowitemsfocus) が無効のデフォルトのドロップダウン動作に依存し、ボタン入力にフォーカスを維持することが可能です。
 
 
 ```html
@@ -361,7 +440,7 @@ public toggleMenu(eventArgs) {
 ```
 
 <div class="sample-container" style="height:220px">
-    <iframe id="dropdown-sample-4-iframe" src='{environment:demosBaseUrl}/dropdown-sample-4' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="dropdown-sample-4-iframe" src='{environment:demosBaseUrl}/data-entries/dropdown-sample-4' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dropdown-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
@@ -383,7 +462,7 @@ public toggleMenu(eventArgs) {
 
 
 
-[allowItemsFocus]({environment:angularApiUrl}/classes/igxcombodropdowncomponent.html#allowitemsfocus) が有効な場合、ドロップダウン項目がタブ インデックスを取得し、アクティブな時にフォーカスされます。フォーカスされたドロップダウン項目がキーボード ナビゲーション時にイベントをトリガーするため、 [igxDropDownItemNavigation]({environment:angularApiUrl}/classes/igxdropdownitemnavigationdirective.html) を各ドロップダウン項目に適用する必要があります。
+[allowItemsFocus]({environment:angularApiUrl}/classes/igxdropdowncomponent.html#allowitemsfocus) が有効な場合、ドロップダウン項目がタブ インデックスを取得し、アクティブな時にフォーカスされます。フォーカスされたドロップダウン項目がキーボード ナビゲーション時にイベントをトリガーするため、 [igxDropDownItemNavigation]({environment:angularApiUrl}/classes/igxdropdownitemnavigationdirective.html) を各ドロップダウン項目に適用する必要があります。
 
 ```
 <igx-input-group [igxToggleAction]="dropDown">
@@ -400,11 +479,11 @@ public toggleMenu(eventArgs) {
 
 ### API まとめ
 
-**igx-drop-down** コンポーネント [**API 参照**]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) と
-[**テーマの参照**]({environment:sassApiUrl}/index.html#mixin-igx-drop-down)
-
-**igx-drop-down-item** コンポーネント [**API 参照**]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html)
-### その他のリソース
+* [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) 
+* [IgxDropDownComponent Styles]({environment:sassApiUrl}/index.html#mixin-igx-drop-down)
+* [IgxDropDownItemComponent]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html).
+* [IgxOverlay]({environment:angularApiUrl}/interfaces/overlaysettings.html)
+* [IgxOverlay Styles]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。

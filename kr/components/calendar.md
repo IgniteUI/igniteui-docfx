@@ -9,8 +9,8 @@ _language: kr
 <p class="highlight">The Ignite UI for Angular Calendar component is developed as a native [Angular component](https://angular.io/guide/architecture#components). Use it to provide your application with three easy and intuitive ways to display date information. Users can select a single date, multiple dates or pick a range of dates.</p>
 
 ### Calendar Demo
-<div class="sample-container loading" style="height: 590px">
-    <iframe id="calendar-sample-5-iframe" src='{environment:demosBaseUrl}/calendar-sample-5' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 730px">
+    <iframe id="calendar-sample-5-iframe" src='{environment:demosBaseUrl}/scheduling/calendar-sample-5' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="calendar-sample-5-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
@@ -56,8 +56,8 @@ Instantiating the [`IgxCalendarComponent`]({environment:angularApiUrl}/classes/i
 <igx-calendar selection="range"></igx-calendar>
 ```
 Notice that the calendar header is not rendered when the selection is either `multi` or `range`:
-<div class="sample-container" style="height: 590px">
-    <iframe id="calendar-sample-1-iframe" src='{environment:demosBaseUrl}/calendar-sample-1' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container" style="height: 730px">
+    <iframe id="calendar-sample-1-iframe" src='{environment:demosBaseUrl}/scheduling/calendar-sample-1' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="calendar-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
@@ -108,7 +108,7 @@ public changeLocale(event) {
 Great, we should now have a calendar with customized dates display that also changes the locale representation based on the user location. Let's have a look at it:
 
 <div class="sample-container" style="height: 570px">
-    <iframe id="calendar-sample-2-iframe" src='{environment:demosBaseUrl}/calendar-sample-2' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="calendar-sample-2-iframe" src='{environment:demosBaseUrl}/scheduling/calendar-sample-2' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="calendar-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
@@ -141,7 +141,7 @@ public verifyRange(dates: Date[]) {
 
 Let's try this out by playing around with selecting ranges:
 <div class="sample-container" style="height: 460px">
-    <iframe id="calendar-sample-3-iframe" src='{environment:demosBaseUrl}/calendar-sample-3' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="calendar-sample-3-iframe" src='{environment:demosBaseUrl}/scheduling/calendar-sample-3' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="calendar-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
@@ -223,7 +223,7 @@ public getDatePart(val: any, component: any, datePart: string) {
 Having implemented this conditional templating and date parsing we should get consistent formatting across all browsers, let's verify that:
 
 <div class="sample-container" style="height: 570px">
-    <iframe id="calendar-sample-4-iframe" src='{environment:demosBaseUrl}/calendar-sample-4' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="calendar-sample-4-iframe" src='{environment:demosBaseUrl}/scheduling/calendar-sample-4' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="calendar-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
@@ -265,7 +265,7 @@ export class CalendarSample6Component {
 This is the result.
 
 <div class="sample-container" style="height: 480px">
-    <iframe id="calendar-sample-6-iframe" src='{environment:demosBaseUrl}/calendar-sample-6' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="calendar-sample-6-iframe" src='{environment:demosBaseUrl}/scheduling/calendar-sample-6' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="calendar-sample-6-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
@@ -276,7 +276,7 @@ This is the result.
 
 [`Special dates`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#specialdates) feature is using almost the same configuration principles as [`Disabled dates`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#disableddates). The difference here is dates `styling` and `interaction`. You are able to select and focus [`Special dates`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#specialdates).
 
-Lets add a [`Special dates`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#specialdates) to our [`igxCalendar`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html), we are going to create a [`DateRangeDescriptor`]({environment:angularApiUrl}/interfaces/daterangedescriptor.html) item of type [`DateRangeType.Specific`]({environment:angularApiUrl}/enums/daterangetype.html#specific) and pass array of dates as [`dateRange`]({environment:angularApiUrl}/classes/daterangedescriptor.html#daterange):
+Lets add a [`Special dates`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#specialdates) to our [`igxCalendar`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html), we are going to create a [`DateRangeDescriptor`]({environment:angularApiUrl}/interfaces/daterangedescriptor.html) item of type [`DateRangeType.Specific`]({environment:angularApiUrl}/enums/daterangetype.html#specific) and pass array of dates as [`dateRange`]({environment:angularApiUrl}/interfaces/daterangedescriptor.html#daterange):
 
 ```typescript
 export class CalendarSample7Component {
@@ -318,7 +318,7 @@ We are going to use the selected dates array to define `Special dates` descripto
 Result:
 
 <div class="sample-container" style="height: 540px">
-    <iframe id="calendar-sample-7-iframe" src='{environment:demosBaseUrl}/calendar-sample-7' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="calendar-sample-7-iframe" src='{environment:demosBaseUrl}/scheduling/calendar-sample-7' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="calendar-sample-7-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>

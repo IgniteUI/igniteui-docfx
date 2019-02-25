@@ -13,7 +13,7 @@ _language: ja
 ### Carousel デモ
 
 <div class="sample-container" style="height: 620px">
-    <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/carousel"></iframe>
+    <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/layouts/carousel"></iframe>
 </div>
 
 ### 使用方法
@@ -51,7 +51,7 @@ export class AppModule {}
 このコードはカルーセルをページでインスタンス化します。
 
 <div class="sample-container" style="height: 230px">
-    <iframe id="carousel-sample-1-iframe" src='{environment:demosBaseUrl}/carousel-sample-1' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="carousel-sample-1-iframe" src='{environment:demosBaseUrl}/layouts/carousel-sample-1' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="carousel-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">                StackBlitz で表示
@@ -111,7 +111,7 @@ a > igx-icon > span{
 
 スタイルの適用後、矢印が強調表示され、コンテンツが中央揃えになります。
 <div class="sample-container" style="height: 600px">
-<iframe id="carousel-sample-2-iframe" src='{environment:demosBaseUrl}/carousel-sample-2' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<iframe id="carousel-sample-2-iframe" src='{environment:demosBaseUrl}/layouts/carousel-sample-2' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="carousel-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">                StackBlitz で表示
@@ -207,7 +207,7 @@ ul.igx-carousel__indicators {
 すべての手順を実行すると、ナビゲーション矢印を使用してユーザーが管理するカルーセルになります。リニア バーが進行状況のインジケーターになります。
 
 <div class="sample-container" style="height: 550px">
-    <iframe id="carousel-sample-3-iframe" src='{environment:demosBaseUrl}/carousel-sample-3' width="100%" height="100%" seamless frameBorder="0"  onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="carousel-sample-3-iframe" src='{environment:demosBaseUrl}/layouts/carousel-sample-3' width="100%" height="100%" seamless frameBorder="0"  onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="carousel-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">                StackBlitz で表示
@@ -247,7 +247,7 @@ ul.igx-carousel__indicators {
 これを構成した後、ルーターが URL を指定した **/details:index** ルート パスと一致させ、相対するページを表示します。
 
 <div class="sample-container" style="height: 620px">
-    <iframe src='{environment:demosBaseUrl}/carousel-sample-4' width="100%" height="100%" seamless frameBorder="0"></iframe>
+    <iframe src='{environment:demosBaseUrl}/layouts/carousel-sample-4' width="100%" height="100%" seamless frameBorder="0"></iframe>
 </div>
 
 ###API

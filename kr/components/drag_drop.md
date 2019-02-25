@@ -13,7 +13,7 @@ _language: kr
 Drag and drop the tiles to solve the puzzle.
 
 <div class="sample-container loading" style="height:325px">
-    <iframe id="drag-drop-sample-iframe" src='{environment:demosBaseUrl}/drag-drop-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="drag-drop-sample-iframe" src='{environment:demosBaseUrl}/interactions/drag-drop-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>

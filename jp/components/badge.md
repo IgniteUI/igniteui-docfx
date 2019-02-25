@@ -13,7 +13,7 @@ _language: ja
 ### Badge デモ
 
 <div class="sample-container loading" style="height:280px">
-    <iframe id="badge-sample-iframe" src='{environment:demosBaseUrl}/badge-sample-3' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="badge-sample-iframe" src='{environment:demosBaseUrl}/data-display/badge-sample-3' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="badge-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
@@ -127,7 +127,7 @@ class Member {
 サンプルを正しく構成すると、メンバー名および状態を含むリストが表示されます。
 
 <div class="sample-container" style="height: 280px">
-    <iframe id="badge-sample-1-iframe" src='{environment:demosBaseUrl}/badge-sample-1' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="badge-sample-1-iframe" src='{environment:demosBaseUrl}/data-display/badge-sample-1' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="badge-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">                StackBlitz で表示
@@ -160,7 +160,7 @@ class Member {
 ```
 
 <div class="sample-container" style="height: 280px">
-<iframe id="badge-sample-2-iframe" src='{environment:demosBaseUrl}/badge-sample-2' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<iframe id="badge-sample-2-iframe" src='{environment:demosBaseUrl}/data-display/badge-sample-2' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="badge-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">                StackBlitz で表示
@@ -213,7 +213,7 @@ class Member {
 サンプルを正しく構成すると、メンバーのリストが表示され、各メンバーにアバターとその状態を示すバッジがあります。
 
 <div class="sample-container" style="height: 280px">
-    <iframe id="badge-sample-3-iframe" src='{environment:demosBaseUrl}/badge-sample-3' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="badge-sample-3-iframe" src='{environment:demosBaseUrl}/data-display/badge-sample-3' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="badge-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">                StackBlitz で表示

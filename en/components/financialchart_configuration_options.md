@@ -1,16 +1,17 @@
 ---
 title: Financial Chart - Configuration Options
 _description: The Ignite UI for Angular Financial Chart component is easily configured to display financial data using a simple and intuitive API, as once the user binds the data, the chart offers multiple ways in which the data can then be visualized and interpreted.
-_keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Chart Control, Angular Chart Example, Angular Grid Component, Angular Chart Component, Angular Financial Chart
+_keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Chart Control, Angular Chart Example, Angular Chart Component, Angular Financial Chart
 ---
+
 ## Configuration Options
 
-The `igx-financial-chart` control provides many visuals that can be customized, such as the navigation behavior, trendline layers, overlays, legend, chart titles and subtitles.
+The `IgxFinancialChart` control provides many visuals that can be customized, such as the navigation behavior, trendline layers, overlays, legend, chart titles and subtitles.
 
 ### Demo
 
 <div class="sample-container" style="height: 500px">
-    <iframe id="financial-chart-trendlines-iframe" src='{environment:demosBaseUrl}/financial-chart-trendlines' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="financial-chart-trendlines-iframe" src='{environment:demosBaseUrl}/charts/financial-chart-trendlines' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="financial-chart-trendlines-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
@@ -20,12 +21,13 @@ The `igx-financial-chart` control provides many visuals that can be customized, 
 <div class="divider--half"></div>
 
 ### Configuring Navigation
-In the `igx-financial-chart` control, chart navigation is enabled by default. However, you can customize it by setting the following properties:
 
-- `isHorizontalZoomEnabled` - This specifies if the chart can be horizontally zoomed through user interactions. By default, this property is set to true.
-- `isVerticalZoomEnabled` - This specifies if the chart can be vertically zoomed through user interactions. By default, this property is set to false.
-- `isWindowSyncedToVisibleRange` - If set to true the Y-Axis will automatically resize to the visible data range. By default, this property is set to false.
-- `windowRect` - This is used to retrieve or specify the scroll and zoom state in the igxFinancialChart. The `windowRect` is expressed as a Rectangle with coordinates and sizes between 0 and 1.
+In the `IgxFinancialChart` control, chart navigation is enabled by default. However, you can customize it by setting the following properties:
+
+-   `isHorizontalZoomEnabled` - This specifies if the chart can be horizontally zoomed through user interactions. By default, this property is set to true.
+-   `isVerticalZoomEnabled` - This specifies if the chart can be vertically zoomed through user interactions. By default, this property is set to false.
+-   `isWindowSyncedToVisibleRange` - If set to true the Y-Axis will automatically resize to the visible data range. By default, this property is set to false.
+-   `windowRect` - This is used to retrieve or specify the scroll and zoom state in the igxFinancialChart. The `windowRect` is expressed as a Rectangle with coordinates and sizes between 0 and 1.
 
 ```html
  <igx-financial-chart
@@ -38,6 +40,7 @@ In the `igx-financial-chart` control, chart navigation is enabled by default. Ho
 ```
 
 ### Configuring Price Pane
+
 The price pane is always displayed in the Financial Chart and you can configure it by changing chart type and customizing appearance of its visuals. The following code demonstrates how to set the brushes and thickness of series in the price pane.
 
 ```html
@@ -55,6 +58,7 @@ The price pane is always displayed in the Financial Chart and you can configure 
 ```
 
 ### Configuring Overlays
+
 By default overlays are not displayed on the igxFinancialChart. There are two types of overlays - `BollingerBands` and `PriceChannel`. You can also customize the default settings of the overlays. The following code demonstrates how to set the color, overlay outlines and thickness.
 
 ```html
@@ -70,6 +74,7 @@ By default overlays are not displayed on the igxFinancialChart. There are two ty
 ```
 
 ### Configuring Indicators
+
 By default the indicator panes are not displayed in the Financial Chart. The toolbar allows the end user to select which indicator to display at run time. In order to display the pane, an indicator type must be set, as demonstrated in the following code:
 
 ```html
@@ -86,6 +91,7 @@ By default the indicator panes are not displayed in the Financial Chart. The too
 ```
 
 ### Configuring Volume Pane
+
 By default volume pane is not displayed in the Financial Chart. However, you can enable this pane at runtime using chart toolbar or in programmatically as it is demonstrated in the following code:
 
 ```html
@@ -101,6 +107,7 @@ By default volume pane is not displayed in the Financial Chart. However, you can
 ```
 
 ### Configuring Trendlines
+
 By default trendlines are not displayed on the igxFinancialChart. When a trendline is displayed, it is the same trendline displayed on all chart panes. You can also customize the default settings of the trendline.
 
 The following code demonstrates how to set the color and thickness of the trendline.
@@ -117,6 +124,7 @@ The following code demonstrates how to set the color and thickness of the trendl
 ```
 
 ### Configuring Titles
+
 You can set title and subtitle that will be displayed between chart's toolbar and the price pane of the Financial Chart. The following code demonstrates how to set the title and subtitle.
 
 ```html
@@ -130,6 +138,7 @@ You can set title and subtitle that will be displayed between chart's toolbar an
 ```
 
 ### Configuring Legend
+
 The legend is not displayed be default. The following code demonstrates how to enable the legend.
 
 ```html

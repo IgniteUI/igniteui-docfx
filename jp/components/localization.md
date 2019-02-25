@@ -2,6 +2,7 @@
 title: ローカライズ - ネイティブ Angular | Ignite UI for Angular
 _description: Ignite UI for Angular ローカライゼーション メカニズムはコンポーネントの文字列をローカライズ/変更する機能をサポートします。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ、ネイティブ Angular コンポーネント
+_language: ja
 ---
 
 ## ローカライズ
@@ -35,7 +36,7 @@ for (const key of Object.keys(currentRS)) {
 changei18n(currentRS);
 ```
 <div>
-<button data-localize="stackblitz" class="stackblitz-btn" date-sample-src="{environment:demosBaseUrl}/localization-sample-2"
+<button data-localize="stackblitz" class="stackblitz-btn" data-sample-src="{environment:demosBaseUrl}/services/localization-sample-2"
     data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示
 </button>
 </div>
@@ -51,7 +52,7 @@ currentRS.igx_grid_filter_row_close = '[Localized]Close';
 ```
 
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" date-sample-src="{environment:demosBaseUrl}/localization-sample-3" 
+    <button data-localize="stackblitz" class="stackblitz-btn" data-sample-src="{environment:demosBaseUrl}/services/localization-sample-3" 
         data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示
     </button>
 </div>
@@ -73,7 +74,7 @@ this.grid.resourceStrings = newGridRes;
 <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="localization-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
 </div>
 
-### npm パッケージからローカライズしたリソースを読み込みます。
+### ローカライズされたリソースを npm パッケージから読み込む
 
 最初にリソース文字列を含むパッケージをインストールします。
 

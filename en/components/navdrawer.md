@@ -10,7 +10,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ### Navigation Drawer Demo
 <div class="sample-container loading" style="height: 600px">
-    <iframe id="nav-drawer-sample-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/navigation-drawer" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="nav-drawer-sample-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/menus/navigation-drawer" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="nav-drawer-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
@@ -98,7 +98,7 @@ Let's replace the `<main>` in **app.component.html** with the following, adding 
 
 And the final result should look like this:
 <div class="sample-container loading" style="height: 500px">
-    <iframe id="nav-drawer-simple-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/navigation-drawer-simple" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="nav-drawer-simple-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/menus/navigation-drawer-simple" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="nav-drawer-simple-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
@@ -137,7 +137,7 @@ Here's how that would would look applied to the previous example:
 ```
 
 <div class="sample-container loading" style="height: 500px">
-    <iframe id="nav-drawer-pin-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/navigation-drawer-pin" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="nav-drawer-pin-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/menus/navigation-drawer-pin" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="nav-drawer-pin-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
@@ -186,7 +186,7 @@ The mini variant is commonly used in a persistent setup, so we've set `pin` and 
 ```
 
 <div class="sample-container loading" style="height: 400px">
-    <iframe id="nav-drawer-mini-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/navigation-drawer-mini" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="nav-drawer-mini-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/menus/navigation-drawer-mini" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="nav-drawer-mini-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>

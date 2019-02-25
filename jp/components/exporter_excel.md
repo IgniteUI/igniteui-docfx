@@ -8,13 +8,13 @@ _language: ja
 ## Excel Exporter
 
 <p class="highlight">
-Ignite UI for Angular Excel Exporter サービスは、Microsoft® Excel® 形式で生データ (配列) または [**IgxGrid**](grid.md) のデータをエクスポートできます。エクスポート機能は、[`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html) クラスでカプセル化され、MS Excel テーブル形式でデータをエクスポートします。この形式では、フィルタリングや並べ替えなどの機能が使用できます。</p>
+Ignite UI for Angular Excel Exporter サービスは、Microsoft® Excel® 形式で生データ (配列) または [**IgxGrid**](grid/grid.md) のデータをエクスポートできます。エクスポート機能は、[`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html) クラスでカプセル化され、MS Excel テーブル形式でデータをエクスポートします。この形式では、フィルタリングや並べ替えなどの機能が使用できます。</p>
 <div class="divider"></div>
 
 ### Excel Exporter デモ
 
 <div class="sample-container loading" style="height: 100px;">
-    <iframe id="excel-export-sample-iframe" src="{environment:demosBaseUrl}/export-excel"
+    <iframe id="excel-export-sample-iframe" src="{environment:demosBaseUrl}/services/export-excel"
         width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -79,7 +79,7 @@ public exportButtonHandler() {
 
 ### IgxGrid データのエクスポート
 
-Excel Exporter サービスでも [**IgxGrid**](grid.md) からのデータを MS Excel 形式でエクスポートできますが、[`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html) の [`export`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html#export) メソッドを呼び出し、[**IgxGrid**](grid.md) を最初の引数として渡す必要があります。
+Excel Exporter サービスでも [**IgxGrid**](grid/grid.md) からのデータを MS Excel 形式でエクスポートできますが、[`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html) の [`export`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html#export) メソッドを呼び出し、[**IgxGrid**](grid/grid.md) を最初の引数として渡す必要があります。
 
 以下はその例です。
 
@@ -114,7 +114,7 @@ public exportButtonHandler() {
 ```
 
 <div class="sample-container loading" style="height: 300px;">
-    <iframe id="excel-export-sample-iframe2" src="{environment:demosBaseUrl}/export-excel-sample-1"
+    <iframe id="excel-export-sample-iframe2" src="{environment:demosBaseUrl}/services/export-excel-sample-1"
         width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -141,7 +141,7 @@ this.excelExportService.onColumnExport.subscribe((args: IColumnExportingEventArg
 this.excelExportService.export(this.igxGrid1, new IgxExcelExporterOptions("ExportedDataFile"));
 ```
 
-[**IgxGrid**](grid.md) からのデータのエクスポートで、エクスポート処理は行フィルタリングおよび列の非表示などの機能に応じてグリッドで表示されるデータのみをエクスポートします。[`IgxExcelExporterOptions`]({environment:angularApiUrl}/classes/igxexcelexporteroptions.html) オブジェクトのプロパティを設定し、エクスポーター サービスを構成してフィルターした行または非表示の列を含むことができます。このプロパティは以下の表で説明します。
+[**IgxGrid**](grid/grid.md) からのデータのエクスポートで、エクスポート処理は行フィルタリングおよび列の非表示などの機能に応じてグリッドで表示されるデータのみをエクスポートします。[`IgxExcelExporterOptions`]({environment:angularApiUrl}/classes/igxexcelexporteroptions.html) オブジェクトのプロパティを設定し、エクスポーター サービスを構成してフィルターした行または非表示の列を含むことができます。このプロパティは以下の表で説明します。
 
 ### API まとめ
 

@@ -12,7 +12,7 @@ The [`IgxExpansionPanel`]({environment:angularApiUrl}/classes/igxexpansionpanelc
 
 ### Expansion Panel Demo
 <div class="sample-container loading" style="height: 400px;">
-    <iframe id="expansion-sample-1-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/expansion-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="expansion-sample-1-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/layouts/expansion-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="expansion-sample-1-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
@@ -21,7 +21,7 @@ The [`IgxExpansionPanel`]({environment:angularApiUrl}/classes/igxexpansionpanelc
 
 ## Usage
 ### Getting Started
-To use the [`IgxExpansionPanelComponent`]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html) we need to import the [**IgxExpansionPanelModule**]({environment:angularApiUrl}/classes/igxexpansionpanelmodule.html) in our **app.module**: 
+To use the [`IgxExpansionPanelComponent`]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html) we need to import the **IgxExpansionPanelModule** in our **app.module**:
 ```typescript
 // app.module.ts
 
@@ -90,9 +90,9 @@ The [`IgxExpansionPanelComponent`]({environment:angularApiUrl}/classes/igxexpans
 
 The css classes `.igx-expansion-panel__header` and `.igx-expansion-panel__body` are also exposed for styling the header and body.
 
-You can see the results below: 
+You can see the results below:
 <div class="sample-container loading" style="height: 400px;">
-    <iframe id="expansion-sample-1-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/expansion-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="expansion-sample-1-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/layouts/expansion-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="expansion-sample-1-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
@@ -147,7 +147,7 @@ export class ExpansionPanelComponent {
 
 Below we have the results:
 <div class="sample-container loading" style="height: 400px;">
-    <iframe id="expansion-sample-2-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/expansion-sample-2" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="expansion-sample-2-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/layouts/expansion-sample-2" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="expansion-sample-2-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
@@ -169,13 +169,13 @@ Configuring the position of the header icon can be done through the [`iconPositi
 ```
 > Note: The [`iconPosition`]({environment:angularApiUrl}/classes/igxexpansionpanelheadercomponent.html#iconposition) property works with `RTL` - e.g. an icon set to show up in **right** will show in the leftmost part of the header when RTL is on.
 
-We can also override the default icon that is used in the control by passing content in an [`igx-expansion-panel-icon`]({environment:angularApiUrl}/classes/igxexpansionpanelicondirective.html) tag:
+We can also override the default icon that is used in the control by passing content in an `igx-expansion-panel-icon` tag:
 ```html
 <!-- in expansion-component.component.html -->
     <igx-expansion-panel>
     ...
         <igx-expansion-panel-header [iconPosition]="'right'">
-        ... 
+        ...
             <igx-expansion-panel-icon>
                 <span class="example-icon" *ngIf="panel.collapsed">Show more</span>
                 <span class="example-icon" *ngIf="!panel.collapsed">Collapse</span>
@@ -240,13 +240,13 @@ export class ExpansionPanelComponent {
 ### Summary
 After applying all of the changes to our initial component, here is the final result:
 <div class="sample-container loading" style="height: 500px;">
-    <iframe id="expansion-sample-3-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/expansion-sample-3" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="expansion-sample-3-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/layouts/expansion-sample-3" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="expansion-sample-3-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-The `IgxExpansionPanel` control allows all sort of content to be added inside of the `igx-expansion-panel-body`. It can render [`IgxGrid`]({environment:angularApiUrl}/classes/igxcombocomponent.html)s, [`IgxCombo`]({environment:angularApiUrl}/classes/igxcombocomponent.html), charts and even other expansion panels!
+The `IgxExpansionPanel` control allows all sort of content to be added inside of the `igx-expansion-panel-body`. It can render [`IgxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html)s, [`IgxCombo`]({environment:angularApiUrl}/classes/igxcombocomponent.html), charts and even other expansion panels!
 
 ## Using Animations
 ### Using specific animation
@@ -335,16 +335,16 @@ The sample shows some user information and the key point here is passing the ani
 ...
 ```
 
-You can see the results below: 
+You can see the results below:
 <div class="sample-container loading" style="height: 350px;">
-    <iframe id="expansion-sample-6-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/expansion-sample-6" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="expansion-sample-6-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/layouts/expansion-sample-6" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="expansion-sample-6-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
 ### Multiple panel scenario
-In the following example we are going to implement more like app case scenario, where you want to follow a particular workflow showing and requiring more user details on portions. In this sample the default [`growVerIn`]({environment:sassApiUrl}/index.html#mixin-grow-ver-in) and [`growVerOut`]({environment:sassApiUrl}/index.html#mixin-grow-ver-out) animations from our inbuilt animations suite are used thus there is no need to pass any specific animation settings or import animations. Notice how we do not allow more than one `igxExpansionPanel` to be expanded at a time, handling the [`onInteraction`]({environment:angularApiUrl}/classes/igxexpansionpanelheadercomponent.html#oninteraction)  event.
+In the following example we are going to implement more like app case scenario, where you want to follow a particular workflow showing and requiring more user details on portions. In this sample the default `growVerIn` and `growVerOut` animations from our inbuilt animations suite are used thus there is no need to pass any specific animation settings or import animations. Notice how we do not allow more than one `igxExpansionPanel` to be expanded at a time, handling the [`onInteraction`]({environment:angularApiUrl}/classes/igxexpansionpanelheadercomponent.html#oninteraction)  event.
 
 ```typescript
 // in expansion-panel.component.ts
@@ -512,9 +512,9 @@ export class ExpansionPanelComponent {
 </igx-expansion-panel>
 ...
 ```
-You can see the results below: 
+You can see the results below:
 <div class="sample-container loading" style="height: 550px;">
-    <iframe id="expansion-sample-5-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/expansion-sample-5" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="expansion-sample-5-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/layouts/expansion-sample-5" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="expansion-sample-5-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
@@ -614,9 +614,9 @@ export const data = {
 
 ```
 
-You can see the results below: 
+You can see the results below:
 <div class="sample-container loading" style="height: 600px;">
-    <iframe id="expansion-sample-7-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/expansion-sample-7" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="expansion-sample-7-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/layouts/expansion-sample-7" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="expansion-sample-7-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>

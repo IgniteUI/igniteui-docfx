@@ -10,8 +10,8 @@ _language: ja
 Ignite UI for Angular Input Group は、簡単に使用できるデータ入力フォームを作成できます。データ入力を簡素化し、入力コントロールには検証やエラーの処理機能も提供します。
 
 ### Input Group デモ
-<div class="sample-container" style="height:750px">
-<iframe id="input-group-sample-6-frame" src='{environment:demosBaseUrl}/input-group-sample-6' width="100%" height="100%" seamless frameBorder="0"></iframe>
+<div class="sample-container" style="height:800px">
+<iframe id="input-group-sample-6-frame" src='{environment:demosBaseUrl}/data-entries/input-group-sample-6' width="100%" height="100%" seamless frameBorder="0"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="input-group-sample-6-frame" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
@@ -61,7 +61,7 @@ Ignite UI for Angular Prefix または Suffix を使用して入力のプレフ�
 結果は以下のようになります。
 
 <div class="sample-container" style="height:100px">
-<iframe id="input-group-sample-3-frame" src='{environment:demosBaseUrl}/input-group-sample-3' width="100%" height="100%" seamless frameBorder="0"></iframe>
+<iframe id="input-group-sample-3-frame" src='{environment:demosBaseUrl}/data-entries/input-group-sample-3' width="100%" height="100%" seamless frameBorder="0"></iframe>
 </div>
 <div class="divider--half"></div>
 
@@ -83,7 +83,7 @@ Ignite UI for Angular Hint は、入力の下に配置されるヘルパー テ�
 ヒントを追加した phone フィールドは以下のようになります。
 
 <div class="sample-container" style="height:110px">
-<iframe id="input-group-sample-4-frame" src='{environment:demosBaseUrl}/input-group-sample-4' width="100%" height="100%" seamless frameBorder="0"></iframe>
+<iframe id="input-group-sample-4-frame" src='{environment:demosBaseUrl}/data-entries/input-group-sample-4' width="100%" height="100%" seamless frameBorder="0"></iframe>
 </div>
 <div class="divider--half"></div>
 
@@ -91,7 +91,7 @@ Ignite UI for Angular Hint は、入力の下に配置されるヘルパー テ�
 入力にスタイルを適用するには、[`igxInputGroup`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) コンポーネントの [`type`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html#type) プロパティを使用します。現在 line (デフォルト)、box、border、および search のスタイル設定をサポートします。スタイル設定の結果:
 
 <div class="sample-container" style="height:520px">
-<iframe id="input-group-sample-5-frame" src='{environment:demosBaseUrl}/input-group-sample-5' width="100%" height="100%" seamless frameBorder="0"></iframe>
+<iframe id="input-group-sample-5-frame" src='{environment:demosBaseUrl}/data-entries/input-group-sample-5' width="100%" height="100%" seamless frameBorder="0"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="input-group-sample-5-frame" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>

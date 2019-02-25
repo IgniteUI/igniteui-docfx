@@ -16,7 +16,7 @@ _language: ja
 ### Bottom Navigation デモ
 
 <div class="sample-container loading" style="height: 600px; width: 400px; border: 1px solid gray;">
-    <iframe id="tabbar-sample-iframe" src='{environment:demosBaseUrl}/tabbar' width="100%" height="100%" seamless
+    <iframe id="tabbar-sample-iframe" src='{environment:demosBaseUrl}/layouts/tabbar' width="100%" height="100%" seamless
         frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -57,7 +57,7 @@ export class AppModule {}
 以下は結果です:
 
 <div class="sample-container loading" style="height: 200px; width: 300px; border: 1px solid gray;">
-    <iframe id="tabbar-sample-1-iframe" src='{environment:demosBaseUrl}/tabbar-sample-1' width="100%" height="100%" seamless
+    <iframe id="tabbar-sample-1-iframe" src='{environment:demosBaseUrl}/layouts/tabbar-sample-1' width="100%" height="100%" seamless
         frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -158,7 +158,7 @@ public booksList: object[] = [
 Bottom Navigation は以下のようになります。
 
 <div class="sample-container loading" style="height: 350px; width: 300px; border: 1px solid gray;">
-    <iframe id="tabbar-sample-2-iframe" src='{environment:demosBaseUrl}/tabbar-sample-2' width="100%" height="100%" seamless
+    <iframe id="tabbar-sample-2-iframe" src='{environment:demosBaseUrl}/layouts/tabbar-sample-2' width="100%" height="100%" seamless
         frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
