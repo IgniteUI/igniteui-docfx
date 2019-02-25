@@ -183,9 +183,10 @@
     - name: 選択
       href: hierarchicalGrid/selection.md
       new: true
-    - name: 検索
-      href: hierarchicalGrid/search.md
-      new: true
+      # Not yet fully implemented for igxHGrid
+    # - name: 検索
+    #   href: hierarchicalGrid/search.md
+    #   new: true
     - name: ツールバー
       href: hierarchicalGrid/toolbar.md
       new: true

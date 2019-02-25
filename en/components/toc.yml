@@ -183,9 +183,10 @@
     - name: Selection
       href: hierarchicalGrid/selection.md
       new: true
-    - name: Searching
-      href: hierarchicalGrid/search.md
-      new: true
+    # Not yet fully implemented for igxHGrid
+    # - name: Searching
+    #   href: hierarchicalGrid/search.md
+    #   new: true
     - name: Toolbar
       href: hierarchicalGrid/toolbar.md
       new: true

@@ -183,9 +183,10 @@
     - name: 행 선택
       href: hierarchicalGrid/selection.md
       new: true
-    - name: 검색
-      href: hierarchicalGrid/search.md
-      new: true
+      # Not yet fully implemented for igxHGrid
+    # - name: 검색
+    #   href: hierarchicalGrid/search.md
+    #   new: true
     - name: 도구 모음
       href: hierarchicalGrid/toolbar.md
       new: true
