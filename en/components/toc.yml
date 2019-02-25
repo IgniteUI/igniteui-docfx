@@ -196,9 +196,9 @@
     - name: Display Density
       href: hierarchicalGrid/display_density.md
       new: true
-    - name: Conditional Cell Styling
-      href: hierarchicalGrid/conditional_cell_styling.md
-      new: true
+    # - name: Conditional Cell Styling
+    #   href: hierarchicalGrid/conditional_cell_styling.md
+    #   new: true
 - name: List View
   href: list.md
 - name: Combo

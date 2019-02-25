@@ -196,9 +196,9 @@
     - name: 表示密度
       href: hierarchicalGrid/display_density.md
       new: true
-    - name: 条件付きセルのスタイル設定
-      href: hierarchicalGrid/conditional_cell_styling.md
-      new: true
+    # - name: 条件付きセルのスタイル設定
+    #   href: hierarchicalGrid/conditional_cell_styling.md
+    #   new: true
 - name: List View
   href: list.md
 - name: Combo
