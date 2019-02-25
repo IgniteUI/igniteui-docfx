@@ -147,6 +147,9 @@
     - name: Virtualization and performance
       href: hierarchicalGrid/virtualization.md
       new: true
+    - name: Load on Demand
+      href: hierarchicalGrid/load_on_demand.md
+      new: true
     - name: Editing
       href: hierarchicalGrid/editing.md
       new: true
