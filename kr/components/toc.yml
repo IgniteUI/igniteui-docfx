@@ -147,6 +147,9 @@
     - name: 가상화 및 성능
       href: hierarchicalGrid/virtualization.md
       new: true
+    - name: Load on Demand
+      href: hierarchicalGrid/load_on_demand.md
+      new: true
     - name: 편집
       href: hierarchicalGrid/editing.md
       new: true
@@ -197,9 +200,6 @@
       new: true
     - name: 조건부 셀 스타일
       href: hierarchicalGrid/conditional_cell_styling.md
-      new: true
-    - name: Load on Demand
-      href: hierarchicalGrid/load_on_demand.md
       new: true
 - name: List View
   href: list.md

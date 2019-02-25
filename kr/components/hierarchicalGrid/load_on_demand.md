@@ -31,7 +31,7 @@ We will be communicating with our backend service over HTTP protocol using XMLHt
 
 
 ```typescript
-public getData(dataState: any): Observable<object> {
+public getData(dataState): Observable<any[]> {
     return this.http.get(this.buildUrl(dataState)).pipe(
         map(response => response['value']),
     );
@@ -46,10 +46,18 @@ Next we will define how we should build our URL for the GET request. This is whe
 
 ![Dragging](../../images/hgrid-database.jpg)
 
- What we need at first is the `key` of our table to determine from where we would get the data for the desired grid, the primary key of the parent row and its unique ID. An example:
+ What we need at first is the `key` of our table to determine from where we would get the data for the desired grid, the primary key of the parent row and its unique ID. We will define all this in an interface called `IDataState`. An example:
 
 ```typescript
-public buildUrl(dataState) {
+export interface IDataState {
+    key: string;
+    parentID: any;
+    parentKey: string;
+    rootLevel: boolean;
+}
+
+//...
+public buildUrl(dataState: IDataState): string {
     let qS = "";
     if (dataState) {
         qS += `${dataState.key}?`;
@@ -64,6 +72,7 @@ public buildUrl(dataState) {
     }
     return `${this.url}${qS}`;
 }
+//...
 ```
 
 #### Result
@@ -77,19 +86,26 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
+export interface IDataState {
+    key: string;
+    parentID: any;
+    parentKey: string;
+    rootLevel: boolean;
+}
+
 @Injectable()
 export class RemoteLoDService {
     url = `https://services.odata.org/V4/Northwind/Northwind.svc/`;
 
     constructor(private http: HttpClient) { }
 
-    public getData(dataState?: any): Observable<object> {
+    public getData(dataState: IDataState): Observable<any[]> {
         return this.http.get(this.buildUrl(dataState)).pipe(
             map((response) => response['value'])
         );
     }
 
-    public buildUrl(dataState) {
+    public buildUrl(dataState: IDataState): string {
         let qS = "";
         if (dataState) {
             qS += `${dataState.key}?`;
@@ -113,7 +129,7 @@ What we will do next, is setup our hierarchical grid and connect it to our remot
 
 #### Template defining
 
-First we will define owr hierarchical grid template with the levels of hierarchy that we expect to have. We know that our root grid [`primaryKey`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html#primarykey) for the customers is their `CustomerID`, for their orders on the first level -  `OrderID` and respectively for order details - `ProductID`. Knowing also each database table and their keys, we can use this information to define our initial template:
+First we will define our hierarchical grid template with the levels of hierarchy that we expect to have. We know that our root grid [`primaryKey`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html#primarykey) for the customers is their `CustomerID`, for their orders on the first level -  `OrderID` and respectively for order details - `ProductID`. Knowing also each database table and their keys, we can use this information to define our initial template:
 
 ```html
 <igx-hierarchical-grid #hGrid [primaryKey]="'CustomerID'" [autoGenerate]="false" [height]="'600px'" [width]="'100%'">

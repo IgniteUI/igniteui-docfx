@@ -147,6 +147,9 @@
     - name: 仮想化とパフォーマンス
       href: hierarchicalGrid/virtualization.md
       new: true
+    - name: Load on Demand
+      href: hierarchicalGrid/load_on_demand.md
+      new: true
     - name: 編集
       href: hierarchicalGrid/editing.md
       new: true
@@ -197,9 +200,6 @@
       new: true
     - name: 条件付きセルのスタイル設定
       href: hierarchicalGrid/conditional_cell_styling.md
-      new: true
-    - name: Load on Demand
-      href: hierarchicalGrid/load_on_demand.md
       new: true
 - name: List View
   href: list.md
