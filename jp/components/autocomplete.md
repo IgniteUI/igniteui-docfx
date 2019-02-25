@@ -1,23 +1,23 @@
----
-title: ƒI[ƒgƒRƒ“ƒvƒŠ[ƒg ƒfƒBƒŒƒNƒeƒBƒu
-_description: igxAutocomplete ƒfƒBƒŒƒNƒeƒBƒu‚ÍAŒó•âƒIƒvƒVƒ‡ƒ“‚Ìƒpƒlƒ‹‚ğ•\¦‚·‚é‚±‚Æ‚É‚æ‚èƒeƒLƒXƒg“ü—Í‚ğŒüã‚·‚é•û–@‚ğ’ñ‹Ÿ‚µ‚Ü‚·B
-_keywords: Ignite UI for Angular, UI ƒRƒ“ƒgƒ[ƒ‹, Angular ƒEƒBƒWƒFƒbƒg, web ƒEƒBƒWƒFƒbƒg, UI ƒEƒBƒWƒFƒbƒg, Angular, ƒlƒCƒeƒBƒu Angular ƒRƒ“ƒ|[ƒlƒ“ƒg ƒXƒC[ƒg, ƒlƒCƒeƒBƒu Angular ƒRƒ“ƒgƒ[ƒ‹, ƒlƒCƒeƒBƒu Angular ƒRƒ“ƒ|[ƒlƒ“ƒg ƒ‰ƒCƒuƒ‰ƒŠ, Angular Autocomplete ƒRƒ“ƒ|[ƒlƒ“ƒg, Angular Autocomplete ƒfƒBƒŒƒNƒeƒBƒu, Angular Autocomplete ƒRƒ“ƒgƒ[ƒ‹
+ï»¿---
+title: ã‚ªãƒ¼ãƒˆã‚³ãƒ³ãƒ—ãƒªãƒ¼ãƒˆ ãƒ‡ã‚£ãƒ¬ã‚¯ãƒ†ã‚£ãƒ–
+_description: igxAutocomplete ãƒ‡ã‚£ãƒ¬ã‚¯ãƒ†ã‚£ãƒ–ã¯ã€å€™è£œã‚ªãƒ—ã‚·ãƒ§ãƒ³ã®ãƒ‘ãƒãƒ«ã‚’è¡¨ç¤ºã™ã‚‹ã“ã¨ã«ã‚ˆã‚Šãƒ†ã‚­ã‚¹ãƒˆå…¥åŠ›ã‚’å‘ä¸Šã™ã‚‹æ–¹æ³•ã‚’æä¾›ã—ã¾ã™ã€‚
+_keywords: Ignite UI for Angular, UI ã‚³ãƒ³ãƒˆãƒ­ãƒ¼ãƒ«, Angular ã‚¦ã‚£ã‚¸ã‚§ãƒƒãƒˆ, web ã‚¦ã‚£ã‚¸ã‚§ãƒƒãƒˆ, UI ã‚¦ã‚£ã‚¸ã‚§ãƒƒãƒˆ, Angular, ãƒã‚¤ãƒ†ã‚£ãƒ– Angular ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆ ã‚¹ã‚¤ãƒ¼ãƒˆ, ãƒã‚¤ãƒ†ã‚£ãƒ– Angular ã‚³ãƒ³ãƒˆãƒ­ãƒ¼ãƒ«, ãƒã‚¤ãƒ†ã‚£ãƒ– Angular ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆ ãƒ©ã‚¤ãƒ–ãƒ©ãƒª, Angular Autocomplete ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆ, Angular Autocomplete ãƒ‡ã‚£ãƒ¬ã‚¯ãƒ†ã‚£ãƒ–, Angular Autocomplete ã‚³ãƒ³ãƒˆãƒ­ãƒ¼ãƒ«
 _language: ja
 ---
 
 ## Autocomplete
 <p class="highlight">
 
-[**igxAutocomplete**]({environment:angularApiUrl}/classes/igxautocompletedirective.html) ƒfƒBƒŒƒNƒeƒBƒu‚Í [igxDropDown]  ({environment:angularApiUrl}/classes/igxdropdowncomponent.html) ‚ÆŒó•âƒIƒvƒVƒ‡ƒ“‚ğ•\¦‚µ‚ÄƒeƒLƒXƒg“ü—Í‚ğŒüã‚·‚é•û–@‚ğ’ñ‹Ÿ‚µ‚Ü‚·BŒó•â‚ÍAƒeƒLƒXƒg“ü—Í‚ÌŠJnA‚Ü‚½‚Í `ã–îˆó/`‰º–îˆó` ƒL[‚ğg—p‚µ‚Ä•\¦‚µ‚Ü‚·B
+[**igxAutocomplete**]({environment:angularApiUrl}/classes/igxautocompletedirective.html) ãƒ‡ã‚£ãƒ¬ã‚¯ãƒ†ã‚£ãƒ–ã¯ [igxDropDown]  ({environment:angularApiUrl}/classes/igxdropdowncomponent.html) ã¨å€™è£œã‚ªãƒ—ã‚·ãƒ§ãƒ³ã‚’è¡¨ç¤ºã—ã¦ãƒ†ã‚­ã‚¹ãƒˆå…¥åŠ›ã‚’å‘ä¸Šã™ã‚‹æ–¹æ³•ã‚’æä¾›ã—ã¾ã™ã€‚å€™è£œã¯ã€ãƒ†ã‚­ã‚¹ãƒˆå…¥åŠ›ã®é–‹å§‹æ™‚ã€ã¾ãŸã¯ `ä¸ŠçŸ¢å°/`ä¸‹çŸ¢å°` ã‚­ãƒ¼ã‚’ä½¿ç”¨ã—ã¦è¡¨ç¤ºã—ã¾ã™ã€‚
 
-ƒfƒtƒHƒ‹ƒg‚ÅÅ‰‚Ì€–Ú‚ªí‚ÉƒnƒCƒ‰ƒCƒg‚³‚êAƒL[‚ğg—p‚µ‚ÄŠÈ’P‚É‘I‘ğ‚Å‚«‚é•û–@‚ğ’ñ‹Ÿ‚µ‚Ü‚·BƒŠƒXƒg‚Ì€–Ú‚ğƒNƒŠƒbƒN‚µ‚Ä‘I‘ğ‚·‚é‚±‚Æ‚à‚Å‚«A“ü—Í’l‚ª©“®“I‚ÉXV‚³‚ê‚Äƒhƒƒbƒvƒ_ƒEƒ“‚ª•Â‚¶‚ç‚ê‚Ü‚·B€–Ú‚ª‘I‘ğ‚³‚ê‚é‚ÆA`onItemSelected` ƒCƒxƒ“ƒg‚ª”­¶‚µ‚Ü‚·BƒCƒxƒ“ƒg‚ªƒLƒƒƒ“ƒZƒ‹‚³‚ê‚é‚Æ€–Ú‚Í‘I‘ğ‚³‚ê‚¸‚Éƒhƒƒbƒvƒ_ƒEƒ“‚à•Â‚¶‚Ü‚¹‚ñB[**igxAutocomplete**]({environment:angularApiUrl}/classes/igxautocompletedirective.html) ƒfƒBƒŒƒNƒeƒBƒu‚Í€–ÚŠÔ‚ğˆÚ“®‚·‚é‚Æ“¯‚É“ü—Í‚ªí‚ÉƒtƒH[ƒJƒX‚³‚ê‚Ü‚·BŒãÒ‚Å‚Í“ü—Í‚ğ‘±s‚Å‚«‚Ü‚·B`ESC` ƒL[‚ªg—p‚µ‚Äƒhƒƒbƒvƒ_ƒEƒ“ ƒŠƒXƒg‚ğ•Â‚¶‚Ü‚·B
+ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆã§æœ€åˆã®é …ç›®ãŒå¸¸ã«ãƒã‚¤ãƒ©ã‚¤ãƒˆã•ã‚Œã€ã‚­ãƒ¼ã‚’ä½¿ç”¨ã—ã¦ç°¡å˜ã«é¸æŠã§ãã‚‹æ–¹æ³•ã‚’æä¾›ã—ã¾ã™ã€‚ãƒªã‚¹ãƒˆã®é …ç›®ã‚’ã‚¯ãƒªãƒƒã‚¯ã—ã¦é¸æŠã™ã‚‹ã“ã¨ã‚‚ã§ãã€å…¥åŠ›å€¤ãŒè‡ªå‹•çš„ã«æ›´æ–°ã•ã‚Œã¦ãƒ‰ãƒ­ãƒƒãƒ—ãƒ€ã‚¦ãƒ³ãŒé–‰ã˜ã‚‰ã‚Œã¾ã™ã€‚é …ç›®ãŒé¸æŠã•ã‚Œã‚‹ã¨ã€`onItemSelected` ã‚¤ãƒ™ãƒ³ãƒˆãŒç™ºç”Ÿã—ã¾ã™ã€‚ã‚¤ãƒ™ãƒ³ãƒˆãŒã‚­ãƒ£ãƒ³ã‚»ãƒ«ã•ã‚Œã‚‹ã¨é …ç›®ã¯é¸æŠã•ã‚Œãšã«ãƒ‰ãƒ­ãƒƒãƒ—ãƒ€ã‚¦ãƒ³ã‚‚é–‰ã˜ã¾ã›ã‚“ã€‚[**igxAutocomplete**]({environment:angularApiUrl}/classes/igxautocompletedirective.html) ãƒ‡ã‚£ãƒ¬ã‚¯ãƒ†ã‚£ãƒ–ã¯é …ç›®é–“ã‚’ç§»å‹•ã™ã‚‹ã¨åŒæ™‚ã«å…¥åŠ›ãŒå¸¸ã«ãƒ•ã‚©ãƒ¼ã‚«ã‚¹ã•ã‚Œã¾ã™ã€‚å¾Œè€…ã§ã¯å…¥åŠ›ã‚’ç¶šè¡Œã§ãã¾ã™ã€‚`ESC` ã‚­ãƒ¼ãŒä½¿ç”¨ã—ã¦ãƒ‰ãƒ­ãƒƒãƒ—ãƒ€ã‚¦ãƒ³ ãƒªã‚¹ãƒˆã‚’é–‰ã˜ã¾ã™ã€‚
 
-[`igx-autocomplete`]({environment:angularApiUrl}/classes/igxautocompletedirective.html) ‚ÍAg—p‰Â”\‚ÈƒIƒvƒVƒ‡ƒ“‚ÌƒvƒƒoƒCƒ_[‚Æ‚µ‚Ä [`igx-drop-down`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) ‚ğg—p‚µ‚Ü‚·B‚Â‚Ü‚èAg—p‰Â”\‚ÈƒOƒ‹[ƒv‰»Aƒeƒ“ƒvƒŒ[ƒgA€–Ú‚ÆƒOƒ‹[ƒv‚Ì–³Œø‰»‚ğŠÜ‚Şƒhƒƒbƒvƒ_ƒEƒ“@ƒRƒ“ƒ|[ƒlƒ“ƒg‚Ì‹@”\‚ªg—p‚³‚ê‚Ü‚·B
+[`igx-autocomplete`]({environment:angularApiUrl}/classes/igxautocompletedirective.html) ã¯ã€ä½¿ç”¨å¯èƒ½ãªã‚ªãƒ—ã‚·ãƒ§ãƒ³ã®ãƒ—ãƒ­ãƒã‚¤ãƒ€ãƒ¼ã¨ã—ã¦ [`igx-drop-down`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) ã‚’ä½¿ç”¨ã—ã¾ã™ã€‚ã¤ã¾ã‚Šã€ä½¿ç”¨å¯èƒ½ãªã‚°ãƒ«ãƒ¼ãƒ—åŒ–ã€ãƒ†ãƒ³ãƒ—ãƒ¬ãƒ¼ãƒˆã€é …ç›®ã¨ã‚°ãƒ«ãƒ¼ãƒ—ã®ç„¡åŠ¹åŒ–ã‚’å«ã‚€ãƒ‰ãƒ­ãƒƒãƒ—ãƒ€ã‚¦ãƒ³ã€€ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆã®æ©Ÿèƒ½ãŒä½¿ç”¨ã•ã‚Œã¾ã™ã€‚
 </p>
 <div class="divider"></div>
 
-### ƒfƒ‚
-ˆÈ‰º‚ÌƒTƒ“ƒvƒ‹‚ÍA`igx-input` ‚É“K—p‚³‚ê‚é `igx-autocomplete` ƒfƒBƒŒƒNƒeƒBƒu‚ÌŠÈ’P‚Èg—p•û–@‚ğ¦‚µ‚Ü‚·BƒfƒBƒŒƒNƒeƒBƒu‚ÍA’è‹`‚µ‚½ƒtƒBƒ‹ƒ^ƒŠƒ“ƒO ƒpƒCƒv‚Ì‚ ‚é `igx-drop-down` ‚Æ‚Æ‚à‚É’ñ‹Ÿ‚³‚ê‚Ü‚·B 
+### ãƒ‡ãƒ¢
+ä»¥ä¸‹ã®ã‚µãƒ³ãƒ—ãƒ«ã¯ã€`igx-input` ã«é©ç”¨ã•ã‚Œã‚‹ `igx-autocomplete` ãƒ‡ã‚£ãƒ¬ã‚¯ãƒ†ã‚£ãƒ–ã®ç°¡å˜ãªä½¿ç”¨æ–¹æ³•ã‚’ç¤ºã—ã¾ã™ã€‚ãƒ‡ã‚£ãƒ¬ã‚¯ãƒ†ã‚£ãƒ–ã¯ã€å®šç¾©ã—ãŸãƒ•ã‚£ãƒ«ã‚¿ãƒªãƒ³ã‚° ãƒ‘ã‚¤ãƒ—ã®ã‚ã‚‹ `igx-drop-down` ã¨ã¨ã‚‚ã«æä¾›ã•ã‚Œã¾ã™ã€‚ 
 <div class="sample-container loading" style="height: 400px;">
     <iframe id="autocomplete-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/data-entries/autocomplete" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -27,11 +27,11 @@ _language: ja
 <div class="divider--half"></div>
 
 > [!WARNING]
-> Ignite UI for Angular ƒRƒ“ƒ|[ƒlƒ“ƒg‚ğƒvƒƒWƒFƒNƒg‚É’Ç‰Á‚·‚é‘O‚ÉA•K—v‚È‚·‚×‚Ä‚ÌˆË‘¶ŠÖŒW‚ğ\¬‚µAƒvƒƒWƒFƒNƒg‚ÌƒZƒbƒgƒAƒbƒv‚ª³‚µ‚­Š®—¹‚µ‚½‚±‚Æ‚ğŠm”F‚µ‚Ä‚­‚¾‚³‚¢Bè‡‚ÍA[‚Í‚¶‚ß‚É](general/getting_started.md)‚ÌƒgƒsƒbƒN‚ğ‚²Šm”F‚­‚¾‚³‚¢B
+> Ignite UI for Angular ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆã‚’ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆã«è¿½åŠ ã™ã‚‹å‰ã«ã€å¿…è¦ãªã™ã¹ã¦ã®ä¾å­˜é–¢ä¿‚ã‚’æ§‹æˆã—ã€ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆã®ã‚»ãƒƒãƒˆã‚¢ãƒƒãƒ—ãŒæ­£ã—ãå®Œäº†ã—ãŸã“ã¨ã‚’ç¢ºèªã—ã¦ãã ã•ã„ã€‚æ‰‹é †ã¯ã€[ã¯ã˜ã‚ã«](general/getting_started.md)ã®ãƒˆãƒ”ãƒƒã‚¯ã‚’ã”ç¢ºèªãã ã•ã„ã€‚
 
-## g—p•û–@
-### ‚Í‚¶‚ß‚É
-[`igx-autocomplete`]({environment:angularApiUrl}/classes/igxautocompletedirective.html) ‚ğg—p‚·‚é‚É‚ÍA**app.module** ‚É **IgxAutocompleteModule** ‚Æ **IgxDropDownModule** ‚ğƒCƒ“ƒ|[ƒg‚·‚é•K—v‚ª‚ ‚è‚Ü‚·B[`igx-autocomplete`]({environment:angularApiUrl}/classes/igxautocompletedirective.html) ‚ğ [igx-input]({environment:angularApiUrl}/classes/igxinputdirective.html) ‚É“K—p‚µ‚½ê‡‚ÍA**igxInputGroupModule** ‚à•K—v‚Æ‚È‚è‚Ü‚·B
+## ä½¿ç”¨æ–¹æ³•
+### ã¯ã˜ã‚ã«
+[`igx-autocomplete`]({environment:angularApiUrl}/classes/igxautocompletedirective.html) ã‚’ä½¿ç”¨ã™ã‚‹ã«ã¯ã€**app.module** ã« **IgxAutocompleteModule** ã¨ **IgxDropDownModule** ã‚’ã‚¤ãƒ³ãƒãƒ¼ãƒˆã™ã‚‹å¿…è¦ãŒã‚ã‚Šã¾ã™ã€‚[`igx-autocomplete`]({environment:angularApiUrl}/classes/igxautocompletedirective.html) ã‚’ [igx-input]({environment:angularApiUrl}/classes/igxinputdirective.html) ã«é©ç”¨ã—ãŸå ´åˆã¯ã€**igxInputGroupModule** ã‚‚å¿…è¦ã¨ãªã‚Šã¾ã™ã€‚
 
 ```typescript
 // app.module.ts
@@ -57,7 +57,7 @@ import {
 export class AppModule {}
 ```
 
-ƒhƒƒbƒvƒ_ƒEƒ“‚ÌQÆ‚Æ‚È‚é `igxAutocomplete` ƒfƒBƒŒƒNƒeƒBƒu‚Æ’l‚ğ’Ç‰Á‚µ‚Ü‚·B
+ãƒ‰ãƒ­ãƒƒãƒ—ãƒ€ã‚¦ãƒ³ã®å‚ç…§ã¨ãªã‚‹ `igxAutocomplete` ãƒ‡ã‚£ãƒ¬ã‚¯ãƒ†ã‚£ãƒ–ã¨å€¤ã‚’è¿½åŠ ã—ã¾ã™ã€‚
 
 ```html
 <igx-input-group>
@@ -87,38 +87,38 @@ export class AutocompleteSampleComponent {
 }
 ```
 
-### ƒL[ƒ{[ƒh ƒiƒrƒQ[ƒVƒ‡ƒ“
+### ã‚­ãƒ¼ãƒœãƒ¼ãƒ‰ ãƒŠãƒ“ã‚²ãƒ¼ã‚·ãƒ§ãƒ³
 
- - ƒhƒƒbƒvƒ_ƒEƒ“‚ª•Â‚¶‚Ä‚¢‚éê‡A`Arrow Down`A`Arrow Up`A`Alt` + `Arrow Down`A`Alt` + `Arrow Up` ‚Íƒhƒƒbƒvƒ_ƒEƒ“‚ğŠJ‚«‚Ü‚·B
- - ƒhƒƒbƒvƒ_ƒEƒ“‚ª•Â‚¶‚Ä‚¢‚éê‡A“ü—ÍƒtƒB[ƒ‹ƒh‚É“ü—Í‚·‚é‚Æƒhƒƒbƒvƒ_ƒEƒ“‚ªŠJ‚«‚Ü‚·B
- - `Arrow Down` - ŠJ‚¢‚Ä‚¢‚éê‡AŸ‚Ìƒhƒƒbƒvƒ_ƒEƒ“€–Ú‚ÖˆÚ“®‚µ‚Ü‚·B
- - `Arrow Up` - ŠJ‚¢‚Ä‚¢‚éê‡AˆÈ‘O‚Ìƒhƒƒbƒvƒ_ƒEƒ“€–Ú‚ÖˆÚ“®‚µ‚Ü‚·B
- - `End` ‚ÍÅŒã‚Ìƒhƒƒbƒvƒ_ƒEƒ“€–Ú‚ÖˆÚ“®‚µ‚Ü‚·B
- - `Home` ‚ÍÅ‰‚Ìƒhƒƒbƒvƒ_ƒEƒ“€–Ú‚ÖˆÚ“®‚µ‚Ü‚·B
- - `Enter` ‚ÍA‚·‚Å‚É‘I‘ğ‚µ‚½€–Ú‚ğŠm’è‚µAƒhƒƒbƒvƒ_ƒEƒ“‚ğ•Â‚¶‚Ü‚·B
- - `Esc` ‚Íƒhƒƒbƒvƒ_ƒEƒ“‚ğ•Â‚¶‚Ü‚·B
+ - ãƒ‰ãƒ­ãƒƒãƒ—ãƒ€ã‚¦ãƒ³ãŒé–‰ã˜ã¦ã„ã‚‹å ´åˆã€`Arrow Down`ã€`Arrow Up`ã€`Alt` + `Arrow Down`ã€`Alt` + `Arrow Up` ã¯ãƒ‰ãƒ­ãƒƒãƒ—ãƒ€ã‚¦ãƒ³ã‚’é–‹ãã¾ã™ã€‚
+ - ãƒ‰ãƒ­ãƒƒãƒ—ãƒ€ã‚¦ãƒ³ãŒé–‰ã˜ã¦ã„ã‚‹å ´åˆã€å…¥åŠ›ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã«å…¥åŠ›ã™ã‚‹ã¨ãƒ‰ãƒ­ãƒƒãƒ—ãƒ€ã‚¦ãƒ³ãŒé–‹ãã¾ã™ã€‚
+ - `Arrow Down` - é–‹ã„ã¦ã„ã‚‹å ´åˆã€æ¬¡ã®ãƒ‰ãƒ­ãƒƒãƒ—ãƒ€ã‚¦ãƒ³é …ç›®ã¸ç§»å‹•ã—ã¾ã™ã€‚
+ - `Arrow Up` - é–‹ã„ã¦ã„ã‚‹å ´åˆã€ä»¥å‰ã®ãƒ‰ãƒ­ãƒƒãƒ—ãƒ€ã‚¦ãƒ³é …ç›®ã¸ç§»å‹•ã—ã¾ã™ã€‚
+ - `End` ã¯æœ€å¾Œã®ãƒ‰ãƒ­ãƒƒãƒ—ãƒ€ã‚¦ãƒ³é …ç›®ã¸ç§»å‹•ã—ã¾ã™ã€‚
+ - `Home` ã¯æœ€åˆã®ãƒ‰ãƒ­ãƒƒãƒ—ãƒ€ã‚¦ãƒ³é …ç›®ã¸ç§»å‹•ã—ã¾ã™ã€‚
+ - `Enter` ã¯ã€ã™ã§ã«é¸æŠã—ãŸé …ç›®ã‚’ç¢ºå®šã—ã€ãƒ‰ãƒ­ãƒƒãƒ—ãƒ€ã‚¦ãƒ³ã‚’é–‰ã˜ã¾ã™ã€‚
+ - `Esc` ã¯ãƒ‰ãƒ­ãƒƒãƒ—ãƒ€ã‚¦ãƒ³ã‚’é–‰ã˜ã¾ã™ã€‚
 
-> ’: ƒI[ƒgƒRƒ“ƒvƒŠ[ƒg‚ªŠJ‚¢‚½‚Æ‚«‚ÉƒŠƒXƒg‚ÌÅ‰‚Ì€–Ú‚ª©“®“I‚É‘I‘ğ‚³‚ê‚Ü‚·BƒŠƒXƒg‚ªƒtƒBƒ‹ƒ^[‚³‚ê‚½‚Æ‚«‚à“¯—l‚Å‚·B
+> æ³¨: ã‚ªãƒ¼ãƒˆã‚³ãƒ³ãƒ—ãƒªãƒ¼ãƒˆãŒé–‹ã„ãŸã¨ãã«ãƒªã‚¹ãƒˆã®æœ€åˆã®é …ç›®ãŒè‡ªå‹•çš„ã«é¸æŠã•ã‚Œã¾ã™ã€‚ãƒªã‚¹ãƒˆãŒãƒ•ã‚£ãƒ«ã‚¿ãƒ¼ã•ã‚ŒãŸã¨ãã‚‚åŒæ§˜ã§ã™ã€‚
 
-### ŒİŠ·«ƒTƒ|[ƒg
+### äº’æ›æ€§ã‚µãƒãƒ¼ãƒˆ
 
-`igxAutocomplete` ƒfƒBƒŒƒNƒeƒBƒu‚ğ“K—p‚·‚é‚Æ—v‘f‚ğˆÈ‰º‚Ì ARIA ‘®«‚Å‘•ü‚µ‚Ü‚·B
- - role="combobox" - ƒfƒBƒŒƒNƒeƒBƒu‚ª“K—p‚³‚ê‚é—v‘f‚Ìƒ[ƒ‹B
- - aria-autocomplete="list" - “ü—ÍŠ®—¹‚ÌŒó•â‚ªƒŠƒXƒg‚ÌƒtƒH[ƒ€‚É“K—p‚³‚ê‚½‚±‚Æ‚ğ¦‚µ‚Ü‚·B
- - aria-haspopup="listbox" ‚ÍA`igxAutocomplete` ‚ª’l‚ğ’ñˆÄ‚·‚éƒRƒ“ƒeƒi‚ğƒ|ƒbƒvƒAƒbƒv‚Å‚«‚é‚±‚Æ‚ğ¦‚·‚½‚ß‚Ì‘®«‚Å‚·B
- - aria-expanded="true"/"false" - ƒhƒƒbƒvƒ_ƒEƒ“‚Ìk¬ó‘Ô‚ÉŠî‚Ã‚¢‚½’lB
- - aria-owns="dropDownID" - ƒhƒƒbƒvƒ_ƒEƒ“‚Ì id ‚ÍŒó•â‚ğ•\¦‚·‚é‚½‚ß‚Ég—p‚³‚ê‚Ü‚·B
- - aria-activedescendant="listItemId" - ’l‚ªŒ»İ‚ÌƒAƒNƒeƒBƒuƒŠƒXƒg—v‘f‚Ì@id ‚Éİ’è‚³‚ê‚Ü‚·B
+`igxAutocomplete` ãƒ‡ã‚£ãƒ¬ã‚¯ãƒ†ã‚£ãƒ–ã‚’é©ç”¨ã™ã‚‹ã¨è¦ç´ ã‚’ä»¥ä¸‹ã® ARIA å±æ€§ã§è£…é£¾ã—ã¾ã™ã€‚
+ - role="combobox" - ãƒ‡ã‚£ãƒ¬ã‚¯ãƒ†ã‚£ãƒ–ãŒé©ç”¨ã•ã‚Œã‚‹è¦ç´ ã®ãƒ­ãƒ¼ãƒ«ã€‚
+ - aria-autocomplete="list" - å…¥åŠ›å®Œäº†ã®å€™è£œãŒãƒªã‚¹ãƒˆã®ãƒ•ã‚©ãƒ¼ãƒ ã«é©ç”¨ã•ã‚ŒãŸã“ã¨ã‚’ç¤ºã—ã¾ã™ã€‚
+ - aria-haspopup="listbox" ã¯ã€`igxAutocomplete` ãŒå€¤ã‚’ææ¡ˆã™ã‚‹ã‚³ãƒ³ãƒ†ãƒŠã‚’ãƒãƒƒãƒ—ã‚¢ãƒƒãƒ—ã§ãã‚‹ã“ã¨ã‚’ç¤ºã™ãŸã‚ã®å±æ€§ã§ã™ã€‚
+ - aria-expanded="true"/"false" - ãƒ‰ãƒ­ãƒƒãƒ—ãƒ€ã‚¦ãƒ³ã®ç¸®å°çŠ¶æ…‹ã«åŸºã¥ã„ãŸå€¤ã€‚
+ - aria-owns="dropDownID" - ãƒ‰ãƒ­ãƒƒãƒ—ãƒ€ã‚¦ãƒ³ã® id ã¯å€™è£œã‚’è¡¨ç¤ºã™ã‚‹ãŸã‚ã«ä½¿ç”¨ã•ã‚Œã¾ã™ã€‚
+ - aria-activedescendant="listItemId" - å€¤ãŒç¾åœ¨ã®ã‚¢ã‚¯ãƒ†ã‚£ãƒ–ãƒªã‚¹ãƒˆè¦ç´ ã®ã€€id ã«è¨­å®šã•ã‚Œã¾ã™ã€‚
 
-Œó•â‚Ég—p‚³‚ê‚é `drop-down` ƒRƒ“ƒ|[ƒlƒ“ƒg‚ÍAˆÈ‰º‚Ì ARIA ‘®«‚ğŒöŠJ‚µ‚Ü‚·B 
- - role="listbox" - `igx-drop-down` ƒRƒ“ƒ|[ƒlƒ“ƒg ƒJƒŒƒ“ƒ_[‚É“K—p‚³‚ê‚Ü‚·B
- - role="group" -`igx-drop-down-item-group` ƒRƒ“ƒ|[ƒlƒ“ƒg ƒRƒ“ƒeƒi‚É“K—p‚³‚ê‚Ü‚·B
- - role="ƒIƒvƒVƒ‡ƒ“" - `igx-drop-down` -itemƒRƒ“ƒ|[ƒlƒ“ƒg ƒRƒ“ƒeƒi‚É“K—p‚³‚ê‚Ü‚·B
- - `Igx-drop-down-item` ‚É“K—p‚³‚ê‚é aria-disabled="true"/"falsevA–³Œø‚Èê‡‚Ì `igx-drop-down-item-group` ƒRƒ“ƒ|[ƒlƒ“ƒg ƒRƒ“ƒeƒiB
+å€™è£œã«ä½¿ç”¨ã•ã‚Œã‚‹ `drop-down` ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆã¯ã€ä»¥ä¸‹ã® ARIA å±æ€§ã‚’å…¬é–‹ã—ã¾ã™ã€‚ 
+ - role="listbox" - `igx-drop-down` ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆ ã‚«ãƒ¬ãƒ³ãƒ€ãƒ¼ã«é©ç”¨ã•ã‚Œã¾ã™ã€‚
+ - role="group" -`igx-drop-down-item-group` ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆ ã‚³ãƒ³ãƒ†ãƒŠã«é©ç”¨ã•ã‚Œã¾ã™ã€‚
+ - role="ã‚ªãƒ—ã‚·ãƒ§ãƒ³" - `igx-drop-down` -itemã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆ ã‚³ãƒ³ãƒ†ãƒŠã«é©ç”¨ã•ã‚Œã¾ã™ã€‚
+ - `Igx-drop-down-item` ã«é©ç”¨ã•ã‚Œã‚‹ aria-disabled="true"/"falseã€ã€ç„¡åŠ¹ãªå ´åˆã® `igx-drop-down-item-group` ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆ ã‚³ãƒ³ãƒ†ãƒŠã€‚
 
-### ƒI[ƒgƒRƒ“ƒvƒŠ[ƒg ƒhƒƒbƒvƒ_ƒEƒ“‚ğ—LŒø/–³Œø‚É‚µ‚Ü‚·B
+### ã‚ªãƒ¼ãƒˆã‚³ãƒ³ãƒ—ãƒªãƒ¼ãƒˆ ãƒ‰ãƒ­ãƒƒãƒ—ãƒ€ã‚¦ãƒ³ã‚’æœ‰åŠ¹/ç„¡åŠ¹ã«ã—ã¾ã™ã€‚
 
-ˆÈ‰º‚ÌƒTƒ“ƒvƒ‹‚ÍA[`IgxAutocompleteDisabled`]({environment:angularApiUrl}/classes/igxautocompletedirective.html#disabled) ‚ğ’è‹`‚µAƒI[ƒgƒRƒ“ƒvƒŠ[ƒg ƒhƒƒbƒvƒ_ƒEƒ“‚Ì—LŒø‚©–³Œø‰»‚ğ‹–‰Â‚µ‚Ü‚·B
+ä»¥ä¸‹ã®ã‚µãƒ³ãƒ—ãƒ«ã¯ã€[`IgxAutocompleteDisabled`]({environment:angularApiUrl}/classes/igxautocompletedirective.html#disabled) ã‚’å®šç¾©ã—ã€ã‚ªãƒ¼ãƒˆã‚³ãƒ³ãƒ—ãƒªãƒ¼ãƒˆ ãƒ‰ãƒ­ãƒƒãƒ—ãƒ€ã‚¦ãƒ³ã®æœ‰åŠ¹ã‹ç„¡åŠ¹åŒ–ã‚’è¨±å¯ã—ã¾ã™ã€‚
 
 ```html
 <igx-input-group>
@@ -151,10 +151,10 @@ export class AutocompleteSampleComponent {
 }
 ```
 
-### ƒhƒƒbƒvƒ_ƒEƒ“‚Ìİ’è
-`igx-autocomplete` ƒhƒƒbƒvƒ_ƒEƒ“‚Ì”z’uAƒXƒNƒ[ƒ‹ ƒXƒgƒ‰ƒeƒW‚ÆƒAƒEƒgƒŒƒbƒg‚ÍA[`IgxAutocompleteSettings`]({environment:angularApiUrl}/classes/igxautocompletedirective.html#autocompleteSettings) ƒIƒvƒVƒ‡ƒ“‚ğg—p‚µ‚Äİ’è‚Å‚«‚Ü‚·Bƒ^ƒCƒv [`AutocompleteOverlaySettings`]({environment:angularApiUrl}/classes/autocompleteoverlaysettings.html) ‚©‚ç‚Ì’l‚ğ‹–‰Â‚µ‚Ü‚·B
+### ãƒ‰ãƒ­ãƒƒãƒ—ãƒ€ã‚¦ãƒ³ã®è¨­å®š
+`igx-autocomplete` ãƒ‰ãƒ­ãƒƒãƒ—ãƒ€ã‚¦ãƒ³ã®é…ç½®ã€ã‚¹ã‚¯ãƒ­ãƒ¼ãƒ« ã‚¹ãƒˆãƒ©ãƒ†ã‚¸ã¨ã‚¢ã‚¦ãƒˆãƒ¬ãƒƒãƒˆã¯ã€[`IgxAutocompleteSettings`]({environment:angularApiUrl}/classes/igxautocompletedirective.html#autocompleteSettings) ã‚ªãƒ—ã‚·ãƒ§ãƒ³ã‚’ä½¿ç”¨ã—ã¦è¨­å®šã§ãã¾ã™ã€‚ã‚¿ã‚¤ãƒ— [`AutocompleteOverlaySettings`]({environment:angularApiUrl}/classes/autocompleteoverlaysettings.html) ã‹ã‚‰ã®å€¤ã‚’è¨±å¯ã—ã¾ã™ã€‚
 
-ˆÈ‰º‚Ì—á‚ÍAƒfƒBƒŒƒNƒeƒBƒu‚ª“K—p‚³‚ê‚é“ü—Í‚Ìã•”‚Éİ’è‰Â”\‚Èƒhƒƒbƒvƒ_ƒEƒ“‚ÌˆÊ’u‚ğ•\¦‚µ‚Ü‚·BX‚ÉŠJ‚­A•Â‚¶‚é‚ÌƒAƒjƒ[ƒVƒ‡ƒ“‚ğ–³Œø‚É‚µ‚Ü‚·B`ConnectedPositioningStrategy` ‚ªg—p‚³‚ê‚Ü‚·B
+ä»¥ä¸‹ã®ä¾‹ã¯ã€ãƒ‡ã‚£ãƒ¬ã‚¯ãƒ†ã‚£ãƒ–ãŒé©ç”¨ã•ã‚Œã‚‹å…¥åŠ›ã®ä¸Šéƒ¨ã«è¨­å®šå¯èƒ½ãªãƒ‰ãƒ­ãƒƒãƒ—ãƒ€ã‚¦ãƒ³ã®ä½ç½®ã‚’è¡¨ç¤ºã—ã¾ã™ã€‚æ›´ã«é–‹ãã€é–‰ã˜ã‚‹ã®ã‚¢ãƒ‹ãƒ¡ãƒ¼ã‚·ãƒ§ãƒ³ã‚’ç„¡åŠ¹ã«ã—ã¾ã™ã€‚`ConnectedPositioningStrategy` ãŒä½¿ç”¨ã•ã‚Œã¾ã™ã€‚
 
 ```html
 <igx-input-group #inputGroup>
@@ -195,12 +195,12 @@ export class AutocompleteSampleComponent {
 }
 ```
 
-> ’: ƒfƒtƒHƒ‹ƒg‚Ì”z’uƒXƒgƒ‰ƒeƒW‚ÍA‹ó‚«ƒXƒy[ƒX‚ÉŠî‚Ã‚¢‚Ä `AutoPositionStrategy` ‚Æƒhƒƒbƒvƒ_ƒEƒ“‚ªŠJ‚«‚Ü‚·B
+> æ³¨: ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆã®é…ç½®ã‚¹ãƒˆãƒ©ãƒ†ã‚¸ã¯ã€ç©ºãã‚¹ãƒšãƒ¼ã‚¹ã«åŸºã¥ã„ã¦ `AutoPositionStrategy` ã¨ãƒ‰ãƒ­ãƒƒãƒ—ãƒ€ã‚¦ãƒ³ãŒé–‹ãã¾ã™ã€‚
 
-## ƒAƒvƒŠƒP[ƒVƒ‡ƒ“ ƒVƒiƒŠƒI
-### Reactive From “à‚ÅƒOƒ‹[ƒv‰»‚µ‚½ igxAutocomplete 
+## ã‚¢ãƒ—ãƒªã‚±ãƒ¼ã‚·ãƒ§ãƒ³ ã‚·ãƒŠãƒªã‚ª
+### Reactive From å†…ã§ã‚°ãƒ«ãƒ¼ãƒ—åŒ–ã—ãŸ igxAutocomplete 
 
-ˆÈ‰º‚ÌƒTƒ“ƒvƒ‹‚ÍAƒI[ƒgƒRƒ“ƒvƒŠ[ƒg‚Å‰f‰æ‚ª city ‚ÅƒOƒ‹[ƒv‰»‚³‚ê‚Ä‚¢‚é cinema ‚Ì‘I‘ğ‚ª‰Â”\‚ÈƒŠƒXƒg‚Å‚·BƒCƒ“ƒvƒbƒg‚Ì“ü—Í‚Ü‚½‚Í `Arrow Down` ƒL[‚ğg—p‚µ‚ÄƒŠƒXƒg‚ğŠJ‚«Acinema ‚ğ‘I‘ğ‚µ‚Ü‚·BŸ‚É movie ‚Æ“ú•t‚ğ‘I‘ğ‚µ‚Ü‚·B
+ä»¥ä¸‹ã®ã‚µãƒ³ãƒ—ãƒ«ã¯ã€ã‚ªãƒ¼ãƒˆã‚³ãƒ³ãƒ—ãƒªãƒ¼ãƒˆã§æ˜ ç”»ãŒ city ã§ã‚°ãƒ«ãƒ¼ãƒ—åŒ–ã•ã‚Œã¦ã„ã‚‹ cinema ã®é¸æŠãŒå¯èƒ½ãªãƒªã‚¹ãƒˆã§ã™ã€‚ã‚¤ãƒ³ãƒ—ãƒƒãƒˆã®å…¥åŠ›ã¾ãŸã¯ `Arrow Down` ã‚­ãƒ¼ã‚’ä½¿ç”¨ã—ã¦ãƒªã‚¹ãƒˆã‚’é–‹ãã€cinema ã‚’é¸æŠã—ã¾ã™ã€‚æ¬¡ã« movie ã¨æ—¥ä»˜ã‚’é¸æŠã—ã¾ã™ã€‚
 
 <div class="sample-container loading" style="height: 600px;">
     <iframe id="autocomplete-movie" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/data-entries/movie" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -211,7 +211,7 @@ export class AutocompleteSampleComponent {
 
 <div class="divider--half"></div>
 
-ã‹LƒTƒ“ƒvƒ‹‚Ì‚æ‚¤‚ÉƒOƒ‹[ƒv‚Å `igxAutocomplete` ‚ğg—p‚·‚é‚É‚ÍAˆÈ‰º‚Ì•û–@‚Åƒf[ƒ^‚ğ’è‹`‚·‚é•K—v‚ª‚ ‚è‚Ü‚·B
+ä¸Šè¨˜ã‚µãƒ³ãƒ—ãƒ«ã®ã‚ˆã†ã«ã‚°ãƒ«ãƒ¼ãƒ—ã§ `igxAutocomplete` ã‚’ä½¿ç”¨ã™ã‚‹ã«ã¯ã€ä»¥ä¸‹ã®æ–¹æ³•ã§ãƒ‡ãƒ¼ã‚¿ã‚’å®šç¾©ã™ã‚‹å¿…è¦ãŒã‚ã‚Šã¾ã™ã€‚
 
 ```html
 <igx-input-group>
@@ -228,8 +228,8 @@ export class AutocompleteSampleComponent {
 </igx-drop-down>
 ```
 
-### ƒI[ƒgƒRƒ“ƒvƒŠ[ƒg‚ğƒŠƒ‚[ƒgƒf[ƒ^‚ÉƒoƒCƒ“ƒh
-ˆÈ‰º‚ÍAƒŠƒ‚[ƒgƒT[ƒrƒX‚ÉƒoƒCƒ“ƒh‚³‚ê‚½ƒhƒƒbƒvƒ_ƒEƒ“‚Æ `igxAutocomplete` ‚ÌƒTƒ“ƒvƒ‹‚Å‚·BˆÈ‰º‚ÍA‚Éƒf[ƒ^ ƒ[ƒh‚É’x‰„‚ª‚ ‚éê‡Aƒhƒƒbƒvƒ_ƒEƒ“‚Ì‘ã‚í‚è‚ÉƒJƒXƒ^ƒ€ ƒeƒ“ƒvƒŒ[ƒg‚ğ“K—p‚µ‚½ƒTƒ“ƒvƒ‹‚Å‚·B
+### ã‚ªãƒ¼ãƒˆã‚³ãƒ³ãƒ—ãƒªãƒ¼ãƒˆã‚’ãƒªãƒ¢ãƒ¼ãƒˆãƒ‡ãƒ¼ã‚¿ã«ãƒã‚¤ãƒ³ãƒ‰
+ä»¥ä¸‹ã¯ã€ãƒªãƒ¢ãƒ¼ãƒˆã‚µãƒ¼ãƒ“ã‚¹ã«ãƒã‚¤ãƒ³ãƒ‰ã•ã‚ŒãŸãƒ‰ãƒ­ãƒƒãƒ—ãƒ€ã‚¦ãƒ³ã¨ `igxAutocomplete` ã®ã‚µãƒ³ãƒ—ãƒ«ã§ã™ã€‚ä»¥ä¸‹ã¯ã€ã«ãƒ‡ãƒ¼ã‚¿ ãƒ­ãƒ¼ãƒ‰æ™‚ã«é…å»¶ãŒã‚ã‚‹å ´åˆã€ãƒ‰ãƒ­ãƒƒãƒ—ãƒ€ã‚¦ãƒ³ã®ä»£ã‚ã‚Šã«ã‚«ã‚¹ã‚¿ãƒ  ãƒ†ãƒ³ãƒ—ãƒ¬ãƒ¼ãƒˆã‚’é©ç”¨ã—ãŸã‚µãƒ³ãƒ—ãƒ«ã§ã™ã€‚
 
 <div class="sample-container loading" style="height: 400px;">
     <iframe id="autocomplete-remote-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/data-entries/autocomplete-remote" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -246,17 +246,17 @@ export class AutocompleteSampleComponent {
 * [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html)
 * [IgxInputGroup]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
 
-## Šù’m‚Ì–â‘è
+## æ—¢çŸ¥ã®å•é¡Œ
 
-### ‚»‚Ì‘¼‚ÌƒŠƒ\[ƒX
+### ãã®ä»–ã®ãƒªã‚½ãƒ¼ã‚¹
 <div class="divider--half"></div>
 
 * [IgxDropDownComponent](drop_down.md)
 * [IgxInputGroup](input_group.md)
-* [ƒeƒ“ƒvƒŒ[ƒg‹ì“®ƒtƒH[ƒ€‚Ì“‡](input_group.md)
+* [ãƒ†ãƒ³ãƒ—ãƒ¬ãƒ¼ãƒˆé§†å‹•ãƒ•ã‚©ãƒ¼ãƒ ã®çµ±åˆ](input_group.md)
 [Reactive Forms Integration](input_group_reactive_forms.md)
 
-ƒRƒ~ƒ…ƒjƒeƒB‚ÉQ‰Á‚µ‚ÄV‚µ‚¢ƒAƒCƒfƒA‚ğ‚²’ñˆÄ‚­‚¾‚³‚¢B
+ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ã«å‚åŠ ã—ã¦æ–°ã—ã„ã‚¢ã‚¤ãƒ‡ã‚¢ã‚’ã”ææ¡ˆãã ã•ã„ã€‚
 
-* [Ignite UI for Angular** ƒtƒH[ƒ‰ƒ€** (‰pŒê) ](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (‰pŒê) ](https://github.com/IgniteUI/igniteui-angular)
+* [Ignite UI for Angular** ãƒ•ã‚©ãƒ¼ãƒ©ãƒ ** (è‹±èª) ](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub** (è‹±èª) ](https://github.com/IgniteUI/igniteui-angular)
