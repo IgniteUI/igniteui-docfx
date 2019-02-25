@@ -49,7 +49,7 @@ Column moving works as well with pinned columns. Dragging an unpinned column and
 <div class="divider--half"></div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-<div class="sample-container loading" style="height:650px">
+<div class="sample-container loading" style="height:660px">
     <iframe id="hierarchical-grid-column-moving-sample-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-moving' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
@@ -122,10 +122,10 @@ public onColumnMovingEnd(event) {
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
-<igx-grid #hierarchicalGrid [data]="data" [autoGenerate]="false" (onColumnMovingEnd)="onColumnMovingEnd($event)">
+<igx-hierarchical-grid #hierarchicalGrid [data]="data" [autoGenerate]="false" (onColumnMovingEnd)="onColumnMovingEnd($event)">
     <igx-column [field]="'Country'" [movable]="true"></igx-column>
     <igx-column [field]="'Phone'" [dataType]="'number'" [movable]="true" ></igx-column>
-</igx-grid>
+</igx-hierarchical-grid>
 ```
 
 ```typescript
