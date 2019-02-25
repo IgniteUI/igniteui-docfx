@@ -13,7 +13,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-    ---
+---
 title: Hierarchical Grid Paging
 _description: The Ignite UI for Angular Hierarchical Grid control features the fastest, touch-responsive data-rich tree grid with popular features.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Hierarchical Grid, Angular Hierarchical Table, Angular Hierarchical Grid component, Angular Hierarchical Table component, Angular Hierarchical Grid control, Angular Hierarchical Table control, Angular High Performance Hierarchical Grid, Angular High Performance Hierarchical Table, Paging, Pagination, Hierarchical Grid Paging, Hierarchical Table Paging

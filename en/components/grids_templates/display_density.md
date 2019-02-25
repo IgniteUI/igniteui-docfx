@@ -13,7 +13,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-    ---
+---
 title:  Hierarchical Grid Display Density - Native Angular | Ignite UI for Angular
 _description: The Ignite UI for Angular Hierarchical Grid control provides default cell templates for editable columns which are based on the data type of the column.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Component, Angular Hierarchical Grid, Angular Hierarchical Table, Angular Hierarchical Grid component, Angular Hierarchical Table component, Angular Hierarchical Grid control, Angular Hierarchical Table control, Angular High Performance Hierarchical Grid, Angular High Performance Hierarchical Table, Hierarchical Grid Display Density, Hierarchical Table Display Density
