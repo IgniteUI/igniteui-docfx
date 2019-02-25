@@ -1,9 +1,20 @@
-﻿---
+﻿@@if (igxName === 'IgxGrid') {
+---
 title: Grid Toolbar Component - Native Angular | Ignite UI for Angular
 _description: With the Ignite UI for Angular Grid Toolbar component you can have a centralized location for IgxGrid features UI controls.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Component, Angular Grid, Angular Table, Angular Data Grid component, Angular Data Table component, Angular Data Grid control, Angular Data Table control, Angular Grid component, Angular Table component, Angular Grid control, Angular Table control, Angular High Performance Grid, Angular High Performance Data Table, Angular Data Grid Toolbar, Angular Data Table Toolbar, Grid Toolbar, Angular Grid Toolbar, Angular Table Toolbar, excel export, grid column hiding chooser, grid column pinning chooser, data table column hiding, data table column pinning
 ---
-
+}
+@@if (igxName === 'IgxTreeGrid') {
+    <!-- TODO -->
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+---
+title: Hierarchical Grid Toolbar Component - Native Angular | Ignite UI for Angular
+_description: With the Ignite UI for Angular Hierarchical Grid Toolbar component you can have a centralized location for IgxHierarchicalGrid features UI controls.
+_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Component, Angular Hierarchical Grid, Angular Hierarchical Table, Angular Hierarchical Grid component, Angular Hierarchical Table component, Angular Hierarchical Grid control, Angular Hierarchical Table control, Angular High Performance Hierarchical Grid, Angular High Performance Hierarchical Table, Angular Hierarchical Grid Toolbar, Angular Hierarchical Table Toolbar, Hierarchical Grid Toolbar, excel export, hierarchical grid column hiding chooser, hierarchical grid column pinning chooser, hierarchical table column hiding, hierarchical table column pinning
+---
+}
 ### @@igComponent Toolbar
 
 The @@igComponent in Ignite UI for Angular provides an [`IgxGridToolbarComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html) which is essentially a container for **UI** operations. The toolbar is located at the top of the @@igComponent and it matches the @@igComponent's horizontal size. The toolbar container hosts different UI controls which are related to some of the @@igComponent's features - column hiding, column pinning, excel exporting, etc.

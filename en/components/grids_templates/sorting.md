@@ -1,9 +1,20 @@
-﻿---
-title: @@igComponent Sorting
+﻿@@if (igxName === 'IgxGrid') {
+---
+title: Grid Sorting
 _description: The Ignite UI for Angular Data Grid control features the fastest, touch-responsive data-rich grid with popular features, including hierarchical and list views.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Grid, Angular Table, Angular Data Grid component, Angular Data Table component, Angular Data Grid control, Angular Data Table control, Angular Grid component, Angular Table component, Angular Grid control, Angular Table control, Angular High Performance Grid, Angular High Performance Data Table, Data Grid Sorting, Data Table Sorting, Angular Data Grid Sorting, Angular Data Table Sorting
 ---
-
+}
+@@if (igxName === 'IgxTreeGrid') {
+    <!-- TODO -->
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+---
+title: Hierarchical Grid Sorting
+_description: The Ignite UI for Angular Hierarchical Grid control features the fastest, touch-responsive data-rich hierarchical grid with popular features.
+_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Hierarchical Grid, Angular Hierarchical Table, Angular Hierarchical Grid component, Angular Hierarchical Table component, Angular Hierarchical Grid control, Angular Hierarchical Table control, Angular Hierarchical Grid component, Angular Hierarchical Table component, Angular High Performance Hierarchical Grid, Angular High Performance Hierarchical Table, Hierarchical Grid Sorting, Hierarchical Table Sorting, Angular Hierarchical Grid Sorting, Angular Hierarchical Table Sorting
+---
+}
 ### @@igComponent Sorting
 
 In Ignite UI for Angular @@igComponent, **Sorting** is enabled on a per-column level, meaning that the **@@igSelector** can have a mix of sortable and non-sortable columns.

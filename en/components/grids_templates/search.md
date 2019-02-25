@@ -1,9 +1,20 @@
+@@if (igxName === 'IgxGrid') {
 ---
 title: Grid searching
 _description: The Ignite UI for Angular Data Grid control features a search API that allows developers to implement search functionality within the grid.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Grid, Angular Table, Angular Data Grid component, Angular Data Table component, Angular Data Grid control, Angular Data Table control, Angular Grid component, Angular Table component, Angular Grid control, Angular Table control, Angular High Performance Grid, Angular High Performance Data Table, Data Grid Searching, Data Table Search
 ---
-
+}
+@@if (igxName === 'IgxTreeGrid') {
+    <!-- TODO -->
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+---
+title: Hierarchical Grid searching
+_description: The Ignite UI for Angular Hierarchical Grid control features a search API that allows developers to implement search functionality within the grid.
+_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Hierarchical Grid, Angular Hierarchical Table, Angular Hierarchical Grid component, Angular Hierarchical Table component, Angular Hierarchical Grid control, Angular Hierarchical Table control, Angular High Performance Hierarchical Grid, Angular High Performance Hierarchical Table, Hierarchical Grid Searching, Hierarchical Table Search
+---
+}
 ### @@igComponent Searching
 
 While browsers natively provide search functionality, most of the time the @@igComponent virtualizes its columns and rows that are out of view. In these cases, the native search is unable to search the virtualized cells, since they are not part of the DOM. We have extended the Ignite UI for Angular @@igComponent with a **search API** that allows you to search through the **virtualized content** of the @@igComponent.
