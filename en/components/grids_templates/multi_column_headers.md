@@ -1,8 +1,19 @@
-﻿---
+﻿@@if (igxName === 'IgxGrid') {
+---
 title: Column Group Component - Native Angular | Ignite UI for Angular
 _description: Multi-column headers allow grouping columns by placing them under a common header. Every column group could be a representation of combination between  other groups or columns.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Grid, Angular Table, Angular Data Grid component, Angular Data Table component, Angular Data Grid control, Angular Data Table control, Angular Grid component, Angular Table component, Angular Grid control, Angular Table control, Angular High Performance Grid, Angular High Performance Data Table, Multi Column Headers, Deferred Multi Column Headers, Grid Multi Column Headers, Angular Grid Multi Column Headers, Angular Data Table Multi Column Headers
 ---
+}
+@@if (igxName === 'IgxTreeGrid') {
+---
+title: Column Group Component - Native Angular | Ignite UI for Angular
+_description: Multi-column headers allow grouping columns by placing them under a common header. Every column group could be a representation of combination between  other groups or columns.
+_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Tree Grid, Angular Tree Table, Angular Tree Grid component, Angular Tree Table component, Angular Tree Grid control, Angular Tree Table control, Angular Tree Grid component, Angular Tree Table component, Angular Tree Grid control, Angular Tree Table control, Angular High Performance Tree Grid, Angular High Performance Tree Table, Multi Column Headers, Deferred Multi Column Headers, Tree Grid Multi Column Headers, Angular Tree Grid Multi Column Headers, Angular Tree Table Multi Column Headers
+---
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+}
 
 ### Multi Column Headers
 
