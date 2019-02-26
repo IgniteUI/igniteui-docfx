@@ -271,7 +271,7 @@ The Hierarchical Grid allows the users to conveniently collapse all its currentl
 
 Calling CRUD API methods should still be done through each separate grid instance.
 
-## API
+## API References
 
 * [IgxHierarchicalGridComponent]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html)
 * [IgxRowIslandComponent]({environment:angularApiUrl}/classes/igxrowislandcomponent.html)
