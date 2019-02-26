@@ -6,7 +6,11 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
-    <!-- TODO -->
+---
+title: Tree Grid searching
+_description: The Ignite UI for Angular Tree Grid control features a search API that allows developers to implement search functionality within the tree grid.
+_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Tree Grid, Angular Tree Table, Angular Tree Grid component, Angular Tree Table component, Angular Tree Grid control, Angular Tree Table control, Angular Tree Grid component, Angular Tree Table component, Angular Tree Grid control, Angular Tree Table control, Angular High Performance Tree Grid, Angular High Performance Tree Table, Tree Grid Searching, Tree Table Search
+---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---

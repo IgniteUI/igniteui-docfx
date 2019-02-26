@@ -6,7 +6,11 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
-    <!-- TODO -->
+---
+title: Summaries Component - Native Angular | Ignite UI for Angular
+_description: With the Ignite UI for Angular Summaries component, see the column information in a separate container with a predefined set of default summary items, depending on the type of data within the column.
+_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Component, Angular Tree Grid, Angular Tree Table, Angular Tree Grid component, Angular Tree Table component, Angular Tree Grid control, Angular Tree Table control, Angular Tree Grid component, Angular Tree Table component, Angular Tree Grid control, Angular Tree Table control, Angular High Performance Tree Grid, Angular High Performance Tree Table, Tree Grid Summaries, Tree Table Summaries, Tree Grid Column Summaries, Tree Table Column Summaries, Tree Grid Column Aggregations, Tree Table Column Aggregations
+---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
