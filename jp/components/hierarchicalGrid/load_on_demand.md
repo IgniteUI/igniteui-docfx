@@ -12,7 +12,7 @@ In this topic we will demonstrate how to achieve Load on Demand, by creating our
 
 #### Demo
 
-<div class="sample-container loading" style="height:650px">
+<div class="sample-container loading" style="height:620px">
     <iframe id="hierarchical-grid-lod-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-lod' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
