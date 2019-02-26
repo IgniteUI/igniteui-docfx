@@ -10,7 +10,7 @@ _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Nati
 
 ### Demo
 
-<div class="sample-container" style="height: 300px">
+<div class="sample-container" style="height: 450px">
     <iframe id="data-chart-axis-sharing-iframe" src='{environment:demosBaseUrl}/charts/data-chart-axis-sharing' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -30,14 +30,14 @@ This code demonstrates how to create data chart with two `IgxNumericYAxisCompone
     width="700px"
     height="500px">
 
-    <igx-category-x-axis name="xAxisShared" label="Date"/>
-    <igx-numeric-y-axis  name="yAxisRight" labelLocation="OutsideRight" />
-    <igx-numeric-y-axis  name="yAxisLeft" labelLocation="OutsideLeft" />
+    <igx-category-x-axis name="sharedXAxis" label="Date"/>
+    <igx-numeric-y-axis  name="rightYAxis" labelLocation="OutsideRight" />
+    <igx-numeric-y-axis  name="leftYAxis" labelLocation="OutsideLeft" />
 
     <igx-financial-price-series
     name="series2"
-    xAxisName="xAxisShared"
-    yAxisName="yAxisRight"
+    xAxisName="sharedXAxis"
+    yAxisName="rightYAxis"
     displayType="Candlestick"
     lowMemberPath="Low"
     highMemberPath="High"
@@ -47,8 +47,8 @@ This code demonstrates how to create data chart with two `IgxNumericYAxisCompone
 
     <igx-money-flow-index-indicator
     name="series3"
-    xAxisName="xAxisShared"
-    yAxisName="yAxisLeft"
+    xAxisName="sharedXAxis"
+    yAxisName="leftYAxis"
     displayType="Column"
     lowMemberPath="Low"
     highMemberPath="High"

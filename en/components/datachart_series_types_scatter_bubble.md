@@ -126,4 +126,6 @@ The `FillScale` is an optional feature which determines the color pattern within
 -   [Axis Sharing](datachart_axis_sharing.md)
 -   [Chart Legend](datachart_chart_legends.md)
 -   [Series Markers](datachart_series_markers.md)
+-   [Series Tooltips](datachart_series_tooltips.md)
+-   [Series Trendlines](datachart_series_trendlines.md)
 -   [Series Types](datachart_series_types.md)
