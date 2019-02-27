@@ -6,7 +6,7 @@ _language: ja
 ---
 
 ## Time Picker
-<p class="highlight">Date Picker のデザインや機能と同様 Ignite UI for Angular Time Picker コンポーネントは、ダイアログのスピン ボタンで時間を選択して入力フィールドに値を設定します。In addition the user can select also or edit a time value, using an editable masked input with a dropdown.</p>
+<p class="highlight">Date Picker のデザインや機能と同様 Ignite UI for Angular Time Picker コンポーネントは、ダイアログのスピン ボタンで時間を選択して入力フィールドに値を設定します。またユーザーは、ドロップダウンで時間値の選択やマスク入力を使用した編集が可能です。</p>
 <div class="divider"></div>
 
 ### Time Picker デモ
