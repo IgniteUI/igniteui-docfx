@@ -17,7 +17,7 @@ draws colored contour lines based on a triangulation of X and Y data with a nume
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-type-contour-series-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
     </button>
-</div>>
+</div>
 
 <div class="divider--half"></div>
 
