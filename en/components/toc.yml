@@ -80,130 +80,130 @@
       href: grid/conditional_cell_styling.md
       new: true
 - name: Tree Grid
-  href: treeGrid/tree_grid.md
+  href: treegrid/tree_grid.md
   new: true
   items:
     - name: Virtualization and performance
-      href: treeGrid/virtualization.md
+      href: treegrid/virtualization.md
       new: false
     - name: Editing
-      href: treeGrid/editing.md
+      href: treegrid/editing.md
       new: false
     - name: Row Editing
-      href: treeGrid/row_editing.md
+      href: treegrid/row_editing.md
       new: false
     - name: Batch Editing
-      href: treeGrid/batch_editing.md
+      href: treegrid/batch_editing.md
       new: false
     - name: Paging
-      href: treeGrid/paging.md
+      href: treegrid/paging.md
       new: false
     - name: Filtering
-      href: treeGrid/filtering.md
+      href: treegrid/filtering.md
       new: false
     - name: Sorting
-      href: treeGrid/sorting.md
+      href: treegrid/sorting.md
       new: false
     - name: Summaries
-      href: treeGrid/summaries.md
+      href: treegrid/summaries.md
       new: false
     - name: Column Moving
-      href: treeGrid/column_moving.md
+      href: treegrid/column_moving.md
       new: false
     - name: Column Pinning
-      href: treeGrid/column_pinning.md
+      href: treegrid/column_pinning.md
       new: false
     - name: Column Resizing
-      href: treeGrid/column_resizing.md
+      href: treegrid/column_resizing.md
       new: false
     - name: Column Hiding
-      href: treeGrid/column_hiding.md
+      href: treegrid/column_hiding.md
       new: false
     - name: Selection
-      href: treeGrid/selection.md
+      href: treegrid/selection.md
       new: false
     - name: Searching
-      href: treeGrid/search.md
+      href: treegrid/search.md
       new: true
     - name: Toolbar
-      href: treeGrid/toolbar.md
+      href: treegrid/toolbar.md
       new: false
     - name: Export to Excel
-      href: treeGrid/export_excel.md
+      href: treegrid/export_excel.md
       new: false
     - name: Multi Column Headers
-      href: treeGrid/multi_column_headers.md
+      href: treegrid/multi_column_headers.md
       new: false
     - name: Display Density
-      href: treeGrid/display_density.md
+      href: treegrid/display_density.md
       new: false
     - name: Conditional Cell Styling
-      href: treeGrid/conditional_cell_styling.md
+      href: treegrid/conditional_cell_styling.md
       new: false
     - name: Aggregations
-      href: treeGrid/aggregations.md
+      href: treegrid/aggregations.md
       new: false
 - name: Hierarchical Grid
-  href: hierarchicalGrid/hierarchical_grid.md
+  href: hierarchicalgrid/hierarchical_grid.md
   new: true
   items:
     - name: Virtualization and performance
-      href: hierarchicalGrid/virtualization.md
+      href: hierarchicalgrid/virtualization.md
       new: true
     - name: Load on Demand
-      href: hierarchicalGrid/load_on_demand.md
+      href: hierarchicalgrid/load_on_demand.md
       new: true
     - name: Editing
-      href: hierarchicalGrid/editing.md
+      href: hierarchicalgrid/editing.md
       new: true
     - name: Row Editing
-      href: hierarchicalGrid/row_editing.md
+      href: hierarchicalgrid/row_editing.md
       new: true
     - name: Batch Editing
-      href: hierarchicalGrid/batch_editing.md
+      href: hierarchicalgrid/batch_editing.md
       new: true
     - name: Paging
-      href: hierarchicalGrid/paging.md
+      href: hierarchicalgrid/paging.md
       new: true
     - name: Filtering
-      href: hierarchicalGrid/filtering.md
+      href: hierarchicalgrid/filtering.md
       new: true
     - name: Sorting
-      href: hierarchicalGrid/sorting.md
+      href: hierarchicalgrid/sorting.md
       new: true
     - name: Summaries
-      href: hierarchicalGrid/summaries.md
+      href: hierarchicalgrid/summaries.md
       new: true
     - name: Column Moving
-      href: hierarchicalGrid/column_moving.md
+      href: hierarchicalgrid/column_moving.md
       new: true
     - name: Column Pinning
-      href: hierarchicalGrid/column_pinning.md
+      href: hierarchicalgrid/column_pinning.md
       new: true
     - name: Column Resizing
-      href: hierarchicalGrid/column_resizing.md
+      href: hierarchicalgrid/column_resizing.md
       new: true
     - name: Column Hiding
-      href: hierarchicalGrid/column_hiding.md
+      href: hierarchicalgrid/column_hiding.md
       new: true
     - name: Selection
-      href: hierarchicalGrid/selection.md
+      href: hierarchicalgrid/selection.md
       new: true
     # Not yet fully implemented for igxHGrid
     # - name: Searching
-    #   href: hierarchicalGrid/search.md
+    #   href: hierarchicalgrid/search.md
     #   new: true
     - name: Toolbar
-      href: hierarchicalGrid/toolbar.md
+      href: hierarchicalgrid/toolbar.md
       new: true
     - name: Multi Column Headers
-      href: hierarchicalGrid/multi_column_headers.md
+      href: hierarchicalgrid/multi_column_headers.md
       new: true
     - name: Display Density
-      href: hierarchicalGrid/display_density.md
+      href: hierarchicalgrid/display_density.md
       new: true
     # - name: Conditional Cell Styling
-    #   href: hierarchicalGrid/conditional_cell_styling.md
+    #   href: hierarchicalgrid/conditional_cell_styling.md
     #   new: true
 - name: List View
   href: list.md

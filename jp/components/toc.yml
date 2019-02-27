@@ -80,130 +80,130 @@
       href: grid/conditional_cell_styling.md
       new: true
 - name: Tree Grid
-  href: treeGrid/tree_grid.md
+  href: treegrid/tree_grid.md
   new: true
   items:
     - name: 仮想化とパフォーマンス
-      href: treeGrid/virtualization.md
+      href: treegrid/virtualization.md
       new: false
     - name: 編集
-      href: treeGrid/editing.md
+      href: treegrid/editing.md
       new: false
     - name: 行編集
-      href: treeGrid/row_editing.md
+      href: treegrid/row_editing.md
       new: false
     - name: 一括編集
-      href: treeGrid/batch_editing.md
+      href: treegrid/batch_editing.md
       new: false
     - name: ページング
-      href: treeGrid/paging.md
+      href: treegrid/paging.md
       new: false
     - name: フィルタリング
-      href: treeGrid/filtering.md
+      href: treegrid/filtering.md
       new: false
     - name: 並べ替え
-      href: treeGrid/sorting.md
+      href: treegrid/sorting.md
       new: false
     - name: 集計
-      href: treeGrid/summaries.md
+      href: treegrid/summaries.md
       new: false
     - name: 列移動
-      href: treeGrid/column_moving.md
+      href: treegrid/column_moving.md
       new: false
     - name: 列のピン固定
-      href: treeGrid/column_pinning.md
+      href: treegrid/column_pinning.md
       new: false
     - name: 列のサイズ変更
-      href: treeGrid/column_resizing.md
+      href: treegrid/column_resizing.md
       new: false
     - name: 列の非表示
-      href: treeGrid/column_hiding.md
+      href: treegrid/column_hiding.md
       new: false
     - name: 選択
-      href: treeGrid/selection.md
+      href: treegrid/selection.md
       new: false
     - name: 検索
-      href: treeGrid/search.md
+      href: treegrid/search.md
       new: true
     - name: ツールバー
-      href: treeGrid/toolbar.md
+      href: treegrid/toolbar.md
       new: false
     - name: Excel エクスポート
-      href: treeGrid/export_excel.md
+      href: treegrid/export_excel.md
       new: false
     - name: 複数列ヘッダー
-      href: treeGrid/multi_column_headers.md
+      href: treegrid/multi_column_headers.md
       new: false
     - name: 表示密度
-      href: treeGrid/display_density.md
+      href: treegrid/display_density.md
       new: false
     - name: 条件付きセルのスタイル設定
-      href: treeGrid/conditional_cell_styling.md
+      href: treegrid/conditional_cell_styling.md
       new: false
     - name: Aggregations 
-      href: treeGrid/aggregations.md
+      href: treegrid/aggregations.md
       new: false
 - name: Hierarchical Grid
-  href: hierarchicalGrid/hierarchical_grid.md
+  href: hierarchicalgrid/hierarchical_grid.md
   new: true
   items:
     - name: 仮想化とパフォーマンス
-      href: hierarchicalGrid/virtualization.md
+      href: hierarchicalgrid/virtualization.md
       new: true
     - name: Load on Demand
-      href: hierarchicalGrid/load_on_demand.md
+      href: hierarchicalgrid/load_on_demand.md
       new: true
     - name: 編集
-      href: hierarchicalGrid/editing.md
+      href: hierarchicalgrid/editing.md
       new: true
     - name: 行編集
-      href: hierarchicalGrid/row_editing.md
+      href: hierarchicalgrid/row_editing.md
       new: true
     - name: 一括編集
-      href: hierarchicalGrid/batch_editing.md
+      href: hierarchicalgrid/batch_editing.md
       new: true
     - name: ページング
-      href: hierarchicalGrid/paging.md
+      href: hierarchicalgrid/paging.md
       new: true
     - name: フィルタリング
-      href: hierarchicalGrid/filtering.md
+      href: hierarchicalgrid/filtering.md
       new: true
     - name: 並べ替え
-      href: hierarchicalGrid/sorting.md
+      href: hierarchicalgrid/sorting.md
       new: true
     - name: 集計
-      href: hierarchicalGrid/summaries.md
+      href: hierarchicalgrid/summaries.md
       new: true
     - name: 列移動
-      href: hierarchicalGrid/column_moving.md
+      href: hierarchicalgrid/column_moving.md
       new: true
     - name: 列のピン固定
-      href: hierarchicalGrid/column_pinning.md
+      href: hierarchicalgrid/column_pinning.md
       new: true
     - name: 列のサイズ変更
-      href: hierarchicalGrid/column_resizing.md
+      href: hierarchicalgrid/column_resizing.md
       new: true
     - name: 列の非表示
-      href: hierarchicalGrid/column_hiding.md
+      href: hierarchicalgrid/column_hiding.md
       new: true
     - name: 選択
-      href: hierarchicalGrid/selection.md
+      href: hierarchicalgrid/selection.md
       new: true
       # Not yet fully implemented for igxHGrid
     # - name: 検索
-    #   href: hierarchicalGrid/search.md
+    #   href: hierarchicalgrid/search.md
     #   new: true
     - name: ツールバー
-      href: hierarchicalGrid/toolbar.md
+      href: hierarchicalgrid/toolbar.md
       new: true
     - name: 複数列ヘッダー
-      href: hierarchicalGrid/multi_column_headers.md
+      href: hierarchicalgrid/multi_column_headers.md
       new: true
     - name: 表示密度
-      href: hierarchicalGrid/display_density.md
+      href: hierarchicalgrid/display_density.md
       new: true
     # - name: 条件付きセルのスタイル設定
-    #   href: hierarchicalGrid/conditional_cell_styling.md
+    #   href: hierarchicalgrid/conditional_cell_styling.md
     #   new: true
 - name: List View
   href: list.md
