@@ -1,9 +1,10 @@
-﻿---
+---
 title: Radial Gauge コンポーネント - ネイティブ Angular | Ignite UI for Angular
 _description: Ignite UI for Angular の Radial Gauge コンポーネントは、針、目盛り、範囲、およびラベルなどの視覚要素を提供し、定義済みの図形およびスケールを表示できます。
 _keywords: Ignite UI for Angular, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular グリッド, Angular データグリッド, Angular グリッドコントロール, Angular グリッドコンポーネント, Angular ラジアル ゲージ コンポーネント, Angular ラジアル ゲージ
 _language: ja
 ---
+
 ## Radial Gauge
 
 Ignite UI for Angular の Radial Gauge コンポーネントは、針、目盛り、範囲、ラベルなどの視覚要素をサポートし、定義済みの図形およびスケールを表示できます。
@@ -28,13 +29,13 @@ Ignite UI for Angular の Radial Gauge コンポーネントは、針、目盛�
 
 gauges パッケージをインストールするときに core パッケージもインストールする必要があります。
 
-`npm install ignite-angular-gauges ignite-angular-core`
+`npm install igniteui-angular-gauges ignite-angular-core`
 
 ラジアル ゲージが `NgModule` としてエクスポートされるため、アプリケーションで `AppModule` に _IgxRadialGaugeModule_ をインポートする必要があります。
 
 ```typescript
 // app.module.ts
-import { IgxRadialGaugeModule } from 'ignite-angular-gauges/ES5/igx-radial-gauge-module';
+import { IgxRadialGaugeModule } from 'igniteui-angular-gauges/ES5/igx-radial-gauge-module';
 
 @NgModule({
     imports: [
@@ -139,6 +140,7 @@ export class AppModule {}
 </div>
 
 ### ラベル
+
 ゲージ ラベルは `minimumValue` と `maximumValue` の値の間で指定された間隔で数値を表示する視覚要素です。0 はゲージ中央、1 はゲージ バッキングの外側範囲を表す `labelExtent` プロパティで小数を使用してラベルの配置を設定できます。`fontBrush` や `font` など、さまざまなスタイル プロパティを設定してラベルをカスタマイズできます。
 
 ```html
@@ -163,6 +165,7 @@ export class AppModule {}
 </div>
 
 ### 目盛
+
 目盛は、ラジアル ゲージの中央から放射状に表示される細い線です。目盛には、主目盛および副目盛の 2 種類があり、主目盛りは `minimumValue` と `maximumValue` の間の `interval` に表示されます。また`minorTickCount` プロパティは、隣接する 2 つの主目盛間の副目盛の数を指定します。目盛りの長さは、`tickStartExtent`、`tickEndExtent`、 `minorTickStartExtent`、`minorTickEndExtent` に少数値 (0 から 1 の間) を設定して制御できます。
 
 ```html
@@ -193,6 +196,7 @@ export class AppModule {}
 </div>
 
 ### 範囲
+
 範囲に `minimumValue` や `maximumValue` プロパティで指定した連続値の境界を強調表示します。開始値と終了値を指定してゲージに複数の範囲を追加でき、各範囲には、`brush` や `outline` などのカスタマイズ プロパティがあります。または、`rangeBrushes` や `rangeOutlines` プロパティを範囲の色リストに設定することもできます。
 
 ```html
@@ -224,6 +228,7 @@ export class AppModule {}
 </div>
 
 ### 針
+
 ゲージ針は、ゲージの設定値を示す視覚要素です。針は、あらかじめ定義されたいくつかの図形の中から選択でき、ピボット図形をゲージの中心に配置できます。またピボット図形は、事前に定義された図形の 1 つを使用します。オーバーレイとアンダーレイを含むピボット図形には、図形に適用する別のピボット ブラシがあります。
 
 サポートされている針の形とキャップは、`needleShape` と `needlePivotShape` プロパティで設定します。
@@ -260,6 +265,7 @@ export class AppModule {}
 </div>
 
 ### まとめ
+
 上記すべてのコード スニペットを以下のコード ブロックにまとめています。プロジェクトに簡単にコピーしてブレットグラフのすべての機能を再現できます。
 
 ```html

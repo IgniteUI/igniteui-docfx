@@ -1,12 +1,13 @@
-﻿---
+---
 title: Financial Chart - カスタム インジケーター
 _description: Ignite UI for Angular Financial Chart コンポーネントは簡易な API を使用してファイナンシャル データを表示できます。ユーザーがデータにバインド後にチャートがデータの可視化オプションを複数提供します。
 _keywords: Ignite UI for Angular, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular チャート, Angular チャート コントロール, Angular チャート例, Angular チャート コンポーネント, Angular Financial Chart
 _language: ja
 ---
+
 ## カスタム インジケーター
 
-`igx-financial-chart` コントロールでは、インジケーター ペインに表示するカスタム財務指標を定義できます。
+`IgxFinancialChart` コントロールでは、インジケーター ペインに表示するカスタム財務指標を定義できます。
 
 ### デモ
 
@@ -20,7 +21,7 @@ _language: ja
 
 <div class="divider--half"></div>
 
-`igx-financial-chart` でカスタム財務指標を有効にするには、`customIndicatorNames` プロパティに名前を追加し、`applyCustomIndicators` イベントで計算を実行します。
+`IgxFinancialChart` でカスタム財務指標を有効にするには、`customIndicatorNames` プロパティに名前を追加し、`applyCustomIndicators` イベントで計算を実行します。
 
 以下のコード例は、2 つのカスタム インジケーターを設定して計算する方法を紹介します。単純移動平均 (SMA) およびランダム値を表示するインジケーターを使用します。
 
