@@ -140,6 +140,9 @@
     - name: 조건부 셀 스타일
       href: treeGrid/conditional_cell_styling.md
       new: false
+    - name: Aggregations 
+      href: treeGrid/aggregations.md
+      new: false
 - name: Hierarchical Grid
   href: hierarchicalGrid/hierarchical_grid.md
   new: true
