@@ -4,28 +4,32 @@ _description: The Ignite UI for Excel Library component with Sparkline support.
 _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Excel Library, Angular Excel Library Example, Angular Excel Library Component, Angular Excel Engine, Sparkline
 _language: ja
 ---
-## スパークラインの使用
+
+## Excel Library - スパークライン
 
 このトピックでは、データ トレンドを視覚的に表すために Infragistics Excel Library を使用して Excel® ワークシート (.xlsx) にスパークラインを追加する方法を表します。スパークラインでデータでの変更を簡単にビジュアル化できます。スパークラインはワークシート内のセル内にどこでも配置できます。 
 
 ### デモ
+
 <div class="sample-container" style="height: 500px">
-    <iframe id="excel-library-overview-sample-iframe" src='{environment:demosBaseUrl}/excel-library/working-with-sparklines' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="excel-library-overview-sample-iframe" 
+	src='{environment:demosBaseUrl}/excel-library/working-with-sparklines' 
+	width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <!-- TODO uncomment when Stackblitz is ready for EXCEL
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="excel-library-working-with-sparklines-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示
-    </button> -->
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="excel-library-working-with-sparklines-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+    </button> 
 </div> 
 
 <div class="divider--half"></div>
 
 ### サポートされるスパークライン
+
 以下はサポートされる定義済スパークラインのタイプです。
 
--  折れ線チャート
--  柱状チャート
--  Win/Loss チャート
+-   折れ線チャート
+-   柱状チャート
+-   Win/Loss チャート
 
 以下のコードは、sparklineGroups コレクションを使用してスパークラインをワークシートへ追加する方法を示します。
 
@@ -36,5 +40,4 @@ var sheet2 = workbook.worksheets().add("Data");
 sheet1.sparklineGroups().add($.ig.excel.SparklineType.Line, "Sparklines!A1:A1", "Data!A2:A11"); 
 sheet1.sparklineGroups().add($.ig.excel.SparklineType.Column, "Sparklines!B1:B1", "Data!A2:A11"); 
 workbook.save(workbook, "Sparklines.xlsx");
-
 ```
