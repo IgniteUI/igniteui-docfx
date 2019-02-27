@@ -90,7 +90,7 @@ Filtering feature is enabled for the @@igComponent component by setting the [`al
 }
 
 > [!NOTE]
-> If values of type `string` are used by column of dataType `Date`, the @@igComponent won't parse them to `Date` objects and using filtering conditions won't be possible. If you want to use `string` objects, additional logic should be implemented on the application level, in order to parse the values to `Date` objects.
+> If values of type `string` are used by a column of dataType `Date`, the @@igComponent won't parse them to `Date` objects and using filtering conditions won't be possible. If you want to use `string` objects, additional logic should be implemented on the application level, in order to parse the values to `Date` objects.
 
 You can filter any column or a combination of columns through the @@igComponent API. The @@igComponent exposes several methods for this task - [`filter`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filter), [`filterGlobal`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filterglobal) and [`clearFilter`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#clearfilter).
 
