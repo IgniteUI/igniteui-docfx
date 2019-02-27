@@ -8,14 +8,14 @@ _language: ja
 
 ポジション ストラテジーは、IgxOverlayService のコンポーネントを表示する位置を決定する方法が 3 通りあります。
 
-1. **Global** - [`positionSettings`] ({environment:angularApiUrl}/interfaces/positionsettings.html)を介して渡される方向に基づいて要素を配置します。[`verticalDirection`] ({environment:angularApiUrl}/interfaces/positionsettings.html#verticaldirection) には Top/Middle/Bottom、 [`horizontalDirection`] ({environment:angularApiUrl}/interfaces/positionsettings.html#horizontaldirection) には Left/Center/Right があります。
+1. **Global** - [`positionSettings`]({environment:angularApiUrl}/interfaces/positionsettings.html)を介して渡される方向に基づいて要素を配置します。[`verticalDirection`]({environment:angularApiUrl}/interfaces/positionsettings.html#verticaldirection) には Top/Middle/Bottom、 [`horizontalDirection`]({environment:angularApiUrl}/interfaces/positionsettings.html#horizontaldirection) には Left/Center/Right があります。
 
     | horizontalDirection        | verticalDirection        |
     |:---------------------------|:-------------------------|
     | HorizontalAlignment.Center | VerticalAlignment.Middle |
 <div class="divider"></div>
 
-2. **Connected** - [`positionSettings`] ({environment:angularApiUrl}/interfaces/positionsettings.html) を介して渡される方向と開始点に基づいて要素を配置します。開始ポイント ([`Point`] ({environment:angularApiUrl}/classes/point.html) 型) または配置ベースとして `HTMLElement` を渡すことができます。以下はデフォルトの設定です。
+2. **Connected** - [`positionSettings`]({environment:angularApiUrl}/interfaces/positionsettings.html) を介して渡される方向と開始点に基づいて要素を配置します。開始ポイント ([`Point`]({environment:angularApiUrl}/classes/point.html) 型) または配置ベースとして `HTMLElement` を渡すことができます。以下はデフォルトの設定です。
 
     | target          | horizontalDirection       |  verticalDirection       | horizontalStartPoint     | verticalStartPoint       |
     |:----------------|:--------------------------|:-------------------------|:-------------------------|:-------------------------|
@@ -44,29 +44,42 @@ _language: ja
 > [!NOTE]
 > オーバーレイ要素はサイズ変更**されます**が配置ストラテジは `overflow` をハンドルしません。たとえば、サイズ変更時の要素に `overflow-y` が必要な場合、適切なスタイルを組み込んで提供します。 
 
+## 使用方法
+既存のボタンを基にターゲットとして要素を配置することにより、始点がボタンの下または左角になります。
+```typescript
+const positionSettings: PositionSettings = {
+    target: buttonElement.nativeElement,
+    horizontalDirection: HorizontalAlignment.Right,
+    verticalDirection: VerticalAlignment.Bottom,
+    horizontalStartPoint: HorizontalAlignment.Left,
+    verticalStartPoint: VerticalAlignment.Bottom
+};
+
+const strategy = new ConnectedPositioningStrategy(positionSettings);
+strategy.position(contentWrapper, size);
+```
 
 ### 作業の開始
-ポジション ストラテジーは、[`overlay.show()`] ({environment:angularApiUrl}/classes/igxoverlayservice.html#show) メソッドが呼ばれたときに [`overlaySettings`] ({environment:angularApiUrl}/interfaces/overlaysettings.html) パラメーターのプロパティとして渡されます。
+ポジション ストラテジーは、[`overlay.attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) メソッドが呼ばれたときに [`overlaySettings`] ({environment:angularApiUrl}/interfaces/overlaysettings.html) パラメーターのプロパティとして渡されます。
 
 ```typescript
     // Initializing and using overlay settings
     const overlaySettings: OverlaySettings = {
-        positionStrategy: new GlobalPositionStrategy(),
+        positionStrategy: new GlobalPositionStrategy(), // Passes the positioning strategy
         scrollStrategy: new AbsoluteScrollStrategy(),
         modal: true,
         closeOnOutsideClick: true
     }
-    overlay.show(dummyElement, overlaySettings); 
+    const overlayId = overlay.attach(dummyElement, overlaySettings); 
 ``` 
 <div class="divider"></div>
 
-オーバーレイで使用するポジション ストラテジーの変更は、オーバーレイに渡される [`overlaySettings`] ({environment:angularApiUrl}/interfaces/overlaysettings.html) オブジェクトの [`positionStrategy`] ({environment:angularApiUrl}/interfaces/ipositionstrategy.html) プロパティをオーバーライドします。
-
+オーバーレイで使用するポジション ストラテジーの変更は、オーバーレイに渡される [`overlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) オブジェクトの [`positionStrategy`]({environment:angularApiUrl}/interfaces/ipositionstrategy.html) プロパティをオーバーライドします。
 ```typescript
     // overlaySettings is an existing object of type OverlaySettings
     // to override the position strategy
     const positionStrategy = new AutoPositionStrategy();
-    overlay.show(dummyElement, { positionStrategy }); 
+    overlay.show(overlayId, { positionStrategy }); 
 ```
 <div class="divider"></div>
 
@@ -81,7 +94,7 @@ _language: ja
         horizontalStartPoint: HorizontalAlignment.Left,
         horizontalDirection: HorizontalAlignment.Left
     });
-    overlay.show(dummyElement, overlaySettings);
+    overlay.show(overlayId, overlaySettings);
     // the element will now start to the left of the target (dimmyHTMLElement)
     // and will align itself to the left
 ```
@@ -131,7 +144,7 @@ export class MyExampleOverlayComponent {
 ```
 
 ### 水平または垂直開始点
-配置設定で水平開始点または垂直開始点を設定すると、コンテンツの開始位置を決定します。開始ポイントは [`positionSettings`] ({environment:angularApiUrl}/interfaces/positionsettings.html) に渡された [`target`] ({environment:angularApiUrl}/interfaces/positionsettings.html#target) が `HTMLElement` の場合のみ効果があり、[`AutoPositionStrategy`] ({environment:angularApiUrl}/classes/autopositionstrategy.html)、[`ElasticPositionStrategy`] ({environment:angularApiUrl}/classes/elasticpositionstrategy.html)、[`ConnectedPositioningStrategy`] ({environment:angularApiUrl}/classes/connectedpositioningstrategy.html) でのみ使用できます。
+配置設定で水平開始点または垂直開始点を設定すると、コンテンツの開始位置を決定します。開始ポイントは [`positionSettings`]({environment:angularApiUrl}/interfaces/positionsettings.html) に渡された [`target`]({environment:angularApiUrl}/interfaces/positionsettings.html#target) が `HTMLElement` の場合のみ効果があり、[`AutoPositionStrategy`] ({environment:angularApiUrl}/classes/autopositionstrategy.html)、[`ElasticPositionStrategy`]({environment:angularApiUrl}/classes/elasticpositionstrategy.html)、[`ConnectedPositioningStrategy`] ({environment:angularApiUrl}/classes/connectedpositioningstrategy.html) でのみ使用できます。
 以下のデモで、オーバーレイ要素は選択した開始点に基づいてターゲット要素に配置します。方向は常に [`HorizontalAlignment.Right`] ({environment:angularApiUrl}/enums/horizontalalignment.html#right)、[`VerticalAlignment.Bottom`] ({environment:angularApiUrl}/enums/verticalalignment.html#bottom) です。
 
 <div class="sample-container loading" style="height: 400px">
@@ -145,4 +158,4 @@ export class MyExampleOverlayComponent {
 
 ## API
 
-* [`IPositionStrategy`] ({environment:angularApiUrl}/interfaces/ipositionstrategy.html)
+* [`IPositionStrategy`]({environment:angularApiUrl}/interfaces/ipositionstrategy.html)
