@@ -382,7 +382,7 @@ The last step will be to declare our template for the gird.
 </igx-hierarchical-grid>
 ```
 }
-This is absolutely enough if we want up and running sample. But we can extend this sample even more by adding an option to change our paging template run time. Let's see how we can achieve that. First we will start by adding one more paging template in our template:
+This is absolutely enough if we want an up and running sample. But we can extend this sample even more by adding an option to change our paging template at run time. Let's see how we can achieve that. First we will start by adding one more paging template in our template:
 
 ```html
 <ng-template #secCustomPager let-api>
@@ -403,19 +403,19 @@ This is absolutely enough if we want up and running sample. But we can extend th
 After that we need to extend the methods that we have already created with some additional logic:
 
 ```typescript
-// same applies and for the methods previousPage() and paginate(page: number, recalc: true)
+// the same also applies for the methods previousPage() and paginate(page: number, recalc: true)
 public nextPage() {
     ...
     if (this.grid1.paginationTemplate === this.secondPagerTemplate) {
         this.setNumberOfPagingItems(this.page, this.totalPages);
     }
 }
-// creates array with the visible page numbers where the user can navigate according the current page and the total page number
+// creates an array with the visible page numbers where the user can navigate according to the current page and the total page number
 public setNumberOfPagingItems(currentPage, totalPages) {
     ....
 }
 ```
-And finally we need to add a button which allows the user to change the pager template run time:
+And finally we need to add a button which allows the user to change the pager template at run time:
 
 ```html
     <button (click)="changeTemplate()" class='changeBtn' igxButton="flat" igxButtonColor="#09f" igxButtonBackground="#dadada"> Change Paging Template</button>
@@ -457,7 +457,7 @@ After all the changes above, the following result will be achieved.
 <div class="divider--half"></div>
 }
 
-If you want your sample to look exactly like this one do not forget to apply the custom paging theme:
+If you want your sample to look exactly like this one, do not forget to apply the custom paging theme:
 
 ```css
 @import '~igniteui-angular/lib/core/styles/themes/index';
