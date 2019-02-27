@@ -83,7 +83,7 @@
   href: treeGrid/tree_grid.md
   new: true
   items:
-    - name: Aggregations 
+    - name: 集計
       href: treeGrid/aggregations.md
       new: false
 - name: List View
