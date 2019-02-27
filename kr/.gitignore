@@ -24,3 +24,4 @@ components/hierarchicalGrid/*.md
 
 # All hierarchical grid specific files that should NOT be ignored:
 !components/hierarchicalGrid/hierarchical_grid.md
+!components/hierarchicalGrid/load_on_demand.md

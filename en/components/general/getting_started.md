@@ -126,7 +126,7 @@ ig start
 
 #### Import modules
 
-First we have to import the respective modules of the components we want to use in the **app.module.ts** file. We will go ahead and do this for the [**igxGrid**](../grid.md)! Please note that some components have animations depending on BrowserAnimationsModule, so let’s import that one as well:
+First we have to import the respective modules of the components we want to use in the **app.module.ts** file. We will go ahead and do this for the [**igxGrid**](../grid/grid.md)! Please note that some components have animations depending on BrowserAnimationsModule, so let’s import that one as well:
 
 ```typescript
 // app.module.ts
@@ -230,7 +230,7 @@ In this article we learned how to create our own Ignite UI for Angular applicati
 
 * [`Ignite UI CLI`](https://github.com/IgniteUI/igniteui-cli)
 * [`Ignite UI CLI Commands`](https://github.com/IgniteUI/igniteui-cli/wiki#available-commands)
-* [`Grid overview`](../grid.md)
+* [`Grid overview`](../grid/grid.md)
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.
