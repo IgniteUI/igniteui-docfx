@@ -1,4 +1,4 @@
-﻿- name: 概要
+- name: 概要
   header: true
 - name: 作業の開始
   href: general/getting_started.md

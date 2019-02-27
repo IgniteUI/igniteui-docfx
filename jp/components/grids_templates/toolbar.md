@@ -1,7 +1,7 @@
 ﻿---
 title: グリッド ツールバー コンポーネント - ネイティブ Angular | Ignite UI for Angular
 _description: Ignite UI for Angular Grid ツールバー コンポーネントは、IgxGrid 機能 UI コントロールを一元管理できます。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, ネイティブ Angular コンポーネント, Angular Grid, Angular Data Grid コンポーネント, Angular Data Grid コントロール, Angular Grid コンポーネント, Angular Grid コントロール, Angular 高いパフォーマンス Grid, Angular Data Grid ツールバー, Grid ツールバー, Angular Grid ツールバー, excel エクスポート, グリッド列非表示選択, グリッド列ピン固定選択
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, ネイティブ Angular コンポーネント, Angular Grid, Angular Table, Angular Data Grid コンポーネント, Angular Data Table コンポーネント, Angular Data Grid コントロール, Angular Data Table コントロール, Angular Grid コンポーネント, Angular Table コンポーネント, Angular Grid コントロール, Angular Table コントロール, Angular 高パフォーマンス Grid, Angular 高パフォーマンス Data Table, Angular Data Grid ツールバー, Angular Data Table ツールバー, Grid ツールバー, Angular Grid ツールバー, Angular Table ツールバー, Excel エクスポート, grid 列非表示選択, grid 列ピン固定選択, data table 列非表示, data table 列ピン固定
 _language: ja
 ---
 
