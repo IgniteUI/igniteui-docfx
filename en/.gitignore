@@ -10,8 +10,8 @@ _site
 .vscode
 
 components/grid/*.md
-components/treeGrid/*.md
-components/hierarchicalGrid/*.md
+components/treegrid/*.md
+components/hierarchicalgrid/*.md
 
 # All grid specific files that should NOT be ignored:
 !components/grid/grid.md
@@ -19,9 +19,9 @@ components/hierarchicalGrid/*.md
 !components/grid/paste_excel.md
 
 # All tree grid specific files that should NOT be ignored:
-!components/treeGrid/tree_grid.md
-!components/treeGrid/aggregations.md
+!components/treegrid/tree_grid.md
+!components/treegrid/aggregations.md
 
 # All hierarchical grid specific files that should NOT be ignored:
-!components/hierarchicalGrid/hierarchical_grid.md
-!components/hierarchicalGrid/load_on_demand.md
+!components/hierarchicalgrid/hierarchical_grid.md
+!components/hierarchicalgrid/load_on_demand.md
