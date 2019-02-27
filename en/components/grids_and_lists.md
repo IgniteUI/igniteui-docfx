@@ -292,7 +292,7 @@ _keywords: angular data grid,infragistics, infragistics.com
   <div class="feature">
     <div class="feature__image feature__image--left">
       <img class="b-lazy" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-lazy-load.png" data-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-keyboard-navigation-768.gif" data-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-keyboard-navigation-480.gif 480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-keyboard-navigation-768.gif 768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-keyboard-navigation-1100.gif 1100w" sizes="(min-width: 1800px) 575px,(max-width: 1799px) and (min-width: 1200px) 50vw,(max-width: 1199px) and (min-width: 992px) 33vw,(max-width: 991px) and (min-width: 768px) 50vw, 100vw" alt="Angular Grid with keyboard navigation for keyboard, touch, and mouse">
-      <a href="grid.md#data-grid" class="feature__more-details">Improve accessibility for your Grid with Keyboard Navigation</a>
+      <a href="grid/grid.md#data-grid" class="feature__more-details">Improve accessibility for your Grid with Keyboard Navigation</a>
     </div>
     <div class="feature__details">
       <h3 id="keyboard-navigation">[Keyboard Navigation](grid/grid.md#data-grid)</h3>

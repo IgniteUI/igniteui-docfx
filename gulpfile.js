@@ -58,7 +58,8 @@ gulp.task('serve', ['build'], () => {
         `${DOCFX_ARTICLES}/grid/paste_excel.md`,
         `${DOCFX_ARTICLES}/treeGrid/tree_grid.md`,
         `${DOCFX_ARTICLES}/treeGrid/aggregations.md`,
-        `${DOCFX_ARTICLES}/hierarchicalGrid/hierarchical_grid.md`
+        `${DOCFX_ARTICLES}/hierarchicalGrid/hierarchical_grid.md`,
+        `${DOCFX_ARTICLES}/hierarchicalGrid/load_on_demand.md`
     ];
 
     gulp.watch(`${DOCFX_TEMPLATE}/**/*`, ['watch']);

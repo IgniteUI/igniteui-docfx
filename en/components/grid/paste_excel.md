@@ -4,11 +4,11 @@ _description: Users can paste data into igxGrid that is copied from Excel.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Controls, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Grid, Angular Data Grid, Angular Grid Control, Angular Grid Component, Paste from Excel, Angular Paste from Excel
 ---
 
-## Paste from Excel
+### Paste from Excel
 
 The Ignite UI for Angular [`IgxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) can read Excel data that is copied to the clipboard. In this section we will show you how to do this with some custom code.
 
-### Paste from Excel Demo
+#### Paste from Excel Demo
 
 This sample demonstrates how to implement pasting from Excel into the [`igxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html).
 To work with the sample open up any Excel spreadsheet, copy some rows, and paste it into the grid using the keyboard (Ctrl + V, Shift + Insert, Command + V).
@@ -31,7 +31,7 @@ The new data after the paste is decorated in Italic.
 </div>
 <div class="divider"></div>
 
-### Usage
+#### Usage
 
 You should add the `paste-handler` directive (you can find its code in the next section) to the [`igxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) and handle its `onDataProcessed` event. The `onDataProcessed` event has one parameter that gives you access to the Excel data in the form of an array. For reference see the `addRecords` and `updateRecords` methods.
 
@@ -136,7 +136,7 @@ You should add the `paste-handler` directive (you can find its code in the next 
 ```
 <div class="divider"></div>
 
-### Paste Handler Directive
+#### Paste Handler Directive
 
 This is the `paste-handler` implementation. The code creates a DOM `textarea` element which is used to receive the pasted data from the clipboard. When the data is pasted in the `textarea` the directive parses it into an array and then emits a custom event `onDataProcessed` passing the parsed data.
 
@@ -219,13 +219,13 @@ export class PasteHandler {
 
 ```
 
-## API
+### API References
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
 
-## Additional Resources
+### Additional Resources
 <div class="divider--half"></div>
 
-* [Excel Exporter](../exporter_excel.md)
+* [Excel Exporter](export_excel.md)
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.
