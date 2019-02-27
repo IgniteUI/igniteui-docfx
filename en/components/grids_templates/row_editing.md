@@ -285,8 +285,9 @@ export class HGridRowEditingSampleComponent implements OnInit {
 
 - Summaries will be updated after row edit is finished. Same is valid for the other features like sorting, filtering, etc.
 
+@@if (igxName === 'IgxGrid') {
 - Expanding and collapsing grouped rows will not terminate editing for the current row.
-
+}
 
 ### Customizing Row Editing Overlay
 
