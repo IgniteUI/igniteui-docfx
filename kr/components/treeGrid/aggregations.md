@@ -1,32 +1,32 @@
-﻿---
-title: Tree Grid 集計 - ネイティブ Angular | Ignite UI for Angular
+---
+title: Tree Grid Aggregations - Native Angular | Ignite UI for Angular
 _description: With the Ignite UI for Angular Tree Grid aggregations, see the data grouped and aggregated.
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, ネイティブ Angular コンポーネント, Angular Tree Grid, Angular Tree Grid コンポーネント, Angular Tree Grid コントロール, Angular 高パフォーマンス Tree Grid, 集計, Summary, Aggregate, 集約
-_language: ja
+_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Component, Angular Tree Grid, Angular Tree Grid component, Angular Tree Grid control, Angular High Performance Tree Grid, Summaries, Summary, Aggregate, Aggregations
+_language: kr
 ---
 
-### Tree Grid 集計
-階層以外のデータ列を**グループ化**し、**集計値**で親行を生成する場合、以下のデモと [`IgxTreeGridComponent`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html) を使用します。
+### Tree Grid Aggregations
+If you have non-hierarchical data and you want to **group by** one or more columns and populate the parent rows with **aggregated values**, you could use the [`IgxTreeGridComponent`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html) and a custom implementation like in the demo below.
 
-#### デモ
+#### Demo
 
 <div class="sample-container loading" style="height:850px">
     <iframe id="treegrid-finjs-iframe" src='{environment:demosBaseUrl}/treegrid-finjs-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-finjs-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-finjs-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
 
 > [!NOTE]
-> このサンプルは [`IgxTreeGridComponent`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html) には含まれていないカスタム ロジックを使用します。[`IgxGridComponent`]({environment:angularApiUrl}/classes/igxgridcomponent.html) のグループ化や集計機能と同様ですが、集計行内ではなく、集計データが親行に表示されます。
+> The sample contains custom logic which is not built in the [`IgxTreeGridComponent`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html). It is similar to the grouping and summaries features of the [`IgxGridComponent`]({environment:angularApiUrl}/classes/igxgridcomponent.html), but instead inside separate summary rows, the calculated data is displayed inside the parent rows.
 
-#### 実装
+#### Implementation
 
-このサンプルで、`TreeGridGroupingPipe` のパイプ クラスを作成し、階層データを **Category**、**Type** および **Contract** フィールドで並べ替えます。並べ替え後の階層は新しく作成された **Categories** 列に表示されます。パイプは **Price**、**Change** および **Change(%)** 列の生成された親行の集計値を計算します。パイプの詳細については、`tree-grid-grouping.pipe.ts` ファイルの `TreeGridGroupingPipe` クラスを参照してください。パイプは完全なカスタマイズが可能でカスタム プロジェクトに使用できます。
+In this sample we have created a pipe class called `TreeGridGroupingPipe` which groups the tabular data by the **"Category"**, **"Type"** and **"Contract"** fields. The resulting hierarchy is displayed in the newly created **"Categories"** column. The pipe also calculates aggregated values for the generated parent rows for the **"Price"**, **"Change"** and **"Change(%)"** columns. For more information on how this pipe works you can take a look at the `TreeGridGroupingPipe` class in the `tree-grid-grouping.pipe.ts` file. The pipe is completely configurable so you could copy and re-use it in your own project.
 
-以下はテンプレートでパイプを使用した例です。
+Here is an example of how to use the pipe in the template:
 
 ```html
 <igx-tree-grid #grid1 
@@ -35,12 +35,12 @@ _language: ja
     <igx-column [field]="groupColumnKey" [width]="'180px'" [sortable]='true' [resizable]='true' [disableHiding]="true"></igx-column>
 ```
 
-以下の引数です。
-- groupColumns - 階層の生成に使用されるフィールドを含む文字列の配列。
-- aggregations - 集計引数の情報を含む `ITreeGridAggregation` オブジェクトの配列。
-- groupColumnKey - 生成された階層列の名前の文字列値。
-- primaryKey - プライマリ キー フィールドのための文字列値。
-- childDataKey - 生成された親行の子コレクションが保存されるフィールドのための文字列値。
+The pipe arguments are the following:
+- groupColumns - an array of string values which contains the fields used to generate the hierarchy
+- aggregations - an array of `ITreeGridAggregation` objects which contains information about the aggregation functions
+- groupColumnKey - a string value for the name of the generated hierarchy column
+- primaryKey - a string value for the primary key field
+- childDataKey - a string value for the field where the child collection of the generated parent rows is stored
 
 ```typescript
 public groupColumns = ["Category", "Type", "Contract"];
@@ -69,26 +69,26 @@ public childDataKey = "Children";
 public groupColumnKey = "Categories";
 ```
 
-### API リファレンス
+### API References
 
 <div class="divider--half"></div>
 
 * [IgxTreeGridComponent]({environment:angularApiUrl}/classes/igxtreegridcomponent.html)
 * [IgxGridComponent Styles]({environment:sassApiUrl}/#function-igx-grid-theme)
 
-### その他のリソース
+### Additional Resources
 
 <div class="divider--half"></div>
 
-* [TreeGrid 概要](tree_grid.md)
-* [TreeGrid 集計](summaries.md)
-* [Grid 集計](../grid/summaries.md)
+* [TreeGrid overview](tree_grid.md)
+* [TreeGrid Summaries](summaries.md)
+* [Grid Summaries](../grid/summaries.md)
 
 <div class="divider--half"></div>
-コミュニティに参加して新しいアイデアをご提案ください。
+Our community is active and always welcoming to new ideas.
 
-* [**Ignite UI for Angular フォーラム (英語) **](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [**Ignite UI for Angular GitHub (英語) **](https://github.com/IgniteUI/igniteui-angular)
+* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
 
 
 
