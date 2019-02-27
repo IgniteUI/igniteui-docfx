@@ -1,14 +1,16 @@
-﻿---
+---
 title: 컨피규레이터 옵션
 _description: Ignite UI for 카테고리 차트 컴포넌트는 데이터 시각화 도메인의 복잡성을 관리 가능한 API로 단순화하여 사용자가 데이터 수집, 그룹 수집, 데이터 속성을 바인딩하고 나머지는 차트 컨트롤이 실행할 수 있도록 합니다.
 _keywords: Ignite UI for Angular, Angular, 네이티브 Angular 컴포넌트 세트, 네이티브 Angular 컨트롤, 네이티브 Angular 컴포넌트, 네이티브 Angular 컴포넌트 라이브러리, Angular 차트, Angular 차트 컨트롤, Angular 차트 예제, Angular 그리드 컴포넌트, Angular 차트 컴포넌트, Angular 카테고리 차트
 _language: kr
 ---
+
 ## 컨피규레이터 옵션
 
 마커, 차트 제목 및 부제, 차트 유형 등 카테고리 차트를 사용자 지정이 가능합니다.
 
 ### 데모
+
 <div class="sample-container" style="height: 550px">
     <iframe id="category-chart-config-options-sample-iframe" src='{environment:demosBaseUrl}/charts/category-chart-config-options-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -57,7 +59,6 @@ _language: kr
 차트에 제목 또는 부제를 추가하면 제목 및 부제 정보에 대해 자동으로 차트 내용의 크기가 조정되도록 허용됩니다.
 
 다음의 코드 예제와 같이 다른 글꼴 스타일, 여백 및 정렬을 적용하는 등 다양한 방법으로 카테고리 차트의 부제 및 제목의 모양과 느낌을 사용자 지정할 수 있습니다.
-
 
 ```html
 <igx-category-chart

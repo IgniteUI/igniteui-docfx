@@ -1,12 +1,13 @@
 ---
-title: Bullet Graph Component - Native Angular | Ignite UI for Angular
+title: Bullet Graph Component - Angular | Ignite UI for Angular
 _description: The Bullet Graph Component in Ignite UI for Angular allows for a linear and concise view of measures compared against a scale.
 _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Data Grid, Angular Chart Control, Angular Grid Component, Angular data grid Bullet graph component example, Angular bullet graph
 _language: kr
 ---
+
 ## Bullet Graph
 
-The Bullet Graph Component in Ignite UI for Angular allows for a linear and concise view of measures compared against a scale.
+The Bullet Graph Component allows for a linear and concise view of measures compared against a scale.
 
 ### Demo
 
@@ -18,7 +19,7 @@ The following sample demonstrates how setting multiple properties on the same ga
     <iframe id="bullet-graph-sample-iframe" src='{environment:demosBaseUrl}/gauges/bullet-graph-animation' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="bullet-graph-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="bullet-graph-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
     </button>
 </div>
 
@@ -28,15 +29,22 @@ This gauge supports one scale, one set of tick marks and one set of labels. The 
 The features of the bullet graph include configurable orientation and direction, configurable visual elements such as the needle, and more.
 
 ### Dependencies
-When installing the gauges package, the core package must also be installed.
 
-**npm install ignite-angular-gauges ignite-angular-core**
+When installing the gauge package, the core package must also be installed.
 
-The bullet graph is exported as an `NgModule`, you need to import the _IgxBulletGraphModule_ inside your `AppModule`:
+**npm install igniteui-angular-gauges igniteui-angular-core**
+
+The bullet graph is exported as an `NgModule`, you need to import the 
+`IgxBulletGraphModule` inside your `AppModule`:
+
+<!-- -->
+
+<!-- -->
 
 ```typescript
 // app.module.ts
-import { IgxBulletGraphModule } from 'ignite-angular-gauges/ES5/igx-bullet-graph-module';
+import { IgxBulletGraphModule } from 'igniteui-angular-gauges/ES5/igx-bullet-graph-module';
+import { IgxBulletGraph } from 'igniteui-angular-gauges/ES5/igr-bullet-graph';
 
 @NgModule({
     imports: [
@@ -53,7 +61,6 @@ export class AppModule {}
 ### Usage
 
 The following code walks through creating a bullet graph component, and configuring a performance bar, comparative measure marker, and three comparative ranges on the scale.
-
 
 ```html
  <igx-bullet-graph height="100"
@@ -79,6 +86,7 @@ The following code walks through creating a bullet graph component, and configur
 ## Configurable Elements
 
 ### Comparative Measures
+
 The bullet graph can show two measures: performance value and target value.
 
 Performance value is the primary measure displayed by the component and it is visualized as a bar that stretches along the length of the whole graph. The target value is a measure which the performance value compares against. It is displayed as a small block that runs perpendicular to the orientation of the performance bar.
@@ -107,11 +115,12 @@ Performance value is the primary measure displayed by the component and it is vi
     <iframe id="bullet-graph-measures-iframe" src='{environment:demosBaseUrl}/gauges/bullet-graph-measures' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="bullet-graph-measures-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="bullet-graph-measures-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
     </button>
 </div>
 
 ### Comparative Ranges
+
 The ranges are visual elements that highlight a specified range of values on a scale. Their purpose is to visually communicate the qualitative state of the performance bar measure, illustrating at the same time the degree to which it resides within that state.
 
 ```html
@@ -143,14 +152,16 @@ The ranges are visual elements that highlight a specified range of values on a s
     <iframe id="bullet-graph-ranges-iframe" src='{environment:demosBaseUrl}/gauges/bullet-graph-ranges' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="bullet-graph-ranges-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="bullet-graph-ranges-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
     </button>
 </div>
 
 ### Tick Marks
+
 The tick marks serve as a visual division of the scale into intervals in order to increase the readability of the bullet graph.
-- Major tick marks – The major tick marks are used as primary delimiters on the scale. The frequency they appear at, their extents and style can be controlled by setting their corresponding properties.
-- Minor tick marks – The minor tick marks represent helper tick marks, which might be used to additionally improve the readability of the scale and can be customized in a way similar to the major ones.
+
+-   Major tick marks – The major tick marks are used as primary delimiters on the scale. The frequency they appear at, their extents and style can be controlled by setting their corresponding properties.
+-   Minor tick marks – The minor tick marks represent helper tick marks, which might be used to additionally improve the readability of the scale and can be customized in a way similar to the major ones.
 
 ```html
 <igx-bullet-graph
@@ -176,11 +187,12 @@ The tick marks serve as a visual division of the scale into intervals in order t
     <iframe id="bullet-graph-tickmarks-iframe" src='{environment:demosBaseUrl}/gauges/bullet-graph-tickmarks' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="bullet-graph-tickmarks-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="bullet-graph-tickmarks-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
     </button>
 </div>
 
 ### Labels
+
 The labels indicate the measures on the scale.
 
 ```html
@@ -201,11 +213,12 @@ The labels indicate the measures on the scale.
     <iframe id="bullet-graph-labels-iframe" src='{environment:demosBaseUrl}/gauges/bullet-graph-labels' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="bullet-graph-labels-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="bullet-graph-labels-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
     </button>
 </div>
 
 ### Backing
+
 The backing element represents background and border of the bullet graph control. It is always the first element rendered and all the rest of elements such as labels, and tick marks are overlaid on top of it.
 
 ```html
@@ -225,11 +238,12 @@ The backing element represents background and border of the bullet graph control
     <iframe id="bullet-graph-background-iframe" src='{environment:demosBaseUrl}/gauges/bullet-graph-background' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="bullet-graph-background-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="bullet-graph-background-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
     </button>
 </div>
 
 ### Scale
+
 The scale is visual element that highlights the full range of values in the gauge. You can customize appearance and shape of the scale. The scale can also be inverted (using `isScaleInverted` property) and all labels will be rendered from right-to-left instead of left-to-right.
 
 ```html
@@ -245,15 +259,17 @@ The scale is visual element that highlights the full range of values in the gaug
     scaleEndExtent=0.95>
 </igx-bullet-graph>
 ```
+
 <div class="sample-container" style="height: 125px">
     <iframe id="bullet-graph-scale-iframe" src='{environment:demosBaseUrl}/gauges/bullet-graph-scale' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="bullet-graph-scale-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="bullet-graph-scale-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
     </button>
 </div>
 
 ### Summary
+
 For your convenience, all above code snippets are combined into one code block below that you can easily copy to your project and see the bullet graph with all features and visuals enabled.
 
 ```html
