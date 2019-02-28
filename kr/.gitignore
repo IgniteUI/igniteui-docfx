@@ -8,3 +8,20 @@
 /**/obj/
 _site
 .vscode
+
+components/grid/*.md
+components/treegrid/*.md
+components/hierarchicalgrid/*.md
+
+# All grid specific files that should NOT be ignored:
+!components/grid/grid.md
+!components/grid/groupby.md
+!components/grid/paste_excel.md
+
+# All tree grid specific files that should NOT be ignored:
+!components/treegrid/tree_grid.md
+!components/treegrid/aggregations.md
+
+# All hierarchical grid specific files that should NOT be ignored:
+!components/hierarchicalgrid/hierarchical_grid.md
+!components/hierarchicalgrid/load_on_demand.md

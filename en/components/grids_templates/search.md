@@ -1,15 +1,31 @@
+@@if (igxName === 'IgxGrid') {
 ---
 title: Grid searching
 _description: The Ignite UI for Angular Data Grid control features a search API that allows developers to implement search functionality within the grid.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Data Grid component, Angular Data Grid control, Angular Grid component, Angular Grid control, Angular High Performance Grid, Searching, Search, Search API
+_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Grid, Angular Table, Angular Data Grid component, Angular Data Table component, Angular Data Grid control, Angular Data Table control, Angular Grid component, Angular Table component, Angular Grid control, Angular Table control, Angular High Performance Grid, Angular High Performance Data Table, Data Grid Searching, Data Table Search
 ---
+}
+@@if (igxName === 'IgxTreeGrid') {
+---
+title: Tree Grid searching
+_description: The Ignite UI for Angular Tree Grid control features a search API that allows developers to implement search functionality within the tree grid.
+_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Tree Grid, Angular Tree Table, Angular Tree Grid component, Angular Tree Table component, Angular Tree Grid control, Angular Tree Table control, Angular Tree Grid component, Angular Tree Table component, Angular Tree Grid control, Angular Tree Table control, Angular High Performance Tree Grid, Angular High Performance Tree Table, Tree Grid Searching, Tree Table Search
+---
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+---
+title: Hierarchical Grid searching
+_description: The Ignite UI for Angular Hierarchical Grid control features a search API that allows developers to implement search functionality within the grid.
+_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Hierarchical Grid, Angular Hierarchical Table, Angular Hierarchical Grid component, Angular Hierarchical Table component, Angular Hierarchical Grid control, Angular Hierarchical Table control, Angular High Performance Hierarchical Grid, Angular High Performance Hierarchical Table, Hierarchical Grid Searching, Hierarchical Table Search
+---
+}
+### @@igComponent Searching
 
-### Grid Searching
-
-While browsers natively provide search functionality, most of the time the grid virtualizes its columns and rows that are out of view. In these cases, the native search is unable to search the virtualized cells, since they are not part of the DOM. We have extended the Ignite UI for Angular Data Grid with a **search API** that allows you to search through the **virtualized content** of the grid.
+While browsers natively provide search functionality, most of the time the @@igComponent virtualizes its columns and rows that are out of view. In these cases, the native search is unable to search the virtualized cells, since they are not part of the DOM. We have extended the Ignite UI for Angular @@igComponent with a **search API** that allows you to search through the **virtualized content** of the @@igComponent.
 
 #### Demo
 
+@@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:600px">
     <iframe id="grid-search-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-search-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -18,12 +34,27 @@ While browsers natively provide search functionality, most of the time the grid 
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-search-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
+}
+@@if (igxName === 'IgxTreeGrid') {
+<div class="sample-container loading" style="height:600px">
+    <iframe id="treegrid-search-sample-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-search' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-search-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+<!-- TODO -->
+}
 
 ### Usage
 
 #### Grid setup
 Let's start by creating our grid and binding it to our data. We will also add some custom styles for the components we will be using!
 
+@@if (igxName === 'IgxGrid') {
 ```html
 <!--searchgrid.component.html-->
 
@@ -36,7 +67,25 @@ Let's start by creating our grid and binding it to our data. We will also add so
     <igx-column [field]="'Date'" dataType="date" [sortable]="true"></igx-column>
 </igx-grid>
 ```
+}
+@@if (igxName === 'IgxTreeGrid') {
+```html
+<!--searchgrid.component.html-->
 
+<igx-tree-grid #treeGrid1 [data]="data" [autoGenerate]="false" primaryKey="ID" foreignKey="ParentID" [allowFiltering]="true">
+    <igx-column [field]="'Name'" dataType="string" [sortable]="true"></igx-column>
+    <igx-column [field]="'ID'" dataType="number" [sortable]="true"></igx-column>
+    <igx-column [field]="'Title'" dataType="string" [sortable]="true"></igx-column>
+    <igx-column [field]="'Age'" dataType="number" [sortable]="true"></igx-column>
+    <igx-column [field]="'HireDate'" dataType="date" [sortable]="true"></igx-column>
+</igx-tree-grid>
+```
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+<!-- TODO -->
+}
+
+@@if (igxName === 'IgxGrid' || igxName === 'IgxTreeGrid') {
 ```css
 /* searchgrid.component.css */
 
@@ -60,8 +109,12 @@ Let's start by creating our grid and binding it to our data. We will also add so
     margin-left: 5px;
 }
 ```
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+<!-- TODO -->
+}
 
-Great, and now let's prepare for the search API of our Data Grid! We can create a few properties, which can be used for storing the currently searched text and whether the search is case sensitive and/or by an exact match.
+Great, and now let's prepare for the search API of our @@igComponent! We can create a few properties, which can be used for storing the currently searched text and whether the search is case sensitive and/or by an exact match.
 
 ```typescript
 // searchgrid.component.ts
@@ -73,37 +126,37 @@ public exactMatch: boolean = false;
 
 #### Search input box
 
-Now let's create our search input! By binding our **searchText** as ngModel to our newly created input and subscribe to the ngModelChange event, we can detect every single **searchText** modification by the user. This will allow us to use the grid's [`findNext`]({environment:angularApiUrl}/classes/igxgridcomponent.html#findnext) and [`findPrev`]({environment:angularApiUrl}/classes/igxgridcomponent.html#findprev) methods to highlight all the occurrences of the **searchText** and scroll to the next/previous one (depending on which method we have invoked).
+Now let's create our search input! By binding our **searchText** as ngModel to our newly created input and subscribe to the ngModelChange event, we can detect every single **searchText** modification by the user. This will allow us to use the @@igComponent's [`findNext`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findnext) and [`findPrev`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findprev) methods to highlight all the occurrences of the **searchText** and scroll to the next/previous one (depending on which method we have invoked).
 
-Both the [`findNext`]({environment:angularApiUrl}/classes/igxgridcomponent.html#findnext) and the [`findPrev`]({environment:angularApiUrl}/classes/igxgridcomponent.html#findprev) methods have three arguments:
+Both the [`findNext`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findnext) and the [`findPrev`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findprev) methods have three arguments:
 - `text`: **string** (the text we are searching for)
 - (optional) `caseSensitive`: **boolean** (should the search be case sensitive or not, default value is false)
 - (optional) `exactMatch`: **boolean** (should the search be by an exact match or not, default value is false)
 
 When searching by an exact match, the search API will highlight as results only the cell values that match entirely the **searchText** by taking the case sensitivity into account as well. For example the strings '_software_' and '_Software_' are an exact match with a disregard for the case sensitivity.
 
-The methods from above return a **number** value (the number of times the grid contains the given string).
+The methods from above return a **number** value (the number of times the @@igComponent contains the given string).
 
 ```html
 <!--searchgrid.component.html-->
 
-<input #search1 id="search1" placeholder="Search" [(ngModel)]="searchText" (ngModelChange)="grid.findNext(searchText, caseSensitive, exactMatch)" />
+<input #search1 id="search1" placeholder="Search" [(ngModel)]="searchText" (ngModelChange)="@@igObjectRef.findNext(searchText, caseSensitive, exactMatch)" />
 ```
 
 #### Display results count
 Let's also display the position of the current occurrence, along with the total results count! We can do this by using the grid's `lastSearchInfo` property. This property is automatically updated when using the **find** methods.
 
-- The `grid.lastSearchInfo.matchInfoCache.length` value will give us the total results count.
-- The `grid.lastSearchInfo.activeMatchIndex` value will give us the index position of the current occurrence (match).
+- The `@@igObjectRef.lastSearchInfo.matchInfoCache.length` value will give us the total results count.
+- The `@@igObjectRef.lastSearchInfo.activeMatchIndex` value will give us the index position of the current occurrence (match).
 
 ```html
 <!--searchgrid.component.html-->
 
-<div class="resultsText" *ngIf="grid.lastSearchInfo">
-    <span *ngIf="grid.lastSearchInfo.matchInfoCache.length > 0">
-        {{ grid.lastSearchInfo.activeMatchIndex + 1 }} of {{ grid.lastSearchInfo.matchInfoCache.length }} results
+<div class="resultsText" *ngIf="@@igObjectRef.lastSearchInfo">
+    <span *ngIf="@@igObjectRef.lastSearchInfo.matchInfoCache.length > 0">
+        {{ @@igObjectRef.lastSearchInfo.activeMatchIndex + 1 }} of {{ @@igObjectRef.lastSearchInfo.matchInfoCache.length }} results
     </span>
-    <span *ngIf="grid.lastSearchInfo.matchInfoCache.length == 0">
+    <span *ngIf="@@igObjectRef.lastSearchInfo.matchInfoCache.length == 0">
         No results
     </span>
 </div>
@@ -111,25 +164,25 @@ Let's also display the position of the current occurrence, along with the total 
 
 #### Add search buttons
 
-In order to freely search and navigate among our search results, let's create a couple of buttons by invoking the [`findNext`]({environment:angularApiUrl}/classes/igxgridcomponent.html#findnext) and the [`findPrev`]({environment:angularApiUrl}/classes/igxgridcomponent.html#findprev) methods inside the buttons' respective click event handlers.
+In order to freely search and navigate among our search results, let's create a couple of buttons by invoking the [`findNext`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findnext) and the [`findPrev`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findprev) methods inside the buttons' respective click event handlers.
 
 ```html
 <!--searchgrid.component.html-->
 
 <div class="searchButtons">
-    <input type="button" value="Previous" (click)="grid.findPrev(searchText, caseSensitive, exactMatch)" />
-    <input type="button" value="Next" (click)="grid.findNext(searchText, caseSensitive, exactMatch)" />
+    <input type="button" value="Previous" (click)="@@igObjectRef.findPrev(searchText, caseSensitive, exactMatch)" />
+    <input type="button" value="Next" (click)="@@igObjectRef.findNext(searchText, caseSensitive, exactMatch)" />
 </div>
 ```
 
 #### Add keyboard search
 
-We can also allow the users to navigate the results by using the keyboard's arrow keys and the Enter key. In order to achieve this, we can handle the **keydown** event of our search input by preventing the default caret movement of the input with the preventDefault() method and invoke the [`findNext`]({environment:angularApiUrl}/classes/igxgridcomponent.html#findnext)/[`findPrev`]({environment:angularApiUrl}/classes/igxgridcomponent.html#findprev) methods depending on which key the user has pressed.
+We can also allow the users to navigate the results by using the keyboard's arrow keys and the Enter key. In order to achieve this, we can handle the **keydown** event of our search input by preventing the default caret movement of the input with the preventDefault() method and invoke the [`findNext`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findnext)/[`findPrev`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findprev) methods depending on which key the user has pressed.
 
 ```html
 <!--searchgrid.component.html-->
 
-<input #search1 id="search1" placeholder="Search" [(ngModel)]="searchText" (ngModelChange)="grid.findNext(searchText, caseSensitive, exactMatch)"
+<input #search1 id="search1" placeholder="Search" [(ngModel)]="searchText" (ngModelChange)="@@igObjectRef.findNext(searchText, caseSensitive, exactMatch)"
        (keydown)="searchKeyDown($event)" />
 ```
 
@@ -139,17 +192,17 @@ We can also allow the users to navigate the results by using the keyboard's arro
 public searchKeyDown(ev) {
     if (ev.key === "Enter" || ev.key === "ArrowDown" || ev.key === "ArrowRight") {
         ev.preventDefault();
-        this.grid.findNext(this.searchText, this.caseSensitive, this.exactMatch);
+        this.@@igObjectRef.findNext(this.searchText, this.caseSensitive, this.exactMatch);
     } else if (ev.key === "ArrowUp" || ev.key === "ArrowLeft") {
         ev.preventDefault();
-        this.grid.findPrev(this.searchText, this.caseSensitive, this.exactMatch);
+        this.@@igObjectRef.findPrev(this.searchText, this.caseSensitive, this.exactMatch);
     }
 }
 ```
 
 #### Case sensitive and Exact match
 
-Now let's allow the user to choose whether the search should be case sensitive and/or by an exact match. For this purpose we can use simple checkbox inputs by binding our **caseSensitive** and **exactMatch** properties to the inputs' **checked** properties respectively and handle their **change** events by toggling our properties and invoking the [`findNext`]({environment:angularApiUrl}/classes/igxgridcomponent.html#findnext) method.
+Now let's allow the user to choose whether the search should be case sensitive and/or by an exact match. For this purpose we can use simple checkbox inputs by binding our **caseSensitive** and **exactMatch** properties to the inputs' **checked** properties respectively and handle their **change** events by toggling our properties and invoking the [`findNext`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findnext) method.
 
 ```html
 <!--searchgrid.component.html-->
@@ -166,18 +219,18 @@ Now let's allow the user to choose whether the search should be case sensitive a
 
 public updateSearch() {
     this.caseSensitive = !this.caseSensitive;
-    this.grid.findNext(this.searchText, this.caseSensitive, this.exactMatch);
+    this.@@igObjectRef.findNext(this.searchText, this.caseSensitive, this.exactMatch);
 }
 
 public updateExactSearch() {
     this.exactMatch = !this.exactMatch;
-    this.grid.findNext(this.searchText, this.caseSensitive, this.exactMatch);
+    this.@@igObjectRef.findNext(this.searchText, this.caseSensitive, this.exactMatch);
 }
 ```
 
 #### Persistence
 
-What if we would like to filter and sort our grid or even to add and remove records? After such operations, the highlights of our current search automatically update and persist over any text that matches the **searchText**! Furthermore, the search will work with paging and will persist the highlights through changes of the grid's [`perPage`]({environment:angularApiUrl}/classes/igxgridcomponent.html#perpage) property.
+What if we would like to filter and sort our @@igComponent or even to add and remove records? After such operations, the highlights of our current search automatically update and persist over any text that matches the **searchText**! Furthermore, the search will work with paging and will persist the highlights through changes of the @@igComponent's [`perPage`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#perpage) property.
 
 #### Adding icons
 
@@ -189,7 +242,7 @@ To do this, let's go and grab the [**IgxInputGroup**](../input_group.md), [**Igx
 
 ...
 import {
-    IgxGridModule.forRoot(),
+    @@igxNameModule,
     IgxInputGroupModule,
     IgxIconModule,
     IgxRippleModule,
@@ -206,7 +259,7 @@ export class AppModule {}
 
 Finally, let's update our template with the new components!
 
-We will wrap all of our components inside an [**IgxInputGroup**](../input_group.md). On the left we will toggle between a search and a delete/clear icon (depending on whether the search input is empty or not). In the center, we will position the input itself. In addition, whenever the delete icon is clicked, we will update our **searchText** and invoke the grid's [`clearSearch`]({environment:angularApiUrl}/classes/igxgridcomponent.html#clearsearch) method to clear the highlights.
+We will wrap all of our components inside an [**IgxInputGroup**](../input_group.md). On the left we will toggle between a search and a delete/clear icon (depending on whether the search input is empty or not). In the center, we will position the input itself. In addition, whenever the delete icon is clicked, we will update our **searchText** and invoke the @@igComponent's [`clearSearch`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#clearsearch) method to clear the highlights.
 
 ```html
 <!--searchgrid.component.html-->
@@ -217,7 +270,7 @@ We will wrap all of our components inside an [**IgxInputGroup**](../input_group.
         <igx-icon *ngIf="searchText.length > 0" (click)="clearSearch()">clear</igx-icon>
     </igx-prefix>
 
-    <input #search1 id="search1" igxInput placeholder="Search" [(ngModel)]="searchText" (ngModelChange)="grid.findNext(searchText, caseSensitive)"
+    <input #search1 id="search1" igxInput placeholder="Search" [(ngModel)]="searchText" (ngModelChange)="@@igObjectRef.findNext(searchText, caseSensitive, exactMatch)"
         (keydown)="searchKeyDown($event)" />
 
     <igx-suffix *ngIf="searchText.length > 0">
@@ -231,7 +284,7 @@ We will wrap all of our components inside an [**IgxInputGroup**](../input_group.
 
 public clearSearch() {
     this.searchText = "";
-    this.grid.clearSearch();
+    this.@@igObjectRef.clearSearch();
 }
 ```
 
@@ -242,11 +295,11 @@ On the right in our input group, let's create three separate containers with the
 <!--searchgrid.component.html-->
 
 <igx-suffix *ngIf="searchText.length > 0">
-    <div class="resultsText" *ngIf="grid.lastSearchInfo">
-        <span *ngIf="grid.lastSearchInfo.matchInfoCache.length > 0">
-            {{ grid.lastSearchInfo.activeMatchIndex + 1 }} of {{ grid.lastSearchInfo.matchInfoCache.length }} results
+    <div class="resultsText" *ngIf="@@igObjectRef.lastSearchInfo">
+        <span *ngIf="@@igObjectRef.lastSearchInfo.matchInfoCache.length > 0">
+            {{ @@igObjectRef.lastSearchInfo.activeMatchIndex + 1 }} of {{ @@igObjectRef.lastSearchInfo.matchInfoCache.length }} results
         </span>
-        <span *ngIf="grid.lastSearchInfo.matchInfoCache.length == 0">
+        <span *ngIf="@@igObjectRef.lastSearchInfo.matchInfoCache.length == 0">
             No results
         </span>
     </div>
@@ -270,17 +323,17 @@ On the right in our input group, let's create three separate containers with the
     </div>
     ...
 ```
-- For the search navigation buttons, we have transformed our inputs into ripple styled buttons with material icons. The handlers for the click events remain the same - invoking the [`findNext`]({environment:angularApiUrl}/classes/igxgridcomponent.html#findnext)/[`findPrev`]({environment:angularApiUrl}/classes/igxgridcomponent.html#findprev) methods.
+- For the search navigation buttons, we have transformed our inputs into ripple styled buttons with material icons. The handlers for the click events remain the same - invoking the [`findNext`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findnext)/[`findPrev`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findprev) methods.
 
 ```html
 <!--searchgrid.component.html-->
 
     ...
     <div class="searchButtons">
-        <button igxButton="icon" igxRipple igxRippleCentered="true" (click)="grid.findPrev(searchText, caseSensitive, exactMatch)">
+        <button igxButton="icon" igxRipple igxRippleCentered="true" (click)="@@igObjectRef.findPrev(searchText, caseSensitive, exactMatch)">
             <igx-icon fontSet="material">navigate_before</igx-icon>
         </button>
-        <button igxButton="icon" igxRipple igxRippleCentered="true" (click)="grid.findNext(searchText, caseSensitive, exactMatch)">
+        <button igxButton="icon" igxRipple igxRippleCentered="true" (click)="@@igObjectRef.findNext(searchText, caseSensitive, exactMatch)">
             <igx-icon fontSet="material">navigate_next</igx-icon>
         </button>
     </div>
@@ -291,20 +344,19 @@ On the right in our input group, let's create three separate containers with the
 
 |Limitation|Description|
 |--- |--- |
-|Searching in cells with a template|The search functionality will replace any cell template with a div element and spans which highlight the searched text in the cell value. This means that it can lead to unexpected behavior when you have more complicated templates, containing several elements or events hooked into the template. If you have a column with such template, you should either use alternative approaches, such as a column formatter, or set the [`searchable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#searchable) property on the column to false.|
+|Searching in cells with a template|The search functionality highlights work only for the default cell templates. If you have a column with custom cell template, the highlights will not work so you should either use alternative approaches, such as a column formatter, or set the [`searchable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#searchable) property on the column to false.|
 |Remote Virtualization| The search will not work properly when using remote virtualization|
-|Cells with cutoff text| When the text in the cell is too large to fit and the text we are looking for is cut off by the ellipsis, we will still scroll to the cell and include it in the match count, but nothing will be highlighted |
-
+|Cells with cut off text| When the text in the cell is too large to fit and the text we are looking for is cut off by the ellipsis, we will still scroll to the cell and include it in the match count, but nothing will be highlighted |
 
 ### API References
 
-In this article we implemented our own search bar for the grid with some additional functionality when it comes to navigating between the search results. We also used some additional Ignite UI for Angular components like icons, chips and inputs. The search API is listed below.
+In this article we implemented our own search bar for the @@igComponent with some additional functionality when it comes to navigating between the search results. We also used some additional Ignite UI for Angular components like icons, chips and inputs. The search API is listed below.
 
-[`IgxGridComponent`]({environment:angularApiUrl}/classes/igxgridcomponent.html) methods:
--   [`findNext`]({environment:angularApiUrl}/classes/igxgridcomponent.html#findnext)
--   [`findPrev`]({environment:angularApiUrl}/classes/igxgridcomponent.html#findprev)
--   [`clearSearch`]({environment:angularApiUrl}/classes/igxgridcomponent.html#clearsearch)
--   [`refreshSearch`]({environment:angularApiUrl}/classes/igxgridcomponent.html#refreshsearch)
+[`@@igxNameComponent`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) methods:
+-   [`findNext`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findnext)
+-   [`findPrev`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findprev)
+-   [`clearSearch`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#clearsearch)
+-   [`refreshSearch`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#refreshsearch)
 
 [`IgxGridCellComponent`]({environment:angularApiUrl}/classes/igxgridcellcomponent.html) methods:
 -   [`highlightText`]({environment:angularApiUrl}/classes/igxgridcellcomponent.html#highlighttext)
@@ -325,7 +377,7 @@ Additional components and/or directives with relative APIs that were used:
 
 Styles:
 
-* [`IgxGridComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [`@@igxNameComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 * [`IgxInputGroupComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-input-group-theme)
 * [`IgxIconComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
 * [`IgxRippleDirective Styles`]({environment:sassApiUrl}/index.html#function-igx-ripple-theme)
@@ -335,7 +387,7 @@ Styles:
 ### Additional Resources
 <div class="divider--half"></div>
 
-* [Grid overview](grid.md)
+* [@@igComponent overview](@@igMainTopic.md)
 * [Virtualization and Performance](virtualization.md)
 * [Filtering](filtering.md)
 * [Paging](paging.md)
@@ -345,7 +397,6 @@ Styles:
 * [Column Pinning](column_pinning.md)
 * [Column Resizing](column_resizing.md)
 * [Selection](selection.md)
-* [Export to Excel](../exporter_excel.md)
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.

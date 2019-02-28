@@ -65,7 +65,7 @@
       href: grid/toolbar.md
       new: false
     - name: Excel 내보내기
-      href: exporter_excel.md
+      href: grid/export_excel.md
       new: false
     - name: Excel에서 붙여넣기
       href: grid/paste_excel.md
@@ -80,8 +80,131 @@
       href: grid/conditional_cell_styling.md
       new: true
 - name: Tree Grid
-  href: treeGrid/tree_grid.md
+  href: treegrid/tree_grid.md
   new: true
+  items:
+    - name: 가상화 및 성능
+      href: treegrid/virtualization.md
+      new: false
+    - name: 편집
+      href: treegrid/editing.md
+      new: false
+    - name: 행 편집
+      href: treegrid/row_editing.md
+      new: false
+    - name: 트랜잭션
+      href: treegrid/batch_editing.md
+      new: false
+    - name: 페이징
+      href: treegrid/paging.md
+      new: false
+    - name: 필터링
+      href: treegrid/filtering.md
+      new: false
+    - name: 정렬
+      href: treegrid/sorting.md
+      new: false
+    - name: 요약
+      href: treegrid/summaries.md
+      new: false
+    - name: 열 이동
+      href: treegrid/column_moving.md
+      new: false
+    - name: 열 핀 고정
+      href: treegrid/column_pinning.md
+      new: false
+    - name: 크기 조정
+      href: treegrid/column_resizing.md
+      new: false
+    - name: 숨기기
+      href: treegrid/column_hiding.md
+      new: false
+    - name: 행 선택
+      href: treegrid/selection.md
+      new: false
+    - name: 검색
+      href: treegrid/search.md
+      new: true
+    - name: 도구 모음
+      href: treegrid/toolbar.md
+      new: false
+    - name: Excel 내보내기
+      href: treegrid/export_excel.md
+      new: false
+    - name: 복수 열 헤더
+      href: treegrid/multi_column_headers.md
+      new: false
+    - name: 표시 밀도
+      href: treegrid/display_density.md
+      new: false
+    - name: 조건부 셀 스타일
+      href: treegrid/conditional_cell_styling.md
+      new: false
+    - name: Aggregations 
+      href: treegrid/aggregations.md
+      new: false
+- name: Hierarchical Grid
+  href: hierarchicalgrid/hierarchical_grid.md
+  new: true
+  items:
+    - name: 가상화 및 성능
+      href: hierarchicalgrid/virtualization.md
+      new: true
+    - name: Load on Demand
+      href: hierarchicalgrid/load_on_demand.md
+      new: true
+    - name: 편집
+      href: hierarchicalgrid/editing.md
+      new: true
+    - name: 행 편집
+      href: hierarchicalgrid/row_editing.md
+      new: true
+    - name: 트랜잭션
+      href: hierarchicalgrid/batch_editing.md
+      new: true
+    - name: 페이징
+      href: hierarchicalgrid/paging.md
+      new: true
+    - name: 필터링
+      href: hierarchicalgrid/filtering.md
+      new: true
+    - name: 정렬
+      href: hierarchicalgrid/sorting.md
+      new: true
+    - name: 요약
+      href: hierarchicalgrid/summaries.md
+      new: true
+    - name: 열 이동
+      href: hierarchicalgrid/column_moving.md
+      new: true
+    - name: 열 핀 고정
+      href: hierarchicalgrid/column_pinning.md
+      new: true
+    - name: 크기 조정
+      href: hierarchicalgrid/column_resizing.md
+      new: true
+    - name: 숨기기
+      href: hierarchicalgrid/column_hiding.md
+      new: true
+    - name: 행 선택
+      href: hierarchicalgrid/selection.md
+      new: true
+      # Not yet fully implemented for igxHGrid
+    # - name: 검색
+    #   href: hierarchicalgrid/search.md
+    #   new: true
+    - name: 도구 모음
+      href: hierarchicalgrid/toolbar.md
+      new: true
+    - name: 복수 열 헤더
+      href: hierarchicalgrid/multi_column_headers.md
+      new: true
+    - name: 표시 밀도
+      href: hierarchicalgrid/display_density.md
+      new: true
+    # - name: 조건부 셀 스타일
+    #   href: hierarchicalgrid/conditional_cell_styling.md
+    #   new: true
 - name: List View
   href: list.md
 - name: Combo
@@ -100,6 +223,9 @@
     - name: Cascading Scenario
       href: combo_cascading.md
       new: true
+- name: Autocomplete
+  href: autocomplete.md
+  new: true
 - name: Charts
   header: true
 - name: Category Chart
@@ -379,6 +505,9 @@
   new: false
 - name: Text Highlight
   href: texthighlight.md
+  new: true
+- name: Select
+  href: select.md
   new: true
 - name: Interactions
   header: true

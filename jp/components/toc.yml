@@ -1,4 +1,4 @@
-﻿- name: 概要
+- name: 概要
   header: true
 - name: 作業の開始
   href: general/getting_started.md
@@ -65,7 +65,7 @@
       href: grid/toolbar.md
       new: false
     - name: Excel エクスポート
-      href: exporter_excel.md
+      href: grid/export_excel.md
       new: false
     - name: Excel からの貼り付け
       href: grid/paste_excel.md
@@ -80,8 +80,131 @@
       href: grid/conditional_cell_styling.md
       new: true
 - name: Tree Grid
-  href: treeGrid/tree_grid.md
+  href: treegrid/tree_grid.md
   new: true
+  items:
+    - name: 仮想化とパフォーマンス
+      href: treegrid/virtualization.md
+      new: false
+    - name: 編集
+      href: treegrid/editing.md
+      new: false
+    - name: 行編集
+      href: treegrid/row_editing.md
+      new: false
+    - name: 一括編集
+      href: treegrid/batch_editing.md
+      new: false
+    - name: ページング
+      href: treegrid/paging.md
+      new: false
+    - name: フィルタリング
+      href: treegrid/filtering.md
+      new: false
+    - name: 並べ替え
+      href: treegrid/sorting.md
+      new: false
+    - name: 集計
+      href: treegrid/summaries.md
+      new: false
+    - name: 列移動
+      href: treegrid/column_moving.md
+      new: false
+    - name: 列のピン固定
+      href: treegrid/column_pinning.md
+      new: false
+    - name: 列のサイズ変更
+      href: treegrid/column_resizing.md
+      new: false
+    - name: 列の非表示
+      href: treegrid/column_hiding.md
+      new: false
+    - name: 選択
+      href: treegrid/selection.md
+      new: false
+    - name: 検索
+      href: treegrid/search.md
+      new: true
+    - name: ツールバー
+      href: treegrid/toolbar.md
+      new: false
+    - name: Excel エクスポート
+      href: treegrid/export_excel.md
+      new: false
+    - name: 複数列ヘッダー
+      href: treegrid/multi_column_headers.md
+      new: false
+    - name: 表示密度
+      href: treegrid/display_density.md
+      new: false
+    - name: 条件付きセルのスタイル設定
+      href: treegrid/conditional_cell_styling.md
+      new: false
+    - name: Aggregations 
+      href: treegrid/aggregations.md
+      new: false
+- name: Hierarchical Grid
+  href: hierarchicalgrid/hierarchical_grid.md
+  new: true
+  items:
+    - name: 仮想化とパフォーマンス
+      href: hierarchicalgrid/virtualization.md
+      new: true
+    - name: Load on Demand
+      href: hierarchicalgrid/load_on_demand.md
+      new: true
+    - name: 編集
+      href: hierarchicalgrid/editing.md
+      new: true
+    - name: 行編集
+      href: hierarchicalgrid/row_editing.md
+      new: true
+    - name: 一括編集
+      href: hierarchicalgrid/batch_editing.md
+      new: true
+    - name: ページング
+      href: hierarchicalgrid/paging.md
+      new: true
+    - name: フィルタリング
+      href: hierarchicalgrid/filtering.md
+      new: true
+    - name: 並べ替え
+      href: hierarchicalgrid/sorting.md
+      new: true
+    - name: 集計
+      href: hierarchicalgrid/summaries.md
+      new: true
+    - name: 列移動
+      href: hierarchicalgrid/column_moving.md
+      new: true
+    - name: 列のピン固定
+      href: hierarchicalgrid/column_pinning.md
+      new: true
+    - name: 列のサイズ変更
+      href: hierarchicalgrid/column_resizing.md
+      new: true
+    - name: 列の非表示
+      href: hierarchicalgrid/column_hiding.md
+      new: true
+    - name: 選択
+      href: hierarchicalgrid/selection.md
+      new: true
+      # Not yet fully implemented for igxHGrid
+    # - name: 検索
+    #   href: hierarchicalgrid/search.md
+    #   new: true
+    - name: ツールバー
+      href: hierarchicalgrid/toolbar.md
+      new: true
+    - name: 複数列ヘッダー
+      href: hierarchicalgrid/multi_column_headers.md
+      new: true
+    - name: 表示密度
+      href: hierarchicalgrid/display_density.md
+      new: true
+    # - name: 条件付きセルのスタイル設定
+    #   href: hierarchicalgrid/conditional_cell_styling.md
+    #   new: true
 - name: List View
   href: list.md
 - name: Combo
@@ -100,6 +223,9 @@
     - name: カスケーディング
       href: combo_cascading.md
       new: true
+- name: Autocomplete
+  href: autocomplete.md
+  new: true
 - name: チャート
   header: true
 - name: Category Chart
@@ -381,6 +507,9 @@
   new: false
 - name: Text Highlight
   href: texthighlight.md
+  new: true
+- name: Select
+  href: select.md
   new: true
 - name: インタラクション
   header: true

@@ -1,7 +1,7 @@
 ﻿---
 title: 行選択 - ネイティブ Angular | Ignite UI for Angular
 _description: Ignite UI for Angular 行選択を使用すると、行ですべての他の列の前に描画されるチェックボックス列があります。このチェックボックスによって行を選択または選択解除でき、データの複数行を選択できます。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular Data Grid コンポーネント, Angular Data Grid コントロール, Angular Grid コンポーネント, Angular Grid コントロール, Angular 高いパフォーマンス Grid, Angular Grid 行選択, Angular 行選択,Angular Grid 選択, Grid 行選択, Grid 選択
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Grid, Angular Table, Angular Data Grid コンポーネント, Angular Data Table コンポーネント, Angular Data Grid コントロール, Angular Data Table コントロール, Angular Grid コンポーネント, Angular Table コンポーネント, Angular Grid コントロール, Angular Table コントロール, Angular 高パフォーマンス Grid, Angular 高パフォーマンス Data Table, Data Grid 検索, Data Table 検索
 _language: ja
 ---
 

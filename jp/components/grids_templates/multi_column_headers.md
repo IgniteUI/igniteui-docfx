@@ -1,7 +1,7 @@
 ---
 title: Column Group コンポーネント - ネイティブ Angular | Ignite UI for Angular
 _description: 複数列ヘッダーは、共通ヘッダーの下に配置して列をグループ化できます。各列グループにその他のグループや列を組み合わせて表示できます。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular データグリッド コンポーネント, Angular データグリッド コントロール, ネイティブ Angular コンポーネント, Angular Grid コンポーネント, Angular Grid コントロール, Angular 高パフォーマンス Grid, 複数列ヘッダー, 遅延複数列ヘッダー, グリッド複数列ヘッダー, Angular グリッド複数列ヘッダー, Angular 列
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Grid, Angular Table, Angular Data Grid コンポーネント, Angular Data Table コンポーネント, Angular Data Grid コントロール, Angular Data Table コントロール, Angular Grid コンポーネント, Angular Table コンポーネント, Angular Grid コントロール, Angular Table コントロール, Angular 高パフォーマンス Grid, Angular 高パフォーマンス Data Table, 複数列ヘッダー, 遅延複数列ヘッダー, Grid 複数列ヘッダー, Angular Grid 複数列ヘッダー, Angular Data Table 複数列ヘッダー
 _language: ja
 ---
 

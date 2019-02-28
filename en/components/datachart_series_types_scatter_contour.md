@@ -15,9 +15,9 @@ draws colored contour lines based on a triangulation of X and Y data with a nume
     <iframe id="data-chart-type-contour-series-iframe" src='{environment:demosBaseUrl}/charts/data-chart-type-contour-series' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="financial-chart-type-contour-series-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-type-contour-series-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
     </button>
-</div>
+</div>>
 
 <div class="divider--half"></div>
 
@@ -111,6 +111,5 @@ The following code shows how to configure the number of contour lines in the `Sc
 ### Additional Resources
 
 -   [Axis Types](datachart_axis_types.md)
--   [Axis Locations](datachart_axis_locations.md)
 -   [Chart Legend](datachart_chart_legends.md)
 -   [Series Types](datachart_series_types.md)

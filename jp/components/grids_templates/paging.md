@@ -1,7 +1,7 @@
 ﻿---
 title: グリッドのページング
 _description: Ignite UI for Angular Data Grid コントロールは、タッチ レスポンシブなデータ グリッドです。階層およびリスト ビューなどの機能があります。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Data Grid コンポーネント, Angular Data Grid コントロール, Angular Grid コンポーネント, Angular Grid コントロール, Angular 高いパフォーマンス Grid, ページング, ページング機能, ページ
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Grid, Angular Table, Angular Data Grid コンポーネント, Angular Data Table コンポーネント, Angular Data Grid コントロール, Angular Data Table コントロール, Angular Grid コンポーネント, Angular Table コンポーネント, Angular Grid コントロール, Angular Table コントロール, Angular 高パフォーマンス Grid, Angular 高パフォーマンス Data Table, ページング, 改ページ位置の自動修正, Data Grid ページング, Data Table ページング
 _language: ja
 ---
 
@@ -208,6 +208,57 @@ public ngAfterViewInit() {
 </igx-grid>
 ```
 
+This is absolutely enough if we want up and running sample. But we can extend this sample even more by adding an option to change our paging template run time. Let's see how we can achieve that. First we will start by adding one more paging template in our template:
+
+```html
+<ng-template #secCustomPager let-api>
+    <button [disabled]="firstPage" (click)="previousPage()" igxButton="flat" igxButtonColor="#09f">
+        PREV
+    </button>
+    <span *ngIf="shouldShowFirstPage" (click)="paginate(0, false)"><a class="pageNavLinks" [routerLink]=''>{{1}}</a> ...</span>
+    <span *ngFor="let item of pages" (click)="paginate(item, false)">
+        <a class="pageNavLinks {{activePage(item)}}" [routerLink]=''>{{item + 1}}</a>
+    </span>
+    <span *ngIf="shouldShowLastPage" (click)="paginate(totalPages - 1, false)">... <a class="pageNavLinks" [routerLink]=''>{{ totalPages }}</a></span>
+    <button [disabled]="lastPage" (click)="nextPage()"  igxButton="flat" igxButtonColor="#09f">
+        NEXT
+    </button>
+</ng-template>
+```
+
+After that we need to extend the methods that we have already created with some additional logic:
+
+```typescript
+// same applies and for the methods previousPage() and paginate(page: number, recalc: true)
+public nextPage() {
+    ...
+    if (this.grid1.paginationTemplate === this.secondPagerTemplate) {
+        this.setNumberOfPagingItems(this.page, this.totalPages);
+    }
+}
+// creates array with the visible page numbers where the user can navigate according the current page and the total page number
+public setNumberOfPagingItems(currentPage, totalPages) {
+    ....
+}
+```
+And finally we need to add a button which allows the user to change the pager template run time:
+
+```html
+    <button (click)="changeTemplate()" class='changeBtn' igxButton="flat" igxButtonColor="#09f" igxButtonBackground="#dadada"> Change Paging Template</button>
+```
+
+```typescript
+public changeTemplate() {
+    if (this.grid1.paginationTemplate === this.remotePager) {
+        this.grid1.paginationTemplate = this.secondPagerTemplate;
+        this.setNumberOfPagingItems(this.page, this.totalPages);
+    } else {
+        this.pages = [];
+        this.grid1.paginationTemplate = this.remotePager;
+    }
+    this.grid1.cdr.detectChanges();
+}
+```
 
 すべての設定を完了すると以下のような結果になります。
 
@@ -221,6 +272,31 @@ public ngAfterViewInit() {
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-remote-paging-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
 </div>
 <div class="divider--half"></div>
+
+If you want your sample to look exactly like this one do not forget to apply the custom paging theme:
+
+```css
+@import '~igniteui-angular/lib/core/styles/themes/index';
+
+@include igx-core();
+@include igx-theme($default-palette, $legacy-support: true);
+
+
+$custom-paginator-theme: igx-grid-paginator-theme(
+    $text-color: #09f
+);
+$custom-button-theme: igx-button-theme(
+    $icon-color: #09f,
+    $icon-hover-color: #dadada,
+    $icon-focus-color:rgb(0, 119, 255),
+    $icon-focus-background: #aeaeae
+  );
+
+.customPager {
+    @include igx-grid-paginator($custom-paginator-theme);
+    @include igx-button($custom-button-theme);
+}
+```
 
 ### API
 * [IgxGridComponent API]({environment:angularApiUrl}/classes/igxgridcomponent.html)

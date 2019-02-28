@@ -6,11 +6,11 @@ _language: ja
 ---
 
 ## Time Picker
-<p class="highlight">Date Picker のデザインや機能と同様 Ignite UI for Angular Time Picker コンポーネントは、ダイアログのスピン ボタンで時間を選択して入力フィールドに値を設定します。</p>
+<p class="highlight">Date Picker のデザインや機能と同様 Ignite UI for Angular Time Picker コンポーネントは、ダイアログのスピン ボタンで時間を選択して入力フィールドに値を設定します。またユーザーは、ドロップダウンで時間値の選択やマスク入力を使用した編集が可能です。</p>
 <div class="divider"></div>
 
 ### Time Picker デモ
-<div class="sample-container loading" style="height: 540px;">
+<div class="sample-container loading" style="height: 600px;">
     <iframe id="time-picker-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/scheduling/timepicker-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -50,7 +50,7 @@ export class AppModule {}
 
 以下は結果です。
 
-<div class="sample-container loading" style="height:540px">
+<div class="sample-container loading" style="height:600px">
     <iframe id="timepicker-sample-1-iframe" src="{environment:demosBaseUrl}/scheduling/timepicker-sample-1" width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -74,7 +74,7 @@ public date: Date = new Date(Date.now());
 
 以下は結果です。
 
-<div class="sample-container loading" style="height: 540px;">
+<div class="sample-container loading" style="height: 600px;">
     <iframe id="time-picker-sample-2" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/scheduling/timepicker-sample-2" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -98,7 +98,7 @@ TwoWay データ バインディングを使用するには、`ngModel` を以�
 
 以下は結果です。
 
-<div class="sample-container loading" style="height: 540px;">
+<div class="sample-container loading" style="height: 600px;">
     <iframe id="time-picker-sample-3" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/scheduling/timepicker-sample-3" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -156,6 +156,44 @@ public onValidationFailed(timepicker){
 </div>
 <div class="divider--half"></div>
 
+#### ドロップダウン モード
+
+タイムピッカーをプロジェクトに追加する際にデフォルト (ダイアログ) モードに設定します。ドロップダウン モードをアクティベイトするために enum [`TimePickerInteractionMode`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#TimePickerInteractionMode) を含む必要がありなす。
+
+```typescript
+// timePickerDropdown.component.ts
+
+import { TimePickerInteractionMode } from 'igniteui-angular';
+...
+
+public mode: TimePickerInteractionMode = TimePickerInteractionMode.dropdown;
+```
+
+```html
+<!--timePickerDropdown.component.html-->
+
+<igx-time-picker [mode]="mode"></igx-time-picker>
+```
+ユーザーは、12 時間と 24 時間形式で時間値を入力、編集、削除できます。 
+
+**キーボード ナビゲーションのドロップダウン モード**
+
+マウス キャレットは、時、分、AM/PM プレースホルダーに配置できます。<kbd>Up</kbd> の押下またはマウス ホイールアップした後に時または分が増加します。<kbd>Down</kbd> または `マウスホイール ダウン`は反転操作に使用できます。注* タイムピッカーの [`minValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#minvalue) または [`maxValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#maxvalue) を設定して [`isSpinLoop`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#isspinloop) を無効にし、時間スクローリングが指定した時間または分の値でブレークします。追加でユーザーは以下の操作も実行できます。
+
+* ドロップダウンを`開く`には、*クロック アイコン* をクリックし、<kbd>Space</kbd> または <kbd>Alt</kbd> + <kbd>Down</kbd> キーの組み合わせを押します。
+* ドロップダウンを`Accept` や `Close` する場合、<kbd>Escape</kbd> または <kbd>Enter</kbd> キーを押します。
+* マウスでタイムピッカー以外をクリックして入力した値を `Accept` してドロップダウンを `Close` します。
+* ドロップダウンが開いて新しい値が `Accept` にタイプされた場合、タイムピッカーの外側をクリックまたは <kbd>Tab</kbd> を押してフォーカスを移動します。
+
+以下は結果です。
+<div class="sample-container loading" style="height:540px">
+    <iframe id="timepicker-dropdown-iframe" src='{environment:demosBaseUrl}/scheduling/timepicker-dropdown' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="timepicker-dropdown-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
+
 #### 入力グループのテンプレート化
 
 API (プロパティ、イベント、メソッド) を使用して要件によってタイムピッカーを構成し、コードで操作する方法を説明しました。次に入力グループの外観をカスタマイズします。
@@ -186,7 +224,7 @@ public date: Date = new Date(Date.now());
 ```
 
 以下は結果です。
-<div class="sample-container loading" style="height: 540px;">
+<div class="sample-container loading" style="height: 600px;">
     <iframe id="time-picker-sample-5" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/scheduling/timepicker-sample-5" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -199,12 +237,8 @@ public date: Date = new Date(Date.now());
 * [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
 * [IgxInputDirective]({environment:angularApiUrl}/classes/igxinputdirective.html)
 * [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
-* [IgxLabelDirective]({environment:angularApiUrl}/classes/igxlabeldirective.html)
-* [IgxPrefixDirective]({environment:angularApiUrl}/classes/igxprefixdirective.html)
-* [IgxSuffixDirective]({environment:angularApiUrl}/classes/igxsuffixdirective.html)
 * [IgxTimePickerComponent]({environment:angularApiUrl}/classes/igxtimepickercomponent.html)
 * [IgxTimePickerComponent Styles]({environment:sassApiUrl}/index.html#function-igx-time-picker-theme)
-* [IgxTimePickerTemplateDirective]({environment:angularApiUrl}/classes/igxtimepickertemplatedirective.html)
 * [IgxOverlayService]({environment:angularApiUrl}/classes/igxoverlayservice.html)
 * [IgxOverlay Styles]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
 

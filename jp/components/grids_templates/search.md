@@ -1,7 +1,7 @@
 ﻿---
 title: Grid 検索
 _description: Ignite UI for Angular Data Grid コントロールは、グリッド内で検索機能を実装する検索 API があります。 
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Data Grid コンポーネント, Angular Data Grid コントロール, Angular Grid コンポーネント, Angular Grid コントロール, Angular 高パフォーマンス Grid, 検索, サーチ, API 検索
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Grid, Angular Table, Angular Data Grid コンポーネント, Angular Data Table コンポーネント, Angular Data Grid コントロール, Angular Data Table コントロール, Angular Grid コンポーネント, Angular Table コンポーネント, Angular Grid コントロール, Angular Table コントロール, Angular 高パフォーマンス Grid, Angular 高パフォーマンス Data Table, Data Grid 検索, Data Table 検索
 _language: ja
 ---
 
@@ -291,7 +291,7 @@ public clearSearch() {
 
 |制限|説明|
 |--- |--- |
-|テンプレート付きセルの検索|検索機能がセル テンプレートを div 要素とスパンで置き換えてセル値の検索テキストを強調表示します。そのため、テンプレートに関連付けした複数の要素やイベントを含む複雑なテンプレートがある場合に予期しない動作を発生する場合があります。列にそのようなテンプレートがある場合、列フォーマッターや列の ` プロパティを false に設定するなど、他の方法を使用してください。|
+|テンプレート付きセルの検索|検索機能がセル テンプレートを div 要素とスパンで置き換えてセル値の検索テキストを強調表示します。そのため、テンプレートに関連付けした複数の要素やイベントを含む複雑なテンプレートがある場合に予期しない動作を発生する場合があります。列にそのようなテンプレートがある場合、列フォーマッターや列の `searchable` プロパティを false に設定するなど、他の方法を使用してください。|
 |リモート仮想化| リモート仮想化の使用時に検索が正しく動作しない問題|
 |セルのテキストが切れる問題| テキストが大きすぎてセルに収まらない場合、省略記号が表示されてセルへスクロール、更に一致項目としてカウントされますが強調表示はされません。 |
 

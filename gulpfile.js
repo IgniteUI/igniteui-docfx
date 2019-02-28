@@ -47,15 +47,19 @@ gulp.task('serve', ['build'], () => {
 
     const excluded = [
         `!${DOCFX_ARTICLES}/grid/**`,
-        `!${DOCFX_ARTICLES}/treeGrid/**`,
-        `!${DOCFX_ARTICLES}/hierarchicalGrid/**`
+        `!${DOCFX_ARTICLES}/treegrid/**`,
+        `!${DOCFX_ARTICLES}/hierarchicalgrid/**`
     ];
 
     // All topics that are not auto-generated and are specific to the respective grid, should be here.
     const included = [
         `${DOCFX_ARTICLES}/grid/grid.md`,
-        `${DOCFX_ARTICLES}/treeGrid/tree_grid.md`,
-        `${DOCFX_ARTICLES}/hierarchicalGrid/hierarchical_grid.md`
+        `${DOCFX_ARTICLES}/grid/groupby.md`,
+        `${DOCFX_ARTICLES}/grid/paste_excel.md`,
+        `${DOCFX_ARTICLES}/treegrid/tree_grid.md`,
+        `${DOCFX_ARTICLES}/treegrid/aggregations.md`,
+        `${DOCFX_ARTICLES}/hierarchicalgrid/hierarchical_grid.md`,
+        `${DOCFX_ARTICLES}/hierarchicalgrid/load_on_demand.md`
     ];
 
     gulp.watch(`${DOCFX_TEMPLATE}/**/*`, ['watch']);
@@ -120,7 +124,7 @@ gulp.task('generate-grids-topics', () => {
             igSelector: "igx-grid"
         },
         {
-            igPath: '/treeGrid',
+            igPath: '/treegrid',
             igMainTopic: 'tree_grid',
             igObjectRef: "treeGrid",
             igComponent: "Tree Grid",
@@ -129,7 +133,7 @@ gulp.task('generate-grids-topics', () => {
             igSelector: "igx-tree-grid"
         },
         {
-            igPath: '/hierarchicalGrid',
+            igPath: '/hierarchicalgrid',
             igMainTopic: 'hierarchical_grid',
             igObjectRef: "hierarchicalGrid",
             igComponent: "Hierarchical Grid",

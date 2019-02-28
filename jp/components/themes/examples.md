@@ -63,7 +63,7 @@ _language: ja
 次のステップは、カスタマイズするコンポーネントと対応するテーマをすべてインポートします。
 
 以下がアプリに含まれます。
-- [**Igx-Grid**](../grid.md) の [**paging**](../grid_paging.md) と [**filtering**](../grid_filtering.md)。
+- [**Igx-Grid**](../grid/grid.md) の [**paging**](../grid/paging.md) と [**filtering**](../grid/filtering.md)。
 
 ```scss
 // Import grid component and theme styles
@@ -331,9 +331,9 @@ export class ThemeChooserSampleComponent implements OnInit {
 * [グローバル テーマ](global-theme.md)
 * [コンポーネント テーマ](component-themes.md)
 * [カラー パレット](palette.md)
-* [Grid](../grid.md)
-* [ページング](../grid_paging.md)
-* [フィルタリング](../grid_filtering.md)
+* [Grid](../grid/grid.md)
+* [ページング](../grid/paging.md)
+* [フィルタリング](../grid/filtering.md)
 * [Dialog](../dialog.md)
 * [Input Group](../input_group.md)
 * [Snackbar](../snackbar.md)
