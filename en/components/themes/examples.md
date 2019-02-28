@@ -7,7 +7,7 @@ _keywords: Ignite UI for Angular, Angular Theming Component, Angular Theming, Ig
 ## Theming Examples
 The **Ignite UI for Angular Theming** provides you the ability to customize themes for your application by setting them globally, in order to beautify all non-custom-styled elements, or applying them severally to the components you want to differentiate.
 
-### Demos
+### Demo
 <div class="sample-container" style="height: 750px">
     <iframe id="theme-chooser-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/theming/theme-chooser" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -163,66 +163,6 @@ That's it!
 
 We have now made a theme for each component in our app. The last step is just to apply it.
 
-#### Using Schemas
-
-Creating schemas is listing properties that a theme should have. They are the 'recipes' component themes use when generating theme maps.
-
-To get started, first you have import the default schemas([light-schema]({environment:sassApiUrl}/index.html#variable-light-schema) and [dark-schema]({environment:sassApiUrl}/index.html#variable-dark-schema)), which are going to be extended later:
-
-```scss
-...
-@import '~igniteui-angular/lib/core/styles/themes/utilities';
-...
-```
-Every component has its own light and dark schema, so if you want to make a custom one, you have to extend one of the components default schemas:
-```scss
-    $_black-grid-schema: extend($_dark-grid,
-            (
-                content-background:  igx-color($black-theme-palette, "primary", 100),
-                header-background: igx-color($black-theme-palette, "secondary", 700),
-                cell-selected-background: igx-color($black-theme-palette, "primary", 500),
-                cell-selected-text-color: igx-color($black-theme-palette, "secondary", 500),
-                row-hover-background: igx-color($black-theme-palette, "secondary", 100),
-                header-border-color: igx-color($black-theme-palette, "primary", 600),
-                content-text-color: white,
-                row-hover-text-color: igx-color($black-theme-palette, "primary", 700),   
-            )
-    );
-
-    $_black-grid-paginator-schema: extend($_dark-grid-pagination,
-        (
-            text-color: igx-color($black-theme-palette, "secondary", 700),
-            background-color: igx-color($black-theme-palette, "primary", 700),
-            border-color: igx-color($black-theme-palette, "secondary", 500)
-        )
-);
-```
-Then set up the schema that you will use in your app, by extending one of the default schemas:
-
-```scss
-    $my-black-schema: extend( $dark-schema, (
-            ...
-            igx-grid: $_black-grid-schema,
-            igx-grid-paginator: $_black-grid-paginator-schema,
-            ...
-        )
-    );
-```
-Finally you have to set the `$schema` property of the components themes with the above defined **app schema**.
-```scss
-...
-$black-grid-theme: igx-grid-theme(
-  $palette: $black-theme-palette,
-  $schema: $my-black-schema
-);
-
-$black-grid-paginator-theme: igx-grid-paginator-theme(
-  $palette: $black-theme-palette,
-  $schema: $my-black-schema  
-);
-...
-```
-
 #### Applying Component Themes
 Bind the host element `class` with the **themes class**.
 
@@ -271,12 +211,94 @@ And the result is:
 
 Import the *utilities*, component mixins and the theme functions, define the colors, define the themes and apply them. These are the steps for styling your app with **Ignite UI for Angular Theming**.
 
+
+###Schema Setting
+
+Creating schemas is defining component properties that a theme should have. They are the 'recipes' component themes use when generating theme maps.
+
+To get started, first you have to import the default global schemas ([light-schema]({environment:sassApiUrl}/index.html#variable-light-schema) and [dark-schema]({environment:sassApiUrl}/index.html#variable-dark-schema)):
+
+```scss
+...
+@import '~igniteui-angular/lib/core/styles/themes/utilities';
+...
+```
+Every component has its own light and dark schema, so if you want to make a custom one, you have to extend one of the components default schemas:
+```scss
+//Define the `recipe` for the igx-grid
+$_black-grid-schema: extend($_dark-grid,
+        (
+            content-background:(
+                igx-color:("primary", 100)
+            ),
+            header-background:(
+                igx-color:("secondary", 700)
+            ),
+            cell-selected-background:(
+                igx-color:("primary", 500)
+            ),
+            cell-selected-text-color:(
+                igx-color:("secondary", 500)
+            ),
+            row-hover-background:(
+                igx-color:("secondary", 100)
+            ),
+            header-border-color:(
+                igx-color:("primary", 600)
+            ),
+            content-text-color: white,
+            row-hover-text-color:(
+                igx-color:("primary", 700)
+            ),   
+        )
+);
+//Define the `recipe` for the igx-grid-paginator
+$_black-grid-paginator-schema: extend($_dark-grid-pagination,
+        (
+            text-color:(
+                igx-color: ("secondary", 700)
+            ),
+            background-color:(
+                igx-color: ("primary", 700)
+            ),
+            border-color:(
+                igx-color:( "secondary", 500)
+            )
+        )
+);
+```
+The component schemas are applied through the global schemas, in order to use the custom one you have to extend one of the globals (`$dark-schema` or `$light-schema`):
+```scss
+    $my-black-schema: extend( $dark-schema, (
+            ...
+            igx-grid: $_black-grid-schema,
+            igx-grid-paginator: $_black-grid-paginator-schema,
+            ...
+        )
+    );
+```
+Finally you have to define the `$palette` and set the `$schema` property of the components themes with the new global schema, defined above.
+```scss
+...
+$black-grid-theme: igx-grid-theme(
+  $palette: $black-theme-palette,
+  $schema: $my-black-schema
+);
+
+$black-grid-paginator-theme: igx-grid-paginator-theme(
+  $palette: $black-theme-palette,
+  $schema: $my-black-schema  
+);
+...
+```
+When you define a schema, you provide a recipe that can be used by all components and also easily changed by only setting new value for the `$palette`.
+<div class="divider--half"></div>
+
 ### Theme Chooser
-In the above sample we set only one theme per component.
 
-If we want to define more themes for a single **Ignite UI for Angular Component**, with the idea of changing them, we can add a **theme chooser**.
+After we have defined a couple of themes, we need a **theme chooser** to switch them easily.
 
-This can be achieved in a few modifications:
+This can be achieved with few modifications:
 - Create a SCSS file and define the classes, which will include the themes:
 
 ```scss
