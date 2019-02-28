@@ -37,7 +37,7 @@ Batch editing allows to **Add/Update/Delete** several records in a chunk and man
 In order to be able to use the Batch Editing functionality, it is required to import the [`HierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) from "igniteui-angular". Again Transaction is a provider that accumulates the applied changes as a transaction log and in the same time holds a state for each modified row and its last state.
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-To use the [`TransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) with [`IgxHierarchicalGridComponent`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html) but have it accumulating separate transaction logs for each island a service factory should be provided instead. One is exported and ready for use as ['IgxHierarchicalTransactionServiceFactory']({environment:angularApiUrl}/classes/igxhierarchicaltransactionservicefactory.html).
+In order to use the [`TransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) with [`IgxHierarchicalGridComponent`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html), but have it accumulating separate transaction logs for each island, a service factory should be provided instead. One is exported and ready for use as ['IgxHierarchicalTransactionServiceFactory']({environment:angularApiUrl}/classes/igxhierarchicaltransactionservicefactory.html).
 }
 
 #### Demo
@@ -67,7 +67,7 @@ The following sample illustrates how to enable and use Batch Editing via Transac
 <div class="divider--half"></div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-<div class="sample-container loading" style="height:650px">
+<div class="sample-container loading" style="height:680px">
     <iframe id="hierarchical-grid-batch-editing-sample-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-batch-editing' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
@@ -78,7 +78,7 @@ The following sample illustrates how to enable and use Batch Editing via Transac
 }
 
 > [!NOTE]
-> Transaction state consists of all the updated, added and deleted rows and their last states.
+> Transaction state consists of all the updated, added and deleted rows, and their last states.
 
 ### Usage
 
@@ -98,7 +98,7 @@ import { @@igxNameModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-Then you need to define the igxTransactionService as provider for the @@igComponent or on some of its parent components:
+Then you need to define the igxTransactionService as a provider for the @@igComponent or for some of its parent components:
 
 @@if (igxName === 'IgxGrid') {
 ```typescript
@@ -143,7 +143,7 @@ export class HierarchicalGridWithTransactionsComponent { }
 ```
 }
 > [!NOTE]
-> `IgxGridTransaction` is injection token defined by the grid.
+> `IgxGridTransaction` is an injection token defined by the grid.
 
 Then define a @@igComponent with bound data source and [`rowEditable`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#roweditable) set to true and bind:
 

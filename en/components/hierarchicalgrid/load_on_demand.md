@@ -6,9 +6,11 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ### Hierarchical Grid Load On Demand
 
-The Ignite UI for Angular [`IgxHierarchicalGrid`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html) can be rendered in such way that it requires the minimal amount of data to get from the server so the user could see it as quickly as possible. Then, only after the user expands a row containing a child grid, he will receive the data for that particular child grid. This mechanism, also known as Load on Demand, can be easily configured to work with any remote data.
+The Ignite UI for Angular [`IgxHierarchicalGrid`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html) allows fast rendering by requesting the minimum amount of data to be retrieved from the server so that the user can see the result in view and interact with the visible data as quickly as possible. Initially only the root grid’s data is retrieved and rendered, only after the user expands a row containing a child grid, he will receive the data for that particular child grid. This mechanism, also known as Load on Demand, can be easily configured to work with any remote data.
 
-In this topic we will demonstrate how to achieve Load on Demand, by creating our own Remote Service Provider for the [`IgxHierarchicalGrid`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html), using a remote oData v4 Service that is readily available. Here's the working demo and later we will go through it step by step and describe the process of creating it.
+
+This topic demonstrates how to configure Load on Demand by creating a Remote Service Provider that communicates with an already available remote oData v4 Service. Here's the working demo and later we will go through it step by step and describe the process of creating it.
+
 
 #### Demo
 
@@ -27,7 +29,7 @@ First we will prepare our service provider so we will be ready to get the data w
 
 #### Getting basic data
 
-We will be communicating with our backend service over HTTP protocol using XMLHttpRequest interface the browsers provide. In order to achieve this more easily we will use Angular's [`HttpClient`](https://angular.io/api/common/http/HttpClient) module that offers a simplified client HTTP API. That way in order to get our data we will need this simple method in our service:
+We will be communicating with our backend service over HTTP protocol using the XMLHttpRequest interface the browsers provide. In order to achieve this more easily we will use Angular's [`HttpClient`](https://angular.io/api/common/http/HttpClient) module that offers a simplified client HTTP API. That way in order to get our data we will need this simple method in our service:
 
 
 ```typescript
@@ -38,7 +40,7 @@ public getData(dataState): Observable<any[]> {
 }
 ```
 
-As you can see `this.http` will be a reference to our `HttpCLient` module, and `buildUrl()` will be the method that will generate our url based on the data that we have received. We map our response so we get only the value of our result and return an Observable since this is executed asynchronously. That way we can later subscribe to it, process it further in our application and pass it to our grid.
+As you can see `this.http` will be a reference to our `HttpCLient` module, and `buildUrl()` will be the method that will generate our url based on the data that we have received. We map our response so we get only the value of our result and return an Observable, since this is executed asynchronously. That way we can later subscribe to it, process it further in our application and pass it to our grid.
 
 #### Building our request url
 
@@ -46,7 +48,7 @@ Next we will define how we should build our URL for the GET request. This is whe
 
 ![Dragging](../../images/hgrid-database.jpg)
 
- What we need at first is the `key` of our table to determine from where we would get the data for the desired grid, the primary key of the parent row and its unique ID. We will define all this in an interface called `IDataState`. An example:
+ What we first need is the `key` of our table to determine from where to get the data for the desired grid, the primary key of the parent row and its unique ID. We will define all this in an interface called `IDataState`. An example:
 
 ```typescript
 export interface IDataState {
@@ -125,11 +127,11 @@ export class RemoteLoDService {
 
 ### Hierarchical Grid Setup
 
-What we will do next, is setup our hierarchical grid and connect it to our remote service provider.
+Next we will setup our hierarchical grid and connect it to our remote service provider.
 
 #### Template defining
 
-First we will define our hierarchical grid template with the levels of hierarchy that we expect to have. We know that our root grid [`primaryKey`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html#primarykey) for the customers is their `CustomerID`, for their orders on the first level -  `OrderID` and respectively for order details - `ProductID`. Knowing also each database table and their keys, we can use this information to define our initial template:
+First we will define our hierarchical grid template with the levels of hierarchy that we expect to have. We know that our root grid [`primaryKey`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html#primarykey) for the customers is their `CustomerID`, for their orders on the first level -  `OrderID` and respectively for order details - `ProductID`. Knowing each database table and their keys allows us to define our initial template:
 
 ```html
 <igx-hierarchical-grid #hGrid [primaryKey]="'CustomerID'" [autoGenerate]="false" [height]="'600px'" [width]="'100%'">
@@ -155,13 +157,13 @@ First we will define our hierarchical grid template with the levels of hierarchy
 </igx-hierarchical-grid>
 ```
 
-There is one thing missing in our template though, and that is the data for our root level hierarchical grid, and eventually its children. We will set the data of the root grid after getting its data from the service in our code later easily, since we can use the `#hGrid` reference. Setting the data for any child that has been expanded is a bit different.
+There is one thing missing in our template though, and that is the data for our root level hierarchical grid, and eventually its children. We will easily set the data of the root grid after getting its data from the service in our code later, since we can use the `#hGrid` reference. Setting the data for any child that has been expanded is a bit different.
 
-When a row is expanded for the first time, a new child `IgxHierarchicalGrid` is rendered for it and we will need to somehow get that reference for the newly created grid to set its data. That is why each [`IgxRowIsland`]({environment:angularApiUrl}/classes/igxrowislandcomponent.html) component provides the [`onGridCreated`]({environment:angularApiUrl}/classes/igxrowislandcomponent.html#ongridcreated)  event that is fired when a new child grid is created for that specific row island. We can use that to get the reference we need for the new grid, request its data from the service, and apply it.
+When a row is expanded for the first time, a new child `IgxHierarchicalGrid` is rendered for it and we need to get the reference for the newly created grid to set its data. That is why each [`IgxRowIsland`]({environment:angularApiUrl}/classes/igxrowislandcomponent.html) component provides the [`onGridCreated`]({environment:angularApiUrl}/classes/igxrowislandcomponent.html#ongridcreated)  event that is fired when a new child grid is created for that specific row island. We can use that to get the reference we need for the new grid, request its data from the service, and apply it.
 
-We can use one method for all row islands since we built our service so that it needs only information if it is the root level, the key of the row island, the primary key of the parent row, and its unique identifier. All this can be taken either directly from the event arguments, or from the row island responsible for triggering the event. 
+We can use one method for all row islands since we built our service so that it needs only information if it is the root level, the key of the row island, the primary key of the parent row, and its unique identifier. All this information can be accessed either directly from the event arguments, or from the row island responsible for triggering the event. 
 
-Let's name the method that we will use `gridCreated`. Since the event [`onGridCreated`]({environment:angularApiUrl}/classes/igxrowislandcomponent.html#ongridcreated) provides the [`parentID`]({environment:angularApiUrl}/interfaces/igridcreatedeventargs.html#parentid) property, a reference to the row island as [`owner`]({environment:angularApiUrl}/interfaces/igridcreatedeventargs.html#owner) and the new child [`grid`]({environment:angularApiUrl}/interfaces/igridcreatedeventargs.html#grid) property, it will be passed as the first argument. We are only missing information about the parent row `primaryKey`, but we can easily pass that as a second argument, depending on which row island we bind. 
+Let's name the method that we will use `gridCreated`. Since the event [`onGridCreated`]({environment:angularApiUrl}/classes/igxrowislandcomponent.html#ongridcreated) provides the [`parentID`]({environment:angularApiUrl}/interfaces/igridcreatedeventargs.html#parentid) property, a reference to the row island as [`owner`]({environment:angularApiUrl}/interfaces/igridcreatedeventargs.html#owner) and the new child [`grid`]({environment:angularApiUrl}/interfaces/igridcreatedeventargs.html#grid) property, it will be passed as the first argument. We are only missing information about the parent row's `primaryKey`, but we can easily pass that as a second argument, depending on which row island we bind. 
 
 The template file `hierarchical-grid-lod.component.html`, with these changes added, would look like this:
 
@@ -191,7 +193,7 @@ The template file `hierarchical-grid-lod.component.html`, with these changes add
 
 #### Connecting our service
 
-One of our final steps now will be to connect our service, that we created earlier, to our hierarchical grid. Since we defined it as an `Injectable`, we can pass it as a provider to our application. We will get a reference to our root grid as well, by using `ViewChild` query to set its data:
+One of our final steps now will be to connect our previously created service to our hierarchical grid. Since we defined it as an `Injectable`, we can pass it as a provider to our application. We will get a reference to our root grid as well, by using `ViewChild` query to set its data:
 
 ````TypeScript
 @Component({
@@ -238,11 +240,11 @@ public gridCreated(event: IGridCreatedEventArgs, _parentKey: string) {
 }
 ````
 
-With this, the setup of our application is almost done. The last thing will improve the user experience, since we would like to inform the user that the data is still loading, and he doesn't look at an empty grid in the meantime. That's why the [`IgxHierarchicalGrid`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html) also supports a loading indicator that is displayed while the data is being empty. If new data comes, the loading indicator will hide and the data will be rendered. 
+With this, the setup of our application is almost done. This last step aims to improve the user experience by informing the user that the data is still loading so he doesn't have to look at an empty grid in the meantime. That's why the [`IgxHierarchicalGrid`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html) supports a loading indicator that can be displayed while the grid is empty. If new data is received, the loading indicator will hide and the data will be rendered. 
 
 #### Setup of loading indication
 
-The [`IgxHierarchicalGrid`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html) supports by default loading indicator by setting the [`isLoading`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html#isloading) property to `true` while there is no data. We will need to set it initially for the root grid and when creating a child grid until the data is loaded. We could always set it to `true` in our template, but we want to hide it and display that the grid has no data if the service returns an empty array by setting it to `false`.
+The [`IgxHierarchicalGrid`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html) can display a loading indicator by setting the [`isLoading`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html#isloading) property to `true` while there is no data. We need to set it initially for the root grid and also when creating new child grids, until their data is loaded. We could always set it to `true` in our template, but we want to hide it and display that the grid has no data if the service returns an empty array by setting it to `false`.
 
 In this case the final version of our `hierarchical-grid-lod.component.ts` would look like this:
 
