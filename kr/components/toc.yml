@@ -505,7 +505,7 @@
   new: false
 - name: Text Highlight
   href: texthighlight.md
-  new: true
+  new: false
 - name: Select
   href: select.md
   new: true

@@ -51,7 +51,7 @@ export class AppModule {}
             <igx-icon *ngIf="searchText.length > 0" (click)="clearSearch()">clear</igx-icon>
         </igx-prefix>
 
-        <input #search1 id="search1" igxInput placeholder="Search" [(ngModel)]="searchText" (ngModelChange)="onTextboxChange()"
+        <input #search1 id="search1" igxInput placeholder="Search" autocomplete="off" [(ngModel)]="searchText" (ngModelChange)="onTextboxChange()"
                 (keydown)="searchKeyDown($event)" />
         <igx-suffix>
             <div class="caseSensitiveButton">
@@ -86,29 +86,19 @@ export class AppModule {}
 テキストの段落と IgxTextHighlight ディレクティブを追加します。値入力を段落のテキストにバインドする必要があることを注意してください。段落のテキストに補間も使用します。複数のコンテナがあり、たとえば 0 の場合に列、行、ページの入力が便利です。その他、検索コンテナは親コンテナの一意の子である必要があるため、周りに div 要素が必要になります。
 
 ```html
-<div>
-    <p igxTextHighlight
-        [value]="html"
-        [groupName]="'group1'"
-        [column]="0"
-        [row]="0"
-        [page]="0"
-        [containerClass]="'search-text'"
-        class="search-text">
+    <div igxTextHighlight
+         [value]="html"
+         [groupName]="'group1'"
+         [containerClass]="'search-text'"
+         class="search-text">
         {{html}}
-    </p>
-</div>
+    </div>
 ```
 
 コンポーネント テンプレートのバインディングに使用する以下のフィールドをコンポーネントの .ts ファイルに追加します。
 
 ``` typescript
-    public html = `
-    Use the search box to search for a certain string in this text.
-    All the results will be highlighted in yellow, while the first occurrence of the string will be in orange.
-    You can use the button in the searchbox to specify if the search will be case sensitive.
-    You can move the orange highlight by either pressing the buttons on the searchbox or by using the Enter or the arrow keys on your keyboard.
-    `;
+    public html = "...";
 
     @ViewChild(IgxTextHighlightDirective, {read: IgxTextHighlightDirective})
     public highlight: IgxTextHighlightDirective;
@@ -127,7 +117,7 @@ export class AppModule {}
 次に以下のメソッドを追加すると、ユーザーが検索ボックスに入力したテキストにハイライトを適用でき、アクティブ ハイライト間を移動できます。
 
 ``` typescript
-     public searchKeyDown(ev) {
+    public searchKeyDown(ev) {
         if (this.searchText) {
             if (ev.key === "Enter" || ev.key === "ArrowDown" || ev.key === "ArrowRight") {
                 ev.preventDefault();
@@ -201,48 +191,29 @@ export class AppModule {}
 [`igxTextHighlight`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html) は、1 つのアクティブ ハイライトを共有する複数のコンテナ内を検索できます。個々にコンテナを持つ複数の TextHighlight ディレクティブで同じグループ値を持つことにより可能になります。サンプルの設定は、前のサンプルの検索ボックスを再利用しますが、今回は 2 段落追加します。両方ともコンテナにありますが 2 つ目は行に異なる値があります。
 
 ```html
-    <div>
-        <p igxTextHighlight
-            [groupName]="'group1'"
-            [column]="0"
-            [row]="0"
-            [page]="0"
-            [containerClass]="'search-text'"
-            [value]="firstParagraph"
-            class="search-text">
-            {{firstParagraph}}
-        </p>
+    <div igxTextHighlight
+         [groupName]="'group1'"
+         [row]="0"
+         [containerClass]="'search-text'"
+         [value]="firstParagraph"
+         class="search-text">
+        {{firstParagraph}}
     </div>
-    <div>
-        <p igxTextHighlight
-            [groupName]="'group1'"
-            [column]="0"
-            [row]="1"
-            [page]="0"
-            [containerClass]="'search-text'"
-            [value]="secondParagraph"
-            class="search-text">
-            {{secondParagraph}}
-        </p>
+    <div igxTextHighlight
+         [groupName]="'group1'"
+         [row]="1"
+         [containerClass]="'search-text'"
+         [value]="secondParagraph"
+         class="search-text">
+        {{secondParagraph}}
     </div>
-
 ```
 .ts ファイルに firstParagraph と secondParagraph フィールドがあり、テキスト ハイライト ディレクティブの各値入力にバインドします。ViewChild の代わりに ViewChildren を使用してテンプレートのすべてのハイライトを取得します。
 
 ```typescript
-    public firstParagraph = `
-        Use the search box to search for a certain string in the paragraph below.
-        All the results will be highlighted in yellow, while the first occurrence of the string will be in orange.
-        You can use the button in the searchbox to specify if the search will be case sensitive.
-        You can move the orange highlight by either pressing the buttons on the searchbox or by using the Enter or the arrow keys on your keyboard.
-`;
+    public firstParagraph = "...";
 
-    public secondParagraph = `
-On top of the functionality from the previous sample, this sample demonstrates how to implement the text highlight directive
-             with several different containers. In this case, we have two paragraphs, each containing some text. You can see that
-             they share the same active (orange) highlight and the returned match count includes both containers. The find method in this
-             sample can be reused regardless of the number of containers you have in your application.
-    `;
+    public secondParagraph = "...";
 
     @ViewChildren(IgxTextHighlightDirective)
     public highlights;
@@ -279,9 +250,7 @@ On top of the functionality from the previous sample, this sample demonstrates h
                 const actualIndex = row === 0 ? this.index : this.index - matchesArray[row - 1];
 
                 IgxTextHighlightDirective.setActiveHighlight("group1", {
-                    columnIndex: 0,
                     index: actualIndex,
-                    page: 0,
                     rowIndex: row
                 });
             }
