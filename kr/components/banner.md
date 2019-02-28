@@ -83,7 +83,7 @@ Changing the message displayed in the banner is easy - just change the content y
 
 #### Adding an icon
 
-Developers can pass an [`igx-icon`]({environment:angularApiUrl}/classes/igxiconmodule.html) in the banner's content and it will always be positioned at **the beginning** of the banner message.
+Developers can pass an `igx-icon` in the banner's content and it will always be positioned at **the beginning** of the banner message.
 
 > [!NOTE]
 > If several `igx-icon` elements are inserted as direct descendants of the banner, the banner will try positioning **all** of them at the beginning. It is **strongly** advised to only pass one `igx-icon` directly to the banner. If you want to use icons in your banner message, wrap them in a `span` tag.
@@ -175,7 +175,7 @@ The results of the templated banner can be seen in the below demo:
 
 ### Applying custom animations
 
-The banner component also exposes an `Input` property that allows setting custom opening and closing animations in the [`animationSettings`]({environment:angularApiUrl}/classes/igxbannermodule.html#animationsettings). Developers can pass custom animations - either self-defined, or those from our [`IgniteUI for Angular animation suite`]({environment:sassApiUrl}/index.html). The default animations used by the banner are `growVerIn` for entry and `growVerOut` for exiting.
+The banner component also exposes an `Input` property that allows setting custom opening and closing animations in the [`animationSettings`]({environment:angularApiUrl}/classes/igxbannercomponent.html#animationsettings). Developers can pass custom animations - either self-defined, or those from our [`IgniteUI for Angular animation suite`]({environment:sassApiUrl}/index.html). The default animations used by the banner are `growVerIn` for entry and `growVerOut` for exiting.
 
 Let's change the animations that our banner uses, so that it slides in.
 
