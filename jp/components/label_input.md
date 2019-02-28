@@ -24,7 +24,7 @@ Ignite UI for Angular Input および Label ディレクティブを使用する
 Label および Input ディレクティブのデフォルト スタイル設定はマテリアル デザイン [**ガイドライン**](https://material.io/guidelines/components/text-fields.html)のテキスト フィールド仕様を実装します。
 
 > [!NOTE]
-> [`igxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html) および [`igxLabel`]({environment:angularApiUrl}/classes/igxlabeldirective.html) を使用するには、`<igx-input-group>` コンテナーにラップする必要があります。
+> [`igxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html) および `igxLabel` を使用するには、`<igx-input-group>` コンテナーにラップする必要があります。
 
 Ignite UI for Angular Label および Input を初期化する前に、[`IgxInputGroupModule`]({environment:angularApiUrl}/classes/igxinputgroupmodule.html) を **app.module.ts** ファイルにインポートします。
 
@@ -43,7 +43,7 @@ export class AppModule {}
 ```
 
 ### Label および Input
-HTML ラベルおよび入力は HTML フォームの基本要素です。[`igxLabel`]({environment:angularApiUrl}/classes/igxlabeldirective.html) および [`igxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html) ディレクティブの使用例:
+HTML ラベルおよび入力は HTML フォームの基本要素です。`igxLabel` および [`igxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html) ディレクティブの使用例:
 
 ```html
 <igx-input-group>
@@ -102,7 +102,6 @@ Input Group コンポーネントの詳細については[ここ](input_group.md
 
 ### API リファレンス
 * [IgxInputDirective]({environment:angularApiUrl}/classes/igxinputdirective.html)
-* [IgxLabelDirective]({environment:angularApiUrl}/classes/igxlabeldirective.html)
 * [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
 
 ### その他のリソース
