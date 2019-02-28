@@ -199,7 +199,7 @@ public addRow() {
 
 #### Updating data in the @@igComponent
 
-Updating data in the @@igComponent is achieved through [`updateRow`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#updaterow) and [`updateCell`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#updatecell) methods but **only if primary key for the grid is defined**. You can also directly update a cell and row value through their [`update`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#update) method.
+Updating data in the @@igComponent is achieved through [`updateRow`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#updaterow) and [`updateCell`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#updatecell) methods but **only if primary key for the grid is defined**. You can also directly update a cell and/or a row value through their respective `update` methods.
 
 @@if (igxName === 'IgxGrid') {
 ```typescript
