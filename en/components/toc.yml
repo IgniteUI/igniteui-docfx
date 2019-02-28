@@ -34,6 +34,10 @@
     - name: Filtering
       href: grid/filtering.md
       new: true
+      items:
+        - name: Excel Style Filtering
+          href: grid/excel_style_filtering.md
+          new: true
     - name: Sorting
       href: grid/sorting.md
       new: false
