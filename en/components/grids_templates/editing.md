@@ -131,7 +131,7 @@ Another way to update cell is directly through [`update`]({environment:angularAp
 ```typescript
 ...
     public updateCell() {
-        const cell = this.treeGrid.getCellByColumn(rowID, 'Age');
+        const cell = this.treeGrid.getCellByColumn(rowIndex, 'Age');
         // You can also get cell by rowID if primary key is defined
         // const cell = this.treeGrid.getCellByKey(rowID, 'Age');
         cell.update(9999);
