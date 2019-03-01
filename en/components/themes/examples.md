@@ -277,7 +277,16 @@ The component schemas are applied through the global schemas, in order to use th
         )
     );
 ```
-Finally you have to define the `$palette` and set the `$schema` property of the components themes with the new global schema, defined above.
+Finally, you have to define the `$palette`:
+```scss
+...
+$black-color: #000000;
+$aqua-color: #00BFFF;
+
+$black-theme-palette: igx-palette($primary: $black-color, $secondary: $aqua-color);
+...
+```
+and then apply it with the newly defined global schema to the components themes:
 ```scss
 ...
 $black-grid-theme: igx-grid-theme(
