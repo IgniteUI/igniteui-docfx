@@ -207,7 +207,7 @@ export class AppModule {}
 
 ```html
 <!--template.component.html-->
-<button igxToggleAction="toggleId" [closeOnOutsideClick]="true" class="toggle-button"  igxButton="raised">Toggle</button>
+<button igxToggleAction="toggleId" class="toggle-button"  igxButton="raised">Toggle</button>
 <div igxToggle id="toggleId" class="toggle-content">
     <section class="toggle-section">
     <h3>Click 

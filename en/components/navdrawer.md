@@ -90,7 +90,7 @@ The Navigation Drawer also integrates with [`igxNavigationService`]({environment
 Let's replace the `<main>` in **app.component.html** with the following, adding [`igxButton`](button.md) and [Icon component](icon.md) to style our toggle:
 ```html
 <main>
-  <span igxButton="icon" igxToggleAction="navigation" [closeOnOutsideClick]="false">
+  <span igxButton="icon" igxToggleAction="navigation">
     <igx-icon fontSet="material">menu</igx-icon>
   </span>
 </main>
