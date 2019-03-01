@@ -232,7 +232,13 @@ $_black-grid-schema: extend($_dark-grid,
                 igx-color:("primary", 100)
             ),
             header-background:(
-                igx-color:("secondary", 700)
+                igx-color:("primary", 700)
+            ),
+            header-border-color:(
+                igx-color:("secondary", 500)
+            ),
+            header-text-color:(
+                igx-color:("secondary", 500)
             ),
             cell-selected-background:(
                 igx-color:("primary", 500)
@@ -242,9 +248,6 @@ $_black-grid-schema: extend($_dark-grid,
             ),
             row-hover-background:(
                 igx-color:("secondary", 100)
-            ),
-            header-border-color:(
-                igx-color:("primary", 600)
             ),
             content-text-color: white,
             row-hover-text-color:(
@@ -277,16 +280,19 @@ The component schemas are applied through the global schemas, in order to use th
         )
     );
 ```
-Finally, you have to define the `$palette`:
+Define the `$palette`:
 ```scss
 ...
 $black-color: #000000;
 $aqua-color: #00BFFF;
 
-$black-theme-palette: igx-palette($primary: $black-color, $secondary: $aqua-color);
+$black-theme-palette: igx-palette($primary: $black-color, $secondary: $aqua-color, $grays: #fff);
 ...
 ```
-and then apply it with the newly defined global schema to the components themes:
+>[!NOTE]
+> Keep in mind when extending the global `$black-scheme` to set the `$grays` parameter with `#fff` in the [igx-palette](https://www.infragistics.com/products/ignite-ui-angular/docs/sass/latest/index.html#function-igx-palette) function!  
+
+Finally, apply the `palette` with the newly defined global schema to the components themes:
 ```scss
 ...
 $black-grid-theme: igx-grid-theme(
