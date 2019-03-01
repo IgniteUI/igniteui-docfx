@@ -216,8 +216,7 @@ The directive is exported both from the main `IgxNavigationDrawerModule` and sep
 
 #### Example: Use default item styles with Angular Router
 To make use of the [`igxDrawerItem`]({environment:angularApiUrl}/classes/igxnavdraweritemdirective.html) directive to style items normally the `active` input should be set, however with routing that state is controlled externally.
-
-Take the following items defined in `app`typescript
+Take the following items defined in `app`:
 ```typescript
 export class AppComponent {
     public componentLinks = [
