@@ -574,6 +574,9 @@
   href: calendar.md
 - name: Date Picker
   href: date_picker.md
+- name: Month Picker
+  href: month_picker.md
+  new: true
 - name: Time Picker
   href: time_picker.md
   new: false
