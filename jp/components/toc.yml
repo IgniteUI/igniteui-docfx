@@ -223,9 +223,6 @@
     - name: カスケーディング
       href: combo_cascading.md
       new: true
-- name: Autocomplete
-  href: autocomplete.md
-  new: true
 - name: チャート
   header: true
 - name: Category Chart
@@ -470,6 +467,12 @@
 - name: Drop Down
   href: drop_down.md
   new: false
+- name: Select
+  href: select.md
+  new: true
+- name: Autocomplete
+  href: autocomplete.md
+  new: true
 - name: Button
   href: button.md
 - name: Button Group
@@ -508,9 +511,6 @@
 - name: Text Highlight
   href: texthighlight.md
   new: false
-- name: Select
-  href: select.md
-  new: true
 - name: インタラクション
   header: true
 - name: Dialog Windows

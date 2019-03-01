@@ -93,8 +93,6 @@ export class AutocompleteSampleComponent {
  - ドロップダウンが閉じている場合、入力フィールドに入力するとドロップダウンが開きます。
  - `Arrow Down` - 開いている場合、次のドロップダウン項目へ移動します。
  - `Arrow Up` - 開いている場合、以前のドロップダウン項目へ移動します。
- - `End` は最後のドロップダウン項目へ移動します。
- - `Home` は最初のドロップダウン項目へ移動します。
  - `Enter` は、すでに選択した項目を確定し、ドロップダウンを閉じます。
  - `Esc` はドロップダウンを閉じます。
 
@@ -202,7 +200,7 @@ export class AutocompleteSampleComponent {
 
 以下のサンプルは、オートコンプリートで映画が city でグループ化されている cinema の選択が可能なリストです。インプットの入力または `Arrow Down` キーを使用してリストを開き、cinema を選択します。次に movie と日付を選択します。
 
-<div class="sample-container loading" style="height: 600px;">
+<div class="sample-container loading" style="height: 650px;">
     <iframe id="autocomplete-movie" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/data-entries/movie" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -229,8 +227,9 @@ export class AutocompleteSampleComponent {
 ```
 
 ### オートコンプリートをリモートデータにバインド
-以下は、リモートサービスにバインドされたドロップダウンと `igxAutocomplete` のサンプルです。以下は、にデータ ロード時に遅延がある場合、ドロップダウンの代わりにカスタム テンプレートを適用したサンプルです。
+The following sample demonstrates an `igxAutocomplete` with a drop-down bound to a remote service. In order to limit requests to the service and improve performance, RxJS `debounce` is used and requests are made `250ms` after the input has stopped.
 
+For the purpose of the sample there is a delay in the data loading, in order to apply and show a custom loading template instead of the drop-down:
 <div class="sample-container loading" style="height: 400px;">
     <iframe id="autocomplete-remote-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/data-entries/autocomplete-remote" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>

@@ -92,8 +92,6 @@ export class AutocompleteSampleComponent {
  - Typing in the input will open the drop-down, if it is closed.
  - `Arrow Down` - will move to the next drop-down item, if it is opened.
  - `Arrow Up` - will move to the previous drop-down item, if it is opened.
- - `End` will move to the last drop-down item.
- - `Home` will move to the first drop-down item.
  - `Enter` will confirm the already selected item and will close the drop-down.
  - `Esc` will close the drop-down.
 
@@ -201,7 +199,7 @@ export class AutocompleteSampleComponent {
 
 The following sample demonstrates an autocomplete, which allows selecting a cinema, where movies are grouped by a city. Type in the input or use the `Arrow Down` key to open the list and choose a cinema, then select a movie and its date and time:
 
-<div class="sample-container loading" style="height: 600px;">
+<div class="sample-container loading" style="height: 650px;">
     <iframe id="autocomplete-movie" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/data-entries/movie" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -228,8 +226,9 @@ In order to use the `igxAutocomplete` with groups, like in the sample above, you
 ```
 
 ### Autocomplete bound to remote data
-The following sample demonstrates an `igxAutocomplete` with a drop-down bound to a remote service. For the purpose of the sample there is a delay, in order to apply a custom template that will show instead of the drop-down, when data is loading:
+The following sample demonstrates an `igxAutocomplete` with a drop-down bound to a remote service. In order to limit requests to the service and improve performance, RxJS `debounce` is used and requests are made `250ms` after the input has stopped.
 
+For the purpose of the sample there is a delay in the data loading, in order to apply and show a custom loading template instead of the drop-down:
 <div class="sample-container loading" style="height: 400px;">
     <iframe id="autocomplete-remote-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/data-entries/autocomplete-remote" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
