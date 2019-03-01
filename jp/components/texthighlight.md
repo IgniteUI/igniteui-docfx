@@ -1,5 +1,5 @@
----
-title: TextHighlight ディレクティブ - ネイティブ Angular | Ignite UI for Angular
+﻿---
+title: TextHighlight ディレクティブ - ネイティブ Angular |Ignite UI for Angular
 _description: Ignite UI for Angular TextHighlight ディレクティブは、テキスト部分のハイライトやアクティブ ハイライトがあります。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コンポーネント, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular TextHighlight ディレクティブ, IgxTextHighlight ディレクティブ
 _language: ja
@@ -83,7 +83,7 @@ export class AppModule {}
     </igx-input-group>
 </div>
 ```
-テキストの段落と IgxTextHighlight ディレクティブを追加します。値入力を段落のテキストにバインドする必要があることを注意してください。段落のテキストに補間も使用します。複数のコンテナがあり、たとえば 0 の場合に列、行、ページの入力が便利です。その他、検索コンテナは親コンテナの一意の子である必要があるため、周りに div 要素が必要になります。
+div テキストと IgxTextHighlight ディレクティブを追加します。値入力を div のテキストにバインドする必要があることに注意してください。div テキストに補間も使用します。
 
 ```html
     <div igxTextHighlight
@@ -187,8 +187,8 @@ export class AppModule {}
 
 <div class="divider"></div>
 
-### 複数コンテナで検索
-[`igxTextHighlight`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html) は、1 つのアクティブ ハイライトを共有する複数のコンテナ内を検索できます。個々にコンテナを持つ複数の TextHighlight ディレクティブで同じグループ値を持つことにより可能になります。サンプルの設定は、前のサンプルの検索ボックスを再利用しますが、今回は 2 段落追加します。両方ともコンテナにありますが 2 つ目は行に異なる値があります。
+### 複数要素で検索
+[`igxTextHighlight`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html) は、1 つのアクティブ ハイライトを共有する複数の要素内を検索できます。複数の TextHighlight ディレクティブで同じ [`groupName`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html#groupname) 値を持つことにより可能になります。サンプルの設定は、前のサンプルの検索ボックスを再利用しますが、今回は div 要素を 2 つ追加します。 [`column`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html#column) と [`row`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html#row) 入力は複数要素がある場合に便利で、この場合は 2 つ目の div に異なる行値があります。
 
 ```html
     <div igxTextHighlight
@@ -218,7 +218,7 @@ export class AppModule {}
     @ViewChildren(IgxTextHighlightDirective)
     public highlights;
 ```
-.ts ファイルのコードの残りすべてがシングル コンテナの例 (find メソッドの例外) と同一となります。複数のコンテナがあるため、このメソッドの変更が必要になりますが、TextHighlight ディレクティブの数値に関係なくコードを使用できます。
+.ts ファイルのコードの残りすべてが単一要素の例 (find メソッドの例外) と同一となります。複数の要素があるため、このメソッドの変更が必要になりますが、TextHighlight ディレクティブの数値に関係なくコードを使用できます。
 
 ```typescript
     private find(increment: number) {
