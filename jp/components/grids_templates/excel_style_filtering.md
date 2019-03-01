@@ -1,15 +1,32 @@
+@@if (igxName === 'IgxGrid') {
 ---
 title: Grid Excel Style Filtering
 _description: The Ignite UI for Angular Data Grid control features the fastest, touch-responsive data-rich grid with popular features, including hierarchical and list views.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Grid, Angular Table, Angular Data Grid component, Angular Data Table component, Angular Data Grid control, Angular Data Table control, Angular Grid component, Angular Table component, Angular Grid control, Angular Table control, Angular High Performance Grid, Angular High Performance Data Table, Filtering, Data Grid Filtering, Data Table Filtering
+_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Grid, Angular Table, Angular Data Grid component, Angular Data Table component, Angular Data Grid control, Angular Data Table control, Angular Grid component, Angular Table component, Angular Grid control, Angular Table control, Angular High Performance Grid, Angular High Performance Data Table, Filtering, Data Grid Filtering, Data Table Filtering, Excel, Excel Style Filtering
 ---
+}
+@@if (igxName === 'IgxTreeGrid') {
+---
+title: Tree Grid Excel Style Filtering
+_description: The Ignite UI for Angular Tree Grid control features the fastest, touch-responsive data-rich grid with popular features, including hierarchical and list views.
+_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Tree Grid, Angular Table, Angular Tree Grid component, Angular Data Table component, Angular Tree Grid control, Angular Data Table control, Angular Tree Grid component, Angular Table component, Angular Grid control, Angular Table control, Angular High Performance Grid, Angular High Performance Data Table, Filtering, Tree Grid Filtering, Data Table Filtering, Excel, Excel Style Filtering
+---
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+---
+title: Hierarchical Grid Excel Style Filtering
+_description: The Ignite UI for Angular Hierarchical Grid control features the fastest, touch-responsive data-rich grid with popular features, including hierarchical and list views.
+_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Hierarchical Grid, Angular Table, Angular Hierarchical Grid component, Angular Data Table component, Angular Hierarchical Grid control, Angular Data Table control, Angular Hierarchical Grid component, Angular Table component, Angular Grid control, Angular Table control, Angular High Performance Grid, Angular High Performance Data Table, Filtering, Hierarchical Grid Filtering, Data Table Filtering, Excel, Excel Style Filtering
+---
+}
 
-### Grid Excel Style Filtering
+### @@igComponent Excel Style Filtering
 
-The Grid component in Ignite UI for Angular provides filter UI similar to the one in excel.
+The @@igComponent component in Ignite UI for Angular provides filter UI similar to the one in excel.
 
 #### Demo
 
+@@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:700px">
     <iframe id="grid-sample-1-iframe" src='{environment:demosBaseUrl}/grid/grid-excel-style-filtering-sample-1' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -17,6 +34,25 @@ The Grid component in Ignite UI for Angular provides filter UI similar to the on
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
+}
+@@if (igxName === 'IgxTreeGrid') {
+<div class="sample-container loading" style="height:700px">
+    <iframe id="tree-grid-sample-1-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-excel-style-filtering' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+<div class="sample-container loading" style="height:700px">
+    <iframe id="hierarchical-grid-sample-1-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-excel-style-filtering' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+}
 
 <div class="divider--half"></div>
 
@@ -24,10 +60,24 @@ The Grid component in Ignite UI for Angular provides filter UI similar to the on
 
 To turn on the excel style filtering, two inputs should be set. The `allowFiltering` should be set to `true` and the `filterMode` should be set to `excelStyleFilter`.
 
+@@if (igxName === 'IgxGrid') {
 ```html
-<igx-grid #grid1 [data]="data" [autoGenerate]="true" [allowFiltering]="true" [filterMode]="'excelStyleFilter'">
+<igx-grid [data]="data" [autoGenerate]="true" [allowFiltering]="true" [filterMode]="'excelStyleFilter'">
 </igx-grid>
 ```
+}
+@@if (igxName === 'IgxTreeGrid') {
+```html
+<igx-tree-grid [data]="data" [autoGenerate]="true" [allowFiltering]="true" [filterMode]="'excelStyleFilter'">
+</igx-tree-grid>
+```
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+```html
+<igx-hierarchical-grid [data]="data" [autoGenerate]="true" [allowFiltering]="true" [filterMode]="'excelStyleFilter'">
+</igx-hierarchical-grid>
+```
+}
 
 ###Interaction
 
@@ -44,6 +94,7 @@ To apply filter with different expressions you can click the **Text filter**, wh
 
 Sorting, moving, pinning and hiding features can be removed from the filter menu. The inputs that controls them are as follows: `sortable`, `movable`, `disablePinning`, `disableHiding`.
 
+@@if (igxName === 'IgxGrid') {
 ```html
 <igx-grid #grid1 [data]="data" [autoGenerate]="false" height="650px" width="100%" [allowFiltering]="true" [filterMode]="'excelStyleFilter'">
     <igx-column field="ProductName" header="Product Name" [sortable]="true" [movable]="true" [dataType]="'string'">
@@ -58,12 +109,87 @@ Sorting, moving, pinning and hiding features can be removed from the filter menu
     </igx-column>
 </igx-grid>
 ```
+
 <div class="divider--half"></div>
 
 In the sample bellow 'Product Name' and 'Discontinued' columns have all four features enebled, 'Quantity Per Unit' have all four disabled, 'Unit Price' has only sorting and moving and 'Order Date' has only pinning and hiding.
+}
+@@if (igxName === 'IgxTreeGrid') {
+```html
+<igx-tree-grid #treegrid1 [data]="data" [autoGenerate]="false" height="480px" width="100%" [allowFiltering]="true" 
+    primaryKey="ID" foreignKey="ParentID" filterMode="excelStyleFilter">
+    <igx-column field="ID" header="Product ID" [dataType]="'string'">
+    </igx-column>
+    <igx-column field="Name" header="Product Name" [sortable]="true" [movable]="true" [dataType]="'string'">
+    </igx-column>
+    <igx-column field="UnitPrice" header="Unit Price" [dataType]="'number'" [sortable]="false" [disablePinning]="true" [disableHiding]="true" [movable]="false">
+        <ng-template igxCell let-cell="cell" let-val>
+            <span *ngIf="cell.row.rowData.UnitPrice == 0">-</span>
+            <span *ngIf="cell.row.rowData.UnitPrice != 0">${{val}}</span>
+        </ng-template>
+    </igx-column>
+    <igx-column field="AddedDate" header="Added Date" [dataType]="'date'" [formatter]="formatDate" [sortable]="false" [movable]="false">
+    </igx-column>
+    <igx-column field="Discontinued" header="Discontinued" [dataType]="'boolean'" [sortable]="true" [movable]="true">
+        <ng-template igxCell let-cell="cell" let-val>
+            <span *ngIf="cell.row.rowData.UnitPrice == 0">-</span>
+            <img *ngIf="cell.row.rowData.UnitPrice != 0 && val" src="assets/images/grid/active.png" title="Continued" alt="Continued" />
+            <img *ngIf="cell.row.rowData.UnitPrice != 0 && !val" src="assets/images/grid/expired.png" title="Discontinued" alt="Discontinued" />
+        </ng-template>
+    </igx-column>
+</igx-tree-grid>
+```
 
 <div class="divider--half"></div>
 
+In the sample bellow 'Product Name' and 'Discontinued' columns have all four features enebled, 'Unit Price' have all four disabled, 'Added Date' has only pinning and hiding.
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+```html
+<igx-hierarchical-grid class="hgrid" [data]="localdata" [autoGenerate]="false" [allowFiltering]='true' filterMode="excelStyleFilter"
+    [height]="'650px'" [width]="'100%'" [rowHeight]="'65px'" #hierarchicalGrid>
+    <igx-column field="Artist" [filterable]='true' [sortable]="true" [movable]="true"></igx-column>
+    <igx-column field="Photo" [filterable]='false'>
+        <ng-template igxCell let-cell="cell">
+            <div class="cell__inner_2">
+                <img [src]="cell.value" class="photo" />
+            </div>
+        </ng-template>
+    </igx-column>
+    <igx-column field="Debut" [filterable]='true' [disablePinning]="true" [disableHiding]="true"></igx-column>
+    <igx-column field="Grammy Nominations" [filterable]='true' [dataType]="'number'" [sortable]="false" [movable]="false"></igx-column>
+    <igx-column field="Grammy Awards" [filterable]='true' [dataType]="'number'"></igx-column>
+
+    <igx-row-island [key]="'Albums'" [autoGenerate]="false" [allowFiltering]='true' filterMode="excelStyleFilter">
+        <igx-column field="Album" [filterable]='true'></igx-column>
+        <igx-column field="Launch Date" [filterable]='true' [dataType]="'date'"></igx-column>
+        <igx-column field="Billboard Review" [filterable]='true' [dataType]="'number'"></igx-column>
+        <igx-column field="US Billboard 200" [filterable]='true' [dataType]="'number'"></igx-column>
+    <igx-row-island [key]="'Songs'" [autoGenerate]="false" >
+            <igx-column field="No."></igx-column>
+            <igx-column field="Title"></igx-column>
+            <igx-column field="Released"></igx-column>
+            <igx-column field="Genre"></igx-column>
+    </igx-row-island>
+    </igx-row-island>
+
+    <igx-row-island [key]="'Tours'" [autoGenerate]="false">
+        <igx-column field="Tour"></igx-column>
+        <igx-column field="Started on"></igx-column>
+        <igx-column field="Location"></igx-column>
+        <igx-column field="Headliner"></igx-column>
+    </igx-row-island>
+</igx-hierarchical-grid>
+```
+
+<div class="divider--half"></div>
+
+In the sample bellow 'Artist' column have all four features enebled, 'Debut' have all four disabled, 'Grammy Nominations' has only pinning and hiding.
+}
+
+<div class="divider--half"></div>
+
+@@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:800px">
     <iframe id="grid-sample-2-iframe" src='{environment:demosBaseUrl}/grid/grid-excel-style-filtering-sample-2' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -71,6 +197,25 @@ In the sample bellow 'Product Name' and 'Discontinued' columns have all four fea
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
+}
+@@if (igxName === 'IgxTreeGrid') {
+<div class="sample-container loading" style="height:800px">
+    <iframe id="tree-grid-sample-2-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-excel-style-filtering-templates' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+<div class="sample-container loading" style="height:800px">
+    <iframe id="hierarchical-grid-sample-2-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-excel-style-filtering-templates' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+}
 
 <div class="divider--half"></div>
 
@@ -78,13 +223,13 @@ In the sample bellow 'Product Name' and 'Discontinued' columns have all four fea
 <div class="divider--half"></div>
 
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
-* [IgxGridComponent API]({environment:angularApiUrl}/classes/igxgridcomponent.html)
-* [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
+* [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 
 ### Additional Resources
 <div class="divider--half"></div>
 
-* [Grid overview](grid.md)
+* [@@igComponent overview](@@igMainTopic.md)
 * [Virtualization and Performance](virtualization.md)
 * [Paging](paging.md)
 * [Sorting](sorting.md)
