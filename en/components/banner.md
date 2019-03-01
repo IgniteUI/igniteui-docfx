@@ -83,7 +83,7 @@ Changing the message displayed in the banner is easy - just change the content y
 
 #### Adding an icon
 
-Developers can pass an `igx-icon` in the banner's content and it will always be positioned at **the beginning** of the banner message.
+Developers can pass an [`igx-icon`](icon.md) in the banner's content and it will always be positioned at **the beginning** of the banner message.
 
 > [!NOTE]
 > If several `igx-icon` elements are inserted as direct descendants of the banner, the banner will try positioning **all** of them at the beginning. It is **strongly** advised to only pass one `igx-icon` directly to the banner. If you want to use icons in your banner message, wrap them in a `span` tag.
