@@ -149,7 +149,7 @@ export class AutocompleteSampleComponent {
 ```
 
 ### Drop-down settings
-The `igx-autocomplete` drop-down positioning, scrolling strategy and outlet can be configured using, the [`IgxAutocompleteSettings`]({environment:angularApiUrl}/classes/igxautocompletedirective.html#autocompleteSettings) option. It allows values from type [`AutocompleteOverlaySettings`]({environment:angularApiUrl}/classes/autocompleteoverlaysettings.html).
+The `igx-autocomplete` drop-down positioning, scrolling strategy and outlet can be configured using, the [`IgxAutocompleteSettings`]({environment:angularApiUrl}/classes/igxautocompletedirective.html#autocompletesettings) option. It allows values from type [`AutocompleteOverlaySettings`]({environment:angularApiUrl}/interfaces/autocompleteoverlaysettings.html).
 
 The following example displays the positioning of the drop-down can be set to be always above the input, where the directive is applied. It also disables opening and closing animations. For the purpose the `ConnectedPositioningStrategy` is used:
 

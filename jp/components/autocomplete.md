@@ -150,7 +150,7 @@ export class AutocompleteSampleComponent {
 ```
 
 ### ドロップダウンの設定
-`igx-autocomplete` ドロップダウンの配置、スクロール ストラテジとアウトレットは、[`IgxAutocompleteSettings`]({environment:angularApiUrl}/classes/igxautocompletedirective.html#autocompleteSettings) オプションを使用して設定できます。タイプ [`AutocompleteOverlaySettings`]({environment:angularApiUrl}/classes/autocompleteoverlaysettings.html) からの値を許可します。
+`igx-autocomplete` ドロップダウンの配置、スクロール ストラテジとアウトレットは、[`IgxAutocompleteSettings`]({environment:angularApiUrl}/classes/igxautocompletedirective.html#autocompletesettings) オプションを使用して設定できます。タイプ [`AutocompleteOverlaySettings`]({environment:angularApiUrl}/interfaces/autocompleteoverlaysettings.html) からの値を許可します。
 
 以下の例は、ディレクティブが適用される入力の上部に設定可能なドロップダウンの位置を表示します。更に開く、閉じるのアニメーションを無効にします。`ConnectedPositioningStrategy` が使用されます。
 
