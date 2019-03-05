@@ -1,25 +1,24 @@
 ﻿---
-title: テーマ
+title: テーマの例
 _description: Ignite UI for Angular は、SASS 機能と mixins でアプリケーション全体および特定部分を最小限のコードでスタイル設定できます。
-_keywords: Ignite UI for Angular, Angular Theming コンポーネント, Angular Theming, Ignite UI for Angular コンポーネント, Ignite for Agular Themes, グローバル テーマ, コンポーネント テーマ
-_language: ja
+_keywords: Ignite UI for Angular, Angular Theming コンポーネント, Angular Theming, Ignite UI for Angular コンポーネント, Ignite for Agular Themes, グローバル コンポーネント, コンポーネント テーマ
 ---
 
-## テーマ
-**Ignite UI for Angular Theming** は、グローバル設定でアプリケーション全体のテーマをカスタマイズしてすべての既定の要素に適用、あるいはコンポーネント別にテーマをそれぞれ適用することができます。
+## テーマの例
+**Ignite UI for Angular Theming** は、グローバルに設定してアプリケーション全体のテーマをカスタマイズしてすべての既定の要素に適用、あるいはコンポーネント別にテーマをそれぞれ適用することができます。
 
 ### デモ
 <div class="sample-container" style="height: 650px">
     <iframe id="theme-chooser-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/theming/theme-chooser" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="theme-chooser-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="theme-chooser-iframe" data-demos-base-url="{environment:demosBaseUrl}"> view on stackblitz
     </button>
 </div>
 <div class="divider--half"></div>
 
 
-### デフォルトのテーマ
+### デフォルト テーマ
 
 **デフォルトのテーマ**は、**Ignite UI for Angular コントロール**のすべてのコンポーネントのスタイルを設定します。はじめに `styles.scss` ファイルに設定します。
 
@@ -40,17 +39,17 @@ _language: ja
     <iframe id="default-theme-sample-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/theming/default-theme-sample" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="default-theme-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}"> stackblitz で開く
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="default-theme-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}"> view on stackblitz
     </button>
 </div>
 <div class="divider--half"></div>
 
-コンポーネントの外観を変更したい場合や**デフォルト テーマ**がアプリケーションの UI に合わない場合は、**Ignite UI for Angular Theming** を使用して多くの CSS を記述せずにスタイル設定が簡単にできます。
+コンポーネント外観を変更したい場合や**デフォルトテーマ**がアプリケーションの UI に合わない場合は、**Ignite UI for Angular Theming** を使用して大量の CSS を書かずにスタイル設定が簡単にできます。
 
-### 作業の開始
+### はじめに
 
 はじめに、**SASS functions と mixins** が入れ子になっている**テーマ ユーティリティ**をインポートします。
-理想的なコード構成は、別々のディレクトリ**テーマ ロジック**に配置することです。
+理想的なコード構成は、別々のディレクトリ**テーマロジック**に配置することです。
 
 ```scss
 // styles/dark-theme.scss
@@ -63,7 +62,7 @@ _language: ja
 次のステップは、カスタマイズするコンポーネントと対応するテーマをすべてインポートします。
 
 以下がアプリに含まれます。
-- [**Igx-Grid**](../grid/grid.md) の [**paging**](../grid/paging.md) と [**filtering**](../grid/filtering.md)。
+- **Igx-Grid** の **paging** と **フィルタリング**。
 
 ```scss
 // Import grid component and theme styles
@@ -75,7 +74,7 @@ _language: ja
 @import '~igniteui-angular/lib/core/styles/components/grid-paginator/grid-paginator-theme';
 
 ```
-- [**Igx-Dialog**](../dialog.md) の組み込み [**Igx-Input-Group**](../input_group.md)。
+- [**Igx-Dialog**](../dialog.md) と埋め込み [**Igx-Input-Group**](../input_group.md)。
 
 ```scss
 
@@ -89,7 +88,7 @@ _language: ja
 
 ```
 
-コンポーネントのテーマ設定に必要なすべての機能があるため、使用する**色パレット**を定義するだけです。
+コンポーネントのテーマ設定に必要なすべての機能があるため、使用する**カラー パレット**を定義するだけです。
 
 ```scss
 // Define the primary color
@@ -107,7 +106,7 @@ $dark-theme-palette: igx-palette($primary: $dark-color, $secondary: $orange-colo
 
 ### テーマの設定
 
-**テーマの設定**は、プライマリおよびセカンダリの色の異なるシェードをコンポーネント パーツに適用します。[**Ignite UI for Angular Themes**]({environment:sassApiUrl}) のヘルプでスタイル設定可能なコンポーネント パーツを確認できます。
+**テーマの設定**は、プライマリおよびセカンダリの色の異なるシェードをコンポーネント パーツに適用します。[**Ignite UI for Angular テーマ**]({environment:sassApiUrl}) のヘルプでスタイル設定可能なコンポーネント パーツを確認できます。
 
 適用する **コンポーネント テーマ**を定義します。
 
@@ -205,7 +204,7 @@ public themesClass = "dark-theme";
     <iframe id="dark-theme-sample-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/theming/dark-theme-sample" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dark-theme-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}"> stackblitz で開く
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dark-theme-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}"> view on stackblitz
     </button>
 </div>
 <div class="divider--half"></div>
@@ -218,7 +217,7 @@ public themesClass = "dark-theme";
 **Ignite UI for Angular コンポーネント**にその他のテーマを定義する場合は、**テーマ**を追加できます。
 
 変更を少し加えるだけです。
-- SCSS ファイルを作成してテーマを含むクラスを定義します
+- SCSS ファイルを作成してテーマを含むクラスを定義します。
 
 ```scss
 // styles/themes-classes.scss
@@ -272,7 +271,7 @@ public themesClass = "dark-theme";
 
 <div class="divider--half"></div>
 
-**テーマ クラス**を表すデータおよびホスト要素の `class` セレクターを操作する関数を追加します。
+**テーマ クラス** を表すデータおよびホスト要素の `class` セレクターを操作する関数を追加します。
 
 ```typescript
 
@@ -311,7 +310,7 @@ export class ThemeChooserSampleComponent implements OnInit {
     <iframe id="theme-chooser-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/theming/theme-chooser" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="theme-chooser-iframe" data-demos-base-url="{environment:demosBaseUrl}"> stackblitz で開く
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="theme-chooser-iframe" data-demos-base-url="{environment:demosBaseUrl}"> view on stackblitz
     </button>
 </div>
 <div class="divider--half"></div>
@@ -328,14 +327,14 @@ export class ThemeChooserSampleComponent implements OnInit {
 ### その他のリソース
 <div class="divider--half"></div>
 
-* [グローバル テーマ](global-theme.md)
+* [Global テーマ](global-theme.md)
 * [コンポーネント テーマ](component-themes.md)
 * [カラー パレット](palette.md)
-* [Grid](../grid/grid.md)
-* [ページング](../grid/paging.md)
-* [フィルタリング](../grid/filtering.md)
-* [Dialog](../dialog.md)
-* [Input Group](../input_group.md)
-* [Snackbar](../snackbar.md)
-* [Button](../button.md)
-* [Button Group](../buttonGroup.md)
+* [グリッド](../grid/grid.md)
+* [グリッド ページング](../grid/paging.md)
+* [グリッド フィルタリング](../grid/filtering.md)
+* [ダイアログ](../dialog.md)
+* [インプット グループ](../input_group.md)
+* [スナックバー](../snackbar.md)
+* [ボタン](../button.md)
+* [ボタン グループ](../buttonGroup.md)
