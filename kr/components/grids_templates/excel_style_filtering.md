@@ -81,18 +81,18 @@ To turn on the excel style filtering, two inputs should be set. The [`allowFilte
 
 ###Interaction
 
-In order to open the filter menu for a particular column, the filter icon in the header should be clicked. If the column can be sorted, pinned, moved or hidden along with the filtering functionality there will be buttons for the features that are turned on.
+In order to open the filter menu for a particular column, the filter icon in the header should be clicked. If the column can be sorted, pinned, moved or hidden along with the filtering functionality, there will be buttons for the features that are turned on.
 
-If no filter is applied all the items in the list will be selected. They can be filtered from the input above the list. In order to filter the data you can select/deselect the items in the list and click Apply button. The filtering applied throught the list items create filter expressions with `equals` operator and the logic operator between each expression is `OR`. If you want to clear the filter you can check Select All item and then Apply button. 
+If no filter is applied, all the items in the list will be selected. They can be filtered from the input above the list. In order to filter the data, you can select/deselect the items in the list and click Apply button. The filtering applied through the list items create filter expressions with `equals` operator and the logic operator between each expression is `OR`. If you want to clear the filter, you can check Select All item and then Apply button. 
 
-To apply filter with different expressions you can click the **Text filter**, which will open a sub menu with all available filter operators for the particular column. Selecting one of them will open the custom filter dialog, where you can add as many expressions as you want with different filter and logic operators. There is also a clear button which can clear the filter.
+To apply a filter with different expressions, you can click the **Text filter**, which will open a sub menu with all available filter operators for the particular column. Selecting one of them will open the custom filter dialog, where you can add as many expressions as you want with different filter and logic operators. There is also a clear button, which can clear the filter.
 
 
 <div class="divider--half"></div>
 
 ###Configure menu features
 
-Sorting, moving, pinning and hiding features can be removed from the filter menu. The inputs that controls them are as follows: `sortable`, `movable`, `disablePinning`, `disableHiding`.
+Sorting, moving, pinning and hiding features can be removed from the filter menu. The inputs that control them are as follows: `sortable`, `movable`, `disablePinning`, `disableHiding`.
 
 @@if (igxName === 'IgxGrid') {
 ```html
@@ -112,7 +112,7 @@ Sorting, moving, pinning and hiding features can be removed from the filter menu
 
 <div class="divider--half"></div>
 
-In the sample bellow 'Product Name' and 'Discontinued' columns have all four features enebled, 'Quantity Per Unit' have all four disabled, 'Unit Price' has only sorting and moving and 'Order Date' has only pinning and hiding.
+In the sample below 'Product Name' and 'Discontinued' columns have all four features enabled, 'Quantity Per Unit' have all four disabled, 'Unit Price' has only sorting and moving and 'Order Date' has only pinning and hiding.
 }
 @@if (igxName === 'IgxTreeGrid') {
 ```html
@@ -142,7 +142,7 @@ In the sample bellow 'Product Name' and 'Discontinued' columns have all four fea
 
 <div class="divider--half"></div>
 
-In the sample bellow 'Product Name' and 'Discontinued' columns have all four features enebled, 'Unit Price' have all four disabled, 'Added Date' has only pinning and hiding.
+In the sample below 'Product Name' and 'Discontinued' columns have all four features enabled, 'Unit Price' have all four disabled, 'Added Date' has only pinning and hiding.
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
@@ -184,7 +184,7 @@ In the sample bellow 'Product Name' and 'Discontinued' columns have all four fea
 
 <div class="divider--half"></div>
 
-In the sample bellow 'Artist' column have all four features enebled, 'Debut' have all four disabled, 'Grammy Nominations' has only pinning and hiding.
+In the sample below 'Artist' column have all four features enabled, 'Debut' have all four disabled, 'Grammy Nominations' has only pinning and hiding.
 }
 
 <div class="divider--half"></div>
