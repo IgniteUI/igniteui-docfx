@@ -57,7 +57,7 @@ A full list of the available Ignite UI CLI commands as well as details on the us
 
 | Command | Alias | Description |
 | --- | --- | --- |
-| [ig new](https://github.com/IgniteUI/igniteui-cli/wiki/new) | | Create a new  Angular, jQuery or React application. The application will be configured to use either Ignite UI for Angular, or Ignite UI for JavaScript controls. 
+| [ig new](https://github.com/IgniteUI/igniteui-cli/wiki/new) | | Create a new  Angular, jQuery or React application. The application will be configured to use Ignite UI for Angular, Ignite UI for React or Ignite UI for JavaScript controls. 
 | [ig add](https://github.com/IgniteUI/igniteui-cli/wiki/add) | | Adds a template by its ID and providing a name to an existing project
 | [ig start](https://github.com/IgniteUI/igniteui-cli/wiki/start) | | Builds the application, starts a web server and opens the application in the default browser.
 | [ig build](https://github.com/IgniteUI/igniteui-cli/wiki/build) | | Builds the application into an output directory
