@@ -1,5 +1,5 @@
 ﻿---
-title: Shadows スタイルガイド
+title: エレベーション/シャドウ
 _description:
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ
 _language: ja
@@ -10,12 +10,11 @@ _language: ja
 Shadows は、Document Object Model ツリーの間に境界線を描画し、機能のカプセル化を向上します。
 
 ### エレベーション
-
 <div class="elevations row">
     <div class="col-lg-4 col-md-4 col-sm-6">
         <div class="elevation-sample elevate-1">
             <p class="variable">
-                $elevate-1
+                Level 1
             </p>
             <p class="css">
                 box-shadow:
@@ -28,7 +27,7 @@ Shadows は、Document Object Model ツリーの間に境界線を描画し、�
     <div class="col-lg-4 col-md-4 col-sm-6">
         <div class="elevation-sample elevate-2">
             <p class="variable">
-                $elevate-2
+                Level 2
             </p>
             <p class="css">
                 box-shadow:
@@ -41,7 +40,7 @@ Shadows は、Document Object Model ツリーの間に境界線を描画し、�
     <div class="col-lg-4 col-md-4 col-sm-6">
         <div class="elevation-sample elevate-3">
             <p class="variable">
-                $elevate-3
+                Level 3
             </p>
             <p class="css">
                 box-shadow:
@@ -54,7 +53,7 @@ Shadows は、Document Object Model ツリーの間に境界線を描画し、�
     <div class="col-lg-4 col-md-4 col-sm-6">
         <div class="elevation-sample elevate-4">
             <p class="variable">
-                $elevate-4
+                Level 4
             </p>
             <p class="css">
                 box-shadow:
@@ -67,7 +66,7 @@ Shadows は、Document Object Model ツリーの間に境界線を描画し、�
     <div class="col-lg-4 col-md-4 col-sm-6">
         <div class="elevation-sample elevate-6">
             <p class="variable">
-                $elevate-6
+                Level 6
             </p>
             <p class="css">
                 box-shadow:
@@ -80,7 +79,7 @@ Shadows は、Document Object Model ツリーの間に境界線を描画し、�
     <div class="col-lg-4 col-md-4 col-sm-6">
         <div class="elevation-sample elevate-8">
             <p class="variable">
-                $elevate-8
+                Level 8
             </p>
             <p class="css">
                 box-shadow:
@@ -93,7 +92,7 @@ Shadows は、Document Object Model ツリーの間に境界線を描画し、�
     <div class="col-lg-4 col-md-4 col-sm-6">
         <div class="elevation-sample elevate-9">
             <p class="variable">
-                $elevate-9
+                Level 9
             </p>
             <p class="css">
                 box-shadow:
@@ -106,7 +105,7 @@ Shadows は、Document Object Model ツリーの間に境界線を描画し、�
     <div class="col-lg-4 col-md-4 col-sm-6">
         <div class="elevation-sample elevate-12">
             <p class="variable">
-                $elevate-12
+                Level 12
             </p>
             <p class="css">
                 box-shadow:
@@ -119,7 +118,7 @@ Shadows は、Document Object Model ツリーの間に境界線を描画し、�
     <div class="col-lg-4 col-md-4 col-sm-6">
         <div class="elevation-sample elevate-16">
             <p class="variable">
-                $elevate-16
+                Level 16
             </p>
             <p class="css">
                 box-shadow:
@@ -132,7 +131,7 @@ Shadows は、Document Object Model ツリーの間に境界線を描画し、�
     <div class="col-lg-4 col-md-4 col-sm-6">
         <div class="elevation-sample elevate-24">
             <p class="variable">
-                $elevate-24
+                Level 24
             </p>
             <p class="css">
                 box-shadow:
@@ -150,44 +149,85 @@ Shadows は、Document Object Model ツリーの間に境界線を描画し、�
     <img width="100%" height="100%" src="../images/whatismaterial_3d_elevation2.jpg" alt="Shadows Usage">
 </div>
 
-###エレベーション設定
+###エレベーションの追加方法
 
-以下は、エレベーションを設定する方法を示します。
+以下はコンポーネントにエレベーションを設定する方法を示します。この例では card コンポーネントを使用しています。
 
-シャドウを設定する要素を定義します。
-
-```html
-...
-<div class="wrapper">
-    <div class="elevation-sample">
-        <p class="variable">
-            $elevate-8
-        </p>
-        <pre class="formatter">
-            <code class ="css">
-                box-shadow:
-                0 5px 5px -3px palette(gray, 400),
-                0 8px 10px 1px palette(gray, 300),
-                0 3px 14px 2px palette(gray, 200)
-            </code>
-                These are the default elevation colors            
-        </pre>
-    </div>
-</div>
-```
-
-次に要素の [igx-elevation]({environment:sassApiUrl}/index.html#function-igx-elevation) を scss クラスに適用します。
+はじめに以下の方法で [igx-elevation]({environment:sassApiUrl}/index.html#function-igx-elevation) をカードに適用します。
 
 ```scss
-    // First you have to import the utilities!
-@import '~igniteui-angular/lib/core/styles/themes/utilities';
+$myCard: igx-card-theme(
+    $resting-shadow: igx-elevation($elevations, 10)
+);
 
-    //Apply the elevation level
-.elevation-sample {
-    box-shadow: igx-elevation($elevations, 8);
+@include igx-card($myCard);
+
+// 以下にコンパイルされます。
+
+.igx-card {
+  box-shadow: 
+    0 6px 6px -3px rgba(0, 0, 0, 0.26),
+    0 10px 14px 1px rgba(0, 0, 0, 0.12),
+    0 4px 18px 3px rgba(0, 0, 0, 0.08);
 }
 ```
-以下は上記コード スニペットの結果です。
+
+マテリアル ガイドラインに沿ってシャドウが生成されました。
+
+シャドウの色を変更するには igx-elevations 関数を使用してデフォルトをオーバーライドします。
+ ```scss
+...
+// Define the 3 elevation colors
+
+$color-1: rgb(153, 191, 170); // Umbra
+$color-2: rgb(92, 134, 141); // Penumbra
+$color-3: rgb(92, 61, 70); // Ambient
+
+// igx-elevations使用して 3 つすべてのボックスシャドウに
+// コスチューム カラーで sass マップを生成します。
+
+$elevations-color: igx-elevations($color-1, $color-2, $color-3);
+
+// igx-elevation を使用してエレベーション レベルを設定します。
+$mySpecialCard: igx-card-theme(
+    $resting-shadow: igx-elevation($elevations-color, 10)
+);
+
+// カスタム エレベーションを特定のセレクターにスコープすることもできます。
+.special-card {
+  @include igx-card($mySpecialCard);
+}
+
+// 次にコンパイルされます。
+
+.special-card .igx-card {
+  box-shadow: 
+    0 6px 6px -3px rgb(153, 191, 170),
+    0 10px 14px 1px rgb(92, 134, 141),
+    0 4px 18px 3px rgb(92, 61, 70);
+}
+
+```
+
+また関数を利用せずに box-shadow を設定することもできます。
+```scss
+$myboringCard: igx-card-theme(
+    $resting-shadow: 0 10px 10px 10px #666
+);
+
+.boring-card{
+  @include igx-card($myboringCard);
+}
+
+// 以下にコンパイルされます。
+
+.boring-card .igx-card {
+  box-shadow: 0 10px 10px 10px #666;
+}
+```
+
+
+以下は上記コードスニペットの結果です。
 
 <div class="sample-container loading" style="height: 350px">
     <iframe id="shadows-sample-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/theming/shadows-sample" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -197,34 +237,8 @@ Shadows は、Document Object Model ツリーの間に境界線を描画し、�
 </div>
 <div class="divider--half"></div>
 
-シャドウの色とエレベーション レベルを変更します。
 
- ```scss
-...
-//Define the 3 elevation colors
-$color-1: #99BFAA;
-$color-2: #5C868D;
-$color-3: #5C3D46; 
-
-//Define the shadow elevations
-$shadow-elevations: igx-elevations($color-1, $color-2, $color-3);
-
-//Apply the custom shadow elevations and change the elevation level 
-.elevation-sample {
-    box-shadow: igx-elevation($shadow-elevations, 24);
-}
-```
-
-結果は以下のようになります。
-
-<div class="sample-container loading" style="height: 350px">
-    <iframe id="shadows-sample-2-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/theming/shadows-sample-2" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="shadows-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz</button>
-</div>
 <div class="divider--half"></div>
-
 
 ### API リファレンス
 

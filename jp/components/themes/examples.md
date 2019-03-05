@@ -63,7 +63,7 @@ _language: ja
 次のステップは、カスタマイズするコンポーネントと対応するテーマをすべてインポートします。
 
 以下がアプリに含まれます。
-- [**Igx-Grid**](../grid.md) の [**paging**](../grid_paging.md) と [**filtering**](../grid_filtering.md)。
+- [**Igx-Grid**](../grid/grid.md) の [**paging**](../grid/paging.md) と [**filtering**](../grid/filtering.md)。
 
 ```scss
 // Import grid component and theme styles
@@ -73,10 +73,6 @@ _language: ja
 // Import grid-paginator component and theme styles
 @import '~igniteui-angular/lib/core/styles/components/grid-paginator/grid-paginator-component';
 @import '~igniteui-angular/lib/core/styles/components/grid-paginator/grid-paginator-theme';
-
-// Import grid-filtering component and theme styles
-@import '~igniteui-angular/lib/core/styles/components/grid-filtering/grid-filtering-component';
-@import '~igniteui-angular/lib/core/styles/components/grid-filtering/grid-filtering-theme';
 
 ```
 - [**Igx-Dialog**](../dialog.md) の組み込み [**Igx-Input-Group**](../input_group.md)。
@@ -320,13 +316,14 @@ export class ThemeChooserSampleComponent implements OnInit {
 </div>
 <div class="divider--half"></div>
 
-###API
+### API
 
 * [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 * [IgxGrid Filtering Styles]({environment:sassApiUrl}/index.html#function-igx-grid-filtering-theme)
 * [IgxGrid Paginator Styles]({environment:sassApiUrl}/index.html#function-igx-grid-paginator-theme)
 * [IgxDialogComponent Styles]({environment:sassApiUrl}/index.html#function-igx-dialog-theme)
 * [IgxInputGroupComponent Styles]({environment:sassApiUrl}/index.html#function-igx-input-group-theme) 
+* [IgxOverlay Styles]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
 
 ### その他のリソース
 <div class="divider--half"></div>
@@ -334,9 +331,9 @@ export class ThemeChooserSampleComponent implements OnInit {
 * [グローバル テーマ](global-theme.md)
 * [コンポーネント テーマ](component-themes.md)
 * [カラー パレット](palette.md)
-* [Grid](../grid.md)
-* [ページング](../grid_paging.md)
-* [フィルタリング](../grid_filtering.md)
+* [Grid](../grid/grid.md)
+* [ページング](../grid/paging.md)
+* [フィルタリング](../grid/filtering.md)
 * [Dialog](../dialog.md)
 * [Input Group](../input_group.md)
 * [Snackbar](../snackbar.md)

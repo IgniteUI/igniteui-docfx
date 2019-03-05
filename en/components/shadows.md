@@ -1,5 +1,5 @@
 ---
-title: Shadows Styleguide
+title: Elevations/shadows
 _description:
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library
 ---
@@ -8,15 +8,12 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 Shadows are used to establish and maintain functional boundaries between Document Object Model trees to enable better functional encapsulation.
 
-<p class="highlight"></p>
-<div class="divider"></div>
-
 ### Elevations
 <div class="elevations row">
     <div class="col-lg-4 col-md-4 col-sm-6">
         <div class="elevation-sample elevate-1">
             <p class="variable">
-                $elevate-1
+                Level 1
             </p>
             <p class="css">
                 box-shadow:
@@ -29,7 +26,7 @@ Shadows are used to establish and maintain functional boundaries between Documen
     <div class="col-lg-4 col-md-4 col-sm-6">
         <div class="elevation-sample elevate-2">
             <p class="variable">
-                $elevate-2
+                Level 2
             </p>
             <p class="css">
                 box-shadow:
@@ -42,7 +39,7 @@ Shadows are used to establish and maintain functional boundaries between Documen
     <div class="col-lg-4 col-md-4 col-sm-6">
         <div class="elevation-sample elevate-3">
             <p class="variable">
-                $elevate-3
+                Level 3
             </p>
             <p class="css">
                 box-shadow:
@@ -55,7 +52,7 @@ Shadows are used to establish and maintain functional boundaries between Documen
     <div class="col-lg-4 col-md-4 col-sm-6">
         <div class="elevation-sample elevate-4">
             <p class="variable">
-                $elevate-4
+                Level 4
             </p>
             <p class="css">
                 box-shadow:
@@ -68,7 +65,7 @@ Shadows are used to establish and maintain functional boundaries between Documen
     <div class="col-lg-4 col-md-4 col-sm-6">
         <div class="elevation-sample elevate-6">
             <p class="variable">
-                $elevate-6
+                Level 6
             </p>
             <p class="css">
                 box-shadow:
@@ -81,7 +78,7 @@ Shadows are used to establish and maintain functional boundaries between Documen
     <div class="col-lg-4 col-md-4 col-sm-6">
         <div class="elevation-sample elevate-8">
             <p class="variable">
-                $elevate-8
+                Level 8
             </p>
             <p class="css">
                 box-shadow:
@@ -94,7 +91,7 @@ Shadows are used to establish and maintain functional boundaries between Documen
     <div class="col-lg-4 col-md-4 col-sm-6">
         <div class="elevation-sample elevate-9">
             <p class="variable">
-                $elevate-9
+                Level 9
             </p>
             <p class="css">
                 box-shadow:
@@ -107,7 +104,7 @@ Shadows are used to establish and maintain functional boundaries between Documen
     <div class="col-lg-4 col-md-4 col-sm-6">
         <div class="elevation-sample elevate-12">
             <p class="variable">
-                $elevate-12
+                Level 12
             </p>
             <p class="css">
                 box-shadow:
@@ -120,7 +117,7 @@ Shadows are used to establish and maintain functional boundaries between Documen
     <div class="col-lg-4 col-md-4 col-sm-6">
         <div class="elevation-sample elevate-16">
             <p class="variable">
-                $elevate-16
+                Level 16
             </p>
             <p class="css">
                 box-shadow:
@@ -133,7 +130,7 @@ Shadows are used to establish and maintain functional boundaries between Documen
     <div class="col-lg-4 col-md-4 col-sm-6">
         <div class="elevation-sample elevate-24">
             <p class="variable">
-                $elevate-24
+                Level 24
             </p>
             <p class="css">
                 box-shadow:
@@ -150,44 +147,85 @@ Shadows are used to establish and maintain functional boundaries between Documen
     <img width="100%" height="100%" src="../images/whatismaterial_3d_elevation2.jpg" alt="Shadows Usage">
 </div>
 
-###Elevations Setting
+### How to add elevations?
 
-The following section demonstrates how to set various elevations to elements.
+The following section demonstrates how to set elevation to a component. In the example, we are using the card component.
 
-Define the element that you want ot set a shadow on:
-
-```html
-...
-<div class="wrapper">
-    <div class="elevation-sample">
-        <p class="variable">
-            $elevate-8
-        </p>
-        <pre class="formatter">
-            <code class ="css">
-                box-shadow:
-                0 5px 5px -3px palette(gray, 400),
-                0 8px 10px 1px palette(gray, 300),
-                0 3px 14px 2px palette(gray, 200)
-            </code>
-                These are the default elevation colors            
-        </pre>
-    </div>
-</div>
-```
-
-Then apply the [igx-elevation]({environment:sassApiUrl}/index.html#function-igx-elevation) to the `scss` class of the element:
+Firs apply the [igx-elevation]({environment:sassApiUrl}/index.html#function-igx-elevation) to the card by doing the following
 
 ```scss
-    // First you have to import the utilities!
-@import '~igniteui-angular/lib/core/styles/themes/utilities';
+$myCard: igx-card-theme(
+    $resting-shadow: igx-elevation($elevations, 10)
+);
 
-    //Apply the elevation level
-.elevation-sample {
-    box-shadow: igx-elevation($elevations, 8);
+@include igx-card($myCard);
+
+// This compiles to
+
+.igx-card {
+  box-shadow: 
+    0 6px 6px -3px rgba(0, 0, 0, 0.26),
+    0 10px 14px 1px rgba(0, 0, 0, 0.12),
+    0 4px 18px 3px rgba(0, 0, 0, 0.08);
 }
 ```
-The result from the above code snippets is:
+
+As you can see the shadow is produced according to the material guidelines.
+
+To change the shadows colors use the igx-elevations function to override the defaults:
+ ```scss
+...
+// Define the 3 elevation colors
+
+$color-1: rgb(153, 191, 170); // Umbra
+$color-2: rgb(92, 134, 141); // Penumbra
+$color-3: rgb(92, 61, 70); // Ambient
+
+// Use igx-elevations to generate sass maps for all three 
+// box-shadows with the costume colors 
+
+$elevations-color: igx-elevations($color-1, $color-2, $color-3);
+
+// Use the igx-elevation to set the desired elevation level
+$mySpecialCard: igx-card-theme(
+    $resting-shadow: igx-elevation($elevations-color, 10)
+);
+
+// If you want you can scope your custom elevation to a specific selector
+.special-card {
+  @include igx-card($mySpecialCard);
+}
+
+// This compiles compiled to
+
+.special-card .igx-card {
+  box-shadow: 
+    0 6px 6px -3px rgb(153, 191, 170),
+    0 10px 14px 1px rgb(92, 134, 141),
+    0 4px 18px 3px rgb(92, 61, 70);
+}
+
+```
+
+You can also set box-shadow without taking advantage of the igx-elevation function:
+```scss
+$myboringCard: igx-card-theme(
+    $resting-shadow: 0 10px 10px 10px #666
+);
+
+.boring-card{
+  @include igx-card($myboringCard);
+}
+
+// This compiles to
+
+.boring-card .igx-card {
+  box-shadow: 0 10px 10px 10px #666;
+}
+```
+
+
+Here is The result from the above code snippets:
 
 <div class="sample-container loading" style="height: 350px">
     <iframe id="shadows-sample-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/theming/shadows-sample" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -197,32 +235,7 @@ The result from the above code snippets is:
 </div>
 <div class="divider--half"></div>
 
-Now lets change the shadow color and the elevation level:
 
- ```scss
-...
-//Define the 3 elevation colors
-$color-1: #99BFAA;
-$color-2: #5C868D;
-$color-3: #5C3D46; 
-
-//Define the shadow elevations
-$shadow-elevations: igx-elevations($color-1, $color-2, $color-3);
-
-//Apply the custom shadow elevations and change the elevation level 
-.elevation-sample {
-    box-shadow: igx-elevation($shadow-elevations, 24);
-}
-```
-
-And you get
-
-<div class="sample-container loading" style="height: 350px">
-    <iframe id="shadows-sample-2-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/theming/shadows-sample-2" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="shadows-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz</button>
-</div>
 <div class="divider--half"></div>
 
 

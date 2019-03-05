@@ -23,7 +23,7 @@ The following demo demonstrates some of the combo features that are enabled/disa
 <div class="divider--half"></div>
 
 ### Usage
-To get started with the Ignite UI for Angular Combo import the [IgxComboModule]({environment:angularApiUrl}/classes/igxcombomodule.html) in the **app.module.ts** file. For the following sample the [igx-switch]({environment:angularApiUrl}/classes/igxswitchcomponent.html) component is used and in addition we will need the [IgxSwitchModule]({environment:angularApiUrl}/classes/igxswitchmodule.html) also:
+To get started with the Ignite UI for Angular Combo import the `IgxComboModule` in the **app.module.ts** file. For the following sample the [igx-switch]({environment:angularApiUrl}/classes/igxswitchcomponent.html) component is used and in addition we will need the `IgxSwitchModule` also:
 
 ```typescript
 // app.module.ts
@@ -98,16 +98,15 @@ Follow this [topic](combo_remote.md) for more details about binding [igx-combo](
 For two-way data-binding, the `ngModel` can be used like shown below:
 
 ```html
-<igx-combo #combo [(ngModel)]="values"></igx-combo>
+<igx-combo #combo [data]="data" [(ngModel)]="values"></igx-combo>
 ```
 
 ```typescript
-@ViewChild('combo', { read: IgxComboComponent }) public combo: IgxComboComponent;
-get values() {
-    return this.combo.selectedItems();
-}
-set values(newValues: Array<any>) {
-    this.combo.selectItems(newValues);
+export class MyExampleComponent {
+    ...
+    public data: ExampleType[] = ...;
+    ...
+    public values: ExampleType[] = ...;
 }
 ```
 

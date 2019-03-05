@@ -133,6 +133,55 @@ public formatter = (date: Date) => {
 </div>
 <div class="divider--half"></div>
 
+#### Editable mode
+By default, the date picker is displayed in read-only mode. To change it to editable mode, set the [`mode`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#mode) input to `editable`.
+
+```html
+<!-- date-picker-sample.component.html -->
+
+<igx-date-picker mode="editable"></igx-date-picker>
+```
+
+You can further customize the editable date picker, configuring the following date picker inputs:
+
+| Input | Type | Description | 
+| ------------- |:-------------:|:-------------:| 
+| [`format`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#format) | `string` | Configures the date display format. Accepts formats containing valid symbols and combinations that can be applied on Angular Date Pipe. For more information, check [DatePipe](https://angular.io/api/common/DatePipe) documentation. The following pre-defined format options are supported as well - shortDate, mediumDate, longDate and fullDate. |
+| [`mask`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#mask)|`string`| Configures the date editor mask. Accepts combinations of the numeric representations of the d, M and y symbols and arbitrary separators - for example dd-MM-y. The editor doesn't accept the literal representation of MMM, MMMM and MMMMM. Valid masks for the day part are: d and dd, for the month part - M and MM and for the year part - y, yy and yyyy.|
+| [`isSpinLoop`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#isspinloop) | `boolean` | Configures the continuos spin loop when using the <kbd>UP</kbd> and <kbd>DOWN</kbd> arrow keys in the editor. If set to false, date part spinning stops when min/max date/month is reached. By default, the spin loop is infinite.|
+| [`locale`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#locale) | `string` | When setting the locale property in editable date picker, have in mind that only the en-US locale data comes with Angular. To localize dates in another language, you must import the corresponding locale data. See the [I18n](https://angular.io/guide/i18n#i18n-pipes) guide for more information.|
+
+
+> Note: If both [`formatter`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#formatter) and [`format`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#format) inputs are set, the editable date picker ignores the [`formatter`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#formatter) input.
+
+The editable date picker provides the following outputs to handle entering of disabled and invalid dates:
+
+| Output | Arguments | Description | 
+| ------------- |:-------------:|:-------------:|
+| [`onDisabledDate`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#ondisableddate) | `IDatePickerDisabledDateEventArgs` | Fires when the user types/spins a disabled date in the date picker editor. |
+| [`onValidationFailed`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#onvalidationfailed) | `IDatePickerValidationFailedEventArgs` | Fires when the user types/spins invalid date in the date picker editor. |
+
+##### Keyboard Navigation
+* To open the date picker drop down: 
+    * <kbd>SPACE</kbd>
+    * <kbd>ALT</kbd> + <kbd>DOWN</kbd> 
+*  To close the date picker drop down:
+    * <kbd>ESC</kbd>
+    * <kbd>ALT</kbd> + <kbd>UP</kbd> 
+*  To increment a date part:
+    * Focus on a date part + <kbd>UP</kbd> 
+*  To decrement a date part:
+    * Focus on a date part + <kbd>DOWN</kbd> 
+
+<div class="sample-container loading" style="height: 600px;">
+    <iframe id="date-picker-dropdown" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/scheduling/datepicker-dropdown" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="date-picker-dropdown" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
+
+
 #### 入力グループのテンプレート化
 
 Date Picker の入力グループをカスタマイズできます。デートピッカー内にネストした ng-template を `IgxDatePickerTemplate`ディレクティブでデコレートする必要があります。ng-template コンテキストは、次のメンバーを公開します。`openDialog` メソッドはデートピッカーダイアログに使用できます。[`displayData`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#displaydata)プロパティは書式設定の値を含みます。[`value`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#value) は実際の値を含みます。ng-template 要素で変数を宣言して使用することができます。
@@ -255,6 +304,7 @@ public getDatePart(val: any, component: any, datePart: string) {
 * [IgxDatePickerComponent Styles]({environment:sassApiUrl}/index.html#function-igx-date-picker-theme)
 * [IgxCalendarComponent]({environment:angularApiUrl}/classes/igxcalendarcomponent.html)
 * [IgxCalendarComponent Styles]({environment:sassApiUrl}/index.html#function-igx-calendar-theme)
+* [IgxOverlay Styles]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
 
 <div class="divider--half"></div>
 

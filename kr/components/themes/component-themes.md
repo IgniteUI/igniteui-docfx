@@ -132,8 +132,8 @@ And this is what our Sass stylesheet looks like:
 
 // Import all required functions and mixins
 @import '~igniteui-angular/lib/core/styles/themes/utilities';
-@import '~igniteui-angular/lib/core/styles/components/avatar-theme';
-@import '~igniteui-angular/lib/core/styles/components/avatar-component';
+@import '~igniteui-angular/lib/core/styles/components/avatar/avatar-theme';
+@import '~igniteui-angular/lib/core/styles/components/avatar/avatar-component';
 
 $avatar-theme: igx-avatar-theme($initials-background: royalblue);
 
@@ -179,8 +179,8 @@ The below sample uses the sample from the [View Encapsulation](#view-encapsulati
 
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/utilities';
-@import '~igniteui-angular/lib/core/styles/components/avatar-theme';
-@import '~igniteui-angular/lib/core/styles/components/avatar-component'; 
+@import '~igniteui-angular/lib/core/styles/components/avatar/avatar-theme';
+@import '~igniteui-angular/lib/core/styles/components/avatar/avatar-component'; 
 // Disable legacy support first.
 $igx-legacy-support: false;
 $avatar-theme: igx-avatar-theme($initials-background: royalblue);

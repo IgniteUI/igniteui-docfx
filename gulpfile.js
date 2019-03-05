@@ -8,6 +8,7 @@ const autoprefixer = require('gulp-autoprefixer');
 const argv = require('yargs').argv;
 const fs = require('fs');
 const environmentVariablesPreConfig = require('./node_modules/igniteui-docfx-template/post-processors/PostProcessors/EnvironmentVariables/preconfig.json');
+const fileinclude = require('gulp-file-include');
 
 const LANG = argv.lang === undefined ? "en" : argv.lang;
 const DOCFX_BASE = {
@@ -44,8 +45,25 @@ gulp.task('serve', ['build'], () => {
         }
     });
 
+    const excluded = [
+        `!${DOCFX_ARTICLES}/grid/**`,
+        `!${DOCFX_ARTICLES}/treegrid/**`,
+        `!${DOCFX_ARTICLES}/hierarchicalgrid/**`
+    ];
+
+    // All topics that are not auto-generated and are specific to the respective grid, should be here.
+    const included = [
+        `${DOCFX_ARTICLES}/grid/grid.md`,
+        `${DOCFX_ARTICLES}/grid/groupby.md`,
+        `${DOCFX_ARTICLES}/grid/paste_excel.md`,
+        `${DOCFX_ARTICLES}/treegrid/tree_grid.md`,
+        `${DOCFX_ARTICLES}/treegrid/aggregations.md`,
+        `${DOCFX_ARTICLES}/hierarchicalgrid/hierarchical_grid.md`,
+        `${DOCFX_ARTICLES}/hierarchicalgrid/load_on_demand.md`
+    ];
+
     gulp.watch(`${DOCFX_TEMPLATE}/**/*`, ['watch']);
-    gulp.watch([`${DOCFX_PATH}/**/*.md`, `${DOCFX_ARTICLES}/**`], ['build']);
+    gulp.watch([`${DOCFX_PATH}/**/*.md`, `${DOCFX_ARTICLES}/**`].concat(excluded).concat(included), ['build']);
 });
 
 gulp.task('styles', () => {
@@ -75,7 +93,7 @@ gulp.task('post-processor-configs', ['cleanup'], () => {
 
     environmentVariablesConfig.variables =
         environmentVariablesConfig.variables[LANG.toLowerCase().trim()][
-            environmentVariablesConfig.environment
+        environmentVariablesConfig.environment
         ];
 
     if (!fs.existsSync(`${DOCFX_SITE}`)) {
@@ -94,9 +112,61 @@ gulp.task('cleanup', () => {
     return del([`${DOCFX_SITE}`]);
 });
 
+gulp.task('generate-grids-topics', () => {
+    const grids = [
+        {
+            igPath: '/grid',
+            igMainTopic: 'grid',
+            igObjectRef: "grid",
+            igComponent: "Grid",
+            igxName: "IgxGrid",
+            igTypeDoc: "igxgridcomponent",
+            igSelector: "igx-grid"
+        },
+        {
+            igPath: '/treegrid',
+            igMainTopic: 'tree_grid',
+            igObjectRef: "treeGrid",
+            igComponent: "Tree Grid",
+            igxName: "IgxTreeGrid",
+            igTypeDoc: "igxtreegridcomponent",
+            igSelector: "igx-tree-grid"
+        },
+        {
+            igPath: '/hierarchicalgrid',
+            igMainTopic: 'hierarchical_grid',
+            igObjectRef: "hierarchicalGrid",
+            igComponent: "Hierarchical Grid",
+            igxName: "IgxHierarchicalGrid",
+            igTypeDoc: "igxhierarchicalgridcomponent",
+            igSelector: "igx-hierarchical-grid"
+        }
+    ];
+
+    for (let j = 0; j < grids.length; j++) {
+        const grid = grids[j];
+
+        gulp.src([DOCFX_ARTICLES + '/grids_templates/*.md'])
+            .pipe(fileinclude({
+                prefix: '@@',
+                basepath: '@file',
+                context: {
+                    "igMainTopic": grid.igMainTopic,
+                    "igObjectRef": grid.igObjectRef,
+                    "igComponent": grid.igComponent,
+                    "igxName": grid.igxName,
+                    "igTypeDoc": grid.igTypeDoc,
+                    "igSelector": grid.igSelector
+                }
+            }))
+            .pipe(gulp.dest(DOCFX_ARTICLES + grid.igPath));
+    }
+});
+
 gulp.task('build', [
     'styles',
     'cleanup',
     'post-processor-configs',
+    'generate-grids-topics',
     'build-site'
 ]);

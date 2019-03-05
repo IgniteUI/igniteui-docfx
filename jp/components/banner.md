@@ -25,7 +25,7 @@ Ignite UI for Angular Banner コンポーネントは、スナックバーより
 
 ## 使用方法
 
-Ignite UI for Angular Banner の使用は、はじめに **app.module.ts** ファイルに [`IgxBannerModule`]({environment:angularApiUrl}/classes/igxbannermodule.html) をインポートします。
+Ignite UI for Angular Banner の使用は、はじめに **app.module.ts** ファイルに `IgxBannerModule` をインポートします。
 
 ```typescript
 // app.module.ts
@@ -102,7 +102,7 @@ Banner コンテンツに [`igx-icon`]({environment:angularApiUrl}/classes/igxic
 
 #### カスタム Banner ボタンの追加
 
-[`IgxBannerModule`]({environment:angularApiUrl}/classes/igxbannermodule.html) は、Banner ボタンをテンプレート化するためのディレクティブ ([`IgxBannerActionsDirective`]({environment:angularApiUrl}/classes/igxbanneractionsdirective.html).) を公開します。このディレクティブを使用してデフォルト Banner ボタン (`Dismiss`) をオーバーライドし、ユーザー定義のカスタム操作を追加します。ほとんどのボタン インタラクションは Banner を閉じることであるため、`click` ハンドラーでBanner の `close()` メソッドを呼び出してください。
+`IgxBannerModule` は、Banner ボタンをテンプレート化するためのディレクティブ ([`IgxBannerActionsDirective`]({environment:angularApiUrl}/classes/igxbanneractionsdirective.html).) を公開します。このディレクティブを使用してデフォルト Banner ボタン (`Dismiss`) をオーバーライドし、ユーザー定義のカスタム操作を追加します。ほとんどのボタン インタラクションは Banner を閉じることであるため、`click` ハンドラーでBanner の `close()` メソッドを呼び出してください。
 
 > [!NOTE]
 > Google の [`マテリアル デザイン` ガイドライン](https://material.io/design/components/banners.html#anatomy) では、Banner に表示するボタンは 2 つまでです。`IgxBannerComponent` は、`igx-banner-actions` タグで 2 要素以上渡すことを明示的に制限**しません**が、マテリアル デザイン ガイドに従うことを推奨します。 
@@ -240,6 +240,5 @@ export class MyBannerComponent {
 
 ## API リファレンス
 
-* [`IgxBannerComponent API`]({environment:angularApiUrl}/classes/igxbannercomponent.html)
-* [`IgxBannerModule`]({environment:angularApiUrl}/classes/igxbannermodule.html)
-* [`IgxBanner Styles`]({environment:sassApiUrl}/index.html#mixin-igx-banner)
+* [IgxBannerComponent]({environment:angularApiUrl}/classes/igxbannercomponent.html)
+* [IgxBannerComponent Styles]({environment:sassApiUrl}/index.html#mixin-igx-banner)
