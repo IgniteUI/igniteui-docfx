@@ -58,7 +58,7 @@ The @@igComponent component in Ignite UI for Angular provides filter UI similar 
 
 ###Usage
 
-To turn on the excel style filtering, two inputs should be set. The `allowFiltering` should be set to `true` and the `filterMode` should be set to `excelStyleFilter`.
+To turn on the excel style filtering, two inputs should be set. The [`allowFiltering`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#allowfiltering) should be set to `true` and the [`filterMode`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filtermode) should be set to `excelStyleFilter`.
 
 @@if (igxName === 'IgxGrid') {
 ```html
