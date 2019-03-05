@@ -39,7 +39,7 @@ export class AppModule {}
 
 #### Default
 
-To add the time picker, use the following code:
+To add the time picker in a template, use the following code:
 
 ```html
 <!--meeting.component.html-->
@@ -154,20 +154,28 @@ And there we have it:
 
 #### Dropdown mode
 
-When you add the time picker to your project, its default mode is read-only dialog mode. To change the time picker mode to editable dropdown mode, set the [`mode`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#mode) input to [`dropdown`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#TimePickerInteractionMode):
+When you add the time picker to your project, its default mode is read-only dialog mode. To change the time picker mode to editable dropdown mode, set the [`mode`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#mode) input to [`dropdown`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#InteractionMode):
 
 ```typescript
 // timePickerDropdown.component.ts
 
-import { TimePickerInteractionMode } from 'igniteui-angular';
+import { InteractionMode } from 'igniteui-angular';
 ...
-public mode: TimePickerInteractionMode = TimePickerInteractionMode.dropdown;
+public mode = InteractionMode.DROPDOWN;
 ```
 
 ```html
 <!--timePickerDropdown.component.html-->
 <igx-time-picker [mode]="mode"></igx-time-picker>
 ```
+
+or just change the `mode` in the time picker like this:
+
+```html
+<!--timePickerDropdown.component.html-->
+<igx-time-picker mode="dropdown"></igx-time-picker>
+```
+
 The user now will be able to type, edit or delete the time value in the input in both 12- and 24-hour formats. 
 
 **Dropdown Mode Keyboard Navigation**
