@@ -195,7 +195,7 @@ export class ExpansionPanelComponent {
 ### コンテキストの追加
 
 コンポーネントの [`igx-expansion-panel-body`]({environment:angularApiUrl}/classes/igxexpansionpanelbodycomponent.htm タグはすべてのマークアップを受け取り、`ng-content` プロジェクションですべてを描画します。[`IgxAvatar`]({environment:angularApiUrl}/classes/igxavatarcomponent.html) を使用して展開パネルのインナー コンテンツを更新できます。
-はじめに [`IgxAvatarModule`]({environment:angularApiUrl}/classes/igxavatarmodule.html) を **app.module.ts** にインポートします。
+はじめに `IgxAvatarModule` を **app.module.ts** にインポートします。
 ```typescript
 // in app.module.ts
 import { IgxExpansionPanelModule, IgxAvatarModule } from 'igniteui-angular';
