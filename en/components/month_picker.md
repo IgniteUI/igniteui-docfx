@@ -8,7 +8,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <p class="highlight">The Ignite UI for Angular Month Picker component provides an easy and intuitive way to select a specific month and year using a month-year calendar view. The component allows single selection, customizable display format and supports localization.</p>
 
 ### Month Picker Demo
-<div class="sample-container loading" style="height: 550px">
+<div class="sample-container loading" style="height: 620px">
     <iframe id="monthpicker-sample-1-iframe" src='{environment:demosBaseUrl}/scheduling/monthpicker-sample-1' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -98,7 +98,7 @@ public numericFormatOptions = {
 ```
 
 Here is an example of modifying the default format options of the month picker:
-<div class="sample-container loading" style="height: 500px">
+<div class="sample-container loading" style="height: 600px">
     <iframe id="monthpicker-sample-2-iframe" src='{environment:demosBaseUrl}/scheduling/monthpicker-sample-2' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -126,7 +126,7 @@ public formatOptions = {
 ```
 
 Here is an example of localizing the month picker component:
-<div class="sample-container loading" style="height: 550px">
+<div class="sample-container loading" style="height: 620px">
     <iframe id="monthpicker-sample-3-iframe" src='{environment:demosBaseUrl}/scheduling/monthpicker-sample-3' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -135,25 +135,25 @@ Here is an example of localizing the month picker component:
 
 ### Keyboard navigation
 - When the **igxMonthPicker** component is focused, use
-    - <kbd>PageUp</kbd> to move to the previous year,
-    - <kbd>PageDown</kbd> to move to the next year,
-    - <kbd>Home</kbd> to focus the first month of the current year,
-    - <kbd>End</kbd> to focus the last month of the current year,
-    - <kbd>Tab</kbd> to navigate through the sub-header buttons.
+    - <kbd>PageUp</kbd> key to move to the previous year,
+    - <kbd>PageDown</kbd> key to move to the next year,
+    - <kbd>Home</kbd> key to focus the first month of the current year,
+    - <kbd>End</kbd> key to focus the last month of the current year,
+    - <kbd>Tab</kbd> key to navigate through the sub-header buttons.
 
 - When `<` (previous) or `>` (next) year button (in the sub-header) is focused, use
-    - <kbd>Space</kbd> or <kbd>Enter</kbd> to scroll into view the next or previous year.
+    - <kbd>Space</kbd> or <kbd>Enter</kbd> key to scroll into view the next or previous year.
 
 - When years button (in the sub-header) is focused, use 
-    - <kbd>Space</kbd> or <kbd>Enter</kbd> to open the years view,
+    - <kbd>Space</kbd> or <kbd>Enter</kbd> key to open the years view,
     - <kbd>Right</kbd> or <kbd>Left</kbd> arrow key to scroll the previous/next year into view.
 
 - When a month inside the months view is focused, use 
     - Arrow keys to navigate through the months,
-    - <kbd>Home</kbd> to focus the first month inside the months view,
-    - <kbd>End</kbd> to focus the last month inside the months view,
-    - <kbd>Enter</kbd> to select the currently focused month and close the view,
-    - <kbd>Tab</kbd> to navigate through the months.
+    - <kbd>Home</kbd> key to focus the first month inside the months view,
+    - <kbd>End</kbd> key to focus the last month inside the months view,
+    - <kbd>Enter</kbd> key to select the currently focused month and close the view,
+    - <kbd>Tab</kbd> key to navigate through the months.
 
 ### API References
 <div class="divider--half"></div>
