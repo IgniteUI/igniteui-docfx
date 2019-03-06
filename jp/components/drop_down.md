@@ -118,7 +118,7 @@ export class MyDropDownComponent {
 
 <div class="divider--half"></div>
 
-[isHeader]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html#isheader) を使用して意味的なグループ化や [disabled]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html#disabled) を使用して非インタラクティブな項目を表示するなど、有用なビジュアル情報を提供できます。また [isSelected]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html#isselected) は特定の項目に設定して選択項目にできます。
+[isHeader]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html#isheader) を使用して意味的なグループ化や [disabled]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html#disabled) を使用して非インタラクティブな項目を表示するなど、有用なビジュアル情報を提供できます。また [selected]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html#selected) は特定の項目に設定して選択項目にできます。
 
 ```html
 <!-- dropdown.component.html -->

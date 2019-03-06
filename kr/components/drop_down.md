@@ -119,7 +119,7 @@ export class MyDropDownComponent {
 
 <div class="divider--half"></div>
 
-To provide more useful visual information, use [isHeader]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html#isheader) to group items semantically or [disabled]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html#disabled) to display an item as non-interactive. You can also set [isSelected]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html#isselected) to a particular item to make it the selected item.
+To provide more useful visual information, use [isHeader]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html#isheader) to group items semantically or [disabled]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html#disabled) to display an item as non-interactive. You can also set [selected]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html#selected) to a particular item to make it the selected item.
 
 ```html
 <!-- dropdown.component.html -->
