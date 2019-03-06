@@ -1,3 +1,365 @@
+﻿- name: 概要
+  header: true
+- name: 作業の開始
+  href: general/getting_started.md
+  new: false
+- name: アップデート ガイド
+  href: general/update_guide.md
+  new: false
+- name: Ignite UI CLI
+  href: general/cli-overview.md
+  new: false
+- name: グリッドとリスト
+  href: grids_and_lists.md
+  header: true
+- name: Data Grid
+  href: grid.md
+  new: true
+  items:
+    - name: 仮想化とパフォーマンス
+      href: grid_virtualization.md
+      new: false
+    - name: 編集
+      href: grid_editing.md
+      new: false
+    - name: 行編集
+      href: grid_row_editing.md
+      new: true
+    - name: 一括編集
+      href: grid_batch_editing.md
+      new: true
+    - name: ページング
+      href: grid_paging.md
+      new: false
+    - name: フィルタリング
+      href: grid_filtering.md
+      new: true
+    - name: 並べ替え
+      href: grid_sorting.md
+      new: false
+    - name: グループ化
+      href: grid_groupby.md
+      new: false
+    - name: 集計
+      href: grid_summaries.md
+      new: false
+    - name: 列移動
+      href: grid_column_moving.md
+      new: false
+    - name: 列のピン固定
+      href: grid_column_pinning.md
+      new: false
+    - name: 列のサイズ変更
+      href: grid_column_resizing.md
+      new: false
+    - name: 列の非表示
+      href: grid_column_hiding.md
+      new: false
+    - name: 選択
+      href: grid_selection.md
+      new: false
+    - name: 検索
+      href: grid_search.md
+      new: false
+    - name: ツールバー
+      href: grid_toolbar.md
+      new: false
+    - name: Excel エクスポート
+      href: exporter_excel.md
+      new: false
+    - name: Excel からの貼り付け
+      href: grid_paste_excel.md
+      new: false
+    - name: 複数列ヘッダー
+      href: grid_multi_column_headers.md
+      new: false
+    - name: 表示密度
+      href: grid_displayDensity.md
+      new: false
+    - name: 条件付きセルのスタイル設定
+      href: grid_conditional_cell_styling.md
+      new: true
+- name: Tree Grid
+  href: treegrid.md
+  new: true
+- name: List View
+  href: list.md
+- name: Combo
+  href: combo.md
+  new: true
+  items:
+    - name: 機能
+      href: combo_features.md
+      new: false
+    - name: リモート バインディング
+      href: combo_remote.md
+      new: true
+    - name: テンプレート
+      href: combo_templates.md
+      new: false
+    - name: カスケーディング
+      href: combo_cascading.md
+      new: true
+- name: チャート
+  header: true
+- name: Category Chart
+  href: categorychart.md
+  new: false
+  items:
+    - name: 注釈
+      href: categorychart_annotation_layers.md
+      new: false
+    - name: 軸オプション
+      href: categorychart_axis_options.md
+      new: false
+    - name: リアルタイム データ
+      href: categorychart_real_time_data.md
+      new: false
+    - name: 大量なデータの処理
+      href: categorychart_high_volume_data.md
+      new: false
+    - name: 構成オプション
+      href: categorychart_configuration_options.md
+      new: false
+    - name: ハイライト
+      href: categorychart_highlighting.md
+      new: false
+    - name: ツールチップ タイプ
+      href: categorychart_tooltip_types.md
+      new: false
+    - name: ツールチップ テンプレート
+      href: categorychart_tooltip_templates.md
+      new: false
+- name: Financial Chart
+  href: financialchart.md
+  new: false
+  items:
+    - name: 注釈とオーバーレイ
+      href: financialchart_annotation_layers.md
+      new: false
+    - name: チャート タイプの選択
+      href: financialchart_explore_chart_types.md
+      new: false
+    - name: リアルタイム データ
+      href: financialchart_real_time_data.md
+      new: false
+    - name: 大規模なデータの処理
+      href: financialchart_high_volume_data.md
+      new: false
+    - name: パフォーマンス
+      href: financialchart_performance.md
+      new: false
+    - name: 複数データ ソースへのバインド
+      href: financialchart_binding_to_multiple_data.md
+      new: false
+    - name: ペイン
+      href: financialchart_panes.md
+      new: false
+    - name: 構成オプション
+      href: financialchart_configuration_options.md
+      new: false
+    - name: カスタム インジケーター
+      href: financialchart_custom_indicators.md
+      new: false
+    - name: ツールチップ タイプ
+      href: financialchart_tooltip_types.md
+      new: false
+    - name: ツールチップ テンプレート
+      href: financialchart_tooltip_templates.md
+- name: Doughnut Chart
+  href: doughnutchart.md
+  new: false
+- name: Pie Chart
+  href: piechart.md
+  new: false
+- name: フレームワーク
+  header: true
+- name: Excel Library
+  href: excel_library.md
+  new: false
+  items:
+    - name: セルの使用
+      href: excel_library_using_cells.md
+      new: false
+    - name: テーブルの使用
+      href: excel_library_using_tables.md
+      new: false
+    - name: ワークブックの使用
+      href: excel_library_using_workbooks.md
+      new: false
+    - name: ワークシートの使用
+      href: excel_library_using_worksheets.md
+      new: false
+    - name: チャートの使用
+      href: excel_library_working_with_charts.md
+      new: false
+    # - name: Working with Grids
+    #   href: excel_library_working_with_grid.md
+    #   new: true
+    - name: スパークラインの使用
+      href: excel_library_working_with_sparklines.md
+      new: false
+- name: ゲージ
+  header: true
+  new: false
+- name: Bullet Graph
+  href: bulletgraph.md
+  new: false
+- name: Linear Gauge
+  href: lineargauge.md
+  new: false
+- name: Radial Gauge
+  href: radialgauge.md
+  new: false
+- name: スタイルとテーマ
+  header: true
+- name: Themes
+  href: themes/index.md
+  items:
+    - name: パレット
+      href: themes/palette.md
+    - name: スキーマ
+      href: themes/schemas.md
+      new: false
+    - name: タイポグラフィ
+      href: themes/typography.md
+    - name: グローバル テーマ
+      href: themes/global-theme.md
+    - name: コンポーネント テーマ
+      href: themes/component-themes.md
+      new: false
+    - name: サンプル
+      href: themes/examples.md
+- name: Componets Roundness
+  href: roundness.md
+  new: true
+- name: Shadows
+  href: shadows.md
+- name: Display Density
+  href: display_density.md
+- name: データ入力と表示
+  header: true
+- name: Drop Down
+  href: drop_down.md
+  new: false
+- name: Button
+  href: button.md
+- name: Button Group
+  href: buttonGroup.md
+- name: Checkbox
+  href: checkbox.md
+- name: Switch
+  href: switch.md
+- name: Radio と Radio Group
+  href: radio_button.md
+  new: false
+- name: Label と Input
+  href: label_input.md
+- name: Input Group
+  href: input_group.md
+  new: false
+  items:
+    - name: リアクティブ フォーム
+      href: input_group_reactive_forms.md
+- name: Mask
+  href: mask.md
+  new: false
+- name: Badge
+  href: badge.md
+- name: Icon
+  href: icon.md
+- name: Linear Progress
+  href: linear_progress.md
+- name: Circular Progress
+  href: circular_progress.md
+- name: Virtual For Directive
+  href: for_of.md
+- name: Chip
+  href: chip.md
+  new: false
+- name: Text Highlight
+  href: texthighlight.md
+  new: true
+- name: インタラクション
+  header: true
+- name: Dialog Windows
+  href: dialog.md
+- name: Slider
+  href: slider.md
+- name: Ripple
+  href: ripple.md
+- name: Toggle
+  href: toggle.md
+- name: Tooltip
+  href: tooltip.md
+  new: true
+- name: Overlay
+  href: overlay_main.md
+  new: true
+  items:
+  - name: ポジション ストラテジー
+    href: overlay_position.md
+    new: true
+  - name: スクロール ストラテジー
+    href: overlay_scroll.md
+    new: false
+- name: Drag and Drop
+  href: drag_drop.md
+  new: false
+- name: メニュー
+  header: true
+- name: Navigation Drawer
+  href: navdrawer.md
+- name: Navbar
+  href: navbar.md
+- name: レイアウト
+  header: true
+- name: Layout Manager
+  href: layout.md
+- name: Carousel
+  href: carousel.md
+- name: Bottom Navigation
+  href: tabbar.md
+- name: Tabs
+  href: tabs.md
+  new: false
+- name: Card
+  href: card.md
+- name: Avatar
+  href: avatar.md
+- name: Expansion Panel
+  href: expansion_panel.md
+  new: true
+- name: 通知
+  header: true
+- name: Banner
+  href: banner.md
+  new: true
+- name: Snackbar
+  href: snackbar.md
+- name: Toast
+  href: toast.md
+- name: スケジュール
+  header: true
+- name: Calendar
+  href: calendar.md
+- name: Date Picker
+  href: date_picker.md
+- name: Time Picker
+  href: time_picker.md
+  new: false
+- name: サービス
+  header: true
+- name: CSV エクスポーター
+  href: exporter_csv.md
+  new: false
+- name: Excel エクスポーター
+  href: exporter_excel.md
+  new: false
+- name: ローカライゼーション
+  href: localization.md
+  new: false
+=======
 - name: 概要
   header: true
 - name: 作業の開始
