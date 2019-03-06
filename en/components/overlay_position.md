@@ -109,7 +109,7 @@ import {AutoPositionStrategy, GlobalPositionStrategy, ConnectedPositioningStrate
 ### Horizontal and Vertical Direction
 Changing the horizontal and/or vertical direction of the positioning settings determined where the content will align itself. Depending on the positioning strategy chosen, the content will either align relative to the target's container ([`AutoPositionStrategy`]({environment:angularApiUrl}/classes/autopositionstrategy.html), [`ElasticPositionStrategy`]({environment:angularApiUrl}/classes/elasticpositionstrategy.html) and [`ConnectedPositioningStrategy`]({environment:angularApiUrl}/classes/connectedpositioningstrategy.html)) or the body of the document [`GlobalPositioningStrategy`]({environment:angularApiUrl}/classes/globalpositionstrategy.html)
 
-<div class="sample-container loading" style="height: 400px">
+<div class="sample-container loading" style="height: 500px">
     <iframe id="overlay-position-sample-1-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/interactions/overlay-position-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
