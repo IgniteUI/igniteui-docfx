@@ -24,7 +24,7 @@ Ignite UI for Angular 行選択は、行内のすべての列の前に描画さ�
 
 #### 単一選択
 
-グリッドの単一選択を grid の [`onSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#onselection) イベントで構成できます。イベントはセル コンポーネントへの参照を発行します。イベントはセル コンポーネントへの参照を発行し、そのセルコンポーネントは含まれる行コンポーネントへの参照を含みます。行コンポーネント参照の [`rowID`](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/classes/igxgridrowcomponent.html#rowid) ゲッターを使用して、[`rowData[primaryKey]`]({environment:angularApiUrl}/classes/igxgridcomponent.html#primarykey) または [`rowData`]({environment:angularApiUrl}/classes/igxgridrowcomponent.html#rowdata) オブジェクト自身を使用して行の一意識別子を selectionAPI の適切なリストに渡します。単一行のみを選択させるには、[`selectionAPI`]({environment:angularApiUrl}/classes/igxselectionapiservice.html) 行選択リストを空にします。これは [`selectRows`]({environment:angularApiUrl}/classes/igxgridcomponent.html#selectrows) メソッドの呼び出しの 2 番目の引数です。
+グリッドの単一選択を grid の [`onSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#onselection) イベントで構成できます。イベントはセル コンポーネントへの参照を発行します。イベントはセル コンポーネントへの参照を発行し、そのセルコンポーネントは含まれる行コンポーネントへの参照を含みます。行コンポーネント参照の [`rowID`](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/classes/igxgridrowcomponent.html#rowid) ゲッターを使用して、[`rowData[primaryKey]`]({environment:angularApiUrl}/classes/igxgridcomponent.html#primarykey) または [`rowData`]({environment:angularApiUrl}/classes/igxgridrowcomponent.html#rowdata) オブジェクト自身を使用して行の一意識別子を selection の適切なリストに渡します。単一行のみを選択させるには、selection 行選択リストを空にします。これは [`selectRows`]({environment:angularApiUrl}/classes/igxgridcomponent.html#selectrows) メソッドの呼び出しの 2 番目の引数です。
 
 ```html
     <!-- in example.component.html -->
