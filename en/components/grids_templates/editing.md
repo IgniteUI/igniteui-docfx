@@ -315,5 +315,5 @@ These can be wired to user interactions, not necessarily related to the **@@igSe
 * [Column Resizing](column_resizing.md)
 * [Selection](selection.md)
 @@if (igxName !== 'IgxHierarchicalGrid') {
-*   [Searching](search.md)
+* [Searching](search.md)
 }
