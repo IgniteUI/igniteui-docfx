@@ -332,6 +332,19 @@ export class CalendarSample7Component {
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="calendar-sample-7-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
 </div>
 
+### Views
+There are separate views provided by the [`IgxCalendarModule`]({environment:angularApiUrl}/classes/igxcalendarmodule.html) that can be used independently:
+- Days View - `igx-days-view`
+- Months View - `igx-months-view`
+- Years View - `igx-years-view`
+
+<div class="sample-container" style="height: 540px">
+    <iframe id="calendar-views-iframe" src='{environment:demosBaseUrl}/scheduling/calendar-views' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="calendar-views-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+
 ### キーボード ナビゲーション
 
 [`IgxCalendarComponent`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) コンポーネントがフォーカスを持つ場合:
