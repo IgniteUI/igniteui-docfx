@@ -37,7 +37,7 @@ Batch editing allows to **Add/Update/Delete** several records in a chunk and man
 In order to be able to use the Batch Editing functionality, it is required to import the [`HierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) from "igniteui-angular". Again Transaction is a provider that accumulates the applied changes as a transaction log and in the same time holds a state for each modified row and its last state.
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-In order to use the [`TransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) with [`IgxHierarchicalGridComponent`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html), but have it accumulating separate transaction logs for each island, a service factory should be provided instead. One is exported and ready for use as IgxHierarchicalTransactionServiceFactory.
+In order to use the [`TransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) with [`IgxHierarchicalGridComponent`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html), but have it accumulating separate transaction logs for each island, a service factory should be provided instead. One is exported and ready for use as `IgxHierarchicalTransactionServiceFactory`.
 }
 
 #### Demo
