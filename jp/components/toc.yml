@@ -35,7 +35,7 @@
       href: grid/filtering.md
       new: true
       items:
-        - name: Excel Style Filtering
+        - name: Excel スタイル フィルタリング
           href: grid/excel_style_filtering.md
           new: true
     - name: 並べ替え
@@ -106,7 +106,7 @@
       href: treegrid/filtering.md
       new: false
       items:
-        - name: Excel Style Filtering
+        - name: Excel スタイル フィルタリング
           href: treegrid/excel_style_filtering.md
           new: true
     - name: 並べ替え
@@ -148,7 +148,7 @@
     - name: 条件付きセルのスタイル設定
       href: treegrid/conditional_cell_styling.md
       new: false
-    - name: Aggregations 
+    - name: 集計 
       href: treegrid/aggregations.md
       new: false
 - name: Hierarchical Grid
@@ -158,7 +158,7 @@
     - name: 仮想化とパフォーマンス
       href: hierarchicalgrid/virtualization.md
       new: true
-    - name: Load on Demand
+    - name: ロードオンデマンド
       href: hierarchicalgrid/load_on_demand.md
       new: true
     - name: 編集
@@ -177,7 +177,7 @@
       href: hierarchicalgrid/filtering.md
       new: true
       items:
-        - name: Excel Style Filtering
+        - name: Excel スタイル フィルタリング
           href: hierarchicalgrid/excel_style_filtering.md
           new: true
     - name: 並べ替え
@@ -273,16 +273,16 @@
       href: datachart_axis_types.md
       new: true
       items:
-        - name: Axis Settings
+        - name: 軸の設定
           href: datachart_axis_settings.md
           new: true
         #- name: Axis Scales
         #  href: datachart_axis_scales.md
         #  new: true
-        - name: Axis Locations
+        - name: 軸の位置
           href: datachart_axis_locations.md
           new: true
-        - name: Axis Sharing
+        - name: 軸の共有
           href: datachart_axis_sharing.md
           new: true
     - name: Series
@@ -292,37 +292,37 @@
       #  - name: Requirements
       #    href: datachart_series_requirements.md
       #    new: true
-        - name: Category Series 
+        - name: カテゴリ シリーズ 
           href: datachart_series_types_category.md
           new: true
-        - name: Financial Series 
+        - name: ファイナンシャル シリーズ 
           href: datachart_series_types_financial.md
           new: true
-        - name: Polar Series 
+        - name: 極座標シリーズ 
           href: datachart_series_types_polar.md
           new: true
-        - name: Radial Series 
+        - name: ラジアル シリーズ 
           href: datachart_series_types_radial.md
           new: true
-        - name: Range Series 
+        - name: 範囲シリーズ 
           href: datachart_series_types_range.md
           new: true
-        - name: Scatter Area Series 
+        - name: 散布エリア シリーズ 
           href: datachart_series_types_scatter_area.md
           new: true
-        - name: Scatter Contour Series 
+        - name: 散布等高線シリーズ
           href: datachart_series_types_scatter_contour.md
           new: true
-        - name: Scatter Bubble Series 
+        - name: 散布バブル シリーズ 
           href: datachart_series_types_scatter_bubble.md
           new: true
         # - name: Scatter HD Series
         #  href: datachart_series_types_scatter_hd.md
         #  new: true
-        - name: Scatter Marker Series
+        - name: 散布マーカー シリーズ
           href: datachart_series_types_scatter_marker.md
           new: true
-        - name: Scatter Shape Series
+        - name: 散布図形シリーズ
           href: datachart_series_types_shape.md
           new: true
         #- name: Stacked Series
@@ -331,34 +331,34 @@
     #- name: Animations
     #  href: datachart_series_animations.md
     #  new: true
-    - name: Annotations
+    - name: 注釈
       href: datachart_series_annotations.md
       new: true
-    - name: Highlighting
+    - name: ハイライト
       href: datachart_series_highlighting.md
       new: true
-    - name: Legend
+    - name: 凡例
       href: datachart_chart_legends.md
       new: true
-    - name: Markers
+    - name: マーカー
       href: datachart_series_markers.md
       new: true
-    - name: Navigation
+    - name: ナビゲーション
       href: datachart_chart_navigation.md
       new: true
     #- name: Synchronization
     #  href: datachart_chart_synchronization.md
     #  new: true
-    - name: Title and Subtitle
+    - name: タイトルとサブタイトル
       href: datachart_chart_titles.md
       new: true
-    - name: Tooltips
+    - name: ツールチップ
       href: datachart_series_tooltips.md
       new: true
-    - name: Trendlines
+    - name: トレンドライン
       href: datachart_series_trendlines.md
       new: true
-    - name: Data Sources
+    - name: データソース
       href: datachart_data_sources.md
       new: true 
     #- name: Data Triangulation
