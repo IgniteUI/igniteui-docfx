@@ -1,30 +1,33 @@
-@@if (igxName === 'IgxGrid') {
+﻿@@if (igxName === 'IgxGrid') {
 ---
-title: Grid Excel Style Filtering
-_description: The Ignite UI for Angular Data Grid control features the fastest, touch-responsive data-rich grid with popular features, including hierarchical and list views.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Grid, Angular Table, Angular Data Grid component, Angular Data Table component, Angular Data Grid control, Angular Data Table control, Angular Grid component, Angular Table component, Angular Grid control, Angular Table control, Angular High Performance Grid, Angular High Performance Data Table, Filtering, Data Grid Filtering, Data Table Filtering, Excel, Excel Style Filtering
+title: Excel フィルタリングの有効化
+_description: Ignite UI for Angular Data Grid コントロールは、タッチ レスポンシブなデータ グリッドです。階層およびリスト ビューなどの機能があります。
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Grid, Angular Table, Angular Data Grid コンポーネント, Angular Data Table コンポーネント, Angular Data Grid コントロール, Angular Data Table コントロール, Angular Grid コンポーネント, Angular Table コンポーネント, Angular Grid コントロール, Angular Table コントロール, Angular 高パフォーマンス Grid, Angular 高パフォーマンス Data Table, フィルタリング, Data Grid フィルタリング, Data Table フィルタリング, Excel, Excel スタイル フィルタリング
+_language: ja
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Tree Grid Excel Style Filtering
-_description: The Ignite UI for Angular Tree Grid control features the fastest, touch-responsive data-rich grid with popular features, including hierarchical and list views.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Tree Grid, Angular Table, Angular Tree Grid component, Angular Data Table component, Angular Tree Grid control, Angular Data Table control, Angular Tree Grid component, Angular Table component, Angular Grid control, Angular Table control, Angular High Performance Grid, Angular High Performance Data Table, Filtering, Tree Grid Filtering, Data Table Filtering, Excel, Excel Style Filtering
+title: Tree Grid Excel スタイル フィルタリング
+_description: Ignite UI for Angular Tree Grid コントロールは、タッチ レスポンシブなデータ グリッドです。階層およびリスト ビューなどの機能があります。
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Tree Grid, Angular Table, Angular Tree Grid コンポーネント, Angular Data Table コンポーネント, Angular Tree Grid コントロール, Angular Data Table コントロール, Angular Tree Grid コンポーネント, Angular Table コンポーネント, Angular Grid コントロール, Angular Table コントロール, Angular 高パフォーマンス Grid, Angular 高パフォーマンス Data Table, Filtering, Tree Grid Filtering, Data Table Filtering, Excel, Excel Style Filtering
+_language: ja
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Hierarchical Grid Excel Style Filtering
-_description: The Ignite UI for Angular Hierarchical Grid control features the fastest, touch-responsive data-rich grid with popular features, including hierarchical and list views.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Hierarchical Grid, Angular Table, Angular Hierarchical Grid component, Angular Data Table component, Angular Hierarchical Grid control, Angular Data Table control, Angular Hierarchical Grid component, Angular Table component, Angular Grid control, Angular Table control, Angular High Performance Grid, Angular High Performance Data Table, Filtering, Hierarchical Grid Filtering, Data Table Filtering, Excel, Excel Style Filtering
+title: Hierarchical Grid Excel スタイル フィルタリング
+_description: Ignite UI for Angular Hierarchical Grid コントロールは、タッチ レスポンシブなデータ グリッドです。階層およびリスト ビューなどの機能があります。
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Hierarchical Grid, Angular Table, Angular Hierarchical Grid コンポーネント, Angular Data Table コンポーネント, Angular Hierarchical  Grid コントロール, Angular Data Table コントロール, Angular Grid コンポーネント, Angular Table コンポーネント, Angular Grid コントロール, Angular Table コントロール, Angular 高パフォーマンス Grid, Angular 高パフォーマンス Data Table, Filtering, Hierarchical Grid Filtering, Data Table Filtering, Excel, Excel Style Filtering
+_language: ja
 ---
 }
 
-### @@igComponent Excel Style Filtering
+### @@igComponent Excel スタイル フィルタリング
 
-The @@igComponent component in Ignite UI for Angular provides filter UI similar to the one in excel.
+Ignite UI for Angular @@igComponent コンポーネントは、Excel ライクなフィルター UI をサポートします。
 
-#### Demo
+#### デモ
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:700px">
@@ -32,7 +35,7 @@ The @@igComponent component in Ignite UI for Angular provides filter UI similar 
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
 </div>
 }
 @@if (igxName === 'IgxTreeGrid') {
@@ -41,7 +44,7 @@ The @@igComponent component in Ignite UI for Angular provides filter UI similar 
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
 </div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -50,15 +53,15 @@ The @@igComponent component in Ignite UI for Angular provides filter UI similar 
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
 </div>
 }
 
 <div class="divider--half"></div>
 
-###Usage
+###使用方法
 
-To turn on the excel style filtering, two inputs should be set. The [`allowFiltering`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#allowfiltering) should be set to `true` and the [`filterMode`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filtermode) should be set to `excelStyleFilter`.
+Excel スタイル フィルタリングをオンにするには、2 つの入力を設定します。  [`allowFiltering`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#allowfiltering) を `true` に設定し、[`filterMode`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filtermode) を  `excelStyleFilter` に設定してください。
 
 @@if (igxName === 'IgxGrid') {
 ```html
@@ -79,20 +82,20 @@ To turn on the excel style filtering, two inputs should be set. The [`allowFilte
 ```
 }
 
-###Interaction
+###インタラクション
 
-In order to open the filter menu for a particular column, the filter icon in the header should be clicked. If the column can be sorted, pinned, moved or hidden along with the filtering functionality, there will be buttons for the features that are turned on.
+特定の列のフィルター メニューを開くには、ヘッダーのフィルター アイコンをクリックします。列でフィルタリング機能と並べ替え、ピン固定、移動、非表示が設定された場合、オンになっている機能のボタンが表示されます。
 
-If no filter is applied, all the items in the list will be selected. They can be filtered from the input above the list. In order to filter the data, you can select/deselect the items in the list and click Apply button. The filtering applied through the list items create filter expressions with `equals` operator and the logic operator between each expression is `OR`. If you want to clear the filter, you can check Select All item and then Apply button. 
+フィルターが適用されていない場合、リストのすべての項目が選択されます￥。リストの上の入力からフィルターされます。データのフィルターは、リストで項目を選択/非選択して [Apply] ボタンをクリックします。リスト項目に適用したフィルタリングは、`equals` オペレーターでフィルター式を作成します。各式間のロジック オペレーターは `OR` です。フィルターをクリアしたい場合、Select All をチェックして [Apply] ボタンを押します。 
 
-To apply a filter with different expressions, you can click the **Text filter**, which will open a sub menu with all available filter operators for the particular column. Selecting one of them will open the custom filter dialog, where you can add as many expressions as you want with different filter and logic operators. There is also a clear button, which can clear the filter.
+異なる式でフィルターを適用する場合、**Text フィルター** をクリックし、特定の列で使用できるフィルター演算子のサブメニューを開きます。いずれかを選択してカスタム フィルター ダイアログを開き、フィルターとロジック演算子を使用して式を追加できます。[clear] ボタンでフィルターをクリアできます。
 
 
 <div class="divider--half"></div>
 
-###Configure menu features
+###メニュー機能の構成
 
-Sorting, moving, pinning and hiding features can be removed from the filter menu. The inputs that control them are as follows: `sortable`, `movable`, `disablePinning`, `disableHiding`.
+並べ替え、移動、ピン固定、非表示の機能をフィルター メニューから削除できます。制御のための入力は、`sortable`、`movable`、`disablePinning`、`disableHiding` があります。
 
 @@if (igxName === 'IgxGrid') {
 ```html
@@ -112,7 +115,7 @@ Sorting, moving, pinning and hiding features can be removed from the filter menu
 
 <div class="divider--half"></div>
 
-In the sample below 'Product Name' and 'Discontinued' columns have all four features enabled, 'Quantity Per Unit' have all four disabled, 'Unit Price' has only sorting and moving and 'Order Date' has only pinning and hiding.
+以下のサンプルの Product Name’ と 'Discontinued’ 列で 4 つすべての機能が有効です。 'Quantity Per Unit’で 4 機能すべてが無効、’Unit Price’ で並べ替えと移動のみ有効、'Order Date’ でピン固定と非表示のみ有効です。  
 }
 @@if (igxName === 'IgxTreeGrid') {
 ```html
@@ -142,7 +145,7 @@ In the sample below 'Product Name' and 'Discontinued' columns have all four feat
 
 <div class="divider--half"></div>
 
-In the sample below 'Product Name' and 'Discontinued' columns have all four features enabled, 'Unit Price' have all four disabled, 'Added Date' has only pinning and hiding.
+以下のサンプル 'Product Name’ と 'Discontinued’ の列には 4 つの機能すべてが有効です。 'Unit Price’ で 4 機能すべてが無効で、'Added Date’ はピン固定と非表示のみ有効です。
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
@@ -184,7 +187,7 @@ In the sample below 'Product Name' and 'Discontinued' columns have all four feat
 
 <div class="divider--half"></div>
 
-In the sample below 'Artist' column have all four features enabled, 'Debut' have all four disabled, 'Grammy Nominations' has only pinning and hiding.
+以下のサンプルは、'Artist’ 列で 4 つの機能が有効、'Debut' で 4 つの機能が無効、'Grammy Nominations’ でピン固定と非表示のみ有効です。
 }
 
 <div class="divider--half"></div>
@@ -195,7 +198,7 @@ In the sample below 'Artist' column have all four features enabled, 'Debut' have
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
 </div>
 }
 @@if (igxName === 'IgxTreeGrid') {
@@ -204,7 +207,7 @@ In the sample below 'Artist' column have all four features enabled, 'Debut' have
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
 </div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -213,34 +216,34 @@ In the sample below 'Artist' column have all four features enabled, 'Debut' have
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
 </div>
 }
 
 <div class="divider--half"></div>
 
-### API References
+### API リファレンス
 <div class="divider--half"></div>
 
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
 * [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 
-### Additional Resources
+### その他のリソース
 <div class="divider--half"></div>
 
-* [@@igComponent overview](@@igMainTopic.md)
-* [Virtualization and Performance](virtualization.md)
-* [Paging](paging.md)
-* [Sorting](sorting.md)
-* [Summaries](summaries.md)
-* [Column Moving](column_moving.md)
-* [Column Pinning](column_pinning.md)
-* [Column Resizing](column_resizing.md)
-* [Selection](selection.md)
+* [@@igComponent 概要](@@igMainTopic.md)
+* [仮想化とパフォーマンス](virtualization.md)
+* [ページング](paging.md)
+* [並べ替え](sorting.md)
+* [集計](summaries.md)
+* [列移動](column_moving.md)
+* [列のピン固定](column_pinning.md)
+* [列のサイズ変更](column_resizing.md)
+* [選択](selection.md)
 
 <div class="divider--half"></div>
-Our community is active and always welcoming to new ideas.
+コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+* [Ignite UI for Angular** フォーラム** (英語) ](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub** (英語) ](https://github.com/IgniteUI/igniteui-angular)
