@@ -46,7 +46,7 @@ To add the date picker in a template, use the following code:
 ```
 
 The result is as follows:
-<div class="sample-container loading" style="height: 540px;">
+<div class="sample-container loading" style="height: 550px;">
     <iframe id="date-picker-sample-1" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/scheduling/datepicker-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -288,7 +288,7 @@ To support those browsers we are going to use alternative template using [ngIf](
     </ng-template>
 </igx-date-picker>
 ```
-Note that **ngIf** evaluates the value of the **formatParts** expression to control which template to use. Let's have a look at the alernative **#parseTemplate** template: the expressions in the curly brackets invokes the **getDatePart** method that returns the evaluated value, in our case this is a formatted date part (year, weekday, month, etc.). The parameters passed to the **getDatePart** are necessary so that formatting is based on the [**IgxDatePickerComponent**]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) locale and format options:
+Note that **ngIf** evaluates the value of the **formatParts** expression to control which template to use. Let's have a look at the alternative **#parseTemplate** template: the expressions in the curly brackets invokes the **getDatePart** method that returns the evaluated value, in our case this is a formatted date part (year, weekday, month, etc.). The parameters passed to the **getDatePart** are necessary so that formatting is based on the [**IgxDatePickerComponent**]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) locale and format options:
 
 ```typescript
 // app.component.ts
