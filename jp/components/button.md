@@ -71,6 +71,17 @@ export class AppModule {}
     <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/data-entries/buttons-sample-3">
 </div>
 
+アウトライン付きボタン スタイル:
+
+```html
+<button igxButton="outlined">Outlined</button>
+```
+
+結果:
+<div class="sample-container loading" style="height: 48px">
+    <iframe class="lazyload" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-sample-8">
+</div>
+
 [`igxButton`]({environment:angularApiUrl}/classes/igxbuttondirective.html) を使用して span 要素を Ignite UI for Angular のスタイル設定済みボタンにします。
 
 ```html
@@ -132,11 +143,10 @@ raised ボタンを作成できます。　
 | 名前       |                                                  説明                                                  |
 | :--------- | :----------------------------------------------------------------------------------------------------: |
 | `flat`     |               デフォルトのボタン タイプ。透明な背景およびプライマリ テーマ色のテキスト。               |
-| `raised`   | このボタン タイプは box-shadow を使用します。プライマリ テーマ色の背景および白いテキスト。 |
-| `gradient` |             raised ボタン タイプと同じです。背景色にグラデーションを指定できます。             |
-| `fab`      |      フローティング アクションのボタン タイプ。丸形で、プライマリ テーマ色の背景色と白い前景色。       |
-| `icon`     |        最もシンプルなボタン タイプ。アイコンをボタンとして使用する場合に使用します。         |
-| `navbar`   |     icon ボタン タイプと同じですが、igx-navbar コンポーネントで使用するために最適化されています。      |
+| `outlined` |  Flat ボタン タイプに似ていますがボタンの端が細いアウトラインで囲まれます。 |
+| `raised`   | このボタン タイプはわずかなシャドウを使用します。背景のパレットにセカンダリ テーマ色を使用。 |
+| `fab`      |      フローティング アクションのボタン タイプ。背景用のセカンダリ テーマ色で円形。       |
+| `icon`     |        最もシンプルなボタン タイプ。アイコンをボタンとして使用する場合に使用。         |
 
 ### API リファレンス
 <div class="divider--half"></div>
