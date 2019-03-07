@@ -156,7 +156,9 @@ public onColumnMovingEnd(event) {
 * [Column Pinning](column_pinning.md)
 * [Column Resizing](column_resizing.md)
 * [Selection](selection.md)
+@@if (igxName !== 'IgxHierarchicalGrid') {
 * [Searching](search.md)
+}
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.
