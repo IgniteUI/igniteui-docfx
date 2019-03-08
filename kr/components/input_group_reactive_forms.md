@@ -12,7 +12,7 @@ Ignite UI for Angular controls can be easily integrated in Reactive Forms.
 <div class="divider"></div>
 
 ### Demo
-The following demo demonstrates [`igx-input-group`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) and [`igx-combo`]({environment:angularApiUrl}/classes/igxcombocomponent.html) controls being part of the Reactive Form.
+The following demo demonstrates [`igx-input-group`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html), [`igx-select`]({environment:angularApiUrl}/classes/igxselectcomponent.html) and [`igx-combo`]({environment:angularApiUrl}/classes/igxcombocomponent.html) controls being part of the Reactive Form.
 
 <div class="sample-container loading" style="height: 800px;">
     <iframe id="reactive-forms-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/data-entries/reactive-forms" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -32,12 +32,12 @@ To get started import all modules for Ignite UI components and the **ReactiveFor
 // app.module.ts
 
 ...
-import { IgxIconModule, IgxInputGroupModule, IgxButtonModule, IgxRippleModule, IgxDatePickerModule, IgxTimePickerModule, IgxComboModule } from "igniteui-angular";
+import { IgxIconModule, IgxInputGroupModule, IgxButtonModule, IgxRippleModule, IgxDatePickerModule, IgxTimePickerModule, IgxComboModule, IgxSelectModule } from "igniteui-angular";
 import { ReactiveFormsModule } from "@angular/forms";
 
 @NgModule({
     ...
-    imports: [..., IgxIconModule, IgxInputGroupModule, IgxButtonModule, IgxRippleModule, IgxDatePickerModule, IgxTimePickerModule, IgxComboModule, ReactiveFormsModule],
+    imports: [..., IgxIconModule, IgxInputGroupModule, IgxButtonModule, IgxRippleModule, IgxDatePickerModule, IgxTimePickerModule, IgxComboModule, IgxSelectModule, ReactiveFormsModule],
     ...
 })
 export class AppModule {}
@@ -48,6 +48,15 @@ What you need to have Reactive form is to set model of the form, using the `form
 ```html
 <form class="input-group-form" [formGroup]="user" (ngSubmit)="onSubmit()">
     <h4 class="sample-title">Book your movie ticket</h4>
+    <igx-select #select name="movies" formControlName="movie">
+        <igx-select-item-group *ngFor="let genre of genres" [label]="genre.type">
+            <igx-select-item *ngFor="let movie of genre.movies" [value]="movie">
+                {{ movie }}
+            </igx-select-item>
+        </igx-select-item-group>
+        <label igxLabel for="movies">Movie</label>
+        <ng-template igxSelectToggleIcon><igx-icon fontSet="material">local_movies</igx-icon></ng-template>
+    </igx-select>
     <igx-input-group>
         <input igxInput name="fullName" type="text" formControlName="fullName"/>
         <label igxLabel for="fullName">Full Name</label>
@@ -57,7 +66,8 @@ What you need to have Reactive form is to set model of the form, using the `form
     </igx-input-group>
     ...
      <igx-combo #combo1 class="input-container" width="100%" [itemsMaxHeight]="130"
-        [data]="dsGenres" type="line" formControlName="genres"
+        [data]="genres" [valueKey]="'type'" [displayKey]="'type'"
+        type="line" formControlName="genres"
         placeholder="Select your favorite genres" searchPlaceholder="Search...">
     </igx-combo>
     ...
@@ -75,18 +85,20 @@ export class ReactiveFormsSampleComponent {
             email: ["", Validators.required],
             fullName: new FormControl("", Validators.required),
             genres: ["", Validators.required],
+            movie: ["", Validators.required],
             phone: [""]
         });
     }
 }
 ```
 
-In that case the full name, email and genres form's fields are required and the form won't be submitted, unless they have values.
+In that case the movie, full name, email and genres form's fields are required and the form won't be submitted, unless they have values.
 
 ## Additional Resources
 <div class="divider--half"></div>
 
 * [Combo](combo.md)
+* [Select](select.md)
 * [Template Driven Forms Integration](input_group.md)
 
 Our community is active and always welcoming to new ideas.
