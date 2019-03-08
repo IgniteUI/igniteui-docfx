@@ -258,36 +258,36 @@ export class AppModule {}
 このトピックでは、グリッドのツールバーの定義済みの列非表示 UI の使用方法や別のコンポーネントとして定義する方法について説明しました。また、その他の列順序から選択する機能を提供する UI を実装し、カスタム タイトルおよびフィルター プロンプト テキストを設定、[**IgxRadio**](../radio_button.md) ボタンのその他の Ignite UI for Angular コンポーネントも使用しました。
 以下は、列非表示 UI のその他の API です。
 
-* [`IgxColumnHidingComponent`]({environment:angularApiUrl}/classes/igxcolumnhidingcomponent.html)
-* [`IgxColumnHidingComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-column-hiding-theme)
+* [IgxColumnHidingComponent]({environment:angularApiUrl}/classes/igxcolumnhidingcomponent.html)
+* [IgxColumnHidingComponent Styles]({environment:sassApiUrl}/index.html#function-igx-column-hiding-theme)
 
 その他のコンポーネントおよびディレクティブ (またはそのいずれか) で使用した API:
 
 [`IgxGridComponent`]({environment:angularApiUrl}/classes/igxgridcomponent.html) プロパティ:
-* [`columnHiding`]({environment:angularApiUrl}/classes/igxgridcomponent.html#columnhiding)
-* [`columnHidingTitle`]({environment:angularApiUrl}/classes/igxgridcomponent.html#columnhidingtitle)
-* [`hiddenColumnsCount`]({environment:angularApiUrl}/classes/igxgridcomponent.html#hiddencolumnscount)
-* [`hiddenColumnsText`]({environment:angularApiUrl}/classes/igxgridcomponent.html#hiddencolumnstext)
+* [columnHiding]({environment:angularApiUrl}/classes/igxgridcomponent.html#columnhiding)
+* [columnHidingTitle]({environment:angularApiUrl}/classes/igxgridcomponent.html#columnhidingtitle)
+* [hiddenColumnsCount]({environment:angularApiUrl}/classes/igxgridcomponent.html#hiddencolumnscount)
+* [hiddenColumnsText]({environment:angularApiUrl}/classes/igxgridcomponent.html#hiddencolumnstext)
 
 [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) プロパティ:
-* [`disableHiding`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#disablehiding)
+* [disableHiding]({environment:angularApiUrl}/classes/igxcolumncomponent.html#disablehiding)
 
 [`IgxGridToolbarComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html) プロパティ:
-* [`columnHidingUI`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html#columnhidingui)
-* [`columnHidingDropdown`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html#columnhidingdropdown)
+* [columnHidingUI]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html#columnhidingui)
+* [columnHidingDropdown]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html#columnhidingdropdown)
 
 [`IgxGridToolbarComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html) メソッド:
-* [`toggleColumnHidingUI`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html#togglecolumnhidingui)
+* [toggleColumnHidingUI]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html#togglecolumnhidingui)
 
 [`IgxGridComponent`]({environment:angularApiUrl}/classes/igxgridcomponent.html) イベント:
-* [`onColumnVisibilityChanged`]({environment:angularApiUrl}/classes/igxgridcomponent.html#oncolumnvisibilitychanged)
+* [onColumnVisibilityChanged]({environment:angularApiUrl}/classes/igxgridcomponent.html#oncolumnvisibilitychanged)
 
-[`IgxRadioComponent`]({environment:angularApiUrl}/classes/igxradiocomponent.html)
+[IgxRadioComponent]({environment:angularApiUrl}/classes/igxradiocomponent.html)
 
 スタイル:
 
-* [`IgxGridComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
-* [`IgxRadioComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-radio-theme)
+* [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [IgxRadioComponent Styles]({environment:sassApiUrl}/index.html#function-igx-radio-theme)
 
 ### その他のリソース
 <div class="divider--half"></div>
