@@ -149,7 +149,7 @@ IgxTreeGridComponent を階層にバインドするには、[`childDataKey`]({en
 このトピックのはじめにあるコードの結果は、[デモ](#demo)で確認できます。
 
 ### プライマリと外部キー
-**primary and foreign keys**オプションを使用した際に各データオブジェクトはプライマリキーと外部キーを含みます。プライマリキーは現在のデータ オブジェクトの一意識別子、外部キーは親の一意識別子です。元のデータソースを含むツリー グリッドの [`data`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#data) プロパティがフラットコレクションになります。
+**primary and foreign keys** オプションを使用した際に各データオブジェクトはプライマリキーと外部キーを含みます。プライマリキーは現在のデータ オブジェクトの一意識別子、外部キーは親の一意識別子です。元のデータソースを含むツリー グリッドの [`data`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#data) プロパティがフラットコレクションになります。
 
 以下は、主と外部キーの関係を定義したフラット コレクションを含むコンポーネントの例です。
 
