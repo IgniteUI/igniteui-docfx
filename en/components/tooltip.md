@@ -41,7 +41,7 @@ export class AppModule {}
 
 ### Simple tooltip
 
-Let's say we want to create a simple text tooltip for an element on our page. In our case, let's use our awesome [**IgxAvatar**](avatar.md) as the element in question by importing the [`IgxAvatarModule`]({environment:angularApiUrl}/classes/igxavatarmodule.html) first.
+Let's say we want to create a simple text tooltip for an element on our page. In our case, let's use our awesome [`IgxAvatar`](avatar.md) as the element in question by importing the [`IgxAvatarModule`]({environment:angularApiUrl}/classes/igxavatarmodule.html) first.
 
 ```typescript
 // app.module.ts
@@ -125,7 +125,7 @@ Now that we have both our target and tooltip defined, all that's left for us to 
 #### Show/Hide delay settings
 What if we want to control the amount of time that should pass before showing and hiding the tooltip? For this purpose we can use the [`showDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#showdelay) and the [`hideDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#hidedelay) properties of the [`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) directive. Both properties are of type **number** and take time span in milliseconds.
 
-Now let's add a couple of [**IgxSlider**](slider.md) elements to control the [`showDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#showdelay) and the [`hideDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#hidedelay). In addition, we will also use the [**IgxSwitch**](switch.md) to enable/disable the user interaction over the tooltip target by using the [`tooltipDisabled`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#tooltipdisabled) property of the target.
+Now let's add a couple of [`IgxSlider`](slider.md) elements to control the [`showDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#showdelay) and the [`hideDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#hidedelay). In addition, we will also use the [`IgxSwitch`](switch.md) to enable/disable the user interaction over the tooltip target by using the [`tooltipDisabled`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#tooltipdisabled) property of the target.
 
 We will go ahead and get the [`IgxSliderModule`]({environment:angularApiUrl}/classes/igxslidermodule.html) and the [`IgxSwitchModule`]({environment:angularApiUrl}/classes/igxswitchmodule.html).
 ```typescript
@@ -176,7 +176,7 @@ You can see the result of the code from above at the beginning of this article i
 
 Customizing and styling the content of our tooltip has never been easier with the [`igxTooltip`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) directive! Since the tooltip itself is an ordinary element in our markup, we can basically improve its content by adding any elements we need and have the ability to style them accordingly!
 
-Let's expand on the use of the [`igxTooltip`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) and use it to provide more details for a specific location on a map! In order to make our application look even better, we will use the [**IgxCard**](card.md) to represent our map, the [**IgxAvatar**](avatar.md) for a logo in our tooltip, the [**IgxIcon**](icon.md) for the location icon on our map and the [**IgxButton**](button.md) for some card actions! For this purpose, we will get their respective modules.
+Let's expand on the use of the [`igxTooltip`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) and use it to provide more details for a specific location on a map! In order to make our application look even better, we will use the [`IgxCard`](card.md) to represent our map, the [`IgxAvatar`](avatar.md) for a logo in our tooltip, the [`IgxIcon`](icon.md) for the location icon on our map and the [`IgxButton`](button.md) for some card actions! For this purpose, we will get their respective modules.
 
 ```typescript
 // app.module.ts
@@ -317,7 +317,7 @@ If all went well, this is how our location and tooltip should look like:
 <div class="divider--half"></div>
 
 ### Overlay configuration
-Both the [`igxTooltip`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) and [`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) directives use the [**IgxOverlayService**](overlay_main.md) to open and close the respective tooltip element.
+Both the [`igxTooltip`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) and [`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) directives use the [`IgxOverlayService`](overlay_main.md) to open and close the respective tooltip element.
 
 The [`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) directive exposes an [`overlaySettings`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#overlaysettings) property (inherited from the [`igxToggleAction`]({environment:angularApiUrl}/classes/igxtoggleactiondirective.html)), which can be used to customize the animations of our tooltip, its position in the UI and a lot more! If this property is not set, then default overlay settings will be used.
 
@@ -338,30 +338,30 @@ Extra care should be taken in the following scenarios:
 
 In this article we learned how to create, configure and style awesome tooltips for the elements on our page! We also used some additional Ignite UI for Angular components like icons, avatars and cards to improve on the design of our application! The respective APIs are listed below:
 
-* [`IgxTooltipModule`]({environment:angularApiUrl}/classes/igxtooltipmodule.html)
-* [`IgxTooltipDirective`]({environment:angularApiUrl}/classes/igxtooltipdirective.html)
-* [`IgxTooltipTargetDirective`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html)
+* [IgxTooltipModule]({environment:angularApiUrl}/classes/igxtooltipmodule.html)
+* [IgxTooltipDirective]({environment:angularApiUrl}/classes/igxtooltipdirective.html)
+* [IgxTooltipTargetDirective]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html)
 
 Additional components and/or directives that were used:
 
-* [`IgxAvatarComponent`]({environment:angularApiUrl}/classes/igxavatarcomponent.html)
-* [`IgxButtonDirective`]({environment:angularApiUrl}/classes/igxbuttondirective.html)
-* [`IgxCardComponent`]({environment:angularApiUrl}/classes/igxcardcomponent.html)
-* [`IgxIconComponent`]({environment:angularApiUrl}/classes/igxiconcomponent.html)
-* [`IgxSliderComponent`]({environment:angularApiUrl}/classes/igxslidercomponent.html)
-* [`IgxSwitchComponent`]({environment:angularApiUrl}/classes/igxswitchcomponent.html)
-* [`IgxToggleDirective`]({environment:angularApiUrl}/classes/igxtoggledirective.html)
-* [`IgxToggleActionDirective`]({environment:angularApiUrl}/classes/igxtoggleactiondirective.html)
+* [IgxAvatarComponent]({environment:angularApiUrl}/classes/igxavatarcomponent.html)
+* [IgxButtonDirective]({environment:angularApiUrl}/classes/igxbuttondirective.html)
+* [IgxCardComponent]({environment:angularApiUrl}/classes/igxcardcomponent.html)
+* [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
+* [IgxSliderComponent]({environment:angularApiUrl}/classes/igxslidercomponent.html)
+* [IgxSwitchComponent]({environment:angularApiUrl}/classes/igxswitchcomponent.html)
+* [IgxToggleDirective]({environment:angularApiUrl}/classes/igxtoggledirective.html)
+* [IgxToggleActionDirective]({environment:angularApiUrl}/classes/igxtoggleactiondirective.html)
 
 Styles:
 
-* [`IgxTooltipDirective Styles`]({environment:sassApiUrl}/index.html#function-igx-tooltip-theme)
-* [`IgxAvatarComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-avatar-theme)
-* [`IgxButtonDirective Styles`]({environment:sassApiUrl}/index.html#function-igx-button-theme)
-* [`IgxCardComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-card-theme)
-* [`IgxIconComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
-* [`IgxSliderComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-slider-theme)
-* [`IgxSwitchComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-switch-theme)
+* [IgxTooltipDirective Styles]({environment:sassApiUrl}/index.html#function-igx-tooltip-theme)
+* [IgxAvatarComponent Styles]({environment:sassApiUrl}/index.html#function-igx-avatar-theme)
+* [IgxButtonDirective Styles]({environment:sassApiUrl}/index.html#function-igx-button-theme)
+* [IgxCardComponent Styles]({environment:sassApiUrl}/index.html#function-igx-card-theme)
+* [IgxIconComponent Styles]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
+* [IgxSliderComponent Styles]({environment:sassApiUrl}/index.html#function-igx-slider-theme)
+* [IgxSwitchComponent Styles]({environment:sassApiUrl}/index.html#function-igx-switch-theme)
 
 <div class="divider"></div>
 

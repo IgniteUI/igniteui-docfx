@@ -42,7 +42,7 @@ export class AppModule {}
 
 ### シンプルなツールチップ
 
-ページの要素にシンプルなテキスト ツールチップを作成します。[`IgxAvatarModule`]({environment:angularApiUrl}/classes/igxavatarmodule.html) をインポートして要素として [**IgxAvatar**](avatar.md) を使用します。
+ページの要素にシンプルなテキスト ツールチップを作成します。[`IgxAvatarModule`]({environment:angularApiUrl}/classes/igxavatarmodule.html) をインポートして要素として [`IgxAvatar`](avatar.md) を使用します。
 
 ```typescript
 // app.module.ts
@@ -126,7 +126,7 @@ avatar をターゲットにして、[`igxTooltipTarget`]({environment:angularAp
 #### 設定の表示/非表示
 ツールチップを表示または非表示にするまでの時間を制御する場合は、[`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) ディレクティブの [`showDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#showdelay) と [`hideDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#hidedelay) プロパティを使用します。両プロパティは型 **number** でミリセカンドでタイムスパンを取得できます。
 
-次に [**IgxSlider**](slider.md) 要素をいくつか [`showDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#showdelay) と [`hideDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#hidedelay) に追加します。更にターゲットの [`tooltipDisabled`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#tooltipdisabled) プロパティを使用してツールチップ ターゲットでユーザー インタラクションを有効/無効にする [**IgxSwitch**](switch.md) を使用します。
+次に [`IgxSlider`](slider.md) 要素をいくつか [`showDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#showdelay) と [`hideDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#hidedelay) に追加します。更にターゲットの [`tooltipDisabled`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#tooltipdisabled) プロパティを使用してツールチップ ターゲットでユーザー インタラクションを有効/無効にする [`IgxSwitch`](switch.md) を使用します。
 
 [`IgxSliderModule`]({environment:angularApiUrl}/classes/igxslidermodule.html) と [`IgxSwitchModule`] を取得します。
 ```typescript
@@ -178,7 +178,7 @@ Slider と Switch コントロールをコンポーネントのテンプレー�
 コンテンツのカスタマイズやスタイル設定が [`igxTooltip`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) ディレクティブで簡単にできます。
 ツールチップはマークアップの標準要素であるため、必要な要素を追加してコンテンツを改善や状況に応じたスタイル設定が可能です。
 
-[`igxTooltip`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) の使用を拡張し、マップの特定の場所について詳細な情報を提供します。アプリケーションの UI を更にきれいにするために[**IgxCard**](card.md)を使用してマップを表示し、ツールチップのロゴに [**IgxAvatar**](avatar.md)、マップの場所アイコンに[**IgxIcon**](icon.md)、カード動作に[**IgxButton**](button.md) を使用します。これには各モジュールを取得する必要があります。
+[`igxTooltip`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) の使用を拡張し、マップの特定の場所について詳細な情報を提供します。アプリケーションの UI を更にきれいにするために[`IgxCard`](card.md)を使用してマップを表示し、ツールチップのロゴに [`IgxAvatar`](avatar.md)、マップの場所アイコンに[`IgxIcon`](icon.md)、カード動作に[`IgxButton`](button.md) を使用します。これには各モジュールを取得する必要があります。
 
 ```typescript
 // app.module.ts
@@ -319,7 +319,7 @@ export class AppModule {}
 <div class="divider--half"></div>
 
 ### オーバーレイ構成
-[`igxTooltip`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) および [`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) ディレクティブは、[**IgxOverlayService**](overlay_main.md) を使用して各ツールチップ要素を開くか閉じるかします。
+[`igxTooltip`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) および [`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) ディレクティブは、[`IgxOverlayService`](overlay_main.md) を使用して各ツールチップ要素を開くか閉じるかします。
 
 [`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) ディレクティブは、[`overlaySettings`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#overlaysettings) プロパティ (inherited from the [`igxToggleAction`]({environment:angularApiUrl}/classes/igxtoggleactiondirective.html)) を公開し、ツールチップ アニメーション、UI 状の配置などのカスタマイズが可能です。プロパティを設定しない場合は、デフォルト オーバーレイ設定が使用されます。
 
@@ -340,30 +340,30 @@ export class AppModule {}
 
 このトピックでは、ページ要素にツールチップを作成する方法について説明しました。また、アプリケーションのデザインには icons, avatars and cards などの Ignite UI for Angular コンポーネントも追加で使用しました。以下は、各 API です。
 
-* [`IgxTooltipModule`]({environment:angularApiUrl}/classes/igxtooltipmodule.html)
-* [`IgxTooltipDirective`]({environment:angularApiUrl}/classes/igxtooltipdirective.html)
-* [`IgxTooltipTargetDirective`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html)
+* [IgxTooltipModule]({environment:angularApiUrl}/classes/igxtooltipmodule.html)
+* [IgxTooltipDirective]({environment:angularApiUrl}/classes/igxtooltipdirective.html)
+* [IgxTooltipTargetDirective]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html)
 
 使用したその他のコンポーネントとディレクティブ:
 
-* [`IgxAvatarComponent`]({environment:angularApiUrl}/classes/igxavatarcomponent.html)
-* [`IgxButtonDirective`]({environment:angularApiUrl}/classes/igxbuttondirective.html)
-* [`IgxCardComponent`]({environment:angularApiUrl}/classes/igxcardcomponent.html)
-* [`IgxIconComponent`]({environment:angularApiUrl}/classes/igxiconcomponent.html)
-* [`IgxSliderComponent`]({environment:angularApiUrl}/classes/igxslidercomponent.html)
-* [`IgxSwitchComponent`]({environment:angularApiUrl}/classes/igxswitchcomponent.html)
-* [`IgxToggleDirective`]({environment:angularApiUrl}/classes/igxtoggledirective.html)
-* [`IgxToggleActionDirective`]({environment:angularApiUrl}/classes/igxtoggleactiondirective.html)
+* [IgxAvatarComponent]({environment:angularApiUrl}/classes/igxavatarcomponent.html)
+* [IgxButtonDirective]({environment:angularApiUrl}/classes/igxbuttondirective.html)
+* [IgxCardComponent]({environment:angularApiUrl}/classes/igxcardcomponent.html)
+* [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
+* [IgxSliderComponent]({environment:angularApiUrl}/classes/igxslidercomponent.html)
+* [IgxSwitchComponent]({environment:angularApiUrl}/classes/igxswitchcomponent.html)
+* [IgxToggleDirective]({environment:angularApiUrl}/classes/igxtoggledirective.html)
+* [IgxToggleActionDirective]({environment:angularApiUrl}/classes/igxtoggleactiondirective.html)
 
 スタイル:
 
-* [`IgxTooltipDirective Styles`]({environment:sassApiUrl}/index.html#function-igx-tooltip-theme)
-* [`IgxAvatarComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-avatar-theme)
-* [`IgxButtonDirective Styles`]({environment:sassApiUrl}/index.html#function-igx-button-theme)
-* [`IgxCardComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-card-theme)
-* [`IgxIconComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
-* [`IgxSliderComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-slider-theme)
-* [`IgxSwitchComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-switch-theme)
+* [IgxTooltipDirective Styles]({environment:sassApiUrl}/index.html#function-igx-tooltip-theme)
+* [IgxAvatarComponent Styles]({environment:sassApiUrl}/index.html#function-igx-avatar-theme)
+* [IgxButtonDirective Styles]({environment:sassApiUrl}/index.html#function-igx-button-theme)
+* [IgxCardComponent Styles]({environment:sassApiUrl}/index.html#function-igx-card-theme)
+* [IgxIconComponent Styles]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
+* [IgxSliderComponent Styles]({environment:sassApiUrl}/index.html#function-igx-slider-theme)
+* [IgxSwitchComponent Styles]({environment:sassApiUrl}/index.html#function-igx-switch-theme)
 
 <div class="divider"></div>
 
