@@ -113,7 +113,7 @@ import {AutoPositionStrategy, GlobalPositionStrategy, ConnectedPositioningStrate
 ### 水平方向または垂直方向
 配置設定で水平方向または垂直方向を設定すると、コンテンツの配置を決定します。配置方法によってコンテンツは、ターゲット コンテナー ([`AutoPositionStrategy`] ({environment:angularApiUrl}/classes/autopositionstrategy.html)、[`ElasticPositionStrategy`]({environment:angularApiUrl}/classes/elasticpositionstrategy.html)、[`ConnectedPositioningStrategy`]({environment:angularApiUrl}/classes/connectedpositioningstrategy.html))、またはドキュメント ([`GlobalPositioningStrategy`]({environment:angularApiUrl}/classes/globalpositionstrategy.html)) のボディに関連して配列します。
 
-<div class="sample-container loading" style="height: 400px">
+<div class="sample-container loading" style="height: 500px">
     <iframe id="overlay-position-sample-1-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/interactions/overlay-position-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
