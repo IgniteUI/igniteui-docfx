@@ -8,9 +8,9 @@ _language: ja
 ## Autocomplete
 <p class="highlight">
 
-[**igxAutocomplete**]({environment:angularApiUrl}/classes/igxautocompletedirective.html) ディレクティブは [igxDropDown]  ({environment:angularApiUrl}/classes/igxdropdowncomponent.html) と候補オプションを表示してテキスト入力を向上する方法を提供します。候補は、テキスト入力の開始時、または `上矢印/`下矢印` キーを使用して表示します。
+[`igxAutocomplete`]({environment:angularApiUrl}/classes/igxautocompletedirective.html) ディレクティブは [`igxDropDown`]  ({environment:angularApiUrl}/classes/igxdropdowncomponent.html) と候補オプションを表示してテキスト入力を向上する方法を提供します。候補は、テキスト入力の開始時、または `上矢印/`下矢印` キーを使用して表示します。
 
-デフォルトで最初の項目が常にハイライトされ、キーを使用して簡単に選択できる方法を提供します。リストの項目をクリックして選択することもでき、入力値が自動的に更新されてドロップダウンが閉じられます。項目が選択されると、`onItemSelected` イベントが発生します。イベントがキャンセルされると項目は選択されずにドロップダウンも閉じません。[**igxAutocomplete**]({environment:angularApiUrl}/classes/igxautocompletedirective.html) ディレクティブは項目間を移動すると同時に入力が常にフォーカスされます。後者では入力を続行できます。`ESC` キーが使用してドロップダウン リストを閉じます。
+デフォルトで最初の項目が常にハイライトされ、キーを使用して簡単に選択できる方法を提供します。リストの項目をクリックして選択することもでき、入力値が自動的に更新されてドロップダウンが閉じられます。項目が選択されると、`onItemSelected` イベントが発生します。イベントがキャンセルされると項目は選択されずにドロップダウンも閉じません。[`igxAutocomplete`]({environment:angularApiUrl}/classes/igxautocompletedirective.html) ディレクティブは項目間を移動すると同時に入力が常にフォーカスされます。後者では入力を続行できます。`ESC` キーが使用してドロップダウン リストを閉じます。
 
 [`igx-autocomplete`]({environment:angularApiUrl}/classes/igxautocompletedirective.html) は、使用可能なオプションのプロバイダーとして [`igx-drop-down`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) を使用します。つまり、使用可能なグループ化、テンプレート、項目とグループの無効化を含むドロップダウン　コンポーネントの機能が使用されます。
 </p>
@@ -253,7 +253,7 @@ For the purpose of the sample there is a delay in the data loading, in order to 
 * [IgxDropDownComponent](drop_down.md)
 * [IgxInputGroup](input_group.md)
 * [テンプレート駆動フォームの統合](input_group.md)
-[Reactive Forms Integration](input_group_reactive_forms.md)
+* [Reactive Forms Integration](input_group_reactive_forms.md)
 
 コミュニティに参加して新しいアイデアをご提案ください。
 
