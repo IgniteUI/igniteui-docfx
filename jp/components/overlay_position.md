@@ -156,6 +156,6 @@ export class MyExampleOverlayComponent {
 <div class="divider"></div>
 
 
-## API
+## API References
 
-* [`IPositionStrategy`]({environment:angularApiUrl}/interfaces/ipositionstrategy.html)
+* [IPositionStrategy]({environment:angularApiUrl}/interfaces/ipositionstrategy.html)
