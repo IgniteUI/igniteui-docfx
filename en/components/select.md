@@ -42,6 +42,7 @@ public items: string[] = ["Orange", "Apple", "Banana", "Mango"];
 Then in your template you need to bind it with said items like so:
 ```html
 <igx-select>
+    <label igxLabel>Simple Select</label>
     <igx-select-item *ngFor="let item of items" [value]="item">
         {{item}}
     </igx-select-item>
@@ -227,6 +228,7 @@ You would notice that now we pass in objects that have certain properties, such 
 Then in your template file you can iterate over these objects and access their properties accordingly:
 ```html
 <igx-select>
+    <label igxLabel>Select With Groups</label>
     <igx-select-item-group *ngFor="let item of items" [label]="item.type">
         <igx-select-item *ngFor="let fruit of item.fruits" 
         [value]="fruit">
@@ -290,6 +292,7 @@ With `igx-select` you are not bound to use any of the [*OverlaySettings*](https:
 To do this you first define your template like so:
 ```html
 <igx-select [overlaySettings]="customOverlaySettings">
+    <label igxLabel>Select An Item</label>
     <igx-select-item *ngFor="let item of items">
         {{item}}
     </igx-select-item>

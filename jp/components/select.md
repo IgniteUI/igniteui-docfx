@@ -43,6 +43,7 @@ public items: string[] = ["Orange", "Apple", "Banana", "Mango"];
 次にテンプレートでバインドします。
 ```html
 <igx-select>
+    <label igxLabel>Simple Select</label>
     <igx-select-item *ngFor="let item of items" [value]="item">
         {{item}}
     </igx-select-item>
@@ -228,6 +229,7 @@ public items: any[] = [
 次にテンプレート ファイルでこれらのオブジェクトを反復してプロパティへ適切にアクセスします。
 ```html
 <igx-select>
+    <label igxLabel>Select With Groups</label>
     <igx-select-item-group *ngFor="let item of items" [label]="item.type">
         <igx-select-item *ngFor="let fruit of item.fruits" 
         [value]="fruit">
@@ -291,6 +293,7 @@ export class MyClass {
 テンプレートを以下のように定義します。
 ```html
 <igx-select [overlaySettings]="customOverlaySettings">
+    <label igxLabel>Select An Item</label>
     <igx-select-item *ngFor="let item of items">
         {{item}}
     </igx-select-item>
