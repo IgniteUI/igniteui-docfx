@@ -229,7 +229,7 @@ export class MyComponent implements OnInit {
 **ツリー セル**のインデントは、フィルタリング、並べ替え、ページングなど他のツリーグリッド全体の機能で永続化されます。
 
 - **sorting** が列に適用された際にデータ行がレベルごとに並べ替えられます。ルートレベルの行はそれぞれの子に関係なく個々に並べ替えられます。各子コレクションは個々に並べ替えられます。
-- 最初の列 (the one that has a [`visibleIndex`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#visibleindex) は、常にツリー列です。
+- 最初の列 ([`visibleIndex`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#visibleindex)　を持つ列は、常にツリー列です。
 - 列ピン固定、列の非表示、列移動などの処理後に 0 の [`visibleIndex`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#visibleindex) で終わる列はツリー列になります。
 - エクスポートした Excel ワークシートは、ツリーグリッドでグループ化されるときにレコードをグループ化して階層に反映できます。すべてのレコードを展開した状態が保持および反映されます。
 - CSV レベルにエクスポートする際に展開した状態は無視されてすべてのデータがフラットでエクスポートされます。
