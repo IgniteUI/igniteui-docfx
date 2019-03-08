@@ -46,7 +46,7 @@ export class AppModule {}
 
 以下は結果です。
 
-<div class="sample-container loading" style="height: 540px;">
+<div class="sample-container loading" style="height: 550px;">
     <iframe id="date-picker-sample-1" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/scheduling/datepicker-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
