@@ -27,12 +27,12 @@ Input Group コンポーネントおよびその関連するディレクティ�
 // app.module.ts
 
 ...
-import { IgxIconModule, IgxInputGroupModule, IgxButtonModule, IgxRippleModule, IgxDatePickerModule, IgxTimePickerModule, IgxComboModule } from "igniteui-angular";
+import { IgxIconModule, IgxInputGroupModule, IgxButtonModule, IgxRippleModule, IgxDatePickerModule, IgxTimePickerModule, IgxComboModule, igxSelectModule } from "igniteui-angular";
 import { FormsModule } from "@angular/forms";
 
 @NgModule({
     ...
-    imports: [..., IgxIconModule, IgxInputGroupModule, IgxButtonModule, IgxRippleModule, IgxDatePickerModule, IgxTimePickerModule, IgxComboModule, FormsModule],
+    imports: [..., IgxIconModule, IgxInputGroupModule, IgxButtonModule, IgxRippleModule, IgxDatePickerModule, IgxTimePickerModule, IgxComboModule, igxSelectModule, FormsModule],
     ...
 })
 export class AppModule {}
@@ -109,6 +109,7 @@ Ignite UI for Angular Hint は、入力の下に配置されるヘルパー テ�
 * [リアクティブ フォームの統合](input_group_reactive_forms.md)
 * [Label と Input](label_input.md)
 * [Combo](combo.md)
+* [Select](select.md)
 * [Display Density](display_density.md)
 
 <div class="divider--half"></div>

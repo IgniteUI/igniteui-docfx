@@ -219,14 +219,14 @@ export class PasteHandler {
 
 ```
 
-### API
+### API リファレンス
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
 
-### 追加のリソース
+### その他のリソース
 
 <div class="divider--half"></div>
 
-* [Excel Exporter](../exporter_excel.md)
+* [Excel Exporter](export_excel.md)
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。

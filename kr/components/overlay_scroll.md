@@ -86,6 +86,6 @@ If the [`modal`] ({environment:angularApiUrl}/interfaces/overlaysettings.html#mo
 </div>
 <div class="divider--half"></div>
 
-## API
+## API References
 
-* [`IScrollStrategy`] ({environment:angularApiUrl}/interfaces/iscrollstrategy.html)
+* [IScrollStrategy] ({environment:angularApiUrl}/interfaces/iscrollstrategy.html)
