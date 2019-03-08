@@ -93,8 +93,8 @@ Ignite UI for Angular の @@igComponent は、**UI** 操作のコンテナとな
 
 @@if (igxName === 'IgxHierarchicalGrid') {
 > [!NOTE]
-> Hierarchical Grid をエクスポートまたはその子グリッドが
-> that belong to the respective grid (the child grids will not be included in the exported data).
+> 階層下に Hierarchical Grid をエクスポートまたはその子グリッドがエクスポートされて、エクスポートされるデータは行のフラットなコレクションで、
+> 該当のグリッドに属します　(子グリッドはエクスポートされるデータに含まれません)。
 }
 
 各ボタン テキストを設定するプロパティについては、以下の API セクションを確認してください。
