@@ -27,12 +27,12 @@ To get started import all modules for Ignite UI components and the **FormsModule
 // app.module.ts
 
 ...
-import { IgxIconModule, IgxInputGroupModule, IgxButtonModule, IgxRippleModule, IgxDatePickerModule, IgxTimePickerModule, IgxComboModule } from "igniteui-angular";
+import { IgxIconModule, IgxInputGroupModule, IgxButtonModule, IgxRippleModule, IgxDatePickerModule, IgxTimePickerModule, IgxComboModule, igxSelectModule } from "igniteui-angular";
 import { FormsModule } from "@angular/forms";
 
 @NgModule({
     ...
-    imports: [..., IgxIconModule, IgxInputGroupModule, IgxButtonModule, IgxRippleModule, IgxDatePickerModule, IgxTimePickerModule, IgxComboModule, FormsModule],
+    imports: [..., IgxIconModule, IgxInputGroupModule, IgxButtonModule, IgxRippleModule, IgxDatePickerModule, IgxTimePickerModule, IgxComboModule, igxSelectModule, FormsModule],
     ...
 })
 export class AppModule {}
@@ -108,6 +108,7 @@ Related topics:
 * [Reactive Forms Integration](input_group_reactive_forms.md)
 * [Label & Input](label_input.md)
 * [Combo](combo.md)
+* [Select](select.md)
 * [Display Density](display_density.md)
 
 Our community is active and always welcoming to new ideas.
