@@ -86,6 +86,6 @@ import { NoOpScrollStrategy } from "./scroll/NoOpScrollStrategy";
 </div>
 <div class="divider--half"></div>
 
-## API
+## API References
 
-* [`IScrollStrategy`]({environment:angularApiUrl}/interfaces/iscrollstrategy.html)
+* [IScrollStrategy]({environment:angularApiUrl}/interfaces/iscrollstrategy.html)
