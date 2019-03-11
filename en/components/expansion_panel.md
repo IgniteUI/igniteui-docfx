@@ -193,7 +193,7 @@ We can also override the default icon that is used in the control by passing con
 Our component will now render "Show More" when the panel is collapsed and "Collapse" once it's fully expanded.
 ### Adding content
 
-The [`igx-expansion-panel-body`]({environment:angularApiUrl}/classes/igxexpansionpanelbodycomponent.html) tag of the component accepts all kinds of markup and renders everything with the `ng-content` projection. We can use an [`IgxAvatar`]({environment:angularApiUrl}/classes/igxavatarcomponent.html) to freshen up our expansion panel's inner content:
+The [`igx-expansion-panel-body`]({environment:angularApiUrl}/classes/igxexpansionpanelbodycomponent.html) tag of the component accepts all kinds of markup and renders everything with the `ng-content` projection. We can use an [`IgxAvatar`](avatar.html) to freshen up our expansion panel's inner content:
 First, we need to import the `IgxAvatarModule` in our **app.module.ts**
 ```typescript
 // in app.module.ts
@@ -246,7 +246,7 @@ After applying all of the changes to our initial component, here is the final re
     <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="expansion-sample-3-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-The `IgxExpansionPanel` control allows all sort of content to be added inside of the `igx-expansion-panel-body`. It can render [`IgxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html)s, [`IgxCombo`]({environment:angularApiUrl}/classes/igxcombocomponent.html), charts and even other expansion panels!
+The `IgxExpansionPanel` control allows all sort of content to be added inside of the `igx-expansion-panel-body`. It can render [`IgxGrid`](grid/grid.md)s, [`IgxCombo`](combo.html), charts and even other expansion panels!
 
 ## Using Animations
 ### Using specific animation
@@ -522,7 +522,7 @@ You can see the results below:
 
 ## Weather Forecast Sample
 
-The following is an illustration of using the [`IgxExpansionPanelComponent`]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html) in combination with several other components like [`IgxCard`]({environment:angularApiUrl}/classes/igxcardcomponent.html) and [`IgxIcon`]({environment:angularApiUrl}/classes/igxiconcomponent.html) to achieve a particular task. In this case - creating a weather component capable of showing both current day temperature and conditions as well as forecast details. If needed, the user can expand more and see the upcoming days weather conditions.
+The following is an illustration of using the [`IgxExpansionPanelComponent`]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html) in combination with several other components like [`IgxCard`](card.html) and [`IgxIcon`](icon.html) to achieve a particular task. In this case - creating a weather component capable of showing both current day temperature and conditions as well as forecast details. If needed, the user can expand more and see the upcoming days weather conditions.
 
 ```typescript
 // in weather-forecast.component.ts

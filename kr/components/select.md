@@ -2,11 +2,10 @@
 title: IgxSelect - Native Angular | Ignite UI for Angular
 _description: The igxSelect provides an input with drop-down list allowing selection of a single item.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Components, Native Angular Controls, Native Angular Components Library, Angular IgxSelect Component, IgxSelect
-_language: kr
 ---
 
 ## Select
-The `IgxSelectComponent` allows you to select a single item from a drop-down list by using the mouse or the keyboard to quickly navigate through them. Using `igx-select` you can also iterate selection through all items based on the input of a specific character or multiple characters.
+The `IgxSelectComponent` allows you to select a single item from a drop-down list by using the mouse or the keyboard to quickly navigate through them. By using `igx-select` you can also iterate selection through all items based on the input of a specific character or multiple characters.
 
 ## Simple Select Demo
 <div class="sample-container loading" style="height: 430px;">
@@ -43,7 +42,6 @@ public items: string[] = ["Orange", "Apple", "Banana", "Mango"];
 Then in your template you need to bind it with said items like so:
 ```html
 <igx-select>
-    <label igxLabel>Simple Select</label>
     <igx-select-item *ngFor="let item of items" [value]="item">
         {{item}}
     </igx-select-item>
@@ -73,11 +71,11 @@ When the `igx-drop-down` is opened, you can close it by doing one of the followi
 - When the drop-down list is opened you can navigate to a *specific* item by rapidly typing in the first few characters of the item you wish to go to.
     - *Note that the speed at which you type in matters.*
 - When the drop-down list is opened, you can navigate through the items using the `Home` and `End` keys.
-- When the drop-down list is opened, navigation with `Up/Down Arrow` keys starts from the selected item if any. Otherwise, it starts from the first item in the list.
+- When the drop-down list is opened, navigation with `Up/Down Arrow` keys starts from the selected item, if any. Otherwise, it starts from the first item in the list.
 - When the drop-down list is closed you can cycle between its items using the `Up/Down Arrow` keys.
 - When the drop-down list is closed you can also navigate through all items that begin with a specific character, it works the same as if it was opened.
 - When the drop-down list is closed you can also navigate to a *specific* item by rapidly typing in its first few characters. The behaviour is the same as when the drop-down is opened.
-- When the drop-down is closed character key navigation is case insensitive.
+- When the drop-down is closed character key navigation is also case insensitive.
 - When the drop-down is closed character key navigation does not change selection when pressing characters that have no matching item(s).
 
 ### Item Selection
@@ -96,7 +94,9 @@ An item from the drop-down list can be selected by:
 - Disabled items are not selectable.
 - Selection is removed if the selected option gets deleted.
 - When there are items with duplicated values, the first one gets selected.
-> It is a good idea to note that `igx-select` supports *single* selection of items only.
+
+>[!NOTE]
+> `igx-select` supports *single* selection of items only.
 
 ### Event emitting
 Since `igx-select` extends `igx-drop-down`, it also makes good use of its events which include:
@@ -115,8 +115,7 @@ You can make use of the `onOpened` event like so:
 - Emitted on:
     - input click
     - select expand/collapse button click (app scenario)
-- Triggered on:
-    - key interaction
+- Triggered on key interaction
 
  The `onOpening` and `onClosing` events are fired *before* the animation finishes playing, i.e. before the drop-down is fully **opened** or **closed**. They can also be canceled by setting the `cancel` property to `true` in the event handler function.
 
@@ -127,11 +126,11 @@ You can make use of the `onOpened` event like so:
 ```
 
 #### Selection event
-- Emitted when the item selection is changing. It is emitted *before* the selection completes.
--  Emitted when an item is selected by a mouse click.
--  Emitted when an item is selected by `Enter`, `Space` keys.
--  Emitted when setting the value property.
--  Emitted when setting an item's `selected` property.
+- Emitted when the item selection is changing (when you attempt to select a new item). It is emitted *before* the selection completes, i.e. before the new item is selected.
+- Emitted when an item is selected by a mouse click.
+- Emitted when an item is selected by `Enter`, `Space` keys.
+- Emitted when setting the value property.
+- Emitted when setting an item's `selected` property.
 
 ```html
 <igx-select (onSelection)="handleSelection($event)">
@@ -168,7 +167,7 @@ export class MyClass {
     }
     /* --- */
     private handleClosing(event: CancelableEventArgs): void {
-        // Cancel the closing event
+        // cancel the closing event
         event.cancel = true;
     }
     /* --- */
@@ -229,7 +228,6 @@ You would notice that now we pass in objects that have certain properties, such 
 Then in your template file you can iterate over these objects and access their properties accordingly:
 ```html
 <igx-select>
-    <label igxLabel>Select With Groups</label>
     <igx-select-item-group *ngFor="let item of items" [label]="item.type">
         <igx-select-item *ngFor="let fruit of item.fruits" 
         [value]="fruit">
@@ -293,7 +291,6 @@ With `igx-select` you are not bound to use any of the [*OverlaySettings*](https:
 To do this you first define your template like so:
 ```html
 <igx-select [overlaySettings]="customOverlaySettings">
-    <label igxLabel>Select An Item</label>
     <igx-select-item *ngFor="let item of items">
         {{item}}
     </igx-select-item>
@@ -364,21 +361,23 @@ export class MyClass implements OnInit {
 ```
 - We should mention that if you pass the custom settings both as an argument in the `open` function as well as into the template, `igx-select` will use the ones provided *in the `open` function*. However, if you bind the settings to an internal event, such as `onOpening` or `onOpened` then `igx-select` will use the settings that are provided in the template.
 
-## API Reference
-* [IgxSelectModule]({environment:angularApiUrl}/classes/igxselectmodule.html)
-* [IgxSelectComponent]({environment:angularApiUrl}/classes/igxselectcomponent.html)  
-* [IgxSelectItemComponent]({environment:angularApiUrl}/classes/igxselectitemcomponent.html)  
-* [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html)  
-* [IgxDropDownItemComponent]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html)  
-* [OverlaySettings]({environment:angularApiUrl}/interfaces/overlaysettings.html)  
-* [ConnectedPositioningStrategy]({environment:angularApiUrl}/classes/connectedpositioningstrategy.html)  
-* [GlobalPositionStrategy]({environment:angularApiUrl}/classes/globalpositionstrategy.html#constructor)  
-* [SelectPositioningStrategy]({environment:angularApiUrl}/classes/selectpositioningstrategy.html)  
-* [AbsoluteScrollStrategy]({environment:angularApiUrl}/classes/absolutescrollstrategy.html)  
-* [PositionSettings]({environment:angularApiUrl}/interfaces/positionsettings.html)
+## API Reference 
+[**IgxSelectComponent**](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/classes/igxselectcomponent.html)  
+[**IgxSelectItemComponent**](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/classes/igxselectitemcomponent.html)  
+[**IgxDropDownComponent**](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/classes/igxdropdowncomponent.html)  
+[**IgxDropDownItemComponent**](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/classes/igxdropdownitemcomponent.html)  
+[**OverlaySettings**](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/interfaces/overlaysettings.html)  
+[**ConnectedPositioningStrategy**](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/classes/connectedpositioningstrategy.html)  
+[**GlobalPositionStrategy**](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/classes/globalpositionstrategy.html#constructor)  
+[**AbsoluteScrollStrategy**](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/classes/absolutescrollstrategy.html)  
+[**PositionSettings**](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/interfaces/positionsettings.html)
 
 ## Additional Resources
-* [IgxSelect Specification](https://github.com/IgniteUI/igniteui-angular/wiki/IgxSelect-Specification#31-keyboard-navigation)  
-* [Angular Select](https://material.angular.io/components/select/overview)  
-* [NgModel](https://angular.io/api/forms/NgModel)  
-* [ViewChild](https://angular.io/api/core/ViewChild)
+[**NgModel**](https://angular.io/api/forms/NgModel)  
+[**ViewChild**](https://angular.io/api/core/ViewChild)  
+[**ngForOf**](https://angular.io/api/common/NgForOf)
+
+Our community is active and always welcoming to new ideas.
+
+* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
