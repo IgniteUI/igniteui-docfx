@@ -13,7 +13,7 @@ The overlay service is fully integrated in the toggle directive.
 
 ## Getting Started
 
-To use the [`IgxOverlayService`]({environment:angularApiUrl}/classes/igxoverlayservice.html) it needs to be imported in the component. `Inject` a reference to it in the component's [`constructor`]({environment:angularApiUrl}/classes/igxoverlayservice.html#constructor):
+To use the [`IgxOverlayService`]({environment:angularApiUrl}/classes/igxoverlayservice.html) it needs to be imported in the component. `Inject` a reference to it in the component's constructor:
 ```typescript
 
 import { Inject } from '@angular/core'
@@ -109,7 +109,7 @@ The first parameter in both overloads is mandatory and represents the content th
 <div class="divider--half"></div>
 
 ### Demo - Dynamic attach - Component
-In the below demo, we can pass the IgxCard [demo](https://www.infragistics.com/products/ignite-ui-angular/angular/components/card.html#card-demo) through the overlay service [`attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) method to optain an ID. Then we call [`show()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#show) method with provided ID to dynamically attach the card to the DOM in a modal container.
+In the below demo, we can pass the [IgxCard](https://www.infragistics.com/products/ignite-ui-angular/angular/components/card.html#card-demo) through the overlay service [`attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) method to optain an ID. Then we call [`show()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#show) method with provided ID to dynamically attach the card to the DOM in a modal container.
 
 
 <div class="sample-container loading" style="height: 400px">
@@ -122,9 +122,9 @@ In the below demo, we can pass the IgxCard [demo](https://www.infragistics.com/p
 
 ### Configuring overlay settings
 
-The overlay service [`attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#atach) method also accepts an object of the [`OverlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) type which configures the way the content is shown. If no such object is provided, the Overlay service will use its default settings to render the passed content.
+The overlay service [`attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) method also accepts an object of the [`OverlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) type which configures the way the content is shown. If no such object is provided, the Overlay service will use its default settings to render the passed content.
 
-For example, if we want the content to be positioned relative to an element, we can pass a different [`positioningStrategy`]({environment:angularApiUrl}/interfaces/overlaysettings.html#positionstrategy) for the overlay's [`attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#atach) method, e.g. [`ConnectedPositioningStrategy`]({environment:angularApiUrl}/classes/connectedpositioningstrategy.html). In order to configure how the component is shown, we need to first create an [`OverlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) object:
+For example, if we want the content to be positioned relative to an element, we can pass a different [`positioningStrategy`]({environment:angularApiUrl}/interfaces/overlaysettings.html#positionstrategy) for the overlay's [`attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) method, e.g. [`ConnectedPositioningStrategy`]({environment:angularApiUrl}/classes/connectedpositioningstrategy.html). In order to configure how the component is shown, we need to first create an [`OverlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) object:
 ```typescript
 // in my-overlay-component.component.ts
 // add an import for the definion of ConnectedPositioningStategy class
@@ -265,7 +265,7 @@ export class ExampleComponent {
             modal: true,
             closeOnOutsideClick: false
         }
-        this.toggleDirective.toggle(true, overlaySettings)
+        this.toggleDirective.toggle(overlaySettings)
     }
 }
 ```
