@@ -26,7 +26,7 @@ Label および Input ディレクティブのデフォルト スタイル設定
 > [!NOTE]
 > [`igxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html) および `igxLabel` を使用するには、`<igx-input-group>` コンテナーにラップする必要があります。
 
-Ignite UI for Angular Label および Input を初期化する前に、[`IgxInputGroupModule`]({environment:angularApiUrl}/classes/igxinputgroupmodule.html) を **app.module.ts** ファイルにインポートします。
+Ignite UI for Angular Label および Input を初期化する前に、`IgxInputGroupModule` を **app.module.ts** ファイルにインポートします。
 
 ```typescript
 // app.module.ts

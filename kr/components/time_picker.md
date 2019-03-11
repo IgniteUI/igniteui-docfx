@@ -19,7 +19,7 @@ _language: kr---
 
 ### Usage
 
-To get started with the Ignite UI for Angular Time Picker, let's first import the [`IgxTimePickerModule`]({environment:angularApiUrl}/classes/igxtimepickermodule.html) in the **app.module.ts** file. Note that the IgxTimePicker is also dependent on the **BrowserAnimationsModule**, so it needs to be added to the AppModule as well:
+To get started with the Ignite UI for Angular Time Picker, let's first import the `IgxTimePickerModule` in the **app.module.ts** file. Note that the IgxTimePicker is also dependent on the **BrowserAnimationsModule**, so it needs to be added to the AppModule as well:
 
 ```typescript
 // app.module.ts
@@ -154,7 +154,7 @@ And there we have it:
 
 #### Dropdown mode
 
-When you add the time picker to your project, its default mode is read-only dialog mode. To change the time picker mode to editable dropdown mode, set the [`mode`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#mode) input to `dropdown`:
+When you add the time picker to your project, its default mode is read-only dialog mode. To change the time picker mode to editable dropdown mode, set the [`mode`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#mode) input to [`dropdown`]({environment:angularApiUrl}/enums/interactionmode.html#dropdown):
 
 ```typescript
 // timePickerDropdown.component.ts

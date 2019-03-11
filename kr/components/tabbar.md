@@ -11,7 +11,7 @@ _language: kr
 <div class="divider"></div>
 
 > [!NOTE]
-> `igx-tab-bar` selector is deprecated. You could use [`igx-bottom-nav`]({environment:angularApiUrl}/classes/igxbottomnavcomponent.html) instead. `IgxTabBarComponent` class is renamed to [`IgxBottomNavComponent`]({environment:angularApiUrl}/classes/igxbottomnavcomponent.html). `IgxTabBarModule` is renamed to [`IgxBottomNavModule`]({environment:angularApiUrl}/classes/igxbottomnavmodule.html).
+> `igx-tab-bar` selector is deprecated. You could use [`igx-bottom-nav`]({environment:angularApiUrl}/classes/igxbottomnavcomponent.html) instead. `IgxTabBarComponent` class is renamed to [`IgxBottomNavComponent`]({environment:angularApiUrl}/classes/igxbottomnavcomponent.html). `IgxTabBarModule` is renamed to `IgxBottomNavModule`.
 
 ### Bottom Navigation Demo
 
@@ -28,7 +28,7 @@ _language: kr
 
 ### Usage
 
-To get started with the control, let's first import the [`IgxBottomNavModule`]({environment:angularApiUrl}/classes/igxbottomnavmodule.html) in the **app.module.ts** file:
+To get started with the control, let's first import the `IgxBottomNavModule` in the **app.module.ts** file:
 
 ```typescript
 // app.module.ts

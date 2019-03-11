@@ -22,7 +22,7 @@ The [`igx-tabs`]({environment:angularApiUrl}/classes/igxtabscomponent.html) comp
 
 ### Usage
 
-To get started with the Ignite UI for Angular Tabs component, let's first import the [`IgxTabsModule`]({environment:angularApiUrl}/classes/igxtabsmodule.html) in the **app.module.ts** file.
+To get started with the Ignite UI for Angular Tabs component, let's first import the `IgxTabsModule` in the **app.module.ts** file.
 
 ```typescript
 // app.module.ts

@@ -23,7 +23,7 @@ By applying [`igxMask`]({environment:angularApiUrl}/classes/igxmaskdirective.htm
 
 ### Usage
 [`igxMask`]({environment:angularApiUrl}/classes/igxmaskdirective.html) directive is used on an input of type **text**.
-To get started with the Ignite UI for Angular Mask directive, let's first import the [`IgxMaskModule`]({environment:angularApiUrl}/classes/igxmaskmodule.html) and [`IgxInputGroupModule`]({environment:angularApiUrl}/classes/igxinputgroupmodule.html) in our **app.module.ts** file.
+To get started with the Ignite UI for Angular Mask directive, let's first import the `IgxMaskModule` and [`IgxInputGroupModule`]({environment:angularApiUrl}/classes/igxinputgroupmodule.html) in our **app.module.ts** file.
 
 ```typescript
 // app.module.ts
@@ -214,7 +214,7 @@ export class Person {
 ```
 
 #### Apply additional formatting on focus and blur
-In addition to the default mask behavior, the user can implement his own custom pipes and take advantage of the [`focusedValuePipe`]({environment:angularApiUrl}/classes/igxmaskdirective.html#focusedValuePipe) and [`displayValuePipe`]({environment:angularApiUrl}/classes/igxmaskdirective.html#displayValuePipe) input properties, to transform the value to a desired output when the input gets or loses focus. This will not affect the underlying model value. Let's demonstrate how this can be achieved!
+In addition to the default mask behavior, the user can implement his own custom pipes and take advantage of the [`focusedValuePipe`]({environment:angularApiUrl}/classes/igxmaskdirective.html#focusedvaluepipe) and [`displayValuePipe`]({environment:angularApiUrl}/classes/igxmaskdirective.html#displayvaluepipe) input properties, to transform the value to a desired output when the input gets or loses focus. This will not affect the underlying model value. Let's demonstrate how this can be achieved!
 
 Implement two pipes that will append/remove a '%' sign at the end of the displayed value:
 ```typescript
@@ -241,7 +241,7 @@ export class InputFormatPipe implements PipeTransform {
 }
 ```
 
-Pass an instance of each pipe to the [`focusedValuePipe`]({environment:angularApiUrl}/classes/igxmaskdirective.html#focusedValuePipe) and [`displayValuePipe`]({environment:angularApiUrl}/classes/igxmaskdirective.html#displayValuePipe) input properties as follows:
+Pass an instance of each pipe to the [`focusedValuePipe`]({environment:angularApiUrl}/classes/igxmaskdirective.html#focusedvaluepipe) and [`displayValuePipe`]({environment:angularApiUrl}/classes/igxmaskdirective.html#displayvaluepipe) input properties as follows:
 
 ```typescript
 value = 1230;

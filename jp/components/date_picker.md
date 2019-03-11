@@ -22,7 +22,7 @@ _language: ja
 > Ignite UI for Angular コンポーネントをプロジェクトに追加する前に、すべての必要な依存関係を構成し、プロジェクトのセットアップが正しく完了したことを確認してください。「[**インストール**](https://jp.infragistics.com/products/ignite-ui-angular/getting-started#installation)」のトピックで手順を参照できます。
 
 ### 使用方法
-[`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) を使用してカレンダーから日付を選択できます。ピッカーは内部で [`IgxCalendarComponent`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) をカレンダーとして使用します。Ignite UI for Angular Date Picker を初期化する前に、[**IgxDatePickerModule**]({environment:angularApiUrl}/classes/igxdatepickermodule.html) を **app.module.ts** ファイルにインポートします。
+[`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) を使用してカレンダーから日付を選択できます。ピッカーは内部で [`IgxCalendarComponent`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) をカレンダーとして使用します。Ignite UI for Angular Date Picker を初期化する前に、`IgxDatePickerModule` を **app.module.ts** ファイルにインポートします。
 
 ```typescript
 // app.module.ts
@@ -170,8 +170,8 @@ The editable date picker provides the following outputs to handle entering of di
 
 | Output | Arguments | 説明 | 
 | ------------- |:-------------:|:-------------:|
-| [ | `IDatePickerDisabledDateEventArgs` | デートピッカーでユーザーが無効な日付を入力またはスピンした場合に発生します。 |
-| [`onValidationFailed`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#onvalidationfailed) | `IDatePickerValidationFailedEventArgs` | デートピッカーでユーザー無効なな日付を入力またはスピンした場合に発生します。 |
+|[`onDisabledDate`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#ondisableddate) | [`IDatePickerDisabledDateEventArgs`]({environment:angularApiUrl}/interfaces/idatepickerdisableddateeventargs.html) | デートピッカーでユーザーが無効な日付を入力またはスピンした場合に発生します。 |
+| [`onValidationFailed`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#onvalidationfailed) | [`IDatePickerValidationFailedEventArgs`]({environment:angularApiUrl}/interfaces/idatepickervalidationfailedeventargs.html) | デートピッカーでユーザー無効なな日付を入力またはスピンした場合に発生します。 |
 
 ##### キーボード ナビゲーション
 * デートピッカー ドロップダウンを開く: 

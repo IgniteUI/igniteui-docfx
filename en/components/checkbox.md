@@ -20,7 +20,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ### Usage
 At its core, the checkbox component allows for a choice between selected/unselected state. The default styling is done according to the selection controls specification as per the Material Design guidelines.
 
-To get started with the Ignite UI for Angular Checkbox import the [`IgxCheckboxModule`]({environment:angularApiUrl}/classes/igxcheckboxmodule.html) in the **app.module.ts** file:
+To get started with the Ignite UI for Angular Checkbox import the `IgxCheckboxModule` in the **app.module.ts** file:
 
 ```typescript
 // app.module.ts

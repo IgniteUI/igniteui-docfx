@@ -23,7 +23,7 @@ _language: kr
 
 ### Usage
 
-To get started with the Ignite UI for Angular Avatar, let's first import the [`IgxAvatarModule`]({environment:angularApiUrl}/classes/igxavatarmodule.html) in the **app.module.ts** file:
+To get started with the Ignite UI for Angular Avatar, let's first import the `IgxAvatarModule` in the **app.module.ts** file:
 
 ```typescript
 // app.module.ts

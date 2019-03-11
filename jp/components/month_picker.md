@@ -19,7 +19,7 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 > Ignite UI for Angular コンポーネント、をプロジェクトに追加する前に、必要なすべての依存関係を構成し、プロジェクトのセットアップが正しく完了したことを確認してください。[**インストール**](https://jp.infragistics.com/products/ignite-ui-angular/getting-started#installation)のトピックで手順を確認できます。
 
 ### 使用方法
-**Ignite UI for Angular Month Picker** を初期化する前に、[**IgxCalendarModule**]({environment:angularApiUrl}/classes/igxcalendarmodule.html) をアプリケーションの AppModule (**app.module.ts** ファイル) にインポートします。注: [**IgxCalendar**]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) に [**IgxCalendar**]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) の依存関係があるため、AppModule にも追加する必要があります。
+**Ignite UI for Angular Month Picker** を初期化する前に、`IgxCalendarModule` をアプリケーションの AppModule (**app.module.ts** ファイル) にインポートします。注: [**IgxCalendar**]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) に [**IgxCalendar**]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) の依存関係があるため、AppModule にも追加する必要があります。
 
 ```typescript
 // app.module.ts
@@ -56,7 +56,7 @@ import { IgxMonthPickerComponent } from "igniteui-angular";
 ```
 
 #### 日付の設定
-[`IgxMonthPickerComponent`]({environment:angularApiUrl}/classes/igxmonthpickercomponent.html) に日付を設定するには、[`value`]({environment:angularApiUrl}/classes/igxmonthpickercomponent.html#value) 入力を設定します。
+[`IgxMonthPickerComponent`]({environment:angularApiUrl}/classes/igxmonthpickercomponent.html) に日付を設定するには、[`value`]({environment:angularApiUrl}/classes/igxcalendarbase.html#value) 入力を設定します。
 
 ```typescript
 // month-picker-sample.component.ts
@@ -79,7 +79,7 @@ Two-way データ バインディングを作成するには、以下のよう�
 ```
 
 #### 書式設定
-`formatViews` と `formatOptions` 入力を使用してマンスピッカーの表示形式を変更します。
+`formatViews` と [`formatOptions`]({environment:angularApiUrl}/classes/igxcalendarbase.html#formatoptions) 入力を使用してマンスピッカーの表示形式を変更します。
 
 ```html
 <!-- month-picker-sample.component.html -->
@@ -106,7 +106,7 @@ public numericFormatOptions = {
 </div>
 
 #### ローカライズ
-`locale` 入力を使用してマンスピッカーのローカライズをカスタマイズします。
+[`locale`]({environment:angularApiUrl}/classes/igxcalendarbase.html#locale) 入力を使用してマンスピッカーのローカライズをカスタマイズします。
 
 ```html
 <!-- month-picker-sample.component.html -->
