@@ -95,6 +95,8 @@ public items: string[] = ["Orange", "Apple", "Banana", "Mango"];
 - 無効な項目は選択できません。
 - 選択オプションが削除されると選択も削除されます。
 - 重複する値を持つ項目がある場合、最初の項目が選択されます。
+
+[!NOTE]
 > `Igx-select` は項目のみの単一選択をサポートします。
 
 ### イベント発生
@@ -167,7 +169,7 @@ export class MyClass {
     }
     /* --- */
     private handleClosing(event: CancelableEventArgs): void {
-        // Cancel the closing event
+        // cancel the closing event
         event.cancel = true;
     }
     /* --- */
@@ -362,7 +364,6 @@ export class MyClass implements OnInit {
 - `open` 関数で引数として、同様にテンプレートへカスタム設定を渡した場合、`open` 関数の引数を使用します。ただし、`onOpening` または `onOpened` などのインターナル イベントにバインドした場合は、`igx-select` はテンプレートの設定を使用します。
 
 ## API リファレンス
-[**IgxSelectModule**](https://jp.infragistics.com/products/ignite-ui-angular/docs/typescript/classes/igxselectmodule.html)  
 [**IgxSelectComponent**](https://jp.infragistics.com/products/ignite-ui-angular/docs/typescript/classes/igxselectcomponent.html)  
 [**IgxSelectItemComponent**](https://jp.infragistics.com/products/ignite-ui-angular/docs/typescript/classes/igxselectitemcomponent.html)  
 [**IgxDropDownComponent**](https://jp.infragistics.com/products/ignite-ui-angular/docs/typescript/classes/igxdropdowncomponent.html)  
@@ -375,7 +376,7 @@ export class MyClass implements OnInit {
 [**PositionSettings**](https://jp.infragistics.com/products/ignite-ui-angular/docs/typescript/interfaces/positionsettings.html)
 
 ## その他のリソース
-[**IgxSelect Specification**](https://github.com/IgniteUI/igniteui-angular/wiki/IgxSelect-Specification#31-keyboard-navigation)  
 [**Angular Select**](https://material.angular.io/components/select/overview)  
 [**NgModel**](https://angular.io/api/forms/NgModel)  
 [**ViewChild**](https://angular.io/api/core/ViewChild)
+[**ngForOf**](https://angular.io/api/common/NgForOf)
