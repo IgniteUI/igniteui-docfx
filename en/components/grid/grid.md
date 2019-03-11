@@ -409,7 +409,7 @@ Keyboard navigation is available by default in any grid and aims at covering as 
 This sample demonstrates the `igxGrid` bound to live data. 
 
 <div class="sample-container loading" style="height:915px">
-    <iframe id="grid-sample-finjs-iframe" src='{environment:demosBaseUrl}/finjs-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="grid-sample-finjs-iframe" data-src='{environment:demosBaseUrl}/finjs-sample' width="100%" height="100%" seamless="" frameborder="0" class="lazyload"></iframe>
 </div>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-finjs-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
