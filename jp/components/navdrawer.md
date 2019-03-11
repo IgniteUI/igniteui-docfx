@@ -115,7 +115,7 @@ Navigation Drawer は [`igxNavigationService`]({environment:angularApiUrl}/class
 
 ```html
 <main>
-  <span igxButton="icon" igxToggleAction="navigation" [closeOnOutsideClick]="false">
+  <span igxButton="icon" igxToggleAction="navigation">
     <igx-icon fontSet="material">menu</igx-icon>
   </span>
 </main>

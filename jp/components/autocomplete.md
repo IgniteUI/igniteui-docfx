@@ -227,9 +227,9 @@ export class AutocompleteSampleComponent {
 ```
 
 ### オートコンプリートをリモートデータにバインド
-The following sample demonstrates an `igxAutocomplete` with a drop-down bound to a remote service. In order to limit requests to the service and improve performance, RxJS `debounce` is used and requests are made `250ms` after the input has stopped.
+以下は、リモートサービスにバインドされたドロップダウンと `igxAutocomplete` のサンプルです。サービスの要求を制限してパフォーマンスを向上するために、RxJS `debounce` を使用して入力が終わった後に`250ms` で要求します。 
 
-For the purpose of the sample there is a delay in the data loading, in order to apply and show a custom loading template instead of the drop-down:
+サンプルではデータ読み込みで遅延があり、ドロップダウンの代わりにカスタム読み込みテンプレートを適用しています。
 <div class="sample-container loading" style="height: 400px;">
     <iframe id="autocomplete-remote-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/data-entries/autocomplete-remote" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
