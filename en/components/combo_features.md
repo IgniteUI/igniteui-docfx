@@ -22,7 +22,7 @@ The following demo demonstrates some of the combo features that are enabled/disa
 <div class="divider--half"></div>
 
 ### Usage
-To get started with the Ignite UI for Angular Combo import the `IgxComboModule` in the **app.module.ts** file. For the following sample the [igx-switch](swtich.md) component is used and in addition we will need the `IgxSwitchModule` also:
+To get started with the Ignite UI for Angular Combo import the `IgxComboModule` in the **app.module.ts** file. For the following sample the [igx-switch](switch.md) component is used and in addition we will need the `IgxSwitchModule` also:
 
 ```typescript
 // app.module.ts
