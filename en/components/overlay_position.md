@@ -21,7 +21,7 @@ Position strategies determine where to display the component in the provided Igx
     | new Point(0, 0) | HorizontalAlignment.Right | VerticalAlignment.Bottom | HorizontalAlignment.Left | VerticalAlignment.Bottom |
 <div class="divider"></div>
 
-3. **Auto** - Positions the element as in **Connected** positioning strategy and re-positions the element in the view port (calculating a different start point) in case the element is partially out of view. Defaults to:
+3. **Auto** - Positions the element as in **Connected** positioning strategy and re-positions the element in the view port (calculating a different start point and direction) in case the element is partially out of view. Defaults to:
 
     | target          | horizontalDirection       |  verticalDirection       | horizontalStartPoint     | verticalStartPoint       |
     |:----------------|:--------------------------|:-------------------------|:-------------------------|:-------------------------|
@@ -31,7 +31,7 @@ Position strategies determine where to display the component in the provided Igx
 > [!NOTE]
 > Will not try to reposition the element if the strategy is using  HorizontalDirection = Center / VerticalDirection = Middle.
 
-4. **Elastic** - Positions the element as in **Connected** positioning strategy and re-sizes the element to fit inside of the view port (re-calculating width and/or height) in case the element is partially out of view. `minSize :{ width: number, height: number}` can be passed in `positionSettings` to prevent resizing if it would put the element dimensions below a certain threshold. Defaults to:
+4. **Elastic** - Positions the element as in **Connected** positioning strategy and re-sizes the element to fit inside of the view port (re-calculating width and/or height) in case the element is partially out of view. [`minSize`]({environment:angularApiUrl}/interfaces/positionsettings.html#minsize) can be passed in [`positionSettings`]({environment:angularApiUrl}/interfaces/positionsettings.html) to prevent resizing if it would put the element dimensions below a certain threshold. Defaults to:
 
     | target          | horizontalDirection       |  verticalDirection       | horizontalStartPoint     | verticalStartPoint       | minSize               |
     |:----------------|:--------------------------|:-------------------------|:-------------------------|:-------------------------|-----------------------|
@@ -39,7 +39,7 @@ Position strategies determine where to display the component in the provided Igx
 <div class="divider"></div>
 
 > [!NOTE]
-> Will not try to reposition the element if the strategy is using  HorizontalDirection = Center / VerticalDirection = Middle.
+> Will not try to resize the element if the strategy is using  HorizontalDirection = Center / VerticalDirection = Middle.
 > [!NOTE]
 > The overlay element **will be** resized, but the positioning strategy **does not** handle `overflow`. For example, if the element needs to have `overflow-y` when resized, incorporate the appropriate style to provide that. 
 
@@ -109,7 +109,7 @@ import {AutoPositionStrategy, GlobalPositionStrategy, ConnectedPositioningStrate
 ### Horizontal and Vertical Direction
 Changing the horizontal and/or vertical direction of the positioning settings determined where the content will align itself. Depending on the positioning strategy chosen, the content will either align relative to the target's container ([`AutoPositionStrategy`]({environment:angularApiUrl}/classes/autopositionstrategy.html), [`ElasticPositionStrategy`]({environment:angularApiUrl}/classes/elasticpositionstrategy.html) and [`ConnectedPositioningStrategy`]({environment:angularApiUrl}/classes/connectedpositioningstrategy.html)) or the body of the document [`GlobalPositioningStrategy`]({environment:angularApiUrl}/classes/globalpositionstrategy.html)
 
-<div class="sample-container loading" style="height: 400px">
+<div class="sample-container loading" style="height: 500px">
     <iframe id="overlay-position-sample-1-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/interactions/overlay-position-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -152,6 +152,6 @@ In the demo below, the overlay element will position itself starting from the ta
 <div class="divider"></div>
 
 
-## API
+## API References
 
-* [`IPositionStrategy`]({environment:angularApiUrl}/interfaces/ipositionstrategy.html)
+* [IPositionStrategy]({environment:angularApiUrl}/interfaces/ipositionstrategy.html)

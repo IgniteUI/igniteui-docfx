@@ -20,7 +20,7 @@ _language: ja
 
 ### 使用方法
 
-Ignite UI for Angular Time Picker を初期化する前に、[`IgxTimePickerModule`]({environment:angularApiUrl}/classes/igxtimepickermodule.html) を **app.module.ts** ファイルにインポートします。注: IgxTimePicker に **BrowserAnimationsModule** の依存関係があるため、AppModule にも追加する必要があります。
+Ignite UI for Angular Time Picker を初期化する前に、`IgxTimePickerModule` を **app.module.ts** ファイルにインポートします。注: IgxTimePicker に **BrowserAnimationsModule** の依存関係があるため、AppModule にも追加する必要があります。
 
 ```typescript
 // app.module.ts
@@ -158,15 +158,15 @@ public onValidationFailed(timepicker){
 
 #### ドロップダウン モード
 
-タイムピッカーをプロジェクトに追加する際にデフォルト (ダイアログ) モードに設定します。ドロップダウン モードをアクティベイトするために enum [`TimePickerInteractionMode`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#TimePickerInteractionMode) を含む必要がありなす。
+タイムピッカーをプロジェクトに追加する際にデフォルト (ダイアログ) モードに設定します。ドロップダウン モードをアクティベイトするために enum [`InteractionMode`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#InteractionMode) を含む必要がありなす。
 
 ```typescript
 // timePickerDropdown.component.ts
 
-import { TimePickerInteractionMode } from 'igniteui-angular';
+import { InteractionMode } from 'igniteui-angular';
 ...
 
-public mode: TimePickerInteractionMode = TimePickerInteractionMode.dropdown;
+public mode = InteractionMode.DropDown;
 ```
 
 ```html

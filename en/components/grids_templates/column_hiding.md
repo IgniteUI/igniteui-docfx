@@ -233,7 +233,7 @@ You can see the result of the code from above at the beginning of this article i
 @@if (igxName !== 'IgxHierarchicalGrid') {
 ### Custom Column Hiding UI
 
-Let's say we want to manually define our [`IgxColumnHidingComponent`]({environment:angularApiUrl}/classes/igxcolumnhidingcomponent.html) and put it anywhere we want on our page. This can be easily done by simply creating an instance of the component in our markup. In order to do this, let's first grab the [`IgxColumnHidingModule`]({environment:angularApiUrl}/classes/igxcolumnhidingmodule.html).
+Let's say we want to manually define our [`IgxColumnHidingComponent`]({environment:angularApiUrl}/classes/igxcolumnhidingcomponent.html) and put it anywhere we want on our page. This can be easily done by simply creating an instance of the component in our markup. In order to do this, let's first grab the `IgxColumnHidingModule`.
 
 ```typescript
 // app.module.ts
@@ -492,7 +492,7 @@ Styles:
 * [Column Pinning](column_pinning.md)
 * [Column Resizing](column_resizing.md)
 * [Selection](selection.md)
-* [Searching](search.md)
+@@if (igxName !== 'IgxHierarchicalGrid') {* [Searching](search.md)}
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.

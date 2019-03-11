@@ -15,9 +15,9 @@ Scroll strategies determines how the scrolling will be handled in the provided I
 ## Usage
 
 Every scroll strategy has the following method used to :
- - [`initialize`] ({environment:angularApiUrl}/classes/iscrollstrategy.html#initialize) - initializes the scroll strategy. It needs a reference to the document, overlay service and the id of the component rendered
- - [`attach`] ({environment:angularApiUrl}/classes/iscrollstrategy.html#attach) - attaches the scroll strategy to the specified element or to the document
- - [`detach`] ({environment:angularApiUrl}/classes/iscrollstrategy.html#detach) - detaches the scroll strategy
+ - [`initialize`] ({environment:angularApiUrl}/interfaces/iscrollstrategy.html#initialize) - initializes the scroll strategy. It needs a reference to the document, overlay service and the id of the component rendered
+ - [`attach`] ({environment:angularApiUrl}/interfaces/iscrollstrategy.html#attach) - attaches the scroll strategy to the specified element or to the document
+ - [`detach`] ({environment:angularApiUrl}/interfaces/iscrollstrategy.html#detach) - detaches the scroll strategy
 
 ```typescript
 this.scrollStrategy.initialize(document, overlayService, id);
@@ -40,7 +40,7 @@ The position strategy is passed as a property in the [`overlaySettings`] ({envir
 ``` 
 <div class="divider"></div>
 
-To change the scroll strategy used by the overlay, override the [`scrollStrategy`] ({environment:angularApiUrl}/classes/iscrollstrategy.html) property of the [`overlaySettings`] ({environment:angularApiUrl}/interfaces/overlaysettings.html) object passed to the overlay:
+To change the scroll strategy used by the overlay, override the [`scrollStrategy`] ({environment:angularApiUrl}/interfaces/iscrollstrategy.html) property of the [`overlaySettings`] ({environment:angularApiUrl}/interfaces/overlaysettings.html) object passed to the overlay:
 ```typescript
     // overlaySettings is an existing object of type OverlaySettings
     // to override the scroll strategy
@@ -64,7 +64,7 @@ import { NoOpScrollStrategy } from "./scroll/NoOpScrollStrategy";
 ## Demos 
 #### Scroll Strategies
 The scroll strategies can be passed through the [`overlaySettings`] ({environment:angularApiUrl}/interfaces/overlaysettings.html) object in order to determine how the overlay should handle scrolling.
-The demo below illustrates the difference between the separate [`scrollStrategies`] ({environment:angularApiUrl}/classes/iscrollstrategy.html):
+The demo below illustrates the difference between the separate [`scrollStrategies`] ({environment:angularApiUrl}/interfaces/iscrollstrategy.html):
 <div class="sample-container loading" style="height: 400px">
     <iframe id="overlay-scroll-sample-2-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/interactions/overlay-scroll-sample-2" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -86,6 +86,6 @@ If the [`modal`] ({environment:angularApiUrl}/interfaces/overlaysettings.html#mo
 </div>
 <div class="divider--half"></div>
 
-## API
+## API References
 
-* [`IScrollStrategy`] ({environment:angularApiUrl}/classes/iscrollstrategy.html)
+* [IScrollStrategy] ({environment:angularApiUrl}/interfaces/iscrollstrategy.html)

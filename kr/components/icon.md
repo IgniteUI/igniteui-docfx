@@ -23,7 +23,7 @@ _language: kr
 
 ### Dependencies
 
-The Icon component is exported as an `NgModule`, thus all you need to do in your application is to import the [`IgxIconModule`]({environment:angularApiUrl}/classes/igxiconmodule.html) inside your `AppModule`:
+The Icon component is exported as an `NgModule`, thus all you need to do in your application is to import the `IgxIconModule` inside your `AppModule`:
 
 ```typescript
 // app.module.ts

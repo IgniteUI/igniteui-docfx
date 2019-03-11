@@ -42,6 +42,7 @@ public items: string[] = ["Orange", "Apple", "Banana", "Mango"];
 Then in your template you need to bind it with said items like so:
 ```html
 <igx-select>
+    <label igxLabel>Simple Select</label>
     <igx-select-item *ngFor="let item of items" [value]="item">
         {{item}}
     </igx-select-item>
@@ -227,6 +228,7 @@ You would notice that now we pass in objects that have certain properties, such 
 Then in your template file you can iterate over these objects and access their properties accordingly:
 ```html
 <igx-select>
+    <label igxLabel>Select With Groups</label>
     <igx-select-item-group *ngFor="let item of items" [label]="item.type">
         <igx-select-item *ngFor="let fruit of item.fruits" 
         [value]="fruit">
@@ -290,6 +292,7 @@ With `igx-select` you are not bound to use any of the [*OverlaySettings*](https:
 To do this you first define your template like so:
 ```html
 <igx-select [overlaySettings]="customOverlaySettings">
+    <label igxLabel>Select An Item</label>
     <igx-select-item *ngFor="let item of items">
         {{item}}
     </igx-select-item>
@@ -361,20 +364,20 @@ export class MyClass implements OnInit {
 - We should mention that if you pass the custom settings both as an argument in the `open` function as well as into the template, `igx-select` will use the ones provided *in the `open` function*. However, if you bind the settings to an internal event, such as `onOpening` or `onOpened` then `igx-select` will use the settings that are provided in the template.
 
 ## API Reference
-[**IgxSelectModule**](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/classes/igxselectmodule.html)  
-[**IgxSelectComponent**](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/classes/igxselectcomponent.html)  
-[**IgxSelectItemComponent**](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/classes/igxselectitemcomponent.html)  
-[**IgxDropDownComponent**](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/classes/igxdropdowncomponent.html)  
-[**IgxDropDownItemComponent**](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/classes/igxdropdownitemcomponent.html)  
-[**OverlaySettings**](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/interfaces/overlaysettings.html)  
-[**ConnectedPositioningStrategy**](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/classes/connectedpositioningstrategy.html)  
-[**GlobalPositionStrategy**](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/classes/globalpositionstrategy.html#constructor)  
-[**SelectPositioningStrategy**](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/classes/selectpositioningstrategy.html)  
-[**AbsoluteScrollStrategy**](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/classes/absolutescrollstrategy.html)  
-[**PositionSettings**](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/interfaces/positionsettings.html)
+* [IgxSelectModule]({environment:angularApiUrl}/classes/igxselectmodule.html)
+* [IgxSelectComponent]({environment:angularApiUrl}/classes/igxselectcomponent.html)  
+* [IgxSelectItemComponent]({environment:angularApiUrl}/classes/igxselectitemcomponent.html)  
+* [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html)  
+* [IgxDropDownItemComponent]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html)  
+* [OverlaySettings]({environment:angularApiUrl}/interfaces/overlaysettings.html)  
+* [ConnectedPositioningStrategy]({environment:angularApiUrl}/classes/connectedpositioningstrategy.html)  
+* [GlobalPositionStrategy]({environment:angularApiUrl}/classes/globalpositionstrategy.html#constructor)  
+* [SelectPositioningStrategy]({environment:angularApiUrl}/classes/selectpositioningstrategy.html)  
+* [AbsoluteScrollStrategy]({environment:angularApiUrl}/classes/absolutescrollstrategy.html)  
+* [PositionSettings]({environment:angularApiUrl}/interfaces/positionsettings.html)
 
 ## Additional Resources
-[**IgxSelect Specification**](https://github.com/IgniteUI/igniteui-angular/wiki/IgxSelect-Specification#31-keyboard-navigation)  
-[**Angular Select**](https://material.angular.io/components/select/overview)  
-[**NgModel**](https://angular.io/api/forms/NgModel)  
-[**ViewChild**](https://angular.io/api/core/ViewChild)
+* [IgxSelect Specification](https://github.com/IgniteUI/igniteui-angular/wiki/IgxSelect-Specification#31-keyboard-navigation)  
+* [Angular Select](https://material.angular.io/components/select/overview)  
+* [NgModel](https://angular.io/api/forms/NgModel)  
+* [ViewChild](https://angular.io/api/core/ViewChild)

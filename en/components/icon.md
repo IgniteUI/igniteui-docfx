@@ -22,7 +22,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ### Dependencies
 
-The Icon component is exported as an `NgModule`, thus all you need to do in your application is to import the [`IgxIconModule`]({environment:angularApiUrl}/classes/igxiconmodule.html) inside your `AppModule`:
+The Icon component is exported as an `NgModule`, thus all you need to do in your application is to import the `IgxIconModule` inside your `AppModule`:
 
 ```typescript
 // app.module.ts

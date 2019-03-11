@@ -1,50 +1,92 @@
-﻿---
-title: Grid 行の編集 - ネイティブ Angular | Ignite UI for Angular
+﻿@@if (igxName === 'IgxGrid') {
+---
+title: Grid 行編集 - ネイティブ Angular|Ignite UI for Angular
 _description: 行編集 - グリッド データソースに変更をサブミットする前に行の複数セルを一度に変更することが可能です。新しいトランザクション プロバイダーの保留中の変更を利用できます。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, ネイティブ Angular コンポーネント, Angular Grid, Angular Table, Angular Data Grid コンポーネント, Angular Data Table コンポーネント, Angular Data Grid コントロール, Angular Data Table コントロール, Angular Grid コンポーネント, Angular Table コンポーネント, Angular Grid コントロール, Angular Table コントロール, Angular 高パフォーマンス Grid, Angular 高パフォーマンス Data Table, Data Grid 行編集, Data Table 行編集
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, ネイティブ Angular コンポーネント, Angular Grid, Angular Table, Angular Data Grid コンポーネント, Angular Data Table コンポーネント, Angular Data Grid コントロール, Angular Data Table コントロール, Angular Grid コンポーネント, Angular Table コンポーネント, Angular Grid コントロール, Angular Table コントロール, Angular 高パフォーマンス Grid, Angular High Performance Data Table, Data Grid Row Editing, Data Table Row Editing
 _language: ja
 ---
+}
+@@if (igxName === 'IgxTreeGrid') {
+---
+title: Tree Grid 行編集 - ネイティブ Angular|Ignite UI for Angular
+_description: 行編集 - グリッド データソースに変更をサブミットする前に行の複数セルを一度に変更することが可能です。行編集 - グリッド データソースに変更をサブミットする前に行の複数セルを一度に変更することが可能です。
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, ネイティブ Angular コンポーネント, Angular Tree Grid, Angular Tree Table, Angular Tree Grid コンポーネント, Angular Tree Table コンポーネント, Angular Tree Grid コントロール, Angular Tree Table コントロール, Angular Tree Grid コンポーネント, Angular Tree Table コンポーネント, Angular Tree Grid コントロール, Angular Tree Table コントロール, Angular 高パフォーマンス Tree Grid, Angular 高パフォーマンス Tree Table, Tree Grid Row 編集, Tree Table
+_language: ja
+---
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+---
+title: Hierarchical Grid 行編集 - ネイティブ Angular|Ignite UI for Angular
+_description: 行編集 - グリッド データソースに変更をサブミットする前に行の複数セルを一度に変更することが可能です。新しいトランザクション プロバイダーの保留中の変更を利用できます。
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, ネイティブ Angular コンポーネント,  Angular Hierarchical Grid, Angular Hierarchical  Table, Angular Hierarchical  Grid コンポーネント, Angular Hierarchical Table コントロール, Angular Hierarchical  Grid コンポーネント, Angular Table コンポーネント, Angular Grid コントロール, Angular Hierarchical Table コントロール, Angular 高パフォーマンス Hierarchical  Grid, Angular 高パフォーマンス Hierarchical Table, Hierarchical Grid Row 編集, Hierarchical Table Row 編集
+_language: ja
+---
+}
 
-## グリッド編集
+### @@igComponent 行編集
 
-行編集 - グリッド データソースに変更をサブミットする前に行の複数セルを一度に変更することが可能です。新しいトランザクション プロバイダーの保留中の変更を利用できます。
+行編集 - @@igComponent のデータソースに変更をサブミットする前に行の複数セルを一度に変更することが可能です。新しいトランザクション プロバイダーの保留中の変更を利用できます。
 
 
+#### デモ
 
-### デモ
+以下の手順では、@@igComponent で行編集を有効にする方法を示します。セル値を変更してから同じ行の他のセルをクリックまたはナビゲーションした場合も Done ボタンを使用して確定するまで行値を更新しません。または Cancel ボタンを使用して破棄します。
 
-以下の手順では、グリッドで行編集を有効にする方法を示します。セル値を変更してから同じ行の他のセルをクリックまたはナビゲーションした場合も Done ボタンを使用して確定するまで行値を更新しません。または Cancel ボタンを使用して破棄します。
-
-<div class="sample-container loading" style="height:650px">
-    <iframe id="grid-row-editing-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-row-editing' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+@@if (igxName === 'IgxGrid') {
+<div class="sample-container loading" style="height:550px">
+    <iframe id="grid-row-editing-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-row-editing' width="100%" height="100%" 
+    seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-row-editing-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-row-editing-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
 </div>
+<div class="divider--half"></div>
+}
+@@if (igxName === 'IgxTreeGrid') {
+<div class="sample-container loading" style="height:590px">
+    <iframe id="tree-grid-row-editing-sample-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-row-edit' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-row-editing-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
+</div>
+<div class="divider--half"></div>
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+   <div class="sample-container loading" style="height:510px">
+    <iframe id="hierarchical-grid-row-editing-sample-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-row-editing' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-row-editing-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
+</div>
+<div class="divider--half"></div>
+}
 
 > [!NOTE]
 > 行が編集モードにある場合、他の行のセルをクリックすると Done ボタンが押されたように動作し、前の行の変更をすべての変更をサブミットします。フォーカスのある新しいセルが編集可能かどうか、新しい行が編集モードに入るかどうか、セルが編集できない場合は前の行のみ編集モードを終了します。
 
-<div class="divider--half"></div>
+### 使用方法
 
+`@@igxNameModule` を **app.module.ts** ファイルにインポートします。
 
 ```typescript
 // app.module.ts
 
 ...
-import { IgxGridModule } from 'igniteui-angular';
+import { @@igxNameModule } from 'igniteui-angular';
 
 @NgModule({
     ...
-    imports: [..., IgxGridModule],
+    imports: [..., @@igxNameModule],
     ...
 })
 export class AppModule {}
 ```
 
-データソースにバインドするグリッドを定義をして [`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditable) を true に設定します。
-
+次に @@igComponent をバインドしたデータソースで定義し、[`rowEditable`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#roweditable) を true に設定してバインドします。
+@@if (igxName ==='IgxGrid') {
 ```html
 <div class="sample-wrapper">
     <igx-grid #gridRowEditTransaction [data]="data" [primaryKey]="'ProductID'" width="100%" height="500px"
@@ -62,18 +104,69 @@ export class AppModule {}
     </igx-grid>
 </div>
 ```
+}
+@@if (igxName === 'IgxTreeGrid') {
+```html
+<igx-tree-grid #treeGrid [data]="data" [primaryKey]="EmployeID" [foreignKey]="PID" width ="100%" 
+               height ="500px" [rowEditable]="true" [rowSelectable]="true" [columnHiding]="true">
+    <igx-column *ngFor="let c of columns"
+        [editable] ="c.editable"
+        [field]="c.field"
+        [dataType]="c.dataType"
+        [header]="c.label"
+        [movable]="c.movable"
+        [resizable]="c.resizable"
+        [sortable]="c.sortable"
+        [filterable]="c.filterable">
+    </igx-column>
+</igx-tree-grid>
+```
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+```html
+        <igx-hierarchical-grid #hierarchicalGrid class="hgrid" [data]="localdata" [autoGenerate]="false"
+        [height]="'600px'" [width]="'100%'">
+            <igx-column field="Artist" [editable]="true" [dataType]="'string'"></igx-column>
+            <igx-column field="HasGrammyAward" [editable]="true" [dataType]="'boolean'">
+            </igx-column>
+            <igx-column field="Debut" [editable]="true" [dataType]="'number'"></igx-column>
+            <igx-column field="GrammyNominations" [editable]="true" [dataType]="'number'" [hasSummary]="true"></igx-column>
+            <igx-column field="GrammyAwards" [editable]="true" [dataType]="'number'"
+            [hasSummary]="true"></igx-column>
+            <igx-column width="10%">
+                <ng-template igxCell let-cell="cell">
+                    <button igxButton="icon" (click)="removeRow(cell.cellID.rowIndex)">
+                        <igx-icon>delete</igx-icon>
+                    </button>
+                </ng-template>
+            </igx-column>
+
+        <igx-row-island [key]="'Albums'" #layout1 [autoGenerate]="false">
+            <igx-column field="Album" [editable]="true" [dataType]="'string'"></igx-column>
+            <igx-column field="Launch Date" [editable]="true" [dataType]="'date'"></igx-column>
+            <igx-column field="Billboard Review" [editable]="true" [dataType]="'number'"></igx-column>
+            <igx-column field="US Billboard 200" [editable]="true" [dataType]="'number'"></igx-column>
+            <igx-row-island [key]="'Songs'" [autoGenerate]="false">
+                    <igx-column field="No."></igx-column>
+                    <igx-column field="Title"></igx-column>
+                    <igx-column field="Released"></igx-column>
+                    <igx-column field="Genre"></igx-column>
+            </igx-row-island>
+        </igx-row-island>
+    </igx-hierarchical-grid>
+```
+}
 
 > [!NOTE]
-> 行編集の処理でプライマリキーの設定は必須です。
+> プライマリキーは行編集操作で必須です。
+
 > [!NOTE]
-> 各列の編集を有効にする必要はありません。グリッドで [`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditable) プロパティを使用するとプライマリ行以外 `field` プロパティを定義したすべての行が編集可能になります。特定の列の編集を無効にする場合、[`editable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable) 列の入力を false に設定します。
+> 各列の編集を有効にする必要はありません。@@igComponent で[`rowEditable`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#roweditable) プロパティを使用するとプライマリ行以外 `field` プロパティを定義したすべての行が編集可能になります。特定の列の編集を無効にする場合、[`editable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable) 列の入力を false に設定します。
 
-
+@@if (igxName === 'IgxGrid') {
 ```typescript
-
 import { Component, ViewChild } from "@angular/core";
 import { data } from "./data";
-
 import { IgxGridComponent } from "igniteui-angular";
 
 @Component({
@@ -90,13 +183,72 @@ export class GridRowEditSampleComponent {
         this.data = data;
     }
 }
-
 ```
+}
+
+@@if (igxName === 'IgxTreeGrid') {
+```typescript
+import { Component, OnInit, ViewChild } from "@angular/core";
+import { IgxTreeGridComponent } from "igniteui-angular";
+import { FLAT_DATA } from "./data";
+
+@Component({
+   providers: [],
+    selector: "app-tree-grid-row-editing-sample",
+    styleUrls: ["tree-grid-row-editing-sample.component.scss"],
+    templateUrl: "tree-grid-row-editing-sample.component.html"
+})
+export class TreeGridRowEditSampleComponent implements OnInit {
+
+    public data: any[];
+    public columns: any[];
+
+    @ViewChild("treeGrid") public treeGrid: IgxTreeGridComponent;
+    public ngOnInit(): void {
+        this.data = FLAT_DATA;
+
+        this.columns = [
+            { field: "FirstName", label: "First Name", resizable: true, movable: true, sortable: true, filterable: true, editable: true, dataType: "string" },
+            { field: "LastName", label: "Last Name", resizable: false, movable: false, sortable: false, filterable: false, editable: true, dataType: "string" },
+            { field: "Title", label: "Title", resizable: true, movable: true, sortable: true, filterable: true, editable: true, dataType: "string" },
+            { field: "HireDate", label: "Hire Date", resizable: true, movable: true, sortable: true, filterable: true, editable: true, dataType: "date" }
+        ];
+    }
+}
+```
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+```typescript
+import { Component, OnInit, ViewChild } from "@angular/core";
+import { IgxRowIslandComponent, IgxHierarchicalGridComponent } from "igniteui-angular";
+import { SINGERS } from './data';
+
+@Component({
+    selector: "hierarchical-grid-row-editing",
+    styleUrls: ["./hierarchical-grid-row-editing.component.scss"],
+    templateUrl: "hierarchical-grid-row-editing.component.html"
+})
+
+export class HGridRowEditingSampleComponent implements OnInit {
+    public localdata;
+
+    @ViewChild('layout1')
+    layout1: IgxRowIslandComponent;
+
+    @ViewChild('hierarchicalGrid')
+    hierarchicalGrid: IgxHierarchicalGridComponent;
+
+    constructor() {
+        this.localdata = SINGERS;
+    }
+}
+```
+}
 
 > [!NOTE]
-> グリッドは、保留中のセル変更を保持するプロバイダー [`IgxBaseTransactionService`]({environment:angularApiUrl}/classes/igxbasetransactionservice.html) を行ステートをサブミットまたはキャンセルするまで内部使用します。
+> @@igComponent は、保留中のセル変更を保持するプロバイダー [`IgxBaseTransactionService`]({environment:angularApiUrl}/classes/igxbasetransactionservice.html) を行ステートをサブミットまたはキャンセルするまで内部使用します。
 
-## 配置
+### 配置
 
 - オーバーレイのデフォルトの位置は編集モードで行の下にあります。
      
@@ -104,7 +256,7 @@ export class GridRowEditSampleComponent {
      
 - 一番上または下に表示されると、オーバーレイは閉じられるまでスクロール時にこの位置を保持します。
 
-## 動作
+### 動作
 
 - 行が編集モードの場合、編集が継続します。同じ行のセルがクリックされたかどうか。
 
@@ -114,34 +266,35 @@ export class GridRowEditSampleComponent {
 
 - 行が編集モードにある場合、他の行のセルをクリックすると現在の行編集を終了し、行の新規の変更をサブミット (Done ボタンをクリックした場合と同じ) します。フォーカスのある新しいセルが編集可能かどうか、新しい行が編集モードに入るかどうか、セルが編集できない場合は前の行のみ編集モードを終了します。
 
-- 行が編集モードの時にグリッドがスクロールされると行が表示領域外になりますが、グリッドは編集モードのままです。グリッドをスクロールすると編集行は再度表示されますが編集行が編集モードのままになります。グリッド外をクリックしたときにセルも編集モードに残ります。
+- 行が編集モードの時にグリッドがスクロールされると行が表示領域外になりますが、@@igComponent は編集モードのままです。@@igComponent をスクロールすると編集行は再度表示されますが編集行が編集モードのままになります。@@igComponent 以外をクリックしたときにセルも編集モードに残ります。
 
-- サイズ変更、移動、並べ替え列、ページの変更など、その他のグリッド操作は編集モードを終了して最新の値をサブミットします。
+- サイズ変更、移動、並べ替え列、ページの変更など、その他の @@igComponent 操作は編集モードを終了して最新の値をサブミットします。
 
-- 編集した各セルは行編集が終了するまで変更スタイルを取得します。グリッドがトランザクションで提供されない場合の動作です。トランザクションが有効な場合、すべての変更がコミットされるまでセル編集スタイルが適用されます。
-
-
-## キーボード ナビゲーション
-
-- `Enter` and `F2` が行編集モードに入ります。
-
-- `Esc` が行編集モードを終了し、行の編集モード時に変更されたいずれのセルの変更もサブミットしません。
-
-- `Tab` は行の編集可能なセルから次のセルへフォーカスを移動、右端の編集可能なセルから CANCEL と Done ボタンへ移動します。DONE ボタンからのナビゲーションは現在の編集行内で編集可能なセルへ移動します。
+- 編集した各セルは行編集が終了するまで変更スタイルを取得します。@@igComponent がトランザクションで提供されない場合の動作です。トランザクションが有効な場合、すべての変更がコミットされるまでセル編集スタイルが適用されます。
 
 
-## 機能の統合
+### キーボード ナビゲーション
+
+- `Enter` と F2 で行編集モードに入ります。
+
+- `Esc` で行編集モードを終了し、行の編集モード時に変更されたいずれのセルの変更もサブミットしません。
+
+- `Tab` で行の編集可能なセルから次のセルへフォーカスを移動、右端の編集可能なセルから CANCEL と Done ボタンへ移動します。DONE ボタンからのナビゲーションは現在の編集行内で編集可能なセルへ移動します。
+
+
+### 機能の統合
 
 - すべてのデータ変更操作は行変更操作を終了し、現在の行の変更をサブミットします。並べ替え、グループの変更、フィルタリング条件、ページングなどが含まれます。
 
 - 行編集が終了した後に集計が更新されます。同様に並べ替えやフィルタリングなどの他の機能が有効になります。
 
+@@if (igxName === 'IgxGrid') {
 - グループ行の展開と縮小は現在の行の編集を終了しません。
+}
 
+### 行編集オーバーレイのカスタマイズ
 
-## 行編集オーバーレイのカスタマイズ
-
-### テキストのカスタマイズ
+#### テキストのカスタマイズ
 
 `igxRowEditTextDirective` を使用した行編集オーバーレイのテキストのカスタマイズが可能です。
 `rowChangesCount` プロパティが公開されて変更されたセルのカウントを保持します。
@@ -152,37 +305,38 @@ export class GridRowEditSampleComponent {
 </ng-template>
  ```
 
- ### ボタンのカスタマイズ
+#### ボタンのカスタマイズ
 `igxRowEditActionsDirective` を使用して行編集オーバーレイのボタンのカスタマイズが可能です。
 キーボード ナビゲーションにボタンを含める場合、各ボタンに `igxRowEditTabStopDirective` が必要です。
 
- ```typescript
+ ```html
  <ng-template igxRowEditActions let-endRowEdit>
 	<button igxButton igxRowEditTabStop (click)="endRowEdit(false)">Cancel</button>
 	<button igxButton igxRowEditTabStop (click)="endRowEdit(true)">Apply</button>
 </ng-template>
  ```
 
-## API リファレンス
+### API リファレンス
 
-### igxGrid 入力
-
-* [rowEditable]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditable)
-
-### igxGrid 出力
-
-* [onRowEditEnter]({environment:angularApiUrl}/classes/igxgridcomponent.html#onroweditenter)
-* [onRowEdit]({environment:angularApiUrl}/classes/igxgridcomponent.html#onrowedit)
-* [onRowEditCancel]({environment:angularApiUrl}/classes/igxgridcomponent.html#onroweditcancel)
-
-### igxGrid メソッド
-
-* [endEdit]({environment:angularApiUrl}/classes/igxgridcomponent.html#endedit)
-
+* [rowEditable]({environment:angularApiUrl}/classes/@@igTypeDoc.html#roweditable)
+* [onRowEditEnter]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onroweditenter)
+* [onRowEdit]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onrowedit)
+* [onRowEditCancel]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onroweditcancel)
+* [endEdit]({environment:angularApiUrl}/classes/@@igTypeDoc.html#endedit)
+* [field]({environment:angularApiUrl}/classes/igxcolumncomponent.html#field)
+* [editable]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable)
+* [primaryKey]({environment:angularApiUrl}/classes/@@igTypeDoc.html#primarykey)
+* [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
 
 ### その他のリソース
 <div class="divider--half"></div>
 
-* [Grid の概要](grid.md)
-* [Grid 編集](editing.md)
-* [Grid トランザクション](batch_editing.md)
+* [@@igComponent 概要](@@igMainTopic.md)
+* [@@igComponent 編集](editing.md)
+* [@@igComponent トランザクション](batch_editing.md)
+
+<div class="divider--half"></div>
+コミュニティに参加して新しいアイデアをご提案ください。
+
+* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

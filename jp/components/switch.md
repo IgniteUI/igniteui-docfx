@@ -24,7 +24,7 @@ _language: ja
 
 中核となるスイッチ コンポーネントはオン/オフ状態の切り替えが可能です。デフォルト スタイル設定はマテリアル デザイン ガイドラインの選択コントロールの仕様に基づきます。
 
-Ignite UI for Angular Switch を初期化する前に、[`IgxSwitchModule`]({environment:angularApiUrl}/classes/igxswitchmodule.html) を **app.module.ts** ファイルにインポートします。
+Ignite UI for Angular Switch を初期化する前に、`IgxSwitchModule` を **app.module.ts** ファイルにインポートします。
 
 ```typescript
 // app.module.ts

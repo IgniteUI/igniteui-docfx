@@ -5,7 +5,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ---
 
 ## Date Picker
-<p class="highlight">The Ignite UI for Angular Date Picker component displays a month-view calendar that lets users to pick a single date in read-only mode or provides an editable input with dropdown calendar to modify the date in edit mode. It supports locales and custom date formatting. The component can display today and cancel buttons in read-only mode.</p>
+<p class="highlight">The Ignite UI for Angular Date Picker component displays a month-view calendar that lets users to pick a single date in dialog mode or provides an editable input with a dropdown calendar to modify the date in dropdown mode. It supports locales and custom date formatting. The component can display today and cancel buttons in dialog mode.</p>
 <div class="divider"></div>
 
 ### Date Picker Demo
@@ -21,7 +21,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 > To start using Ignite UI for Angular components in your own projects, make sure you have configured all necessary dependencies and have performed the proper setup of your project. You can learn how to do this in the [**installation**](https://www.infragistics.com/products/ignite-ui-angular/getting-started#installation) topic.
 
 ### Usage
-By default, the [`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) allows you to pick a date from a calendar. The picker uses the [`IgxCalendarComponent`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) internally as a calendar. To get started with the Ignite UI for Angular Date Picker, let's first import the [**IgxDatePickerModule**]({environment:angularApiUrl}/classes/igxdatepickermodule.html) in our **app.module.ts** file:
+By default, the [`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) allows you to pick a date from a calendar. The picker uses the [`IgxCalendarComponent`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) internally as a calendar. To get started with the Ignite UI for Angular Date Picker, let's first import the `IgxDatePickerModule` in our **app.module.ts** file:
 
 ```typescript
 // app.module.ts
@@ -91,7 +91,7 @@ To create a two-way data-binding, set `ngModel` like this:
 #### Adding buttons
 The [`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) supports 'Today' button, which selects the current day from the calendar. 'Cancel' button could be enabled as well. 
 
->Note: Configuring the 'Today' and 'Cancel' buttons is applicable only to the read-only mode date picker.
+>Note: Configuring the 'Today' and 'Cancel' buttons is applicable only when the date picker is in dialog mode.
 
 To enable the buttons in a template, use the [`cancelButtonLabel`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#cancelbuttonlabel) and [`todayButtonLabel`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#todaybuttonlabel) inputs and set the buttons text:
 
@@ -141,45 +141,45 @@ Here is the formatted date:
 </div>
 <div class="divider--half"></div>
 
-#### Editable mode
-By default, the date picker is displayed in read-only mode. To change it to editable mode, set the [`mode`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#mode) input to `editable`.
+#### Dropdown mode
+By default, the date picker is displayed in read-only dialog mode. To change it to editable dropdown mode, set the [`mode`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#mode) input to [`dropdown`]({environment:angularApiUrl}/enums/interactionmode.html#dropdown).
 
 ```html
 <!-- date-picker-sample.component.html -->
 
-<igx-date-picker mode="editable"></igx-date-picker>
+<igx-date-picker mode="dropdown"></igx-date-picker>
 ```
 
-You can further customize the editable date picker, configuring the following date picker inputs:
+You can further customize the drop-down date picker, configuring the following inputs:
 
 | Input | Type | Description | 
 | ------------- |:-------------:|:-------------:| 
 | [`format`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#format) | `string` | Configures the date display format. Accepts formats containing valid symbols and combinations that can be applied on Angular Date Pipe. For more information, check [DatePipe](https://angular.io/api/common/DatePipe) documentation. The following pre-defined format options are supported as well - shortDate, mediumDate, longDate and fullDate. |
 | [`mask`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#mask)|`string`| Configures the date editor mask. Accepts combinations of the numeric representations of the d, M and y symbols and arbitrary separators - for example dd-MM-y. The editor doesn't accept the literal representation of MMM, MMMM and MMMMM. Valid masks for the day part are: d and dd, for the month part - M and MM and for the year part - y, yy and yyyy.|
-| [`isSpinLoop`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#isspinloop) | `boolean` | Configures the continuos spin loop when using the <kbd>UP</kbd> and <kbd>DOWN</kbd> arrow keys in the editor. If set to false, date part spinning stops when min/max date/month is reached. By default, the spin loop is infinite.|
-| [`locale`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#locale) | `string` | When setting the locale property in editable date picker, have in mind that only the en-US locale data comes with Angular. To localize dates in another language, you must import the corresponding locale data. See the [I18n](https://angular.io/guide/i18n#i18n-pipes) guide for more information.|
+| [`isSpinLoop`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#isspinloop) | `boolean` | Configures the continuous spin loop when using the <kbd>UP</kbd> and <kbd>DOWN</kbd> arrow keys in the editor. If set to false, date part spinning stops when min/max date/month is reached. By default, the spin loop is infinite.|
+| [`locale`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#locale) | `string` | When setting the `locale` property in editable drop-down date picker, have in mind that only the en-US locale data comes with Angular. To localize dates in another language, you must import the corresponding locale data. See the [I18n](https://angular.io/guide/i18n#i18n-pipes) guide for more information.|
 
 
-> Note: If both [`formatter`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#formatter) and [`format`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#format) inputs are set, the editable date picker ignores the [`formatter`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#formatter) input.
+> Note: If both [`formatter`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#formatter) and [`format`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#format) inputs are set, the drop-down date picker ignores the [`formatter`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#formatter) input.
 
-The editable date picker provides the following outputs to handle entering of disabled and invalid dates:
+The editable drop-down date picker provides the following outputs to handle the input of disabled and invalid dates:
 
 | Output | Arguments | Description | 
 | ------------- |:-------------:|:-------------:|
-| [`onDisabledDate`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#ondisableddate) | `IDatePickerDisabledDateEventArgs` | Fires when the user types/spins a disabled date in the date picker editor. |
-| [`onValidationFailed`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#onvalidationfailed) | `IDatePickerValidationFailedEventArgs` | Fires when the user types/spins invalid date in the date picker editor. |
+| [`onDisabledDate`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#ondisableddate) | [`IDatePickerDisabledDateEventArgs`]({environment:angularApiUrl}/interfaces/idatepickerdisableddateeventargs.html) | Fires when the user types/spins a disabled date in the date picker editor. |
+| [`onValidationFailed`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#onvalidationfailed) | [`IDatePickerValidationFailedEventArgs`]({environment:angularApiUrl}/interfaces/idatepickervalidationfailedeventargs.html) | Fires when the user types/spins invalid date in the date picker editor. |
 
 ##### Keyboard Navigation
-* To open the date picker drop down: 
-    * <kbd>SPACE</kbd>
-    * <kbd>ALT</kbd> + <kbd>DOWN</kbd> 
-*  To close the date picker drop down:
-    * <kbd>ESC</kbd>
-    * <kbd>ALT</kbd> + <kbd>UP</kbd> 
+* To open the date picker drop-down: 
+    * <kbd>SPACE</kbd> key
+    * <kbd>ALT</kbd> + <kbd>DOWN</kbd> keys
+*  To close the date picker drop-down:
+    * <kbd>ESC</kbd> key
+    * <kbd>ALT</kbd> + <kbd>UP</kbd>  keys
 *  To increment a date part:
-    * Focus on a date part + <kbd>UP</kbd> 
+    * Focus on a date part + <kbd>UP</kbd> key
 *  To decrement a date part:
-    * Focus on a date part + <kbd>DOWN</kbd> 
+    * Focus on a date part + <kbd>DOWN</kbd> key
 
 <div class="sample-container loading" style="height: 600px;">
     <iframe id="date-picker-dropdown" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/scheduling/datepicker-dropdown" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -198,13 +198,13 @@ The Date Picker's input group look can be customized. To do that, we need to dec
 | `openDialog` | Method that can be used to open the date picker dialog |
 | [`disabled`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#disabled) | Controls date picker disabled state |
 | [`disabledDates`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#disableddates) | Contains disabled dates |
-| [`displayData`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#displaydata) | Contains the formatted value when date picker is in read-only mode |
-| [`format`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#format) | Contains display format when date picker is in editable mode |
-| [`isSpinLoop`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#isspinloop) | Controls continuos spin loop when date picker is in editable mode |
+| [`displayData`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#displaydata) | Contains the formatted value when date picker is in dialog mode |
+| [`format`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#format) | Contains display format when date picker is in dropdown mode |
+| [`isSpinLoop`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#isspinloop) | Controls continuous spin loop when date picker is in dropdown mode |
 | [`label`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#label) | Contains the input label text |
 | [`labelVisibility`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#labelvisibility) | Controls the input label text visibility |
 | [`locale`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#locale) | Contains the locale used for formatting and displaying the dates |
-| [`mask`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#mask) | Contains the mask when date picker is in editable mode |
+| [`mask`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#mask) | Contains the mask when date picker is in editable dropdown mode |
 | [`mode`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#mode) | Contains the date picker mode |
 | [`specialDates`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#specialDates) | Contains special dates |
 | [`value`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#value) | Contains the real value |

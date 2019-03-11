@@ -15,9 +15,9 @@ _language: ja
 ## 使用方法
 
 各スクロール方法は以下のメソッドがあります。
- - [`initialize`]({environment:angularApiUrl}/classes/iscrollstrategy.html#initialize) - スクロール方法を初期化します。ドキュメントへの参照、オーバーレイ サービスへの参照、および描画されるコンポーネントの id が必要です。
- - [`attach`]({environment:angularApiUrl}/classes/iscrollstrategy.html#attach) - スクロール方法を指定した要素またはドキュメントにアタッチします。
- - [`detach`]({environment:angularApiUrl}/classes/iscrollstrategy.html#detach) - スクロール方法をデタッチします。
+ - [`initialize`]({environment:angularApiUrl}/interfaces/iscrollstrategy.html#initialize) - スクロール方法を初期化します。ドキュメントへの参照、オーバーレイ サービスへの参照、および描画されるコンポーネントの id が必要です。
+ - [`attach`]({environment:angularApiUrl}/interfaces/iscrollstrategy.html#attach) - スクロール方法を指定した要素またはドキュメントにアタッチします。
+ - [`detach`]({environment:angularApiUrl}/interfaces/iscrollstrategy.html#detach) - スクロール方法をデタッチします。
 
 ```typescript
 this.scrollStrategy.initialize(document, overlayService, id);
@@ -41,7 +41,7 @@ this.scrollStrategy.detach();
 ``` 
 <div class="divider"></div>
 
-オーバーレイで使用するスクロール方法の変更は、オーバーレイに渡される [`overlaySettings`] ({environment:angularApiUrl}/interfaces/overlaysettings.html) オブジェクトの [`scrollStrategy`] ({environment:angularApiUrl}/classes/iscrollstrategy.html) プロパティをオーバーライドします。
+オーバーレイで使用するスクロール方法の変更は、オーバーレイに渡される [`overlaySettings`] ({environment:angularApiUrl}/interfaces/overlaysettings.html) オブジェクトの [`scrollStrategy`] ({environment:angularApiUrl}/interfaces/iscrollstrategy.html) プロパティをオーバーライドします。
 ```typescript
     // overlaySettings is an existing object of type OverlaySettings
     // to override the scroll strategy
@@ -64,7 +64,7 @@ import { NoOpScrollStrategy } from "./scroll/NoOpScrollStrategy";
 ## デモ
 ### スクロール方法
 オーバーレイのスクロールの処理方法を決定するためにスクロール方法を [`overlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) オブジェクトによって渡すことができます。
-以下のデモは複数の [`scrollStrategies`]({environment:angularApiUrl}/classes/iscrollstrategy.html) を紹介します。
+以下のデモは複数の [`scrollStrategies`]({environment:angularApiUrl}/interfaces/iscrollstrategy.html) を紹介します。
 <div class="sample-container loading" style="height: 400px">
     <iframe id="overlay-scroll-sample-1-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/interactions/overlay-scroll-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -86,6 +86,6 @@ import { NoOpScrollStrategy } from "./scroll/NoOpScrollStrategy";
 </div>
 <div class="divider--half"></div>
 
-## API
+## API References
 
-* [`IScrollStrategy`]({environment:angularApiUrl}/classes/iscrollstrategy.html)
+* [IScrollStrategy]({environment:angularApiUrl}/interfaces/iscrollstrategy.html)
