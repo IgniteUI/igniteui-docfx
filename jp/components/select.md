@@ -43,7 +43,6 @@ public items: string[] = ["Orange", "Apple", "Banana", "Mango"];
 次にテンプレートでバインドします。
 ```html
 <igx-select>
-    <label igxLabel>Simple Select</label>
     <igx-select-item *ngFor="let item of items" [value]="item">
         {{item}}
     </igx-select-item>
@@ -96,6 +95,8 @@ public items: string[] = ["Orange", "Apple", "Banana", "Mango"];
 - 無効な項目は選択できません。
 - 選択オプションが削除されると選択も削除されます。
 - 重複する値を持つ項目がある場合、最初の項目が選択されます。
+
+[!NOTE]
 > `Igx-select` は項目のみの単一選択をサポートします。
 
 ### イベント発生
@@ -168,7 +169,7 @@ export class MyClass {
     }
     /* --- */
     private handleClosing(event: CancelableEventArgs): void {
-        // Cancel the closing event
+        // cancel the closing event
         event.cancel = true;
     }
     /* --- */
@@ -229,7 +230,6 @@ public items: any[] = [
 次にテンプレート ファイルでこれらのオブジェクトを反復してプロパティへ適切にアクセスします。
 ```html
 <igx-select>
-    <label igxLabel>Select With Groups</label>
     <igx-select-item-group *ngFor="let item of items" [label]="item.type">
         <igx-select-item *ngFor="let fruit of item.fruits" 
         [value]="fruit">
@@ -293,7 +293,6 @@ export class MyClass {
 テンプレートを以下のように定義します。
 ```html
 <igx-select [overlaySettings]="customOverlaySettings">
-    <label igxLabel>Select An Item</label>
     <igx-select-item *ngFor="let item of items">
         {{item}}
     </igx-select-item>
@@ -365,20 +364,22 @@ export class MyClass implements OnInit {
 - `open` 関数で引数として、同様にテンプレートへカスタム設定を渡した場合、`open` 関数の引数を使用します。ただし、`onOpening` または `onOpened` などのインターナル イベントにバインドした場合は、`igx-select` はテンプレートの設定を使用します。
 
 ## API リファレンス
-* [IgxSelectModule]({environment:angularApiUrl}/classes/igxselectmodule.html)
-* [IgxSelectComponent]({environment:angularApiUrl}/classes/igxselectcomponent.html)  
-* [IgxSelectItemComponent]({environment:angularApiUrl}/classes/igxselectitemcomponent.html)  
-* [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html)  
-* [IgxDropDownItemComponent]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html)  
-* [OverlaySettings]({environment:angularApiUrl}/interfaces/overlaysettings.html)  
-* [ConnectedPositioningStrategy]({environment:angularApiUrl}/classes/connectedpositioningstrategy.html)  
-* [GlobalPositionStrategy]({environment:angularApiUrl}/classes/globalpositionstrategy.html#constructor)  
-* [SelectPositioningStrategy]({environment:angularApiUrl}/classes/selectpositioningstrategy.html)  
-* [AbsoluteScrollStrategy]({environment:angularApiUrl}/classes/absolutescrollstrategy.html)  
-* [PositionSettings]({environment:angularApiUrl}/interfaces/positionsettings.html)
+[**IgxSelectComponent**](https://jp.infragistics.com/products/ignite-ui-angular/docs/typescript/classes/igxselectcomponent.html)  
+[**IgxSelectItemComponent**](https://jp.infragistics.com/products/ignite-ui-angular/docs/typescript/classes/igxselectitemcomponent.html)  
+[**IgxDropDownComponent**](https://jp.infragistics.com/products/ignite-ui-angular/docs/typescript/classes/igxdropdowncomponent.html)  
+[**IgxDropDownItemComponent**](https://jp.infragistics.com/products/ignite-ui-angular/docs/typescript/classes/igxdropdownitemcomponent.html)  
+[**OverlaySettings**](https://jp.infragistics.com/products/ignite-ui-angular/docs/typescript/interfaces/overlaysettings.html)  
+[**ConnectedPositioningStrategy**](https://jp.infragistics.com/products/ignite-ui-angular/docs/typescript/classes/connectedpositioningstrategy.html)  
+[**GlobalPositionStrategy**](https://jp.infragistics.com/products/ignite-ui-angular/docs/typescript/classes/globalpositionstrategy.html#constructor)  
+[**AbsoluteScrollStrategy**](https://jp.infragistics.com/products/ignite-ui-angular/docs/typescript/classes/absolutescrollstrategy.html)  
+[**PositionSettings**](https://jp.infragistics.com/products/ignite-ui-angular/docs/typescript/interfaces/positionsettings.html)
 
 ## その他のリソース
-* [IgxSelect Specification](https://github.com/IgniteUI/igniteui-angular/wiki/IgxSelect-Specification#31-keyboard-navigation)  
-* [Angular Select](https://material.angular.io/components/select/overview)  
-* [NgModel](https://angular.io/api/forms/NgModel)  
-* [ViewChild](https://angular.io/api/core/ViewChild)
+[**NgModel**](https://angular.io/api/forms/NgModel)  
+[**ViewChild**](https://angular.io/api/core/ViewChild)  
+[**ngForOf**](https://angular.io/api/common/NgForOf)
+
+Our community is active and always welcoming to new ideas.
+
+* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
