@@ -1,4 +1,4 @@
-﻿---
+---
 title: テーマの例
 _description: Ignite UI for Angular は、SASS 機能と mixins でアプリケーション全体および特定部分を最小限のコードでスタイル設定できます。
 _keywords: Ignite UI for Angular, Angular Theming コンポーネント, Angular Theming, Ignite UI for Angular コンポーネント, Ignite for Agular Themes, グローバル コンポーネント, コンポーネント テーマ
@@ -8,8 +8,8 @@ _keywords: Ignite UI for Angular, Angular Theming コンポーネント, Angular
 **Ignite UI for Angular Theming** は、グローバルに設定してアプリケーション全体のテーマをカスタマイズしてすべての既定の要素に適用、あるいはコンポーネント別にテーマをそれぞれ適用することができます。
 
 ### デモ
-<div class="sample-container" style="height: 650px">
-    <iframe id="theme-chooser-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/theming/theme-chooser" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 650px">
+    <iframe id="theme-chooser-iframe" seamless="" width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/theming/theme-chooser" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="theme-chooser-iframe" data-demos-base-url="{environment:demosBaseUrl}"> stackblitz で表示
@@ -35,8 +35,8 @@ _keywords: Ignite UI for Angular, Angular Theming コンポーネント, Angular
 
 以下は上記コード スニペットの結果です。
 
-<div class="sample-container" style="height: 650px">
-    <iframe id="default-theme-sample-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/theming/default-theme-sample" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 650px">
+    <iframe id="default-theme-sample-iframe" seamless="" width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/theming/default-theme-sample" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="default-theme-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}"> stackblitz で表示
@@ -200,8 +200,8 @@ public themesClass = "dark-theme";
 ```
 結果は以下です。
 
-<div class="sample-container" style="height: 650px">
-    <iframe id="dark-theme-sample-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/theming/dark-theme-sample" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 650px">
+    <iframe id="dark-theme-sample-iframe" seamless="" width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/theming/dark-theme-sample" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dark-theme-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}"> stackblitz で表示
@@ -306,8 +306,8 @@ export class ThemeChooserSampleComponent implements OnInit {
 
 `click` イベントのみで定義済みテーマを簡単に変更できます。
 
-<div class="sample-container" style="height: 650px">
-    <iframe id="theme-chooser-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/theming/theme-chooser" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 650px">
+    <iframe id="theme-chooser-iframe" seamless="" width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/theming/theme-chooser" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="theme-chooser-iframe" data-demos-base-url="{environment:demosBaseUrl}"> stackblitz で表示
