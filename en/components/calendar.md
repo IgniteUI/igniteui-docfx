@@ -44,7 +44,7 @@ import { IgxCalendarComponent } from 'igniteui-angular';
 > Consider using the [appropriate polyfills](https://github.com/andyearnshaw/Intl.js/) if your target platform does not support them.
 
 #### Selection
-Instantiating the [`IgxCalendarComponent`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) is as easy as placing its selector element in the template. This will display the current month in the calendar and use single selection mode. We switch to any of the other selection modes - `multi` and `range`, by setting the [`selection`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#selection) property:
+Instantiating the [`IgxCalendarComponent`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) is as easy as placing its selector element in the template. This will display the current month in the calendar and use single selection mode. We switch to any of the other selection modes - `multi` and `range`, by setting the [`selection`]({environment:angularApiUrl}/classes/igxcalendarbase.html#selection) property:
 
 ```html
 <!-- app.component.html -->
@@ -117,7 +117,7 @@ Great, we should now have a calendar with customized dates display that also cha
 </div>
 
 #### Events
-Let's build on top of that sample a bit. We will require the user to enter a date range that does not exceed 5 days. We need to change the [`selection`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#selection) mode of the calendar to "range" and prompt the user to correct the selection, if the range is not valid. To do this we will use the [`onSelection`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#onselection) event:
+Let's build on top of that sample a bit. We will require the user to enter a date range that does not exceed 5 days. We need to change the [`selection`]({environment:angularApiUrl}/classes/igxcalendarbase.html#selection) mode of the calendar to "range" and prompt the user to correct the selection, if the range is not valid. To do this we will use the [`onSelection`]({environment:angularApiUrl}/classes/igxcalendarbase.html#onselection) event:
 
 ```html
 <!-- app.component.html -->
@@ -232,7 +232,7 @@ Having implemented this conditional templating and date parsing we should get co
 </div>
 
 #### Disabled dates
-This section demonstrates the usage of [`disabledDates`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#disableddates) functionallity. Different `single dates` or `range` elements could be added to Array, and passed to the [`disabledDates`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#disableddates) descriptor.
+This section demonstrates the usage of [`disabledDates`]({environment:angularApiUrl}/classes/igxcalendarbase.html#disableddates) functionallity. Different `single dates` or `range` elements could be added to Array, and passed to the [`disabledDates`]({environment:angularApiUrl}/classes/igxcalendarbase.html#disableddates) descriptor.
 
 ```typescript
 this.calendar.disabledDates = [{ type: DateRangeType.Between, dateRange: [
@@ -325,10 +325,10 @@ Result:
 </div>
 
 ### Views
-There are separate views provided by the [`IgxCalendarModule`]({environment:angularApiUrl}/classes/igxcalendarmodule.html) that can be used independently:
-- Days View - `igx-days-view`
-- Months View - `igx-months-view`
-- Years View - `igx-years-view`
+There are separate views provided by the `IgxCalendarModule` that can be used independently:
+- Days View - [`igx-days-view`]({environment:angularApiUrl}/classes/igxdaysviewcomponent.html)
+- Months View - [`igx-months-view`]({environment:angularApiUrl}/classes/igxmonthsviewcomponent.html)
+- Years View - [`igx-years-view`]({environment:angularApiUrl}/classes/igxyearsviewcomponent.html)
 
 <div class="sample-container" style="height: 540px">
     <iframe id="calendar-views-iframe" src='{environment:demosBaseUrl}/scheduling/calendar-views' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
