@@ -39,12 +39,13 @@ import { IgxCalendarComponent } from 'igniteui-angular';
 @ViewChild('calendar', { read: IgxCalendarComponent }) public calendar: IgxCalendarComponent;
 ```
 
-> [!WARNING]
+> [!NOTE]
 > Note that the [`IgxCalendarComponent`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) uses the [Intl](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat) WebAPI for localization and formatting of dates.
 > Consider using the [appropriate polyfills](https://github.com/andyearnshaw/Intl.js/) if your target platform does not support them.
 
-### Selection
+#### Selection
 Instantiating the [`IgxCalendarComponent`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) is as easy as placing its selector element in the template. This will display the current month in the calendar and use single selection mode. We switch to any of the other selection modes - `multi` and `range`, by setting the [`selection`]({environment:angularApiUrl}/classes/igxcalendarbase.html#selection) property:
+
 ```html
 <!-- app.component.html -->
 <!-- Single selection mode -->
@@ -54,7 +55,9 @@ Instantiating the [`IgxCalendarComponent`]({environment:angularApiUrl}/classes/i
 <!-- Range selection mode -->
 <igx-calendar selection="range"></igx-calendar>
 ```
+
 Notice that the calendar header is not rendered when the selection is either `multi` or `range`:
+
 <div class="sample-container" style="height: 730px">
     <iframe id="calendar-sample-1-iframe" src='{environment:demosBaseUrl}/scheduling/calendar-sample-1' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -62,7 +65,7 @@ Notice that the calendar header is not rendered when the selection is either `mu
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="calendar-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-###Localization and formatting
+#### Localization and formatting
 
 Due to their very nature, localization and formatting are essential to any calendar. In the [`IgxCalendarComponent`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) those are controlled and customized through the following properties - [`locale`]({environment:angularApiUrl}/classes/igxcalendarbase.html#locale), [`formatOptions`]({environment:angularApiUrl}/classes/igxcalendarbase.html#formatoptions), [`formatViews`]({environment:angularApiUrl}/classes/igxmonthpickerbase.html#formatviews).
 <br>
@@ -113,7 +116,7 @@ Great, we should now have a calendar with customized dates display that also cha
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="calendar-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-### Events
+#### Events
 Let's build on top of that sample a bit. We will require the user to enter a date range that does not exceed 5 days. We need to change the [`selection`]({environment:angularApiUrl}/classes/igxcalendarbase.html#selection) mode of the calendar to "range" and prompt the user to correct the selection, if the range is not valid. To do this we will use the [`onSelection`]({environment:angularApiUrl}/classes/igxcalendarbase.html#onselection) event:
 
 ```html
@@ -146,9 +149,9 @@ Let's try this out by playing around with selecting ranges:
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="calendar-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-### Templating
+#### Templating
 
-We have seen how to make use of the [`IgxCalendarComponent`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) API (properties, events, methods) so that we configure the calendar per our requirements and interact with it programatically. Now we want to go further and customize its look, benefiting from the header and subheader templating capabilities.
+We have seen how to make use of the [`IgxCalendarComponent`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) API (properties, events, methods) so that we configure the calendar per our requirements and interact with it programmatically. Now we want to go further and customize its look, benefiting from the header and subheader templating capabilities.
 
 To do that we need to decorate a ng-template inside the calendar with **igxCalendarHeader** or **igxCalendarSubheader** directive and use the context returned to customize the way the date is displayed.
 The template decorated with the **igxCalendarHeader** directive is rendered only when the calendar selection is set to single. The **igxCalendarSubheader** is available in all selection modes.
@@ -228,8 +231,8 @@ Having implemented this conditional templating and date parsing we should get co
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="calendar-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-### Disabled dates
-This section demonstrates the usage of [`disabledDates`]({environment:angularApiUrl}/classes/igxcalendarbase.html#disableddates) functionality. Different `single dates` or `range` elements could be added to Array, and passed to the [`disabledDates`]({environment:angularApiUrl}/classes/igxcalendarbase.html#disableddates) descriptor.
+#### Disabled dates
+This section demonstrates the usage of [`disabledDates`]({environment:angularApiUrl}/classes/igxcalendarbase.html#disableddates) functionallity. Different `single dates` or `range` elements could be added to Array, and passed to the [`disabledDates`]({environment:angularApiUrl}/classes/igxcalendarbase.html#disableddates) descriptor.
 
 ```typescript
 this.calendar.disabledDates = [{ type: DateRangeType.Between, dateRange: [
@@ -258,7 +261,6 @@ export class CalendarSample6Component {
         this.calendar.disabledDates = [{ type: DateRangeType.Specific, dateRange: this.range }];
     }
 }
-
 ```
 
 This is the result.
@@ -270,8 +272,7 @@ This is the result.
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="calendar-sample-6-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-
-### Special dates
+#### Special dates
 
 [`Special dates`]({environment:angularApiUrl}/classes/igxcalendarbase.html#specialdates) feature is using almost the same configuration principles as [`Disabled dates`]({environment:angularApiUrl}/classes/igxcalendarbase.html#disableddates). The difference here is dates `styling` and `interaction`. You are able to select and focus [`Special dates`]({environment:angularApiUrl}/classes/igxcalendarbase.html#specialdates).
 
@@ -323,25 +324,69 @@ Result:
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="calendar-sample-7-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-### Keyboard navigation
-When the [**igxCalendar**]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) component is focused:
-- `PageUp` will move to the previous month.
-- `PageDown` will move to the next month.
-- `Shift + PageUp` will move to the previous year.
-- `Shift + PageDown` will move to the next year.
-- `Home` will focus the first day of the current month that is in view.
-- `End` will focus the last day of the current month that is in view.
+### Views
+There are separate views provided by the `IgxCalendarModule` that can be used independently:
+- Days View - [`igx-days-view`]({environment:angularApiUrl}/classes/igxdaysviewcomponent.html)
+- Months View - [`igx-months-view`]({environment:angularApiUrl}/classes/igxmonthsviewcomponent.html)
+- Years View - [`igx-years-view`]({environment:angularApiUrl}/classes/igxyearsviewcomponent.html)
 
-When a day inside the current month is focused:
-- Arrow keys will navigate through the days.
-- `Enter` will select the currently focused day.
+<div class="sample-container" style="height: 540px">
+    <iframe id="calendar-views-iframe" src='{environment:demosBaseUrl}/scheduling/calendar-views' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="calendar-views-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+
+### Keyboard navigation
+When the [**igxCalendar**]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) component is focused, use:
+- <kbd>PageUp</kbd> key to move to the previous month,
+- <kbd>PageDown</kbd> key to move to the next month,
+- <kbd>Shift</kbd> + <kbd>PageUp</kbd> keys to move to the previous year,
+- <kbd>Shift</kbd> + <kbd>PageDown</kbd> keys to move to the next year,
+- <kbd>Home</kbd> key to focus the first day of the current month that is into view,
+- <kbd>End</kbd> key to focus the last day of the current month that is into view,
+- <kbd>Tab</kbd> key to navigate through the subheader buttons;
+
+When `prev` or `next` month buttons (in the subheader) are focused, use:
+- <kbd>Space</kbd> or <kbd>Enter</kbd> key to scroll into view the next or previous month.
+
+When `months` button (in the subheader) is focused, use:
+- <kbd>Space</kbd> or <kbd>Enter</kbd> key to open the months view.
+
+When `year` button (in the subheader) is focused, use:
+- <kbd>Space</kbd> or <kbd>Enter</kbd> key to open the decade view.
+
+When a day inside the current month is focused, use:
+- Arrow keys to navigate through the days,
+- Arrow keys to navigate to previous/next month as well,
+- <kbd>Enter</kbd> key to select the currently focused day.
+
+When a month inside the months view is focused, use:
+- Arrow keys to navigate through the months,
+- <kbd>Home</kbd> key to focus the first month inside the months view,
+- <kbd>End</kbd> key to focus the last month inside the months view,
+- <kbd>Enter</kbd> key to select the currently focused month and close the view.
+
+When an year inside the decade view is focused, use:
+- Arrow keys to navigate through the years,
+- <kbd>Enter</kbd> key to select the currently focused year and close the view.
+
 <div class="divider--half"></div>
 
-### API
+### API References
 <div class="divider--half"></div>
 
 * [IgxCalendarComponent]({environment:angularApiUrl}/classes/igxcalendarcomponent.html)
 * [IgxCalendarComponent Styles]({environment:sassApiUrl}/index.html#function-igx-calendar-theme)
 * [DateRangeType]({environment:angularApiUrl}/enums/daterangetype.html)
 * [DateRangeDescriptor]({environment:angularApiUrl}/interfaces/daterangedescriptor.html)
+
+<div class="divider--half"></div>
+
+### Additional Resources
+<div class="divider--half"></div>
+Our community is active and always welcoming to new ideas.
+
+* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
 
