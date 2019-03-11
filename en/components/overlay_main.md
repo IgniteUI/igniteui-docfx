@@ -109,7 +109,7 @@ The first parameter in both overloads is mandatory and represents the content th
 <div class="divider--half"></div>
 
 ### Demo - Dynamic attach - Component
-In the below demo, we can pass the [IgxCard](https://www.infragistics.com/products/ignite-ui-angular/angular/components/card.html#card-demo) through the overlay service [`attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) method to optain an ID. Then we call [`show()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#show) method with provided ID to dynamically attach the card to the DOM in a modal container.
+In the below demo, we can pass the [IgxCard](card.html#card-demo) through the overlay service [`attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) method to optain an ID. Then we call [`show()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#show) method with provided ID to dynamically attach the card to the DOM in a modal container.
 
 
 <div class="sample-container loading" style="height: 400px">
