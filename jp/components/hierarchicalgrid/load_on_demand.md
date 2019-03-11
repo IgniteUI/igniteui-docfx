@@ -1,33 +1,35 @@
+﻿---
+title: Hierarchical Grid ロードオンデマンド - ネイティブ Angular |Ignite UI for Angular
+_description: Ignite UI for Angular Hierarchical Grid は、展開された各子グリッドでロードオンデマンドに必要なツールを提供します。データ量が大幅に軽減されてユーザがデータを必要な場合のみ取得されます。
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, Native Angular コンポーネント スイート, Native Angular コントロール, Native Angular コンポーネントs Library, Angular Hierarchical Grid コンポーネント, Angular Hierarchical Data Table コンポーネント, Angular Hierarchical Grid コントロール, Angular Hierarchical Data Table コントロール, Angular 高パフォーマンスe Hierarchical Grid, Angular 高パフォーマンス Hierarchical Data Table, Hierarchical Grid, Hierarchical Data Table
 ---
-title: Hierarchical Grid load on demand - Native Angular | Ignite UI for Angular
-_description: The Ignite UI for Angular Hierarchical Grid provides the necessary tools to load data on demand for each child grid that is expanded. That way the volume of data would be greatly reduced and can be retrieved only when the user needs it.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Hierarchical Grid component, Angular Hierarchical Data Table component, Angular Hierarchical Grid control, Angular Hierarchical Data Table control, Angular High Performance Hierarchical Grid, Angular High Performance Hierarchical Data Table, Hierarchical Grid, Hierarchical Data Table
----
 
-### Hierarchical Grid Load On Demand
+### 階層グリッド ロードオンデマンド
 
-The Ignite UI for Angular [`IgxHierarchicalGrid`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html) can be rendered in such way that it requires the minimal amount of data to get from the server so the user could see it as quickly as possible. Then, only after the user expands a row containing a child grid, he will receive the data for that particular child grid. This mechanism, also known as Load on Demand, can be easily configured to work with any remote data.
+[`IgxHierarchicalGrid`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html) は、要求するサーバーからのデータを最低限にすることによりすばやく描画できます。このため、ユーザーがビューで結果を確認でき、表示データをインタラクティブに操作できます。初期時にグリッドのデータのみが取得されて描画され、ユーザーが子グリッドを含む行を拡張した後のみ、特定の子グリッドのデータを取得します。このメカニズムはロードオンデマンドであらゆるリモートデータとの設定が簡単にできます。
 
-In this topic we will demonstrate how to achieve Load on Demand, by creating our own Remote Service Provider for the [`IgxHierarchicalGrid`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html), using a remote oData v4 Service that is readily available. Here's the working demo and later we will go through it step by step and describe the process of creating it.
 
-#### Demo
+このトピックは、既に利用可能なリモート oData v4 サービスと通信してリモート サービス プロバイダーを作成し、ロードオンデマンドを設定する方法を説明します。以下は、デモと作成手順を示します。
+
+
+#### デモ
 
 <div class="sample-container loading" style="height:620px">
     <iframe id="hierarchical-grid-lod-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-lod' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-lod-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-lod-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
 </div>
 <div class="divider--half"></div>
 
-### Remote Service Provider
+### リモート サービス プロバイダー
 
-First we will prepare our service provider so we will be ready to get the data we would need for the hierarchical grid.
+はじめにサービス プロバイダーを準備して階層グリッドに必要なデータを取得します。
 
-#### Getting basic data
+#### 基本データの取得
 
-We will be communicating with our backend service over HTTP protocol using XMLHttpRequest interface the browsers provide. In order to achieve this more easily we will use Angular's [`HttpClient`](https://angular.io/api/common/http/HttpClient) module that offers a simplified client HTTP API. That way in order to get our data we will need this simple method in our service:
+ブラウザーが提供する XMLHttpRequest インターフェイス を使用した HTTP プロトコルでバックエンドサービスと通信します。簡易的なクライアント HTTP API を提供する Angular の [`HttpClient`](https://angular.io/api/common/http/HttpClient) モジュールを使用してより簡単に行うことができます。データを取得にはサービスのシンプルなメソッドが必要となります。
 
 
 ```typescript
@@ -38,15 +40,15 @@ public getData(dataState): Observable<any[]> {
 }
 ```
 
-As you can see `this.http` will be a reference to our `HttpCLient` module, and `buildUrl()` will be the method that will generate our url based on the data that we have received. We map our response so we get only the value of our result and return an Observable since this is executed asynchronously. That way we can later subscribe to it, process it further in our application and pass it to our grid.
+`this.http` は、`HttpCLient` モジュールの参照となり、`buildUrl()` は取得したデータに基づいて url を生成するメソッドになります。実行された非同期のため、返信をマップして結果値のみ取得し、Observable を返します。それにより後でサブスクライブし、アプリケーションで処理を進めてグリッドへ渡すことができます。
 
-#### Building our request url
+#### 要求 URL をビルドします。
 
-Next we will define how we should build our URL for the GET request. This is where we will be able to get the data for our main grid but also for any child grid inside it. We will use the `Customers` data from `https://services.odata.org/V4/Northwind/Northwind.svc/` for our root level and use `Order` and `Order_Details` for the lower levels. The model will differ per application but we will use the following one:
+次に GET 要求の URL をビルドする方法を定義します。メイン グリッドのデータを取得できますが含まれる子グリッドのデータも取得できます。ルート レベルに `https://services.odata.org/V4/Northwind/Northwind.svc/` の `Customers` データを使用し、それ以外のレベルには `Order` と `Order_Details` を使用します。このモデルはアプリケーションごとに異なりますが、ここでは以下を使用します。
 
 ![Dragging](../../images/hgrid-database.jpg)
 
- What we need at first is the `key` of our table to determine from where we would get the data for the desired grid, the primary key of the parent row and its unique ID. We will define all this in an interface called `IDataState`. An example:
+ はじめに必要となるのはグリッドのデータ、親業のプライマリキーとその一意の ID をどこから取得するかを決定するテーブルの `key` が必要です。インターフェイス `IDataState` でこれらすべてを定義します。例:
 
 ```typescript
 export interface IDataState {
@@ -75,9 +77,9 @@ public buildUrl(dataState: IDataState): string {
 //...
 ```
 
-#### Result
+#### 結果
 
-Finally, this is how our `remote-lod.service.ts` would look like:
+最後に `remote-lod.service.ts` は以下のようになります。
 
 
 ```typescript
@@ -123,13 +125,13 @@ export class RemoteLoDService {
 }
 ```
 
-### Hierarchical Grid Setup
+### 階層グリッド設定
 
-What we will do next, is setup our hierarchical grid and connect it to our remote service provider.
+次に階層グリッドを設定してリモート サービス プロバイダーに接続します。
 
-#### Template defining
+#### テンプレートの地祇
 
-First we will define our hierarchical grid template with the levels of hierarchy that we expect to have. We know that our root grid [`primaryKey`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html#primarykey) for the customers is their `CustomerID`, for their orders on the first level -  `OrderID` and respectively for order details - `ProductID`. Knowing also each database table and their keys, we can use this information to define our initial template:
+最初に階層グリッド テンプレートを必要な階層レベルで定義します。customers のルート グリッド [`primaryKey`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html#primarykey) は最初のレベルの orders の `CustomerID` です。`OrderID` と各 order 詳細の `ProductID` です。各データベース テーブルとキーで初期テンプレートを定義します。
 
 ```html
 <igx-hierarchical-grid #hGrid [primaryKey]="'CustomerID'" [autoGenerate]="false" [height]="'600px'" [width]="'100%'">
@@ -155,15 +157,16 @@ First we will define our hierarchical grid template with the levels of hierarchy
 </igx-hierarchical-grid>
 ```
 
-There is one thing missing in our template though, and that is the data for our root level hierarchical grid, and eventually its children. We will set the data of the root grid after getting its data from the service in our code later easily, since we can use the `#hGrid` reference. Setting the data for any child that has been expanded is a bit different.
+ルート レベル階層グリッドと最終的にはその子のデータがテンプレートに必要となります。`#hGrid` 参照が使用できるため、コードでサービスからデータ取得後にルート グリッドのデータを簡単に設定できます。展開されている子にデータを設定する方法は異なります。
 
-When a row is expanded for the first time, a new child `IgxHierarchicalGrid` is rendered for it and we will need to somehow get that reference for the newly created grid to set its data. That is why each [`IgxRowIsland`]({environment:angularApiUrl}/classes/igxrowislandcomponent.html) component provides the [`onGridCreated`]({environment:angularApiUrl}/classes/igxrowislandcomponent.html#ongridcreated)  event that is fired when a new child grid is created for that specific row island. We can use that to get the reference we need for the new grid, request its data from the service, and apply it.
+行がはじめて展開されたときに新し子 `IgxHierarchicalGrid` が描画がされるため、データを設定するために新しく作成されたグリッドの参照を取得する必要があります。各 [`IgxRowIsland`]({environment:angularApiUrl}/classes/igxrowislandcomponent.html) コンポーネントに [`onGridCreated`]({environment:angularApiUrl}/classes/igxrowislandcomponent.html#ongridcreated) イベントがあり、特定の子アイランドに新しい子グリッドが作成されたときに発生します。新しいグリッドの参照を取得するために使用でき、サービスからデータを要求して適用します。
 
-We can use one method for all row islands since we built our service so that it needs only information if it is the root level, the key of the row island, the primary key of the parent row, and its unique identifier. All this can be taken either directly from the event arguments, or from the row island responsible for triggering the event. 
+サービスをビルドしているためルートレベルの場合に情報のみが必要なため、すべてのアイランドに 1 メソッドを使用できます。このすべての情報には、イベント引数から直接またはイベントをトリガーする行アイランドからアクセスできます。 
 
-Let's name the method that we will use `gridCreated`. Since the event [`onGridCreated`]({environment:angularApiUrl}/classes/igxrowislandcomponent.html#ongridcreated) provides the [`parentID`]({environment:angularApiUrl}/interfaces/igridcreatedeventargs.html#parentid) property, a reference to the row island as [`owner`]({environment:angularApiUrl}/interfaces/igridcreatedeventargs.html#owner) and the new child [`grid`]({environment:angularApiUrl}/interfaces/igridcreatedeventargs.html#grid) property, it will be passed as the first argument. We are only missing information about the parent row `primaryKey`, but we can easily pass that as a second argument, depending on which row island we bind. 
+`gridCreated` を使用するメソッドに名前を付けます。イベント [`onGridCreated`]({environment:angularApiUrl}/classes/igxrowislandcomponent.html#ongridcreated) は [`parentID`]({environment:angularApiUrl}/interfaces/igridcreatedeventargs.html#parentid) プロパティ、[`owner`]({environment:angularApiUrl}/interfaces/igridcreatedeventargs.html#owner) として行アイランドへの参照、新しい子 [`grid`]({environment:angularApiUrl}/interfaces/igridcreatedeventargs.html#grid) プロパティを提供するため、最初の引数として渡されます。
+親行の `primaryKey` についての情報はありませんが、バインドした行アイランドに基づいて 2 つ目の引数として簡単に渡すことができます。 
 
-The template file `hierarchical-grid-lod.component.html`, with these changes added, would look like this:
+変更を加えたテンプレート ファイル `hierarchical-grid-lod.component.html` は以下のようになります。
 
 ```html
 <igx-hierarchical-grid #hGrid [primaryKey]="'CustomerID'" [autoGenerate]="false" [height]="'600px'" [width]="'100%'">
@@ -189,9 +192,9 @@ The template file `hierarchical-grid-lod.component.html`, with these changes add
 </igx-hierarchical-grid>
 ```
 
-#### Connecting our service
+#### サービスへ接続
 
-One of our final steps now will be to connect our service, that we created earlier, to our hierarchical grid. Since we defined it as an `Injectable`, we can pass it as a provider to our application. We will get a reference to our root grid as well, by using `ViewChild` query to set its data:
+最後の手順の 1 つとして、以前作成したサービスに階層グリッドを接続することです。`Injectable` として定義するため、プロバイダーとしてアプリケーションへ渡すことができます。`ViewChild` クエリをデータに設定してルートグリッドへの参照も取得します。
 
 ````TypeScript
 @Component({
@@ -208,7 +211,7 @@ export class HierarchicalGridLoDSampleComponent {
 }
 ````
 
-In order to make sure that out grid is rendered before we request its data from the service and assign it, we will use the `AfterViewInit` lifecycle hook. As it doesn't have any parents we can only pass that `rootLevel` is `true`, and the key for it, to the `getData` of our service. Since it returns an observable we will need to subscribe to it:
+グリッドがサービスのデータを要求して割り当てる前に描画されることを確認するために、ライフサイクル フックを使用します。親がないため、`rootLevel` は `true` でそのキーのみをサービスの `getData` へ渡すことができます。サブスクライブする必要のある observable を返します。
 
 ````TypeScript
 public ngAfterViewInit() {
@@ -219,7 +222,7 @@ public ngAfterViewInit() {
 }
 ````
 
-Next, we only need to create our `gridCreated` method that will request data for any new child grid created. It will be similar to getting the root level grid data, just this time we will need to pass more information, like `parentID` and `parentKey`. `rootLevel` will be `false` for any child:
+次に作成した新しい子グリッドのデータを要求する `gridCreated` メソッドを作成する必要があります。ルート レベル グリッド データの取得と同様に、ここでは`parentID` や `parentKey` などの情報を渡す必要があります。`rootLevel` はいずれの子も `false` です。
 
 ````TypeScript
 public gridCreated(event: IGridCreatedEventArgs, _parentKey: string) {
@@ -238,13 +241,13 @@ public gridCreated(event: IGridCreatedEventArgs, _parentKey: string) {
 }
 ````
 
-With this, the setup of our application is almost done. The last thing will improve the user experience, since we would like to inform the user that the data is still loading, and he doesn't look at an empty grid in the meantime. That's why the [`IgxHierarchicalGrid`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html) also supports a loading indicator that is displayed while the data is being empty. If new data comes, the loading indicator will hide and the data will be rendered. 
+これにより、アプリケーションの設定はほぼ完了です。最後の手順は、空グリッドを表示する代わりにユーザーにデータがまだ読み込み中であることを通知してユーザー エクスペリエンスを向上します。 [`IgxHierarchicalGrid`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html) は、グリッドが空のときに表示できるインジケーターの読み込みサポートします。新しいデータが取得されると読み込みインジケーターが非表示となりデータが描画されます。 
 
-#### Setup of loading indication
+#### 読み込み通知の設定
 
-The [`IgxHierarchicalGrid`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html) supports by default loading indicator by setting the [`isLoading`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html#isloading) property to `true` while there is no data. We will need to set it initially for the root grid and when creating a child grid until the data is loaded. We could always set it to `true` in our template, but we want to hide it and display that the grid has no data if the service returns an empty array by setting it to `false`.
+[`IgxHierarchicalGrid`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html) は、[`isLoading`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html#isloading) プロパティを `true` に設定して読み込みインジケーターを表示できます。データが読み込まれるまでルートグリッドにあらかじめ設定しますが、新しい子グリッドを作成する際にも必要です。テンプレートで常に `true` に設定できますが、`false` に設定してサービスが空配列を返した場合は非表示にしてデータのないグリッドを表示できます。 
 
-In this case the final version of our `hierarchical-grid-lod.component.ts` would look like this:
+以下は `hierarchical-grid-lod.component.ts` の最終バージョンです。
 
 ````TypeScript
 import { AfterViewInit, Component, ViewChild } from "@angular/core";
@@ -295,19 +298,19 @@ export class HierarchicalGridLoDSampleComponent implements AfterViewInit {
 }
 ````
 
-### API References
+### API リファレンス
 
 * [IgxHierarchicalGridComponent]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html)
 * [IgxRowIslandComponent]({environment:angularApiUrl}/classes/igxrowislandcomponent.html)
 
-### Additional Resources
+### その他のリソース
 
 <div class="divider--half"></div>
 
-* [Hierarchical Grid Component](hierarchical_grid.md)
+* [Hierarchical Grid コンポーネント](hierarchical_grid.md)
 
 <div class="divider--half"></div>
-Our community is active and always welcoming to new ideas.
+コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
