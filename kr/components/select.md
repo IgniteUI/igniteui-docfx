@@ -374,7 +374,11 @@ export class MyClass implements OnInit {
 [**PositionSettings**](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/interfaces/positionsettings.html)
 
 ## Additional Resources
-[**Angular Select**](https://material.angular.io/components/select/overview)  
 [**NgModel**](https://angular.io/api/forms/NgModel)  
-[**ViewChild**](https://angular.io/api/core/ViewChild)
+[**ViewChild**](https://angular.io/api/core/ViewChild)  
 [**ngForOf**](https://angular.io/api/common/NgForOf)
+
+Our community is active and always welcoming to new ideas.
+
+* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
