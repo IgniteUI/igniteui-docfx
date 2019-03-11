@@ -22,7 +22,7 @@ While most tooltips have a limited number of available positions, with the [`igx
 
 ### Setup
 
-To get started with the Ignite UI for Angular Tooltip and Tooltip Target, let's first import the [`IgxTooltipModule`]({environment:angularApiUrl}/classes/igxtooltipmodule.html) in the app.module.ts file.
+To get started with the Ignite UI for Angular Tooltip and Tooltip Target, let's first import the `IgxTooltipModule` in the app.module.ts file.
 
 ```typescript
 // app.module.ts
@@ -41,7 +41,7 @@ export class AppModule {}
 
 ### Simple tooltip
 
-Let's say we want to create a simple text tooltip for an element on our page. In our case, let's use our awesome [**IgxAvatar**](avatar.md) as the element in question by importing the [`IgxAvatarModule`]({environment:angularApiUrl}/classes/igxavatarmodule.html) first.
+Let's say we want to create a simple text tooltip for an element on our page. In our case, let's use our awesome [**IgxAvatar**](avatar.md) as the element in question by importing the `IgxAvatarModule` first.
 
 ```typescript
 // app.module.ts
@@ -127,7 +127,7 @@ What if we want to control the amount of time that should pass before showing an
 
 Now let's add a couple of [**IgxSlider**](slider.md) elements to control the [`showDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#showdelay) and the [`hideDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#hidedelay). In addition, we will also use the [**IgxSwitch**](switch.md) to enable/disable the user interaction over the tooltip target by using the [`tooltipDisabled`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#tooltipdisabled) property of the target.
 
-We will go ahead and get the [`IgxSliderModule`]({environment:angularApiUrl}/classes/igxslidermodule.html) and the [`IgxSwitchModule`]({environment:angularApiUrl}/classes/igxswitchmodule.html).
+We will go ahead and get the `IgxSliderModule` and the `IgxSwitchModule`.
 ```typescript
 // app.module.ts
 
@@ -338,7 +338,6 @@ Extra care should be taken in the following scenarios:
 
 In this article we learned how to create, configure and style awesome tooltips for the elements on our page! We also used some additional Ignite UI for Angular components like icons, avatars and cards to improve on the design of our application! The respective APIs are listed below:
 
-* [`IgxTooltipModule`]({environment:angularApiUrl}/classes/igxtooltipmodule.html)
 * [`IgxTooltipDirective`]({environment:angularApiUrl}/classes/igxtooltipdirective.html)
 * [`IgxTooltipTargetDirective`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html)
 
