@@ -358,7 +358,7 @@ When `year` button (in the subheader) is focused, use:
 
 When a day inside the current month is focused, use:
 - Arrow keys to navigate through the days,
-- Arrow keys to navigation to previous/next month as well,
+- Arrow keys to navigate to previous/next month as well,
 - <kbd>Enter</kbd> key to select the currently focused day.
 
 When a month inside the months view is focused, use:
