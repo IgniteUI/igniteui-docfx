@@ -209,7 +209,7 @@ public customOverlaySettings: OverlaySettings = {
 
 ### グループで選択
 <div class="sample-container loading" style="height: 450px;">
-    <iframe id="select-sample-2-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/data-entries/select-sample-2" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="select-sample-2-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/data-entries/select-sample-2" class="lazyload"></iframe>
 </div>
 
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="select-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
@@ -246,7 +246,7 @@ public items: any[] = [
 
 ### フォームの選択
 <div class="sample-container loading" style="height: 450px;">
-    <iframe id="select-sample-3-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/data-entries/select-sample-3" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="select-sample-3-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/data-entries/select-sample-3" class="lazyload"></iframe>
 </div>
 
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="select-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
@@ -285,7 +285,7 @@ export class MyClass {
 `Igx-select` では[OverlaySettings](https://jp.infragistics.com/products/ignite-ui-angular/docs/typescript/interfaces/overlaysettings.html)のいずれにもバインドしませんが、カスタムな設定を作成して渡すことができます。
 
 <div class="sample-container loading" style="height: 260px;">
-    <iframe id="select-sample-4-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/data-entries/select-sample-4" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="select-sample-4-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/data-entries/select-sample-4" class="lazyload"></iframe>
 </div>
 
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="select-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>

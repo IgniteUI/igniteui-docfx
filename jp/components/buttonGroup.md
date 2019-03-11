@@ -1,4 +1,4 @@
-﻿---
+---
 title: Button Group コンポーネント
 _description: ボタン グループの機能、さらに水平/垂直の配置、単一/複数の選択、および切り替え機能を提供します。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ,  Angular ボタン グループ コンポーネント, Angular Button Group コントロール, Angular Button コンポーネント, Angular Button コントロール
@@ -11,9 +11,9 @@ Ignite UI for Angular [**igx-buttongroup**]({environment:angularApiUrl}/classes/
 
 ### Button Group デモ
 
-<div class="sample-container" style="height: 362px">
-    <iframe id="buttonGroup-sample-1-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/data-entries/button-group-sample-1" onload="onSampleIframeContentLoaded(this);">
-</div>
+<div class="sample-container loading" style="height: 362px">
+    <iframe id="buttonGroup-sample-1-iframe" seamless="" width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/data-entries/button-group-sample-1" onload="onSampleIframeContentLoaded(this);">
+</iframe></div>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="buttonGroup-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
@@ -71,9 +71,9 @@ public alignment = ButtonGroupAlignment.vertical;
 <igx-buttongroup [multiSelection]="false" [values]="cities" [alignment]="alignment">
 </igx-buttongroup>
 ```
-<div class="sample-container" style="height: 164px">
-    <iframe id="buttonGroup-sample-2-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/data-entries/button-group-sample-2" onload="onSampleIframeContentLoaded(this);">
-</div>
+<div class="sample-container loading" style="height: 164px">
+    <iframe id="buttonGroup-sample-2-iframe" seamless="" width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/button-group-sample-2" class="lazyload">
+</iframe></div>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="buttonGroup-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
@@ -114,9 +114,9 @@ public ngOnInit() {
 </igx-buttongroup>
 ```
 
-<div class="sample-container" style="height: 52px">
-    <iframe id="buttonGroup-sample-3-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/data-entries/button-group-sample-3" onload="onSampleIframeContentLoaded(this);">
-</div>
+<div class="sample-container loading" style="height: 52px">
+    <iframe id="buttonGroup-sample-3-iframe" seamless="" width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/button-group-sample-3" class="lazyload">
+</iframe></div>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="buttonGroup-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>

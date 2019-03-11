@@ -1,4 +1,4 @@
-﻿---
+---
 title: オートコンプリート ディレクティブ
 _description: igxAutocomplete ディレクティブは、候補オプションのパネルを表示することによりテキスト入力を向上する方法を提供します。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Autocomplete コンポーネント, Angular Autocomplete ディレクティブ, Angular Autocomplete コントロール
@@ -201,7 +201,7 @@ export class AutocompleteSampleComponent {
 以下のサンプルは、オートコンプリートで映画が city でグループ化されている cinema の選択が可能なリストです。インプットの入力または `Arrow Down` キーを使用してリストを開き、cinema を選択します。次に movie と日付を選択します。
 
 <div class="sample-container loading" style="height: 650px;">
-    <iframe id="autocomplete-movie" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/data-entries/movie" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="autocomplete-movie" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/data-entries/movie" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="autocomplete-movie" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
@@ -231,7 +231,7 @@ export class AutocompleteSampleComponent {
 
 サンプルではデータ読み込みで遅延があり、ドロップダウンの代わりにカスタム読み込みテンプレートを適用しています。
 <div class="sample-container loading" style="height: 400px;">
-    <iframe id="autocomplete-remote-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/data-entries/autocomplete-remote" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="autocomplete-remote-sample" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/data-entries/autocomplete-remote" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="autocomplete-remote-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>

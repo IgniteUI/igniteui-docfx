@@ -1,4 +1,4 @@
-﻿---
+---
 title: Switch コンポーネント
 _description: Ignite UI for Angular Switch コンポーネントはアプリケーションにバイナリ有効/無効または true/false のデータ入力関数を追加します。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Switch コンポーネント, Angular Switch コントロール
@@ -50,8 +50,8 @@ export class AppModule {}
 
 以下は結果です。
 
-<div class="sample-container" style="height: 150px">
-<iframe src='{environment:demosBaseUrl}/data-entries/switch-sample-1' width="100%" height="100%" seamless frameBorder="0"></iframe>
+<div class="sample-container loading" style="height: 150px">
+<iframe data-src='{environment:demosBaseUrl}/data-entries/switch-sample-1' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 
 #### Switch プロパティ
@@ -81,8 +81,8 @@ export class AppModule {}
 
 結果は以下のようになります。
 
-<div class="sample-container" style="height: 200px">
-　　　　<iframe src='{environment:demosBaseUrl}/data-entries/switch-sample-2' width="100%" height="100%" seamless frameBorder="0"></iframe>
+<div class="sample-container loading" style="height: 200px">
+　　　　<iframe data-src='{environment:demosBaseUrl}/data-entries/switch-sample-2' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 
 ### API リファレンス
