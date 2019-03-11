@@ -107,7 +107,7 @@ export class MyOverlayComponent {
 <div class="divider--half"></div>
 
 ### デモ - 動的なアタッチ - コンポーネント
-以下のデモで、IgxCard [デモ](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/card.html#card-デモ) をオーバーレイ サービスの show() メソッドに渡して、モーダル コンテナーで DOM に動的にアタッチします。
+以下のデモで、[IgxCard](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/card.html#card-デモ) をオーバーレイ サービスの show() メソッドに渡して、モーダル コンテナーで DOM に動的にアタッチします。
 
 
 <div class="sample-container loading" style="height: 400px">
@@ -264,7 +264,7 @@ export class ExampleComponent {
             modal: true,
             closeOnOutsideClick: false
         }
-        this.toggleDirective.toggle(true, overlaySettings)
+        this.toggleDirective.toggle(overlaySettings)
     }
 }
 ```
