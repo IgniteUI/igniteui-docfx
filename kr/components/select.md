@@ -369,7 +369,6 @@ export class MyClass implements OnInit {
 [**OverlaySettings**](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/interfaces/overlaysettings.html)  
 [**ConnectedPositioningStrategy**](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/classes/connectedpositioningstrategy.html)  
 [**GlobalPositionStrategy**](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/classes/globalpositionstrategy.html#constructor)  
-[**SelectPositioningStrategy**](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/classes/selectpositioningstrategy.html)  
 [**AbsoluteScrollStrategy**](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/classes/absolutescrollstrategy.html)  
 [**PositionSettings**](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/interfaces/positionsettings.html)
 
