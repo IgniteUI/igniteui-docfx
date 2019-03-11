@@ -152,6 +152,6 @@ In the demo below, the overlay element will position itself starting from the ta
 <div class="divider"></div>
 
 
-## API
+## API References
 
-* [`IPositionStrategy`] ({environment:angularApiUrl}/interfaces/ipositionstrategy.html)
+* [IPositionStrategy] ({environment:angularApiUrl}/interfaces/ipositionstrategy.html)

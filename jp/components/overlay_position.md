@@ -1,4 +1,4 @@
----
+﻿---
 title: Overlay サービス - スクロール ストラテジー
 _description: オーバレイ サービスの IPositionStrategy インターフェイスと実装するクラスについての説明とその例です。
 _language: ja
@@ -22,7 +22,7 @@ _language: ja
     | new Point(0, 0) | HorizontalAlignment.Right | VerticalAlignment.Bottom | HorizontalAlignment.Left | VerticalAlignment.Bottom |
 <div class="divider"></div>
 
-3. **Auto** - **Connected** ポジション ストラテジーとして要素を配置し、要素が表示外となった場合はビューポート (異なる開始ポイントを算出) に要素を再配置します。以下はデフォルトの設定です。
+3. **Auto** - **Connected** ポジション ストラテジーとして要素を配置し、要素が表示外となった場合はビューポート (異なる開始ポイントと方向を計算) に要素を再配置します。以下はデフォルトの設定です。
 
     | target          | horizontalDirection       |  verticalDirection       | horizontalStartPoint     | verticalStartPoint       |
     |:----------------|:--------------------------|:-------------------------|:-------------------------|:-------------------------|
@@ -32,7 +32,7 @@ _language: ja
 > [!NOTE]
 > ストラテジが HorizontalDirection = Center / VerticalDirection = Middle を使用している場合、要素を再配置しないようにします。
 
-4. **Elastic** - **Connected** 配置ストラテジとして要素を配置し、要素の一部が表示範囲外の場合に要素をサイズ変更してビューポイント内 (幅と高さまたはそのいずれかを再計算) にフィットさせます。 `minSize :{ width: number, height: number}` を `positionSettings` へ渡して要素のディメンションが特定のしきい値以下の場合にサイズ変更します。デフォルト値は:
+4. **Elastic** - **Connected** 配置ストラテジとして要素を配置し、要素の一部が表示範囲外の場合に要素をサイズ変更してビューポイント内 (幅と高さまたはそのいずれかを再計算) にフィットさせます。[`minSize`]({environment:angularApiUrl}/interfaces/positionsettings.html#minsize) を `positionSettings` へ渡して要素のディメンションが特定のしきい値以下の場合にサイズ変更します。デフォルト値は:
     
     | target          | horizontalDirection       |  verticalDirection       | horizontalStartPoint     | verticalStartPoint       | minSize               |
     |:----------------|:--------------------------|:-------------------------|:-------------------------|:-------------------------|-----------------------|
@@ -40,7 +40,7 @@ _language: ja
 <div class="divider"></div>
 
 > [!NOTE]
-> ストラテジが HorizontalDirection = Center / VerticalDirection = Middle を使用している場合、要素を再配置しないようにします。
+> ストラテジが HorizontalDirection = Center / VerticalDirection = Middle を使用している場合、要素をサイズ変更しないようにします。
 > [!NOTE]
 > オーバーレイ要素はサイズ変更**されます**が配置ストラテジは `overflow` をハンドルしません。たとえば、サイズ変更時の要素に `overflow-y` が必要な場合、適切なスタイルを組み込んで提供します。 
 
@@ -156,6 +156,6 @@ export class MyExampleOverlayComponent {
 <div class="divider"></div>
 
 
-## API
+## API References
 
-* [`IPositionStrategy`]({environment:angularApiUrl}/interfaces/ipositionstrategy.html)
+* [IPositionStrategy]({environment:angularApiUrl}/interfaces/ipositionstrategy.html)
