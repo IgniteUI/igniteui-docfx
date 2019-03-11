@@ -22,7 +22,7 @@ Ignite UI for Angular Button ディレクティブを任意の button、span、d
 
 ### 依存関係
 
-Button ディレクティブは `NgModule` としてエクスポートされるため、アプリケーションで `AppModule` に [`IgxButtonModule`]({environment:angularApiUrl}/classes/igxbuttonmodule.html) をインポートする必要があります。
+Button ディレクティブは `NgModule` としてエクスポートされるため、アプリケーションで `AppModule` に `IgxButtonModule` をインポートする必要があります。
 
 ```typescript
 // app.module.ts

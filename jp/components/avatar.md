@@ -22,7 +22,7 @@ _language: ja
 
 ### 使用方法
 
-Ignite UI for Angular Avatar を初期化する前に、[`IgxAvatarModule`]({environment:angularApiUrl}/classes/igxavatarmodule.html) を **app.module.ts** ファイルにインポートします。
+Ignite UI for Angular Avatar を初期化する前に、`IgxAvatarModule` を **app.module.ts** ファイルにインポートします。
 
 ```typescript
 // app.module.ts

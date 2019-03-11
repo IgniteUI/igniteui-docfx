@@ -23,7 +23,7 @@ Ignite UI for Angular [`igx-tabs`]({environment:angularApiUrl}/classes/igxtabsco
 
 ### 使用方法
 
-Ignite UI for Angular Tabs コンポーネントを初期化する前に [`IgxTabsModule`]({environment:angularApiUrl}/classes/igxtabsmodule.html) を **app.module.ts** ファイルにインポートします。
+Ignite UI for Angular Tabs コンポーネントを初期化する前に `IgxTabsModule` を **app.module.ts** ファイルにインポートします。
 
 ```typescript
 // app.module.ts
