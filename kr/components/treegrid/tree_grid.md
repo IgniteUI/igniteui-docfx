@@ -21,7 +21,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ### Getting started
 
-The tree grid is exported as an `NgModule`, thus all you need to do in your application is to import the [`IgxTreeGridModule`]({environment:angularApiUrl}/classes/igxtreegridmodule.html) inside your `AppModule`:
+The tree grid is exported as an `NgModule`, thus all you need to do in your application is to import the `IgxTreeGridModule` inside your `AppModule`:
 
 ```typescript
 // app.module.ts
@@ -325,7 +325,6 @@ The indentation of the **tree cells** persists across other tree grid features l
 
 <div class="divider--half"></div>
 
-* [`IgxTreeGridModule`]({environment:angularApiUrl}/classes/igxtreegridmodule.html)
 * [`IgxTreeGridComponent`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html)
 * [`IgxTreeGridCellComponent`]({environment:angularApiUrl}/classes/igxtreegridcellcomponent.html)
 * [`IgxTreeGridRowComponent`]({environment:angularApiUrl}/classes/igxtreegridrowcomponent.html)

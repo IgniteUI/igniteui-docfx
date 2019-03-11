@@ -23,7 +23,7 @@ _language: ja
 ### 使用方法
 
 List コンポーネントは項目の垂直リストを表示します。項目のデフォルト スタイル設定はマテリアル デザイン [**ガイドライン**](https://material.io/guidelines/components/lists.html)の単一行リストの仕様に基づきます。
-Ignite UI for Angular List を初期化する前に、最初に [`IgxListModule`]({environment:angularApiUrl}/classes/igxlistmodule.html) を app.module.ts ファイルにインポートします:
+Ignite UI for Angular List を初期化する前に、最初に `IgxListModule` を app.module.ts ファイルにインポートします:
 
 ```typescript
 // app.module.ts
@@ -494,7 +494,7 @@ public leftPanPerformed(args) {
 </igx-input-group>
 ```
 
-[`IgxFilterModule`]({environment:angularApiUrl}/classes/igxfiltermodule.html) および [`IgxInputGroupModule`]({environment:angularApiUrl}/classes/igxinputgroupmodule.html) を app.module.ts ファイルにインポートし、[`IgxFilterOptions`]({environment:angularApiUrl}/classes/igxfilteroptions.html) を連絡先コンポーネントにインポートします。
+`IgxFilterModule` および `IgxInputGroupModule` を app.module.ts ファイルにインポートし、[`IgxFilterOptions`]({environment:angularApiUrl}/classes/igxfilteroptions.html) を連絡先コンポーネントにインポートします。
 
 ```typescript
     // app.module.ts

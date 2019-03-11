@@ -95,7 +95,7 @@ public ngAfterViewInit() {
 
 ### 사용자 열 숨기기 UI
 
-[`IgxColumnHidingComponent`]({environment:angularApiUrl}/classes/igxcolumnhidingcomponent.html)를 수동으로 정의하고 페이지에 원하는 위치에 배치하는 경우를 가정해 보겠습니다. 단순히 마크업에 컴포넌트의 인스턴스를 작성함으로써 쉽게 실행할 수 있습니다. 이 작업을 하려면 먼저 [`IgxColumnHidingModule`]({environment:angularApiUrl}/classes/igxcolumnhidingmodule.html)을 잡습니다.
+[`IgxColumnHidingComponent`]({environment:angularApiUrl}/classes/igxcolumnhidingcomponent.html)를 수동으로 정의하고 페이지에 원하는 위치에 배치하는 경우를 가정해 보겠습니다. 단순히 마크업에 컴포넌트의 인스턴스를 작성함으로써 쉽게 실행할 수 있습니다. 이 작업을 하려면 먼저 `IgxColumnHidingModule` 을 잡습니다.
 
 ```typescript
 // app.module.ts

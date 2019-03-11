@@ -24,7 +24,7 @@ _language: kr
 Cards allow you to easily display content composed of different types of objects or similar objects whose size and supported actions can vary.
 
 ####Getting Started
-To get started with the Ignite UI for Angular Card, let's first import the [`IgxCardModule`]({environment:angularApiUrl}/classes/igxcardmodule.html) inside our **app.module.ts** file:
+To get started with the Ignite UI for Angular Card, let's first import the `IgxCardModule` inside our **app.module.ts** file:
 
 ```typescript
 // app.module.ts
