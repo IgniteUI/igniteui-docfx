@@ -33,6 +33,9 @@
       new: false
     - name: Filtering
       href: grid/filtering.md
+      new: false
+    - name: Excel Style Filtering
+      href: grid/excel_style_filtering.md
       new: true
     - name: Sorting
       href: grid/sorting.md
@@ -101,6 +104,9 @@
     - name: Filtering
       href: treegrid/filtering.md
       new: false
+    - name: Excel Style Filtering
+      href: treegrid/excel_style_filtering.md
+      new: true
     - name: Sorting
       href: treegrid/sorting.md
       new: false
@@ -167,6 +173,9 @@
       new: true
     - name: Filtering
       href: hierarchicalgrid/filtering.md
+      new: true
+    - name: Excel Style Filtering
+      href: hierarchicalgrid/excel_style_filtering.md
       new: true
     - name: Sorting
       href: hierarchicalgrid/sorting.md
@@ -456,6 +465,9 @@
       new: false
     - name: Examples
       href: themes/examples.md
+- name: Componets Roundness
+  href: roundness.md
+  new: true
 - name: Shadows
   href: shadows.md
 - name: Display Density
@@ -574,6 +586,9 @@
   href: calendar.md
 - name: Date Picker
   href: date_picker.md
+- name: Month Picker
+  href: month_picker.md
+  new: true
 - name: Time Picker
   href: time_picker.md
   new: false

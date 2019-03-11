@@ -15,9 +15,9 @@ _language: ja
 ## 使用方法
 
 各スクロール方法は以下のメソッドがあります。
- - [`initialize`] ({environment:angularApiUrl}/classes/iscrollstrategy.html#initialize) - スクロール方法を初期化します。ドキュメントへの参照、オーバーレイ サービスへの参照、および描画されるコンポーネントの id が必要です。
- - [`attach`] ({environment:angularApiUrl}/classes/iscrollstrategy.html#attach) - スクロール方法を指定した要素またはドキュメントにアタッチします。
- - [`detach`] ({environment:angularApiUrl}/classes/iscrollstrategy.html#detach) - スクロール方法をデタッチします。
+ - [`initialize`]({environment:angularApiUrl}/interfaces/iscrollstrategy.html#initialize) - スクロール方法を初期化します。ドキュメントへの参照、オーバーレイ サービスへの参照、および描画されるコンポーネントの id が必要です。
+ - [`attach`]({environment:angularApiUrl}/interfaces/iscrollstrategy.html#attach) - スクロール方法を指定した要素またはドキュメントにアタッチします。
+ - [`detach`]({environment:angularApiUrl}/interfaces/iscrollstrategy.html#detach) - スクロール方法をデタッチします。
 
 ```typescript
 this.scrollStrategy.initialize(document, overlayService, id);
@@ -28,7 +28,7 @@ this.scrollStrategy.detach();
 <div class="divider--half"></div>
 
 ### 作業の開始
-ポジション ストラテジーは、[`overlay.show()`] ({environment:angularApiUrl}/classes/igxoverlayservice.html#show) メソッドが呼ばれたときに [`overlaySettings`] ({environment:angularApiUrl}/interfaces/overlaysettings.html) パラメーターのプロパティとして渡されます。
+ポジション ストラテジーは、[`overlay.attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) メソッドが呼ばれたときに [`overlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) パラメーターのプロパティとして渡されます。
 ```typescript
     // Initializing and using overlay settings
     const overlaySettings: OverlaySettings = {
@@ -37,11 +37,11 @@ this.scrollStrategy.detach();
         modal: true,
         closeOnOutsideClick: true
     }
-    overlay.show(dummyElement, overlaySettings); 
+    const overlayId = overlay.attach(dummyElement, overlaySettings); 
 ``` 
 <div class="divider"></div>
 
-オーバーレイで使用するスクロール方法の変更は、オーバーレイに渡される [`overlaySettings`] ({environment:angularApiUrl}/interfaces/overlaysettings.html) オブジェクトの [`scrollStrategy`] ({environment:angularApiUrl}/classes/iscrollstrategy.html) プロパティをオーバーライドします。
+オーバーレイで使用するスクロール方法の変更は、オーバーレイに渡される [`overlaySettings`] ({environment:angularApiUrl}/interfaces/overlaysettings.html) オブジェクトの [`scrollStrategy`] ({environment:angularApiUrl}/interfaces/iscrollstrategy.html) プロパティをオーバーライドします。
 ```typescript
     // overlaySettings is an existing object of type OverlaySettings
     // to override the scroll strategy
@@ -63,8 +63,8 @@ import { NoOpScrollStrategy } from "./scroll/NoOpScrollStrategy";
 
 ## デモ
 ### スクロール方法
-オーバーレイのスクロールの処理方法を決定するためにスクロール方法を [`overlaySettings`] ({environment:angularApiUrl}/interfaces/overlaysettings.html) オブジェクトによって渡すことができます。
-以下のデモは複数の [`scrollStrategies`] ({environment:angularApiUrl}/classes/iscrollstrategy.html) を紹介します。
+オーバーレイのスクロールの処理方法を決定するためにスクロール方法を [`overlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) オブジェクトによって渡すことができます。
+以下のデモは複数の [`scrollStrategies`]({environment:angularApiUrl}/interfaces/iscrollstrategy.html) を紹介します。
 <div class="sample-container loading" style="height: 400px">
     <iframe id="overlay-scroll-sample-1-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/interactions/overlay-scroll-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -74,9 +74,9 @@ import { NoOpScrollStrategy } from "./scroll/NoOpScrollStrategy";
 <div class="divider--half"></div>
 
 ### モーダル
-[`overlaySettings`] ({environment:angularApiUrl}/interfaces/overlaysettings.html) オブジェクトに [`modal`] ({environment:angularApiUrl}/interfaces/overlaysettings.html#modal) ブール値を渡すことができます。これはオーバーレイが表示される方法を制御します。
-[`modal`] ({environment:angularApiUrl}/interfaces/overlaysettings.html#modal) プロパティが `false` の場合、要素は DOM 前景にアタッチされますが、すべての要素がまだアクティブで操作可能 (スクロール、クリックなど) です。
-[`modal`] ({environment:angularApiUrl}/interfaces/overlaysettings.html#modal) プロパティが `true` の場合、要素が DOM 前景にアタッチされ、背景の要素が非アクティブなため操作不能となり、すべてのイベントが中止されます。
+[`overlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) オブジェクトに [`modal`] ({environment:angularApiUrl}/interfaces/overlaysettings.html#modal) ブール値を渡すことができます。これはオーバーレイが表示される方法を制御します。
+[`modal`]({environment:angularApiUrl}/interfaces/overlaysettings.html#modal) プロパティが `false` の場合、要素は DOM 前景にアタッチされますが、すべての要素がまだアクティブで操作可能 (スクロール、クリックなど) です。
+[`modal`]({environment:angularApiUrl}/interfaces/overlaysettings.html#modal) プロパティが `true` の場合、要素が DOM 前景にアタッチされ、背景の要素が非アクティブなため操作不能となり、すべてのイベントが中止されます。
 
 <div class="sample-container loading" style="height: 400px">
     <iframe id="overlay-scroll-sample-2-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/interactions/overlay-scroll-sample-2" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -86,6 +86,6 @@ import { NoOpScrollStrategy } from "./scroll/NoOpScrollStrategy";
 </div>
 <div class="divider--half"></div>
 
-## API
+## API References
 
-* [`IScrollStrategy`] ({environment:angularApiUrl}/classes/iscrollstrategy.html)
+* [IScrollStrategy]({environment:angularApiUrl}/interfaces/iscrollstrategy.html)

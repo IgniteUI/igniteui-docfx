@@ -27,22 +27,22 @@ Input Group コンポーネントおよびその関連するディレクティ�
 // app.module.ts
 
 ...
-import { IgxIconModule, IgxInputGroupModule, IgxButtonModule, IgxRippleModule, IgxDatePickerModule, IgxTimePickerModule, IgxComboModule } from "igniteui-angular";
+import { IgxIconModule, IgxInputGroupModule, IgxButtonModule, IgxRippleModule, IgxDatePickerModule, IgxTimePickerModule, IgxComboModule, igxSelectModule } from "igniteui-angular";
 import { FormsModule } from "@angular/forms";
 
 @NgModule({
     ...
-    imports: [..., IgxIconModule, IgxInputGroupModule, IgxButtonModule, IgxRippleModule, IgxDatePickerModule, IgxTimePickerModule, IgxComboModule, FormsModule],
+    imports: [..., IgxIconModule, IgxInputGroupModule, IgxButtonModule, IgxRippleModule, IgxDatePickerModule, IgxTimePickerModule, IgxComboModule, igxSelectModule, FormsModule],
     ...
 })
 export class AppModule {}
 ```
 
 > [!NOTE]
-> [`igxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html)、[`igxLabel`]({environment:angularApiUrl}/classes/igxlabeldirective.html)、[`igx-prefix`]({environment:angularApiUrl}/classes/igxprefixdirective.html)、[`igx-suffix`]({environment:angularApiUrl}/classes/igxsuffixdirective.html)、または [`igx-hint`]({environment:angularApiUrl}/classes/igxhintdirective.html) ディレクティブを使用するには、`<igx-input-group>` コンテナーにラップする必要があります。
+> [`igxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html)、`igxLabel`、`igx-prefix`、`igx-suffix`、または [`igx-hint`]({environment:angularApiUrl}/classes/igxhintdirective.html) ディレクティブを使用するには、`<igx-input-group>` コンテナーにラップする必要があります。
 
 #### Label および Input
-[`igxLabel`]({environment:angularApiUrl}/classes/igxlabeldirective.html) および [`igxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html) ディレクティブとその検証、データ バインディング、API については、[このトピック](label_input.md)を参照してください。
+`igxLabel` および [`igxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html) ディレクティブとその検証、データ バインディング、API については、[このトピック](label_input.md)を参照してください。
 
 #### Prefix と Suffix
 Ignite UI for Angular Prefix または Suffix を使用して入力のプレフィックスまたはサフィックスを追加できます。両方のディレクティブに HTML 要素、文字列、またはその他のコンポーネントを含むことができます。文字列 **prefix** (`+359`) および [`igx-icon`]({environment:angularApiUrl}/classes/igxiconcomponent.html) **suffix** (`<igx-icon>phone</igx-icon>`) を持つ新しい入力フィールドを追加します。
@@ -102,9 +102,6 @@ Ignite UI for Angular Hint は、入力の下に配置されるヘルパー テ�
 * [IgxInputDirective]({environment:angularApiUrl}/classes/igxinputdirective.html)
 * [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
 * [IgxInputGroupComponent Styles]({environment:sassApiUrl}/index.html#function-igx-input-group-theme)
-* [IgxLabelDirective]({environment:angularApiUrl}/classes/igxlabeldirective.html)
-* [IgxPrefixDirective]({environment:angularApiUrl}/classes/igxprefixdirective.html)
-* [IgxSuffixDirective]({environment:angularApiUrl}/classes/igxsuffixdirective.html)
 
 ### その他のリソース
 関連トピック:
@@ -112,6 +109,7 @@ Ignite UI for Angular Hint は、入力の下に配置されるヘルパー テ�
 * [リアクティブ フォームの統合](input_group_reactive_forms.md)
 * [Label と Input](label_input.md)
 * [Combo](combo.md)
+* [Select](select.md)
 * [Display Density](display_density.md)
 
 <div class="divider--half"></div>

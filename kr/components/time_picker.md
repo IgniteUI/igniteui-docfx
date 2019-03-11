@@ -154,14 +154,14 @@ And there we have it:
 
 #### Dropdown mode
 
-When you add the time picker to your project, its default mode is read-only dialog mode. To change the time picker mode to editable dropdown mode, set the [`mode`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#mode) input to [`dropdown`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#TimePickerInteractionMode):
+When you add the time picker to your project, its default mode is read-only dialog mode. To change the time picker mode to editable dropdown mode, set the [`mode`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#mode) input to `dropdown`:
 
 ```typescript
 // timePickerDropdown.component.ts
 
-import { TimePickerInteractionMode } from 'igniteui-angular';
+import { InteractionMode } from 'igniteui-angular';
 ...
-public mode: TimePickerInteractionMode = TimePickerInteractionMode.dropdown;
+public mode = InteractionMode.DropDown;
 ```
 
 ```html

@@ -314,4 +314,4 @@ These can be wired to user interactions, not necessarily related to the **@@igSe
 * [Column Pinning](column_pinning.md)
 * [Column Resizing](column_resizing.md)
 * [Selection](selection.md)
-* [Searching](search.md)
+@@if (igxName !== 'IgxHierarchicalGrid') {* [Searching](search.md)}

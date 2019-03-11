@@ -1,4 +1,4 @@
-﻿---
+---
 title: Date Picker コンポーネント
 _description: Ignite UI for Angular Date Picker コントロールを使用して web アプリケーションにカレンダーから日付を選択する機能を追加できます。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Date Picker コンポーネント, Angular Date Picker コントロール
@@ -38,15 +38,17 @@ import { IgxDatePickerModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-テンプレートに日付ピッカーを追加します。
+デートピッカーの追加は、以下のコードを使用してください。
 
 ```html
+<!-- date-picker-sample.component.html -->
+
 <igx-date-picker></igx-date-picker>
 ```
 
 以下は結果です。
 
-<div class="sample-container loading" style="height: 540px;">
+<div class="sample-container loading" style="height: 550px;">
     <iframe id="date-picker-sample-1" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/scheduling/datepicker-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -59,12 +61,16 @@ export class AppModule {}
 [`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) に日付を設定するには、[`value`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#value) 入力を設定します。日付を追加します。
 
 ```typescript
+// date-picker-sample.component.ts
+
 public date: Date = new Date(Date.now());
 ```
 
 テンプレートで [`value`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#value) 入力を使用します。
 
 ```html
+<!-- date-picker-sample.component.html -->
+
 <igx-date-picker [value]="date"></igx-date-picker>
 ```
 
@@ -78,7 +84,7 @@ public date: Date = new Date(Date.now());
 </div>
 <div class="divider--half"></div>
 
-以下は、`ngModule` で TwoWay データ バインディングを使用する方法です。
+Two-way データ バインディングを作成するには、以下のように `ngModel` を設定します。
 
 ```html
 <igx-date-picker [(ngModel)]="date"></igx-date-picker>
@@ -86,25 +92,30 @@ public date: Date = new Date(Date.now());
 
 #### ボタンの追加
 
-[`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) は、カレンダーからの現在の日を選択する [今日] ボタンをサポートします。[キャンセル] ボタンも有効にできます。テンプレートでボタンを有効にするには、以下のコードを使用します。
+[`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) は、カレンダーで今日を選択する ‘今日’ ボタンをサポートします。'キャンセル 'ボタンも有効にできます。 
+
+>Note: Configuring the 'Today' and 'Cancel' buttons is applicable only to the read-only mode date picker.
+
+ボタンを有効にするには、 [`cancelButtonLabel`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#cancelbuttonlabel) と [`todayButtonLabel`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#todaybuttonlabel) 入力を使用してボタン テキストを設定します。 
 
 ```html
+<!-- date-picker-sample.component.html -->
+
 <igx-date-picker cancelButtonLabel="cancel" todayButtonLabel="today" [(ngModel)]="date"></igx-date-picker>
 ```
 
 ボタンが表示されるサンプル:
-
 <div class="sample-container loading" style="height: 580px;">
     <iframe id="date-picker-sample-3" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/scheduling/datepicker-sample-3" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="date-picker-sample-3" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="date-picker-sample-3" data-demos-base-url="{environment:demosBaseUrl}">stackblitz　で表示</button>
 </div>
 <div class="divider--half"></div>
 
 #### カスタム書式設定
 
-デフォルトで日付は設定した [`locale`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#locale) に基づいて書式設定され、カスタム フォーマッタも使用できます。フォーマッタ関数の追加:
+デフォルトで表示する値は指定した [`locale`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#locale) に基づいて書式設定され、カスタム フォーマッタも使用できます。フォーマッタ関数の追加:
 
 ```typescript
 public date: Date = new Date(Date.now());
@@ -120,21 +131,22 @@ public formatter = (date: Date) => {
 次に [`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) の [`formatter`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#formatter) 入力を使用します。
 
 ```html
+<!-- date-picker-sample.component.html -->
+
 <igx-date-picker [value]="date" [formatter]="formatter"></igx-date-picker>
 ```
 
 書式設定した日付を表示するサンプル:
-
 <div class="sample-container loading" style="height: 540px;">
     <iframe id="date-picker-sample-4" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/scheduling/datepicker-sample-4" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="date-picker-sample-4" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="date-picker-sample-4" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
-#### Editable mode
-By default, the date picker is displayed in read-only mode. To change it to editable mode, set the [`mode`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#mode) input to `editable`.
+#### 編集モード
+デフォルトでデート ピッカーは読み取り専用モードで表示されます。編集可能なモードに変更するには、[`mode`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#mode) 入力を `editable` に設定します。
 
 ```html
 <!-- date-picker-sample.component.html -->
@@ -142,51 +154,69 @@ By default, the date picker is displayed in read-only mode. To change it to edit
 <igx-date-picker mode="editable"></igx-date-picker>
 ```
 
-You can further customize the editable date picker, configuring the following date picker inputs:
+デートピッカーは、以下のデートピッカー入力を設定して更にカスタマイズできます。
 
-| Input | Type | Description | 
+| 入力 | タイプ | 説明 | 
 | ------------- |:-------------:|:-------------:| 
-| [`format`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#format) | `string` | Configures the date display format. Accepts formats containing valid symbols and combinations that can be applied on Angular Date Pipe. For more information, check [DatePipe](https://angular.io/api/common/DatePipe) documentation. The following pre-defined format options are supported as well - shortDate, mediumDate, longDate and fullDate. |
-| [`mask`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#mask)|`string`| Configures the date editor mask. Accepts combinations of the numeric representations of the d, M and y symbols and arbitrary separators - for example dd-MM-y. The editor doesn't accept the literal representation of MMM, MMMM and MMMMM. Valid masks for the day part are: d and dd, for the month part - M and MM and for the year part - y, yy and yyyy.|
-| [`isSpinLoop`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#isspinloop) | `boolean` | Configures the continuos spin loop when using the <kbd>UP</kbd> and <kbd>DOWN</kbd> arrow keys in the editor. If set to false, date part spinning stops when min/max date/month is reached. By default, the spin loop is infinite.|
-| [`locale`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#locale) | `string` | When setting the locale property in editable date picker, have in mind that only the en-US locale data comes with Angular. To localize dates in another language, you must import the corresponding locale data. See the [I18n](https://angular.io/guide/i18n#i18n-pipes) guide for more information.|
+| [`format`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#format) | `string` | 日付の表示書式を設定します。有効な記号と含む書式を受け付けます。詳細については、[DatePipe](https://angular.io/api/common/DatePipe) をご覧ください。shortDate, mediumDate, longDate and fullDate など定義済みの書式オプションもサポートされます。 |
+| [`mask`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#mask)|`string`|日付エディター マスクの設定d、M、y 記号の数値表記や dd-MM-y などの任意のセパレーターの組み合わせを受け付けます。エディターは MMM、MMMM、MMMMM の文字表記を受け取りません。有効なマスクの日の部分は d と dd、月部分は M と MM、年部分は y、yy、yyyy となります。|
+| [`isSpinLoop`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#isspinloop) | `boolean` | 継続するスピン ループを設定します。false に設定すると、日付部分のスピンが停止します。デフォルトでスピン ループは無限ループです。|
+| [`locale`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#locale) | `string` | ロケール プロパティを設定する場合に Angular に含まれるロケールが en-US のみであることに注意してください。その他の日付をローカライズするためには対応するロケール データをインポートする必要があります。詳細については、[I18n](https://angular.io/guide/i18n#i18n-pipes) ガイドをご覧ください。|
 
 
 > Note: If both [`formatter`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#formatter) and [`format`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#format) inputs are set, the editable date picker ignores the [`formatter`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#formatter) input.
 
 The editable date picker provides the following outputs to handle entering of disabled and invalid dates:
 
-| Output | Arguments | Description | 
+| Output | Arguments | 説明 | 
 | ------------- |:-------------:|:-------------:|
-| [`onDisabledDate`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#ondisableddate) | `IDatePickerDisabledDateEventArgs` | Fires when the user types/spins a disabled date in the date picker editor. |
-| [`onValidationFailed`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#onvalidationfailed) | `IDatePickerValidationFailedEventArgs` | Fires when the user types/spins invalid date in the date picker editor. |
+| [ | `IDatePickerDisabledDateEventArgs` | デートピッカーでユーザーが無効な日付を入力またはスピンした場合に発生します。 |
+| [`onValidationFailed`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#onvalidationfailed) | `IDatePickerValidationFailedEventArgs` | デートピッカーでユーザー無効なな日付を入力またはスピンした場合に発生します。 |
 
-##### Keyboard Navigation
-* To open the date picker drop down: 
+##### キーボード ナビゲーション
+* デートピッカー ドロップダウンを開く: 
     * <kbd>SPACE</kbd>
     * <kbd>ALT</kbd> + <kbd>DOWN</kbd> 
-*  To close the date picker drop down:
+*  デートピッカー ドロップダウンを閉じる:
     * <kbd>ESC</kbd>
     * <kbd>ALT</kbd> + <kbd>UP</kbd> 
-*  To increment a date part:
-    * Focus on a date part + <kbd>UP</kbd> 
-*  To decrement a date part:
-    * Focus on a date part + <kbd>DOWN</kbd> 
+*  日付部分のインクリメント:
+    * 日付部分にフォーカス + <kbd>UP</kbd> 
+*  日付部分のデクリメント:
+    * 日付部分にフォーカス + <kbd>DOWN</kbd> 
 
 <div class="sample-container loading" style="height: 600px;">
     <iframe id="date-picker-dropdown" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/scheduling/datepicker-dropdown" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="date-picker-dropdown" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="date-picker-dropdown" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
 
 #### 入力グループのテンプレート化
 
-Date Picker の入力グループをカスタマイズできます。デートピッカー内にネストした ng-template を `IgxDatePickerTemplate`ディレクティブでデコレートする必要があります。ng-template コンテキストは、次のメンバーを公開します。`openDialog` メソッドはデートピッカーダイアログに使用できます。[`displayData`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#displaydata)プロパティは書式設定の値を含みます。[`value`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#value) は実際の値を含みます。ng-template 要素で変数を宣言して使用することができます。
+Date Picker の入力グループをカスタマイズできます。To do that, we need to decorate the nested ng-template inside the date picker with `IgxDatePickerTemplate` directive.ng-template コンテキストは以下のメンバーを公開します。
 
-以下の例では、デフォルトのラベル "Date" を変更して 2 つ目のアイコンをサフィックスとして追加します。ラベルを使用して実際のデートピッカーの値を表示する入力グループです。
+| メンバー | 説明 | 
+| ------------- |:-------------:| 
+| `openDialog` | 日付の選択 ダイアログを開くために使用できるメソッド。 |
+| [`disabled`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#disabled) | デートピッカーの無効状態を制御します。 |
+| [`disabledDates`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#disableddates) | 無効な日付を含みます。 |
+| [`displayData`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#displaydata) | デートピッカーが読み取り専用モード時に書式設定付きの値を含みます。 |
+| [`format`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#format) | デートピッカーの編集モード時に表示書式を含みます。 |
+| [`isSpinLoop`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#isspinloop) | デートピッカーの編集モード時に連続スピンループを制御します。 |
+| [`label`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#label) | 入力テキストを含みます。 |
+| [`labelVisibility`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#labelvisibility) | 入力ラベル テキストの表示を制御します。 |
+| [`locale`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#locale) | 日付の書式設定と表示のためのロケールを含みます。 |
+| [`mask`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#mask) | デートピッカーの編集モード時にマスクを含みます。 |
+| [`mode`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#mode) | デートピッカー モードを含みます。 |
+| [`specialDates`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#specialDates) | 特定の日付を含みます。 |
+| [`value`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#value) | 実数値を含みます。 |
+
+ng-template 要素で変数を宣言して使用することができます。
+
+以下の例では、デフォルトのラベル "Date" を変更して 2 つ目のアイコンをサフィックスとして追加します。以下は入力グループで実際のデートピッカーの値を表示するラベルを設定します。
 
 ```html
 <igx-date-picker [value]="date">
@@ -214,7 +244,7 @@ public date: Date = new Date(Date.now());
     <iframe id="date-picker-sample-6" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/scheduling/datepicker-sample-6" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="date-picker-sample-6" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="date-picker-sample-6" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
