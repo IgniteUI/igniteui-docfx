@@ -57,8 +57,8 @@ Instantiating the [`IgxCalendarComponent`]({environment:angularApiUrl}/classes/i
 <igx-calendar selection="range"></igx-calendar>
 ```
 Notice that the calendar header is not rendered when the selection is either `multi` or `range`:
-<div class="sample-container" style="height: 730px">
-    <iframe id="calendar-sample-1-iframe" src='{environment:demosBaseUrl}/scheduling/calendar-sample-1' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 730px">
+    <iframe id="calendar-sample-1-iframe" data-src='{environment:demosBaseUrl}/scheduling/calendar-sample-1' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="calendar-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
@@ -108,8 +108,8 @@ public changeLocale(event) {
 
 Great, we should now have a calendar with customized dates display that also changes the locale representation based on the user location. Let's have a look at it:
 
-<div class="sample-container" style="height: 570px">
-    <iframe id="calendar-sample-2-iframe" src='{environment:demosBaseUrl}/scheduling/calendar-sample-2' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 570px">
+    <iframe id="calendar-sample-2-iframe" data-src='{environment:demosBaseUrl}/scheduling/calendar-sample-2' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="calendar-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
@@ -141,8 +141,8 @@ public verifyRange(dates: Date[]) {
 ```
 
 Let's try this out by playing around with selecting ranges:
-<div class="sample-container" style="height: 460px">
-    <iframe id="calendar-sample-3-iframe" src='{environment:demosBaseUrl}/scheduling/calendar-sample-3' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 460px">
+    <iframe id="calendar-sample-3-iframe" data-src='{environment:demosBaseUrl}/scheduling/calendar-sample-3' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="calendar-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
@@ -223,8 +223,8 @@ public getDatePart(val: any, component: any, datePart: string) {
 
 Having implemented this conditional templating and date parsing we should get consistent formatting across all browsers, let's verify that:
 
-<div class="sample-container" style="height: 570px">
-    <iframe id="calendar-sample-4-iframe" src='{environment:demosBaseUrl}/scheduling/calendar-sample-4' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 570px">
+    <iframe id="calendar-sample-4-iframe" data-src='{environment:demosBaseUrl}/scheduling/calendar-sample-4' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="calendar-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
@@ -265,8 +265,8 @@ export class CalendarSample6Component {
 
 This is the result.
 
-<div class="sample-container" style="height: 480px">
-    <iframe id="calendar-sample-6-iframe" src='{environment:demosBaseUrl}/scheduling/calendar-sample-6' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 480px">
+    <iframe id="calendar-sample-6-iframe" data-src='{environment:demosBaseUrl}/scheduling/calendar-sample-6' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="calendar-sample-6-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
@@ -318,8 +318,8 @@ We are going to use the selected dates array to define `Special dates` descripto
 
 Result:
 
-<div class="sample-container" style="height: 540px">
-    <iframe id="calendar-sample-7-iframe" src='{environment:demosBaseUrl}/scheduling/calendar-sample-7' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 540px">
+    <iframe id="calendar-sample-7-iframe" data-src='{environment:demosBaseUrl}/scheduling/calendar-sample-7' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="calendar-sample-7-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
@@ -331,8 +331,8 @@ There are separate views provided by the [`IgxCalendarModule`]({environment:angu
 - Months View - `igx-months-view`
 - Years View - `igx-years-view`
 
-<div class="sample-container" style="height: 540px">
-    <iframe id="calendar-views-iframe" src='{environment:demosBaseUrl}/scheduling/calendar-views' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 540px">
+    <iframe id="calendar-views-iframe" data-src='{environment:demosBaseUrl}/scheduling/calendar-views' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="calendar-views-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
