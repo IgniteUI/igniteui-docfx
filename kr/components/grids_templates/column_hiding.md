@@ -1,4 +1,4 @@
-﻿---
+---
 title: 열 숨기기 컴포넌트 - 네이티브 Angular| Ignite UI for Angular
 _description: Ignite UI for Angular 열 숨기기 컴포넌트는 데이터 그리드의 기본 UI를 사용하여 사용자가 열을 숨기거나 표시할 수 있습니다.
 _keywords: Ignite UI for Angular, UI 컨트롤, Angular 위젯, 웹 위젯, UI 위젯, Angular, 네이티브 Angular 컴포넌트 세트, 네이티브 Angular 컨트롤, 네이티브 Angular 컴포넌트 라이브러리, 네이티브 Angular 컴포넌트, Angular 데이터 그리드 컴포넌트, Angular 데이터 그리드 컨트롤, Angular 그리드 컴포넌트, Angular 그리드 컨트롤, Angular 고성능 그리드, 그리드 열 숨기기, 열 숨기기, Angular 그리드 열 숨기기, Angular 열 숨기기
@@ -246,7 +246,7 @@ export class AppModule {}
 모든 것이 잘 진행되었다면 다음과 같이 열 숨기기 UI 컴포넌트가 표시됩니다:
 
 <div class="sample-container loading" style="height:650px">
-    <iframe id="grid-column-hiding-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-column-hiding-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="grid-column-hiding-sample-iframe" data-src='{environment:demosBaseUrl}/grid/grid-column-hiding-sample' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <br/>
 <div>

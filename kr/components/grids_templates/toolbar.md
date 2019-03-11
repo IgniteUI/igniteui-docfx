@@ -1,4 +1,4 @@
-﻿---
+---
 title: 그리드 툴 모음 컴포넌트- 네이티브 Angular| Ignite UI for Angular
 _description: Ignite UI for Angular 그리드 툴 모음 컴포넌트를 사용하면 IgxGrid 기능 UI 컨트롤의 중앙 위치를 지정할 수 있습니다.
 _keywords: Ignite UI for Angular, UI 컨트롤, Angular 위젯, 웹 위젯, UI 위젯, Angular, 네이티브 Angular 컴포넌트 세트, 네이티브 Angular 컨트롤, 네이티브 Angular 컴포넌트 라이브러리, 네이티브 Angular 컴포넌트, Angular 그리드, Angular 데이터 그리드 컴포넌트, Angular 데이터 그리드 컨트롤, Angular 그리드 컴포넌트, Angular 그리드 컨트롤, Angular 고성능 그리드, Angular 데이터 그리드 툴 모음, 그리드 툴 모음, Angular 그리드 툴 모음, Excel 내보내기, 그리드 열 숨기기 선택기, 그리드 열 핀 고정 선택기
@@ -39,7 +39,7 @@ IgxGrid의 툴 모음은 열 숨기기, 열 핀 고정, 데이터를 MS Excel �
 각 버튼의 텍스트를 설정하는 속성에 대해서는 이하의 API 부분에 열거되어 있습니다.
 
 <div class="sample-container loading" style="height:420px">
-    <iframe id="grid-toolbar-sample-2-iframe" src='{environment:demosBaseUrl}/grid/grid-toolbar-sample-2' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="grid-toolbar-sample-2-iframe" data-src='{environment:demosBaseUrl}/grid/grid-toolbar-sample-2' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <br/>
 <div>
@@ -122,7 +122,7 @@ public toolbarExportingHandler(args) {
 다음 샘플에서는 내보내기 파일을 사용자 지정하는 방법을 보여줍니다.
 
 <div class="sample-container loading" style="height:420px">
-    <iframe id="grid-toolbar-sample-3-iframe" src='{environment:demosBaseUrl}/grid/grid-toolbar-sample-3' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="grid-toolbar-sample-3-iframe" data-src='{environment:demosBaseUrl}/grid/grid-toolbar-sample-3' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <br/>
 <div>
@@ -157,7 +157,7 @@ If you need to add some application specific UI to the toolbar (like custom butt
 The following sample demonstrates how to add an additional button to the toolbar to clear the sorting set by clicking on the columns' headers:
 
 <div class="sample-container loading" style="height:420px">
-    <iframe id="grid-toolbar-sample-4-iframe" src='{environment:demosBaseUrl}/grid/grid-toolbar-sample-4' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="grid-toolbar-sample-4-iframe" data-src='{environment:demosBaseUrl}/grid/grid-toolbar-sample-4' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <br/>
 <div>
