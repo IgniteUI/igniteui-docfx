@@ -20,7 +20,7 @@ The [`igxToggle`]({environment:angularApiUrl}/classes/igxtoggledirective.html) d
 
 ##Usage
 The toggle allows you easily to wrap some content into a box which easily can be opened and closed.
-To get started with the IgniteUI for Angular Toggle, let's first import the [**IgxToggleModule**]({environment:angularApiUrl}/classes/igxtogglemodule.html) in our **app.module.ts**. We are also planning to take advantage of [**igxButton**]({environment:angularApiUrl}/classes/igxbuttondirective.html) directive so we will have to import [**IgxButtonModule**]({environment:angularApiUrl}/classes/igxbuttonmodule.html) into the **app.module.ts** too.
+To get started with the IgniteUI for Angular Toggle, let's first import the **IgxToggleModule** in our **app.module.ts**. We are also planning to take advantage of [**igxButton**]({environment:angularApiUrl}/classes/igxbuttondirective.html) directive so we will have to import **IgxButtonModule** into the **app.module.ts** too.
 
 ```typescript
 // app.module.ts
@@ -149,7 +149,7 @@ The [`igxToggle`]({environment:angularApiUrl}/classes/igxtoggledirective.html) u
 
 ### Automatic toggle actions
 
-In order to prevent this invocation of these methods there is a directive which has `onClick` handler and changes the state to the toggle we are referred to. So let's dive in. If we would like to take advantage of this functionality we will have to use [**IgxToggleActionDirective**]({environment:angularApiUrl}/classes/igxtoggleactiondirective.html) which is comming from the same [**IgxToggleModule**]({environment:angularApiUrl}/classes/igxtogglemodule.html).
+In order to prevent the invocation of these methods there is a directive which has `onClick` handler and changes the state to the toggle we are referred to. So let's dive in. If we would like to take advantage of this functionality we will have to use [**IgxToggleActionDirective**]({environment:angularApiUrl}/classes/igxtoggleactiondirective.html) which is coming from the same **IgxToggleModule**.
 
 ```typescript
 // app.module.ts
