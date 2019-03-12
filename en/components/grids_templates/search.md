@@ -377,7 +377,7 @@ Additional components and/or directives with relative APIs that were used:
 
 Styles:
 
-* [@@igxNameComponentStyles`]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 * [IgxInputGroupComponent Styles]({environment:sassApiUrl}/index.html#function-igx-input-group-theme)
 * [IgxIconComponent Styles]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
 * [IgxRippleDirective Styles]({environment:sassApiUrl}/index.html#function-igx-ripple-theme)
