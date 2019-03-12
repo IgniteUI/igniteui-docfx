@@ -132,8 +132,8 @@ this.excelExportService.export(this.@@igObjectRef, new IgxExcelExporterOptions("
 
 以下は、その他の Excel Exporter サービスの API です。
 
-* [`IgxExcelExporterService API`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html)
-* [`IgxExcelExporterOptions API`]({environment:angularApiUrl}/classes/igxexcelexporteroptions.html)
+* [IgxExcelExporterService API]({environment:angularApiUrl}/classes/igxexcelexporterservice.html)
+* [IgxExcelExporterOptions API]({environment:angularApiUrl}/classes/igxexcelexporteroptions.html)
 
 使用したその他のコンポーネント:
 

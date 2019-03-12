@@ -113,8 +113,8 @@ When you are exporting data from the @@igComponent component, the export process
 
 The Excel Exporter service has a few more APIs to explore, which are listed below.
 
-* [`IgxExcelExporterService API`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html)
-* [`IgxExcelExporterOptions API`]({environment:angularApiUrl}/classes/igxexcelexporteroptions.html)
+* [IgxExcelExporterService API]({environment:angularApiUrl}/classes/igxexcelexporterservice.html)
+* [IgxExcelExporterOptions API]({environment:angularApiUrl}/classes/igxexcelexporteroptions.html)
 
 Additional components that were used:
 

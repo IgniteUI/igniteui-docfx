@@ -353,36 +353,36 @@ public clearSearch() {
 このトピックでは、@@igComponent にカスタム検索バーを実装し、更に検索結果を移動する際の機能を追加しました。アイコン、チップ、入力などその他の Ignite UI for Angular コンポーネントも使用しています。以下は検索 API です。
 
 [`@@igxNameComponent`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) メソッド:
--   [`findNext`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findnext)
--   [`findPrev`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findprev)
--   [`clearSearch`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#clearsearch)
--   [`refreshSearch`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#refreshsearch)
+-   [findNext]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findnext)
+-   [findPrev]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findprev)
+-   [clearSearch]({environment:angularApiUrl}/classes/@@igTypeDoc.html#clearsearch)
+-   [refreshSearch]({environment:angularApiUrl}/classes/@@igTypeDoc.html#refreshsearch)
 
 [`IgxGridCellComponent`]({environment:angularApiUrl}/classes/igxgridcellcomponent.html) メソッド:
--   [`highlightText`]({environment:angularApiUrl}/classes/igxgridcellcomponent.html#highlighttext)
--   [`clearHighlight`]({environment:angularApiUrl}/classes/igxgridcellcomponent.html#clearhighlight)
+-   [highlightText]({environment:angularApiUrl}/classes/igxgridcellcomponent.html#highlighttext)
+-   [clearHighlight]({environment:angularApiUrl}/classes/igxgridcellcomponent.html#clearhighlight)
 
 [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) プロパティ:
--   [`searchable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#searchable)
+-   [searchable]({environment:angularApiUrl}/classes/igxcolumncomponent.html#searchable)
 
-[`ISearchInfo`]({environment:angularApiUrl}/interfaces/isearchinfo.html)
+[ISearchInfo]({environment:angularApiUrl}/interfaces/isearchinfo.html)
 
 その他のコンポーネントおよびディレクティブ (またはそのいずれか) で使用した API:
 
-* [`IgxInputGroupComponent`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
-* [`IgxIconComponent`]({environment:angularApiUrl}/classes/igxiconcomponent.html)
-* [`IgxRippleDirective`]({environment:angularApiUrl}/classes/igxrippledirective.html)
-* [`IgxButtonDirective`]({environment:angularApiUrl}/classes/igxbuttondirective.html)
-* [`IgxChipComponent`]({environment:angularApiUrl}/classes/igxchipcomponent.html)
+* [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
+* [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
+* [IgxRippleDirective]({environment:angularApiUrl}/classes/igxrippledirective.html)
+* [IgxButtonDirective]({environment:angularApiUrl}/classes/igxbuttondirective.html)
+* [IgxChipComponent]({environment:angularApiUrl}/classes/igxchipcomponent.html)
 
 スタイル:
 
-* [`@@igxNameComponent スタイル`]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
-* [`IgxInputGroupComponent スタイル`]({environment:sassApiUrl}/index.html#function-igx-input-group-theme)
-* [`IgxIconComponent スタイル`]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
-* [`IgxRippleDirective スタイル`]({environment:sassApiUrl}/index.html#function-igx-ripple-theme)
-* [`IgxButtonDirective スタイル`]({environment:sassApiUrl}/index.html#function-igx-button-theme)
-* [`IgxChipComponent スタイル`]({environment:sassApiUrl}/index.html#function-igx-chip-theme)
+* [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [IgxInputGroupComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-input-group-theme)
+* [IgxIconComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
+* [IgxRippleDirective スタイル]({environment:sassApiUrl}/index.html#function-igx-ripple-theme)
+* [IgxButtonDirective スタイル]({environment:sassApiUrl}/index.html#function-igx-button-theme)
+* [IgxChipComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-chip-theme)
 
 ### その他のリソース
 <div class="divider--half"></div>
