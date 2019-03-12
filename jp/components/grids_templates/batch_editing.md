@@ -37,7 +37,7 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 一括編集機能を使用するには igniteui-angular から [`HierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) をインポートする必要があります。トランザクションは、適用された変更をトランザクション ログとして蓄積し、各変更済みの行とその状態を保持するプロバイダーです。
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-[`TransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) と [`IgxHierarchicalGridComponent`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html) を使用した場合も各アイランドに個別のトランザクション ログを累積させるには、代わりにサービス ファクトリが必要です。エクスポートされて ['IgxHierarchicalTransactionServiceFactory']({environment:angularApiUrl}/classes/igxhierarchicaltransactionservicefactory.html) として利用できます。
+[`TransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) と [`IgxHierarchicalGridComponent`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html) を使用した場合も各アイランドに個別のトランザクション ログを累積させるには、代わりにサービス ファクトリが必要です。エクスポートされて [`IgxHierarchicalTransactionServiceFactory`]({environment:angularApiUrl}/index.html#igxhierarchicaltransactionservicefactory) として利用できます。
 }
 
 #### デモ
@@ -375,7 +375,7 @@ export class HierarchicalGridBatchEditingSampleComponent {
 * [`IgxGridComponent`]({environment:angularApiUrl}/classes/igxgridcomponent.html)
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-[`igxHierarchicalTransactionServiceFactory`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservicefactory.html)
+[igxHierarchicalTransactionServiceFactory]({environment:angularApiUrl}/index.html#igxhierarchicaltransactionservicefactory)
 }
 
 ### その他のリソース

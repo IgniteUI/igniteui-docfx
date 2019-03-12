@@ -227,9 +227,10 @@ export class AutocompleteSampleComponent {
 ```
 
 ### オートコンプリートをリモートデータにバインド
-以下は、リモートサービスにバインドされたドロップダウンと `igxAutocomplete` のサンプルです。サービスの要求を制限してパフォーマンスを向上するために、RxJS `debounce` を使用して入力が終わった後に`250ms` で要求します。 
+以下は、リモートサービスにバインドされたドロップダウンと `igxAutocomplete` のサンプルです。サービスへのリクエストを制限してパフォーマンスを向上させるために、RxJS `debounce` を使用し、入力が終わった `250ms` 後にリクエストします。
 
-サンプルではデータ読み込みで遅延があり、ドロップダウンの代わりにカスタム読み込みテンプレートを適用しています。
+サンプルでドロップダウンの代わりにカスタムの読み込みテンプレートを適用しているため、表示時にデータの読み込みで遅延が発生します。
+
 <div class="sample-container loading" style="height: 400px;">
     <iframe id="autocomplete-remote-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/data-entries/autocomplete-remote" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -253,7 +254,7 @@ export class AutocompleteSampleComponent {
 * [IgxDropDownComponent](drop_down.md)
 * [IgxInputGroup](input_group.md)
 * [テンプレート駆動フォームの統合](input_group.md)
-* [Reactive Forms Integration](input_group_reactive_forms.md)
+* [Reactive Forms インテグレーション](input_group_reactive_forms.md)
 
 コミュニティに参加して新しいアイデアをご提案ください。
 
