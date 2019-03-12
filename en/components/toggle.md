@@ -148,16 +148,17 @@ The [`igxToggle`]({environment:angularApiUrl}/classes/igxtoggledirective.html) u
     </button>
 </div>
 
-***Note***: We have set [`closeOnOutsideClick`]({environment:angularApiUrl}/interfaces/overlaysettings.html#closeonoutsideclick) to `false`. We do so because it will not work with toggle button. If we set [`closeOnOutsideClick`]({environment:angularApiUrl}/interfaces/overlaysettings.html#closeonoutsideclick) to `true` the events will happen in this order: 
-1. Click on toggle button will show the toggle element; 
-2. Click on toggle button, with toggle element shown, will: 
-- fire close on outside click. This will try to close the toggle element; 
-- fire click on the toggle button. This will try to open the toggle element; 
+***Note***: By defaut [`closeOnOutsideClick`]({environment:angularApiUrl}/interfaces/overlaysettings.html#closeonoutsideclick) is set to `false`. If set to `true` there are limitations in the behavior which we'll explain below.
 
-As a result toggle element will not close. To solve this behavior you may: 
-- set the button as [`target`]({environment:angularApiUrl}/interfaces/positionsettings.html#target). Then set [`excludePositionTarget`]({environment:angularApiUrl}/interfaces/overlaysettings.html#excludePositionTarget) to true;
-- set [`closeOnOutsideClick`]({environment:angularApiUrl}/interfaces/overlaysettings.html#closeonoutsideclick) to `false` as in the sample above; 
-- use [`IgxToggleActionDirective`]({environment:angularApiUrl}/classes/igxtoggleactiondirective.html) as described bellow;
+1. If the toggle element is hidden when the toggle button is clicked the element will be shown.  
+2. If toggle button is clicked, while toggle element is shown - the following events will occur: 
+- fire close on outside click - as a result the toggle element gets closed
+- fire click on the toggle button - as a result the toggle tries to open the toggle element; 
+
+Those two events neutralize each other and nothing happens. In order to achieve the desired behavior there a couple of options listed below: 
+- set the button as [`target`]({environment:angularApiUrl}/interfaces/positionsettings.html#target) and set [`excludePositionTarget`]({environment:angularApiUrl}/interfaces/overlaysettings.html#excludePositionTarget) to true
+- set [`closeOnOutsideClick`]({environment:angularApiUrl}/interfaces/overlaysettings.html#closeonoutsideclick) to `false` as in the sample above
+- use [`IgxToggleActionDirective`]({environment:angularApiUrl}/classes/igxtoggleactiondirective.html) as described below;
 
 ### Automatic toggle actions
 
