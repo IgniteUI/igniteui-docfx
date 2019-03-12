@@ -10,7 +10,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <div class="divider"></div>
 
 > [!NOTE]
-> `igx-tab-bar` selector is deprecated. You could use [`igx-bottom-nav`]({environment:angularApiUrl}/classes/igxbottomnavcomponent.html) instead. `IgxTabBarComponent` class is renamed to [`IgxBottomNavComponent`]({environment:angularApiUrl}/classes/igxbottomnavcomponent.html). `IgxTabBarModule` is renamed to [`IgxBottomNavModule`]({environment:angularApiUrl}/classes/igxbottomnavmodule.html).
+> `igx-tab-bar` selector is deprecated. You could use [`igx-bottom-nav`]({environment:angularApiUrl}/classes/igxbottomnavcomponent.html) instead. `IgxTabBarComponent` class is renamed to [`IgxBottomNavComponent`]({environment:angularApiUrl}/classes/igxbottomnavcomponent.html). `IgxTabBarModule` is renamed to `IgxBottomNavModule`.
 
 ### Bottom Navigation Demo
 
@@ -27,7 +27,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ### Usage
 
-To get started with the control, let's first import the [`IgxBottomNavModule`]({environment:angularApiUrl}/classes/igxbottomnavmodule.html) in the **app.module.ts** file:
+To get started with the control, let's first import the `IgxBottomNavModule` in the **app.module.ts** file:
 
 ```typescript
 // app.module.ts
@@ -193,7 +193,7 @@ Here is an example:
 You can combine other Ignite UI for Angular components with the Bottom Navigation to achieve more complex applications.
 For example you may use the [`IgxListComponent`]({environment:angularApiUrl}/classes/igxlistcomponent.html) to create a list of contacts in a Bottom Navigation's panel and also visualize each contact using [`IgxAvatarComponent`]({environment:angularApiUrl}/classes/igxavatarcomponent.html) and [`IgxIconComponent`]({environment:angularApiUrl}/classes/igxiconcomponent.html).
 
-This time you will need to include both the [`IgxBottomNavModule`]({environment:angularApiUrl}/classes/igxbottomnavmodule.html) and [`IgxListModule`]({environment:angularApiUrl}/classes/igxlistmodule.html) in your "app.module.ts" file:
+This time you will need to include both the `IgxBottomNavModule` and `IgxListModule` in your "app.module.ts" file:
 
 ```typescript
 // app.module.ts

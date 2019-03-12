@@ -85,6 +85,6 @@ The [`overlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.h
 </div>
 <div class="divider--half"></div>
 
-## API
+## API References
 
-* [`IScrollStrategy`]({environment:angularApiUrl}/interfaces/iscrollstrategy.html)
+* [IScrollStrategy]({environment:angularApiUrl}/interfaces/iscrollstrategy.html)

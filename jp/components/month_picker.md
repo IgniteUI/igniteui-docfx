@@ -1,25 +1,25 @@
----
-title: Month Picker Component
-_description: The Ignite UI for Angular Month Picker component provides an easy and intuitive way to select a specific month and year using a month-year calendar view.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Month Picker components, Angular Month Picker controls
+﻿---
+title: Month Picker コンポーネント
+_description: Angular Month Picker コンポーネントは、カレンダー ビューで年や月を簡単で直感的な選択できます。
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Month Picker コンポーネント, Angular Month Picker コントロール
 ---
 
 ## Month Picker
-<p class="highlight">The Ignite UI for Angular Month Picker component provides an easy and intuitive way to select a specific month and year using a month-year calendar view. The component allows single selection, customizable display format and supports localization.</p>
+<p class="highlight">Angular Month Picker コンポーネントは、カレンダー ビューで年や月を簡単で直感的な選択できます。コンポーネントは、単一選択、表示形式のカスタマイズ、ローカライゼーションをサポートします。</p>
 
-### Month Picker Demo
+### Month Picker デモ
 <div class="sample-container loading" style="height: 620px">
     <iframe id="monthpicker-sample-1-iframe" src='{environment:demosBaseUrl}/scheduling/monthpicker-sample-1' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="monthpicker-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="monthpicker-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
 </div>
 
-> [!NOTE]
-> To start using Ignite UI for Angular components in your own projects, make sure you have configured all necessary dependencies and have performed the proper setup of your project. You can learn how to do this in the [**installation**](https://www.infragistics.com/products/ignite-ui-angular/getting-started#installation) topic.
+> 
+> Ignite UI for Angular コンポーネント、をプロジェクトに追加する前に、必要なすべての依存関係を構成し、プロジェクトのセットアップが正しく完了したことを確認してください。[**インストール**](https://jp.infragistics.com/products/ignite-ui-angular/getting-started#installation)のトピックで手順を確認できます。
 
-### Usage
-To get started with the **Ignite UI for Angular Month Picker**, let's first import the [**IgxCalendarModule**]({environment:angularApiUrl}/classes/igxcalendarmodule.html) in the application's AppModule, typically this is the **app.module.ts** file. Note that the [**IgxCalendar**]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) is also dependent on the **BrowserAnimationsModule**, so it needs to be added to the AppModule as well:
+### 使用方法
+**Ignite UI for Angular Month Picker** を初期化する前に、`IgxCalendarModule` をアプリケーションの AppModule (**app.module.ts** ファイル) にインポートします。注: [**IgxCalendar**]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) に [**IgxCalendar**]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) の依存関係があるため、AppModule にも追加する必要があります。
 
 ```typescript
 // app.module.ts
@@ -34,7 +34,7 @@ import { IgxCalendarModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-You will usually also import the [`IgxMonthPickerComponent`]({environment:angularApiUrl}/classes/igxmonthpickercomponent.html) in the AppComponent file (or your editor will auto-import them for you) when declaring types that are part of the month picker API:
+カレンダー API の型を宣言する前に [`IgxMonthPickerComponent`]({environment:angularApiUrl}/classes/igxmonthpickercomponent.html) を AppComponent ファイルにインポートします。エディターが自動的にインポートすることが可能です。
 
 ```typescript
 import { IgxMonthPickerComponent } from "igniteui-angular";
@@ -43,11 +43,11 @@ import { IgxMonthPickerComponent } from "igniteui-angular";
 @ViewChild('monthPicker', { read: IgxMonthPickerComponent }) public monthPicker: IgxMonthPickerComponent;
 ```
 
-> [!NOTE]
-> Note that the [`IgxMonthPickerComponent`]({environment:angularApiUrl}/classes/igxmonthpickercomponent.html) uses the [Intl](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat) WebAPI for localization and formatting of dates.
-> Consider using the [appropriate polyfills](https://github.com/andyearnshaw/Intl.js/) if your target platform does not support them.
+> 
+> 注: [`IgxMonthPickerComponent`]({environment:angularApiUrl}/classes/igxmonthpickercomponent.html) が日付のローカライズおよび書式設定のために [Intl](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat) を使用します。
+> 対象プラットフォームがその API をサポートしない場合、[適切なポリフィル](https://github.com/andyearnshaw/Intl.js/)を使用してください。
 
-To add a month picker in a template, use the following code:
+マンスピッカーの追加は、以下のコードを使用してください。
 
 ```html
 <!-- month-picker-sample.component.html -->
@@ -55,8 +55,8 @@ To add a month picker in a template, use the following code:
 <igx-month-picker></igx-month-picker>
 ```
 
-#### Setting date
-Set a date to [`IgxMonthPickerComponent`]({environment:angularApiUrl}/classes/igxmonthpickercomponent.html) using the [`value`]({environment:angularApiUrl}/classes/igxmonthpickercomponent.html#value) input.
+#### 日付の設定
+[`IgxMonthPickerComponent`]({environment:angularApiUrl}/classes/igxmonthpickercomponent.html) に日付を設定するには、[`value`]({environment:angularApiUrl}/classes/igxcalendarbase.html#value) 入力を設定します。
 
 ```typescript
 // month-picker-sample.component.ts
@@ -70,7 +70,7 @@ public date: Date = new Date(Date.now());
 <igx-month-picker [value]="date"></igx-date-picker>
 ```
 
-To create a two-way data-binding, set `ngModel` like this:
+Two-way データ バインディングを作成するには、以下のように `ngModel` を設定します。
 
 ```html
 <!-- month-picker-sample.component.html -->
@@ -78,8 +78,8 @@ To create a two-way data-binding, set `ngModel` like this:
 <igx-month-picker [(ngModel)]="date"></igx-date-picker>
 ```
 
-#### Formatting
-Change the month picker display format, using the `formatViews` and `formatOptions` inputs.
+#### 書式設定
+`formatViews` と [`formatOptions`]({environment:angularApiUrl}/classes/igxcalendarbase.html#formatoptions) 入力を使用してマンスピッカーの表示形式を変更します。
 
 ```html
 <!-- month-picker-sample.component.html -->
@@ -97,16 +97,16 @@ public numericFormatOptions = {
 };
 ```
 
-Here is an example of modifying the default format options of the month picker:
+以下は、マンスピッカーのデフォルトの書式オプションを変更する例です。
 <div class="sample-container loading" style="height: 600px">
     <iframe id="monthpicker-sample-2-iframe" src='{environment:demosBaseUrl}/scheduling/monthpicker-sample-2' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="monthpicker-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="monthpicker-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
 </div>
 
-#### Localization
-Use the `locale` input, to customize the month picker localization.
+#### ローカライズ
+[`locale`]({environment:angularApiUrl}/classes/igxcalendarbase.html#locale) 入力を使用してマンスピッカーのローカライズをカスタマイズします。
 
 ```html
 <!-- month-picker-sample.component.html -->
@@ -125,48 +125,48 @@ public formatOptions = {
 };
 ```
 
-Here is an example of localizing the month picker component:
+マンスピッカー コンポーネントのローカライズの例:
 <div class="sample-container loading" style="height: 620px">
     <iframe id="monthpicker-sample-3-iframe" src='{environment:demosBaseUrl}/scheduling/monthpicker-sample-3' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="monthpicker-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="monthpicker-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
 </div>
 
-### Keyboard navigation
-- When the **igxMonthPicker** component is focused, use
-    - <kbd>PageUp</kbd> key to move to the previous year,
-    - <kbd>PageDown</kbd> key to move to the next year,
-    - <kbd>Home</kbd> key to focus the first month of the current year,
-    - <kbd>End</kbd> key to focus the last month of the current year,
-    - <kbd>Tab</kbd> key to navigate through the sub-header buttons.
+### キーボード ナビゲーション
+- **igxMonthPicker** コンポーネントがフォーカスを持つ場合:
+    - <kbd>PageUp</kbd> キーは前の年に移動します。
+    - <kbd>PageDown</kbd> キーは次の年に移動します。
+    - <kbd>Home</kbd> キーは現在の年の最初の月にフォーカスします。
+    - <kbd>End</kbd> キーは現在の年の最初の月にフォーカスします。
+    - <kbd>Tab</kbd> キーはサブヘッダー ボタン間を移動します。
 
-- When `<` (previous) or `>` (next) year button (in the sub-header) is focused, use
-    - <kbd>Space</kbd> or <kbd>Enter</kbd> key to scroll into view the next or previous year.
+- サブヘッダーで `<` (前) または `>` (次) の年ボタンのフォーカス時:
+    - <kbd>Space</kbd> または <kbd>Enter</kbd> キーは次または前の年のビューへスクロールします。
 
-- When years button (in the sub-header) is focused, use 
-    - <kbd>Space</kbd> or <kbd>Enter</kbd> key to open the years view,
-    - <kbd>Right</kbd> or <kbd>Left</kbd> arrow key to scroll the previous/next year into view.
+- サブヘッダーの年ボタンのフォーカス時: 
+    - <kbd>Space</kbd> または <kbd>Enter</kbd> キーは年ビューを開きます。
+    - <kbd>Right</kbd> または <kbd>Left</kbd> は前の年または次の年のビューへスクロールします。
 
-- When a month inside the months view is focused, use 
-    - Arrow keys to navigate through the months,
-    - <kbd>Home</kbd> key to focus the first month inside the months view,
-    - <kbd>End</kbd> key to focus the last month inside the months view,
-    - <kbd>Enter</kbd> key to select the currently focused month and close the view,
+- 月ビュー内の月のフォーカス時: 
+    - 矢印キーで月を移動します。
+    - <kbd>Home</kbd> キーは月ビューの最初の月にフォーカスします。
+    - <kbd>End</kbd> キーは月ビューの最後の月にフォーカスします。
+    - <kbd>Enter</kbd> キーは現在フォーカスされた月を選択してビューを閉じ
     - <kbd>Tab</kbd> key to navigate through the months.
 
-### API References
+### API リファレンス
 <div class="divider--half"></div>
 
 * [IgxMonthPickerComponent]({environment:angularApiUrl}/classes/igxmonthpickercomponent.html)
 * [IgxCalendarComponent]({environment:angularApiUrl}/classes/igxcalendarcomponent.html)
-* [IgxCalendarComponent Styles]({environment:sassApiUrl}/index.html#function-igx-calendar-theme)
+* [IgxCalendarComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-calendar-theme)
 
 <div class="divider--half"></div>
 
-### Additional Resources
+### その他のリソース
 <div class="divider--half"></div>
-Our community is active and always welcoming to new ideas.
+コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

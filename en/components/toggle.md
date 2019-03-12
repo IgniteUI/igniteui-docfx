@@ -4,11 +4,11 @@ _description: The Ignite UI for Angular Toggle directive allows the users to ope
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Components, Angular Toggle directives, Angular Toggle controls, Angular Toggle Component,
 ---
 
-##Toggle
+## Toggle
 
 The [`igxToggle`]({environment:angularApiUrl}/classes/igxtoggledirective.html) directive allows the users to open, to interact with, to apply animations, and to close a toggle container. All toggle components implement the [`igxToggle`]({environment:angularApiUrl}/classes/igxtoggledirective.html) or [`igxToggleAction`]({environment:angularApiUrl}/classes/igxtoggleactiondirective.html) internally, and users can implement toggle-based components and views, like dropdowns, while the [`igxToggleAction`]({environment:angularApiUrl}/classes/igxtoggleactiondirective.html) directive controls other components until the toggle umbrella.
 
-###Toggle Demo
+### Toggle Demo
 
 <div class="sample-container loading" style="height: 370px">
     <iframe id="toggle-iframe" src='{environment:demosBaseUrl}/interactions/toggle' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -18,9 +18,10 @@ The [`igxToggle`]({environment:angularApiUrl}/classes/igxtoggledirective.html) d
     </button>
 </div>
 
-##Usage
+## Usage
+
 The toggle allows you easily to wrap some content into a box which easily can be opened and closed.
-To get started with the IgniteUI for Angular Toggle, let's first import the [**IgxToggleModule**]({environment:angularApiUrl}/classes/igxtogglemodule.html) in our **app.module.ts**. We are also planning to take advantage of [**igxButton**]({environment:angularApiUrl}/classes/igxbuttondirective.html) directive so we will have to import [**IgxButtonModule**]({environment:angularApiUrl}/classes/igxbuttonmodule.html) into the **app.module.ts** too.
+To get started with the IgniteUI for Angular Toggle, let's first import the **IgxToggleModule** in our **app.module.ts**. We are also planning to take advantage of [**igxButton**]({environment:angularApiUrl}/classes/igxbuttondirective.html) directive so we will have to import **IgxButtonModule** into the **app.module.ts** too.
 
 ```typescript
 // app.module.ts
@@ -127,7 +128,7 @@ The [`igxToggle`]({environment:angularApiUrl}/classes/igxtoggledirective.html) u
         verticalStartPoint: VerticalAlignment.Bottom
     };
     public _overlaySettings = {
-        closeOnOutsideClick: true,
+        closeOnOutsideClick: false,
         modal: false,
         positionStrategy: new ConnectedPositioningStrategy(this._positionSettings),
         scrollStrategy: new CloseScrollStrategy()
@@ -147,9 +148,14 @@ The [`igxToggle`]({environment:angularApiUrl}/classes/igxtoggledirective.html) u
     </button>
 </div>
 
+***Note***: By defaut [`closeOnOutsideClick`]({environment:angularApiUrl}/interfaces/overlaysettings.html#closeonoutsideclick) is set to `false`. If set to `true` there are some limitations in the behavior. When element is shown clicking on toggle button will force close on outside click and toggle method. Close on outside click will start close animation. Then toggle method, with close animation started, will call open. Those two events neutralize each other and nothing happens. In order to achieve the desired behavior there a couple of options listed below: 
+- set the button as [`target`]({environment:angularApiUrl}/interfaces/positionsettings.html#target) and set [`excludePositionTarget`]({environment:angularApiUrl}/interfaces/overlaysettings.html#excludePositionTarget) to true
+- set [`closeOnOutsideClick`]({environment:angularApiUrl}/interfaces/overlaysettings.html#closeonoutsideclick) to `false` as in the sample above
+- use [`IgxToggleActionDirective`]({environment:angularApiUrl}/classes/igxtoggleactiondirective.html) as described below;
+
 ### Automatic toggle actions
 
-In order to prevent this invocation of these methods there is a directive which has `onClick` handler and changes the state to the toggle we are referred to. So let's dive in. If we would like to take advantage of this functionality we will have to use [**IgxToggleActionDirective**]({environment:angularApiUrl}/classes/igxtoggleactiondirective.html) which is comming from the same [**IgxToggleModule**]({environment:angularApiUrl}/classes/igxtogglemodule.html).
+In order to prevent the invocation of these methods there is a directive which has `onClick` handler and changes the state to the toggle we are referred to. So let's dive in. If we would like to take advantage of this functionality we will have to use [**IgxToggleActionDirective**]({environment:angularApiUrl}/classes/igxtoggleactiondirective.html) which is coming from the same **IgxToggleModule**.
 
 ```typescript
 // app.module.ts
@@ -186,6 +192,8 @@ After these changes the toggle should work exactly in the same way.
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="toggle-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">                       view on stackblitz
     </button>
 </div>
+
+***Note***: By default [**IgxToggleActionDirective**]({environment:angularApiUrl}/classes/igxtoggleactiondirective.html) excludes its host element from [`closeOnOutsideClick`]({environment:angularApiUrl}/interfaces/overlaysettings.html#closeonoutsideclick). Clicking on the host element will not fire close on outside click. Additionally [**IgxToggleActionDirective**]({environment:angularApiUrl}/classes/igxtoggleactiondirective.html) will set its host element as the position strategy [`target`]({environment:angularApiUrl}/interfaces/positionsettings.html#target).
 
 ### Automatic toggle actions with service provider
 
@@ -243,8 +251,8 @@ This allows to provide the `outlet` templates variable as a setting to the toggl
 
 ## API Summary
 
-In this article we covered the details of how to use Toggle directive. We created a content which would possible to be hidden or shown by invoking programmatically methods which determine this behaviour.
-Furthermore we added another helping directive which controls automatically this same behaviour by giving it the appropriate toggle reference. In the end we have registered our [**igxToggle**]({environment:angularApiUrl}/classes/igxtoggledirective.html) directive in the **igxNavigationService** provider by giving it an ID, which we then provided to our helping **igxToggleAction** directive.
+In this article we covered the details of how to use Toggle directive. We created a content which would possible to be hidden or shown by invoking programmatically methods which determine this behavior.
+Furthermore we added another helping directive which controls automatically this same behavior by giving it the appropriate toggle reference. In the end we have registered our [**igxToggle**]({environment:angularApiUrl}/classes/igxtoggledirective.html) directive in the **igxNavigationService** provider by giving it an ID, which we then provided to our helping **igxToggleAction** directive.
 
 ###API References
 <div class="divider"></div>

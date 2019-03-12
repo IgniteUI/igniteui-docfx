@@ -21,7 +21,7 @@ The [**igx-buttongroup**]({environment:angularApiUrl}/classes/igxbuttongroupcomp
 
 ### Dependencies
 
-The Button Group is exported as an `NgModule`, thus you will need to import the [`IgxButtonGroupModule`]({environment:angularApiUrl}/classes/igxbuttongroupmodule.html) inside your `AppModule`:
+The Button Group is exported as an `NgModule`, thus you will need to import the `IgxButtonGroupModule` inside your `AppModule`:
 
 ```typescript
 // app.module.ts

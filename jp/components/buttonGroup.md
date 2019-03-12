@@ -21,7 +21,7 @@ Ignite UI for Angular [**igx-buttongroup**]({environment:angularApiUrl}/classes/
 
 ### 依存関係
 
-Button Group が `NgModule` としてエクスポートされるため、アプリケーションで `AppModule` に [`IgxButtonGroupModule`]({environment:angularApiUrl}/classes/igxbuttongroupmodule.html) をインポートする必要があります。
+Button Group が `NgModule` としてエクスポートされるため、アプリケーションで `AppModule` に `IgxButtonGroupModule` をインポートする必要があります。
 
 ```typescript
 // app.module.ts

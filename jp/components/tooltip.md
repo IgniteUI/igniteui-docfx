@@ -23,7 +23,7 @@ _language: ja
 
 ### 設定
 
-Ignite UI for Angular ツールチップ、ヒント および ツールチップ、ヒントターゲットを初期化する前に、app.module.ts ファイルに[`IgxTooltipModule`]({environment:angularApiUrl}/classes/igxtooltipmodule.html) をインポートします。
+Ignite UI for Angular ツールチップ、ヒント および ツールチップ、ヒントターゲットを初期化する前に、app.module.ts ファイルに `IgxTooltipModule` をインポートします。
 
 ```typescript
 // app.module.ts
@@ -42,7 +42,7 @@ export class AppModule {}
 
 ### シンプルなツールチップ
 
-ページの要素にシンプルなテキスト ツールチップを作成します。[`IgxAvatarModule`]({environment:angularApiUrl}/classes/igxavatarmodule.html) をインポートして要素として [`IgxAvatar`](avatar.md) を使用します。
+ページの要素にシンプルなテキスト ツールチップを作成します。`IgxAvatarModule` をインポートして要素として [`IgxAvatar`](avatar.md) を使用します。
 
 ```typescript
 // app.module.ts
@@ -128,7 +128,7 @@ avatar をターゲットにして、[`igxTooltipTarget`]({environment:angularAp
 
 次に [`IgxSlider`](slider.md) 要素をいくつか [`showDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#showdelay) と [`hideDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#hidedelay) に追加します。更にターゲットの [`tooltipDisabled`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#tooltipdisabled) プロパティを使用してツールチップ ターゲットでユーザー インタラクションを有効/無効にする [`IgxSwitch`](switch.md) を使用します。
 
-[`IgxSliderModule`]({environment:angularApiUrl}/classes/igxslidermodule.html) と [`IgxSwitchModule`] を取得します。
+`IgxSliderModule` と `IgxSwitchModule` を取得します。
 ```typescript
 // app.module.ts
 
@@ -340,7 +340,6 @@ export class AppModule {}
 
 このトピックでは、ページ要素にツールチップを作成する方法について説明しました。また、アプリケーションのデザインには icons, avatars and cards などの Ignite UI for Angular コンポーネントも追加で使用しました。以下は、各 API です。
 
-* [IgxTooltipModule]({environment:angularApiUrl}/classes/igxtooltipmodule.html)
 * [IgxTooltipDirective]({environment:angularApiUrl}/classes/igxtooltipdirective.html)
 * [IgxTooltipTargetDirective]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html)
 

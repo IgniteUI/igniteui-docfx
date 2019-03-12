@@ -22,7 +22,7 @@ _language: ja
 
 ### 依存関係
 
-Ripple ディレクティブが `NgModule` としてエクスポートされるため、アプリケーションで `AppModule` に [`IgxRippleModule`]({environment:angularApiUrl}/classes/igxripplemodule.html) をインポートする必要があります。
+Ripple ディレクティブが `NgModule` としてエクスポートされるため、アプリケーションで `AppModule` に `IgxRippleModule` をインポートする必要があります。
 
 ```typescript
 // app.module.ts

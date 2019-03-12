@@ -22,7 +22,7 @@ _language: kr
 
 ### Usage
 At its core the list component allows you to easily display a vertical list of items. The default styling of the items is done according to the single-line list specification as per the Material Design [**guidelines**](https://material.io/guidelines/components/lists.html).
-To get started with the Ignite UI for Angular List, let's first import the [`IgxListModule`]({environment:angularApiUrl}/classes/igxlistmodule.html) in our app.module.ts file:
+To get started with the Ignite UI for Angular List, let's first import the `IgxListModule` in our app.module.ts file:
 
 ```typescript
 // app.module.ts
@@ -499,7 +499,7 @@ Let's add an input field to the top in our component template first and bind it 
 </igx-input-group>
 ```
 
-It's time to import the [`IgxFilterModule`]({environment:angularApiUrl}/classes/igxfiltermodule.html) and the [`IgxInputGroupModule`]({environment:angularApiUrl}/classes/igxinputgroupmodule.html) in our app.module.ts file and [`IgxFilterOptions`]({environment:angularApiUrl}/classes/igxfilteroptions.html) in our contacts component:
+It's time to import the `IgxFilterModule` and the `IgxInputGroupModule` in our app.module.ts file and [`IgxFilterOptions`]({environment:angularApiUrl}/classes/igxfilteroptions.html) in our contacts component:
 
 ```typescript
     // app.module.ts

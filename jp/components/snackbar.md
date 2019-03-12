@@ -25,7 +25,7 @@ _language: ja
 
 ### 使用方法
 
-Ignite UI for Angular Snack Bar を初期化する前に、[`IgxSnackbarModule`]({environment:angularApiUrl}/classes/igxsnackbarmodule.html) を **app.module.ts** ファイルにインポートします。
+Ignite UI for Angular Snack Bar を初期化する前に、`IgxSnackbarModule` を **app.module.ts** ファイルにインポートします。
 
 ```typescript
 // app.module.ts
