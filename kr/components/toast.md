@@ -23,7 +23,7 @@ _language: kr
 
 ###Usage
 
-To get started with the Ignite UI for Angular Toast, let's first import the [`IgxToastModule`]({environment:angularApiUrl}/classes/igxtoastmodule.html) in our **app.module.ts** file:
+To get started with the Ignite UI for Angular Toast, let's first import the `IgxToastModule` in our **app.module.ts** file:
 
 ```typescript
 // app.module.ts

@@ -23,7 +23,7 @@ _language: ja
 
 Toggle は、簡単に開いたり、閉じたりできるボックスにコンテンツをラップします。
 
-Ignite UI for Angular Toggle を初期化する前に、[**IgxToggleModule**]({environment:angularApiUrl}/classes/igxtogglemodule.html) を **app.module.ts** ファイルにインポートします。また、[**igxButton**]({environment:angularApiUrl}/classes/igxbuttondirective.html) ディレクティブを使用するため、[**IgxButtonModule**]({environment:angularApiUrl}/classes/igxbuttonmodule.html) も **app.module.ts** にインポートする必要があります。
+Ignite UI for Angular Toggle を初期化する前に、**IgxToggleModule** を **app.module.ts** ファイルにインポートします。また、[**igxButton**]({environment:angularApiUrl}/classes/igxbuttondirective.html) ディレクティブを使用するため、**IgxButtonModule** も **app.module.ts** にインポートする必要があります。
 
 ```typescript
 // app.module.ts
@@ -211,7 +211,7 @@ export class AppModule {}
 
 ```html
 <!--template.component.html-->
-<button igxToggleAction="toggleId" [closeOnOutsideClick]="true" class="toggle-button"  igxButton="raised">Toggle</button>
+<button igxToggleAction="toggleId" class="toggle-button"  igxButton="raised">Toggle</button>
 <div igxToggle id="toggleId" class="toggle-content">
     <section class="toggle-section">
     <h3>Click 

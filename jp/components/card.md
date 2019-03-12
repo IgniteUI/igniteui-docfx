@@ -23,7 +23,7 @@ _language: ja
 Card コンポーネントは、様々なオブジェクト タイプ、サイズやサポートされる操作が異なる同様のオブジェクトから成るコンテンツを表示できます。
 
 #### はじめに
-Ignite UI for Angular Card を初期化する前に、[`IgxCardModule`]({environment:angularApiUrl}/classes/igxcardmodule.html) を **app.module.ts** ファイルにインポートします:
+Ignite UI for Angular Card を初期化する前に、`IgxCardModule` を **app.module.ts** ファイルにインポートします:
 
 ```typescript
 // app.module.ts

@@ -33,11 +33,10 @@
       new: false
     - name: Filtering
       href: grid/filtering.md
+      new: false
+    - name: Excel Style Filtering
+      href: grid/excel_style_filtering.md
       new: true
-      items:
-        - name: Excel Style Filtering
-          href: grid/excel_style_filtering.md
-          new: true
     - name: Sorting
       href: grid/sorting.md
       new: false
@@ -104,11 +103,10 @@
       new: false
     - name: Filtering
       href: treegrid/filtering.md
+      new: false
+    - name: Excel Style Filtering
+      href: treegrid/excel_style_filtering.md
       new: true
-      items:
-        - name: Excel Style Filtering
-          href: treegrid/excel_style_filtering.md
-          new: true
     - name: Sorting
       href: treegrid/sorting.md
       new: false
@@ -176,10 +174,9 @@
     - name: Filtering
       href: hierarchicalgrid/filtering.md
       new: true
-      items:
-        - name: Excel Style Filtering
-          href: hierarchicalgrid/excel_style_filtering.md
-          new: true
+    - name: Excel Style Filtering
+      href: hierarchicalgrid/excel_style_filtering.md
+      new: true
     - name: Sorting
       href: hierarchicalgrid/sorting.md
       new: true

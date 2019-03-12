@@ -23,7 +23,7 @@ Ignite UI for Angular の [`IgxTextHighlight`]({environment:angularApiUrl}/class
 
 ### 使用方法
 
-Ignite UI for Angular TextHighlight ディレクティブを使用する前に **app.module.ts** ファイルに [`IgxTextHighlightModule`]({environment:angularApiUrl}/classes/igxtexthighlightmodule.html) とアプリケーションに必要な他の Ignute UI for Angular モジュールをインポートします。
+Ignite UI for Angular TextHighlight ディレクティブを使用する前に **app.module.ts** ファイルに `IgxTextHighlightModule` とアプリケーションに必要な他の Ignute UI for Angular モジュールをインポートします。
 
 ```typescript
 // app.module.ts

@@ -25,7 +25,7 @@ _language: ja
 
 ### 使用方法
 
-Ignite UI for Angular Badge を初期化する前に、[`IgxBadgeModule`]({environment:angularApiUrl}/classes/igxbadgemodule.html) を **app.module.ts** ファイルにインポートします。
+Ignite UI for Angular Badge を初期化する前に、`IgxBadgeModule` を **app.module.ts** ファイルにインポートします。
 
 ```typescript
 // app.module.ts

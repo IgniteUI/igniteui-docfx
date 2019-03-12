@@ -233,7 +233,7 @@ public ngAfterViewInit() {
 @@if (igxName !== 'IgxHierarchicalGrid') {
 ### カスタム列の非表示 UI
 
-[`IgxColumnHidingComponent`]({environment:angularApiUrl}/classes/igxcolumnhidingcomponent.html) を手動で定義してページのどこかに配置する場合を仮定します。マークアップでコンポーネントのインスタンスを作成して簡単に行うことができます。これには [`IgxColumnHidingModule`]({environment:angularApiUrl}/classes/igxcolumnhidingmodule.html) を使用します。
+[`IgxColumnHidingComponent`]({environment:angularApiUrl}/classes/igxcolumnhidingcomponent.html) を手動で定義してページのどこかに配置する場合を仮定します。マークアップでコンポーネントのインスタンスを作成して簡単に行うことができます。これには `IgxColumnHidingModule` を使用します。
 
 ```typescript
 // app.module.ts

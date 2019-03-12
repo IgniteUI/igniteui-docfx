@@ -11,7 +11,7 @@ _language: ja
 <div class="divider"></div>
 
 > [!NOTE]
-> `igx-tab-bar` セレクターは非推奨です。代わりに [`igx-bottom-nav`]({environment:angularApiUrl}/classes/igxbottomnavcomponent.html) を使用してください。`IgxTabBarComponent` クラスは [`IgxBottomNavComponent`]({environment:angularApiUrl}/classes/igxbottomnavcomponent.html) に名前変更しました。`IgxTabBarModule` は [`IgxBottomNavModule`]({environment:angularApiUrl}/classes/igxbottomnavmodule.html) に名前変更しました。
+> `igx-tab-bar` セレクターは非推奨です。代わりに [`igx-bottom-nav`]({environment:angularApiUrl}/classes/igxbottomnavcomponent.html) を使用してください。`IgxTabBarComponent` クラスは [`IgxBottomNavComponent`]({environment:angularApiUrl}/classes/igxbottomnavcomponent.html) に名前変更しました。`IgxTabBarModule` は `IgxBottomNavModule` に名前変更しました。
 
 ### Bottom Navigation デモ
 
@@ -28,7 +28,7 @@ _language: ja
 
 #### 使用方法
 
-コントロールを初期化する前に、[`IgxBottomNavModule`]({environment:angularApiUrl}/classes/igxbottomnavmodule.html) を **app.module.ts** ファイルにインポートします。
+コントロールを初期化する前に、`IgxBottomNavModule` を **app.module.ts** ファイルにインポートします。
 
 ```typescript
 // app.module.ts

@@ -26,7 +26,7 @@ _language: ja
 
 ラジオ ボタン コンポーネントはオプションの単一選択を可能にします。デフォルト スタイル設定はマテリアル デザイン ガイドラインの選択コントロールの仕様に基づきます。
 
-Ignite UI for Angular Radio を初期化する前に [`IgxRadioModule`]({environment:angularApiUrl}/classes/igxradiomodule.html) を **app.module.ts** ファイルにインポートします。
+Ignite UI for Angular Radio を初期化する前に `IgxRadioModule` を **app.module.ts** ファイルにインポートします。
 
 ```typescript
 // app.module.ts
@@ -120,7 +120,7 @@ public selectedColor: string = this.colors[3].hex;
 
 #### Radio Group の使用
 
-Radio Group ディレクティブが NgModule としてエクスポートされるため、アプリケーションで **app.module.ts** ファイルの [`IgxRadioModule`]({environment:angularApiUrl}/classes/igxradiomodule.html) をインポートする必要があります。
+Radio Group ディレクティブが NgModule としてエクスポートされるため、アプリケーションで **app.module.ts** ファイルの `IgxRadioModule` をインポートする必要があります。
 
 ```typescript
 // app.module.ts
