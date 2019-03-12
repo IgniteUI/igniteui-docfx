@@ -120,9 +120,8 @@ export class GridBatchEditingSampleComponent {
 
 ## API
 
-* [`transactions`]({environment:angularApiUrl}/classes/igxgridcomponent.html#transactions)
-
-* [`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html)
+* [transactions]({environment:angularApiUrl}/classes/igxgridcomponent.html#transactions)
+* [igxTransactionService]({environment:angularApiUrl}/classes/igxtransactionservice.html)
 
 
 ### 추가 리소스

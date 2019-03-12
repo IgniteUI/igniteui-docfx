@@ -365,14 +365,14 @@ export class HierarchicalGridBatchEditingSampleComponent {
 ### API References
 
 @@if (igxName === 'IgxGrid') {
-* [`transactions`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#transactions)
-* [`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html)
+* [transactions]({environment:angularApiUrl}/classes/@@igTypeDoc.html#transactions)
+* [igxTransactionService]({environment:angularApiUrl}/classes/igxtransactionservice.html)
 }
 @@if (igxName === 'IgxTreeGrid') {
-* [`HierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) 
-* [`rowEditable`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#roweditable)
-* [`IgxTreeGridComponent`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html)
-* [`IgxGridComponent`]({environment:angularApiUrl}/classes/igxgridcomponent.html)
+* [HierarchicalTransactionService]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) 
+* [rowEditable]({environment:angularApiUrl}/classes/@@igTypeDoc.html#roweditable)
+* [IgxTreeGridComponent]({environment:angularApiUrl}/classes/igxtreegridcomponent.html)
+* [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 * [igxHierarchicalTransactionServiceFactory]({environment:angularApiUrl}/index.html#igxhierarchicaltransactionservicefactory)

@@ -353,36 +353,36 @@ On the right in our input group, let's create three separate containers with the
 In this article we implemented our own search bar for the @@igComponent with some additional functionality when it comes to navigating between the search results. We also used some additional Ignite UI for Angular components like icons, chips and inputs. The search API is listed below.
 
 [`@@igxNameComponent`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) methods:
--   [`findNext`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findnext)
--   [`findPrev`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findprev)
--   [`clearSearch`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#clearsearch)
--   [`refreshSearch`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#refreshsearch)
+-   [findNext]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findnext)
+-   [findPrev]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findprev)
+-   [clearSearch]({environment:angularApiUrl}/classes/@@igTypeDoc.html#clearsearch)
+-   [refreshSearch]({environment:angularApiUrl}/classes/@@igTypeDoc.html#refreshsearch)
 
 [`IgxGridCellComponent`]({environment:angularApiUrl}/classes/igxgridcellcomponent.html) methods:
--   [`highlightText`]({environment:angularApiUrl}/classes/igxgridcellcomponent.html#highlighttext)
--   [`clearHighlight`]({environment:angularApiUrl}/classes/igxgridcellcomponent.html#clearhighlight)
+-   [highlightText]({environment:angularApiUrl}/classes/igxgridcellcomponent.html#highlighttext)
+-   [clearHighlight]({environment:angularApiUrl}/classes/igxgridcellcomponent.html#clearhighlight)
 
 [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) properties:
--   [`searchable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#searchable)
+-   [searchable]({environment:angularApiUrl}/classes/igxcolumncomponent.html#searchable)
 
-[`ISearchInfo`]({environment:angularApiUrl}/interfaces/isearchinfo.html)
+[ISearchInfo]({environment:angularApiUrl}/interfaces/isearchinfo.html)
 
 Additional components and/or directives with relative APIs that were used:
 
-* [`IgxInputGroupComponent`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
-* [`IgxIconComponent`]({environment:angularApiUrl}/classes/igxiconcomponent.html)
-* [`IgxRippleDirective`]({environment:angularApiUrl}/classes/igxrippledirective.html)
-* [`IgxButtonDirective`]({environment:angularApiUrl}/classes/igxbuttondirective.html)
-* [`IgxChipComponent`]({environment:angularApiUrl}/classes/igxchipcomponent.html)
+* [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
+* [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
+* [IgxRippleDirective]({environment:angularApiUrl}/classes/igxrippledirective.html)
+* [IgxButtonDirective]({environment:angularApiUrl}/classes/igxbuttondirective.html)
+* [IgxChipComponent]({environment:angularApiUrl}/classes/igxchipcomponent.html)
 
 Styles:
 
-* [`@@igxNameComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
-* [`IgxInputGroupComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-input-group-theme)
-* [`IgxIconComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
-* [`IgxRippleDirective Styles`]({environment:sassApiUrl}/index.html#function-igx-ripple-theme)
-* [`IgxButtonDirective Styles`]({environment:sassApiUrl}/index.html#function-igx-button-theme)
-* [`IgxChipComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-chip-theme)
+* [@@igxNameComponentStyles`]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [IgxInputGroupComponent Styles]({environment:sassApiUrl}/index.html#function-igx-input-group-theme)
+* [IgxIconComponent Styles]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
+* [IgxRippleDirective Styles]({environment:sassApiUrl}/index.html#function-igx-ripple-theme)
+* [IgxButtonDirective Styles]({environment:sassApiUrl}/index.html#function-igx-button-theme)
+* [IgxChipComponent Styles]({environment:sassApiUrl}/index.html#function-igx-chip-theme)
 
 ### Additional Resources
 <div class="divider--half"></div>
