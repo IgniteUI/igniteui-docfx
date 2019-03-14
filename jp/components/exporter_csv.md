@@ -1,4 +1,4 @@
-﻿---
+---
 title: CSV/TSV へのエクスポート コンポーネント - ネイティブ Angular | Ignite UI for Angular
 _description: ユーザーが編集またはオフライン プレゼンテーションのためにデータをエクスポートできます。CSV/TSV へのエクスポート Ignite UI for Angular コンポーネントで CSV または TSV 形式にエクスポートできます。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Grid, Angular Data Grid, Angular Grid コントロール, Angular Grid コンポーネント, CSV エクスポート, TSV エクスポート
@@ -113,8 +113,7 @@ public exportButtonHandler() {
 ```
 
 <div class="sample-container loading" style="height: 300px;">
-    <iframe id="csv-export-sample-iframe2" src="{environment:demosBaseUrl}/services/export-csv-sample-1"
-        width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="csv-export-sample-iframe2" data-src="{environment:demosBaseUrl}/services/export-csv-sample-1" width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="csv-export-sample-iframe2"
