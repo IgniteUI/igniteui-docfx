@@ -400,8 +400,8 @@ Keyboard navigation is available by default in any grid and aims at covering as 
  - `Tab` - sequentially move the focus over the next cell on the row and if the last cell is reached move to next row; If next row is group row the whole row is focused, if it is data row, move focus over the first cell; When cell is in edit mode, will move the focus to next editable cell in the row, and from the right-most editable cell to the `CANCEL` and `DONE` buttons, and from the `DONE` button to the left-most editable cell within the currently edited row;
  - `Shift + Tab` - sequentially move focus to the previous cell on the row, if the first cell is reached move the focus to the previous row. If previous row is group row focus the whole row or if it is data row, focus the last cell of the row; when cell is in edit mode, will move the focus to the next editable cell in the row, and from the right-most editable cell to the `CANCEL` and `DONE` buttons, and from the `DONE` button to the left-most editable cell within the currently edited row;
  - `Space` -  if the row is selectable, on keydown space triggers row selection;
- - `Alt + Arrow Left` over GroupRow \ Tree Grid row - collapses the group row content if the row is not already collapsed;
- - `Alt + Arrow Right` over GroupRow \ Tree Grid Row - expands the group row content if the row is not already expanded;
+ - `Alt + Arrow Left` over GroupRow - collapses the group row content if the row is not already collapsed;
+ - `Alt + Arrow Right` over GroupRow - expands the group row content if the row is not already expanded;
  - on mouse `wheel` -  blurs the focused element;
 
 ### Live Updating Demo
