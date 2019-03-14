@@ -46,9 +46,9 @@ Having all set up, let's show all the options in the [IgxDropDownComponent]({env
 ```html
 <!-- dropdown.component.html -->
 
-<div class="sample-wrapper drop-down-wrapper">
-    <button igxButton="raised" (click)="toggleDropDown($event)" [igxDropDownItemNavigation]="dropdown1">Options</button>
-    <igx-drop-down #dropdown1>
+<div class="sample-wrapper">
+    <button class="button" igxButton="raised" [igxToggleAction]="dropdown" [igxDropDownItemNavigation]="dropdown" >Options</button>
+    <igx-drop-down #dropdown [width]="'100px'">
         <igx-drop-down-item *ngFor="let item of items">
             {{ item.field }}
         </igx-drop-down-item>
@@ -59,33 +59,13 @@ Having all set up, let's show all the options in the [IgxDropDownComponent]({env
 ```typescript
 // dropdown.component.ts
 
-...
-    @ViewChild(IgxDropDownComponent) public igxDropDown: IgxDropDownComponent;
-
-    public items: any[] = [];
-
-    private _positionSettings = {
-        horizontalStartPoint: HorizontalAlignment.Left,
-        verticalStartPoint: VerticalAlignment.Bottom
-    };
-    private _overlaySettings = {
-      closeOnOutsideClick: true,
-      modal: false,
-      positionStrategy: new ConnectedPositioningStrategy(this._positionSettings),
-      scrollStrategy: new CloseScrollStrategy()
-    };
-
-    public ngOnInit() {
-        for (let i = 1; i < 4; i ++) {
-            const item = { field: "Option " + i };
-            this.items.push(item);
-        }
-    }
-
-    public toggleDropDown(eventArgs) {
-        this._overlaySettings.positionStrategy.settings.target = eventArgs.target;
-        this.igxDropDown.toggle(this._overlaySettings);
-    }
+export class MyDropDownComponent {
+    public items: Array<{ field: string }> = [
+        { field: "Option 1" },
+        { field: "Option 2" },
+        { field: "Option 3" }
+    ];
+}
 ```
 
 
@@ -107,9 +87,9 @@ Let's say we want to have a predefined selected item. One way to do this, is by 
 ```html
 <!-- dropdown.component.html -->
 
-<div class="sample-wrapper drop-down-wrapper">
-    <button igxButton="raised" (click)="toggleDropDown($event)" [igxDropDownItemNavigation]="dropdown2">Options</button>
-    <igx-drop-down #dropdown2 (onOpening)="onOpening($event)">
+<div class="sample-wrapper">
+    <button class="button" igxButton="raised" [igxToggleAction]="dropdown" [igxDropDownItemNavigation]="dropdown">Options</button>
+    <igx-drop-down #dropdown (onOpening)="dropdown.setSelectedItem(0)" [width]="'100px'">
         <igx-drop-down-item *ngFor="let item of items">
             {{ item.field }}
         </igx-drop-down-item>
@@ -120,39 +100,13 @@ Let's say we want to have a predefined selected item. One way to do this, is by 
 ```typescript
 // dropdown.component.ts
 
-...
-    @ViewChild(IgxDropDownComponent) public igxDropDown: IgxDropDownComponent;
-
-    public items: any[] = [];
-
-    private _positionSettings = {
-        horizontalStartPoint: HorizontalAlignment.Left,
-        verticalStartPoint: VerticalAlignment.Bottom
-    };
-
-    private _overlaySettings = {
-      closeOnOutsideClick: true,
-      modal: false,
-      positionStrategy: new ConnectedPositioningStrategy(this._positionSettings),
-      scrollStrategy: new CloseScrollStrategy()
-  };
-
-    public ngOnInit() {
-        for (let i = 1; i < 4; i ++) {
-            const item = { field: "Option " + i };
-            this.items.push(item);
-        }
-    }
-
-    public toggleDropDown(eventArgs) {
-        this._overlaySettings.positionStrategy.settings.target = eventArgs.target;
-        this.igxDropDown.toggle(this._overlaySettings);
-    }
-
-    public onOpening(ev) {
-        this.igxDropDown.setSelectedItem(0);
-    }
-
+export class MyDropDownComponent {
+    public items: Array<{ field: string }> = [
+        { field: "Option 1" },
+        { field: "Option 2" },
+        { field: "Option 3" }
+    ];
+}
 ```
 
 <div class="sample-container" style="height: 200px">
@@ -165,28 +119,28 @@ Let's say we want to have a predefined selected item. One way to do this, is by 
 
 <div class="divider--half"></div>
 
-To provide more useful visual information, use [isHeader]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html#isheader) to group items semantically or [disabled]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html#disabled) to display an item as non-interactive. You can also set [isSelected]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html#isselected) to a particular item to make it the selected item.
+To provide more useful visual information, use [isHeader]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html#isheader) to group items semantically or [disabled]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html#disabled) to display an item as non-interactive. You can also set [selected]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html#selected) to a particular item to make it the selected item.
 
 ```html
 <!-- dropdown.component.html -->
 
-<div class="sample-wrapper drop-down-wrapper">
-    <button igxButton="raised" (click)="toggleDropDown($event)" [igxDropDownItemNavigation]="dropdown3">Countries</button>
-    <igx-drop-down #dropdown3>
-        <igx-drop-down-item *ngFor="let item of items" [disabled]="item.disabled" [isHeader]="item.header" [isSelected]="item.selected">
-            {{ item.field }}
-        </igx-drop-down-item>
+<div class="sample-wrapper">
+    <button class="button" igxButton="raised" [igxToggleAction]="dropdown" [igxDropDownItemNavigation]="dropdown">Countries</button>
+    <igx-drop-down #dropdown [width]="'144px'">
+        <div class="drop-down__scroll-container">
+            <igx-drop-down-item *ngFor="let item of items" [disabled]="item.disabled" [isHeader]="item.header"
+                [selected]="item.selected">
+                {{ item.field }}
+            </igx-drop-down-item>
+        </div>
     </igx-drop-down>
 </div>
-
 ```
 
 ```typescript
 // dropdown.component.ts
 
-...
-    @ViewChild(IgxDropDownComponent) public igxDropDown: IgxDropDownComponent;
-
+export class MyDropDownComponent {
     public items: any[] = [
         { field: "EU", header: true },
         { field: "Germany" },
@@ -195,25 +149,9 @@ To provide more useful visual information, use [isHeader]({environment:angularAp
         { field: "NA", header: true },
         { field: "Canada" },
         { field: "USA" },
-        { field: "Mexico" }];
-
-    private _positionSettings = {
-        horizontalStartPoint: HorizontalAlignment.Left,
-        verticalStartPoint: VerticalAlignment.Bottom
-    };
-
-    private _overlaySettings = {
-      closeOnOutsideClick: true,
-      modal: false,
-      positionStrategy: new ConnectedPositioningStrategy(this._positionSettings),
-      scrollStrategy: new CloseScrollStrategy()
-  };
-
-    public toggleDropDown(eventArgs) {
-        this._overlaySettings.positionStrategy.settings.target = eventArgs.target;
-        this.igxDropDown.toggle(this._overlaySettings);
-    }
-
+        { field: "Mexico" }
+    ];
+}
 ```
 
 If the sample is configured properly, a list  of countries should be displayed as a group under EU header, UK as a non-interactive item, and Bulgaria as selected item.
@@ -237,16 +175,17 @@ export class MyCustomDropDownComponent {
     public foods: { 
         name: string,
         entries: { name: string, refNo: string }[]
-    }[] = [{
-    name: 'Vegetables',
-    entries: [{
-        name: 'Cucumber',
-        refNo: `00000`
+    }[] = [
+    {
+        name: 'Vegetables',
+        entries: [{
+            name: 'Cucumber',
+            refNo: `00000`
     }, {
         name: 'Lettuce',
         refNo: `00001`
     },
-    ...]
+        ...]
     }, {
         name: 'Fruits',
         entries: [{
@@ -268,7 +207,6 @@ export class MyCustomDropDownComponent {
         },
         ...]
     }];
-
 }
 ...
 ```
@@ -313,7 +251,10 @@ You can configure the [`igxDropDown`]({environment:angularApiUrl}/classes/igxdro
 
 <div class="drop-down-wrapper">
     <igx-navbar title="Contacts">
-        <igx-icon #menu_icon (click)="toggleMenu($event)" [igxDropDownItemNavigation]="menu" tabindex="0">more_vert</igx-icon>
+        <button [igxToggleAction]="menu" [igxToggleOutlet]="outlet" [overlaySettings]="overlaySettings" [igxDropDownItemNavigation]="menu"
+            igxButton="icon">
+            <igx-icon fontSet="material">more_vert</igx-icon>
+        </button>
         <igx-drop-down #menu (onSelection)="onSelection($event)">
             <igx-drop-down-item *ngFor="let item of items" [value]="item.text">
                 <div>{{ item.text }}</div>
@@ -334,39 +275,23 @@ You can configure the [`igxDropDown`]({environment:angularApiUrl}/classes/igxdro
 ```typescript
 // dropdown.component.ts
 
-...
-@ViewChild(IgxOverlayOutletDirective) public igxOverlayOutlet: IgxOverlayOutletDirective;
-@ViewChild(IgxDropDownComponent) public menu: IgxDropDownComponent;
-
-public items: any[] = [];
-public text;
-
-private positionSettings = {
-    horizontalDirection: HorizontalAlignment.Left,
-    horizontalStartPoint: HorizontalAlignment.Right,
-    verticalStartPoint: VerticalAlignment.Bottom
-};
-
-public ngOnInit() {
-    this.items = [{ text: "Add New Contact" }, { text: "Edit Contact" }, { text: "Refresh" }, { text: "Help" }];
-}
-
-public onSelection(eventArgs: ISelectionEventArgs) {
-    this.text = eventArgs.newSelection.value;
-    eventArgs.cancel = true;
-}
-
-public toggleMenu(eventArgs) {
-    const overlaySettings: OverlaySettings = {
-        closeOnOutsideClick: true,
-        modal: false,
-        outlet: this.igxOverlayOutlet,
-        positionStrategy: new ConnectedPositioningStrategy(this.positionSettings),
+export class MyMenuComponent {
+    public items: Array<{ text: string }> =
+        [{ text: "Add New Contact" }, { text: "Edit Contact" }, { text: "Refresh" }, { text: "Help" }];
+    public text: string;
+    public overlaySettings = {
+        positionStrategy: new ConnectedPositioningStrategy({
+            horizontalDirection: HorizontalAlignment.Left,
+            horizontalStartPoint: HorizontalAlignment.Right,
+            verticalStartPoint: VerticalAlignment.Bottom
+        }),
         scrollStrategy: new NoOpScrollStrategy()
     };
 
-    overlaySettings.positionStrategy.settings.target = eventArgs.target;
-    this.menu.toggle(overlaySettings);
+    public onSelection(eventArgs: ISelectionEventArgs) {
+        this.text = eventArgs.newSelection.value;
+        eventArgs.cancel = true;
+    }
 }
 ```
 
@@ -388,48 +313,39 @@ The following sample demonstrates an input that on click opens and closes igxDro
 
 ```html
 <!-- input-dropdown.component.html -->
-    <igx-input-group #inputGroup class="input-group" [igxToggleAction]="dropDown">
-        <input #input class="input" type="text" igxInput [igxDropDownItemNavigation]="igxDropDown"
-            readonly= "true"
-            placeholder="choose an option"
-            [(ngModel)]="this.value"
-            (keydown.ArrowDown)="openDropDown()"/>
 
-        <igx-suffix igxButton="icon" class="dropdownToggleButton" igxRipple>
-            <igx-icon *ngIf="igxDropDown.collapsed; else toggleUp" fontSet="material">arrow_drop_down</igx-icon>
-            <ng-template #toggleUp>
-                <igx-icon fontSet="material">arrow_drop_up</igx-icon>
-            </ng-template>
-        </igx-suffix>
-    </igx-input-group>
-    <span>Selected: {{this.value}}</span>
-    <igx-drop-down #dropDown [width]="'160px'" (onSelection)="onSelection($event)">
-        <igx-drop-down-item *ngFor="let item of items" [value]="item.field">
-            {{ item.field }}
-        </igx-drop-down-item>
-    </igx-drop-down>
+<igx-input-group #inputGroup [igxToggleAction]="dropDown" class="input-group">
+    <input class="input"  type="text" igxInput [igxDropDownItemNavigation]="dropDown"
+        readonly= "true"
+        placeholder="choose an option"
+        [value]="dropDown.selectedItem?.value"
+        (keydown.ArrowDown)="openDropDown()"/>
+
+    <igx-suffix igxButton="icon" class="dropdownToggleButton" igxRipple>
+        <igx-icon>arrow_drop{{ dropDown.collapsed ? '_down' : '_up' }}</igx-icon>
+    </igx-suffix>
+</igx-input-group>
+
+<span>Selected: {{ dropDown.selectedItem?.value }}</span>
+<igx-drop-down #dropDown [width]="'160px'">
+    <igx-drop-down-item *ngFor="let item of items" [value]="item.field">
+        {{ item.field }}
+    </igx-drop-down-item>
+</igx-drop-down>
 ```
 
 ```typescript
 // input-dropdown.component.ts
+
+export class InputDropDownComponent {
     @ViewChild(IgxDropDownComponent) public igxDropDown: IgxDropDownComponent;
     @ViewChild("inputGroup", { read: IgxInputGroupComponent}) public inputGroup: IgxInputGroupComponent;
-    @ViewChild("input", { read: IgxInputDirective })
-    public input: IgxInputDirective;
 
-    public items: any[] = [];
-    public value: string;
-
-    public ngOnInit() {
-        for (let i = 1; i < 4; i ++) {
-            const item = { field: "Option " + i };
-            this.items.push(item);
-        }
-    }
-
-    public onSelection(eventArgs: ISelectionEventArgs) {
-        this.value = eventArgs.newSelection.value;
-    }
+    public items: Array<{ field: string }> = [
+        { field: "Option 1" },
+        { field: "Option 2" },
+        { field: "Option 3" }
+    ];
 
     public openDropDown() {
         if (this.igxDropDown.collapsed) {
@@ -441,6 +357,7 @@ The following sample demonstrates an input that on click opens and closes igxDro
             });
         }
     }
+}
 ```
 
 <div class="sample-container" style="height:220px">

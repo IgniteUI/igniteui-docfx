@@ -1,4 +1,4 @@
-﻿---
+---
 title: Avatar コンポーネント
 _description: Ignite UI for Angular の Avatar コントロールは、プロファイル ボタンなどのアプリケーションのインスタンスに画像、マテリアル アイコン、またはイニシャルを追加できます。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Avatar コンポーネント, Angular Avatar コントロール
@@ -22,7 +22,7 @@ _language: ja
 
 ### 使用方法
 
-Ignite UI for Angular Avatar を初期化する前に、[`IgxAvatarModule`]({environment:angularApiUrl}/classes/igxavatarmodule.html) を **app.module.ts** ファイルにインポートします。
+Ignite UI for Angular Avatar を初期化する前に、`IgxAvatarModule` を **app.module.ts** ファイルにインポートします。
 
 ```typescript
 // app.module.ts
@@ -71,7 +71,7 @@ Avatar の形式は四角または丸で、3 つのサイズ オプション (�
 以下は結果です。
 
 <div class="sample-container loading" style="height:100px">
-    <iframe id="avatar-sample-1-iframe" src='{environment:demosBaseUrl}/layouts/avatar-sample-1' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="avatar-sample-1-iframe" data-src='{environment:demosBaseUrl}/layouts/avatar-sample-1' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 
 #### 画像を表示するアバター
@@ -94,7 +94,7 @@ Avatar の形式は四角または丸で、3 つのサイズ オプション (�
 以下は結果です。
 
 <div class="sample-container loading" style="height:100px">
-    <iframe id="avatar-sample-2-iframe" src='{environment:demosBaseUrl}/layouts/avatar-sample-2' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="avatar-sample-2-iframe" data-src='{environment:demosBaseUrl}/layouts/avatar-sample-2' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 
 #### アイコンを表示するアバター

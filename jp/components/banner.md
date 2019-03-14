@@ -84,7 +84,7 @@ Bannerは、要素がページ テンプレートに挿入された場所にそ�
 
 #### アイコンの追加
 
-Banner コンテンツに [`igx-icon`]({environment:angularApiUrl}/classes/igxiconmodule.html) を渡すことができ、常に Banner メッセージの最初に配置されます。
+Banner コンテンツに [`igx-icon`](icon.md) を渡すことができ、常に Banner メッセージの最初に配置されます。
 
 > [!NOTE]
 > 複数の `igx-icon` 要素が Banner の直接の子孫として挿入される場合、Banner はそれらすべてを最初に配置しようとします。`igx-icon` は 1 つのみ、直接渡すことに注意してください。Banner メッセージのアイコンを使用する場合、`span` タグでラップしてください。
@@ -179,7 +179,7 @@ export class MyBannerComponent implements OnInit, OnDestroy {
 
 ### カスタム アニメーションの適用
 
-Banner コンポーネントは、[`animationSettings`]({environment:angularApiUrl}/classes/igxbannermodule.html#animationsettings) にカスタム オープンの設定とアニメーションのクローズを許容する `Input` プロパティを公開します。カスタム アニメーションは、ユーザー定義または [`IgniteUI for Angular animation suite`]({environment:sassApiUrl}/index.html) から渡すことができます。Bannerで使用されるデフォルト アニメーションは、`growVerIn` が開始、`growVerOut` が終了です。
+Banner コンポーネントは、[`animationSettings`]({environment:angularApiUrl}/classes/igxbannercomponent.html#animationsettings) にカスタム オープンの設定とアニメーションのクローズを許容する `Input` プロパティを公開します。カスタム アニメーションは、ユーザー定義または [`IgniteUI for Angular animation suite`]({environment:sassApiUrl}/index.html) から渡すことができます。Bannerで使用されるデフォルト アニメーションは、`growVerIn` が開始、`growVerOut` が終了です。
 
 スライドインするためにBannerが使用するアニメーションを変更します。
 

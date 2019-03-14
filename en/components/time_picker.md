@@ -19,7 +19,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ### Usage
 
-To get started with the Ignite UI for Angular Time Picker, let's first import the [`IgxTimePickerModule`]({environment:angularApiUrl}/classes/igxtimepickermodule.html) in the **app.module.ts** file. Note that the IgxTimePicker is also dependent on the **BrowserAnimationsModule**, so it needs to be added to the AppModule as well:
+To get started with the Ignite UI for Angular Time Picker, let's first import the `IgxTimePickerModule` in the **app.module.ts** file. Note that the IgxTimePicker is also dependent on the **BrowserAnimationsModule**, so it needs to be added to the AppModule as well:
 
 ```typescript
 // app.module.ts
@@ -39,7 +39,7 @@ export class AppModule {}
 
 #### Default
 
-To add the time picker, use the following code:
+To add the time picker in a template, use the following code:
 
 ```html
 <!--meeting.component.html-->
@@ -48,7 +48,7 @@ To add the time picker, use the following code:
 
 And there we have it:
 <div class="sample-container loading" style="height:600px">
-    <iframe id="timepicker-sample-1-iframe" src="{environment:demosBaseUrl}/scheduling/timepicker-sample-1" width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="timepicker-sample-1-iframe" data-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-1" width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="timepicker-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
@@ -71,7 +71,7 @@ Then use the [`value`]({environment:angularApiUrl}/classes/igxtimepickercomponen
 
 And there we have it:
 <div class="sample-container loading" style="height: 600px;">
-    <iframe id="time-picker-sample-2" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/scheduling/timepicker-sample-2" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="time-picker-sample-2" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-2" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="time-picker-sample-2" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
@@ -94,7 +94,7 @@ To change the delta of the items, set the [`itemsDelta`]({environment:angularApi
 
 And there we have it:
 <div class="sample-container loading" style="height: 600px;">
-    <iframe id="time-picker-sample-3" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/scheduling/timepicker-sample-3" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="time-picker-sample-3" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-3" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="time-picker-sample-3" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
@@ -145,7 +145,7 @@ public onValidationFailed(timepicker){
 
 And there we have it:
 <div class="sample-container loading" style="height: 540px;">
-    <iframe id="time-picker-sample-4" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/scheduling/timepicker-sample-4" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="time-picker-sample-4" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-4" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="time-picker-sample-4" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
@@ -154,20 +154,28 @@ And there we have it:
 
 #### Dropdown mode
 
-When you add the time picker to your project, its default mode is read-only dialog mode. To change the time picker mode to editable dropdown mode, set the [`mode`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#mode) input to [`dropdown`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#TimePickerInteractionMode):
+When you add the time picker to your project, its default mode is read-only dialog mode. To change the time picker mode to editable dropdown mode, set the [`mode`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#mode) input to [`dropdown`]({environment:angularApiUrl}/enums/interactionmode.html#dropdown):
 
 ```typescript
 // timePickerDropdown.component.ts
 
-import { TimePickerInteractionMode } from 'igniteui-angular';
+import { InteractionMode } from 'igniteui-angular';
 ...
-public mode: TimePickerInteractionMode = TimePickerInteractionMode.dropdown;
+public mode = InteractionMode.DropDown;
 ```
 
 ```html
 <!--timePickerDropdown.component.html-->
 <igx-time-picker [mode]="mode"></igx-time-picker>
 ```
+
+or just change the [`mode`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#mode) in the time picker like this:
+
+```html
+<!--timePickerDropdown.component.html-->
+<igx-time-picker mode="dropdown"></igx-time-picker>
+```
+
 The user now will be able to type, edit or delete the time value in the input in both 12- and 24-hour formats. 
 
 **Dropdown Mode Keyboard Navigation**
@@ -185,7 +193,7 @@ When the mouse caret is positioned at the hours, minutes or AM/PM placeholders a
 
 And there we have it:
 <div class="sample-container loading" style="height:540px">
-    <iframe id="timepicker-dropdown-iframe" src='{environment:demosBaseUrl}/scheduling/timepicker-dropdown' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="timepicker-dropdown-iframe" data-src='{environment:demosBaseUrl}/scheduling/timepicker-dropdown' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="timepicker-dropdown-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
@@ -223,7 +231,7 @@ public date: Date = new Date(Date.now());
 
 And there we have it:
 <div class="sample-container loading" style="height: 600px;">
-    <iframe id="time-picker-sample-5" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/scheduling/timepicker-sample-5" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="time-picker-sample-5" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-5" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="time-picker-sample-5" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>

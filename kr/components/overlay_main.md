@@ -14,7 +14,7 @@ The overlay service is fully integrated in the toggle directive.
 
 ## Getting Started
 
-To use the [`IgxOverlayService`] ({environment:angularApiUrl}/classes/igxoverlayservice.html) it needs to be imported in the component. `Inject` a reference to it in the component's [`constructor`] ({environment:angularApiUrl}/classes/igxoverlayservice.html#constructor):
+To use the [`IgxOverlayService`] ({environment:angularApiUrl}/classes/igxoverlayservice.html) it needs to be imported in the component. `Inject` a reference to it in the component's constructor:
 ```typescript
 
 import { Inject } from '@angular/core'
@@ -99,7 +99,7 @@ The overlay service [`show()`] ({environment:angularApiUrl}/classes/igxoverlayse
 <div class="divider--half"></div>
 
 ### Demo - Dynamic attach - Component
-In the below demo, we can pass the IgxCard [demo](https://www.infragistics.com/products/ignite-ui-angular/angular/components/card.html#card-demo) through the overlay service [`show()`] ({environment:angularApiUrl}/classes/igxoverlayservice.html#show) method to dynamically attach it to the DOM in a modal container.
+In the below demo, we can pass the [IgxCard](card.html#card-demo) through the overlay service [`show()`] ({environment:angularApiUrl}/classes/igxoverlayservice.html#show) method to dynamically attach it to the DOM in a modal container.
 
 
 <div class="sample-container loading" style="height: 400px">
@@ -242,7 +242,7 @@ export class ExampleComponent {
             modal: true,
             closeOnOutsideClick: false
         }
-        this.toggleDirective.toggle(true, overlaySettings)
+        this.toggleDirective.toggle(overlaySettings)
     }
 }
 ```

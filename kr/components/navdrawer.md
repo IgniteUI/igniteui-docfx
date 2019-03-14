@@ -21,7 +21,7 @@ _language: kr
 ### Dependencies
 To started with all needed dependencies you can use the [`IgxNavigationDrawerModule`]({environment:angularApiUrl}/classes/igxnavigationdrawermodule.html) and import it in your application IgxNavigationDrawerModule } from 'igniteui { IgxNavigationDrawerModule } from 'igniteui-angular/navigation-drawer';
 ```
-And include it@NgModule({
+@NgModule({
     imports: [
         IgxNavigationDrawerModule,
         ...
@@ -114,7 +114,7 @@ Unpinned (elevated above content) mode is the normal behavior where the drawer s
 The drawer can be pinned to take advantage of larger screens, placing it within normal content flow with relative position. Depending on whether the app provides a way to toggle the drawer, the pinned mode can be used to achieve either [permanent or persistent behavior](https://material.io/guidelines/patterns/navigation-drawer.html#navigation-drawer-behavior).
 
 > [!NOTE]
-> By default the Navigation Drawer is responsive, actively changing between unpinned and pinned mode based on screen size. This behavior is controlled by the [`pinThreshold`](https://github.com/IgniteUI/igniteui-docfx/blob/master/en/components/navdrawer.md#api) property and can be disabled by setting a falsy value (e.g. 0).
+> By default the Navigation Drawer is responsive, actively changing between unpinned and pinned mode based on screen size. This behavior is controlled by the [`pinThreshold`]({environment:angularApiUrl}/classes/igxnavigationdrawercomponent.html#pinthreshold) property and can be disabled by setting a falsy value (e.g. 0).
 
 
 #### Pinned (persistent) setup
@@ -216,8 +216,8 @@ The directive is exported both from the main `IgxNavigationDrawerModule` and sep
 
 #### Example: Use default item styles with Angular Router
 To make use of the [`igxDrawerItem`]({environment:angularApiUrl}/classes/igxnavdraweritemdirective.html) directive to style items normally the `active` input should be set, however with routing that state is controlled externally.
-
-Take the following items defined in `app`typescript
+Take the following items defined in `app`:
+```typescript
 export class AppComponent {
     public componentLinks = [
         {

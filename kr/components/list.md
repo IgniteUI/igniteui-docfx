@@ -22,7 +22,7 @@ _language: kr
 
 ### Usage
 At its core the list component allows you to easily display a vertical list of items. The default styling of the items is done according to the single-line list specification as per the Material Design [**guidelines**](https://material.io/guidelines/components/lists.html).
-To get started with the Ignite UI for Angular List, let's first import the [`IgxListModule`]({environment:angularApiUrl}/classes/igxlistmodule.html) in our app.module.ts file:
+To get started with the Ignite UI for Angular List, let's first import the `IgxListModule` in our app.module.ts file:
 
 ```typescript
 // app.module.ts
@@ -68,7 +68,7 @@ And our style for the empty template:
 If all went great, this is how our empty list should look like:
 
 <div class="sample-container loading" style="height: 100px">
-<iframe id="list-sample-5-iframe" src='{environment:demosBaseUrl}/lists/list-sample-5' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<iframe id="list-sample-5-iframe" data-src='{environment:demosBaseUrl}/lists/list-sample-5' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
 <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-sample-5-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
@@ -97,7 +97,7 @@ Sometimes there may be a delay in your data loading. In this case you can set th
 ```
 
 <div class="sample-container loading" style="height: 300px">
-<iframe id="list-sample-6-iframe" src='{environment:demosBaseUrl}/lists/list-sample-6' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<iframe id="list-sample-6-iframe" data-src='{environment:demosBaseUrl}/lists/list-sample-6' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
 <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-sample-6-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
@@ -121,7 +121,7 @@ It's nice having a template for when the list is empty, but now let's add some i
 If all went well, you should see the following in your browser:
 
 <div class="sample-container loading" style="height: 200px">
-<iframe id="list-sample-2-iframe" src='{environment:demosBaseUrl}/lists/list-sample-2' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<iframe id="list-sample-2-iframe" data-src='{environment:demosBaseUrl}/lists/list-sample-2' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
 <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
@@ -189,7 +189,7 @@ You may have noticed that despite the fact that we used span elements to display
 After all that our list should now look like that:
 
 <div class="sample-container loading" style="height: 400px">
-<iframe id="list-sample-3-iframe" src='{environment:demosBaseUrl}/lists/list-sample-3' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<iframe id="list-sample-3-iframe" data-src='{environment:demosBaseUrl}/lists/list-sample-3' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
 <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
@@ -325,7 +325,7 @@ toggleFavorite(item: IgxListItem) {
 And here's the result of all that work:
 
 <div class="sample-container loading" style="height: 477px">
-<iframe id="list-sample-4-final-iframe" src='{environment:demosBaseUrl}/lists/list-sample-4' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<iframe id="list-sample-4-final-iframe" data-src='{environment:demosBaseUrl}/lists/list-sample-4' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
 <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-sample-4-final-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
@@ -471,7 +471,7 @@ public leftPanPerformed(args) {
 Now try panning the list items for yourself:
 
 <div class="sample-container loading" style="height: 500px">
-<iframe id="list-sample-7-final-iframe" src='{environment:demosBaseUrl}/lists/list-sample-7' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<iframe id="list-sample-7-final-iframe" data-src='{environment:demosBaseUrl}/lists/list-sample-7' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
 <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-sample-7-final-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
@@ -499,7 +499,7 @@ Let's add an input field to the top in our component template first and bind it 
 </igx-input-group>
 ```
 
-It's time to import the [`IgxFilterModule`]({environment:angularApiUrl}/classes/igxfiltermodule.html) and the [`IgxInputGroupModule`]({environment:angularApiUrl}/classes/igxinputgroupmodule.html) in our app.module.ts file and [`IgxFilterOptions`]({environment:angularApiUrl}/classes/igxfilteroptions.html) in our contacts component:
+It's time to import the `IgxFilterModule` and the `IgxInputGroupModule` in our app.module.ts file and [`IgxFilterOptions`]({environment:angularApiUrl}/classes/igxfilteroptions.html) in our contacts component:
 
 ```typescript
     // app.module.ts

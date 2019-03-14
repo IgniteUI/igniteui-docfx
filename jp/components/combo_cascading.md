@@ -1,19 +1,19 @@
 ---
 title: カスケーディング
-_description: igx-combo と igx-drop-down は、簡単にカスケーディングを作成できるイベント、プロパティ、メソッドを公開します。
+_description: igx-combo と igx-select は、簡単にカスケーディングを作成できるイベント、プロパティ、メソッドを公開します。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Combo コンポーネント, Angular Combo コントロール、Angular カスケーディング Combo, Angular Drop Down, Angular カスケーディング
 _language: ja
 ---
 
 ## カスケーディング
 <p class="highlight">
- [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) と [igx-drop-down]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) は、簡単にカスケーディングを作成できるイベント、プロパティ、メソッドを公開します。
+ [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) と [igx-select]({environment:angularApiUrl}/classes/igxselectcomponent.html) は、簡単にカスケーディングを作成できるイベント、プロパティ、メソッドを公開します。
 </p>
 <div class="divider"></div>
 
 ### デモ
 
-以下のサンプルは、2 つの [igx-drop-down]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) と [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) コンポーネントを使用しています。
+以下のサンプルは、2 つの [igx-select]({environment:angularApiUrl}/classes/igxselectcomponent.html) と [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) コンポーネントを使用しています。
 
 <div class="sample-container loading" style="height: 540px;">
     <iframe id="cascading-combos-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/lists/cascading-combos" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -24,67 +24,42 @@ _language: ja
 <div class="divider--half"></div>
 
 ### 使用方法
-はじめに `IgxComboModule`, `IgxDropDownModule`, `IgxIconModule`, `IgxInputGroupModule` を **app.module.ts** ファイルにインポートします。
+はじめに `IgxComboModule`, `IgxDropDownModule` を **app.module.ts** ファイルにインポートします。
 
 ```typescript
 // app.module.ts
 
 ...
-import { IgxComboModule, IgxDropDownModule, IgxIconModule, IgxInputGroupModule } from 'igniteui-angular';
+import { IgxComboModule, IgxDropDownModule } from 'igniteui-angular';
 
 @NgModule({
     ...
-    imports: [..., IgxComboModule, IgxDropDownModule, IgxIconModule, IgxInputGroupModule],
+    imports: [..., IgxComboModule, IgxDropDownModule ],
     ...
 })
 export class AppModule {}
 ```
 
-以下のサンプルは、[igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) と 2 つの [igx-drop-down]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) コンポーネント、それらに対応する入力要素を使用しています。両コンポーネントの API は、選択された項目を取得してドロップダウンまたはコンボのいずれかにデータソースを読み込み、選択をクリアまたはデータソースをリセットします。
+以下のサンプルは、[igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) と 2 つの [igx-select]({environment:angularApiUrl}/classes/igxselectcomponent.html) コンポーネント、それらに対応する入力要素を使用しています。両コンポーネントの API は、選択された項目を取得してドロップダウンまたはコンボのいずれかにデータソースを読み込み、選択をクリアまたはデータソースをリセットします。
 
 ```html
-
-<div class="combo-container">
-    <igx-input-group type="box" #inputGroupCountry style="width: 300px;" (click)="toggleDDCountry()">
-        <input igxInput #inputCountry name="inputCountry" type="text" [(ngModel)]="country" readonly placeholder="Choose Country..."
-            [igxDropDownItemNavigation]="dropdownCountry"/>
-        <igx-suffix><igx-icon>{{arrowCountry}}</igx-icon></igx-suffix>
-    </igx-input-group>
-    <igx-drop-down #dropdownCountry width="300px"
-        (onSelection)="selectCountry($event)" (onClosed)="onCountryClosed()">
-        <igx-drop-down-item *ngFor="let c of countryData">
-            {{ c }}
-        </igx-drop-down-item>
-    </igx-drop-down>
-</div>
-
-<div class="combo-container">
-    <igx-input-group type="box" #inputGroupProvince style="width: 300px;" (click)="toggleDDProvince()" [disabled]="disabledProvince">
-        <input igxInput #inputProvince name="inputProvince" type="text" [(ngModel)]="province" readonly placeholder="Choose Province..."
-            [igxDropDownItemNavigation]="dropdownCountry"/>
-        <igx-suffix><igx-icon>{{arrowProvince}}</igx-icon></igx-suffix>
-    </igx-input-group>
-    <igx-drop-down #dropdownProvince width="300px"
-        (onSelection)="selectProvince($event)" (onClosed)="onProvinceClosed()">
-        <igx-drop-down-item *ngFor="let p of provinceData">
-            {{ p }}
-        </igx-drop-down-item>
-    </igx-drop-down>
-</div>
-
-<div class="combo-container">
-    <igx-combo #comboTown width="300px" [itemsMaxHeight]="225"
-        [data]="townData" [disabled]="true"
-        placeholder="Choose Town..." searchPlaceholder="Search..."
-        [allowCustomValues]="false">
-    </igx-combo>
-</div>
+<igx-select type="box" #cntr placeholder="Choose Country..."
+    (onSelection)="selectCountry($event)" [(ngModel)]="location.country">
+    <igx-select-item *ngFor="let c of countryData" [value]="c"> {{ c }} </igx-select-item>
+</igx-select>
+<igx-select type="box" #prvnc placeholder="Choose Province..." [disabled]="!cntr.value"
+    (onSelection)="selectProvince($event)" [(ngModel)]="location.province">
+    <igx-select-item *ngFor="let p of provinceData" [value]="p"> {{ p }} </igx-select-item>
+</igx-select>
+<igx-combo #twn [itemsMaxHeight]="225" [data]="townData" [disabled]="!prvnc.value"
+    placeholder="Choose Town..." searchPlaceholder="Search..." [allowCustomValues]="false"
+    [(ngModel)]="location.towns">
+</igx-combo>
 
 ```
 
 ```typescript
-import { Component, ViewChild } from "@angular/core";
-import { ConnectedPositioningStrategy, IgxComboComponent, IgxDropDownComponent, IgxInputGroupComponent, NoOpScrollStrategy, OverlaySettings } from "igniteui-angular";
+import { Component } from "@angular/core";
 import { data } from "./local-data";
 
 @Component({
@@ -93,73 +68,28 @@ import { data } from "./local-data";
     templateUrl: "./cascading-combos.component.html"
 })
 export class CascadingCombos {
-
-    @ViewChild("inputGroupCountry", { read: IgxInputGroupComponent}) public inputGroupCountry: IgxInputGroupComponent;
-    @ViewChild("inputGroupProvince", { read: IgxInputGroupComponent}) public inputGroupProvince: IgxInputGroupComponent;
-    @ViewChild("inputCountry") public inputCountry: HTMLInputElement;
-    @ViewChild("inputProvince") public inputProvince: HTMLInputElement;
-    @ViewChild("dropdownCountry", { read: IgxDropDownComponent}) public dropdownCountry: IgxDropDownComponent;
-    @ViewChild("dropdownProvince", { read: IgxDropDownComponent}) public dropdownProvince: IgxDropDownComponent;
-    @ViewChild("comboTown", { read: IgxComboComponent }) public comboTown: IgxComboComponent;
-    public arrowCountry = "arrow_drop_down";
-    public arrowProvince = "arrow_drop_down";
-    public disabledProvince = true;
-
-    public countryData: any[] = [];
-    public provinceData: any[] = [];
-    public townData: any[] = [];
-    public country: string;
-    public province: string;
-    public town: string;
-    private _overlaySettings: OverlaySettings = {
-        closeOnOutsideClick: true,
-        modal: false,
-        positionStrategy: new ConnectedPositioningStrategy(),
-        scrollStrategy: new NoOpScrollStrategy()
-    };
+    public location: { country: string, province: string, towns: string[] } = { country: "", province: "", towns: [] };
+    public data = data;
+    public countryData = [];
+    public provinceData = [];
+    public townData = [];
 
     constructor() {
         this.countryData = Object.keys(data);
     }
 
-    public toggleDDCountry() {
-        this._overlaySettings.positionStrategy.settings.target = this.inputGroupCountry.element.nativeElement;
-        this.dropdownCountry.toggle(this._overlaySettings);
-        this.arrowCountry = "arrow_drop_up";
-    }
-
-    public toggleDDProvince() {
-        this._overlaySettings.positionStrategy.settings.target = this.inputGroupProvince.element.nativeElement;
-        this.dropdownProvince.toggle(this._overlaySettings);
-        this.arrowProvince = "arrow_drop_up";
-    }
-
     public selectCountry(args) {
-        this.disabledProvince = false;
-        this.country = Object.keys(data)[args.newSelection.index];
-        this.provinceData = Object.keys(data[this.country]);
-        this.province = "";
-        this.comboTown.deselectAllItems();
+        this.provinceData = Object.keys(this.data[args.newSelection.value]);
+        this.location.province = "";
+        this.location.towns = [];
     }
 
     public selectProvince(args) {
-        this.arrowProvince = "arrow_drop_down";
-        this.comboTown.disabled = false;
-        this.province = this.provinceData[args.newSelection.index];
-        this.townData = data[this.country][this.province];
-        this.comboTown.deselectAllItems();
-    }
-
-    public onCountryClosed() {
-        this.arrowCountry = "arrow_drop_down";
-    }
-
-    public onProvinceClosed() {
-        this.arrowProvince = "arrow_drop_down";
+        this.townData = this.data[this.location.country][args.newSelection.value];
+        this.location.towns = [this.townData[0]];
     }
 }
 ```
-> 注: [igx-overlay]({environment:angularApiUrl}/classes/igxoverlayservice.html) 配置機能は、入力の下にドロップダウンを表示して単一選択コンボをエミュレートするために使用します。
 
 ## その他のリソース
 <div class="divider--half"></div>

@@ -19,7 +19,7 @@ _language: kr
 <div class="divider--half"></div>
 
 ### Usage
-To get started with the Ignite UI for Angular NavBar component, let's first import the [`IgxNavbarModule`]({environment:angularApiUrl}/classes/igxnavbarmodule.html) in our **app.module.ts** file:
+To get started with the Ignite UI for Angular NavBar component, let's first import the `IgxNavbarModule` in our **app.module.ts** file:
 
 ```typescript
 // app.module.ts

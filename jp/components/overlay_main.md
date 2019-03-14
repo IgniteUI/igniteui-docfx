@@ -14,7 +14,7 @@ _language: ja
 
 ## 使用方法
 
-[`IgxOverlayService`] ({environment:angularApiUrl}/classes/igxoverlayservice.html) を使用するには、コンポーネントにインポートします。 サービスへの参照をコンポーネントの [`constructor`] ({environment:angularApiUrl}/classes/igxoverlayservice.html#constructor) に注入します。
+[`IgxOverlayService`]({environment:angularApiUrl}/classes/igxoverlayservice.html) を使用するには、コンポーネントにインポートします。 サービスへの参照をコンポーネントの [`constructor`] ({environment:angularApiUrl}/classes/igxoverlayservice.html#constructor) に注入します。
 ```typescript
 
 import { Inject } from '@angular/core'
@@ -35,7 +35,7 @@ export class MyOverlayComponent {
 
 オーバーレイ サービスでオーバーレイ DOM にアタッチすると `HTMLNode` または Angular コンポーネントを動的に表示できます。
 
-Overlay サービスへの参照を追加した後、コンテンツを動的に表示/非表示できます。たとえば、Angular コンポーネントを show 関数で渡せます。
+Overlay サービスへの参照を追加後、コンテンツを動的に表示/非表示できます。たとえば、Angular コンポーネントは `attach` 関数で渡して一意の ID を生成します。次にこの ID を `show` 関数に渡してコンポーネントを表示します。
 
 ```typescript
 
@@ -43,7 +43,7 @@ Overlay サービスへの参照を追加した後、コンテンツを動的に
 import { MyDynamicComponent } from '../my-dynamic-component/my-dynamic-component.component';
 
 export class MyOverlayComponent {
-
+    private _overlayId = ''; // The unique identifier assigned to the component by the Overlay service
     ... 
     // a reference to the OverlayService is defined via @Inject in the constructor
     // under this.overlayService
@@ -63,7 +63,7 @@ export class MyOverlayComponent {
 
 ```
 
-ページの既存の `ElementRef` から [`IgxOverlayService`] ({environment:angularApiUrl}/classes/igxoverlayservice.html) へ渡す場合は以下の手順に従ってください。
+ページの既存の `ElementRef` から [`IgxOverlayService`]({environment:angularApiUrl}/classes/igxoverlayservice.html) へ渡す場合は以下の手順に従ってください。
 
 ```HTML
 <!-- in my-overlay-component.component.html -->
@@ -79,27 +79,35 @@ export class MyOverlayComponent {
 // in my-overlay-component.component.ts
 import { Inject, ViewChild } from '@angular/core'
 export class MyOverlayComponent {
+    private _overlayId = ''; // The unique identifier assigned to the component by the Overlay service
 
     @ViewChild('exampleImage', {read: ElementRef})
     private exampleImage: ElementRef;
     public showInOverlay() {
-        this.overlayService.show(this.exampleImage);
+        if (!this._overlayId) {
+            this._overlayId = this.overlayService.attach(this.exampleImage);
+        }
+        this.overlayService.show(this._overlayId);
     }
 }
 ```
 <div class="divider--half"></div>
 
-オーバーレイ サービスの [`show()`] ({environment:angularApiUrl}/classes/igxoverlayservice.html#show) メソッドは 2 つの引数を受け取ります。最初の引数はオーバーレイに描画するコンテンツです。
-  - 上記の例などのコンポーネント定義 - コンポーネントを最初の引数として渡す場合、オーバーレイ サービスがそのコンポーネントの新しいインスタンスを作成し、動的にオーバーレイ DOM にアタッチします。
-  - 既存 DOM 要素へ `ElementRef` - ページで描画されるビューをオーバーレイ サービスに渡す場合、オーバーレイ DOM に描画されます。この方法を使用する場合:
-    - Angular から渡されるビューへの参照を取得します。
+オーバーレイサービス [`attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) に 2 つのオーバーロードがあります。
+  - `attach(element, settings?)`
+  - `attach(component, settings?, moduleRef)`
+
+オーバーロードの最初のパラメーターは必須でオーバーレイに表示されるコンテンツを表します。以下は、コンテンツを渡す場合の例です。
+  - 上記の例などのコンポーネント定義 - コンポーネントを最初の引数として渡す場合、オーバーレイ サービスがそのコンポーネントの新しいインスタンスを作成し、`オーバーレイ DOM` に動的にアタッチします。`moduleRef` が提供される場合、`moduleRef` を作成する際にサービスはルートではなくモジュールの `ComponentFactoryResolver` と `Injector` を使用します。
+  - `ElementRef` から既存の DOM 要素 - ページで既に描画されたビューはオーバーレイ サービスで渡して、オーバーレイ DOM で描画できます。[`show(id)`]({environment:angularApiUrl}/classes/igxoverlayservice.html#show) を呼び出したときにこの方法を使用するとオーバーレイは:
+    - Angular から渡されるビューへの参照を取得します。 
     - ビューを DOM からデタッチし、そこにアンカーを追加します。
-    - [`show()`] ({environment:angularApiUrl}/classes/igxoverlayservice.html#show) メソッド設定またはデフォルトのオーバーレイ設定を使用してビューをオーバーレイにアタッチします。
+    - [`show()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#show) メソッド設定またはデフォルトのオーバーレイ設定を使用してビューをオーバーレイにアタッチします。
     - 閉じた後、ビューを DOM にある元の位置にアタッチします。
 <div class="divider--half"></div>
 
 ### デモ - 動的なアタッチ - コンポーネント
-以下のデモで、IgxCard [デモ](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/card.html#card-デモ) をオーバーレイ サービスの show() メソッドに渡して、モーダル コンテナーで DOM に動的にアタッチします。
+以下のデモで、[IgxCard](card.html#card-デモ) をオーバーレイ サービスの show() メソッドに渡して、モーダル コンテナーで DOM に動的にアタッチします。
 
 
 <div class="sample-container loading" style="height: 400px">
@@ -112,9 +120,9 @@ export class MyOverlayComponent {
 
 ### オーバーレイ設定の構成
 
-オーバーレイ サービスの [`show()`] ({environment:angularApiUrl}/classes/igxoverlayservice.html#show) メソッドは [`OverlaySettings`] ({environment:angularApiUrl}/interfaces/overlaysettings.html) 型のオブジェクトを受け取ります。このオブジェクトはコンテンツの表示方法を構成します。このオブジェクトが指定されていない場合、Overlay サービスは渡されたコンテンツを描画するためにデフォルト設定を使用します。
+オーバーレイ サービスの [`attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) メソッドは [`OverlaySettings`] ({environment:angularApiUrl}/interfaces/overlaysettings.html) 型のオブジェクトを受け取ります。このオブジェクトはコンテンツの表示方法を構成します。このオブジェクトが指定されていない場合、Overlay サービスは渡されたコンテンツを描画するためにデフォルト設定を使用します。
 
-たとえば、コンテンツを要素に相対的に配置するには、オーバーレイの [`show()`] ({environment:angularApiUrl}/classes/igxoverlayservice.html#show) メソッドに別の [`positioningStrategy`] ({environment:angularApiUrl}/interfaces/overlaysettings.html#positionstrategy) ([`ConnectedPositioningStrategy`] ({environment:angularApiUrl}/classes/connectedpositioningstrategy.html) など) を渡します。コンポーネントの表示方法を構成するには、[`OverlaySettings`] ({environment:angularApiUrl}/interfaces/overlaysettings.html) オブジェクトを作成します。
+たとえば、コンテンツを要素に相対的に配置するには、オーバーレイの [`attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#show) メソッドに別の [`positioningStrategy`] ({environment:angularApiUrl}/interfaces/overlaysettings.html#positionstrategy) ([`ConnectedPositioningStrategy`] ({environment:angularApiUrl}/classes/connectedpositioningstrategy.html) など) を渡します。コンポーネントの表示方法を構成するには、[`OverlaySettings`] ({environment:angularApiUrl}/interfaces/overlaysettings.html) オブジェクトを作成します。
 ```typescript
 // in my-overlay-component.component.ts
 // add an import for the definion of ConnectedPositioningStategy class
@@ -124,11 +132,17 @@ export class MyOverlayComponent {
 
     @ViewChild(`myAnchorButton`)
     private myAnchorButton: ElementRef;
+    private _overlayId = ''; // The unique identifier assigned to the component by the Overlay service
 
     public showInOverlay() {
-        this.overlayService.show(MyDynamicComponent, {
-            positionStrategy: new ConnectedPositioningStrategy({ target: this.myAnchorButton.nativeElement })
-        });
+        if (!this._overlayId) {
+            this._overlayId = this.overlayService.attach(MyDynamicComponent, {
+                positionStrategy: new ConnectedPositioningStrategy({
+                    target: this.myAnchorButton.nativeElement
+                })
+            });
+        }
+        this.overlayService.show(this._overlayId);
     }
 }
 ```
@@ -145,9 +159,9 @@ export class MyOverlayComponent {
 
 ### オーバーレイの非表示
 
-[`IgxOverlayService.hide()`] ({environment:angularApiUrl}/classes/igxoverlayservice.html#hide)メソッドはコンテンツをオーバーレイからコンテンツを削除し、DOM の元の位置に再度アタッチします。
+[`IgxOverlayService.hide()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#hide) メソッドはコンテンツをオーバーレイからコンテンツを削除し、DOM の元の位置に再度アタッチします。
 
-すべてのオーバーレイ サービスで描画される要素にサービスによって割り当てられた一意の ID があります。[`IgxOverlayService.show()`] ({environment:angularApiUrl}/classes/igxoverlayservice.html#show) メソッドは描画されるコンテンツの識別子を返します。オーバーレイからコンテンツを削除するには、その ID をオーバーレイの [`hide()`] ({environment:angularApiUrl}/classes/igxoverlayservice.html#hide) メソッドに渡します。
+すべてのオーバーレイ サービスで描画される要素にサービスによって割り当てられた一意の ID があります。[`IgxOverlayService.attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) メソッドは描画されるコンテンツの識別子を返します。オーバーレイからコンテンツを削除するには、その ID をオーバーレイの [`hide()`] ({environment:angularApiUrl}/classes/igxoverlayservice.html#hide) メソッドに渡します。
 
 以前に定義されたオーバーレイ メソッドをオーバーレイ要素を表示して非表示するために変更できます。
 ```typescript
@@ -164,11 +178,18 @@ export class MyOverlayComponent {
 
     public toggleOverlay() {
         if (!this._overlayShown) { // If the element is not visible, show it
-            this._overlayId = this.overlayService.show(MyDynamicComponent, {
-                positionStrategy: new ConnectedPositioningStrategy({ target: this.myAnchorButton.nativeElement }),
-                closeOnOutsideClick: false, // overlay will not close on outside clicks
-                modal: false // overlay content will not be rendered in a modal dialog
-            }); // The show method returns an ID that can be used to reference the shown content
+            //  generate ID
+            if (!this._overlayId) {
+                this._overlayId = this.overlayService.attach(MyDynamicComponent, {
+                    positionStrategy: new ConnectedPositioningStrategy({
+                        target: this.myAnchorButton.nativeElement,
+                        closeOnOutsideClick: false, // overlay will not close on outside clicks
+                        modal: false // overlay content will not be rendered in a modal dialog
+                    }) // The attach method returns an ID that can be used to reference the shown content
+                });
+            }
+
+            this.overlayService.show(this._overlayId);
         } else { // If the element is visible, hide it
             this.overlayService.hide(this._overlayId); // Find and remove the component from the overlay container
         }
@@ -185,7 +206,7 @@ export class MyOverlayComponent {
 ```
 ### デモ - 動的なアタッチ - 設定
 
-[`show()`] ({environment:angularApiUrl}/classes/igxoverlayservice.html#show) メソッドの [`overlaySettings`] ({environment:angularApiUrl}/interfaces/overlaysettings.html) パラメーターを使用してコンテンツの表示方法を変更できます。たとえば、コンテンツの配置、スクロールの動作、およびコンテナーがモーダルかどうかを設定できます。
+[`attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) メソッドの [`overlaySettings`] ({environment:angularApiUrl}/interfaces/overlaysettings.html) パラメーターを使用してコンテンツの表示方法を変更できます。たとえば、コンテンツの配置、スクロールの動作、およびコンテナーがモーダルかどうかを設定できます。
 
 <div class="sample-container loading" style="height: 400px">
     <iframe id="overlay-sample-main-2-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/interactions/overlay-sample-main-2" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -195,7 +216,7 @@ export class MyOverlayComponent {
 </div>
 <div class="divider--half"></div>
 
-[`overlaySettings`] ({environment:angularApiUrl}/interfaces/overlaysettings.html) が指定されていない場合、切り替えた要素はデフォルト表示設定を使用します。
+[`overlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) が指定されていない場合、切り替えた要素はデフォルト表示設定を使用します。
 
 ```typescript
 defaultOverlaySettings = {
@@ -208,7 +229,7 @@ defaultOverlaySettings = {
 <div class="divider--half"></div>
 
 ### igxToggle との統合
-[`IgxToggleDirective`] ({environment:angularApiUrl}/classes/igxtoggledirective.html) は [`IgxOverlayService`] ({environment:angularApiUrl}/classes/igxoverlayservice.html) と完全に統合されます。コンテンツの切り替えでトグルの [`toggle()`] ({environment:angularApiUrl}/classes/igxtoggledirective.html#toggle) メソッドにカスタム オーバーレイ設定を渡すことができます。
+[`IgxToggleDirective`]({environment:angularApiUrl}/classes/igxtoggledirective.html) は [`IgxOverlayService`]({environment:angularApiUrl}/classes/igxoverlayservice.html) と完全に統合されます。コンテンツの切り替えでトグルの [`toggle()`]({environment:angularApiUrl}/classes/igxtoggledirective.html#toggle) メソッドにカスタム オーバーレイ設定を渡すことができます。
 
 構成設定をトグルのメソッドに渡す方法は以下の例で紹介されます。
 
@@ -243,7 +264,7 @@ export class ExampleComponent {
             modal: true,
             closeOnOutsideClick: false
         }
-        this.toggleDirective.toggle(true, overlaySettings)
+        this.toggleDirective.toggle(overlaySettings)
     }
 }
 ```

@@ -302,36 +302,36 @@ public clearSearch() {
 검색 결과의 탐색은 그리드에 사용자 검색 줄 기능을 추가하여 구현했습니다. 또한 아이콘, 칩, 입력 등의 Ignite UI for Angular 컴포넌트를 추가로 사용했습니다. 검색 API는 다음과 같습니다.
 
 [`IgxGridComponent`]({environment:angularApiUrl}/classes/igxgridcomponent.html) methods:
--   [`findNext`]({environment:angularApiUrl}/classes/igxgridcomponent.html#findnext)
--   [`findPrev`]({environment:angularApiUrl}/classes/igxgridcomponent.html#findprev)
--   [`clearSearch`]({environment:angularApiUrl}/classes/igxgridcomponent.html#clearsearch)
--   [`refreshSearch`]({environment:angularApiUrl}/classes/igxgridcomponent.html#refreshsearch)
+-   [findNext]({environment:angularApiUrl}/classes/igxgridcomponent.html#findnext)
+-   [findPrev]({environment:angularApiUrl}/classes/igxgridcomponent.html#findprev)
+-   [clearSearch]({environment:angularApiUrl}/classes/igxgridcomponent.html#clearsearch)
+-   [refreshSearch]({environment:angularApiUrl}/classes/igxgridcomponent.html#refreshsearch)
 
 [`IgxGridCellComponent`]({environment:angularApiUrl}/classes/igxgridcellcomponent.html) methods:
--   [`highlightText`]({environment:angularApiUrl}/classes/igxgridcellcomponent.html#highlighttext)
--   [`clearHighlight`]({environment:angularApiUrl}/classes/igxgridcellcomponent.html#clearhighlight)
+-   [highlightText]({environment:angularApiUrl}/classes/igxgridcellcomponent.html#highlighttext)
+-   [clearHighlight]({environment:angularApiUrl}/classes/igxgridcellcomponent.html#clearhighlight)
 
 [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) properties:
--   [`searchable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#searchable)
+-   [searchable]({environment:angularApiUrl}/classes/igxcolumncomponent.html#searchable)
 
-[`ISearchInfo`]({environment:angularApiUrl}/interfaces/isearchinfo.html)
+[ISearchInfo]({environment:angularApiUrl}/interfaces/isearchinfo.html)
 
 사용된 상대 API가 있는 추가 컴포넌트 및/또는 지시문:
 
-* [`IgxInputGroupComponent`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
-* [`IgxIconComponent`]({environment:angularApiUrl}/classes/igxiconcomponent.html)
-* [`IgxRippleDirective`]({environment:angularApiUrl}/classes/igxrippledirective.html)
-* [`IgxButtonDirective`]({environment:angularApiUrl}/classes/igxbuttondirective.html)
-* [`IgxChipComponent`]({environment:angularApiUrl}/classes/igxchipcomponent.html)
+* [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
+* [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
+* [IgxRippleDirective]({environment:angularApiUrl}/classes/igxrippledirective.html)
+* [IgxButtonDirective]({environment:angularApiUrl}/classes/igxbuttondirective.html)
+* [IgxChipComponent]({environment:angularApiUrl}/classes/igxchipcomponent.html)
 
 스타일:
 
-* [`IgxGridComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
-* [`IgxInputGroupComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-input-group-theme)
-* [`IgxIconComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
-* [`IgxRippleDirective Styles`]({environment:sassApiUrl}/index.html#function-igx-ripple-theme)
-* [`IgxButtonDirective Styles`]({environment:sassApiUrl}/index.html#function-igx-button-theme)
-* [`IgxChipComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-chip-theme)
+* [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [IgxInputGroupComponent Styles]({environment:sassApiUrl}/index.html#function-igx-input-group-theme)
+* [IgxIconComponent Styles]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
+* [IgxRippleDirective Styles]({environment:sassApiUrl}/index.html#function-igx-ripple-theme)
+* [IgxButtonDirective Styles]({environment:sassApiUrl}/index.html#function-igx-button-theme)
+* [IgxChipComponent Styles]({environment:sassApiUrl}/index.html#function-igx-chip-theme)
 
 ### 추가 리소스
 <div class="divider--half"></div>

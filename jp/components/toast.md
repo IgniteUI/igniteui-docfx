@@ -25,7 +25,7 @@ _language: ja
 
 ### 使用方法
 
-Ignite UI for Angular Toast を初期化する前に、最初に [`IgxToastModule`]({environment:angularApiUrl}/classes/igxtoastmodule.html) を **app.module.ts** ファイルにインポートします:
+Ignite UI for Angular Toast を初期化する前に、最初に `IgxToastModule` を **app.module.ts** ファイルにインポートします:
 
 ```typescript
 // app.module.ts

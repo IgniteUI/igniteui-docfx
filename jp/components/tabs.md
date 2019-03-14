@@ -1,4 +1,4 @@
-﻿---
+---
 title: Tabs コンポーネント - ネイティブ Angular | Ignite UI for Angular
 _description: Ignite UI for Angular Tabs コンポーネントはタブを上側に配置し、複数のタブ項目がある場合にスクロールを許可します。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コンポーネント, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Tabs コンポーネント, Angular Tabs コントロール, Angular Tabs
@@ -23,7 +23,7 @@ Ignite UI for Angular [`igx-tabs`]({environment:angularApiUrl}/classes/igxtabsco
 
 ### 使用方法
 
-Ignite UI for Angular Tabs コンポーネントを初期化する前に [`IgxTabsModule`]({environment:angularApiUrl}/classes/igxtabsmodule.html) を **app.module.ts** ファイルにインポートします。
+Ignite UI for Angular Tabs コンポーネントを初期化する前に `IgxTabsModule` を **app.module.ts** ファイルにインポートします。
 
 ```typescript
 // app.module.ts
@@ -54,8 +54,7 @@ export class AppModule {}
 サンプルを構成した後、結果は以下のようになります。
 
 <div class="sample-container loading" style="height: 200px; width: 600px; border: 1px solid gray;">
-    <iframe id="tabs-sample-1-iframe" src='{environment:demosBaseUrl}/layouts/tabs-sample-1' width="100%" height="100%" seamless
-        frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="tabs-sample-1-iframe" data-src='{environment:demosBaseUrl}/layouts/tabs-sample-1' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tabs-sample-1-iframe"
@@ -99,8 +98,7 @@ export class AppModule {}
 ```
 
 <div class="sample-container loading" style="height: 450px; width: 800px;">
-    <iframe id="tabs-sample-2-iframe" src='{environment:demosBaseUrl}/layouts/tabs-sample-2' width="100%" height="100%" seamless
-        frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="tabs-sample-2-iframe" data-src='{environment:demosBaseUrl}/layouts/tabs-sample-2' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tabs-sample-2-iframe"
@@ -159,8 +157,7 @@ export class AppModule {}
 サンプルを正しく構成した場合、タブは以下の例のようになります。
 
 <div class="sample-container loading" style="height: 250px; width: 600px;">
-    <iframe id="tabs-sample-3-iframe" src='{environment:demosBaseUrl}/layouts/tabs-sample-3' width="100%" height="100%" seamless
-        frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="tabs-sample-3-iframe" data-src='{environment:demosBaseUrl}/layouts/tabs-sample-3' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tabs-sample-3-iframe"
@@ -291,9 +288,8 @@ public ngOnInit() {
 }
 ```
 
-<div class="sample-container loading" >
-    <iframe id="tabs-sample-4-iframe" src='{environment:demosBaseUrl}/layouts/tabs-sample-4' seamless
-        frameBorder="0" style="display: none"></iframe>
+<div class="sample-container loading">
+    <iframe id="tabs-sample-4-iframe" data-src='{environment:demosBaseUrl}/layouts/tabs-sample-4' seamless="" frameBorder="0" style="display: none" class="lazyload"></iframe>
 </div>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tabs-sample-4-iframe"
@@ -384,9 +380,8 @@ const routes: Routes = [
 ...
 ```
 
-<div class="sample-container loading" >
-    <iframe id="tabs-sample-5-iframe" src='{environment:demosBaseUrl}/layouts/tabs-sample-5' seamless
-        frameBorder="0" style="display: none"></iframe>
+<div class="sample-container loading">
+    <iframe id="tabs-sample-5-iframe" data-src='{environment:demosBaseUrl}/layouts/tabs-sample-5' seamless="" frameBorder="0" style="display: none" class="lazyload"></iframe>
 </div>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tabs-sample-5-iframe"

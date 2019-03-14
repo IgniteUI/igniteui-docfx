@@ -1,4 +1,4 @@
-﻿---
+---
 title: Bottom Navigation コンポーネント
 _description: タブ付きのユーザー インターフェイスでタブを表示します。この UI コントロールはタブの外観および動作を管理します。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Bottom Nav コンポーネント, Angular Bottom Navigation コントロール
@@ -11,7 +11,7 @@ _language: ja
 <div class="divider"></div>
 
 > [!NOTE]
-> `igx-tab-bar` セレクターは非推奨です。代わりに [`igx-bottom-nav`]({environment:angularApiUrl}/classes/igxbottomnavcomponent.html) を使用してください。`IgxTabBarComponent` クラスは [`IgxBottomNavComponent`]({environment:angularApiUrl}/classes/igxbottomnavcomponent.html) に名前変更しました。`IgxTabBarModule` は [`IgxBottomNavModule`]({environment:angularApiUrl}/classes/igxbottomnavmodule.html) に名前変更しました。
+> `igx-tab-bar` セレクターは非推奨です。代わりに [`igx-bottom-nav`]({environment:angularApiUrl}/classes/igxbottomnavcomponent.html) を使用してください。`IgxTabBarComponent` クラスは [`IgxBottomNavComponent`]({environment:angularApiUrl}/classes/igxbottomnavcomponent.html) に名前変更しました。`IgxTabBarModule` は `IgxBottomNavModule` に名前変更しました。
 
 ### Bottom Navigation デモ
 
@@ -28,7 +28,7 @@ _language: ja
 
 #### 使用方法
 
-コントロールを初期化する前に、[`IgxBottomNavModule`]({environment:angularApiUrl}/classes/igxbottomnavmodule.html) を **app.module.ts** ファイルにインポートします。
+コントロールを初期化する前に、`IgxBottomNavModule` を **app.module.ts** ファイルにインポートします。
 
 ```typescript
 // app.module.ts
@@ -57,8 +57,7 @@ export class AppModule {}
 以下は結果です:
 
 <div class="sample-container loading" style="height: 200px; width: 300px; border: 1px solid gray;">
-    <iframe id="tabbar-sample-1-iframe" src='{environment:demosBaseUrl}/layouts/tabbar-sample-1' width="100%" height="100%" seamless
-        frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="tabbar-sample-1-iframe" data-src='{environment:demosBaseUrl}/layouts/tabbar-sample-1' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tabbar-sample-1-iframe"
@@ -158,8 +157,7 @@ public booksList: object[] = [
 Bottom Navigation は以下のようになります。
 
 <div class="sample-container loading" style="height: 350px; width: 300px; border: 1px solid gray;">
-    <iframe id="tabbar-sample-2-iframe" src='{environment:demosBaseUrl}/layouts/tabbar-sample-2' width="100%" height="100%" seamless
-        frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="tabbar-sample-2-iframe" data-src='{environment:demosBaseUrl}/layouts/tabbar-sample-2' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tabbar-sample-2-iframe"

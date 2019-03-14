@@ -22,7 +22,7 @@ _language: ja
 
 ### 使用方法
 
-Ignite UI for Angular NavBar コンポーネントを初期化する前に [`IgxNavbarModule`]({environment:angularApiUrl}/classes/igxnavbarmodule.html) を **app.module.ts** ファイルにインポートします。
+Ignite UI for Angular NavBar コンポーネントを初期化する前に `IgxNavbarModule` を **app.module.ts** ファイルにインポートします。
 
 ```typescript
 // app.module.ts

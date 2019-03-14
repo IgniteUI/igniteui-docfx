@@ -24,7 +24,7 @@ Ignite UI for Angular에서 행 선택은 해당 행의 모든 열 앞에 체크
 
 #### 단일 선택
 
-그리드의 [`onSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#onselection) 이벤트를 사용하여 그리드 단일 선택을 간단히 설정할 수 있습니다. 이 이벤트는 셀 컴포넌트에 대한 참조를 내보냅니다. 셀 컴포넌트에는 포함되는 행 컴포넌트에 대한 참조가 있습니다. 행 컴포넌트 참조의 [`rowID`](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/classes/igxgridrowcomponent.html#rowid) 게터를 사용하여 행([`rowData[primaryKey]`]({environment:angularApiUrl}/classes/igxgridcomponent.html#primarykey) 또는 [`rowData`]({environment:angularApiUrl}/classes/igxgridrowcomponent.html#rowdata) 객체 자체를 사용하여)의 고유 식별자를 selectionAPI의 적절한 목록에 전달합니다. 단일 행만 항상 선택되도록 하기 위해 [`selectionAPI`]({environment:angularApiUrl}/classes/igxselectionapiservice.html) 행 선택 목록을 미리 비웁니다([`selectRows`]({environment:angularApiUrl}/classes/igxgridcomponent.html#selectrows) 메소드 호출의 두 번째 인수):
+그리드의 [`onSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#onselection) 이벤트를 사용하여 그리드 단일 선택을 간단히 설정할 수 있습니다. 이 이벤트는 셀 컴포넌트에 대한 참조를 내보냅니다. 셀 컴포넌트에는 포함되는 행 컴포넌트에 대한 참조가 있습니다. 행 컴포넌트 참조의 [`rowID`](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/classes/igxgridrowcomponent.html#rowid) 게터를 사용하여 행([`rowData[primaryKey]`]({environment:angularApiUrl}/classes/igxgridcomponent.html#primarykey) 또는 [`rowData`]({environment:angularApiUrl}/classes/igxgridrowcomponent.html#rowdata) 객체 자체를 사용하여)의 고유 식별자를 selection의 적절한 목록에 전달합니다. 단일 행만 항상 선택되도록 하기 위해 selection 행 선택 목록을 미리 비웁니다([`selectRows`]({environment:angularApiUrl}/classes/igxgridcomponent.html#selectrows) 메소드 호출의 두 번째 인수):
 
 ```html
     <!-- in example.component.html -->

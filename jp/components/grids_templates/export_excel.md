@@ -1,17 +1,36 @@
+﻿@@if (igxName === 'IgxGrid') {
 ---
-title: Export to Excel Component - Native Angular | Ignite UI for Angular
-_description: Users can export their data for editing or offline presentation can do so in Excel format with the Export to Excel Ignite UI for Angular component.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Controls, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Grid, Angular Data Grid, Angular Grid Control, Angular Grid Component, Excel Export, Angular Excel Component, Angular Export Excel
+title: Excel コンポーネントへエクスポート - ネイティブ Angular |Ignite UI for Angular
+_description: ユーザーが編集またはオフライン プレゼンテーションのためにデータをエクスポートできます。Excel へのエクスポート Ignite UI for Angular コンポーネントで Excel 形式にエクスポートできます。
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Grid, Angular Data Grid, Angular Grid コントロール, Angular Grid コンポーネント, Excel エクスポート, Angular Excel コンポーネント, Angular エクスポート Excel
+_language: ja
 ---
+}
+@@if (igxName === 'IgxTreeGrid') {
+---
+title: Excel コンポーネントへエクスポート - ネイティブ Angular|Ignite UI for Angular
+_description: ユーザーが編集またはオフライン プレゼンテーションのためにデータをエクスポートできます。Excel へのエクスポート Ignite UI for Angular コンポーネントで Excel 形式にエクスポートできます。
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Tree Grid, Angular Tree Grid, Angular Tree Grid コントロール, Angular Tree Grid コンポーネント, Excel Export, Angular Excel コンポーネント, Angular Export Excel
+_language: ja
+---
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+---
+title: Excel コンポーネントへエクスポート - ネイティブ Angular|Ignite UI for Angular
+_description: ユーザーが編集またはオフライン プレゼンテーションのためにデータをエクスポートできます。Excel へのエクスポート Ignite UI for Angular コンポーネントで Excel 形式にエクスポートできます。
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Hierarchical Grid,, Angular Hierarchical Grid コントロール, Angular Hierarchical Grid コンポーネント, Excel Export, Angular Excel コンポーネント, Angular Export Excel
+_language: ja
+---
+}
 
-### @@igComponent Export to Excel
+### @@igComponent Excel へエクスポート
 
 <p class="highlight">
-The Excel Exporter service can export data in MS Excel format from the @@igxName. The exporting functionality is encapsulated in the [`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html) class and the data is exported in MS Excel table format. This format allows features like filtering, sorting, etc. To do this you need to invoke the [`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html)'s [`export`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html#export) method and pass the @@igxName component as first argument.</p>
+Excel Exporter サービスも@@igxName からのデータを MS Excel 形式でエクスポートできます。エクスポート機能は、[`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html) クラスでカプセル化され、MS Excel テーブル形式でデータをエクスポートします。この形式はフィルタリングや並べ替えなどの機能が使用でき、[`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html) の [`export`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html#export) メソッドを呼び出して最初の引数として @@igxName コンポーネントを渡します。</p>
 
 <div class="divider"></div>
 
-#### Excel Exporter Demo
+#### Excel Exporter デモ
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height: 300px;">
@@ -20,7 +39,7 @@ The Excel Exporter service can export data in MS Excel format from the @@igxName
 </div>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="excel-export-sample-iframe"
-    data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
 </div>
 }
 @@if (igxName === 'IgxTreeGrid') {
@@ -30,7 +49,7 @@ The Excel Exporter service can export data in MS Excel format from the @@igxName
 </div>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="excel-export-sample-iframe"
-    data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
 </div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -39,9 +58,9 @@ The Excel Exporter service can export data in MS Excel format from the @@igxName
 
 <div class="divider--half"></div>
 
-#### Exporting @@igComponent's Data
+#### @@igComponent のデータのエクスポート
 
-To start using the IgniteUI Excel Exporter first import the [`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html) in the app.module.ts file and add the service to the `providers` array:
+Ignite UI Excel Exporter を使用するには、[`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html) を app.module.ts ファイルにインポートし、`providers` 配列にサービスを追加します。
 
 ```typescript
 // app.module.ts
@@ -56,18 +75,18 @@ import { IgxExcelExporterService } from "igniteui-angular/services/index";
 export class AppModule {}
 ```
 
-> **Note:** The Excel Exporter service has a peer dependency on the JSZip library. The JSZip library should be installed when using the Excel Exporter.
+> **注:** Excel Exporter サービスは JSZip にピア依存関係があります。JSZip ライブラリは Excel Exporter の使用時にインストールしてください。
 
-To initiate an export process you may use the handler of a button in your component's template.
+エクスポート処理の開始は、コンポーネントのテンプレートでボタンのハンドラーを使用します。
 
 ```html
 <@@igSelector #@@igObjectRef [data]="localData" [autoGenerate]="true"></@@igSelector>
 <button (click)="exportButtonHandler()">Export @@igxName to Excel</button>
 ```
 
-You may access the exporter service by defining an argument of type [`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html) in the component's constructor and the Angular framework will provide an instance of the service. To export some data in MS Excel format you need to invoke the exporter service's [`export`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html#export) method and pass the @@igxName component as first argument.
+エクスポーター サービスへのアクセスは、コンポーネントのコンストラクターで [`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html) 型の引数を定義し、Angular フレームワークはサービスのインスタンスを提供します。データを MS Excel 形式でエクスポートするには、エクスポーター サービスの [`export`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html#export) メソッドを呼び出して@@igxNameコンポーネントを最初の引数として渡します。
 
-Here is the code which will execute the export process in the component's typescript file:
+以下のコードはコンポーネントの typescript ファイルでエクスポート処理を実行します。
 
 ```typescript
 // component.ts
@@ -88,13 +107,13 @@ public exportButtonHandler() {
 
 ```
 
-If all went well, you should see the @@igxName component and a button under it. When pressing the button, it will trigger the export process and the browser will download a file named "ExportedDataFile.xlsx" which contains the data from the @@igComponent component in MS Excel format.
+上記をすべて行うと、@@igxName コンポーネントとその下にボタンを確認できます。ボタンを押すととエクスポート処理をトリガーし、ブラウザーで "ExportedDataFile.xlsx"  ファイルをダウンロードします。このファイルは MS Excel 形式の @@igComponent のデータを含みます。
 
-#### Customizing the Exported Content
+#### エクスポートするコンテンツのカスタマイズ
 
-In the above examples the Excel Exporter service was exporting all available data. There are situations in which you may want to skip exporting a row or even an entire column. To achieve this you may hook to the [`onColumnExport`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html#oncolumnexport) and/or [`onRowExport`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html#onrowexport) events which are fired respectively for each column and/or each row and cancel the respective event by setting the event argument object's [`cancel`]({environment:angularApiUrl}/interfaces/irowexportingeventargs.html#cancel) property to `true`.
+上記の例では、Excel Exporter サービスで利用可能なデータをすべてエクスポートしました。行または列全体のエクスポートをしない方が良い場合があります。実装は、各列で発生される [`onColumnExport`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html#oncolumnexport) または各行で発生される [`onRowExport`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html#onrowexport) イベントを処理し、イベント引数オブジェクトの [`cancel`]({environment:angularApiUrl}/interfaces/irowexportingeventargs.html#cancel) プロパティを `true` に設定して各イベントをキャンセルします。
 
-The following example will exclude a column from the export if its header is "Age" and if its index is 1:
+以下の例では、ヘッダーが "Age" で、インデックスが 1 の場合、エクスポートから列を除外します。
 
 ```typescript
 // component.ts
@@ -107,26 +126,26 @@ this.excelExportService.onColumnExport.subscribe((args: IColumnExportingEventArg
 this.excelExportService.export(this.@@igObjectRef, new IgxExcelExporterOptions("ExportedDataFile"));
 ```
 
-When you are exporting data from the @@igComponent component, the export process takes in account features like row filtering and column hiding and exports only the data visible in the @@igComponent. You can configure the exporter service to include filtered rows or hidden columns by setting properties on the [`IgxExcelExporterOptions`]({environment:angularApiUrl}/classes/igxexcelexporteroptions.html) object. These properties are described in the table below.
+@@igComponent コンポーネントのデータ エクスポートでは、行フィルタリングおよび列の非表示などの機能に応じて @@igComponent で表示されるデータのみをエクスポートします。[`IgxExcelExporterOptions`]({environment:angularApiUrl}/classes/igxexcelexporteroptions.html) オブジェクトのプロパティを設定し、エクスポーター サービスを構成してフィルターした行または非表示の列を含むことができます。このプロパティは以下の表で説明します。
 
-#### API References
+#### API リファレンス
 
-The Excel Exporter service has a few more APIs to explore, which are listed below.
+以下は、その他の Excel Exporter サービスの API です。
 
-* [`IgxExcelExporterService API`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html)
-* [`IgxExcelExporterOptions API`]({environment:angularApiUrl}/classes/igxexcelexporteroptions.html)
+* [IgxExcelExporterService API]({environment:angularApiUrl}/classes/igxexcelexporterservice.html)
+* [IgxExcelExporterOptions API]({environment:angularApiUrl}/classes/igxexcelexporteroptions.html)
 
-Additional components that were used:
+使用したその他のコンポーネント:
 
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
-* [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 
 <div class="divider"></div>
 
-#### Additional Resources
+#### その他のリソース
 
 <div class="divider--half"></div>
-Our community is active and always welcoming to new ideas.
+コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

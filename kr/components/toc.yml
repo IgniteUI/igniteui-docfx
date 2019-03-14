@@ -33,6 +33,9 @@
       new: false
     - name: 필터링
       href: grid/filtering.md
+      new: false
+    - name: Excel Style Filtering
+      href: grid/excel_style_filtering.md
       new: true
     - name: 정렬
       href: grid/sorting.md
@@ -101,6 +104,9 @@
     - name: 필터링
       href: treegrid/filtering.md
       new: false
+    - name: Excel Style Filtering
+      href: treegrid/excel_style_filtering.md
+      new: true
     - name: 정렬
       href: treegrid/sorting.md
       new: false
@@ -168,6 +174,9 @@
     - name: 필터링
       href: hierarchicalgrid/filtering.md
       new: true
+    - name: Excel Style Filtering
+      href: hierarchicalgrid/excel_style_filtering.md
+      new: true
     - name: 정렬
       href: hierarchicalgrid/sorting.md
       new: true
@@ -223,9 +232,6 @@
     - name: Cascading Scenario
       href: combo_cascading.md
       new: true
-- name: Autocomplete
-  href: autocomplete.md
-  new: true
 - name: Charts
   header: true
 - name: Category Chart
@@ -459,6 +465,9 @@
       new: false
     - name: Examples
       href: themes/examples.md
+- name: Componets Roundness
+  href: roundness.md
+  new: true
 - name: Shadows
   href: shadows.md
 - name: Display Density
@@ -468,6 +477,12 @@
 - name: Drop Down
   href: drop_down.md
   new: false
+- name: Select
+  href: select.md
+  new: true
+- name: Autocomplete
+  href: autocomplete.md
+  new: true
 - name: Button
   href: button.md
 - name: Button Group
@@ -505,10 +520,7 @@
   new: false
 - name: Text Highlight
   href: texthighlight.md
-  new: true
-- name: Select
-  href: select.md
-  new: true
+  new: false
 - name: Interactions
   header: true
 - name: Dialog Window
@@ -574,6 +586,9 @@
   href: calendar.md
 - name: Date Picker
   href: date_picker.md
+- name: Month Picker
+  href: month_picker.md
+  new: true
 - name: Time Picker
   href: time_picker.md
   new: false
