@@ -10,8 +10,8 @@ This topic explains various types of category series in the `IgxDataChart` contr
 
 ### Demo
 
-<div class="sample-container loading" style="height: 400px">
-    <iframe id="data-chart-type-category-series-iframe" src='{environment:demosBaseUrl}/charts/data-chart-type-category-series' width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container" style="height: 400px">
+    <iframe id="data-chart-type-category-series-iframe" src='{environment:demosBaseUrl}/charts/data-chart-type-category-series' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-type-category-series-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
@@ -150,5 +150,9 @@ Note that you can also use above code to create other type of category series by
 -   [Axis Types](datachart_axis_types.md)
 -   [Axis Sharing](datachart_axis_sharing.md)
 -   [Chart Legend](datachart_chart_legends.md)
+-   [Series Annotations](datachart_series_annotations.md)
+-   [Series Highlighting](datachart_series_highlighting.md)
 -   [Series Markers](datachart_series_markers.md)
+-   [Series Tooltips](datachart_series_tooltips.md)
+-   [Series Trendlines](datachart_series_trendlines.md)
 -   [Series Types](datachart_series_types.md)

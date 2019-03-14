@@ -11,8 +11,8 @@ is similar to [Scatter Marker Series](datachart_series_types_scatter_marker.md) 
 
 ### Demo
 
-<div class="sample-container loading" style="height: 500px">
-    <iframe id="data-chart-type-scatter-series-iframe" src='{environment:demosBaseUrl}/charts/data-chart-type-scatter-series' width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container" style="height: 500px">
+    <iframe id="data-chart-type-scatter-series-iframe" src='{environment:demosBaseUrl}/charts/data-chart-type-scatter-series' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-type-scatter-series-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
@@ -126,4 +126,6 @@ The `FillScale` is an optional feature which determines the color pattern within
 -   [Axis Sharing](datachart_axis_sharing.md)
 -   [Chart Legend](datachart_chart_legends.md)
 -   [Series Markers](datachart_series_markers.md)
+-   [Series Tooltips](datachart_series_tooltips.md)
+-   [Series Trendlines](datachart_series_trendlines.md)
 -   [Series Types](datachart_series_types.md)
