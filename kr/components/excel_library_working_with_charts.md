@@ -1,4 +1,4 @@
-﻿---
+---
 title: Working with Charts
 _description: The Ignite UI for Excel Library component allows for the addition of charts to show visual representations of data trends across regions of cells in a worksheet.
 _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Excel Library, Angular Excel Library Example, Angular Excel Library Component, Angular Excel Engine, Chart, Angular Excel Chart
@@ -10,8 +10,8 @@ The Infragistics Excel Engine's `WorksheetChart` functionality allows you to add
 
 ### Demo
 
-<div class="sample-container" style="height: 500px">
-    <iframe id="excel-library-overview-sample-iframe" src='{environment:demosBaseUrl}/excel-library/working-with-charts' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 500px">
+    <iframe id="excel-library-overview-sample-iframe" src='{environment:demosBaseUrl}/excel-library/working-with-charts' width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <!-- TODO uncomment when Stackblitz is ready for EXCEL
