@@ -1,4 +1,4 @@
-﻿---
+---
 title: 構成オプション
 _description: Ignite UI for Angular Category Chart コンポーネントは複雑なデータ ビジュアライゼーションを API によって簡素化できます。ユーザーがデータのコレクションまたはコレクションのグループにバインドし、データを指定するプロパティを設定後、チャート コントロールが残りの作業を処理します。
 _keywords: Ignite UI for Angular, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular チャート, Angular チャート コントロール, Angular チャート例, Angular チャート コンポーネント, Angular Category Chart
@@ -10,8 +10,8 @@ _language: ja
 
 ### デモ
 
-<div class="sample-container" style="height: 550px">
-    <iframe id="category-chart-config-options-sample-iframe" src='{environment:demosBaseUrl}/charts/category-chart-config-options-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 550px">
+    <iframe id="category-chart-config-options-sample-iframe" src='{environment:demosBaseUrl}/charts/category-chart-config-options-sample' width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="category-chart-config-options-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
