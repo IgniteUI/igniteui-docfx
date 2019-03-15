@@ -361,6 +361,33 @@ export class MyComponent implements OnInit {
 
 **Note**: 그리드 [`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#autogenerate) 속성은 현재 원격 데이터에 바인딩할 때 사용하지 않는 것이 좋습니다. 데이터를 검사하고 적절한 열을 생성하기 위해 데이터를 사용 가능하도록 해야 합니다. 일반적으로 원격 서비스가 응답하기 전까지 그리드는 오류가 발생합니다. 원격 서비스에 바인딩할 때 [`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#autogenerate)을 사용할 수 있도록 설정하는 방법은 향후 버전에 추가될 것입니다
 
+### Keyboard navigation
+Keyboard navigation is available by default in any grid and aims at covering as many as possible features and scenarios for the end user. When you focus a specific cell and press one of the following key combinations, the described behaviour is performed:
+
+ - `Arrow Up` - navigates one cell up (no wrapping);
+ - `Arrow Down` - navigates one cell down (no wrapping);
+ - `Arrow Left` - navigates one cell left (no wrapping between lines);
+ - `Arrow Right` - navigates one cell right (no wrapping between lines);
+ - `Ctrl + Arrow Up` - navigates to the first cell in the current column;
+ - `Ctrl + Arrow Down` - navigates to the last cell in the current column;
+ - `Ctrl + Arrow Left` -  moves to leftmost cell in row;
+ - `Home` - moves to leftmost cell in row;
+ - `Ctrl + Home` - moves to top left cell in the grid;
+ - `Ctrl + Arrow Right` - moves to rightmost cell in row;
+ - `End` - moves to rightmost cell in row;
+ - `Ctrl + End` - moves to bottom right cell in the grid;
+ - `Page Up` - scrolls one page (view port) up;
+ - `Page Down` -  scrolls one page (view port) down;
+ - `Enter` - enters edit mode;
+ - `F2` - enters edit mode;
+ - `Esc` - exits edit mode;
+ - `Tab` - sequentially move the focus over the next cell on the row and if the last cell is reached move to next row; If next row is group row the whole row is focused, if it is data row, move focus over the first cell; When cell is in edit mode, will move the focus to next editable cell in the row, and from the right-most editable cell to the `CANCEL` and `DONE` buttons, and from the `DONE` button to the left-most editable cell within the currently edited row;
+ - `Shift + Tab` - sequentially move focus to the previous cell on the row, if the first cell is reached move the focus to the previous row. If previous row is group row focus the whole row or if it is data row, focus the last cell of the row; when cell is in edit mode, will move the focus to the next editable cell in the row, and from the right-most editable cell to the `CANCEL` and `DONE` buttons, and from the `DONE` button to the left-most editable cell within the currently edited row;
+ - `Space` -  if the row is selectable, on keydown space triggers row selection;
+ - `Alt + Arrow Left` over GroupRow - collapses the group row content if the row is not already collapsed;
+ - `Alt + Arrow Right` over GroupRow - expands the group row content if the row is not already expanded;
+ - on mouse `wheel` -  blurs the focused element;
+
 ### Live Updating Demo
 
 This sample demonstrates the `igxGrid` bound to live data. 
