@@ -1,4 +1,4 @@
-﻿---
+---
 title: 열 숨기기 컴포넌트 - 네이티브 Angular| Ignite UI for Angular
 _description: Ignite UI for Angular 열 숨기기 컴포넌트는 데이터 그리드의 기본 UI를 사용하여 사용자가 열을 숨기거나 표시할 수 있습니다.
 _keywords: Ignite UI for Angular, UI 컨트롤, Angular 위젯, 웹 위젯, UI 위젯, Angular, 네이티브 Angular 컴포넌트 세트, 네이티브 Angular 컨트롤, 네이티브 Angular 컴포넌트 라이브러리, 네이티브 Angular 컴포넌트, Angular 데이터 그리드 컴포넌트, Angular 데이터 그리드 컨트롤, Angular 그리드 컴포넌트, Angular 그리드 컨트롤, Angular 고성능 그리드, 그리드 열 숨기기, 열 숨기기, Angular 그리드 열 숨기기, Angular 열 숨기기
@@ -95,7 +95,7 @@ public ngAfterViewInit() {
 
 ### 사용자 열 숨기기 UI
 
-[`IgxColumnHidingComponent`]({environment:angularApiUrl}/classes/igxcolumnhidingcomponent.html)를 수동으로 정의하고 페이지에 원하는 위치에 배치하는 경우를 가정해 보겠습니다. 단순히 마크업에 컴포넌트의 인스턴스를 작성함으로써 쉽게 실행할 수 있습니다. 이 작업을 하려면 먼저 [`IgxColumnHidingModule`]({environment:angularApiUrl}/classes/igxcolumnhidingmodule.html)을 잡습니다.
+[`IgxColumnHidingComponent`]({environment:angularApiUrl}/classes/igxcolumnhidingcomponent.html)를 수동으로 정의하고 페이지에 원하는 위치에 배치하는 경우를 가정해 보겠습니다. 단순히 마크업에 컴포넌트의 인스턴스를 작성함으로써 쉽게 실행할 수 있습니다. 이 작업을 하려면 먼저 `IgxColumnHidingModule` 을 잡습니다.
 
 ```typescript
 // app.module.ts
@@ -246,7 +246,7 @@ export class AppModule {}
 모든 것이 잘 진행되었다면 다음과 같이 열 숨기기 UI 컴포넌트가 표시됩니다:
 
 <div class="sample-container loading" style="height:650px">
-    <iframe id="grid-column-hiding-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-column-hiding-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="grid-column-hiding-sample-iframe" data-src='{environment:demosBaseUrl}/grid/grid-column-hiding-sample' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <br/>
 <div>
@@ -260,36 +260,36 @@ export class AppModule {}
 이 조항에서는 그리드 툴바에 내장된 열 숨기기 UI를 사용하는 방법과 별도의 컴포넌트로 정의하는 방법을 설명했습니다. 사용자가 다른 열 순서 중에서 선택할 수 있는 기능을 제공하는 UI를 장착하여 사용자 제목 및 필터 프롬프트 텍스트를 설정했습니다. 또한, Ignite UI for Angular 컴포넌트 [**IgxRadio**](../radio_button.md) 버튼을 추가로 사용했습니다.
 열 숨기기 UI에는 아래에 나열된 몇 가지 API가 추가로 포함되어 있습니다.
 
-* [`IgxColumnHidingComponent`]({environment:angularApiUrl}/classes/igxcolumnhidingcomponent.html)
-* [`IgxColumnHidingComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-column-hiding-theme)
+* [IgxColumnHidingComponent]({environment:angularApiUrl}/classes/igxcolumnhidingcomponent.html)
+* [IgxColumnHidingComponent Styles]({environment:sassApiUrl}/index.html#function-igx-column-hiding-theme)
 
 사용된 상대 API가 있는 추가 컴포넌트 및/또는 지시문:
 
 [`IgxGridComponent`]({environment:angularApiUrl}/classes/igxgridcomponent.html) properties:
-* [`columnHiding`]({environment:angularApiUrl}/classes/igxgridcomponent.html#columnhiding)
-* [`columnHidingTitle`]({environment:angularApiUrl}/classes/igxgridcomponent.html#columnhidingtitle)
-* [`hiddenColumnsCount`]({environment:angularApiUrl}/classes/igxgridcomponent.html#hiddencolumnscount)
-* [`hiddenColumnsText`]({environment:angularApiUrl}/classes/igxgridcomponent.html#hiddencolumnstext)
+* [columnHiding]({environment:angularApiUrl}/classes/igxgridcomponent.html#columnhiding)
+* [columnHidingTitle]({environment:angularApiUrl}/classes/igxgridcomponent.html#columnhidingtitle)
+* [hiddenColumnsCount]({environment:angularApiUrl}/classes/igxgridcomponent.html#hiddencolumnscount)
+* [hiddenColumnsText]({environment:angularApiUrl}/classes/igxgridcomponent.html#hiddencolumnstext)
 
 [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) properties:
-* [`disableHiding`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#disablehiding)
+* [disableHiding]({environment:angularApiUrl}/classes/igxcolumncomponent.html#disablehiding)
 
 [`IgxGridToolbarComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html) properties:
-* [`columnHidingUI`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html#columnhidingui)
-* [`columnHidingDropdown`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html#columnhidingdropdown)
+* [columnHidingUI]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html#columnhidingui)
+* [columnHidingDropdown]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html#columnhidingdropdown)
 
 [`IgxGridToolbarComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html) methods:
-* [`toggleColumnHidingUI`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html#togglecolumnhidingui)
+* [toggleColumnHidingUI]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html#togglecolumnhidingui)
 
 [`IgxGridComponent`]({environment:angularApiUrl}/classes/igxgridcomponent.html) events:
-* [`onColumnVisibilityChanged`]({environment:angularApiUrl}/classes/igxgridcomponent.html#oncolumnvisibilitychanged)
+* [onColumnVisibilityChanged]({environment:angularApiUrl}/classes/igxgridcomponent.html#oncolumnvisibilitychanged)
 
-[`IgxRadioComponent`]({environment:angularApiUrl}/classes/igxradiocomponent.html)
+[IgxRadioComponent]({environment:angularApiUrl}/classes/igxradiocomponent.html)
 
 스타일:
 
-* [`IgxGridComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
-* [`IgxRadioComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-radio-theme)
+* [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [IgxRadioComponent Styles]({environment:sassApiUrl}/index.html#function-igx-radio-theme)
 
 ### 추가 리소스
 <div class="divider--half"></div>

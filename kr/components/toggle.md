@@ -21,7 +21,7 @@ The [`igxToggle`]({environment:angularApiUrl}/classes/igxtoggledirective.html) d
 
 ##Usage
 The toggle allows you easily to wrap some content into a box which easily can be opened and closed.
-To get started with the IgniteUI for Angular Toggle, let's first import the [**IgxToggleModule**]({environment:angularApiUrl}/classes/igxtogglemodule.html) in our **app.module.ts**. We are also planning to take advantage of [**igxButton**]({environment:angularApiUrl}/classes/igxbuttondirective.html) directive so we will have to import [**IgxButtonModule**]({environment:angularApiUrl}/classes/igxbuttonmodule.html) into the **app.module.ts** too.
+To get started with the IgniteUI for Angular Toggle, let's first import the **IgxToggleModule** in our **app.module.ts**. We are also planning to take advantage of [**igxButton**]({environment:angularApiUrl}/classes/igxbuttondirective.html) directive so we will have to import **IgxButtonModule** into the **app.module.ts** too.
 
 ```typescript
 // app.module.ts
@@ -78,7 +78,7 @@ export class Class {
 If all went well, you should see the following in your browser:
 
 <div class="sample-container loading" style="height: 370px">
-    <iframe id="toggle-sample-1-iframe" src='{environment:demosBaseUrl}/interactions/toggle-sample-1' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="toggle-sample-1-iframe" data-src='{environment:demosBaseUrl}/interactions/toggle-sample-1' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="toggle-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">                       StackBlitz 에서보기
@@ -141,7 +141,7 @@ The [`igxToggle`]({environment:angularApiUrl}/classes/igxtoggledirective.html) u
 
 
 <div class="sample-container loading" style="height: 370px">
-    <iframe id="toggle-iframe-1" src='{environment:demosBaseUrl}/interactions/toggle' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="toggle-iframe-1" data-src='{environment:demosBaseUrl}/interactions/toggle' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="toggle-iframe-1" data-demos-base-url="{environment:demosBaseUrl}">                       StackBlitz 에서보기
@@ -150,7 +150,7 @@ The [`igxToggle`]({environment:angularApiUrl}/classes/igxtoggledirective.html) u
 
 ### Automatic toggle actions
 
-In order to prevent this invocation of these methods there is a directive which has `onClick` handler and changes the state to the toggle we are referred to. So let's dive in. If we would like to take advantage of this functionality we will have to use [**IgxToggleActionDirective**]({environment:angularApiUrl}/classes/igxtoggleactiondirective.html) which is comming from the same [**IgxToggleModule**]({environment:angularApiUrl}/classes/igxtogglemodule.html).
+In order to prevent the invocation of these methods there is a directive which has `onClick` handler and changes the state to the toggle we are referred to. So let's dive in. If we would like to take advantage of this functionality we will have to use [**IgxToggleActionDirective**]({environment:angularApiUrl}/classes/igxtoggleactiondirective.html) which is comming from the same [**IgxToggleModule**]({environment:angularApiUrl}/classes/igxtogglemodule.html).
 
 ```typescript
 // app.module.ts
@@ -181,7 +181,7 @@ Then in the template we need to declare [**IgxToggleActionDirective**]({environm
 After these changes the toggle should work exactly in the same way.
 
 <div class="sample-container loading" style="height: 370px">
-    <iframe id="toggle-sample-2-iframe" src='{environment:demosBaseUrl}/interactions/toggle-sample-2' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="toggle-sample-2-iframe" data-src='{environment:demosBaseUrl}/interactions/toggle-sample-2' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="toggle-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">                       StackBlitz 에서보기
@@ -220,7 +220,7 @@ export class AppModule {}
 If all went well, it will look like this:
 
 <div class="sample-container loading" style="height: 370px">
-    <iframe id="toggle-sample-3-iframe" src='{environment:demosBaseUrl}/interactions/toggle-sample-3' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="toggle-sample-3-iframe" data-src='{environment:demosBaseUrl}/interactions/toggle-sample-3' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="toggle-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">                       StackBlitz 에서보기

@@ -22,7 +22,7 @@ _language: kr
 > To start using Ignite UI for Angular components in your own projects, make sure you have configured all necessary dependencies and have performed the proper setup of your project. You can learn how to do this in the [**installation**](https://www.infragistics.com/products/ignite-ui-angular/getting-started#installation) topic.
 
 ### Usage
-By default, the [`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) allows you to pick a date from a calendar. The picker uses the [`IgxCalendarComponent`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) internally as a calendar. To get started with the Ignite UI for Angular Date Picker, let's first import the [**IgxDatePickerModule**]({environment:angularApiUrl}/classes/igxdatepickermodule.html) in our **app.module.ts** file:
+By default, the [`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) allows you to pick a date from a calendar. The picker uses the [`IgxCalendarComponent`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) internally as a calendar. To get started with the Ignite UI for Angular Date Picker, let's first import the `IgxDatePickerModule` in our **app.module.ts** file:
 
 ```typescript
 // app.module.ts
@@ -48,7 +48,7 @@ To add the date picker in a template, use the following code:
 
 The result is as follows:
 <div class="sample-container loading" style="height: 540px;">
-    <iframe id="date-picker-sample-1" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/scheduling/datepicker-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="date-picker-sample-1" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/datepicker-sample-1" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="date-picker-sample-1" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz ????</button>
@@ -74,7 +74,7 @@ Then, use the [`value`]({environment:angularApiUrl}/classes/igxdatepickercompone
 
 And there we have it:
 <div class="sample-container loading" style="height: 540px;">
-    <iframe id="date-picker-sample-2" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/scheduling/datepicker-sample-2" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="date-picker-sample-2" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/datepicker-sample-2" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="date-picker-sample-2" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz ????</button>
@@ -104,7 +104,7 @@ To enable the buttons in a template, use the [`cancelButtonLabel`]({environment:
 
 Here you can see the buttons:
 <div class="sample-container loading" style="height: 580px;">
-    <iframe id="date-picker-sample-3" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/scheduling/datepicker-sample-3" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="date-picker-sample-3" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/datepicker-sample-3" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="date-picker-sample-3" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz ????</button>
@@ -135,7 +135,7 @@ And then use the [`formatter`]({environment:angularApiUrl}/classes/igxdatepicker
 
 Here is the formatted date:
 <div class="sample-container loading" style="height: 540px;">
-    <iframe id="date-picker-sample-4" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/scheduling/datepicker-sample-4" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="date-picker-sample-4" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/datepicker-sample-4" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="date-picker-sample-4" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz ????</button>
@@ -167,8 +167,8 @@ The editable date picker provides the following outputs to handle entering of di
 
 | Output | Arguments | Description | 
 | ------------- |:-------------:|:-------------:|
-| [`onDisabledDate`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#ondisableddate) | `IDatePickerDisabledDateEventArgs` | Fires when the user types/spins a disabled date in the date picker editor. |
-| [`onValidationFailed`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#onvalidationfailed) | `IDatePickerValidationFailedEventArgs` | Fires when the user types/spins invalid date in the date picker editor. |
+| [`onDisabledDate`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#ondisableddate) | [`IDatePickerDisabledDateEventArgs`]({environment:angularApiUrl}/interfaces/idatepickerdisableddateeventargs.html) | Fires when the user types/spins a disabled date in the date picker editor. |
+| [`onValidationFailed`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#onvalidationfailed) | [`IDatePickerValidationFailedEventArgs`]({environment:angularApiUrl}/interfaces/idatepickervalidationfailedeventargs.html) | Fires when the user types/spins invalid date in the date picker editor. |
 
 ##### Keyboard Navigation
 * To open the date picker drop down: 
@@ -183,7 +183,7 @@ The editable date picker provides the following outputs to handle entering of di
     * Focus on a date part + <kbd>DOWN</kbd> 
 
 <div class="sample-container loading" style="height: 600px;">
-    <iframe id="date-picker-dropdown" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/scheduling/datepicker-dropdown" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="date-picker-dropdown" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/datepicker-dropdown" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="date-picker-dropdown" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
@@ -237,7 +237,7 @@ public date: Date = new Date(Date.now());
 
 Here is the retemplated input group:
 <div class="sample-container loading" style="height: 540px;">
-    <iframe id="date-picker-sample-6" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/scheduling/datepicker-sample-6" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="date-picker-sample-6" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/datepicker-sample-6" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="date-picker-sample-6" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz ????</button>
@@ -312,7 +312,7 @@ public getDatePart(val: any, component: any, datePart: string) {
 
 The result is as follows:
 <div class="sample-container loading" style="height: 580px;">
-    <iframe id="date-picker-sample-5" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/scheduling/datepicker-sample-5" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="date-picker-sample-5" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/datepicker-sample-5" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="date-picker-sample-5" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz ????</button>

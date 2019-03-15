@@ -14,8 +14,8 @@ The radial gauge component is a data visualization tool capable of displaying a 
 
 The following sample demonstrates how setting multiple properties on the same gauge can transform it to completely different gauge.
 
-<div class="sample-container" style="height: 375px">
-    <iframe id="radial-gauge-sample-iframe" src='{environment:demosBaseUrl}/gauges/radial-gauge-animation' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 375px">
+    <iframe id="radial-gauge-sample-iframe" src='{environment:demosBaseUrl}/gauges/radial-gauge-animation' width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="radial-gauge-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
@@ -105,8 +105,8 @@ The backing can be circular or fitted. A circular shape creates a 360 degree cir
 </igx-radial-gauge>
 ```
 
-<div class="sample-container" style="height: 320px">
-    <iframe id="radial-gauge-backing-iframe" src='{environment:demosBaseUrl}/gauges/radial-gauge-backing' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 320px">
+    <iframe id="radial-gauge-backing-iframe" data-src='{environment:demosBaseUrl}/gauges/radial-gauge-backing' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="radial-gauge-backing-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
@@ -133,8 +133,8 @@ The scale is visual element that highlights full range of values in the gauge wh
 </igx-radial-gauge>
 ```
 
-<div class="sample-container" style="height: 320px">
-    <iframe id="radial-gauge-scale-iframe" src='{environment:demosBaseUrl}/gauges/radial-gauge-scale' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 320px">
+    <iframe id="radial-gauge-scale-iframe" data-src='{environment:demosBaseUrl}/gauges/radial-gauge-scale' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="radial-gauge-scale-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
@@ -157,8 +157,8 @@ The gauge labels are visual elements displaying numeric values at a specified in
 </igx-radial-gauge>
 ```
 
-<div class="sample-container" style="height: 320px">
-    <iframe id="radial-gauge-labels-iframe" src='{environment:demosBaseUrl}/gauges/radial-gauge-labels' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 320px">
+    <iframe id="radial-gauge-labels-iframe" data-src='{environment:demosBaseUrl}/gauges/radial-gauge-labels' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="radial-gauge-labels-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
@@ -186,8 +186,8 @@ Tick marks are thin lines radiating from the center of the radial gauge. There a
 </igx-radial-gauge>
 ```
 
-<div class="sample-container" style="height: 320px">
-    <iframe id="radial-gauge-tickmarks-iframe" src='{environment:demosBaseUrl}/gauges/radial-gauge-tickmarks' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 320px">
+    <iframe id="radial-gauge-tickmarks-iframe" data-src='{environment:demosBaseUrl}/gauges/radial-gauge-tickmarks' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="radial-gauge-tickmarks-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
@@ -217,8 +217,8 @@ A range highlights a set of continuous values bound by a specified `minimumValue
 </igx-radial-gauge>
 ```
 
-<div class="sample-container" style="height: 320px">
-    <iframe id="radial-gauge-ranges-iframe" src='{environment:demosBaseUrl}/gauges/radial-gauge-ranges' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 320px">
+    <iframe id="radial-gauge-ranges-iframe" data-src='{environment:demosBaseUrl}/gauges/radial-gauge-ranges' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="radial-gauge-ranges-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
@@ -254,8 +254,8 @@ You can enable an interactive mode of the gauge (using `isNeedleDraggingEnabled`
 </igx-radial-gauge>
 ```
 
-<div class="sample-container" style="height: 320px">
-    <iframe id="radial-gauge-needle-iframe" src='{environment:demosBaseUrl}/gauges/radial-gauge-needle' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 320px">
+    <iframe id="radial-gauge-needle-iframe" data-src='{environment:demosBaseUrl}/gauges/radial-gauge-needle' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="radial-gauge-needle-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz

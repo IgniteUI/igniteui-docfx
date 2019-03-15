@@ -130,7 +130,7 @@ export interface IGroupByRecord {
 |--- |--- |
 |グループ列の最大値は 10 です。 | 10 列以上の場合はエラーがスローされます。
 
-### API
+### API リファレンス
 
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
 * [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)

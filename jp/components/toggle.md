@@ -1,4 +1,4 @@
-﻿---
+---
 title: Toggle コンポーネント - ネイティブ Angular | Ignite UI for Angular
 _description: Ignite UI for Angular Toggle ディレクティブを使用すると、トグル コンテナーを開く、操作、アニメーションに適用、および閉じることができます。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, ネイティブ Angular コンポーネント, Angular Toggle ディレクティブ, Angular Toggle コントロール, Angular Toggle コンポーネント
@@ -23,7 +23,7 @@ _language: ja
 
 Toggle は、簡単に開いたり、閉じたりできるボックスにコンテンツをラップします。
 
-Ignite UI for Angular Toggle を初期化する前に、[**IgxToggleModule**]({environment:angularApiUrl}/classes/igxtogglemodule.html) を **app.module.ts** ファイルにインポートします。また、[**igxButton**]({environment:angularApiUrl}/classes/igxbuttondirective.html) ディレクティブを使用するため、[**IgxButtonModule**]({environment:angularApiUrl}/classes/igxbuttonmodule.html) も **app.module.ts** にインポートする必要があります。
+Ignite UI for Angular Toggle を初期化する前に、**IgxToggleModule** を **app.module.ts** ファイルにインポートします。また、[**igxButton**]({environment:angularApiUrl}/classes/igxbuttondirective.html) ディレクティブを使用するため、**IgxButtonModule** も **app.module.ts** にインポートする必要があります。
 
 ```typescript
 // app.module.ts
@@ -81,7 +81,7 @@ export class Class {
 以下は結果です:
 
 <div class="sample-container loading" style="height: 370px">
-    <iframe id="toggle-sample-1-iframe" src='{environment:demosBaseUrl}/interactions/toggle-sample-1' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="toggle-sample-1-iframe" data-src='{environment:demosBaseUrl}/interactions/toggle-sample-1' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="toggle-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">                       StackBlitz で表示
@@ -144,7 +144,7 @@ export class AppModule {}
 
 
 <div class="sample-container loading" style="height: 370px">
-    <iframe id="toggle-iframe-1" src='{environment:demosBaseUrl}/interactions/toggle' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="toggle-iframe-1" data-src='{environment:demosBaseUrl}/interactions/toggle' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="toggle-iframe-1" data-demos-base-url="{environment:demosBaseUrl}">                       StackBlitz で表示
@@ -184,7 +184,7 @@ export class AppModule {}
 この変更後、トグルが以下のように動作します。
 
 <div class="sample-container loading" style="height: 370px">
-    <iframe id="toggle-sample-2-iframe" src='{environment:demosBaseUrl}/interactions/toggle-sample-2' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="toggle-sample-2-iframe" data-src='{environment:demosBaseUrl}/interactions/toggle-sample-2' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="toggle-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">                       StackBlitz で表示
@@ -211,7 +211,7 @@ export class AppModule {}
 
 ```html
 <!--template.component.html-->
-<button igxToggleAction="toggleId" [closeOnOutsideClick]="true" class="toggle-button"  igxButton="raised">Toggle</button>
+<button igxToggleAction="toggleId" class="toggle-button"  igxButton="raised">Toggle</button>
 <div igxToggle id="toggleId" class="toggle-content">
     <section class="toggle-section">
     <h3>Click 
@@ -223,7 +223,7 @@ export class AppModule {}
 結果は以下のようになります。
 
 <div class="sample-container loading" style="height: 370px">
-    <iframe id="toggle-sample-3-iframe" src='{environment:demosBaseUrl}/interactions/toggle-sample-3' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="toggle-sample-3-iframe" data-src='{environment:demosBaseUrl}/interactions/toggle-sample-3' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="toggle-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">                       StackBlitz で表示

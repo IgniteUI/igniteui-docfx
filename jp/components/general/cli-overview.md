@@ -1,5 +1,5 @@
 ---
-title: Ignite UI CLI を使用
+title: Ignite UI CLI
 _description: Ignite UI CLI は、さまざまなフレームワークでアプリケーションの初期化、開発、スキャフォールディング、および処理を可能にするツールです。
 _keywords: Ignite UI for Angular, UI コントロール, CLI, テンプレート, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ
 _language: ja
@@ -58,7 +58,7 @@ ig start
 
 | コマンド | エイリアス | 説明 |
 | --- | --- | --- |
-| [ig new](https://github.com/IgniteUI/igniteui-cli/wiki/new) | | 新しい Angular、jQuery、React を作成します。アプリケーションを Ignite UI for Angular または Ignite UI for JavaScript で使用するために構成します。
+| [ig new](https://github.com/IgniteUI/igniteui-cli/wiki/new) | | 新しい Angular、jQuery、React を作成します。アプリケーションを Ignite UI for Angular、Ignite UI for React、または Ignite UI for JavaScript で使用するために構成します。
 | [ig add](https://github.com/IgniteUI/igniteui-cli/wiki/add) | | ID でテンプレートを追加し、既存にプロジェクトに名前を付けます。
 | [ig start](https://github.com/IgniteUI/igniteui-cli/wiki/start) | | アプリケーションをビルドしてウェブ サーバーを開始、次にアプリケーションをデフォルト ブラウザーで開きます。
 | [ig build](https://github.com/IgniteUI/igniteui-cli/wiki/build) | | アプリケーションをアプトプット ディレクトリへビルドします。

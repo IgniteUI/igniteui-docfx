@@ -1,4 +1,4 @@
-﻿---
+---
 title: 그리드 필터링
 _description: Ignite UI for Angular 데이터 그리드 컨트롤은 신속하며, 계층 및 목록 보기를 포함하여 널리 사용되는 기능으로 풍부한 터치 반응 데이터 그리드를 제공합니다.
 _keywords: Ignite UI for Angular, UI 컨트롤, Angular 위젯, 웹 위젯, UI 위젯, Angular, 네이티브 Angular 컴포넌트 세트, 네이티브 Angular 컨트롤, 네이티브 Angular 컴포넌트 라이브러리, Angular 데이터 그리드 컴포넌트, Angular 데이터 그리드 컨트롤, Angular 그리드 컴포넌트, Angular 그리드 컨트롤, Angular 고성능 그리드, 필터링, 필터
@@ -29,6 +29,8 @@ While there are applied conditions for a column and the filter row is closed, yo
 ###Usage
 
 기본적으로 제공되는 기본 필터링 및 표준 필터링 조건이 있으며 개발자가 사용자 구현으로 대체 할 수도 있습니다. 또한, 사용자 필터링 조건을 간단히 플러그인할 수 있습니다. 그리드는 현재 단순한 필터링 UI뿐만 아니라 보다 복잡한 필터링 옵션을 제공합니다. 열의 [`dataType`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#datatype)에 따라 올바른 [**필터링 처리**](grid.md#필터링-조건) 세트가 필터 UI 드롭다운에 로드됩니다. 또한, [`ignoreCase`]({environment:angularApiUrl}/interfaces/ifilteringexpression.html) 및 초기 [`condition`]({environment:angularApiUrl}/interfaces/ifilteringexpression.html#condition) 속성을 설정할 수 있습니다.
+
+Filtering feature is enabled for the @@igComponent component by setting the [`allowFiltering`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#allowfiltering) input to `true`. The default [`filterMode`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filtermode) is `quickFilter` and it **cannot** be changed run time. To disable this feature for a certain column – set the [`filterable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#filterable) input to `false`.
 
 ```html
 <igx-column field="ProductName" filterable="true" dataType="string"></igx-column>
@@ -235,7 +237,7 @@ export class BooleanFilteringOperand extends IgxBooleanFilteringOperand {
 ```
 
 <div class="sample-container loading" style="height:600px">
-    <iframe id="grid-filtering-iframe" src='{environment:demosBaseUrl}/grid/grid-filter-conditions' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="grid-filtering-iframe" data-src='{environment:demosBaseUrl}/grid/grid-filter-conditions' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <br/>
 <div>

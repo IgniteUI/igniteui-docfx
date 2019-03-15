@@ -8,9 +8,9 @@ _language: ja
 ## Autocomplete
 <p class="highlight">
 
-[**igxAutocomplete**]({environment:angularApiUrl}/classes/igxautocompletedirective.html) ディレクティブは [igxDropDown]  ({environment:angularApiUrl}/classes/igxdropdowncomponent.html) と候補オプションを表示してテキスト入力を向上する方法を提供します。候補は、テキスト入力の開始時、または `上矢印/`下矢印` キーを使用して表示します。
+[`igxAutocomplete`]({environment:angularApiUrl}/classes/igxautocompletedirective.html) ディレクティブは [`igxDropDown`]  ({environment:angularApiUrl}/classes/igxdropdowncomponent.html) と候補オプションを表示してテキスト入力を向上する方法を提供します。候補は、テキスト入力の開始時、または `上矢印/`下矢印` キーを使用して表示します。
 
-デフォルトで最初の項目が常にハイライトされ、キーを使用して簡単に選択できる方法を提供します。リストの項目をクリックして選択することもでき、入力値が自動的に更新されてドロップダウンが閉じられます。項目が選択されると、`onItemSelected` イベントが発生します。イベントがキャンセルされると項目は選択されずにドロップダウンも閉じません。[**igxAutocomplete**]({environment:angularApiUrl}/classes/igxautocompletedirective.html) ディレクティブは項目間を移動すると同時に入力が常にフォーカスされます。後者では入力を続行できます。`ESC` キーが使用してドロップダウン リストを閉じます。
+デフォルトで最初の項目が常にハイライトされ、キーを使用して簡単に選択できる方法を提供します。リストの項目をクリックして選択することもでき、入力値が自動的に更新されてドロップダウンが閉じられます。項目が選択されると、`onItemSelected` イベントが発生します。イベントがキャンセルされると項目は選択されずにドロップダウンも閉じません。[`igxAutocomplete`]({environment:angularApiUrl}/classes/igxautocompletedirective.html) ディレクティブは項目間を移動すると同時に入力が常にフォーカスされます。後者では入力を続行できます。`ESC` キーが使用してドロップダウン リストを閉じます。
 
 [`igx-autocomplete`]({environment:angularApiUrl}/classes/igxautocompletedirective.html) は、使用可能なオプションのプロバイダーとして [`igx-drop-down`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) を使用します。つまり、使用可能なグループ化、テンプレート、項目とグループの無効化を含むドロップダウン　コンポーネントの機能が使用されます。
 </p>
@@ -93,8 +93,6 @@ export class AutocompleteSampleComponent {
  - ドロップダウンが閉じている場合、入力フィールドに入力するとドロップダウンが開きます。
  - `Arrow Down` - 開いている場合、次のドロップダウン項目へ移動します。
  - `Arrow Up` - 開いている場合、以前のドロップダウン項目へ移動します。
- - `End` は最後のドロップダウン項目へ移動します。
- - `Home` は最初のドロップダウン項目へ移動します。
  - `Enter` は、すでに選択した項目を確定し、ドロップダウンを閉じます。
  - `Esc` はドロップダウンを閉じます。
 
@@ -152,7 +150,7 @@ export class AutocompleteSampleComponent {
 ```
 
 ### ドロップダウンの設定
-`igx-autocomplete` ドロップダウンの配置、スクロール ストラテジとアウトレットは、[`IgxAutocompleteSettings`]({environment:angularApiUrl}/classes/igxautocompletedirective.html#autocompleteSettings) オプションを使用して設定できます。タイプ [`AutocompleteOverlaySettings`]({environment:angularApiUrl}/classes/autocompleteoverlaysettings.html) からの値を許可します。
+`igx-autocomplete` ドロップダウンの配置、スクロール ストラテジとアウトレットは、[`IgxAutocompleteSettings`]({environment:angularApiUrl}/classes/igxautocompletedirective.html#autocompletesettings) オプションを使用して設定できます。タイプ [`AutocompleteOverlaySettings`]({environment:angularApiUrl}/interfaces/autocompleteoverlaysettings.html) からの値を許可します。
 
 以下の例は、ディレクティブが適用される入力の上部に設定可能なドロップダウンの位置を表示します。更に開く、閉じるのアニメーションを無効にします。`ConnectedPositioningStrategy` が使用されます。
 
@@ -202,7 +200,7 @@ export class AutocompleteSampleComponent {
 
 以下のサンプルは、オートコンプリートで映画が city でグループ化されている cinema の選択が可能なリストです。インプットの入力または `Arrow Down` キーを使用してリストを開き、cinema を選択します。次に movie と日付を選択します。
 
-<div class="sample-container loading" style="height: 600px;">
+<div class="sample-container loading" style="height: 650px;">
     <iframe id="autocomplete-movie" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/data-entries/movie" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -229,7 +227,9 @@ export class AutocompleteSampleComponent {
 ```
 
 ### オートコンプリートをリモートデータにバインド
-以下は、リモートサービスにバインドされたドロップダウンと `igxAutocomplete` のサンプルです。以下は、にデータ ロード時に遅延がある場合、ドロップダウンの代わりにカスタム テンプレートを適用したサンプルです。
+以下は、リモートサービスにバインドされたドロップダウンと `igxAutocomplete` のサンプルです。サービスへのリクエストを制限してパフォーマンスを向上させるために、RxJS `debounce` を使用し、入力が終わった `250ms` 後にリクエストします。
+
+サンプルでドロップダウンの代わりにカスタムの読み込みテンプレートを適用しているため、表示時にデータの読み込みで遅延が発生します。
 
 <div class="sample-container loading" style="height: 400px;">
     <iframe id="autocomplete-remote-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/data-entries/autocomplete-remote" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -254,7 +254,7 @@ export class AutocompleteSampleComponent {
 * [IgxDropDownComponent](drop_down.md)
 * [IgxInputGroup](input_group.md)
 * [テンプレート駆動フォームの統合](input_group.md)
-[Reactive Forms Integration](input_group_reactive_forms.md)
+* [Reactive Forms インテグレーション](input_group_reactive_forms.md)
 
 コミュニティに参加して新しいアイデアをご提案ください。
 

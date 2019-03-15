@@ -1,24 +1,24 @@
+﻿---
+title: Hierarchical Grid コンポーネント
+_description: Ignite UI for Angular Hierarchical Grid コントロールは、タッチ レスポンシブが有効なデータ リッチな階層グリッドです。
+_keywords: Ignite UI for Angular, UI controls, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Hierarchical Grid コンポーネント, Angular Hierarchical Grid コントロール, Angular 高パフォーマンス Hierarchical Grid, Hierarchical Grid
 ---
-title: Hierarchical Grid Component
-_description: The Ignite UI for Angular Hierarchical Grid control features the fastest, touch-responsive data-rich hierarchical grid with popular features.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Hierarchical Grid component, Angular Hierarchical Grid control, Angular High Performance Hierarchical Grid, Hierarchical Grid
----
-## Hierarchical Grid
-<p class="highlight">Display and manipulate hierarchically structured data with the Ignite UI for Angular Hierarchical Grid. Features include Filtering, Sorting, Paging, Templates, Column Pinning, Column Moving and Column Hiding, as well as Updating the visualized data. The Hierarchical Grid builds upon the Data Grid Component and extends its functionality by allowing the users to expand or collapse the rows of the parent grid, revealing the according child grid, when more detailed information is needed.</p>
+## 階層グリッド
+<p class="highlight">Ignite UI for Angular Hierarchical Grid は、階層形式のデータの表示や編集ができます。フィルタリング、並べ替え、ページング、テンプレート、列ピン固定、列移動、列非表示などの機能が含まれます。Hierarchical Grid は、Data Grid コンポーネントをベースとして構築されており、親グリッドの行の展開/縮小、詳細な情報が必要な場合に子グリッドを表示する機能を拡張しました。</p>
 
-### Demo
+### デモ
 
 <div class="sample-container loading" style="height:520px">
     <iframe id="grid-sample-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-resizing' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
-### Dependencies
-The Hierarchical Grid is exported as an `NgModule` - all you need to do in your application is import the _IgxHierarchicalGridModule_ inside your `AppModule`.
+### 依存関係
+Hierarchical Grid が `NgModule` としてエクスポートされるため、アプリケーションで `AppModule` に _IgxTreeGridModule_ をインポートする必要があります。
 
 ```typescript
 // app.module.ts
@@ -35,21 +35,21 @@ import { IgxHierarchicalGridModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-We can obtain a reference to the Hierarchical Grid in TypeScript the following way:
+以下の方法で TypeScript の Hierarchical Grid の参照を取得します。
 
 ```typescript
 @ViewChild('hgrid1', { read: IgxHierarchicalGridComponent })
 public hgrid1: IgxHierarchicalGridComponent;
 ```
 
-### Data Binding
+### データ バインディング
 
-**igx-hierarchical-grid** derives from **igx-grid** and shares most of its functionality. The main difference is that it allows multiple levels of hierarchy to be defined. They are configured through a separate tag within the definition of **igx-hierarchical-grid**, called **igx-row-island**. The **igx-row-island** component defines the configuration for each child grid for the particular level. Multiple row islands per level are also supported.
-The Hierarchical Grid supports two ways of binding to data: 
+**igx-hierarchical-grid** は、**igx-grid** から派生し、ほとんどの機能を共有します。主要な違いは階層で複数レベルを定義できることです。**Igx-row-island** と呼ばれる **Igx-hierarchical-grid** の定義内の個別のタグで設定されます。**igx-row-island** コンポーネントは、特定レベルの各子グリッドの設定を定義します。レベルごとの複数行アイランドがサポートされます。
+階層グリッドで 2 通りのデータ バインドがサポートされます。 
 
-#### 1. Using hierarchical data
+#### 1.階層データの使用
 
-If the application loads the whole hierarchical data as an array of objects referencing children arrays of objects, then the Hierarchical Grid can be configured to read it and bind to it automatically. Here is an example of a properly structured hierarchical data source:
+アプリケーションが階層データ全体をオブジェクトの子配列を参照するオブジェクトの配列として読み込む場合、Hierarchical Grid を設定して読み込み、自動的にバインドすることができます。以下はプロパティ構造の階層データソースのプロパティの例です。
 
 ```javascript
 export const singers = [{
@@ -81,7 +81,7 @@ export const singers = [{
     }]
 }];
 ```
-Each **igx-row-island** should specify the key of the property that holds the children data.
+各 **igx-row-island** は、子データを保持するプロパティのキーを指定します。
 
 ```html
 <igx-hierarchical-grid #hierarchicalGrid [data]="singers" [autoGenerate]="true">
@@ -94,11 +94,11 @@ Each **igx-row-island** should specify the key of the property that holds the ch
 </igx-hierarchical-grid>
 ```
 > [!NOTE]
-> Note that instead of `data` the user configures only the `key` that the **igx-hierarchical-grid** needs to read to set the data automatically.
+> `data` の代わりにユーザーは、データを自動的に設定するめの読み込みに **igx-hierarchical-grid** が必要な `key` のみ設定します。
 
-#### 2. Using Load-On-Demand
+#### 2.ロードオンデマンドの使用
 
-Most applications are designed to load as little data as possible initially, which results in faster load times. In such cases **igx-hierarchical-grid** may be configured to allow user-created services to feed it with data on demand. The following configuration uses a special `@Output` and a newly introduced loading-in-progress template to provide a fully-featured load-on-demand.
+ほとんどのアプリケーションがはじめに最小限のデータを読み込むようでざいんされているため、結果的に読み込み時間が短くなります。このような場合、**igx-hierarchical-grid** を設定してユーザーが作成したサービスでデータのオンデマンド フィードを可能にします。以下の設定は、特別な `@Output` と新しい loading-in-progress テンプレートでロードオンデマンドのすべての機能が提供されます。
 
 ```html
 <!-- hierarchicalGridSample.component.html -->
@@ -180,9 +180,9 @@ export class RemoteLoDService {
     }
 }
 ```
-### Features
+### 機能
 
-The grid features could be enabled and configured through the **igx-row-island** markup - they get applied for every grid that is created for it. Changing options at runtime through the row island instance changes them for each of the grids it has spawned. 
+グリッド機能を有効にして **igx-row-island** マークアップを介して設定し、作成された各グリッドに適用されます。ランタイムに行アイランド インスタンスでオプションを変更すると生成した各グリッドで変更されます。 
 
 ```html
 <igx-hierarchical-grid [data]="localData" [displayDensity]="density" [autoGenerate]="false"
@@ -202,76 +202,76 @@ The grid features could be enabled and configured through the **igx-row-island**
 </igx-hierarchical-grid>
 ```
 
-The following grid features work on a per grid level, which means that each grid instance manages them independently of the rest of the grids:
+以下のグリッド機能はグリッド レベルごとに動作するため、各グリッド インスタンスが残りのグリッドとは別に管理します。
 
-- Sorting
-- Filtering
-- Paging
-- Multi Column Headers
-- Hiding
-- Pinning
-- Moving
-- Summaries
-- Search
+- 並べ替え
+- フィルタリング
+- ページング
+- 複数列ヘッダー
+- 非表示
+- ピン固定
+- 移動
+- 集計
+- 検索
 
-The Selection and Navigation features work globally for the whole **igx-hierarchical-grid** 
+選択とナビゲーション機能は、**igx-hierarchical-grid** 全体でグローバルに作用します。 
 
-- Selection 
-    Selection does not allow selected cells to be present for two different child grids at once.
-- Navigation
-    When navigating up/down, if next/prev element is a child grid, navigation will continue in the related child grid, marking the related cell as selected and focused. If the child cell is outside the current visible view port it is scrolled into view so that selected cell is always visible.
+- 選択 
+    選択は、選択したセルを異なる 2 つの子グリッドで同時に表示することを許可しません。
+- ナビゲーション
+    up/down へ移動するときに next/prev 要素が子グリッドの場合、ナビゲーションが関連子グリッド内で継続され、関連セルが選択済みにマークされ、フォーカスされます。子セルが現在の表示ビューポート以外にある場合にビューへスクロールされるため、選択したセルが常に表示されます。
 
-### Keyboard navigation
-Keyboard navigation is supported by default by the Hierarchical Grid. When you focus a cell and press one of the following key combinations, the described behaviour is performed:
+### キーボード ナビゲーション
+キーボード ナビゲーションは Hierarchical Grid でデフォルトでサポートされます。セルをフォーカスして以下のキーの組み合わせを押した場合の動作を示します。
 
- - `Arrow Up` - navigates one cell up, going up the grid hierarchy if necessary (no wrapping)
- - `Arrow Down` - navigates one cell down, going deeper into the grid hierarchy if necessary (no wrapping)
- - `Arrow Left` - navigates one cell left (no wrapping between lines)
- - `Arrow Right` - navigates one cell right (no wrapping between lines)
- - `Ctrl + Arrow Up` - navigates to the first cell in the current column;
- - `Ctrl + Arrow Down` - navigates to the last cell in the current column;
- - `Ctrl + Arrow Left` -  moves to leftmost cell in the row
- - `Home` - moves to leftmost cell in the row
- - `Ctrl + Home` - moves to leftmost cell in the row
- - `Ctrl + Arrow Right` - moves to rightmost cell in the row
- - `End` - moves to rightmost cell in the row
- - `Ctrl + End` - moves to rightmost cell in the row
- - `Page Up` - scrolls one page (view port) up
- - `Page Down` -  scrolls one page (view port) down
- - `Enter` - enters edit mode
- - `F2` - enters edit mode
- - `Esc` - exits edit mode
- - `Tab` - sequentially moves the focus over the next cell on the row and if the last cell is reached, moves to the next row. If the focus is on the last cell of an expanded row, moves the focus inside its first child; When a cell is in edit mode, will move the focus to next editable cell in the row, and from the right-most editable cell to the `CANCEL` and `DONE` buttons, and from the `DONE` button to the left-most editable cell within the currently edited row.
- - `Shift + Tab` - sequentially moves focus to the previous cell on the row and if the first cell is reached, moves the focus to the previous row. If the focus is on the first cell of an expanded child grid, moves the focus inside its parent; When a cell is in edit mode, will move the focus to the next editable cell in the row, and from the right-most editable cell to the `CANCEL` and `DONE` buttons, and from the `DONE` button to the left-most editable cell within the currently edited row.
- - `Space` -  if the row is selectable, on keydown space triggers row selection
- - `Alt + Arrow Left` on a parent grid row - collapses the parent row content if the row is not already collapsed;
- - `Alt + Arrow Up` on a parent grid row - collapses the parent row content if the row is not already collapsed;
- - `Alt + Arrow Right` on a parent grid row - expands the parent row content if the row is not already expanded;
- - `Alt + Arrow Down` on a parent grid row - expands the parent row content if the row is not already expanded;
- - on mouse `wheel` -  blurs the focused element;
+ - `Arrow Up` - 1 つ上のセル、必要に応じてグリッド上階層へ移動 (ラッピングなし);
+ - `Arrow Down` - 1 つ下のセル、必要に応じてグリッド下階層へ移動 (ラッピングなし);
+ - `左矢印` - 1 つ左のセルへ移動 (行間のラッピングなし);
+ - `右矢印` - 1 つ右のセルへ移動 (行間のラッピングなし);
+ - `Ctrl + 上矢印` - 現在の列の最初のセルへ移動;
+ - `Ctrl + 下矢印` - 現在の列の最後のセルへ移動;
+ - `Ctrl + 左矢印` -  行の左端のセルへ移動;
+ - `Home` - 行の左端のセルへ移動;
+ - `Ctrl + Home` - moves to top left cell in the grid;
+ - `Ctrl + 右矢印` - 行の右端のセルへ移動;
+ - `End` - 行の右端のセルへ移動;
+ - `Ctrl + End` -  moves to bottom right cell in the grid;
+ - `Page Up` - 1 ページ (ビューポート) 上へスクロール;
+ - `Page Down` - 1 ページ (ビューポート) 下へスクロール;
+ - `Enter` - 編集モードに入る;
+ - `F2` - 編集モードに入る;
+ - `Esc` - 編集モードを終了する;
+ - `Tab` - 行の次のセルへ順番に移動して最後のセルの後は次の行へ移動。展開した行の最後のセルにフォーカスがある場合、最初の子にフォーカスを移動します。セルが編集モードの場合、行で編集可能な次のセルにフォーカスを移動します。編集可能な一番右のセルから `CANCEL`、`DONE`ボタンへ、`DONE` から編集可能な一番左のセルへ移動します;
+ - `Shift + Tab` - 行の前のセルへフォーカスを順番に移動し、最初のセルの次に前の行へフォーカスを移動します。展開した子グリッドの最初のセルにフォーカスがある場合、その親内にフォーカスを移動します。セルが編集モードの場合、行で編集可能な次のセルにフォーカスを移動します。編集可能な一番右のセルから `CANCEL`、`DONE` ボタンへ、`DONE` から編集可能な一番左のセルへ移動します;
+ - `Space` -  行が選択可能な場合、スペースキーを押下すると行選択をトリガーします;
+ - 親グリッド行で `Alt + 左矢印` - 行が縮小されていない場合は親行コンテンツを縮小します;
+ - 親グリッド行で `Alt + 上矢印` - 行が縮小されていない場合は親行コンテンツを縮小します;
+ - 親グリッド行で `Alt + 右矢印` - 行が展開されていない場合は親行コンテンツを展開します;
+ - 親グリッド行で `Alt + 下矢印` - 行が展開されていない場合は親行コンテンツを展開します;
+ - マウス `ホイール` - フォーカス要素をぼかします;
 
 
-#### "Collapse All" Button
+#### "すべて縮小" ボタン
 
-The Hierarchical Grid allows the users to conveniently collapse all its currently expanded rows by pressing the "Collapse All" button at its top left corner. Additionally, every child grid which contains other grids and is a Hierarchical Grid itself, also has such a button - this way the user is able to collapse only a given grid in the hierarchy: 
+左上の角にある [すべて縮小] ボタンを押して Hierarchical Grid で展開されてる行を縮小できます。更に他のグリッドを含む各子グリッドと Hierarchical Grid にも同様のボタンがあり、階層の特定のグリッドのみ縮小することができます。 
 
 ![](../../images/unfold_less_icon_screenshot.jpg)
 
-### Known Limitations
+### 既知の問題と制限
 
-|Limitation|Description|
+|制限|説明|
 |--- |--- |
-|Group By|Group By feature is not supported by the hierarchical grid.|
-|Export to Excel|Export to Excel is currently not supported by the Hierarchical Grid, but it would be available in future versions of Ignite UI for Angular.|
+|グループ化|グループ化機能は、階層グリッドでサポートされません。|
+|Excel へエクスポート|Excel へのエクスポートは Hierarchical Grid でサポートされませんが、今後の Ignite UI for Angular アップデートでサポート予定です。|
 
-### CRUD operations
+### CRUD 操作
 
 > [!NOTE]
-> An important difference from the flat Data Grid is that each instance for a given row island has the same transaction service instance and accumulates the same transaction log. In order to enable the CRUD functionality users should inject the `IgxHierarchicalTransactionServiceFactory`.
+> フラットな Data Grid と行アイランドの各インスタンスの重要な違いは、同じトランザクション サービス インスタンスがあり、同じトランザクション ログを蓄積する点です。CRUD 機能を有効にするには、`IgxHierarchicalTransactionServiceFactory` を注入する必要があります。
 
-Calling CRUD API methods should still be done through each separate grid instance.
+CRUD API メソッドの呼び出しは,各グリッド インスタンスで可能です。
 
-## API References
+## API リファレンス
 
 * [IgxHierarchicalGridComponent]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html)
 * [IgxRowIslandComponent]({environment:angularApiUrl}/classes/igxrowislandcomponent.html)
@@ -281,21 +281,21 @@ Calling CRUD API methods should still be done through each separate grid instanc
 * [IgxGridRowComponent]({environment:angularApiUrl}/classes/igxgridrowcomponent.html)
 * [IgxGridCellComponent]({environment:angularApiUrl}/classes/igxgridcellcomponent.html)
 
-### Additional Resources
+### その他のリソース
 <div class="divider--half"></div>
 
-* [Virtualization and Performance](virtualization.md)
-* [Paging](paging.md)
-* [Filtering](filtering.md)
-* [Sorting](sorting.md)
-* [Summaries](summaries.md)
-* [Column Moving](column_moving.md)
-* [Column Pinning](column_pinning.md)
-* [Column Resizing](column_resizing.md)
-* [Selection](selection.md)
+* [仮想化とパフォーマンス](virtualization.md)
+* [ページング](paging.md)
+* [フィルタリング](filtering.md)
+* [並べ替え](sorting.md)
+* [集計](summaries.md)
+* [列移動](column_moving.md)
+* [列のピン固定](column_pinning.md)
+* [列のサイズ変更](column_resizing.md)
+* [選択](selection.md)
 
 <div class="divider--half"></div>
-Our community is active and always welcoming to new ideas.
+コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+* [Ignite UI for Angular** フォーラム** (英語) ](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub** (英語) ](https://github.com/IgniteUI/igniteui-angular)

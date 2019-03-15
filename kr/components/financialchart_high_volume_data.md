@@ -10,9 +10,8 @@ _language: kr
 `IgxFinancialChart` 컨트롤은 대량의 데이터를 처리할 수 있습니다. 다음 데모는 20년간의 데이터를 바인딩하고 선형 차트를 사용하여 1시간 간격으로 주가를 표시합니다.
 
 ### 데모
-
-<div class="sample-container" style="height: 550px">
-    <iframe id="financial-chart-high-volume-iframe" src='{environment:demosBaseUrl}/charts/financial-chart-high-volume' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 550px">
+    <iframe id="financial-chart-high-volume-iframe" src='{environment:demosBaseUrl}/charts/financial-chart-high-volume' width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="financial-chart-high-volume-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기

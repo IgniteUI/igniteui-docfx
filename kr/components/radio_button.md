@@ -23,7 +23,7 @@ _language: kr
 #### Radio Button Usage
 
 At its core the radio button component allows for a single option selection. The default styling is done according to the selection controls specification as per the Material Design guidelines.
-To get started with the Ignite UI for Angular Radio, let's first import the [`IgxRadioModule`]({environment:angularApiUrl}/classes/igxradiomodule.html) in the **app.module.ts** file:
+To get started with the Ignite UI for Angular Radio, let's first import the `IgxRadioModule` in the **app.module.ts** file:
 
 ```typescript
 // app.module.ts
@@ -114,7 +114,7 @@ Try it! The final result would be something like that:
 
 #### Radio Group Usage
 
-The Radio Group Directive is exported as an `NgModule`, thus all you need to do in your application is to import the [`IgxRadioModule`]({environment:angularApiUrl}/classes/igxradiomodule.html) in the **app.module.ts** file:
+The Radio Group Directive is exported as an `NgModule`, thus all you need to do in your application is to import the `IgxRadioModule` in the **app.module.ts** file:
 
 ```typescript
 // app.module.ts

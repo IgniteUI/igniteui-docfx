@@ -222,15 +222,15 @@ The final result should look something like this:
 
 In this article we learned how to create our own Ignite UI for Angular application from scratch by taking advantage of the fully-automated process of Ignite UI for Angular projects creation in the Ignite UI CLI. We also learned and how to add Ignite UI for Angular to an existing application by using the Angular CLI. We designed our own page by including the [`IgxGridComponent`]({environment:angularApiUrl}/classes/igxgridcomponent.html) to it, which itself offers some awesome features, which you can take a look at by referring to the navigation menu.
 
-* [`IgxGridComponent`]({environment:angularApiUrl}/classes/igxgridcomponent.html)
-* [`IgxGridComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
+* [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 
 ## Additional Resources
 <div class="divider--half"></div>
 
-* [`Ignite UI CLI`](https://github.com/IgniteUI/igniteui-cli)
-* [`Ignite UI CLI Commands`](https://github.com/IgniteUI/igniteui-cli/wiki#available-commands)
-* [`Grid overview`](../grid/grid.md)
+* [Ignite UI CLI](https://github.com/IgniteUI/igniteui-cli)
+* [Ignite UI CLI Commands](https://github.com/IgniteUI/igniteui-cli/wiki#available-commands)
+* [Grid overview](../grid/grid.md)
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.

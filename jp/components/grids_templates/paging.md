@@ -1,76 +1,116 @@
-﻿---
-title: グリッドのページング
+@@if (igxName === 'IgxGrid') {
+---
+title: グリッドのページング機能
 _description: Ignite UI for Angular Data Grid コントロールは、タッチ レスポンシブなデータ グリッドです。階層およびリスト ビューなどの機能があります。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Grid, Angular Table, Angular Data Grid コンポーネント, Angular Data Table コンポーネント, Angular Data Grid コントロール, Angular Data Table コントロール, Angular Grid コンポーネント, Angular Table コンポーネント, Angular Grid コントロール, Angular Table コントロール, Angular 高パフォーマンス Grid, Angular 高パフォーマンス Data Table, ページング, 改ページ位置の自動修正, Data Grid ページング, Data Table ページング
 _language: ja
 ---
+}
+@@if (igxName === 'IgxTreeGrid') {
+---
+title: Tree Grid ページング
+_description: Ignite UI for Angular Tree Grid コントロールは、タッチ レスポンシブ、データリッチなツリー データ グリッドで階層およびリスト ビューなどの機能があります。
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, Native Angular コンポーネントs スイート, Native Angular コントロール, Native Angular コンポーネントs Library, Angular Tree Grid, Angular Tree Table, Angular Tree Grid コンポーネント, Angular Tree Table コンポーネント, Angular Tree Grid control, Angular Data Tree Table コントロール, Angular Tree Grid コンポーネント, Angular Tree Table コンポーネント, Angular Tree Grid コントロール, Angular Tree Table コントロール, Angular 高パフォーマンス Tree Grid, Angular 高パフォーマンス Tree Table, Paging, Pagination, Tree Grid Paging, Tree Table Paging
+_language: ja
+---
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+---
+title: Hierarchical Grid ページング
+_description: Ignite UI for Angular Hierarchical Grid コントロールは、高速でタッチ レスポンシブが有効なデータ リッチなツリーグリッドです。
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, Native Angular コンポーネントs スイート, Native Angular コントロール, Native Angular コンポーネントs Library, Angular Hierarchical Grid, Angular Hierarchical Table, Angular Hierarchical Grid コンポーネント, Angular Hierarchical Table コンポーネント, Angular Hierarchical Grid コントロール, Angular Hierarchical Table コントロール, Angular 高パフォーマンス Hierarchical Grid, Angular 高パフォーマンス Hierarchical Table, Paging, Pagination, Hierarchical Grid Paging, Hierarchical Table Paging
+_language: ja
+---
+}
 
-### グリッドのページング
+### @@igComponent ページング
 
-Ignite UI for Angular で、**ページング**がルート `igx-grid` コンポーネントで初期化され、[`paging`]({environment:angularApiUrl}/classes/igxgridcomponent.html#paging) および [`perPage`]({environment:angularApiUrl}/classes/igxgridcomponent.html#perpage) 入力によって構成できます。
+In Ignite UI for Angular @@igComponent では、**Paging** がルート `@@igSelector` コンポーネントで初期化されて、[`paging`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#paging) と [`perPage`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#perpage) 入力で設定できます。
 
 #### デモ
 
-<div class="sample-container loading" style="height:605px">
+@@if (igxName === 'IgxGrid') {
+<div class="sample-container loading" style="height:550px">
     <iframe id="grid-paging-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-paging-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-paging-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-paging-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
+</div>
+}
+@@if (igxName === 'IgxTreeGrid') {
+<div class="sample-container loading" style="height:550px">
+    <iframe id="treegrid-paging-sample-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-paging' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-paging-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
+</div>
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+<div class="sample-container loading" style="height:560px">
+    <iframe id="hierarchical-grid-paging-sample-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-paging' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-paging-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
+}
 
-機能が有効かどうかを制御する paging は Boolean プロパティです。[`perPage`]({environment:angularApiUrl}/classes/igxgridcomponent.html#perpage) プロパティはページごとに表示可能なレコードを制御します。以下のようにグリッドでページングを有効にします。
+
+Paging は機能が有効かどうかを制御する Boolean プロパティです。`perPage`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#perpage) プロパティはページごとに表示レコードを制御します。以下のように @@igComponent でページングを有効にします。
 
 ```html
-<igx-grid #grid1 [data]="data" [paging]="true" [perPage]="10" [paginationTemplate]="pager" height="500px" width="100%" displayDensity="cosy"></igx-grid>
+<@@igSelector #@@igObjectRef [data]="data" [paging]="true" [perPage]="10" [paginationTemplate]="pager" height="500px" width="100%" displayDensity="cosy">
+</@@igSelector>
 ```
 
-ページング領域でテンプレート化がサポートされますが、初期化でテンプレート参照をグリッドに渡す必要があります。以下は、ページングが入力によって制御されるテンプレートの例です。
+ページング領域でテンプレート化がサポートされますが、初期化でテンプレート参照を @@igComponent に渡す必要があります。以下は、ページングが入力によって制御されるテンプレートの例です。
 
 ```html
 <ng-template #myTemplate let-grid>
-    Current page: {{ grid.page }}
-    <input type="number" [ngModel]="grid.page" (onModelChange)="grid.paginate($event)" />
-    Total pages: {{ grid.totalPages }}
+    Current page: {{ @@igObjectRef.page }}
+    <input type="number" [ngModel]="grid.page" (onModelChange)="@@igObjectRef.paginate($event)" />
+    Total pages: {{ @@igObjectRef.totalPages }}
 </ng-template>
 
-<igx-grid paging="true" [paginationTemplate]="myTemplate">
+<@@igSelector [paging]="true" [paginationTemplate]="myTemplate">
     ...
-</igx-grid>
+</@@igSelector>
 ```
 
-ページングは、[`paginate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#paginate)、 [`previousPage`]({environment:angularApiUrl}/classes/igxgridcomponent.html#previouspage)、 [`nextPage`]({environment:angularApiUrl}/classes/igxgridcomponent.html#nextpage) メソッドを使用して Grid API を使用して設定できます。
+ページングはコードで @@igComponent API を使用して設定できます。[`paginate`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#paginate)、[`previousPage`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#previouspage)、[`nextPage`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#nextpage) メソッド:
 
 ```typescript
 // Go to page 6
-this.grid.paginate(5);
+this.@@igObjectRef.paginate(5);
 
 // Go to previous/next page
-this.grid.previousPage();
-this.grid.nextPage();
+this.@@igObjectRef.previousPage();
+this.@@igObjectRef.nextPage();
 
 // Check for first/last page
-this.grid.isFirstPage;
-this.grid.isLastPage;
+this.@@igObjectRef.isFirstPage;
+this.@@igObjectRef.isLastPage;
 
 // Get the number of pages
-this.grid.totalPages;
+this.@@igObjectRef.totalPages;
 
 // Change the number of records per page
-this.grid.perPage = 25;
+this.@@igObjectRef.perPage = 25;
 
 // Enables/disables paging
-this.grid.paging = false;
+this.@@igObjectRef.paging = false;
 ```
 
+@@if (igxName === 'IgxGrid' || igxName === 'IgxHierarchicalGrid') {
 ### リモート データ
 
 ページングはリモート データで処理することもできます。
 
-はじめにデータをフェッチして現在のページ データのみを返すサービスを宣言します。
-ページ カウントを計算するためにすべてのデータのカウントをサービスに追加する必要があります。
-
+はじめにデータ フェッチングを行うサービスを宣言します。
+ページ カウントを計算するためにすべてのデータ項目のカウントをが必要なため、ロジックをサービスに追加する必要があります。
 ```typescript
 @Injectable()
 export class RemoteService {
@@ -105,8 +145,8 @@ export class RemoteService {
     }
 }
 ```
-サービスの宣言後、グリッド構成とデータ サブスクリプションのためのコンポーネントを作成します。
-
+サービスを宣言した後にコンポーネントを作成する必要があり、@@igComponent コンストラクションとデータ サブスクリプションを処理します。
+@@if (igxName === 'IgxGrid') {
 ```typescript
 export class RemotePagingGridSample implements OnInit, AfterViewInit {
     public data: Observable<any[]>;
@@ -123,9 +163,34 @@ export class RemotePagingGridSample implements OnInit, AfterViewInit {
     }
 }
 ```
-要求されたページのデータのみを取得し、選択したページと`ページごとの項目`に基づいて `skip` と `top` パラメーターをリモート サービスに渡すためのカスタム ページャー テンプレートを作成します。
-更にページ ボタンの有効化および無効化も設定します。
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+```typescript
+export class HGridRemotePagingSampleComponent implements OnInit, AfterViewInit, OnDestroy {
+    public page = 0;
+    public lastPage = false;
+    public firstPage = true;
+    public totalPages: number = 1;
+    public totalCount = 0;
+    
+    constructor(private remoteService: RemotePagingService) {}
 
+    public ngOnInit(): void {
+        this._dataLengthSubscriber = this.remoteService.getDataLength(
+            { parentID: null, rootLevel: true, key: "Customers" }).subscribe((length) => {
+            this.totalCount = length;
+            this.totalPages = Math.ceil(length / this.perPage);
+            this.buttonDeselection(this.page, this.totalPages);
+        });
+
+}
+}
+```
+}
+要求されたページのデータのみを取得し、選択したページと項目 [`perPage`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#perpage) に基づいて `skip` と `top` パラメーターをリモート サービスに渡すためのカスタム ページャー テンプレートを作成します。
+ページ ボタンの有効化および無効化も設定します。
+
+@@if (igxName === 'IgxGrid') {
 ```html
 <ng-template #customPager>
     <button [disabled]="firstPage" (click)="paginate(0, false)" igxButton="icon" igxRipple igxRippleCentered="true">
@@ -191,24 +256,136 @@ public buttonDeselection(page: number, totalPages: number) {
 ...
 public ngAfterViewInit() {
     this.remoteService.getData(0, this.perPage);
-    this.grid1.paginationTemplate = this.remotePager;
+    this.@@igObjectRef.paginationTemplate = this.remotePager;
 }
 
 ```
-最後にグリッドのテンプレートを宣言します。
-
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
 ```html
-<igx-grid #grid1 [data]="data | async" width="960px" height="550px" [paging]="true" [perPage]="perPage">
+    <ng-template #customPager let-api>
+        <button [disabled]="firstPage" (click)="paginate(0, false)" igxButton="icon" igxRipple igxRippleCentered="true">
+            <igx-icon fontSet="material">first_page</igx-icon>
+        </button>
+        <button [disabled]="firstPage" (click)="previousPage()" igxButton="icon" igxRipple igxRippleCentered="true">
+            <igx-icon fontSet="material">chevron_left</igx-icon>
+        </button>
+        <span>{{ page + 1 }} of {{totalPages}}</span>
+        <button [disabled]="lastPage" (click)="nextPage()" igxRipple igxRippleCentered="true" igxButton="icon">
+            <igx-icon fontSet="material">chevron_right</igx-icon>
+        </button>
+        <button [disabled]="lastPage" (click)="paginate(totalPages - 1, false)" igxButton="icon" igxRipple
+            igxRippleCentered="true">
+            <igx-icon fontSet="material">last_page</igx-icon>
+        </button>
+        <select style="margin-left: 1rem;" (change)="parseToInt($event.target.value);">
+            <option [value]="val" [selected]="perPage == val" *ngFor="let val of [5, 10, 15, 20]">{{ val
+                }}</option>
+        </select>
+    </ng-template>
+```
+```typescript
+@ViewChild("customPager", { read: TemplateRef })
+    public remotePager: TemplateRef<any>;
+    public title = "gridPaging";
+    
+@ViewChild("layout1")
+    public layout1: IgxRowIslandComponent;
+
+@ViewChild("hierarchicalGrid")
+    public hierarchicalGrid: IgxHierarchicalGridComponent;
+    
+    ...
+        public ngAfterViewInit() {
+        this.hierarchicalGrid.isLoading = true;
+        this.remoteService.getData(
+            { parentID: null, rootLevel: true, key: "Customers" }, 0, this.perPage).subscribe((data) => {
+            this.hierarchicalGrid.isLoading = false;
+            this.hierarchicalGrid.data = data;
+            this.hierarchicalGrid.paginationTemplate = this.remotePager;
+            this.hierarchicalGrid.cdr.detectChanges();
+        });
+    }
+    ...
+   public nextPage() {
+        this.firstPage = false;
+        this.page++;
+        const skip = this.page * this.perPage;
+        const top = this.perPage;
+        this.remoteService.getData(
+            { parentID: null, rootLevel: true, key: "Customers" }, skip, top).subscribe((data) => {
+            this.hierarchicalGrid.data = data;
+            this.hierarchicalGrid.cdr.detectChanges();
+        });
+        if (this.page + 1 >= this.totalPages) {
+            this.lastPage = true;
+        }
+    }
+
+    public previousPage() {
+        this.lastPage = false;
+        this.page--;
+        const skip = this.page * this.perPage;
+        const top = this.perPage;
+        this.remoteService.getData(
+            { parentID: null, rootLevel: true, key: "Customers" }, skip, top).subscribe((data) => {
+            this.hierarchicalGrid.data = data;
+            this.hierarchicalGrid.cdr.detectChanges();
+        });
+        if (this.page <= 0) {
+            this.firstPage = true;
+        }
+    }
+
+    public paginate(page: number, recalc: true) {
+        this.page = page;
+        const skip = this.page * this.perPage;
+        const top = this.perPage;
+        if (recalc) {
+            this.totalPages = Math.ceil(this.totalCount / this.perPage);
+        }
+        this.remoteService.getData(
+            { parentID: null, rootLevel: true, key: "Customers" }, skip, top).subscribe((data) => {
+            this.hierarchicalGrid.data = data;
+            this.hierarchicalGrid.cdr.detectChanges();
+        });
+        this.buttonDeselection(this.page, this.totalPages);
+    }
+
+    public buttonDeselection(page: number, totalPages: number) {
+        ...
+    }
+
+```
+}
+最後にグリッドのテンプレートを宣言します。
+@@if (igxName === 'IgxGrid') {
+```html
+<@@igSelector #@@igObjectRef [data]="data | async" width="960px" height="550px" [paging]="true" [perPage]="perPage">
     <igx-column field="ID"></igx-column>
     <igx-column field="ProductName"></igx-column>
     <igx-column field="QuantityPerUnit"></igx-column>
     <igx-column field="SupplierName"></igx-column>
     <igx-column field="UnitsInStock"></igx-column>
     <igx-column field="Rating"></igx-column>
-</igx-grid>
+</@@igSelector>
 ```
-
-This is absolutely enough if we want up and running sample. But we can extend this sample even more by adding an option to change our paging template run time. Let's see how we can achieve that. First we will start by adding one more paging template in our template:
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+```html
+<igx-hierarchical-grid [paging]="true" [perPage]="perPage"
+    [primaryKey]="'CustomerID'" [height]="'550px'" [width]="'100%'" #hierarchicalGrid>
+    <igx-column field="CustomerID"></igx-column>
+        <igx-column field="CompanyName"></igx-column>
+        <igx-column field="ContactName"></igx-column>
+        <igx-column field="ContactTitle"></igx-column>
+        <igx-column field="Country"></igx-column>
+        <igx-column field="Phone"></igx-column>
+        ...
+</igx-hierarchical-grid>
+```
+}
+これでサンプルを実行できます。またパージング テンプレートをランタイムで変更するオプションを追加してサンプルを更に拡張できます。以下は、実装方法です。はじめにテンプレートにもう 1 つページング テンプレートを追加します。
 
 ```html
 <ng-template #secCustomPager let-api>
@@ -226,22 +403,22 @@ This is absolutely enough if we want up and running sample. But we can extend th
 </ng-template>
 ```
 
-After that we need to extend the methods that we have already created with some additional logic:
+次にその他のロジックを使用してすでに作成したメソッドを拡張します。
 
 ```typescript
-// same applies and for the methods previousPage() and paginate(page: number, recalc: true)
+// the same also applies for the methods previousPage() and paginate(page: number, recalc: true)
 public nextPage() {
     ...
     if (this.grid1.paginationTemplate === this.secondPagerTemplate) {
         this.setNumberOfPagingItems(this.page, this.totalPages);
     }
 }
-// creates array with the visible page numbers where the user can navigate according the current page and the total page number
+// creates an array with the visible page numbers where the user can navigate according to the current page and the total page number
 public setNumberOfPagingItems(currentPage, totalPages) {
     ....
 }
 ```
-And finally we need to add a button which allows the user to change the pager template run time:
+最後にランタイムでユーザーがページャー テンプレートを変更するためのボタンを追加します。
 
 ```html
     <button (click)="changeTemplate()" class='changeBtn' igxButton="flat" igxButtonColor="#09f" igxButtonBackground="#dadada"> Change Paging Template</button>
@@ -260,20 +437,30 @@ public changeTemplate() {
 }
 ```
 
-すべての設定を完了すると以下のような結果になります。
+上記すべての設定を完了すると以下のような結果になります。
 
 #### デモ
-
-<div class="sample-container loading" style="height:605px">
-    <iframe id="grid-remote-paging-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-remote-paging-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+@@if (igxName === 'IgxGrid') {
+<div class="sample-container loading" style="height:650px">
+    <iframe id="grid-remote-paging-sample-iframe" data-src='{environment:demosBaseUrl}/grid/grid-remote-paging-sample' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-remote-paging-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-remote-paging-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
+</div>
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+<div class="sample-container loading" style="height:560px">
+    <iframe id="hierarchical-grid-remote-paging-sample-iframe" data-src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-remote-paging' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-remote-paging-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
+}
 
-If you want your sample to look exactly like this one do not forget to apply the custom paging theme:
+このサンプルのルックアンドフィール再現するにはカスタム ページング テーマを適用してください。
 
 ```css
 @import '~igniteui-angular/lib/core/styles/themes/index';
@@ -297,16 +484,16 @@ $custom-button-theme: igx-button-theme(
     @include igx-button($custom-button-theme);
 }
 ```
-
-### API
-* [IgxGridComponent API]({environment:angularApiUrl}/classes/igxgridcomponent.html)
-* [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
-* [IgxGridPaginator Styles]({environment:sassApiUrl}/index.html#function-igx-grid-paginator-theme)
+}
+### API リファレンス
+* [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
+* [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [IgxGridPaginator スタイル]({environment:sassApiUrl}/index.html#function-igx-grid-paginator-theme)
 
 ### その他のリソース
 <div class="divider--half"></div>
 
-* [グリッドの概要](grid.md)
+* [@@igComponent 概要](@@igMainTopic.md)
 * [仮想化とパフォーマンス](virtualization.md)
 * [フィルタリング](filtering.md)
 * [並べ替え](sorting.md)
@@ -319,5 +506,5 @@ $custom-button-theme: igx-button-theme(
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+* [Ignite UI for Angular** フォーラム** (英語) ](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub** (英語) ](https://github.com/IgniteUI/igniteui-angular)

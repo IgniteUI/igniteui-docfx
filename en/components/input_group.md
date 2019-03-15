@@ -27,12 +27,12 @@ To get started import all modules for Ignite UI components and the **FormsModule
 // app.module.ts
 
 ...
-import { IgxIconModule, IgxInputGroupModule, IgxButtonModule, IgxRippleModule, IgxDatePickerModule, IgxTimePickerModule, IgxComboModule } from "igniteui-angular";
+import { IgxIconModule, IgxInputGroupModule, IgxButtonModule, IgxRippleModule, IgxDatePickerModule, IgxTimePickerModule, IgxComboModule, igxSelectModule } from "igniteui-angular";
 import { FormsModule } from "@angular/forms";
 
 @NgModule({
     ...
-    imports: [..., IgxIconModule, IgxInputGroupModule, IgxButtonModule, IgxRippleModule, IgxDatePickerModule, IgxTimePickerModule, IgxComboModule, FormsModule],
+    imports: [..., IgxIconModule, IgxInputGroupModule, IgxButtonModule, IgxRippleModule, IgxDatePickerModule, IgxTimePickerModule, IgxComboModule, igxSelectModule, FormsModule],
     ...
 })
 export class AppModule {}
@@ -40,10 +40,10 @@ export class AppModule {}
 
 
 > [!NOTE]
-> To use any of the directives [`igxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html), [`igxLabel`]({environment:angularApiUrl}/classes/igxlabeldirective.html), [`igx-prefix`]({environment:angularApiUrl}/classes/igxprefixdirective.html), [`igx-suffix`]({environment:angularApiUrl}/classes/igxsuffixdirective.html) or [`igx-hint`]({environment:angularApiUrl}/classes/igxhintdirective.html), you have to wrap them in an `<igx-input-group>` container.
+> To use any of the directives [`igxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html), `igxLabel`, `igx-prefix`, `igx-suffix` or [`igx-hint`]({environment:angularApiUrl}/classes/igxhintdirective.html), you have to wrap them in an `<igx-input-group>` container.
 
 #### Label & Input
-You can read about the [`igxLabel`]({environment:angularApiUrl}/classes/igxlabeldirective.html) and [`igxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html) directives as well as their validation, data binding and API in a separate topic [here](label_input.md).
+You can read about the `igxLabel` and [`igxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html) directives as well as their validation, data binding and API in a separate topic [here](label_input.md).
 
 #### Prefix & Suffix
 If you want to have an input prefix or suffix, you can use Ignite UI for Angular Prefix or Suffix. Both directives can contain html elements, strings, icons or even other components. Let's add a new input field with string **prefix** (`+359`) and [`igx-icon`]({environment:angularApiUrl}/classes/igxiconcomponent.html) **suffix** (`<igx-icon>phone</igx-icon>`):
@@ -101,9 +101,6 @@ Our inputs could be styled differently by using the [`type`]({environment:angula
 * [IgxInputDirective]({environment:angularApiUrl}/classes/igxinputdirective.html)
 * [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
 * [IgxInputGroupComponent Styles]({environment:sassApiUrl}/index.html#function-igx-input-group-theme)
-* [IgxLabelDirective]({environment:angularApiUrl}/classes/igxlabeldirective.html)
-* [IgxPrefixDirective]({environment:angularApiUrl}/classes/igxprefixdirective.html)
-* [IgxSuffixDirective]({environment:angularApiUrl}/classes/igxsuffixdirective.html)
 
 ### Additional Resources
 Related topics:
@@ -111,6 +108,7 @@ Related topics:
 * [Reactive Forms Integration](input_group_reactive_forms.md)
 * [Label & Input](label_input.md)
 * [Combo](combo.md)
+* [Select](select.md)
 * [Display Density](display_density.md)
 
 Our community is active and always welcoming to new ideas.

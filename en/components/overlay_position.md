@@ -7,21 +7,21 @@ _description: Explanation and example about the Overlay Service's IPositionStrat
 
 Position strategies determine where to display the component in the provided IgxOverlayService. There are three position strategies:
 
-1. **Global** - Positions the element based on the directions passed in through [`positionSettings`] ({environment:angularApiUrl}/interfaces/positionsettings.html). These are Top/Middle/Bottom for [`verticalDirection`] ({environment:angularApiUrl}/interfaces/positionsettings.html#verticaldirection) and Left/Center/Right for [`horizontalDirection`] ({environment:angularApiUrl}/interfaces/positionsettings.html#horizontaldirection). Defaults to:
+1. **Global** - Positions the element based on the directions passed in through [`positionSettings`]({environment:angularApiUrl}/interfaces/positionsettings.html). These are Top/Middle/Bottom for [`verticalDirection`]({environment:angularApiUrl}/interfaces/positionsettings.html#verticaldirection) and Left/Center/Right for [`horizontalDirection`]({environment:angularApiUrl}/interfaces/positionsettings.html#horizontaldirection). Defaults to:
 
     | horizontalDirection        | verticalDirection        |
     |:---------------------------|:-------------------------|
     | HorizontalAlignment.Center | VerticalAlignment.Middle |
 <div class="divider"></div>
 
-2. **Connected** - Positions the element based on the directions and start point passed in through [`positionSettings`] ({environment:angularApiUrl}/interfaces/positionsettings.html). It is possible to either pass a start point (type [`Point`] ({environment:angularApiUrl}/classes/point.html)) or an `HTMLElement` as a positioning base. Defaults to:
+2. **Connected** - Positions the element based on the directions and start point passed in through [`positionSettings`]({environment:angularApiUrl}/interfaces/positionsettings.html). It is possible to either pass a start point (type [`Point`]({environment:angularApiUrl}/classes/point.html)) or an `HTMLElement` as a positioning base. Defaults to:
 
     | target          | horizontalDirection       |  verticalDirection       | horizontalStartPoint     | verticalStartPoint       |
     |:----------------|:--------------------------|:-------------------------|:-------------------------|:-------------------------|
     | new Point(0, 0) | HorizontalAlignment.Right | VerticalAlignment.Bottom | HorizontalAlignment.Left | VerticalAlignment.Bottom |
 <div class="divider"></div>
 
-3. **Auto** - Positions the element as in **Connected** positioning strategy and re-positions the element in the view port (calculating a different start point) in case the element is partially out of view. Defaults to:
+3. **Auto** - Positions the element as in **Connected** positioning strategy and re-positions the element in the view port (calculating a different start point and direction) in case the element is partially out of view. Defaults to:
 
     | target          | horizontalDirection       |  verticalDirection       | horizontalStartPoint     | verticalStartPoint       |
     |:----------------|:--------------------------|:-------------------------|:-------------------------|:-------------------------|
@@ -31,7 +31,7 @@ Position strategies determine where to display the component in the provided Igx
 > [!NOTE]
 > Will not try to reposition the element if the strategy is using  HorizontalDirection = Center / VerticalDirection = Middle.
 
-4. **Elastic** - Positions the element as in **Connected** positioning strategy and re-sizes the element to fit inside of the view port (re-calculating width and/or height) in case the element is partially out of view. `minSize :{ width: number, height: number}` can be passed in `positionSettings` to prevent resizing if it would put the element dimensions below a certain threshold. Defaults to:
+4. **Elastic** - Positions the element as in **Connected** positioning strategy and re-sizes the element to fit inside of the view port (re-calculating width and/or height) in case the element is partially out of view. [`minSize`]({environment:angularApiUrl}/interfaces/positionsettings.html#minsize) can be passed in [`positionSettings`]({environment:angularApiUrl}/interfaces/positionsettings.html) to prevent resizing if it would put the element dimensions below a certain threshold. Defaults to:
 
     | target          | horizontalDirection       |  verticalDirection       | horizontalStartPoint     | verticalStartPoint       | minSize               |
     |:----------------|:--------------------------|:-------------------------|:-------------------------|:-------------------------|-----------------------|
@@ -39,7 +39,7 @@ Position strategies determine where to display the component in the provided Igx
 <div class="divider"></div>
 
 > [!NOTE]
-> Will not try to reposition the element if the strategy is using  HorizontalDirection = Center / VerticalDirection = Middle.
+> Will not try to resize the element if the strategy is using  HorizontalDirection = Center / VerticalDirection = Middle.
 > [!NOTE]
 > The overlay element **will be** resized, but the positioning strategy **does not** handle `overflow`. For example, if the element needs to have `overflow-y` when resized, incorporate the appropriate style to provide that. 
 
@@ -54,12 +54,12 @@ const positionSettings: PositionSettings = {
     verticalStartPoint: VerticalAlignment.Bottom
 };
 
-const strategy =  new ConnectedPositioningStrategy(positionSettings);
+const strategy = new ConnectedPositioningStrategy(positionSettings);
 strategy.position(contentWrapper, size);
 ```
 
 ### Getting Started
-The position strategy is passed as a property in the [`overlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) parameter when the [`overlay.show()`] ({environment:angularApiUrl}/classes/igxoverlayservice.html#show) method is called:
+The position strategy is passed as a property in the [`overlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) parameter when the [`overlay.attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) method is called:
 ```typescript
     // Initializing and using overlay settings
     const overlaySettings: OverlaySettings = {
@@ -68,16 +68,16 @@ The position strategy is passed as a property in the [`overlaySettings`]({enviro
         modal: true,
         closeOnOutsideClick: true
     }
-    overlay.show(dummyElement, overlaySettings); 
+    const overlayId = overlay.attach(dummyElement, overlaySettings); 
 ``` 
 <div class="divider"></div>
 
-To change the position strategy used by the overlay, override the [`positionStrategy`]({environment:angularApiUrl}/interfaces/ipositionstrategy.html) property of the [`overlaySettings`] ({environment:angularApiUrl}/interfaces/overlaysettings.html) object passed to the overlay:
+To change the position strategy used by the overlay, override the [`positionStrategy`]({environment:angularApiUrl}/interfaces/ipositionstrategy.html) property of the [`overlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) object passed to the overlay:
 ```typescript
     // overlaySettings is an existing object of type OverlaySettings
     // to override the position strategy
     const positionStrategy = new AutoPositionStrategy();
-    overlay.show(dummyElement, { positionStrategy }); 
+    overlay.show(overlayId, { positionStrategy }); 
 ```
 <div class="divider"></div>
 
@@ -91,7 +91,7 @@ To change the position settings an already existing strategy is using, override 
         horizontalStartPoint: HorizontalAlignment.Left,
         horizontalDirection: HorizontalAlignment.Left
     });
-    overlay.show(dummyElement, overlaySettings);
+    overlay.show(overlayId, overlaySettings);
     // the element will now start to the left of the target (dimmyHTMLElement)
     // and will align itself to the left
 ```
@@ -107,9 +107,9 @@ import {AutoPositionStrategy, GlobalPositionStrategy, ConnectedPositioningStrate
 ## Demos 
 
 ### Horizontal and Vertical Direction
-Changing the horizontal and/or vertical direction of the positioning settings determined where the content will align itself. Depending on the positioning strategy chosen, the content will either align relative to the target's container ([`AutoPositionStrategy`] ({environment:angularApiUrl}/classes/autopositionstrategy.html), [`ElasticPositionStrategy`]({environment:angularApiUrl}/classes/elasticpositionstrategy.html) and [`ConnectedPositioningStrategy`]({environment:angularApiUrl}/classes/connectedpositioningstrategy.html)) or the body of the document ([`GlobalPositioningStrategy`]({environment:angularApiUrl}/classes/globalpositionstrategy.html))
+Changing the horizontal and/or vertical direction of the positioning settings determined where the content will align itself. Depending on the positioning strategy chosen, the content will either align relative to the target's container ([`AutoPositionStrategy`]({environment:angularApiUrl}/classes/autopositionstrategy.html), [`ElasticPositionStrategy`]({environment:angularApiUrl}/classes/elasticpositionstrategy.html) and [`ConnectedPositioningStrategy`]({environment:angularApiUrl}/classes/connectedpositioningstrategy.html)) or the body of the document [`GlobalPositioningStrategy`]({environment:angularApiUrl}/classes/globalpositionstrategy.html)
 
-<div class="sample-container loading" style="height: 400px">
+<div class="sample-container loading" style="height: 500px">
     <iframe id="overlay-position-sample-1-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/interactions/overlay-position-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -140,8 +140,8 @@ export class MyExampleOverlayComponent {
 ```
 
 ### Horizontal and Vertical Start Point
-Changing the horizontal and/or vertical start point of the positioning settings determines where the content will try to start from. Start point has effect only if the [`target`] ({environment:angularApiUrl}/interfaces/positionsettings.html#target) passed in the [`positionSettings`] ({environment:angularApiUrl}/interfaces/positionsettings.html) is an `HTMLElement` and works only for [`AutoPositionStrategy`] ({environment:angularApiUrl}/classes/autopositionstrategy.html), [`ElasticPositionStrategy`] ({environment:angularApiUrl}/classes/elasticpositionstrategy.html) and [`ConnectedPositioningStrategy`] ({environment:angularApiUrl}/classes/connectedpositioningstrategy.html).
-In the demo below, the overlay element will position itself starting from the target element depending on the start point chosen. Directions are always [`HorizontalAlignment.Right`] ({environment:angularApiUrl}/enums/horizontalalignment.html#right) and [`VerticalAlignment.Bottom`] ({environment:angularApiUrl}/enums/verticalalignment.html#bottom):
+Changing the horizontal and/or vertical start point of the positioning settings determines where the content will try to start from. Start point has effect only if the [`target`]({environment:angularApiUrl}/interfaces/positionsettings.html#target) passed in the [`positionSettings`]({environment:angularApiUrl}/interfaces/positionsettings.html) is an `HTMLElement` and works only for [`AutoPositionStrategy`]({environment:angularApiUrl}/classes/autopositionstrategy.html), [`ElasticPositionStrategy`]({environment:angularApiUrl}/classes/elasticpositionstrategy.html) and [`ConnectedPositioningStrategy`]({environment:angularApiUrl}/classes/connectedpositioningstrategy.html).
+In the demo below, the overlay element will position itself starting from the target element depending on the start point chosen. Directions are always [`HorizontalAlignment.Right`]({environment:angularApiUrl}/enums/horizontalalignment.html#right) and [`VerticalAlignment.Bottom`]({environment:angularApiUrl}/enums/verticalalignment.html#bottom):
 
 <div class="sample-container loading" style="height: 400px">
     <iframe id="overlay-position-sample-2-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/interactions/overlay-position-sample-2" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -152,6 +152,6 @@ In the demo below, the overlay element will position itself starting from the ta
 <div class="divider"></div>
 
 
-## API
+## API References
 
-* [`IPositionStrategy`] ({environment:angularApiUrl}/interfaces/ipositionstrategy.html)
+* [IPositionStrategy]({environment:angularApiUrl}/interfaces/ipositionstrategy.html)

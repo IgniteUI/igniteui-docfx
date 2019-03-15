@@ -22,7 +22,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ###Usage
 
-To get started with the Ignite UI for Angular Toast, let's first import the [`IgxToastModule`]({environment:angularApiUrl}/classes/igxtoastmodule.html) in our **app.module.ts** file:
+To get started with the Ignite UI for Angular Toast, let's first import the `IgxToastModule` in our **app.module.ts** file:
 
 ```typescript
 // app.module.ts
@@ -50,7 +50,7 @@ In order to display the toast component, use its [`show()`]({environment:angular
 If the sample is configured properly, a toast appears displaying a notification when the button is clicked.
 
 <div class="sample-container loading" style="height: 300px">
-    <iframe id="toast-sample-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/notifications/toast-sample-2" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="toast-sample-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/toast-sample-2" class="lazyload"></iframe>
 </div>
 
 #### Hide/Auto Hide
@@ -67,7 +67,7 @@ Once opened, the toast disappears after a period specified by the [`displayTime`
 If the sample is configured properly, the toast appears when the 'SHOW' button is clicked. The auto hide feature is disabled and the toast disappears on 'HIDE' button click.
 
 <div class="sample-container loading" style="height: 300px">
-    <iframe id="toast-sample-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/notifications/toast-sample-3" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="toast-sample-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/toast-sample-3" class="lazyload"></iframe>
 </div>
 
 #### Display Time
@@ -83,7 +83,7 @@ Use [`displayTime`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#d
 If the sample is configured properly, the toast auto hides faster.
 
 <div class="sample-container loading" style="height: 300px">
-    <iframe id="toast-sample-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/notifications/toast-sample-4" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="toast-sample-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/toast-sample-4" class="lazyload"></iframe>
 </div>
 
 #### Positioning
@@ -115,7 +115,7 @@ public show(toast) {
 ```
 
 <div class="sample-container loading" style="height: 300px">
-    <iframe id="toast-sample-5-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/notifications/toast-sample-5" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="toast-sample-5-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/toast-sample-5" class="lazyload"></iframe>
 </div>
 
 <div>

@@ -1,4 +1,4 @@
-﻿---
+---
 title: Toast コンポーネント
 _description: Ignite UI for Angular Toast コンポーネントは、アプリケーションで非対話型メッセージをユーザーに表示できます。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Toast コンポーネント, Angular Toast コントロール
@@ -25,7 +25,7 @@ _language: ja
 
 ### 使用方法
 
-Ignite UI for Angular Toast を初期化する前に、最初に [`IgxToastModule`]({environment:angularApiUrl}/classes/igxtoastmodule.html) を **app.module.ts** ファイルにインポートします:
+Ignite UI for Angular Toast を初期化する前に、最初に `IgxToastModule` を **app.module.ts** ファイルにインポートします:
 
 ```typescript
 // app.module.ts
@@ -55,7 +55,7 @@ Toast コンポーネントを表示するには、ボタン クリックで [`s
 サンプルが正しく構成された場合、ボタン クリック時に通知を表示する Toast が表示されます。
 
 <div class="sample-container loading" style="height: 300px">
-    <iframe id="toast-sample-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/notifications/toast-sample-2" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="toast-sample-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/toast-sample-2" class="lazyload"></iframe>
 </div>
 
 #### 非表示/自動的に隠す
@@ -73,7 +73,7 @@ Toast コンポーネントを表示するには、ボタン クリックで [`s
 サンプルが正しく構成されると、[SHOW] ボタンをクリックしたときに Toast が表示されます。自動的に隠す機能が無効で、[HIDE] ボタンのクリックで Toast が非表示になります。
 
 <div class="sample-container loading" style="height: 300px">
-    <iframe id="toast-sample-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/notifications/toast-sample-3" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="toast-sample-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/toast-sample-3" class="lazyload"></iframe>
 </div>
 
 #### 表示期間
@@ -90,7 +90,7 @@ Toast コンポーネントを表示するには、ボタン クリックで [`s
 サンプルが正しく構成された場合、Toast が自動ですばやく非表示になります。
 
 <div class="sample-container loading" style="height: 300px">
-    <iframe id="toast-sample-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/notifications/toast-sample-4" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="toast-sample-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/toast-sample-4" class="lazyload"></iframe>
 </div>
 
 ### 配置
@@ -122,7 +122,7 @@ public show(toast) {
 ```
 
 <div class="sample-container loading" style="height: 300px">
-    <iframe id="toast-sample-5-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/notifications/toast-sample-5" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="toast-sample-5-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/toast-sample-5" class="lazyload"></iframe>
 </div>
 
 <div>

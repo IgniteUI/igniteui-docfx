@@ -10,9 +10,8 @@ _language: kr
 `IgxFinancialChart` 컨트롤에는 금융 데이터를 표시하는 복수의 창이 있습니다.
 
 ### 데모
-
-<div class="sample-container" style="height: 550px">
-    <iframe id="financial-chart-panes-iframe" src='{environment:demosBaseUrl}/charts/financial-chart-panes' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 550px">
+    <iframe id="financial-chart-panes-iframe" src='{environment:demosBaseUrl}/charts/financial-chart-panes' width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="financial-chart-panes-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기

@@ -9,8 +9,8 @@ _language: ja
 このトピックでは、`igx-financial-chart` のツールチップ タイプについて説明します。
 
 ### デモ
-<div class="sample-container" style="height: 500px">
-    <iframe id="financial-chart-tooltip-types-iframe" src='{environment:demosBaseUrl}/charts/financial-chart-tooltip-types' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 500px">
+    <iframe id="financial-chart-tooltip-types-iframe" src='{environment:demosBaseUrl}/charts/financial-chart-tooltip-types' width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="financial-chart-tooltip-types-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示

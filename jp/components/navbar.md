@@ -1,4 +1,4 @@
-﻿---
+---
 title: Navbar コンポーネント
 _description: Ignite UI for Angular Navbar コントロールはアプリケーションでのスムーズな移動を可能にする UI コンポーネントです。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Navbar コンポーネント, Angular Navbar コントロール
@@ -22,7 +22,7 @@ _language: ja
 
 ### 使用方法
 
-Ignite UI for Angular NavBar コンポーネントを初期化する前に [`IgxNavbarModule`]({environment:angularApiUrl}/classes/igxnavbarmodule.html) を **app.module.ts** ファイルにインポートします。
+Ignite UI for Angular NavBar コンポーネントを初期化する前に `IgxNavbarModule` を **app.module.ts** ファイルにインポートします。
 
 ```typescript
 // app.module.ts
@@ -95,7 +95,7 @@ export class AppModule {}
 以下は結果です。
 
 <div class="sample-container loading" style="height: 330px">
-    <iframe id="nav-bar-sample-1-iframe" frameborder="0" seamless width="100%" height="100%" src='{environment:demosBaseUrl}/menus/navbar-sample-1' onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="nav-bar-sample-1-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src='{environment:demosBaseUrl}/menus/navbar-sample-1' class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="nav-bar-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
@@ -136,7 +136,7 @@ export class AppModule {}
 以下はカスタム アクション アイコンをした場合の navbar の外観です。
 
 <div class="sample-container loading" style="height: 330px">
-    <iframe id="nav-bar-sample-2-iframe" frameborder="0" seamless width="100%" height="100%" src='{environment:demosBaseUrl}/menus/navbar-sample-2' onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="nav-bar-sample-2-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src='{environment:demosBaseUrl}/menus/navbar-sample-2' class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="nav-bar-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>

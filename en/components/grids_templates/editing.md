@@ -131,7 +131,7 @@ Another way to update cell is directly through [`update`]({environment:angularAp
 ```typescript
 ...
     public updateCell() {
-        const cell = this.treeGrid.getCellByColumn(rowID, 'Age');
+        const cell = this.treeGrid.getCellByColumn(rowIndex, 'Age');
         // You can also get cell by rowID if primary key is defined
         // const cell = this.treeGrid.getCellByKey(rowID, 'Age');
         cell.update(9999);
@@ -199,7 +199,7 @@ public addRow() {
 
 #### Updating data in the @@igComponent
 
-Updating data in the @@igComponent is achieved through [`updateRow`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#updaterow) and [`updateCell`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#updatecell) methods but **only if primary key for the grid is defined**. You can also directly update a cell and row value through their [`update`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#update) method.
+Updating data in the @@igComponent is achieved through [`updateRow`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#updaterow) and [`updateCell`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#updatecell) methods but **only if primary key for the grid is defined**. You can also directly update a cell and/or a row value through their respective `update` methods.
 
 @@if (igxName === 'IgxGrid') {
 ```typescript
@@ -314,4 +314,4 @@ These can be wired to user interactions, not necessarily related to the **@@igSe
 * [Column Pinning](column_pinning.md)
 * [Column Resizing](column_resizing.md)
 * [Selection](selection.md)
-* [Searching](search.md)
+@@if (igxName !== 'IgxHierarchicalGrid') {* [Searching](search.md)}

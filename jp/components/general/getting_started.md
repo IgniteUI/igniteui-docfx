@@ -222,14 +222,14 @@ ng serve
 
 このトピックでは、Ignite UI CLI. で Ignite UI for Angular プロジェクトを作成するプロセスを使用して Ignite UI for Angular アプリケーションを作成する方法について説明しました。また Ignite UI for Angular を Angular CLI を使用して既存のアプリケーションに追加する方法についてもふれました。[`IgxGridComponent`]({environment:angularApiUrl}/classes/igxgridcomponent.html) を含むことにより、カスタムなページをデザインしてナビゲーション メニューを参照して表示できる機能が提供されます。
 
-* [`IgxGridComponent`]({environment:angularApiUrl}/classes/igxgridcomponent.html)
-* [`IgxGridComponent スタイル`]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
+* [IgxGridComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 
 ## その他のリソース
 <div class="divider--half"></div>
 
-* [`Ignite UI CLI`](https://github.com/IgniteUI/igniteui-cli)
-* [`Ignite UI CLI コマンド`](https://github.com/IgniteUI/igniteui-cli/wiki#available-commands)
+* [Ignite UI CLI](https://github.com/IgniteUI/igniteui-cli)
+* [Ignite UI CLI コマンド](https://github.com/IgniteUI/igniteui-cli/wiki#available-commands)
 * [Grid の概要](../grid/grid.md)
 
 <div class="divider--half"></div>

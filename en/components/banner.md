@@ -24,7 +24,7 @@ The Ignite UI for Angular Banner Component provides a way to easily display a pr
 
 ## Usage
 
-To get started with the Ignite UI for Angular Banner, let's first import the [`IgxBannerModule`]({environment:angularApiUrl}/classes/igxbannermodule.html) in our **app.module.ts** file:
+To get started with the Ignite UI for Angular Banner, let's first import the `IgxBannerModule` in our **app.module.ts** file:
 
 ```typescript
 // app.module.ts
@@ -58,7 +58,7 @@ The banner appears relative to where the element was inserted in the page templa
 #### Basic Banner Demo
 
 <div class="sample-container loading" style="height: 530px">
-    <iframe id="banner-sample-1-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/notifications/banner-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="banner-sample-1-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/banner-sample-1" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="banner-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
@@ -83,7 +83,7 @@ Changing the message displayed in the banner is easy - just change the content y
 
 #### Adding an icon
 
-Developers can pass an [`igx-icon`]({environment:angularApiUrl}/classes/igxiconmodule.html) in the banner's content and it will always be positioned at **the beginning** of the banner message.
+Developers can pass an [`igx-icon`](icon.md) in the banner's content and it will always be positioned at **the beginning** of the banner message.
 
 > [!NOTE]
 > If several `igx-icon` elements are inserted as direct descendants of the banner, the banner will try positioning **all** of them at the beginning. It is **strongly** advised to only pass one `igx-icon` directly to the banner. If you want to use icons in your banner message, wrap them in a `span` tag.
@@ -167,7 +167,7 @@ The results of the templated banner can be seen in the below demo:
 #### Templating Demo
 
 <div class="sample-container loading" style="height: 530px">
-    <iframe id="banner-sample-2-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/notifications/banner-sample-2" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="banner-sample-2-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/banner-sample-2" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="banner-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
@@ -175,7 +175,7 @@ The results of the templated banner can be seen in the below demo:
 
 ### Applying custom animations
 
-The banner component also exposes an `Input` property that allows setting custom opening and closing animations in the [`animationSettings`]({environment:angularApiUrl}/classes/igxbannermodule.html#animationsettings). Developers can pass custom animations - either self-defined, or those from our [`IgniteUI for Angular animation suite`]({environment:sassApiUrl}/index.html). The default animations used by the banner are `growVerIn` for entry and `growVerOut` for exiting.
+The banner component also exposes an `Input` property that allows setting custom opening and closing animations in the [`animationSettings`]({environment:angularApiUrl}/classes/igxbannercomponent.html#animationsettings). Developers can pass custom animations - either self-defined, or those from our [`IgniteUI for Angular animation suite`]({environment:sassApiUrl}/index.html). The default animations used by the banner are `growVerIn` for entry and `growVerOut` for exiting.
 
 Let's change the animations that our banner uses, so that it slides in.
 
@@ -204,7 +204,7 @@ export class MyBannerComponent {
 #### Animation Demo
 
 <div class="sample-container loading" style="height: 530px">
-    <iframe id="banner-sample-3-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/notifications/banner-sample-3" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="banner-sample-3-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/banner-sample-3" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="banner-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>

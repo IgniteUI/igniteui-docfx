@@ -23,7 +23,7 @@ _language: ja
 
 ### 依存関係
 
-Icon コンポーネントが `NgModule` としてエクスポートされるため、アプリケーションで `AppModule` への [`IgxIconModule`]({environment:angularApiUrl}/classes/igxiconmodule.html) のインポートのみが必要になります。
+Icon コンポーネントが `NgModule` としてエクスポートされるため、アプリケーションで `AppModule` への `IgxIconModule` のインポートのみが必要になります。
 
 ```typescript
 // app.module.ts

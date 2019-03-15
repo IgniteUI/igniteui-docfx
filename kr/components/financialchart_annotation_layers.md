@@ -10,9 +10,8 @@ _language: kr
 이 항목에서는 `igx-category-chart`에서 사용할 수 있는 주석 및 오버레이 상호 작용에 대한 개념 정보를 제공합니다.
 
 ### 데모
-
-<div class="sample-container" style="height: 500px">
-    <iframe id="financial-chart-annotations-iframe" src='{environment:demosBaseUrl}/charts/financial-chart-annotations' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 500px">
+    <iframe id="financial-chart-annotations-iframe" src='{environment:demosBaseUrl}/charts/financial-chart-annotations' width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="financial-chart-annotations-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기

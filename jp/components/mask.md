@@ -23,7 +23,7 @@ _language: ja
 
 ### 使用方法
 
-[`igxMask`]({environment:angularApiUrl}/classes/igxmaskdirective.html) ディレクティブは **text** 型の入力に使用します。Ignite UI for Angular Mask ディレクティブを初期化する前に、[`IgxMaskModule`]({environment:angularApiUrl}/classes/igxmaskmodule.html) および [`IgxInputGroupModule`]({environment:angularApiUrl}/classes/igxinputgroupmodule.html) を **app.module.ts** ファイルにインポートします。**igxMask** ディレクティブを任意の Angular 入力コントロールと使用できます。
+[`igxMask`]({environment:angularApiUrl}/classes/igxmaskdirective.html) ディレクティブは **text** 型の入力に使用します。Ignite UI for Angular Mask ディレクティブを初期化する前に、[`IgxMaskModule`]({environment:angularApiUrl}/classes/igxmaskmodule.html) および `IgxInputGroupModule` を **app.module.ts** ファイルにインポートします。**igxMask** ディレクティブを任意の Angular 入力コントロールと使用できます。
 
 ```typescript
 // app.module.ts
@@ -218,7 +218,7 @@ export class Person {
 ```
 
 #### focus と blur に追加の書式を適用
-デフォルトの mask 動作に加え、カスタムパイプを実装して [`focusedValuePipe`]({environment:angularApiUrl}/classes/igxmaskdirective.html#focusedValuePipe) や [`displayValuePipe`]({environment:angularApiUrl}/classes/igxmaskdirective.html#displayValuePipe) 入力プロパティで入力がフォーカスを get または lost した場合に値を必要なアウトプットへ変換できます。基になるモデル値に影響はありません。以下はその方法です。
+デフォルトの mask 動作に加え、カスタムパイプを実装して [`focusedValuePipe`]({environment:angularApiUrl}/classes/igxmaskdirective.html#focusedvaluepipe) や [`displayValuePipe`]({environment:angularApiUrl}/classes/igxmaskdirective.html#displayvaluepipe) 入力プロパティで入力がフォーカスを get または lost した場合に値を必要なアウトプットへ変換できます。基になるモデル値に影響はありません。以下はその方法です。
 
  表示値の最後に '%' サインを追加または削除する 2 つのパイプを実装します。
 ```typescript
@@ -245,7 +245,7 @@ export class InputFormatPipe implements PipeTransform {
 }
 ```
 
-[`focusedValuePipe`]({environment:angularApiUrl}/classes/igxmaskdirective.html#focusedValuePipe) や [`displayValuePipe`]({environment:angularApiUrl}/classes/igxmaskdirective.html#displayValuePipe) 入力プロパティに各パイプのインスタンスを渡します。
+[`focusedValuePipe`]({environment:angularApiUrl}/classes/igxmaskdirective.html#focusedvaluepipe) や [`displayValuePipe`]({environment:angularApiUrl}/classes/igxmaskdirective.html#displayvaluepipe) 入力プロパティに各パイプのインスタンスを渡します。
 
 ```typescript
 value = 1230;
@@ -300,9 +300,7 @@ value = null;
 
 * [IgxInputDirective]({environment:angularApiUrl}/classes/igxinputdirective.html)
 * [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
-* [IgxLabelDirective]({environment:angularApiUrl}/classes/igxlabeldirective.html)
 * [IgxMaskDirective]({environment:angularApiUrl}/classes/igxmaskdirective.html)
-* [IgxPrefixDirective]({environment:angularApiUrl}/classes/igxprefixdirective.html)
 * [IgxSnackbarComponent]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html)
 
 ### その他のリソース

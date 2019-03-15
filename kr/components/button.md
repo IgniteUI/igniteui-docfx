@@ -7,7 +7,7 @@ _language: kr
 
 ## Button
 
-The Button directive within Ignite UI for Angular is intended to be used on any button, span, div, or anchor element to turn it into a fully functional button. 
+The Button directive within Ignite UI for Angular is intended to be used on any button, span, div, or anchor element to turn it into a fully functional button.
 
 ### Button Demo
 
@@ -21,7 +21,7 @@ The Button directive within Ignite UI for Angular is intended to be used on any 
 
 ### Dependencies
 
-The Button Directive is exported as an `NgModule`, thus all you need to do in your application is to import the [`IgxButtonModule`]({environment:angularApiUrl}/classes/igxbuttonmodule.html) inside your `AppModule`:
+The Button Directive is exported as an `NgModule`, thus all you need to do in your application is to import the `IgxButtonModule` inside your `AppModule`:
 
 ```typescript
 // app.module.ts
@@ -48,7 +48,7 @@ Setting a simple [`igxButton`]({environment:angularApiUrl}/classes/igxbuttondire
 
 Result:
 <div class="sample-container" style="height: 48px">
-    <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/data-entries/buttons-sample-2">
+    <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/data-entries/buttons-sample-2" onload="onSampleIframeContentLoaded(this);">
 </div>
 
 You can add a Ripple effect. And also set its color `igxRipple="blue"`.
@@ -59,8 +59,20 @@ You can add a Ripple effect. And also set its color `igxRipple="blue"`.
 
 Default ripple color. Custom ripple color:
 <div class="sample-container" style="height: 48px">
-    <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/data-entries/buttons-sample-3">
+    <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/data-entries/buttons-sample-3" onload="onSampleIframeContentLoaded(this);">
 </div>
+
+Outlined button style:
+
+```html
+<button igxButton="outlined">Outlined</button>
+```
+
+Result:
+<div class="sample-container loading" style="height: 48px">
+    <iframe class="lazyload" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/data-entries/buttons-sample-8" onload="onSampleIframeContentLoaded(this);">
+</div>
+
 
 Using [`igxButton`]({environment:angularApiUrl}/classes/igxbuttondirective.html) to turn a `span` element into a Ignite UI for Angular styled button.
 
@@ -70,7 +82,7 @@ Using [`igxButton`]({environment:angularApiUrl}/classes/igxbuttondirective.html)
 
 The span now looks like:
 <div class="sample-container" style="height: 54px">
-    <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/data-entries/buttons-sample-4">
+    <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/data-entries/buttons-sample-4" onload="onSampleIframeContentLoaded(this);">
 </div>
 
 You can create a rased button.
@@ -80,7 +92,7 @@ You can create a rased button.
 ```
 
 <div class="sample-container" style="height: 54px">
-    <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/data-entries/buttons-sample-5">
+    <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/data-entries/buttons-sample-5" onload="onSampleIframeContentLoaded(this);">
 </div>
 
 A floating action button and use an icon to display:
@@ -91,7 +103,7 @@ A floating action button and use an icon to display:
 </button>
 ```
 <div class="sample-container" style="height: 74px">
-    <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/data-entries/buttons-sample-6">
+    <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/data-entries/buttons-sample-6" onload="onSampleIframeContentLoaded(this);">
 </div>
 
 Or use icons as buttons:
@@ -108,21 +120,19 @@ Or use icons as buttons:
 ```
 Icon results:
 <div class="sample-container" style="height: 54px">
-    <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/data-entries/buttons-sample-7">
+    <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/data-entries/buttons-sample-7" onload="onSampleIframeContentLoaded(this);">
 </div>
 
 <div class="divider--half"></div>
 
-### Button Types
+### Button types
 | Name   | Description |
 |:----------|:-------------:|
-| `flat` | The default button type. Transparent background and primary theme color for text. |
-| `raised` | As the name implies, this button type uses subtle box-shadow. Primary theme color for background and white for text color. |
-| `gradient` | Same as the raised button type. Additionally you can specify a gradient value for background color. |
-| `fab` | Floating action button type. Circular with primary theme color for background and white text. |
+| `flat` | The default button type. Uses transparent background and the secondary theme color from the palette color for the text. |
+| `outlined` |  Very similar to the flat button type but with a thin outline around the edges of the button. |
+| `raised` | As the name implies, this button type features a subtle shadow. Uses the secondary theme color from the palette for background. |
+| `fab` | Floating action button type. Circular with secondary theme color for background. |
 | `icon` | This is the simplest of button types. Use it whenever you need to use an icon as button. |
-| `navbar` | Same as the icon button type, albeit optimized for use with the igx-navbar component. |
-
 
 ### API References
 <div class="divider--half"></div>
