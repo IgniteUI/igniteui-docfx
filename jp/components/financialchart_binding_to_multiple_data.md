@@ -1,17 +1,18 @@
 ---
-title: Financial Chart - 複数データ ソースへのバインド
+title: Financial Chart - 複数データ ソースへバインド
 _description: Ignite UI for Angular Financial Chart コンポーネントは簡易な API を使用してファイナンシャル データを表示できます。ユーザーがデータにバインド後にチャートがデータの可視化オプションを複数提供します。
 _keywords: Ignite UI for Angular, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular チャート, Angular チャート コントロール, Angular チャート例, Angular チャート コンポーネント, Angular Financial Chart
 _language: ja
 ---
+
 ## 複数データ ソースへバインド
 
-`igx-financial-chart` コントロールは、以下のように複数のデータ ソースへバインドできます。
+`IgxFinancialChart` コントロールは、以下のように複数のデータ ソースへバインドできます。
 
 ### デモ
 
-<div class="sample-container loading" style="height: 550px">
-    <iframe id="financial-chart-multiple-data-iframe" src='{environment:demosBaseUrl}/charts/financial-chart-multiple-data' width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container" style="height: 550px">
+    <iframe id="financial-chart-multiple-data-iframe" src='{environment:demosBaseUrl}/charts/financial-chart-multiple-data' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="financial-chart-multiple-data-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
@@ -40,7 +41,6 @@ dataSource1.title = "Stock1 Name (Symbol)";
 dataSource2.title = "Stock2 Name (Symbol)";
 
 let data: any = [ dataSource1, dataSource2 ]
-
 ```
 
 以下のコードはファイナンシャル チャートを上記のデータにバインドします。
@@ -54,8 +54,9 @@ let data: any = [ dataSource1, dataSource2 ]
 <div class="divider--half"></div>
 
 ### 追加のリソース
+
 <div class="divider--half"></div>
 
-* [チャートのパフォーマンス](financialchart_performance.md)
-* [リアルタイム データにバインド](financialchart_real_time_data.md)
-* [大規模データへのバインド](financialchart_high_volume_data.md)
+-   [チャートのパフォーマンス](financialchart_performance.md)
+-   [リアルタイム データにバインド](financialchart_real_time_data.md)
+-   [大規模データへのバインド](financialchart_high_volume_data.md)

@@ -4,14 +4,15 @@ _description: Ignite UI for Angular Financial Chart コンポーネントは、�
 _keywords: Ignite UI for Angular, データ ビジュアライゼーション, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Chart コンポーネント, Angular Financial Chart コンポーネント, Angular Chart コントロール, Angular Financial Chart コントロール
 _language: ja
 ---
+
 ## 構成オプション
 
-`igx-financial-chart` コントロールで、ナビゲーション動作、トレンドライン レイヤー、オーバーレイ、凡例、チャート タイトル、チャート サブタイトルなどのカスタマイズ可能なビジュアルがあります。コード例を使用してプロパティでファイナンシャル チャートをカスタマイズする方法を説明します。
+`IgxFinancialChart` コントロールで、ナビゲーション動作、トレンドライン レイヤー、オーバーレイ、凡例、チャート タイトル、チャート サブタイトルなどのカスタマイズ可能なビジュアルがあります。コード例を使用してプロパティでファイナンシャル チャートをカスタマイズする方法を説明します。
 
 ### デモ
 
-<div class="sample-container loading" style="height: 550px">
-    <iframe id="financial-chart-trendlines-iframe" src='{environment:demosBaseUrl}/charts/financial-chart-trendlines' width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container" style="height: 550px">
+    <iframe id="financial-chart-trendlines-iframe" src='{environment:demosBaseUrl}/charts/financial-chart-trendlines' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="financial-chart-trendlines-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
@@ -22,12 +23,12 @@ _language: ja
 
 ### ナビゲーションの構成
 
-`igx-financial-chart` コントロールでは、チャート ナビゲーションがデフォルトで有効になっています。ただし、以下のプロパティを設定することによって、カスタマイズできます。
+`IgxFinancialChart` コントロールでは、チャート ナビゲーションがデフォルトで有効になっています。ただし、以下のプロパティを設定することによって、カスタマイズできます。
 
-- `IsHorizontalZoomEnabled` - チャートがユーザー操作により水平方向にズーム可能かどうかを指定します。デフォルトでこのプロパティは true に設定されます。
-- `IsVerticalZoomEnabled` - チャートがユーザー操作により垂直方向にズーム可能かどうかを指定します。デフォルトでこのプロパティは false に設定されます。
-- `IsWindowSyncedToVisibleRange` - true に設定される場合、Y 軸は表示データ範囲に自動的にサイズ変更します。デフォルトでこのプロパティは false に設定されます。
-- `WindowRect` - `igx-financial-chart` のスクロール状態およびズーム状態を取得または設定するために使用できます。`windowRect` は、 0 ~ 1 の間の座標およびサイズの Rectangle として表現されます。
+-   `IsHorizontalZoomEnabled` - チャートがユーザー操作により水平方向にズーム可能かどうかを指定します。デフォルトでこのプロパティは true に設定されます。
+-   `IsVerticalZoomEnabled` - チャートがユーザー操作により垂直方向にズーム可能かどうかを指定します。デフォルトでこのプロパティは false に設定されます。
+-   `IsWindowSyncedToVisibleRange` - true に設定される場合、Y 軸は表示データ範囲に自動的にサイズ変更します。デフォルトでこのプロパティは false に設定されます。
+-   `WindowRect` - `IgxFinancialChart` のスクロール状態およびズーム状態を取得または設定するために使用できます。`windowRect` は、 0 ~ 1 の間の座標およびサイズの Rectangle として表現されます。
 
 ```html
  <igx-financial-chart
@@ -40,6 +41,7 @@ _language: ja
 ```
 
 ### 価格ペインの構成
+
 価格ペインは常に Financial Chart で表示されます。チャート タイプを変更、またはビジュアルの外観をカスタマイズして構成します。以下のコードは価格ペインでシリーズのブラシおよび太さを設定します。
 
 ```html
@@ -57,6 +59,7 @@ _language: ja
 ```
 
 ### オーバーレイの構成
+
 オーバーレイはデフォルトで igxFinancialChart に表示されません。オーバーレイには、`BollingerBands` および `PriceChannel` の 2 種類があります。オーバーレイのデフォルト設定をカスタマイズできます。以下のコードはオーバーレイの色、アウトライン、および太さを設定します。
 
 ```html
@@ -72,6 +75,7 @@ _language: ja
 ```
 
 ### インジケーターの構成
+
 デフォルトでインジケーター ペインは Financial Chart に表示されません。ツールバーを使用してランタイムに表示するインジケーターを選択できます。ペインを表示するには、以下のコードのようにインジケーター タイプを設定する必要があります。
 
 ```html
@@ -88,6 +92,7 @@ _language: ja
 ```
 
 ### ボリューム ペインの構成
+
 デフォルトでボリューム ペインは Financial Chart に表示されません。ただし、チャート ツールバーを使用してランタイムにこのペインを有効にするか、以下のコードのようにコードで有効にできます。
 
 ```html
@@ -120,6 +125,7 @@ _language: ja
 ```
 
 ### タイトルの構成
+
 チャート ツールバーおよび Financial Chart の価格ペインの間に表示されるタイトルおよびサブタイトルを設定できます。以下のコード例は、タイトルとサブタイトルを設定する方法を紹介します。
 
 ```html
@@ -133,6 +139,7 @@ _language: ja
 ```
 
 ### 凡例の構成
+
 凡例はデフォルトで表示されません。以下のコードは、凡例を有効する方法を示します。
 
 ```html
@@ -143,5 +150,3 @@ _language: ja
     isLegendVisible="true">
  </igx-financial-chart>
 ```
-
-

@@ -4,14 +4,15 @@ _description: Ignite UI for Angular Financial Chart コンポーネントは簡�
 _keywords: Ignite UI for Angular, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular チャート, Angular チャート コントロール, Angular チャート例, Angular チャート コンポーネント, Angular Financial Chart
 _language: ja
 ---
+
 ## チャート　タイプの選択
 
-`igx-financial-chart` コントロールでは、軸は軸線、目盛、タイトル、や軸のラベルの外観を設定する基本プロパティを提供します。
+`IgxFinancialChart` コントロールでは、軸は軸線、目盛、タイトル、や軸のラベルの外観を設定する基本プロパティを提供します。
 
 ### デモ
 
-<div class="sample-container loading" style="height: 550px">
-    <iframe id="financial-chart-axis-types-iframe" src='{environment:demosBaseUrl}/charts/financial-chart-axis-types' width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container" style="height: 550px">
+    <iframe id="financial-chart-axis-types-iframe" src='{environment:demosBaseUrl}/charts/financial-chart-axis-types' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="financial-chart-axis-types-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
@@ -27,20 +28,18 @@ _language: ja
 Financial Chart コントロールで、`yAxisInterval` プロパティは主グリッド線および軸ラベルが軸に描画される頻度を指定します。同様に、`yAxisMinorInterval` プロパティは副グリッド線が軸に描画される頻度を指定します。
 
 以下のコード スニペットは、Y 軸の間隔を設定する方法を示します。
- 
+
 ```html
  <igx-financial-chart
-	yAxisInterval="200"
+    yAxisInterval="200"
     yAxisMinorInterval="50"
     yAxisMajorStroke="Black"
     yAxisMinorStroke="Gray"
     yAxisMinorStrokeThickness="0.5"
-    yAxisMajorStrokeThickness="0.5"
-    width="850px"
-    height="600px"
-	[dataSource]="data"
+    yAxisMajorStrokeThickness="0.5" >
  </igx-financial-chart>
 ```
+
 <div class="divider--half"></div>
 
 ### 軸ラベル
@@ -64,17 +63,20 @@ Financial Chart コントロールは、チャートで表示されるラベル�
     [dataSource]="data">
 </igx-financial-chart>
 ```
+
 <div class="divider--half"></div>
 
-### 軸モード 
+### 軸モード
 
-`igx-financial-chart` コントロールで X 軸および Y 軸に別のモードを設定できます。X 軸で以下のモードを選択できます。
-- Time - このモードはデータのギャップを X 軸にスペースを用いて描画します。つまり、週末または休日に株取引がないことを示します。
-- Ordinal - このモードはデータがない日付領域を縮小します。これがデフォルト値です。
+`IgxFinancialChart` コントロールで X 軸および Y 軸に別のモードを設定できます。X 軸で以下のモードを選択できます。
+
+-   Time - このモードはデータのギャップを X 軸にスペースを用いて描画します。つまり、週末または休日に株取引がないことを示します。
+-   Ordinal - このモードはデータがない日付領域を縮小します。これがデフォルト値です。
 
 Y 軸で以下のモードを選択できます。
-- Numeric - このモードはデータの値を描画します。これがデフォルト値です。
-- PercentChange - このモードは最初のデータ ポイントに相対するパーセンテージ変更としてデータを表示します。
+
+-   Numeric - このモードはデータの値を描画します。これがデフォルト値です。
+-   PercentChange - このモードは最初のデータ ポイントに相対するパーセンテージ変更としてデータを表示します。
 
 以下のコード例では、軸のモードを設定する方法を示します。
 
@@ -87,6 +89,7 @@ Y 軸で以下のモードを選択できます。
 	[dataSource]="data">
 </igx-financial-chart>
 ```
+
 <div class="divider--half"></div>
 
 ### 軸の範囲
@@ -104,13 +107,15 @@ Financial Chart コントロールの数値軸の範囲は軸の始めと終わ�
     [dataSource]="data">
   </igx-financial-chart>
 ```
+
  <div class="divider--half"></div>
- 
+
 ### 軸スケール
 
 Financial Chart コントロールで、チャートのデータが Y 軸に対数的にマップされるかどうかを制御できます。これは以下の設定で実行されます。
-- `yAxisIsLogarithmic` - Y 軸がリニア スケールの代わりに対数目盛を使用するかどうかを指定します。デフォルトでこのプロパティは False に設定されます。
-- `yAxisLogarithmBase` - Y 軸にデータ項目の位置をマップするときに log 関数で使用する基本値。これは yAxisIsLogarithmic が True の場合のみ効果があります。
+
+-   `yAxisIsLogarithmic` - Y 軸がリニア スケールの代わりに対数目盛を使用するかどうかを指定します。デフォルトでこのプロパティは False に設定されます。
+-   `yAxisLogarithmBase` - Y 軸にデータ項目の位置をマップするときに log 関数で使用する基本値。これは yAxisIsLogarithmic が True の場合のみ効果があります。
 
 以下のコードスニペットは、x 軸の目盛りの色、長さ、太さを設定します。
 
@@ -123,6 +128,7 @@ Financial Chart コントロールで、チャートのデータが Y 軸に対�
     [dataSource]="data">
  </igx-financial-chart>
 ```
+
 <div class="divider--half"></div>
 
 ### 軸目盛
@@ -141,6 +147,7 @@ Financial Chart コントロールで、チャートのデータが Y 軸に対�
     [dataSource]="data">
   </igx-financial-chart>
 ```
+
 <div class="divider--half"></div>
 
 ### 軸タイトル
@@ -163,4 +170,5 @@ Financial Chart コントロールの軸タイトル機能は、チャートの 
 	  [dataSource]="data">
  </igx-financial-chart>
 ```
+
 <div class="divider--half"></div>
