@@ -1,4 +1,4 @@
-﻿@@if (igxName === 'IgxGrid') {
+@@if (igxName === 'IgxGrid') {
 ---
 title: グリッドのページング機能
 _description: Ignite UI for Angular Data Grid コントロールは、タッチ レスポンシブなデータ グリッドです。階層およびリスト ビューなどの機能があります。
@@ -442,7 +442,7 @@ public changeTemplate() {
 #### デモ
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:650px">
-    <iframe id="grid-remote-paging-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-remote-paging-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="grid-remote-paging-sample-iframe" data-src='{environment:demosBaseUrl}/grid/grid-remote-paging-sample' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <br/>
 <div>
@@ -451,7 +451,7 @@ public changeTemplate() {
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 <div class="sample-container loading" style="height:560px">
-    <iframe id="hierarchical-grid-remote-paging-sample-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-remote-paging' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="hierarchical-grid-remote-paging-sample-iframe" data-src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-remote-paging' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <br/>
 <div>

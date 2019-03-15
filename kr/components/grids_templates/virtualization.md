@@ -1,4 +1,4 @@
-﻿---
+---
 title: 가상화 지시문 - 네이티브 Angular| Ignite UI for Angular 
 _description: Ignite UI for Angular 가상화 지시문은 대용량 데이터 세트를 처리할 때 그리드의 속도와 성능을 뒷받침하는 핵심 메커닉으로 가상 렌더링 메커니즘을 통해 메모리에 있는 DOM 객체 수를 수정하여 쉽게 스크롤할 수 있습니다. 
 _keywords: Ignite UI for Angular, UI 컨트롤, Angular 위젯, 웹 위젯, UI 위젯, Angular, 네이티브 Angular 컴포넌트 세트, 네이티브 Angular 컨트롤, 네이티브 Angular 컴포넌트 라이브러리, 네이티브 Angular 컴포넌트, Angular 데이터 그리드 컴포넌트, Angular 데이터 그리드 컨트롤, Angular 그리드 컴포넌트, Angular 그리드 컨트롤, Angular 고성능 그리드, Angular 가상화 지시문, 가상화, 퍼포먼스
@@ -39,7 +39,7 @@ Ignite UI for Angular에서 [`IgxGrid`]({environment:angularApiUrl}/classes/igxg
 ### 그리드 원격 가상화 데모
 
 <div class="sample-container loading" style="height:550px">
-    <iframe id="grid-sample-4-iframe" src='{environment:demosBaseUrl}/grid/grid-sample-4' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="grid-sample-4-iframe" data-src='{environment:demosBaseUrl}/grid/grid-sample-4' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <br/>
 <div>
@@ -88,7 +88,7 @@ public processData() {
 원격 데이터를 요청할 때 필터링 작업은 대소문자를 구분합니다.
 
 <div class="sample-container loading" style="height:550px">
-    <iframe id="grid-remote-filtering-iframe" src='{environment:demosBaseUrl}/grid/grid-remote-filtering' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="grid-remote-filtering-iframe" data-src='{environment:demosBaseUrl}/grid/grid-remote-filtering' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <br/>
 <div>

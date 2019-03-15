@@ -99,7 +99,7 @@ Let's replace the `<main>` in **app.component.html** with the following, adding 
 
 And the final result should look like this:
 <div class="sample-container loading" style="height: 500px">
-    <iframe id="nav-drawer-simple-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/menus/navigation-drawer-simple" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="nav-drawer-simple-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/menus/navigation-drawer-simple" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="nav-drawer-simple-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
@@ -138,7 +138,7 @@ Here's how that would would look applied to the previous example:
 ```
 
 <div class="sample-container loading" style="height: 500px">
-    <iframe id="nav-drawer-pin-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/menus/navigation-drawer-pin" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="nav-drawer-pin-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/menus/navigation-drawer-pin" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="nav-drawer-pin-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
@@ -187,7 +187,7 @@ The mini variant is commonly used in a persistent setup, so we've set `pin` and 
 ```
 
 <div class="sample-container loading" style="height: 400px">
-    <iframe id="nav-drawer-mini-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/menus/navigation-drawer-mini" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="nav-drawer-mini-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/menus/navigation-drawer-mini" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="nav-drawer-mini-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>

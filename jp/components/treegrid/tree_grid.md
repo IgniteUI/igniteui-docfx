@@ -1,4 +1,4 @@
-﻿---
+---
 title: Tree Grid コンポーネント
 _description: Ignite UI for Angular Tree Grid コントロールは、タッチ レスポンシブなデータ グリッドです。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コントロール Suite, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Tree Grid コンポーネント, Angular Tree Grid コントロール, Angular Tree Grid コンポーネント, Angular 高パフォーマンス Tree Grid, Tree Grid
@@ -216,7 +216,7 @@ export class MyComponent implements OnInit {
 以下は結果です。
 
 <div class="sample-container loading" style="height:450px">
-    <iframe id="treegrid-primaryforeignkey-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-primaryforeignkey' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="treegrid-primaryforeignkey-iframe" data-src='{environment:demosBaseUrl}/tree-grid/treegrid-primaryforeignkey' width="100%" height="100%" seamless="" frameborder="0" class="lazyload"></iframe>
 </div>
 <br/>
 <div>
@@ -233,6 +233,38 @@ export class MyComponent implements OnInit {
 - 列ピン固定、列の非表示、列移動などの処理後に 0 の [`visibleIndex`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#visibleindex) で終わる列はツリー列になります。
 - エクスポートした Excel ワークシートは、ツリーグリッドでグループ化されるときにレコードをグループ化して階層に反映できます。すべてのレコードを展開した状態が保持および反映されます。
 - CSV レベルにエクスポートする際に展開した状態は無視されてすべてのデータがフラットでエクスポートされます。
+
+<div class="divider--half"></div>
+
+### Keyboard navigation
+
+Keyboard navigation is available by default in the Tree Grid and aims at covering as many as possible features and scenarios for the end user. When you focus a specific cell and press one of the following key combinations, the described behaviour is performed:
+
+ - `Arrow Up` - navigates one cell up (no wrapping);
+ - `Arrow Down` - navigates one cell down (no wrapping);
+ - `Arrow Left` - navigates one cell left (no wrapping between lines);
+ - `Arrow Right` - navigates one cell right (no wrapping between lines);
+ - `Ctrl + Arrow Up` - navigates to the first cell in the current column;
+ - `Ctrl + Arrow Down` - navigates to the last cell in the current column;
+ - `Ctrl + Arrow Left` -  moves to leftmost cell in row;
+ - `Home` - moves to leftmost cell in row;
+ - `Ctrl + Home` - moves to top left cell in the grid;
+ - `Ctrl + Arrow Right` - moves to rightmost cell in row;
+ - `End` - moves to rightmost cell in row;
+ - `Ctrl + End` - moves to bottom right cell in the grid;
+ - `Page Up` - scrolls one page (view port) up;
+ - `Page Down` -  scrolls one page (view port) down;
+ - `Enter` - enters edit mode;
+ - `F2` - enters edit mode;
+ - `Esc` - exits edit mode;
+ - `Tab` - sequentially move the focus over the next cell on the row and if the last cell is reached move to next row; When cell is in edit mode, will move the focus to next editable cell in the row, and from the right-most editable cell to the `CANCEL` and `DONE` buttons, and from the `DONE` button to the left-most editable cell within the currently edited row. If the next cell is not editable, it has to be selected;
+ - `Shift + Tab` - sequentially move the focus to the previous cell on the row, if the first cell is reached move the focus to the previous row. When cell is in edit mode, will move the focus to the previous editable cell in the row, and from the right-most editable cell to the `CANCEL` and `DONE` buttons, and from the `DONE` button to the left-most editable cell within the currently edited row. If the cell is not editable, it has to be selected;
+ - `Space` -  if the row is selectable, on keydown space triggers row selection;
+ - `Alt + Arrow Left` over Tree Grid row - the cell should stay selected and focused and if the selected cell row has children the row should be collapsed;
+ - `Alt + Arrow Up` over Tree Grid row - the cell should stay selected and focused and if the selected cell row has children the row should be collapsed;
+ - `Alt + Arrow Right` over Tree Grid Row - the cell should stay selected and focused and if the selected cell row has children the row should be expanded;
+ - `Alt + Arrow Down` over Tree Grid Row - the cell should stay selected and focused and if the selected cell row has children the row should be expanded;
+ - on mouse `wheel` -  blurs the focused element;
 
 <div class="divider--half"></div>
 

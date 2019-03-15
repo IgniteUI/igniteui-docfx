@@ -1,4 +1,4 @@
-﻿@@if (igxName === 'IgxGrid') {
+@@if (igxName === 'IgxGrid') {
 ---
 title: Summaries Component - Native Angular | Ignite UI for Angular
 _description: With the Ignite UI for Angular Summaries component, see the column information in a separate container with a predefined set of default summary items, depending on the type of data within the column.
@@ -296,7 +296,7 @@ The available values of the [`summaryPosition`]({environment:angularApiUrl}/clas
 #### Demo
 
 <div class="sample-container loading" style="height:720px">
-    <iframe id="grid-groupby-summary-iframe" src='{environment:demosBaseUrl}/grid/grid-groupby-summary' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="grid-groupby-summary-iframe" data-src='{environment:demosBaseUrl}/grid/grid-groupby-summary' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <br/>
 <div>
@@ -321,7 +321,7 @@ The available values of the [`summaryPosition`]({environment:angularApiUrl}/clas
 > The [`summaryPosition`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#summaryposition) property applies only for the child level summaries. The root level summaries appear always fixed at the bottom of the @@igComponent.
 
 <div class="sample-container loading" style="height:720px">
-    <iframe id="treegrid-child-summary-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-summary2' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="treegrid-child-summary-iframe" data-src='{environment:demosBaseUrl}/tree-grid/treegrid-summary2' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <br/>
 <div>
