@@ -1,4 +1,4 @@
-﻿---
+---
 title: Navigation Drawer コンポーネント
 _description: Ignite UI for Angular Navigation Drawer コンポーネントは、コードでスライド イン/アウト ナビゲーション コンテナーの実装が可能です。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Navigation Drawer コンポーネント, Angular Navigation Drawer コントロール
@@ -124,7 +124,7 @@ Navigation Drawer は [`igxNavigationService`]({environment:angularApiUrl}/class
 結果は以下のようになります。
 
 <div class="sample-container loading" style="height: 500px">
-    <iframe id="nav-drawer-simple-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/menus/navigation-drawer-simple" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="nav-drawer-simple-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/menus/navigation-drawer-simple" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="nav-drawer-simple-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
@@ -165,7 +165,7 @@ Navigation Drawer は [`igxNavigationService`]({environment:angularApiUrl}/class
 ```
 
 <div class="sample-container loading" style="height: 500px">
-    <iframe id="nav-drawer-pin-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/menus/navigation-drawer-pin" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="nav-drawer-pin-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/menus/navigation-drawer-pin" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="nav-drawer-pin-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
@@ -215,7 +215,7 @@ Drawer は `flex-basis` をホスト要素に適用すると、残りのコン�
 ```
 
 <div class="sample-container loading" style="height: 400px">
-    <iframe id="nav-drawer-mini-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/menus/navigation-drawer-mini" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="nav-drawer-mini-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/menus/navigation-drawer-mini" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="nav-drawer-mini-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>

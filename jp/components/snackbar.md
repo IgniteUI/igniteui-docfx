@@ -1,4 +1,4 @@
-﻿---
+---
 title: Snackbar コンポーネント
 _description: Ignite UI for Angular Snackbar を使用すると、単一行メッセージをモバイルおよびデスクトップ アプリケーションに含みます。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Snackbar コンポーネント, Angular Snackbar コントロール
@@ -57,7 +57,7 @@ Snackbar コンポーネントを表示するには、ボタン クリックで 
 サンプルが正しく構成された場合、ボタン クリック時にテキスト メッセージを表示する Snackbar が表示されます。
 
 <div class="sample-container loading" style="height: 170px">
-    <iframe id="snackbar-sample-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/notifications/snackbar-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="snackbar-sample-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/snackbar-sample-1" class="lazyload"></iframe>
 </div>
 
 #### 非表示/自動的に隠す
@@ -84,7 +84,7 @@ public close(element) {
 サンプルを正しく構成した後、ボタンをクリックするとメッセージおよびアクション ボタンを含む Snackbar が表示されます。自動的に隠す機能が無効で、[CLOSE] ボタンのクリックで Snackbar が非表示になります。
 
 <div class="sample-container loading" style="height: 170px">
-    <iframe id="snackbar-sample-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/notifications/snackbar-sample-2" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="snackbar-sample-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/snackbar-sample-2" class="lazyload"></iframe>
 </div>
 
 #### 表示期間
@@ -103,7 +103,7 @@ public close(element) {
 サンプルが正しく構成された場合、Snackbar が自動ですばやく非表示になります。
 
 <div class="sample-container loading" style="height: 170px">
-    <iframe id="snackbar-sample-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/notifications/snackbar-sample-3" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="snackbar-sample-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/snackbar-sample-3" class="lazyload"></iframe>
 </div>
 
 #### Customize Snackbar
@@ -157,7 +157,7 @@ We can also customize the content of the Snackbar to display more complex elemen
 結果としてメッセージと 3 つのローディング ドットがスナックバーに表示されます。
 
 <div class="sample-container loading" style="height: 170px">
-    <iframe id="snackbar-sample-iframe-1" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/notifications/snackbar-sample-5" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="snackbar-sample-iframe-1" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/snackbar-sample-5" class="lazyload"></iframe>
 </div>
 
 <div>
@@ -244,7 +244,7 @@ public restore() {
 ```
 
 <div class="sample-container loading" style="height: 350px">
-    <iframe id="snackbar-sample-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/notifications/snackbar-sample-4" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="snackbar-sample-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/snackbar-sample-4" class="lazyload"></iframe>
 </div>
 
 <div>
