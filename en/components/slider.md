@@ -60,7 +60,7 @@ public volume = 20;
 If the sample is configured properly, dragging the slider thumb should update the label below and the slider value should be limited between the specified minimum and maximum values:
 
 <div class="sample-container loading" style="height: 140px">
-    <iframe id="slide-sample-2-iframe" src='{environment:demosBaseUrl}/interactions/slider-sample-2' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="slide-sample-2-iframe" data-src='{environment:demosBaseUrl}/interactions/slider-sample-2' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="slide-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
@@ -109,7 +109,7 @@ class Task {
 If the sample is configured properly, dragging the slider thumb should update the input value and modifying the input value should update the slider value.
 
 <div class="sample-container loading" style="height: 170px">
-    <iframe id="slide-sample-3-iframe" src='{environment:demosBaseUrl}/interactions/slider-sample-3' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="slide-sample-3-iframe" data-src='{environment:demosBaseUrl}/interactions/slider-sample-3' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="slide-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
@@ -143,7 +143,7 @@ class PriceRange {
 ```
 
 <div class="sample-container loading" style="height: 120px">
-    <iframe id="slide-sample-4-iframe" src='{environment:demosBaseUrl}/interactions/slider-sample-4' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="slide-sample-4-iframe" data-src='{environment:demosBaseUrl}/interactions/slider-sample-4' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="slide-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
@@ -158,7 +158,7 @@ In some cases, values near to the minimum and maximum are not appropriate. You c
 ```
 
 <div class="sample-container loading" style="height: 120px">
-    <iframe id="slide-sample-5-iframe" src='{environment:demosBaseUrl}/interactions/slider-sample-5' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="slide-sample-5-iframe" data-src='{environment:demosBaseUrl}/interactions/slider-sample-5' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="slide-sample-5-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
@@ -206,7 +206,7 @@ public updatePriceRange(event) {
 If the sample is configured properly, the final result should look like that:
 
 <div class="sample-container loading" style="height: 250px">
-    <iframe id="slide-sample-1-final-iframe" src='{environment:demosBaseUrl}/interactions/slider-sample-1' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="slide-sample-1-final-iframe" data-src='{environment:demosBaseUrl}/interactions/slider-sample-1' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="slide-sample-1-final-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
