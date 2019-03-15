@@ -1,4 +1,4 @@
-﻿---
+---
 title: 요약 컴포넌트- 네이티브 Angular| Ignite UI for Angular
 _description: Ignite UI for Angular 요약 컴포넌트는 열의 데이터 유형에 따라 사전 정의된 기본 요약 항목 세트를 가진 별도의 컨테이너에서 열 정보를 표시할 수 있습니다.
 _keywords: Ignite UI for Angular, UI 컨트롤, Angular 위젯, 웹 위젯, UI 위젯, Angular, 네이티브 Angular 컴포넌트 세트, 네이티브 Angular 컨트롤, 네이티브 Angular 컴포넌트 라이브러리, 네이티브 Angular 컴포넌트, Angular 그리드, Angular 데이터 그리드 컴포넌트, Angular 데이터 그리드 컨트롤, Angular 그리드 컴포넌트, Angular 그리드 컨트롤, Angular 고성능 그리드, 요약, 개요
@@ -156,7 +156,7 @@ The available values of the [`summaryPosition`]({environment:angularApiUrl}/clas
 #### Demo
 
 <div class="sample-container loading" style="height:720px">
-    <iframe id="grid-groupby-summary-iframe" src='{environment:demosBaseUrl}/grid/grid-groupby-summary' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="grid-groupby-summary-iframe" data-src='{environment:demosBaseUrl}/grid/grid-groupby-summary' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <br/>
 <div>

@@ -11,8 +11,8 @@ Category Chart コントロールは、数百万に及ぶデータ ポイント�
 
 ### デモ
 
-<div class="sample-container" style="height: 570px">
-    <iframe id="category-chart-performance-iframe" src='{environment:demosBaseUrl}/charts/category-chart-high-frequency-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 570px">
+    <iframe id="category-chart-performance-iframe" src='{environment:demosBaseUrl}/charts/category-chart-high-frequency-sample' width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="category-chart-high-frequency-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く

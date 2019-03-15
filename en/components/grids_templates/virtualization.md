@@ -1,4 +1,4 @@
-﻿@@if (igxName === 'IgxGrid') {
+@@if (igxName === 'IgxGrid') {
 ---
 title: Virtualization Directive - Native Angular | Ignite UI for Angular 
 _description: The Ignite UI for Angular Virtualization directive is the core mechanic behind the speed and performance of the grid when handling large data sets, since its virtual rendering mechanism allows the user to effortlessly scroll by its fixing of the number of DOM objects in memory. 
@@ -67,7 +67,7 @@ Explicitly setting column widths in percentages (%) will, in most cases, create 
 ### Remote Virtualization Demo
 
 <div class="sample-container loading" style="height:550px">
-    <iframe id="grid-sample-4-iframe" src='{environment:demosBaseUrl}/grid/grid-sample-4' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="grid-sample-4-iframe" data-src='{environment:demosBaseUrl}/grid/grid-sample-4' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <br/>
 <div>
@@ -116,7 +116,7 @@ To provide remote sorting and filtering, you need to subscribe to the [`onDataPr
 Note that when requesting remote data, filtering operation is case-sensitive.
 
 <div class="sample-container loading" style="height:550px">
-    <iframe id="grid-remote-filtering-iframe" src='{environment:demosBaseUrl}/grid/grid-remote-filtering' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="grid-remote-filtering-iframe" data-src='{environment:demosBaseUrl}/grid/grid-remote-filtering' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <br/>
 <div>

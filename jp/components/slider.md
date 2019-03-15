@@ -1,4 +1,4 @@
-﻿---
+---
 title: Slider コンポーネント
 _description: Ignite UI for Angular Slider コントロールは、ブラウザー間で統一したエクスペリエンスおよび値選択の入力機能を提供します。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Slider コンポーネント, Angular Slider コントロール
@@ -10,8 +10,8 @@ _language: ja
 <div class="divider"></div>
 
 ### Slider デモ
-<div class="sample-container" style="height: 250px">
-    <iframe id="slide-sample-1-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/interactions/slider-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 250px">
+    <iframe id="slide-sample-1-iframe" frameborder="0" seamless="" width="100%" height="100%" src="{environment:demosBaseUrl}/interactions/slider-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="slide-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
@@ -61,8 +61,8 @@ public volume = 20;
 
 サンプルの構成後、スライダーのつまみをドラッグするとラベルを更新しますが、スライダー値は指定した最小値および最大値の間に制限されます。
 
-<div class="sample-container" style="height: 140px">
-    <iframe id="slide-sample-2-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/interactions/slider-sample-2" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 140px">
+    <iframe id="slide-sample-2-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/interactions/slider-sample-2" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="slide-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
@@ -111,8 +111,8 @@ class Task {
 
 サンプルを構成した後、スライダーのつまみをドラッグすると入力値を更新し、入力値を変更するとスライダー値を更新します。
 
-<div class="sample-container" style="height: 170px">
-    <iframe id="slide-sample-3-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/interactions/slider-sample-3" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 170px">
+    <iframe id="slide-sample-3-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/interactions/slider-sample-3" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="slide-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
@@ -146,8 +146,8 @@ class PriceRange {
 
 ```
 
-<div class="sample-container" style="height: 120px">
-    <iframe id="slide-sample-4-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/interactions/slider-sample-4" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 120px">
+    <iframe id="slide-sample-4-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/interactions/slider-sample-4" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="slide-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
@@ -161,8 +161,8 @@ class PriceRange {
 <igx-slider [type]="sliderType.RANGE" [minValue]="0" [maxValue]="1000" [(ngModel)]="priceRange" [lowerBound]="100" [upperBound]="900" ></igx-slider>
 ```
 
-<div class="sample-container" style="height: 120px">
-    <iframe id="slide-sample-5-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/interactions/slider-sample-5" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 120px">
+    <iframe id="slide-sample-5-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/interactions/slider-sample-5" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="slide-sample-5-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
@@ -211,8 +211,8 @@ public updatePriceRange(event) {
 サンプルを構成した後、結果は以下のようになります。
 
 
-<div class="sample-container" style="height: 250px">
-    <iframe id="slide-sample-1-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/interactions/slider-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 250px">
+    <iframe id="slide-sample-1-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/interactions/slider-sample-1" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="slide-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
