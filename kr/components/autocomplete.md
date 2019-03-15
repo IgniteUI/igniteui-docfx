@@ -6,7 +6,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ## Autocomplete
 <p class="highlight">
-
+test
 The [**igxAutocomplete**]({environment:angularApiUrl}/classes/igxautocompletedirective.html) directive provides a way to enhance a text input by showing a [igxDropDown]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) with suggested options, provided by the developer. The suggestions will show once you start typing in the text input or use the `Arrow Up`/`Arrow Down` keys.
 
 By default, the first item is always highlighted, which provides an easy way to select it using the `Enter` key. Clicking on the item from the list will select it too, and the input value will be automatically updated, which will result closing of the dropdown. When an item is selected, the `onItemSelected` event is fired. If this event is canceled, the item will not be selected and the drop-down will not close. The [**igxAutocomplete**]({environment:angularApiUrl}/classes/igxautocompletedirective.html) directive allows you to navigate through items and at the same time to have focus always on the input. The latter will allow you to continue typing in the input. You can use the `ESC` key to close the drop-down list.
