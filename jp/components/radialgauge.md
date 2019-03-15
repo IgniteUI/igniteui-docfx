@@ -1,4 +1,4 @@
-﻿---
+---
 title: Radial Gauge コンポーネント - ネイティブ Angular | Ignite UI for Angular
 _description: Ignite UI for Angular の Radial Gauge コンポーネントは、針、目盛り、範囲、およびラベルなどの視覚要素を提供し、定義済みの図形およびスケールを表示できます。
 _keywords: Ignite UI for Angular, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular グリッド, Angular データグリッド, Angular グリッドコントロール, Angular グリッドコンポーネント, Angular ラジアル ゲージ コンポーネント, Angular ラジアル ゲージ
@@ -14,8 +14,8 @@ Ignite UI for Angular の Radial Gauge コンポーネントは、針、目盛�
 
 以下のサンプルは、同じゲージでいくつかのプロパティを設定して全く異なるゲージにする方法を示します。
 
-<div class="sample-container" style="height: 350px">
-    <iframe id="radial-gauge-animation-iframe" src='{environment:demosBaseUrl}/gauges/radial-gauge-animation' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 350px">
+    <iframe id="radial-gauge-animation-iframe" src='{environment:demosBaseUrl}/gauges/radial-gauge-animation' width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="radial-gauge-animation-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
@@ -101,8 +101,8 @@ export class AppModule {}
 </igx-radial-gauge>
 ```
 
-<div class="sample-container" style="height: 320px">
-    <iframe id="radial-gauge-backing-iframe" src='{environment:demosBaseUrl}/gauges/radial-gauge-backing' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 320px">
+    <iframe id="radial-gauge-backing-iframe" data-src='{environment:demosBaseUrl}/gauges/radial-gauge-backing' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="radial-gauge-backing-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
@@ -130,8 +130,8 @@ export class AppModule {}
 </igx-radial-gauge>
 ```
 
-<div class="sample-container" style="height: 320px">
-    <iframe id="radial-gauge-scale-iframe" src='{environment:demosBaseUrl}/gauges/radial-gauge-scale' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 320px">
+    <iframe id="radial-gauge-scale-iframe" data-src='{environment:demosBaseUrl}/gauges/radial-gauge-scale' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="radial-gauge-scale-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
@@ -154,8 +154,8 @@ export class AppModule {}
 </igx-radial-gauge>
 ```
 
-<div class="sample-container" style="height: 320px">
-    <iframe id="radial-gauge-labels-iframe" src='{environment:demosBaseUrl}/gauges/radial-gauge-labels' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 320px">
+    <iframe id="radial-gauge-labels-iframe" data-src='{environment:demosBaseUrl}/gauges/radial-gauge-labels' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="radial-gauge-labels-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
@@ -184,8 +184,8 @@ export class AppModule {}
 </igx-radial-gauge>
 ```
 
-<div class="sample-container" style="height: 320px">
-    <iframe id="radial-gauge-tickmarks-iframe" src='{environment:demosBaseUrl}/gauges/radial-gauge-tickmarks' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 320px">
+    <iframe id="radial-gauge-tickmarks-iframe" data-src='{environment:demosBaseUrl}/gauges/radial-gauge-tickmarks' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="radial-gauge-tickmarks-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
@@ -215,8 +215,8 @@ export class AppModule {}
 </igx-radial-gauge>
 ```
 
-<div class="sample-container" style="height: 320px">
-    <iframe id="radial-gauge-ranges-iframe" src='{environment:demosBaseUrl}/gauges/radial-gauge-ranges' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 320px">
+    <iframe id="radial-gauge-ranges-iframe" data-src='{environment:demosBaseUrl}/gauges/radial-gauge-ranges' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="radial-gauge-ranges-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
@@ -251,8 +251,8 @@ export class AppModule {}
 </igx-radial-gauge>
 ```
 
-<div class="sample-container" style="height: 320px">
-    <iframe id="radial-gauge-needle-iframe" src='{environment:demosBaseUrl}/gauges/radial-gauge-needle' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 320px">
+    <iframe id="radial-gauge-needle-iframe" data-src='{environment:demosBaseUrl}/gauges/radial-gauge-needle' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="radial-gauge-needle-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
