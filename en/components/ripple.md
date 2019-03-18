@@ -50,8 +50,8 @@ Use [`igxRipple`]({environment:angularApiUrl}/classes/igxrippledirective.html) t
 <button igxButton="raised" igxRipple>Click Me</button>
 ```
 <div class="sample-container loading" style="height: 68px">
-    <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/interactions/ripple-sample-5" onload="onSampleIframeContentLoaded(this);">
-</div>
+    <iframe seamless="" width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/interactions/ripple-sample-5" class="lazyload">
+</iframe></div>
 
 #### Custom Color
 
@@ -61,8 +61,8 @@ You can set the ripple color using [`igxRipple`]({environment:angularApiUrl}/cla
 <button igxButton="raised" igxRipple="white">White</button>
 ```
 <div class="sample-container loading" style="height: 68px">
-    <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/interactions/ripple-sample-6" onload="onSampleIframeContentLoaded(this);">
-</div>
+    <iframe seamless="" width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/interactions/ripple-sample-6" class="lazyload">
+</iframe></div>
 
 #### Centered Ripple Effect 
 The ripple effect starts from the position of the click event. You can change this behavior using [`igxRippleCentered`]({environment:angularApiUrl}/classes/igxrippledirective.html#centered) and setting the center of the element as origin.
@@ -71,8 +71,8 @@ The ripple effect starts from the position of the click event. You can change th
 <button igxButton="raised" igxRipple="white" igxRippleCentered="true">Centered</button>
 ```
 <div class="sample-container loading" style="height: 68px">
-    <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/interactions/ripple-sample-3" onload="onSampleIframeContentLoaded(this);">
-</div>
+    <iframe seamless="" width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/interactions/ripple-sample-3" class="lazyload">
+</iframe></div>
 
 #### Ripple Target
 Use [`igxRippleTarget`]({environment:angularApiUrl}/classes/igxrippledirective.html#rippletarget) to attach a ripple effect to a specific element inside a parent element.
@@ -87,8 +87,8 @@ Use [`igxRippleTarget`]({environment:angularApiUrl}/classes/igxrippledirective.h
 ```
 Notice that if you click on the parent or the child divs the ripple effect will only appear inside the child div. The child div position has to be set to **relative**.
 <div class="sample-container loading" style="height: 168px">
-    <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/interactions/ripple-sample-2" onload="onSampleIframeContentLoaded(this);">
-</div>
+    <iframe seamless="" width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/interactions/ripple-sample-2" class="lazyload">
+</iframe></div>
 
 #### Ripple Duration
 Use [`igxRippleDuration`]({environment:angularApiUrl}/classes/igxrippledirective.html#rippleduration) to change the duration of the ripple animation. The default is 600 miliseconds. In this sample the [`igxRippleDuration`]({environment:angularApiUrl}/classes/igxrippledirective.html#rippleduration) is set to 2000 miliseconds.
@@ -99,8 +99,8 @@ Use [`igxRippleDuration`]({environment:angularApiUrl}/classes/igxrippledirective
 </div>
 ```
 <div class="sample-container loading" style="height: 148px">
-    <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/interactions/ripple-sample-4" onload="onSampleIframeContentLoaded(this);">
-</div>
+    <iframe seamless="" width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/interactions/ripple-sample-4" class="lazyload">
+</iframe></div>
 
 > [!NOTE]
 > Use a relatively positioned element for the ripple animation. You can also use [`igxRippleTarget`]({environment:angularApiUrl}/classes/igxrippledirective.html#rippletarget) to target a child element.

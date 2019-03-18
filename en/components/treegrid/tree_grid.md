@@ -216,7 +216,7 @@ In addition we will enable the row selection feature of the tree grid by using t
 And here is the final result:
 
 <div class="sample-container loading" style="height:450px">
-    <iframe id="treegrid-primaryforeignkey-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-primaryforeignkey' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="treegrid-primaryforeignkey-iframe" data-src='{environment:demosBaseUrl}/tree-grid/treegrid-primaryforeignkey' width="100%" height="100%" seamless="" frameborder="0" class="lazyload"></iframe>
 </div>
 <br/>
 <div>
@@ -233,6 +233,38 @@ The indentation of the **tree cells** persists across other tree grid features l
 - The column that ends up with a [`visibleIndex`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#visibleindex) of 0 after operations like column pinning, column hiding and column moving becomes the tree column.
 - Exported Excel worksheets reflect the hierarchy by grouping the records as they are grouped in the tree grid itself. All records expanded states would also be persisted and reflected.
 - When exporting to CSV, levels and expanded states are ignored and all data is exported as flat.
+
+<div class="divider--half"></div>
+
+### Keyboard navigation
+
+Keyboard navigation is available by default in the Tree Grid and aims at covering as many as possible features and scenarios for the end user. When you focus a specific cell and press one of the following key combinations, the described behaviour is performed:
+
+ - `Arrow Up` - navigates one cell up (no wrapping);
+ - `Arrow Down` - navigates one cell down (no wrapping);
+ - `Arrow Left` - navigates one cell left (no wrapping between lines);
+ - `Arrow Right` - navigates one cell right (no wrapping between lines);
+ - `Ctrl + Arrow Up` - navigates to the first cell in the current column;
+ - `Ctrl + Arrow Down` - navigates to the last cell in the current column;
+ - `Ctrl + Arrow Left` -  moves to leftmost cell in row;
+ - `Home` - moves to leftmost cell in row;
+ - `Ctrl + Home` - moves to top left cell in the grid;
+ - `Ctrl + Arrow Right` - moves to rightmost cell in row;
+ - `End` - moves to rightmost cell in row;
+ - `Ctrl + End` - moves to bottom right cell in the grid;
+ - `Page Up` - scrolls one page (view port) up;
+ - `Page Down` -  scrolls one page (view port) down;
+ - `Enter` - enters edit mode;
+ - `F2` - enters edit mode;
+ - `Esc` - exits edit mode;
+ - `Tab` - sequentially move the focus over the next cell on the row and if the last cell is reached move to next row; When cell is in edit mode, will move the focus to next editable cell in the row, and from the right-most editable cell to the `CANCEL` and `DONE` buttons, and from the `DONE` button to the left-most editable cell within the currently edited row. If the next cell is not editable, it has to be selected;
+ - `Shift + Tab` - sequentially move the focus to the previous cell on the row, if the first cell is reached move the focus to the previous row. When cell is in edit mode, will move the focus to the previous editable cell in the row, and from the right-most editable cell to the `CANCEL` and `DONE` buttons, and from the `DONE` button to the left-most editable cell within the currently edited row. If the cell is not editable, it has to be selected;
+ - `Space` -  if the row is selectable, on keydown space triggers row selection;
+ - `Alt + Arrow Left` over Tree Grid row - the cell should stay selected and focused and if the selected cell row has children the row should be collapsed;
+ - `Alt + Arrow Up` over Tree Grid row - the cell should stay selected and focused and if the selected cell row has children the row should be collapsed;
+ - `Alt + Arrow Right` over Tree Grid Row - the cell should stay selected and focused and if the selected cell row has children the row should be expanded;
+ - `Alt + Arrow Down` over Tree Grid Row - the cell should stay selected and focused and if the selected cell row has children the row should be expanded;
+ - on mouse `wheel` -  blurs the focused element;
 
 <div class="divider--half"></div>
 

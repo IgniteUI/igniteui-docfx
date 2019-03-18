@@ -1,4 +1,4 @@
-﻿---
+---
 title: 대용량 데이터
 _description: Ignite UI for 카테고리 차트 컴포넌트는 데이터 시각화 도메인의 복잡성을 관리 가능한 API로 단순화하여 사용자가 데이터 수집, 그룹 수집, 데이터 속성을 바인딩하고 나머지는 차트 컨트롤이 실행할 수 있도록 합니다. 
 _keywords: Ignite UI for Angular, Angular, 네이티브 Angular 컴포넌트 세트, 네이티브 Angular 컨트롤, 네이티브 Angular 컴포넌트, 네이티브 Angular 컴포넌트 라이브러리, Angular 차트, Angular 차트 컨트롤, Angular 차트 예제, Angular 그리드 컴포넌트, Angular 차트 컴포넌트, Angular 카테고리 차트
@@ -9,8 +9,8 @@ _language: kr
 카테고리 차트 컨트롤은 다음의 데모에서 설명하는 것처럼 수백만 개에 이르는 데이터 점을 포함한 대용량 데이터를 처리할 수 있습니다.
 
 ### 데모 
-<div class="sample-container" style="height: 570px">
-    <iframe id="category-chart-high-volume-sample-iframe" src='{environment:demosBaseUrl}/charts/category-chart-high-volume-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 570px">
+    <iframe id="category-chart-high-volume-sample-iframe" src='{environment:demosBaseUrl}/charts/category-chart-high-volume-sample' width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="category-chart-high-volume-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기

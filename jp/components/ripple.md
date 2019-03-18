@@ -1,4 +1,4 @@
-﻿---
+---
 title: Ripple ディレクティブ
 _description: Ignite UI for Angular Ripple ディレクティブは、リップル アニメーション エフェクトが適用されている領域を定義できます。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Ripple コンポーネント, Angular Ripple コントロール
@@ -51,8 +51,8 @@ export class AppModule {}
 ```
 
 <div class="sample-container loading" style="height: 68px">
-    <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/interactions/ripple-sample-5" onload="onSampleIframeContentLoaded(this);">
-</div>
+    <iframe seamless="" width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/interactions/ripple-sample-5" class="lazyload">
+</iframe></div>
 
 #### カスタム色
 
@@ -63,8 +63,8 @@ export class AppModule {}
 ```
 
 <div class="sample-container loading" style="height: 68px">
-    <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/interactions/ripple-sample-6" onload="onSampleIframeContentLoaded(this);">
-</div>
+    <iframe seamless="" width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/interactions/ripple-sample-6" class="lazyload">
+</iframe></div>
 
 #### 中央揃えのリップル エフェクト
 
@@ -75,8 +75,8 @@ export class AppModule {}
 ```
 
 <div class="sample-container loading" style="height: 68px">
-    <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/interactions/ripple-sample-3" onload="onSampleIframeContentLoaded(this);">
-</div>
+    <iframe seamless="" width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/interactions/ripple-sample-3" class="lazyload">
+</iframe></div>
 
 #### リップルの対象要素
 
@@ -94,8 +94,8 @@ export class AppModule {}
 親 div または子 div をクリックすると、リップル エフェクトは子 div 内のみに表示されます。子 div の要素を **relative** に設定する必要があります。
 
 <div class="sample-container loading" style="height: 168px">
-    <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/interactions/ripple-sample-2" onload="onSampleIframeContentLoaded(this);">
-</div>
+    <iframe seamless="" width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/interactions/ripple-sample-2" class="lazyload">
+</iframe></div>
 
 #### リップルの期間
 
@@ -108,8 +108,8 @@ export class AppModule {}
 ```
 
 <div class="sample-container loading" style="height: 148px">
-    <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/interactions/ripple-sample-4" onload="onSampleIframeContentLoaded(this);">
-</div>
+    <iframe seamless="" width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/interactions/ripple-sample-4" class="lazyload">
+</iframe></div>
 
 > [!NOTE]
 > リップル アニメーションで相対的な位置を持つ要素を使用します。また、[`igxRippleTarget`]({environment:angularApiUrl}/classes/igxrippledirective.html#rippletarget) を使用して子要素を対象にすることもできます。
