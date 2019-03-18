@@ -49,7 +49,12 @@ export class AppComponent {
 
 -   コンポーネントにバインドするプロパティで大量のデータを保存する場合、`@Component` デコレーターで `changeDetection: ChangeDetectionStrategy.OnPush` を設定します。Angular の各変更検出のサイクルでデータ配列内の変更を確認しないようにする設定です。
 -   チャートに Angular が自動でデータ変更を通知する代わりに、バインドされたデータが変更された方法をコンポーネントに通知できます。デルタ通知の処理は、Angular が変更検出を実行する際に 100 万のレコードを含む配列のすべての変更を比較するより効果的に実行できます。バインドしたデータの変更をチャートに通知する方法の詳細については、チャートの `notify*` メソッドを参照してください。
--   Angular が Debug モードで実行されている場合、特定のブラウザーでパフォーマンスを低下させるオーバーヘッドがあります。実環境パフォーマンスを評価する場合、`--prod` を使用して serve または build してください。
+-   When Angular is in Debug mode, there is a lot of overhead in some browsers that will drag down performance. When evaluating real world performance always make sure to serve or build with `--prod` version.
+
+[!NOTE]
+For React:
+
+-   When Angular is in development mode, there is a lot of overhead in some browsers that will drag down performance. When evaluating real world performance always make sure to use production builds.
 
 また、アプリケーションのパフォーマンスを最適化する場合、ファイナンシャル チャートの以下の機能に注意してください。
 
@@ -70,17 +75,17 @@ export class AppComponent {
 -   `area` - `line` ボリューム タイプより描画に手間がかかります。
 -   `column` - `area` ボリューム タイプより描画に手間がかかります。1 つ ～ 3 つの在庫の出来高データを描画する場合に使用することをお勧めします。
 
-### マーカー タイプ
+### Marker Type
 
-`markerTypes` オプションを `none` に設定すると他のタイプより描画する項目の量が少なくなります。
+Setting the `markerTypes` option to `none` will decrease the amount of items to render than any other type.
 
-### 凡例の表示
+### Legend Visibility
 
-`isLegendVisible` オプションを `false` に設定すると凡例が描画されないためパフォーマンスが向上します。
+Setting the `isLegendVisible` option to `false` will increase performance since the legend will not be drawn.
 
 ### ズーム スライダー タイプ
 
-`zoomSliderType` オプションを `none` に設定すると、チャート パフォーマンスが向上し、その他のインジケーターおよびボリューム ペインに垂直スペースが利用できるようになります。
+`zoomSliderType` オプションを `none` に設定すると、チャート パフォーマンスを向上し、その他のインジケーターおよびボリューム ペインのために垂直スペースを利用可能になります。
 
 ### チャート ペイン
 
@@ -93,13 +98,13 @@ export class AppComponent {
 -   `ordinal` - ファイナンシャル チャートで使用できる最も簡易な X 軸です。データ範囲のギャップ (週末または休日など) の描画が必要ない場合に使用することをお勧めします。
 -   `time` - ファイナンシャル チャートで `ordinal` より手間がかかります。データ範囲のギャップ (週末または休日など) の描画が必要な場合に使用することをお勧めします。
 
-### Y 軸モード
+### Y-Axis Mode
 
-パフォーマンスを向上させるには、`percentChange` モードよりオプションが少ない `yAxisMode` オプションの `numeric` に設定してください。
+Setting the `yAxisMode` option to `numeric` is recommended for higher performance, as fewer operations are needed than using `percentChange` mode.
 
-### 注釈
+### Annotations
 
-コールアウト注釈 (`calloutsVisible`) または最終値の注釈 (`finalValueAnnotationsVisible`) はファイナンシャル チャートのパフォーマンスを低下させます。
+Enabling the Callout Annotations (`calloutsVisible`) or Final Value Annotations (`finalValueAnnotationsVisible`) will decrease performance of the financial chart.
 
 ### 軸ビジュアル
 
@@ -124,7 +129,7 @@ export class AppComponent {
 
 <div class="divider--half"></div>
 
-### その他のリソース
+### 追加のリソース
 
 <div class="divider--half"></div>
 

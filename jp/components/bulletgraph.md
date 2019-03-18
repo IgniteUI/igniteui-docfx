@@ -4,6 +4,7 @@ _description: Ignite UI for Angular の Bullet Graph コンポーネントはス
 _keywords: Ignite UI for Angular, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular ブレット グラフ コンポーネント, Angular ブレット グラフ
 _language: ja
 ---
+
 ## Bullet Graph
 
 Ignite UI for Angular の Bullet Graph コンポーネントは、目盛り上でメジャーの比較を簡潔にリニアで表示します。
@@ -28,15 +29,22 @@ Ignite UI for Angular の Bullet Graph コンポーネントは、目盛り上�
 ブレット グラフの機能には構成可能な向きや方向、視覚要素やツールチップなどがあります。
 
 ### 依存関係
+
 gauges パッケージのインストール時に core パッケージもインストールする必要があります。
 
-`npm install ignite-angular-gauges ignite-angular-core`
+**npm install igniteui-angular-gauges igniteui-angular-core**
 
-ブレット グラフが `NgModule` としてエクスポートされるため、アプリケーションで `AppModule` に _IgxBulletGraphModule_ をインポートする必要があります。
+The bullet graph is exported as an `NgModule`, you need to import the 
+`IgxBulletGraphModule` inside your `AppModule`:
+
+<!-- -->
+
+<!-- -->
 
 ```typescript
 // app.module.ts
 import { IgxBulletGraphModule } from 'igniteui-angular-gauges/ES5/igx-bullet-graph-module';
+import { IgxBulletGraph } from 'igniteui-angular-gauges/ES5/igr-bullet-graph';
 
 @NgModule({
     imports: [
@@ -114,6 +122,7 @@ export class AppModule {}
 </div>
 
 ### 比較範囲
+
 範囲はスケールで指定した値の範囲を強調表示する視覚的な要素です。その目的は、パフォーマンス バー メジャーの質的状態を視覚で伝えると同時に、その状態をレベルとして示すことにあります。
 
 ```html
@@ -151,9 +160,11 @@ export class AppModule {}
 </div>
 
 ### 目盛
+
 目盛は、ブレット グラフを読み取りやすくするために、目盛の間隔でスケールを分割して見せる役割を果たします。
-- 主目盛 - 主目盛は、スケールの主要な区切りとして使用されます。表示間隔、範囲、およびスタイルは、対応するプロパティを設定し制御できます。
-- 補助目盛 - 補助目盛は主目盛を補助し、スケールの数値を読み取りやすくするために追加して使用します。主目盛と同じ方法でカスタマイズできます。
+
+-   主目盛 - 主目盛は、スケールの主要な区切りとして使用されます。表示間隔、範囲、およびスタイルは、対応するプロパティを設定し制御できます。
+-   補助目盛 - 補助目盛は主目盛を補助し、スケールの数値を読み取りやすくするために追加して使用します。主目盛と同じ方法でカスタマイズできます。
 
 ```html
 <igx-bullet-graph
@@ -185,6 +196,7 @@ export class AppModule {}
 </div>
 
 ### ラベル
+
 ラベルはスケールのメジャーを示します。
 
 ```html
@@ -210,6 +222,7 @@ export class AppModule {}
 </div>
 
 ### バッキング
+
 バッキング要素はブレット グラフ コントロールの背景と境界線を表します。常に最初に描画される要素でラベルやメモリなどの残りの要素は互いにオーバーレイします。
 
 ```html
@@ -241,6 +254,7 @@ export class AppModule {}
 </div>
 
 ### スケール
+
 スケールはゲージで値の全範囲を強調表示する視覚的な要素です。外観やスケールの図形のカスタマイズ、更にスケールを反転 (`isScaleInverted` プロパティを使用) させて、すべてのラベルを左から右ではなく、右から左へ描画することもできます。
 
 ```html
@@ -257,6 +271,7 @@ export class AppModule {}
     scaleEndExtent=0.95>
 </igx-bullet-graph>
 ```
+
 <div class="sample-container loading" style="height: 125px">
     <iframe id="bullet-graph-scale-iframe" data-src='{environment:demosBaseUrl}/gauges/bullet-graph-scale' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
@@ -266,6 +281,7 @@ export class AppModule {}
 </div>
 
 ### まとめ
+
 上記すべてのコード スニペットを以下のコード ブロックにまとめています。プロジェクトに簡単にコピーしてブレットグラフのすべての機能を再現できます。
 
 ```html

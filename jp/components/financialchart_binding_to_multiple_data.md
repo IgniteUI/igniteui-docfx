@@ -4,9 +4,10 @@ _description: Ignite UI for Angular Financial Chart コンポーネントは簡�
 _keywords: Ignite UI for Angular, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular チャート, Angular チャート コントロール, Angular チャート例, Angular チャート コンポーネント, Angular Financial Chart
 _language: ja
 ---
+
 ## 複数データ ソースへバインド
 
-`igx-financial-chart` コントロールは、以下のように複数のデータ ソースへバインドできます。
+`IgxFinancialChart` コントロールは、以下のように複数のデータ ソースへバインドできます。
 
 ### デモ
 
@@ -40,7 +41,6 @@ dataSource1.title = "Stock1 Name (Symbol)";
 dataSource2.title = "Stock2 Name (Symbol)";
 
 let data: any = [ dataSource1, dataSource2 ]
-
 ```
 
 以下のコードはファイナンシャル チャートを上記のデータにバインドします。
@@ -54,8 +54,9 @@ let data: any = [ dataSource1, dataSource2 ]
 <div class="divider--half"></div>
 
 ### 追加のリソース
+
 <div class="divider--half"></div>
 
-* [チャートのパフォーマンス](financialchart_performance.md)
-* [リアルタイム データにバインド](financialchart_real_time_data.md)
-* [大規模データへのバインド](financialchart_high_volume_data.md)
+-   [チャートのパフォーマンス](financialchart_performance.md)
+-   [リアルタイム データにバインド](financialchart_real_time_data.md)
+-   [大規模データへのバインド](financialchart_high_volume_data.md)

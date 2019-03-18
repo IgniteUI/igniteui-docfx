@@ -4,26 +4,26 @@ _description: Ignite UI for Excel Library コンポーネント
 _keywords: Ignite UI for Angular, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular Excel ライブラリ, Angular Excel ライブラリ例,  Angular Excel Library コンポーネント, Angular Excel ライブラリ
 _language: ja
 ---
-## セルの使用
 
-Excel ワークシートの `WorksheetCell` オブジェクトは、ワークシートの実際のデータ値を保持するオブジェクトです。このトピックは、名前で領域にアクセス、数式やコメントをセルに追加、結合および書式設定など、セルで実行できる多くの操作について説明します。
+## Using Cells
 
-### デモ
+The `WorksheetCell` objects in an Excel worksheet is the object that holds your actual data values for the worksheet. This topic goes over the many operations that you can perform on these cells, such as accessing them and their regions by name, adding formulas and comments to the cells, and merging and formatting them.
+
+### Demo
 
 <div class="sample-container loading" style="height: 150px">
     <iframe id="excel-library-overview-sample-iframe" src='{environment:demosBaseUrl}/excel-library/working-with-cells' width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <!-- TODO uncomment when Stackblitz is ready for EXCEL
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="excel-library-working-with-cells-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
-    </button> -->
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="excel-library-working-with-cells-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+    </button>
 </div> 
 
 <div class="divider--half"></div>
 
-### リファレンス
+### References
 
-以下のコードは、以下のコード スニペットを使用するインポートを示します。
+The following code shows the imports needed to use the code-snippets below:
 
 ```typescript
 import { Workbook } from "igniteui-angular-excel/ES5/Workbook";
@@ -35,11 +35,11 @@ import { WorksheetCellComment } from 'igniteui-angular-excel/ES5/WorksheetCellCo
 import { FormattedString } from 'igniteui-angular-excel/ES5/FormattedString'; 
 ```
 
-### セルと領域を参照
+### Referencing Cells and Regions
 
-`Worksheet` オブジェクトの `getCell` または `getRegion` メソッドを呼び出して `WorksheetCell` オブジェクト または `WorksheetRegion` オブジェクトへアクセスできます。両メソッドはセルを参照する文字列パラメーターを許容します。書式設定を適用する場合または数式とセルのコンテンツで作業する場合にセル参照を取得すると便利です。
+You can access a `WorksheetCell` object or a `WorksheetRegion` object by calling the `Worksheet` object’s `getCell` or `getRegion` methods, respectively. Both methods accept a string parameter that references a cell. Getting a reference to a cell is useful when applying formats or working with formulas and cell contents.
 
-以下のコード例では、セルと領域を参照する方法を示します。
+The following example code demonstrates how to reference cells and regions:
 
 ```typescript
 var workbook = new Workbook();
@@ -51,13 +51,13 @@ var cell = worksheet.getCell("E2");
 var region = worksheet.getRegion("G1:G10");
 ```
 
-### セルと領域に名前でアクセス
+### Accessing Cells and Regions by Name
 
-Microsoft Excel では各セルとセル領域に名前が割り当てられています。アドレスの代わりにセルまたは領域の名前を使用してセルまたは領域を参照できます。
+In Microsoft Excel, individual cells, as well as cell regions can have names assigned to them. The name of a cell or region can be used to reference that cell or region instead of their address.
 
-Infragistics Excel Library は、Worksheet オブジェクトの `getCell` と `getRegion` メソッドによって、名前によるセルおよび領域の参照をサポートします。そのセルまたは領域を参照する `NamedReference` インスタンスを使用してセルまたは領域を参照します。
+The Infragistics Excel Library supports the referencing of cells and regions by name through the `getCell` and `getRegion` methods of the `Worksheet` object. You refer to the cell or region using the `NamedReference` instance that refers to that cell or region.
 
-以下のコードスニペットは、セルまたは領域の名前の例です。
+You can use the following code snippet as an example for naming a cell or region:
 
 ```typescript
 var workbook = new Workbook();      
@@ -67,18 +67,18 @@ var cell_reference = workbook.namedReferences().add("myCell", "=Sheet1:A1");
 var region_reference = workbook.namedReferences().add("myRegion", "=Sheet1!A1:B2");
 ```
 
-以下のコードは、"myCell" と "myRegion" 名前付き参照によって参照されたセルと領域を取得する例です。
+The following code can be used to the get the cell and region referenced by the "myCell" and "myRegion" named references above:
 
 ```typescript
 var cell = worksheet.getCell("myCell");
 var region = worksheet.getRegion("myRegion");
 ```
 
-### セルにコメントを追加 
+### Adding a Comment to a Cell
 
-コメントによって、エンドユーザーがマウスをセル上にホバーするとセルのヒントまたはメモを表示することができます。コメントはテキストを含むツールチップのような吹き出しとして表示します。Infragistics Excel Library は `WorksheetCell` オブジェクトの `comment` プロパティでセルにコメントを追加できます。
+A comment allows you to display hints or notes for a cell when the end user’s mouse hovers over a cell. The comments display as a tooltip-like callout that contains text. The Infragistics Excel Library allows you to add comments to a cell by setting a `WorksheetCell` object’s `comment` property.
 
-以下のコード例は、セルにコメントを追加する方法を示します。
+The following example code demonstrates how to add a comment to a cell:
 
 ```typescript
 var workbook = new Workbook();  
@@ -89,13 +89,13 @@ var commentText = new FormattedString("This cell has a comment.");
 cellComment.text = commentText;
 
 worksheet.rows(0).cells(0).comment = cellComment;
-```    
+```
 
-### セルに数式を追加
+### Adding a Formula to a Cell
 
-Infragistics Excel ライブラリは、ワークシートでセルまたはセルのグループに Microsoft Excel の数式を追加できます。`WorksheetCell` オブジェクトの `applyFormula` メソッドを使用、または `Formula` オブジェクトを初期化してセルに割り当てることができます。セルに数式を適用する方法に関わらず、`WorksheetCell` オブジェクトのプロパティを使用して `Formula` オブジェクトにアクセスできます。値が必要な場合、セルの `Value` プロパティを使用します。
+The Infragistics Excel Library allows you to add Microsoft Excel formulas to a cell or group of cells in a worksheet. You can do this using the `WorksheetCell` object’s `applyFormula` method or by instantiating a `Formula` object and applying it to a cell. Regardless of the manner in which you apply a formula to a cell, you can access the `Formula` object using the `WorksheetCell` object’s `Formula` property. If you need the value, use the cell’s `Value` property.
 
-以下のコードは、セルに数式を追加する方法を示します。
+The following code shows you how to add a formula to a cell.
 
 ```typescript
  var workbook = new Workbook();
@@ -107,11 +107,11 @@ Infragistics Excel ライブラリは、ワークシートでセルまたはセ�
  sumFormula.applyTo(worksheet.rows(5).cells(0));
 ```
 
-### セル書式のコピー
+### Copying a Cell’s Format
 
-セルには背景色、書式文字列、フォント スタイルなどさまざまな書式を持つことができます。以前書式設定したセルと同じ書式を持つようにする場合、`WorksheetCell` オブジェクトの  `cellFormat` プロパティで公開した各オプションを設定する代わりに`CellFormat` オブジェクトの `setFormatting` メソッドを呼び出して `CellFormat` オブジェクトへ渡してコピーします。これによって最初のセルから 2 番目のセルにすべての書式設定をコピーします。行、結合セル領域、または列でも行うことができます。
+Cells can have different formatting, including background color, format string, and font style. If you need a cell to have the same format as a previously formatted cell, instead of individually setting each option exposed by the `WorksheetCell` object’s `cellFormat` property, you can call the `CellFormat` object’s `setFormatting` method and pass it a `CellFormat` object to copy. This will copy every format setting from the first cell to the second cell. You can also do this for a row, merged cell region, or column.
 
-以下のコードは、2 列目の書式を 4 列目にコピーする方法を示します。
+The following code shows you how to copy the format of the 2nd column to the 4th column:
 
 ```typescript
 var workbook = new Workbook();
@@ -125,15 +125,15 @@ worksheet.columns(1).cellFormat.font.bold = true;
 worksheet.columns(3).cellFormat.setFormatting(worksheet.columns(1).cellFormat);
 ```
 
-### セルの書式設定
+### Formatting a Cell
 
-Infragistics Excel Library は、セルの外観と動作をカスタマイズすることができます。`WorksheetCell`、`WorksheetRow`、`WorksheetColumn`、または `WorksheetMergedCellsRegion` オブジェクトの `cellFormat` プロパティで公開したプロパティを設定してセルをカスタマイズできます。
+The Infragistics Excel Library allows you to customize the look and behavior of a cell. You can customize a cell by setting properties exposed by the `cellFormat` property of the `WorksheetCell`, `WorksheetRow`, `WorksheetColumn`, or `WorksheetMergedCellsRegion` objects.
 
-セル外観の各アスペクトをカスタマイズできます。セルのフォント、背景、境界線だけでなくテキストの配列と回転を設定できます。セルのテキストで文字ごとに異なる書式を適用することさえ可能です。
+You can customize every aspect of a cell’s appearance. You can set a cell’s font, background, and borders, as well as text alignment and rotation. You can even apply a different format on a character-by-character basis for a cell’s text.
 
-書式文字列を指定することによってセル値を書式設定することも可能です。許容可能な書式文字列は .NET の標準書式および書式コードに従います。
+You can also format cell values by assigning a format string. An acceptable format string follows the traditional format standards and formatting codes.
 
-以下のコードは、セルの書式設定と数値を通貨として表示する方法を示します。
+The following code shows you how to format a cell to display numbers as currency:
 
 ```typescript
 var workbook = new Workbook(format);      
@@ -142,31 +142,31 @@ var workbook = workbook.worksheets().add("Sheet1");
 worksheet.columns(2).cellFormat.formatString = "\"$\"#,##0.00";
 ```
 
-### Excel 2007 カラー モデル
+### Excel 2007 Color Model
 
-このカラー パレットは Microsoft Excel 2007 UI のカラー ダイアログと似ています。[Excel オプション] => [保存] => [色] からこのカラー ダイアログを開くことができます。
+The color palette is analogous to the color dialog in Microsoft Excel 2007 UI. You can open this color dialog by navigating to Excel Options => Save => Colors.
 
-`CellFill` クラスで静的なプロパティおよびメソッドを使用してすべての可能な塗りつぶしタイプを作成できます。以下の通りです:
+You can create all possible fill types using static properties and methods on the `CellFill` class. They are as follows:
 
-- `noColor` - 色なしの塗りつぶしを表すプロパティ。ワークシートの背景画像がある場合は透けて見えます。
+-   `noColor` - A property that represents a fill with no color, which allows a background image of the worksheet, if any, to show through.
 
-- `createSolidFill` - Solid のパターン スタイルと、メソッドで指定された `Color` または `WorkbookColorInfo` に設定された背景色を持つ `CellFillPattern` インスタンスを返します。
+-   `createSolidFill` - Returns a `CellFillPattern` instance which has a pattern style of `Solid` and a background color set to the `Color` or `WorkbookColorInfo` specified in the method.
 
-- `createPatternFill` - 指定されたパターン スタイルと、背景とパターンの色に指定された `Color` または `WorkbookColorInfo` 値がある `CellFillPattern` インスタンスを返します。
+-   `createPatternFill` - Returns a `CellFillPattern` instance which has the specified pattern style and the `Color` or `WorkbookColorInfo` values, specified for the background and pattern colors.
 
-- `createLinearGradientFill` - 角度とグラデーション境界が指定された `CellFillLinearGradient` インスタンスを返します。
+-   `createLinearGradientFill` - Returns a `CellFillLinearGradient` instance with the specified angle and gradient stops.
 
-- `createRectangularGradientFill` - 内側の長方形とグラデーション境界の左、上、右、下が指定された `CellFillRectangularGradient` インスタンスを返します。内側の四角形値が指定されていない場合、セルの中心が内側の四角形として使用されます。
+-   `createRectangularGradientFill` - Returns a `CellFillRectangularGradient` instance with the specified left, top, right, and bottom of the inner rectangle and gradient stops. If the inner rectangle values are not specified, the center of the cell is used as the inner rectangle.
 
-作成可能なさまさまな塗りつぶしを表す派生タイプは以下の通りです:
+The derived types, representing the various fills which can be created, are as follows:
 
-- `CellFillPattern` - 色なし、単色、パターン塗りつぶしのセル塗りつぶしを表すパターン。Excel の [セルの書式設定] ダイアログの [塗りつぶし] タブに、カラー セクションに直接対応する背景色の情報とパターンの色があります。
+-   `CellFillPattern` - A pattern that represents a cell fill of no color, a solid color, or a pattern fill for a cell. It has background color info and a pattern color info which correspond directly to the color sections in the Fill tab of the Format Cells dialog of Excel.
 
-- `CellFillLinearGradient` - 線状グラデーションの塗りつぶしを表します。角度 (左から右の線状グラデーションの時計回りの角度) と、グラデーションの長さに沿って 2 つ以上の色のトランジションを説明するグラデーション境界コレクションがあります。
+-   `CellFillLinearGradient` - Represents a linear gradient fill. It has an angle, which is degrees clockwise of the left to right linear gradient, and a gradients stops collection which describes two or more color transitions along the length of the gradient.
 
-- `CellFillRectangularGradient` - 長方形グラデーションの塗りつぶしを表します。相対座標で、グラデーションが開始し、セルの端で終わる内側の四角形を説明する上、左、右、下の値があります。内側の四角形からセルの端までのパスに沿って 2 つ以上の色のトランジションを説明するグラデーション境界コレクションもあります。
+-   `CellFillRectangularGradient` - Represents a rectangular gradient fill. It has top, left, right, and bottom values, which describe, in relative coordinates, the inner rectangle from which the gradient starts and goes out to the cell edges. It also has a gradient stops collection which describes two or more color transitions along the path from the inner rectangle to the cell edges.
 
-以下のコード スニペットは、`WorksheetCell` で単色の塗りつぶしを作成する方法を示します。
+The following code snippet demonstrates how to create a solid fill in a `WorksheetCell`:
 
 ```typescript
 var workbook = new Workbook();
@@ -176,89 +176,89 @@ var cellFill = CellFill.createSolidFill("Blue");
 worksheet.rows(0).cells(0).cellFormat.Fill = cellFill;
 ```
 
-セルで線状グラデーションと長方形グラデーションを使用して、色 (Excel セルの背景、罫線などの色) を指定できます。これらのグラデーションを付けられたワークブックを .xls ファイル形式で保存して、Excel 2007/2010 で開いたとき、グラデーションを表示したいが、これらのファイルを Microsoft Excel 2003 で開くときは、最初のグラデーション境界からのベタ一色の色でセルが塗りつぶされるようにしたいです。
+You can specify a color (the color of Excel cells background, border, etc) using linear and rectangular gradients in cells. When workbooks with these gradients are saved in .xls file format and opened in Microsoft Excel 2007/2010, the gradients will be visible, but when these files are opened in Microsoft Excel 2003, the cell will be filled with the solid color from the first gradient stop.
 
-これらは、以下のように色を定義できる方法です:
+These are the ways a color can be defined, as follows:
 
-- 自動的な色 (WindowText システム カラー)
+-   The automatic color (which is the WindowText system color)
 
-- 任意のユーザー定義の RGB カラー
+-   Any user defined RGB color
 
-- テーマの色
+-   A theme color
 
-RGB またはテーマの色が使用される場合、色を明るくする、または暗くするためにオプションの濃淡を適用できます。この濃淡は Microsoft Excel 2007 UI では直接設定できませんが、ユーザーに表示されるカラー パレットのさまざまな色が濃淡が適用された実際的なテーマの色になります。
+If an RGB or a theme color is used, an optional tint can be applied to lighten or darken the color. This tint cannot be set directly in Microsoft Excel 2007 UI, but various colors in the color palette displayed to the user are actually theme colors with tints applied.
 
-各ワークブックは 12 の関連付けられたテーマの色があります。これらは以下の通りです:
+Each workbook has 12 associated theme colors. They are the following:
 
-- ライト 1
+-   Light 1
 
-- ライト 2
+-   Light 2
 
-- ダーク 1
+-   Dark 1
 
-- ダーク 2
+-   Dark 2
 
-- アクセント1
+-   Accent1
 
-- アクセント2
+-   Accent2
 
-- アクセント3
+-   Accent3
 
-- アクセント4
+-   Accent4
 
-- アクセント5
+-   Accent5
 
-- アクセント6
+-   Accent6
 
-- ハイパーリンク
+-   Hyperlink
 
-- 表示済みハイパーリンク
+-   Followed Hyperlink
 
-- これらはワークブックが作成されるときの既定値で、Excel を介してカスタマイズできます。
+-   There are default values when a workbook is created, which can be customized via Excel.
 
-色は、シールされた不変クラスである、`WorkbookColorInfo` クラスで定義されます。このクラスには静的な `automatic` プロパティがあり、自動的な色を返します。色またはテーマ値とオプションの濃淡で `WorkbookColorInfo` インスタンスを作成することを可能にするさまざまなコンストラクターがあります。
+Colors are defined by the `WorkbookColorInfo` class, which is a sealed immutable class. The class has a static `automatic` property, which returns the automatic color, and there are various constructors which allow you to create a `WorkbookColorInfo` instance with a color or a theme value and an optional tint.
 
-`WorkbookColorInfo` の `getResolvedColor` メソッドは、Excel でファイルを開く際にユーザーに実際に表示される色を決定することが可能となります。
+The `getResolvedColor` method on `WorkbookColorInfo` allows you to determine what color will actually be seen by the user when they open the file in Excel.
 
-`WorkbookColorInfo` がテーマの色を表す場合、Workbook インストールをこのメソッドに渡す必要があります。これによってテーマの色の RGB 値をワークブックから取得できます。
+If the `WorkbookColorInfo` represents a theme color, you must pass in a Workbook instance to the method so it can get the theme color’s RGB value from the workbook.
 
-.xlsx など新しいファイル形式で保存するときは、より新しい色の情報が直接ファイルに保存されます。.xls など古いファイル形式で保存するときは、パレットで最も近い色のインデックスが保存されます。さらに、古い形式には、新しい色の情報を示すために保存できる将来の機能レコードがあります。
+When saving out in the newer file formats such as .xlsx, the newer color information is saved directly into the file. When saving out in an older file format such as .xls, the index to the closest color in the palette will be saved out. In addition, the older formats have future feature records that can be saved out to indicate the newer color information.
 
-古い形式が Microsoft Excel 2003 以前のバージョンで開かれると機能が無視されますが Excel 2007 以降で開かれるとレコードが読み取られて色情報が標準形式レコードから以前読み込まれたインデックス付きの色を上書きします。
+When the older formats are opened in Microsoft Excel 2003 and earlier versions, these future features records are ignored, but when the older file formats are opened in Excel 2007 and later, their records are read and the color information from them overwrites the indexed color that was previously loaded from the normal format records.
 
-### Excel 書式設定のサポート
+### Excel Format Support
 
-セルの `cellFormat` プロパティから返された `CellFormat` オブジェクトを使用して `WorksheetCell` でさまざまな形式のホストを設定できます。この `CellFormat` オブジェクトはさまざまなセルの側面 (境界線、フォント、塗りつぶし、配置) のスタイル設定、セルのサイズ自動調整やロックなどを設定できます。
+You can set a host of different formats on a `WorksheetCell` by using the `CellFormat` object returned by the `cellFormat` property of that cell. This `CellFormat` object enables you to style many different aspects of the cell such as borders, font, fill, alignments, and whether or not the cell should shrink to fit or be locked.
 
-`Workbook` オブジェクトの `styles` コレクションを使用して Microsoft Excel 2007 ビルトイン スタイルにアクセスできます。Excel のスタイル リストは、Microsoft Excel 2007 で [ホーム] タブの [セルのスタイル] ギャラリーにあります。
+You can also access the built-in styles to Microsoft Excel 2007 using the `styles` collection of the `Workbook` object. The full list of styles in Excel can be found in the Cell Styles gallery of the Home tab of Microsoft Excel 2007.
 
-ワークブックの `styles` コレクションに標準スタイルという特別なタイプのスタイルがあり、コレクションの `normalStyle` プロパティによって、または Normal という名前でコレクションにインデックスしてアクセスできます。
+There is a special type of style on the workbook's `styles` collection known as the "normal" style, which can be accessed using that collection's `normalStyle` property, or by indexing into the collection with the name "Normal".
 
-`normalStyle` にはワークブックのすべてのセルのデフォルトのプロパティが含まれています。ただし、行、列またはセルで指定されている場合はその限りではありません。`normalStyle` でプロパティを変更すると、ワークブックのすべてのデフォルトのセル書式プロパティが変更されます。ワークブックの既定のフォント以外に変更したい場合などに便利です。
+The `normalStyle` contains the default properties for all cells in the workbook, unless otherwise specified on a row, column, or cell. Changing the properties on the `normalStyle` will change all of the default cell format properties on the workbook. This is useful, for example, if you want to change the default font for your workbook.
 
-以下のメソッドを使用して`styles` コレクションのクリア、または `clear` や `reset` メソッドで定義された状態にリセットすることができます。両メソッドはすべてのユーザー定義スタイルを削除しますが `clear` は `styles` コレクション全体をクリアします。
+You can clear the `styles` collection or reset it to its predefined state by using the `clear` and `reset` methods, respectively. Both of these will remove all user-defined styles, but `clear` will clear the `styles` collection entirely.
 
-この機能では、`style` プロパティが `CellFormat` オブジェクトに追加されています。これは書式の親スタイルを表す、`WorkbookStyle` インターフェイスへの参照です。スタイルの書式では、このプロパティは常に null です。スタイルが親スタイルを持つことができないためです。行、列およびセル書式には、`style` プロパティが常にデフォルトで `normalStyle` スタイルを返します。
+With this feature, a `style` property has been added to the `CellFormat` object. This is a reference to a `WorkbookStyle` instance, representing the parent style of the format. For formats of a style, this property will always be null, because styles cannot have a parent style. For row, column, and cell formats, the `style` property always returns the `normalStyle` by default.
 
-`style` プロパティを null に設定した場合、`normalStyle` スタイルに戻ります。スタイル コレクションで別のスタイルに設定される場合、そのスタイルはセル書式にすべての未設定のプロパティのデフォルトを保持するようになります。
+If the `style` property is set to null, it will revert back to the `normalStyle`. If it is set to another style in the styles collection, that style will now hold the defaults for all unset properties on the cell format.
 
-`style` プロパティをセル書式に設定した場合、`style` に含まれる書式オプションはセル書式から削除されます。すべてのその他のプロパティはそのまま残されます。たとえば、境界線の書式を含むセル スタイルを作成してスタイルをセルの `style` として設定した場合、セル書式の境界線の書式オプションは削除され、セル書式に塗りつぶしの書式のみ含まれます。
+When the `style` property is set on a cell format, the format options included on the `style` are removed from the cell format. All other properties are left intact. For example, if a cell style including border formatting was created and that style was set as the cell's `style`, the border format option on the cell format would be removed and the cell format only includes fill formatting.
 
-書式オプション フラグが書式から削除されると、すべての関連付けたプロパティは未設定値にリセットされます。したがってセル書式の罫線プロパティはデフォルト/未設定値に暗黙的にリセットされます。
+When a format option flag is removed from a format, all associated properties are reset to their unset values, so the cell format’s border properties are implicitly reset to default/unset values.
 
-行、列、セルおよび結合セルを表すクラスで、`getResolvedCellFormat` メソッドを使用することで、セルに実際に何が表示されるかを決定できます。
+You can determine what would really be seen in cells by using the `getResolvedCellFormat` method on classes which represent a row, column, cell, and merged cell.
 
-このメソッドは、ベースとなった関連付けられた `CellFormat` に参照を返す `cellFormat` インスタンスを返します。そのため `CellFormat` プロパティへの以降の変更は、`getResolvedCellFormat` の呼び出しから返されるインスタンスに反映されます。
+This method returns a `CellFormat` instance which refers back to the associated `cellFormat` on which it is based. So subsequent changes to the `CellFormat` property will be reflected in the instance returned from a `getResolvedCellFormat` call.
 
-### セルの結合
+### Merging Cells
 
-セルの値または書式の設定以外に、2 つ以上のセルをひとつのセルとして表示するためにセルを結合することができます。セルを結合する場合、長方形の領域内にセルがなければなりません。
+Aside from setting the value or format of cells, you can also merge cells to make two or more cells appear as one. If you merge cells, they must be in a rectangular region.
 
-セルを結合した場合、領域の各セルが同じ値とセル書式になります。結合セルは同じ `WorksheetMergedCellsRegion` オブジェクトに関連付けされ、`associatedMergedCellsRegion` プロパティからアクセスできるようになります。`WorksheetMergedCellsRegion` オブジェクトも結果としてセルと同じ値およびセル書式になります。
+When you merge cells, each cell in the region will have the same value and cell format. The merged cells will also be associated with the same `WorksheetMergedCellsRegion` object, accessible from their `associatedMergedCellsRegion` property. The resultant `WorksheetMergedCellsRegion` object will also have the same value and cell format as the cells.
 
-領域または領域内の任意のセルの値（またはセル書式）を設定すると、すべてのセルおよび領域の値を変更します。セルを結合を解除する場合、以前結合したセルすべて結合以前に指定された共有のセル書式を保持します。ただし、領域の左上のセルのみが共有値を保持します。
+Setting the value (or cell format) of the region or any cell in the region will change the value of all cells and the region. If you unmerge cells, all of the previously merged cells will retain the shared cell format they had before they were unmerged. However, only the top-left cell of the region will retain the shared value.
 
-結合されたセル領域を作成するには、セルの範囲を `Worksheet` オブジェクトの `mergedCellsRegions` コレクションに追加する必要があります。このコレクションは、4 つの整数パラメーターを取得する `add` メソッドを公開します。4 つのパラメーターは、開始する行と列（左上隅のセル）のインデックス、および終了する行と列（右下隅のセル）のインデックスを決定します。
+In order to create a merged cell region, you must add a range of cells to the `Worksheet` object’s `mergedCellsRegions` collection. This collection exposes an `add` method that takes four integer parameters. The four parameters determine the index of the starting row and column (top-left most cell) and the index of the ending row and column (bottom-right most cell).
 
 ```typescript
 var workbook = new Workbook();
@@ -280,51 +280,51 @@ mergedRegion1.value = "Day 1";
 worksheet.rows(0).cells(2).cellFormat.alignment = HorizontalCellAlignment.Center;
 ```
 
-### Excel に表示されるセル テキストを取得 
+### Retrieving the Cell Text as Displayed in Excel
 
-セルに表示されるテキストは、書式文字列やセルが含まれる列幅など実際のセル値以外の複数の要因に依存します。
+The text displayed in a cell depends on several factors other than the actual cell value, such as the format string and the width of the column that the cell is contained in.
 
-書式文字列は、セルの値がテキストに変換される方法と、書式設定された値でどのリテラル文字が表示されるのかを決定します。ここで書式コードに関する詳細情報を見つけることができます。
+The format string determines how the value of cell is converted to text and what literal character should be displayed with the formatted value. You can find more detailed information about format codes here.
 
-セルで使用可能な水平領域の量は、値がユーザーに表示される方法に大きく影響します。
+The amount of horizontal space available in a cell plays a big part in how the value is displayed to the user.
 
-さまざまな列幅に基づいて表示されるテキストは異なります。
+Displayed text can be different depending on varying column widths.
 
-数字を表示して “General” または “@” を含む書式文字列を使用するとき、セルの幅に合った書式設定を見つけるさまざまな書式があります。以下は書式の例です。
+When displaying numbers and using format string containing “General” or “@”, there are various formats which are tried to find a formatting which fits the cell width. A list of example formats are shown below:
 
-- `Normal Value` - スペースに制限がない場合と同じように数字が表示されます。
+-   `Normal Value` - Number is displayed as it would be if there is unlimited amount of space.
 
-- `10 進数の削除` - 10 進数は、一致する書式が見つかるまで 1 つづつ削除されます。たとえば、値 12345.6789 値は次の書式に一致するまで減らされます。 12345.679、12345.68、12345.7、12346。最初の有効数字が 1 つだけ残るとこれは停止します。したがって、たとえば 0.0001234567890 のような値は 0.0001 に短縮されます。
+-   `Remove decimal digits` - Decimal digits will be removed one at a time until a format is found which fits. For example, a value of 12345.6789 will be reduced to the following formats until one fits: 12345.679, 12345.68, 12345.7, and 12346. This will stop when the first significant digit is the only one left, so for example value like 0.0001234567890 can only be reduced to 0.0001.
 
-- `指数、5 decimal digits` - 数字は 1.23457E+09 または 1.23457E-04 などの 0.00000E+00 の形式で表示されます。
+-   `Scientific, 5 decimal digits` - Number is displayed in the form of 0.00000E+00, such as 1.23457E+09, or 1.23457E-04
 
-- `指数、4 decimal digits` - 数字は 1.23457E+09 または 1.23457E-04 などの 0.0000E+00 の形式で表示されます。
+-   `Scientific, 4 decimal digits` - Number is displayed in the form of 0.0000E+00, such as 1.2346E+09, or 1.23456E-04
 
-- `指数、3 decimal digits` - 数字は 1.235E+09 または 1.235E-0 などの 0.000E+00 の形式で表示されます。
+-   `Scientific, 3 decimal digits` - Number is displayed in the form of 0.000E+00, such as 1.235E+09, or 1.235E-0
 
-- `指数、2 decimal digits` - 数字は 1.23E+09 または 1.23E-04 などの 0.00E+00 の形式で表示されます。
+-   `Scientific, 2 decimal digits` - Number is displayed in the form of 0.00E+00, such as 1.23E+09, or 1.23E-04
 
-- `指数、1 decimal digits` - 数字は 1.2E+09 または 1.2E-04 などの 0.0E+00 の形式で表示されます。
+-   `Scientific, 1 decimal digits` - Number is displayed in the form of 0.0E+00, such as 1.2E+09, or 1.2E-04
 
-- `指数、0 decimal digits` - 数字は 1E+09 または 1E-04 などの 0E+00 の形式で表示されます。
+-   `Scientific, 0 decimal digits` - Number is displayed in the form of 0E+00, such as 1E+09, or 1E-04
 
-- `四捨五入された値` - 最初の有効数字が数の 10 進部分にある場合、値は直近の整数値に丸められます。たとえば、値 0.0001234567890 の場合、0 に四捨五入され、セルに表示されるテキストは 0になります。
+-   `Rounded value` - If the first significant digit is in the decimal potion of the number, the value will be rounded to the nearest integer value. For example, for a value 0.0001234567890, it will be rounded to 0, and the displayed text in cell will be 0.
 
-- `Hash marks` - 数の凝縮されたバージョンを表示できる場合、ハッシュ (#) がセルの幅一杯繰り返されます。
+-   `Hash marks` - If no condensed version of the number can be displayed, hashes (#) will be repeated through the width of the cell.
 
-- `Empty string` - ハッシュ マークでセルを埋められない場合、空の文字列が表示されるセル テキストとして返されます。
+-   `Empty string` - If no hash marks can fit in the cell, an empty string will be returned as displayed cell text.
 
-数値の書式文字列に General または @ が含まれない場合、以下の段階のサイズ変更しかありません。普通の値、ハッシュ マーク、空の文字列。
+If the format string for numeric value does not contain General or @, there are only the following stages of resizing: Normal value, Hash marks, Empty string
 
-テキストがセルで使用される場合、切り取られる、またはセル内にないにかかわらず、セルに表示されるテキストは常にフル値です。
+If a text is used in the cell, the cell displayed text will always be full value, regardless of whether it is cut off or not in the cell.
 
-これが該当しない唯一のときは、パディング文字が書式文字列で使用される時です。テキストのために十分な余地がないとき、値はすべてのハッシュ マークとして表示されます。
+The only time when this is not the case is when padding characters are used in format string. Then the value will be displayed as all hash marks when there is not enough room for the text.
 
-ワークシートの `displayOptions` の `showFormulasInCells` プロパティを設定してセルに結果の代わりに数式を表示できます。書式文字列やセル幅は無視されます。テキスト値は書式文字列が @ であるかのように表示します。整数でない数値は書式文字列が 0.0 であるかのように表示し、整数の数値は書式文字列が 0 のように表示します。
+You can set the worksheet's `displayOptions`' `showFormulasInCells` property to  have formulas be displayed in cells instead of their results, and format strings and cell widths are ignored. Text values display as if their format string were @ , non-integral numeric values display as if their format string were 0.0 and integral numeric values display as if their format string were 0 .
 
-さらに、値が合わない場合、すべてのハッシュとして表示しません。完全に表示できないとしても、表示テキストはセル テキストとしてフル テキストを今まで通り返します。
+Additionally, if the value cannot fit, it will not display as all hashes. Display text will still return its full text as the cell text, even though it may not be fully seen.
 
-以下のコード スニペットは、`getText` メソッドを使用して Excel で表示されるようなテキストを取得する方法を示します。
+The following code snippet demonstrates the usage of the `getText` method to get the text as it would be displayed in Excel:
 
 ```typescript
 var workbook = new Workbook();

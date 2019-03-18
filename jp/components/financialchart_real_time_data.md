@@ -4,9 +4,10 @@ _description: Ignite UI for Angular Financial Chart コンポーネントは簡�
 _keywords: Ignite UI for Angular, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular チャート, Angular チャート コントロール, Angular チャート例, Angular チャート コンポーネント, Angular Financial Chart
 _language: ja
 ---
+
 ## リアルタイム データにバインド
 
-`igx-financial-chart` コントロールはリアルタイムでデータの描画をすばやく処理できるコントロールです。以下のデモでは、Financial Chart のデータが高頻度で更新されています。
+`IgxFinancialChart` コントロールはリアルタイムでデータの描画をすばやく処理できるコントロールです。以下のデモでは、Financial Chart のデータが高頻度で更新されています。
 
 ### デモ
 
@@ -20,7 +21,6 @@ _language: ja
 
 <div class="divider--half"></div>
 
-
 ### コード例
 
 高頻度でデータを更新するファイナンシャル チャート コントロールを作成するには、データ ソースの最初のデータ項目を削除し、新しいデータ項目をデータの最後に追加します。また、チャートに変更について通知するために `notifyRemoveItem` および `notifyInsertItem` 関数を呼び出します。バインドしたデータの変更をチャートに通知する方法の詳細については、ファイナンシャル チャートの `notify*` メソッドを参照してください。
@@ -28,7 +28,6 @@ _language: ja
 以下の例は、高頻度のデータ更新について Financial Chart を通知する方法を紹介します。
 
 ```typescript
-
 private tick(): void {
     const newVal = this.getValue();
     const oldVal = this.data[0];
@@ -39,14 +38,14 @@ private tick(): void {
     this.data.splice(0, 1);
     this.chart.notifyRemoveItem(this.data, 0, oldVal);
 }
-
 ```
 
 <div class="divider--half"></div>
 
 ### 追加のリソース
+
 <div class="divider--half"></div>
 
-* [チャートのパフォーマンス](financialchart_performance.md)
-* [大量のデータのバインド](financialchart_high_volume_data.md)
-* [複数データ ソースへのバインド](financialchart_binding_to_multiple_data.md)
+-   [チャートのパフォーマンス](financialchart_performance.md)
+-   [大量のデータのバインド](financialchart_high_volume_data.md)
+-   [複数データ ソースへのバインド](financialchart_binding_to_multiple_data.md)

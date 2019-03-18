@@ -1,9 +1,10 @@
 ---
 title: Linear Gauge コンポーネント - ネイティブ Angular | Ignite UI for Angular
 _description: Ignite UI for Angular の Linear Gauge コンポーネントを使用すると、値をスケールまたは複数の範囲に比較することを表示します。
-_keywords: Ignite UI for Angular, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular リニア ゲージ コンポーネント, Angular リニア ゲージ
+_keywords: Angular, Ignite UI for Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular リニア ゲージ コンポーネント, Angular リニア ゲージ
 _language: ja
 ---
+
 ## Linear Gauge
 
 Ignite UI for Angular の Linear Gauge コンポーネントは、値とスケールまたは複数の範囲に対する比較を表示します。
@@ -26,15 +27,24 @@ Ignite UI for Angular の Linear Gauge コンポーネントは、値とスケ�
 <div class="divider--half"></div>
 
 ### 依存関係
+
 gauges パッケージをインストールするときに core パッケージもインストールする必要があります。
 
-`npm install ignite-angular-gauges ignite-angular-core`
+**npm install igniteui-angular-gauges igniteui-angular-core**
 
-リニア ゲージが `NgModule` としてエクスポートされるため、アプリケーションで `AppModule` に _IgxLinearGaugeModule_ をインポートする必要があります。
+[!NOTE]
+
+> For Angular:
+> リニア ゲージが `NgModule` としてエクスポートされるため、アプリケーションで `AppModule` に _IgxLinearGaugeModule_ をインポートする必要があります。
+
+<!-- -->
+
+<!-- -->
 
 ```typescript
 // app.module.ts
-import { IgxLinearGaugeModule } from 'ignite-angular-gauges/ES5/igx-linear-gauge-module';
+import { IgxLinearGaugeModule } from 'igniteui-angular-gauges/ES5/igx-linear-gauge-module';
+import { IgxLinearGauge } from 'igniteui-angular-gauges/ES5/igx-linear-gauge';
 
 @NgModule({
     imports: [
@@ -44,6 +54,20 @@ import { IgxLinearGaugeModule } from 'ignite-angular-gauges/ES5/igx-linear-gauge
     ]
 })
 export class AppModule {}
+```
+
+```typescript
+import { IgrLinearGaugeModule } from 'igniteui-react-gauges/ES5/igr-linear-gauge-module';
+import { IgxLinearGauge } from 'ignite-react-gauges/ES5/igx-linear-gauge';
+
+IgrLinearGaugeModule.register();
+```
+
+```typescript
+import { IgcLinearGaugeModule } from 'igniteui-webcomponents-gauges/ES5/igc-linear-gauge-module';
+import { IgxLinearGauge } from 'ignite-webcomponents-gauges/ES5/igx-linear-gauge';
+
+IgcLinearGaugeModule.register();
 ```
 
 <div class="divider--half"></div>
@@ -75,10 +99,11 @@ export class AppModule {}
 ## 構成可能な要素
 
 ### 針
+
 これは、コンポーネントで表示されるプライマリ メジャーでバーで可視化されます。あるいは以下で示す図形のほとんどすべてをカスタマイズすることもできます。
 
 ```html
-<igx-linear-gauge
+ <igx-linear-gauge
     height="80px" width="400px"
     minimumValue=0
     maximumValue=100 interval=10
@@ -99,6 +124,7 @@ export class AppModule {}
     needleOuterBaseWidth=0.07>
 </igx-linear-gauge>
 ```
+
 <div class="sample-container loading" style="height: 125px">
     <iframe id="linear-gauge-needle-iframe" data-src='{environment:demosBaseUrl}/gauges/linear-gauge-needle' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
@@ -108,6 +134,7 @@ export class AppModule {}
 </div>
 
 ### 比較範囲
+
 範囲はスケールで指定した値の範囲を強調表示する視覚的な要素です。その目的は、パフォーマンス バー メジャーの質的状態を視覚で伝えると同時に、その状態をレベルとして示すことにあります。
 
 ```html
@@ -115,7 +142,6 @@ export class AppModule {}
     height="80px" width="400px"
     minimumValue=0 value=50
     maximumValue=100 interval=10
-
     rangeBrushes="#a4bd29, #F86232"
     rangeOutlines="#a4bd29, #F86232" >
     <igx-linear-graph-range
@@ -130,6 +156,7 @@ export class AppModule {}
     </igx-linear-graph-range>
 </igx-linear-gauge>
 ```
+
 <div class="sample-container loading" style="height: 125px">
     <iframe id="linear-gauge-ranges-iframe" data-src='{environment:demosBaseUrl}/gauges/linear-gauge-ranges' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
@@ -139,6 +166,7 @@ export class AppModule {}
 </div>
 
 ### 目盛
+
 目盛は、リニア ゲージを読み取りやすくするために、目盛の間隔でスケールを分割して見せる役割を果たします。
 
 主目盛 - 主目盛は、スケールの主要な区切りとして使用されます。表示間隔、範囲、およびスタイルは、対応するプロパティを設定し制御できます。
@@ -164,6 +192,7 @@ export class AppModule {}
     minorTickStrokeThickness=1>
 </igx-linear-gauge>
 ```
+
 <div class="sample-container loading" style="height: 125px">
     <iframe id="linear-gauge-tickmarks-iframe" data-src='{environment:demosBaseUrl}/gauges/linear-gauge-tickmarks' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
@@ -173,6 +202,7 @@ export class AppModule {}
 </div>
 
 ### ラベル
+
 ラベルはスケールのメジャーを示します。
 
 ```html
@@ -180,7 +210,6 @@ export class AppModule {}
     height="80px" width="400px"
     minimumValue=0 value=50
     maximumValue=100 interval=10
-
     labelInterval=10
     labelExtent=0.025
     labelsPreTerminal=0
@@ -199,6 +228,7 @@ export class AppModule {}
 </div>
 
 ### バッキング
+
 バッキング要素はブレット グラフ コントロールの背景と境界線を表します。常に最初に描画される要素でラベルやメモリなどの残りの要素は互いにオーバーレイします。
 
 ```html
@@ -206,7 +236,6 @@ export class AppModule {}
     height="80px" width="400px"
     minimumValue=0 value=50
     maximumValue=100 interval=10
-
     backingBrush="#bddcfc"
     backingOutline="DodgerBlue"
     backingStrokeThickness=4
@@ -224,6 +253,7 @@ export class AppModule {}
 </div>
 
 ### スケール
+
 スケールはゲージで値の全範囲を強調表示する視覚的な要素です。外観やスケールの図形のカスタマイズ、更にスケールを反転 (`isScaleInverted` プロパティを使用) させて、すべてのラベルを左から右ではなく、右から左へ描画することもできます。
 
 ```html
@@ -231,7 +261,6 @@ export class AppModule {}
     height="80px" width="400px"
     minimumValue=0 value=50
     maximumValue=100 interval=10
-
     isScaleInverted=false
     scaleBrush="DodgerBlue"
     scaleOutline="DarkViolet"
@@ -252,6 +281,7 @@ export class AppModule {}
 </div>
 
 ### まとめ
+
 上記すべてのコード スニペットを以下のコード ブロックにまとめています。プロジェクトに簡単にコピーしてブレットグラフのすべての機能を再現できます。
 
 ```html

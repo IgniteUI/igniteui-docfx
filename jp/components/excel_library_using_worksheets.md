@@ -4,35 +4,54 @@ _description: Ignite UI for Excel Library コンポーネントのワークシ�
 _keywords: Ignite UI for Angular, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular Excel ライブラリ, Angular Excel ライブラリ例,  Angular Excel Library コンポーネント, Angular Excel Engine、ワークシート, 条件付き書式, Sorting, フィルタリング、グリッド線, ヘッダー, 保護 
 _language: ja
 ---
-## ワークシートの使用
 
-Infragistics Excel Engine の `Worksheet` にデータが保存されます。Worksheet の行やセルにデータを入力でき、対応する値を設定できます。`Worksheet` は、フィルター、並べ替え、セル書式のカスタマイズができます。
+## Using Worksheets
 
-### デモ
+The Infragistics Excel Engine's `Worksheet` is where your data is kept. You can input data by working with the Worksheet's rows and cells and setting their corresponding values. The `Worksheet` allows you to filter, sort, and customize the formats of the cells, as shown below.
+
+### Demo
 
 <div class="sample-container loading" style="height: 100px">
     <iframe id="excel-library-overview-sample-iframe" src='{environment:demosBaseUrl}/excel-library/operations-on-worksheets' width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <!-- TODO uncomment when Stackblitz is ready for EXCEL
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="excel-library-operations-on-worksheets-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
-    </button> -->
-</div> 
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="excel-library-operations-on-worksheets-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+    </button> 
+</div>  
 
 <div class="divider--half"></div>
 
-### ガイドラインの設定
-グリッド線は、ワークシートでセルを視覚的に分離するために使用されます。グリッド線は表示または非表示にできます。また、色を変更することもできます。
+The following code shows the imports needed to use the code-snippets below:
 
-列と行のヘッダーは、ワークシートの displayOptions の `showGridlines` プロパティを使用して、表示と非表示を切り替えることができます。以下のコードは、ワークシートのグリッドラインを非表示にする方法を示します。
+```typescript
+import { Workbook } from "igniteui-angular-excel/ES5/Workbook";
+import { Worksheet } from "igniteui-angular-excel/ES5/Worksheet";
+import { WorkbookFormat } from "igniteui-angular-excel/ES5/WorkbookFormat";
+import { Color } from "igniteui-angular-core/ES5/Color";
+
+import { CustomFilterCondition } from "igniteui-angular-excel/ES5/excel.core";
+import { ExcelComparisonOperator } from "igniteui-angular-excel/ES5/excel.core";
+import { FormatConditionTextOperator } from "igniteui-angular-excel/ES5/excel.core";
+import { OrderedSortCondition } from "igniteui-angular-excel/ES5/excel.core";
+import { RelativeIndex } from "igniteui-angular-excel/ES5/excel.core";
+import { SortDirection } from "igniteui-angular-excel/ES5/excel.core";
+import { WorkbookColorInfo } from "igniteui-angular-excel/ES5/excel.core";
+```
+
+### Configuring the Gridlines
+
+The gridlines are used to visually separate the cells in the worksheet. You may show or hide the gridlines and also change their color.
+
+You can show or hide the gridlines using the `showGridlines` property of the `displayOptions` of the worksheet. The following code demonstrates how you can hide the gridlines in your worksheet:
 
 ```typescript
 var workbook = new Workbook(WorkbookFormat.Excel2007);
-var worksheet = workbook.worksheets().add("Sheet1");    
+var worksheet = workbook.worksheets().add("Sheet1");
+    
 worksheet.displayOptions.showGridlines = false;
 ```
 
-ワークシートの `displayOptions` の `gridlineColor` プロパティを使用して、グリッド線の色を設定できます。以下のコードは、ワークシートのグリッド線を変更する方法を示します。
+You can configure the gridlines' color using the `gridlineColor` property of the `displayOptions` of the worksheet. The following code demonstrates how you can change the gridlines in your worksheet to be red:
 
 ```typescript
 var workbook = new Workbook(WorkbookFormat.Excel2007);
@@ -41,21 +60,24 @@ var worksheet = workbook.worksheets().add("Sheet1");
 worksheet.displayOptions.gridlineColor = "Red";
 ```
 
-### ヘッダーの構成
-列ヘッダーと行ヘッダーは、列と行を視覚的に特定するために使用します。また、現在選択されているセルやセル領域を強調表示する場合にも使用します。
+### Configuring the Headers
 
-列と行のヘッダーは、ワークシートの `displayOptions`  の `showRowAndColumnHeaders` プロパティを使用して、表示と非表示を切り替えることができます。以下のコードは、列と行ヘッダーを非表示にする方法を示します。
+The column and row headers are used to visually identify columns and rows. They are also used to visually highlight the currently selected cell or cell region.
+
+You can show or hide the column and row headers using the `showRowAndColumnHeaders` property of the `displayOptions` of the worksheet. The following code demonstrates how you can hide the row and column headers:
 
 ```typescript
 var workbook = new Workbook(WorkbookFormat.Excel2007);
 var worksheet = workbook.worksheets().add("Sheet1");
+
 worksheet.displayOptions.showRowAndColumnHeaders = false;
 ```
 
-### ワークシートの編集を設定
-デフォルトで保存する `Worksheet` オブジェクトが有効です。`Worksheet` オブジェクトの `protect` メソッドを使用してワークシートを保護することにより、ワークシートの編集を禁止できます。このメソッドは、保護する部分を決定する null 許容型 `bool` 引数が多くあり、オプションの 1 つは編集オブジェクトを許容し、`false` に設定した場合はワークシートの編集を防止します。
+### Configuring Editing of the Worksheet
 
-以下のコードは、ワークシートで編集を無効にする方法を示します。
+By default, the `Worksheet` objects that you save will be editable. You can disable editing of a worksheet by protecting it using the `Worksheet` object's `protect` method. This method has a lot of nullable `bool` arguments that determine which pieces are protected, and one of these options is to allow editing of objects, which if set to `false` will prevent editing of the worksheet.
+
+The following code demonstrates how to disable editing in your worksheet:
 
 ```typescript
 var workbook = new Workbook(WorkbookFormat.Excel2007);
@@ -64,11 +86,11 @@ var worksheet = workbook.worksheets().add("Sheet1");
 worksheet.protect();
 ```
 
-`Worksheet` オブジェクトの `protect` メソッドを使用して構造変更からワークシートを保護できます。
+You can also use the `Worksheet` object's `protect` method to protect a worksheet against structural changes.
 
-保護が設定されると、Worksheet オブジェクトの保護をこれらのオブジェクトでオーバーライドするために、`CellFormat` オブジェクトの `locked` プロパティを各セル、行、マージされたセル領域、または列で設定することができます。たとえば、1 つの列のセルを除き、ワークシートのすべてのセルを読み取り専用にする必要がある場合、特定の `WorksheetColumn` オブジェクトで `CellFormat` プロパティの `locked` を `false` に設定します。これにより、その列内のセルの編集をユーザーに許可し、ワークシートの他のセルの編集は禁止できます。
+When protection is set, you can set the `CellFormat` object's `locked` property on individual cells, rows, merged cell regions, or columns to override the worksheet object's protection on those objects. For example, if you need all cells of a worksheet to be read-only except for the cells of one column, you can protect the worksheet and then set the `CellFormat` object's `locked` property to `false` on a specific `WorksheetColumn` object. This will allow your users to edit cells within the column while disabling editing of the other cells in the worksheet.
 
-以下のコードはその方法を示します。
+The following code demonstrates how you can do this:
 
 ```typescript
 var workbook = new Workbook(WorkbookFormat.Excel2007);
@@ -78,27 +100,28 @@ worksheet.protect();
 worksheet.columns(0).cellFormat.locked = false;
 ```
 
-### ワークシート領域のフィルタリング
-フィルタリングは、`Worksheet` オブジェクトの `filterSettings` プロパティから取得できるワークシートの `WorksheetFilterSettings` でフィルター条件を設定できます。フィルター条件は、フィルター条件追加、削除、変更される時に、または `reapplyFilters` メソッドがワークシートで呼び出されるときに限り再適用されます。フィルターは、領域内で常にデータを評価するわけではありません。
+### Filtering Worksheet Regions
 
-`WorksheetFilterSettings` オブジェクトの `setRegion` メソッドでフィルターを適用する領域を指定できます。
+Filtering is done by setting a filter condition on a worksheet's `WorksheetFilterSettings` which can be retrieved from the `Worksheet` object's `filterSettings` property. Filter conditions are only reapplied when they're added, removed, modified, or when the `reapplyFilters` method is called on the worksheet. They are not constantly evaluated as data within the region changes.
 
-以下は、フィルターをワークシートに追加するためのメソッド一覧と概要です。
+You can specify the region to apply the filter by using the `setRegion` method on the `WorksheetFilterSettings` object.
 
-| メソッド			|説明     																	|
-| ------------- 	|:-------------:																	|
-|`ApplyAverageFilter`|データ範囲全体の平均を下回るデータであるか上回るデータであるかという条件に基づいてデータを絞り込むことのできるフィルターです。|
-|`ApplyDatePeriodFilter`|月または四半期の日付をフィルターできるフィルターを表します。|
-|`ApplyFillFilter`|背景の塗りつぶしに基づいてセルを絞り込むフィルターを表します。このフィルターには CellFill を 1 つ指定します。この塗りつぶしのセルがデータ範囲に表示されることになります。他のセルはすべて非表示になります。|
-|`ApplyFixedValuesFilter`|具体的な指定値に基づいて表示セルを絞り込むことのできるフィルターです。|
-|`ApplyFontColorFilter`|フォントの色に基づいてセルを絞り込むフィルターを表します。このフィルターには 1 つの色を指定します。この色のフォントのセルがデータ範囲に表示されることになります。他のセルはすべて非表示になります。|
-|`ApplyIconFilter`|条件付き書式アイコンに基づいてセルを絞り込むフィルターを表します。|
-|`ApplyRelativeDateRangeFilter`|フィルターの適用日を基点とした相対日付によって日付セルの範囲を絞り込むことのできるフィルターです。|
-|`ApplyTopOrBottomFilter`|並べ替えられた値リストの上位または下位にあるセルを表示できるフィルターです。|
-|`ApplyYearToDateFilter`|日付セルの範囲を現在の年の開始日からフィルターの評価実施日までの期間に絞り込むことのできるフィルターです。|
-|`ApplyCustomFilter`|1 つ、ないし 2 つのカスタム条件に基づいてデータを絞り込むことのできるフィルターです。この 2 つの絞り込み条件は論理積 (and) または論理和 (or) 演算子と組み合わせて使用できます。|
+Below is a list of methods and their descriptions that you can use to add a filter to a worksheet:
 
-以下のコードスニペットを使用してフィルターをワークシート領域に追加します。
+| Method                         |                                                                                                    Description                                                                                                   |
+| ------------------------------ | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+| `ApplyAverageFilter`           |                                            Represents a filter which can filter data based on whether the data is below or above the average of the entire data range.                                           |
+| `ApplyDatePeriodFilter`        |                                                                  Represents a filter which can filter dates in a Month, or quarter of any year.                                                                  |
+| `ApplyFillFilter`              | Represents a filter which will filter cells based on their background fills. This filter specifies a single CellFill. Cells of with this fill will be visible in the data range. All other cells will be hidden. |
+| `ApplyFixedValuesFilter`       |                                                     Represents a filter which can filter cells based on specific, fixed values, which are allowed to display.                                                    |
+| `ApplyFontColorFilter`         |    Represents a filter which will filter cells based on their font colors. This filter specifies a single color. Cells with this color font will be visible in the data range. All other cells will be hidden.   |
+| `ApplyIconFilter`              |                                                              Represents a filter which can filter cells based on their conditional formatting icon.                                                              |
+| `ApplyRelativeDateRangeFilter` |                                                    Represents a filter which can filter date cells based on dates relative to the when the filter was applied.                                                   |
+| `ApplyTopOrBottomFilter`       |                                                         Represents a filter which can filter in cells in the upper or lower portion of the sorted values.                                                        |
+| `ApplyYearToDateFilter`        |                              Represents a filter which can filter in date cells if the dates occur between the start of the current year and the time when the filter is evaluated.                              |
+| `ApplyCustomFilter`            |                  Represents a filter which can filter data based on one or two custom conditions. These two filter conditions can be combined with a logical "and" or a logical "or" operation.                  |
+
+You can use the following code snippet as an example to add a filter to a worksheet region:
 
 ```typescript
 var workbook = new Workbook(WorkbookFormat.Excel2007);
@@ -108,14 +131,15 @@ worksheet.filterSettings.setRegion("Sheet1!A1:A10");
 worksheet.filterSettings.applyAverageFilter(0, AverageFilterType.AboveAverage);
 ```
 
-### ペインの固定と分割
-ペイン固定機能は、行をワークシートの上または列を左にで固定できます。ユーザーがスクロールしている間、固定した行や列は表示されたままになります。固定された行列は、削除できない実線によってワークシートの残りの部分と区切られます。
+### Freezing and Splitting Panes
 
-ペイン固定を有効にするために `Worksheet` オブジェクトの `displayOptions` の `panesAreFrozen` プロパティを `true` に設定する必要があります。表示オプション `frozenPaneSettings` の `frozenRows` と `frozenColumns` プロパティを使用して固定する行列を指定できます。
+You can freeze rows at the top of your worksheet or columns at the left using the freezing panes features. Frozen rows and columns remain visible at all times while the user is scrolling. The frozen rows and columns are separated from the rest of the worksheet by a single, solid line, which cannot be removed.
 
-また `firstRowInBottomPane` と `firstColumnInRightPane` を個々に使用して下ペインの最初の行または右ペインの最初の列を指定できます。
+In order to enable pane freezing, you need to set the `panesAreFrozen` property of the `Worksheet` object's `displayOptions` to `true`. You can then specify the rows or columns to freeze by using the `frozenRows` and `frozenColumns` properties of the display options `frozenPaneSettings`, respectively.
 
-以下のコード スニペットは、ワークシートのペイン機能を固定する方法を示します。
+You can also specify the first row in the bottom pane or first column in the right pane using the `firstRowInBottomPane` and `firstColumnInRightPane` properties, respectively.
+
+The following code snippet demonstrates how to use the freezing panes features in a worksheet:
 
 ```typescript
 var workbook = new Workbook(WorkbookFormat.Excel2007);
@@ -130,10 +154,11 @@ worksheet.displayOptions.frozenPaneSettings.firstColumnInRightPane = 2;
 worksheet.displayOptions.frozenPaneSettings.firstRowInBottomPane = 6;
 ```
 
-### ワークシート ズーム レベルの設定
-各ワークシートのズーム レベルは、`Worksheet` オブジェクトの `displayOptions` の `magnificationInNormalView` プロパティを使用して個別に変更できます。このプロパティは、10 から 400 の間の値を取得して適用したいズームのパーセンテージを表します。
+### Setting the Worksheet Zoom Level
 
-以下のコードはその方法を示します。
+You can change the zoom level for each worksheet independently using the `magnificationInNormalView` property on the `Worksheet` object's `displayOptions`. This property takes a value between 10 and 400 and represents the percentage of zoom that you wish to apply.
+
+The following code demonstrates how you can do this:
 
 ```typescript
 var workbook = new Workbook(WorkbookFormat.Excel2007);
@@ -142,14 +167,15 @@ var worksheet = workbook.worksheets().add("Sheet1");
 worksheet.displayOptions.magnificationInNormalView = 300;
 ```
 
-### ワークシート レベルの並べ替え
-列または行にワークシート レベル オブジェクトで並べ替えの条件を設定することによって並べ替えが実行されます。列または行を昇順または降順に並べ替えることができます。
+### Worksheet Level Sorting
 
-シートの `sortSettings` プロパティを使用して取得できる `Worksheet` オブジェクトの `WorksheetSortSettings` に領域と並べ替えタイプを指定し、シート`sortSettings` プロパティを使用して取得できます。
+Sorting is done by setting a sorting condition on a worksheet level object on either columns or rows. You can sort columns or rows in ascending or descending order.
 
-シートの並べ替え条件は、並べ替え条件が追加、削除、変更される時に、または `reapplySortConditions` メソッドがワークシートで呼び出されるときに限り再適用されます。列または行を領域で並べ替えます。'Rows' はデフォルトの並べ替えタイプです。
+This is done by specifying a region and sort type to the `Worksheet` object's `WorksheetSortSettings` that can be retrieved using the `sortSettings` property of the sheet.
 
-以下のコード スニペットは、ワークシートのセル領域を適用する方法を示します。
+The sort conditions in a sheet are only reapplied when sort conditions are added, removed, modified, or when the `reapplySortConditions` method is called on the worksheet. Columns or rows will be sorted within the region. "Rows" is the default sort type.
+
+The following code snippet demonstrates how to apply a sort to a region of cells in a worksheet:
 
 ```typescript
 var workbook = new Workbook(WorkbookFormat.Excel2007);
@@ -158,23 +184,24 @@ var worksheet = workbook.worksheets().add("Sheet1");
 worksheet.sortSettings.sortConditions().addItem(new RelativeIndex(0), new OrderedSortCondition(SortDirection.Ascending));
 ```
 
-### ワークシートの保護
-`Worksheet` オブジェクトで `protect` メソッドを呼び出してワークシートを保護できます。このメソッドは、以下のユーザー操作を制限または許容する null 許容型 `bool` パラメーターを公開します。
+### Worksheet Protection
 
-- セルの編集
-- 図形、コメント、チャートなどのオブジェクトやコントロールを編集します。
-- シナリオの編集。
-- データ フィルタリング。
-- セルの書式設定。
-- 列の挿入、削除、書式設定。
-- 行の挿入、削除、書式設定。
-- ハイパーリンクの挿入。
-- データの並べ替え。
-- ピボット テーブルの使用
+You can protect a worksheet by calling the `protect` method on the `Worksheet` object. This method exposes many nullable `bool` parameters that allow you to restrict or allow the following user operations:
 
-`Worksheet` オブジェクトで `unprotect` メソッドを呼び出してワークシートの保護を削除できます。
+-   Editing of cells.
+-   Editing of objects such as shapes, comments, charts, or other controls.
+-   Editing of scenarios.
+-   Filtering of data.
+-   Formatting of cells.
+-   Inserting, deleting, and formatting of columns.
+-   Inserting, deleting, and formatting of rows.
+-   Inserting of hyperlinks.
+-   Sorting of data.
+-   Usage of pivot tables.
 
-以下のコード スニペットは、上記にリストされたすべてのユーザー操作を保護を有効にします。
+You can remove worksheet protection by calling the `unprotect` method on the `Worksheet` object.
+
+The following code snippet shows how to enable protection of all of the above-listed user operations:
 
 ```typescript
 var workbook = new Workbook(WorkbookFormat.Excel2007);
@@ -183,16 +210,17 @@ var worksheet = workbook.worksheets().add("Sheet1");
 worksheet.protect();
 ```
 
-### ワークシートの条件付き書式設定
-`Worksheet` の条件付き書式を設定するには、ワークシートの `conditionalFormats` コレクションで公開される多数の Add メソッドを使用できます。この Add メソッドの最初のパラメーターは条件付き書式に適用する Worksheet の `string` 領域です。
+### Worksheet Conditional Formatting
 
-Worksheet に追加可能な条件付き書式にその条件が true の場合に `WorksheetCell`  要素の外観を決定する `cellFormat` プロパティがあります。たとえば、`Fill` や `Font` などのこの `cellFormat` プロパティにアタッチされるプロパティを使用してセルの背景およびフォント設定を決定できます。
+You can configure the conditional formatting of a `Worksheet` object by using the many "Add" methods exposed on the `conditionalFormats` collection of that worksheet. The first parameter of these "Add" methods is the `string` region of the worksheet that you would like to apply the conditional format to.
 
-ワークシート セルの可視化の動作が異なるため、`cellFormat` プロパティがない条件付き書式もあります。この条件付き書式は `DataBarConditionalFormat`、`ColorScaleConditionalFormat`、`IconSetConditionalFormat` です。
+Many of the conditional formats that you can add to your worksheet have a `cellFormat` property that determines the way that the `WorksheetCell` elements should look when the condition in that conditional format holds true. For example, you can use the properties attached to this `cellFormat` property such as `Fill` and `Font` to determine the background and font settings of your cells under a particular conditional format, respectively.
 
-既存の `Workbook` を Excel から読み込む場合、その `Workbook` を読み込んだときに書式設定が保持されます。`Workbook` を Excel ファイルに保存する場合も保持されます。
+There are a few conditional formats that do not have a `cellFormat` property, as their visualization on the worksheet cell behaves differently. These conditional formats are the `DataBarConditionalFormat`, `ColorScaleConditionalFormat`, and `IconSetConditionalFormat`.
 
-以下のコード例はワークシートの条件付き書式の使用方法を紹介します。
+When loading a pre-existing `Workbook` from Excel, the formats will be preserved when that `Workbook` is loaded. The same is true for when you save the `Workbook` out to an Excel file.
+
+The following code example demonstrates usage of conditional formats on a worksheet:
 
 ```typescript
 var workbook = new Workbook(WorkbookFormat.Excel2007);
