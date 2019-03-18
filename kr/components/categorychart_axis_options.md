@@ -1,31 +1,33 @@
 ---
 title: Axis Options
-_description: The Ignite UI for Category Chart component simplifies the complexities of the data visualization domain into manageable API so that a user can bind a collection of data, a group of collections, and a data property, and let the charting control do the rest.
-_keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Chart Control, Angular Chart Example, Angular Grid Component, Angular Chart Component, Angular Category Chart
+_description: Ignite UI for 카테고리 차트 컴포넌트는 데이터 시각화 도메인의 복잡성을 관리 가능한 API로 단순화하여 사용자가 데이터 수집, 그룹 수집, 데이터 속성을 바인딩하고 나머지는 차트 컨트롤이 실행할 수 있도록 합니다.
+_keywords: Ignite UI for Angular, Angular, 네이티브 Angular 컴포넌트 세트, 네이티브 Angular 컨트롤, 네이티브 Angular 컴포넌트, 네이티브 Angular 컴포넌트 라이브러리, Angular 차트, Angular 차트 컨트롤, Angular 차트 예제, Angular 그리드 컴포넌트, Angular 차트 컴포넌트, Angular 카테고리 차트
 _language: kr
 ---
+
 ## Axis Options
 
-In the Category Chart control, an Axis provides base properties for specifying appearance of axis main lines, tickmarks, titles, and axis labels.
+카테고리 차트 컨트롤에서는 축은 축 기본 선, 눈금 표시, 제목 및 축 레이블의 모양을 설정하는 기본 속성을 제공합니다.
 
-### Demo
+### 데모
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="category-chart-axis-options-sample-iframe" src='{environment:demosBaseUrl}/charts/category-chart-axis-options-sample' width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="category-chart-axis-options-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="category-chart-axis-options-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기
     </button>
 </div>
 
 <div class="divider--half"></div>
 
-By default, you do not need to explicitly set the labels. The Category Chart will use the first appropriate string property that it finds within the data you provided and will explicitly set which property to use for the labels.
+기본적으로 레이블을 명시적으로 설정할 필요는 없습니다. 카테고리 차트는 제공한 데이터 내에서 최초의 적절한 문자열 속성을 사용하고 레이블에 사용할 속성을 명시적으로 설정합니다.
 
-### Axis Labels
-The Category Chart control allows you full control over configuring, formatting and styling the font of the labels displayed on your chart. You can change the rotation angle, margin, horizontal/vertical alignment, opacity, padding and visibility.
+### 축 레이블
 
-The following code example shows how to style labels on the x-axis using style properties:
+카테고리 차트 컨트롤을 사용하면 차트에 표시되는 레이블의 구성, 서식 설정, 글꼴 스타일을 설정할 수 있습니다. 회전 각도, 여백, 수평/수직 정렬, 불투명도, 패딩, 표시 상태를 변경할 수 있습니다.
+
+다음 코드 예제에서는 스타일 속성을 사용하여 X축에 레이블을 스타일하는 방법을 보여줍니다.
 
 ```html
 <igx-category-chart
@@ -43,10 +45,11 @@ The following code example shows how to style labels on the x-axis using style p
 
 <div class="divider--half"></div>
 
-### Axis Titles
-The axis title feature of the Category Chart control allows you to add contextual information to the x and y axes of the chart. You can customize the look and feel of the Category Chart's x-axis and y-axis titles in many different ways such as applying different font styles, margins, and alignment.
+### 축 제목
 
-The following code example shows how to set and customize the titles on the x-axis and y-axis:
+카테고리 차트 컨트롤의 축 제목 기능을 사용하면 차트의 X축 및 Y축에 맥락 정보를 추가할 수 있습니다. 카테고리 차트는 X축 및 Y축 제목의 글꼴 스타일, 여백, 정렬 등을 다양하게 변경하여 룩 앤드 필을 사용자 정의할 수 있습니다.
+
+다음의 코드 예제는 X축 및 Y축의 제목을 설정하고 사용자 지정하는 방법을 보여줍니다.
 
 ```html
  <igx-category-chart
@@ -65,10 +68,11 @@ The following code example shows how to set and customize the titles on the x-ax
  </igx-category-chart>
 ```
 
-### Axis Tickmarks
-Tick marks display points on the axes. They represent a certain numeric point on a scale or the value of the category in a category axis. You can change the length, thickness and color of the x-axis and y-axis labels.
+### 축 눈금
 
-The following code snippet demonstrates how to set the color, length and thickness of the tickmark on the x-axis.
+눈금 표시는 축에 점을 표시합니다. 축적의 특정 수치 점 또는 카테고리 축의 카테고리 값을 나타냅니다. X축 및 Y축 레이블의 길이, 두께, 색상을 변경할 수 있습니다.
+
+다음의 코드 조각은 X축에서 눈금 표시의 색상, 길이, 두께를 설정하는 방법을 보여줍니다.
 
 ```html
  <igx-category-chart
@@ -84,10 +88,11 @@ The following code snippet demonstrates how to set the color, length and thickne
 
 <div class="divider--half"></div>
 
-### Axis Range
-In the Category Chart control, the range on numeric axes is the difference in numeric values from the beginning of the axis to the end or from the smallest to largest values in the data. The range minimum is the lowest value of the axis. The range maximum is the highest value of the axis. By default, the Category Chart control will calculate the minimum and maximum values for the y-axis range based on the lowest and highest data points in order to maximize the chart plot area. The automatic calculation of an axis' minimum and maximum values may not be appropriate for your set of data points. For example, if your data has a minimum value of 850, you may want to set the minimum value of the axis using y-axis’s `yAxisMinimumValue` property to 800 so that there will be a space value of 50 between the axis minimum and the lowest value of data points. The same can be applied to the axis maximum value and the highest value of data points using y-axis’s `yAxisMaximumValue` property.
+### 축 범위
 
-The following sample code demonstrates how to change the axis range on the y-axis.
+카테고리 차트 컨트롤에서 숫자 축의 범위는 축 시작부터 끝까지이며 데이터의 최소값에서 최대값까지의 수치 값의 차이입니다. 범위 최소값은 축의 최소값입니다. 범위 최대값은 축의 최대값입니다. 기본적으로 카테고리 차트 컨트롤은 차트 플롯 영역을 최대화하기 위해 최저 및 최고 데이터 점을 기준으로 Y축 범위의 최소값 및 최대값을 계산합니다. 축의 최소값과 최대값을 자동으로 계산하면 데이터 점의 세트에 적합하지 않을 수 있습니다. 예를 들면, 데이터의 최소값이 850인 경우, Y축의 `yAxisMinimumValue` 속성을 사용하여 축의 최소값을 800으로 설정하면 축의 최소값과 데이터 점의 최소값 사이에 50의 스페이스 값이 생깁니다. Y축의 `yAxisMaximumValue` 속성을 사용하여 축의 최대값과 데이터 점의 최대값에도 동일하게 적용할 수 있습니다.
+
+다음 예제 코드는 Y축의 축 범위를 변경하는 방법을 보여줍니다.
 
 ```html
  <igx-category-chart
@@ -101,10 +106,11 @@ The following sample code demonstrates how to change the axis range on the y-axi
 
 <div class="divider--half"></div>
 
-### Axis Interval
-In the Category Chart control, the `yAxisInterval` property specifies how frequently major gridlines and axis labels are rendered on an axis. Similarly, the `yAxisMinorInterval` property specifies how frequently minor gridlines are rendered on an axis.
+### 축 간격
 
-The following code snippet demonstrates how to configure the interval on the y-axis.
+카테고리 차트 컨트롤에서 `yAxisInterval` 속성은 주 격자선 및 축 레이블이 축에 렌더링되는 빈도를 지정합니다. 마찬가지로 `yAxisMinorInterval` 속성은 축에 부 격자선이 렌더링되는 빈도를 지정합니다.
+
+다음의 코드 조각은 Y축의 간격을 설정하는 방법을 보여줍니다.
 
 ```html
  <igx-category-chart
@@ -122,35 +128,37 @@ The following code snippet demonstrates how to configure the interval on the y-a
 
 <div class="divider--half"></div>
 
-### Axis Gap
-The Axis Gap feature of the Category Chart control allows setting the gap between series of the chart.
+### 축 갭
 
-The property accepts a numeric float value between 0 and 1. The value represents a relative width of the gap out of the available number of pixels between series.
-   0 - no gap is rendered between series;
-   1 - maximum available gap is rendered between series.
+카테고리 차트 컨트롤의 축 갭 기능을 사용하면 차트 시리즈 간의 갭을 설정할 수 있습니다.
 
-To set the Category Chart with `xAxisGap` of `0.125` the following code can be used:
+이 속성은 0과 1 사이의 수치 소수값을 허용합니다. 이 값은 시리즈 간의 사용 가능한 픽셀 수에서 갭의 상대 너비를 나타냅니다.
+   0 - 시리즈 간에 갭이 렌더링되지 않습니다;
+   1 - 시리즈 간에 사용 가능한 최대 갭이 렌더링됩니다.
+
+`xAxisGap`이 `0.125`인 카테고리 차트를 설정하려면 다음 코드를 사용합니다:
 
 ```html
 <igx-category-chart
     [dataSource]="data"
     width="700px"
     height="500px"
-    xAxisGap="0.125" >
+    xAxisGap="0.125">
 </igx-category-chart>
 ```
 
 <div class="divider--half"></div>
 
-### Axis Overlap
-The Axis Overlap feature of the Category Chart control allows setting overlap of rendered categories.
+### 축 중복
 
-The property accepts a numeric float value between -1 and 1. The value represents a relative overlap out of the available number of pixels dedicated to each series.
+카테고리 차트 컨트롤의 축 중첩 기능을 사용하면 렌더링되는 카테고리의 중복을 설정할 수 있습니다.
 
-* Negative value (up to -1): the categories are pushed away from each other producing a gap between themselves.
-* Positive value (up to 1): the categories are overlapping each other. Value of 1 directs the chart to render categories on top of each other.
+이 속성은 -1과 1 사이의 수치 소수값을 허용합니다. 이 값은 각 시리즈에 사용 가능한 픽셀 수에서 상대하는 중복을 나타냅니다.
 
-The following code example sets the `xAxisOverlap` to 0.
+-   음수 값(-1까지): 카테고리가 서로 생성하는 갭에 의해 떨어집니다.
+-   양수 값(1까지): 카테고리가 서로 중복됩니다. 값1은 서로 차트 위에 카테고리를 렌더링합니다.
+
+다음의 코드 예제는 `xAxisOverlap`을 0으로 설정합니다.
 
 ```html
  <igx-category-chart

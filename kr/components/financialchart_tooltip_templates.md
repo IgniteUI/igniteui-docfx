@@ -4,9 +4,10 @@ _description: Ignite UI for Angular 금융 차트 컴포넌트는 간단하고 �
 _keywords: Ignite UI for Angular, Angular, 네이티브 Angular 컴포넌트 세트, 네이티브 Angular 컨트롤, 네이티브 Angular 컴포넌트, 네이티브 Angular 컴포넌트 라이브러리, Angular 차트, Angular 차트 컨트롤, Angular 차트 예제, Angular 그리드 컴포넌트, Angular 차트 컴포넌트, Angular 금융 차트
 _language: kr
 ---
+
 ## 툴팁 템플릿
 
-`igx-financial-chart` 컨트롤은 각 시리즈 유형에 기본 툴 설명을 제공합니다. 기본 툴 설명에는 시리즈 제목, 데이터 값, 축 값 등의 특정 시리즈 항목과 관련된 모든 정보가 표시됩니다. 이들은 시리즈의 스타일에 맞게 디자인되어 있습니다. 기본 툴 설명이 충분하지 않은 경우 툴 설명 콘텐츠와 룩 앤드 필을 사용자 정의하여 사용자 툴 설명을 구성할 수 있습니다.
+`IgxFinancialChart` 컨트롤은 각 시리즈 유형에 기본 도구 설명을 제공합니다. 기본 도구 설명에는 시리즈 제목, 데이터 값, 축 값 등의 특정 시리즈 항목과 관련된 모든 정보가 표시됩니다. 이들은 시리즈의 스타일에 맞게 디자인되어 있습니다. 기본 도구 설명이 충분하지 않은 경우 도구 설명 콘텐츠와 룩 앤드 필을 사용자 정의하여 사용자 도구 설명을 구성할 수 있습니다.
 
 ### 데모
 
@@ -20,7 +21,7 @@ _language: kr
 
 <div class="divider--half"></div>
 
-툴 설명 콘텐츠는 다음의 코드와 같이 툴 설명 템플릿을 생성하여 사용자 정의화됩니다.
+도구 설명 콘텐츠는 다음의 코드와 같이 도구 설명 템플릿을 생성하여 사용자 정의화됩니다.
 
 ```html
 <ng-template let-series="series" let-item="item" #valueTooltip>
@@ -36,7 +37,4 @@ _language: kr
     [dataSource]="data"
     [tooltipTemplate]="valueTooltip" >
 </igx-financial-chart>
-
 ```
-
-

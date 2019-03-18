@@ -4,6 +4,7 @@ _description: Ignite UI for Angular 금융 차트 컴포넌트는 간단하고 �
 _keywords: Ignite UI for Angular, Angular, 네이티브 Angular 컴포넌트 세트, 네이티브 Angular 컨트롤, 네이티브 Angular 컴포넌트, 네이티브 Angular 컴포넌트 라이브러리, Angular 차트, Angular 차트 컨트롤, Angular 차트 예제, Angular 그리드 컴포넌트, Angular 차트 컴포넌트, Angular 금융 차트
 _language: kr
 ---
+
 ## 금융 차트 주석 및 오버레이
 
 이 항목에서는 `igx-category-chart`에서 사용할 수 있는 주석 및 오버레이 상호 작용에 대한 개념 정보를 제공합니다.
@@ -35,9 +36,9 @@ _language: kr
 </igx-financial-chart>
 ```
 
-### 카테고리 툴 힌트 레이어
+### 카테고리 도구 힌트 레이어
 
-카테고리 툴 힌트 레이어는 카테고리 축을 사용하여 시리즈에 대한 그룹화된 툴 힌트를 표시합니다.
+카테고리 도구 힌트 레이어는 카테고리 축을 사용하여 시리즈에 대한 그룹화된 도구 힌트를 표시합니다.
 
 ```html
 <igx-financial-chart
@@ -48,9 +49,9 @@ _language: kr
 </igx-financial-chart>
 ```
 
-### 항목 툴 힌트 레이어
+### 항목 도구 힌트 레이어
 
-항목 툴 힌트 레이어는 모든 대상 시리즈에 대한 툴 힌트를 개별적으로 표시합니다.
+항목 도구 힌트 레이어는 모든 대상 시리즈에 대한 도구 힌트를 개별적으로 표시합니다.
 
 ```html
 <igx-financial-chart
@@ -78,7 +79,7 @@ _language: kr
 
 ### 콜아웃 레이어
 
-콜아웃 레이어는 X/Y 위치에서 콜아웃을 표시합니다. 주석 위로 마우스를 가져 가면 레이블과 일부 추가 콘텐츠를 툴 힌트처럼 표시할 수 있습니다.
+콜아웃 레이어는 X/Y 위치에서 콜아웃을 표시합니다. 주석 위로 마우스를 가져 가면 레이블과 일부 추가 콘텐츠를 도구 힌트처럼 표시할 수 있습니다.
 
 > 참고: 서수 X 축 모드를 사용하는 경우에는 `calloutsXMemberPath`는 항목의 수치 인덱스를 가리켜야 하거나 그렇지 않으면 `calloutsXMemberPath`가 시간 값을 가리켜야 합니다.
 

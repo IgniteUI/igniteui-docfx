@@ -48,7 +48,12 @@ export class AppComponent {
 
 -   컴포넌트에 바인딩할 속성에 대량의 데이터를 저장할 경우,  `@Component` 코레이터에서 `changeDetection: ChangeDetectionStrategy.OnPush`를 설정해야 합니다. Angular가 모든 변경 검출 주기에서 데이터 배열 내의 변경 사항을 확인하지 않도록 설정합니다.
 -   Angular가 차트에 자동으로 데이터 변경을 알려주는 대신에 바인딩된 데이터가 변경된 방법을 컴포넌트에 알리도록 할 수 했습니다. 이러한 델타 알림은 Angular가 변경 검출을 실행할 때마다 100만 레코드 배열의 모든 변경을 비교하는 것보다 훨씬 효율적으로 실행할 수 있습니다. 바인딩된 데이터의 변경을 차트에 알리는 방법에 대한 자세한 것은 각 차트의 `notify*`메소드를 참조하십시오.
--   Angular가 디버그 모드에서 실행된 경우, 일부 브라우저에는 퍼포먼스를 저하시키는 오버헤드가 있습니다. 실제 퍼포먼스를 평가할 경우, 항상 `--prod` 버전을 사용하여 서비스하거나 빌드해야 합니다.
+-   When Angular is in Debug mode, there is a lot of overhead in some browsers that will drag down performance. When evaluating real world performance always make sure to serve or build with `--prod` version.
+
+[!NOTE]
+For React:
+
+-   When Angular is in development mode, there is a lot of overhead in some browsers that will drag down performance. When evaluating real world performance always make sure to use production builds.
 
 또한, 애플리케이션에서 퍼포먼스를 최적화할 때 금융 차트의 다음 기능을 고려해야 합니다.
 

@@ -4,9 +4,10 @@ _description: Ignite UI for Angular 금융 차트 컴포넌트는 간단하고 �
 _keywords: Ignite UI for Angular, Angular, 네이티브 Angular 컴포넌트 세트, 네이티브 Angular 컨트롤, 네이티브 Angular 컴포넌트, 네이티브 Angular 컴포넌트 라이브러리, Angular 차트, Angular 차트 컨트롤, Angular 차트 예제, Angular 그리드 컴포넌트, Angular 차트 컴포넌트, Angular 금융 차트
 _language: kr
 ---
+
 ## 대용량 데이터
 
-`igx-financial-chart` 컨트롤은 대량의 데이터를 처리할 수 있습니다. 다음 데모는 20년간의 데이터를 바인딩하고 선형 차트를 사용하여 1시간 간격으로 주가를 표시합니다.
+`IgxFinancialChart` 컨트롤은 대량의 데이터를 처리할 수 있습니다. 다음 데모는 20년간의 데이터를 바인딩하고 선형 차트를 사용하여 1시간 간격으로 주가를 표시합니다.
 
 ### 데모
 <div class="sample-container loading" style="height: 550px">
@@ -20,7 +21,7 @@ _language: kr
 
 차트의 퍼포먼스에 영향을 주는 여러 기능 및 Angular 고유 기능이 있으므로 애플리케이션에서 퍼포먼스를 최적화할 때 이를 고려해야 합니다.
 
-* 컴포넌트에 바인딩할 속성에 대량의 데이터를 저장할 경우, @Component 데코레이터에서 changeDetection: ChangeDetectionStrategy.OnPush를 설정해야 합니다. Angular가 모든 변경 검출 주기에서 데이터 배열 내의 변경 사항을 확인하지 않도록 설정합니다.
+-   컴포넌트에 바인딩할 속성에 대량의 데이터를 저장할 경우, @Component 데코레이터에서 changeDetection: ChangeDetectionStrategy.OnPush를 설정해야 합니다. Angular가 모든 변경 검출 주기에서 데이터 배열 내의 변경 사항을 확인하지 않도록 설정합니다.
 
 다음의 코드는 금융 차트를 대량의 데이터에 바인딩하는 방법을 보여줍니다.
 
@@ -49,10 +50,9 @@ export class AppComponent {
 <div class="divider--half"></div>
 
 ### 추가 리소스
+
 <div class="divider--half"></div>
 
-* [차트 퍼포먼스](financialchart_performance.md)
-* [실시간 데이터 바인딩](financialchart_real_time_data.md)
-* [복수 데이터 소스 바인딩](financialchart_binding_to_multiple_data.md)
-
-
+-   [차트 퍼포먼스](financialchart_performance.md)
+-   [실시간 데이터 바인딩](financialchart_real_time_data.md)
+-   [복수 데이터 소스 바인딩](financialchart_binding_to_multiple_data.md)
