@@ -1,35 +1,35 @@
 ---
-title: Data Chart Component - Native Angular | Ignite UI for Angular
-_description: The Ignite UI for Angular Data Chart is a charting component that provides modular design of axis, markers, series, legend, and annotation layers. With this chart, you can create multiple instances of these visual elements in the same chart plot area in order to create composite chart views.
-_keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Chart Control, Angular Chart Example, Angular Chart Component, Angular Data Chart
+title: Data Chart コンポーネント - ネイティブ Angular|Ignite UI for Angular
+_description: Ignite UI for Angular Data Chart は、軸、マーカー、凡例、および注釈レイヤーのモジュール設計を提供するチャート コンポーネントです。チャート機能は、複合チャート ビューを作成するために同じチャート領域でのビジュアル要素の複数のインスタンスを利用できます。
+_keywords: Ignite UI for Angular, Angular, Native Angular コンポーネント スイート, Native Angular コントロール, ネイティブ Angular コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular チャート, Angular チャート コントロール, Angular チャート例, Angular チャート コンポーネント, Angular データ チャート
 _language: ja
 ---
 
-## Series Annotations
+## シリーズの注釈
 
-The `IgxDataChart` supports layers that allow you to display contextual information about the points plotted in your chart as annotations. This can help to show more information to your end-users that cannot be seen by simply looking at the series.
+`IgxDataChart` は、チャートにプロットされた点に関するコンテキスト情報を注釈として表示することを可能にするレイヤーをサポートします。これは、シリーズを見るだけでは把握できないような、より多くの情報をエンドユーザーに表示するのに役立ちます。
 
-### Demo
+### デモ
 
 <div class="sample-container" style="height: 500px">
     <iframe id="data-chart-series-annotations-iframe" src='{environment:demosBaseUrl}/charts/data-chart-series-annotations' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-series-annotations-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-series-annotations-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
     </button>
 </div>
 
 <div class="divider--half"></div>
 
-### Callout Layer
+### コールアウト レイヤー
 
-The callout layer displays annotations from existing or new data on the `IgxDataChart` control. The annotations appear next to the given data values in the data source.
+`IgxDataChart` はチャート既存または新しいデータの注釈を表示します。注釈は、データソース内の指定されたデータ値の横に表示されます。
 
-Use the callout annotations to display additional information, such as notes or specific details about datapoints, that you would like to point out to your users.
+コールアウト注釈を使用して、メモやデータポイントに関する特定の詳細など、ユーザーに追加情報を表示します
 
-You can configure the callouts to target a specific series if you want to have multiple callouts layers present with different configurations. This can be done be setting the `TargetSeries` property.
+複数のコールアウト レイヤーを異なる設定で使用する場合は、コールアウトを設定して特定のシリーズをターゲットにできます。これには `TargetSeries` プロパティを設定します。
 
-The following code snippet demonstrates how to add a callout layer to the chart:
+以下は、チャートにコールアウト レイヤーを追加する方法を示すコードスニペットです。
 
 ```html
 <igx-data-chart dataSource={this.data}
@@ -54,15 +54,15 @@ The following code snippet demonstrates how to add a callout layer to the chart:
 </igx-data-chart>
 ```
 
-### Crosshair Layer
+### 十字線レイヤー
 
-The crosshair layer renders as crossing lines intersecting at the actual value of every series that they are configured to target with each series rendering a separate set of lines.
+十字線レイヤーは、各シリーズが個別の線をセットでレンダリングするように設定されているすべてのシリーズの実際の値で交差する交差ラインとしてレンダリングされます。
 
-You can configure the crosshair layer so that the layer will only display one specific series as by default they target all series on the `IgxDataChart` control. To achieve this, set the `TargetSeries` property.
+デフォルトでは `IgxDataChart` コントロールのすべてのシリーズをターゲットとするように、特定のシリーズを 1 つだけ表示するように十字線レイヤーを構成できます。これを実行するには、`TargetSeries` プロパティを設定します。
 
-By default, the color of the crosshair lines is the color of the series that it is interacting with. However, this default setting can be overridden so that you can select a color that will be used for the crosshair lines. This is done by setting the `Brush` property.
+デフォルトでは、十字線の色は、相互作用しているシリーズの色です。ただし、このデフォルト値は、十字線に使用される色を選択できるようにオーバーライドできます。これは、`Brush` プロパティを設定することによって行います。
 
-The following code snippet shows how to add a crosshair layer to the chart:
+以下は、チャートに十字線レイヤーを追加する方法を示すコードスニペットです。
 
 ```html
 <igx-data-chart dataSource={this.data}
@@ -84,13 +84,13 @@ The following code snippet shows how to add a crosshair layer to the chart:
 </igx-data-chart>
 ```
 
-### Final Value Layer
+### 最終値レイヤー
 
-The final value layer displays annotations along the chart’s axes that represent the final value of a series on the `IgxDataChart` control.
+最終値レイヤーには、`IgxDataChart` コントロールのシリーズの最終値を表す注釈がチャートの軸に沿って表示されます。
 
-You can configure the annotations to target a specific series if you want to have multiple final value layers present with different configurations. This can be done be setting the `TargetSeries` property.
+複数の最終値レイヤーを異なる設定で使用したい場合は、注釈を設定して特定のシリーズをターゲットにすることができます。これには `TargetSeries` プロパティを設定します。
 
-The following code snippet demonstrates how to add a final value layer to the chart:
+以下は、チャートに最終値レイヤーを追加する方法を示すコードスニペットです。
 
 ```html
 <igx-data-chart dataSource={this.data}

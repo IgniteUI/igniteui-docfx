@@ -1,27 +1,27 @@
 ---
-title: Data Chart Component - Native Angular | Ignite UI for Angular
-_description: The Ignite UI for Angular Data Chart is a charting component that provides modular design of axis, markers, series, legend, and annotation layers. With this chart, you can create multiple instances of these visual elements in the same chart plot area in order to create composite chart views.
-_keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Chart Control, Angular Chart Example, Angular Chart Component, Angular Data Chart
+title: Data Chart コンポーネント - ネイティブ Angular|Ignite UI for Angular
+_description: Ignite UI for Angular Data Chart は、軸、マーカー、凡例、および注釈レイヤーのモジュール設計を提供するチャート コンポーネントです。チャート機能は、複合チャート ビューを作成するために同じチャート領域でのビジュアル要素の複数のインスタンスを利用できます。
+_keywords: Ignite UI for Angular, Angular, Native Angular コンポーネント スイート, Native Angular コントロール, ネイティブ Angular コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular チャート, Angular チャート コントロール, Angular チャート例, Angular チャート コンポーネント, Angular データ チャート
 _language: ja
 ---
 
-## Tooltips
+## ツールチップ
 
-The `IgxDataChart` control has support for showing tooltips along with a couple of tooltip "layers." These tooltips help you to see contextual information about each of the series in your chart.
+`IgxDataChart` コントロールは、2 つのツールチップ 「レイヤー」 と共にツールチップを表示できます。これらのツールチップを使用すると、チャート内の各シリーズに関するコンテキスト情報を確認するのに役立ちます。
 
-### Demo
+### デモ
 
 <div class="sample-container" style="height: 500px">
     <iframe id="data-chart-series-tooltips-iframe" src='{environment:demosBaseUrl}/charts/data-chart-series-tooltips' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-series-tooltips-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-series-tooltips-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
     </button>
 </div>
 
 <div class="divider--half"></div>
 
-In order to use tooltips or tooltip layers in the `IgxDataChart` control, you need to import and register the interactivity module. This can be done by using the following code:
+`IgxDataChart` コントロールでツールチップ レイヤーを有効にするには、対話モジュールをインポートして登録する必要があります。以下のコードを使用できます。
 
 ```typescript
 import { IgxDataChartInteractivityModule } from "igniteui-angular-charts/ES5/igx-data-chart-interactivity-module";
@@ -29,11 +29,11 @@ import { IgxDataChartInteractivityModule } from "igniteui-angular-charts/ES5/igx
 IgxDataChartInteractivityModule.register();
 ```
 
-### Default Tooltips
+### デフォルト ツールチップ
 
-The `IgxDataChart` control provides default tooltips for each type of series. The default tooltips display all of the information relevant to the particular series item that is being hovered, including the series title, data values, axis values, etc. They are also styled to match the series' appearance.
+`IgxDataChart` コントロールは、シリーズの種類ごとに既定のツールチップを提供します。デフォルトのツールチップには、シリーズのタイトル、データ値、軸の値など、ホバーされている特定のシリーズ項目に関連するすべての情報が表示されます。これらもシリーズの外観に合わせてスタイル設定されています。
 
-The following code snippet demonstrates how to enable the default tooltips in the `IgxDataChart` control:
+次のコードスニペットは、`IgxDataChart` コントロールで既定のツールチップを有効にする方法を示しています。
 
 ```html
 <igx-data-chart #chart
@@ -54,11 +54,11 @@ The following code snippet demonstrates how to enable the default tooltips in th
 </igx-data-chart>
 ```
 
-### Category Tooltip Layer
+### カテゴリ ツールチップ レイヤー
 
-The CategoryToolTipLayer displays grouped tooltips for the series on the `IgxDataChart` control using a category axis. The grouped tooltips currently appear at the top of the `IgxDataChart` control.
+CategoryToolTipLayer は、カテゴリ軸を使用する `IgxDataChart` コントロールのシリーズ用にグループ化されたヒントを表示します。グループ化されたツールチップは現在、`IgxDataChart` コントロールの上部に表示されています。
 
-The following code snippet demonstrates how to add a category tooltip layer to the `IgxDataChart` control:
+次のコードスニペットは、`IgxDataChart` コントロールにカテゴリ項目ハイライト レイヤーを追加する方法を示しています。
 
 ```html
 <igx-data-chart #chart
@@ -81,11 +81,11 @@ The following code snippet demonstrates how to add a category tooltip layer to t
 </igx-data-chart>
 ```
 
-### Item Tooltip Layer
+### 項目ツールチップ レイヤー
 
-The item tooltip layer displays tooltips for all the series on the `IgxDataChart` control individually when a pointer hovers over that particular series. The tooltip style is inherited from the series that is displaying the tooltip.
+itemToolTipLayer は、特定のシリーズにマウスがホバーする場合に `IgxDataChart` コントロール上のすべてのシリーズに関するヒントを個別に表示します。ツールチップスタイルは、ツールチップを表示しているシリーズから継承されます。
 
-The following code snippet demonstrates how to add an item tooltip layer to the `IgxDataChart` control:
+次のコードスニペットは、`IgxDataChart` コントロールに項目ツールチップ レイヤーを追加する方法を示しています。
 
 ```html
 <igx-data-chart #chart

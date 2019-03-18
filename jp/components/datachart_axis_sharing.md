@@ -1,29 +1,29 @@
 ---
-title: Data Chart Component - Native Angular | Ignite UI for Angular
-_description: The Ignite UI for Angular Data Chart is a charting component that provides modular design of axis, markers, series, legend, and annotation layers. With this chart, you can create multiple instances of these visual elements in the same chart plot area in order to create composite chart views.
-_keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Chart Control, Angular Chart Example, Angular Chart Component, Angular Data Chart
+title: Data Chart コンポーネント - ネイティブ Angular|Ignite UI for Angular
+_description: Ignite UI for Angular Data Chart は、軸、マーカー、凡例、および注釈レイヤーのモジュール設計を提供するチャート コンポーネントです。チャート機能は、複合チャート ビューを作成するために同じチャート領域でのビジュアル要素の複数のインスタンスを利用できます。
+_keywords: Ignite UI for Angular, Angular, Native Angular コンポーネント スイート, Native Angular コントロール, ネイティブ Angular コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular チャート, Angular チャート コントロール, Angular チャート例, Angular チャート コンポーネント, Angular データ チャート
 _language: ja
 ---
 
-## Axis Sharing and Multiple Axes
+## 軸共有と複数軸
 
- You can share and add multiple axes in the same plot area of the `IgxDataChart` control. For all axes, you can specify locations in relationship to chart plot area. It a common scenario to use multiple axes when you want to plot many data sources that have wide range of values (e.g. stock prices and stock trade volumes).
+ `IgxDataChart` コントロールの同じプロット領域に複数の軸を共有して追加できます。すべての軸に対して、チャートプロット領域に関連して位置を指定できます。広範囲の値 (株価や株取引量など) を持つ多くのデータソースをプロットする場合は、複数の軸を使用するのが一般的なシナリオです。
 
-### Demo
+### デモ
 
 <div class="sample-container" style="height: 450px">
     <iframe id="data-chart-axis-sharing-iframe" src='{environment:demosBaseUrl}/charts/data-chart-axis-sharing' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-axis-sharing-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-axis-sharing-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
     </button>
 </div>
 
 <div class="divider--half"></div>
 
-### Code Example
+### コード例
 
-This code demonstrates how to create data chart with two `IgxNumericYAxisComponent` and one `IgxCategoryXAxisComponent` that will be shared between two series.
+このコードは、2 つのシリーズ間で共有される 2 つの `IgxNumericYAxisComponent` と 1 つの `IgxCategoryXAxisComponent` でデータ チャートを作成する方法を示します。
 
 ```html
  <igx-data-chart
@@ -60,7 +60,7 @@ This code demonstrates how to create data chart with two `IgxNumericYAxisCompone
  </igx-data-chart>
 ```
 
-### Additional Resources
+### その他のリソース
 
--   [Axis Types](datachart_axis_types.md)
--   [Series Types](datachart_series_types.md)
+-   [軸のタイプ](datachart_axis_types.md)
+-   [シリーズ タイプ](datachart_series_types.md)

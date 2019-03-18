@@ -1,27 +1,27 @@
 ---
-title: Data Chart Component - Native Angular | Ignite UI for Angular
-_description: The Ignite UI for Angular Data Chart is a charting component that provides modular design of axis, markers, series, legend, and annotation layers. With this chart, you can create multiple instances of these visual elements in the same chart plot area in order to create composite chart views.
-_keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Chart Control, Angular Chart Example, Angular Chart Component, Angular Data Chart
+title: Data Chart コンポーネント - ネイティブ Angular|Ignite UI for Angular
+_description: Ignite UI for Angular Data Chart は、軸、マーカー、凡例、および注釈レイヤーのモジュール設計を提供するチャート コンポーネントです。チャート機能は、複合チャート ビューを作成するために同じチャート領域でのビジュアル要素の複数のインスタンスを利用できます。
+_keywords: Ignite UI for Angular, Angular, Native Angular コンポーネント スイート, Native Angular コントロール, ネイティブ Angular コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular チャート, Angular チャート コントロール, Angular チャート例, Angular チャート コンポーネント, Angular データ チャート
 _language: ja
 ---
 
-## Title and Subtitle
+## タイトルとサブタイトル
 
-The `Title` and `Subtitle` feature of the `IgxDataChart` control allows you to add information to the top section of the chart. When adding a title or subtitle to the chart, the content of the chart automatically resizes allowing for the title and subtitle information that you provide.
+`xamDataChart` コントロールの`タイトル`と`サブタイトル`の機能は、チャート コントロールの一番上のセクションに情報を追加できます。チャートにタイトルまたは字幕を追加すると、チャートの内容は自動的にサイズ変更され、指定したタイトルとサブタイトルの情報が表示されます。
 
-### Demo
+### デモ
 
 <div class="sample-container" style="height: 500px">
     <iframe id="data-chart-titles-iframe" src='{environment:demosBaseUrl}/charts/data-chart-titles' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-titles-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-titles-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
     </button>
 </div>
 
 <div class="divider--half"></div>
 
-There are properties provided that allow you to style the text color, style, and margins of the titles and subtitles of the chart. The following code-snippet demonstrates how you can set and customize the titles in the chart:
+チャートのタイトルと字幕のテキストの色、スタイル、および余白をスタイルするためのプロパティが用意されています。次のコードスニペットは、チャートのタイトルを設定およびカスタマイズする方法を示しています。
 
 ```html
 <igx-data-chart [dataSource]="data"

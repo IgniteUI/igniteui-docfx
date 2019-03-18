@@ -1,27 +1,27 @@
 ---
-title: Data Chart Component - Native Angular | Ignite UI for Angular
-_description: The Ignite UI for Angular Data Chart is a charting component that provides modular design of axis, markers, series, legend, and annotation layers. With this chart, you can create multiple instances of these visual elements in the same chart plot area in order to create composite chart views.
-_keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Chart Control, Angular Chart Example, Angular Chart Component, Angular Data Chart
+title: Data Chart コンポーネント - ネイティブ Angular|Ignite UI for Angular
+_description: Ignite UI for Angular Data Chart は、軸、マーカー、凡例、および注釈レイヤーのモジュール設計を提供するチャート コンポーネントです。チャート機能は、複合チャート ビューを作成するために同じチャート領域でのビジュアル要素の複数のインスタンスを利用できます。
+_keywords: Ignite UI for Angular, Angular, Native Angular コンポーネント スイート, Native Angular コントロール, ネイティブ Angular コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular チャート, Angular チャート コントロール, Angular チャート例, Angular チャート コンポーネント, Angular データ チャート
 _language: ja
 ---
 
-## Navigation
+## ナビゲーション
 
-In the `IgxDataChart` control, navigation is disabled by default. Once enabled, you are able to zoom and pan the chart either programmatically or in the UI.
+`IgxDataChart` コントロールでは、チャート ナビゲーションがデフォルトで無効になっています。有効にするとコードや UI を介してチャートのズームやパンニングができるようになります。
 
-### Demo
+### デモ
 
 <div class="sample-container" style="height: 500px">
     <iframe id="data-chart-navigation-iframe" src='{environment:demosBaseUrl}/charts/data-chart-navigation' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-navigation-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-navigation-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
     </button>
 </div>
 
 <div class="divider--half"></div>
 
-In order to use navigation in the chart, you need to import and register the interactivity module. This can be done by using the following code:
+チャートでナビゲーションする場合、インポートしてからインタラクティブ モードを登録します。以下のコードを使用できます。
 
 ```typescript
 import { IgxDataChartInteractivityModule } from "igniteui-angular-charts/ES5/igx-data-chart-interactivity-module";
@@ -29,13 +29,13 @@ import { IgxDataChartInteractivityModule } from "igniteui-angular-charts/ES5/igx
 IgxDataChartInteractivityModule.register();
 ```
 
-### Chart UI Navigation Overview
+### チャート UI ナビゲーションの概要
 
-In order to allow navigation in the UI, you need to set either the `IsHorizontalZoomEnabled` and/or the `IsVerticalZoomEnabled` properties of the chart to true, depending on the direction that you wish to allow zooming. This will allow you to zoom the chart by rolling a mouse wheel over it.
+UI でのナビゲーションを許可するには、ズームを許可する方向に応じて、チャートの `IsHorizontalZoomEnabled` プロパティおよび `IsVerticalZoomEnabled` プロパティを true に設定する必要があります。マウスホイールを回転してチャートをズームできます。
 
-It is also possible to zoom or pan simply by clicking the buttons on the mouse or using touch. The `DefaultInteraction` property of the chart determines what happens on mouse click or touch events. This property defaults to `DragZoom` and when set to this with zooming enabled, clicking and dragging will place a preview rectangle over the plot area that will become the zoomed area of the chart. This `DefaultInteraction` property can also be set to either `DragPan` to allow panning or `None` to prevent these operations.
+またマウスやタッチでボタンをクリックしてズームまたはパンニングできます。チャートの `DefaultInteraction` プロパティは、マウスクリック イベントやタッチ イベントで何が起こるかを決定します。このプロパティはデフォルトで `DragZoom` に設定されており、ズームを有効に設定すると、クリックしてドラッグした際にプロット領域の上に四角形のプレビューが配置され、グラフのズーム領域になります。この `DefaultInteraction` プロパティは、パンニングを許可する場合は `DragPan`、これらの操作を禁止する場合は `None` に設定することもできます。
 
-The following code snippet demonstrates how you can enable base UI navigation in the chart:
+次のコードスニペットは、チャートで基本的な UI ナビゲーションを有効にする方法を示しています。
 
 ```html
 <igx-data-chart #chart
@@ -47,26 +47,26 @@ The following code snippet demonstrates how you can enable base UI navigation in
 </igx-data-chart>
 ```
 
-### Chart Navigation with Mouse and Keyboard
+### マウスとキーボードによるチャート ナビゲーション
 
-Navigation in the `IgxDataChart` control can happen with either the mouse or the keyboard once enabled. The following operations can be invoked using the following mouse or keyboard operations by default:
+`IgxDataChart` コントロールのナビゲーションは、マウスまたはキーボードのいずれかを有効にすると発生します。以下の操作は、デフォルトで以下のマウスまたはキーボード操作を使用して呼び出すことができます。
 
--   `Panning`: Using arrow keys on keyboard or holding the Shift key and clicking and dragging with the mouse.
--   `Zoom In`: Using the PageUp key on keyboard or rolling the mouse wheel up.
--   `Zoom Out`: Using the PageDown key on keyboard or rolling the mouse wheel down.
--   `Fit to Chart Plot Area`: Home key on the keyboard. There is no mouse operation for this.
--   `Area Zoom`: Click and drag mouse within the plot area with the `DefaultInteraction` property set to its default, `DragZoom`.
+-   `Panning`:  キーボードの矢印キーを使用するか、Shift キーを押しながらマウスでクリックしてドラッグします。
+-   `Zoom In`:  キーボードのPageUpキーを使用するか、マウスホイールを回転させます。
+-   `Zoom Out`:  キーボードの PageDown キーを使用するか、マウスホイールを回転させます。
+-   `チャート プロット領域に合わせる`: キーボードの Home キー。これに対するマウス操作はありません。
+-   `領域ズーム`: `DefaultInteraction` プロパティをデフォルトの `DragZoom` に設定して、プロット領域内でマウスをクリックしてドラッグします。
 
-The zoom and pan operations can also be enabled by using modifier keys by setting the `DragModifier` and `PanModifier` properties, respectively. These properties can be set to the following modifier keys, and when pressed, the corresponding operation will be enabled:
+ズーム操作とパン操作は、それぞれ `DragModifier` プロパティと `PanModifier` プロパティを設定し、修飾キーを使用して有効にすることもできます。これらのプロパティは以下の修飾キーに設定することができ、押すと対応する操作が有効になります。
 
 -   Shift
 -   Alt
 -   Control
--   Windows Key
--   Apple Key
+-   Windows キー
+-   Apple キー
 -   None
 
-The following code snippet demonstrates how you can enable UI navigation in the chart. The following will only allow zooming while holding the `Shift` key and panning while holding the `Alt` key:
+次のコードスニペットは、チャートで UI ナビゲーションを有効にする方法を示しています。以下の例では、`Shift` キーを押しながらズーム、`Alt` キーを押しながらパンのみ可能です。
 
 ```html
 <igx-data-chart #chart
@@ -108,17 +108,17 @@ The following code snippet demonstrates how to enable the overview plus detail p
 </IgrDataChart>
 ``` -->
 
-### Chart Navigation through Code
+### コードによるチャート ナビゲーション
 
-The `IgxDataChart` control provides several navigation properties that are updated each time a zoom or pan operation happens in the chart. You can also set each of these properties to zoom or pan the chart programmatically. The following is a list of these properties:
+`IgxDataChart` コントロールは、チャートでズームまたはパン操作が行われるたびに更新されるいくつかのナビゲーション プロパティを提供します。各プロパティは、チャートでズームやパンニングするためにコードで設定できます。以下は、これらのプロパティの一覧です。
 
--   `WindowPositionHorizontal`: A numeric value describing the X portion of the content view rectangle displayed by the chart.
--   `WindowPositionVertical`: A numeric value describing the Y portion of the content view rectangle displayed by the chart.
--   `WindowRect`: An `IgRect` object representing a rectangle that represents the portion of the chart that is currently in view. For example, a `WindowRect` of "0, 0, 1, 1" would be the entirety of the chart.
--   `WindowScaleHorizontal`: A numeric value describing the width portion of the content view rectangle displayed by the chart.
--   `WindowScaleVertical`: A numeric value describing the height portion of the content view rectangle displayed by the chart.
+-   `WindowPositionHorizontal`: コンテンツ ビュー長方形の X 部分を表す数値は、チャートで表示されます。
+-   `WindowPositionVertical`: 数値は、チャートに表示されるコンテンツビュー四角形のの Y 部分を表します。
+-   `WindowRect`: 長方形を表す `IgRect` オブジェクトは、現在ビューにあるチャート部分を表します。例えば、`WindowRect` の "0, 0, 1, 1" はチャート全体になります。
+-   `WindowScaleHorizontal`: チャートで表示されるコンテンツ ビュー長方形の幅部分を表す数値。
+-   `WindowScaleVertical`: チャートで表示されるコンテンツ ビュー長方形の高さ部分を表す数値。
 
-The following code snippets show how to modify the view of the `IgxDataChart` control programmatically. The following assumes you have a variable named "chart" to represent the `IgxDataChart` control:
+次のコードスニペットは、`WindowRect` コントロールのビューをプログラムで変更する方法を示しています。以下では、`IgxDataChart` コントロールを表す変数名 chart があると仮定します。
 
 ```typescript
 // Zoom in by a factor of 0.05

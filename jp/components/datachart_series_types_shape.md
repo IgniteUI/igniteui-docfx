@@ -1,65 +1,65 @@
 ---
-title: Data Chart Component - Native Angular | Ignite UI for Angular
-_description: The Ignite UI for Angular Data Chart is a charting component that provides modular design of axis, markers, series, legend, and annotation layers. With this chart, you can create multiple instances of these visual elements in the same chart plot area in order to create composite chart views.
-_keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Chart Control, Angular Chart Example, Angular Chart Component, Angular Data Chart
+title: Data Chart コンポーネント - ネイティブ Angular|Ignite UI for Angular
+_description: Ignite UI for Angular Data Chart は、軸、マーカー、凡例、および注釈レイヤーのモジュール設計を提供するチャート コンポーネントです。チャート機能は、複合チャート ビューを作成するために同じチャート領域でのビジュアル要素の複数のインスタンスを利用できます。
+_keywords: Ignite UI for Angular, Angular, Native Angular コンポーネント スイート, Native Angular コントロール, ネイティブ Angular コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular チャート, Angular チャート コントロール, Angular チャート例, Angular チャート コンポーネント, Angular データ チャート
 _language: ja
 ---
 
-## Scatter Shape Series
+## 散布図シリーズ
 
-This topic explains various types of shape series in the `IgxDataChart` control. Scatter shape series is a group of chart series that take array of shapes (array or arrays of X/Y coordinates) and render them as collection of polygons (`ScatterPolygonSeries`)  or polylines (`ScatterPolylineSeries`) in Cartesian (x, y) coordinate system.
+このトピックは、`IgxDataChart` コントロールの図形シリーズのさまざまなタイプについて説明します。散布図シリーズは、一連の形状 (1 つまたは複数の X/Y 座標の配列) をとり、それらをデカルト (x、y) 座標系のポリゴン (ScatterPolygonSeries) またはポリライン (ScatterPolylineSeries) のコレクションとして描画するチャート シリーズのグループです。
 
-Scatter shape series are often used highlight regions in scientific data or they can be used to plot diagrams, blueprints, or even floor plan of buildings.
+散布図シリーズは科学データの強調領域でよく使用されますが、ダイアグラム、青写真、さらには建物の間取り図のプロットにも使用できます。
 
-### Demo
+### デモ
 
 <div class="sample-container" style="height: 400px">
     <iframe id="data-chart-type-shape-series-iframe" src='{environment:demosBaseUrl}/charts/data-chart-type-shape-series' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-type-shape-series-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-type-shape-series-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示
     </button>
 </div>
 
 <div class="divider--half"></div>
 
-### Types of Shape Series
+### シェイプ シリーズの種類
 
-The following table lists all types of shape series and their descriptions:
+次の表は、すべての種類のシェイプ シリーズとその説明を示しています。
 
-| Series Name             | Description                                                                                                                                        |
-| ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `ScatterPolygonSeries`  | Displays a polygon for each of shape mapped to `ShapeMemberPath` property. It is useful for rendering shapes such as a country boarders.           |
-| `ScatterPolylineSeries` | Displays a polyline for each of shape mapped to `ShapeMemberPath` property. It is useful for rendering disconnected lines such as a network graph. |
+| シリーズ名                   | 説明                                                                              |
+| ----------------------- | ------------------------------------------------------------------------------- |
+| `ScatterPolygonSeries`  | `ShapeMemberPath` プロパティにマッピングされた各図形の多角形を表示します。国境などの図形をレンダリングするのに便利です。           |
+| `ScatterPolylineSeries` | `ShapeMemberPath` プロパティにマッピングされた各図形のポリラインを表示します。ネットワークグラフのように断線をレンダリングするのに便利です。 |
 
-### Required Axes
+### 軸の要件
 
-The `IgxDataChart` control provides various types of axes but only the following types of axes can be used with scatter shape series.
+`IgxDataChart` コントロールはさまざまな軸タイプを提供しますが、ラジアル シリーズで使用できるのは以下のタイプの軸のみです。
 
-| Series Type             | YAxis Type                 | XAxis Type                 |
+| シリーズ タイプ                | YAxis タイプ                  | XAxis タイプ                  |
 | ----------------------- | -------------------------- | -------------------------- |
 | `ScatterPolygonSeries`  | `IgxNumericYAxisComponent` | `IgxNumericXAxisComponent` |
 | `ScatterPolylineSeries` | `IgxNumericYAxisComponent` | `IgxNumericXAxisComponent` |
 
-### Required Data
+### データの要件
 
-Scatter shape series have the following data requirements:
+散布シェイプ シリーズには、以下のデータ要件があります。
 
--   The data source must be an array or a list of data items
--   The data source must contain at least one data item otherwise the chart will not render the scatter shape series.
--   All data items must contain at one shape data column (array or arrays of X/Y coordinates) which should be mapped to the `ShapeMemberPath` property of scatter shape series (e.g. `ScatterPolygonSeries`)
+-   データソースはデータ項目の配列やリストである必要があります。
+-   データソースはデータ項目を少なくとも 1 つ含む必要があります。含まない場合はチャートに散布シェイプ シリーズを描画しません。
+-   すべてのデータ項目には、スキャッタシェイプシリーズの `ShapeMemberPath` プロパティにマッピングする必要がある1つのシェイプデータ列（XまたはY座標の配列）を含める必要があります (`ScatterPolygonSeries` など)
 
-You can use the [SampleShapeData](datachart_data_sources_shape.md) as data source which meets above data requirements.
+上記データ要件を満たすデータソースとして [SampleShapeData](datachart_data_sources_shape.md) を使用できます。
 
 ```typescript
 this.state = { dataSource: SampleShapeData.create() }
 ```
 
-### Required Modules
+### モジュールの要件
 
 <!-- Angular -->
 
-In order to use scatter shape series, you need to import the following modules in your app during load and register data chart modules:
+散布図形シリーズを使用するには、データチャート モジュールの読み込みと登録の際にアプリケーションに次のモジュールをインポートする必要があります。
 
 ```typescript
 // axis' modules:
@@ -86,9 +86,9 @@ import { IgxDataChartShapeModule } from "igniteui-angular-charts/ES5/igx-data-ch
 export class AppModule { /* ... */ }
 ```
 
-### Code Example
+### コード例
 
-This code demonstrates how to create an instance of data chart with `ShapeColumnSeries` and bind it to the data source.
+このコードは、`ShapeColumnSeries` でデータチャートのインスタンスを作成し、データソースにバインドする方法を説明します。
 
 ```html
  <igx-data-chart
@@ -106,12 +106,12 @@ This code demonstrates how to create an instance of data chart with `ShapeColumn
  </igx-data-chart>
 ```
 
-Note that you can also use above code to create `ScatterPolygonSeries` by replacing `ScatterPolylineSeries`.
+`ScatterPolygonSeries` を置き換えることで `ScatterPolylineSeries` を作成するために上記のコードを使用することもできます。
 
-### Additional Resources
+### その他のリソース
 
--   [Axis Types](datachart_axis_types.md)
--   [Axis Sharing](datachart_axis_sharing.md)
--   [Chart Legend](datachart_chart_legends.md)
--   [Series Markers](datachart_series_markers.md)
--   [Series Types](datachart_series_types.md)
+-   [軸タイプ](datachart_axis_types.md)
+-   [軸の共有](datachart_axis_sharing.md)
+-   [チャートの凡例](datachart_chart_legends.md)
+-   [シリーズのマーカー](datachart_series_markers.md)
+-   [シリーズ タイプ](datachart_series_types.md)

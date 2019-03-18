@@ -1,22 +1,23 @@
 ---
-title: Data Chart Component - Native Angular | Ignite UI for Angular
-_description: The Ignite UI for Angular Data Chart is a charting component that provides modular design of axis, markers, series, legend, and annotation layers. With this chart, you can create multiple instances of these visual elements in the same chart plot area in order to create composite chart views.
-_keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Chart Control, Angular Chart Example, Angular Chart Component, Angular Data Chart
+title: Data Chart �R���|�[�l���g - �l�C�e�B�u Angular|Ignite UI for Angular
+_description: Ignite UI for Angular Data Chart �́A���A�}�[�J�[�A�}��A����ђ��߃��C���[�̃��W���[���݌v��񋟂���`���[�g �R���|�[�l���g�ł��B�`���[�g�@�\�́A�����`���[�g �r���[��쐬���邽�߂ɓ����`���[�g�̈�ł̃r�W���A���v�f�̕����̃C���X�^���X�𗘗p�ł��܂��B
+_keywords: Ignite UI for Angular, Angular, Native Angular �R���|�[�l���g �X�C�[�g, Native Angular �R���g���[��, �l�C�e�B�u Angular �R���|�[�l���g, �l�C�e�B�u Angular �R���|�[�l���g ���C�u����, Angular �`���[�g, Angular �`���[�g �R���g���[��, Angular �`���[�g��, Angular �`���[�g �R���|�[�l���g, Angular �f�[�^ �`���[�g
 _language: ja
 ---
 
-## Data Sources
+## �f�\[�^ �\\�\[�X
 
-In the `IgxDataChart` control, all series require specific numer and type of data columns to render correctly. This topic provides examples of how to implement data source for each group of series.
+`IgxDataChart` �R���g���\[���ł́A���ׂẴV���\[�Y�𐳂����\\�����邽�߂ɓ���̐��l�ƃf�\[�^��̌^��K�v�Ƃ��܂��B���̃g�s�b�N�ł́A�V���\[�Y�̊e�O���\[�v�Ƀf�\[�^�\\�\[�X�����������@�̗����܂��B
 
--   [SampleCategoryData](datachart_data_sources_category.md) for [Category Series](datachart_series_types_category.md)
--   [SampleFinancialData](datachart_data_sources_financial.md) for [Financial Series](datachart_series_types_financial.md)
--   [SamplePolarData](datachart_data_sources_polar.md) for [Polar Series](datachart_series_types_polar.md)
--   [SampleRadialData](datachart_data_sources_radial.md) for [Radial Series](datachart_series_types_radial.md)
--   [SampleRangeData](datachart_data_sources_range.md) for [Range Series](datachart_series_types_range.md)
--   [SampleDensityData](datachart_data_sources_density.md) for [Scatter HD Series](datachart_series_types_scatter_hd.md)
--   [SampleScatterData](datachart_data_sources_scatter.md) for [Scatter Area Series](datachart_series_types_scatter_contour.md)
--   [SampleScatterData](datachart_data_sources_scatter.md) for [Scatter Contour Series](datachart_series_types_scatter_contour.md)
--   [SampleScatterStats](datachart_data_sources_stats.md) for [Scatter Bubble Series](datachart_series_types_scatter_bubble.md)
--   [SampleScatterStats](datachart_data_sources_stats.md) for [Scatter Marker Series](datachart_series_types_scatter_marker.md)
--   [SampleShapeData](datachart_data_sources_shape.md) for [Scatter Shape Series](datachart_series_types_shape.md)
+-   [Category Series](datachart_series_types_category.md) �� [SampleCategoryData](datachart_data_sources_category.md)
+-   [Financial Series](datachart_series_types_financial.md) �� [SampleFinancialData](datachart_data_sources_financial.md)
+-   [Polar Series](datachart_series_types_polar.md) �� [SamplePolarData](datachart_data_sources_polar.md)
+-   [Radial Series](datachart_series_types_radial.md) �� [SampleRadialData](datachart_data_sources_radial.md)
+-   [Range Series](datachart_series_types_range.md) �� [SampleRangeData](datachart_data_sources_range.md)
+-   [Scatter HD Series](datachart_series_types_scatter_hd.md) �� [SampleDensityData](datachart_data_sources_density.md)
+-   [Scatter Area Series](datachart_series_types_scatter_contour.md) �� [SampleScatterData](datachart_data_sources_scatter.md)
+-   [Scatter Contour Series](datachart_series_types_scatter_contour.md) �� [SampleScatterData](datachart_data_sources_scatter.md)
+-   [ries](datachart_series_types_scatter_bubble.md) �� [SampleScatterData](datachart_data_sources_stats.md)
+    �� [SampleScatterStats](datachart_data_sources_stats.md)
+-   [Scatter Marker Series](datachart_series_types_scatter_marker.md) �� [SampleScatterStats](datachart_data_sources_stats.md)
+-   [Scatter Shape Series](datachart_series_types_shape.md) �� [SampleShapeData](datachart_data_sources_shape.md)

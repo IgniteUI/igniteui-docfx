@@ -1,13 +1,13 @@
 ---
-title: Data Chart Component - Native Angular | Ignite UI for Angular
-_description: The Ignite UI for Angular Data Chart is a charting component that provides modular design of axis, markers, series, legend, and annotation layers. With this chart, you can create multiple instances of these visual elements in the same chart plot area in order to create composite chart views.
-_keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Data Chart Control, Angular Data Chart Example, Angular Data Chart Component, Angular Data Chart
+title: Data Chart コンポーネント - ネイティブ Angular|Ignite UI for Angular
+_description: Ignite UI for Angular Data Chart は、軸、マーカー、凡例、および注釈レイヤーのモジュール設計を提供するチャート コンポーネントです。チャート機能は、複合チャート ビューを作成するために同じチャート領域でのビジュアル要素の複数のインスタンスを利用できます。
+_keywords: Ignite UI for Angular, Angular, Native Angular コンポーネント Suite, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント, ネイティブ Angular コンポーネント Library, Angular Chart, Angular Data Chart コントロール, Angular Data Chart Example, Angular Data Chart コンポーネント, Angular Data Chart
 _language: ja
 ---
 
-## Sample Data Source for Scatter Bubble Series
+## 散布バブル シリーズのサンプルデータソース
 
-This topic provides an example on how to implement data source for [Scatter Bubble Series](datachart_series_types_scatter_bubble.md) and [Scatter Marker Series](datachart_series_types_scatter_marker.md)
+このトピックでは、[散布バブル シリーズ](datachart_series_types_scatter_bubble.md)と [Scatter Marker シリーズ](datachart_series_types_scatter_marker.md) のデータソースを実装する方法の例を示します。
 
 ```typescript
 export class SampleScatterStats {

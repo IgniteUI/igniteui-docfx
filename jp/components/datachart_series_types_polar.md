@@ -1,45 +1,45 @@
 ---
-title: Data Chart Component - Native Angular | Ignite UI for Angular
-_description: The Ignite UI for Angular Data Chart is a charting component that provides modular design of axis, markers, series, legend, and annotation layers. With this chart, you can create multiple instances of these visual elements in the same chart plot area in order to create composite chart views.
-_keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Chart Control, Angular Chart Example, Angular Chart Component, Angular Data Chart
+title: Data Chart コンポーネント - ネイティブ Angular|Ignite UI for Angular
+_description: Ignite UI for Angular Data Chart は、軸、マーカー、凡例、および注釈レイヤーのモジュール設計を提供するチャート コンポーネントです。チャート機能は、複合チャート ビューを作成するために同じチャート領域でのビジュアル要素の複数のインスタンスを利用できます。
+_keywords: Ignite UI for Angular, Angular, Native Angular コンポーネント スイート, Native Angular コントロール, ネイティブ Angular コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular チャート, Angular チャート コントロール, Angular チャート例, Angular チャート コンポーネント, Angular データ チャート
 _language: ja
 ---
 
-## Polar Series
+## 極座標シリーズ
 
-This topic explains various types of polar series in the `IgxDataChart` control. Polar series is a group of series that use the polar (angle, radius) coordinate system instead of the Cartesian (x, y) coordinate system to plot data in chart. In other words, polar series take concepts of [Scatter Series](datachart_series_types_scatter_marker.md) and wrap them around a circle rather than stretching along a horizontal line. This group of series is used to show the relationship among the items in several distinct series of data using the polar coordinates system.
+このトピックは、`IgxDataChart` コントロールの極座標 シリーズのさまざまなタイプについて説明します。極座標シリーズは、デカルト（x、y）座標系の代わりに極座標（角度、半径）座標シリーズを使用してチャートにデータをプロットする一連のシリーズです。つまり、極座標シリーズは[散布シリーズ](datachart_series_types_scatter_marker.md) の概念を使用して、水平線に沿って伸びるのではなく円の周りを囲みます。このシリーズのグループは、極座標系を使用して複数の異なるデータのシリーズ内の項目間の関係を示すために使用されます。
 
-Polar series draw attention to uneven intervals or clusters of data. They are often used to plot scientific data (e.g. wind's direction and speed, strength and direction of magnetic field, location of objects in solar system), and can highlight the deviation of collected data from predicted results.
+極座標シリーズでは、データの不均等な散らばりやデータの塊に注意が向けられます。これらは科学的なデータ (風の方向と速度、磁場の強さと方向、太陽系内の物体の位置など) をプロットするためによく使用され、予測結果と収集データの偏差を強調することができます。
 
-### Demo
+### デモ
 
 <div class="sample-container" style="height: 500px">
     <iframe id="data-chart-type-polar-series-iframe" src='{environment:demosBaseUrl}/charts/data-chart-type-polar-series' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-type-polar-series-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-type-polar-series-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示
     </button>
 </div>
 
 <div class="divider--half"></div>
 
-### Types of Polar Series
+### 極座標シリーズのタイプ
 
-The Data Chart supports the following types of polar series:
+データチャートは、次のタイプの極座標シリーズをサポートしています。
 
-| Series Name             | Description                                                                                                                                                      |
-| ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `PolarAreaSeries`       | Displays a filled polygon enclosed by a collection of straight lines connecting data points which are located at the polar (angle/radius) coordinates            |
-| `PolarSplineAreaSeries` | Displays a filled polygon enclosed by a collection of smooth/interpolated lines connecting data points which are located at the polar (angle/radius) coordinates |
-| `PolarSplineSeries`     | Displays a collection of smooth/interpolated lines connecting data points which are located at the polar (angle/radius) coordinates                              |
-| `PolarScatterSeries`    | Displays a collection of markers representing data points which are located at the polar (angle/radius) coordinates                                              |
-| `PolarLineSeries`       | Displays a collection of straight lines connecting data points which are located at the polar (angle/radius) coordinates                                         |
+| シリーズ名                   | 説明                                                            |
+| ----------------------- | ------------------------------------------------------------- |
+| `PolarAreaSeries`       | 極座標 (角度/半径) 座標にあるデータ ポイントを結ぶ直線の集合で囲まれ、塗りつぶされた多角形を表示します        |
+| `PolarSplineAreaSeries` | 極座標（角度/半径）座標にあるデータ ポイントを結ぶ滑らかな/補間された線の集合で囲まれ、塗りつぶされた多角形を表示します |
+| `PolarSplineSeries`     | 極座標 (角度/半径) 座標にあるデータ ポイントを結ぶ滑らかな/補間された集合を表示します。               |
+| `PolarScatterSeries`    | 極座標 (角度/半径) 座標にあるデータ ポイントを表すマーカーの集合を表示します。                    |
+| `PolarLineSeries`       | 極座標 (角度/半径) 座標にあるデータ ポイントを結ぶ直線の集合を表示します。                      |
 
-### Required Axes
+### 軸の要件
 
-The `IgxDataChart` control provides various types of axes but only the following types of axes can be used with polar series.
+`IgxDataChart` コントロールは、さまざまな軸タイプを提供しますが、極座標シリーズの特定のタイプでは以下の軸タイプのみ使用できます。
 
-| Series Type             | Radius Axis Type                | Angle Axis Type                |
+| シリーズ タイプ                | 半径軸タイプ                          | 角度軸タイプ                         |
 | ----------------------- | ------------------------------- | ------------------------------ |
 | `PolarAreaSeries`       | `IgxNumericRadiusAxisComponent` | `IgxNumericAngleAxisComponent` |
 | `PolarSplineAreaSeries` | `IgxNumericRadiusAxisComponent` | `IgxNumericAngleAxisComponent` |
@@ -47,27 +47,27 @@ The `IgxDataChart` control provides various types of axes but only the following
 | `PolarScatterSeries`    | `IgxNumericRadiusAxisComponent` | `IgxNumericAngleAxisComponent` |
 | `PolarLineSeries`       | `IgxNumericRadiusAxisComponent` | `IgxNumericAngleAxisComponent` |
 
-### Required Data
+### データの要件
 
-Polar series have the following data requirements:
+極座標シリーズには、以下のデータ要件があります。
 
--   The data source must be an array or a list of data items
--   The data source must contain at least one data item otherwise the chart will not render the polar series.
--   All data items must contain at least two numeric data columns which should be mapped using the `AngleMemberPath` and `RadiusMemberPath` properties of polar series (e.g. `PolarAreaSeries`)
+-   データソースはデータ項目の配列やリストである必要があります。
+-   データソースはデータ項目を少なくとも 1 つ含む必要があります。含まない場合はチャートは極座標シリーズを描画しません。
+-   すべてのデータ項目には、極座標シリーズの `AngleMemberPath` および `RadiusMemberPath` プロパティを使用してマッピングする必要がある少なくとも2つの数値データ列 (`PolarAreaSeries` など）を含める必要があります。
 
-In polar coordinate systems, the location of data points is determined by an angle (angular coordinate) from a fixed direction and distance (radial coordinate) from a fixed point (analogous to the origin of a Cartesian coordinate) which is called "the pole". The lines that start from the pole and point outwards are gridlines of the angular axis (`IgxNumericAngleAxisComponent`) and the concentric rings that surround the pole are gridlines of the radius axis (`IgxNumericRadiusAxisComponent`)
+極座標シリーズのデータポイントの位置は、「極」と呼ばれる、固定方向からの角度 (角度座標) と固定点 (デカルト座標の原点に類似) からの距離 (半径座標) によって決まります。極から始まり外側に向かう線は、角度軸のグリッド線 (`IgxNumericAngleAxisComponent`)、極を囲む同心円は半径軸のグリッド線 (`IgxNumericRadiusAxisComponent`) です。
 
-You can use the [SamplePolarData](datachart_data_sources_polar.md) as data source which meets above data requirements.
+上記データ要件を満たすデータソースとして [SamplePolarData](datachart_data_sources_polar.md) を使用できます。
 
 ```typescript
 this.state = { dataSource: SamplePolarData.create() }
 ```
 
-### Required Modules
+### モジュールの要件
 
 <!-- Angular -->
 
-In order to use polar series, you need to import the following modules in your app during load and register data chart modules:
+極座標シリーズを使用するために、読み込み時に以下のモジュールをアプリへインポートしてデータチャートモジュールを登録する必要があります。
 
 ```typescript
 // axis' modules:
@@ -98,9 +98,9 @@ import { IgxDataChartPolarModule } from "igniteui-angular-charts/ES5/igx-data-ch
 })
 ```
 
-### Code Example
+### コード例
 
-This code demonstrates how to create an instance of data chart with `PolarLineSeries` and bind it to the data source.
+このコードは、`PolarLineSeries` でデータチャートのインスタンスを作成し、データソースにバインドする方法を説明します。
 
 ```html
  <igx-data-chart
@@ -118,12 +118,12 @@ This code demonstrates how to create an instance of data chart with `PolarLineSe
  </igx-data-chart>
 ```
 
-Note that you can also use above code to create other type of polar series by replacing `PolarLineSeries` with name of polar series that you want to render.
+上記のコードを使って `PolarLineSeries` をレンダリングしたい極座標シリーズの名前で置き換えて他のタイプの極座標 シリーズを作成することもできます。
 
-### Additional Resources
+### その他のリソース
 
--   [Axis Types](datachart_axis_types.md)
--   [Axis Sharing](datachart_axis_sharing.md)
--   [Chart Legend](datachart_chart_legends.md)
--   [Series Markers](datachart_series_markers.md)
--   [Series Types](datachart_series_types.md)
+-   [軸タイプ](datachart_axis_types.md)
+-   [軸の共有](datachart_axis_sharing.md)
+-   [チャートの凡例](datachart_chart_legends.md)
+-   [シリーズのマーカー](datachart_series_markers.md)
+-   [シリーズ タイプ](datachart_series_types.md)

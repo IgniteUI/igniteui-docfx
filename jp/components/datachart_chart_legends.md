@@ -1,33 +1,33 @@
 ---
-title: Data Chart Component - Native Angular | Ignite UI for Angular
-_description: The Ignite UI for Angular Data Chart is a charting component that provides modular design of axis, markers, series, legend, and annotation layers. With this chart, you can create multiple instances of these visual elements in the same chart plot area in order to create composite chart views.
-_keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Chart Control, Angular Chart Example, Angular Chart Component, Angular Data Chart
+title: Data Chart コンポーネント - ネイティブ Angular|Ignite UI for Angular
+_description: Ignite UI for Angular Data Chart は、軸、マーカー、凡例、および注釈レイヤーのモジュール設計を提供するチャート コンポーネントです。チャート機能は、複合チャート ビューを作成するために同じチャート領域でのビジュアル要素の複数のインスタンスを利用できます。
+_keywords: Ignite UI for Angular, Angular, Native Angular コンポーネント スイート, Native Angular コントロール, ネイティブ Angular コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular チャート, Angular チャート コントロール, Angular チャート例, Angular チャート コンポーネント, Angular データ チャート
 _language: ja
 ---
 
-## Legends
+## 凡例
 
-Legends help end-users identify visuals of chart series with contextual information related to data plotted in the `IgxDataChart` control. Most charts should have at least one legend in order to make it easier to understand data displayed in the plot area, however, it is not a requirement and the chart can render without any legends, as it does by default.
+凡例は、エンドユーザーが `IgxDataChart` コントロールにプロットされたデータに関連するコンテキスト情報を使用してチャートシリーズのビジュアルを識別するのに役立ちます。プロットエリアに表示されるデータを理解しやすくするために、ほとんどのチャートには凡例が少なくとも 1 つ必要ですが、必須ではなく、チャートはデフォルトで凡例なしで表示できます。
 
-### Demo
+### デモ
 
 <div class="sample-container" style="height: 500px">
     <iframe id="data-chart-legends-iframe" src='{environment:demosBaseUrl}/charts/data-chart-legends' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-legends-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-legends-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
     </button>
 </div>
 
 <div class="divider--half"></div>
 
-### Legend Overview
+### 凡例概要
 
-By default, the `IgxDataChart` does not display legends for any series in the chart. If you want to show a common legend for multiple series, you need to add an `IgxLegend` object to your application and then set it to the `IgxLegendComponent` property of the chart.
+デフォルトでは、`IgxDataChart` はチャート内のどのシリーズの凡例も表示しません。複数のシリーズに共通の凡例を表示したい場合は、`IgxLegend` オブジェクトをアプリケーションに追加してから、それをチャートの `IgxLegendComponent` プロパティに設定する必要があります。
 
-In addition, you must set the `Title` property for each series object or the legend will use a default series title.
+さらに、各シリーズオブジェクトの `Title` プロパティを設定しないと、凡例にデフォルトのシリーズタイトルが使用されます。
 
-The following code snippet shows how to use a legend in the `IgxDataChart` control:
+次のコードスニペットは、`IgxDataChart` コントロールで凡例を使用する方法を示しています。
 
 ```html
 <div>

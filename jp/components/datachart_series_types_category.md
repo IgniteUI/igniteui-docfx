@@ -1,48 +1,48 @@
 ---
-title: Data Chart Component - Native Angular | Ignite UI for Angular
-_description: The Ignite UI for Angular Data Chart is a charting component that provides modular design of axis, markers, series, legend, and annotation layers. With this chart, you can create multiple instances of these visual elements in the same chart plot area in order to create composite chart views.
-_keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Chart Control, Angular Chart Example, Angular Chart Component, Angular Data Chart
+title: Data Chart コンポーネント - ネイティブ Angular|Ignite UI for Angular
+_description: Ignite UI for Angular Data Chart は、軸、マーカー、凡例、および注釈レイヤーのモジュール設計を提供するチャート コンポーネントです。チャート機能は、複合チャート ビューを作成するために同じチャート領域でのビジュアル要素の複数のインスタンスを利用できます。
+_keywords: Ignite UI for Angular, Angular, Native Angular コンポーネント スイート, Native Angular コントロール, ネイティブ Angular コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular チャート, Angular チャート コントロール, Angular チャート例, Angular チャート コンポーネント, Angular データ チャート
 _language: ja
 ---
 
-## Category Series
+## カテゴリ シリーズ
 
-This topic explains various types of category series in the `IgxDataChart` control. Category series is a group of the simplest and most common form of chart series that take data and render it as collection of data points stretched along a horizontal line (e.g. `IgxColumnSeriesComponent`) or vertical line (e.g. `BarSeries`).
+このトピックは、`IgxDataChart` コントロールのファイナカテゴリ シリーズのさまざまなタイプについて説明します。カテゴリ シリーズは、データを取り入れてそれを水平線 (`IgxColumnSeriesComponent` )など) または垂直線 (`BarSeries` など) に沿って延ばしたデータ ポイントのコレクションとして描画するチャート シリーズの中でも、もっとも簡単で一般的な形のグループです。
 
-### Demo
+### デモ
 
 <div class="sample-container" style="height: 400px">
     <iframe id="data-chart-type-category-series-iframe" src='{environment:demosBaseUrl}/charts/data-chart-type-category-series' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-type-category-series-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-type-category-series-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
     </button>
 </div>
 
 <div class="divider--half"></div>
 
-### Types of Category Series
+### カテゴリ シリーズのタイプ
 
-The following table lists all types of category series and their descriptions:
+次の表は、すべてのタイプのカテゴリ シリーズとその説明をまとめたものです。
 
-| Series Name                    | Description                                                                                                                                                                                                                                                                                                                                                                                  |
-| ------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `IgxAreaSeriesComponent`       | Displays a set of evenly placed points connected by a line below which area is filled in. Categories are arranged horizontally and values – vertically.                                                                                                                                                                                                                                      |
-| `BarSeries`                    | Displays discrete data in separate rows. Unlike other series, categories are arranged vertically and values are plotted horizontally. In other words, this series is like `IgxColumnSeriesComponent` but rotated 90 degrees clockwise.                                                                                                                                                       |
-| `IgxColumnSeriesComponent`     | Displays discrete data in separate columns. Categories are arranged horizontally and values are plotted vertically. Used for showing the changes in a data series over time or for comparing multiple items.                                                                                                                                                                                 |
-| `IgxLineSeriesComponent`       | Displays a set of evenly placed points connected by straight lines. Used for showing data or information that changes continuously over time. Useful when emphasizing the relationship between the points is required.                                                                                                                                                                       |
-| `IgxPointSeriesComponent`      | Displays markers at locations of data points without connecting them by lines. Shape of these markers can be changed using `markerType` property                                                                                                                                                                                                                                             |
-| `IgxSplineSeriesComponent`     | Displays a set of evenly placed points connected by smooth lines that are generated using spline interpolation for improved presentation of data.                                                                                                                                                                                                                                            |
-| `IgxSplineAreaSeriesComponent` | Same as the `IgxAreaSeriesComponent` type with the added feature of spline interpolation and smoothing for improved presentation of data.                                                                                                                                                                                                                                                    |
-| `IgxStepLineSeriesComponent`   | Same as the `IgxLineSeriesComponent` type, except that the values are connected by continuous vertical and horizontal lines forming a step-like progression instead of a straight line tracing the shortest path between points.                                                                                                                                                             |
-| `IgxStepAreaSeriesComponent`   | Same as the `IgxStepLineSeriesComponent` type, except that the area below values is filled out instead of continuous vertical and horizontal lines forming a step-like progression for the changes between data points.                                                                                                                                                                      |
-| `IgxWaterfallSeriesComponent`  | Displays a set of points as vertical columns that show the difference between values of consecutive data points. The columns are color coded for distinguishing between positive and negative changes in value. Categories are arranged horizontally and values are plotted vertically. Used for showing the changes in a consecutive data points over time or for comparing multiple items. |
+| シリーズ名                          | 概要                                                                                                                                                 |
+| ------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `IgxAreaSeriesComponent`       | その下の領域が塗りつぶされる線で接続された、均等に配置された一連の点を表示します。カテゴリは水平に配置され、値は垂直に配置されます。                                                                                 |
+| `BarSeries`                    | 個々のデータを別々の行に表示します。他のシリーズとは異なり、カテゴリは縦に並べられ、値は横にプロットされます。つまり、このシリーズは `IgxColumnSeriesComponent` に似てますが、時計回りに90度回転されます。                               |
+| `IgxColumnSeriesComponent`     | 個々のデータを別々の列に表示します。カテゴリは水平方向、値は垂直方向にプロットされます。データ シリーズの経時的な変化を表示、または複数の項目を比較するために使用します。                                                              |
+| `IgxLineSeriesComponent`       | 直線で結ばれた均等に配置された点のセットを表示します。経時的に連続的に変化するデータまたは情報を示すために使用します。ポイントの間の関係を強調する必要がある場合に役立ちます。                                                            |
+| `IgxPointSeriesComponent`      | 線で結ばずにデータポイントの位置にマーカーを表示します。これらのマーカーの形状は、`markerType` プロパティを使用して変更されます。                                                                            |
+| `IgxSplineSeriesComponent`     | データ表示を向上させるためにスプライン補間を使用して生成した滑らかな線で接続された、均等に配置された点のセットを表示します。                                                                                     |
+| `IgxSplineAreaSeriesComponent` | データの表示を向上させるためのスプライン補間とスムージングの追加機能を持つ `IgxAreaSeriesComponent` タイプ。                                                                                |
+| `IgxStepLineSeriesComponent`   | `IgxLineSeriesComponent` と同じですが、値が点間の最短経路をトレースする直線ではなく、段階的に連続する垂直線と水平線で接続されている点が異なります。                                                             |
+| `IgxStepAreaSeriesComponent`   | `IgxStepLineSeriesComponent` と同じですが、連続する垂直線と水平線がデータポイント間の変化を段階的に進行させるのではなく、値より下の領域が塗りつぶされる点が異なります。                                                 |
+| `IgxWaterfallSeriesComponent`  | ポイントの集合を、連続するデータ ポイントの値同士の差異を示す垂直列として表示します。列は色でコード化され、値が正の変化であるか負の変化であるかを区別します。カテゴリは水平方向、値は垂直方向にプロットされます。データ ポイントの経時的な変化を表示、または複数の項目を比較するために使用します。 |
 
-### Required Axes
+### 軸の要件
 
-The `IgxDataChart` control provides various types of axes but only the following types of axes can be used with category series.
+ `IgxDataChart` コントロールは、さまざまな軸タイプを提供しますが、カテゴリ シリーズの特定のタイプでは以下の軸タイプのみ使用できます。
 
-| Series Type                    | YAxis Type                 | XAxis Type                                                                           |
+| シリーズ タイプ                       | YAxis タイプ                  | XAxis タイプ                                                                            |
 | ------------------------------ | -------------------------- | ------------------------------------------------------------------------------------ |
 | `BarSeries`                    | `CategoryYAxis`            | `IgxNumericXAxisComponent`                                                           |
 | `IgxAreaSeriesComponent`       | `IgxNumericYAxisComponent` | `IgxCategoryXAxisComponent`, `IgxOrdinalTimeXAxisComponent`, `IgxTimeXAxisComponent` |
@@ -54,26 +54,26 @@ The `IgxDataChart` control provides various types of axes but only the following
 | `IgxStepLineSeriesComponent`   | `IgxNumericYAxisComponent` | `IgxCategoryXAxisComponent`, `IgxOrdinalTimeXAxisComponent`, `IgxTimeXAxisComponent` |
 | `IgxWaterfallSeriesComponent`  | `IgxNumericYAxisComponent` | `IgxCategoryXAxisComponent`, `IgxOrdinalTimeXAxisComponent`, `IgxTimeXAxisComponent` |
 
-### Required Data
+### データの要件
 
-Category series have the following data requirements:
+カテゴリシリーズには、以下のデータ要件があります。
 
--   The data source must be an array or a list of data items
--   The data source must contain at least one data item otherwise the chart will not render the category series.
--   All data items must contain at least one data column (string or date time) which should be mapped to the `Label` property of the category axis (e.g. `IgxCategoryXAxisComponent`)
--   All data items must contain at least one numeric data column which should be mapped using the `ValueMemberPath` property of a category series (e.g. `IgxLineSeriesComponent`)
+-   データソースはデータ項目の配列またはリストである必要があります。
+-   データソースには少なくとも1つのデータ項目が含まれている必要があります。そうでない場合、チャートはカテゴリ シリーズをレンダリングしません。
+-   すべてのデータ項目には、財務軸 (`IgxCategoryXAxisComponent` など) の `Label` プロパティにマッピングする必要があるデータ列 （文字列または日時）を少なくとも 1 列含める必要があります
+-   データ itemsは、カテゴリシリーズ (`IgxLineSeriesComponent` など) の `ValueMemberPath` プロパティを使用してマップする数値データ列を少なくとも 1 列含む必要があります。
 
-You can use the [SampleCategoryData](datachart_data_sources_category.md) as data source which meets above data requirements.
+上記データ要件を満たすデータソースとして [SampleCategoryData](datachart_data_sources_category.md) を使用できます。
 
 ```typescript
 this.state = { dataSource: SampleCategoryData.create() }
 ```
 
-### Required Modules
+### モジュールの要件
 
 <!-- Angular -->
 
-In order to use category series, you need to import the following modules in your app during load and register data chart modules:
+カテゴリ シリーズを使用するために、読み込み時に以下のモジュールをアプリへインポートしてデータチャートモジュールを登録する必要があります。
 
 ```typescript
 // axis' modules:
@@ -108,9 +108,9 @@ import { IgxDataChartCategoryModule } from 'igniteui-angular-charts/ES5/igx-data
 })
 ```
 
-### Code Example - Column Series
+### コード例 - 列シリーズ
 
-This code demonstrates how to create an instance of data chart with `IgxColumnSeriesComponent` and bind it to the data source.
+このコードは、 `IgxColumnSeriesComponent`  でデータチャートのインスタンスを作成し、データソースにバインドする方法を説明します。
 
 ```html
  <igx-data-chart
@@ -127,9 +127,9 @@ This code demonstrates how to create an instance of data chart with `IgxColumnSe
  </igx-data-chart>
 ```
 
-### Code Example - Bar Series
+### コード例 - バーシリーズ
 
-Note that you can also use above code to create other type of category series by replacing `IgxColumnSeriesComponent` with name of series that you want to render. However, the `BarSeries` is an exception from this rule because it requires different types of axes. This code demonstrates how to create an instance of data chart with `BarSeries` and bind it to the data source.
+上記のコードを使って  `IgxColumnSeriesComponent`  をレンダリングしたいシリーズの名前で置き換えて他のタイプのカテゴリ シリーズを作成することもできます。ただし、 `BarSeries`  は、他のタイプの軸が必要なため、この規則の例外となります。このコードは、`BarSeries` でデータチャートのインスタンスを作成し、データソースにバインドする方法を説明します。
 
 ```html
  <igx-data-chart
@@ -146,14 +146,14 @@ Note that you can also use above code to create other type of category series by
  </igx-data-chart>
 ```
 
-### Additional Resources
+### その他のリソース
 
--   [Axis Types](datachart_axis_types.md)
--   [Axis Sharing](datachart_axis_sharing.md)
--   [Chart Legend](datachart_chart_legends.md)
--   [Series Annotations](datachart_series_annotations.md)
--   [Series Highlighting](datachart_series_highlighting.md)
--   [Series Markers](datachart_series_markers.md)
--   [Series Tooltips](datachart_series_tooltips.md)
--   [Series Trendlines](datachart_series_trendlines.md)
--   [Series Types](datachart_series_types.md)
+-   [軸のタイプ](datachart_axis_types.md)
+-   [軸の共有](datachart_axis_sharing.md)
+-   [チャート凡例](datachart_chart_legends.md)
+-   [シリーズの注釈](datachart_series_annotations.md)
+-   [シリーズの強調表示](datachart_series_highlighting.md)
+-   [シリーズ マーカー](datachart_series_markers.md)
+-   [シリーズのツールチップ](datachart_series_tooltips.md)
+-   [シリーズ トレンドライン](datachart_series_trendlines.md)
+-   [シリーズ タイプ](datachart_series_types.md)
