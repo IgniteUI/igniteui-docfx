@@ -314,7 +314,6 @@ export class MyClass implements OnInit {
             verticalStartPoint: VerticalAlignment.Bottom
         };
         this.customOverlaySettings = {
-
             positionStrategy: new ConnectedPositioningStrategy(
                 positionSettings
             ),
