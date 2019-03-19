@@ -32,10 +32,9 @@ chart パッケージをインストールするときに core パッケージ�
 <!-- -->
 
 [!NOTE]
-For React:
+React:
 
-In order to use the Doughnut chart, you need to register the 
-`IgxDoughnutChartModule`and `IgrRingSeriesModule` in your app during load:
+ドーナツ型チャートを使用するには、ロード時に `IgxDoughnutChartModule`と` IgrRingSeriesModule`　アプリケーションに登録する必要があります。
 
 ```typescript
 // app.module.ts
