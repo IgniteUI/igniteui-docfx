@@ -1,4 +1,4 @@
-@@if (igxName === 'IgxGrid') {
+﻿@@if (igxName === 'IgxGrid') {
 ---
 title: Excel フィルタリングの有効化
 _description: Ignite UI for Angular Data Grid コントロールは、タッチ レスポンシブなデータ グリッドです。階層およびリスト ビューなどの機能があります。
@@ -222,7 +222,7 @@ Excel スタイル フィルタリングをオンにするには、2 つの入�
 
 <div class="divider--half"></div>
 
-If you want to keep the sorting, moving, pinning and hiding features of the columns, but remove the items from the excel style filter menu, you can add templates in the grid for each operaton.
+If you want to keep the sorting, moving, pinning and hiding features of the columns, but remove the items from the excel style filter menu, you can add templates in the grid for each operation.
 
 @@if (igxName === 'IgxGrid') {
 ```html

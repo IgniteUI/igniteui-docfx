@@ -219,7 +219,7 @@ In the sample below 'Artist' column have all four features enabled, 'Debut' have
 
 <div class="divider--half"></div>
 
-If you want to keep the sorting, moving, pinning and hiding features of the columns, but remove the items from the excel style filter menu, you can add templates in the grid for each operaton.
+If you want to keep the sorting, moving, pinning and hiding features of the columns, but remove the items from the excel style filter menu, you can add templates in the grid for each operation.
 
 @@if (igxName === 'IgxGrid') {
 ```html
