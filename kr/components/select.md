@@ -305,10 +305,10 @@ export class MyClass implements OnInit {
 
     public ngOnInit(): void {
         const positionSettings: PositionSettings = {
-            closeAnimation: slideOutRight,
+            closeAnimation: scaleOutBottom,
             horizontalDirection: HorizontalAlignment.Right,
             horizontalStartPoint: HorizontalAlignment.Left,
-            openAnimation: slideInLeft,
+            openAnimation: scaleInTop,
             target: this.igxSelect.inputGroup.element.nativeElement,
             verticalDirection: VerticalAlignment.Bottom,
             verticalStartPoint: VerticalAlignment.Bottom
