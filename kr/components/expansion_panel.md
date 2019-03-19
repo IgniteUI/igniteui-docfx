@@ -93,7 +93,7 @@ The css classes `.igx-expansion-panel__header` and `.igx-expansion-panel__body` 
 
 You can see the results below:
 <div class="sample-container loading" style="height: 400px;">
-    <iframe id="expansion-sample-1-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/layouts/expansion-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="expansion-sample-1-sample" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/layouts/expansion-sample-1" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="expansion-sample-1-sample" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
@@ -148,7 +148,7 @@ export class ExpansionPanelComponent {
 
 Below we have the results:
 <div class="sample-container loading" style="height: 400px;">
-    <iframe id="expansion-sample-2-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/layouts/expansion-sample-2" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="expansion-sample-2-sample" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/layouts/expansion-sample-2" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="expansion-sample-2-sample" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
@@ -241,7 +241,7 @@ export class ExpansionPanelComponent {
 ### Summary
 After applying all of the changes to our initial component, here is the final result:
 <div class="sample-container loading" style="height: 500px;">
-    <iframe id="expansion-sample-3-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/layouts/expansion-sample-3" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="expansion-sample-3-sample" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/layouts/expansion-sample-3" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="expansion-sample-3-sample" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
@@ -338,7 +338,7 @@ The sample shows some user information and the key point here is passing the ani
 
 You can see the results below:
 <div class="sample-container loading" style="height: 350px;">
-    <iframe id="expansion-sample-6-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/layouts/expansion-sample-6" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="expansion-sample-6-sample" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/layouts/expansion-sample-6" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="expansion-sample-6-sample" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
@@ -515,7 +515,7 @@ export class ExpansionPanelComponent {
 ```
 You can see the results below:
 <div class="sample-container loading" style="height: 550px;">
-    <iframe id="expansion-sample-5-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/layouts/expansion-sample-5" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="expansion-sample-5-sample" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/layouts/expansion-sample-5" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="expansion-sample-5-sample" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
@@ -617,7 +617,7 @@ export const data = {
 
 You can see the results below:
 <div class="sample-container loading" style="height: 600px;">
-    <iframe id="expansion-sample-7-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/layouts/expansion-sample-7" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="expansion-sample-7-sample" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/layouts/expansion-sample-7" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="expansion-sample-7-sample" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>

@@ -1,4 +1,4 @@
-﻿@@if (igxName === 'IgxGrid') {
+@@if (igxName === 'IgxGrid') {
 ---
 title: Grid フィルタリング
 _description: Ignite UI for Angular Data Grid コントロールは、タッチ レスポンシブなデータ グリッドです。階層およびリスト ビューなどの機能があります。
@@ -310,7 +310,7 @@ export class BooleanFilteringOperand extends IgxBooleanFilteringOperand {
 }
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:600px">
-    <iframe id="grid-filtering-iframe" src='{environment:demosBaseUrl}/grid/grid-filter-conditions' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="grid-filtering-iframe" data-src='{environment:demosBaseUrl}/grid/grid-filter-conditions' width="100%" height="100%" seamless="" frameborder="0" class="lazyload"></iframe>
 </div>
 <br/>
 <div>
@@ -319,7 +319,7 @@ export class BooleanFilteringOperand extends IgxBooleanFilteringOperand {
 }
 @@if (igxName === 'IgxTreeGrid') {
 <div class="sample-container loading" style="height:600px">
-    <iframe id="treegrid-filtering-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-filtering-custom' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="treegrid-filtering-iframe" data-src='{environment:demosBaseUrl}/tree-grid/treegrid-filtering-custom' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <br/>
 <div>
@@ -328,7 +328,7 @@ export class BooleanFilteringOperand extends IgxBooleanFilteringOperand {
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
    <div class="sample-container loading" style="height:610px">
-    <iframe id="hierarchical-grid-filtering-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-custom-filtering' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="hierarchical-grid-filtering-iframe" data-src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-custom-filtering' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <br/>
 <div>

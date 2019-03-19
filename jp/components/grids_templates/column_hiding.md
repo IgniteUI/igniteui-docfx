@@ -1,4 +1,4 @@
-﻿@@if (igxName === 'IgxGrid') {
+@@if (igxName === 'IgxGrid') {
 ---
 title: Column Hiding コンポーネント – ネイティブ Angular |Ignite UI for Angular
 _description: Ignite UI for Angular 列非表示機能を使用すると、データ グリッドの定義済み UI で列を非表示/表示できます。
@@ -419,7 +419,7 @@ export class AppModule {}
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:600px">
-    <iframe id="grid-column-hiding-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-column-hiding-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="grid-column-hiding-sample-iframe" data-src='{environment:demosBaseUrl}/grid/grid-column-hiding-sample' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <br/>
 <div>
@@ -429,7 +429,7 @@ export class AppModule {}
 }
 @@if (igxName === 'IgxTreeGrid') {
 <div class="sample-container loading" style="height:600px">
-    <iframe id="treegrid-column-hiding-sample-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-column-hiding' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="treegrid-column-hiding-sample-iframe" data-src='{environment:demosBaseUrl}/tree-grid/treegrid-column-hiding' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <br/>
 <div>

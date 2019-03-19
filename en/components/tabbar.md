@@ -55,8 +55,7 @@ Then, modify the component's template to include the Bottom Navigation and add t
 If all went well, you should see the following in your browser:
 
 <div class="sample-container loading" style="height: 200px; width: 300px; border: 1px solid gray;">
-    <iframe id="tabbar-sample-1-iframe" src='{environment:demosBaseUrl}/layouts/tabbar-sample-1' width="100%" height="100%" seamless
-        frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="tabbar-sample-1-iframe" data-src='{environment:demosBaseUrl}/layouts/tabbar-sample-1' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tabbar-sample-1-iframe"
@@ -158,8 +157,7 @@ Finally add the CSS classes used by the DIV and SPAN elements of the template to
 After these modifications our Bottom Navigation should look similar to this:
 
 <div class="sample-container loading" style="height: 350px; width: 300px; border: 1px solid gray;">
-    <iframe id="tabbar-sample-2-iframe" src='{environment:demosBaseUrl}/layouts/tabbar-sample-2' width="100%" height="100%" seamless
-        frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="tabbar-sample-2-iframe" data-src='{environment:demosBaseUrl}/layouts/tabbar-sample-2' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tabbar-sample-2-iframe"

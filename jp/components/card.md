@@ -1,4 +1,4 @@
-﻿---
+---
 title: Card コンポーネント
 _description: Ignite UI for Angular Card コンポーネントを使用して、詳細情報のエントリ ポイントとして、ダッシュボード、テキスト、画像、アイコン、ボタンなどを表示します。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Card コンポーネント, Angular Card コントロール
@@ -55,8 +55,8 @@ export class AppModule {}
 ```
 
 以下は結果です。
-<div class="sample-container" style="height: 300px">
-    <iframe id="card-sample-1-iframe" src='{environment:demosBaseUrl}/layouts/card-sample-1' width="100%" height="100%" seamless frameBorder="0"  onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 300px">
+    <iframe id="card-sample-1-iframe" data-src='{environment:demosBaseUrl}/layouts/card-sample-1' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="card-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
@@ -104,8 +104,8 @@ export class AppModule {}
 ```
 
 この時点でカードは以下のような外観になります。
-<div class="sample-container" style="height: 480px">
-    <iframe id="card-sample-2-iframe" src='{environment:demosBaseUrl}/layouts/card-sample-2' width="100%" height="100%" seamless frameBorder="0"  onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 480px">
+    <iframe id="card-sample-2-iframe" data-src='{environment:demosBaseUrl}/layouts/card-sample-2' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="card-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
@@ -170,8 +170,8 @@ public icons = ['add', 'star'];
 ```
 
 簡単に機能を追加できました。ブラウザーで結果を確認します。
-<div class="sample-container" style="height: 400px">
-    <iframe id="card-sample-3-iframe" src='{environment:demosBaseUrl}/layouts/card-sample-3' width="100%" height="100%" seamless frameBorder="0"  onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 400px">
+    <iframe id="card-sample-3-iframe" data-src='{environment:demosBaseUrl}/layouts/card-sample-3' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="card-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>

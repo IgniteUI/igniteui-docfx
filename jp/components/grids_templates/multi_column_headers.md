@@ -25,7 +25,7 @@ _language: ja
 
 ### 複数列ヘッダー
 
-[`@@igxName`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) supports `multi-column headers` which allows you to group columns by placing them under a common header. Every `column group` could be a representation of combinations between other groups or columns.
+[`@@igxName`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) は、列ヘッダーの下に行を配置した行のグループ化が可能な `複数列ヘッダー`をサポートします。それぞれの`列グループ`は、その他のグループや列と組み合わせて表示できます。
 
 #### デモ
 

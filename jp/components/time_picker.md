@@ -1,4 +1,4 @@
-﻿---
+---
 title: Time Picker コンポーネント - ネイティブ Angular | Ignite UI for Angular
 _description: Ignite UI for Angular Time Picker コンポーネントを使用すると、スピン ボタンがあるダイアログから時間を選択し、入力フィールドに値が設定されます。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, ネイティブ Angular コンポーネント, Angular Time Picker コンポーネント, Angular Time Picker コントロール、Time Picker, Angular Time Picker
@@ -51,7 +51,7 @@ export class AppModule {}
 以下は結果です。
 
 <div class="sample-container loading" style="height:600px">
-    <iframe id="timepicker-sample-1-iframe" src="{environment:demosBaseUrl}/scheduling/timepicker-sample-1" width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="timepicker-sample-1-iframe" data-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-1" width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="timepicker-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
@@ -75,7 +75,7 @@ public date: Date = new Date(Date.now());
 以下は結果です。
 
 <div class="sample-container loading" style="height: 600px;">
-    <iframe id="time-picker-sample-2" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/scheduling/timepicker-sample-2" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="time-picker-sample-2" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-2" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="time-picker-sample-2" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
@@ -99,7 +99,7 @@ TwoWay データ バインディングを使用するには、`ngModel` を以�
 以下は結果です。
 
 <div class="sample-container loading" style="height: 600px;">
-    <iframe id="time-picker-sample-3" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/scheduling/timepicker-sample-3" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="time-picker-sample-3" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-3" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="time-picker-sample-3" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
@@ -149,7 +149,7 @@ public onValidationFailed(timepicker){
 以下は結果です。
 
 <div class="sample-container loading" style="height: 540px;">
-    <iframe id="time-picker-sample-4" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/scheduling/timepicker-sample-4" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="time-picker-sample-4" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-4" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="time-picker-sample-4" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
@@ -187,7 +187,7 @@ public mode = InteractionMode.DropDown;
 
 以下は結果です。
 <div class="sample-container loading" style="height:540px">
-    <iframe id="timepicker-dropdown-iframe" src='{environment:demosBaseUrl}/scheduling/timepicker-dropdown' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="timepicker-dropdown-iframe" data-src='{environment:demosBaseUrl}/scheduling/timepicker-dropdown' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="timepicker-dropdown-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
@@ -225,7 +225,7 @@ public date: Date = new Date(Date.now());
 
 以下は結果です。
 <div class="sample-container loading" style="height: 600px;">
-    <iframe id="time-picker-sample-5" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/scheduling/timepicker-sample-5" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="time-picker-sample-5" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-5" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="time-picker-sample-5" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>

@@ -99,7 +99,7 @@ public numericFormatOptions = {
 
 Here is an example of modifying the default format options of the month picker:
 <div class="sample-container loading" style="height: 600px">
-    <iframe id="monthpicker-sample-2-iframe" src='{environment:demosBaseUrl}/scheduling/monthpicker-sample-2' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="monthpicker-sample-2-iframe" data-src='{environment:demosBaseUrl}/scheduling/monthpicker-sample-2' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="monthpicker-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
@@ -127,7 +127,7 @@ public formatOptions = {
 
 Here is an example of localizing the month picker component:
 <div class="sample-container loading" style="height: 620px">
-    <iframe id="monthpicker-sample-3-iframe" src='{environment:demosBaseUrl}/scheduling/monthpicker-sample-3' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="monthpicker-sample-3-iframe" data-src='{environment:demosBaseUrl}/scheduling/monthpicker-sample-3' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="monthpicker-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>

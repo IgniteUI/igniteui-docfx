@@ -8,8 +8,8 @@ _keywords: Ignite UI for Angular, Angular Theming Component, Angular Theming, Ig
 The **Ignite UI for Angular Theming** provides you the ability to customize themes for your application by setting them globally, in order to beautify all non-custom-styled elements, or applying them severally to the components you want to differentiate.
 
 ### Demo
-<div class="sample-container" style="height: 750px">
-    <iframe id="theme-chooser-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/theming/theme-chooser" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 750px">
+    <iframe id="theme-chooser-iframe" seamless="" width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/theming/theme-chooser" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="theme-chooser-iframe" data-demos-base-url="{environment:demosBaseUrl}"> view on stackblitz
@@ -35,8 +35,8 @@ There is a **default theme** that styles all the components in the **Ignite UI f
 
 The result from the above code snippet looks like this:
 
-<div class="sample-container" style="height: 700px">
-    <iframe id="default-theme-sample-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/theming/default-theme-sample" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 700px">
+    <iframe id="default-theme-sample-iframe" seamless="" width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/theming/default-theme-sample" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="default-theme-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}"> view on stackblitz
@@ -200,8 +200,8 @@ After that, in a new SCSS file nest the **themes class**, that includes the comp
 ```
 And the result is:
 
-<div class="sample-container" style="height: 750px">
-    <iframe id="dark-theme-sample-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/theming/dark-theme-sample" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 750px">
+    <iframe id="dark-theme-sample-iframe" seamless="" width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/theming/dark-theme-sample" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dark-theme-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}"> view on stackblitz
@@ -403,8 +403,8 @@ export class ThemeChooserSampleComponent implements OnInit {
 
 Now we can easily change our defined themes with only a `click` event:
 
-<div class="sample-container" style="height: 750px">
-    <iframe id="theme-chooser-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/theming/theme-chooser" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 750px">
+    <iframe id="theme-chooser-iframe" seamless="" width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/theming/theme-chooser" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="theme-chooser-iframe" data-demos-base-url="{environment:demosBaseUrl}"> view on stackblitz

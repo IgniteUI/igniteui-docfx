@@ -114,8 +114,7 @@ public exportButtonHandler() {
 ```
 
 <div class="sample-container loading" style="height: 300px;">
-    <iframe id="csv-export-sample-iframe2" src="{environment:demosBaseUrl}/services/export-csv-sample-1"
-        width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="csv-export-sample-iframe2" data-src="{environment:demosBaseUrl}/services/export-csv-sample-1" width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="csv-export-sample-iframe2"

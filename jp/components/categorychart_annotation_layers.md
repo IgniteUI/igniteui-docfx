@@ -4,13 +4,15 @@ _description: Ignite UI for Angular Category Chart コンポーネントは複�
 _keywords: Ignite UI for Angular, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular チャート, Angular チャート コントロール, Angular チャート例, Angular Grid コンポーネント, Angular Chart コンポーネント, Angular Category Chart
 _language: ja
 ---
+
 ## 注釈
 
-このトピックでは、`igx-category-chart` の注釈やインタラクションについて説明します。
+このトピックでは、`IgxCategoryChart` の注釈やインタラクションについて説明します。
 
 ### デモ
-<div class="sample-container" style="height: 550px">
-    <iframe id="category-chart-annotations-iframe" src='{environment:demosBaseUrl}/charts/category-chart-annotations' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+
+<div class="sample-container loading" style="height: 550px">
+    <iframe id="category-chart-annotations-iframe" src='{environment:demosBaseUrl}/charts/category-chart-annotations' width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="category-chart-annotations-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz

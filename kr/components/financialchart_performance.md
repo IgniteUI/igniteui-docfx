@@ -1,4 +1,4 @@
-﻿---
+---
 title: 금융 차트 - 퍼포먼스
 _description: Ignite UI for Angular 금융 차트 컴포넌트는 간단하고 직관적인 API를 사용하여 재무 데이터를 표시하도록 쉽게 구성되어 있으며, 사용자가 데이터를 바인딩하면 차트는 데이터를 시각화하고 해석할 수 있는 다양한 방법을 제공합니다.
 _keywords: Ignite UI for Angular, Angular, 네이티브 Angular 컴포넌트 세트, 네이티브 Angular 컨트롤, 네이티브 Angular 컴포넌트, 네이티브 Angular 컴포넌트 라이브러리, Angular 차트, Angular 차트 컨트롤, Angular 차트 예제, Angular 그리드 컴포넌트, Angular 차트 컴포넌트, Angular 금융 차트
@@ -11,8 +11,8 @@ _language: kr
 
 ### 데모
 
-<div class="sample-container" style="height: 550px">
-    <iframe id="financial-chart-performance-iframe" src='{environment:demosBaseUrl}/charts/financial-chart-performance' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 550px">
+    <iframe id="financial-chart-performance-iframe" src='{environment:demosBaseUrl}/charts/financial-chart-performance' width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="financial-chart-performance-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기
@@ -48,7 +48,12 @@ export class AppComponent {
 
 -   컴포넌트에 바인딩할 속성에 대량의 데이터를 저장할 경우,  `@Component` 코레이터에서 `changeDetection: ChangeDetectionStrategy.OnPush`를 설정해야 합니다. Angular가 모든 변경 검출 주기에서 데이터 배열 내의 변경 사항을 확인하지 않도록 설정합니다.
 -   Angular가 차트에 자동으로 데이터 변경을 알려주는 대신에 바인딩된 데이터가 변경된 방법을 컴포넌트에 알리도록 할 수 했습니다. 이러한 델타 알림은 Angular가 변경 검출을 실행할 때마다 100만 레코드 배열의 모든 변경을 비교하는 것보다 훨씬 효율적으로 실행할 수 있습니다. 바인딩된 데이터의 변경을 차트에 알리는 방법에 대한 자세한 것은 각 차트의 `notify*`메소드를 참조하십시오.
--   Angular가 디버그 모드에서 실행된 경우, 일부 브라우저에는 퍼포먼스를 저하시키는 오버헤드가 있습니다. 실제 퍼포먼스를 평가할 경우, 항상 `--prod` 버전을 사용하여 서비스하거나 빌드해야 합니다.
+-   When Angular is in Debug mode, there is a lot of overhead in some browsers that will drag down performance. When evaluating real world performance always make sure to serve or build with `--prod` version.
+
+[!NOTE]
+For React:
+
+-   When Angular is in development mode, there is a lot of overhead in some browsers that will drag down performance. When evaluating real world performance always make sure to use production builds.
 
 또한, 애플리케이션에서 퍼포먼스를 최적화할 때 금융 차트의 다음 기능을 고려해야 합니다.
 

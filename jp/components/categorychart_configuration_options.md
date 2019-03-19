@@ -1,17 +1,18 @@
-﻿---
+---
 title: 構成オプション
 _description: Ignite UI for Angular Category Chart コンポーネントは複雑なデータ ビジュアライゼーションを API によって簡素化できます。ユーザーがデータのコレクションまたはコレクションのグループにバインドし、データを指定するプロパティを設定後、チャート コントロールが残りの作業を処理します。
 _keywords: Ignite UI for Angular, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular チャート, Angular チャート コントロール, Angular チャート例, Angular チャート コンポーネント, Angular Category Chart
 _language: ja
 ---
+
 ## 構成オプション
 
 マーカー、チャート タイトルとサブタイトル、およびチャート タイプなどのカテゴリ チャート機能をカスタマイズできます。
 
 ### デモ
 
-<div class="sample-container" style="height: 550px">
-    <iframe id="category-chart-config-options-sample-iframe" src='{environment:demosBaseUrl}/charts/category-chart-config-options-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 550px">
+    <iframe id="category-chart-config-options-sample-iframe" src='{environment:demosBaseUrl}/charts/category-chart-config-options-sample' width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="category-chart-config-options-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
@@ -51,13 +52,13 @@ _language: ja
     markerOutlines="yellow">
 </igx-category-chart>
 ```
+
 ### チャートのタイトルとサブタイトルを構成
 
 カテゴリ チャート コンポーネントのタイトルとサブタイトル機能は、チャートの上部セクションに情報を追加できます。
 チャートにタイトルまたはサブタイトルを追加すると、タイトルとサブタイトルの情報に応じて、チャートの内容が自動的にサイズ変更されます。
 
 以下のコード例のようにカテゴリ チャートのサブタイトルとタイトルにさまざまなフォントスタイル、マージン、配置を適用してルックアンドフィールをカスタマイズできます。
-
 
 ```html
 <igx-category-chart
@@ -79,8 +80,8 @@ _language: ja
 
 チャートでタイトルおよびサブタイトル情報がサイズ変更できます。
 
->[!NOTE] 
->デフォルトでトランジションイン アニメーションは無効ですが、`isTransitionInEnabled` オプションを `true` に設定してトランジションイン アニメーションを有効にできます。
+> [!NOTE] 
+> デフォルトでトランジションイン アニメーションは無効ですが、`isTransitionInEnabled` オプションを `true` に設定してトランジションイン アニメーションを有効にできます。
 
 トランジションイン アニメーションのトランジション タイプ、データ ポイントに相対するスピード、およびイージング関数によって管理されるイージング トランジションを構成できます。
 

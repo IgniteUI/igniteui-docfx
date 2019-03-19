@@ -1,4 +1,4 @@
-﻿---
+---
 title: Month Picker コンポーネント
 _description: Angular Month Picker コンポーネントは、カレンダー ビューで年や月を簡単で直感的な選択できます。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Month Picker コンポーネント, Angular Month Picker コントロール
@@ -99,7 +99,7 @@ public numericFormatOptions = {
 
 以下は、マンスピッカーのデフォルトの書式オプションを変更する例です。
 <div class="sample-container loading" style="height: 600px">
-    <iframe id="monthpicker-sample-2-iframe" src='{environment:demosBaseUrl}/scheduling/monthpicker-sample-2' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="monthpicker-sample-2-iframe" data-src='{environment:demosBaseUrl}/scheduling/monthpicker-sample-2' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="monthpicker-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
@@ -127,7 +127,7 @@ public formatOptions = {
 
 マンスピッカー コンポーネントのローカライズの例:
 <div class="sample-container loading" style="height: 620px">
-    <iframe id="monthpicker-sample-3-iframe" src='{environment:demosBaseUrl}/scheduling/monthpicker-sample-3' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="monthpicker-sample-3-iframe" data-src='{environment:demosBaseUrl}/scheduling/monthpicker-sample-3' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="monthpicker-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
