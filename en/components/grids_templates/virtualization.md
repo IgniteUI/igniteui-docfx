@@ -134,9 +134,9 @@ To provide remote filtering, you need to subscribe to the [`onFilteringDone`]({e
 
 <igx-tree-grid #treeGrid [data]="remoteData | async" primaryKey="ID" foreignKey="ParentID" [autoGenerate]="false" width="100%" height="450px"
                 [autoGenerate]="false" (onFilteringDone)="processData()" [allowFiltering]="true">
-    <igx-column [field]="'Name'" dataType="string" [sortable]="true"></igx-column>
-    <igx-column [field]="'Title'" dataType="string" [sortable]="true"></igx-column>
-    <igx-column [field]="'Age'" dataType="number" [sortable]="true"></igx-column>
+    <igx-column [field]="'Name'" dataType="string"></igx-column>
+    <igx-column [field]="'Title'" dataType="string"></igx-column>
+    <igx-column [field]="'Age'" dataType="number"></igx-column>
     ...
 </igx-tree-grid>
 ```
