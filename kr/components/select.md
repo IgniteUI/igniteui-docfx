@@ -61,7 +61,7 @@ When the `igx-drop-down` is opened, you can close it by doing one of the followi
 - select an item from the drop-down list
 - press `ALT + UP/Down Arrow` keys
 - press any of `Enter`, `Space`, `Esc` or `Tab` keys
-- It is also possible to close the drop-down by left-clicking with the mouse on the drop-down button or if you lef-click outside of the drop-down list.
+- It is also possible to close the drop-down by left-clicking with the mouse on the drop-down button or if you left-click outside of the drop-down list (input blur).
 
 ### Keyboard Navigation
 `igx-select` has intuitive keyboard navigation that makes it easy to select items without having to touch the mouse.
@@ -192,8 +192,6 @@ All of it looks like this:
 public igxSelect: IgxSelectComponent;
 
 public customOverlaySettings: OverlaySettings = {
-    closeOnOutsideClick: true,
-    modal: false,
     positionStrategy: new SelectPositioningStrategy(
         this.igxSelect
     ),
@@ -201,7 +199,6 @@ public customOverlaySettings: OverlaySettings = {
 };
 ```
 As you can see there is also a `scrollStrategy` property that is present in the `customOverlaySettings` object. This ensures that the scrolling functionality of the drop-down works as expected. The scroll will appear every time the total height of all items in the list exceeds the drop-down's height.
-- The `modal` and `closeOnOutsideClick` properties are optional and have default values respectively `false` and `true`.
 
 Another thing worth mentioning is that `igx-select` uses the `SelectPositioningStrategy` by default.
 > You can pass a variety of positioning strategies to the *positionStrategy* property, you can find them [*here*](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/latest/interfaces/ipositionstrategy.html). 
@@ -317,8 +314,6 @@ export class MyClass implements OnInit {
             verticalStartPoint: VerticalAlignment.Bottom
         };
         this.customOverlaySettings = {
-            closeOnOutsideClick: false,
-            modal: true,
             positionStrategy: new ConnectedPositioningStrategy(
                 positionSettings
             ),
@@ -348,8 +343,6 @@ Your class should look something like this:
 export class MyClass implements OnInit {
     /* -- */
     private otherCustomOverlaySettings: OverlaySettings = {
-        closeOnOutsideClick: true,
-        modal: false,
         positionStrategy: new GlobalPositionStrategy(),
         scrollStrategy: new AbsoluteScrollStrategy()
     }
