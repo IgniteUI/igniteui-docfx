@@ -464,7 +464,7 @@ public leftPanPerformed(args) {
 ```
 
 > [!NOTE]
-> リスト項目のパンニング時にパンニング イベントが発生するために達する必要のあるしきい値があります。[`IgxList`]({environment:angularApiUrl}/classes/igxlistcomponent.html) [`panEndTriggeringThreshold`]({environment:angularApiUrl}/classes/igxlistcomponent.html#panendtriggeringthreshold) プロパティを使用するしきい値を変更できます。このプロパティのデフォルトは0.5 でリスト項目幅の 50% を意味します。
+> リスト項目のパンニング時にパンニング イベントが発生するために達する必要のあるしきい値があります。[`IgxList`]({environment:angularApiUrl}/classes/igxlistcomponent.html) [`panEndTriggeringThreshold`]({environment:angularApiUrl}/classes/igxlistcomponent.html#panendtriggeringthreshold) プロパティを使用するしきい値を変更できます。このプロパティのデフォルトは 0.5 でリスト項目幅の 50% を意味します。
 
 次にリスト項目をパンニングします。
 

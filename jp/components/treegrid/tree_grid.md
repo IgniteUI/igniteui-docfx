@@ -40,7 +40,7 @@ export class AppModule {}
 
 ### 使用方法
 
-[`IgxTreeGridComponent`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html) は`IgxGridComponent`]({environment:angularApiUrl}/classes/igxgridcomponent.html) と多数の機能を共有しますが、データを階層で表示する機能も追加されています。
+[`IgxTreeGridComponent`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html) は [`IgxGridComponent`]({environment:angularApiUrl}/classes/igxgridcomponent.html) と多数の機能を共有しますが、データを階層で表示する機能も追加されています。
 [`IgxTreeGridComponent`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html) は、各データオブジェクトの [child collection](#child-collection) または各データオブジェクトに[プライマリキーまたは外部キー](#primary-and-foreign-keys)を使用してデータ オブジェクト内の関係を定義できます。
 
 ### ツリー セル
@@ -236,35 +236,35 @@ export class MyComponent implements OnInit {
 
 <div class="divider--half"></div>
 
-### Keyboard navigation
+### キーボード ナビゲーション
 
-Keyboard navigation is available by default in the Tree Grid and aims at covering as many as possible features and scenarios for the end user. When you focus a specific cell and press one of the following key combinations, the described behaviour is performed:
+Tree Grid では、キーボード ナビゲーションがデフォルトで有効です。エンドユーザーの要件に合わせて機能を追加できます。以下は、特定のセルをフォーカスして以下のキーの組み合わせを押した場合の動作を示します。
 
- - `Arrow Up` - navigates one cell up (no wrapping);
- - `Arrow Down` - navigates one cell down (no wrapping);
- - `Arrow Left` - navigates one cell left (no wrapping between lines);
- - `Arrow Right` - navigates one cell right (no wrapping between lines);
- - `Ctrl + Arrow Up` - navigates to the first cell in the current column;
- - `Ctrl + Arrow Down` - navigates to the last cell in the current column;
- - `Ctrl + Arrow Left` -  moves to leftmost cell in row;
- - `Home` - moves to leftmost cell in row;
- - `Ctrl + Home` - moves to top left cell in the grid;
- - `Ctrl + Arrow Right` - moves to rightmost cell in row;
- - `End` - moves to rightmost cell in row;
- - `Ctrl + End` - moves to bottom right cell in the grid;
- - `Page Up` - scrolls one page (view port) up;
- - `Page Down` -  scrolls one page (view port) down;
- - `Enter` - enters edit mode;
- - `F2` - enters edit mode;
- - `Esc` - exits edit mode;
- - `Tab` - sequentially move the focus over the next cell on the row and if the last cell is reached move to next row; When cell is in edit mode, will move the focus to next editable cell in the row, and from the right-most editable cell to the `CANCEL` and `DONE` buttons, and from the `DONE` button to the left-most editable cell within the currently edited row. If the next cell is not editable, it has to be selected;
- - `Shift + Tab` - sequentially move the focus to the previous cell on the row, if the first cell is reached move the focus to the previous row. When cell is in edit mode, will move the focus to the previous editable cell in the row, and from the right-most editable cell to the `CANCEL` and `DONE` buttons, and from the `DONE` button to the left-most editable cell within the currently edited row. If the cell is not editable, it has to be selected;
- - `Space` -  if the row is selectable, on keydown space triggers row selection;
- - `Alt + Arrow Left` over Tree Grid row - the cell should stay selected and focused and if the selected cell row has children the row should be collapsed;
- - `Alt + Arrow Up` over Tree Grid row - the cell should stay selected and focused and if the selected cell row has children the row should be collapsed;
- - `Alt + Arrow Right` over Tree Grid Row - the cell should stay selected and focused and if the selected cell row has children the row should be expanded;
- - `Alt + Arrow Down` over Tree Grid Row - the cell should stay selected and focused and if the selected cell row has children the row should be expanded;
- - on mouse `wheel` -  blurs the focused element;
+ - `上矢印` - 1 つ上のセルへ移動 (ラッピングなし);
+ - `下矢印` - 1 つ下のセルへ移動 (ラッピングなし);
+ - `左矢印` - 1 つ左のセルへ移動 (行間のラッピングなし);
+ - `右矢印` - 1 つ右のセルへ移動 (行間のラッピングなし);
+ - `Ctrl + 上矢印` - 現在の列の最初のセルへ移動
+ - Ctrl + 下矢印` - 現在の列の最後のセルへ移動
+ - Ctrl + 左矢印` -  行の左端のセルへ移動;
+ - `Home` - 行の左端のセルへ移動;
+ - `Ctrl + Home` - グリッドの左上のセルへ移動;
+ - `Ctrl + 右矢印` -  行の右端のセルへ移動;
+ - `End` - 行の右端のセルへ移動;
+ - `Ctrl + End` - グリッドの右下のセルへ移動;
+ - `Page Up` - 1 ページ (ビューポート) 上へスクロール;
+ - `Page Down` - 1 ページ (ビューポート) 下へスクロール;
+ - `Enter` - 編集モードに入る;
+ - `F2` - 編集モードに入る;
+ - `Esc` - 編集モードを終了する;
+ - `Tab` - フォーカスを行の次のセルへ順番に移動し、最後のセルのあとは次の行へ移動します。次の行がグループ行の場合、行全体がフォーカスされます。データ行の場合、最初のセルにフォーカスを移動します。セルが編集モードの場合、フォーカスを次の編集可能なセルへ移動し、編集可能な一番右のセルから`CANCEL`、`DONE` ボタン、`DONE` から編集可能な一番左のセルへ移動します。次のセルが編集できない場合は選択する必要があります。
+ - `Shift + Tab` - 行の前のセルへフォーカスを順番に移動し、最初のセルの次に前の行へフォーカスを移動します。セルが編集モードの場合、行で編集可能な前のセルにフォーカスを移動します。編集可能な一番右のセルから `CANCEL`、`DONE` ボタンへ、`DONE` から編集可能な一番左のセルへ移動します。セルが編集できない場合は選択する必要があります。
+ - `Space` - 行が選択可能な場合、スペースキーを押下すると行選択をトリガーします。
+ - ` Alt + 左矢印 ` Tree Grid 行の上 - セルが選択されてフォーカスされたままになり、選択されたセル行に子がある場合、その行が折りたたまれます。
+ - ` Alt + 上矢印 ` Tree Grid 行の上 - セルが選択されてフォーカスされたままになり、選択されたセル行に子がある場合、その行が折りたたまれます。
+ - ` Alt + 右矢印 ` Tree Grid 行の上 - セルが選択されてフォーカスされたままになり、選択されたセル行に子がある場合、その行がエキスパンダーりたたまれます。
+ - ` Alt + 下矢印 ` Tree Grid 行の上 - セルが選択されてフォーカスされたままになり、選択されたセル行に子がある場合、その行がエキスパンダーりたたまれます。
+ - マウス `ホイール` - フォーカス要素をぼかします。
 
 <div class="divider--half"></div>
 

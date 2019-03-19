@@ -10,7 +10,7 @@ _language: ja
 最小限のコードで Ignite UI for Angular コンポーネントの文字列を簡単にローカライズできます。
 
 <div class="sample-container loading" style="height:550px">
-    <iframe id="localization-sample-1-iframe" src='{environment:demosBaseUrl}/localization-sample-1' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="localization-sample-1-iframe" src="{environment:demosBaseUrl}/services/localization-sample-1" width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>

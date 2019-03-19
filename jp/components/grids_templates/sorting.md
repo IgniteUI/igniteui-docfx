@@ -24,10 +24,10 @@ _language: ja
 }
 ### @@igComponent 並べ替え
 
-Ignite UI for Angular @@igComponent では、列レベルでの**並べ替**えが可能です。つまり、**@@igSelector** に並べ替え可能な列と並べ替え不可の列の両方を持つことができます。
+Ignite UI for Angular @@igComponent では、列レベルでの**並べ替**えが可能で、**@@igSelector** に並べ替え可能な列と並べ替え不可の列の両方を持つことができます。
 
 #### デモ
-更に @@igSelector** の [`onContextMenu`] を使用して並べ替えにカスタム contextmenu が追加されます。
+更に **@@igSelector** の [`onContextMenu`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#oncontextmenu) を使用して並べ替えにカスタム contextmenu が追加されます。
 
 
 @@if (igxName === 'IgxGrid') {

@@ -269,7 +269,7 @@ export class LinearProgressbarSample2Component implements OnInit {
 > [!NOTE]
 > [`step`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#step) 入力値が定義されていない場合、更新は **[`max`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#max) 値の 1%**。進行を速くしたい場合、[`step`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#step) 値を (**[`max`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#max) * 1%**) より大きい値にし、より遅い進行は[`step`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#step) をデフォルト進捗状況未満にする必要があります。
 
-> [`step`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#step) を [`value`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#value) 入力より大きい値に定義した場合、**進行状況の更新に渡す値を取得する更新は一つのみとなります。
+> [`step`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#step) を [`value`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#value) 入力より大きい値に定義した場合、更新は 1 つのみで、**進行状況の更新に渡される値**を取得します。
 <div class="divider--half"></div>
 
 ### API

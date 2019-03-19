@@ -100,15 +100,15 @@ xamDoughnutChart は、複数のリングを、異なるコレクションにバ
 
 **スライスをクリックして選択状態を変更** - `sliceClick` イベントにイベント ハンドラーをアタッチした場合、選択状態を変更するためのイベント引数のクリックしたスライスへの参照を提供します。ドーナツ型チャートは、選択されたスライスのスタイルを決定する `selectedStyle` プロパティを公開します。デフォルトでは、適用されるスタイルはありません。スライスを選択しても、その見た目はどのようにも変わりません。選択されたスライスにカスタム スタイルを適用する場合は、Slice の `targetType` で Style を定義し、`selectedStyle` プロパティの値として設定する必要があります。 
 
-**Setting the IsSelected property** - ドーナツ型チャートは、`isSelected` プロパティを直接変更できるすべてのスライスへの参照を保持しなす。ドーナツ型チャートは、スライスの選択済み/選択解除の状態の変更に使用する `sliceClick` イベントを公開します。  
+**IsSelected プロパティの設定** - ドーナツ型チャートは、`isSelected` プロパティを直接変更できるすべてのスライスへの参照を保持しなす。ドーナツ型チャートは、スライスの選択済み/選択解除の状態の変更に使用する `sliceClick` イベントを公開します。  
 
-### 
+### スライス選択のデモ
 
-<div class="sample-container loading" style="height: 550px">
-    <iframe id="doughnut-chart-selection-iframe" data-src='{environment:demosBaseUrl}/charts/doughnut-chart-selection' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+<div class="sample-container loading" style="height: 450px">
+    <iframe id="doughnut-chart-selection-iframe" data-src='{environment:demosBaseUrl}/charts/doughnut-chart-selection' width="100%" height="100%" seamless="" frameborder="0" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="doughnut-chart-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示
+    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="doughnut-chart-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
     </button>
 </div>
 
@@ -126,28 +126,28 @@ xamDoughnutChart は、複数のリングを、異なるコレクションにバ
 import { SliceClickEventArgs } from "igniteui-react-charts/ES5/igr-slice-click-event-args";
 ```
 
-### 
+### スライス分割のデモ
 
-<div class="sample-container loading" style="height: 550px">
-    <iframe id="doughnut-chart-explosion-iframe" data-src='{environment:demosBaseUrl}/charts/doughnut-chart-explosion' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+<div class="sample-container loading" style="height: 450px">
+    <iframe id="doughnut-chart-explosion-iframe" data-src='{environment:demosBaseUrl}/charts/doughnut-chart-explosion' width="100%" height="100%" seamless="" frameborder="0" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="doughnut-chart-explosion-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示
+    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="doughnut-chart-explosion-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
     </button>
 </div>
 
 <div class="divider--half"></div>
 
-### Legend
+### 凡例
 
 The `IgxDoughnutChart` supports the use of a legend. The legend used is the ItemLegend which is connected though the series of the chart.
 
 ### Legend Demo
 
-<div class="sample-container" style="height: 450px">
-    <iframe id="doughnut-chart-legend-iframe" src='{environment:demosBaseUrl}/charts/doughnut-chart-legend' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 450px">
+    <iframe id="doughnut-chart-legend-iframe" data-src='{environment:demosBaseUrl}/charts/doughnut-chart-legend' width="100%" height="100%" seamless="" frameborder="0" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="doughnut-chart-explosion-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="doughnut-chart-explosion-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示
     </button>
 </div>
