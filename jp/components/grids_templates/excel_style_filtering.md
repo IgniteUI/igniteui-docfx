@@ -95,7 +95,7 @@ Excel スタイル フィルタリングをオンにするには、2 つの入�
 
 ###メニュー機能の構成
 
-並べ替え、移動、ピン固定、非表示の機能をフィルター メニューから削除できます。制御のための入力は、[`sortable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#sortable), [`movable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#movable), [`disablePinning`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#disablePinning), [`disableHiding`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#disableHiding) があります。
+並べ替え、移動、ピン固定、非表示の機能をフィルター メニューから削除できます。制御のための入力は、[`sortable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#sortable), [`movable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#movable), [`disablePinning`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#disablepinning), [`disableHiding`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#disablehiding) があります。
 
 @@if (igxName === 'IgxGrid') {
 ```html
