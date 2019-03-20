@@ -159,34 +159,7 @@ public processData() {
 }
 ```
 
-The remote filtering will have to be performed over the flat collection directly. We will also include all the parents for any record that matches the filtering condition regardless of whether or not the parents match the filtering (we do this to keep the hierarchy intact).
-
-```typescript
-// remoteFilteringService.ts
-
-private filterData(data: any[], filteringArgs: IFilteringExpressionsTree): any[] {
-    const filteredData: any[] = [];
-
-    data.forEach((record) => {
-        if (this._filteringStrategy.matchRecord(record, filteringArgs)) {
-            // If record matches the filtering condition, add it to the result array.
-            filteredData.push(record);
-
-            // Add record's parents as well in order to keep them in the display hierarchy.
-            const parents = this.getParents(record);
-            parents.forEach((parent) => {
-                if (filteredData.indexOf(parent) === -1) {
-                    filteredData.push(parent);
-                }
-            });
-        }
-    });
-
-    return filteredData;
-}
-```
-
-The result can be seen below:
+The remote filtering will have to be performed over the flat collection directly. We will also have to include all the parents for any record that matches the filtering condition regardless of whether or not the parents match the filtering (we do this to keep the hierarchy intact). The result can be seen below:
 
 <div class="sample-container loading" style="height:550px">
     <iframe id="treegrid-remotefiltering-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-remote-filtering' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
