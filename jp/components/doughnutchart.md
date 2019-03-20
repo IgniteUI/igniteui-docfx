@@ -1,36 +1,36 @@
----
-title: Doughnut Chart �R���|�[�l���g - �l�C�e�B�u Angular |Ignite UI for Angular
+﻿---
+title: Doughnut Chart コンポーネント - ネイティブ Angular |Ignite UI for Angular
 mentionedTypes: ['DoughnutChart', 'DoughnutChartType']
-_description: Ignite UI for Angular Doughnut Chart �R���|�[�l���g�́A�����̕ϐ��𓯐S�~��̗ւŕ\���ł��A�f�[�^�͑��̃R���N�V�����⋤�ʃf�[�^�\�[�X�Ƀo�C���h�ł��܂��B
-_keywords: Ignite UI for Angular, UI �R���g���[��, Angular �E�B�W�F�b�g, web �E�B�W�F�b�g, UI �E�B�W�F�b�g, Angular, �l�C�e�B�u Angular �R���|�[�l���g �X�C�[�g, �l�C�e�B�u Angular �R���g���[��, �l�C�e�B�u Angular �R���|�[�l���g Library, Angular Data Grid �R���|�[�l���g, Angular Data Grid �R���g���[��, Angular Doughnut Chart �R���g���[��, Angular Doughnut Chart �R���|�[�l���g, Angular data grid Doughnut Chart �R���|�[�l���g��, Angular Doughnut Chart
+_description: Ignite UI for Angular Doughnut Chart コンポーネントは、複数の変数を同心円状の輪で表示でき、データは他のコレクションや共通データソースにバインドできます。
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント Library, Angular Data Grid コンポーネント, Angular Data Grid コントロール, Angular Doughnut Chart コントロール, Angular Doughnut Chart コンポーネント, Angular data grid Doughnut Chart コンポーネント例, Angular Doughnut Chart
 
 ---
 
-## �h�[�i�c �`���[�g
+## ドーナツ チャート
 
-`IgxDoughnutChart` �R���|�[�l���g�͉~�`���[�g�Ɠ��l�A�ϐ��̔�������I�ɕ\�����܂��B�h�[�i�c�^�`���[�g �́A�����̕ϐ����R���Z���g���b�N �����O�ŕ\���ł��A�K�w�f�[�^�̉�����g�ݍ��݂ŃT�|�[�g���܂��B
+`IgxDoughnutChart` コンポーネントは円チャートと同様、変数の発生を比例的に表示します。ドーナツ型チャート は、複数の変数をコンセントリック リングで表示でき、階層データの可視化を組み込みでサポートします。
 
-### �f��
+### デモ
 
 <div class="sample-container loading" style="height: 450px">
     <iframe id="doughnut-chart-overview-iframe" src='{environment:demosBaseUrl}/charts/doughnut-chart-overview' width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="doughnut-chart-overview-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz �ŊJ��
+    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="doughnut-chart-overview-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
     </button>
 </div>
 
 <div class="divider--half"></div>
 
-### �ˑ��֌W
+### 依存関係
 
-chart �p�b�P�[�W���C���X�g�[������Ƃ��� core �p�b�P�[�W���C���X�g�[������K�v������܂��B
+chart パッケージをインストールするときに core パッケージもインストールする必要があります。
 **npm install igniteui-angular-core**
 **npm install igniteui-angular-charts**
 
 <!-- -->
 
-���W�A�� �Q�[�W�� `NgModule` �Ƃ��ăG�N�X�|�[�g����邽�߁A�A�v���P�[�V������ `AppModule` �� `IgxDoughnutChart` ���C���|�[�g����K�v������܂��B
+ラジアル ゲージが `NgModule` としてエクスポートされるため、アプリケーションで `AppModule` に `IgxDoughnutChart` をインポートする必要があります。
 
 <!-- -->
 
@@ -50,10 +50,10 @@ export class AppModule {}
 
 <div class="divider--half"></div>
 
-### �g�p���@
+### 使用方法
 
-�t�@�C�i�h�[�i�c�^ �`���[�g ���W���[�����C���|�[�g������A�`���[�g���f�[�^�Ƀo�C���h���܂��B
-�R���|�[�l���g���쐬����ɂ́A�ŏ��Ƀo�C���h���邽�߂̃f�[�^���K�v�ɂȂ�܂��B�ȉ��̃R�[�h �X�j�y�b�g�́A�V���v���ȃf�[�^�\�[�X���쐬������@�������܂��B
+ファイナドーナツ型 チャート モジュールをインポートした後、チャートをデータにバインドします。
+コンポーネントを作成するには、最初にバインドするためのデータが必要になります。以下のコード スニペットは、シンプルなデータソースを作成する方法を示します。
 
 ```typescript
 this.state = {
@@ -66,7 +66,7 @@ this.state = {
 ] };
 ```
 
-���̃R�[�h�́A�h�[�i�c�^�`���[�g����L�̃f�[�^�Ƀo�C���h������@�������Ă��܂��B
+次のコードは、ドーナツ型チャートを上記のデータにバインドする方法を示しています。
 
 ```html
  <igx-doughnut-chart width="700px"
@@ -81,76 +81,76 @@ this.state = {
 
 <div class="divider--half"></div>
 
-## �\���\�ȗv�f
+## 構成可能な要素
 
-### �����̃����O
+### 複数のリング
 
-`IgxDoughnutChart` �́A�e�����O���قȂ�R���N�V�����Ƀo�C���h���ĕ����̃����O�𓯎��ɕ\���⋤�ʂ̃f�[�^�\�[�X�̋��L���ł��܂��B
+`IgxDoughnutChart` は、各リングを異なるコレクションにバインドして複数のリングを同時に表示や共通のデータソースの共有ができます。
 
-### �X���C�X�̑I��
+### スライスの選択
 
-`IgxDoughnutChart` �R���|�[�l���g�́A1 �X���C�X�ȏ�̏�Ԃ�I���ς݂ɐݒ肷�邽�߂� API �����J���܂��B�C�ӂŁA�P��̃J�X�^�� �r�W���A�� �X�^�C����I���ς݃X���C�X�ɓK�p�ł��܂��B
+`IgxDoughnutChart` コンポーネントは、1 スライス以上の状態を選択済みに設定するための API を公開します。任意で、単一のカスタム ビジュアル スタイルを選択済みスライスに適用できます。
 
-**�X���C�X�I���̗L����/������** - `allowSliceSelection` ��ݒ肵�ăh�[�i�c�^�`���[�g�ŃX���C�X�̑I����L���܂��͖����ɂ��܂��B
+**スライス選択の有効化/無効化** - `allowSliceSelection` を設定してドーナツ型チャートでスライスの選択を有効または無効にします。
 
-**�I�����ꂽ�X���C�X�̃X�^�C���ݒ�** - �X���C�X�� `targetType` �őI�����ꂽ�X���C�X�̃X�^�C�����`���A�h�[�i�c�^�`���[�g�� `selectedStyle` �v���p�e�B�Ɋ��蓖�Ă邱�ƂŃX�^�C���ݒ�ł��܂��B
+**選択されたスライスのスタイル設定** - スライスの `targetType` で選択されたスライスのスタイルを定義し、ドーナツ型チャートの `selectedStyle` プロパティに割り当てることでスタイル設定できます。
 
-**�X���C�X���N���b�N���đI����Ԃ�ύX** - `sliceClick` �C�x���g�ɃC�x���g �n���h���[���A�^�b�`�����ꍇ�A�I����Ԃ�ύX���邽�߂̃C�x���g�����̃N���b�N�����X���C�X�ւ̎Q�Ƃ�񋟂��܂��B�h�[�i�c�^�`���[�g�́A�I�����ꂽ�X���C�X�̃X�^�C�������肷�� `selectedStyle` �v���p�e�B�����J���܂��B�f�t�H���g�ł́A�K�p�����X�^�C���͂���܂���B�X���C�X��I�����Ă��A���̌����ڂ͂ǂ̂悤�ɂ��ς��܂���B�Ǝ��̃X�^�C����I�����ꂽ�X���C�X�ɓK�p����ƁASlice �� `targetType` ������ Style ���`���āA`selectedStyle` �v���p�e�B�̒l�Ƃ��Đݒ肷��K�v������܂��B
+**スライスをクリックして選択状態を変更** - `sliceClick` イベントにイベント ハンドラーをアタッチした場合、選択状態を変更するためのイベント引数のクリックしたスライスへの参照を提供します。ドーナツ型チャートは、選択されたスライスのスタイルを決定する `selectedStyle` プロパティを公開します。デフォルトでは、適用されるスタイルはありません。スライスを選択しても、その見た目はどのようにも変わりません。独自のスタイルを選択されたスライスに適用すると、Slice の `targetType` を持つ Style を定義して、`selectedStyle` プロパティの値として設定する必要があります。
 
-**IsSelected �v���p�e�B�̐ݒ�** - `IgxDoughnutChart` �́A`isSelected` �v���p�e�B�𒼐ڕύX�ł��邷�ׂẴX���C�X�ւ̎Q�Ƃ�ێ����Ȃ��B�h�[�i�c�^�`���[�g�́A�X���C�X�̑I���ς�/�I�������̏�Ԃ̕ύX�Ɏg�p���� `sliceClick` �C�x���g�����J���܂��B
+**IsSelected プロパティの設定** - `IgxDoughnutChart` は、`isSelected` プロパティを直接変更できるすべてのスライスへの参照を保持しなす。ドーナツ型チャートは、スライスの選択済み/選択解除の状態の変更に使用する `sliceClick` イベントを公開します。
 
-**SelectedSlices �R���N�V�����̃R���e���c��ύX** - `selectedSlices` �R���N�V�����̃R���e���c��ύX���đI�����ꂽ�X���C�X��ύX�ł��܂��B�h�[�i�c�^�`���[�g�́ASlice �I�u�W�F�N�g�ւɑ΂� `isSelected` �v���p�e�B�𒼐ڏC���ł��邷�ׂẴX���C�X�ւ̎Q�Ƃ�ێ����܂��B
+**SelectedSlices コレクションのコンテンツを変更** - `selectedSlices` コレクションのコンテンツを変更して選択されたスライスを変更できます。ドーナツ型チャートは、Slice オブジェクトへに対し `isSelected` プロパティを直接修正できるすべてのスライスへの参照を保持します。
 
-### �X���C�X�I���̃f��
+### スライス選択のデモ
 
 <div class="sample-container loading" style="height: 450px">
     <iframe id="doughnut-chart-selection-iframe" data-src='{environment:demosBaseUrl}/charts/doughnut-chart-selection' width="100%" height="100%" seamless="" frameborder="0" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="doughnut-chart-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz �ŊJ��
+    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="doughnut-chart-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
     </button>
 </div>
 
 <div class="divider--half"></div>
 
-### �X���C�X�̕���
+### スライスの分割
 
-`IgxDoughnutChart` �X���C�X�́A�v���O������ŁA�܂��̓��[�U�[ �C���^���N�V�����ɂ���ĕ����ł��܂��B
+`IgxDoughnutChart` スライスは、プログラム上で、またはユーザー インタラクションによって分割できます。
 
-**�X���C�X�����̗L����/������**
-`allowSliceExplosion` �v���p�e�B��ݒ肵�ăX���C�X�𕪊�����@�\��L���܂��͖����ɂł��܂��B
+**スライス分割の有効化/無効化**
+`allowSliceExplosion` プロパティを設定してスライスを分割する機能を有効または無効にできます。
 
-**�X���C�X�̃N���b�N���ɃX���C�X�̕�����Ԃ�ύX**
-`sliceClick` �C�x���g�p�C�x���g �n���h���[���A�^�b�`����ƁA�C�x���g�����ŃN���b�N���ꂽ�X���C�X�ւ̎Q�Ƃ�񋟂���A������Ԃ��C���ł��܂��B
+**スライスのクリック時にスライスの分割状態を変更**
+`sliceClick` イベント用イベント ハンドラーをアタッチすると、イベント引数でクリックされたスライスへの参照を提供され、分割状態を修正できます。
 
-**IsExploded �v���p�e�B�̐ݒ�**
-`IgxDoughnutChart` �́A`isExploded` �v���p�e�B�𒼐ڏC���ł��邷�ׂẴX���C�X�ւ̎Q�Ƃ�ێ����܂��B
+**IsExploded プロパティの設定**
+`IgxDoughnutChart` は、`isExploded` プロパティを直接修正できるすべてのスライスへの参照を保持します。
 
-**ExplodedSlices �R���N�V�����̃R���e���c�̏C��**
-`explodedSlices` �R���N�V�����̃R���e���c��ύX���邱�Ƃɂ����J���ꂽ�X���C�X��ύX�ł��܂��B
+**ExplodedSlices コレクションのコンテンツの修正**
+`explodedSlices` コレクションのコンテンツを変更することにより公開されたスライスを変更できます。
 
-### �X���C�X�̕����̃f��
+### スライスの分割のデモ
 
 <div class="sample-container loading" style="height: 450px">
     <iframe id="doughnut-chart-explosion-iframe" data-src='{environment:demosBaseUrl}/charts/doughnut-chart-explosion' width="100%" height="100%" seamless="" frameborder="0" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="doughnut-chart-explosion-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz �ŊJ��
+    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="doughnut-chart-explosion-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
     </button>
 </div>
 
 <div class="divider--half"></div>
 
-### �}��
+### 凡例
 
-`IgxDoughnutChart` �͖}��̎g�p���T�|�[�g���Ă��܂��B�g�p�����}��́A��A�̃`���[�g����Đڑ�����Ă��� ItemLegend �ł��B
+`IgxDoughnutChart` は凡例の使用をサポートしています。使用される凡例は、一連のチャートを介して接続されている ItemLegend です。
 
-### �}��̃f��
+### 凡例のデモ
 
 <div class="sample-container loading" style="height: 450px">
     <iframe id="doughnut-chart-legend-iframe" data-src='{environment:demosBaseUrl}/charts/doughnut-chart-legend' width="100%" height="100%" seamless="" frameborder="0" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="doughnut-chart-explosion-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz �ŊJ��
+    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="doughnut-chart-explosion-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
     </button>
 </div>
