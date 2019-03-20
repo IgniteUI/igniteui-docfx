@@ -1,15 +1,15 @@
----
-title: Highlighting
-_description: The Ignite UI for Category Chart component simplifies the complexities of the data visualization domain into manageable API so that a user can bind a collection of data, a group of collections, and a data property, and let the charting control do the rest.
-_keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Chart Control, Angular Chart Example, Angular Grid Component, Angular Chart Component, Angular Category Chart
+﻿---
+title: ハイライト
+_description: Ignite UI for Angular Category Chart コンポーネントは複雑なデータ ビジュアライゼーションを API によって簡素化できます。ユーザーがデータのコレクションまたはコレクションのグループにバインドし、データを指定するプロパティを設定後、チャート コントロールが残りの作業を処理します。
+_keywords: Ignite UI for Angular, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular Chart, Angular Chart コントロール, Angular Chart Example, Angular Grid コンポーネント, Angular Chart コンポーネント, Angular Category Chart
 _language: ja
 ---
 
-## Highlighting
+## ハイライト
 
-This topic provides conceptual information about the highlighting features of the `IgxCategoryChart`.
+このトピックでは、`IgxCategoryChart` のハイライト機能について説明します。
 
-### Demo
+### デモ
 
 ### デモ
 <div class="sample-container loading" style="height: 500px">
@@ -21,15 +21,15 @@ This topic provides conceptual information about the highlighting features of th
 </div>
 <div class="divider--half"></div>
 
-### Highlight Layers
+### レイヤーのハイライト
 
-The `IgxCategoryChart` can enable three types of highlighting when hovering over items.
+`IgxCategoryChart` は、項目のホバー オーバー時に 3 種類のハイライト タイプを使用できます。
 
-1.  Series Highlighting will highlight the single data point when the pointer is positioned over it.
+1.  シリーズ ハイライトは、ポインターがデータ ポイント上にある場合にそのポイントをハイライトします。
 
-2.  Item Highlighting highlights items in a series either by drawing a banded shape at their position or by rendering a marker at their position.
+2.  項目ハイライトは、バンド図形をその位置で描画またはマーカーをその位置で描画のいずれかでカテゴリ軸を使用するシリーズの項目をハイライトするシリーズ。
 
-3.  Category Highlighting targets all category axes in the chart. They draw a shape that illuminates the area of the axis closest to the pointer position.
+3.  カテゴリ ハイライトはすべてのカテゴリ軸を対象にします。カーソル位置に最も近い軸領域を照らす図形を描画します。
 
 ```html
 <igx-category-chart

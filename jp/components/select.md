@@ -65,7 +65,7 @@ public items: string[] = ["Orange", "Apple", "Banana", "Mango"];
 - ドロップダウン ボタン上でマウスを左クリック、またはドロップダウン以外を左クリックしてドロップダウンを閉じることもできます (input blur)。
 
 ### キーボード ナビゲーション
-`igx-select` has intuitive keyboard navigation that makes it easy to select items without having to touch the mouse.
+`igx-select`には直感的なキーボードナビゲーションがあり、マウスを使わずに簡単に項目を選択できます。
 
 - ドロップダウン リストが開いているときの移動先に残っている項目がある場合は、`上矢印/下矢印`で項目を移動できます。更に `Home` または `End` を押すとリストの最初と最後の項目に移動します。 
 - ドロップダウン リストが開いたときに対応するキーを押して特定の文字で始まる各項目に移動できます。大文字小文字を区別して一致するすべての項目間をフォーカスします￥。
@@ -96,10 +96,10 @@ public items: string[] = ["Orange", "Apple", "Banana", "Mango"];
 - 選択オプションが削除されると選択も削除されます。
 - 重複する値を持つ項目がある場合、最初の項目が選択されます。
 
-[!NOTE]
+>[!NOTE]
 > `Igx-select` は項目のみの単一選択をサポートします。
 
-### イベント発生
+### イベントの発生
 `Igx-select` が `igx-drop-down` を拡張するため、以下を含むイベントも使用できます。
 
 #### Opend イベント
@@ -372,7 +372,7 @@ export class MyClass implements OnInit {
 [**ViewChild**](https://angular.io/api/core/ViewChild)  
 [**ngForOf**](https://angular.io/api/common/NgForOf)
 
-Our community is active and always welcoming to new ideas.
+コミュニティに参加して新しいアイデアをご提案ください。
 
 * [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
 * [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

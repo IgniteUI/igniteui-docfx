@@ -112,8 +112,8 @@ public ngOnInit() {
     </button>
 </div>
 
-### Breaking Changes in 6.2.0
-* The [`IgxIconComponent`]({environment:angularApiUrl}/classes/igxiconcomponent.html) `iconName` property is deprecated. To set the icon name for 'material' icons, place the name of the icon between the opening and closing tags. For 'Font Awesome' and SVG icons, use the `name` property.
+### 6.2.0 の重大な変更
+* [`IgxIconComponent`]（{environment：angularApiUrl} /classes/igxiconcomponent.html） `iconName` プロパティは非推奨です。「マテリアル」アイコンのアイコン名を設定するには、開始タグと終了タグの間にアイコンの名前を配置します。'Font Awesome' と SVG のアイコンには `name` プロパティを使用します。
 
 ### API リファレンス
 <div class="divider--half"></div>

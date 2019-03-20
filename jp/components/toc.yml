@@ -512,7 +512,7 @@
   href: linear_progress.md
 - name: Circular Progress
   href: circular_progress.md
-- name: Virtual For Directive
+- name: 仮想 For ディレクティブ
   href: for_of.md
 - name: Chip
   href: chip.md

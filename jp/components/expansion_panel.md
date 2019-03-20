@@ -168,7 +168,7 @@ export class ExpansionPanelComponent {
         </igx-expansion-panel-header>
     </igx-expansion-panel>
 ```
-> [`iconPosition`]({environment:angularApiUrl}/classes/igxexpansionpanelheadercomponent.html#iconposition) プロパティは、`RTL` で使用できます。たとえば、**right**に表示するよう設定したアイコンは、RTL 設定時にヘッダーの左端に表示されます。
+> [`iconPosition`]({environment:angularApiUrl}/classes/igxexpansionpanelheadercomponent.html#iconposition) プロパティは、`RTL` で使用できます。たとえば、**right** に表示するよう設定したアイコンは、RTL 設定時にヘッダーの左端に表示されます。
 
 コンテンツを渡してコントロールで使用するデフォルト アイコンは、`igx-expansion-panel-icon` タグでをオーバーライドできます。
 ```html
@@ -194,7 +194,7 @@ export class ExpansionPanelComponent {
 このコンポーネントは、パネルの縮小時と完全に展開した後に「更に表示」を描画します。
 ### コンテキストの追加
 
-コンポーネントの [`igx-expansion-panel-body`]({environment:angularApiUrl}/classes/igxexpansionpanelbodycomponent.htm タグはすべてのマークアップを受け取り、`ng-content` プロジェクションですべてを描画します。[`IgxAvatar`](avatar.html) を使用して展開パネルのインナー コンテンツを更新できます。
+コンポーネントの [`igx-expansion-panel-body`]({environment:angularApiUrl}/classes/igxexpansionpanelbodycomponent.htm) タグはすべてのマークアップを受け取り、`ng-content` プロジェクションですべてを描画します。[`IgxAvatar`](avatar.html) を使用して展開パネルのインナー コンテンツを更新できます。
 はじめに `IgxAvatarModule` を **app.module.ts** にインポートします。
 ```typescript
 // in app.module.ts
