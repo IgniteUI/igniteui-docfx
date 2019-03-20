@@ -1,40 +1,38 @@
 ---
-title: Doughnut Chart ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆ - Native Angular | Ignite UI for Angular
-_description: Ignite UI for Angular Doughnut Chart ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆã¯ã€è¤‡æ•°ã®å¤‰æ•°ã‚’åŒå¿ƒå††çŠ¶ã®è¼ªã§è¡¨ç¤ºã§ãã€ãƒ‡ãƒ¼ã‚¿ã¯ä»–ã®ã‚³ãƒ¬ã‚¯ã‚·ãƒ§ãƒ³ã‚„å…±é€šãƒ‡ãƒ¼ã‚¿ã‚½ãƒ¼ã‚¹ã«ãƒã‚¤ãƒ³ãƒ‰ã§ãã¾ã™ã€‚ 
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Data Grid component, Angular Data Grid control, Angular Doughnut Chart Control, Angular Doughnut Chart Component, Angular data grid Doughnut Chart component example, Angular Doughnut Chart 
-_language: ja
+title: Doughnut Chart ƒRƒ“ƒ|[ƒlƒ“ƒg - ƒlƒCƒeƒBƒu Angular |Ignite UI for Angular
+mentionedTypes: ['DoughnutChart', 'DoughnutChartType']
+_description: Ignite UI for Angular Doughnut Chart ƒRƒ“ƒ|[ƒlƒ“ƒg‚ÍA•¡”‚Ì•Ï”‚ð“¯S‰~ó‚Ì—Ö‚Å•\Ž¦‚Å‚«Aƒf[ƒ^‚Í‘¼‚ÌƒRƒŒƒNƒVƒ‡ƒ“‚â‹¤’Êƒf[ƒ^ƒ\[ƒX‚ÉƒoƒCƒ“ƒh‚Å‚«‚Ü‚·B
+_keywords: Ignite UI for Angular, UI ƒRƒ“ƒgƒ[ƒ‹, Angular ƒEƒBƒWƒFƒbƒg, web ƒEƒBƒWƒFƒbƒg, UI ƒEƒBƒWƒFƒbƒg, Angular, ƒlƒCƒeƒBƒu Angular ƒRƒ“ƒ|[ƒlƒ“ƒg ƒXƒC[ƒg, ƒlƒCƒeƒBƒu Angular ƒRƒ“ƒgƒ[ƒ‹, ƒlƒCƒeƒBƒu Angular ƒRƒ“ƒ|[ƒlƒ“ƒg Library, Angular Data Grid ƒRƒ“ƒ|[ƒlƒ“ƒg, Angular Data Grid ƒRƒ“ƒgƒ[ƒ‹, Angular Doughnut Chart ƒRƒ“ƒgƒ[ƒ‹, Angular Doughnut Chart ƒRƒ“ƒ|[ƒlƒ“ƒg, Angular data grid Doughnut Chart ƒRƒ“ƒ|[ƒlƒ“ƒg—á, Angular Doughnut Chart
+
 ---
 
-## ãƒ‰ãƒ¼ãƒŠãƒ„åž‹ãƒãƒ£ãƒ¼ãƒˆ
+## ƒh[ƒiƒc ƒ`ƒƒ[ƒg
 
-ãƒ‰ãƒ¼ãƒŠãƒ„ ãƒãƒ£ãƒ¼ãƒˆ ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆã¯å††ãƒãƒ£ãƒ¼ãƒˆã¨åŒæ§˜ã€å¤‰æ•°ã®ç™ºç”Ÿã‚’æ¯”ä¾‹çš„ã«è¡¨ç¤ºã—ã¾ã™ã€‚ãƒ‰ãƒ¼ãƒŠãƒ„åž‹ãƒãƒ£ãƒ¼ãƒˆ ã¯ã€è¤‡æ•°ã®å¤‰æ•°ã‚’ã‚³ãƒ³ã‚»ãƒ³ãƒˆãƒªãƒƒã‚¯ ãƒªãƒ³ã‚°ã§è¡¨ç¤ºã§ãã€éšŽå±¤ãƒ‡ãƒ¼ã‚¿ã®å¯è¦–åŒ–ã‚’çµ„ã¿è¾¼ã¿ã§ã‚µãƒãƒ¼ãƒˆã—ã¾ã™ã€‚
+`IgxDoughnutChart` ƒRƒ“ƒ|[ƒlƒ“ƒg‚Í‰~ƒ`ƒƒ[ƒg‚Æ“¯—lA•Ï”‚Ì”­¶‚ð”ä—á“I‚É•\Ž¦‚µ‚Ü‚·Bƒh[ƒiƒcŒ^ƒ`ƒƒ[ƒg ‚ÍA•¡”‚Ì•Ï”‚ðƒRƒ“ƒZƒ“ƒgƒŠƒbƒN ƒŠƒ“ƒO‚Å•\Ž¦‚Å‚«AŠK‘wƒf[ƒ^‚Ì‰ÂŽ‹‰»‚ð‘g‚Ýž‚Ý‚ÅƒTƒ|[ƒg‚µ‚Ü‚·B
 
-### ãƒ‡ãƒ¢
+### ƒfƒ‚
 
-<div class="sample-container loading" style="height: 550px">
+<div class="sample-container loading" style="height: 450px">
     <iframe id="doughnut-chart-overview-iframe" src='{environment:demosBaseUrl}/charts/doughnut-chart-overview' width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="doughnut-chart-overview-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz ã§è¡¨ç¤º
+    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="doughnut-chart-overview-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz ‚ÅŠJ‚­
     </button>
 </div>
 
 <div class="divider--half"></div>
 
-### ä¾å­˜é–¢ä¿‚
+### ˆË‘¶ŠÖŒW
 
-chart ãƒ‘ãƒƒã‚±ãƒ¼ã‚¸ã‚’ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã™ã‚‹ã¨ãã« core ãƒ‘ãƒƒã‚±ãƒ¼ã‚¸ã‚‚ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã™ã‚‹å¿…è¦ãŒã‚ã‚Šã¾ã™ã€‚
-
-**npm install igniteui-angular-charts igniteui-angular-core**
-
-ãƒ‰ãƒ¼ãƒŠãƒ„åž‹ãƒãƒ£ãƒ¼ãƒˆãŒ `NgModule` ã¨ã—ã¦ã‚¨ã‚¯ã‚¹ãƒãƒ¼ãƒˆã•ã‚Œã‚‹ãŸã‚ã€ã‚¢ãƒ—ãƒªã‚±ãƒ¼ã‚·ãƒ§ãƒ³ã§ `AppModule` ã« _IgxDoughnutChartModule_ ã‚’ã‚¤ãƒ³ãƒãƒ¼ãƒˆã™ã‚‹å¿…è¦ãŒã‚ã‚Šã¾ã™ã€‚
+chart ƒpƒbƒP[ƒW‚ðƒCƒ“ƒXƒg[ƒ‹‚·‚é‚Æ‚«‚É core ƒpƒbƒP[ƒW‚àƒCƒ“ƒXƒg[ƒ‹‚·‚é•K—v‚ª‚ ‚è‚Ü‚·B
+**npm install igniteui-angular-core**
+**npm install igniteui-angular-charts**
 
 <!-- -->
 
-[!NOTE]
-React:
+ƒ‰ƒWƒAƒ‹ ƒQ[ƒW‚ª `NgModule` ‚Æ‚µ‚ÄƒGƒNƒXƒ|[ƒg‚³‚ê‚é‚½‚ßAƒAƒvƒŠƒP[ƒVƒ‡ƒ“‚Å `AppModule` ‚É `IgxDoughnutChart` ‚ðƒCƒ“ƒ|[ƒg‚·‚é•K—v‚ª‚ ‚è‚Ü‚·B
 
-ãƒ‰ãƒ¼ãƒŠãƒ„åž‹ãƒãƒ£ãƒ¼ãƒˆã‚’ä½¿ç”¨ã™ã‚‹ã«ã¯ã€ãƒ­ãƒ¼ãƒ‰æ™‚ã« `IgxDoughnutChartModule`ã¨` IgrRingSeriesModule`ã€€ã‚¢ãƒ—ãƒªã‚±ãƒ¼ã‚·ãƒ§ãƒ³ã«ç™»éŒ²ã™ã‚‹å¿…è¦ãŒã‚ã‚Šã¾ã™ã€‚
+<!-- -->
 
 ```typescript
 // app.module.ts
@@ -42,9 +40,9 @@ import { IgxDoughnutChartModule } from 'igniteui-angular-charts/ES5/igx-doughnut
 
 @NgModule({
     imports: [
-        ...
+        // ...
         IgxDoughnutChartModule,
-        ...
+        // ...
     ]
 })
 export class AppModule {}
@@ -52,10 +50,10 @@ export class AppModule {}
 
 <div class="divider--half"></div>
 
-### ä½¿ç”¨æ–¹æ³•
+### Žg—p•û–@
 
-ãƒ•ã‚¡ã‚¤ãƒŠãƒ‰ãƒ¼ãƒŠãƒ„åž‹ ãƒãƒ£ãƒ¼ãƒˆ ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«ã‚’ã‚¤ãƒ³ãƒãƒ¼ãƒˆã—ãŸå¾Œã€ãƒãƒ£ãƒ¼ãƒˆã‚’ãƒ‡ãƒ¼ã‚¿ã«ãƒã‚¤ãƒ³ãƒ‰ã—ã¾ã™ã€‚
-Igx-doughnut-chart ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆã‚’ä½œæˆã™ã‚‹ã«ã¯ã€ã¯ã˜ã‚ã«ãƒ‡ãƒ¼ã‚¿ã‚’ãƒã‚¤ãƒ³ãƒ‰ã™ã‚‹å¿…è¦ãŒã‚ã‚Šã¾ã™ã€‚ä»¥ä¸‹ã®ã‚³ãƒ¼ãƒ‰ ã‚¹ãƒ‹ãƒšãƒƒãƒˆã¯ã€ã‚·ãƒ³ãƒ—ãƒ«ãªãƒ‡ãƒ¼ã‚¿ã‚½ãƒ¼ã‚¹ã‚’ä½œæˆã™ã‚‹æ–¹æ³•ã‚’ç¤ºã—ã¾ã™ã€‚
+ƒtƒ@ƒCƒiƒh[ƒiƒcŒ^ ƒ`ƒƒ[ƒg ƒ‚ƒWƒ…[ƒ‹‚ðƒCƒ“ƒ|[ƒg‚µ‚½ŒãAƒ`ƒƒ[ƒg‚ðƒf[ƒ^‚ÉƒoƒCƒ“ƒh‚µ‚Ü‚·B
+ƒRƒ“ƒ|[ƒlƒ“ƒg‚ðì¬‚·‚é‚É‚ÍAÅ‰‚ÉƒoƒCƒ“ƒh‚·‚é‚½‚ß‚Ìƒf[ƒ^‚ª•K—v‚É‚È‚è‚Ü‚·BˆÈ‰º‚ÌƒR[ƒh ƒXƒjƒyƒbƒg‚ÍAƒVƒ“ƒvƒ‹‚Èƒf[ƒ^ƒ\[ƒX‚ðì¬‚·‚é•û–@‚ðŽ¦‚µ‚Ü‚·B
 
 ```typescript
 this.state = {
@@ -68,13 +66,13 @@ this.state = {
 ] };
 ```
 
-ä»¥ä¸‹ã®ã‚³ãƒ¼ãƒ‰ã¯ãƒ‰ãƒ¼ãƒŠãƒ„åž‹ãƒãƒ£ãƒ¼ãƒˆã‚’ä¸Šè¨˜ã®ãƒ‡ãƒ¼ã‚¿ã«ãƒã‚¤ãƒ³ãƒ‰ã—ã¾ã™ã€‚
+ŽŸ‚ÌƒR[ƒh‚ÍAƒh[ƒiƒcŒ^ƒ`ƒƒ[ƒg‚ðã‹L‚Ìƒf[ƒ^‚ÉƒoƒCƒ“ƒh‚·‚é•û–@‚ðŽ¦‚µ‚Ä‚¢‚Ü‚·B
 
 ```html
  <igx-doughnut-chart width="700px"
                      height="500px">
     <igx-doughnut-chart-series>
-        <igx-ring-series  [itemsSource]="data"        
+        <igx-ring-series  [itemsSource]="data"
                 labelMemberPath="Label"
                 valueMemberPath="Value">
     </igx-doughnut-chart-series>
@@ -83,70 +81,76 @@ this.state = {
 
 <div class="divider--half"></div>
 
-## æ§‹æˆå¯èƒ½ãªè¦ç´ 
+## \¬‰Â”\‚È—v‘f
 
-### è¤‡æ•°ã®ãƒªãƒ³ã‚°
+### •¡”‚ÌƒŠƒ“ƒO
 
-xamDoughnutChart ã¯ã€è¤‡æ•°ã®ãƒªãƒ³ã‚°ã‚’ã€ç•°ãªã‚‹ã‚³ãƒ¬ã‚¯ã‚·ãƒ§ãƒ³ã«ãƒã‚¤ãƒ³ãƒ‰å¯èƒ½ãªå„ãƒªãƒ³ã‚°ã¨åŒæ™‚ã«è¡¨ç¤ºã§ãã¾ã™ã€‚ã¾ãŸã¯å…±é€šã®ãƒ‡ãƒ¼ã‚¿ ã‚½ãƒ¼ã‚¹ã‚’å…±æœ‰ã§ãã¾ã™ã€‚
+`IgxDoughnutChart` ‚ÍAŠeƒŠƒ“ƒO‚ðˆÙ‚È‚éƒRƒŒƒNƒVƒ‡ƒ“‚ÉƒoƒCƒ“ƒh‚µ‚Ä•¡”‚ÌƒŠƒ“ƒO‚ð“¯Žž‚É•\Ž¦‚â‹¤’Ê‚Ìƒf[ƒ^ƒ\[ƒX‚Ì‹¤—L‚ª‚Å‚«‚Ü‚·B
 
-### ã‚¹ãƒ©ã‚¤ã‚¹ã®é¸æŠž
+### ƒXƒ‰ƒCƒX‚Ì‘I‘ð
 
-ãƒ‰ãƒ¼ãƒŠãƒ„åž‹ãƒãƒ£ãƒ¼ãƒˆ ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆã¯ã€1 ã¤ä»¥ä¸Šã®ã‚¹ãƒ©ã‚¤ã‚¹ã®çŠ¶æ…‹ã‚’ é¸æŠžã•ã‚ŒãŸçŠ¶æ…‹ã«è¨­å®šã™ã‚‹ API ã‚’å…¬é–‹ã—ã¾ã™ã€‚ä»»æ„ã§ã€å˜ä¸€ã®ã‚«ã‚¹ã‚¿ãƒ  ãƒ“ã‚¸ãƒ¥ã‚¢ãƒ« ã‚¹ã‚¿ã‚¤ãƒ«ã‚’é¸æŠžæ¸ˆã¿ã‚¹ãƒ©ã‚¤ã‚¹ã«é©ç”¨ã§ãã¾ã™ã€‚
+`IgxDoughnutChart` ƒRƒ“ƒ|[ƒlƒ“ƒg‚ÍA1 ƒXƒ‰ƒCƒXˆÈã‚Ìó‘Ô‚ð‘I‘ðÏ‚Ý‚ÉÝ’è‚·‚é‚½‚ß‚Ì API ‚ðŒöŠJ‚µ‚Ü‚·B”CˆÓ‚ÅA’Pˆê‚ÌƒJƒXƒ^ƒ€ ƒrƒWƒ…ƒAƒ‹ ƒXƒ^ƒCƒ‹‚ð‘I‘ðÏ‚ÝƒXƒ‰ƒCƒX‚É“K—p‚Å‚«‚Ü‚·B
 
-**ã‚¹ãƒ©ã‚¤ã‚¹é¸æŠžã®æœ‰åŠ¹åŒ–/ç„¡åŠ¹åŒ–** - `allowSliceSelection` ã‚’è¨­å®šã—ã¦ãƒ‰ãƒ¼ãƒŠãƒ„åž‹ãƒãƒ£ãƒ¼ãƒˆã§ã‚¹ãƒ©ã‚¤ã‚¹ã®é¸æŠžã‚’æœ‰åŠ¹ã¾ãŸã¯ç„¡åŠ¹ã«ã—ã¾ã™ã€‚  
+**ƒXƒ‰ƒCƒX‘I‘ð‚Ì—LŒø‰»/–³Œø‰»** - `allowSliceSelection` ‚ðÝ’è‚µ‚Äƒh[ƒiƒcŒ^ƒ`ƒƒ[ƒg‚ÅƒXƒ‰ƒCƒX‚Ì‘I‘ð‚ð—LŒø‚Ü‚½‚Í–³Œø‚É‚µ‚Ü‚·B
 
-**é¸æŠžã•ã‚ŒãŸã‚¹ãƒ©ã‚¤ã‚¹ã®ã‚¹ã‚¿ã‚¤ãƒ«è¨­å®š** - ã‚¹ãƒ©ã‚¤ã‚¹ã® `targetType` ã§é¸æŠžã•ã‚ŒãŸã‚¹ãƒ©ã‚¤ã‚¹ã®ã‚¹ã‚¿ã‚¤ãƒ«ã‚’å®šç¾©ã—ã€ãƒ‰ãƒ¼ãƒŠãƒ„åž‹ãƒãƒ£ãƒ¼ãƒˆã® `selectedStyle` ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã«å‰²ã‚Šå½“ã¦ã‚‹ã“ã¨ã§ã‚¹ã‚¿ã‚¤ãƒ«è¨­å®šã§ãã¾ã™ã€‚ 
+**‘I‘ð‚³‚ê‚½ƒXƒ‰ƒCƒX‚ÌƒXƒ^ƒCƒ‹Ý’è** - ƒXƒ‰ƒCƒX‚Ì `targetType` ‚Å‘I‘ð‚³‚ê‚½ƒXƒ‰ƒCƒX‚ÌƒXƒ^ƒCƒ‹‚ð’è‹`‚µAƒh[ƒiƒcŒ^ƒ`ƒƒ[ƒg‚Ì `selectedStyle` ƒvƒƒpƒeƒB‚ÉŠ„‚è“–‚Ä‚é‚±‚Æ‚ÅƒXƒ^ƒCƒ‹Ý’è‚Å‚«‚Ü‚·B
 
-**ã‚¹ãƒ©ã‚¤ã‚¹ã‚’ã‚¯ãƒªãƒƒã‚¯ã—ã¦é¸æŠžçŠ¶æ…‹ã‚’å¤‰æ›´** - `sliceClick` ã‚¤ãƒ™ãƒ³ãƒˆã«ã‚¤ãƒ™ãƒ³ãƒˆ ãƒãƒ³ãƒ‰ãƒ©ãƒ¼ã‚’ã‚¢ã‚¿ãƒƒãƒã—ãŸå ´åˆã€é¸æŠžçŠ¶æ…‹ã‚’å¤‰æ›´ã™ã‚‹ãŸã‚ã®ã‚¤ãƒ™ãƒ³ãƒˆå¼•æ•°ã®ã‚¯ãƒªãƒƒã‚¯ã—ãŸã‚¹ãƒ©ã‚¤ã‚¹ã¸ã®å‚ç…§ã‚’æä¾›ã—ã¾ã™ã€‚ãƒ‰ãƒ¼ãƒŠãƒ„åž‹ãƒãƒ£ãƒ¼ãƒˆã¯ã€é¸æŠžã•ã‚ŒãŸã‚¹ãƒ©ã‚¤ã‚¹ã®ã‚¹ã‚¿ã‚¤ãƒ«ã‚’æ±ºå®šã™ã‚‹ `selectedStyle` ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã‚’å…¬é–‹ã—ã¾ã™ã€‚ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆã§ã¯ã€é©ç”¨ã•ã‚Œã‚‹ã‚¹ã‚¿ã‚¤ãƒ«ã¯ã‚ã‚Šã¾ã›ã‚“ã€‚ã‚¹ãƒ©ã‚¤ã‚¹ã‚’é¸æŠžã—ã¦ã‚‚ã€ãã®è¦‹ãŸç›®ã¯ã©ã®ã‚ˆã†ã«ã‚‚å¤‰ã‚ã‚Šã¾ã›ã‚“ã€‚é¸æŠžã•ã‚ŒãŸã‚¹ãƒ©ã‚¤ã‚¹ã«ã‚«ã‚¹ã‚¿ãƒ  ã‚¹ã‚¿ã‚¤ãƒ«ã‚’é©ç”¨ã™ã‚‹å ´åˆã¯ã€Slice ã® `targetType` ã§ Style ã‚’å®šç¾©ã—ã€`selectedStyle` ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã®å€¤ã¨ã—ã¦è¨­å®šã™ã‚‹å¿…è¦ãŒã‚ã‚Šã¾ã™ã€‚ 
+**ƒXƒ‰ƒCƒX‚ðƒNƒŠƒbƒN‚µ‚Ä‘I‘ðó‘Ô‚ð•ÏX** - `sliceClick` ƒCƒxƒ“ƒg‚ÉƒCƒxƒ“ƒg ƒnƒ“ƒhƒ‰[‚ðƒAƒ^ƒbƒ`‚µ‚½ê‡A‘I‘ðó‘Ô‚ð•ÏX‚·‚é‚½‚ß‚ÌƒCƒxƒ“ƒgˆø”‚ÌƒNƒŠƒbƒN‚µ‚½ƒXƒ‰ƒCƒX‚Ö‚ÌŽQÆ‚ð’ñ‹Ÿ‚µ‚Ü‚·Bƒh[ƒiƒcŒ^ƒ`ƒƒ[ƒg‚ÍA‘I‘ð‚³‚ê‚½ƒXƒ‰ƒCƒX‚ÌƒXƒ^ƒCƒ‹‚ðŒˆ’è‚·‚é `selectedStyle` ƒvƒƒpƒeƒB‚ðŒöŠJ‚µ‚Ü‚·BƒfƒtƒHƒ‹ƒg‚Å‚ÍA“K—p‚³‚ê‚éƒXƒ^ƒCƒ‹‚Í‚ ‚è‚Ü‚¹‚ñBƒXƒ‰ƒCƒX‚ð‘I‘ð‚µ‚Ä‚àA‚»‚ÌŒ©‚½–Ú‚Í‚Ç‚Ì‚æ‚¤‚É‚à•Ï‚í‚è‚Ü‚¹‚ñB“ÆŽ©‚ÌƒXƒ^ƒCƒ‹‚ð‘I‘ð‚³‚ê‚½ƒXƒ‰ƒCƒX‚É“K—p‚·‚é‚ÆASlice ‚Ì `targetType` ‚ðŽ‚Â Style ‚ð’è‹`‚µ‚ÄA`selectedStyle` ƒvƒƒpƒeƒB‚Ì’l‚Æ‚µ‚ÄÝ’è‚·‚é•K—v‚ª‚ ‚è‚Ü‚·B
 
-**IsSelected ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã®è¨­å®š** - ãƒ‰ãƒ¼ãƒŠãƒ„åž‹ãƒãƒ£ãƒ¼ãƒˆã¯ã€`isSelected` ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã‚’ç›´æŽ¥å¤‰æ›´ã§ãã‚‹ã™ã¹ã¦ã®ã‚¹ãƒ©ã‚¤ã‚¹ã¸ã®å‚ç…§ã‚’ä¿æŒã—ãªã™ã€‚ãƒ‰ãƒ¼ãƒŠãƒ„åž‹ãƒãƒ£ãƒ¼ãƒˆã¯ã€ã‚¹ãƒ©ã‚¤ã‚¹ã®é¸æŠžæ¸ˆã¿/é¸æŠžè§£é™¤ã®çŠ¶æ…‹ã®å¤‰æ›´ã«ä½¿ç”¨ã™ã‚‹ `sliceClick` ã‚¤ãƒ™ãƒ³ãƒˆã‚’å…¬é–‹ã—ã¾ã™ã€‚  
+**IsSelected ƒvƒƒpƒeƒB‚ÌÝ’è** - `IgxDoughnutChart` ‚ÍA`isSelected` ƒvƒƒpƒeƒB‚ð’¼Ú•ÏX‚Å‚«‚é‚·‚×‚Ä‚ÌƒXƒ‰ƒCƒX‚Ö‚ÌŽQÆ‚ð•ÛŽ‚µ‚È‚·Bƒh[ƒiƒcŒ^ƒ`ƒƒ[ƒg‚ÍAƒXƒ‰ƒCƒX‚Ì‘I‘ðÏ‚Ý/‘I‘ð‰ðœ‚Ìó‘Ô‚Ì•ÏX‚ÉŽg—p‚·‚é `sliceClick` ƒCƒxƒ“ƒg‚ðŒöŠJ‚µ‚Ü‚·B
 
-### ã‚¹ãƒ©ã‚¤ã‚¹é¸æŠžã®ãƒ‡ãƒ¢
+**SelectedSlices ƒRƒŒƒNƒVƒ‡ƒ“‚ÌƒRƒ“ƒeƒ“ƒc‚ð•ÏX** - `selectedSlices` ƒRƒŒƒNƒVƒ‡ƒ“‚ÌƒRƒ“ƒeƒ“ƒc‚ð•ÏX‚µ‚Ä‘I‘ð‚³‚ê‚½ƒXƒ‰ƒCƒX‚ð•ÏX‚Å‚«‚Ü‚·Bƒh[ƒiƒcŒ^ƒ`ƒƒ[ƒg‚ÍASlice ƒIƒuƒWƒFƒNƒg‚Ö‚É‘Î‚µ `isSelected` ƒvƒƒpƒeƒB‚ð’¼ÚC³‚Å‚«‚é‚·‚×‚Ä‚ÌƒXƒ‰ƒCƒX‚Ö‚ÌŽQÆ‚ð•ÛŽ‚µ‚Ü‚·B
+
+### ƒXƒ‰ƒCƒX‘I‘ð‚Ìƒfƒ‚
 
 <div class="sample-container loading" style="height: 450px">
     <iframe id="doughnut-chart-selection-iframe" data-src='{environment:demosBaseUrl}/charts/doughnut-chart-selection' width="100%" height="100%" seamless="" frameborder="0" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="doughnut-chart-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="doughnut-chart-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz ‚ÅŠJ‚­
     </button>
 </div>
 
 <div class="divider--half"></div>
 
-### ã‚¹ãƒ©ã‚¤ã‚¹ã®åˆ†å‰²
+### ƒXƒ‰ƒCƒX‚Ì•ªŠ„
 
-**ã‚¹ãƒ©ã‚¤ã‚¹ã‚’ã‚¯ãƒªãƒƒã‚¯ã—ã¦å±•é–‹çŠ¶æ…‹ã‚’å¤‰æ›´**
-`sliceClick` ã‚¤ãƒ™ãƒ³ãƒˆã«ã‚¤ãƒ™ãƒ³ãƒˆ ãƒãƒ³ãƒ‰ãƒ©ãƒ¼ã‚’ã‚¢ã‚¿ãƒƒãƒã—ãŸå ´åˆã€ã‚¯ãƒªãƒƒã‚¯ã•ã‚ŒãŸã‚¹ãƒ©ã‚¤ã‚¹ã¸ã®å‚ç…§ãŒã‚¤ãƒ™ãƒ³ãƒˆå¼•æ•°ã«æä¾›ã•ã‚Œã¦å±•é–‹çŠ¶æ…‹ã‚’å¤‰æ›´ã§ãã¾ã™ã€‚
+`IgxDoughnutChart` ƒXƒ‰ƒCƒX‚ÍAƒvƒƒOƒ‰ƒ€ã‚ÅA‚Ü‚½‚Íƒ†[ƒU[ ƒCƒ“ƒ^ƒ‰ƒNƒVƒ‡ƒ“‚É‚æ‚Á‚Ä•ªŠ„‚Å‚«‚Ü‚·B
 
-**IsExploded ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã®è¨­å®š**
-ãƒ‰ãƒ¼ãƒŠãƒ„åž‹ãƒãƒ£ãƒ¼ãƒˆã¯ã™ã¹ã¦ã®ã‚¹ãƒ©ã‚¤ã‚¹ã¸ã®å‚ç…§ã‚’ä¿æŒã—ã¦ `isExploded` ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã‚’ç›´æŽ¥å¤‰æ›´ã§ãã¾ã™ã€‚
+**ƒXƒ‰ƒCƒX•ªŠ„‚Ì—LŒø‰»/–³Œø‰»**
+`allowSliceExplosion` ƒvƒƒpƒeƒB‚ðÝ’è‚µ‚ÄƒXƒ‰ƒCƒX‚ð•ªŠ„‚·‚é‹@”\‚ð—LŒø‚Ü‚½‚Í–³Œø‚É‚Å‚«‚Ü‚·B
 
-```typescript
-import { SliceClickEventArgs } from "igniteui-react-charts/ES5/igr-slice-click-event-args";
-```
+**ƒXƒ‰ƒCƒX‚ÌƒNƒŠƒbƒNŽž‚ÉƒXƒ‰ƒCƒX‚Ì•ªŠ„ó‘Ô‚ð•ÏX**
+`sliceClick` ƒCƒxƒ“ƒg—pƒCƒxƒ“ƒg ƒnƒ“ƒhƒ‰[‚ðƒAƒ^ƒbƒ`‚·‚é‚ÆAƒCƒxƒ“ƒgˆø”‚ÅƒNƒŠƒbƒN‚³‚ê‚½ƒXƒ‰ƒCƒX‚Ö‚ÌŽQÆ‚ð’ñ‹Ÿ‚³‚êA•ªŠ„ó‘Ô‚ðC³‚Å‚«‚Ü‚·B
 
-### ã‚¹ãƒ©ã‚¤ã‚¹åˆ†å‰²ã®ãƒ‡ãƒ¢
+**IsExploded ƒvƒƒpƒeƒB‚ÌÝ’è**
+`IgxDoughnutChart` ‚ÍA`isExploded` ƒvƒƒpƒeƒB‚ð’¼ÚC³‚Å‚«‚é‚·‚×‚Ä‚ÌƒXƒ‰ƒCƒX‚Ö‚ÌŽQÆ‚ð•ÛŽ‚µ‚Ü‚·B
+
+**ExplodedSlices ƒRƒŒƒNƒVƒ‡ƒ“‚ÌƒRƒ“ƒeƒ“ƒc‚ÌC³**
+`explodedSlices` ƒRƒŒƒNƒVƒ‡ƒ“‚ÌƒRƒ“ƒeƒ“ƒc‚ð•ÏX‚·‚é‚±‚Æ‚É‚æ‚èŒöŠJ‚³‚ê‚½ƒXƒ‰ƒCƒX‚ð•ÏX‚Å‚«‚Ü‚·B
+
+### ƒXƒ‰ƒCƒX‚Ì•ªŠ„‚Ìƒfƒ‚
 
 <div class="sample-container loading" style="height: 450px">
     <iframe id="doughnut-chart-explosion-iframe" data-src='{environment:demosBaseUrl}/charts/doughnut-chart-explosion' width="100%" height="100%" seamless="" frameborder="0" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="doughnut-chart-explosion-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="doughnut-chart-explosion-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz ‚ÅŠJ‚­
     </button>
 </div>
 
 <div class="divider--half"></div>
 
-### å‡¡ä¾‹
+### –}—á
 
-The `IgxDoughnutChart` supports the use of a legend. The legend used is the ItemLegend which is connected though the series of the chart.
+`IgxDoughnutChart` ‚Í–}—á‚ÌŽg—p‚ðƒTƒ|[ƒg‚µ‚Ä‚¢‚Ü‚·BŽg—p‚³‚ê‚é–}—á‚ÍAˆê˜A‚Ìƒ`ƒƒ[ƒg‚ð‰î‚µ‚ÄÚ‘±‚³‚ê‚Ä‚¢‚é ItemLegend ‚Å‚·B
 
-### Legend Demo
+### –}—á‚Ìƒfƒ‚
 
 <div class="sample-container loading" style="height: 450px">
     <iframe id="doughnut-chart-legend-iframe" data-src='{environment:demosBaseUrl}/charts/doughnut-chart-legend' width="100%" height="100%" seamless="" frameborder="0" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="doughnut-chart-explosion-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz ã§è¡¨ç¤º
+    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="doughnut-chart-explosion-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz ‚ÅŠJ‚­
     </button>
 </div>

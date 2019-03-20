@@ -333,7 +333,7 @@ export class CalendarSample7Component {
 </div>
 
 ### ビュー
-[`IgxCalendarModule`]（{environment：angularApiUrl} /classes/igxcalendarmodule.html） によって提供される個別のビューがあり、別々に使用できます。
+`IgxCalendarModule` によって提供される個別のビューがあり、別々に使用できます。
 - Days ビュー - `igx-days-view`
 - Months ビュー - `igx-months-view`
 - Years ビュー - `igx-years-view`
