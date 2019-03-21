@@ -81,7 +81,7 @@ this.@@igObjectRef.displayDensity = "cosy";
  - **compact** - これは最高密度で行の高さは `32px` です。左と右のパディングが `12px` で最小列[`width`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#width) は `24px` です。
 
 > [!NOTE]
-> 注: 現在サイズはオーバーライド**できません**。
+> 現在サイズはオーバーライド**できません**。
 
 引き続きサンプルを使用して [`displayDensity`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#displaydensity) の適用方法について説明します。最初に各密度を切り替えるボタンを追加します。
 

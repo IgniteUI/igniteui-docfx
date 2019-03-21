@@ -1,4 +1,4 @@
-﻿---
+---
 title: Radio と Radio Group
 _description: Ignite UI for Angular Radio Button コントロールおよび Radio Group コントロールは、テンプレート主導およびリアクティブ フォームで選択可能なオプションのリストを表示します。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Radio Button コンポーネント, Angular Radio Button コントロール, Angular Radio Group コンポーネント, Angular Radio Group コントロール
@@ -53,8 +53,8 @@ export class AppModule {
 
 以下は結果です:
 
-<div class="sample-container" style="height: 88px">
-    <iframe src='{environment:demosBaseUrl}/data-entries/radio-sample-1' width="100%" height="100%" seamless frameBorder="0"></iframe>
+<div class="sample-container loading" style="height: 88px">
+    <iframe data-src='{environment:demosBaseUrl}/data-entries/radio-sample-1' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 
 #### Radio Button プロパティ
@@ -101,8 +101,8 @@ public selectedColor: string = this.colors[3].hex;
 
 以上を実行すると以下のような結果になります。
 
-<div class="sample-container" style="height: 384px">
-    <iframe src='{environment:demosBaseUrl}/data-entries/radio-sample-2' width="100%" height="100%" seamless frameBorder="0"></iframe>
+<div class="sample-container loading" style="height: 384px">
+    <iframe data-src='{environment:demosBaseUrl}/data-entries/radio-sample-2' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 
 ### Radio Group
@@ -110,8 +110,8 @@ public selectedColor: string = this.colors[3].hex;
 <div class="divider"></div>
 
 #### Radio Group デモ
-<div class="sample-container" style="height: 320px">
-    <iframe id="radio-group-sample-iframe" src='{environment:demosBaseUrl}/data-entries/radio-group-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 320px">
+    <iframe id="radio-group-sample-iframe" data-src='{environment:demosBaseUrl}/data-entries/radio-group-sample' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="radio-group-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>

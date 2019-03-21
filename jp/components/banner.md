@@ -42,7 +42,7 @@ export class AppModule {}
 ```
 ### ベーシック Banner
 
-Banner コンポーネントを表示するには、({environment:angularApiUrl}/classes/igxbannercomponent.html#open) メソッドを呼び出してボタンクリックで呼び出します。Banner メッセージを構成するには、Banner コンテンツ内のテキストを渡します。指定した Banner 領域にテキストが表示され、表示時にBannerはデフォルト テンプレートを使用します。
+Banner コンポーネントを表示するには、[`open()`]({environment:angularApiUrl}/classes/igxbannercomponent.html#open) メソッドを呼び出してボタンクリックで呼び出します。Banner メッセージを構成するには、Banner コンテンツ内のテキストを渡します。指定した Banner 領域にテキストが表示され、表示時にBannerはデフォルト テンプレートを使用します。
 
 ```html
 <!--banner.component.html-->

@@ -1,4 +1,4 @@
-﻿---
+---
 title: Icon コンポーネント
 _description: Ignite UI for Angular Icon コンポーネントを使用して、様々なアイコンおよびフォント セットを統合して交互に使用し、カスタム色を定義できます。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Icon コンポーネント, Angular Icon コントロール
@@ -12,9 +12,9 @@ _language: ja
 
 ### Icon デモ
 
-<div class="sample-container" style="height: 384px">
-    <iframe id="icon-sample-1-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/data-display/icon-sample-1"  onload="onSampleIframeContentLoaded(this);">
-</div>
+<div class="sample-container loading" style="height: 384px">
+    <iframe id="icon-sample-1-iframe" seamless="" width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/data-display/icon-sample-1" onload="onSampleIframeContentLoaded(this);">
+</iframe></div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="icon-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">                StackBlitz で表示
     </button>
@@ -73,9 +73,9 @@ CSS でアイコン サイズを設定するには、カスタム CSS を作成�
     height: 56px;
 }
 ```
-<div class="sample-container" style="height: 80px; width: 300px">
-    <iframe id="icon-sample2-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/data-display/icon-sample2"  onload="onSampleIframeContentLoaded(this);">
-</div>
+<div class="sample-container loading" style="height: 80px; width: 300px">
+    <iframe id="icon-sample2-iframe" seamless="" width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-display/icon-sample2" class="lazyload">
+</iframe></div>
 
 ### SVG Icons
 
@@ -104,16 +104,16 @@ public ngOnInit() {
 <igx-icon name="contains" fontSet="filter-icons"></igx-icon>
 ```
 
-<div class="sample-container" style="height: 50px">
-    <iframe id="svg-icon-sample-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/data-display/svg-icon-sample"  onload="onSampleIframeContentLoaded(this);">
-</div>
+<div class="sample-container loading" style="height: 50px">
+    <iframe id="svg-icon-sample-iframe" seamless="" width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-display/svg-icon-sample" class="lazyload">
+</iframe></div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="svg-icon-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">                view on stackblitz
     </button>
 </div>
 
-### Breaking Changes in 6.2.0
-* The [`IgxIconComponent`]({environment:angularApiUrl}/classes/igxiconcomponent.html) `iconName` property is deprecated. To set the icon name for 'material' icons, place the name of the icon between the opening and closing tags. For 'Font Awesome' and SVG icons, use the `name` property.
+### 6.2.0 の重大な変更
+* [`IgxIconComponent`]（{environment：angularApiUrl} /classes/igxiconcomponent.html） `iconName` プロパティは非推奨です。「マテリアル」アイコンのアイコン名を設定するには、開始タグと終了タグの間にアイコンの名前を配置します。'Font Awesome' と SVG のアイコンには `name` プロパティを使用します。
 
 ### API リファレンス
 <div class="divider--half"></div>

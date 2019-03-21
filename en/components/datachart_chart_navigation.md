@@ -10,8 +10,8 @@ In the `IgxDataChart` control, navigation is disabled by default. Once enabled, 
 
 ### Demo
 
-<div class="sample-container loading" style="height: 500px">
-    <iframe id="data-chart-navigation-iframe" src='{environment:demosBaseUrl}/charts/data-chart-navigation' width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container" style="height: 500px">
+    <iframe id="data-chart-navigation-iframe" src='{environment:demosBaseUrl}/charts/data-chart-navigation' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-navigation-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
@@ -82,7 +82,7 @@ The following code snippet demonstrates how you can enable UI navigation in the 
 
 <!-- ### Chart Navigation with Overview Plus Detail Pane
 
-In the `IgxDataChart` control, there is an overlaid control that allows navigation. This control supports a preview of most supported series types as well as all navigation methods described above. This overlay is the overview plus detail pane, and it can be enabled by setting the `overviewPlusDetailPaneVisibility` property.
+In the `Ig$DataChart` control, there is an overlaid control that allows navigation. This control supports a preview of most supported series types as well as all navigation methods described above. This overlay is the overview plus detail pane, and it can be enabled by setting the `overviewPlusDetailPaneVisibility` property.
 
 The following is a summary of the operations a user can carry out with the overview plus detail pane:
 

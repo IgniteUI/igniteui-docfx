@@ -332,11 +332,11 @@ export class CalendarSample7Component {
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="calendar-sample-7-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
 </div>
 
-### Views
-There are separate views provided by the [`IgxCalendarModule`]({environment:angularApiUrl}/classes/igxcalendarmodule.html) that can be used independently:
-- Days View - `igx-days-view`
-- Months View - `igx-months-view`
-- Years View - `igx-years-view`
+### ビュー
+`IgxCalendarModule` によって提供される個別のビューがあり、別々に使用できます。
+- Days ビュー - `igx-days-view`
+- Months ビュー - `igx-months-view`
+- Years ビュー - `igx-years-view`
 
 <div class="sample-container loading" style="height: 540px">
     <iframe id="calendar-views-iframe" data-src='{environment:demosBaseUrl}/scheduling/calendar-views' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>

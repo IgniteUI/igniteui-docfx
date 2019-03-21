@@ -10,7 +10,7 @@ _language: ja
 最小限のコードで Ignite UI for Angular コンポーネントの文字列を簡単にローカライズできます。
 
 <div class="sample-container loading" style="height:550px">
-    <iframe id="localization-sample-1-iframe" src='{environment:demosBaseUrl}/localization-sample-1' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="localization-sample-1-iframe" src="{environment:demosBaseUrl}/services/localization-sample-1" width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
@@ -98,6 +98,6 @@ changei18n(IgxResouceStringsJA);
 
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular** フォーラム** (英語) ](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **フォーラム** (英語) ](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
 * [Ignite UI for Angular **GitHub** (英語) ](https://github.com/IgniteUI/igniteui-angular)
-* [Ignite UI for Angular** フォーラム** (英語) ](https://github.com/IgniteUI/igniteui-angular-i18n)
+* [Ignite UI for Angular **フォーラム** (英語) ](https://github.com/IgniteUI/igniteui-angular-i18n)

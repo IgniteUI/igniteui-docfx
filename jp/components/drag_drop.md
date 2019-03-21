@@ -1,11 +1,11 @@
 ﻿---
-title: ドラッグ アンド ドロップ
+title: Drag and Drop 
 _description: Ignite UI for Angular Drag and Drop ディレクティブを使用して DOM 要素の位置を移動できます。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Scrollbar コンポーネント,  Angular Drag and Drop ディレクティブ
 _language: ja
 ---
 
-## ドラッグ アンド ドロップ
+## Drag and Drop
 <p class="highlight">Ignite UI for Angular Drag and Drop ディレクティブは、ページの要素のドラッグを有効にします。</p>
 
 #### デモ
@@ -118,5 +118,5 @@ public onAreaLeave() {
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
 
-- [Ignite UI for Angular** フォーラム** (英語) ](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **フォーラム** (英語) ](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
 - [Ignite UI for Angular **GitHub** (英語) ](https://github.com/IgniteUI/igniteui-angular)

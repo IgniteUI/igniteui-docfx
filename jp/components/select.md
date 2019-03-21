@@ -62,10 +62,10 @@ public items: string[] = ["Orange", "Apple", "Banana", "Mango"];
 - ドロップダウン リストから項目を選択
 - `ALT + 上矢印/下矢印` キーの押下
 - `Enter`、`Space`、`Esc`、`Tab` キーのいずれかを押下
-- ドロップダウン ボタン上でマウスを左クリック、またはドロップダウン以外を左クリックしてドロップダウンを閉じることもできます。
+- ドロップダウン ボタン上でマウスを左クリック、またはドロップダウン以外を左クリックしてドロップダウンを閉じることもできます (input blur)。
 
 ### キーボード ナビゲーション
-`igx-select` has intuitive keyboard navigation that makes it easy to select items without having to touch the mouse.
+`igx-select`には直感的なキーボードナビゲーションがあり、マウスを使わずに簡単に項目を選択できます。
 
 - ドロップダウン リストが開いているときの移動先に残っている項目がある場合は、`上矢印/下矢印`で項目を移動できます。更に `Home` または `End` を押すとリストの最初と最後の項目に移動します。 
 - ドロップダウン リストが開いたときに対応するキーを押して特定の文字で始まる各項目に移動できます。大文字小文字を区別して一致するすべての項目間をフォーカスします￥。
@@ -96,10 +96,10 @@ public items: string[] = ["Orange", "Apple", "Banana", "Mango"];
 - 選択オプションが削除されると選択も削除されます。
 - 重複する値を持つ項目がある場合、最初の項目が選択されます。
 
-[!NOTE]
+>[!NOTE]
 > `Igx-select` は項目のみの単一選択をサポートします。
 
-### イベント発生
+### イベントの発生
 `Igx-select` が `igx-drop-down` を拡張するため、以下を含むイベントも使用できます。
 
 #### Opend イベント
@@ -194,8 +194,6 @@ import { SelectPositioningStrategy, OverlaySettings } from 'igniteui-angular';
 public igxSelect: IgxSelectComponent;
 
 public customOverlaySettings: OverlaySettings = {
-    closeOnOutsideClick: true,
-    modal: false,
     positionStrategy: new SelectPositioningStrategy(
         this.igxSelect
     ),
@@ -203,14 +201,13 @@ public customOverlaySettings: OverlaySettings = {
 };
 ```
 上記のように `customOverlaySettings` オブジェクトにある `scrollStrategy` プロパティもあります。これにより、ドロップダウンのスクロール機能が正しく動作します。このスクロールは、リストのすべての項目の合計の高さがドロップダウンの高さを超えるたびに表示されます。
-- `modal` and `closeOnOutsideClick` プロパティはオプションで、 `false` and `true`. のデフォルト値があります。
 
 その他の重要な点は `igx-select` がデフォルトで `SelectPositioningStrategy` を使用する点です。 
 > さまざまなポジション ストラテジを *positionStrategy* プロパティへ渡します。[ここ](https://jp.infragistics.com/products/ignite-ui-angular/docs/typescript/latest/interfaces/ipositionstrategy.html)をご覧ください。 
 
 ### グループで選択
 <div class="sample-container loading" style="height: 450px;">
-    <iframe id="select-sample-2-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/data-entries/select-sample-2" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="select-sample-2-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/data-entries/select-sample-2" class="lazyload"></iframe>
 </div>
 
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="select-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
@@ -246,7 +243,7 @@ public items: any[] = [
 
 ### フォームの選択
 <div class="sample-container loading" style="height: 450px;">
-    <iframe id="select-sample-3-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/data-entries/select-sample-3" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="select-sample-3-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/data-entries/select-sample-3" class="lazyload"></iframe>
 </div>
 
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="select-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
@@ -285,7 +282,7 @@ export class MyClass {
 `Igx-select` では[OverlaySettings](https://jp.infragistics.com/products/ignite-ui-angular/docs/typescript/interfaces/overlaysettings.html)のいずれにもバインドしませんが、カスタムな設定を作成して渡すことができます。
 
 <div class="sample-container loading" style="height: 260px;">
-    <iframe id="select-sample-4-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/data-entries/select-sample-4" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="select-sample-4-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/data-entries/select-sample-4" class="lazyload"></iframe>
 </div>
 
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="select-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
@@ -310,17 +307,15 @@ export class MyClass implements OnInit {
 
     public ngOnInit(): void {
         const positionSettings: PositionSettings = {
-            closeAnimation: slideOutRight,
+            closeAnimation: scaleOutBottom,
             horizontalDirection: HorizontalAlignment.Right,
             horizontalStartPoint: HorizontalAlignment.Left,
-            openAnimation: slideInLeft,
+            openAnimation: scaleInTop,
             target: this.igxSelect.inputGroup.element.nativeElement,
             verticalDirection: VerticalAlignment.Bottom,
             verticalStartPoint: VerticalAlignment.Bottom
         };
         this.customOverlaySettings = {
-            closeOnOutsideClick: false,
-            modal: true,
             positionStrategy: new ConnectedPositioningStrategy(
                 positionSettings
             ),
@@ -350,8 +345,6 @@ export class MyClass implements OnInit {
 export class MyClass implements OnInit {
     /* -- */
     private otherCustomOverlaySettings: OverlaySettings = {
-        closeOnOutsideClick: true,
-        modal: false,
         positionStrategy: new GlobalPositionStrategy(),
         scrollStrategy: new AbsoluteScrollStrategy()
     }
@@ -379,7 +372,7 @@ export class MyClass implements OnInit {
 [**ViewChild**](https://angular.io/api/core/ViewChild)  
 [**ngForOf**](https://angular.io/api/common/NgForOf)
 
-Our community is active and always welcoming to new ideas.
+コミュニティに参加して新しいアイデアをご提案ください。
 
 * [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
 * [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

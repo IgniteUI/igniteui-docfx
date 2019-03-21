@@ -1,4 +1,4 @@
----
+﻿---
 title: Date Picker コンポーネント
 _description: Ignite UI for Angular Date Picker コントロールを使用して web アプリケーションにカレンダーから日付を選択する機能を追加できます。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Date Picker コンポーネント, Angular Date Picker コントロール
@@ -164,11 +164,11 @@ public formatter = (date: Date) => {
 | [`locale`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#locale) | `string` | ロケール プロパティを設定する場合に Angular に含まれるロケールが en-US のみであることに注意してください。その他の日付をローカライズするためには対応するロケール データをインポートする必要があります。詳細については、[I18n](https://angular.io/guide/i18n#i18n-pipes) ガイドをご覧ください。|
 
 
-> Note: If both [`formatter`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#formatter) and [`format`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#format) inputs are set, the editable date picker ignores the [`formatter`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#formatter) input.
+> 注: [`formatter`]({environment：angularApiUrl} /classes/igxdatepickercomponent.html#formatter) および [`format`]({environment：angularApiUrl} /classes/igxdatepickercomponent.html#format) 両方の入力が設定されている場合、編集可能なデートピッカーは [`formatter`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#formatter) の入力を無視します。
 
-The editable date picker provides the following outputs to handle entering of disabled and invalid dates:
+編集可能なデートピッカーは、無効な日付と無効な入力を処理するために次のアウトプットを提供します。
 
-| Output | Arguments | 説明 | 
+| アウトプット | 引数 | 説明 | 
 | ------------- |:-------------:|:-------------:|
 |[`onDisabledDate`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#ondisableddate) | [`IDatePickerDisabledDateEventArgs`]({environment:angularApiUrl}/interfaces/idatepickerdisableddateeventargs.html) | デートピッカーでユーザーが無効な日付を入力またはスピンした場合に発生します。 |
 | [`onValidationFailed`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#onvalidationfailed) | [`IDatePickerValidationFailedEventArgs`]({environment:angularApiUrl}/interfaces/idatepickervalidationfailedeventargs.html) | デートピッカーでユーザー無効なな日付を入力またはスピンした場合に発生します。 |
@@ -196,7 +196,7 @@ The editable date picker provides the following outputs to handle entering of di
 
 #### 入力グループのテンプレート化
 
-Date Picker の入力グループをカスタマイズできます。To do that, we need to decorate the nested ng-template inside the date picker with `IgxDatePickerTemplate` directive.ng-template コンテキストは以下のメンバーを公開します。
+Date Picker の入力グループをカスタマイズできます。そのために `IgxDatePickerTemplate`ディレクティブでデートピッカーに入れ子になった ng-template をデコレートする必要があります。ng-template コンテキストは、以下のメンバーを公開しています。 コンテキストは以下のメンバーを公開します。
 
 | メンバー | 説明 | 
 | ------------- |:-------------:| 

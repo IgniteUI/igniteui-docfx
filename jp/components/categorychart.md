@@ -8,25 +8,21 @@ _language: ja
 
 ## Category Chart
 
-The `IgxCategoryChart` is a charting component that makes visualizing category data easy to do. The control simplifies the complexities of the data visualization domain into manageable API.
+`IgxCategoryChart` は、カテゴリ データの可視化を容易にするチャート コンポーネントです。このコントロールにより、データ可視化ドメインの複雑さを管理しやすい API に簡素化できます。
 
-### Demo
+### デモ
 
 <div class="sample-container" style="height: 500px">
     <iframe id="category-chart-overview-iframe" src='{environment:demosBaseUrl}/charts/category-chart-overview' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="category-chart-overview-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
-    </button>
-</div>
 
 <div class="divider--half"></div>
 
- A user can bind a collection of data, a group of collections, and a data property and let the charting control do the rest. The component will analyze the data and then automatically choose the best series type to represent the data.
+ ユーザーがデータのコレクョンまたはコレクション グループにバインドしてデータを指定するプロパティを設定後、あとの作業はチャート コントロールによって処理されます。コンポーネントはデータを解析し、データを表すための最適なシリーズ タイプを自動的に選択します。
 
-By using a smart Data Adapter, the data is analyzed and the appropriate visualization is rendered. For example, if the `chartType` property is set to `Auto`, the control will use a column chart for a small data sets or a line chart for larger data sets.
+スマート データ アダプターは、データを分析して適切なビジュアライゼーションを描画します。たとえば、`chartType` プロパティが `Auto` に設定される場合、コントロールは小さいデータ セットのために柱状チャートを使用し、より大きいデータ セットのために折れ線チャートを使用します。
 
-However, you can also explicitly specify the chart type by setting the `chartType` to:
+ただし、`chartType` を明示的に以下に設定してチャート タイプを指定することもできます。
 
 -   `Line`
 -   `Area`
@@ -38,15 +34,15 @@ However, you can also explicitly specify the chart type by setting the `chartTyp
 -   `StepLine`
 -   `Waterfall`
 
-Another example of the intuitive behavior of the Category Chart control is that you do not need to explicitly set the labels. The Category Chart will use the first appropriate string property that it finds within the data you provided and will use that for the labels.
+その他のカテゴリ チャート コントロールの直感的な動作の例として、明示的にラベルを設定する必要がないことがあります。カテゴリ チャートは、提供したデータ内で最初の適切な文字列プロパティを使用し、ラベルに使用します。
 
-### Dependencies
+### 依存関係
 
-When installing the chart package, the core package must also be installed.
+chart パッケージをインストールするときに core パッケージもインストールする必要があります。
 
 **npm install igniteui-angular-charts igniteui-angular-core**
 
-The category chart is exported as an `NgModule`, you need to import the 
+カテゴリ チャートが `NgModule` としてエクスポートされるため、アプリケーションで AppModule に IgxCategoryChartModule をインポートする必要があります。 
 `IgxCategoryChartModule` inside your `AppModule`:
 
 <!-- -->
@@ -67,15 +63,15 @@ import { IgxCategoryChartModule } from 'igniteui-angular-charts/ES5/igx-category
 export class AppModule {}
 ```
 
-It's also possible to load a more minimal configuration of category chart whereby it can only load a subset of the possible series, and exclude other optional features by instead loading the `IgxCategoryChartCoreModule`, and the dynamic module for the series in question, e.g. `IgxLineSeriesDynamicModule`. If the `chartType` is `Auto`, it wil make sure to select a series type that has been loaded.
+カテゴリ チャートのより最小限の設定をロードすることも可能で、それによって可能なシリーズのサブセットだけをロードし、代わりに `IgxCategoryChartCoreModule` や `IgxLineSeriesDynamicModule` など問題のシリーズの動的モジュールをロードして除外します。`chartType` が `auto` の場合、読み込んだシリーズ型が選択されます。
 
 <div class="divider--half"></div>
 
-### Usage
+### 使用方法
 
-Now that the category chart module is imported, next step is to bind it to data.
+カテゴリ チャート モジュールをインポートした後、チャートをデータにバインドします。
 
-In order to create an `IgxCategoryChartComponent` control, you must first have data to bind it to. The following code snippet demonstrates how to create a simple data source.
+`IgxCategoryChartComponent` コントロールを作成するには、はじめにデータをバインドする必要があります。以下のコード スニペットは、シンプルなデータソースを作成する方法を示します。
 
 ```typescript
 var data = [
@@ -87,7 +83,7 @@ var data = [
 ];
 ```
 
-The following code demonstrates how to bind the category chart to the above data.
+以下のコードはカテゴリ チャートを上記のデータにバインドします。
 
 ```html
  <igx-category-chart [dataSource]="data"
@@ -98,25 +94,25 @@ The following code demonstrates how to bind the category chart to the above data
 
 <div class="divider--half"></div>
 
-### Chart Types
+### チャート タイプ
 
-You can override the default behavior of the category chart and set which type of chart should be displayed. This is done by setting the `chartType` property.
-Below are listed all of the types that the Category Chart supports.
+表示するチャート型を設定するために、カテゴリ チャートのデフォルト動作をオーバーライドできます。これを実行するには、`chartType` プロパティを設定します。
+以下は、カテゴリ チャートでサポートされるすべてのタイプです。
 
 > [!NOTE]
-> Special case is the `Auto` setting of that property. If `Auto` is used the chart will analyze assigned data and will assign the most suitable chart type.
+> 特別なケースにプロパティの `Auto` 設定があります。`Auto` を使用した場合、チャートがデータを分析し、最適なチャート タイプを割り当てます。
 
-#### Supported chart types
+#### サポートされるチャート タイプ
 
-| Property     | Description                                                                        | Example                                      |
+| プロパティ     | 説明                                                                        | 例                                      |
 | ------------ | ---------------------------------------------------------------------------------- | -------------------------------------------- |
-| `Line`       | Specifies category line series with markers at each data point                     | ![](../images/category_chart_line.png)       |
-| `Area`       | Specifies category area series                                                     | ![](../images/category_chart_area.png)       |
-| `Column`     | Specifies category column chart with vertical rectangles at each data point        | ![](../images/category_chart_column.png)     |
-| `Point`      | Specifies category point chart with markers at each data point                     | ![](../images/category_chart_point.png)      |
-| `StepLine`   | Specifies category step line chart                                                 | ![](../images/category_chart_stepline.png)   |
-| `StepArea`   | Specifies category step area chart                                                 | ![](../images/category_chart_steparea.png)   |
-| `Spline`     | Specifies category spline line series with markers at each data point              | ![](../images/category_chart_spline.png)     |
-| `SplineArea` | Specifies category spline area series                                              | ![](../images/category_chart_splinearea.png) |
-| `Waterfall`  | Specifies category waterfall chart                                                 | ![](../images/category_chart_waterfall.png)  |
-| `Auto`       | Specifies automatic selection of chart type based on suggestions from Data Adapter |                                              |
+| `Line`       | 各データ ポイントにマーカーがあるカテゴリ折れ線シリーズを指定します。                     | ![](../images/category_chart_line.png)       |
+| `Area`       | カテゴリ エリア シリーズを指定します。                                                     | ![](../images/category_chart_area.png)       |
+| `Column`     | 各データ ポイントに垂直長方形があるカテゴリ柱状チャートを指定します。        | ![](../images/category_chart_column.png)     |
+| `Point`      | 各データ ポイントにマーカーがあるカテゴリ ポイント チャートを指定します。                     | ![](../images/category_chart_point.png)      |
+| `StepLine`   | カテゴリ ステップ折れ線チャートを指定します。                                                 | ![](../images/category_chart_stepline.png)   |
+| `StepArea`   | カテゴリ ステップ エリア チャートを指定します。                                                 | ![](../images/category_chart_steparea.png)   |
+| `Spline`     | 各データ ポイントにマーカーがあるカテゴリ スプライン折れ線シリーズを指定します。              | ![](../images/category_chart_spline.png)     |
+| `SplineArea` | カテゴリ スプライン エリア シリーズを指定します。                                              | ![](../images/category_chart_splinearea.png) |
+| `Waterfall`  | カテゴリ ウォーターフォール チャートを指定します。                                                 | ![](../images/category_chart_waterfall.png)  |
+| `Auto`       | データ アダプターからの提案に基づいてチャート タイプの自動選択を指定します。 |                                              |
