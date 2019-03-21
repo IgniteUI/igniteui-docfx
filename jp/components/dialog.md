@@ -125,6 +125,37 @@ export class AppModule {}
 </div>
 <div class="divider--half"></div>
 
+#### Customized Title and Actions
+
+Dialog title area can be customized using `igxDialogTitle` directive or `igx-dialog-title` selector. The actions area can be customized using `igxDialogActions` directive or `igx-dialog-actions` selector.
+
+```html
+<!-- dialog.component.html -->
+
+<igx-dialog #dialog [closeOnOutsideSelect]="true" message="This will create a new social media account.">
+    <igx-dialog-title>
+        <div class="dialog-container">
+            <igx-icon>account_box</igx-icon>
+            <div class="dialog-title">Create a new account?</div>
+        </div>
+    </igx-dialog-title>
+    <igx-dialog-actions>
+        <div class="dialog-container dialog-actions">
+            <button igxButton (click)="dialog.close()">CREATE</button>
+            <button igxButton (click)="dialog.close()">CANCEL</button>
+        </div>
+    </igx-dialog-actions>
+</igx-dialog>
+```
+
+<div class="sample-container loading" style="height:300px">
+    <iframe id="custom-dialog-sample-iframe" data-src='{environment:demosBaseUrl}/interactions/custom-dialog-sample' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="custom-dialog-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
+
 ### API まとめ
 <div class="divider--half"></div>
 
