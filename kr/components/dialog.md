@@ -141,12 +141,10 @@ Dialog title area can be customized using `igxDialogTitle` directive or `igx-dia
             <div class="dialog-title">Create a new account?</div>
         </div>
     </igx-dialog-title>
-    <igx-dialog-actions>
-        <div class="dialog-container dialog-actions">
-            <button igxButton (click)="dialog.close()">CREATE</button>
-            <button igxButton (click)="dialog.close()">CANCEL</button>
-        </div>
-    </igx-dialog-actions>
+    <div igxDialogActions class="dialog-container dialog-actions">
+        <button igxButton (click)="dialog.close()">CREATE</button>
+        <button igxButton (click)="dialog.close()">CANCEL</button>
+    </div>
 </igx-dialog>
 ```
 
