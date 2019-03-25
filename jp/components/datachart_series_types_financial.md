@@ -27,20 +27,19 @@ _language: ja
 
 ### ファイナンシャル オーバーレイ
 
-ファイナンシャル オーバーレイは通常 `IgxFinancialPriceSeriesComponent` の背面に表示されます。
-and they show trends in stock prices.オーバーレイは、Y-Axis 値の同じスケールを使用するため、`IgxFinancialPriceSeriesComponent` をプロットする同じ Data Chart でプロットできます。以下のリストは、ファイナンシャルオーバーレイのすべてのタイプを表示します。
+ファイナンシャル オーバーレイは通常 `IgxFinancialPriceSeriesComponent` の背面に表示されて、株価のトレントを表します。オーバーレイは、Y-Axis 値の同じスケールを使用するため、`IgxFinancialPriceSeriesComponent` をプロットする同じ Data Chart でプロットできます。以下のリストは、ファイナンシャルオーバーレイのすべてのタイプを表示します。
 
 -   `IgxBollingerBandsOverlayComponent` (BBO) は、価格の標準偏差に基づいて価格変動を幅に取り入れます。バンドは標準偏差が増加すると幅が広くなり、標準偏差が減少すると幅が狭くなります。また、バンドは移動平均で平滑化されます。標準偏差およびユーザーが調整可能な平滑化期間は別にして、BollingerBandsOverlay 幅のスケールに影響を及ぼすユーザーが調整可能な乗数もあります。、
 -   `IgxPriceChannelOverlayComponent` (PCO) は、価格変動または平行線で価格の経時変化です。下の線はトレンド ラインで低い価格に描画されます。上の線はチャネル ラインで高値に基づきます。チャネルは任意の期間のトレンド方向を示します。価格チャネルまたはトレンドは、上、下または横が可能です。
 
 ### 財務指標
 
-財務指標は、株価の動きの計測やトレンドを確認するためにトレーダーによって使用されます。These indicators are usually displayed in a separate chart above or below of a chart with the `IgxFinancialPriceSeriesComponent` because they do not share the same Y-Axis scale.ただし、チャート コントロールは同じプロット領域で価格シリーズとインジケーターの描画をサポートします。複数軸の使用や軸を共有することもできます。詳細については、[軸共有と複数軸](datachart_axis_sharing.md)のトピックを参照してください。更にすべての財務指標に `displayType` プロパティがあり、インジケーターをライン、柱状、エリアを使用して描画するかどうかを決定します。以下のリストは、ファイナンシャル インジケーターのすべてのタイプを表示します。
+財務指標は、株価の動きの計測やトレンドを確認するためにトレーダーによって使用されます。これらのインジケーターは、同じ Y 軸を共有しないため IgxFinancialPriceSeriesComponent を使用するチャートの上または下に表示されます。ただし、チャート コントロールは同じプロット領域で価格シリーズとインジケーターの描画をサポートします。複数軸の使用や軸を共有することもできます。詳細については、[軸共有と複数軸](datachart_axis_sharing.md)のトピックを参照してください。更にすべての財務指標に `displayType` プロパティがあり、インジケーターをライン、柱状、エリアを使用して描画するかどうかを決定します。以下のリストは、ファイナンシャル インジケーターのすべてのタイプを表示します。
 
 -   `IgxAbsoluteVolumeOscillatorIndicatorComponent` (AVO) は、2 つの平均出来高測定の差異を使用して計算されます。パーセンテージ ボリューム オシレーターに似ていますが、範囲が -100% から +100% まであります。インジケーターは、ボリューム トレンドの増加または減少を識別するために使用します。ユーザーは分析の期間を選択できます。
 -   `IgxAccumulationDistributionIndicatorComponent` (ADI) は、一般的に出来高に関連する指標によく使用されます。投資家が売買をするかどうかの差異を調べることによって、株式、証券、またはインデックスの時間上の需要と供給を評価します。
 -   `IgxAverageDirectionalIndexIndicatorComponent` |(ADX) はトレンドの強さを計測します。このインジケーターは、値動きの強さと方向を決定するために通常使用されます。
--   `IgxAverageTrueRangeIndicatorComponent` |is (ATR) measures a security’s degree of price movement or volatility within a given period of time.このインジケーターは価格方向や期間ではなく、ただ価格移動の程度、つまり乱高下を測定しています。ATR (Average True Range) は、さまざまなベース (毎日、毎週、毎月など) で 14 日の期間を使用して頻繁に計算されています。Average True Range というのは最近 14 期間の TR 値の指数移動平均のことです。使用される実際の期間は、ユーザー設定によって変わります。
+-   `IgxAverageTrueRangeIndicatorComponent` |(ATR) は、一定期間内の証券の価格変動またはラン効果の程度を測定します。このインジケーターは価格方向や期間ではなく、ただ価格移動の程度、つまり乱高下を測定しています。ATR (Average True Range) は、さまざまなベース (毎日、毎週、毎月など) で 14 日の期間を使用して頻繁に計算されています。Average True Range というのは最近 14 期間の TR 値の指数移動平均のことです。使用される実際の期間は、ユーザー設定によって変わります。
 -   `IgxBollingerBandWidthIndicatorComponent` |(BBW) は `IgxBollingerBandsOverlayComponent` と一緒に使用されます。このインジケーターは、指定したポイントでボリンジャー バンドの幅を表します。変化が多い場合、バンドの幅がより大きくなります。狭い帯域幅 (低値) は標準偏差の減少を示します。広い帯域幅 (高値) は価格の標準偏差の増加を示します。`IgxBollingerBandsOverlayComponent` のようなスケーリング係数をサポートするため、それらの値を一致させることができます。
 -   `IgxChaikinVolatilityIndicatorComponent` (CHV) は、指定された期間中の高値と安値の差異の指数移動平均の変化割合を表示することによって、証券の乱高下を反映する財務指標です。
 -   `IgxChaikinOscillatorIndicatorComponent` は、蓄積/分配インジケーターでトレンドを識別するために使用される (COI) です。チャイキン オシレーターは、蓄積/分配インジケーターの 3 日間の指数移動平均（EMA）から蓄積/分配インジケーターの 10 日間の EMA を引いたものです。
@@ -48,8 +47,8 @@ and they show trends in stock prices.オーバーレイは、Y-Axis 値の同じ
 -   `IgxDetrendedPriceOscillatorIndicatorComponent` (DPO) は、短期間のトレンドを識別するために、長期間の株価トレンドを制御するために設計された財務指標です。変位移動平均に基づきますが、モメンタム オシレーターではありません。
 -   `IgxEaseOfMovementIndicatorComponent` (EOM) は、証券の価格を変更するために必要な出来高を識別するために使用される財務指標です。通常移動平均で平滑化されます。
 -   `IgxFastStochasticOscillatorIndicatorComponent` (FSO) は、一定期間の高/低範囲に関連する終値を表示します。確率オシレーターには、ファスト、スロー、フルの 3 つのタイプがあります。このインジケーターはモメンタム インジケーターです。現在の終値を高値/安値の範囲に対して 0 ～ 100 のスケールを使用して関係を示します。これは、株価は高騰市況では 100 に近づき、 下降市場で 0 に近づくという前提に基づきます。このインジケーターは、買う拡散または売る拡散を識別するために使用されます。
--   `IgxForceIndexIndicatorComponent` (FII) is a price-and-volume oscillator that financial analysts use to determine if a stock’s trend is positive or negative.勢力指数は、今日の終値から昨日の終値を引いて、その差に当日の出来高を掛けて計算されます。今日の終値が昨日の終値より高い場合、勢力指数は正の数になります。終値が昨日の終値より高い場合、勢力指数は正の数になります。
--   `IgxFullStochasticOscillatorIndicatorComponent` (FSO) は、一定期間の高/低範囲に関連する終値を表示します。This indicator is similar to the `IgxSlowStochasticOscillatorIndicatorComponent` but with time period customization.
+-   `IgxForceIndexIndicatorComponent` (FII) は、株の動向が上昇または下降のいずれかであるかを判断するために財務アナリストが使用する値と出来高のオシレーターです。勢力指数は、今日の終値から昨日の終値を引いて、その差に当日の出来高を掛けて計算されます。今日の終値が昨日の終値より高い場合、勢力指数は正の数になります。終値が昨日の終値より高い場合、勢力指数は正の数になります。
+-   `IgxFullStochasticOscillatorIndicatorComponent` (FSO) は、一定期間の高/低範囲に関連する終値を表示します。インジケーターは IgxSlowStochasticOscillatorIndicatorComponent に似ていますが、期間のカスタマイズができます。
 -   `IgxMarketFacilitationIndexIndicatorComponent` (MFI) は、効率的に計測するために分析で株価と出来高を組み合わせます。計算は、安値と高値の差を出来高で割ります。
 -   `IgxMassIndexIndicatorComponent` (MII) は、トレンド反転を検出するために使用される財務指標です。価格範囲が大きくなった時に反落が起こるという前提に基づきます。計算は前のトレーディング範囲 (高値マイナス低値) を比較します。EMAs はその目的で使用されます。このインジケーターは、動きが大きい場合は増加し、動きが小さい場合は減少します。
 -   `IgxMedianPriceIndicatorComponent` (MPI) は、高値と安値の間の中間点を表します。中央値は代表値です。このインジケーターは、中央値のチャートを表示します。
@@ -62,10 +61,10 @@ and they show trends in stock prices.オーバーレイは、Y-Axis 値の同じ
 -   `IgxPositiveVolumeIndexIndicatorComponent` (PVI) は、Negative Volume Index と併用され、上げ相場を識別するために使用できます。この 2 つのインジケーターは、取引が少なく情報が少ない場合のスマートマネーの取引、または楽観的な売買が多い日の取引に基づいて計算されます。
 -   `IgxPriceVolumeTrendIndicatorComponent` (PVT) は、日々の出来高の部分を追加または減算することによってマネーフローの評価に使用されるインジケーターに基づいたモメンタムです。この加算値または減算値は、前日の終値と比較した当日の価格の上昇または下降の量によって異なります。このインジケーターは、差が取引シグナルとなる主にトレンドとスポットの確認に使用されます。
 -   `IgxPriceVolumeTrendIndicatorComponent` (PVT) は、日々の出来高の部分を追加または減算することによってマネーフローの評価に使用されるインジケーターに基づいたモメンタムです。この加算値または減算値は、前日の終値と比較した当日の価格の上昇または下降の量によって異なります。このインジケーターは、差が取引シグナルとなる主にトレンドとスポットの確認に使用されます。
--   `IgxRelativeStrengthIndexIndicatorComponent` (RSI) is a commonly used measure of market strength/weakness calculated on closing prices during a specified time period.上げ相場の期間は価格が高まり、下げ相場の期間は価格が低くなることに基づいて計算されます。RSIは、より低い終値に対するより高い終値の比率です。範囲は 0 から 100 です。
+-   `IgxRelativeStrengthIndexIndicatorComponent` （RSI）は、指定期間中の終値で計算される市場の強さ/弱さの一般的な尺度です。上げ相場の期間は価格が高まり、下げ相場の期間は価格が低くなることに基づいて計算されます。RSIは、より低い終値に対するより高い終値の比率です。範囲は 0 から 100 です。
 -   `IgxSlowStochasticOscillatorIndicatorComponent` (SSO) は、一定期間の高/低範囲に関連する終値を表示します。このインジケーターは買いまたは売りのダイバージェンスを識別するために使用され、単純移動平均 (SMA) に 3 日間使用します。
--   `IgxStandardDeviationIndicatorComponent` (SDI) は、株価または乱高下の統計的変動を測定します。The difference between an individual security’s closing price and the average security closing price is called the dispersion.分散が大きくなると標準偏差が高くなるため、乱高下になります。分散が小さくなるほど (各終値と平均値の差異)、標準偏差は小さくなり、値の乱高下は小さくなります。
--   `IgxStochRSIIndicatorComponent` (SRSI) は、指定された期間内で証券が過剰買いまたは過剰売りされた時に測定する財務指標です。値の範囲は 0 から 1 です。This indicator is calculated by applying the Stochastic Oscillator formula to `IgxRelativeStrengthIndexIndicatorComponent` (RSI) data.
+-   `IgxStandardDeviationIndicatorComponent` (SDI) は、株価または乱高下の統計的変動を測定します。証券の終値と平均の証券終値間の差は、分散と呼ばれます。分散が大きくなると標準偏差が高くなるため、乱高下になります。分散が小さくなるほど (各終値と平均値の差異)、標準偏差は小さくなり、値の乱高下は小さくなります。
+-   `IgxStochRSIIndicatorComponent` (SRSI) は、指定された期間内で証券が過剰買いまたは過剰売りされた時に測定する財務指標です。値の範囲は 0 から 1 です。インジケーターは、ストキャスティクス オシレーター数式を IgxRelativeStrengthIndexIndicatorComponent (RSI) データに適用して計算されます。
 -   TRIXIndicator (TRIX) は、証券の過剰買いまたは過剰売りを識別するために使用されるモメンタムの方法です。その他のオシレーターのように、TRIX スコアは 0 ぐらいです。正の値は証券の過剰買いを示し、負の値は過剰売りを示します。TRIX は、指定した時間期間の間に価格の 3 重の指数スムージング移動平均を使用して計算されます。単一線は、証券の価格が今後どのようになるかを示すために頻繁に使用されます。
 -   `IgxTypicalPriceIndicatorComponent` (TPI) は、指定された期間で証券の高値、安値、および終値の算術的な平均を表す一般的な財務指標 (ピボット ポイント) です。
 -   `IgxUltimateOscillatorIndicatorComponent` (UOI) は、単一期間に基づく他のインジケーターに関連する乱高下およびノイズを削減するために、3 つの異なる期間の重み付けされた平均を使用する財務指標です。これは範囲限界インジケーターのため、スコアは 0 ~ 100 の間です。
@@ -82,8 +81,8 @@ and they show trends in stock prices.オーバーレイは、Y-Axis 値の同じ
 
 -   データソースはデータ項目の配列またはリストである必要があります。
 -   データソースは、少なくともデータ項目を 1 つ含む必要があり、含まない場合はチャートでファイナンシャル シリーズを描画しません。
--   All data items must contain at least one data column (string or date time) which should be mapped to the `Label` property of the financial axis (e.g. `IgxCategoryXAxisComponent`)
--   All data items must contain 5 numeric data column which should be mapped using properties of a financial series: `OpenMemberPath`, `HighMemberPath`, `LowMemberPath`, `CloseMemberPath`, `VolumeMemberPath`
+-   すべてのデータ項目には、財務軸 (IgxCategoryXAxisComponent など) の Label プロパティにマッピングする必要がある少なくとも1つのデータ列 （文字列または日時）を含める必要があります
+-   すべてのデータ項目は、ファイナンシャル シリーズのプロパティ使用してマップされる 5 つの数値データ列を含む必要があります。 (`OpenMemberPath`、`HighMemberPath`、`LowMemberPath`、`CloseMemberPath`、`VolumeMemberPath`)。
 
 上記データ要件を満たすデータソースとして [SampleFinancialData](datachart_data_sources_financial.md) を使用できます。
 
@@ -122,7 +121,7 @@ import { IgxDataChartCoreModule } from "igniteui-angular-charts/ES5/igx-data-cha
 
 ### コード例
 
-This code demonstrates how to create an instance of data chart with `IgxFinancialPriceSeriesComponent`, `IgxBollingerBandsOverlayComponent`, and `IgxMedianPriceIndicatorComponent`.これらのシリーズは同じ  X-Axis と Y-Axis を使用しますが複数軸を使用して異なるシリーズに割り当てることができます。詳細については、[Axis Sharing and Multiple Axes](datachart_axis_sharing.md) トピックを参照してください。
+このコードは、IgxFinancialPriceSeriesComponent、IgxBollingerBandsOverlayComponent、IgxMedianPriceIndicatorComponent でデータ チャートのインスタンスを作成する方法を示します。これらのシリーズは同じ  X-Axis と Y-Axis を使用しますが複数軸を使用して異なるシリーズに割り当てることができます。詳細については、[Axis Sharing and Multiple Axes](datachart_axis_sharing.md) トピックを参照してください。
 
 ```html
  <igx-data-chart

@@ -7,8 +7,7 @@ _language: ja
 
 ## 散布等高線シリーズ
 
-このトピックは、コード例を示して `IgxDataChart` コントロールで `ScatterContourSeries` を使用する方法を説明します。This series
-draws colored contour lines based on a triangulation of X and Y data with a numeric value assigned to each point.このシリーズのタイプはヒート マップ、磁場の強さ、またはオフィスの Wi-Fi の強さを描画する場合などに便利です。`ScatterContourSeries` は `ScatterAreaSeries` とよく似ていますが、塗りつぶしスケールを使用して色付けされた等高線としてデータを表し、散布エリア シリーズはカラースケールを使用して補間された面としてデータを表します。
+このトピックは、コード例を示して `IgxDataChart` コントロールで `ScatterContourSeries` を使用する方法を説明します。このシリーズは、各点に数値が割り当てられた X および Y データの三角測量に基づいて色付きの等高線を描画します。このシリーズのタイプはヒート マップ、磁場の強さ、またはオフィスの Wi-Fi の強さを描画する場合などに便利です。`ScatterContourSeries` は `ScatterAreaSeries` とよく似ていますが、塗りつぶしスケールを使用して色付けされた等高線としてデータを表し、散布エリア シリーズはカラースケールを使用して補間された面としてデータを表します。
 
 ### デモ
 
