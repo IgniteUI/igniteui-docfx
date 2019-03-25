@@ -1,48 +1,48 @@
 ---
-title: Data Chart Component - Native Angular | Ignite UI for Angular
-_description: The Ignite UI for Angular Data Chart is a charting component that provides modular design of axis, markers, series, legend, and annotation layers. With this chart, you can create multiple instances of these visual elements in the same chart plot area in order to create composite chart views.
-_keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Chart Control, Angular Chart Example, Angular Chart Component, Angular Data Chart
+title: Data Chart コンポーネント - ネイティブ Angular|Ignite UI for Angular
+_description: Ignite UI for Angular Data Chart は、軸、マーカー、凡例、および注釈レイヤーのモジュール設計を提供するチャート コンポーネントです。チャート機能は、複合チャート ビューを作成するために同じチャート領域でのビジュアル要素の複数のインスタンスを利用できます。
+_keywords: Ignite UI for Angular, Angular, Native Angular コンポーネント スイート, Native Angular コントロール, ネイティブ Angular コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular チャート, Angular チャート コントロール, Angular チャート例, Angular チャート コンポーネント, Angular データ チャート
 _language: ja
 ---
 
 ## Axis
 
-In the `IgxDataChart` control, an axis provides base properties for specifying appearance of axis main lines, gridlines, tickmarks, titles, and labels. There are several different types of axis that can be used by the `IgxDataChart` for the different types of series that the chart supports. The type of series determines what type of axes can be used with them.
+`IgxDataChart` コントロールの軸は、軸の主線、グリッド線、目盛り、タイトル、およびラベルの外観を指定するための基本プロパティを提供します。チャートがサポートするさまざまなシリーズ タイプの `IgxDataChart` で使用できる複数の軸タイプがあります。シリーズのタイプは、一緒に使用できる軸タイプを決定します。
 
-### Demo
+### デモ
 
 <div class="sample-container" style="height: 500px">
     <iframe id="data-chart-overview-iframe" src='{environment:demosBaseUrl}/charts/data-chart-axis-types' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-axis-types-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-axis-types-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
     </button>
 </div>
 
 <div class="divider--half"></div>
 
-### Supported Axes
+### サポートされる軸
 
-The `IgxDataChart` control supports various types of axis that are intended to use with specific type of series. The following table lists which axes can be used with type of series.
+`IgxDataChart` コントロールは、特定の種類のシリーズで使用することを目的としたさまざまな種類の軸をサポートします。以下の表はシリーズ タイプで使用できます。
 
-| Axis Type          | Supported Series Types                                                                                                                                                                                                                                                           |
-| ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| CategoryYAxis      | only `BarSeries` in [Category Series](datachart_series_types_category.md) group                                                                                                                                                                                                  |
-| CategoryXAxis      | all [Financial Series](datachart_series_types_financial.md), [Range Series](datachart_series_types_range.md),  [Category Series](datachart_series_types_category.md) (except `BarSeries`)                                                                                        |
-| TimeXAxis          | all [Financial Series](datachart_series_types_financial.md), [Range Series](datachart_series_types_range.md),  [Category Series](datachart_series_types_category.md) (except `BarSeries`)                                                                                        |
-| OrdinalTimeXAxis   | all [Financial Series](datachart_series_types_financial.md), [Range Series](datachart_series_types_range.md),  [Category Series](datachart_series_types_category.md) (except `BarSeries`)                                                                                        |
-| PercentChangeYAxis | all [Financial Series](datachart_series_types_financial.md), [Range Series](datachart_series_types_range.md), [Category Series](datachart_series_types_category.md), [Scatter Series](datachart_series_types_scatter_bubble.md), [Shape Series](datachart_series_types_shape.md) |
-| NumericYAxis       | all [Scatter Series](datachart_series_types_scatter_bubble.md), [Shape Series](datachart_series_types_shape.md), [Financial Series](datachart_series_types_financial.md), [Range Series](datachart_series_types_range.md), [Category Series](datachart_series_types_category.md) |
-| NumericXAxis       | all [Scatter Series](datachart_series_types_scatter_bubble.md), [Shape Series](datachart_series_types_shape.md), and `BarSeries` in [Category Series](datachart_series_types_category.md) group                                                                                  |
-| NumericAngleAxis   | all [Polar Series](datachart_series_types_polar.md)                                                                                                                                                                                                                              |
-| NumericRadiusAxis  | all [Polar Series](datachart_series_types_polar.md) and [Radial Series](datachart_series_types_radial.md)                                                                                                                                                                        |
-| CategoryAngleAxis  | all  [Radial Series](datachart_series_types_radial.md)                                                                                                                                                                                                                           |
+| 軸タイプ               | サポートされるシリーズ タイプ                                                                                                                                                                                                                                                     |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| CategoryYAxis      | [Category ](datachart_series_types_category.md) グループの `BarSeries` のみ                                                                                                                                                                                                |
+| CategoryXAxis      | すべての [Financial シリーズ](datachart_series_types_financial.md)、[Range シリーズ](datachart_series_types_range.md)、[Category シリーズ](datachart_series_types_category.md) (`BarSeries` 以外)                                                                                       |
+| TimeXAxis          | すべての [Financial シリーズ](datachart_series_types_financial.md)、[Range シリーズ](datachart_series_types_range.md)、[Category シリーズ](datachart_series_types_category.md) (`BarSeries` 以外)                                                                                       |
+| OrdinalTimeXAxis   | すべての [Financial シリーズ](datachart_series_types_financial.md)、[Range シリーズ](datachart_series_types_range.md)、[Category シリーズ](datachart_series_types_category.md) (`BarSeries` 以外)                                                                                       |
+| PercentChangeYAxis | すべての [Financial シリーズ](datachart_series_types_financial.md)、[Range シリーズ](datachart_series_types_range.md)、[Category シリーズ](datachart_series_types_category.md)、[Scatter シリーズ](datachart_series_types_scatter_bubble.md)、[Shape シリーズ](datachart_series_types_shape.md) |
+| NumericYAxis       | すべての [Scatter シリーズ](datachart_series_types_scatter_bubble.md)、[Shape シリーズ](datachart_series_types_shape.md)、[Financial シリーズ](datachart_series_types_financial.md)、[Range シリーズ](datachart_series_types_range.md)、[Category シリーズ](datachart_series_types_category.md) |
+| NumericXAxis       | [Category シリーズ](datachart_series_types_category.md) グループのすべての [Scatter シリーズ](datachart_series_types_scatter_bubble.md)、[Shape シリーズ](datachart_series_types_shape.md)、`BarSeries`                                                                                    |
+| NumericAngleAxis   | すべての [極座標シリーズ](datachart_series_types_polar.md)                                                                                                                                                                                                                     |
+| NumericRadiusAxis  | すべての [極座標シリーズ](datachart_series_types_polar.md) と [ラジアル シリーズ](datachart_series_types_radial.md)                                                                                                                                                                     |
+| CategoryAngleAxis  | すべての [ラジアル シリーズ](datachart_series_types_radial.md)                                                                                                                                                                                                                  |
 
-### Category X Axis
+### カテゴリ X 軸
 
-The `IgxCategoryXAxisComponent` treats the data as a sequence of category data items. Labels on this axis are placed along the X-Axis, according to their position in the sequence. This type of axis can display almost any type of data including strings and numbers. This type of axis is compatible with the [Financial Series](datachart_series_types_financial.md), [Range Series](datachart_series_types_range.md),  and [Category Series](datachart_series_types_category.md) (except `BarSeries`)
+`IgxCategoryXAxisComponent`は、データをカテゴリのデータ項目のシーケンスとして扱っています。この軸のラベルがシーケンスの位置に応じて、X 軸に沿って配置されます。この軸の種類では、数字、文字列などのほぼすべてのデータのタイプを表示できます。軸のタイプは、[Financial シリーズ](datachart_series_types_financial.md)、[Range シリーズ](datachart_series_types_range.md)、[Category シリーズ](datachart_series_types_category.md) (`BarSeries` 以外)と互換性があります。
 
-The following code snippet demonstrates how to add a `IgxCategoryXAxisComponent` to the `IgxDataChart` control:
+以下のコードは、`IgxCategoryXAxisComponent` を `IgxDataChart` コントロールに追加する方法を示します。
 
 ```html
 <igx-data-chart [dataSource]="data"
@@ -52,11 +52,11 @@ The following code snippet demonstrates how to add a `IgxCategoryXAxisComponent`
 </igx-data-chart>
 ```
 
-### Category Y Axis
+### カテゴリ Y 軸
 
-The `CategoryYAxis` treats the data as a sequence of category data items. Labels on this axis are placed along the Y-Axis, according to their position in the sequence. This type of axis can display almost any type of data including strings and numbers. This type of axis is compatible only with `BarSeries` within the [Category Series](datachart_series_types_category.md) group.
+`CategoryYAxis`は、データをカテゴリのデータ項目のシーケンスとして扱っています。この軸のラベルがシーケンスの位置に応じて、Y 軸に沿って配置されます。この軸の種類では、数字、文字列などのほぼすべてのデータのタイプを表示できます。この軸タイプは、[Category Series](datachart_series_types_category.md) グループ内の `BarSeries` とのみ互換性があります。
 
-The following code snippet demonstrates how to add a `CategoryYAxis` to the `IgxDataChart` control:
+以下のコード スニペットは、`CategoryYAxis` を `IgxDataChart` コントロールに追加する方法を示します。
 
 ```html
 <igx-data-chart [dataSource]="data"
@@ -66,11 +66,11 @@ The following code snippet demonstrates how to add a `CategoryYAxis` to the `Igx
 </igx-data-chart>
 ```
 
-### Category DateTime X Axis
+### カテゴリ DateTime X 軸
 
-The `IgxCategoryDateTimeXAxisComponent` Axis treats the data as a sequence of category data items that are sorted by date. Labels on this axis are placed along the X-Axis, according to the value in a data column that is mapped using the `DateTimeMemberPath` property of this axis. This type of axis is compatible with the [Financial Series](datachart_series_types_financial.md), [Range Series](datachart_series_types_range.md), and [Category Series](datachart_series_types_category.md) (except `BarSeries`)
+`IgxCategoryDateTimeXAxisComponent` は、日付順に並べ替えられた一連のカテゴリデータ項目としてデータを扱います。この軸のラベルは、この軸の `DateTimeMemberPath` プロパティを使用してマップされるデータ列の値に基づいて X 軸に沿って配置されます。軸のタイプは、[Financial シリーズ](datachart_series_types_financial.md)、[Range シリーズ](datachart_series_types_range.md)、[Category シリーズ](datachart_series_types_category.md) (`BarSeries` 以外)と互換性があります。
 
-The following code snippet demonstrates how to add a `IgxCategoryDateTimeXAxisComponent` to the `IgxDataChart` control:
+以下のコード スニペットは、`IgxCategoryDateTimeXAxisComponent` を `IgxDataChart` コントロールに追加する方法を示します。
 
 ```html
 <igx-data-chart [dataSource]="data"
@@ -80,11 +80,11 @@ The following code snippet demonstrates how to add a `IgxCategoryDateTimeXAxisCo
 </igx-data-chart>
 ```
 
-### Numeric X Axis
+### 数字 X 軸
 
-The `IgxNumericXAxisComponent` treats the data as continously varying numerical data items. Labels on this axis are placed along the X-Axis. Location of labels varies according to the value in a data column that is mapped using their corresponding value-mapping properties. This type of axis is compatible with the [Scatter Series](datachart_series_types_scatter_bubble.md) and [Shape Series](datachart_series_types_shape.md) types. Also, this axis is compatible with the `BarSeries` type of [Category Series](datachart_series_types_category.md), in which the `ValueMemberPath` property will be used to map the data column.
+`IgxNumericXAxisComponent` は、データをカテゴリのデータ項目のシーケンスとして扱っています。この軸のラベルは X-Axis に沿ってに配置されます。ラベルの位置は、対応する値マッピング プロパティを使用してマップされたデータ列の値に基づいて変わります。このタイプの軸は、[Scatter シリーズ](datachart_series_types_scatter_bubble.md)と [Shape シリーズ](datachart_series_types_shape.md) のタイプと互換性があります。また、この軸は `BarSeries` タイプの [カテゴリ シリーズ](datachart_series_types_category.md) と互換性があります。ここでは、`ValueMemberPath` プロパティを使用してデータ列をマップします。
 
-The following code snippet demonstrates how to add a `IgxNumericXAxisComponent` to the `IgxDataChart` control:
+以下のコード スニペットは、`IgxNumericXAxisComponent` を `IgxDataChart` コントロールに追加する方法を示します。
 
 ```html
 <igx-data-chart [dataSource]="data"
@@ -94,11 +94,11 @@ The following code snippet demonstrates how to add a `IgxNumericXAxisComponent` 
 </igx-data-chart>
 ```
 
-### Numeric Y Axis
+### 数字 Y 軸
 
-The `IgxNumericYAxisComponent` treats the data as continuously varying numerical data items. Labels on this axis are placed along the Y-axis. Location of labels varies according to the value in a data column that is mapped using their corresponding value-mapping properties. This type of axis is compatible with the [Scatter Series](datachart_series_types_scatter_bubble.md) and [Shape Series](datachart_series_types_shape.md) types. Also, this axis is compatible with [Financial Series](datachart_series_types_financial.md), [Range Series](datachart_series_types_range.md), and [Category Series](datachart_series_types_category.md) types (except `BarSeries`).
+`IgxNumericYAxisComponent` は、データをカテゴリのデータ項目のシーケンスとして扱っています。この軸のラベルは Y 軸に沿ってに配置されます。ラベルの位置は、対応する値マッピング プロパティを使用してマップされたデータ列の値に基づいて変わります。このタイプの軸は、[Scatter シリーズ](datachart_series_types_scatter_bubble.md)と [Shape シリーズ](datachart_series_types_shape.md) のタイプと互換性があります。また、このタイプの軸は、[Financial シリーズ](datachart_series_types_financial.md)、[Range シリーズ](datachart_series_types_range.md)、[Category シリーズ](datachart_series_types_category.md) (`BarSeries` を除く) タイプと互換性があります。
 
-The following code snippet demonstrates how to add a `IgxNumericYAxisComponent` to the `IgxDataChart` control:
+以下のコード スニペットは、`IgxNumericYAxisComponent` を `IgxDataChart` コントロールに追加する方法を示します。
 
 ```html
 <igx-data-chart [dataSource]="data"
@@ -108,13 +108,13 @@ The following code snippet demonstrates how to add a `IgxNumericYAxisComponent` 
 </igx-data-chart>
 ```
 
-### Time X Axis
+### 時間 X 軸
 
-The `IgxTimeXAxisComponent` treats the data as a sequence of category data items that are sorted by date. Labels on this axis are placed along the X-Axis, according to the value in a data column that is mapped using the `DateTimeMemberPath` property of this axis. This type of axis is compatible with the [Financial Series](datachart_series_types_financial.md), [Range Series](datachart_series_types_range.md), and [Category Series](datachart_series_types_category.md) types.
+`IgxTimeXAxisComponent` は、日付順に並べ替えられた一連のカテゴリデータ項目としてデータを扱います。この軸のラベルは、この軸の `DateTimeMemberPath` プロパティを使用してマップされるデータ列の値に基づいて X 軸に沿って配置されます。このタイプの軸は、[Financial シリーズ](datachart_series_types_financial.md)、[Range シリーズ](datachart_series_types_range.md)、[Category シリーズ](datachart_series_types_category.md) と互換性があります。
 
-The `IgxTimeXAxisComponent` also supports the ability to exclude intervals of data with `breaks`. As a result, labels will not appear at the excluded interval. For example, working/non-working days, holidays, or weekends.
+`IgxTimeXAxisComponent` に `breaks` を使用してデータの間隔を除外するオプションがあります。その結果として、ラベルは除外された間隔で表示されません。たとえば、勤務日/休業日、休日、週末などです。
 
-The following code snippet demonstrates how to add a `IgxTimeXAxisComponent` to the `IgxDataChart` control:
+以下のコード スニペットは、`IgxTimeXAxisComponent` を `IgxDataChart` コントロールに追加する方法を示します。
 
 ```html
 <igx-data-chart [dataSource]="data"
@@ -124,11 +124,11 @@ The following code snippet demonstrates how to add a `IgxTimeXAxisComponent` to 
 </igx-data-chart>
 ```
 
-### Ordinal Time X Axis
+### 序数時間 X 軸の
 
-The main difference between the `IgxOrdinalTimeXAxisComponent` and the `IgxTimeXAxisComponent` is that in the ordinal axis, the dates displayed are assumed to be equidistant. The `IgxTimeXAxisComponent` currently sorts and aligns the dates according to a chronological timescale. Therefore, we recommend using `IgxOrdinalTimeXAxisComponent` for better performance or when your data items are already in chronological order with the same time interval.
+`IgxOrdinalTimeXAxisComponent` と `IgxTimeXAxisComponent` の主な違いは、序数軸で表示される日付は等距離であると見なされることです。`IgxTimeXAxisComponent` は現在、日付を時系列に従って並べ替えます。そのため、パフォーマンスを向上させるため、またはデータ項目が同じ時間間隔で時系列順になっている場合は、`IgxOrdinalTimeXAxisComponent` を使用することをお勧めします。
 
-The following code snippet demonstrates how to add a `IgxOrdinalTimeXAxisComponent` to the `IgxDataChart` control:
+以下のコード スニペットは、`IgxOrdinalTimeXAxisComponent` を `IgxDataChart` コントロールに追加する方法を示します。
 
 ```html
 <igx-data-chart [dataSource]="data"
@@ -138,13 +138,13 @@ The following code snippet demonstrates how to add a `IgxOrdinalTimeXAxisCompone
 </igx-data-chart>
 ```
 
-### Percent Change Y Axis
+### Y軸の変化率
 
-The `IgxPercentChangeYAxisComponent` works such that it takes the first point in your series as a reference value. Each value after the first value is scaled according to what percent increase or decrease it is compared to the reference value.
+`IgxPercentChangeYAxisComponent` は、参照値としてシリーズの最初のポイントを取得します。それ以後の値は参照値に比較して増減パーセントに基づいて拡大縮小されます。
 
-This axis type is based on `IgxNumericYAxisComponent`, and so will support the same series types. For [Category Series](datachart_series_types_category.md), the reference value will correspond to the `ValueMemberPath` for those series. For[Scatter Series](datachart_series_types_scatter_bubble.md), the reference value will correspond to the `YMemberPath` of those series. For [Financial Series](datachart_series_types_financial.md), the reference value will correspond to the first value mappted to `OpenMemberPath` property.
+この軸タイプは `IgxNumericYAxisComponent` に基づいているため、同じシリーズ タイプをサポートします。[Category シリーズ](datachart_series_types_category.md)の場合、参照値はそれらのシリーズの `ValueMemberPath` に対応します。[散布シリーズ](datachart_series_types_scatter_bubble.md)の場合、参照値はそれらのシリーズの `YMemberPath` に対応します。[ファイナンシャル シリーズ](datachart_series_types_financial.md)の場合、参照値は `OpenMemberPath` プロパティにマッピングされた最初の値に対応します。
 
-The following code snippet demonstrates how to add a `IgxPercentChangeYAxisComponent` to the `IgxDataChart` control:
+以下のコード スニペットは、`IgxPercentChangeYAxisComponent` を `IgxDataChart` コントロールに追加する方法を示します。
 
 ```html
 <igx-data-chart [dataSource]="data"
@@ -154,11 +154,11 @@ The following code snippet demonstrates how to add a `IgxPercentChangeYAxisCompo
 </igx-data-chart>
 ```
 
-### Additional Resources
+### その他のリソース
 
--   [Axis Types](datachart_axis_types.md)
--   [Axis Sharing](datachart_axis_sharing.md)
--   [Axis Settings](datachart_axis_settings.md)
--   [Chart Legend](datachart_chart_legends.md)
--   [Series Markers](datachart_series_markers.md)
--   [Series Types](datachart_series_types.md)
+-   [軸のタイプ](datachart_axis_types.md)
+-   [軸の共有](datachart_axis_sharing.md)
+-   [軸設定](datachart_axis_settings.md)
+-   [チャート凡例](datachart_chart_legends.md)
+-   [シリーズ マーカー](datachart_series_markers.md)
+-   [シリーズ タイプ](datachart_series_types.md)

@@ -1,39 +1,54 @@
 ---
-title: Data Chart Component - Native Angular | Ignite UI for Angular
+title: Data Chart コンポーネント - ネイティブ Angular|Ignite UI for Angular
 mentionedTypes: ['DataChart']
-_description: The Ignite UI for Angular Data Chart is a charting component that provides modular design of axis, markers, series, legend, and annotation layers. With this chart, you can create multiple instances of these visual elements in the same chart plot area in order to create composite chart views.
-_keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Chart Control, Angular Chart Example, Angular Grid Component, Angular Chart Component, Angular Data Chart
+_description: Ignite UI for Angular Data Chart は、軸、マーカー、凡例、および注釈レイヤーのモジュール設計を提供するチャート コンポーネントです。チャート機能は、複合チャート ビューを作成するために同じチャート領域でのビジュアル要素の複数のインスタンスを利用できます。
+_keywords: Ignite UI for Angular, Angular, Native Angular コンポーネント スイート, Native Angular コントロール, ネイティブ Angular コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular チャート, Angular チャート コントロール, Angular チャート例, Angular チャート コンポーネント, Angular データ チャート
 _language: ja
 ---
 
-## Data Chart
+## データ チャート
 
-The `IgxDataChart` is a charting component that provides modular design of axis, markers, series, legend, and annotation layers. With this chart, you can create multiple instances of these visual elements in the same chart plot area in order to create composite chart views.
+`IgxDataChart` は、軸、マーカー、凡例、および注釈レイヤーのモジュール設計を提供するチャート コンポーネントです。チャート機能は、複合チャート ビューを作成するために同じチャート領域でのビジュアル要素の複数のインスタンスを利用できます。
 
-### Demo
+### デモ
 
 <div class="sample-container" style="height: 500px">
     <iframe id="data-chart-overview-iframe" src='{environment:demosBaseUrl}/charts/data-chart-overview' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-overview-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-overview-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
     </button>
 </div>
 
 <div class="divider--half"></div>
 
-### Dependencies
+### 依存関係
 
-When installing the chart package, the core package must also be installed.
+chart パッケージをインストールするときに core パッケージもインストールする必要があります。
 
 **npm install igniteui-angular-charts igniteui-angular-core**
 
-The data chart is exported as an `NgModule`, you need to import the
-`IgxDataChartCoreModule` inside your `AppModule`:
+> [!NOTE]
+> Angular:
+>
+> カテゴリ チャートが NgModule としてエクスポートされるため、アプリケーションで
+> AppModule に IgxCategoryChartModule をインポートする必要があります。
 
 <!-- -->
 
+> [!NOTE]
+> WebComponents:
+>
+> データチャートを使うには、ロード中にアプリケーションに `Ig $ DataChartCoreModule` 
+> を登録する必要があります。
+
 <!-- -->
+
+> [!NOTE]
+> React:
+>
+> データチャートを使うには、ロード中にアプリケーションに `Ig $ DataChartCoreModule` 
+> を登録する必要があります。
 
 ```typescript
 // data chart's modules required for all series:
@@ -63,36 +78,36 @@ export class AppModule { /* ... */ }
 
 <div class="divider--half"></div>
 
-### Supported Series
+### サポートされるシリーズ
 
-The `IgxDataChart` control supports over 65 types of series including [Category Series](datachart_series_types_category.md), [Financial Series](datachart_series_types_financial.md), [Polar Series](datachart_series_types_polar.md), [Radial Series](datachart_series_types_radial.md), [Range Series](datachart_series_types_range.md), [Scatter Series](datachart_series_types_scatter_bubble.md), and [Shape Series](datachart_series_types_shape.md). Refer to the [Series](datachart_series_types.md) topic, for a full list of supported types of series and how to use them.
+`IgxDataChart` コントロールは、[Category シリーズ](datachart_series_types_category.md), [Financial シリーズ](datachart_series_types_financial.md)、[Polar シリーズ](datachart_series_types_polar.md)、[Radial シリーズ](datachart_series_types_radial.md)、[Range Series](datachart_series_types_range.md)、[Scatter シリーズ](datachart_series_types_scatter_bubble.md)、[Shape シリーズ](datachart_series_types_shape.md) を含む 65 種類以上のシリーズをサポートします。サポートされている [Series](datachart_series_types.md) のタイプとそれらの使用方法のリストについては、シリーズのトピックを参照してください。
 
-### Supported Axes
+### サポートされる軸
 
-The `IgxDataChart` control supports various types of axis that are intended to use with specific type of series. The following table lists which axes can be used with type of series.   Refer to the [Series](datachart_series_types.md) and [Axis](datachart_axis_types.md) topics, for more information on how to use these types of axis.
+`IgxDataChart` コントロールは、特定の種類のシリーズで使用することを目的としたさまざまな種類の軸をサポートします。以下の表はシリーズ タイプで使用できます。   これらのタイプの軸の使用方法については、[Series](datachart_series_types.md) と [Axis](datachart_axis_types.md) のトピックを参照してください。
 
-| Axis Type          | Supported Series Types                                                                                                                                                                                                                                                           |
-| ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| CategoryYAxis      | only `BarSeries` in [Category Series](datachart_series_types_category.md) group                                                                                                                                                                                                  |
-| CategoryXAxis      | all [Financial Series](datachart_series_types_financial.md), [Range Series](datachart_series_types_range.md),  [Category Series](datachart_series_types_category.md) (except `BarSeries`)                                                                                        |
-| TimeXAxis          | all [Financial Series](datachart_series_types_financial.md), [Range Series](datachart_series_types_range.md),  [Category Series](datachart_series_types_category.md) (except `BarSeries`)                                                                                        |
-| OrdinalTimeXAxis   | all [Financial Series](datachart_series_types_financial.md), [Range Series](datachart_series_types_range.md),  [Category Series](datachart_series_types_category.md) (except `BarSeries`)                                                                                        |
-| PercentChangeYAxis | all [Financial Series](datachart_series_types_financial.md), [Range Series](datachart_series_types_range.md), [Category Series](datachart_series_types_category.md), [Scatter Series](datachart_series_types_scatter_bubble.md), [Shape Series](datachart_series_types_shape.md) |
-| NumericYAxis       | all [Scatter Series](datachart_series_types_scatter_bubble.md), [Shape Series](datachart_series_types_shape.md), [Financial Series](datachart_series_types_financial.md), [Range Series](datachart_series_types_range.md), [Category Series](datachart_series_types_category.md) |
-| NumericXAxis       | all [Scatter Series](datachart_series_types_scatter_bubble.md), [Shape Series](datachart_series_types_shape.md), and `BarSeries` in [Category Series](datachart_series_types_category.md) group                                                                                  |
-| NumericAngleAxis   | all [Polar Series](datachart_series_types_polar.md)                                                                                                                                                                                                                              |
-| NumericRadiusAxis  | all [Polar Series](datachart_series_types_polar.md) and [Radial Series](datachart_series_types_radial.md)                                                                                                                                                                        |
-| CategoryAngleAxis  | all  [Radial Series](datachart_series_types_radial.md)                                                                                                                                                                                                                           |
+| 軸タイプ               | サポートされるシリーズ タイプ                                                                                                                                                                                                                                                     |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| CategoryYAxis      | [Category ](datachart_series_types_category.md) グループの `BarSeries` のみ                                                                                                                                                                                                |
+| CategoryXAxis      | すべての [Financial シリーズ](datachart_series_types_financial.md)、[Range シリーズ](datachart_series_types_range.md)、[Category シリーズ](datachart_series_types_category.md) (`BarSeries` 以外)                                                                                       |
+| TimeXAxis          | すべての [Financial シリーズ](datachart_series_types_financial.md)、[Range シリーズ](datachart_series_types_range.md)、[Category シリーズ](datachart_series_types_category.md) (`BarSeries` 以外)                                                                                       |
+| OrdinalTimeXAxis   | すべての [Financial シリーズ](datachart_series_types_financial.md)、[Range シリーズ](datachart_series_types_range.md)、[Category シリーズ](datachart_series_types_category.md) (`BarSeries` 以外)                                                                                       |
+| PercentChangeYAxis | すべての [Financial シリーズ](datachart_series_types_financial.md)、[Range シリーズ](datachart_series_types_range.md)、[Category シリーズ](datachart_series_types_category.md)、[Scatter シリーズ](datachart_series_types_scatter_bubble.md)、[Shape シリーズ](datachart_series_types_shape.md) |
+| NumericYAxis       | すべての [Scatter シリーズ](datachart_series_types_scatter_bubble.md)、[Shape シリーズ](datachart_series_types_shape.md)、[Financial シリーズ](datachart_series_types_financial.md)、[Range シリーズ](datachart_series_types_range.md)、[Category シリーズ](datachart_series_types_category.md) |
+| NumericXAxis       | [Category シリーズ](datachart_series_types_category.md) グループのすべての [Scatter シリーズ](datachart_series_types_scatter_bubble.md)、[Shape シリーズ](datachart_series_types_shape.md)、BarSeries                                                                                      |
+| NumericAngleAxis   | すべての [極座標シリーズ](datachart_series_types_polar.md)                                                                                                                                                                                                                     |
+| NumericRadiusAxis  | すべての [極座標シリーズ](datachart_series_types_polar.md) と [ラジアル シリーズ](datachart_series_types_radial.md)                                                                                                                                                                     |
+| CategoryAngleAxis  | すべての [ラジアル シリーズ](datachart_series_types_radial.md)                                                                                                                                                                                                                  |
 
-### Usage
+### 使用方法
 
-Now that the data chart modules are imported, next step is to bind chart to data. All series require specific number and type of data columns to render correctly and you can find a data source for each type of series in the [Data Sources](datachart_data_sources.md) topic.
+データチャートモジュールがインポートされたので、次のステップはチャートをデータにバインドすることです。すべてのシリーズを正しく表示するには、特定の数と種類のデータ列が必要です。[Data Sources](datachart_data_sources.md) のトピックで、系列の種類ごとにデータソースを見つけることができます。
 
-The following code snippet demonstrates how to create scatter `BubbleSeries` and bind it to [SampleScatterStats](datachart_data_sources_stats.md) data.
+次のコードスニペットは、散布 `BubbleSeries` を作成し、それを [SampleScatterStats](datachart_data_sources_stats.md) データにバインドする方法を示しています。
 
 > [!NOTE]
 >
-> Setting a data source on the chart component will apply to all series but you can also set different data sources on each series added in the data chart.
+> チャートコンポーネントにデータソースを設定すると、すべてのシリーズに適用されますが、データチャートに追加された各シリーズに異なるデータソースを設定することもできます。
 
 ```html
  <igx-data-chart [dataSource]="data"
@@ -113,11 +128,11 @@ The following code snippet demonstrates how to create scatter `BubbleSeries` and
 
 <div class="divider--half"></div>
 
-### Additional Resources
+### その他のリソース
 
--   [Axis Types](datachart_axis_types.md)
--   [Axis Sharing](datachart_axis_sharing.md)
--   [Axis Settings](datachart_axis_settings.md)
--   [Chart Legend](datachart_chart_legends.md)
--   [Series Markers](datachart_series_markers.md)
--   [Series Types](datachart_series_types.md)
+-   [軸のタイプ](datachart_axis_types.md)
+-   [軸の共有](datachart_axis_sharing.md)
+-   [軸設定](datachart_axis_settings.md)
+-   [チャート凡例](datachart_chart_legends.md)
+-   [シリーズ マーカー](datachart_series_markers.md)
+-   [シリーズ タイプ](datachart_series_types.md)

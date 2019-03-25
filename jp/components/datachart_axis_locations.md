@@ -1,29 +1,29 @@
 ---
-title: Data Chart Component - Native Angular | Ignite UI for Angular
-_description: The Ignite UI for Angular Data Chart is a charting component that provides modular design of axis, markers, series, legend, and annotation layers. With this chart, you can create multiple instances of these visual elements in the same chart plot area in order to create composite chart views.
-_keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Chart Control, Angular Chart Example, Angular Chart Component, Angular Data Chart
+title: Data Chart コンポーネント - ネイティブ Angular|Ignite UI for Angular
+_description: Ignite UI for Angular Data Chart は、軸、マーカー、凡例、および注釈レイヤーのモジュール設計を提供するチャート コンポーネントです。チャート機能は、複合チャート ビューを作成するために同じチャート領域でのビジュアル要素の複数のインスタンスを利用できます。
+_keywords: Ignite UI for Angular, Angular, Native Angular コンポーネント スイート, Native Angular コントロール, ネイティブ Angular コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular チャート, Angular チャート コントロール, Angular チャート例, Angular チャート コンポーネント, Angular データ チャート
 _language: ja
 ---
 
-## Axis Locations
+## 軸の位置
 
- For all axes have, you can specify axis location in relationship to chart plot area. This especially important when using more than two axes in the same chart or when [Sharing Axis](datachart_axis_sharing.md) between multiple series.
+ すべての軸に対して、チャートのプロット領域に関連して軸の位置を指定できます。これは、同じチャートで 2 つ以上の軸を使用する場合、または複数のシリーズ間で軸を共有する場合に特に重要です。
 
-### Demo
+### デモ
 
 <div class="sample-container" style="height: 450px">
     <iframe id="data-chart-axis-locations-iframe" src='{environment:demosBaseUrl}/charts/data-chart-axis-locations' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-axis-locations-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-axis-locations-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
     </button>
 </div>
 
 <div class="divider--half"></div>
 
-### Code Example
+### コード例
 
-This code demonstrates how to create data chart with two `IgxNumericYAxisComponent` that will be placed on left/right sides and two `IgxCategoryXAxisComponent` that will be stacked on one another.
+このコードは、左右に配置される 2 つの `IgxNumericYAxisComponent` と、互いに積み重ねられる2つの `IgxCategoryXAxisComponent` を使用してデータチャートを作成する方法を示します。
 
 ```html
  <igx-data-chart
@@ -62,8 +62,8 @@ This code demonstrates how to create data chart with two `IgxNumericYAxisCompone
  </igx-data-chart>
 ```
 
-### Additional Resources
+### その他のリソース
 
--   [Axis Types](datachart_axis_types.md)
--   [Axis Sharing](datachart_axis_sharing.md)
--   [Series Types](datachart_series_types.md)
+-   [軸のタイプ](datachart_axis_types.md)
+-   [軸の共有](datachart_axis_sharing.md)
+-   [シリーズ タイプ](datachart_series_types.md)

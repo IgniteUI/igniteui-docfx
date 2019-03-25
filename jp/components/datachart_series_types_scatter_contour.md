@@ -1,50 +1,49 @@
 ---
-title: Data Chart Component - Native Angular | Ignite UI for Angular
-_description: The Ignite UI for Angular Data Chart is a charting component that provides modular design of axis, markers, series, legend, and annotation layers. With this chart, you can create multiple instances of these visual elements in the same chart plot area in order to create composite chart views.
-_keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Chart Control, Angular Chart Example, Angular Chart Component, Angular Data Chart
+title: Data Chart コンポーネント - ネイティブ Angular|Ignite UI for Angular
+_description: Ignite UI for Angular Data Chart は、軸、マーカー、凡例、および注釈レイヤーのモジュール設計を提供するチャート コンポーネントです。チャート機能は、複合チャート ビューを作成するために同じチャート領域でのビジュアル要素の複数のインスタンスを利用できます。
+_keywords: Ignite UI for Angular, Angular, Native Angular コンポーネント スイート, Native Angular コントロール, ネイティブ Angular コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular チャート, Angular チャート コントロール, Angular チャート例, Angular チャート コンポーネント, Angular データ チャート
 _language: ja
 ---
 
-## Scatter Contour Series
+## 散布等高線シリーズ
 
-This topic explains, with code examples, how to use  `ScatterContourSeries` in the `IgxDataChart` control. This series
-draws colored contour lines based on a triangulation of X and Y data with a numeric value assigned to each point. This type of series is useful for rendering heat maps, magnetic field strength or Wi-Fi strength in an office. The `ScatterContourSeries` works a lot like the `ScatterAreaSeries` except that it represents data as contour lines colored using a fill scale and the scatter area series represents data as a surface interpolated using a color scale.
+このトピックは、コード例を示して `IgxDataChart` コントロールで `ScatterContourSeries` を使用する方法を説明します。このシリーズは、各点に数値が割り当てられた X および Y データの三角測量に基づいて色付きの等高線を描画します。このシリーズのタイプはヒート マップ、磁場の強さ、またはオフィスの Wi-Fi の強さを描画する場合などに便利です。`ScatterContourSeries` は `ScatterAreaSeries` とよく似ていますが、塗りつぶしスケールを使用して色付けされた等高線としてデータを表し、散布エリア シリーズはカラースケールを使用して補間された面としてデータを表します。
 
-### Demo
+### デモ
 
 <div class="sample-container" style="height: 500px">
     <iframe id="data-chart-type-contour-series-iframe" src='{environment:demosBaseUrl}/charts/data-chart-type-contour-series' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-type-contour-series-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-type-contour-series-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
     </button>
 </div>
 
 <div class="divider--half"></div>
 
-### Required Axes
+### 軸の要件
 
-The `IgxDataChart` control provides various types of axes but only `IgxNumericYAxisComponent`and `IgxNumericYAxisComponent` can be used with `ScatterContourSeries`.
+`IgxDataChart` コントロールにはさまざまな種類の軸がありますが、ScatterContourSeries では `IgxNumericYAxisComponent` と `IgxNumericYAxisComponent` のみ使用できます。
 
-### Required Data
+### データの要件
 
-The `ScatterContourSeries` has the following data requirements:
+ `ScatterContourSeries` には以下のデータ要件があります。
 
--   The data source must be an array or a list of data items
--   The data source must contain at least one data item otherwise the chart will not render the scatter shape series.
--   All data items must contain 3 numeric data columns which should be mapped to the `XMemberPath`, `YMemberPath`, and `ValueMemberPath` properties.
+-   データソースはデータ項目の配列またはリストである必要があります。
+-   データソースはデータ項目を少なくとも 1 つ含む必要があります。含まない場合はチャートに散布シェイプ シリーズを描画しません。
+-   すべてのデータ項目には、`XMemberPath`、`YMemberPath`、`ValueMemberPath` プロパティにマップされる 3 つの数値データ列を含める必要があります。
 
-You can use the [SampleScatterData](datachart_data_sources_scatter.md) as data source which meets above data requirements.
+上記データ要件を満たすデータソースとして [SamplePolarData](datachart_data_sources_scatter.md) を使用できます。
 
 ```typescript
 this.state = { dataSource: SampleScatterData.create() }
 ```
 
-### Required Modules
+### モジュールの要件
 
 <!-- Angular -->
 
-The scatter area series requires the following modules:
+散布エリア シリーズは以下のモジュールを要求します。
 
 ```typescript
 // axis' modules:
@@ -72,9 +71,9 @@ import { IgxDataChartScatterModule } from "igniteui-angular-charts/ES5/igx-data-
 export class AppModule { /* ... */ }
 ```
 
-### Code Example
+### コード例
 
-This code demonstrates how to create an instance of data chart with  `ScatterContourSeries` and bind it to the data source.
+このコードは、`ScatterContourSeries` でデータチャートのインスタンスを作成し、データソースにバインドする方法を説明します。
 
 ```html
  <igx-data-chart
@@ -93,24 +92,24 @@ This code demonstrates how to create an instance of data chart with  `ScatterCon
  </igx-data-chart>
 ```
 
-### Contour Fill Scale
+### 等高線の塗りつぶしスケール
 
-Use the `FillScale` property of the`ScatterContourSeries` to resolve fill brushes of the contour lines.
+`ScatterContourSeries` の `FillScale` プロパティを使用して等高線の塗りブラシを解決します。
 
-The provided `ValueBrushScale` class should satisfy most coloring needs, but you can inherit from this class and provide your own coloring logic. The following table lists properties of the `ValueBrushScale` affecting the surface coloring of the `ScatterContourSeries`:
+提供されている `ValueBrushScale` クラスはほとんどの色付けのニーズを満たすはずですが、このクラスから継承して独自の色付けのロジックを指定することができます。以下の表は `ScatterContourSeries` の面のカラーリングに影響する `ValueBrushScale` プロパティをリストします。
 
--   `Brushes` sets the collection of brushes for filling contours.
--   `MaximumValue` sets the highest value to assign a brush. Any given value greater than this value will be Transparent.
--   `MinimumValue` sets the lowest value to assign a brush. Any given value less than this value will be Transparent.
+-   `Brushes` は、輪郭を塗りつぶすためのブラシのコレクションを設定します。
+-   `Brushes` は、ブラシを割り当てるための最大値を設定します。指定した値がこの値より大きい場合は透明になります。
+-   `MinimumValue` は、ブラシを割り当てるための最小値を設定します。指定した値がこの値より小さい場合は透明になります。
 
-### Contour Value Resolver
+### 等高線値リゾルバー
 
-The `ScatterContourSeries` renders using exactly 10 contour lines at even intervals between the minimum and maximum values of the items mapped to the `ValueMemberPath` property. If you desire more or fewer contours, you can assign the `LinearContourValueResolver` with a number of contours to the `ValueResolver` property of the `ScatterContourSeries`.
+`ScatterContourSeries` は、`ValueMemberPath` プロパティにマップされた項目の最小値と最大値の間を等間隔でちょうど 10 本の等高線を使用して描画します。これより多くの等高線が必要な場合、またはこれより少ない等高線が必要な場合、等高線の数を持つ `LinearContourValueResolver` を `ScatterContourSeries` の `ValueResolver` プロパティに割り当てることができます。
 
-The following code shows how to configure the number of contour lines in the `ScatterContourSeries`.
+以下のコードは、`ScatterContourSeries` の等高線の数を構成する方法を示します。
 
-### Additional Resources
+### その他のリソース
 
--   [Axis Types](datachart_axis_types.md)
--   [Chart Legend](datachart_chart_legends.md)
--   [Series Types](datachart_series_types.md)
+-   [軸のタイプ](datachart_axis_types.md)
+-   [チャート凡例](datachart_chart_legends.md)
+-   [シリーズ タイプ](datachart_series_types.md)

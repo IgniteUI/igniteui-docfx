@@ -1,69 +1,69 @@
 ---
-title: Data Chart Component - Native Angular | Ignite UI for Angular
-_description: The Ignite UI for Angular Data Chart is a charting component that provides modular design of axis, markers, series, legend, and annotation layers. With this chart, you can create multiple instances of these visual elements in the same chart plot area in order to create composite chart views.
-_keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Chart Control, Angular Chart Example, Angular Chart Component, Angular Data Chart
+title: Data Chart コンポーネント - ネイティブ Angular|Ignite UI for Angular
+_description: Ignite UI for Angular Data Chart は、軸、マーカー、凡例、および注釈レイヤーのモジュール設計を提供するチャート コンポーネントです。チャート機能は、複合チャート ビューを作成するために同じチャート領域でのビジュアル要素の複数のインスタンスを利用できます。
+_keywords: Ignite UI for Angular, Angular, Native Angular コンポーネント スイート, Native Angular コントロール, ネイティブ Angular コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular チャート, Angular チャート コントロール, Angular チャート例, Angular チャート コンポーネント, Angular データ チャート
 _language: ja
 ---
 
-## Radial Series
+## ラジアル シリーズ
 
-This topic explains various types of radial series in the `IgxDataChart` control. Radial series a group of series that render data as collection of data points wrapped around a circle, rather than stretching along a horizontal line as [Category Series](datachart_series_types_category.md) do. Radial series are also mapping a list of categories from the minimum to the maximum of the extent of the chart, and support the same category grouping mechanisms of [Category Series](datachart_series_types_category.md).
+このトピックは、`IgxDataChart` コントロールのラジアル シリーズのさまざまなタイプについて説明します。ラジアル シリーズは、[カテゴリ シリーズ](datachart_series_types_category.md) のように水平線に沿って伸びるのではなく、円の周りを囲んだデータポイントのコレクションとしてデータをレンダリングするシリーズのグループです。ラジアル シリーズは、チャートの範囲の最小から最大までのカテゴリのリストもマッピングし、カテゴリシリーズと同じカテゴリグループ化メカニズムをサポートします。
 
-### Demo
+### デモ
 
 <div class="sample-container" style="height: 500px">
     <iframe id="data-chart-type-radial-series-iframe" src='{environment:demosBaseUrl}/charts/data-chart-type-radial-series' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-type-radial-series-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-type-radial-series-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示
     </button>
 </div>
 
 <div class="divider--half"></div>
 
-### Types of Radial Series
+### ラジアル シリーズのタイプ
 
-The following table lists all types of radial series and their descriptions:
+次の表は、すべてのタイプのカテゴリ シリーズとその説明をまとめたものです。
 
-| Series Name              | Description                                                                                                                                                       |
-| ------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `RadialAreaSeries`       | Displays a filled polygon enclosed by a collection of straight lines connecting data points which are located at the radial (angle/radius) coordinates            |
-| `RadialSplineAreaSeries` | Displays a filled polygon enclosed by a collection of smooth/interpolated lines connecting data points which are located at the radial (angle/radius) coordinates |
-| `RadialSplineSeries`     | Displays a collection of smooth/interpolated lines connecting data points which are located at the radial (angle/radius) coordinates                              |
-| `RadialScatterSeries`    | Displays a collection of markers representing data points which are located at the radial (angle/radius) coordinates                                              |
-| `RadialLineSeries`       | Displays a collection of straight lines connecting data points which are located at the radial (angle/radius) coordinates                                         |
+| シリーズ名                    | 説明                                                               |
+| ------------------------ | ---------------------------------------------------------------- |
+| `RadialAreaSeries`       | ラジアル (角度/半径) 座標にあるデータ ポイントを結ぶ直線の集合で囲まれ、塗りつぶされた多角形を表示します          |
+| `RadialSplineAreaSeries` | ラジアル (角度/半径) 座標にあるデータ ポイントを結ぶ滑らかな/補間された線の集合で囲まれ、塗りつぶされた多角形を表示します |
+| `RadialSplineSeries`     | ラジアル (角度/半径) 座標にあるデータ ポイントを結ぶ滑らかな/補間された線の集合を表示します。               |
+| `RadialScatterSeries`    | 極座標 (角度/半径) 座標にあるデータ ポイントを表すマーカーの集合を表示します。                       |
+| `RadialLineSeries`       | 極座標 (角度/半径) 座標にあるデータ ポイントを結ぶ直線の集合を表示します。                         |
 
-### Required Axes
+### 軸の要件
 
-The `IgxDataChart` control provides various types of axes but only the following types of axes can be used with radial series.
+`IgxDataChart` コントロールはさまざまな軸タイプを提供しますが、ラジアル シリーズで使用できるのは以下のタイプの軸のみです。
 
-| Series Type          | Radius Axis Type                | Angle Axis Type                 |
+| シリーズ タイプ             | 半径軸タイプ                          | 角度軸タイプ                          |
 | -------------------- | ------------------------------- | ------------------------------- |
 | `RadialAreaSeries`   | `IgxNumericRadiusAxisComponent` | `IgxCategoryAngleAxisComponent` |
 | `RadialPieSeries`    | `IgxNumericRadiusAxisComponent` | `IgxCategoryAngleAxisComponent` |
 | `RadialColumnSeries` | `IgxNumericRadiusAxisComponent` | `IgxCategoryAngleAxisComponent` |
 | `RadialLineSeries`   | `IgxNumericRadiusAxisComponent` | `IgxCategoryAngleAxisComponent` |
 
-### Required Data
+### データの要件
 
-Radial series have the following data requirements:
+極座標シリーズには、以下のデータ要件があります。
 
--   The data source must be an array or a list of data items
--   The data source must contain at least one data item otherwise the chart will not render the radial series.
--   All data items must contain at least one label data column (string or date time) which should be mapped to the `Label` property of the category axis (e.g. `IgxCategoryAngleAxisComponent`)
--   All data items must contain at least one numeric data column which should be mapped using the `ValueMemberPath` property of radial series (e.g. `RadialAreaSeries`)
+-   データソースはデータ項目の配列またはリストである必要があります。
+-   データソースはデータ項目を少なくとも 1 つ含む必要があります。含まない場合はチャートはラジアル シリーズをレンダリングしません。
+-   すべてのデータ項目には、財務軸 (`IgxCategoryXAxisComponent` など) の `Label` プロパティにマッピングする必要があるデータ列 （文字列または日時）を少なくとも 1 列含める必要があります
+-   データ itemsは、カテゴリシリーズ (`RadialAreaSeries` など) の `ValueMemberPath` プロパティを使用してマップする数値データ列を少なくとも 1 列含む必要があります。
 
-You can use the [SampleRadialData](datachart_data_sources_radial.md) as data source which meets above data requirements.
+上記データ要件を満たすデータソースとして [SampleRadialData](datachart_data_sources_radial.md) を使用できます。
 
 ```typescript
 this.state = { dataSource: SampleRadialData.create() }
 ```
 
-### Required Modules
+### モジュールの要件
 
 <!-- Angular -->
 
-In order to use radial series, you need to import the following modules in your app during load and register data chart modules:
+ラジアル シリーズを使用するには、データチャート モジュールの読み込みと登録の際にアプリケーションに次のモジュールをインポートする必要があります。
 
 ```typescript
 // axis' modules:
@@ -92,9 +92,9 @@ import { IgxDataChartRadialModule } from "igniteui-angular-charts/ES5/igx-data-c
 })
 ```
 
-### Code Example
+### コード例
 
-This code demonstrates how to create an instance of data chart with `RadialAreaSeries` and bind it to the data source.
+このコードは、`RadialAreaSeries` でデータチャートのインスタンスを作成し、データソースにバインドする方法を説明します。
 
 ```html
  <igx-data-chart
@@ -111,12 +111,12 @@ This code demonstrates how to create an instance of data chart with `RadialAreaS
  </igx-data-chart>
 ```
 
-Note that you can also use above code to create other type of radial series by replacing `RadialAreaSeries` with name of radial series that you want to render.
+上記のコードを使って `RadialAreaSeries` をレンダリングしたい極座標シリーズの名前で置き換えて他のタイプの極座標 シリーズを作成することもできます。
 
-### Additional Resources
+### その他のリソース
 
--   [Axis Types](datachart_axis_types.md)
--   [Axis Sharing](datachart_axis_sharing.md)
--   [Chart Legend](datachart_chart_legends.md)
--   [Series Markers](datachart_series_markers.md)
--   [Series Types](datachart_series_types.md)
+-   [軸タイプ](datachart_axis_types.md)
+-   [軸の共有](datachart_axis_sharing.md)
+-   [チャートの凡例](datachart_chart_legends.md)
+-   [シリーズのマーカー](datachart_series_markers.md)
+-   [シリーズ タイプ](datachart_series_types.md)

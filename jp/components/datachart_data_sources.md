@@ -1,22 +1,22 @@
----
-title: Data Chart Component - Native Angular | Ignite UI for Angular
-_description: The Ignite UI for Angular Data Chart is a charting component that provides modular design of axis, markers, series, legend, and annotation layers. With this chart, you can create multiple instances of these visual elements in the same chart plot area in order to create composite chart views.
-_keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Chart Control, Angular Chart Example, Angular Chart Component, Angular Data Chart
+﻿---
+title: Data Chart コンポーネント - ネイティブ Angular|Ignite UI for Angular
+_description: Ignite UI for Angular Data Chart は、軸、マーカー、凡例、および注釈レイヤーのモジュール設計を提供するチャート コンポーネントです。チャート機能は、複合チャート ビューを作成するために同じチャート領域でのビジュアル要素の複数のインスタンスを利用できます。
+_keywords: Ignite UI for Angular, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular チャート, Angular チャート コントロール, Angular チャート例, Angular チャート コンポーネント, Angular データ チャート
 _language: ja
 ---
 
-## Data Sources
+## データ ソース
 
-In the `IgxDataChart` control, all series require specific numer and type of data columns to render correctly. This topic provides examples of how to implement data source for each group of series.
+`IgxDataChart` コントロールでは、すべてのシリーズを正しく表示するために特定の数値とデータ列の型を必要とします。このトピックでは、シリーズの各グループにデータソースを実装する方法の例を示します。
 
--   [SampleCategoryData](datachart_data_sources_category.md) for [Category Series](datachart_series_types_category.md)
--   [SampleFinancialData](datachart_data_sources_financial.md) for [Financial Series](datachart_series_types_financial.md)
--   [SamplePolarData](datachart_data_sources_polar.md) for [Polar Series](datachart_series_types_polar.md)
--   [SampleRadialData](datachart_data_sources_radial.md) for [Radial Series](datachart_series_types_radial.md)
--   [SampleRangeData](datachart_data_sources_range.md) for [Range Series](datachart_series_types_range.md)
--   [SampleDensityData](datachart_data_sources_density.md) for [Scatter HD Series](datachart_series_types_scatter_hd.md)
--   [SampleScatterData](datachart_data_sources_scatter.md) for [Scatter Area Series](datachart_series_types_scatter_contour.md)
--   [SampleScatterData](datachart_data_sources_scatter.md) for [Scatter Contour Series](datachart_series_types_scatter_contour.md)
--   [SampleScatterStats](datachart_data_sources_stats.md) for [Scatter Bubble Series](datachart_series_types_scatter_bubble.md)
--   [SampleScatterStats](datachart_data_sources_stats.md) for [Scatter Marker Series](datachart_series_types_scatter_marker.md)
--   [SampleShapeData](datachart_data_sources_shape.md) for [Scatter Shape Series](datachart_series_types_shape.md)
+-   [Category Series](datachart_series_types_category.md) の [SampleCategoryData](datachart_data_sources_category.md)
+-   [Financial Series](datachart_series_types_financial.md) の [SampleFinancialData](datachart_data_sources_financial.md)
+-   [Polar Series](datachart_series_types_polar.md) の [SamplePolarData](datachart_data_sources_polar.md)
+-   [Radial Series](datachart_series_types_radial.md) の [SampleRadialData](datachart_data_sources_radial.md)
+-   [Range Series](datachart_series_types_range.md) の [SampleRangeData](datachart_data_sources_range.md)
+-   [Scatter HD Series](datachart_series_types_scatter_hd.md) の [SampleDensityData](datachart_data_sources_density.md)
+-   [Scatter Area Series](datachart_series_types_scatter_contour.md) の [SampleScatterData](datachart_data_sources_scatter.md)
+-   [Scatter Contour Series](datachart_series_types_scatter_contour.md) の [SampleScatterData](datachart_data_sources_scatter.md)
+-   [Scatter Bubble Series](datachart_series_types_scatter_bubble.md) の [SampleScatterData](datachart_data_sources_stats.md)
+-   [Scatter Marker Series](datachart_series_types_scatter_marker.md) の [SampleScatterStats](datachart_data_sources_stats.md)
+-   [Scatter Shape Series](datachart_series_types_shape.md) の [SampleShapeData](datachart_data_sources_shape.md)

@@ -1,31 +1,31 @@
 ---
-title: Data Chart Component - Native Angular | Ignite UI for Angular
-_description: The Ignite UI for Angular Data Chart is a charting component that provides modular design of axis, markers, series, legend, and annotation layers. With this chart, you can create multiple instances of these visual elements in the same chart plot area in order to create composite chart views.
-_keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Chart Control, Angular Chart Example, Angular Chart Component, Angular Data Chart
+title: Data Chart コンポーネント - ネイティブ Angular|Ignite UI for Angular
+_description: Ignite UI for Angular Data Chart は、軸、マーカー、凡例、および注釈レイヤーのモジュール設計を提供するチャート コンポーネントです。チャート機能は、複合チャート ビューを作成するために同じチャート領域でのビジュアル要素の複数のインスタンスを利用できます。
+_keywords: Ignite UI for Angular, Angular, Native Angular コンポーネント スイート, Native Angular コントロール, ネイティブ Angular コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular チャート, Angular チャート コントロール, Angular チャート例, Angular チャート コンポーネント, Angular データ チャート
 _language: ja
 ---
 
-## Axis Settings
+## 軸設定
 
-In the `IgxDataChart` control, an axis provides base properties for specifying the appearance of axis main lines, tickmarks, titles, and axis labels.
+`IgxDataChart` コントロールでは、軸は、軸メインライン、目盛り、タイトル、および軸ラベルの外観を指定するための基本プロパティを提供します。
 
-### Demo
+### デモ
 
 <div class="sample-container" style="height: 500px">
     <iframe id="data-chart-axis-settings-iframe" src='{environment:demosBaseUrl}/charts/data-chart-axis-settings' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-axis-settings-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-axis-settings-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
     </button>
 </div>
 
 <div class="divider--half"></div>
 
-### Axis Labels
+### 軸ラベル
 
-The `IgxDataChart` control allows you full control over configuring, formatting, and styling the font of the labels displayed on an axis in your chart. You can change the rotation angle, margin, horizontal and vertical alignment, color, padding, and visibility of these labels.
+`IgxDataChart` コントロールは、チャートで表示されるラベルの構成、書式設定、およびラベル フォントのスタイル設定を制御することが可能です。これらのラベルの回転角度、マージン、水平および垂直方向の配置、色、余白、および表示設定を変更できます。
 
-The following code example shows how to style the labels on a category x-axis in the chart:
+次のコード例は、チャートのカテゴリ X 軸のラベルのスタイルを設定する方法を示しています。
 
 ```html
 <igx-category-x-axis #xAxis
@@ -37,11 +37,11 @@ The following code example shows how to style the labels on a category x-axis in
 </igx-category-x-axis>
 ```
 
-### Axis Titles
+### 軸タイトル
 
-The axis title feature of the `IgxDataChart` control allows you to add contextual information to the axes of the chart. You can customize the look and feel of the axis titles in many different ways such as applying different font styles, margins, and alignments.
+`IgxDataChart` コントロールの軸タイトル機能を使用すると、チャートの軸にコンテキスト情報を追加できます。さまざまなフォントスタイル、マージン、および配置を適用するなど、さまざまな方法で軸タイトルの外観をカスタマイズできます。
 
-The following code example shows how to set and customize the titles on a category x-axis in the chart:
+次のコード例は、チャートのカテゴリ X 軸のタイトルを設定およびカスタマイズする方法を示しています。
 
 ```html
 <igx-category-x-axis #xAxis
@@ -53,11 +53,11 @@ The following code example shows how to set and customize the titles on a catego
 </igx-category-x-axis>
 ```
 
-### Axis Tickmarks
+### 軸目盛
 
-Tick marks display points on the axes in the chart. They represent a certain numeric point on a scale or the value of the category in a category axis. You can change the length, thickness, and color of the tick marks on an axis in the `IgxDataChart` control.
+目盛りは、チャートの軸上に点を表示します。スケールに特定の数値ポイント、またはカテゴリ軸にカテゴリ値を表します。`IgxDataChart` コントロールでは、軸上の目盛りの長さ、太さ、および色を変更できます。
 
-The following code example shows how to set and customize the color, length, and thickness of the tick marks on a category x-axis in the chart:
+次のコード例は、チャートのカテゴリX軸上の目盛りの色、長さ、および太さを設定およびカスタマイズする方法を示しています。
 
 ```html
 <igx-category-x-axis #xAxis
@@ -68,13 +68,13 @@ The following code example shows how to set and customize the color, length, and
 </igx-category-x-axis>
 ```
 
-### Axis Range
+### 軸の範囲
 
-In the `IgxDataChart` control, you can define a range minimum and range maximum value of a numeric or time axis. The range minimum is the lowest value of the axis and the range maximum is the highest value of the axis. These are set by setting the `MinimumValue` and `MaximumValue` options on the corresponding axes.
+`IgxDataChart` コントロールでは、数値軸または時間軸の範囲の最小値と最大値を定義できます。範囲の最小値は軸の最小値で、範囲の最大値は軸の最大値です。これらは対応する軸で `MinimumValue` と `MaximumValue` オプションを設定することによって設定されます。
 
-By default, the `IgxDataChart` control will calculate the minimum and maximum values for the numeric and time axis range based on the lowest and highest corresponding value points in your data, but this automatic calculation may not be appropriate for your set of data points in all cases. For example, if your data has a minimum value of 850, you may want to set the `MinimumValue` of the numeric axis to 800 so that there will be a space value of 50 between the axis minimum and the lowest value of data points. The same idea can be applied to the axis minimum value and the highest value of data points using the `MaximumValue` property.
+既定では、`IgxDataChart` コントロールは、データ内の対応する最小値と最大値に基づいて、数値と時間軸の範囲の最小値と最大値を計算しますが、この自動計算は、データセットには適していません。たとえば、データの最小値が 850 の場合、数値軸の `MinimumValue` を 800 に設定して、軸の最小値とデータポイントの最小値の間に 50 のスペース値ができるようにします。`MinimumValue` プロパティを使用して、同じ方法を軸の最小値と最大値に適用することができます。
 
-The following code snippet demonstrates changing an axis range in the `IgxDataChart` control:
+次のコードスニペットは、`IgxDataChart` コントロールの軸範囲を変更する方法を示しています。
 
 ```html
 <igx-numeric-y-axis #yAxis
@@ -84,15 +84,15 @@ The following code snippet demonstrates changing an axis range in the `IgxDataCh
 </igx-numeric-y-axis>
 ```
 
-### Axis Gridlines
+### 軸グリッド線
 
-In the `IgxDataChart` control, the `Interval` property of an axis determines how frequently the major gridlines and axis labels are rendered on that axis. Similarly, the `MinorInterval` property specifies how frequently minor gridlines are rendered between those major gridlines.
+`IgxDataChart` コントロールでは、軸の Interval プロパティによって、主グリッド線と軸ラベルをその軸に描画する頻度が決まります。同様に、`MinorInterval` プロパティは、それらの主グリッド線の間に副グリッド線が描画される頻度を指定します。
 
-For numeric axes, these intervals will be numeric, but for category axes, these values will represent the frequency of the number of categories that you wish for the lines to be drawn. For example, if you set the `Interval` to 2 on a category axis, the major gridlines would be drawn every 2 categories.
+数値軸の場合、これらの間隔は数値になりますが、カテゴリ軸の場合、これらの値は線を引くのに必要なカテゴリ数の頻度を表します。たとえば、カテゴリ軸で `Interval` を 2 に設定した場合、主グリッド線は 2 カテゴリごとに描画されます。
 
-You can also configure the color and thickness of the intervals on the axes in the chart by setting the corresponding stroke and stroke thickness properties.
+対応するストロークとストロークの太さのプロパティを設定して、チャート内の軸上の間隔の色と太さを設定することもできます。
 
-The following code snippet demonstrates how to configure the intervals on the axes in the chart:
+次のコードスニペットは、チャートの軸上の間隔を構成する方法を示しています。
 
 ```html
 <igx-numeric-y-axis #yAxis
@@ -106,13 +106,13 @@ The following code snippet demonstrates how to configure the intervals on the ax
 </igx-numeric-y-axis>
 ```
 
-### Axis Gap
+### 軸間隔
 
-The `Gap` property on the category axes of the `IgxDataChart` control determines the amount of space between series of the chart.
+`IgxDataChart` コントロールのカテゴリ軸の `Gap` プロパティは、一連のチャート間のスペースの量を決定します。
 
-This property accepts a numeric value between 0 and 1. The value represents a relative width of the gap out of the available number of pixels between the series. Setting this property to 0 would mean there is no gap rendered between the series, and setting it 1 woudl render the maximum available gap.
+このプロパティは、0 から 1 までの数値を受け入れます。値は、シリーズ間の利用可能なピクセル数からのギャップの相対幅を表します。このプロパティを 0 に設定すると、シリーズ間にギャップがレンダリングされず、1 に設定すると最大ギャップがレンダリングされます。
 
-The following sample code demonstrates setting an x-axis gap:
+次のサンプルコードは、x 軸の間隔を設定する方法を示しています。
 
 ```html
 <igx-category-x-axis #xAxis
@@ -122,17 +122,17 @@ The following sample code demonstrates setting an x-axis gap:
 </igx-category-x-axis>
 ```
 
-### Axis Overlap
+### 軸の重複
 
-The axis `Overlap` feature of the category axes of the `IgxDataChart` control allows setting the overlap of the rendered categories.
+`IgxDataChart` コントロールのカテゴリ軸の軸 `Overlap` 機能を使用すると、レンダリングされたカテゴリの重なりを設定できます。
 
-This property accepts a numeric value between -1 and 1. The value represents a relative overlap out of the available number of pixels dedicated to each series.
+このプロパティは、-1 から 1 までの数値を受け入れます。値は、各シリーズ専用の使用可能なピクセル数からの相対的な重なりを表します。
 
-Setting this property to a negative value (down to -1) results in the categories being pushed away from each other, producing a gap between themselves.
+このプロパティを負の値 (-1まで) に設定すると、カテゴリが互いから離れてしまい、それらの間にギャップが生じます。
 
-Setting this property to a positive value (up to 1) results in the categories overlapping each other. A value of 1 directs the chart to render the categories on top of each other.
+このプロパティを正の値 （最大 1） に設定すると、カテゴリが互いに重なります。値が 1 の場合、チャートはカテゴリを互いの上に表示します。
 
-The following code snippet sets the x-axis `Overlap` to 0:
+次のコードスニペットは、x 軸の `Overlap` を 0 に設定します。
 
 ```html
 <igx-category-x-axis #xAxis

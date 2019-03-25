@@ -1,49 +1,49 @@
 ---
-title: Data Chart Component - Native Angular | Ignite UI for Angular
-_description: The Ignite UI for Angular Data Chart is a charting component that provides modular design of axis, markers, series, legend, and annotation layers. With this chart, you can create multiple instances of these visual elements in the same chart plot area in order to create composite chart views.
-_keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Chart Control, Angular Chart Example, Angular Chart Component, Angular Data Chart
+title: Data Chart コンポーネント - ネイティブ Angular|Ignite UI for Angular
+_description: Ignite UI for Angular Data Chart は、軸、マーカー、凡例、および注釈レイヤーのモジュール設計を提供するチャート コンポーネントです。チャート機能は、複合チャート ビューを作成するために同じチャート領域でのビジュアル要素の複数のインスタンスを利用できます。
+_keywords: Ignite UI for Angular, Angular, Native Angular コンポーネント スイート, Native Angular コントロール, ネイティブ Angular コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular チャート, Angular チャート コントロール, Angular チャート例, Angular チャート コンポーネント, Angular データ チャート
 _language: ja
 ---
 
-## Scatter Area Series
+## 散布エリア シリーズ
 
-This topic explains, with code examples, how to use  `ScatterAreaSeries` in the `IgxDataChart` control. This series draws a colored surface based on a triangulation of X and Y data with a numeric value assigned to each point. This type of series is useful for rendering heat maps, magnetic field strength or Wi-Fi strength in an office. The `ScatterAreaSeries` works a lot like the `ScatterContourSeries` except that it represents data as interpolated and colored surface instead of contour lines connecting data points with the same values.
+このトピックは、コード例を示して `IgxDataChart` コントロールで `ScatterAreaSeries` を使用する方法を説明します。このシリーズは、各点に数値が割り当てられた X および Y データの三角測量に基づいて色付きの表面を描画します。このシリーズのタイプはヒート マップ、磁場の強さ、またはオフィスの Wi-Fi の強さを描画する場合などに便利です。`ScatterAreaSeries` は `ScatterContourSeries` と同様ですが、同じ値を持つデータポイントを接続する等線の置換に補完で色つきサーフェス エリアとしてデータを表します。
 
-### Demo
+### デモ
 
 <div class="sample-container" style="height: 500px">
     <iframe id="data-chart-type-area-series-iframe" src='{environment:demosBaseUrl}/charts/data-chart-type-area-series' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-type-area-series-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-type-area-series-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示
     </button>
 </div>
 
 <div class="divider--half"></div>
 
-### Required Axes
+### 軸の要件
 
-The `IgxDataChart` control provides various types of axes but only `IgxNumericYAxisComponent`and `IgxNumericYAxisComponent` can be used with `ScatterAreaSeries`.
+`IgxDataChart` コントロールにはさまざまな種類の軸がありますが、`ScatterAreaSeries` では `IgxNumericYAxisComponent` と `IgxNumericYAxisComponent` のみ使用できます。
 
-### Required Data
+### データの要件
 
-The `ScatterAreaSeries` has the following data requirements:
+`ScatterAreaSeries` には以下のデータ要件があります。
 
--   The data source must be an array or a list of data items
--   The data source must contain at least one data item otherwise the chart will not render the scatter shape series.
--   All data items must contain 3 numeric data columns which should be mapped to the `XMemberPath`, `YMemberPath`, and `ColorMemberPath` properties.
+-   データソースはデータ項目の配列またはリストである必要があります。
+-   データソースはデータ項目を少なくとも 1 つ含む必要があります。含まない場合はチャートに散布シェイプ シリーズを描画しません。
+-   すべてのデータ項目には、`XMemberPath`、`YMemberPath`、そして `ColorMemberPath` プロパティにマップされる 3 つの数値データ列を含める必要があります。
 
-You can use the [SampleScatterData](datachart_data_sources_scatter.md) as data source which meets above data requirements.
+上記データ要件を満たすデータソースとして [SamplePolarData](datachart_data_sources_scatter.md) を使用できます。
 
 ```typescript
 this.state = { dataSource: SampleScatterData.create() }
 ```
 
-### Required Modules
+### モジュールの要件
 
 <!-- Angular -->
 
-The scatter area series requires the following modules:
+散布エリア シリーズは以下のモジュールを要求します。
 
 ```typescript
 // axis' modules:
@@ -71,9 +71,9 @@ import { IgxDataChartScatterModule } from "igniteui-angular-charts/ES5/igx-data-
 export class AppModule { /* ... */ }
 ```
 
-### Code Example
+### コード例
 
-This code demonstrates how to create an instance of data chart with  `ScatterAreaSeries` and bind it to the data source.
+このコードは、`ScatterAreaSeries` でデータチャートのインスタンスを作成し、データソースにバインドする方法を説明します。
 
 ```html
  <igx-data-chart
@@ -92,21 +92,21 @@ This code demonstrates how to create an instance of data chart with  `ScatterAre
  </igx-data-chart>
 ```
 
-### Color Scale
+### カラー スケール
 
-Use the `ColorScale` property of the`ScatterAreaSeries` to resolve values of points and thus fill the surface of the series. The colors are smoothly interpolated around the shape of the surface by applying a pixel-wise triangle rasterizer to triangulation data. Because rendering of the surface is pixel-wise, the color scale uses colors instead of brushes.
+`ScatterAreaSeries` の `ColorScale` プロパティを使用して、ポイントの値を解決し、シリーズの面を塗りつぶします。色は、ピクセル単位の三角ラスタライザーを三角測量データに適用することによって、サーフェスの図形の周りをなめらかに補間します。サーフェスの描画がピクセル単位であるため、カラー スケールはブラシではなく色を使用します。
 
-The provided `CustomPaletteColorScale` class should satisfy most coloring needs, but you can inherit from the `ColorScale` abstract class and provide your own coloring logic.
+提供されている `CustomPaletteColorScale` クラスはほとんどの色付けのニーズを満たすはずですが、`ColorScale` 抽象クラスから継承して独自の色付けのロジックを指定することができます。
 
-The following table list properties of the `CustomPaletteColorScale` affecting surface coloring of the `ScatterAreaSeries`.
+以下の表は `ScatterAreaSeries` の面のカラ―リングに影響する `CustomPaletteColorScale` プロパティをリストします。
 
--   `Palette`  sets the collection of colors to select from or to interpolate between.
--   `InterpolationMode` sets the method getting a color from the Palette.
--   `MaximumValue` sets the highest value to assign a color. Any given value greater than this value will be Transparent.
--   `MinimumValue` sets the lowest value to assign a color. Any given value less than this value will be Transparent.
+-   `Palette` は、選択する、または補間する色のコレクションを設定します。
+-   `InterpolationMode` は、パレットから色を取得するメソッドを設定します。
+-   `MaximumValue` は、色を割り当てるための最大値を設定します。指定した値がこの値より大きい場合は透明になります。
+-   `MinimumValue` は、色を割り当てるための最小値を設定します。指定した値がこの値より小さい場合は透明になります。
 
-### Additional Resources
+### その他のリソース
 
--   [Axis Types](datachart_axis_types.md)
--   [Chart Legend](datachart_chart_legends.md)
--   [Series Types](datachart_series_types.md)
+-   [軸タイプ](datachart_axis_types.md)
+-   [チャートの凡例](datachart_chart_legends.md)
+-   [シリーズ タイプ](datachart_series_types.md)
