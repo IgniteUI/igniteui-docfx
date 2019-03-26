@@ -1,9 +1,10 @@
 sudo: required
 dist: trusty
-mono: latest
 language: node_js
 node_js:
 - '10.14.1'
+install:
+- nuget
 before_script:
 - nuget install docfx.console -ExcludeVersion
 - export DOCFX_TOOL="mono docfx.console/tools/docfx.exe"
