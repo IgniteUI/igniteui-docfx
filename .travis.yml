@@ -3,5 +3,4 @@ dist: trusty
 language: node_js
 node_js:
 - '10.14.1'
-script:
-- npm run build
+script: gulp build
