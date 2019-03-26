@@ -12,7 +12,6 @@ before_script:
 # Download the latest stable `nuget.exe` to `/usr/local/bin`
 - sudo curl -o /usr/local/bin/nuget.exe https://dist.nuget.org/win-x86-commandline/latest/nuget.exe
 # Create as alias for nuget
-- alias nuget="mono /usr/local/bin/nuget.exe"
-- nuget install docfx.console -ExcludeVersion
+- mono /usr/local/bin/nuget.exe install docfx.console -ExcludeVersion
 - export DOCFX_TOOL="mono docfx.console/tools/docfx.exe"
 script: gulp build
