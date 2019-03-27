@@ -198,7 +198,7 @@
     - name: 選択
       href: hierarchicalgrid/selection.md
       new: true
-      # Not yet fully implemented for igxHGrid
+    # Not yet fully implemented for igxHGrid
     # - name: 検索
     #   href: hierarchicalgrid/search.md
     #   new: true
@@ -236,7 +236,6 @@
   header: true
 - name: Category Chart
   href: categorychart.md
-  new: false
   items:
     - name: 注釈
       href: categorychart_annotation_layers.md
@@ -247,7 +246,7 @@
     - name: リアルタイム データ
       href: categorychart_real_time_data.md
       new: false
-    - name: 大量なデータの処理
+    - name: 大規模なデータの処理
       href: categorychart_high_volume_data.md
       new: false
     - name: 構成オプション
@@ -262,102 +261,102 @@
     - name: ツールチップ テンプレート
       href: categorychart_tooltip_templates.md
       new: false
-#- name: Data Chart
-    # href: datachart.md
-    #new: true
-    #items:
-    # - name: Axis
-    #  href: datachart_axis_types.md
-    #  new: true
-    #  items:
-     #   - name: 軸の設定
-     #     href: datachart_axis_settings.md
-     #     new: true
-        #- name: Axis Scales
+- name: Data Chart
+  href: datachart.md
+  new: true
+  items:
+    - name: Axis
+      href: datachart_axis_types.md
+      new: true
+      items:
+        - name: 軸の設定
+          href: datachart_axis_settings.md
+          new: true
+        # - name: Axis Scales
         #  href: datachart_axis_scales.md
         #  new: true
-    #    - name: 軸の位置
-    #      href: datachart_axis_locations.md
-    #     new: true
-    #    - name: 軸の共有
-    #      href: datachart_axis_sharing.md
-    #      new: true
-    # - name: Series
-    #  href: datachart_series_types.md
-    #  new: true
-    #  items:
+        # - name: 軸の位置
+        # href: datachart_axis_locations.md
+        # new: true
+        - name: 軸の共有
+          href: datachart_axis_sharing.md
+          new: true
+    - name: Series
+      href: datachart_series_types.md
+      new: true
+      items:
       #  - name: Requirements
       #    href: datachart_series_requirements.md
       #    new: true
-    #    - name: カテゴリ シリーズ 
-    #      href: datachart_series_types_category.md
-    #      new: true
-    #    - name: ファイナンシャル シリーズ 
-    #      href: datachart_series_types_financial.md
-    #      new: true
-    #    - name: 極座標シリーズ 
-    #      href: datachart_series_types_polar.md
-    #      new: true
-    #    - name: ラジアル シリーズ 
-    #      href: datachart_series_types_radial.md
-    #      new: true
-    #    - name: 範囲シリーズ 
-    #      href: datachart_series_types_range.md
-    #      new: true
-    #    - name: 散布エリア シリーズ 
-    #      href: datachart_series_types_scatter_area.md
-    #      new: true
-    #    - name: 散布等高線シリーズ
-    #      href: datachart_series_types_scatter_contour.md
-    #      new: true
-    #    - name: 散布バブル シリーズ 
-    #      href: datachart_series_types_scatter_bubble.md
-    #      new: true
+        - name: カテゴリ シリーズ 
+          href: datachart_series_types_category.md
+          new: true
+        - name: ファイナンシャル シリーズ 
+          href: datachart_series_types_financial.md
+          new: true
+        - name: 極座標シリーズ 
+          href: datachart_series_types_polar.md
+          new: true
+        - name: ラジアル シリーズ 
+          href: datachart_series_types_radial.md
+          new: true
+        - name: 範囲シリーズ 
+          href: datachart_series_types_range.md
+          new: true
+        - name: 散布エリア シリーズ 
+          href: datachart_series_types_scatter_area.md
+          new: true
+        - name: 散布等高線シリーズ
+          href: datachart_series_types_scatter_contour.md
+          new: true
+        - name: 散布バブル シリーズ 
+          href: datachart_series_types_scatter_bubble.md
+          new: true
         # - name: Scatter HD Series
         #  href: datachart_series_types_scatter_hd.md
         #  new: true
-    #    - name: 散布マーカー シリーズ
-    #      href: datachart_series_types_scatter_marker.md
-    #      new: true
-    #    - name: 散布図形シリーズ
-    #      href: datachart_series_types_shape.md
-    #      new: true
+        - name: 散布マーカー シリーズ
+          href: datachart_series_types_scatter_marker.md
+          new: true
+        - name: 散布図形シリーズ
+          href: datachart_series_types_shape.md
+          new: true
         #- name: Stacked Series
         #  href: datachart_series_types_stacked.md
         #  new: true
     #- name: Animations
     #  href: datachart_series_animations.md
     #  new: true
-    #- name: 注釈
-    #  href: datachart_series_annotations.md
-    #  new: true
-    #- name: ハイライト
-    #  href: datachart_series_highlighting.md
-    #  new: true
-    #- name: 凡例
-    #  href: datachart_chart_legends.md
-    #  new: true
-    #- name: マーカー
-    #  href: datachart_series_markers.md
-    #  new: true
-    #- name: ナビゲーション
-    #  href: datachart_chart_navigation.md
-    #  new: true
+    - name: 注釈
+      href: datachart_series_annotations.md
+      new: true
+    - name: ハイライト
+      href: datachart_series_highlighting.md
+      new: true
+    - name: 凡例
+      href: datachart_chart_legends.md
+      new: true
+    - name: マーカー
+      href: datachart_series_markers.md
+      new: true
+    - name: ナビゲーション
+      href: datachart_chart_navigation.md
+      new: true
     #- name: Synchronization
     #  href: datachart_chart_synchronization.md
     #  new: true
-    #- name: タイトルとサブタイトル
-    #  href: datachart_chart_titles.md
-    #  new: true
-    #- name: ツールチップ
-    #  href: datachart_series_tooltips.md
-    #  new: true
-    #- name: トレンドライン
-    #  href: datachart_series_trendlines.md
-    #  new: true
-    #- name: データソース
-    #  href: datachart_data_sources.md
-    #  new: true 
+    - name: タイトルとサブタイトル
+      href: datachart_chart_titles.md
+      new: true
+    - name: ツールチップ
+      href: datachart_series_tooltips.md
+      new: true
+    - name: トレンドライン
+      href: datachart_series_trendlines.md
+      new: true
+    - name: データソース
+      href: datachart_data_sources.md
+      new: true 
     #- name: Data Triangulation
     #  href: datachart_data_triangulation.md
     #  new: true
@@ -369,7 +368,6 @@
     #  new: true   
 - name: Financial Chart
   href: financialchart.md
-  new: false
   items:
     - name: 注釈とオーバーレイ
       href: financialchart_annotation_layers.md
@@ -467,6 +465,9 @@
       new: false
     - name: サンプル
       href: themes/examples.md
+- name: Componets Roundness
+  href: roundness.md
+  new: true
 - name: Shadows
   href: shadows.md
 - name: Display Density
