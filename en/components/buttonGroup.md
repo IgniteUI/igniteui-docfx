@@ -5,12 +5,10 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ---
 
 ## Button Group
-
-The [**igx-buttongroup**]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html) component in Ignite UI for Angular provides a button group functionality to developers with horizontal/vertical alignment and single/multiple selection along with toggling. The igx-buttongroup component makes use of the [igxButton directive.](button.md)
+The [**igx-buttongroup**]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html) component in Ignite UI for Angular provides a button group functionality with horizontal/vertical alignment and single/multiple selection along with toggling. The igx-buttongroup component makes use of the [igxButton directive.](button.md)
 
 ### Button Group Demo
-
-<div class="sample-container loading" style="height: 362px">
+<div class="sample-container loading" style="height: 400px">
     <iframe id="buttonGroup-sample-1-iframe" seamless="" width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/data-entries/button-group-sample-1" onload="onSampleIframeContentLoaded(this);">
 </iframe></div>
 <div>
@@ -19,7 +17,6 @@ The [**igx-buttongroup**]({environment:angularApiUrl}/classes/igxbuttongroupcomp
 <div class="divider--half"></div>
 
 ### Dependencies
-
 The Button Group is exported as an `NgModule`, thus you will need to import the `IgxButtonGroupModule` inside your `AppModule`:
 
 ```typescript
@@ -37,38 +34,38 @@ import { IgxButtonGroupModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 ### Usage
-
 Use [`igx-buttongroup`]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html) to organize buttons into an Angular styled button group.
+
+#### Alignment
+Use the [`alignment`]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html#alignment) input to set the orientation of the buttons in the button group. 
 
 ```typescript
 //sample.component.ts
-import { ButtonGroupAlignment } from 'igniteui-angular';
+
+import { ButtonGroupAlignment } from "igniteui-angular";
 ...
 public alignment = ButtonGroupAlignment.vertical;
-...
- public ngOnInit() {
-    this.cities = [
-      new Button({
-          label: "Sofia"
-      }),
-      new Button({
-          label: "London"
-      }),
-      new Button({
-          label: "New York",
-          selected: true
-      }),
-      new Button({
-          label: "Tokyo"
-      })
-  ];
-  }
 ...
 ```
 
 ```html
-<igx-buttongroup [multiSelection]="false" [values]="cities" [alignment]="alignment">
+<!-- sample.component.html -->
+
+<igx-buttongroup [alignment]="alignment">
+    <button igxButton>Sofia</button>
+    <button igxButton>London</button>
+    <button igxButton [selected]="true">New York</button>
+    <button igxButton>Tokyo</button>
 </igx-buttongroup>
+```
+
+```scss
+// sample.component.scss
+
+igx-buttongroup{
+    display: inline-block;
+    width: 200px;
+}
 ```
 <div class="sample-container loading" style="height: 164px">
     <iframe id="buttonGroup-sample-2-iframe" seamless="" width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/button-group-sample-2" class="lazyload">
@@ -78,40 +75,99 @@ public alignment = ButtonGroupAlignment.vertical;
 </div>
 <div class="divider--half"></div>
 
-While you can use Exclusive or Multiple selection you can also set a button to be togglable and disabled. In the following example the leftmost button is selected, but not togglable. The rightmost is disabled.
+#### Multiple selection
+Use the the [`multiSelection`]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html#multiselection) input to enable the multiple selection in the button group.
 
-```typescript
-//sample.component.ts
-...
-public ngOnInit() {
-    this.alignOptions = [
-      new Button({
-          icon: "format_align_left",
-          selected: true,
-          togglable: false
-      }),
-      new Button({
-          icon: "format_align_center",
-      }),
-      new Button({
-          icon: "format_align_right",
-          selected: true
-      }),
-      new Button({
-          disabled: true,
-          icon: "format_align_justify",
-      })
-  ];
-  }
-...
-
-```
 ```html
-<igx-buttongroup [multiSelection]="true" [values]="alignOptions">
+<!-- sample.component.html -->
+
+<igx-buttongroup [multiSelection]="true">
+    <button igxButton>
+        <igx-icon>format_bold</igx-icon>
+    </button>
+    <button igxButton>
+        <igx-icon>format_italic</igx-icon>
+    </button>
+    <button igxButton>
+        <igx-icon>format_underlined</igx-icon>
+    </button>
 </igx-buttongroup>
 ```
 
-<div class="sample-container loading" style="height: 52px">
+<div class="sample-container loading" style="height: 60px">
+    <iframe id="buttonGroup-sample-4-iframe" seamless="" width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/button-group-sample-4" class="lazyload">
+</iframe></div>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="buttonGroup-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+
+#### Custom toggle buttons
+Use the [`values`]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html#values) input to set an array of customized buttons in the button group.
+
+```typescript
+// sample.component.ts
+
+interface IButton {
+    ripple?: string;
+    label?: string;
+    disabled?: boolean;
+    togglable?: boolean;
+    selected?: boolean;
+    color?: string;
+    icon?: string;
+}
+
+class ToggleButton {
+    private ripple: string;
+    private label: string;
+    private disabled: boolean;
+    private togglable: boolean;
+    private selected: boolean;
+    private color: string;
+    private icon: string;
+
+    constructor(obj?: IButton) {
+        this.ripple = obj.ripple || "gray";
+        this.label = obj.label;
+        this.selected = obj.selected || false;
+        this.togglable = obj.togglable || true;
+        this.disabled = obj.disabled || false;
+        this.color = obj.color;
+        this.icon = obj.icon;
+    }
+}
+...
+public bordersButtons: ToggleButton[];
+
+public ngOnInit() {
+    this.bordersButtons = [
+        new ToggleButton({
+            icon: "border_top",
+            selected: true
+        }),
+        new ToggleButton({
+            icon: "border_right",
+            selected: false
+        }),
+        new ToggleButton({
+            icon: "border_bottom",
+            selected: false
+        }),
+        new ToggleButton({
+            icon: "border_left",
+            selected: false
+        })
+    ];
+}
+...
+```
+
+```html
+<!-- sample.component.html -->
+
+<igx-buttongroup [multiSelection]="true" [values]="borders"></igx-buttongroup>
+```
+<div class="sample-container loading" style="height: 60px">
     <iframe id="buttonGroup-sample-3-iframe" seamless="" width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/button-group-sample-3" class="lazyload">
 </iframe></div>
 <div>
