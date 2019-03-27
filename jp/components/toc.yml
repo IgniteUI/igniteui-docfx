@@ -198,7 +198,7 @@
     - name: 選択
       href: hierarchicalgrid/selection.md
       new: true
-      # Not yet fully implemented for igxHGrid
+    # Not yet fully implemented for igxHGrid
     # - name: 検索
     #   href: hierarchicalgrid/search.md
     #   new: true
@@ -236,7 +236,6 @@
   header: true
 - name: Category Chart
   href: categorychart.md
-  new: false
   items:
     - name: 注釈
       href: categorychart_annotation_layers.md
@@ -247,7 +246,7 @@
     - name: リアルタイム データ
       href: categorychart_real_time_data.md
       new: false
-    - name: 大量なデータの処理
+    - name: 大規模なデータの処理
       href: categorychart_high_volume_data.md
       new: false
     - name: 構成オプション
@@ -282,10 +281,10 @@
         - name: 軸の共有
           href: datachart_axis_sharing.md
           new: true
-     - name: Series
-       href: datachart_series_types.md
-       new: true
-       items:
+    - name: Series
+      href: datachart_series_types.md
+      new: true
+      items:
       #  - name: Requirements
       #    href: datachart_series_requirements.md
       #    new: true
@@ -369,7 +368,6 @@
     #  new: true   
 - name: Financial Chart
   href: financialchart.md
-  new: false
   items:
     - name: 注釈とオーバーレイ
       href: financialchart_annotation_layers.md
@@ -467,6 +465,9 @@
       new: false
     - name: サンプル
       href: themes/examples.md
+- name: Componets Roundness
+  href: roundness.md
+  new: true
 - name: Shadows
   href: shadows.md
 - name: Display Density
