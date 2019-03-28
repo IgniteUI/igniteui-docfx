@@ -337,7 +337,7 @@ export class BooleanFilteringOperand extends IgxBooleanFilteringOperand {
 }
 
 #### Retemplating filter cell
-You can add a template marked with `igxFilterCellTemplate` in order to retemplate the filter cell. In the sample below, an input is added for the string columns and IgxDatePicker for the date column. When the user types or selects a value, a filter with contains or equals operator, based on column type, is applied.
+You can add a template marked with `igxFilterCellTemplate` in order to retemplate the filter cell. In the sample below, an input is added for the string columns and IgxDatePicker for the date column. When the user types or selects a value, a filter with contains operator for string columns and equals operator for date columns, is applied using grid's public API.
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:500px">
