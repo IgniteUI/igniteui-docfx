@@ -1,13 +1,13 @@
----
+﻿---
 title: Data Chart コンポーネント - ネイティブ Angular|Ignite UI for Angular
 _description: Ignite UI for Angular Data Chart は、軸、マーカー、凡例、および注釈レイヤーのモジュール設計を提供するチャート コンポーネントです。チャート機能は、複合チャート ビューを作成するために同じチャート領域でのビジュアル要素の複数のインスタンスを利用できます。
 _keywords: Ignite UI for Angular, Angular, Native Angular コンポーネント スイート, Native Angular コントロール, ネイティブ Angular コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular チャート, Angular チャート コントロール, Angular チャート例, Angular チャート コンポーネント, Angular データ チャート
 _language: ja
 ---
 
-## Highlighting
+## ハイライト
 
-`IgxDataChart` コントロールを使用すると、チャートにプロットされたシリーズを強調表示し、マウスが移動している項目またはシリーズを視覚化、または強調表示レイヤーを使用して視覚化できます。
+`IgxDataChart` コントロールを使用すると、チャートにプロットされたシリーズを強調表示し、マウスが移動している項目またはシリーズを可視化、または強調表示レイヤーを使用して可視化できます。
 
 ### デモ
 

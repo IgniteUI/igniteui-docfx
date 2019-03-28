@@ -5,7 +5,7 @@ _keywords: Ignite UI for Angular, Angular, Native Angular コンポーネント 
 _language: ja
 ---
 
-## 軸設定
+## 軸の設定
 
 `IgxDataChart` コントロールでは、軸は、軸メインライン、目盛り、タイトル、および軸ラベルの外観を指定するための基本プロパティを提供します。
 
