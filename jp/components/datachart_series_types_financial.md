@@ -82,7 +82,7 @@ _language: ja
 -   データソースはデータ項目の配列またはリストである必要があります。
 -   データソースは、少なくともデータ項目を 1 つ含む必要があり、含まない場合はチャートでファイナンシャル シリーズを描画しません。
 -   すべてのデータ項目には、財務軸 (IgxCategoryXAxisComponent など) の Label プロパティにマッピングする必要がある少なくとも1つのデータ列 （文字列または日時）を含める必要があります
--   すべてのデータ項目は、ファイナンシャル シリーズのプロパティ使用してマップされる 5 つの数値データ列を含む必要があります。 (`OpenMemberPath`、`HighMemberPath`、`LowMemberPath`、`CloseMemberPath`、`VolumeMemberPath`)。
+-   すべてのデータ項目は、ファイナンシャル シリーズのプロパティ使用してマップされる 5 つの数値データ列 (`OpenMemberPath`、`HighMemberPath`、`LowMemberPath`、`CloseMemberPath`、`VolumeMemberPath`) を含む必要があります。
 
 上記データ要件を満たすデータソースとして [SampleFinancialData](datachart_data_sources_financial.md) を使用できます。
 
@@ -121,7 +121,7 @@ import { IgxDataChartCoreModule } from "igniteui-angular-charts/ES5/igx-data-cha
 
 ### コード例
 
-このコードは、IgxFinancialPriceSeriesComponent、IgxBollingerBandsOverlayComponent、IgxMedianPriceIndicatorComponent でデータ チャートのインスタンスを作成する方法を示します。これらのシリーズは同じ  X-Axis と Y-Axis を使用しますが複数軸を使用して異なるシリーズに割り当てることができます。詳細については、[Axis Sharing and Multiple Axes](datachart_axis_sharing.md) トピックを参照してください。
+このコードは、IgxFinancialPriceSeriesComponent、IgxBollingerBandsOverlayComponent、IgxMedianPriceIndicatorComponent でデータ チャートのインスタンスを作成する方法を示します。これらのシリーズは同じ  X-Axis と Y-Axis を使用しますが複数軸を使用して異なるシリーズに割り当てることができます。詳細については、[軸共有と複数軸](datachart_axis_sharing.md)のトピックを参照してください。
 
 ```html
  <igx-data-chart

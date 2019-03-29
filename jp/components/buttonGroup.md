@@ -6,12 +6,10 @@ _language: ja
 ---
 
 ## Button Group
-
 Ignite UI for Angular [**igx-buttongroup**]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html) コンポーネントは、ボタン グループの機能、さらに水平/垂直の配置、単一/複数の選択、および切り替え機能を提供します。igx-ButtonGroup コンポーネントは、[igxButton ディレクティブ](button.md)を使用します。
 
 ### Button Group デモ
-
-<div class="sample-container loading" style="height: 362px">
+<div class="sample-container loading" style="height: 400px">
     <iframe id="buttonGroup-sample-1-iframe" seamless="" width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/data-entries/button-group-sample-1" onload="onSampleIframeContentLoaded(this);">
 </iframe></div>
 <div>
@@ -20,7 +18,6 @@ Ignite UI for Angular [**igx-buttongroup**]({environment:angularApiUrl}/classes/
 <div class="divider--half"></div>
 
 ### 依存関係
-
 Button Group が `NgModule` としてエクスポートされるため、アプリケーションで `AppModule` に `IgxButtonGroupModule` をインポートする必要があります。
 
 ```typescript
@@ -38,38 +35,38 @@ import { IgxButtonGroupModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 ### 使用方法
-
 [`igx-buttongroup`]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html) を使用して、ボタンを Angular スタイルのボタン グループに配置します。
+
+#### Alignment
+Use the [`alignment`]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html#alignment) input to set the orientation of the buttons in the button group. 
 
 ```typescript
 //sample.component.ts
-import { ButtonGroupAlignment } from 'igniteui-angular';
+
+import { ButtonGroupAlignment } from "igniteui-angular";
 ...
 public alignment = ButtonGroupAlignment.vertical;
-...
- public ngOnInit() {
-    this.cities = [
-      new Button({
-          label: "Sofia"
-      }),
-      new Button({
-          label: "London"
-      }),
-      new Button({
-          label: "New York",
-          selected: true
-      }),
-      new Button({
-          label: "Tokyo"
-      })
-  ];
-  }
 ...
 ```
 
 ```html
-<igx-buttongroup [multiSelection]="false" [values]="cities" [alignment]="alignment">
+<!-- sample.component.html -->
+
+<igx-buttongroup [alignment]="alignment">
+    <button igxButton>Sofia</button>
+    <button igxButton>London</button>
+    <button igxButton [selected]="true">New York</button>
+    <button igxButton>Tokyo</button>
 </igx-buttongroup>
+```
+
+```scss
+// sample.component.scss
+
+igx-buttongroup{
+    display: inline-block;
+    width: 200px;
+}
 ```
 <div class="sample-container loading" style="height: 164px">
     <iframe id="buttonGroup-sample-2-iframe" seamless="" width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/button-group-sample-2" class="lazyload">
@@ -79,46 +76,103 @@ public alignment = ButtonGroupAlignment.vertical;
 </div>
 <div class="divider--half"></div>
 
+#### Multiple selection
+Use the the [`multiSelection`]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html#multiselection) input to enable the multiple selection in the button group.
 
-「排他的」または「複数選択」を使用することもできますが、ボタンを切り替え可能および無効に設定することもできます。次の例では、一番左のボタンが選択されますが切り替えはできません。一番右のボタンは無効になっています。
+```html
+<!-- sample.component.html -->
+
+<igx-buttongroup [multiSelection]="true">
+    <button igxButton>
+        <igx-icon>format_bold</igx-icon>
+    </button>
+    <button igxButton>
+        <igx-icon>format_italic</igx-icon>
+    </button>
+    <button igxButton>
+        <igx-icon>format_underlined</igx-icon>
+    </button>
+</igx-buttongroup>
+```
+<div class="sample-container loading" style="height: 60px">
+    <iframe id="buttonGroup-sample-4-iframe" seamless="" width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/button-group-sample-4" class="lazyload">
+</iframe></div>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="buttonGroup-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+
+#### Custom toggle buttons
+Use the [`values`]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html#values) input to set an array of customized buttons in the button group.
 
 ```typescript
-//sample.component.ts
-...
-public ngOnInit() {
-    this.alignOptions = [
-      new Button({
-          icon: "format_align_left",
-          selected: true,
-          togglable: false
-      }),
-      new Button({
-          icon: "format_align_center",
-      }),
-      new Button({
-          icon: "format_align_right",
-          selected: true
-      }),
-      new Button({
-          disabled: true,
-          icon: "format_align_justify",
-      })
-  ];
-  }
-...
+// sample.component.ts
 
+interface IButton {
+    ripple?: string;
+    label?: string;
+    disabled?: boolean;
+    togglable?: boolean;
+    selected?: boolean;
+    color?: string;
+    icon?: string;
+}
+
+class ToggleButton {
+    private ripple: string;
+    private label: string;
+    private disabled: boolean;
+    private togglable: boolean;
+    private selected: boolean;
+    private color: string;
+    private icon: string;
+
+    constructor(obj?: IButton) {
+        this.ripple = obj.ripple || "gray";
+        this.label = obj.label;
+        this.selected = obj.selected || false;
+        this.togglable = obj.togglable || true;
+        this.disabled = obj.disabled || false;
+        this.color = obj.color;
+        this.icon = obj.icon;
+    }
+}
+...
+public bordersButtons: ToggleButton[];
+
+public ngOnInit() {
+    this.bordersButtons = [
+        new ToggleButton({
+            icon: "border_top",
+            selected: true
+        }),
+        new ToggleButton({
+            icon: "border_right",
+            selected: false
+        }),
+        new ToggleButton({
+            icon: "border_bottom",
+            selected: false
+        }),
+        new ToggleButton({
+            icon: "border_left",
+            selected: false
+        })
+    ];
+}
+...
 ```
 
 ```html
-<igx-buttongroup [multiSelection]="true" [values]="alignOptions">
-</igx-buttongroup>
+<!-- sample.component.html -->
+
+<igx-buttongroup [multiSelection]="true" [values]="borders"></igx-buttongroup>
 ```
 
-<div class="sample-container loading" style="height: 52px">
+<div class="sample-container loading" style="height: 60px">
     <iframe id="buttonGroup-sample-3-iframe" seamless="" width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/button-group-sample-3" class="lazyload">
 </iframe></div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="buttonGroup-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="buttonGroup-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
 ### API リファレンス

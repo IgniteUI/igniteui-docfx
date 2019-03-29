@@ -1,11 +1,11 @@
----
+﻿---
 title: Data Chart コンポーネント - ネイティブ Angular|Ignite UI for Angular
 _description: Ignite UI for Angular Data Chart は、軸、マーカー、凡例、および注釈レイヤーのモジュール設計を提供するチャート コンポーネントです。チャート機能は、複合チャート ビューを作成するために同じチャート領域でのビジュアル要素の複数のインスタンスを利用できます。
 _keywords: Ignite UI for Angular, Angular, Native Angular コンポーネント スイート, Native Angular コントロール, ネイティブ Angular コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular チャート, Angular チャート コントロール, Angular チャート例, Angular チャート コンポーネント, Angular データ チャート
 _language: ja
 ---
 
-## 軸設定
+## 軸の設定
 
 `IgxDataChart` コントロールでは、軸は、軸メインライン、目盛り、タイトル、および軸ラベルの外観を指定するための基本プロパティを提供します。
 
@@ -122,7 +122,7 @@ _language: ja
 </igx-category-x-axis>
 ```
 
-### 軸の重複
+### 軸の重なり
 
 `IgxDataChart` コントロールのカテゴリ軸の軸 `Overlap` 機能を使用すると、レンダリングされたカテゴリの重なりを設定できます。
 

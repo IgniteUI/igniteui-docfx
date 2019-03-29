@@ -5,7 +5,7 @@ _keywords: Ignite UI for Angular, Angular, Native Angular コンポーネント 
 _language: ja
 ---
 
-## Series
+## シリーズ
 
 `IgxDataChart` コントロールでシリーズは類似するシリーズの次のグループに分類されます。カテゴリ シリーズ、ファイナンシャル シリーズ、極座標シリーズ、ラジアル シリーズ、範囲シリーズ、散布図シリーズ、積層シリーズ、図形シリーズ。
 
