@@ -170,3 +170,10 @@ gulp.task('build', [
     'generate-grids-topics',
     'build-site'
 ]);
+
+gulp.task('build-travis', [
+    'styles',
+    'cleanup',
+    'post-processor-configs',
+    'generate-grids-topics'
+]);
