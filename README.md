@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/IgniteUI/igniteui-docfx.svg?branch=master)](https://travis-ci.org/IgniteUI/igniteui-docfx)
+
 # Ignite UI DocFX Site Builder
 
 This project uses Node.js and Gulp as a build tool to accelerate the development of the Ignite UI DocFX samples site for Ignite UI for Angular.
