@@ -51,16 +51,10 @@ Multi-cell selection enables range selection of cells in the @@igComponent. Vari
 #### Keyboard navigation interactions
 
 ##### While Shift key is pressed
-- <kbd>Shift</kbd> + <kbd>Arrow Up</kbd> to select the cell above the focused cell.
-- <kbd>Shift</kbd> + <kbd>Arrow Down</kbd> to select the cell below the focused cell.
-- <kbd>Shift</kbd> + <kbd>Arrow Left</kbd> to select the cell on the left of the focused cell.
-- <kbd>Shift</kbd> + <kbd>Arrow Right</kbd> to select the cell on the right of the focused cell.
-- <kbd>Shift</kbd> + <kbd>Ctrl</kbd> + <kbd>Arrow Up</kbd> to select all cells above the focused cell to the top cell in the column.
-- <kbd>Shift</kbd> + <kbd>Ctrl</kbd> + <kbd>Arrow Down</kbd> to select all cells below the focused cell to the bottom cell in the column.
-- <kbd>Shift</kbd> + <kbd>Ctrl</kbd> + <kbd>Arrow Left</kbd> to select all cells on the left of the focused cell to the first one in the row.
-- <kbd>Shift</kbd> + <kbd>Ctrl</kbd> + <kbd>Arrow Right</kbd> to select all cells on the right of the focused cell to the last one in the row.
-- <kbd>Shift</kbd> + <kbd>Ctrl</kbd> + <kbd>Home</kbd> to select all cells above and on the left of the focused cell to the first one in the grid.
-- <kbd>Shift</kbd> + <kbd>Ctrl</kbd> + <kbd>End</kbd> to select all cells below and on the right of the focused cell to the last one in the grid.
+- <kbd>Shift</kbd> + <kbd>Arrow Up</kbd> to add above cell to the current selection.
+- <kbd>Shift</kbd> + <kbd>Arrow Down</kbd> to add below cell to the current selection.
+- <kbd>Shift</kbd> + <kbd>Arrow Left</kbd> to add left cell to the current selection.
+- <kbd>Shift</kbd> + <kbd>Arrow Right</kbd> to add right cell to the current selection.
 
 ##### While Ctrl + Shift keys are pressed
 - <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Arrow Up</kbd> to select all cells above the focused cell in the column.
@@ -108,7 +102,7 @@ expectedData = [
 ];
 ```
 		
-2. If three cells from one column are selected
+2. If three cells from one column are selected:
 ```
 expectedData = [
     { Address: "Obere Str. 57"},
