@@ -222,7 +222,7 @@ Excel スタイル フィルタリングをオンにするには、2 つの入�
 
 <div class="divider--half"></div>
 
-If you want to keep the sorting, moving, pinning and hiding features of the columns, but remove the items from the excel style filter menu, you can add templates in the grid for each operation.
+列の並べ替え、移動、固定、および非表示の機能を維持しながら、エクセル スタイルのフィルター メニューから項目を削除する場合は、操作ごとにグリッドにテンプレートを追加できます。
 
 @@if (igxName === 'IgxGrid') {
 ```html
@@ -332,7 +332,7 @@ If you want to keep the sorting, moving, pinning and hiding features of the colu
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
 </div>
 }
 @@if (igxName === 'IgxTreeGrid') {
@@ -341,7 +341,7 @@ If you want to keep the sorting, moving, pinning and hiding features of the colu
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
 </div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -350,7 +350,7 @@ If you want to keep the sorting, moving, pinning and hiding features of the colu
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
 </div>
 }
 
