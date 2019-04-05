@@ -116,7 +116,7 @@ expectedData = [
 ];
 ```
 		
-2. If three cells from one column are selected
+2. If three cells from one column are selected:
 ```
 expectedData = [
     { Address: "Obere Str. 57"},
