@@ -19,6 +19,159 @@ _description: With the Row Selection component in Ignite UI for Angular, there i
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Hierarchical Grid, Angular Hierarchical Table, Angular Hierarchical Grid component, Angular Hierarchical Table component, Angular Hierarchical Grid control, Angular Hierarchical Table control, Angular High Performance Hierarchical Grid, Angular High Performance Hierarchical Table, Angular Hierarchical Grid Row Selection, Angular Hierarchical Table Row Selection, Angular Row Selection, Angular Hierarchical Grid Selection, Hierarchical Grid Row Selection, Hierarchical Table Row Selection, Hierarchical Grid Selection
 ---
 }
+
+@@if (igxName !== 'IgxHierarchicalGrid') {
+
+### @@igComponent Multi-cell selection
+
+Multi-cell selection enables range selection of cells in the @@igComponent. Variety of multi-cell selection capabilities are available:
+- By `Mouse drag` - Rectangular selection of cells would be performed.
+- By `Ctrl key` press + `Mouse drag` - Multiple range selections would be performed. Any other existing cell selection will be persisted.
+- Instand multi-cell selection by using Shift key. Select single cell and select another single cell by holding the Shift key. Cell range between the two cells will be selected. Keep in mind that if another second cell is selected while holding `Shift key` the cell selection range will be updated based on the first selected cell position (starting point).
+- Keyboard multi-cell selection by using the `Arrow keys` while holding `Shift key`. Multi-cell selection range will be created based on the focused cell.
+- Keyboard multi-cell selection by using the `Ctrl + Arrow keys` and `Ctrl + Home/End` while holding `Shift key`. Multi-cell selection range will be created based on the focused cell.
+- Clicking with the `Left Mouse key` while holding `Ctrl key` will add single cell ranges into the selected cells collection.
+- Continuous multiple cell selection is available, by clicking with the mouse and dragging. 
+
+#### Demo
+
+}
+
+@@if (igxName === 'IgxGrid') {
+<div class="sample-container loading" style="height:700px">
+    <iframe id="grid-multi-cell-selection-iframe" src='{environment:demosBaseUrl}/grid/grid-multi-cell-selection' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-multi-cell-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
+}
+@@if (igxName === 'IgxTreeGrid') {
+<div class="sample-container loading" style="height:700px">
+    <iframe id="grid-multi-cell-selection-iframe" src='{environment:demosBaseUrl}/grid/grid-multi-cell-selection' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-multi-cell-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
+}
+
+@@if (igxName !== 'IgxHierarchicalGrid') {
+#### Keyboard navigation interactions
+
+##### While Shift key is pressed
+- <kbd>Shift</kbd> + <kbd>Arrow Up</kbd> to add above cell to the current selection.
+- <kbd>Shift</kbd> + <kbd>Arrow Down</kbd> to add below cell to the current selection.
+- <kbd>Shift</kbd> + <kbd>Arrow Left</kbd> to add left cell to the current selection.
+- <kbd>Shift</kbd> + <kbd>Arrow Right</kbd> to add right cell to the current selection.
+
+##### While Ctrl + Shift keys are pressed
+- <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Arrow Up</kbd> to select all cells above the focused cell in the column.
+- <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Arrow Down</kbd> to select all cells below the focused cell in the column.
+- <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Arrow Left</kbd> to select all cells till the start of the row.
+- <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Arrow Right</kbd> to select all cells till the end of the row.
+- <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Home</kbd> to select all cells from the focused cell till the first-most cell in the grid
+- <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>End</kbd> to select all cells from the focused cell till the last-most cell in the grid
+
+> [!NOTE] Continuous scroll is possible only within Grid's body.
+
+### Api usage
+Below are the methods that you can use in order to select ranges, clear selection or get selected cells data.
+
+##### Select range
+
+[`selectRange(range)`]({environment:angularApiUrl}/classes/igxgridbasecomponent.html#selectrange) - Select a range of cells with the API. `rowStart` and `rowEnd` should use row indexes and `columnStart` and `columnEnd` could use column index or column data field value. 
+
+```typescript
+const range = { rowStart: 2, rowEnd: 2, columnStart: 1, columnEnd: 1 };
+this.grid1.selectRange(range);
+...
+
+const range = { rowStart: 0, rowEnd: 2, columnStart: 'Name', columnEnd: 'ParentID' };
+this.grid1.selectRange(range);
+
+```
+
+> [!NOTE] Select range is additive operation. It will not clear your previous selection.
+
+##### Clear cell selection
+
+[`clearCellSelection()`]({environment:angularApiUrl}/classes/igxgridbasecomponent.html#clearcellselection) will clear the current cell selection.
+
+##### Get selected data
+
+[`getSelectedData()`]({environment:angularApiUrl}/classes/igxgridbasecomponent.html#getselecteddata) will return array of the selected data in format depending on the selection. Examples below:
+
+1. If three different single cells are selected:
+```
+expectedData = [
+    { CompanyName: "Infragistics" },
+    { Name: "Michael Langdon" },
+    { ParentID: 147 }
+];
+```
+		
+2. If three cells from one column are selected:
+```
+expectedData = [
+    { Address: "Obere Str. 57"},
+    { Address: "Avda. de la Constitución 2222"},
+    { Address: "Mataderos 2312"}
+];
+```
+
+3. If three cells are selected with mouse drag from one row and three columns:
+```
+expectedData = [
+    { Address: "Avda. de la Constitución 2222", City: "México D.F.", ContactTitle: "Owner" }
+];
+```
+
+4. If three cells are selected with mouse drag from two rows and three columns:
+```
+expectedData = [
+    { ContactTitle: "Sales Agent", Address: "Cerrito 333", City: "Buenos Aires"},
+    { ContactTitle: "Marketing Manager", Address: "Sierras de Granada 9993", City: "México D.F."}
+];
+```
+
+5. If two different ranges are selected:
+```
+expectedData = [
+    { ContactName: "Martín Sommer", ContactTitle: "Owner"},
+    { ContactName: "Laurence Lebihan", ContactTitle: "Owner"},
+    { Address: "23 Tsawassen Blvd.", City: "Tsawassen"},
+    { Address: "Fauntleroy Circus", City: "London"}
+];
+```
+
+6. If two overlapping ranges are selected, the format would be:
+```
+expectedData = [
+    { ContactName: "Diego Roel", ContactTitle: "Accounting Manager", Address: "C/ Moralzarzal, 86"},
+    { ContactName: "Martine Rancé", ContactTitle: "Assistant Sales Agent", Address: "184, chaussée de Tournai", City: "Lille"},
+    { ContactName: "Maria Larsson", ContactTitle: "Owner", Address: "Åkergatan 24", City: "Bräcke"},
+    { ContactTitle: "Marketing Manager", Address: "Berliner Platz 43", City: "München"}
+];
+```
+
+> [!NOTE] [`selectedCells()`]({environment:angularApiUrl}/classes/igxgridbasecomponent.html#selectedcells) will not return any result if the cell is not visible in grids view port, although [`getSelectedData()`]({environment:angularApiUrl}/classes/igxgridbasecomponent.html#getselecteddata) will return the selected cell data.
+> [`getSelectedRanges(): GridSelectionRange[]`]({environment:angularApiUrl}/classes/igxgridbasecomponent.html#getselectedranges) will return the current selected ranges in the grid from both keyboard and pointer interactions. The type is GridSelectionRange[].
+
+
+### Features integration
+The multi-cell selection is index based (DOM elements selection).
+
+- `Sorting` - When sorting is performed selection will not be cleared. It will leave currently selected cells the same while sorting ascending or descending.
+- `Paging` - On paging selected cells will be cleared. Selection wont be persisted across pages.
+- `Filtering` - When filtering is performed selection will not be cleared. If filtering is cleared it will return - the initially selected cells.
+- `Resizing` - On column resizing selected cells will not be cleared.
+- `Hiding` - It will not clear the selected cells. If column is hidden, the cells from the next visible column will be selected.
+- `Pinning` - Selected cell will not be cleared. Same as hiding
+- `Group by` - On column grouping selected cells will not be cleared.
+
+}
+
 ### @@igComponent Row Selection
 
 With row selection in Ignite UI for Angular, there is a checkbox that precedes all other columns within the row. When a user clicks on the checkbox, the row will either become selected or deselected, enabling the user to select multiple rows of data.  
