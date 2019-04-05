@@ -69,7 +69,6 @@ Multi-cell selection enables range selection of cells in the @@igComponent. Vari
 - <kbd>Shift</kbd> + <kbd>Arrow Down</kbd> to add below cell to the current selection.
 - <kbd>Shift</kbd> + <kbd>Arrow Left</kbd> to select the cell on the left of the focused cell.
 - <kbd>Shift</kbd> + <kbd>Arrow Right</kbd> to select the cell on the right of the focused cell.
-- <kbd>Shift</kbd> + <kbd>Ctrl</kbd> + <kbd>End</kbd> to select all cells below and on the right of the focused cell to the last one in the grid.
 
 ##### While Ctrl + Shift keys are pressed
 - <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Arrow Up</kbd> to select all cells above the focused cell in the column.
