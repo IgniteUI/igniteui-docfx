@@ -20,6 +20,8 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ---
 }
 
+@@if (igxName !== 'IgxHierarchicalGrid') {
+
 ### @@igComponent Multi-cell selection
 
 Multi-cell selection enables range selection of cells in the @@igComponent. Variety of multi-cell selection capabilities are available:
@@ -33,6 +35,8 @@ Multi-cell selection enables range selection of cells in the @@igComponent. Vari
 
 #### Demo
 
+}
+
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:700px">
     <iframe id="grid-multi-cell-selection-iframe" src='{environment:demosBaseUrl}/grid/grid-multi-cell-selection' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -44,24 +48,15 @@ Multi-cell selection enables range selection of cells in the @@igComponent. Vari
 }
 @@if (igxName === 'IgxTreeGrid') {
 <div class="sample-container loading" style="height:700px">
-    <iframe id="treegrid-multi-cell-selection-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-multi-cell-selection' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="grid-multi-cell-selection-iframe" src='{environment:demosBaseUrl}/grid/grid-multi-cell-selection' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-multi-cell-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
-<div class="divider--half"></div>
-}
-@@if (igxName === 'IgxHierarchicalGrid') {
-<div class="sample-container loading" style="height:710px">
-    <iframe id="hierarchical-grid-multi-cell-selection-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-multi-cell-selection' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-<div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-multi-cell-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-multi-cell-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
 }
 
-
+@@if (igxName !== 'IgxHierarchicalGrid') {
 #### Keyboard navigation interactions
 
 ##### While Shift key is pressed
@@ -174,6 +169,8 @@ The multi-cell selection is index based (DOM elements selection).
 - `Hiding` - It will not clear the selected cells. If column is hidden, the cells from the next visible column will be selected.
 - `Pinning` - Selected cell will not be cleared. Same as hiding
 - `Group by` - On column grouping selected cells will not be cleared.
+
+}
 
 ### @@igComponent Row Selection
 
