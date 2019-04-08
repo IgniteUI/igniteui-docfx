@@ -185,7 +185,7 @@ public formatter = (date: Date) => {
 *  日付部分のデクリメント:
     * 日付部分にフォーカス + <kbd>DOWN</kbd> 
 
-<div class="sample-container loading" style="height: 600px;">
+<div class="sample-container loading" style="height: 650px;">
     <iframe id="date-picker-dropdown" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/datepicker-dropdown" class="lazyload"></iframe>
 </div>
 <div>
