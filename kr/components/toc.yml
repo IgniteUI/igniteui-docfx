@@ -60,7 +60,7 @@
       new: false
     - name: 행 선택
       href: grid/selection.md
-      new: false
+      new: true
     - name: 검색
       href: grid/search.md
       new: false

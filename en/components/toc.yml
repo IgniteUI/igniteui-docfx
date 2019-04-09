@@ -60,7 +60,7 @@
       new: false
     - name: Selection
       href: grid/selection.md
-      new: false
+      new: true
     - name: Searching
       href: grid/search.md
       new: false
