@@ -1,4 +1,4 @@
----
+﻿---
 title: Data Chart コンポーネント - ネイティブ Angular|Ignite UI for Angular
 _description: Ignite UI for Angular Data Chart は、軸、マーカー、凡例、および注釈レイヤーのモジュール設計を提供するチャート コンポーネントです。チャート機能は、複合チャート ビューを作成するために同じチャート領域でのビジュアル要素の複数のインスタンスを利用できます。
 _keywords: Ignite UI for Angular, Angular, Native Angular コンポーネント スイート, Native Angular コントロール, ネイティブ Angular コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular チャート, Angular チャート コントロール, Angular チャート例, Angular チャート コンポーネント, Angular データ チャート
@@ -82,16 +82,16 @@ import { IgxCategoryYAxis } from "igniteui-angular-charts/ES5/igx-category-y-axi
 import { IgxNumericYAxis } from "igniteui-angular-charts/ES5/igx-numeric-y-axis";
 import { IgxNumericXAxis } from "igniteui-angular-charts/ES5/igx-numeric-x-axis";
 // series' modules:
-import { IgxAreaSeries } from "igniteui-angular-charts/ES5/igx-area-series";
-import { IgxBarSeries } from "igniteui-angular-charts/ES5/igx-bar-series";
-import { IgxColumnSeries } from "igniteui-angular-charts/ES5/igx-column-series";
-import { IgxLineSeries } from "igniteui-angular-charts/ES5/igx-line-series";
-import { IgxPointSeries } from "igniteui-angular-charts/ES5/igx-point-series";
-import { IgxSplineSeries } from "igniteui-angular-charts/ES5/igx-spline-series";
-import { IgxSplineAreaSeries } from "igniteui-angular-charts/ES5/igx-spline-area-series";
-import { IgxStepAreaSeries } from "igniteui-angular-charts/ES5/igx-step-area-series";
-import { IgxStepLineSeries } from "igniteui-angular-charts/ES5/igx-step-line-series";
-import { IgxWaterfallSeries } from "igniteui-angular-charts/ES5/igx-waterfall-series";
+import { IgxAreaSeriesModule  } from 'igniteui-angular-charts/ES5/igx-area-series-module';
+import { IgxBarSeriesModule  } from 'igniteui-angular-charts/ES5/igx-bar-series-module';
+import { IgxColumnSeriesModule  } from 'igniteui-angular-charts/ES5/igx-column-series-module';
+import { IgxLineSeriesModule  } from 'igniteui-angular-charts/ES5/igx-line-series-module';
+import { IgxPointSeriesModule  } from 'igniteui-angular-charts/ES5/igx-point-series-module';
+import { IgxSplineSeriesModule  } from 'igniteui-angular-charts/ES5/igx-spline-series-module';
+import { IgxSplineAreaSeriesModule  } from 'igniteui-angular-charts/ES5/igx-spline-area-series-module';
+import { IgxStepAreaSeriesModule  } from 'igniteui-angular-charts/ES5/igx-step-area-series-module';
+import { IgxStepLineSeriesModule  } from 'igniteui-angular-charts/ES5/igx-step-line-series-module';
+import { IgxWaterfallSeriesModule  } from 'igniteui-angular-charts/ES5/igx-waterfall-series-module';
 // data chart's modules:
 import { IgxDataChartModule } from 'igniteui-angular-charts/ES5/igx-data-chart-module';
 import { IgxDataChartCoreModule } from 'igniteui-angular-charts/ES5/igx-data-chart-core--module';

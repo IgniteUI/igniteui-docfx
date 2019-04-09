@@ -1,4 +1,4 @@
----
+﻿---
 title: Dialog Window コンポーネント
 _description: Ignite UI for Angular Dialog Window コンポーネントを使用すると、情報ダイアログまたはデータ変換ウィンドウを作成し、リアルタイムで情報を表示して管理できます。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Dialog Window コンポーネント, Angular Dialog Window コントロール
@@ -125,9 +125,9 @@ export class AppModule {}
 </div>
 <div class="divider--half"></div>
 
-#### Customized Title and Actions
+#### タイトルとアクションのカスタマイズ
 
-Dialog title area can be customized using `igxDialogTitle` directive or `igx-dialog-title` selector. The actions area can be customized using `igxDialogActions` directive or `igx-dialog-actions` selector.
+ダイアログ タイトル領域は `igxDialogTitle` ディレクティブまたは ` igx-dialog-title` セレクターを使ってカスタマイズできます。また、アクション領域は `igxDialogActions` ディレクティブまたは ` igx-dialog-actions` セレクターを使ってカスタマイズできます。
 
 ```html
 <!-- dialog.component.html -->
@@ -150,7 +150,7 @@ Dialog title area can be customized using `igxDialogTitle` directive or `igx-dia
     <iframe id="custom-dialog-sample-iframe" data-src='{environment:demosBaseUrl}/interactions/custom-dialog-sample' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="custom-dialog-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="custom-dialog-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
