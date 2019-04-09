@@ -24,25 +24,25 @@ _language: ja
 }
 
 
-### @@igComponent Multi-cell selection
+### @@igComponent マルチセル選択
 
-Multi-cell selection enables range selection of cells in the @@igComponent. Variety of multi-cell selection capabilities are available:
-- By `Mouse drag` - Rectangular selection of cells would be performed.
-- By `Ctrl key` press + `Mouse drag` - Multiple range selections would be performed. Any other existing cell selection will be persisted.
-- Instand multi-cell selection by using Shift key. Select single cell and select another single cell by holding the Shift key. Cell range between the two cells will be selected. Keep in mind that if another second cell is selected while holding `Shift key` the cell selection range will be updated based on the first selected cell position (starting point).
-- Keyboard multi-cell selection by using the `Arrow keys` while holding `Shift key`. Multi-cell selection range will be created based on the focused cell.
-- Keyboard multi-cell selection by using the `Ctrl + Arrow keys` and `Ctrl + Home/End` while holding `Shift key`. Multi-cell selection range will be created based on the focused cell.
-- Clicking with the `Left Mouse key` while holding `Ctrl key` will add single cell ranges into the selected cells collection.
-- Continuous multiple cell selection is available, by clicking with the mouse and dragging. 
+マルチセル選択は @@ igComponent のセルの範囲選択を可能にします。さまざまなマルチセル選択機能が利用可能です。
+- `マウスドラッグ` - マウスドラッグ - セルが長方形に選択されます。
+- `Ctrl キー` 押下 + `マウス ドラッグ` - 複数の範囲が選択されます。他の既存のセル選択は保持されます。
+- Shift キーを使用してマルチセルの選択をインスタンス化します。Shift キーを押しながら、単一セルを選択して別の単一セルを選択します。2 つのセル間のセル範囲が選択されます。Shift キーを押しながら他の 2 番目のセルを選択すると、最初に選択したセルの位置 (開始点) に基づいてセル選択範囲が更新されます。
+- Shift キーを押しながら矢印キーを使用してキーボードで複数セルを選択します。マルチセル選択範囲は、フォーカスされたセルに基づいて作成されます。
+- Shift キーを押しながら `Ctrl + Arrow キー` と `Ctrl + Home/End` を使用してキーボードで複数セルを選択。マルチセル選択範囲は、フォーカスされたセルに基づいて作成されます。
+- `Ctrl キー`を押しながら`左マウスキー`でクリックすると、選択したセルコレクションに単一のセル範囲が追加されます。
+- マウスでクリックしてドラッグすることで、連続した複数セルの選択が可能です。 
 
-#### Demo
+#### デモ
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:700px">
     <iframe id="grid-multi-cell-selection-iframe" src='{environment:demosBaseUrl}/grid/grid-multi-cell-selection' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-multi-cell-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-multi-cell-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -51,7 +51,7 @@ Multi-cell selection enables range selection of cells in the @@igComponent. Vari
     <iframe id="treegrid-multi-cell-selection-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-multi-cell-selection' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-multi-cell-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-multi-cell-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -60,34 +60,34 @@ Multi-cell selection enables range selection of cells in the @@igComponent. Vari
     <iframe id="hierarchical-grid-multi-cell-selection-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-multi-cell-selection' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-multi-cell-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-multi-cell-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 }
 
 
-#### Keyboard navigation interactions
+#### キーボード ナビゲーションのインタラクション
 
-##### While Shift key is pressed
-- <kbd>Shift</kbd> + <kbd>Arrow Up</kbd> to add above cell to the current selection.
-- <kbd>Shift</kbd> + <kbd>Arrow Down</kbd> to add below cell to the current selection.
-- <kbd>Shift</kbd> + <kbd>Arrow Left</kbd> to add left cell to the current selection.
-- <kbd>Shift</kbd> + <kbd>Arrow Right</kbd> to add right cell to the current selection.
+##### Shift キーが押されている間
+- <kbd>Shift</kbd> + <kbd>上矢印</kbd> - 現在の選択範囲に上のセルを追加します。
+- <kbd>Shift</kbd> + <kbd>下矢印</kbd> - 現在の選択範囲に下のセルを追加します。
+- <kbd>Shift</kbd> + <kbd>左矢印</kbd> - 現在の選択に左のセルを追加します。
+- <kbd>Shift</kbd> + <kbd>右矢印</kbd> - 現在の選択範囲に右のセルを追加します。
 
-##### While Ctrl + Shift keys are pressed
-- <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Arrow Up</kbd> to select all cells above the focused cell in the column.
-- <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Arrow Down</kbd> to select all cells below the focused cell in the column.
-- <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Arrow Left</kbd> to select all cells till the start of the row.
-- <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Arrow Right</kbd> to select all cells till the end of the row.
-- <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Home</kbd> to select all cells from the focused cell till the first-most cell in the grid
-- <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>End</kbd> to select all cells from the focused cell till the last-most cell in the grid
+##### Ctrl + Shift キーが押されている間
+- <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>上矢印</kbd> - 列内のフォーカスのあるセルの上にあるすべてのセルを選択します。
+- <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>下矢印</kbd> - 列内のフォーカスのあるセルの下にあるすべてのセルを選択します。
+- <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>左矢印</kbd> - 行の先頭まですべてのセルを選択します。
+- <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>右矢印</kbd> - 行末まですべてのセルを選択します。
+- <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Home</kbd> - フォーカスされているセルからグリッド内の最初のセルまでのすべてのセルを選択します。
+- <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>End</kbd> - フォーカスされているセルからグリッド内の最後のセルまでのすべてのセルを選択します。
 
 > [!NOTE] Continuous scroll is possible only within Grid's body.
 
-### Api usage
-Below are the methods that you can use in order to select ranges, clear selection or get selected cells data.
+### API の使用
+以下は、範囲の選択、選択の解除、または選択したセルデータの取得に使用できる方法です。
 
-##### Select range
+##### 範囲を選択
 
 [`selectRange(range)`]({environment:angularApiUrl}/classes/igxgridbasecomponent.html#selectrange) - Select a range of cells with the API. `rowStart` and `rowEnd` should use row indexes and `columnStart` and `columnEnd` could use column index or column data field value. 
 
@@ -103,15 +103,15 @@ this.grid1.selectRange(range);
 
 > [!NOTE] Select range is additive operation. It will not clear your previous selection.
 
-##### Clear cell selection
+##### セル選択のクリア
 
 [`clearCellSelection()`]({environment:angularApiUrl}/classes/igxgridbasecomponent.html#clearcellselection) will clear the current cell selection.
 
-##### Get selected data
+##### 選択したデータの取得
 
 [`getSelectedData()`]({environment:angularApiUrl}/classes/igxgridbasecomponent.html#getselecteddata) will return array of the selected data in format depending on the selection. Examples below:
 
-1. If three different single cells are selected:
+1. 3 つの異なる単一セルが選択されている場合:
 ```
 expectedData = [
     { CompanyName: "Infragistics" },
@@ -120,7 +120,7 @@ expectedData = [
 ];
 ```
 		
-2. If three cells from one column are selected:
+2. 1 列から 3 つのセルが選択されている場合:
 ```
 expectedData = [
     { Address: "Obere Str. 57"},
@@ -129,14 +129,14 @@ expectedData = [
 ];
 ```
 
-3. If three cells are selected with mouse drag from one row and three columns:
+3. 1 行 3 列から 3 つのセルをマウスドラッグで選択した場合:
 ```
 expectedData = [
     { Address: "Avda. de la Constitución 2222", City: "México D.F.", ContactTitle: "Owner" }
 ];
 ```
 
-4. If three cells are selected with mouse drag from two rows and three columns:
+4. 2 行 3 列から 3 つのセルをマウスドラッグで選択した場合:
 ```
 expectedData = [
     { ContactTitle: "Sales Agent", Address: "Cerrito 333", City: "Buenos Aires"},
@@ -144,7 +144,7 @@ expectedData = [
 ];
 ```
 
-5. If two different ranges are selected:
+5. 2 つの異なる範囲が選択されている場合:
 ```
 expectedData = [
     { ContactName: "Martín Sommer", ContactTitle: "Owner"},
@@ -154,7 +154,7 @@ expectedData = [
 ];
 ```
 
-6. If two overlapping ranges are selected, the format would be:
+6. 2 つの重複範囲が選択されている場合、形式は次のようになります。
 ```
 expectedData = [
     { ContactName: "Diego Roel", ContactTitle: "Accounting Manager", Address: "C/ Moralzarzal, 86"},
@@ -168,16 +168,16 @@ expectedData = [
 > [`getSelectedRanges(): GridSelectionRange[]`]({environment:angularApiUrl}/classes/igxgridbasecomponent.html#getselectedranges) will return the current selected ranges in the grid from both keyboard and pointer interactions. The type is GridSelectionRange[].
 
 
-### Features integration
-The multi-cell selection is index based (DOM elements selection).
+### 機能の統合
+マルチセル選択はインデックス ベースです (DOM 要素選択)。
 
-- `Sorting` - When sorting is performed selection will not be cleared. It will leave currently selected cells the same while sorting ascending or descending.
-- `Paging` - On paging selected cells will be cleared. Selection wont be persisted across pages.
-- `Filtering` - When filtering is performed selection will not be cleared. If filtering is cleared it will return - the initially selected cells.
-- `Resizing` - On column resizing selected cells will not be cleared.
-- `Hiding` - It will not clear the selected cells. If column is hidden, the cells from the next visible column will be selected.
-- `Pinning` - Selected cell will not be cleared. Same as hiding
-- `Group by` - On column grouping selected cells will not be cleared.
+- `Sorting` - ソートが実行されると、選択は解除されません。昇順または降順で並べ替えている間、現在選択されているセルはそのままになります。
+- `Paging` - ページング時に選択されたセルはクリアされます。選択はページを超えては持続されません。
+- `Filtering` - フィルタリングが実行されると、選択は解除されません。フィルタリングがクリアされている場合は、最初に選択されたセルが返されます。
+- `Resizing` - 列のサイズを変更すると、選択したセルはクリアされません。
+- `Hiding` - 選択したセルはクリアされません。列が非表示の場合は、次に表示されている列のセルが選択されます。
+- `Pinning` - 選択したセルはクリアされません。非表示と同じ
+- `Group by` - 列をグループ化すると、選択したセルはクリアされません。
 
 
 
