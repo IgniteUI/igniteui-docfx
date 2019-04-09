@@ -1,10 +1,12 @@
 ﻿---
-title: 행 선택 컴포넌트- 네이티브 Angular| Ignite UI for Angular
+title: Grid Selection - 네이티브 Angular| Ignite UI for Angular
 _description: Ignite UI for Angular 행 선택 컴포넌트는 행의 모든 열 앞에 있는 체크 박스에서 행을 선택하거나 선택 취소할 수 있고 사용자가 데이터를 포함한 복수의 행을 선택할 수 있습니다.
 _keywords: Ignite UI for Angular, UI 컨트롤, Angular 위젯, 웹 위젯, UI 위젯, Angular, 네이티브 Angular 컴포넌트 세트, 네이티브 Angular 컨트롤, 네이티브 Angular 컴포넌트 라이브러리, 네이티브 Angular 컴포넌트, Angular 데이터 그리드 컴포넌트, Angular 데이터 그리드 컨트롤, Angular 그리드 컴포넌트, Angular 그리드 컨트롤, Angular 고성능 그리드, Angular 그리드 행 선택, Angular 행 선택, Angular 그리드 선택, 그리드 행 선택, 그리드 선택
 _language: kr
 ---
 
+
+@@if (igxName !== 'IgxHierarchicalGrid') {
 
 ### @@igComponent Multi-cell selection
 
@@ -19,6 +21,8 @@ Multi-cell selection enables range selection of cells in the @@igComponent. Vari
 
 #### Demo
 
+}
+
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:700px">
     <iframe id="grid-multi-cell-selection-iframe" src='{environment:demosBaseUrl}/grid/grid-multi-cell-selection' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -30,24 +34,15 @@ Multi-cell selection enables range selection of cells in the @@igComponent. Vari
 }
 @@if (igxName === 'IgxTreeGrid') {
 <div class="sample-container loading" style="height:700px">
-    <iframe id="treegrid-multi-cell-selection-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-multi-cell-selection' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="tree-grid-multi-cell-selection-iframe" src='{environment:demosBaseUrl}/tree-grid/tree-grid-multi-cell-selection' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-multi-cell-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
-<div class="divider--half"></div>
-}
-@@if (igxName === 'IgxHierarchicalGrid') {
-<div class="sample-container loading" style="height:710px">
-    <iframe id="hierarchical-grid-multi-cell-selection-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-multi-cell-selection' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-<div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-multi-cell-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-multi-cell-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
 }
 
-
+@@if (igxName !== 'IgxHierarchicalGrid') {
 #### Keyboard navigation interactions
 
 ##### While Shift key is pressed
@@ -161,7 +156,7 @@ The multi-cell selection is index based (DOM elements selection).
 - `Pinning` - Selected cell will not be cleared. Same as hiding
 - `Group by` - On column grouping selected cells will not be cleared.
 
-
+}
 
 ### 데이터 그리드 행 선택
 
