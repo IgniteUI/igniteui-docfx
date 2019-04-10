@@ -1,8 +1,7 @@
 ---
-title: Category Chart Component - Native Angular | Ignite UI for Angular
-mentionedTypes: ['CategoryChart', 'CategoryChartType']
-_description: The Ignite UI for Angular Category Chart component simplifies the complexities of the data visualization domain into manageable API so that a user can bind a collection of data, a group of collections, and a data property, and let the charting control do the rest.
-_keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Chart Control, Angular Chart Example, Angular Grid Component, Angular Chart Component, Angular Category Chart
+title: Category Chart | Data Visualization Tools | Ignite UI for Angular | Infragistics 
+_description: Use the category chart component to analyze and  automatically choose the best chart type to represent data. Learn about our chart types for visualization.
+_keywords: category chart, Ignite UI for Angular, infragistics 
 ---
 
 ## Category Chart
@@ -11,8 +10,8 @@ The `IgxCategoryChart` is a charting component that makes visualizing category d
 
 ### Demo
 
-<div class="sample-container loading" style="height: 500px">
-    <iframe id="category-chart-overview-iframe" src='{environment:demosBaseUrl}/charts/category-chart-overview' width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container" style="height: 500px">
+    <iframe id="category-chart-overview-iframe" src='{environment:demosBaseUrl}/charts/category-chart-overview' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 
 <div>
@@ -24,13 +23,13 @@ The `IgxCategoryChart` is a charting component that makes visualizing category d
 
  A user can bind a collection of data, a group of collections, and a data property and let the charting control do the rest. The component will analyze the data and then automatically choose the best series type to represent the data.
 
-By using a smart Data Adapter, the data is analyzed and the appropriate visualization is rendered. For example, if the `chartType` property is set to `Auto`, the control will use a column chart for a small data sets or a line chart for larger data sets.
+By using a smart Data Adapter, the data is analyzed and the appropriate visualization is rendered. For example, if the `ChartType` property is set to `Auto`, the control will use a column chart for a small data sets or a line chart for larger data sets.
 
-However, you can also explicitly specify the chart type by setting the `chartType` to:
+However, you can also explicitly specify the chart type by setting the `ChartType` to:
 
 -   `Line`
 -   `Area`
--   `Column`
+-   `IgxColumnComponent`
 -   `Point`
 -   `Spline`
 -   `SplineArea`
@@ -67,7 +66,7 @@ import { IgxCategoryChartModule } from 'igniteui-angular-charts/ES5/igx-category
 export class AppModule {}
 ```
 
-It's also possible to load a more minimal configuration of category chart whereby it can only load a subset of the possible series, and exclude other optional features by instead loading the `IgxCategoryChartCoreModule`, and the dynamic module for the series in question, e.g. `IgxLineSeriesDynamicModule`. If the `chartType` is `Auto`, it wil make sure to select a series type that has been loaded.
+It's also possible to load a more minimal configuration of category chart whereby it can only load a subset of the possible series, and exclude other optional features by instead loading the `IgxCategoryChartCoreModule`, and the dynamic module for the series in question, e.g. `IgxLineSeriesDynamicModule`. If the `ChartType` is `Auto`, it wil make sure to select a series type that has been loaded.
 
 <div class="divider--half"></div>
 
@@ -108,15 +107,15 @@ Below are listed all of the types that the Category Chart supports.
 
 #### Supported chart types
 
-| Property     | Description                                                                        | Example                                      |
-| ------------ | ---------------------------------------------------------------------------------- | -------------------------------------------- |
-| `Line`       | Specifies category line series with markers at each data point                     | ![](../images/category_chart_line.png)       |
-| `Area`       | Specifies category area series                                                     | ![](../images/category_chart_area.png)       |
-| `Column`     | Specifies category column chart with vertical rectangles at each data point        | ![](../images/category_chart_column.png)     |
-| `Point`      | Specifies category point chart with markers at each data point                     | ![](../images/category_chart_point.png)      |
-| `StepLine`   | Specifies category step line chart                                                 | ![](../images/category_chart_stepline.png)   |
-| `StepArea`   | Specifies category step area chart                                                 | ![](../images/category_chart_steparea.png)   |
-| `Spline`     | Specifies category spline line series with markers at each data point              | ![](../images/category_chart_spline.png)     |
-| `SplineArea` | Specifies category spline area series                                              | ![](../images/category_chart_splinearea.png) |
-| `Waterfall`  | Specifies category waterfall chart                                                 | ![](../images/category_chart_waterfall.png)  |
-| `Auto`       | Specifies automatic selection of chart type based on suggestions from Data Adapter |                                              |
+| Property             | Description                                                                        | Example                                      |
+| -------------------- | ---------------------------------------------------------------------------------- | -------------------------------------------- |
+| `Line`               | Specifies category line series with markers at each data point                     | ![](../images/category_chart_line.png)       |
+| `Area`               | Specifies category area series                                                     | ![](../images/category_chart_area.png)       |
+| `IgxColumnComponent` | Specifies category column chart with vertical rectangles at each data point        | ![](../images/category_chart_column.png)     |
+| `Point`              | Specifies category point chart with markers at each data point                     | ![](../images/category_chart_point.png)      |
+| `StepLine`           | Specifies category step line chart                                                 | ![](../images/category_chart_stepline.png)   |
+| `StepArea`           | Specifies category step area chart                                                 | ![](../images/category_chart_steparea.png)   |
+| `Spline`             | Specifies category spline line series with markers at each data point              | ![](../images/category_chart_spline.png)     |
+| `SplineArea`         | Specifies category spline area series                                              | ![](../images/category_chart_splinearea.png) |
+| `Waterfall`          | Specifies category waterfall chart                                                 | ![](../images/category_chart_waterfall.png)  |
+| `Auto`               | Specifies automatic selection of chart type based on suggestions from Data Adapter |                                              |

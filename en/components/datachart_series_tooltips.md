@@ -25,7 +25,7 @@ In order to use tooltips or tooltip layers in the `IgxDataChart` control, you ne
 ```typescript
 import { IgxDataChartInteractivityModule } from "igniteui-angular-charts/ES5/igx-data-chart-interactivity-module";
 
-IgxDataChartInteractivityModule;
+IgxDataChartInteractivityModule.register();
 ```
 
 ### Default Tooltips
@@ -47,7 +47,7 @@ The following code snippet demonstrates how to enable the default tooltips in th
         [xAxis]="xAxis"
         [yAxis]="yAxis"
         valueMemberPath="Value"
-        [showDefaultTooltip]="true">
+        showDefaultTooltip=true>
     </igx-column-series>
 
 </igx-data-chart>
@@ -72,7 +72,7 @@ The following code snippet demonstrates how to add a category tooltip layer to t
         [xAxis]="xAxis"
         [yAxis]="yAxis"
         valueMemberPath="Value"
-        [showDefaultTooltip]="true">
+        showDefaultTooltip=true>
     </igx-column-series>
 
     <igx-category-tooltip-layer></igx-category-tooltip-layer>
@@ -99,7 +99,7 @@ The following code snippet demonstrates how to add an item tooltip layer to the 
         [xAxis]="xAxis"
         [yAxis]="yAxis"
         valueMemberPath="Value"
-        [showDefaultTooltip]="true">
+        showDefaultTooltip=true>
     </igx-column-series>
 
     <igx-item-tooltip-layer></igx-item-tooltip-layer>

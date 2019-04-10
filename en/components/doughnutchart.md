@@ -1,8 +1,7 @@
 ---
-title: Doughnut Chart Component - Native Angular | Ignite UI for Angular
-mentionedTypes: ['DoughnutChart', 'DoughnutChartType']
-_description: The Ignite UI for Angular Doughnut Chart component allows user to display multiple variables in concentric rings, and the data can be bound to a different collection or a common data source.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Data Grid component, Angular Data Grid control, Angular Doughnut Chart Control, Angular Doughnut Chart Component, Angular data grid Doughnut Chart component example, Angular Doughnut Chart
+title: Doughnut Chart | Hierarchical Data Visualization | Ignite UI for Angular | Infragistics
+_description: Use the doughnut chart component to display multiple variables in concentric rings for hierarchical data visualization. View the demo for more information.
+_keywords: doughnut chart, Ignite UI for Angular, infragistics
 
 ---
 
