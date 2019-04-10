@@ -62,10 +62,10 @@ The additional parameters passed to the `*igxFor` directive are:
  - `containerSize` - the size of the virtualized container (in `px`). This needs to be enforced on the wrapping `<div>` as well
  - `itemSize` - the size of the items that will be displayed (in `px`)
 
-In order to assure uniqueness of the items, pass `item` inside of the `[value]` input and `index` inside of the `[index]` input of the `igx-drop-down-item`.
+In order to assure uniqueness of the items, pass `item` inside of the [`value`]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html#value) input and `index` inside of the [`index`]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html#index) input of the `igx-drop-down-item`.
 To preserve selection while scrolling, the drop down item needs to have a reference to the data items it is bound to.
 > [!NOTE]
-> For the drop down to work with a virtualized list of items, `[value]` and `[index]` inputs **must** be passed to all items.
+> For the drop down to work with a virtualized list of items, [`value`]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html#value) and [`index`]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html#index) inputs **must** be passed to all items.
 > [!NOTE]
 > It is strongly advised for each item to have an unique value passed to the `[value]` input. Otherwise, it might lead to unexpected results (incorrect selection). 
 > [!NOTE]
