@@ -127,7 +127,7 @@
       new: false
     - name: 選択
       href: treegrid/selection.md
-      new: false
+      new: true
     - name: 検索
       href: treegrid/search.md
       new: true
