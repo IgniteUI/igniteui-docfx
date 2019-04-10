@@ -1,7 +1,7 @@
 ---
-title: Linear Gauge Component - Native Angular | Ignite UI for Angular
-_description: Use the Linear Gauge component to see a simple display of a value compared against a scale and one or more ranges.
-_keywords: Angular, Ignite UI for Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Data Grid, Angular Chart Control, Angular Grid Component, Angular linear graph Component, Angular linear graph
+title: Linear Gauge | Data Visualization Tools | Ignite UI for Angular | Infragistics
+_description: Use the linear gauge component to visualize data with a simple and concise view. Learn about the configurable elements, dependencies and code snippets.
+_keywords: linear gauge, Ignite UI for Angular, infragistics, infragistics.com
 ---
 
 ## Linear Gauge
