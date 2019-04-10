@@ -1,7 +1,7 @@
 ---
-title: Axis Options
-_description: The Ignite UI for Category Chart component simplifies the complexities of the data visualization domain into manageable API so that a user can bind a collection of data, a group of collections, and a data property, and let the charting control do the rest.
-_keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Chart Control, Angular Chart Example, Angular Grid Component, Angular Chart Component, Angular Category Chart
+title: Category Chart | Data Visualization Tools | Ignite UI for Angular | Infragistics | Axis Options
+_description: Use the category chart component to analyze and  automatically choose the best chart type to represent data. Learn about our chart types for visualization.
+_keywords: category chart, Ignite UI for Angular, infragistics 
 ---
 
 ## Axis Options
@@ -10,8 +10,8 @@ In the `IgxCategoryChart`, an Axis provides base properties for specifying appea
 
 ### Demo
 
-<div class="sample-container loading" style="height: 500px">
-    <iframe id="category-chart-axis-options-sample-iframe" src='{environment:demosBaseUrl}/charts/category-chart-axis-options-sample' width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container" style="height: 500px">
+    <iframe id="category-chart-axis-options-sample-iframe" src='{environment:demosBaseUrl}/charts/category-chart-axis-options-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="category-chart-axis-options-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz

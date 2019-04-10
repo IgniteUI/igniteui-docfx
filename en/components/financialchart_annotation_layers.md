@@ -1,7 +1,7 @@
 ---
-title: Financial Chart Annotations
-_description: The Ignite UI for Angular Financial Chart component is easily configured to display financial data using a simple and intuitive API, as once the user binds the data, the chart offers multiple ways in which the data can then be visualized and interpreted.
-_keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Chart Control, Angular Chart Example, Angular Chart Component, Angular Financial Chart
+title: Financial Chart | Data Visualization Tools | Ignite UI for Angular | Infragistics
+_description: Use the financial chart component to visualize financial data using a simple API. View the demo, dependencies, usage and toolbar for more information. 
+_keywords: financial chart, Ignite UI for Angular, infragistics
 ---
 
 ## Annotations
