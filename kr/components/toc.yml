@@ -127,7 +127,7 @@
       new: false
     - name: 행 선택
       href: treegrid/selection.md
-      new: false
+      new: true
     - name: 검색
       href: treegrid/search.md
       new: true
