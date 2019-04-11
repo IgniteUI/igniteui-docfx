@@ -37,8 +37,8 @@ export class AppModule {}
 ### 使用方法
 [`igx-buttongroup`]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html) を使用して、ボタンを Angular スタイルのボタン グループに配置します。
 
-#### Alignment
-Use the [`alignment`]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html#alignment) input to set the orientation of the buttons in the button group. 
+#### 整列
+[`alignment`]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html#alignment) 入力を使用して、ボタン グループ内のボタンの方向を設定します。
 
 ```typescript
 //sample.component.ts
@@ -76,8 +76,8 @@ igx-buttongroup{
 </div>
 <div class="divider--half"></div>
 
-#### Multiple selection
-Use the the [`multiSelection`]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html#multiselection) input to enable the multiple selection in the button group.
+#### 複数選択
+ボタン グループの複数選択を有効にするには、[`multiSelection`]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html#multiselection) 入力を使用します。
 
 ```html
 <!-- sample.component.html -->
@@ -98,11 +98,11 @@ Use the the [`multiSelection`]({environment:angularApiUrl}/classes/igxbuttongrou
     <iframe id="buttonGroup-sample-4-iframe" seamless="" width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/button-group-sample-4" class="lazyload">
 </iframe></div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="buttonGroup-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="buttonGroup-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
 </div>
 
-#### Custom toggle buttons
-Use the [`values`]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html#values) input to set an array of customized buttons in the button group.
+#### カスタム トグル ボタン
+[`values`]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html#values) 入力を使用して、ボタン グループ内のカスタマイズされたボタンの配列を設定します。
 
 ```typescript
 // sample.component.ts
@@ -172,7 +172,7 @@ public ngOnInit() {
     <iframe id="buttonGroup-sample-3-iframe" seamless="" width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/button-group-sample-3" class="lazyload">
 </iframe></div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="buttonGroup-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="buttonGroup-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
 </div>
 
 ### API リファレンス
