@@ -1,8 +1,7 @@
 ---
-title: Pie Chart Component - Native Angular | Ignite UI for Angular
-mentionedTypes: ['PieChart', 'PieChartType']
-_description: With the Ignite UI for Ignite UI for Angular Pie Chart component, see the column information in a separate container with a predefined set of default summary views, depending on the type of data within the column.
-_keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Pie Chart, Angular Pie Chart Control, Angular Pie Chart Component
+title: Pie Chart | Categorical Data Visualization | Ignite UI for React | Infragistics
+_description: Create a colorful pie chart to display categorical data in Ignite UI for data visualization. View the demo for more information.
+_keywords: pie chart, ignite ui for react, infragistics
 ---
 
 ## Pie Chart
