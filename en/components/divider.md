@@ -13,7 +13,7 @@ By default the divider is a solid horizontal line
 <igx-divider></igx-divider>
 ```
 ##### Divider Demo (vertically)
-By adding the vertical attribute and set it to true you can change the direction from horizontal to vertical
+By adding the `vertical` attribute and set it to `true` you can change the direction from horizontal to vertical
 ```
 <igx-divider [vertical]="true"></igx-divider>
 ```
