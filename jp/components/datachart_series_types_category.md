@@ -61,7 +61,7 @@ _language: ja
 -   データソースはデータ項目の配列またはリストである必要があります。
 -   データソースには少なくとも1つのデータ項目が含まれている必要があります。そうでない場合、チャートはカテゴリ シリーズをレンダリングしません。
 -   すべてのデータ項目には、財務軸 (`IgxCategoryXAxisComponent` など) の `Label` プロパティにマッピングする必要があるデータ列 （文字列または日時）を少なくとも 1 列含める必要があります
--   データ itemsは、カテゴリシリーズ (`IgxLineSeriesComponent` など) の `ValueMemberPath` プロパティを使用してマップする数値データ列を少なくとも 1 列含む必要があります。
+-   データ項目は、カテゴリシリーズ (`IgxLineSeriesComponent` など) の `ValueMemberPath` プロパティを使用してマップする数値データ列を少なくとも 1 列含む必要があります。
 
 上記データ要件を満たすデータソースとして [SampleCategoryData](datachart_data_sources_category.md) を使用できます。
 
