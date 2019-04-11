@@ -1,14 +1,14 @@
 ---
-title: Category Chart | Data Visualization Tools | Ignite UI for Angular | Infragistics | Configuration Options
+title: Category Chart | Data Visualization Tools | Ignite UI for Angular | Configuration Options | Infragistics 
 _description: Use the category chart component to analyze and  automatically choose the best chart type to represent data. Learn about our chart types for visualization.
 _keywords: category chart, Ignite UI for Angular, infragistics 
 ---
 
-## Configuration Options
+# Configuration Options
 
-There are many areas of the `IgxCategoryChart` that can be customized, such as the markers, chart titles and subtitles, and the chart types.
+There are many areas of the Ignite UI for Angular category chart component that can be customized, such as the markers, chart titles and subtitles, and the chart types.
 
-### Demo
+## Demo
 
 <div class="sample-container" style="height: 500px">
     <iframe id="category-chart-config-options-sample-iframe" src='{environment:demosBaseUrl}/charts/category-chart-config-options-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -18,7 +18,7 @@ There are many areas of the `IgxCategoryChart` that can be customized, such as t
     </button>
 </div>
 
-### Configuring Chart Visuals
+## Configuring Chart Visuals
 
 As shown in the above demo, the brushes for the chart types can be configured. The following code example sets the chart type to waterfall and changes the default color of the brushes.
 
@@ -35,11 +35,11 @@ As shown in the above demo, the brushes for the chart types can be configured. T
 </igx-category-chart>
 ```
 
-### Configuring Chart Markers
+## Configuring Chart Markers
 
-Markers are visual elements that display the values of data points in the Category Chart control's plot area. Markers help your end-users immediately identify a data point's value even if the value falls between major or minor grid lines.
+Markers are visual elements that display the values of data points in the category chart component's plot area. Markers help your end-users immediately identify a data point's value even if the value falls between major or minor grid lines.
 
-The appearance of chart markers is managed through the `markerType`, `markerBrushes`, `markerOutlines` properties of the Category Chart, as demonstrated in the following code example.
+The appearance of chart markers is managed through the `markerType`, `markerBrushes`, `markerOutlines` properties of the category chart, as demonstrated in the following code example.
 
 ```html
 <igx-category-chart
@@ -52,7 +52,7 @@ The appearance of chart markers is managed through the `markerType`, `markerBrus
 </igx-category-chart>
 ```
 
-### Configuring Chart Titles and Subtitles
+## Configuring Chart Titles and Subtitles
 
 The title and subtitle feature of the category chart component allows you to add information to the top section of the chart.
 When adding a title or subtitle to the chart, the content of the chart automatically resizes allowing for the title and subtitle information.
@@ -73,7 +73,7 @@ You can customize the look and feel of the category chart’s subtitle and title
 </igx-category-chart>
 ```
 
-### Transition In Animations
+## Transition In Animations
 
 This feature allows you to animate the series as it loads a new data source. The available animation differs depending on the type of series involved. For example, the column series animates by rising from the x-axis, a line series animates by drawing from the y-axis.
 

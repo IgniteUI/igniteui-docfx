@@ -1,14 +1,14 @@
 ---
-title: Category Chart | Data Visualization Tools | Ignite UI for Angular | Infragistics | Annotations
+title: Category Chart | Data Visualization Tools | Ignite UI for Angular | Annotations | Infragistics 
 _description: Use the category chart component to analyze and  automatically choose the best chart type to represent data. Learn about our chart types for visualization.
 _keywords: category chart, Ignite UI for Angular, infragistics 
 ---
 
-## Annotations
+# Annotations
 
-This topic provides conceptual information about the annotations and overlay interactions available on the `IgxCategoryChart`.
+This topic provides conceptual information about the annotations and overlay interactions available on the Ignite UI for Angular category chart component.
 
-### Demo
+## Demo
 
 <div class="sample-container" style="height: 500px">
     <iframe id="category-chart-annotations-iframe" src='{environment:demosBaseUrl}/charts/category-chart-annotations' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -19,9 +19,9 @@ This topic provides conceptual information about the annotations and overlay int
 </div>
 <div class="divider--half"></div>
 
-### Crosshair Layer
+## Crosshair Layer
 
-The Crosshair Layer provides crossing lines that meet at the actual value of every targeted series.  Crosshair types include: Horizontal, Vertical, and Both.  The Crosshairs can also be configured to snap to data points by setting the `crosshairsSnapToData` property to true, otherwise the crosshairs will be interpolated between data points.  Annotations can also be enabled to display the crosshair's value along the axis.
+The Crosshair Layer of the category chart provides crossing lines that meet at the actual value of every targeted series.  Crosshair types include: Horizontal, Vertical, and Both.  The Crosshairs can also be configured to snap to data points by setting the `crosshairsSnapToData` property to true, otherwise the crosshairs will be interpolated between data points.  Annotations can also be enabled to display the crosshair's value along the axis.
 
 ```html
 <igx-category-chart
@@ -32,9 +32,9 @@ The Crosshair Layer provides crossing lines that meet at the actual value of eve
 </igx-category-chart>
 ```
 
-### Final Value Layer
+## Final Value Layer
 
-The Final Value Layer provides a quick view along the axis of the ending value displayed in a series.
+The Final Value Layer of the category chart component provides a quick view along the axis of the ending value displayed in a series.
 
 ```html
 <igx-category-chart
@@ -43,9 +43,9 @@ The Final Value Layer provides a quick view along the axis of the ending value d
 </igx-category-chart>
 ```
 
-### Callout Layer
+## Callout Layer
 
-The Callout Layer displays a text callout at X/Y positions given in the data.
+The Callout Layer of the category chart component displays a text callout at X/Y positions given in the data.
 
 ```html
 <igx-category-chart
