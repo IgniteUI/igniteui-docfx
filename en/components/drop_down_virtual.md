@@ -18,7 +18,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ## Configuration
 
-In order for the drop down to display a list of virtual items, some prerequisites need to be fulfilled.
+In order to configure the drop down to display a list of virtual items, you need to fulfil some prerequisites
 First, we need to import the `IgxForOfModule` in the module of the component that will be declaring the our drop down.
 
 
@@ -74,7 +74,7 @@ To preserve selection while scrolling, the drop down item needs to have a refere
 
 ### Component Definition
 
-Inside of our component's `constructor`, we'll declare a moderately large list of items (container both headers and disabled items) which we'll be displaying in our drop-down. We also need to declare `itemHeight` and `itemsMaxHeight` (used in the template) inside of our `drop-down-virtual.component.ts` file:
+Inside of our component's `constructor`, we'll declare a moderately large list of items (containing both headers and disabled items) which we'll be displaying in our drop-down. We also need to declare `itemHeight` and `itemsMaxHeight` (used in the template) inside of our `drop-down-virtual.component.ts` file:
 
 ```typescript
 // drop-drop-virtual.component.ts
@@ -109,7 +109,7 @@ export class DropDownVirtualComponent {
 
 ### Styles
 
-The last (but very important) part of the configuration happens inside of our component's style sheet, `drop-down-virtual.component.scss`. We need to declare that our wrapping div (`drop-down-virtual-wrapper`) has `overflow: hidden`, so that we don't end up with two scroll bars (one from the `igxFor` and one from the container itself):
+The last (but very important) part of the configuration happens inside of our component's style sheet, `drop-down-virtual.component.scss`.The wrapping div (`drop-down-virtual-wrapper`) needs to have `overflow: hidden` set, to prevent the appearance of two scroll bars (one from the `igxFor` and one from the container itself):
 
 ```scss
     .drop-down-virtual-wrapper {
