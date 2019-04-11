@@ -78,7 +78,7 @@ igx-buttongroup{
 
 #### 複数選択
 ボタン グループの複数選択を有効にするには、[`multiSelection`]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html#multiselection) 入力を使用します。
-=======
+
 
 ```html
 <!-- sample.component.html -->
@@ -104,9 +104,6 @@ igx-buttongroup{
 
 #### カスタム トグル ボタン
 [`values`]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html#values) 入力を使用して、ボタン グループ内のカスタマイズされたボタンの配列を設定します。
-=======
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="buttonGroup-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
-</div>
 
 ```typescript
 // sample.component.ts
@@ -176,9 +173,8 @@ public ngOnInit() {
     <iframe id="buttonGroup-sample-3-iframe" seamless="" width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/button-group-sample-3" class="lazyload">
 </iframe></div>
 <div>
-
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="buttonGroup-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
-
+</div>
 
 ### API リファレンス
 <div class="divider--half"></div>
