@@ -4,18 +4,18 @@ _description: Use the linear gauge component to visualize data with a simple and
 _keywords: linear gauge, Ignite UI for Angular, infragistics, infragistics.com
 ---
 
-## Linear Gauge
+# Linear Gauge
 
-Use the Linear Gauge component to see a simple display of a value compared against a scale and one or more ranges.
+Use the linear gauge component to see a simple display of a value compared against a scale and one or more ranges.
 
-### Demo
+## Demo
 
-The linear gauge component allows for visualizing data in the form of a linear gauge. It provides a simple and concise view of a value compared against a scale and one or more ranges. It supports one scale, one set of tick marks and one set of labels. The component has also a built-in support for animated transitions. This animation is easily customizable by setting the `transitionDuration` property. The features of the linear gauge component include configurable orientation and direction, configurable visual elements such as the needle, and more.
+The Ignite UI for Angular linear gauge component allows for visualizing data in the form of a linear gauge. It provides a simple and concise view of a value compared against a scale and one or more ranges. It supports one scale, one set of tick marks and one set of labels. The component has also a built-in support for animated transitions. This animation is easily customizable by setting the `transitionDuration` property. The features of the linear gauge component include configurable orientation and direction, configurable visual elements such as the needle, and more.
 
-The following sample demonstrates how setting multiple properties on the same gauge can transform it to completely different gauge.
+The following sample demonstrates how setting multiple properties on the same linear gauge can transform it to completely different linear gauge.
 
-<div class="sample-container" style="height: 155px">
-    <iframe id="linear-gauge-sample-iframe" src='{environment:demosBaseUrl}/gauges/linear-gauge-animation' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 155px">
+    <iframe id="linear-gauge-sample-iframe" src='{environment:demosBaseUrl}/gauges/linear-gauge-animation' width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="linear-gauge-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
@@ -24,7 +24,7 @@ The following sample demonstrates how setting multiple properties on the same ga
 
 <div class="divider--half"></div>
 
-### Dependencies
+## Dependencies
 
 When installing the gauge package, the core package must also be installed.
 
@@ -54,7 +54,7 @@ export class AppModule {}
 
 <div class="divider--half"></div>
 
-### Usage
+## Usage
 
 The following code demonstrates how create a linear gauge containing a needle and three comparative ranges on the scale.
 
@@ -78,11 +78,9 @@ The following code demonstrates how create a linear gauge containing a needle an
 
 <div class="divider--half"></div>
 
-## Configurable Elements
+## Needle
 
-### Needle
-
-This is the primary measure displayed by the component and is visualized as a bar or you can customize it to show almost any shape as is demonstrated below.
+This is the primary measure displayed by the linear gauge component and is visualized as a bar or you can customize it to show almost any shape as is demonstrated below.
 
 ```html
  <igx-linear-gauge
@@ -107,15 +105,15 @@ This is the primary measure displayed by the component and is visualized as a ba
 </igx-linear-gauge>
 ```
 
-<div class="sample-container" style="height: 125px">
-    <iframe id="linear-gauge-needle-iframe" src='{environment:demosBaseUrl}/gauges/linear-gauge-needle' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 125px">
+    <iframe id="linear-gauge-needle-iframe" data-src='{environment:demosBaseUrl}/gauges/linear-gauge-needle' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="linear-gauge-needle-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
     </button>
 </div>
 
-### Ranges
+## Ranges
 
 The ranges are visual elements that highlight a specified range of values on a scale. Their purpose is to visually communicate the qualitative state of the performance bar measure, illustrating at the same times the degree to which it resides within that state.
 
@@ -139,15 +137,15 @@ The ranges are visual elements that highlight a specified range of values on a s
 </igx-linear-gauge>
 ```
 
-<div class="sample-container" style="height: 125px">
-    <iframe id="linear-gauge-ranges-iframe" src='{environment:demosBaseUrl}/gauges/linear-gauge-ranges' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 125px">
+    <iframe id="linear-gauge-ranges-iframe" data-src='{environment:demosBaseUrl}/gauges/linear-gauge-ranges' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="linear-gauge-ranges-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
     </button>
 </div>
 
-### Tick Marks
+## Tick Marks
 
 The tick marks serve as a visual division of the scale into intervals in order to increase the readability of the linear gauge.
 
@@ -175,15 +173,15 @@ Minor tick marks – The minor tick marks represent helper tick marks, which mig
 </igx-linear-gauge>
 ```
 
-<div class="sample-container" style="height: 125px">
-    <iframe id="linear-gauge-tickmarks-iframe" src='{environment:demosBaseUrl}/gauges/linear-gauge-tickmarks' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 125px">
+    <iframe id="linear-gauge-tickmarks-iframe" data-src='{environment:demosBaseUrl}/gauges/linear-gauge-tickmarks' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="linear-gauge-tickmarks-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
     </button>
 </div>
 
-### Labels
+## Labels
 
 The labels indicate the measures on the scale.
 
@@ -201,17 +199,17 @@ The labels indicate the measures on the scale.
 </igx-linear-gauge>
 ```
 
-<div class="sample-container" style="height: 125px">
-    <iframe id="linear-gauge-labels-iframe" src='{environment:demosBaseUrl}/gauges/linear-gauge-labels' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 125px">
+    <iframe id="linear-gauge-labels-iframe" data-src='{environment:demosBaseUrl}/gauges/linear-gauge-labels' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="linear-gauge-labels-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
     </button>
 </div>
 
-### Backing
+## Backing
 
-The backing element represents background and border of the bullet graph control. It is always the first element rendered and all the rest of elements such as labels, and tick marks are overlaid on top of it.
+The backing element represents background and border of the linear gauge component. It is always the first element rendered and all the rest of elements such as labels, and tick marks are overlaid on top of it.
 
 ```html
 <igx-linear-gauge
@@ -226,17 +224,17 @@ The backing element represents background and border of the bullet graph control
 </igx-linear-gauge>
 ```
 
-<div class="sample-container" style="height: 125px">
-    <iframe id="linear-gauge-backing-iframe" src='{environment:demosBaseUrl}/gauges/linear-gauge-backing' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 125px">
+    <iframe id="linear-gauge-backing-iframe" data-src='{environment:demosBaseUrl}/gauges/linear-gauge-backing' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="linear-gauge-backing-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
     </button>
 </div>
 
-### Scale
+## Scale
 
-The scale is a visual element that highlights the full range of values in the gauge. You can customize the appearance and the shape of the scale. It can also be inverted (using `isScaleInverted` property) and all labels will be rendered from right-to-left instead of left-to-right.
+The scale is a visual element that highlights the full range of values in the linear gauge. You can customize the appearance and the shape of the scale. It can also be inverted (using `isScaleInverted` property) and all labels will be rendered from right-to-left instead of left-to-right.
 
 ```html
 <igx-linear-gauge
@@ -254,15 +252,15 @@ The scale is a visual element that highlights the full range of values in the ga
 </igx-linear-gauge>
 ```
 
-<div class="sample-container" style="height: 125px">
-    <iframe id="linear-gauge-scale-iframe" src='{environment:demosBaseUrl}/gauges/linear-gauge-scale' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 125px">
+    <iframe id="linear-gauge-scale-iframe" data-src='{environment:demosBaseUrl}/gauges/linear-gauge-scale' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="linear-gauge-scale-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
     </button>
 </div>
 
-### Summary
+## Summary
 
 For your convenience, all above code snippets are combined into one code block below that you can easily copy to your project and see the linear gauge with all features and visuals enabled.
 
