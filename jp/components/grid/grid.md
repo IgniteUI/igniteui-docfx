@@ -1,4 +1,4 @@
----
+﻿---
 title: Data Grid コンポーネント
 _description: Ignite UI for Angular Data Grid コントロールは、タッチ レスポンシブなデータ グリッドです。階層およびリスト ビューなどの機能があります。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Data Grid コンポーネント, Angular Data Grid コントロール, Angular Grid コンポーネント, Angular Grid コントロール, Angular 高パフォーマンス Grid
@@ -388,10 +388,10 @@ export class MyComponent implements OnInit {
  - `Ctrl + 下矢印` - 現在の列の最後のセルへ移動;
  - `Ctrl + 左矢印` -  行の左端のセルへ移動;
  - `Home` - 行の左端のセルへ移動;
- - `Ctrl + Home` - moves to top left cell in the grid;
+ - `Ctrl + Home` - グリッドの左上のセルに移動します;
  - `Ctrl + 右矢印` -  行の右端のセルへ移動;
  - `End` - 行の右端のセルへ移動;
- - `Ctrl + End` -  moves to bottom right cell in the grid;
+ - `Ctrl + End` -  グリッドの右下のセルに移動します;
  - `Page Up` - 1 ページ (ビューポート) 上へスクロール;
  - `Page Down` - 1 ページ (ビューポート) 下へスクロール;
  - `Enter` - 編集モードに入る;
@@ -400,8 +400,8 @@ export class MyComponent implements OnInit {
  - `Tab` - フォーカスを行の次のセルへ順番に移動し、最後のセルのあとは次の行へ移動します。次の行がグループ行の場合、行全体がフォーカスされます。データ行の場合、最初のセルにフォーカスを移動します。セルが編集モードの場合、フォーカスを次の編集可能なセルへ移動し、編集可能な一番右のセルから`CANCEL`、`DONE` ボタン、`DONE` から編集可能な一番左のセルへ移動します;
  - `Shift + Tab` - 行の前のセルへフォーカスを順番に移動し、最初のセルの次に前の行へフォーカスを移動します。前の行がグループ行の場合、行全体をフォーカスします。データ行の場合、最後のセルをフォーカスします。セルが編集モードの場合、フォーカスを次の編集可能なセルへ移動し、編集可能な一番右のセルから `CANCEL` および `DONE` ボタン、`DONE` から編集可能な一番左のセルへ移動します;
  - `Space` -  行が選択可能な場合、スペースキーを押下すると行選択をトリガーします;
- - GroupRow `Alt + 左矢印` - 行が縮小されていない場合はグループ行コンテンツを縮小します;
- - GroupRow `Alt + 右矢印` - 行が展開されていない場合はグループ行コンテンツを展開します;
+ - GroupRow 上で `Alt + 左矢印` - 行が縮小されていない場合はグループ行コンテンツを縮小します;
+ - GroupRow 上で `Alt + 右矢印` - 行が展開されていない場合はグループ行コンテンツを展開します;
  - マウス `ホイール` - フォーカス要素をぼかします;
 
 ### 更新ライブデモ

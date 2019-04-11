@@ -1,7 +1,7 @@
----
+﻿---
 title: カスケーディング
-_description: igx-combo と igx-select は、簡単にカスケーディングを作成できるイベント、プロパティ、メソッドを公開します。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Combo コンポーネント, Angular Combo コントロール、Angular カスケーディング Combo, Angular Drop Down, Angular カスケーディング
+_description: igx-combo と igx-select は、ユーザーが一方または両方のコントロールを使用してカスケード シナリオを簡単に構築できるようにするイベント、プロパティ、およびメソッドを公開します。
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Combo コンポーネント, Angular Combo コントロール、Angular カスケーディング Combo, Angular Select, Angular カスケーディング
 _language: ja
 ---
 
