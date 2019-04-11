@@ -1,14 +1,14 @@
 ---
-title: Category Chart | Data Visualization Tools | Ignite UI for Angular | Infragistics | Axis Options
+title: Category Chart | Data Visualization Tools | Ignite UI for Angular | Axis Options | Infragistics 
 _description: Use the category chart component to analyze and  automatically choose the best chart type to represent data. Learn about our chart types for visualization.
 _keywords: category chart, Ignite UI for Angular, infragistics 
 ---
 
-## Axis Options
+# Axis Options
 
-In the `IgxCategoryChart`, an Axis provides base properties for specifying appearance of axis main lines, tickmarks, titles, and axis labels.
+In the Ignite UI for Angular category chart component, an Axis provides base properties for specifying appearance of axis main lines, tickmarks, titles, and axis labels.
 
-### Demo
+## Demo
 
 <div class="sample-container" style="height: 500px">
     <iframe id="category-chart-axis-options-sample-iframe" src='{environment:demosBaseUrl}/charts/category-chart-axis-options-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -20,11 +20,11 @@ In the `IgxCategoryChart`, an Axis provides base properties for specifying appea
 
 <div class="divider--half"></div>
 
-By default, you do not need to explicitly set the labels. The Category Chart will use the first appropriate string property that it finds within the data you provided and will explicitly set which property to use for the labels.
+By default, you do not need to explicitly set the labels. The category chart component will use the first appropriate string property that it finds within the data you provided and will explicitly set which property to use for the labels.
 
-### Axis Labels
+## Axis Labels
 
-The Category Chart control allows you full control over configuring, formatting and styling the font of the labels displayed on your chart. You can change the rotation angle, margin, horizontal/vertical alignment, opacity, padding and visibility.
+The category chart component allows you full control over configuring, formatting and styling the font of the labels displayed on your chart. You can change the rotation angle, margin, horizontal/vertical alignment, opacity, padding and visibility.
 
 The following code example shows how to style labels on the x-axis using style properties:
 
@@ -46,7 +46,7 @@ The following code example shows how to style labels on the x-axis using style p
 
 ### Axis Titles
 
-The axis title feature of the Category Chart control allows you to add contextual information to the x and y axes of the chart. You can customize the look and feel of the Category Chart's x-axis and y-axis titles in many different ways such as applying different font styles, margins, and alignment.
+The axis title feature of the category chart allows you to add contextual information to the x and y axes of the chart. You can customize the look and feel of the category chart's x-axis and y-axis titles in many different ways such as applying different font styles, margins, and alignment.
 
 The following code example shows how to set and customize the titles on the x-axis and y-axis:
 
@@ -67,7 +67,7 @@ The following code example shows how to set and customize the titles on the x-ax
  </igx-category-chart>
 ```
 
-### Axis Tickmarks
+## Axis Tickmarks
 
 Tick marks display points on the axes. They represent a certain numeric point on a scale or the value of the category in a category axis. You can change the length, thickness and color of the x-axis and y-axis labels.
 
@@ -87,9 +87,9 @@ The following code snippet demonstrates how to set the color, length and thickne
 
 <div class="divider--half"></div>
 
-### Axis Range
+## Axis Range
 
-In the Category Chart control, the range on numeric axes is the difference in numeric values from the beginning of the axis to the end or from the smallest to largest values in the data. The range minimum is the lowest value of the axis. The range maximum is the highest value of the axis. By default, the Category Chart control will calculate the minimum and maximum values for the y-axis range based on the lowest and highest data points in order to maximize the chart plot area. The automatic calculation of an axis' minimum and maximum values may not be appropriate for your set of data points. For example, if your data has a minimum value of 850, you may want to set the minimum value of the axis using y-axis’s `yAxisMinimumValue` property to 800 so that there will be a space value of 50 between the axis minimum and the lowest value of data points. The same can be applied to the axis maximum value and the highest value of data points using y-axis’s `yAxisMaximumValue` property.
+In the category chart component, the range on numeric axes is the difference in numeric values from the beginning of the axis to the end or from the smallest to largest values in the data. The range minimum is the lowest value of the axis. The range maximum is the highest value of the axis. By default, the category chart component will calculate the minimum and maximum values for the y-axis range based on the lowest and highest data points in order to maximize the chart plot area. The automatic calculation of an axis' minimum and maximum values may not be appropriate for your set of data points. For example, if your data has a minimum value of 850, you may want to set the minimum value of the axis using y-axis’s `yAxisMinimumValue` property to 800 so that there will be a space value of 50 between the axis minimum and the lowest value of data points. The same can be applied to the axis maximum value and the highest value of data points using y-axis’s `yAxisMaximumValue` property.
 
 The following sample code demonstrates how to change the axis range on the y-axis.
 
@@ -105,9 +105,9 @@ The following sample code demonstrates how to change the axis range on the y-axi
 
 <div class="divider--half"></div>
 
-### Axis Interval
+## Axis Interval
 
-In the Category Chart control, the `yAxisInterval` property specifies how frequently major gridlines and axis labels are rendered on an axis. Similarly, the `yAxisMinorInterval` property specifies how frequently minor gridlines are rendered on an axis.
+In the category chart component, the `yAxisInterval` property specifies how frequently major gridlines and axis labels are rendered on an axis. Similarly, the `yAxisMinorInterval` property specifies how frequently minor gridlines are rendered on an axis.
 
 The following code snippet demonstrates how to configure the interval on the y-axis.
 
@@ -127,15 +127,15 @@ The following code snippet demonstrates how to configure the interval on the y-a
 
 <div class="divider--half"></div>
 
-### Axis Gap
+## Axis Gap
 
-The Axis Gap feature of the Category Chart control allows setting the gap between series of the chart.
+The Axis Gap feature of the category chart allows setting the gap between series of the chart.
 
 The property accepts a numeric float value between 0 and 1. The value represents a relative width of the gap out of the available number of pixels between series.
    0 - no gap is rendered between series;
    1 - maximum available gap is rendered between series.
 
-To set the Category Chart with `xAxisGap` of `0.125` the following code can be used:
+To set the category chart with `xAxisGap` of `0.125` the following code can be used:
 
 ```html
 <igx-category-chart
@@ -148,9 +148,9 @@ To set the Category Chart with `xAxisGap` of `0.125` the following code can be u
 
 <div class="divider--half"></div>
 
-### Axis Overlap
+## Axis Overlap
 
-The Axis Overlap feature of the Category Chart control allows setting overlap of rendered categories.
+The Axis Overlap feature of the category chart component allows setting overlap of rendered categories.
 
 The property accepts a numeric float value between -1 and 1. The value represents a relative overlap out of the available number of pixels dedicated to each series.
 

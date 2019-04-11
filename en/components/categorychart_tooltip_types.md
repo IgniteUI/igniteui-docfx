@@ -1,14 +1,14 @@
 ---
-title: Category Chart | Data Visualization Tools | Ignite UI for Angular | Infragistics | Tooltip Types
+title: Category Chart | Data Visualization Tools | Ignite UI for Angular | Tooltip Types | Infragistics 
 _description: Use the category chart component to analyze and  automatically choose the best chart type to represent data. Learn about our chart types for visualization.
 _keywords: category chart, Ignite UI for Angular, infragistics 
 ---
 
-## Tooltip Types
+# Tooltip Types
 
-This topic provides conceptual information about the tooltip types available on the `IgxCategoryChart`.
+This topic provides conceptual information about the tooltip types available on the Ignite UI for Angular category chart component.
 
-### Demo
+## Demo
 
 <div class="sample-container" style="height: 500px">
     <iframe id="category-chart-tooltip-types-iframe" src='{environment:demosBaseUrl}/charts/category-chart-tooltip-types' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -19,9 +19,9 @@ This topic provides conceptual information about the tooltip types available on 
 </div>
 <div class="divider--half"></div>
 
-### Tooltip Types
+## Tooltip Types
 
-The `IgxCategoryChart` can be configured to display Tooltips in the following ways:
+The category chart component can be configured to display Tooltips in the following ways:
 
 1.  `Default` tooltips will display a tooltip for a single item when the pointer is positioned over it.
 2.  `Item` tooltips will display a tooltip for each data item in the category that the pointer is positioned over.

@@ -4,13 +4,13 @@ _description: Create a colorful pie chart to display categorical data in Ignite 
 _keywords: pie chart, ignite ui for react, infragistics
 ---
 
-## Pie Chart
+# Pie Chart
 
-The Pie Chart is a specialized component that renders a pie chart, consisting of a circular area divided into sections. Each section has arc length proportional to its underlying data value.
+The Ignite UI for Angular pie chart component is a specialized component that renders a pie chart, consisting of a circular area divided into sections. Each section has arc length proportional to its underlying data value.
 
 This control is used for representing categorical data. It is most effective when there are only a few categories, and when each category makes up a relatively large percentage of the data as a whole.
 
-### Demo
+## Demo
 
 <div class="sample-container" style="height: 350px">
     <iframe id="pie-chart-data-sample-iframe" src='{environment:demosBaseUrl}/charts/pie-chart-data-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -22,7 +22,7 @@ This control is used for representing categorical data. It is most effective whe
 
 <div class="divider--half"></div>
 
-### Dependencies
+## Dependencies
 
 When installing the charts package, the core package must also be installed.
 
@@ -50,7 +50,7 @@ export class AppModule {}
 
 <div class="divider--half"></div>
 
-### Usage
+## Usage
 
 Now that the pie chart module is imported, next step is to bind it to data.
 In order to create a pie chart, you must first have data to bind it to. The following code snippet demonstrates how to create a simple data source.
@@ -78,11 +78,9 @@ The following code demonstrates how to bind the pie chart to the above data.
 
 <div class="divider--half"></div>
 
-## Configurable Elements
+## Legend
 
-### Legend
-
-In order to display a legend next to the pie chart an ItemLegend needs to be created and assigned to the `legend` property. The `legendLabelMemberPath` can then be used to specify which property on your data model it will use to display inside the legend for each pie slice.
+In order to display a legend next to the pie chart component an ItemLegend needs to be created and assigned to the `legend` property. The `legendLabelMemberPath` can then be used to specify which property on your data model it will use to display inside the legend for each pie slice.
 
 Additionally you can use the `legendItemTemplate` and `legendItemBadgeTemplate` properties and the various font properties on ItemLegend to further customize the look of the legend items.
 
@@ -107,9 +105,9 @@ Additionally you can use the `legendItemTemplate` and `legendItemBadgeTemplate` 
 
 <div class="divider--half"></div>
 
-### Others Category
+## Others Category
 
-Sometimes, the underlying data for the Pie Chart component will contain many items with small values. In this case, the Others category will permit automatic aggregation of several data values into a single slice
+Sometimes, the underlying data for the pie chart component will contain many items with small values. In this case, the Others category will permit automatic aggregation of several data values into a single slice
 
 In the sample below, the `othersCategoryThreshold` is set to 2, and `othersCategoryType` is set to Number. Therefore, items with value less than or equal to 2 will be assigned to the “Others” category.
 
@@ -137,9 +135,9 @@ If you set `othersCategoryType` to Percent, then `othersCategoryThreshold` will 
 
 <div class="divider--half"></div>
 
-### Explosion
+## Explosion
 
-The `IgxPieChart` supports explosion of individual pie slices as well as a `sliceClick` event that allows you to modify selection states and implement custom logic
+The pie chart component supports explosion of individual pie slices as well as a `sliceClick` event that allows you to modify selection states and implement custom logic
 
 ```html
 <igx-pie-chart [dataSource]="data"
@@ -153,27 +151,22 @@ The `IgxPieChart` supports explosion of individual pie slices as well as a `slic
 <div class="sample-container" style="height: 350px">
     <iframe id="pie-chart-explosion-iframe" src='{environment:demosBaseUrl}/charts/pie-chart-explosion' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
-<!--
-<div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="pie-chart-explosion-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
-    </button>
-</div>
 
 <div class="divider--half"></div>
 
-### Selection
+## Selection
 
 The pie chart supports slice selection by mouse click as the default behavior. You can determine the selected slices by using the `selectedItems` property. The selected slices are then highlighted.
 
 There is a property called `selectionMode` which is how you set what mode you want the pie chart to use. The default value is `single`. In order to disable selection, set the property to `manual`.
 
-The `IgxPieChart` supports three different selection modes.
+The pie chart compoment supports three different selection modes.
 
 -   Single - When the mode is set to single, only one slice can be selected at a time. When you select a new slice the previously selected slice will be deselected and the new one will become selected.
 -   Multiple - When the mode is set to Multiple, many slices can be selected at once. If you click on a slice, it will become selected and clicking on a different slice will also select that slice leaving the previous slice selected.
 -   Manual - When the mode is set to Manual, selection is disabled.
 
-The `IgxPieChart` has 4 events associated with selection:
+The pie chart component has 4 events associated with selection:
 
 -   SelectedItemChanging
 -   SelectedItemChanged
