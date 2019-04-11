@@ -21,7 +21,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ### Dependencies
 
-The grid is exported as an `NgModule`, thus all you need to do in your application is to import the [`IgxGridModule`]({environment:angularApiUrl}/classes/igxgridmodule.html) inside your `AppModule`:
+The grid is exported as an `NgModule`, thus all you need to do in your application is to import the `IgxGridModule` inside your `AppModule`:
 
 ```typescript
 // app.module.ts
@@ -40,7 +40,7 @@ import { IgxGridModule } from 'igniteui-angular/grid';
 export class AppModule {}
 ```
 
-Each of the components, directives and helper classes in the [`IgxGridModule`]({environment:angularApiUrl}/classes/igxgridmodule.html) can be imported either through the _grid_ sub-package or through the main bundle in _igniteui-angular_. While you don't need to import all of them to instantiate and use the grid, you usually will import them (or your editor will auto-import them for you) when declaring types that are part of the grid API.
+Each of the components, directives and helper classes in the `IgxGridModule` can be imported either through the _grid_ sub-package or through the main bundle in _igniteui-angular_. While you don't need to import all of them to instantiate and use the grid, you usually will import them (or your editor will auto-import them for you) when declaring types that are part of the grid API.
 
 ```typescript
 import { IgxGridComponent } from 'igniteui-angular/grid/';

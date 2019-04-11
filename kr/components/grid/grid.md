@@ -23,7 +23,7 @@ _language: kr
 
 ### 의존성
 
-그리드는 `NgModule`로 내보내기를 하므로 애플리케이션에서 `AppModule` 내부의 [`IgxGridModule`]({environment:angularApiUrl}/classes/igxgridmodule.html)을 불러오기만 하면 됩니다:
+그리드는 `NgModule`로 내보내기를 하므로 애플리케이션에서 `AppModule` 내부의 `IgxGridModule` 을 불러오기만 하면 됩니다:
 
 ```typescript
 // app.module.ts
@@ -42,7 +42,7 @@ import { IgxGridModule } from 'igniteui-angular/grid';
 export class AppModule {}
 ```
 
-[`IgxGridModule`]({environment:angularApiUrl}/classes/igxgridmodule.html)의 각 컴포넌트, 지시문 및 도우미 클래스는 _ 하위 패키지 또는 _igniteui-angular_의 기본 번들을 통해 가져올 수 있습니다. 그리드를 인스턴스화하고 사용하기 위해 모든 항목을 가져올 필요는 없지만 일반적으로 그리드 API의 일부인 유형을 선언할 때 가져옵니다(또는 편집기가 자동으로 가져옵니다).
+`IgxGridModule` 의 각 컴포넌트, 지시문 및 도우미 클래스는 _ 하위 패키지 또는 _igniteui-angular_의 기본 번들을 통해 가져올 수 있습니다. 그리드를 인스턴스화하고 사용하기 위해 모든 항목을 가져올 필요는 없지만 일반적으로 그리드 API의 일부인 유형을 선언할 때 가져옵니다(또는 편집기가 자동으로 가져옵니다).
 
 ```typescript
 import { IgxGridComponent } from 'igniteui-angular/grid/';
