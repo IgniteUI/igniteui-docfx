@@ -232,8 +232,33 @@
     - name: カスケーディング
       href: combo_cascading.md
       new: true
+- name: Spreadsheet
+  href: spreadsheet_overview.md
+  new: true
+  items:
+    - name: Activation
+      href: spreadsheet_activation.md
+      new: true
+    - name: Clipboard
+      href: spreadsheet_clipboard.md
+      new: true
+    - name: Conditional Formatting
+      href: spreadsheet_conditional_formatting.md
+      new: true
+    - name: Configuring Spreadsheet
+      href: spreadsheet_configuring.md
+      new: true
+    - name: Commands
+      href: spreadsheet_commands.md
+      new: true
+    - name: Data Validation
+      href: spreadsheet_data_validation.md
+      new: true
+    - name: Hyperlinks
+      href: spreadsheet_hyperlinks.md
+      new: true      
 - name: チャート
-  header: true
+  header: true  
 - name: Category Chart
   href: categorychart.md
   items:
