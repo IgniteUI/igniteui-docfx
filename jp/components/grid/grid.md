@@ -22,7 +22,7 @@ _language: ja
 
 ### 依存関係
 
-グリッドが `NgModule` としてエクスポートされるため、アプリケーションで `AppModule` に [`IgxGridModule`]({environment:angularApiUrl}/classes/igxgridmodule.html) をインポートする必要があります。
+グリッドが `NgModule` としてエクスポートされるため、アプリケーションで `AppModule` に `IgxGridModule` をインポートする必要があります。
 
 ```typescript
 // app.module.ts
@@ -41,7 +41,7 @@ import { IgxGridModule } from 'igniteui-angular/grid';
 export class AppModule {}
 ```
 
-[`IgxGridModule`]({environment:angularApiUrl}/classes/igxgridmodule.html) の各コンポーネント、ディレクティブ、およびヘルパー クラスはグリッド サブパッケージまたは igniteui-angular のメイン バンドルでインポートできます。グリッドをインスタンス化して使用するためにすべての機能をインポートする必要はありませんが、グリッド API の一部である型を宣言する場合はインポート (またはエディターで自動的にインポート) します。
+`IgxGridModule` の各コンポーネント、ディレクティブ、およびヘルパー クラスはグリッド サブパッケージまたは igniteui-angular のメイン バンドルでインポートできます。グリッドをインスタンス化して使用するためにすべての機能をインポートする必要はありませんが、グリッド API の一部である型を宣言する場合はインポート (またはエディターで自動的にインポート) します。
 
 ```typescript
 import { IgxGridComponent } from 'igniteui-angular/grid/';
