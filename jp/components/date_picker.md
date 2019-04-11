@@ -248,6 +248,18 @@ public date: Date = new Date(Date.now());
 </div>
 <div class="divider--half"></div>
 
+#### Templating Dropdown Mode Date Picker
+All the information mentioned in the <a href="#templating-dialog-mode-date-picker">Templating Dialog Mode Date Picker</a> section can be applied when re-templating a dropdown date picker. The only requirement is that an HTML element should be marked with `dropDownTarget` id to be used as a target for the calendar dropdown.
+
+<div class="sample-container loading" style="height: 650px;">
+    <iframe id="date-picker-sample-7" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/datepicker-sample-7" class="lazyload"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="date-picker-sample-7" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+
+<div class="divider--half"></div>
+
 ### インターナショナリゼーション
 
 [`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) はロケールをサポートします。[`locale`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#locale) 入力を使用して設定できます。ヘッダー (`igxCalendarHeader`) およびサブヘッダー (`igxCalendarSubheader`) の  [`IgxCalendarComponent`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) テンプレートを使用してヘッダーおよびサブヘッダーの外観を設定できます。このテンプレートを使用する方法の詳細については、`IgxCalendarComponent` [ヘルプ](calendar.md)を参照してください。以下は日本ロケール定義を持つ日付ピッカーです。
