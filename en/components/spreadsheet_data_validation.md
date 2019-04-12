@@ -13,10 +13,6 @@ This topic explains to to configure and set the bulit-in data validation rules.
 <div class="sample-container" style="height: 500px">
     <iframe id="spreadsheet-data-validation-sample-iframe" src='{environment:demosBaseUrl}/spreadsheet/spreadsheet-data-validation' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="spreadsheet-data-validation-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
-    </button>
-</div>
 
 <div class="divider--half"></div>
 
