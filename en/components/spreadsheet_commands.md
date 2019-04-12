@@ -13,10 +13,6 @@ This topic explains how to perform different operations with the control using c
 <div class="sample-container" style="height: 500px">
     <iframe id="spreadsheet-commands-sample-iframe" src='{environment:demosBaseUrl}/spreadsheet/spreadsheet-commands' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="spreadsheet-commands-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
-    </button>
-</div>
 
 <div class="divider--half"></div>
 
@@ -42,10 +38,10 @@ public spreadsheet: IgxSpreadsheetComponent;
 ---
 
 public zoomIn(): void {
-    this.spreadsheet.executeCommand(SpreadsheetAction.ZoomIn);
+    this.spreadsheet.executeAction(SpreadsheetAction.ZoomIn);
 }
 
 public zoomOut(): void {
-    this.spreadsheet.executeCommand(SpreadsheetAction.ZoomOut);
+    this.spreadsheet.executeAction(SpreadsheetAction.ZoomOut);
 }
 ```
