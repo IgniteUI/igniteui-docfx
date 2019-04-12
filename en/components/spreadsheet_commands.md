@@ -42,10 +42,10 @@ public spreadsheet: IgxSpreadsheetComponent;
 ---
 
 public zoomIn(): void {
-    this.spreadsheet.executeCommand(SpreadsheetAction.ZoomIn);
+    this.spreadsheet.executeAction(SpreadsheetAction.ZoomIn);
 }
 
 public zoomOut(): void {
-    this.spreadsheet.executeCommand(SpreadsheetAction.ZoomOut);
+    this.spreadsheet.executeAction(SpreadsheetAction.ZoomOut);
 }
 ```
