@@ -12,8 +12,8 @@ This control is used for representing categorical data. It is most effective whe
 
 ## Demo
 
-<div class="sample-container" style="height: 350px">
-    <iframe id="pie-chart-data-sample-iframe" src='{environment:demosBaseUrl}/charts/pie-chart-data-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 350px">
+    <iframe id="pie-chart-data-sample-iframe" src='{environment:demosBaseUrl}/charts/pie-chart-data-sample' width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="pie-chart-data-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
@@ -95,8 +95,8 @@ Additionally you can use the `legendItemTemplate` and `legendItemBadgeTemplate` 
 </igx-pie-chart>
 ```
 
-<div class="sample-container" style="height: 350px">
-    <iframe id="pie-chart-legend-iframe" src='{environment:demosBaseUrl}/charts/pie-chart-legend' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 350px">
+    <iframe id="pie-chart-legend-iframe" data-src='{environment:demosBaseUrl}/charts/pie-chart-legend' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="pie-chart-legend-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
@@ -125,8 +125,8 @@ If you set `othersCategoryType` to Percent, then `othersCategoryThreshold` will 
 </igx-pie-chart>
 ```
 
-<div class="sample-container" style="height: 350px">
-    <iframe id="pie-chart-others-iframe" src='{environment:demosBaseUrl}/charts/pie-chart-others' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 350px">
+    <iframe id="pie-chart-others-iframe" data-src='{environment:demosBaseUrl}/charts/pie-chart-others' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="pie-chart-others-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
@@ -148,8 +148,8 @@ The pie chart component supports explosion of individual pie slices as well as a
 </igx-pie-chart>
 ```
 
-<div class="sample-container" style="height: 350px">
-    <iframe id="pie-chart-explosion-iframe" src='{environment:demosBaseUrl}/charts/pie-chart-explosion' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 350px">
+    <iframe id="pie-chart-explosion-iframe" data-src='{environment:demosBaseUrl}/charts/pie-chart-explosion' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 
 <div class="divider--half"></div>
@@ -185,8 +185,8 @@ For scenarios where you click on the Others slice, the pie chart will return an 
 </igx-pie-chart>
 ```
 
-<div class="sample-container" style="height: 350px">
-    <iframe id="pie-chart-selection-iframe" src='{environment:demosBaseUrl}/charts/pie-chart-selection' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 350px">
+    <iframe id="pie-chart-selection-iframe" data-src='{environment:demosBaseUrl}/charts/pie-chart-selection' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 
 <div>
