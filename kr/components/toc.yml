@@ -346,9 +346,9 @@
         - name: Scatter Shape Series
           href: datachart_series_types_shape.md
           new: true
-        #- name: Stacked Series
-        #  href: datachart_series_types_stacked.md
-        #  new: true
+        - name: Stacked Series
+          href: datachart_series_types_stacked.md
+          new: true
     #- name: Animations
     #  href: datachart_series_animations.md
     #  new: true
