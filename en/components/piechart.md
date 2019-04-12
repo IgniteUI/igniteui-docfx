@@ -4,13 +4,13 @@ _description: Create a colorful pie chart to display categorical data in Ignite 
 _keywords: pie chart, ignite ui for react, infragistics
 ---
 
-# Pie Chart
+## Pie Chart
 
 The Ignite UI for Angular pie chart component is a specialized component that renders a pie chart, consisting of a circular area divided into sections. Each section has arc length proportional to its underlying data value.
 
 This control is used for representing categorical data. It is most effective when there are only a few categories, and when each category makes up a relatively large percentage of the data as a whole.
 
-## Demo
+### Demo
 
 <div class="sample-container" style="height: 350px">
     <iframe id="pie-chart-data-sample-iframe" src='{environment:demosBaseUrl}/charts/pie-chart-data-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -22,7 +22,7 @@ This control is used for representing categorical data. It is most effective whe
 
 <div class="divider--half"></div>
 
-## Dependencies
+### Dependencies
 
 When installing the charts package, the core package must also be installed.
 
@@ -50,7 +50,7 @@ export class AppModule {}
 
 <div class="divider--half"></div>
 
-## Usage
+### Usage
 
 Now that the pie chart module is imported, next step is to bind it to data.
 In order to create a pie chart, you must first have data to bind it to. The following code snippet demonstrates how to create a simple data source.
@@ -78,7 +78,7 @@ The following code demonstrates how to bind the pie chart to the above data.
 
 <div class="divider--half"></div>
 
-## Legend
+### Legend
 
 In order to display a legend next to the pie chart component an ItemLegend needs to be created and assigned to the `legend` property. The `legendLabelMemberPath` can then be used to specify which property on your data model it will use to display inside the legend for each pie slice.
 
@@ -105,7 +105,7 @@ Additionally you can use the `legendItemTemplate` and `legendItemBadgeTemplate` 
 
 <div class="divider--half"></div>
 
-## Others Category
+### Others Category
 
 Sometimes, the underlying data for the pie chart component will contain many items with small values. In this case, the Others category will permit automatic aggregation of several data values into a single slice
 
@@ -135,7 +135,7 @@ If you set `othersCategoryType` to Percent, then `othersCategoryThreshold` will 
 
 <div class="divider--half"></div>
 
-## Explosion
+### Explosion
 
 The pie chart component supports explosion of individual pie slices as well as a `sliceClick` event that allows you to modify selection states and implement custom logic
 
@@ -154,7 +154,7 @@ The pie chart component supports explosion of individual pie slices as well as a
 
 <div class="divider--half"></div>
 
-## Selection
+### Selection
 
 The pie chart supports slice selection by mouse click as the default behavior. You can determine the selected slices by using the `selectedItems` property. The selected slices are then highlighted.
 
