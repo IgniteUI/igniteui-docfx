@@ -15,7 +15,7 @@ The Ignite UI for Angular linear gauge component allows for visualizing data in 
 The following sample demonstrates how setting multiple properties on the same linear gauge can transform it to completely different linear gauge.
 
 <div class="sample-container loading" style="height: 155px">
-    <iframe id="linear-gauge-sample-iframe" src='{environment:demosBaseUrl}/gauges/linear-gauge-animation' width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="linear-gauge-sample-iframe" src='{environment:demosBaseUrl}/gauges/linear-gauge-animation' width="100%" height="100%" seamless="" frameBorder="0" onload="onDvSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="linear-gauge-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz

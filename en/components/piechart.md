@@ -12,8 +12,8 @@ This control is used for representing categorical data. It is most effective whe
 
 ## Demo
 
-<div class="sample-container" style="height: 350px">
-    <iframe id="pie-chart-data-sample-iframe" src='{environment:demosBaseUrl}/charts/pie-chart-data-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 350px">
+    <iframe id="pie-chart-data-sample-iframe" src='{environment:demosBaseUrl}/charts/pie-chart-data-sample' width="100%" height="100%" seamless="" frameBorder="0" onload="onDvSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="pie-chart-data-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
