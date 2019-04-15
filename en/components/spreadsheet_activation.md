@@ -6,7 +6,7 @@ _keywords: Spreadsheet, Ignite UI for Angular, Infragistics
 
 ## Spreadsheet Activation
 
-The `IgxSpreadsheet` control exposes properties that allow you to determine the currently active cell, pane, and worksheet in the control. This is helpful as it can help you to determine where the user may be navigating or editing in the control.
+The Angular Spreadsheet component exposes properties that allow you to determine the currently active cell, pane, and worksheet in the control. This is helpful as it can help you to determine where the user may be navigating or editing in the control.
 
 ### Demo
 
