@@ -153,7 +153,7 @@ export class AppModule {}
 
 ### トグル自動操作
 
-このメソッドの呼び出しを回避するための `onClick` ハンドラーを含む、参照トグルの状態を変更できるディレクティブがあります。この機能を使用するには、同じ [**IgxToggleModule**]({environment:angularApiUrl}/classes/igxtogglemodule.html) にある [**IgxToggleActionDirective**]({environment:angularApiUrl}/classes/igxtoggleactiondirective.html) を使用します。
+このメソッドの呼び出しを回避するための `onClick` ハンドラーを含む、参照トグルの状態を変更できるディレクティブがあります。この機能を使用するには、同じ **IgxToggleModule** にある [**IgxToggleActionDirective**]({environment:angularApiUrl}/classes/igxtoggleactiondirective.html) を使用します。
 
 ```typescript
 // app.module.ts
