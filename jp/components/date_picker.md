@@ -164,7 +164,7 @@ public formatter = (date: Date) => {
 | [`locale`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#locale) | `string` | ロケール プロパティを設定する場合に Angular に含まれるロケールが en-US のみであることに注意してください。その他の日付をローカライズするためには対応するロケール データをインポートする必要があります。詳細については、[I18n](https://angular.io/guide/i18n#i18n-pipes) ガイドをご覧ください。|
 
 
-> 注: [`formatter`]({environment：angularApiUrl} /classes/igxdatepickercomponent.html#formatter) および [`format`]({environment：angularApiUrl} /classes/igxdatepickercomponent.html#format) 両方の入力が設定されている場合、編集可能なデートピッカーは [`formatter`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#formatter) の入力を無視します。
+> 注: [`formatter`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#formatter) および [`format`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#format) 両方の入力が設定されている場合、編集可能なデートピッカーは [`formatter`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#formatter) の入力を無視します。
 
 編集可能なデートピッカーは、無効な日付と無効な入力を処理するために次のアウトプットを提供します。
 
