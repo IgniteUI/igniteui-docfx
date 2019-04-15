@@ -148,6 +148,6 @@ Follow the steps below for lazy loading implementation in a topic ([PR example](
 # <a name='#updating-of-data-visualization-related-topics'>Updating of Data Visualization related topics</a>
 Our cross platform docs are in `internal repo`. 
 
-If you need to update the cross platform docs, please do so from `internal repo`), queue an Angular build from `AngularDocFX_EN` build definition in the `xplat-docfx` repository, and then approve the PR that will come into public repo from ESShared.
+If you need to update the cross platform docs, please do so from `internal repo`, queue an Angular build from `AngularDocFX_EN` build definition in the `xplat-docfx` repository, and then approve the PR that will come into public repo from ESShared.
 
 - `internal repo` - "...tfs/engineering/IgInternalApplicationsGit/IgInternalApplicationsGit Team/_git/xplat-docfx"
