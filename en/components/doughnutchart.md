@@ -5,11 +5,11 @@ _keywords: doughnut chart, Ignite UI for Angular, infragistics
 
 ---
 
-# Doughnut Chart
+## Doughnut Chart
 
 The Ignite UI for Angular doughnut chart component is similar to the Pie Chart component, proportionally illustrating the occurrences of a variable. The doughnut chart can display multiple variables in concentric rings, and provides built-in support for visualizing hierarchical data.
 
-## Demo
+### Demo
 
 <div class="sample-container loading" style="height: 450px">
     <iframe id="doughnut-chart-overview-iframe" src='{environment:demosBaseUrl}/charts/doughnut-chart-overview' width="100%" height="100%" seamless="" frameBorder="0" onload="onDvSampleIframeContentLoaded(this);"></iframe>
@@ -21,7 +21,7 @@ The Ignite UI for Angular doughnut chart component is similar to the Pie Chart c
 
 <div class="divider--half"></div>
 
-## Dependencies
+### Dependencies
 
 When installing the charts package, the core package must also be installed.
 **npm install igniteui-angular-core**
@@ -49,7 +49,7 @@ export class AppModule {}
 
 <div class="divider--half"></div>
 
-## Usage
+### Usage
 
 Now that the doughnut chart module is imported, next step is to bind it to data.
 In order to create the component, you must first have data to bind it to. The following code snippet demonstrates how to create a simple data source.
@@ -80,11 +80,11 @@ The following code demonstradtes how to bind the doughnut chart to the above dat
 
 <div class="divider--half"></div>
 
-## Multiple Rings
+### Multiple Rings
 
 The doughnut chart component can display multiple rings at the same time with each of the rings capable of being bound to a different collection, or they can share a common data source.
 
-## Slice Selection
+### Slice Selection
 
 The doughnut chart component exposes the API for setting the state of one or more slices to selected. Optionally, you may apply a single custom visual style to the selected slices.
 
@@ -98,7 +98,7 @@ The doughnut chart component exposes the API for setting the state of one or mor
 
 **Modifying the contents of the SelectedSlices collection** - You can change the selected slice by changing the contents of the `selectedSlices` collection. The doughnut chart holds references to all the slices allowing you to modify their `isSelected` property directly to the Slice objects.
 
-## Slice Selection Demo
+### Slice Selection Demo
 
 <div class="sample-container" style="height: 450px">
     <iframe id="doughnut-chart-selection-iframe" src='{environment:demosBaseUrl}/charts/doughnut-chart-selection' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -110,7 +110,7 @@ The doughnut chart component exposes the API for setting the state of one or mor
 
 <div class="divider--half"></div>
 
-## Slice Explosion
+### Slice Explosion
 
 The doughnut chart component slices explode either programmatically or by user interaction.
 
@@ -126,7 +126,7 @@ The `IgxDoughnutChart` holds references to all the slices allowing you to modify
 **Modifying the contents of the ExplodedSlices collection**
 You can change the exploded slices by changing the contents of the `explodedSlices` collection.
 
-## Slice Explosion Demo
+### Slice Explosion Demo
 
 <div class="sample-container" style="height: 450px">
     <iframe id="doughnut-chart-explosion-iframe" src='{environment:demosBaseUrl}/charts/doughnut-chart-explosion' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -138,11 +138,11 @@ You can change the exploded slices by changing the contents of the `explodedSlic
 
 <div class="divider--half"></div>
 
-## Legend
+### Legend
 
 The doughnut chart component supports the use of a legend. The legend used is the ItemLegend which is connected though the series of the chart.
 
-## Legend Demo
+### Legend Demo
 
 <div class="sample-container" style="height: 450px">
     <iframe id="doughnut-chart-legend-iframe" src='{environment:demosBaseUrl}/charts/doughnut-chart-legend' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>

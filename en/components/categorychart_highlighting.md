@@ -4,11 +4,11 @@ _description: Use the category chart component to analyze and  automatically cho
 _keywords: category chart, Ignite UI for Angular, infragistics 
 ---
 
-# Highlighting
+## Highlighting
 
 This topic provides conceptual information about the highlighting features of the Ignite UI for Angular category chart component.
 
-## Demo
+### Demo
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="category-chart-highlighting-sample-iframe" src='{environment:demosBaseUrl}/charts/category-chart-highlighting-sample' width="100%" height="100%" seamless="" frameBorder="0" onload="onDvSampleIframeContentLoaded(this);"></iframe>
@@ -19,7 +19,7 @@ This topic provides conceptual information about the highlighting features of th
 </div>
 <div class="divider--half"></div>
 
-## Highlight Layers
+### Highlight Layers
 
 The category chart component can enable three types of highlighting when hovering over items.
 

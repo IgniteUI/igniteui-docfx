@@ -28,6 +28,8 @@ The activation of the `IgxSpreadsheet` control is split up between the cells, pa
 -   `ActivePane`: Returns the active pane in the currently active worksheet of the spreadsheet control.
 -   `ActiveWorksheet`: Returns or sets the active worksheet in the `Workbook` of the spreadsheet control. This can be set by setting it to an existing worksheet in the `Workbook` attached to the spreadsheet.
 
+### Code Snippet
+
 The following code snippet shows setting activation of the cell and worksheet in the `IgxSpreadsheet` control:
 
 ```typescript

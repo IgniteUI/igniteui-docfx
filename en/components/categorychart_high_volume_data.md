@@ -4,11 +4,11 @@ _description: Use the category chart component to analyze and  automatically cho
 _keywords: category chart, Ignite UI for Angular, infragistics 
 ---
 
-# High Volume Data
+## High Volume Data
 
 The Ignite UI for Angular category chart component is capable of handling high volumes of data, ranging into the millions of data points, as demonstated in the following demo.
 
-## Demo
+### Demo
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="category-chart-high-volume-sample-iframe" src='{environment:demosBaseUrl}/charts/category-chart-high-volume-sample' width="100%" height="100%" seamless="" frameBorder="0" onload="onDvSampleIframeContentLoaded(this);"></iframe>
@@ -20,7 +20,7 @@ The Ignite UI for Angular category chart component is capable of handling high v
 
 <div class="divider--half"></div>
 
-## Performance Optimizations
+### Performance Optimizations
 
 There are several chart features and Angular specific features that affect performance of the chart and they should be considered when optimizing performance in your application.
 
