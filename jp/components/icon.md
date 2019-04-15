@@ -1,4 +1,4 @@
----
+﻿---
 title: Icon コンポーネント
 _description: Ignite UI for Angular Icon コンポーネントを使用して、様々なアイコンおよびフォント セットを統合して交互に使用し、カスタム色を定義できます。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Icon コンポーネント, Angular Icon コントロール
@@ -113,7 +113,7 @@ public ngOnInit() {
 </div>
 
 ### 6.2.0 の重大な変更
-* [`IgxIconComponent`]（{environment：angularApiUrl} /classes/igxiconcomponent.html） `iconName` プロパティは非推奨です。「マテリアル」アイコンのアイコン名を設定するには、開始タグと終了タグの間にアイコンの名前を配置します。'Font Awesome' と SVG のアイコンには `name` プロパティを使用します。
+* [`IgxIconComponent`]（{environment:angularApiUrl}/classes/igxiconcomponent.html） `iconName` プロパティは非推奨です。「マテリアル」アイコンのアイコン名を設定するには、開始タグと終了タグの間にアイコンの名前を配置します。'Font Awesome' と SVG のアイコンには `name` プロパティを使用します。
 
 ### API リファレンス
 <div class="divider--half"></div>
