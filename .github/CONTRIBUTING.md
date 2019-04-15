@@ -4,6 +4,7 @@
  ### 3. [StackBlitz configuration](#stackblitz-configuration)
  ### 4. [Lazy loading](#lazy-loading-of-samples-in-a-topic)
  ### 5. [Creating shared help topics](#creating-shared-help-topics)
+ ### 6. [Updating of Data Visualization related topics](#updating-of-data-visualization-related-topics)
 
 # <a name='#writing-an-article'>Writing an article</a>
 
@@ -143,3 +144,10 @@ Follow the steps below for lazy loading implementation in a topic ([PR example](
 
 # <a name='#creating-shared-help-topics'>Creating shared help topics</a>
 [Here](https://github.com/IgniteUI/igniteui-docfx/wiki/Creating-Shared-Help-Topics) you can find the document which describes how to create a shared topic (template) which is used to produce separate topics for a particular features. For example shared templates for IgxGrid, IgxTreeGrid and/or IgxHierarchicalGrid components.
+
+# <a name='#updating-of-data-visualization-related-topics'>Updating of Data Visualization related topics</a>
+Our cross platform docs are in `internal repo`. 
+
+If you need to update the cross platform docs, please do so from `internal repo`), queue an Angular build from `AngularDocFX_EN` build definition in the `xplat-docfx` repository, and then approve the PR that will come into public repo from ESShared.
+
+- `internal repo` - "...tfs/engineering/IgInternalApplicationsGit/IgInternalApplicationsGit Team/_git/xplat-docfx"
