@@ -67,7 +67,7 @@ To inset the divider, set the `middle` attribute of the divider to `true` and pr
 <igx-divider inset="40px"></igx-divider>
 
 ```
-<div class="sample-container loading" style="height:339px">
+<div class="sample-container loading" style="height:311px">
     <iframe id="divider-sample-4-iframe" data-src='{environment:demosBaseUrl}/layouts/divider-sample-4' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
