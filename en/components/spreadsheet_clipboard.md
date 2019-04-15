@@ -18,7 +18,7 @@ This topic explains how to perform clipboard operations on the Ignite UI for Ang
 
 ### Dependencies
 
-Before making use of the clipboard you will want to import the SpreadsheetAction
+Before making use of the clipboard you will want to import the `SpreadsheetAction`:
 
 ```typescript
 import { IgxSpreadsheetComponent } from "igniteui-angular-spreadsheet/ES5/igx-spreadsheet-component";
@@ -29,7 +29,7 @@ import { SpreadsheetAction } from "igniteui-angular-spreadsheet/ES5/SpreadsheetA
 
 ### Usage
 
-The following snippt shows how you can setup the data validation rules
+The following code snippet shows how you can execute commands related to the clipboard in the `IgxSpreadsheet` control:
 
 ```typescript
 @ViewChild("spreadsheet", { read: IgxSpreadsheetComponent })

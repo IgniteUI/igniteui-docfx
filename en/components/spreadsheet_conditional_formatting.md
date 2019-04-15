@@ -6,15 +6,7 @@ _keywords: Spreadsheet, Ignite UI for Angular, Infragistics
 
 ## Spreadsheet Conditional Formatting
 
-The Angular Spreadsheet is a Angular component that allows visualizing and editing of spreadsheet data. Features include activation, cell editing, conditional formatting, selection, clipboard. 
-
-### Demo
-
-<div class="sample-container" style="height: 500px">
-    <iframe id="spreadsheet-overview-sample-iframe" src='{environment:demosBaseUrl}/spreadsheet/spreadsheet-cond-formatting' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-
-<div class="divider--half"></div>
+The Angular Spreadsheet component allows you conditionally format the cells of a worksheet. This allows you to highlight different pieces of your data based on a condition.
 
 ### Conditional Formatting Overview
 

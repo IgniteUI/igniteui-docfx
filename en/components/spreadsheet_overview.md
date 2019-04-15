@@ -6,7 +6,7 @@ _keywords: Spreadsheet, Ignite UI for Angular, Infragistics
 
 ## Angular Spreadsheet
 
-The Angular Spreadsheet is a Angular component that allows visualizing and editing of spreadsheet data. Features include activation, cell editing, conditional formatting, selection, clipboard. 
+The Angular Spreadsheet component allows visualizing and editing of spreadsheet data. Features include activation, cell editing, conditional formatting, selection, clipboard. 
 
 ### Demo
 
