@@ -9,13 +9,11 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <div class="divider"></div>
 
 ###Card Demo
-<div class="sample-container loading" style="height: 930px">
-    <iframe id="card-sample-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/layouts/card"
-        onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 690px">
+    <iframe id="card-sample-4-iframe" data-src='{environment:demosBaseUrl}/layouts/card-sample-4' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="card-sample-iframe"
-        data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="card-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
 
@@ -38,150 +36,258 @@ import { IgxCardModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-Then in the template of our info card component we can add the following code to display a basic card with a header area and brief text content.
+Then in the template of our first card component we can add the following code to display a card with a media image, header, content and actions area.
 
 ```html
-<!--infocard.component.html>-->
+<!--card.component.html>-->
 
 <igx-card>
-  <igx-card-header>
-    <h3 class="igx-card-header__title">Brad Stanley</h3>
-    <h5 class="igx-card-header__subtitle">Audi AG</h5>
-  </igx-card-header>
-  <igx-card-content>
-    <p class="igx-card-content__text">Brad Stanley (born 17 March 1963 in Titting, Germany) is a German business executive and chairman of the Vorstand (CEO) of Audi AG.</p>
-  </igx-card-content>
+    <igx-card-media height="196px">
+        <img [src]="https://images.unsplash.com/photo-1518235506717-e1ed3306a89b?ixlib=rb-1.2.1&auto=format&fit=crop&w=640&q=50">
+    </igx-card-media>
+
+    <igx-card-header>
+        <h3 igxCardHeaderTitle>New York</h3>
+        <h5 igxCardHeaderSubtitle>City in New York</h5>
+    </igx-card-header>
+
+    <igx-card-content>
+        <p>New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean. At its core is Manhattan, a densely populated borough that’s among the world’s major commercial, financial and cultural centers.</p>
+    </igx-card-content>
+
+    <igx-card-actions>
+        <button igxButton igxRipple>Read More</button>
+        <button igxButton="icon" igxRipple igxRippleCentered="true">
+            <igx-icon>favorite</igx-icon>
+        </button>
+        <button igxButton="icon" igxRipple igxRippleCentered="true">
+            <igx-icon>share</igx-icon>
+        </button>
+    </igx-card-actions>
 </igx-card>
 ```
 
 If all went well, you should see the following card in your browser:
-<div class="sample-container loading" style="height: 300px">
-    <iframe id="card-sample-1-iframe" data-src='{environment:demosBaseUrl}/card-sample-1' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+
+<div class="sample-container loading" style="height: 486px">
+    <iframe id="card-sample-0-iframe" data-src='{environment:demosBaseUrl}/layouts/card-sample-0' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="card-sample-0-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+
+You will notice a few things above. First when we want to _tag_ an elements as a header title, like the `h3` heading, we place it between the `igx-car-header` tags and attach the `igxCardHeaderTitle` directive to the element. Conversely, if we wanted to make another heading element a `subtitle` we would attach the `igxCardHeaderSubtitle` to it.
+
+Any image or video we want to show in the card, we wrap inside the `igx-card-media` tags. The `igx-card-media` allows us to size the content placed inside via the `width` and `height` attributes. In the example above we provided just `height`, which would leave the width to `auto`, thus allowing the image to stretch across the entire card surface, while maintaining the set height.
+
+You can place anything inside the `igx-card-content` tags. Usually text goes there.
+
+Finally, the `igx-card-actions` is where you'd place any actionable items, like buttons. If you use the `igxButton` directive on an element, it will automatically be placed correctly according to the material design spec inside the area.
+
+#### Media, Thumbs, and Avatars
+If you want to show an image or icon in the card header next to the title and subtitle, you can do it by using the `igxCardThumbnail` directive.
+
+Taking the card above as an example, we can edit the contents of the `igx-card-header` and add a `igxCardThumbnail` container to hold an icon:
+
+```html
+<igx-card-header>
+    <div igxCardThumbnail>
+        <igx-icon>place</igx-icon>
+    </div>
+    
+    <h3 igxCardHeaderTitle>Title</h3>
+    <h5 igxCardHeaderSubtitle>Subtitle</h5>
+</igx-card-header>
+```
+
+The above example will show the icon alongside the title and subtitle in the card header.
+
+We also automatically detect the presence of `igx-avatar` or `igx-card-media` placed in the card header. They will appear as if they were card thumbnails. So you can do:
+
+```html
+<igx-card-header>
+    <igx-avatar>
+        <igx-icon>place</igx-icon>
+    </igx-avatar>
+
+    <h3 igxCardHeaderTitle>Title</h3>
+    <h5 igxCardHeaderSubtitle>Subtitle</h5>
+</igx-card-header>
+```
+
+or, even this:
+
+```html
+<igx-card-header>
+    <igx-card-media width="40px" height="40px">
+        <img src="https://images.unsplash.com/photo-1518235506717-e1ed3306a89b?ixlib=rb-1.2.1&auto=format&fit=crop&w=80&q=50">
+    </igx-card-media>
+
+    <h3 igxCardHeaderTitle>Title</h3>
+    <h5 igxCardHeaderSubtitle>Subtitle</h5>
+</igx-card-header>
+```
+
+#### Outlined cards
+The card has a `type` attribute you can set to either `default` (set automatically if omitted), or `outlined`. The `outlined` type removes any shadows from the card, replacing them with a thin border to separate the card from the background.
+
+Here's an example of an outlined card:
+
+```html
+<!--outlined-card.component.html>-->
+<igx-card type="outlined">
+    <igx-card-header>
+        <igx-card-media width="64px" height="64px">
+            <img [src]="card.imageUrl">
+        </igx-card-media>
+
+        <h5 igxCardHeaderTitle>{{card.title}}</h5>
+        <h5 igxCardHeaderSubtitle>{{card.subtitle}}</h5>
+    </igx-card-header>
+
+    <igx-divider></igx-divider>
+
+    <igx-card-actions layout="justify">
+        <button *ngFor="let icon of card.icons;" igxButton="icon" igxRipple igxRippleCentered="true">
+            <igx-icon>{{icon}}</igx-icon>
+        </button>
+    </igx-card-actions>
+</igx-card>
+```
+
+At this point the card should look similar to the following:
+<div class="sample-container loading" style="height: 168px">
+    <iframe id="card-sample-1-iframe" data-src='{environment:demosBaseUrl}/layouts/card-sample-1' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="card-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-####Adding Avatar and Images
+#### Horizontal Layout
 
-Yes, Brad Stanley is popular, but maybe we want to make his card a bit more interesting. We can add a nice picture avatar to the left of his name and a larger Audi TT image. To do that let's grab the [**IgxAvatar**](avatar.md) module and import it in our **app.module.ts** file.
-```typescript
-// app.module.ts
+By default all sections of the card (header, content, media, actions) are layed out vertically. This is nice when we have a lot of vertical space. Say we wanted to lay out all the sections in the card horizontally. We can use the `horizontal` attribute of the card to set its layout.
 
-...
-import {
-    IgxCardModule,
-    IgxAvatarModule
-} from 'igniteui-angular';
-
-@NgModule({
-    ...
-    imports: [..., IgxAvatarModule],
-})
-export class AppModule {}
-```
-
-Next, we need to update the template for our card to show a round-shaped avatar and the actual car:
+Take a look at this example:
 
 ```html
-<!--infocard.component.html>-->
+<igx-card type="outlined" [horizontal]="horizontal">
+    <div igxLayout igxLayoutDir="column" igxFlex igxFlexGrow="1">
+        <igx-card-header>
+            <h5 igxCardHeaderTitle>{{card.title}}</h5>
+            <h5 igxCardHeaderSubtitle>{{card.subtitle}}</h5>
+            <igx-card-media width="64px" height="64px">
+                <img [src]="card.imageUrl">
+            </igx-card-media>
+        </igx-card-header>
 
-<igx-card>
-    <igx-card-header class="compact">
-        <igx-avatar src="assets/images/card/avatars/brad_stanley.jpg" roundShape="true"></igx-avatar>
-        <div class="igx-card-header__tgroup">
-            <h3 class="igx-card-header__title--small">Brad Stanley</h3>
-            <h5 class="igx-card-header__subtitle">Audi AG</h5>
-        </div>
-    </igx-card-header>
-    <div style="overflow: hidden">
-        <img width="100%" height="100%" src="assets/images/card/media/audi_tt.jpg">
+        <igx-card-content>
+            <p>{{card.content}}</p>
+        </igx-card-content>
     </div>
-    <igx-card-content>
-      <p class="igx-card-content__text">Brad Stanley (born 17 March 1963 in Titting, Germany) is a German business executive and chairman of the Vorstand (CEO) of Audi AG.</p>
-    </igx-card-content>
+
+    <igx-divider [vertical]="horizontal"></igx-divider>
+
+    <igx-card-actions layout="justify">
+        <button *ngFor="let icon of card.icons;" igxButton="icon" igxRipple igxRippleCentered="true">
+            <igx-icon>{{icon}}</igx-icon>
+        </button>
+    </igx-card-actions>
 </igx-card>
 ```
 
-At this point the card should look similar to the following:
-<div class="sample-container loading" style="height: 480px">
+We are using the `igxLayout` and `igxFlex` supporting directives to bundle the `igx-card-header` and `igx-card-content` together, keeping them aligned vertically, while other sections in the card align horizontally. 
+
+Notice how the buttons in the `igx-card-actions` have now switched to a `vertical` layout. The `igx-card-actions` has an `inverse` layout relationship with its parent. So whenever the card's `horizontal` attribute is set to `true` the actions `vertical` property will be set to `true` and vice versa.
+
+You can set the `vertical` attribute of he actions area explicitly, thus overriding this default behavior. 
+
+```html
+<igx-card-actions layout="justify" [vertical]="false">
+    <button *ngFor="let icon of card.icons;" igxButton="icon" igxRipple igxRippleCentered="true">
+        <igx-icon>{{icon}}</igx-icon>
+    </button>
+</igx-card-actions>
+```
+
+Here's how our horizontal card looks:
+
+<div class="sample-container loading" style="height: 202px">
     <iframe id="card-sample-2-iframe" data-src='{environment:demosBaseUrl}/layouts/card-sample-2' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="card-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-####Adding Actions
+#### Alternative layouts
 
-Now, we have a rich and very informative card, but it does seem like it is missing something, right? The good news is we can use some of our other components to enrich the experience and add some functionality.
-Let's put a few options to directly access social media from within the card. To do that we will grab two other modules - the [**IgxIcon**](icon.md) and the [**IgxButton**](button.md), and import them in our **app.module.ts** file.
+You can get even more creative with the layout of the `igx-card`.
 
-```typescript
-// app.module.ts
-
-...
-import {
-    IgxCardModule,
-    IgxAvatarModule,
-    IgxIconModule,
-    IgxButtonModule
-} from 'igniteui-angular';
-
-@NgModule({
-    ...
-    imports: [..., IgxIconModule, IgxButtonModule],
-})
-export class AppModule {}
-```
-
-Next, we need to update the template for our card to show these action buttons:
+Bellow is an example showing how you can create a semi-horizontal card, where we have every section of the card layed out vertically, while the `igx-card-media` appears alongside the vertical sections of the card.
 
 ```html
-<!--infocard.component.html>-->
+<igx-card [horizontal]="horizontal">
+    <div igxLayout igxLayoutDir="column" igxFlex igxFlexGrow="1">
+        <igx-card-header>
+            <igx-avatar [src]="card.avatarUrl"></igx-avatar>
+            <h5 igxCardHeaderTitle>{{card.title}}</h5>
+            <h5 igxCardHeaderSubtitle>{{card.subtitle}}</h5>
+        </igx-card-header>
 
-<igx-card>
-    <igx-card-header class="compact">
-        <igx-avatar src="assets/images/card/avatars/brad_stanley.jpg" roundShape="true"></igx-avatar>
-        <div class="igx-card-header__tgroup">
-            <h3 class="igx-card-header__title--small">Brad Stanley</h3>
-            <h5 class="igx-card-header__subtitle">Audi AG</h5>
-        </div>
-    </igx-card-header>
-    <div style="overflow: hidden">
-        <img width="100%" height="100%" src="assets/images/card/media/audi_tt.jpg">
+        <igx-card-content>
+            <p>{{card.content}}</p>
+        </igx-card-content>
+
+        <igx-card-actions [vertical]="false">
+            <button *ngFor="let button of card.buttons;" igxButton="flat" igxRipple>
+                {{button}}
+            </button>
+        </igx-card-actions>
     </div>
-    <igx-card-actions >
-        <div class="igx-card-actions__igroup--start">
-            <span igxButton="icon" igxRipple igxRippleCentered="true" *ngFor="let icon of icons">
-                <igx-icon fontSet="material">{{icon}}</igx-icon>
-            </span>
-        </div>
-        <button igxButton igxRipple >Follow</button>
-    </igx-card-actions>
+
+    <igx-card-media width="96px">
+        <img [src]="card.imageUrl">
+    </igx-card-media>
 </igx-card>
 ```
 
-We added two icons from the official [**material icons set**](https://material.io/icons/) by setting [`IgxIconComponent`]({environment:angularApiUrl}/classes/igxiconcomponent.html)'s [`fontSet`]({environment:angularApiUrl}/classes/igxiconcomponent.html#font) property to "material". The list of these two icons is defined in our **infocard.component.ts** file as follows:
-
-```typescript
-// infocard.comoponent.ts
-
-public icons = ['add', 'star'];
-```
-
-Easy, right? Let's see how it turned out in the browser:
-
-<div class="sample-container loading" style="height: 400px">
-    <iframe id="card-sample-3-iframe" seamless="" width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/layouts/card-sample-3" class="lazyload"></iframe>
+<div class="sample-container loading" style="height: 252px">
+    <iframe id="card-sample-3-iframe" data-src='{environment:demosBaseUrl}/layouts/card-sample-3' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"
-        data-iframe-id="card-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="card-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-<div class="divider--half"></div>
+#### Card Actions
 
-####Summary
+The card actions area allows additional configuration to what we have already mentioned.
+
+You can reverse order of the flat buttons and the button icons using the `reverse` attribute.
+
+```html
+<igx-card-actions [reverse]="true">
+    <button igxButton>Button</button>
+
+    <button igxButton="icon">
+        <igx-icon>star</igx-icon>
+    </button>
+</igx-card-actions>
+```
+
+Now the icon buttons will appear before the flat-style text buttons.
+
+You can also justify the buttons so that they are layed out across the entire axis, not at the opposite ends. To do that, use the `layout` attribute an set its value to `justify`, like below:
+
+```html
+<igx-card-actions layout="justify">
+    <button igxButton>Button</button>
+
+    <button igxButton="icon">
+        <igx-icon>star</igx-icon>
+    </button>
+</igx-card-actions>
+```
+
+#### Summary
 In this article we covered a lot of ground with the card component. First, we created a very simple card with text content only. Then added some images to make the card a bit more appealing. Finally, we used some additional Ignite UI for Angular components inside our card, like avatars, buttons and icons, to enrich the experience and add some functionality. The card component is capable of displaying more different layouts worth exploring in the Card Demo in the beginning of this article.
 
 ### API and Style References
@@ -198,6 +304,7 @@ Additional components and/or directives that were used:
 * [`IgxAvatarComponent`]({environment:angularApiUrl}/classes/igxavatarcomponent.html)
 * [`IgxIconComponent`]({environment:angularApiUrl}/classes/igxiconcomponent.html)
 * [`IgxButtonDirective`]({environment:angularApiUrl}/classes/igxbuttondirective.html)
+* [`IgxDividerDirective`]({environment:angularApiUrl}/classes/igxdividerdirective.html)
 
 Styles:
 
