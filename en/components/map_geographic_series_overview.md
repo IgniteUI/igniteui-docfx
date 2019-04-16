@@ -9,23 +9,21 @@ _keywords: map, Ignite UI for Angular, infragistics
 In the Ignite UI for Angular map component, geographic series are visual elements of the map that display geo-spatial data as points (e.g. locations of cities), polylines (e.g. road connections), or polygons (shape of countries) in a geographic context.
 The map component's `IgxSeriesComponent` property is a collection of geographic series objects. This property is used to support rendering an unlimited number of geographic series in the same plot area. When multiple geographic series objects are added to the `IgxSeriesComponent` property, each successive series will be layered on top of the previous series starting from the first to the last series. Therefore, geographic series can be better understood as map layers that can be stacked on top of each other and/or on top of geographic imagery.
 
-### Demo
-
-<div class="sample-container" style="height: 500px">
-    <iframe id="map-geographic-series-iframe" src='{environment:demosBaseUrl}/maps/map-geographic-series' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="map-geographic-series-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
-    </button>
-</div>
-
-<div class="divider--half"></div>
-
 All types of geographic series are always rendered on top of the geographic imagery tiles. However, sometimes geographic series (e.g. with detailed shape files of the world) might provide enough geographic contexts for an application and geographic imagery is not desired in the map control. 
 
 ### Code Snippet
 
 The code shows how to add the `GeographicShapeSeries` with the `ShapefileConverter` binding to the map component.
+
+<!-- Angular -->
+
+```html
+ TODO - ADD CODE SNIPPET
+```
+
+```typescript
+
+```
 
 ### Additional Resources
 

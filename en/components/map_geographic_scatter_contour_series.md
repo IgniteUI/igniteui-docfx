@@ -56,16 +56,16 @@ The following table list properties of the CustomPaletteColorScale affecting the
 | `MaximumValue` | double          | The highest value to assign a brush in a fill scale.                                             |
 | `MinimumValue` | double          | The lowest value to assign a brush in a fill scale.                                              |
 
-### Contour Value Resolver\`
-
-The `GeographicContourLineSeries` renders using exactly 10 contour lines at even intervals between the minimum and maximum values of the items mapped to the `ValueMemberPath` property. If you desire more or fewer contours, you can assign the LinearContourValueResolver with a number of contours to the `ValueResolver` property of the `GeographicContourLineSeries`.
-
-The following code shows how to configure the number of contour lines in the `GeographicContourLineSeries`
-
-To determine the position of contour lines in an application, implement the Custom value resolvers. This is accomplished by inheriting from the `ContourValueResolver` and overriding the `GetContourValues` method.
-
-The following code shows implementation of a custom contour value resolver that specifies contour lines at predefined positions.
-
 ### Code Snippet
 
 The following code shows how to bind the `GeographicContourLineSeries` to triangulation data representing precipitation over the United States.
+
+<!-- Angular -->
+
+```html
+ TODO - ADD CODE SNIPPET
+```
+
+```typescript
+
+```

@@ -51,3 +51,13 @@ The Heat Color Scale, an optional feature, determines the color pattern within t
 | `HeatMaximumColor` | Color  | Defines the point density color used at the top end of the color scale    |
 
 The following code demonstrates how set the `HeatMinimumColor` and `HeatMaximumColor` properties of the `GeographicHighDensityScatterSeries`
+
+<!-- Angular -->
+
+```html
+ TODO - ADD CODE SNIPPET
+```
+
+```typescript
+
+```

@@ -29,3 +29,13 @@ Similarly to other types of geographic series in the control, the `GeographicPol
 ### Code Snippet
 
 The following code shows how to bind the `GeographicPolylineSeries` to locations of cities loaded from a shape file using the `ShapefileConverter`.
+
+<!-- Angular -->
+
+```html
+ TODO - ADD CODE SNIPPET
+```
+
+```typescript
+
+```
