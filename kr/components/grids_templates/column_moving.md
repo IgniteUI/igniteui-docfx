@@ -11,6 +11,15 @@ Ignite UI for Angular 그리드 컴포넌트는 표준 드래그/드롭 마우�
 
 열 이동은 고정된 열에서도 작동합니다. 핀 고정 해제된 열을 드래그하여 핀 고정 영역 안으로 드롭하여 해당 열을 핀 고정시키거나, 반대로 핀 고정된 열을 드래그하여 핀 고정 영역 밖으로 드롭하여 해당 열을 핀 고정 해제할 수 있습니다.
 
+> [!NOTE]
+> If a header is retemplated and the corresponding column is movable (or groupable), you have to set the **draggable** attribute to **false** on the templated elements, so that you can handle any of the events that are applied!
+
+```html
+<ng-template igxHeader>
+    <igx-icon [attr.draggable]="false" (click)="onClick()"></igx-icon>
+</ng-template>
+```
+
 #### 데모
 
 <div class="sample-container loading" style="height:630px">
