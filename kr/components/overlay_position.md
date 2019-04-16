@@ -22,15 +22,12 @@ Position strategies determine where to display the component in the provided Igx
     | new Point(0, 0) | HorizontalAlignment.Right | VerticalAlignment.Bottom | HorizontalAlignment.Left | VerticalAlignment.Bottom |
 <div class="divider"></div>
 
-3. **Auto** - Positions the element as in **Connected** positioning strategy and re-positions the element in the view port (calculating a different start point) in case the element is partially out of view. Defaults to:
+3. **Auto** - Positions the element as in **Connected** positioning strategy and re-positions the element in the view port (calculating a different start point) in case the element is partially out of view. **Auto** strategy will try initially to show the element as **Connected** does. If element goes out of the view **Auto** will flip the start point and direction, e.g. if direction is bottom it will switch it to top and so on. If after flipping the element is still out of view **Auto** will use initial directions and start point and will push the element into view, e.g. if the element goes out with 50px in right direction **Auto** will push it with 50px to the left. If after this element is partially out of view, element is wider or higher than the view port, **Auto** will align element's left/top edge with view port's left/top edge. Defaults to:
 
     | target          | horizontalDirection       |  verticalDirection       | horizontalStartPoint     | verticalStartPoint       |
     |:----------------|:--------------------------|:-------------------------|:-------------------------|:-------------------------|
     | new Point(0, 0) | HorizontalAlignment.Right | VerticalAlignment.Bottom | HorizontalAlignment.Left | VerticalAlignment.Bottom |
 <div class="divider"></div>
-
-> [!NOTE]
-> Will not try to reposition the element if the strategy is using  HorizontalDirection = Center / VerticalDirection = Middle.
 
 4. **Elastic** - Positions the element as in **Connected** positioning strategy and re-sizes the element to fit inside of the view port (re-calculating width and/or height) in case the element is partially out of view. `minSize :{ width: number, height: number}` can be passed in `positionSettings` to prevent resizing if it would put the element dimensions below a certain threshold. Defaults to:
     | target          | horizontalDirection       |  verticalDirection       | horizontalStartPoint     | verticalStartPoint       | minSize               |
