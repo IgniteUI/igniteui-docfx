@@ -194,7 +194,7 @@ export class ExpansionPanelComponent {
 このコンポーネントは、パネルの縮小時と完全に展開した後に「更に表示」を描画します。
 ### コンテキストの追加
 
-コンポーネントの [`igx-expansion-panel-body`]({environment:angularApiUrl}/classes/igxexpansionpanelbodycomponent.htm) タグはすべてのマークアップを受け取り、`ng-content` プロジェクションですべてを描画します。[`IgxAvatar`](avatar.html) を使用して展開パネルのインナー コンテンツを更新できます。
+コンポーネントの [`igx-expansion-panel-body`]({environment:angularApiUrl}/classes/igxexpansionpanelbodycomponent.html) タグはすべてのマークアップを受け取り、`ng-content` プロジェクションですべてを描画します。[`IgxAvatar`](avatar.html) を使用して展開パネルのインナー コンテンツを更新できます。
 はじめに `IgxAvatarModule` を **app.module.ts** にインポートします。
 ```typescript
 // in app.module.ts
