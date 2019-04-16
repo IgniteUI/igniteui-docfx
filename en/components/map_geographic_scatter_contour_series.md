@@ -6,8 +6,7 @@ _keywords: map, Ignite UI for Angular, infragistics
 
 ## Using Scatter Contour Series
 
-In the Ignite UI for Angular map component, the `GeographicContourLineSeries` is a visual map element that draws colored contour lines, in a geographic context, based on a triangulation of longitude and latitude data with a numeric value assigned to each point.
-This type of geographic series is useful for rendering scattered data defined by geographic locations such as weather temperature, atmospheric pressure, precipitation, population distribution, topographic data, etc. The `GeographicContourLineSeries` works a lot like the `GeographicScatterAreaSeries` except that it represents data as contour lines, colored using a fill scale and the geographic scatter area series, represents data as a surface interpolated using a color scale.
+Use the map component's `GeographicContourLineSeries` to draw colored contour lines, in a geographic context, based on a triangulation of longitude and latitude data with a numeric value assigned to each point. This type of geographic series is useful for rendering scattered data defined by geographic locations such as weather temperature, atmospheric pressure, precipitation, population distribution, topographic data, etc.
 
 ### Demo
 
@@ -21,12 +20,11 @@ This type of geographic series is useful for rendering scattered data defined by
 
 <div class="divider--half"></div>
 
-The following table summarized data structures required for each type of geographic series :
+The `GeographicContourLineSeries` works a lot like the `GeographicScatterAreaSeries` except that it represents data as contour lines, colored using a fill scale and the geographic scatter area series, represents data as a surface interpolated using a color scale.
 
 ### Data Requirements
 
-Similar to other types of geographic series in the map component, the `GeographicContourLineSeries` has the `ItemsSource` property for data binding. This property can be bound to an object that implements an IEnumerable interface.
-In addition, each item in the items source must have three data columns, two that store geographic location (longitude and latitude coordinates) and one data column that stores a value associated with the geographic location. These data column, are identified by `LongitudeMemberPath`, `LatitudeMemberPath`, and `ValueMemberPath` properties of the geographic series.
+Similar to other types of geographic series in the map component, the `GeographicContourLineSeries` has the `ItemsSource` property which can be bound to an array of objects. In addition, each item in the items source must have three data columns, two that store geographic location (longitude and latitude coordinates) and one data column that stores a value associated with the geographic location. These data column, are identified by `LongitudeMemberPath`, `LatitudeMemberPath`, and `ValueMemberPath` properties of the geographic series.
 The `GeographicContourLineSeries` automatically performs built-in data triangulation on items in the ItemsSource if no triangulation is set to the `TrianglesSource` property. However, computing triangulation can be a very time-consuming process, so the runtime performance will be better when specifying a `TriangulationSource` for this property, especially when a large number of data items are present.
 
 ### Data Binding

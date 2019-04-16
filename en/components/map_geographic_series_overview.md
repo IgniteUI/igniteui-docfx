@@ -6,12 +6,14 @@ _keywords: map, Ignite UI for Angular, infragistics
 
 ## Geographic Series
 
-In the Ignite UI for Angular map component, geographic series are visual elements of the map that display geo-spatial data as points (e.g. locations of cities), polylines (e.g. road connections), or polygons (shape of countries) in a geographic context.
+In the Ignite UI for Angular Map component, geographic series are visual elements of the map that display geo-spatial data as points (e.g. locations of cities), polylines (e.g. road connections), or polygons (shape of countries) in a geographic context.
 The map component's `IgxSeriesComponent` property is a collection of geographic series objects. This property is used to support rendering an unlimited number of geographic series in the same plot area. When multiple geographic series objects are added to the `IgxSeriesComponent` property, each successive series will be layered on top of the previous series starting from the first to the last series. Therefore, geographic series can be better understood as map layers that can be stacked on top of each other and/or on top of geographic imagery.
 
 All types of geographic series are always rendered on top of the geographic imagery tiles. However, sometimes geographic series (e.g. with detailed shape files of the world) might provide enough geographic contexts for an application and geographic imagery is not desired in the map control.
 
 ### Type of Geographic Series
+
+The Geographic Map component supports the following typs of geographic series:
 
 -   [Using Scatter Symbol Series](map_geographic_scatter_symbol_series.md)
 -   [Using Scatter Proportional Series](map_geographic_scatter_proportional_series.md)
@@ -20,4 +22,3 @@ All types of geographic series are always rendered on top of the geographic imag
 -   [Using Scatter Area Series](map_geographic_scatter_area_series.md)
 -   [Using Shape Polygon Series](map_geographic_shape_polygon_series.md)
 -   [Using Shape Polyline Series](map_geographic_shape_polyline_series.md)
--   [Using Multiple Series](map_binding_multiple_data_source.md)

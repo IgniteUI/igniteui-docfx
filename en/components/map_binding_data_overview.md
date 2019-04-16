@@ -4,7 +4,7 @@ _description: The Map allows you to display data that contains geographic locati
 _keywords: map, Ignite UI for Angular, infragistics
 ---
 
-## Data Binding Overview
+## Data Binding
 
 The Ignite UI for Angular map component is designed to display geo-spatial data from shape files and/or geographic locations from data models on geographic imagery maps. The `ItemsSource` property of geographic series is used for the purpose of binding to data models.
 

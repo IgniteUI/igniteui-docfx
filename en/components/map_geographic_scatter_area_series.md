@@ -6,8 +6,7 @@ _keywords: map, Ignite UI for Angular, infragistics
 
 ## Using Scatter Area Series
 
-In the Ignite UI for Angular map component, the `GeographicScatterAreaSeries` is a visual map element that draws a colored surface, in a geographic context, based on a triangulation of longitude and latitude data with a numeric value assigned to each point.
-This type of geographic series is useful for rendering scattered data, defined by geographic locations such as weather temperature, precipitation, population distribution, air pollution, etc. The `GeographicScatterAreaSeries` works a lot like the `GeographicContourLineSeries` except that it represents data as interpolated and colored surface instead of contour lines connecting data points with the same values.
+Use the map component's `GeographicScatterAreaSeries` to draw a colored surface, in a geographic context, based on a triangulation of longitude and latitude data with a numeric value assigned to each point. This type of geographic series is useful for rendering scattered data, defined by geographic locations such as weather temperature, precipitation, population distribution, air pollution, etc.
 
 ### Demo
 
@@ -21,10 +20,11 @@ This type of geographic series is useful for rendering scattered data, defined b
 
 <div class="divider--half"></div>
 
+The `GeographicScatterAreaSeries` works a lot like the `GeographicContourLineSeries` except that it represents data as interpolated and colored surface instead of contour lines connecting data points with the same values.
+
 ### Data Requirements
 
-Similar to other types of geographic series in the map component, the `GeographicScatterAreaSeries` has the `ItemsSource` property for the purpose of data binding. This property can be bound to an object that implements an IEnumerable interface.
-In addition, each item in the items source must have three data columns, two that store a geographic longitude and latitude coordinates and one data column that stores a value associated with the geographic location. The `LongitudeMemberPath`, `LatitudeMemberPath`, and `ColorMemberPath` properties of the geographic series identify these data column.
+Similar to other types of geographic series in the map component, the `GeographicScatterAreaSeries` has the `ItemsSource` property which can be bound to an array of objects. In addition, each item in the items source must have three data columns, two that store a geographic longitude and latitude coordinates and one data column that stores a value associated with the geographic location. The `LongitudeMemberPath`, `LatitudeMemberPath`, and `ColorMemberPath` properties of the geographic series identify these data column.
 The `GeographicScatterAreaSeries` automatically performs built-in data triangulation on items in the ItemsSource if no triangulation is set to the `TrianglesSource` property. However, computing triangulation can be a very time-consuming process, so the runtime performance will be better when specifying a TriangulationSource for this property, especially when a large number of data items are present.
 
 ### Data Binding

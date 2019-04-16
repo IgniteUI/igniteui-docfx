@@ -6,7 +6,7 @@ _keywords: map, Ignite UI for Angular, infragistics
 
 ## Using Shape Polygon Series
 
-The `GeographicShapeSeries` is a visual map element that displays geo-spatial data using shape polygons in a geographic context. This type of geographic series is often used to render shapes of countries or regions defined by geographic locations.
+Use the map component's `GeographicShapeSeries` to display geo-spatial data using shape polygons in a geographic context. This type of geographic series is often used to render shapes of countries or regions defined by geographic locations.
 
 ### Demo
 
@@ -20,13 +20,11 @@ The `GeographicShapeSeries` is a visual map element that displays geo-spatial da
 
 <div class="divider--half"></div>
 
-The demo above shows the `GeographicShapeSeries` plotting countries of the world.
-
 The `GeographicShapeSeries` works a lot like the `GeographicPolylineSeries` except that geo-spatial data is rendered with polygons instead of polylines.
 
 ### Data Requirements
 
-Similar to other types of geographic series in the map control, the `GeographicShapeSeries` has the `ItemsSource` property for the purpose of data binding. This property can be bound to an object that implements IEnumerable interface. In addition, each item in this object must have one data column that stores geographic locations (longitude and latitude) of a shape using the IEnumerable<Point> or IEnumerable&lt;IEnumerable<Point>> structure. The latter is the standard data structure used by shape files and the `ShapeDataSource` class. This data column is then mapped to the `ShapeMemberPath` property. The `GeographicShapeSeries` uses points of this mapped data column to plot polygons in the map control.
+Similar to other types of geographic series in the map control, the `GeographicShapeSeries` has the `ItemsSource` property which can be bound to an array of objects. In addition, each data item in this object must have one data column that stores single/multiple shapes using an array of arrays of objects with x and y values representing geographic locations. This data column is then mapped to the `ShapeMemberPath` property. The `GeographicShapeSeries` uses points of this mapped data column to plot polygons in the map control.
 
 ### Code Snippet
 

@@ -6,7 +6,7 @@ _keywords: map, Ignite UI for Angular, infragistics
 
 ## Using Shape Polyline Series
 
-In the Ignite UI for Angular map component, the `GeographicPolylineSeries` is a visual map element that displays geo-spatial data using polylines in a geographic context. This type of geographic series is often used to render roads or connections between geographic locations such as cities or airports. The `GeographicPolylineSeries` works a lot like the `GeographicShapeSeries` except that geo-spatial data is rendered with polylines instead of polygons.
+Use the map component's `GeographicPolylineSeries` to display geo-spatial data using polylines in a geographic context. This type of geographic series is often used to render roads or connections between geographic locations such as cities or airports.
 
 ### Demo
 
@@ -20,11 +20,11 @@ In the Ignite UI for Angular map component, the `GeographicPolylineSeries` is a 
 
 <div class="divider--half"></div>
 
-The following table summarized data structures required for each type of geographic series :
+The `GeographicPolylineSeries` works a lot like the `GeographicShapeSeries` except that geo-spatial data is rendered with polylines instead of polygons.
 
 ### Data Requirements
 
-Similarly to other types of geographic series in the control, the `GeographicPolylineSeries` has the `ItemsSource` property for the purpose of data binding. This property can be bound to an object that implements the IEnumerable interface (e.g. List, Collection, Queue, Stack). In addition, each item in this object must have one data column that stores geographic locations (longitude and latitude) of connected items using the IEnumerable<Point> or IEnumerable&lt;IEnumerable<Point>> structure. The latter is the standard data structure used by shape files and the `ShapeDataSource` object. This data column is then mapped to the ShapeMemberPath property. The `GeographicPolylineSeries` uses points of this mapped data column to plot polygons in the control.
+Similarly to other types of geographic series in the control, the `GeographicPolylineSeries` has the `ItemsSource` property which can be bound to an array of objects. In addition, each data item in this object must have one data column that stores single/multiple shapes using an array of arrays of objects with x and y values representing geographic locations. This data column is then mapped to the ShapeMemberPath property. The `GeographicPolylineSeries` uses points of this mapped data column to plot polygons in the control.
 
 ### Code Snippet
 

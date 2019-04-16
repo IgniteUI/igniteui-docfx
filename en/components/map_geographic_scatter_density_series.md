@@ -6,7 +6,7 @@ _keywords: map, Ignite UI for Angular, infragistics
 
 ## Using Scatter High Density Series
 
-Use the map component's `GeographicHighDensityScatterSeries` series to bind and show scatter data ranging from hundreds to millions of data points requiring exceedingly little loading time.
+Use the map component's `GeographicHighDensityScatterSeries` to bind and show scatter data ranging from hundreds to millions of data points requiring exceedingly little loading time.
 
 ### Demo
 
@@ -26,8 +26,7 @@ Because there are so many data points, the series displays the scatter data as t
 
 ### Data Requirements
 
-Similar to other types of scatter series in the map control, the `GeographicHighDensityScatterSeries` series has the `ItemsSource` property for data binding. This property can be bound to objects implementing an IEnumerable interface.
-In addition, each item in the items source must have two data columns that store geographic longitude and latitude coordinates and uses the `LongitudeMemberPath` and `LatitudeMemberPath` properties to map these data columns.
+Similar to other types of scatter series in the map control, the `GeographicHighDensityScatterSeries` series has the `ItemsSource` property which can be bound to an array of objects. In addition, each data item in the items source must have two data columns that store geographic longitude and latitude coordinates and uses the `LongitudeMemberPath` and `LatitudeMemberPath` properties to map these data columns.
 
 #### Data Binding
 
