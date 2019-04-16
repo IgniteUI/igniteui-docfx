@@ -8,7 +8,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 <p class="highlight">[The Ignite UI for Angular Drop Down](drop_down.md) can fully integrate usage of the [IgxForOf directive](for_of.md) in order to display a very large list of items for its selection</p>
 
-<div class="sample-container loading" style="height:220px">
+<div class="sample-container loading" style="height:320px">
     <iframe id="dropdown-virtual-iframe" src='{environment:demosBaseUrl}/data-entries/dropdown-virtual' width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -81,9 +81,9 @@ Inside of our component's `constructor`, we'll declare a moderately large list o
 export class DropDownVirtualComponent {
   public items: DataItem[];
   public itemHeight = 48;
-  public itemsMaxHeight = 480;
+  public itemsMaxHeight = 320;
 
-  constructor(protected cdr: ChangeDetectorRef) {
+  constructor() {
     const itemsCollection: DataItem[] = [];
     for (let i = 0; i < 50; i++) {
         const series = (i * 10).toString();
@@ -114,7 +114,7 @@ The last (but very important) part of the configuration happens inside of our co
 ```scss
     .drop-down-virtual-wrapper {
         overflow: hidden;
-        height: 480px;
+        height: 320px;
         width: 240px;
     }
 ```
@@ -125,11 +125,122 @@ Here, we can also pass the style for `height` (but we already did so in the temp
 
 You can view the configured example below:
 
-<div class="sample-container loading" style="height:220px">
+<div class="sample-container loading" style="height:320px">
     <iframe id="dropdown-virtual-iframe" src='{environment:demosBaseUrl}/data-entries/dropdown-virtual' width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dropdown-virtual-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
+
+## Remote Data
+The `igx-drop-down` supports loading chunks of remote data using `igxFor` directive. The configuration is similar to the one using `igxFor` with local items and the main difference is handling the loading of different chunk, as well as 
+
+### Template
+The drop-down template does not need to change much compared to the [previous example](#configuration): We still need to specify a wrapping div, style it accordingly and write out the complete configuration for the `*igxFor`. Since we'll be getting our data from a remote source, we need to specify that our data will be an observable and pass it through Angular's `async` pipe:
+
+```html
+<igx-drop-down #remoteDropDown>
+    <div class="drop-down-virtual-wrapper">
+        <igx-drop-down-item
+            *igxFor="let item of remoteData | async; index as index; scrollOrientation: 'vertical'; containerSize: itemsMaxHeight; itemSize: itemHeight;"
+            [value]="item" role="option" [disabled]="item.disabled" [index]="index">
+            {{ item.ProductName }}
+        </igx-drop-down-item>
+    </div>
+</igx-drop-down>
+```
+
+### Handling chunk load
+As you can see, the template is almost identical to the one in the previous example. In this remote data scenario, the code behind will do most of the heavy lifting.
+
+First, we need to define a remote service for fetching data:
+```typescript
+// remote.service.ts
+
+import { HttpClient } from "@angular/common/http";
+import { Injectable } from "@angular/core";
+import { IForOfState } from "igniteui-angular";
+import { BehaviorSubject, Observable } from "rxjs";
+
+@Injectable()
+export class RemoteService {
+    public remoteData: Observable<any[]>;
+    private _remoteData: BehaviorSubject<any[]>;
+
+    constructor(private http: HttpClient) {
+        this._remoteData = new BehaviorSubject([]);
+        this.remoteData = this._remoteData.asObservable();
+    }
+
+    public getData(data?: IForOfState, cb?: (any) => void): any {
+        // Use the current virtualization state of the drop-down and fetch data for it accordingly
+    }
+```
+
+The service exposes an `Observable` under `remoteData`. We will Inject our service and bind to that property in our remote drop-down component:
+
+```typescript
+// remote-drop-down.component.ts
+@Component({
+    providers: [RemoteService],
+    selector: "app-drop-down-remote",
+    templateUrl: "./drop-down-remote.component.html",
+    styleUrls: ["./drop-down-remote.component.scss"]
+})
+export class DropDownRemoteComponent implements OnInit, OnDestroy {
+    @ViewChild("remoteDropDown", { read: IgxDropDownComponent })
+    public remoteDropDown: IgxDropDownComponent;
+    public itemHeight = 48;
+    public itemsMaxHeight = 480;
+    public prevRequest: Subscription;
+    public rData: any;
+
+    private destroy$ = new Subject();
+    constructor(private remoteService: RemoteService) { }
+
+    public ngAfterViewInit() {
+        const initialState = { startIndex: 0, chunkSize: Math.ceil(this.itemsMaxHeight / this.itemHeight) }
+        this.remoteService.getData(initialState, (data) => {
+            this.remoteDropDown.virtDir.totalItemCount = data["@odata.count"];
+        });
+        // Subscribe to igxForOf.onChunkPreload and load new data from service
+        this.remoteDropDown.virtDir.onChunkPreload.pipe(takeUntil(this.destroy$)).subscribe((data) => {
+            this.dataLoading(data);
+        });
+    }
+
+    public dataLoading(evt) {
+        if (this.prevRequest) {
+            this.prevRequest.unsubscribe();
+        }
+        this.prevRequest = this.remoteService.getData(
+            evt,
+            (data) => {
+                this.remoteDropDown.virtDir.totalItemCount = data["@odata.count"];
+            });
+    }
+
+    public ngOnInit() {
+        this.rData = this.remoteService.remoteData;
+    }
+
+    public ngOnDestroy() {
+        this.destroy$.next();
+        this.destroy$.complete();
+    }
+}
+```
+Inside of the `ngAfterViewInit` hook, we call to get data for the initial state and subscribe to the `igxForOf` directive's [`onChunkPreload`]({environment:angularApiUrl}/classes/igxforofdirective.html#onchunkpreload) emitter. This subscription will be responsible for fetching data everytime the loaded chunk changes. We use `pipe(takeUntil(this.destroy$))` so we can easily unsubscribe from the emitter on component destroy.
+
+### Remote Virtualization - Demo
+The result of the above configuration is a drop-down that dynamically loads the data in should display, depending on the scrollbar's state. You can view the demo and play around with the configuration below:
+
+<div class="sample-container loading" style="height:400px">
+    <iframe id="dropdown-remote-iframe" src='{environment:demosBaseUrl}/data-entries/dropdown-remote' width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dropdown-remote-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
 
@@ -149,6 +260,7 @@ Using the drop down with a virtualized list of items enforce some limitations. P
  }
  ```
  - `dropdown.setSelectedItem` should be called with the **item's index in the data set**
+ - setting the drop-down item's `[selected]` input will **not** mark the item in the drop-down selection
 
 ## API References
 
