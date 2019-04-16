@@ -1,10 +1,10 @@
 ---
 title: Map | Data Visualization Tools | Ignite UI for Angular | Contour Line Series | Infragistics
-_description: The Map allows you to display data that contains geographic locations from view models or geo-spatial data loaded from shape files on geographic imagery maps.View the demo, dependencies, usage and toolbar for more information. 
+_description: The Map allows you to display data that contains geographic locations from view models or geo-spatial data loaded from shape files on geographic imagery maps.View the demo, dependencies, usage and toolbar for more information.
 _keywords: map, Ignite UI for Angular, infragistics
 ---
 
-## Contour Line Series
+## Using Scatter Contour Series
 
 In the Ignite UI for Angular map component, the `GeographicContourLineSeries` is a visual map element that draws colored contour lines, in a geographic context, based on a triangulation of longitude and latitude data with a numeric value assigned to each point.
 This type of geographic series is useful for rendering scattered data defined by geographic locations such as weather temperature, atmospheric pressure, precipitation, population distribution, topographic data, etc. The `GeographicContourLineSeries` works a lot like the `GeographicScatterAreaSeries` except that it represents data as contour lines, colored using a fill scale and the geographic scatter area series, represents data as a surface interpolated using a color scale.
@@ -12,10 +12,10 @@ This type of geographic series is useful for rendering scattered data defined by
 ### Demo
 
 <div class="sample-container" style="height: 500px">
-    <iframe id="map-geographic-contour-line-series-iframe" src='{environment:demosBaseUrl}/maps/map-geographic-contour-line-series' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="geo-map-type-scatter-contour-series-iframe" src='{environment:demosBaseUrl}/maps/geo-map-type-scatter-contour-series' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="map-geographic-contour-line-series-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="geo-map-type-scatter-contour-series-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
     </button>
 </div>
 
@@ -35,11 +35,11 @@ The following table summarizes properties of `GeographicContourLineSeries` used 
 
 | Property Name               | Property Type | Description                                                                                                                                                                                                                                                      |
 | --------------------------- | ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `ItemsSource`               | IEnumerable   | Gets or sets the source of items to perform triangulation on if the TrianglesSource property provides no triangulation data.                                                                                                                                     |
-| `TrianglesSource`           | IEnumerable   | Gets or sets the source of triangulation data. Setting Triangles of the TriangulationSource object to this property improves both runtime performance and geographic series rendering.                                                                           |
-| `LongitudeMemberPath`       | string        | The name of the property containing the Longitude for each item in the ItemsSource.                                                                                                                                                                              |
-| `LatitudeMemberPath`        | string        | The name of the property containing the Latitude for each item in the ItemsSource.                                                                                                                                                                               |
-| `ValueMemberPath`           | string        | The name of the property on each data item containing a numeric value which can be converted to a brush by a fill scale set to the FillScale property.                                                                                                           |
+| `ItemsSource`               | any           | The source of data items to perform triangulation on if the `TrianglesSource` property provides no triangulation data.                                                                                                                                           |
+| `LongitudeMemberPath`       | string        | The name of the property containing the Longitude for all items bound to the `ItemsSource`.                                                                                                                                                                      |
+| `LatitudeMemberPath`        | string        | The name of the property containing the Latitude for all items bound to to the `ItemsSource`.                                                                                                                                                                    |
+| `ValueMemberPath`           | string        | The name of the property containing a value at Latitude and Longitude coordinates of each data item. This numeric value will be be converted to a color when the `FillScale` property is set.                                                                    |
+| `TrianglesSource`           | any           | Gets or sets the source of triangulation data. Setting Triangles of the TriangulationSource object to this property improves both runtime performance and geographic series rendering.                                                                           |
 | `TriangleVertexMemberPath1` | string        | The name of the property of the TrianglesSource items which, for each triangle, contains the index of the first vertex point in the ItemsSource. It is not mandatory to set this property. It is taken by default unless custom triangulation logic is provided. |
 | `TriangleVertexMemberPath2` | string        | The name of the property of the TrianglesSource items which, for each triangle, contains the index of the first vertex point in the ItemsSource. It is not mandatory to set this property. It is taken by default unless custom triangulation logic is provided. |
 | `TriangleVertexMemberPath3` | string        | The name of the property of the TrianglesSource items which, for each triangle, contains the index of the first vertex point in the ItemsSource. It is not mandatory to set this property. It is taken by default unless custom triangulation logic is provided. |
@@ -63,7 +63,7 @@ The following code shows how to bind the `GeographicContourLineSeries` to triang
 <!-- Angular -->
 
 ```html
- TODO - ADD CODE SNIPPET
+TODO - ADD CODE SNIPPET
 ```
 
 ```typescript

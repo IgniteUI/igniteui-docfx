@@ -1,6 +1,6 @@
 ---
-title: Map | Data Visualization Tools | Ignite UI for Angular | Geogrpahich Data Models | Infragistics
-_description: The Map allows you to display data that contains geographic locations from view models or geo-spatial data loaded from shape files on geographic imagery maps.View the demo, dependencies, usage and toolbar for more information. 
+title: Map | Data Visualization Tools | Ignite UI for Angular | Geographic Data Models | Infragistics
+_description: The Map allows you to display data that contains geographic locations from view models or geo-spatial data loaded from shape files on geographic imagery maps.View the demo, dependencies, usage and toolbar for more information.
 _keywords: map, Ignite UI for Angular, infragistics
 ---
 
@@ -11,10 +11,10 @@ The Ignite UI for Angular map component is designed to display geo-spatial data 
 ### Demo
 
 <div class="sample-container" style="height: 500px">
-    <iframe id="map-data-binding-iframe" src='{environment:demosBaseUrl}/maps/map-data-binding' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="geo-map-binding-data-model-iframe" src='{environment:demosBaseUrl}/maps/geo-map-binding-data-model' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="map-data-binding-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="geo-map-binding-data-model-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
     </button>
 </div>
 
