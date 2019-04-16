@@ -4,11 +4,11 @@ _description: Use the category chart component to analyze and  automatically cho
 _keywords: category chart, Ignite UI for Angular, infragistics 
 ---
 
-# Category Chart
+## Category Chart
 
 The category chart component is a Ignite UI for Angular charting component that makes visualizing category data easy to do. The control simplifies the complexities of the data visualization domain into manageable API.
 
-## Demo
+### Demo
 
 <div class="sample-container" style="height: 500px">
     <iframe id="category-chart-overview-iframe" src='{environment:demosBaseUrl}/charts/category-chart-overview' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -39,7 +39,7 @@ However, you can also explicitly specify the chart type by setting the `ChartTyp
 
 Another example of the intuitive behavior of the category chart component is that you do not need to explicitly set the labels. The category chart will use the first appropriate string property that it finds within the data you provided and will use that for the labels.
 
-## Dependencies
+### Dependencies
 
 When installing the chart package, the core package must also be installed.
 
@@ -70,7 +70,7 @@ It's also possible to load a more minimal configuration of category chart whereb
 
 <div class="divider--half"></div>
 
-## Usage
+### Usage
 
 Now that the category chart module is imported, next step is to bind it to data.
 
@@ -97,7 +97,7 @@ The following code demonstrates how to bind the category chart to the above data
 
 <div class="divider--half"></div>
 
-## Chart Types
+### Chart Types
 
 You can override the default behavior of the category chart and set which type of chart should be displayed. This is done by setting the `ChartType` property.
 Below are listed all of the types that the category chart supports.
@@ -105,7 +105,7 @@ Below are listed all of the types that the category chart supports.
 > [!NOTE]
 > Special case is the `Auto` setting of that property. If `Auto` is used the chart will analyze assigned data and will assign the most suitable chart type.
 
-## Supported chart types
+### Supported chart types
 
 | Property             | Description                                                                        | Example                                      |
 | -------------------- | ---------------------------------------------------------------------------------- | -------------------------------------------- |

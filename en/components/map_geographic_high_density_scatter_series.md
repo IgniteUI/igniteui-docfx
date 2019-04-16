@@ -4,17 +4,17 @@ _description: The Map allows you to display data that contains geographic locati
 _keywords: map, Ignite UI for Angular, infragistics
 ---
 
-## Map
+## High Density Scatter Series
 
-Use the map component's GeographicHighDensityScatterSeries series to bind and show scatter data ranging from hundreds to millions of data points requiring exceedingly little loading time.
+Use the map component's `GeographicHighDensityScatterSeries` series to bind and show scatter data ranging from hundreds to millions of data points requiring exceedingly little loading time.
 
 ### Demo
 
 <div class="sample-container" style="height: 500px">
-    <iframe id="map-geographic_high_density_scatter_series-iframe" src='{environment:demosBaseUrl}/maps/map-geographic_high_density_scatter_series' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="geo-map-scatter-density-series-iframe" src='{environment:demosBaseUrl}/maps/geo-map-scatter-density-series' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="map-geographic_high_density_scatter_series-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="geo-map-scatter-density-series-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
     </button>
 </div>
 
@@ -43,10 +43,11 @@ The following table summarizes the GeographicHighDensityScatterSeries series pro
 
 The Heat Color Scale, an optional feature, determines the color pattern within the series. The following table summarizes the properties used for determining the color scale.
 
-Property |Type|Description
-`HeatMinimum`|Double|Defines the double value representing the minimum end of the color scale
-`HeatMaximum`|Double|Defines the double value representing the maximum end of the color scale
-`HeatMinimumColor`|Color|Defines the point density color used at the bottom end of the color scale
-`HeatMaximumColor`|Color|Defines the point density color used at the top end of the color scale
+| Property           | Type   | Description                                                               |
+| ------------------ | ------ | ------------------------------------------------------------------------- |
+| `HeatMinimum`      | Double | Defines the double value representing the minimum end of the color scale  |
+| `HeatMaximum`      | Double | Defines the double value representing the maximum end of the color scale  |
+| `HeatMinimumColor` | Color  | Defines the point density color used at the bottom end of the color scale |
+| `HeatMaximumColor` | Color  | Defines the point density color used at the top end of the color scale    |
 
-The following code demonstrates how set the `HeatMinimumColor` and `HeatMaximumColor` properties of the GeographicHighDensityScatterSeries 
+The following code demonstrates how set the `HeatMinimumColor` and `HeatMaximumColor` properties of the `GeographicHighDensityScatterSeries`
