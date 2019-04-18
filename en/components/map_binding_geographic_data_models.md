@@ -10,7 +10,7 @@ The Ignite UI for Angular map component is designed to display geo-spatial data 
 
 ### Demo
 
-<div class="sample-container" style="height: 500px">
+<div class="sample-container" style="height: 400px">
     <iframe id="geo-map-binding-data-model-iframe" src='{environment:demosBaseUrl}/maps/geo-map-binding-data-model' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -27,11 +27,11 @@ The following table summarized data structures required for each type of geograp
 | `GeographicSymbolSeries`             | `LongitudeMemberPath`, `LatitudeMemberPath`                     | Specifies names of 2 numeric longitude and latitude coordinates                                                                                                                                    |
 | `GeographicHighDensityScatterSeries` | `LongitudeMemberPath`, `LatitudeMemberPath`                     | Specifies names of 2 numeric longitude and latitude coordinates                                                                                                                                    |
 | `GeographicProportionalSymbolSeries` | `LongitudeMemberPath`, `LatitudeMemberPath`, `RadiusMemberPath` | Specifies names of 2 numeric longitude and latitude coordinates and 1 numeric column for size/radius of symbols                                                                                    |
-| `GeographicScatterAreaSeries`        | `LongitudeMemberPath`, `LatitudeMemberPath`, `ColorMemberPath`  | Specifies names of 2 numeric longitude and latitude coordinates and 1 numeric column for trinagulation of values                                                                                   |
-| `GeographicContourLineSeries`        | `LongitudeMemberPath`, `LatitudeMemberPath`, `ValueMemberPath`  | Specifies names of 2 numeric longitude and latitude coordinates and 1 numeric column for trinagulation of values                                                                                   |
+| `GeographicScatterAreaSeries`        | `LongitudeMemberPath`, `LatitudeMemberPath`, `ColorMemberPath`  | Specifies names of 2 numeric longitude and latitude coordinates and 1 numeric column for triangulation of values                                                                                   |
+| `GeographicContourLineSeries`        | `LongitudeMemberPath`, `LatitudeMemberPath`, `ValueMemberPath`  | Specifies names of 2 numeric longitude and latitude coordinates and 1 numeric column for triangulation of values                                                                                   |
 | `GeographicShapeSeries`              | `ShapeMemberPath`                                               | Specifies the name of data column of `ItemsSource` items that contains the geographic points of shapes. This property must be mapped to an array of arrays of objects with x and y properties.     |
 | `GeographicPolylineSeries`           | `ShapeMemberPath`                                               | Specifies the name of data column of `ItemsSource` items that contains the geographic coordinates of lines. This property must be mapped to an array of arrays of objects with x and y properties. |
 
 ### Code Snippet
 
-The following code shows how to bind the `GeographicSymbolSeries` to a custom data model that contains geographic locations of some cities of the world stored using longitude and latitude coordinates. Also, we use the `GeographicPolylineSeries` to plot shortest geographic path between these locations.
+The following code shows how to bind the `GeographicSymbolSeries` to a custom data model that contains geographic locations of some cities of the world stored using longitude and latitude coordinates. Also, we use the `GeographicPolylineSeries` to plot shortest geographic path between these locations using the [WorldUtility](map_resources_world_util.md)

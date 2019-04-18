@@ -6,12 +6,12 @@ _keywords: map, Ignite UI for Angular, infragistics
 
 ## Binding Imagery from Open Street Maps
 
-The Open Street Maps is a free geographic imagery mapping service created collaboratively by OpenStreetMap© contributors from around the world. It provides geographic imagery tiles of the world only in road map style without any configuration options. This geographic imagery service can be accessed directly on www.openstreetmap.org web site.
+The Open Street Maps is a free geographic imagery mapping service created collaboratively by OpenStreetMap© contributors from around the world. It provides geographic imagery tiles of the world only in road map style without any configuration options. This geographic imagery service can be accessed directly on <a href="http://www.openstreetmap.org" target="_blank">www.OpenStreetMap.org</a> web site.
 By the default, the Ignite UI for Angular map component displays geographic imagery from the Open Street Maps in the map background content using the OpenStreetMapImagery class. Therefore, there is no need to configure the control to display geographic imagery from the Open Street Maps.
 
 ### Demo
 
-<div class="sample-container" style="height: 500px">
+<div class="sample-container" style="height: 400px">
     <iframe id="geo-map-binding-osm-imagery-iframe" src='{environment:demosBaseUrl}/maps/geo-map-binding-osm-imagery' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>

@@ -6,12 +6,11 @@ _keywords: map, Ignite UI for Angular, infragistics
 
 ## Binding Shape Files with Geo-spatial Data
 
-The Ignite UI for Angular map component, the `ShapeDataSource` class loads geo-spatial data from shape files and converts it to a collection of ShapefileRecord objects.
-The following table explains properties of the `ShapeDataSource` class for loading shape files.
+The Ignite UI for Angular map component, the `ShapeDataSource` class loads geo-spatial data (points/locations, polylines, polygons) from shape files and converts it to a collection of `ShapefileRecord` objects.
 
 ### Demo
 
-<div class="sample-container" style="height: 500px">
+<div class="sample-container" style="height: 400px">
     <iframe id="geo-map-binding-shp-polylines-iframe" src='{environment:demosBaseUrl}/maps/geo-map-binding-shp-polylines' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -21,20 +20,22 @@ The following table explains properties of the `ShapeDataSource` class for loadi
 
 <div class="divider--half"></div>
 
-The following table summarized data structures required for each type of geographic series :
+The following table explains properties of the `ShapeDataSource` class for loading shape files.
 
 | Property          | Type   | Description                                                                                              |
 | ----------------- | ------ | -------------------------------------------------------------------------------------------------------- |
 | `ShapefileSource` | string | Specifies the Uri to a shape file (.shp) that contains geo-spatial data items.                           |
 | `DatabaseSource`  | string | Specifies the Uri to a shape database file (.dbf) that contains a data table for geo-spatial data items. |
 
-Both of the source properties for shape files are of Uri type. This means that shape files can be embedded resources in the application assembly and on the internet (via http). Refer to the previous section for more information on this process. The rules for resolving Uri objects are equivalent to any standard Uri property, for example the BitmapImage.UriSource property.
+<!-- TODO add for WPF only: -->
+
+<!-- Both of the source properties for shape files are of Uri type. This means that shape files can be embedded resources in the application assembly and on the internet (via http). Refer to the previous section for more information on this process. The rules for resolving Uri objects are equivalent to any standard Uri property, for example the BitmapImage.UriSource property. -->
 
 When both source properties are set to non-null values, then the `ShapeDataSource` object’s ImportAsync method is invoked which in return performs fetching and reading the shape files and finally doing the conversion. After this operation is complete, the `ShapeDataSource` is populated with `ShapefileRecord` objects and the `ImportCompleted` event is raised in order to notify about completed process of loading and converting geo-spatial data from shape files.
 
 ### Loading Shapefiles
 
-The following code creates an instance of the `ShapeDataSource` object for loading a shape file that contains locations of major cities in the world. It also demonstrates how to handle the ImportCompleted event as a prerequisite for binding data to the map component.
+The following code creates an instance of the `ShapeDataSource` object for loading a shape file that contains locations of major cities in the world. It also demonstrates how to handle the `ImportCompleted` event as a prerequisite for binding data to the map component.
 
 ### Binding Shapefiles
 

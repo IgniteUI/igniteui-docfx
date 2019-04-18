@@ -10,7 +10,7 @@ Use the map component's `GeographicContourLineSeries` to draw colored contour li
 
 ### Demo
 
-<div class="sample-container" style="height: 500px">
+<div class="sample-container" style="height: 400px">
     <iframe id="geo-map-type-scatter-contour-series-iframe" src='{environment:demosBaseUrl}/maps/geo-map-type-scatter-contour-series' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>

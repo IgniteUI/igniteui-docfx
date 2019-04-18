@@ -10,7 +10,7 @@ Use the map component's `GeographicScatterAreaSeries` to draw a colored surface,
 
 ### Demo
 
-<div class="sample-container" style="height: 500px">
+<div class="sample-container" style="height: 400px">
     <iframe id="geo-map-type-scatter-area-series-iframe" src='{environment:demosBaseUrl}/maps/geo-map-type-scatter-area-series' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>

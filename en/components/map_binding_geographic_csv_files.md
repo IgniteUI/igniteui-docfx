@@ -6,11 +6,11 @@ _keywords: map, Ignite UI for Angular, infragistics
 
 ## Binding CSV Files with Geographic Locations
 
-With the Ignite UI for Angular map component, you can plot geographic data loaded from various file types. For example, you can load geographic locations from a comma seperated values (CSV) file.
+With the Ignite UI for Angular map component, you can plot geographic data loaded from various file types. For example, you can load geographic locations from a comma separated values (CSV) file.
 
 ### Demo
 
-<div class="sample-container" style="height: 500px">
+<div class="sample-container" style="height: 400px">
     <iframe id="geo-map-binding-data-csv-iframe" src='{environment:demosBaseUrl}/maps/geo-map-binding-data-csv' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -19,6 +19,10 @@ With the Ignite UI for Angular map component, you can plot geographic data loade
 </div>
 
 <div class="divider--half"></div>
+
+### Data Example
+
+Here is an example of data from CSV file:
 
 ### Code Snippet
 
