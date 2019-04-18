@@ -148,6 +148,6 @@ The doughnut chart component supports the use of a legend. The legend used is th
     <iframe id="doughnut-chart-legend-iframe" src='{environment:demosBaseUrl}/charts/doughnut-chart-legend' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="doughnut-chart-explosion-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="doughnut-chart-legend-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
     </button>
 </div>
