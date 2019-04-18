@@ -189,6 +189,8 @@ The service exposes an `Observable` under `remoteData`. We will Inject our servi
     styleUrls: ["./drop-down-remote.component.scss"]
 })
 export class DropDownRemoteComponent implements OnInit, OnDestroy {
+    @ViewChild(IgxForOfDirective, { read: IgxForOfDirective })
+    public remoteForDir: IgxForOfDirective<any>;
     @ViewChild("remoteDropDown", { read: IgxDropDownComponent })
     public remoteDropDown: IgxDropDownComponent;
     public itemHeight = 48;
@@ -202,10 +204,10 @@ export class DropDownRemoteComponent implements OnInit, OnDestroy {
     public ngAfterViewInit() {
         const initialState = { startIndex: 0, chunkSize: Math.ceil(this.itemsMaxHeight / this.itemHeight) }
         this.remoteService.getData(initialState, (data) => {
-            this.remoteDropDown.virtDir.totalItemCount = data["@odata.count"];
+            this.remoteForDir.totalItemCount = data["@odata.count"];
         });
         // Subscribe to igxForOf.onChunkPreload and load new data from service
-        this.remoteDropDown.virtDir.onChunkPreload.pipe(takeUntil(this.destroy$)).subscribe((data) => {
+        this.remoteForDir.onChunkPreload.pipe(takeUntil(this.destroy$)).subscribe((data) => {
             this.dataLoading(data);
         });
     }
@@ -217,7 +219,7 @@ export class DropDownRemoteComponent implements OnInit, OnDestroy {
         this.prevRequest = this.remoteService.getData(
             evt,
             (data) => {
-                this.remoteDropDown.virtDir.totalItemCount = data["@odata.count"];
+                this.remoteForDir.totalItemCount = data["@odata.count"];
             });
     }
 
