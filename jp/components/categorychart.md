@@ -1,12 +1,12 @@
 ---
-title: Category Chart Component - Native Angular | Ignite UI for Angular
+title: Category Chart コンポーネント - ネイティブ Angular | Ignite UI for Angular
 mentionedTypes: ['CategoryChart', 'CategoryChartType']
-_description: The Ignite UI for Angular Category Chart component simplifies the complexities of the data visualization domain into manageable API so that a user can bind a collection of data, a group of collections, and a data property, and let the charting control do the rest.
-_keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Chart Control, Angular Chart Example, Angular Grid Component, Angular Chart Component, Angular Category Chart
+_description: Ignite UI for Angular Category Chart コンポーネントは複雑なデータ ビジュアライゼーションを API によって簡素化できます。ユーザーがデータのコレクションまたはコレクションのグループにバインドし、データを指定するプロパティを設定後、チャート コントロールが残りの作業を処理します。
+_keywords: Ignite UI for Angular, Angular, Native Angular コンポーネント スイート, Native Angular コントロール, ネイティブ Angular コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular チャート, Angular チャート コントロール, Angular チャート例, Angular チャート コンポーネント, Angular データ チャート
 _language: ja
 ---
 
-## Category Chart
+## カテゴリー チャート
 
 `IgxCategoryChart` は、カテゴリ データの可視化を容易にするチャート コンポーネントです。このコントロールにより、データ可視化ドメインの複雑さを管理しやすい API に簡素化できます。
 
@@ -14,6 +14,10 @@ _language: ja
 
 <div class="sample-container" style="height: 500px">
     <iframe id="category-chart-overview-iframe" src='{environment:demosBaseUrl}/charts/category-chart-overview' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="category-chart-overview-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示
+    </button>
 </div>
 
 <div class="divider--half"></div>
@@ -42,12 +46,27 @@ chart パッケージをインストールするときに core パッケージ�
 
 **npm install igniteui-angular-charts igniteui-angular-core**
 
-カテゴリ チャートが `NgModule` としてエクスポートされるため、アプリケーションで AppModule に IgxCategoryChartModule をインポートする必要があります。 
-`IgxCategoryChartModule` inside your `AppModule`:
+> [!NOTE]
+> Angular:
+>
+> カテゴリ チャートが NgModule としてエクスポートされるため、アプリケーションで `AppModule` に
+> `IgxCategoryChartModule` をインポートする必要があります。 
 
 <!-- -->
 
+> [!NOTE]
+> WebComponents:
+>
+> カテゴリ チャートを使うには、アプリケーションのロード時に
+> `IgxCategoryChartModule` を登録する必要があります。
+
 <!-- -->
+
+> [!NOTE]
+> React:
+>
+> カテゴリ チャートを使うには、アプリケーションのロード時に
+> `IgxCategoryChartModule` を登録する必要があります。
 
 ```typescript
 // app.module.ts
@@ -63,7 +82,7 @@ import { IgxCategoryChartModule } from 'igniteui-angular-charts/ES5/igx-category
 export class AppModule {}
 ```
 
-カテゴリ チャートのより最小限の設定をロードすることも可能で、それによって可能なシリーズのサブセットだけをロードし、代わりに `IgxCategoryChartCoreModule` や `IgxLineSeriesDynamicModule` など問題のシリーズの動的モジュールをロードして除外します。`chartType` が `auto` の場合、読み込んだシリーズ型が選択されます。
+カテゴリ チャートのより最小限の設定をロードすることも可能で、それによって可能なシリーズのサブセットだけをロードし、代わりに `IgxCategoryChartCoreModule` や `IgxLineSeriesDynamicModule` など問題のシリーズの動的モジュールをロードして除外します。`chartType` が `Auto` の場合、読み込んだシリーズ型が選択されます。
 
 <div class="divider--half"></div>
 
@@ -104,15 +123,15 @@ var data = [
 
 #### サポートされるチャート タイプ
 
-| プロパティ     | 説明                                                                        | 例                                      |
-| ------------ | ---------------------------------------------------------------------------------- | -------------------------------------------- |
-| `Line`       | 各データ ポイントにマーカーがあるカテゴリ折れ線シリーズを指定します。                     | ![](../images/category_chart_line.png)       |
-| `Area`       | カテゴリ エリア シリーズを指定します。                                                     | ![](../images/category_chart_area.png)       |
-| `Column`     | 各データ ポイントに垂直長方形があるカテゴリ柱状チャートを指定します。        | ![](../images/category_chart_column.png)     |
-| `Point`      | 各データ ポイントにマーカーがあるカテゴリ ポイント チャートを指定します。                     | ![](../images/category_chart_point.png)      |
-| `StepLine`   | カテゴリ ステップ折れ線チャートを指定します。                                                 | ![](../images/category_chart_stepline.png)   |
-| `StepArea`   | カテゴリ ステップ エリア チャートを指定します。                                                 | ![](../images/category_chart_steparea.png)   |
-| `Spline`     | 各データ ポイントにマーカーがあるカテゴリ スプライン折れ線シリーズを指定します。              | ![](../images/category_chart_spline.png)     |
-| `SplineArea` | カテゴリ スプライン エリア シリーズを指定します。                                              | ![](../images/category_chart_splinearea.png) |
-| `Waterfall`  | カテゴリ ウォーターフォール チャートを指定します。                                                 | ![](../images/category_chart_waterfall.png)  |
-| `Auto`       | データ アダプターからの提案に基づいてチャート タイプの自動選択を指定します。 |                                              |
+| プロパティ        | 説明                                        | 例                                            |
+| ------------ | ----------------------------------------- | -------------------------------------------- |
+| `Line`       | 各データ ポイントにマーカーがあるカテゴリ折れ線シリーズを指定します。       | ![](../images/category_chart_line.png)       |
+| `Area`       | カテゴリ エリア シリーズを指定します。                      | ![](../images/category_chart_area.png)       |
+| `Column`     | 各データ ポイントに垂直長方形があるカテゴリ柱状チャートを指定します。       | ![](../images/category_chart_column.png)     |
+| `Point`      | 各データ ポイントにマーカーがあるカテゴリ ポイント チャートを指定します。    | ![](../images/category_chart_point.png)      |
+| `StepLine`   | カテゴリ ステップ折れ線チャートを指定します。                   | ![](../images/category_chart_stepline.png)   |
+| `StepArea`   | カテゴリ ステップ エリア チャートを指定します。                 | ![](../images/category_chart_steparea.png)   |
+| `Spline`     | 各データ ポイントにマーカーがあるカテゴリ スプライン折れ線シリーズを指定します。 | ![](../images/category_chart_spline.png)     |
+| `SplineArea` | カテゴリ スプライン エリア シリーズを指定します。                | ![](../images/category_chart_splinearea.png) |
+| `Waterfall`  | カテゴリ ウォーターフォール チャートを指定します。                | ![](../images/category_chart_waterfall.png)  |
+| `Auto`       | データ アダプターからの提案に基づいてチャート タイプの自動選択を指定します。   |                                              |

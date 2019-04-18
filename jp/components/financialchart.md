@@ -1,7 +1,7 @@
 ---
-title: Financial Chart コンポーネント - ネイティブ Angular | Ignite UI for Angular
-_description: Ignite UI for Angular Financial Chart コンポーネントは簡易な API を使用してファイナンシャル データを表示できます。ユーザーがデータにバインド後にチャートがデータの可視化オプションを複数提供します。
-_keywords: Ignite UI for Angular, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular チャート, Angular チャート コントロール, Angular チャート例, Angular チャート コンポーネント, Angular Financial Chart
+title: Financial Chart の構成|データ可視化ツール |Ignite UI for Angular |Infragistics
+_description: 簡単な API を使用して財務データを可視化するには、財務チャート コンポーネントを使用します。詳細については、デモ、依存関係、使用方法、およびツールバーを参照してください。
+_keywords: 財務チャート, Ignite UI for Angular, infragistics
 _language: ja
 ---
 
@@ -35,7 +35,7 @@ Financial Chart は、シンプルな API を使用して複雑なファイナ�
 | `line`   | 折れ線シリーズを指定します。                                                                                                               |
 | `auto`   | データ アダプターに基づいてチャート タイプの自動選択を指定します。これは、データの名前および数値列の数に基づいて上記の値を選択します。たとえば、Open、High、Low、および Close 列があるデータ項目のために `bar` を使用します。 |
 
-その他のチャート ペインの詳細については、「[Financial Chart ペイン](financialchart_panes.md)」トピックを参照してください。
+その他のチャート ペインの詳細については、[Financial Chart ペイン](financialchart_panes.md) トピックを参照してください。
 
 ```html
 <igx-financial-chart
@@ -47,43 +47,42 @@ Financial Chart は、シンプルな API を使用して複雑なファイナ�
 
 chart パッケージをインストールするときに core パッケージもインストールする必要があります。
 
-`npm install igniteui-Angular-charts ignite-Angular-core`
+**npm install igniteui-Angular-charts igniteui-Angular-core**
 
-ファイナンシャル チャートが `NgModule` としてエクスポートされるため、アプリケーションで `AppModule` に `IgxFinancialChartModule` をインポートする必要があります。
+> [!NOTE]
+> Angular:
+>
+> ファイナンシャル チャートが `NgModule` としてエクスポートされるため、アプリケーションで `AppModule` に
+> `IgxFinancialChartModule` をインポートする必要があります。
+>
+> <!-- -->
+>
+> [!NOTE]
+> WebComponents:
+>
+> ファイナンシャル チャートを使用するには、ロード中にアプリに
+> `IgxFinancialChartModule` を登録する必要があります。
+>
+> <!-- -->
+>
+> [!NOTE]
+> React:
+>
+> ファイナンシャル チャートを使用するには、ロード中にアプリに
+> `IgxFinancialChartModule` を登録する必要があります。
 
 ```typescript
 // app.module.ts
-import {IgxFinancialChartModule} from 'igniteui-Angular-charts/ES5/igx-financialchart-module'
+import {IgxFinancialChartModule} from 'igniteui-Angular-charts/ES5/igx-financial-chart-module'
 
 @NgModule({
     imports: [
-        ...
+        // ...
         IgxFinancialChartModule,
-        ...
+        // ...
     ]
 })
 export class AppModule {}
-```
-
-### ツールバー
-
-ファイナンシャル チャートの上にツールバーが表示されます。チャートで表示されるデータの詳細を変更でき、複数のペインの表示も可能です。ツールバーには次のセレクターが含まれます:
-
--   インジケーター タイプ セレクター - 財務指標の複数タイプを選択できます。これらのインジケーターは価格またはその他のインジケーターと同じ Y 軸を共有しないため、価格ペインの下のペインに表示されます。
--   オーバーレイ タイプ セレクター - 財務オーバーレイのタイプを選択できます。これらのオーバーレイは、同じ Y 軸スケールを共有する財務物価シリーズと共に表示されます。オーバーレイには、`BollingerBands` および `PriceChannel` の 2 種類があります。
--   トレンドライン タイプ セレクター - トレンドラインのタイプを選択できます。トレンドラインは価格ペインおよびボリューム ペインのトレンドライン レイヤーで表示されます。
--   日付範囲セレクター - データを表示するために定義済みの範囲を選択できます。データ範囲が 1 年未満の場合、無効になるボタンがあることに注意してください。
--   チャート タイプ セレクター - ファイナンシャル チャートのチャート タイプを選択できます。これは価格ペインで表示されます。
--   ボリューム タイプ セレクター - ボリューム ペインで出来高を表示します。None、Column、Line、および Area チャート タイプから選択できます。
-
-注: ファイナンシャル チャートの幅に基づいて、ツールバーは上記のセクションに説明した要素をすべて含まない場合があります。ファイナンシャル チャートおよびそのコンテナーの幅を増加すると、ツールバーがセレクターを表示にします。
-
-また、チャート ペインの垂直スペースを最大化するには、ツールバーを非表示できます。以下のコードはツールバーを非表示にする方法を紹介します。
-
-```html
-<igx-financial-chart
-   isToolbarVisible="false">
-</igx-financial-chart>
 ```
 
 <div class="divider--half"></div>
@@ -92,7 +91,7 @@ export class AppModule {}
 
 ファイナンシャル チャート モジュールをインポートした後、チャートをデータにバインドします。
 
-`IgxFinancialChart` コントロールを作成するには、はじめにデータをバインドする必要があります。以下のコード スニペットは、シンプルなデータソースを作成する方法を示します。
+`IgxFinancialChart` コントロールを作成するには、はじめにバインドするデータが必要です。以下のコード スニペットは、シンプルなデータソースを作成する方法を示します。
 
 ```typescript
 let data = [
@@ -117,5 +116,24 @@ let data = [
    [dataSource]="data"
     width="850px"
     height="600px">
+ </igx-financial-chart>
+```
+
+### ツールバー
+
+ファイナンシャル チャートの上にツールバーが表示されます。チャートで表示されるデータの詳細を変更でき、複数のペインの表示も可能です。ツールバーには次のセレクターが含まれます。
+
+-   インジケーター タイプ セレクター - 財務指標のタイプを選択できます。これらのインジケーターは価格またはその他のインジケーターと同じ Y 軸を共有しないため、価格ペインの下のペインに表示されます。
+-   オーバーレイ タイプ セレクター - ファイナンシャル オーバーレイのタイプを選択できます。これらのオーバーレイは、同じ Y 軸スケールを共有する財務物価シリーズと共に表示されます。オーバーレイには、`BollingerBands` と `PriceChannel` の 2 種類があります。
+-   トレンドライン タイプ セレクター - トレンドラインのタイプを選択できます。トレンドラインは、価格ペインとボリューム ペインの上のトレンドライン レイヤーに表示されます。
+-   日付範囲セレクター - データを表示するために定義済みの範囲を選択できます。データ範囲が 1 年未満の場合、無効になるボタンがあることに注意してください。
+-   チャート タイプ セレクター - ファイナンシャル チャートのチャート タイプを選択できます。これは価格ペインで表示されます。
+-   ボリューム タイプ セレクター - ボリューム ペインで出来高を表示します。None、Column、Line、および Area チャート タイプから選択できます。
+    注: ファイナンシャル チャートの幅に基づいて、ツールバーは上記のセクションに説明した要素をすべて含まない場合があります。ファイナンシャル チャートおよびそのコンテナーの幅を増加すると、ツールバーがセレクターを表示にします。
+    また、チャート ペインの垂直スペースを最大化するには、ツールバーを非表示できます。以下のコードはツールバーを非表示にする方法を紹介します。
+
+```html
+ <igx-financial-chart
+    isToolbarVisible="false">
  </igx-financial-chart>
 ```

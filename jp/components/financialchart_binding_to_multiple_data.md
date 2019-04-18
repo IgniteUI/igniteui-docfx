@@ -53,7 +53,7 @@ let data: any = [ dataSource1, dataSource2 ]
 
 <div class="divider--half"></div>
 
-### 追加のリソース
+### その他のリソース
 
 <div class="divider--half"></div>
 

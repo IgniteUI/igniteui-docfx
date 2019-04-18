@@ -1,4 +1,4 @@
-﻿---
+---
 title: Data Chart コンポーネント - ネイティブ Angular|Ignite UI for Angular
 _description: Ignite UI for Angular Data Chart は、軸、マーカー、凡例、および注釈レイヤーのモジュール設計を提供するチャート コンポーネントです。チャート機能は、複合チャート ビューを作成するために同じチャート領域でのビジュアル要素の複数のインスタンスを利用できます。
 _keywords: Ignite UI for Angular, Angular, Native Angular コンポーネント スイート, Native Angular コントロール, ネイティブ Angular コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular チャート, Angular チャート コントロール, Angular チャート例, Angular チャート コンポーネント, Angular データ チャート
@@ -31,7 +31,7 @@ IgxDataChartInteractivityModule.register();
 
 ### チャート UI ナビゲーションの概要
 
-UI でのナビゲーションを許可するには、ズームを許可する方向に応じて、チャートの `IsHorizontalZoomEnabled` プロパティおよび `IsVerticalZoomEnabled` プロパティを true に設定する必要があります。チャートはマウスホイールを回転してズームできます。
+UI でのナビゲーションを許可するには、ズームを許可する方向に応じて、チャートの `IsHorizontalZoomEnabled` プロパティおよび `IsVerticalZoomEnabled` プロパティを true に設定する必要があります。マウスホイールを回転してチャートをズームできます。
 
 またマウスやタッチでボタンをクリックしてズームまたはパンニングできます。チャートの `DefaultInteraction` プロパティは、マウスクリック イベントやタッチ イベントで何が起こるかを決定します。このプロパティはデフォルトで `DragZoom` に設定されており、ズームを有効に設定すると、クリックしてドラッグした際にプロット領域の上に四角形のプレビューが配置され、グラフのズーム領域になります。この `DefaultInteraction` プロパティは、パンニングを許可する場合は `DragPan`、これらの操作を禁止する場合は `None` に設定することもできます。
 

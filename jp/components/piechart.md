@@ -1,13 +1,13 @@
 ---
 title: Pie Chart コンポーネント - Native Angular  | Ignite UI for Angular
 _description: Ignite UI for Angular  Pie Chart を使用すると、列のデータ型に基づいて定義済みのデフォルト集計ビューを持つ別のコンテナーで列情報を表示します。
-_keywords: Ignite UI for Angular , Angular , Native Angular  Components Suite, Native Angular  Controls, Native Angular  Components, Native Angular  Components Library, Angular  Chart, Angular  Pie Chart, Angular  Pie Chart Control, Angular Pie Chart Component
+_keywords: Ignite UI for Angular , Angular , ネイティブ Angular  コンポーネント スイート, ネイティブ Angular  コントロール, ネイティブ Angular  コンポーネント, ネイティブ Angular  コンポーネント ライブラリ, Angular  Chart, Angular  Pie Chart, Angular  Pie Chart コントロール, Angular Pie Chart コンポーネント
 _language: ja
 ---
 
-## Pie Chart
+## 円チャート
 
-Pie Chart は、セクションに分割された円形の領域で構成される、円チャートを表示するためのコンポーネントです。各セクションには、基本データ値に比例する円弧の長さがあります。
+円チャートは、セクションに分割された円形の領域で構成される、円チャートを表示するためのコンポーネントです。各セクションには、基本データ値に比例する円弧の長さがあります。
 
 コンポーネントは分類したデータを表すために使用されます。カテゴリが少ない場合や各カテゴリが全体としてデータの相対的に大きなパーセンテージを構成する場合、これは最も効率的です。
 
@@ -29,23 +29,29 @@ chart パッケージをインストールするときに core パッケージ�
 
 **npm install igniteui-angular-charts igniteui-angular-core**
 
-円チャートが `NgModule` としてエクスポートされるため、アプリケーションで `AppModule` に _IgxPieChartModule_ をインポートする必要があります。
+> [!NOTE]
+> Angular:
+> 円チャートは `NgModule` としてエクスポートされます。`AppModule` に _Ig $ PieChartModule_ をインポートする必要があります
+> _Ig $ PieChartModule_ をインポートする必要があります。
 
-[!NOTE]
-For React:
+<!-- -->
 
-In order to use the pie chart, you need to register the
-`IgxPieChartModule` in your app during load:
+> [!NOTE]
+> React:
+>
+> 円グラフを使用するには、ロード中に　`IgxPieChartModule` を
+> アプリに登録する必要があります。
 
 ```typescript
 // app.module.ts
+
 import { IgxPieChartModule } from 'igniteui-angular-charts/ES5/igx-pie-chart-module';
 
 @NgModule({
     imports: [
-        ...
+        // ...
         IgxPieChartModule,
-        ...
+        // ...
     ]
 })
 export class AppModule {}
@@ -85,7 +91,7 @@ var data = [
 
 ### 凡例
 
-円チャートの隣に凡例を表示するには、ItemLegend を作成し、Legend プロパティに割り当てます。`legendLabelMemberPath` は、各円スライスの凡例項目を表示するために使用するデータ モデルのプロパティを指定します。
+円チャートの隣に凡例を表示するには、ItemLegend を作成し、`legend` プロパティに割り当てます。`legendLabelMemberPath` は、各円スライスの凡例項目を表示するために使用するデータ モデルのプロパティを指定します。
 
 また、凡例項目の外観をカスタマイズするために `legendItemTemplate` と `legendItemBadgeTemplate` プロパティ、多数のフォント プロパティを使用できます。
 
@@ -138,7 +144,7 @@ Pie Chart  コンポーネントの基本データに、小さい値を含む多
 
 ### 展開
 
-円チャート コントロールは個々の円スライスの選択と展開だけでなく、選択状態を変更しカスタム ロジックを実装することを可能にする 'sliceClick' イベントをサポートします。
+円チャート コントロールは個々の円スライスの選択と展開だけでなく、選択状態を変更しカスタム ロジックを実装することを可能にする `sliceClick` イベントをサポートします。
 
 ```html
 <igx-pie-chart [dataSource]="data"

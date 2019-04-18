@@ -1,7 +1,7 @@
-﻿---
+---
 title: ハイライト
 _description: Ignite UI for Angular Category Chart コンポーネントは複雑なデータ ビジュアライゼーションを API によって簡素化できます。ユーザーがデータのコレクションまたはコレクションのグループにバインドし、データを指定するプロパティを設定後、チャート コントロールが残りの作業を処理します。
-_keywords: Ignite UI for Angular, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular Chart, Angular Chart コントロール, Angular Chart Example, Angular Grid コンポーネント, Angular Chart コンポーネント, Angular Category Chart
+_keywords: Ignite UI for Angular, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular Components, ネイティブ Angular コンポーネント ライブラリ, Angular Chart, Angular Chart コントロール, Angular Chart 例, Angular Grid コンポーネント, Angular Chart コンポーネント, Angular Category Chart
 _language: ja
 ---
 
@@ -22,7 +22,7 @@ _language: ja
 
 ### レイヤーのハイライト
 
-`IgxCategoryChart` は、項目のホバー オーバー時に 3 種類のハイライト タイプを使用できます。
+IgxCategoryChart は、項目のホバー オーバー時に 3 種類のハイライト タイプを使用できます。
 
 1.  シリーズ ハイライトは、ポインターがデータ ポイント上にある場合にそのポイントをハイライトします。
 

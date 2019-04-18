@@ -96,7 +96,7 @@ _language: ja
 
 <div class="divider--half"></div>
 
-### 追加のリソース
+### その他のリソース
 
 <div class="divider--half"></div>
 
