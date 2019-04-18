@@ -259,6 +259,7 @@ The scale is visual element that highlights the full range of values in the gaug
     scaleEndExtent=0.95>
 </igx-bullet-graph>
 ```
+
 <div class="sample-container loading" style="height: 125px">
     <iframe id="bullet-graph-scale-iframe" data-src='{environment:demosBaseUrl}/gauges/bullet-graph-scale' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>

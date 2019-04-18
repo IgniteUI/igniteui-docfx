@@ -114,6 +114,7 @@ This is the primary measure displayed by the component and is visualized as a ba
     needleOuterBaseWidth=0.07>
 </igx-linear-gauge>
 ```
+
 <div class="sample-container loading" style="height: 125px">
     <iframe id="linear-gauge-needle-iframe" data-src='{environment:demosBaseUrl}/gauges/linear-gauge-needle' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
@@ -145,6 +146,7 @@ The ranges are visual elements that highlight a specified range of values on a s
     </igx-linear-graph-range>
 </igx-linear-gauge>
 ```
+
 <div class="sample-container loading" style="height: 125px">
     <iframe id="linear-gauge-ranges-iframe" data-src='{environment:demosBaseUrl}/gauges/linear-gauge-ranges' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
@@ -180,6 +182,7 @@ Minor tick marks – The minor tick marks represent helper tick marks, which mig
     minorTickStrokeThickness=1>
 </igx-linear-gauge>
 ```
+
 <div class="sample-container loading" style="height: 125px">
     <iframe id="linear-gauge-tickmarks-iframe" data-src='{environment:demosBaseUrl}/gauges/linear-gauge-tickmarks' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
@@ -205,6 +208,7 @@ The labels indicate the measures on the scale.
     font="11px Verdana">
 </igx-linear-gauge>
 ```
+
 <div class="sample-container loading" style="height: 125px">
     <iframe id="linear-gauge-labels-iframe" data-src='{environment:demosBaseUrl}/gauges/linear-gauge-labels' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
@@ -229,6 +233,7 @@ The backing element represents background and border of the bullet graph control
     backingOuterExtent=1>
 </igx-linear-gauge>
 ```
+
 <div class="sample-container loading" style="height: 125px">
     <iframe id="linear-gauge-backing-iframe" data-src='{environment:demosBaseUrl}/gauges/linear-gauge-backing' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
@@ -256,7 +261,8 @@ The scale is a visual element that highlights the full range of values in the ga
     scaleEndExtent=0.95>
 </igx-linear-gauge>
 ```
-<div class="sample-container loading" style="height: 125px">
+
+ <div class="sample-container loading" style="height: 125px">
     <iframe id="linear-gauge-scale-iframe" data-src='{environment:demosBaseUrl}/gauges/linear-gauge-scale' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
