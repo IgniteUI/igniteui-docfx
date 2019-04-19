@@ -70,7 +70,7 @@ After executing those simple commands, your new project will be built and served
 
 ### Updating Existing App
 
-What if you want to use Ignite UI for Angular in an existing Angular CLI project (one that you have from before)? We have you covered! All you have to do is execute the command below:
+What if you want to use Ignite UI for Angular in an existing Angular CLI project (one that you have from before)? We have you covered! All you have to do is execute these commands:
 
 -   **npm install --save igniteui-react-charts igniteui-angular-core**
 -   **npm install --save igniteui-react-excel igniteui-angular-core**
@@ -90,11 +90,11 @@ This will automatically install packages for Ignite UI for Angular, along with a
 
 ### Importing Modules
 
-First we have to import the respective modules of the components we want to use. We will go ahead and do this for the [**GeographicMap**](map_overview.md)
+First we have to import the required modules of the components we want to use. We will go ahead and do this for the [**GeographicMap**](map_overview.md) component.
 
 ### Using Components
 
-We are now ready to use the `GeographicMap` in our markup! Let's go ahead and define it:
+We are now ready to use the `GeographicMap` component in our markup! Let's go ahead and define it:
 
 ### Running Application
 
@@ -102,6 +102,6 @@ Finally, we can run our new application by using one of the following commands:
 
 -   **npm run-script start**
 
-The final result should look something like this:
+The final result should look something like this screenshot:
 
 <img src="../images/general/geo-map.png" />
