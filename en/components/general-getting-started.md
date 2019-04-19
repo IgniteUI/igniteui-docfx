@@ -1,12 +1,14 @@
 ---
 title: Data Visualization Tools | Ignite UI for Angular | Infragistics
 _description: The Ignite UI for Angular is a complete set of Angular components designed to enable developers to build the most modern, high-performance HTML5 & TypeScript apps for modern desktop browsers.
-_keywords: Ignite UI for Angular, Infragistics, Getting started, IG,
+_keywords: Ignite UI for Angular, Infragistics, Getting started, IG, Install Angular
 ---
 
 ## Getting Started With Ignite UI for Angular
 
 The Ignite UI for Angular is a complete set of Angular components designed to enable developers to build the most modern, high-performance HTML5 & TypeScript apps for modern desktop browsers.
+
+### Setting Up Computer
 
 Before you can run Ignite UI for Angular, there are 2 steps to get everything on your machine set up to run any Angular app, including Ignite UI for Angular, and to build Angular apps. To get started, you must install both NodeJS and Visual Studio Code on your machine. Modern web development with Angular requires NodeJS, it’s sort of like an ASP.NET app running in the browser and requires ASP.NET runtime deployed on the server. For development, there is nothing better than Visual Studio Code to build Angular apps. Getting started is easy, just download and install both Node.js and Visual Studio Code.
 
@@ -16,7 +18,7 @@ Before you can run Ignite UI for Angular, there are 2 steps to get everything on
            style="display:flex;max-height:100px;margin:auto auto 20px auto;" />
       <a target="_blank" href="https://nodejs.org/en/download/"
          style="color:white;background-color:#09f;text-decoration:none;font-weight:700;font-size:16px;padding: 5px 15px 5px 15px;">
-        DOWNLOAD NODE
+        DOWNLOAD NODE JS
       </a>
     </div>
     <div style="display:inline-block;width:45%;text-align:center;">
@@ -33,38 +35,36 @@ Before you can run Ignite UI for Angular, there are 2 steps to get everything on
 
 Now that we have everything we need, we can start creating/updating our application!
 
-In **VS Code**, select **Terminal** menu, **New Terminal** option, and type:
+In **VS Code**, select **Terminal** menu, **New Terminal** option, and type this command in terminal window:
 
-```typescript
-npx create-react-app my-app-name --typescript
-// Or
-yarn create react-app my-app-name --typescript
-```
+-   **npx create-react-app my-app-name --typescript**
+
+Or
+
+-   **yarn create react-app my-app-name --typescript**
 
 Refer to this <a href="https://facebook.github.io/create-react-app/docs/adding-typescript" target="_blank">website</a> for more information on above commands.
 
-Next, you need to open the **my-app-name** folder in VS Code and install one of the following packages for Ignite UI for Angular using the following commands:
+Next, you need to open the **my-app-name** folder in **VS Code** app and install the following packages for Ignite UI for Angular using these commands:
 
-```typescript
-npm install --save igniteui-react-charts igniteui-angular-core
-npm install --save igniteui-react-excel igniteui-angular-core
-npm install --save igniteui-react-gauges igniteui-angular-core
-npm install --save igniteui-react-grids igniteui-angular-core
-npm install --save igniteui-react-maps igniteui-angular-core
-// Or
-yarn add igniteui-react-charts igniteui-angular-core
-yarn add igniteui-react-excel igniteui-angular-core
-yarn add igniteui-react-gauges igniteui-angular-core
-yarn add igniteui-react-grids igniteui-angular-core
-yarn add igniteui-react-maps igniteui-angular-core
-```
+-   **npm install --save igniteui-react-charts igniteui-angular-core**
+-   **npm install --save igniteui-react-excel igniteui-angular-core**
+-   **npm install --save igniteui-react-gauges igniteui-angular-core**
+-   **npm install --save igniteui-react-grids igniteui-angular-core**
+-   **npm install --save igniteui-react-maps igniteui-angular-core**
 
-Lastly, you can build and start your application with these commands:
+Or
 
-```typescript
-npm run-script build
-npm run-script start
-```
+-   **yarn add igniteui-react-charts igniteui-angular-core**
+-   **yarn add igniteui-react-excel igniteui-angular-core**
+-   **yarn add igniteui-react-gauges igniteui-angular-core**
+-   **yarn add igniteui-react-grids igniteui-angular-core**
+-   **yarn add igniteui-react-maps igniteui-angular-core**
+
+Lastly, you can build for production or start your application with these commands:
+
+-   **npm run-script build**
+-   **npm run-script start**
 
 After executing those simple commands, your new project will be built and served. It will automatically open in your default browser and you will be able to use Ignite UI for Angular components in your project.
 
@@ -72,25 +72,25 @@ After executing those simple commands, your new project will be built and served
 
 What if you want to use Ignite UI for Angular in an existing Angular CLI project (one that you have from before)? We have you covered! All you have to do is execute the command below:
 
-```typescript
-npm install --save igniteui-react-charts igniteui-angular-core
-npm install --save igniteui-react-excel igniteui-angular-core
-npm install --save igniteui-react-gauges igniteui-angular-core
-npm install --save igniteui-react-grids igniteui-angular-core
-npm install --save igniteui-react-maps igniteui-angular-core
-// Or
-yarn add igniteui-react-charts igniteui-angular-core
-yarn add igniteui-react-excel igniteui-angular-core
-yarn add igniteui-react-gauges igniteui-angular-core
-yarn add igniteui-react-grids igniteui-angular-core
-yarn add igniteui-react-maps igniteui-angular-core
-```
+-   **npm install --save igniteui-react-charts igniteui-angular-core**
+-   **npm install --save igniteui-react-excel igniteui-angular-core**
+-   **npm install --save igniteui-react-gauges igniteui-angular-core**
+-   **npm install --save igniteui-react-grids igniteui-angular-core**
+-   **npm install --save igniteui-react-maps igniteui-angular-core**
+
+Or
+
+-   **yarn add igniteui-react-charts igniteui-angular-core**
+-   **yarn add igniteui-react-excel igniteui-angular-core**
+-   **yarn add igniteui-react-gauges igniteui-angular-core**
+-   **yarn add igniteui-react-grids igniteui-angular-core**
+-   **yarn add igniteui-react-maps igniteui-angular-core**
 
 This will automatically install packages for Ignite UI for Angular, along with all of their dependencies, font imports and styles references to the existing project.
 
 ### Importing Modules
 
-First we have to import the respective modules of the components we want to use. We will go ahead and do this for the [**GeographicMap**](../map_overview.md)
+First we have to import the respective modules of the components we want to use. We will go ahead and do this for the [**GeographicMap**](map_overview.md)
 
 ### Using Components
 
@@ -100,9 +100,7 @@ We are now ready to use the `GeographicMap` in our markup! Let's go ahead and de
 
 Finally, we can run our new application by using one of the following commands:
 
-```typescript
-npm run-script start
-```
+-   **npm run-script start**
 
 The final result should look something like this:
 
