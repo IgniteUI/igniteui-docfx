@@ -103,7 +103,7 @@ export class AppComponent {
 
 ### Y 軸モード
 
-パフォーマンスを向上させるには、`percentChange` モードよりオプションが少ない `yAxisMode` オプションの numeric に設定してください。
+パフォーマンスを向上させるには、`percentChange` モードよりオプションが少ない `yAxisMode` オプションの `numeric` に設定してください。
 
 ### 注釈
 
