@@ -1,7 +1,8 @@
-﻿---
+---
 title: Excel ライブラリ コンポーネント - Native Angular | Ignite UI for Angular
 _description: Ignite UI for Excel Library コンポーネント
 _keywords: Ignite UI for Angular, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular Excel ライブラリ, Angular Excel ライブラリ例,  Angular Excel Library コンポーネント, Angular Excel ライブラリ
+_language: ja
 ---
 
 ## セルの使用
@@ -15,10 +16,14 @@ Excel ワークシートの `WorksheetCell` オブジェクトは、ワークシ
 	src='{environment:demosBaseUrl}/excel-library/working-with-cells' 
 	width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="excel-library-overview-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示
+    </button>
+</div> 
 
 <div class="divider--half"></div>
 
-### リファレンス
+### 参照
 
 以下のコードは、以下のコード スニペットを使用するインポートを示します。
 
@@ -90,7 +95,8 @@ worksheet.rows(0).cells(0).comment = cellComment;
 
 ### セルに数式を追加
 
-Infragistics Excel ライブラリは、ワークシートでセルまたはセルのグループに Microsoft Excel の数式を追加できます。`WorksheetCell` オブジェクトの `applyFormula` メソッドを使用、または `Formula` オブジェクトを初期化してセルに割り当てることができます。セルに数式を適用する方法に関わらず、`WorksheetCell` オブジェクトのプロパティを使用して `Formula` オブジェクトにアクセスできます。値が必要な場合、セルの `Value` プロパティを使用します。
+Infragistics Excel ライブラリは、ワークシートでセルまたはセルのグループに Microsoft Excel の数式を追加できます。
+これを行うには、 `WorksheetCell` オブジェクトの `applyFormula` メソッドを使うか、 `Formula` オブジェクトをインスタンス化してセルに適用します。セルに数式を適用する方法に関わらず、` Formula` にアクセスできます。値が必要な場合はセルの `Value` プロパティを使います。
 
 以下のコードは、セルに数式を追加する方法を示します。
 
@@ -143,7 +149,7 @@ worksheet.columns(2).cellFormat.formatString = "\"$\"#,##0.00";
 
 このカラー パレットは Microsoft Excel 2007 UI のカラー ダイアログと似ています。[Excel オプション] => [保存] => [色] からこのカラー ダイアログを開くことができます。
 
-`CellFill` クラスで静的なプロパティおよびメソッドを使用してすべての可能な塗りつぶしタイプを作成できます。以下の通りです:
+`CellFill` クラスで静的なプロパティおよびメソッドを使用してすべての可能な塗りつぶしタイプを作成できます。
 
 -   `noColor` - 色なしの塗りつぶしを表すプロパティ。ワークシートの背景画像がある場合は透けて見えます。
 
@@ -239,7 +245,7 @@ RGB またはテーマの色が使用される場合、色を明るくする、�
 
 `style` プロパティを null に設定した場合、`normalStyle` スタイルに戻ります。スタイル コレクションで別のスタイルに設定される場合、そのスタイルはセル書式にすべての未設定のプロパティのデフォルトを保持するようになります。
 
-`style` プロパティをセル書式に設定した場合、`style` に含まれる書式オプションはセル書式から削除されます。すべてのその他のプロパティはそのまま残されます。たとえば、境界線の書式を含むセル スタイルを作成してスタイルをセルの`スタイル`として設定した場合、セル書式の境界線の書式オプションは削除され、セル書式に塗りつぶしの書式のみ含まれます。
+`style` プロパティをセル書式に設定した場合、`style` に含まれる書式オプションはセル書式から削除されます。すべてのその他のプロパティはそのまま残されます。たとえば、境界線の書式を含むセル スタイルを作成してスタイルをセルの `style` として設定した場合、セル書式の境界線の書式オプションは削除され、セル書式に塗りつぶしの書式のみ含まれます。
 
 書式オプション フラグが書式から削除されると、すべての関連付けたプロパティは未設定値にリセットされます。したがってセル書式の罫線プロパティはデフォルト/未設定値に暗黙的にリセットされます。
 

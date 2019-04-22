@@ -1,11 +1,11 @@
 ---
-title: Data Chart コンポーネント - ネイティブ Angular|Ignite UI for Angular
-_description: Ignite UI for Angular Data Chart は、軸、マーカー、凡例、および注釈レイヤーのモジュール設計を提供するチャート コンポーネントです。チャート機能は、複合チャート ビューを作成するために同じチャート領域でのビジュアル要素の複数のインスタンスを利用できます。
-_keywords: Ignite UI for Angular, Angular, Native Angular コンポーネント スイート, Native Angular コントロール, ネイティブ Angular コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular チャート, Angular チャート コントロール, Angular チャート例, Angular チャート コンポーネント, Angular データ チャート
+title: Data Chart コンポーネント - ネイティブ Angular | Ignite UI for Angular
+_description: Ignite UI for Angular Data Chart は、軸、マーカー、シリーズ、凡例、および注釈レイヤーのモジュール設計を提供するチャート コンポーネントです。このチャートでは、複合チャート ビューを作成するために、同じチャート プロット領域にこれらの視覚要素の複数のインスタンスを作成できます。
+_keywords: Ignite UI for Angular, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular Chart, Angular Chart コントロール, Angular Chart 例, Angular Chart コンポーネント, Angular Data Chart
 _language: ja
 ---
 
-## Axis
+## 軸
 
 `IgxDataChart` コントロールの軸は、軸の主線、グリッド線、目盛り、タイトル、およびラベルの外観を指定するための基本プロパティを提供します。チャートがサポートするさまざまなシリーズ タイプの `IgxDataChart` で使用できる複数の軸タイプがあります。シリーズのタイプは、一緒に使用できる軸タイプを決定します。
 
@@ -15,7 +15,7 @@ _language: ja
     <iframe id="data-chart-overview-iframe" src='{environment:demosBaseUrl}/charts/data-chart-axis-types' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-axis-types-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-overview-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
     </button>
 </div>
 

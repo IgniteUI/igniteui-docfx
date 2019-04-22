@@ -51,7 +51,7 @@ _language: ja
 -   データソースはデータ項目の配列またはリストである必要があります。
 -   データソースはデータ項目を少なくとも 1 つ含む必要があります。含まない場合はチャートはラジアル シリーズをレンダリングしません。
 -   すべてのデータ項目には、財務軸 (`IgxCategoryXAxisComponent` など) の `Label` プロパティにマッピングする必要があるデータ列 （文字列または日時）を少なくとも 1 列含める必要があります
--   データ itemsは、カテゴリシリーズ (`RadialAreaSeries` など) の `ValueMemberPath` プロパティを使用してマップする数値データ列を少なくとも 1 列含む必要があります。
+-   データ項目は、カテゴリシリーズ (`RadialAreaSeries` など) の `ValueMemberPath` プロパティを使用してマップする数値データ列を少なくとも 1 列含む必要があります。
 
 上記データ要件を満たすデータソースとして [SampleRadialData](datachart_data_sources_radial.md) を使用できます。
 
@@ -111,7 +111,7 @@ import { IgxDataChartRadialModule } from "igniteui-angular-charts/ES5/igx-data-c
  </igx-data-chart>
 ```
 
-上記のコードを使って `RadialAreaSeries` をレンダリングしたい極座標シリーズの名前で置き換えて他のタイプの極座標シリーズを作成することもできます。
+上記のコードを使って `RadialAreaSeries` をレンダリングしたい極座標シリーズの名前で置き換えて他のタイプの極座標 シリーズを作成することもできます。
 
 ### その他のリソース
 

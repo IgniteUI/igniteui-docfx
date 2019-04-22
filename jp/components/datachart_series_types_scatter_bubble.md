@@ -1,14 +1,14 @@
-﻿---
+---
 title: Data Chart コンポーネント - ネイティブ Angular|Ignite UI for Angular
 _description: Ignite UI for Angular Data Chart は、軸、マーカー、凡例、および注釈レイヤーのモジュール設計を提供するチャート コンポーネントです。チャート機能は、複合チャート ビューを作成するために同じチャート領域でのビジュアル要素の複数のインスタンスを利用できます。
 _keywords: Ignite UI for Angular, Angular, Native Angular コンポーネント スイート, Native Angular コントロール, ネイティブ Angular コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular チャート, Angular チャート コントロール, Angular チャート例, Angular チャート コンポーネント, Angular データ チャート
 _language: ja
 ---
 
-## 散布バブル シリーズ
+## 散布図 - バブル シリーズ
 
-このトピックは、コード例を示して `IgxDataChart` コントロールで散布 `BubbleSeries` 使用する方法を説明します。
-このシリーズは、データをプロットするためにデカルト (x,y) 座標系を使用する[散布図シリーズ](datachart_series_types_scatter_marker.md)に似ており、スケールされたバブルの集まりとしてデータを表示します。それぞれがその位置を決定する一対の数値　X / Y 値とそのサイズを決定する 3 番目の値を持ちます。
+このトピックは、コード例を示して `IgxDataChart` コントロールで散布 `BubbleSeries` 使用する方法を説明します。このシリーズ
+データをプロットするためにデカルト座標系 (x, y) を使用する[散布図 - マーカーシリーズ](datachart_series_types_scatter_marker.md)に似ています。このシリーズはスケールされたバブルの集まりとしてデータを表示します。それぞれがその位置を決定する一対の数値X / Y値とそのサイズを決定する 3 番目の値を持ちます。
 
 ### デモ
 

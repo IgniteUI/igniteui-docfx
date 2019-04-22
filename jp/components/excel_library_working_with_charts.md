@@ -1,7 +1,7 @@
 ---
 title: チャートでの作業
-_description: The Ignite UI for Excel Library component allows for the addition of charts to show visual representations of data trends across regions of cells in a worksheet.
-_keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Excel Library, Angular Excel Library Example, Angular Excel Library Component, Angular Excel Engine, Chart, Angular Excel Chart
+_description: Ignite UI for Excel Library コンポーネントは、ワークシートも領域セル全体のデータ トレンドをビジュアル表示できるチャートです。
+_keywords: Ignite UI for Angular, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular Excel ライブラリ, Angular Excel ライブラリ例,  Angular Excel Library コンポーネント, Angular Excel Engine, Chart, Angular Excel Chart
 _language: ja
 ---
 
@@ -16,6 +16,10 @@ _language: ja
 	src='{environment:demosBaseUrl}/excel-library/working-with-charts' 
 	width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="excel-library-overview-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示
+    </button> 
+</div> 
 
 <div class="divider--half"></div>
 
