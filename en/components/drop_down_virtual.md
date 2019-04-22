@@ -134,7 +134,7 @@ You can view the configured example below:
 <div class="divider--half"></div>
 
 ## Remote Data
-The `igx-drop-down` supports loading chunks of remote data using `igxFor` directive. The configuration is similar to the one using `igxFor` with local items and the main difference is handling the loading of different chunk, as well as 
+The `igx-drop-down` supports loading chunks of remote data using `igxFor` directive. The configuration is similar to the one using `igxFor` with local items and the main difference is handling the loading of different data chunks.
 
 ### Template
 The drop-down template does not need to change much compared to the [previous example](#configuration): We still need to specify a wrapping div, style it accordingly and write out the complete configuration for the `*igxFor`. Since we'll be getting our data from a remote source, we need to specify that our data will be an observable and pass it through Angular's `async` pipe:
@@ -143,7 +143,7 @@ The drop-down template does not need to change much compared to the [previous ex
 <igx-drop-down #remoteDropDown>
     <div class="drop-down-virtual-wrapper">
         <igx-drop-down-item
-            *igxFor="let item of remoteData | async; index as index; scrollOrientation: 'vertical'; containerSize: itemsMaxHeight; itemSize: itemHeight;"
+            *igxFor="let item of rData | async; index as index; scrollOrientation: 'vertical'; containerSize: itemsMaxHeight; itemSize: itemHeight;"
             [value]="item" role="option" [disabled]="item.disabled" [index]="index">
             {{ item.ProductName }}
         </igx-drop-down-item>
@@ -174,8 +174,14 @@ export class RemoteService {
     }
 
     public getData(data?: IForOfState, cb?: (any) => void): any {
-        // Use the current virtualization state of the drop-down and fetch data for it accordingly
-    }
+        // Assuming that the API service is RESTful and can take the following:
+        // skip: start index of the data that we fecth
+        // count: number of records we fetch
+    this.http.get(`https://dummy.db/dummyEndpoint?skip=${data.startIndex}&count=${data.chunkSize}`).subscribe((data) => {
+        // emit the values through the _remoteData subject
+        this._remoteData.next(data);
+    })
+}
 ```
 
 The service exposes an `Observable` under `remoteData`. We will Inject our service and bind to that property in our remote drop-down component:
