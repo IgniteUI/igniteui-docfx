@@ -49,16 +49,16 @@ The provided `CustomPaletteColorScale` class should satisfy most coloring needs,
 
 The following table list properties of the `CustomPaletteColorScale` affecting surface coloring of the GeographicScatterAreaSeries.
 
-| Property Name       | Property Type               | Description                                                                                       |
-| ------------------- | --------------------------- | ------------------------------------------------------------------------------------------------- |
-| `Palette`           | ObservableCollection<Color> | Gets or sets the collection of colors to select from or to interpolate between.                   |
-| `InterpolationMode` | ColorScaleInterpolationMode | Gets or sets the method getting a color from the Palette.                                         |
-| `MaximumValue`      | double                      | The highest value to assign a color. Any given value greater than this value will be Transparent. |
-| `MinimumValue`      | double                      | The lowest value to assign a color. Any given value less than this value will be Transparent.     |
+| Property Name       | Property Type                 | Description                                                                                       |
+| ------------------- | ----------------------------- | ------------------------------------------------------------------------------------------------- |
+| `Palette`           | ObservableCollection<Color>   | Gets or sets the collection of colors to select from or to interpolate between.                   |
+| `InterpolationMode` | `ColorScaleInterpolationMode` | Gets or sets the method getting a color from the Palette.                                         |
+| `MaximumValue`      | double                        | The highest value to assign a color. Any given value greater than this value will be Transparent. |
+| `MinimumValue`      | double                        | The lowest value to assign a color. Any given value less than this value will be Transparent.     |
 
 ### Code Snippet
 
-The following code shows how to bind the `GeographicScatterAreaSeries` to triangulation data representing precipitation over the United States.
+The following code shows how to bind the `GeographicScatterAreaSeries` to triangulation data representing surface temperatures in the world.
 
 <!-- Angular -->
 

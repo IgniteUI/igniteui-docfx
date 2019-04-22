@@ -26,7 +26,8 @@ This control is used for representing categorical data. It is most effective whe
 
 When installing the charts package, the core package must also be installed.
 
-**npm install igniteui-angular-charts igniteui-angular-core**
+-   **npm install --save igniteui-angular-core**
+-   **npm install --save igniteui-angular-charts**
 
 The pie chart is exported as an `NgModule`, you need > to import the _Ig$PieChartModule_ inside your
 `AppModule`:

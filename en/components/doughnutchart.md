@@ -24,8 +24,9 @@ The Ignite UI for Angular doughnut chart component is similar to the Pie Chart c
 ### Dependencies
 
 When installing the charts package, the core package must also be installed.
-**npm install igniteui-angular-core**
-**npm install igniteui-angular-charts**
+
+-   **npm install --save igniteui-angular-core**
+-   **npm install --save igniteui-angular-charts**
 
 <!-- -->
 

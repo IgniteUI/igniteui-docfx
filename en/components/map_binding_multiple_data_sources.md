@@ -6,7 +6,7 @@ _keywords: map, Ignite UI for Angular, infragistics
 
 ## Binding Multiple Data Sources
 
-In the `XamGeographicMap`, you can add multiple geographic series objects to overlay custom data sources with geo-spacial data. For example, `GeographicSymbolSeries` for plotting geographic locations of airports, the `GeographicPolylineSeries` for plotting flights between airports, and 2nd `GeographicPolylineSeries` for plotting gridlines of major geographic coordinates.
+In the `GeographicMap`, you can add multiple geographic series objects to overlay custom data sources with geo-spacial data. For example, `GeographicSymbolSeries` for plotting geographic locations of airports, the `GeographicPolylineSeries` for plotting flights between airports, and 2nd `GeographicPolylineSeries` for plotting gridlines of major geographic coordinates.
 
 ### Demo
 
@@ -22,22 +22,22 @@ In the `XamGeographicMap`, you can add multiple geographic series objects to ove
 
 This topic takes you step-by-step towards displaying multiple geographic series that will plot following geo-spatial data:
 
-`GeographicSymbolSeries` – displays locations of major airports
-`GeographicPolylineSeries` – displays flights between airports
-`GeographicPolylineSeries` – displays gridlines of major coordinates
+-   `GeographicSymbolSeries` – displays locations of major airports
+-   `GeographicPolylineSeries` – displays flights between airports
+-   `GeographicPolylineSeries` – displays gridlines of major coordinates
 
 You can use geographic series in this or other combinations to plot desired data.
 
 ### Creating Data Sources
 
-Create data sources for all geographic series that you want to display in the `XamGeographicMap`. For example, you can the use[WorldConnections](map_resources_world_connections.md) script.
+Create data sources for all geographic series that you want to display in the `GeographicMap`. For example, you can the use [WorldConnections](map_resources_world_connections.md) script.
 
 ### Overlaying Flights
 
-Create first `GeographicPolylineSeries` object with flight connections between major airports and add it to `IgxSeriesComponent` collection of the `XamGeographicMap`.
+Create first `GeographicPolylineSeries` object with flight connections between major airports and add it to `IgxSeriesComponent` collection of the `GeographicMap`.
 
 ### Overlaying Gridlines
 
-Create second `GeographicPolylineSeries` object with geographic gridlines and add it to `IgxSeriesComponent` collection of the `XamGeographicMap`.
+Create second `GeographicPolylineSeries` object with geographic gridlines and add it to `IgxSeriesComponent` collection of the `GeographicMap`.
 
-Create `GeographicSymbolSeries` object with geographic gridlines and add it to `IgxSeriesComponent` collection of the geographic `XamGeographicMap`.
+Create `GeographicSymbolSeries` object with geographic gridlines and add it to `IgxSeriesComponent` collection of the geographic `GeographicMap`.

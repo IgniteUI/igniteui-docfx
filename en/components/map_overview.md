@@ -30,9 +30,9 @@ The map provides customizable navigation behaviors for navigating map content us
 
 To use the geographic map component, you need to first install these packages:
 
--   **npm install --save igniteui-Angular-core**
--   **npm install --save igniteui-Angular-charts**
--   **npm install --save igniteui-Angular-maps**
+-   **npm install --save igniteui-angular-core**
+-   **npm install --save igniteui-angular-charts**
+-   **npm install --save igniteui-angular-maps**
 
 The map is exported as an `NgModule`, you need to import the _IgxMapModule_ inside your
 `AppModule`:
@@ -43,7 +43,7 @@ The map is exported as an `NgModule`, you need to import the _IgxMapModule_ insi
 
 ```typescript
 // app.module.ts
-import {IgxMapModule} from 'igniteui-Angular-maps/ES5/igx-map-module'
+import {IgxMapModule} from 'igniteui-angular-maps/ES5/igx-map-module'
 
 @NgModule({
     imports: [
