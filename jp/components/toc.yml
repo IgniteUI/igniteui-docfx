@@ -502,6 +502,10 @@
 - name: Drop Down
   href: drop_down.md
   new: false
+  items:
+    - name: Virtual Drop Down
+      href: drop_down_virtual.md
+      new: true
 - name: Select
   href: select.md
   new: true
