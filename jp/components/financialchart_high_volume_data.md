@@ -1,13 +1,13 @@
-﻿---
-title: Financial Chart - 大規模データの処理
+---
+title: Financial Chart - 大規模なデータの処理
 _description: Ignite UI for Angular Financial Chart コンポーネントは、財務データを表示するタッチ対応、高いパフォーマンス、軽量なチャート コントロールです。
 _keywords: Ignite UI for Angular, データ ビジュアライゼーション, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Chart コンポーネント, Angular Financial Chart コンポーネント, Angular Chart コントロール, Angular Financial Chart コントロール
 _language: ja
 ---
 
-## 大規模データの処理
+## 大規模なデータの処理
 
-`IgxFinancialChart` コントロールは大規模なデータの処理が可能です。以下のデモは 20 年間のデータをバインドします。折れ線チャートは 1 時間間隔で在庫価格を示します。
+`IgxFinancialChart` コントロールは大規模なデータを処理できます。以下のデモは 20 年にわたるデータをバインドします。折れ線チャートで 1 時間間隔の在庫価格を示します。
 
 <div class="divider"></div>
 
@@ -25,9 +25,9 @@ _language: ja
 
 チャートのパフォーマンスに影響を及ぼすチャート機能および Angular 固有の機能があり、アプリケーションのパフォーマンスを最適化する際に検討する必要があります。
 
--   コンポーネントにバインドするプロパティで大規模なデータを保存する場合、`@Component` デコレーターで `changeDetection: ChangeDetectionStrategy.OnPush` を設定します。 Angular の各変更検出のサイクルでデータ配列内の変更を確認しないようにする設定です。
+-   コンポーネントにバインドするプロパティで大量のデータを保存する場合、`@Component` デコレーターで `changeDetection: ChangeDetectionStrategy.OnPush` を設定します。 Angular の各変更検出のサイクルでデータ配列内の変更を確認しないようにする設定です。
 
-以下のコードはファイナンシャル チャートを大規模なデータにバインドします。
+以下のコードはファイナンシャル チャートを大量のデータにバインドします。
 
 ```typescript
 import { GenerateHourlyPricesService } from "../services/generate-hourly-prices.service";

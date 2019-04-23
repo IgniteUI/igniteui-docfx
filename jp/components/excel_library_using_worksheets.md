@@ -1,7 +1,8 @@
-﻿---
+---
 title: ワークシートを使用した Excel Library
 _description: Ignite UI for Excel Library コンポーネントのワークシート処理
 _keywords: Ignite UI for Angular, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular Excel ライブラリ, Angular Excel ライブラリ例,  Angular Excel Library コンポーネント, Angular Excel Engine、ワークシート, 条件付き書式, Sorting, フィルタリング、グリッド線, ヘッダー, 保護
+_language: ja
 ---
 
 ## ワークシートの使用
@@ -15,6 +16,10 @@ Infragistics Excel Engine の `Worksheet` にデータが保存されます。Wo
 	src='{environment:demosBaseUrl}/excel-library/operations-on-worksheets' 
 	width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="excel-library-overview-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示
+    </button> 
+</div>  
 
 <div class="divider--half"></div>
 
@@ -105,18 +110,18 @@ worksheet.columns(0).cellFormat.locked = false;
 
 以下は、フィルターをワークシートに追加するためのメソッド一覧と概要です。
 
-| メソッド                         |                                                                                                    説明                                                                                                   |
-| ------------------------------ | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-| `ApplyAverageFilter`           |                                            データ範囲全体の平均を下回るデータであるか上回るデータであるかという条件に基づいてデータを絞り込むことのできるフィルターです。                                           |
-| `ApplyDatePeriodFilter`        |                                                                  月または四半期の日付をフィルターできるフィルターを表します。                                                                  |
+| メソッド                           |                                                      説明                                                      |
+| ------------------------------ | :----------------------------------------------------------------------------------------------------------: |
+| `ApplyAverageFilter`           |                        データ範囲全体の平均を下回るデータであるか上回るデータであるかという条件に基づいてデータを絞り込むことのできるフィルターです。                       |
+| `ApplyDatePeriodFilter`        |                                        月または四半期の日付をフィルターできるフィルターを表します。                                        |
 | `ApplyFillFilter`              | 背景の塗りつぶしに基づいてセルを絞り込むフィルターを表します。このフィルターには CellFill を 1 つ指定します。この塗りつぶしのセルがデータ範囲に表示されることになります。他のセルはすべて非表示になります。 |
-| `ApplyFixedValuesFilter`       |                                                     具体的な指定値に基づいて表示セルを絞り込むことのできるフィルターです。                                                    |
-| `ApplyFontColorFilter`         |    フォントの色に基づいてセルを絞り込むフィルターを表します。このフィルターには 1 つの色を指定します。この色のフォントのセルがデータ範囲に表示されることになります。他のセルはすべて非表示になります。   |
-| `ApplyIconFilter`              |                                                              条件付き書式アイコンに基づいてセルを絞り込むフィルターを表します。                                                              |
-| `ApplyRelativeDateRangeFilter` |                                                    フィルターの適用日を基点とした相対日付によって日付セルの範囲を絞り込むことのできるフィルターです。                                                   |
-| `ApplyTopOrBottomFilter`       |                                                         並べ替えられた値リストの上位または下位にあるセルを表示できるフィルターです。                                                        |
-| `ApplyYearToDateFilter`        |                              日付セルの範囲を現在の年の開始日からフィルターの評価実施日までの期間に絞り込むことのできるフィルターです。                              |
-| `ApplyCustomFilter`            |                  1 つ、ないし 2 つのカスタム条件に基づいてデータを絞り込むことのできるフィルターです。この 2 つの絞り込み条件は論理積 (and) または論理和 (or) 演算子と組み合わせて使用できます。                  |
+| `ApplyFixedValuesFilter`       |                                      具体的な指定値に基づいて表示セルを絞り込むことのできるフィルターです。                                     |
+| `ApplyFontColorFilter`         |      フォントの色に基づいてセルを絞り込むフィルターを表します。このフィルターには 1 つの色を指定します。この色のフォントのセルがデータ範囲に表示されることになります。他のセルはすべて非表示になります。     |
+| `ApplyIconFilter`              |                                       条件付き書式アイコンに基づいてセルを絞り込むフィルターを表します。                                      |
+| `ApplyRelativeDateRangeFilter` |                               フィルターの適用日を基点とした相対日付によって日付セルの範囲を絞り込むことのできるフィルターです。                              |
+| `ApplyTopOrBottomFilter`       |                                    並べ替えられた値リストの上位または下位にあるセルを表示できるフィルターです。                                    |
+| `ApplyYearToDateFilter`        |                             日付セルの範囲を現在の年の開始日からフィルターの評価実施日までの期間に絞り込むことのできるフィルターです。                            |
+| `ApplyCustomFilter`            |      1 つ、ないし 2 つのカスタム条件に基づいてデータを絞り込むことのできるフィルターです。この 2 つの絞り込み条件は論理積 (and) または論理和 (or) 演算子と組み合わせて使用できます。      |
 
 以下のコードスニペットを使用してフィルターをワークシート領域に追加します。
 
@@ -132,7 +137,7 @@ worksheet.filterSettings.applyAverageFilter(0, AverageFilterType.AboveAverage);
 
 ペイン固定機能は、行をワークシートの上または列を左にで固定できます。ユーザーがスクロールしている間、固定した行や列は表示されたままになります。固定された行列は、削除できない実線によってワークシートの残りの部分と区切られます。
 
-ペイン固定を有効にするために Worksheet オブジェクトの `displayOptions` の `panesAreFrozen` プロパティを `true` に設定する必要があります。表示オプション `frozenPaneSettings` の `frozenRows` と `frozenColumns` プロパティを使用して固定する行列を指定できます。
+ペイン固定を有効にするために `Worksheet` オブジェクトの `displayOptions` の `panesAreFrozen` プロパティを `true` に設定する必要があります。表示オプション `frozenPaneSettings` の `frozenRows` と `frozenColumns` プロパティを使用して固定する行列を指定できます。
 
 また `firstRowInBottomPane` と `firstColumnInRightPane` を個々に使用して下ペインの最初の行または右ペインの最初の列を指定できます。
 
@@ -153,7 +158,7 @@ worksheet.displayOptions.frozenPaneSettings.firstRowInBottomPane = 6;
 
 ### ワークシート ズーム レベルの設定
 
-各ワークシートのズーム レベルは、`Worksheet` オブジェクトの `Worksheet` の `magnificationInNormalView` プロパティを使用して個別に変更できます。このプロパティは、10 から 400 の間の値を取得して適用したいズームのパーセンテージを表します。
+各ワークシートのズーム レベルは、`Worksheet` オブジェクトの `displayOptions` の `magnificationInNormalView` プロパティを使用して個別に変更できます。このプロパティは、10 から 400 の間の値を取得して適用したいズームのパーセンテージを表します。
 
 以下のコードはその方法を示します。
 
@@ -215,7 +220,7 @@ Worksheet に追加可能な条件付き書式にその条件が true の場合�
 
 ワークシート セルの可視化の動作が異なるため、`cellFormat` プロパティがない条件付き書式もあります。この条件付き書式は `DataBarConditionalFormat`、`ColorScaleConditionalFormat`、`IconSetConditionalFormat` です。
 
-既存の `Workbook` を Excel から読み込む際に、その Workbook が読み込まれた場合も書式設定は保持されます。`Workbook` を Excel ファイルに保存する場合も保持されます。
+既存の `Workbook` を Excel から読み込む際に、その `Workbook` が読み込まれた場合も書式設定は保持されます。`Workbook` を Excel ファイルに保存する場合も保持されます。
 
 以下のコード例はワークシートの条件付き書式の使用方法を紹介します。
 

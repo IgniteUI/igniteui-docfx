@@ -15,7 +15,7 @@ Category Chart コントロールは、数百万に及ぶデータ ポイント�
     <iframe id="category-chart-performance-iframe" src='{environment:demosBaseUrl}/charts/category-chart-high-volume-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="category-chart-high-volume-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="category-chart-performance-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
     </button>
 </div>
 
@@ -32,4 +32,4 @@ Category Chart コントロールは、数百万に及ぶデータ ポイント�
 >     -   バインドしたデータの変更をチャートに通知する方法の詳細については、チャートの `notify*` メソッドを参照してください。
 > -   Angular が Debug モードで実行されている場合、特定のブラウザーでパフォーマンスを低下させるオーバーヘッドがあります。実環境パフォーマンスを評価する場合、`--prod` を使用して serve または build してください。
 >
-> 注: アプリケーションでパフォーマンス上の問題が発生した場合、デバッグ ビルドではなくプロダクション ビルドで実行するとチャートのパフォーマンスが改善されます。これらのケースでは必ずプロダクション ビルドを実行してください。
+> 注: アプリケーションでパフォーマンス上の問題が発生した場合、デバッグ ビルドではなくプロダクション ビルドで実行するとチャートのパフォーマンスが改善されます。  これらのケースでは必ずプロダクション ビルドを実行してください。

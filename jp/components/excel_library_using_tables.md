@@ -1,4 +1,4 @@
-﻿---
+---
 title: テーブルを使用した Excel Library
 _description: テーブルを使用した Ignite UI for Excel Library コンポーネント
 _keywords: Ignite UI for Angular, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular Excel ライブラリ, Angular Excel ライブラリ例,  Angular Excel Library コンポーネント, Angular Excel Engine, Tables, Sorting, フィルタリング
