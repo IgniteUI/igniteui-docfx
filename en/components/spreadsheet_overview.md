@@ -24,10 +24,9 @@ When installing the spreadsheet package, the core and excel package must also be
 -   **npm install --save igniteui-angular-excel**
 -   **npm install --save igniteui-angular-spreadsheet**
 
-<!-- -->
+### Required Modules
 
-In order to use the spreadsheet, you need to register the
-`IgxSpreadsheetModule` in your app during load:
+The `IgxSpreadsheet` requires the following modules:
 
 ```typescript
 import { IgxExcelModule } from "igniteui-angular-excel/ES5/igx-excel-module";

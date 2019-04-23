@@ -29,10 +29,9 @@ When installing the charts package, the core package must also be installed.
 -   **npm install --save igniteui-angular-core**
 -   **npm install --save igniteui-angular-charts**
 
-The pie chart is exported as an `NgModule`, you need > to import the _Ig$PieChartModule_ inside your
-`AppModule`:
+### Required Modules
 
-<!-- -->
+The `IgxPieChart` requires the following modules:
 
 ```typescript
 // app.module.ts

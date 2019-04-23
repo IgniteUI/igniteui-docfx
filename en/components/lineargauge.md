@@ -31,12 +31,9 @@ When installing the gauge package, the core package must also be installed.
 -   **npm install --save igniteui-angular-core**
 -   **npm install --save igniteui-angular-gauges**
 
-The linear gauge is exported as an `NgModule`, you need to import the
-`IgxLinearGaugeModule` inside your `AppModule`:
+### Required Modules
 
-<!-- -->
-
-<!-- -->
+The `IgxLinearGauge` requires the following modules:
 
 ```typescript
 // app.module.ts

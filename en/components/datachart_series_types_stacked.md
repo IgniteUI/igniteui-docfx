@@ -71,9 +71,7 @@ Stacked series have the following data requirements:
 
 ### Required Modules
 
-<!-- Angular -->
-
-In order to use stacked series, you need to import the following modules in your app during load:
+The stacked series requires the following modules:
 
 ```typescript
 // axis' modules:
@@ -129,7 +127,7 @@ This code demonstrates how to create an instance of data chart with `StackedColu
     <igx-stacked-fragment-series valueMemberPath="Gas"></igx-stacked-fragment-series>
     <igx-stacked-fragment-series valueMemberPath="Oil"></igx-stacked-fragment-series>
   </igx-stacked-column-series>
-    
+
 </igx-data-chart>
 ```
 
@@ -149,6 +147,6 @@ This code demonstrates how to create an instance of data chart with `StackedColu
     <igx-stacked-fragment-series valueMemberPath="Gas"></igx-stacked-fragment-series>
     <igx-stacked-fragment-series valueMemberPath="Oil"></igx-stacked-fragment-series>
   </igx-stacked-bar-series>
-    
+
 </igx-data-chart>
 ```

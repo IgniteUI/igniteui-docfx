@@ -34,12 +34,9 @@ When installing the gauge package, the core package must also be installed.
 -   **npm install --save igniteui-angular-core**
 -   **npm install --save igniteui-angular-gauges**
 
-The bullet graph is exported as an `NgModule`, you need to import the
-`IgxBulletGraphModule` inside your `AppModule`:
+### Required Modules
 
-<!-- -->
-
-<!-- -->
+The `IgxBulletGraph` requires the following modules:
 
 ```typescript
 // app.module.ts

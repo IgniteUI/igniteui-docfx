@@ -28,11 +28,9 @@ When installing the charts package, the core package must also be installed.
 -   **npm install --save igniteui-angular-core**
 -   **npm install --save igniteui-angular-charts**
 
-<!-- -->
+### Required Modules
 
-The `IgxDoughnutChart` is exported as an `NgModule`, you need to import the _IgxDoughnutChartModule_ inside your `AppModule`:
-
-<!-- -->
+The `IgxDoughnutChart` requires the following modules:
 
 ```typescript
 // app.module.ts

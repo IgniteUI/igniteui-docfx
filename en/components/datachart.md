@@ -28,12 +28,9 @@ When installing the chart package, the core package must also be installed.
 -   **npm install --save igniteui-angular-core**
 -   **npm install --save igniteui-angular-charts**
 
-The data chart is exported as an `NgModule`, you need to import the
-`IgxDataChartCoreModule` inside your `AppModule`:
+### Required Modules
 
-<!-- -->
-
-<!-- -->
+The `IgxDataChart` requires the following modules:
 
 ```typescript
 // data chart's modules required for all series:

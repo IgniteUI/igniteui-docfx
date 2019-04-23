@@ -31,15 +31,9 @@ When installing the gauge package, the core package must also be installed.
 -   **npm install --save igniteui-angular-core**
 -   **npm install --save igniteui-angular-gauges**
 
-The radial gauge is exported as an `NgModule`, you need to import the
-`IgxRadialGaugeModule` inside your
-`AppModule`:
+### Required Modules
 
-<!-- -->
-
-<!-- -->
-
-<!-- Angular -->
+The `IgxRadialGauge` requires the following modules:
 
 ```typescript
 // app.module.ts
@@ -56,15 +50,6 @@ import { IgrRadialGaugeModule } from 'igniteui-angular-gauges/ES5/igx-radial-gau
 export class AppModule {}
 ```
 
-<!-- end: Angular -->
-
-```typescript
-import { IgcRadialGaugeModule } from 'igniteui-webcomponents-gauges/ES5/igc-radial-gauge-module';
-import { IgcRadialGaugeModule } from 'ignite-webcomponents-gauges/ES5/igx-radial-gauge';
-
-IgcRadialGaugeModule.register();
-```
-
 <div class="divider--half"></div>
 
 ### Usage
@@ -73,10 +58,10 @@ The following code demonstrates how create a radial gauge containing a needle an
 
 ```html
  <igx-radial-gauge height="400px" width="400px"
-    value=25
-    interval=5
-    minimumValue=0
-    maximumValue=50>
+    value="25"
+    interval="5"
+    minimumValue="0"
+    maximumValue="50">
     <igx-radial-graph-range startValue="0"
                             endValue="30"
                             brush="red"/>

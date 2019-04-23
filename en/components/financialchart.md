@@ -49,12 +49,9 @@ When installing the chart package, the core package must also be installed.
 -   **npm install --save igniteui-angular-core**
 -   **npm install --save igniteui-angular-charts**
 
-The financial chart is exported as an `NgModule`, you need to import the _IgxFinancialChartModule_ inside your
-`AppModule`:
+### Required Modules
 
-<!-- -->
-
-<!-- -->
+The `IgxFinancialChart` requires the following modules:
 
 ```typescript
 // app.module.ts

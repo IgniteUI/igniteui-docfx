@@ -34,12 +34,9 @@ To use the geographic map component, you need to first install these packages:
 -   **npm install --save igniteui-angular-charts**
 -   **npm install --save igniteui-angular-maps**
 
-The map is exported as an `NgModule`, you need to import the _IgxMapModule_ inside your
-`AppModule`:
+### Required Modules
 
-<!-- -->
-
-<!-- -->
+The `IgxGeographicMap` requires the following modules:
 
 ```typescript
 // app.module.ts
