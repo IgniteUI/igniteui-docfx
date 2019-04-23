@@ -26,29 +26,28 @@ _language: ja
 
 chart パッケージをインストールするときに core パッケージもインストールする必要があります。
 
-**npm install igniteui-angular-charts igniteui-angular-core**
+-   **npm install --save igniteui-angular-core**
+-   **npm install --save igniteui-angular-charts**
 
+<!--
 > [!NOTE]
 > Angular:
 >
 > カテゴリ チャートが NgModule としてエクスポートされるため、アプリケーションで
 > AppModule に IgxCategoryChartModule をインポートする必要があります。
 
-<!-- -->
-
 > [!NOTE]
 > WebComponents:
 >
-> データチャートを使うには、ロード中にアプリケーションに `Ig $ DataChartCoreModule` 
+> データチャートを使うには、ロード中にアプリケーションに `Ig $ DataChartCoreModule`
 > を登録する必要があります。
-
-<!-- -->
 
 > [!NOTE]
 > React:
 >
-> データチャートを使うには、ロード中にアプリケーションに `Ig $ DataChartCoreModule` 
+> データチャートを使うには、ロード中にアプリケーションに `Ig $ DataChartCoreModule`
 > を登録する必要があります。
+-->
 
 ```typescript
 // data chart's modules required for all series:
@@ -80,7 +79,7 @@ export class AppModule { /* ... */ }
 
 ### サポートされるシリーズ
 
-`IgxDataChart` コントロールは、[カテゴリ シリーズ](datachart_series_types_category.md)、 [ファイナンシャル シリーズ](datachart_series_types_financial.md)、[極座標シリーズ](datachart_series_types_polar.md)、[ラジアル シリーズ](datachart_series_types_radial.md)、[範囲シリーズ](datachart_series_types_range.md)、[散布シリーズ](datachart_series_types_scatter_bubble.md)、[図形シリーズ](datachart_series_types_shape.md) を含む 65 種類以上のシリーズをサポートします。サポートされている [Series](datachart_series_types.md) のタイプとそれらの使用方法のリストについては、シリーズのトピックを参照してください。
+`IgxDataChart` コントロールは、[カテゴリ シリーズ](datachart_series_types_category.md), [ファイナンシャル シリーズ](datachart_series_types_financial.md)、[極座標シリーズ](datachart_series_types_polar.md)、[ラジアル シリーズ](datachart_series_types_radial.md)、[範囲シリーズ](datachart_series_types_range.md)、[散布シリーズ](datachart_series_types_scatter_bubble.md)、[図形シリーズ](datachart_series_types_shape.md) を含む 65 種類以上のシリーズをサポートします。サポートされている [Series](datachart_series_types.md) のタイプとそれらの使用方法のリストについては、シリーズのトピックを参照してください。
 
 ### サポートされる軸
 
@@ -88,7 +87,7 @@ export class AppModule { /* ... */ }
 
 | 軸タイプ               | サポートされるシリーズ タイプ                                                                                                                                                                                                                                  |
 | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| CategoryYAxis      | [カテゴリ ](datachart_series_types_category.md) グループの `BarSeries` のみ                                                                                                                                                                             |
+| CategoryYAxis      | [Category ](datachart_series_types_category.md) グループの `BarSeries` のみ                                                                                                                                                                             |
 | CategoryXAxis      | すべての [ファイナンシャル シリーズ](datachart_series_types_financial.md)、[範囲シリーズ](datachart_series_types_range.md)、[カテゴリ シリーズ](datachart_series_types_category.md) (`BarSeries` 以外)                                                                             |
 | TimeXAxis          | すべての [ファイナンシャル シリーズ](datachart_series_types_financial.md)、[範囲シリーズ](datachart_series_types_range.md)、[カテゴリ シリーズ](datachart_series_types_category.md) (`BarSeries` 以外)                                                                             |
 | OrdinalTimeXAxis   | すべての [ファイナンシャル シリーズ](datachart_series_types_financial.md)、[範囲シリーズ](datachart_series_types_range.md)、[カテゴリ シリーズ](datachart_series_types_category.md) (`BarSeries` 以外)                                                                             |
@@ -101,7 +100,7 @@ export class AppModule { /* ... */ }
 
 ### 使用方法
 
-データチャートモジュールがインポートされたので、次のステップはチャートをデータにバインドすることです。すべてのシリーズを正しく表示するには、特定の数と種類のデータ列が必要です。[データソース](datachart_data_sources.md) のトピックで、系列の種類ごとにデータソースを見つけることができます。
+データチャートモジュールがインポートされたので、次のステップはチャートをデータにバインドすることです。すべてのシリーズを正しく表示するには、特定の数と種類のデータ列が必要です。[Data Sources](datachart_data_sources.md) のトピックで、系列の種類ごとにデータソースを見つけることができます。
 
 次のコードスニペットは、散布 `BubbleSeries` を作成し、それを [SampleScatterStats](datachart_data_sources_stats.md) データにバインドする方法を示しています。
 

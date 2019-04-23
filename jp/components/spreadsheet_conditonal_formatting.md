@@ -1,20 +1,21 @@
 ---
-title: Angular Spreadsheet | Grid Controls | Ignite UI for Angular | Conditional Formatting | Infragistics |
-_description: Use the Spreadsheet control to embed Excel document creation and editing experiences right into your application.
+title: Angular Spreadsheet | Grid コントロール | Ignite UI for Angular | 条件付き書式 | Infragistics |
+_description: スプレッドシート コントロールを使用して、Excel ドキュメントの作成と編集のエクスペリエンスをアプリケーションに直接埋め込むことができます。
 _keywords: Spreadsheet, Ignite UI for Angular, Infragistics
+_language: ja
 ---
 
 ## Angular Spreadsheet
 
-The Angular Spreadsheet is a Angular component that allows visualizing and editing of spreadsheet data. Features include activation, cell editing, conditional formatting, selection, clipboard. 
+Angular Spreadsheet は、スプレッドシート データの視覚化と編集を可能にする Angular コンポーネントです。機能には、アクティブ化、セル編集、条件付き書式設定、選択、クリップボードなどがあります。 
 
-### Demo
+### デモ
 
 <div class="sample-container" style="height: 500px">
     <iframe id="spreadsheet-overview-sample-iframe" src='{environment:demosBaseUrl}/spreadsheet/spreadsheet-overview' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="spreadsheet-overview-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="spreadsheet-overview-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示
     </button>
 </div>
 

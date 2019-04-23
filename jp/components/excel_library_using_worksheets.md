@@ -1,5 +1,5 @@
 ---
-title: ワークシートを使用した Excel Library
+title: ワークシートを使用した Excel ライブラリ
 _description: Ignite UI for Excel Library コンポーネントのワークシート処理
 _keywords: Ignite UI for Angular, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular Excel ライブラリ, Angular Excel ライブラリ例,  Angular Excel Library コンポーネント, Angular Excel Engine、ワークシート, 条件付き書式, Sorting, フィルタリング、グリッド線, ヘッダー, 保護
 _language: ja
@@ -7,7 +7,7 @@ _language: ja
 
 ## ワークシートの使用
 
-Infragistics Excel Engine の `Worksheet` にデータが保存されます。Worksheet の行やセルにデータを入力でき、対応する値を設定できます。`Worksheet` は、フィルター、並べ替え、セル書式のカスタマイズができます。
+Infragistics Excel エンジンの `Worksheet` にデータが保存されます。Worksheet の行やセルにデータを入力でき、対応する値を設定できます。`Worksheet` は、フィルター、並べ替え、セル書式のカスタマイズができます。
 
 ### デモ
 
@@ -44,7 +44,7 @@ import { WorkbookColorInfo } from "igniteui-angular-excel/ES5/excel.core";
 
 グリッド線は、ワークシートでセルを視覚的に分離するために使用されます。グリッド線は表示または非表示にできます。また、色を変更することもできます。
 
-列と行のヘッダーは、ワークシートの `displayOptions` の `showGridlines` プロパティを使用して、表示と非表示を切り替えることができます。以下のコードは、ワークシートのグリッドラインを非表示にする方法を示します。
+列と行のヘッダーは、ワークシートの displayOptions の showGridlines プロパティを使用して、表示と非表示を切り替えることができます。以下のコードは、ワークシートのグリッドラインを非表示にする方法を示します。
 
 ```typescript
 var workbook = new Workbook(WorkbookFormat.Excel2007);
@@ -53,7 +53,7 @@ var worksheet = workbook.worksheets().add("Sheet1");
 worksheet.displayOptions.showGridlines = false;
 ```
 
-ワークシートの `displayOptions` の `gridlineColor` プロパティを使用して、グリッド線の色を設定できます。以下のコードは、ワークシートのグリッド線を変更する方法を示します。
+ワークシートの displayOptions の gridlineColor プロパティを使用して、グリッド線の色を設定できます。以下のコードは、ワークシートのグリッド線を変更する方法を示します。
 
 ```typescript
 var workbook = new Workbook(WorkbookFormat.Excel2007);

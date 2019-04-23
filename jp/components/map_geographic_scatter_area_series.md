@@ -1,6 +1,6 @@
 ---
 title: マップ | データ可視化ツール | Ignite UI for Angular | 散布エリア シリーズ | Infragistics
-_description: マップを使用すると、ビューモデルからの地理的位置を含むデータ、またはシェイプファイルから地理的画像マップにロードされた地理空間データを表示できます。
+_description: マップを使用すると、ビューモデルからの地理的位置を含むデータ、またはシェープファイルから地理的画像マップにロードされた地理空間データを表示できます。
 _keywords: map, Ignite UI for Angular, infragistics
 _language: ja
 ---

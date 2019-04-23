@@ -5,7 +5,7 @@ _keywords: Ignite UI for Angular, Angular, ネイティブ Angular コンポー�
 _language: ja
 ---
 
-## Excel Library - スパークライン
+## Excel ライブラリ スパークライン
 
 このトピックでは、データ トレンドを視覚的に表すために Infragistics Excel Library を使用して Excel® ワークシート (.xlsx) にスパークラインを追加する方法を表します。スパークラインでデータでの変更を簡単にビジュアル化できます。スパークラインはワークシート内のセル内にどこでも配置できます。 
 

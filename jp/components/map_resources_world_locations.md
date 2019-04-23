@@ -5,7 +5,7 @@ _keywords: map, Ignite UI for Angular, infragistics
 _language: ja
 ---
 
-## 世界の場所
+## ワールド ロケーション
 
 リソース トピックでは、都市の地理的位置と国の首都を生成するためのデータ ユーティリティの実装を提供します。
 

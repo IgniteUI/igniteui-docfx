@@ -23,7 +23,7 @@ Excel ワークシートの `WorksheetCell` オブジェクトは、ワークシ
 
 <div class="divider--half"></div>
 
-### 参照
+### References
 
 以下のコードは、以下のコード スニペットを使用するインポートを示します。
 
@@ -57,7 +57,7 @@ var region = worksheet.getRegion("G1:G10");
 
 Microsoft Excel では各セルとセル領域に名前が割り当てられています。アドレスの代わりにセルまたは領域の名前を使用してセルまたは領域を参照できます。
 
-Infragistics Excel Library は、Worksheet オブジェクトの `getCell` と `getRegion` メソッドによって、名前によるセルおよび領域の参照をサポートします。そのセルまたは領域を参照する `NamedReference` インスタンスを使用してセルまたは領域を参照します。
+Infragistics Excel Library は、Worksheet オブジェクトの `getCell` と `getRegion` メソッドによって、名前によるセルおよび領域の参照をサポートします。You refer to the cell or region using the `NamedReference` instance that refers to that cell or region.
 
 以下のコードスニペットは、セルまたは領域の名前の例です。
 
@@ -95,8 +95,7 @@ worksheet.rows(0).cells(0).comment = cellComment;
 
 ### セルに数式を追加
 
-Infragistics Excel ライブラリは、ワークシートでセルまたはセルのグループに Microsoft Excel の数式を追加できます。
-これを行うには、 `WorksheetCell` オブジェクトの `applyFormula` メソッドを使うか、 `Formula` オブジェクトをインスタンス化してセルに適用します。セルに数式を適用する方法に関わらず、` Formula` にアクセスできます。値が必要な場合はセルの `Value` プロパティを使います。
+Infragistics Excel ライブラリは、ワークシートでセルまたはセルのグループに Microsoft Excel の数式を追加できます。You can do this using the `WorksheetCell` object’s `applyFormula` method or by instantiating a `Formula` object and applying it to a cell.Regardless of the manner in which you apply a formula to a cell, you can access the `Formula` object using the `WorksheetCell` object’s `Formula` property.If you need the value, use the cell’s `Value` property.
 
 以下のコードは、セルに数式を追加する方法を示します。
 
@@ -149,7 +148,7 @@ worksheet.columns(2).cellFormat.formatString = "\"$\"#,##0.00";
 
 このカラー パレットは Microsoft Excel 2007 UI のカラー ダイアログと似ています。[Excel オプション] => [保存] => [色] からこのカラー ダイアログを開くことができます。
 
-`CellFill` クラスで静的なプロパティおよびメソッドを使用してすべての可能な塗りつぶしタイプを作成できます。
+You can create all possible fill types using static properties and methods on the `CellFill` class.以下の通りです:
 
 -   `noColor` - 色なしの塗りつぶしを表すプロパティ。ワークシートの背景画像がある場合は透けて見えます。
 
@@ -219,7 +218,7 @@ RGB またはテーマの色が使用される場合、色を明るくする、�
 
 -   これらはワークブックが作成されるときの既定値で、Excel を介してカスタマイズできます。
 
-色は、シールされた不変クラスである、`WorkbookColorInfo` クラスで定義されます。このクラスには静的な `automatic` プロパティがあり、自動的な色を返します。色またはテーマ値とオプションの濃淡で `WorkbookColorInfo` インスタンスを作成することを可能にするさまざまなコンストラクターがあります。
+Colors are defined by the `WorkbookColorInfo` class, which is a sealed immutable class.このクラスには静的な `automatic` プロパティがあり、自動的な色を返します。色またはテーマ値とオプションの濃淡で `WorkbookColorInfo` インスタンスを作成することを可能にするさまざまなコンストラクターがあります。
 
 `WorkbookColorInfo` の `getResolvedColor` メソッドは、Excel でファイルを開く際にユーザーに実際に表示される色を決定することが可能となります。
 
@@ -245,7 +244,7 @@ RGB またはテーマの色が使用される場合、色を明るくする、�
 
 `style` プロパティを null に設定した場合、`normalStyle` スタイルに戻ります。スタイル コレクションで別のスタイルに設定される場合、そのスタイルはセル書式にすべての未設定のプロパティのデフォルトを保持するようになります。
 
-`style` プロパティをセル書式に設定した場合、`style` に含まれる書式オプションはセル書式から削除されます。すべてのその他のプロパティはそのまま残されます。たとえば、境界線の書式を含むセル スタイルを作成してスタイルをセルの `style` として設定した場合、セル書式の境界線の書式オプションは削除され、セル書式に塗りつぶしの書式のみ含まれます。
+`style` プロパティをセル書式に設定した場合、`style` に含まれる書式オプションはセル書式から削除されます。すべてのその他のプロパティはそのまま残されます。For example, if a cell style including border formatting was created and that style was set as the cell's `style`, the border format option on the cell format would be removed and the cell format only includes fill formatting.
 
 書式オプション フラグが書式から削除されると、すべての関連付けたプロパティは未設定値にリセットされます。したがってセル書式の罫線プロパティはデフォルト/未設定値に暗黙的にリセットされます。
 

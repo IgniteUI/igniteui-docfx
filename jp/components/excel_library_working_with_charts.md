@@ -5,7 +5,7 @@ _keywords: Ignite UI for Angular, Angular, ネイティブ Angular コンポー�
 _language: ja
 ---
 
-## Excel Library チャート
+## Excel ライブラリ チャート
 
 このトピックでは、データ トレンドを視覚的に表示するためにコードを使用して Excel ワークシート (.xlsx) にワークシート チャートを追加し、ワークシートのセル領域のデータ トレンドを可視化する方法を表します。たとえば Excel データを柱状チャートや折れ線チャートで可視化する場合この機能は便利です。
 

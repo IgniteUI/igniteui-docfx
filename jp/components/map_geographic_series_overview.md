@@ -1,7 +1,8 @@
 ---
 title: Map | Data Visualization Tools | Ignite UI for Angular | Geographic Series | Infragistics
-_description: The Map allows you to display data that contains geographic locations from view models or geo-spatial data loaded from shape files on geographic imagery maps.View the demo, dependencies, usage and toolbar for more information.
+_description: �}�b�v��g�p����ƁA�r���[���f������̒n���I�ʒu��܂ރf�[�^�A�܂��̓V�F�[�v�t�@�C������n���I�摜�}�b�v�Ƀ��[�h���ꂽ�n����ԃf�[�^��\���ł��܂��B
 _keywords: map, Ignite UI for Angular, infragistics
+_language: ja
 ---
 
 ## Geographic Series
@@ -18,7 +19,7 @@ The Geographic Map component supports the following typs of geographic series:
 -   [Using Scatter Symbol Series](map_geographic_scatter_symbol_series.md)
 -   [Using Scatter Proportional Series](map_geographic_scatter_proportional_series.md)
 -   [Using Scatter Contour Series](map_geographic_scatter_contour_series.md)
--   [Using Scatter Density Series](map_geographic_high_density_scatter_series.md)
+-   [Using Scatter Density Series](map_geographic_scatter_density_series.md)
 -   [Using Scatter Area Series](map_geographic_scatter_area_series.md)
 -   [Using Shape Polygon Series](map_geographic_shape_polygon_series.md)
 -   [Using Shape Polyline Series](map_geographic_shape_polyline_series.md)

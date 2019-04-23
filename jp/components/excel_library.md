@@ -12,14 +12,14 @@ Infragistics Excel ライブラリは、Workbook、Worksheet、Cell、Formula �
 ### デモ
 
 <div class="sample-container" style="height: 500px">
-    <iframe id="excel-library-overview-sample-iframe" 
-	src='{environment:demosBaseUrl}/excel-library/operations-on-workbooks' 
+    <iframe id="excel-library-overview-sample-iframe"
+	src='{environment:demosBaseUrl}/excel-library/operations-on-workbooks'
 	width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="excel-library-overview-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示
     </button>
-</div> 
+</div>
 
 <div class="divider--half"></div>
 
@@ -27,7 +27,8 @@ Infragistics Excel ライブラリは、Workbook、Worksheet、Cell、Formula �
 
 excel パッケージをインストールするときに core パッケージもインストールする必要があります。
 
--   **npm install igniteui-angular-excel igniteui-angular-core --save**
+-   **npm install --save igniteui-angular-core**
+-   **npm install --save igniteui-angular-excel**
 
 Excel Library が `NgModule` としてエクスポートされるため、アプリケーションで `AppModule` に `IgxExcelModule` をインポートする必要があります。
 
@@ -45,9 +46,9 @@ import { IgxExcelModule } from "igniteui-angular-excel/ES5/igx-excel-module";
 export class AppModule {}
 ```
 
-### Modules – Excel Library の 5 つのモジュール
+### Excel ライブラリの 5 つのモジュール
 
--   **IgxExcelCoreModule** – オブジェクトモデルを含み、Exce の基盤となります。
+-   **IgxExcelCoreModule** – オブジェクトモデルを含み、Excel の基盤となります。
 -   **IgxExcelFunctionsModule** – Sum、Average、Min、Max、SumIfs、Ifs など、数式評価のほとんどのカスタム関数を含み、このモジュールがなくても数式が計算 ( “=SUM(A1:A5 などの数式を適用するなど) されてセルの Value を要求する場合は数式の解析で問題を発生しません。(注: 例外のスローではありません。数式の結果がエラーとなるため特定のエラーを表すオブジェクト)。
 -   **IgxExcelXlsModule** – xls (および関連する) タイプ ファイルのロジックの読み込みと保存を含みます。これは Excel97to2003 関連の WorkbookFormats です。
 -   **IgxExcelXlsxModule** – xlsx (および関連する) タイプ ファイルのロジックの読み込みと保存を含みます。これは Excel2007 関連および StrictOpenXml ANDWorkbookFormats です。

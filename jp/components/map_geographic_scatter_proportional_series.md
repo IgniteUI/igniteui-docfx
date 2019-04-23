@@ -5,7 +5,7 @@ _keywords: map, Ignite UI for Angular, infragistics
 _language: ja
 ---
 
-## Using Scatter Proportional Series
+## 散布図 - 比例シリーズの使用
 
 アプリケーション内のデータで指定された地理的な地点のマーカーをプロットするには、マップコンポーネントの `GeographicProportionalSymbolSeries` を使用します。このマップ シリーズは、百貨店、倉庫、オフィスなど、特定のビジネス ケースに応じたポイントを強調表示する場合に役立ちます。また、動的な車両追跡のためにフリート管理システムまたは GPS システムでこの地図シリーズを使用することができます。
 

@@ -5,7 +5,7 @@ _keywords: Ignite UI for Angular, Angular, ネイティブ Angular コンポー�
 _language: ja
 ---
 
-## グリッドと Excel Library
+## グリッドと Excel ライブラリ
 
 TODO
 

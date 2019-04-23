@@ -1,57 +1,58 @@
 ---
-title: Map | Data Visualization Tools | Ignite UI for Angular | Infragistics
-_description: The Map allows you to display data that contains geographic locations from view models or geo-spatial data loaded from shape files on geographic imagery maps.View the demo, dependencies, usage and toolbar for more information.
+title: Map |データ可視化ツール|Ignite UI for Angular |Infragistics
+_description: マップを使用すると、ビューモデルからの地理的位置を含むデータ、またはシェープファイルから地理的画像マップにロードされた地理空間データを表示できます。
 _keywords: map, Ignite UI for Angular, infragistics
+_language: ja
 ---
 
-## Using Scatter High Density Series
+## 散布高密度シリーズの使用
 
-Use the map component's `GeographicHighDensityScatterSeries` to bind and show scatter data ranging from hundreds to millions of data points requiring exceedingly little loading time.
+マップ コンポーネントの `GeographicHighDensityScatterSeries` を使用して、非常に少ないロード時間で、数百から数百万のデータ ポイントを持つ散布図データをバインドして表示できます。
 
-### Demo
+### デモ
 
 <div class="sample-container" style="height: 400px">
     <iframe id="geo-map-type-scatter-density-series-iframe" src='{environment:demosBaseUrl}/maps/geo-map-type-scatter-density-series' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="geo-map-type-scatter-density-series-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="geo-map-type-scatter-density-series-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示
     </button>
 </div>
 
 <div class="divider--half"></div>
 
-The demo above shows the `GeographicHighDensityScatterSeries` series in the map component bound to hundreds or even thousands of data points representing Australia’s population density. The map plot area with more densely populated data points represented as coalescences of red pixels and loosely distributed data points by discrete blue pixels.
+上記のデモは、オーストラリアの人口密度を表す何百、何千ものデータ ポイントにバインドされた `GeographicHighDensityScatterSeries` シリーズをマップ コンポーネントで示しています。大量のデータ ポイントを含むマップのプロット領域は凝縮された赤色のピクセルによって表します。少量のデータ ポイントを含む領域は青色のピクセルによって表します。
 
-Because there are so many data points, the series displays the scatter data as tiny dots as opposed to full size markers, and displays areas with the most data using a higher color density representing a cluster of data points.
+相当数のデータ ポイントがあるため、シリーズではフルサイズのマーカーに対して散布データを小さな点として表示し、領域にはデータ ポイントの集合を表す高い色密度を使用した大半のデータを表示します。
 
-### Data Requirements
+### データ要件
 
-Similar to other types of scatter series in the map control, the `GeographicHighDensityScatterSeries` series has the `ItemsSource` property which can be bound to an array of objects. In addition, each data item in the items source must have two data columns that store geographic longitude and latitude coordinates and uses the `LongitudeMemberPath` and `LatitudeMemberPath` properties to map these data columns.
+マップ コントロールの他のタイプの散布図シリーズと同様に、`GeographicHighDensityScatterSeries` シリーズには、オブジェクトの配列にバインドできる `ItemsSource` プロパティがあります。また、項目ソースの各項目は、地理経度および緯度を表す 2 つのデータ列があります。`LongitudeMemberPath` と `LatitudeMemberPath` プロパティを使用してこのデータ列をマップします。
 
-#### Data Binding
+#### データ バインディング
 
-The following table summarizes the GeographicHighDensityScatterSeries series properties used for data binding.
+以下の表に、データ バインドに使用される GeographicHighDensityScatterSeries シリーズのプロパティをまとめています。
 
-| Property              | Type   | Description                                                                                           |
-| --------------------- | ------ | ----------------------------------------------------------------------------------------------------- |
-| `ItemsSource`         | any    | Gets or sets the items source                                                                         |
-| `LongitudeMemberPath` | String | Uses the ItemsSource property to determine the location of the longitude values on the assigned items |
-| `LatitudeMemberPath`  | String | Uses the ItemsSource property to determine the location of the latitude values on the assigned items  |
+| プロパティ                 | タイプ                                               | 説明                                                |
+| --------------------- | ------------------------------------------------- | ------------------------------------------------- |
+| `ItemsSource`         | any                                               | 項目ソースを取得または設定します。                                 |
+| `LongitudeMemberPath` | 経度値が割り当てられた項目上の位置を決定するには ItemsSource プロパティを使用します。 |                                                   |
+| `LatitudeMemberPath`  | String                                            | 緯度値が割り当てられた項目上の位置を決定するには ItemsSource プロパティを使用します。 |
 
-### Heat Color Scale
+### 熱色スケール
 
-The Heat Color Scale, an optional feature, determines the color pattern within the series. The following table summarizes the properties used for determining the color scale.
+熱色スケールは、シリーズ内のカラー パターンを決定するオプションの機能です。以下の表は、カラー スケールを決定するために使用するプロパティをまとめたものです。
 
-| Property           | Type   | Description                                                               |
-| ------------------ | ------ | ------------------------------------------------------------------------- |
-| `HeatMinimum`      | Double | Defines the double value representing the minimum end of the color scale  |
-| `HeatMaximum`      | Double | Defines the double value representing the maximum end of the color scale  |
-| `HeatMinimumColor` | Color  | Defines the point density color used at the bottom end of the color scale |
-| `HeatMaximumColor` | Color  | Defines the point density color used at the top end of the color scale    |
+| プロパティ              | タイプ                             | 説明                               |
+| ------------------ | ------------------------------- | -------------------------------- |
+| `HeatMinimum`      | カラー スケールの最小端を表す double 値を定義します。 |                                  |
+| `HeatMaximum`      | カラー スケールの最大端を表す double 値を定義します。 |                                  |
+| `HeatMinimumColor` | Color                           | カラー スケールの下端で使用するポイント密度カラーを定義します。 |
+| `HeatMaximumColor` | Color                           | カラー スケールの上端で使用するポイント密度カラーを定義します。 |
 
-### Code Example
+### コード例
 
-The following code demonstrates how set the `HeatMinimumColor` and `HeatMaximumColor` properties of the `GeographicHighDensityScatterSeries`
+以下のコードは、`GeographicHighDensityScatterSeries` の `HeatMinimumColor` と `HeatMaximumColor` プロパティを設定する方法を示します。
 
 <!-- Angular -->
 
