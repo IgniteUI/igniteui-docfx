@@ -35,7 +35,7 @@ import { TwoConstraintDataValidationRule } from "igniteui-angular-excel/ES5/TwoC
 
 ### Usage
 
-The following snippt shows how you can setup the data validation rules
+The following snippet shows how you can setup the data validation rules
 
 ```typescript
 // this validation rule has only input message set

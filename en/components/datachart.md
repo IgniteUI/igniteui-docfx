@@ -25,7 +25,8 @@ The `IgxDataChart` is a charting component that provides modular design of axis,
 
 When installing the chart package, the core package must also be installed.
 
-**npm install igniteui-angular-charts igniteui-angular-core**
+-   **npm install --save igniteui-angular-core**
+-   **npm install --save igniteui-angular-charts**
 
 The data chart is exported as an `NgModule`, you need to import the
 `IgxDataChartCoreModule` inside your `AppModule`:

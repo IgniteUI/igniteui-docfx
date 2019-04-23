@@ -1,6 +1,6 @@
 ---
 title: Map | Data Visualization Tools | Ignite UI for Angular | Infragistics
-_description: The Map allows you to display data that contains geographic locations from view models or geo-spatial data loaded from shape files on geographic imagery maps.View the demo, dependencies, usage and toolbar for more information. 
+_description: The Map allows you to display data that contains geographic locations from view models or geo-spatial data loaded from shape files on geographic imagery maps.View the demo, dependencies, usage and toolbar for more information.
 _keywords: map, Ignite UI for Angular, infragistics
 ---
 
@@ -10,7 +10,7 @@ The Ignite UI for Angular map component allows you to display data that contains
 
 ### Demo
 
-<div class="sample-container" style="height: 500px">
+<div class="sample-container" style="height: 400px">
     <iframe id="geo-map-overview-iframe" src='{environment:demosBaseUrl}/maps/geo-map-overview' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -20,7 +20,7 @@ The Ignite UI for Angular map component allows you to display data that contains
 
 <div class="divider--half"></div>
 
-The map component allows you to render geographic imagery from Bing Maps™, and Open Street Maps. Also, it supports creation of maps from other geographic imagery sources such as Map Quest©. The map provides plotting of tens of thousands of data points, and updates them every few milliseconds so that the control can handle your real-time feeds.
+The map component allows you to render geographic imagery from Bing Maps™, and Open Street Maps. The map provides plotting of tens of thousands of data points, and updates them every few milliseconds so that the control can handle your real-time feeds.
 
 The map's `IgxSeriesComponent` property is used to support rendering an unlimited number of geographic series. This property is a collection of geographic series objects and any type of geographic series can be added to it. For example, `GeographicSymbolSeries` can be added for plotting geographic locations such as cities and the `GeographicPolylineSeries` for plotting connections (e.g. roads) between these geographic locations.
 
@@ -28,9 +28,11 @@ The map provides customizable navigation behaviors for navigating map content us
 
 ### Dependencies
 
-When installing the map package, the core package must also be installed.
+To use the geographic map component, you need to first install these packages:
 
-**npm install igniteui-Angular-maps igniteui-Angular-core**
+-   **npm install --save igniteui-angular-core**
+-   **npm install --save igniteui-angular-charts**
+-   **npm install --save igniteui-angular-maps**
 
 The map is exported as an `NgModule`, you need to import the _IgxMapModule_ inside your
 `AppModule`:
@@ -41,7 +43,7 @@ The map is exported as an `NgModule`, you need to import the _IgxMapModule_ insi
 
 ```typescript
 // app.module.ts
-import {IgxMapModule} from 'igniteui-Angular-maps/ES5/igx-map-module'
+import {IgxMapModule} from 'igniteui-angular-maps/ES5/igx-map-module'
 
 @NgModule({
     imports: [
@@ -57,8 +59,4 @@ export class AppModule {}
 
 ### Usage
 
-Now that the map module is imported, next step is to bind it to data.
-
-In the map control, the `ShapefileConverter` class loads geo-spatial data from shape files and converts it to a collection of `ShapefileRecord` objects. Geographic series can be bound to this collection and render geo-spatial data. For more information see the Binding Shape Files with Geospatical Data topic.
-
-The following code demonstrates how to load a shape file that contains locations of major cities in the world.
+Now that the map module is imported, next step is to create geographic map. The following code demonstrates how to do this and enable zooming in the map.

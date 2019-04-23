@@ -1,6 +1,6 @@
 ---
 title: Financial Chart | Data Visualization Tools | Ignite UI for Angular | Infragistics
-_description: Use the financial chart component to visualize financial data using a simple API. View the demo, dependencies, usage and toolbar for more information. 
+_description: Use the financial chart component to visualize financial data using a simple API. View the demo, dependencies, usage and toolbar for more information.
 _keywords: financial chart, Ignite UI for Angular, infragistics
 ---
 
@@ -46,7 +46,8 @@ Refer to the [Financial Chart Panes](financialchart_panes.md) topics for  inform
 
 When installing the chart package, the core package must also be installed.
 
-**npm install igniteui-Angular-charts igniteui-Angular-core**
+-   **npm install --save igniteui-angular-core**
+-   **npm install --save igniteui-angular-charts**
 
 The financial chart is exported as an `NgModule`, you need to import the _IgxFinancialChartModule_ inside your
 `AppModule`:
@@ -57,7 +58,7 @@ The financial chart is exported as an `NgModule`, you need to import the _IgxFin
 
 ```typescript
 // app.module.ts
-import {IgxFinancialChartModule} from 'igniteui-Angular-charts/ES5/igx-financial-chart-module'
+import {IgxFinancialChartModule} from 'igniteui-angular-charts/ES5/igx-financial-chart-module'
 
 @NgModule({
     imports: [
