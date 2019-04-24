@@ -14,7 +14,7 @@ This topic explains the various types of stacked series in the `IgxDataChart` co
     <iframe id="data-chart-overview-iframe" src='{environment:demosBaseUrl}/charts/data-chart-type-stacked-series' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="financial-chart-overview-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-overview-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
     </button>
 </div>
 
@@ -71,9 +71,7 @@ Stacked series have the following data requirements:
 
 ### Required Modules
 
-<!-- Angular -->
-
-In order to use stacked series, you need to import the following modules in your app during load:
+The stacked series requires the following modules:
 
 ```typescript
 // axis' modules:
@@ -129,7 +127,7 @@ This code demonstrates how to create an instance of data chart with `StackedColu
     <igx-stacked-fragment-series valueMemberPath="Gas"></igx-stacked-fragment-series>
     <igx-stacked-fragment-series valueMemberPath="Oil"></igx-stacked-fragment-series>
   </igx-stacked-column-series>
-    
+
 </igx-data-chart>
 ```
 
@@ -149,6 +147,6 @@ This code demonstrates how to create an instance of data chart with `StackedColu
     <igx-stacked-fragment-series valueMemberPath="Gas"></igx-stacked-fragment-series>
     <igx-stacked-fragment-series valueMemberPath="Oil"></igx-stacked-fragment-series>
   </igx-stacked-bar-series>
-    
+
 </igx-data-chart>
 ```
