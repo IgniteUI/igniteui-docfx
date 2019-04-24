@@ -32,9 +32,7 @@ gauges パッケージをインストールするときに core パッケージ�
 -   **npm install --save igniteui-angular-core**
 -   **npm install --save igniteui-angular-gauges**
 
-The radial gauge is exported as an `NgModule`, you need to import the
-`IgxRadialGaugeModule` inside your
-`AppModule`:
+ラジアル ゲージは `NgModule` としてエクスポートされます。`AppModule` 内に `IgxRadialGaugeModule` をインポートする必要があります。
 
 <!-- -->
 
