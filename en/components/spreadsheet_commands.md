@@ -18,7 +18,7 @@ The Angular Spreadsheet component allows you to perform commands for activatinig
 
 ### Dependencies
 
-Before making use of the commands you will want to import the SpreadsheetAction
+Before making use of the commands you will want to import the `SpreadsheetAction`
 
 ```typescript
 import { IgxSpreadsheetComponent } from "igniteui-angular-spreadsheet/ES5/igx-spreadsheet-component";
