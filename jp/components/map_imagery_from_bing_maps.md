@@ -1,7 +1,8 @@
 ---
 title: Map | Data Visualization Tools | Ignite UI for Angular | Bing Maps | Infragistics
-_description: The Map allows you to display data that contains geographic locations from view models or geo-spatial data loaded from shape files on geographic imagery maps.View the demo, dependencies, usage and toolbar for more information.
+_description: マップを使用すると、ビューモデルからの地理的位置を含むデータ、またはシェープファイルから地理的画像マップにロードされた地理空間データを表示できます。
 _keywords: map, Ignite UI for Angular, infragistics
+_language: ja
 ---
 
 ## Binding Imagery from Bing Maps

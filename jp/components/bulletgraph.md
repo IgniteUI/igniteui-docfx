@@ -32,29 +32,28 @@ Angular Bullet Graph コンポーネントは、目盛り上でメジャーの�
 
 gauges パッケージのインストール時に core パッケージもインストールする必要があります。
 
-**npm install igniteui-angular-gauges igniteui-angular-core**
+-   **npm install --save igniteui-angular-core**
+-   **npm install --save igniteui-angular-gauges**
 
+<!--
 > [!NOTE]
 > Angular:
 >
 > ブレット グラフが  `NgModule` としてエクスポートされるため、アプリケーションで
-> `AppModule` に `IgxBulletGraphModule` をインポートする必要があります。
-
-<!-- -->
+> `AppModule` に `Ig$BulletGraphModule` をインポートする必要があります。
 
 > [!NOTE]
 > WebComponents:
 >
 > ブレット グラフを使うには、アプリケーションのロード時に
-> `IgxBulletGraphModule` を登録する必要があります。
-
-<!-- -->
+> `Ig$BulletGraphModule` を登録する必要があります。
 
 > [!NOTE]
 > React:
 >
-> ブレット グラフを使うには、アプリケーションのロード時に
-> `IgxBulletGraphModule` を登録する必要があります。
+-->
+
+ブレット グラフを使うには、アプリケーションのロード時に　`IgxBulletGraphModule` を登録する必要があります。
 
 ```typescript
 // app.module.ts
@@ -129,7 +128,7 @@ export class AppModule {}
 ```
 
 <div class="sample-container loading" style="height: 125px">
-    <iframe id="bullet-graph-measures-iframe" data-src='{environment:demosBaseUrl}/gauges/bullet-graph-measures' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+    <iframe id="bullet-graph-measures-iframe" src='{environment:demosBaseUrl}/gauges/bullet-graph-measures' width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="bullet-graph-measures-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
@@ -167,7 +166,7 @@ export class AppModule {}
 ```
 
 <div class="sample-container loading" style="height: 125px">
-    <iframe id="bullet-graph-ranges-iframe" data-src='{environment:demosBaseUrl}/gauges/bullet-graph-ranges' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+    <iframe id="bullet-graph-ranges-iframe" src='{environment:demosBaseUrl}/gauges/bullet-graph-ranges' width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="bullet-graph-ranges-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
@@ -203,7 +202,7 @@ export class AppModule {}
 ```
 
 <div class="sample-container loading" style="height: 125px">
-    <iframe id="bullet-graph-tickmarks-iframe" data-src='{environment:demosBaseUrl}/gauges/bullet-graph-tickmarks' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+    <iframe id="bullet-graph-tickmarks-iframe" src='{environment:demosBaseUrl}/gauges/bullet-graph-tickmarks' width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="bullet-graph-tickmarks-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
@@ -229,7 +228,7 @@ export class AppModule {}
 ```
 
 <div class="sample-container loading" style="height: 125px">
-    <iframe id="bullet-graph-labels-iframe" data-src='{environment:demosBaseUrl}/gauges/bullet-graph-labels' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+    <iframe id="bullet-graph-labels-iframe" src='{environment:demosBaseUrl}/gauges/bullet-graph-labels' width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="bullet-graph-labels-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
@@ -254,7 +253,7 @@ export class AppModule {}
 ```
 
 <div class="sample-container loading" style="height: 125px">
-    <iframe id="bullet-graph-background-iframe" data-src='{environment:demosBaseUrl}/gauges/bullet-graph-background' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+    <iframe id="bullet-graph-background-iframe" src='{environment:demosBaseUrl}/gauges/bullet-graph-background' width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="bullet-graph-background-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示
@@ -281,7 +280,7 @@ export class AppModule {}
 ```
 
 <div class="sample-container loading" style="height: 125px">
-    <iframe id="bullet-graph-scale-iframe" data-src='{environment:demosBaseUrl}/gauges/bullet-graph-scale' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+    <iframe id="bullet-graph-scale-iframe" src='{environment:demosBaseUrl}/gauges/bullet-graph-scale' width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="bullet-graph-scale-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く

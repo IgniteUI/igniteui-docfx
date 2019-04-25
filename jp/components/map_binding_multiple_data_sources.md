@@ -7,7 +7,7 @@ _language: ja
 
 ## 複数データ ソースのバインド
 
-`XamGeographicMap` では、カスタムデータソースを地理空間データとオーバーレイするために複数の地理的シリーズオブジェクトを追加できます。たとえば、空港の地理的位置をプロットするための `GeographicSymbolSeries`、空港間のフライトをプロットするための `GeographicPolylineSeries`、主要な地理座標のグリッド線をプロットするための 2nd `GeographicPolylineSeries` などです。
+`IgxGeographicMap` では、カスタムデータソースを地理空間データとオーバーレイするために複数の地理的シリーズオブジェクトを追加できます。たとえば、空港の地理的位置をプロットするための `GeographicSymbolSeries`、空港間のフライトをプロットするための `GeographicPolylineSeries`、主要な地理座標のグリッド線をプロットするための 2nd `GeographicPolylineSeries` などです。
 
 ### デモ
 
@@ -31,14 +31,14 @@ _language: ja
 
 ### データ ソースの作成
 
-`XamGeographicMap` に表示するすべての地理的シリーズのデータ​​ソースを作成します。たとえば、[WorldConnections](map_resources_world_connections.md) スクリプトを使用できます。
+`IgxGeographicMap` に表示するすべての地理的シリーズのデータ​​ソースを作成します。たとえば、[WorldConnections](map_resources_world_connections.md) スクリプトを使用できます。
 
 ### フライトのオーバーレイ
 
-主要空港間のフライト接続を含む最初の `GeographicPolylineSeries` オブジェクトを作成し、それを `XamGeographicMap` の `IgxSeriesComponent` コレクションに追加します。
+主要空港間のフライト接続を含む最初の `GeographicPolylineSeries` オブジェクトを作成し、それを `IgxGeographicMap` の `IgxSeriesComponent` コレクションに追加します。
 
 ### グリッド線のオーバーレイ
 
-地理グリッド線を使用して2番目の `GeographicPolylineSeries` オブジェクトを作成し、それを XamGeographicMap の Series コレクションに追加します。
+地理グリッド線を使用して2番目の `GeographicPolylineSeries` オブジェクトを作成し、それを `IgxGeographicMap` の Series コレクションに追加します。
 
-地理的なグリッド線を使用して `GeographicSymbolSeries` オブジェクトを作成し、それを地理的な `XamGeographicMap` の `IgxSeriesComponent` コレクションに追加します。
+地理的なグリッド線を使用して `GeographicSymbolSeries` オブジェクトを作成し、それを地理的な `IgxGeographicMap` の `IgxSeriesComponent` コレクションに追加します。

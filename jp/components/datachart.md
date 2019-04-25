@@ -26,29 +26,28 @@ _language: ja
 
 chart パッケージをインストールするときに core パッケージもインストールする必要があります。
 
-**npm install igniteui-angular-charts igniteui-angular-core**
+-   **npm install --save igniteui-angular-core**
+-   **npm install --save igniteui-angular-charts**
 
+<!--
 > [!NOTE]
 > Angular:
 >
 > カテゴリ チャートが NgModule としてエクスポートされるため、アプリケーションで
 > AppModule に IgxCategoryChartModule をインポートする必要があります。
 
-<!-- -->
-
 > [!NOTE]
 > WebComponents:
 >
-> データチャートを使うには、ロード中にアプリケーションに `Ig $ DataChartCoreModule` 
+> データチャートを使うには、ロード中にアプリケーションに `Ig $ DataChartCoreModule`
 > を登録する必要があります。
-
-<!-- -->
 
 > [!NOTE]
 > React:
 >
-> データチャートを使うには、ロード中にアプリケーションに `Ig $ DataChartCoreModule` 
+> データチャートを使うには、ロード中にアプリケーションに `Ig $ DataChartCoreModule`
 > を登録する必要があります。
+-->
 
 ```typescript
 // data chart's modules required for all series:
@@ -88,7 +87,7 @@ export class AppModule { /* ... */ }
 
 | 軸タイプ               | サポートされるシリーズ タイプ                                                                                                                                                                                                                                  |
 | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| CategoryYAxis      | [カテゴリ ](datachart_series_types_category.md) グループの `BarSeries` のみ                                                                                                                                                                             |
+| CategoryYAxis      | [Category ](datachart_series_types_category.md) グループの `BarSeries` のみ                                                                                                                                                                             |
 | CategoryXAxis      | すべての [ファイナンシャル シリーズ](datachart_series_types_financial.md)、[範囲シリーズ](datachart_series_types_range.md)、[カテゴリ シリーズ](datachart_series_types_category.md) (`BarSeries` 以外)                                                                             |
 | TimeXAxis          | すべての [ファイナンシャル シリーズ](datachart_series_types_financial.md)、[範囲シリーズ](datachart_series_types_range.md)、[カテゴリ シリーズ](datachart_series_types_category.md) (`BarSeries` 以外)                                                                             |
 | OrdinalTimeXAxis   | すべての [ファイナンシャル シリーズ](datachart_series_types_financial.md)、[範囲シリーズ](datachart_series_types_range.md)、[カテゴリ シリーズ](datachart_series_types_category.md) (`BarSeries` 以外)                                                                             |

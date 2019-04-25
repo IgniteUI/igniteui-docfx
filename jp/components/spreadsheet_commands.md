@@ -1,28 +1,29 @@
 ---
-title: Angular Spreadsheet | Grid Controls | Ignite UI for Angular | Commands | Infragistics |
-_description: Use the Spreadsheet control to embed Excel document creation and editing experiences right into your application.
+title: Angular Spreadsheet | Grid コントロール | Ignite UI for Angular | コマンド | Infragistics |
+_description: スプレッドシート コントロールを使用して、Excel ドキュメントの作成と編集のエクスペリエンスをアプリケーションに直接埋め込むことができます。
 _keywords: Spreadsheet, Ignite UI for Angular, Infragistics
+_language: ja
 ---
 
-## Working with Commands
+## コマンドの使用
 
-The Angular Spreadsheet component allows you to perform commands for activatinig different features of the spreadsheet. This topic explains how to perform different operations with the control using commands. Many of the commands will perform their action based on the active cells, rows, or worksheets. For example two such commands are ZoomIn and ZoomOut. See the SpreadsheetAction enum for a full list.
+$PlatformShort $ Spreadsheet コンポーネントは、スプレッドシートのさまざまな機能をアクティブにするためのコマンドを実行できます。このトピックでは、コマンドによりコントロールを使用してさまざまな操作を実行する方法を説明します。多くのコマンドは、アクティブセル、行、またはワークシートに基づいてアクションを実行します。例えば、ZoomIn と ZoomOut の 2 つのコマンドです。完全なリストは SpreadsheetAction の enum を見てください。
 
-### Demo
+### デモ
 
 <div class="sample-container" style="height: 500px">
     <iframe id="spreadsheet-commands-sample-iframe" src='{environment:demosBaseUrl}/spreadsheet/spreadsheet-commands' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="spreadsheet-commands-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="spreadsheet-commands-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz　で表示
     </button>
 </div>
 
 <div class="divider--half"></div>
 
-### Dependencies
+### 依存関係
 
-Before making use of the commands you will want to import the SpreadsheetAction
+コマンドボードを利用する前に、SpreadsheetAction をインポートします。
 
 ```typescript
 import { IgxSpreadsheetComponent } from "igniteui-angular-spreadsheet/ES5/igx-spreadsheet-component";
@@ -31,9 +32,9 @@ import { SpreadsheetAction } from "igniteui-angular-spreadsheet/ES5/SpreadsheetA
 
 <div class="divider--half"></div>
 
-### Usage
+### 使用方法
 
-The following snippt shows how you can setup the data validation rules
+以下のコード スニペットは、データの検証規則を設定する方法を示します。
 
 ```typescript
 @ViewChild("spreadsheet", { read: IgxSpreadsheetComponent })

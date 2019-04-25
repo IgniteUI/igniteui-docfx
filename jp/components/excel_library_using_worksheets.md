@@ -1,5 +1,5 @@
 ---
-title: ワークシートを使用した Excel Library
+title: ワークシートを使用した Excel ライブラリ
 _description: Ignite UI for Excel Library コンポーネントのワークシート処理
 _keywords: Ignite UI for Angular, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular Excel ライブラリ, Angular Excel ライブラリ例,  Angular Excel Library コンポーネント, Angular Excel Engine、ワークシート, 条件付き書式, Sorting, フィルタリング、グリッド線, ヘッダー, 保護
 _language: ja
@@ -7,7 +7,7 @@ _language: ja
 
 ## ワークシートの使用
 
-Infragistics Excel Engine の `Worksheet` にデータが保存されます。Worksheet の行やセルにデータを入力でき、対応する値を設定できます。`Worksheet` は、フィルター、並べ替え、セル書式のカスタマイズができます。
+Infragistics Excel エンジンの `Worksheet` にデータが保存されます。Worksheet の行やセルにデータを入力でき、対応する値を設定できます。`Worksheet` は、フィルター、並べ替え、セル書式のカスタマイズができます。
 
 ### デモ
 

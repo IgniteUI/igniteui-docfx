@@ -1,28 +1,29 @@
 ---
-title: Angular Spreadsheet | Grid Controls | Ignite UI for Angular | Data Validation | Infragistics |
-_description: Use the Spreadsheet control to embed Excel document creation and editing experiences right into your application.
+title: Angular Spreadsheet | Grid Controls | Ignite UI for Angular | データ検証 | Infragistics |
+_description: スプレッドシート コントロールを使用して、Excel ドキュメントの作成と編集のエクスペリエンスをアプリケーションに直接埋め込むことができます。
 _keywords: Spreadsheet, Ignite UI for Angular, Infragistics
+_language: ja
 ---
 
-## Data Validation
+## データ検証
 
-This topic explains to to configure and set the bulit-in data validation rules.
+このトピックでは、一括データ検証規則を構成および設定する方法について説明します。
 
-### Demo
+### デモ
 
 <div class="sample-container" style="height: 500px">
     <iframe id="spreadsheet-data-validation-sample-iframe" src='{environment:demosBaseUrl}/spreadsheet/spreadsheet-data-validation' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="spreadsheet-data-validation-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="spreadsheet-data-validation-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示
     </button>
 </div>
 
 <div class="divider--half"></div>
 
-### Dependencies
+### 依存関係
 
-When setting up the data validation rules you will need to import the rules you want to use.
+データ検証ルールを設定するときは、使用するルールをインポートする必要があります。
 
 ```typescript
 import { AnyValueDataValidationRule } from "igniteui-angular-excel/ES5/AnyValueDataValidationRule";
@@ -37,9 +38,9 @@ import { TwoConstraintDataValidationRule } from "igniteui-angular-excel/ES5/TwoC
 
 <div class="divider--half"></div>
 
-### Usage
+### 使用方法
 
-The following snippt shows how you can setup the data validation rules
+以下のコード スニペットは、データの検証規則を設定する方法を示します。
 
 ```typescript
 // this validation rule has only input message set

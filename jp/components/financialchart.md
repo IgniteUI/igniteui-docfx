@@ -7,7 +7,7 @@ _language: ja
 
 ## ファイナンシャル チャート
 
-ファイナンシャル チャートは、シンプルな API を使用して複雑なファイナンシャル データを可視化するチャート コンポーネントです。
+Financial Chart は、シンプルな API を使用して複雑なファイナンシャル データを可視化するチャート コンポーネントです。
 
 ### デモ
 
@@ -35,7 +35,7 @@ _language: ja
 | `line`   | 折れ線シリーズを指定します。                                                                                                               |
 | `auto`   | データ アダプターに基づいてチャート タイプの自動選択を指定します。これは、データの名前および数値列の数に基づいて上記の値を選択します。たとえば、Open、High、Low、および Close 列があるデータ項目のために `bar` を使用します。 |
 
-その他のチャート ペインの詳細については、[ファイナンシャル チャート ペイン](financialchart_panes.md) トピックを参照してください。
+その他のチャート ペインの詳細については、[Financial Chart ペイン](financialchart_panes.md) トピックを参照してください。
 
 ```html
 <igx-financial-chart
@@ -47,33 +47,32 @@ _language: ja
 
 chart パッケージをインストールするときに core パッケージもインストールする必要があります。
 
-**npm install igniteui-Angular-charts igniteui-Angular-core**
+-   **npm install --save igniteui-angular-core**
+-   **npm install --save igniteui-angular-charts**
 
+<!--
 > [!NOTE]
 > Angular:
 >
 > ファイナンシャル チャートが `NgModule` としてエクスポートされるため、アプリケーションで `AppModule` に
 > `IgxFinancialChartModule` をインポートする必要があります。
->
-> <!-- -->
->
+
 > [!NOTE]
 > WebComponents:
 >
 > ファイナンシャル チャートを使用するには、ロード中にアプリに
-> `IgxFinancialChartModule` を登録する必要があります。
->
-> <!-- -->
->
+> `Ig$FinancialChartModule` を登録する必要があります。
+
 > [!NOTE]
 > React:
 >
 > ファイナンシャル チャートを使用するには、ロード中にアプリに
-> `IgxFinancialChartModule` を登録する必要があります。
+> `Ig$FinancialChartModule` を登録する必要があります。
+-->
 
 ```typescript
 // app.module.ts
-import {IgxFinancialChartModule} from 'igniteui-Angular-charts/ES5/igx-financial-chart-module'
+import {IgxFinancialChartModule} from 'igniteui-angular-charts/ES5/igx-financial-chart-module'
 
 @NgModule({
     imports: [

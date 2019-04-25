@@ -1,34 +1,35 @@
 ---
-title: Angular Spreadsheet | Grid Controls | Ignite UI for Angular | Configuration | Infragistics |
-_description: Use the Spreadsheet control to embed Excel document creation and editing experiences right into your application.
+title: Angular Spreadsheet | Grid コントロール | Ignite UI for Angular | 構成 | Infragistics |
+_description: スプレッドシート コントロールを使用して、Excel ドキュメントの作成と編集のエクスペリエンスをアプリケーションに直接埋め込むことができます。
 _keywords: Spreadsheet, Ignite UI for Angular, Infragistics
+_language: ja
 ---
 
-## Configuring Spreadsheet
+## Spreadsheet の構成
 
-The `IgxSpreadsheet` allows the user to configure many different aspects of the control, including but not limited to editing of the cells, the visibility of gridlines and headers, protection, zoom level, and various other properties related to the Excel worksheet. 
+`IgxSpreadsheet` を使用すると、セルの編集、グリッド線とヘッダーの表示、保護、ズームレベル、および Excel ワークシートに関連するその他のさまざまなプロパティを含むがこれらに限定されない、コントロールのさまざまな側面を設定できます。 
 
-### Demo
+### デモ
 
 <div class="sample-container" style="height: 500px">
     <iframe id="spreadsheet-overview-sample-iframe" src='{environment:demosBaseUrl}/spreadsheet/spreadsheet-configuring' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="spreadsheet-overview-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="spreadsheet-overview-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示
     </button>
 </div>
 
 <div class="divider--half"></div>
 
-### Configuring Cell Editing
+### セル編集の構成
 
-When a user edits a cell value and confirms the new input, the `IgxSpreadsheet` control has the ability to navigate to cells adjacent to the currently active cell on press of the `Enter` key, depending on the configuration of the spreadsheet.
+ユーザーがセルの値を編集して新しい入力を確認すると、スプレッドシートの構成に応じて、`IgxSpreadsheet` コントロールに `Enter` キーを押すと現在アクティブなセルに隣接するセルに移動できます。
 
-In order to enable this `Enter` key navigation, you can set the `IsEnterKeyNavigationEnabled` property to `true`. If set to false, the active cell will stay the same when pressing the `Enter` key. 
+この Enter キーナビゲーションを有効にするために、IsEnterKeyNavigationEnabled プロパティを true に設定できます。false に設定すると、`Enter` キーを押してもアクティブ セルは変わりません。 
 
-You can also configure the direction of the adjacent cell navigated to on press of the `Enter` key by setting the `EnterKeyNavigationDirection` property to `Down`, `Up`, `Left` or `Right`.
+`Enter` キーを押したときに移動する隣接セルの方向を、`EnterKeyNavigationDirection` プロパティを `Down`、`Up`、`Left` または `Right` に設定して構成することもできます。
 
-The following code snippets demonstrate the above:
+次のコードスニペットは上記のデモです。
 
 ```html
 <igx-spreadsheet isEnterKeyNavigationEnabled=true
@@ -41,11 +42,11 @@ this.spreadsheet.isEnterKeyNavigationEnabled = true;
 this.spreadsheet.enterKeyNavigationDirection = SpreadsheetEnterKeyNavigationDirection.Left;
 ```
 
-### Configuring Formula Bar
+### 数式バーの構成
 
-The `IgxSpreadsheet` allows you to configure the visibility of the formula bar by setting the `IsFormulaBarVisible` property of the control.
+`IgxSpreadsheet` を使用すると、コントロールの `IsFormulaBarVisible` プロパティを設定して数式バーの表示/非表示を設定できます。
 
-The following code snippets demonstrate the above: 
+次のコードスニペットは上記のデモです。 
 
 ```html
 <igx-spreadsheet isFormulaBarVisible=true></igx-spreadsheet>
@@ -55,11 +56,11 @@ The following code snippets demonstrate the above:
 this.spreadsheet.isFormulaBarVisible = true;
 ```
 
-### Configuring Gridlines
+### ガイドラインの設定
 
-The `IgxSpreadsheet` allows you to configure the visibility of its gridlines by setting the `AreGridlinesVisible` property of the control.
+`IgxSpreadsheet` を使用すると、コントロールの `AreGridlinesVisible` プロパティを設定し目盛線, グリッド線の表示/非表示を設定できます。
 
-The following code snippets demonstrate the above: 
+次のコードスニペットは上記のデモです。 
 
 ```html
 <igx-spreadsheet areGridlinesVisible=true></igx-spreadsheet>
@@ -69,11 +70,11 @@ The following code snippets demonstrate the above:
 this.spreadsheet.areGridlinesVisible = true;
 ```
 
-### Configuring Headers
+### ヘッダーの構成
 
-The `IgxSpreadsheet` allows you to configure the visibility of its headers by setting the `AreHeadersVisible` property of the control.
+`IgxSpreadsheet` では、コントロールの `AreHeadersVisible` プロパティを設定することで、ヘッダーの表示設定を構成できます。
 
-The following code snippets demonstrate the above: 
+次のコードスニペットは上記のデモです。 
 
 ```html
 <igx-spreadsheet areHeadersVisible=false></igx-spreadsheet>
@@ -83,15 +84,15 @@ The following code snippets demonstrate the above:
 this.spreadsheet.areHeadersVisible = false;
 ```
 
-### Configuring Navigation
+### ナビゲーションの構成
 
-The `IgxSpreadsheet` control allows you to configure navigation between a worksheet's cells by configuring whether or not the control is in "end mode." End mode is the functionality where, on press of an arrow key, the active cell will be moved from the current cell to the end of the row or column where data exists in the adjacent cells, depending on the direction of the arrow key pressed. This functionality is good for navigating to the end of large blocks of data very quickly.
+`IgxSpreadsheet` コントロールは、コントロールが「終了モード」にあるかどうかを構成することによって、ワークシートのセル間のナビゲーションを構成できます。終了モードは、矢印キーを押すと、アクティブなセルが、押された矢印キーの方向に応じて、現在のセルからデータが隣接するセルの行または列の末尾に移動する機能です。この機能は、大量のデータ ブロックの終わりまですばやく移動するのに役立ちます。
 
-For example, if you are in end mode, and you click in a large 100x100 block of data, and press the `Right` arrow key, this will navigate to the right end of the row that you are in to the furthest right column with data. After this operation, the `IgxSpreadsheet` will pop out of end mode.
+たとえば、終了モードになっているときに、100x100 の大きなデータブロックをクリックして右矢印キーを押すと、現在の行の右端に移動し、データのある一番右の列に移動します。この操作の後、`IgxSpreadsheet` は終了モードから飛び出します。
 
-End mode goes into effect at runtime when the user presses the `End` key, but it can be configured programmatically by setting the `IsInEndMode` property of the spreadsheet control.
+ユーザーが End キーを押すと、実行時に終了モードが有効になりますが、スプレッドシート コントロールの IsInEndMode プロパティを設定することでプログラムで設定できます。
 
-The following code snippets demonstrate the above, in that the `IgxSpreadsheet` will begin in end mode:
+以下のコードスニペットは、`IgxSpreadsheet` を終了モードで開始させる方法を示しています。
 
 ```html
 <igx-spreadsheet isInEndMode=true></igx-spreadsheet>
@@ -101,28 +102,28 @@ The following code snippets demonstrate the above, in that the `IgxSpreadsheet` 
 this.spreadsheet.isInEndMode = true;
 ```
 
-### Configuring Protection
+### 保護の設定
 
-The `IgxSpreadsheet` will respect the protection of a workbook on a worksheet-by-worksheet basis. Configuration for a worksheet's protection can be configured by calling the `Protect()` method on the worksheet to protect it, and the `Unprotect()` method to unprotect it.
+`IgxSpreadsheet` は、ワークシートごとにブックを保護します。ワークシートの保護の設定は、ワークシートの Protect() メソッドを呼び出して保護し、`Unprotect()` メソッドを呼び出して保護解除することで設定できます。
 
-You can activate or deactivate protection on the `IgxSpreadsheet` control's currently active worksheet by using the code below:
+以下のコードは、`IgxSpreadsheet` コントロールの現在アクティブなワークシートの保護を有効または無効にすることができます。
 
 ```typescript
 this.spreadsheet.activeWorksheet.protect();
 this.spreadsheet.activeWorksheet.unprotect();
 ```
 
-### Configuring Selection
+### 選択の設定
 
-The `IgxSpreadsheet` control allows you to configure the type of selection allowed in the control then modifier keys (`Shift` or `Ctrl`) are pressed by the user. This is done by setting the `SelectionMode` property of the spreadsheet to one of the following values:
+`IgxSpreadsheet` コントロールは、コントロールで許可されている選択の種類を設定できます。その後、ユーザーが修飾キー (`Shift` または `Ctrl`)  を押します。これは、スプレッドシートの `SelectionMode` プロパティを次のいずれかの値に設定することによって行われます。
 
--   `AddToSelection`: New cell ranges are added to the `SpreadsheetSelection` object's `CellRanges` collection without needing to hold down the ctrl key when dragging via the mouse and a range is added with the first arrow key navigation after entering the mode. One can enter the mode by pressing Shift+F8.
--   `ExtendSelection`: The selection range in the `SpreadsheetSelection` object's `CellRanges` collection representing the active cell is updated as one uses the mouse to select a cell or navigating via the keyboard.
--   `Normal`: The selection is replaced when dragging the mouse to select a cell or range of cells. Similarly when navigating via the keyboard a new selection is created. One may add a new range by holding the Ctrl key and using the mouse and one may alter the selection range containing the active cell by holding the Shift key down while clicking with the mouse or navigating with the keyboard such as with the arrow keys.
+-   `AddToSelection`: マウスでドラッグしているときにCtrlキーを押す必要がなく、新しいセル範囲が `SpreadsheetSelection` オブジェクトの `CellRanges` コレクションに追加され、モードに入った後の最初の矢印キーナビゲーションで範囲が追加されます。Shift+F8 を押すとモードに入ります。
+-   `ExtendSelection`: アクティブセルを表す `SpreadsheetSelection` オブジェクトの `CellRanges` コレクション内の選択範囲は、マウスを使用してセルを選択するかキーボードで移動すると更新されます。
+-   `Normal`: 選択範囲は、マウスをドラッグしてセルまたはセル範囲を選択すると置き換えられます。同様に、キーボードで移動すると新しい選択範囲が作成されます。Ctrl キーを押したままマウスを使用することで新しい範囲を追加できます。また、Shift キーを押したままマウスでクリックする、あるいはキーボードで移動することでアクティブ セルを含む選択範囲を変更できます。
 
-The `SpreadsheetSelection` object mentioned in the descriptions above can be obtained by using the `ActiveSelection` property of the `IgxSpreadsheet` control.
+上記の説明で述べた `SpreadsheetSelection` オブジェクトは、`IgxSpreadsheet` コントロールの `ActiveSelection` プロパティを使用して取得できます。
 
-The following code snippets demonstrate configuration of the selection mode:
+次のコードスニペットは、選択モードの設定を示しています。
 
 ```html
 <igx-spreadsheet selectionMode="ExtendSelection"></igx-spreadsheet>
@@ -132,23 +133,23 @@ The following code snippets demonstrate configuration of the selection mode:
 this.spreadsheet.selectionMode = SpreadsheetCellSelectionMode.ExtendSelection;
 ```
 
-The selection of the `IgxSpreadsheet` control can also be set or obtained programmatically. For single selection, you can set the `ActiveCell` property Multiple selection is done through the `SpreadsheetSelection` object that is returned by the `IgxSpreadsheet` control's `ActiveSelection` property.
+`IgxSpreadsheet` コントロールの選択は、プログラムで設定または取得することもできます。単一選択の場合は、`ActiveCell` プロパティを設定できます。複数選択は、`IgxSpreadsheet` コントロールの `ActiveSelection` プロパティによって返される `SpreadsheetSelection` オブジェクトを介して行われます。
 
-The `SpreadsheetSelection` object has an `AddCellRange()` method that allows you to programmatically add a range of cells to the selection of the spreadsheet in the form of a new  `SpreadsheetCellRange` object.
+`SpreadsheetSelection` オブジェクトには、新しい `SpreadsheetCellRange` オブジェクトの形式でスプレッドシートの選択範囲にプログラムでセルの範囲を追加できる `AddCellRange()` メソッドがあります。
 
-The following code snippet demonstrates adding a cell range to the spreadsheet's selection:
+次のコードスニペットは、スプレッドシートの選択範囲にセル範囲を追加する方法を示しています。
 
 ```typescript
 this.spreadsheet.activeSelection.addCellRange(new SpreadsheetCellRange(2, 2, 5, 5));
 ```
 
-### Configuring Tab Bar Area
+### タブバー領域の構成
 
-The `IgxSpreadsheet` control respects the configuration of the visibility and width of the tab bar area from the `WindowOptions` of the currently active `Workbook` via the `TabBarWidth` and `TabBarVisibility` properties, respectively.
+`IgxSpreadsheet` コントロールは、`TabBarWidth` プロパティと `TabBarVisibility` プロパティを介して、現在アクティブな `Workbook` の `WindowOptions` からタブバー領域の表示設定と幅の設定を使用します。
 
-The tab bar area is the area that visualizes the worksheet names as tabs in the control.
+タブバー領域は、ワークシート名をコントロール内のタブとして可視化する領域です。
 
-You can configure the tab bar's visibility and width using the following code snippet:
+次のコードスニペットを使用して、タブバーの表示と幅を設定できます。
 
 ```typescript
 this.spreadsheet.workbook.windowOptions.tabBarVisible = false;
@@ -156,13 +157,13 @@ this.spreadsheet.workbook.windowOptions.tabBarVisible = false;
 this.spreadsheet.workbook.windowOptions.tabBarWidth = 200;
 ```
 
-### Configuring Zoom Level
+### ズーム レベルの設定
 
-The `IgxSpreadsheet` control supports zooming in and out by configuring its `ZoomLevel` property. The zoom level can be a maximum of 400% and a minimum of 10%.
+`IgxSpreadsheet` コントロールは、`ZoomLevel` プロパティを設定することによってズームインおよびズームアウトをサポートします。ズーム レベルは最大 400%、最小 10% です。
 
-Setting this property to a number represents the percentage as a whole number, so setting the `ZoomLevel` to 100 is equivalent to setting it to 100%.
+このプロパティを数値に設定すると、整数としてのパーセンテージが表されるため、`ZoomLevel` を 100 に設定することは、100% に設定することと同じです。
 
-The following code snippets show how to configure the spreadsheet's zoom level:
+次のコード スニペットは、スプレッドシートのズームレベルを設定する方法を示しています。
 
 ```html
 <igx-spreadsheet zoomLevel=200></igx-spreadsheet>

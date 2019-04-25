@@ -31,35 +31,34 @@ Map は、マウス、キーボード、またはコードビハインドを使�
 
 地理マップコンポーネントを使用するには、はじめにこれらのパッケージをインストールする必要があります。
 
--   **npm install --save igniteui-Angular-core**
--   **npm install --save igniteui-Angular-charts**
--   **npm install --save igniteui-Angular-maps**
+-   **npm install --save igniteui-angular-core**
+-   **npm install --save igniteui-angular-charts**
+-   **npm install --save igniteui-angular-maps**
 
+<!--
 > [!NOTE]
 > Angular:
 >
 > マップが `NgModule` としてエクスポートされるため、`AppModule` に _IgxMapModule_ をインポートする必要があります。
 > `AppModule`:
 
-<!-- -->
 
 > [!NOTE]
 > WebComponents:
 >
 > マップを使用するには、読み込み中にアプリに
-> `IgxMapModule` を登録する必要があります。
-
-<!-- -->
+> `Ig$MapModule` を登録する必要があります。
 
 > [!NOTE]
 > React:
 >
 > マップを使用するには、読み込み中にアプリに
-> `IgxMapModule` を登録する必要があります。
+> `Ig$MapModule` を登録する必要があります。
+-->
 
 ```typescript
 // app.module.ts
-import {IgxMapModule} from 'igniteui-Angular-maps/ES5/igx-map-module'
+import {IgxMapModule} from 'igniteui-angular-maps/ES5/igx-map-module'
 
 @NgModule({
     imports: [

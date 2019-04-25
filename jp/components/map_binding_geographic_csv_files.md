@@ -5,7 +5,7 @@ _keywords: map, Ignite UI for Angular, infragistics
 _language: ja
 ---
 
-## Binding CSV Files with Geographic Locations
+## 地理的位置と CSV ファイルのバインド
 
 Ignite UI for Angular Map コンポーネントを使用すると、さまざまな種類のファイルからロードされた地理データをプロットできます。たとえば、カンマ区切り値 (CSV) ファイルから地理的な場所を読み込むことができます。
 
@@ -24,6 +24,12 @@ Ignite UI for Angular Map コンポーネントを使用すると、さまざま
 ### データ例
 
 CSV ファイルからのデータの例:
+
+```typescript
+City,Lat,Lon,State,Code,County,Density,Population
+New York,40.7856,-74.0093,New Jersey,NJ,Hudson,21057,54227
+Dundee,42.5236,-76.9775,New York,NY,Yates,579,1650
+```
 
 ### コード スニペット
 
