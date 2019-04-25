@@ -6,7 +6,7 @@ _keywords: Spreadsheet, Ignite UI for Angular, Infragistics
 
 ## Data Validation
 
-This topic explains to to configure and set the bulit-in data validation rules.
+This topic explains how to configure and set the bulit-in data validation rules.
 
 ### Demo
 
