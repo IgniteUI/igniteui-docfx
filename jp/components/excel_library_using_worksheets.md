@@ -44,7 +44,7 @@ import { WorkbookColorInfo } from "igniteui-angular-excel/ES5/excel.core";
 
 グリッド線は、ワークシートでセルを視覚的に分離するために使用されます。グリッド線は表示または非表示にできます。また、色を変更することもできます。
 
-列と行のヘッダーは、ワークシートの displayOptions の showGridlines プロパティを使用して、表示と非表示を切り替えることができます。以下のコードは、ワークシートのグリッドラインを非表示にする方法を示します。
+列と行のヘッダーは、ワークシートの `displayOptions` の `showGridlines` プロパティを使用して、表示と非表示を切り替えることができます。以下のコードは、ワークシートのグリッドラインを非表示にする方法を示します。
 
 ```typescript
 var workbook = new Workbook(WorkbookFormat.Excel2007);
@@ -53,7 +53,7 @@ var worksheet = workbook.worksheets().add("Sheet1");
 worksheet.displayOptions.showGridlines = false;
 ```
 
-ワークシートの displayOptions の gridlineColor プロパティを使用して、グリッド線の色を設定できます。以下のコードは、ワークシートのグリッド線を変更する方法を示します。
+ワークシートの `displayOptions` の `gridlineColor` プロパティを使用して、グリッド線の色を設定できます。以下のコードは、ワークシートのグリッド線を変更する方法を示します。
 
 ```typescript
 var workbook = new Workbook(WorkbookFormat.Excel2007);
