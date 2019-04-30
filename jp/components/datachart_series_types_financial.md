@@ -92,9 +92,7 @@ this.state = { dataSource: SampleFinancialData.create() }
 
 ### モジュールの要件
 
-<!-- Angular -->
-
-ファイナンシャル シリーズを使用するために、読み込み時に以下のモジュールをアプリへインポートしてデータチャートモジュールを登録する必要があります。
+The financial series require the following modules:
 
 ```typescript
 // axis' modules:

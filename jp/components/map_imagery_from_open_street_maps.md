@@ -1,27 +1,27 @@
 ---
-title: Map | Data Visualization Tools | Ignite UI for Angular | Open Street Maps | Infragistics
-_description: マップを使用すると、ビューモデルからの地理的位置を含むデータ、またはシェープファイルから地理的画像マップにロードされた地理空間データを表示できます。
+title: Map |データ可視化ツール |Ignite UI for Angular |オープンストリートマップ |Infragistics
+_description: マップを使用すると、ビュー モデルからの地理的位置を含むデータ、またはシェープ ファイルから地理的画像マップにロードされた地理空間データを表示できます。
 _keywords: map, Ignite UI for Angular, infragistics
 _language: ja
 ---
 
-## Binding Imagery from Open Street Maps
+## オープン ストリート マップからの画像のバインド
 
-The Open Street Maps is a free geographic imagery mapping service created collaboratively by OpenStreetMapﾂｩ contributors from around the world. It provides geographic imagery tiles of the world only in road map style without any configuration options. This geographic imagery service can be accessed directly on <a href="http://www.openstreetmap.org" target="_blank">www.OpenStreetMap.org</a> web site.
-By the default, the Ignite UI for Angular map component displays geographic imagery from the Open Street Maps in the map background content using the OpenStreetMapImagery class. Therefore, there is no need to configure the control to display geographic imagery from the Open Street Maps.
+Open Street Maps は、世界中の OpenStreetMap© のコントリビューターが共同で作成した無料の地理的画像マッピングサービスです。これは、構成オプションなしで、道路地図スタイル限定で世界の地理的画像を提供します。この地理的画像サービスは、<a href="http://www.openstreetmap.org" target="_blank">www.OpenStreetMap.org</a> に直接アクセスして利用できます。
+デフォルトでは、Ignite UI for Angular Map コンポーネントは、OpenStreetMapImagery クラスを使用して、地図の背景コンテンツにオープンストリートマップの地理的画像を表示します。したがって、Open Street Maps から地理的画像を表示するように、コントロールを構成する必要はありません。
 
-### Demo
+### デモ
 
 <div class="sample-container" style="height: 400px">
     <iframe id="geo-map-binding-osm-imagery-iframe" src='{environment:demosBaseUrl}/maps/geo-map-binding-osm-imagery' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="geo-map-binding-osm-imagery-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="geo-map-binding-osm-imagery-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示
     </button>
 </div>
 
 <div class="divider--half"></div>
 
-### Code Snippet
+### コード スニペット
 
-This code example explicitly sets `BackgroundContent` of the map component to the `OpenStreetMapImagery` object which provides geographic imagery tile from the Open Street Maps.
+このコード例では、マップコンポーネントの `BackgroundContent` を、`OpenStreetMapImagery` の地理的画像タイルを提供する OpenStreetMapImagery オブジェクトに明示的に設定しています。

@@ -30,7 +30,9 @@ excel パッケージをインストールするときに core パッケージ�
 -   **npm install --save igniteui-angular-core**
 -   **npm install --save igniteui-angular-excel**
 
-Excel Library が `NgModule` としてエクスポートされるため、アプリケーションで `AppModule` に `IgxExcelModule` をインポートする必要があります。
+### 必要なモジュール
+
+excel ライブラリは、以下のモジュールが必要です。
 
 ```typescript
 // app.module.ts
@@ -38,9 +40,9 @@ import { IgxExcelModule } from "igniteui-angular-excel/ES5/igx-excel-module";
 
 @NgModule({
     imports: [
-        ...
+        // ...
         IgxExcelModule,
-        ...
+        // ...
     ]
 })
 export class AppModule {}
@@ -112,9 +114,9 @@ Excel Library のサイズに因り、ソースマップの生成を無効にす
             "index": "src/index.html",
             "main": "src/main.ts",
             "tsConfig": "src/tsconfig.app.json",
-                  ...
+                  // ...
           },
-              ...
+              // ...
         },
         "serve": {
           "builder": "...",
@@ -122,9 +124,9 @@ Excel Library のサイズに因り、ソースマップの生成を無効にす
             "vendorSourceMap": false,
             "browserTarget": "my-app:build"
           },
-              ...
+              // ...
         },
-        ...
+        // ...
       }
 ```
 

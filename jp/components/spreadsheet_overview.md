@@ -29,13 +29,9 @@ Angular Spreadsheet は、スプレッドシート データの視覚化と編�
 -   **npm install --save igniteui-angular-excel**
 -   **npm install --save igniteui-angular-spreadsheet**
 
-<!--
-> [!NOTE]
-> Angular:
->
-> In order to use the spreadsheet, you need to register the
-> `Ig$SpreadsheetModule` in your app during load:
--->
+### 必要なモジュール
+
+`IgxSpreadsheet` は、以下のモジュールが必要です。
 
 ```typescript
 import { IgxExcelModule } from "igniteui-angular-excel/ES5/igx-excel-module";
@@ -68,8 +64,7 @@ export class AppModule {}
 ```ts
 import { IgxSpreadsheetComponent } from "igniteui-angular-spreadsheet/ES5/igx-spreadsheet-component";
 import { ExcelUtility } from './../utilities/excel-utility';
-
----
+// ...
 
 @ViewChild("spreadsheet", { read: IgxSpreadsheetComponent })
 public spreadsheet: IgxSpreadsheetComponent;

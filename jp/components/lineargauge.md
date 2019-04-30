@@ -20,7 +20,7 @@ Linear Gauge コンポーネントは、データをリニア ゲージ形式で
     <iframe id="linear-gauge-sample-iframe" src='{environment:demosBaseUrl}/gauges/linear-gauge-animation' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="linear-gauge-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="linear-gauge-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
     </button>
 </div>
 
@@ -33,23 +33,9 @@ gauges パッケージをインストールするときに core パッケージ�
 -   **npm install --save igniteui-angular-core**
 -   **npm install --save igniteui-angular-gauges**
 
-<!--
-> [!NOTE]
-> Angular:
-> リニア ゲージが `NgModule` としてエクスポートされるため、アプリケーションで `AppModule` に _IgxLinearGaugeModule_ をインポートする必要があります。
+### 必要なモジュール
 
-> [!NOTE]
-> WebComponents:
->
-> リニア ゲージを使うには、アプリケーションのロード時に
-> `Ig$LinearGaugeModule` を登録する必要があります。
-
-> [!NOTE]
-> React:
->
-> リニア ゲージを使うには、アプリケーションのロード時に
-> `Ig$LinearGaugeModule` を登録する必要があります。
--->
+`IgxLinearGauge` は、以下のモジュールが必要です。
 
 ```typescript
 // app.module.ts
@@ -58,9 +44,9 @@ import { IgxLinearGauge } from 'igniteui-angular-gauges/ES5/igx-linear-gauge';
 
 @NgModule({
     imports: [
-        ...
+        // ...
         IgxLinearGaugeModule,
-        ...
+        // ...
     ]
 })
 export class AppModule {}

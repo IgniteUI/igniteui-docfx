@@ -38,7 +38,7 @@ Ignite UI for Angular を実行する前に、Ignite UI for Angular を含むす
 
 -   **npx create-react-app my-app-name --typescript**
 
-また
+Or
 
 -   **yarn create react-app my-app-name --typescript**
 
@@ -52,7 +52,7 @@ Ignite UI for Angular を実行する前に、Ignite UI for Angular を含むす
 -   **npm install --save igniteui-angular-grids igniteui-angular-core**
 -   **npm install --save igniteui-angular-maps igniteui-angular-core**
 
-また
+Or
 
 -   **yarn add igniteui-angular-charts igniteui-angular-core**
 -   **yarn add igniteui-angular-excel igniteui-angular-core**
@@ -77,7 +77,7 @@ Ignite UI for Angular を実行する前に、Ignite UI for Angular を含むす
 -   **npm install --save igniteui-angular-grids igniteui-angular-core**
 -   **npm install --save igniteui-angular-maps igniteui-angular-core**
 
-また
+Or
 
 -   **yarn add igniteui-angular-charts igniteui-angular-core**
 -   **yarn add igniteui-angular-excel igniteui-angular-core**

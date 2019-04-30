@@ -30,22 +30,12 @@ chart パッケージをインストールするときに core パッケージ�
 -   **npm install --save igniteui-angular-core**
 -   **npm install --save igniteui-angular-charts**
 
-<!--
-> [!NOTE]
-> Angular:
-> 円チャートは `NgModule` としてエクスポートされます。`AppModule` に _Ig $ PieChartModule_ をインポートする必要があります
-> _Ig $ PieChartModule_ をインポートする必要があります。
+### 必要なモジュール
 
-> [!NOTE]
-> React:
-
-> 円グラフを使用するには、ロード中に　`Ig$PieChartModule` を
-> アプリに登録する必要があります。
--->
+`IgxPieChart` は、以下のモジュールが必要です。
 
 ```typescript
 // app.module.ts
-
 import { IgxPieChartModule } from 'igniteui-angular-charts/ES5/igx-pie-chart-module';
 
 @NgModule({
