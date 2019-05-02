@@ -20,11 +20,11 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ---
 }
 
-### @@igComponent Row Drag
+# @@igComponent Row Drag
 
-In Ignite UI for Angular @@igComponent, **RowDrag** is initialized on the root `@@igSelector` component and is configurable via the [`rowDrag`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowDrag) input.
+In Ignite UI for Angular @@igComponent, **RowDrag** is initialized on the root `@@igSelector` component and is configurable via the [`rowDraggable`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowdraggable) input. Enabling row dragging provides users with a row drag-handle with which they can initiate dragging of a row.
 
-#### Demo
+## Demo
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:550px">
@@ -35,9 +35,18 @@ In Ignite UI for Angular @@igComponent, **RowDrag** is initialized on the root `
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-row-drag-to-grid-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 }
-@@if (igxName === 'IgxTreeGrid') {
 
+@@if (igxName === 'IgxTreeGrid') {
+<div class="sample-container loading" style="height:560px">
+    <iframe id="tree-grid-row-drag-sample-iframe" src='{environment:demosBaseUrl}/tree-grid/tree-grid-row-drag' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-row-drag-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
 }
+
 @@if (igxName === 'IgxHierarchicalGrid') {
 <div class="sample-container loading" style="height:560px">
     <iframe id="hierarchical-grid-row-drag-sample-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-row-drag' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -47,4 +56,227 @@ In Ignite UI for Angular @@igComponent, **RowDrag** is initialized on the root `
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-row-drag-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
+}
+
+## Configuration
+
+In order to enable row-dragging for your `@@igSelector`, all you need to do is set the grid's [`rowDraggable`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowdraggable) to **`true`**. Once this is enabled, a row-drag handle will be displayed on each row. This handle can be used to initiate row dragging.
+
+```html
+<@@igSelector [rowDragging]="true">
+ ...
+</@@igSelector>
+```
+Clicking on the drag-handle and holding down the button will cause the grid's [`onRowDragStart`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onrowdragstart) event to fire. Releasing the click at any time will cause [`onRowDragEnd`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onrowdragend) event to fire.
+
+Below, you can find a walkthrough on how to configure an `@@igSelector` to support row dragging and how to properly handle the drop event.
+
+@@if (igxName === 'IgxTreeGrid' || igxName === 'IgxHierarchicalGrid') {
+In this example, we'll handle dragging a row from a grid to a designated area and, when dropping it, removing it from the grid.
+}
+@@if (igxName === 'IgxGrid') {
+In this example, we'll handle dragging a row from one grid to another, removing from the first data source and adding it to the second.
+}
+
+### Drop Areas
+
+Enabling row-dragging was pretty easy, but now we have to configure how we'll handle row-*dropping*.
+We can define where we want our rows to be dropped using the [`igxDrop` directive](../drag_drop.md).
+
+First we need to import the `IgxDragDropModule` in our app module:
+
+```typescript
+    import { ..., IgxDragDropModule } from 'igniteui-angular';
+    ...
+    @NgModule({
+        imports: [..., IgxDragDropModule]
+    })
+```
+
+Then, in our template, we define a drop-area using the directive's selector:
+
+@@if (igxName === 'IgxTreeGrid' || igxName === 'IgxHierarchicalGrid') {
+```html
+<div class="drop-area" igxDrop (onEnter)="onEnterAllowed($event)" (onLeave)="onLeaveAllowed($event)"
+(onDrop)="onDropAllowed($event)">
+    <igx-icon>delete</igx-icon>
+    <div>Drag a row here to delete it</div>
+</div>
+```
+}
+@@if (igxName === 'IgxGrid') {
+In this case, our drop-area will be a whole second grid where we'll drop the rows.
+```html
+<igx-grid #targetGrid igxDrop [data]="data2" [autoGenerate]="false" [emptyGridTemplate]="dragHereTemplate"
+    (onEnter)="onEnterAllowed($event)" (onLeave)="onLeaveAllowed($event)" (onDrop)="onDropAllowed($event)" [primaryKey]="'ID'">
+    ...
+</igx-grid>
+```
+
+Since the grid will initially be empty, we also define a template that will be more meaningful to the user:
+
+```html
+    <ng-template #dragHereTemplate>
+        Drop a row to add it to the grid
+    </ng-template>
+```
+}
+
+### Drop Area Event Handlers
+
+Once we've defined our drop-area in the template, we have to declare our handlers for the `igxDrop`'s [`onEnter`]({environment:angularApiUrl}/classes/igxdropdirective.html#onenter), [`onLeave`]({environment:angularApiUrl}/classes/igxdropdirective.html#onleave) and [`onDrop`]({environment:angularApiUrl}/classes/igxdropdirective.html#ondrop) events in our component's `.ts` file.
+
+First, let's take a look at our `onEnter` and `onLeave` handlers. In those methods, we just want to change the icon of the drag's *ghost* so we can indicate to the user that they are above an area the allows them to drop the row:
+
+```typescript
+        export class @@igxNameRowDragComponent {
+            ...
+            public onEnterAllowed(args) {
+                this.changeGhostIcon(args.drag.dragGhost, DragIcon.ALLOW);
+            }
+
+            public onLeaveAllowed(args) {
+                this.changeGhostIcon(args.drag.dragGhost, DragIcon.DEFAULT);
+            }
+
+            private changeGhostIcon(ghost, icon: string) {
+                if (ghost) {
+                    ghost.querySelector("igx-icon").innerHTML = icon;
+                }
+            }
+
+        }
+```
+The `changeGhostIcon` **private** method just changes the icon inside of the drag ghost. The icons themselves are from the [`material` font set](material.io/tools/icons/) and are defined in a separate **`enum`**:
+@@if (igxName === 'IgxTreeGrid' || igxName === 'IgxHierarchicalGrid') {
+```typescript
+    enum DragIcon {
+    DEFAULT = "drag_indicator",
+    ALLOW = "remove"
+}
+```
+}
+@@if (igxName === 'IgxGrid') {
+```typescript
+    enum DragIcon {
+    DEFAULT = "drag_indicator",
+    ALLOW = "add"
+}
+```
+}
+
+Next, we have to define what should happen when the user actually *drops* the row inside of the drop-area.
+@@if (igxName === 'IgxTreeGrid' || igxName === 'IgxHierarchicalGrid') {
+```typescript
+    export class @@igxNameRowDragComponent {
+        ...
+        public onDropAllowed(args: IgxDropEventArgs) {
+            args.cancel = true;
+            const draggedRow: @@igxNameGridRowComponent = args.dragData;
+            draggedRow.delete();
+        }
+
+    }
+```
+
+Once the row is dropped, we just do the following:
+- cancel the event
+- call the row's [`delete()`]({environment:angularApiUrl}/classes/@@igxNameRowComponent.html#delete) method
+}
+
+@@if (igxName === 'IgxGrid') {
+```typescript
+    export class @@igxNameRowDragComponent {
+        @ViewChild("sourceGrid", { read: IgxGridComponent }) public sourceGrid: IgxGridComponent;
+        @ViewChild("targetGrid", { read: IgxGridComponent }) public targetGrid: IgxGridComponent;
+        ... 
+        public onDropAllowed(args) {
+            args.cancel = true;
+            this.targetGrid.addRow(args.dragData.rowData);
+            this.sourceGrid.deleteRow(args.dragData.rowID);
+        }
+        ...
+    }
+```
+
+We define a refenrece to each of our grids via the `ViewChild` decorator and the handle the drop as follows:
+- cancel the event
+- add a row to the `targetGrid` that contains the data of the row being dropped
+- remove the dragged row from the `sourceGrid`
+}
+
+@@if (igxName === 'IgxTreeGrid' || igxName === 'IgxHierarchicalGrid') {
+### Styling the drop area
+Once our drop handlers are properly configured, all that's left is to style our drop area a bit:
+```css
+.drop-area {
+    width: 160px;
+    height: 160px;
+    background-color: #d3d3d3;
+    border: 1px dashed #131313;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    text-align: center;
+    margin: 8px;
+}
+
+:host {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    width: 100%;
+}
+```
+
+The result can be seen in the demo below:
+}
+@@if (igxName === 'IgxGrid') {
+Once our drop handlers are properly configured, we're good to go!
+The result of the configuration can be seem below:
+}
+
+### Example Demo
+@@if (igxName === 'IgxGrid') {
+<div class="sample-container loading" style="height:550px">
+    <iframe id="grid-row-drag-to-grid-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-row-drag-to-grid' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-row-drag-to-grid-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+}
+
+@@if (igxName === 'IgxTreeGrid') {
+<div class="sample-container loading" style="height:560px">
+    <iframe id="tree-grid-row-drag-sample-iframe" src='{environment:demosBaseUrl}/tree-grid/tree-grid-row-drag' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-row-drag-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
+}
+
+@@if (igxName === 'IgxHierarchicalGrid') {
+<div class="sample-container loading" style="height:560px">
+    <iframe id="hierarchical-grid-row-drag-sample-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-row-drag' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-row-drag-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
+}
+
+## Limitations
+
+There are a couple of things that need to be considered when using the `rowDraggable` directive:
+> [!NOTE]
+> When handling the row-drop event, the `eventArgs.cancel` should be set to **`true`** in order to prevent leftover elements from the row drag ghost from being visible 
+@@if (igxName === 'IgxHierarchicalGrid') {
+> [!NOTE]
+> When using `rowDraggable` with an @@igSelector, the [`dragIndicatorIconTemplate`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#dragindicatoricontemplate) cannot be set through the template, as a `ContentChild`. Instead, you can get a reference to the template (via `ViewChild` decorator) and pass it to the grid `myHGrid.dragIndicatorIconTemplate: TemplateRef = myCustomTemplate` 
 }
