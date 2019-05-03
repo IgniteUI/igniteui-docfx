@@ -24,15 +24,19 @@ To get all available resource strings, there is a global function `getCurrentRes
 The values could be replaced in order to be localized and then the object can be passed to the `changei18n` function, as a parameter, which will change the global i18n for the igniteui-angular components on an app.module level. The localization can be done anywhere in the app, not only in the app.module.ts
 
 ```typescript
-//app.module.ts
+// app.component.ts
 
-const currentRS = getCurrentResourceStrings();
+public ngOnInit(): void {
+    ...
+    const currentRS = getCurrentResourceStrings();
 
-for (const key of Object.keys(currentRS)) {
-    currentRS[key] = '[Localized]'+ currentRS[key];
+    for (const key of Object.keys(currentRS)) {
+        currentRS[key] = '[Localized]'+ currentRS[key];
+    }
+
+    changei18n(currentRS);
+    ...
 }
-
-changei18n(currentRS);
 ```
 <div>
 <button data-localize="stackblitz" class="stackblitz-btn" data-sample-src="{environment:demosBaseUrl}/services/localization-sample-2"
@@ -58,7 +62,7 @@ currentRS.igx_grid_filter_row_close = '[Localized]Close';
 
 #### Localize particular strings for particular instance of a component
 
-If only a single `igx-grid` instance should be localized, there is way. The `resourceStrings` proeprty should be used and it should be set to a new instance of `IGridResourceStrings` type.
+If only a single `igx-grid` instance should be localized, there is a way. The `resourceStrings` property should be used and it should be set to a new instance of `IGridResourceStrings` type.
 
 ```typescript
 const newGridRes: IGridResourceStrings = {
@@ -82,13 +86,17 @@ Firstly the package that contains the resource strings should be installed:
 Then in order to use Japanese and Korean resource strings, the following imports should be added to the application and the `changei18n` functions should be called:
 
 ```typescript
-//app.module.ts
+// app.component.ts
 
 import { IgxResourceStringsJA } from 'igniteui-angular-i18n';
 import { IgxResourceStringsKR } from 'igniteui-angular-i18n';
 ...
 
-changei18n(IgxResourceStringsJA);
+public ngOnInit(): void {
+    ...
+    changei18n(IgxResourceStringsJA);
+    ...
+}
 ```
 
 ### Additional Resources
