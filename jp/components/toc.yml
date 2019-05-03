@@ -25,6 +25,9 @@
     - name: 行編集
       href: grid/row_editing.md
       new: true
+    - name: Row Drag
+      href: grid/row_drag.md
+      new: true
     - name: 一括編集
       href: grid/batch_editing.md
       new: true
@@ -95,6 +98,9 @@
     - name: 行編集
       href: treegrid/row_editing.md
       new: false
+    - name: Row Drag
+      href: treegrid/row_drag.md
+      new: true
     - name: 一括編集
       href: treegrid/batch_editing.md
       new: false
@@ -164,6 +170,9 @@
       new: true
     - name: 行編集
       href: hierarchicalgrid/row_editing.md
+      new: true
+    - name: Row Drag
+      href: hierarchicalgrid/row_drag.md
       new: true
     - name: 一括編集
       href: hierarchicalgrid/batch_editing.md
