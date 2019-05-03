@@ -85,11 +85,11 @@ this.grid.resourceStrings = newGridRes;
 ```typescript
 //app.module.ts
 
-import { IgxResouceStringsJA } from 'igniteui-angular-i18n';
-import { IgxResouceStringsKR } from 'igniteui-angular-i18n';
+import { IgxResourceStringsJA } from 'igniteui-angular-i18n';
+import { IgxResourceStringsKR } from 'igniteui-angular-i18n';
 ...
 
-changei18n(IgxResouceStringsJA);
+changei18n(IgxResourceStringsJA);
 ```
 
 ### その他のリソース
