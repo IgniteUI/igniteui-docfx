@@ -67,7 +67,7 @@ In order to enable row-dragging for your `@@igSelector`, all you need to do is s
  ...
 </@@igSelector>
 ```
-Clicking on the drag-handle and holding down the button will cause the grid's [`onRowDragStart`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onrowdragstart) event to fire. Releasing the click at any time will cause [`onRowDragEnd`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onrowdragend) event to fire.
+Clicking on the drag-handle and *moving the cursor* while holding down the button will cause the grid's [`onRowDragStart`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onrowdragstart) event to fire. Releasing the click at any time will cause [`onRowDragEnd`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onrowdragend) event to fire.
 
 Below, you can find a walkthrough on how to configure an `@@igSelector` to support row dragging and how to properly handle the drop event.
 
@@ -75,7 +75,7 @@ Below, you can find a walkthrough on how to configure an `@@igSelector` to suppo
 In this example, we'll handle dragging a row from a grid to a designated area and, when dropping it, removing it from the grid.
 }
 @@if (igxName === 'IgxGrid') {
-In this example, we'll handle dragging a row from one grid to another, removing from the first data source and adding it to the second.
+In this example, we'll handle dragging a row from one grid to another, removing it from the first data source and adding it to the second.
 }
 
 ### Drop Areas
@@ -126,7 +126,7 @@ Since the grid will initially be empty, we also define a template that will be m
 
 Once we've defined our drop-area in the template, we have to declare our handlers for the `igxDrop`'s [`onEnter`]({environment:angularApiUrl}/classes/igxdropdirective.html#onenter), [`onLeave`]({environment:angularApiUrl}/classes/igxdropdirective.html#onleave) and [`onDrop`]({environment:angularApiUrl}/classes/igxdropdirective.html#ondrop) events in our component's `.ts` file.
 
-First, let's take a look at our `onEnter` and `onLeave` handlers. In those methods, we just want to change the icon of the drag's *ghost* so we can indicate to the user that they are above an area the allows them to drop the row:
+First, let's take a look at our `onEnter` and `onLeave` handlers. In those methods, we just want to change the icon of the drag's *ghost* so we can indicate to the user that they are above an area that allows them to drop the row:
 
 ```typescript
         export class @@igxNameRowDragComponent {
