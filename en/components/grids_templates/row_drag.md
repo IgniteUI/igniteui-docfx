@@ -131,6 +131,8 @@ First, let's take a look at our `onEnter` and `onLeave` handlers. In those metho
 ```typescript
         export class @@igxNameRowDragComponent {
             ...
+            private _prevIcon;
+            ...
             public onEnterAllowed(args) {
                 this.changeGhostIcon(args.drag.dragGhost, DragIcon.ALLOW);
             }
@@ -141,13 +143,20 @@ First, let's take a look at our `onEnter` and `onLeave` handlers. In those metho
 
             private changeGhostIcon(ghost, icon: string) {
                 if (ghost) {
-                    ghost.querySelector("igx-icon").innerHTML = icon;
+                    const currentIcon = [...ghost.querySelectorAll("igx-icon")]
+                    .find((e) => e.innerText === (this._prevIcon || DragIcon.DEFAULT));
+                    if (currentIcon) {
+                        currentIcon.innerText = icon;
+                        this._prevIcon = icon;
+                    }
                 }
             }
 
         }
 ```
-The `changeGhostIcon` **private** method just changes the icon inside of the drag ghost. The icons themselves are from the [`material` font set](material.io/tools/icons/) and are defined in a separate **`enum`**:
+The `changeGhostIcon` **private** method just changes the icon inside of the drag ghost. The logic in the method finds the element that contains the icon (if it was previously changed - check for that, if not - check for the default icon), changing the element's inner text (and the icon we should search for in the next change) to the passed one.
+This is done so we do not accidentally change another icon in the row element. 
+The icons themselves are from the [`material` font set](https://material.io/tools/icons/) and are defined in a separate **`enum`**:
 @@if (igxName === 'IgxTreeGrid' || igxName === 'IgxHierarchicalGrid') {
 ```typescript
     enum DragIcon {
@@ -204,6 +213,53 @@ We define a refenrece to each of our grids via the `ViewChild` decorator and the
 - add a row to the `targetGrid` that contains the data of the row being dropped
 - remove the dragged row from the `sourceGrid`
 }
+
+### Templating the drag icon
+The drag handle icon can be templated using the grid's [`dragIndicatorIconTemplate`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#dragindicatoricontemplate). In the example we're building, let's change the icon from the default one (`drag_indicator`) to `drag_handle`.
+@@if (igxName === 'IgxTreeGrid' || igxName === 'IgxGrid') {
+To do so, we can use the `igxDragIndicatorIcon` to pass a template inside of the `@@igSelector`'s body:
+```html
+<@@igSelector>
+...
+    <ng-template igxDragIndicatorIcon>
+        <igx-icon>drag_handle</igx-icon>
+    </ng-template>
+...
+</@@igSelector>
+```
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+To do so, we need to define a template in our component's template, get it as a `ViewChild` and pass it to the @@igxName's `dragIndicatorIconTemplate` property
+
+```html
+<@@igSelector>
+...
+</@@igSelector>
+...
+<ng-template #customDragIcon>
+    <igx-icon>drag_handle</igx-icon>
+</ng-template>
+```
+
+```typescript
+ export class @@igxNameRowDragComponent implements AfterViewInit{
+     @ViewChild('customDragIcon', {read: TemplateRef})
+     public customIcon: TemplateRef<any>;
+     ...
+     ngAfterViewInit() {
+         this.grid.dragIndicatorIconTemplate = this.customIcon;
+     }
+ }
+```
+}
+
+Once we've set the new icon template, we also need to adjust the `DEFAULT` icon in our `DragIcon enum`, so it's properly change by the `changeIcon` method:
+```typescript
+    enum DragIcon {
+    DEFAULT = "drag_handle",
+    ...
+}
+```
 
 @@if (igxName === 'IgxTreeGrid' || igxName === 'IgxHierarchicalGrid') {
 ### Styling the drop area
