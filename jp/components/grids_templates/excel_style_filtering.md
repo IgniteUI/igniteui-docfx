@@ -30,7 +30,7 @@ Ignite UI for Angular @@igComponent コンポーネントは、Excel ライク�
 #### デモ
 
 @@if (igxName === 'IgxGrid') {
-<div class="sample-container loading" style="height:850px">
+<div class="sample-container loading" style="height:950px">
     <iframe id="grid-sample-1-iframe" src='{environment:demosBaseUrl}/grid/grid-excel-style-filtering-sample-1' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
@@ -39,7 +39,7 @@ Ignite UI for Angular @@igComponent コンポーネントは、Excel ライク�
 </div>
 }
 @@if (igxName === 'IgxTreeGrid') {
-<div class="sample-container loading" style="height:850px">
+<div class="sample-container loading" style="height:950px">
     <iframe id="tree-grid-sample-1-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-excel-style-filtering-sample-1' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
@@ -48,7 +48,7 @@ Ignite UI for Angular @@igComponent コンポーネントは、Excel ライク�
 </div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-<div class="sample-container loading" style="height:850px">
+<div class="sample-container loading" style="height:950px">
     <iframe id="hierarchical-grid-sample-1-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-excel-style-filtering-sample-1' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
@@ -193,7 +193,7 @@ Excel スタイル フィルタリングをオンにするには、2 つの入�
 <div class="divider--half"></div>
 
 @@if (igxName === 'IgxGrid') {
-<div class="sample-container loading" style="height:850px">
+<div class="sample-container loading" style="height:900px">
     <iframe id="grid-sample-2-iframe" data-src='{environment:demosBaseUrl}/grid/grid-excel-style-filtering-sample-2' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <br/>
@@ -202,7 +202,7 @@ Excel スタイル フィルタリングをオンにするには、2 つの入�
 </div>
 }
 @@if (igxName === 'IgxTreeGrid') {
-<div class="sample-container loading" style="height:850px">
+<div class="sample-container loading" style="height:900px">
     <iframe id="tree-grid-sample-2-iframe" data-src='{environment:demosBaseUrl}/tree-grid/treegrid-excel-style-filtering-sample-2' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <br/>
@@ -211,7 +211,7 @@ Excel スタイル フィルタリングをオンにするには、2 つの入�
 </div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-<div class="sample-container loading" style="height:850px">
+<div class="sample-container loading" style="height:900px">
     <iframe id="hierarchical-grid-sample-2-iframe" data-src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-excel-style-filtering-sample-2' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <br/>
@@ -327,7 +327,7 @@ Excel スタイル フィルタリングをオンにするには、2 つの入�
 <div class="divider--half"></div>
 
 @@if (igxName === 'IgxGrid') {
-<div class="sample-container loading" style="height:850px">
+<div class="sample-container loading" style="height:900px">
     <iframe id="grid-sample-2-iframe" src='{environment:demosBaseUrl}/grid/grid-excel-style-filtering-sample-3' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
@@ -336,7 +336,7 @@ Excel スタイル フィルタリングをオンにするには、2 つの入�
 </div>
 }
 @@if (igxName === 'IgxTreeGrid') {
-<div class="sample-container loading" style="height:850px">
+<div class="sample-container loading" style="height:900px">
     <iframe id="tree-grid-sample-2-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-excel-style-filtering-sample-3' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
@@ -345,7 +345,7 @@ Excel スタイル フィルタリングをオンにするには、2 つの入�
 </div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-<div class="sample-container loading" style="height:850px">
+<div class="sample-container loading" style="height:900px">
     <iframe id="hierarchical-grid-sample-2-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-excel-style-filtering-sample-3' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
