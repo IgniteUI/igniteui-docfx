@@ -20,11 +20,11 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ---
 }
 
-# @@igComponent Row Drag
+### @@igComponent Row Drag
 
 In Ignite UI for Angular @@igComponent, **RowDrag** is initialized on the root `@@igSelector` component and is configurable via the [`rowDraggable`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowdraggable) input. Enabling row dragging provides users with a row drag-handle with which they can initiate dragging of a row.
 
-## Demo
+#### Demo
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:550px">
@@ -58,12 +58,12 @@ In Ignite UI for Angular @@igComponent, **RowDrag** is initialized on the root `
 <div class="divider--half"></div>
 }
 
-## Configuration
+#### Configuration
 
 In order to enable row-dragging for your `@@igSelector`, all you need to do is set the grid's [`rowDraggable`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowdraggable) to **`true`**. Once this is enabled, a row-drag handle will be displayed on each row. This handle can be used to initiate row dragging.
 
 ```html
-<@@igSelector [rowDragging]="true">
+<@@igSelector [rowDraggable]="true">
  ...
 </@@igSelector>
 ```
@@ -78,7 +78,7 @@ In this example, we'll handle dragging a row from a grid to a designated area an
 In this example, we'll handle dragging a row from one grid to another, removing it from the first data source and adding it to the second.
 }
 
-### Drop Areas
+##### Drop Areas
 
 Enabling row-dragging was pretty easy, but now we have to configure how we'll handle row-*dropping*.
 We can define where we want our rows to be dropped using the [`igxDrop` directive](../drag_drop.md).
@@ -86,11 +86,11 @@ We can define where we want our rows to be dropped using the [`igxDrop` directiv
 First we need to import the `IgxDragDropModule` in our app module:
 
 ```typescript
-    import { ..., IgxDragDropModule } from 'igniteui-angular';
-    ...
-    @NgModule({
-        imports: [..., IgxDragDropModule]
-    })
+import { ..., IgxDragDropModule } from 'igniteui-angular';
+...
+@NgModule({
+    imports: [..., IgxDragDropModule]
+})
 ```
 
 Then, in our template, we define a drop-area using the directive's selector:
@@ -116,45 +116,45 @@ In this case, our drop-area will be a whole second grid where we'll drop the row
 Since the grid will initially be empty, we also define a template that will be more meaningful to the user:
 
 ```html
-    <ng-template #dragHereTemplate>
-        Drop a row to add it to the grid
-    </ng-template>
+<ng-template #dragHereTemplate>
+    Drop a row to add it to the grid
+</ng-template>
 ```
 }
 
-### Drop Area Event Handlers
+##### Drop Area Event Handlers
 
 Once we've defined our drop-area in the template, we have to declare our handlers for the `igxDrop`'s [`onEnter`]({environment:angularApiUrl}/classes/igxdropdirective.html#onenter), [`onLeave`]({environment:angularApiUrl}/classes/igxdropdirective.html#onleave) and [`onDrop`]({environment:angularApiUrl}/classes/igxdropdirective.html#ondrop) events in our component's `.ts` file.
 
 First, let's take a look at our `onEnter` and `onLeave` handlers. In those methods, we just want to change the icon of the drag's *ghost* so we can indicate to the user that they are above an area that allows them to drop the row:
 
 ```typescript
-        export class @@igxNameRowDragComponent {
-            ...
-            public onEnterAllowed(args) {
-                this.changeGhostIcon(args.drag.dragGhost, DragIcon.ALLOW);
-            }
+export class @@igxNameRowDragComponent {
+    ...
+    public onEnterAllowed(args) {
+        this.changeGhostIcon(args.drag.dragGhost, DragIcon.ALLOW);
+    }
 
-            public onLeaveAllowed(args) {
-                this.changeGhostIcon(args.drag.dragGhost, DragIcon.DEFAULT);
-            }
+    public onLeaveAllowed(args) {
+        this.changeGhostIcon(args.drag.dragGhost, DragIcon.DEFAULT);
+    }
 
-            private changeGhostIcon(ghost, icon: string) {
-                if (ghost) {
-                    const currentIcon = ghost.querySelector(".igx-grid__drag-indicator  > igx-icon");
-                    if (currentIcon) {
-                        currentIcon.innerText = icon;
-                    }
-                }
+    private changeGhostIcon(ghost, icon: string) {
+        if (ghost) {
+            const currentIcon = ghost.querySelector(".igx-grid__drag-indicator  > igx-icon");
+            if (currentIcon) {
+                currentIcon.innerText = icon;
             }
-
         }
+    }
+
+}
 ```
 The `changeGhostIcon` **private** method just changes the icon inside of the drag ghost. The logic in the method finds the element that contains the icon (using the `igx-grid__drag-indicator` class that is applied to the drag-indicator container), changing the element's inner text to the passed one.
 The icons themselves are from the [`material` font set](https://material.io/tools/icons/) and are defined in a separate **`enum`**:
 @@if (igxName === 'IgxTreeGrid' || igxName === 'IgxHierarchicalGrid') {
 ```typescript
-    enum DragIcon {
+enum DragIcon {
     DEFAULT = "drag_indicator",
     ALLOW = "remove"
 }
@@ -162,7 +162,7 @@ The icons themselves are from the [`material` font set](https://material.io/tool
 }
 @@if (igxName === 'IgxGrid') {
 ```typescript
-    enum DragIcon {
+enum DragIcon {
     DEFAULT = "drag_indicator",
     ALLOW = "add"
 }
@@ -172,15 +172,15 @@ The icons themselves are from the [`material` font set](https://material.io/tool
 Next, we have to define what should happen when the user actually *drops* the row inside of the drop-area.
 @@if (igxName === 'IgxTreeGrid' || igxName === 'IgxHierarchicalGrid') {
 ```typescript
-    export class @@igxNameRowDragComponent {
-        ...
-        public onDropAllowed(args: IgxDropEventArgs) {
-            args.cancel = true;
-            const draggedRow: @@igxNameGridRowComponent = args.dragData;
-            draggedRow.delete();
-        }
-
+export class @@igxNameRowDragComponent {
+    ...
+    public onDropAllowed(args: IgxDropEventArgs) {
+        args.cancel = true;
+        const draggedRow: @@igxNameGridRowComponent = args.dragData;
+        draggedRow.delete();
     }
+
+}
 ```
 
 Once the row is dropped, we just do the following:
@@ -190,17 +190,17 @@ Once the row is dropped, we just do the following:
 
 @@if (igxName === 'IgxGrid') {
 ```typescript
-    export class @@igxNameRowDragComponent {
-        @ViewChild("sourceGrid", { read: IgxGridComponent }) public sourceGrid: IgxGridComponent;
-        @ViewChild("targetGrid", { read: IgxGridComponent }) public targetGrid: IgxGridComponent;
-        ... 
-        public onDropAllowed(args) {
-            args.cancel = true;
-            this.targetGrid.addRow(args.dragData.rowData);
-            this.sourceGrid.deleteRow(args.dragData.rowID);
-        }
-        ...
+export class @@igxNameRowDragComponent {
+    @ViewChild("sourceGrid", { read: IgxGridComponent }) public sourceGrid: IgxGridComponent;
+    @ViewChild("targetGrid", { read: IgxGridComponent }) public targetGrid: IgxGridComponent;
+    ... 
+    public onDropAllowed(args) {
+        args.cancel = true;
+        this.targetGrid.addRow(args.dragData.rowData);
+        this.sourceGrid.deleteRow(args.dragData.rowID);
     }
+    ...
+}
 ```
 
 We define a refenrece to each of our grids via the `ViewChild` decorator and the handle the drop as follows:
@@ -209,7 +209,7 @@ We define a refenrece to each of our grids via the `ViewChild` decorator and the
 - remove the dragged row from the `sourceGrid`
 }
 
-### Templating the drag icon
+##### Templating the drag icon
 The drag handle icon can be templated using the grid's [`dragIndicatorIconTemplate`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#dragindicatoricontemplate). In the example we're building, let's change the icon from the default one (`drag_indicator`) to `drag_handle`.
 @@if (igxName === 'IgxTreeGrid' || igxName === 'IgxGrid') {
 To do so, we can use the `igxDragIndicatorIcon` to pass a template inside of the `@@igSelector`'s body:
@@ -237,27 +237,27 @@ To do so, we need to define a template in our component's template, get it as a 
 ```
 
 ```typescript
- export class @@igxNameRowDragComponent implements AfterViewInit{
-     @ViewChild('customDragIcon', {read: TemplateRef})
-     public customIcon: TemplateRef<any>;
-     ...
-     ngAfterViewInit() {
-         this.grid.dragIndicatorIconTemplate = this.customIcon;
-     }
- }
+export class @@igxNameRowDragComponent implements AfterViewInit{
+    @ViewChild('customDragIcon', {read: TemplateRef})
+    public customIcon: TemplateRef<any>;
+    ...
+    ngAfterViewInit() {
+        this.grid.dragIndicatorIconTemplate = this.customIcon;
+    }
+}
 ```
 }
 
 Once we've set the new icon template, we also need to adjust the `DEFAULT` icon in our `DragIcon enum`, so it's properly change by the `changeIcon` method:
 ```typescript
-    enum DragIcon {
+enum DragIcon {
     DEFAULT = "drag_handle",
     ...
 }
 ```
 
 @@if (igxName === 'IgxTreeGrid' || igxName === 'IgxHierarchicalGrid') {
-### Styling the drop area
+##### Styling the drop area
 Once our drop handlers are properly configured, all that's left is to style our drop area a bit:
 ```css
 .drop-area {
@@ -289,7 +289,7 @@ Once our drop handlers are properly configured, we're good to go!
 The result of the configuration can be seem below:
 }
 
-### Example Demo
+##### Example Demo
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:550px">
     <iframe id="grid-row-drag-to-grid-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-row-drag-to-grid' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -322,7 +322,7 @@ The result of the configuration can be seem below:
 <div class="divider--half"></div>
 }
 
-## Limitations
+#### Limitations
 
 There are a couple of things that need to be considered when using the `rowDraggable` directive:
 > [!NOTE]
@@ -331,3 +331,21 @@ There are a couple of things that need to be considered when using the `rowDragg
 > [!NOTE]
 > When using `rowDraggable` with an @@igSelector, the [`dragIndicatorIconTemplate`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#dragindicatoricontemplate) cannot be set through the template, as a `ContentChild`. Instead, you can get a reference to the template (via `ViewChild` decorator) and pass it to the grid `myHGrid.dragIndicatorIconTemplate: TemplateRef = myCustomTemplate` 
 }
+
+### API References
+
+* [rowDraggable]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowdraggable)
+* [onRowDragStart]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onrowdragstart)
+* [onRowDragEnd]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onrowdragend)
+* [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
+
+### Additional Resources
+<div class="divider--half"></div>
+
+* [@@igComponent Overview](@@igMainTopic.md)
+
+<div class="divider--half"></div>
+Our community is active and always welcoming to new ideas.
+
+* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
