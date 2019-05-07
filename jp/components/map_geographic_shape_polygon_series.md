@@ -5,7 +5,7 @@ _keywords: map, Ignite UI for Angular, infragistics
 _language: ja
 ---
 
-## Using Shape Polygon Series
+## 図形ポリゴン シリーズの使用
 
 地理的コンテキストで形状ポリゴンを使用して地理空間データを表示するには、マップコンポーネントの `GeographicShapeSeries` を使用します。地理的シリーズのこのタイプは、地理的位置で定義される国々または領域の図形を描画するためにしばしば使用されます。
 
@@ -21,7 +21,7 @@ _language: ja
 
 <div class="divider--half"></div>
 
-`GeographicShapeSeries` は、地理的データがポリラインの代わりに多角形で描画されることを除いて、`GeographicPolylineSeries`?とほどんど同様に機能します。
+`GeographicShapeSeries` は、地理的データがポリラインの代わりに多角形で描画されることを除いて、`GeographicPolylineSeries` とほどんど同様に機能します。
 
 ### データ要件
 
@@ -29,7 +29,7 @@ _language: ja
 
 ### コード スニペット
 
-次のコードは、`ShapeDataSource` を使用してシェイプファイルからロードされた世界の国々のシェイプに `GeographicShapeSeries` をバインドする方法を示しています。
+次のコードは、`ShapeDataSource` を使用してシェープファイルからロードされた世界の国々のシェイプに `GeographicShapeSeries` をバインドする方法を示しています。
 
 <!-- Angular -->
 

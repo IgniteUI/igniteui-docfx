@@ -5,9 +5,9 @@ _keywords: map, Ignite UI for Angular, infragistics
 _language: ja
 ---
 
-## 世界のつながり
+## ワールド コネクション
 
-リソースト ピックは、空港の位置、飛行経路、および地理的なグリッド線を生成するためのデータユーティリティの実装を提供します。これらのデータソースを独自の地理データを作成するための参照点として使用できます。このユーティリティは [WorldUtil](map_resources_world_util.md) と [WorldLocations](map_resources_world_locations.md) スクリプトに依存していることに注意してください。
+空港の位置、飛行経路、および地理的なグリッド線を生成するためのデータユーティリティの実装を提供します。これらのデータソースを独自の地理データを作成するための参照点として使用できます。このユーティリティは [WorldUtil](map_resources_world_util.md) と [WorldLocations](map_resources_world_locations.md) スクリプトに依存していることに注意してください。
 
 ### コード スニペット
 

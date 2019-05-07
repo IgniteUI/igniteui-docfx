@@ -5,9 +5,9 @@ _keywords: map, Ignite UI for Angular, infragistics
 _language: ja
 ---
 
-## 複数のシェイプファイルのバインドとオーバレイ
+## 複数のシェープファイルのバインドとオーバレイ
 
-`XamGeographicMap` では、複数の地理的シリーズオブジェクトを追加して、いくつかのシェープファイルを地理空間データとオーバーレイすることができます。たとえば、港湾の地理的位置をプロットするための `GeographicSymbolSeries`、港湾間のルートをプロットするための `GeographicPolylineSeries`、国の形状をプロットするための `GeographicShapeSeries` などです。
+`IgxGeographicMap` では、複数の地理的シリーズオブジェクトを追加して、いくつかのシェープファイルを地理空間データとオーバーレイすることができます。たとえば、港湾の地理的位置をプロットするための `GeographicSymbolSeries`、港湾間のルートをプロットするための `GeographicPolylineSeries`、国の形状をプロットするための `GeographicShapeSeries` などです。
 
 ### デモ
 
@@ -35,14 +35,14 @@ _language: ja
 
 ### オーバーレイ シェイプ ポリゴン
 
-世界の国々の形状で `GeographicShapeSeries` オブジェクトを作成し、それを `XamGeographicMap` の `IgxSeriesComponent` コレクションに追加します。
+世界の国々の形状で `GeographicShapeSeries` オブジェクトを作成し、それを `IgxGeographicMap` の `IgxSeriesComponent` コレクションに追加します。
 
 ### オーバーレイ シェイプ ポリライン
 
-メジャー ポート間のルートで `GeographicPolylineSeries` オブジェクトを作成し、それを `XamGeographicMap` の `IgxSeriesComponent` コレクションに追加します。
+メジャー ポート間のルートで `GeographicPolylineSeries` オブジェクトを作成し、それを `IgxGeographicMap` の `IgxSeriesComponent` コレクションに追加します。
 
 ### オーバーレイ シェイプ ポイント
 
-主要都市の場所を含む `GeographicSymbolSeries` オブジェクトを作成し、それを `XamGeographicMap` の `IgxSeriesComponent` コレクションに追加します。
+主要都市の場所を含む `GeographicSymbolSeries` オブジェクトを作成し、それを `IgxGeographicMap` の `IgxSeriesComponent` コレクションに追加します。
 
 また形状ファイルがアプリケーションのために十分な地理的文脈 (国の形状など) を提供した際に、地図背景コンテンツで地理的画像を非表示にしたい場合があります。

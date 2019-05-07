@@ -10,8 +10,9 @@ _language: kr
 마커, 차트 제목 및 부제, 차트 유형 등 카테고리 차트를 사용자 지정이 가능합니다.
 
 ### 데모
-<div class="sample-container loading" style="height: 550px">
-    <iframe id="category-chart-config-options-sample-iframe" src='{environment:demosBaseUrl}/charts/category-chart-config-options-sample' width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+
+<div class="sample-container" style="height: 550px">
+    <iframe id="category-chart-config-options-sample-iframe" src='{environment:demosBaseUrl}/charts/category-chart-config-options-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="category-chart-config-options-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기

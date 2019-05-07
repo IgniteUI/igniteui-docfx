@@ -5,9 +5,9 @@ _keywords: map, Ignite UI for Angular, infragistics
 _language: ja
 ---
 
-## Binding JSON Files with Geographic Locations
+## 地理的位置と JSON ファイルのバインド
 
-`XamGeographicMap` は、さまざまな種類のファイルからロードされた地理データをプロットできます。たとえば、JavaScript Object Notation (JSON) ファイルから地理的位置をロードできます。
+`IgxGeographicMap` は、さまざまな種類のファイルからロードされた地理データをプロットできます。たとえば、JavaScript Object Notation (JSON) ファイルから地理的位置をロードできます。
 
 ### デモ
 
@@ -24,6 +24,15 @@ _language: ja
 ### データ例
 
 JSON ファイルからのデータの例:
+
+```typescript
+[
+ { "n": "Sydney Island", "y": -16.68972, "x": 139.45917 },
+ { "n": "Sydney Creek", "y": -16.3, "x": 128.95 },
+ { "n": "Mount Sydney", "y": -21.39864, "x": 121.193 },
+ // ...
+]
+```
 
 ### コード スニペット
 

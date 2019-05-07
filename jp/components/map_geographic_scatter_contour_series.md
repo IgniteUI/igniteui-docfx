@@ -1,11 +1,11 @@
 ---
 title: マップ | データ可視化ツール | Ignite UI for Angular | 等高線シリーズ | Infragistics
-_description: The Map allows you to display data that contains geographic locations from view models or geo-spatial data loaded from shape files on geographic imagery maps.View the demo, dependencies, usage and toolbar for more information.
+_description: マップを使用すると、ビュー モデルからの地理的位置を含むデータ、またはシェープファイルからロードされた地理空間データを表示できます。詳細については、デモ、依存関係、使用方法、およびツールバーを参照してください。
 _keywords: map, Ignite UI for Angular, infragistics
 _language: ja
 ---
 
-## 散布等高線シリーズの使用
+## 散布図 - 等高線シリーズの使用
 
 地図コンポーネントの `GeographicContourLineSeries` を使用して、各点に数値が割り当てられた経度および緯度データの三角測量に基づいて、地理的なコンテキストで色付きの等高線を描画します。このタイプの地理的シリーズは、天気の気温、気圧、降水量、人口分布、地形データなどの地理的位置によって定義される散在データをレンダリングするのに役立ちます。
 

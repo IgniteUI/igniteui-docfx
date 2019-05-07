@@ -5,9 +5,9 @@ _keywords: Ignite UI for Angular, Angular, ネイティブ Angular コンポー�
 _language: ja
 ---
 
-## ワークブックを使用した Excel Library
+## ワークブックを使用した Excel ライブラリ
 
-Infragistics Excel Engine は、データを Microsoft® Excel® に保存、また Microsoft® Excel® からの読み込みを可能にします。ライブラリのさまざまなクラスを使用してワークブックやワークシートを作成、データを入力、データを Excel にエクスポートできます。Infragistics Excel Engine は、Excel スプレッドシートでアプリケーションのデータの表示や Excel からアプリケーションへのデータのインポートが簡単にできます。 
+Infragistics Excel エンジンは、データを Microsoft® Excel® に保存、また Microsoft® Excel® からの読み込みを可能にします。ライブラリのさまざまなクラスを使用してワークブックやワークシートを作成、データを入力、データを Excel にエクスポートできます。Infragistics Excel Engine は、Excel スプレッドシートでアプリケーションのデータの表示や Excel からアプリケーションへのデータのインポートが簡単にできます。 
 
 ### デモ
 

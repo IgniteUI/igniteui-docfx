@@ -133,6 +133,7 @@ The scale is visual element that highlights full range of values in the gauge wh
     maximumValue=80 interval=10>
 </igx-radial-gauge>
 ```
+
 <div class="sample-container loading" style="height: 320px">
     <iframe id="radial-gauge-scale-iframe" data-src='{environment:demosBaseUrl}/gauges/radial-gauge-scale' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
@@ -156,6 +157,7 @@ The gauge labels are visual elements displaying numeric values at a specified in
     maximumValue=100 interval=10>
 </igx-radial-gauge>
 ```
+
 <div class="sample-container loading" style="height: 320px">
     <iframe id="radial-gauge-labels-iframe" data-src='{environment:demosBaseUrl}/gauges/radial-gauge-labels' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
@@ -184,6 +186,7 @@ Tick marks are thin lines radiating from the center of the radial gauge. There a
     maximumValue=80 interval=10>
 </igx-radial-gauge>
 ```
+
 <div class="sample-container loading" style="height: 320px">
     <iframe id="radial-gauge-tickmarks-iframe" data-src='{environment:demosBaseUrl}/gauges/radial-gauge-tickmarks' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
@@ -214,6 +217,7 @@ A range highlights a set of continuous values bound by a specified `minimumValue
    </igx-radial-gauge-range>
 </igx-radial-gauge>
 ```
+
 <div class="sample-container loading" style="height: 320px">
     <iframe id="radial-gauge-ranges-iframe" data-src='{environment:demosBaseUrl}/gauges/radial-gauge-ranges' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
@@ -250,6 +254,7 @@ You can enable an interactive mode of the gauge (using `isNeedleDraggingEnabled`
     maximumValue=80 interval=10>
 </igx-radial-gauge>
 ```
+
 <div class="sample-container loading" style="height: 320px">
     <iframe id="radial-gauge-needle-iframe" data-src='{environment:demosBaseUrl}/gauges/radial-gauge-needle' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>

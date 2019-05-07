@@ -44,29 +44,27 @@ _language: ja
 
 chart パッケージをインストールするときに core パッケージもインストールする必要があります。
 
-**npm install igniteui-angular-charts igniteui-angular-core**
+-   **npm install --save igniteui-angular-core**
+-   **npm install --save igniteui-angular-charts**
 
-> [!NOTE]
+<!-- > [!NOTE]
 > Angular:
 >
 > カテゴリ チャートが NgModule としてエクスポートされるため、アプリケーションで `AppModule` に
-> `IgxCategoryChartModule` をインポートする必要があります。 
-
-<!-- -->
+> `Ig$CategoryChartModule` をインポートする必要があります。
 
 > [!NOTE]
 > WebComponents:
 >
 > カテゴリ チャートを使うには、アプリケーションのロード時に
-> `IgxCategoryChartModule` を登録する必要があります。
-
-<!-- -->
+> `Ig$CategoryChartModule` を登録する必要があります。
 
 > [!NOTE]
 > React:
 >
-> カテゴリ チャートを使うには、アプリケーションのロード時に
-> `IgxCategoryChartModule` を登録する必要があります。
+-->
+
+カテゴリ チャートを使うには、アプリケーションのロード時に `IgxCategoryChartModule` を登録する必要があります。
 
 ```typescript
 // app.module.ts
@@ -118,20 +116,20 @@ var data = [
 表示するチャート型を設定するために、カテゴリ チャートのデフォルト動作をオーバーライドできます。これを実行するには、`chartType` プロパティを設定します。
 以下は、カテゴリ チャートでサポートされるすべてのタイプです。
 
-> [!NOTE]
+<!-- > [!NOTE]
 > 特別なケースにプロパティの `Auto` 設定があります。`Auto` を使用した場合、チャートがデータを分析し、最適なチャート タイプを割り当てます。
 
 #### サポートされるチャート タイプ
+プロパティ|説明|例
+---|---|---
+`Line`|各データ ポイントにマーカーがあるカテゴリ折れ線シリーズを指定します。|![](../images/category_chart_line.png)
+`Area`|カテゴリ エリア シリーズを指定します。|![](../images/category_chart_area.png)
+`Column`|各データ ポイントに垂直長方形があるカテゴリ柱状チャートを指定します。|![](../images/category_chart_column.png)
+`Point`|各データ ポイントにマーカーがあるカテゴリ ポイント チャートを指定します。|![](../images/category_chart_point.png)
+`StepLine`|カテゴリ ステップ折れ線チャートを指定します。|![](../images/category_chart_stepline.png)
+`StepArea`|カテゴリ ステップ エリア チャートを指定します。|![](../images/category_chart_steparea.png)
+`Spline`|各データ ポイントにマーカーがあるカテゴリ スプライン折れ線シリーズを指定します。|![](../images/category_chart_spline.png)
+`SplineArea`|カテゴリ スプライン エリア シリーズを指定します。|![](../images/category_chart_splinearea.png)
+`Waterfall`|カテゴリ ウォーターフォール チャートを指定します。|![](../images/category_chart_waterfall.png)
+`Auto`|データ アダプターからの提案に基づいてチャート タイプの自動選択を指定します。
 
-| プロパティ        | 説明                                        | 例                                            |
-| ------------ | ----------------------------------------- | -------------------------------------------- |
-| `Line`       | 各データ ポイントにマーカーがあるカテゴリ折れ線シリーズを指定します。       | ![](../images/category_chart_line.png)       |
-| `Area`       | カテゴリ エリア シリーズを指定します。                      | ![](../images/category_chart_area.png)       |
-| `Column`     | 各データ ポイントに垂直長方形があるカテゴリ柱状チャートを指定します。       | ![](../images/category_chart_column.png)     |
-| `Point`      | 各データ ポイントにマーカーがあるカテゴリ ポイント チャートを指定します。    | ![](../images/category_chart_point.png)      |
-| `StepLine`   | カテゴリ ステップ折れ線チャートを指定します。                   | ![](../images/category_chart_stepline.png)   |
-| `StepArea`   | カテゴリ ステップ エリア チャートを指定します。                 | ![](../images/category_chart_steparea.png)   |
-| `Spline`     | 各データ ポイントにマーカーがあるカテゴリ スプライン折れ線シリーズを指定します。 | ![](../images/category_chart_spline.png)     |
-| `SplineArea` | カテゴリ スプライン エリア シリーズを指定します。                | ![](../images/category_chart_splinearea.png) |
-| `Waterfall`  | カテゴリ ウォーターフォール チャートを指定します。                | ![](../images/category_chart_waterfall.png)  |
-| `Auto`       | データ アダプターからの提案に基づいてチャート タイプの自動選択を指定します。   |                                              |
