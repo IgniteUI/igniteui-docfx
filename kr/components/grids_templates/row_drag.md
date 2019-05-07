@@ -131,8 +131,6 @@ First, let's take a look at our `onEnter` and `onLeave` handlers. In those metho
 ```typescript
         export class @@igxNameRowDragComponent {
             ...
-            private _prevIcon;
-            ...
             public onEnterAllowed(args) {
                 this.changeGhostIcon(args.drag.dragGhost, DragIcon.ALLOW);
             }
@@ -143,19 +141,16 @@ First, let's take a look at our `onEnter` and `onLeave` handlers. In those metho
 
             private changeGhostIcon(ghost, icon: string) {
                 if (ghost) {
-                    const currentIcon = [...ghost.querySelectorAll("igx-icon")]
-                    .find((e) => e.innerText === (this._prevIcon || DragIcon.DEFAULT));
+                    const currentIcon = ghost.querySelector(".igx-grid__drag-indicator  > igx-icon");
                     if (currentIcon) {
                         currentIcon.innerText = icon;
-                        this._prevIcon = icon;
                     }
                 }
             }
 
         }
 ```
-The `changeGhostIcon` **private** method just changes the icon inside of the drag ghost. The logic in the method finds the element that contains the icon (if it was previously changed - check for that, if not - check for the default icon), changing the element's inner text (and the icon we should search for in the next change) to the passed one.
-This is done so we do not accidentally change another icon in the row element. 
+The `changeGhostIcon` **private** method just changes the icon inside of the drag ghost. The logic in the method finds the element that contains the icon (using the `igx-grid__drag-indicator` class that is applied to the drag-indicator container), changing the element's inner text to the passed one.
 The icons themselves are from the [`material` font set](https://material.io/tools/icons/) and are defined in a separate **`enum`**:
 @@if (igxName === 'IgxTreeGrid' || igxName === 'IgxHierarchicalGrid') {
 ```typescript
