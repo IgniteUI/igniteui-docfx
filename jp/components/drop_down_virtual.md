@@ -1,28 +1,29 @@
----
-title: Drop Down Component
-_description: Use Ignite UI for Angular Virtualized Drop Down to display a very large list of items which supports a single item selection.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Drop Down components, Angular Drop Down controls, Angular Control Large Item List, Angular Control Singe Selection
+﻿---
+title: ドロップダウン コンポーネント
+_description: Angular 仮想化 Drop Down の Ignite UI を使用して、単一の項目選択をサポートする非常に大きな項目のリストを表示します。
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Drop Down コンポーネント, Angular Drop Down コントロール, Angular コントロール Large Item List, Angular コントロール Singe Selection
+_language: ja
 ---
 
-## Virtual Drop Down
+## 仮想ドロップダウン
 
-<p class="highlight">[The Ignite UI for Angular Drop Down](drop_down.md) can fully integrate usage of the [IgxForOf directive](for_of.md) in order to display a very large list of items for its selection</p>
+<p class="highlight">[Ignite UI for Angular Drop Down](drop_down.md) は、選択可能な項目リストを表示するために、[IgxForOf directive](for_of.md) の使用方法を完全に統合できます。</p>
 
 <div class="sample-container loading" style="height:320px">
     <iframe id="dropdown-virtual-iframe" src='{environment:demosBaseUrl}/data-entries/dropdown-virtual' width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dropdown-virtual-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dropdown-virtual-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
-## Configuration
+## 構成
 
-In order to configure the drop down to display a list of virtual items, you need to fulfil some prerequisites
-First, we need to import the `IgxForOfModule` in the module of the component that will be declaring the our drop down.
+仮想項目のリストを表示するようにドロップダウンを設定するには、いくつかの前提条件を満たす必要があります。
+はじめにドロップダウンを宣言するコンポーネントのモジュールに IgxForOfModule をインポートします。
 
 
-### Module Import
+### モジュールのインポート
 
 ```typescript
 // app.module.ts
@@ -38,9 +39,9 @@ import { IgxForOfModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-### Template Configuration
+### テンプレートの構成
 
-Next, we need to create the drop down component's template, looping through the data using [`*igxFor`]({environment:angularApiUrl}/classes/igxforofdirective.html) instead of `*ngFor`. The `*igxFor` needs some additional configuration in order to properly display all of the items:
+次に、ngFor の代わりに [`*igxFor`]({environment:angularApiUrl}/classes/igxforofdirective.html) を使用してデータをループ処理し、ドロップダウン コンポーネントのテンプレートを作成します。すべての項目を正しく表示するために`*igxFor` に追加の構成を行います。
 ```html
 <!-- drop-down-virtual.component.html -->
 <button igxButton [igxToggleAction]="dropdown" [igxDropDownItemNavigation]="dropdown">Item Series</button>
@@ -56,25 +57,25 @@ Next, we need to create the drop down component's template, looping through the 
 </igx-drop-down>
 <div class="selection">Selected Model: <span class="selection__name">{{ dropdown.selectedItem?.value.name }}</span></div>
 ```
-The additional parameters passed to the `*igxFor` directive are:
- - `index` - captures the index of the current item in the data set
- - `scrollOrientation` - should always be `'vertical'`
- - `containerSize` - the size of the virtualized container (in `px`). This needs to be enforced on the wrapping `<div>` as well
- - `itemSize` - the size of the items that will be displayed (in `px`)
+以下は、`*igxFor` ディレクティブに渡される追加パラメーターです。
+ - `index` - データセット内の現在の項目のインデックスを取得します。
+ - `scrollOrientation` - 常に `'vertical'` にする必要があります。
+ - `containerSize` - 仮想化コンテナのサイズ (ピクセル単位)。これは、ラッピング <div> にも適用する必要があります。
+ - `itemSize` - 表示される項目のサイズ (ピクセル単位)。
 
-In order to assure uniqueness of the items, pass `item` inside of the [`value`]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html#value) input and `index` inside of the [`index`]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html#index) input of the `igx-drop-down-item`.
-To preserve selection while scrolling, the drop down item needs to have a reference to the data items it is bound to.
+項目の一意性を確保するために、[`value`]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html#value) input の内の `item` および `igx-drop-down-item` の [`index`]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html#index) 内の `index` を渡します。
+スクロールしながら選択を維持するには、ドロップダウン 項目はそれがバインドされているデータ 項目への参照を持つ必要があります。
 > [!NOTE]
-> For the drop down to work with a virtualized list of items, [`value`]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html#value) and [`index`]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html#index) inputs **must** be passed to all items.
+> ドロップダウンが項目の仮想化リストで機能するためには、[`value`]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html#value) および [`index`]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html#index) の入力をすべての項目に渡す必要があります。
 > [!NOTE]
-> It is strongly advised for each item to have an unique value passed to the `[value]` input. Otherwise, it might lead to unexpected results (incorrect selection). 
+> 各項目に対して `[value]` 入力に渡される一意の値を持たない場合、予想外の結果 (誤った選択) となる場合があります。 
 > [!NOTE]
-> When the drop down uses virtualized items, the type of [`dropdown.selectedItem`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html#selecteditem) becomes `{ value: any, index: number }`, where `value` is a reference to the data item passed inside of the `[value]` input and `index` is the item's index in the data set
+> ドロップダウンが仮想化項目を使用する場合、[`dropdown.selectedItem`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html#selecteditem) の種類は `{ value: any, index: number }` になります。ここで、`value` はデータ項目への参照です。`[value]` input の内に渡され、`index` はデータセット内の項目のインデックスです。
 
 
-### Component Definition
+### コンポーネント定義
 
-Inside of our component's `constructor`, we'll declare a moderately large list of items (containing both headers and disabled items) which we'll be displaying in our drop-down. We also need to declare `itemHeight` and `itemsMaxHeight` (used in the template) inside of our `drop-down-virtual.component.ts` file:
+コンポーネントの `constructor` 内で、ドロップダウンに表示される、適度な大きさの項目リスト (ヘッダーと無効な項目の両方を含む) を宣言します。また、ドロップダウン virtual.component.ts ファイル内で `itemHeight` と `itemsMaxHeight` (テンプレートで使用) を宣言する必要があります。
 
 ```typescript
 // drop-drop-virtual.component.ts
@@ -107,9 +108,10 @@ export class DropDownVirtualComponent {
 }
 ```
 
-### Styles
+### スタイル
 
-The last (but very important) part of the configuration happens inside of our component's style sheet, `drop-down-virtual.component.scss`.The wrapping div (`drop-down-virtual-wrapper`) needs to have `overflow: hidden` set, to prevent the appearance of two scroll bars (one from the `igxFor` and one from the container itself):
+設定の最後の非常に重要な部分は、コンポーネントのスタイルシート `drop-down-virtual.component.scss` 内で行われます。2 つのスクロールバー (1 つは `igxFor` から、もう 1 つはコンテナ自体から) が表示されるのを防止します。
+wrapping div (`drop-down-virtual-wrapper`) は、2 つのスクロールバー (1 つは igxFor から、もう 1 つはコンテナー自体から) を表示しないように、`overflow: hidden` セットにする必要があります。
 
 ```scss
     .drop-down-virtual-wrapper {
@@ -119,11 +121,11 @@ The last (but very important) part of the configuration happens inside of our co
     }
 ```
 
-Here, we can also pass the style for `height` (but we already did so in the template) - the value of `itemsMaxHeight`, but in `px`.
+ここでは、`height` のスタイルを渡すこともできます (テンプレートでは既に行いました) - `itemsMaxHeight` の値ですが、`px` で渡します。
 
-### Virtual Drop Down Demo
+### 仮想ドロップダウン デモ
 
-You can view the configured example below:
+以下の設定例を見ることができます。
 
 <div class="sample-container loading" style="height:320px">
     <iframe id="dropdown-virtual-iframe" src='{environment:demosBaseUrl}/data-entries/dropdown-virtual' width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -133,11 +135,11 @@ You can view the configured example below:
 </div>
 <div class="divider--half"></div>
 
-## Remote Data
-The `igx-drop-down` supports loading chunks of remote data using `igxFor` directive. The configuration is similar to the one using `igxFor` with local items and the main difference is handling the loading of different data chunks.
+## リモート データ
+`igx-drop-down` ドロップダウンは、`igxFor` ディレクティブを使用したリモートデータ チャンクのロードをサポートします。設定はローカル項目で `igxFor` を使用するものと似ていますが、主な違いは異なるデータ チャンク ロードの処理です。
 
-### Template
-The drop-down template does not need to change much compared to the [previous example](#configuration): We still need to specify a wrapping div, style it accordingly and write out the complete configuration for the `*igxFor`. Since we'll be getting our data from a remote source, we need to specify that our data will be an observable and pass it through Angular's `async` pipe:
+### テンプレート
+ドロップダウン テンプレートは、[上記の例](#configuration) と比べてそれほど変更する必要はありませんが、ラッピング div を指定し、それに応じてスタイルを設定し、`*igxFor` の完全な設定を書き出す必要があります。またリモートソースからデータを取得するため、データが観測可能になるように指定して Angular の`非同期`パイプに渡します。
 
 ```html
 <igx-drop-down #remoteDropDown>
@@ -151,10 +153,10 @@ The drop-down template does not need to change much compared to the [previous ex
 </igx-drop-down>
 ```
 
-### Handling chunk load
-As you can see, the template is almost identical to the one in the previous example. In this remote data scenario, the code behind will do most of the heavy lifting.
+### チャンク ロードの処理
+ご覧のとおり、テンプレートは上記の例のテンプレートとほとんど同じです。このリモートデータのシナリオでは、背後にあるコードが大部分の負担を軽減します。
 
-First, we need to define a remote service for fetching data:
+はじめにデータを取得するためのリモートサービスを定義する必要があります。
 ```typescript
 // remote.service.ts
 
@@ -184,7 +186,7 @@ export class RemoteService {
 }
 ```
 
-The service exposes an `Observable` under `remoteData`. We will Inject our service and bind to that property in our remote drop-down component:
+このサービスは、`remoteData` の下に Observable を公開します。リモート ドロップダウン コンポーネントでサービスを注入し、そのプロパティにバインドします。
 
 ```typescript
 // remote-drop-down.component.ts
@@ -239,27 +241,27 @@ export class DropDownRemoteComponent implements OnInit, OnDestroy {
     }
 }
 ```
-Inside of the `ngAfterViewInit` hook, we call to get data for the initial state and subscribe to the `igxForOf` directive's [`onChunkPreload`]({environment:angularApiUrl}/classes/igxforofdirective.html#onchunkpreload) emitter. This subscription will be responsible for fetching data everytime the loaded chunk changes. We use `pipe(takeUntil(this.destroy$))` so we can easily unsubscribe from the emitter on component destroy.
+`ngAfterViewInit` フックの内で初期状態のデータを取得し、`igxForOf` ディレクティブの [`onChunkPreload`]({environment:angularApiUrl}/classes/igxforofdirective.html#onchunkpreload) エミッターをサブスクライブするために呼び出します。このサブスクリプションは、ロードされたチャンクが変更されるたびにデータを取得します。コンポーネントの破棄時にエミッターから簡単にサブスクライブ解除できるように、`pipe(takeUntil(this.destroy$))` を使用します。
 
-### Remote Virtualization - Demo
-The result of the above configuration is a drop-down that dynamically loads the data in should display, depending on the scrollbar's state. You can view the demo and play around with the configuration below:
+### リモートの仮想化-デモ
+上記の設定の結果は、スクロールバーの状態に応じて表示されるはずのデータを動的にロードするドロップダウンです。デモを確認し、以下の設定で試すことができます。
 
 <div class="sample-container loading" style="height:400px">
     <iframe id="dropdown-remote-iframe" src='{environment:demosBaseUrl}/data-entries/dropdown-remote' width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dropdown-remote-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dropdown-remote-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
-## Notes and Limitations
+## 注意と制限
 
-Using the drop down with a virtualized list of items enforce some limitations. Please be aware of the following when trying to set up a drop-down list using `*igxFor`:
- - The `<igx-drop-down-item>`s that are being looped need to be passed in a wrapping element (e.g. `<div>`) which has the following css: `overflow: hidden` and `height` equal to `containerSize` in `px`
- - `<igx-drop-down-item-group>`s cannot be used for grouping items when the list is virtualized. Use the `isHeader` propery instead
- - The `items` accessor will return only the list of non-header `igx-drop-down-item`s that are currently in the virtualized view.
- - [`dropdown.selectedItem`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html#selecteditem) is of type `{ value: any, index: number }`
- - The object emitted by [`onSelection`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html#onselection) changes to 
+仮想化された項目のリストでドロップダウンを使用すると、いくつかの制限があります。`*igxFor` を使用してドロップダウン リストを設定するときは、次の点に注意してください。
+ - ループされている `<igx-drop-down-item>` は、次の css を持つラッピング要素 (`<div>` など）で渡す必要があります。`px` `overflow: hidden と`高さ`が `px` の `containerSize` に等しい。
+ - リストが仮想化されている場合、`<igx-drop-down-item-group>` を項目のグループ化に使用することはできません。`isHeader` プロパティを代わりに使用します。
+ - `項目`アクセサーは、現在仮想化ビューにあるヘッダー以外の `igx-drop-down-item` のリストのみを返します。
+ - [`dropdown.selectedItem`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html#selecteditem) は、タイプ `{ value: any, index: number }` です。
+ - [`onSelection`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html#onselection) で発生されるオブジェクトは次に変更されます。 
  ```typescript
  const emittedEvent: {
      newSelection: { value: any, index: number },
@@ -267,10 +269,10 @@ Using the drop down with a virtualized list of items enforce some limitations. P
      cancel: boolean,
  }
  ```
- - `dropdown.setSelectedItem` should be called with the **item's index in the data set**
- - setting the drop-down item's `[selected]` input will **not** mark the item in the drop-down selection
+ - `dropdown.setSelectedItem` は、**データセット内の項目のインデックス**を使用して呼び出す必要があります。
+ - ドロップダウン項目の `[selected]` 入力を設定しても、ドロップダウン選択内の項目はマークされません。
 
-## API References
+## API リファレンス
 
 * [IgxForOfDirective]({environment:angularApiUrl}/classes/igxforofdirective.html)
 * [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html)
