@@ -503,7 +503,7 @@
   href: drop_down.md
   new: false
   items:
-    - name: Virtual Drop Down
+    - name: 仮想ドロップダウン
       href: drop_down_virtual.md
       new: true
 - name: Select
