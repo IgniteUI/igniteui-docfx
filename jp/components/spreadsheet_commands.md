@@ -7,7 +7,7 @@ _language: ja
 
 ## コマンドの使用
 
-$PlatformShort $ Spreadsheet コンポーネントは、スプレッドシートのさまざまな機能をアクティブにするためのコマンドを実行できます。このトピックでは、コマンドによりコントロールを使用してさまざまな操作を実行する方法を説明します。多くのコマンドは、アクティブセル、行、またはワークシートに基づいてアクションを実行します。例えば、ZoomIn と ZoomOut の 2 つのコマンドです。完全なリストは SpreadsheetAction の enum を見てください。
+Angular Spreadsheet コンポーネントは、スプレッドシートのさまざまな機能をアクティブにするためのコマンドを実行できます。このトピックでは、コマンドによりコントロールを使用してさまざまな操作を実行する方法を説明します。多くのコマンドは、アクティブセル、行、またはワークシートに基づいてアクションを実行します。例えば、ZoomIn と ZoomOut の 2 つのコマンドです。完全なリストは SpreadsheetAction の enum を見てください。
 
 ### デモ
 
@@ -23,7 +23,7 @@ $PlatformShort $ Spreadsheet コンポーネントは、スプレッドシート
 
 ### 依存関係
 
-コマンドボードを利用する前に、SpreadsheetAction をインポートします。
+コマンドボードを利用する前に、`SpreadsheetAction` をインポートします。
 
 ```typescript
 import { IgxSpreadsheetComponent } from "igniteui-angular-spreadsheet/ES5/igx-spreadsheet-component";

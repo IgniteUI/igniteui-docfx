@@ -28,19 +28,9 @@ _language: ja
 -   **npm install --save igniteui-angular-core**
 -   **npm install --save igniteui-angular-charts**
 
-<!-- -->
+### 必要なモジュール
 
-> [!NOTE]
-> Angular:
->
-> `Ig $ DoughnutChart` は `NgModule` としてエクスポートされます。`AppModule` に _IgxDoughnutChartModule_ をインポートする必要があります
-
-<!-- -->
-
-> [!NOTE]
-> React:
->
-> ドーナツ型チャートを使用するには、ロード中にアプリに `IgxDoughnutChartModule` と `IgrRingSeriesModule` を登録する必要があります。
+`IgxDoughnutChart` は、以下のモジュールが必要です。
 
 ```typescript
 // app.module.ts

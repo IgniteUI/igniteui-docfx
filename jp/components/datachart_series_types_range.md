@@ -15,7 +15,7 @@ _language: ja
     <iframe id="data-chart-type-range-series-iframe" src='{environment:demosBaseUrl}/charts/data-chart-type-range-series' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-type-range-series-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-type-range-series-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示
     </button>
 </div>
 
@@ -56,9 +56,7 @@ this.state = { dataSource: SampleRangeData.create() }
 
 ### モジュールの要件
 
-<!-- Angular -->
-
-範囲シリーズを使用するには、データチャート モジュールの読み込みと登録の際にアプリケーションに次のモジュールをインポートする必要があります。
+極座標シリーズを使用するには、ロード中にアプリに以下のモジュールをインポートする必要があります。
 
 ```typescript
 // in app.module.ts file

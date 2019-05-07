@@ -35,25 +35,9 @@ gauges パッケージのインストール時に core パッケージもイン�
 -   **npm install --save igniteui-angular-core**
 -   **npm install --save igniteui-angular-gauges**
 
-<!--
-> [!NOTE]
-> Angular:
->
-> ブレット グラフが  `NgModule` としてエクスポートされるため、アプリケーションで
-> `AppModule` に `Ig$BulletGraphModule` をインポートする必要があります。
+### 必要なモジュール
 
-> [!NOTE]
-> WebComponents:
->
-> ブレット グラフを使うには、アプリケーションのロード時に
-> `Ig$BulletGraphModule` を登録する必要があります。
-
-> [!NOTE]
-> React:
->
--->
-
-ブレット グラフを使うには、アプリケーションのロード時に　`IgxBulletGraphModule` を登録する必要があります。
+`IgxBulletGraph` は、以下のモジュールが必要です。
 
 ```typescript
 // app.module.ts
@@ -62,9 +46,9 @@ import { IgxBulletGraph } from 'igniteui-angular-gauges/ES5/igr-bullet-graph';
 
 @NgModule({
     imports: [
-        ...
+        // ...
         IgxBulletGraphModule,
-        ...
+        // ...
     ]
 })
 export class AppModule {}
