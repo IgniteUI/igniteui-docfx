@@ -6,7 +6,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ### Multi Row Layout
 
-Multi Row Layout boosts the rendering capabilities of a `igxGridComponent`. The feature allows positioning and sizing the columns in a more powerful and flexible way. The column fields can span on multiple rows and columns.
+Multi Row Layout extends the rendering capabilities of the `igxGridComponent`. The feature allows splitting a single data record into multiple visible rows.
 
 #### Demo
 
@@ -18,15 +18,13 @@ Multi Row Layout boosts the rendering capabilities of a `igxGridComponent`. The 
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-multi-row-layout-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-The declaration of `Multi Row Layout` is achieved through [`igx-column-layout`]({environment:angularApiUrl}/classes/igxcolumnlayoutcomponent.html) component. Those `igx-column-layout` components should be considered as specific blocks, which contain `igx-column` component. There should be no columns outside of those blocks and no usage of `IgxColumnGroupComponent` when applying Multi Row Layout. Each block should define complete [grid layout](https://www.w3.org/TR/css-grid-1/) structure.
+The declaration of Multi Row Layout is achieved through [`igx-column-layout`]({environment:angularApiUrl}/classes/igxcolumnlayoutcomponent.html) component. Each `igx-column-layout` component should be considered as a block, containing one or multiple `igx-column` components. Some of the grid features work on block level (those are listed in the "Feature Integration" section below). For example the virtualization will use the block to determine the virtual chunks, so for better performance split the columns into more `igx-column-layout` blocks if the layout allows it. There should be no columns outside of those blocks and no usage of `IgxColumnGroupComponent` when configuring a multi row layout. Multi Row Layout is implemented on top of the [grid layout](https://www.w3.org/TR/css-grid-1/) specification and should conform to its requirements.
 
- The virtual directive will use those blocks as a base to determine the virtual chunks. For better performance split the columns into more `igx-column-layout` blocks if the layout allows it.
-
-IgxColumnComponent will expose 4 `@Input` properties to determine the location and size of each cell:
-* `colEnd` - column index where the current field should end. The amount of columns between colStart and colEnd will determine the amount of spanning columns to that field
-* `rowEnd` - row index where the current field should end. The amount of rows between rowStart and rowEnd will determine the amount of spanning rows to that field
-* `colStart` - column index from which the field is starting
-* `rowStart` - row index from which the field is starting
+`IgxColumnComponent` exposes four `@Input` properties to determine the location and span of each cell:
+* [`colEnd`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#colend) - column index where the current field should end. The amount of columns between colStart and colEnd will determine the amount of spanning columns to that field
+* [`rowEnd`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#rowend) - row index where the current field should end. The amount of rows between rowStart and rowEnd will determine the amount of spanning rows to that field
+* [`colStart`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#colstart) - column index from which the field is starting
+* [`rowStart`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#rowstart) - row index from which the field is starting
 
 ```html
 <igx-column-layout>
@@ -43,9 +41,9 @@ IgxColumnComponent will expose 4 `@Input` properties to determine the location a
 ```
 
 > [!Note]
-> `rowStart` and `colStart` properties must be set for each `igx-column` into `igx-column-layout`. The `igxColumnLayout` component is not verifying if the layout is correct and not throwing errors or warnings about that. The developers must make sure that the declaration of their layout is correct and complete, otherwise they may end up in broken layout with misalignments, overlaps and browser inconsistencies.
+> [`rowStart`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#rowstart) and [`colStart`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#colstart) properties must be set for each `igx-column` into `igx-column-layout`. The `igxColumnLayout` component is not verifying if the layout is correct and not throwing errors or warnings about that. The developers must make sure that the declaration of their layout is correct and complete, otherwise they may end up in broken layout with misalignments, overlaps and browser inconsistencies.
 
-### Feature integration
+### Feature Integration
 Due to the completly different rendering approach of Multi Row Layout, some of the column features will work only on `igx-column-layout` component. Such features are Column Pinning, Colunm Moving and Column Hiding. Othes like - Sorting and Grouping will work in the same way - on `igx-column` component.
 > [!Note]
 > Multi Column Headers and Export to Excel are not supported.
