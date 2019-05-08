@@ -268,9 +268,9 @@ export class HGridRowEditingSampleComponent implements OnInit {
 
 - 行が編集モードの時にグリッドがスクロールされると行が表示領域外になりますが、@@igComponent は編集モードのままです。@@igComponent をスクロールすると編集行は再度表示されますが編集行が編集モードのままになります。@@igComponent 以外をクリックしたときにセルも編集モードに残ります。
 
-- When perform *sorting*, *filtering*, *searching* and *hiding* operations, will revert all current changes in the row and row will exit edit mode.
+並べ替え、フィルタリング、検索、および非表示操作を実行すると、現在の行のすべての変更が元に戻され、行の編集モードを終了します。
 
-- When perform *paging*, *resizing*, *pinning* and *moving* operations, will exit edit mode and will submit latest value.
+ページング、サイズ変更、ピン留め、移動操作を実行すると、編集モードを終了して最新の値を送信します。
 
 - 編集した各セルは行編集が終了するまで変更スタイルを取得します。@@igComponent がトランザクションで提供されない場合の動作です。トランザクションが有効な場合、すべての変更がコミットされるまでセル編集スタイルが適用されます。
 

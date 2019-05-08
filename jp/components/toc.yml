@@ -550,6 +550,9 @@
   href: badge.md
 - name: Icon
   href: icon.md
+- name: Divider
+  href: divider.md
+  new: true
 - name: Linear Progress
   href: linear_progress.md
 - name: Circular Progress
