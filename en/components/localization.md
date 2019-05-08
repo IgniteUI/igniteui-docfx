@@ -28,14 +28,14 @@ The values could be replaced in order to be localized and then the object can be
 
 public ngOnInit(): void {
     ...
-	const currentRS = getCurrentResourceStrings();
+    const currentRS = getCurrentResourceStrings();
 
-	for (const key of Object.keys(currentRS)) {
-		currentRS[key] = '[Localized]'+ currentRS[key];
-	}
+    for (const key of Object.keys(currentRS)) {
+    currentRS[key] = '[Localized]'+ currentRS[key];
+    }
 
-	changei18n(currentRS);
-	...
+    changei18n(currentRS);
+    ...
 }
 ```
 <div>

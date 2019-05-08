@@ -28,15 +28,15 @@ _language: ja
 // app.component.ts
 
 public ngOnInit(): void {
-	...
-	const currentRS = getCurrentResourceStrings();
+    ...
+    const currentRS = getCurrentResourceStrings();
 
-	for (const key of Object.keys(currentRS)) {
-		currentRS[key] = '[Localized]'+ currentRS[key];
-	}
+    for (const key of Object.keys(currentRS)) {
+        currentRS[key] = '[Localized]'+ currentRS[key];
+    }
 
-	changei18n(currentRS);
-	...
+    changei18n(currentRS);
+    ...
 }
 ```
 <div>
@@ -94,9 +94,9 @@ import { IgxResourceStringsKR } from 'igniteui-angular-i18n';
 ...
 
 public ngOnInit(): void {
-	...
-	changei18n(IgxResourceStringsJA);
-	...
+    ...
+    changei18n(IgxResourceStringsJA);
+    ...
 }
 ```
 
