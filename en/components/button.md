@@ -132,6 +132,55 @@ Icon results:
 | `fab` | Floating action button type. Circular with secondary theme color for background. |
 | `icon` | This is the simplest of button types. Use it whenever you need to use an icon as button. |
 
+### Display Density
+
+We can allow the user to choose the display density of the [`igxButton`]({environment:angularApiUrl}/classes/igxbuttondirective.html) by using its [`displayDensity`]({environment:angularApiUrl}/classes/igxbuttondirective.html#displaydensity) input. We will do this by importing the `IgxButtonGroupModule` and using the [**IgxButtonGroup**](buttonGroup.md) to display all density values. This way whenever one gets selected, we will update our own **density** property that is bound to the [`displayDensity`]({environment:angularApiUrl}/classes/igxbuttondirective.html#displaydensity) of the button.
+
+> [!NOTE] The `icon` type button does not introduce visual changes for different display density values.
+
+```typescript
+// app.module.ts
+...
+import { IgxButtonGroupModule } from 'igniteui-angular';
+@NgModule({
+    imports: [..., IgxButtonGroupModule]
+})
+```
+
+```html
+<!--buttons-density.component.html-->
+
+<igx-buttongroup [values]="displayDensities" (onSelect)="selectDensity($event)"></igx-buttongroup>
+...
+<button igxButton="flat" [displayDensity]="density">Flat</button>
+```
+
+```typescript
+// buttons-density.component.ts
+public density = "comfortable";
+public displayDensities;
+public ngOnInit() {
+    this.displayDensities = [
+        { label: 'comfortable', selected: this.density === 'comfortable', togglable: true },
+        { label: 'cosy', selected: this.density === 'cosy', togglable: true },
+        { label: 'compact', selected: this.density === 'compact', togglable: true }
+    ];
+}
+public selectDensity(event) {
+    this.density = this.displayDensities[event.index].label;
+}
+```
+
+And the final result:
+
+<div class="sample-container loading" style="height: 300px">
+    <iframe id="buttons-display-density-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/data-entries/buttons-display-density" onload="onSampleIframeContentLoaded(this);">
+</div>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="buttons-display-density-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
+
 ### API References
 <div class="divider--half"></div>
 
