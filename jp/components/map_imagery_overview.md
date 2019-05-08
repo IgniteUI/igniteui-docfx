@@ -1,46 +1,46 @@
 ---
-title: Map | Data Visualization Tools | Ignite UI for Angular | Geographic Imagery | Infragistics
-_description: The Map allows you to display data that contains geographic locations from view models or geo-spatial data loaded from shape files on geographic imagery maps.View the demo, dependencies, usage and toolbar for more information.
+title: マップ|データ可視化ツール|Ignite UI for Angular|地理的画像|Infragistics
+_description: マップを使用すると、ビューモデルからの地理的位置を含むデータ、またはシェープファイルから地理的画像マップにロードされた地理空間データを表示できます。
 _keywords: map, Ignite UI for Angular, infragistics
 _language: ja
 ---
 
-## Geographic Imagery
+## 地理的画像
 
-Geographic imagery is a detailed representation of the world from a top view perspective. It can consist of an aerial-satellite map or road maps in a multi-scale imagery tiles structure. The geographic map component can display geographic imagery in order to provide end-users with rich and interactive world maps and geographic context for geo-spatial data.
+地理的画像は、上空から見た世界の詳細な表現です。マルチ スケール画像タイル構造の航空衛星地図または道路地図で構成できます。地理的なマップ構成要素は、エンドユーザーに豊かでインタラクティブな世界地図や地理空間データのための地理的状況を提供するために地理的画像を表示できます。
 
-### Types of geographic imagery
+### 地理的画像のタイプ
 
-The map component can display geographic imagery tiles from three supported mapping services or from other mapping services that can be easily implemented in an application.
+マップ コンポーネントは、サポートされている 3 つのマッピング サービスまたはアプリケーションに簡単に実装できる他のマッピング サービスからの地理的画像タイルを表示できます。
 
-The following table summarizes supported and custom geographic imagery sources for the map component.
+以下の表は、マップ コンポーネントでサポートされているカスタムの地理的画像ソースをまとめたものです。
 
-| Imagery          | Description                                                                                                                                                                                                         |
-| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Open Street Maps | Provides geographic imagery from Open Street Maps service with an option to display a road map style only in one coloring theme.                                                                                    |
-| Bing Maps        | Provides geographic imagery from Bing Maps service with configurable options to display the following map styles:<ul><li> Satellite Map Style</li><li> Satellite Map with Labels Style</li><li> Road Map Style</li> |
+| 画像               | 説明                                                                                                                          |
+| ---------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| Open Street Maps | 1 色のテーマで道路地図スタイルだけを表示するためのオプションで、Open Street Maps サービスから地理的画像を提供します。                                                        |
+| Bing Maps        | Bing Maps サービスの地理的画像に、次の地図スタイルを表示するための設定可能なオプションがあります。<ul><li> 衛星地図のスタイル</li><li> ラベル付きの衛星地図のスタイル</li><li> ロードマップ スタイル</li> |
 
 <!-- | Map Quest |Provides custom geographic imagery from Map Quest service with configurable options to display the following map styles:<ul><li>Satellite Map Style</li><li>Road Map Style</li></ul> -->
 
-### Map Background Content
+### マップ背景コンテンツ
 
-The map component's `BackgroundContent` property is used to display all supported types of geographic imagery sources. For each imagery source, there is an imagery class used for rendering corresponding geographic imagery tiles.
+マップ コンポーネントの BackgroundContent プロパティは、サポートされているすべての種類の地理的画像ソースを表示するために使用されます。画像ソースごとに、対応する地理的画像タイルのレンダリングに使用される画像クラスがあります。
 
-The following table summarizes imagery classes provided by the map component.
+以下の表は、xamGeographicMap  コントロールによって提供される画像クラスを簡単に説明します。
 
-| Imagery Class          | Description                                                                                                                                                                                                                                                                                |
-| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `GeographicMapImagery` | Represents the base control for all imagery classes that display all types of supported geographic imagery tiles. This class can be extended for the purpose of implementing support for geographic imagery tiles from other geographic imagery sources such as Map Quest mapping service. |
-| `OpenStreetMapImagery` | Represents the multi-scale imagery control for displaying geographic imagery tiles from the Open Street Maps service.                                                                                                                                                                      |
+| 画像クラス                  | 説明                                                                                                                              |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| `GeographicMapImagery` | サポートされている地理的画像タイルのすべてのタイプを表示するすべての画像クラスの基本コントロールを表します。このクラスは、Map Quest マッピング サービスなどの他の地理的画像ソースから地理的画像タイルのサポートを実装する目的のために拡張できます。 |
+| `OpenStreetMapImagery` | Open Street Maps サービスから地理的画像タイルを表示するためのマルチスケール画像コントロールを表します。                                                                    |
 
 <!-- |`BingMapsMapImagery`|Represents the multi-scale imagery control for displaying geographic imagery tiles from the Bing Maps service.| -->
 
-By default, the `BackgroundContent` property is set to `OpenStreetMapImagery` object and the map component displays geographic imagery tiles from the Open Street Maps service. In order to display different types of geographic imagery tiles, the map component must be re-configured.
+デフォルトでは、`BackgroundContent` プロパティは `OpenStreetMapImagery` オブジェクトに設定され、マップコンポーネントはOpen Street Mapsサービスからの地理的画像タイルを表示します。さまざまな種類の地理的画像タイルを表示するには、マップ コンポーネントを再設定する必要があります。
 
-In addition, the `BackgroundContent` property can be set to any object that inherits the class. However, only objects that inherit the `GeographicMapImagery` class will allow panning and zooming of the map background content.
+さらに、`BackgroundContent` プロパティは、このクラスを継承するオブジェクトに設定できます。ただし、`GeographicMapImagery` クラスを継承するオブジェクトだけが、マップ背景コンテンツのパンおよびズームができます。
 
-In the map component, map background content is always rendered behind all geographic series. In other words, geographic imagery tiles are always rendered first and any geographic series in the map component's `IgxSeriesComponent` property is rendered on top of the geographic imagery tiles. This is especially important when displaying multiple geographic series in the same plot area of the map component because geographic imagery tiles can quickly get buried in the map view.
+マップ コンポーネントでは、マップの背景コンテンツは常にすべての地理的シリーズの背後にレンダリングされます。つまり、地理的画像タイルは常に最初にレンダリングされ、マップ コンポーネントの Series プロパティ内の地理的シリーズは地理的画像タイルの上にレンダリングされます。地理的画像タイルはマップ ビューにすばやく埋め込まれるため、これは、マップ コンポーネントの同じプロット領域に複数の地理的シリーズを表示する場合に特に重要です。
 
-### Code Snippet
+### コード スニペット
 
-This code example explicitly sets `BackgroundContent` of the map component to the `OpenStreetMapImagery` object which provides geographic imagery tile from the Open Street Maps.
+このコード例では、マップコンポーネントの `BackgroundContent` を、`OpenStreetMapImagery` の地理的画像タイルを提供する OpenStreetMapImagery オブジェクトに明示的に設定しています。

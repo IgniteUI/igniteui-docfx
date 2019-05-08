@@ -42,8 +42,6 @@ this.state = { dataSource: SampleScatterStats.getCountries() }
 
 ### モジュールの要件
 
-<!-- Angular -->
-
 散布バブル シリーズは以下のモジュールを要求します。
 
 ```typescript

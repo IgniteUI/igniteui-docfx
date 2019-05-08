@@ -41,8 +41,6 @@ this.state = { dataSource: SampleScatterData.create() }
 
 ### モジュールの要件
 
-<!-- Angular -->
-
 散布エリア シリーズは以下のモジュールを要求します。
 
 ```typescript

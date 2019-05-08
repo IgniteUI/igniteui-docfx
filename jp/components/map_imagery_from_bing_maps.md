@@ -1,15 +1,15 @@
 ---
-title: Map | Data Visualization Tools | Ignite UI for Angular | Bing Maps | Infragistics
+title: マップ|データ可視化ツール|Ignite UI for Angular|Bing Maps|Infragistics
 _description: マップを使用すると、ビューモデルからの地理的位置を含むデータ、またはシェープファイルから地理的画像マップにロードされた地理空間データを表示できます。
 _keywords: map, Ignite UI for Angular, infragistics
 _language: ja
 ---
 
-## Binding Imagery from Bing Maps
+## Bing Maps からの画像のバインド
 
-Bing Maps is Microsoft’s® licensed geographic imagery mapping service. This geographic imagery service is accessible directly on the <a href="http://www.bing.com/maps" target="_blank">www.bing.com/maps</a>  web site. The Ignite UI for Angular map component displays geographic imagery from Bing Maps in the map’s background content using the `BingMapsMapImagery` class. However, by default the map component displays geographic imagery from the Open Street Maps in the map background content requiring you to configure the control to display Bing Maps’ geographic imagery. Prior to using Bing Maps’ geographic imagery, you must register and obtain a Bing Map API key from <a href="http://www.bingmapsportal.coms" target="_blank">www.bingmapsportal.com</a> You must use the Bing Maps’ API key to set the BingMapsMapImagery object’s ApiKey property.
+Bing Maps は Microsoft® のライセンス付きの地理画像マッピング サービスです。この地理的画像サービスは、<a href="http://www.bing.com/maps" target="blank"> www.bing.com/maps </a> Webサイトから直接アクセスできます。Ignite UI for Angular map コンポーネントは、`BingMapsMapImagery` クラスを使用して、地図の背景コンテンツに Bing Maps の地理的画像を表示します。ただし、map コンポーネントはデフォルトで Open Street Maps の地理画像をマップ背景コンテンツに表示します。Bing Maps の地理画像を表示するには、コントロールを構成する必要があります。Bing Maps の地理的画像を使用する前に、<a href="http://www.bingmapsportal.coms" target="_blank"> www.bingmapsportal.com </a> から Bing Map API キーを登録して取得する必要があります。 BingMapsMapImagery オブジェクトの ApiKey プロパティを設定するには、Bing Maps の API キーを使用する必要があります。
 
-### Demo
+### デモ
 
 <div class="sample-container" style="height: 400px">
     <iframe id="geo-map-binding-bing-imagery-iframe" src='{environment:demosBaseUrl}/maps/geo-map-binding-bing-imagery' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -21,19 +21,19 @@ Bing Maps is Microsoft’s® licensed geographic imagery mapping service. This g
 
 <div class="divider--half"></div>
 
-The following table summarized data structures required for each type of geographic series :
+以下の表で、地理的シリーズのタイプごとに必要となるデータ構造を簡単に説明します。
 
-| Property Name        | Property Type                | Description                                                                                                                                                                                                                                                                                                                                                                                                           |
-| -------------------- | ---------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `ApiKey`             | String                       | Represents the property for setting an API key required for the Bing Maps imagery service. You must obtain this key from the <a href="http://www.bingmapsportal.coms" target="_blank">www.bingmapsportal.com</a> website.                                                                                                                                                                                             |
-| `BingImageryRestUri` | String                       | Represents the property for setting the Bing Imagery REST URI specifying where the TilePath and SubDomains will come from. This is an optional property, and if not specified it will use the default REST URI.                                                                                                                                                                                                       |
-| `CultureName`        | String                       | Represents a property for setting the culture name for the tile source.                                                                                                                                                                                                                                                                                                                                               |
-| `ImageryStyle`       | BingMapsImageryStyle         | Represents the property for setting the Bing Maps imagery tiles map style. This property can be set to the following BingMapsImageryStyle enumeration values: <ul><li> Aerial - Specifies the Aerial map style without road or labels overlay</li> <li> AerialWithLabels - Specifies the Aerial map style with road and labels overlay</li><li> Road - Specifies the Roads map style without Aerial overlay</li></ul> |
-| `IsDeferredLoad`     | Boolean                      | Represents the property that specifies whether or not the Bing Maps service should auto-initialized upon the assignment of valid property values.                                                                                                                                                                                                                                                                     |
-| `IsInitialized`      | Boolean                      | Represents the property that is set to True occurs when geographic imagery tiles from Bing Maps service have been initialized and they are ready for rendering in the map component.                                                                                                                                                                                                                                  |
-| `SubDomains`         | ObservableCollection<string> | Represents an image collection of URI sub domains                                                                                                                                                                                                                                                                                                                                                                     |
-| `TilePath`           | String                       | Represents a property that sets the map tile image URI, this is the actual location of the Bing Maps                                                                                                                                                                                                                                                                                                                  |
+| プロパティ名               | プロパティ型                       | 説明                                                                                                                                                                                                                                                                 |
+| -------------------- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `ApiKey`             | 文字列                          | Bing Maps 画像サービスで必要となる API キーを設定するためのプロパティを表します。このキーは <a href="http://www.bingmapsportal.coms" target="blank"> www.bingmapsportal.com </a> ウェブサイトから取得してください。                                                                                                       |
+| `BingImageryRestUri` | 文字列                          | TilePath と SubDomain の位置を指定する Bing Imagery REST URI を設定するためのプロパティを表します。これはオプションのプロパティです。指定されていない場合、デフォルトの REST URI を使用します。                                                                                                                                         |
+| `CultureName`        | 文字列                          | タイル ソースのカルチャ名を設定するためのプロパティを表します。                                                                                                                                                                                                                                   |
+| `ImageryStyle`       | BingMapsImageryStyle         | Bing Maps 画像タイルのマップ スタイルを設定するプロパティを表します。このプロパティは、次の BingMapsImageryStyle 列挙値に設定できます。<ul> <li> Aerial  - 道路またはラベルのオーバーレイなしの Aerial 地図スタイルを指定します</li> <li> AerialWithLabels  - 道路およびラベルのオーバーレイ付き航空地図スタイルを指定します。/ li> <li>道路 - 空中オーバーレイなしの道路マップ スタイルを指定します</li> </ul> |
+| `IsDeferredLoad`     | Boolean                      | Bing Maps サービスが有効なプロパティ値の割り当てで自動初期化するかどうかを指定するプロパティを表します。                                                                                                                                                                                                          |
+| `IsInitialized`      | Boolean                      | True に設定されているプロパティは、Bing Maps サービスからの地理的画像タイルが初期化され、マップ コンポーネントでのレンダリングの準備ができたときに発生することを表します。                                                                                                                                                                      |
+| `SubDomains`         | ObservableCollection<string> | URI サブ ドメインの画像コレクションを表します。                                                                                                                                                                                                                                         |
+| `TilePath`           | 文字列                          | マップ タイル画像 URI を設定するプロパティを表します。これは Bing Maps の実際の位置です。                                                                                                                                                                                                              |
 
-### Code Snippet
+### コード スニペット
 
-The following code snippet shows how to display geographic imagery from Bing Maps in the background content of the map component.
+次のコード スニペットは、Bing Maps の地理的画像をマップ コンポーネントの背景コンテンツに表示する方法を示しています。

@@ -57,8 +57,6 @@ this.state = { dataSource: SampleScatterStats.getCountries() }
 
 ### モジュールの要件
 
-<!-- Angular -->
-
 散布マーカーｂ シリーズは以下のモジュールを要求します。
 
 ```typescript

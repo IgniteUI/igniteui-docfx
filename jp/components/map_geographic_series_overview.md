@@ -1,25 +1,25 @@
 ---
-title: Map | Data Visualization Tools | Ignite UI for Angular | Geographic Series | Infragistics
-_description: The Map allows you to display data that contains geographic locations from view models or geo-spatial data loaded from shape files on geographic imagery maps.View the demo, dependencies, usage and toolbar for more information.
+title: マップ|データ可視化ツール|Ignite UI for Angular|地理的シリーズ|Infragistics
+_description: マップを使用すると、ビュー モデルからの地理的位置を含むデータ、またはシェープ ファイルから地理的画像マップにロードされた地理空間データを表示できます。
 _keywords: map, Ignite UI for Angular, infragistics
 _language: ja
 ---
 
-## Geographic Series
+## 地理的シリーズ
 
-In the Ignite UI for Angular Map component, geographic series are visual elements of the map that display geo-spatial data as points (e.g. locations of cities), polylines (e.g. road connections), or polygons (shape of countries) in a geographic context.
-The map component's `IgxSeriesComponent` property is a collection of geographic series objects. This property is used to support rendering an unlimited number of geographic series in the same plot area. When multiple geographic series objects are added to the `IgxSeriesComponent` property, each successive series will be layered on top of the previous series starting from the first to the last series. Therefore, geographic series can be better understood as map layers that can be stacked on top of each other and/or on top of geographic imagery.
+Ignite UI for Angular Map コンポーネントでは、地理的シリーズは、地理的なデータをポイント (都市の位置など)、ポリライン (道路の接続など)、またはポリゴン (国の形状) として地理的コンテキストで表示する地図の視覚的要素です。
+マップ コンポーネントの `IgxSeriesComponent` プロパティは、地理的なシリーズオブジェクトのコレクションです。このプロパティは、同じプロット領域に無制限の地理的系列を描画するのをサポートするために使用されます。`IgxSeriesComponent` プロパティに複数の地理的シリーズオブジェクトが追加されると、連続する各シリーズは、最初のシリーズから最後のシリーズまで、前のシリーズの上に重ねられます。したがって、地理的シリーズは、互いの上および地理的画像 (またはそのいずれか) の上に積み重ねることができる地図として理解できます。
 
-All types of geographic series are always rendered on top of the geographic imagery tiles. However, sometimes geographic series (e.g. with detailed shape files of the world) might provide enough geographic contexts for an application and geographic imagery is not desired in the map control.
+地理的シリーズのすべてのタイプは、常に地理的画像タイルの上に描画されます。ただし、場合によっては地理的シリーズ（たとえば、世界の詳細なシェイプ ファイルがある）は、アプリケーションで十分な地理的コンテキストを提供しており、地理的画像は Map コントロールで必要とはされません。
 
-### Type of Geographic Series
+### 地理的シリーズのタイプ
 
-The Geographic Map component supports the following typs of geographic series:
+地理マップ コンポーネントは、次の種類の地理的シリーズをサポートします。
 
--   [Using Scatter Symbol Series](map_geographic_scatter_symbol_series.md)
--   [Using Scatter Proportional Series](map_geographic_scatter_proportional_series.md)
--   [Using Scatter Contour Series](map_geographic_scatter_contour_series.md)
--   [Using Scatter Density Series](map_geographic_scatter_density_series.md)
--   [Using Scatter Area Series](map_geographic_scatter_area_series.md)
--   [Using Shape Polygon Series](map_geographic_shape_polygon_series.md)
--   [Using Shape Polyline Series](map_geographic_shape_polyline_series.md)
+-   [散布図記号シリーズの使用](map_geographic_scatter_symbol_series.md)
+-   [散布図比例シリーズの使用](map_geographic_scatter_proportional_series.md)
+-   [散布等高線シリーズの使用](map_geographic_scatter_contour_series.md)
+-   [散布図密度シリーズの使用](map_geographic_scatter_density_series.md)
+-   [散布エリア シリーズの使用](map_geographic_scatter_area_series.md)
+-   [シェイプ多角形シリーズの使用](map_geographic_shape_polygon_series.md)
+-   [シェイプ ポリライン シリーズの使用](map_geographic_shape_polyline_series.md)

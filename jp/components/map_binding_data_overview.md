@@ -1,19 +1,20 @@
 ---
-title: Map | Data Visualization Tools | Ignite UI for Angular | Data Binding | Infragistics
-_description: The Map allows you to display data that contains geographic locations from view models or geo-spatial data loaded from shape files on geographic imagery maps.View the demo, dependencies, usage and toolbar for more information.
+title: マップ|データ可視化ツール|Ignite UI for Angular|データ バインディング|Infragistics
+_description: マップを使用すると、ビュー モデルからの地理的位置を含むデータ、またはシェープ ファイルから地理的画像マップにロードされた地理空間データを表示できます。
 _keywords: map, Ignite UI for Angular, infragistics
+_language: ja
 ---
 
-## Data Binding
+## データ バインディング
 
-The Ignite UI for Angular map component is designed to display geo-spatial data from shape files and/or geographic locations from data models on geographic imagery maps. The `ItemsSource` property of geographic series is used for the purpose of binding to data models.
+Ignite UI for Angular マップ コンポーネントは、シェイプ ファイルからの地理空間データやデータ モデルからの地理的位置を地理的画像マップに表示するように設計されています。地理的シリーズの `ItemsSource` プロパティは、データ モデルへのバインディングのために使用されます。
 
-### Types of Data Sources
+### データソースの種類
 
-The following section list some of data source that you can bind in the geographic map component
+次のセクションでは、ジオグラフィック マップ コンポーネントにバインドできるいくつかのデータソースをリストします。
 
--   [Binding Shape Files](map_binding_geographic_shape_files.md)
--   [Binding JSON Files](map_binding_geographic_json_files.md)
--   [Binding CSV Files](map_binding_geographic_csv_files.md)
--   [Binding Data Models](map_binding_geographic_data_models.md)
--   [Binding Multiple Sources](map_binding_multiple_data_sources.md)
+-   [シェープ ファイルのバインド](map_binding_geographic_shape_files.md)
+-   [JSON ファイルのバインド](map_binding_geographic_json_files.md)
+-   [CSV ファイルのバインド](map_binding_geographic_csv_files.md)
+-   [データ モデルのバインド](map_binding_geographic_data_models.md)
+-   [複数ソースのバインド](map_binding_multiple_data_sources.md)

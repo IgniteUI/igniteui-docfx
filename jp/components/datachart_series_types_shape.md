@@ -57,9 +57,7 @@ this.state = { dataSource: SampleShapeData.create() }
 
 ### モジュールの要件
 
-<!-- Angular -->
-
-散布図形シリーズを使用するには、データチャート モジュールの読み込みと登録の際にアプリケーションに次のモジュールをインポートする必要があります。
+散布多角形シリーズには、以下のモジュールが必要です。
 
 ```typescript
 // axis' modules:

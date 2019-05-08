@@ -15,7 +15,7 @@ _language: ja
     <iframe id="data-chart-type-category-series-iframe" src='{environment:demosBaseUrl}/charts/data-chart-type-category-series' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-type-category-series-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-type-category-series-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示
     </button>
 </div>
 
@@ -71,9 +71,7 @@ this.state = { dataSource: SampleCategoryData.create() }
 
 ### モジュールの要件
 
-<!-- Angular -->
-
-カテゴリ シリーズを使用するために、読み込み時に以下のモジュールをアプリへインポートしてデータチャートモジュールを登録する必要があります。
+カテゴリシリーズには以下のモジュールが必要です。
 
 ```typescript
 // axis' modules:
