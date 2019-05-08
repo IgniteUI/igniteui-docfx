@@ -80,7 +80,7 @@ Ignite UI for Angular @@igComponent コンポーネントは、列のデータ�
  - `F2` キーの押下;
  - `Tab` キーの押下;
  - 他のセルをシングル クリック - @@igComponent で他のセルをクリックしたときに変更がサブミットされます。
- - operations like paging, resize, pin or move will exit edit mode and changes will be submitted.
+ - その他の操作 (ページング、サイズ変更、ピン固定、移動など) は、編集モードを終了して変更を送信します。
 
 > [!NOTE]
 > セルは、垂直/水平方向へのスクロールや @@igComponent 以外をクリックした場合も編集モードのままです。セル編集と行編集両方で有効です。
