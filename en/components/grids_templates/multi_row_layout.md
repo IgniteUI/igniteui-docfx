@@ -59,7 +59,7 @@ The result of the above configuration can be seen on the screenshot below:
 
 ### Feature Integration
 Due to the completly different rendering approach of Multi Row Layout, some of the column features will work only on `igx-column-layout` component. Such features are Column Pinning and Column Hiding. Othes like - Sorting and Grouping will work in the same way - on `igx-column` component.
-- Filtering - only Excel Style Filtering is supported and it defaults to it when Filtering is enabled. Setting `filterMode` explicitly to `FilterMode.quickFilter` has no effect.
+- Filtering - only Excel Style Filtering is supported. Setting `filterMode` explicitly to `FilterMode.quickFilter` has no effect.
 - Paging - works on records, not visual rows.
 - Group By - `hideGroupedColumns` option has no effect in Multi Row Layout. The grouped columns are always visible.
 
