@@ -361,6 +361,60 @@ export class MyComponent implements OnInit {
 
 **Note**: 그리드 [`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#autogenerate) 속성은 현재 원격 데이터에 바인딩할 때 사용하지 않는 것이 좋습니다. 데이터를 검사하고 적절한 열을 생성하기 위해 데이터를 사용 가능하도록 해야 합니다. 일반적으로 원격 서비스가 응답하기 전까지 그리드는 오류가 발생합니다. 원격 서비스에 바인딩할 때 [`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#autogenerate)을 사용할 수 있도록 설정하는 방법은 향후 버전에 추가될 것입니다
 
+### State persistence
+
+Persisting the grid state across pages/sessions is a common scenario and is currently achievable on application level. To demonstrate the approach to take, let's implement state persistence across pages. The example is using the `localStorage` object to store the JSON string of the state, but depending on your needs you may decide to go with the `sessionStorage` object. All implementation details are extracted in the `igxState` directive:
+
+```typescript
+// state.directive.ts
+
+@Directive({
+    selector: "[igxState]"
+})
+export class IgxGridStateDirective {
+
+    public ngOnInit() {
+        this.loadGridState();
+        this.router.events.pipe(take(1)).subscribe((event: NavigationStart) => {
+            this.saveGridState();
+        });
+    }
+
+    public ngAfterViewInit() {
+        this.restoreGridState();
+    }
+
+    public saveGridState() { ... }
+    public loadGridState() { ... }
+    public restoreGridState() { ... }
+}
+```
+
+As seen in the example above, when a NavigationStart event occurs (each time a user navigates away from the page), `saveGridState` method is called, which contains the logic to read the grid state (sorting and filtering expressions, paging state, columns order, collection of selected rows) and save this data as json string in the `localStorge`. Later, when a user comes back to the grid, `loadGridState` and `restoreGridState` methods are called during the `OnInit` and `AfterViewInit` lifecycle hooks respectively.
+What `loadGridState` does is decode the JSON string from the `localStorage` into a `gridState` object, while `restoreGridState` uses the grid API to apply the corresponding sorting and filtering expressions to the grid, set paging, etc.
+
+Last thing to do is apply the directive to the grid and restore the columns collection during the `OnInit` hook of the grid component: 
+
+```typescript
+// grid.component.ts
+
+public ngOnInit() {
+this.localData = employeesData;
+const columnsFromState =  this.state.getStoredState("columns");
+this.columns = this.state.columns && columnsFromState ?
+    columnsFromState : this.initialColumns;
+}
+```
+
+<div class="sample-container loading" style="height:750px">
+    <iframe id="grid-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-state' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
+
 ### Keyboard navigation
 Keyboard navigation is available by default in any grid and aims at covering as many as possible features and scenarios for the end user. When you focus a specific cell and press one of the following key combinations, the described behaviour is performed:
 
