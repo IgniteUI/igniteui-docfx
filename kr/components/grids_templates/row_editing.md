@@ -102,9 +102,9 @@ export class GridRowEditSampleComponent {
 ## 포지셔닝
 
 - 오버레이의 기본 위치는 편집 모드의 행 아래에 위치합니다.
-     
+
 - 행 아래에 공간이 없으면 행 위에 오버레이가 표시됩니다.
-     
+
 - 상단 또는 하단에 표시된 후 오버레이는 오버레이가 닫히기 전까지 이 위치를 유지합니다.
 
 ## 비헤이비어
@@ -117,7 +117,9 @@ export class GridRowEditSampleComponent {
 
 - 행이 편집 모드에 있는 경우, 다른 행의 셀을 클릭하면 현재 행 편집이 종료되고 새로운 행 변경이 제출됩니다(동일한 비헤이비어는 “종료” 버튼을 클릭). 포커스를 받은 새로운 셀을 편집할 수 있는 경우에는 새로운 행도 편집 모드로 전환되며, 셀을 편집 할 수 없는 경우에는 이전 행만 편집 모드를 종료합니다.
 
-- 행이 편집 모드이고 행이 표시된 영역 밖으로 이동하도록 그리드를 스크롤한 경우에도 행은 여전히 편집 모드에 있습니다. 그리드를 스크롤하여 행이 다시 표시되도록 하면 행은 여전히 편집 모드에 있습니다.
+- When perform *sorting*, *filtering*, *searching* and *hiding* operations, will revert all current changes in the row and row will exit edit mode.
+
+- When perform *paging*, *resizing*, *pinning* and *moving* operations, will exit edit mode and will submit latest value.
 
 - 수정된 각 셀은 행 편집이 종료될 때까지 편집된 스타일을 가집니다. 그리드가 트랜잭션과 함께 제공되지 않는 경우의 비헤이비어입니다. 트랜잭션을 사용할 수 있는 경우, 모든 변경이 확정될 때까지 셀 편집 스타일이 적용됩니다.
 

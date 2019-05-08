@@ -42,7 +42,7 @@ Ignite UI for Angular 그리드 컴포넌트는 열의 데이터 유형을 기�
  - `F2` 키를 누름;
  - `Tab` 키를 누름;
  - 다른 셀을 원클릭 - 그리드의 다른 셀을 클릭하면 변경이 제출됩니다.
- - '이동' 및 '고정' 조작을 실행할 때;
+ - operations like paging, resize, pin or move will exit edit mode and changes will be submitted.
 
 > [!NOTE]
 > 세로 또는 가로로 스크롤하거나, 그리드 이외를 클릭하거나, 열의 크기를 조정하거나, 열을 핀 고정하거나 다른 페이지로 이동한 경우에는 셀은 편집 모드로 유지됩니다.
@@ -135,7 +135,7 @@ row.delete();
 * [IgxDatePickerComponent]({environment:angularApiUrl}/classes/igxdatepickercomponent.html)
 * [IgxDatePickerComponent Styles]({environment:sassApiUrl}/index.html#function-igx-date-picker-theme)
 * [IgxCheckboxComponent]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html)
-* [IgxCheckboxComponent Styles]({environment:sassApiUrl}/index.html#function-igx-checkbox-theme) 
+* [IgxCheckboxComponent Styles]({environment:sassApiUrl}/index.html#function-igx-checkbox-theme)
 * [IgxOverlay]({environment:angularApiUrl}/interfaces/overlaysettings.html)
 * [IgxOverlay Styles]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
 
