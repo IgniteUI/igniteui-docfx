@@ -89,6 +89,9 @@
     - name: Virtualization and performance
       href: treegrid/virtualization.md
       new: false
+    - name: Load On Demand
+      href: treegrid/load_on_demand.md
+      new: true
     - name: Editing
       href: treegrid/editing.md
       new: false

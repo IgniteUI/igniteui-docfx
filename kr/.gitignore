@@ -21,6 +21,7 @@ components/hierarchicalgrid/*.md
 # All tree grid specific files that should NOT be ignored:
 !components/treegrid/tree_grid.md
 !components/treegrid/aggregations.md
+!components/treegrid/load_on_demand.md
 
 # All hierarchical grid specific files that should NOT be ignored:
 !components/hierarchicalgrid/hierarchical_grid.md

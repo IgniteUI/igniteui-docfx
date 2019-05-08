@@ -89,6 +89,9 @@
     - name: 가상화 및 성능
       href: treegrid/virtualization.md
       new: false
+    - name: Load On Demand
+      href: treegrid/load_on_demand.md
+      new: true
     - name: 편집
       href: treegrid/editing.md
       new: false
