@@ -95,7 +95,7 @@
     - name: 仮想化とパフォーマンス
       href: treegrid/virtualization.md
       new: false
-    - name: Load On Demand
+    - name: ロードオンデマンド
       href: treegrid/load_on_demand.md
       new: true
     - name: 編集
@@ -505,12 +505,12 @@
       new: false
     - name: サンプル
       href: themes/examples.md
-- name: Componets Roundness
+- name: 丸み付け
   href: roundness.md
   new: true
-- name: Shadows
+- name: シャドウ
   href: shadows.md
-- name: Display Density
+- name: 表示密度
   href: display_density.md
 - name: データ入力と表示
   header: true
