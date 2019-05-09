@@ -257,21 +257,21 @@
      - name: クリップボードでの作業
        href: spreadsheet_clipboard.md
        new: true
-     - name: Conditional Formatting
+     - name: 条件付き書式
        href: spreadsheet_conditional_formatting.md
        new: true
      - name: Spreadsheet の構成
        href: spreadsheet_configuring.md
        new: true
-     - name: コマンドの使用
+     - name: コマンド
        href: spreadsheet_commands.md
        new: true
      - name: データ検証
        href: spreadsheet_data_validation.md
        new: true
-     - name: Hyperlinks
+     - name: ハイパーリンク
        href: spreadsheet_hyperlinks.md
-       new: true   
+       new: true  
 - name: チャート
   header: true  
 - name: Category Chart
