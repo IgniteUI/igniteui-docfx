@@ -247,10 +247,31 @@
     - name: カスケーディング
       href: combo_cascading.md
       new: true
-    - name: Spreadsheet
-      href: spreadsheet_overview.md
-      new: true
+ - name: Spreadsheet
+   href: spreadsheet_overview.md
+   new: true
    items:
+     - name: アクティブ化
+       href: spreadsheet_activation.md
+       new: true
+     - name: クリップボードでの作業
+       href: spreadsheet_clipboard.md
+       new: true
+     - name: Conditional Formatting
+       href: spreadsheet_conditional_formatting.md
+       new: true
+     - name: Spreadsheet の構成
+       href: spreadsheet_configuring.md
+       new: true
+     - name: コマンドの使用
+       href: spreadsheet_commands.md
+       new: true
+     - name: データ検証
+       href: spreadsheet_data_validation.md
+       new: true
+     - name: Hyperlinks
+       href: spreadsheet_hyperlinks.md
+       new: true
     - name: アクティブ化
       href: spreadsheet_activation.md
       new: true
