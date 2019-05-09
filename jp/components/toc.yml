@@ -585,10 +585,10 @@
   href: overlay_main.md
   new: true
   items:
-  - name: ポジション ストラテジー
+  - name: ポジション ストラテジ
     href: overlay_position.md
     new: true
-  - name: スクロール ストラテジー
+  - name: スクロール ストラテジ
     href: overlay_scroll.md
     new: false
 - name: Drag and Drop

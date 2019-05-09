@@ -1,12 +1,12 @@
 ﻿---
-title: Overlay サービス - スクロール ストラテジー
+title: Overlay サービス - スクロール ストラテジ
 _description: オーバレイ サービスの IPositionStrategy インターフェイスと実装するクラスについての説明とその例です。
 _language: ja
 ---
 
-## ポジション ストラテジー
+## ポジション ストラテジ
 
-ポジション ストラテジーは、IgxOverlayService のコンポーネントを表示する位置を決定する方法が 3 通りあります。
+ポジション ストラテジは、IgxOverlayService のコンポーネントを表示する位置を決定する方法が 3 通りあります。
 
 1. **Global** - [`positionSettings`]({environment:angularApiUrl}/interfaces/positionsettings.html)を介して渡される方向に基づいて要素を配置します。[`verticalDirection`]({environment:angularApiUrl}/interfaces/positionsettings.html#verticaldirection) には Top/Middle/Bottom、 [`horizontalDirection`]({environment:angularApiUrl}/interfaces/positionsettings.html#horizontaldirection) には Left/Center/Right があります。
 
@@ -22,7 +22,7 @@ _language: ja
     | new Point(0, 0) | HorizontalAlignment.Right | VerticalAlignment.Bottom | HorizontalAlignment.Left | VerticalAlignment.Bottom |
 <div class="divider"></div>
 
-3. **Auto** - **Connected** ポジション ストラテジーとして要素を配置し、要素が表示外となった場合はビューポート (異なる開始ポイントと方向を計算) に要素を再配置します。以下はデフォルトの設定です。
+3. **Auto** - **Connected** ポジション ストラテジと同じ方法で要素を配置します。要素が部分的にビューポートから出た場合を考慮して、異なる開始点も計算します。**Auto** ストラテジは最初に **Connected** ストラテジと同じように要素を表示しようとします。要素がビューポートから出た場合 **Auto** は開始点と方向を反転します。つまり、方向が 'bottom' の場合、要素は 'top' に切り替わります。反転後、要素がまだビューポートのものである場合、**Auto ** は要素をビューポートにプッシュするために初期方向と開始点を使用します。たとえば、エレメントがビューポートの右側から 50 ピクセル分外に出た場合、**Auto** はそれを 50 ピクセル分左プッシュします。その後、要素がビューポートから部分的に外れている場合、その高さまたは幅がビューポートのものより大きい場合、**Auto** は要素の左端/上端をビューポートの左端/上端に揃えます。デフォルト値：
 
     | target          | horizontalDirection       |  verticalDirection       | horizontalStartPoint     | verticalStartPoint       |
     |:----------------|:--------------------------|:-------------------------|:-------------------------|:-------------------------|
@@ -60,7 +60,7 @@ strategy.position(contentWrapper, size);
 ```
 
 ### 作業の開始
-ポジション ストラテジーは、[`overlay.attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) メソッドが呼ばれたときに [`overlaySettings`] ({environment:angularApiUrl}/interfaces/overlaysettings.html) パラメーターのプロパティとして渡されます。
+ポジション ストラテジは、[`overlay.attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) メソッドが呼ばれたときに [`overlaySettings`] ({environment:angularApiUrl}/interfaces/overlaysettings.html) パラメーターのプロパティとして渡されます。
 
 ```typescript
     // Initializing and using overlay settings
@@ -74,7 +74,7 @@ strategy.position(contentWrapper, size);
 ``` 
 <div class="divider"></div>
 
-オーバーレイで使用するポジション ストラテジーの変更は、オーバーレイに渡される [`overlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) オブジェクトの [`positionStrategy`]({environment:angularApiUrl}/interfaces/ipositionstrategy.html) プロパティをオーバーライドします。
+オーバーレイで使用するポジション ストラテジの変更は、オーバーレイに渡される [`overlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) オブジェクトの [`positionStrategy`]({environment:angularApiUrl}/interfaces/ipositionstrategy.html) プロパティをオーバーライドします。
 ```typescript
     // overlaySettings is an existing object of type OverlaySettings
     // to override the position strategy
@@ -83,7 +83,7 @@ strategy.position(contentWrapper, size);
 ```
 <div class="divider"></div>
 
-既存の配置設定を変更するには、変更したいストラテジーの設定をオーバーライドします。
+既存の配置設定を変更するには、変更したいストラテジの設定をオーバーライドします。
 
 ```typescript
     // overlaySettings is an existing object of type OverlaySettings
@@ -102,7 +102,7 @@ strategy.position(contentWrapper, size);
 
 ### 依存関係
 
-必要に応じてポジション ストラテジーをインポートできます。
+必要に応じてポジション ストラテジをインポートできます。
 
 ```typescript
 import {AutoPositionStrategy, GlobalPositionStrategy, ConnectedPositioningStrategy, ElasticPositionStrategy } from 'igniteui-angular';
