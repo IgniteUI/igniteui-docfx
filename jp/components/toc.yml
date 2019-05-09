@@ -25,7 +25,7 @@
     - name: 行編集
       href: grid/row_editing.md
       new: true
-    - name: Row Drag
+    - name: 行ドラッグ
       href: grid/row_drag.md
       new: true
     - name: 一括編集
@@ -104,7 +104,7 @@
     - name: 行編集
       href: treegrid/row_editing.md
       new: false
-    - name: Row Drag
+    - name: 行ドラッグ
       href: treegrid/row_drag.md
       new: true
     - name: 一括編集
@@ -177,7 +177,7 @@
     - name: 行編集
       href: hierarchicalgrid/row_editing.md
       new: true
-    - name: Row Drag
+    - name: 行ドラッグ
       href: hierarchicalgrid/row_drag.md
       new: true
     - name: 一括編集
