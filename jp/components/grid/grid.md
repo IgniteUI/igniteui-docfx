@@ -415,7 +415,7 @@ Last thing to do is apply the directive to the grid and restore the columns coll
 // grid.component.ts
 
 public ngOnInit() {
-    const columnsFromState =  this.state.getStoredState("columns");
+    const columnsFromState = this.state.getColumnsForGrid(this.gridId);
     this.columns = this.state.columns && columnsFromState ?
         columnsFromState : this.initialColumns;
 }
