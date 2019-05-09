@@ -422,7 +422,7 @@ public ngOnInit() {
 ```
 
 <div class="sample-container loading" style="height:750px">
-    <iframe id="grid-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-state' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="grid-state-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-state' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
