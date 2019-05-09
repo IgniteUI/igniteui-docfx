@@ -247,10 +247,10 @@
     - name: カスケーディング
       href: combo_cascading.md
       new: true
- - name: Spreadsheet
-   href: spreadsheet_overview.md
-   new: true
-   items:
+- name: Spreadsheet
+  href: spreadsheet_overview.md
+  new: true
+  items:
      - name: アクティブ化
        href: spreadsheet_activation.md
        new: true
