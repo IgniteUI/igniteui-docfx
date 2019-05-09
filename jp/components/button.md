@@ -148,11 +148,11 @@ raised ボタンを作成できます。　
 | `fab`      |      フローティング アクションのボタン タイプ。背景用のセカンダリ テーマ色で円形。       |
 | `icon`     |        最もシンプルなボタン タイプ。アイコンをボタンとして使用する場合に使用。         |
 
-### Display Density
+### 密度の表示
 
-We can allow the user to choose the display density of the [`igxButton`]({environment:angularApiUrl}/classes/igxbuttondirective.html) by using its [`displayDensity`]({environment:angularApiUrl}/classes/igxbuttondirective.html#displaydensity) input. We will do this by importing the `IgxButtonGroupModule` and using the [**IgxButtonGroup**](buttonGroup.md) to display all density values. This way whenever one gets selected, we will update our own **density** property that is bound to the [`displayDensity`]({environment:angularApiUrl}/classes/igxbuttondirective.html#displaydensity) of the button.
+[`displayDensity`]({environment:angularApiUrl}/classes/igxbuttondirective.html#displaydensity) 入力を使用すると、ユーザーは [`igxButton`]({environment:angularApiUrl}/classes/igxbuttondirective.html) 入力の表示密度を選択できるようになります。これには、`IgxButtonGroupModule` をインポートし、[**IgxButtonGroup**](buttonGroup.md) を使用してすべての密度値を表示します。これにより、選択されるたびにボタンの [`displayDensity`]({environment:angularApiUrl}/classes/igxbuttondirective.html#displaydensity) にバインドされた独自の **density** プロパティが更新されます。
 
-> [!NOTE] The `icon` type button does not introduce visual changes for different display density values.
+> [!NOTE] `icon` タイプのボタンは、異なる表示密度の値に対して視覚的な変化をもたらしません。
 
 ```typescript
 // app.module.ts
