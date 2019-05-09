@@ -377,6 +377,192 @@ and in the template of the component:
 
 **Note**: The grid [`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#autogenerate) property is best to be avoided when binding to remote data for now. It assumes that the data is available in order to inspect it and generate the appropriate columns. This is usually not the case until the remote service responds, and the grid will throw an error. Making [`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#autogenerate) available, when binding to remote service, is on our roadmap for future versions.
 
+### Complex data binding
+
+The [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html) main purpose is to handle **flat data**, but this does not mean that it is impossible to work with more complex data.
+
+In this section we will cover, how to configure [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html) with **composite nested data** and **composite flat data**.
+
+#### Nested data
+
+In order to bind hierarchical data to **IgxGrid** you have to use two things:
+    - **the value of the cell, that contains the nested data**
+    - **a custom column template**
+
+The data we are going to render:
+
+```typescript
+export const EMPLOYEE_DATA = [
+    {
+        Age: 55,
+        Employees: [
+            {
+                Age: 43,
+                HireDate: new Date(2011, 6, 3),
+                ID: 3,
+                Name: "Michael Burke",
+                Title: "Senior Software Developer"
+            },
+            {
+                Age: 29,
+                HireDate: new Date(2009, 6, 19),
+                ID: 2,
+                Name: "Thomas Anderson",
+                Title: "Senior Software Developer"
+            },
+            {
+                Age: 31,
+                HireDate: new Date(2014, 8, 18),
+                ID: 11,
+                Name: "Monica Reyes",
+                Title: "Software Development Team Lead"
+            }],
+        HireDate: new Date(2008, 3, 20),
+        ID: 1,
+        Name: "Johnathan Winchester",
+        Title: "Development Manager"
+    },
+...
+```
+The custom template for the column, that will render the nested data:
+
+```html
+...
+<igx-column field="Employees" header="Employees" width="40%" editable="true">
+                <ng-template #nestedDataTemp igxCell let-cell="cell">
+                    <div class="employees-container">
+                            // For every employee record in the Employee field, render its Name, Title and HireDate value
+                        <div *ngFor="let employee of cell.value">
+                            <span><strong>Name:</strong> {{employee.Name}} </span>
+                            
+                            <span><strong>Title:</strong> {{employee.Title}} </span>
+                            
+                            <span><strong>Hire Date:</strong> {{employee.HireDate | date:'shortDate'}} </span>
+                            
+                        </div>
+                    </div>
+                </ng-template>
+...
+```
+Оnly with this template you will not be able to make **CRUD** operations, so we need an editor template.
+
+```html
+...
+                <ng-template igxCellEditor let-cell="cell">
+                    <div class="employees-container--edit">
+                        <div *ngFor="let employee of cell.value">
+                            <span>
+                                <strong>Name:</strong>
+                                <igx-input-group>
+                                    <input igxInput [(ngModel)]="employee.Name" />
+                                </igx-input-group>
+                            </span>
+                            <span>
+                            <strong>Title:</strong>
+                            <igx-input-group>
+                                <input igxInput [(ngModel)]="employee.Title" style="text-overflow:ellipsis" />
+                            </igx-input-group>
+                        </span>
+                            <span>
+                            <strong>Hire Date:</strong>
+                            <igx-date-picker [(ngModel)]="employee.HireDate" [label]="''"></igx-date-picker>
+                        </span>
+                        </div>
+                    </div>
+                </ng-template>
+</igx-column>
+...
+```
+
+And the result from this configuration is:
+
+<div class="sample-container loading" style="height:500px">
+    <iframe id="grid-nested-dataBind-iframe" data-src='{environment:demosBaseUrl}/grid/grid-nested-data-binding' width="100%" height="100%" seamless="" frameborder="0" class="lazyload"></iframe>
+</div>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-nested-dataBind-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
+
+#### Flat data
+
+The composite flat data binding approach is similar to the nested data, but instead of **cell value** we use the [`rowData`]({environment:angularApiUrl}/classes/igxrowcomponent.html#rowdata) property of the [IgxRowComponent]({environment:angularApiUrl}/classes/igxrowcomponent.html).
+
+Since the grid is a component for **rendering**, **manipulating** and **preserving** data records, having access to **every data record** gives you the opportunity to customize the approach of handling it. The [`rowData`]({environment:angularApiUrl}/classes/igxrowcomponent.html#rowdata) property provides you this opportunity.
+
+The data that we will render:
+```typescript
+export const DATA: any[] = [
+    {
+        Address: "Obere Str. 57",
+        City: "Berlin",
+        CompanyName: "Alfreds Futterkiste",
+        ContactName: "Maria Anders",
+        ContactTitle: "Sales Representative",
+        Country: "Germany",
+        Fax: "030-0076545",
+        ID: "ALFKI",
+        Phone: "030-0074321",
+        PostalCode: "12209",
+        Region: null
+    },
+...
+```
+The custom template:
+
+```html
+...
+<igx-column field="Address" header="Address" width="25%" editable="true">
+                <ng-template #compositeTemp igxCell let-cell="cell">
+                    <div class="address-container">
+                    // In the Address column combine the Country, City and PostCode values of the corresponding data record 
+                        <span><strong>Country:</strong> {{cell.row.rowData.Country}}</span>
+                        <br/>
+                        <span><strong>City:</strong> {{cell.row.rowData.City}}</span>
+                        <br/>
+                        <span><strong>Postal Code:</strong> {{cell.row.rowData.PostalCode}}</span>
+                    </div>
+                </ng-template>
+...
+```
+The custom **editor** template:
+
+```html
+...
+                 <ng-template  igxCellEditor let-cell="cell">
+                        <div class="address-container">
+                        <span>
+                            <strong>Country:</strong> {{cell.row.rowData.Country}}
+                            <igx-input-group width="100%">
+                                    <input igxInput [(ngModel)]="cell.row.rowData.Country" />
+                            </igx-input-group>
+                        </span>
+                            <br/>
+                            <span><strong>City:</strong> {{cell.row.rowData.City}}</span>
+                            <igx-input-group width="100%">
+                                    <input igxInput [(ngModel)]="cell.row.rowData.City" />
+                            </igx-input-group>
+                            <br/>
+                            <span><strong>Postal Code:</strong> {{cell.row.rowData.PostalCode}}</span>
+                            <igx-input-group width="100%">
+                                    <input igxInput [(ngModel)]="cell.row.rowData.PostalCode" />
+                            </igx-input-group>
+                            <br/>
+                        </div>
+                </ng-template>
+</igx-column>
+...
+```
+And the result is:
+
+<div class="sample-container loading" style="height:500px">
+    <iframe id="grid-composite-dataBind-iframe" data-src='{environment:demosBaseUrl}/grid/grid-composite-data-binding' width="100%" height="100%" seamless="" frameborder="0" class="lazyload"></iframe>
+</div>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-composite-dataBind-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
+
 ### Keyboard navigation
 Keyboard navigation is available by default in any grid and aims at covering as many as possible features and scenarios for the end user. When you focus a specific cell and press one of the following key combinations, the described behaviour is performed:
 
