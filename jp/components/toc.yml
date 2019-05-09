@@ -85,7 +85,7 @@
     - name: 条件付きセルのスタイル設定
       href: grid/conditional_cell_styling.md
       new: false
-    - name: Multi Row Layout
+    - name: 複数行レイアウト
       href: grid/multi_row_layout.md
       new: true
 - name: Tree Grid
