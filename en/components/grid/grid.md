@@ -436,7 +436,6 @@ The custom template for the column, that will render the nested data:
                             <span><strong>Name:</strong> {{employee.Name}} </span>
                             <span><strong>Title:</strong> {{employee.Title}} </span>
                             <span><strong>Hire Date:</strong> {{employee.HireDate | date:'shortDate'}} </span>
-                            
                         </div>
                     </div>
                 </ng-template>
