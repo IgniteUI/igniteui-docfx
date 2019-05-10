@@ -441,7 +441,7 @@ The custom template for the column, that will render the nested data:
                 </ng-template>
 ...
 ```
-Оnly with this template you will not be able to make **CRUD** operations, so we need an editor template.
+Keep in mind that with this template you will not be able to make editing operations, so we need an editor template.
 
 ```html
 ...
