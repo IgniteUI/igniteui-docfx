@@ -24,14 +24,13 @@ The Ignite UI for Angular doughnut chart component is similar to the Pie Chart c
 ### Dependencies
 
 When installing the charts package, the core package must also be installed.
-**npm install igniteui-angular-core**
-**npm install igniteui-angular-charts**
 
-<!-- -->
+-   **npm install --save igniteui-angular-core**
+-   **npm install --save igniteui-angular-charts**
 
-The `IgxDoughnutChart` is exported as an `NgModule`, you need to import the _IgxDoughnutChartModule_ inside your `AppModule`:
+### Required Modules
 
-<!-- -->
+The `IgxDoughnutChart` requires the following modules:
 
 ```typescript
 // app.module.ts
@@ -148,6 +147,6 @@ The doughnut chart component supports the use of a legend. The legend used is th
     <iframe id="doughnut-chart-legend-iframe" src='{environment:demosBaseUrl}/charts/doughnut-chart-legend' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="doughnut-chart-explosion-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="doughnut-chart-legend-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
     </button>
 </div>

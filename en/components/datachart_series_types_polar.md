@@ -64,9 +64,7 @@ this.state = { dataSource: SamplePolarData.create() }
 
 ### Required Modules
 
-<!-- Angular -->
-
-In order to use polar series, you need to import the following modules in your app during load and register data chart modules:
+In order to use polar series, you need to import the following modules in your app during load:
 
 ```typescript
 // axis' modules:

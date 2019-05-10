@@ -56,9 +56,7 @@ this.state = { dataSource: SampleShapeData.create() }
 
 ### Required Modules
 
-<!-- Angular -->
-
-In order to use scatter shape series, you need to import the following modules in your app during load and register data chart modules:
+The scatter polygon series requires the following modules:
 
 ```typescript
 // axis' modules:

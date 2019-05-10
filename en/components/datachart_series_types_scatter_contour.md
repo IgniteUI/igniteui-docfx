@@ -41,9 +41,7 @@ this.state = { dataSource: SampleScatterData.create() }
 
 ### Required Modules
 
-<!-- Angular -->
-
-The scatter area series requires the following modules:
+The scatter contour series requires the following modules:
 
 ```typescript
 // axis' modules:
