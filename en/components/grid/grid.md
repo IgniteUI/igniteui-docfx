@@ -389,7 +389,7 @@ In order to bind hierarchical data to **IgxGrid** you may use:
     - the `value` of the cell, that contains the nested data
     - a custom column template
 
-The data we are going to render:
+Below is the data that we are going to use:
 
 ```typescript
 export const EMPLOYEE_DATA = [
