@@ -5,7 +5,7 @@ _keywords: Ignite UI for Angular, Angular, Native Angular コンポーネント 
 _language: ja
 ---
 
-## 積層型シリーズ
+## 積層シリーズ
 
 このトピックは、`IgxDataChart` コントロールの積層シリーズのさまざまなタイプについて説明します。積層シリーズは、データを受け取り、それを水平線 (ColumnSeriesなど) または垂直線 (BarSeriesなど) に沿って伸びるデータポイントの集まりとしてレンダリングするチャートシリーズの最も単純で最も一般的な形式のグループです。
 
@@ -23,7 +23,7 @@ _language: ja
 
 積層シリーズごとに独自の `IgxSeriesComponent` コレクションがあり、StackedFragmentSeries 要素を配置できます。これらのフラグメントは、チャートの実際のレンダリングを構成するものであり、`ValueMemberPath` を受け入れる要素です。
 
-### 積層型シリーズのタイプ
+### 積層シリーズのタイプ
 
 次の表は、すべてのタイプのカテゴリ シリーズとその説明をまとめたものです。
 
@@ -102,17 +102,17 @@ import { IgxDataChartStackedModule } from "igniteui-angular-charts/ES5/igx-data-
 
 @NgModule({
     imports: [
-        // ...
+        ...
         IgxDataChartModule,
         IgxDataChartCoreModule,
         IgxDataChartCategoryModule,
         IgxDataChartStackedModule
-        // ...
+        ...
     ]
 })
 ```
 
-### コード例 - 積層型列シリーズ
+### コード例 - 積層柱状シリーズ
 
 このコードは、`StackedColumnSeries` でデータチャートのインスタンスを作成し、データソースにバインドする方法を説明します。上記のコードを使って `StackedColumnSeries` をレンダリングしたいシリーズの名前で置き換えて他のタイプのカテゴリ シリーズを作成することもできます。
 

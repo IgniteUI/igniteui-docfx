@@ -7,7 +7,7 @@ _language: ja
 
 ## Radial Gauge
 
-Radial Gauge コンポーネントは、針、目盛り、範囲、ラベルなどの視覚要素をサポートし、定義済みの図形およびスケールを表示できます。
+Radial Gauge コンポーネントは、針、目盛り、範囲、ラベルなどの視覚要素をサポートし、定義済みの図形やスケールを表示できます。
 
 ### デモ
 
@@ -42,9 +42,9 @@ import { IgxRadialGaugeModule } from 'igniteui-angular-gauges/ES5/igx-radial-gau
 
 @NgModule({
     imports: [
-        // ...
+        ...
         IgxRadialGaugeModule,
-        // ...
+        ...
     ]
 })
 export class AppModule {}

@@ -80,12 +80,12 @@ import { IgxDataChartRadialModule } from "igniteui-angular-charts/ES5/igx-data-c
 
 @NgModule({
     imports: [
-        // ...
+        ...
         IgxDataChartModule,
         IgxDataChartCoreModule,
         IgxDataChartRadialCoreModule,
         IgxDataChartRadialModule,
-        // ...
+        ...
     ]
 })
 ```

@@ -14,7 +14,7 @@ Angular Spreadsheet コンポーネントは、ワークシートのセルに条
 
 ワークシートに追加できる条件付き書式の多くには、その条件付き書式の条件が満たされたときにセルを表示する方法を決定する `CellFormat` プロパティがあります。たとえば、`Fill` と `Font` などのこの `CellFormat` プロパティにアタッチされるプロパティを使用してセルの背景およびフォント設定を決定できます。
 
-条件付き書式が作成され、`CellFormat` が適用される場合、ワークシートのセルにサポートされるプロパティのサブセットがあります。`CellFormat` で現在優先されるプロパティは、strikethrough, underline, italic, bold, and color などの`Fill`, `Border` properties, `FormatString`, and some `Font` プロパティです。以下のコード スニペットに複数のプロパティが設定されます。
+条件付き書式が作成され、`CellFormat` が適用される場合、ワークシートのセルにサポートされるプロパティのサブセットがあります。現在サポートされる `CellFormat` メソッドのプロパティは `Fill`、`Border` プロパティ、`FormatString`、および `Strikethrough`、`Underline`、`Italic`、`Bold`、`Color` などの `Font` プロパティです。以下のコード スニペットに複数のプロパティが設定されます。
 
 ワーク セルの可視化の動作が異なるため、`CellFormat` プロパティがない条件付き書式もあります。この条件付き書式は `DataBarConditionalFormat`、`ColorScaleConditionalFormat`、`IconSetConditionalFormat` です。
 
