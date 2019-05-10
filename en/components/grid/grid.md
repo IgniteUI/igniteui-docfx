@@ -431,11 +431,11 @@ The custom template for the column, that will render the nested data:
 <igx-column field="Employees" header="Employees" width="40%" editable="true">
                 <ng-template #nestedDataTemp igxCell let-cell="cell">
                     <div class="employees-container">
-                            // For every employee record in the Employee field, render its Name, Title and HireDate value
+                            // For every employee record in the Employee field, render its Name, Title and Age value
                         <div *ngFor="let employee of cell.value">
                             <span><strong>Name:</strong> {{employee.Name}} </span>
                             <span><strong>Title:</strong> {{employee.Title}} </span>
-                            <span><strong>Hire Date:</strong> {{employee.HireDate | date:'shortDate'}} </span>
+                            <span><strong>Age:</strong> {{employee.Age}} </span>
                         </div>
                     </div>
                 </ng-template>
@@ -455,15 +455,17 @@ Keep in mind that with this template you will not be able to make editing operat
                                 </igx-input-group>
                             </span>
                             <span>
-                            <strong>Title:</strong>
-                            <igx-input-group>
-                                <input igxInput [(ngModel)]="employee.Title" style="text-overflow:ellipsis" />
-                            </igx-input-group>
-                        </span>
-                            <span>
-                            <strong>Hire Date:</strong>
-                            <igx-date-picker [(ngModel)]="employee.HireDate" [label]="''"></igx-date-picker>
-                        </span>
+                                <strong>Title:</strong>
+                                <igx-input-group>
+                                    <input igxInput [(ngModel)]="employee.Title" style="text-overflow:ellipsis" />
+                                </igx-input-group>
+                            </span>
+                            <span style="width:10%">
+                                <strong>Age:</strong>
+                                <igx-input-group>
+                                        <input igxInput type="number" [(ngModel)]="employee.Age"/>
+                                </igx-input-group>
+                            </span>
                         </div>
                     </div>
                 </ng-template>
