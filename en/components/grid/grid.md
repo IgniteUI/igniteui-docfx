@@ -473,13 +473,13 @@ Keep in mind that with this template you will not be able to make editing operat
 
 And the result from this configuration is:
 
-<!-- <div class="sample-container loading" style="height:500px">
+<div class="sample-container loading" style="height:550px">
     <iframe id="grid-nested-dataBind-iframe" data-src='{environment:demosBaseUrl}/grid/grid-nested-data-binding' width="100%" height="100%" seamless="" frameborder="0" class="lazyload"></iframe>
 </div>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-nested-dataBind-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
-<div class="divider--half"></div> -->
+<div class="divider--half"></div>
 
 #### Flat data
 
