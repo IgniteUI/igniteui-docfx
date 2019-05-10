@@ -416,10 +416,17 @@ export const EMPLOYEE_DATA = [
                 ID: 11,
                 Name: "Monica Reyes",
                 Title: "Software Development Team Lead"
+            },
+            {
+                Age: 35,
+                HireDate: new Date(2015, 9, 17),
+                ID: 6,
+                Name: "Roland Mendel",
+                Title: "Senior Software Developer"
             }],
         HireDate: new Date(2008, 3, 20),
         ID: 1,
-        Name: "Johnathan Winchester",
+        Name: "John Winchester",
         Title: "Development Manager"
     },
 ...
@@ -475,7 +482,7 @@ Keep in mind that with this template you will not be able to make editing operat
 
 And the result from this configuration is:
 
-<div class="sample-container loading" style="height:550px">
+<div class="sample-container loading" style="height:460px">
     <iframe id="grid-nested-dataBind-iframe" data-src='{environment:demosBaseUrl}/grid/grid-nested-data-binding' width="100%" height="100%" seamless="" frameborder="0" class="lazyload"></iframe>
 </div>
 <div>
