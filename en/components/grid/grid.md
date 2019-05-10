@@ -387,7 +387,7 @@ Currently, the Grid columns don't support composite keys, although you can still
 
 In order to bind hierarchical data to **IgxGrid** you may use:
     - the `value` of the cell, that contains the nested data
-    - **a custom column template**
+    - a custom column template
 
 The data we are going to render:
 
