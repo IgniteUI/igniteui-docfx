@@ -1,14 +1,15 @@
 ---
-title: Data Chart Component - Native Angular | Ignite UI for Angular
-_description: The Ignite UI for Angular Data Chart is a charting component that provides modular design of axis, markers, series, legend, and annotation layers. With this chart, you can create multiple instances of these visual elements in the same chart plot area in order to create composite chart views.
-_keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Chart Control, Angular Chart Example, Angular Chart Component, Angular Data Chart
+title: Data Chart コンポーネント - ネイティブ Angular|Ignite UI for Angular
+_description: Ignite UI for Angular Data Chart は、軸、マーカー、凡例、および注釈レイヤーのモジュール設計を提供するチャート コンポーネントです。チャート機能は、複合チャート ビューを作成するために同じチャート領域でのビジュアル要素の複数のインスタンスを利用できます。
+_keywords: Ignite UI for Angular, Angular, Native Angular コンポーネント スイート, Native Angular コントロール, ネイティブ Angular コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular チャート, Angular チャート コントロール, Angular チャート例, Angular チャート コンポーネント, Angular データ チャート
+_language: ja
 ---
 
-## Stacked Series
+## 積層型シリーズ
 
-This topic explains the various types of stacked series in the `IgxDataChart` control. Stacked series are a group of the simplest and most common form of chart series that take data and render it as collection of data points stretched along a horizontal line (e.g. `IgxColumnSeriesComponent`) or vertical line (e.g. `BarSeries`).
+このトピックは、`IgxDataChart` コントロールの積層シリーズのさまざまなタイプについて説明します。積層シリーズは、データを受け取り、それを水平線 (ColumnSeriesなど) または垂直線 (BarSeriesなど) に沿って伸びるデータポイントの集まりとしてレンダリングするチャートシリーズの最も単純で最も一般的な形式のグループです。
 
-### Demo
+### デモ
 
 <div class="sample-container" style="height: 500px">
     <iframe id="data-chart-overview-iframe" src='{environment:demosBaseUrl}/charts/data-chart-type-stacked-series' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -20,60 +21,58 @@ This topic explains the various types of stacked series in the `IgxDataChart` co
 
 <div class="divider--half"></div>
 
-Each stacked series has its own `IgxSeriesComponent` collection in which you can place the `StackedFragmentSeries` elements. These fragments are what make up the actual rendering of the chart and are the elements that accept the `ValueMemberPath`.
+積層シリーズごとに独自の `IgxSeriesComponent` コレクションがあり、StackedFragmentSeries 要素を配置できます。これらのフラグメントは、チャートの実際のレンダリングを構成するものであり、`ValueMemberPath` を受け入れる要素です。
 
-### Types of Stacked Series
+### 積層型シリーズのタイプ
 
-The following table lists all types of category series and their descriptions:
+次の表は、すべてのタイプのカテゴリ シリーズとその説明をまとめたものです。
 
-| Series Name                  | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `StackedAreaSeries`          | This series type is rendered using a collection of points connected by line segments (`StackedFragmentSeries`) with the area below the line filled in and stacked on top of each other. Each stacked fragment in the collection represents one visual element in each stack. Each stack can contain both positive and negative values. All positive values are grouped on the positive side of the y-axis, and all negative values are grouped on the negative side of the y-axis.                      |
-| `StackedBarSeries`           | Displays discrete data in bars stacked next to each other. Categories are arranged vertically and values are stacked horizontally. This series is usually used for showing the changes in a data series over time or for comparing multiple items.                                                                                                                                                                                                                                                      |
-| `StackedColumnSeries`        | Displays discrete data in columns stacked on top of each other. Categories are arranged horizontally and values are stacked vertically. This series is usually used for showing the changes in a data series over time or for comparing multiple items.                                                                                                                                                                                                                                                 |
-| `StackedLineSeries`          | This series type is rendered using a collection of points connected by line segments (`StackedFragmentSeries`) that are stacked on top of each other. Each stacked fragment in the collection represents one visual element in each stack. Each stack can contain both positive and negative values. All positive values are grouped on the positive side of the y-axis, and all negative values are grouped on the negative side of the y-axis.                                                        |
-| `StackedSplineAreaSeries`    | This series type is rendered using a collection of points connected by smooth curves of spline segments (`StackedFragmentSeries`) with the area below the spline filled in and stacked on top of each other. Each stacked fragment in the collection represents one visual element in each stack. Each stack can contain both positive and negative values. All positive values are grouped on the positive side of the y-axis, and all negative values are grouped on the negative side of the y-axis. |
-| `StackedSplineSeries`        | This series type is rendered using a collection of points connected by smooth curves of spline segments (`StackedFragmentSeries`) that are stacked on top of each other. Each stacked fragment in the collection represents one visual element in each stack. Each stack can contain both positive and negative values. All positive values are grouped on the positive side of the y-axis, and all negative values are grouped on the negative side of the y-axis.                                     |
-| `Stacked100AreaSeries`       | This series is identical to the `StackedAreaSeries` in all aspects except in their treatment of the values on y-axis. Instead of presenting a direct representation of the data, the `Stacked100AreaSeries` presents the data in terms of percent of the sum of all values in a data point.                                                                                                                                                                                                             |
-| `Stacked100BarSeries`        | This series is the same as the `StackedBarSeries` type with the added feature of presenting data in terms of percent of all values in category instead of presenting a direct representation of the data.                                                                                                                                                                                                                                                                                               |
-| `Stacked100ColumnSeries`     | This series is the same as the `StackedColumnSeries` type with the added feature of presenting data in terms of percent of all values in category instead of presenting a direct representation of the data.                                                                                                                                                                                                                                                                                            |
-| `Stacked100LineSeries`       | This series is identical to the `StackedLineSeries` in all aspects except in their treatment of the values on y-axis. Instead of presenting a direct representation of the data, the `Stacked100LineSeries` presents the data in terms of percent of the sum of all values in a data point.                                                                                                                                                                                                             |
-| `Stacked100SplineAreaSeries` | This series is identical to the `StackedSplineAreaSeries` in all aspects except in their treatment of the values on y-axis. Instead of presenting a direct representation of the data, the `Stacked100SplineAreaSeries` presents the data in terms of percent of the sum of all values in a data point.                                                                                                                                                                                                 |
-| `Stacked100SplineSeries`     | This series is identical to the `StackedSplineSeries` in all aspects except in their treatment of the values on y-axis. Instead of presenting a direct representation of the data, the `Stacked100SplineSeries` presents the data in terms of percent of the sum of all values in a data point.                                                                                                                                                                                                         |
+| シリーズ名                        | 説明                                                                                                                                                                                                                        |
+| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `StackedAreaSeries`          | このシリーズタイプは、線の下の領域が塗りつぶされて重なり合うようにして、線分 (StackedFragmentSeries) で接続された点のコレクションを使用してレンダリングされます。コレクションのそれぞれの積層フラグメントは各積層の視覚的な要素を表します。各積層は正の値と負の値の両方を含みます。正の値はいずれも y 軸の正の側にグループ化され、負の値は y 軸の負の側にグループ化されます。                    |
+| `StackedBarSeries`           | 個々のデータを互いに積層された棒に表示します。カテゴリは垂直方向に配置され、値は水平方向に積層されます。このシリーズは通常、データ シリーズの経時的な変化の表示、または複数の項目を比較するために使用されます。                                                                                                                  |
+| `StackedColumnSeries`        | 個々のデータをそれぞれ上に積層された列に表示します。カテゴリは水平方向、値は垂直方向に積層されます。このシリーズは通常、データ シリーズの経時的な変化の表示、または複数の項目を比較するために使用されます。                                                                                                                    |
+| `StackedLineSeries`          | このシリーズタイプは、互いの上に積み重ねられた線分 (`StackedFragmentSeries`) で接続された点の集まりを使用してレンダリングされます。コレクションのそれぞれの積層フラグメントは各積層の視覚的な要素を表します。各積層は正の値と負の値の両方を含みます。正の値はいずれも y 軸の正の側にグループ化され、負の値は y 軸の負の側にグループ化されます。                                  |
+| `StackedSplineAreaSeries`    | このシリーズタイプは、スプラインの下の領域が塗りつぶされ、積み重ねられた状態で、スプラインセグメントの滑らかな曲線  (`StackedFragmentSeries`) で接続された点の集まりを使用してレンダリングされます。コレクションのそれぞれの積層フラグメントは各積層の視覚的な要素を表します。各積層は正の値と負の値の両方を含みます。正の値はいずれも y 軸の正の側にグループ化され、負の値は y 軸の負の側にグループ化されます。 |
+| `StackedSplineSeries`        | このシリーズ タイプは、互いに積み重ねられたスプライン セグメントの滑らかな曲線 (StackedFragmentSeries) によって接続された点の集まりを使用してレンダリングされます。コレクションのそれぞれの積層フラグメントは各積層の視覚的な要素を表します。各積層は正の値と負の値の両方を含みます。正の値はいずれも y 軸の正の側にグループ化され、負の値は y 軸の負の側にグループ化されます。                  |
+| `Stacked100AreaSeries`       | このシリーズは、y 軸の値の取り扱いを除いて、すべての点で StackedAreaSeries と同じです。データを直接的に表す代わりに、`Stacked100AreaSeries` は、データ ポイント内のすべての値の合計の割合でデータを表示します。                                                                                            |
+| `Stacked100BarSeries`        | このシリーズは `StackedBarSeries` タイプと同じですが、データを直接表示するのではなく、カテゴリ内のすべての値のパーセントでデータを表示する機能が追加されています。                                                                                                                               |
+| `Stacked100ColumnSeries`     | このシリーズは `StackedColumnSeries` タイプと同じですが、データを直接表現するのではなく、カテゴリ内のすべての値のパーセントでデータを表現するという追加機能があります。                                                                                                                           |
+| `Stacked100LineSeries`       | このシリーズは、y軸上の値の取り扱いを除いて、あらゆる点で `StackedLineSeries` と同じです。`Stacked100LineSeries` は、データを直接表現するのではなく、データポイント内のすべての値の合計に対するパーセントでデータを表現します。                                                                                    |
+| `Stacked100SplineAreaSeries` | このシリーズは、y 軸上の値の取り扱いを除いて、あらゆる点で `StackedSplineAreaSeries` と同じです。`Stacked100SplineAreaSeries` は、データを直接表現するのではなく、データ ポイント内のすべての値の合計に対するパーセントでデータを表現します。                                                                      |
+| `Stacked100SplineSeries`     | このシリーズは、y軸上の値の取り扱いを除いて、あらゆる点で `StackedSplineSeries` と同じです。`Stacked100SplineSeries` は、データを直接表現するのではなく、データ ポイント内のすべての値の合計に対するパーセントでデータを表現します。                                                                               |
 
-### Required Axes
+### 軸の要件
 
-The `IgxDataChart` control provides various types of axes but only the following types of axes can be used with stacked series.
+`IgxDataChart` コントロールはさまざまな種類の軸を提供しますが、積み上げシリーズで使用できるのは次の種類の軸のみです。
 
-| Series Type                  | YAxis Type                 | XAxis Type                                                                           |
-| ---------------------------- | -------------------------- | ------------------------------------------------------------------------------------ |
-| `StackedAreaSeries`          | `CategoryYAxis`            | `IgxNumericXAxisComponent`                                                           |
-| `StackedBarSeries`           | `IgxNumericYAxisComponent` | `IgxCategoryXAxisComponent`, `IgxOrdinalTimeXAxisComponent`, `IgxTimeXAxisComponent` |
-| `StackedColumnSeries`        | `IgxNumericYAxisComponent` | `IgxCategoryXAxisComponent`, `IgxOrdinalTimeXAxisComponent`, `IgxTimeXAxisComponent` |
-| `StackedLineSeries`          | `IgxNumericYAxisComponent` | `IgxCategoryXAxisComponent`, `IgxOrdinalTimeXAxisComponent`, `IgxTimeXAxisComponent` |
-| `StackedSplineAreaSeries`    | `IgxNumericYAxisComponent` | `IgxCategoryXAxisComponent`, `IgxOrdinalTimeXAxisComponent`, `IgxTimeXAxisComponent` |
-| `StackedSplineSeries`        | `IgxNumericYAxisComponent` | `IgxCategoryXAxisComponent`, `IgxOrdinalTimeXAxisComponent`, `IgxTimeXAxisComponent` |
-| `Stacked100AreaSeries`       | `CategoryYAxis`            | `IgxNumericXAxisComponent`                                                           |
-| `Stacked100BarSeries`        | `IgxNumericYAxisComponent` | `IgxCategoryXAxisComponent`, `IgxOrdinalTimeXAxisComponent`, `IgxTimeXAxisComponent` |
-| `Stacked100ColumnSeries`     | `IgxNumericYAxisComponent` | `IgxCategoryXAxisComponent`, `IgxOrdinalTimeXAxisComponent`, `IgxTimeXAxisComponent` |
-| `Stacked100LineSeries`       | `IgxNumericYAxisComponent` | `IgxCategoryXAxisComponent`, `IgxOrdinalTimeXAxisComponent`, `IgxTimeXAxisComponent` |
-| `Stacked100SplineAreaSeries` | `IgxNumericYAxisComponent` | `IgxCategoryXAxisComponent`, `IgxOrdinalTimeXAxisComponent`, `IgxTimeXAxisComponent` |
-| `Stacked100SplineSeries`     | `IgxNumericYAxisComponent` | `IgxCategoryXAxisComponent`, `IgxOrdinalTimeXAxisComponent`, `IgxTimeXAxisComponent` |
+| シリーズ タイプ                     | YAxis タイプ                  | XAxis タイプ                                                                          |
+| ---------------------------- | -------------------------- | ---------------------------------------------------------------------------------- |
+| `StackedAreaSeries`          | `CategoryYAxis`            | `IgxNumericXAxisComponent`                                                         |
+| `StackedBarSeries`           | `IgxNumericYAxisComponent` | `IgxCategoryXAxisComponent`、`IgxOrdinalTimeXAxisComponent`、`IgxTimeXAxisComponent` |
+| `StackedColumnSeries`        | `IgxNumericYAxisComponent` | `IgxCategoryXAxisComponent`、`IgxOrdinalTimeXAxisComponent`、`IgxTimeXAxisComponent` |
+| `StackedLineSeries`          | `IgxNumericYAxisComponent` | `IgxCategoryXAxisComponent`、`IgxOrdinalTimeXAxisComponent`、`IgxTimeXAxisComponent` |
+| `StackedSplineAreaSeries`    | `IgxNumericYAxisComponent` | `IgxCategoryXAxisComponent`、`IgxOrdinalTimeXAxisComponent`、`IgxTimeXAxisComponent` |
+| `StackedSplineSeries`        | `IgxNumericYAxisComponent` | `IgxCategoryXAxisComponent`、`IgxOrdinalTimeXAxisComponent`、`IgxTimeXAxisComponent` |
+| `Stacked100AreaSeries`       | `CategoryYAxis`            | `IgxNumericXAxisComponent`                                                         |
+| `Stacked100BarSeries`        | `IgxNumericYAxisComponent` | `IgxCategoryXAxisComponent`、`IgxOrdinalTimeXAxisComponent`、`IgxTimeXAxisComponent` |
+| `Stacked100ColumnSeries`     | `IgxNumericYAxisComponent` | `IgxCategoryXAxisComponent`、`IgxOrdinalTimeXAxisComponent`、`IgxTimeXAxisComponent` |
+| `Stacked100LineSeries`       | `IgxNumericYAxisComponent` | `IgxCategoryXAxisComponent`、`IgxOrdinalTimeXAxisComponent`、`IgxTimeXAxisComponent` |
+| `Stacked100SplineAreaSeries` | `IgxNumericYAxisComponent` | `IgxCategoryXAxisComponent`、`IgxOrdinalTimeXAxisComponent`、`IgxTimeXAxisComponent` |
+| `Stacked100SplineSeries`     | `IgxNumericYAxisComponent` | `IgxCategoryXAxisComponent`、`IgxOrdinalTimeXAxisComponent`、`IgxTimeXAxisComponent` |
 
-### Required Data
+### データの要件
 
-Stacked series have the following data requirements:
+積層シリーズには、以下のデータ要件があります。
 
--   The data source must be an array or a list of data items
--   The data source must contain at least one data item otherwise the chart will not render the stacked series.
--   All data items must contain at least one data column (string or date time) which should be mapped to the `Label` property of the category axis (e.g. `IgxCategoryXAxisComponent`)
--   All data items must contain at least one numeric data column which should be mapped using the `ValueMemberPath` property of the `StackedFragmentSeries` to be added to the stacked series' `IgxSeriesComponent` collection.
+-   データソースはデータ項目の配列またはリストである必要があります。
+-   データソースにはデータ項目を少なくとも 1 つ含む必要があり、含まれない場合はチャートで積層シリーズがレンダリングされません。
+-   すべてのデータ項目には、財務軸 (CategoryXAxis など) の Label プロパティにマッピングする必要があるデータ列 (文字列または日時) を少なくとも 1 列含める必要があります
+-   すべてのデータ項目には、積層シリーズの `IgxSeriesComponent` コレクションに追加する `StackedFragmentSeries` の `ValueMemberPath` プロパティを使用してマッピングする必要がある少なくとも 1 つの数値データ列を含める必要があります。
 
-### Required Modules
+### 必要なモジュール
 
-<!-- Angular -->
-
-In order to use stacked series, you need to import the following modules in your app during load:
+散布 シリーズは以下のモジュールが必要です。
 
 ```typescript
 // axis' modules:
@@ -113,9 +112,9 @@ import { IgxDataChartStackedModule } from "igniteui-angular-charts/ES5/igx-data-
 })
 ```
 
-### Code Example - Stacked Column Series
+### コード例 - 積層型列シリーズ
 
-This code demonstrates how to create an instance of data chart with `StackedColumnSeries` and bind it to the data source. Note that you can also use above code to create other type of category series by replacing `StackedColumnSeries` with name of series that you want to render.
+このコードは、`StackedColumnSeries` でデータチャートのインスタンスを作成し、データソースにバインドする方法を説明します。上記のコードを使って `StackedColumnSeries` をレンダリングしたいシリーズの名前で置き換えて他のタイプのカテゴリ シリーズを作成することもできます。
 
 ```html
 <igx-data-chart #chart height="100%" width="100%" [dataSource]="data">
@@ -129,13 +128,13 @@ This code demonstrates how to create an instance of data chart with `StackedColu
     <igx-stacked-fragment-series valueMemberPath="Gas"></igx-stacked-fragment-series>
     <igx-stacked-fragment-series valueMemberPath="Oil"></igx-stacked-fragment-series>
   </igx-stacked-column-series>
-    
+
 </igx-data-chart>
 ```
 
-### Code Example - Stacked Bar Series
+### コード例 - 積層棒シリーズ
 
- The `StackedBarSeries` is an exception to the rule that you can replace `StackedColumnSeries` with any series name because it requires different types of axes in that it uses a `CategoryYAxis` and `IgxNumericXAxisComponent`. This code demonstrates how to create an instance of the data chart with a `StackedBarSeries` and bind it to the data source.
+ `StackedBarSeries` は、`CategoryYAxis` と `IgxNumericXAxisComponent` を使用するという点で異なるタイプの軸を必要とするため、`StackedColumnSeries` を任意のシリーズ名に置き換えることができるという規則の例外です。このコードは、`StackedBarSeries` を使用してデータチャートのインスタンスを作成し、それをデータソースにバインドする方法を示します。
 
 ```html
 <igx-data-chart #chart height="100%" width="100%" [dataSource]="data">
@@ -149,6 +148,6 @@ This code demonstrates how to create an instance of data chart with `StackedColu
     <igx-stacked-fragment-series valueMemberPath="Gas"></igx-stacked-fragment-series>
     <igx-stacked-fragment-series valueMemberPath="Oil"></igx-stacked-fragment-series>
   </igx-stacked-bar-series>
-    
+
 </igx-data-chart>
 ```

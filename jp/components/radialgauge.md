@@ -32,13 +32,9 @@ gauges パッケージをインストールするときに core パッケージ�
 -   **npm install --save igniteui-angular-core**
 -   **npm install --save igniteui-angular-gauges**
 
-ラジアル ゲージは `NgModule` としてエクスポートされます。`AppModule` 内に `IgxRadialGaugeModule` をインポートする必要があります。
+### 必要なモジュール
 
-<!-- -->
-
-<!-- -->
-
-<!-- Angular -->
+`IgxRadialGauge` は、以下のモジュールが必要です。
 
 ```typescript
 // app.module.ts
@@ -46,21 +42,12 @@ import { IgxRadialGaugeModule } from 'igniteui-angular-gauges/ES5/igx-radial-gau
 
 @NgModule({
     imports: [
-        ...
+        // ...
         IgxRadialGaugeModule,
-        ...
+        // ...
     ]
 })
 export class AppModule {}
-```
-
-<!-- end: Angular -->
-
-```typescript
-import { IgcRadialGaugeModule } from 'igniteui-webcomponents-gauges/ES5/igc-radial-gauge-module';
-import { IgcRadialGaugeModule } from 'ignite-webcomponents-gauges/ES5/igx-radial-gauge';
-
-IgcRadialGaugeModule.register();
 ```
 
 <div class="divider--half"></div>
@@ -71,10 +58,10 @@ IgcRadialGaugeModule.register();
 
 ```html
 <igx-radial-gauge height="400px" width="400px"
-    value=25
-    interval=5
-    minimumValue=0
-    maximumValue=50>
+    value="25"
+    interval="5"
+    minimumValue="0"
+    maximumValue="50">
     <igx-radial-graph-range startValue="0"
                             endValue="30"
                             brush="red"/>

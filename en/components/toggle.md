@@ -149,9 +149,8 @@ The [`igxToggle`]({environment:angularApiUrl}/classes/igxtoggledirective.html) u
 </div>
 
 ***Note***: By defaut [`closeOnOutsideClick`]({environment:angularApiUrl}/interfaces/overlaysettings.html#closeonoutsideclick) is set to `false`. If set to `true` there are some limitations in the behavior. When element is shown clicking on toggle button will force close on outside click and toggle method. Close on outside click will start close animation. Then toggle method, with close animation started, will call open. Those two events neutralize each other and nothing happens. In order to achieve the desired behavior there a couple of options listed below: 
-- set the button as [`target`]({environment:angularApiUrl}/interfaces/positionsettings.html#target) and set [`excludePositionTarget`]({environment:angularApiUrl}/interfaces/overlaysettings.html#excludePositionTarget) to true
-- set [`closeOnOutsideClick`]({environment:angularApiUrl}/interfaces/overlaysettings.html#closeonoutsideclick) to `false` as in the sample above
 - use [`IgxToggleActionDirective`]({environment:angularApiUrl}/classes/igxtoggleactiondirective.html) as described below;
+- set [`closeOnOutsideClick`]({environment:angularApiUrl}/interfaces/overlaysettings.html#closeonoutsideclick) to `false` as in the sample above
 
 ### Automatic toggle actions
 

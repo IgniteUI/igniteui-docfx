@@ -1,29 +1,28 @@
----
+﻿---
 title: Card コンポーネント
-_description: Ignite UI for Angular Card コンポーネントを使用して、詳細情報のエントリ ポイントとして、ダッシュボード、テキスト、画像、アイコン、ボタンなどを表示します。
+_description: _description: Ignite UI for Angular Card コンポーネントを使用して、詳細情報のエントリ ポイントとして、ダッシュボード、テキスト、画像、アイコン、ボタンなどを表示します。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Card コンポーネント, Angular Card コントロール
 _language: ja
 ---
 
-## Card
-
+##Card
 <p class="highlight">Ignite UI for Angular [`IgxCardComponent`]({environment:angularApiUrl}/classes/igxcardcomponent.html) は、テキスト、画像、アイコン、およびボタンを表示します。この要素は詳細情報のエントリ ポイントになります。Card を使用してマルチメディア ダッシュボードを作成できます。Card コンポーネントは、Ignite UI for Angular Grid と同じコンポーネントを使用してページングをサポートします。ただし、カスタム コードが必要です。</p>
 <div class="divider"></div>
 
-### Card デモ
-<div class="sample-container loading" style="height: 930px">
-    <iframe id="card-sample-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/layouts/card" onload="onSampleIframeContentLoaded(this);"></iframe>
+###Card デモ
+<div class="sample-container loading" style="height: 690px">
+    <iframe id="card-sample-4-iframe" data-src='{environment:demosBaseUrl}/layouts/card-sample-4' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="card-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="card-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
-### 使用方法
-Card コンポーネントは、様々なオブジェクト タイプ、サイズやサポートされる操作が異なる同様のオブジェクトから成るコンテンツを表示できます。
+###使用方法
+Card コンポーネントは、様々なオブジェクト タイプ、サイズやサポートされるアクションが異なる同様のオブジェクトから成るコンテンツを表示できます。
 
-#### はじめに
-Ignite UI for Angular Card を初期化する前に、`IgxCardModule` を **app.module.ts** ファイルにインポートします:
+####作業の開始
+Ignite UI for Angular Card の初期化前に `IgxCardModule` を **app.module.ts** ファイルにインポートします:
 
 ```typescript
 // app.module.ts
@@ -38,149 +37,259 @@ import { IgxCardModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-以下のコードは、Card コンポーネントのテンプレートでヘッダー領域および短いテキスト コンテンツを含むベーシックなカードを表示します。
+次に、最初のカード コンポーネントのテンプレートに、メディア画像、ヘッダー、コンテンツ、およびアクション領域を含むカードを表示するための次のコードを追加します。 
 
 ```html
-<!--infocard.component.html>-->
+<!--card.component.html>-->
 
 <igx-card>
-  <igx-card-header>
-    <h3 class="igx-card-header__title">Brad Stanley</h3>
-    <h5 class="igx-card-header__subtitle">Audi AG</h5>
-  </igx-card-header>
-  <igx-card-content>
-    <p class="igx-card-content__text">Brad Stanley (born 17 March 1963 in Titting, Germany) is a German business executive and chairman of the Vorstand (CEO) of Audi AG.</p>
-  </igx-card-content>
+    <igx-card-media height="196px">
+        <img [src]="https://images.unsplash.com/photo-1518235506717-e1ed3306a89b?ixlib=rb-1.2.1&auto=format&fit=crop&w=640&q=50">
+    </igx-card-media>
+
+    <igx-card-header>
+        <h3 igxCardHeaderTitle>New York</h3>
+        <h5 igxCardHeaderSubtitle>City in New York</h5>
+    </igx-card-header>
+
+    <igx-card-content>
+        <p>New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean. At its core is Manhattan, a densely populated borough thatâ€™s among the worldâ€™s major commercial, financial and cultural centers.</p>
+    </igx-card-content>
+
+    <igx-card-actions>
+        <button igxButton igxRipple>Read More</button>
+        <button igxButton="icon" igxRipple igxRippleCentered="true">
+            <igx-icon>favorite</igx-icon>
+        </button>
+        <button igxButton="icon" igxRipple igxRippleCentered="true">
+            <igx-icon>share</igx-icon>
+        </button>
+    </igx-card-actions>
 </igx-card>
 ```
 
 以下は結果です。
-<div class="sample-container loading" style="height: 300px">
+
+<div class="sample-container loading" style="height: 486px">
+    <iframe id="card-sample-0-iframe" data-src='{environment:demosBaseUrl}/layouts/card-sample-0' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="card-sample-0-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+</div>
+
+上記が確認できます。最初に `h3` 見出しのように要素をヘッダータイトルとしてタグしたい場合は、`igx-car-header` タグの間に配置し、`igxCardHeaderTitle` ディレクティブを要素に添付します。逆に、別の見出し要素を`サブタイトル`にしたい場合は、`igxCardHeaderSubtitle` をそれに添付します。
+
+カードに表示する画像やビデオはすべて、`igx-card-media` タグで囲みます。`igx-card-media` を使用すると、`width` や `height` 属性を使用して内側に配置されているコンテンツのサイズを変更できます。上の例では、`高さ`のみ指定し、幅を `自動` にすることにより、設定された高さを維持しながら画像をカードの表面全体に広げることが可能になります。
+
+`igx-card-content` タグ内には何でも配置できます。通常テキストが配置されます。
+
+最後に `igx-card-actions` は、ボタンのようなアクション可能なアイテムを配置する場所です。要素に `igxButton` ディレクティブを使用すると、その領域内の材料設計仕様に従って自動的に正しく配置されます。
+
+#### メディア、サムネイル、アバター
+タイトルや字幕の横のカード ヘッダーに画像やアイコンを表示したい場合は、`igxCardThumbnail` ディレクティブを使用してそれを実行できます。
+
+上記のカードを例にとると、`igx-card-header` の内容を編集して、アイコンを保持する `igxCardThumbnail` コンテナを追加できます。
+
+```html
+<igx-card-header>
+    <div igxCardThumbnail>
+        <igx-icon>place</igx-icon>
+    </div>
+    
+    <h3 igxCardHeaderTitle>Title</h3>
+    <h5 igxCardHeaderSubtitle>Subtitle</h5>
+</igx-card-header>
+```
+
+上記の例では、カード ヘッダーのタイトルと字幕の横にアイコンが表示されます。
+
+カード ヘッダーに置かれた `igx-avatar` または `igx-card-media` の存在も自動的に検出され、カードのサムネイルのように表示されます。So you can do:
+
+```html
+<igx-card-header>
+    <igx-avatar>
+        <igx-icon>place</igx-icon>
+    </igx-avatar>
+
+    <h3 igxCardHeaderTitle>Title</h3>
+    <h5 igxCardHeaderSubtitle>Subtitle</h5>
+</igx-card-header>
+```
+
+or, even this:
+
+```html
+<igx-card-header>
+    <igx-card-media width="40px" height="40px">
+        <img src="https://images.unsplash.com/photo-1518235506717-e1ed3306a89b?ixlib=rb-1.2.1&auto=format&fit=crop&w=80&q=50">
+    </igx-card-media>
+
+    <h3 igxCardHeaderTitle>Title</h3>
+    <h5 igxCardHeaderSubtitle>Subtitle</h5>
+</igx-card-header>
+```
+
+#### Outlined cards
+カードには `type` 属性があり、`デフォルト` (省略した場合は自動的に設定) または`アウトライン`に設定できます。`outlined` タイプは、細い境界線と置き換えてカードと背景を区別してカードからすべてのシャドウを削除します。
+
+以下はアウトラインのあるカードの例です。
+
+```html
+<!--outlined-card.component.html>-->
+<igx-card type="outlined">
+    <igx-card-header>
+        <igx-card-media width="64px" height="64px">
+            <img [src]="card.imageUrl">
+        </igx-card-media>
+
+        <h5 igxCardHeaderTitle>{{card.title}}</h5>
+        <h5 igxCardHeaderSubtitle>{{card.subtitle}}</h5>
+    </igx-card-header>
+
+    <igx-divider></igx-divider>
+
+    <igx-card-actions layout="justify">
+        <button *ngFor="let icon of card.icons;" igxButton="icon" igxRipple igxRippleCentered="true">
+            <igx-icon>{{icon}}</igx-icon>
+        </button>
+    </igx-card-actions>
+</igx-card>
+```
+
+この時点でカードは以下のようになります。
+<div class="sample-container loading" style="height: 168px">
     <iframe id="card-sample-1-iframe" data-src='{environment:demosBaseUrl}/layouts/card-sample-1' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="card-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
-#### アバターおよび画像の追加
+#### 水平レイアウト
 
-ルーパート スタドラーは人気がありますが、カードをもう少し魅力的に変えてみます。名前の左に画像のアバターを表示し、より大きい Audi TT 画像を追加できます。要素を追加するには、[**IgxAvatar**](avatar.md) モジュールを **app.module.ts** ファイルにインポートします。
-```typescript
-// app.module.ts
+デフォルトでは、カードのすべてのセクション (ヘッダー、コンテンツ、メディア、アクション) は縦にレイアウトされています。垂直方向のスペースが多くある場合に便利です。カードのすべてのセクションを水平に配置する場合、カードの `horizontal` 属性を使用してレイアウトを設定できます。
 
-...
-import {
-    IgxCardModule,
-    IgxAvatarModule
-} from 'igniteui-angular';
-
-@NgModule({
-    ...
-    imports: [..., IgxAvatarModule],
-})
-export class AppModule {}
-```
-
-次に丸いアバター図形および実際の車を表示するためにカードのテンプレートを変更します。
+以下の例を参照してください。
 
 ```html
-<!--infocard.component.html>-->
+<igx-card type="outlined" [horizontal]="horizontal">
+    <div igxLayout igxLayoutDir="column" igxFlex igxFlexGrow="1">
+        <igx-card-header>
+            <h5 igxCardHeaderTitle>{{card.title}}</h5>
+            <h5 igxCardHeaderSubtitle>{{card.subtitle}}</h5>
+            <igx-card-media width="64px" height="64px">
+                <img [src]="card.imageUrl">
+            </igx-card-media>
+        </igx-card-header>
 
-<igx-card>
-    <igx-card-header class="compact">
-        <igx-avatar src="assets/images/card/avatars/brad_stanley.jpg" roundShape="true"></igx-avatar>
-        <div class="igx-card-header__tgroup">
-            <h3 class="igx-card-header__title--small">Brad Stanley</h3>
-            <h5 class="igx-card-header__subtitle">Audi AG</h5>
-        </div>
-    </igx-card-header>
-    <div style="overflow: hidden">
-        <img width="100%" height="100%" src="assets/images/card/media/audi_tt.jpg">
+        <igx-card-content>
+            <p>{{card.content}}</p>
+        </igx-card-content>
     </div>
-    <igx-card-content>
-      <p class="igx-card-content__text">Brad Stanley (born 17 March 1963 in Titting, Germany) is a German business executive and chairman of the Vorstand (CEO) of Audi AG.</p>
-    </igx-card-content>
+
+    <igx-divider [vertical]="horizontal"></igx-divider>
+
+    <igx-card-actions layout="justify">
+        <button *ngFor="let icon of card.icons;" igxButton="icon" igxRipple igxRippleCentered="true">
+            <igx-icon>{{icon}}</igx-icon>
+        </button>
+    </igx-card-actions>
 </igx-card>
 ```
 
-この時点でカードは以下のような外観になります。
-<div class="sample-container loading" style="height: 480px">
+`igxLayout` と `igxFlex` のサポートディレクティブを使用して、`igx-card-header` と `igx-card-content` を縦に並べ、カード内の他のセクションは横に並べます。 
+
+`igx-card-actions` のボタンが`垂直`のレイアウトに切り替わりました。`igx-card-actions` は、その親と`逆`のレイアウトになります。そのため、カードの `horizontal` 属性が `true` に設定されているときはいつでもアクションの `vertical` プロパティが `true` に設定され、その逆も同様です。
+
+アクション領域の `vertical` 属性を明示的に設定して、デフォルトの動作を上書きすることができます。 
+
+```html
+<igx-card-actions layout="justify" [vertical]="false">
+    <button *ngFor="let icon of card.icons;" igxButton="icon" igxRipple igxRippleCentered="true">
+        <igx-icon>{{icon}}</igx-icon>
+    </button>
+</igx-card-actions>
+```
+
+以下は横向きのカードです。
+
+<div class="sample-container loading" style="height: 202px">
     <iframe id="card-sample-2-iframe" data-src='{environment:demosBaseUrl}/layouts/card-sample-2' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="card-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
-#### アクションの追加
+#### その他のレイアウト
 
-カードに多くの情報が含まれるようになりました。更に他の機能も追加します。その他のコンポーネントを使用してエクスペリエンスを向上し、機能を追加します。
-カードからソーシャル メディアにアクセスするオプションを追加します。要素を追加するには、[**IgxButton**](button.md) および [**IgxIcon**](icon.md) モジュールを取得して **app.module.ts** ファイルにインポートします。
+`igx-card` カードはさまざまなレイアウトが可能です。
 
-```typescript
-// app.module.ts
-
-...
-import {
-    IgxCardModule,
-    IgxAvatarModule,
-    IgxIconModule,
-    IgxButtonModule
-} from 'igniteui-angular';
-
-@NgModule({
-    ...
-    imports: [..., IgxIconModule, IgxButtonModule],
-})
-export class AppModule {}
-```
-
-次にこのアクション ボタンを表示するためにカードのテンプレートを変更します。
+以下は、`igx-card-media` がカードの垂直部分と並んで表示されている状態で、カードのすべての部分を垂直方向にレイアウトし、半横向きのカードを作成する方法を示した例です。
 
 ```html
-<!--infocard.component.html>-->
+<igx-card [horizontal]="horizontal">
+    <div igxLayout igxLayoutDir="column" igxFlex igxFlexGrow="1">
+        <igx-card-header>
+            <igx-avatar [src]="card.avatarUrl"></igx-avatar>
+            <h5 igxCardHeaderTitle>{{card.title}}</h5>
+            <h5 igxCardHeaderSubtitle>{{card.subtitle}}</h5>
+        </igx-card-header>
 
-<igx-card>
-    <igx-card-header class="compact">
-        <igx-avatar src="assets/images/card/avatars/brad_stanley.jpg" roundShape="true"></igx-avatar>
-        <div class="igx-card-header__tgroup">
-            <h3 class="igx-card-header__title--small">Brad Stanley</h3>
-            <h5 class="igx-card-header__subtitle">Audi AG</h5>
-        </div>
-    </igx-card-header>
-    <div style="overflow: hidden">
-        <img width="100%" height="100%" src="assets/images/card/media/audi_tt.jpg">
+        <igx-card-content>
+            <p>{{card.content}}</p>
+        </igx-card-content>
+
+        <igx-card-actions [vertical]="false">
+            <button *ngFor="let button of card.buttons;" igxButton="flat" igxRipple>
+                {{button}}
+            </button>
+        </igx-card-actions>
     </div>
-    <igx-card-actions >
-        <div class="igx-card-actions__igroup--start">
-            <span igxButton="icon" igxRipple igxRippleCentered="true" *ngFor="let icon of icons">
-                <igx-icon fontSet="material">{{icon}}</igx-icon>
-            </span>
-        </div>
-        <button igxButton igxRipple >Follow</button>
-    </igx-card-actions>
+
+    <igx-card-media width="96px">
+        <img [src]="card.imageUrl">
+    </igx-card-media>
 </igx-card>
 ```
 
-**igx-icon** コンポーネントの fontSet プロパティを "material" に設定し、[**マテリアル アイコン セット**](https://material.io/icons/)の 2 つのアイコンを追加しました。このアイコンのリストは **infocard.component.ts** ファイルで定義されます。
-
-```typescript
-// infocard.comoponent.ts
-
-public icons = ['add', 'star'];
-```
-
-簡単に機能を追加できました。ブラウザーで結果を確認します。
-<div class="sample-container loading" style="height: 400px">
+<div class="sample-container loading" style="height: 252px">
     <iframe id="card-sample-3-iframe" data-src='{environment:demosBaseUrl}/layouts/card-sample-3' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="card-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
-<div class="divider--half"></div>
+#### カード アクション
 
-####まとめ
-このトピックでは Card コンポーネントの詳細について説明しました。テキスト コンテンツのみを含むベーシックなカードを作成し、次に画像、最後に他の Ignite UI for Angular コンポーネントをカードで使用してアバター、ボタン、およびアイコンを追加して機能を改善しました。カード コンポーネントはその他のレイアウトも表示できます。詳細については、このトピックの最初の部分の Card デモを参照してください。
+カードのアクション領域では、すでに説明したコンテンツに追加の設定を加えることができます。
+
+`reverse` 属性を使用して、フラットボタンとボタンアイコンの順序を逆にすることができます。
+
+```html
+<igx-card-actions [reverse]="true">
+    <button igxButton>Button</button>
+
+    <button igxButton="icon">
+        <igx-icon>star</igx-icon>
+    </button>
+</igx-card-actions>
+```
+
+アイコン ボタンはフラットスタイルのテキスト ボタンの前に表示されます。
+
+ボタンは、両端ではなく軸全体に配置されるように配置することもできるため、以下のように、`layout` 属性を使用して値を `justify` に設定します。
+
+```html
+<igx-card-actions layout="justify">
+    <button igxButton>Button</button>
+
+    <button igxButton="icon">
+        <igx-icon>star</igx-icon>
+    </button>
+</igx-card-actions>
+```
+
+#### 概要
+このトピックでは Card コンポーネントの詳細について説明しました。最初にテキスト コンテンツのみを含むベーシックなカードを作成しました。次に画像を追加しました。最後に他の Ignite UI for Angular コンポーネントをカードで使用してアバター、ボタン、およびアイコンを追加して機能性を向上しました。カード コンポーネントはその他のレイアウトも表示できます。詳細については、このトピックの最初の部分の Card デモを参照してください。
 
 ### API と スタイル リファレンス
 
@@ -189,23 +298,24 @@ public icons = ['add', 'star'];
 
 以下の定義済み CSS スタイルを使用してカード レイアウトを構成しました。
 
-* [`IgxCardComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-card-theme)
+* [`IgxCardComponent スタイル`]({environment:sassApiUrl}/index.html#function-igx-card-theme)
 
-使用したその他のコンポーネントとディレクティブ:
+使用したその他のコンポーネントとディレクティブ
 
 * [`IgxAvatarComponent`]({environment:angularApiUrl}/classes/igxavatarcomponent.html)
 * [`IgxIconComponent`]({environment:angularApiUrl}/classes/igxiconcomponent.html)
 * [`IgxButtonDirective`]({environment:angularApiUrl}/classes/igxbuttondirective.html)
+* [`IgxDividerDirective`]({environment:angularApiUrl}/classes/igxdividerdirective.html)
 
 スタイル:
 
-* [`IgxAvatarComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-avatar-theme)
-* [`IgxIconComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
-* [`IgxButtonDirective Styles`]({environment:sassApiUrl}/index.html#function-igx-button-theme)
+* [`IgxAvatarComponent スタイル`]({environment:sassApiUrl}/index.html#function-igx-avatar-theme)
+* [`IgxIconComponent スタイル`]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
+* [`IgxButtonDirective スタイル`]({environment:sassApiUrl}/index.html#function-igx-button-theme)
 
 <div class="divider"></div>
 
-### その他のリソース
+###その他のリソース
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
