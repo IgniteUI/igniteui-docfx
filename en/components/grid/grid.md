@@ -381,7 +381,7 @@ and in the template of the component:
 
 The [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html) main purpose is to handle **flat data**, although this does not mean that it is impossible to work with more complex data.
 
-In this section we will cover, how to configure [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html) with **composite nested data** and **composite flat data**.
+Currently, the Grid columns don't support composite keys, although you can still create a column out of several other columns. In this section we will cover, how to configure [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html) with **nested data** and **flat data**.
 
 #### Nested data
 
