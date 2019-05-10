@@ -131,7 +131,7 @@ export class AppModule {}
         verticalStartPoint: VerticalAlignment.Bottom
     };
     public _overlaySettings = {
-        closeOnOutsideClick: true,
+        closeOnOutsideClick: false,
         modal: false,
         positionStrategy: new ConnectedPositioningStrategy(this._positionSettings),
         scrollStrategy: new CloseScrollStrategy()
@@ -147,9 +147,13 @@ export class AppModule {}
     <iframe id="toggle-iframe-1" data-src='{environment:demosBaseUrl}/interactions/toggle' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="toggle-iframe-1" data-demos-base-url="{environment:demosBaseUrl}">                       StackBlitz で表示
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="toggle-iframe-1" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示
     </button>
 </div>
+
+***注***: デフォルトで [`closeOnOutsideClick`]({environment:angularApiUrl}/interfaces/overlaysettings.html#closeonoutsideclick) は `false` に設定されます。`true` に設定した場合、動作にいくつかの制限があります。たとえば要素が表示されているときにトグルボタンをクリックすると、外側のクリックとトグル方法が強制的に閉じられます。また外側のクリックで閉じるとアニメーションが閉じられます。更に閉じるアニメーションが開始された状態で toggle メソッドが open を呼び出します。これら 2 つのイベントは互いを無効化するため何も起こりません。以下は、無効化せずに動作させるためのオプションです。
+- 下記のように [`IgxToggleActionDirective`]({environment:angularApiUrl}/classes/igxtoggleactiondirective.html) を使用します。
+- 上記のサンプルのように [`closeOnOutsideClick`]({environment:angularApiUrl}/interfaces/overlaysettings.html#closeonoutsideclick) を `false` に設定します。
 
 ### トグル自動操作
 
@@ -244,7 +248,7 @@ export class AppModule {}
 <custom-component #reference></custom-component>
 ```
 
-### API まとめ
+### API リファレンス
 
 <div class="divider"></div>
 
@@ -255,7 +259,7 @@ export class AppModule {}
 
 <div class="divider"></div>
 
-### 追加のリソース
+### その他のリソース
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。

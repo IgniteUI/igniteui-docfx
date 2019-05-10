@@ -25,7 +25,7 @@
     - name: 行編集
       href: grid/row_editing.md
       new: true
-    - name: Row Drag
+    - name: 行ドラッグ
       href: grid/row_drag.md
       new: true
     - name: 一括編集
@@ -85,7 +85,7 @@
     - name: 条件付きセルのスタイル設定
       href: grid/conditional_cell_styling.md
       new: false
-    - name: Multi Row Layout
+    - name: 複数行レイアウト
       href: grid/multi_row_layout.md
       new: true
 - name: Tree Grid
@@ -95,7 +95,7 @@
     - name: 仮想化とパフォーマンス
       href: treegrid/virtualization.md
       new: false
-    - name: Load On Demand
+    - name: ロードオンデマンド
       href: treegrid/load_on_demand.md
       new: true
     - name: 編集
@@ -104,7 +104,7 @@
     - name: 行編集
       href: treegrid/row_editing.md
       new: false
-    - name: Row Drag
+    - name: 行ドラッグ
       href: treegrid/row_drag.md
       new: true
     - name: 一括編集
@@ -177,7 +177,7 @@
     - name: 行編集
       href: hierarchicalgrid/row_editing.md
       new: true
-    - name: Row Drag
+    - name: 行ドラッグ
       href: hierarchicalgrid/row_drag.md
       new: true
     - name: 一括編集
@@ -247,31 +247,31 @@
     - name: カスケーディング
       href: combo_cascading.md
       new: true
-# - name: Spreadsheet
-#   href: spreadsheet_overview.md
-#   new: true
-#   items:
-#     - name: アクティブ化
-#       href: spreadsheet_activation.md
-#       new: true
-#     - name: クリップボードでの作業
-#       href: spreadsheet_clipboard.md
-#       new: true
-#     - name: Conditional Formatting
-#       href: spreadsheet_conditional_formatting.md
-#       new: true
-#     - name: Spreadsheet の構成
-#       href: spreadsheet_configuring.md
-#       new: true
-#     - name: コマンドの使用
-#       href: spreadsheet_commands.md
-#       new: true
-#     - name: データ検証
-#       href: spreadsheet_data_validation.md
-#       new: true
-#     - name: Hyperlinks
-#       href: spreadsheet_hyperlinks.md
-#       new: true      
+- name: Spreadsheet
+  href: spreadsheet_overview.md
+  new: true
+  items:
+     - name: アクティブ化
+       href: spreadsheet_activation.md
+       new: true
+     - name: クリップボードでの作業
+       href: spreadsheet_clipboard.md
+       new: true
+     - name: 条件付き書式
+       href: spreadsheet_conditional_formatting.md
+       new: true
+     - name: Spreadsheet の構成
+       href: spreadsheet_configuring.md
+       new: true
+     - name: コマンド
+       href: spreadsheet_commands.md
+       new: true
+     - name: データ検証
+       href: spreadsheet_data_validation.md
+       new: true
+     - name: ハイパーリンク
+       href: spreadsheet_hyperlinks.md
+       new: true  
 - name: チャート
   header: true  
 - name: Category Chart
@@ -505,12 +505,12 @@
       new: false
     - name: サンプル
       href: themes/examples.md
-- name: Componets Roundness
+- name: 丸み付け
   href: roundness.md
   new: true
-- name: Shadows
+- name: シャドウ
   href: shadows.md
-- name: Display Density
+- name: 表示密度
   href: display_density.md
 - name: データ入力と表示
   header: true
@@ -585,10 +585,10 @@
   href: overlay_main.md
   new: true
   items:
-  - name: ポジション ストラテジー
+  - name: ポジション ストラテジ
     href: overlay_position.md
     new: true
-  - name: スクロール ストラテジー
+  - name: スクロール ストラテジ
     href: overlay_scroll.md
     new: false
 - name: Drag and Drop
