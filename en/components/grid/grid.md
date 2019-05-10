@@ -434,7 +434,6 @@ The custom template for the column, that will render the nested data:
                             // For every employee record in the Employee field, render its Name, Title and HireDate value
                         <div *ngFor="let employee of cell.value">
                             <span><strong>Name:</strong> {{employee.Name}} </span>
-                            
                             <span><strong>Title:</strong> {{employee.Title}} </span>
                             
                             <span><strong>Hire Date:</strong> {{employee.HireDate | date:'shortDate'}} </span>
