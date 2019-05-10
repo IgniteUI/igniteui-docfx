@@ -379,7 +379,7 @@ and in the template of the component:
 
 ### Complex data binding
 
-The [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html) main purpose is to handle **flat data**, but this does not mean that it is impossible to work with more complex data.
+The [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html) main purpose is to handle **flat data**, although this does not mean that it is impossible to work with more complex data.
 
 In this section we will cover, how to configure [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html) with **composite nested data** and **composite flat data**.
 
