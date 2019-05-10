@@ -95,9 +95,6 @@
     - name: Row Editing
       href: treegrid/row_editing.md
       new: false
-    - name: Row Drag
-      href: treegrid/row_drag.md
-      new: true
     - name: Batch Editing
       href: treegrid/batch_editing.md
       new: false
@@ -167,9 +164,6 @@
       new: true
     - name: Row Editing
       href: hierarchicalgrid/row_editing.md
-      new: true
-    - name: Row Drag
-      href: hierarchicalgrid/row_drag.md
       new: true
     - name: Batch Editing
       href: hierarchicalgrid/batch_editing.md
