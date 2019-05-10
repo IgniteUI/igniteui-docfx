@@ -237,6 +237,46 @@ And there we have it:
     <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="time-picker-sample-5" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
+#### Templating Input Group - dropdown mode
+
+All the information mentioned in the <a href="#templating-input-group">Templating Input Group</a> section can be applied when re-templating a dropdown mode time picker. The only additional requirement is that an HTML element inside the template should be marked with the `dropDownTarget` template reference variable to be used as an opening target for the dropdown.
+
+```html
+<igx-time-picker [value]="today" format="HH:mm" mode="dropdown">
+    <ng-template igxTimePickerTemplate let-openDialog="openDialog" let-value="value" let-displayTime="displayTime">
+        <igx-input-group>
+            <input #dropDownTarget igxInput [value]="displayTime" (blur)="onBlur(dropDownTarget.value, value)"/>
+            <igx-suffix>
+                <igx-icon (click)="openDialog()">access_time</igx-icon>
+            </igx-suffix>
+        </igx-input-group>
+    </ng-template>
+</igx-time-picker>
+```
+```typescript
+public today: Date = new Date(Date.now());
+```
+
+Note that `displayTime ` property, exposed in the template context, is **read-only**. In the example above it is used in combination with the input element **blur** event in order to achieve two-way binding.
+
+```typescript
+public onBlur(inputValue, timePickerValue) {
+    const parts = inputValue.split(":");
+
+    if (parts.length === 2) {
+        timePickerValue.setHours(parts[0], parts[1]);
+    }
+}
+```
+
+And there we have it, a re-templated time picker with dropdwon and two-way binding support:
+<div class="sample-container loading" style="height: 600px;">
+    <iframe id="time-picker-sample-6" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-6" class="lazyload"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="time-picker-sample-6" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+
 ### API References
 <div class="divider--half"></div>
 
