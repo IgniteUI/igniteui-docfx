@@ -65,7 +65,7 @@ this.state = { dataSource: SamplePolarData.create() }
 
 ### モジュールの要件
 
-The `IgxDataChart` requires the following modules:
+`IgxDataChart` には以下のモジュールが必要です。
 
 ```typescript
 // axis' modules:
@@ -86,12 +86,12 @@ import { IgxDataChartPolarModule } from "igniteui-angular-charts/ES5/igx-data-ch
 // in app.module.ts file
 @NgModule({
     imports: [
-        // ...
+        ...
         IgxDataChartModule,
         IgxDataChartCoreModule,
         IgxDataChartPolarCoreModule,
         IgxDataChartPolarModule,
-        // ...
+        ...
     ]
 })
 ```

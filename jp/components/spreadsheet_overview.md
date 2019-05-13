@@ -39,10 +39,10 @@ import { IgxSpreadsheetModule } from "igniteui-angular-spreadsheet/ES5/igx-sprea
 
 @NgModule({
     imports: [
-        // ...
+        ...
         IgxExcelModule,
         IgxSpreadsheetModule,
-        // ...
+        ...
     ]
 })
 export class AppModule {}
@@ -64,7 +64,7 @@ export class AppModule {}
 ```ts
 import { IgxSpreadsheetComponent } from "igniteui-angular-spreadsheet/ES5/igx-spreadsheet-component";
 import { ExcelUtility } from './../utilities/excel-utility';
-// ...
+...
 
 @ViewChild("spreadsheet", { read: IgxSpreadsheetComponent })
 public spreadsheet: IgxSpreadsheetComponent;

@@ -23,9 +23,9 @@ _language: ja
 
 ### 散布マーカー シリーズのタイプ
 
-次の表は、すべてのタイプの散布マーカー シリーズとその説明をまとめたものです。
+以下の表は、すべてのタイプの散布マーカー シリーズとその説明をまとめたものです。
 
-| Series Name           | Description                                                     |
+| シリーズ名                 | 説明                                                              |
 | --------------------- | --------------------------------------------------------------- |
 | `ScatterSeries`       | `XMemberPath` および `YMemberPath` プロパティにマップされたデータポイントのマーカーを表示します。 |
 | `ScatterLineSeries`   | マーカーに加えて、各データ ポイント間に直線を表示します。                                   |
@@ -35,7 +35,7 @@ _language: ja
 
 `IgxDataChart` コントロールはさまざまな軸タイプを提供しますが、散布マーカー シリーズで使用できるのは以下のタイプの軸のみです。
 
-| Series Type           | YAxis Type                 | XAxis Type                 |
+| シリーズ タイプ              | YAxis タイプ                  | XAxis タイプ                  |
 | --------------------- | -------------------------- | -------------------------- |
 | `ScatterSeries`       | `IgxNumericYAxisComponent` | `IgxNumericXAxisComponent` |
 | `ScatterLineSeries`   | `IgxNumericYAxisComponent` | `IgxNumericXAxisComponent` |
@@ -57,7 +57,7 @@ this.state = { dataSource: SampleScatterStats.getCountries() }
 
 ### モジュールの要件
 
-散布マーカーｂ シリーズは以下のモジュールを要求します。
+散布マーカー シリーズは以下のモジュールが必要です。
 
 ```typescript
 // axis' modules:
@@ -76,7 +76,7 @@ import { IgxDataChartScatterModule } from "igniteui-angular-charts/ES5/igx-data-
 
 @NgModule({
     imports: [
-        // ...
+        ...
         IgxDataChartModule,
         IgxDataChartCoreModule,
         IgxDataChartScatterCoreModule,
