@@ -97,11 +97,11 @@ import { IgxDataChartCategoryModule } from 'igniteui-angular-charts/ES5/igx-data
 
 @NgModule({
     imports: [
-        // ...
+        ...
         IgxDataChartModule,
         IgxDataChartCoreModule,
         IgxDataChartCategoryModule,
-        // ...
+        ...
     ]
 })
 ```

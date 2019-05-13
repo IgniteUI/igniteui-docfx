@@ -92,7 +92,7 @@ this.state = { dataSource: SampleFinancialData.create() }
 
 ### モジュールの要件
 
-The financial series require the following modules:
+ファイナンシャル シリーズには以下のモジュールが必要です。
 
 ```typescript
 // axis' modules:
@@ -109,10 +109,10 @@ import { IgxDataChartCoreModule } from "igniteui-angular-charts/ES5/igx-data-cha
 // in app.module.ts file
 @NgModule({
     imports: [
-        // ...
+        ...
         IgxDataChartModule,
         IgxDataChartCoreModule,
-        // ...
+        ...
     ]
 })
 ```

@@ -13,7 +13,7 @@ _language: ja
 -   [ファイナンシャル シリーズ](datachart_series_types_financial.md)の [SampleFinancialData](datachart_data_sources_financial.md)
 -   [極座標シリーズ](datachart_series_types_polar.md)の [SamplePolarData](datachart_data_sources_polar.md)
 -   [ラジアル シリーズ](datachart_series_types_radial.md)の [SampleRadialData](datachart_data_sources_radial.md)
--   [散布図 - 範囲シリーズ](datachart_series_types_range.md)の [SampleRangeData](datachart_data_sources_range.md)
+-   [散布図 - エリア シリーズ](datachart_series_types_range.md)の [SampleRangeData](datachart_data_sources_range.md)
 -   [散布図 -  HD シリーズ](datachart_series_types_scatter_hd.md)の [SampleDensityData](datachart_data_sources_density.md)
 -   [散布図 - エリア シリーズ](datachart_series_types_scatter_area.md)の [SampleScatterData](datachart_data_sources_scatter.md)
 -   [散布図 - 等高線シリーズ](datachart_series_types_scatter_contour.md)の [SampleScatterData](datachart_data_sources_scatter.md)
