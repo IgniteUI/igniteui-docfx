@@ -1,8 +1,8 @@
 ﻿@@if (igxName === 'IgxGrid') {
 ---
-title: Grid Editing - Native Angular | Ignite UI for Angular
-_description: The Ignite UI for Angular Data Grid control provides default cell templates for editable columns which are based on the data type of the column.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Component, Angular Grid, Angular Table, Angular Data Grid component, Angular Data Table component, Angular Data Grid control, Angular Data Table control, Angular Grid component, Angular Table component, Angular Grid control, Angular Table control, Angular High Performance Grid, Angular High Performance Data Table, Cell Editing, Data Grid Cell Editing, Data Table Cell Editing
+title: Angular Grid | Data Manipulation | Infragistics
+_description: Configure in cell data manipulation with the feature rich angular ui grid, try the update data features and angular crud by using the Ignite UI Angular Grid.
+_keywords: Data Manipulation, IgniteUI for Angular, Infragistics
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
@@ -20,9 +20,9 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ---
 }
 
-### @@igComponent Editing
+### @@igComponent cell editing and edit templates 
 
-The @@igComponent component in Ignite UI for Angular provides you with default cell templates for editable columns which are based on the data type of the column. In addition you can define your own custom templates for editable columns and override default behavior for committing and discarding changes in the cell value.
+Ignite UI for Angular @@igComponent component provides a great data manipulation capabilities and powerful API for Angular CRUD operations. By default the @@igComponent is using `in cell` editing and different editors will be shown based on the data type of the column, thanks to the default cell editing template. In addition you can define your own custom templates for update data actions and override default behavior for committing and discarding any changes.
 
 #### Demo
 
