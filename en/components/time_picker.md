@@ -269,7 +269,7 @@ public onBlur(inputValue, timePickerValue) {
 }
 ```
 
-And there we have it, a re-templated time picker with dropdwon and two-way binding support:
+And there we have it, a re-templated time picker with dropdown and two-way binding support:
 <div class="sample-container loading" style="height: 600px;">
     <iframe id="time-picker-sample-6" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-6" class="lazyload"></iframe>
 </div>
