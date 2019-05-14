@@ -340,30 +340,30 @@
         - name: ラジアル シリーズ 
           href: datachart_series_types_radial.md
           new: true
-        - name: 範囲シリーズ 
+        - name: エリア シリーズ 
           href: datachart_series_types_range.md
           new: true
-        - name: 散布エリア シリーズ 
+        - name: 散布図 - エリア シリーズ 
           href: datachart_series_types_scatter_area.md
           new: true
-        - name: 散布等高線シリーズ
+        - name: 散布図 - 等高線シリーズ
           href: datachart_series_types_scatter_contour.md
           new: true
-        - name: 散布バブル シリーズ 
+        - name: 散布図 - バブル シリーズ 
           href: datachart_series_types_scatter_bubble.md
           new: true
         # - name: Scatter HD Series
         #  href: datachart_series_types_scatter_hd.md
         #  new: true
-        - name: 散布マーカー シリーズ
+        - name: 散布図 - マーカー シリーズ
           href: datachart_series_types_scatter_marker.md
           new: true
-        - name: 散布図形シリーズ
+        - name: 散布図 - 図形シリーズ
           href: datachart_series_types_shape.md
           new: true
-        # - name: Stacked Series
-        #   href: datachart_series_types_stacked.md
-        #   new: true
+        - name: 積層シリーズ
+          href: datachart_series_types_stacked.md
+          new: true
     #- name: Animations
     #  href: datachart_series_animations.md
     #  new: true
