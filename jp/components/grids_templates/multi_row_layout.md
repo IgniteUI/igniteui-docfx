@@ -20,11 +20,9 @@ _language: ja
  複数行レイアウトの宣言は、[`igx-column-layout`]({environment:angularApiUrl}/classes/igxcolumnlayoutcomponent.html) コンポーネントによって実現されます。各 `igx-column-layout` コンポーネントは、単一または複数の `igx-column` コンポーネントを含むブロックと見なします。一部のグリッド機能はブロック レベルで機能します (下記の「機能の統合」セクション参照)。たとえば、仮想化ではブロックを使用して仮想チャンクを決定します。そのため、レイアウトで許容される場合は、パフォーマンスを向上させるために列を更に `igx-column-layout` ブロックに分割します。複数行のレイアウトを設定するときは、これらのブロックの外側に列がなく、`IgxColumnGroupComponent` を使用しないでください。Multi Row Layout は、[グリッド レイアウト](https://www.w3.org/TR/css-grid-1/)仕様上に実装されており、その要件に準拠する必要があります。	
  `IgxColumnComponent` は各セルの位置と範囲を決めるために 4 つの `@Input` プロパティを公開しています。	
 * [`colStart`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#colstart) - フィールドの開始位置となる列インデックス。このプロパティは**必須**です。	
-* [`rowStart`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#rowstart) - 	
-フィールドの開始位置となる行インデックス。このプロパティは**必須**です。
+* [`rowStart`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#rowstart) - フィールドの開始位置となる行インデックス。このプロパティは**必須**です。
 * [`colEnd`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#colend) - 現在のフィールドが終了する位置の列インデックス。colStart と colEnd の間の列数によって、そのフィールドまでの列の幅が決まります。このプロパティは**オプション**です。設定されていない場合は、デフォルトで 1 に設定されます。	
-* [`rowEnd`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#rowend) - 	
-現在のフィールドが終了する行インデックス。rowStart と rowEnd の間の行数によって、そのフィールドにまたがる行数が決まります。このプロパティは**オプション**です。設定されていない場合は、デフォルトで `rowStart + 1` に設定されます。	
+* [`rowEnd`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#rowend) - 現在のフィールドが終了する行インデックス。rowStart と rowEnd の間の行数によって、そのフィールドにまたがる行数が決まります。このプロパティは**オプション**です。設定されていない場合は、デフォルトで `rowStart + 1` に設定されます。	
 
 
  ```html	
@@ -71,18 +69,18 @@ Multi Row Layout のレンダリング方法は全く異なるため、列固定
 
  ### キーボード ナビゲーション	
 
- * <kbd>TAB</kbd> は行の左から右へ次のセルに移動します (定義されている列ブロックの影響は受けません)。	
-* <kbd>Shift</kbd> + <kbd>TAB</kbd> 行の右から左に前のセルに移動します (定義されている列ブロックの影響は受けません)。	
-* <kbd>Arrow left</kbd> and <kbd>Arrow right</kbd> は、現在行内の左右に隣接するセルに移動します (定義されている列ブロックの影響を受けません)。	
-* <Kbd>上矢印</kbd> と <kbd>下矢印</kbd> は、共通の境界を共有する上下のセルに移動します。複数のセルと境界を共有する場合は、最も左にあるものが優先されます。	
+* <kbd>TAB</kbd> は行の左から右へ次のセルに移動します (定義されている列ブロックの影響は受けません)。
+* <kbd>Shift</kbd> + <kbd>TAB</kbd> 行の右から左に前のセルに移動します (定義されている列ブロックの影響は受けません)。
+* <kbd>Arrow left</kbd> and <kbd>Arrow right</kbd> は、現在行内の左右に隣接するセルに移動します (定義されている列ブロックの影響を受けません)。
+* <kbd>上矢印</kbd> と <kbd>下矢印</kbd> は、共通の境界を共有する上下のセルに移動します。複数のセルと境界を共有する場合は、最も左にあるものが優先されます。
 
  ### API リファレンス	
 <div class="divider--half"></div>	
 
- * [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)	
-* [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-grid-theme)	
-* [IgxColumnLayoutComponent]({environment:angularApiUrl}/classes/igxcolumnlayoutcomponent.html)	
-* [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)	
+* [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
+* [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [IgxColumnLayoutComponent]({environment:angularApiUrl}/classes/igxcolumnlayoutcomponent.html)
+* [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 <div class="divider--half"></div>	
 
  ### その他のリソース	
@@ -96,8 +94,7 @@ Multi Row Layout のレンダリング方法は全く異なるため、列固定
 * [選択](selection.md)	
 
  <div class="divider--half"></div>	
-
 コミュニティに参加して新しいアイデアをご提案ください。
 	
- * [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)	
+* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)	
 * [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
