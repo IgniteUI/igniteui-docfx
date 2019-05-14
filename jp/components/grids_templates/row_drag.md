@@ -1,30 +1,33 @@
-@@if (igxName === 'IgxGrid') {
+﻿@@if (igxName === 'IgxGrid') {
 ---
-title: Grid Row Drag
-_description: The Ignite UI for Angular Data Grid control features the fastest, touch-responsive data-rich grid with popular features, including hierarchical and list views.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Grid, Angular Table, Angular Data Grid component, Angular Data Table component, Angular Data Grid control, Angular Data Table control, Angular Grid component, Angular Table component, Angular Grid control, Angular Table control, Angular High Performance Grid, Angular High Performance Data Table, Row Drag, Row Dragging, Data Grid Row Drag, Data Table Row Drag
+title: グリッド行のドラッグ
+_description: The Ignite UI for Angular Data Grid コントロールは、階層ビューやリストビューなどの需要の高い機能を備えた、最速でタッチレスポンス、データリッチなグリッドが実現できます。
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Grid, Angular Table, Angular Data Grid コンポーネント, Angular Data Table コンポーネント, Angular Data Grid コントロール, Angular Data Table コントロール, Angular Grid コンポーネント, Angular Table コンポーネント, Angular Grid コントロール, Angular Table コントロール, Angular 高パフォーマンス Grid, Angular 高パフォーマンス Data Table, Row Drag, Row Dragging, Data Grid Row Drag, Data Table Row Drag
+_language: ja
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Tree Grid Row Drag
-_description: The Ignite UI for Angular Tree Grid control features the fastest, touch-responsive data-rich tree grid with popular features, including hierarchical and list views.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Tree Grid, Angular Tree Table, Angular Tree Grid component, Angular Tree Table component, Angular Tree Grid control, Angular Tree Table control, Angular Tree Grid component, Angular Tree Table component, Angular Tree Grid control, Angular Tree Table control, Angular High Performance Tree Grid, Angular High Performance Tree Table, Row Drag, Row Dragging, Tree Grid Row Drag, Tree Table Row Drag
+title: ツリー グリッド行ドラッグ
+_description: Ignite UI for Angular Tree Grid コントロールは、タッチ レスポンシブ、データリッチなツリー データ グリッドで階層およびリスト ビューなどの機能があります。
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Tree Grid, Angular Tree Table, Angular Tree Grid コンポーネント, Angular Tree Table コンポーネント, Angular Tree Grid コントロール, Angular Data Tree Table コントロール, Angular Tree Grid コンポーネント, Angular Tree Table コンポーネント, Angular Tree Grid コントロール, Angular Tree Table コントロール, Angular 高パフォーマンス Tree Grid, Angular 高パフォーマンス Tree Table, Row Drag, Row Dragging, Tree Grid Row Drag, Tree Table Row Drag
+_language: ja
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Hierarchical Grid Row Drag
-_description: The Ignite UI for Angular Hierarchical Grid control features the fastest, touch-responsive data-rich tree grid with popular features.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Hierarchical Grid, Angular Hierarchical Table, Angular Hierarchical Grid component, Angular Hierarchical Table component, Angular Hierarchical Grid control, Angular Hierarchical Table control, Angular High Performance Hierarchical Grid, Angular High Performance Hierarchical Table, Row Drag, Row Dragging, Hierarchical Grid Row Drag, Hierarchical Table Row Drag
+title: 階層グリッドの行ドラッグ
+_description: Ignite UI for Angular Hierarchical Grid コントロールは、高速でタッチ レスポンシブが有効なデータ リッチなツリーグリッドです。
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Tree Grid, Angular Tree Table, Angular Tree Grid コンポーネント, Angular Tree Table コンポーネント, Angular Tree Grid コントロール, Angular Data Tree Table コントロール, Angular Tree Grid コンポーネント, Angular Tree Table コンポーネント, Angular Tree Grid コントロール, Angular Tree Table コントロール, Angular 高パフォーマンス Tree Grid, Angular 高パフォーマンス Tree Table, Row Drag, Row Dragging, Hierarchical Grid Row Drag, Hierarchical Table Row Drag
+_language: ja
 ---
 }
 
-### @@igComponent Row Drag
+### @@igComponent 行ドラッグ
 
-In Ignite UI for Angular @@igComponent, **RowDrag** is initialized on the root `@@igSelector` component and is configurable via the [`rowDraggable`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowdraggable) input. Enabling row dragging provides users with a row drag-handle with which they can initiate dragging of a row.
+Ignite UI for Angular @@igComponent では、**RowDrag** がルート `@@igSelector` コンポーネントで初期化されて、`paging`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#paging) と [`rowDraggable`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowdraggable) 入力で設定できます。行ドラッグを有効にすると、ユーザーは行ドラッグ ハンドルを使用して行のドラッグを開始できます。
 
-#### Demo
+#### デモ
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:550px">
@@ -32,7 +35,7 @@ In Ignite UI for Angular @@igComponent, **RowDrag** is initialized on the root `
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-row-drag-to-grid-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-row-drag-to-grid-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
 </div>
 }
 
@@ -42,7 +45,7 @@ In Ignite UI for Angular @@igComponent, **RowDrag** is initialized on the root `
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-row-drag-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-row-drag-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -53,37 +56,37 @@ In Ignite UI for Angular @@igComponent, **RowDrag** is initialized on the root `
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-row-drag-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-row-drag-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 }
 
-#### Configuration
+#### 構成
 
-In order to enable row-dragging for your `@@igSelector`, all you need to do is set the grid's [`rowDraggable`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowdraggable) to **`true`**. Once this is enabled, a row-drag handle will be displayed on each row. This handle can be used to initiate row dragging.
+`@@igSelector` の行ドラッグを有効にするには、グリッドの [`rowDraggable`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowdraggable) を **`true`** に設定します。これが有効になると、行ドラッグ ハンドルが各行に表示されます。このハンドルは行ドラッグを開始するために使用できます。
 
 ```html
 <@@igSelector [rowDraggable]="true">
  ...
 </@@igSelector>
 ```
-Clicking on the drag-handle and *moving the cursor* while holding down the button will cause the grid's [`onRowDragStart`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onrowdragstart) event to fire. Releasing the click at any time will cause [`onRowDragEnd`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onrowdragend) event to fire.
+ドラッグ ハンドルをクリックしてボタンを押しながらカーソルを動かすと、グリッドの [`onRowDragStart`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onrowdragstart) イベントが発生します。クリックをリリースすると、[`onRowDragEnd`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onrowdragend) イベントが発生します。
 
-Below, you can find a walkthrough on how to configure an `@@igSelector` to support row dragging and how to properly handle the drop event.
+以下は、行ドラッグをサポートするための `@@igSelector` の設定方法と、ドロップイベントの適切な処理方法についてのチュートリアルです。
 
 @@if (igxName === 'IgxTreeGrid' || igxName === 'IgxHierarchicalGrid') {
-In this example, we'll handle dragging a row from a grid to a designated area and, when dropping it, removing it from the grid.
+この例では、グリッドから指定された領域に行をドラッグし、ドロップするとグリッドから削除します。
 }
 @@if (igxName === 'IgxGrid') {
-In this example, we'll handle dragging a row from one grid to another, removing it from the first data source and adding it to the second.
+この例では、あるグリッドから別のグリッドに行をドラッグし、それを最初のデータソースから削除し、それを 2 番目のデータソースに追加します。
 }
 
-##### Drop Areas
+##### ドロップエリア
 
-Enabling row-dragging was pretty easy, but now we have to configure how we'll handle row-*dropping*.
-We can define where we want our rows to be dropped using the [`igxDrop` directive](../drag_drop.md).
+行ドラッグを簡単に有効にできました。次は行ドロップを処理する方法を設定する必要があります。
+[`igxDrop` directive](../drag_drop.md) ディレクティブを使用して、行をドロップする場所を定義できます。
 
-First we need to import the `IgxDragDropModule` in our app module:
+はじめに、アプリ モジュールに IgxDragDropModule をインポートする必要があります。
 
 ```typescript
 import { ..., IgxDragDropModule } from 'igniteui-angular';
@@ -93,7 +96,7 @@ import { ..., IgxDragDropModule } from 'igniteui-angular';
 })
 ```
 
-Then, in our template, we define a drop-area using the directive's selector:
+次にテンプレートでディレクティブのセレクターを使ってドロップ エリアを定義します。
 
 @@if (igxName === 'IgxTreeGrid' || igxName === 'IgxHierarchicalGrid') {
 ```html
@@ -105,7 +108,7 @@ Then, in our template, we define a drop-area using the directive's selector:
 ```
 }
 @@if (igxName === 'IgxGrid') {
-In this case, our drop-area will be a whole second grid where we'll drop the rows.
+この場合、ドロップ領域は行をドロップする 2 番目のグリッドになります。
 ```html
 <igx-grid #targetGrid igxDrop [data]="data2" [autoGenerate]="false" [emptyGridTemplate]="dragHereTemplate"
     (onEnter)="onEnterAllowed($event)" (onLeave)="onLeaveAllowed($event)" (onDrop)="onDropAllowed($event)" [primaryKey]="'ID'">
@@ -113,7 +116,7 @@ In this case, our drop-area will be a whole second grid where we'll drop the row
 </igx-grid>
 ```
 
-Since the grid will initially be empty, we also define a template that will be more meaningful to the user:
+グリッドは最初空のため、ユーザーにとってより意味のあるテンプレートを定義します。
 
 ```html
 <ng-template #dragHereTemplate>
@@ -122,11 +125,11 @@ Since the grid will initially be empty, we also define a template that will be m
 ```
 }
 
-##### Drop Area Event Handlers
+##### ドロップ エリア イベント ハンドラー
 
-Once we've defined our drop-area in the template, we have to declare our handlers for the `igxDrop`'s [`onEnter`]({environment:angularApiUrl}/classes/igxdropdirective.html#onenter), [`onLeave`]({environment:angularApiUrl}/classes/igxdropdirective.html#onleave) and [`onDrop`]({environment:angularApiUrl}/classes/igxdropdirective.html#ondrop) events in our component's `.ts` file.
+テンプレートでドロップ領域を定義したら、コンポーネントの `.ts` ファイルで `igxDrop`'s [`onEnter`]({environment:angularApiUrl}/classes/igxdropdirective.html#onenter)、[`onLeave`]({environment:angularApiUrl}/classes/igxdropdirective.html#onleave)、[`onDrop`]({environment:angularApiUrl}/classes/igxdropdirective.html#ondrop) イベントを宣言する必要があります。
 
-First, let's take a look at our `onEnter` and `onLeave` handlers. In those methods, we just want to change the icon of the drag's *ghost* so we can indicate to the user that they are above an area that allows them to drop the row:
+はじめに、onEnter と onLeave ハンドラーを見てみましょう。これらのメソッドでは、ドラッグの **ghost** のアイコンを変更して、行をドロップできる領域の上にあることをユーザーに示すことができます。
 
 ```typescript
 export class @@igxNameRowDragComponent {
@@ -150,8 +153,8 @@ export class @@igxNameRowDragComponent {
 
 }
 ```
-The `changeGhostIcon` **private** method just changes the icon inside of the drag ghost. The logic in the method finds the element that contains the icon (using the `igx-grid__drag-indicator` class that is applied to the drag-indicator container), changing the element's inner text to the passed one.
-The icons themselves are from the [`material` font set](https://material.io/tools/icons/) and are defined in a separate **`enum`**:
+`changeGhostIcon` **private** メソッドは、ドラッグ ゴースト内のアイコンを変更するだけです。メソッドのロジックは、アイコンを含む要素を検索し (ドラッグ インジケーター コンテナに適用される `igx-grid__drag-indicator` クラスを使用)、要素の内部テキストを渡されたものに変更します。
+アイコンは [`material` フォントセット](https://material.io/tools/icons/)からのもので、別の**`列挙型`**で定義されています。
 @@if (igxName === 'IgxTreeGrid' || igxName === 'IgxHierarchicalGrid') {
 ```typescript
 enum DragIcon {
@@ -169,7 +172,7 @@ enum DragIcon {
 ```
 }
 
-Next, we have to define what should happen when the user actually *drops* the row inside of the drop-area.
+次に、ユーザーが実際にドロップ領域内に行を**ドロップ**したときに何が起こるかを定義する必要があります。
 @@if (igxName === 'IgxTreeGrid' || igxName === 'IgxHierarchicalGrid') {
 ```typescript
 export class @@igxNameRowDragComponent {
@@ -183,9 +186,9 @@ export class @@igxNameRowDragComponent {
 }
 ```
 
-Once the row is dropped, we just do the following:
-- cancel the event
-- call the row's [`delete()`]({environment:angularApiUrl}/classes/@@igxNameRowComponent.html#delete) method
+行をドロップした後は、以下のようにします。
+- イベントのキャンセル
+- 行の [`delete()`]({environment:angularApiUrl}/classes/@@igxNameRowComponent.html#delete) メソッドを呼び出します。
 }
 
 @@if (igxName === 'IgxGrid') {
@@ -203,16 +206,16 @@ export class @@igxNameRowDragComponent {
 }
 ```
 
-We define a refenrece to each of our grids via the `ViewChild` decorator and the handle the drop as follows:
-- cancel the event
-- add a row to the `targetGrid` that contains the data of the row being dropped
-- remove the dragged row from the `sourceGrid`
+次のように `ViewChild` デコレータを使用して各グリッドに refenrece を定義し、ドロップを処理します。
+- イベントのキャンセル
+- 削除される行のデータを含む行を `targetGrid` に追加します。
+- `sourceGrid` からドラッグした行を削除します
 }
 
-##### Templating the drag icon
-The drag handle icon can be templated using the grid's [`dragIndicatorIconTemplate`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#dragindicatoricontemplate). In the example we're building, let's change the icon from the default one (`drag_indicator`) to `drag_handle`.
+##### ドラッグ アイコンのテンプレート化
+ドラッグ ハンドル アイコンは、グリッドの [`dragIndicatorIconTemplate`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#dragindicatoricontemplate) を使用してテンプレート化できます。作成している例で、アイコンをデフォルトのもの (`drag_indicator`) から `drag_handle` に変更します。
 @@if (igxName === 'IgxTreeGrid' || igxName === 'IgxGrid') {
-To do so, we can use the `igxDragIndicatorIcon` to pass a template inside of the `@@igSelector`'s body:
+`igxDragIndicatorIcon` を使用して `@@igSelector` のボディ内にテンプレートを渡して変更できます。
 ```html
 <@@igSelector>
 ...
@@ -224,7 +227,7 @@ To do so, we can use the `igxDragIndicatorIcon` to pass a template inside of the
 ```
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-To do so, we need to define a template in our component's template, get it as a `ViewChild` and pass it to the @@igxName's `dragIndicatorIconTemplate` property
+コンポーネントのテンプレートでテンプレートを定義し、それを `ViewChild` として取得して　@@igxName の `dragIndicatorIconTemplate` プロパティに渡して変更できます。
 
 ```html
 <@@igSelector>
@@ -248,7 +251,7 @@ export class @@igxNameRowDragComponent implements AfterViewInit{
 ```
 }
 
-Once we've set the new icon template, we also need to adjust the `DEFAULT` icon in our `DragIcon enum`, so it's properly change by the `changeIcon` method:
+新しいアイコン テンプレートの設定後、`DragIcon enum` の `DEFAULT` アイコンも調整する必要があるため、`changeIcon` メソッドによって適切に変更されます。
 ```typescript
 enum DragIcon {
     DEFAULT = "drag_handle",
@@ -257,8 +260,8 @@ enum DragIcon {
 ```
 
 @@if (igxName === 'IgxTreeGrid' || igxName === 'IgxHierarchicalGrid') {
-##### Styling the drop area
-Once our drop handlers are properly configured, all that's left is to style our drop area a bit:
+##### ドロップ エリアのスタイル
+ドロップ ハンドラが正しく設定されたら、次にドロップ領域をスタイル設定します。
 ```css
 .drop-area {
     width: 160px;
@@ -282,21 +285,21 @@ Once our drop handlers are properly configured, all that's left is to style our 
 }
 ```
 
-The result can be seen in the demo below:
+結果は以下のデモで確認できます。
 }
 @@if (igxName === 'IgxGrid') {
-Once our drop handlers are properly configured, we're good to go!
-The result of the configuration can be seem below:
+ドロップ ハンドラが正しく設定されたら、準備完了です。
+以下は、設定の結果です。
 }
 
-##### Example Demo
+##### デモ
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:550px">
     <iframe id="grid-row-drag-to-grid-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-row-drag-to-grid' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-row-drag-to-grid-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-row-drag-to-grid-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
 </div>
 }
 
@@ -306,7 +309,7 @@ The result of the configuration can be seem below:
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-row-drag-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-row-drag-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -317,35 +320,35 @@ The result of the configuration can be seem below:
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-row-drag-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-row-drag-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 }
 
-#### Limitations
+#### 制限
 
-There are a couple of things that need to be considered when using the `rowDraggable` directive:
+`rowDraggable` ディレクティブを使用するときに考慮する必要があることがいくつかあります。
 > [!NOTE]
-> When handling the row-drop event, the `eventArgs.cancel` should be set to **`true`** in order to prevent leftover elements from the row drag ghost from being visible 
+> 行ドロップイベントを処理するときは、行ドラッグゴーストの残りの要素が表示されないようにするため、`eventArgs.cancel` を **`true`** に設定する必要があります。 
 @@if (igxName === 'IgxHierarchicalGrid') {
 > [!NOTE]
-> When using `rowDraggable` with an @@igSelector, the [`dragIndicatorIconTemplate`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#dragindicatoricontemplate) cannot be set through the template, as a `ContentChild`. Instead, you can get a reference to the template (via `ViewChild` decorator) and pass it to the grid `myHGrid.dragIndicatorIconTemplate: TemplateRef = myCustomTemplate` 
+> `rowDraggable` を @@igSelector と一緒に使用する場合、[`dragIndicatorIconTemplate`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#dragindicatoricontemplate) は `ContentChild` としてテンプレートから設定できません。代わりに、(`ViewChild` デコレ―タを介して) テンプレートへの参照を取得し、それをグリッド `myHGrid.dragIndicatorIconTemplate: TemplateRef = myCustomTemplate` に渡すことができます。 
 }
 
-### API References
+### API リファレンス
 
 * [rowDraggable]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowdraggable)
 * [onRowDragStart]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onrowdragstart)
 * [onRowDragEnd]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onrowdragend)
 * [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
 
-### Additional Resources
+### その他のリソース
 <div class="divider--half"></div>
 
-* [@@igComponent Overview](@@igMainTopic.md)
+* [@@igComponent 概要](@@igMainTopic.md)
 
 <div class="divider--half"></div>
-Our community is active and always welcoming to new ideas.
+コミュニティに参加して新しいアイデアをご提案ください。
 
 * [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
 * [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
