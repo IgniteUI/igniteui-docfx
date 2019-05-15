@@ -1,12 +1,12 @@
 ---
-title: Overlay サービス - スクロール ストラテジー
+title: Overlay サービス - スクロール ストラテジ
 _description: オーバレイ サービスの IScrollStrategy インターフェイスと実装するクラスについての説明とその例です。
 _language: ja
 ---
 
-## スクロール ストラテジー
+## スクロール ストラテジ
 
-スクロール ストラテジーは、IgxOverlayService でスクロールが処理される方法を決定する以下の 4 つがあります。
+スクロール ストラテジは、IgxOverlayService でスクロールが処理される方法を決定する以下の 4 つがあります。
 1. **NoOperation** -  何もしません。
 2. **Block** - コンポーネントはウィンドウでスクロールしません。イベントはキャンセルされてスクロールは発生しません。
 3. **Close** - 許容値を使用して許容範囲を超えた場合にスクロールで展開したコンポーネントを閉じます。
@@ -28,7 +28,7 @@ this.scrollStrategy.detach();
 <div class="divider--half"></div>
 
 ### 作業の開始
-ポジション ストラテジーは、[`overlay.attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) メソッドが呼ばれたときに [`overlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) パラメーターのプロパティとして渡されます。
+ポジション ストラテジは、[`overlay.attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) メソッドが呼ばれたときに [`overlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) パラメーターのプロパティとして渡されます。
 ```typescript
     // Initializing and using overlay settings
     const overlaySettings: OverlaySettings = {
@@ -55,7 +55,7 @@ this.scrollStrategy.detach();
 
 ### 依存関係
 
-以下は、スクロール ストラテジーをインポートする方法です。
+以下は、スクロール ストラテジをインポートする方法です。
 
 ```typescript
 import { NoOpScrollStrategy } from "./scroll/NoOpScrollStrategy";
