@@ -210,7 +210,7 @@ We define a refenrece to each of our grids via the `ViewChild` decorator and the
 }
 
 > [!NOTE]
-> When using row data from the event arguments (`args.dragData.rowData`) or any other row property, know that the entire row is a passed in the arguments as a reference, which means that you need to clone the data you need, if you want to distinguish it from the one in the source grid.
+> When using row data from the event arguments (`args.dragData.rowData`) or any other row property, the entire row is passed in the arguments as a reference, which means that you need to clone the data you need, if you want to distinguish it from the one in the source grid.
 
 ##### Templating the drag icon
 The drag handle icon can be templated using the grid's [`dragIndicatorIconTemplate`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#dragindicatoricontemplate). In the example we're building, let's change the icon from the default one (`drag_indicator`) to `drag_handle`.

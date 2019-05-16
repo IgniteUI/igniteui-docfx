@@ -213,7 +213,7 @@ export class @@igxNameRowDragComponent {
 }
 
 > [!NOTE]
-> When using row data from the event arguments (`args.dragData.rowData`) or any other row property, know that the entire row is a passed in the arguments as a reference, which means that you need to clone the data you need, if you want to distinguish it from the one in the source grid.
+> When using row data from the event arguments (`args.dragData.rowData`) or any other row property, the entire row is passed in the arguments as a reference, which means that you need to clone the data you need, if you want to distinguish it from the one in the source grid.
 
 ##### ドラッグ アイコンのテンプレート化
 ドラッグ ハンドル アイコンは、グリッドの [`dragIndicatorIconTemplate`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#dragindicatoricontemplate) を使用してテンプレート化できます。作成している例で、アイコンをデフォルトのもの (`drag_indicator`) から `drag_handle` に変更します。
