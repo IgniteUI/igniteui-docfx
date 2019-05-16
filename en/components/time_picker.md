@@ -239,13 +239,13 @@ And there we have it:
 
 #### Templating Input Group - dropdown mode
 
-All the information mentioned in the <a href="#templating-input-group">Templating Input Group</a> section can be applied when re-templating a dropdown mode time picker. The only additional requirement is that an HTML element inside the template should be marked with the `dropDownTarget` template reference variable to be used as an opening target for the dropdown.
+All the information mentioned in the <a href="#templating-input-group">Templating Input Group</a> section can be applied when re-templating a dropdown mode time picker. The only additional requirement is that an HTML element inside the template should be marked with the `dropDownTarget` template reference variable to be used as an opening target for the dropdown. Otherwise the dropdown will not be opened and you will get an error message in the console that advise you to do so.
 
 ```html
-<igx-time-picker [value]="today" format="HH:mm" mode="dropdown">
+<igx-time-picker #picker [value]="today" format="HH:mm" mode="dropdown">
     <ng-template igxTimePickerTemplate let-openDialog="openDialog" let-value="value" let-displayTime="displayTime">
         <igx-input-group>
-            <input #dropDownTarget igxInput [value]="displayTime" (blur)="onBlur(dropDownTarget.value, value)"/>
+            <input #dropDownTarget igxInput [value]="displayTime" (blur)="onBlur(dropDownTarget.value, value, picker)"/>
             <igx-suffix>
                 <igx-icon (click)="openDialog()">access_time</igx-icon>
             </igx-suffix>
@@ -257,14 +257,21 @@ All the information mentioned in the <a href="#templating-input-group">Templatin
 public today: Date = new Date(Date.now());
 ```
 
-Note that `displayTime ` property, exposed in the template context, is **read-only**. In the example above it is used in combination with the input element **blur** event in order to achieve two-way binding.
+Note that `displayTime` property, exposed in the template context, is **read-only**. In the example above it is used in combination with the input element **blur** event in order to achieve two-way binding.
 
 ```typescript
-public onBlur(inputValue, timePickerValue) {
-    const parts = inputValue.split(":");
+public today: Date = new Date(Date.now());
 
-    if (parts.length === 2) {
-        timePickerValue.setHours(parts[0], parts[1]);
+public onBlur(inputValue: string, value: Date, picker: IgxTimePickerComponent) {
+    const parts = inputValue.split(/[\s:]+/);
+
+    const hour = parseInt(parts[0], 10);
+    const minutes = parseInt(parts[1], 10);
+
+    if (picker.validHourEntries.indexOf(hour) !== -1 && picker.validMinuteEntries.indexOf(minutes) !== -1) {
+        value.setHours(hour, minutes);
+    } else {
+        throw new Error("This is not a valid hour.");
     }
 }
 ```
