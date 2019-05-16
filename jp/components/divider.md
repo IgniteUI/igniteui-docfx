@@ -80,8 +80,8 @@ _language: ja
 ### API リファレンス
 <div class="divider--half"></div>
 
-* [IgxAvatarComponent]({environment:angularApiUrl}/classes/dividerurl.html)
-* [IgxAvatarComponent スタイル]({environment:sassApiUrl}/index.html#dividerurl)
+* [IgxDividerDirective]({environment:angularApiUrl}/classes/igxdividerdirective.html)
+* [IgxDividerDirective Styles]({environment:sassApiUrl}/index.html#function-igx-divider-theme)
 
 ### その他のリソース
 <div class="divider--half"></div>
