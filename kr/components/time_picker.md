@@ -231,7 +231,7 @@ And there we have it:
 
 #### Templating Input Group - dropdown mode
 
-All the information mentioned in the <a href="#templating-input-group">Templating Input Group</a> section can be applied when re-templating a dropdown mode time picker. The only additional requirement is that an HTML element inside the template should be marked with the `dropDownTarget` template reference variable to be used as an opening target for the dropdown. Otherwise the dropdown will not be opened and you will get an error message in the console that advise you to do so.
+All the information mentioned in the <a href="#templating-input-group">Templating Input Group</a> section can be applied when re-templating a dropdown mode time picker. The only additional requirement is that an HTML element inside the template should be marked with the `dropDownTarget` template reference variable to be used as an opening target for the dropdown. Otherwise, the dropdown will not be opened and you will get an error message in the console that advise you to do so.
 
 ```html
 <igx-time-picker #picker [value]="today" format="HH:mm" mode="dropdown">
