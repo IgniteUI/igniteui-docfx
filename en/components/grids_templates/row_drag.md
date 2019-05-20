@@ -325,6 +325,24 @@ The result of the configuration can be seem below:
 <div class="divider--half"></div>
 }
 
+@@if (igxName === 'IgxGrid') {
+### Application Demo
+The following demo demonstrates how to use row drag event information to change both states of a custom component, where the row is dropped, and the source grid itself.
+Try to drag moons from the grid and drop them to their corresponding planets. Row drag ghost background is dynamically changed, depending on the hovered planet. If you succeed then the row in the grid will be selected and dragging will be disabled for it. Clicking planets will give you useful information.
+
+<div class="sample-container loading" style="height:560px">
+    <iframe id="grid-row-drag-1" src='{environment:demosBaseUrl}/grid/grid-row-drag' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-row-drag-1" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+
+> [!NOTE] The classes applied to the row drag ghost, used in the demo above, are using ::ng-deep modifier, because row drag is an internal grid feature and cannot be accessed on application level, due to the CSS encapsulation.
+
+<div class="divider--half"></div>
+}
+
 ### Limitations
 
 There are a couple of things that need to be considered when using the `rowDraggable` directive:
