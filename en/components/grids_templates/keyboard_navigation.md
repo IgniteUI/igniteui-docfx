@@ -67,6 +67,9 @@ Customizing the default behavior, that we described above when a certain key is 
 The sample below shows how to:
 - add cell validation to number values on `tab key` press (horizontal navigation).
 
+#### Demo
+@@if (igxName !== 'IgxHierarchicalGrid') {
+
 ```html
 <@@igSelector #grid1 [data]="data" [primaryKey]="'ProductID'" [autoGenerate]="false" [displayDensity]="'compact'"
     width="100%" height="350px" [paging]="true" [rowSelectable]="true" (onGridKeydown)="customKeydown($event)">
@@ -93,9 +96,6 @@ if (type === "dataCell" && args.event.key.toLowerCase() === "enter") {
 }
 ```
 
-#### Demo
-@@if (igxName !== 'IgxHierarchicalGrid') {
-
 You can try the `actions below` in order to observe the custom keyboard navigation:
 - Double click on a cell from `Orders` column and after the cell is in edit mode, change the value to `7` and press `tab key`. Prompt message will be shown.
 - Select a cell and press `Enter key` a couple of times. Column based navigation will be applied.
@@ -111,13 +111,63 @@ You can try the `actions below` in order to observe the custom keyboard navigati
 }
 
 @@if (igxName === 'IgxHierarchicalGrid') {
+In order to add custom keyboard navigation to igxHierarchicalGrid child grids [`onGridCreated`]({environment:angularApiUrl}/classes/igxrowislandcomponent.html#ongridcreated) should be handled and each child grid should subscribe to [`onGridKeydown`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html#ongridkeydown) event.
+
+```typescript
+public childGridCreated(event: IGridCreatedEventArgs) {
+    const grid = event.grid;
+    event.grid.onGridKeydown.subscribe((args) => {
+        this.customKeydown(args, grid);
+    });
+}
+```
+
+```html
+<igx-hierarchical-grid #grid1 class="hgrid" [data]="data" (onGridKeydown)="customKeydown($event, grid1)"
+    [height]="'500px'" [width]="'80%'" [rowHeight]="'65px'">
+        <igx-column field="Artist" editable="true" width="20%"></igx-column>
+        ...
+        <igx-column field="Grammy Awards" editable="true" dataType="number" width="20%"></igx-column>
+
+        <igx-row-island [key]="'Albums'" [autoGenerate]="false" [showToolbar]="true" toolbarTitle="Albums"
+        (onGridCreated)="childGridCreated($event)">
+            <igx-column field="Album"></igx-column>
+            <igx-column field="Launch Date" [dataType]="'date'"></igx-column>
+            <igx-column field="Billboard Review" editable="true"></igx-column>
+            <igx-column field="US Billboard 200" editable="true"></igx-column>
+        </igx-row-island>
+
+</igx-hierarchical-grid>
+```
+
+- perform column based navigation (vertical) on `enter key` press.
+
+```typescript
+public customKeydown(args: IGridKeydownEventArgs, grid) {
+    ...
+    if (type === "dataCell" && target.inEditMode && evt.key.toLowerCase() === "tab") {
+        ...
+        const cell = evt.shiftKey ?
+            grid.getPreviousCell(target.rowIndex, target.visibleColumnIndex, (col) => col.editable) :
+            grid.getNextCell(target.rowIndex, target.visibleColumnIndex, (col) => col.editable);
+
+        grid.navigateTo(cell.rowIndex, cell.visibleColumnIndex,
+            (obj) => { obj.target.nativeElement.focus(); });
+    } else if (type === "dataCell" && evt.key.toLowerCase() === "enter") {
+        ...
+        grid.navigateTo(target.rowIndex + 1, target.visibleColumnIndex,
+            (obj) => { obj.target.nativeElement.focus(); });
+    }
+}
+```
+
 You can try the `actions below` in order to observe the custom keyboard navigation:
 - Double click on a `number type` cell and after the cell is in edit mode, change the value to negative number (e.g. -1) and press `tab key`. Prompt message will be shown.
 - Select a cell and press `Enter key` a couple of times. Column based navigation will be applied.
 
 > Note: Keep in mind that the default `Enter key` action is overriden and in order to enter edit mode you can use `F2 key` instead.
 
-<div class="sample-container loading" style="height:500px">
+<div class="sample-container loading" style="height:520px">
     <iframe id="hgrid-custom-keyboard-navigation-sample-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-custom-kb-navigation' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
