@@ -74,7 +74,7 @@ import { IgxDataChartShapeModule } from "igniteui-angular-charts/ES5/igx-data-ch
 
 @NgModule({
     imports: [
-        // ...
+        ...
         IgxDataChartModule,
         IgxDataChartCoreModule,
         IgxDataChartShapeCoreModule,

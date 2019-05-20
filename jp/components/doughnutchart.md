@@ -1,13 +1,13 @@
 ---
-title: Doughnut Chart コンポーネント - Native Angular | Ignite UI for Angular
+title: Doughnut Chart コンポーネント - ネイティブ Angular | Ignite UI for Angular
 _description: Ignite UI for Angular Doughnut Chart コンポーネントは、複数の変数を同心円状の輪で表示でき、データは他のコレクションや共通データソースにバインドできます。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Data Grid コンポーネント, Angular Data Grid コントロール, Angular Doughnut Chart コントロール, Angular Doughnut Chart コンポーネント, Angular data grid Doughnut Chart コンポーネント例, Angular Doughnut Chart
 _language: ja
 ---
 
-## ドーナツ型チャート
+## ドーナツ チャート
 
-ドーナツ チャート コンポーネントは円チャートと同様、変数の発生を比例的に表示します。ドーナツ型チャート は、複数の変数をコンセントリック リングで表示でき、階層データの可視化を組み込みでサポートします。
+Doughnut Chart コンポーネントは円チャートと同様、変数の発生を比例的に表示します。ドーナツ型チャート は、複数の変数をコンセントリック リングで表示でき、階層データの可視化を組み込みでサポートします。
 
 ### デモ
 
@@ -38,9 +38,9 @@ import { IgxDoughnutChartModule } from 'igniteui-angular-charts/ES5/igx-doughnut
 
 @NgModule({
     imports: [
-        // ...
+        ...
         IgxDoughnutChartModule,
-        // ...
+        ...
     ]
 })
 export class AppModule {}
@@ -50,7 +50,7 @@ export class AppModule {}
 
 ### 使用方法
 
-ドーナツ型 チャート モジュールをインポートした後、チャートをデータにバインドします。
+ドーナツ チャート モジュールをインポートした後、チャートをデータにバインドします。
 Igx-doughnut-chart コンポーネントを作成するには、はじめにデータをバインドする必要があります。以下のコード スニペットは、シンプルなデータソースを作成する方法を示します。
 
 ```typescript

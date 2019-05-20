@@ -8,7 +8,7 @@ _language: ja
 ## 散布図 - 等高線シリーズ
 
 このトピックは、コード例を示して `IgxDataChart` コントロールで `ScatterContourSeries` を使用する方法を説明します。このシリーズ
-各点に数値が割り当てられた X および Y データの三角測量に基づいて色付きの等高線を描画します。このシリーズのタイプはヒート マップ、磁場の強さ、またはオフィスの Wi-Fi の強さを描画する場合などに便利です。`ScatterContourSeries` は `ScatterAreaSeries` とよく似ていますが、塗りつぶしスケールを使用して色付けされた等高線としてデータを表し、散布エリア シリーズはカラースケールを使用して補間された面としてデータを表します。
+各ポイントに数値が割り当てられた X および Y データの三角測量に基づいて色付きの等高線を描画します。このシリーズのタイプはヒート マップ、磁場の強さ、またはオフィスの Wi-Fi の強さを描画する場合などに便利です。`ScatterContourSeries` は `ScatterAreaSeries` とよく似ていますが、塗りつぶしスケールを使用して色付けされた等高線としてデータを表し、散布エリア シリーズはカラースケールを使用して補間された面としてデータを表します。
 
 ### デモ
 
@@ -60,7 +60,7 @@ import { IgxDataChartScatterModule } from "igniteui-angular-charts/ES5/igx-data-
 
 @NgModule({
     imports: [
-        // ...
+        ...
         IgxDataChartModule,
         IgxDataChartCoreModule,
         IgxDataChartScatterCoreModule,

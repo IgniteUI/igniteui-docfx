@@ -1,27 +1,28 @@
+﻿---
+title:  Tree Grid ロードオンデマンド - ネイティブ Angular|Ignite UI for Angular
+_description: Ignite UI for Angular Tree Grid は、親行が展開されたときに必要な子データのみを読み込むことにより、取得およびレンダリングするデータ量が大幅に軽減されます。
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Tree Grid コンポーネント, Angular Tree Table コンポーネント, Angular Tree Grid コントロール, Angular Tree Table コントロール, Angular 高パフォーマンス Tree Grid, Angular 高パフォーマンス Tree Table, Tree Grid, Tree Table
+_language: ja
 ---
-title: Tree Grid load on demand - Native Angular | Ignite UI for Angular
-_description: The Ignite UI for Angular Tree Grid provides the necessary tools to load child data on demand when a parent row is expanded. That way the volume of data would be greatly reduced and can be retrieved only when the user needs it.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Tree Grid component, Angular Tree Table component, Angular Tree Grid control, Angular Tree Table control, Angular High Performance Tree Grid, Angular High Performance Tree Table, Tree Grid, Tree Table
----
 
-### Tree Grid Load On Demand
+###  Tree グリッド ロードオンデマンド
 
-The Ignite UI for Angular [`IgxTreeGrid`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html) can be rendered in such way that it requires the minimal amount of data to get from the server so the user could see it as quickly as possible. Then, only after the user expands a row, the children for that particular parent row will be loaded. This mechanism, also known as Load on Demand, can be easily configured to work with any remote data.
+Ignite UI for Angular [`IgxTreeGrid`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html) は、サーバーから最小限のデータのみ取得してレンダリングされるため、ユーザーにすばやくデータを表示できます。その後、ユーザーが行を展開した後にのみ、その特定の親行の子がロードされます。このメカニズムは、ロードオンデマンドであらゆるリモートデータとの設定が簡単にできます。
 
-#### Demo
+#### デモ
 
 <div class="sample-container loading" style="height:450px">
     <iframe id="tree-grid-lod-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-load-on-demand' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-lod-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-lod-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
-### Usage
+### 使用方法
 
-The Load on Demand feature is compatible with both types of Tree Grid data sources - [`primary and foreign keys`](tree_grid.md#primary-and-foreign-keys) or [`child collection`](tree_grid.md#child-collection). You only need to load the root level data in the Tree Grid and specify the necessary keys for one of the data source types. In order to load the child rows when the user expands a row, the Tree Grid provides the callback input property [`loadChildrenOnDemand`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#loadchildrenondemand).
+ロードオンデマンド機能は、ツリーグリッド データソースの両方のタイプ ([`主キーと外部キー`](tree_grid.md#primary-and-foreign-keys)、または[`子コレクション`](tree_grid.md#child-collection)) と互換性があります。ツリー グリッドにルート レベルのデータをロードし、いずれかのデータソース タイプに必要なキーを指定するだけです。ツリーグリッドは、ユーザーが行を展開したときに子行をロードするためのコールバック入力プロパティ [`loadChildrenOnDemand`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#loadchildrenondemand) を提供します。
 
 ```html
 <igx-tree-grid #treeGrid [data]="data" primaryKey="ID" foreignKey="ParentID"
@@ -30,10 +31,10 @@ The Load on Demand feature is compatible with both types of Tree Grid data sourc
 </igx-tree-grid>
 ```
 
-The [`loadChildrenOnDemand`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#loadchildrenondemand) callback provides two parameters:
+loadChildrenOnDemand コールバックは、2 つのパラメーターを提供します。
 
-- parentID - the ID of the parent row that is being expanded.
-- done - callback that should be called with the children when they are retrieved from the server. 
+- parentID - 展開されている親行の ID。
+- done  - 子がサーバーから取得されたときに子と共に呼び出されるコールバック。 
 
 ```typescript
 public loadChildren = (parentID: any, done: (children: any[]) => void) => {
@@ -41,9 +42,9 @@ public loadChildren = (parentID: any, done: (children: any[]) => void) => {
 }
 ```
 
-After the user clicks the expand icon, it is replaced by a loading indicator. When the `done` callback is called, the loading indicator disappears and the children are loaded. The Tree Grid adds the children to the underlying data source and populates the necessary keys automatically. 
+ユーザーが展開アイコンをクリックすると、ロード アイコンに変わります。`done` コールバックが呼び出されると、ロード インジケーターが消え、子が読み込まれます。ツリーグリッドは子を基になるデータソースに追加し、必要なキーを自動的に設定します。 
 
-If you have a way to provide an information whether a row has children prior to its expanding, you could use the [`hasChildrenKey`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#haschildrenkey) input property. This way you could provide a boolean property from the data objects which indicates whether an expansion indicator should be displayed.
+行がその展開前に子を持つかどうかについての情報を提供する方法がある場合は、[`hasChildrenKey`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#haschildrenkey) 入力プロパティを使用できます。このようにして、展開インジケータを表示するかどうかを示すデータオブジェクトからブール値プロパティを提供できます。
 
 ```html
 <igx-tree-grid #treeGrid [data]="data" primaryKey="ID" foreignKey="ParentID"
@@ -52,9 +53,9 @@ If you have a way to provide an information whether a row has children prior to 
 </igx-tree-grid>
 ```
 
-Note that setting the [`hasChildrenKey`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#haschildrenkey) property is not required. In case you don't provide it, expansion indicators will be displayed for each row. After expanding a row that has no children, you still need to call the `done` callback with undefined or empty array. In this case after the loading indicator disappears, the expansion indicator never shows up.
+[`hasChildrenKey`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#haschildrenkey) プロパティを設定する必要はありません。指定しなかった場合は、各行に展開インジケーターが表示されます。子を持たない行を展開した後も、未定義または空の配列で `done` コールバックを呼び出す必要があります。この場合、ロード インジケーターが消えた後に展開ンジケータは表示されません。
 
-If you want to provide your own custom loading indicator, you may create an ng-template and mark it with the `igxRowLoadingIndicator` directive. The following code snippet demonstrates how to define such custom template:
+カスタムの読み込みインジケーターを提供したい場合は、ng-template を作成し、それに `igxRowLoadingIndicator` ディレクティブを使用してマークを付けます。以下のコード スニペットはカスタム テンプレートを定義する方法を示します。
 
 ```html
 <igx-tree-grid ...>
@@ -67,14 +68,14 @@ If you want to provide your own custom loading indicator, you may create an ng-t
 </igx-tree-grid>
 ```
 
-### API References
+### API リファレンス
 
 <div class="divider--half"></div>
 
 * [IgxTreeGridComponent]({environment:angularApiUrl}/classes/igxtreegridcomponent.html)
-* [IgxGridComponent Styles]({environment:sassApiUrl}/#function-igx-grid-theme)
+* [IgxGridComponent スタイル]({environment:sassApiUrl}/#function-igx-grid-theme)
 
-### Additional Resources
+### その他のリソース
 
 <div class="divider--half"></div>
 
@@ -82,7 +83,7 @@ If you want to provide your own custom loading indicator, you may create an ng-t
 * [Tree Grid Virtualization and Performance](virtualization.md)
 
 <div class="divider--half"></div>
-Our community is active and always welcoming to new ideas.
+コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+* [Ignite UI for Angular **フォーラム** (英語) ](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub** (英語) ](https://github.com/IgniteUI/igniteui-angular)
