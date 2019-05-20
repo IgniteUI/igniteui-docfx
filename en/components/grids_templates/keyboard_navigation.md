@@ -68,10 +68,10 @@ The sample below shows how to:
 - add cell validation to number values on `tab key` press (horizontal navigation).
 
 #### Demo
-@@if (igxName !== 'IgxHierarchicalGrid') {
+@@if (igxName === 'IgxGrid') {
 
 ```html
-<@@igSelector #grid1 [data]="data" [primaryKey]="'ProductID'" [autoGenerate]="false" [displayDensity]="'compact'"
+<igx-grid #grid1 [data]="data" [primaryKey]="'ProductID'" [autoGenerate]="false" [displayDensity]="'compact'"
     width="100%" height="350px" [paging]="true" [rowSelectable]="true" (onGridKeydown)="customKeydown($event)">
     <igx-column field="ProductID" header="Product ID" width="16%" [headerClasses]="'prodId'"
         [editable]="true">
@@ -97,7 +97,7 @@ if (type === "dataCell" && args.event.key.toLowerCase() === "enter") {
 ```
 
 You can try the `actions below` in order to observe the custom keyboard navigation:
-- Double click on a cell from `Orders` column and after the cell is in edit mode, change the value to `7` and press `tab key`. Prompt message will be shown.
+- Double click on a cell from number column type and after the cell is in edit mode, change the value to `7` and press `tab key`. Prompt message will be shown.
 - Select a cell and press `Enter key` a couple of times. Column based navigation will be applied.
 
 > Note: Keep in mind that the default `Enter key` action is overriden and in order to enter edit mode you can use `F2 key` instead.
@@ -172,6 +172,49 @@ You can try the `actions below` in order to observe the custom keyboard navigati
 </div>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hgrid-custom-keyboard-navigation-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+}
+
+@@if (igxName === 'IgxTreeGrid') {
+
+```html
+<igx-tree-grid #grid1 [data]="data" [primaryKey]="'ProductID'" [autoGenerate]="false" [displayDensity]="'compact'"
+    width="100%" height="350px" [paging]="true" [rowSelectable]="true" (onGridKeydown)="customKeydown($event)">
+    <igx-column field="ProductID" header="Product ID" width="16%" [headerClasses]="'prodId'"
+        [editable]="true">
+    </igx-column>
+    ...
+```
+
+```typescript
+const cell = args.event.shiftKey ?
+    this.grid1.getPreviousCell(target.rowIndex, target.visibleColumnIndex, (col) => col.editable) :
+    this.grid1.getNextCell(target.rowIndex, target.visibleColumnIndex, (col) => col.editable);
+
+this.grid1.navigateTo(cell.rowIndex, cell.visibleColumnIndex,
+    (obj) => { obj.target.nativeElement.focus(); });
+```
+- perform column based navigation (vertical) on `enter key` press.
+
+```typescript
+if (type === "dataCell" && args.event.key.toLowerCase() === "enter") {
+    this.grid1.navigateTo(target.rowIndex + 1, target.visibleColumnIndex,
+        (obj) => { obj.target.nativeElement.focus(); });
+    ...
+}
+```
+
+You can try the `actions below` in order to observe the custom keyboard navigation:
+- Double click on a cell from `Age` column and after the cell is in edit mode, change the value to `17` and press `tab key`. Prompt message will be shown.
+- Select a cell and press `Enter key` a couple of times. Column based navigation will be applied.
+
+> Note: Keep in mind that the default `Enter key` action is overriden and in order to enter edit mode you can use `F2 key` instead.
+
+<div class="sample-container loading" style="height:520px">
+    <iframe id="tree-grid-custom-keyboard-navigation-sample-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-keyboard-navigation' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-custom-keyboard-navigation-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 }
 
