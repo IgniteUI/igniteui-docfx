@@ -231,53 +231,6 @@ public date: Date = new Date(Date.now());
     <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="time-picker-sample-5" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
 </div>
 
-#### 入力グループのテンプレート - ドロップダウン モード
-
-<a href="#templating-input-group"> テンプレート入力グループ</a>セクションに記載されているすべての情報は、ドロップダウン モードのタイムピッカーを再テンプレート設定する際に適用できます。その他の要件として、ドロップダウンの開始ターゲットとして使用するために、テンプレート内の HTML 要素を dropDownTarget テンプレート参照変数でマークする必要があります。それ以外の場合、ドロップダウンは開かれず、コンソールにエラーメッセージが表示されます。
-
-```html
-<igx-time-picker #picker [value]="today" format="HH:mm" mode="dropdown">
-    <ng-template igxTimePickerTemplate let-openDialog="openDialog" let-value="value" let-displayTime="displayTime">
-        <igx-input-group>
-            <input #dropDownTarget igxInput [value]="displayTime" (blur)="onBlur(dropDownTarget.value, value, picker)"/>
-            <igx-suffix>
-                <igx-icon (click)="openDialog()">access_time</igx-icon>
-            </igx-suffix>
-        </igx-input-group>
-    </ng-template>
-</igx-time-picker>
-```
-```typescript
-public today: Date = new Date(Date.now());
-```
-
-テンプレート コンテキストで公開されている `displayTime` プロパティは**読み取り専用**です。上記の例では、双方向バインディングを実現するために、入力要素の  **blur** イベントと組み合わせて使用​​されています。
-
-```typescript
-public today: Date = new Date(Date.now());
-
-public onBlur(inputValue: string, value: Date, picker: IgxTimePickerComponent) {
-    const parts = inputValue.split(/[\s:]+/);
-
-    const hour = parseInt(parts[0], 10);
-    const minutes = parseInt(parts[1], 10);
-
-    if (picker.validHourEntries.indexOf(hour) !== -1 && picker.validMinuteEntries.indexOf(minutes) !== -1) {
-        value.setHours(hour, minutes);
-    } else {
-        throw new Error("This is not a valid hour.");
-    }
-}
-```
-
-ドロップダウンと双方向バインディングをサポートする、再テンプレート化されたタイムピッカーです。
-<div class="sample-container loading" style="height: 600px;">
-    <iframe id="time-picker-sample-6" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-6" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="time-picker-sample-6" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
-</div>
-
 ### API リファレンス
 <div class="divider--half"></div>
 
