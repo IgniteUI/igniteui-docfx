@@ -102,15 +102,15 @@ Use the the [`multiSelection`]({environment:angularApiUrl}/classes/igxbuttongrou
 </div>
 
 #### Display Density
-Use the [`displayDensity`]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html#displayDensity) input to set the display density for the button group. This will set the style for the buttons in the group to cosy, compact or comfortable accordingly.
+Use the [`displayDensity`]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html#displaydensity) input to set the display density for the button group. This will set the style for the buttons in the group to cosy, compact or comfortable (default value) accordingly.
 
-> [!NOTE] The display density of a `button` within a button group is not changed, if it is explicitly specified.
+> [!NOTE] The display density of a button within a button group is not changed if it is explicitly specified.
 
 ```typescript
 // sample.component.ts
 
 ...
-public displayDensity = "Comfrtable";
+public displayDensity = "comfortable";
 public displayDensities;
 
 public ngOnInit() {
