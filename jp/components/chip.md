@@ -130,15 +130,15 @@ public chipsOrderChanged(event) {
 
 #### Chip テンプレート
 
-[`IgxChipComponent`]({environment:angularApiUrl}/classes/igxchipcomponent.html) の主要な構造は、`select icon`, [`prefix`]、`chip content`、[`suffix`] と `remove button` で構成されています。すべての要素のテンプレート化できます。
+[`IgxChipComponent`]({environment:angularApiUrl}/classes/igxchipcomponent.html) の主要な構造は、`select icon`, `prefix`、`chip content`、`suffix` と `remove button` で構成されています。すべての要素のテンプレート化できます。
 
-チップのコンテンツは、チップの [`prefix`] および [`suffix`] を定義する要素以外のテンプレートに定義されるコンテンツです。コンテンツ タイプを定義できます。
+チップのコンテンツは、チップの `prefix` および `suffix` を定義する要素以外のテンプレートに定義されるコンテンツです。コンテンツ タイプを定義できます。
 
-[`prefix`] と [`suffix`] は、テンプレート化可能な実際のチップ領域内の要素です。[`IgxPrefix`] と [`IxgSuffix`] それぞれのディレクティブを使用して指定できます。
+`prefix` と `suffix` は、テンプレート化可能な実際のチップ領域内の要素です。`IgxPrefix` と `IxgSuffix` それぞれのディレクティブを使用して指定できます。
 
 ![Prefix and Suffix](../images/chip/prefix_suffix.jpg)
 
-[`prefix`] と [`suffix`] 両方のアイコンを使用した例と `content` のテキスト:
+`prefix` と `suffix` 両方のアイコンを使用した例と `content` のテキスト:
 
 ```html
 <igx-chip>
