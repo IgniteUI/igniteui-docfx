@@ -2,6 +2,7 @@
 title: Update Guide
 _description: Information on updating to a newer version of the Ignite UI for Angular library.
 _keywords: Ignite UI for Angular, update, npm package, version, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library
+_language: kr
 ---
 
 ## Update Guide
