@@ -1,73 +1,79 @@
-@@if (igxName === 'IgxGrid') {
+﻿@@if (igxName === 'IgxGrid') {
 ---
-title: Data Grid Component
-_description: The Ignite UI for Angular Data Grid control features the fastest, touch-responsive data-rich grid with popular features, including hierarchical and list views.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Data Grid component, Angular Data Grid control, Angular Grid component, Angular Grid control, Angular High Performance Grid
+title: Data Grid コンポーネント
+_description: Ignite UI for Angular Data Grid コントロールは、タッチ レスポンシブなデータ グリッドです。階層およびリスト ビューなどの機能があります。
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Data Grid コンポーネント, Angular Data Grid コントロール, Angular Grid コンポーネント, Angular Grid コントロール, Angular 高パフォーマンス Grid
+_language: ja
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Tree Grid Component
-_description: The Ignite UI for Angular Tree Grid control features the fastest, touch-responsive data-rich grid with popular features.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Tree Grid component, Angular Tree Grid control, Angular Tree Grid component, Angular High Performance Tree Grid, Tree Grid
+title: Tree Grid コンポーネント
+_description: Ignite UI for Angular Tree Grid コントロールは、タッチ レスポンシブなデータ グリッドです。
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コントロール Suite, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Tree Grid コンポーネント, Angular Tree Grid コントロール, Angular Tree Grid コンポーネント, Angular 高パフォーマンス Tree Grid, Tree Grid
+_language: ja
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Hierarchical Grid Component
-_description: The Ignite UI for Angular Hierarchical Grid control features the fastest, touch-responsive data-rich hierarchical grid with popular features.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Hierarchical Grid component, Angular Hierarchical Grid control, Angular High Performance Hierarchical Grid, Hierarchical Grid
+title: Hierarchical Grid コンポーネント
+_description: Ignite UI for Angular Hierarchical Grid コントロールは、タッチ レスポンシブが有効なデータ リッチな階層グリッドです。
+_keywords: Ignite UI for Angular, UI controls, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Hierarchical Grid コンポーネント, Angular Hierarchical Grid コントロール, Angular 高パフォーマンス Hierarchical Grid, Hierarchical Grid
+_language: ja
 ---
 }
 
-## @@igComponent Keyboard Navigation
+## @@igComponent キーボード ナビゲーション
 
-Keyboard navigation is available by default in any grid and aims at covering as many as possible features and scenarios for the end user. When you focus a specific cell and press one of the following key combinations, the described behaviour is performed.
+キーボード ナビゲーションはすべてのグリッドでデフォルトで有効です。エンドユーザーの要件に合わせて機能を追加できます。以下は、特定のセルをフォーカスして以下のキーの組み合わせを押した場合の動作を示します。
 
-### Key combinations
+### キー コンビネーション
 @@if (igxName === 'IgxHierarchicalGrid') {
- - `Arrow Up` - navigates one cell up, going up the grid hierarchy if necessary (no wrapping);
- - `Arrow Down` - navigates one cell down, going deeper into the grid hierarchy if necessary (no wrapping);}@@if (igxName === 'IgxGrid' || igxName === 'IgxTreeGrid') {
- - `Arrow Up` - navigates one cell up (no wrapping);
- - `Arrow Down` - navigates one cell down (no wrapping);}
- - `Arrow Left` - navigates one cell left (no wrapping between lines);
- - `Arrow Right` - navigates one cell right (no wrapping between lines);
- - `Ctrl + Arrow Up` - navigates to the first cell in the current column;
- - `Ctrl + Arrow Down` - navigates to the last cell in the current column;
- - `Ctrl + Arrow Left` -  moves to leftmost cell in row;
- - `Home` - moves to leftmost cell in row;
- - `Ctrl + Home` - moves to top left cell in the grid;
- - `Ctrl + Arrow Right` - moves to rightmost cell in row;
- - `End` - moves to rightmost cell in row;
- - `Ctrl + End` - moves to bottom right cell in the grid;
- - `Page Up` - scrolls one page (view port) up;
- - `Page Down` -  scrolls one page (view port) down;
- - `Enter` - enters edit mode;
- - `F2` - enters edit mode;
- - `Esc` - exits edit mode;
- - `Tab` - sequentially move the focus over the next cell on the row and if the last cell is reached move to next row; If next row is group row the whole row is focused, if it is data row, move focus over the first cell; When cell is in edit mode, will move the focus to next editable cell in the row, and from the right-most editable cell to the `CANCEL` and `DONE` buttons, and from the `DONE` button to the left-most editable cell within the currently edited row;
- - `Shift + Tab` - sequentially move focus to the previous cell on the row, if the first cell is reached move the focus to the previous row. If previous row is group row focus the whole row or if it is data row, focus the last cell of the row; when cell is in edit mode, will move the focus to the next editable cell in the row, and from the right-most editable cell to the `CANCEL` and `DONE` buttons, and from the `DONE` button to the left-most editable cell within the currently edited row;
- - `Space` -  if the row is selectable, on keydown space triggers row selection;@@if (igxName === 'IgxGrid' || igxName === 'IgxHierarchicalGrid') {
- - `Alt + Arrow Left` over GroupRow - collapses the group row content if the row is not already collapsed;
- - `Alt + Arrow Right` over GroupRow - expands the group row content if the row is not already expanded;}
- - on mouse `wheel` -  blurs the focused element;
+ - `上矢印` - 1 つ上のセル、必要に応じてグリッド上階層へ移動 (ラッピングなし);
+ - `下矢印` - 1 つ下のセル、必要に応じてグリッド下階層へ移動 (ラッピングなし);}@@if (igxName === 'IgxGrid' || igxName === 'IgxTreeGrid') {
+ - `上矢印` - 1 つ上のセルへ移動 (ラッピングなし);
+ - `下矢印` - 1 つ下のセルへ移動 (ラッピングなし);}
+ - `左矢印` - 1 つ左のセルへ移動 (行間のラッピングなし);
+ - `右矢印` - 1 つ右のセルへ移動 (行間のラッピングなし);
+ - `Ctrl + 上矢印` - 現在の列の最初のセルへ移動
+ - `Ctrl + 下矢印` - 現在の列の最後のセルへ移動
+ - `Ctrl + 左矢印` -  行の左端のセルへ移動;
+ - `Home` - 行の左端のセルへ移動;
+ - `Ctrl + Home` - グリッドの左上のセルへ移動;
+ - `Ctrl + 右矢印` -  行の右端のセルへ移動;
+ - `End` - 行の右端のセルへ移動;
+ - `Ctrl + End` - グリッドの右下のセルへ移動;
+ - `Page Up` - 1 ページ (ビューポート) 上へスクロール;
+ - `Page Down` - 1 ページ (ビューポート) 下へスクロール;
+ - `Enter` - 編集モードに入る;
+ - `F2` - 編集モードに入る;
+ - `Esc` - 編集モードを終了する;
+ - `Tab` - フォーカスを行の次のセルへ順番に移動し、最後のセルのあとは次の行へ移動します。次の行がグループ行の場合、行全体がフォーカスされます。データ行の場合、最初のセルにフォーカスを移動します。セルが編集モードの場合、フォーカスを次の編集可能なセルへ移動し、編集可能な一番右のセルから`CANCEL`、`DONE` ボタン、`DONE` から編集可能な一番左のセルへ移動します。
+ - `Shift + Tab` - 行の前のセルへフォーカスを順番に移動し、最初のセルの次に前の行へフォーカスを移動します。前の行がグループ行の場合、行全体をフォーカスします。データ行の場合、最後のセルをフォーカスします。セルが編集モードの場合、フォーカスを次の編集可能なセルへ移動し、編集可能な一番右のセルから `CANCEL` および `DONE` ボタン、`DONE` から編集可能な一番左のセルへ移動します;
+ - `Space` - 行が選択可能な場合、スペースキーを押下すると行選択をトリガーします。;@@if (igxName === 'IgxGrid' || igxName === 'IgxHierarchicalGrid') {
+ - GroupRow で `Alt + 左矢印` - 行が縮小されていない場合はグループ行コンテンツを縮小します。
+ - GroupRow で `Alt + 右矢印` - 行が展開されていない場合はグループ行コンテンツを展開します。}
+ - マウス `ホイール` - フォーカス要素をぼかします。
 
-### Custom keyboard navigation
-Customizing the default behavior, that we described above when a certain key is pressed is one of the great benefits that our keyboard navigation feature provides. Like when `Enter key` or `Tab key` are pressed. Actions like `going to the next cell` or `cell below` could be handled easily with the powerful keyboard navigation API.
+### カスタム キーボード ナビゲーション
+特定のキーが押されたときに上記に示したデフォルトの動作をカスタマイズすることは、キーボード　ナビゲーション機能が提供する利点の 1 つです。`Enter キー`または `Tab キー`が押されたときと同じです。`次のセル`または`下のセル`に移動するようなアクションは、強力なキーボードナビゲーションAPIを使用して簡単に処理できます。
 
-- [`onGridKeydown`]({environment:angularApiUrl}/classes/igxgridbasecomponent.html#ongridkeydown) is exposed. The event will emit [`IGridKeydownEventArgs`]({environment:angularApiUrl}/interfaces/igridkeydowneventargs.html). This event is available only through the keyboard key combinations mentioned above, for all other key actions you can use `keydown` event `(keydown)="onKeydown($event)"`
-- [`navigateTo`]({environment:angularApiUrl}/classes/igxgridbasecomponent.html#navigateto) - this method allows you to navigate to a position based on provided `rowindex` and `visibleColumnIndex`
-- [`getNextCell`]({environment:angularApiUrl}/classes/igxgridbasecomponent.html#navigateto) - returns [`ICellPosition`]({environment:angularApiUrl}/interfaces/icellposition.html) which defines the next cell, according to the current position, that match specific criteria. You can pass callback function as a third parameter of [`getPreviousCell`]({environment:angularApiUrl}/classes/igxgridbasecomponent.html#getpreviouscell) method
-- [`getPreviousCell`]({environment:angularApiUrl}/classes/igxgridbasecomponent.html#getpreviouscell) - returns [`ICellPosition`]({environment:angularApiUrl}/interfaces/icellposition.html) which defines the previous cell, according to the current position, that match specific criteria. You can pass callback function as a third parameter of [`getPreviousCell`]({environment:angularApiUrl}/classes/igxgridbasecomponent.html#getpreviouscell) method.
+- [`onGridKeydown`]({environment:angularApiUrl}/classes/igxgridbasecomponent.html#ongridkeydown) が公開されます。イベントは [`IGridKeydownEventArgs`]({environment:angularApiUrl}/interfaces/igridkeydowneventargs.html) を発生します。このイベントは、キーボードで上記のキー組み合わせを介してのみ使用できます。他のすべてのキー操作では、`keydown` event（keydown）= "onKeydown（$ event）"を使用できます。
+- [`navigateTo`]({environment:angularApiUrl}/classes/igxgridbasecomponent.html#navigateto) - 
+このメソッドを使用すると、提供された `rowindex` と `visibleColumnIndex` に基づいて位置に移動できます。
+- [`getNextCell`]({environment:angularApiUrl}/classes/igxgridbasecomponent.html#navigateto) - 
+現在の位置に従って、特定の基準に一致する次のセルを定義する [`ICellPosition`]({environment:angularApiUrl}/interfaces/icellposition.html) を返します。[`getPreviousCell`]({environment:angularApiUrl}/classes/igxgridbasecomponent.html#getpreviouscell) メソッドの 3 番目のパラメータ－としてコールバック関数を渡すことができます。
+- [`getPreviousCell`]({environment:angularApiUrl}/classes/igxgridbasecomponent.html#getpreviouscell) -
+現在の位置に従って、特定の基準に一致する前のセルを定義する [`ICellPosition`]({environment:angularApiUrl}/interfaces/icellposition.html) を返します。[`getPreviousCell`]({environment:angularApiUrl}/classes/igxgridbasecomponent.html#getpreviouscell) メソッドの 3 番目のパラメータ－としてコールバック関数を渡すことができます。。
 
  @@if (igxName === 'IgxHierarchicalGrid') {
-> Note: Both [`getNextCell`]({environment:angularApiUrl}/classes/igxgridbasecomponent.html#navigateto) and [`getPreviousCell`]({environment:angularApiUrl}/classes/igxgridbasecomponent.html#getpreviouscell) are availabe on the current level, you cannot access child cells.
+> 注: [`getNextCell`]({environment:angularApiUrl}/classes/igxgridbasecomponent.html#navigateto) および [`getPreviousCell`]({environment:angularApiUrl}/classes/igxgridbasecomponent.html#getpreviouscell) は現在のレベルでは使用できないため、子セルにアクセスすることはできません。
 }
 
-The sample below shows how to:
-- add cell validation to number values on `tab key` press (horizontal navigation).
+以下のサンプルは、その方法を示しています。
+- `Tab キー` を押したときに数値にセル検証を追加します (水平ナビゲーション)。
 
-#### Demo
+#### デモ
 @@if (igxName === 'IgxGrid') {
 
 ```html
@@ -86,7 +92,7 @@ const cell = args.event.shiftKey ?
 this.grid1.navigateTo(cell.rowIndex, cell.visibleColumnIndex,
     (obj) => { obj.target.nativeElement.focus(); });
 ```
-- perform column based navigation (vertical) on `enter key` press.
+- `Enter key` キーを押すと列ベースのナビゲーション（垂直）を実行します。
 
 ```typescript
 if (type === "dataCell" && args.event.key.toLowerCase() === "enter") {
@@ -96,22 +102,22 @@ if (type === "dataCell" && args.event.key.toLowerCase() === "enter") {
 }
 ```
 
-You can try the `actions below` in order to observe the custom keyboard navigation:
-- Double click on a cell from number column type and after the cell is in edit mode, change the value to `7` and press `tab key`. Prompt message will be shown.
-- Select a cell and press `Enter key` a couple of times. Column based navigation will be applied.
+カスタム キーボード ナビゲーションを確認するために以下の操作を試すことができます。
+- 数値列タイプのセルをダブルクリックし、セルが編集モードになったら、値を `7` に変更して `tab キー` を押します。プロンプト メッセージが表示されます。
+- セルを選択して `Enter キー` を数回押します。列ベースのナビゲーションが適用されます。
 
-> Note: Keep in mind that the default `Enter key` action is overriden and in order to enter edit mode you can use `F2 key` instead.
+> 注: デフォルトの `Enter キー` 操作は上書きされ、編集モードに入るには代わりに F2 キーを使用できることに注意してください。
 
 <div class="sample-container loading" style="height:400px">
     <iframe id="grid-custom-keyboard-navigation-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-custom-keyboard-navigation' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-custom-keyboard-navigation-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-custom-keyboard-navigation-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitzb で表示</button>
 </div>
 }
 
 @@if (igxName === 'IgxHierarchicalGrid') {
-In order to add custom keyboard navigation to igxHierarchicalGrid child grids [`onGridCreated`]({environment:angularApiUrl}/classes/igxrowislandcomponent.html#ongridcreated) should be handled and each child grid should subscribe to [`onGridKeydown`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html#ongridkeydown) event.
+igxHierarchicalGrid子グリッドにカスタムキーボードナビゲーションを追加するには、[`onGridCreated`]({environment:angularApiUrl}/classes/igxrowislandcomponent.html#ongridcreated) を処理し、各子グリッドを [`onGridKeydown`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html#ongridkeydown) イベントにサブスクライブする必要があります。
 
 ```typescript
 public childGridCreated(event: IGridCreatedEventArgs) {
@@ -140,7 +146,7 @@ public childGridCreated(event: IGridCreatedEventArgs) {
 </igx-hierarchical-grid>
 ```
 
-- perform column based navigation (vertical) on `enter key` press.
+- `Enter key` キーを押すと列ベースのナビゲーション (垂直) を実行します。
 
 ```typescript
 public customKeydown(args: IGridKeydownEventArgs, grid) {
@@ -161,17 +167,17 @@ public customKeydown(args: IGridKeydownEventArgs, grid) {
 }
 ```
 
-You can try the `actions below` in order to observe the custom keyboard navigation:
-- Double click on a `number type` cell and after the cell is in edit mode, change the value to negative number (e.g. -1) and press `tab key`. Prompt message will be shown.
-- Select a cell and press `Enter key` a couple of times. Column based navigation will be applied.
+カスタム キーボード ナビゲーションを確認するために`以下の操作`を試すことができます。
+- `数値タイプ`のセルをダブル クリックし、セルが編集モードになったら、値を負の数値 (-1 など) に変更して `Tabキー` を押します。プロンプト メッセージが表示されます。
+- セルを選択して `Enter キー` を数回押します。列ベースのナビゲーションが適用されます。
 
-> Note: Keep in mind that the default `Enter key` action is overriden and in order to enter edit mode you can use `F2 key` instead.
+> 注: デフォルトの `Enter キー` 操作は上書きされ、編集モードに入るには代わりに F2 キーを使用できることに注意してください。
 
 <div class="sample-container loading" style="height:520px">
     <iframe id="hgrid-custom-keyboard-navigation-sample-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-custom-kb-navigation' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hgrid-custom-keyboard-navigation-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hgrid-custom-keyboard-navigation-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitzb で表示</button>
 </div>
 }
 
@@ -194,7 +200,7 @@ const cell = args.event.shiftKey ?
 this.grid1.navigateTo(cell.rowIndex, cell.visibleColumnIndex,
     (obj) => { obj.target.nativeElement.focus(); });
 ```
-- perform column based navigation (vertical) on `enter key` press.
+- `Enter key` キーを押すと列ベースのナビゲーション (垂直) を実行します。
 
 ```typescript
 if (type === "dataCell" && args.event.key.toLowerCase() === "enter") {
@@ -204,40 +210,40 @@ if (type === "dataCell" && args.event.key.toLowerCase() === "enter") {
 }
 ```
 
-You can try the `actions below` in order to observe the custom keyboard navigation:
-- Double click on a cell from `Age` column and after the cell is in edit mode, change the value to `17` and press `tab key`. Prompt message will be shown.
-- Select a cell and press `Enter key` a couple of times. Column based navigation will be applied.
+カスタム キーボード ナビゲーションを確認するために`以下の操作`を試すことができます。
+- `Age` 列のセルをダブルクリックし、セルが編集モードになったら、値を `17` に変更して `Tab キー` を押します。プロンプト メッセージが表示されます。
+- セルを選択して `Enter キー` を数回押します。列ベースのナビゲーションが適用されます。
 
-> Note: Keep in mind that the default `Enter key` action is overriden and in order to enter edit mode you can use `F2 key` instead.
+> 注: デフォルトの `Enter キー` 操作は上書きされ、編集モードに入るには代わりに F2 キーを使用できることに注意してください。
 
 <div class="sample-container loading" style="height:520px">
     <iframe id="tree-grid-custom-keyboard-navigation-sample-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-keyboard-navigation' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-custom-keyboard-navigation-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-custom-keyboard-navigation-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitzb で表示</button>
 </div>
 }
 
-### API References
+### API リファレンス
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
-* [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 
-### Additional Resources
+### その他のリソース
 <div class="divider--half"></div>
 
-* [@@igComponent overview](@@igMainTopic.md)
-* [Virtualization and Performance](virtualization.md)
-* [Filtering](filtering.md)
-* [Sorting](sorting.md)
-* [Summaries](summaries.md)
-* [Column Moving](column_moving.md)
-* [Column Pinning](column_pinning.md)
-* [Column Resizing](column_resizing.md)
-* [Selection](selection.md)
+* [@@igComponent 概要](@@igMainTopic.md)
+* [仮想化とパフォーマンス](virtualization.md)
+* [フィルタリング](filtering.md)
+* [並べ替え](sorting.md)
+* [集計](summaries.md)
+* [列移動](column_moving.md)
+* [列のピン固定](column_pinning.md)
+* [列のサイズ変更](column_resizing.md)
+* [選択](selection.md)
 
 <div class="divider--half"></div>
-Our community is active and always welcoming to new ideas.
+コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
 

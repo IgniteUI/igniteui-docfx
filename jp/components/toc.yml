@@ -85,7 +85,7 @@
     - name: 条件付きセルのスタイル設定
       href: grid/conditional_cell_styling.md
       new: false
-    - name: Keyboard navigation
+    - name: キーボード ナビゲーション
       href: grid/keyboard_navigation.md
       new: true
     - name: 複数行レイアウト
@@ -164,7 +164,7 @@
     - name: 集計 
       href: treegrid/aggregations.md
       new: false
-    - name: Keyboard navigation
+    - name: キーボード ナビゲーション
       href: treegrid/keyboard_navigation.md
       new: true
 - name: Hierarchical Grid
@@ -235,7 +235,7 @@
     # - name: 条件付きセルのスタイル設定
     #   href: hierarchicalgrid/conditional_cell_styling.md
     #   new: true
-    - name: Keyboard navigation
+    - name: キーボード ナビゲーション
       href: hierarchicalgrid/keyboard_navigation.md
       new: true
 - name: List View

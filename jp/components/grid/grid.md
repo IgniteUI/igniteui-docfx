@@ -377,19 +377,19 @@ export class MyComponent implements OnInit {
 
 **注**: リモート データにバインドする場合、グリッドの [`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#autogenerate) プロパティは使用しないことをお勧めします。データを検証して適切な列を生成するためにデータが利用可能である必要があります。リモート サービスの応答が完了するまでデータが利用できないため、グリッドはエラーを発生します。リモート サービスへバインド時に [`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#autogenerate) を使用する機能は今後追加予定です。
 
-### Complex data binding
+### 複雑なデータ バインディング
 
-The [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html) main purpose is to handle **flat data**, although this does not mean that it is impossible to work with more complex data.
+[IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html) の主な目的は**フラット データ**を処理することですが、これはより複雑なデータを扱うことが不可能であることを意味するものではありません。
 
-Currently, the Grid columns don't support composite keys, although you can still create a column out of several other columns. In this section we will cover, how to configure [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html) with **nested data** and **flat data**.
+現在、グリッド列は複合キーをサポートしていませんが、他の列から列を作成することができます。このセクションでは、**ネスト データ**と**フラット データ**を使用して [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html) を構成する方法について説明します。
 
-#### Nested data
+#### ネスト データ[`rowData`]({environment:angularApiUrl}/classes/igxrowcomponent.html#rowdata)
 
-In order to bind hierarchical data to **IgxGrid** you may use:
-    - the `value` of the cell, that contains the nested data
-    - a custom column template
+以下は、階層データを **IgxGrid** へバインドする方法です。
+    - ネストされたデータを含むセルの値
+    - カスタム列テンプレート
 
-Below is the data that we are going to use:
+以下は使用するデータです。
 
 ```typescript
 export const EMPLOYEE_DATA = [
@@ -431,7 +431,7 @@ export const EMPLOYEE_DATA = [
     },
 ...
 ```
-The custom template for the column, that will render the nested data:
+ネスト データをレンダリングする列のカスタム テンプレート。
 
 ```html
 ...
@@ -463,7 +463,7 @@ The custom template for the column, that will render the nested data:
 ...
 ```
 
-And the result from this configuration is:
+以下は、この設定の結果です。
 
 <div class="sample-container loading" style="height:460px">
     <iframe id="grid-nested-dataBind-iframe" data-src='{environment:demosBaseUrl}/grid/grid-nested-data-binding' width="100%" height="100%" seamless="" frameborder="0" class="lazyload"></iframe>
@@ -473,13 +473,13 @@ And the result from this configuration is:
 </div>
 <div class="divider--half"></div>
 
-#### Flat data
+#### フラット データ
 
-The flat data binding approach is similar to the one that we already described above, but instead of **cell value** we are going to use the [`rowData`]({environment:angularApiUrl}/classes/igxrowcomponent.html#rowdata) property of the [IgxRowComponent]({environment:angularApiUrl}/classes/igxrowcomponent.html).
+フラットデータバインディングのアプローチは既に説明したものと似ていますが、**セル値**の代わりに、[IgxRowComponent]({environment:angularApiUrl}/classes/igxrowcomponent.html) の [`rowData`]({environment:angularApiUrl}/classes/igxrowcomponent.html#rowdata) プロパティを使用します。 
 
-Since the grid is a component for **rendering**, **manipulating** and **preserving** data records, having access to **every data record** gives you the opportunity to customize the approach of handling it. The [`rowData`]({environment:angularApiUrl}/classes/igxrowcomponent.html#rowdata) property provides you this opportunity.
+グリッドはデータレコードを**レンダリング**、**操作**、**保存**するためのコンポーネントのため、すべてのデータ レコードへアクセスすることで、それを処理する方法をカスタマイズすることができます。それには、[`rowData`]({environment:angularApiUrl}/classes/igxrowcomponent.html#rowdata) プロパティを使用します。
 
-Below is the data that we are going to use:
+以下は使用するデータです。
 ```typescript
 export const DATA: any[] = [
     {
@@ -497,7 +497,7 @@ export const DATA: any[] = [
     },
 ...
 ```
-The custom template:
+カスタム テンプレート:
 
 ```html
 ...
@@ -514,7 +514,7 @@ The custom template:
                 </ng-template>
 ...
 ```
-Keep in mind that with the above defined template you will not be able to make editing operations, so we need an editor template.
+上記で定義したテンプレートでは編集操作ができないため、エディター テンプレートが必要であることに注意してください。
 
 ```html
 ...
@@ -542,7 +542,7 @@ Keep in mind that with the above defined template you will not be able to make e
 </igx-column>
 ...
 ```
-And the result is:
+以下は結果です。
 
 <div class="sample-container loading" style="height:550px">
     <iframe id="grid-composite-dataBind-iframe" data-src='{environment:demosBaseUrl}/grid/grid-composite-data-binding' width="100%" height="100%" seamless="" frameborder="0" class="lazyload"></iframe>
@@ -552,9 +552,9 @@ And the result is:
 </div>
 <div class="divider--half"></div>
 
-### State persistence
+### パーシステンス (永続化) 状態
 
-Persisting the grid state across pages/sessions is a common scenario and is currently achievable on application level. To demonstrate the approach to take, let's implement state persistence across pages. The example is using the `localStorage` object to store the JSON string of the state, but depending on your needs you may decide to go with the `sessionStorage` object. All implementation details are extracted in the `igxState` directive:
+ページ/セッション間でグリッドの状態を維持することは一般的なシナリオであり、現在アプリケーション レベルで実現可能です。ページをまたいで状態のパーシステンスを実装します。この例では、`localStorage` オブジェクトを使用して状態の JSON 文字列を格納していますが、必要に応じて `sessionStorage` オブジェクトを使用することもできます。実装の詳細はすべて `igxState` ディレクティブに抽出されます。
 
 ```typescript
 // state.directive.ts
@@ -581,10 +581,10 @@ export class IgxGridStateDirective {
 }
 ```
 
-As seen in the example above, when a NavigationStart event occurs (each time a user navigates away from the page), `saveGridState` method is called, which contains the logic to read the grid state (sorting and filtering expressions, paging state, columns order, collection of selected rows) and save this data as json string in the `localStorge`. Later, when a user comes back to the grid, `loadGridState` and `restoreGridState` methods are called during the `OnInit` and `AfterViewInit` lifecycle hooks respectively.
-What `loadGridState` does is decode the JSON string from the `localStorage` into a `gridState` object, while `restoreGridState` uses the grid API to apply the corresponding sorting and filtering expressions to the grid, set paging, etc.
+上の例にあるように、NavigationStart イベントが発生すると (ユーザーがページから移動するたびに) `saveGridState` メソッドが呼び出されます。このメソッドには、グリッドの状態 (ソートおよびフィルター式、ページング状態、列の順序など) を読み込むロジックが含まれ、選択された行のコレクション）を作成して、このデータを json 文字列として `localStorge` に保存します。後でユーザーがグリッドに戻ったときに、`loadGridState` と `restoreGridState` メソッドがそれぞれ `OnInit` と `AfterViewInit`ライフサイクル フック中に呼び出されます。
+`loadGridState` は JSON 文字列を `localStorage` から `gridState` オブジェクトにデコードします。一方、`restoreGridState` はgrid APIを使用して、対応する並べ替えとフィルタリングの式をグリッドに適用したり、ページングを設定したりします。
 
-Last thing to do is apply the directive to the grid and restore the columns collection during the `OnInit` hook of the grid component: 
+最後にディレクティブをグリッドに適用し、グリッド コンポーネントの `OnInit` フック間で列コレクションを復元します。 
 
 ```typescript
 // grid.component.ts
@@ -626,7 +626,7 @@ public ngOnInit() {
 |親コンテナーでネストされた Grid | グリッドの [`width`]({environment:angularApiUrl}/classes/igxgridcomponent.html#width) を設定せずに定義済みのディメンションで親コンテナーに配置した場合、グリッドがコンテナーに合わせてスパンします。|
 |Grid `OnPush` ChangeDetectionStrategy|グリッドで `ChangeDetectionStrategy.OnPush` を処理し、カスタム表示されたときにグリッドに発生した変更について通知します。|
 | 列には設定可能な最小幅があります。[`displayDensity`]({environment:angularApiUrl}/classes/igxgridcomponent.html#displaydensity) オプションに基づきます。 <br/>"compact": 24px <br/> "cosy": 32px <br/> "comfortable ": 48px | 許容される最小幅未満に設定した場合、描画要素には影響せずに対応する [`displayDensity`]({environment:angularApiUrl}/classes/igxgridcomponent.html#displaydensity) に合わせて許容される最小幅で描画します。水平方向の仮想化は予期しない動作を招く場合があるためサポートしていません。
-| ビューに描画されていないセル高さは行の高さに影響しません。| 仮想化のため、セルの高さを変更するビューにないカスタム テンプレートの列は行の高さに影響しません。関連する列がビューにスクロールされるときのみ行の高さに影響します。
+| ビューに描画されていないセル高さは行の高さに影響しません。|仮想化のため、セルの高さを変更するビューにないカスタム テンプレートの列は行の高さに影響しません。関連する列がビューにスクロールされるときのみ行の高さに影響します。
 
 <div class="divider--half"></div>
 
