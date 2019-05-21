@@ -116,8 +116,8 @@ public displayDensities;
 
 public ngOnInit() {
     this.displayDensities = [
-        { label: "cosy", selected: this.displayDensity === "cosy", togglable: true },
         { label: "compact", selected: this.displayDensity === "compact", togglable: true },
+        { label: "cosy", selected: this.displayDensity === "cosy", togglable: true },
         { label: "comfortable", selected: this.displayDensity === "comfortable", togglable: true }
     ];
 }
