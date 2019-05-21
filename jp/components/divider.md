@@ -81,7 +81,7 @@ _language: ja
 <div class="divider--half"></div>
 
 * [IgxDividerDirective]({environment:angularApiUrl}/classes/igxdividerdirective.html)
-* [IgxDividerDirective Styles]({environment:sassApiUrl}/index.html#function-igx-divider-theme)
+* [IgxDividerDirective スタイル]({environment:sassApiUrl}/index.html#function-igx-divider-theme)
 
 ### その他のリソース
 <div class="divider--half"></div>
