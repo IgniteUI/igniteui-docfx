@@ -2,6 +2,7 @@
 title: Display Density | Ignite UI for Angular 
 _description: The Ignite UI for Angular provides a way of setting display density property on application or component level. 
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Components, Native Angular Controls, Native Angular Components Library, density, display density
+_language: kr
 ---
 
 ## Display Density

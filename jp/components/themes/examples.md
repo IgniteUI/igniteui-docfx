@@ -2,6 +2,7 @@
 title: テーマの例
 _description: Ignite UI for Angular は、SASS 機能と mixins でアプリケーション全体および特定部分を最小限のコードでスタイル設定できます。
 _keywords: Ignite UI for Angular, Angular Theming コンポーネント, Angular Theming, Ignite UI for Angular コンポーネント, Ignite for Agular Themes, グローバル コンポーネント, コンポーネント テーマ
+_language: ja
 ---
 
 ## テーマの例

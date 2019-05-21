@@ -2,6 +2,7 @@
 title: Localization - Native Angular | Ignite UI for Angular
 _description: The Ignite UI for Angular Localization mechanism provides the ability to change/localize strings in the components.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Components
+_language: kr
 ---
 
 ## Localization

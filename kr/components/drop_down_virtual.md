@@ -2,6 +2,7 @@
 title: Drop Down Component
 _description: Use Ignite UI for Angular Virtualized Drop Down to display a very large list of items which supports a single item selection.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Drop Down components, Angular Drop Down controls, Angular Control Large Item List, Angular Control Singe Selection
+_language: kr
 ---
 
 ## Virtual Drop Down

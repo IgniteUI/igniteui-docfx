@@ -2,6 +2,7 @@
 title: Hierarchical Grid Component
 _description: The Ignite UI for Angular Hierarchical Grid control features the fastest, touch-responsive data-rich hierarchical grid with popular features.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Hierarchical Grid component, Angular Hierarchical Grid control, Angular High Performance Hierarchical Grid, Hierarchical Grid
+_language: kr
 ---
 ## Hierarchical Grid
 <p class="highlight">Display and manipulate hierarchically structured data with the Ignite UI for Angular Hierarchical Grid. Features include Filtering, Sorting, Paging, Templates, Column Pinning, Column Moving and Column Hiding, as well as Updating the visualized data. The Hierarchical Grid builds upon the Data Grid Component and extends its functionality by allowing the users to expand or collapse the rows of the parent grid, revealing the according child grid, when more detailed information is needed.</p>

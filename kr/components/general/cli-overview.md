@@ -2,6 +2,7 @@
 title: Ignite UI CLI
 _description: The Ignite UI CLI is a tool to initialize, develop, scaffold and maintain applications in a wide variety of frameworks.
 _keywords: Ignite UI for Angular, UI controls, CLI, Templates, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library
+_language: kr
 ---
 
 ## Ignite UI CLI

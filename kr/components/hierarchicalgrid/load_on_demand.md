@@ -2,6 +2,7 @@
 title: Hierarchical Grid load on demand - Native Angular | Ignite UI for Angular
 _description: The Ignite UI for Angular Hierarchical Grid provides the necessary tools to load data on demand for each child grid that is expanded. That way the volume of data would be greatly reduced and can be retrieved only when the user needs it.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Hierarchical Grid component, Angular Hierarchical Data Table component, Angular Hierarchical Grid control, Angular Hierarchical Data Table control, Angular High Performance Hierarchical Grid, Angular High Performance Hierarchical Data Table, Hierarchical Grid, Hierarchical Data Table
+_language: kr
 ---
 
 ### Hierarchical Grid Load On Demand

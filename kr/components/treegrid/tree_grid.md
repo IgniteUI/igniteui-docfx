@@ -2,6 +2,7 @@
 title: Tree Grid Component
 _description: The Ignite UI for Angular Tree Grid control features the fastest, touch-responsive data-rich grid with popular features.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Tree Grid component, Angular Tree Grid control, Angular Tree Grid component, Angular High Performance Tree Grid, Tree Grid
+_language: kr
 ---
 
 ## Tree Grid
