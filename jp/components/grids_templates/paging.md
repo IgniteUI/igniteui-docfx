@@ -1,4 +1,4 @@
-@@if (igxName === 'IgxGrid') {
+﻿@@if (igxName === 'IgxGrid') {
 ---
 title: グリッドのページング機能
 _description: Ignite UI for Angular Data Grid コントロールは、タッチ レスポンシブなデータ グリッドです。階層およびリスト ビューなどの機能があります。
@@ -59,7 +59,7 @@ In Ignite UI for Angular @@igComponent では、**Paging** がルート `@@igSel
 }
 
 
-Paging は機能が有効かどうかを制御する Boolean プロパティです。`perPage`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#perpage) プロパティはページごとに表示レコードを制御します。以下のように @@igComponent でページングを有効にします。
+Paging は機能が有効かどうかを制御する Boolean プロパティです。[`perPage`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#perpage) プロパティはページごとに表示レコードを制御します。以下のように @@igComponent でページングを有効にします。
 
 ```html
 <@@igSelector #@@igObjectRef [data]="data" [paging]="true" [perPage]="10" [paginationTemplate]="pager" height="500px" width="100%" displayDensity="cosy">
