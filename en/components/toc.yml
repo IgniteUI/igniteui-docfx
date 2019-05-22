@@ -495,6 +495,26 @@
 - name: Radial Gauge
   href: radialgauge.md
   new: false
+- name: Maps
+  header: true
+  new: true
+- name: Map
+- name: Binding CSV File
+- name: Binding JSON File
+- name: Binding Data Model
+- name: Binding Shape File
+- name: Binding Multiple Shapes
+- name: Binding Multiple Sources
+- name: Scatter Area Series
+- name: Scatter Contour Series
+- name: Scatter Density Series
+- name: Scatter Proportional Series
+- name: Scatter Symbol Series
+- name: Shape Polygon Series
+- name: Shape Polyline Series
+- name: Wrold Connections
+- name: World Locations
+- name: World Utility
 - name: Styling & Themes
   header: true
 - name: Themes
