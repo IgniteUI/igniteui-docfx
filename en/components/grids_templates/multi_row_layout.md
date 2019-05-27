@@ -10,7 +10,7 @@ Multi Row Layout extends the rendering capabilities of the `igxGridComponent`. T
 
 #### Demo
 
-<div class="sample-container loading" style="height:600px">
+<div class="sample-container loading" style="height:755px">
     <iframe id="grid-multi-row-layout-iframe" src='{environment:demosBaseUrl}/grid/grid-multi-row-layout' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
