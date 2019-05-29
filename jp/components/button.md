@@ -148,6 +148,55 @@ raised ボタンを作成できます。　
 | `fab`      |      フローティング アクションのボタン タイプ。背景用のセカンダリ テーマ色で円形。       |
 | `icon`     |        最もシンプルなボタン タイプ。アイコンをボタンとして使用する場合に使用。         |
 
+### 密度の表示
+
+[`displayDensity`]({environment:angularApiUrl}/classes/igxbuttondirective.html#displaydensity) 入力を使用すると、ユーザーは [`igxButton`]({environment:angularApiUrl}/classes/igxbuttondirective.html) 入力の表示密度を選択できるようになります。これには、`IgxButtonGroupModule` をインポートし、[**IgxButtonGroup**](buttonGroup.md) を使用してすべての密度値を表示します。これにより、選択されるたびにボタンの [`displayDensity`]({environment:angularApiUrl}/classes/igxbuttondirective.html#displaydensity) にバインドされた独自の **density** プロパティが更新されます。
+
+> [!NOTE] `icon` タイプのボタンは、異なる表示密度の値に対して視覚的な変化をもたらしません。
+
+```typescript
+// app.module.ts
+...
+import { IgxButtonGroupModule } from 'igniteui-angular';
+@NgModule({
+    imports: [..., IgxButtonGroupModule]
+})
+```
+
+```html
+<!--buttons-density.component.html-->
+
+<igx-buttongroup [values]="displayDensities" (onSelect)="selectDensity($event)"></igx-buttongroup>
+...
+<button igxButton="flat" [displayDensity]="density">Flat</button>
+```
+
+```typescript
+// buttons-density.component.ts
+public density = "comfortable";
+public displayDensities;
+public ngOnInit() {
+    this.displayDensities = [
+        { label: 'comfortable', selected: this.density === 'comfortable', togglable: true },
+        { label: 'cosy', selected: this.density === 'cosy', togglable: true },
+        { label: 'compact', selected: this.density === 'compact', togglable: true }
+    ];
+}
+public selectDensity(event) {
+    this.density = this.displayDensities[event.index].label;
+}
+```
+
+And the final result:
+
+<div class="sample-container loading" style="height: 300px">
+    <iframe id="buttons-display-density-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/data-entries/buttons-display-density" onload="onSampleIframeContentLoaded(this);">
+</div>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="buttons-display-density-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
+
 ### API リファレンス
 <div class="divider--half"></div>
 

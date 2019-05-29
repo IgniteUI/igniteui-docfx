@@ -1,15 +1,15 @@
 ---
 title: Data Chart コンポーネント - ネイティブ Angular|Ignite UI for Angular
 _description: Ignite UI for Angular Data Chart は、軸、マーカー、凡例、および注釈レイヤーのモジュール設計を提供するチャート コンポーネントです。チャート機能は、複合チャート ビューを作成するために同じチャート領域でのビジュアル要素の複数のインスタンスを利用できます。
-_keywords: Ignite UI for Angular, Angular, Native Angular コンポーネント Suite, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント, ネイティブ Angular コンポーネント Library, Angular Data Chart, Angular Data Chart コントロール, Angular Data Chart Example, Angular Data Chart コンポーネント, Angular Data Chart
+_keywords: Ignite UI for Angular, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular Data Chart, Angular Data Chart コントロール, Angular Data Chart Example, Angular Data Chart コンポーネント, Angular Data Chart
 _language: ja
 ---
 
 ## シリーズ
 
-`IgxDataChart` コントロールでシリーズは類似するシリーズの次のグループに分類されます。カテゴリ シリーズ、ファイナンシャル シリーズ、極座標シリーズ、ラジアル シリーズ、範囲シリーズ、散布図シリーズ、積層シリーズ、図形シリーズ。
+`IgxDataChart` コントロールでシリーズは類似するシリーズの次のグループに分類されます。カテゴリ シリーズ、ファイナンシャル シリーズ、極座標シリーズ、ラジアル シリーズ、エリア シリーズ、散布図シリーズ、積層シリーズ、図形シリーズ。
 
-これらのシリーズに加えて、Ig$DataChart コントロールに[シリーズ注釈](datachart_series_annotations.md)と[シリーズ ハイライト](datachart_series_highlighting.md)を追加できます。
+これらのシリーズに加えて、`IgxDataChart` コントロールに[シリーズ注釈](datachart_series_annotations.md)と[シリーズ ハイライト](datachart_series_highlighting.md)を追加できます。
 
 以下のリストは、各グループのすべてのシリーズ タイプを示します。`IgxDataChart` コントロールで各シリーズを使用する方法についてのヘルプは、シリーズの名前をクリックしてください。
 
@@ -41,21 +41,21 @@ _language: ja
 -   [RadialColumnSeries](datachart_series_types_radial.md)
 -   [RadialPieSeries](datachart_series_types_radial.md)
 
-#### 範囲シリーズ
+#### エリア シリーズ
 
 -   [RangeAreaSeries](datachart_series_types_range.md)
 -   [RangeColumnSeries](datachart_series_types_range.md)
 
-#### 散布シリーズ
+#### 散布図シリーズ
 
--   [散布エリア シリーズ](datachart_series_types_scatter_area.md)
--   [散布バブル シリーズ](datachart_series_types_scatter_bubble.md)
--   [散布等高線シリーズ](datachart_series_types_scatter_contour.md)
--   [散布図 - マーカーシリーズ](datachart_series_types_scatter_marker.md)
--   [散布図 - 折れ線シリーズ](datachart_series_types_scatter_marker.md)
--   [散布図 - スプライン シリーズ](datachart_series_types_scatter_marker.md)
--   [散布多角形シリーズ](datachart_series_types_shape.md)
--   [散布ポリライン シリーズ](datachart_series_types_shape.md)
+-   [Scatter Area Series](datachart_series_types_scatter_area.md)
+-   [Scatter Bubble Series](datachart_series_types_scatter_bubble.md)
+-   [Scatter Contour Series](datachart_series_types_scatter_contour.md)
+-   [Scatter Marker Series](datachart_series_types_scatter_marker.md)
+-   [Scatter Line Series](datachart_series_types_scatter_marker.md)
+-   [Scatter Spline Series](datachart_series_types_scatter_marker.md)
+-   [Scatter Polygon Series](datachart_series_types_shape.md)
+-   [Scatter Polyline Series](datachart_series_types_shape.md)
 
 #### ファイナンシャル シリーズ
 

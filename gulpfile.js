@@ -58,6 +58,7 @@ gulp.task('serve', ['build'], () => {
         `${DOCFX_ARTICLES}/grid/paste_excel.md`,
         `${DOCFX_ARTICLES}/treegrid/tree_grid.md`,
         `${DOCFX_ARTICLES}/treegrid/aggregations.md`,
+        `${DOCFX_ARTICLES}/treegrid/load_on_demand.md`,
         `${DOCFX_ARTICLES}/hierarchicalgrid/hierarchical_grid.md`,
         `${DOCFX_ARTICLES}/hierarchicalgrid/load_on_demand.md`
     ];

@@ -25,6 +25,9 @@
     - name: Row Editing
       href: grid/row_editing.md
       new: true
+    - name: Row Drag
+      href: grid/row_drag.md
+      new: true
     - name: Batch Editing
       href: grid/batch_editing.md
       new: true
@@ -82,6 +85,12 @@
     - name: Conditional Cell Styling
       href: grid/conditional_cell_styling.md
       new: false
+    - name: Keyboard navigation
+      href: grid/keyboard_navigation.md
+      new: true
+    - name: Multi Row Layout
+      href: grid/multi_row_layout.md
+      new: true
 - name: Tree Grid
   href: treegrid/tree_grid.md
   new: true
@@ -89,12 +98,18 @@
     - name: Virtualization and performance
       href: treegrid/virtualization.md
       new: false
+    - name: Load On Demand
+      href: treegrid/load_on_demand.md
+      new: true
     - name: Editing
       href: treegrid/editing.md
       new: false
     - name: Row Editing
       href: treegrid/row_editing.md
       new: false
+    - name: Row Drag
+      href: treegrid/row_drag.md
+      new: true
     - name: Batch Editing
       href: treegrid/batch_editing.md
       new: false
@@ -149,6 +164,9 @@
     - name: Aggregations
       href: treegrid/aggregations.md
       new: false
+    - name: Keyboard navigation
+      href: treegrid/keyboard_navigation.md
+      new: true
 - name: Hierarchical Grid
   href: hierarchicalgrid/hierarchical_grid.md
   new: true
@@ -164,6 +182,9 @@
       new: true
     - name: Row Editing
       href: hierarchicalgrid/row_editing.md
+      new: true
+    - name: Row Drag
+      href: hierarchicalgrid/row_drag.md
       new: true
     - name: Batch Editing
       href: hierarchicalgrid/batch_editing.md
@@ -214,6 +235,9 @@
     # - name: Conditional Cell Styling
     #   href: hierarchicalgrid/conditional_cell_styling.md
     #   new: true
+    - name: Keyboard navigation
+      href: hierarchicalgrid/keyboard_navigation.md
+      new: true
 - name: List View
   href: list.md
 - name: Combo
@@ -345,10 +369,10 @@
           new: true
         - name: Scatter Shape Series
           href: datachart_series_types_shape.md
+          new: true        
+        - name: Stacked Series
+          href: datachart_series_types_stacked.md
           new: true
-        #- name: Stacked Series
-        #  href: datachart_series_types_stacked.md
-        #  new: true
     #- name: Animations
     #  href: datachart_series_animations.md
     #  new: true
@@ -502,6 +526,10 @@
 - name: Drop Down
   href: drop_down.md
   new: false
+  items:
+    - name: Virtual Drop Down
+      href: drop_down_virtual.md
+      new: true
 - name: Select
   href: select.md
   new: true
@@ -534,6 +562,9 @@
   href: badge.md
 - name: Icon
   href: icon.md
+- name: Divider
+  href: divider.md
+  new: true
 - name: Linear Progress
   href: linear_progress.md
 - name: Circular Progress

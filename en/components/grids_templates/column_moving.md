@@ -26,6 +26,15 @@ The @@igComponent component in Ignite UI for Angular provides **column moving** 
 
 Column moving works as well with pinned columns. Dragging an unpinned column and dropping it inside the pinned area makes that column pinned and vice versa, dragging a pinned column and dropping it outside the pinned area makes that column unpinned.
 
+> [!NOTE]
+> If a header is retemplated and the corresponding column is movable (or groupable), you have to set the **draggable** attribute to **false** on the templated elements, so that you can handle any of the events that are applied!
+
+```html
+<ng-template igxHeader>
+    <igx-icon [attr.draggable]="false" (click)="onClick()"></igx-icon>
+</ng-template>
+```
+
 #### Demo
 
 @@if (igxName === 'IgxGrid') {

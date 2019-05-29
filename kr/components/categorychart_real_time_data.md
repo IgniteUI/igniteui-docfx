@@ -10,8 +10,9 @@ _language: kr
 카테고리 차트 컨트롤은 다음 데모에서 설명하는 것처럼 수백만 개에 이르는 데이터 점을 포함한 대용량 데이터를 처리하고 수밀리 초마다 업데이트할 수 있습니다.
 
 ### 데모
-<div class="sample-container loading" style="height: 570px;">
-    <iframe id="category-chart-high-frequency-sample-iframe" align="center" src='{environment:demosBaseUrl}/charts/category-chart-high-frequency-sample' height="100%" width="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+
+<div class="sample-container" style="height: 570px;">
+    <iframe id="category-chart-high-frequency-sample-iframe" align="center" src='{environment:demosBaseUrl}/charts/category-chart-high-frequency-sample' height="100%" width="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="category-chart-high-frequency-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기

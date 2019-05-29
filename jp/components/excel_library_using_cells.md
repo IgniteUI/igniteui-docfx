@@ -1,7 +1,8 @@
-﻿---
+---
 title: Excel ライブラリ コンポーネント - Native Angular | Ignite UI for Angular
 _description: Ignite UI for Excel Library コンポーネント
 _keywords: Ignite UI for Angular, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular Excel ライブラリ, Angular Excel ライブラリ例,  Angular Excel Library コンポーネント, Angular Excel ライブラリ
+_language: ja
 ---
 
 ## セルの使用
@@ -15,10 +16,14 @@ Excel ワークシートの `WorksheetCell` オブジェクトは、ワークシ
 	src='{environment:demosBaseUrl}/excel-library/working-with-cells' 
 	width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="excel-library-overview-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示
+    </button>
+</div> 
 
 <div class="divider--half"></div>
 
-### リファレンス
+### References
 
 以下のコードは、以下のコード スニペットを使用するインポートを示します。
 
@@ -239,7 +244,7 @@ RGB またはテーマの色が使用される場合、色を明るくする、�
 
 `style` プロパティを null に設定した場合、`normalStyle` スタイルに戻ります。スタイル コレクションで別のスタイルに設定される場合、そのスタイルはセル書式にすべての未設定のプロパティのデフォルトを保持するようになります。
 
-`style` プロパティをセル書式に設定した場合、`style` に含まれる書式オプションはセル書式から削除されます。すべてのその他のプロパティはそのまま残されます。たとえば、境界線の書式を含むセル スタイルを作成してスタイルをセルの`スタイル`として設定した場合、セル書式の境界線の書式オプションは削除され、セル書式に塗りつぶしの書式のみ含まれます。
+`style` プロパティをセル書式に設定した場合、`style` に含まれる書式オプションはセル書式から削除されます。すべてのその他のプロパティはそのまま残されます。たとえば、境界線の書式を含むセルの `style` を作成してスタイルをセルのスタイルとして設定した場合、セル書式の境界線の書式オプションは削除され、セル書式に塗りつぶしの書式のみ含まれます。
 
 書式オプション フラグが書式から削除されると、すべての関連付けたプロパティは未設定値にリセットされます。したがってセル書式の罫線プロパティはデフォルト/未設定値に暗黙的にリセットされます。
 

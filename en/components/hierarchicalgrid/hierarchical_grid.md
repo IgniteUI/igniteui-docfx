@@ -221,41 +221,11 @@ The Selection and Navigation features work globally for the whole **igx-hierarch
 - Navigation
     When navigating up/down, if next/prev element is a child grid, navigation will continue in the related child grid, marking the related cell as selected and focused. If the child cell is outside the current visible view port it is scrolled into view so that selected cell is always visible.
 
-### Keyboard navigation
-Keyboard navigation is supported by default by the Hierarchical Grid. When you focus a cell and press one of the following key combinations, the described behaviour is performed:
-
- - `Arrow Up` - navigates one cell up, going up the grid hierarchy if necessary (no wrapping);
- - `Arrow Down` - navigates one cell down, going deeper into the grid hierarchy if necessary (no wrapping);
- - `Arrow Left` - navigates one cell left (no wrapping between lines);
- - `Arrow Right` - navigates one cell right (no wrapping between lines);
- - `Ctrl + Arrow Up` - navigates to the first cell in the current column;
- - `Ctrl + Arrow Down` - navigates to the last cell in the current column;
- - `Ctrl + Arrow Left` -  moves to leftmost cell in the row;
- - `Home` - moves to leftmost cell in the row;
- - `Ctrl + Home` - moves to top left cell in the grid;
- - `Ctrl + Arrow Right` - moves to rightmost cell in the row;
- - `End` - moves to rightmost cell in the row;
- - `Ctrl + End` - moves to bottom right cell in the grid;
- - `Page Up` - scrolls one page (view port) up;
- - `Page Down` -  scrolls one page (view port) down;
- - `Enter` - enters edit mode;
- - `F2` - enters edit mode;
- - `Esc` - exits edit mode;
- - `Tab` - sequentially moves the focus over the next cell on the row and if the last cell is reached, moves to the next row. If the focus is on the last cell of an expanded row, moves the focus inside its first child; When a cell is in edit mode, will move the focus to next editable cell in the row, and from the right-most editable cell to the `CANCEL` and `DONE` buttons, and from the `DONE` button to the left-most editable cell within the currently edited row;
- - `Shift + Tab` - sequentially moves focus to the previous cell on the row and if the first cell is reached, moves the focus to the previous row. If the focus is on the first cell of an expanded child grid, moves the focus inside its parent; When a cell is in edit mode, will move the focus to the next editable cell in the row, and from the right-most editable cell to the `CANCEL` and `DONE` buttons, and from the `DONE` button to the left-most editable cell within the currently edited row;
- - `Space` -  if the row is selectable, on keydown space triggers row selection;
- - `Alt + Arrow Left` on a parent grid row - collapses the parent row content if the row is not already collapsed;
- - `Alt + Arrow Up` on a parent grid row - collapses the parent row content if the row is not already collapsed;
- - `Alt + Arrow Right` on a parent grid row - expands the parent row content if the row is not already expanded;
- - `Alt + Arrow Down` on a parent grid row - expands the parent row content if the row is not already expanded;
- - on mouse `wheel` -  blurs the focused element;
-
-
 #### "Collapse All" Button
 
 The Hierarchical Grid allows the users to conveniently collapse all its currently expanded rows by pressing the "Collapse All" button at its top left corner. Additionally, every child grid which contains other grids and is a Hierarchical Grid itself, also has such a button - this way the user is able to collapse only a given grid in the hierarchy: 
 
-![](../../images/unfold_less_icon_screenshot.jpg)
+<img class="responsive-img" src="../../images/unfold_less_icon_screenshot.jpg" srcset="../../images/unfold_less_icon_screenshoto@2x.jpg 2x" />
 
 ### Known Limitations
 

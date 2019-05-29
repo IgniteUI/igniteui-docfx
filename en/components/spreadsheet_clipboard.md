@@ -6,23 +6,19 @@ _keywords: Spreadsheet, Ignite UI for Angular, Infragistics
 
 ## Working with Clipboard
 
-This topic explains how to perform clipboard operations.
+This topic explains how to perform clipboard operations on the Ignite UI for Angular spreadsheet component.
 
 ### Demo
 
 <div class="sample-container" style="height: 500px">
     <iframe id="spreadsheet-clipboard-sample-iframe" src='{environment:demosBaseUrl}/spreadsheet/spreadsheet-clipboard' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="spreadsheet-clipboard-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
-    </button>
-</div>
 
 <div class="divider--half"></div>
 
 ### Dependencies
 
-Before making use of the clipboard you will want to import the SpreadsheetAction
+Before making use of the clipboard you will want to import the `SpreadsheetAction`:
 
 ```typescript
 import { IgxSpreadsheetComponent } from "igniteui-angular-spreadsheet/ES5/igx-spreadsheet-component";
@@ -33,7 +29,7 @@ import { SpreadsheetAction } from "igniteui-angular-spreadsheet/ES5/SpreadsheetA
 
 ### Usage
 
-The following snippt shows how you can setup the data validation rules
+The following code snippet shows how you can execute commands related to the clipboard in the `IgxSpreadsheet` control:
 
 ```typescript
 @ViewChild("spreadsheet", { read: IgxSpreadsheetComponent })
@@ -42,14 +38,14 @@ public spreadsheet: IgxSpreadsheetComponent;
 ---
 
 public cut(): void {
-    this.spreadsheet.executeCommand(SpreadsheetAction.Cut);
+    this.spreadsheet.executeAction(SpreadsheetAction.Cut);
 }
 
 public copy(): void {
-    this.spreadsheet.executeCommand(SpreadsheetAction.Copy);
+    this.spreadsheet.executeAction(SpreadsheetAction.Copy);
 }
 
 public paste(): void {
-    this.spreadsheet.executeCommand(SpreadsheetAction.Paste);
+    this.spreadsheet.executeAction(SpreadsheetAction.Paste);
 }
 ```

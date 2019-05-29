@@ -5,9 +5,9 @@ _keywords: Ignite UI for Angular, Angular, Native Angular コンポーネント 
 _language: ja
 ---
 
-## 散布図シリーズ
+## 散布図 - 図形シリーズ
 
-このトピックは、`IgxDataChart` コントロールの図形シリーズのさまざまなタイプについて説明します。散布図シリーズは、一連の形状 (1 つまたは複数の X/Y 座標の配列) をとり、それらをデカルト (x、y) 座標系のポリゴン (ScatterPolygonSeries) またはポリライン (ScatterPolylineSeries) のコレクションとして描画するチャート シリーズのグループです。
+このトピックは、`IgxDataChart` コントロールの図形シリーズのさまざまなタイプについて説明します。散布図シリーズは、一連の形状 (1 つまたは複数の X/Y 座標の配列) をとり、それらをデカルト (x、y) 座標系のポリゴン (`ScatterPolygonSeries`) またはポリライン (`ScatterPolylineSeries`) のコレクションとして描画するチャート シリーズのグループです。
 
 散布図シリーズは科学データの強調領域でよく使用されますが、ダイアグラム、青写真、さらには建物の間取り図のプロットにも使用できます。
 
@@ -57,9 +57,7 @@ this.state = { dataSource: SampleShapeData.create() }
 
 ### モジュールの要件
 
-<!-- Angular -->
-
-散布図形シリーズを使用するには、データチャート モジュールの読み込みと登録の際にアプリケーションに次のモジュールをインポートする必要があります。
+散布多角形シリーズには、以下のモジュールが必要です。
 
 ```typescript
 // axis' modules:
@@ -76,7 +74,7 @@ import { IgxDataChartShapeModule } from "igniteui-angular-charts/ES5/igx-data-ch
 
 @NgModule({
     imports: [
-        // ...
+        ...
         IgxDataChartModule,
         IgxDataChartCoreModule,
         IgxDataChartShapeCoreModule,

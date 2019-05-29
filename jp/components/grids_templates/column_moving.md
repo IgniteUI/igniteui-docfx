@@ -11,6 +11,15 @@ Ignite UI for Angular の Grid コンポーネントは、標準ドラッグ/ド
 
 固定列の列移動も可能なため、ピン固定していない列をドラッグしてピン固定領域内にドロップして列をピンを固定したり、ピン固定領域内から列をドラッグして非固定領域にドロップしてピン固定の解除ができます。
 
+> [!NOTE]
+> ヘッダーが再テンプレート化され、対応する列が移動可能 (またはグループ化可能) な場合は、テンプレート要素で **draggable** 属性を **false** に設定する必要があり、これにより適用されるイベントをすべて処理できます。
+
+```html
+<ng-template igxHeader>
+    <igx-icon [attr.draggable]="false" (click)="onClick()"></igx-icon>
+</ng-template>
+```
+
 #### デモ
 
 <div class="sample-container loading" style="height:630px">
@@ -60,7 +69,7 @@ public onColumnMovingEnd(event) {
 ### その他のリソース
 <div class="divider--half"></div>
 
-* [Grid の概要](grid.md)
+* [@@igComponent の概要](@@igMainTopic.md)
 * [仮想化とパフォーマンス](virtualization.md)
 * [ページング](paging.md)
 * [フィルタリング](filtering.md)

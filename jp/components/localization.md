@@ -25,15 +25,19 @@ _language: ja
 値はローカライズするために置き換えられます。次にオブジェクトはパラメーターとして `changei18n` 関数に渡して app.module レベルでコンポーネントのグローバル i18n を変更します。app.module.ts だけでなくアプリ内どこでもローカライズ可能です。
 
 ```typescript
-//app.module.ts
+// app.component.ts
 
-const currentRS = getCurrentResourceStrings();
+public ngOnInit(): void {
+    ...
+    const currentRS = getCurrentResourceStrings();
 
-for (const key of Object.keys(currentRS)) {
-    currentRS[key] = '[Localized]'+ currentRS[key];
+    for (const key of Object.keys(currentRS)) {
+        currentRS[key] = '[Localized]'+ currentRS[key];
+    }
+
+    changei18n(currentRS);
+    ...
 }
-
-changei18n(currentRS);
 ```
 <div>
 <button data-localize="stackblitz" class="stackblitz-btn" data-sample-src="{environment:demosBaseUrl}/services/localization-sample-2"
@@ -83,13 +87,17 @@ this.grid.resourceStrings = newGridRes;
 日本語のリソース文字列を使用するには、以下のインポートをアプリケーションに追加して `changei18n` 関数を呼び出します。
 
 ```typescript
-//app.module.ts
+// app.component.ts
 
-import { IgxResouceStringsJA } from 'igniteui-angular-i18n';
-import { IgxResouceStringsKR } from 'igniteui-angular-i18n';
+import { IgxResourceStringsJA } from 'igniteui-angular-i18n';
+import { IgxResourceStringsKR } from 'igniteui-angular-i18n';
 ...
 
-changei18n(IgxResouceStringsJA);
+public ngOnInit(): void {
+    ...
+    changei18n(IgxResourceStringsJA);
+    ...
+}
 ```
 
 ### その他のリソース

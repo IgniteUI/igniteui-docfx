@@ -1,20 +1,24 @@
-﻿---
+---
 title: Excel ライブラリ コンポーネント - Native Angular | Ignite UI for Angular
 _description: Ignite UI for Excel Library コンポーネントTODO.
-_keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Excel Library, Angular Excel Library Example, Angular Excel Library Component, Angular Excel Engine
+_keywords: Ignite UI for Angular, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular Excel ライブラリ, Angular Excel ライブラリ例, Angular Excel ライブラリ コンポーネント, Angular Excel エンジン
 _language: ja
 ---
 
-## Excel Library
+## Excel ライブラリ
 
-Infragistics Excel Library  は、Workbook、Worksheet、Cell、Formula などの人気の Microsoft® Excel® スプレッドシート オブジェクトを使用してスプレッドシート データで作業をすることができます。Infragistics Excel Library によって Excel スプレッドシートでアプリケーションのデータを表示するだけでなく、Excel からアプリケーションへのデータの転送も簡単になります。
+Infragistics Excel ライブラリは、Workbook、Worksheet、Cell、Formula などの人気の Microsoft® Excel® スプレッドシート オブジェクトを使用してスプレッドシート データで作業をすることができます。Infragistics Excel Library によって Excel スプレッドシートでアプリケーションのデータを表示するだけでなく、Excel からアプリケーションへのデータの転送も簡単になります。
 
 ### デモ
 
 <div class="sample-container" style="height: 500px">
-    <iframe id="excel-library-overview-sample-iframe" 
-	src='{environment:demosBaseUrl}/excel-library/operations-on-workbooks' 
+    <iframe id="excel-library-overview-sample-iframe"
+	src='{environment:demosBaseUrl}/excel-library/operations-on-workbooks'
 	width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="excel-library-overview-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示
+    </button>
 </div>
 
 <div class="divider--half"></div>
@@ -23,9 +27,12 @@ Infragistics Excel Library  は、Workbook、Worksheet、Cell、Formula など�
 
 excel パッケージをインストールするときに core パッケージもインストールする必要があります。
 
--   **npm install igniteui-angular-excel igniteui-angular-core --save**
+-   **npm install --save igniteui-angular-core**
+-   **npm install --save igniteui-angular-excel**
 
-Excel Library が `NgModule` としてエクスポートされるため、アプリケーションで `AppModule` に `IgxExcelModule` をインポートする必要があります。
+### 必要なモジュール
+
+excel ライブラリは、以下のモジュールが必要です。
 
 ```typescript
 // app.module.ts
@@ -41,9 +48,9 @@ import { IgxExcelModule } from "igniteui-angular-excel/ES5/igx-excel-module";
 export class AppModule {}
 ```
 
-### Modules – Excel Library の 5 つのモジュール
+### Excel ライブラリの 5 つのモジュール
 
--   **IgxExcelCoreModule** – オブジェクトモデルを含み、Exce の基盤となります。
+-   **IgxExcelCoreModule** – オブジェクトモデルを含み、Excel の基盤となります。
 -   **IgxExcelFunctionsModule** – Sum、Average、Min、Max、SumIfs、Ifs など、数式評価のほとんどのカスタム関数を含み、このモジュールがなくても数式が計算 ( “=SUM(A1:A5 などの数式を適用するなど) されてセルの Value を要求する場合は数式の解析で問題を発生しません。(注: 例外のスローではありません。数式の結果がエラーとなるため特定のエラーを表すオブジェクト)。
 -   **IgxExcelXlsModule** – xls (および関連する) タイプ ファイルのロジックの読み込みと保存を含みます。これは Excel97to2003 関連の WorkbookFormats です。
 -   **IgxExcelXlsxModule** – xlsx (および関連する) タイプ ファイルのロジックの読み込みと保存を含みます。これは Excel2007 関連および StrictOpenXml ANDWorkbookFormats です。

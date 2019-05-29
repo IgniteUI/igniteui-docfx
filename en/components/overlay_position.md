@@ -21,15 +21,11 @@ Position strategies determine where to display the component in the provided Igx
     | new Point(0, 0) | HorizontalAlignment.Right | VerticalAlignment.Bottom | HorizontalAlignment.Left | VerticalAlignment.Bottom |
 <div class="divider"></div>
 
-3. **Auto** - Positions the element as in **Connected** positioning strategy and re-positions the element in the view port (calculating a different start point and direction) in case the element is partially out of view. Defaults to:
-
+3. **Auto** - Positions the element the same way as the **Connected** positioning strategy. It also calculates a different starting point in case the element goes partially out of the view port. The **Auto** strategy will initially try to show the element as the **Connected** strategy does. If the element goes out of the view port **Auto** will flip the starting point and the direction, i.e. if the direction is 'bottom', it will switch it to 'top' and so on. After the flipping, if the element is still of the view port, **Auto** will use the initial directions and the starting point to push the element into the view port. For example - if the element goes out of the right side of the view port by 50px, **Auto** will push it with 50px to the left. Afterwards if the element is partially out of the view port, then its height or width were greater than the view port's, **Auto** will align the element's left/top edge with the view port's left/top edge. Defaults to:
     | target          | horizontalDirection       |  verticalDirection       | horizontalStartPoint     | verticalStartPoint       |
     |:----------------|:--------------------------|:-------------------------|:-------------------------|:-------------------------|
     | new Point(0, 0) | HorizontalAlignment.Right | VerticalAlignment.Bottom | HorizontalAlignment.Left | VerticalAlignment.Bottom |
 <div class="divider"></div>
-
-> [!NOTE]
-> Will not try to reposition the element if the strategy is using  HorizontalDirection = Center / VerticalDirection = Middle.
 
 4. **Elastic** - Positions the element as in **Connected** positioning strategy and re-sizes the element to fit inside of the view port (re-calculating width and/or height) in case the element is partially out of view. [`minSize`]({environment:angularApiUrl}/interfaces/positionsettings.html#minsize) can be passed in [`positionSettings`]({environment:angularApiUrl}/interfaces/positionsettings.html) to prevent resizing if it would put the element dimensions below a certain threshold. Defaults to:
 

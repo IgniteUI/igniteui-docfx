@@ -5,9 +5,9 @@ _keywords: Ignite UI for Angular, Angular, Native Angular コンポーネント 
 _language: ja
 ---
 
-## 散布エリア シリーズ
+## 散布図 - エリア シリーズ
 
-このトピックは、コード例を示して `IgxDataChart` コントロールで `ScatterAreaSeries` を使用する方法を説明します。このシリーズは、各点に数値が割り当てられた X および Y データの三角測量に基づいて色付きの表面を描画します。このシリーズのタイプはヒート マップ、磁場の強さ、またはオフィスの Wi-Fi の強さを描画する場合などに便利です。`ScatterAreaSeries` は `ScatterContourSeries` と同様ですが、同じ値を持つデータポイントを接続する等線の置換に補完で色つきサーフェス エリアとしてデータを表します。
+このトピックは、コード例を示して `IgxDataChart` コントロールで `ScatterAreaSeries` を使用する方法を説明します。このシリーズは、各ポイントに数値が割り当てられた X および Y データの三角測量に基づいて色付きの表面を描画します。このシリーズのタイプはヒート マップ、磁場の強さ、またはオフィスの Wi-Fi の強さを描画する場合などに便利です。`ScatterAreaSeries` は `ScatterContourSeries` と同様ですが、同じ値を持つデータポイントを接続する等線の置換に補完で色つきサーフェス エリアとしてデータを表します。
 
 ### デモ
 
@@ -41,8 +41,6 @@ this.state = { dataSource: SampleScatterData.create() }
 
 ### モジュールの要件
 
-<!-- Angular -->
-
 散布エリア シリーズは以下のモジュールを要求します。
 
 ```typescript
@@ -61,7 +59,7 @@ import { IgxDataChartScatterModule } from "igniteui-angular-charts/ES5/igx-data-
 
 @NgModule({
     imports: [
-        // ...
+        ...
         IgxDataChartModule,
         IgxDataChartCoreModule,
         IgxDataChartScatterCoreModule,

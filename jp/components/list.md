@@ -320,6 +320,47 @@ toggleFavorite(item: IgxListItem) {
 }
 ```
 
+[`displayDensity`]({environment:angularApiUrl}/classes/igxlistcomponent.html#displaydensity) 入力を使用して、ユーザーがリストの表示密度を選択できるようにします。これには、`IgxButtonGroupModule` をインポートし、[**IgxButtonGroup**](buttonGroup.md) を使用してすべての密度値を表示します。このようにして選択されるたびに、リストの [`displayDensity`]({environment:angularApiUrl}/classes/igxlistcomponent.html#displaydensity) にバインドされている独自の **density** プロパティを更新します。
+
+```typescript
+// app.module.ts
+...
+import { IgxButtonGroupModule } from 'igniteui-angular';
+
+@NgModule({
+    imports: [..., IgxButtonGroupModule]
+})
+```
+
+```html
+<!--contacts.component.html-->
+
+<igx-buttongroup [values]="displayDensities" (onSelect)="selectDensity($event)"></igx-buttongroup>
+...
+<igx-list [displayDensity]="density">
+    ...
+</igx-list>
+```
+
+```typescript
+// contacts.component.ts
+
+public density = "comfortable";
+public displayDensities;
+
+public ngOnInit() {
+this.displayDensities = [
+    { label: 'comfortable', selected: this.density === 'comfortable', togglable: true },
+    { label: 'cosy', selected: this.density === 'cosy', togglable: true },
+    { label: 'compact', selected: this.density === 'compact', togglable: true }
+];
+}
+
+public selectDensity(event) {
+    this.density = this.displayDensities[event.index].label;
+}
+```
+
 結果は以下のようになります。
 
 <div class="sample-container loading" style="height: 477px">

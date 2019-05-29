@@ -34,7 +34,7 @@ _language: ja
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:550px">
-    <iframe id="grid-row-editing-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-row-editing' width="100%" height="100%" 
+    <iframe id="grid-row-editing-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-row-editing' width="100%" height="100%"
     seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
@@ -107,7 +107,7 @@ export class AppModule {}
 }
 @@if (igxName === 'IgxTreeGrid') {
 ```html
-<igx-tree-grid #treeGrid [data]="data" [primaryKey]="EmployeID" [foreignKey]="PID" width ="100%" 
+<igx-tree-grid #treeGrid [data]="data" [primaryKey]="EmployeID" [foreignKey]="PID" width ="100%"
                height ="500px" [rowEditable]="true" [rowSelectable]="true" [columnHiding]="true">
     <igx-column *ngFor="let c of columns"
         [editable] ="c.editable"
@@ -251,9 +251,9 @@ export class HGridRowEditingSampleComponent implements OnInit {
 ### 配置
 
 - オーバーレイのデフォルトの位置は編集モードで行の下にあります。
-     
+
 - 行の下にスペースがない場合、オーバーレイが行の上に表示されます。
-     
+
 - 一番上または下に表示されると、オーバーレイは閉じられるまでスクロール時にこの位置を保持します。
 
 ### 動作
@@ -268,7 +268,9 @@ export class HGridRowEditingSampleComponent implements OnInit {
 
 - 行が編集モードの時にグリッドがスクロールされると行が表示領域外になりますが、@@igComponent は編集モードのままです。@@igComponent をスクロールすると編集行は再度表示されますが編集行が編集モードのままになります。@@igComponent 以外をクリックしたときにセルも編集モードに残ります。
 
-- サイズ変更、移動、並べ替え列、ページの変更など、その他の @@igComponent 操作は編集モードを終了して最新の値をサブミットします。
+並べ替え、フィルタリング、検索、および非表示操作を実行すると、現在の行のすべての変更が元に戻され、行の編集モードを終了します。
+
+ページング、サイズ変更、ピン留め、移動操作を実行すると、編集モードを終了して最新の値を送信します。
 
 - 編集した各セルは行編集が終了するまで変更スタイルを取得します。@@igComponent がトランザクションで提供されない場合の動作です。トランザクションが有効な場合、すべての変更がコミットされるまでセル編集スタイルが適用されます。
 

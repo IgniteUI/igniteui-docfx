@@ -5,9 +5,9 @@ _keywords: Ignite UI for Angular, Angular, Native Angular コンポーネント 
 _language: ja
 ---
 
-## 範囲シリーズのサンプル データソース
+## エリア シリーズのサンプル データソース
 
-このトピックでは、[範囲シリーズ](datachart_series_types_range.md) のデータソースを実装する方法の例を示します。
+このトピックでは、[エリア シリーズ](datachart_series_types_range.md) のデータソースを実装する方法の例を示します。
 
 ```typescript
 export class SampleRangeData {

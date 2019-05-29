@@ -377,32 +377,233 @@ and in the template of the component:
 
 **Note**: The grid [`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#autogenerate) property is best to be avoided when binding to remote data for now. It assumes that the data is available in order to inspect it and generate the appropriate columns. This is usually not the case until the remote service responds, and the grid will throw an error. Making [`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#autogenerate) available, when binding to remote service, is on our roadmap for future versions.
 
-### Keyboard navigation
-Keyboard navigation is available by default in any grid and aims at covering as many as possible features and scenarios for the end user. When you focus a specific cell and press one of the following key combinations, the described behaviour is performed:
+### Complex data binding
 
- - `Arrow Up` - navigates one cell up (no wrapping);
- - `Arrow Down` - navigates one cell down (no wrapping);
- - `Arrow Left` - navigates one cell left (no wrapping between lines);
- - `Arrow Right` - navigates one cell right (no wrapping between lines);
- - `Ctrl + Arrow Up` - navigates to the first cell in the current column;
- - `Ctrl + Arrow Down` - navigates to the last cell in the current column;
- - `Ctrl + Arrow Left` -  moves to leftmost cell in row;
- - `Home` - moves to leftmost cell in row;
- - `Ctrl + Home` - moves to top left cell in the grid;
- - `Ctrl + Arrow Right` - moves to rightmost cell in row;
- - `End` - moves to rightmost cell in row;
- - `Ctrl + End` - moves to bottom right cell in the grid;
- - `Page Up` - scrolls one page (view port) up;
- - `Page Down` -  scrolls one page (view port) down;
- - `Enter` - enters edit mode;
- - `F2` - enters edit mode;
- - `Esc` - exits edit mode;
- - `Tab` - sequentially move the focus over the next cell on the row and if the last cell is reached move to next row; If next row is group row the whole row is focused, if it is data row, move focus over the first cell; When cell is in edit mode, will move the focus to next editable cell in the row, and from the right-most editable cell to the `CANCEL` and `DONE` buttons, and from the `DONE` button to the left-most editable cell within the currently edited row;
- - `Shift + Tab` - sequentially move focus to the previous cell on the row, if the first cell is reached move the focus to the previous row. If previous row is group row focus the whole row or if it is data row, focus the last cell of the row; when cell is in edit mode, will move the focus to the next editable cell in the row, and from the right-most editable cell to the `CANCEL` and `DONE` buttons, and from the `DONE` button to the left-most editable cell within the currently edited row;
- - `Space` -  if the row is selectable, on keydown space triggers row selection;
- - `Alt + Arrow Left` over GroupRow - collapses the group row content if the row is not already collapsed;
- - `Alt + Arrow Right` over GroupRow - expands the group row content if the row is not already expanded;
- - on mouse `wheel` -  blurs the focused element;
+The [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html) main purpose is to handle **flat data**, although this does not mean that it is impossible to work with more complex data.
+
+Currently, the Grid columns don't support composite keys, although you can still create a column out of several other columns. In this section we will cover, how to configure [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html) with **nested data** and **flat data**.
+
+#### Nested data
+
+In order to bind hierarchical data to **IgxGrid** you may use:
+    - the `value` of the cell, that contains the nested data
+    - a custom column template
+
+Below is the data that we are going to use:
+
+```typescript
+export const EMPLOYEE_DATA = [
+    {
+        Age: 55,
+        Employees: [
+            {
+                Age: 43,
+                HireDate: new Date(2011, 6, 3),
+                ID: 3,
+                Name: "Michael Burke",
+                Title: "Senior Software Developer"
+            },
+            {
+                Age: 29,
+                HireDate: new Date(2009, 6, 19),
+                ID: 2,
+                Name: "Thomas Anderson",
+                Title: "Senior Software Developer"
+            },
+            {
+                Age: 31,
+                HireDate: new Date(2014, 8, 18),
+                ID: 11,
+                Name: "Monica Reyes",
+                Title: "Software Development Team Lead"
+            },
+            {
+                Age: 35,
+                HireDate: new Date(2015, 9, 17),
+                ID: 6,
+                Name: "Roland Mendel",
+                Title: "Senior Software Developer"
+            }],
+        HireDate: new Date(2008, 3, 20),
+        ID: 1,
+        Name: "John Winchester",
+        Title: "Development Manager"
+    },
+...
+```
+The custom template for the column, that will render the nested data:
+
+```html
+...
+ <igx-column field="Employees" header="Employees" [cellClasses]="{ expand: true }" width="40%">
+        <ng-template #nestedDataTemp igxCell let-people let-cell="cell">
+            <div class="employees-container">
+                <igx-expansion-panel *ngFor="let person of people">
+                    <igx-expansion-panel-header iconPosition="right">
+                        <igx-expansion-panel-description>
+                            {{ person.Name }}
+                        </igx-expansion-panel-description>
+                    </igx-expansion-panel-header>
+                    <igx-expansion-panel-body>
+                        <div class="description">
+                            <igx-input-group (keydown)="stop($event)" displayDensity="compact">
+                                <label igxLabel for="title">Title</label>
+                                <input type="text" name="title" igxInput [(ngModel)]="person.Title" style="text-overflow: ellipsis;" />
+                            </igx-input-group>
+                            <igx-input-group (keydown)="stop($event)" displayDensity="compact" style="width: 15%;">
+                                <label igxLabel for="age">Age</label>
+                                <input type="number" name="age" igxInput [(ngModel)]="person.Age" />
+                            </igx-input-group>
+                        </div>
+                    </igx-expansion-panel-body>
+                </igx-expansion-panel>
+            </div>
+        </ng-template>
+ </igx-column>
+...
+```
+
+And the result from this configuration is:
+
+<div class="sample-container loading" style="height:460px">
+    <iframe id="grid-nested-dataBind-iframe" data-src='{environment:demosBaseUrl}/grid/grid-nested-data-binding' width="100%" height="100%" seamless="" frameborder="0" class="lazyload"></iframe>
+</div>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-nested-dataBind-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
+
+#### Flat data
+
+The flat data binding approach is similar to the one that we already described above, but instead of **cell value** we are going to use the [`rowData`]({environment:angularApiUrl}/classes/igxrowcomponent.html#rowdata) property of the [IgxRowComponent]({environment:angularApiUrl}/classes/igxrowcomponent.html).
+
+Since the grid is a component for **rendering**, **manipulating** and **preserving** data records, having access to **every data record** gives you the opportunity to customize the approach of handling it. The [`rowData`]({environment:angularApiUrl}/classes/igxrowcomponent.html#rowdata) property provides you this opportunity.
+
+Below is the data that we are going to use:
+```typescript
+export const DATA: any[] = [
+    {
+        Address: "Obere Str. 57",
+        City: "Berlin",
+        CompanyName: "Alfreds Futterkiste",
+        ContactName: "Maria Anders",
+        ContactTitle: "Sales Representative",
+        Country: "Germany",
+        Fax: "030-0076545",
+        ID: "ALFKI",
+        Phone: "030-0074321",
+        PostalCode: "12209",
+        Region: null
+    },
+...
+```
+The custom template:
+
+```html
+...
+<igx-column field="Address" header="Address" width="25%" editable="true">
+                <ng-template #compositeTemp igxCell let-cell="cell">
+                    <div class="address-container">
+                    // In the Address column combine the Country, City and PostCode values of the corresponding data record 
+                        <span><strong>Country:</strong> {{cell.row.rowData.Country}}</span>
+                        <br/>
+                        <span><strong>City:</strong> {{cell.row.rowData.City}}</span>
+                        <br/>
+                        <span><strong>Postal Code:</strong> {{cell.row.rowData.PostalCode}}</span>
+                    </div>
+                </ng-template>
+...
+```
+Keep in mind that with the above defined template you will not be able to make editing operations, so we need an editor template.
+
+```html
+...
+                 <ng-template  igxCellEditor let-cell="cell">
+                        <div class="address-container">
+                        <span>
+                            <strong>Country:</strong> {{cell.row.rowData.Country}}
+                            <igx-input-group width="100%">
+                                    <input igxInput [(ngModel)]="cell.row.rowData.Country" />
+                            </igx-input-group>
+                        </span>
+                            <br/>
+                            <span><strong>City:</strong> {{cell.row.rowData.City}}</span>
+                            <igx-input-group width="100%">
+                                    <input igxInput [(ngModel)]="cell.row.rowData.City" />
+                            </igx-input-group>
+                            <br/>
+                            <span><strong>Postal Code:</strong> {{cell.row.rowData.PostalCode}}</span>
+                            <igx-input-group width="100%">
+                                    <input igxInput [(ngModel)]="cell.row.rowData.PostalCode" />
+                            </igx-input-group>
+                            <br/>
+                        </div>
+                </ng-template>
+</igx-column>
+...
+```
+And the result is:
+
+<div class="sample-container loading" style="height:550px">
+    <iframe id="grid-composite-dataBind-iframe" data-src='{environment:demosBaseUrl}/grid/grid-composite-data-binding' width="100%" height="100%" seamless="" frameborder="0" class="lazyload"></iframe>
+</div>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-composite-dataBind-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
+
+### State persistence
+
+Persisting the grid state across pages/sessions is a common scenario and is currently achievable on application level. To demonstrate the approach to take, let's implement state persistence across pages. The example is using the `localStorage` object to store the JSON string of the state, but depending on your needs you may decide to go with the `sessionStorage` object. All implementation details are extracted in the `igxState` directive:
+
+```typescript
+// state.directive.ts
+
+@Directive({
+    selector: "[igxState]"
+})
+export class IgxGridStateDirective {
+
+    public ngOnInit() {
+        this.loadGridState();
+        this.router.events.pipe(take(1)).subscribe((event: NavigationStart) => {
+            this.saveGridState();
+        });
+    }
+
+    public ngAfterViewInit() {
+        this.restoreGridState();
+    }
+
+    public saveGridState() { ... }
+    public loadGridState() { ... }
+    public restoreGridState() { ... }
+}
+```
+
+As seen in the example above, when a NavigationStart event occurs (each time a user navigates away from the page), `saveGridState` method is called, which contains the logic to read the grid state (sorting and filtering expressions, paging state, columns order, collection of selected rows) and save this data as json string in the `localStorge`. Later, when a user comes back to the grid, `loadGridState` and `restoreGridState` methods are called during the `OnInit` and `AfterViewInit` lifecycle hooks respectively.
+What `loadGridState` does is decode the JSON string from the `localStorage` into a `gridState` object, while `restoreGridState` uses the grid API to apply the corresponding sorting and filtering expressions to the grid, set paging, etc.
+
+Last thing to do is apply the directive to the grid and restore the columns collection during the `OnInit` hook of the grid component: 
+
+```typescript
+// grid.component.ts
+
+public ngOnInit() {
+    const columnsFromState = this.state.getColumnsForGrid(this.gridId);
+    this.columns = this.state.columns && columnsFromState ?
+        columnsFromState : this.initialColumns;
+}
+```
+
+<div class="sample-container loading" style="height:750px">
+    <iframe id="grid-state-sample-iframe" data-src='{environment:demosBaseUrl}/grid/grid-state' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-state-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
 
 ### Live Updating Demo
 

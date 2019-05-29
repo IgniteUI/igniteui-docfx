@@ -3,6 +3,7 @@
 title: Grid Excel Style Filtering
 _description: The Ignite UI for Angular Data Grid control features the fastest, touch-responsive data-rich grid with popular features, including hierarchical and list views.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Grid, Angular Table, Angular Data Grid component, Angular Data Table component, Angular Data Grid control, Angular Data Table control, Angular Grid component, Angular Table component, Angular Grid control, Angular Table control, Angular High Performance Grid, Angular High Performance Data Table, Filtering, Data Grid Filtering, Data Table Filtering, Excel, Excel Style Filtering
+_language: kr
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
@@ -10,6 +11,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 title: Tree Grid Excel Style Filtering
 _description: The Ignite UI for Angular Tree Grid control features the fastest, touch-responsive data-rich grid with popular features, including hierarchical and list views.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Tree Grid, Angular Table, Angular Tree Grid component, Angular Data Table component, Angular Tree Grid control, Angular Data Table control, Angular Tree Grid component, Angular Table component, Angular Grid control, Angular Table control, Angular High Performance Grid, Angular High Performance Data Table, Filtering, Tree Grid Filtering, Data Table Filtering, Excel, Excel Style Filtering
+_language: kr
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -17,6 +19,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 title: Hierarchical Grid Excel Style Filtering
 _description: The Ignite UI for Angular Hierarchical Grid control features the fastest, touch-responsive data-rich grid with popular features, including hierarchical and list views.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Hierarchical Grid, Angular Table, Angular Hierarchical Grid component, Angular Data Table component, Angular Hierarchical Grid control, Angular Data Table control, Angular Hierarchical Grid component, Angular Table component, Angular Grid control, Angular Table control, Angular High Performance Grid, Angular High Performance Data Table, Filtering, Hierarchical Grid Filtering, Data Table Filtering, Excel, Excel Style Filtering
+_language: kr
 ---
 }
 
@@ -27,7 +30,7 @@ The @@igComponent component in Ignite UI for Angular provides filter UI similar 
 #### Demo
 
 @@if (igxName === 'IgxGrid') {
-<div class="sample-container loading" style="height:850px">
+<div class="sample-container loading" style="height:950px">
     <iframe id="grid-sample-1-iframe" src='{environment:demosBaseUrl}/grid/grid-excel-style-filtering-sample-1' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
@@ -36,7 +39,7 @@ The @@igComponent component in Ignite UI for Angular provides filter UI similar 
 </div>
 }
 @@if (igxName === 'IgxTreeGrid') {
-<div class="sample-container loading" style="height:850px">
+<div class="sample-container loading" style="height:950px">
     <iframe id="tree-grid-sample-1-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-excel-style-filtering-sample-1' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
@@ -45,7 +48,7 @@ The @@igComponent component in Ignite UI for Angular provides filter UI similar 
 </div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-<div class="sample-container loading" style="height:850px">
+<div class="sample-container loading" style="height:950px">
     <iframe id="hierarchical-grid-sample-1-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-excel-style-filtering-sample-1' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
@@ -190,7 +193,7 @@ In the sample below 'Artist' column have all four features enabled, 'Debut' have
 <div class="divider--half"></div>
 
 @@if (igxName === 'IgxGrid') {
-<div class="sample-container loading" style="height:850px">
+<div class="sample-container loading" style="height:900px">
     <iframe id="grid-sample-2-iframe" data-src='{environment:demosBaseUrl}/grid/grid-excel-style-filtering-sample-2' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <br/>
@@ -199,7 +202,7 @@ In the sample below 'Artist' column have all four features enabled, 'Debut' have
 </div>
 }
 @@if (igxName === 'IgxTreeGrid') {
-<div class="sample-container loading" style="height:850px">
+<div class="sample-container loading" style="height:900px">
     <iframe id="tree-grid-sample-2-iframe" data-src='{environment:demosBaseUrl}/tree-grid/treegrid-excel-style-filtering-sample-2' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <br/>
@@ -208,7 +211,7 @@ In the sample below 'Artist' column have all four features enabled, 'Debut' have
 </div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-<div class="sample-container loading" style="height:850px">
+<div class="sample-container loading" style="height:900px">
     <iframe id="hierarchical-grid-sample-2-iframe" data-src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-excel-style-filtering-sample-2' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <br/>
@@ -324,7 +327,7 @@ If you want to keep the sorting, moving, pinning and hiding features of the colu
 <div class="divider--half"></div>
 
 @@if (igxName === 'IgxGrid') {
-<div class="sample-container loading" style="height:850px">
+<div class="sample-container loading" style="height:900px">
     <iframe id="grid-sample-2-iframe" src='{environment:demosBaseUrl}/grid/grid-excel-style-filtering-sample-3' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
@@ -333,7 +336,7 @@ If you want to keep the sorting, moving, pinning and hiding features of the colu
 </div>
 }
 @@if (igxName === 'IgxTreeGrid') {
-<div class="sample-container loading" style="height:850px">
+<div class="sample-container loading" style="height:900px">
     <iframe id="tree-grid-sample-2-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-excel-style-filtering-sample-3' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
@@ -342,7 +345,7 @@ If you want to keep the sorting, moving, pinning and hiding features of the colu
 </div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-<div class="sample-container loading" style="height:850px">
+<div class="sample-container loading" style="height:900px">
     <iframe id="hierarchical-grid-sample-2-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-excel-style-filtering-sample-3' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>

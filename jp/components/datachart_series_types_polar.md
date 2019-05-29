@@ -65,9 +65,7 @@ this.state = { dataSource: SamplePolarData.create() }
 
 ### モジュールの要件
 
-<!-- Angular -->
-
-極座標シリーズを使用するために、読み込み時に以下のモジュールをアプリへインポートしてデータチャートモジュールを登録する必要があります。
+`IgxDataChart` には以下のモジュールが必要です。
 
 ```typescript
 // axis' modules:
@@ -88,12 +86,12 @@ import { IgxDataChartPolarModule } from "igniteui-angular-charts/ES5/igx-data-ch
 // in app.module.ts file
 @NgModule({
     imports: [
-        // ...
+        ...
         IgxDataChartModule,
         IgxDataChartCoreModule,
         IgxDataChartPolarCoreModule,
         IgxDataChartPolarModule,
-        // ...
+        ...
     ]
 })
 ```

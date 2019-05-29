@@ -6,16 +6,12 @@ _keywords: Spreadsheet, Ignite UI for Angular, Infragistics
 
 ## Working with Commands
 
-This topic explains how to perform different operations with the control using commands.
+The Angular Spreadsheet component allows you to perform commands for activatinig different features of the spreadsheet. This topic explains how to perform different operations with the control using commands. Many of the commands will perform their action based on the active cells, rows, or worksheets. For example two such commands are ZoomIn and ZoomOut. See the SpreadsheetAction enum for a full list.
 
 ### Demo
 
 <div class="sample-container" style="height: 500px">
     <iframe id="spreadsheet-commands-sample-iframe" src='{environment:demosBaseUrl}/spreadsheet/spreadsheet-commands' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="spreadsheet-commands-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
-    </button>
 </div>
 
 <div class="divider--half"></div>
@@ -33,7 +29,7 @@ import { SpreadsheetAction } from "igniteui-angular-spreadsheet/ES5/SpreadsheetA
 
 ### Usage
 
-The following snippt shows how you can setup the data validation rules
+The following snippet shows how you can setup the data validation rules
 
 ```typescript
 @ViewChild("spreadsheet", { read: IgxSpreadsheetComponent })
@@ -42,10 +38,10 @@ public spreadsheet: IgxSpreadsheetComponent;
 ---
 
 public zoomIn(): void {
-    this.spreadsheet.executeCommand(SpreadsheetAction.ZoomIn);
+    this.spreadsheet.executeAction(SpreadsheetAction.ZoomIn);
 }
 
 public zoomOut(): void {
-    this.spreadsheet.executeCommand(SpreadsheetAction.ZoomOut);
+    this.spreadsheet.executeAction(SpreadsheetAction.ZoomOut);
 }
 ```

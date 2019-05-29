@@ -4,17 +4,17 @@ _description: The Map allows you to display data that contains geographic locati
 _keywords: map, Ignite UI for Angular, infragistics
 ---
 
-## Map
+## Proportional Symbol Series
 
 Use the map component's `GeographicProportionalSymbolSeries` series to plot markers for the geographic points specified by the data in your application. This map series can be useful for highlighting points of interest in your particular business case like department stores, warehouses, or offices. Additional uses of this map series may be in a fleet management system or a GPS system for dynamic vehicle tracking.
 
 ### Demo
 
 <div class="sample-container" style="height: 500px">
-    <iframe id="map-geographic_proportional_symbol_series-iframe" src='{environment:demosBaseUrl}/maps/map-geographic_proportional_symbol_series' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="geo-map-scatter-proportional-series-iframe" src='{environment:demosBaseUrl}/maps/geo-map-scatter-proportional-series' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="map-geographic_proportional_symbol_series-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="geo-map-scatter-proportional-series-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
     </button>
 </div>
 
@@ -26,8 +26,6 @@ The demo above shows the `GeographicProportionalSymbolSeries` series and how to 
 
 Similar to other types of scatter series in the map control, the `GeographicProportionalSymbolSeries` series has the `ItemsSource` property for data binding. This property can be bound to objects implementing an IEnumerable interface.
 In addition, each item in the items source must have two data columns that store geographic longitude and latitude coordinates and uses the `LongitudeMemberPath` and `LatitudeMemberPath` properties to map these data columns. The `RadiusScale` and `RadiusMemberPath` will settings configures the radius for the bubbles.  
-
-#### Properties
 
 The following table summarizes the GeographicHighDensityScatterSeries series properties used for data binding.
 
@@ -41,7 +39,7 @@ The following table summarizes the GeographicHighDensityScatterSeries series pro
 | `MinimumValue`        | any                                                     | Configure the minimum value for calculating value sub ranges.                                         |
 | `MaximumValue`        | any                                                     | Configure the maximum value for calculating value sub ranges.                                         |
 
-### Code Example - Geographic Proportional Symbol Series
+### Code Snippet
 
 <!--Angular -->
 

@@ -2,7 +2,6 @@
 title: Excel Library Using Worksheets
 _description: The Ignite UI for Excel Library component with Worksheet Operations.
 _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Excel Library, Angular Excel Library Example, Angular Excel Library Component, Angular Excel Engine, Worksheet, Conditional Formatting, Sorting, Filtering, Gridlines, Headers, Protection
-_language: kr
 ---
 
 ## Using Worksheets
@@ -11,12 +10,10 @@ The Infragistics Excel Engine's `Worksheet` is where your data is kept. You can 
 
 ### Demo
 
-<div class="sample-container loading" style="height: 100px">
-    <iframe id="excel-library-overview-sample-iframe" src='{environment:demosBaseUrl}/excel-library/operations-on-worksheets' width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="excel-library-operations-on-worksheets-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
-    </button> 
+<div class="sample-container" style="height: 100px">
+    <iframe id="excel-library-overview-sample-iframe" 
+	src='{environment:demosBaseUrl}/excel-library/operations-on-worksheets' 
+	width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 
 <div class="divider--half"></div>

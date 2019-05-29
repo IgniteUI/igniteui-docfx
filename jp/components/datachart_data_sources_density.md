@@ -5,7 +5,7 @@ _keywords: Ignite UI for Angular, Angular, Native Angular コンポーネント 
 _language: ja
 ---
 
-## 散布 HD シリーズのサンプル データソース
+## 散布図 - HD シリーズのサンプル データソース
 
 このトピックでは、[散布 HD シリーズ](datachart_series_types_polar.md) のデータソースを実装する方法の例を示します。
 
