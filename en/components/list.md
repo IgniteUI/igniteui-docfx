@@ -494,7 +494,42 @@ Finally, we need to apply the filtering pipe to our contacts data before we can 
 </igx-list-item>
 ```
 
-<div class="divider"></div>
+### Applying theme to the list component
+
+Let's see how we can change the background of our list. First we need to import index.scss in to our component .scss file.
+
+```scss
+@import '~igniteui-angular/lib/core/styles/themes/index';
+```
+
+Then we need to create a theme for our component.
+
+```scss
+@import '~igniteui-angular/lib/core/styles/themes/index';
+
+:host ::ng-deep {
+    $my-list-theme: igx-list-theme(
+        $background: #0568ab
+    );
+
+    @include igx-list($my-list-theme);
+}
+```
+The result from the above code is 
+
+<div class="sample-container loading" style="height: 365px">
+<iframe id="list-sample-8-final-iframe" data-src='{environment:demosBaseUrl}/lists/list-sample-8' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+</div>
+<div>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-sample-8-final-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
+
+> [!NOTE]
+> Please note that if we create our component theme in the component .scss file we need to use `::ng-deep` in order to pass the view encapsulation otherwise our new theme will not work! for more info please refer to:  [Component Themes](https://www.infragistics.com/products/ignite-ui-angular/angular/components/themes/component-themes.html).
+
+For full list of parameters that you can change for the list component please refer to: [IgxListComponent Styles]({environment:sassApiUrl}/index.html#function-igx-list-theme)
+
 
 ### API References
 
