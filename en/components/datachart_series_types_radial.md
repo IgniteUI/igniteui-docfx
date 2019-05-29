@@ -62,7 +62,7 @@ this.state = { dataSource: SampleRadialData.create() }
 
 <!-- Angular -->
 
-In order to use radial series, you need to import the following modules in your app during load and register data chart modules:
+In order to use radial series, you need to import the following modules in your app during load:
 
 ```typescript
 // axis' modules:

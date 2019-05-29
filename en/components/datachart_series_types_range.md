@@ -55,9 +55,7 @@ this.state = { dataSource: SampleRangeData.create() }
 
 ### Required Modules
 
-<!-- Angular -->
-
-In order to use range series, you need to import the following modules in your app during load and register data chart modules:
+In order to use range series, you need to import the following modules in your app during load:
 
 ```typescript
 // in app.module.ts file
