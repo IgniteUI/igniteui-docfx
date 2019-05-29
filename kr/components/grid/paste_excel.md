@@ -1,15 +1,15 @@
----
-title: Excel에서 붙여넣기 - 네이티브 Angular| Ignite UI for Angular
-_description: 사용자는 Excel에서 복사한 데이터를 igxGrid에 붙여넣을 수 있습니다.
-_keywords: Ignite UI for Angular, UI 컨트롤, Angular 위젯, 웹 위젯, UI 위젯, Angular, 네이티브 Angular 컨트롤, 네이티브 Angular 컴포넌트 세트, 네이티브 Angular 컨트롤, 네이티브 Angular 컴포넌트 라이브러리, Angular 그리드, Angular 데이터 그리드, Angular 그리드 컨트롤, Angular 그리드 컴포넌트, Excel에서 붙여넣기, Angular Excel에서 붙여넣기
+﻿---
+제목: Excel에서 붙여넣기 - 네이티브 Angular | Ignite UI for Angular
+_description: Users can paste data into igxGrid that is copied from Excel.
+_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Controls, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Grid, Angular Data Grid, Angular Grid Control, Angular Grid Component, Paste from Excel, Angular Paste from Excel
 _language: kr
 ---
 
-## Excel에서 붙여넣기
+### Excel에서 붙여넣기
 
 Ignite UI for Angular [`IgxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html)는 클립보드에 복사된 Excel 데이터를 읽어올 수 있습니다. 이 부분에서는 몇 가지 사용자 코드를 사용하여 실행하는 방법을 설명합니다.
 
-### Excel에서 붙여넣기 데모
+#### Excel에서 붙여넣기 데모
 
 이 샘플은 Excel에서 [`igxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html)로 붙여넣기를 실행하는 방법을 보여줍니다.
 샘플을 실행하려면, Excel 스프레드 시트를 열고 행을 복사한 후 키보드(Ctrl+V, Shift+Insert, Command+V)를 사용하여 그리드에 붙여넣기를 합니다.
@@ -32,7 +32,7 @@ Ignite UI for Angular [`IgxGrid`]({environment:angularApiUrl}/classes/igxgridcom
 </div>
 <div class="divider"></div>
 
-### 사용 방법
+#### 사용 방법
 
 `paste-handler` 지시문(다음 섹션에 코드가 있음)을 [`igxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html)에 추가하고 `onDataProcessed` 이벤트를 처리해야 합니다. `onDataProcessed` 이벤트에 배열 형식의 Excel 데이터에 액세스를 제공하는 하나의 매개 변수가 있습니다. 상세한 것은 `addRecords` 및 `updateRecords` 메소드를 참조하십시오.
 
@@ -137,9 +137,9 @@ Ignite UI for Angular [`IgxGrid`]({environment:angularApiUrl}/classes/igxgridcom
 ```
 <div class="divider"></div>
 
-### 붙여넣기 핸들러 지시문
+#### 붙여넣기 핸들러 지시문
 
-이것은 `paste-handler` 실행입니다. 클립보드에서 붙여넣은 데이터를 받는데 사용되는 DOM `textarea` 요소를 코드로 작성합니다. 데이터를 `textarea`에 붙여넣기 할 때 지시문은 이것을 배열에 분석하고 분석 데이터를 전달하는 사용자 이벤트 `onDataProcessed`를 내보냅니다.
+이것은 `paste-handler` 구현입니다. 클립보드에서 붙여넣은 데이터를 받는데 사용되는 DOM `textarea` 요소를 코드로 작성합니다. 데이터를 `textarea`에 붙여넣기 할 때 지시문은 이것을 배열에 분석하고 분석 데이터를 전달하는 사용자 이벤트 `onDataProcessed`를 내보냅니다.
 
 ```typescript
 import { Directive, EventEmitter, HostListener, Output} from "@angular/core";
@@ -220,16 +220,16 @@ export class PasteHandler {
 
 ```
 
-## API
+### API 참조
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
 
-## 추가 리소스
+### 추가 리소스
 <div class="divider--half"></div>
 
-* [Excel 내보내기](../exporter_excel.md)
+* [Excel 내보내기](export_excel.md)
 
 <div class="divider--half"></div>
 커뮤니티는 활동적이고 새로운 아이디어를 항상 환영합니다.
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **포럼**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
 * [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
