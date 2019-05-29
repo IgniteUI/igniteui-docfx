@@ -1,6 +1,6 @@
 ﻿@@if (igxName === 'IgxGrid') {
 ---
-제목: 그리드 정렬
+title: 그리드 정렬
 _description: The Ignite UI for Angular Data Grid control features the fastest, touch-responsive data-rich grid with popular features, including hierarchical and list views.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Grid, Angular Table, Angular Data Grid component, Angular Data Table component, Angular Data Grid control, Angular Data Table control, Angular Grid component, Angular Table component, Angular Grid control, Angular Table control, Angular High Performance Grid, Angular High Performance Data Table, Data Grid Sorting, Data Table Sorting, Angular Data Grid Sorting, Angular Data Table Sorting
 _language: kr
@@ -8,7 +8,7 @@ _language: kr
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-제목: 트리 그리드 정렬
+title: 트리 그리드 정렬
 _description: The Ignite UI for Angular Tree Grid control features the fastest, touch-responsive data-rich tree grid with popular features, including hierarchical and list views.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Tree Grid, Angular Tree Table, Angular Tree Grid component, Angular Tree Table component, Angular Tree Grid control, Angular Tree Table control, Angular Tree Grid component, Angular Tree Table component, Angular Tree Grid control, Angular Tree Table control, Angular High Performance Tree Grid, Angular High Performance Tree Table, Tree Grid Sorting, Tree Table Sorting, Angular Tree Grid Sorting, Angular Tree Table Sorting
 _language: kr
@@ -16,7 +16,7 @@ _language: kr
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-제목: 계층 그리드 정렬
+title: 계층 그리드 정렬
 _description: The Ignite UI for Angular Hierarchical Grid control features the fastest, touch-responsive data-rich hierarchical grid with popular features.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Hierarchical Grid, Angular Hierarchical Table, Angular Hierarchical Grid component, Angular Hierarchical Table component, Angular Hierarchical Grid control, Angular Hierarchical Table control, Angular Hierarchical Grid component, Angular Hierarchical Table component, Angular High Performance Hierarchical Grid, Angular High Performance Hierarchical Table, Hierarchical Grid Sorting, Hierarchical Table Sorting, Angular Hierarchical Grid Sorting, Angular Hierarchical Table Sorting
 _language: kr
@@ -83,7 +83,7 @@ this.@@igObjectRef.sort([
 ]);
 ```
 
-> [!참고]
+> [!NOTE]
 > 정렬은 [`DefaultSortingStrategy`]({environment:angularApiUrl}/classes/defaultsortingstrategy.html) 알고리즘을 사용하여 실행됩니다. [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#sortStrategy) 또는 [`ISortingExpression`]({environment:angularApiUrl}/interfaces/isortingexpression.html#strategy)은 대체 알고리즘으로 [`ISortingStrategy`]({environment:angularApiUrl}/interfaces/isortingstrategy.html)의 사용자 구현을 사용할 수 있습니다. 예를 들면, 복잡한 템플릿 열 또는 이미지 열에 사용자 정렬을 정의해야 할 때 유용합니다.
 
 필터링 동작과 마찬가지로 [`clearSort`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#clearsort) 메소드를 사용하여 정렬 상태를 해제할 수 있습니다:
@@ -96,7 +96,7 @@ this.@@igObjectRef.clearSort('ProductName');
 this.@@igObjectRef.clearSort();
 ```
 
-> [!참고]
+> [!NOTE]
 > 정렬 조작은 @@igComponent의 기본 데이터 소스를 변경하지 **않습니다**.
 
 #### 초기 정렬 상태
@@ -112,7 +112,7 @@ public ngOnInit() {
 }
 ```
 
-> [!참고]
+> [!NOTE]
 > `string` 유형의 값이 [`dataType`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#datatype) `Date` 열에서 사용되는 경우, @@igComponent는 `Date` 객체로 구문 분석하지 않으므로 @@igComponent를 사용하면 `sorting`이 예상대로 작동하지 않습니다. `string` 객체를 사용하려면 값을 `Date` 객체로 구문 분석하기 위해 애플리케이션 수준에서 추가 논리를 구현해야 합니다.
 
 <div class="divider--half"></div>

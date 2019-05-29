@@ -1,6 +1,6 @@
 ﻿@@if (igxName === 'IgxGrid') {
 ---
-제목: 그리드 편집- 네이티브 Angular | Ignite UI for Angular
+title: 그리드 편집- 네이티브 Angular | Ignite UI for Angular
 _description: The Ignite UI for Angular Data Grid control provides default cell templates for editable columns which are based on the data type of the column.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Component, Angular Grid, Angular Table, Angular Data Grid component, Angular Data Table component, Angular Data Grid control, Angular Data Table control, Angular Grid component, Angular Table component, Angular Grid control, Angular Table control, Angular High Performance Grid, Angular High Performance Data Table, Cell Editing, Data Grid Cell Editing, Data Table Cell Editing
 _language: kr
@@ -8,7 +8,7 @@ _language: kr
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-제목: 트리 그리드 편집- 네이티브 Angular | Ignite UI for Angular
+title: 트리 그리드 편집- 네이티브 Angular | Ignite UI for Angular
 _description: The Ignite UI for Angular Tree Grid control provides default cell templates for editable columns which are based on the data type of the column.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Component, Angular Tree Grid, Angular Tree Table, Angular Tree Grid component, Angular Tree Table component, Angular Tree Grid control, Angular Tree Table control, Angular Tree Grid component, Angular Tree Table component, Angular Tree Grid control, Angular Tree Table control, Angular High Performance Tree Grid, Angular High Performance Tree Table, Cell Editing, Tree Grid Cell Editing, Tree Table Cell Editing
 _language: kr
@@ -16,7 +16,7 @@ _language: kr
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-제목: 계층 그리드 편집 - 네이티브 Angular | Ignite UI for Angular
+title: 계층 그리드 편집 - 네이티브 Angular | Ignite UI for Angular
 _description: The Ignite UI for Angular Hierarchical Grid control provides default cell templates for editable columns which are based on the data type of the column.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Component, Angular Hierarchical Grid, Angular Hierarchical Table, Angular Hierarchical Grid component, Angular Hierarchical Table component, Angular Hierarchical Grid control, Angular Hierarchical Table control, Angular High Performance Hierarchical Grid, Angular High Performance Hierarchical Table, Cell Editing, Hierarchical Grid Cell Editing, Hierarchical Table Cell Editing
 _language: kr
@@ -82,7 +82,7 @@ Ignite UI for Angular의 @@igComponent 컴포넌트는 열의 데이터 유형�
  - 다른 셀을 원클릭 - @@igComponent의 다른 셀을 클릭하면 변경이 제출됩니다.
  - 페이징, 크기 조정, 핀 고정 또는 이동 등의 조작은 편집 모드를 종료하고 변경 사항이 확정됩니다.
 
-> [!참고]
+> [!NOTE]
 > 셀은 수직 또는 수평으로 스크롤하거나 @@igComponent 이외를 클릭해도 편집 모드로 유지됩니다. 이것은 셀 편집과 행 편집 모두에 유효합니다.
 
 기본 키가 정의되어 있는 경우에만 @@igxName API를 통해 셀 값을 수정할 수도 있습니다.
@@ -161,7 +161,7 @@ Ignite UI for Angular의 @@igComponent 컴포넌트는 열의 데이터 유형�
 
 ### CRUD 조작
 
-> [!참고]
+> [!NOTE]
 > **CRUD 조작**을 실행할 경우에는 **필터링**, **정렬**, **그룹화** 등 적용된 모든 파이프는 다시 적용되고 표시가 자동으로 업데이트된다는 점에 유의하십시오.
 
 [`@@igxNameComponent`]({environment:angularApiUrl}/classes/@@igTypeDoc.html)는 기본적인 CRUD 조작을 위한 간단한 API를 제공합니다.

@@ -1,6 +1,6 @@
 ﻿@@if (igxName === 'IgxGrid') {
 ---
-제목: 그리드 행 드래그
+title: 그리드 행 드래그
 _description: The Ignite UI for Angular Data Grid control features the fastest, touch-responsive data-rich grid with popular features, including hierarchical and list views.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Grid, Angular Table, Angular Data Grid component, Angular Data Table component, Angular Data Grid control, Angular Data Table control, Angular Grid component, Angular Table component, Angular Grid control, Angular Table control, Angular High Performance Grid, Angular High Performance Data Table, Row Drag, Row Dragging, Data Grid Row Drag, Data Table Row Drag
 _language: kr
@@ -8,7 +8,7 @@ _language: kr
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-제목: 트리 그리드 행 드래그
+title: 트리 그리드 행 드래그
 _description: The Ignite UI for Angular Tree Grid control features the fastest, touch-responsive data-rich tree grid with popular features, including hierarchical and list views.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Tree Grid, Angular Tree Table, Angular Tree Grid component, Angular Tree Table component, Angular Tree Grid control, Angular Tree Table control, Angular Tree Grid component, Angular Tree Table component, Angular Tree Grid control, Angular Tree Table control, Angular High Performance Tree Grid, Angular High Performance Tree Table, Row Drag, Row Dragging, Tree Grid Row Drag, Tree Table Row Drag
 _language: kr
@@ -16,7 +16,7 @@ _language: kr
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-제목: 계층 그리드 행 드래그
+title: 계층 그리드 행 드래그
 _description: The Ignite UI for Angular Hierarchical Grid control features the fastest, touch-responsive data-rich tree grid with popular features.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Hierarchical Grid, Angular Hierarchical Table, Angular Hierarchical Grid component, Angular Hierarchical Table component, Angular Hierarchical Grid control, Angular Hierarchical Table control, Angular High Performance Hierarchical Grid, Angular High Performance Hierarchical Table, Row Drag, Row Dragging, Hierarchical Grid Row Drag, Hierarchical Table Row Drag
 _language: kr
@@ -328,10 +328,10 @@ enum DragIcon {
 ### 제한 사항
 
 `rowDraggable` 지시문을 사용할 경우, 고려해야 할 몇 가지 사항이 있습니다:
-> [!참고]
+> [!NOTE]
 > 행 드롭 이벤트를 처리할 경우, 행 드래그 고스트의 남은 요소가 표시되지 않도록 `eventArgs.cancel`을 **`true`**로 설정해야 합니다 
 @@if (igxName === 'IgxHierarchicalGrid') {
-> [!참고]
+> [!NOTE]
 > @@igSelector와 함께 `rowDraggable`을 사용하는 경우, 템플릿을 통해 [`dragIndicatorIconTemplate`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#dragindicatoricontemplate)을 `ContentChild`로 설정할 수 없습니다. 대신에 템플릿(`ViewChild` 데코레이터를 통해)에 대한 참조를 가져와서 그리드 `myHGrid.dragIndicatorIconTemplate: TemplateRef = myCustomTemplate`에 전달할 수 있습니다 
 }
 

@@ -1,6 +1,6 @@
 ﻿@@if (igxName === 'IgxGrid') {
 ---
-제목: 그리드 검색
+title: 그리드 검색
 _description: The Ignite UI for Angular Data Grid control features a search API that allows developers to implement search functionality within the grid.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Grid, Angular Table, Angular Data Grid component, Angular Data Table component, Angular Data Grid control, Angular Data Table control, Angular Grid component, Angular Table component, Angular Grid control, Angular Table control, Angular High Performance Grid, Angular High Performance Data Table, Data Grid Searching, Data Table Search
 _language: kr
@@ -8,7 +8,7 @@ _language: kr
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-제목: 트리 그리드 검색
+title: 트리 그리드 검색
 _description: The Ignite UI for Angular Tree Grid control features a search API that allows developers to implement search functionality within the tree grid.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Tree Grid, Angular Tree Table, Angular Tree Grid component, Angular Tree Table component, Angular Tree Grid control, Angular Tree Table control, Angular Tree Grid component, Angular Tree Table component, Angular Tree Grid control, Angular Tree Table control, Angular High Performance Tree Grid, Angular High Performance Tree Table, Tree Grid Searching, Tree Table Search
 _language: kr
@@ -16,7 +16,7 @@ _language: kr
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-제목: 계층 그리드 검색
+title: 계층 그리드 검색
 _description: The Ignite UI for Angular Hierarchical Grid control features a search API that allows developers to implement search functionality within the grid.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Hierarchical Grid, Angular Hierarchical Table, Angular Hierarchical Grid component, Angular Hierarchical Table component, Angular Hierarchical Grid control, Angular Hierarchical Table control, Angular High Performance Hierarchical Grid, Angular High Performance Hierarchical Table, Hierarchical Grid Searching, Hierarchical Table Search
 _language: kr

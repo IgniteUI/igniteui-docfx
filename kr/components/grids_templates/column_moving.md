@@ -1,6 +1,6 @@
 ﻿@@if (igxName === 'IgxGrid') {
 ---
-제목: 열 이동- 네이티브 Angular | Ignite UI for Angular
+title: 열 이동- 네이티브 Angular | Ignite UI for Angular
 _description: Column moving feature provides a means for reordering columns interactively via a standard drag/drop mouse gesture.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Grid, Angular Table, Angular Data Grid component, Angular Data Table component, Angular Data Grid control, Angular Data Table control, Angular Grid component, Angular Table component, Angular Grid control, Angular Table control, Angular High Performance Grid, Angular High Performance Data Table, Column Moving, Grid Column Moving, Angular Grid Column Moving, Angular Data Table Column Moving, Angular column moving
 _language: kr
@@ -8,7 +8,7 @@ _language: kr
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-제목: 열 이동- 네이티브 Angular | Ignite UI for Angular
+title: 열 이동- 네이티브 Angular | Ignite UI for Angular
 _description: Column moving feature provides a means for reordering columns interactively via a standard drag/drop mouse gesture.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Tree Grid, Angular Tree Table, Angular Tree Grid component, Angular Tree Table component, Angular Tree Grid control, Angular Tree Table control, Angular Tree Grid component, Angular Tree Table component, Angular Tree Grid control, Angular Tree Table control, Angular High Performance Tree Grid, Angular High Performance Tree Table, Column Moving, Tree Grid Column Moving, Angular Tree Grid Column Moving, Angular Tree Table Column Moving, Angular column moving
 _language: kr
@@ -16,7 +16,7 @@ _language: kr
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-제목: 열 이동- 네이티브 Angular | Ignite UI for Angular
+title: 열 이동- 네이티브 Angular | Ignite UI for Angular
 _description: Column moving feature provides a means for reordering columns interactively via a standard drag/drop mouse gesture.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Hierarchical Grid, Angular Hierarchical Table, Angular Hierarchical Grid component, Angular Hierarchical Table component, Angular Hierarchical Grid control, Angular Hierarchical Table control, Angular High Performance Hierarchical Grid, Angular High Performance Hierarchical Table, Column Moving, Hierarchical Grid Column Moving, Angular Hierarchical Grid Column Moving, Angular Hierarchical Table Column Moving, Angular column moving
 _language: kr
@@ -29,7 +29,7 @@ Ignite UI for Angular @@igComponent 컴포넌트는 표준 드래그/드롭 마�
 
 열 이동은 고정된 열에서도 작동합니다. 핀 고정 해제된 열을 드래그하여 핀 고정 영역 안으로 드롭하여 해당 열을 핀 고정시키거나, 반대로 핀 고정된 열을 드래그하여 핀 고정 영역 밖으로 드롭하여 해당 열을 핀 고정 해제할 수 있습니다.
 
-> [!참고]
+> [!NOTE]
 > 헤더가 다시 적용되고 해당 열이 이동 가능(또는 그룹화 가능)한 경우, 적용된 이벤트를 모두 처리할 수 있도록 적용 요소에서 **draggable**을 **false**로 설정해야 합니다!
 
 ```html
@@ -92,7 +92,7 @@ Ignite UI for Angular @@igComponent 컴포넌트는 표준 드래그/드롭 마�
 ```
 }
 
-> [!참고]
+> [!NOTE]
 > 핀 고정 영역이 최대 허용 너비(전체 @@igComponent 너비의 80%)를 초과하면 드롭 조작이 금지되어 있어 핀 고정이 불가함을 힌트 표시로 최종 사용자에게 알립니다. 즉, 핀 고정 영역에 열을 드롭할 수 없게 됩니다.
 
 #### 이벤트

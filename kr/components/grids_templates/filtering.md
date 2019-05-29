@@ -1,6 +1,6 @@
 ﻿@@if (igxName === 'IgxGrid') {
 ---
-제목: 그리드 필터링
+title: 그리드 필터링
 _description: The Ignite UI for Angular Data Grid control features the fastest, touch-responsive data-rich grid with popular features, including hierarchical and list views.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Grid, Angular Table, Angular Data Grid component, Angular Data Table component, Angular Data Grid control, Angular Data Table control, Angular Grid component, Angular Table component, Angular Grid control, Angular Table control, Angular High Performance Grid, Angular High Performance Data Table, Filtering, Data Grid Filtering, Data Table Filtering
 _language: kr
@@ -8,7 +8,7 @@ _language: kr
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-제목: 트리 그리드 필터링
+title: 트리 그리드 필터링
 _description: The Ignite UI for Angular Tree Grid control features the fastest, touch-responsive data-rich grid with popular features, including hierarchical and list views.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Tree Grid, Angular Tree Table, Angular Tree Grid component, Angular Tree Table component, Angular Tree Grid control, Angular Data Tree Table control, Angular Tree Grid component, Angular Tree Table component, Angular Tree Grid control, Angular Tree Table control, Angular High Performance Tree Grid, Angular High Performance Tree Table, Filtering, Tree Grid Filtering, Tree Table Filtering
 _language: kr
@@ -16,7 +16,7 @@ _language: kr
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-제목: 계층적 그리드 필터링
+title: 계층적 그리드 필터링
 _description: The Ignite UI for Angular Hierarchical Grid control features the fastest, touch-responsive data-rich grid with popular features.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Hierarchical Grid, Angular Hierarchical Table, Angular Hierarchical Grid component, Angular Hierarchical Table component, Angular Hierarchical Grid control, Angular Hierarchical Table control, Angular High Performance Hierarchical Grid, Angular High Performance Hierarchical Table, Filtering, Hierarchical Grid Filtering, Hierarchical Table Filtering
 _language: kr
@@ -92,7 +92,7 @@ Ignite UI for Angular의 @@igComponent 컴포넌트는 @@igComponent가 바인�
 ```
 }
 
-> [!참고]
+> [!NOTE]
 > `string` 유형의 값이 dataType `Date` 열에서 사용되는 경우, @@igComponent는 `Date` 객체로 구문 분석하지 않으므로 필터링 조건을 사용할 수 없습니다. `string` 객체를 사용하려면 값을 `Date` 객체로 구문 분석하기 위해 애플리케이션 수준에서 추가 논리를 구현해야 합니다.
 
 @@igComponent API를 통해 모든 열 또는 열 조합을 필터링할 수 있습니다. @@igComponent는 이 작업에 복수의 메소드를 공개합니다 - [`filter`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filter), [`filterGlobal`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filterglobal) 및 [`clearFilter`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#clearfilter).
@@ -115,7 +115,7 @@ this.@@igObjectRef.filter('ProductName', 'myproduct', IgxStringFilteringOperand.
 
 유일한 필수 매개 변수는 열 필드 키 및 필터링 조건입니다. 조건 및 대소문자 구분을 설정하지 않으면 열 속성에서 추측됩니다. 다중 필터링의 경우 이 메소드는 필터링식 배열을 허용합니다.
 
-> [!참고]
+> [!NOTE]
 > 필터링 조작은 @@igComponent의 기본 데이터 소스를 변경하지 **않습니다**.
 
 ```typescript

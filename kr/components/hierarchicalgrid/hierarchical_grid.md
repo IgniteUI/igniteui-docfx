@@ -1,5 +1,5 @@
 ﻿---
-제목: 계층 그리드 컴포넌트
+title: 계층 그리드 컴포넌트
 _description: The Ignite UI for Angular Hierarchical Grid control features the fastest, touch-responsive data-rich hierarchical grid with popular features.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Hierarchical Grid component, Angular Hierarchical Grid control, Angular High Performance Hierarchical Grid, Hierarchical Grid
 _language: kr
@@ -94,7 +94,7 @@ export const singers = [{
     </igx-row-island>
 </igx-hierarchical-grid>
 ```
-> [!참고]
+> [!NOTE]
 > `Data` 대신에 사용자는 데이터를 자동으로 설정하기 위해 **igx-hierarchical-grid**가 로딩해야 하는 `key`만 구성합니다.
 
 #### 2. 로드 온디맨드 사용
@@ -267,7 +267,7 @@ export class RemoteLoDService {
 
 ### CRUD 조작
 
-> [!참고]
+> [!NOTE]
 > 플랫 데이터 그리드와 특정 행 아일랜드의 각 인스턴스과의 중요한 차이점은 동일한 트랜잭션 서비스 인스턴스를 가지며 동일한 트랜잭션 로그를 누적한다는 것입니다. CRUD 기능을 활성화하려면 `IgxHierarchicalTransactionServiceFactory`를 인젝트해야 합니다.
 
 CRUD API 메소드 호출은 각 개별 그리드 인스턴스를 통해 실행해야 합니다.

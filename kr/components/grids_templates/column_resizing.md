@@ -1,6 +1,6 @@
 ﻿@@if (igxName === 'IgxGrid') {
 ---
-제목: 열 크기 조정 컴포넌트- 네이티브 Angular | Ignite UI for Angular
+title: 열 크기 조정 컴포넌트- 네이티브 Angular | Ignite UI for Angular
 _description: With deferred column resizing, see a temporary resize indicator while the drag operation is in effect with using the Ignite UI for Angular Column Resizing Component.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Grid, Angular Table, Angular Data Grid component, Angular Data Table component, Angular Data Grid control, Angular Data Table control, Angular Grid component, Angular Table component, Angular Grid control, Angular Table control, Angular High Performance Grid, Angular High Performance Data Table, Column Resizing, Deferred Column Reszing, Grid Column Resizing, Angular Grid Column Resizing, Angular Data Table Column Resizing
 _language: kr
@@ -8,7 +8,7 @@ _language: kr
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-제목: 열 크기 조정 컴포넌트- 네이티브 Angular | Ignite UI for Angular
+title: 열 크기 조정 컴포넌트- 네이티브 Angular | Ignite UI for Angular
 _description: With deferred column resizing, see a temporary resize indicator while the drag operation is in effect with using the Ignite UI for Angular Column Resizing Component.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Tree Grid, Angular Tree Table, Angular Tree Grid component, Angular Tree Table component, Angular Tree Grid control, Angular Tree Table control, Angular Tree Grid component, Angular Tree Table component, Angular Tree Grid control, Angular Tree Table control, Angular High Performance Tree Grid, Angular High Performance Tree Table, Column Resizing, Deferred Column Reszing, Tree Grid Column Resizing, Angular Tree Grid Column Resizing, Angular Tree Table Column Resizing
 _language: kr
@@ -16,7 +16,7 @@ _language: kr
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-제목: 열 크기 조정 컴포넌트- 네이티브 Angular | Ignite UI for Angular
+title: 열 크기 조정 컴포넌트- 네이티브 Angular | Ignite UI for Angular
 _description: With deferred column resizing, see a temporary resize indicator while the drag operation is in effect with using the Ignite UI for Angular Column Resizing Component.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Hierarchical Grid, Angular Hierarchical Table, Angular Hierarchical Grid component, Angular Hierarchical Table component, Angular Hierarchical Grid control, Angular Hierarchical Table control, Angular High Performance Hierarchical Grid, Angular High Performance Hierarchical Table, Column Resizing, Deferred Column Reszing, Hierarchical Grid Column Resizing, Angular Hierarchical Grid Column Resizing, Angular Hierarchical Table Column Resizing
 _language: kr
@@ -141,7 +141,7 @@ public onResize(event) {
 ```
 }
 
-> [!참고]
+> [!NOTE]
 > [`minWidth`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#minwidth)가 그보다 작은 값으로 설정된 경우에도 열 크기를 **88px** 미만으로 조정할 수 없습니다.
 
 #### 더블 클릭으로 자동 크기 열 조정

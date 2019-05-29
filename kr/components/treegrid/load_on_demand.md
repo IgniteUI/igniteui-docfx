@@ -1,5 +1,5 @@
 ﻿---
-제목: 트리 그리드 로드 온디맨드 - 네이티브 Angular | Ignite UI for Angular
+title: 트리 그리드 로드 온디맨드 - 네이티브 Angular | Ignite UI for Angular
 _description: The Ignite UI for Angular Tree Grid provides the necessary tools to load child data on demand when a parent row is expanded. That way the volume of data would be greatly reduced and can be retrieved only when the user needs it.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Tree Grid component, Angular Tree Table component, Angular Tree Grid control, Angular Tree Table control, Angular High Performance Tree Grid, Angular High Performance Tree Table, Tree Grid, Tree Table
 _language: kr

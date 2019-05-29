@@ -1,5 +1,5 @@
 ﻿---
-제목: 데이터 그리드 컴포넌트
+title: 데이터 그리드 컴포넌트
 _description: The Ignite UI for Angular Data Grid control features the fastest, touch-responsive data-rich grid with popular features, including hierarchical and list views.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Data Grid component, Angular Data Grid control, Angular Grid component, Angular Grid control, Angular High Performance Grid
 _language: kr
@@ -66,7 +66,7 @@ public grid: IgxGridComponent;
 [`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#autogenerate) 속성은 데이터 소스 필드를 기반으로 **igx-grid**에 [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html)를 자동 생성하도록 합니다. 또한, 가능한 경우 열에 적합한 데이터 유형을 추론합니다. 그렇지 않으면 개발자가 데이터 소스 필드에 대한 열과 매핑을 명시적으로 정의해야 합니다.
 
 ### 스타일 구성
-> [!참고]
+> [!NOTE]
 > [**IgxGridComponent**]({environment:angularApiUrl}/classes/igxgridcomponent.html)는 **프리픽스 없이는 IE에서 지원되지 않는** **css 그리드 레이아웃**을 사용하므로 결과적으로 제대로 렌더링되지 않습니다.
 
 [**Angular**](https://angular.io/)의 대부분의 스타일은 [Autoprefixer](https://www.npmjs.com/package/autoprefixer) 플러그인으로 인해 암시적으로 프리픽스가 됩니다. 

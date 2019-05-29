@@ -1,5 +1,5 @@
 ﻿---
-제목: 그리드 - 다중 행 레이아웃 - 네이티브 Angular | Ignite UI for Angular
+title: 그리드 - 다중 행 레이아웃 - 네이티브 Angular | Ignite UI for Angular
 _description: Multi row layout allow positioning and sizing the columns in a more powerful and flexible way. Every single column layout is a representation of a complete grid layout which consists of column fields.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Grid, Angular Table, Angular Data Grid component, Angular Data Table component, Angular Data Grid control, Angular Data Table control, Angular Grid component, Angular Table component, Angular Grid control, Angular Table control, Angular High Performance Grid, Angular High Performance Data Table, Multi Row Layout, Angular Multi Row Layout, Angular Data Table Multi Row Layout, Grid Layout, Angular Grid Layout, Column Layout, ColumnLayout, igxColumnLayout
 _language: kr
@@ -55,7 +55,7 @@ _language: kr
 <img src="../../images/multi-row-layout-1.png" style="width: 100%"/>
 
 
-> [!참고]
+> [!NOTE]
 > [`rowStart`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#rowstart) 및 [`colStart`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#colstart) 속성은 각 `igx-column`에 대해 `igx-column-layout`에 설정해야 합니다. `igxColumnLayout` 컴포넌트는 레이아웃이 올바른지 확인하지 않으며 이에 대한 오류나 경고를 표시하지 않습니다. 개발자는 레이아웃 선언이 정확하고 완전한지 확인해야 하는데 그렇지 않으면 정렬 오류, 중복 및 브라우저 불일치로 잘못된 레이아웃으로 끝날 수 있습니다.
 
 ### 기능 통합

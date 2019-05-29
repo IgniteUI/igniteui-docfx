@@ -1,5 +1,5 @@
 ﻿---
-제목: 컴포넌트별 그룹화 - 네이티브 Angular | Ignite UI for Angular
+title: 컴포넌트별 그룹화 - 네이티브 Angular | Ignite UI for Angular
 _description: The Ignite UI for Angular Group By component allows users to group data based on common values for particular columns.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Components, Angular Data Grid component, Angular Data Grid control, Angular Grid component, Angular Grid control, Angular High Performance Grid, group by, groupby, grouping, column grouping
 _language: kr

@@ -1,6 +1,6 @@
 ﻿@@if (igxName === 'IgxGrid') {
 ---
-제목: 그리드 도구 모음 컴포넌트- 네이티브 Angular | Ignite UI for Angular
+title: 그리드 도구 모음 컴포넌트- 네이티브 Angular | Ignite UI for Angular
 _description: With the Ignite UI for Angular Grid Toolbar component you can have a centralized location for IgxGrid features UI controls.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Component, Angular Grid, Angular Table, Angular Data Grid component, Angular Data Table component, Angular Data Grid control, Angular Data Table control, Angular Grid component, Angular Table component, Angular Grid control, Angular Table control, Angular High Performance Grid, Angular High Performance Data Table, Angular Data Grid Toolbar, Angular Data Table Toolbar, Grid Toolbar, Angular Grid Toolbar, Angular Table Toolbar, excel export, grid column hiding chooser, grid column pinning chooser, data table column hiding, data table column pinning
 _language: kr
@@ -8,7 +8,7 @@ _language: kr
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-제목: 트리 그리드 도구 모음 컴포넌트- 네이티브 Angular | Ignite UI for Angular
+title: 트리 그리드 도구 모음 컴포넌트- 네이티브 Angular | Ignite UI for Angular
 _description: With the Ignite UI for Angular Tree Grid Toolbar component you can have a centralized location for IgxTreeGrid features UI controls.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Component, Angular Tree Grid, Angular Tree Table, Angular Tree Grid component, Angular Tree Table component, Angular Tree Grid control, Angular Tree Table control, Angular Tree Grid component, Angular Tree Table component, Angular Tree Grid control, Angular Tree Table control, Angular High Performance Tree Grid, Angular High Performance Tree Table, Angular Tree Grid Toolbar, Angular Tree Table Toolbar, Tree Grid Toolbar, Angular Tree Grid Toolbar, Angular Tree Table Toolbar, excel export, tree grid column hiding chooser, tree grid column pinning chooser, tree table column hiding, tree table column pinning
 _language: kr
@@ -16,7 +16,7 @@ _language: kr
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-제목: 계층 그리드 도구 모음 컴포넌트- 네이티브 Angular | Ignite UI for Angular
+title: 계층 그리드 도구 모음 컴포넌트- 네이티브 Angular | Ignite UI for Angular
 _description: With the Ignite UI for Angular Hierarchical Grid Toolbar component you can have a centralized location for IgxHierarchicalGrid features UI controls.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Component, Angular Hierarchical Grid, Angular Hierarchical Table, Angular Hierarchical Grid component, Angular Hierarchical Table component, Angular Hierarchical Grid control, Angular Hierarchical Table control, Angular High Performance Hierarchical Grid, Angular High Performance Hierarchical Table, Angular Hierarchical Grid Toolbar, Angular Hierarchical Table Toolbar, Hierarchical Grid Toolbar, excel export, hierarchical grid column hiding chooser, hierarchical grid column pinning chooser, hierarchical table column hiding, hierarchical table column pinning
 _language: kr
@@ -92,7 +92,7 @@ Ignite UI for Angular의 @@igComponent는 기본적으로 **UI** 조작을 위�
 - CSV 내보내기는 @@igComponent의 [`exportCsv`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#exportcsv) 속성을 **true**로 설정
 
 @@if (igxName === 'IgxHierarchicalGrid') {
-> [!참고]
+> [!NOTE]
 > 계층 그리드 또는 하위 그리드를 계층 아래로 내보내기를 하는 경우, 내보내기를 한 데이터는 각 그리드에 속한
 > 행의 플랫 컬렉션이 됩니다(하위 그리드는 내보내기를 한 데이터에 포함되지 않음).
 }
@@ -187,7 +187,7 @@ export class AppModule {}
 
 단순히 도구 모음 기능을 켜거나 끄는 것 외에도 내보내기 처리는 사용자가 내보내기 처리를 초기화할 때 생성되는 [`onToolbarExporting`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#ontoolbarexporting) 이벤트에서 상세 설정할 수 있습니다. 이 이벤트는 내보내기와 내보내기 옵션을 모두 보여줍니다.
 
-> [!참고]
+> [!NOTE]
 > 기본적으로 CSV로 내보내기를 할 때 내보내기는 쉼표 구분 기호를 사용하여 내보내기를 하며 출력 파일에는 '.csv' 확장자를 사용합니다.
 > 내보내기 이벤트에 서브스크라이브하거나 내보내기 옵션 필드 값을 변경하여 내보내기 매개 변수를 사용자 정의할 수 있습니다.
 > 또한, 이벤트 인수의 취소 필드를 true로 설정하여 내보내기 처리를 취소할 수 있습니다.
@@ -272,7 +272,7 @@ public toolbarExportingHandler(args) {
 </@@igSelector>
 ```
 
-> [!참고]
+> [!NOTE]
 > [`igxToolbarCustomContent`]({environment:angularApiUrl}/classes/igxgridtoolbarcustomcontentdirective.html) 지시문의 컨텍스트에는 2가지 속성이 있습니다:
 > `grid` - 도구 모음이 포함된 [`@@igxNameComponent`]({environment:angularApiUrl}/classes/@@igTypeDoc.html)에 대한 참조 및
 > `toolbar` - [`IgxGridToolbarComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html)에 대한 참조

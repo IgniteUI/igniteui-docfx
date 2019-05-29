@@ -1,6 +1,6 @@
 ﻿@@if (igxName === 'IgxGrid') {
 ---
-제목: 요약 컴포넌트- 네이티브 Angular | Ignite UI for Angular
+title: 요약 컴포넌트- 네이티브 Angular | Ignite UI for Angular
 _description: With the Ignite UI for Angular Summaries component, see the column information in a separate container with a predefined set of default summary items, depending on the type of data within the column.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Component, Angular Grid, Angular Table, Angular Data Grid component, Angular Data Table component, Angular Data Grid control, Angular Data Table control, Angular Grid component, Angular Table component, Angular Grid control, Angular Table control, Angular High Performance Grid, Angular High Performance Data Table, Data Grid Summaries, Data Table Summaries, Data Grid Column Summaries, Data Table Column Summaries, Data Grid Column Aggregations, Data Table Column Aggregations
 _language: kr
@@ -8,7 +8,7 @@ _language: kr
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-제목: 요약 컴포넌트- 네이티브 Angular | Ignite UI for Angular
+title: 요약 컴포넌트- 네이티브 Angular | Ignite UI for Angular
 _description: With the Ignite UI for Angular Summaries component, see the column information in a separate container with a predefined set of default summary items, depending on the type of data within the column.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Component, Angular Tree Grid, Angular Tree Table, Angular Tree Grid component, Angular Tree Table component, Angular Tree Grid control, Angular Tree Table control, Angular Tree Grid component, Angular Tree Table component, Angular Tree Grid control, Angular Tree Table control, Angular High Performance Tree Grid, Angular High Performance Tree Table, Tree Grid Summaries, Tree Table Summaries, Tree Grid Column Summaries, Tree Table Column Summaries, Tree Grid Column Aggregations, Tree Table Column Aggregations
 _language: kr
@@ -16,7 +16,7 @@ _language: kr
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-제목: 요약 컴포넌트- 네이티브 Angular | Ignite UI for Angular
+title: 요약 컴포넌트- 네이티브 Angular | Ignite UI for Angular
 _description: With the Ignite UI for Angular Summaries component, see the column information in a separate container with a predefined set of default summary items, depending on the type of data within the column.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Component, Angular Hierarchical Grid, Angular Hierarchical Table, Angular Hierarchical Grid component, Angular Hierarchical Table component, Angular Hierarchical Grid control, Angular Hierarchical Table control, Angular High Performance Hierarchical Grid, Angular High Performance Hierarchical Table, Hierarchical Data Grid Summaries, Hierarchical Table Summaries, Hierarchical Grid Column Summaries, Hierarchical Table Column Summaries, Hierarchical Grid Column Aggregations, Hierarchical Table Column Aggregations
 _language: kr
@@ -58,7 +58,7 @@ Ignite UI for Angular @@igComponent 컴포넌트에는 열 단위 수준에서 �
 
 <div class="divider--half"></div>
 
-> [!참고]
+> [!NOTE]
 > 열 요약은 **모든 열 값의 함수**이지만 필터링이 적용된 경우에는 열 요약은 **필터링된 결과 값의 함수**가 됩니다
 
 사용자는 열의 데이터 유형에 따라 사전 정의된 기본 요약 항목 세트를 가진 별도의 컨테이너에서 열 정보를 표시할 수 있습니다. **Ignite UI for Angular에서 @@igComponent summaries**을 열 단위 수준으로 활성화하고 필요한 열에 대해서만 활성화할 수 있습니다. @@igComponent 요약은 열의 데이터 유형에 따라 사전 정의된 기본 요약 세트를 제공하므로 시간을 절약할 수 있습니다.
@@ -225,7 +225,7 @@ interface IgxSummaryResult {
 }
 ```
 
-> [!참고]
+> [!NOTE]
 > 요약 행 높이를 올바르게 계산하기 위해 @@igComponent의 [`operate`]({environment:angularApiUrl}/classes/igxsummaryoperand.html#operate) 메소드에서 데이터가 비어있는 경우에도 항상 적절한 길이의 [`IgxSummaryResult`]({environment:angularApiUrl}/interfaces/igxsummaryresult.html) 배열을 반환해야 합니다.
 @@if (igxName !== 'IgxHierarchicalGrid') {
 이제 `UnitsInStock` 열에 사용자 요약을 추가해 보겠습니다. [`summaries`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#summaries) 속성을 아래에서 작성하는 클래스로 설정하면 됩니다.
@@ -293,7 +293,7 @@ export class HGridSummarySampleComponent implements OnInit {
  - top - 요약 행은 그룹화 행의 하위 앞에 표시됩니다.
  - bottom - 요약 행은 그룹화 행의 하위 뒤에 표시됩니다. 이것이 기본값입니다.
 
-> [!참고]
+> [!NOTE]
 > [`summaryPosition`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#summaryposition) 속성은 하위 수준 요약에만 적용됩니다. 루트 수준 요약은 @@igComponent의 아래에 항상 고정되어 표시됩니다.
 
 #### 데모
@@ -320,7 +320,7 @@ export class HGridSummarySampleComponent implements OnInit {
  - top - 요약 행은 하위 행의 목록 앞에 나타납니다.
  - bottom - 요약 행은 하위 행의 목록 뒤에 나타납니다. 이것이 기본값입니다.
 
-> [!참고]
+> [!NOTE]
 > [`summaryPosition`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#summaryposition) 속성은 하위 수준 요약에만 적용됩니다. 루트 수준 요약은 @@igComponent의 아래에 항상 고정되어 표시됩니다.
 
 <div class="sample-container loading" style="height:720px">

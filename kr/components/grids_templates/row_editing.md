@@ -1,6 +1,6 @@
 ﻿@@if (igxName === 'IgxGrid') {
 ---
-제목: 그리드 행 편집 - 네이티브 Angular | Ignite UI for Angular
+title: 그리드 행 편집 - 네이티브 Angular | Ignite UI for Angular
 _description: Row editing - allows modification of several cells in the row, before submitting, at once, all those changes to the grid's data source. Leverages the pending changes functionality of the new transaction provider.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Component, Angular Grid, Angular Table, Angular Data Grid component, Angular Data Table component, Angular Data Grid control, Angular Data Table control, Angular Grid component, Angular Table component, Angular Grid control, Angular Table control, Angular High Performance Grid, Angular High Performance Data Table, Data Grid Row Editing, Data Table Row Editing
 _language: kr
@@ -8,7 +8,7 @@ _language: kr
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-제목: 트리 그리드 행 편집 - 네이티브 Angular | Ignite UI for Angular
+title: 트리 그리드 행 편집 - 네이티브 Angular | Ignite UI for Angular
 _description: Row editing - allows modification of several cells in the row, before submitting, at once, all those changes to the grid's data source. Leverages the pending changes functionality of the new transaction provider.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Component, Angular Tree Grid, Angular Tree Table, Angular Tree Grid component, Angular Tree Table component, Angular Tree Grid control, Angular Tree Table control, Angular Tree Grid component, Angular Tree Table component, Angular Tree Grid control, Angular Tree Table control, Angular High Performance Tree Grid, Angular High Performance Tree Table, Tree Grid Row Editing, Tree Table Row Editing
 _language: kr
@@ -16,7 +16,7 @@ _language: kr
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-제목: 계층 그리드 행 편집 - 네이티브 Angular | Ignite UI for Angular
+title: 계층 그리드 행 편집 - 네이티브 Angular | Ignite UI for Angular
 _description: Row editing - allows modification of several cells in the row, before submitting, at once, all those changes to the grid's data source. Leverages the pending changes functionality of the new transaction provider.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Component, Angular Hierarchical Grid, Angular Hierarchical Table, Angular Hierarchical Grid component, Angular Hierarchical Table component, Angular Hierarchical Grid control, Angular Hierarchical Table control, Angular High Performance Hierarchical Grid, Angular High Performance Hierarchical Table, Hierarchical Grid Row Editing, Hierarchical Table Row Editing
 _language: kr
@@ -64,7 +64,7 @@ _language: kr
 <div class="divider--half"></div>
 }
 
-> [!참고]
+> [!NOTE]
 > 행이 편집 모드에 있는 경우, 다른 행의 셀을 클릭하면 종료 버튼을 누른 것처럼 작동하며, 이전 행의 모든 변경 사항을 제출합니다. 포커스를 받은 새로운 셀을 편집할 수 있는 경우에는 새로운 행도 편집 모드로 전환되며, 셀을 편집 할 수 없는 경우에는 이전 행만 편집 모드를 종료합니다.
 
 ### 사용 방법
@@ -157,10 +157,10 @@ export class AppModule {}
 ```
 }
 
-> [!참고]
+> [!NOTE]
 > 기본 키 설정은 행 편집 조작에 필수입니다.
 
-> [!참고]
+> [!NOTE]
 > 개별 열에 대해 편집할 필요가 없습니다. @@igComponent에서 [`rowEditable`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#roweditable) 속성을 사용하면 기본 필드를 제외한 모든 `field` 속성이 편집 가능함을 의미합니다. 특정 열에 대한 편집을 비활성화하려면 [`editable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable)({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable) 열의 입력을 false로 설정합니다.
 
 @@if (igxName === 'IgxGrid') {
@@ -245,7 +245,7 @@ export class HGridRowEditingSampleComponent implements OnInit {
 ```
 }
 
-> [!참고]
+> [!NOTE]
 > @@igComponent는 행 상태가 제출되거나 취소될 때까지 보류 중인 셀 변경을 보유한 공급자 [`IgxBaseTransactionService`]({environment:angularApiUrl}/classes/igxbasetransactionservice.html)를 내부적으로 사용합니다.
 
 ### 포지셔닝

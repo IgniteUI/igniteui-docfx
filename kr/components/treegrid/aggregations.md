@@ -1,5 +1,5 @@
 ﻿---
-제목: 트리 그리드 집계- 네이티브 Angular | Ignite UI for Angular
+title: 트리 그리드 집계- 네이티브 Angular | Ignite UI for Angular
 _description: With the Ignite UI for Angular Tree Grid aggregations, see the data grouped and aggregated.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Component, Angular Tree Grid, Angular Tree Grid component, Angular Tree Grid control, Angular High Performance Tree Grid, Summaries, Summary, Aggregate, Aggregations
 _language: kr
@@ -19,7 +19,7 @@ _language: kr
 </div>
 <div class="divider--half"></div>
 
-> [!참고]
+> [!NOTE]
 > 이 샘플은 [`IgxTreeGridComponent`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html)에 포함되지 않은 사용자 논리를 포함하고 있습니다. [`IgxGridComponent`]({environment:angularApiUrl}/classes/igxgridcomponent.html)의 그룹화 및 요약 기능과 유사하지만 별도의 요약 행 안이 아닌 계산된 데이터가 상위 행 내부에 표시됩니다.
 
 #### 구현

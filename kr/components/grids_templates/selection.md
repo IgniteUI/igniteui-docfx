@@ -76,7 +76,7 @@ _language: kr
 - <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Home</kbd> - 포커스된 셀에서 그리드의 첫 번째 셀까지의 모든 셀을 선택합니다
 - <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>End</kbd> - 포커스된 셀에서 그리드의 마지막 셀까지의 모든 셀을 선택합니다.
 
-> [!참고] 그리드 보디에서만 연속 스크롤이 가능합니다.
+> [!NOTE] 그리드 보디에서만 연속 스크롤이 가능합니다.
 
 ### API 사용
 다음은 범위 선택, 선택 취소 또는 선택한 셀 데이터를 가져오기에 사용할 수 있는 방법입니다.
@@ -95,7 +95,7 @@ this.grid1.selectRange(range);
 
 ```
 
-> [!참고] 선택 범위는 부가 연산입니다. 이전 선택을 삭제하지 않습니다.
+> [!NOTE] 선택 범위는 부가 연산입니다. 이전 선택을 삭제하지 않습니다.
 
 ##### 셀 선택 삭제
 
@@ -158,7 +158,7 @@ expectedData = [
 ];
 ```
 
-> [!참고] 셀이 그리드 뷰 포트에 표시되지 않은 경우, [`selectedCells()`]({environment:angularApiUrl}/classes/igxgridbasecomponent.html#selectedcells)는 결과를 반환하지 않지만 [`getSelectedData()`]({environment:angularApiUrl}/classes/igxgridbasecomponent.html#getselecteddata)는 선택된 셀 데이터를 반환합니다.
+> [!NOTE] 셀이 그리드 뷰 포트에 표시되지 않은 경우, [`selectedCells()`]({environment:angularApiUrl}/classes/igxgridbasecomponent.html#selectedcells)는 결과를 반환하지 않지만 [`getSelectedData()`]({environment:angularApiUrl}/classes/igxgridbasecomponent.html#getselecteddata)는 선택된 셀 데이터를 반환합니다.
 > [`getSelectedRanges(): GridSelectionRange[]`]({environment:angularApiUrl}/classes/igxgridbasecomponent.html#getselectedranges)는 키보드와 포인터 상호 작용으로 그리드에서 현재 선택된 범위를 반환합니다. 유형은 GridSelectionRange[]입니다.
 
 

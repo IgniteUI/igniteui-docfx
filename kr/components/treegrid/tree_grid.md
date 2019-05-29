@@ -1,5 +1,5 @@
 ﻿---
-제목: 트리 그리드 컴포넌트
+title: 트리 그리드 컴포넌트
 _description: The Ignite UI for Angular Tree Grid control features the fastest, touch-responsive data-rich grid with popular features.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Tree Grid component, Angular Tree Grid control, Angular Tree Grid component, Angular High Performance Tree Grid, Tree Grid
 _language: kr
@@ -51,7 +51,7 @@ export class AppModule {}
 - [`IgxGridCellComponent`]({environment:angularApiUrl}/classes/igxgridcellcomponent.html) - 값이 포함된 표준 셀입니다.
 - [`IgxTreeGridCellComponent`]({environment:angularApiUrl}/classes/igxtreegridcellcomponent.html) - 셀의 행 수준을 기반으로 한 값, 인디케이터의 전개/축소, 인덴트 div 요소가 포함된 트리 셀입니다. 행 컴포넌트의 수준은 내부 [`treeRow`]({environment:angularApiUrl}/classes/igxtreegridrowcomponent.html#treerow)의 [`level`]({environment:angularApiUrl}/interfaces/itreegridrecord.html#level) 속성을 통해 접근할 수 있습니다.
 
-> [!참고]
+> [!NOTE]
 > 각 행에는 하나의 트리 셀만 가질 수 있지만 표준 셀은 여러 개 가질 수 있습니다.
 
 ### 초기 전개 심도

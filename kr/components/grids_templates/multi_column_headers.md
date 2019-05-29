@@ -1,6 +1,6 @@
 ﻿@@if (igxName === 'IgxGrid') {
 ---
-제목: 열 그룹 컴포넌트- 네이티브 Angular | Ignite UI for Angular
+title: 열 그룹 컴포넌트- 네이티브 Angular | Ignite UI for Angular
 _description: Multi-column headers allow grouping columns by placing them under a common header. Every column group could be a representation of combination between  other groups or columns.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Grid, Angular Table, Angular Data Grid component, Angular Data Table component, Angular Data Grid control, Angular Data Table control, Angular Grid component, Angular Table component, Angular Grid control, Angular Table control, Angular High Performance Grid, Angular High Performance Data Table, Multi Column Headers, Deferred Multi Column Headers, Grid Multi Column Headers, Angular Grid Multi Column Headers, Angular Data Table Multi Column Headers
 _language: kr
@@ -8,7 +8,7 @@ _language: kr
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-제목: 열 그룹 컴포넌트- 네이티브 Angular | Ignite UI for Angular
+title: 열 그룹 컴포넌트- 네이티브 Angular | Ignite UI for Angular
 _description: Multi-column headers allow grouping columns by placing them under a common header. Every column group could be a representation of combination between  other groups or columns.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Tree Grid, Angular Tree Table, Angular Tree Grid component, Angular Tree Table component, Angular Tree Grid control, Angular Tree Table control, Angular Tree Grid component, Angular Tree Table component, Angular Tree Grid control, Angular Tree Table control, Angular High Performance Tree Grid, Angular High Performance Tree Table, Multi Column Headers, Deferred Multi Column Headers, Tree Grid Multi Column Headers, Angular Tree Grid Multi Column Headers, Angular Tree Table Multi Column Headers
 _language: kr
@@ -16,7 +16,7 @@ _language: kr
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-제목: 열 그룹 컴포넌트- 네이티브 Angular | Ignite UI for Angular
+title: 열 그룹 컴포넌트- 네이티브 Angular | Ignite UI for Angular
 _description: Multi-column headers allow grouping columns by placing them under a common header. Every column group could be a representation of combination between  other groups or columns.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Hierarchical Grid, Angular Hierarchical Table, Angular Hierarchical Grid component, Angular Hierarchical Table component, Angular Hierarchical Grid control, Angular Hierarchical Table control, Angular Hierarchical Table control, Angular High Performance Hierarchical Grid, Angular High Performance Hierarchical Table, Multi Column Headers, Deferred Multi Column Headers, Hierarchical Grid Multi Column Headers, Angular Hierarchical Grid Multi Column Headers, Angular Hierarchical Table Multi Column Headers
 _language: kr
@@ -149,7 +149,7 @@ _language: kr
 }
 
 모든 [`igx-column-group`]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html)은 [`moving`](column_moving.md), [`pinning`](column_pinning.md), [`hiding`](column_hiding.md)을 지원합니다.
-> [!참고]
+> [!NOTE]
 > 열 집합과 열 그룹이 있는 경우 가장 위의 상위 열에 대해서만 핀 고정이 가능합니다. 더 구체적으로 중첩된 `column groups` 또는 `columns`의 핀 고정은 허용되지 않습니다. <br />
 > `columns`과 `column groups` 사이의 이동은 계층에서 같은 수준이고 같은 `group`인 경우에만 허용됩니다. <br />
 > `columns/column-groups`이 현재 `group`으로 래핑되어 있지 않은 즉, **최상위** `columns`인 경우 표시된 전체 열 사이에서 이동이 허용됩니다.

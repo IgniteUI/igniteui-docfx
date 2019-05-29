@@ -1,6 +1,6 @@
 ﻿@@if (igxName === 'IgxGrid') {
 ---
-제목:  그리드 표시 밀도- 네이티브 Angular | Ignite UI for Angular
+title:  그리드 표시 밀도- 네이티브 Angular | Ignite UI for Angular
 _description: The Ignite UI for Angular Data Grid control provides default cell templates for editable columns which are based on the data type of the column.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Component, Angular Grid, Angular Table, Angular Data Grid component, Angular Data Table component, Angular Data Grid control, Angular Data Table control, Angular Grid component, Angular Table component, Angular Grid control, Angular Table control, Angular High Performance Grid, Angular High Performance Data Table, Grid Display Density, Data Table Display Density
 _language: kr
@@ -8,7 +8,7 @@ _language: kr
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-제목:  트리 그리드 표시 밀도- 네이티브 Angular | Ignite UI for Angular
+title:  트리 그리드 표시 밀도- 네이티브 Angular | Ignite UI for Angular
 _description: The Ignite UI for Angular Tree Grid control provides default cell templates for editable columns which are based on the data type of the column.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Component, Angular Tree Grid, Angular Tree Table, Angular Tree Grid component, Angular Tree Table component, Angular Tree Grid control, Angular Tree Table control, Angular Tree Grid component, Angular Tree Table component, Angular Tree Grid control, Angular Tree Table control, Angular High Performance Tree Grid, Angular High Performance Tree Table, Tree Grid Display Density, Tree Table Display Density
 _language: kr
@@ -16,7 +16,7 @@ _language: kr
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-제목:  계층 그리드 표시 밀도- 네이티브 Angular | Ignite UI for Angular
+title:  계층 그리드 표시 밀도- 네이티브 Angular | Ignite UI for Angular
 _description: The Ignite UI for Angular Hierarchical Grid control provides default cell templates for editable columns which are based on the data type of the column.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Component, Angular Hierarchical Grid, Angular Hierarchical Table, Angular Hierarchical Grid component, Angular Hierarchical Table component, Angular Hierarchical Grid control, Angular Hierarchical Table control, Angular High Performance Hierarchical Grid, Angular High Performance Hierarchical Table, Hierarchical Grid Display Density, Hierarchical Table Display Density
 _language: kr
@@ -80,7 +80,7 @@ this.@@igObjectRef.displayDensity = "cosy";
  - **cosy** - 이것은 행 높이가 `40px`인 중간 밀도입니다. 왼쪽 및 오른쪽 패딩은 `16px`임; 최소 열 [`width`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#width)는 `32px`임;
  - **compact** - 이것은 행 높이가 `32px`인 최고 밀도입니다. 왼쪽 및 오른쪽 패딩은 `12px`임; 최소 열 [`width`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#width)는 `24px`임;
 
-> [!참고]
+> [!NOTE]
 > 현재 크기를 재정의 할 수는 **없습니다**.
 
 계속하여 샘플을 사용해 [`displayDensity`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#displaydensity)의 적용 방법을 살펴 보겠습니다. 먼저 각 밀도를 전환하는데 도움이 되는 버튼을 추가해 보겠습니다:
