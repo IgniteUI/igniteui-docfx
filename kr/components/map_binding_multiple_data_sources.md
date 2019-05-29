@@ -6,7 +6,7 @@ _keywords: map, Ignite UI for Angular, infragistics
 
 ## Binding Multiple Data Sources
 
-In the `XamGeographicMap`, you can add multiple geographic series objects to overlay custom data sources with geo-spacial data. For example, `GeographicSymbolSeries` for plotting geographic locations of airports, the `GeographicPolylineSeries` for plotting flights between airports, and 2nd `GeographicPolylineSeries` for plotting gridlines of major geographic coordinates.
+In the `IgxGeographicMap`, you can add multiple geographic series objects to overlay custom data sources with geo-spacial data. For example, `GeographicSymbolSeries` for plotting geographic locations of airports, the `GeographicPolylineSeries` for plotting flights between airports, and 2nd `GeographicPolylineSeries` for plotting gridlines of major geographic coordinates.
 
 ### Demo
 
@@ -30,14 +30,14 @@ You can use geographic series in this or other combinations to plot desired data
 
 ### Creating Data Sources
 
-Create data sources for all geographic series that you want to display in the `XamGeographicMap`. For example, you can the use[WorldConnections](map_resources_world_connections.md) script.
+Create data sources for all geographic series that you want to display in the `IgxGeographicMap`. For example, you can the use[WorldConnections](map_resources_world_connections.md) script.
 
 ### Overlaying Flights
 
-Create first `GeographicPolylineSeries` object with flight connections between major airports and add it to `IgxSeriesComponent` collection of the `XamGeographicMap`.
+Create first `GeographicPolylineSeries` object with flight connections between major airports and add it to `IgxSeriesComponent` collection of the `IgxGeographicMap`.
 
 ### Overlaying Gridlines
 
-Create second `GeographicPolylineSeries` object with geographic gridlines and add it to `IgxSeriesComponent` collection of the `XamGeographicMap`.
+Create second `GeographicPolylineSeries` object with geographic gridlines and add it to `IgxSeriesComponent` collection of the `IgxGeographicMap`.
 
-Create `GeographicSymbolSeries` object with geographic gridlines and add it to `IgxSeriesComponent` collection of the geographic `XamGeographicMap`.
+Create `GeographicSymbolSeries` object with geographic gridlines and add it to `IgxSeriesComponent` collection of the geographic `IgxGeographicMap`.

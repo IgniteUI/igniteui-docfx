@@ -1,13 +1,13 @@
 ---
-title: 툴팁 템플릿
-_description: Ignite UI for 카테고리 차트 컴포넌트는 데이터 시각화 도메인의 복잡성을 관리 가능한 API로 단순화하여 사용자가 데이터 수집, 그룹 수집, 데이터 속성을 바인딩하고 나머지는 차트 컨트롤이 실행할 수 있도록 합니다. 
-_keywords: Ignite UI for Angular, Angular, 네이티브 Angular 컴포넌트 세트, 네이티브 Angular 컨트롤, 네이티브 Angular 컴포넌트, 네이티브 Angular 컴포넌트 라이브러리, Angular 차트, Angular 차트 컨트롤, Angular 차트 예제, Angular 그리드 컴포넌트, Angular 차트 컴포넌트, Angular 카테고리 차트
+제목: 카테고리 차트 | 데이터 비주얼라이제이션 도구 | Ignite UI for Angular | 도구 설명 템플릿 | Infragistics 
+_description: Use the category chart component to analyze and  automatically choose the best chart type to represent data. Learn about our chart types for visualization.
+_keywords: category chart, Ignite UI for Angular, infragistics
 _language: kr
 ---
 
-## 툴팁 템플릿
+## 도구 설명 템플릿
 
-카테고리 차트는 각 시리즈 유형에 기본 도구 설명을 제공합니다. 기본 도구 설명에는 시리즈 제목, 데이터 값, 축 값 등의 특정 시리즈 항목과 관련된 모든 정보가 표시됩니다. 이들은 시리즈의 스타일에 맞게 디자인되어 있습니다. 기본 도구 설명이 충분하지 않은 경우 도구 설명 콘텐츠와 룩 앤드 필을 사용자 정의하여 사용자 도구 설명을 구성할 수 있습니다.
+`IgxCategoryChart` 제어는 각 시리즈 유형에 기본 도구 설명을 제공합니다. 기본 도구 설명에는 시리즈 제목, 데이터 값, 축 값 등의 특정 시리즈 항목과 관련된 모든 정보가 표시됩니다. 이들은 시리즈의 스타일에 맞게 디자인되어 있습니다. 기본 도구 설명이 충분하지 않은 경우 도구 설명 콘텐츠와 룩 앤드 필을 사용자 정의하여 도구 설명 템플릿을 구성할 수 있습니다.
 
 ### 데모
 
@@ -15,7 +15,7 @@ _language: kr
     <iframe id="category-chart-tooltip-template-iframe" src='{environment:demosBaseUrl}/charts/category-chart-tooltip-template' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="category-chart-tooltip-template-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="category-chart-tooltip-template-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기
     </button>
 </div>
 
