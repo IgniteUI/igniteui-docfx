@@ -1,21 +1,21 @@
 ---
-title: 컨피규레이터 옵션
-_description: Ignite UI for 카테고리 차트 컴포넌트는 데이터 시각화 도메인의 복잡성을 관리 가능한 API로 단순화하여 사용자가 데이터 수집, 그룹 수집, 데이터 속성을 바인딩하고 나머지는 차트 컨트롤이 실행할 수 있도록 합니다.
-_keywords: Ignite UI for Angular, Angular, 네이티브 Angular 컴포넌트 세트, 네이티브 Angular 컨트롤, 네이티브 Angular 컴포넌트, 네이티브 Angular 컴포넌트 라이브러리, Angular 차트, Angular 차트 컨트롤, Angular 차트 예제, Angular 그리드 컴포넌트, Angular 차트 컴포넌트, Angular 카테고리 차트
+제목: 카테고리 차트 | 데이터 비주얼라이제이션 도구 | Ignite UI for Angular | 컨피규레이터 옵션 | Infragistics 
+_description: Use the category chart component to analyze and  automatically choose the best chart type to represent data. Learn about our chart types for visualization.
+_keywords: category chart, Ignite UI for Angular, infragistics
 _language: kr
 ---
 
 ## 컨피규레이터 옵션
 
-마커, 차트 제목 및 부제, 차트 유형 등 카테고리 차트를 사용자 지정이 가능합니다.
+마커, 차트 제목 및 부제, 차트 유형 등 Ignite UI for Angular 카테고리 차트 컴포넌트를 사용자 지정이 가능합니다.
 
 ### 데모
 
-<div class="sample-container" style="height: 550px">
+<div class="sample-container" style="height: 500px">
     <iframe id="category-chart-config-options-sample-iframe" src='{environment:demosBaseUrl}/charts/category-chart-config-options-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="category-chart-config-options-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="category-chart-config-options-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기
     </button>
 </div>
 
@@ -38,7 +38,7 @@ _language: kr
 
 ### 차트 마커 구성
 
-마커는 카테고리 차트 컨트롤의 플롯 영역의 데이터 점 값을 표시하는 시각적 요소입니다. 마커를 사용하면 최종 주 그리드 선과 보조 그리드 선 사이에 값이 있더라도 지정한 데이터 점 값을 즉시 사용자가 식별할 수 있습니다.
+마커는 카테고리 차트 컴포넌트의 플롯 영역의 데이터 점 값을 표시하는 시각적 요소입니다. 마커를 사용하면 주 그리드 선과 보조 그리드 선 사이에 값이 있더라도 지정한 데이터 점 값을 즉시 최종 사용자가 식별할 수 있습니다.
 
 차트 마커의 모양은 다음의 코드 예제와 같이 카테고리 차트의 `markerType`, `markerBrushes`, `markerOutlines` 속성에 의해 처리됩니다.
 

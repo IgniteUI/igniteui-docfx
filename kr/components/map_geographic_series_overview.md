@@ -18,7 +18,7 @@ The Geographic Map component supports the following typs of geographic series:
 -   [Using Scatter Symbol Series](map_geographic_scatter_symbol_series.md)
 -   [Using Scatter Proportional Series](map_geographic_scatter_proportional_series.md)
 -   [Using Scatter Contour Series](map_geographic_scatter_contour_series.md)
--   [Using Scatter Density Series](map_geographic_high_density_scatter_series.md)
+-   [Using Scatter Density Series](map_geographic_scatter_density_series.md)
 -   [Using Scatter Area Series](map_geographic_scatter_area_series.md)
 -   [Using Shape Polygon Series](map_geographic_shape_polygon_series.md)
 -   [Using Shape Polyline Series](map_geographic_shape_polyline_series.md)

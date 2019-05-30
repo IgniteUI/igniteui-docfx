@@ -56,7 +56,7 @@ The following table list properties of the CustomPaletteColorScale affecting the
 
 ### Code Snippet
 
-The following code shows how to bind the `GeographicContourLineSeries` to triangulation data representing precipitation over the United States.
+The following code shows how to bind the `GeographicContourLineSeries` to triangulation data representing surface temperatures in the world.
 
 <!-- Angular -->
 

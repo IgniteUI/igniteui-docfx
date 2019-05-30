@@ -1,48 +1,48 @@
 ---
-title: Data Chart Component - Native Angular | Ignite UI for Angular
+제목: 데이터 차트 구성 요소 - 네이티브 Angular | Ignite UI for Angular
 _description: The Ignite UI for Angular Data Chart is a charting component that provides modular design of axis, markers, series, legend, and annotation layers. With this chart, you can create multiple instances of these visual elements in the same chart plot area in order to create composite chart views.
 _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Chart Control, Angular Chart Example, Angular Chart Component, Angular Data Chart
 _language: kr
 ---
 
-## Axis
+## 축
 
-In the `IgxDataChart` control, an axis provides base properties for specifying appearance of axis main lines, gridlines, tickmarks, titles, and labels. There are several different types of axis that can be used by the `IgxDataChart` for the different types of series that the chart supports. The type of series determines what type of axes can be used with them.
+`IgxDataChart` 제어에서는 축은 축 기본 선, 격자선, 눈금 표시, 제목 및 라벨 모양을 설정하는 기본 속성을 제공합니다. 차트가 지원하는 여러 유형의 시리즈에 대해 `IgxDataChart`에서 사용할 수 있는 여러 유형의 축이 있습니다. 시리즈 유형에 따라 사용할 수 있는 축 유형이 결정됩니다.
 
-### Demo
+### 데모
 
 <div class="sample-container" style="height: 500px">
     <iframe id="data-chart-overview-iframe" src='{environment:demosBaseUrl}/charts/data-chart-axis-types' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-overview-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-overview-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기
     </button>
 </div>
 
 <div class="divider--half"></div>
 
-### Supported Axes
+### 지원되는 축
 
-The `IgxDataChart` control supports various types of axis that are intended to use with specific type of series. The following table lists which axes can be used with type of series.
+`IgxDataChart` 제어는 특정 시리즈 유형에 사용할 수 있도록 다양한 유형의 축을 지원합니다. 다음 표에는 시리즈 유형에 사용할 수 있는 축이 열거되어 있습니다.
 
-| Axis Type          | Supported Series Types                                                                                                                                                                                                                                                           |
-| ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| CategoryYAxis      | only `BarSeries` in [Category Series](datachart_series_types_category.md) group                                                                                                                                                                                                  |
-| CategoryXAxis      | all [Financial Series](datachart_series_types_financial.md), [Range Series](datachart_series_types_range.md),  [Category Series](datachart_series_types_category.md) (except `BarSeries`)                                                                                        |
-| TimeXAxis          | all [Financial Series](datachart_series_types_financial.md), [Range Series](datachart_series_types_range.md),  [Category Series](datachart_series_types_category.md) (except `BarSeries`)                                                                                        |
-| OrdinalTimeXAxis   | all [Financial Series](datachart_series_types_financial.md), [Range Series](datachart_series_types_range.md),  [Category Series](datachart_series_types_category.md) (except `BarSeries`)                                                                                        |
-| PercentChangeYAxis | all [Financial Series](datachart_series_types_financial.md), [Range Series](datachart_series_types_range.md), [Category Series](datachart_series_types_category.md), [Scatter Series](datachart_series_types_scatter_bubble.md), [Shape Series](datachart_series_types_shape.md) |
-| NumericYAxis       | all [Scatter Series](datachart_series_types_scatter_bubble.md), [Shape Series](datachart_series_types_shape.md), [Financial Series](datachart_series_types_financial.md), [Range Series](datachart_series_types_range.md), [Category Series](datachart_series_types_category.md) |
-| NumericXAxis       | all [Scatter Series](datachart_series_types_scatter_bubble.md), [Shape Series](datachart_series_types_shape.md), and `BarSeries` in [Category Series](datachart_series_types_category.md) group                                                                                  |
-| NumericAngleAxis   | all [Polar Series](datachart_series_types_polar.md)                                                                                                                                                                                                                              |
-| NumericRadiusAxis  | all [Polar Series](datachart_series_types_polar.md) and [Radial Series](datachart_series_types_radial.md)                                                                                                                                                                        |
-| CategoryAngleAxis  | all  [Radial Series](datachart_series_types_radial.md)                                                                                                                                                                                                                           |
+| 축 유형               | 지원되는 시리즈 유형                                                                                                                                                                                                                                |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| CategoryYAxis      | [카테고리 시리즈](datachart_series_types_category.md) 그룹의 `BarSeries`만                                                                                                                                                                            |
+| CategoryXAxis      | 모든 [금융 시리즈](datachart_series_types_financial.md), [범위 시리즈](datachart_series_types_range.md),  [카테고리 시리즈](datachart_series_types_category.md)(`BarSeries` 제외)                                                                               |
+| TimeXAxis          | 모든 [금융 시리즈](datachart_series_types_financial.md), [범위 시리즈](datachart_series_types_range.md),  [카테고리 시리즈](datachart_series_types_category.md)(`BarSeries` 제외)                                                                               |
+| OrdinalTimeXAxis   | 모든 [금융 시리즈](datachart_series_types_financial.md), [범위 시리즈](datachart_series_types_range.md),  [카테고리 시리즈](datachart_series_types_category.md)(`BarSeries` 제외)                                                                               |
+| PercentChangeYAxis | 모든 [금융 시리즈](datachart_series_types_financial.md), [범위 시리즈](datachart_series_types_range.md), [카테고리 시리즈](datachart_series_types_category.md), [분산 시리즈](datachart_series_types_scatter_bubble.md), [모양 시리즈](datachart_series_types_shape.md) |
+| NumericYAxis       | 모든 [분산 시리즈](datachart_series_types_scatter_bubble.md), [모양 시리즈](datachart_series_types_shape.md), [금융 시리즈](datachart_series_types_financial.md), [범위 시리즈](datachart_series_types_range.md), [카테고리 시리즈](datachart_series_types_category.md) |
+| NumericXAxis       | [카테고리 시리즈](datachart_series_types_category.md) 그룹의 모든 [분산 시리즈](datachart_series_types_scatter_bubble.md), [모양 시리즈](datachart_series_types_shape.md) 및 `BarSeries`                                                                          |
+| NumericAngleAxis   | 모든 [폴라 시리즈](datachart_series_types_polar.md)                                                                                                                                                                                               |
+| NumericRadiusAxis  | 모든 [폴라 시리즈](datachart_series_types_polar.md) 및 [레이디얼 시리즈](datachart_series_types_radial.md)                                                                                                                                                |
+| CategoryAngleAxis  | 모든 [레이디얼 시리즈](datachart_series_types_radial.md)                                                                                                                                                                                            |
 
-### Category X Axis
+### 카테고리 X축
 
-The `IgxCategoryXAxisComponent` treats the data as a sequence of category data items. Labels on this axis are placed along the X-Axis, according to their position in the sequence. This type of axis can display almost any type of data including strings and numbers. This type of axis is compatible with the [Financial Series](datachart_series_types_financial.md), [Range Series](datachart_series_types_range.md),  and [Category Series](datachart_series_types_category.md) (except `BarSeries`)
+`IgxCategoryXAxisComponent`는 데이터를 일련의 카테고리 데이터 항목으로 처리합니다. 이 축의 라벨은 순서의 위치에 따라 X축에 배치됩니다. 이 유형의 축은 문자열과 숫자를 포함한 거의 모든 유형의 데이터를 표시할 수 있습니다. 이 유형의 축은 [금융 시리즈](datachart_series_types_financial.md), [범위 시리즈](datachart_series_types_range.md),  and [카테고리 시리즈](datachart_series_types_category.md)(`BarSeries` 제외)와 호환됩니다
 
-The following code snippet demonstrates how to add a `IgxCategoryXAxisComponent` to the `IgxDataChart` control:
+다음 코드 조각은 `IgxCategoryXAxisComponent`를 `IgxDataChart` 제어에 추가하는 방법을 보여줍니다:
 
 ```html
 <igx-data-chart [dataSource]="data"
@@ -52,11 +52,11 @@ The following code snippet demonstrates how to add a `IgxCategoryXAxisComponent`
 </igx-data-chart>
 ```
 
-### Category Y Axis
+### 카테고리  Y축
 
-The `CategoryYAxis` treats the data as a sequence of category data items. Labels on this axis are placed along the Y-Axis, according to their position in the sequence. This type of axis can display almost any type of data including strings and numbers. This type of axis is compatible only with `BarSeries` within the [Category Series](datachart_series_types_category.md) group.
+`CategoryYAxis` 는 데이터를 일련의 카테고리 데이터 항목으로 처리합니다. 이 축의 라벨은 순서의 위치에 따라 Y축에 배치됩니다. 이 유형의 축은 문자열과 숫자를 포함한 거의 모든 유형의 데이터를 표시할 수 있습니다. 이 유형의 축은 [카테고리 시리즈](datachart_series_types_category.md) 그룹 내의 `BarSeries`만 호환됩니다.
 
-The following code snippet demonstrates how to add a `CategoryYAxis` to the `IgxDataChart` control:
+다음 코드 조각은 `CategoryYAxis`를 `IgxDataChart` 제어에 추가하는 방법을 보여줍니다:
 
 ```html
 <igx-data-chart [dataSource]="data"
@@ -66,11 +66,11 @@ The following code snippet demonstrates how to add a `CategoryYAxis` to the `Igx
 </igx-data-chart>
 ```
 
-### Category DateTime X Axis
+### 카테고리 DateTime X축
 
-The `IgxCategoryDateTimeXAxisComponent` Axis treats the data as a sequence of category data items that are sorted by date. Labels on this axis are placed along the X-Axis, according to the value in a data column that is mapped using the `DateTimeMemberPath` property of this axis. This type of axis is compatible with the [Financial Series](datachart_series_types_financial.md), [Range Series](datachart_series_types_range.md), and [Category Series](datachart_series_types_category.md) (except `BarSeries`)
+`IgxCategoryDateTimeXAxisComponent` 축은 데이터를 날짜별로 정렬된 카테고리 데이터 항목의 순서대로 처리합니다. 이 축의 라벨은 이 축의 `DateTimeMemberPath` 속성을 사용하여 매핑된 데이터 열의 값에 따라 X축에 배치됩니다. 이 유형의 축은 [금융 시리즈](datachart_series_types_financial.md), [범위 시리즈](datachart_series_types_range.md) 및 [카테고리 시리즈](datachart_series_types_category.md)(`BarSeries` 제외)와 호환됩니다
 
-The following code snippet demonstrates how to add a `IgxCategoryDateTimeXAxisComponent` to the `IgxDataChart` control:
+다음 코드 조각은 `IgxCategoryDateTimeXAxisComponent`를 `IgxDataChart` 제어에 추가하는 방법을 보여줍니다:
 
 ```html
 <igx-data-chart [dataSource]="data"
@@ -80,11 +80,11 @@ The following code snippet demonstrates how to add a `IgxCategoryDateTimeXAxisCo
 </igx-data-chart>
 ```
 
-### Numeric X Axis
+### 숫자 X축
 
-The `IgxNumericXAxisComponent` treats the data as continously varying numerical data items. Labels on this axis are placed along the X-Axis. Location of labels varies according to the value in a data column that is mapped using their corresponding value-mapping properties. This type of axis is compatible with the [Scatter Series](datachart_series_types_scatter_bubble.md) and [Shape Series](datachart_series_types_shape.md) types. Also, this axis is compatible with the `BarSeries` type of [Category Series](datachart_series_types_category.md), in which the `ValueMemberPath` property will be used to map the data column.
+`IgxNumericXAxisComponent`는 데이터를 지속적으로 변하는 숫자 데이터 항목으로 처리합니다. 이 축의 라벨은 X축에 배치됩니다. 라벨 위치는 해당 값 매핑 속성을 사용하여 매핑되는 데이터 열의 값에 따라 다릅니다. 이 유형의 축은 [분산 시리즈](datachart_series_types_scatter_bubble.md) 및 [모양 시리즈](datachart_series_types_shape.md) 유형과 호환됩니다. 또한, 이 축은 `ValueMemberPath` 속성을 사용하여 데이터 열을 매핑하는 [Category Series](datachart_series_types_category.md)의 `BarSeries` 유형과 호환됩니다.
 
-The following code snippet demonstrates how to add a `IgxNumericXAxisComponent` to the `IgxDataChart` control:
+다음 코드 조각은 `IgxNumericXAxisComponent`를 `IgxDataChart` 제어에 추가하는 방법을 보여줍니다:
 
 ```html
 <igx-data-chart [dataSource]="data"
@@ -94,11 +94,11 @@ The following code snippet demonstrates how to add a `IgxNumericXAxisComponent` 
 </igx-data-chart>
 ```
 
-### Numeric Y Axis
+### 숫자 Y축
 
-The `IgxNumericYAxisComponent` treats the data as continuously varying numerical data items. Labels on this axis are placed along the Y-axis. Location of labels varies according to the value in a data column that is mapped using their corresponding value-mapping properties. This type of axis is compatible with the [Scatter Series](datachart_series_types_scatter_bubble.md) and [Shape Series](datachart_series_types_shape.md) types. Also, this axis is compatible with [Financial Series](datachart_series_types_financial.md), [Range Series](datachart_series_types_range.md), and [Category Series](datachart_series_types_category.md) types (except `BarSeries`).
+`IgxNumericYAxisComponent`는 데이터를 지속적으로 변하는 숫자 데이터 항목으로 처리합니다. 이 축의 라벨은 Y축에 배치됩니다. 라벨 위치는 해당 값 매핑 속성을 사용하여 매핑되는 데이터 열의 값에 따라 다릅니다. 이 유형의 축은 [분산 시리즈](datachart_series_types_scatter_bubble.md) 및 [모양 시리즈](datachart_series_types_shape.md) 유형과 호환됩니다. 또한,  이 축은 [금융 시리즈](datachart_series_types_financial.md), [범위 시리즈](datachart_series_types_range.md) 및 [카테고리 시리즈](datachart_series_types_category.md) 유형(`BarSeries` 제외)과 호환됩니다
 
-The following code snippet demonstrates how to add a `IgxNumericYAxisComponent` to the `IgxDataChart` control:
+다음 코드 조각은 `IgxNumericYAxisComponent`를 `IgxDataChart` 제어에 추가하는 방법을 보여줍니다:
 
 ```html
 <igx-data-chart [dataSource]="data"
@@ -108,13 +108,13 @@ The following code snippet demonstrates how to add a `IgxNumericYAxisComponent` 
 </igx-data-chart>
 ```
 
-### Time X Axis
+### 시간 X축
 
-The `IgxTimeXAxisComponent` treats the data as a sequence of category data items that are sorted by date. Labels on this axis are placed along the X-Axis, according to the value in a data column that is mapped using the `DateTimeMemberPath` property of this axis. This type of axis is compatible with the [Financial Series](datachart_series_types_financial.md), [Range Series](datachart_series_types_range.md), and [Category Series](datachart_series_types_category.md) types.
+`IgxTimeXAxisComponent`는 데이터를 날짜별로 정렬된 카테고리 데이터 항목의 순서대로 처리합니다. 이 축의 라벨은 이 축의 `DateTimeMemberPath` 속성을 사용하여 매핑된 데이터 열의 값에 따라 X축에 배치됩니다. 이 유형의 축은 [금융 시리즈](datachart_series_types_financial.md), [범위 시리즈](datachart_series_types_range.md) 및 [카테고리 시리즈](datachart_series_types_category.md) 유형과 호환됩니다
 
-The `IgxTimeXAxisComponent` also supports the ability to exclude intervals of data with `breaks`. As a result, labels will not appear at the excluded interval. For example, working/non-working days, holidays, or weekends.
+또한, `IgxTimeXAxisComponent`는 `breaks`로 데이터 간격을 제외하는 기능을 지원합니다. 따라서 라벨은 제외된 간격에 표시되지 않습니다. 예를 들면, 근무/휴무일, 공휴일 또는 주말.
 
-The following code snippet demonstrates how to add a `IgxTimeXAxisComponent` to the `IgxDataChart` control:
+다음 코드 조각은 `IgxTimeXAxisComponent`를 `IgxDataChart` 제어에 추가하는 방법을 보여줍니다:
 
 ```html
 <igx-data-chart [dataSource]="data"
@@ -124,11 +124,11 @@ The following code snippet demonstrates how to add a `IgxTimeXAxisComponent` to 
 </igx-data-chart>
 ```
 
-### Ordinal Time X Axis
+### 서수 시간 X축
 
-The main difference between the `IgxOrdinalTimeXAxisComponent` and the `IgxTimeXAxisComponent` is that in the ordinal axis, the dates displayed are assumed to be equidistant. The `IgxTimeXAxisComponent` currently sorts and aligns the dates according to a chronological timescale. Therefore, we recommend using `IgxOrdinalTimeXAxisComponent` for better performance or when your data items are already in chronological order with the same time interval.
+`IgxOrdinalTimeXAxisComponent`와 `IgxTimeXAxisComponent`의 주요 차이점은 서수 축에 표시되는 날짜를 등거리로 가정하는 것입니다. `IgxTimeXAxisComponent` 는 현재 시간 순서대로 날짜를 정렬하고 조정합니다. 따라서 더 나은 성능을 위해 또는 동일한 시간 간격으로 데이터 항목이 시간 순서대로 이미 존재할 경우에는 `IgxOrdinalTimeXAxisComponent`를 사용하는 것이 좋습니다.
 
-The following code snippet demonstrates how to add a `IgxOrdinalTimeXAxisComponent` to the `IgxDataChart` control:
+다음 코드 조각은 `IgxOrdinalTimeXAxisComponent`를 `IgxDataChart` 제어에 추가하는 방법을 보여줍니다:
 
 ```html
 <igx-data-chart [dataSource]="data"
@@ -138,13 +138,13 @@ The following code snippet demonstrates how to add a `IgxOrdinalTimeXAxisCompone
 </igx-data-chart>
 ```
 
-### Percent Change Y Axis
+### 백분율 변경 Y축
 
-The `IgxPercentChangeYAxisComponent` works such that it takes the first point in your series as a reference value. Each value after the first value is scaled according to what percent increase or decrease it is compared to the reference value.
+`IgxPercentChangeYAxisComponent`는 시리즈의 첫 번째 점을 참조값으로 사용하도록 작동합니다. 첫 번째 값 이후의 각 값은 기준 값과 비교하여 증가 또는 감소하는 백분율에 따라 변경됩니다.
 
-This axis type is based on `IgxNumericYAxisComponent`, and so will support the same series types. For [Category Series](datachart_series_types_category.md), the reference value will correspond to the `ValueMemberPath` for those series. For[Scatter Series](datachart_series_types_scatter_bubble.md), the reference value will correspond to the `YMemberPath` of those series. For [Financial Series](datachart_series_types_financial.md), the reference value will correspond to the first value mappted to `OpenMemberPath` property.
+이 축 유형은 `IgxNumericYAxisComponent`를 기반으로 하기 때문에 동일한 시리즈 유형을 지원합니다. [카테고리 시리즈](datachart_series_types_category.md)의 경우, 참조값은 해당 시리즈의 `ValueMemberPath`에 해당합니다. [분산 시리즈](datachart_series_types_scatter_bubble.md)의 경우, 참조값은 해당 시리즈의 `YMemberPath`에 해당합니다. [금융 시리즈](datachart_series_types_financial.md)의 경우, 참조값은 `OpenMemberPath` 속성에 매핑된 첫 번째 값에 해당합니다.
 
-The following code snippet demonstrates how to add a `IgxPercentChangeYAxisComponent` to the `IgxDataChart` control:
+다음 코드 조각은 `IgxPercentChangeYAxisComponent`를 `IgxDataChart` 제어에 추가하는 방법을 보여줍니다:
 
 ```html
 <igx-data-chart [dataSource]="data"
@@ -154,11 +154,11 @@ The following code snippet demonstrates how to add a `IgxPercentChangeYAxisCompo
 </igx-data-chart>
 ```
 
-### Additional Resources
+### 추가 리소스
 
--   [Axis Types](datachart_axis_types.md)
--   [Axis Sharing](datachart_axis_sharing.md)
--   [Axis Settings](datachart_axis_settings.md)
--   [Chart Legend](datachart_chart_legends.md)
--   [Series Markers](datachart_series_markers.md)
--   [Series Types](datachart_series_types.md)
+-   [축 유형](datachart_axis_types.md)
+-   [축 공유](datachart_axis_sharing.md)
+-   [축 설정](datachart_axis_settings.md)
+-   [차트 범례](datachart_chart_legends.md)
+-   [시리즈 마커](datachart_series_markers.md)
+-   [시리즈 유형](datachart_series_types.md)
