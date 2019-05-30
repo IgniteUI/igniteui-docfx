@@ -26,7 +26,7 @@ gulp.task('cleanup', () => {
     return del([`${DOCFX_SITE}`]);
 });
 
-gulp.task('post-processor-configs', gulp.series('cleanup'), () => {
+gulp.task('post-processor-configs', gulp.series('cleanup', (done) => {
     var environmentVariablesConfig = JSON.parse(JSON.stringify(environmentVariablesPreConfig));
 
     if (process.env.NODE_ENV) {
@@ -46,7 +46,8 @@ gulp.task('post-processor-configs', gulp.series('cleanup'), () => {
         `${DOCFX_SITE}/${environmentVariablesConfig._configFileName}`,
         JSON.stringify(environmentVariablesConfig)
     );
-});
+    done();
+}));
 
 gulp.task('generate-grids-topics', (done) => {
     const grids = [
@@ -123,14 +124,14 @@ gulp.task('build', gulp.series(
     'build-site'
 ));
 
-gulp.task('build-travis', gulp.parallel(
+gulp.task('build-travis', gulp.series(
     'styles',
     'cleanup',
     'post-processor-configs',
     'generate-grids-topics'
 ));
 
-gulp.task('serve', gulp.series('build'), () => {
+gulp.task('serve', gulp.series('build', (done) => {
     browserSync.init({
         server: {
             baseDir: `${DOCFX_SITE}`
@@ -173,7 +174,9 @@ gulp.task('serve', gulp.series('build'), () => {
 
     gulp.watch(`${DOCFX_TEMPLATE}/**/*`, gulp.series('watch'));
     gulp.watch([`${DOCFX_PATH}/**/*.md`, `${DOCFX_ARTICLES}/**`].concat(excluded).concat(included), gulp.series('build'));
-});
+
+    done();
+}));
 
 gulp.task('watch', gulp.series('build'), done => {
     browserSync.reload();
