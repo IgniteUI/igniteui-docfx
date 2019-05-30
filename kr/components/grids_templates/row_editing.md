@@ -161,7 +161,7 @@ export class AppModule {}
 > 기본 키 설정은 행 편집 조작에 필수입니다.
 
 > [!NOTE]
-> 개별 열에 대해 편집할 필요가 없습니다. @@igComponent에서 [`rowEditable`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#roweditable) 속성을 사용하면 기본 필드를 제외한 모든 `field` 속성이 편집 가능함을 의미합니다. 특정 열에 대한 편집을 비활성화하려면 [`editable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable)({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable) 열의 입력을 false로 설정합니다.
+> 개별 열에 대해 편집할 필요가 없습니다. @@igComponent에서 [`rowEditable`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#roweditable) 속성을 사용하면 기본 필드를 제외한 모든 `field` 속성이 편집 가능함을 의미합니다. 특정 열에 대한 편집을 비활성화하려면 [`editable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable) 열의 입력을 false로 설정합니다.
 
 @@if (igxName === 'IgxGrid') {
 ```typescript

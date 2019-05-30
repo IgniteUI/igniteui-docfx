@@ -271,10 +271,10 @@ export class MyComponent implements OnInit {
 
 ## 알려진 제한 사항
 
-|Limitation|Description|
+|제한 사항|설명|
 |--- |--- |
-|Templating Tree Cells|When templating a tree cell, content that spans outside the boundaries of the cell will not be shown unless positioned in an overlay.|
-|Group By|Group By feature is not supported, because it is inherent to the tree grid.|
+|템플리트 트리 셀|트리 셀을 템플릿으로 만들 때 셀의 경계 외부에있는 내용은 오버레이에 배치되지 않으면 표시되지 않습니다.|
+|Group By|Group By 기능은 트리 그리드에 고유하기 때문에 지원되지 않습니다.|
 
 
 <div class="divider--half"></div>

@@ -260,10 +260,10 @@ export class RemoteLoDService {
 
 ### 알려진 제한 사항
 
-|Limitation|Description|
+|제한 사항|설명|
 |--- |--- |
-|Group By|Group By feature is not supported by the hierarchical grid.|
-|Export to Excel|Export to Excel is currently not supported by the Hierarchical Grid, but it would be available in future versions of Ignite UI for Angular.|
+|Group By|Group By 기능은 계층 적 그리드에서 지원되지 않습니다.|
+|Export to Excel|Export to Excel 는 현재 계층 적 그리드에서 지원되지 않지만 Ignite UI for Angular의 차후 버전에서 사용할 수 있습니다.|
 
 ### CRUD 조작
 

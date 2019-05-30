@@ -195,9 +195,9 @@ import { FilteringLogic } from 'igniteui-angular';
 this.@@igObjectRef.filteringLogic = FilteringLogic.OR;
 ```
 
-[`AND`]({environment:angularApiUrl}/enums/filteringlogic.html#and)의 기본값은 현재 적용된 모든 필터링식과 일치하는 행만 반환합니다. 위 예제에 따라 'ProductName' 셀 값에 'myproduct'가 포함되어 있고 'Price' 셀 값이 55보다 큰 경우에는 행이 반환됩니다.
+[`AND`]({environment:angularApiUrl}/enums/filteringlogic.html#and)의 기본값은 현재 적용된 모든 필터링식과 일치하는 행만 반환합니다. 위 예제에 따라 'ProductName' 셀 값에 'myproduct' 가 포함되어 있고 'Price' 셀 값이 55 보다 큰 경우에는 행이 반환됩니다.
 
-[`OR`]({environment:angularApiUrl}/enums/filteringlogic.html#or)로 설정하면 'ProductName' 셀 값에 'myproduct'가 포함되거나 'Price' 셀 값이 55보다 큰 경우에 행이 반환됩니다.
+[`OR`]({environment:angularApiUrl}/enums/filteringlogic.html#or)로 설정하면 'ProductName' 셀 값에 'myproduct' 가 포함되거나 'Price' 셀 값이 55 보다 큰 경우에 행이 반환됩니다.
 
 <div class="divider--half"></div>
 

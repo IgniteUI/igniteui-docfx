@@ -73,7 +73,7 @@ _language: kr
 ### 키보드 탐색
 
 * <kbd>TAB</kbd> 행의 왼쪽에서 오른쪽으로 다음 셀로 이동합니다(정의된 열 블록에 영향을 받지 않음).
-* <kbd>Shift</kbd> + <kbd>TAB</kbd> move to the previous cell from right to left in the row (unaffected by the column blocks that are defined).
+* <kbd>Shift</kbd> + <kbd>TAB</kbd> 행의 오른쪽에서 왼쪽으로 이전 셀로 이동합니다 (정의 된 열 블록의 영향을받지 않음).
 * <kbd>왼쪽 화살표</kbd> 및 <kbd>오른쪽 화살표</kbd> 현재 행 내에서 왼쪽/오른쪽의 인접 셀로 이동합니다(정의된 열 블록에 영향을 받지 않음).
 * <kbd>위 화살표</kbd> 및 <kbd>아래 화살표</kbd> 공통 테두리를 공유하는 위/아래 셀로 이동합니다. 여러 셀과 테두리를 공유하는 경우, 가장 왼쪽이 우선합니다.
 

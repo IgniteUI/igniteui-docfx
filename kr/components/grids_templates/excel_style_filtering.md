@@ -115,7 +115,7 @@ Excel 스타일 필터링을 켜려면 2개의 입력을 설정해야 합니다.
 
 <div class="divider--half"></div>
 
-아래 샘플에서 'Product Name' 및 'Discontinued' 열에서는 4가지 기능이 모두 활성화되어 있으며, Quantity Per Unit'에서는 4가지 모두 비활성화되어 있으며, 'Unit Price'에서는 정렬 및 이동만 활성화되어 있으며, 'Order Date'에서는 고정 및 숨기기만 활성화되어 있습니다.
+아래 샘플에서 'Product Name' 및 'Discontinued' 열에서는 4가지 기능이 모두 활성화되어 있으며, 'Quantity Per Unit' 에서는 4 가지 모두 비활성화되어 있으며, 'Unit Price' 에서는 정렬 및 이동만 활성화되어 있으며, 'Order Date' 에서는 고정 및 숨기기만 활성화되어 있습니다.
 }
 @@if (igxName === 'IgxTreeGrid') {
 ```html
