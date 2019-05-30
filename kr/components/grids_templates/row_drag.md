@@ -78,7 +78,7 @@ In this example, we'll handle dragging a row from a grid to a designated area an
 In this example, we'll handle dragging a row from one grid to another, removing it from the first data source and adding it to the second.
 }
 
-##### Drop Areas
+#### Drop Areas
 
 Enabling row-dragging was pretty easy, but now we have to configure how we'll handle row-*dropping*.
 We can define where we want our rows to be dropped using the [`igxDrop` directive](../drag_drop.md).
@@ -122,7 +122,7 @@ Since the grid will initially be empty, we also define a template that will be m
 ```
 }
 
-##### Drop Area Event Handlers
+#### Drop Area Event Handlers
 
 Once we've defined our drop-area in the template, we have to declare our handlers for the `igxDrop`'s [`onEnter`]({environment:angularApiUrl}/classes/igxdropdirective.html#onenter), [`onLeave`]({environment:angularApiUrl}/classes/igxdropdirective.html#onleave) and [`onDrop`]({environment:angularApiUrl}/classes/igxdropdirective.html#ondrop) events in our component's `.ts` file.
 
@@ -212,9 +212,8 @@ We define a refenrece to each of our grids via the `ViewChild` decorator and the
 > [!NOTE]
 > When using row data from the event arguments (`args.dragData.rowData`) or any other row property, note that the entire row is passed in the arguments as a reference, which means that you need to clone the data you need, if you want to distinguish it from the one in the source grid.
 
-##### Templating the drag icon
+#### Templating the drag icon
 The drag handle icon can be templated using the grid's [`dragIndicatorIconTemplate`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#dragindicatoricontemplate). In the example we're building, let's change the icon from the default one (`drag_indicator`) to `drag_handle`.
-@@if (igxName === 'IgxTreeGrid' || igxName === 'IgxGrid') {
 To do so, we can use the `igxDragIndicatorIcon` to pass a template inside of the `@@igSelector`'s body:
 ```html
 <@@igSelector>
@@ -225,31 +224,7 @@ To do so, we can use the `igxDragIndicatorIcon` to pass a template inside of the
 ...
 </@@igSelector>
 ```
-}
-@@if (igxName === 'IgxHierarchicalGrid') {
-To do so, we need to define a template in our component's template, get it as a `ViewChild` and pass it to the @@igxName's `dragIndicatorIconTemplate` property
 
-```html
-<@@igSelector>
-...
-</@@igSelector>
-...
-<ng-template #customDragIcon>
-    <igx-icon>drag_handle</igx-icon>
-</ng-template>
-```
-
-```typescript
-export class @@igxNameRowDragComponent implements AfterViewInit{
-    @ViewChild('customDragIcon', {read: TemplateRef})
-    public customIcon: TemplateRef<any>;
-    ...
-    ngAfterViewInit() {
-        this.grid.dragIndicatorIconTemplate = this.customIcon;
-    }
-}
-```
-}
 
 Once we've set the new icon template, we also need to adjust the `DEFAULT` icon in our `DragIcon enum`, so it's properly change by the `changeIcon` method:
 ```typescript
@@ -260,7 +235,7 @@ enum DragIcon {
 ```
 
 @@if (igxName === 'IgxTreeGrid' || igxName === 'IgxHierarchicalGrid') {
-##### Styling the drop area
+#### Styling the drop area
 Once our drop handlers are properly configured, all that's left is to style our drop area a bit:
 ```css
 .drop-area {
@@ -292,7 +267,7 @@ Once our drop handlers are properly configured, we're good to go!
 The result of the configuration can be seem below:
 }
 
-##### Example Demo
+#### Example Demo
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:550px">
     <iframe id="grid-row-drag-to-grid-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-row-drag-to-grid' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -343,15 +318,11 @@ Try to drag moons from the grid and drop them to their corresponding planets. Ro
 <div class="divider--half"></div>
 }
 
-#### Limitations
+### Limitations
 
 There are a couple of things that need to be considered when using the `rowDraggable` directive:
 > [!NOTE]
 > When handling the row-drop event, the `eventArgs.cancel` should be set to **`true`** in order to prevent leftover elements from the row drag ghost from being visible 
-@@if (igxName === 'IgxHierarchicalGrid') {
-> [!NOTE]
-> When using `rowDraggable` with an @@igSelector, the [`dragIndicatorIconTemplate`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#dragindicatoricontemplate) cannot be set through the template, as a `ContentChild`. Instead, you can get a reference to the template (via `ViewChild` decorator) and pass it to the grid `myHGrid.dragIndicatorIconTemplate: TemplateRef = myCustomTemplate` 
-}
 
 ### API References
 
