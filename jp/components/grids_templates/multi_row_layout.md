@@ -74,6 +74,25 @@ Multi Row Layout のレンダリング方法は全く異なるため、列固定
 * <kbd>Arrow left</kbd> and <kbd>Arrow right</kbd> は、現在行内の左右に隣接するセルに移動します (定義されている列ブロックの影響を受けません)。
 * <kbd>上矢印</kbd> と <kbd>下矢印</kbd> は、共通の境界を共有する上下のセルに移動します。複数のセルと境界を共有する場合は、最も左にあるものが優先されます。
 
+#### Custom Keyboard Navigation
+
+The grid allows customizing the default navigation behavior when a certain key is pressed. Actions like `going to the next cell` or `cell below` could be handled easily with the powerful keyboard navigation API:
+
+- [`onGridKeydown`]({environment:angularApiUrl}/classes/igxgridbasecomponent.html#ongridkeydown) is exposed. The event will emit [`IGridKeydownEventArgs`]({environment:angularApiUrl}/interfaces/igridkeydowneventargs.html). This event is available only through the keyboard key combinations mentioned above, for all other key actions you can use `keydown` event `(keydown)="onKeydown($event)"`
+- [`navigateTo`]({environment:angularApiUrl}/classes/igxgridbasecomponent.html#navigateto) - this method allows you to navigate to a position based on provided `rowindex` and `visibleColumnIndex`
+
+The demo below adds additional navigation down/up via the <kbd>Enter</kbd> and <kbd>Shift</kbd> + <kbd>Enter</kbd> keys, similar to the behavior observed in Excel.
+
+#### Demo
+
+<div class="sample-container loading" style="height:605px">
+    <iframe id="grid-mrl-custom-navigation-iframe" src='{environment:demosBaseUrl}/grid/grid-mrl-custom-navigation' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-mrl-custom-navigation-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+
  ### API リファレンス	
 <div class="divider--half"></div>	
 
