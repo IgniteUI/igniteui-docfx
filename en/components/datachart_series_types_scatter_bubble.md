@@ -41,8 +41,6 @@ this.state = { dataSource: SampleScatterStats.getCountries() }
 
 ### Required Modules
 
-<!-- Angular -->
-
 The scatter bubble series requires the following modules:
 
 ```typescript

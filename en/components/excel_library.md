@@ -11,8 +11,8 @@ The Infragistics Excel Library allows you to work with spreadsheet data using fa
 ### Demo
 
 <div class="sample-container" style="height: 500px">
-    <iframe id="excel-library-overview-sample-iframe" 
-	src='{environment:demosBaseUrl}/excel-library/operations-on-workbooks' 
+    <iframe id="excel-library-overview-sample-iframe"
+	src='{environment:demosBaseUrl}/excel-library/operations-on-workbooks'
 	width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 
@@ -22,9 +22,12 @@ The Infragistics Excel Library allows you to work with spreadsheet data using fa
 
 When installing the excel package, the core package must also be installed.
 
--   **npm install igniteui-angular-excel igniteui-angular-core --save**
+-   **npm install --save igniteui-angular-core**
+-   **npm install --save igniteui-angular-excel**
 
-The Excel Library is exported as an `NgModule`, you need to import the `IgxExcelModule` inside your `AppModule`:
+### Required Modules
+
+The excel library requires the following modules:
 
 ```typescript
 // app.module.ts
@@ -32,15 +35,17 @@ import { IgxExcelModule } from "igniteui-angular-excel/ES5/igx-excel-module";
 
 @NgModule({
     imports: [
-        ...
+        // ...
         IgxExcelModule,
-        ...
+        // ...
     ]
 })
 export class AppModule {}
 ```
 
-### The Excel Library Contains 5 Modules
+### Modules Implementation
+
+The Excel Library contains 5 modules that you can use to limit bundle size of your app:
 
 -   **IgxExcelCoreModule** – This contains the object model and much of the excel infrastructure
 -   **IgxExcelFunctionsModule** – This contains the majority of the functions for formula evaluations, such as Sum, Average, Min, Max, etc. The absence of this module won’t cause any issues with formula parsing if the formula is to be calculated. For example, if you apply a formula like “=SUM(A1:A5)” and ask for the Value of the cell, then you would get a #NAME! error returned. This is not an exception throw – it’s an object that represents a particular error since formulas can result in errors.
@@ -106,9 +111,9 @@ Modify `angular.json` by setting the `vendorSourceMap` option under architect =>
             "index": "src/index.html",
             "main": "src/main.ts",
             "tsConfig": "src/tsconfig.app.json",
-                  ...
+                  // ...
           },
-              ...
+              // ...
         },
         "serve": {
           "builder": "...",
@@ -116,9 +121,9 @@ Modify `angular.json` by setting the `vendorSourceMap` option under architect =>
             "vendorSourceMap": false,
             "browserTarget": "my-app:build"
           },
-              ...
+              // ...
         },
-        ...
+        // ...
       }
 ```
 

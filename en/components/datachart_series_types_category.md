@@ -70,9 +70,7 @@ this.state = { dataSource: SampleCategoryData.create() }
 
 ### Required Modules
 
-<!-- Angular -->
-
-In order to use category series, you need to import the following modules in your app during load and register data chart modules:
+The category series require the following modules:
 
 ```typescript
 // axis' modules:
