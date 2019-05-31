@@ -21,7 +21,7 @@ _language: kr
 
 다중 행 레이아웃 선언은 [`igx-column-layout`]({environment:angularApiUrl}/classes/igxcolumnlayoutcomponent.html) 컴포넌트를 통해 이루어집니다. 각 `igx-column-layout` 컴포넌트는 하나 이상의 `igx-column` 컴포넌트를 포함하는 블록으로 간주해야 합니다. 일부 그리드 기능은 블록 수준에서 작동합니다(아래의 "기능 통합" 섹션에서 열거). 예를 들면, 가상화는 블록을 사용하여 가상 청크를 결정하므로 성능을 향상하려면 레이아웃이 허용하는 경우, 열을 더 많은 `igx-column-layout` 블록으로 분할합니다. 다중 행 레이아웃을 구성할 경우, 이러한 블록 이외에 열이 없어야 하며, `IgxColumnGroupComponent`를 사용하지 않아야 합니다. 다중 행 레이아웃은 [grid layout](https://www.w3.org/TR/css-grid-1/) 사양 상에서 구현되며 요구 사항을 준수해야 합니다.
 
-`IgxColumnComponent` exposes four `@Input` properties to determine the location and span of each cell:
+`IgxColumnComponent` 네 개의 `@Input` 속성을 노출하여 각 셀의 위치와 범위를 결정합니다.
 * [`colStart`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#colstart) - 필드가 시작되는 열 인덱스입니다. 이 속성은 **mandatory**입니다.
 * [`rowStart`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#rowstart) - 필드가 시작되는 행 인덱스입니다. 이 속성은 **mandatory**입니다.
 * [`colEnd`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#colend) - 현재 필드가 끝나는 열 인덱스입니다. colStart와 colEnd 사이의 열의 양은 해당 필드에 대한 스패닝 열의 양을 결정합니다. 이 속성은 **optional**입니다. 설정되지 않은 경우, 기본값은 `colStart + 1`입니다.
