@@ -81,20 +81,6 @@ Ignite UI for Angular @@igComponent では、**RowDrag** がルート `@@igSelec
 この例では、あるグリッドから別のグリッドに行をドラッグし、それを最初のデータソースから削除し、それを 2 番目のデータソースに追加します。
 }
 
-You may enable animation when a row is dropped on a non-droppable area using the `animation` parameter of the [`onRowDragEnd`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onrowdragend) event. If set to true, the dragged row would return to its' original position when dropped over a non-droppable area.
-
-You may enable animation like this:
-
-```typescript
-export class @@igxNameRowDragComponent {
-    ...
-    public onRowDragEnd(args) {
-        args.animation = true;
-    }
-
-}
-```
-
 ##### ドロップエリア
 
 行ドラッグを簡単に有効にできました。次は行ドロップを処理する方法を設定する必要があります。
@@ -138,6 +124,20 @@ import { ..., IgxDragDropModule } from 'igniteui-angular';
 </ng-template>
 ```
 }
+
+You may enable animation when a row is dropped on a non-droppable area using the `animation` parameter of the [`onRowDragEnd`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onrowdragend) event. If set to true, the dragged row will animate back to its' original position when dropped over a non-droppable area.
+
+You may enable animation like this:
+
+```typescript
+export class @@igxNameRowDragComponent {
+    ...
+    public onRowDragEnd(args) {
+        args.animation = true;
+    }
+
+}
+```
 
 ##### ドロップ エリア イベント ハンドラー
 
