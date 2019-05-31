@@ -78,6 +78,20 @@ In this example, we'll handle dragging a row from a grid to a designated area an
 In this example, we'll handle dragging a row from one grid to another, removing it from the first data source and adding it to the second.
 }
 
+You may enable animation when a row is dropped on a non-droppable area using the `animation` parameter of the [`onRowDragEnd`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onrowdragend) event. If set to true, the dragged row would return to its' original position when dropped over a non-droppable area.
+
+You may enable animation like this:
+
+```typescript
+export class @@igxNameRowDragComponent {
+    ...
+    public onRowDragEnd(args) {
+        args.animation = true;
+    }
+
+}
+```
+
 ##### Drop Areas
 
 Enabling row-dragging was pretty easy, but now we have to configure how we'll handle row-*dropping*.
