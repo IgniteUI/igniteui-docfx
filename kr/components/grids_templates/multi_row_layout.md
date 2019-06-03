@@ -72,10 +72,27 @@ _language: kr
 
 ### 키보드 탐색
 
-* <kbd>TAB</kbd> 행의 왼쪽에서 오른쪽으로 다음 셀로 이동합니다(정의된 열 블록에 영향을 받지 않음).
-* <kbd>Shift</kbd> + <kbd>TAB</kbd> 행의 오른쪽에서 왼쪽으로 이전 셀로 이동합니다 (정의 된 열 블록의 영향을받지 않음).
-* <kbd>왼쪽 화살표</kbd> 및 <kbd>오른쪽 화살표</kbd> 현재 행 내에서 왼쪽/오른쪽의 인접 셀로 이동합니다(정의된 열 블록에 영향을 받지 않음).
-* <kbd>위 화살표</kbd> 및 <kbd>아래 화살표</kbd> 공통 테두리를 공유하는 위/아래 셀로 이동합니다. 여러 셀과 테두리를 공유하는 경우, 가장 왼쪽이 우선합니다.
+IgxGridComponent with Multi-Row Layouts provides build-in keyboard navigation.
+
+#### TAB navigation
+* <kbd>TAB</kbd> and <kbd>Shift</kbd> + <kbd>TAB</kbd> - move to the next/previous cell from left to right row after row unaffected by the column groups/blocks that are defined.  The navigation is done through the cells once for each row, meaning that it should skip cell if doesn't have the same `rowStart` as the currently selected cell. And each cell from the row will be selected only once. When the row is in edit mode, the navigation is restricted to the cells into that row and to the CANCEL and DONE buttons.
+
+#### Horizontal nagivation
+* <kbd>Arrow Left</kbd> or <kbd>Arrow Right</kbd> - move to the adjacent cell on the left/right within the current row unaffected by the column groups/blocks that are defined. If the current cell spans on more than one row, <kbd>Arrow Left</kbd> and <kbd>Arrow Right</kbd> should navigate to the first cell on the left and right with the same `rowStart`, unless you have navigated to some other adjacent cell before. The navigation stores the starting navigation cell and navigates to the cells with the same `rowStart` if possible.
+* <kbd>Ctrl</kbd> + <kbd>Arrow Left</kbd> (<kbd>HOME</kbd>) or <kbd>Ctrl</kbd> + <kbd>Arrow Right</kbd> (<kbd>END</kbd>) - navigate to the start or end of the row and select the cell with accordance to the starting navigation cell.
+
+
+#### Vertical nagivation
+* <kbd>Arrow Up</kbd> or <kbd>Arrow Down</kbd> - move to the cell above/below in relation to a starting position and is unaffected by the rows. If the current cell spans on more than one column the next active cell will be chosen with accordance to the starting navigation cell.
+* <kbd>Ctrl</kbd> + Arrow Up</kbd> or <kbd>Ctrl</kbd> + <kbd>Down</kbd> - Navigates and selects the same column field on the first or on the last row.
+* <kbd>Ctrl</kbd> + <kbd>Home</kbd> or <kbd>Ctrl</kbd> + <kbd>End</kbd> - should navigate to the first row and selects first cell or navigates to the last row and selects the last cell.
+	
+	
+> [!Note]
+> Navigation though cells which span on multiple rows or columns is done with accordance to the starting navigation cell. And will allow returning to the starting cell with the key for the opposite direction. The same approach is used when navigating through group rows.
+
+> [!Note]
+> Selection and multi cell selection are working on blocks. Meaning that when a cell is active, its layout will be selected. Also all features of multiple selection like drag selection are applicable and will work per layout not per cell.
 
 ### API 참조
 <div class="divider--half"></div>
