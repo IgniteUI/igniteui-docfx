@@ -1,27 +1,27 @@
 ---
-title: Data Chart Component - Native Angular | Ignite UI for Angular
+제목: 데이터 차트 구성 요소 - 네이티브 Angular | Ignite UI for Angular
 _description: The Ignite UI for Angular Data Chart is a charting component that provides modular design of axis, markers, series, legend, and annotation layers. With this chart, you can create multiple instances of these visual elements in the same chart plot area in order to create composite chart views.
 _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Chart Control, Angular Chart Example, Angular Chart Component, Angular Data Chart
 _language: kr
 ---
 
-## Navigation
+## 탐색
 
-In the `IgxDataChart` control, navigation is disabled by default. Once enabled, you are able to zoom and pan the chart either programmatically or in the UI.
+`IgxDataChart` 제어에서는 탐색이 기본적으로 비활성화되어 있습니다. 활성화로 설정되면 프로그래밍 방식 또는 UI를 통해 차트를 확대/축소하고 이동할 수 있습니다.
 
-### Demo
+### 데모
 
 <div class="sample-container" style="height: 500px">
     <iframe id="data-chart-navigation-iframe" src='{environment:demosBaseUrl}/charts/data-chart-navigation' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-navigation-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-navigation-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기
     </button>
 </div>
 
 <div class="divider--half"></div>
 
-In order to use navigation in the chart, you need to import and register the interactivity module. This can be done by using the following code:
+차트에서 탐색을 사용하려면 상호 작용 모듈을 가져와 등록해야 합니다. 다음 코드를 사용하여 이 작업을 실행할 수 있습니다:
 
 ```typescript
 import { IgxDataChartInteractivityModule } from "igniteui-angular-charts/ES5/igx-data-chart-interactivity-module";
@@ -29,13 +29,13 @@ import { IgxDataChartInteractivityModule } from "igniteui-angular-charts/ES5/igx
 IgxDataChartInteractivityModule.register();
 ```
 
-### Chart UI Navigation Overview
+### 차트 UI 탐색 개요
 
-In order to allow navigation in the UI, you need to set either the `IsHorizontalZoomEnabled` and/or the `IsVerticalZoomEnabled` properties of the chart to true, depending on the direction that you wish to allow zooming. This will allow you to zoom the chart by rolling a mouse wheel over it.
+UI에서 탐색을 허용하려면 확대/축소를 허용하려는 방향에 따라 차트의 `IsHorizontalZoomEnabled` 및/또는 `IsVerticalZoomEnabled` 속성을 true로 설정해야 합니다. 이렇게 하면 마우스 휠을 사용해 차트를 확대/축소할 수 있습니다.
 
-It is also possible to zoom or pan simply by clicking the buttons on the mouse or using touch. The `DefaultInteraction` property of the chart determines what happens on mouse click or touch events. This property defaults to `DragZoom` and when set to this with zooming enabled, clicking and dragging will place a preview rectangle over the plot area that will become the zoomed area of the chart. This `DefaultInteraction` property can also be set to either `DragPan` to allow panning or `None` to prevent these operations.
+마우스 버튼을 클릭하거나 터치를 사용하여 간단하게 확대/축소하거나 이동할 수도 있습니다. 차트의 `DefaultInteraction` 속성은 마우스 클릭 또는 터치 이벤트로 발생하는 동작을 결정합니다. 이 속성은 기본값으로 `DragZoom`으로 설정되며 확대/축소를 활성화 상태로 설정한 경우, 클릭 및 드래그하면 차트의 확대 영역이 될 플롯 영역 위에 사각형의 미리보기가 배치됩니다. 이 `DefaultInteraction` 속성은 이동을 허용하기 위해 `DragPan`으로 설정하거나, 이러한 조작을 금지하기 위해 `None`으로 설정할 수 있습니다.
 
-The following code snippet demonstrates how you can enable base UI navigation in the chart:
+다음 코드 조각은 차트에서 기본 UI 탐색을 활성화하는 방법을 보여줍니다:
 
 ```html
 <igx-data-chart #chart
@@ -47,26 +47,26 @@ The following code snippet demonstrates how you can enable base UI navigation in
 </igx-data-chart>
 ```
 
-### Chart Navigation with Mouse and Keyboard
+### 마우스 및 키보드를 사용한 차트 탐색
 
-Navigation in the `IgxDataChart` control can happen with either the mouse or the keyboard once enabled. The following operations can be invoked using the following mouse or keyboard operations by default:
+`IgxDataChart` 제어의 탐색은 마우스나 키보드가 활성화된 상태에서 실행됩니다. 다음 조작은 기본적으로 다음의 마우스 또는 키보드 조작을 사용하여 호출할 수 있습니다:
 
--   `Panning`: Using arrow keys on keyboard or holding the Shift key and clicking and dragging with the mouse.
--   `Zoom In`: Using the PageUp key on keyboard or rolling the mouse wheel up.
--   `Zoom Out`: Using the PageDown key on keyboard or rolling the mouse wheel down.
--   `Fit to Chart Plot Area`: Home key on the keyboard. There is no mouse operation for this.
--   `Area Zoom`: Click and drag mouse within the plot area with the `DefaultInteraction` property set to its default, `DragZoom`.
+-   `Panning`: 키보드의 화살표 키를 사용하거나 Shift 키를 누른 상태에서 마우스로 클릭하고 드래그합니다.
+-   `Zoom In`: 키보드의 PageUp 키를 사용하거나 마우스 휠을 위로 회전시킵니다.
+-   `Zoom Out`: 키보드의 PageDown 키를 사용하거나 마우스 휠을 아래로 회전시킵니다.
+-   `차트 플롯 영역에 맞춤`: 키보드의 Home 키입니다. 이것에 대한 마우스 조작은 없습니다.
+-   `영역 줌`: `DefaultInteraction` 속성을 기본값인 `DragZoom`으로 설정하고 플롯 영역 내에서 마우스를 클릭하고 드래그합니다.
 
-The zoom and pan operations can also be enabled by using modifier keys by setting the `DragModifier` and `PanModifier` properties, respectively. These properties can be set to the following modifier keys, and when pressed, the corresponding operation will be enabled:
+확대/축소 및 이동 조작은 `DragModifier` 및 `PanModifier` 속성을 각각 설정하고 보조 키를 사용하여 활성화할 수도 있습니다. 이러한 속성은 다음의 보조 키로 설정할 수 있으며 누르면 해당 조작이 활성화됩니다:
 
 -   Shift
 -   Alt
 -   Control
--   Windows Key
--   Apple Key
+-   Windows 키
+-   Apple 키
 -   None
 
-The following code snippet demonstrates how you can enable UI navigation in the chart. The following will only allow zooming while holding the `Shift` key and panning while holding the `Alt` key:
+다음 코드 조각은 차트에서 UI 탐색을 활성화하는 방법을 보여줍니다: 다음은 `Shift` 키를 누른 상태에서 확대/축소, `Alt` 키를 누른 상태에서 이동만 가능합니다:
 
 ```html
 <igx-data-chart #chart
@@ -108,17 +108,17 @@ The following code snippet demonstrates how to enable the overview plus detail p
 </IgrDataChart>
 ``` -->
 
-### Chart Navigation through Code
+### 코드를 통한 차트 탐색
 
-The `IgxDataChart` control provides several navigation properties that are updated each time a zoom or pan operation happens in the chart. You can also set each of these properties to zoom or pan the chart programmatically. The following is a list of these properties:
+`IgxDataChart` 제어는 차트에서 확대/축소 또는 이동 조작이 발생할 때마다 업데이트되는 여러 탐색 속성을 제공합니다. 이러한 각 속성을 설정하여 차트를 프로그래밍 방식으로 확대/축소 또는 이동할 수도 있습니다. 다음은 이러한 속성 목록입니다:
 
--   `WindowPositionHorizontal`: A numeric value describing the X portion of the content view rectangle displayed by the chart.
--   `WindowPositionVertical`: A numeric value describing the Y portion of the content view rectangle displayed by the chart.
--   `WindowRect`: An `IgRect` object representing a rectangle that represents the portion of the chart that is currently in view. For example, a `WindowRect` of "0, 0, 1, 1" would be the entirety of the chart.
--   `WindowScaleHorizontal`: A numeric value describing the width portion of the content view rectangle displayed by the chart.
--   `WindowScaleVertical`: A numeric value describing the height portion of the content view rectangle displayed by the chart.
+-   `WindowPositionHorizontal`: 차트에 표시되는 콘텐츠 뷰 직사각형의 X부분을 나타내는 수치 값입니다.
+-   `WindowPositionVertical`: 차트에 표시되는 콘텐츠 뷰 직사각형의 Y부분을 나타내는 수치 값입니다.
+-   `WindowRect`: 현재 뷰에 있는 차트 부분을 표시하는 직사각형을 나타내는 `IgRect` 객체입니다. 예를 들면, "0, 0, 1, 1"의 `WindowRect`는 전체 차트입니다.
+-   `WindowScaleHorizontal`: 차트에 표시되는 콘텐츠 뷰 직사각형의 너비 부분을 나타내는 수치 값입니다.
+-   `WindowScaleVertical`: 차트에 표시되는 콘텐츠 뷰 직사각형의 높이 부분을 나타내는 수치 값입니다.
 
-The following code snippets show how to modify the view of the `IgxDataChart` control programmatically. The following assumes you have a variable named "chart" to represent the `IgxDataChart` control:
+다음의 코드 조각은 `IgxDataChart` 제어의 뷰를 프로그래밍 방식으로 변경하는 방법을 보여줍니다. 다음은 `IgxDataChart` 제어를 나타내는 "chart"라는 변수가 있다고 가정한 경우입니다:
 
 ```typescript
 // Zoom in by a factor of 0.05

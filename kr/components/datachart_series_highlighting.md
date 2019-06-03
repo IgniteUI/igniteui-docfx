@@ -1,27 +1,27 @@
 ---
-title: Data Chart Component - Native Angular | Ignite UI for Angular
+제목: 데이터 차트 구성 요소 - 네이티브 Angular | Ignite UI for Angular
 _description: The Ignite UI for Angular Data Chart is a charting component that provides modular design of axis, markers, series, legend, and annotation layers. With this chart, you can create multiple instances of these visual elements in the same chart plot area in order to create composite chart views.
 _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Chart Control, Angular Chart Example, Angular Chart Component, Angular Data Chart
 _language: kr
 ---
 
-## Highlighting
+## 강조 표시
 
-The `IgxDataChart` control allows you to highlight the plotted series in the chart to visualize the item or series that the mouse is hovering over or by using the highlighting layers.
+`IgxDataChart` 제어를 사용하면 차트에 플롯된 시리즈를 강조 표시하여 마우스가 이동하는 항목이나 시리즈를 시각화하거나 강조 표시 레이어를 사용하여 시각화할 수 있습니다.
 
-### Demo
+### 데모
 
 <div class="sample-container" style="height: 500px">
     <iframe id="data-chart-series-highlighting-iframe" src='{environment:demosBaseUrl}/charts/data-chart-series-highlighting' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-series-highlighting-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-series-highlighting-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기
     </button>
 </div>
 
 <div class="divider--half"></div>
 
-In order to enable highlighting in the `IgxDataChart` control, you need to import and register the interactivity module. This can be done using the following code:
+`IgxDataChart` 제어에서 강조 표시를 활성화하려면 대화형 모듈을 가져와 등록해야 합니다. 다음 코드를 사용하여 이 작업을 실행할 수 있습니다:
 
 ```typescript
 import { IgxDataChartInteractivityModule } from "igniteui-angular-charts/ES5/igx-data-chart-interactivity-module";
@@ -31,11 +31,11 @@ IgxDataChartInteractivityModule.register();
 IgxDataChartAnnotationModule.register();
 ```
 
-### Highlighting Series Visuals
+### 시리즈 비주얼 강조 표시
 
-The series highlighting feature of the `IgxDataChart` control allows you to either highlight single items or entire series. For example, if you are using a line series, the highlighting will highlight the entire shape of the line as it is all one single shape. However, highlights can be applied to each single item in a series such as a column series.
+`IgxDataChart` 제어의 시리즈 강조 표시 기능을 사용하면 단일 항목이나 전체 시리즈를 강조 표시할 수 있습니다. 예를 들면, 선 시리즈를 사용하는 경우, 강조 표시는 선의 전체 모양을 하나의 단일 모양으로 강조 표시합니다. 단, 열 시리즈와 같은 시리즈의 각 항목에 강조 표시를 적용할 수 있습니다.
 
-The following code snippet demonstrates how to enable highlighting on series in the chart:
+다음 코드 조각은 차트 시리즈에서 강조 표시를 활성화하는 방법을 보여 줍니다:
 
 ```html
 <igx-data-chart #chart
@@ -62,15 +62,15 @@ The following code snippet demonstrates how to enable highlighting on series in 
 </igx-data-chart>
 ```
 
-### Highlight Series Categories
+### 시리즈 카테고리 강조 표시
 
-The category highlight layer targets a category axis, or all category axes in the `IgxDataChart` control. If the axis contains any series that are aligned between major gridlines of the axis, for example, a column series, this will render a shape that fills the current category.
+카테고리 강조 표시 레이어는 카테고리 축 또는 `IgxDataChart` 제어의 모든 카테고리 축을 대상으로 합니다. 축에 축의 주 격자선 사이에 정렬된 시리즈, 예를 들면 열 시리즈 등이 있으면 현재 카테고리를 채우는 모양이 렌더링됩니다.
 
-For other series, such as a line series, it will render a band with an adjustable thickness at the closest gridline to the pointer position. In this situation, if the `UseInterpolation` property is enabled, this will cause the x position to become fixed to the x-position of the pointer.
+선 시리즈 등 다른 시리즈의 경우, 포인터 위치에 가장 가까운 격자선에서 조절 가능한 두께를 가진 줄무늬를 렌더링합니다. 이 경우, `UseInterpolation` 속성을 활성화하면 x 위치가 포인터의 x 위치에 고정됩니다.
 
-You can also change the color of the highlighting area by setting the `Brush` property.
+`Brush` 속성을 설정하여 강조 표시 영역의 컬러를 변경할 수도 있습니다.
 
-The following is a code snippet demonstrating how to add a category highlight layer to the chart:
+다음은 차트에 카테고리 강조 표시 레이어를 추가하는 방법을 보여 주는 코드 조각입니다:
 
 ```html
 <igx-data-chart #chart
@@ -100,13 +100,13 @@ The following is a code snippet demonstrating how to add a category highlight la
 </igx-data-chart>
 ```
 
-### Highlighting Series Items
+### 시리즈 항목 강조 표시
 
-The category item highlight layer highlights items in series using category axis by either drawing a banded shape or rendering a marker at that position.
+카테고리 항목 강조 표시 레이어는 줄무늬 모양을 그리거나 해당 위치에 마커를 렌더링하여 카테고리 축을 사용하는 시리즈의 항목을 강조 표시합니다.
 
-The default highlight depends on the type of series. For example, the highlight for a column series and a line series is different. For column series it is a banded shape whereas for line series it is a marker. You can override the default highlight by setting the `HighlightType` property.
+기본 강조 표시는 시리즈 유형에 따라 다릅니다. 예를 들면, 열 시리즈와 선 시리즈의 강조 표시가 다릅니다. 열 시리즈의 경우에는 줄무늬 모양이지만 줄 시리즈의 경우에는 마커입니다. `HighlightType` 속성을 설정하여 기본 강조 표시를 재정의할 수 있습니다.
 
-The following code snippet demonstrates how you can add a category item highlight layer to the `IgxDataChart` control:
+다음 코드 조각은 `IgxDataChart` 제어에 카테고리 항목 강조 표시 레이어를 추가하는 방법을 보여 줍니다:
 
 ```html
 <igx-data-chart #chart

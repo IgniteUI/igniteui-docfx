@@ -1,50 +1,48 @@
 ---
-title: Data Chart Component - Native Angular | Ignite UI for Angular
+제목: 데이터 차트 구성 요소 - 네이티브 Angular | Ignite UI for Angular
 _description: The Ignite UI for Angular Data Chart is a charting component that provides modular design of axis, markers, series, legend, and annotation layers. With this chart, you can create multiple instances of these visual elements in the same chart plot area in order to create composite chart views.
 _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Chart Control, Angular Chart Example, Angular Chart Component, Angular Data Chart
 _language: kr
 ---
 
-## Scatter Bubble Series
+## 분산 버블 시리즈
 
-This topic explains, with code examples, how to use scatter `BubbleSeries` in the `IgxDataChart` control. This series
-is similar to [Scatter Marker Series](datachart_series_types_scatter_marker.md) which use the Cartesian (x, y) coordinate system to plot data. This series displays the data as a collection of scaled bubbles, each having a pair of numeric X/Y values that determines its location and 3rd value that determines its size.
+이 항목에서는 코드 예제를 사용하여 `IgxDataChart` 제어에서 분산 `BubbleSeries`를 사용하는 방법을 설명합니다. 이 시리즈는
+데카르트(x, y) 좌표계를 사용하여 데이터를 플롯하는 [분산 마커 시리즈](datachart_series_types_scatter_marker.md)와 유사합니다. 이 시리즈는 데이터를 크기가 변경된 버블 집합으로 표시하는데 각 버블에는 위치를 결정하는 숫자 X /Y 값과 크기를 결정하는 세 번째 값이 있습니다.
 
-### Demo
+### 데모
 
 <div class="sample-container" style="height: 500px">
     <iframe id="data-chart-type-scatter-series-iframe" src='{environment:demosBaseUrl}/charts/data-chart-type-scatter-series' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-type-scatter-series-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-type-scatter-series-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기
     </button>
 </div>
 
 <div class="divider--half"></div>
 
-### Required Axes
+### 필요한 축
 
-The `IgxDataChart` control provides various types of axes but only `IgxNumericYAxisComponent`and `IgxNumericYAxisComponent` can be used with `BubbleSeries`.
+`IgxDataChart` 제어는 다양한 유형의 축을 제공하며, `IgxNumericYAxisComponent` 및 `IgxNumericYAxisComponent`만 `BubbleSeries`와 함께 사용할 수 있습니다.
 
-### Required Data
+### 필요한 데이터
 
-The `BubbleSeries` has the following data requirements:
+`BubbleSeries`에는 다음과 같은 데이터 요구 사항이 있습니다:
 
--   The data source must be an array or a list of data items
--   The data source must contain at least one data item otherwise the chart will not render the scatter shape series.
--   All data items must contain 3 numeric data columns which should be mapped to the `XMemberPath`, `YMemberPath`, and `RadiusMemberPath` properties
+-   데이터 소스는 배열 또는 데이터 항목 목록이어야 함
+-   데이터 소스에는 하나 이상의 데이터 항목이 포함되어야 하며 그렇지 않을 경우에는 차트가 분산형 시리즈를 렌더링하지 않습니다.
+-   모든 데이터 항목에는 `XMemberPath`, `YMemberPath` 및 `RadiusMemberPath` 속성에 매핑되는 3개의 숫자 데이터 열이 있어야 합니다
 
-You can use the [SampleScatterStats](datachart_data_sources_stats.md) as data source which meets above data requirements.
+[SampleScatterStats](datachart_data_sources_stats.md)는 위의 데이터 요구 사항을 충족하는 데이터 소스로 사용할 수 있습니다.
 
 ```typescript
 this.state = { dataSource: SampleScatterStats.getCountries() }
 ```
 
-### Required Modules
+### 필요한 모듈
 
-<!-- Angular -->
-
-The scatter bubble series requires the following modules:
+분산 버블 시리즈에는 다음과 같은 모듈이 필요합니다:
 
 ```typescript
 // axis' modules:
@@ -75,9 +73,9 @@ import { IgxDataChartScatterModule } from "igniteui-angular-charts/ES5/igx-data-
 export class AppModule { /* ... */ }
 ```
 
-### Code Example
+### 코드 예제
 
-This code demonstrates how to create an instance of data chart with `BubbleSeries` and bind it to the data source.
+이 코드는 `BubbleSeries`로 데이터 차트의 인스턴스를 생성하고 데이터 소스에 바인딩하는 방법을 보여줍니다.
 
 ```html
  <igx-data-chart
@@ -97,9 +95,9 @@ This code demonstrates how to create an instance of data chart with `BubbleSerie
  </igx-data-chart>
 ```
 
-### Bubble Shapes
+### 버블 모양
 
-You can customize appearance of `BubbleSeries` using the [Markers](datachart_series_markers.md) properties as well as to change shape of bubbles to one of predefined shapes, for example:
+`BubbleSeries`의 모양은 [Markers](datachart_series_markers.md) 속성을 사용하여 버블 모양을 미리 정의된 모양 중 하나로 변경할 수 있는데 예를 들면 다음과 같습니다:
 
 ```html
 <igx-bubble-series
@@ -110,23 +108,23 @@ You can customize appearance of `BubbleSeries` using the [Markers](datachart_ser
 />
 ```
 
-### Bubble Radius Scale
+### 버블 반경 비율
 
-The `RadiusScale` is an optional feature of `BubbleSeries` that determines the sizes of bubbles. This feature is implemented through the`SizeScale` object. When the radius scale is set, the smallest bubble will be equal to `MinimumValue`, the largest bubble will be equal to `MaximumValue`, and all the remaining bubbles will be scaled accordingly. The size scale can be either linear or logarithmic. When the radius scale is not set, each bubble’s size is equal to the value of data column mapped to `RadiusMemberPath` property
+`RadiusScale`은 버블의 크기를 결정하는 `BubbleSeries`의 옵션 기능입니다. 이 기능은 `SizeScale` 객체를 통해 구현됩니다. 반경 비율이 설정되면 가장 작은 버블은 `MinimumValue`와 같게 되며, 가장 큰 버블은 `MaximumValue`와 같게 되고 나머지 모든 버블은 그에 따라 변경됩니다. 크기 비율은 선형 또는 로그여도 상관 없습니다. 반경 비율이 설정되지 않은 경우, 각 버블의 크기는 `RadiusMemberPath` 속성에 매핑된 데이터 열의 값과 동일하게 됩니다
 
-### Bubble Fill Scale
+### 버블 채우기 비율
 
-The `FillScale` is an optional feature which determines the color pattern within a single `BubbleSeries`. This series supports the following fill scales:
+`FillScale`은 단일 `BubbleSeries` 내의 컬러 패턴을 결정하는 옵션 기능입니다. 이 시리즈는 다음과 같은 채우기 비율을 지원합니다:
 
--   `ValueBrushScale` uses a set of values from data column mapped to `FillMemberPath` property to determine an interpolated brush for bubbles. Also, it can have user-specified `MinimumValue` and `MaximumValue`. When a range is set on this scale, bubbles with values that fall outside the range do not get a brush from the `Brushes` collection and are not colored.
--   `CustomPaletteBrushScale` uses the index of a bubble marker to select a brush from the `Brushes` collection. When the `BrushSelectionMode` property is set to the `Select` enumerable value, the bubbles are colored sequentially and it is set to `Interpolate`, the brush is interpolated based on the bubble’s index and the number of brushes in the collection.
+-   `ValueBrushScale`은 `FillMemberPath` 속성에 매핑된 데이터 열의 값 집합을 사용하여 버블의 보간 브러시를 결정합니다. 또한, 사용자가 지정한 `MinimumValue` 및 `MaximumValue`를 가질 수 있습니다. 이 비율로 범위를 설정하면 범위 밖에 있는 값을 가진 버블은 `Brushes` 컬렉션으로부터 브러시를 얻지 못하고 컬러도 없습니다.
+-   `CustomPaletteBrushScale`은 버블 마커의 인덱스를 사용하여 `Brushes` 컬렉션으로부터 브러시를 선택합니다. `BrushSelectionMode` 속성을 `Select` enumerable 값으로 설정하면 버블이 순차적으로 색칠되어 `Interpolate`로 설정되고, 브러시는 버블의 인덱스와 컬렉션의 브러시 수에 따라 보간됩니다.
 
-### Additional Resources
+### 추가 리소스
 
--   [Axis Types](datachart_axis_types.md)
--   [Axis Sharing](datachart_axis_sharing.md)
--   [Chart Legend](datachart_chart_legends.md)
--   [Series Markers](datachart_series_markers.md)
--   [Series Tooltips](datachart_series_tooltips.md)
--   [Series Trendlines](datachart_series_trendlines.md)
--   [Series Types](datachart_series_types.md)
+-   [축 유형](datachart_axis_types.md)
+-   [축 공유](datachart_axis_sharing.md)
+-   [차트 범례](datachart_chart_legends.md)
+-   [시리즈 마커](datachart_series_markers.md)
+-   [시리즈 도구 설명](datachart_series_tooltips.md)
+-   [시리즈 추세선](datachart_series_trendlines.md)
+-   [시리즈 유형](datachart_series_types.md)

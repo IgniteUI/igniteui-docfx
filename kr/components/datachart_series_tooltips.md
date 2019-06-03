@@ -1,27 +1,27 @@
 ---
-title: Data Chart Component - Native Angular | Ignite UI for Angular
+제목: 데이터 차트 구성 요소 - 네이티브 Angular | Ignite UI for Angular
 _description: The Ignite UI for Angular Data Chart is a charting component that provides modular design of axis, markers, series, legend, and annotation layers. With this chart, you can create multiple instances of these visual elements in the same chart plot area in order to create composite chart views.
 _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Chart Control, Angular Chart Example, Angular Chart Component, Angular Data Chart
 _language: kr
 ---
 
-## Tooltips
+## 도구 설명
 
-The `IgxDataChart` control has support for showing tooltips along with a couple of tooltip "layers." These tooltips help you to see contextual information about each of the series in your chart.
+`IgxDataChart` 제어는 2개의 도구 설명 "레이어"와 함께 도구 설명을 표시할 수 있습니다. 이 도구 설명은 차트의 각 시리즈에 대한 맥락 정보를 확인할 수 있습니다.
 
-### Demo
+### 데모
 
 <div class="sample-container" style="height: 500px">
     <iframe id="data-chart-series-tooltips-iframe" src='{environment:demosBaseUrl}/charts/data-chart-series-tooltips' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-series-tooltips-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-series-tooltips-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기
     </button>
 </div>
 
 <div class="divider--half"></div>
 
-In order to use tooltips or tooltip layers in the `IgxDataChart` control, you need to import and register the interactivity module. This can be done by using the following code:
+`IgxDataChart` 제어에서 도구 설명 또는 도구 설명 레이어를 사용하려면 대화형 모듈을 가져와서 등록해야 합니다. 다음 코드를 사용하여 이 작업을 실행할 수 있습니다:
 
 ```typescript
 import { IgxDataChartInteractivityModule } from "igniteui-angular-charts/ES5/igx-data-chart-interactivity-module";
@@ -29,11 +29,11 @@ import { IgxDataChartInteractivityModule } from "igniteui-angular-charts/ES5/igx
 IgxDataChartInteractivityModule.register();
 ```
 
-### Default Tooltips
+### 기본 도구 설명
 
-The `IgxDataChart` control provides default tooltips for each type of series. The default tooltips display all of the information relevant to the particular series item that is being hovered, including the series title, data values, axis values, etc. They are also styled to match the series' appearance.
+`IgxDataChart` 제어는 각 시리즈 유형에 기본 도구 설명을 제공합니다. 기본 도구 설명에는 시리즈 제목, 데이터 값, 축 값 등 호버된 특정 시리즈 항목과 관련된 모든 정보가 표시되며 또한, 시리즈 외관에 맞게 스타일 설정되어 있습니다.
 
-The following code snippet demonstrates how to enable the default tooltips in the `IgxDataChart` control:
+다음 코드 조각은 `IgxDataChart` 제어에서 기본 도구 설명을 사용하는 방법을 보여 줍니다:
 
 ```html
 <igx-data-chart #chart
@@ -54,11 +54,11 @@ The following code snippet demonstrates how to enable the default tooltips in th
 </igx-data-chart>
 ```
 
-### Category Tooltip Layer
+### 카테고리 도구 설명 레이어
 
-The CategoryToolTipLayer displays grouped tooltips for the series on the `IgxDataChart` control using a category axis. The grouped tooltips currently appear at the top of the `IgxDataChart` control.
+CategoryToolTipLayer는 카테고리 축을 사용하는 `IgxDataChart` 제어 시리즈용의 그룹화된 도구 설명을 표시합니다. 그룹화된 도구 설명은 현재 `IgxDataChart` 제어 상단에 표시됩니다.
 
-The following code snippet demonstrates how to add a category tooltip layer to the `IgxDataChart` control:
+다음 코드 조각은 카테고리 도구 설명 레이어를 `IgxDataChart` 제어에 추가하는 방법을 보여 줍니다:
 
 ```html
 <igx-data-chart #chart
@@ -81,11 +81,11 @@ The following code snippet demonstrates how to add a category tooltip layer to t
 </igx-data-chart>
 ```
 
-### Item Tooltip Layer
+### 항목 도구 설명 레이어
 
-The item tooltip layer displays tooltips for all the series on the `IgxDataChart` control individually when a pointer hovers over that particular series. The tooltip style is inherited from the series that is displaying the tooltip.
+항목 도구 설명 레이어는 포인터가 특정 시리즈 위로 이동할 경우에 `IgxDataChart` 제어의 모든 시리즈에 대한 도구 설명을 개별적으로 표시합니다. 도구 설명 스타일은 도구 설명을 표시하는 시리즈에서 상속됩니다.
 
-The following code snippet demonstrates how to add an item tooltip layer to the `IgxDataChart` control:
+다음 코드 조각은 항목 도구 설명 레이어를 `IgxDataChart` 제어에 추가하는 방법을 보여 줍니다:
 
 ```html
 <igx-data-chart #chart
