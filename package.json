@@ -13,9 +13,9 @@
   "author": "Infragistics",
   "license": "ISC",
   "dependencies": {
-    "browser-sync": "^2.26.5",
+    "browser-sync": "2.18.13",
     "del": "^3.0.0",
-    "gulp": "^4.0.2",
+    "gulp": "^3.9.1",
     "gulp-autoprefixer": "^5.0.0",
     "gulp-file-include": "^2.0.1",
     "gulp-sass": "^4.0.1",
