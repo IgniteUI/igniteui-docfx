@@ -77,6 +77,17 @@ _language: kr
 * <kbd>왼쪽 화살표</kbd> 및 <kbd>오른쪽 화살표</kbd> 현재 행 내에서 왼쪽/오른쪽의 인접 셀로 이동합니다(정의된 열 블록에 영향을 받지 않음).
 * <kbd>위 화살표</kbd> 및 <kbd>아래 화살표</kbd> 공통 테두리를 공유하는 위/아래 셀로 이동합니다. 여러 셀과 테두리를 공유하는 경우, 가장 왼쪽이 우선합니다.
 
+### Layout Configurator
+
+Sometimes when configuring a column layout it might be a challenge to calculate and set the proper `colStart` and `colEnd` or `rowStart` and `rowEnd`. Especially when there are a lot of columns in a single layout. That is why we have created the following small configurator, so you can easily do that and have a similar preview of how it would look inside the igxGrid when applied.
+
+By default we have set the same columns as our previous sample earlier. You can drag and drop new columns to replace, resize already applied column left/right/down or add your own completely different columns and layouts.
+
+<div class="sample-container loading" style="height:500px">
+    <iframe id="grid-multi-row-layout-configuration-iframe" src='{environment:demosBaseUrl}/grid/grid-multi-row-layout-configuration' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+
 ### API 참조
 <div class="divider--half"></div>
 

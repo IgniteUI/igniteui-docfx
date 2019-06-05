@@ -74,6 +74,17 @@ Multi Row Layout のレンダリング方法は全く異なるため、列固定
 * <kbd>Arrow left</kbd> and <kbd>Arrow right</kbd> は、現在行内の左右に隣接するセルに移動します (定義されている列ブロックの影響を受けません)。
 * <kbd>上矢印</kbd> と <kbd>下矢印</kbd> は、共通の境界を共有する上下のセルに移動します。複数のセルと境界を共有する場合は、最も左にあるものが優先されます。
 
+### Layout Configurator
+
+Sometimes when configuring a column layout it might be a challenge to calculate and set the proper `colStart` and `colEnd` or `rowStart` and `rowEnd`. Especially when there are a lot of columns in a single layout. That is why we have created the following small configurator, so you can easily do that and have a similar preview of how it would look inside the igxGrid when applied.
+
+By default we have set the same columns as our previous sample earlier. You can drag and drop new columns to replace, resize already applied column left/right/down or add your own completely different columns and layouts.
+
+<div class="sample-container loading" style="height:500px">
+    <iframe id="grid-multi-row-layout-configuration-iframe" src='{environment:demosBaseUrl}/grid/grid-multi-row-layout-configuration' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+
  ### API リファレンス	
 <div class="divider--half"></div>	
 

@@ -76,6 +76,17 @@ The following features are currently **not** supported:
 * <kbd>Arrow left</kbd> and <kbd>Arrow right</kbd> move to the adjacent cell on the left/right within the current row (unaffected by the column blocks that are defined).
 * <kbd>Arrow up</kbd> and <kbd>Arrow down</kbd> move to the cell above/below with which it shares common border. If it shares border with multiple cells the most left takes precedence.
 
+### Layout Configurator
+
+Sometimes when configuring a column layout it might be a challenge to calculate and set the proper `colStart` and `colEnd` or `rowStart` and `rowEnd`. Especially when there are a lot of columns in a single layout. That is why we have created the following small configurator, so you can easily do that and have a similar preview of how it would look inside the igxGrid when applied.
+
+By default we have set the same columns as our previous sample earlier. You can drag and drop new columns to replace, resize already applied column left/right/down or add your own completely different columns and layouts.
+
+<div class="sample-container loading" style="height:500px">
+    <iframe id="grid-multi-row-layout-configuration-iframe" src='{environment:demosBaseUrl}/grid/grid-multi-row-layout-configuration' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+
 ### API References
 <div class="divider--half"></div>
 
