@@ -1,21 +1,21 @@
 ---
-title: 금융 차트 - 차트 유형 탐색
-_description: Ignite UI for Angular 금융 차트 컴포넌트는 간단하고 직관적인 API를 사용하여 재무 데이터를 표시하도록 쉽게 구성되어 있으며, 사용자가 데이터를 바인딩하면 차트는 데이터를 시각화하고 해석할 수 있는 다양한 방법을 제공합니다.
-_keywords: Ignite UI for Angular, Angular, 네이티브 Angular 컴포넌트 세트, 네이티브 Angular 컨트롤, 네이티브 Angular 컴포넌트, 네이티브 Angular 컴포넌트 라이브러리, Angular 차트, Angular 차트 컨트롤, Angular 차트 예제, Angular 그리드 컴포넌트, Angular 차트 컴포넌트, Angular 금융 차트
+제목: 금융 차트 | 데이터 비주얼라이제이션 도구 | Ignite UI for Angular | Infragistics | 차트 유형
+_description: Use the financial chart component to visualize financial data using a simple API. View the demo, dependencies, usage and toolbar for more information. 
+_keywords: financial chart, Ignite UI for Angular, infragistics
 _language: kr
 ---
 
 ## 차트 유형 탐색
 
-`IgxFinancialChart` 컨트롤에서는 축은 축 기본 선, 눈금 표시, 제목 및 축 레이블의 모양을 설정하는 기본 속성을 제공합니다.
+`IgxFinancialChart` 제어에서는 축은 축 기본 선, 눈금 표시, 제목 및 축 라벨 모양을 설정하는 기본 속성을 제공합니다.
 
 ### 데모
 
-<div class="sample-container" style="height: 550px">
+<div class="sample-container" style="height: 500px">
     <iframe id="financial-chart-axis-types-iframe" src='{environment:demosBaseUrl}/charts/financial-chart-axis-types' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="financial-chart-axis-types-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="financial-chart-axis-types-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기
     </button>
 </div>
 
@@ -25,7 +25,7 @@ _language: kr
 
 ### 축 간격
 
-금융 차트 컨트롤에서 `yAxisInterval` 속성은 주 격자선 및 축 레이블이 축에 렌더링되는 빈도를 지정합니다. 마찬가지로 `yAxisMinorInterval` 속성은 축에 부 격자선이 렌더링되는 빈도를 지정합니다.
+금융 차트 제어에서 `yAxisInterval` 속성은 주 격자선 및 축 레이블이 축에 렌더링되는 빈도를 지정합니다. 마찬가지로 `yAxisMinorInterval` 속성은 축에 부 격자선이 렌더링되는 빈도를 지정합니다.
 
 다음 코드 조각은 Y축의 간격을 설정하는 방법을 보여줍니다.
 
@@ -36,10 +36,7 @@ _language: kr
     yAxisMajorStroke="Black"
     yAxisMinorStroke="Gray"
     yAxisMinorStrokeThickness="0.5"
-    yAxisMajorStrokeThickness="0.5"
-    width="850px"
-    height="600px"
-    [dataSource]="data">
+    yAxisMajorStrokeThickness="0.5" >
  </igx-financial-chart>
 ```
 
@@ -71,7 +68,7 @@ _language: kr
 
 ### 축 모드
 
-`IgxFinancialChart` 컨트롤을 사용하면 X축 및 Y축에 다른 모드를 설정할 수 있습니다.
+`IgxFinancialChart` 제어를 사용하면 X축 및 Y축에 다른 모드를 설정할 수 있습니다.
 X축의 경우 다음 모드 중에서 선택할 수 있습니다:
 
 -   Time - 이 모드는 데이터의 갭을 X축에 스페이스를 사용해 렌더링하는데 예를 들면, 주간이나 공휴일에 주식 거래가 없음을 나타냅니다.

@@ -1,44 +1,44 @@
 ---
-title: Data Chart Component - Native Angular | Ignite UI for Angular
+제목: 데이터 차트 구성 요소 - 네이티브 Angular | Ignite UI for Angular
 _description: The Ignite UI for Angular Data Chart is a charting component that provides modular design of axis, markers, series, legend, and annotation layers. With this chart, you can create multiple instances of these visual elements in the same chart plot area in order to create composite chart views.
 _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Chart Control, Angular Chart Example, Angular Chart Component, Angular Data Chart
 _language: kr
 ---
 
-## Markers
+## 마커
 
-In the `IgxDataChart` control's plot area, markers are visual elements displayed at location of data points. Markers help your end users immediately identify a data point’s even if its values fall between major or minor grid lines.
+`IgxDataChart` 제어의 플롯 영역에서 마커는 데이터 점 위치에 표시되는 시각적 요소입니다. 마커는 주 그리드 선과 보조 그리드 선 사이에 값이 있더라도 데이터 점을 즉시 식별할 수 있도록 최종 사용자를 지원합니다.
 
-### Demo
+### 데모
 
 <div class="sample-container" style="height: 300px">
     <iframe id="data-chart-series-markers-iframe" src='{environment:demosBaseUrl}/charts/data-chart-series-markers' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-series-markers-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-series-markers-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기
     </button>
 </div>
 
 <div class="divider--half"></div>
 
-### Supported Series
+### 지원되는 시리즈
 
-Most of chart series support markers and they are listed below:
+대부분의 차트 시리즈는 다음과 같은 마커를 지원합니다:
 
--   All [Category Series](datachart_series_types_category.md)
--   All [Polar Series](datachart_series_types_polar.md)
--   All [Radial Series](datachart_series_types_radial.md)
--   Some Scatter Series:
-    -   [Scatter Bubble Series](datachart_series_types_scatter_bubble.md)
-    -   [Scatter Point Series](datachart_series_types_scatter_marker.md)
-    -   [Scatter Line Series](datachart_series_types_scatter_marker.md)
-    -   [Scatter Spline Series](datachart_series_types_scatter_marker.md)
+-   모든 [카테고리 시리즈](datachart_series_types_category.md)
+-   모든 [폴라 시리즈](datachart_series_types_polar.md)
+-   모든 [레이디얼 시리즈](datachart_series_types_radial.md)
+-   분산 시리즈:
+    -   [분산 버블 시리즈](datachart_series_types_scatter_bubble.md)
+    -   [분산점 시리즈](datachart_series_types_scatter_marker.md)
+    -   [분산 라인 시리즈](datachart_series_types_scatter_marker.md)
+    -   [분산 스플라인 시리즈](datachart_series_types_scatter_marker.md)
 
-### Marker Properties
+### 마커 속성
 
-Above series support 12 shapes of markers that you can change using the `MarkerType` property.  Also, you can change fill and stroke using `MarkerBrush` and `MarkerOutline` properties respectively.
+위 시리즈는 `MarkerType` 속성을 사용하여 변경할 수 있는 12형태의 마커를 지원합니다.  또한, `MarkerBrush` 및 `MarkerOutline` 속성을 각각 사용하여 채우기 및 스트로크를 변경할 수 있습니다.
 
-This code snippet below demonstrate how to change shape and appearance of markers.
+아래의 코드 조각은 마커의 형태와 모양을 변경하는 방법을 보여 줍니다.
 
 ```html
 <igx-column-series name="series1"
@@ -72,8 +72,8 @@ This code snippet below demonstrate how to create custom  marker with values of 
     markerTemplate="customMarker" />
 ``` -->
 
-### Additional Resources
+### 추가 리소스
 
--   [Axis Types](datachart_axis_types.md)
--   [Series Types](datachart_series_types.md)
--   [Series Tooltips](datachart_series_tooltips.md)
+-   [축 유형](datachart_axis_types.md)
+-   [시리즈 유형](datachart_series_types.md)
+-   [시리즈 도구 설명](datachart_series_tooltips.md)

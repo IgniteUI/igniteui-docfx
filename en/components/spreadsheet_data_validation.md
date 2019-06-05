@@ -6,7 +6,7 @@ _keywords: Spreadsheet, Ignite UI for Angular, Infragistics
 
 ## Data Validation
 
-This topic explains to to configure and set the bulit-in data validation rules.
+This topic explains how to configure and set the bulit-in data validation rules.
 
 ### Demo
 
@@ -35,7 +35,7 @@ import { TwoConstraintDataValidationRule } from "igniteui-angular-excel/ES5/TwoC
 
 ### Usage
 
-The following snippt shows how you can setup the data validation rules
+The following snippet shows how you can setup the data validation rules
 
 ```typescript
 // this validation rule has only input message set

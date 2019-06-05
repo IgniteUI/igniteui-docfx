@@ -1,30 +1,31 @@
 ---
-title: Data Chart Component - Native Angular | Ignite UI for Angular
+제목: 데이터 차트 구성 요소 - 네이티브 Angular | Ignite UI for Angular
 _description: The Ignite UI for Angular Data Chart is a charting component that provides modular design of axis, markers, series, legend, and annotation layers. With this chart, you can create multiple instances of these visual elements in the same chart plot area in order to create composite chart views.
 _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Chart Control, Angular Chart Example, Angular Chart Component, Angular Data Chart
+_language: kr
 ---
 
-## Stacked Series
+## 스택 시리즈
 
-This topic explains the various types of stacked series in the `IgxDataChart` control. Stacked series are a group of the simplest and most common form of chart series that take data and render it as collection of data points stretched along a horizontal line (e.g. `IgxColumnSeriesComponent`) or vertical line (e.g. `BarSeries`).
+이 항목에서는 `IgxDataChart` 제어에서 다양한 유형의 스택 시리즈에 대해 설명합니다. 스택 시리즈는 데이터를 가져 와서 가로 라인(예: `IgxColumnSeriesComponent`) 또는 세로 라인(예: `BarSeries`)을 따라 늘어나는 데이터 점 컬렉션으로 렌더링하는 차트 시리즈의 가장 간단하고 일반적인 형태의 그룹입니다.
 
-### Demo
+### 데모
 
 <div class="sample-container" style="height: 500px">
     <iframe id="data-chart-overview-iframe" src='{environment:demosBaseUrl}/charts/data-chart-type-stacked-series' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-overview-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-overview-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기
     </button>
 </div>
 
 <div class="divider--half"></div>
 
-Each stacked series has its own `IgxSeriesComponent` collection in which you can place the `StackedFragmentSeries` elements. These fragments are what make up the actual rendering of the chart and are the elements that accept the `ValueMemberPath`.
+스택된 각 시리즈에는　`StackedFragmentSeries` 요소를 배치할 수 있는 자체 `IgxSeriesComponent` 컬렉션이 있습니다. 이러한 프라그먼트는 차트의 실제 렌더링을 구성하며 `ValueMemberPath`를 허용하는 요소입니다.
 
-### Types of Stacked Series
+### 스택 시리즈의 유형
 
-The following table lists all types of category series and their descriptions:
+다음 표에는 모든 유형의 카테고리 시리즈와 그 설명이 표시되어 있습니다.
 
 | Series Name                  | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -41,9 +42,9 @@ The following table lists all types of category series and their descriptions:
 | `Stacked100SplineAreaSeries` | This series is identical to the `StackedSplineAreaSeries` in all aspects except in their treatment of the values on y-axis. Instead of presenting a direct representation of the data, the `Stacked100SplineAreaSeries` presents the data in terms of percent of the sum of all values in a data point.                                                                                                                                                                                                 |
 | `Stacked100SplineSeries`     | This series is identical to the `StackedSplineSeries` in all aspects except in their treatment of the values on y-axis. Instead of presenting a direct representation of the data, the `Stacked100SplineSeries` presents the data in terms of percent of the sum of all values in a data point.                                                                                                                                                                                                         |
 
-### Required Axes
+### 필요한 축
 
-The `IgxDataChart` control provides various types of axes but only the following types of axes can be used with stacked series.
+`IgxDataChart` 제어는 다양한 유형의 축을 제공하지만 스택 시리즈에는 다음의 축 유형만 사용할 수 있습니다.
 
 | Series Type                  | YAxis Type                 | XAxis Type                                                                           |
 | ---------------------------- | -------------------------- | ------------------------------------------------------------------------------------ |
@@ -60,20 +61,18 @@ The `IgxDataChart` control provides various types of axes but only the following
 | `Stacked100SplineAreaSeries` | `IgxNumericYAxisComponent` | `IgxCategoryXAxisComponent`, `IgxOrdinalTimeXAxisComponent`, `IgxTimeXAxisComponent` |
 | `Stacked100SplineSeries`     | `IgxNumericYAxisComponent` | `IgxCategoryXAxisComponent`, `IgxOrdinalTimeXAxisComponent`, `IgxTimeXAxisComponent` |
 
-### Required Data
+### 필요한 데이터
 
-Stacked series have the following data requirements:
+스택 시리즈에는 다음과 같은 데이터 요구 사항이 있습니다:
 
--   The data source must be an array or a list of data items
--   The data source must contain at least one data item otherwise the chart will not render the stacked series.
--   All data items must contain at least one data column (string or date time) which should be mapped to the `Label` property of the category axis (e.g. `IgxCategoryXAxisComponent`)
--   All data items must contain at least one numeric data column which should be mapped using the `ValueMemberPath` property of the `StackedFragmentSeries` to be added to the stacked series' `IgxSeriesComponent` collection.
+-   데이터 소스는 배열 또는 데이터 항목 목록이어야 함
+-   데이터 소스에는 하나 이상의 데이터 항목이 포함되어야 하며 그렇지 않을 경우에는 차트가 스택 시리즈를 렌더링하지 않습니다.
+-   모든 데이터 항목에는 카테고리 축(예: `IgxCategoryXAxisComponent`)의 `Label` 속성에 매핑해야 하는 하나 이상의 데이터 열(문자열 또는 날짜 시간)이 포함되어 있어야 함
+-   모든 데이터 항목에는스택 시리즈의  `시리즈` 컬렉션에 추가할 `StackedFragmentSeries`의　`ValueMemberPath` 속성을 사용하여 매핑해야 하는 숫자 데이터 열이 적어도 하나 이상 포함되어야 합니다.
 
-### Required Modules
+### 필요한 모듈
 
-<!-- Angular -->
-
-In order to use stacked series, you need to import the following modules in your app during load:
+스택 시리즈에는 다음과 같은 모듈이 필요합니다:
 
 ```typescript
 // axis' modules:
@@ -113,9 +112,9 @@ import { IgxDataChartStackedModule } from "igniteui-angular-charts/ES5/igx-data-
 })
 ```
 
-### Code Example - Stacked Column Series
+### 코드 예제 - 스택 열 시리즈
 
-This code demonstrates how to create an instance of data chart with `StackedColumnSeries` and bind it to the data source. Note that you can also use above code to create other type of category series by replacing `StackedColumnSeries` with name of series that you want to render.
+이 코드는 `StackedColumnSeries`로 데이터 차트의 인스턴스를 생성하고 데이터 소스에 바인딩하는 방법을 보여줍니다. 또한, 위의 코드를 사용하여 `StackedColumnSeries`를 렌더링할 카테고리 시리즈의 이름으로 대체하여 다른 유형의 시리즈를 생성할 수도 있습니다.
 
 ```html
 <igx-data-chart #chart height="100%" width="100%" [dataSource]="data">
@@ -129,13 +128,13 @@ This code demonstrates how to create an instance of data chart with `StackedColu
     <igx-stacked-fragment-series valueMemberPath="Gas"></igx-stacked-fragment-series>
     <igx-stacked-fragment-series valueMemberPath="Oil"></igx-stacked-fragment-series>
   </igx-stacked-column-series>
-    
+
 </igx-data-chart>
 ```
 
-### Code Example - Stacked Bar Series
+### 코드 예제 - 스택 바 시리즈
 
- The `StackedBarSeries` is an exception to the rule that you can replace `StackedColumnSeries` with any series name because it requires different types of axes in that it uses a `CategoryYAxis` and `IgxNumericXAxisComponent`. This code demonstrates how to create an instance of the data chart with a `StackedBarSeries` and bind it to the data source.
+ `StackedBarSeries`는 `CategoryYAxis` 및 `IgxNumericXAxisComponent`를 사용한다는 점에서 다른 유형의 축을 필요로 하기 때문에 `StackedColumnSeries`를 다른 시리즈 이름으로 대체할 수 있다는 규칙에서 예외입니다. 이 코드는 `StackedBarSeries`로 데이터 차트의 인스턴스를 생성하고 데이터 소스에 바인딩하는 방법을 보여줍니다.
 
 ```html
 <igx-data-chart #chart height="100%" width="100%" [dataSource]="data">
@@ -149,6 +148,6 @@ This code demonstrates how to create an instance of data chart with `StackedColu
     <igx-stacked-fragment-series valueMemberPath="Gas"></igx-stacked-fragment-series>
     <igx-stacked-fragment-series valueMemberPath="Oil"></igx-stacked-fragment-series>
   </igx-stacked-bar-series>
-    
+
 </igx-data-chart>
 ```

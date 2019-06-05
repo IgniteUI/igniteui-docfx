@@ -1,25 +1,25 @@
----
-title: Hierarchical Grid Component
+﻿---
+title: 계층 그리드 컴포넌트
 _description: The Ignite UI for Angular Hierarchical Grid control features the fastest, touch-responsive data-rich hierarchical grid with popular features.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Hierarchical Grid component, Angular Hierarchical Grid control, Angular High Performance Hierarchical Grid, Hierarchical Grid
 _language: kr
 ---
-## Hierarchical Grid
-<p class="highlight">Display and manipulate hierarchically structured data with the Ignite UI for Angular Hierarchical Grid. Features include Filtering, Sorting, Paging, Templates, Column Pinning, Column Moving and Column Hiding, as well as Updating the visualized data. The Hierarchical Grid builds upon the Data Grid Component and extends its functionality by allowing the users to expand or collapse the rows of the parent grid, revealing the according child grid, when more detailed information is needed.</p>
+## 계층 그리드
+<p class="highlight">Ignite UI for Angular Hierarchical Grid는 계층으로 구조화된 데이터를 표시하고 편집합니다. 필터링, 정렬, 페이징, 템플릿, 열 고정, 열 이동 및 열 숨기기, 시각화된 데이터 업데이트 등의 기능이 있습니다. 계층 그리드는 데이터 그리드 컴포넌트를 기반으로 구축되며 사용자가 상위 그리드의 행을 확장하거나 축소하여 더 자세한 정보가 필요할 때 하위 그리드를 표시함으로써 기능을 확장합니다.</p>
 
-### Demo
+### 데모
 
 <div class="sample-container loading" style="height:520px">
     <iframe id="grid-sample-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-resizing' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기</button>
 </div>
 <div class="divider--half"></div>
 
-### Dependencies
-The Hierarchical Grid is exported as an `NgModule` - all you need to do in your application is import the _IgxHierarchicalGridModule_ inside your `AppModule`.
+### 의존성
+계층 그리드는 `NgModule`로 내보내기 되므로 애플리케이션에서 `AppModule` 안에 IgxHierarchicalGridModule을 가져와야 합니다.
 
 ```typescript
 // app.module.ts
@@ -36,21 +36,21 @@ import { IgxHierarchicalGridModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-We can obtain a reference to the Hierarchical Grid in TypeScript the following way:
+다음 방법으로 TypeScript의 계층 그리드에 대한 참조를 얻을 수 있습니다:
 
 ```typescript
 @ViewChild('hgrid1', { read: IgxHierarchicalGridComponent })
 public hgrid1: IgxHierarchicalGridComponent;
 ```
 
-### Data Binding
+### 데이터 바인딩
 
-**igx-hierarchical-grid** derives from **igx-grid** and shares most of its functionality. The main difference is that it allows multiple levels of hierarchy to be defined. They are configured through a separate tag within the definition of **igx-hierarchical-grid**, called **igx-row-island**. The **igx-row-island** component defines the configuration for each child grid for the particular level. Multiple row islands per level are also supported.
-The Hierarchical Grid supports two ways of binding to data: 
+**igx-hierarchical-grid**는 **igx-grid**에서 파생되며 대부분의 기능을 공유합니다. 주된 차이점은 여러 수준의 계층을 정의할 수 있다는 것입니다. **igx-row-island**라고 하는 **igx-hierarchical-grid**의 정의 내에서 별도의 태그를 통해 구성됩니다. **igx-row-island** 컴포넌트는 특정 수준의 각 하위 그리드에 대한 구성을 정의합니다. 수준별로 여러 행 아일랜드도 지원합니다.
+계층 그리드는 2가지 방법으로 데이터에 바인딩할 수 있습니다. 
 
-#### 1. Using hierarchical data
+#### 1. 계층 데이터 사용
 
-If the application loads the whole hierarchical data as an array of objects referencing children arrays of objects, then the Hierarchical Grid can be configured to read it and bind to it automatically. Here is an example of a properly structured hierarchical data source:
+애플리케이션이 계층 데이터 전체를 객체의 하위 배열을 참조하는 객체 배열로 로딩하는 경우, 계층 그리드를 설정하여 읽고 이를 자동으로 바인딩하도록 구성할 수 있습니다. 다음은 적절히 구조화된 계층 데이터 소스의 예입니다:
 
 ```javascript
 export const singers = [{
@@ -82,7 +82,7 @@ export const singers = [{
     }]
 }];
 ```
-Each **igx-row-island** should specify the key of the property that holds the children data.
+각 **igx-row-island**는 하위 데이터를 보유하는 속성의 키를 지정해야 합니다.
 
 ```html
 <igx-hierarchical-grid #hierarchicalGrid [data]="singers" [autoGenerate]="true">
@@ -95,11 +95,11 @@ Each **igx-row-island** should specify the key of the property that holds the ch
 </igx-hierarchical-grid>
 ```
 > [!NOTE]
-> Note that instead of `data` the user configures only the `key` that the **igx-hierarchical-grid** needs to read to set the data automatically.
+> `Data` 대신에 사용자는 데이터를 자동으로 설정하기 위해 **igx-hierarchical-grid**가 로딩해야 하는 `key`만 구성합니다.
 
-#### 2. Using Load-On-Demand
+#### 2. 로드 온디맨드 사용
 
-Most applications are designed to load as little data as possible initially, which results in faster load times. In such cases **igx-hierarchical-grid** may be configured to allow user-created services to feed it with data on demand. The following configuration uses a special `@Output` and a newly introduced loading-in-progress template to provide a fully-featured load-on-demand.
+대부분의 애플리케이션은 초기에 가능한 적은 데이터를 로딩하도록 설계되어 있어 로딩 시간이 빨라집니다. 이러한 경우, **igx-hierarchical-grid**는 사용자가 생성한 서비스가 데이터 온디맨드를 제공할 수 있도록 구성할 수 있습니다. 다음 구성은 특별한 `@Output` 및 새로운 loading-in-progress 템플릿을 사용하여 로딩 온디맨드의 모든 기능을 제공합니다.
 
 ```html
 <!-- hierarchicalGridSample.component.html -->
@@ -181,9 +181,9 @@ export class RemoteLoDService {
     }
 }
 ```
-### Features
+### 기능
 
-The grid features could be enabled and configured through the **igx-row-island** markup - they get applied for every grid that is created for it. Changing options at runtime through the row island instance changes them for each of the grids it has spawned. 
+그리드 기능은 **igx-row-island** 마크업을 통해 활성화 및 구성할 수 있으며 이 마크업은 생성된 모든 그리드에 적용됩니다. 행 아일랜드 인스턴스를 통해 런타임에 옵션을 변경하면 생성된 각 그리드의 옵션이 변경됩니다. 
 
 ```html
 <igx-hierarchical-grid [data]="localData" [displayDensity]="density" [autoGenerate]="false"
@@ -203,70 +203,100 @@ The grid features could be enabled and configured through the **igx-row-island**
 </igx-hierarchical-grid>
 ```
 
-The following grid features work on a per grid level, which means that each grid instance manages them independently of the rest of the grids:
+다음의 그리드 기능은 그리드 수준별로 작동하며 각 그리드 인스턴스는 나머지 그리드와 독립적으로 관리됩니다.
 
-- Sorting
-- Filtering
-- Paging
-- Multi Column Headers
-- Hiding
-- Pinning
-- Moving
-- Summaries
-- Search
+- 정렬
+- 필터링
+- 페이징
+- 복수 열 헤더
+- 숨기기
+- 핀 고정
+- 이동
+- 요약
+- 검색
 
-The Selection and Navigation features work globally for the whole **igx-hierarchical-grid** 
+선택 및 탐색 기능은 **igx-hierarchical-grid** 전체에서 글로벌하게 작동함 
 
-- Selection 
-    Selection does not allow selected cells to be present for two different child grids at once.
-- Navigation
-    When navigating up/down, if next/prev element is a child grid, navigation will continue in the related child grid, marking the related cell as selected and focused. If the child cell is outside the current visible view port it is scrolled into view so that selected cell is always visible.
+- 선택 
+    선택한 셀이 2개의 다른 하위 그리드로 동시에 표시할 수 없습니다.
+- 탐색
+    up/down으로 탐색할 때 next/prev 요소가 하위 그리드인 경우, 관련된 하위 그리드에서 탐색이 계속 진행되어 관련 셀이 선택되고 포커스된 것으로 표시됩니다. 하위 셀이 현재 표시된 뷰 포트 이외에 있는 경우, 뷰로 스크롤되어 선택한 셀이 항상 표시됩니다.
 
-#### "Collapse All" Button
+### 키보드 탐색
+키보드 탐색은 기본적으로 계층 그리드에서 지원됩니다. 셀에 초점을 맞추고 다음 키 조합 중 하나를 누른 경우 설명된 동작이 실행됩니다:
 
-The Hierarchical Grid allows the users to conveniently collapse all its currently expanded rows by pressing the "Collapse All" button at its top left corner. Additionally, every child grid which contains other grids and is a Hierarchical Grid itself, also has such a button - this way the user is able to collapse only a given grid in the hierarchy: 
+ - `위 화살표` - 한 셀 위로 이동, 필요에 따라 그리드 위 계층으로 이동(줄 바꿈 없음);
+ - `아래 화살표` - 한 셀 아래로 이동, 필요에 따라 그리드 아래 계층으로 이동(줄 바꿈 없음);
+ - `왼쪽 화살표` - 한 셀 왼쪽으로 이동(라인 간에 줄 바꿈 없음);
+ - `오른쪽 화살표` - 한 셀 오른쪽으로 이동(라인 간에 줄 바꿈 없음);
+ - `Ctrl + 위 화살표` - 현재 열의 첫 번째 셀로 이동;
+ - `Ctrl + 아래 화살표` - 현재 열의 마지막 셀로 이동;
+ - `Ctrl + 왼쪽 화살표` -  행의 가장 왼쪽 셀로 이동;
+ - `Home` - 행의 가장 왼쪽 셀로 이동;
+ - `Ctrl + Home` - 그리드의 왼쪽 상단 셀로 이동;
+ - `Ctrl + 오른쪽 화살표` -  행의 가장 오른쪽 셀로 이동;
+ - `End` - 행의 가장 오른쪽 셀로 이동;
+ - `Ctrl + End` - 그리드의 오른쪽 하단 셀로 이동;
+ - `Page Up` - 한 페이지(뷰 포트) 위로 스크롤;
+ - `Page Down` -  한 페이지(뷰 포트) 아래로 스크롤;
+ - `Enter` - 편집 모드로 들어감;
+ - `F2` - 편집 모드로 들어감;
+ - `Esc` - 편집 모드를 종료함;
+ - `Tab` - 행의 다음 셀로 포커스를 순차적으로 이동하고 마지막 셀에 도달하면 다음 행으로 이동. 확장한 행의 마지막 셀에 포커스가 있는 경우에는 첫 번째 하위로 포커스를 이동하며, 셀이 편집 모드인 경우에는 행에서 다음 편집 가능한 셀로 포커스가 이동하며, 편집 가능한 가장 오른쪽 셀에서 `CANCEL` 및 `DONE` 버튼으로 이동하고, `DONE` 버튼으로 현재 편집된 행 안의 편집 가능한 가장 왼쪽 셀로 이동합니다;
+ - `Shift + Tab` - 순차적으로 행의 이전 셀로 포커스를 이동하고, 첫 번째 셀에 도달하면 포커스를 이전 행으로 이동합니다. 확장한 하위 그리드의 첫 번째 셀에 포커스가 있는 경우에는 상위로 포커스를 이동하며, 셀이 편집 모드인 경우에는 행에서 다음 편집 가능한 셀로 포커스가 이동하며, 편집 가능한 가장 오른쪽 셀에서 `CANCEL` 및 `DONE` 버튼으로 이동하고, `DONE` 버튼으로 현재 편집된 행 안의 편집 가능한 가장 왼쪽 셀로 이동합니다;
+ - `Space` -  행을 선택할 수 있는 경우에는 스페이스 키를 누르면 행 선택을 트리거합니다;
+ - 상위 그리드 행에서 `Alt + Arrow Left` - 행이 아직 축소되지 않은 경우에는 상위 행 콘텐츠를 축소합니다;
+ - 상위 그리드 행에서 `Alt + 위 화살표` - 행이 아직 축소되지 않은 경우에는 상위 행 콘텐츠를 축소합니다;
+ - 상위 그리드 행에서 `Alt + 오른쪽 화살표` - 행이 아직 확장되지 않은 경우에는 상위 행 콘텐츠를 확장합니다;
+ - 상위 그리드 행에서 `Alt + 아래 화살표` - 행이 아직 확장되지 않은 경우에는 상위 행 콘텐츠를 확장합니다;
+ - 마우스 `휠` -  포커스 요소를 흐리게 합니다;
 
-![](../../images/unfold_less_icon_screenshot.jpg)
 
-### Known Limitations
+#### "모두 축소" 버튼
 
-|Limitation|Description|
+계층 그리드는 사용자가 왼쪽 상단 모서리에서 "모두 축소" 버튼을 눌러 현재 확장된 모든 행을 편리하게 축소할 수 있습니다. 또한, 다른 그리드를 포함하는 모든 하위 그리드와 계층 그리드에는 이러한 버튼이 있으며, 계층의 특정 그리드만 축소할 수 있습니다. 
+
+<img class="responsive-img" src="../../images/unfold_less_icon_screenshot.jpg" srcset="../../images/unfold_less_icon_screenshoto@2x.jpg 2x" />
+
+### 알려진 제한 사항
+
+|제한 사항|설명|
 |--- |--- |
-|Group By|Group By feature is not supported by the hierarchical grid.|
-|Export to Excel|Export to Excel is currently not supported by the Hierarchical Grid, but it would be available in future versions of Ignite UI for Angular.|
+|Group By|Group By 기능은 계층 적 그리드에서 지원되지 않습니다.|
+|Export to Excel|Export to Excel 는 현재 계층 적 그리드에서 지원되지 않지만 Ignite UI for Angular의 차후 버전에서 사용할 수 있습니다.|
 
-### CRUD operations
+### CRUD 조작
 
 > [!NOTE]
-> An important difference from the flat Data Grid is that each instance for a given row island has the same transaction service instance and accumulates the same transaction log. In order to enable the CRUD functionality users should inject the `IgxHierarchicalTransactionServiceFactory`.
+> 플랫 데이터 그리드와 특정 행 아일랜드의 각 인스턴스과의 중요한 차이점은 동일한 트랜잭션 서비스 인스턴스를 가지며 동일한 트랜잭션 로그를 누적한다는 것입니다. CRUD 기능을 활성화하려면 `IgxHierarchicalTransactionServiceFactory`를 인젝트해야 합니다.
 
-Calling CRUD API methods should still be done through each separate grid instance.
+CRUD API 메소드 호출은 각 개별 그리드 인스턴스를 통해 실행해야 합니다.
 
-## API References
+## API 참조
 
 * [IgxHierarchicalGridComponent]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html)
 * [IgxRowIslandComponent]({environment:angularApiUrl}/classes/igxrowislandcomponent.html)
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
-* [IgxGridComponent Styles]({environment:sassApiUrl}/#function-igx-grid-theme)
+* [IgxGridComponent 스타일]({environment:sassApiUrl}/#function-igx-grid-theme)
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 * [IgxGridRowComponent]({environment:angularApiUrl}/classes/igxgridrowcomponent.html)
 * [IgxGridCellComponent]({environment:angularApiUrl}/classes/igxgridcellcomponent.html)
 
-### Additional Resources
+### 추가 리소스
 <div class="divider--half"></div>
 
-* [Virtualization and Performance](virtualization.md)
-* [Paging](paging.md)
-* [Filtering](filtering.md)
-* [Sorting](sorting.md)
-* [Summaries](summaries.md)
-* [Column Moving](column_moving.md)
-* [Column Pinning](column_pinning.md)
-* [Column Resizing](column_resizing.md)
-* [Selection](selection.md)
+* [가상화 및 성능](virtualization.md)
+* [페이징](paging.md)
+* [필터링](filtering.md)
+* [정렬](sorting.md)
+* [요약](summaries.md)
+* [열 이동](column_moving.md)
+* [열 핀 고정](column_pinning.md)
+* [열 크기 조정](column_resizing.md)
+* [선택](selection.md)
 
 <div class="divider--half"></div>
-Our community is active and always welcoming to new ideas.
+커뮤니티는 활동적이고 새로운 아이디어를 항상 환영합니다.
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **포럼**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
 * [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

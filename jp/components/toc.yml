@@ -37,7 +37,7 @@
     - name: フィルタリング
       href: grid/filtering.md
       new: false
-    - name: Excel スタイル フィルタリング
+    - name: Excel フィルタリング
       href: grid/excel_style_filtering.md
       new: true
     - name: 並べ替え
@@ -85,7 +85,7 @@
     - name: 条件付きセルのスタイル設定
       href: grid/conditional_cell_styling.md
       new: false
-    - name: キーボード ナビゲーション
+    - name: キーボードナビゲーション
       href: grid/keyboard_navigation.md
       new: true
     - name: 複数行レイアウト
@@ -119,7 +119,7 @@
     - name: フィルタリング
       href: treegrid/filtering.md
       new: false
-    - name: Excel スタイル フィルタリング
+    - name: Excel フィルタリング
       href: treegrid/excel_style_filtering.md
       new: true
     - name: 並べ替え
@@ -164,7 +164,7 @@
     - name: 集計 
       href: treegrid/aggregations.md
       new: false
-    - name: キーボード ナビゲーション
+    - name: キーボードナビゲーション
       href: treegrid/keyboard_navigation.md
       new: true
 - name: Hierarchical Grid
@@ -195,7 +195,7 @@
     - name: フィルタリング
       href: hierarchicalgrid/filtering.md
       new: true
-    - name: Excel スタイル フィルタリング
+    - name: Excel フィルタリング
       href: hierarchicalgrid/excel_style_filtering.md
       new: true
     - name: 並べ替え
@@ -235,7 +235,7 @@
     # - name: 条件付きセルのスタイル設定
     #   href: hierarchicalgrid/conditional_cell_styling.md
     #   new: true
-    - name: キーボード ナビゲーション
+    - name: キーボードナビゲーション
       href: hierarchicalgrid/keyboard_navigation.md
       new: true
 - name: List View
@@ -247,7 +247,7 @@
     - name: 機能
       href: combo_features.md
       new: false
-    - name: リモート バインディング
+    - name: リモートバインディング
       href: combo_remote.md
       new: true
     - name: テンプレート
@@ -263,7 +263,7 @@
      - name: アクティブ化
        href: spreadsheet_activation.md
        new: true
-     - name: クリップボードでの作業
+     - name: クリップボード
        href: spreadsheet_clipboard.md
        new: true
      - name: 条件付き書式
@@ -337,7 +337,7 @@
       #  - name: Requirements
       #    href: datachart_series_requirements.md
       #    new: true
-        - name: カテゴリ シリーズ 
+        - name: カテゴリシリーズ 
           href: datachart_series_types_category.md
           new: true
         - name: ファイナンシャル シリーズ 
@@ -346,7 +346,7 @@
         - name: 極座標シリーズ 
           href: datachart_series_types_polar.md
           new: true
-        - name: ラジアル シリーズ 
+        - name: ラジアルシリーズ 
           href: datachart_series_types_radial.md
           new: true
         - name: エリア シリーズ 
@@ -394,7 +394,7 @@
     #- name: Synchronization
     #  href: datachart_chart_synchronization.md
     #  new: true
-    - name: タイトルとサブタイトル
+    - name: タイトル/サブタイトル
       href: datachart_chart_titles.md
       new: true
     - name: ツールチップ
@@ -569,7 +569,7 @@
   href: linear_progress.md
 - name: Circular Progress
   href: circular_progress.md
-- name: 仮想 For ディレクティブ
+- name: 仮想スクロール ディレクティブ
   href: for_of.md
 - name: Chip
   href: chip.md
@@ -594,10 +594,10 @@
   href: overlay_main.md
   new: true
   items:
-  - name: ポジション ストラテジ
+  - name: ポジションストラテジ
     href: overlay_position.md
     new: true
-  - name: スクロール ストラテジ
+  - name: スクロールストラテジ
     href: overlay_scroll.md
     new: false
 - name: Drag and Drop
