@@ -139,7 +139,7 @@ export class TreeGridBatchEditingSampleComponent {
 
 <div class="divider--half"></div>
 
-* [Data Grid](grid.md)
+* [Data Grid](../grid/grid.md)
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
