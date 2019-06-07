@@ -6,12 +6,12 @@ _keywords: financial chart, Ignite UI for Angular, infragistics
 
 ## Financial Chart Panes
 
-The `IgxFinancialChart` control has multiple panes to display financial data.
+The Angular financial chart component has multiple panes to display financial data.
 
 ### Demo
 
-<div class="sample-container" style="height: 500px">
-    <iframe id="financial-chart-panes-iframe" src='{environment:demosBaseUrl}/charts/financial-chart-panes' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 500px">
+    <iframe id="financial-chart-panes-iframe" src='{environment:demosBaseUrl}/charts/financial-chart-panes' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="financial-chart-panes-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
@@ -20,7 +20,7 @@ The `IgxFinancialChart` control has multiple panes to display financial data.
 
 <div class="divider--half"></div>
 
-The following panes are available in the Financial Chart control:
+The following panes are available in the Angular financial chart component:
 
 -   Price Pane - Renders prices using Line, Candlestick, Bar (OHLC), trendlines and financial overlays.
 -   Indicator Pane - Renders all the financial indicators in a separate chart while the `BollingerBands` and `PriceChannel` overlays are rendered in the Price Pane because they share the same values range on Y-Axis.
