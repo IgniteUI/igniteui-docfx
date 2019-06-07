@@ -1,17 +1,17 @@
 ---
-title: Data Chart Component - Native Angular | Ignite UI for Angular
-_description: The Ignite UI for Angular Data Chart is a charting component that provides modular design of axis, markers, series, legend, and annotation layers. With this chart, you can create multiple instances of these visual elements in the same chart plot area in order to create composite chart views.
-_keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Chart Control, Angular Chart Example, Angular Chart Component, Angular Data Chart
+title: Data Chart | Visualization Tools | Ignite UI for Angular | Infragistics | Title and Subtitle
+_description: Create a data chart that displays multiple instances of visual elements in the same plot area in order to create composite chart views.
+_keywords: data chart, Ignite UI for Angular, Infragistics
 ---
 
 ## Title and Subtitle
 
-The `Title` and `Subtitle` feature of the `IgxDataChart` control allows you to add information to the top section of the chart. When adding a title or subtitle to the chart, the content of the chart automatically resizes allowing for the title and subtitle information that you provide.
+The `Title` and `Subtitle` feature of the Angular data chart component allows you to add information to the top section of the data chart. When adding a title or subtitle to the data chart, the content of the data chart automatically resizes allowing for the title and subtitle information that you provide.
 
 ### Demo
 
-<div class="sample-container" style="height: 500px">
-    <iframe id="data-chart-titles-iframe" src='{environment:demosBaseUrl}/charts/data-chart-titles' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 500px">
+    <iframe id="data-chart-titles-iframe" src='{environment:demosBaseUrl}/charts/data-chart-titles' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-titles-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
@@ -20,7 +20,7 @@ The `Title` and `Subtitle` feature of the `IgxDataChart` control allows you to a
 
 <div class="divider--half"></div>
 
-There are properties provided that allow you to style the text color, style, and margins of the titles and subtitles of the chart. The following code-snippet demonstrates how you can set and customize the titles in the chart:
+There are properties provided that allow you to style the text color, style, and margins of the titles and subtitles of the data chart. The following code-snippet demonstrates how you can set and customize the titles in the Angular data chart component:
 
 ```html
 <igx-data-chart [dataSource]="data"
