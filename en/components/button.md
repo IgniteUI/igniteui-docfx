@@ -136,7 +136,8 @@ Icon results:
 
 We can allow the user to choose the display density of the [`igxButton`]({environment:angularApiUrl}/classes/igxbuttondirective.html) by using its [`displayDensity`]({environment:angularApiUrl}/classes/igxbuttondirective.html#displaydensity) input. We will do this by importing the `IgxButtonGroupModule` and using the [**IgxButtonGroup**](buttonGroup.md) to display all density values. This way whenever one gets selected, we will update our own **density** property that is bound to the [`displayDensity`]({environment:angularApiUrl}/classes/igxbuttondirective.html#displaydensity) of the button.
 
-> [!NOTE] The `icon` type button does not introduce visual changes for different display density values.
+> [!NOTE] 
+> The `icon` type button does not introduce visual changes for different display density values.
 
 ```typescript
 // app.module.ts
