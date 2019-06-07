@@ -169,23 +169,11 @@ If you want the buttons to be part of the keyboard navigation, then each on of t
 > Currently the Batch Editing functionality is planed for the upcoming releases.
 
 
-### API References
-
-* [`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditable)
-* [`field`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#field)
-* [`editable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable)
-* [`endRowEdit`]({environment:angularApiUrl}/classes/igxgridcomponent.html#endrowedit)
-* [`primaryKey`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#primarykey)
-* [`IgxTreeGridModule`]({environment:angularApiUrl}/classes/igxtreegridmodule.html)
-* [`IgxTreeGridComponent`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html)
-* [`IgxGridComponent`]({environment:angularApiUrl}/classes/igxgridcomponent.html)
-
-
 ### Additional Resources
 
 <div class="divider--half"></div>
 
-* [Data Grid](grid.md)
+* [Data Grid](../grid/grid.md)
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.

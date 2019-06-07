@@ -77,7 +77,8 @@ _language: ja
 - <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Home</kbd> - フォーカスされているセルからグリッド内の最初のセルまでのすべてのセルを選択します。
 - <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>End</kbd> - フォーカスされているセルからグリッド内の最後のセルまでのすべてのセルを選択します。
 
-> [!NOTE] 連続スクロールは Grid のボディでのみ可能です。
+> [!NOTE] 
+> 連続スクロールは Grid のボディでのみ可能です。
 
 ### API の使用
 以下は、範囲の選択、選択の解除、または選択したセル データを取得する方法です。
@@ -96,7 +97,8 @@ this.grid1.selectRange(range);
 
 ```
 
-> [!NOTE] 選択範囲は加法演算で以前の選択をクリアすることはありません。
+> [!NOTE] 
+> 選択範囲は加法演算で以前の選択をクリアすることはありません。
 
 ##### セル選択のクリア
 
@@ -160,7 +162,7 @@ expectedData = [
 ```
 
 > [!NOTE] 
-セルがグリッドビューポートに表示されていない場合、[`selectedCells()`]({environment:angularApiUrl}/classes/igxgridbasecomponent.html#selectedcells) は結果を返しませんが、[`getSelectedData()`]({environment:angularApiUrl}/classes/igxgridbasecomponent.html#getselecteddata) は選択されたセルデータを返します。
+> セルがグリッドビューポートに表示されていない場合、[`selectedCells()`]({environment:angularApiUrl}/classes/igxgridbasecomponent.html#selectedcells) は結果を返しませんが、[`getSelectedData()`]({environment:angularApiUrl}/classes/igxgridbasecomponent.html#getselecteddata) は選択されたセルデータを返します。
 > [`getSelectedRanges(): GridSelectionRange[]`]({environment:angularApiUrl}/classes/igxgridbasecomponent.html#getselectedranges) は、キーボードとポインタの両方の操作からグリッドで現在選択されている範囲を返します。タイプは GridSelectionRange[] です。
 
 

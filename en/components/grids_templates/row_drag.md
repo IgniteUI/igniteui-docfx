@@ -338,7 +338,8 @@ Try to drag moons from the grid and drop them to their corresponding planets. Ro
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-row-drag-1" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-> [!NOTE] The classes applied to the row drag ghost, used in the demo above, are using ::ng-deep modifier, because row drag is an internal grid feature and cannot be accessed on application level, due to the CSS encapsulation.
+> [!NOTE] 
+> The classes applied to the row drag ghost, used in the demo above, are using ::ng-deep modifier, because row drag is an internal grid feature and cannot be accessed on application level, due to the CSS encapsulation.
 
 <div class="divider--half"></div>
 }
