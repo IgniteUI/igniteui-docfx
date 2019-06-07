@@ -6,12 +6,12 @@ _keywords: financial chart, Ignite UI for Angular, infragistics
 
 ## Binding Financial Chart to Multiple Data Sources
 
-The `IgxFinancialChart` control can bind easily to multiple data sources, as shown in the following demo.
+The Angular financial chart component can bind easily to multiple data sources, as shown in the following demo.
 
 ### Demo
 
-<div class="sample-container" style="height: 500px">
-    <iframe id="financial-chart-multiple-data-iframe" src='{environment:demosBaseUrl}/charts/financial-chart-multiple-data' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 500px">
+    <iframe id="financial-chart-multiple-data-iframe" src='{environment:demosBaseUrl}/charts/financial-chart-multiple-data' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="financial-chart-multiple-data-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
@@ -19,7 +19,7 @@ The `IgxFinancialChart` control can bind easily to multiple data sources, as sho
 </div>
 <div class="divider--half"></div>
 
-The financial chart can plot multiple data sources as long as your each data source is added to an array. The following code snippet demonstrates how to create a multiple data sources.
+The financial chart component can plot multiple data sources as long as your each data source is added to an array. The following code snippet demonstrates how to create a multiple data sources.
 
 ```typescript
 let dataSource1: any = [
@@ -42,7 +42,7 @@ dataSource2.title = "Stock2 Name (Symbol)";
 let data: any = [ dataSource1, dataSource2 ]
 ```
 
-The following code demonstrates how to bind the financial chart to the above data.
+The following code demonstrates how to bind the financial chart component to the above data.
 
 ```html
  <igx-financial-chart

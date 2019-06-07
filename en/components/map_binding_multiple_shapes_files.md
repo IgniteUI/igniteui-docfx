@@ -10,8 +10,8 @@ In the `GeographicMap`, you can add multiple geographic series objects to overla
 
 ### Demo
 
-<div class="sample-container" style="height: 400px">
-    <iframe id="geo-map-binding-multiple-shapes-iframe" src='{environment:demosBaseUrl}/maps/geo-map-binding-multiple-shapes' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 400px">
+    <iframe id="geo-map-binding-multiple-shapes-iframe" src='{environment:demosBaseUrl}/maps/geo-map-binding-multiple-shapes' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="geo-map-binding-multiple-shapes-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
@@ -31,6 +31,27 @@ You can use geographic series in this or other combinations to plot desired data
 ### Loading Multiple Shapefiles
 
 In constructor of your page, add a `ShapeDataSource` for each shapefile that you want to display in the geographic map component.
+
+```ts
+import { ShapeDataSource } from "igniteui-react-core/ES5/igr-shape-data-source";
+// ...
+
+const sdsPolygons = new ShapeDataSource();
+sdsPolygons.importCompleted = this.onShapePolygonsLoaded;
+sdsPolygons.shapefileSource = url + "/shapes/WorldCountries.shp";
+sdsPolygons.databaseSource  = url + "/shapes/WorldCountries.dbf";
+sdsPolygons.dataBind();
+const sdsPolylines = new ShapeDataSource();
+sdsPolylines.importCompleted = this.onShapePolylinesLoaded;
+sdsPolylines.shapefileSource = url + "/shapes/WorldConnections.shp";
+sdsPolylines.databaseSource  = url + "/shapes/WorldConnections.dbf";
+sdsPolylines.dataBind();
+const sdsLocations = new ShapeDataSource();
+sdsLocations.importCompleted = this.onShapeLocationsLoaded;
+sdsLocations.shapefileSource = url + "/Shapes/WorldCities.shp";
+sdsLocations.databaseSource  = url + "/Shapes/WorldCities.dbf";
+sdsLocations.dataBind();
+```
 
 ### Overlaying Shape Polygons
 

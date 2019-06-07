@@ -10,8 +10,8 @@ This topic explains how to perform clipboard operations on the Ignite UI for Ang
 
 ### Demo
 
-<div class="sample-container" style="height: 500px">
-    <iframe id="spreadsheet-clipboard-sample-iframe" src='{environment:demosBaseUrl}/spreadsheet/spreadsheet-clipboard' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 500px">
+    <iframe id="spreadsheet-clipboard-sample-iframe" src='{environment:demosBaseUrl}/spreadsheet/spreadsheet-clipboard' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 
 <div class="divider--half"></div>

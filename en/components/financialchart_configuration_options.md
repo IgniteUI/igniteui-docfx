@@ -6,12 +6,12 @@ _keywords: financial chart, Ignite UI for Angular, infragistics
 
 ## Configuration Options
 
-The `IgxFinancialChart` control provides many visuals that can be customized, such as the navigation behavior, trendline layers, overlays, legend, chart titles and subtitles.
+The Angular financial chart component provides many visuals that can be customized, such as the navigation behavior, trendline layers, overlays, legend, chart titles and subtitles.
 
 ### Demo
 
-<div class="sample-container" style="height: 500px">
-    <iframe id="financial-chart-trendlines-iframe" src='{environment:demosBaseUrl}/charts/financial-chart-trendlines' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 500px">
+    <iframe id="financial-chart-trendlines-iframe" src='{environment:demosBaseUrl}/charts/financial-chart-trendlines' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="financial-chart-trendlines-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
@@ -22,7 +22,7 @@ The `IgxFinancialChart` control provides many visuals that can be customized, su
 
 ### Configuring Navigation
 
-In the `IgxFinancialChart` control, chart navigation is enabled by default. However, you can customize it by setting the following properties:
+In the Angular financial chart component, chart navigation is enabled by default. However, you can customize it by setting the following properties:
 
 -   `isHorizontalZoomEnabled` - This specifies if the chart can be horizontally zoomed through user interactions. By default, this property is set to true.
 -   `isVerticalZoomEnabled` - This specifies if the chart can be vertically zoomed through user interactions. By default, this property is set to false.
@@ -59,7 +59,7 @@ The price pane is always displayed in the Financial Chart and you can configure 
 
 ### Configuring Overlays
 
-By default overlays are not displayed on the igxFinancialChart. There are two types of overlays - `BollingerBands` and `PriceChannel`. You can also customize the default settings of the overlays. The following code demonstrates how to set the color, overlay outlines and thickness.
+By default overlays are not displayed on the Angular financial chart component. There are two types of overlays - `BollingerBands` and `PriceChannel`. You can also customize the default settings of the overlays. The following code demonstrates how to set the color, overlay outlines and thickness.
 
 ```html
  <igx-financial-chart
@@ -75,7 +75,7 @@ By default overlays are not displayed on the igxFinancialChart. There are two ty
 
 ### Configuring Indicators
 
-By default the indicator panes are not displayed in the Financial Chart. The toolbar allows the end user to select which indicator to display at run time. In order to display the pane, an indicator type must be set, as demonstrated in the following code:
+By default the indicator panes are not displayed in the financial chart. The toolbar allows the end user to select which indicator to display at run time. In order to display the pane, an indicator type must be set, as demonstrated in the following code:
 
 ```html
  <igx-financial-chart
@@ -92,7 +92,7 @@ By default the indicator panes are not displayed in the Financial Chart. The too
 
 ### Configuring Volume Pane
 
-By default volume pane is not displayed in the Financial Chart. However, you can enable this pane at runtime using chart toolbar or in programmatically as it is demonstrated in the following code:
+By default volume pane is not displayed in the financial chart component. However, you can enable this pane at runtime using chart toolbar or in programmatically as it is demonstrated in the following code:
 
 ```html
  <igx-financial-chart
@@ -108,7 +108,7 @@ By default volume pane is not displayed in the Financial Chart. However, you can
 
 ### Configuring Trendlines
 
-By default trendlines are not displayed on the igxFinancialChart. When a trendline is displayed, it is the same trendline displayed on all chart panes. You can also customize the default settings of the trendline.
+By default trendlines are not displayed on the Angular financial chart component. When a trendline is displayed, it is the same trendline displayed on all chart panes. You can also customize the default settings of the trendline.
 
 The following code demonstrates how to set the color and thickness of the trendline.
 
@@ -125,7 +125,7 @@ The following code demonstrates how to set the color and thickness of the trendl
 
 ### Configuring Titles
 
-You can set title and subtitle that will be displayed between chart's toolbar and the price pane of the Financial Chart. The following code demonstrates how to set the title and subtitle.
+You can set title and subtitle that will be displayed between chart's toolbar and the price pane of the financial chart. The following code demonstrates how to set the title and subtitle.
 
 ```html
  <igx-financial-chart

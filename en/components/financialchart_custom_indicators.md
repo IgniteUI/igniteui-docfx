@@ -6,12 +6,12 @@ _keywords: financial chart, Ignite UI for Angular, infragistics
 
 ## Custom Indicators
 
-The `IgxFinancialChart` control allows you to define custom financial indicators to display in the Indicator Pane.
+The Angular financial chart component allows you to define custom financial indicators to display in the Indicator Pane.
 
 ### Demo
 
-<div class="sample-container" style="height: 500px">
-    <iframe id="financial-chart-custom-indicators-iframe" src='{environment:demosBaseUrl}/charts/financial-chart-custom-indicators' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 500px">
+    <iframe id="financial-chart-custom-indicators-iframe" src='{environment:demosBaseUrl}/charts/financial-chart-custom-indicators' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="financial-chart-custom-indicators-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
@@ -20,7 +20,7 @@ The `IgxFinancialChart` control allows you to define custom financial indicators
 
 <div class="divider--half"></div>
 
-In the `IgxFinancialChart`, you can enable custom financial indicators by adding names for them to the `customIndicatorNames` property and performing calculations for them in the `applyCustomIndicators` event.
+In the Angular financial chart component, you can enable custom financial indicators by adding names for them to the `customIndicatorNames` property and performing calculations for them in the `applyCustomIndicators` event.
 
 The following code example shows how to set up and calculate two custom indicators, one featuring the Simple Moving Average (SMA) and one displaying random values.
 
