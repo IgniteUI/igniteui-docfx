@@ -73,7 +73,8 @@ Multi-cell selection enables range selection of cells in the @@igComponent. Vari
 - <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Home</kbd> to select all cells from the focused cell till the first-most cell in the grid
 - <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>End</kbd> to select all cells from the focused cell till the last-most cell in the grid
 
-> [!NOTE] Continuous scroll is possible only within Grid's body.
+> [!NOTE] 
+> Continuous scroll is possible only within Grid's body.
 
 ### Api usage
 Below are the methods that you can use in order to select ranges, clear selection or get selected cells data.
@@ -92,7 +93,8 @@ this.grid1.selectRange(range);
 
 ```
 
-> [!NOTE] Select range is additive operation. It will not clear your previous selection.
+> [!NOTE] 
+> Select range is additive operation. It will not clear your previous selection.
 
 ##### Clear cell selection
 
@@ -155,7 +157,8 @@ expectedData = [
 ];
 ```
 
-> [!NOTE] [`selectedCells()`]({environment:angularApiUrl}/classes/igxgridbasecomponent.html#selectedcells) will not return any result if the cell is not visible in grids view port, although [`getSelectedData()`]({environment:angularApiUrl}/classes/igxgridbasecomponent.html#getselecteddata) will return the selected cell data.
+> [!NOTE] 
+> [`selectedCells()`]({environment:angularApiUrl}/classes/igxgridbasecomponent.html#selectedcells) will not return any result if the cell is not visible in grids view port, although [`getSelectedData()`]({environment:angularApiUrl}/classes/igxgridbasecomponent.html#getselecteddata) will return the selected cell data.
 > [`getSelectedRanges(): GridSelectionRange[]`]({environment:angularApiUrl}/classes/igxgridbasecomponent.html#getselectedranges) will return the current selected ranges in the grid from both keyboard and pointer interactions. The type is GridSelectionRange[].
 
 

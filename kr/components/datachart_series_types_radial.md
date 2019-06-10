@@ -1,5 +1,5 @@
 ---
-title: Data Chart Component - Native Angular | Ignite UI for Angular
+제목: 데이터 차트 구성 요소 - 네이티브 Angular | Ignite UI for Angular
 _description: The Ignite UI for Angular Data Chart is a charting component that provides modular design of axis, markers, series, legend, and annotation layers. With this chart, you can create multiple instances of these visual elements in the same chart plot area in order to create composite chart views.
 _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Chart Control, Angular Chart Example, Angular Chart Component, Angular Data Chart
 _language: kr
@@ -7,23 +7,23 @@ _language: kr
 
 ## Radial Series
 
-This topic explains various types of radial series in the `IgxDataChart` control. Radial series a group of series that render data as collection of data points wrapped around a circle, rather than stretching along a horizontal line as [Category Series](datachart_series_types_category.md) do. Radial series are also mapping a list of categories from the minimum to the maximum of the extent of the chart, and support the same category grouping mechanisms of [Category Series](datachart_series_types_category.md).
+이 항목에서는 `IgxDataChart` 제어에서 다양한 유형의 레이디얼 시리즈에 대해 설명합니다. 레이디얼 시리즈는 [카테고리 시리즈](datachart_series_types_category.md)처럼 가로 라인에 따라 늘어나는 것이 아니라 데이터를 원형으로 감싼 데이터 점 컬렉션으로 데이터를 렌더링하는 시리즈의 그룹입니다. 레이디얼 시리즈는 차트 범위의 최소값에서 최대값까지 카테고리 목록을 매핑하고 [카테고리 시리즈](datachart_series_types_category.md)의 동일한 카테고리 그룹화 메커니즘을 지원합니다.
 
-### Demo
+### 데모
 
 <div class="sample-container" style="height: 500px">
     <iframe id="data-chart-type-radial-series-iframe" src='{environment:demosBaseUrl}/charts/data-chart-type-radial-series' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-type-radial-series-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-type-radial-series-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기
     </button>
 </div>
 
 <div class="divider--half"></div>
 
-### Types of Radial Series
+### 레이디얼 시리즈의 유형
 
-The following table lists all types of radial series and their descriptions:
+다음 표에는 모든 유형의 레이디얼 시리즈와 그 설명이 표시되어 있습니다.
 
 | Series Name              | Description                                                                                                                                                       |
 | ------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -33,9 +33,9 @@ The following table lists all types of radial series and their descriptions:
 | `RadialScatterSeries`    | Displays a collection of markers representing data points which are located at the radial (angle/radius) coordinates                                              |
 | `RadialLineSeries`       | Displays a collection of straight lines connecting data points which are located at the radial (angle/radius) coordinates                                         |
 
-### Required Axes
+### 필요한 축
 
-The `IgxDataChart` control provides various types of axes but only the following types of axes can be used with radial series.
+`IgxDataChart` 제어는 다양한 유형의 축을 제공하지만 레이디얼 시리즈에는 다음의 축 유형만 사용할 수 있습니다.
 
 | Series Type          | Radius Axis Type                | Angle Axis Type                 |
 | -------------------- | ------------------------------- | ------------------------------- |
@@ -44,26 +44,26 @@ The `IgxDataChart` control provides various types of axes but only the following
 | `RadialColumnSeries` | `IgxNumericRadiusAxisComponent` | `IgxCategoryAngleAxisComponent` |
 | `RadialLineSeries`   | `IgxNumericRadiusAxisComponent` | `IgxCategoryAngleAxisComponent` |
 
-### Required Data
+### 필요한 데이터
 
-Radial series have the following data requirements:
+레이디얼 시리즈에는 다음과 같은 데이터 요구 사항이 있습니다:
 
--   The data source must be an array or a list of data items
--   The data source must contain at least one data item otherwise the chart will not render the radial series.
--   All data items must contain at least one label data column (string or date time) which should be mapped to the `Label` property of the category axis (e.g. `IgxCategoryAngleAxisComponent`)
--   All data items must contain at least one numeric data column which should be mapped using the `ValueMemberPath` property of radial series (e.g. `RadialAreaSeries`)
+-   데이터 소스는 배열 또는 데이터 항목 목록이어야 함
+-   데이터 소스에는 하나 이상의 데이터 항목이 포함되어야 하며 그렇지 않을 경우에는 차트가 레이디얼 시리즈를 렌더링하지 않습니다.
+-   모든 데이터 항목에는 카테고리 축(예: `IgxCategoryAngleAxisComponent`)의 `Label` 속성에 매핑해야 하는 하나 이상의 라벨 데이터 열(문자열 또는 날짜 시간)이 포함되어 있어야 함
+-   모든 데이터 항목에는 카테고리 시리즈(예: `RadialAreaSeries`)의 `ValueMemberPath` 속성을 사용하여 매핑하는 숫자 데이터 열이 하나 이상 있어야 합니다
 
-You can use the [SampleRadialData](datachart_data_sources_radial.md) as data source which meets above data requirements.
+[SampleRadialData](datachart_data_sources_radial.md)는 위의 데이터 요구 사항을 충족하는 데이터 소스로 사용할 수 있습니다.
 
 ```typescript
 this.state = { dataSource: SampleRadialData.create() }
 ```
 
-### Required Modules
+### 필요한 모듈
 
 <!-- Angular -->
 
-In order to use radial series, you need to import the following modules in your app during load and register data chart modules:
+레이디얼 시리즈를 사용하려면 로딩하는 동안 앱에 다음 모듈을 불러와야 합니다.
 
 ```typescript
 // axis' modules:
@@ -92,9 +92,9 @@ import { IgxDataChartRadialModule } from "igniteui-angular-charts/ES5/igx-data-c
 })
 ```
 
-### Code Example
+### 코드 예제
 
-This code demonstrates how to create an instance of data chart with `RadialAreaSeries` and bind it to the data source.
+이 코드는 `RadialAreaSeries`로 데이터 차트의 인스턴스를 생성하고 데이터 소스에 바인딩하는 방법을 보여줍니다.
 
 ```html
  <igx-data-chart
@@ -111,12 +111,12 @@ This code demonstrates how to create an instance of data chart with `RadialAreaS
  </igx-data-chart>
 ```
 
-Note that you can also use above code to create other type of radial series by replacing `RadialAreaSeries` with name of radial series that you want to render.
+또한, 위의 코드를 사용하여 `RadialAreaSeries`를 렌더링할 레이디얼 시리즈의 이름으로 대체하여 다른 유형의 시리즈를 생성할 수도 있습니다.
 
-### Additional Resources
+### 추가 리소스
 
--   [Axis Types](datachart_axis_types.md)
--   [Axis Sharing](datachart_axis_sharing.md)
--   [Chart Legend](datachart_chart_legends.md)
--   [Series Markers](datachart_series_markers.md)
--   [Series Types](datachart_series_types.md)
+-   [축 유형](datachart_axis_types.md)
+-   [축 공유](datachart_axis_sharing.md)
+-   [차트 범례](datachart_chart_legends.md)
+-   [시리즈 마커](datachart_series_markers.md)
+-   [시리즈 유형](datachart_series_types.md)

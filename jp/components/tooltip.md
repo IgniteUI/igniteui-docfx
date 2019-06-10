@@ -171,7 +171,7 @@ Slider と Switch コントロールをコンポーネントのテンプレー�
 このトピックのはじめにあるコードの結果は「ツールチップ、ヒント表示デモ」で確認できます。
 
 > [!NOTE]
-> ビルトイン UI インタラクションの動作と `IgxTooltipTargetDirective`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) および [`showDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#showdelay) と [`hideDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#hidedelay) プロパティ値を考慮します。[`IgxTooltipDirective`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) の API によるツールチップを表示および非表示は、[`showDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#showdelay) and [`hideDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#hidedelay) プロパティ値を考慮しません。必要な場合、ロジックはアプリケーションの仕様を手動で実装する必要があります。
+> ビルトイン UI インタラクションの動作と [`IgxTooltipTargetDirective`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) および [`showDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#showdelay) と [`hideDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#hidedelay) プロパティ値を考慮します。[`IgxTooltipDirective`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) の API によるツールチップを表示および非表示は、[`showDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#showdelay) and [`hideDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#hidedelay) プロパティ値を考慮しません。必要な場合、ロジックはアプリケーションの仕様を手動で実装する必要があります。
 
 ### 高機能なツールチップ
 
@@ -324,12 +324,12 @@ export class AppModule {}
 [`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) ディレクティブは、[`overlaySettings`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#overlaysettings) プロパティ (inherited from the [`igxToggleAction`]({environment:angularApiUrl}/classes/igxtoggleactiondirective.html)) を公開し、ツールチップ アニメーション、UI 状の配置などのカスタマイズが可能です。プロパティを設定しない場合は、デフォルト オーバーレイ設定が使用されます。
 
 > [!NOTE]
-> `overlaySettings`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#overlaysettings) で設定したプロパティは、デフォルト オーバーレイ設定の同じプロパティをオーバーライドし、ツールチップに直接影響があります。
+> [`overlaySettings`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#overlaysettings) で設定したプロパティは、デフォルト オーバーレイ設定の同じプロパティをオーバーライドし、ツールチップに直接影響があります。
 
 
 ### ユーザー補助
 
-[`igxTooltip`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) ディレクティブの要素には、ツールチップの表示状態に基づいて自動的に更新、自動生成された ({environment:angularApiUrl}/classes/igxtooltipdirective.html#id) プロパティ (開発者が設定しない場合)、ツールチップ [`role`]({environment:angularApiUrl}/classes/igxtooltipdirective.html#role)、**aria-hidden** 属性が含まれます。ターゲットの **aria-describedby** 属性を各ツールチップの[`id`]({environment:angularApiUrl}/classes/igxtooltipdirective.html#id) に設定すると、参照がツールチップ要素に提供されます。エンドユーザーがツールチップへアクセスしたときにツールチップのコンテンツにアクセスするために必要な情報であるスクリーン リーダーを提供します。 
+[`igxTooltip`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) ディレクティブの要素には、ツールチップの表示状態に基づいて自動的に更新、自動生成された [`id`]({environment:angularApiUrl}/classes/igxtooltipdirective.html#id)  プロパティ (開発者が設定しない場合)、ツールチップ [`role`]({environment:angularApiUrl}/classes/igxtooltipdirective.html#role)、**aria-hidden** 属性が含まれます。ターゲットの **aria-describedby** 属性を各ツールチップの[`id`]({environment:angularApiUrl}/classes/igxtooltipdirective.html#id) に設定すると、参照がツールチップ要素に提供されます。エンドユーザーがツールチップへアクセスしたときにツールチップのコンテンツにアクセスするために必要な情報であるスクリーン リーダーを提供します。 
 
 以下の状況では十分な注意が必要です。
 - ツールチップのコンテンツは非常に複雑なため自動翻訳できません。
@@ -338,7 +338,7 @@ export class AppModule {}
 
 ### API リファレンス
 
-このトピックでは、ページ要素にツールチップを作成する方法について説明しました。また、アプリケーションのデザインには icons, avatars and cards などの Ignite UI for Angular コンポーネントも追加で使用しました。以下は、各 API です。
+このトピックでは、ページ要素にツールチップを作成する方法について説明しました。また、アプリケーションのデザインには icons、avatars、cards などの Ignite UI for Angular コンポーネントも追加で使用しました。以下は、各 API です。
 
 * [IgxTooltipDirective]({environment:angularApiUrl}/classes/igxtooltipdirective.html)
 * [IgxTooltipTargetDirective]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html)

@@ -6,12 +6,12 @@ _keywords: Spreadsheet, Ignite UI for Angular, Infragistics
 
 ## Data Validation
 
-This topic explains to to configure and set the bulit-in data validation rules.
+This topic explains how to configure and set the bulit-in data validation rules.
 
 ### Demo
 
-<div class="sample-container" style="height: 500px">
-    <iframe id="spreadsheet-data-validation-sample-iframe" src='{environment:demosBaseUrl}/spreadsheet/spreadsheet-data-validation' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 500px">
+    <iframe id="spreadsheet-data-validation-sample-iframe" src='{environment:demosBaseUrl}/spreadsheet/spreadsheet-data-validation' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 
 <div class="divider--half"></div>
@@ -35,7 +35,7 @@ import { TwoConstraintDataValidationRule } from "igniteui-angular-excel/ES5/TwoC
 
 ### Usage
 
-The following snippt shows how you can setup the data validation rules
+The following snippet shows how you can setup the data validation rules
 
 ```typescript
 // this validation rule has only input message set

@@ -1,7 +1,7 @@
 ---
-title: Category Chart | Data Visualization Tools | Ignite UI for Angular | Infragistics 
+title: Category Chart | Data Visualization Tools | Ignite UI for Angular | Infragistics
 _description: Use the category chart component to analyze and  automatically choose the best chart type to represent data. Learn about our chart types for visualization.
-_keywords: category chart, Ignite UI for Angular, infragistics 
+_keywords: category chart, Ignite UI for Angular, infragistics
 ---
 
 ## Category Chart
@@ -10,8 +10,8 @@ The category chart component is a Ignite UI for Angular charting component that 
 
 ### Demo
 
-<div class="sample-container" style="height: 500px">
-    <iframe id="category-chart-overview-iframe" src='{environment:demosBaseUrl}/charts/category-chart-overview' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 500px">
+    <iframe id="category-chart-overview-iframe" src='{environment:demosBaseUrl}/charts/category-chart-overview' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 
 <div>
@@ -43,14 +43,12 @@ Another example of the intuitive behavior of the category chart component is tha
 
 When installing the chart package, the core package must also be installed.
 
-**npm install igniteui-angular-charts igniteui-angular-core**
+-   **npm install --save igniteui-angular-core**
+-   **npm install --save igniteui-angular-charts**
 
-The category chart is exported as an `NgModule`, you need to import the
-`IgxCategoryChartModule` inside your `AppModule`:
+### Required Modules
 
-<!-- -->
-
-<!-- -->
+The `IgxCategoryChart` requires the following modules:
 
 ```typescript
 // app.module.ts

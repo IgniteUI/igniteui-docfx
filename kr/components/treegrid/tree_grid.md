@@ -1,27 +1,28 @@
----
-title: Tree Grid Component
+﻿---
+title: 트리 그리드 컴포넌트
 _description: The Ignite UI for Angular Tree Grid control features the fastest, touch-responsive data-rich grid with popular features.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Tree Grid component, Angular Tree Grid control, Angular Tree Grid component, Angular High Performance Tree Grid, Tree Grid
+_language: kr
 ---
 
-## Tree Grid
+## 트리 그리드
 
-<p class="highlight">Displays and manipulates hierarchical data with consistent schema formatted as a table and provides a line of advanced features such as sorting, filtering, summaries, editing, column pinning, paging, column moving and hiding.</p>
+<p class="highlight">일관된 테이블 형식으로 서식 설정된 스키마로 계층적 데이터를 표시 및 조작하고 정렬, 필터링, 요약, 편집, 열 고정, 페이징, 열 이동, 숨기기와 같은 고급 기능을 제공합니다.</p>
 
-### Demo
+### 데모
 
 <div class="sample-container loading" style="height:850px">
     <iframe id="treegrid-childdatakey-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-childdatakey' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-childdatakey-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-childdatakey-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기</button>
 </div>
 <div class="divider--half"></div>
 
-### Getting started
+### 시작하기
 
-The tree grid is exported as an `NgModule`, thus all you need to do in your application is to import the `IgxTreeGridModule` inside your `AppModule`:
+트리 그리드는 `NgModule`로 내보내기가 되기 때문에 애플리케이션에서 `IgxTreeGridModule`을 `AppModule`로 가져오기만 하면 됩니다:
 
 ```typescript
 // app.module.ts
@@ -38,29 +39,29 @@ import { IgxTreeGridModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-### Usage
+### 사용 방법
 
-The [`IgxTreeGridComponent`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html) shares a lot of features with the [`IgxGridComponent`]({environment:angularApiUrl}/classes/igxgridcomponent.html), but it also adds the ability to display its data hierarchically.
-In order to achieve this, the [`IgxTreeGridComponent`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html) provides us with a couple of ways to define the relations among our data objects - by using a **child collection** for every data object or by using **primary and foreign keys** for every data object.
+[`IgxTreeGridComponent`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html)는 [`IgxGridComponent`]({environment:angularApiUrl}/classes/igxgridcomponent.html)와 많은 기능을 공유하지만 데이터를 계층적으로 표시하는 기능도 추가되었습니다.
+이를 위해 [`IgxTreeGridComponent`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html)는 각 데이터 객체의  [하위 컬렉션](#child-collection)을 사용하거나 각 데이터 객체에 [기본 키와 외부 키](#primary-and-foreign-keys)를 사용하여 데이터 객체 간의 관계를 정의하는 몇 가지 방법을 제공합니다.
 
-#### Tree cells
+### 트리 셀
 
-Regardless of which option is used for building the tree grid's hierarchy (child collection or primary and foreign keys), the tree grid's rows are constructed of two types of cells:
+트리 그리드의 계층 구조(하위 컬렉션 또는 기본 키와 외부 키)를 작성하는 데 사용되는 옵션과 관계없이 트리 그리드의 행은 2가지 유형의 셀로 구성됩니다:
 
-- [`IgxGridCellComponent`]({environment:angularApiUrl}/classes/igxgridcellcomponent.html) - Ordinary cell that contains a value.
-- [`IgxTreeGridCellComponent`]({environment:angularApiUrl}/classes/igxtreegridcellcomponent.html) - Tree cell that contains a value, an expand/collapse indicator and an indentation div element, which is based on the level of the cell's row. The level of a row component can be accessed through the [`level`]({environment:angularApiUrl}/interfaces/itreegridrecord.html#level) property of its inner [`treeRow`]({environment:angularApiUrl}/classes/igxtreegridrowcomponent.html#treerow).
+- [`IgxGridCellComponent`]({environment:angularApiUrl}/classes/igxgridcellcomponent.html) - 값이 포함된 표준 셀입니다.
+- [`IgxTreeGridCellComponent`]({environment:angularApiUrl}/classes/igxtreegridcellcomponent.html) - 셀의 행 수준을 기반으로 한 값, 인디케이터의 전개/축소, 인덴트 div 요소가 포함된 트리 셀입니다. 행 컴포넌트의 수준은 내부 [`treeRow`]({environment:angularApiUrl}/classes/igxtreegridrowcomponent.html#treerow)의 [`level`]({environment:angularApiUrl}/interfaces/itreegridrecord.html#level) 속성을 통해 접근할 수 있습니다.
 
 > [!NOTE]
-> Each row can have only one tree cell, but it can have multiple (or none) ordinary cells.
+> 각 행에는 하나의 트리 셀만 가질 수 있지만 표준 셀은 여러 개 가질 수 있습니다.
 
-#### Initial Expansion Depth
+### 초기 전개 심도
 
-Initially the tree grid will expand all node levels and show them. This behavior can be configured using the [`expansionDepth`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#expansiondepth) property. By default its value is **Infinity** which means all node levels will be expanded. You may control the initial expansion depth by setting this property to a numeric value. For example **0** will show only root level nodes, **1** will show root level nodes and their child nodes and so on.
+처음에는 트리 그리드가 모든 노드 수준을 전개하여 표시합니다. 이 동작은 [`expansionDepth`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#expansiondepth) 속성을 사용하여 구성할 수 있습니다. 기본적으로 이 값은 **Infinity**이며 모든 노드 수준이 전개됨을 의미합니다. 이 속성을 숫자 값으로 설정하여 초기 전개 심도를 제어할 수 있습니다. 예를 들면, **0**은 루트 수준의 노드만 표시하고, **1**은 루트 수준의 노드와 하위 노드 등을 표시합니다.
 
-#### Child collection
-When we are using the **child collection** option, every data object contains a child collection, that is populated with items of the same type as the parent data object. This way every record in our tree grid will have a direct reference to any of its children. In this case the [`data`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#data) property of our tree grid that contains the original data source will be a hierarchically defined collection.
+### 하위 컬렉션
+**child collection** 옵션을 사용하는 경우, 모든 데이터 객체에는 상위 데이터 객체와 동일한 유형의 항목으로 채워진 하위 컬렉션이 포함됩니다. 이렇게하면 트리 그리드의 모든 레코드가 해당 자식에 대한 직접적인 참조를 갖게됩니다. 이 경우, 원본 데이터 소스가 포함된 트리 그리드의 [`data`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#data) 속성은 계층적으로 정의된 컬렉션이 됩니다.
 
-For this sample, let's use the following collection structure:
+이 샘플의 경우, 다음과 같은 컬렉션 구조를 사용합니다:
 
 ```typescript
 // Sample Employee Data
@@ -93,7 +94,7 @@ export const EMPLOYEE_DATA = [
 ]
 ```
 
-Now let's start by importing our data collection and binding it to the [`data`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#data) input of our tree grid.
+이제 데이터 컬렉션을 불러오기 하여 트리 그리드의 [`data`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#data) 입력에 바인딩합니다.
 
 ```html
 <!--treeGridSample.component.html-->
@@ -102,8 +103,8 @@ Now let's start by importing our data collection and binding it to the [`data`](
 </igx-tree-grid>
 ```
 
-In order for the IgxTreeGridComponent to build the hierarchy, we will have to set its [`childDataKey`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#childdatakey) property to the name of the child collection that is used in each of our data objects. In our case that will be the **Employees** collection.
-In addition, we will disable the automatic column generation and define them manually by matching them to the actual properties of our data objects. (The **Employees** collection will be automatically used for the hierarchy, so there is no need to include it in the columns' definitions.)
+IgxTreeGridComponent가 계층을 구축하려면 [`childDataKey`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#childdatakey) 속성을 각 데이터 객체에서 사용되는 하위 컬렉션의 이름으로 설정해야 합니다. 이 샘플의 경우, **Employees** 컬렉션이 됩니다.
+또한, 자동 열 생성을 비활성화하고 데이터 객체의 실제 속성과의 일치를 수동으로 정의합니다. (**Employees** 컬렉션은 계층 구조에 자동으로 사용되므로 열 정의에 포함할 필요가 없습니다.)
 
 ```html
 <!--treeGridSample.component.html-->
@@ -116,8 +117,8 @@ In addition, we will disable the automatic column generation and define them man
 </igx-tree-grid>
 ```
 
-We will now enable the row selection and paging features of the tree grid by using the [`rowSelectable`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#rowselectable) and the [`paging`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#paging) properties.
-We will also enable the summaries feature on the first column and the filtering, sorting, editing, moving and resizing features for each of our columns.
+[`rowSelectable`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#rowselectable) 및 [`paging`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#paging) 속성을 사용하여 트리 그리드의 행 선택 및 페이징 기능을 활성화합니다.
+또한, 첫 번째 열의 요약 기능과 각 열의 필터링, 정렬, 편집, 이동 및 크기 조정 기능을 사용할 수 있습니다.
 
 ```html
 <!--treeGridSample.component.html-->
@@ -131,7 +132,7 @@ We will also enable the summaries feature on the first column and the filtering,
 </igx-tree-grid>
 ```
 
-Finally, we will enable the toolbar of our tree grid, along with the column hiding, column pinning and exporting features by using the [`showToolbar`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#showtoolbar), [`columnHiding`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#columnhiding), [`columnPinning`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#columnpinning), [`exportExcel`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#exportexcel) and [`exportCsv`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#exportcsv) properties respectively.
+마지막으로 [`showToolbar`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#showtoolbar), [`columnHiding`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#columnhiding), [`columnPinning`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#columnpinning), [`exportExcel`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#exportexcel) 및 [`exportCsv`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#exportcsv) 속성을 각각 사용하여 열 숨기기, 열 고정 및 내보내기 기능이 포함된 트리 그리드의 도구 모음을 활성화합니다.
 
 ```html
 <!--treeGridSample.component.html-->
@@ -146,12 +147,12 @@ Finally, we will enable the toolbar of our tree grid, along with the column hidi
 </igx-tree-grid>
 ```
 
-You can see the result of the code from above at the beginning of this article in the [Demo](#demo) section.
+[Demo](#demo) 섹션에서 이 내용 시작 부분에 있는 코드 결과를 확인할 수 있습니다.
 
-#### Primary and Foreign keys
-When we are using the **primary and foreign keys** option, every data object contains a primary key and a foreign key. The primary key is the unique identifier of the current data object and the foreign key is the unique identifier of its parent. In this case the [`data`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#data) property of our tree grid that contains the original data source will be a flat collection.
+### 기본 키와 외부 키
+**기본 키와 외부 키** 옵션을 사용하는 경우에는 모든 데이터 개체에 기본 키와 외부 키가 포함됩니다. 기본 키는 현재 데이터 객체의 고유 식별자이며, 외부 키는 해당 상위 객체의 고유 식별자입니다. 이 경우, 원본 데이터 소스가 포함된 트리 그리드의 [`data`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#data) 속성은 플랫 컬렉션이 됩니다.
 
-The following is an example of a component which contains a flat collection defined with primary and foreign keys relation:
+다음은 기본 키와 외부 키의 관계를 정의한 플랫 컬렉션을 포함하는 컴포넌트의 예입니다.
 
 ```typescript
 // treeGridSample.component.ts
@@ -183,11 +184,11 @@ export class MyComponent implements OnInit {
 }
 ```
 
-In the sample data above, all records have an ID, a ParentID and some additional properties like Name, JobTitle and Age. As mentioned previously, the ID of the records must be unique. The ParentID contains the ID of the parent node. If a row has a ParentID that does not match any row in the tree grid, then that means this row is a root row.
+위의 샘플 데이터에서 모든 레코드는 ID, ParentID 및 Name, JobTitle, Age 등의 몇 가지 추가 속성을 가집니다. 앞서 언급했듯이 레코드의 ID는 고유해야 합니다. ParentID에는 상위 노드의 ID가 포함됩니다. 행에 트리 그리드의 행과 일치하지 않는 ParentID가 있는 경우, 이 행은 루트 행임을 의미합니다.
 
-The parent-child relation is configured using the tree grid's [`primaryKey`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#primarykey) and [`foreignKey`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#foreignkey) properties.
+상위-하위 관계는 트리 그리드의 [`기본 키`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#primarykey) and [`외부 키`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#foreignkey) 속성을 사용하여 구성됩니다.
 
-Here is the template of the component which demonstrates how to configure the tree grid to display the data defined in the above flat collection:
+다음은 위의 플랫 컬렉션에 정의된 데이터를 표시하기 위해 트리 그리드를 구성하는 방법을 보여주는 컴포넌트의 템플릿입니다.
 
 ```html
 <!--treeGridSample.component.html-->
@@ -200,7 +201,7 @@ Here is the template of the component which demonstrates how to configure the tr
 </igx-tree-grid>
 ```
 
-In addition we will enable the row selection feature of the tree grid by using the [`rowSelectable`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#rowselectable) property and also the filtering, sorting, editing, moving and resizing features for each of our columns.
+또한, [`rowSelectable`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#rowselectable) 속성을 사용하여 각 열의 필터링, 정렬, 편집, 이동 및 크기 조정 기능 및 트리 그리드의 행 선택 기능을 활성화합니다.
 
 ```html
 <!--treeGridSample.component.html-->
@@ -213,147 +214,72 @@ In addition we will enable the row selection feature of the tree grid by using t
 </igx-tree-grid>
 ```
 
-And here is the final result:
+다음은 최종 결과입니다:
 
 <div class="sample-container loading" style="height:450px">
     <iframe id="treegrid-primaryforeignkey-iframe" data-src='{environment:demosBaseUrl}/tree-grid/treegrid-primaryforeignkey' width="100%" height="100%" seamless="" frameborder="0" class="lazyload"></iframe>
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-primaryforeignkey-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-primaryforeignkey-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기</button>
 </div>
 <div class="divider--half"></div>
 
-#### Tree Grid Row Editing
+### 지속성 및 통합성
 
-Row editing - allows modification of several cells in the row, before submitting, at once, all those changes to the tree grid's data source. Leverages the pending changes functionality of the new transaction provider.
+**트리 셀**의 인덴트는 필터링, 정렬 및 페이징 등의 다른 트리 그리드 기능과 함께 지속됩니다.
 
-If [`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditable) is enabled, then all columns that have [field]({environment:angularApiUrl}/classes/igxcolumncomponent.html#field) property defined (excluding a [`primaryKey`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#primarykey) one) will be editable, even though the [`editable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable) property is not defined for them. If you want to disable editing for a specific column, then you set the [`editable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable) column's input to false.
-The following sample illustrates how to enable row editing using the grid's [`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditable) property.
-
-Let's start with defining a tree grid with bound data source and [`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditable) set to true:
-
-```html
-    <igx-tree-grid #treeGrid1 [data]="data" primaryKey="EmployeID" foreignKey="PID" width="100%" height="500px"
-        rowEditable=true rowSelectable=true>
-        <igx-column *ngFor="let c of columns"
-            [editable]="c.editable"
-            [field]="c.field"
-            [dataType]="c.dataType"
-            [header]="c.label"
-            [movable]="c.movable"
-            [resizable]="c.resizable"
-            [sortable]="c.sortable"
-            [filterable]="c.filterable"
-            >
-        </igx-column>
-    </igx-tree-grid>
-```
-
-> [!NOTE]
-> Setting primary key is mandatory for editing operations, including row editing.
-
-> [!NOTE]
-> It's not needed to enable editing for individual columns. Using the [`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditable) property in the grid, will mean that all rows, with defined [`field`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#field) property, excluding primary one, will be editable. If you want to disable editing for specific column, then you set the [`editable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable) column's input to `false`.
-
-```typescript
-import { Component, OnInit, ViewChild } from "@angular/core";
-import { IgxTreeGridComponent } from "igniteui-angular";
-...
-
-@Component({
-    providers: [],
-    selector: "app-tree-grid-row-editing-sample",
-    styleUrls: ["tree-grid-row-editing-sample.component.scss"],
-    templateUrl: "tree-grid-row-editing-sample.component.html"
-})
-export class TreeGridRowEditSampleComponent implements OnInit {
-
-    public data: any[];
-    public columns: any[];
-
-    @ViewChild("treeGrid1") public treeGrid1: IgxTreeGridComponent;
-    public ngOnInit(): void {
-        this.data = FLAT_DATA;
-        this.columns = [
-            { field: "FirstName", label: "First Name", resizable: true, movable: true, sortable: true, filterable: true, editable: true, dataType: "string" },
-            { field: "LastName", label: "Last Name", resizable: false, movable: false, sortable: false, filterable: false, editable: true, dataType: "string" },
-            { field: "Title", label: "Title", resizable: true, movable: true, sortable: true, filterable: true, editable: true, dataType: "string" },
-            { field: "HireDate", label: "Hire Date", resizable: true, movable: true, sortable: true, filterable: true, editable: true, dataType: "date" }
-        ];
-    }
-
-```
-
-> [!NOTE]
-> The grid uses internally a provider [`IgxBaseTransactionService`]({environment:angularApiUrl}/classes/igxbasetransactionservice.html) that holds pending cell changes, until row state submitted or cancelled.
-
-Here is the result:
-
-<div class="sample-container loading" style="height:590px">
-    <iframe id="tree-grid-row-editing-sample-iframe" data-src='{environment:demosBaseUrl}/tree-grid/treegrid-row-edit' width="100%" height="100%" seamless="" frameborder="0" class="lazyload"></iframe>
-</div>
-<br/>
-<div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-row-editing-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
-</div>
-<div class="divider--half"></div>
-
-#### Persistence and Integration
-
-The indentation of the **tree cells** persists across other tree grid features like filtering, sorting and paging.
-
-- When **sorting** is applied on a column, the data rows get sorted by levels. This means that the root level rows will be sorted independently from their respective children. Their respective children collections will each be sorted independently as well and so on.
-- The first column (the one that has a [`visibleIndex`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#visibleindex) of 0) is always the tree column.
-- The column that ends up with a [`visibleIndex`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#visibleindex) of 0 after operations like column pinning, column hiding and column moving becomes the tree column.
-- Exported Excel worksheets reflect the hierarchy by grouping the records as they are grouped in the tree grid itself. All records expanded states would also be persisted and reflected.
-- When exporting to CSV, levels and expanded states are ignored and all data is exported as flat.
+- **sorting**이 열에 적용되면 데이터 행이 수준별로 정렬됩니다. 루트 수준의 행은 해당 하위와 독립적으로 정렬됩니다. 각각의 하위 컬렉션은 각각 독립적으로 정렬됩니다.
+- 첫 번째 열([`visibleIndex`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#visibleindex)가 0인 열)은 항상 트리 열입니다.
+- 열 고정, 열 숨기기 및 열 이동 등의 작업 후에 0의 [`visibleIndex`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#visibleindex)로 끝나는 열이 트리 열이 됩니다.
+- 내보내기를 한 Excel 워크시트는 트리 그리드 자체에 그룹화될 때 레코드를 그룹화하여 계층에 반영합니다. 모든 레코드의 전개 상태도 지속되고 반영됩니다.
+- CSV로 내보내기를 할 때 수준 및 전개 상태는 무시되며 모든 데이터는 플랫으로 내보내기가 됩니다.
 
 <div class="divider--half"></div>
 
-### Keyboard navigation
+### 키보드 탐색
 
-Keyboard navigation is available by default in the Tree Grid and aims at covering as many as possible features and scenarios for the end user. When you focus a specific cell and press one of the following key combinations, the described behaviour is performed:
+키보드 탐색은 트리 그리드에서 기본적으로 사용할 수 있으며 최종 사용자를 위해 가능한 많은 기능과 시나리오를 포함하도록 하고 있습니다. 특정 셀에 초점을 맞추고 다음 키 조합 중 하나를 누른 경우 설명된 동작이 실행됩니다:
 
- - `Arrow Up` - navigates one cell up (no wrapping);
- - `Arrow Down` - navigates one cell down (no wrapping);
- - `Arrow Left` - navigates one cell left (no wrapping between lines);
- - `Arrow Right` - navigates one cell right (no wrapping between lines);
- - `Ctrl + Arrow Up` - navigates to the first cell in the current column;
- - `Ctrl + Arrow Down` - navigates to the last cell in the current column;
- - `Ctrl + Arrow Left` -  moves to leftmost cell in row;
- - `Home` - moves to leftmost cell in row;
- - `Ctrl + Home` - moves to top left cell in the grid;
- - `Ctrl + Arrow Right` - moves to rightmost cell in row;
- - `End` - moves to rightmost cell in row;
- - `Ctrl + End` - moves to bottom right cell in the grid;
- - `Page Up` - scrolls one page (view port) up;
- - `Page Down` -  scrolls one page (view port) down;
- - `Enter` - enters edit mode;
- - `F2` - enters edit mode;
- - `Esc` - exits edit mode;
- - `Tab` - sequentially move the focus over the next cell on the row and if the last cell is reached move to next row; When cell is in edit mode, will move the focus to next editable cell in the row, and from the right-most editable cell to the `CANCEL` and `DONE` buttons, and from the `DONE` button to the left-most editable cell within the currently edited row. If the next cell is not editable, it has to be selected;
- - `Shift + Tab` - sequentially move the focus to the previous cell on the row, if the first cell is reached move the focus to the previous row. When cell is in edit mode, will move the focus to the previous editable cell in the row, and from the right-most editable cell to the `CANCEL` and `DONE` buttons, and from the `DONE` button to the left-most editable cell within the currently edited row. If the cell is not editable, it has to be selected;
- - `Space` -  if the row is selectable, on keydown space triggers row selection;
- - `Alt + Arrow Left` over Tree Grid row - the cell should stay selected and focused and if the selected cell row has children the row should be collapsed;
- - `Alt + Arrow Up` over Tree Grid row - the cell should stay selected and focused and if the selected cell row has children the row should be collapsed;
- - `Alt + Arrow Right` over Tree Grid Row - the cell should stay selected and focused and if the selected cell row has children the row should be expanded;
- - `Alt + Arrow Down` over Tree Grid Row - the cell should stay selected and focused and if the selected cell row has children the row should be expanded;
- - on mouse `wheel` -  blurs the focused element;
+ - `위 화살표` - 한 셀 위로 이동(줄 바꿈 없음);
+ - `아래 화살표` - 한 셀 아래로 이동(줄 바꿈 없음);
+ - `왼쪽 화살표` - 한 셀 왼쪽으로 이동(라인 간에 줄 바꿈 없음);
+ - `오른쪽 화살표` - 한 셀 오른쪽으로 이동(라인 간에 줄 바꿈 없음);
+ - `Ctrl + 위 화살표` - 현재 열의 첫 번째 셀로 이동;
+ - `Ctrl + 아래 화살표` - 현재 열의 마지막 셀로 이동;
+ - `Ctrl + 왼쪽 화살표` -  행의 가장 왼쪽 셀로 이동;
+ - `Home` - 행의 가장 왼쪽 셀로 이동;
+ - `Ctrl + Home` - 그리드의 왼쪽 상단 셀로 이동;
+ - `Ctrl + 오른쪽 화살표` -  행의 가장 오른쪽 셀로 이동;
+ - `End` - 행의 가장 오른쪽 셀로 이동;
+ - `Ctrl + End` - 그리드의 오른쪽 하단 셀로 이동;
+ - `Page Up` - 한 페이지(뷰 포트) 위로 스크롤;
+ - `Page Down` -  한 페이지(뷰 포트) 아래로 스크롤;
+ - `Enter` - 편집 모드로 들어감;
+ - `F2` - 편집 모드로 들어감;
+ - `Esc` - 편집 모드를 종료함;
+ - `Tab` - 순차적으로 포커스를 행의 다음 셀 위로 이동하고, 마지막 셀에 도달하면 다음 행으로 이동합니다; 셀이 편집 모드인 경우에는 행의 다음 편집 가능한 셀로 이동하고, 편집 가능한 가장 오른쪽 셀에서 `CANCEL` 및 `DONE` 버튼으로 이동하고, `DONE` 버튼으로 현재 편집된 행 안의 편집 가능한 가장 왼쪽 셀로 이동합니다. 다음 셀을 편집할 수 없으면 선택해야 합니다;
+ - `Shift + Tab` - 순차적으로 행의 이전 셀로 포커스를 이동하고, 첫 번째 셀에 도달하면 포커스를 이전 행으로 이동합니다. 셀이 편집 모드인 경우에는 행의 이전 편집 가능한 셀로 이동하고, 편집 가능한 가장 오른쪽 셀에서 `CANCEL` 및 `DONE` 버튼으로 이동하고, `DONE` 버튼으로 현재 편집된 행 안의 편집 가능한 가장 왼쪽 셀로 이동합니다. 셀을 편집할 수 없으면 선택해야 합니다;
+ - `Space` -  행을 선택할 수 있는 경우에는 스페이스 키를 누르면 행 선택을 트리거합니다;
+ - `Alt + 왼쪽 화살표` 트리 그리드 행의 위 - 셀은 선택되고 포커스되어지며 선택된 셀 행에 하위가 있으면 행은 접혀집니다;
+ - `Alt + 위 화살표` 트리 그리드 행의 위 - 셀은 선택되고 포커스되어지며 선택된 셀 행에 하위가 있으면 행은 접혀집니다;
+ - `Alt + 오른쪽 화살표` 트리 그리드 행의 위 - 셀은 선택되고 포커스되어지며 선택된 셀 행에 하위가 있으면 행은 전개됩니다;
+ - `Alt + 아래 화살표` 트리 그리드 행의 위 - 셀은 선택되고 포커스되어지며 선택된 셀 행에 하위가 있으면 행은 전개됩니다;
+ - 마우스 `휠` -  포커스 요소를 흐리게 합니다;
 
 <div class="divider--half"></div>
 
-### Known Limitations
+## 알려진 제한 사항
 
-|Limitation|Description|
+|제한 사항|설명|
 |--- |--- |
-|Templating Tree Cells|When templating a tree cell, content that spans outside the boundaries of the cell will not be shown unless positioned in an overlay.|
-|Group By|Group By feature is not supported, because it is inherent to the tree grid.|
+|템플리트 트리 셀|트리 셀을 템플릿으로 만들 때 셀의 경계 외부에있는 내용은 오버레이에 배치되지 않으면 표시되지 않습니다.|
+|Group By|Group By 기능은 트리 그리드에 고유하기 때문에 지원되지 않습니다.|
 
 
 <div class="divider--half"></div>
 
-### API References
+## API 참조
 
 <div class="divider--half"></div>
 
@@ -361,21 +287,21 @@ Keyboard navigation is available by default in the Tree Grid and aims at coverin
 * [IgxTreeGridCellComponent]({environment:angularApiUrl}/classes/igxtreegridcellcomponent.html)
 * [IgxTreeGridRowComponent]({environment:angularApiUrl}/classes/igxtreegridrowcomponent.html)
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
-* [IgxGridComponent Styles]({environment:sassApiUrl}/#function-igx-grid-theme)
+* [IgxGridComponent 스타일]({environment:sassApiUrl}/#function-igx-grid-theme)
 * [IgxGridCellComponent]({environment:angularApiUrl}/classes/igxgridcellcomponent.html)
 * [IgxGridRowComponent]({environment:angularApiUrl}/classes/igxgridrowcomponent.html)
 * [IgxBaseTransactionService]({environment:angularApiUrl}/classes/igxbasetransactionservice.html)
 
 
-### Additional Resources
+## 추가 리소스
 
 <div class="divider--half"></div>
 
-* [Data Grid](../grid/grid.md)
-* [Grid Editing](row_editing.md)
+* [데이터 그리드](../grid/grid.md)
+* [행 편집](row_editing.md)
 
 <div class="divider--half"></div>
-Our community is active and always welcoming to new ideas.
+커뮤니티는 활동적이고 새로운 아이디어를 항상 환영합니다.
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **포럼**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
 * [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

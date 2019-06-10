@@ -2,6 +2,7 @@
 title: Banner Component
 _description: Easily integrate a short, non-intrusive message (along with optional actions) using Ignite UI for Angular Banner component.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Banner component, Angular Banner control
+_language: kr
 ---
 ## Banner
 

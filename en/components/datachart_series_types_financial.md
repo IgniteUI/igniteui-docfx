@@ -1,17 +1,17 @@
 ---
-title: Data Chart Component - Native Angular | Ignite UI for Angular
-_description: The Ignite UI for Angular Data Chart is a charting component that provides modular design of axis, markers, series, legend, and annotation layers. With this chart, you can create multiple instances of these visual elements in the same chart plot area in order to create composite chart views.
-_keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Chart Control, Angular Chart Example, Angular Chart Component, Angular Data Chart
+title: Data Chart | Visualization Tools | Ignite UI for Angular | Infragistics | Financial
+_description: Create a data chart that displays multiple instances of visual elements in the same plot area in order to create composite chart views.
+_keywords: data chart, Ignite UI for Angular, Infragistics
 ---
 
 ## Financial Series
 
-This topic explains various types of financial series in the `IgxDataChart` control. Financial series is a group of the simplest and most common form of chart series that take financial data such as stock prices and render it as collection of OHLC bars or candlesticks along a horizontal line (e.g. `IgxFinancialPriceSeriesComponent`).
+This topic explains various types of financial series in the Angular data chart component. Financial series is a group of the simplest and most common form of data chart series that take financial data such as stock prices and render it as collection of OHLC bars or candlesticks along a horizontal line (e.g. `IgxFinancialPriceSeriesComponent`).
 
 ### Demo
 
-<div class="sample-container" style="height: 400px">
-    <iframe id="data-chart-type-financial-series-iframe" src='{environment:demosBaseUrl}/charts/data-chart-type-financial-series' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 400px">
+    <iframe id="data-chart-type-financial-series-iframe" src='{environment:demosBaseUrl}/charts/data-chart-type-financial-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-type-financial-series-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
@@ -73,14 +73,14 @@ Financial indicators are often used by traders to measure changes and to show tr
 
 ### Required Axes
 
-The `IgxDataChart` control provides various types of axes but all financial series can only use the `IgxNumericYAxisComponent` as Y-Axis and `IgxCategoryXAxisComponent`, `IgxOrdinalTimeXAxisComponent`, or `IgxTimeXAxisComponent` as X-Axis.
+The Angular data chart component provides various types of axes but all financial series can only use the `IgxNumericYAxisComponent` as Y-Axis and `IgxCategoryXAxisComponent`, `IgxOrdinalTimeXAxisComponent`, or `IgxTimeXAxisComponent` as X-Axis.
 
 ### Required Data
 
 Financial series, indicators, and overlays have the following data requirements:
 
 -   The data source must be an array or a list of data items
--   The data source must contain at least one data item otherwise the chart will not render the financial series.
+-   The data source must contain at least one data item otherwise the data chart will not render the financial series.
 -   All data items must contain at least one data column (string or date time) which should be mapped to the `Label` property of the financial axis (e.g. `IgxCategoryXAxisComponent`)
 -   All data items must contain 5 numeric data column which should be mapped using properties of a financial series: `OpenMemberPath`, `HighMemberPath`, `LowMemberPath`, `CloseMemberPath`, `VolumeMemberPath`
 
@@ -92,9 +92,7 @@ this.state = { dataSource: SampleFinancialData.create() }
 
 ### Required Modules
 
-<!-- Angular -->
-
-In order to use financial series, you need to import the following modules in your app during load and register data chart modules:
+The financial series require the following modules:
 
 ```typescript
 // axis' modules:
@@ -128,8 +126,8 @@ This code demonstrates how to create an instance of data chart with `IgxFinancia
     [dataSource]="dataSource"
     width="700px"
     height="500px">
-    <igx-category-x-axis name="xAxis" label="Date" />
-    <igx-numeric-y-axis  name="yAxis" />
+    <igx-category-x-axis name="xAxis" label="Date"></igx-category-x-axis>
+    <igx-numeric-y-axis  name="yAxis"></igx-numeric-y-axis>
     <igx-bollinger-bands-overlay
         name="series1"
         xAxisName="xAxis"
@@ -138,7 +136,8 @@ This code demonstrates how to create an instance of data chart with `IgxFinancia
         highMemberPath="High"
         openMemberPath="Open"
         closeMemberPath="Close"
-        volumeMemberPath="Volume" />
+        volumeMemberPath="Volume">
+    </igx-bollinger-bands-overlay>
 
     <igx-financial-price-series
         name="series2"
@@ -149,7 +148,8 @@ This code demonstrates how to create an instance of data chart with `IgxFinancia
         highMemberPath="High"
         openMemberPath="Open"
         closeMemberPath="Close"
-        volumeMemberPath="Volume"  />
+        volumeMemberPath="Volume">
+    </igx-financial-price-series>
 
     <igx-median-price-indicator
         name="series3"
@@ -160,7 +160,8 @@ This code demonstrates how to create an instance of data chart with `IgxFinancia
         highMemberPath="High"
         openMemberPath="Open"
         closeMemberPath="Close"
-        volumeMemberPath="Volume" />
+        volumeMemberPath="Volume">
+    </igx-median-price-indicator>
  </igx-data-chart>
 ```
 

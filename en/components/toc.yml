@@ -85,6 +85,9 @@
     - name: Conditional Cell Styling
       href: grid/conditional_cell_styling.md
       new: false
+    - name: Keyboard navigation
+      href: grid/keyboard_navigation.md
+      new: true
     - name: Multi Row Layout
       href: grid/multi_row_layout.md
       new: true
@@ -161,6 +164,9 @@
     - name: Aggregations
       href: treegrid/aggregations.md
       new: false
+    - name: Keyboard navigation
+      href: treegrid/keyboard_navigation.md
+      new: true
 - name: Hierarchical Grid
   href: hierarchicalgrid/hierarchical_grid.md
   new: true
@@ -229,6 +235,9 @@
     # - name: Conditional Cell Styling
     #   href: hierarchicalgrid/conditional_cell_styling.md
     #   new: true
+    - name: Keyboard navigation
+      href: hierarchicalgrid/keyboard_navigation.md
+      new: true
 - name: List View
   href: list.md
 - name: Combo
@@ -486,6 +495,27 @@
 - name: Radial Gauge
   href: radialgauge.md
   new: false
+- name: Maps
+  header: true
+  href: map_overview.md
+  new: true
+- name: Map
+- name: Binding CSV File
+- name: Binding JSON File
+- name: Binding Data Model
+- name: Binding Shape File
+- name: Binding Multiple Shapes
+- name: Binding Multiple Sources
+- name: Scatter Area Series
+- name: Scatter Contour Series
+- name: Scatter Density Series
+- name: Scatter Proportional Series
+- name: Scatter Symbol Series
+- name: Shape Polygon Series
+- name: Shape Polyline Series
+- name: Wrold Connections
+- name: World Locations
+- name: World Utility
 - name: Styling & Themes
   header: true
 - name: Themes

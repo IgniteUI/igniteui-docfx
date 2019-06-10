@@ -102,6 +102,49 @@ igx-buttongroup{
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="buttonGroup-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
 </div>
 
+#### 表示密度
+[`displayDensity`]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html#displaydensity) 入力を使用して、ボタン グループの表示密度を設定します。これにより、グループ内のボタンのスタイルが、cosy、compact、または comfortable (デフォルト値) に設定されます。
+
+> [!NOTE] 
+> ボタン グループ内のボタンの表示密度は、明示的に指定されている場合は変更されません。
+
+```typescript
+// sample.component.ts
+
+...
+public displayDensity = "comfortable";
+public displayDensities;
+
+public ngOnInit() {
+    this.displayDensities = [
+        { label: "compact", selected: this.displayDensity === "compact", togglable: true },
+        { label: "cosy", selected: this.displayDensity === "cosy", togglable: true },
+        { label: "comfortable", selected: this.displayDensity === "comfortable", togglable: true }
+    ];
+}
+
+public selectDensity(event) {
+    this.displayDensity = this.displayDensities[event.index].label;
+}
+...
+```
+
+```html
+<!-- sample.component.html -->
+
+<article class="sample-column">
+    <igx-buttongroup [multiSelection]="false" [values]="displayDensities" (onSelect)="selectDensity($event)"
+        [displayDensity]="displayDensity">
+    </igx-buttongroup>
+</article>
+```
+<div class="sample-container loading" style="height: 60px">
+    <iframe id="buttonGroup-sample-5-iframe" seamless="" width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/button-group-sample-5" class="lazyload">
+</iframe></div>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="buttonGroup-sample-5-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
+</div>
+
 #### カスタム トグル ボタン
 [`values`]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html#values) 入力を使用して、ボタン グループ内のカスタマイズされたボタンの配列を設定します。
 

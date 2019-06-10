@@ -37,7 +37,7 @@
     - name: フィルタリング
       href: grid/filtering.md
       new: false
-    - name: Excel スタイル フィルタリング
+    - name: Excel フィルタリング
       href: grid/excel_style_filtering.md
       new: true
     - name: 並べ替え
@@ -85,6 +85,9 @@
     - name: 条件付きセルのスタイル設定
       href: grid/conditional_cell_styling.md
       new: false
+    - name: キーボードナビゲーション
+      href: grid/keyboard_navigation.md
+      new: true
     - name: 複数行レイアウト
       href: grid/multi_row_layout.md
       new: true
@@ -116,7 +119,7 @@
     - name: フィルタリング
       href: treegrid/filtering.md
       new: false
-    - name: Excel スタイル フィルタリング
+    - name: Excel フィルタリング
       href: treegrid/excel_style_filtering.md
       new: true
     - name: 並べ替え
@@ -161,6 +164,9 @@
     - name: 集計 
       href: treegrid/aggregations.md
       new: false
+    - name: キーボードナビゲーション
+      href: treegrid/keyboard_navigation.md
+      new: true
 - name: Hierarchical Grid
   href: hierarchicalgrid/hierarchical_grid.md
   new: true
@@ -189,7 +195,7 @@
     - name: フィルタリング
       href: hierarchicalgrid/filtering.md
       new: true
-    - name: Excel スタイル フィルタリング
+    - name: Excel フィルタリング
       href: hierarchicalgrid/excel_style_filtering.md
       new: true
     - name: 並べ替え
@@ -229,6 +235,9 @@
     # - name: 条件付きセルのスタイル設定
     #   href: hierarchicalgrid/conditional_cell_styling.md
     #   new: true
+    - name: キーボードナビゲーション
+      href: hierarchicalgrid/keyboard_navigation.md
+      new: true
 - name: List View
   href: list.md
 - name: Combo
@@ -238,7 +247,7 @@
     - name: 機能
       href: combo_features.md
       new: false
-    - name: リモート バインディング
+    - name: リモートバインディング
       href: combo_remote.md
       new: true
     - name: テンプレート
@@ -254,7 +263,7 @@
      - name: アクティブ化
        href: spreadsheet_activation.md
        new: true
-     - name: クリップボードでの作業
+     - name: クリップボード
        href: spreadsheet_clipboard.md
        new: true
      - name: 条件付き書式
@@ -328,7 +337,7 @@
       #  - name: Requirements
       #    href: datachart_series_requirements.md
       #    new: true
-        - name: カテゴリ シリーズ 
+        - name: カテゴリシリーズ 
           href: datachart_series_types_category.md
           new: true
         - name: ファイナンシャル シリーズ 
@@ -337,33 +346,33 @@
         - name: 極座標シリーズ 
           href: datachart_series_types_polar.md
           new: true
-        - name: ラジアル シリーズ 
+        - name: ラジアルシリーズ 
           href: datachart_series_types_radial.md
           new: true
-        - name: 範囲シリーズ 
+        - name: エリア シリーズ 
           href: datachart_series_types_range.md
           new: true
-        - name: 散布エリア シリーズ 
+        - name: 散布図 - エリア シリーズ 
           href: datachart_series_types_scatter_area.md
           new: true
-        - name: 散布等高線シリーズ
+        - name: 散布図 - 等高線シリーズ
           href: datachart_series_types_scatter_contour.md
           new: true
-        - name: 散布バブル シリーズ 
+        - name: 散布図 - バブル シリーズ 
           href: datachart_series_types_scatter_bubble.md
           new: true
         # - name: Scatter HD Series
         #  href: datachart_series_types_scatter_hd.md
         #  new: true
-        - name: 散布マーカー シリーズ
+        - name: 散布図 - マーカー シリーズ
           href: datachart_series_types_scatter_marker.md
           new: true
-        - name: 散布図形シリーズ
+        - name: 散布図 - 図形シリーズ
           href: datachart_series_types_shape.md
           new: true
-        # - name: Stacked Series
-        #   href: datachart_series_types_stacked.md
-        #   new: true
+        - name: 積層シリーズ
+          href: datachart_series_types_stacked.md
+          new: true
     #- name: Animations
     #  href: datachart_series_animations.md
     #  new: true
@@ -385,7 +394,7 @@
     #- name: Synchronization
     #  href: datachart_chart_synchronization.md
     #  new: true
-    - name: タイトルとサブタイトル
+    - name: タイトル/サブタイトル
       href: datachart_chart_titles.md
       new: true
     - name: ツールチップ
@@ -560,7 +569,7 @@
   href: linear_progress.md
 - name: Circular Progress
   href: circular_progress.md
-- name: 仮想 For ディレクティブ
+- name: 仮想スクロール ディレクティブ
   href: for_of.md
 - name: Chip
   href: chip.md
@@ -585,10 +594,10 @@
   href: overlay_main.md
   new: true
   items:
-  - name: ポジション ストラテジ
+  - name: ポジションストラテジ
     href: overlay_position.md
     new: true
-  - name: スクロール ストラテジ
+  - name: スクロールストラテジ
     href: overlay_scroll.md
     new: false
 - name: Drag and Drop

@@ -1,17 +1,17 @@
 ---
-title: Data Chart Component - Native Angular | Ignite UI for Angular
-_description: The Ignite UI for Angular Data Chart is a charting component that provides modular design of axis, markers, series, legend, and annotation layers. With this chart, you can create multiple instances of these visual elements in the same chart plot area in order to create composite chart views.
-_keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Chart Control, Angular Chart Example, Angular Chart Component, Angular Data Chart
+title: Data Chart | Visualization Tools | Ignite UI for Angular | Infragistics | Category Series
+_description: Create a data chart that displays multiple instances of visual elements in the same plot area in order to create composite chart views.
+_keywords: data chart, Ignite UI for Angular, Infragistics
 ---
 
 ## Category Series
 
-This topic explains various types of category series in the `IgxDataChart` control. Category series is a group of the simplest and most common form of chart series that take data and render it as collection of data points stretched along a horizontal line (e.g. `IgxColumnSeriesComponent`) or vertical line (e.g. `BarSeries`).
+This topic explains various types of category series in the Angular data chart component. Category series is a group of the simplest and most common form of chart series that take data and render it as collection of data points stretched along a horizontal line (e.g. `IgxColumnSeriesComponent`) or vertical line (e.g. `BarSeries`).
 
 ### Demo
 
-<div class="sample-container" style="height: 400px">
-    <iframe id="data-chart-type-category-series-iframe" src='{environment:demosBaseUrl}/charts/data-chart-type-category-series' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 400px">
+    <iframe id="data-chart-type-category-series-iframe" src='{environment:demosBaseUrl}/charts/data-chart-type-category-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-type-category-series-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
@@ -39,7 +39,7 @@ The following table lists all types of category series and their descriptions:
 
 ### Required Axes
 
-The `IgxDataChart` control provides various types of axes but only the following types of axes can be used with category series.
+The Angular data chart component provides various types of axes but only the following types of axes can be used with category series.
 
 | Series Type                    | YAxis Type                 | XAxis Type                                                                           |
 | ------------------------------ | -------------------------- | ------------------------------------------------------------------------------------ |
@@ -70,9 +70,7 @@ this.state = { dataSource: SampleCategoryData.create() }
 
 ### Required Modules
 
-<!-- Angular -->
-
-In order to use category series, you need to import the following modules in your app during load and register data chart modules:
+The category series require the following modules:
 
 ```typescript
 // axis' modules:
@@ -116,13 +114,14 @@ This code demonstrates how to create an instance of data chart with `IgxColumnSe
     [dataSource]="dataSource"
     width="700px"
     height="500px">
-    <igx-category-x-axis name="xAxis" label="Year" />
-    <igx-numeric-y-axis  name="yAxis" />
+    <igx-category-x-axis name="xAxis" label="Year"></igx-category-x-axis>
+    <igx-numeric-y-axis  name="yAxis"></igx-numeric-y-axis>
     <igx-column-series
         name="series1"
         xAxisName="xAxis"
         yAxisName="yAxis"
-        valueMemberPath="USA" />
+        valueMemberPath="USA">
+    </igx-column-series>
  </igx-data-chart>
 ```
 
@@ -135,13 +134,14 @@ Note that you can also use above code to create other type of category series by
     [dataSource]="dataSource"
     width="700px"
     height="500px">
-    <igx-numeric-x-axis  name="xAxis" />
-    <igx-category-y-axis name="yAxis" label="Year" />
+    <igx-numeric-x-axis  name="xAxis"></igx-numeric-x-axis>
+    <igx-category-y-axis name="yAxis" label="Year"></igx-category-y-axis>
     <igx-bar-series
         name="series1"
         xAxisName="xAxis"
         yAxisName="yAxis"
-        valueMemberPath="USA" />
+        valueMemberPath="USA">
+    </igx-bar-series>
  </igx-data-chart>
 ```
 

@@ -1,17 +1,17 @@
 ---
-title: Data Chart Component - Native Angular | Ignite UI for Angular
-_description: The Ignite UI for Angular Data Chart is a charting component that provides modular design of axis, markers, series, legend, and annotation layers. With this chart, you can create multiple instances of these visual elements in the same chart plot area in order to create composite chart views.
-_keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Chart Control, Angular Chart Example, Angular Chart Component, Angular Data Chart
+title: Data Chart | Visualization Tools | Ignite UI for Angular | Infragistics | Range
+_description: Create a data chart that displays multiple instances of visual elements in the same plot area in order to create composite chart views.
+_keywords: data chart, Ignite UI for Angular, Infragistics
 ---
 
 ## Range Series
 
-This topic explains various types of range series in the `IgxDataChart` control. range series is a group of chart series that take two numeric data columns and render them as collection of data points stretched in horizontal orientation (e.g. `IgxRangeAreaSeriesComponent`)
+This topic explains various types of range series in the Angular data chart component. The range series is a group of chart series that takes two numeric data columns and render them as collection of data points stretched in horizontal orientation (e.g. `IgxRangeAreaSeriesComponent`)
 
 ### Demo
 
-<div class="sample-container" style="height: 400px">
-    <iframe id="data-chart-type-range-series-iframe" src='{environment:demosBaseUrl}/charts/data-chart-type-range-series' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 400px">
+    <iframe id="data-chart-type-range-series-iframe" src='{environment:demosBaseUrl}/charts/data-chart-type-range-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-type-range-series-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
@@ -31,7 +31,7 @@ The following table lists all types of range series and their descriptions:
 
 ### Required Axes
 
-The `IgxDataChart` control provides various types of axes but only the following types of axes can be used with range series.
+The Angular data chart component provides various types of axes but only the following types of axes can be used with range series.
 
 | Series Type                     | YAxis Type                 | XAxis Type                                                                           |
 | ------------------------------- | -------------------------- | ------------------------------------------------------------------------------------ |
@@ -55,9 +55,7 @@ this.state = { dataSource: SampleRangeData.create() }
 
 ### Required Modules
 
-<!-- Angular -->
-
-In order to use range series, you need to import the following modules in your app during load and register data chart modules:
+In order to use range series, you need to import the following modules in your app during load:
 
 ```typescript
 // in app.module.ts file
@@ -93,14 +91,15 @@ This code demonstrates how to create an instance of data chart with `IgxRangeCol
     [dataSource]="dataSource"
     width="700px"
     height="500px">
-    <igx-category-x-axis name="xAxis" label="Year" />
-    <igx-numeric-y-axis  name="yAxis" />
+    <igx-category-x-axis name="xAxis" label="Year"></igx-category-x-axis>
+    <igx-numeric-y-axis  name="yAxis"></igx-numeric-y-axis>
     <igx-range-column-series
         name="series1"
         xAxisName="xAxis"
         yAxisName="yAxis"
         highMemberPath="High"
-        lowMemberPath="Low" />
+        lowMemberPath="Low">
+    </igx-range-column-series>
  </igx-data-chart>
 ```
 

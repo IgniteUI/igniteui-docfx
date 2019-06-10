@@ -85,6 +85,9 @@
     - name: 조건부 셀 스타일
       href: grid/conditional_cell_styling.md
       new: false
+    - name: Keyboard navigation
+      href: grid/keyboard_navigation.md
+      new: true
     - name: Multi Row Layout
       href: grid/multi_row_layout.md
       new: true
@@ -161,6 +164,9 @@
     - name: Aggregations 
       href: treegrid/aggregations.md
       new: false
+    - name: Keyboard navigation
+      href: treegrid/keyboard_navigation.md
+      new: true
 - name: Hierarchical Grid
   href: hierarchicalgrid/hierarchical_grid.md
   new: true
@@ -229,6 +235,9 @@
     # - name: 조건부 셀 스타일
     #   href: hierarchicalgrid/conditional_cell_styling.md
     #   new: true
+    - name: Keyboard navigation
+      href: hierarchicalgrid/keyboard_navigation.md
+      new: true
 - name: List View
   href: list.md
 - name: Combo
@@ -553,6 +562,9 @@
   href: badge.md
 - name: Icon
   href: icon.md
+- name: Divider
+  href: divider.md
+  new: true
 - name: Linear Progress
   href: linear_progress.md
 - name: Circular Progress

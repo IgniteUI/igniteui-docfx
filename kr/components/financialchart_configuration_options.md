@@ -1,21 +1,21 @@
 ---
-title: 금융 차트 - 컨피규레이터 옵션
-_description: Ignite UI for Angular 금융 차트 컴포넌트는 간단하고 직관적인 API를 사용하여 재무 데이터를 표시하도록 쉽게 구성되어 있으며, 사용자가 데이터를 바인딩하면 차트는 데이터를 시각화하고 해석할 수 있는 다양한 방법을 제공합니다.
-_keywords: Ignite UI for Angular, Angular, 네이티브 Angular 컴포넌트 세트, 네이티브 Angular 컨트롤, 네이티브 Angular 컴포넌트, 네이티브 Angular 컴포넌트 라이브러리, Angular 차트, Angular 차트 컨트롤, Angular 차트 예제, Angular 그리드 컴포넌트, Angular 차트 컴포넌트, Angular 금융 차트
+제목: 금융 차트 | 데이터 비주얼라이제이션 도구 | Ignite UI for Angular | Infragistics | 컨피규레이터 옵션
+_description: Use the financial chart component to visualize financial data using a simple API. View the demo, dependencies, usage and toolbar for more information. 
+_keywords: financial chart, Ignite UI for Angular, infragistics
 _language: kr
 ---
 
 ## 컨피규레이터 옵션
 
-`IgxFinancialChart` 컨트롤은 탐색 동작, 추세선 레이어, 오버레이, 차트 제목, 부제 등의 사용자 지정이 가능한 많은 비주얼을 제공합니다.
+`IgxFinancialChart` 제어는 탐색 동작, 추세선 레이어, 오버레이, 범례, 차트 제목, 부제 등의 사용자 지정이 가능한 많은 비주얼을 제공합니다.
 
 ### 데모
 
-<div class="sample-container" style="height: 550px">
+<div class="sample-container" style="height: 500px">
     <iframe id="financial-chart-trendlines-iframe" src='{environment:demosBaseUrl}/charts/financial-chart-trendlines' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="financial-chart-trendlines-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="financial-chart-trendlines-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기
     </button>
 </div>
 
@@ -23,7 +23,7 @@ _language: kr
 
 ### 탐색 구성
 
-`IgxFinancialChart` 컨트롤에서 차트 탐색은 기본적으로 사용할 수 있습니다. 그러나, 다음 속성을 설정하여 사용자 정의를 실시할 수 있습니다:
+`IgxFinancialChart` 제어에서 차트 탐색은 기본적으로 활성화됩니다. 그러나, 다음 속성을 설정하여 사용자 정의를 실시할 수 있습니다:
 
 -   `isHorizontalZoomEnabled` - 차트가 사용자 조작에 의해 수평 방향으로 줌이 가능한지 여부를 지정합니다. 기본적으로 이 속성은 true로 설정됩니다.
 -   `isVerticalZoomEnabled` - 차트가 사용자 조작에 의해 수직 방향으로 줌이 가능한지 여부를 지정합니다. 기본적으로 이 속성은 false로 설정됩니다.
@@ -60,7 +60,7 @@ _language: kr
 
 ### 오버레이 구성
 
-기본적으로 오버레이는 igxFinancialChart에 표시되지 않습니다. `BollingerBands` 및 `PriceChannel`의 두 가지 유형의 오버레이가 있습니다. 오버레이의 기본 설정을 사용자 정의할 수도 있습니다. 다음의 코드는 색상, 오버레이의 외곽선 및 두께를 설정하는 방법을 보여줍니다.
+기본적으로 오버레이는 igxFinancialChart에 표시되지 않습니다. `BollingerBands` 및 `PriceChannel`의 2가지 유형의 오버레이가 있습니다. 오버레이의 기본 설정을 사용자 정의할 수도 있습니다. 다음의 코드는 색상, 오버레이의 외곽선 및 두께를 설정하는 방법을 보여줍니다.
 
 ```html
  <igx-financial-chart
@@ -135,5 +135,18 @@ _language: kr
     height="600px"
     chartTitle="Stock Prices"
     subtitle="Between 2000 and 2015">
+ </igx-financial-chart>
+```
+
+### 범례 구성
+
+범례는 기본값으로 표시되지 않습니다. 다음 코드는 범례를 활성화하는 방법을 보여줍니다.
+
+```html
+ <igx-financial-chart
+    [dataSource]="data"
+    width="850px"
+    height="600px"
+    isLegendVisible="true">
  </igx-financial-chart>
 ```

@@ -1,34 +1,34 @@
 ---
-title: Highlighting
-_description: The Ignite UI for Category Chart component simplifies the complexities of the data visualization domain into manageable API so that a user can bind a collection of data, a group of collections, and a data property, and let the charting control do the rest.
-_keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Chart Control, Angular Chart Example, Angular Grid Component, Angular Chart Component, Angular Category Chart
+제목: 카테고리 차트 | 데이터 비주얼라이제이션 도구 | Ignite UI for Angular | 강조 표시 | Infragistics 
+_description: Use the category chart component to analyze and  automatically choose the best chart type to represent data. Learn about our chart types for visualization.
+_keywords: category chart, Ignite UI for Angular, infragistics
 _language: kr
 ---
 
-## Highlighting
+## 강조 표시
 
-This topic provides conceptual information about the highlighting features of the `IgxCategoryChart`.
+이 항목에서는 Ignite UI for Angular 카테고리 차트 컴포넌트의 강조 표시 기능에 대한 개념 정보를 제공합니다.
 
-### Demo
+### 데모
 
 <div class="sample-container" style="height: 500px">
     <iframe id="category-chart-highlighting-sample-iframe" src='{environment:demosBaseUrl}/charts/category-chart-highlighting-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="category-chart-highlighting-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="category-chart-highlighting-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기
     </button>
 </div>
 <div class="divider--half"></div>
 
-### Highlight Layers
+### 강조 표시 레이어
 
-The `IgxCategoryChart` can enable three types of highlighting when hovering over items.
+카테고리 차트 컴포넌트는 항목 위로 마우스를 가져간 경우, 3가지 유형의 강조 표시를 활성화할 수 있습니다.
 
-1.  Series Highlighting will highlight the single data point when the pointer is positioned over it.
+1.  시리즈 강조 표시는 포인터가 데이터 점 위에 있을 때 단일 데이터 점을 강조 표시합니다.
 
-2.  Item Highlighting highlights items in a series either by drawing a banded shape at their position or by rendering a marker at their position.
+2.  항목 강조 표시는 해당 위치에 줄무늬 모양을 그리거나 해당 위치에 마커를 렌더링하여 시리즈의 항목을 강조 표시합니다.
 
-3.  Category Highlighting targets all category axes in the chart. They draw a shape that illuminates the area of the axis closest to the pointer position.
+3.  카테고리 강조 표시는 차트의 모든 카테고리 축을 대상으로 합니다. 포인터 위치에 가장 가까운 축의 영역을 밝게 하는 모양을 그립니다.
 
 ```html
 <igx-category-chart

@@ -6,7 +6,7 @@ _keywords: map, Ignite UI for Angular, infragistics
 
 ## Binding and Overlaying Multiple Shape Files
 
-In the `XamGeographicMap`, you can add multiple geographic series objects to overlay a few shapefiles with geo-spacial data. For example, `GeographicSymbolSeries` for plotting geographic locations of ports, the `GeographicPolylineSeries` for plotting routes between ports, and the `GeographicShapeSeries` for plotting shapes of countries.
+In the `IgxGeographicMap`, you can add multiple geographic series objects to overlay a few shapefiles with geo-spacial data. For example, `GeographicSymbolSeries` for plotting geographic locations of ports, the `GeographicPolylineSeries` for plotting routes between ports, and the `GeographicShapeSeries` for plotting shapes of countries.
 
 ### Demo
 
@@ -34,14 +34,14 @@ In constructor of your page, add a `ShapeDataSource` for each shapefile that you
 
 ### Overlaying Shape Polygons
 
-Create `GeographicShapeSeries` object with shapes of countries of the world and add it to `IgxSeriesComponent` collection of the `XamGeographicMap`.
+Create `GeographicShapeSeries` object with shapes of countries of the world and add it to `IgxSeriesComponent` collection of the `IgxGeographicMap`.
 
 ### Overlaying Shape Polyline
 
-Create `GeographicPolylineSeries` object with routes between major ports and add it to `IgxSeriesComponent` collection of the `XamGeographicMap`.
+Create `GeographicPolylineSeries` object with routes between major ports and add it to `IgxSeriesComponent` collection of the `IgxGeographicMap`.
 
 ### Overlaying Shape Points
 
-Create `GeographicSymbolSeries` object with locations of major cities and add it to `IgxSeriesComponent` collection of the `XamGeographicMap`.
+Create `GeographicSymbolSeries` object with locations of major cities and add it to `IgxSeriesComponent` collection of the `IgxGeographicMap`.
 
 Also, you might want to hide geographic imagery from the map background content if your shape files provided sufficient geographic context (e.g. shape of countries) for your application.

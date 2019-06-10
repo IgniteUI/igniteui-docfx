@@ -129,15 +129,15 @@ public chipsOrderChanged(event: IChipsAreaReorderEventArgs) {
 
 #### Chip Templates
 
-The [`IgxChipComponent`]({environment:angularApiUrl}/classes/igxchipcomponent.html)'s main structure consists of `select icon`, [`prefix`]({environment:angularApiUrl}/classes/igxprefixdirective.html), `chip content`, [`suffix`]({environment:angularApiUrl}/classes/igxsuffixdirective.html) and `remove button`. All of those elements are templatable.
+The [`IgxChipComponent`]({environment:angularApiUrl}/classes/igxchipcomponent.html)'s main structure consists of `select icon`, `prefix`, `chip content`, `suffix` and `remove button`. All of those elements are templatable.
 
-The content of the chip is taken by the content defined inside the chip template except elements that define the [`prefix`]({environment:angularApiUrl}/classes/igxprefixdirective.html) and  [`suffix`]({environment:angularApiUrl}/classes/igxsuffixdirective.html) of the chip. You can define any type of content you need.
+The content of the chip is taken by the content defined inside the chip template except elements that define the `prefix` and  `suffix` of the chip. You can define any type of content you need.
 
-The [`prefix`]({environment:angularApiUrl}/classes/igxprefixdirective.html) and [`suffix`]({environment:angularApiUrl}/classes/igxsuffixdirective.html) are also elements inside the actual chip area where they can be templated by your preference. The way they can be specified is by respectively using the [`IgxPrefix`]({environment:angularApiUrl}/classes/igxprefixdirective.html) and [`IxgSuffix`]({environment:angularApiUrl}/classes/igxsuffixdirective.html) directives:
+The `prefix` and `suffix` are also elements inside the actual chip area where they can be templated by your preference. The way they can be specified is by respectively using the `IgxPrefix` and `IxgSuffix` directives:
 
 ![Prefix and Suffix](../images/chip/prefix_suffix.jpg)
 
-Example of using an icon for both [`prefix`]({environment:angularApiUrl}/classes/igxprefixdirective.html) and [`suffix`]({environment:angularApiUrl}/classes/igxsuffixdirective.html) and a text for `content`:
+Example of using an icon for both `prefix` and `suffix` and a text for `content`:
 
 ```html
 <igx-chip>
@@ -198,8 +198,6 @@ The chip can be focused using the `Tab` key or by clicking on it. When in chip a
 * [IgxChipComponent]({environment:angularApiUrl}/classes/igxchipcomponent.html)
 * [IgxChipComponent Styles]({environment:sassApiUrl}/index.html#function-igx-chip-theme)
 * [IgxChipsAreaComponent]({environment:angularApiUrl}/classes/igxchipsareacomponent.html)
-* [IgxPrefixDirective]({environment:angularApiUrl}/classes/igxprefixdirective.html)
-* [IgxSuffixDirective]({environment:angularApiUrl}/classes/igxsuffixdirective.html)
 
 ### References
 

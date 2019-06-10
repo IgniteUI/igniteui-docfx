@@ -15,7 +15,7 @@ The Ignite UI for Angular radial gauge component is a data visualization tool ca
 The following sample demonstrates how setting multiple properties on the same radial gauge can transform it to completely different radial gauge.
 
 <div class="sample-container loading" style="height: 375px">
-    <iframe id="radial-gauge-sample-iframe" src='{environment:demosBaseUrl}/gauges/radial-gauge-animation' width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="radial-gauge-sample-iframe" src='{environment:demosBaseUrl}/gauges/radial-gauge-animation' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="radial-gauge-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
@@ -28,14 +28,12 @@ The following sample demonstrates how setting multiple properties on the same ra
 
 When installing the gauge package, the core package must also be installed.
 
-**npm install igniteui-angular-gauges igniteui-angular-core**
+-   **npm install --save igniteui-angular-core**
+-   **npm install --save igniteui-angular-gauges**
 
-The radial gauge is exported as an `NgModule`, you need to import the
-`IgxRadialGaugeModule` inside your `AppModule`:
+### Required Modules
 
-<!-- -->
-
-<!-- -->
+The `IgxRadialGauge` requires the following modules:
 
 ```typescript
 // app.module.ts
@@ -60,19 +58,22 @@ The following code demonstrates how create a radial gauge containing a needle an
 
 ```html
  <igx-radial-gauge height="400px" width="400px"
-    value=25
-    interval=5
-    minimumValue=0
-    maximumValue=50>
+    value="25"
+    interval="5"
+    minimumValue="0"
+    maximumValue="50">
     <igx-radial-graph-range startValue="0"
                             endValue="30"
-                            brush="red"/>
+                            brush="red">
+    </igx-radial-graph-range>
     <igx-radial-graph-range startValue="30"
                             endValue="60"
-                            brush="yellow"/>
+                            brush="yellow">
+    </igx-radial-graph-range>
     <igx-radial-graph-range startValue="60"
                             endValue="100"
-                            brush="green"/>
+                            brush="green">
+    </igx-radial-graph-range>
 </igx-radial-gauge>
 ```
 
@@ -104,7 +105,7 @@ The backing can be circular or fitted. A circular shape creates a 360 degree cir
 ```
 
 <div class="sample-container loading" style="height: 320px">
-    <iframe id="radial-gauge-backing-iframe" data-src='{environment:demosBaseUrl}/gauges/radial-gauge-backing' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+    <iframe id="radial-gauge-backing-iframe" data-src='{environment:demosBaseUrl}/gauges/radial-gauge-backing' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="radial-gauge-backing-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
@@ -132,7 +133,7 @@ The scale is visual element that highlights full range of values in the gauge wh
 ```
 
 <div class="sample-container loading" style="height: 320px">
-    <iframe id="radial-gauge-scale-iframe" data-src='{environment:demosBaseUrl}/gauges/radial-gauge-scale' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+    <iframe id="radial-gauge-scale-iframe" data-src='{environment:demosBaseUrl}/gauges/radial-gauge-scale' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="radial-gauge-scale-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
@@ -156,7 +157,7 @@ The radial gauge labels are visual elements displaying numeric values at a speci
 ```
 
 <div class="sample-container loading" style="height: 320px">
-    <iframe id="radial-gauge-labels-iframe" data-src='{environment:demosBaseUrl}/gauges/radial-gauge-labels' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+    <iframe id="radial-gauge-labels-iframe" data-src='{environment:demosBaseUrl}/gauges/radial-gauge-labels' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="radial-gauge-labels-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
@@ -165,7 +166,7 @@ The radial gauge labels are visual elements displaying numeric values at a speci
 
 ### Tick Marks
 
-Tick marks are thin lines radiating from the center of the radial gauge. There are two types of tick marks: major and minor. Major tick marks are displayed at the `interval` between the `minimumValue` and `maximumValue` properties. Use the `minorTickCount` property to specify the number of minor tick marks displayed between each major tick mark. You can control the length of tick marks by setting a fraction (beteen 0 and 1) to `tickStartExtent`, `tickEndExtent`, `minorTickStartExtent`, and `minorTickEndExtent` properties.
+Tick marks are thin lines radiating from the center of the radial gauge. There are two types of tick marks: major and minor. Major tick marks are displayed at the `interval` between the `minimumValue` and `maximumValue` properties. Use the `minorTickCount` property to specify the number of minor tick marks displayed between each major tick mark. You can control the length of tick marks by setting a fraction (between 0 and 1) to `tickStartExtent`, `tickEndExtent`, `minorTickStartExtent`, and `minorTickEndExtent` properties.
 
 ```html
 <igx-radial-gauge
@@ -185,7 +186,7 @@ Tick marks are thin lines radiating from the center of the radial gauge. There a
 ```
 
 <div class="sample-container loading" style="height: 320px">
-    <iframe id="radial-gauge-tickmarks-iframe" data-src='{environment:demosBaseUrl}/gauges/radial-gauge-tickmarks' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+    <iframe id="radial-gauge-tickmarks-iframe" data-src='{environment:demosBaseUrl}/gauges/radial-gauge-tickmarks' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="radial-gauge-tickmarks-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
@@ -216,7 +217,7 @@ A range highlights a set of continuous values bound by a specified `minimumValue
 ```
 
 <div class="sample-container loading" style="height: 320px">
-    <iframe id="radial-gauge-ranges-iframe" data-src='{environment:demosBaseUrl}/gauges/radial-gauge-ranges' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+    <iframe id="radial-gauge-ranges-iframe" data-src='{environment:demosBaseUrl}/gauges/radial-gauge-ranges' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="radial-gauge-ranges-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
@@ -253,7 +254,7 @@ You can enable an interactive mode of the gauge (using `isNeedleDraggingEnabled`
 ```
 
 <div class="sample-container loading" style="height: 320px">
-    <iframe id="radial-gauge-needle-iframe" data-src='{environment:demosBaseUrl}/gauges/radial-gauge-needle' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+    <iframe id="radial-gauge-needle-iframe" data-src='{environment:demosBaseUrl}/gauges/radial-gauge-needle' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="radial-gauge-needle-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz

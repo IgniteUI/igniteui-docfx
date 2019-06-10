@@ -1,18 +1,17 @@
 ---
-title: Data Chart Component - Native Angular | Ignite UI for Angular
-mentionedTypes: ['DataChart']
-_description: The Ignite UI for Angular Data Chart is a charting component that provides modular design of axis, markers, series, legend, and annotation layers. With this chart, you can create multiple instances of these visual elements in the same chart plot area in order to create composite chart views.
-_keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Chart Control, Angular Chart Example, Angular Grid Component, Angular Chart Component, Angular Data Chart
+title: Data Chart | Visualization Tools | Ignite UI for Angular | Infragistics
+_description: Create a data chart that displays multiple instances of visual elements in the same plot area in order to create composite chart views.
+_keywords: data chart, Ignite UI for Angular, Infragistics
 ---
 
 ## Data Chart
 
-The `IgxDataChart` is a charting component that provides modular design of axis, markers, series, legend, and annotation layers. With this chart, you can create multiple instances of these visual elements in the same chart plot area in order to create composite chart views.
+The Angular data chart is a charting component that provides modular design of axis, markers, series, legend, and annotation layers. With this data chart, you can create multiple instances of these visual elements in the same chart plot area in order to create composite chart views.
 
 ### Demo
 
-<div class="sample-container" style="height: 500px">
-    <iframe id="data-chart-overview-iframe" src='{environment:demosBaseUrl}/charts/data-chart-overview' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 500px">
+    <iframe id="data-chart-overview-iframe" src='{environment:demosBaseUrl}/charts/data-chart-overview' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-overview-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
@@ -23,16 +22,14 @@ The `IgxDataChart` is a charting component that provides modular design of axis,
 
 ### Dependencies
 
-When installing the chart package, the core package must also be installed.
+When installing the data chart package, the core package must also be installed.
 
-**npm install igniteui-angular-charts igniteui-angular-core**
+-   **npm install --save igniteui-angular-core**
+-   **npm install --save igniteui-angular-charts**
 
-The data chart is exported as an `NgModule`, you need to import the
-`IgxDataChartCoreModule` inside your `AppModule`:
+### Required Modules
 
-<!-- -->
-
-<!-- -->
+The Angular data chart component requires the following modules:
 
 ```typescript
 // data chart's modules required for all series:
@@ -64,11 +61,11 @@ export class AppModule { /* ... */ }
 
 ### Supported Series
 
-The `IgxDataChart` control supports over 65 types of series including [Category Series](datachart_series_types_category.md), [Financial Series](datachart_series_types_financial.md), [Polar Series](datachart_series_types_polar.md), [Radial Series](datachart_series_types_radial.md), [Range Series](datachart_series_types_range.md), [Scatter Series](datachart_series_types_scatter_bubble.md), and [Shape Series](datachart_series_types_shape.md). Refer to the [Series](datachart_series_types.md) topic, for a full list of supported types of series and how to use them.
+The Angular data chart component supports over 65 types of series including [Category Series](datachart_series_types_category.md), [Financial Series](datachart_series_types_financial.md), [Polar Series](datachart_series_types_polar.md), [Radial Series](datachart_series_types_radial.md), [Range Series](datachart_series_types_range.md), [Scatter Series](datachart_series_types_scatter_bubble.md), and [Shape Series](datachart_series_types_shape.md). Refer to the [Series](datachart_series_types.md) topic, for a full list of supported types of series and how to use them.
 
 ### Supported Axes
 
-The `IgxDataChart` control supports various types of axis that are intended to use with specific type of series. The following table lists which axes can be used with type of series.   Refer to the [Series](datachart_series_types.md) and [Axis](datachart_axis_types.md) topics, for more information on how to use these types of axis.
+The Angular data chart component supports various types of axis that are intended to use with specific type of series. The following table lists which axes can be used with type of series.   Refer to the [Series](datachart_series_types.md) and [Axis](datachart_axis_types.md) topics, for more information on how to use these types of axis.
 
 | Axis Type          | Supported Series Types                                                                                                                                                                                                                                                           |
 | ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

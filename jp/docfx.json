@@ -21,7 +21,7 @@
                     "toc.yml",
                     "*.md"
                 ],
-                "exclude": ["obj/**", "_site/**"]
+                "exclude": ["obj/**", "_site/**", "components/grids_templates/**"]
             }
         ],
         "resource": [

@@ -1,19 +1,17 @@
 ---
-title: Excel Library Component - Native Angular | Ignite UI for Angular
-_description: The Ignite UI for Excel Library component with Workbook Operations.
-_keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Excel Library, Angular Excel Library Example, Angular Excel Library Component, Angular Excel Engine, Workbook, Font, Document Properties
+title: Excel Library| Data Spreadsheet | Ignite UI for Angular | Infragistics
+_description: Use the Excel Library to work with spreadsheet data using Microsoft Excel features. Easily transfer data from excel to your application. 
+_keywords: Excel library, Ignite UI for Angular, Infragistics
 ---
 
 ## Using Workbooks
 
-The Infragistics Excel Engine enables you to save data to and load data from Microsoft® Excel®. You can create workbooks and worksheets, input data, and export the data to Excel using the library’s various classes. The Infragistics Excel Engine makes it easy to export the data in your application as an Excel spreadsheet as well as import data from Excel into your application. 
+The Infragistics Angular Excel Engine enables you to save data to and load data from Microsoft® Excel®. You can create workbooks and worksheets, input data, and export the data to Excel using the library’s various classes. The Infragistics Angular Excel Engine makes it easy to export the data in your application as an Excel spreadsheet as well as import data from Excel into your application. 
 
 ### Demo
 
-<div class="sample-container" style="height: 500px">
-    <iframe id="excel-library-overview-sample-iframe" 
-	src='{environment:demosBaseUrl}/excel-library/operations-on-workbooks' 
-	width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 500px">
+    <iframe id="excel-library-overview-sample-iframe" src='{environment:demosBaseUrl}/excel-library/operations-on-workbooks' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 
 <div class="divider--half"></div>
@@ -32,7 +30,7 @@ font.height = 16 * 20;
 
 ### Setting Workbook Properties
 
-Microsoft Excel® document properties provide information to help organize and keep track of your documents. You can use the Infragistics Excel Library to set these properties using the `Workbook` object’s `documentProperties` property. The available properties are:
+Microsoft Excel® document properties provide information to help organize and keep track of your documents. You can use the Infragistics Angular Excel Library to set these properties using the `Workbook` object’s `documentProperties` property. The available properties are:
 
 -   `author`
 

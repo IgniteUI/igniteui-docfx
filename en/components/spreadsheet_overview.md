@@ -6,12 +6,12 @@ _keywords: Spreadsheet, Ignite UI for Angular, Infragistics
 
 ## Angular Spreadsheet
 
-The Angular Spreadsheet component allows visualizing and editing of spreadsheet data. Features include activation, cell editing, conditional formatting, selection, clipboard. 
+The Angular Spreadsheet component allows visualizing and editing of spreadsheet data. Features include activation, cell editing, conditional formatting, selection, clipboard.
 
 ### Demo
 
-<div class="sample-container" style="height: 500px">
-    <iframe id="spreadsheet-overview-sample-iframe" src='{environment:demosBaseUrl}/spreadsheet/spreadsheet-overview' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 500px">
+    <iframe id="spreadsheet-overview-sample-iframe" src='{environment:demosBaseUrl}/spreadsheet/spreadsheet-overview' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 
 <div class="divider--half"></div>
@@ -20,14 +20,13 @@ The Angular Spreadsheet component allows visualizing and editing of spreadsheet 
 
 When installing the spreadsheet package, the core and excel package must also be installed.
 
-**npm install igniteui-angular-core**
-**npm install igniteui-angular-excel**
-**npm install igniteui-angular-spreadsheet**
+-   **npm install --save igniteui-angular-core**
+-   **npm install --save igniteui-angular-excel**
+-   **npm install --save igniteui-angular-spreadsheet**
 
-<!-- -->
+### Required Modules
 
-In order to use the spreadsheet, you need to register the
-`IgxSpreadsheetModule` in your app during load:
+The `IgxSpreadsheet` requires the following modules:
 
 ```typescript
 import { IgxExcelModule } from "igniteui-angular-excel/ES5/igx-excel-module";

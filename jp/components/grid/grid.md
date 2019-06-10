@@ -377,9 +377,184 @@ export class MyComponent implements OnInit {
 
 **注**: リモート データにバインドする場合、グリッドの [`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#autogenerate) プロパティは使用しないことをお勧めします。データを検証して適切な列を生成するためにデータが利用可能である必要があります。リモート サービスの応答が完了するまでデータが利用できないため、グリッドはエラーを発生します。リモート サービスへバインド時に [`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#autogenerate) を使用する機能は今後追加予定です。
 
-### State persistence
+### 複雑なデータ バインディング
 
-Persisting the grid state across pages/sessions is a common scenario and is currently achievable on application level. To demonstrate the approach to take, let's implement state persistence across pages. The example is using the `localStorage` object to store the JSON string of the state, but depending on your needs you may decide to go with the `sessionStorage` object. All implementation details are extracted in the `igxState` directive:
+[IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html) の主な目的は**フラット データ**を処理することですが、これはより複雑なデータを扱うことが不可能であることを意味するものではありません。
+
+現在、グリッド列は複合キーをサポートしていませんが、他の列から列を作成することができます。このセクションでは、**ネスト データ**と**フラット データ**を使用して [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html) を構成する方法について説明します。
+
+#### ネスト データ[`rowData`]({environment:angularApiUrl}/classes/igxrowcomponent.html#rowdata)
+
+以下は、階層データを **IgxGrid** へバインドする方法です。
+    - ネストされたデータを含むセルの値
+    - カスタム列テンプレート
+
+以下は使用するデータです。
+
+```typescript
+export const EMPLOYEE_DATA = [
+    {
+        Age: 55,
+        Employees: [
+            {
+                Age: 43,
+                HireDate: new Date(2011, 6, 3),
+                ID: 3,
+                Name: "Michael Burke",
+                Title: "Senior Software Developer"
+            },
+            {
+                Age: 29,
+                HireDate: new Date(2009, 6, 19),
+                ID: 2,
+                Name: "Thomas Anderson",
+                Title: "Senior Software Developer"
+            },
+            {
+                Age: 31,
+                HireDate: new Date(2014, 8, 18),
+                ID: 11,
+                Name: "Monica Reyes",
+                Title: "Software Development Team Lead"
+            },
+            {
+                Age: 35,
+                HireDate: new Date(2015, 9, 17),
+                ID: 6,
+                Name: "Roland Mendel",
+                Title: "Senior Software Developer"
+            }],
+        HireDate: new Date(2008, 3, 20),
+        ID: 1,
+        Name: "John Winchester",
+        Title: "Development Manager"
+    },
+...
+```
+ネスト データをレンダリングする列のカスタム テンプレート。
+
+```html
+...
+ <igx-column field="Employees" header="Employees" [cellClasses]="{ expand: true }" width="40%">
+        <ng-template #nestedDataTemp igxCell let-people let-cell="cell">
+            <div class="employees-container">
+                <igx-expansion-panel *ngFor="let person of people">
+                    <igx-expansion-panel-header iconPosition="right">
+                        <igx-expansion-panel-description>
+                            {{ person.Name }}
+                        </igx-expansion-panel-description>
+                    </igx-expansion-panel-header>
+                    <igx-expansion-panel-body>
+                        <div class="description">
+                            <igx-input-group (keydown)="stop($event)" displayDensity="compact">
+                                <label igxLabel for="title">Title</label>
+                                <input type="text" name="title" igxInput [(ngModel)]="person.Title" style="text-overflow: ellipsis;" />
+                            </igx-input-group>
+                            <igx-input-group (keydown)="stop($event)" displayDensity="compact" style="width: 15%;">
+                                <label igxLabel for="age">Age</label>
+                                <input type="number" name="age" igxInput [(ngModel)]="person.Age" />
+                            </igx-input-group>
+                        </div>
+                    </igx-expansion-panel-body>
+                </igx-expansion-panel>
+            </div>
+        </ng-template>
+ </igx-column>
+...
+```
+
+以下は、この設定の結果です。
+
+<div class="sample-container loading" style="height:460px">
+    <iframe id="grid-nested-dataBind-iframe" data-src='{environment:demosBaseUrl}/grid/grid-nested-data-binding' width="100%" height="100%" seamless="" frameborder="0" class="lazyload"></iframe>
+</div>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-nested-dataBind-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
+
+#### フラット データ
+
+フラットデータバインディングのアプローチは既に説明したものと似ていますが、**セル値**の代わりに、[IgxRowComponent]({environment:angularApiUrl}/classes/igxrowcomponent.html) の [`rowData`]({environment:angularApiUrl}/classes/igxrowcomponent.html#rowdata) プロパティを使用します。 
+
+グリッドはデータレコードを**レンダリング**、**操作**、**保存**するためのコンポーネントのため、すべてのデータ レコードへアクセスすることで、それを処理する方法をカスタマイズすることができます。それには、[`rowData`]({environment:angularApiUrl}/classes/igxrowcomponent.html#rowdata) プロパティを使用します。
+
+以下は使用するデータです。
+```typescript
+export const DATA: any[] = [
+    {
+        Address: "Obere Str. 57",
+        City: "Berlin",
+        CompanyName: "Alfreds Futterkiste",
+        ContactName: "Maria Anders",
+        ContactTitle: "Sales Representative",
+        Country: "Germany",
+        Fax: "030-0076545",
+        ID: "ALFKI",
+        Phone: "030-0074321",
+        PostalCode: "12209",
+        Region: null
+    },
+...
+```
+カスタム テンプレート:
+
+```html
+...
+<igx-column field="Address" header="Address" width="25%" editable="true">
+                <ng-template #compositeTemp igxCell let-cell="cell">
+                    <div class="address-container">
+                    // In the Address column combine the Country, City and PostCode values of the corresponding data record 
+                        <span><strong>Country:</strong> {{cell.row.rowData.Country}}</span>
+                        <br/>
+                        <span><strong>City:</strong> {{cell.row.rowData.City}}</span>
+                        <br/>
+                        <span><strong>Postal Code:</strong> {{cell.row.rowData.PostalCode}}</span>
+                    </div>
+                </ng-template>
+...
+```
+上記で定義したテンプレートでは編集操作ができないため、エディター テンプレートが必要であることに注意してください。
+
+```html
+...
+                 <ng-template  igxCellEditor let-cell="cell">
+                        <div class="address-container">
+                        <span>
+                            <strong>Country:</strong> {{cell.row.rowData.Country}}
+                            <igx-input-group width="100%">
+                                    <input igxInput [(ngModel)]="cell.row.rowData.Country" />
+                            </igx-input-group>
+                        </span>
+                            <br/>
+                            <span><strong>City:</strong> {{cell.row.rowData.City}}</span>
+                            <igx-input-group width="100%">
+                                    <input igxInput [(ngModel)]="cell.row.rowData.City" />
+                            </igx-input-group>
+                            <br/>
+                            <span><strong>Postal Code:</strong> {{cell.row.rowData.PostalCode}}</span>
+                            <igx-input-group width="100%">
+                                    <input igxInput [(ngModel)]="cell.row.rowData.PostalCode" />
+                            </igx-input-group>
+                            <br/>
+                        </div>
+                </ng-template>
+</igx-column>
+...
+```
+以下は結果です。
+
+<div class="sample-container loading" style="height:550px">
+    <iframe id="grid-composite-dataBind-iframe" data-src='{environment:demosBaseUrl}/grid/grid-composite-data-binding' width="100%" height="100%" seamless="" frameborder="0" class="lazyload"></iframe>
+</div>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-composite-dataBind-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
+
+### パーシステンス (永続化) 状態
+
+ページ/セッション間でグリッドの状態を維持することは一般的なシナリオであり、現在アプリケーション レベルで実現可能です。ページをまたいで状態のパーシステンスを実装します。この例では、`localStorage` オブジェクトを使用して状態の JSON 文字列を格納していますが、必要に応じて `sessionStorage` オブジェクトを使用することもできます。実装の詳細はすべて `igxState` ディレクティブに抽出されます。
 
 ```typescript
 // state.directive.ts
@@ -406,10 +581,10 @@ export class IgxGridStateDirective {
 }
 ```
 
-As seen in the example above, when a NavigationStart event occurs (each time a user navigates away from the page), `saveGridState` method is called, which contains the logic to read the grid state (sorting and filtering expressions, paging state, columns order, collection of selected rows) and save this data as json string in the `localStorge`. Later, when a user comes back to the grid, `loadGridState` and `restoreGridState` methods are called during the `OnInit` and `AfterViewInit` lifecycle hooks respectively.
-What `loadGridState` does is decode the JSON string from the `localStorage` into a `gridState` object, while `restoreGridState` uses the grid API to apply the corresponding sorting and filtering expressions to the grid, set paging, etc.
+上の例にあるように、NavigationStart イベントが発生すると (ユーザーがページから移動するたびに) `saveGridState` メソッドが呼び出されます。このメソッドには、グリッドの状態 (ソートおよびフィルター式、ページング状態、列の順序など) を読み込むロジックが含まれ、選択された行のコレクション）を作成して、このデータを json 文字列として `localStorge` に保存します。後でユーザーがグリッドに戻ったときに、`loadGridState` と `restoreGridState` メソッドがそれぞれ `OnInit` と `AfterViewInit`ライフサイクル フック中に呼び出されます。
+`loadGridState` は JSON 文字列を `localStorage` から `gridState` オブジェクトにデコードします。一方、`restoreGridState` はgrid APIを使用して、対応する並べ替えとフィルタリングの式をグリッドに適用したり、ページングを設定したりします。
 
-Last thing to do is apply the directive to the grid and restore the columns collection during the `OnInit` hook of the grid component: 
+最後にディレクティブをグリッドに適用し、グリッド コンポーネントの `OnInit` フック間で列コレクションを復元します。 
 
 ```typescript
 // grid.component.ts
@@ -429,33 +604,6 @@ public ngOnInit() {
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-state-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
-
-### キーボード ナビゲーション
-キーボード ナビゲーションはすべてのグリッドでデフォルトで有効です。エンドユーザーの要件に合わせて機能を追加できます。以下は、特定のセルをフォーカスして以下のキーの組み合わせを押した場合の動作を示します。
-
- - `上矢印` - 1 つ上のセルへ移動 (ラッピングなし);
- - `下矢印` - 1 つ下のセルへ移動 (ラッピングなし);
- - `左矢印` - 1 つ左のセルへ移動 (行間のラッピングなし);
- - `右矢印` - 1 つ右のセルへ移動 (行間のラッピングなし);
- - `Ctrl + 上矢印` - 現在の列の最初のセルへ移動;
- - `Ctrl + 下矢印` - 現在の列の最後のセルへ移動;
- - `Ctrl + 左矢印` -  行の左端のセルへ移動;
- - `Home` - 行の左端のセルへ移動;
- - `Ctrl + Home` - グリッドの左上のセルに移動します;
- - `Ctrl + 右矢印` -  行の右端のセルへ移動;
- - `End` - 行の右端のセルへ移動;
- - `Ctrl + End` -  グリッドの右下のセルに移動します;
- - `Page Up` - 1 ページ (ビューポート) 上へスクロール;
- - `Page Down` - 1 ページ (ビューポート) 下へスクロール;
- - `Enter` - 編集モードに入る;
- - `F2` - 編集モードに入る;
- - `Esc` - 編集モードを終了する;
- - `Tab` - フォーカスを行の次のセルへ順番に移動し、最後のセルのあとは次の行へ移動します。次の行がグループ行の場合、行全体がフォーカスされます。データ行の場合、最初のセルにフォーカスを移動します。セルが編集モードの場合、フォーカスを次の編集可能なセルへ移動し、編集可能な一番右のセルから`CANCEL`、`DONE` ボタン、`DONE` から編集可能な一番左のセルへ移動します;
- - `Shift + Tab` - 行の前のセルへフォーカスを順番に移動し、最初のセルの次に前の行へフォーカスを移動します。前の行がグループ行の場合、行全体をフォーカスします。データ行の場合、最後のセルをフォーカスします。セルが編集モードの場合、フォーカスを次の編集可能なセルへ移動し、編集可能な一番右のセルから `CANCEL` および `DONE` ボタン、`DONE` から編集可能な一番左のセルへ移動します;
- - `Space` -  行が選択可能な場合、スペースキーを押下すると行選択をトリガーします;
- - GroupRow 上で `Alt + 左矢印` - 行が縮小されていない場合はグループ行コンテンツを縮小します;
- - GroupRow 上で `Alt + 右矢印` - 行が展開されていない場合はグループ行コンテンツを展開します;
- - マウス `ホイール` - フォーカス要素をぼかします;
 
 ### 更新ライブデモ
 
@@ -478,7 +626,7 @@ public ngOnInit() {
 |親コンテナーでネストされた Grid | グリッドの [`width`]({environment:angularApiUrl}/classes/igxgridcomponent.html#width) を設定せずに定義済みのディメンションで親コンテナーに配置した場合、グリッドがコンテナーに合わせてスパンします。|
 |Grid `OnPush` ChangeDetectionStrategy|グリッドで `ChangeDetectionStrategy.OnPush` を処理し、カスタム表示されたときにグリッドに発生した変更について通知します。|
 | 列には設定可能な最小幅があります。[`displayDensity`]({environment:angularApiUrl}/classes/igxgridcomponent.html#displaydensity) オプションに基づきます。 <br/>"compact": 24px <br/> "cosy": 32px <br/> "comfortable ": 48px | 許容される最小幅未満に設定した場合、描画要素には影響せずに対応する [`displayDensity`]({environment:angularApiUrl}/classes/igxgridcomponent.html#displaydensity) に合わせて許容される最小幅で描画します。水平方向の仮想化は予期しない動作を招く場合があるためサポートしていません。
-| ビューに描画されていないセル高さは行の高さに影響しません。| 仮想化のため、セルの高さを変更するビューにないカスタム テンプレートの列は行の高さに影響しません。関連する列がビューにスクロールされるときのみ行の高さに影響します。
+| ビューに描画されていないセル高さは行の高さに影響しません。|仮想化のため、セルの高さを変更するビューにないカスタム テンプレートの列は行の高さに影響しません。関連する列がビューにスクロールされるときのみ行の高さに影響します。
 
 <div class="divider--half"></div>
 
