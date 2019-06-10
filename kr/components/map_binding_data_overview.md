@@ -16,4 +16,4 @@ The following section list some of data source that you can bind in the geograph
 -   [Binding JSON Files](map_binding_geographic_json_files.md)
 -   [Binding CSV Files](map_binding_geographic_csv_files.md)
 -   [Binding Data Models](map_binding_geographic_data_models.md)
--   [Binding Multiple Sources](map_binding_multiple_data_source.md)
+-   [Binding Multiple Sources](map_binding_multiple_data_sources.md)

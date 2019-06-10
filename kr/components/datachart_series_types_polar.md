@@ -1,31 +1,31 @@
 ---
-title: Data Chart Component - Native Angular | Ignite UI for Angular
+제목: 데이터 차트 구성 요소 - 네이티브 Angular | Ignite UI for Angular
 _description: The Ignite UI for Angular Data Chart is a charting component that provides modular design of axis, markers, series, legend, and annotation layers. With this chart, you can create multiple instances of these visual elements in the same chart plot area in order to create composite chart views.
 _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Chart Control, Angular Chart Example, Angular Chart Component, Angular Data Chart
 _language: kr
 ---
 
-## Polar Series
+## 폴라 시리즈
 
-This topic explains various types of polar series in the `IgxDataChart` control. Polar series is a group of series that use the polar (angle, radius) coordinate system instead of the Cartesian (x, y) coordinate system to plot data in chart. In other words, polar series take concepts of [Scatter Series](datachart_series_types_scatter_marker.md) and wrap them around a circle rather than stretching along a horizontal line. This group of series is used to show the relationship among the items in several distinct series of data using the polar coordinates system.
+이 항목에서는 `IgxDataChart` 제어에서 다양한 유형의 폴라 시리즈에 대해 설명합니다. 폴라 시리즈는 데카르트(x, y) 좌표계 대신 폴라(각도, 반경) 좌표계를 사용하여 차트에 데이터를 플롯하는 일련의 시리즈입니다. 즉, 폴라 시리즈는 [분산 시리즈](datachart_series_types_scatter_marker.md)의 개념을 사용하여 수평선을 따라 늘어서는 것이 아니라 원을 중심으로 감쌉니다. 이 시리즈 그룹은 폴라 좌표계를 사용하여 여러 개의 서로 다른 데이터 시리즈 내의 항목 간의 관계를 표시하는 데 사용됩니다.
 
-Polar series draw attention to uneven intervals or clusters of data. They are often used to plot scientific data (e.g. wind's direction and speed, strength and direction of magnetic field, location of objects in solar system), and can highlight the deviation of collected data from predicted results.
+폴라 시리즈는 데이터의 불균등한 간격이나 데이터 클러스터에 주의를 끕니다. 이것은 과학적인 데이터(예: 바람의 방향과 속도, 자기장의 강도와 방향, 태양계 내의 물체 위치)를 플롯하는 데 사용되며, 수집된 데이터와 예상 결과의 편차를 강조 표시할 수 있습니다.
 
-### Demo
+### 데모
 
 <div class="sample-container" style="height: 500px">
     <iframe id="data-chart-type-polar-series-iframe" src='{environment:demosBaseUrl}/charts/data-chart-type-polar-series' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-type-polar-series-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-type-polar-series-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기
     </button>
 </div>
 
 <div class="divider--half"></div>
 
-### Types of Polar Series
+### 폴라 시리즈의 유형
 
-The Data Chart supports the following types of polar series:
+데이터 차트는 다음과 같은 유형의 폴라 시리즈를 지원합니다:
 
 | Series Name             | Description                                                                                                                                                      |
 | ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -35,9 +35,9 @@ The Data Chart supports the following types of polar series:
 | `PolarScatterSeries`    | Displays a collection of markers representing data points which are located at the polar (angle/radius) coordinates                                              |
 | `PolarLineSeries`       | Displays a collection of straight lines connecting data points which are located at the polar (angle/radius) coordinates                                         |
 
-### Required Axes
+### 필요한 축
 
-The `IgxDataChart` control provides various types of axes but only the following types of axes can be used with polar series.
+`IgxDataChart` 제어는 다양한 유형의 축을 제공하지만 폴라 시리즈에는 다음의 축 유형만 사용할 수 있습니다.
 
 | Series Type             | Radius Axis Type                | Angle Axis Type                |
 | ----------------------- | ------------------------------- | ------------------------------ |
@@ -47,27 +47,25 @@ The `IgxDataChart` control provides various types of axes but only the following
 | `PolarScatterSeries`    | `IgxNumericRadiusAxisComponent` | `IgxNumericAngleAxisComponent` |
 | `PolarLineSeries`       | `IgxNumericRadiusAxisComponent` | `IgxNumericAngleAxisComponent` |
 
-### Required Data
+### 필요한 데이터
 
-Polar series have the following data requirements:
+폴라 시리즈에는 다음과 같은 데이터 요구 사항이 있습니다:
 
--   The data source must be an array or a list of data items
--   The data source must contain at least one data item otherwise the chart will not render the polar series.
--   All data items must contain at least two numeric data columns which should be mapped using the `AngleMemberPath` and `RadiusMemberPath` properties of polar series (e.g. `PolarAreaSeries`)
+-   데이터 소스는 배열 또는 데이터 항목 목록이어야 함
+-   데이터 소스에는 하나 이상의 데이터 항목이 포함되어야 하며 그렇지 않을 경우에는 차트가 폴라 시리즈를 렌더링하지 않습니다.
+-   모든 데이터 항목에는 폴라 시리즈의 `AngleMemberPath` 및 `RadiusMemberPath` 속성(예: `PolarAreaSeries`)을 사용하여 매핑하는 숫자 데이터 열이 2개 이상 있어야 합니다
 
-In polar coordinate systems, the location of data points is determined by an angle (angular coordinate) from a fixed direction and distance (radial coordinate) from a fixed point (analogous to the origin of a Cartesian coordinate) which is called "the pole". The lines that start from the pole and point outwards are gridlines of the angular axis (`IgxNumericAngleAxisComponent`) and the concentric rings that surround the pole are gridlines of the radius axis (`IgxNumericRadiusAxisComponent`)
+폴라 좌표계의 데이터 점의 위치는  "극"이라고 하는 고정 방향에서의 각도(각도 좌표)와 고정점(데카르트 좌표의 원점과 유사)에서의 거리(반경 좌표)로 결정됩니다. 극에서 시작하여 바깥 쪽을 향하는 선은 각도 축의 격자선(`IgxNumericAngleAxisComponent`)이며, 극을 둘러싸는 동심원은 반경 축의 격자선(`IgxNumericRadiusAxisComponent`)입니다
 
-You can use the [SamplePolarData](datachart_data_sources_polar.md) as data source which meets above data requirements.
+[SamplePolarData](datachart_data_sources_polar.md)는 위의 데이터 요구 사항을 충족하는 데이터 소스로 사용할 수 있습니다.
 
 ```typescript
 this.state = { dataSource: SamplePolarData.create() }
 ```
 
-### Required Modules
+### 필요한 모듈
 
-<!-- Angular -->
-
-In order to use polar series, you need to import the following modules in your app during load and register data chart modules:
+폴라 시리즈를 사용하려면 로딩하는 동안 앱에 다음 모듈을 불러와야 합니다.
 
 ```typescript
 // axis' modules:
@@ -98,9 +96,9 @@ import { IgxDataChartPolarModule } from "igniteui-angular-charts/ES5/igx-data-ch
 })
 ```
 
-### Code Example
+### 코드 예제
 
-This code demonstrates how to create an instance of data chart with `PolarLineSeries` and bind it to the data source.
+이 코드는 `PolarLineSeries`로 데이터 차트의 인스턴스를 생성하고 데이터 소스에 바인딩하는 방법을 보여줍니다.
 
 ```html
  <igx-data-chart
@@ -118,12 +116,12 @@ This code demonstrates how to create an instance of data chart with `PolarLineSe
  </igx-data-chart>
 ```
 
-Note that you can also use above code to create other type of polar series by replacing `PolarLineSeries` with name of polar series that you want to render.
+또한, 위의 코드를 사용하여 `PolarLineSeries`를 렌더링할 폴라 시리즈의 이름으로 대체하여 다른 유형의 폴라 시리즈를 생성할 수도 있습니다.
 
-### Additional Resources
+### 추가 리소스
 
--   [Axis Types](datachart_axis_types.md)
--   [Axis Sharing](datachart_axis_sharing.md)
--   [Chart Legend](datachart_chart_legends.md)
--   [Series Markers](datachart_series_markers.md)
--   [Series Types](datachart_series_types.md)
+-   [축 유형](datachart_axis_types.md)
+-   [축 공유](datachart_axis_sharing.md)
+-   [차트 범례](datachart_chart_legends.md)
+-   [시리즈 마커](datachart_series_markers.md)
+-   [시리즈 유형](datachart_series_types.md)
