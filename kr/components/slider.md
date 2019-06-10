@@ -39,7 +39,10 @@ export class AppModule {}
 ```
 
 ####Continuous Slider
-Let's start with a simple continuous slider. First, specify the slider type by setting the [`isContinuous`]({environment:angularApiUrl}/classes/igxslidercomponent.html#iscontinuous) input to true. Next, define the minimum and maximum values using [`minValue`]({environment:angularApiUrl}/classes/igxslidercomponent.html#minvalue) and [`maxValue`]({environment:angularApiUrl}/classes/igxslidercomponent.html#maxvalue). We also bind the slider [`value`]({environment:angularApiUrl}/classes/igxslidercomponent.html#value) to a property in our component called "volume".
+> [!WARNING]
+> `isContinuous` property has been deprecated. Instead, you will have to use `continuous`.
+
+Let's start with a simple continuous slider. First, specify the slider type by setting the [`continuous`]({environment:angularApiUrl}/classes/igxslidercomponent.html#continuous) input to true. Next, define the minimum and maximum values using [`minValue`]({environment:angularApiUrl}/classes/igxslidercomponent.html#minvalue) and [`maxValue`]({environment:angularApiUrl}/classes/igxslidercomponent.html#maxvalue). We also bind the slider [`value`]({environment:angularApiUrl}/classes/igxslidercomponent.html#value) to a property in our component called "volume".
 
 > [!NOTE]
 > Continuous slider does not display ticks and bubble label for the current value.
@@ -47,7 +50,7 @@ Let's start with a simple continuous slider. First, specify the slider type by s
 ```html
 <!--sample.component.html-->
 
-<igx-slider id="slider" [minValue]="0" [maxValue]="100" [isContinuous]=true [(ngModel)]="volume" ></igx-slider>
+<igx-slider id="slider" [minValue]="0" [maxValue]="100" [continuous]=true [(ngModel)]="volume" ></igx-slider>
 <label igxLabel for="slider">Volume: {{volume}}</label>
 ```
 
