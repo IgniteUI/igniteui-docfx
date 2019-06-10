@@ -569,18 +569,14 @@ We have made two paginator themes. Now we just have to apply them.
 #### Application
 The theme is the argument, that we pass to coherent component mixin. We will include the **grid paginator mixin** within two **CSS classes** one for the light theme and one for the dark. If we use the default  [**View Encapsulation**](../themes/component-themes.md#view-encapsulation) strategy, we have to define these classes within the `:host ::ng-deep` modifiers.
 ```scss
-// custom-grid-paging-style.component
+// grid-paging-themes.scss
     ...
-    &.dark-grid-paginator {
-        ::ng-deep {
-            @include igx-grid-paginator($dark-grid-paginator);
-        }
+    .dark-grid-paginator {
+        @include igx-grid-paginator($dark-grid-paginator);
     }
     ...
-    &.light-grid-paginator {
-        ::ng-deep {
-            @include igx-grid-paginator($light-grid-paginator);
-        }
+    .light-grid-paginator {
+        @include igx-grid-paginator($light-grid-paginator);
     }
     ...
 ```
@@ -588,12 +584,18 @@ The theme is the argument, that we pass to coherent component mixin. We will inc
 
 ```scss
 ...
-:host ::ng-deep{
-    .dark-grid-paginator{
-        @include igx-grid-paginator($dark-pagnitor-theme);
+// grid-paging-themes.scss
+:host {
+    &.dark-grid-paginator {
+        ::ng-deep {
+            @include igx-grid-paginator($dark-grid-paginator);
+        }
     }
-    .light-grid-paginator{
-        @include igx-grid-paginator($light-pagnitor-theme);
+
+    &.light-grid-paginator {
+        ::ng-deep {
+            @include igx-grid-paginator($light-grid-paginator);
+        }
     }
 }
 ...
