@@ -40,7 +40,10 @@ export class AppModule {}
 ```
 
 #### 連続スライダー
-簡易な連続スライダーを使用します。最初に、[`isContinuous`]({environment:angularApiUrl}/classes/igxslidercomponent.html#iscontinuous) プロパティを true に設定し、スライダー タイプを指定します。次に、[`minValue`]({environment:angularApiUrl}/classes/igxslidercomponent.html#minvalue) および [`maxValue`]({environment:angularApiUrl}/classes/igxslidercomponent.html#maxvalue) プロパティを設定し、最小値および最大値を定義します。また、スライダーの [`value`]({environment:angularApiUrl}/classes/igxslidercomponent.html#value) をコンポーネントの "volume" プロパティにバインドします。
+> [!WARNING]
+> `isContinuous` property has been deprecated. Instead, you will have to use `continuous`.
+
+簡易な連続スライダーを使用します。最初に、[`continuous`]({environment:angularApiUrl}/classes/igxslidercomponent.html#continuous) プロパティを true に設定し、スライダー タイプを指定します。次に、[`minValue`]({environment:angularApiUrl}/classes/igxslidercomponent.html#minvalue) および [`maxValue`]({environment:angularApiUrl}/classes/igxslidercomponent.html#maxvalue) プロパティを設定し、最小値および最大値を定義します。また、スライダーの [`value`]({environment:angularApiUrl}/classes/igxslidercomponent.html#value) をコンポーネントの "volume" プロパティにバインドします。
 
 > [!NOTE]
 > 連続スライダーは、現在の値に目盛りおよびバブル ラベルを表示しません。
@@ -48,7 +51,7 @@ export class AppModule {}
 ```html
 <!--sample.component.html-->
 
-<igx-slider id="slider" [minValue]="0" [maxValue]="100" [isContinuous]=true [(ngModel)]="volume" ></igx-slider>
+<igx-slider id="slider" [minValue]="0" [maxValue]="100" [continuous]=true [(ngModel)]="volume" ></igx-slider>
 <label igxLabel for="slider">Volume: {{volume}}</label>
 ```
 
