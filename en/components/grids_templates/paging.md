@@ -493,10 +493,12 @@ If you want to add different exterior to the paginator, you can do so with our [
 
 #### First Steps
 
-To get started with the custom styling of the grid paginator, first you have to import the [**paginator mixin**]({environment:sassApiUrl}/index.html#mixin-igx-grid-paginator) and the [**paginator theme**]({environment:sassApiUrl}/index.html#function-igx-grid-paginator-theme):
+To get started with the custom styling of the grid paginator, first you have to import the `themes utilities`, the [**paginator mixin**]({environment:sassApiUrl}/index.html#mixin-igx-grid-paginator) and the [**paginator theme**]({environment:sassApiUrl}/index.html#function-igx-grid-paginator-theme):
  
 ```scss
 // grid-paging-themes.scss
+@import '~igniteui-angular/lib/core/styles/themes/utilities';
+
 @import '~igniteui-angular/lib/core/styles/components/grid-paginator/grid-paginator-component';
 @import '~igniteui-angular/lib/core/styles/components/grid-paginator/grid-paginator-theme';
 ``` 
