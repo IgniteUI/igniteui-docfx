@@ -1,6 +1,6 @@
 ---
 제목: 데이터 차트 구성 요소 - 네이티브 Angular | Ignite UI for Angular
-_description: The Ignite UI for Angular Data Chart is a charting component that provides modular design of axis, markers, series, legend, and annotation layers. With this chart, you can create multiple instances of these visual elements in the same chart plot area in order to create composite chart views.
+_description: Ignite UI for Angular 데이터 차트는 축, 마커, 시리즈, 범례 및 주석 레이어의 모듈 식 디자인을 제공하는 차트 구성 요소입니다. 이 차트를 사용하면 동일한 차트 영역에 이러한 시각적 요소의 인스턴스를 여러 개 만들어 복합 차트 뷰를 만들 수 있습니다.
 _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Chart Control, Angular Chart Example, Angular Chart Component, Angular Data Chart
 _language: kr
 ---
@@ -11,8 +11,8 @@ _language: kr
 
 ### 데모
 
-<div class="sample-container" style="height: 400px">
-    <iframe id="data-chart-type-financial-series-iframe" src='{environment:demosBaseUrl}/charts/data-chart-type-financial-series' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 400px">
+    <iframe id="data-chart-type-financial-series-iframe" src='{environment:demosBaseUrl}/charts/data-chart-type-financial-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-type-financial-series-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기
@@ -127,8 +127,8 @@ import { IgxDataChartCoreModule } from "igniteui-angular-charts/ES5/igx-data-cha
     [dataSource]="dataSource"
     width="700px"
     height="500px">
-    <igx-category-x-axis name="xAxis" label="Date" />
-    <igx-numeric-y-axis  name="yAxis" />
+    <igx-category-x-axis name="xAxis" label="Date"></igx-category-x-axis>
+    <igx-numeric-y-axis  name="yAxis"></igx-numeric-y-axis>
     <igx-bollinger-bands-overlay
         name="series1"
         xAxisName="xAxis"
@@ -137,7 +137,8 @@ import { IgxDataChartCoreModule } from "igniteui-angular-charts/ES5/igx-data-cha
         highMemberPath="High"
         openMemberPath="Open"
         closeMemberPath="Close"
-        volumeMemberPath="Volume" />
+        volumeMemberPath="Volume">
+    </igx-bollinger-bands-overlay>
 
     <igx-financial-price-series
         name="series2"
@@ -148,7 +149,8 @@ import { IgxDataChartCoreModule } from "igniteui-angular-charts/ES5/igx-data-cha
         highMemberPath="High"
         openMemberPath="Open"
         closeMemberPath="Close"
-        volumeMemberPath="Volume"  />
+        volumeMemberPath="Volume">
+    </igx-financial-price-series>
 
     <igx-median-price-indicator
         name="series3"
@@ -159,7 +161,8 @@ import { IgxDataChartCoreModule } from "igniteui-angular-charts/ES5/igx-data-cha
         highMemberPath="High"
         openMemberPath="Open"
         closeMemberPath="Close"
-        volumeMemberPath="Volume" />
+        volumeMemberPath="Volume">
+    </igx-median-price-indicator>
  </igx-data-chart>
 ```
 

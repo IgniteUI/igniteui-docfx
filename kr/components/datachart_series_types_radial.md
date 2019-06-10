@@ -1,6 +1,6 @@
 ---
 제목: 데이터 차트 구성 요소 - 네이티브 Angular | Ignite UI for Angular
-_description: The Ignite UI for Angular Data Chart is a charting component that provides modular design of axis, markers, series, legend, and annotation layers. With this chart, you can create multiple instances of these visual elements in the same chart plot area in order to create composite chart views.
+_description: Ignite UI for Angular 데이터 차트는 축, 마커, 시리즈, 범례 및 주석 레이어의 모듈 식 디자인을 제공하는 차트 구성 요소입니다. 이 차트를 사용하면 동일한 차트 영역에 이러한 시각적 요소의 인스턴스를 여러 개 만들어 복합 차트 뷰를 만들 수 있습니다.
 _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Chart Control, Angular Chart Example, Angular Chart Component, Angular Data Chart
 _language: kr
 ---
@@ -11,8 +11,8 @@ _language: kr
 
 ### 데모
 
-<div class="sample-container" style="height: 500px">
-    <iframe id="data-chart-type-radial-series-iframe" src='{environment:demosBaseUrl}/charts/data-chart-type-radial-series' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 500px">
+    <iframe id="data-chart-type-radial-series-iframe" src='{environment:demosBaseUrl}/charts/data-chart-type-radial-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-type-radial-series-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기
@@ -25,19 +25,19 @@ _language: kr
 
 다음 표에는 모든 유형의 레이디얼 시리즈와 그 설명이 표시되어 있습니다.
 
-| Series Name              | Description                                                                                                                                                       |
-| ------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `RadialAreaSeries`       | Displays a filled polygon enclosed by a collection of straight lines connecting data points which are located at the radial (angle/radius) coordinates            |
-| `RadialSplineAreaSeries` | Displays a filled polygon enclosed by a collection of smooth/interpolated lines connecting data points which are located at the radial (angle/radius) coordinates |
-| `RadialSplineSeries`     | Displays a collection of smooth/interpolated lines connecting data points which are located at the radial (angle/radius) coordinates                              |
-| `RadialScatterSeries`    | Displays a collection of markers representing data points which are located at the radial (angle/radius) coordinates                                              |
-| `RadialLineSeries`       | Displays a collection of straight lines connecting data points which are located at the radial (angle/radius) coordinates                                         |
+| 시리즈 이름                   | 설명                                                                  |
+| ------------------------ | ------------------------------------------------------------------- |
+| `RadialAreaSeries`       | 레이디얼(각도/반경) 좌표에 있는 데이터 점을 연결하는 직선 집합으로 둘러싸여 채워진 폴리곤을 표시합니다.         |
+| `RadialSplineAreaSeries` | 레이디얼(각도/반경) 좌표에 있는 데이터 점을 연결하는 매끄럽고/보간된 선 집합으로 둘러싸여 채워진 폴리곤을 표시합니다. |
+| `RadialSplineSeries`     | 레이디얼(각도/반경) 좌표에 있는 데이터 점을 연결하는 매끄럽고/보간된 선 집합을 표시합니다.                |
+| `RadialScatterSeries`    | 레이디얼(각도/반경) 좌표에 있는 데이터 점을 나타내는 마커 집합을 표시합니다.                        |
+| `RadialLineSeries`       | 레이디얼(각도/반경) 좌표에 있는 데이터 점을 연결하는 직선 집합을 표시합니다.                        |
 
 ### 필요한 축
 
 `IgxDataChart` 제어는 다양한 유형의 축을 제공하지만 레이디얼 시리즈에는 다음의 축 유형만 사용할 수 있습니다.
 
-| Series Type          | Radius Axis Type                | Angle Axis Type                 |
+| 시리즈 유형               | Radius Axis 유형                  | Angle Axis 유형                   |
 | -------------------- | ------------------------------- | ------------------------------- |
 | `RadialAreaSeries`   | `IgxNumericRadiusAxisComponent` | `IgxCategoryAngleAxisComponent` |
 | `RadialPieSeries`    | `IgxNumericRadiusAxisComponent` | `IgxCategoryAngleAxisComponent` |
@@ -101,13 +101,14 @@ import { IgxDataChartRadialModule } from "igniteui-angular-charts/ES5/igx-data-c
     [dataSource]="dataSource"
     width="700px"
     height="500px">
-    <igx-category-angle-axis name="angleAxis" label="Department" />
-    <igx-numeric-radius-axis name="radiusAxis" />
+    <igx-category-angle-axis name="angleAxis" label="Department"></igx-category-angle-axis>
+    <igx-numeric-radius-axis name="radiusAxis"></igx-numeric-radius-axis>
     <igx-radial-pie-series
         name="series1"
         valueMemberPath="Budget"
         valueAxisName="radiusAxis"
-        angleAxisName="angleAxis"/>
+        angleAxisName="angleAxis">
+    </igx-radial-pie-series>
  </igx-data-chart>
 ```
 
