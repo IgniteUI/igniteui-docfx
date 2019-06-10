@@ -504,10 +504,10 @@ To get started with the custom styling of the grid paginator, first you have to 
 Then define a [color palette](../themes/palette.md) that you are going to apply to the component theme:
 ```scss
 // grid-paging-themes.scss
-$yellow-color: #F9D342
-$black-color: #292826
+$yellow-color: #F9D342;
+$black-color: #292826;
 
-$dark-paginator-palette: igx-palette($primary: $black-color, $secondary: $yellow-color);
+$paginator-palette: igx-palette($primary: $black-color, $secondary: $yellow-color);
 ```
 With this palette we are going to apply different color variations of the its primary and secondary colors with the help of the [igx-color]({environment:sassApiUrl}/index.html#function-igx-color) function.
 
@@ -520,7 +520,7 @@ The grid paginator theme definition without schema:
     ...
     // The variable, to which the theme will be assigned 
     $dark-pagnitor-theme: igx-grid-paginator-theme(
-        $palette: $dark-paginator-palette,
+        $palette: $paginator-palette,
         $text-color: igx-color($paginator-palette, "secondary", 200),
         $background-color: igx-color($paginator-palette, "primary", 500),
         $border-color:  igx-color($paginator-palette, "secondary", 200)
@@ -553,13 +553,13 @@ The component theme takes one of the two global schemas as an argument, which ar
 // grid-paging-themes.scss
 ...
 // Extending the global light schema
-$custom-light-schema: extend($light-schema),(
+$custom-light-schema: extend($light-schema,
     igx-grid-paginator: $light-grid-paginator-schema
 ));
 
 // Defining the theme
 $light-grid-paginator: igx-grid-paginator-theme(
-  $palette: $black-theme-palette,
+  $palette: $paginator-palette,
   $schema: $custom-light-schema  
 );
 ...
@@ -576,7 +576,7 @@ The theme is the argument, that we pass to coherent component mixin. We will inc
     }
     ...
     .light-grid-paginator{
-        @include igx-grid-paginator($dark-pagnitor-theme);
+        @include igx-grid-paginator($light-pagnitor-theme);
     }
     ...
 ```
@@ -589,7 +589,7 @@ The theme is the argument, that we pass to coherent component mixin. We will inc
         @include igx-grid-paginator($dark-pagnitor-theme);
     }
     .light-grid-paginator{
-        @include igx-grid-paginator($dark-pagnitor-theme);
+        @include igx-grid-paginator($light-pagnitor-theme);
     }
 }
 ...
