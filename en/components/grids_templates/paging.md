@@ -519,12 +519,12 @@ The grid paginator theme definition without schema:
 // grid-paging-themes.scss
     ...
     // The variable, to which the theme will be assigned 
-    $dark-pagnitor-theme: igx-grid-paginator-theme(
-        $palette: $paginator-palette,
-        $text-color: igx-color($paginator-palette, "secondary", 200),
-        $background-color: igx-color($paginator-palette, "primary", 500),
-        $border-color:  igx-color($paginator-palette, "secondary", 200)
-    );
+$dark-grid-paginator: igx-grid-paginator-theme(
+    $palette: $paginator-palette,
+    $text-color: igx-color($paginator-palette, "secondary", 200),
+    $background-color: igx-color($paginator-palette, "primary", 500),
+    $border-color:  igx-color($paginator-palette, "secondary", 200)
+);
     ...
 ```
 
@@ -534,7 +534,7 @@ The custom component schema must extend one of the two predefined schemas, that 
 // grid-paging-themes.scss
 ...
 // Extending the light paginator schema
-$light-grid-paginator-schema: extend($_ligh-grid-pagination,
+$light-grid-paginator-schema: extend($_light-grid-pagination,
         (
             text-color:(
                 igx-color: ("primary", 700)
@@ -553,14 +553,14 @@ The component theme takes one of the two global schemas as an argument, which ar
 // grid-paging-themes.scss
 ...
 // Extending the global light schema
-$custom-light-schema: extend($light-schema,
+$custom-light-schema: extend($light-schema,(
     igx-grid-paginator: $light-grid-paginator-schema
 ));
 
 // Defining the theme
 $light-grid-paginator: igx-grid-paginator-theme(
   $palette: $paginator-palette,
-  $schema: $custom-light-schema  
+  $schema: $custom-light-schema
 );
 ...
 ```
@@ -571,12 +571,16 @@ The theme is the argument, that we pass to coherent component mixin. We will inc
 ```scss
 // custom-grid-paging-style.component
     ...
-    .dark-grid-paginator{
-        @include igx-grid-paginator($dark-pagnitor-theme);
+    &.dark-grid-paginator {
+        ::ng-deep {
+            @include igx-grid-paginator($dark-grid-paginator);
+        }
     }
     ...
-    .light-grid-paginator{
-        @include igx-grid-paginator($light-pagnitor-theme);
+    &.light-grid-paginator {
+        ::ng-deep {
+            @include igx-grid-paginator($light-grid-paginator);
+        }
     }
     ...
 ```
