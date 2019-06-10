@@ -1,26 +1,24 @@
 ---
-title: Excel Library Using Tables
-_description: The Ignite UI for Excel Library component Using Tables.
-_keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Excel Library, Angular Excel Library Example, Angular Excel Library Component, Angular Excel Engine, Tables, Sorting, Filtering
+title: Excel Library| Data Spreadsheet | Ignite UI for Angular | Infragistics
+_description: Use the Excel Library to work with spreadsheet data using Microsoft Excel features. Easily transfer data from excel to your application. 
+_keywords: Excel library, Ignite UI for Angular, Infragistics
 ---
 
 ## Using Tables
 
-The Infragistics Excel Engine's `WorksheetTable` functionality allows you to format your data in rows and columns The data in a worksheet table can be managed independently from the data in the other rows and columns in a `Worksheet`.
+The Infragistics Angular Excel Engine's `WorksheetTable` functionality allows you to format your data in rows and columns The data in a worksheet table can be managed independently from the data in the other rows and columns in a `Worksheet`.
 
 <!--### Demo
 
-<div class="sample-container" style="height: 500px">
-    <iframe id="excel-library-overview-sample-iframe" 
-	src='{environment:demosBaseUrl}/excel-library/working-with-tables' 
-	width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 500px">
+    <iframe id="excel-library-overview-sample-iframe" src='{environment:demosBaseUrl}/excel-library/working-with-tables' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>-->
 
 <div class="divider--half"></div>
 
 ### Adding a Table to a Worksheet
 
-Worksheet tables in the Infragistics Excel Engine are represented by the `WorksheetTable` object and are added in the worksheet's `tables` collection. In order to add a table, you need to invoke the `add` method on this collection. In this method, you can specify the region in which you would like to add a table, whether or not the table should contain headers, and optionally, specify the table's style as a `WorksheetTableStyle` object.
+Worksheet tables in the Infragistics Angular Excel Engine are represented by the `WorksheetTable` object and are added in the worksheet's `tables` collection. In order to add a table, you need to invoke the `add` method on this collection. In this method, you can specify the region in which you would like to add a table, whether or not the table should contain headers, and optionally, specify the table's style as a `WorksheetTableStyle` object.
 
 The following code demonstrates how you can add a table with headers to a `Worksheet` spanning a region of A1 to G10, where A1 to G1 will be the column headers:
 

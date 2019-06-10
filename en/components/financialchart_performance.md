@@ -6,12 +6,12 @@ _keywords: financial chart, Ignite UI for Angular, infragistics
 
 ## Performance
 
-The `IgxFinancialChart` control has very good performance of rendering a lot of data points. The following demo binds 20 years of data, with 1 day intervals and displays the stock prices using candle sticks.
+The Angular financial chart component has very good performance of rendering a lot of data points. The following demo binds 20 years of data, with 1 day intervals and displays the stock prices using candle sticks.
 
 ### Demo
 
-<div class="sample-container" style="height: 500px">
-    <iframe id="financial-chart-performance-iframe" src='{environment:demosBaseUrl}/charts/financial-chart-performance' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 500px">
+    <iframe id="financial-chart-performance-iframe" src='{environment:demosBaseUrl}/charts/financial-chart-performance' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="financial-chart-performance-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
