@@ -313,7 +313,7 @@ The result of the configuration can be seem below:
 </div>
 <div class="divider--half"></div>
 
-The following sample demonstrates row reordering in the tree grid. Notice that we also have row selection enabled and we preserve the selection when dropping the dragged row.
+The following sample demonstrates how to configure row reordering in the tree grid. Notice that we also have row selection enabled and we preserve the selection when dropping the dragged row.
 <div class="sample-container loading" style="height:560px">
     <iframe id="tree-grid-row-reorder-sample-iframe" src='{environment:demosBaseUrl}/tree-grid/tree-grid-row-reordering' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -334,7 +334,7 @@ The following sample demonstrates row reordering in the tree grid. Notice that w
 </div>
 <div class="divider--half"></div>
 
-The following sample demonstrates row reordering in the hierarchical grid.
+The following sample demonstrates how to configure row reordering in the hierarchical grid.
 Notice that we also have row selection enabled and we preserve the selection when dropping the dragged row.
 <div class="sample-container loading" style="height:560px">
     <iframe id="hierarchical-grid-row-reorder-sample-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-row-reorder' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -363,7 +363,7 @@ Try to drag moons from the grid and drop them to their corresponding planets. Ro
 
 <div class="divider--half"></div>
 
-The following sample demonstrates row reordering in the grid. Holding onto the drag icon will allow you to move a row anywhere in the grid.
+The following sample demonstrates how to configure row reordering in the grid. Holding onto the drag icon will allow you to move a row anywhere in the grid.
 <div class="sample-container loading" style="height:560px">
     <iframe id="grid-row-reorder" src='{environment:demosBaseUrl}/grid/grid-row-reorder' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
