@@ -312,6 +312,16 @@ The result of the configuration can be seem below:
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-row-drag-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
+
+The following sample demonstrates row reordering in the tree grid. Notice that we also have row selection enabled and we preserve the selection when dropping the dragged row.
+<div class="sample-container loading" style="height:560px">
+    <iframe id="tree-grid-row-reorder-sample-iframe" src='{environment:demosBaseUrl}/tree-grid/tree-grid-row-reordering' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-row-reorder-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div> 
 }
 
 @@if (igxName === 'IgxHierarchicalGrid') {
