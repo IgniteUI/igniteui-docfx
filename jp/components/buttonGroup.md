@@ -102,10 +102,11 @@ igx-buttongroup{
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="buttonGroup-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
 </div>
 
-#### Display Density
-Use the [`displayDensity`]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html#displaydensity) input to set the display density for the button group. This will set the style for the buttons in the group to cosy, compact or comfortable (default value) accordingly.
+#### 表示密度
+[`displayDensity`]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html#displaydensity) 入力を使用して、ボタン グループの表示密度を設定します。これにより、グループ内のボタンのスタイルが、cosy、compact、または comfortable (デフォルト値) に設定されます。
 
-> [!NOTE] The display density of a button within a button group is not changed if it is explicitly specified.
+> [!NOTE] 
+> ボタン グループ内のボタンの表示密度は、明示的に指定されている場合は変更されません。
 
 ```typescript
 // sample.component.ts
@@ -141,7 +142,7 @@ public selectDensity(event) {
     <iframe id="buttonGroup-sample-5-iframe" seamless="" width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/button-group-sample-5" class="lazyload">
 </iframe></div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="buttonGroup-sample-5-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="buttonGroup-sample-5-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
 </div>
 
 #### カスタム トグル ボタン

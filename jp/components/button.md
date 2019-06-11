@@ -152,7 +152,8 @@ raised ボタンを作成できます。　
 
 [`displayDensity`]({environment:angularApiUrl}/classes/igxbuttondirective.html#displaydensity) 入力を使用すると、ユーザーは [`igxButton`]({environment:angularApiUrl}/classes/igxbuttondirective.html) 入力の表示密度を選択できるようになります。これには、`IgxButtonGroupModule` をインポートし、[**IgxButtonGroup**](buttonGroup.md) を使用してすべての密度値を表示します。これにより、選択されるたびにボタンの [`displayDensity`]({environment:angularApiUrl}/classes/igxbuttondirective.html#displaydensity) にバインドされた独自の **density** プロパティが更新されます。
 
-> [!NOTE] `icon` タイプのボタンは、異なる表示密度の値に対して視覚的な変化をもたらしません。
+> [!NOTE] 
+> `icon` タイプのボタンは、異なる表示密度の値に対して視覚的な変化をもたらしません。
 
 ```typescript
 // app.module.ts

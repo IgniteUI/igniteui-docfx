@@ -1,47 +1,36 @@
 ---
-title: Doughnut Chart Component - Native Angular | Ignite UI for Angular
-mentionedTypes: ['DoughnutChart', 'DoughnutChartType']
-_description: The Ignite UI for Angular Doughnut Chart component allows user to display multiple variables in concentric rings, and the data can be bound to a different collection or a common data source. 
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Data Grid component, Angular Data Grid control, Angular Doughnut Chart Control, Angular Doughnut Chart Component, Angular data grid Doughnut Chart component example, Angular Doughnut Chart 
+제목: 도넛형 차트 | 계층 데이터 비주얼라이제이션 | Ignite UI for Angular | Infragistics
+_description: Use the doughnut chart component to display multiple variables in concentric rings for hierarchical data visualization. View the demo for more information.
+_keywords: doughnut chart, Ignite UI for Angular, infragistics
 _language: kr
 ---
 
-## Doughnut Chart
+## 도넛형 차트
 
-The `IgxDoughnutChart` component is similar to the Pie Chart component, proportionally illustrating the occurrences of a variable. The doughnut chart can display multiple variables in concentric rings, and provides built-in support for visualizing hierarchical data.
+Ignite UI for Angular 도넛형 차트 컴포넌트는 파이형 차트 컴포넌트와 유사하며 변수의 발생을 비례 적으로 보여줍니다. 도넛형 차트는 동심원상 링으로 여러 변수를 표시할 수 있으며, 계층 데이터를 시각화하기 위한 내장 기능도 제공합니다.
 
-### Demo
+### 데모
 
 <div class="sample-container" style="height: 450px">
     <iframe id="doughnut-chart-overview-iframe" src='{environment:demosBaseUrl}/charts/doughnut-chart-overview' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="doughnut-chart-overview-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기
+    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="doughnut-chart-overview-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기
     </button>
 </div>
 
 <div class="divider--half"></div>
 
-### Dependencies
+### 의존성
 
-When installing the charts package, the core package must also be installed.
+차트 패키지를 설치할 때 코어 패키지도 설치해야 합니다.
 
-**npm install igniteui-angular-charts igniteui-angular-core**
+-   **npm install --save igniteui-angular-core**
+-   **npm install --save igniteui-angular-charts**
 
-<!-- -->
+### 필요한 모듈
 
-[!NOTE]
-For Angular:
-
-The doughnut chart is exported as an `NgModule`, you need to import the _IgxDoughnutChartModule_ inside your `AppModule`:
-
-<!-- -->
-
-[!NOTE]
-For React:
-
-In order to use the Doughnut chart, you need to register the 
-`IgxDoughnutChartModule` and `IgrRingSeriesModule` in your app during load:
+`IgxDoughnutChart`에는 다음 모듈이 필요합니다:
 
 ```typescript
 // app.module.ts
@@ -49,9 +38,9 @@ import { IgxDoughnutChartModule } from 'igniteui-angular-charts/ES5/igx-doughnut
 
 @NgModule({
     imports: [
-        ...
+        // ...
         IgxDoughnutChartModule,
-        ...
+        // ...
     ]
 })
 export class AppModule {}
@@ -59,10 +48,10 @@ export class AppModule {}
 
 <div class="divider--half"></div>
 
-### Usage
+### 사용 방법
 
-Now that the doughnut chart module is imported, next step is to bind it to data.
-In order to create an igx-doughnut-chart component, you must first have data to bind it to. The following code snippet demonstrates how to create a simple data source.
+도넛형 차트 모듈을 불러오기 한 후 다음 단계는 데이터에 바인딩합니다.
+컴포넌트를 작성하려면 먼저 데이터를 바인딩해야 합니다. 다음의 코드 조작은 간단한 데이터 소스를 작성하는 방법을 보여줍니다.
 
 ```typescript
 this.state = {
@@ -75,13 +64,13 @@ this.state = {
 ] };
 ```
 
-The following code demonstrates how to bind the doughnut chart to the above data.
+다음의 코드는 도넛형 차트를 상기의 데이터에 바인딩하는 방법을 보여줍니다.
 
 ```html
  <igx-doughnut-chart width="700px"
                      height="500px">
     <igx-doughnut-chart-series>
-        <igx-ring-series  [itemsSource]="data"        
+        <igx-ring-series  [itemsSource]="data"
                 labelMemberPath="Label"
                 valueMemberPath="Value">
     </igx-doughnut-chart-series>
@@ -90,80 +79,74 @@ The following code demonstrates how to bind the doughnut chart to the above data
 
 <div class="divider--half"></div>
 
-## Configurable Elements
+### 다중 링
 
-### Multiple Rings
+도넛형 차트 컴포넌트는 다중 링을 다른 컬렉션에 바인딩할 수 있는 각 링과 동시에 표시할 수 있으며 공통 데이터 소스를 공유할 수 있습니다.
 
-The `IgxDoughnutChart` can display multiple rings at the same time with each of the rings capable of being bound to a different collection, or they can share a common data source.
+### 조각 선택
 
-### Slice Selection
+도넛형 차트 컴포넌트는 하나 이상의 조각 상태를 선택한 상태로 설정하는 API를 공개합니다. 임의로 선택한 조각에 단일 사용자 비주얼 스타일을 적용할 수 있습니다.
 
-The doughnut chart component exposes the API for setting the state of one or more slices to selected. Optionally, you may apply a single custom visual style to the selected slices.
+**조각 선택 활성화/비활성화** - `allowSliceSelection` 속성을 설정하여 도넛형 차트에서 조각 선택을 활성화(기본 설정)하거나 비활성화할 수 있습니다.
 
-**Enable/disable slice selection** - You can enable (default setting) or disable slice selection in the doughnut chart by setting the `allowSliceSelection` property. 
+**선택한 조각 모양의 설정** - 슬라이스의 `targetType`를 사용하여 모양을 정의하고 이를 도넛형 차트의 `selectedStyle` 속성에 할당하여 선택한 조각의 모양을 정의할 수 있습니다.
 
-**Configuring the look of the selected slices** - You can define how the selected slices will look by defining a style with a `targetType` of Slice and assigning it to the `selectedStyle` property of the doughnut chart. 
+**조각을 클릭하여 선택 상태를 변경** - `sliceClick` 이벤트에 이벤트 핸들러를 연결한 경우, 선택 상태를 수정할 수 있도록 이벤트 인수에서 클릭한 조각에 대한 참조를 제공합니다. 도넛형 차트는 선택한 조각의 모양을 결정하는 `selectedStyle` 속성을 공개합니다. 기본적으로 모양이 적용되지 않으며 조각을 선택해도 어떤 식으로든 모양이 변경되지는 않습니다. 선택한 조각에 사용자 모양을 적용하려면 조각의 `targetType`로 스타일을 정의하고 선택한 `selectedStyle` 속성의 값으로 설정해야 합니다.
 
-**Changing the selection state upon slice click** - If you attach an event handler for the `sliceClick` event, it supplies a reference to the clicked slice in the event arguments allowing you to modify its selection state. The doughnut chart exposes a `selectedStyle` property that determines the look of the selected slices. By default, no style is applied, and selecting a slice will not alter its appearance in any way. In order to apply your own style to the selected slices you need to define a Style with `targetType` of Slice and set it as the value of the `selectedStyle` property. 
+**IsSelected 속성 설정** - `IgxDoughnutChart`는 `isSelected` 속성을 직접 수정할 수 있도록 모든 조각에 대한 참조를 보유하고 있습니다. 도넛형 차트는 조각의 선택/선택 해제 상태를 변경하는 데 사용되는 `sliceClick` 이벤트를 공개합니다.
 
-**Setting the IsSelected property** - The doughnut chart holds references to all the slices allowing you to modify their `isSelected` property directly. The doughnut chart exposes a `sliceClick` event used to change the selected/unselected state of a slice.  
+**SelectedSlices 컬렉션의 콘텐츠 수정** - `selectedSlices` 컬렉션의 콘텐츠를 변경하여 선택한 조각을 변경할 수 있습니다. 도넛형 차트에는 슬라이스 객체에 대한 `isSelected` 속성을 직접 수정할 수 있도록 모든 조각에 대한 참조를 보유하고 있습니다.
 
-**Modifying the contents of the SelectedSlices collection** - You can change the selected slice by changing the contents of the `selectedSlices` collection. The doughnut chart holds references to all the slices allowing you to modify their `isSelected` property directly to the Slice objects. 
-
-### Slice Selection Demo
+### 조각 선택 데모
 
 <div class="sample-container" style="height: 450px">
     <iframe id="doughnut-chart-selection-iframe" src='{environment:demosBaseUrl}/charts/doughnut-chart-selection' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="doughnut-chart-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기
+    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="doughnut-chart-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기
     </button>
 </div>
 
 <div class="divider--half"></div>
 
-### Slice Explosion
+### 조각 전개
 
-The `IgxDoughnutChart` slices explode either programmatically or by user interaction.
+도넛형 차트 컴포넌트 조각은 프로그래밍 방식 또는 사용자 상호 작용에 의해 전개됩니다.
 
-**Enable/disable slice explosion**
-You can enable or disable the ability to explode slices by setting the `allowSliceExplosion` property.
+**조각 분할 활성화/비활성화**
+`allowSliceExplosion` 속성을 설정하여 조각 전개 기능을 활성화 또는 비활성화할 수 있습니다.
 
-**Changing the exploded state of a slice upon slice click**
-If you attach an event handler for the `sliceClick` event, a reference to the clicked slice is supplied in the event arguments and you can modify its exploded state.
+**조각을 클릭하여 조각의 전개 상태를 변경**
+`sliceClick` 이벤트에 이벤트 핸들러를 연결한 경우, 클릭한 조각에 대한 참조가 이벤트 인수에 제공되고 해당 전개 상태를 수정할 수 있습니다.
 
-**Setting the IsExploded property**
-The doughnut chart holds references to all the slices allowing you to modify their `isExploded` property directly.
+**IsExploded 속성 설정**
+`IgxDoughnutChart`에는 모든 조각에 대한 참조가 있으며 `isExploded` 속성을 직접 수정할 수 있습니다.
 
-**Modifying the contents of the ExplodedSlices collection**
-You can change the exploded slices by changing the contents of the `explodedSlices` collection.
+**ExplodedSlices 컬렉션의 콘텐츠 수정**
+`explodedSlices` 컬렉션의 콘텐츠를 변경하여 전개된 조각을 변경할 수 있습니다.
 
-```typescript
-import { SliceClickEventArgs } from "igniteui-react-charts/ES5/igr-slice-click-event-args";
-```
-
-### Slice Explosion Demo
+### 조각 전개 데모
 
 <div class="sample-container" style="height: 450px">
     <iframe id="doughnut-chart-explosion-iframe" src='{environment:demosBaseUrl}/charts/doughnut-chart-explosion' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="doughnut-chart-explosion-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기
+    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="doughnut-chart-explosion-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기
     </button>
 </div>
 
 <div class="divider--half"></div>
 
-### Legend
+### 범례
 
-The `IgxDoughnutChart` supports the use of a legend. The legend used is the ItemLegend which is connected though the series of the chart.
+도넛형 차트 컴포넌트는 범례 사용을 지원합니다. 범례는 차트 시리즈를 통해 연결된 ItemLegend가 사용됩니다.
 
-### Legend Demo
+### 범례 데모
 
 <div class="sample-container" style="height: 450px">
     <iframe id="doughnut-chart-legend-iframe" src='{environment:demosBaseUrl}/charts/doughnut-chart-legend' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="doughnut-chart-legend-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="doughnut-chart-legend-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기
     </button>
 </div>

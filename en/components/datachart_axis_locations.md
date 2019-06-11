@@ -1,17 +1,17 @@
 ---
-title: Data Chart Component - Native Angular | Ignite UI for Angular
-_description: The Ignite UI for Angular Data Chart is a charting component that provides modular design of axis, markers, series, legend, and annotation layers. With this chart, you can create multiple instances of these visual elements in the same chart plot area in order to create composite chart views.
-_keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Chart Control, Angular Chart Example, Angular Chart Component, Angular Data Chart
+title: Data Chart | Visualization Tools | Ignite UI for Angular | Infragistics | Axis Location
+_description: Create a data chart that displays multiple instances of visual elements in the same plot area in order to create composite chart views.
+_keywords: data chart, Ignite UI for Angular, Infragistics
 ---
 
 ## Axis Locations
 
- For all axes have, you can specify axis location in relationship to chart plot area. This especially important when using more than two axes in the same chart or when [Sharing Axis](datachart_axis_sharing.md) between multiple series.
+ For all axes have, you can specify axis location in relationship to chart plot area. This especially important when using more than two axes in the same data chart or when [Sharing Axis](datachart_axis_sharing.md) between multiple series.
 
 ### Demo
 
-<div class="sample-container" style="height: 450px">
-    <iframe id="data-chart-axis-locations-iframe" src='{environment:demosBaseUrl}/charts/data-chart-axis-locations' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 450px">
+    <iframe id="data-chart-axis-locations-iframe" src='{environment:demosBaseUrl}/charts/data-chart-axis-locations' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-axis-locations-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz

@@ -35,8 +35,8 @@ The following table summarizes the GeographicHighDensityScatterSeries series pro
 | Property              | Type   | Description                                                                                           |
 | --------------------- | ------ | ----------------------------------------------------------------------------------------------------- |
 | `ItemsSource`         | any    | Gets or sets the items source                                                                         |
-| `LongitudeMemberPath` | String | Uses the ItemsSource property to determine the location of the longitude values on the assigned items |
-| `LatitudeMemberPath`  | String | Uses the ItemsSource property to determine the location of the latitude values on the assigned items  |
+| `LongitudeMemberPath` | string | Uses the ItemsSource property to determine the location of the longitude values on the assigned items |
+| `LatitudeMemberPath`  | string | Uses the ItemsSource property to determine the location of the latitude values on the assigned items  |
 
 ### Heat Color Scale
 

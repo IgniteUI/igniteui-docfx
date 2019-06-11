@@ -11,8 +11,8 @@ By the default, the Ignite UI for Angular map component displays geographic imag
 
 ### Demo
 
-<div class="sample-container" style="height: 400px">
-    <iframe id="geo-map-binding-osm-imagery-iframe" src='{environment:demosBaseUrl}/maps/geo-map-binding-osm-imagery' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 400px">
+    <iframe id="geo-map-binding-osm-imagery-iframe" src='{environment:demosBaseUrl}/maps/geo-map-binding-osm-imagery' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="geo-map-binding-osm-imagery-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz

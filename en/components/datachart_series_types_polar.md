@@ -1,19 +1,19 @@
 ---
-title: Data Chart Component - Native Angular | Ignite UI for Angular
-_description: The Ignite UI for Angular Data Chart is a charting component that provides modular design of axis, markers, series, legend, and annotation layers. With this chart, you can create multiple instances of these visual elements in the same chart plot area in order to create composite chart views.
-_keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Chart Control, Angular Chart Example, Angular Chart Component, Angular Data Chart
+title: Data Chart | Visualization Tools | Ignite UI for Angular | Infragistics | Polar
+_description: Create a data chart that displays multiple instances of visual elements in the same plot area in order to create composite chart views.
+_keywords: data chart, Ignite UI for Angular, Infragistics
 ---
 
 ## Polar Series
 
-This topic explains various types of polar series in the `IgxDataChart` control. Polar series is a group of series that use the polar (angle, radius) coordinate system instead of the Cartesian (x, y) coordinate system to plot data in chart. In other words, polar series take concepts of [Scatter Series](datachart_series_types_scatter_marker.md) and wrap them around a circle rather than stretching along a horizontal line. This group of series is used to show the relationship among the items in several distinct series of data using the polar coordinates system.
+This topic explains various types of polar series in the Angular data chart component. Polar series is a group of series that use the polar (angle, radius) coordinate system instead of the Cartesian (x, y) coordinate system to plot data in chart. In other words, polar series take concepts of [Scatter Series](datachart_series_types_scatter_marker.md) and wrap them around a circle rather than stretching along a horizontal line. This group of series is used to show the relationship among the items in several distinct series of data using the polar coordinates system.
 
 Polar series draw attention to uneven intervals or clusters of data. They are often used to plot scientific data (e.g. wind's direction and speed, strength and direction of magnetic field, location of objects in solar system), and can highlight the deviation of collected data from predicted results.
 
 ### Demo
 
-<div class="sample-container" style="height: 500px">
-    <iframe id="data-chart-type-polar-series-iframe" src='{environment:demosBaseUrl}/charts/data-chart-type-polar-series' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 500px">
+    <iframe id="data-chart-type-polar-series-iframe" src='{environment:demosBaseUrl}/charts/data-chart-type-polar-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-type-polar-series-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
@@ -36,7 +36,7 @@ The Data Chart supports the following types of polar series:
 
 ### Required Axes
 
-The `IgxDataChart` control provides various types of axes but only the following types of axes can be used with polar series.
+The Angular data chart component provides various types of axes but only the following types of axes can be used with polar series.
 
 | Series Type             | Radius Axis Type                | Angle Axis Type                |
 | ----------------------- | ------------------------------- | ------------------------------ |
@@ -104,14 +104,15 @@ This code demonstrates how to create an instance of data chart with `PolarLineSe
     [dataSource]="dataSource"
     width="700px"
     height="500px">
-    <igx-numeric-angle-axis  name="angleAxis" startAngleOffset="-90"/>
-    <igx-numeric-radius-axis name="radiusAxis" />
+    <igx-numeric-angle-axis  name="angleAxis" startAngleOffset="-90"></igx-numeric-angle-axis>
+    <igx-numeric-radius-axis name="radiusAxis"></igx-numeric-radius-axis>
     <igx-polar-line-series
         name="series1"
         angleMemberPath="Direction"
         radiusMemberPath="WindSpeed"
         radiusAxisName="radiusAxis"
-        angleAxisName="angleAxis"/>
+        angleAxisName="angleAxis">
+    </igx-polar-line-series>
  </igx-data-chart>
 ```
 

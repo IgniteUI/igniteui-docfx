@@ -1,19 +1,19 @@
 ---
-title: Data Chart Component - Native Angular | Ignite UI for Angular
+제목: 데이터 차트 구성 요소 - 네이티브 Angular | Ignite UI for Angular
 _description: The Ignite UI for Angular Data Chart is a charting component that provides modular design of axis, markers, series, legend, and annotation layers. With this chart, you can create multiple instances of these visual elements in the same chart plot area in order to create composite chart views.
 _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Data Chart, Angular Data Chart Control, Angular Data Chart Example, Angular Data Chart Component, Angular Data Chart
 _language: kr
 ---
 
-## Series
+## 시리즈
 
-In the `IgxDataChart` control, series are classified into groups of similar series: Category Series, Financial Series, Polar Series, Radial Series, Range Series, Scatter Series, Stacked Series, and Shape Series.
+`IgxDataChart` 제어에서 시리즈는 카테고리 시리즈, 금융 시리즈, 폴라 시리즈, 레이디얼 시리즈, 범위 시리즈, 분산 시리즈, 스택 시리즈, 모양 시리즈의 유사한 시리즈 그룹으로 분류됩니다.
 
-In addition to these series, you can add [Series Annotations](datachart_series_annotations.md) and [Series Highlighting](datachart_series_highlighting.md) in the `IgxDataChart` control.
+이 시리즈 외에도 `IgxDataChart` 제어에 [시리즈 주석](datachart_series_annotations.md) 및 [시리즈 강조 표시](datachart_series_highlighting.md)를 추가할 수 있습니다.
 
-The following list shows all types of the series in each of their groups. Click on a name of a series to navigate to a help topic that provides details on how to use a given series in the `IgxDataChart` control.
+다음 목록은 각 그룹의 모든 시리즈 유형을 보여 줍니다. 시리즈 이름을 클릭하면 `IgxDataChart` 제어에서 각 시리즈를 사용하는 방법에 대해 설명한 도움말을 볼 수 있습니다.
 
-#### Category Series
+#### 카테고리 시리즈
 
 -   [AreaSeries](datachart_series_types_category.md)
 -   [BarSeries](datachart_series_types_category.md)
@@ -26,7 +26,7 @@ The following list shows all types of the series in each of their groups. Click 
 -   [StepLineSeries](datachart_series_types_category.md)
 -   [WaterfallSeries](datachart_series_types_category.md)
 
-#### Polar Series
+#### 폴라 시리즈
 
 -   [PolarAreaSeries](datachart_series_types_polar.md)
 -   [PolarLineSeries](datachart_series_types_polar.md)
@@ -41,33 +41,33 @@ The following list shows all types of the series in each of their groups. Click 
 -   [RadialColumnSeries](datachart_series_types_radial.md)
 -   [RadialPieSeries](datachart_series_types_radial.md)
 
-#### Range Series
+#### 범위 시리즈
 
 -   [RangeAreaSeries](datachart_series_types_range.md)
 -   [RangeColumnSeries](datachart_series_types_range.md)
 
-#### Scatter Series
+#### 분산 시리즈
 
--   [Scatter Area Series](datachart_series_types_scatter_area.md)
--   [Scatter Bubble Series](datachart_series_types_scatter_bubble.md)
--   [Scatter Contour Series](datachart_series_types_scatter_contour.md)
--   [Scatter Marker Series](datachart_series_types_scatter_marker.md)
--   [Scatter Line Series](datachart_series_types_scatter_marker.md)
--   [Scatter Spline Series](datachart_series_types_scatter_marker.md)
--   [Scatter Polygon Series](datachart_series_types_shape.md)
--   [Scatter Polyline Series](datachart_series_types_shape.md)
+-   [분산 영역 시리즈](datachart_series_types_scatter_area.md)
+-   [분산 버블 시리즈](datachart_series_types_scatter_bubble.md)
+-   [분산 등고선 시리즈](datachart_series_types_scatter_contour.md)
+-   [분산 마커 시리즈](datachart_series_types_scatter_marker.md)
+-   [분산 라인 시리즈](datachart_series_types_scatter_marker.md)
+-   [분산 스플라인 시리즈](datachart_series_types_scatter_marker.md)
+-   [분산 폴리곤 시리즈](datachart_series_types_shape.md)
+-   [분산 폴리라인 시리즈](datachart_series_types_shape.md)
 
-#### Financial Series
+#### 금융 시리즈
 
--   [FinancialPriceSeries (OHLC)](datachart_series_types_financial.md)
--   [FinancialPriceSeries (Candlestick)](datachart_series_types_financial.md)
+-   [FinancialPriceSeries(OHLC)](datachart_series_types_financial.md)
+-   [FinancialPriceSeries(Candlestick)](datachart_series_types_financial.md)
 
-#### Financial Overlays
+#### 금융 오버레이
 
 -   [BollingerBandsOverlay](datachart_series_types_financial.md)
 -   [PriceChannelOverlay](datachart_series_types_financial.md)
 
-#### Financial Indicators
+#### 금융지표
 
 -   [AbsoluteVolumeOscillatorIndicator](datachart_series_types_financial.md)
 -   [AccumulationDistributionIndicator](datachart_series_types_financial.md)

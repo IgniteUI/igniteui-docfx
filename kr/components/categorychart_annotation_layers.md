@@ -1,28 +1,28 @@
 ---
-title: Annotations
-_description: The Ignite UI for Category Chart component simplifies the complexities of the data visualization domain into manageable API so that a user can bind a collection of data, a group of collections, and a data property, and let the charting control do the rest.
-_keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Chart Control, Angular Chart Example, Angular Grid Component, Angular Chart Component, Angular Category Chart
+제목: 카테고리 차트 | 데이터 비주얼라이제이션 도구 | Ignite UI for Angular | 주석 | Infragistics 
+_description: Use the category chart component to analyze and  automatically choose the best chart type to represent data. Learn about our chart types for visualization.
+_keywords: category chart, Ignite UI for Angular, infragistics
 _language: kr
 ---
 
-## Annotations
+## 주석
 
-This topic provides conceptual information about the annotations and overlay interactions available on the `IgxCategoryChart`.
+이 항목에서는 Ignite UI for Angular 카테고리 차트 컴포넌트에서 사용할 수 있는 주석 및 오버레이 상호 작용에 대한 개념 정보를 제공합니다.
 
-### Demo
+### 데모
 
 <div class="sample-container" style="height: 500px">
     <iframe id="category-chart-annotations-iframe" src='{environment:demosBaseUrl}/charts/category-chart-annotations' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="category-chart-annotations-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="category-chart-annotations-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기
     </button>
 </div>
 <div class="divider--half"></div>
 
-### Crosshair Layer
+### 십자형 레이어
 
-The Crosshair Layer provides crossing lines that meet at the actual value of every targeted series.  Crosshair types include: Horizontal, Vertical, and Both.  The Crosshairs can also be configured to snap to data points by setting the `crosshairsSnapToData` property to true, otherwise the crosshairs will be interpolated between data points.  Annotations can also be enabled to display the crosshair's value along the axis.
+카테고리 차트의 십자형 레이어는 모든 대상 시리즈의 실제 값과 만나는 교차 선을 제공합니다.  십자형 유형: 수평, 수직, 양쪽 모두가 포함.  십자형은 `crosshairsSnapToData` 속성을 true로 설정하여 데이터 점에 스냅하도록 구성할 수 있으며, 그렇지 않으면 데이터 점간에 십자선이 보간됩니다.  주석을 활성화하여 축에 따라 십자선 값을 표시할 수 있습니다.
 
 ```html
 <igx-category-chart
@@ -33,9 +33,9 @@ The Crosshair Layer provides crossing lines that meet at the actual value of eve
 </igx-category-chart>
 ```
 
-### Final Value Layer
+### 최종값 레이어
 
-The Final Value Layer provides a quick view along the axis of the ending value displayed in a series.
+카테고리 차트 컴포넌트의 최종값 레이어는 시리즈에 표시된 종료값 축을 따라 빠른 보기를 제공합니다.
 
 ```html
 <igx-category-chart
@@ -44,9 +44,9 @@ The Final Value Layer provides a quick view along the axis of the ending value d
 </igx-category-chart>
 ```
 
-### Callout Layer
+### 콜아웃 레이어
 
-The Callout Layer displays a text callout at X/Y positions given in the data.
+카테고리 차트 컴포넌트의 콜아웃 레이어는 데이터에 지정된 X/Y 위치에 텍스트 콜아웃을 표시합니다.
 
 ```html
 <igx-category-chart

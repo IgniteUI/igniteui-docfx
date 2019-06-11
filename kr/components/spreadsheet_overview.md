@@ -6,7 +6,7 @@ _keywords: Spreadsheet, Ignite UI for Angular, Infragistics
 
 ## Angular Spreadsheet
 
-The Angular Spreadsheet is a Angular component that allows visualizing and editing of spreadsheet data. Features include activation, cell editing, conditional formatting, selection, clipboard. 
+The Angular Spreadsheet is a Angular component that allows visualizing and editing of spreadsheet data. Features include activation, cell editing, conditional formatting, selection, clipboard.
 
 ### Demo
 
@@ -24,14 +24,13 @@ The Angular Spreadsheet is a Angular component that allows visualizing and editi
 
 When installing the spreadsheet package, the core and excel package must also be installed.
 
-**npm install igniteui-angular-core**
-**npm install igniteui-angular-excel**
-**npm install igniteui-angular-spreadsheet**
+-   **npm install --save igniteui-angular-core**
+-   **npm install --save igniteui-angular-excel**
+-   **npm install --save igniteui-angular-spreadsheet**
 
-<!-- -->
+### Required Modules
 
-In order to use the spreadsheet, you need to register the
-`IgxSpreadsheetModule` in your app during load:
+The `IgxSpreadsheet` requires the following modules:
 
 ```typescript
 import { IgxExcelModule } from "igniteui-angular-excel/ES5/igx-excel-module";

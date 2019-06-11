@@ -1,16 +1,16 @@
 ---
-title: Data Chart Component - Native Angular | Ignite UI for Angular
-_description: The Ignite UI for Angular Data Chart is a charting component that provides modular design of axis, markers, series, legend, and annotation layers. With this chart, you can create multiple instances of these visual elements in the same chart plot area in order to create composite chart views.
-_keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Data Chart, Angular Data Chart Control, Angular Data Chart Example, Angular Data Chart Component, Angular Data Chart
+title: Data Chart | Visualization Tools | Ignite UI for Angular | Infragistics | Series
+_description: Create a data chart that displays multiple instances of visual elements in the same plot area in order to create composite chart views.
+_keywords: data chart, Ignite UI for Angular, Infragistics
 ---
 
 ## Series
 
-In the `IgxDataChart` control, series are classified into groups of similar series: Category Series, Financial Series, Polar Series, Radial Series, Range Series, Scatter Series, Stacked Series, and Shape Series.
+In the Angular data chart component, series are classified into groups of similar series: Category Series, Financial Series, Polar Series, Radial Series, Range Series, Scatter Series, Stacked Series, and Shape Series.
 
-In addition to these series, you can add [Series Annotations](datachart_series_annotations.md) and [Series Highlighting](datachart_series_highlighting.md) in the `IgxDataChart` control.
+In addition to these series, you can add [Series Annotations](datachart_series_annotations.md) and [Series Highlighting](datachart_series_highlighting.md) in the Angular data chart component.
 
-The following list shows all types of the series in each of their groups. Click on a name of a series to navigate to a help topic that provides details on how to use a given series in the `IgxDataChart` control.
+The following list shows all types of the series in each of their groups. Click on a name of a series to navigate to a help topic that provides details on how to use a given series in the Angular data chart component.
 
 #### Category Series
 

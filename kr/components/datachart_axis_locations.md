@@ -1,29 +1,29 @@
 ---
-title: Data Chart Component - Native Angular | Ignite UI for Angular
+제목: 데이터 차트 구성 요소 - 네이티브 Angular | Ignite UI for Angular
 _description: The Ignite UI for Angular Data Chart is a charting component that provides modular design of axis, markers, series, legend, and annotation layers. With this chart, you can create multiple instances of these visual elements in the same chart plot area in order to create composite chart views.
 _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Chart Control, Angular Chart Example, Angular Chart Component, Angular Data Chart
 _language: kr
 ---
 
-## Axis Locations
+## 축 위치
 
- For all axes have, you can specify axis location in relationship to chart plot area. This especially important when using more than two axes in the same chart or when [Sharing Axis](datachart_axis_sharing.md) between multiple series.
+ 모든 축에 대해 차트 플롯 영역과 관련하여 축 위치를 지정할 수 있습니다. 이는 동일한 차트에서 2개 이상의 축을 사용하거나 여러 시리즈 간에 [축을 공유](datachart_axis_sharing.md)하는 경우에 특히 중요합니다.
 
-### Demo
+### 데모
 
 <div class="sample-container" style="height: 450px">
     <iframe id="data-chart-axis-locations-iframe" src='{environment:demosBaseUrl}/charts/data-chart-axis-locations' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-axis-locations-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-axis-locations-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기
     </button>
 </div>
 
 <div class="divider--half"></div>
 
-### Code Example
+### 코드 예제
 
-This code demonstrates how to create data chart with two `IgxNumericYAxisComponent` that will be placed on left/right sides and two `IgxCategoryXAxisComponent` that will be stacked on one another.
+이 코드는 2개의 `IgxNumericYAxisComponent`가 왼쪽/오른쪽에 배치되고, 2개의 `IgxCategoryXAxisComponent`가 서로 쌓이는 데이터 차트를 생성하는 방법을 보여 줍니다.
 
 ```html
  <igx-data-chart
@@ -62,8 +62,8 @@ This code demonstrates how to create data chart with two `IgxNumericYAxisCompone
  </igx-data-chart>
 ```
 
-### Additional Resources
+### 추가 리소스
 
--   [Axis Types](datachart_axis_types.md)
--   [Axis Sharing](datachart_axis_sharing.md)
--   [Series Types](datachart_series_types.md)
+-   [축 유형](datachart_axis_types.md)
+-   [축 공유](datachart_axis_sharing.md)
+-   [시리즈 유형](datachart_series_types.md)
