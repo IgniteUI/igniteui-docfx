@@ -37,7 +37,7 @@ import { IgxSliderModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-####Continuous Slider
+#### Continuous Slider
 > [!WARNING]
 > `isContinuous` property has been deprecated. Instead, you will have to use `continuous`.
 
