@@ -301,6 +301,16 @@ enum DragIcon {
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-row-drag-to-grid-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기</button>
 </div>
+
+The following sample demonstrates how to configure row reordering in the grid. Holding onto the drag icon will allow you to move a row anywhere in the grid.
+<div class="sample-container loading" style="height:830px">
+    <iframe id="grid-row-reorder" src='{environment:demosBaseUrl}/grid/grid-row-reorder' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-row-reorder" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
 }
 
 @@if (igxName === 'IgxTreeGrid') {
@@ -312,6 +322,16 @@ enum DragIcon {
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-row-drag-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기</button>
 </div>
 <div class="divider--half"></div>
+
+The following sample demonstrates how to configure row reordering in the tree grid. Notice that we also have row selection enabled and we preserve the selection when dropping the dragged row.
+<div class="sample-container loading" style="height:560px">
+    <iframe id="tree-grid-row-reorder-sample-iframe" src='{environment:demosBaseUrl}/tree-grid/tree-grid-row-reordering' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-row-reorder-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div> 
 }
 
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -323,6 +343,17 @@ enum DragIcon {
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-row-drag-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기</button>
 </div>
 <div class="divider--half"></div>
+
+The following sample demonstrates how to configure row reordering in the hierarchical grid.
+Notice that we also have row selection enabled and we preserve the selection when dropping the dragged row.
+<div class="sample-container loading" style="height:560px">
+    <iframe id="hierarchical-grid-row-reorder-sample-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-row-reorder' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-row-reorder-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div> 
 }
 
 ### 제한 사항

@@ -301,6 +301,16 @@ The result of the configuration can be seem below:
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-row-drag-to-grid-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
+
+The following sample demonstrates how to configure row reordering in the grid. Holding onto the drag icon will allow you to move a row anywhere in the grid.
+<div class="sample-container loading" style="height:830px">
+    <iframe id="grid-row-reorder" src='{environment:demosBaseUrl}/grid/grid-row-reorder' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-row-reorder" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
 }
 
 @@if (igxName === 'IgxTreeGrid') {
@@ -361,16 +371,6 @@ Try to drag moons from the grid and drop them to their corresponding planets. Ro
 
 > [!NOTE] The classes applied to the row drag ghost, used in the demo above, are using ::ng-deep modifier, because row drag is an internal grid feature and cannot be accessed on application level, due to the CSS encapsulation.
 
-<div class="divider--half"></div>
-
-The following sample demonstrates how to configure row reordering in the grid. Holding onto the drag icon will allow you to move a row anywhere in the grid.
-<div class="sample-container loading" style="height:560px">
-    <iframe id="grid-row-reorder" src='{environment:demosBaseUrl}/grid/grid-row-reorder' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-<br/>
-<div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-row-reorder" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
 <div class="divider--half"></div>
 }
 
