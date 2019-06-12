@@ -259,7 +259,7 @@ As we see from the sample above, setting `boundaries` is still a valid operation
 
 #### lables templating
 During the showcase above, we've intentionally shown how we can provide our custom `label` template, by using both  [igxSliderThumbFrom]({environment:angularApiUrl}/interfaces/igxSliderThumbFrom.html) and [igxSliderThumbTo]({environment:angularApiUrl}/interfaces/igxSliderThumbTo.html) directives. Intuitively we can assume that [igxSliderThumbFrom]({environment:angularApiUrl}/interfaces/igxSliderThumbFrom.html) corresponds to the  [lowerLabel]({environment:angularApiUrl}/classes/igxslidercomponent.html#lowerLabel) and [igxSliderThumbTo]({environment:angularApiUrl}/interfaces/igxSliderThumbTo.html) to the [upperLabel]({environment:angularApiUrl}/classes/igxslidercomponent.html#upperLabel). <br>
-The [context]({environment:angularApiUrl}/classes/igxslidercomponent.html#context) here gives us implicitely a reference to the `value` **input** property and explicitely a reference to the `labels` **input** if `labelsView` is enabled.
+The [context]({environment:angularApiUrl}/classes/igxslidercomponent.html#context) here gives us implicitly a reference to the `value` **input** property and explicitly a reference to the `labels` **input** if `labelsView` is enabled.
 
 ```html
   <ng-template igxSliderThumbFrom let-value let-labels="labels">
