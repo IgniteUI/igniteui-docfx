@@ -228,7 +228,6 @@ Once we have the definition that corresponds to the preceding rule, we are ready
 > Please take into account the fact that when [`labelsView`]({environment:angularApiUrl}/classes/igxslidercomponent.html#labelsviewenabled) is enabled, your control over the [`maxValue`]({environment:angularApiUrl}/classes/igxslidercomponent.html#maxvalue), [`minValue`]({environment:angularApiUrl}/classes/igxslidercomponent.html#minvalue) and [`step`]({environment:angularApiUrl}/classes/igxslidercomponent.html#step) inputs will be taken. 
 
 Another important factor is the way that the `slider` handles the update process when `labelsView` is enabled.
->[!NOTE]
 > It simply operates with the `index(es)` of the colleciton, which respectively means that the `value`, `lowerBound` and `upperBound` **properties** control the `track` by following/setting them (`index(es)`).
 
 ```html
