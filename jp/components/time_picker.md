@@ -233,7 +233,7 @@ public date: Date = new Date(Date.now());
 
 #### 入力グループのテンプレート - ドロップダウン モード
 
-<a href="#templating-input-group"> テンプレート入力グループ</a>セクションに記載されているすべての情報は、ドロップダウン モードのタイムピッカーを再テンプレート設定する際に適用できます。その他の要件として、ドロップダウンの開始ターゲットとして使用するために、テンプレート内の HTML 要素を dropDownTarget テンプレート参照変数でマークする必要があります。それ以外の場合、ドロップダウンは開かれず、コンソールにエラーメッセージが表示されます。
+<a href="#templating-input-group"> テンプレート入力グループ</a>セクションに記載されているすべての情報は、ドロップダウン モードのタイムピッカーを再テンプレート設定する際に適用できます。The only requirement is that an HTML element should be passed to the `openDialog(target)`, and that element will be used as a positioning target for the drop down that is being spawned.
 
 ```html
 <igx-time-picker #picker [value]="today" format="HH:mm" mode="dropdown">
@@ -241,7 +241,7 @@ public date: Date = new Date(Date.now());
         <igx-input-group>
             <input #dropDownTarget igxInput [value]="displayTime" (blur)="onBlur(dropDownTarget.value, value, picker)"/>
             <igx-suffix>
-                <igx-icon (click)="openDialog()">access_time</igx-icon>
+                <igx-icon (click)="openDialog(dropDownTarget)">access_time</igx-icon>
             </igx-suffix>
         </igx-input-group>
     </ng-template>
