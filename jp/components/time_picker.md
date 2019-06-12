@@ -88,6 +88,31 @@ TwoWay データ バインディングを使用するには、`ngModel` を以�
 <igx-time-picker [(ngModel)]="date"></igx-time-picker>
 ```
 
+#### Setting format
+To set the time format, use the [`IgxTimePickerComponent`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html) [`format`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#format) option.
+
+The table below lists valid time display formats:
+
+| Format | Description |
+|:-------:|:-----------|
+| `h` | Formats the hours field in 12-hours format without leading zero (1..12). | 
+| `hh` | Formats the hours field in 12-hours format with leading zero (01..12). | 
+| `H` | Formats the hours field in 24-hours format without leading zero (0..23). | 
+| `HH` | Formats the hours field in 24-hours format with leading zero (00..23). | 
+| `m` | Formats the minutes field without leading zero (0..59). |
+| `mm` | Formats the minutes field with leading zero (00..59). |
+| `tt` | Represents the AM/PM field. |
+
+
+The result is as follows:
+<div class="sample-container loading" style="height: 580px;">
+    <iframe id="time-picker-sample-8" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-8" class="lazyload"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="time-picker-sample-8" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
+
 #### デルタおよびスピン モードの変更
 
 項目のデルタを変更するには、[`itemsDelta`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#itemsdelta) を設定します。スピン モードを変更するには、[`isSpinLoop`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#isspinloop) を使用します。
@@ -277,6 +302,44 @@ public onBlur(inputValue: string, value: Date, picker: IgxTimePickerComponent) {
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="time-picker-sample-6" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
 </div>
+
+#### Custom button action
+The [`IgxTimePickerComponent`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html) supports adding of custom actions buttons. To achieve that, wrap the buttons in `ng-template` marked with the `igxTimePickerActions` directive selector.
+
+In the example below, custom action buttons are added for 'CANCEL', 'OK' and 'NOW' actions.
+
+```html
+<!-- sample.component.html -->
+
+<igx-time-picker #picker format="HH:mm" mode="dropdown">
+    <ng-template igxTimePickerActions>
+        <div class="container action-buttons">
+            <button igxButton="flat" (click)="picker.cancelButtonClick()">cancel</button>
+            <button igxButton="flat" (click)="picker.okButtonClick()">ok</button>
+            <button igxButton="flat" (click)="selectNow(picker)">now</button>
+        </div>
+    </ng-template>
+</igx-time-picker>
+```
+
+```typescript
+// sample.component.ts
+...
+public selectNow(timePicker: IgxTimePickerComponent) {
+    timePicker.value = new Date(Date.now());
+    timePicker.close();
+}
+...
+```
+
+The result is as follows:
+<div class="sample-container loading" style="height: 580px;">
+    <iframe id="time-picker-sample-7" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-7" class="lazyload"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="time-picker-sample-7" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
 
 ### API リファレンス
 <div class="divider--half"></div>
