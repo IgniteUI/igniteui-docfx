@@ -218,7 +218,7 @@ If the sample is configured properly, the final result should look like that:
 <div class="divider"></div>
 
 #### Labels mode
-We've seen only numbers so far. There is one more way, we can present our information through the slider, and it's by an array of primitive values. 
+We've seen only numbers in the thumbs so far, although there is another approach that you could use in order to present information - by using an array of primitive values. 
 >[!NOTE]
 > Your array of primitive values should contains at least two values, otherwise `labelsView` won't be enabled.
 
