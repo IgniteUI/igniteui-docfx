@@ -39,7 +39,7 @@ export class AppModule {}
 
 #### Continuous Slider
 > [!WARNING]
-> `isContinuous` property has been deprecated. Instead, you will have to use `continuous`.
+> `isContinuous` property has been deprecated, [`continuous`]({environment:angularApiUrl}/classes/igxslidercomponent.html#continuous) should be used instead.
 
 Let's start with a simple continuous slider. First, specify the slider type by setting the [`continuous`]({environment:angularApiUrl}/classes/igxslidercomponent.html#continuous) input to true. Next, define the minimum and maximum values using [`minValue`]({environment:angularApiUrl}/classes/igxslidercomponent.html#minvalue) and [`maxValue`]({environment:angularApiUrl}/classes/igxslidercomponent.html#maxvalue). We also bind the slider [`value`]({environment:angularApiUrl}/classes/igxslidercomponent.html#value) to a property in our component called "volume".
 
