@@ -20,7 +20,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 > [!NOTE]
 > To start using Ignite UI for Angular components in your own projects, make sure you have configured all necessary dependencies and have performed the proper setup of your project. You can learn how to do this in the [**installation**](https://www.infragistics.com/products/ignite-ui-angular/getting-started#installation) topic.
 
-###Usage
+### Usage
 To get started with the Ignite UI for Angular Slider, let's first import the [**IgxSliderModule**]({environment:angularApiUrl}/classes/igxslidermodule.html) in our **app.module.ts** file:
 
 ```typescript
@@ -37,8 +37,11 @@ import { IgxSliderModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-####Continuous Slider
-Let's start with a simple continuous slider. First, specify the slider type by setting the [`isContinuous`]({environment:angularApiUrl}/classes/igxslidercomponent.html#iscontinuous) input to true. Next, define the minimum and maximum values using [`minValue`]({environment:angularApiUrl}/classes/igxslidercomponent.html#minvalue) and [`maxValue`]({environment:angularApiUrl}/classes/igxslidercomponent.html#maxvalue). We also bind the slider [`value`]({environment:angularApiUrl}/classes/igxslidercomponent.html#value) to a property in our component called "volume".
+#### Continuous Slider
+> [!WARNING]
+> `isContinuous` property has been deprecated, [`continuous`]({environment:angularApiUrl}/classes/igxslidercomponent.html#continuous) should be used instead.
+
+Let's start with a simple continuous slider. First, specify the slider type by setting the [`continuous`]({environment:angularApiUrl}/classes/igxslidercomponent.html#continuous) input to true. Next, define the minimum and maximum values using [`minValue`]({environment:angularApiUrl}/classes/igxslidercomponent.html#minvalue) and [`maxValue`]({environment:angularApiUrl}/classes/igxslidercomponent.html#maxvalue). We also bind the slider [`value`]({environment:angularApiUrl}/classes/igxslidercomponent.html#value) to a property in our component called "volume".
 
 > [!NOTE]
 > Continuous slider does not display ticks and bubble label for the current value.
@@ -46,7 +49,7 @@ Let's start with a simple continuous slider. First, specify the slider type by s
 ```html
 <!--sample.component.html-->
 
-<igx-slider id="slider" [minValue]="0" [maxValue]="100" [isContinuous]=true [(ngModel)]="volume" ></igx-slider>
+<igx-slider id="slider" [minValue]="0" [maxValue]="100" [continuous]=true [(ngModel)]="volume" ></igx-slider>
 <label igxLabel for="slider">Volume: {{volume}}</label>
 ```
 
@@ -66,7 +69,7 @@ If the sample is configured properly, dragging the slider thumb should update th
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="slide-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-####Discrete Slider
+#### Discrete Slider
 By default, the Ignite UI for Angular Slider is discrete. Discrete slider provides visualization of the current value with a numeric label (bubble).
 
 You can use a discrete slider with predefined steps to track only meaningful values for the user. For example, the discrete slider can visualize rating from 0 to 5 or completion percentage from 0% to 100%.
@@ -206,13 +209,66 @@ public updatePriceRange(event) {
 If the sample is configured properly, the final result should look like that:
 
 <div class="sample-container loading" style="height: 250px">
-    <iframe id="slide-sample-1-final-iframe" data-src='{environment:demosBaseUrl}/interactions/slider-sample-1' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+    <iframe id="slide-sample-1-iframe" data-src='{environment:demosBaseUrl}/interactions/slider-sample-1' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="slide-sample-1-final-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="slide-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
 <div class="divider"></div>
+
+#### Labels mode
+We've seen only numbers in the thumbs so far, although there is another approach that you could use in order to present information - by using an array of primitive values.
+>[!NOTE]
+> Your array of primitive values should contains at least two values, otherwise `labelsView` won't be enabled.
+
+Once we have the definition that corresponds to the preceding rule, we are ready to give it to the `labels` **input** property, which would handle our data by spreading it equally over the `track`. Now, label values represent every primitive value we've defined in our collection. They could be accessed at any time through the API by requesting either [lowerLabel]({environment:angularApiUrl}/classes/igxslidercomponent.html#lowerLabel) or [upperLabel]({environment:angularApiUrl}/classes/igxslidercomponent.html#upperLabel).
+
+>[!NOTE]
+> Please take into account the fact that when [`labelsView`]({environment:angularApiUrl}/classes/igxslidercomponent.html#labelsviewenabled) is enabled, your control over the [`maxValue`]({environment:angularApiUrl}/classes/igxslidercomponent.html#maxvalue), [`minValue`]({environment:angularApiUrl}/classes/igxslidercomponent.html#minvalue) and [`step`]({environment:angularApiUrl}/classes/igxslidercomponent.html#step) inputs will be taken. 
+
+Another important factor is the way that the `slider` handles the update process when `labelsView` is enabled.
+It simply operates with the `index(es)` of the colleciton, which respectively means that the `value`, `lowerBound` and `upperBound` **properties** control the `track` by following/setting them (`index(es)`).
+
+```html
+<!--sample.component.html-->
+<igx-slider #slider3 [type]="sliderType" [labels]="labels" [lowerBound]="1" [upperBound]="5">
+    <ng-template igxSliderThumbFrom let-value let-labels="labels">
+        <span class="ellipsis">{{ labels[value.lower] }}</span>
+    </ng-template>
+    <ng-template igxSliderThumbTo let-value let-labels="labels">
+        <span class="ellipsis">{{ labels[value.upper] }}</span>
+    </ng-template>
+</igx-slider>
+```
+
+```typescript
+// sample.component.ts
+public sliderType: SliderType = SliderType.RANGE;
+public labels = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+```
+
+<div class="sample-container loading" style="height: 250px">
+    <iframe id="slide-sample-6-final-iframe" data-src='{environment:demosBaseUrl}/interactions/slider-sample-6' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="slide-sample-6-final-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+
+As we see from the sample above, setting `boundaries` is still a valid operation. Addressing [`lowerBound`]({environment:angularApiUrl}/classes/igxslidercomponent.html#lowerbound) and [`upperBound`]({environment:angularApiUrl}/classes/igxslidercomponent.html#upperbound), limits the range you can slide through.
+
+#### lables templating
+During the showcase above, we've intentionally shown how we can provide our custom `label` template, by using both  [igxSliderThumbFrom]({environment:angularApiUrl}/interfaces/igxSliderThumbFrom.html) and [igxSliderThumbTo]({environment:angularApiUrl}/interfaces/igxSliderThumbTo.html) directives. Intuitively we can assume that [igxSliderThumbFrom]({environment:angularApiUrl}/interfaces/igxSliderThumbFrom.html) corresponds to the  [lowerLabel]({environment:angularApiUrl}/classes/igxslidercomponent.html#lowerLabel) and [igxSliderThumbTo]({environment:angularApiUrl}/interfaces/igxSliderThumbTo.html) to the [upperLabel]({environment:angularApiUrl}/classes/igxslidercomponent.html#upperLabel). <br>
+The [context]({environment:angularApiUrl}/classes/igxslidercomponent.html#context) here gives us implicitly a reference to the `value` **input** property and explicitly a reference to the `labels` **input** if `labelsView` is enabled.
+
+```html
+  <ng-template igxSliderThumbFrom let-value let-labels="labels">
+    <span class="ellipsis">{{ labels[value.lower] }}</span>
+  </ng-template>
+  <ng-template igxSliderThumbTo let-value let-labels="labels">
+      <span class="ellipsis">{{ labels[value.upper] }}</span>
+  </ng-template>
+```
 
 ### API References
 <div class="divider--half"></div>

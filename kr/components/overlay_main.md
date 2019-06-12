@@ -99,7 +99,7 @@ The overlay service [`show()`] ({environment:angularApiUrl}/classes/igxoverlayse
 <div class="divider--half"></div>
 
 ### Demo - Dynamic attach - Component
-In the below demo, we can pass the [IgxCard](card.html#card-demo) through the overlay service [`show()`] ({environment:angularApiUrl}/classes/igxoverlayservice.html#show) method to dynamically attach it to the DOM in a modal container.
+In the below demo, we can pass the [IgxCard](card.md#card-demo) through the overlay service [`show()`] ({environment:angularApiUrl}/classes/igxoverlayservice.html#show) method to dynamically attach it to the DOM in a modal container.
 
 
 <div class="sample-container loading" style="height: 400px">
