@@ -20,7 +20,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 > [!NOTE]
 > To start using Ignite UI for Angular components in your own projects, make sure you have configured all necessary dependencies and have performed the proper setup of your project. You can learn how to do this in the [**installation**](https://www.infragistics.com/products/ignite-ui-angular/getting-started#installation) topic.
 
-###Usage
+### Usage
 To get started with the Ignite UI for Angular Slider, let's first import the [**IgxSliderModule**]({environment:angularApiUrl}/classes/igxslidermodule.html) in our **app.module.ts** file:
 
 ```typescript
@@ -218,7 +218,7 @@ If the sample is configured properly, the final result should look like that:
 <div class="divider"></div>
 
 #### Labels mode
-We've seen only numbers in the thumbs so far, although there is another approach that you could use in order to present information - by using an array of primitive values. 
+We've seen only numbers in the thumbs so far, although there is another approach that you could use in order to present information - by using an array of primitive values.
 >[!NOTE]
 > Your array of primitive values should contains at least two values, otherwise `labelsView` won't be enabled.
 
@@ -269,7 +269,6 @@ The [context]({environment:angularApiUrl}/classes/igxslidercomponent.html#contex
       <span class="ellipsis">{{ labels[value.upper] }}</span>
   </ng-template>
 ```
-
 
 ### API References
 <div class="divider--half"></div>

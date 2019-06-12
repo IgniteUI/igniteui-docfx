@@ -41,7 +41,7 @@ export class AppModule {}
 
 #### 連続スライダー
 > [!WARNING]
-> `isContinuous` property has been deprecated. Instead, you will have to use `continuous`.
+> `isContinuous` property has been deprecated, [`continuous`]({environment:angularApiUrl}/classes/igxslidercomponent.html#continuous) should be used instead.
 
 簡易な連続スライダーを使用します。最初に、[`continuous`]({environment:angularApiUrl}/classes/igxslidercomponent.html#continuous) プロパティを true に設定し、スライダー タイプを指定します。次に、[`minValue`]({environment:angularApiUrl}/classes/igxslidercomponent.html#minvalue) および [`maxValue`]({environment:angularApiUrl}/classes/igxslidercomponent.html#maxvalue) プロパティを設定し、最小値および最大値を定義します。また、スライダーの [`value`]({environment:angularApiUrl}/classes/igxslidercomponent.html#value) をコンポーネントの "volume" プロパティにバインドします。
 
@@ -224,18 +224,17 @@ public updatePriceRange(event) {
 <div class="divider"></div>
 
 #### Labels mode
-We've seen only numbers so far. There is one more way, we can present our information through the slider, and it's by an array of primitive values. 
+We've seen only numbers in the thumbs so far, although there is another approach that you could use in order to present information - by using an array of primitive values.
 >[!NOTE]
 > Your array of primitive values should contains at least two values, otherwise `labelsView` won't be enabled.
 
 Once we have the definition that corresponds to the preceding rule, we are ready to give it to the `labels` **input** property, which would handle our data by spreading it equally over the `track`. Now, label values represent every primitive value we've defined in our collection. They could be accessed at any time through the API by requesting either [lowerLabel]({environment:angularApiUrl}/classes/igxslidercomponent.html#lowerLabel) or [upperLabel]({environment:angularApiUrl}/classes/igxslidercomponent.html#upperLabel).
 
 >[!NOTE]
-> Please take into account the fact that when `labelsView` is enabled, your control over the `maxValue`, `minValue` and `step` inputs will be taken. 
+> Please take into account the fact that when [`labelsView`]({environment:angularApiUrl}/classes/igxslidercomponent.html#labelsviewenabled) is enabled, your control over the [`maxValue`]({environment:angularApiUrl}/classes/igxslidercomponent.html#maxvalue), [`minValue`]({environment:angularApiUrl}/classes/igxslidercomponent.html#minvalue) and [`step`]({environment:angularApiUrl}/classes/igxslidercomponent.html#step) inputs will be taken. 
 
 Another important factor is the way that the `slider` handles the update process when `labelsView` is enabled.
->[!NOTE]
-> It simply operates with the `index(es)` of the colleciton, which respectively means that the `value`, `lowerBound` and `upperBound` **properties** control the `track` by following/setting them (`index(es)`).
+It simply operates with the `index(es)` of the colleciton, which respectively means that the `value`, `lowerBound` and `upperBound` **properties** control the `track` by following/setting them (`index(es)`).
 
 ```html
 <!--sample.component.html-->
@@ -262,11 +261,11 @@ public labels = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturd
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="slide-sample-6-final-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-As we see from the sample above, setting `boundaries` is still a valid operation. Addressing `lowerBound` and `upperBound`, limits the range you can slide through.
+As we see from the sample above, setting `boundaries` is still a valid operation. Addressing [`lowerBound`]({environment:angularApiUrl}/classes/igxslidercomponent.html#lowerbound) and [`upperBound`]({environment:angularApiUrl}/classes/igxslidercomponent.html#upperbound), limits the range you can slide through.
 
 #### lables templating
 During the showcase above, we've intentionally shown how we can provide our custom `label` template, by using both  [igxSliderThumbFrom]({environment:angularApiUrl}/interfaces/igxSliderThumbFrom.html) and [igxSliderThumbTo]({environment:angularApiUrl}/interfaces/igxSliderThumbTo.html) directives. Intuitively we can assume that [igxSliderThumbFrom]({environment:angularApiUrl}/interfaces/igxSliderThumbFrom.html) corresponds to the  [lowerLabel]({environment:angularApiUrl}/classes/igxslidercomponent.html#lowerLabel) and [igxSliderThumbTo]({environment:angularApiUrl}/interfaces/igxSliderThumbTo.html) to the [upperLabel]({environment:angularApiUrl}/classes/igxslidercomponent.html#upperLabel). <br>
-The [context]({environment:angularApiUrl}/classes/igxslidercomponent.html#context) here gives us implicitely a reference to the `value` **input** property and explicitely a reference to the `labels` **input** if `labelsView` is enabled.
+The [context]({environment:angularApiUrl}/classes/igxslidercomponent.html#context) here gives us implicitly a reference to the `value` **input** property and explicitly a reference to the `labels` **input** if `labelsView` is enabled.
 
 ```html
   <ng-template igxSliderThumbFrom let-value let-labels="labels">
