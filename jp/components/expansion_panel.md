@@ -194,7 +194,7 @@ export class ExpansionPanelComponent {
 このコンポーネントは、パネルの縮小時と完全に展開した後に「更に表示」を描画します。
 ### コンテキストの追加
 
-コンポーネントの [`igx-expansion-panel-body`]({environment:angularApiUrl}/classes/igxexpansionpanelbodycomponent.html) タグはすべてのマークアップを受け取り、`ng-content` プロジェクションですべてを描画します。[`IgxAvatar`](avatar.html) を使用して展開パネルのインナー コンテンツを更新できます。
+コンポーネントの [`igx-expansion-panel-body`]({environment:angularApiUrl}/classes/igxexpansionpanelbodycomponent.html) タグはすべてのマークアップを受け取り、`ng-content` プロジェクションですべてを描画します。[`IgxAvatar`](avatar.md) を使用して展開パネルのインナー コンテンツを更新できます。
 はじめに `IgxAvatarModule` を **app.module.ts** にインポートします。
 ```typescript
 // in app.module.ts
@@ -247,7 +247,7 @@ export class ExpansionPanelComponent {
     <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="expansion-sample-3-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-`IgxExpansionPanel` コントロールは、すべてのコンテンツの並べ替え[`IgxGrid`](grid/grid.html)、[`IgxCombo`](combo.html)、チャート、更に他の展開パネルも描画できます。
+`IgxExpansionPanel` コントロールは、すべてのコンテンツの並べ替え[`IgxGrid`](grid/grid.md)、[`IgxCombo`](combo.md)、チャート、更に他の展開パネルも描画できます。
 
 ## アニメーションの使用
 ### 特定のアニメーションの使用
@@ -523,7 +523,7 @@ export class ExpansionPanelComponent {
 
 ## 天気予報のサンプル
 
-以下のサンプルは、[`IgxExpansionPanelComponent`]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html) に加え、[`IgxCard`](card.html) や [`IgxIcon`](icon.html) など、その他複数のコンポーネントを使用しています。ここでは、今日の気温や天気の状態、更に予報の詳細を表示する天気のコンポーネントを作成します。必要に応じてユーザーが更に展開でき、次の数日間の天気を表示できます。
+以下のサンプルは、[`IgxExpansionPanelComponent`]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html) に加え、[`IgxCard`](card.md) や [`IgxIcon`](icon.md) など、その他複数のコンポーネントを使用しています。ここでは、今日の気温や天気の状態、更に予報の詳細を表示する天気のコンポーネントを作成します。必要に応じてユーザーが更に展開でき、次の数日間の天気を表示できます。
 
 ```typescript
 // in weather-forecast.component.ts

@@ -53,7 +53,7 @@ _language: ja
 
 
 > [!Note]	
-> [`rowStart`]({environment：angularApiUrl} /classes/igxcolumncomponent.html#colstart) プロパティは、それぞれの `igx-column` に対して`igx-column-layout` に設定する必要があります。`igxColumnLayout` コンポーネントはレイアウトが正しいかどうかを検証しておらず、それについてエラーや警告を投げていません。 開発者は、自分のレイアウトの宣言が正しく完全であることを確認する必要があります。そうしないと、誤った配置、オーバーラップ、ブラウザの不整合などが発生し、壊れたレイアウトになる可能性があります。	
+> [`rowStart`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#colstart) プロパティは、それぞれの `igx-column` に対して`igx-column-layout` に設定する必要があります。`igxColumnLayout` コンポーネントはレイアウトが正しいかどうかを検証しておらず、それについてエラーや警告を投げていません。 開発者は、自分のレイアウトの宣言が正しく完全であることを確認する必要があります。そうしないと、誤った配置、オーバーラップ、ブラウザの不整合などが発生し、壊れたレイアウトになる可能性があります。	
 
  ### 機能の統合	
 Multi Row Layout のレンダリング方法は全く異なるため、列固定や列非表示など一部の列機能は `igx-column-layout` コンポーネントでのみ機能します。  その他の機能ソートとグループ化などは、`igx-column` コンポーネントで同じように機能します。	
@@ -108,6 +108,25 @@ The demo below adds additional navigation down/up via the <kbd>Enter</kbd> and <
 <br/>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-mrl-custom-navigation-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+
+### Layout Configurator
+
+
+Sometimes when configuring a column layout it might be a challenge to calculate and set the proper [`colStart`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#colstart)  and [`colEnd`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#colend)  or [`rowStart`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#rowstart)  and [`rowEnd`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#rowend). Especially when there are a lot of columns in a single layout. That is why we have created a small configurator, so you can easily do that and have a similar preview of how it would look inside the igxGrid when applied. You can do the following interactions with it:
+
+* Set number of rows for the whole configuration. All layouts must have the same amount of rows.
+* Add/Remove column layouts by clicking the `Add Layout` chip or reordering them by dragging a layout chip left/right.
+* Set specific settings for each layout as number of columns and how wide they will be. The setting refer to the currently selected layout.
+* Resize column cells in the layout preview so they can span more columns/rows or clear them using the `Delete` button.
+* Set columns in the preview by dragging a column chip in the place your will want it to be.
+* Add/Remove new columns by using the `Add Column` chip.
+* Get template output of the whole configuration ready to by placed inside an igxGrid or the JSON representation that can also be used and parsed in your template using [`NgForOf`](https://angular.io/api/common/NgForOf) for example.
+
+By default we have set the same columns as our previous sample, but it can be cleared and configured to match your desired configuration.
+
+<div class="sample-container loading" style="height:500px">
+    <iframe id="grid-multi-row-layout-configuration-iframe" src='{environment:demosBaseUrl}/grid/grid-multi-row-layout-configuration' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 
  ### API リファレンス	

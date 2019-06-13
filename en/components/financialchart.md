@@ -6,12 +6,12 @@ _keywords: financial chart, Ignite UI for Angular, infragistics
 
 ## Financial Chart
 
-The Financial Chart is a charting component that makes it easy to visualize financial data by using a simple and intuitive API.
+The Angular financial chart component is a charting component that makes it easy to visualize financial data by using a simple and intuitive API.
 
 ### Demo
 
-<div class="sample-container" style="height: 500px">
-    <iframe id="financial-chart-overview-sample-iframe" src='{environment:demosBaseUrl}/charts/financial-chart-overview-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 500px">
+    <iframe id="financial-chart-overview-sample-iframe" src='{environment:demosBaseUrl}/charts/financial-chart-overview-sample' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="financial-chart-overview-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
@@ -51,7 +51,7 @@ When installing the chart package, the core package must also be installed.
 
 ### Required Modules
 
-The `IgxFinancialChart` requires the following modules:
+The Angular financial chart component requires the following modules:
 
 ```typescript
 // app.module.ts
