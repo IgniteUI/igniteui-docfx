@@ -34,7 +34,7 @@ The $PlatformShor$ douhgnut chart component requires the following modules:
 
 ```typescript
 // app.module.ts
-import { IgxDoughnutChartModule } from 'igniteui-angular-charts/ES5/igx-doughnut-chart-module';
+import { IgxDoughnutChartModule } from "igniteui-angular-charts/ES5/igx-doughnut-chart-module";
 
 @NgModule({
     imports: [
