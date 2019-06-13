@@ -53,7 +53,7 @@ _language: kr
 
 ```typescript
 // app.module.ts
-import { IgxCategoryChartModule } from 'igniteui-angular-charts/ES5/igx-category-chart-module';
+import { IgxCategoryChartModule } from "igniteui-angular-charts/ES5/igx-category-chart-module";
 
 @NgModule({
     imports: [

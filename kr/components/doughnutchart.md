@@ -34,7 +34,7 @@ Ignite UI for Angular 도넛형 차트 컴포넌트는 파이형 차트 컴포�
 
 ```typescript
 // app.module.ts
-import { IgxDoughnutChartModule } from 'igniteui-angular-charts/ES5/igx-doughnut-chart-module';
+import { IgxDoughnutChartModule } from "igniteui-angular-charts/ES5/igx-doughnut-chart-module";
 
 @NgModule({
     imports: [

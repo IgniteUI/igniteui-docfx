@@ -38,8 +38,8 @@ The `IgxRadialGauge` requires the following modules:
 
 ```typescript
 // app.module.ts
-import { IgxRadialGaugeModule } from 'igniteui-angular-gauges/ES5/igx-radial-gauge-module';
-import { IgrRadialGaugeModule } from 'igniteui-angular-gauges/ES5/igx-radial-gauge';
+import { IgxRadialGaugeModule } from "igniteui-angular-gauges/ES5/igx-radial-gauge-module";
+import { IgxRadialGauge } from "igniteui-angular-gauges/ES5/igx-radial-gauge";
 
 @NgModule({
     imports: [

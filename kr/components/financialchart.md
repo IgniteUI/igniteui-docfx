@@ -56,7 +56,7 @@ _language: kr
 
 ```typescript
 // app.module.ts
-import {IgxFinancialChartModule} from 'igniteui-angular-charts/ES5/igx-financial-chart-module'
+import {IgxFinancialChartModule} from "igniteui-angular-charts/ES5/igx-financial-chart-module";
 
 @NgModule({
     imports: [

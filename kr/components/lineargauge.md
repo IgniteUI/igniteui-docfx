@@ -38,8 +38,8 @@ The `IgxLinearGauge` requires the following modules:
 
 ```typescript
 // app.module.ts
-import { IgxLinearGaugeModule } from 'igniteui-angular-gauges/ES5/igx-linear-gauge-module';
-import { IgxLinearGauge } from 'igniteui-angular-gauges/ES5/igx-linear-gauge';
+import { IgxLinearGaugeModule } from "igniteui-angular-gauges/ES5/igx-linear-gauge-module";
+import { IgxLinearGauge } from "igniteui-angular-gauges/ES5/igx-linear-gauge";
 
 @NgModule({
     imports: [
@@ -52,8 +52,8 @@ export class AppModule {}
 ```
 
 ```typescript
-import { IgrLinearGaugeModule } from 'igniteui-react-gauges/ES5/igr-linear-gauge-module';
-import { IgxLinearGauge } from 'ignite-react-gauges/ES5/igx-linear-gauge';
+import { IgrLinearGaugeModule } from "igniteui-react-gauges/ES5/igr-linear-gauge-module";
+import { IgxLinearGauge } from "ignite-react-gauges/ES5/igx-linear-gauge";
 
 IgrLinearGaugeModule.register();
 ```
