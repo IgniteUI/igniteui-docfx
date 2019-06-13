@@ -33,7 +33,3 @@ The following code shows how to bind the `GeographicSymbolSeries` to locations o
 ```html
 TODO - ADD CODE SNIPPET
 ```
-
-```typescript
-
-```

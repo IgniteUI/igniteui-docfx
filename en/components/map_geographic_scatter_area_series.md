@@ -65,7 +65,3 @@ The following code shows how to bind the `GeographicScatterAreaSeries` to triang
 ```html
 TODO - ADD CODE SNIPPET
 ```
-
-```typescript
-
-```

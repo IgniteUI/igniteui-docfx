@@ -45,7 +45,3 @@ The following table summarizes the GeographicHighDensityScatterSeries series pro
 ```html
 TODO - ADD CODE SNIPPET
 ```
-
-```typescript
-
-```
