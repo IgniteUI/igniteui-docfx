@@ -1,6 +1,6 @@
 ---
 제목: 파이형 차트 | 카테고리형 데이터 비주얼라이제이션 | Ignite UI for React | Infragistics
-_description: Create a colorful pie chart to display categorical data in Ignite UI for data visualization. View the demo for more information.
+_description: 다채로운 원형 차트를 만들어 데이터 시각화를 위해 Ignite UI 에 범주 형 데이터를 표시합니다.
 _keywords: pie chart, ignite ui for react, infragistics
 _language: kr
 ---
@@ -13,8 +13,8 @@ Ignite UI for Angular 파이형 차트 컴포넌트는 원형 영역을 섹션�
 
 ### 데모
 
-<div class="sample-container" style="height: 350px">
-    <iframe id="pie-chart-data-sample-iframe" src='{environment:demosBaseUrl}/charts/pie-chart-data-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 350px">
+    <iframe id="pie-chart-data-sample-iframe" src='{environment:demosBaseUrl}/charts/pie-chart-data-sample' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="pie-chart-data-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기
@@ -96,8 +96,8 @@ var data = [
 </igx-pie-chart>
 ```
 
-<div class="sample-container" style="height: 350px">
-    <iframe id="pie-chart-legend-iframe" src='{environment:demosBaseUrl}/charts/pie-chart-legend' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 350px">
+    <iframe id="pie-chart-legend-iframe" data-src='{environment:demosBaseUrl}/charts/pie-chart-legend' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="pie-chart-legend-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기
@@ -126,8 +126,8 @@ var data = [
 </igx-pie-chart>
 ```
 
-<div class="sample-container" style="height: 350px">
-    <iframe id="pie-chart-others-iframe" src='{environment:demosBaseUrl}/charts/pie-chart-others' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 350px">
+    <iframe id="pie-chart-others-iframe" data-src='{environment:demosBaseUrl}/charts/pie-chart-others' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="pie-chart-others-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기
@@ -149,8 +149,8 @@ var data = [
 </igx-pie-chart>
 ```
 
-<div class="sample-container" style="height: 350px">
-    <iframe id="pie-chart-explosion-iframe" src='{environment:demosBaseUrl}/charts/pie-chart-explosion' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 350px">
+    <iframe id="pie-chart-explosion-iframe" data-src='{environment:demosBaseUrl}/charts/pie-chart-explosion' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 
 <div class="divider--half"></div>
@@ -186,8 +186,8 @@ var data = [
 </igx-pie-chart>
 ```
 
-<div class="sample-container" style="height: 350px">
-    <iframe id="pie-chart-selection-iframe" src='{environment:demosBaseUrl}/charts/pie-chart-selection' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 350px">
+    <iframe id="pie-chart-selection-iframe" data-src='{environment:demosBaseUrl}/charts/pie-chart-selection' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 
 <div>
