@@ -1,22 +1,22 @@
 ﻿@@if (igxName === 'IgxGrid') {
 ---
-title: Angular Grid | Data Manipulation | Infragistics
-_description: Configure in cell data manipulation with the feature rich angular ui grid, try the update data features and angular crud by using the Ignite UI Angular Grid.
-_keywords: Data Manipulation, IgniteUI for Angular, Infragistics
+title: Angular Grid Editing | Data Manipulation | Ignite UI for Angular | Infragistics
+_description: Configure in cell data manipulation with feature rich angular ui grid, try the update data features and angular crud by using the Ignite UI Angular grid editing
+_keywords: Data manipulation, Igniteui for Angular, Infragistics
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Tree Grid Editing - Native Angular | Ignite UI for Angular
-_description: The Ignite UI for Angular Tree Grid control provides default cell templates for editable columns which are based on the data type of the column.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Component, Angular Tree Grid, Angular Tree Table, Angular Tree Grid component, Angular Tree Table component, Angular Tree Grid control, Angular Tree Table control, Angular Tree Grid component, Angular Tree Table component, Angular Tree Grid control, Angular Tree Table control, Angular High Performance Tree Grid, Angular High Performance Tree Table, Cell Editing, Tree Grid Cell Editing, Tree Table Cell Editing
+title: Angular TreeGrid Editing | Data Manipulation | Ignite UI for Angular
+_description: Configure in cell data manipulation with feature rich angular ui grid, try the update data features and angular crud by using the Ignite UI Angular tree grid editing
+_keywords: Data manipulation, Igniteui for Angular, Infragistics
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Hierarchical Grid Editing - Native Angular | Ignite UI for Angular
-_description: The Ignite UI for Angular Hierarchical Grid control provides default cell templates for editable columns which are based on the data type of the column.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Component, Angular Hierarchical Grid, Angular Hierarchical Table, Angular Hierarchical Grid component, Angular Hierarchical Table component, Angular Hierarchical Grid control, Angular Hierarchical Table control, Angular High Performance Hierarchical Grid, Angular High Performance Hierarchical Table, Cell Editing, Hierarchical Grid Cell Editing, Hierarchical Table Cell Editing
+title: Angular Hierarchical Grid Editing | Data Manipulation | Ignite UI for Angular
+_description: Configure in cell data manipulation with feature rich angular ui grid, try the update data features and angular crud by using the Ignite UI Angular hierarchical grid editing
+_keywords: Data manipulation, Igniteui for Angular, Infragistics
 ---
 }
 
