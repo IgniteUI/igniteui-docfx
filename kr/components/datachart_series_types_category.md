@@ -1,6 +1,6 @@
 ---
 제목: 데이터 차트 구성 요소 - 네이티브 Angular | Ignite UI for Angular
-_description: The Ignite UI for Angular Data Chart is a charting component that provides modular design of axis, markers, series, legend, and annotation layers. With this chart, you can create multiple instances of these visual elements in the same chart plot area in order to create composite chart views.
+_description: Ignite UI for Angular 데이터 차트는 축, 마커, 시리즈, 범례 및 주석 레이어의 모듈 식 디자인을 제공하는 차트 구성 요소입니다. 이 차트를 사용하면 동일한 차트 영역에 이러한 시각적 요소의 인스턴스를 여러 개 만들어 복합 차트 뷰를 만들 수 있습니다.
 _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Chart Control, Angular Chart Example, Angular Chart Component, Angular Data Chart
 _language: kr
 ---
@@ -11,8 +11,8 @@ _language: kr
 
 ### 데모
 
-<div class="sample-container" style="height: 400px">
-    <iframe id="data-chart-type-category-series-iframe" src='{environment:demosBaseUrl}/charts/data-chart-type-category-series' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 400px">
+    <iframe id="data-chart-type-category-series-iframe" src='{environment:demosBaseUrl}/charts/data-chart-type-category-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-type-category-series-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기
@@ -25,24 +25,24 @@ _language: kr
 
 다음 표에는 모든 유형의 카테고리 시리즈와 그 설명이 표시되어 있습니다.
 
-| Series Name                    | Description                                                                                                                                                                                                                                                                                                                                                                                  |
-| ------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `IgxAreaSeriesComponent`       | Displays a set of evenly placed points connected by a line below which area is filled in. Categories are arranged horizontally and values – vertically.                                                                                                                                                                                                                                      |
-| `BarSeries`                    | Displays discrete data in separate rows. Unlike other series, categories are arranged vertically and values are plotted horizontally. In other words, this series is like `IgxColumnSeriesComponent` but rotated 90 degrees clockwise.                                                                                                                                                       |
-| `IgxColumnSeriesComponent`     | Displays discrete data in separate columns. Categories are arranged horizontally and values are plotted vertically. Used for showing the changes in a data series over time or for comparing multiple items.                                                                                                                                                                                 |
-| `IgxLineSeriesComponent`       | Displays a set of evenly placed points connected by straight lines. Used for showing data or information that changes continuously over time. Useful when emphasizing the relationship between the points is required.                                                                                                                                                                       |
-| `IgxPointSeriesComponent`      | Displays markers at locations of data points without connecting them by lines. Shape of these markers can be changed using `markerType` property                                                                                                                                                                                                                                             |
-| `IgxSplineSeriesComponent`     | Displays a set of evenly placed points connected by smooth lines that are generated using spline interpolation for improved presentation of data.                                                                                                                                                                                                                                            |
-| `IgxSplineAreaSeriesComponent` | Same as the `IgxAreaSeriesComponent` type with the added feature of spline interpolation and smoothing for improved presentation of data.                                                                                                                                                                                                                                                    |
-| `IgxStepLineSeriesComponent`   | Same as the `IgxLineSeriesComponent` type, except that the values are connected by continuous vertical and horizontal lines forming a step-like progression instead of a straight line tracing the shortest path between points.                                                                                                                                                             |
-| `IgxStepAreaSeriesComponent`   | Same as the `IgxStepLineSeriesComponent` type, except that the area below values is filled out instead of continuous vertical and horizontal lines forming a step-like progression for the changes between data points.                                                                                                                                                                      |
-| `IgxWaterfallSeriesComponent`  | Displays a set of points as vertical columns that show the difference between values of consecutive data points. The columns are color coded for distinguishing between positive and negative changes in value. Categories are arranged horizontally and values are plotted vertically. Used for showing the changes in a consecutive data points over time or for comparing multiple items. |
+| 시리즈 이름                         | 설명                                                                                                                                                                |
+| ------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `IgxAreaSeriesComponent`       | 영역이 채워진 아래 선으로 연결된 균일하게 배열된 점 집합을 표시합니다. 카테고리는 가로로 배열되고 값은 세로로 배열됩니다.                                                                                             |
+| `BarSeries`                    | 개개의 데이터를 각각의 행에 표시합니다.다른 시리즈와 달리 카테고리는 세로로 배열되고 값은 가로로 표시됩니다.즉, 이 시리즈는 `IgxColumnSeriesComponent` 와 비슷하지만 시계 방향으로 90도 회전됩니다.                                      |
+| `IgxColumnSeriesComponent`     | 개개의 데이터를 각각의 열에 표시합니다.카테고리는 가로로 정렬되고 값은 세로로 표시됩니다. 시간 경과에 따른 데이터 시리즈의 변경을 표시하거나 여러 항목을 비교할 때 사용합니다.                                                               |
+| `IgxLineSeriesComponent`       | 직선으로 연결되고 균등 배열된 점 집합을 표시합니다.시간 경과에 따라 지속적으로 변화하는 데이터 또는 정보를 표시하는 데 사용합니다.점 사이의 관계를 강조할 때 유용합니다.                                                                  |
+| `IgxPointSeriesComponent`      | 선으로 연결하지 않고 데이터 점의 위치에 마커를 표시합니다.이러한 마커의 모양은 `markerType` 속성을 사용하여 변경할 수 있습니다.                                                                                    |
+| `IgxSplineSeriesComponent`     | 데이터 표시를 향상시키기 위해 스플라인 보간을 사용하여 생성한 매끄러운 선으로 연결된 균일하게 배열되는 점 집합을 표시합니다.                                                                                            |
+| `IgxSplineAreaSeriesComponent` | 데이터 표시를 향상시키기 위한 스플라인 보간 및 스무딩 기능이 추가된 `IgxAreaSeriesComponent` 유형과 동일합니다.                                                                                        |
+| `IgxStepLineSeriesComponent`   | `IgxLineSeriesComponent` 유형과 동일하지만 점들 사이의 최단 경로를 추적하는 직선이 아닌 단계적으로 연속하는 수직선과 수평선으로 값이 연결된다는 점이 다릅니다.                                                              |
+| `IgxStepAreaSeriesComponent`   | `IgxStepLineSeriesComponent` 유형과 동일하지만 연속하는 수직선과 수평선이 데이터 점 사이의 변화를 단계적으로 진행시키는 것이 아닌 값보다 아래의 영역이 채워진다는 점이 다릅니다.                                                  |
+| `IgxWaterfallSeriesComponent`  | 속하는 데이터 점의 값 사이의 차이를 나타내는 세로 열로 점 집합을 표시합니다.값의 양수 및 음수 변화를 구별하기 위해 열은 색상으로 코드화됩니다. 카테고리는 가로로 정렬되고 값은 세로로 표시됩니다.U시간 경과에 따른 연이은 데이터 점 변경을 표시하거나 여러 항목을 비교할 때 사용합니다. |
 
 ### 필요한 축
 
 `IgxDataChart` 제어는 다양한 유형의 축을 제공하지만 카테고리 시리즈에는 다음의 축 유형만 사용할 수 있습니다.
 
-| Series Type                    | YAxis Type                 | XAxis Type                                                                           |
+| 시리즈 유형                         | YAxis 유형                   | XAxis 유형                                                                             |
 | ------------------------------ | -------------------------- | ------------------------------------------------------------------------------------ |
 | `BarSeries`                    | `CategoryYAxis`            | `IgxNumericXAxisComponent`                                                           |
 | `IgxAreaSeriesComponent`       | `IgxNumericYAxisComponent` | `IgxCategoryXAxisComponent`, `IgxOrdinalTimeXAxisComponent`, `IgxTimeXAxisComponent` |
@@ -115,13 +115,14 @@ import { IgxDataChartCategoryModule } from 'igniteui-angular-charts/ES5/igx-data
     [dataSource]="dataSource"
     width="700px"
     height="500px">
-    <igx-category-x-axis name="xAxis" label="Year" />
-    <igx-numeric-y-axis  name="yAxis" />
+    <igx-category-x-axis name="xAxis" label="Year"></igx-category-x-axis>
+    <igx-numeric-y-axis  name="yAxis"></igx-numeric-y-axis>
     <igx-column-series
         name="series1"
         xAxisName="xAxis"
         yAxisName="yAxis"
-        valueMemberPath="USA" />
+        valueMemberPath="USA">
+    </igx-column-series>
  </igx-data-chart>
 ```
 
@@ -134,13 +135,14 @@ import { IgxDataChartCategoryModule } from 'igniteui-angular-charts/ES5/igx-data
     [dataSource]="dataSource"
     width="700px"
     height="500px">
-    <igx-numeric-x-axis  name="xAxis" />
-    <igx-category-y-axis name="yAxis" label="Year" />
+    <igx-numeric-x-axis  name="xAxis"></igx-numeric-x-axis>
+    <igx-category-y-axis name="yAxis" label="Year"></igx-category-y-axis>
     <igx-bar-series
         name="series1"
         xAxisName="xAxis"
         yAxisName="yAxis"
-        valueMemberPath="USA" />
+        valueMemberPath="USA">
+    </igx-bar-series>
  </igx-data-chart>
 ```
 
