@@ -214,7 +214,6 @@ We define a refenrece to each of our grids via the `ViewChild` decorator and the
 
 #### Templating the drag icon
 The drag handle icon can be templated using the grid's [`dragIndicatorIconTemplate`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#dragindicatoricontemplate). In the example we're building, let's change the icon from the default one (`drag_indicator`) to `drag_handle`.
-@@if (igxName === 'IgxTreeGrid' || igxName === 'IgxGrid') {
 To do so, we can use the `igxDragIndicatorIcon` to pass a template inside of the `@@igSelector`'s body:
 ```html
 <@@igSelector>
@@ -225,31 +224,6 @@ To do so, we can use the `igxDragIndicatorIcon` to pass a template inside of the
 ...
 </@@igSelector>
 ```
-}
-@@if (igxName === 'IgxHierarchicalGrid') {
-To do so, we need to define a template in our component's template, get it as a `ViewChild` and pass it to the @@igxName's `dragIndicatorIconTemplate` property
-
-```html
-<@@igSelector>
-...
-</@@igSelector>
-...
-<ng-template #customDragIcon>
-    <igx-icon>drag_handle</igx-icon>
-</ng-template>
-```
-
-```typescript
-export class @@igxNameRowDragComponent implements AfterViewInit{
-    @ViewChild('customDragIcon', {read: TemplateRef})
-    public customIcon: TemplateRef<any>;
-    ...
-    ngAfterViewInit() {
-        this.grid.dragIndicatorIconTemplate = this.customIcon;
-    }
-}
-```
-}
 
 Once we've set the new icon template, we also need to adjust the `DEFAULT` icon in our `DragIcon enum`, so it's properly change by the `changeIcon` method:
 ```typescript
@@ -380,19 +354,15 @@ Try to drag moons from the grid and drop them to their corresponding planets. Ro
 There are a couple of things that need to be considered when using the `rowDraggable` directive:
 > [!NOTE]
 > When handling the row-drop event, the `eventArgs.cancel` should be set to **`true`** in order to prevent leftover elements from the row drag ghost from being visible 
-@@if (igxName === 'IgxHierarchicalGrid') {
-> [!NOTE]
-> When using `rowDraggable` with an @@igSelector, the [`dragIndicatorIconTemplate`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#dragindicatoricontemplate) cannot be set through the template, as a `ContentChild`. Instead, you can get a reference to the template (via `ViewChild` decorator) and pass it to the grid `myHGrid.dragIndicatorIconTemplate: TemplateRef = myCustomTemplate` 
-}
 
-## API References
+### API References
 
 * [rowDraggable]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowdraggable)
 * [onRowDragStart]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onrowdragstart)
 * [onRowDragEnd]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onrowdragend)
 * [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
 
-## Additional Resources
+### Additional Resources
 <div class="divider--half"></div>
 
 * [@@igComponent Overview](@@igMainTopic.md)

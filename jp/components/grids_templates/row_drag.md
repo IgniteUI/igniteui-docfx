@@ -61,7 +61,7 @@ Ignite UI for Angular @@igComponent では、**RowDrag** がルート `@@igSelec
 <div class="divider--half"></div>
 }
 
-#### 構成
+### 構成
 
 `@@igSelector` の行ドラッグを有効にするには、グリッドの [`rowDraggable`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowdraggable) を **`true`** に設定します。これが有効になると、行ドラッグ ハンドルが各行に表示されます。このハンドルは行ドラッグを開始するために使用できます。
 
@@ -81,7 +81,7 @@ Ignite UI for Angular @@igComponent では、**RowDrag** がルート `@@igSelec
 この例では、あるグリッドから別のグリッドに行をドラッグし、それを最初のデータソースから削除し、それを 2 番目のデータソースに追加します。
 }
 
-##### ドロップエリア
+#### ドロップエリア
 
 行ドラッグを簡単に有効にできました。次は行ドロップを処理する方法を設定する必要があります。
 [`igxDrop` directive](../drag_drop.md) ディレクティブを使用して、行をドロップする場所を定義できます。
@@ -125,7 +125,7 @@ import { ..., IgxDragDropModule } from 'igniteui-angular';
 ```
 }
 
-##### ドロップ エリア イベント ハンドラー
+#### ドロップ エリア イベント ハンドラー
 
 テンプレートでドロップ領域を定義したら、コンポーネントの `.ts` ファイルで `igxDrop`'s [`onEnter`]({environment:angularApiUrl}/classes/igxdropdirective.html#onenter)、[`onLeave`]({environment:angularApiUrl}/classes/igxdropdirective.html#onleave)、[`onDrop`]({environment:angularApiUrl}/classes/igxdropdirective.html#ondrop) イベントを宣言する必要があります。
 
@@ -215,9 +215,8 @@ export class @@igxNameRowDragComponent {
 > [!NOTE]
 > イベント引数 (`args.dragData.rowData`) または他の行プロパティからの行データを使用する場合、行全体が参照として引数に渡されることに注意してください。つまり、ソースグリッドのデータと区別する必要がある場合は、必要なデータを複製する必要があります。
 
-##### ドラッグ アイコンのテンプレート化
+#### ドラッグ アイコンのテンプレート化
 ドラッグ ハンドル アイコンは、グリッドの [`dragIndicatorIconTemplate`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#dragindicatoricontemplate) を使用してテンプレート化できます。作成している例で、アイコンをデフォルトのもの (`drag_indicator`) から `drag_handle` に変更します。
-@@if (igxName === 'IgxTreeGrid' || igxName === 'IgxGrid') {
 `igxDragIndicatorIcon` を使用して `@@igSelector` のボディ内にテンプレートを渡して変更できます。
 ```html
 <@@igSelector>
@@ -228,31 +227,7 @@ export class @@igxNameRowDragComponent {
 ...
 </@@igSelector>
 ```
-}
-@@if (igxName === 'IgxHierarchicalGrid') {
-コンポーネントのテンプレートでテンプレートを定義し、それを `ViewChild` として取得して　@@igxName の `dragIndicatorIconTemplate` プロパティに渡して変更できます。
 
-```html
-<@@igSelector>
-...
-</@@igSelector>
-...
-<ng-template #customDragIcon>
-    <igx-icon>drag_handle</igx-icon>
-</ng-template>
-```
-
-```typescript
-export class @@igxNameRowDragComponent implements AfterViewInit{
-    @ViewChild('customDragIcon', {read: TemplateRef})
-    public customIcon: TemplateRef<any>;
-    ...
-    ngAfterViewInit() {
-        this.grid.dragIndicatorIconTemplate = this.customIcon;
-    }
-}
-```
-}
 
 新しいアイコン テンプレートの設定後、`DragIcon enum` の `DEFAULT` アイコンも調整する必要があるため、`changeIcon` メソッドによって適切に変更されます。
 ```typescript
@@ -263,7 +238,7 @@ enum DragIcon {
 ```
 
 @@if (igxName === 'IgxTreeGrid' || igxName === 'IgxHierarchicalGrid') {
-##### ドロップ エリアのスタイル
+#### ドロップ エリアのスタイル
 ドロップ ハンドラが正しく設定されたら、次にドロップ領域をスタイル設定します。
 ```css
 .drop-area {
@@ -295,7 +270,7 @@ enum DragIcon {
 以下は、設定の結果です。
 }
 
-##### デモ
+#### デモ
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:550px">
     <iframe id="grid-row-drag-to-grid-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-row-drag-to-grid' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -378,15 +353,11 @@ enum DragIcon {
 <div class="divider--half"></div>
 }
 
-#### 制限
+### 制限
 
 `rowDraggable` ディレクティブを使用するときに考慮する必要があることがいくつかあります。
 > [!NOTE]
 > 行ドロップイベントを処理するときは、行ドラッグゴーストの残りの要素が表示されないようにするため、`eventArgs.cancel` を **`true`** に設定する必要があります。 
-@@if (igxName === 'IgxHierarchicalGrid') {
-> [!NOTE]
-> `rowDraggable` を @@igSelector と一緒に使用する場合、[`dragIndicatorIconTemplate`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#dragindicatoricontemplate) は `ContentChild` としてテンプレートから設定できません。代わりに、(`ViewChild` デコレ―タを介して) テンプレートへの参照を取得し、それをグリッド `myHGrid.dragIndicatorIconTemplate: TemplateRef = myCustomTemplate` に渡すことができます。 
-}
 
 ### API リファレンス
 

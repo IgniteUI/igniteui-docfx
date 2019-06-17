@@ -214,7 +214,6 @@ export class @@igxNameRowDragComponent {
 
 #### 드래그 아이콘 템플레이팅
 드래그 핸들 아이콘은 그리드의 [`dragIndicatorIconTemplate`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#dragindicatoricontemplate)를 사용하여 템플레이팅할 수 있습니다. 구축 중인 예제에서 아이콘을 기본(`drag_indicator`)에서 `drag_handle`로 변경해 보겠습니다.
-@@if (igxName === 'IgxTreeGrid' || igxName === 'IgxGrid') {
 이를 위해 `igxDragIndicatorIcon`을 사용하여 `@@igSelector`의 내부에 템플릿을 전달할 수 있습니다:
 ```html
 <@@igSelector>
@@ -225,31 +224,7 @@ export class @@igxNameRowDragComponent {
 ...
 </@@igSelector>
 ```
-}
-@@if (igxName === 'IgxHierarchicalGrid') {
-이렇게 하려면 컴포넌트 템플릿에 템플릿을 정의하고 `ViewChild`로 가져와서 @@igxName의 `dragIndicatorIconTemplate` 속성에 전달해야 합니다
 
-```html
-<@@igSelector>
-...
-</@@igSelector>
-...
-<ng-template #customDragIcon>
-    <igx-icon>drag_handle</igx-icon>
-</ng-template>
-```
-
-```typescript
-export class @@igxNameRowDragComponent implements AfterViewInit{
-    @ViewChild('customDragIcon', {read: TemplateRef})
-    public customIcon: TemplateRef<any>;
-    ...
-    ngAfterViewInit() {
-        this.grid.dragIndicatorIconTemplate = this.customIcon;
-    }
-}
-```
-}
 
 새로운 아이콘 템플릿을 설정하면  `DragIcon enum`에서 `DEFAULT` 아이콘도 조정해야 하므로 `changeIcon` 메소드에 의해 적절히 변경됩니다:
 ```typescript
@@ -361,10 +336,6 @@ Notice that we also have row selection enabled and we preserve the selection whe
 `rowDraggable` 지시문을 사용할 경우, 고려해야 할 몇 가지 사항이 있습니다:
 > [!NOTE]
 > 행 드롭 이벤트를 처리할 경우, 행 드래그 고스트의 남은 요소가 표시되지 않도록 `eventArgs.cancel`을 **`true`**로 설정해야 합니다 
-@@if (igxName === 'IgxHierarchicalGrid') {
-> [!NOTE]
-> @@igSelector와 함께 `rowDraggable`을 사용하는 경우, 템플릿을 통해 [`dragIndicatorIconTemplate`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#dragindicatoricontemplate)을 `ContentChild`로 설정할 수 없습니다. 대신에 템플릿(`ViewChild` 데코레이터를 통해)에 대한 참조를 가져와서 그리드 `myHGrid.dragIndicatorIconTemplate: TemplateRef = myCustomTemplate`에 전달할 수 있습니다 
-}
 
 ## API 참조
 
