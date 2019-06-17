@@ -88,28 +88,28 @@ TwoWay データ バインディングを使用するには、`ngModel` を以�
 <igx-time-picker [(ngModel)]="date"></igx-time-picker>
 ```
 
-#### Setting format
-To set the time format, use the [`IgxTimePickerComponent`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html) [`format`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#format) option.
+#### 書式の設定
+時間の書式を設定するには、[`IgxTimePickerComponent`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html) [`format`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#format) オプションを使用します。
 
-The table below lists valid time display formats:
+以下の表は、使用可能な時間表示書式です。
 
-| Format | Description |
+| 書式 | 説明 |
 |:-------:|:-----------|
-| `h` | Formats the hours field in 12-hours format without leading zero (1..12). | 
-| `hh` | Formats the hours field in 12-hours format with leading zero (01..12). | 
-| `H` | Formats the hours field in 24-hours format without leading zero (0..23). | 
-| `HH` | Formats the hours field in 24-hours format with leading zero (00..23). | 
-| `m` | Formats the minutes field without leading zero (0..59). |
-| `mm` | Formats the minutes field with leading zero (00..59). |
-| `tt` | Represents the AM/PM field. |
+| `h` | 先行ゼロのない 12 時間形式で時間フィールドを書式設定します (1..12)。 | 
+| `hh` | 先行ゼロのある 12 時間形式で時間フィールドを書式設定します (01..12)。 | 
+| `H` | 先行ゼロがない 24 時間形式で時間フィールドを書式設定します (0..23)。 | 
+| `HH` | 先行ゼロがある 24 時間形式の時フィールドを書式設定します (00..23)。 | 
+| `m` | 先行ゼロがない分フィールドを書式設定します (0..59)。 |
+| `mm` | 先行ゼロのある分フィールドを書式設定します (00..59)。 |
+| `tt` | AM/PM フィールドを表します。 |
 
 
-The result is as follows:
+以下は結果です。
 <div class="sample-container loading" style="height: 580px;">
     <iframe id="time-picker-sample-8" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-8" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="time-picker-sample-8" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="time-picker-sample-8" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
@@ -215,7 +215,7 @@ public mode = InteractionMode.DropDown;
     <iframe id="timepicker-dropdown-iframe" data-src='{environment:demosBaseUrl}/scheduling/timepicker-dropdown' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="timepicker-dropdown-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="timepicker-dropdown-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
@@ -303,10 +303,10 @@ public onBlur(inputValue: string, value: Date, picker: IgxTimePickerComponent) {
     <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="time-picker-sample-6" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
 </div>
 
-#### Custom button action
-The [`IgxTimePickerComponent`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html) supports adding of custom actions buttons. To achieve that, wrap the buttons in `ng-template` marked with the `igxTimePickerActions` directive selector.
+#### カスタム ボタン アクション
+[`IgxTimePickerComponent`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html) は、カスタム アクション ボタンをサポートします。これを実現するには、igxTimePickerActionsディレクティブセレクタでマークされたng-templateでボタンをラップします。
 
-In the example below, custom action buttons are added for 'CANCEL', 'OK' and 'NOW' actions.
+以下の例では、CANCEL'、'OK'、'NOW’ 操作用のカスタム操作ボタンが追加されています。
 
 ```html
 <!-- sample.component.html -->
@@ -337,7 +337,7 @@ The result is as follows:
     <iframe id="time-picker-sample-7" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-7" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="time-picker-sample-7" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="time-picker-sample-7" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 

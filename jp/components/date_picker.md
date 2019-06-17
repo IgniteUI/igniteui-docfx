@@ -258,10 +258,10 @@ public date: Date = new Date(Date.now());
 
 <div class="divider--half"></div>
 
-#### Custom button action
-The [`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) supports predefined 'Today' and ‘Cancel’ buttons, but custom actions buttons can be added as well. To do that, wrap the buttons in `ng-template` marked with the `igxDatePickerActions` directive selector.
+#### カスタム ボタン アクション
+`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) は、定義済みの 'Today’ と ‘Cancel’ ボタンをサポートしますが、カスタム アクション ボタンも追加できます。これを行うには、`igxDatePickerActions` ディレクティブ セレクターでマークされた `ng-template` でボタンをラップします。
 
-In the example below, two custom action buttons are included to switch to months and years calendar view.
+以下の例では、年と月のカレンダー ビューに切り替えるための 2 つのカスタム アクション ボタンが含まれています。
 
 ```html
 <!-- sample.component.html -->
@@ -289,12 +289,12 @@ public yearsView(datePicker: IgxDatePickerComponent) {
 ...
 ```
 
-The result is as follows:
+以下は結果です。
 <div class="sample-container loading" style="height: 680px;">
     <iframe id="date-picker-sample-8" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/datepicker-sample-8" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="date-picker-sample-8" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="date-picker-sample-8" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
