@@ -1,37 +1,34 @@
 ﻿@@if (igxName === 'IgxGrid') {
 ---
-title: 그리드 일괄 편집 - 네이티브 Angular | Ignite UI for Angular
-_description: TransactionService is an injectable middleware that a component can use to accumulate changes without affecting the underlying data. The provider exposes API to access, manipulate changes (undo and redo) and discard or commit all to the data.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Component, Angular Grid, Angular Table, Angular Data Grid component, Angular Data Table component, Angular Data Grid control, Angular Data Table control, Angular Grid component, Angular Table component, Angular Grid control, Angular Table control, Angular High Performance Grid, Angular High Performance Data Table, Cell Editing, Row Editing, Batch Updating, Batch Editing, Transactions
-_language: kr
+title: Angular Grid Batch Editing | Angular Crud | Ignite UI for Angular | Infragistics
+_description: Perform data manipulation without affecting the underlying data with grid batch editing and with angular crud using material ui table by Ignite UI for Angular
+_keywords: Angular Crud, Igniteui for Angular, Infragistics
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: 트리 그리드 일괄 편집 - 네이티브 Angular | Ignite UI for Angular
-_description: TransactionService is an injectable middleware that a component can use to accumulate changes without affecting the underlying data. The provider exposes API to access, manipulate changes (undo and redo) and discard or commit all to the data.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Component, Angular Tree Grid, Angular Tree Table, Angular Tree Grid component, Angular Tree Table component, Angular Tree Grid control, Angular Tree Table control, Angular Tree Grid component, Angular Tree Table component, Angular Tree Grid control, Angular Tree Table control, Angular High Performance Tree Grid, Angular High Performance Tree Table, Cell Editing, Row Editing, Batch Updating, Batch Editing, Transactions
-_language: kr
+title: Angular Tree Grid Batch Editing | Angular Crud | Ignite UI for Angular | Infragistics
+_description: Perform data manipulation without affecting the underlying data with grid batch editing and with angular crud using material ui table by Ignite UI for Angular
+_keywords: Angular Crud, Igniteui for Angular, Infragistics
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: 계층 그리드 일괄 편집 - 네이티브 Angular | Ignite UI for Angular
-_description: TransactionService is an injectable middleware that a component can use to accumulate changes without affecting the underlying data. The provider exposes API to access, manipulate changes (undo and redo) and discard or commit all to the data.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Component, Angular Hierarchical Grid, Angular Hierarchical Table, Angular Hierarchical Grid component, Angular Hierarchical Table component, Angular Hierarchical Grid control, Angular Hierarchical Table control, Angular High Performance Hierarchical Grid, Angular High Performance Hierarchical Table, Cell Editing, Row Editing, Batch Updating, Batch Editing, Transactions
-_language: kr
+title: Angular HierarchicalGrid Grid Batch Editing | Angular Crud | Ignite UI for Angular | Infragistics
+_description: Perform data manipulation without affecting the underlying data with grid batch editing and with angular crud using material ui table by Ignite UI for Angular
+_keywords: Angular Crud, Igniteui for Angular, Infragistics
 ---
 }
 
-### @@igComponent 일괄 편집
+### @@igComponent Batch Editing and Transactions
 
 @@if (igxName !== 'IgxTreeGrid') {
-[`TransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) 는 컴포넌트가 기본 데이터에 영향을 주지 않고 변경을 축적하는데 사용할 수 있는 삽입 가능한 미들웨어입니다. 공급자가 API를 노출하여 액세스, 변경 처리(취소 및 재실행) 및 모든 데이터를 삭제 또는 확정합니다.
+[`TransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) 는 컴포넌트가 기본 데이터에 영향을 주지 않고 변경을 축적하는데 사용할 수 있는 삽입 가능한 미들웨어입니다. The provider exposes API for angular crud and data manipulation (undo and redo), also it can discard or commit all of the changes with a grid batch editing capabilities.
 
 [`TransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) 는 셀 편집과 행 편집 모두를 실행합니다. 행이 편집 모드를 종료한 경우 행 트랜잭션이 작성되는 동안 셀이 편집 모드를 종료하면 셀 편집 트랜잭션이 추가됩니다. 그러나, 두 경우 모두 그리드 편집 상태는 모든 업데이트, 추가 및 삭제된 행 및 마지막 상태로 구성됩니다. 이것들은 나중에 검사, 조작, 즉시 제출될 수 있습니다. 변경은 편집 모드에 따라 개별 셀 또는 행별로 수집되고 데이터 행/레코드별로 축적됩니다.
 }
 @@if (igxName === 'IgxTreeGrid') {
-[`HierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html)는 컴포넌트가 기본 데이터에 영향을 주지 않고 변경을 축적하는데 사용할 수 있는 삽입 가능한 미들웨어입니다. 공급자가 API를 노출하여 액세스, 변경 처리(취소 및 재실행) 및 모든 데이터를 삭제 또는 확정합니다.
+[`HierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html)는 컴포넌트가 기본 데이터에 영향을 주지 않고 변경을 축적하는데 사용할 수 있는 삽입 가능한 미들웨어입니다. The provider exposes API for angular crud and data manipulation (undo and redo), also it can discard or commit all of the changes with a grid batch editing capabilities.
 
 [`HierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html)는 셀 편집과 행 편집 모두를 실행합니다. 행이 편집 모드를 종료한 경우 행 트랜잭션이 작성되는 동안 셀이 편집 모드를 종료하면 셀 편집 트랜잭션이 추가됩니다. 그러나, 두 경우 모두 그리드 편집 상태는 모든 업데이트, 추가 및 삭제된 행 및 마지막 상태로 구성됩니다. 이것들은 나중에 검사, 조작, 즉시 제출될 수 있습니다. 변경 사항은 사용 중인 편집 모드에 따라 개별 셀 또는 행별로 수집되고 데이터 행/레코드별로 축적됩니다.
 
