@@ -14,13 +14,13 @@ _keywords: Data manipulation, Igniteui for Angular, Infragistics
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular Hierarchical Grid Editing | Data Manipulation | Ignite UI for Angular
+title: Angular HierarchicalGrid Editing | Data Manipulation | Ignite UI for Angular
 _description: Configure in cell data manipulation with feature rich angular ui grid, try the update data features and angular crud by using the Ignite UI Angular hierarchical grid editing
 _keywords: Data manipulation, Igniteui for Angular, Infragistics
 ---
 }
 
-### @@igComponent cell editing and edit templates 
+### @@igComponent cell editing and edit templates
 
 Ignite UI for Angular @@igComponent component provides a great data manipulation capabilities and powerful API for Angular CRUD operations. By default the @@igComponent is using `in cell` editing and different editors will be shown based on the data type of the column, thanks to the default cell editing template. In addition you can define your own custom templates for update data actions and to override the default behavior for committing and discarding any changes.
 
