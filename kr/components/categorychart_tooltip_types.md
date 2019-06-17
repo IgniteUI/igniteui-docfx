@@ -1,6 +1,6 @@
 ---
 제목: 카테고리 차트 | 데이터 비주얼라이제이션 도구 | Ignite UI for Angular | 도구 설명 유형 | Infragistics 
-_description: Use the category chart component to analyze and  automatically choose the best chart type to represent data. Learn about our chart types for visualization.
+_description: 범주 차트 구성 요소를 사용하여 데이터를 나타내는 데 가장 적합한 차트 유형을 분석하고 자동으로 선택합니다. 시각화를위한 차트 유형에 대해 알아보십시오.
 _keywords: category chart, Ignite UI for Angular, infragistics
 _language: kr
 ---
@@ -11,8 +11,8 @@ _language: kr
 
 ### 데모
 
-<div class="sample-container" style="height: 500px">
-    <iframe id="category-chart-tooltip-types-iframe" src='{environment:demosBaseUrl}/charts/category-chart-tooltip-types' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 500px">
+    <iframe id="category-chart-tooltip-types-iframe" src='{environment:demosBaseUrl}/charts/category-chart-tooltip-types' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="category-chart-tooltip-types-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기

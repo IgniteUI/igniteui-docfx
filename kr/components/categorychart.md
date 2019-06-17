@@ -1,6 +1,6 @@
 ---
 제목: 카테고리 차트 | 데이터 비주얼라이제이션 도구 | Ignite UI for Angular | Infragistics
-_description: Use the category chart component to analyze and  automatically choose the best chart type to represent data. Learn about our chart types for visualization.
+_description: 범주 차트 구성 요소를 사용하여 데이터를 나타내는 데 가장 적합한 차트 유형을 분석하고 자동으로 선택합니다. 시각화를위한 차트 유형에 대해 알아보십시오.
 _keywords: category chart, Ignite UI for Angular, infragistics
 _language: kr
 ---
@@ -11,8 +11,8 @@ _language: kr
 
 ### 데모
 
-<div class="sample-container" style="height: 500px">
-    <iframe id="category-chart-overview-iframe" src='{environment:demosBaseUrl}/charts/category-chart-overview' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 500px">
+    <iframe id="category-chart-overview-iframe" src='{environment:demosBaseUrl}/charts/category-chart-overview' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 
 <div>
@@ -53,7 +53,7 @@ _language: kr
 
 ```typescript
 // app.module.ts
-import { IgxCategoryChartModule } from 'igniteui-angular-charts/ES5/igx-category-chart-module';
+import { IgxCategoryChartModule } from "igniteui-angular-charts/ES5/igx-category-chart-module";
 
 @NgModule({
     imports: [
@@ -106,15 +106,15 @@ var data = [
 
 ### 지원되는 차트 유형
 
-| 속성                   | 설명                                                                                 | 예                                            |
-| -------------------- | ---------------------------------------------------------------------------------- | -------------------------------------------- |
-| `Line`               | Specifies category line series with markers at each data point                     | ![](../images/category_chart_line.png)       |
-| `Area`               | Specifies category area series                                                     | ![](../images/category_chart_area.png)       |
-| `IgxColumnComponent` | Specifies category column chart with vertical rectangles at each data point        | ![](../images/category_chart_column.png)     |
-| `Point`              | Specifies category point chart with markers at each data point                     | ![](../images/category_chart_point.png)      |
-| `StepLine`           | Specifies category step line chart                                                 | ![](../images/category_chart_stepline.png)   |
-| `StepArea`           | Specifies category step area chart                                                 | ![](../images/category_chart_steparea.png)   |
-| `Spline`             | Specifies category spline line series with markers at each data point              | ![](../images/category_chart_spline.png)     |
-| `SplineArea`         | Specifies category spline area series                                              | ![](../images/category_chart_splinearea.png) |
-| `Waterfall`          | Specifies category waterfall chart                                                 | ![](../images/category_chart_waterfall.png)  |
-| `Auto`               | Specifies automatic selection of chart type based on suggestions from Data Adapter |                                              |
+| 속성                   | 설명                                                                          | 예                                            |
+| -------------------- | --------------------------------------------------------------------------- | -------------------------------------------- |
+| `Line`               | 각 데이터 점에 마커로 카테고리 선형 시리즈를 지정합니다                                             | ![](../images/category_chart_line.png)       |
+| `Area`               | 카테고리 영역 시리즈를 지정합니다                                                          | ![](../images/category_chart_area.png)       |
+| `IgxColumnComponent` | Specifies category column chart with vertical rectangles at each data point | ![](../images/category_chart_column.png)     |
+| `Point`              | 각 데이터 점에 수직 직사각형으로 카테고리 세로막대형 차트를 지정합니다                                     | ![](../images/category_chart_point.png)      |
+| `StepLine`           | 카테고리 스텝 선형 차트를 지정합니다                                                        | ![](../images/category_chart_stepline.png)   |
+| `StepArea`           | 카테고리 스텝 영역 차트를 지정합니다                                                        | ![](../images/category_chart_steparea.png)   |
+| `Spline`             | 각 데이터 점에 마커로 카테고리 스플라인 선형 시리즈를 지정합니다                                        | ![](../images/category_chart_spline.png)     |
+| `SplineArea`         | 카테고리 스플라인 영역 시리즈를 지정합니다                                                     | ![](../images/category_chart_splinearea.png) |
+| `Waterfall`          | 카테고리 워터폴 차트를 지정합니다                                                          | ![](../images/category_chart_waterfall.png)  |
+| `Auto`               | 데이터 어댑터의 제안을 기반으로 차트 유형의 자동 선택을 지정합니다                                       |                                              |

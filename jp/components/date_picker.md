@@ -94,8 +94,6 @@ Two-way データ バインディングを作成するには、以下のよう�
 
 [`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) は、カレンダーで今日を選択する ‘今日’ ボタンをサポートします。'キャンセル 'ボタンも有効にできます。 
 
->Note: Configuring the 'Today' and 'Cancel' buttons is applicable only to the read-only mode date picker.
-
 ボタンを有効にするには、 [`cancelButtonLabel`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#cancelbuttonlabel) と [`todayButtonLabel`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#todaybuttonlabel) 入力を使用してボタン テキストを設定します。 
 
 ```html
@@ -105,7 +103,7 @@ Two-way データ バインディングを作成するには、以下のよう�
 ```
 
 ボタンが表示されるサンプル:
-<div class="sample-container loading" style="height: 580px;">
+<div class="sample-container loading" style="height: 680px;">
     <iframe id="date-picker-sample-3" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/datepicker-sample-3" class="lazyload"></iframe>
 </div>
 <div>
@@ -258,6 +256,46 @@ public date: Date = new Date(Date.now());
     <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="date-picker-sample-7" data-demos-base-url="{environment:demosBaseUrl}">stackblitz　で表示</button>
 </div>
 
+<div class="divider--half"></div>
+
+#### カスタム ボタン アクション
+`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) は、定義済みの 'Today’ と ‘Cancel’ ボタンをサポートしますが、カスタム アクション ボタンも追加できます。これを行うには、`igxDatePickerActions` ディレクティブ セレクターでマークされた `ng-template` でボタンをラップします。
+
+以下の例では、年と月のカレンダー ビューに切り替えるための 2 つのカスタム アクション ボタンが含まれています。
+
+```html
+<!-- sample.component.html -->
+ <igx-date-picker mode="dropdown" #picker [(ngModel)]="date">
+    <ng-template igxDatePickerActions>
+        <div class="container action-buttons">
+            <button igxButton="flat" (click)="monthsView(picker)">months view</button>
+            <button igxButton="flat" (click)="yearsView(picker)">years view</button>
+        </div>
+    </ng-template>
+</igx-date-picker>
+```
+
+```typescript
+// sample.component.ts
+...
+public date = new Date();
+public monthsView(datePicker: IgxDatePickerComponent) {
+    datePicker.calendar.activeViewYear();
+}
+
+public yearsView(datePicker: IgxDatePickerComponent) {
+    datePicker.calendar.activeViewDecade();
+}
+...
+```
+
+以下は結果です。
+<div class="sample-container loading" style="height: 680px;">
+    <iframe id="date-picker-sample-8" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/datepicker-sample-8" class="lazyload"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="date-picker-sample-8" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
+</div>
 <div class="divider--half"></div>
 
 ### インターナショナリゼーション

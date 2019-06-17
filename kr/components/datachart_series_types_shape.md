@@ -1,6 +1,6 @@
 ---
 제목: 데이터 차트 구성 요소 - 네이티브 Angular | Ignite UI for Angular
-_description: The Ignite UI for Angular Data Chart is a charting component that provides modular design of axis, markers, series, legend, and annotation layers. With this chart, you can create multiple instances of these visual elements in the same chart plot area in order to create composite chart views.
+_description: The Ignite UI for Angular 데이터 차트는 축, 마커, 시리즈, 범례 및 주석 레이어의 모듈 식 디자인을 제공하는 차트 구성 요소입니다. 이 차트를 사용하면 동일한 차트 영역에 이러한 시각적 요소의 인스턴스를 여러 개 만들어 복합 차트 뷰를 만들 수 있습니다.
 _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Chart Control, Angular Chart Example, Angular Chart Component, Angular Data Chart
 _language: kr
 ---
@@ -13,8 +13,8 @@ _language: kr
 
 ### 데모
 
-<div class="sample-container" style="height: 400px">
-    <iframe id="data-chart-type-shape-series-iframe" src='{environment:demosBaseUrl}/charts/data-chart-type-shape-series' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 400px">
+    <iframe id="data-chart-type-shape-series-iframe" src='{environment:demosBaseUrl}/charts/data-chart-type-shape-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-type-shape-series-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기
@@ -27,16 +27,16 @@ _language: kr
 
 다음 표에는 모든 유형의 모양 시리즈와 그 설명이 표시되어 있습니다.
 
-| Series Name             | Description                                                                                                                                        |
-| ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `ScatterPolygonSeries`  | Displays a polygon for each of shape mapped to `ShapeMemberPath` property. It is useful for rendering shapes such as a country boarders.           |
-| `ScatterPolylineSeries` | Displays a polyline for each of shape mapped to `ShapeMemberPath` property. It is useful for rendering disconnected lines such as a network graph. |
+| 시리즈 이름                  | 설명                                                                          |
+| ----------------------- | --------------------------------------------------------------------------- |
+| `ScatterPolygonSeries`  | `ShapeMemberPath` 속성에 매핑된 각 도형의 폴리곤을 표시합니다. 국경과 같은 도형을 렌더링할 때 유용합니다.        |
+| `ScatterPolylineSeries` | `ShapeMemberPath` 속성에 매핑된 각 도형의 폴리라인을 표시합니다. 네트워크 그래프와 같이 단선을 렌더링할 때 유용합니다. |
 
 ### 필요한 축
 
 `IgxDataChart` 제어는 다양한 유형의 축을 제공하지만 분산 모양 시리즈에는 다음의 축 유형만 사용할 수 있습니다.
 
-| Series Type             | YAxis Type                 | XAxis Type                 |
+| 시리즈 유형                  | YAxis 유형                   | XAxis 유형                   |
 | ----------------------- | -------------------------- | -------------------------- |
 | `ScatterPolygonSeries`  | `IgxNumericYAxisComponent` | `IgxNumericXAxisComponent` |
 | `ScatterPolylineSeries` | `IgxNumericYAxisComponent` | `IgxNumericXAxisComponent` |
@@ -93,14 +93,15 @@ export class AppModule { /* ... */ }
     [dataSource]="dataSource"
     width="700px"
     height="500px">
-    <igx-numeric-x-axis name="xAxis" />
-    <igx-numeric-y-axis name="yAxis" />
+    <igx-numeric-x-axis name="xAxis"></igx-numeric-x-axis>
+    <igx-numeric-y-axis name="yAxis"></igx-numeric-y-axis>
     <igx-scatter-polygon-series
-     name="series1"
-     shapeMemberPath="Points"
-     title="House Floor Plan"
-     brush="Gray"
-     outline="Black" />
+        name="series1"
+        shapeMemberPath="Points"
+        title="House Floor Plan"
+        brush="Gray"
+        outline="Black">
+    </igx-scatter-polygon-series>
  </igx-data-chart>
 ```
 
