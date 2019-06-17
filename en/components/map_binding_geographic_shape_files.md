@@ -10,8 +10,8 @@ The Ignite UI for Angular map component, the `ShapeDataSource` class loads geo-s
 
 ### Demo
 
-<div class="sample-container" style="height: 400px">
-    <iframe id="geo-map-binding-shp-polylines-iframe" src='{environment:demosBaseUrl}/maps/geo-map-binding-shp-polylines' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 400px">
+    <iframe id="geo-map-binding-shp-polylines-iframe" src='{environment:demosBaseUrl}/maps/geo-map-binding-shp-polylines' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="geo-map-binding-shp-polylines-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
@@ -36,6 +36,17 @@ When both source properties are set to non-null values, then the `ShapeDataSourc
 ### Loading Shapefiles
 
 The following code creates an instance of the `ShapeDataSource` object for loading a shape file that contains locations of major cities in the world. It also demonstrates how to handle the `ImportCompleted` event as a prerequisite for binding data to the map component.
+
+```ts
+import { ShapeDataSource } from "igniteui-react-core/ES5/igr-shape-data-source";
+// ...
+
+const sds = new ShapeDataSource();
+sds.importCompleted = this.onShapePolylinesLoaded;
+sds.shapefileSource = url + "/shapes/WorldCableRoutes.shp";
+sds.databaseSource  = url + "/shapes/WorldCableRoutes.dbf";
+sds.dataBind();
+```
 
 ### Binding Shapefiles
 

@@ -11,8 +11,8 @@ The Infragistics Excel Library allows you to work with spreadsheet data using fa
 ### Demo
 
 <div class="sample-container" style="height: 500px">
-    <iframe id="excel-library-overview-sample-iframe" 
-	src='{environment:demosBaseUrl}/excel-library/operations-on-workbooks' 
+    <iframe id="excel-library-overview-sample-iframe"
+	src='{environment:demosBaseUrl}/excel-library/operations-on-workbooks'
 	width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 
@@ -22,7 +22,8 @@ The Infragistics Excel Library allows you to work with spreadsheet data using fa
 
 When installing the excel package, the core package must also be installed.
 
--   **npm install igniteui-angular-excel igniteui-angular-core --save**
+-   **npm install --save igniteui-angular-core**
+-   **npm install --save igniteui-angular-excel**
 
 The Excel Library is exported as an `NgModule`, you need to import the `IgxExcelModule` inside your `AppModule`:
 
@@ -32,9 +33,9 @@ import { IgxExcelModule } from "igniteui-angular-excel/ES5/igx-excel-module";
 
 @NgModule({
     imports: [
-        ...
+        // ...
         IgxExcelModule,
-        ...
+        // ...
     ]
 })
 export class AppModule {}
@@ -106,9 +107,9 @@ Modify `angular.json` by setting the `vendorSourceMap` option under architect =>
             "index": "src/index.html",
             "main": "src/main.ts",
             "tsConfig": "src/tsconfig.app.json",
-                  ...
+                  // ...
           },
-              ...
+              // ...
         },
         "serve": {
           "builder": "...",
@@ -116,9 +117,9 @@ Modify `angular.json` by setting the `vendorSourceMap` option under architect =>
             "vendorSourceMap": false,
             "browserTarget": "my-app:build"
           },
-              ...
+              // ...
         },
-        ...
+        // ...
       }
 ```
 

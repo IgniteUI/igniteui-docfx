@@ -1,49 +1,47 @@
 ---
-title: Data Chart Component - Native Angular | Ignite UI for Angular
+제목: 데이터 차트 구성 요소 - 네이티브 Angular | Ignite UI for Angular
 _description: The Ignite UI for Angular Data Chart is a charting component that provides modular design of axis, markers, series, legend, and annotation layers. With this chart, you can create multiple instances of these visual elements in the same chart plot area in order to create composite chart views.
 _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Chart Control, Angular Chart Example, Angular Chart Component, Angular Data Chart
 _language: kr
 ---
 
-## Scatter Area Series
+## 분산 영역 시리즈
 
-This topic explains, with code examples, how to use  `ScatterAreaSeries` in the `IgxDataChart` control. This series draws a colored surface based on a triangulation of X and Y data with a numeric value assigned to each point. This type of series is useful for rendering heat maps, magnetic field strength or Wi-Fi strength in an office. The `ScatterAreaSeries` works a lot like the `ScatterContourSeries` except that it represents data as interpolated and colored surface instead of contour lines connecting data points with the same values.
+이 항목에서는 코드 예제를 사용하여 `IgxDataChart` 제어에서 `ScatterAreaSeries`를 사용하는 방법을 설명합니다. 이 시리즈는 각 점에 할당된 숫치 값으로X 및 Y 데이터의 삼각 측량을 기반으로 색상이 입혀진 표면을 그립니다. 이 유형의 시리즈는 히트 맵, 자기장 강도 또는 사무실에서 Wi-Fi 강도를 렌더링하는 경우 등에 유용합니다. `ScatterAreaSeries`는 데이터 점를 동일한 값으로 연결하는 등고선 대신 보간 및 채색된 표면으로 데이터를 나타낸다는 점을 제외하면 `ScatterContourSeries`와 매우 유사합니다.
 
-### Demo
+### 데모
 
 <div class="sample-container" style="height: 500px">
     <iframe id="data-chart-type-area-series-iframe" src='{environment:demosBaseUrl}/charts/data-chart-type-area-series' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-type-area-series-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-type-area-series-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기
     </button>
 </div>
 
 <div class="divider--half"></div>
 
-### Required Axes
+### 필요한 축
 
-The `IgxDataChart` control provides various types of axes but only `IgxNumericYAxisComponent`and `IgxNumericYAxisComponent` can be used with `ScatterAreaSeries`.
+`IgxDataChart` 제어는 다양한 유형의 축을 제공하며, `IgxNumericYAxisComponent` 및 `IgxNumericYAxisComponent`만 `ScatterAreaSeries`와 함께 사용할 수 있습니다.
 
-### Required Data
+### 필요한 데이터
 
-The `ScatterAreaSeries` has the following data requirements:
+`ScatterAreaSeries`에는 다음과 같은 데이터 요구 사항이 있습니다:
 
--   The data source must be an array or a list of data items
--   The data source must contain at least one data item otherwise the chart will not render the scatter shape series.
--   All data items must contain 3 numeric data columns which should be mapped to the `XMemberPath`, `YMemberPath`, and `ColorMemberPath` properties.
+-   데이터 소스는 배열 또는 데이터 항목 목록이어야 함
+-   데이터 소스에는 하나 이상의 데이터 항목이 포함되어야 하며 그렇지 않을 경우에는 차트가 분산형 시리즈를 렌더링하지 않습니다.
+-   모든 데이터 항목에는 `XMemberPath`, `YMemberPath` 및 `ColorMemberPath` 속성에 매핑되는 3개의 숫자 데이터 열이 있어야 합니다.
 
-You can use the [SampleScatterData](datachart_data_sources_scatter.md) as data source which meets above data requirements.
+[SampleScatterData](datachart_data_sources_scatter.md)는 위의 데이터 요구 사항을 충족하는 데이터 소스로 사용할 수 있습니다.
 
 ```typescript
 this.state = { dataSource: SampleScatterData.create() }
 ```
 
-### Required Modules
+### 필요한 모듈
 
-<!-- Angular -->
-
-The scatter area series requires the following modules:
+분산 영역 시리즈에는 다음과 같은 모듈이 필요합니다:
 
 ```typescript
 // axis' modules:
@@ -71,9 +69,9 @@ import { IgxDataChartScatterModule } from "igniteui-angular-charts/ES5/igx-data-
 export class AppModule { /* ... */ }
 ```
 
-### Code Example
+### 코드 예제
 
-This code demonstrates how to create an instance of data chart with  `ScatterAreaSeries` and bind it to the data source.
+이 코드는 `ScatterAreaSeries`로 데이터 차트의 인스턴스를 생성하고 데이터 소스에 바인딩하는 방법을 보여줍니다.
 
 ```html
  <igx-data-chart
@@ -92,21 +90,21 @@ This code demonstrates how to create an instance of data chart with  `ScatterAre
  </igx-data-chart>
 ```
 
-### Color Scale
+### 컬러 비율
 
-Use the `ColorScale` property of the`ScatterAreaSeries` to resolve values of points and thus fill the surface of the series. The colors are smoothly interpolated around the shape of the surface by applying a pixel-wise triangle rasterizer to triangulation data. Because rendering of the surface is pixel-wise, the color scale uses colors instead of brushes.
+`ScatterAreaSeries`의 `ColorScale` 속성을 사용하여 점의 값을 분석하고 시리즈의 표면을 채 웁니다. 컬러는 삼각 측량 데이터에 픽셀 단위의 삼각 래스터라이저를 적용하여 표면의 모양 주변을 매끄럽게 보간합니다. 표면 렌더링은 픽셀 단위이기 때문에 컬러 비율은 브러시 대신 컬러를 사용합니다.
 
-The provided `CustomPaletteColorScale` class should satisfy most coloring needs, but you can inherit from the `ColorScale` abstract class and provide your own coloring logic.
+제공된 `CustomPaletteColorScale` 클래스는 대부분의 착색 요구 사항을 만족시킬 수 있지만 `ColorScale` 추상 클래스를 상속하고 독자적인 착색 논리를 제공할 수 있습니다.
 
-The following table list properties of the `CustomPaletteColorScale` affecting surface coloring of the `ScatterAreaSeries`.
+다음 표에는 `ScatterAreaSeries`의 면 채색에 영향을 주는 `CustomPaletteColorScale`의 속성이 열거되어 있습니다 .
 
--   `Palette`  sets the collection of colors to select from or to interpolate between.
--   `InterpolationMode` sets the method getting a color from the Palette.
--   `MaximumValue` sets the highest value to assign a color. Any given value greater than this value will be Transparent.
--   `MinimumValue` sets the lowest value to assign a color. Any given value less than this value will be Transparent.
+-   `Palette`는 선택하거나 보간하는 컬러의 컬렉션을 설정합니다.
+-   `InterpolationMode`는 팔레트에서 컬러를 가져오는 메소드를 설정합니다.
+-   `MaximumValue`는 컬러를 할당할 수 있는 상한값을 설정합니다. 지정한 값이 이 값보다 큰 경우에는 투명하게 됩니다.
+-   `MinimumValue`는 컬러를 할당할 수 있는 최소값을 설정합니다. 지정한 값이 이 값보다 작은 경우에는 투명하게 됩니다.
 
-### Additional Resources
+### 추가 리소스
 
--   [Axis Types](datachart_axis_types.md)
--   [Chart Legend](datachart_chart_legends.md)
--   [Series Types](datachart_series_types.md)
+-   [축 유형](datachart_axis_types.md)
+-   [차트 범례](datachart_chart_legends.md)
+-   [시리즈 유형](datachart_series_types.md)

@@ -1,7 +1,7 @@
 ---
-title: Excel Library Component - Native Angular | Ignite UI for Angular
-_description: The Ignite UI for Excel Library component.
-_keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Excel Library, Angular Excel Library Example, Angular Excel Library Component, Angular Excel Library
+title: Excel Library| Data Spreadsheet | Ignite UI for Angular | Infragistics
+_description: Use the Excel Library to work with spreadsheet data using Microsoft Excel features. Easily transfer data from excel to your application. 
+_keywords: Excel library, Ignite UI for Angular, Infragistics
 ---
 
 ## Using Cells
@@ -10,10 +10,8 @@ The `WorksheetCell` objects in an Excel worksheet is the object that holds your 
 
 ### Demo
 
-<div class="sample-container" style="height: 150px">
-    <iframe id="excel-library-overview-sample-iframe" 
-	src='{environment:demosBaseUrl}/excel-library/working-with-cells' 
-	width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 150px">
+    <iframe id="excel-library-overview-sample-iframe" src='{environment:demosBaseUrl}/excel-library/working-with-cells' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 
 <div class="divider--half"></div>
@@ -52,7 +50,7 @@ var region = worksheet.getRegion("G1:G10");
 
 In Microsoft Excel, individual cells, as well as cell regions can have names assigned to them. The name of a cell or region can be used to reference that cell or region instead of their address.
 
-The Infragistics Excel Library supports the referencing of cells and regions by name through the `getCell` and `getRegion` methods of the `Worksheet` object. You refer to the cell or region using the `NamedReference` instance that refers to that cell or region.
+The Infragistics Angular Excel Library supports the referencing of cells and regions by name through the `getCell` and `getRegion` methods of the `Worksheet` object. You refer to the cell or region using the `NamedReference` instance that refers to that cell or region.
 
 You can use the following code snippet as an example for naming a cell or region:
 
@@ -73,7 +71,7 @@ var region = worksheet.getRegion("myRegion");
 
 ### Adding a Comment to a Cell
 
-A comment allows you to display hints or notes for a cell when the end user’s mouse hovers over a cell. The comments display as a tooltip-like callout that contains text. The Infragistics Excel Library allows you to add comments to a cell by setting a `WorksheetCell` object’s `comment` property.
+A comment allows you to display hints or notes for a cell when the end user’s mouse hovers over a cell. The comments display as a tooltip-like callout that contains text. The Infragistics Angular Excel Library allows you to add comments to a cell by setting a `WorksheetCell` object’s `comment` property.
 
 The following example code demonstrates how to add a comment to a cell:
 
@@ -90,7 +88,7 @@ worksheet.rows(0).cells(0).comment = cellComment;
 
 ### Adding a Formula to a Cell
 
-The Infragistics Excel Library allows you to add Microsoft Excel formulas to a cell or group of cells in a worksheet. You can do this using the `WorksheetCell` object’s `applyFormula` method or by instantiating a `Formula` object and applying it to a cell. Regardless of the manner in which you apply a formula to a cell, you can access the `Formula` object using the `WorksheetCell` object’s `Formula` property. If you need the value, use the cell’s `Value` property.
+The Infragistics Angular Excel Library allows you to add Microsoft Excel formulas to a cell or group of cells in a worksheet. You can do this using the `WorksheetCell` object’s `applyFormula` method or by instantiating a `Formula` object and applying it to a cell. Regardless of the manner in which you apply a formula to a cell, you can access the `Formula` object using the `WorksheetCell` object’s `Formula` property. If you need the value, use the cell’s `Value` property.
 
 The following code shows you how to add a formula to a cell.
 
@@ -124,7 +122,7 @@ worksheet.columns(3).cellFormat.setFormatting(worksheet.columns(1).cellFormat);
 
 ### Formatting a Cell
 
-The Infragistics Excel Library allows you to customize the look and behavior of a cell. You can customize a cell by setting properties exposed by the `cellFormat` property of the `WorksheetCell`, `WorksheetRow`, `WorksheetColumn`, or `WorksheetMergedCellsRegion` objects.
+The Infragistics Angular Excel Library allows you to customize the look and behavior of a cell. You can customize a cell by setting properties exposed by the `cellFormat` property of the `WorksheetCell`, `WorksheetRow`, `WorksheetColumn`, or `WorksheetMergedCellsRegion` objects.
 
 You can customize every aspect of a cell’s appearance. You can set a cell’s font, background, and borders, as well as text alignment and rotation. You can even apply a different format on a character-by-character basis for a cell’s text.
 

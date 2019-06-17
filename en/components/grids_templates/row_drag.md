@@ -228,7 +228,6 @@ We define a refenrece to each of our grids via the `ViewChild` decorator and the
 
 #### Templating the drag icon
 The drag handle icon can be templated using the grid's [`dragIndicatorIconTemplate`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#dragindicatoricontemplate). In the example we're building, let's change the icon from the default one (`drag_indicator`) to `drag_handle`.
-@@if (igxName === 'IgxTreeGrid' || igxName === 'IgxGrid') {
 To do so, we can use the `igxDragIndicatorIcon` to pass a template inside of the `@@igSelector`'s body:
 ```html
 <@@igSelector>
@@ -239,31 +238,6 @@ To do so, we can use the `igxDragIndicatorIcon` to pass a template inside of the
 ...
 </@@igSelector>
 ```
-}
-@@if (igxName === 'IgxHierarchicalGrid') {
-To do so, we need to define a template in our component's template, get it as a `ViewChild` and pass it to the @@igxName's `dragIndicatorIconTemplate` property
-
-```html
-<@@igSelector>
-...
-</@@igSelector>
-...
-<ng-template #customDragIcon>
-    <igx-icon>drag_handle</igx-icon>
-</ng-template>
-```
-
-```typescript
-export class @@igxNameRowDragComponent implements AfterViewInit{
-    @ViewChild('customDragIcon', {read: TemplateRef})
-    public customIcon: TemplateRef<any>;
-    ...
-    ngAfterViewInit() {
-        this.grid.dragIndicatorIconTemplate = this.customIcon;
-    }
-}
-```
-}
 
 Once we've set the new icon template, we also need to adjust the `DEFAULT` icon in our `DragIcon enum`, so it's properly change by the `changeIcon` method:
 ```typescript
@@ -315,6 +289,16 @@ The result of the configuration can be seem below:
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-row-drag-to-grid-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
+
+The following sample demonstrates how to configure row reordering in the grid. Holding onto the drag icon will allow you to move a row anywhere in the grid.
+<div class="sample-container loading" style="height:830px">
+    <iframe id="grid-row-reorder" src='{environment:demosBaseUrl}/grid/grid-row-reorder' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-row-reorder" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
 }
 
 @@if (igxName === 'IgxTreeGrid') {
@@ -326,6 +310,16 @@ The result of the configuration can be seem below:
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-row-drag-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
+
+The following sample demonstrates how to configure row reordering in the tree grid. Notice that we also have row selection enabled and we preserve the selection when dropping the dragged row.
+<div class="sample-container loading" style="height:560px">
+    <iframe id="tree-grid-row-reorder-sample-iframe" src='{environment:demosBaseUrl}/tree-grid/tree-grid-row-reordering' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-row-reorder-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div> 
 }
 
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -337,6 +331,17 @@ The result of the configuration can be seem below:
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-row-drag-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
+
+The following sample demonstrates how to configure row reordering in the hierarchical grid.
+Notice that we also have row selection enabled and we preserve the selection when dropping the dragged row.
+<div class="sample-container loading" style="height:560px">
+    <iframe id="hierarchical-grid-row-reorder-sample-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-row-reorder' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-row-reorder-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div> 
 }
 
 @@if (igxName === 'IgxGrid') {
@@ -352,7 +357,8 @@ Try to drag moons from the grid and drop them to their corresponding planets. Ro
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-row-drag-1" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-> [!NOTE] The classes applied to the row drag ghost, used in the demo above, are using ::ng-deep modifier, because row drag is an internal grid feature and cannot be accessed on application level, due to the CSS encapsulation.
+> [!NOTE] 
+> The classes applied to the row drag ghost, used in the demo above, are using ::ng-deep modifier, because row drag is an internal grid feature and cannot be accessed on application level, due to the CSS encapsulation.
 
 <div class="divider--half"></div>
 }
@@ -362,19 +368,15 @@ Try to drag moons from the grid and drop them to their corresponding planets. Ro
 There are a couple of things that need to be considered when using the `rowDraggable` directive:
 > [!NOTE]
 > When handling the row-drop event, the `eventArgs.cancel` should be set to **`true`** in order to prevent leftover elements from the row drag ghost from being visible 
-@@if (igxName === 'IgxHierarchicalGrid') {
-> [!NOTE]
-> When using `rowDraggable` with an @@igSelector, the [`dragIndicatorIconTemplate`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#dragindicatoricontemplate) cannot be set through the template, as a `ContentChild`. Instead, you can get a reference to the template (via `ViewChild` decorator) and pass it to the grid `myHGrid.dragIndicatorIconTemplate: TemplateRef = myCustomTemplate` 
-}
 
-## API References
+### API References
 
 * [rowDraggable]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowdraggable)
 * [onRowDragStart]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onrowdragstart)
 * [onRowDragEnd]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onrowdragend)
 * [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
 
-## Additional Resources
+### Additional Resources
 <div class="divider--half"></div>
 
 * [@@igComponent Overview](@@igMainTopic.md)

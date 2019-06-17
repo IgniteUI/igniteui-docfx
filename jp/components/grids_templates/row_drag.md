@@ -61,7 +61,7 @@ Ignite UI for Angular @@igComponent では、**RowDrag** がルート `@@igSelec
 <div class="divider--half"></div>
 }
 
-#### 構成
+### 構成
 
 `@@igSelector` の行ドラッグを有効にするには、グリッドの [`rowDraggable`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowdraggable) を **`true`** に設定します。これが有効になると、行ドラッグ ハンドルが各行に表示されます。このハンドルは行ドラッグを開始するために使用できます。
 
@@ -81,7 +81,7 @@ Ignite UI for Angular @@igComponent では、**RowDrag** がルート `@@igSelec
 この例では、あるグリッドから別のグリッドに行をドラッグし、それを最初のデータソースから削除し、それを 2 番目のデータソースに追加します。
 }
 
-##### ドロップエリア
+#### ドロップエリア
 
 行ドラッグを簡単に有効にできました。次は行ドロップを処理する方法を設定する必要があります。
 [`igxDrop` directive](../drag_drop.md) ディレクティブを使用して、行をドロップする場所を定義できます。
@@ -139,7 +139,7 @@ export class @@igxNameRowDragComponent {
 }
 ```
 
-##### ドロップ エリア イベント ハンドラー
+#### ドロップ エリア イベント ハンドラー
 
 テンプレートでドロップ領域を定義したら、コンポーネントの `.ts` ファイルで `igxDrop`'s [`onEnter`]({environment:angularApiUrl}/classes/igxdropdirective.html#onenter)、[`onLeave`]({environment:angularApiUrl}/classes/igxdropdirective.html#onleave)、[`onDrop`]({environment:angularApiUrl}/classes/igxdropdirective.html#ondrop) イベントを宣言する必要があります。
 
@@ -229,9 +229,8 @@ export class @@igxNameRowDragComponent {
 > [!NOTE]
 > イベント引数 (`args.dragData.rowData`) または他の行プロパティからの行データを使用する場合、行全体が参照として引数に渡されることに注意してください。つまり、ソースグリッドのデータと区別する必要がある場合は、必要なデータを複製する必要があります。
 
-##### ドラッグ アイコンのテンプレート化
+#### ドラッグ アイコンのテンプレート化
 ドラッグ ハンドル アイコンは、グリッドの [`dragIndicatorIconTemplate`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#dragindicatoricontemplate) を使用してテンプレート化できます。作成している例で、アイコンをデフォルトのもの (`drag_indicator`) から `drag_handle` に変更します。
-@@if (igxName === 'IgxTreeGrid' || igxName === 'IgxGrid') {
 `igxDragIndicatorIcon` を使用して `@@igSelector` のボディ内にテンプレートを渡して変更できます。
 ```html
 <@@igSelector>
@@ -242,31 +241,7 @@ export class @@igxNameRowDragComponent {
 ...
 </@@igSelector>
 ```
-}
-@@if (igxName === 'IgxHierarchicalGrid') {
-コンポーネントのテンプレートでテンプレートを定義し、それを `ViewChild` として取得して　@@igxName の `dragIndicatorIconTemplate` プロパティに渡して変更できます。
 
-```html
-<@@igSelector>
-...
-</@@igSelector>
-...
-<ng-template #customDragIcon>
-    <igx-icon>drag_handle</igx-icon>
-</ng-template>
-```
-
-```typescript
-export class @@igxNameRowDragComponent implements AfterViewInit{
-    @ViewChild('customDragIcon', {read: TemplateRef})
-    public customIcon: TemplateRef<any>;
-    ...
-    ngAfterViewInit() {
-        this.grid.dragIndicatorIconTemplate = this.customIcon;
-    }
-}
-```
-}
 
 新しいアイコン テンプレートの設定後、`DragIcon enum` の `DEFAULT` アイコンも調整する必要があるため、`changeIcon` メソッドによって適切に変更されます。
 ```typescript
@@ -277,7 +252,7 @@ enum DragIcon {
 ```
 
 @@if (igxName === 'IgxTreeGrid' || igxName === 'IgxHierarchicalGrid') {
-##### ドロップ エリアのスタイル
+#### ドロップ エリアのスタイル
 ドロップ ハンドラが正しく設定されたら、次にドロップ領域をスタイル設定します。
 ```css
 .drop-area {
@@ -309,7 +284,7 @@ enum DragIcon {
 以下は、設定の結果です。
 }
 
-##### デモ
+#### デモ
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:550px">
     <iframe id="grid-row-drag-to-grid-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-row-drag-to-grid' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -318,6 +293,16 @@ enum DragIcon {
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-row-drag-to-grid-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
 </div>
+
+以下のサンプルは、グリッドで行の並べ替えを構成する方法を示します。ドラッグ アイコンを押下しながら、グリッド内で好きな場所に行を移動できます。
+<div class="sample-container loading" style="height:830px">
+    <iframe id="grid-row-reorder" src='{environment:demosBaseUrl}/grid/grid-row-reorder' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-row-reorder" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
 }
 
 @@if (igxName === 'IgxTreeGrid') {
@@ -329,6 +314,16 @@ enum DragIcon {
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-row-drag-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
+
+以下のサンプルは、ツリー グリッドで行の並べ替えを構成する方法を示します。行の選択も有効で、ドラッグした行をドロップしても選択が保持されます。
+<div class="sample-container loading" style="height:560px">
+    <iframe id="tree-grid-row-reorder-sample-iframe" src='{environment:demosBaseUrl}/tree-grid/tree-grid-row-reordering' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-row-reorder-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
+</div>
+<div class="divider--half"></div> 
 }
 
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -340,6 +335,17 @@ enum DragIcon {
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-row-drag-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
+
+以下のサンプルでは、階層グリッドで行の並べ替えを構成する方法を示します。
+行の選択も有効で、ドラッグした行をドロップしても選択が保持されます。
+<div class="sample-container loading" style="height:560px">
+    <iframe id="hierarchical-grid-row-reorder-sample-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-row-reorder' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-row-reorder-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
+</div>
+<div class="divider--half"></div> 
 }
 
 @@if (igxName === 'IgxGrid') {
@@ -355,20 +361,17 @@ enum DragIcon {
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-row-drag-1" data-demos-base-url="{environment:demosBaseUrl}">stackblitzb で表示</button>
 </div>
 
-> [!NOTE] 上記のデモで使用した行ドラッグ ゴーストに適用されるクラスは ::ng-deep 修飾子を使用しています。行ドラッグは内部グリッド機能であり、CSS カプセル化のためにアプリケーションレベルでアクセスできないためです。
+> [!NOTE] 
+> 上記のデモで使用した行ドラッグ ゴーストに適用されるクラスは ::ng-deep 修飾子を使用しています。行ドラッグは内部グリッド機能であり、CSS カプセル化のためにアプリケーションレベルでアクセスできないためです。
 
 <div class="divider--half"></div>
 }
 
-#### 制限
+### 制限
 
 `rowDraggable` ディレクティブを使用するときに考慮する必要があることがいくつかあります。
 > [!NOTE]
 > 行ドロップイベントを処理するときは、行ドラッグゴーストの残りの要素が表示されないようにするため、`eventArgs.cancel` を **`true`** に設定する必要があります。 
-@@if (igxName === 'IgxHierarchicalGrid') {
-> [!NOTE]
-> `rowDraggable` を @@igSelector と一緒に使用する場合、[`dragIndicatorIconTemplate`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#dragindicatoricontemplate) は `ContentChild` としてテンプレートから設定できません。代わりに、(`ViewChild` デコレ―タを介して) テンプレートへの参照を取得し、それをグリッド `myHGrid.dragIndicatorIconTemplate: TemplateRef = myCustomTemplate` に渡すことができます。 
-}
 
 ### API リファレンス
 

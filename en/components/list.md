@@ -11,7 +11,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ### List Demo
 
-<div class="sample-container loading" style="height: 477px">
+<div class="sample-container loading" style="height: 513px">
 <iframe id="list-sample-4-iframe" src='{environment:demosBaseUrl}/lists/list-sample-4' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -126,9 +126,7 @@ If all went well, you should see the following in your browser:
 <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-#### Custom List Items
-
-Let's up our game a bit and create some custom markup and styles for our list items. Say we want to create a list of contacts with a name and a phone number displayed under the name.
+Let's up our game a bit and enhance our list items. Say we want to create a list of contacts with a name and a phone number displayed under the name.
 In our component typescript file we can define a list of contacts:
 
 ```typescript
@@ -152,7 +150,10 @@ public contacts = [{
 }];
 ```
 
-Now that we have some data we want to render, let's set up some markup:
+Now that we have some data we want to render, let's set up some markup.  
+If we want some styling out of the box we can use some of the directives that come with the list items.  
+
+Let's look at how we can use some of them in the next example:
 
 ```html
 <!--contacts.component.html-->
@@ -162,28 +163,13 @@ Now that we have some data we want to render, let's set up some markup:
     Contacts
   </igx-list-item>
   <igx-list-item *ngFor="let contact of contacts">
-    <span class="name">{{ contact.name }}</span>
-    <span class="phone">{{ contact.phone }}</span>
+    <h4 igxListLineTitle>{{ contact.name }}</h4>
+    <p igxListLineSubTitle>{{ contact.phone }}</p>
   </igx-list-item>
 </igx-list>
 ```
 
-> [!NOTE]
-> The list item uses `flex` as its display value, with `flex-direction` set to `column`. Bear this in mind when building list layouts.
-
-You may have noticed that despite the fact that we used span elements to display the name and phone number for our contacts, we still see them rendered one under the other. This is due to the column nature of each list item. Now that we have that out of the way, let's add some custom styling. We added two new classes to our name and phone spans - _name_ and _phone_. Let's use those classes to style the items:
-
-```css
-/* contacts.component.css */
-
-.name {
-    font-weight: 600;
-}
-
-.phone {
-    font-size: 0.875em;
-}
-```
+Both directives `igxListLineTitle` and `igxListLineSubTitle` gives our list items some default look. 
 
 After all that our list should now look like that:
 
@@ -248,7 +234,7 @@ public contacts = [{
 }];
 ```
 
-Cool, now let's update the template for our contacts list to show the avatar and icon:
+Cool, now let's update the template for our contacts list to show the avatar and icon. Again we can do that by using some of the list directives.
 
 ```html
 <!--contacts.component.html-->
@@ -258,58 +244,20 @@ Cool, now let's update the template for our contacts list to show the avatar and
     Contacts
   </igx-list-item>
   <igx-list-item #item *ngFor="let contact of contacts;">
-    <div class="item-container">
-      <div class="contact">
-        <igx-avatar [src]="contact.photo" roundShape="true"></igx-avatar>
-        <div class="contact__info">
-          <span class="name">{{ contact.name }}</span>
-          <span class="phone">{{ contact.phone }}</span>
-        </div>
-      </div>
-      <igx-icon [color]="contact.isFavorite ? 'orange' : 'lightgray'" (click)="toggleFavorite(item)">star</igx-icon>
-    </div>
+      <igx-avatar igxListThumbnail [src]="contact.photo" roundShape="true"></igx-avatar>
+      <h4 igxListLineTitle>{{ contact.name }}</h4>
+      <p igxListLineSubTitle class="phone">{{ contact.phone }}</p>
+      <span igxListLine>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, laborum.</span>
+      <igx-icon igxListAction [color]="contact.isFavorite ? 'orange' : 'lightgray'" (click)="toggleFavorite(item)">star</igx-icon>
   </igx-list-item>
 </igx-list>
 ```
 
-First we wrap all our elements in an item container to allow us to style the flow a bit easier. Then we add our [**IgxAvatar**](avatar.md) component alongside our contact info in a contact wrapper. Lastly, we include the [**IgxIcon**](icon.md) component. Let's update the css stylesheet to reflect the changes made to our markup:
+- `igxListThumbnail` is meant to be used if we need to add some kind of media at the beginning of our list items. The directive will wrap the target element in our case igx-avatar in a container that will provide some default position and spacing.
+- `igxListAction` is meant to be used for list items that have some kind of action or metadata, for example, switch, radio-button, checkbox, etc. In our case the action is will be represented by an `igx-icon`. Again, the directive will wrap the target element in a container that will have the correct position and spacing.
+- `igxListLine` is meant to be used if we need some text in-between `igxListThumbnail` and `igxListAction` the directive will make sure that the text position, spacing and alignment will look great with the other two directives around.
 
-```css
-/* contacts.component.css */
-
-igx-icon {
-    cursor: pointer;
-    user-select: none;
-}
-
-.item-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.contact {
-    display: flex;
-    flex: 1 0 240px;
-    align-items: center;
-}
-
-.contact__info {
-    display: flex;
-    flex-flow: column nowrap;
-    margin-left: 24px;
-}
-
-.name {
-    font-weight: 600;
-}
-
-.phone {
-    font-size: 0.875em;
-}
-```
-
-We then listen for a click event on the [**IgxIcon**](icon.md) component to toggle the _isFavorite_ property in our contact object.
+Next we listen for a click event on the [**IgxIcon**](icon.md) component to toggle the _isFavorite_ property in our contact object.
 
 ```typescript
 // contacts.component.ts
@@ -364,7 +312,7 @@ public selectDensity(event) {
 
 And here's the result of all that work:
 
-<div class="sample-container loading" style="height: 477px">
+<div class="sample-container loading" style="height: 513px">
 <iframe id="list-sample-4-final-iframe" data-src='{environment:demosBaseUrl}/lists/list-sample-4' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
@@ -405,17 +353,10 @@ Here is the HTML code of the example:
   </ng-template>
   <igx-list-item isHeader="true">Contacts</igx-list-item>
   <igx-list-item #item *ngFor="let contact of contacts">
-    <div class="item-container">
-      <div class="contact">
-        <igx-avatar [src]="contact.photo" roundShape="true"></igx-avatar>
-        <div class="contact__info">
-          <span class="name">{{ contact.name }}</span>
-          <span class="phone">{{ contact.phone }}</span>
-        </div>
-      </div>
-      <igx-icon [color]="contact.isFavorite ? 'orange' : 'lightgray'"
-        (click)="toggleFavorite(item)">star</igx-icon>
-    </div>
+    <igx-avatar igxListThumbnail [src]="contact.photo" roundShape="true"></igx-avatar>
+    <h4 igxListLineTitle>{{ contact.name }}</h4>
+    <p igxListLineSubTitle class="phone">{{ contact.phone }}</p>
+    <igx-icon igxListAction [color]="contact.isFavorite ? 'orange' : 'lightgray'" (click)="toggleFavorite(item)">star</igx-icon>
   </igx-list-item>
 </igx-list>
 
@@ -430,32 +371,6 @@ The above example is using some CSS styles which may be found here:
 igx-icon {
     cursor: pointer;
     user-select: none;
-}
-
-.item-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.contact {
-    display: flex;
-    flex: 1 0 240px;
-    align-items: center;
-}
-
-.contact__info {
-    display: flex;
-    flex-flow: column nowrap;
-    margin-left: 24px;
-}
-
-.name {
-    font-weight: 600;
-}
-
-.phone {
-    font-size: 0.875em;
 }
 
 .listItemLeftPanningStyle {
@@ -579,7 +494,42 @@ Finally, we need to apply the filtering pipe to our contacts data before we can 
 </igx-list-item>
 ```
 
-<div class="divider"></div>
+### Applying theme to the list component
+
+Let's see how we can change the background of our list. First we need to import index.scss in to our component .scss file.
+
+```scss
+@import '~igniteui-angular/lib/core/styles/themes/index';
+```
+
+Then we need to create a theme for our component.
+
+```scss
+@import '~igniteui-angular/lib/core/styles/themes/index';
+
+:host ::ng-deep {
+    $my-list-theme: igx-list-theme(
+        $background: #0568ab
+    );
+
+    @include igx-list($my-list-theme);
+}
+```
+The result from the above code is 
+
+<div class="sample-container loading" style="height: 365px">
+<iframe id="list-sample-8-final-iframe" data-src='{environment:demosBaseUrl}/lists/list-sample-8' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+</div>
+<div>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-sample-8-final-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
+
+> [!NOTE]
+> Please note that if we create our component theme in the component .scss file we need to use `::ng-deep` in order to pass the view encapsulation otherwise our new theme will not work! for more info please refer to:  [Component Themes](https://www.infragistics.com/products/ignite-ui-angular/angular/components/themes/component-themes.html).
+
+For full list of parameters that you can change for the list component please refer to: [IgxListComponent Styles]({environment:sassApiUrl}/index.html#function-igx-list-theme)
+
 
 ### API References
 
