@@ -11,8 +11,8 @@ _language: kr
 
 ### 데모
 
-<div class="sample-container" style="height: 500px">
-    <iframe id="data-chart-series-annotations-iframe" src='{environment:demosBaseUrl}/charts/data-chart-series-annotations' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 500px">
+    <iframe id="data-chart-series-annotations-iframe" src='{environment:demosBaseUrl}/charts/data-chart-series-annotations' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-series-annotations-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기
@@ -32,25 +32,27 @@ _language: kr
 다음 코드 조각은 콜아웃 레이어를 차트에 추가하는 방법을 보여 줍니다.
 
 ```html
-<igx-data-chart dataSource={this.data}
-   width="100%"
-   height="400px">
+<igx-data-chart dataSource={this.data} width="100%" height="400px">
 
-   <igx-category-x-axis name="xAxis" />
-   <igx-numeric-y-axis  name="yAxis" />
+   <igx-category-x-axis name="xAxis"></igx-category-x-axis>
+   <igx-numeric-y-axis  name="yAxis"></igx-numeric-y-axis>
 
    <igx-column-series name="series1"
        xAxisName="xAxis"
        yAxisName="yAxis"
-       valueMemberPath="Value1"/>
+       valueMemberPath="Value1">
+   </igx-column-series>
    <igx-column-series name="series2"
        xAxisName="xAxis"
        yAxisName="yAxis"
-       valueMemberPath="Value2"/>
+       valueMemberPath="Value2">
+   </igx-column-series>
+
    <igx-callout-layer name="callout"
        xMemberPath="Index"
        yMemberPath="Value"
-       labelMemberPath="Label" />
+       labelMemberPath="Label">
+   </igx-callout-layer>
 </igx-data-chart>
 ```
 
@@ -65,22 +67,22 @@ _language: kr
 다음 코드 조각은 십자형 레이어를 차트에 추가하는 방법을 보여 줍니다.
 
 ```html
-<igx-data-chart dataSource={this.data}
-   width="100%"
-   height="400px" >
-   <igx-category-x-axis name="xAxis" />
-   <igx-numeric-y-axis  name="yAxis" />
+<igx-data-chart dataSource={this.data} width="100%" height="400px">
+   <igx-category-x-axis name="xAxis"></igx-category-x-axis>
+   <igx-numeric-y-axis  name="yAxis"></igx-numeric-y-axis>
 
    <igx-column-series name="series1"
        xAxisName="xAxis"
        yAxisName="yAxis"
-       valueMemberPath="Value1" />
+       valueMemberPath="Value1">
+   </igx-column-series>
    <igx-column-series name="series2"
        xAxisName="xAxis"
        yAxisName="yAxis"
-       valueMemberPath="Value2" />
+       valueMemberPath="Value2">
+   </igx-column-series>
 
-   <igx-crosshair-layer name="crosshair" />
+   <igx-crosshair-layer name="crosshair"></igx-crosshair-layer>
 </igx-data-chart>
 ```
 
@@ -93,21 +95,21 @@ _language: kr
 다음 코드 조각은 최종값 레이어를 차트에 추가하는 방법을 보여 줍니다.
 
 ```html
-<igx-data-chart dataSource={this.data}
-   width="100%"
-   height="400px">
-   <igx-category-x-axis name="xAxis" />
-   <igx-numeric-y-axis name="yAxis" />
+<igx-data-chart dataSource={this.data} width="100%" height="400px">
+   <igx-category-x-axis name="xAxis"></igx-category-x-axis>
+   <igx-numeric-y-axis name="yAxis"></igx-numeric-y-axis>
 
    <igx-column-series name="series1"
        xAxisName="xAxis"
        yAxisName="yAxis"
-       valueMemberPath="Value1"/>
+       valueMemberPath="Value1">
+   </igx-column-series>
    <igx-column-series name="series2"
        xAxisName="xAxis"
        yAxisName="yAxis"
-       valueMemberPath="Value2"/>
+       valueMemberPath="Value2">
+   </igx-column-series>
 
-   <igx-final-value-layer name="finalValue" />
+   <igx-final-value-layer name="finalValue"></igx-final-value-layer>
 </igx-data-chart>
 ```

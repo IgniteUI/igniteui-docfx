@@ -1,6 +1,6 @@
 ---
 제목: 금융 차트 | 데이터 비주얼라이제이션 도구 | Ignite UI for Angular | Infragistics
-_description: Use the financial chart component to visualize financial data using a simple API. View the demo, dependencies, usage and toolbar for more information.
+_description: 재무 차트 구성 요소를 사용하여 간단한 API를 사용하여 재무 데이터를 시각화하십시오. 자세한 정보는 데모, 종속성, 사용법 및 도구 모음을보십시오.
 _keywords: financial chart, Ignite UI for Angular, infragistics
 _language: kr
 ---
@@ -11,8 +11,8 @@ _language: kr
 
 ### 데모
 
-<div class="sample-container" style="height: 500px">
-    <iframe id="financial-chart-overview-sample-iframe" src='{environment:demosBaseUrl}/charts/financial-chart-overview-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 500px">
+    <iframe id="financial-chart-overview-sample-iframe" src='{environment:demosBaseUrl}/charts/financial-chart-overview-sample' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="financial-chart-overview-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기
@@ -27,13 +27,13 @@ _language: kr
 
 `chartType` 속성을 다음 옵션 중 하나에 설정하여 차트 유형을 명시적으로 지정할 수 있습니다:
 
-| 속성       | 설명                                                                                                                                                                                                                                                 |
-| -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `bar`    | Specifies the bar series with markers at each data point                                                                                                                                                                                           |
-| `candle` | Specifies the candle series                                                                                                                                                                                                                        |
-| `column` | Specifies the column series                                                                                                                                                                                                                        |
-| `line`   | Specifies the line series                                                                                                                                                                                                                          |
-| `auto`   | Specifies automatic selection of chart type based on Data Adapter which suggest one of above values based names and number of numeric columns in your data. For example, it will suggest `bar` for data items with Open, High, Low, Close columns. |
+| 속성       | 설명                                                                                                                        |
+| -------- | ------------------------------------------------------------------------------------------------------------------------- |
+| `bar`    | 각 데이터 점에 마커로 바 시리즈를 지정합니다.                                                                                                |
+| `candle` | 캔들 시리즈를 지정합니다.                                                                                                            |
+| `column` | 기둥 시리즈를 지정합니다.                                                                                                            |
+| `line`   | 선 시리즈를 지정합니다                                                                                                              |
+| `auto`   | 데이터의 이름 및 수치 열 수를 기반으로 한 위의 값 중에서 제안하는 데이터 어댑터를 기반으로 차트 유형의 자동 선택을 지정합니다. 예를 들면, 열기, 높음, 낮음, 닫기 열이 있는 데이터 항목에 ‘바’를 제안합니다. |
 
 다른 차트 창에 대한 정보는 [금융 차트 창](financialchart_panes.md) 항목을 참조하십시오.
 
@@ -56,7 +56,7 @@ _language: kr
 
 ```typescript
 // app.module.ts
-import {IgxFinancialChartModule} from 'igniteui-angular-charts/ES5/igx-financial-chart-module'
+import {IgxFinancialChartModule} from "igniteui-angular-charts/ES5/igx-financial-chart-module";
 
 @NgModule({
     imports: [

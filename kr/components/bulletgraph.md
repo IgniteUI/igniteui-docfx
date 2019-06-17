@@ -16,7 +16,7 @@ The bullet graph component provides you with the ability to create attractive da
 The following sample demonstrates how setting multiple properties on the same gauge can transform it to completely different gauge.
 
 <div class="sample-container loading" style="height: 125px">
-    <iframe id="bullet-graph-sample-iframe" src='{environment:demosBaseUrl}/gauges/bullet-graph-animation' width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="bullet-graph-sample-iframe" src='{environment:demosBaseUrl}/gauges/bullet-graph-animation' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="bullet-graph-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
@@ -41,8 +41,8 @@ The `IgxBulletGraph` requires the following modules:
 
 ```typescript
 // app.module.ts
-import { IgxBulletGraphModule } from 'igniteui-angular-gauges/ES5/igx-bullet-graph-module';
-import { IgxBulletGraph } from 'igniteui-angular-gauges/ES5/igr-bullet-graph';
+import { IgxBulletGraphModule } from "igniteui-angular-gauges/ES5/igx-bullet-graph-module";
+import { IgxBulletGraph } from "igniteui-angular-gauges/ES5/igr-bullet-graph";
 
 @NgModule({
     imports: [
@@ -69,13 +69,16 @@ The following code walks through creating a bullet graph component, and configur
                    targetValue = "43">
         <igx-linear-graph-range startValue="0"
                                 endValue="15"
-                                Brush="#828181"/>
+                                Brush="#828181">
+        </igx-linear-graph-range>
         <igx-linear-graph-range StartValue="15"
                                 EndValue="30"
-                                Brush="#AAAAAA"/>
+                                Brush="#AAAAAA">
+        </igx-linear-graph-range>
         <igx-linear-graph-range StartValue="30"
                                 EndValue="55"
-                                Brush="#D0D0D0"/>
+                                Brush="#D0D0D0">
+        </igx-linear-graph-range>
  </igx-bullet-graph>
 ```
 
@@ -110,7 +113,7 @@ Performance value is the primary measure displayed by the component and it is vi
 ```
 
 <div class="sample-container loading" style="height: 125px">
-    <iframe id="bullet-graph-measures-iframe" src='{environment:demosBaseUrl}/gauges/bullet-graph-measures' width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="bullet-graph-measures-iframe" data-src='{environment:demosBaseUrl}/gauges/bullet-graph-measures' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="bullet-graph-measures-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
@@ -147,7 +150,7 @@ The ranges are visual elements that highlight a specified range of values on a s
 ```
 
 <div class="sample-container loading" style="height: 125px">
-    <iframe id="bullet-graph-ranges-iframe" src='{environment:demosBaseUrl}/gauges/bullet-graph-ranges' width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="bullet-graph-ranges-iframe" data-src='{environment:demosBaseUrl}/gauges/bullet-graph-ranges' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="bullet-graph-ranges-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
@@ -182,7 +185,7 @@ The tick marks serve as a visual division of the scale into intervals in order t
 ```
 
 <div class="sample-container loading" style="height: 125px">
-    <iframe id="bullet-graph-tickmarks-iframe" src='{environment:demosBaseUrl}/gauges/bullet-graph-tickmarks' width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="bullet-graph-tickmarks-iframe" data-src='{environment:demosBaseUrl}/gauges/bullet-graph-tickmarks' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="bullet-graph-tickmarks-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
@@ -208,7 +211,7 @@ The labels indicate the measures on the scale.
 ```
 
 <div class="sample-container loading" style="height: 125px">
-    <iframe id="bullet-graph-labels-iframe" src='{environment:demosBaseUrl}/gauges/bullet-graph-labels' width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="bullet-graph-labels-iframe" data-src='{environment:demosBaseUrl}/gauges/bullet-graph-labels' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="bullet-graph-labels-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
@@ -233,7 +236,7 @@ The backing element represents background and border of the bullet graph control
 ```
 
 <div class="sample-container loading" style="height: 125px">
-    <iframe id="bullet-graph-background-iframe" src='{environment:demosBaseUrl}/gauges/bullet-graph-background' width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="bullet-graph-background-iframe" data-src='{environment:demosBaseUrl}/gauges/bullet-graph-background' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="bullet-graph-background-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
@@ -259,7 +262,7 @@ The scale is visual element that highlights the full range of values in the gaug
 ```
 
 <div class="sample-container loading" style="height: 125px">
-    <iframe id="bullet-graph-scale-iframe" src='{environment:demosBaseUrl}/gauges/bullet-graph-scale' width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="bullet-graph-scale-iframe" data-src='{environment:demosBaseUrl}/gauges/bullet-graph-scale' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="bullet-graph-scale-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
