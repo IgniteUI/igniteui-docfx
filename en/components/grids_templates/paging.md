@@ -489,45 +489,155 @@ $custom-button-theme: igx-button-theme(
 @@if (igxName === 'IgxGrid'){
 ### Styling
 
-If you want to add different exterior to the paginator, you can do so with our [**theming engine**](../themes/index.md). In this section we will cover how to define a paginator [**theme**](../themes/component-themes.md) and how to use paginator [**schema**](../themes/schemas.md)
+In this section we will cover how to style the grid paginator with our [**theming engine**](../themes/index.md) with the help of [**component themes**](../themes/component-themes.md) and [**schemas**](../themes/schemas.md)
 
-#### Theme Definition 
+#### Basic Approach 
 
-In the component styling file import the `themes utilities`, the [**paginator mixin**]({environment:sassApiUrl}/index.html#mixin-igx-grid-paginator) and the [**paginator theme**]({environment:sassApiUrl}/index.html#function-igx-grid-paginator-theme):
- 
+In the component styling file import the `index` file, where all the theme functions and component mixins live:
+
 ```scss
 // custom-grid-paging-style.component.scss
-@import '~igniteui-angular/lib/core/styles/themes/utilities';
-
-@import '~igniteui-angular/lib/core/styles/components/grid-paginator/grid-paginator-component';
-@import '~igniteui-angular/lib/core/styles/components/grid-paginator/grid-paginator-theme';
+@import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-Define the [color palette](../themes/palette.md) that you are going to apply to the component theme:
+To style the paginator we are going to define 2 themes:
+- [grid paginator theme]({environment:sassApiUrl}/index.html#function-igx-grid-paginator)
 
 ```scss
-// custom-grid-paging-style.component.scss
+$dark-grid-paginator: igx-grid-paginator-theme(
+    $text-color: #F4D45C,
+    $background-color: #575757,
+    $border-color: #292826
+);
+```
+- [button theme]({environment:sassApiUrl}/index.html#function-igx-button)
+
+```scss
+$dark-button: igx-button-theme(
+    $icon-color: #FFCD0F,
+    $icon-hover-color: #292826,
+    $icon-hover-background: #FFCD0F,
+    $icon-focus-color: #292826,
+    $icon-focus-background: #FFCD0F,
+    $disabled-color: #16130C
+);
+```
+
+#### Igx-Palette and Igx-Color
+
+You can facilitate your work with the [igx-palette]({environment:sassApiUrl}/index.html#function-igx-palette) and [igx-color]({environment:sassApiUrl}/index.html#function-igx-color) functions.
+
+With **igx-palette** you set the two main colors that your theme will use.
+
+First you have to set the primary and secondary colors and then define the [color palette](../themes/palette.md):
+
+```scss
 $yellow-color: #F9D342;
 $black-color: #292826;
 
-$paginator-palette: igx-palette($primary: $black-color, $secondary: $yellow-color);
+$dark-palette: igx-palette($primary: $black-color, $secondary: $yellow-color);
 ```
 
-Define the paginator theme:
+With **igx-color** you easily apply different variations of the palette's primary and secondary colors to your theme:  
 
 ```scss
-// The variable, to which the theme will be assigned 
 $dark-grid-paginator: igx-grid-paginator-theme(
-    $palette: $paginator-palette,
-    $text-color: igx-color($paginator-palette, "secondary", 200),
-    $background-color: igx-color($paginator-palette, "primary", 500),
-    $border-color:  igx-color($paginator-palette, "secondary", 200)
+    $palette: $dark-palette,
+    $text-color: igx-color($dark-palette, "secondary", 400),
+    $background-color: igx-color($dark-palette, "primary", 200),
+    $border-color:  igx-color($dark-palette, "primary", 500)
+);
+
+$dark-button: igx-button-theme(
+    $palette: $dark-palette,
+    $icon-color: igx-color($dark-palette, "secondary", 700),
+    $icon-hover-color: igx-color($dark-palette, "primary", 500),
+    $icon-hover-background: igx-color($dark-palette, "secondary", 500),
+    $icon-focus-color: igx-color($dark-palette, "primary", 500),
+    $icon-focus-background: igx-color($dark-palette, "secondary", 500),
+    $disabled-color: igx-color($dark-palette, "primary", 700)
 );
 ```
-Include the paginator mixin, so that the theme could be applied:
+
+#### Using Schemas
+
+A **schema** is a recipe of a theme.
+
+This approach is slightly different, but it saves you a lot of future work and it is resource efficient.
+
+Extend one of the two predefined schemas, that are provided for every component, in this case  - [`dark-grid-pagination`]({environment:sassApiUrl}/index.html#variable-_dark-grid-pagination) and [`dark-button`]({environment:sassApiUrl}/index.html#variable-_dark-button) schemas: 
+
+```scss
+// Extending the dark paginator schema
+$dark-grid-paginator-schema: extend($_dark-grid-pagination,
+        (
+            text-color:(
+                igx-color: ("secondary", 400)
+            ),
+            background-color:(
+                igx-color: ("primary", 200)
+            ),
+            border-color:(
+                igx-color:( "primary", 500)
+            )
+        )
+);
+// Extending the dark button schema
+$dark-button-schema: extend($_dark-button,
+        (
+            icon-color:(
+                igx-color:("secondary", 700)
+            ),
+            icon-hover-color:(
+                igx-color:("primary", 500)
+            ),
+            icon-hover-background:(
+                igx-color:("secondary", 500)
+            ),
+            icon-focus-color:(
+                igx-color:("primary", 500)
+            ),
+            icon-focus-background:(
+                igx-color:("secondary", 500)
+            ),
+            disabled-color:(
+                igx-color:("primary", 700)
+            )
+        )
+);
+```
+
+In order to apply our custom schemas we have to **extend** one of the globals ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) or [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)), which is basically pointing out the components with a custom schema, after that add it to the respective component themes:
+
+```scss
+// Extending the global dark-schema
+$custom-dark-schema: extend($dark-schema,(
+    igx-grid-paginator: $dark-grid-paginator-schema,
+    igx-button: $dark-button-schema
+));
+
+// Defining grid-paginator-theme with the global dark schema
+$dark-grid-paginator: igx-grid-paginator-theme(
+  $palette: $dark-palette,
+  $schema: $custom-dark-schema
+);
+
+// Defining button-theme with the global dark schema
+$dark-button: igx-button-theme(
+  $palette: $dark-palette,
+  $schema: $custom-dark-schema
+);
+```
+
+#### Application and Result
+
+The last step is to **include** the component mixins, each with its respective theme: 
 
 ```scss
  @include igx-grid-paginator($dark-grid-paginator);
+.igx-paginator {
+    @include igx-button($dark-button);
+}
 ```
  - if we use the default [**View Encapsulation**](../themes/component-themes.md#view-encapsulation) strategy:
 
@@ -535,12 +645,17 @@ Include the paginator mixin, so that the theme could be applied:
 :host {
     ::ng-deep {
         @include igx-grid-paginator($dark-grid-paginator);
+        .igx-paginator {
+            @include igx-button($dark-button);
+        }
     }
 }
-...
 ```
 
-Result:
+>[!NOTE]
+>We include the **igx-button** mixin within the scope of the `igx-paginator`, so that only the paginator buttons could be styled.
+
+The result from every single approach, from the above described ones, is:
 
 <div class="sample-container loading" style="height:560px">
     <iframe id="custom-grid-paging-style-iframe" src='{environment:demosBaseUrl}/grid/custom-grid-paging-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
@@ -549,64 +664,7 @@ Result:
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="custom-grid-paging-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
-<div class="divider--half"></div>
-
-
-#### Using Schemas
-
-Extend one of the two predefined schemas, that are provided for every component, in this case  - [`light-grid-pagination`]({environment:sassApiUrl}/index.html#variable-_light-grid-pagination) schema: 
-
-```scss
-// custom-grid-paging-style.component.scss
-...
-// Extending the light paginator schema
-$light-grid-paginator-schema: extend($_light-grid-pagination,
-        (
-            text-color:(
-                igx-color: ("primary", 700)
-            ),
-            background-color:(
-                igx-color: ("secondary", 500)
-            ),
-            border-color:(
-                igx-color:( "primary", 500)
-            )
-        )
-);
-```
-
-In order to apply our custom schema we have to **extend** one of the globals ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) or [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)), which is basically pointing out the components with a custom schema, after that add it to the **paginator theme**:
-
-```scss
-// Extending the global light schema
-$custom-light-schema: extend($light-schema,(
-    igx-grid-paginator: $light-grid-paginator-schema
-));
-
-// Defining the theme
-$light-grid-paginator: igx-grid-paginator-theme(
-  $palette: $paginator-palette,
-  $schema: $custom-light-schema
-);
-```
-
-Include the mixin:
-
-```scss
-    @include igx-grid-paginator($light-grid-paginator);
-```
-
- - if we use the default  [**View Encapsulation**](../themes/component-themes.md#view-encapsulation) strategy:
-
-```scss
-// custom-grid-paging-style.component.scss
-:host {
-    ::ng-deep {
-        @include igx-grid-paginator($light-grid-paginator);
-    }
-}
-...
-```
+<div class="divider--half"></div>  
 }
 
 ### API References
