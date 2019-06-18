@@ -1,6 +1,6 @@
 ---
 제목: 도넛형 차트 | 계층 데이터 비주얼라이제이션 | Ignite UI for Angular | Infragistics
-_description: Use the doughnut chart component to display multiple variables in concentric rings for hierarchical data visualization. View the demo for more information.
+_description: 도넛 형 차트 구성 요소를 사용하여 계층 적 데이터 시각화를위한 동심 반지 모양의 여러 변수를 표시합니다. 자세한 정보는 데모를보십시오.
 _keywords: doughnut chart, Ignite UI for Angular, infragistics
 _language: kr
 ---
@@ -11,8 +11,8 @@ Ignite UI for Angular 도넛형 차트 컴포넌트는 파이형 차트 컴포�
 
 ### 데모
 
-<div class="sample-container" style="height: 450px">
-    <iframe id="doughnut-chart-overview-iframe" src='{environment:demosBaseUrl}/charts/doughnut-chart-overview' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 450px">
+    <iframe id="doughnut-chart-overview-iframe" src='{environment:demosBaseUrl}/charts/doughnut-chart-overview' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="doughnut-chart-overview-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기
@@ -34,7 +34,7 @@ Ignite UI for Angular 도넛형 차트 컴포넌트는 파이형 차트 컴포�
 
 ```typescript
 // app.module.ts
-import { IgxDoughnutChartModule } from 'igniteui-angular-charts/ES5/igx-doughnut-chart-module';
+import { IgxDoughnutChartModule } from "igniteui-angular-charts/ES5/igx-doughnut-chart-module";
 
 @NgModule({
     imports: [
@@ -73,6 +73,7 @@ this.state = {
         <igx-ring-series  [itemsSource]="data"
                 labelMemberPath="Label"
                 valueMemberPath="Value">
+        </igx-ring-series>
     </igx-doughnut-chart-series>
  </igx-doughnut-chart>
 ```
@@ -99,8 +100,8 @@ this.state = {
 
 ### 조각 선택 데모
 
-<div class="sample-container" style="height: 450px">
-    <iframe id="doughnut-chart-selection-iframe" src='{environment:demosBaseUrl}/charts/doughnut-chart-selection' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 450px">
+    <iframe id="doughnut-chart-selection-iframe" data-src='{environment:demosBaseUrl}/charts/doughnut-chart-selection' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="doughnut-chart-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기
@@ -127,8 +128,8 @@ this.state = {
 
 ### 조각 전개 데모
 
-<div class="sample-container" style="height: 450px">
-    <iframe id="doughnut-chart-explosion-iframe" src='{environment:demosBaseUrl}/charts/doughnut-chart-explosion' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 450px">
+    <iframe id="doughnut-chart-explosion-iframe" data-src='{environment:demosBaseUrl}/charts/doughnut-chart-explosion' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="doughnut-chart-explosion-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기
@@ -141,12 +142,12 @@ this.state = {
 
 도넛형 차트 컴포넌트는 범례 사용을 지원합니다. 범례는 차트 시리즈를 통해 연결된 ItemLegend가 사용됩니다.
 
-### 범례 데모
+<!-- ### 범례 데모
 
-<div class="sample-container" style="height: 450px">
-    <iframe id="doughnut-chart-legend-iframe" src='{environment:demosBaseUrl}/charts/doughnut-chart-legend' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 450px">
+    <iframe id="doughnut-chart-legend-iframe" data-src='{environment:demosBaseUrl}/charts/doughnut-chart-legend' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="doughnut-chart-legend-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기
     </button>
-</div>
+</div> -->

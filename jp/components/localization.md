@@ -100,6 +100,8 @@ public ngOnInit(): void {
 }
 ```
 
+* [詳しい実装サンプルはこちら](https://kb.jp.infragistics.com/?p=535)
+
 ### その他のリソース
 
 <div class="divider--half"></div>

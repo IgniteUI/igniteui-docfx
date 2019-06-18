@@ -10,8 +10,8 @@ Use the map component's `GeographicPolylineSeries` to display geo-spatial data u
 
 ### Demo
 
-<div class="sample-container" style="height: 400px">
-    <iframe id="geo-map-type-shape-polyline-series-iframe" src='{environment:demosBaseUrl}/maps/geo-map-type-shape-polyline-series' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 400px">
+    <iframe id="geo-map-type-shape-polyline-series-iframe" src='{environment:demosBaseUrl}/maps/geo-map-type-shape-polyline-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="geo-map-type-shape-polyline-series-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz

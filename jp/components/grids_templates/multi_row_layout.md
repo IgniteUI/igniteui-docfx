@@ -13,7 +13,7 @@ _language: ja
 </div>	
 <br/>	
 <div>	
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-multi-row-layout-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>	
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-multi-row-layout-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>	
 </div>	
 
 
@@ -69,61 +69,62 @@ Multi Row Layout のレンダリング方法は全く異なるため、列固定
 
  ### キーボード ナビゲーション	
 
-IgxGridComponent with Multi-Row Layouts provides build-in keyboard navigation.
+複数行レイアウトを持つ IgxGridComponent は、ビルトインのキーボード ナビゲーションを提供します。
 
-#### TAB navigation
-* <kbd>TAB</kbd> and <kbd>Shift</kbd> + <kbd>TAB</kbd> - move to the next/previous cell in a row unaffected by the column layouts that are defined.  The navigation is done through all of the cells by focusing each one only once for each row, meaning that it should skip cell if it doesn't have the same `rowStart` as the currently selected cell. When the row is in edit mode, the navigation is restricted to the cells into that row and to the CANCEL and DONE buttons.
+#### タブ ナビゲーション
+* <kbd>TAB</kbd> と <kbd>Shift</kbd> + <kbd>TAB</kbd> - 定義されている列レイアウトの影響を受けずに、行内の次のセルまたは前のセルに移動します。  ナビゲーションはすべてのセルを介して行ごとに 1 回のみフォーカスすることで行われます。つまり、現在選択されているセルと同じ `rowStart` がない場合はセルをスキップする必要があります。行が編集モードのときは、ナビゲーションはその行のセルと [キャンセル] ボタンおよび [完了] ボタンに制限されます。
 
-#### Horizontal nagivation
-* <kbd>Arrow Left</kbd> or <kbd>Arrow Right</kbd> - move to the adjacent cell on the left/right within the current row unaffected by the column layouts that are defined. If the current cell spans on more than one row, <kbd>Arrow Left</kbd> and <kbd>Arrow Right</kbd> should navigate to the first cell on the left and right with the same `rowStart`, unless you have navigated to some other adjacent cell before. The navigation stores the starting navigation cell and navigates to the cells with the same `rowStart` if possible.
-* <kbd>Ctrl</kbd> + <kbd>Arrow Left</kbd> (<kbd>HOME</kbd>) or <kbd>Ctrl</kbd> + <kbd>Arrow Right</kbd> (<kbd>END</kbd>) - navigate to the start or end of the row and select the cell with accordance to the starting navigation cell.
+#### 水平ナビゲーション
+* <Kbd>左矢印</kbd>または<kbd>右矢印</kbd>は、現在行内の左右に隣接するセルに移動します。定義されている列レイアウトの影響を受けません。現在のセルが複数の行にまたがる場合は、他の隣接するセルへ移動した場合を除き、<kbd>左矢印</kbd>と<kbd>右矢印</kbd>は、同じ `rowStart` で左右の最初のセルに移動します。ナビゲーションはナビゲーション開始セルを格納し、可能であれば同じ `rowStart` を持つセルに移動します。
+* <kbd>Ctrl</kbd> + <kbd>左矢印</kbd> (<kbd>HOME</kbd>) または <kbd>Ctrl</kbd> + <kbd>右矢印</kbd> (<kbd>END</kbd>) - 行の先頭または末尾に移動し、ナビゲーション開始セルに従ってセルを選択します。
 
 
-#### Vertical nagivation
-* <kbd>Arrow Up</kbd> or <kbd>Arrow Down</kbd> - move to the cell above/below in relation to a starting position and is unaffected by the rows. If the current cell spans on more than one column the next active cell will be selected with accordance to the starting navigation cell.
-* <kbd>Ctrl</kbd> + Arrow Up</kbd> or <kbd>Ctrl</kbd> + <kbd>Down</kbd> - Navigate and apply focus on the same column on the first or on the last row.
-* <kbd>Ctrl</kbd> + <kbd>Home</kbd> or <kbd>Ctrl</kbd> + <kbd>End</kbd> - Navigate to the first row and focus first cell or navigate to the last row and focus the last cell.
+#### 垂直ナビゲーション
+* <kbd>上矢印</kbd> または <kbd>下矢印</kbd> - 開始位置に対して上下のセルに移動し、行の影響は受けません。現在のセルが複数の列にまたがる場合は、次のアクティブ セルがナビゲーション開始セルに従って選択されます。
+* <kbd>Ctrl</kbd> + 上矢印</kbd>または<kbd>Ctrl</kbd> + <kbd>Down</kbd> - 最初の行または最後の行の同じ列に移動してフォーカスを適用します。 
+* <kbd>Ctrl</kbd> + <kbd>Home</kbd> or <kbd>Ctrl</kbd> + <kbd>End</kbd> - 最初の行に移動して最初のセルに移動するか、最後のセルに移動します。最後のセルに移動してフォーカスを合わせます。
 	
 	
 > [!Note]
-> Navigation through cells which span on multiple rows or columns is done with accordance to the starting navigation cell and will allow returning to the starting cell using the key for the opposite direction. The same approach is used when navigating through group rows.
+> 複数の行または列にわたるセルを介したナビゲーションは、ナビゲーション開始セルに従って行われ、反対方向のキーを使用して開始セルに戻ることができます。グループ行を移動するときにも同じ方法が使用されます。
 
 > [!Note]
-> Selection and multi cell selection are working on layout, meaning that when a cell is active, its layout will be selected. Also all features of multiple selection like drag selection are applicable and will work per layout not per cell.
+> 選択と複数セル選択はレイアウトで使用できます。つまり、セルがアクティブになると、そのレイアウトが選択されます。ドラッグ選択などの複数選択のすべての機能も適用可能であり、セルごとではなくレイアウトごとに機能します。
 
-#### Custom Keyboard Navigation
+#### カスタム キーボード ナビゲーション
 
-The grid allows customizing the default navigation behavior when a certain key is pressed. Actions like `going to the next cell` or `cell below` could be handled easily with the powerful keyboard navigation API:
+グリッドでは、特定のキーが押されたときのデフォルトのナビゲーション動作をカスタマイズできます。`隣りのセル`または`下のセル`へ移動するような操作は、キーボード ナビゲーション API を使用して簡単に処理できます。
 
-- [`onGridKeydown`]({environment:angularApiUrl}/classes/igxgridbasecomponent.html#ongridkeydown) is exposed. The event will emit [`IGridKeydownEventArgs`]({environment:angularApiUrl}/interfaces/igridkeydowneventargs.html). This event is available only through the keyboard key combinations mentioned above, for all other key actions you can use `keydown` event `(keydown)="onKeydown($event)"`
-- [`navigateTo`]({environment:angularApiUrl}/classes/igxgridbasecomponent.html#navigateto) - this method allows you to navigate to a position based on provided `rowindex` and `visibleColumnIndex`
+- [`onGridKeydown`]({environment:angularApiUrl}/classes/igxgridbasecomponent.html#ongridkeydown) が公開されます。イベントは [`IGridKeydownEventArgs`]({environment:angularApiUrl}/interfaces/igridkeydowneventargs.html) を発生します。このイベントは、キーボードで上記のキー組み合わせを介してのみ使用できます。他のすべてのキー操作では、`keydown` event（keydown）= "onKeydown（$ event）"を使用できます。
+- [`navigateTo`]({environment:angularApiUrl}/classes/igxgridbasecomponent.html#navigateto) - 
+このメソッドを使用すると、提供された `rowindex` と `visibleColumnIndex` に基づいて位置に移動できます。
 
-The demo below adds additional navigation down/up via the <kbd>Enter</kbd> and <kbd>Shift</kbd> + <kbd>Enter</kbd> keys, similar to the behavior observed in Excel.
+以下のデモでは、Excel と同じように、<kbd>Enter</kbd> と <kbd>Shift</kbd> + <kbd>Enter</kbd> キーを使って追加のナビゲーションを使用します。
 
-#### Demo
+#### デモ
 
 <div class="sample-container loading" style="height:605px">
     <iframe id="grid-mrl-custom-navigation-iframe" src='{environment:demosBaseUrl}/grid/grid-mrl-custom-navigation' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-mrl-custom-navigation-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-mrl-custom-navigation-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
 </div>
 
-### Layout Configurator
+### レイアウトの構成
 
 
-Sometimes when configuring a column layout it might be a challenge to calculate and set the proper [`colStart`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#colstart)  and [`colEnd`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#colend)  or [`rowStart`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#rowstart)  and [`rowEnd`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#rowend). Especially when there are a lot of columns in a single layout. That is why we have created a small configurator, so you can easily do that and have a similar preview of how it would look inside the igxGrid when applied. You can do the following interactions with it:
+列レイアウトを構成するときに、適切な [`colStart`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#colstart)  および [`colEnd`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#colend)、または [`rowStart`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#rowstart) および [`rowEnd`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#rowend) を計算して設定するのが難しい場合があります。  特に 1 つのレイアウトに多数の列がある場合などですが、適用時のプレビューを簡単に確認するためにコンフィギュレーターを使用できます。以下の操作が可能です。
 
-* Set number of rows for the whole configuration. All layouts must have the same amount of rows.
-* Add/Remove column layouts by clicking the `Add Layout` chip or reordering them by dragging a layout chip left/right.
-* Set specific settings for each layout as number of columns and how wide they will be. The setting refer to the currently selected layout.
-* Resize column cells in the layout preview so they can span more columns/rows or clear them using the `Delete` button.
-* Set columns in the preview by dragging a column chip in the place your will want it to be.
-* Add/Remove new columns by using the `Add Column` chip.
-* Get template output of the whole configuration ready to by placed inside an igxGrid or the JSON representation that can also be used and parsed in your template using [`NgForOf`](https://angular.io/api/common/NgForOf) for example.
+* 設定全体の行数を設定します。すべてのレイアウトは同じ行数である必要があります。
+* `レイアウトの追加` チップをクリックするか、レイアウトチップを左右にドラッグして並べ替えます。
+* 各レイアウトに特定の設定を列数と幅に合わせて設定します。設定は現在選択されているレイアウトを参照します。
+* レイアウト プレビューで列セルのサイズを変更して、より多くの列/行にまたがるようにしたり、`削除`ボタンを使用して列セルを消去したりできます。
+* プレビューで列チップをドラッグして列を設定します。
+* `列の追加`チップを使用して新しい列を追加/削除します。
+* [`NgForOf`](https://angular.io/api/common/NgForOf) を使用してテンプレート内で使用および解析できるJSON表現または igxGrid 内に配置できるように構成全体のテンプレート出力を取得します。
 
-By default we have set the same columns as our previous sample, but it can be cleared and configured to match your desired configuration.
+デフォルトでは、前のサンプルと同じ列を設定していますが、目的の設定に合わせて消去して設定することもできます。
 
 <div class="sample-container loading" style="height:500px">
     <iframe id="grid-multi-row-layout-configuration-iframe" src='{environment:demosBaseUrl}/grid/grid-multi-row-layout-configuration' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
