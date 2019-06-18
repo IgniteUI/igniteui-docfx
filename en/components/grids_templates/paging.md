@@ -1,4 +1,3 @@
-
 ---
 title: Grid Paging
 _description: The Ignite UI for Angular Data Grid control features the fastest, touch-responsive data-rich grid with popular features, including hierarchical and list views.
