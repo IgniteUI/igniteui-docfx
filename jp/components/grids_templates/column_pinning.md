@@ -1,30 +1,27 @@
 ﻿@@if (igxName === 'IgxGrid') {
 ---
-title: Column Pinning コンポーネント – ネイティブ Angular |Ignite UI for Angular
-_description: Ignite UI for Angular 列ピン固定を使用して列をピン固定すると、ピン固した列が水平スクロール時に常に表示されます。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, ネイティブ Angular コンポーネント, Angular Grid, Angular Table, Angular Data Grid コンポーネント, Angular Data Table コンポーネント, Angular Data Grid コントロール, Angular Data Table コントロール, Angular Grid コンポーネント, Angular Table コンポーネント, Angular Grid コントロール, Angular Table コントロール, Angular 高パフォーマンス Grid, Angular 高パフォーマンス Data Table, 列固定, Angular Data Table 列固定, ピン固定, ピン固定
-_language: ja
+title: Angular Grid Column Pinning | Lock Column | Ignite UI for Angular | Infragistics
+_description: Start to use the Pinning feature of the Ignite UI angular material table in order to lock column or change column order with rich and easy to use API
+_keywords: lock column, ignite ui for angular, infragistics 
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Column Pinning コンポーネント – ネイティブ Angular|Ignite UI for Angular
-_description: Ignite UI for Angular 列ピン固定を使用して列をピン固定すると、ピン固した列が水平スクロール時に常に表示されます。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, ネイティブ Angular コンポーネント, Angular Tree Grid, Angular Tree Table, Angular Tree Grid コンポーネント, Angular Tree Table コンポーネント, Angular Tree Grid コントロール, Angular Tree Table コントロール, Angular Tree Grid コンポーネント, Angular Tree Table コンポーネント, Angular Tree Grid コントロール, Angular Tree Table コントロール, Angular 高パフォーマンス Tree Grid, Angular 高パフォーマンス Tree Table, 列ピン固定, Angular Tree Table 列ピン固定, ピン固定, ピン
-_language: ja
+title: Angular Tree Grid Column Pinning | Lock Column | Ignite UI for Angular | Infragistics
+_description: Start to use the Pinning feature of the Ignite UI angular material table in order to lock column or change column order with rich and easy to use API
+_keywords: lock column, ignite ui for angular, infragistics 
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Column Pinning コンポーネント – ネイティブ Angular|Ignite UI for Angular
-_description: Ignite UI for Angular 列ピン固定を使用して列をピン固定すると、ピン固した列が水平スクロール時に常に表示されます。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, ネイティブ Angular コンポーネント,  Angular Hierarchical Grid, Angular Hierarchical  Table, Angular Hierarchical  Grid コンポーネント, Angular Hierarchical Table コントロール, Angular Hierarchical  Grid コンポーネント, Angular Table コンポーネント, Angular Grid コントロール, Angular Hierarchical Table コントロール, Angular 高パフォーマンス Hierarchical  Grid, Angular 高パフォーマンス Hierarchical Table, 列ピン固定, Angular Hierarchical Table 列ピン固定, ピン固定, ピン
-_language: ja
+title: Angular Hierarchical Grid Column Pinning | Lock Column | Ignite UI for Angular | Infragistics
+_description: Start to use the Pinning feature of the Ignite UI angular material table in order to lock column or change column order with rich and easy to use API
+_keywords: lock column, ignite ui for angular, infragistics 
 ---
 }
 
-### @@igComponent 列ピン固定
-単一または複数の列を @@igComponent の左端にピン固定できます。Ignite UI for Angular の **Column Pinning** は、水平スクロール時にピン固した列が常に表示されます。 
+### @@igComponent Column Pinning 
+A column or multiple columns can be pinned to the left-hand side of the Angular UI Grid. **Column Pinning** in Ignite UI for Angular allows the users to lock column in a particular column order, this will allow us to see it while horizontally scrolling the @@igComponent.
 
 #### デモ
 

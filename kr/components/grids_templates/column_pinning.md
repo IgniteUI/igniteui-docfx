@@ -1,30 +1,27 @@
 ﻿@@if (igxName === 'IgxGrid') {
 ---
-title: 열 핀 고정 컴포넌트 - 네이티브 Angular | Ignite UI for Angular
-_description: Pinning with the Ignite UI for Angular Column Pinning component allows the users to always see the pinned columns while horizontally scrolling. 
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Components, Angular Grid, Angular Table, Angular Data Grid component, Angular Data Table component, Angular Data Grid control, Angular Data Table control, Angular Grid component, Angular Table component, Angular Grid control, Angular Table control, Angular High Performance Grid, Angular High Performance Data Table, column pinning, Angular Data Table column pinning, pinning, pin
-_language: kr
+title: Angular Grid Column Pinning | Lock Column | Ignite UI for Angular | Infragistics
+_description: Start to use the Pinning feature of the Ignite UI angular material table in order to lock column or change column order with rich and easy to use API
+_keywords: lock column, ignite ui for angular, infragistics 
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: 열 핀 고정 컴포넌트 - 네이티브 Angular | Ignite UI for Angular
-_description: Pinning with the Ignite UI for Angular Column Pinning component allows the users to always see the pinned columns while horizontally scrolling. 
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Components, Angular Tree Grid, Angular Tree Table, Angular Tree Grid component, Angular Tree Table component, Angular Tree Grid control, Angular Tree Table control, Angular Tree Grid component, Angular Tree Table component, Angular Tree Grid control, Angular Tree Table control, Angular High Performance Tree Grid, Angular High Performance Tree Table, column pinning, Angular Tree Table column pinning, pinning, pin
-_language: kr
+title: Angular Tree Grid Column Pinning | Lock Column | Ignite UI for Angular | Infragistics
+_description: Start to use the Pinning feature of the Ignite UI angular material table in order to lock column or change column order with rich and easy to use API
+_keywords: lock column, ignite ui for angular, infragistics 
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: 열 핀 고정 컴포넌트 - 네이티브 Angular | Ignite UI for Angular
-_description: Pinning with the Ignite UI for Angular Column Pinning component allows the users to always see the pinned columns while horizontally scrolling. 
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Components, Angular Hierarchical Grid, Angular Hierarchical Table, Angular Hierarchical Grid component, Angular Hierarchical Table component, Angular Hierarchical Grid control, Angular Hierarchical Table control, Angular High Performance Hierarchical Grid, Angular High Performance Hierarchical Table, column pinning, Angular Hierarchical Table column pinning, pinning, pin
-_language: kr
+title: Angular Hierarchical Grid Column Pinning | Lock Column | Ignite UI for Angular | Infragistics
+_description: Start to use the Pinning feature of the Ignite UI angular material table in order to lock column or change column order with rich and easy to use API
+_keywords: lock column, ignite ui for angular, infragistics 
 ---
 }
 
-### @@igComponent 열 핀 고정
-단일 열 또는 복수 열을 @@igComponent의 왼쪽에 핀 고정할 수 있습니다. Ignite UI for Angular의 **열 핀 고정**을 사용하면 사용자가 수평 스크롤하는 동안 핀 고정된 열이 항상 표시됩니다. 
+### @@igComponent Column Pinning 
+A column or multiple columns can be pinned to the left-hand side of the Angular UI Grid. **Column Pinning** in Ignite UI for Angular allows the users to lock column in a particular column order, this will allow us to see it while horizontally scrolling the @@igComponent.
 
 #### 데모
 
