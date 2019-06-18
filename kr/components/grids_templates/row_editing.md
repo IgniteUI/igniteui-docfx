@@ -85,7 +85,7 @@ import { @@igxNameModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-그런 다음 바인딩된 데이터 소스 및 [`rowEditable`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#roweditable)이 true로 설정된 @@igComponent를 정의합니다:
+그런 다음 바인딩된 데이터 소스 및 [`rowEditable`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#roweditable) 이 true로 설정된 @@igComponent를 정의합니다:
 @@if (igxName ==='IgxGrid') {
 ```html
 <div class="sample-wrapper">

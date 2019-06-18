@@ -118,7 +118,7 @@ public grid: IgxGridComponent;
 ...
 ```
 
-`igxCell` applies the provided template to all cells in the column. The context object provided in the template consists of the cell value provided implicitly and the cell object itself. It can be used to define a template where the cells can grow according to their content, as in the below example.
+`igxCell` 은 제공된 템플릿을 열의 모든 셀에 적용합니다.템플릿에 제공된 컨텍스트 객체는 암시적으로 제공된 셀 값과 셀 객체 자체로 구성됩니다.아래 예와 같이 콘텐츠에 따라 셀이 증가할 수 있는 템플릿을 정의하는데 사용할 수 있습니다.
 
 ```html
 ...
@@ -471,15 +471,15 @@ public ngOnInit() {
 
 ## 알려진 제한 사항
 
-|Limitation|Description|
+|제한 사항|설명|
 |--- |--- |
-|Column widths set in `percentage` and `px`|Currently we do not support mixing of column widths with `%` and `px`.|
-|When trying to filter a column of type `number`|If a value different than `number` is entered into the filtering input, `NaN` is returned due to an incorrect cast.|
-|Grid [`width`]({environment:angularApiUrl}/classes/igxgridcomponent.html#width) does not depend on the column widths | The [`width`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#width) of all columns does not determine the spanning of the grid itself. It is determined by the parent container dimensions or the defined grid's [`width`]({environment:angularApiUrl}/classes/igxgridcomponent.html#width).|
-|Grid nested in parent container | When grid's [`width`]({environment:angularApiUrl}/classes/igxgridcomponent.html#width) is not set and it is placed in a parent container with defined dimensions, the grid spans to this container.|
-|Grid `OnPush` ChangeDetectionStrategy |The grid operates with `ChangeDetectionStrategy.OnPush` so whenever some customization appears make sure that the grid is notified about the changes that happens.|
-| Columns have a minimum allowed column width. Depending on the [`displayDensity`]({environment:angularApiUrl}/classes/igxgridcomponent.html#displaydensity) option, they are as follows: <br/>"compact": 24px <br/> "cosy": 32px <br/> "comfortable ": 48px | If width less than the minimum allowed is set it will not affect the rendered elements. They will render with the minimum allowed width for the corresponding [`displayDensity`]({environment:angularApiUrl}/classes/igxgridcomponent.html#displaydensity). This may lead to an unexpected behavior with horizontal virtualization and is therefore not supported.
-| Row height is not affected by the height of cells that are not currently rendered in view. | Because of virtualization a column with a custom template (that changes the cell height) that is not in the view will not affect the row height. The row height will be affected only while the related column is scrolled in the view.
+|`percentage` 및 `px`로 설정된 열 너비|열 너비에 `%`와 `px`를 조합하는 것은 지원하지 않습니다.|
+|`number` 형식의 열을 필터링할 경우|필터링 입력에 `number`와 다른 값을 입력한 경우, 캐스트가 올바르지 않아 `NaN`이 반환됩니다.|
+|그리드 [`너비`]({environment:angularApiUrl}/classes/igxgridcomponent.html#width)는 열 너비에 따라 달라지지 않습니다| 모든 열의 [`너비`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#width)는 그리드 자체의 스패닝을 결정하지 않습니다. 상위 컨테이너 크기 또는 정의된 그리드 [`너비`]({environment:angularApiUrl}/classes/igxgridcomponent.html#width)에 따라 결정됩니다.|
+|상위 컨테이너에 중첩된 그리드| 그리드 [`너비`]({environment:angularApiUrl}/classes/igxgridcomponent.html#width)가 설정되지 않고 크기가 정의된 상위 컨테이너에 배치되면 그리드가 이 컨테이너에 스팬됩니다.|
+|그리드 `OnPush` ChangeDetectionStrategy|그리드에서 `ChangeDetectionStrategy.OnPush`를 처리하고 사용자 정의가 표시될 때마다 그리드에 변경 사항이 통지됩니다.|
+| 열에는 허용 가능한 최소 열 너비가 있습니다. [`displayDensity`]({environment:angularApiUrl}/classes/igxgridcomponent.html#displaydensity) 옵션에 따라 다음과 같이 표시됩니다: <br/> “소”: 24px <br/> “중”: 32px <br/> “대”: 48px| 허용된 최소 너비보다 작게 설정된 경우, 렌더링된 요소에 영향을 주지 않습니다. 해당 [`displayDensity`]({environment:angularApiUrl}/classes/igxgridcomponent.html#displaydensity)의 최소 허용 너비로 렌더링합니다. 수평 가상화는 예기치 않은 동작이 발생할 수 있으므로 지원되지 않습니다.
+| 행 높이는 현재 뷰에 렌더링되지 않은 셀의 높이에 영향을 받지 않습니다. | 가상화로 인해 뷰에 없는 사용자 템플릿(셀 높이를 변경한)을 가진 열은 행 높이에 영향을 주지 않습니다. 행 높이는 관련된 열이 뷰에서 스크롤되는 동안에만 영향을 받습니다.
 
 <div class="divider--half"></div>
 
