@@ -20,7 +20,7 @@ This topic explains how to perform clipboard operations on the Ignite UI for Ang
 
 Before making use of the clipboard you will want to import the `SpreadsheetAction`:
 
-```typescript
+```ts
 import { IgxSpreadsheetComponent } from "igniteui-angular-spreadsheet/ES5/igx-spreadsheet-component";
 import { SpreadsheetAction } from "igniteui-angular-spreadsheet/ES5/SpreadsheetAction";
 ```

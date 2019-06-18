@@ -32,7 +32,11 @@ The following code snippets demonstrate the above:
 </igx-spreadsheet>
 ```
 
-```typescript
+```ts
+import { SpreadsheetEnterKeyNavigationDirection } from "igniteui-react-spreadsheet/ES5/SpreadsheetEnterKeyNavigationDirection";
+```
+
+```ts
 this.spreadsheet.isEnterKeyNavigationEnabled = true;
 this.spreadsheet.enterKeyNavigationDirection = SpreadsheetEnterKeyNavigationDirection.Left;
 ```
@@ -47,7 +51,7 @@ The following code snippets demonstrate the above:
 <igx-spreadsheet isFormulaBarVisible=true></igx-spreadsheet>
 ```
 
-```typescript
+```ts
 this.spreadsheet.isFormulaBarVisible = true;
 ```
 
@@ -61,7 +65,7 @@ The following code snippets demonstrate the above:
 <igx-spreadsheet areGridlinesVisible=true></igx-spreadsheet>
 ```
 
-```typescript
+```ts
 this.spreadsheet.areGridlinesVisible = true;
 ```
 
@@ -75,7 +79,7 @@ The following code snippets demonstrate the above:
 <igx-spreadsheet areHeadersVisible=false></igx-spreadsheet>
 ```
 
-```typescript
+```ts
 this.spreadsheet.areHeadersVisible = false;
 ```
 
@@ -93,7 +97,7 @@ The following code snippets demonstrate the above, in that the `IgxSpreadsheet` 
 <igx-spreadsheet isInEndMode=true></igx-spreadsheet>
 ```
 
-```typescript
+```ts
 this.spreadsheet.isInEndMode = true;
 ```
 
@@ -124,7 +128,11 @@ The following code snippets demonstrate configuration of the selection mode:
 <igx-spreadsheet selectionMode="ExtendSelection"></igx-spreadsheet>
 ```
 
-```typescript
+```ts
+import { SpreadsheetCellSelectionMode } from "igniteui-react-spreadsheet/ES5/SpreadsheetCellSelectionMode";
+```
+
+```ts
 this.spreadsheet.selectionMode = SpreadsheetCellSelectionMode.ExtendSelection;
 ```
 
@@ -134,7 +142,7 @@ The `SpreadsheetSelection` object has an `AddCellRange()` method that allows you
 
 The following code snippet demonstrates adding a cell range to the spreadsheet's selection:
 
-```typescript
+```ts
 this.spreadsheet.activeSelection.addCellRange(new SpreadsheetCellRange(2, 2, 5, 5));
 ```
 
@@ -146,7 +154,7 @@ The tab bar area is the area that visualizes the worksheet names as tabs in the 
 
 You can configure the tab bar's visibility and width using the following code snippet:
 
-```typescript
+```ts
 this.spreadsheet.workbook.windowOptions.tabBarVisible = false;
 
 this.spreadsheet.workbook.windowOptions.tabBarWidth = 200;
@@ -164,6 +172,6 @@ The following code snippets show how to configure the spreadsheet's zoom level:
 <igx-spreadsheet zoomLevel=200></igx-spreadsheet>
 ```
 
-```typescript
+```ts
 this.spreadsheet.zoomLevel = 200;
 ```

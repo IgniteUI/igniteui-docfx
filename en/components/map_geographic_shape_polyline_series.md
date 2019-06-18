@@ -35,7 +35,3 @@ The following code shows how to bind the `GeographicPolylineSeries` to locations
 ```html
 TODO - ADD CODE SNIPPET
 ```
-
-```typescript
-
-```

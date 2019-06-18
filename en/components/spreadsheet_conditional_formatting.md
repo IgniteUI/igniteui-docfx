@@ -42,7 +42,7 @@ The following lists the supported conditional formats in the `IgxSpreadsheet` co
 
 In order to add conditional formatting to the `IgxSpreadsheet` control, you will need to import the following dependencies:
 
-```typescript
+```ts
 import { CellFill} from "igniteui-angular-excel/ES5/CellFill";
 import { Color } from 'igniteui-angular-core/ES5/Color';
 import { ColorScaleType} from "igniteui-angular-excel/ES5/ColorScaleType";
@@ -53,6 +53,19 @@ import { FormatConditionTextOperator } from "igniteui-angular-excel/ES5/FormatCo
 import { FormatConditionTimePeriod } from "igniteui-angular-excel/ES5/FormatConditionTimePeriod";
 import { FormatConditionTopBottom} from "igniteui-angular-excel/ES5/FormatConditionTopBottom";
 import { WorkbookColorInfo } from "igniteui-angular-excel/ES5/WorkbookColorInfo";
+```
+
+```ts
+import { CellFill} from "igniteui-react-excel/ES5/CellFill";
+import { Color } from 'igniteui-react-core/ES5/Color';
+import { ColorScaleType} from "igniteui-react-excel/ES5/ColorScaleType";
+import { FormatConditionAboveBelow } from "igniteui-react-excel/ES5/FormatConditionAboveBelow";
+import { FormatConditionIconSet } from "igniteui-react-excel/ES5/FormatConditionIconSet";
+import { FormatConditionOperator } from "igniteui-react-excel/ES5/FormatConditionOperator";
+import { FormatConditionTextOperator } from "igniteui-react-excel/ES5/FormatConditionTextOperator";
+import { FormatConditionTimePeriod } from "igniteui-react-excel/ES5/FormatConditionTimePeriod";
+import { FormatConditionTopBottom} from "igniteui-react-excel/ES5/FormatConditionTopBottom";
+import { WorkbookColorInfo } from "igniteui-react-excel/ES5/WorkbookColorInfo";
 ```
 
 ### Code Snippet

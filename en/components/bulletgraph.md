@@ -40,8 +40,8 @@ The `IgxBulletGraph` requires the following modules:
 
 ```typescript
 // app.module.ts
-import { IgxBulletGraphModule } from 'igniteui-angular-gauges/ES5/igx-bullet-graph-module';
-import { IgxBulletGraph } from 'igniteui-angular-gauges/ES5/igr-bullet-graph';
+import { IgxBulletGraphModule } from "igniteui-angular-gauges/ES5/igx-bullet-graph-module";
+import { IgxBulletGraph } from "igniteui-angular-gauges/ES5/igr-bullet-graph";
 
 @NgModule({
     imports: [
