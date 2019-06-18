@@ -495,7 +495,7 @@ export class AppModule {}
 * [열 핀 고정](column_pinning.md)
 * [열 크기 조정](column_resizing.md)
 * [선택](selection.md)
-@@if (igxName !== 'IgxHierarchicalGrid') {* [Searching](search.md)}
+@@if (igxName !== 'IgxHierarchicalGrid') {* [검색](search.md)}
 
 <div class="divider--half"></div>
 커뮤니티는 활동적이고 새로운 아이디어를 항상 환영합니다.

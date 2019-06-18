@@ -37,7 +37,7 @@
     - name: 필터링
       href: grid/filtering.md
       new: false
-    - name: Excel Style Filtering
+    - name: Excel 스타일 필터링
       href: grid/excel_style_filtering.md
       new: true
     - name: 정렬
@@ -85,12 +85,12 @@
     - name: 조건부 셀 스타일
       href: grid/conditional_cell_styling.md
       new: false
-    - name: Keyboard navigation
-      href: grid/keyboard_navigation.md
-      new: true
-    - name: Multi Row Layout
-      href: grid/multi_row_layout.md
-      new: true
+    #- name: Keyboard navigation
+    #  href: grid/keyboard_navigation.md
+    #  new: true
+    #- name: 다중 행 레이아웃
+    #  href: grid/multi_row_layout.md
+    #  new: true
 - name: Tree Grid
   href: treegrid/tree_grid.md
   new: true
@@ -98,7 +98,7 @@
     - name: 가상화 및 성능
       href: treegrid/virtualization.md
       new: false
-    - name: Load On Demand
+    - name: 로드 온디맨드
       href: treegrid/load_on_demand.md
       new: true
     - name: 편집
@@ -119,7 +119,7 @@
     - name: 필터링
       href: treegrid/filtering.md
       new: false
-    - name: Excel Style Filtering
+    - name: Excel 스타일 필터링
       href: treegrid/excel_style_filtering.md
       new: true
     - name: 정렬
@@ -161,12 +161,12 @@
     - name: 조건부 셀 스타일
       href: treegrid/conditional_cell_styling.md
       new: false
-    - name: Aggregations 
+    - name: 그리드 집계
       href: treegrid/aggregations.md
       new: false
-    - name: Keyboard navigation
-      href: treegrid/keyboard_navigation.md
-      new: true
+    #- name: Keyboard navigation
+    # href: treegrid/keyboard_navigation.md
+    # new: true
 - name: Hierarchical Grid
   href: hierarchicalgrid/hierarchical_grid.md
   new: true
@@ -174,7 +174,7 @@
     - name: 가상화 및 성능
       href: hierarchicalgrid/virtualization.md
       new: true
-    - name: Load on Demand
+    - name: 로드 온디맨드
       href: hierarchicalgrid/load_on_demand.md
       new: true
     - name: 편집
@@ -195,7 +195,7 @@
     - name: 필터링
       href: hierarchicalgrid/filtering.md
       new: true
-    - name: Excel Style Filtering
+    - name: Excel 스타일 필터링
       href: hierarchicalgrid/excel_style_filtering.md
       new: true
     - name: 정렬
@@ -235,9 +235,9 @@
     # - name: 조건부 셀 스타일
     #   href: hierarchicalgrid/conditional_cell_styling.md
     #   new: true
-    - name: Keyboard navigation
-      href: hierarchicalgrid/keyboard_navigation.md
-      new: true
+    #- name: Keyboard navigation
+    #  href: hierarchicalgrid/keyboard_navigation.md
+    #  new: true
 - name: List View
   href: list.md
 - name: Combo
@@ -289,7 +289,7 @@
     - name: 주석 및 오버레이
       href: categorychart_annotation_layers.md
       new: false
-    - name: Axis Options
+    - name: 축 옵션
       href: categorychart_axis_options.md
       new: false
     - name: 실시간 데이터
@@ -301,7 +301,7 @@
     - name: 컨피규레이터 옵션
       href: categorychart_configuration_options.md
       new: false
-    - name: Highlighting
+    - name: 강조 표시
       href: categorychart_highlighting.md
       new: false
     - name: Tooltip Types
@@ -318,16 +318,16 @@
       href: datachart_axis_types.md
       new: true
       items:
-        - name: Axis Settings
+        - name: 축 설정
           href: datachart_axis_settings.md
           new: true
         #- name: Axis Scales
         #  href: datachart_axis_scales.md
         #  new: true
-        - name: Axis Locations
-          href: datachart_axis_locations.md
-          new: true
-        - name: Axis Sharing
+        #- name: Axis Locations
+        #  href: datachart_axis_locations.md
+        #  new: true
+        - name: 축 공유 및 다중 행
           href: datachart_axis_sharing.md
           new: true
     - name: Series
@@ -337,73 +337,73 @@
       #  - name: Requirements
       #    href: datachart_series_requirements.md
       #    new: true
-        - name: Category Series 
+        - name: 카테고리 시리즈
           href: datachart_series_types_category.md
           new: true
-        - name: Financial Series 
+        - name: 금융 시리즈 
           href: datachart_series_types_financial.md
           new: true
-        - name: Polar Series 
+        - name: 폴라 시리즈
           href: datachart_series_types_polar.md
           new: true
-        - name: Radial Series 
+        - name: 레이디얼 시리즈 
           href: datachart_series_types_radial.md
           new: true
-        - name: Range Series 
+        - name: 범위 시리즈
           href: datachart_series_types_range.md
           new: true
-        - name: Scatter Area Series 
+        - name: 분산 영역 시리즈 
           href: datachart_series_types_scatter_area.md
           new: true
-        - name: Scatter Contour Series 
+        - name: 분산 등고선 시리즈 
           href: datachart_series_types_scatter_contour.md
           new: true
-        - name: Scatter Bubble Series 
+        - name: 분산 버블 시리즈 
           href: datachart_series_types_scatter_bubble.md
           new: true
         # - name: Scatter HD Series
         #  href: datachart_series_types_scatter_hd.md
         #  new: true
-        - name: Scatter Marker Series
+        - name: 분산 마커 시리즈
           href: datachart_series_types_scatter_marker.md
           new: true
-        - name: Scatter Shape Series
+        - name: 분산 모양 시리즈
           href: datachart_series_types_shape.md
           new: true
-        - name: Stacked Series
+        - name: 스택 시리즈
           href: datachart_series_types_stacked.md
           new: true
     #- name: Animations
     #  href: datachart_series_animations.md
     #  new: true
-    - name: Annotations
+    - name: 시리즈 주석
       href: datachart_series_annotations.md
       new: true
-    - name: Highlighting
+    - name: 강조 표시
       href: datachart_series_highlighting.md
       new: true
-    - name: Legend
+    - name: 범례
       href: datachart_chart_legends.md
       new: true
-    - name: Markers
+    - name: 마커
       href: datachart_series_markers.md
       new: true
-    - name: Navigation
+    - name: 탐색
       href: datachart_chart_navigation.md
       new: true
     #- name: Synchronization
     #  href: datachart_chart_synchronization.md
     #  new: true
-    - name: Title and Subtitle
+    - name: 제목 및 부제
       href: datachart_chart_titles.md
       new: true
-    - name: Tooltips
+    - name: 도구 설명
       href: datachart_series_tooltips.md
       new: true
-    - name: Trendlines
+    - name: 추세선
       href: datachart_series_trendlines.md
       new: true
-    - name: Data Sources
+    - name: 데이터 소스
       href: datachart_data_sources.md
       new: true 
     #- name: Data Triangulation
@@ -445,7 +445,7 @@
     - name: 사용자 인디케이터
       href: financialchart_custom_indicators.md
       new: false
-    - name: Tooltip Types
+    - name: 설명 유형
       href: financialchart_tooltip_types.md
       new: false
     - name: 사용자 도구 설명

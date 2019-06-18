@@ -125,6 +125,20 @@ import { ..., IgxDragDropModule } from 'igniteui-angular';
 ```
 }
 
+You may enable animation when a row is dropped on a non-droppable area using the `animation` parameter of the [`onRowDragEnd`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onrowdragend) event. If set to true, the dragged row will animate back to its' original position when dropped over a non-droppable area.
+
+You may enable animation like this:
+
+```typescript
+export class @@igxNameRowDragComponent {
+    ...
+    public onRowDragEnd(args) {
+        args.animation = true;
+    }
+
+}
+```
+
 #### 드롭 영역 이벤트 핸들러
 
 템플릿에서 드롭 영역을 정의한 후에는 컴포넌트의 `.ts` 파일에 있는 `igxDrop`의 [`onEnter`]({environment:angularApiUrl}/classes/igxdropdirective.html#onenter), [`onLeave`]({environment:angularApiUrl}/classes/igxdropdirective.html#onleave) 및 [`onDrop`]({environment:angularApiUrl}/classes/igxdropdirective.html#ondrop) 이벤트에 대한 핸들러를 선언해야 합니다.
@@ -214,7 +228,6 @@ export class @@igxNameRowDragComponent {
 
 #### 드래그 아이콘 템플레이팅
 드래그 핸들 아이콘은 그리드의 [`dragIndicatorIconTemplate`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#dragindicatoricontemplate)를 사용하여 템플레이팅할 수 있습니다. 구축 중인 예제에서 아이콘을 기본(`drag_indicator`)에서 `drag_handle`로 변경해 보겠습니다.
-@@if (igxName === 'IgxTreeGrid' || igxName === 'IgxGrid') {
 이를 위해 `igxDragIndicatorIcon`을 사용하여 `@@igSelector`의 내부에 템플릿을 전달할 수 있습니다:
 ```html
 <@@igSelector>
@@ -225,31 +238,7 @@ export class @@igxNameRowDragComponent {
 ...
 </@@igSelector>
 ```
-}
-@@if (igxName === 'IgxHierarchicalGrid') {
-이렇게 하려면 컴포넌트 템플릿에 템플릿을 정의하고 `ViewChild`로 가져와서 @@igxName의 `dragIndicatorIconTemplate` 속성에 전달해야 합니다
 
-```html
-<@@igSelector>
-...
-</@@igSelector>
-...
-<ng-template #customDragIcon>
-    <igx-icon>drag_handle</igx-icon>
-</ng-template>
-```
-
-```typescript
-export class @@igxNameRowDragComponent implements AfterViewInit{
-    @ViewChild('customDragIcon', {read: TemplateRef})
-    public customIcon: TemplateRef<any>;
-    ...
-    ngAfterViewInit() {
-        this.grid.dragIndicatorIconTemplate = this.customIcon;
-    }
-}
-```
-}
 
 새로운 아이콘 템플릿을 설정하면  `DragIcon enum`에서 `DEFAULT` 아이콘도 조정해야 하므로 `changeIcon` 메소드에 의해 적절히 변경됩니다:
 ```typescript
@@ -301,6 +290,16 @@ enum DragIcon {
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-row-drag-to-grid-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기</button>
 </div>
+
+The following sample demonstrates how to configure row reordering in the grid. Holding onto the drag icon will allow you to move a row anywhere in the grid.
+<div class="sample-container loading" style="height:830px">
+    <iframe id="grid-row-reorder" src='{environment:demosBaseUrl}/grid/grid-row-reorder' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-row-reorder" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
 }
 
 @@if (igxName === 'IgxTreeGrid') {
@@ -312,6 +311,16 @@ enum DragIcon {
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-row-drag-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기</button>
 </div>
 <div class="divider--half"></div>
+
+The following sample demonstrates how to configure row reordering in the tree grid. Notice that we also have row selection enabled and we preserve the selection when dropping the dragged row.
+<div class="sample-container loading" style="height:560px">
+    <iframe id="tree-grid-row-reorder-sample-iframe" src='{environment:demosBaseUrl}/tree-grid/tree-grid-row-reordering' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-row-reorder-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div> 
 }
 
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -323,6 +332,17 @@ enum DragIcon {
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-row-drag-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기</button>
 </div>
 <div class="divider--half"></div>
+
+The following sample demonstrates how to configure row reordering in the hierarchical grid.
+Notice that we also have row selection enabled and we preserve the selection when dropping the dragged row.
+<div class="sample-container loading" style="height:560px">
+    <iframe id="hierarchical-grid-row-reorder-sample-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-row-reorder' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-row-reorder-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div> 
 }
 
 ### 제한 사항
@@ -330,10 +350,6 @@ enum DragIcon {
 `rowDraggable` 지시문을 사용할 경우, 고려해야 할 몇 가지 사항이 있습니다:
 > [!NOTE]
 > 행 드롭 이벤트를 처리할 경우, 행 드래그 고스트의 남은 요소가 표시되지 않도록 `eventArgs.cancel`을 **`true`**로 설정해야 합니다 
-@@if (igxName === 'IgxHierarchicalGrid') {
-> [!NOTE]
-> @@igSelector와 함께 `rowDraggable`을 사용하는 경우, 템플릿을 통해 [`dragIndicatorIconTemplate`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#dragindicatoricontemplate)을 `ContentChild`로 설정할 수 없습니다. 대신에 템플릿(`ViewChild` 데코레이터를 통해)에 대한 참조를 가져와서 그리드 `myHGrid.dragIndicatorIconTemplate: TemplateRef = myCustomTemplate`에 전달할 수 있습니다 
-}
 
 ## API 참조
 

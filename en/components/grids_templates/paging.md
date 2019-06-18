@@ -101,11 +101,11 @@ this.@@igObjectRef.perPage = 25;
 this.@@igObjectRef.paging = false;
 ```
 
-@@if (igxName === 'IgxGrid' || igxName === 'IgxHierarchicalGrid') {
 ### Remote Data
 
 Paging could also operate with remote data.
 
+@@if (igxName === 'IgxGrid' || igxName === 'IgxHierarchicalGrid') {
 Lets first declare our service that will be responsible for data fetching.
 We will need the count of all the data items in order to calculate pages count and we will add this logic to our service.
 ```typescript
@@ -181,6 +181,17 @@ export class HGridRemotePagingSampleComponent implements OnInit, AfterViewInit, 
         });
     }
 }
+```
+}
+}
+@@if (igxName === 'IgxTreeGrid') {
+In this sample we will demonstrate how to display a certain number of root records per page no matter how many child records they have. In order to cancel the built-in Tree Grid paging algorithm, which displays a certain number of records no matter their level (root or child), we have to set the [`perPage`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#perpage) property to `Number.MAX_SAFE_INTEGER`.
+```html
+<igx-tree-grid #treeGrid ...
+               [paging]="true" [perPage]="maxPerPage">
+```
+```typescript
+public maxPerPage = Number.MAX_SAFE_INTEGER;
 ```
 }
 We need to create a custom pager template to get the data only for the requested page and to pass the correct `skip` and `top` parameters to the remote service according to the selected page and items [`perPage`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#perpage).
@@ -357,6 +368,82 @@ public buttonDeselection(page: number, totalPages: number) {
 
 ```
 }
+@@if (igxName === 'IgxTreeGrid') {
+```html
+<ng-template #customPager let-api>
+    <button [disabled]="firstPage" (click)="paginate(0, false)" igxButton="icon" igxRipple
+        igxRippleCentered="true">
+        <igx-icon fontSet="material">first_page</igx-icon>
+    </button>
+    <button [disabled]="firstPage" (click)="previousPage()" igxButton="icon" igxRipple igxRippleCentered="true">
+        <igx-icon fontSet="material">chevron_left</igx-icon>
+    </button>
+    <span>{{ page + 1 }} of {{totalPages}}</span>
+    <button [disabled]="lastPage" (click)="nextPage()" igxRipple igxRippleCentered="true" igxButton="icon">
+        <igx-icon fontSet="material">chevron_right</igx-icon>
+    </button>
+    <button [disabled]="lastPage" (click)="paginate(totalPages - 1, false)" igxButton="icon" igxRipple
+        igxRippleCentered="true">
+        <igx-icon fontSet="material">last_page</igx-icon>
+    </button>
+    <select style="margin-left: 1rem;" (change)="perPage = parseToInt($event.target.value);">
+        <option [value]="val" [selected]="perPage == val" *ngFor="let val of [5, 10, 12, 25, 50]">{{ val
+        }}</option>
+    </select>
+</ng-template>
+```
+
+```typescript
+public nextPage() {
+    this.firstPage = false;
+    this.page++;
+    const skip = this.page * this.perPage;
+    const top = this.perPage;
+    this.remoteService.getData(skip, top);
+    if (this.page + 1 >= this.totalPages) {
+        this.lastPage = true;
+    }
+}
+
+public previousPage() {
+    this.lastPage = false;
+    this.page--;
+    const skip = this.page * this.perPage;
+    const top = this.perPage;
+    this.remoteService.getData(skip, top);
+    if (this.page <= 0) {
+        this.firstPage = true;
+    }
+}
+
+public paginate(page: number, recalc: true) {
+    this.page = page;
+    const skip = this.page * this.perPage;
+    const top = this.perPage;
+    if (recalc) {
+        this.totalPages = Math.ceil(this.totalCount / this.perPage);
+    }
+    this.remoteService.getData(skip, top);
+    this.buttonDeselection(this.page, this.totalPages);
+}
+
+public buttonDeselection(page: number, totalPages: number) {
+    if (totalPages === 1) {
+        this.lastPage = true;
+        this.firstPage = true;
+    } else if (page + 1 >= totalPages) {
+        this.lastPage = true;
+        this.firstPage = false;
+    } else if (page !== 0 && page !== totalPages) {
+        this.lastPage = false;
+        this.firstPage = false;
+    } else {
+        this.lastPage = false;
+        this.firstPage = true;
+    }
+}
+```
+}
 The last step will be to declare our template for the gird.
 @@if (igxName === 'IgxGrid') {
 ```html
@@ -384,6 +471,23 @@ The last step will be to declare our template for the gird.
 </igx-hierarchical-grid>
 ```
 }
+@@if (igxName === 'IgxTreeGrid') {
+```html
+<igx-tree-grid #treeGrid [data]="data | async" childDataKey="Content" expansionDepth="0" width="100%"
+                [paging]="true" [perPage]="maxPerPage" [paginationTemplate]="customPager">
+    <igx-column field="Name">
+        <ng-template igxCell let-cell="cell" let-val>
+            <igx-icon *ngIf="cell.rowData.Type === 'File folder'" fontSet="material" class="typeIcon">folder</igx-icon>
+            <igx-icon *ngIf="cell.rowData.Type === 'JPG File'" fontSet="material" class="typeIcon">photo</igx-icon>
+            {{val}}
+        </ng-template>
+    </igx-column>
+    <igx-column field="Type"></igx-column>
+    <igx-column field="Size" dataType="number" [formatter]="formatSize"></igx-column>
+</igx-tree-grid>
+```
+}
+@@if (igxName === 'IgxGrid') {
 This is absolutely enough if we want an up and running sample. But we can extend this sample even more by adding an option to change our paging template at run time. Let's see how we can achieve that. First we will start by adding one more paging template in our template:
 
 ```html
@@ -436,6 +540,7 @@ public changeTemplate() {
     this.grid1.cdr.detectChanges();
 }
 ```
+}
 
 After all the changes above, the following result will be achieved.
 
@@ -459,7 +564,18 @@ After all the changes above, the following result will be achieved.
 </div>
 <div class="divider--half"></div>
 }
+@@if (igxName === 'IgxTreeGrid') {
+<div class="sample-container loading" style="height:560px">
+    <iframe id="tree-grid-remote-paging-sample-iframe" data-src='{environment:demosBaseUrl}/tree-grid/treegrid-remote-paging' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-remote-paging-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
+}
 
+@@if (igxName === 'IgxGrid') {
 If you want your sample to look exactly like this one, do not forget to apply the custom paging theme:
 
 ```css
@@ -485,6 +601,188 @@ $custom-button-theme: igx-button-theme(
 }
 ```
 }
+
+@@if (igxName === 'IgxGrid'){
+
+### Styling
+
+To get started with styling the paginator, we need to import the `index` file, where all the theme functions and component mixins live:
+
+```scss
+// custom-grid-paging-style.component.scss
+@import '~igniteui-angular/lib/core/styles/themes/index';
+``` 
+
+Following the simplest approach, we create a new theme that extends the [`igx-grid-paginator-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-paginator-theme) and accepts the `$text-color`, `$background-color` and the `$border-color` parameters.
+
+```scss
+$dark-grid-paginator: igx-grid-paginator-theme(
+    $text-color: #F4D45C,
+    $background-color: #575757,
+    $border-color: #292826
+);
+```
+
+The paginator UI also contains buttons, so a new button theme needs to be created too:
+
+```scss
+$dark-button: igx-button-theme(
+    $icon-color: #FFCD0F,
+    $icon-hover-color: #292826,
+    $icon-hover-background: #FFCD0F,
+    $icon-focus-color: #292826,
+    $icon-focus-background: #FFCD0F,
+    $disabled-color: #16130C
+);
+```
+
+In this example we only changed the icon color and background and the button disabled color, but the the [`igx-button-theme`](({environment:sassApiUrl}/index.html#function-igx-button-theme)) provides way more paramaters to control the button style.
+
+The last step is to **include** the component mixins, each with its respective theme: 
+
+```scss
+@include igx-grid-paginator($dark-grid-paginator);
+.igx-paginator {
+    @include igx-button($dark-button);
+}
+```
+
+>[!NOTE]
+>We include the **igx-button** mixin within the scope of the `igx-paginator`, so that only the paginator buttons could be styled. Otherwise other buttons in the grid would be affected too.
+
+ >[!NOTE]
+ >Depending on the component [**View Encapsulation**](../themes/component-themes.md#view-encapsulation) strategy, it may be necessary to `penetrate` this encapsulation using `::ng-deep`:
+
+```scss
+:host {
+    ::ng-deep {
+        @include igx-grid-paginator($dark-grid-paginator);
+        .igx-paginator {
+            @include igx-button($dark-button);
+        }
+    }
+}
+```
+
+#### Defining a color palette
+
+Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [igx-palette]({environment:sassApiUrl}/index.html#function-igx-palette) and [igx-color]({environment:sassApiUrl}/index.html#function-igx-color) functions.
+
+**igx-palette** generates a color palette based on the primary and secondary colors that are passed:
+
+```scss
+$yellow-color: #F9D342;
+$black-color: #292826;
+
+$dark-palette: igx-palette($primary: $black-color, $secondary: $yellow-color);
+```
+
+And then with **igx-color**({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the pallete. 
+
+```scss
+$dark-grid-paginator: igx-grid-paginator-theme(
+    $palette: $dark-palette,
+    $text-color: igx-color($dark-palette, "secondary", 400),
+    $background-color: igx-color($dark-palette, "primary", 200),
+    $border-color:  igx-color($dark-palette, "primary", 500)
+);
+
+$dark-button: igx-button-theme(
+    $palette: $dark-palette,
+    $icon-color: igx-color($dark-palette, "secondary", 700),
+    $icon-hover-color: igx-color($dark-palette, "primary", 500),
+    $icon-hover-background: igx-color($dark-palette, "secondary", 500),
+    $icon-focus-color: igx-color($dark-palette, "primary", 500),
+    $icon-focus-background: igx-color($dark-palette, "secondary", 500),
+    $disabled-color: igx-color($dark-palette, "primary", 700)
+);
+```
+
+>[!NOTE]
+>The igx-color and igx-palette are powerful functions for generating and retrieving colors. Please refer to [`Palettes`](../themes/palette.md) topic for detailed guidance on how to use them.
+
+#### Using Schemas
+
+ Going further with the theming engine, you can build a robust and flexible structure that benefits from [**schemas**](../themes/schemas.md). A **schema** is a recipe of a theme.
+
+Extend one of the two predefined schemas, that are provided for every component, in this case - [`dark-grid-pagination`]({environment:sassApiUrl}/index.html#variable-_dark-grid-pagination) and [`dark-button`]({environment:sassApiUrl}/index.html#variable-_dark-button) schemas: 
+
+```scss
+// Extending the dark paginator schema
+$dark-grid-paginator-schema: extend($_dark-grid-pagination,
+        (
+            text-color:(
+                igx-color: ("secondary", 400)
+            ),
+            background-color:(
+                igx-color: ("primary", 200)
+            ),
+            border-color:(
+                igx-color:( "primary", 500)
+            )
+        )
+);
+// Extending the dark button schema
+$dark-button-schema: extend($_dark-button,
+        (
+            icon-color:(
+                igx-color:("secondary", 700)
+            ),
+            icon-hover-color:(
+                igx-color:("primary", 500)
+            ),
+            icon-hover-background:(
+                igx-color:("secondary", 500)
+            ),
+            icon-focus-color:(
+                igx-color:("primary", 500)
+            ),
+            icon-focus-background:(
+                igx-color:("secondary", 500)
+            ),
+            disabled-color:(
+                igx-color:("primary", 700)
+            )
+        )
+);
+```
+
+In order to apply our custom schemas we have to **extend** one of the globals ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) or [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)), which is basically pointing out the components with a custom schema, and after that add it to the respective component themes:
+
+```scss
+// Extending the global dark-schema
+$custom-dark-schema: extend($dark-schema,(
+    igx-grid-paginator: $dark-grid-paginator-schema,
+    igx-button: $dark-button-schema
+));
+
+// Defining grid-paginator-theme with the global dark schema
+$dark-grid-paginator: igx-grid-paginator-theme(
+  $palette: $dark-palette,
+  $schema: $custom-dark-schema
+);
+
+// Defining button-theme with the global dark schema
+$dark-button: igx-button-theme(
+  $palette: $dark-palette,
+  $schema: $custom-dark-schema
+);
+```
+
+Don't forget to include the themes in the same way as it was demonstrated above.
+
+#### Demo
+
+<div class="sample-container loading" style="height:560px">
+    <iframe id="custom-grid-paging-style-iframe" src='{environment:demosBaseUrl}/grid/custom-grid-paging-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="custom-grid-paging-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
+}
+
 ### API References
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
 * [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)

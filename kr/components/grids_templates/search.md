@@ -345,11 +345,11 @@ public clearSearch() {
 
 ### 알려진 제한 사항
 
-|Limitation|Description|
+|제한 사항|설명|
 |--- |--- |
-|Searching in cells with a template|The search functionality highlights work only for the default cell templates. If you have a column with custom cell template, the highlights will not work so you should either use alternative approaches, such as a column formatter, or set the [`searchable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#searchable) property on the column to false.|
-|Remote Virtualization| The search will not work properly when using remote virtualization|
-|Cells with cut off text| When the text in the cell is too large to fit and the text we are looking for is cut off by the ellipsis, we will still scroll to the cell and include it in the match count, but nothing will be highlighted |
+|템플릿으로 셀 검색|검색 기능은 모든 셀 템플릿을 div 요소 및 셀 값에서 검색된 텍스트를 강조 표시하는 범위를 바꿉니다. 즉, 템플릿에 여러 요소 또는 이벤트가 포함된 복잡한 템플릿이 있는 경우, 예기치 않은 동작이 발생할 수 있습니다. 이러한 템플릿을 가진 열이 있는 경우, 열 형식과 같은 다른 방법을 사용하거나 열의 [`searchable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#searchable) 속성을 false로 설정해야 합니다.|
+|원격 가상화| 원격 가상화를 사용할 경우 검색이 제대로 작동하지 않습니다|
+|컷오프 텍스트가 있는 셀| 셀의 텍스트가 너무 커서 텍스트에 맞지 않을 경우, 찾고 있는 텍스트가 생략되어 컷오프된 경우, 셀로 스크롤하여 매치 카운트에 포함시켜도 아무 것도 강조 표시되지 않습니다 |
 
 ### API 참조
 

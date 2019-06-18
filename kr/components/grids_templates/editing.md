@@ -315,4 +315,4 @@ row.delete();
 * [열 핀 고정](column_pinning.md)
 * [열 크기 조정](column_resizing.md)
 * [선택](selection.md)
-@@if (igxName !== 'IgxHierarchicalGrid') {* [Searching](search.md)}
+@@if (igxName !== 'IgxHierarchicalGrid') {* [검색](search.md)}
