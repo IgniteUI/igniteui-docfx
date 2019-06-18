@@ -507,7 +507,7 @@ $dark-grid-paginator: igx-grid-paginator-theme(
 );
 ```
 
-The paginator UI also contains buttons, so a new button theme needs to be created too:
+As seen, the `igx-grid-paginator-theme` only controls colors for the paging container, but does not affect the buttons in the pager UI. To style those buttons, let's create a new button theme:
 
 ```scss
 $dark-button: igx-button-theme(
@@ -520,7 +520,7 @@ $dark-button: igx-button-theme(
 );
 ```
 
-In this example we only changed the icon color and background and the button disabled color, but the the [`igx-button-theme`](({environment:sassApiUrl}/index.html#function-igx-button-theme)) provides way more paramaters to control the button style.
+In this example we only changed the icon color and background and the button disabled color, but the the [`igx-button-theme`]({environment:sassApiUrl}/index.html#function-igx-button-theme) provides way more paramaters to control the button style.
 
 The last step is to **include** the component mixins, each with its respective theme: 
 
@@ -532,10 +532,10 @@ The last step is to **include** the component mixins, each with its respective t
 ```
 
 >[!NOTE]
->We include the **igx-button** mixin within the scope of the `igx-paginator`, so that only the paginator buttons could be styled. Otherwise other buttons in the grid would be affected too.
+>We scope the **igx-button** mixin within `.igx-paginator`, so that only the paginator buttons would be styled. Otherwise other buttons in the grid would be affected too.
 
  >[!NOTE]
- >Depending on the component [**View Encapsulation**](../themes/component-themes.md#view-encapsulation) strategy, it may be necessary to `penetrate` this encapsulation using `::ng-deep`:
+ >If the component is using an [`Emulated`](../themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`:
 
 ```scss
 :host {
@@ -550,9 +550,9 @@ The last step is to **include** the component mixins, each with its respective t
 
 #### Defining a color palette
 
-Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [igx-palette]({environment:sassApiUrl}/index.html#function-igx-palette) and [igx-color]({environment:sassApiUrl}/index.html#function-igx-color) functions.
+Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.
 
-**igx-palette** generates a color palette based on the primary and secondary colors that are passed:
+`igx-palette` generates a color palette based on the primary and secondary colors that are passed:
 
 ```scss
 $yellow-color: #F9D342;
@@ -561,7 +561,7 @@ $black-color: #292826;
 $dark-palette: igx-palette($primary: $black-color, $secondary: $yellow-color);
 ```
 
-And then with **igx-color**({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the pallete. 
+And then with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the pallete. 
 
 ```scss
 $dark-grid-paginator: igx-grid-paginator-theme(
@@ -583,7 +583,7 @@ $dark-button: igx-button-theme(
 ```
 
 >[!NOTE]
->The igx-color and igx-palette are powerful functions for generating and retrieving colors. Please refer to [`Palettes`](../themes/palette.md) topic for detailed guidance on how to use them.
+>The `igx-color` and `igx-palette` are powerful functions for generating and retrieving colors. Please refer to [`Palettes`](../themes/palette.md) topic for detailed guidance on how to use them.
 
 #### Using Schemas
 
