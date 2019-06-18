@@ -45,6 +45,13 @@ ng update @angular/cli
 
 例: 6.2.4 から 7.1.0 にアップデートする場合、[6.x .. から] セクションから始めて変更を適用していきます。
 
+### From 7.1.x to 8.0.x
+* We no longer do CSS normalization on an application level. Users who depended on our CSS browser normalization will have to handle that on their own going forward.
+* If you use an IgxCombo with `combo.value`, you should know that now `combo.value` is only a getter.
+* If you use `IgxTextHighlightDirective`, you should know that the `page`input property is deprecated. `rowIndex`, `columnIndex` and `page` properties of the `IActiveHighlightInfo` interface are also deprecated. Instead, `row` and `column` optional properties are added.
+* If you use the `igx-button-theme`, you should know that the `$button-roundness` have been replaced for each button type with: `$flat-border-radius`, `$raised-border-radius`, `$outline-border-radius`, `$fab-border-radius`,  `$icon-border-radius`. 
+* While updating, if you face the folllowing error `Package "@angular/compiler-cli" has an incompatible peer dependency to "typescript" (requires ">=3.1.1 <3.3", would install "3.4.5").`, you should update `@angular/core` package first. This is related to this known Angular CLI issue: https://github.com/angular/angular-cli/issues/13095
+
 ### 7.0.x から 7.1.x
  * アプリケーションで IgxGrid の集計を使用する場合、`IgxSummaryOperand.operate()` メソッドがからデータとともに順番に呼び出されて集計行に必要な高さを計算します。カスタム集計オペランドは、メソッドが常に適切な長さの IgxSummaryResult の配列を返します。
 
