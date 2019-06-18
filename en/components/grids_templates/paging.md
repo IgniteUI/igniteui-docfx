@@ -550,9 +550,9 @@ The last step is to **include** the component mixins, each with its respective t
 
 #### Defining a color palette
 
-Instead of hardcoding the colors, we can use the [igx-palette]({environment:sassApiUrl}/index.html#function-igx-palette) and [igx-color]({environment:sassApiUrl}/index.html#function-igx-color) functions to achieve great flexibility in retrieving color values.
+Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [igx-palette]({environment:sassApiUrl}/index.html#function-igx-palette) and [igx-color]({environment:sassApiUrl}/index.html#function-igx-color) functions.
 
-**igx-palette** allows for setting primary and secondary colors that will be used by the component theme.
+**igx-palette** generates a color palette based on the primary and secondary colors that are passed:
 
 ```scss
 $yellow-color: #F9D342;
@@ -561,7 +561,7 @@ $black-color: #292826;
 $dark-palette: igx-palette($primary: $black-color, $secondary: $yellow-color);
 ```
 
-And then with **igx-color** we can easily retrieve different variations of the palette's primary and secondary colors and pass those to the theme:
+And then with **igx-color**({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the pallete. 
 
 ```scss
 $dark-grid-paginator: igx-grid-paginator-theme(
@@ -581,6 +581,9 @@ $dark-button: igx-button-theme(
     $disabled-color: igx-color($dark-palette, "primary", 700)
 );
 ```
+
+>[!NOTE]
+>The igx-color and igx-palette are powerful functions for generating and retrieving colors. Please refer to [`Palettes`](../themes/palette.md) topic for detailed guidance on how to use them.
 
 #### Using Schemas
 
