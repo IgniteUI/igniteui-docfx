@@ -1,29 +1,28 @@
 @@if (igxName === 'IgxGrid') {
 ---
-title: Column Hiding コンポーネント – ネイティブ Angular |Ignite UI for Angular
-_description: Ignite UI for Angular 列非表示機能を使用すると、データ グリッドの定義済み UI で列を非表示/表示できます。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, ネイティブ Angular コンポーネント, Angular Grid, Angular Table, Angular Data Grid コンポーネント, Angular Data Table コンポーネント, Angular Data Grid コントロール, Angular Data Table コントロール, Angular Grid コンポーネント, Angular Table コンポーネント, Angular Grid コントロール, Angular Table コントロール, Angular 高パフォーマンス Grid, Angular 高パフォーマンス Data Table, grid column hiding, column hiding, angular grid column hiding, angular data table column hiding, angular column hiding
+title: Angular Grid Column Hiding | Ignite UI for Angular | Infragistics
+_description: Learn how to use the Column Hiding feature that allows users to change the visible state of the columns directly through the UI of the Ignite material ui table
+_keywords: column hiding, ignite ui for angular, infragistics
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Column Hiding コンポーネント – ネイティブ Angular|Ignite UI for Angular
-_description: Ignite UI for Angular 列非表示機能を使用すると Tree Grid の定義済み UI で列を非表示/表示できます。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, UI ウィジェット, Angular, Native Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Native Angular コンポーネント, Angular Tree Grid, Angular Tree Table, Angular Tree Grid コンポーネント, Angular Tree Table コンポーネント, Angular Tree Grid コントロール, Angular Tree Table コントロール, Angular Tree Grid コンポーネント, Angular Tree Table コンポーネント, Angular Tree Grid コントロール, Angular Tree Table コントロール, Angular 高パフォーマンス Tree Grid, Angular 高パフォーマンス Tree Table, tree grid column hiding, column hiding, angular tree grid column hiding, angular tree table column hiding, angular column hiding
+title: Angular Tree Grid Column Hiding | Ignite UI for Angular | Infragistics
+_description: Learn how to use the Column Hiding feature that allows users to change the visible state of the columns directly through the UI of the Ignite material ui table
+_keywords: column hiding, ignite ui for angular, infragistics
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Column Hiding コンポーネント – ネイティブ Angular|Ignite UI for Angular
-_description: Ignite UI for Angular 列非表示機能を使用すると、Hierarchical グリッドの定義済み UI で列を非表示/表示できます。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, Native Angular コンポーネント Suite, Native Angular コントロール, Native Angular コンポーネント Library, ネイティブ Angular コンポーネント, Angular Hierarchical Grid, Angular Hierarchical Table, Angular Hierarchical Grid コンポーネント, Angular Hierarchical Table コンポーネント, Angular Hierarchical Grid コントロール, Angular Hierarchical Table コントロール, Angular 高パフォーマンス Hierarchical Grid, Angular 高パフォーマンス Hierarchical Table, hierarchical grid column hiding, column hiding, angular hierarchical grid column hiding, angular hierarchical table column hiding, angular column hiding
+title: Angular Hierarchical Grid Column Hiding | Ignite UI for Angular | Infragistics
+_description: Learn how to use the Column Hiding feature that allows users to change the visible state of the columns directly through the UI of the Ignite material ui table
+_keywords: column hiding, ignite ui for angular, infragistics
 ---
 }
 
-
 ### グリッドの列非表示
 
-Ignite UI for Angular @@igComponent の [`IgxColumnHidingComponent`]({environment:angularApiUrl}/classes/igxcolumnhidingcomponent.html)は、UI で列の表示/非表示オプションをサポートします。@@igComponent のビルトインの列非表示 UI は、@@igComponent のツールバーで使用できます。更に別のコンポーネントとして列非表示 UI を定義してページの必要な場所に配置できます。
+The Ignite UI for Angular @@igComponent provides an [`IgxColumnHidingComponent`]({environment:angularApiUrl}/classes/igxcolumnhidingcomponent.html), which allows users to perform column hiding directly through the **UI** or by using the angular component. The Material UI Grid has a built-in column hiding UI, which can be used through the @@igComponent's toolbar to change the visible state of the columns. In addition, developers can always define the column hiding UI as a separate component and place it anywhere they want on the page.
 
 #### デモ
 
