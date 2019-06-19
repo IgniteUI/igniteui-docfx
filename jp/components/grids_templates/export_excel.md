@@ -1,32 +1,29 @@
 ﻿@@if (igxName === 'IgxGrid') {
 ---
-title: Excel コンポーネントへエクスポート - ネイティブ Angular |Ignite UI for Angular
-_description: ユーザーが編集またはオフライン プレゼンテーションのためにデータをエクスポートできます。Excel へのエクスポート Ignite UI for Angular コンポーネントで Excel 形式にエクスポートできます。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Grid, Angular Data Grid, Angular Grid コントロール, Angular Grid コンポーネント, Excel エクスポート, Angular Excel コンポーネント, Angular エクスポート Excel
-_language: ja
+title: Angular Grid Export to Excel | Ignite UI for Angular | Infragistics
+_description: Learn how to use the Excel Exporter service in order to export Grid data to MS Excel file. Grid Angular material table has a rich set of helpful angular events
+_keywords: data export, ignite ui for angular, infragistics
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Excel コンポーネントへエクスポート - ネイティブ Angular|Ignite UI for Angular
-_description: ユーザーが編集またはオフライン プレゼンテーションのためにデータをエクスポートできます。Excel へのエクスポート Ignite UI for Angular コンポーネントで Excel 形式にエクスポートできます。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Tree Grid, Angular Tree Grid, Angular Tree Grid コントロール, Angular Tree Grid コンポーネント, Excel Export, Angular Excel コンポーネント, Angular Export Excel
-_language: ja
+title: Angular Tree Grid Export to Excel | Ignite UI for Angular | Infragistics
+_description: Learn how to use the Excel Exporter service in order to export Grid data to MS Excel file. Grid Angular material table has a rich set of helpful angular events
+_keywords: data export, ignite ui for angular, infragistics
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Excel コンポーネントへエクスポート - ネイティブ Angular|Ignite UI for Angular
-_description: ユーザーが編集またはオフライン プレゼンテーションのためにデータをエクスポートできます。Excel へのエクスポート Ignite UI for Angular コンポーネントで Excel 形式にエクスポートできます。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Hierarchical Grid,, Angular Hierarchical Grid コントロール, Angular Hierarchical Grid コンポーネント, Excel Export, Angular Excel コンポーネント, Angular Export Excel
-_language: ja
+title: Angular Hierarchical Grid Export to Excel | Ignite UI for Angular | Infragistics
+_description: Learn how to use the Excel Exporter service in order to export Grid data to MS Excel file. Grid Angular material table has a rich set of helpful angular events
+_keywords: data export, ignite ui for angular, infragistics
 ---
 }
 
-### @@igComponent Excel へエクスポート
+### @@igComponent Export to Excel Service
 
 <p class="highlight">
-Excel Exporter サービスも@@igxName からのデータを MS Excel 形式でエクスポートできます。エクスポート機能は、[`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html) クラスでカプセル化され、MS Excel テーブル形式でデータをエクスポートします。この形式はフィルタリングや並べ替えなどの機能が使用でき、[`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html) の [`export`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html#export) メソッドを呼び出して最初の引数として @@igxName コンポーネントを渡します。</p>
+The Excel Exporter service can export data to excel from the @@igxName. The data export functionality is encapsulated in the [`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html) class and the data is exported in MS Excel table format. This format allows features like filtering, sorting, etc. To do this you need to invoke the [`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html)'s [`export`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html#export) method and pass the @@igxName component as first argument to export grid easily.</p>
 
 <div class="divider"></div>
 

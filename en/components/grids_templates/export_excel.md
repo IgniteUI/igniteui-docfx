@@ -1,29 +1,29 @@
 @@if (igxName === 'IgxGrid') {
 ---
-title: Export to Excel Component - Native Angular | Ignite UI for Angular
-_description: Users can export their data for editing or offline presentation can do so in Excel format with the Export to Excel Ignite UI for Angular component.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Controls, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Grid, Angular Data Grid, Angular Grid Control, Angular Grid Component, Excel Export, Angular Excel Component, Angular Export Excel
+title: Angular Grid Export to Excel | Ignite UI for Angular | Infragistics
+_description: Learn how to use the Excel Exporter service in order to export Grid data to MS Excel file. Grid Angular material table has a rich set of helpful angular events
+_keywords: data export, ignite ui for angular, infragistics
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Export to Excel Component - Native Angular | Ignite UI for Angular
-_description: Users can export their data for editing or offline presentation can do so in Excel format with the Export to Excel Ignite UI for Angular component.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Controls, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Tree Grid, Angular Tree Grid, Angular Tree Grid Control, Angular Tree Grid Component, Excel Export, Angular Excel Component, Angular Export Excel
+title: Angular Tree Grid Export to Excel | Ignite UI for Angular | Infragistics
+_description: Learn how to use the Excel Exporter service in order to export Grid data to MS Excel file. Grid Angular material table has a rich set of helpful angular events
+_keywords: data export, ignite ui for angular, infragistics
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Export to Excel Component - Native Angular | Ignite UI for Angular
-_description: Users can export their data for editing or offline presentation can do so in Excel format with the Export to Excel Ignite UI for Angular component.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Controls, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Hierarchical Grid,, Angular Hierarchical Grid Control, Angular Hierarchical Grid Component, Excel Export, Angular Excel Component, Angular Export Excel
+title: Angular Hierarchical Grid Export to Excel | Ignite UI for Angular | Infragistics
+_description: Learn how to use the Excel Exporter service in order to export Grid data to MS Excel file. Grid Angular material table has a rich set of helpful angular events
+_keywords: data export, ignite ui for angular, infragistics
 ---
 }
 
-### @@igComponent Export to Excel
+### @@igComponent Export to Excel Service
 
 <p class="highlight">
-The Excel Exporter service can export data in MS Excel format from the @@igxName. The exporting functionality is encapsulated in the [`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html) class and the data is exported in MS Excel table format. This format allows features like filtering, sorting, etc. To do this you need to invoke the [`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html)'s [`export`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html#export) method and pass the @@igxName component as first argument.</p>
+The Excel Exporter service can export data to excel from the @@igxName. The data export functionality is encapsulated in the [`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html) class and the data is exported in MS Excel table format. This format allows features like filtering, sorting, etc. To do this you need to invoke the [`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html)'s [`export`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html#export) method and pass the @@igxName component as first argument to export grid easily.</p>
 
 <div class="divider"></div>
 
