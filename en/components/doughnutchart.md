@@ -70,7 +70,7 @@ The following code demonstradtes how to bind the doughnut chart to the above dat
  <igx-doughnut-chart width="700px"
                      height="500px">
     <igx-doughnut-chart-series>
-        <igx-ring-series  [itemsSource]="data"
+        <igx-ring-series  [dataSource]="data"
                 labelMemberPath="Label"
                 valueMemberPath="Value">
         </igx-ring-series>

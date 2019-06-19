@@ -67,7 +67,8 @@ The following code snippet demonstrates how to add a `CategoryYAxis` to the data
 
 ### Category DateTime X Axis
 
-The `IgxCategoryDateTimeXAxisComponent` Axis treats the data as a sequence of category data items that are sorted by date. Labels on this axis are placed along the X-Axis, according to the value in a data column that is mapped using the `DateTimeMemberPath` property of this axis. This type of axis is compatible with the [Financial Series](datachart_series_types_financial.md), [Range Series](datachart_series_types_range.md), and [Category Series](datachart_series_types_category.md) (except `BarSeries`)
+The `IgxCategoryDateTimeXAxisComponent` Axis treats the data as a sequence of category data items that are sorted by date. Labels on this axis are placed along the X-Axis, according to the value in a data column that is mapped using the `DateTimeMemberPath` property of this axis. Also in order to display the formatted labels you can use the ‘FormatLabel’ event.
+This type of axis is compatible with the [Financial Series](datachart_series_types_financial.md), [Range Series](datachart_series_types_range.md), and [Category Series](datachart_series_types_category.md) (except `BarSeries`)
 
 The following code snippet demonstrates how to add a `IgxCategoryDateTimeXAxisComponent` to the Angular data chart component:
 
@@ -75,7 +76,10 @@ The following code snippet demonstrates how to add a `IgxCategoryDateTimeXAxisCo
 <igx-data-chart [dataSource]="data"
     width="100%"
     height="400px">
-    <igx-category-date-time-x-axis name="yAxis" dateTimeMemberPath="Date" />
+    <igx-category-date-time-x-axis name="yAxis" 
+        (FormatLabel)=”xAxisFormatLabel()” 
+        dateTimeMemberPath="Date" >
+        </igx-category-date-time-x-axis>
 </igx-data-chart>
 ```
 

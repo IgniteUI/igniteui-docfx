@@ -29,9 +29,3 @@ Similar to other types of geographic series in the map control, the `GeographicS
 ### Code Snippet
 
 The following code demonstrates how to bind the `GeographicShapeSeries` to shapes of countries in the world loaded from a shape file using the `ShapeDataSource`.
-
-<!-- Angular -->
-
-```html
-TODO - ADD CODE SNIPPET
-```

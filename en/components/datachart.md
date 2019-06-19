@@ -33,8 +33,8 @@ The Angular data chart component requires the following modules:
 
 ```typescript
 // data chart's modules required for all series:
-import { IgxDataChartModule } from 'igniteui-angular-charts/ES5/igx-data-chart-module';
-import { IgxDataChartCoreModule } from 'igniteui-angular-charts/ES5/igx-data-chart-core--module';
+import { IgxDataChartModule } from "igniteui-angular-charts/ES5/igx-data-chart-module";
+import { IgxDataChartCoreModule } from "igniteui-angular-charts/ES5/igx-data-chart-core--module";
 // scatter series' modules:
 import { IgxDataChartScatterCoreModule } from "igniteui-angular-charts/ES5/igx-data-chart-scatter-core-module";
 import { IgxDataChartScatterModule } from "igniteui-angular-charts/ES5/igx-data-chart-scatter-module";
@@ -94,8 +94,8 @@ The following code snippet demonstrates how to create scatter `BubbleSeries` and
  <igx-data-chart [dataSource]="data"
                  width="700px"
                  height="500px">
-    <igx-numeric-x-axis name="xAxis" isLogarithmic="true" />
-    <igx-numeric-y-axis name="yAxis" isLogarithmic="true" />
+    <igx-numeric-x-axis name="xAxis" isLogarithmic="true" ></igx-numeric-x-axis>
+    <igx-numeric-y-axis name="yAxis" isLogarithmic="true" ></igx-numeric-x-axis>
     <igx-bubble-series
         name="series1"
         xAxisName="xAxis"
@@ -103,7 +103,7 @@ The following code snippet demonstrates how to create scatter `BubbleSeries` and
         xMemberPath="Population"
         yMemberPath="GdpTotal"
         radiusMemberPath="GdpPerCapita"
-        [dataSource]="data"  />
+        [dataSource]="data"  ></igx-bubble-series>
  </igx-data-chart>
 ```
 

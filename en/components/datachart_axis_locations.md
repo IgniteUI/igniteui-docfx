@@ -25,40 +25,47 @@ _keywords: data chart, Ignite UI for Angular, Infragistics
 This code demonstrates how to create data chart with two `IgxNumericYAxisComponent` that will be placed on left/right sides and two `IgxCategoryXAxisComponent` that will be stacked on one another.
 
 ```html
- <igx-data-chart
-    [dataSource]="dataSource"
-    width="700px"
-    height="500px">
+   <igx-data-chart
+            [dataSource]="dataSource"
+            width="700px"
+            height="500px">
+        
+            <igx-category-x-axis name="xAxisYears"
+            interval="12" labelLocation="OutsideBottom"
+            label="Year"  overlap="1" gap="0.4"  >
+            </igx-category-x-axis>
+            <igx-category-x-axis name="xAxisMonths"
+            interval="1"  labelLocation="OutsideBottom"
+            label="Month" overlap="1" gap="0.4" >
+            </igx-category-x-axis>
 
-    <igx-category-x-axis name="xAxisYears"
-    interval="12" labelLocation="OutsideBottom"
-    label="Year"  overlap="1" gap="0.4"  />
-    <igx-category-x-axis name="xAxisMonths"
-    interval="1"  labelLocation="OutsideBottom"
-    label="Month" overlap="1" gap="0.4" />
-    <igx-numeric-y-axis  name="yAxisLeft"
-    title="Expanse | Revenue"
-    minimumValue="-900" labelLocation="OutsideLeft"
-    maximumValue="900"
-    interval="300" />
-    <igx-numeric-y-axis  name="yAxisRight"
-    title="Profit (%)"
-    minimumValue="0"  labelLocation="OutsideRight"
-    maximumValue="100" />
-
-    <igx-column-series name="series1"
-    valueMemberPath="Revenue"
-    xAxisName="xAxisMonths"
-    yAxisName="yAxisLeft" />
-    <igx-column-series name="series3"
-    valueMemberPath="Expanse"
-    xAxisName="xAxisMonths"
-    yAxisName="yAxisLeft" />
-    <igx-column-series name="series2"
-    valueMemberPath="Profit"
-    xAxisName="xAxisYears"
-    yAxisName="yAxisRight" />
- </igx-data-chart>
+            <igx-numeric-y-axis  name="yAxisLeft"
+            title="Expanse | Revenue"
+            minimumValue="-900" labelLocation="OutsideLeft"
+            maximumValue="900"
+            interval="300" >
+            </igx-numeric-y-axis>
+            <igx-numeric-y-axis  name="yAxisRight"
+            title="Profit (%)"
+            minimumValue="0"  labelLocation="OutsideRight"
+            maximumValue="100" >
+            </igx-numeric-y-axis>        
+            <igx-column-series name="series1"
+            valueMemberPath="Revenue"
+            xAxisName="xAxisMonths"
+            yAxisName="yAxisLeft" >
+            </igx-column-series>
+            <igx-column-series name="series3"
+            valueMemberPath="Expanse"
+            xAxisName="xAxisMonths"
+            yAxisName="yAxisLeft" >
+            </igx-column-series>
+            <igx-column-series name="series2"
+            valueMemberPath="Profit"
+            xAxisName="xAxisYears"
+            yAxisName="yAxisRight" >
+            </igx-column-series>
+         </igx-data-chart>
 ```
 
 ### Additional Resources

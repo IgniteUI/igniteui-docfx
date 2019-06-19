@@ -27,9 +27,3 @@ Similarly to other types of geographic series in the map component, the `Geograp
 ### Code Snippet
 
 The following code shows how to bind the `GeographicSymbolSeries` to locations of cities loaded from a shape file using the `ShapeDataSource`.
-
-<!-- Angular -->
-
-```html
-TODO - ADD CODE SNIPPET
-```

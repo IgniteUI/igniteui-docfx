@@ -90,9 +90,9 @@ import { IgxStepAreaSeries } from "igniteui-angular-charts/ES5/igx-step-area-ser
 import { IgxStepLineSeries } from "igniteui-angular-charts/ES5/igx-step-line-series";
 import { IgxWaterfallSeries } from "igniteui-angular-charts/ES5/igx-waterfall-series";
 // data chart's modules:
-import { IgxDataChartModule } from 'igniteui-angular-charts/ES5/igx-data-chart-module';
-import { IgxDataChartCoreModule } from 'igniteui-angular-charts/ES5/igx-data-chart-core--module';
-import { IgxDataChartCategoryModule } from 'igniteui-angular-charts/ES5/igx-data-chart-category--module';
+import { IgxDataChartModule } from "igniteui-angular-charts/ES5/igx-data-chart-module";
+import { IgxDataChartCoreModule } from "igniteui-angular-charts/ES5/igx-data-chart-core--module";
+import { IgxDataChartCategoryModule } from "igniteui-angular-charts/ES5/igx-data-chart-category--module";
 
 @NgModule({
     imports: [
