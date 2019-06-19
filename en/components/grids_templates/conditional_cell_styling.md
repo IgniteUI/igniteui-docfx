@@ -1,29 +1,29 @@
 @@if (igxName === 'IgxGrid') {
 ---
-title: Conditional Cell Styling - Native Angular | Ignite UI for Angular
-_description: Conditional Cell Styling feature provides a means for column cells styling based on custom conditions.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Grid, Angular Table, Angular Data Grid component, Angular Data Table component, Angular Data Grid control, Angular Data Table control, Angular Grid component, Angular Table component, Angular Grid control, Angular Table control, Angular High Performance Grid, Angular High Performance Data Table, Cell Styling, Conditional Formatting, Conditional Cell Styling, Angular Grid Conditional Column Styling, Angular Data Table Conditional Column Styling, Angular Conditional Cell Styling
+title: Angular Conditional Cell Styling | Ignite UI for Angular | Infragistics 
+_description: Define a variety of styles with the help of the conditional styling feature of the material ui grid, by using different material styling guidelines with a rich API
+_keywords: conditional styling, ignite ui for angular, infragistics
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Conditional Cell Styling - Native Angular | Ignite UI for Angular
-_description: Conditional Cell Styling feature provides a means for column cells styling based on custom conditions.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Tree Grid, Angular Tree Table, Angular Tree Grid component, Angular Tree Table component, Angular Tree Grid control, Angular Tree Table control, Angular Tree Grid component, Angular Tree Table component, Angular Tree Grid control, Angular Tree Table control, Angular High Performance Tree Grid, Angular High Performance Tree Table, Cell Styling, Conditional Formatting, Conditional Cell Styling, Angular Tree Grid Conditional Column Styling, Angular Tree Table Conditional Column Styling, Angular Conditional Cell Styling
+title: Angular Conditional Cell Styling | Ignite UI for Angular | Infragistics 
+_description: Define a variety of styles with the help of the conditional styling feature of the material ui grid, by using different material styling guidelines with a rich API
+_keywords: conditional styling, ignite ui for angular, infragistics
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Conditional Cell Styling - Native Angular | Ignite UI for Angular
-_description: Conditional Cell Styling feature provides a means for column cells styling based on custom conditions.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Hierarchical Grid, Angular Hierarchical Table, Angular Hierarchical Grid component, Angular Hierarchical Table component, Angular Hierarchical Grid control, Angular Hierarchical Table control, Angular High Performance Hierarchical Grid, Angular High Performance Hierarchical Table, Cell Styling, Conditional Formatting, Conditional Cell Styling, Angular Hierarchical Grid Conditional Column Styling, Angular Hierarchical Table Conditional Column Styling, Angular Conditional Cell Styling
+title: Angular Conditional Cell Styling | Ignite UI for Angular | Infragistics 
+_description: Define a variety of styles with the help of the conditional styling feature of the material ui grid, by using different material styling guidelines with a rich API
+_keywords: conditional styling, ignite ui for angular, infragistics
 ---
 }
 
-### Conditional Cell Styling
-The @@igxName component in Ignite UI for Angular provides **conditional cell styling** based on custom rules.
+### @@igxName Conditional Cell Styling
+The @@igxName component in Ignite UI for Angular provides **conditional styling of cells** based on custom rules.
 
-This can be achieved by setting the [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) input [`cellClasses`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#cellclasses) to an object literal containing key-value pairs. The key is the name of the CSS class, while the value is either a callback function that returns a boolean, or boolean value.
+This can be achieved by setting the [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) input [`cellClasses`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#cellclasses) to an object literal containing key-value pairs. The key is the name of the CSS class, while the value is either a callback function that returns a boolean, or boolean value. The result is a convenient material styling of the cell.
 
 #### Demo
 
