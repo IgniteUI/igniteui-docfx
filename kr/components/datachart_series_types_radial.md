@@ -5,7 +5,7 @@ _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Nati
 _language: kr
 ---
 
-## Radial Series
+## 레이디얼 시리즈
 
 이 항목에서는 `IgxDataChart` 제어에서 다양한 유형의 레이디얼 시리즈에 대해 설명합니다. 레이디얼 시리즈는 [카테고리 시리즈](datachart_series_types_category.md)처럼 가로 라인에 따라 늘어나는 것이 아니라 데이터를 원형으로 감싼 데이터 점 컬렉션으로 데이터를 렌더링하는 시리즈의 그룹입니다. 레이디얼 시리즈는 차트 범위의 최소값에서 최대값까지 카테고리 목록을 매핑하고 [카테고리 시리즈](datachart_series_types_category.md)의 동일한 카테고리 그룹화 메커니즘을 지원합니다.
 
