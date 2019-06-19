@@ -104,11 +104,11 @@ this.@@igObjectRef.perPage = 25;
 this.@@igObjectRef.paging = false;
 ```
 
-@@if (igxName === 'IgxGrid' || igxName === 'IgxHierarchicalGrid') {
 ### リモート データ
 
 ページングはリモート データで処理することもできます。
 
+@@if (igxName === 'IgxGrid' || igxName === 'IgxHierarchicalGrid') {
 はじめにデータ フェッチングを行うサービスを宣言します。
 ページ カウントを計算するためにすべてのデータ項目のカウントをが必要なため、ロジックをサービスに追加する必要があります。
 ```typescript
@@ -185,6 +185,17 @@ export class HGridRemotePagingSampleComponent implements OnInit, AfterViewInit, 
 
 }
 }
+```
+}
+}
+@@if (igxName === 'IgxTreeGrid') {
+このサンプルでは、​​子レコードがいくつあっても、ページごとに一定数のルート レコードを表示する方法を示します。レベル (root または child) に関係なく一定数のレコードを表示するビルトインの Tree Grid ページング アルゴリズムをキャンセルするには、[`perPage`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#perpage) プロパティを `Number.MAX_SAFE_INTEGER` に設定してください。
+```html
+<igx-tree-grid #treeGrid ...
+               [paging]="true" [perPage]="maxPerPage">
+```
+```typescript
+public maxPerPage = Number.MAX_SAFE_INTEGER;
 ```
 }
 要求されたページのデータのみを取得し、選択したページと項目 [`perPage`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#perpage) に基づいて `skip` と `top` パラメーターをリモート サービスに渡すためのカスタム ページャー テンプレートを作成します。
@@ -358,6 +369,82 @@ public ngAfterViewInit() {
 
 ```
 }
+@@if (igxName === 'IgxTreeGrid') {
+```html
+<ng-template #customPager let-api>
+    <button [disabled]="firstPage" (click)="paginate(0, false)" igxButton="icon" igxRipple
+        igxRippleCentered="true">
+        <igx-icon fontSet="material">first_page</igx-icon>
+    </button>
+    <button [disabled]="firstPage" (click)="previousPage()" igxButton="icon" igxRipple igxRippleCentered="true">
+        <igx-icon fontSet="material">chevron_left</igx-icon>
+    </button>
+    <span>{{ page + 1 }} of {{totalPages}}</span>
+    <button [disabled]="lastPage" (click)="nextPage()" igxRipple igxRippleCentered="true" igxButton="icon">
+        <igx-icon fontSet="material">chevron_right</igx-icon>
+    </button>
+    <button [disabled]="lastPage" (click)="paginate(totalPages - 1, false)" igxButton="icon" igxRipple
+        igxRippleCentered="true">
+        <igx-icon fontSet="material">last_page</igx-icon>
+    </button>
+    <select style="margin-left: 1rem;" (change)="perPage = parseToInt($event.target.value);">
+        <option [value]="val" [selected]="perPage == val" *ngFor="let val of [5, 10, 12, 25, 50]">{{ val
+        }}</option>
+    </select>
+</ng-template>
+```
+
+```typescript
+public nextPage() {
+    this.firstPage = false;
+    this.page++;
+    const skip = this.page * this.perPage;
+    const top = this.perPage;
+    this.remoteService.getData(skip, top);
+    if (this.page + 1 >= this.totalPages) {
+        this.lastPage = true;
+    }
+}
+
+public previousPage() {
+    this.lastPage = false;
+    this.page--;
+    const skip = this.page * this.perPage;
+    const top = this.perPage;
+    this.remoteService.getData(skip, top);
+    if (this.page <= 0) {
+        this.firstPage = true;
+    }
+}
+
+public paginate(page: number, recalc: true) {
+    this.page = page;
+    const skip = this.page * this.perPage;
+    const top = this.perPage;
+    if (recalc) {
+        this.totalPages = Math.ceil(this.totalCount / this.perPage);
+    }
+    this.remoteService.getData(skip, top);
+    this.buttonDeselection(this.page, this.totalPages);
+}
+
+public buttonDeselection(page: number, totalPages: number) {
+    if (totalPages === 1) {
+        this.lastPage = true;
+        this.firstPage = true;
+    } else if (page + 1 >= totalPages) {
+        this.lastPage = true;
+        this.firstPage = false;
+    } else if (page !== 0 && page !== totalPages) {
+        this.lastPage = false;
+        this.firstPage = false;
+    } else {
+        this.lastPage = false;
+        this.firstPage = true;
+    }
+}
+```
+}
 最後にグリッドのテンプレートを宣言します。
 @@if (igxName === 'IgxGrid') {
 ```html
@@ -385,6 +472,23 @@ public ngAfterViewInit() {
 </igx-hierarchical-grid>
 ```
 }
+@@if (igxName === 'IgxTreeGrid') {
+```html
+<igx-tree-grid #treeGrid [data]="data | async" childDataKey="Content" expansionDepth="0" width="100%"
+                [paging]="true" [perPage]="maxPerPage" [paginationTemplate]="customPager">
+    <igx-column field="Name">
+        <ng-template igxCell let-cell="cell" let-val>
+            <igx-icon *ngIf="cell.rowData.Type === 'File folder'" fontSet="material" class="typeIcon">folder</igx-icon>
+            <igx-icon *ngIf="cell.rowData.Type === 'JPG File'" fontSet="material" class="typeIcon">photo</igx-icon>
+            {{val}}
+        </ng-template>
+    </igx-column>
+    <igx-column field="Type"></igx-column>
+    <igx-column field="Size" dataType="number" [formatter]="formatSize"></igx-column>
+</igx-tree-grid>
+```
+}
+@@if (igxName === 'IgxGrid') {
 これでサンプルを実行できます。またパージング テンプレートをランタイムで変更するオプションを追加してサンプルを更に拡張できます。以下は、実装方法です。はじめにテンプレートにもう 1 つページング テンプレートを追加します。
 
 ```html
@@ -436,6 +540,7 @@ public changeTemplate() {
     this.grid1.cdr.detectChanges();
 }
 ```
+}
 
 上記すべての設定を完了すると以下のような結果になります。
 
@@ -459,7 +564,18 @@ public changeTemplate() {
 </div>
 <div class="divider--half"></div>
 }
+@@if (igxName === 'IgxTreeGrid') {
+<div class="sample-container loading" style="height:560px">
+    <iframe id="tree-grid-remote-paging-sample-iframe" data-src='{environment:demosBaseUrl}/tree-grid/treegrid-remote-paging' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-remote-paging-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
+}
 
+@@if (igxName === 'IgxGrid') {
 このサンプルのルックアンドフィール再現するにはカスタム ページング テーマを適用してください。
 
 ```css
