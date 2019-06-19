@@ -1,30 +1,28 @@
 ﻿@@if (igxName === 'IgxGrid') {
 ---
-title: 그리드 검색
-_description: The Ignite UI for Angular Data Grid control features a search API that allows developers to implement search functionality within the grid.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Grid, Angular Table, Angular Data Grid component, Angular Data Table component, Angular Data Grid control, Angular Data Table control, Angular Grid component, Angular Table component, Angular Grid control, Angular Table control, Angular High Performance Grid, Angular High Performance Data Table, Data Grid Searching, Data Table Search
-_language: kr
+title: Angular Grid search | search data | Ignite UI for Angular | Infragistics 
+_description: Learn how to perform grid seach with the Ignite Angular material table using rich API. It also allows instant content search in the virtualized data of the Grid
+_keywords: Content search, ignite ui for angular, infragistics
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: 트리 그리드 검색
-_description: The Ignite UI for Angular Tree Grid control features a search API that allows developers to implement search functionality within the tree grid.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Tree Grid, Angular Tree Table, Angular Tree Grid component, Angular Tree Table component, Angular Tree Grid control, Angular Tree Table control, Angular Tree Grid component, Angular Tree Table component, Angular Tree Grid control, Angular Tree Table control, Angular High Performance Tree Grid, Angular High Performance Tree Table, Tree Grid Searching, Tree Table Search
-_language: kr
+title: Angular Tree Grid search | search data | Ignite UI for Angular | Infragistics
+_description: Learn how to perform grid seach with the Ignite Angular material table using rich API. It also allows instant content search in the virtualized data of the Grid
+_keywords: Content search, ignite ui for angular, infragistics
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: 계층 그리드 검색
-_description: The Ignite UI for Angular Hierarchical Grid control features a search API that allows developers to implement search functionality within the grid.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Hierarchical Grid, Angular Hierarchical Table, Angular Hierarchical Grid component, Angular Hierarchical Table component, Angular Hierarchical Grid control, Angular Hierarchical Table control, Angular High Performance Hierarchical Grid, Angular High Performance Hierarchical Table, Hierarchical Grid Searching, Hierarchical Table Search
-_language: kr
+title: Angular Hierarchical Grid search | search data | Ignite UI for Angular | Infragistics
+_description: Learn how to perform grid seach with the Ignite Angular material table using rich API. It also allows instant content search in the virtualized data of the Grid
+_keywords: Content search, ignite ui for angular, infragistics
 ---
 }
-### @@igComponent 검색
 
-브라우저는 기본적으로 검색 기능을 제공하지만 대부분의 경우 @@igComponent의 열과 행이 표시되지 않게 가상화합니다. 이러한 경우 네이티브 검색은 DOM의 일부가 아니므로 가상화된 셀을 검색할 수 없습니다. Ignite UI for Angular @@igComponent를 **검색 API**를 사용하여 확장했기 때문에 @@igComponent의 **가상화된 콘텐츠**를 통해 검색할 수 있게 됩니다.
+### @@igComponent Searching through virtualized content
+
+While browsers natively provide content search functionality, most of the time the @@igComponent virtualizes its columns and rows that are out of view. In these cases, the native grid search is unable to search data in the virtualized cells, since they are not part of the DOM. We have extended the Ignite UI for Angular material table based grid with a **search API** that allows you to search through the **virtualized content** of the @@igComponent.
 
 #### 데모
 
