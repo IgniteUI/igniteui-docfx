@@ -6,7 +6,7 @@ _keywords: Excel library, Ignite UI for Angular, Infragistics
 
 ## Using Tables
 
-The Infragistics Angular Excel Engine's `WorksheetTable` functionality allows you to format your data in rows and columns The data in a worksheet table can be managed independently from the data in the other rows and columns in a `Worksheet`.
+The Infragistics Angular Excel Engine's `WorksheetTable` functionality allows you to format your data in rows and columns The data in a worksheet table can be managed independently from the data in the other rows and columns in a `worksheet`.
 
 <!--### Demo
 

@@ -6,7 +6,7 @@ _keywords: map, Ignite UI for Angular, infragistics
 
 ## Using Scatter Symbol Series
 
-Use the map component's `GeographicSymbolSeries` to display geo-spatial data using points or markers in a geographic context. This type of geographic series is often used to render a collection of geographic locations such as cities, airports, earthquakes, or points of interests.
+Use the map component's `IgxGeographicSymbolSeriesComponent` to display geo-spatial data using points or markers in a geographic context. This type of geographic series is often used to render a collection of geographic locations such as cities, airports, earthquakes, or points of interests.
 
 ### Demo
 
@@ -22,8 +22,8 @@ Use the map component's `GeographicSymbolSeries` to display geo-spatial data usi
 
 ### Data Requirements
 
-Similarly to other types of geographic series in the map component, the `GeographicSymbolSeries` has the `ItemsSource` property which can be bound to an array of objects. In addition, each data item in this object must have two numeric data columns that store a geographic location (longitude and latitude). These data columns are then mapped to the `LatitudeMemberPath` and `LongitudeMemberPath` properties. The `GeographicSymbolSeries` uses values of these mapped data columns to plot symbol elements in the geographic map component.
+Similarly to other types of geographic series in the map component, the `IgxGeographicSymbolSeriesComponent` has the `ItemsSource` property which can be bound to an array of objects. In addition, each data item in this object must have two numeric data columns that store a geographic location (longitude and latitude). These data columns are then mapped to the `latitudeMemberPath` and `longitudeMemberPath` properties. The `IgxGeographicSymbolSeriesComponent` uses values of these mapped data columns to plot symbol elements in the geographic map component.
 
 ### Code Snippet
 
-The following code shows how to bind the `GeographicSymbolSeries` to locations of cities loaded from a shape file using the `ShapeDataSource`.
+The following code shows how to bind the `IgxGeographicSymbolSeriesComponent` to locations of cities loaded from a shape file using the `ShapeDataSource`.

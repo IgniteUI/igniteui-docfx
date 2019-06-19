@@ -27,8 +27,8 @@ By using a smart Data Adapter, the data is analyzed and the appropriate visualiz
 
 However, you can also explicitly specify the chart type by setting the `ChartType` to:
 
--   `Line`
--   `Area`
+-   `line`
+-   `area`
 -   `IgxColumnComponent`
 -   `Point`
 -   `Spline`
@@ -107,8 +107,8 @@ Below are listed all of the types that the category chart supports.
 
 | Property             | Description                                                                        | Example                                      |
 | -------------------- | ---------------------------------------------------------------------------------- | -------------------------------------------- |
-| `Line`               | Specifies category line series with markers at each data point                     | ![](../images/category_chart_line.png)       |
-| `Area`               | Specifies category area series                                                     | ![](../images/category_chart_area.png)       |
+| `line`               | Specifies category line series with markers at each data point                     | ![](../images/category_chart_line.png)       |
+| `area`               | Specifies category area series                                                     | ![](../images/category_chart_area.png)       |
 | `IgxColumnComponent` | Specifies category column chart with vertical rectangles at each data point        | ![](../images/category_chart_column.png)     |
 | `Point`              | Specifies category point chart with markers at each data point                     | ![](../images/category_chart_point.png)      |
 | `StepLine`           | Specifies category step line chart                                                 | ![](../images/category_chart_stepline.png)   |

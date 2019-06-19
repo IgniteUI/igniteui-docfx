@@ -6,7 +6,7 @@ _keywords: map, Ignite UI for Angular, infragistics
 
 ## Binding and Overlaying Multiple Shape Files
 
-In the `GeographicMap`, you can add multiple geographic series objects to overlay a few shapefiles with geo-spacial data. For example, `GeographicSymbolSeries` for plotting geographic locations of ports, the `GeographicPolylineSeries` for plotting routes between ports, and the `GeographicShapeSeries` for plotting shapes of countries.
+In the `GeographicMap`, you can add multiple geographic series objects to overlay a few shapefiles with geo-spacial data. For example, `IgxGeographicSymbolSeriesComponent` for plotting geographic locations of ports, the `IgxGeographicPolylineSeriesComponent` for plotting routes between ports, and the `IgxGeographicShapeSeriesComponent` for plotting shapes of countries.
 
 ### Demo
 
@@ -22,9 +22,9 @@ In the `GeographicMap`, you can add multiple geographic series objects to overla
 
 This topic takes you step-by-step towards displaying multiple geographic series in the map component. All geographic series plot following geo-spatial data loaded from shape files using the `ShapeDataSource` class. Refer to the [Binding Shape Files](map_binding_geographic_shape_files.md) topic for more information about `ShapeDataSource` object.
 
--   `GeographicSymbolSeries` – displays locations of major cities
--   `GeographicPolylineSeries` – displays routes between major ports
--   `GeographicShapeSeries` – displays shapes of countries of the world
+-   `IgxGeographicSymbolSeriesComponent` – displays locations of major cities
+-   `IgxGeographicPolylineSeriesComponent` – displays routes between major ports
+-   `IgxGeographicShapeSeriesComponent` – displays shapes of countries of the world
 
 You can use geographic series in this or other combinations to plot desired data.
 
@@ -55,14 +55,14 @@ sdsLocations.dataBind();
 
 ### Overlaying Shape Polygons
 
-Create `GeographicShapeSeries` object with shapes of countries of the world and add it to `IgxSeriesComponent` collection of the `GeographicMap`.
+Create `IgxGeographicShapeSeriesComponent` object with shapes of countries of the world and add it to `IgxSeriesComponent` collection of the `GeographicMap`.
 
 ### Overlaying Shape Polyline
 
-Create `GeographicPolylineSeries` object with routes between major ports and add it to `IgxSeriesComponent` collection of the `GeographicMap`.
+Create `IgxGeographicPolylineSeriesComponent` object with routes between major ports and add it to `IgxSeriesComponent` collection of the `GeographicMap`.
 
 ### Overlaying Shape Points
 
-Create `GeographicSymbolSeries` object with locations of major cities and add it to `IgxSeriesComponent` collection of the `GeographicMap`.
+Create `IgxGeographicSymbolSeriesComponent` object with locations of major cities and add it to `IgxSeriesComponent` collection of the `GeographicMap`.
 
 Also, you might want to hide geographic imagery from the map background content if your shape files provided sufficient geographic context (e.g. shape of countries) for your application.
