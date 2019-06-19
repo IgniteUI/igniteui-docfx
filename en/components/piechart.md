@@ -36,7 +36,7 @@ The `IgxPieChart` requires the following modules:
 ```typescript
 // app.module.ts
 
-import { IgxPieChartModule } from 'igniteui-angular-charts/ES5/igx-pie-chart-module';
+import { IgxPieChartModule } from "igniteui-angular-charts/ES5/igx-pie-chart-module";
 
 @NgModule({
     imports: [

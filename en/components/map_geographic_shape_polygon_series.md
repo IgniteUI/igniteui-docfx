@@ -35,7 +35,3 @@ The following code demonstrates how to bind the `GeographicShapeSeries` to shape
 ```html
 TODO - ADD CODE SNIPPET
 ```
-
-```typescript
-
-```

@@ -40,7 +40,7 @@ The `IgxGeographicMap` requires the following modules:
 
 ```typescript
 // app.module.ts
-import {IgxMapModule} from 'igniteui-angular-maps/ES5/igx-map-module'
+import {IgxMapModule} from "igniteui-angular-maps/ES5/igx-map-module";
 
 @NgModule({
     imports: [

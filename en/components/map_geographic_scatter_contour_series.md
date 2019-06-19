@@ -63,7 +63,3 @@ The following code shows how to bind the `GeographicContourLineSeries` to triang
 ```html
 TODO - ADD CODE SNIPPET
 ```
-
-```typescript
-
-```

@@ -20,7 +20,7 @@ The Angular Spreadsheet component allows you to perform commands for activatinig
 
 Before making use of the commands you will want to import the `SpreadsheetAction`
 
-```typescript
+```ts
 import { IgxSpreadsheetComponent } from "igniteui-angular-spreadsheet/ES5/igx-spreadsheet-component";
 import { SpreadsheetAction } from "igniteui-angular-spreadsheet/ES5/SpreadsheetAction";
 ```
@@ -31,7 +31,7 @@ import { SpreadsheetAction } from "igniteui-angular-spreadsheet/ES5/SpreadsheetA
 
 The following snippet shows how you can setup the data validation rules
 
-```typescript
+```ts
 @ViewChild("spreadsheet", { read: IgxSpreadsheetComponent })
 public spreadsheet: IgxSpreadsheetComponent;
 

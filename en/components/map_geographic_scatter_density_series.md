@@ -58,7 +58,3 @@ The following code demonstrates how set the `HeatMinimumColor` and `HeatMaximumC
 ```html
 TODO - ADD CODE SNIPPET
 ```
-
-```typescript
-
-```

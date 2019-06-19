@@ -25,9 +25,9 @@ import { Workbook } from "igniteui-angular-excel/ES5/Workbook";
 import { WorkbookFormat } from "igniteui-angular-excel/ES5/WorkbookFormat";
 import { Worksheet } from "igniteui-angular-excel/ES5/Worksheet";
 import { WorksheetTable } from "igniteui-angular-excel/ES5/WorksheetTable";
-import { NamedReference } from 'igniteui-angular-excel/ES5/NamedReference';
-import { WorksheetCellComment } from 'igniteui-angular-excel/ES5/WorksheetCellComment'; 
-import { FormattedString } from 'igniteui-angular-excel/ES5/FormattedString'; 
+import { NamedReference } from "igniteui-angular-excel/ES5/NamedReference";
+import { WorksheetCellComment } from "igniteui-angular-excel/ES5/WorksheetCellComment"; 
+import { FormattedString } from "igniteui-angular-excel/ES5/FormattedString"; 
 ```
 
 ### Referencing Cells and Regions
