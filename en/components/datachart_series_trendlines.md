@@ -24,20 +24,20 @@ Trendlines in the Angular data chart component are not on by default. In order t
 
 Trendlines are supported on all series except for stacked and range series. Below is a list of trendlines that can be used with the series of the data chart:
 
--   `None`
--   `CubicFit`
--   `CumulativeAverage`
--   `ExponentialAverage`
--   `ExponentialFit`
--   `LinearFit`
--   `LogarithmicFit`
--   `ModifiedAverage`
--   `PowerLawFit`
--   `QuadraticFit`
--   `QuarticFit`
--   `QuinticFit`
--   `SimpleAverage`
--   `WeightedAverage`
+-   [`None`](/angular-apis/typescript/latest/enums/trendlinetype.html#none)
+-   [`CubicFit`](/angular-apis/typescript/latest/enums/trendlinetype.html#cubicfit)
+-   [`CumulativeAverage`](/angular-apis/typescript/latest/enums/trendlinetype.html#cumulativeaverage)
+-   [`ExponentialAverage`](/angular-apis/typescript/latest/enums/trendlinetype.html#exponentialaverage)
+-   [`ExponentialFit`](/angular-apis/typescript/latest/enums/trendlinetype.html#exponentialfit)
+-   [`LinearFit`](/angular-apis/typescript/latest/enums/trendlinetype.html#linearfit)
+-   [`LogarithmicFit`](/angular-apis/typescript/latest/enums/trendlinetype.html#logarithmicfit)
+-   [`ModifiedAverage`](/angular-apis/typescript/latest/enums/trendlinetype.html#modifiedaverage)
+-   [`PowerLawFit`](/angular-apis/typescript/latest/enums/trendlinetype.html#powerlawfit)
+-   [`QuadraticFit`](/angular-apis/typescript/latest/enums/trendlinetype.html#quadraticfit)
+-   [`QuarticFit`](/angular-apis/typescript/latest/enums/trendlinetype.html#quarticfit)
+-   [`QuinticFit`](/angular-apis/typescript/latest/enums/trendlinetype.html#quinticfit)
+-   [`SimpleAverage`](/angular-apis/typescript/latest/enums/trendlinetype.html#simpleaverage)
+-   [`WeightedAverage`](/angular-apis/typescript/latest/enums/trendlinetype.html#weightedaverage)
 
 The following code snippet demonstrates how to add a trendline to a series in the Angular data chart component:
 

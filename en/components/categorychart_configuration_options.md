@@ -1,7 +1,8 @@
 ---
 title: Category Chart | Data Visualization Tools | Ignite UI for Angular | Configuration Options | Infragistics 
 _description: Use the category chart component to analyze and  automatically choose the best chart type to represent data. Learn about our chart types for visualization.
-_keywords: category chart, Ignite UI for Angular, infragistics 
+_keywords: category chart, Ignite UI for Angular, infragistics
+mentionedTypes: ['CategoryChart'] 
 ---
 
 ## Configuration Options
@@ -39,7 +40,7 @@ As shown in the above demo, the brushes for the chart types can be configured. T
 
 Markers are visual elements that display the values of data points in the category chart component's plot area. Markers help your end-users immediately identify a data point's value even if the value falls between major or minor grid lines.
 
-The appearance of chart markers is managed through the `markerType`, `markerBrushes`, `markerOutlines` properties of the category chart, as demonstrated in the following code example.
+The appearance of chart markers is managed through the `MarkerType`, `MarkerBrushes`, `MarkerOutlines` properties of the category chart, as demonstrated in the following code example.
 
 ```html
 <igx-category-chart
@@ -79,7 +80,7 @@ This feature allows you to animate the series as it loads a new data source. The
 
 The chart resizes allowing for the title and subtitle information.
 
-By default, transition in animations are disabled and you can enable transition-in animations by setting the `isTransitionInEnabled` option to “true”.
+By default, transition in animations are disabled and you can enable transition-in animations by setting the [`isTransitionInEnabled`](/angular-apis/typescript/latest/classes/igxcategorychartcomponent.html#istransitioninenabled) option to “true”.
 
 Transition in animations can be configured in terms of transition type, speed of the individual data points relative to each other, and the easing transition (managed by an easing function).
 

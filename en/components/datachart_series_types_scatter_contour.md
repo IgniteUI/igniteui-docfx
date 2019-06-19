@@ -31,7 +31,7 @@ The `IgxScatterContourSeriesComponent` has the following data requirements:
 
 -   The data source must be an array or a list of data items
 -   The data source must contain at least one data item otherwise the chart will not render the scatter shape series.
--   All data items must contain 3 numeric data columns which should be mapped to the `XMemberPath`, `YMemberPath`, and `valueMemberPath` properties.
+-   All data items must contain 3 numeric data columns which should be mapped to the `XMemberPath`, `YMemberPath`, and [`valueMemberPath`](/angular-apis/typescript/latest/classes/igxscattercontourseriescomponent.html#valuememberpath) properties.
 
 You can use the [SampleScatterData](datachart_data_sources_scatter.md) as data source which meets above data requirements.
 
@@ -93,7 +93,7 @@ This code demonstrates how to create an instance of data chart with  `IgxScatter
 
 ### Contour Fill Scale
 
-Use the `fillScale` property of the`IgxScatterContourSeriesComponent` to resolve fill brushes of the contour lines.
+Use the [`fillScale`](/angular-apis/typescript/latest/classes/igxscattercontourseriescomponent.html#fillscale) property of the`IgxScatterContourSeriesComponent` to resolve fill brushes of the contour lines.
 
 The provided `IgxValueBrushScaleComponent` class should satisfy most coloring needs, but you can inherit from this class and provide your own coloring logic. The following table lists properties of the `IgxValueBrushScaleComponent` affecting the surface coloring of the `IgxScatterContourSeriesComponent`:
 
@@ -103,7 +103,7 @@ The provided `IgxValueBrushScaleComponent` class should satisfy most coloring ne
 
 ### Contour Value Resolver
 
-The `IgxScatterContourSeriesComponent` renders using exactly 10 contour lines at even intervals between the minimum and maximum values of the items mapped to the `valueMemberPath` property. If you desire more or fewer contours, you can assign the `IgxLinearContourValueResolverComponent` with a number of contours to the `ValueResolver` property of the `IgxScatterContourSeriesComponent`.
+The `IgxScatterContourSeriesComponent` renders using exactly 10 contour lines at even intervals between the minimum and maximum values of the items mapped to the [`valueMemberPath`](/angular-apis/typescript/latest/classes/igxscattercontourseriescomponent.html#valuememberpath) property. If you desire more or fewer contours, you can assign the `IgxLinearContourValueResolverComponent` with a number of contours to the `ValueResolver` property of the `IgxScatterContourSeriesComponent`.
 
 The following code shows how to configure the number of contour lines in the `IgxScatterContourSeriesComponent`.
 

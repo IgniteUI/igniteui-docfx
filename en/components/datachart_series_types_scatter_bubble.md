@@ -31,7 +31,7 @@ The `IgxBubbleSeriesComponent` has the following data requirements:
 
 -   The data source must be an array or a list of data items
 -   The data source must contain at least one data item otherwise the chart will not render the scatter shape series.
--   All data items must contain 3 numeric data columns which should be mapped to the `XMemberPath`, `YMemberPath`, and `radiusMemberPath` properties
+-   All data items must contain 3 numeric data columns which should be mapped to the `XMemberPath`, `YMemberPath`, and [`radiusMemberPath`](/angular-apis/typescript/latest/classes/igxbubbleseriescomponent.html#radiusmemberpath) properties
 
 You can use the [SampleScatterStats](datachart_data_sources_stats.md) as data source which meets above data requirements.
 
@@ -117,7 +117,7 @@ series1.markerOutline = "Blue";
 
 ### Bubble Radius Scale
 
-The `radiusScale` is an optional feature of `IgxBubbleSeriesComponent` that determines the sizes of bubbles. This feature is implemented through the`IgxSizeScaleComponent` object. When the radius scale is set, the smallest bubble will be equal to `minimumValue`, the largest bubble will be equal to `maximumValue`, and all the remaining bubbles will be scaled accordingly. The size scale can be either linear or logarithmic. When the radius scale is not set, each bubble’s size is equal to the value of data column mapped to `RadiusMemberPath` property
+The [`radiusScale`](/angular-apis/typescript/latest/classes/igxbubbleseriescomponent.html#radiusscale) is an optional feature of `IgxBubbleSeriesComponent` that determines the sizes of bubbles. This feature is implemented through the`IgxSizeScaleComponent` object. When the radius scale is set, the smallest bubble will be equal to [`minimumValue`](/angular-apis/typescript/latest/classes/igxsizescalecomponent.html#minimumvalue), the largest bubble will be equal to [`maximumValue`](/angular-apis/typescript/latest/classes/igxsizescalecomponent.html#maximumvalue), and all the remaining bubbles will be scaled accordingly. The size scale can be either linear or logarithmic. When the radius scale is not set, each bubble’s size is equal to the value of data column mapped to `RadiusMemberPath` property
 
 ```typescript
 const sizeScale = new IgxSizeScale({});
@@ -132,8 +132,8 @@ series1.radiusScale = sizeScale;
 
 The `FillScale` is an optional feature which determines the color pattern within a single `IgxBubbleSeriesComponent`. This series supports the following fill scales:
 
--   `IgxValueBrushScaleComponent` uses a set of values from data column mapped to `FillMemberPath` property to determine an interpolated brush for bubbles. Also, it can have user-specified `minimumValue` and `maximumValue`. When a range is set on this scale, bubbles with values that fall outside the range do not get a brush from the `Brushes` collection and are not colored.
--   `IgxCustomPaletteBrushScaleComponent` uses the index of a bubble marker to select a brush from the `Brushes` collection. When the `brushSelectionMode` property is set to the `Select` enumerable value, the bubbles are colored sequentially and it is set to `Interpolate`, the brush is interpolated based on the bubble’s index and the number of brushes in the collection.
+-   `IgxValueBrushScaleComponent` uses a set of values from data column mapped to `FillMemberPath` property to determine an interpolated brush for bubbles. Also, it can have user-specified [`minimumValue`](/angular-apis/typescript/latest/classes/igxvaluebrushscalecomponent.html#minimumvalue) and [`maximumValue`](/angular-apis/typescript/latest/classes/igxvaluebrushscalecomponent.html#maximumvalue). When a range is set on this scale, bubbles with values that fall outside the range do not get a brush from the `Brushes` collection and are not colored.
+-   `IgxCustomPaletteBrushScaleComponent` uses the index of a bubble marker to select a brush from the `Brushes` collection. When the [`brushSelectionMode`](/angular-apis/typescript/latest/classes/igxcustompalettebrushscalecomponent.html#brushselectionmode) property is set to the `Select` enumerable value, the bubbles are colored sequentially and it is set to `Interpolate`, the brush is interpolated based on the bubble’s index and the number of brushes in the collection.
 
 ```typescript
 const brushScale = new IgxValueBrushScale({});

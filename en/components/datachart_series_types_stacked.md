@@ -20,7 +20,7 @@ This topic explains the various types of stacked series in the Angular data char
 
 <div class="divider--half"></div>
 
-Each stacked series has its own `IgxSeriesComponent` collection in which you can place the `IgxStackedFragmentSeriesComponent` elements. These fragments are what make up the actual rendering of the chart and are the elements that accept the `valueMemberPath`.
+Each stacked series has its own `IgxSeriesComponent` collection in which you can place the `IgxStackedFragmentSeriesComponent` elements. These fragments are what make up the actual rendering of the chart and are the elements that accept the [`valueMemberPath`](/angular-apis/typescript/latest/classes/igxstackedfragmentseriescomponent.html#valuememberpath).
 
 ### Types of Stacked Series
 

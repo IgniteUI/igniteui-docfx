@@ -2,6 +2,7 @@
 title: Data Chart | Visualization Tools | Ignite UI for Angular | Infragistics | Axis
 _description: Create a data chart that displays multiple instances of visual elements in the same plot area in order to create composite chart views.
 _keywords: data chart, Ignite UI for Angular, Infragistics
+mentionedTypes: ['XamDataChart', 'CategoryXAxis', 'NumericYAxis', 'CategoryDateTimeXAxis', 'CategoryAxisBase', 'Axis', 'NumericAxisBase']
 ---
 
 ## Axis
@@ -115,7 +116,7 @@ The following code snippet demonstrates how to add a `IgxNumericYAxisComponent` 
 
 The `IgxTimeXAxisComponent` treats the data as a sequence of category data items that are sorted by date. Labels on this axis are placed along the X-Axis, according to the value in a data column that is mapped using the `DateTimeMemberPath` property of this axis. This type of axis is compatible with the [Financial Series](datachart_series_types_financial.md), [Range Series](datachart_series_types_range.md), and [Category Series](datachart_series_types_category.md) types.
 
-The `IgxTimeXAxisComponent` also supports the ability to exclude intervals of data with `breaks`. As a result, labels will not appear at the excluded interval. For example, working/non-working days, holidays, or weekends.
+The `IgxTimeXAxisComponent` also supports the ability to exclude intervals of data with [`breaks`](/angular-apis/typescript/latest/classes/igxtimexaxiscomponent.html#breaks). As a result, labels will not appear at the excluded interval. For example, working/non-working days, holidays, or weekends.
 
 The following code snippet demonstrates how to add a `IgxTimeXAxisComponent` to the Angular data chart component:
 

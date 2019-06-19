@@ -22,7 +22,7 @@ Use the map component's `IgxGeographicSymbolSeriesComponent` to display geo-spat
 
 ### Data Requirements
 
-Similarly to other types of geographic series in the map component, the `IgxGeographicSymbolSeriesComponent` has the `ItemsSource` property which can be bound to an array of objects. In addition, each data item in this object must have two numeric data columns that store a geographic location (longitude and latitude). These data columns are then mapped to the `latitudeMemberPath` and `longitudeMemberPath` properties. The `IgxGeographicSymbolSeriesComponent` uses values of these mapped data columns to plot symbol elements in the geographic map component.
+Similarly to other types of geographic series in the map component, the `IgxGeographicSymbolSeriesComponent` has the `ItemsSource` property which can be bound to an array of objects. In addition, each data item in this object must have two numeric data columns that store a geographic location (longitude and latitude). These data columns are then mapped to the [`latitudeMemberPath`](/angular-apis/typescript/latest/classes/igxgeographicsymbolseriescomponent.html#latitudememberpath) and [`longitudeMemberPath`](/angular-apis/typescript/latest/classes/igxgeographicsymbolseriescomponent.html#longitudememberpath) properties. The `IgxGeographicSymbolSeriesComponent` uses values of these mapped data columns to plot symbol elements in the geographic map component.
 
 ### Code Snippet
 

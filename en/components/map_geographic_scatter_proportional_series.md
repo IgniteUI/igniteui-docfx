@@ -24,19 +24,19 @@ The demo above shows the `IgxGeographicProportionalSymbolSeriesComponent` series
 
 ### Configuration Summary
 
-Similar to other types of scatter series in the map control, the `IgxGeographicProportionalSymbolSeriesComponent` series has the `ItemsSource` property which can be bound to an array of objects. In addition, each data item in the items source must have two data columns that store geographic longitude and latitude coordinates and uses the `longitudeMemberPath` and `latitudeMemberPath` properties to map these data columns. The `radiusScale` and `radiusMemberPath` will settings configures the radius for the bubbles.
+Similar to other types of scatter series in the map control, the `IgxGeographicProportionalSymbolSeriesComponent` series has the `ItemsSource` property which can be bound to an array of objects. In addition, each data item in the items source must have two data columns that store geographic longitude and latitude coordinates and uses the [`longitudeMemberPath`](/angular-apis/typescript/latest/classes/igxgeographicproportionalsymbolseriescomponent.html#longitudememberpath) and [`latitudeMemberPath`](/angular-apis/typescript/latest/classes/igxgeographicproportionalsymbolseriescomponent.html#latitudememberpath) properties to map these data columns. The [`radiusScale`](/angular-apis/typescript/latest/classes/igxgeographicproportionalsymbolseriescomponent.html#radiusscale) and [`radiusMemberPath`](/angular-apis/typescript/latest/classes/igxgeographicproportionalsymbolseriescomponent.html#radiusmemberpath) will settings configures the radius for the bubbles.
 
 The following table summarizes the GeographicHighDensityScatterSeries series properties used for data binding.
 
-| Property              | Type           | Description                                                                                           |
-| --------------------- | -------------- | ----------------------------------------------------------------------------------------------------- |
-| `ItemsSource`         | any            | Gets or sets the items source                                                                         |
-| `longitudeMemberPath` | string         | Uses the ItemsSource property to determine the location of the longitude values on the assigned items |
-| `latitudeMemberPath`  | string         | Uses the ItemsSource property to determine the location of the latitude values on the assigned items  |
-| `radiusMemberPath`    | string         | Sets the path to use to get the radius values for the series.                                         |
-| `radiusScale`         | `IgxSizeScale` | Gets or sets the radius scale property for the current bubble series.                                 |
-| `MinimumValue`        | any            | Configure the minimum value for calculating value sub ranges.                                         |
-| `MaximumValue`        | any            | Configure the maximum value for calculating value sub ranges.                                         |
+| Property                                                                                                                                 | Type           | Description                                                                                           |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------- | ----------------------------------------------------------------------------------------------------- |
+| `ItemsSource`                                                                                                                            | any            | Gets or sets the items source                                                                         |
+| [`longitudeMemberPath`](/angular-apis/typescript/latest/classes/igxgeographicproportionalsymbolseriescomponent.html#longitudememberpath) | string         | Uses the ItemsSource property to determine the location of the longitude values on the assigned items |
+| [`latitudeMemberPath`](/angular-apis/typescript/latest/classes/igxgeographicproportionalsymbolseriescomponent.html#latitudememberpath)   | string         | Uses the ItemsSource property to determine the location of the latitude values on the assigned items  |
+| [`radiusMemberPath`](/angular-apis/typescript/latest/classes/igxgeographicproportionalsymbolseriescomponent.html#radiusmemberpath)       | string         | Sets the path to use to get the radius values for the series.                                         |
+| [`radiusScale`](/angular-apis/typescript/latest/classes/igxgeographicproportionalsymbolseriescomponent.html#radiusscale)                 | `IgxSizeScale` | Gets or sets the radius scale property for the current bubble series.                                 |
+| `MinimumValue`                                                                                                                           | any            | Configure the minimum value for calculating value sub ranges.                                         |
+| `MaximumValue`                                                                                                                           | any            | Configure the maximum value for calculating value sub ranges.                                         |
 
 ### Code Snippet
 

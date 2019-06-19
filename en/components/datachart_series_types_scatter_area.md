@@ -30,7 +30,7 @@ The `IgxScatterAreaSeriesComponent` has the following data requirements:
 
 -   The data source must be an array or a list of data items
 -   The data source must contain at least one data item otherwise the chart will not render the scatter shape series.
--   All data items must contain 3 numeric data columns which should be mapped to the `XMemberPath`, `YMemberPath`, and `colorMemberPath` properties.
+-   All data items must contain 3 numeric data columns which should be mapped to the `XMemberPath`, `YMemberPath`, and [`colorMemberPath`](/angular-apis/typescript/latest/classes/igxscatterareaseriescomponent.html#colormemberpath) properties.
 
 You can use the [SampleScatterData](datachart_data_sources_scatter.md) as data source which meets above data requirements.
 
@@ -92,7 +92,7 @@ This code demonstrates how to create an instance of data chart with  `IgxScatter
 
 ### Color Scale
 
-Use the `colorScale` property of the`IgxScatterAreaSeriesComponent` to resolve values of points and thus fill the surface of the series. The colors are smoothly interpolated around the shape of the surface by applying a pixel-wise triangle rasterizer to triangulation data. Because rendering of the surface is pixel-wise, the color scale uses colors instead of brushes.
+Use the [`colorScale`](/angular-apis/typescript/latest/classes/igxscatterareaseriescomponent.html#colorscale) property of the`IgxScatterAreaSeriesComponent` to resolve values of points and thus fill the surface of the series. The colors are smoothly interpolated around the shape of the surface by applying a pixel-wise triangle rasterizer to triangulation data. Because rendering of the surface is pixel-wise, the color scale uses colors instead of brushes.
 
 The provided `IgxCustomPaletteColorScaleComponent` class should satisfy most coloring needs, but you can inherit from the `IgxColorScaleComponent` abstract class and provide your own coloring logic.
 
