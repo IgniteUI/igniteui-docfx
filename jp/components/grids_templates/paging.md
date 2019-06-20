@@ -769,6 +769,8 @@ $dark-button: igx-button-theme(
 
 Don't forget to include the themes in the same way as it was demonstrated above.
 
+@@if (igxName === 'IgxGrid'){
+
 #### Demo
 
 <div class="sample-container loading" style="height:560px">
@@ -779,6 +781,26 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="custom-grid-paging-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
+}
+
+@@if (igxName === 'IgxHierarchicalGrid'){
+#### Demo
+
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-sample-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-paging-style" 
+        data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz
+    </button>
+</div>
+}
+
+@@if (igxName === 'IgxTreeGrid'){
+#### Demo
+
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-sample-src="{environment:demosBaseUrl}/tree-grid/treegrid-paging-style" 
+        data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz
+    </button>
+</div>
 }
 
 ### API リファレンス
