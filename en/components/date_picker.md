@@ -242,7 +242,7 @@ Here is the retemplated input group:
 <div class="divider--half"></div>
 
 #### Templating Dropdown Mode Date Picker
-All the information mentioned in the <a href="#templating-dialog-mode-date-picker">Templating Dialog Mode Date Picker</a> section can be applied when re-templating a dropdown date picker. The only requirement is that an HTML element should be marked with `dropDownTarget` id to be used as a target for the calendar dropdown.
+All the information mentioned in the <a href="#templating-dialog-mode-date-picker">Templating Dialog Mode Date Picker</a> section can be applied when re-templating a dropdown date picker. The only requirement is that an HTML element should be passed to the `openDialog(target)`, and that element will be used as a positioning target for the drop down that is being spawned.
 
 <div class="sample-container loading" style="height: 650px;">
     <iframe id="date-picker-sample-7" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/datepicker-sample-7" class="lazyload"></iframe>
