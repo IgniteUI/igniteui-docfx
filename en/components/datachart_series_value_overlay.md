@@ -26,7 +26,7 @@ When using a numeric X or Y axis, the `Value` property should reflect the actual
 
 When using the value overlay with a numeric angle axis, it will appear as a line from the center of the chart and when using a numeric radius axis, it will appear as a circle.
 
-Value overlay appearance properties are inherited from `IgxSeriesComponent` and so `brush` and `thickness` for example are available and work the same way they do with other types of series.
+Value overlay appearance properties are inherited from `IgxSeriesComponent` and so [`brush`](/angular-apis/typescript/latest/classes/igxseriescomponent.html#brush) and [`thickness`](/angular-apis/typescript/latest/classes/igxseriescomponent.html#thickness) for example are available and work the same way they do with other types of series.
 
 ### Code Example - Value Overlay
 

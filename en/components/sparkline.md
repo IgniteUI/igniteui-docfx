@@ -131,20 +131,20 @@ Trendlines can only be displayed one at a time and by default, the trendline is 
 
 A list of supported trendlines can be found below:
 
--   `None`
--   `CubicFit`
--   `CumulativeAverage`
--   `ExponentialAverage`
--   `ExponentialFit`
--   `LinearFit`
--   `LogarithmicFit`
--   `ModifiedAverage`
--   `PowerLawFit`
--   `QuadraticFit`
--   `QuarticFit`
--   `QuinticFit`
--   `SimpleAverage`
--   `WeightedAverage`
+-   [`None`](/angular-apis/typescript/latest/enums/trendlinetype.html#none)
+-   [`CubicFit`](/angular-apis/typescript/latest/enums/trendlinetype.html#cubicfit)
+-   [`CumulativeAverage`](/angular-apis/typescript/latest/enums/trendlinetype.html#cumulativeaverage)
+-   [`ExponentialAverage`](/angular-apis/typescript/latest/enums/trendlinetype.html#exponentialaverage)
+-   [`ExponentialFit`](/angular-apis/typescript/latest/enums/trendlinetype.html#exponentialfit)
+-   [`LinearFit`](/angular-apis/typescript/latest/enums/trendlinetype.html#linearfit)
+-   [`LogarithmicFit`](/angular-apis/typescript/latest/enums/trendlinetype.html#logarithmicfit)
+-   [`ModifiedAverage`](/angular-apis/typescript/latest/enums/trendlinetype.html#modifiedaverage)
+-   [`PowerLawFit`](/angular-apis/typescript/latest/enums/trendlinetype.html#powerlawfit)
+-   [`QuadraticFit`](/angular-apis/typescript/latest/enums/trendlinetype.html#quadraticfit)
+-   [`QuarticFit`](/angular-apis/typescript/latest/enums/trendlinetype.html#quarticfit)
+-   [`QuinticFit`](/angular-apis/typescript/latest/enums/trendlinetype.html#quinticfit)
+-   [`SimpleAverage`](/angular-apis/typescript/latest/enums/trendlinetype.html#simpleaverage)
+-   [`WeightedAverage`](/angular-apis/typescript/latest/enums/trendlinetype.html#weightedaverage)
 
 The following code example shows how to enable a trendline in the Ignite UI for Angular sparkline component:
 
@@ -162,7 +162,7 @@ The following code example shows how to enable a trendline in the Ignite UI for 
 
 The Ignite UI for Angular sparkline component can detect unknown values and render the space for unknown values through a specified interpolation algorithm. If your data contains null values and you do not use this feature, meaning no interpolation is specified, the unknown value will not be plotted.
 
-In order to plot the unknown values, you can set the `UnknownValuePlotting` property of the sparkline component. This property has two possible values, `LinearInterpolate` and `DontPlot`, which will interpolate or ignore unknown values, respectively.
+In order to plot the unknown values, you can set the `UnknownValuePlotting` property of the sparkline component. This property has two possible values, [`LinearInterpolate`](/angular-apis/typescript/latest/enums/unknownvalueplotting.html#linearinterpolate) and [`DontPlot`](/angular-apis/typescript/latest/enums/unknownvalueplotting.html#dontplot), which will interpolate or ignore unknown values, respectively.
 
 <div class="sample-container loading" style="height: 375px">
     <iframe id="radial-gauge-sample-iframe" src='{environment:demosBaseUrl}/gauges/radial-gauge-animation' width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>

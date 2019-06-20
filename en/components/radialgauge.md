@@ -38,7 +38,7 @@ The `IgxRadialGauge` requires the following modules:
 ```typescript
 // app.module.ts
 import { IgxRadialGaugeModule } from "igniteui-angular-gauges/ES5/igx-radial-gauge-module";
-import { IgrRadialGauge } from "igniteui-angular-gauges/ES5/igx-radial-gauge";
+import { IgxRadialGauge } from "igniteui-angular-gauges/ES5/igx-radial-gauge";
 
 @NgModule({
     imports: [
@@ -62,18 +62,18 @@ The following code demonstrates how create a radial gauge containing a needle an
     interval="5"
     minimumValue="0"
     maximumValue="50">
-    <igx-radial-graph-range startValue="0"
+    <igx-radial-gauge-range startValue="0"
                             endValue="30"
                             brush="red">
-    </igx-radial-graph-range>
-    <igx-radial-graph-range startValue="30"
+    </igx-radial-gauge-range>
+    <igx-radial-gauge-range startValue="30"
                             endValue="60"
                             brush="yellow">
-    </igx-radial-graph-range>
-    <igx-radial-graph-range startValue="60"
+    </igx-radial-gauge-range>
+    <igx-radial-gauge-range startValue="60"
                             endValue="100"
                             brush="green">
-    </igx-radial-graph-range>
+    </igx-radial-gauge-range>
 </igx-radial-gauge>
 ```
 

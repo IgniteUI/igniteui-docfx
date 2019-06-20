@@ -24,21 +24,21 @@ This topic explains various types of scatter marker series in the Angular data c
 
 The following table lists all types of scatter marker series and their descriptions:
 
-| Series Name           | Description                                                                            |
-| --------------------- | -------------------------------------------------------------------------------------- |
-| `ScatterSeries`       | Displays a marker for data point mapped to `XMemberPath` and `YMemberPath` properties. |
-| `ScatterLineSeries`   | Displays a straight line between each data point in addition to a marker.              |
-| `ScatterSplineSeries` | Displays smooth line interpolated between each data point in addition to a marker.     |
+| Series Name                       | Description                                                                            |
+| --------------------------------- | -------------------------------------------------------------------------------------- |
+| `IgxScatterSeriesComponent`       | Displays a marker for data point mapped to `XMemberPath` and `YMemberPath` properties. |
+| `IgxScatterLineSeriesComponent`   | Displays a straight line between each data point in addition to a marker.              |
+| `IgxScatterSplineSeriesComponent` | Displays smooth line interpolated between each data point in addition to a marker.     |
 
 ### Required Axes
 
 The Angular data chart component provides various types of axes but only the following types of axes can be used with scatter marker series.
 
-| Series Type           | YAxis Type                 | XAxis Type                 |
-| --------------------- | -------------------------- | -------------------------- |
-| `ScatterSeries`       | `IgxNumericYAxisComponent` | `IgxNumericXAxisComponent` |
-| `ScatterLineSeries`   | `IgxNumericYAxisComponent` | `IgxNumericXAxisComponent` |
-| `ScatterSplineSeries` | `IgxNumericYAxisComponent` | `IgxNumericXAxisComponent` |
+| Series Type                       | YAxis Type                 | XAxis Type                 |
+| --------------------------------- | -------------------------- | -------------------------- |
+| `IgxScatterSeriesComponent`       | `IgxNumericYAxisComponent` | `IgxNumericXAxisComponent` |
+| `IgxScatterLineSeriesComponent`   | `IgxNumericYAxisComponent` | `IgxNumericXAxisComponent` |
+| `IgxScatterSplineSeriesComponent` | `IgxNumericYAxisComponent` | `IgxNumericXAxisComponent` |
 
 ### Required Data
 
@@ -87,7 +87,7 @@ export class AppModule { /* ... */ }
 
 ### Code Example
 
-This code demonstrates how to create an instance of data chart with `ScatterSeries` and bind it to the data source.
+This code demonstrates how to create an instance of data chart with `IgxScatterSeriesComponent` and bind it to the data source.
 
 ```html
  <igx-data-chart
@@ -106,7 +106,7 @@ This code demonstrates how to create an instance of data chart with `ScatterSeri
  </igx-data-chart>
 ```
 
-Note that you can also use above code to create `ScatterLineSeries` or `ScatterSplineSeries` by replacing `ScatterSeries`.
+Note that you can also use above code to create `IgxScatterLineSeriesComponent` or `IgxScatterSplineSeriesComponent` by replacing `IgxScatterSeriesComponent`.
 
 ### Series Appearance
 

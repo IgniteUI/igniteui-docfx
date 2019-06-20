@@ -33,8 +33,8 @@ The Angular data chart component requires the following modules:
 
 ```typescript
 // data chart's modules required for all series:
-import { IgxDataChartModule } from 'igniteui-angular-charts/ES5/igx-data-chart-module';
-import { IgxDataChartCoreModule } from 'igniteui-angular-charts/ES5/igx-data-chart-core--module';
+import { IgxDataChartModule } from "igniteui-angular-charts/ES5/igx-data-chart-module";
+import { IgxDataChartCoreModule } from "igniteui-angular-charts/ES5/igx-data-chart-core--module";
 // scatter series' modules:
 import { IgxDataChartScatterCoreModule } from "igniteui-angular-charts/ES5/igx-data-chart-scatter-core-module";
 import { IgxDataChartScatterModule } from "igniteui-angular-charts/ES5/igx-data-chart-scatter-module";
@@ -69,13 +69,13 @@ The Angular data chart component supports various types of axis that are intende
 
 | Axis Type          | Supported Series Types                                                                                                                                                                                                                                                           |
 | ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| CategoryYAxis      | only `BarSeries` in [Category Series](datachart_series_types_category.md) group                                                                                                                                                                                                  |
-| CategoryXAxis      | all [Financial Series](datachart_series_types_financial.md), [Range Series](datachart_series_types_range.md),  [Category Series](datachart_series_types_category.md) (except `BarSeries`)                                                                                        |
-| TimeXAxis          | all [Financial Series](datachart_series_types_financial.md), [Range Series](datachart_series_types_range.md),  [Category Series](datachart_series_types_category.md) (except `BarSeries`)                                                                                        |
-| OrdinalTimeXAxis   | all [Financial Series](datachart_series_types_financial.md), [Range Series](datachart_series_types_range.md),  [Category Series](datachart_series_types_category.md) (except `BarSeries`)                                                                                        |
+| CategoryYAxis      | only `IgxBarSeriesComponent` in [Category Series](datachart_series_types_category.md) group                                                                                                                                                                                      |
+| CategoryXAxis      | all [Financial Series](datachart_series_types_financial.md), [Range Series](datachart_series_types_range.md),  [Category Series](datachart_series_types_category.md) (except `IgxBarSeriesComponent`)                                                                            |
+| TimeXAxis          | all [Financial Series](datachart_series_types_financial.md), [Range Series](datachart_series_types_range.md),  [Category Series](datachart_series_types_category.md) (except `IgxBarSeriesComponent`)                                                                            |
+| OrdinalTimeXAxis   | all [Financial Series](datachart_series_types_financial.md), [Range Series](datachart_series_types_range.md),  [Category Series](datachart_series_types_category.md) (except `IgxBarSeriesComponent`)                                                                            |
 | PercentChangeYAxis | all [Financial Series](datachart_series_types_financial.md), [Range Series](datachart_series_types_range.md), [Category Series](datachart_series_types_category.md), [Scatter Series](datachart_series_types_scatter_bubble.md), [Shape Series](datachart_series_types_shape.md) |
 | NumericYAxis       | all [Scatter Series](datachart_series_types_scatter_bubble.md), [Shape Series](datachart_series_types_shape.md), [Financial Series](datachart_series_types_financial.md), [Range Series](datachart_series_types_range.md), [Category Series](datachart_series_types_category.md) |
-| NumericXAxis       | all [Scatter Series](datachart_series_types_scatter_bubble.md), [Shape Series](datachart_series_types_shape.md), and `BarSeries` in [Category Series](datachart_series_types_category.md) group                                                                                  |
+| NumericXAxis       | all [Scatter Series](datachart_series_types_scatter_bubble.md), [Shape Series](datachart_series_types_shape.md), and `IgxBarSeriesComponent` in [Category Series](datachart_series_types_category.md) group                                                                      |
 | NumericAngleAxis   | all [Polar Series](datachart_series_types_polar.md)                                                                                                                                                                                                                              |
 | NumericRadiusAxis  | all [Polar Series](datachart_series_types_polar.md) and [Radial Series](datachart_series_types_radial.md)                                                                                                                                                                        |
 | CategoryAngleAxis  | all  [Radial Series](datachart_series_types_radial.md)                                                                                                                                                                                                                           |
@@ -84,7 +84,7 @@ The Angular data chart component supports various types of axis that are intende
 
 Now that the data chart modules are imported, next step is to bind chart to data. All series require specific number and type of data columns to render correctly and you can find a data source for each type of series in the [Data Sources](datachart_data_sources.md) topic.
 
-The following code snippet demonstrates how to create scatter `BubbleSeries` and bind it to [SampleScatterStats](datachart_data_sources_stats.md) data.
+The following code snippet demonstrates how to create scatter `IgxBubbleSeriesComponent` and bind it to [SampleScatterStats](datachart_data_sources_stats.md) data.
 
 > [!NOTE]
 >
@@ -94,8 +94,8 @@ The following code snippet demonstrates how to create scatter `BubbleSeries` and
  <igx-data-chart [dataSource]="data"
                  width="700px"
                  height="500px">
-    <igx-numeric-x-axis name="xAxis" isLogarithmic="true" />
-    <igx-numeric-y-axis name="yAxis" isLogarithmic="true" />
+    <igx-numeric-x-axis name="xAxis" isLogarithmic="true" ></igx-numeric-x-axis>
+    <igx-numeric-y-axis name="yAxis" isLogarithmic="true" ></igx-numeric-x-axis>
     <igx-bubble-series
         name="series1"
         xAxisName="xAxis"
@@ -103,7 +103,7 @@ The following code snippet demonstrates how to create scatter `BubbleSeries` and
         xMemberPath="Population"
         yMemberPath="GdpTotal"
         radiusMemberPath="GdpPerCapita"
-        [dataSource]="data"  />
+        [dataSource]="data"  ></igx-bubble-series>
  </igx-data-chart>
 ```
 

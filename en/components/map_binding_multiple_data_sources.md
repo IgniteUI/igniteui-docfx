@@ -6,7 +6,7 @@ _keywords: map, Ignite UI for Angular, infragistics
 
 ## Binding Multiple Data Sources
 
-In the `GeographicMap`, you can add multiple geographic series objects to overlay custom data sources with geo-spacial data. For example, `GeographicSymbolSeries` for plotting geographic locations of airports, the `GeographicPolylineSeries` for plotting flights between airports, and 2nd `GeographicPolylineSeries` for plotting gridlines of major geographic coordinates.
+In the `GeographicMap`, you can add multiple geographic series objects to overlay custom data sources with geo-spacial data. For example, `IgxGeographicSymbolSeriesComponent` for plotting geographic locations of airports, the `IgxGeographicPolylineSeriesComponent` for plotting flights between airports, and 2nd `IgxGeographicPolylineSeriesComponent` for plotting gridlines of major geographic coordinates.
 
 ### Demo
 
@@ -22,9 +22,9 @@ In the `GeographicMap`, you can add multiple geographic series objects to overla
 
 This topic takes you step-by-step towards displaying multiple geographic series that will plot following geo-spatial data:
 
--   `GeographicSymbolSeries` – displays locations of major airports
--   `GeographicPolylineSeries` – displays flights between airports
--   `GeographicPolylineSeries` – displays gridlines of major coordinates
+-   `IgxGeographicSymbolSeriesComponent` – displays locations of major airports
+-   `IgxGeographicPolylineSeriesComponent` – displays flights between airports
+-   `IgxGeographicPolylineSeriesComponent` – displays gridlines of major coordinates
 
 You can use geographic series in this or other combinations to plot desired data.
 
@@ -34,10 +34,10 @@ Create data sources for all geographic series that you want to display in the `G
 
 ### Overlaying Flights
 
-Create first `GeographicPolylineSeries` object with flight connections between major airports and add it to `IgxSeriesComponent` collection of the `GeographicMap`.
+Create first `IgxGeographicPolylineSeriesComponent` object with flight connections between major airports and add it to `IgxSeriesComponent` collection of the `GeographicMap`.
 
 ### Overlaying Gridlines
 
-Create second `GeographicPolylineSeries` object with geographic gridlines and add it to `IgxSeriesComponent` collection of the `GeographicMap`.
+Create second `IgxGeographicPolylineSeriesComponent` object with geographic gridlines and add it to `IgxSeriesComponent` collection of the `GeographicMap`.
 
-Create `GeographicSymbolSeries` object with geographic gridlines and add it to `IgxSeriesComponent` collection of the geographic `GeographicMap`.
+Create `IgxGeographicSymbolSeriesComponent` object with geographic gridlines and add it to `IgxSeriesComponent` collection of the geographic `GeographicMap`.
