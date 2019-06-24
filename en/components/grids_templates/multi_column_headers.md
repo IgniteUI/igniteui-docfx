@@ -191,6 +191,69 @@ Every [`igx-column-group`]({environment:angularApiUrl}/classes/igxcolumngroupcom
 ```
 }
 
+### Multi Column Header Template
+
+Each of the column groups of the grid can be templated separately. The column group expects `ng-template` tag decorated with the `igxHeader` directive.
+The `ng-template` is provided with the column group object as a context.
+
+```html
+...
+<igx-column-group header="General Information">
+    <ng-template igxHeader let-columnGroup>
+        {{ columnGroup.header | uppercase }}
+    </ng-template>
+    ...
+</igx-column-group>
+...
+```
+
+If you want to re-use a single template for several column groups, you could set the [`headerTemplate`]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html#headertemplate) property of the column group like this:
+
+```html
+<ng-template #columnGroupHeaderTemplate let-columnGroup>
+    {{ columnGroup.header | uppercase }}
+</ng-template>
+
+...
+<igx-column-group header="General Information" [headerTemplate]="columnGroupHeaderTemplate">
+    ...
+</igx-column-group>
+<igx-column-group header="Address Information" [headerTemplate]="columnGroupHeaderTemplate">
+    ...
+</igx-column-group>
+...
+```
+
+The following sample demonstrates how to implement collapsible column groups using header templates.
+
+@@if (igxName === 'IgxGrid') {
+<div class="sample-container loading" style="height:550px">
+    <iframe id="grid-multi-column-header-template-iframe" src='{environment:demosBaseUrl}/grid/multi-column-header-template' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-multi-column-header-template-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+}
+@@if (igxName === 'IgxTreeGrid') {
+<div class="sample-container loading" style="height:550px">
+    <iframe id="treegrid-multi-column-header-template-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-multi-column-header-template' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-multi-column-header-template-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+<div class="sample-container loading" style="height:550px">
+    <iframe id="hierarchical-grid-multi-column-header-template-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-multi-column-template' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-multi-column-header-template-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+}
+
 ### API References
 <div class="divider--half"></div>
 
