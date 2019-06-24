@@ -405,7 +405,7 @@ Basically the main function will look like this:
     // If we have multi-cell selection, check if selected cell is within the ranges
     if (this.multiCellSelection) {
         const node = eventArgs.cell.selectionNode;
-        const isCellWithinRange = this.multiCellSelection.selectionRanges.some(range => {
+        const isCellWithinRange = this.grid1.getSelectedRanges().some(range => {
             if (node.column >= range.columnStart &&
                 node.column <= range.columnEnd &&
                 node.row >= range.rowStart &&
