@@ -44,7 +44,7 @@ In order to add conditional formatting to the `IgxSpreadsheet` control, you will
 
 ```ts
 import { CellFill} from "igniteui-angular-excel/ES5/CellFill";
-import { Color } from 'igniteui-angular-core/ES5/Color';
+import { Color } from "igniteui-angular-core/ES5/Color";
 import { ColorScaleType} from "igniteui-angular-excel/ES5/ColorScaleType";
 import { FormatConditionAboveBelow } from "igniteui-angular-excel/ES5/FormatConditionAboveBelow";
 import { FormatConditionIconSet } from "igniteui-angular-excel/ES5/FormatConditionIconSet";
@@ -57,7 +57,7 @@ import { WorkbookColorInfo } from "igniteui-angular-excel/ES5/WorkbookColorInfo"
 
 ```ts
 import { CellFill} from "igniteui-react-excel/ES5/CellFill";
-import { Color } from 'igniteui-react-core/ES5/Color';
+import { Color } from "igniteui-react-core/ES5/Color";
 import { ColorScaleType} from "igniteui-react-excel/ES5/ColorScaleType";
 import { FormatConditionAboveBelow } from "igniteui-react-excel/ES5/FormatConditionAboveBelow";
 import { FormatConditionIconSet } from "igniteui-react-excel/ES5/FormatConditionIconSet";

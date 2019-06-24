@@ -6,7 +6,7 @@ _keywords: data chart, Ignite UI for Angular, Infragistics
 
 ## Category Series
 
-This topic explains various types of category series in the Angular data chart component. Category series is a group of the simplest and most common form of chart series that take data and render it as collection of data points stretched along a horizontal line (e.g. `IgxColumnSeriesComponent`) or vertical line (e.g. `BarSeries`).
+This topic explains various types of category series in the Angular data chart component. Category series is a group of the simplest and most common form of chart series that take data and render it as collection of data points stretched along a horizontal line (e.g. `IgxColumnSeriesComponent`) or vertical line (e.g. `IgxBarSeriesComponent`).
 
 ### Demo
 
@@ -27,7 +27,7 @@ The following table lists all types of category series and their descriptions:
 | Series Name                    | Description                                                                                                                                                                                                                                                                                                                                                                                  |
 | ------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `IgxAreaSeriesComponent`       | Displays a set of evenly placed points connected by a line below which area is filled in. Categories are arranged horizontally and values – vertically.                                                                                                                                                                                                                                      |
-| `BarSeries`                    | Displays discrete data in separate rows. Unlike other series, categories are arranged vertically and values are plotted horizontally. In other words, this series is like `IgxColumnSeriesComponent` but rotated 90 degrees clockwise.                                                                                                                                                       |
+| `IgxBarSeriesComponent`        | Displays discrete data in separate rows. Unlike other series, categories are arranged vertically and values are plotted horizontally. In other words, this series is like `IgxColumnSeriesComponent` but rotated 90 degrees clockwise.                                                                                                                                                       |
 | `IgxColumnSeriesComponent`     | Displays discrete data in separate columns. Categories are arranged horizontally and values are plotted vertically. Used for showing the changes in a data series over time or for comparing multiple items.                                                                                                                                                                                 |
 | `IgxLineSeriesComponent`       | Displays a set of evenly placed points connected by straight lines. Used for showing data or information that changes continuously over time. Useful when emphasizing the relationship between the points is required.                                                                                                                                                                       |
 | `IgxPointSeriesComponent`      | Displays markers at locations of data points without connecting them by lines. Shape of these markers can be changed using `markerType` property                                                                                                                                                                                                                                             |
@@ -41,17 +41,17 @@ The following table lists all types of category series and their descriptions:
 
 The Angular data chart component provides various types of axes but only the following types of axes can be used with category series.
 
-| Series Type                    | YAxis Type                 | XAxis Type                                                                           |
-| ------------------------------ | -------------------------- | ------------------------------------------------------------------------------------ |
-| `BarSeries`                    | `CategoryYAxis`            | `IgxNumericXAxisComponent`                                                           |
-| `IgxAreaSeriesComponent`       | `IgxNumericYAxisComponent` | `IgxCategoryXAxisComponent`, `IgxOrdinalTimeXAxisComponent`, `IgxTimeXAxisComponent` |
-| `IgxColumnSeriesComponent`     | `IgxNumericYAxisComponent` | `IgxCategoryXAxisComponent`, `IgxOrdinalTimeXAxisComponent`, `IgxTimeXAxisComponent` |
-| `IgxLineSeriesComponent`       | `IgxNumericYAxisComponent` | `IgxCategoryXAxisComponent`, `IgxOrdinalTimeXAxisComponent`, `IgxTimeXAxisComponent` |
-| `IgxSplineSeriesComponent`     | `IgxNumericYAxisComponent` | `IgxCategoryXAxisComponent`, `IgxOrdinalTimeXAxisComponent`, `IgxTimeXAxisComponent` |
-| `IgxSplineAreaSeriesComponent` | `IgxNumericYAxisComponent` | `IgxCategoryXAxisComponent`, `IgxOrdinalTimeXAxisComponent`, `IgxTimeXAxisComponent` |
-| `IgxStepAreaSeriesComponent`   | `IgxNumericYAxisComponent` | `IgxCategoryXAxisComponent`, `IgxOrdinalTimeXAxisComponent`, `IgxTimeXAxisComponent` |
-| `IgxStepLineSeriesComponent`   | `IgxNumericYAxisComponent` | `IgxCategoryXAxisComponent`, `IgxOrdinalTimeXAxisComponent`, `IgxTimeXAxisComponent` |
-| `IgxWaterfallSeriesComponent`  | `IgxNumericYAxisComponent` | `IgxCategoryXAxisComponent`, `IgxOrdinalTimeXAxisComponent`, `IgxTimeXAxisComponent` |
+| Series Type                    | YAxis Type                  | XAxis Type                                                                           |
+| ------------------------------ | --------------------------- | ------------------------------------------------------------------------------------ |
+| `IgxBarSeriesComponent`        | `IgxCategoryYAxisComponent` | `IgxNumericXAxisComponent`                                                           |
+| `IgxAreaSeriesComponent`       | `IgxNumericYAxisComponent`  | `IgxCategoryXAxisComponent`, `IgxOrdinalTimeXAxisComponent`, `IgxTimeXAxisComponent` |
+| `IgxColumnSeriesComponent`     | `IgxNumericYAxisComponent`  | `IgxCategoryXAxisComponent`, `IgxOrdinalTimeXAxisComponent`, `IgxTimeXAxisComponent` |
+| `IgxLineSeriesComponent`       | `IgxNumericYAxisComponent`  | `IgxCategoryXAxisComponent`, `IgxOrdinalTimeXAxisComponent`, `IgxTimeXAxisComponent` |
+| `IgxSplineSeriesComponent`     | `IgxNumericYAxisComponent`  | `IgxCategoryXAxisComponent`, `IgxOrdinalTimeXAxisComponent`, `IgxTimeXAxisComponent` |
+| `IgxSplineAreaSeriesComponent` | `IgxNumericYAxisComponent`  | `IgxCategoryXAxisComponent`, `IgxOrdinalTimeXAxisComponent`, `IgxTimeXAxisComponent` |
+| `IgxStepAreaSeriesComponent`   | `IgxNumericYAxisComponent`  | `IgxCategoryXAxisComponent`, `IgxOrdinalTimeXAxisComponent`, `IgxTimeXAxisComponent` |
+| `IgxStepLineSeriesComponent`   | `IgxNumericYAxisComponent`  | `IgxCategoryXAxisComponent`, `IgxOrdinalTimeXAxisComponent`, `IgxTimeXAxisComponent` |
+| `IgxWaterfallSeriesComponent`  | `IgxNumericYAxisComponent`  | `IgxCategoryXAxisComponent`, `IgxOrdinalTimeXAxisComponent`, `IgxTimeXAxisComponent` |
 
 ### Required Data
 
@@ -90,9 +90,9 @@ import { IgxStepAreaSeries } from "igniteui-angular-charts/ES5/igx-step-area-ser
 import { IgxStepLineSeries } from "igniteui-angular-charts/ES5/igx-step-line-series";
 import { IgxWaterfallSeries } from "igniteui-angular-charts/ES5/igx-waterfall-series";
 // data chart's modules:
-import { IgxDataChartModule } from 'igniteui-angular-charts/ES5/igx-data-chart-module';
-import { IgxDataChartCoreModule } from 'igniteui-angular-charts/ES5/igx-data-chart-core--module';
-import { IgxDataChartCategoryModule } from 'igniteui-angular-charts/ES5/igx-data-chart-category--module';
+import { IgxDataChartModule } from "igniteui-angular-charts/ES5/igx-data-chart-module";
+import { IgxDataChartCoreModule } from "igniteui-angular-charts/ES5/igx-data-chart-core--module";
+import { IgxDataChartCategoryModule } from "igniteui-angular-charts/ES5/igx-data-chart-category--module";
 
 @NgModule({
     imports: [
@@ -127,7 +127,7 @@ This code demonstrates how to create an instance of data chart with `IgxColumnSe
 
 ### Code Example - Bar Series
 
-Note that you can also use above code to create other type of category series by replacing `IgxColumnSeriesComponent` with name of series that you want to render. However, the `BarSeries` is an exception from this rule because it requires different types of axes. This code demonstrates how to create an instance of data chart with `BarSeries` and bind it to the data source.
+Note that you can also use above code to create other type of category series by replacing `IgxColumnSeriesComponent` with name of series that you want to render. However, the `IgxBarSeriesComponent` is an exception from this rule because it requires different types of axes. This code demonstrates how to create an instance of data chart with `IgxBarSeriesComponent` and bind it to the data source.
 
 ```html
  <igx-data-chart

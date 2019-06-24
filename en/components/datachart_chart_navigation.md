@@ -2,6 +2,7 @@
 title: Data Chart | Visualization Tools | Ignite UI for Angular | Infragistics | Navigation
 _description: Create a data chart that displays multiple instances of visual elements in the same plot area in order to create composite chart views.
 _keywords: data chart, Ignite UI for Angular, Infragistics
+mentionedTypes: ['XamDataChart', 'ModifierKeys']
 ---
 
 ## Navigation
@@ -30,7 +31,7 @@ IgxDataChartInteractivityModule.register();
 
 ### Data Chart UI Navigation Overview
 
-In order to allow navigation in the UI, you need to set either the `IsHorizontalZoomEnabled` and/or the `IsVerticalZoomEnabled` properties of the chart to true, depending on the direction that you wish to allow zooming. This will allow you to zoom the data chart by rolling a mouse wheel over it.
+In order to allow navigation in the UI, you need to set either the [`isHorizontalZoomEnabled`](/angular-apis/typescript/latest/classes/igxdatachartcomponent.html#ishorizontalzoomenabled) and/or the [`isVerticalZoomEnabled`](/angular-apis/typescript/latest/classes/igxdatachartcomponent.html#isverticalzoomenabled) properties of the chart to true, depending on the direction that you wish to allow zooming. This will allow you to zoom the data chart by rolling a mouse wheel over it.
 
 It is also possible to zoom or pan simply by clicking the buttons on the mouse or using touch. The `DefaultInteraction` property of the data chart determines what happens on mouse click or touch events. This property defaults to `DragZoom` and when set to this with zooming enabled, clicking and dragging will place a preview rectangle over the plot area that will become the zoomed area of the chart. This `DefaultInteraction` property can also be set to either `DragPan` to allow panning or `None` to prevent these operations.
 
@@ -114,8 +115,8 @@ The Angular data chart component provides several navigation properties that are
 -   `WindowPositionHorizontal`: A numeric value describing the X portion of the content view rectangle displayed by the data chart.
 -   `WindowPositionVertical`: A numeric value describing the Y portion of the content view rectangle displayed by the data chart.
 -   `WindowRect`: An `IgRect` object representing a rectangle that represents the portion of the chart that is currently in view. For example, a `WindowRect` of "0, 0, 1, 1" would be the entirety of the data chart.
--   `WindowScaleHorizontal`: A numeric value describing the width portion of the content view rectangle displayed by the data chart.
--   `WindowScaleVertical`: A numeric value describing the height portion of the content view rectangle displayed by the data chart.
+-   [`windowScaleHorizontal`](/angular-apis/typescript/latest/classes/igxdatachartcomponent.html#windowscalehorizontal): A numeric value describing the width portion of the content view rectangle displayed by the data chart.
+-   [`windowScaleVertical`](/angular-apis/typescript/latest/classes/igxdatachartcomponent.html#windowscalevertical): A numeric value describing the height portion of the content view rectangle displayed by the data chart.
 
 The following code snippets show how to modify the view of the Angular data chart component programmatically. The following assumes you have a variable named "chart" to represent the Angular data chart component:
 

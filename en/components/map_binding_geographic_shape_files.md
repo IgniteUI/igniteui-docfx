@@ -65,4 +65,4 @@ This data structure is suitable for use in most Geographic Series as long as app
 ### Code Snippet
 
 This code example assumes that shape files were loaded using the `ShapeDataSource`.
-The following code binds `GeographicPolylineSeries` in the map component to the `ShapeDataSource` and maps the `Points` property of all `ShapefileRecord` objects.
+The following code binds `IgxGeographicPolylineSeriesComponent` in the map component to the `ShapeDataSource` and maps the `Points` property of all `ShapefileRecord` objects.

@@ -35,4 +35,4 @@ Here is an example of data from JSON file:
 
 ### Code Snippet
 
-The following code loads and binds `GeographicHighDensityScatterSeries` in the map component to an array of objects created from loaded JSON file with geographic locations:
+The following code loads and binds `IgxGeographicHighDensityScatterSeriesComponent` in the map component to an array of objects created from loaded JSON file with geographic locations:

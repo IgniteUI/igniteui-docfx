@@ -6,7 +6,7 @@ _keywords: map, Ignite UI for Angular, infragistics
 
 ## Using Scatter High Density Series
 
-Use the map component's `GeographicHighDensityScatterSeries` to bind and show scatter data ranging from hundreds to millions of data points requiring exceedingly little loading time.
+Use the map component's `IgxGeographicHighDensityScatterSeriesComponent` to bind and show scatter data ranging from hundreds to millions of data points requiring exceedingly little loading time.
 
 ### Demo
 
@@ -20,38 +20,38 @@ Use the map component's `GeographicHighDensityScatterSeries` to bind and show sc
 
 <div class="divider--half"></div>
 
-The demo above shows the `GeographicHighDensityScatterSeries` series in the map component bound to hundreds or even thousands of data points representing Australia’s population density. The map plot area with more densely populated data points represented as coalescences of red pixels and loosely distributed data points by discrete blue pixels.
+The demo above shows the `IgxGeographicHighDensityScatterSeriesComponent` series in the map component bound to hundreds or even thousands of data points representing Australia’s population density. The map plot area with more densely populated data points represented as coalescences of red pixels and loosely distributed data points by discrete blue pixels.
 
 Because there are so many data points, the series displays the scatter data as tiny dots as opposed to full size markers, and displays areas with the most data using a higher color density representing a cluster of data points.
 
 ### Data Requirements
 
-Similar to other types of scatter series in the map control, the `GeographicHighDensityScatterSeries` series has the `ItemsSource` property which can be bound to an array of objects. In addition, each data item in the items source must have two data columns that store geographic longitude and latitude coordinates and uses the `LongitudeMemberPath` and `LatitudeMemberPath` properties to map these data columns.
+Similar to other types of scatter series in the map control, the `IgxGeographicHighDensityScatterSeriesComponent` series has the `ItemsSource` property which can be bound to an array of objects. In addition, each data item in the items source must have two data columns that store geographic longitude and latitude coordinates and uses the [`longitudeMemberPath`](/angular-apis/typescript/latest/classes/igxgeographichighdensityscatterseriescomponent.html#longitudememberpath) and [`latitudeMemberPath`](/angular-apis/typescript/latest/classes/igxgeographichighdensityscatterseriescomponent.html#latitudememberpath) properties to map these data columns.
 
 #### Data Binding
 
 The following table summarizes the GeographicHighDensityScatterSeries series properties used for data binding.
 
-| Property              | Type   | Description                                                                                           |
-| --------------------- | ------ | ----------------------------------------------------------------------------------------------------- |
-| `ItemsSource`         | any    | Gets or sets the items source                                                                         |
-| `LongitudeMemberPath` | string | Uses the ItemsSource property to determine the location of the longitude values on the assigned items |
-| `LatitudeMemberPath`  | string | Uses the ItemsSource property to determine the location of the latitude values on the assigned items  |
+| Property                                                                                                                                 | Type   | Description                                                                                           |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | ------ | ----------------------------------------------------------------------------------------------------- |
+| `ItemsSource`                                                                                                                            | any    | Gets or sets the items source                                                                         |
+| [`longitudeMemberPath`](/angular-apis/typescript/latest/classes/igxgeographichighdensityscatterseriescomponent.html#longitudememberpath) | string | Uses the ItemsSource property to determine the location of the longitude values on the assigned items |
+| [`latitudeMemberPath`](/angular-apis/typescript/latest/classes/igxgeographichighdensityscatterseriescomponent.html#latitudememberpath)   | string | Uses the ItemsSource property to determine the location of the latitude values on the assigned items  |
 
 ### Heat Color Scale
 
 The Heat Color Scale, an optional feature, determines the color pattern within the series. The following table summarizes the properties used for determining the color scale.
 
-| Property           | Type   | Description                                                               |
-| ------------------ | ------ | ------------------------------------------------------------------------- |
-| `HeatMinimum`      | Double | Defines the double value representing the minimum end of the color scale  |
-| `HeatMaximum`      | Double | Defines the double value representing the maximum end of the color scale  |
-| `HeatMinimumColor` | Color  | Defines the point density color used at the bottom end of the color scale |
-| `HeatMaximumColor` | Color  | Defines the point density color used at the top end of the color scale    |
+| Property                                                                                                                           | Type   | Description                                                               |
+| ---------------------------------------------------------------------------------------------------------------------------------- | ------ | ------------------------------------------------------------------------- |
+| [`heatMinimum`](/angular-apis/typescript/latest/classes/igxgeographichighdensityscatterseriescomponent.html#heatminimum)           | Double | Defines the double value representing the minimum end of the color scale  |
+| [`heatMaximum`](/angular-apis/typescript/latest/classes/igxgeographichighdensityscatterseriescomponent.html#heatmaximum)           | Double | Defines the double value representing the maximum end of the color scale  |
+| [`heatMinimumColor`](/angular-apis/typescript/latest/classes/igxgeographichighdensityscatterseriescomponent.html#heatminimumcolor) | Color  | Defines the point density color used at the bottom end of the color scale |
+| [`heatMaximumColor`](/angular-apis/typescript/latest/classes/igxgeographichighdensityscatterseriescomponent.html#heatmaximumcolor) | Color  | Defines the point density color used at the top end of the color scale    |
 
 ### Code Example
 
-The following code demonstrates how set the `HeatMinimumColor` and `HeatMaximumColor` properties of the `GeographicHighDensityScatterSeries`
+The following code demonstrates how set the [`heatMinimumColor`](/angular-apis/typescript/latest/classes/igxgeographichighdensityscatterseriescomponent.html#heatminimumcolor) and [`heatMaximumColor`](/angular-apis/typescript/latest/classes/igxgeographichighdensityscatterseriescomponent.html#heatmaximumcolor) properties of the `IgxGeographicHighDensityScatterSeriesComponent`
 
 <!-- Angular -->
 

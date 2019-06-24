@@ -68,13 +68,11 @@ The following code demonstradtes how to bind the doughnut chart to the above dat
 
 ```html
  <igx-doughnut-chart width="700px"
-                     height="500px">
-    <igx-doughnut-chart-series>
-        <igx-ring-series  [itemsSource]="data"
+                     height="500px">   
+        <igx-ring-series  [dataSource]="data"
                 labelMemberPath="Label"
                 valueMemberPath="Value">
-        </igx-ring-series>
-    </igx-doughnut-chart-series>
+        </igx-ring-series>   
  </igx-doughnut-chart>
 ```
 

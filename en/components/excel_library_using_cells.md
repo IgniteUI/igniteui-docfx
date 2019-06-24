@@ -32,7 +32,7 @@ import { FormattedString } from "igniteui-angular-excel/ES5/FormattedString";
 
 ### Referencing Cells and Regions
 
-You can access a `WorksheetCell` object or a `WorksheetRegion` object by calling the `Worksheet` object’s `getCell` or `getRegion` methods, respectively. Both methods accept a string parameter that references a cell. Getting a reference to a cell is useful when applying formats or working with formulas and cell contents.
+You can access a `WorksheetCell` object or a `WorksheetRegion` object by calling the [`worksheet`](/angular-apis/typescript/latest/classes/worksheetregion.html#worksheet) object’s `getCell` or `getRegion` methods, respectively. Both methods accept a string parameter that references a cell. Getting a reference to a cell is useful when applying formats or working with formulas and cell contents.
 
 The following example code demonstrates how to reference cells and regions:
 
@@ -50,7 +50,7 @@ var region = worksheet.getRegion("G1:G10");
 
 In Microsoft Excel, individual cells, as well as cell regions can have names assigned to them. The name of a cell or region can be used to reference that cell or region instead of their address.
 
-The Infragistics Angular Excel Library supports the referencing of cells and regions by name through the `getCell` and `getRegion` methods of the `Worksheet` object. You refer to the cell or region using the `NamedReference` instance that refers to that cell or region.
+The Infragistics Angular Excel Library supports the referencing of cells and regions by name through the `getCell` and `getRegion` methods of the [`worksheet`](/angular-apis/typescript/latest/classes/worksheetregion.html#worksheet) object. You refer to the cell or region using the `NamedReference` instance that refers to that cell or region.
 
 You can use the following code snippet as an example for naming a cell or region:
 
@@ -88,7 +88,7 @@ worksheet.rows(0).cells(0).comment = cellComment;
 
 ### Adding a Formula to a Cell
 
-The Infragistics Angular Excel Library allows you to add Microsoft Excel formulas to a cell or group of cells in a worksheet. You can do this using the `WorksheetCell` object’s `applyFormula` method or by instantiating a `Formula` object and applying it to a cell. Regardless of the manner in which you apply a formula to a cell, you can access the `Formula` object using the `WorksheetCell` object’s `Formula` property. If you need the value, use the cell’s `Value` property.
+The Infragistics Angular Excel Library allows you to add Microsoft Excel formulas to a cell or group of cells in a worksheet. You can do this using the `WorksheetCell` object’s `applyFormula` method or by instantiating a [`formula`](/angular-apis/typescript/latest/classes/worksheetcell.html#formula) object and applying it to a cell. Regardless of the manner in which you apply a formula to a cell, you can access the [`formula`](/angular-apis/typescript/latest/classes/worksheetcell.html#formula) object using the `WorksheetCell` object’s [`formula`](/angular-apis/typescript/latest/classes/worksheetcell.html#formula) property. If you need the value, use the cell’s [`value`](/angular-apis/typescript/latest/classes/worksheetcell.html#value) property.
 
 The following code shows you how to add a formula to a cell.
 
@@ -104,7 +104,7 @@ The following code shows you how to add a formula to a cell.
 
 ### Copying a Cell’s Format
 
-Cells can have different formatting, including background color, format string, and font style. If you need a cell to have the same format as a previously formatted cell, instead of individually setting each option exposed by the `WorksheetCell` object’s `cellFormat` property, you can call the `CellFormat` object’s `setFormatting` method and pass it a `CellFormat` object to copy. This will copy every format setting from the first cell to the second cell. You can also do this for a row, merged cell region, or column.
+Cells can have different formatting, including background color, format string, and font style. If you need a cell to have the same format as a previously formatted cell, instead of individually setting each option exposed by the `WorksheetCell` object’s `cellFormat` property, you can call the [`cellFormat`](/angular-apis/typescript/latest/classes/worksheetcell.html#cellformat) object’s `setFormatting` method and pass it a [`cellFormat`](/angular-apis/typescript/latest/classes/worksheetcell.html#cellformat) object to copy. This will copy every format setting from the first cell to the second cell. You can also do this for a row, merged cell region, or column.
 
 The following code shows you how to copy the format of the 2nd column to the 4th column:
 
@@ -223,7 +223,7 @@ When the older formats are opened in Microsoft Excel 2003 and earlier versions, 
 
 ### Excel Format Support
 
-You can set a host of different formats on a `WorksheetCell` by using the `CellFormat` object returned by the `cellFormat` property of that cell. This `CellFormat` object enables you to style many different aspects of the cell such as borders, font, fill, alignments, and whether or not the cell should shrink to fit or be locked.
+You can set a host of different formats on a `WorksheetCell` by using the [`cellFormat`](/angular-apis/typescript/latest/classes/worksheetcell.html#cellformat) object returned by the `cellFormat` property of that cell. This [`cellFormat`](/angular-apis/typescript/latest/classes/worksheetcell.html#cellformat) object enables you to style many different aspects of the cell such as borders, font, fill, alignments, and whether or not the cell should shrink to fit or be locked.
 
 You can also access the built-in styles to Microsoft Excel 2007 using the `styles` collection of the `Workbook` object. The full list of styles in Excel can be found in the Cell Styles gallery of the Home tab of Microsoft Excel 2007.
 

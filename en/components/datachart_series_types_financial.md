@@ -22,7 +22,7 @@ This topic explains various types of financial series in the Angular data chart 
 
 ### Types of Financial Series
 
-The Data Chart supports 2 financial overlays, over 30 financial indicators, and the `IgxFinancialPriceSeriesComponent` that plots stock prices such as high, low, open, and close prices over time. It can display stock prices as OHLC bars or Candlesticks using the `displayType` property. This series is often used in combination with a number of financial indicators and financial overlays to measure changes and analyze trends of stock prices.
+The Data Chart supports 2 financial overlays, over 30 financial indicators, and the `IgxFinancialPriceSeriesComponent` that plots stock prices such as high, low, open, and close prices over time. It can display stock prices as OHLC bars or Candlesticks using the [`displayType`](/angular-apis/typescript/latest/classes/igxfinancialpriceseriescomponent.html#displaytype) property. This series is often used in combination with a number of financial indicators and financial overlays to measure changes and analyze trends of stock prices.
 
 ### Financial Overlays
 
@@ -34,7 +34,7 @@ and they show trends in stock prices. These overlays can be plotted in the same 
 
 ### Financial Indicators
 
-Financial indicators are often used by traders to measure changes and to show trends in stock prices. These indicators are usually displayed in a separate chart above or below of a chart with the `IgxFinancialPriceSeriesComponent` because they do not share the same Y-Axis scale. However, the chart control supports plotting price series and indicators in the same plot area, if desired, using multiple axes and by sharing axes. For more information on this, please refer to the [Axis Sharing and Multiple Axes](datachart_axis_sharing.md) topic. In addition, all financial indicators have the `displayType` property that determines if an indicator renders using a line, columns, or area. The following list shows all types of financial indicators:
+Financial indicators are often used by traders to measure changes and to show trends in stock prices. These indicators are usually displayed in a separate chart above or below of a chart with the `IgxFinancialPriceSeriesComponent` because they do not share the same Y-Axis scale. However, the chart control supports plotting price series and indicators in the same plot area, if desired, using multiple axes and by sharing axes. For more information on this, please refer to the [Axis Sharing and Multiple Axes](datachart_axis_sharing.md) topic. In addition, all financial indicators have the [`displayType`](/angular-apis/typescript/latest/classes/igxfinancialpriceseriescomponent.html#displaytype) property that determines if an indicator renders using a line, columns, or area. The following list shows all types of financial indicators:
 
 -   `IgxAbsoluteVolumeOscillatorIndicatorComponent` (AVO) calculates the difference between two average volume measures. It is similar to the Percentage Volume Oscillator, but scores range from -100% to +100%. The indicator is used to identify whether volume trends are increasing or decreasing. The user can select the time period for analysis
 -   `IgxAccumulationDistributionIndicatorComponent` (ADI) is a very popular volume related indicator. It evaluates the supply and demand of a stock, security, or index over time by looking at disparities in whether investors are selling or buying
@@ -103,7 +103,7 @@ import { IgxFinancialPriceSeries } from "igniteui-angular-charts/ES5/igx-financi
 import { IgxBollingerBandsOverlay } from "igniteui-angular-charts/ES5/igx-bollinger-bands-overlay";
 import { IgxMedianPriceIndicator } from "igniteui-angular-charts/ES5/igx-median-price-indicator";
 // data chart's modules:
-import { IgxDataChartModule } from 'igniteui-angular-charts/ES5/igx-data-chart-module';
+import { IgxDataChartModule } from "igniteui-angular-charts/ES5/igx-data-chart-module";
 import { IgxDataChartCoreModule } from "igniteui-angular-charts/ES5/igx-data-chart-core-module";
 
 // in app.module.ts file
