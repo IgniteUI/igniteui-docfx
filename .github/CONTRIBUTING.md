@@ -132,7 +132,7 @@ Open both repositories and perform `npm start`. This will start both projects an
 > Note: This status should be set only when the PR is approved. This will indicate that no further changes will be applied.
 2. `status: localized` this status is for issues that were with a pending translation status and have already been localized. Place this status label once these translation changes have been included in the current pull request, or the changes are already pulled with a different pull request.
 
-> Note: Keep in mind that when you submit a change in the EN .md files, you will need to make the same change in the JP versions as well. This will help our Localization team to translate the change. As for the KR version of the topic, these changes will be handled by the Localization team.
+> Note: Keep in mind that when you submit a change in the EN .md files, you will need to make the same change in the JP and KR versions as well. This will help our Localization team to translate the change.
 
 
 # <a name='#stackblitz-configuration'>StackBlitz configuration</a>
@@ -141,7 +141,7 @@ StackBlitz button should be added for each live editing sample.
 In order to do that, certain configuration should be added in the [angular samples](https://github.com/IgniteUI/igniteui-angular-samples) repository. More could be found here [To do](https://github.com/IgniteUI/igniteui-angular-samples/issues/130).
 
 
-StackBlitz button should be referencing the iframe provided by angular samples repo. Add the button in the JP versions of the documentation as well:
+StackBlitz button should be referencing the iframe provided by angular samples repo. Add the button in both JP and KR versions of the documentation as well:
 
 ```html
 <div class="sample-container loading" style="height: 477px">
