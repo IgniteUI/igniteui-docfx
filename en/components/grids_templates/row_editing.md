@@ -1,28 +1,12 @@
-@@if (igxName === 'IgxGrid') {
 ---
-title: Grid Row Editing - Native Angular | Ignite UI for Angular
-_description: Row editing - allows modification of several cells in the row, before submitting, at once, all those changes to the grid's data source. Leverages the pending changes functionality of the new transaction provider.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Component, Angular Grid, Angular Table, Angular Data Grid component, Angular Data Table component, Angular Data Grid control, Angular Data Table control, Angular Grid component, Angular Table component, Angular Grid control, Angular Table control, Angular High Performance Grid, Angular High Performance Data Table, Data Grid Row Editing, Data Table Row Editing
+title: Angular Grid Row Editing | UI Grid | Ignite UI for Angular | Infragistics
+_description: Learn how to configure in row data manipulations with Ignite UI for Angular. Intuitive grid row editing and crud capabilities are available with the ui grid.
+_keywords: row editing, igniteui for angular, infragistics
 ---
-}
-@@if (igxName === 'IgxTreeGrid') {
----
-title: Tree Grid Row Editing - Native Angular | Ignite UI for Angular
-_description: Row editing - allows modification of several cells in the row, before submitting, at once, all those changes to the grid's data source. Leverages the pending changes functionality of the new transaction provider.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Component, Angular Tree Grid, Angular Tree Table, Angular Tree Grid component, Angular Tree Table component, Angular Tree Grid control, Angular Tree Table control, Angular Tree Grid component, Angular Tree Table component, Angular Tree Grid control, Angular Tree Table control, Angular High Performance Tree Grid, Angular High Performance Tree Table, Tree Grid Row Editing, Tree Table Row Editing
----
-}
-@@if (igxName === 'IgxHierarchicalGrid') {
----
-title: Hierarchical Grid Row Editing - Native Angular | Ignite UI for Angular
-_description: Row editing - allows modification of several cells in the row, before submitting, at once, all those changes to the grid's data source. Leverages the pending changes functionality of the new transaction provider.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Component, Angular Hierarchical Grid, Angular Hierarchical Table, Angular Hierarchical Grid component, Angular Hierarchical Table component, Angular Hierarchical Grid control, Angular Hierarchical Table control, Angular High Performance Hierarchical Grid, Angular High Performance Hierarchical Table, Hierarchical Grid Row Editing, Hierarchical Table Row Editing
----
-}
 
-### @@igComponent Row Editing
+### @@igComponent Row Editing and Usage
 
-Row editing allows modification of several cells in the row, before submitting, at once, all those changes to the @@igComponent's data source. Leverages the pending changes functionality of the new transaction provider.
+Row editing allows updating of several cells in the row, before submitting, at once, all those changes. Grid Row Editing as part of the Angular CRUD is happening in row in the UI grid. Leverages the pending changes functionality of the new transaction provider.
 
 
 #### Demo

@@ -1,31 +1,31 @@
 ﻿@@if (igxName === 'IgxGrid') {
 ---
-title: Grid Selection - Native Angular | Ignite UI for Angular
-_description: Single and multi-cell selection is available within the Grid. Multi-cell selection enables range selection of cells. With the Row Selection component in Ignite UI for Angular, there is a checkbox that precedes all other columns within the row, allowing the row to be either selected or deselected and enabling the user to select multiple rows of data.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Grid, Angular Table, Angular Data Grid component, Angular Data Table component, Angular Data Grid control, Angular Data Table control, Angular Grid component, Angular Table component, Angular Grid control, Angular Table control, Angular High Performance Grid, Angular High Performance Data Table, Angular Grid Row Selection, Angular Data Table Row Selection, Angular Row Selection, Angular Grid Selection, Data Grid Row Selection, Data Table Row Selection, Grid Selection
+title: Angular Grid Multi-Cell Selection | Ignite UI for Angular | infragistics 
+_description: Check how easy it is to use Row and Multi-cell data select of the Ignite ui angular material table by using angular events, API or with mouse interactions.
+_keywords: data select, igniteui for angular, infragistics
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Grid Selection - Native Angular | Ignite UI for Angular
-_description: Single and multi-cell selection is available within the Grid. Multi-cell selection enables range selection of cells.  With the Row Selection component in Ignite UI for Angular, there is a checkbox that precedes all other columns within the row, allowing the row to be either selected or deselected and enabling the user to select multiple rows of data.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Tree Grid, Angular Tree Table, Angular Tree Grid component, Angular Tree Table component, Angular Tree Grid control, Angular Tree Table control, Angular Tree Grid component, Angular Tree Table component, Angular Tree Grid control, Angular Tree Table control, Angular High Performance Tree Grid, Angular High Performance Tree Table, Angular Tree Grid Row Selection, Angular Tree Table Row Selection, Angular Row Selection, Angular Tree Grid Selection, Tree Grid Row Selection, Tree Table Row Selection, Tree Grid Selection
+title: Angular Tree Grid Multi-Cell Selection | Ignite UI for Angular | infragistics 
+_description: Check how easy it is to use Row and Multi-cell data select of the Ignite ui angular material table by using angular events, API or with mouse interactions.
+_keywords: data select, igniteui for angular, infragistics
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Grid Selection - Native Angular | Ignite UI for Angular
-_description: Single and multi-cell selection is available within the Grid. Multi-cell selection enables range selection of cells.  With the Row Selection component in Ignite UI for Angular, there is a checkbox that precedes all other columns within the row, allowing the row to be either selected or deselected and enabling the user to select multiple rows of data.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Hierarchical Grid, Angular Hierarchical Table, Angular Hierarchical Grid component, Angular Hierarchical Table component, Angular Hierarchical Grid control, Angular Hierarchical Table control, Angular High Performance Hierarchical Grid, Angular High Performance Hierarchical Table, Angular Hierarchical Grid Row Selection, Angular Hierarchical Table Row Selection, Angular Row Selection, Angular Hierarchical Grid Selection, Hierarchical Grid Row Selection, Hierarchical Table Row Selection, Hierarchical Grid Selection
+title: Angular Hierarchical Grid Multi-Cell Selection | Ignite UI for Angular | infragistics 
+_description: Check how easy it is to use Row and Multi-cell data select of the Ignite ui angular material table by using angular events, API or with mouse interactions.
+_keywords: data select, igniteui for angular, infragistics
 ---
 }
 
 @@if (igxName !== 'IgxHierarchicalGrid') {
 
-### @@igComponent Multi-cell selection
+### @@igComponent Мulti-cell Selection and Row Selection
 
-Multi-cell selection enables range selection of cells in the @@igComponent. Variety of multi-cell selection capabilities are available:
-- By `Mouse drag` - Rectangular selection of cells would be performed.
+Multi-cell selection enables range data selection in the @@igComponent. Variety of multi-cell selection capabilities are available:
+- By `Mouse drag` - Rectangular data selectoion of cells would be performed.
 - By `Ctrl key` press + `Mouse drag` - Multiple range selections would be performed. Any other existing cell selection will be persisted.
 - Instant multi-cell selection by using Shift key. Select single cell and select another single cell by holding the Shift key. Cell range between the two cells will be selected. Keep in mind that if another second cell is selected while holding `Shift key` the cell selection range will be updated based on the first selected cell position (starting point).
 - Keyboard multi-cell selection by using the `Arrow keys` while holding `Shift key`. Multi-cell selection range will be created based on the focused cell.

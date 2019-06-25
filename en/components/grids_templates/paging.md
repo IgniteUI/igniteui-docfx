@@ -1,28 +1,11 @@
-@@if (igxName === 'IgxGrid') {
 ---
-title: Grid Paging
-_description: The Ignite UI for Angular Data Grid control features the fastest, touch-responsive data-rich grid with popular features, including hierarchical and list views.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Grid, Angular Table, Angular Data Grid component, Angular Data Table component, Angular Data Grid control, Angular Data Table control, Angular Grid component, Angular Table component, Angular Grid control, Angular Table control, Angular High Performance Grid, Angular High Performance Data Table, Paging, Pagination, Data Grid Paging, Data Table Paging
+title: Angular Grid Pagination | Template | Ignite UI for Angular | Infragistics
+_description: Configure Angular pagination and create custom pages in the angular material table by Ignite UI, get data for the requested pages with variety of angular events.
+_keywords: angular pagination, igniteui for angular, infragistics
 ---
-}
-@@if (igxName === 'IgxTreeGrid') {
----
-title: Tree Grid Paging
-_description: The Ignite UI for Angular Tree Grid control features the fastest, touch-responsive data-rich tree grid with popular features, including hierarchical and list views.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Tree Grid, Angular Tree Table, Angular Tree Grid component, Angular Tree Table component, Angular Tree Grid control, Angular Tree Table control, Angular Tree Grid component, Angular Tree Table component, Angular Tree Grid control, Angular Tree Table control, Angular High Performance Tree Grid, Angular High Performance Tree Table, Paging, Pagination, Tree Grid Paging, Tree Table Paging
----
-}
-@@if (igxName === 'IgxHierarchicalGrid') {
----
-title: Hierarchical Grid Paging
-_description: The Ignite UI for Angular Hierarchical Grid control features the fastest, touch-responsive data-rich tree grid with popular features.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Hierarchical Grid, Angular Hierarchical Table, Angular Hierarchical Grid component, Angular Hierarchical Table component, Angular Hierarchical Grid control, Angular Hierarchical Table control, Angular High Performance Hierarchical Grid, Angular High Performance Hierarchical Table, Paging, Pagination, Hierarchical Grid Paging, Hierarchical Table Paging
----
-}
 
-### @@igComponent Paging
-
-In Ignite UI for Angular @@igComponent, **Paging** is initialized on the root `@@igSelector` component and is configurable via the [`paging`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#paging) and [`perPage`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#perpage) inputs.
+### @@igComponent Paging Functionality
+Angular pagination in the @@igComponent is configurable via the [`paging`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#paging) and [`perPage`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#perpage) inputs. As in any Angular material table, the pagination in @@igComponent supports template for custom pages.
 
 #### Demo
 
