@@ -149,7 +149,7 @@ public onColumnMovingEnd(event) {
 
 ### Styling
 
-To get started with styling the grid, we need to import the `index` file, where all the theme functions and component mixins live:
+To get started with styling the @@igComponent column moving headers, we need to import the `index` file, where all the theme functions and component mixins live:
 
  ```scss
 // custom-grid-column-moving-style.component.scss
@@ -174,7 +174,7 @@ The last step is to **include** the component mixins with its respective theme:
 ```
 
 > [!NOTE]
-> Depending on the component [**View Encapsulation**](/components/themes/component-themes.html#view-encapsulation) strategy, it may be necessary to `penetrate` this encapsulation using `::ng-deep:`:
+> Depending on the component [**View Encapsulation**](/components/themes/component-themes.html#view-encapsulation) strategy, it may be necessary to `penetrate` this encapsulation using `::ng-deep`
 
 ```scss
 :host {
@@ -223,10 +223,10 @@ Extend one of the two predefined schemas, that are provided for every component,
 $dark-grid-column-moving-schema: extend($_dark-grid,
         (
             ghost-header-text-color:(
-                igx-color: ("secondary", 400)
+                igx-color: ("primary", 400)
             ),
             ghost-header-background:(
-                igx-color: ("primary", 200)
+                igx-color: ("secondary", 200)
             ),
             ghost-header-icon-color:(
                 igx-color:( "primary", 500)
@@ -235,22 +235,22 @@ $dark-grid-column-moving-schema: extend($_dark-grid,
 );
 ```
 
-In order to apply our custom schemas we have to **extend** one of the globals ([light]({environment:sassApiUrl}/index.html#variable-light-schema) or [dark]({environment:sassApiUrl}/index.html#variable-dark-schema)), which is basically pointing out the components with a custom schema, and after that add it to the respective component themes:
+In order to apply our custom schema we have to **extend** one of the globals ([light]({environment:sassApiUrl}/index.html#variable-light-schema) or [dark]({environment:sassApiUrl}/index.html#variable-dark-schema)), which is basically pointing out the components with a custom schema, and after that add it to the respective component theme:
 
 ```scss
 // Extending the global dark-schema
-$custom-dark-schema: extend($dark-schema,(
+$custom-light-schema: extend($light-schema,(
     igx-grid: $dark-grid-column-moving-schema,
 ));
 
 // Defining dark-grid-theme with the global dark schema
-$dark-grid: igx-grid-theme(
+$dark-grid-column-moving-theme: igx-grid-theme(
   $palette: $dark-palette,
-  $schema: $custom-dark-schema
+  $schema: $custom-light-schema
 );
 ```
 
-Don't forget to include the themes in the same way as it was demonstrated above.
+Don't forget to include the theme in the same way as it was demonstrated above.
 
 #### Demo
 
