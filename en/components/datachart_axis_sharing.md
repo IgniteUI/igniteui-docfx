@@ -2,7 +2,7 @@
 title: Data Chart | Visualization Tools | Ignite UI for Angular | Infragistics | Axis Sharing
 _description: Create a data chart that displays multiple instances of visual elements in the same plot area in order to create composite chart views.
 _keywords: data chart, Ignite UI for Angular, Infragistics
-mentionedTypes: ['XamDataChart', 'CategoryXAxis', 'NumericYAxis', 'CategoryDateTimeXAxis', 'CategoryAxisBase', 'Axis', 'NumericAxisBase']
+mentionedTypes: ['XamDataChart', 'CategoryXAxis', 'NumericYAxis', 'CategoryDateTimeXAxis']
 ---
 
 ## Axis Sharing and Multiple Axes
@@ -23,7 +23,7 @@ mentionedTypes: ['XamDataChart', 'CategoryXAxis', 'NumericYAxis', 'CategoryDateT
 
 ### Code Example
 
-This code demonstrates how to create data chart with two `IgxNumericYAxisComponent` and one `IgxCategoryXAxisComponent` that will be shared between two series.
+This code demonstrates how to create data chart with two [`IgxNumericYAxisComponent`](/angular-apis/typescript/latest/classes/igxnumericyaxiscomponent.html) and one [`IgxCategoryXAxisComponent`](/angular-apis/typescript/latest/classes/igxcategoryxaxiscomponent.html) that will be shared between two series.
 
 ```html
  <igx-data-chart

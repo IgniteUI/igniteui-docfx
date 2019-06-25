@@ -26,7 +26,7 @@ When installing the spreadsheet package, the core and excel package must also be
 
 ### Required Modules
 
-The `IgxSpreadsheet` requires the following modules:
+The [`IgxSpreadsheet`](/angular-apis/typescript/latest/classes/igxspreadsheet.html) requires the following modules:
 
 ```ts
 import { IgxExcelModule } from "igniteui-angular-excel/ES5/igx-excel-module";

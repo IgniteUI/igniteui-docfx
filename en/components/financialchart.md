@@ -73,7 +73,7 @@ export class AppModule {}
 
 Now that the financial chart module is imported, next step is to bind it to data.
 
-In order to create an `IgxFinancialChart` control, you must first have data to bind it to. The following code snippet demonstrates how to create a simple data source.
+In order to create an [`IgxFinancialChart`](/angular-apis/typescript/latest/classes/igxfinancialchart.html) control, you must first have data to bind it to. The following code snippet demonstrates how to create a simple data source.
 
 ```typescript
 let data = [

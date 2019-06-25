@@ -22,7 +22,7 @@ The Ignite UI for Angular map component allows you to display data that contains
 
 The map component allows you to render geographic imagery from Bing Maps™, and Open Street Maps. The map provides plotting of tens of thousands of data points, and updates them every few milliseconds so that the control can handle your real-time feeds.
 
-The map's `IgxSeriesComponent` property is used to support rendering an unlimited number of geographic series. This property is a collection of geographic series objects and any type of geographic series can be added to it. For example, `IgxGeographicSymbolSeriesComponent` can be added for plotting geographic locations such as cities and the `IgxGeographicPolylineSeriesComponent` for plotting connections (e.g. roads) between these geographic locations.
+The map's `Infragistics.Controls.Charts.Series` property is used to support rendering an unlimited number of geographic series. This property is a collection of geographic series objects and any type of geographic series can be added to it. For example, [`IgxGeographicSymbolSeriesComponent`](/angular-apis/typescript/latest/classes/igxgeographicsymbolseriescomponent.html) can be added for plotting geographic locations such as cities and the [`IgxGeographicPolylineSeriesComponent`](/angular-apis/typescript/latest/classes/igxgeographicpolylineseriescomponent.html) for plotting connections (e.g. roads) between these geographic locations.
 
 The map provides customizable navigation behaviors for navigating map content using mouse, keyboard, or code-behind.
 
@@ -36,7 +36,7 @@ To use the geographic map component, you need to first install these packages:
 
 ### Required Modules
 
-The `IgxGeographicMap` requires the following modules:
+The [`IgxGeographicMap`](/angular-apis/typescript/latest/classes/igxgeographicmap.html) requires the following modules:
 
 ```typescript
 // app.module.ts

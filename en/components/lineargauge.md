@@ -33,7 +33,7 @@ When installing the gauge package, the core package must also be installed.
 
 ### Required Modules
 
-The `IgxLinearGauge` requires the following modules:
+The [`IgxLinearGauge`](/angular-apis/typescript/latest/classes/igxlineargauge.html) requires the following modules:
 
 ```typescript
 // app.module.ts
