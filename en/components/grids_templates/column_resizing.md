@@ -20,7 +20,6 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ---
 }
 
-
 ### @@igComponent Column Resizing
 
 With deferred column resizing, the user will see a temporary resize indicator while the drag operation is in effect. The new column size is only put into its place once the drag operation has ended.
@@ -143,9 +142,9 @@ You can also configure the minimum and maximum allowable column widths. This is 
 
 #### Auto-size columns on double click
 
-Each column can be **auto sized** by double clicking the right side of the header - the column will be sized to the longest currently visible cell value, including the header itself. This behavior is enabled by default, no additional configuration is needed. However, the column will not be autosized in case [`maxWidth`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#maxwidth) is set on that column and the new width exceeds that [`maxWidth`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#maxwidth) value. In this case the column will be sized according to preset [`maxWidth`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#maxwidth) value.
+Each column can be **auto sized** by double clicking the right side of the header - the column will be sized to the longest currently visible cell value, including the header itself. This behavior is enabled by default, no additional configuration is needed. However, the column will not be auto-sized in case [`maxWidth`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#maxwidth) is set on that column and the new width exceeds that [`maxWidth`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#maxwidth) value. In this case the column will be sized according to preset [`maxWidth`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#maxwidth) value.
 
-You can also autosize a column dynamically using the exposed [`autosize()`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#autosize) method on [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html).
+You can also auto-size a column dynamically using the exposed [`autosize()`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#autosize) method on [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html).
 
 @@if (igxName !== 'IgxHierarchicalGrid') {
 ```typescript
@@ -167,7 +166,126 @@ column.autosize();
 #### Pinned columns resizing
 
 Pinned columns can also be resized. However, resizing is limited so that the overall width of the pinned columns container cannot become larger than 80% of the overall @@igComponent width.
-Again, if you try to autosize a pinned column and the new width will cause the pinned columns container to exceed those 80% of the overall @@igComponent width, autosizing will be discarded. We just want to make sure that the unpinned columns are always visible and available to the user!
+Again, if you try to autosize a pinned column and the new width will cause the pinned columns container to exceed those 80% of the overall @@igComponent width, auto sizing will be discarded. We just want to make sure that the unpinned columns are always visible and available to the user!
+
+### Styling
+To get started with the styling of the @@igComponent column resize line, we need to import the index file, where all the theme functions and component mixins live:
+
+```scss
+// grid-resize-line-styling-sample.scss
+@import '~igniteui-angular/lib/core/styles/themes/index';
+```
+
+The simplest approach to achieve this is to create a new theme that extends the [`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) and accepts many parameters as well as the `$resize-line-color` parameter.
+
+``` scss
+$blue-color: #0288D1;
+$custom-grid-theme: igx-grid-theme(
+    $resize-line-color: $blue-color
+);
+
+```
+ >[!NOTE]
+ >If the component is using an [`Emulated`](../themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`.
+
+```scss
+:host {
+    ::ng-deep {
+        @include igx-grid($custom-grid-theme);
+    }
+}
+```
+
+#### Defining a color palette
+Instead of hard-coding the color values, we can achieve greater flexibility in terms of colors by using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.
+
+`igx-palette` generates a color palette based on the specified primary and secondary color:
+
+```scss
+$primary-color: #0288D1;
+$secondary-color: #BDBDBD;
+
+$custom-theme-palette: igx-palette($primary: $primary-color, $secondary: $secondary-color);
+```
+
+And then, with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color), we can easily retrieve the color from the palette. 
+
+```scss
+$custom-grid-theme: igx-grid-theme(
+    $palette: $custom-theme-palette,
+    $resize-line-color: igx-color($custom-theme-palette, 'secondary', 500)
+);
+```
+
+>[!NOTE]
+>The `igx-color` and `igx-palette` are powerful functions for generating and retrieving colors. Please, refer to [`Palettes`](../themes/palette.md) topic for detailed guidance on how to use them.
+
+#### Using Schemas
+Going further with the theming engine, you can build a robust and flexible structure that benefits from [**schemas**](../themes/schemas.md). A **schema** is a recipe of a theme.
+
+Extend the predefined schema provided for every component, in this case - [`light-grid`]({environment:sassApiUrl}/index.html#variable-_light-grid) schema:
+
+```scss
+// Extending the light grid schema
+$light-grid-schema: extend($_light-grid,
+    (
+        resize-line-color: (
+            igx-color: ('secondary', 500)
+            ),
+        header-background: (
+            igx-color: ("primary", 100)
+            ),
+        header-text-color: (
+            igx-color: ("primary", 600)
+            )
+    )
+);
+```
+
+In order to apply our custom schema, we have to **extend** one of the globals ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) or [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)), which is basically pointing out the components with a custom schema, and after that add it to the respective component theme:
+
+```scss
+// Extending the global light-schema
+$custom-light-grid-schema: extend($light-schema,(
+    igx-grid: $light-grid-schema
+));
+
+// Specifying the palette and schema of the custom grid theme
+$custom-grid-theme: igx-grid-theme(
+    $palette: $custom-theme-palette,
+    $schema: $custom-light-grid-schema
+);
+```
+Don't forget to include the theme in the same way as it was demonstrated above.
+
+@@if (igxName === 'IgxGrid') {
+<div class="sample-container loading" style="height:550px">
+    <iframe id="grid-resizing-styling-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-resize-line-styling-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-resizing-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
+}
+@@if (igxName === 'IgxTreeGrid') {
+<div class="sample-container loading" style="height:550px">
+    <iframe id="treegrid-column-resizing-styling-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-resize-line-styling' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-column-resizing-styling-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+<div class="sample-container loading" style="height:550px">
+    <iframe id="hierarchical-grid-resize-line-styling-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-resize-line-styling' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div class="divider--half"></div>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-resize-line-styling-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
+}
 
 ### API References
 <div class="divider--half"></div>

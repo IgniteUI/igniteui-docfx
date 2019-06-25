@@ -172,6 +172,125 @@ column.autosize();
 ピン固定列もサイズ変更できます。ただし、ピン固定される列のコンテナーが @@igComponent 全体の幅の 80% より大きくできないため、サイズ変更が制限されます。
 ピン固定列の自動サイズ調整で、新しい幅がピン固定列コンテナーが @@igComponent 全体の幅の 80% より大きい場合、自動サイズ調整操作は無視されます。これは、ピン固定されていない列を常にユーザーに表示して利用可能にするためです。
 
+### Styling
+To get started with the styling of the @@igComponent column resize line, we need to import the index file, where all the theme functions and component mixins live:
+
+```scss
+// grid-resize-line-styling-sample.scss
+@import '~igniteui-angular/lib/core/styles/themes/index';
+```
+
+The simplest approach to achieve this is to create a new theme that extends the [`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) and accepts many parameters as well as the `$resize-line-color` parameter.
+
+``` scss
+$blue-color: #0288D1;
+$custom-grid-theme: igx-grid-theme(
+    $resize-line-color: $blue-color
+);
+
+```
+ >[!NOTE]
+ >If the component is using an [`Emulated`](../themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`.
+
+```scss
+:host {
+    ::ng-deep {
+        @include igx-grid($custom-grid-theme);
+    }
+}
+```
+
+#### Defining a color palette
+Instead of hard-coding the color values, we can achieve greater flexibility in terms of colors by using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.
+
+`igx-palette` generates a color palette based on the specified primary and secondary color:
+
+```scss
+$primary-color: #0288D1;
+$secondary-color: #BDBDBD;
+
+$custom-theme-palette: igx-palette($primary: $primary-color, $secondary: $secondary-color);
+```
+
+And then, with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color), we can easily retrieve the color from the palette. 
+
+```scss
+$custom-grid-theme: igx-grid-theme(
+    $palette: $custom-theme-palette,
+    $resize-line-color: igx-color($custom-theme-palette, 'secondary', 500)
+);
+```
+
+>[!NOTE]
+>The `igx-color` and `igx-palette` are powerful functions for generating and retrieving colors. Please, refer to [`Palettes`](../themes/palette.md) topic for detailed guidance on how to use them.
+
+#### Using Schemas
+Going further with the theming engine, you can build a robust and flexible structure that benefits from [**schemas**](../themes/schemas.md). A **schema** is a recipe of a theme.
+
+Extend the predefined schema provided for every component, in this case - [`light-grid`]({environment:sassApiUrl}/index.html#variable-_light-grid) schema:
+
+```scss
+// Extending the light grid schema
+$light-grid-schema: extend($_light-grid,
+    (
+        resize-line-color: (
+            igx-color: ('secondary', 500)
+            ),
+        header-background: (
+            igx-color: ("primary", 100)
+            ),
+        header-text-color: (
+            igx-color: ("primary", 600)
+            )
+    )
+);
+```
+
+In order to apply our custom schema, we have to **extend** one of the globals ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) or [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)), which is basically pointing out the components with a custom schema, and after that add it to the respective component theme:
+
+```scss
+// Extending the global light-schema
+$custom-light-grid-schema: extend($light-schema,(
+    igx-grid: $light-grid-schema
+));
+
+// Specifying the palette and schema of the custom grid theme
+$custom-grid-theme: igx-grid-theme(
+    $palette: $custom-theme-palette,
+    $schema: $custom-light-grid-schema
+);
+```
+Don't forget to include the theme in the same way as it was demonstrated above.
+
+@@if (igxName === 'IgxGrid') {
+<div class="sample-container loading" style="height:550px">
+    <iframe id="grid-resizing-styling-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-resize-line-styling-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-resizing-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
+}
+@@if (igxName === 'IgxTreeGrid') {
+<div class="sample-container loading" style="height:550px">
+    <iframe id="treegrid-column-resizing-styling-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-resize-line-styling' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-column-resizing-styling-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+<div class="sample-container loading" style="height:550px">
+    <iframe id="hierarchical-grid-resize-line-styling-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-resize-line-styling' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div class="divider--half"></div>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-resize-line-styling-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
+}
+
 ### API リファレンス
 <div class="divider--half"></div>
 
