@@ -224,6 +224,15 @@ If you want to re-use a single template for several column groups, you could set
 ...
 ```
 
+> [!NOTE]
+> If a header is retemplated and the corresponding column group is movable, you have to set the **draggable** attribute to **false** on the templated elements, so that you can handle any of the events that are applied!
+
+```html
+<ng-template igxHeader>
+    <igx-icon [attr.draggable]="false" (click)="onClick()"></igx-icon>
+</ng-template>
+```
+
 The following sample demonstrates how to implement collapsible column groups using header templates.
 
 @@if (igxName === 'IgxGrid') {
