@@ -9,6 +9,13 @@
 - name: Ignite UI CLI
   href: general/cli-overview.md
   new: false
+- name: WPF to Angular guide
+  href: general/wpf_to_angular_guide/wpf_to_angular_guide.md
+  new: false
+  items:
+    - name: Create your first Angular app
+      href: general/wpf_to_angular_guide/create_first_angular_app.md
+      new: false
 - name: Grids & Lists
   href: grids_and_lists.md
   header: true
