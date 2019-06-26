@@ -220,7 +220,7 @@ Extend one of the two predefined schemas, that are provided for every component,
 
 ```scss
 // Extending the dark grid schema
-$dark-grid-column-moving-schema: extend($_dark-grid,
+$dark-grid-column-moving-schema: extend($_light-grid,
         (
             ghost-header-text-color:(
                 igx-color: ("primary", 400)
