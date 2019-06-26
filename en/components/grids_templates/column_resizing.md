@@ -179,9 +179,8 @@ To get started with the styling of the @@igComponent column resize line, we need
 The simplest approach to achieve this is to create a new theme that extends the [`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) and accepts many parameters as well as the `$resize-line-color` parameter.
 
 ``` scss
-$blue-color: #0288D1;
 $custom-grid-theme: igx-grid-theme(
-    $resize-line-color: $blue-color
+    $resize-line-color: #0288D1
 );
 
 ```
@@ -257,6 +256,8 @@ $custom-grid-theme: igx-grid-theme(
 );
 ```
 Don't forget to include the theme in the same way as it was demonstrated above.
+
+#### Demo
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:550px">
