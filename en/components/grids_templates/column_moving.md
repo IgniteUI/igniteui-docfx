@@ -216,7 +216,7 @@ $dark-grid-column-moving-theme: igx-grid-theme(
 
 Going further with the theming engine, you can build a robust and flexible structure that benefits from [schemas](/components/themes/schemas.html). A **schema** is a recipe of a theme.
 
-Extend one of the two predefined schemas, that are provided for every component, in this case - [dark-grid]({environment:sassApiUrl}/index.html#variable-_dark-grid).
+Extend one of the two predefined schemas, that are provided for every component, in this case - [light-grid]({environment:sassApiUrl}/index.html#variable-_light-grid).
 
 ```scss
 // Extending the dark grid schema
