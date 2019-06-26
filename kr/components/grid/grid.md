@@ -458,15 +458,15 @@ public ngOnInit() {
  - GroupRow 위에서 `Alt + 오른쪽 화살표` - 행이 아직 확장되지 않은 경우에는 그룹 행 콘텐츠를 확장합니다;
  - 마우스 `휠` -  포커스 요소를 흐리게 합니다;
 
-### 실시간 업데이트 데모	
+### 실시간 업데이트 데모
 
- 이 샘플은 실시간 데이터에 바인딩된 `igxGrid`를 보여줍니다. 
+이 샘플은 실시간 데이터에 바인딩된 `igxGrid`를 보여줍니다. 
 
- <div class="sample-container loading" style="height:915px">	
-    <iframe id="grid-sample-finjs-iframe" data-src='{environment:demosBaseUrl}/finjs-sample' width="100%" height="100%" seamless="" frameborder="0" class="lazyload"></iframe>	
-</div>	
-<div>	
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-finjs-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기</button>	
+<div class="sample-container loading" style="height:915px">
+    <iframe id="grid-sample-finjs-iframe" data-src='{environment:demosBaseUrl}/finjs-sample' width="100%" height="100%" seamless="" frameborder="0" class="lazyload"></iframe>
+</div>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-finjs-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기</button>
 </div>
 
 ## 알려진 제한 사항
