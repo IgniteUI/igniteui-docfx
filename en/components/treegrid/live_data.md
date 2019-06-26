@@ -5,9 +5,9 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ---
 
 ### Live Updating Demo
-The `IgxTreeGrid` component in Ignite UI for Angular is able to handle thousands of updates per seconds, while keeping the grid responsive for any interaction that the user may udertake. This sample demonstrates the `IgxTreeGrid` handling thousands of updates per second.
+The `IgxTreeGrid` component in Ignite UI for Angular is able to handle thousands of updates per seconds, while keeping the grid responsive for any interaction that the user may undertake. This sample demonstrates the `IgxTreeGrid` handling thousands of updates per second.
 
-<div class="sample-container loading" style="height:500px">
+<div class="sample-container loading" style="height:700px">
     <iframe id="grid-sample-finjs-iframe" data-src='{environment:demosBaseUrl}/treegrid-finjs-sample' width="100%" height="100%" seamless="" frameborder="0" class="lazyload"></iframe>
 </div>
 <div>
