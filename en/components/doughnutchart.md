@@ -200,7 +200,7 @@ You can change the exploded slices by changing the contents of the `ExplodedSlic
 
 The doughnut chart component supports the use of a legend. The legend used is the ItemLegend which is connected though the series of the chart.
 
-<!-- ### Legend Demo
+### Legend Demo
 
 <div class="sample-container loading" style="height: 450px">
     <iframe id="doughnut-chart-legend-iframe" data-src='{environment:demosBaseUrl}/charts/doughnut-chart-legend' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
@@ -208,4 +208,4 @@ The doughnut chart component supports the use of a legend. The legend used is th
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="doughnut-chart-legend-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
     </button>
-</div> -->
+</div>

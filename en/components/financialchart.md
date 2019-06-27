@@ -34,7 +34,7 @@ You can explicitly specify the chart type by setting the `chartType` property to
 | `line`   | Specifies the line series                                                                                                                                                                                                                          |
 | `auto`   | Specifies automatic selection of chart type based on Data Adapter which suggest one of above values based names and number of numeric columns in your data. For example, it will suggest `bar` for data items with Open, High, Low, Close columns. |
 
-Refer to the [Financial Chart Panes](financialchart_panes.md) topics for  information on other chart panes.
+Refer to the [Financial Chart Panes](financialchart_chart_panes.md) topics for  information on other chart panes.
 
 ```html
  <igx-financial-chart
@@ -121,3 +121,17 @@ Also, you can hide the toolbar if you wish to maximize vertical space for the ch
     isToolbarVisible="false">
  </igx-financial-chart>
 ```
+
+### Additional Resources
+
+-   [Binding Multiple Sources](financialchart_binding_multiple_sources.md)
+-   [Binding High Volume Data](financialchart_binding_large_data.md)
+-   [Binding Real-Time Data](financialchart_binding_live_data.md)
+-   [Chart Annotations](financialchart_chart_annotations.md)
+-   [Chart Configuration](financialchart_chart_configuration.md)
+-   [Chart Display Types](financialchart_chart_display_types.md)
+-   [Chart Panes](financialchart_chart_panes.md)
+-   [Chart Performance](financialchart_chart_performance.md)
+    <!-- - [Custom Indicators](financialchart_custom_indicators.md) -->
+    <!-- - [Tooltip Templates](financialchart_tooltip_templates.md) -->
+    <!-- - [Tooltip Types](financialchart_tooltip_types.md) -->
