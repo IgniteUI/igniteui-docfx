@@ -501,27 +501,63 @@
 - name: Radial Gauge
   href: radialgauge.md
   new: false
+- name: Sparkline
+  href: sparkline.md
+  new: true
 - name: Maps
   header: true
+- name: Map
   href: map_overview.md
   new: true
-- name: Map
-- name: Binding CSV File
-- name: Binding JSON File
-- name: Binding Data Model
-- name: Binding Shape File
-- name: Binding Multiple Shapes
-- name: Binding Multiple Sources
-- name: Scatter Area Series
-- name: Scatter Contour Series
-- name: Scatter Density Series
-- name: Scatter Proportional Series
-- name: Scatter Symbol Series
-- name: Shape Polygon Series
-- name: Shape Polyline Series
-- name: Wrold Connections
-- name: World Locations
-- name: World Utility
+  items:
+    - name: Binding CSV File
+      href: map_binding_geographic_csv_files.md
+      new: true
+    - name: Binding JSON File
+      href: map_binding_geographic_json_files.md
+      new: true
+    - name: Binding Data Model
+      href: map_binding_geographic_data_models.md
+      new: true
+    - name: Binding Shape File
+      href: map_binding_geographic_shape_files.md
+      new: true
+    - name: Binding Multiple Shapes
+      href: map_binding_multiple_shapes_files.md
+      new: true
+    - name: Binding Multiple Sources
+      href: map_binding_multiple_data_sources.md
+      new: true
+    - name: Scatter Area Series
+      href: map_geographic_scatter_area_series.md
+      new: true
+    - name: Scatter Contour Series
+      href: map_geographic_scatter_contour_series.md
+      new: true
+    - name: Scatter Density Series
+      href: map_geographic_scatter_density_series.md
+      new: true
+    - name: Scatter Proportional Series
+      href: map_geographic_scatter_proportional_series.md
+      new: true
+    - name: Scatter Symbol Series
+      href: map_geographic_scatter_symbol_series.md
+      new: true
+    - name: Shape Polygon Series
+      href: map_geographic_shape_polygon_series.md
+      new: true
+    - name: Shape Polyline Series
+      href: map_geographic_shape_polyline_series.md
+      new: true
+    - name: World Connections
+      href: map_resources_world_connections.md
+      new: true
+    - name: World Locations
+      href: map_resources_world_locations.md
+      new: true
+    - name: World Utility
+      href: map_resources_world_util.md
+      new: true
 - name: Styling & Themes
   header: true
 - name: Themes
