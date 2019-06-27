@@ -6,7 +6,7 @@ _keywords: angular data grid, igniteui for angular, infragistics
 
 ## Hierarchical Grid
 
-<p class="highlight">Display and manipulate hierarchical data with the Ignite UI for Angular Hierarchical Data Grid. Features include the must have for any angular material table filtering, sorting, paging, templates, movable columns, and the ability to edit and update data, making it the ultimate angular material table or material UI grid. All of the above making it the ultimate material UI grid. The Hierarchical Grid builds upon the Data Grid Component and extends its functionality by allowing the users to expand or collapse the rows of the parent grid, revealing the according child grid, when more detailed information is needed.</p>
+<p class="highlight">Display and manipulate hierarchical data with the Ignite UI for Angular Hierarchical Data Grid. Features include the must have for any Angular Material table filtering, sorting, paging, templates, movable columns, and the ability to edit and update data, making it the ultimate Angular Material table or material UI grid. All of the above making it the ultimate material UI grid. The Hierarchical Grid builds upon the Data Grid Component and extends its functionality by allowing the users to expand or collapse the rows of the parent grid, revealing the according child grid, when more detailed information is needed.</p>
 
 ### Demo
 

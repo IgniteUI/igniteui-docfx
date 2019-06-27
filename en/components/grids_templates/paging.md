@@ -1,11 +1,11 @@
 ---
 title: Angular Grid Pagination | Template | Ignite UI for Angular | Infragistics
-_description: Configure Angular pagination and create custom pages in the angular material table by Ignite UI, get data for the requested pages with variety of angular events.
+_description: Configure Angular pagination and create custom pages in the Angular Material table by Ignite UI, get data for the requested pages with variety of angular events.
 _keywords: angular pagination, igniteui for angular, infragistics
 ---
 
 ### @@igComponent Paging Functionality
-Angular pagination in the @@igComponent is configurable via the [`paging`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#paging) and [`perPage`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#perpage) inputs. As in any Angular material table, the pagination in @@igComponent supports template for custom pages.
+Angular pagination in the @@igComponent is configurable via the [`paging`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#paging) and [`perPage`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#perpage) inputs. As in any Angular Material table, the pagination in @@igComponent supports template for custom pages.
 
 #### Demo
 
