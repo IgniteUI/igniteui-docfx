@@ -6,7 +6,7 @@ _keywords: data chart, Ignite UI for Angular, Infragistics
 
 ## Range Series
 
-This topic explains various types of range series in the Angular data chart component. The range series is a group of chart series that takes two numeric data columns and render them as collection of data points stretched in horizontal orientation (e.g. `IgxRangeAreaSeriesComponent`)
+This topic explains various types of range series in the Angular data chart component. The range series is a group of chart series that takes two numeric data columns and render them as collection of data points stretched in horizontal orientation (e.g. [`IgxRangeAreaSeriesComponent`](/angular-apis/typescript/latest/classes/igxrangeareaseriescomponent.html))
 
 ### Demo
 
@@ -24,19 +24,19 @@ This topic explains various types of range series in the Angular data chart comp
 
 The following table lists all types of range series and their descriptions:
 
-| Series Name                     | Description                                                                                                                                                |
-| ------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `IgxRangeAreaSeriesComponent`   | Displays filled region/area between pairs of High/Low values of data points. Categories are arranged horizontally and values – vertically.                 |
-| `IgxRangeColumnSeriesComponent` | Displays discrete data in separate columns between High/Low values of data points. Categories are arranged horizontally and values are plotted vertically. |
+| Series Name                                                                                                   | Description                                                                                                                                                |
+| ------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [`IgxRangeAreaSeriesComponent`](/angular-apis/typescript/latest/classes/igxrangeareaseriescomponent.html)     | Displays filled region/area between pairs of High/Low values of data points. Categories are arranged horizontally and values – vertically.                 |
+| [`IgxRangeColumnSeriesComponent`](/angular-apis/typescript/latest/classes/igxrangecolumnseriescomponent.html) | Displays discrete data in separate columns between High/Low values of data points. Categories are arranged horizontally and values are plotted vertically. |
 
 ### Required Axes
 
 The Angular data chart component provides various types of axes but only the following types of axes can be used with range series.
 
-| Series Type                     | YAxis Type                 | XAxis Type                                                                           |
-| ------------------------------- | -------------------------- | ------------------------------------------------------------------------------------ |
-| `IgxRangeAreaSeriesComponent`   | `IgxNumericYAxisComponent` | `IgxCategoryXAxisComponent`, `IgxOrdinalTimeXAxisComponent`, `IgxTimeXAxisComponent` |
-| `IgxRangeColumnSeriesComponent` | `IgxNumericYAxisComponent` | `IgxCategoryXAxisComponent`, `IgxOrdinalTimeXAxisComponent`, `IgxTimeXAxisComponent` |
+| Series Type                                                                                                   | YAxis Type                                                                                          | XAxis Type                                                                                                                                                                                                                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [`IgxRangeAreaSeriesComponent`](/angular-apis/typescript/latest/classes/igxrangeareaseriescomponent.html)     | [`IgxNumericYAxisComponent`](/angular-apis/typescript/latest/classes/igxnumericyaxiscomponent.html) | [`IgxCategoryXAxisComponent`](/angular-apis/typescript/latest/classes/igxcategoryxaxiscomponent.html), [`IgxOrdinalTimeXAxisComponent`](/angular-apis/typescript/latest/classes/igxordinaltimexaxiscomponent.html), [`IgxTimeXAxisComponent`](/angular-apis/typescript/latest/classes/igxtimexaxiscomponent.html) |
+| [`IgxRangeColumnSeriesComponent`](/angular-apis/typescript/latest/classes/igxrangecolumnseriescomponent.html) | [`IgxNumericYAxisComponent`](/angular-apis/typescript/latest/classes/igxnumericyaxiscomponent.html) | [`IgxCategoryXAxisComponent`](/angular-apis/typescript/latest/classes/igxcategoryxaxiscomponent.html), [`IgxOrdinalTimeXAxisComponent`](/angular-apis/typescript/latest/classes/igxordinaltimexaxiscomponent.html), [`IgxTimeXAxisComponent`](/angular-apis/typescript/latest/classes/igxtimexaxiscomponent.html) |
 
 ### Required Data
 
@@ -44,8 +44,8 @@ Range series have the following data requirements:
 
 -   The data source must be an array or a list of data items
 -   The data source must contain at least one data item otherwise the chart will not render the range series.
--   All data items must contain at least one label data column (string or date time) which should be mapped to the `Label` property of the category axis (e.g. `IgxCategoryXAxisComponent`)
--   All data items must contain at least two numeric data column which should be mapped using the `HighMemberPath` and `LowMemberPath` properties of range series (e.g. `IgxRangeAreaSeriesComponent`)
+-   All data items must contain at least one label data column (string or date time) which should be mapped to the `Label` property of the category axis (e.g. [`IgxCategoryXAxisComponent`](/angular-apis/typescript/latest/classes/igxcategoryxaxiscomponent.html))
+-   All data items must contain at least two numeric data column which should be mapped using the `HighMemberPath` and `LowMemberPath` properties of range series (e.g. [`IgxRangeAreaSeriesComponent`](/angular-apis/typescript/latest/classes/igxrangeareaseriescomponent.html))
 
 You can use the [SampleRangeData](datachart_data_sources_range.md) as data source which meets above data requirements.
 
@@ -84,7 +84,7 @@ import { IgxDataChartCategoryModule } from "igniteui-angular-charts/ES5/igx-data
 
 ### Code Example
 
-This code demonstrates how to create an instance of data chart with `IgxRangeColumnSeriesComponent` and bind it to the data source.
+This code demonstrates how to create an instance of data chart with [`IgxRangeColumnSeriesComponent`](/angular-apis/typescript/latest/classes/igxrangecolumnseriescomponent.html) and bind it to the data source.
 
 ```html
  <igx-data-chart
@@ -103,7 +103,7 @@ This code demonstrates how to create an instance of data chart with `IgxRangeCol
  </igx-data-chart>
 ```
 
-Note that you can also use above code to create `IgxRangeAreaSeriesComponent` by replacing `IgxRangeColumnSeriesComponent`.
+Note that you can also use above code to create [`IgxRangeAreaSeriesComponent`](/angular-apis/typescript/latest/classes/igxrangeareaseriescomponent.html) by replacing [`IgxRangeColumnSeriesComponent`](/angular-apis/typescript/latest/classes/igxrangecolumnseriescomponent.html).
 
 ### Additional Resources
 

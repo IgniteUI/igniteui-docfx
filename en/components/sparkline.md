@@ -52,7 +52,7 @@ export class AppModule {}
 The Ignite UI for Angular sparkline component supports the following types of sparklines:
 
 -   `Area`
--   `IgxColumnComponent`
+-   [`IgxColumnComponent`](/angular-apis/typescript/latest/classes/igxcolumncomponent.html)
 -   `Line`
 -   `Win/Loss`
 
@@ -74,7 +74,7 @@ If the `Win/Loss` sparkline is bound to the same data as the other types such as
 
 ### Markers
 
-The Ignite UI for Angular sparkline component allows you to show markers as circular colored icons on your series to indicate the individual data points based on X/Y coordinates. Markers can be set on sparklines of display types `Line`, `Area`, and `IgxColumnComponent`. The `Win/Loss` type of sparkline does not currently accept markers. By default, markers are not displayed.
+The Ignite UI for Angular sparkline component allows you to show markers as circular colored icons on your series to indicate the individual data points based on X/Y coordinates. Markers can be set on sparklines of display types `Line`, `Area`, and [`IgxColumnComponent`](/angular-apis/typescript/latest/classes/igxcolumncomponent.html). The `Win/Loss` type of sparkline does not currently accept markers. By default, markers are not displayed.
 
 Markers in the sparkline can be placed in any combination of the following locations:
 
@@ -123,9 +123,9 @@ You can also configure whether or not to show the normal range in front of or be
 
 ### Trendlines
 
-The Ignite UI for Angular sparkline component has support for a range of trendlines that display as another layer on top of the actual sparkline layer. To display a sparkline, you can use the `TrendLineType` property.
+The Ignite UI for Angular sparkline component has support for a range of trendlines that display as another layer on top of the actual sparkline layer. To display a sparkline, you can use the [`TrendLineType`](/angular-apis/typescript/latest/enums/trendlinetype.html) property.
 
-The trendlines are calculated according to the algorithm specified by the `TrendLineType` property using the values of the data the the chart is bound to.
+The trendlines are calculated according to the algorithm specified by the [`TrendLineType`](/angular-apis/typescript/latest/enums/trendlinetype.html) property using the values of the data the the chart is bound to.
 
 Trendlines can only be displayed one at a time and by default, the trendline is not displayed.
 
@@ -162,7 +162,7 @@ The following code example shows how to enable a trendline in the Ignite UI for 
 
 The Ignite UI for Angular sparkline component can detect unknown values and render the space for unknown values through a specified interpolation algorithm. If your data contains null values and you do not use this feature, meaning no interpolation is specified, the unknown value will not be plotted.
 
-In order to plot the unknown values, you can set the `UnknownValuePlotting` property of the sparkline component. This property has two possible values, [`LinearInterpolate`](/angular-apis/typescript/latest/enums/unknownvalueplotting.html#linearinterpolate) and [`DontPlot`](/angular-apis/typescript/latest/enums/unknownvalueplotting.html#dontplot), which will interpolate or ignore unknown values, respectively.
+In order to plot the unknown values, you can set the [`UnknownValuePlotting`](/angular-apis/typescript/latest/enums/unknownvalueplotting.html) property of the sparkline component. This property has two possible values, [`LinearInterpolate`](/angular-apis/typescript/latest/enums/unknownvalueplotting.html#linearinterpolate) and [`DontPlot`](/angular-apis/typescript/latest/enums/unknownvalueplotting.html#dontplot), which will interpolate or ignore unknown values, respectively.
 
 <div class="sample-container loading" style="height: 375px">
     <iframe id="radial-gauge-sample-iframe" src='{environment:demosBaseUrl}/gauges/radial-gauge-animation' width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>

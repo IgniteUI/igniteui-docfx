@@ -49,7 +49,7 @@ When installing the chart package, the core package must also be installed.
 
 ### Required Modules
 
-The `IgxCategoryChart` requires the following modules:
+The [`IgxCategoryChartComponent`](/angular-apis/typescript/latest/classes/igxcategorychartcomponent.html) requires the following modules:
 
 ```typescript
 // app.module.ts
@@ -65,7 +65,7 @@ import { IgxCategoryChartModule } from "igniteui-angular-charts/ES5/igx-category
 export class AppModule {}
 ```
 
-It's also possible to load a more minimal configuration of category chart whereby it can only load a subset of the possible series, and exclude other optional features by instead loading the `IgxCategoryChartCoreModule`, and the dynamic module for the series in question, e.g. `IgxLineSeriesDynamicModule`. If the [`chartType`](/angular-apis/typescript/latest/classes/igxcategorychartcomponent.html#charttype) is [`Auto`](/angular-apis/typescript/latest/enums/categorycharttype.html#auto), it wil make sure to select a series type that has been loaded.
+It's also possible to load a more minimal configuration of category chart whereby it can only load a subset of the possible series, and exclude other optional features by instead loading the [`IgxCategoryChartCoreModule`](/angular-apis/typescript/latest/classes/igxcategorychartcoremodule.html), and the dynamic module for the series in question, e.g. [`IgxLineSeriesDynamicModule`](/angular-apis/typescript/latest/classes/igxlineseriesdynamicmodule.html). If the [`chartType`](/angular-apis/typescript/latest/classes/igxcategorychartcomponent.html#charttype) is [`Auto`](/angular-apis/typescript/latest/enums/categorycharttype.html#auto), it wil make sure to select a series type that has been loaded.
 
 <div class="divider--half"></div>
 

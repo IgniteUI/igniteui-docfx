@@ -37,7 +37,7 @@ When installing the gauge package, the core package must also be installed.
 
 ### Required Modules
 
-The `IgxBulletGraph` requires the following modules:
+The [`IgxBulletGraph`](/angular-apis/typescript/latest/classes/igxbulletgraph.html) requires the following modules:
 
 ```typescript
 // app.module.ts

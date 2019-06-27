@@ -31,7 +31,7 @@ When installing the charts package, the core package must also be installed.
 
 ### Required Modules
 
-The `IgxPieChart` requires the following modules:
+The [`IgxPieChart`](/angular-apis/typescript/latest/classes/igxpiechart.html) requires the following modules:
 
 ```typescript
 // app.module.ts
@@ -80,7 +80,7 @@ The following code demonstrates how to bind the pie chart to the above data.
 
 ### Legend
 
-In order to display a legend next to the pie chart component an ItemLegend needs to be created and assigned to the `legend` property. The `legendLabelMemberPath` can then be used to specify which property on your data model it will use to display inside the legend for each pie slice.
+In order to display a legend next to the pie chart component an ItemLegend needs to be created and assigned to the `Infragistics.Controls.Charts.Legend` property. The `legendLabelMemberPath` can then be used to specify which property on your data model it will use to display inside the legend for each pie slice.
 
 Additionally you can use the `legendItemTemplate` and `legendItemBadgeTemplate` properties and the various font properties on ItemLegend to further customize the look of the legend items.
 

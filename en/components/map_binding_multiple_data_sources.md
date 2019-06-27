@@ -6,7 +6,7 @@ _keywords: map, Ignite UI for Angular, infragistics
 
 ## Binding Multiple Data Sources
 
-In the `GeographicMap`, you can add multiple geographic series objects to overlay custom data sources with geo-spacial data. For example, `IgxGeographicSymbolSeriesComponent` for plotting geographic locations of airports, the `IgxGeographicPolylineSeriesComponent` for plotting flights between airports, and 2nd `IgxGeographicPolylineSeriesComponent` for plotting gridlines of major geographic coordinates.
+In the `GeographicMap`, you can add multiple geographic series objects to overlay custom data sources with geo-spacial data. For example, [`IgxGeographicSymbolSeriesComponent`](/angular-apis/typescript/latest/classes/igxgeographicsymbolseriescomponent.html) for plotting geographic locations of airports, the [`IgxGeographicPolylineSeriesComponent`](/angular-apis/typescript/latest/classes/igxgeographicpolylineseriescomponent.html) for plotting flights between airports, and 2nd [`IgxGeographicPolylineSeriesComponent`](/angular-apis/typescript/latest/classes/igxgeographicpolylineseriescomponent.html) for plotting gridlines of major geographic coordinates.
 
 ### Demo
 
@@ -22,9 +22,9 @@ In the `GeographicMap`, you can add multiple geographic series objects to overla
 
 This topic takes you step-by-step towards displaying multiple geographic series that will plot following geo-spatial data:
 
--   `IgxGeographicSymbolSeriesComponent` – displays locations of major airports
--   `IgxGeographicPolylineSeriesComponent` – displays flights between airports
--   `IgxGeographicPolylineSeriesComponent` – displays gridlines of major coordinates
+-   [`IgxGeographicSymbolSeriesComponent`](/angular-apis/typescript/latest/classes/igxgeographicsymbolseriescomponent.html) – displays locations of major airports
+-   [`IgxGeographicPolylineSeriesComponent`](/angular-apis/typescript/latest/classes/igxgeographicpolylineseriescomponent.html) – displays flights between airports
+-   [`IgxGeographicPolylineSeriesComponent`](/angular-apis/typescript/latest/classes/igxgeographicpolylineseriescomponent.html) – displays gridlines of major coordinates
 
 You can use geographic series in this or other combinations to plot desired data.
 
@@ -34,10 +34,10 @@ Create data sources for all geographic series that you want to display in the `G
 
 ### Overlaying Flights
 
-Create first `IgxGeographicPolylineSeriesComponent` object with flight connections between major airports and add it to `IgxSeriesComponent` collection of the `GeographicMap`.
+Create first [`IgxGeographicPolylineSeriesComponent`](/angular-apis/typescript/latest/classes/igxgeographicpolylineseriescomponent.html) object with flight connections between major airports and add it to `Infragistics.Controls.Charts.Series` collection of the `GeographicMap`.
 
 ### Overlaying Gridlines
 
-Create second `IgxGeographicPolylineSeriesComponent` object with geographic gridlines and add it to `IgxSeriesComponent` collection of the `GeographicMap`.
+Create second [`IgxGeographicPolylineSeriesComponent`](/angular-apis/typescript/latest/classes/igxgeographicpolylineseriescomponent.html) object with geographic gridlines and add it to `Infragistics.Controls.Charts.Series` collection of the `GeographicMap`.
 
-Create `IgxGeographicSymbolSeriesComponent` object with geographic gridlines and add it to `IgxSeriesComponent` collection of the geographic `GeographicMap`.
+Create [`IgxGeographicSymbolSeriesComponent`](/angular-apis/typescript/latest/classes/igxgeographicsymbolseriescomponent.html) object with geographic gridlines and add it to `Infragistics.Controls.Charts.Series` collection of the geographic `GeographicMap`.
