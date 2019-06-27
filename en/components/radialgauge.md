@@ -33,7 +33,7 @@ When installing the gauge package, the core package must also be installed.
 
 ### Required Modules
 
-The `IgxRadialGauge` requires the following modules:
+The [`IgxRadialGauge`](/angular-apis/typescript/latest/classes/igxradialgauge.html) requires the following modules:
 
 ```typescript
 // app.module.ts

@@ -29,7 +29,7 @@ import { SpreadsheetAction } from "igniteui-angular-spreadsheet/ES5/SpreadsheetA
 
 ### Usage
 
-The following code snippet shows how you can execute commands related to the clipboard in the `IgxSpreadsheet` control:
+The following code snippet shows how you can execute commands related to the clipboard in the [`IgxSpreadsheet`](/angular-apis/typescript/latest/classes/igxspreadsheet.html) control:
 
 ```typescript
 @ViewChild("spreadsheet", { read: IgxSpreadsheetComponent })

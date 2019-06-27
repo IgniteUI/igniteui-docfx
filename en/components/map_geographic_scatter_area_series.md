@@ -6,7 +6,7 @@ _keywords: map, Ignite UI for Angular, infragistics
 
 ## Using Scatter Area Series
 
-Use the map component's `IgxGeographicScatterAreaSeriesComponent` to draw a colored surface, in a geographic context, based on a triangulation of longitude and latitude data with a numeric value assigned to each point. This type of geographic series is useful for rendering scattered data, defined by geographic locations such as weather temperature, precipitation, population distribution, air pollution, etc.
+Use the map component's [`IgxGeographicScatterAreaSeriesComponent`](/angular-apis/typescript/latest/classes/igxgeographicscatterareaseriescomponent.html) to draw a colored surface, in a geographic context, based on a triangulation of longitude and latitude data with a numeric value assigned to each point. This type of geographic series is useful for rendering scattered data, defined by geographic locations such as weather temperature, precipitation, population distribution, air pollution, etc.
 
 ### Demo
 
@@ -20,12 +20,12 @@ Use the map component's `IgxGeographicScatterAreaSeriesComponent` to draw a colo
 
 <div class="divider--half"></div>
 
-The `IgxGeographicScatterAreaSeriesComponent` works a lot like the `IgxGeographicContourLineSeriesComponent` except that it represents data as interpolated and colored surface instead of contour lines connecting data points with the same values.
+The [`IgxGeographicScatterAreaSeriesComponent`](/angular-apis/typescript/latest/classes/igxgeographicscatterareaseriescomponent.html) works a lot like the [`IgxGeographicContourLineSeriesComponent`](/angular-apis/typescript/latest/classes/igxgeographiccontourlineseriescomponent.html) except that it represents data as interpolated and colored surface instead of contour lines connecting data points with the same values.
 
 ### Data Requirements
 
-Similar to other types of geographic series in the map component, the `IgxGeographicScatterAreaSeriesComponent` has the `ItemsSource` property which can be bound to an array of objects. In addition, each item in the items source must have three data columns, two that store a geographic longitude and latitude coordinates and one data column that stores a value associated with the geographic location. The `LongitudeMemberPath`, `LatitudeMemberPath`, and [`colorMemberPath`](/angular-apis/typescript/latest/classes/igxgeographicscatterareaseriescomponent.html#colormemberpath) properties of the geographic series identify these data column.
-The `IgxGeographicScatterAreaSeriesComponent` automatically performs built-in data triangulation on items in the ItemsSource if no triangulation is set to the `TrianglesSource` property. However, computing triangulation can be a very time-consuming process, so the runtime performance will be better when specifying a TriangulationSource for this property, especially when a large number of data items are present.
+Similar to other types of geographic series in the map component, the [`IgxGeographicScatterAreaSeriesComponent`](/angular-apis/typescript/latest/classes/igxgeographicscatterareaseriescomponent.html) has the `ItemsSource` property which can be bound to an array of objects. In addition, each item in the items source must have three data columns, two that store a geographic longitude and latitude coordinates and one data column that stores a value associated with the geographic location. The `LongitudeMemberPath`, `LatitudeMemberPath`, and [`colorMemberPath`](/angular-apis/typescript/latest/classes/igxgeographicscatterareaseriescomponent.html#colormemberpath) properties of the geographic series identify these data column.
+The [`IgxGeographicScatterAreaSeriesComponent`](/angular-apis/typescript/latest/classes/igxgeographicscatterareaseriescomponent.html) automatically performs built-in data triangulation on items in the ItemsSource if no triangulation is set to the `TrianglesSource` property. However, computing triangulation can be a very time-consuming process, so the runtime performance will be better when specifying a TriangulationSource for this property, especially when a large number of data items are present.
 
 ### Data Binding
 
@@ -44,21 +44,21 @@ The following table summarizes properties of GeographicScatterAreaSeries used fo
 
 ### Color Scale
 
-Use the ColorScale property of the `IgxGeographicScatterAreaSeriesComponent` to resolve colors values of points and thus fill surface of the geographic series. The colors are smoothly interpolated around the shape of the surface by applying a pixel-wise triangle rasterizer to a triangulation data. Because rendering of the surface is pixel-wise, the color scale uses colors instead of brushes.
-The provided `IgxCustomPaletteColorScaleComponent` class should satisfy most coloring needs, but the ColorScale base class can be inherited by the application for custom coloring logic.
+Use the ColorScale property of the [`IgxGeographicScatterAreaSeriesComponent`](/angular-apis/typescript/latest/classes/igxgeographicscatterareaseriescomponent.html) to resolve colors values of points and thus fill surface of the geographic series. The colors are smoothly interpolated around the shape of the surface by applying a pixel-wise triangle rasterizer to a triangulation data. Because rendering of the surface is pixel-wise, the color scale uses colors instead of brushes.
+The provided [`IgxCustomPaletteColorScaleComponent`](/angular-apis/typescript/latest/classes/igxcustompalettecolorscalecomponent.html) class should satisfy most coloring needs, but the ColorScale base class can be inherited by the application for custom coloring logic.
 
-The following table list properties of the `IgxCustomPaletteColorScaleComponent` affecting surface coloring of the GeographicScatterAreaSeries.
+The following table list properties of the [`IgxCustomPaletteColorScaleComponent`](/angular-apis/typescript/latest/classes/igxcustompalettecolorscalecomponent.html) affecting surface coloring of the GeographicScatterAreaSeries.
 
-| Property Name                                                                                                             | Property Type                 | Description                                                                                       |
-| ------------------------------------------------------------------------------------------------------------------------- | ----------------------------- | ------------------------------------------------------------------------------------------------- |
-| [`palette`](/angular-apis/typescript/latest/classes/igxcustompalettecolorscalecomponent.html#palette)                     | ObservableCollection<Color>   | Gets or sets the collection of colors to select from or to interpolate between.                   |
-| [`interpolationMode`](/angular-apis/typescript/latest/classes/igxcustompalettecolorscalecomponent.html#interpolationmode) | `ColorScaleInterpolationMode` | Gets or sets the method getting a color from the Palette.                                         |
-| `MaximumValue`                                                                                                            | double                        | The highest value to assign a color. Any given value greater than this value will be Transparent. |
-| `MinimumValue`                                                                                                            | double                        | The lowest value to assign a color. Any given value less than this value will be Transparent.     |
+| Property Name                                                                                                             | Property Type                                                                                           | Description                                                                                       |
+| ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| [`palette`](/angular-apis/typescript/latest/classes/igxcustompalettecolorscalecomponent.html#palette)                     | ObservableCollection<Color>                                                                             | Gets or sets the collection of colors to select from or to interpolate between.                   |
+| [`interpolationMode`](/angular-apis/typescript/latest/classes/igxcustompalettecolorscalecomponent.html#interpolationmode) | [`ColorScaleInterpolationMode`](/angular-apis/typescript/latest/enums/colorscaleinterpolationmode.html) | Gets or sets the method getting a color from the Palette.                                         |
+| `MaximumValue`                                                                                                            | double                                                                                                  | The highest value to assign a color. Any given value greater than this value will be Transparent. |
+| `MinimumValue`                                                                                                            | double                                                                                                  | The lowest value to assign a color. Any given value less than this value will be Transparent.     |
 
 ### Code Snippet
 
-The following code shows how to bind the `IgxGeographicScatterAreaSeriesComponent` to triangulation data representing surface temperatures in the world.
+The following code shows how to bind the [`IgxGeographicScatterAreaSeriesComponent`](/angular-apis/typescript/latest/classes/igxgeographicscatterareaseriescomponent.html) to triangulation data representing surface temperatures in the world.
 
 <!-- Angular -->
 
