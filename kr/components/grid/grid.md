@@ -460,11 +460,11 @@ public ngOnInit() {
 
 ### 실시간 업데이트 데모
 
-이 샘플은 실시간 데이터에 바인딩된 `igxGrid`를 보여줍니다.
+이 샘플은 실시간 데이터에 바인딩된 `igxGrid`를 보여줍니다. 
 
 <div class="sample-container loading" style="height:915px">
     <iframe id="grid-sample-finjs-iframe" data-src='{environment:demosBaseUrl}/finjs-sample' width="100%" height="100%" seamless="" frameborder="0" class="lazyload"></iframe>
-</div>	
+</div>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-finjs-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기</button>
 </div>
