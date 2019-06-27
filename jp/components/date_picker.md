@@ -247,7 +247,7 @@ public date: Date = new Date(Date.now());
 <div class="divider--half"></div>
 
 #### ドロップダウン モード デート ピッカーのテンプレート
-<a href="#templating-dialog-mode-date-picker"> テンプレート ダイアログ モードのデートピッカー</a>セクションに記載されているすべての情報は、ドロップダウン デートピッカーを再テンプレートするときに適用できます。The only requirement is that an HTML element should be passed to the `openDialog(target)`, and that element will be used as a positioning target for the drop down that is being spawned.
+<a href="#templating-dialog-mode-date-picker"> テンプレート ダイアログ モードのデートピッカー</a>セクションに記載されているすべての情報は、ドロップダウン デートピッカーを再テンプレートするときに適用できます。唯一の要件は、HTML 要素が `openDialog(target)` に渡されて、その要素が生成されているドロップダウンの配置ターゲットとして使用されることです。
 
 <div class="sample-container loading" style="height: 650px;">
     <iframe id="date-picker-sample-7" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/datepicker-sample-7" class="lazyload"></iframe>

@@ -113,6 +113,7 @@ public onColumnMovingEnd(event) {
 }
 ```
 }
+
 @@if (igxName === 'IgxTreeGrid') {
 ```html
 <igx-tree-grid #treeGrid [data]="data" primaryKey="ID" foreignKey="ParentID" [autoGenerate]="false" (onColumnMovingEnd)="onColumnMovingEnd($event)">
@@ -144,6 +145,146 @@ public onColumnMovingEnd(event) {
     }
 }
 ```
+}
+
+### Styling
+
+To get started with styling the @@igComponent column moving headers, we need to import the `index` file, where all the theme functions and component mixins live:
+
+ ```scss
+// custom-grid-column-moving-style.component.scss
+@import '~igniteui-angular/lib/core/styles/themes/index';
+ ``` 
+
+Following the simplest approach, we create a new theme that extends the [`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) and accepts the `$ghost-header-background`, `$ghost-header-text-color` and the `$ghost-header-icon-color` parameters.
+
+```scss
+// Define dark theme for the column moving
+$dark-grid-column-moving-theme: igx-grid-theme(
+    $ghost-header-text-color: #F4D45C,
+    $ghost-header-background: #575757,
+    $ghost-header-icon-color: #f4bb5c
+);
+```
+
+The last step is to **include** the component mixins with its respective theme:
+
+```scss
+@include igx-grid($dark-grid-column-moving-theme);
+```
+
+> [!NOTE]
+> Depending on the component [**View Encapsulation**](/components/themes/component-themes.html#view-encapsulation) strategy, it may be necessary to `penetrate` this encapsulation using `::ng-deep`
+
+```scss
+:host {
+    ::ng-deep {
+        @include igx-grid($dark-grid-column-moving-theme);
+    }
+}
+```
+
+#### Defining a color palette
+
+Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [igx-palette]({environment:sassApiUrl}/index.html#function-igx-palette) and [igx-color]({environment:sassApiUrl}/index.html#function-igx-color) functions.
+
+
+**igx-palette** generates a color palette based on the primary and secondary colors that are passed:
+```scss
+$yellow-color: #F4D45C;
+$black-color: #575757;
+
+$dark-palette: igx-palette($primary: $yellow-color, $secondary: $black-color);
+```
+
+And then with [**igx-color**]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the pallete.
+
+```scss
+$dark-grid-column-moving-theme: igx-grid-theme(
+    $palette: $dark-palette,
+    $ghost-header-text-color: igx-color($dark-palette, "primary", 400),
+    $ghost-header-background: igx-color($dark-palette, "secondary", 200),
+    $ghost-header-icon-color:  igx-color($dark-palette, "primary", 500)
+);
+```
+
+
+> [!NOTE]
+> The igx-color and igx-palette are powerful functions for generating and retrieving colors. Please refer to [`Palettes`](/components/themes/palette.html) topic for detailed guidance on how to use them.
+
+#### Using Schemas
+
+Going further with the theming engine, you can build a robust and flexible structure that benefits from [schemas](/components/themes/schemas.html). A **schema** is a recipe of a theme.
+
+Extend one of the two predefined schemas, that are provided for every component, in this case - [light-grid]({environment:sassApiUrl}/index.html#variable-_light-grid).
+
+```scss
+// Extending the dark grid schema
+$dark-grid-column-moving-schema: extend($_light-grid,
+        (
+            ghost-header-text-color:(
+                igx-color: ("primary", 400)
+            ),
+            ghost-header-background:(
+                igx-color: ("secondary", 200)
+            ),
+            ghost-header-icon-color:(
+                igx-color:( "primary", 500)
+            )
+        )
+);
+```
+
+In order to apply our custom schema we have to **extend** one of the globals ([light]({environment:sassApiUrl}/index.html#variable-light-schema) or [dark]({environment:sassApiUrl}/index.html#variable-dark-schema)), which is basically pointing out the components with a custom schema, and after that add it to the respective component theme:
+
+```scss
+// Extending the global dark-schema
+$custom-light-schema: extend($light-schema,(
+    igx-grid: $dark-grid-column-moving-schema,
+));
+
+// Defining dark-grid-theme with the global dark schema
+$dark-grid-column-moving-theme: igx-grid-theme(
+  $palette: $dark-palette,
+  $schema: $custom-light-schema
+);
+```
+
+Don't forget to include the theme in the same way as it was demonstrated above.
+
+#### Demo
+
+@@if (igxName === 'IgxGrid') {
+<div class="sample-container loading" style="height:650px">
+    <iframe id="column-moving-styled-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-moving-styled-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="column-moving-styled-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
+}
+
+@@if (igxName === 'IgxTreeGrid') {
+<div class="sample-container loading" style="height:650px">
+    <iframe id="treegrid-column-moving-styled-sample-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-column-moving-styled' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-column-moving-styled-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
+}
+
+@@if (igxName === 'IgxHierarchicalGrid') {
+<div class="sample-container loading" style="height:660px">
+    <iframe id="hierarchical-grid-column-moving-styled-sample-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-moving-styled' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-column-moving-styled-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
 }
 
 ### API References

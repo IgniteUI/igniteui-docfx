@@ -16,6 +16,9 @@
   href: grid/grid.md
   new: true
   items:
+    - name: Live Data / Real-Time
+      href: grid/live_data.md
+      new: false
     - name: 仮想化とパフォーマンス
       href: grid/virtualization.md
       new: false
@@ -95,6 +98,9 @@
   href: treegrid/tree_grid.md
   new: true
   items:
+    - name: Live Data / Real-Time
+      href: grid/live_data.md
+      new: false
     - name: 仮想化とパフォーマンス
       href: treegrid/virtualization.md
       new: false
