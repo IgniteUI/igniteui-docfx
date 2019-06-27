@@ -24,12 +24,10 @@ Hyperlinks are added to the [`IgxSpreadsheet`](/angular-apis/typescript/latest/c
 
 When setting up your spreadsheet control to use hyperlinks, you will need to import the [`WorksheetHyperlink`](/angular-apis/typescript/latest/classes/worksheethyperlink.html) class like so:
 
-```ts
-import { WorksheetHyperlink } from "igniteui-angular-excel/ES5/WorksheetHyperlink";
-```
+<!-- Angular -->
 
 ```ts
-import { WorksheetHyperlink } from "igniteui-react-excel/ES5/WorksheetHyperlink";
+import { WorksheetHyperlink } from "igniteui-angular-excel/ES5/WorksheetHyperlink";
 ```
 
 ### Code Snippet

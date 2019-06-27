@@ -12,7 +12,7 @@ The Ignite UI for Angular data chart component allows for synchronization with r
 ### Demo
 
 <div class="sample-container loading" style="height: 500px">
-    <iframe id="data-chart-overview-iframe" src='{environment:demosBaseUrl}/charts/data-chart-overview' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="data-chart-overview-iframe" src='{environment:demosBaseUrl}/charts/data-chart-synchronization' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-overview-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
@@ -27,7 +27,7 @@ If you want to synchronize a set of charts, you can assign them the same name to
 
 Note that in order to synchronize either vertically and/or horizontally, you will need to set the [`isHorizontalZoomEnabled`](/angular-apis/typescript/latest/classes/igxdatachartcomponent.html#ishorizontalzoomenabled) and/or [`isVerticalZoomEnabled`](/angular-apis/typescript/latest/classes/igxdatachartcomponent.html#isverticalzoomenabled) property to `true`, respectively. A synchronized chart that is dependent on another chart will still zoom regardless of this property setting.
 
-### Code Snippet - Chart Synchronization
+### Code Snippet
 
 The following code snippet demonstrates how to synchronize a pair of chart controls in the Ignite UI for Angular data chart:
 

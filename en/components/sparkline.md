@@ -6,19 +6,19 @@ _keywords: Sparkline, Ignite UI for Angular, Infragistics
 
 ## Sparkline
 
-The Ignite UI for Angular sparkline component is a lightweight charting control. It is intended for rendering within a small scale layout such as within a grid cell, but can also be rendered alone.
+The Ignite UI for Angular [`IgxSparklineComponent`](/angular-apis/typescript/latest/classes/igxsparklinecomponent.html) component is a lightweight charting control. It is intended for rendering within a small scale layout such as within a grid cell, but can also be rendered alone.
 
 The sparkline control has several visual elements and corresponding features that can be configured and customized such as the chart type, markers, ranges, trendlines, unknown value plotting, and tooltips.
 
 ### Demo
 
-<div class="sample-container loading" style="height: 375px">
-    <iframe id="radial-gauge-sample-iframe" src='{environment:demosBaseUrl}/gauges/radial-gauge-animation' width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 400px">
+    <iframe id="sparkline-display-types-iframe" src='{environment:demosBaseUrl}/charts/sparkline-display-types' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
-<!-- <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="radial-gauge-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="sparkline-display-types-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
     </button>
-</div> -->
+</div>
 
 <div class="divider--half"></div>
 
@@ -35,6 +35,7 @@ The sparkline component requires the import of the following modules:
 // app.module.ts
 import { IgxSparklineModule} from "igniteui-angular-charts/ES5/igx-sparkline-module";
 import { IgxSparklineCoreModule} from "igniteui-angular-charts/ES5/igx-sparkline-core-module";
+import { SparklineDisplayType } from 'igniteui-angular-charts/ES5/SparklineDisplayType';
 
 @NgModule({
     imports: [
@@ -62,13 +63,20 @@ The `Win/Loss` sparkline type is a column chart type, in which the value of each
 
 If the `Win/Loss` sparkline is bound to the same data as the other types such as the `Line` type, which can be bound to a collection of numeric values, then the sparkline component will select two values from the collection - the highest and the lowest - and will render the sparkline based upon those values.
 
-<div class="sample-container loading" style="height: 375px">
-    <iframe id="radial-gauge-sample-iframe" src='{environment:demosBaseUrl}/gauges/radial-gauge-animation' width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+```html
+<igx-sparkline height="200px" width="400px"
+    [dataSource]="data"
+    valueMemberPath="Value"
+    displayType="Area" />
+```
+
+<div class="sample-container loading" style="height: 400px">
+    <iframe id="sparkline-display-types-iframe" src='{environment:demosBaseUrl}/charts/sparkline-display-types' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
-<!-- <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="radial-gauge-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="sparkline-display-types-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
     </button>
-</div> -->
+</div>
 
 <div class="divider--half"></div>
 
@@ -87,13 +95,29 @@ Markers in the sparkline can be placed in any combination of the following locat
 
 All of the markers mentioned above can be customized using the related marker types' property in aspects of color, visibility, and size. For example, the `Low` markers above will have properties `LowMarkerBrush`, `LowMarkerVisibility`, and `LowMarkerSize`.
 
-<div class="sample-container loading" style="height: 375px">
-    <iframe id="radial-gauge-sample-iframe" src='{environment:demosBaseUrl}/gauges/radial-gauge-animation' width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+```html
+<igx-sparkline
+    highMarkerVisibility="Visible"
+    lowMarkerVisibility="Visible"
+    firstMarkerVisibility="Visible"
+    lastMarkerVisibility="Visible"
+    negativeMarkerVisibility="Visible"
+    markerVisibility="Collapsed"
+    markerSize="10"
+    firstMarkerSize="10"
+    lastMarkerSize="10"
+    lowMarkerSize="10"
+    highMarkerSize="10"
+    negativeMarkerSize="10"/>
+```
+
+<div class="sample-container loading" style="height: 400px">
+    <iframe id="sparkline-markers-iframe" src='{environment:demosBaseUrl}/charts/sparkline-markers' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
-<!-- <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="radial-gauge-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="sparkline-markers-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
     </button>
-</div> -->
+</div>
 
 <div class="divider--half"></div>
 
@@ -111,13 +135,22 @@ By default, the normal range is not displayed. When enabled, the normal range sh
 
 You can also configure whether or not to show the normal range in front of or behind the plotted series in your sparkline component by setting the `DisplayNormalRangeInFront` property.
 
-<div class="sample-container loading" style="height: 375px">
-    <iframe id="radial-gauge-sample-iframe" src='{environment:demosBaseUrl}/gauges/radial-gauge-animation' width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+```html
+<igx-sparkline
+    normalRangeVisibility="Visible"
+    normalRangeMinimum="1"
+    normalRangeMaximum="4"
+    normalRangeFill="rgba(88, 88, 88, 0.4)"
+    displayNormalRangeInFront="true" />
+```
+
+<div class="sample-container loading" style="height: 400px">
+    <iframe id="sparkline-normal-range-iframe" src='{environment:demosBaseUrl}/charts/sparkline-normal-range' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
-<!-- <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="radial-gauge-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="sparkline-normal-range-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
     </button>
-</div> -->
+</div>
 
 <div class="divider--half"></div>
 
@@ -148,13 +181,21 @@ A list of supported trendlines can be found below:
 
 The following code example shows how to enable a trendline in the Ignite UI for Angular sparkline component:
 
-<div class="sample-container loading" style="height: 375px">
-    <iframe id="radial-gauge-sample-iframe" src='{environment:demosBaseUrl}/gauges/radial-gauge-animation' width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+```html
+<igx-sparkline
+    trendLineThickness="3"
+    trendLinePeriod="5"
+    trendLineType="ExponentialFit"
+    trendLineBrush="gray" />
+```
+
+<div class="sample-container loading" style="height: 400px">
+    <iframe id="sparkline-trendlines-iframe" src='{environment:demosBaseUrl}/charts/sparkline-trendlines' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
-<!-- <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="radial-gauge-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="sparkline-trendlines-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
     </button>
-</div> -->
+</div>
 
 <div class="divider--half"></div>
 
@@ -162,14 +203,19 @@ The following code example shows how to enable a trendline in the Ignite UI for 
 
 The Ignite UI for Angular sparkline component can detect unknown values and render the space for unknown values through a specified interpolation algorithm. If your data contains null values and you do not use this feature, meaning no interpolation is specified, the unknown value will not be plotted.
 
-In order to plot the unknown values, you can set the [`UnknownValuePlotting`](/angular-apis/typescript/latest/enums/unknownvalueplotting.html) property of the sparkline component. This property has two possible values, [`LinearInterpolate`](/angular-apis/typescript/latest/enums/unknownvalueplotting.html#linearinterpolate) and [`DontPlot`](/angular-apis/typescript/latest/enums/unknownvalueplotting.html#dontplot), which will interpolate or ignore unknown values, respectively.
+In order to plot the unknown values, you can set the [`UnknownValuePlotting`](/angular-apis/typescript/latest/enums/unknownvalueplotting.html) property of the sparkline component.
 
-<div class="sample-container loading" style="height: 375px">
-    <iframe id="radial-gauge-sample-iframe" src='{environment:demosBaseUrl}/gauges/radial-gauge-animation' width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+```html
+<igx-sparkline
+    unknownValuePlotting="LinearInterpolate" />
+```
+
+<div class="sample-container loading" style="height: 400px">
+    <iframe id="sparkline-unknown-values-iframe" src='{environment:demosBaseUrl}/charts/sparkline-unknown-values' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
-<!-- <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="radial-gauge-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="sparkline-unknown-values-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
     </button>
-</div> -->
+</div>
 
 <div class="divider--half"></div>

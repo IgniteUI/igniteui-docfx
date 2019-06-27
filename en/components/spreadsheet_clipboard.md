@@ -20,6 +20,8 @@ This topic explains how to perform clipboard operations on the Ignite UI for Ang
 
 Before making use of the clipboard you will want to import the `SpreadsheetAction`:
 
+<!-- Angular -->
+
 ```ts
 import { IgxSpreadsheetComponent } from "igniteui-angular-spreadsheet/ES5/igx-spreadsheet-component";
 import { SpreadsheetAction } from "igniteui-angular-spreadsheet/ES5/SpreadsheetAction";
@@ -31,12 +33,7 @@ import { SpreadsheetAction } from "igniteui-angular-spreadsheet/ES5/SpreadsheetA
 
 The following code snippet shows how you can execute commands related to the clipboard in the [`IgxSpreadsheet`](/angular-apis/typescript/latest/classes/igxspreadsheet.html) control:
 
-```typescript
-@ViewChild("spreadsheet", { read: IgxSpreadsheetComponent })
-public spreadsheet: IgxSpreadsheetComponent;
-
----
-
+```ts
 public cut(): void {
     this.spreadsheet.executeAction(SpreadsheetAction.Cut);
 }

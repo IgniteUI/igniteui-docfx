@@ -6,7 +6,7 @@ _keywords: map, Ignite UI for Angular, infragistics
 
 ## Displaying Imagery from Esri Maps
 
-The [`ArcGISOnlineMapImagery`](/angular-apis/typescript/latest/classes/arcgisonlinemapimagery.html) is a free geographic imagery mapping service created by Esri. It provides over 40 styles of geographic imagery tiles of the world. This geographic imagery service can be accessed directly on <a href="http://services.arcgisonline.com/ArcGIS/rest/services" target="_blank">www.arcgisonline.com</a> web site.
+The [`ArcGISOnlineMapImagery`](/angular-apis/typescript/latest/classes/arcgisonlinemapimagery.html) is a free geographic imagery mapping service created by Esri. It provides over 40 styles of geographic imagery tiles of the world. This geographic imagery service can be accessed directly on <a href="https://services.arcgisonline.com/ArcGIS/rest/services" target="_blank">www.arcgisonline.com</a> web site.
 
 ### Demo
 
@@ -24,4 +24,4 @@ The [`ArcGISOnlineMapImagery`](/angular-apis/typescript/latest/classes/arcgisonl
 
 The following code snippet shows how to display geographic imagery from Esri Maps in [`IgxGeographicMapComponent`](/angular-apis/typescript/latest/classes/igxgeographicmapcomponent.html) using [`ArcGISOnlineMapImagery`](/angular-apis/typescript/latest/classes/arcgisonlinemapimagery.html).
 
-You can also use the [ArcGISOnlineMapServers](map_resources_esri.md) which defines most of server URIs provided by Esri Maps.
+Also, you can use the [EsriUtility](map_resources_esri.md) which defines all styles of Esri Maps.

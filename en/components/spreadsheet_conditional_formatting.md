@@ -8,6 +8,14 @@ _keywords: Spreadsheet, Ignite UI for Angular, Infragistics
 
 The Angular Spreadsheet component allows you conditionally format the cells of a worksheet. This allows you to highlight different pieces of your data based on a condition.
 
+### Demo
+
+<div class="sample-container loading" style="height: 500px">
+    <iframe id="live-grid-overview-sample-iframe" src='{environment:demosBaseUrl}/spreadsheet/spreadsheet-conditional-formatting' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+</div>
+
+<div class="divider--half"></div>
+
 ### Conditional Formatting Overview
 
 You can configure the conditional formatting of a particular worksheet by using the many `Add` methods exposed on the `ConditionalFormats` collection of that worksheet. The first parameter of these `Add` methods is the string region of the worksheet that you would like to apply the conditional format to.

@@ -162,7 +162,7 @@ this.spreadsheet.workbook.windowOptions.tabBarWidth = 200;
 
 ### Configuring Zoom Level
 
-The [`IgxSpreadsheet`](/angular-apis/typescript/latest/classes/igxspreadsheet.html) control supports zooming in and out by configuring its `ZoomLevel` property. The zoom level can be a maximum of 400% and a minimum of 10%.
+The Angular Spreadsheet component supports zooming in and out by configuring its `ZoomLevel` property. The zoom level can be a maximum of 400% and a minimum of 10%.
 
 Setting this property to a number represents the percentage as a whole number, so setting the `ZoomLevel` to 100 is equivalent to setting it to 100%.
 

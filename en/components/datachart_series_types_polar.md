@@ -100,7 +100,7 @@ import { IgxDataChartPolarModule } from "igniteui-angular-charts/ES5/igx-data-ch
 This code demonstrates how to create an instance of data chart with [`IgxPolarLineSeriesComponent`](/angular-apis/typescript/latest/classes/igxpolarlineseriescomponent.html) and bind it to the data source.
 
 ```html
- <igx-data-chart
+<igx-data-chart
     [dataSource]="dataSource"
     width="700px"
     height="500px">
@@ -113,7 +113,7 @@ This code demonstrates how to create an instance of data chart with [`IgxPolarLi
         radiusAxisName="radiusAxis"
         angleAxisName="angleAxis">
     </igx-polar-line-series>
- </igx-data-chart>
+</igx-data-chart>
 ```
 
 Note that you can also use above code to create other type of polar series by replacing [`IgxPolarLineSeriesComponent`](/angular-apis/typescript/latest/classes/igxpolarlineseriescomponent.html) with name of polar series that you want to render.
