@@ -10,7 +10,7 @@ The [`ArcGISOnlineMapImagery`](/angular-apis/typescript/latest/classes/arcgisonl
 
 ### Demo
 
-<div class="sample-container loading" style="height: 400px">
+<div class="sample-container loading" style="height: 500px">
     <iframe id="geo-map-displaying-esri-imagery-iframe" src='{environment:demosBaseUrl}/maps/geo-map-displaying-esri-imagery' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>

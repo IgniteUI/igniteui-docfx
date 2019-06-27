@@ -6,13 +6,13 @@ _keywords: Sparkline, Ignite UI for Angular, Infragistics
 
 ## Sparkline
 
-The Ignite UI for Angular [`IgxSparklineComponent`](/angular-apis/typescript/latest/classes/igxsparklinecomponent.html) component is a lightweight charting control. It is intended for rendering within a small scale layout such as within a grid cell, but can also be rendered alone.
+The Ignite UI for Angular sparkline component is a lightweight charting control. It is intended for rendering within a small scale layout such as within a grid cell, but can also be rendered alone.
 
 The sparkline control has several visual elements and corresponding features that can be configured and customized such as the chart type, markers, ranges, trendlines, unknown value plotting, and tooltips.
 
 ### Demo
 
-<div class="sample-container loading" style="height: 400px">
+<div class="sample-container loading" style="height: 300px">
     <iframe id="sparkline-display-types-iframe" src='{environment:demosBaseUrl}/charts/sparkline-display-types' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -70,7 +70,7 @@ If the `Win/Loss` sparkline is bound to the same data as the other types such as
     displayType="Area" />
 ```
 
-<div class="sample-container loading" style="height: 400px">
+<div class="sample-container loading" style="height: 300px">
     <iframe id="sparkline-display-types-iframe" src='{environment:demosBaseUrl}/charts/sparkline-display-types' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -111,7 +111,7 @@ All of the markers mentioned above can be customized using the related marker ty
     negativeMarkerSize="10"/>
 ```
 
-<div class="sample-container loading" style="height: 400px">
+<div class="sample-container loading" style="height: 300px">
     <iframe id="sparkline-markers-iframe" src='{environment:demosBaseUrl}/charts/sparkline-markers' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -144,7 +144,7 @@ You can also configure whether or not to show the normal range in front of or be
     displayNormalRangeInFront="true" />
 ```
 
-<div class="sample-container loading" style="height: 400px">
+<div class="sample-container loading" style="height: 300px">
     <iframe id="sparkline-normal-range-iframe" src='{environment:demosBaseUrl}/charts/sparkline-normal-range' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -189,7 +189,7 @@ The following code example shows how to enable a trendline in the Ignite UI for 
     trendLineBrush="gray" />
 ```
 
-<div class="sample-container loading" style="height: 400px">
+<div class="sample-container loading" style="height: 300px">
     <iframe id="sparkline-trendlines-iframe" src='{environment:demosBaseUrl}/charts/sparkline-trendlines' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -210,7 +210,7 @@ In order to plot the unknown values, you can set the [`UnknownValuePlotting`](/a
     unknownValuePlotting="LinearInterpolate" />
 ```
 
-<div class="sample-container loading" style="height: 400px">
+<div class="sample-container loading" style="height: 300px">
     <iframe id="sparkline-unknown-values-iframe" src='{environment:demosBaseUrl}/charts/sparkline-unknown-values' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>

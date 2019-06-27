@@ -137,7 +137,7 @@ If you set `othersCategoryType` to Percent, then `othersCategoryThreshold` will 
 
 ### Explosion
 
-The pie chart component supports explosion of individual pie slices as well as a `sliceClick` event that allows you to modify selection states and implement custom logic
+The pie chart component supports explosion of individual pie slices as well as a `SliceClick` event that allows you to modify selection states and implement custom logic
 
 ```html
 <igx-pie-chart [dataSource]="data"
