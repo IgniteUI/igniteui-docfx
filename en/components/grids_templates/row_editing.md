@@ -1,6 +1,6 @@
 ---
 title: Angular Grid Row Editing | UI Grid | Ignite UI for Angular | Infragistics
-_description: Learn how to configure in row data manipulations with Ignite UI for Angular. Intuitive grid row editing and crud capabilities are available with the ui grid.
+_description: Learn how to configure in row data manipulations with Ignite UI for Angular. Intuitive grid row editing and CRUD capabilities are available with the ui grid.
 _keywords: row editing, igniteui for angular, infragistics
 ---
 
