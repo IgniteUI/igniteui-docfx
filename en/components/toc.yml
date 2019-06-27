@@ -397,9 +397,9 @@
     - name: Navigation
       href: datachart_chart_navigation.md
       new: true
-    #- name: Synchronization
-    #  href: datachart_chart_synchronization.md
-    #  new: true
+    - name: Synchronization
+      href: datachart_chart_synchronization.md
+      new: true
     - name: Title and Subtitle
       href: datachart_chart_titles.md
       new: true
@@ -418,9 +418,9 @@
     #- name: Series Error Bars
     #  href: datachart_series_errorbars.md
     #  new: true
-    #- name: Value Overlay
-    #  href: datachart_series_value_overlay.md
-    #  new: true        
+    - name: Value Overlay
+      href: datachart_series_value_overlay.md
+      new: true        
 - name: Financial Chart
   href: financialchart.md
   items:
