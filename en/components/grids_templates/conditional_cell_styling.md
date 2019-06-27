@@ -1,21 +1,21 @@
 @@if (igxName === 'IgxGrid') {
 ---
 title: Angular Conditional Cell Styling | Ignite UI for Angular | Infragistics 
-_description: Define a variety of styles with the help of the conditional styling feature of the material ui grid, by using different material styling guidelines with a rich API
+_description: Define a variety of styles with the help of the conditional styling feature of the Material UI grid, by using different material styling guidelines with a rich API
 _keywords: conditional styling, ignite ui for angular, infragistics
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
 title: Angular Conditional Cell Styling | Ignite UI for Angular | Infragistics 
-_description: Define a variety of styles with the help of the conditional styling feature of the material ui grid, by using different material styling guidelines with a rich API
+_description: Define a variety of styles with the help of the conditional styling feature of the Material UI grid, by using different material styling guidelines with a rich API
 _keywords: conditional styling, ignite ui for angular, infragistics
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
 title: Angular Conditional Cell Styling | Ignite UI for Angular | Infragistics 
-_description: Define a variety of styles with the help of the conditional styling feature of the material ui grid, by using different material styling guidelines with a rich API
+_description: Define a variety of styles with the help of the conditional styling feature of the Material UI grid, by using different material styling guidelines with a rich API
 _keywords: conditional styling, ignite ui for angular, infragistics
 ---
 }

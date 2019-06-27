@@ -1,21 +1,21 @@
 ﻿@@if (igxName === 'IgxGrid') {
 ---
-title: Angular Grid Batch Editing | Angular Crud | Ignite UI for Angular | Infragistics
-_description: Perform data manipulation without affecting the underlying data with grid batch editing and with angular crud using material ui table by Ignite UI for Angular
+title: Angular Grid Batch Editing | Angular CRUD | Ignite UI for Angular | Infragistics
+_description: Perform data manipulation without affecting the underlying data with Grid Batch Editing and with Angular CRUD using Material UI table by Ignite UI for Angular
 _keywords: angular crud, ignite ui for angular, infragistics
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular Tree Grid Batch Editing | Angular Crud | Ignite UI for Angular | Infragistics
-_description: Perform data manipulation without affecting the underlying data with grid batch editing and with angular crud using material ui table by Ignite UI for Angular
+title: Angular Tree Grid Batch Editing | Angular CRUD | Ignite UI for Angular | Infragistics
+_description: Perform data manipulation without affecting the underlying data with Grid Batch Editing and with Angular CRUD using Material UI table by Ignite UI for Angular
 _keywords: angular crud, ignite ui for angular, infragistics
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular HierarchicalGrid Grid Batch Editing | Angular Crud | Ignite UI for Angular | Infragistics
-_description: Perform data manipulation without affecting the underlying data with grid batch editing and with angular crud using material ui table by Ignite UI for Angular
+title: Angular HierarchicalGrid Grid Batch Editing | Angular CRUD | Ignite UI for Angular | Infragistics
+_description: Perform data manipulation without affecting the underlying data with Grid Batch Editing and with Angular CRUD using Material UI table by Ignite UI for Angular
 _keywords: angular crud, ignite ui for angular, infragistics
 ---
 }
@@ -23,12 +23,12 @@ _keywords: angular crud, ignite ui for angular, infragistics
 ### @@igComponent Batch Editing and Transactions
 
 @@if (igxName !== 'IgxTreeGrid') {
-[`TransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) is an injectable middleware that a component can use to accumulate changes without affecting the underlying data. The provider exposes API for angular crud and data manipulation (undo and redo), also it can discard or commit all of the changes with a grid batch editing capabilities.
+[`TransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) is an injectable middleware that a component can use to accumulate changes without affecting the underlying data. The provider exposes API for Angular CRUD and data manipulation (undo and redo), also it can discard or commit all of the changes with a grid batch editing capabilities.
 
 The [`TransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) works with both cell editing and row editing. The transaction for the cell edit is added when the cell exits edit mode, while row transaction is created, when the row exits edit mode. But in both cases the state of the grid edits consist of all updated, added and deleted rows and their last states. Those can later be inspected, manipulated and submitted at once. Changes are collected for individual cells or rows, depending on editing mode, and accumulated per data row/record.
 }
 @@if (igxName === 'IgxTreeGrid') {
-[`HierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) is an injectable middleware that a component can use to accumulate changes without affecting the underlying data. The provider exposes API for angular crud and data manipulation (undo and redo), also it can discard or commit all of the changes with a grid batch editing capabilities.
+[`HierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) is an injectable middleware that a component can use to accumulate changes without affecting the underlying data. The provider exposes API for Angular CRUD and data manipulation (undo and redo), also it can discard or commit all of the changes with a grid batch editing capabilities.
 
 The [`HierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) works with both cell editing and row editing. The transaction for the cell edit is added when the cell exits edit mode, while row transaction is created, when the row exits edit mode. But in both cases the state of the grid edits consist of all updated, added and deleted rows and their last states. Those can later be inspected, manipulated and submitted at once. Changes are collected for individual cells or rows, depending on the editing mode in use, and accumulated per data row/record.
 

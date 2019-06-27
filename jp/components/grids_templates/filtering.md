@@ -1,28 +1,28 @@
 ﻿@@if (igxName === 'IgxGrid') {
 ---
 title: Angular Filter | Angular Grid Filtering | Ignite UI for Angular | Infragistics
-_description: Start using angular filter to return data with Ignite UI angular material table similar to the one in excel with convenient usage be the angular grid filtering
+_description: Start using angular filter to return data with Ignite UI Angular Material table similar to the one in excel with convenient usage be the angular grid filtering
 _keywords: angular filter, ignite ui for angular, infragistics
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
 title: Angular Filter | Angular Tree Grid Filtering | Ignite UI for Angular | Infragistics
-_description: Start using angular filter to return data with Ignite UI angular material table similar to the one in excel with convenient usage be the angular grid filtering
+_description: Start using angular filter to return data with Ignite UI Angular Material table similar to the one in excel with convenient usage be the angular grid filtering
 _keywords: angular filter, ignite ui for angular, infragistics
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
 title: Angular Filter | Angular Hierarchical Grid Filtering | Ignite UI for Angular | Infragistics
-_description: Start using angular filter to return data with Ignite UI angular material table similar to the one in excel with convenient usage be the angular grid filtering
+_description: Start using angular filter to return data with Ignite UI Angular Material table similar to the one in excel with convenient usage be the angular grid filtering
 _keywords: angular filter, ignite ui for angular, infragistics
 ---
 }
 
 ### @@igComponent Filtering Overview
 
-Angular grid filtering enables you to display only the records which meet specified criteria. The material ui grid component in Ignite UI provides angular filter capabilities and extensive filtering API through the Data Container to which the @@igComponent is bound.
+Angular grid filtering enables you to display only the records which meet specified criteria. The Material UI grid component in Ignite UI provides angular filter capabilities and extensive filtering API through the Data Container to which the @@igComponent is bound.
 
 #### デモ
 
