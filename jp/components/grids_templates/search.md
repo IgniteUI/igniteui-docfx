@@ -1,27 +1,28 @@
 ﻿@@if (igxName === 'IgxGrid') {
 ---
-title: Grid 検索
-_description: Ignite UI for Angular Data Grid コントロールは、グリッド内で検索機能を実装する検索 API があります。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Grid, Angular Table, Angular Data Grid コンポーネント, Angular Data Table コンポーネント, Angular Data Grid コントロール, Angular Data Table コントロール, Angular Grid コンポーネント, Angular Table コンポーネント, Angular Grid コントロール, Angular Table コントロール, Angular 高パフォーマンス Grid, Angular 高パフォーマンス Data Table, Data Grid 検索, Data Table 検索
+title: Angular Grid search | search data | Ignite UI for Angular | Infragistics 
+_description: Learn how to perform grid seach with the Ignite Angular Material table using rich API. It also allows instant content search in the virtualized data of the Grid
+_keywords: Content search, ignite ui for angular, infragistics
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Tree Grid 検索
-_description: Ignite UI for Angular Tree Grid コントロールは、グリッド内で検索機能を実装する検索 API があります。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, Native Angular コンポーネントs スイート, Native Angular コントロール, Native Angular コンポーネントs Library, Angular Tree Grid, Angular Tree Table, Angular Tree Grid コンポーネント, Angular Tree Table コンポーネント, Angular Tree Grid control, Angular Data Tree Table コントロール, Angular Tree Grid コンポーネント, Angular Tree Table コンポーネント, Angular Tree Grid コントロール, Angular Tree Table コントロール, Angular 高パフォーマンス Tree Grid, Angular 高パフォーマンスe Tree Table, Tree Grid 検索, Tree Table 検索
+title: Angular Tree Grid search | search data | Ignite UI for Angular | Infragistics
+_description: Learn how to perform grid seach with the Ignite Angular Material table using rich API. It also allows instant content search in the virtualized data of the Grid
+_keywords: Content search, ignite ui for angular, infragistics
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Hierarchical Grid 検索
-_description: Ignite UI for Angular Hierarchical Grid コントロールは、グリッド内で検索機能を実装する検索 API があります。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, Native Angular コンポーネントs スイート, Native Angular コントロール, Native Angular コンポーネントs Library, Angular Hierarchical Grid, Angular Hierarchical Table, Angular Hierarchical Grid コンポーネント, Angular Hierarchical Table コンポーネント, Angular Hierarchical Grid コントロール, Angular Hierarchical Table コントロール, Angular 高パフォーマンス Hierarchical Grid, Angular 高パフォーマンス Hierarchical Table, Hierarchical Grid 検索, Hierarchical Table 検索
+title: Angular Hierarchical Grid search | search data | Ignite UI for Angular | Infragistics
+_description: Learn how to perform grid seach with the Ignite Angular Material table using rich API. It also allows instant content search in the virtualized data of the Grid
+_keywords: Content search, ignite ui for angular, infragistics
 ---
 }
-### @@igComponent 検索
 
-ブラウザーにはネイティブな検索機能がありますが、ほとんどの場合で @@igComponent の行列が表示範囲外に仮想化されます。このような場合、ネイティブ検索は DOM の一部でないため仮想化セルを検索できません。Ignite UI for Angular @@igComponent を **検索 API** で拡張したため、@@igComponent の仮想コンテンツを介して検索できるようになりました。
+### @@igComponent Searching through virtualized content
+
+While browsers natively provide content search functionality, most of the time the @@igComponent virtualizes its columns and rows that are out of view. In these cases, the native grid search is unable to search data in the virtualized cells, since they are not part of the DOM. We have extended the Ignite UI for Angular Material table based grid with a **search API** that allows you to search through the **virtualized content** of the @@igComponent.
 
 #### デモ
 

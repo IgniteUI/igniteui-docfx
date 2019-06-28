@@ -1,32 +1,29 @@
 @@if (igxName === 'IgxGrid') {
 ---
-title: 条件付きセルのスタイル設定 - ネイティブ Angular | Ignite UI for Angular
-_description: 条件付きセル スタイル機能は、カスタム条件に基づいて列のセル スタイル設定が可能です。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Grid, Angular Table, Angular Data Grid コンポーネント, Angular Data Table コンポーネント, Angular Data Grid コントロール, Angular Data Table コントロール, Angular Grid コンポーネント, Angular Table コンポーネント, Angular Grid コントロール, Angular Table コントロール, Angular 高パフォーマンス Grid, Angular 高パフォーマンス Data Table, セルのスタイル設定, 条件付き書式, 条件付きセルのスタイル設定, Angular グリッド条件付き列のスタイル設定, Angular Data Table 条件付き列のスタイル設定, Angular 条件付きセルのスタイル設定
-_language: ja
+title: Angular Conditional Cell Styling | Ignite UI for Angular | Infragistics 
+_description: Define a variety of styles with the help of the conditional styling feature of the Material UI grid, by using different material styling guidelines with a rich API
+_keywords: conditional styling, ignite ui for angular, infragistics
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: 条件付きセルのスタイル設定 - ネイティブ Angular | Ignite UI for Angular
-_description: 条件付きセル スタイル機能は、カスタム条件に基づいて列のセル スタイル設定が可能です。
-_keywords: Ignite UI for Angular, UI controls, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, Native Angular コンポーネント Suite, ネイティブ Angular Controls, ネイティブ Angular コンポーネント Library, Angular Tree Grid, Angular Tree Table, Angular Tree Grid コンポーネント, Angular Tree Table コンポーネント, Angular Tree Grid control, Angular Tree Table コントロール, Angular Tree Grid コンポーネント, Angular Tree Table コンポーネント, Angular Tree Grid コントロール, Angular Tree Table コントロール, Angular 高パフォーマンス Tree Grid, Angular 高パフォーマンス Tree Table, Cell Styling, Conditional Formatting, Conditional Cell Styling, Angular Tree Grid Conditional Column Styling, Angular Tree Table Conditional Column Styling, Angular Conditional Cell Styling
-_language: ja
+title: Angular Conditional Cell Styling | Ignite UI for Angular | Infragistics 
+_description: Define a variety of styles with the help of the conditional styling feature of the Material UI grid, by using different material styling guidelines with a rich API
+_keywords: conditional styling, ignite ui for angular, infragistics
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: 条件付きセルのスタイル設定 - ネイティブ Angular | Ignite UI for Angular
-_description: 条件付きセル スタイル機能は、カスタム条件に基づいて列のセル スタイル設定が可能です。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, Native Angular コントロール, ネイティブ Angular コンポーネント Library, Angular Hierarchical Grid, Angular Hierarchical Table, Angular Hierarchical Grid コンポーネント, Angular Hierarchical Table コンポーネント, Angular Hierarchical Grid コントロール, Angular Hierarchical Table コントロール, Angular 高パフォーマンス Hierarchical Grid, Angular 高パフォーマンス Hierarchical Table, Cell Styling, Conditional Formatting, Conditional Cell Styling, Angular Hierarchical Grid Conditional Column Styling, Angular Hierarchical Table Conditional Column スタイリング, Angular Conditional Cell スタイリング
-_language: ja
+title: Angular Conditional Cell Styling | Ignite UI for Angular | Infragistics 
+_description: Define a variety of styles with the help of the conditional styling feature of the Material UI grid, by using different material styling guidelines with a rich API
+_keywords: conditional styling, ignite ui for angular, infragistics
 ---
 }
 
-### 条件付きセルのスタイル設定
-Ignite UI for Angular の @@igxName コンポーネントは、カスタム条件に基づいた**条件付きセルのスタイル設定**をサポートします。
+### @@igxName Conditional Cell Styling
+The @@igxName component in Ignite UI for Angular provides **conditional styling of cells** based on custom rules.
 
-[`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) 入力 [`cellClasses`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#cellclasses) をキーと値のペアを含むオブジェクト リテラルに設定します。キーは CSS クラスの名前です。値はブール値を返すコールバック関数またはブール値です。
+This can be achieved by setting the [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) input [`cellClasses`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#cellclasses) to an object literal containing key-value pairs. The key is the name of the CSS class, while the value is either a callback function that returns a boolean, or boolean value. The result is a convenient material styling of the cell.
 
 #### デモ
 

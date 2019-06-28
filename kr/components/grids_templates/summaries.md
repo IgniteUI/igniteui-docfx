@@ -1,30 +1,28 @@
 ﻿@@if (igxName === 'IgxGrid') {
 ---
-title: 요약 컴포넌트- 네이티브 Angular | Ignite UI for Angular
-_description: With the Ignite UI for Angular Summaries component, see the column information in a separate container with a predefined set of default summary items, depending on the type of data within the column.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Component, Angular Grid, Angular Table, Angular Data Grid component, Angular Data Table component, Angular Data Grid control, Angular Data Table control, Angular Grid component, Angular Table component, Angular Grid control, Angular Table control, Angular High Performance Grid, Angular High Performance Data Table, Data Grid Summaries, Data Table Summaries, Data Grid Column Summaries, Data Table Column Summaries, Data Grid Column Aggregations, Data Table Column Aggregations
-_language: kr
+title: Angular Grid Summaries| Group Footer | Ignite UI for Angular | Infragistics
+_description: Configure angular grid summaries in the group footer of the column and use the option to set custom angular template in the Ignite UI for angular Material UI
+_keywords: angular grid summaries, igniteui for angular, infragistics
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: 요약 컴포넌트- 네이티브 Angular | Ignite UI for Angular
-_description: With the Ignite UI for Angular Summaries component, see the column information in a separate container with a predefined set of default summary items, depending on the type of data within the column.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Component, Angular Tree Grid, Angular Tree Table, Angular Tree Grid component, Angular Tree Table component, Angular Tree Grid control, Angular Tree Table control, Angular Tree Grid component, Angular Tree Table component, Angular Tree Grid control, Angular Tree Table control, Angular High Performance Tree Grid, Angular High Performance Tree Table, Tree Grid Summaries, Tree Table Summaries, Tree Grid Column Summaries, Tree Table Column Summaries, Tree Grid Column Aggregations, Tree Table Column Aggregations
-_language: kr
+title: Angular Tree Grid Summaries| Group Footer | Ignite UI for Angular | Infragistics
+_description: Configure angular grid summaries in the group footer of the column and use the option to set custom angular template in the Ignite UI for angular Material UI
+_keywords: angular grid summaries, ignite ui for angular, infragistics
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: 요약 컴포넌트- 네이티브 Angular | Ignite UI for Angular
-_description: With the Ignite UI for Angular Summaries component, see the column information in a separate container with a predefined set of default summary items, depending on the type of data within the column.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Component, Angular Hierarchical Grid, Angular Hierarchical Table, Angular Hierarchical Grid component, Angular Hierarchical Table component, Angular Hierarchical Grid control, Angular Hierarchical Table control, Angular High Performance Hierarchical Grid, Angular High Performance Hierarchical Table, Hierarchical Data Grid Summaries, Hierarchical Table Summaries, Hierarchical Grid Column Summaries, Hierarchical Table Column Summaries, Hierarchical Grid Column Aggregations, Hierarchical Table Column Aggregations
-_language: kr
+title: Angular Hierarchical Grid Summaries| Group Footer | Ignite UI for Angular | Infragistics
+_description: Configure angular grid summaries in the group footer of the column and use the option to set custom angular template in the Ignite UI for angular Material UI
+_keywords: angular grid summaries, ignite ui for angular, infragistics
 ---
 }
-### @@igComponent 요약
 
-Ignite UI for Angular @@igComponent 컴포넌트에는 열 단위 수준에서 작동하는 **요약** 기능이 있습니다.
+### @@igComponent Summaries Overview
+
+The Angular UI grid in Ignite UI for Angular has a **summaries** feature that functions on a per-column level as group footer. Angular grid summaries is powerful feature which enables the user to see column information in a separate container with a predefined set of default summary items, depending on the type of data within the column or by implementing a custom angular template in the @@igComponent.
 
 #### 데모
 
@@ -61,7 +59,7 @@ Ignite UI for Angular @@igComponent 컴포넌트에는 열 단위 수준에서 �
 > [!NOTE]
 > 열 요약은 **모든 열 값의 함수**이지만 필터링이 적용된 경우에는 열 요약은 **필터링된 결과 값의 함수**가 됩니다
 
-사용자는 열의 데이터 유형에 따라 사전 정의된 기본 요약 항목 세트를 가진 별도의 컨테이너에서 열 정보를 표시할 수 있습니다. **Ignite UI for Angular에서 @@igComponent summaries**을 열 단위 수준으로 활성화하고 필요한 열에 대해서만 활성화할 수 있습니다. @@igComponent 요약은 열의 데이터 유형에 따라 사전 정의된 기본 요약 세트를 제공하므로 시간을 절약할 수 있습니다.
+**Ignite UI for Angular에서 @@igComponent summaries**을 열 단위 수준으로 활성화하고 필요한 열에 대해서만 활성화할 수 있습니다. @@igComponent 요약은 열의 데이터 유형에 따라 사전 정의된 기본 요약 세트를 제공하므로 시간을 절약할 수 있습니다.
 
 
 `string` 및 `boolean` [`data types`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#datatype)의 경우 다음의 함수를 사용할 수 있습니다:
