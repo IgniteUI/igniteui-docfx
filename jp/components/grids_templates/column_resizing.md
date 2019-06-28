@@ -141,9 +141,6 @@ public onResize(event) {
 ```
 }
 
-> [!NOTE]
-> [`minWidth`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#minwidth) が値より小さい値に設定されてた場合も、列を **88px** より小さいサイズに変更することはできません。
-
 #### ダブルクリックで列の自動サイズ調整
 
 各列ヘッダーの右側をダブルクリックして列を**自動サイズ調整**することができます。列は、現在表示されているヘッダーを含む一番長いセル値にサイズ設定されます。この動作はデフォルトで有効なため、追加で構成する必要はありません。ただし、[`maxWidth`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#maxwidth) がその列に設定された際に新しい幅が [`maxWidth`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#maxwidth) 値より大きい場合、列は自動サイズ調整されません。この場合、列が [`maxWidth`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#maxwidth) 値に設定されます。
