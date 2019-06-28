@@ -1,28 +1,28 @@
 ﻿@@if (igxName === 'IgxGrid') {
 ---
-title:  Grid Display Density - Native Angular | Ignite UI for Angular
-_description: The Ignite UI for Angular Data Grid control provides default cell templates for editable columns which are based on the data type of the column.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Component, Angular Grid, Angular Table, Angular Data Grid component, Angular Data Table component, Angular Data Grid control, Angular Data Table control, Angular Grid component, Angular Table component, Angular Grid control, Angular Table control, Angular High Performance Grid, Angular High Performance Data Table, Grid Display Density, Data Table Display Density
+title:  Angular Grid Display Density | Ignite UI for Angular | infragistics 
+_description: Learn how to apply material density capabilities to the Material UI table component by using a set of compact view options in the Ignite UI Grid angular component.
+_keywords: material density, igniteui for angular, infragistics
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title:  Tree Grid Display Density - Native Angular | Ignite UI for Angular
-_description: The Ignite UI for Angular Tree Grid control provides default cell templates for editable columns which are based on the data type of the column.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Component, Angular Tree Grid, Angular Tree Table, Angular Tree Grid component, Angular Tree Table component, Angular Tree Grid control, Angular Tree Table control, Angular Tree Grid component, Angular Tree Table component, Angular Tree Grid control, Angular Tree Table control, Angular High Performance Tree Grid, Angular High Performance Tree Table, Tree Grid Display Density, Tree Table Display Density
+title:  Angular Tree Grid Display Density | Ignite UI for Angular | infragistics 
+_description: Learn how to apply material density capabilities to the Material UI table component by using a set of compact view options in the Ignite UI Grid angular component.
+_keywords: material density, igniteui for angular, infragistics
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title:  Hierarchical Grid Display Density - Native Angular | Ignite UI for Angular
-_description: The Ignite UI for Angular Hierarchical Grid control provides default cell templates for editable columns which are based on the data type of the column.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Component, Angular Hierarchical Grid, Angular Hierarchical Table, Angular Hierarchical Grid component, Angular Hierarchical Table component, Angular Hierarchical Grid control, Angular Hierarchical Table control, Angular High Performance Hierarchical Grid, Angular High Performance Hierarchical Table, Hierarchical Grid Display Density, Hierarchical Table Display Density
+title:  Angular Hierarchical Grid Display Density | Ignite UI for Angular | infragistics 
+_description: Learn how to apply material density capabilities to the Material UI table component by using a set of compact view options in the Ignite UI Grid angular component.
+_keywords: material density, igniteui for angular, infragistics
 ---
 }
 
 ### @@igComponent Display Density
 
-**@@igxName** design is based on [Material Design Guidelines](https://material.io/guidelines/material-design/introduction.html). We currently provide an option to choose between predefined set of display [density](https://material.io/design/layout/density.html#usage) options. By selecting the right density for your use case you can significantly improve the user experience when interacting with large amounts of content.
+**@@igxName** design is based on [Material Design Guidelines](https://material.io/guidelines/material-design/introduction.html). We currently provide an option to choose between predefined set of display [density](https://material.io/design/layout/density.html#usage) options that will bring a cosy, comfortable or compact view respectively. By selecting the right density for your Material UI table / Material UI grid you can significantly improve the user experience when interacting with large amounts of content.
 
 
 #### Demo
