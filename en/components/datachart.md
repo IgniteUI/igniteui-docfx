@@ -2,6 +2,7 @@
 title: Data Chart | Visualization Tools | Ignite UI for Angular | Infragistics
 _description: Create a data chart that displays multiple instances of visual elements in the same plot area in order to create composite chart views.
 _keywords: data chart, Ignite UI for Angular, Infragistics
+mentionedTypes: ['XamDataChart']
 ---
 
 ## Data Chart
@@ -31,7 +32,7 @@ When installing the data chart package, the core package must also be installed.
 
 The Angular data chart component requires the following modules:
 
-```typescript
+```ts
 // data chart's modules required for all series:
 import { IgxDataChartModule } from "igniteui-angular-charts/ES5/igx-data-chart-module";
 import { IgxDataChartCoreModule } from "igniteui-angular-charts/ES5/igx-data-chart-core--module";

@@ -23,7 +23,7 @@ In the Angular data chart component, navigation is disabled by default. Once ena
 
 In order to use navigation in the data chart, you need to import and register the interactivity module. This can be done by using the following code:
 
-```typescript
+```ts
 import { IgxDataChartInteractivityModule } from "igniteui-angular-charts/ES5/igx-data-chart-interactivity-module";
 
 IgxDataChartInteractivityModule.register();
@@ -120,7 +120,7 @@ The Angular data chart component provides several navigation properties that are
 
 The following code snippets show how to modify the view of the Angular data chart component programmatically. The following assumes you have a variable named "chart" to represent the Angular data chart component:
 
-```typescript
+```ts
 // Zoom in by a factor of 0.05
 this.chart.windowScaleVertical -= 0.05;
 this.chart.windowScaleHorizontal -= 0.05;

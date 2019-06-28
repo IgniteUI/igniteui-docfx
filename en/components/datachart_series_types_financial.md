@@ -2,6 +2,7 @@
 title: Data Chart | Visualization Tools | Ignite UI for Angular | Infragistics | Financial
 _description: Create a data chart that displays multiple instances of visual elements in the same plot area in order to create composite chart views.
 _keywords: data chart, Ignite UI for Angular, Infragistics
+mentionedTypes: ['XamDataChart', 'FinancialPriceSeries']
 ---
 
 ## Financial Series
@@ -82,11 +83,11 @@ Financial series, indicators, and overlays have the following data requirements:
 -   The data source must be an array or a list of data items
 -   The data source must contain at least one data item otherwise the data chart will not render the financial series.
 -   All data items must contain at least one data column (string or date time) which should be mapped to the `Label` property of the financial axis (e.g. [`IgxCategoryXAxisComponent`](/angular-apis/typescript/latest/classes/igxcategoryxaxiscomponent.html))
--   All data items must contain 5 numeric data column which should be mapped using properties of a financial series: `OpenMemberPath`, `HighMemberPath`, `LowMemberPath`, `CloseMemberPath`, `VolumeMemberPath`
+-   All data items must contain 5 numeric data column which should be mapped using properties of a financial series: [`openMemberPath`](/angular-apis/typescript/latest/classes/igxfinancialseriescomponent.html#openmemberpath), [`highMemberPath`](/angular-apis/typescript/latest/classes/igxfinancialseriescomponent.html#highmemberpath), [`lowMemberPath`](/angular-apis/typescript/latest/classes/igxfinancialseriescomponent.html#lowmemberpath), [`closeMemberPath`](/angular-apis/typescript/latest/classes/igxfinancialseriescomponent.html#closememberpath), [`volumeMemberPath`](/angular-apis/typescript/latest/classes/igxfinancialseriescomponent.html#volumememberpath)
 
 You can use the [SampleFinancialData](datachart_data_sources_financial.md) as data source which meets above data requirements.
 
-```typescript
+```ts
 this.state = { dataSource: SampleFinancialData.create() }
 ```
 
@@ -94,7 +95,7 @@ this.state = { dataSource: SampleFinancialData.create() }
 
 The financial series require the following modules:
 
-```typescript
+```ts
 // axis' modules:
 import { IgxNumericYAxis } from "igniteui-angular-charts/ES5/igx-numeric-y-axis";
 import { IgxCategoryXAxis } from "igniteui-angular-charts/ES5/igx-category-x-axis";

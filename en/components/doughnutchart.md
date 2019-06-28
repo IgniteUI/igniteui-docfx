@@ -2,6 +2,7 @@
 title: Doughnut Chart | Hierarchical Data Visualization | Ignite UI for Angular | Infragistics
 _description: Use the doughnut chart component to display multiple variables in concentric rings for hierarchical data visualization. View the demo for more information.
 _keywords: doughnut chart, Ignite UI for Angular, infragistics
+mentionedTypes: ['XamDoughnutChart']
 
 ---
 
@@ -32,7 +33,7 @@ When installing the charts package, the core package must also be installed.
 
 The $PlatformShor$ douhgnut chart component requires the following modules:
 
-```typescript
+```ts
 // app.module.ts
 import { IgxDoughnutChartModule } from "igniteui-angular-charts/ES5/igx-doughnut-chart-module";
 
@@ -53,7 +54,7 @@ export class AppModule {}
 Now that the doughnut chart module is imported, next step is to bind it to data.
 In order to create the component, you must first have data to bind it to. The following code snippet demonstrates how to create a simple data source.
 
-```typescript
+```ts
 this.data = [
     { Value: 30, Label: "Google",    },
     { Value: 15, Label: "Microsoft", },
@@ -82,7 +83,7 @@ The following code demonstradtes how to bind the doughnut chart to the above dat
 The doughnut chart component can also display multiple rings at the same time with each of the rings capable of being bound to a different data spirce, or they can share a common data source. For example, the following 2 data sources
 are used to bind to multiple rings:
 
-```typescript
+```ts
 public Months: any[];
 public Seasons: any[];
 /// ...
@@ -146,7 +147,7 @@ this.Seasons = [
 
 The doughnut chart component exposes the API for setting the state of one or more slices to selected. Optionally, you may apply a single custom visual style to the selected slices.
 
-**Enable/disable slice selection** - You can enable (default setting) or disable slice selection in the doughnut chart by setting the `AllowSliceSelection` property.
+**Enable/disable slice selection** - You can enable (default setting) or disable slice selection in the doughnut chart by setting the [`allowSliceSelection`](/angular-apis/typescript/latest/classes/igxdoughnutchartcomponent.html#allowsliceselection) property.
 
 **Configuring the look of the selected slices** - You can define how the selected slices will look by defining a style with a `TargetType` of Slice and assigning it to the `SelectedStyle` property of the doughnut chart.
 
@@ -173,7 +174,7 @@ The doughnut chart component exposes the API for setting the state of one or mor
 The doughnut chart component slices explode either programmatically or by user interaction.
 
 **Enable/disable slice explosion**
-You can enable or disable the ability to explode slices by setting the `AllowSliceExplosion` property.
+You can enable or disable the ability to explode slices by setting the [`allowSliceExplosion`](/angular-apis/typescript/latest/classes/igxdoughnutchartcomponent.html#allowsliceexplosion) property.
 
 **Changing the exploded state of a slice upon slice click**
 If you attach an event handler for the `SliceClick` event, a reference to the clicked slice is supplied in the event arguments and you can modify its exploded state.

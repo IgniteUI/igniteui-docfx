@@ -2,6 +2,7 @@
 title: Data Chart | Visualization Tools | Ignite UI for Angular | Infragistics | Stacked
 _description: Create a data chart that displays multiple instances of visual elements in the same plot area in order to create composite chart views.
 _keywords: data chart, Ignite UI for Angular, Infragistics
+mentionedTypes: ['XamDataChart','StackedColumnSeries']
 namespace: Infragistics.Controls.Charts
 ---
 
@@ -74,7 +75,7 @@ Stacked series have the following data requirements:
 
 The stacked series requires the following modules:
 
-```typescript
+```ts
 // axis' modules:
 import { IgxCategoryXAxis } from "igniteui-angular-charts/ES5/igx-category-x-axis";
 import { IgxCategoryYAxis } from "igniteui-angular-charts/ES5/igx-category-y-axis";

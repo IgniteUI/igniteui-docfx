@@ -9,7 +9,7 @@ mentionedTypes: ['XamDataChart', 'FinancialPriceSeries', 'FinancialSeries']
 
 This topic provides an example on how to implement data source for [Financial Series](datachart_series_types_financial.md)
 
-```typescript
+```ts
 export class SampleFinancialData {
 
     public static create(): any[] {

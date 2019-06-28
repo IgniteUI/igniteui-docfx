@@ -2,6 +2,7 @@
 title: Angular Spreadsheet | Grid Controls | Ignite UI for Angular | Data Validation | Infragistics |
 _description: Use the Spreadsheet control to embed Excel document creation and editing experiences right into your application.
 _keywords: Spreadsheet, Ignite UI for Angular, Infragistics
+mentionedTypes: ['XamSpreadsheet']
 ---
 
 ## Data Validation
@@ -39,7 +40,7 @@ import { TwoConstraintDataValidationRule } from "igniteui-angular-excel/ES5/TwoC
 
 The following snippet shows how you can setup the data validation rules
 
-```typescript
+```ts
 // this validation rule has only input message set
 const valRule1 = new AnyValueDataValidationRule();
 valRule1.inputMessageTitle = "Hotel room booking form";

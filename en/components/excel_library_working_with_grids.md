@@ -1,7 +1,8 @@
 ---
 title: Excel Library| Data Spreadsheet | Ignite UI for Angular | Infragistics
-_description: Use the Excel Library to work with spreadsheet data using Microsoft Excel features. Easily transfer data from excel to your application. 
+_description: Use the Excel Library to work with spreadsheet data using Microsoft Excel features. Easily transfer data from excel to your application.
 _keywords: Excel library, Ignite UI for Angular, Infragistics
+mentionedTypes: ['Workbook']
 ---
 
 ## Working with Grids
@@ -20,6 +21,6 @@ TODO
 
 The following code demonstrates how to use ... TODO
 
-```typescript
+```ts
 TODO
 ```

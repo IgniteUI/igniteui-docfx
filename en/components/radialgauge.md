@@ -2,6 +2,7 @@
 title: Radial Gauge Chart | Data Visualization Tools | Ignite UI for Angular | Infragistics
 _description: Create a colorful radial gauge to display a number of visual elements, such as needle, tick marks and ranges. View our data visualization tools.
 _keywords: Radial Gauge, Ignite UI for Angular, Infragistics
+mentionedTypes: ['XamRadialGauge']
 ---
 
 ## Radial Gauge
@@ -35,7 +36,7 @@ When installing the gauge package, the core package must also be installed.
 
 The [`IgxRadialGauge`](/angular-apis/typescript/latest/classes/igxradialgauge.html) requires the following modules:
 
-```typescript
+```ts
 // app.module.ts
 import { IgxRadialGaugeModule } from "igniteui-angular-gauges/ES5/igx-radial-gauge-module";
 import { IgxRadialGauge } from "igniteui-angular-gauges/ES5/igx-radial-gauge";
@@ -230,7 +231,7 @@ Radial gauge needles are visual elements used to signify a gauge set value. Need
 
 The supported needle shapes and caps are set using the `needleShape` and `needlePivotShape` properties.
 
-You can enable an interactive mode of the gauge (using `isNeedleDraggingEnabled` property) and the end-user will be able to change value by dragging the needle between values of `minimumValue` and `maximumValue` properties.
+You can enable an interactive mode of the gauge (using [`isNeedleDraggingEnabled`](/angular-apis/typescript/latest/classes/igxradialgaugecomponent.html#isneedledraggingenabled) property) and the end-user will be able to change value by dragging the needle between values of `minimumValue` and `maximumValue` properties.
 
 ```html
 <igx-radial-gauge

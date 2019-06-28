@@ -2,6 +2,7 @@
 title: Data Chart | Visualization Tools | Ignite UI for Angular | Infragistics | Scatter Marker
 _description: Create a data chart that displays multiple instances of visual elements in the same plot area in order to create composite chart views.
 _keywords: data chart, Ignite UI for Angular, Infragistics
+mentionedTypes: ['XamDataChart']
 ---
 
 ## Scatter Marker Series
@@ -50,7 +51,7 @@ The scatter marker series have the following data requirements:
 
 You can use the [SampleScatterStats](datachart_data_sources_stats.md) as data source which meets above data requirements.
 
-```typescript
+```ts
 this.state = { dataSource: SampleScatterStats.getCountries() }
 ```
 
@@ -58,7 +59,7 @@ this.state = { dataSource: SampleScatterStats.getCountries() }
 
 The scatter marker series requires the following modules:
 
-```typescript
+```ts
 // axis' modules:
 import { IgxNumericYAxis } from "igniteui-angular-charts/ES5/igx-numeric-y-axis";
 import { IgxNumericXAxis } from "igniteui-angular-charts/ES5/igx-numeric-x-axis";
@@ -123,7 +124,7 @@ You can customize appearance of marker using the [Markers](datachart_series_mark
 </igx-scatter-series>
 ```
 
-```typescript
+```ts
 const series1 = new IgxScatterLineSeries({ name: "series1" });
 series1.markerType = MarkerType.Square;
 series1.markerBrush = "White";

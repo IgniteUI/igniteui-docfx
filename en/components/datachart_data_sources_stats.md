@@ -9,7 +9,7 @@ mentionedTypes: ['XamDataChart']
 
 This topic provides an example on how to implement data source for [Scatter Bubble Series](datachart_series_types_scatter_bubble.md) and [Scatter Marker Series](datachart_series_types_scatter_marker.md)
 
-```typescript
+```ts
 export class SampleScatterStats {
 
     public static countries: Country[];

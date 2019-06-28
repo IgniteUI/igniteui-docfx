@@ -1,7 +1,8 @@
 ---
 title: Map | Data Visualization Tools | Ignite UI for Angular | Open Street Maps | Infragistics
-_description: The Map allows you to display data that contains geographic locations from view models or geo-spatial data loaded from shape files on geographic imagery maps.View the demo, dependencies, usage and toolbar for more information.
+_description: The Map allows you to display imagery from Open Street Maps. View the demo and usage for more
 _keywords: map, Ignite UI for Angular, infragistics
+mentionedTypes: ['XamGeographicMap']
 ---
 
 ## Displaying Imagery from Open Street Maps
@@ -12,10 +13,10 @@ By the default, the Ignite UI for Angular map component already displays geograp
 ### Demo
 
 <div class="sample-container loading" style="height: 400px">
-    <iframe id="geo-map-displaying-osm-imagery-iframe" src='{environment:demosBaseUrl}/maps/geo-map-displaying-osm-imagery' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="geo-map-display-osm-imagery-iframe" src='{environment:demosBaseUrl}/maps/geo-map-display-osm-imagery' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="geo-map-displaying-osm-imagery-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="geo-map-display-osm-imagery-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
     </button>
 </div>
 

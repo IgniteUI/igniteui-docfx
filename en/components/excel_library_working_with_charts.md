@@ -1,7 +1,8 @@
 ---
 title: Excel Library| Data Spreadsheet | Ignite UI for Angular | Infragistics
-_description: Use the Excel Library to work with spreadsheet data using Microsoft Excel features. Easily transfer data from excel to your application. 
+_description: Use the Excel Library to work with spreadsheet data using Microsoft Excel features. Easily transfer data from excel to your application.
 _keywords: Excel library, Ignite UI for Angular, Infragistics
+mentionedTypes: ['Workbook']
 ---
 
 ## Working with Charts
@@ -26,8 +27,8 @@ There are over 70 supported chart types, including `Line`, `Area`, [`IgxColumnCo
 
 The following code demonstrates how to use the Excel charting feature. The below snippet will add a column chart to between the first cell and the 13th cell in the first row of the worksheet. The source data is then set for the data in the region of A2:M6, switching the mapping of columns and rows for the X and Y axis of the column chart:
 
-```typescript
-var chart = ws.shapes().addChart(ChartType.ColumnClustered, 
+```ts
+var chart = ws.shapes().addChart(ChartType.ColumnClustered,
       ws.rows(0).cells(0), { x: 0, y: 0 },
       ws.rows(0).cells(12), { x: 100, y: 100 });
 

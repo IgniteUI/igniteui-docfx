@@ -2,6 +2,7 @@
 title: Financial Chart | Data Visualization Tools | Ignite UI for Angular | Infragistics
 _description: Use the financial chart component to visualize financial data using a simple API. View the demo, dependencies, usage and toolbar for more information.
 _keywords: financial chart, Ignite UI for Angular, infragistics
+mentionedTypes: ['XamFinancialChart']
 ---
 
 ## Chart Annotations

@@ -2,6 +2,7 @@
 title: Data Chart | Visualization Tools | Ignite UI for Angular | Infragistics | Polar
 _description: Create a data chart that displays multiple instances of visual elements in the same plot area in order to create composite chart views.
 _keywords: data chart, Ignite UI for Angular, Infragistics
+mentionedTypes: ['XamDataChart', 'PolarLineSeries']
 ---
 
 ## Polar Series
@@ -52,13 +53,13 @@ Polar series have the following data requirements:
 
 -   The data source must be an array or a list of data items
 -   The data source must contain at least one data item otherwise the chart will not render the polar series.
--   All data items must contain at least two numeric data columns which should be mapped using the `AngleMemberPath` and `RadiusMemberPath` properties of polar series (e.g. [`IgxPolarAreaSeriesComponent`](/angular-apis/typescript/latest/classes/igxpolarareaseriescomponent.html))
+-   All data items must contain at least two numeric data columns which should be mapped using the [`angleMemberPath`](/angular-apis/typescript/latest/classes/igxpolarbasecomponent.html#anglememberpath) and [`radiusMemberPath`](/angular-apis/typescript/latest/classes/igxpolarbasecomponent.html#radiusmemberpath) properties of polar series (e.g. [`IgxPolarAreaSeriesComponent`](/angular-apis/typescript/latest/classes/igxpolarareaseriescomponent.html))
 
 In polar coordinate systems, the location of data points is determined by an angle (angular coordinate) from a fixed direction and distance (radial coordinate) from a fixed point (analogous to the origin of a Cartesian coordinate) which is called "the pole". The lines that start from the pole and point outwards are gridlines of the angular axis ([`IgxNumericAngleAxisComponent`](/angular-apis/typescript/latest/classes/igxnumericangleaxiscomponent.html)) and the concentric rings that surround the pole are gridlines of the radius axis ([`IgxNumericRadiusAxisComponent`](/angular-apis/typescript/latest/classes/igxnumericradiusaxiscomponent.html))
 
 You can use the [SamplePolarData](datachart_data_sources_polar.md) as data source which meets above data requirements.
 
-```typescript
+```ts
 this.state = { dataSource: SamplePolarData.create() }
 ```
 
@@ -66,7 +67,7 @@ this.state = { dataSource: SamplePolarData.create() }
 
 In order to use polar series, you need to import the following modules in your app during load:
 
-```typescript
+```ts
 // axis' modules:
 import { IgxNumericAngleAxis } from "igniteui-angular-charts/ES5/igx-numeric-angle-axis";
 import { IgxNumericRadiusAxis } from "igniteui-angular-charts/ES5/igx-numeric-radius-axis";

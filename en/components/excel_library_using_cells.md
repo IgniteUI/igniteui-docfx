@@ -1,7 +1,8 @@
 ---
 title: Excel Library| Data Spreadsheet | Ignite UI for Angular | Infragistics
-_description: Use the Excel Library to work with spreadsheet data using Microsoft Excel features. Easily transfer data from excel to your application. 
+_description: Use the Excel Library to work with spreadsheet data using Microsoft Excel features. Easily transfer data from excel to your application.
 _keywords: Excel library, Ignite UI for Angular, Infragistics
+mentionedTypes: ['Workbook']
 ---
 
 ## Using Cells
@@ -20,14 +21,14 @@ The [`WorksheetCell`](/angular-apis/typescript/latest/classes/worksheetcell.html
 
 The following code shows the imports needed to use the code-snippets below:
 
-```typescript
+```ts
 import { Workbook } from "igniteui-angular-excel/ES5/Workbook";
 import { WorkbookFormat } from "igniteui-angular-excel/ES5/WorkbookFormat";
 import { Worksheet } from "igniteui-angular-excel/ES5/Worksheet";
 import { WorksheetTable } from "igniteui-angular-excel/ES5/WorksheetTable";
 import { NamedReference } from "igniteui-angular-excel/ES5/NamedReference";
-import { WorksheetCellComment } from "igniteui-angular-excel/ES5/WorksheetCellComment"; 
-import { FormattedString } from "igniteui-angular-excel/ES5/FormattedString"; 
+import { WorksheetCellComment } from "igniteui-angular-excel/ES5/WorksheetCellComment";
+import { FormattedString } from "igniteui-angular-excel/ES5/FormattedString";
 ```
 
 ### Referencing Cells and Regions
@@ -36,7 +37,7 @@ You can access a [`WorksheetCell`](/angular-apis/typescript/latest/classes/works
 
 The following example code demonstrates how to reference cells and regions:
 
-```typescript
+```ts
 var workbook = new Workbook();
 var worksheet = workbook.worksheets().add("Sheet1");
 
@@ -54,8 +55,8 @@ The Infragistics Angular Excel Library supports the referencing of cells and reg
 
 You can use the following code snippet as an example for naming a cell or region:
 
-```typescript
-var workbook = new Workbook();      
+```ts
+var workbook = new Workbook();
 var worksheet = workbook.worksheets().add("Sheet1");
 
 var cell_reference = workbook.namedReferences().add("myCell", "=Sheet1:A1");
@@ -64,7 +65,7 @@ var region_reference = workbook.namedReferences().add("myRegion", "=Sheet1!A1:B2
 
 The following code can be used to the get the cell and region referenced by the "myCell" and "myRegion" named references above:
 
-```typescript
+```ts
 var cell = worksheet.getCell("myCell");
 var region = worksheet.getRegion("myRegion");
 ```
@@ -75,8 +76,8 @@ A comment allows you to display hints or notes for a cell when the end user’s 
 
 The following example code demonstrates how to add a comment to a cell:
 
-```typescript
-var workbook = new Workbook();  
+```ts
+var workbook = new Workbook();
 var worksheet = workbook.worksheets().add("Sheet1");
 
 var cellComment = new WorksheetCellComment();
@@ -88,15 +89,15 @@ worksheet.rows(0).cells(0).comment = cellComment;
 
 ### Adding a Formula to a Cell
 
-The Infragistics Angular Excel Library allows you to add Microsoft Excel formulas to a cell or group of cells in a worksheet. You can do this using the [`WorksheetCell`](/angular-apis/typescript/latest/classes/worksheetcell.html) object’s `applyFormula` method or by instantiating a [`formula`](/angular-apis/typescript/latest/classes/worksheetcell.html#formula) object and applying it to a cell. Regardless of the manner in which you apply a formula to a cell, you can access the [`formula`](/angular-apis/typescript/latest/classes/worksheetcell.html#formula) object using the [`WorksheetCell`](/angular-apis/typescript/latest/classes/worksheetcell.html) object’s [`formula`](/angular-apis/typescript/latest/classes/worksheetcell.html#formula) property. If you need the value, use the cell’s [`value`](/angular-apis/typescript/latest/classes/worksheetcell.html#value) property.
+The Infragistics Angular Excel Library allows you to add Microsoft Excel formulas to a cell or group of cells in a worksheet. You can do this using the [`WorksheetCell`](/angular-apis/typescript/latest/classes/worksheetcell.html) object’s [`applyFormula`](/angular-apis/typescript/latest/classes/worksheetcell.html#applyformula) method or by instantiating a [`formula`](/angular-apis/typescript/latest/classes/worksheetcell.html#formula) object and applying it to a cell. Regardless of the manner in which you apply a formula to a cell, you can access the [`formula`](/angular-apis/typescript/latest/classes/worksheetcell.html#formula) object using the [`WorksheetCell`](/angular-apis/typescript/latest/classes/worksheetcell.html) object’s [`formula`](/angular-apis/typescript/latest/classes/worksheetcell.html#formula) property. If you need the value, use the cell’s [`value`](/angular-apis/typescript/latest/classes/worksheetcell.html#value) property.
 
 The following code shows you how to add a formula to a cell.
 
-```typescript
+```ts
  var workbook = new Workbook();
  var worksheet = workbook.worksheets().add("Sheet1");
  worksheet.rows(5).cells(0).applyFormula("=SUM(A1:A5)");
- 
+
  //Using a Formula object to apply a formula
  var sumFormula = Formula.parse("=SUM(A1:A5)", CellReferenceMode.A1);
  sumFormula.applyTo(worksheet.rows(5).cells(0));
@@ -108,7 +109,7 @@ Cells can have different formatting, including background color, format string, 
 
 The following code shows you how to copy the format of the 2nd column to the 4th column:
 
-```typescript
+```ts
 var workbook = new Workbook();
 var worksheet = workbook.worksheets().add("Sheet1");
 
@@ -130,8 +131,8 @@ You can also format cell values by assigning a format string. An acceptable form
 
 The following code shows you how to format a cell to display numbers as currency:
 
-```typescript
-var workbook = new Workbook(format);      
+```ts
+var workbook = new Workbook(format);
 var workbook = workbook.worksheets().add("Sheet1");
 
 worksheet.columns(2).cellFormat.formatString = "\"$\"#,##0.00";
@@ -163,7 +164,7 @@ The derived types, representing the various fills which can be created, are as f
 
 The following code snippet demonstrates how to create a solid fill in a [`WorksheetCell`](/angular-apis/typescript/latest/classes/worksheetcell.html):
 
-```typescript
+```ts
 var workbook = new Workbook();
 var worksheet = workbook.worksheets().add("Sheet1");
 
@@ -253,9 +254,9 @@ When you merge cells, each cell in the region will have the same value and cell 
 
 Setting the value (or cell format) of the region or any cell in the region will change the value of all cells and the region. If you unmerge cells, all of the previously merged cells will retain the shared cell format they had before they were unmerged. However, only the top-left cell of the region will retain the shared value.
 
-In order to create a merged cell region, you must add a range of cells to the [`Worksheet`](/angular-apis/typescript/latest/classes/worksheet.html) object’s `mergedCellsRegions` collection. This collection exposes an `add` method that takes four integer parameters. The four parameters determine the index of the starting row and column (top-left most cell) and the index of the ending row and column (bottom-right most cell).
+In order to create a merged cell region, you must add a range of cells to the [`Worksheet`](/angular-apis/typescript/latest/classes/worksheet.html) object’s `mergedCellsRegions` collection. This collection exposes an `Add` method that takes four integer parameters. The four parameters determine the index of the starting row and column (top-left most cell) and the index of the ending row and column (bottom-right most cell).
 
-```typescript
+```ts
 var workbook = new Workbook();
 var worksheet = workbook.worksheets().add("Sheet1");
 
@@ -321,7 +322,7 @@ Additionally, if the value cannot fit, it will not display as all hashes. Displa
 
 The following code snippet demonstrates the usage of the `getText` method to get the text as it would be displayed in Excel:
 
-```typescript
+```ts
 var workbook = new Workbook();
 var worksheet = this.workbook.worksheets().add("Sheet1");
 

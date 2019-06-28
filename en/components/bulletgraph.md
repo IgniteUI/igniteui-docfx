@@ -37,9 +37,9 @@ When installing the gauge package, the core package must also be installed.
 
 ### Required Modules
 
-The [`IgxBulletGraph`](/angular-apis/typescript/latest/classes/igxbulletgraph.html) requires the following modules:
+The [`IgxBulletGraphComponent`](/angular-apis/typescript/latest/classes/igxbulletgraphcomponent.html) requires the following modules:
 
-```typescript
+```ts
 // app.module.ts
 import { IgxBulletGraphModule } from "igniteui-angular-gauges/ES5/igx-bullet-graph-module";
 import { IgxBulletGraph } from "igniteui-angular-gauges/ES5/igx-bullet-graph";

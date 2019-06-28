@@ -1,7 +1,8 @@
 ---
 title: Excel Library| Data Spreadsheet | Ignite UI for Angular | Infragistics
-_description: Use the Excel Library to work with spreadsheet data using Microsoft Excel features. Easily transfer data from excel to your application. 
+_description: Use the Excel Library to work with spreadsheet data using Microsoft Excel features. Easily transfer data from excel to your application.
 _keywords: Excel library, Ignite UI for Angular, Infragistics
+mentionedTypes: ['Workbook']
 ---
 
 ## Using Tables
@@ -18,11 +19,11 @@ The Infragistics Angular Excel Engine's [`WorksheetTable`](/angular-apis/typescr
 
 ### Adding a Table to a Worksheet
 
-Worksheet tables in the Infragistics Angular Excel Engine are represented by the [`WorksheetTable`](/angular-apis/typescript/latest/classes/worksheettable.html) object and are added in the worksheet's `tables` collection. In order to add a table, you need to invoke the `add` method on this collection. In this method, you can specify the region in which you would like to add a table, whether or not the table should contain headers, and optionally, specify the table's style as a [`WorksheetTableStyle`](/angular-apis/typescript/latest/classes/worksheettablestyle.html) object.
+Worksheet tables in the Infragistics Angular Excel Engine are represented by the [`WorksheetTable`](/angular-apis/typescript/latest/classes/worksheettable.html) object and are added in the worksheet's `tables` collection. In order to add a table, you need to invoke the `Add` method on this collection. In this method, you can specify the region in which you would like to add a table, whether or not the table should contain headers, and optionally, specify the table's style as a [`WorksheetTableStyle`](/angular-apis/typescript/latest/classes/worksheettablestyle.html) object.
 
 The following code demonstrates how you can add a table with headers to a [`Worksheet`](/angular-apis/typescript/latest/classes/worksheet.html) spanning a region of A1 to G10, where A1 to G1 will be the column headers:
 
-```typescript
+```ts
 var workbook = new Workbook(WorkbookFormat.Excel2007);
 var worksheet = this.workbook.worksheets().add("Sheet1");
 
@@ -33,7 +34,7 @@ Once you have added a table, you can modify it by adding or deleting rows and co
 
 The following code snippet shows the usage of these methods:
 
-```typescript
+```ts
 var workbook = new Workbook(WorkbookFormat.Excel2007);
 var worksheet = this.workbook.worksheets().add("Sheet1");
 var table = worksheet.tables().add("A1:G10", true);
@@ -74,7 +75,7 @@ The following are the filter types available to the columns of your [`WorksheetT
 
 The following code snippet demonstrates how to apply an "above average" filter to a [`WorksheetTable`](/angular-apis/typescript/latest/classes/worksheettable.html)'s first column:
 
-```typescript
+```ts
 var workbook = new Workbook(WorkbookFormat.Excel2007);
 var worksheet = this.workbook.worksheets().add("Sheet1");
 var table = worksheet.tables().add("A1:G10", true);
@@ -101,7 +102,7 @@ There is also a `caseSensitive` property on the `sortSettings` of the [`Workshee
 
 The following code snippet demonstrates how to apply an [`OrderedSortCondition`](/angular-apis/typescript/latest/classes/orderedsortcondition.html) to a [`WorksheetTable`](/angular-apis/typescript/latest/classes/worksheettable.html):
 
-```typescript
+```ts
 var workbook = new Workbook(WorkbookFormat.Excel2007);
 var worksheet = this.workbook.worksheets().add("Sheet1");
 var table = worksheet.tables().add("A1:G10", true);

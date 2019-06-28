@@ -2,6 +2,7 @@
 title: Financial Chart | Data Visualization Tools | Ignite UI for Angular | Infragistics | Configuration Options
 _description: Use the financial chart component to visualize financial data using a simple API. View the demo, dependencies, usage and toolbar for more information.
 _keywords: financial chart, Ignite UI for Angular, infragistics
+mentionedTypes: ['XamFinancialChart']
 ---
 
 ## Chart Configuration Options
@@ -24,9 +25,9 @@ The Angular financial chart component provides many visuals that can be customiz
 
 In the Angular financial chart component, chart navigation is enabled by default. However, you can customize it by setting the following properties:
 
--   `isHorizontalZoomEnabled` - This specifies if the chart can be horizontally zoomed through user interactions. By default, this property is set to true.
--   `isVerticalZoomEnabled` - This specifies if the chart can be vertically zoomed through user interactions. By default, this property is set to false.
--   `isWindowSyncedToVisibleRange` - If set to true the Y-Axis will automatically resize to the visible data range. By default, this property is set to false.
+-   `IsHorizontalZoomEnabled` - This specifies if the chart can be horizontally zoomed through user interactions. By default, this property is set to true.
+-   `IsVerticalZoomEnabled` - This specifies if the chart can be vertically zoomed through user interactions. By default, this property is set to false.
+-   `IsWindowSyncedToVisibleRange` - If set to true the Y-Axis will automatically resize to the visible data range. By default, this property is set to false.
 -   `windowRect` - This is used to retrieve or specify the scroll and zoom state in the igxFinancialChart. The `windowRect` is expressed as a Rectangle with coordinates and sizes between 0 and 1.
 
 ```html

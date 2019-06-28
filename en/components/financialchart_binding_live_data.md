@@ -2,6 +2,7 @@
 title: Financial Chart | Data Visualization Tools | Ignite UI for Angular | Infragistics | Real Time Data
 _description: Use the financial chart component to visualize financial data using a simple API. View the demo, dependencies, usage and toolbar for more information.
 _keywords: financial chart, Ignite UI for Angular, infragistics
+mentionedTypes: ['XamFinancialChart']
 ---
 
 ## Binding Real-Time Data
@@ -26,7 +27,7 @@ You can create the Angular financial chart component with high frequency data up
 
 The following example demonstrates how to notify Financial Chart control about high frequency data updates:
 
-```typescript
+```ts
 private tick(): void {
     const newVal = this.getValue();
     const oldVal = this.data[0];

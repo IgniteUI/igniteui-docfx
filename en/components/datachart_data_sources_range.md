@@ -9,7 +9,7 @@ mentionedTypes: ['XamDataChart']
 
 This topic provides an example on how to implement data source for [Range Series](datachart_series_types_range.md)
 
-```typescript
+```ts
 export class SampleRangeData {
 
     public static create(): any[] {

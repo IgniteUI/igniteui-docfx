@@ -2,6 +2,7 @@
 title: Map | Data Visualization Tools | Ignite UI for Angular | Geographic Imagery | Infragistics
 _description: The Map allows you to display data that contains geographic locations from view models or geo-spatial data loaded from shape files on geographic imagery maps.View the demo, dependencies, usage and toolbar for more information.
 _keywords: map, Ignite UI for Angular, infragistics
+mentionedTypes: ['XamGeographicMap']
 ---
 
 ## Geographic Imagery

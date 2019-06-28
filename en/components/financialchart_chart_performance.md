@@ -2,6 +2,7 @@
 title: Financial Chart | Data Visualization Tools | Ignite UI for Angular | Infragistics | Performance
 _description: Use the financial chart component to visualize financial data using a simple API. View the demo, dependencies, usage and toolbar for more information.
 _keywords: financial chart, Ignite UI for Angular, infragistics
+mentionedTypes: ['XamFinancialChart']
 ---
 
 ## Chart Performance
@@ -21,7 +22,7 @@ The Angular financial chart component has very good performance of rendering a l
 
 The following code demonstrates how to bind the financial chart to high volumes of data.
 
-```typescript
+```ts
 import { GenerateOhlcPricesService } from "../services/generate-ohlc-prices.service";
 
 export class AppComponent {
@@ -55,47 +56,47 @@ Also, you should consider the following features of the financial chart when opt
 
 ### Chart Type
 
-Setting the `chartType` option can have the following impact on chart performance:
+Setting the [`ChartType`](/angular-apis/typescript/latest/enums/charttype.html) option can have the following impact on chart performance:
 
--   `line` - is the least expensive chart type to render and it is recommended when rendering a lot of data points or when plotting a lot of data sources.
--   `column` - is more expensive to render than the `line` chart type and it is recommended when rendering data items with single numeric value.
--   `bar` - is more expensive to render than the `column` chart type and it is recommended when rendering data items with OHLC  numeric values.
--   `candle` - is more expensive to render than the `bar` chart type and it is also recommended when rendering data items with OHLC  numeric values.
+-   [`line`](/angular-apis/typescript/latest/enums/charttype.html#line) - is the least expensive chart type to render and it is recommended when rendering a lot of data points or when plotting a lot of data sources.
+-   [`IgxColumnComponent`](/angular-apis/typescript/latest/classes/igxcolumncomponent.html) - is more expensive to render than the `Line` chart type and it is recommended when rendering data items with single numeric value.
+-   `Bar` - is more expensive to render than the [`IgxColumnComponent`](/angular-apis/typescript/latest/classes/igxcolumncomponent.html) chart type and it is recommended when rendering data items with OHLC  numeric values.
+-   `Candle` - is more expensive to render than the `Bar` chart type and it is also recommended when rendering data items with OHLC  numeric values.
 
 ### Volume Type
 
-Setting the `volumeType` option can have the following impact on chart performance:
+Setting the `VolumeType` option can have the following impact on chart performance:
 
--   `line` - is the least expensive volume type to render and it is recommended when rendering a lot of data points or when plotting a lot of data sources.
--   `area` - is more expensive to render than the `line` volume type.
--   `column` - is more expensive to render than the `area` volume type and it is recommended when rendering volume data of 1-3 stocks.
+-   `Line` - is the least expensive volume type to render and it is recommended when rendering a lot of data points or when plotting a lot of data sources.
+-   `area` - is more expensive to render than the `Line` volume type.
+-   [`IgxColumnComponent`](/angular-apis/typescript/latest/classes/igxcolumncomponent.html) - is more expensive to render than the `area` volume type and it is recommended when rendering volume data of 1-3 stocks.
 
 ### Marker Type
 
-Setting the `markerTypes` option to `none` will decrease the amount of items to render than any other type.
+Setting the `MarkerTypes` option to `none` will decrease the amount of items to render than any other type.
 
 ### Legend Visibility
 
-Setting the `isLegendVisible` option to `false` will increase performance since the legend will not be drawn.
+Setting the `IsLegendVisible` option to `false` will increase performance since the legend will not be drawn.
 
 ### Zoom Slider Type
 
-Setting the `zoomSliderType` option to `none` will improve chart performance and enable more vertical space for other indicators and the volume pane.
+Setting the `ZoomSliderType` option to `none` will improve chart performance and enable more vertical space for other indicators and the volume pane.
 
 ### Chart Panes
 
-Setting a lot of panes using `inidicatorTypes` and `overlayTypes` options, might decrease performance and it is recommended to use a few financial indicators and one financial overlay.
+Setting a lot of panes using `inidicatorTypes` and `OverlayTypes` options, might decrease performance and it is recommended to use a few financial indicators and one financial overlay.
 
 ### X-Axis Mode
 
-Setting the `xAxisMode` option can have the following impact on chart performance:
+Setting the `XAxisMode` option can have the following impact on chart performance:
 
--   `ordinal` - is the least expensive x-axis mode to use in the financial chart and it is recommended when rendering of break in data range (e.g. weekends or holidays) is not important.
--   `time` - is more expensive expensive than the `ordinal` to use in the financial chart. It is recommended when rendering of break in data range (e.g. weekends or holidays) is  required.
+-   `Ordinal` - is the least expensive x-axis mode to use in the financial chart and it is recommended when rendering of break in data range (e.g. weekends or holidays) is not important.
+-   `time` - is more expensive expensive than the `Ordinal` to use in the financial chart. It is recommended when rendering of break in data range (e.g. weekends or holidays) is  required.
 
 ### Y-Axis Mode
 
-Setting the `yAxisMode` option to `numeric` is recommended for higher performance, as fewer operations are needed than using `percentChange` mode.
+Setting the `YAxisMode` option to `numeric` is recommended for higher performance, as fewer operations are needed than using `PercentChange` mode.
 
 ### Annotations
 
@@ -105,22 +106,22 @@ Enabling the Callout Annotations (`calloutsVisible`) or Final Value Annotations 
 
 By default, the financial chart is already optimized for the best performance and enabling additional visuals of the chart might decrease performance, for example the following options:
 
--   `xAxisInterval`
--   `yAxisInterval`
--   `xAxisTitle`
--   `yAxisTitle`
--   `xAxisTick`
--   `yAxisTick`
--   `xAxisMajor`
--   `yAxisMajor`
--   `xAxisMinor`
--   `yAxisMinor`
--   `xAxisLabel`
--   `yAxisLabel`
--   `xAxisStroke`
--   `yAxisStroke`
--   `xAxisStrip`
--   `yAxisStrip`
+-   `XAxisInterval`
+-   `YAxisInterval`
+-   `XAxisTitle`
+-   `YAxisTitle`
+-   `XAxisTick`
+-   `YAxisTick`
+-   `XAxisMajor`
+-   `YAxisMajor`
+-   `XAxisMinor`
+-   `YAxisMinor`
+-   `XAxisLabel`
+-   `YAxisLabel`
+-   `XAxisStroke`
+-   `YAxisStroke`
+-   `XAxisStrip`
+-   `YAxisStrip`
 
 <div class="divider--half"></div>
 

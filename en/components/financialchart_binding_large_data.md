@@ -2,6 +2,7 @@
 title: Financial Chart | Data Visualization Tools | Ignite UI for Angular | Infragistics | High Volume Data
 _description: Use the financial chart component to visualize financial data using a simple API. View the demo, dependencies, usage and toolbar for more information.
 _keywords: financial chart, Ignite UI for Angular, infragistics
+mentionedTypes: ['XamFinancialChart']
 ---
 
 ## Binding High Volume Data
@@ -25,7 +26,7 @@ When storing lots of data in properties in your components to bind against, you 
 
 The following code demonstrates how to bind the financial chart to high volumes of data.
 
-```typescript
+```ts
 import { GenerateHourlyPricesService } from "../services/generate-hourly-prices.service";
 
 export class AppComponent {

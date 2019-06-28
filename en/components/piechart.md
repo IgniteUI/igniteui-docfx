@@ -2,6 +2,7 @@
 title: Pie Chart | Categorical Data Visualization | Ignite UI for React | Infragistics
 _description: Create a colorful pie chart to display categorical data in Ignite UI for data visualization. View the demo for more information.
 _keywords: pie chart, ignite ui for react, infragistics
+mentionedTypes: ['XamPieChart']
 ---
 
 ## Pie Chart
@@ -33,7 +34,7 @@ When installing the charts package, the core package must also be installed.
 
 The [`IgxPieChart`](/angular-apis/typescript/latest/classes/igxpiechart.html) requires the following modules:
 
-```typescript
+```ts
 // app.module.ts
 
 import { IgxPieChartModule } from "igniteui-angular-charts/ES5/igx-pie-chart-module";
@@ -55,7 +56,7 @@ export class AppModule {}
 Now that the pie chart module is imported, next step is to bind it to data.
 In order to create a pie chart, you must first have data to bind it to. The following code snippet demonstrates how to create a simple data source.
 
-```typescript
+```ts
 var data = [
     { MarketShare: 30, Company: "Google",    },
     { MarketShare: 30, Company: "Apple",     },

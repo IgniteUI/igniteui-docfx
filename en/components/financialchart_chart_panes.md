@@ -2,6 +2,7 @@
 title: Financial Chart | Data Visualization Tools | Ignite UI for Angular | Infragistics | Panes
 _description: Use the financial chart component to visualize financial data using a simple API. View the demo, dependencies, usage and toolbar for more information.
 _keywords: financial chart, Ignite UI for Angular, infragistics
+mentionedTypes: ['XamFinancialChart']
 ---
 
 ## Chart Panes
@@ -73,7 +74,7 @@ Note that is recommended to use line chart type if plotting multiple data source
 
 ### Zoom Pane
 
-This pane controls the zoom of all the displayed panes. This pane is displayed by default. It can be turned off by setting the `zoomSliderType` to `none` as demonstrated in the following code:
+This pane controls the zoom of all the displayed panes. This pane is displayed by default. It can be turned off by setting the `ZoomSliderType` to `none` as demonstrated in the following code:
 
 ```html
  <igx-financial-chart
@@ -84,7 +85,7 @@ This pane controls the zoom of all the displayed panes. This pane is displayed b
  </igx-financial-chart>
 ```
 
-Note that you should set the `zoomSliderType` option to the same value as the `chartType` option is set to. This way, the zoom slider will show correct preview of the price pane. The following code demonstrates how to do this:
+Note that you should set the `ZoomSliderType` option to the same value as the [`ChartType`](/angular-apis/typescript/latest/enums/charttype.html) option is set to. This way, the zoom slider will show correct preview of the price pane. The following code demonstrates how to do this:
 
 ```html
  <igx-financial-chart

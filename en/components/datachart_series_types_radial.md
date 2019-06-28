@@ -2,6 +2,7 @@
 title: Data Chart | Visualization Tools | Ignite UI for Angular | Infragistics | Radial
 _description: Create a data chart that displays multiple instances of visual elements in the same plot area in order to create composite chart views.
 _keywords: data chart, Ignite UI for Angular, Infragistics
+mentionedTypes: ['XamDataChart','RadialPieSeries']
 ---
 
 ## Radial Series
@@ -50,11 +51,11 @@ Radial series have the following data requirements:
 -   The data source must be an array or a list of data items
 -   The data source must contain at least one data item otherwise the chart will not render the radial series.
 -   All data items must contain at least one label data column (string or date time) which should be mapped to the `Label` property of the category axis (e.g. [`IgxCategoryAngleAxisComponent`](/angular-apis/typescript/latest/classes/igxcategoryangleaxiscomponent.html))
--   All data items must contain at least one numeric data column which should be mapped using the `ValueMemberPath` property of radial series (e.g. [`IgxRadialAreaSeriesComponent`](/angular-apis/typescript/latest/classes/igxradialareaseriescomponent.html))
+-   All data items must contain at least one numeric data column which should be mapped using the [`valueMemberPath`](/angular-apis/typescript/latest/classes/igxanchoredradialseriescomponent.html#valuememberpath) property of radial series (e.g. [`IgxRadialAreaSeriesComponent`](/angular-apis/typescript/latest/classes/igxradialareaseriescomponent.html))
 
 You can use the [SampleRadialData](datachart_data_sources_radial.md) as data source which meets above data requirements.
 
-```typescript
+```ts
 this.state = { dataSource: SampleRadialData.create() }
 ```
 
@@ -64,7 +65,7 @@ this.state = { dataSource: SampleRadialData.create() }
 
 In order to use radial series, you need to import the following modules in your app during load:
 
-```typescript
+```ts
 // axis' modules:
 import { IgxCategoryAngleAxis } from "igniteui-angular-charts/ES5/igx-category-angle-axis";
 import { IgxNumericRadiusAxis } from "igniteui-angular-charts/ES5/igx-numeric-radius-axis";

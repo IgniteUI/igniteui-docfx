@@ -1,7 +1,8 @@
 ---
 title: Excel Library| Data Spreadsheet | Ignite UI for Angular | Infragistics
-_description: Use the Excel Library to work with spreadsheet data using Microsoft Excel features. Easily transfer data from excel to your application. 
+_description: Use the Excel Library to work with spreadsheet data using Microsoft Excel features. Easily transfer data from excel to your application.
 _keywords: Excel library, Ignite UI for Angular, Infragistics
+mentionedTypes: ['Workbook']
 ---
 
 ## Using Worksheets
@@ -18,7 +19,7 @@ The Infragistics Angular Excel Engine's [`Worksheet`](/angular-apis/typescript/l
 
 The following code shows the imports needed to use the code-snippets below:
 
-```typescript
+```ts
 import { Workbook } from "igniteui-angular-excel/ES5/Workbook";
 import { Worksheet } from "igniteui-angular-excel/ES5/Worksheet";
 import { WorkbookFormat } from "igniteui-angular-excel/ES5/WorkbookFormat";
@@ -39,16 +40,16 @@ The gridlines are used to visually separate the cells in the worksheet. You may 
 
 You can show or hide the gridlines using the `showGridlines` property of the `displayOptions` of the worksheet. The following code demonstrates how you can hide the gridlines in your worksheet:
 
-```typescript
+```ts
 var workbook = new Workbook(WorkbookFormat.Excel2007);
 var worksheet = workbook.worksheets().add("Sheet1");
-    
+
 worksheet.displayOptions.showGridlines = false;
 ```
 
 You can configure the gridlines' color using the `gridlineColor` property of the `displayOptions` of the worksheet. The following code demonstrates how you can change the gridlines in your worksheet to be red:
 
-```typescript
+```ts
 var workbook = new Workbook(WorkbookFormat.Excel2007);
 var worksheet = workbook.worksheets().add("Sheet1");
 
@@ -61,7 +62,7 @@ The column and row headers are used to visually identify columns and rows. They 
 
 You can show or hide the column and row headers using the `showRowAndColumnHeaders` property of the `displayOptions` of the worksheet. The following code demonstrates how you can hide the row and column headers:
 
-```typescript
+```ts
 var workbook = new Workbook(WorkbookFormat.Excel2007);
 var worksheet = workbook.worksheets().add("Sheet1");
 
@@ -74,7 +75,7 @@ By default, the [`Worksheet`](/angular-apis/typescript/latest/classes/worksheet.
 
 The following code demonstrates how to disable editing in your worksheet:
 
-```typescript
+```ts
 var workbook = new Workbook(WorkbookFormat.Excel2007);
 var worksheet = workbook.worksheets().add("Sheet1");
 
@@ -87,7 +88,7 @@ When protection is set, you can set the `CellFormat` object's `locked` property 
 
 The following code demonstrates how you can do this:
 
-```typescript
+```ts
 var workbook = new Workbook(WorkbookFormat.Excel2007);
 var worksheet = workbook.worksheets().add("Sheet1");
 
@@ -118,7 +119,7 @@ Below is a list of methods and their descriptions that you can use to add a filt
 
 You can use the following code snippet as an example to add a filter to a worksheet region:
 
-```typescript
+```ts
 var workbook = new Workbook(WorkbookFormat.Excel2007);
 var worksheet = workbook.worksheets().add("Sheet1");
 
@@ -136,12 +137,12 @@ You can also specify the first row in the bottom pane or first column in the rig
 
 The following code snippet demonstrates how to use the freezing panes features in a worksheet:
 
-```typescript
+```ts
 var workbook = new Workbook(WorkbookFormat.Excel2007);
 var worksheet = workbook.worksheets().add("Sheet1");
 
 worksheet.displayOptions.panesAreFrozen = true;
-    
+
 worksheet.displayOptions.frozenPaneSettings.frozenRows = 3;
 worksheet.displayOptions.frozenPaneSettings.frozenColumns = 1;
 
@@ -155,7 +156,7 @@ You can change the zoom level for each worksheet independently using the `magnif
 
 The following code demonstrates how you can do this:
 
-```typescript
+```ts
 var workbook = new Workbook(WorkbookFormat.Excel2007);
 var worksheet = workbook.worksheets().add("Sheet1");
 
@@ -172,7 +173,7 @@ The sort conditions in a sheet are only reapplied when sort conditions are added
 
 The following code snippet demonstrates how to apply a sort to a region of cells in a worksheet:
 
-```typescript
+```ts
 var workbook = new Workbook(WorkbookFormat.Excel2007);
 var worksheet = workbook.worksheets().add("Sheet1");
 
@@ -198,7 +199,7 @@ You can remove worksheet protection by calling the `unprotect` method on the [`W
 
 The following code snippet shows how to enable protection of all of the above-listed user operations:
 
-```typescript
+```ts
 var workbook = new Workbook(WorkbookFormat.Excel2007);
 var worksheet = workbook.worksheets().add("Sheet1");
 
@@ -217,13 +218,13 @@ When loading a pre-existing [`Workbook`](/angular-apis/typescript/latest/classes
 
 The following code example demonstrates usage of conditional formats on a worksheet:
 
-```typescript
+```ts
 var workbook = new Workbook(WorkbookFormat.Excel2007);
 var worksheet = workbook.worksheets().add("Sheet1");
 
 var color = new Color();
 color.colorString = "Red";
-    
+
 var format = worksheet.conditionalFormats().addAverageCondition("A1:A10", FormatConditionAboveBelow.AboveAverage);
 format.cellFormat.font.colorInfo = new WorkbookColorInfo(color);
 ```

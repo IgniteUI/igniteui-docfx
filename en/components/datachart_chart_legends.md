@@ -49,7 +49,7 @@ The following code snippet shows how to use a legend in the Angular data chart c
 </div>
 ```
 
-```typescript
+```ts
 @ViewChild("legend")
 public legend : IgxLegendComponent;
 ```

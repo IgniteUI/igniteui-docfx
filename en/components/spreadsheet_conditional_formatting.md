@@ -2,6 +2,7 @@
 title: Angular Spreadsheet | Grid Controls | Ignite UI for Angular | Conditional Formatting | Infragistics |
 _description: Use the Spreadsheet control to embed Excel document creation and editing experiences right into your application.
 _keywords: Spreadsheet, Ignite UI for Angular, Infragistics
+mentionedTypes: ['XamSpreadsheet']
 ---
 
 ## Spreadsheet Conditional Formatting
@@ -28,7 +29,7 @@ There are a few conditional formats that do not have a `CellFormat` property, as
 
 When loading a pre-existing workbook from Excel, the formats will be preserved when that workbook is loaded. The same is true for when you save the workbook out to an Excel file.
 
-The following lists the supported conditional formats in the [`IgxSpreadsheet`](/angular-apis/typescript/latest/classes/igxspreadsheet.html) control:
+The following lists the supported conditional formats in the `XamSpreadsheet` control:
 
 -   [`AverageConditionalFormat`](/angular-apis/typescript/latest/classes/averageconditionalformat.html): Added using the `AddAverageCondition` method, this conditional format exposes properties which control the visual attributes of a worksheet cell based on whether a cell’s value is above or below the average or standard deviation for the associated range.
 -   [`BlanksConditionalFormat`](/angular-apis/typescript/latest/classes/blanksconditionalformat.html): Added using the `AddBlanksCondition` method, this conditional format exposes properties which control the visual attributes of a worksheet cell based on whether the cell’s value is not set.
@@ -44,11 +45,11 @@ The following lists the supported conditional formats in the [`IgxSpreadsheet`](
 -   [`OperatorConditionalFormat`](/angular-apis/typescript/latest/classes/operatorconditionalformat.html): Added using the `AddOperatorCondition` method, this conditional format exposes properties which control the visual attributes of a worksheet cell based on whether the cell’s value meets the criteria defined by a logical operator.
 -   [`RankConditionalFormat`](/angular-apis/typescript/latest/classes/rankconditionalformat.html): Added using the `AddRankCondition` method, this conditional format exposes properties which control the visual attributes of a worksheet cell based on whether a cell’s value is within the top of bottom rank of values across the associated range.
 -   [`TextOperatorConditionalFormat`](/angular-apis/typescript/latest/classes/textoperatorconditionalformat.html): Added using the `AddTextCondition` method, this conditional format exposes properties which control the visual attributes of a worksheet cell based on whether a cell’s text value meets the criteria defined by a string and a [`FormatConditionTextOperator`](/angular-apis/typescript/latest/enums/formatconditiontextoperator.html) value as placed in the `AddTextCondition` method’s parameters.
--   [`UniqueConditionalFormat`](/angular-apis/typescript/latest/classes/uniqueconditionalformat.html): Added using the `AddUniqueCondition` method, this conditional format exposes properties which control the visual attributes of a worksheet cell based on whether a cell’s value is unique across the associated range. 
+-   [`UniqueConditionalFormat`](/angular-apis/typescript/latest/classes/uniqueconditionalformat.html): Added using the `AddUniqueCondition` method, this conditional format exposes properties which control the visual attributes of a worksheet cell based on whether a cell’s value is unique across the associated range.
 
 ### Dependencies
 
-In order to add conditional formatting to the [`IgxSpreadsheet`](/angular-apis/typescript/latest/classes/igxspreadsheet.html) control, you will need to import the following dependencies:
+In order to add conditional formatting to the `XamSpreadsheet` control, you will need to import the following dependencies:
 
 ```ts
 import { CellFill} from "igniteui-angular-excel/ES5/CellFill";
@@ -78,9 +79,9 @@ import { WorkbookColorInfo } from "igniteui-react-excel/ES5/WorkbookColorInfo";
 
 ### Code Snippet
 
-The following code snippet demonstrates how to add each of the conditional formats to a spreadsheet in the [`IgxSpreadsheet`](/angular-apis/typescript/latest/classes/igxspreadsheet.html) control:
+The following code snippet demonstrates how to add each of the conditional formats to a spreadsheet in the `XamSpreadsheet` control:
 
-```typescript
+```ts
 let sheet = this.spreadsheet.activeWorksheet;
 
 let red = new Color();
@@ -93,7 +94,7 @@ let green = new Color();
 green.colorString = "#00ff00";
 
 let gray = new Color();
-gray.colorString = "#d3d3d3";    
+gray.colorString = "#d3d3d3";
 
 let avgFormat = sheet.conditionalFormats().addAverageCondition("A1:A10", FormatConditionAboveBelow.AboveAverage);
 avgFormat.cellFormat.font.colorInfo = new WorkbookColorInfo(red);

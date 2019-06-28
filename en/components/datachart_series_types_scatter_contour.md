@@ -2,6 +2,8 @@
 title: Data Chart | Visualization Tools | Ignite UI for Angular | Infragistics | Scatter Contour
 _description: Create a data chart that displays multiple instances of visual elements in the same plot area in order to create composite chart views.
 _keywords: data chart, Ignite UI for Angular, Infragistics
+mentionedTypes: ['XamDataChart','ScatterContourSeries']
+
 ---
 
 ## Scatter Contour Series
@@ -23,7 +25,7 @@ draws colored contour lines based on a triangulation of X and Y data with a nume
 
 ### Required Axes
 
-The Angular data chart component provides various types of axes but only [`IgxNumericYAxisComponent`](/angular-apis/typescript/latest/classes/igxnumericyaxiscomponent.html)and [`IgxNumericYAxisComponent`](/angular-apis/typescript/latest/classes/igxnumericyaxiscomponent.html) can be used with [`IgxScatterContourSeriesComponent`](/angular-apis/typescript/latest/classes/igxscattercontourseriescomponent.html).
+The Angular data chart component provides various types of axes but only [`IgxNumericYAxisComponent`](/angular-apis/typescript/latest/classes/igxnumericyaxiscomponent.html) and [`IgxNumericYAxisComponent`](/angular-apis/typescript/latest/classes/igxnumericyaxiscomponent.html) can be used with [`IgxScatterContourSeriesComponent`](/angular-apis/typescript/latest/classes/igxscattercontourseriescomponent.html).
 
 ### Required Data
 
@@ -31,11 +33,11 @@ The [`IgxScatterContourSeriesComponent`](/angular-apis/typescript/latest/classes
 
 -   The data source must be an array or a list of data items
 -   The data source must contain at least one data item otherwise the chart will not render the scatter shape series.
--   All data items must contain 3 numeric data columns which should be mapped to the `XMemberPath`, `YMemberPath`, and [`valueMemberPath`](/angular-apis/typescript/latest/classes/igxscattercontourseriescomponent.html#valuememberpath) properties.
+-   All data items must contain 3 numeric data columns which should be mapped to the [`xMemberPath`](/angular-apis/typescript/latest/classes/igxscattertriangulationseriescomponent.html#xmemberpath), [`yMemberPath`](/angular-apis/typescript/latest/classes/igxscattertriangulationseriescomponent.html#ymemberpath), and [`valueMemberPath`](/angular-apis/typescript/latest/classes/igxscattercontourseriescomponent.html#valuememberpath) properties.
 
 You can use the [SampleScatterData](datachart_data_sources_scatter.md) as data source which meets above data requirements.
 
-```typescript
+```ts
 this.state = { dataSource: SampleScatterData.create() }
 ```
 
@@ -43,7 +45,7 @@ this.state = { dataSource: SampleScatterData.create() }
 
 The scatter contour series requires the following modules:
 
-```typescript
+```ts
 // axis' modules:
 import { IgxNumericYAxis } from "igniteui-angular-charts/ES5/igx-numeric-y-axis";
 import { IgxNumericXAxis } from "igniteui-angular-charts/ES5/igx-numeric-x-axis";
@@ -97,13 +99,13 @@ Use the [`fillScale`](/angular-apis/typescript/latest/classes/igxscattercontours
 
 The provided [`IgxValueBrushScaleComponent`](/angular-apis/typescript/latest/classes/igxvaluebrushscalecomponent.html) class should satisfy most coloring needs, but you can inherit from this class and provide your own coloring logic. The following table lists properties of the [`IgxValueBrushScaleComponent`](/angular-apis/typescript/latest/classes/igxvaluebrushscalecomponent.html) affecting the surface coloring of the [`IgxScatterContourSeriesComponent`](/angular-apis/typescript/latest/classes/igxscattercontourseriescomponent.html):
 
--   `Brushes` sets the collection of brushes for filling contours.
+-   [`brushes`](/angular-apis/typescript/latest/classes/igxdatachartcomponent.html#brushes) sets the collection of brushes for filling contours.
 -   `MaximumValue` sets the highest value to assign a brush. Any given value greater than this value will be Transparent.
 -   `MinimumValue` sets the lowest value to assign a brush. Any given value less than this value will be Transparent.
 
 ### Contour Value Resolver
 
-The [`IgxScatterContourSeriesComponent`](/angular-apis/typescript/latest/classes/igxscattercontourseriescomponent.html) renders using exactly 10 contour lines at even intervals between the minimum and maximum values of the items mapped to the [`valueMemberPath`](/angular-apis/typescript/latest/classes/igxscattercontourseriescomponent.html#valuememberpath) property. If you desire more or fewer contours, you can assign the [`IgxLinearContourValueResolverComponent`](/angular-apis/typescript/latest/classes/igxlinearcontourvalueresolvercomponent.html) with a number of contours to the `ValueResolver` property of the [`IgxScatterContourSeriesComponent`](/angular-apis/typescript/latest/classes/igxscattercontourseriescomponent.html).
+The [`IgxScatterContourSeriesComponent`](/angular-apis/typescript/latest/classes/igxscattercontourseriescomponent.html) renders using exactly 10 contour lines at even intervals between the minimum and maximum values of the items mapped to the [`valueMemberPath`](/angular-apis/typescript/latest/classes/igxscattercontourseriescomponent.html#valuememberpath) property. If you desire more or fewer contours, you can assign the [`IgxLinearContourValueResolverComponent`](/angular-apis/typescript/latest/classes/igxlinearcontourvalueresolvercomponent.html) with a number of contours to the [`valueResolver`](/angular-apis/typescript/latest/classes/igxscattercontourseriescomponent.html#valueresolver) property of the [`IgxScatterContourSeriesComponent`](/angular-apis/typescript/latest/classes/igxscattercontourseriescomponent.html).
 
 The following code shows how to configure the number of contour lines in the [`IgxScatterContourSeriesComponent`](/angular-apis/typescript/latest/classes/igxscattercontourseriescomponent.html).
 

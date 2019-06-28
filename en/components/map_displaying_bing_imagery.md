@@ -1,7 +1,8 @@
 ---
 title: Map | Data Visualization Tools | Ignite UI for Angular | Bing Maps | Infragistics
-_description: The Map allows you to display data that contains geographic locations from view models or geo-spatial data loaded from shape files on geographic imagery maps.View the demo, dependencies, usage and toolbar for more information.
+_description: The Map allows you to display imagery from Bing Maps. View the demo and usage for more
 _keywords: map, Ignite UI for Angular, infragistics
+mentionedTypes: ['XamGeographicMap']
 ---
 
 ## Displaying Imagery from Bing Maps
@@ -11,10 +12,10 @@ The [`BingMapsMapImagery`](/angular-apis/typescript/latest/classes/bingmapsmapim
 ### Demo
 
 <div class="sample-container loading" style="height: 500px">
-    <iframe id="geo-map-displaying-bing-imagery-iframe" src='{environment:demosBaseUrl}/maps/geo-map-displaying-bing-imagery' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="geo-map-display-bing-imagery-iframe" src='{environment:demosBaseUrl}/maps/geo-map-display-bing-imagery' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="geo-map-displaying-bing-imagery-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="geo-map-display-bing-imagery-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
     </button>
 </div>
 
