@@ -110,6 +110,28 @@ public ngOnInit() {
     </button>
 </div>
 
+### Server-side Rendering Note
+
+> In case you have implemented server side rendering logic in your application using Angular Universal and have used the `IgxIconService` to register icons, this may cause the following exception:
+<br/>
+`XMLHttpRequest is not defined. Could not fetch SVG from url.`
+<br/>
+In order to avoid this, execute the listed steps:
+<ol>
+<li>
+Install `xmlhttprequest`:
+```cmd
+npm i xmlhttprequest
+```
+</li>
+<li>
+On the top of your `server.ts` file, add: 
+``` typescript
+(global as any).XMLHttpRequest = require('xmlhttprequest').XMLHttpRequest;
+```
+</li>
+</ol>
+
 ### Breaking Changes in 6.2.0
 
 * The [`IgxIconComponent`]({environment:angularApiUrl}/classes/igxiconcomponent.html) `iconName` property is deprecated. To set the icon name for 'material' icons, place the name of the icon between the opening and closing tags. For 'Font Awesome' and SVG icons, use the `name` property.
