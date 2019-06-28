@@ -18,20 +18,22 @@ The Angular Spreadsheet component allows display of pre-existing hyperlinks in y
 
 ### Hyperlinks Overview
 
-Hyperlinks are added to the `IgxSpreadsheet` control by accessing the `Hyperlinks` collection on the worksheet that you want to place the hyperlink on. This collection has an `add` method that takes a `WorksheetHyperlink` object, where you can define the cell address, the hyperlink URL to be navigated to, the display text, and a tooltip to optionally be displayed on hover.
+Hyperlinks are added to the [`IgxSpreadsheet`](/angular-apis/typescript/latest/classes/igxspreadsheet.html) control by accessing the `Hyperlinks` collection on the worksheet that you want to place the hyperlink on. This collection has an `add` method that takes a [`WorksheetHyperlink`](/angular-apis/typescript/latest/classes/worksheethyperlink.html) object, where you can define the cell address, the hyperlink URL to be navigated to, the display text, and a tooltip to optionally be displayed on hover.
 
 ### Dependencies
 
-When setting up your spreadsheet control to use hyperlinks, you will need to import the `WorksheetHyperlink` class like so:
+When setting up your spreadsheet control to use hyperlinks, you will need to import the [`WorksheetHyperlink`](/angular-apis/typescript/latest/classes/worksheethyperlink.html) class like so:
 
-```typescript
+<!-- Angular -->
+
+```ts
 import { WorksheetHyperlink } from "igniteui-angular-excel/ES5/WorksheetHyperlink";
 ```
 
 ### Code Snippet
 
-The following code snippet demonstrates how to add a hyperlink to the currently viewed worksheet in the `IgxSpreadsheet` control:
+The following code snippet demonstrates how to add a hyperlink to the currently viewed worksheet in the [`IgxSpreadsheet`](/angular-apis/typescript/latest/classes/igxspreadsheet.html) control:
 
-```typescript
+```ts
 this.spreadsheet.activeWorksheet.hyperlinks().add(new WorksheetHyperlink("A1", "http://www.infragistics.com", "Infragistics", "Infragistics Home Page"));
 ```

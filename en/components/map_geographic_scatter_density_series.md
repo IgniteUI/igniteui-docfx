@@ -6,7 +6,7 @@ _keywords: map, Ignite UI for Angular, infragistics
 
 ## Using Scatter High Density Series
 
-Use the map component's `IgxGeographicHighDensityScatterSeriesComponent` to bind and show scatter data ranging from hundreds to millions of data points requiring exceedingly little loading time.
+Use the map component's [`IgxGeographicHighDensityScatterSeriesComponent`](/angular-apis/typescript/latest/classes/igxgeographichighdensityscatterseriescomponent.html) to bind and show scatter data ranging from hundreds to millions of data points requiring exceedingly little loading time.
 
 ### Demo
 
@@ -20,13 +20,13 @@ Use the map component's `IgxGeographicHighDensityScatterSeriesComponent` to bind
 
 <div class="divider--half"></div>
 
-The demo above shows the `IgxGeographicHighDensityScatterSeriesComponent` series in the map component bound to hundreds or even thousands of data points representing Australia’s population density. The map plot area with more densely populated data points represented as coalescences of red pixels and loosely distributed data points by discrete blue pixels.
+The demo above shows the [`IgxGeographicHighDensityScatterSeriesComponent`](/angular-apis/typescript/latest/classes/igxgeographichighdensityscatterseriescomponent.html) series in the map component bound to hundreds or even thousands of data points representing Australia’s population density. The map plot area with more densely populated data points represented as coalescences of red pixels and loosely distributed data points by discrete blue pixels.
 
 Because there are so many data points, the series displays the scatter data as tiny dots as opposed to full size markers, and displays areas with the most data using a higher color density representing a cluster of data points.
 
 ### Data Requirements
 
-Similar to other types of scatter series in the map control, the `IgxGeographicHighDensityScatterSeriesComponent` series has the `ItemsSource` property which can be bound to an array of objects. In addition, each data item in the items source must have two data columns that store geographic longitude and latitude coordinates and uses the [`longitudeMemberPath`](/angular-apis/typescript/latest/classes/igxgeographichighdensityscatterseriescomponent.html#longitudememberpath) and [`latitudeMemberPath`](/angular-apis/typescript/latest/classes/igxgeographichighdensityscatterseriescomponent.html#latitudememberpath) properties to map these data columns.
+Similar to other types of scatter series in the map control, the [`IgxGeographicHighDensityScatterSeriesComponent`](/angular-apis/typescript/latest/classes/igxgeographichighdensityscatterseriescomponent.html) series has the `ItemsSource` property which can be bound to an array of objects. In addition, each data item in the items source must have two data columns that store geographic longitude and latitude coordinates and uses the [`longitudeMemberPath`](/angular-apis/typescript/latest/classes/igxgeographichighdensityscatterseriescomponent.html#longitudememberpath) and [`latitudeMemberPath`](/angular-apis/typescript/latest/classes/igxgeographichighdensityscatterseriescomponent.html#latitudememberpath) properties to map these data columns.
 
 #### Data Binding
 
@@ -51,7 +51,7 @@ The Heat Color Scale, an optional feature, determines the color pattern within t
 
 ### Code Example
 
-The following code demonstrates how set the [`heatMinimumColor`](/angular-apis/typescript/latest/classes/igxgeographichighdensityscatterseriescomponent.html#heatminimumcolor) and [`heatMaximumColor`](/angular-apis/typescript/latest/classes/igxgeographichighdensityscatterseriescomponent.html#heatmaximumcolor) properties of the `IgxGeographicHighDensityScatterSeriesComponent`
+The following code demonstrates how set the [`heatMinimumColor`](/angular-apis/typescript/latest/classes/igxgeographichighdensityscatterseriescomponent.html#heatminimumcolor) and [`heatMaximumColor`](/angular-apis/typescript/latest/classes/igxgeographichighdensityscatterseriescomponent.html#heatmaximumcolor) properties of the [`IgxGeographicHighDensityScatterSeriesComponent`](/angular-apis/typescript/latest/classes/igxgeographichighdensityscatterseriescomponent.html)
 
 <!-- Angular -->
 
