@@ -22,15 +22,15 @@ _keywords:  sizing, igniteui for angular, infragistics
 
 ### Grid sizing
 
-When it comes to [**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) sizing there are a few different scenarios that are important to understand. While some are straight forward, others might not be so much and that is why we will take each one and look into them in more detail. We will look in into setting `width` and `height` separately since there are some differences when using percentages for example and etc.
+When it comes to [**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) sizing there are a few different scenarios that are important to understand. While some are straight forward, others might be more complex and that is why we will take each one and look into them in more detail. We will go through setting `width` and `height` separately since there are some differences when using percentages for example for each one and etc.
 
 ### Width
 
-When the [**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) `width` input is not set the grid sizes accordingly as if it is set to `100%`.
+When the [**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) `width` input is not set the grid sizes accordingly as if it is set to `100%`. You can check how the grid reacts to it in the `Percentage` section.
 
 #### Pixels
 
-When the [**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) `width` input is set to pixels it will set the whole grid size to that value and it would be static. It will not react to any browser resizing or changes in the DOM. When it comes to the grid content though:
+When the [**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) `width` input is set to pixels it will set the whole grid size to that value and it will be static. It will not react to any browser resizing or changes in the DOM. When it comes to the grid content though:
 
 * When the combined width of the columns is less than the visible area of the [**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) there will be empty space between the last column and the right edge of the grid. For example lets render a grid with width `1200px` and all 6 columns having a width of `150px`. This will lead to empty space of `300px`.
 
@@ -46,39 +46,39 @@ When the [**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) `
 
 #### Percentage
 
-When the `width` of the [**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) is set to percentages it will size the grid according to the parent element if it has width defined otherwise to the browser window.
+When the `width` of the [**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) is set to percentages it will size the grid according to the parent element's width. If the parent element does not have width specified the [**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) will size relative to the browser window.
 
 * For example if we set the grid `width` input to `100%` and there is no parent element it will fill 100% of the available width of the browser window. If it is resized the grid will resize as well accordingly.
 
     ![](../../images/grid_sizing/width-percent-100p.jpg)
 
-* If we set it to `100%` again but there is parent element that has specific width of `1200px` this will mean that the grid will size relative to that element.
+* If we set it to `100%` again but there is parent element that has specific width of `1200px` this will mean that the grid will size relative to that element and his final width will be `1200px`.
 
 
     ![](../../images/grid_sizing/width-percent-parent-100p.jpg)
 
-* If we set the width to `50%` the grid will fill half of the available space and similarly if we set `150%` it will bet half of the available space bigger.
+* If we set the width to `50%` the grid will fill half of the available space and similarly if we set `150%` it will bet half of the available space bigger and etc. No matter what it is relatively based off of.
 
 
 ### Height
 
-By default if no height is defined the grid will default to `100%` height. You can check how the grid reacts to it in the `Percentage` section.
+By default if no height is defined for the [**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html), it will default to `100%`. You can check how the grid reacts to it in the `Percentage` section.
 
 #### Null
 
-The [**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) `height` input can accept `null` value, which when set displays all rows with no scrollbar no matter how many they are. In this case there is no vertical virtualization since the grid renders all rows anyway.
+The [**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) `height` input can accept `null` value, which when set, displays all rows with no scrollbar no matter how many they are. In this case there is no vertical virtualization since the grid renders all rows anyway.
 
 * If we for example have data with 14 rows in this case the grid will render all 14 of them and size the grid so all are visible without any empty space inside the grid.
 
     ![](../../images/grid_sizing/height-null-14rows.jpg)
 
-* If we have 24 rows for example instead the grid will still render all rows but since they are too many and they exceed the browser boundaries the browser itself will render vertical scrollbar by default so the user can scroll down to the rest of the rows.
+* If we have 24 rows instead, the grid will still render all rows but since they are too many and they exceed the browser boundaries the browser itself will render vertical scrollbar by default so the user can scroll down to the rest of the rows.
 
     ![](../../images/grid_sizing/height-null-24rows.jpg)
 
 #### Pixels
 
-Setting the [**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) `height` in pixels is more straightforward since the grid will size to that specific size in all occasions.
+Setting the [**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) `height` in pixels is more straightforward since the grid will size to that specific size in all occasions similarly to how `width` in pixels is set.
 
 * If we set for example the height `500px` with 4 rows for our data the grid will sit to that size and since 4 rows is not enough to fill the visible area it is expected to have some empty area.
 
@@ -92,7 +92,7 @@ Setting the [**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html
 
 When the `height` input is set to percentages the [**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) will size based on the parent element height. If the parent element has height set in pixels or percentages the grid will size relative to the size ot the parent.
 
-If the parent element does not have specific height set the browser does not assign height to it initially and sizes it later on based on its children and their size. That is why there is not way for the grid to know what height to use as relative information for sizing and it defaults to maximum number of rendered rows 10. We will look in this scenario in more detail in the next examples.
+If the parent element does not have defined height, the browser does not assign height to it initially and sizes it based on its children and their size. That is why there is no way for the grid to know what base height to use in order to apply percentage sizing based on it. For this reason it will render maximum of 10 rows and if they are more a vertical scrollbar will be rendered, otherwise the grid will fit to number of rendered rows. We will look in this scenario in more detail in the next examples.
 
 Lets have width set to `1200px` and the parent element not having any size applied to it:
 
