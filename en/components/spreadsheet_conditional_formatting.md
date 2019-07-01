@@ -2,7 +2,7 @@
 title: Angular Spreadsheet | Grid Controls | Ignite UI for Angular | Conditional Formatting | Infragistics |
 _description: Use the Spreadsheet control to embed Excel document creation and editing experiences right into your application.
 _keywords: Spreadsheet, Ignite UI for Angular, Infragistics
-mentionedTypes: ['XamSpreadsheet']
+mentionedTypes: ['Spreadsheet']
 ---
 
 ## Spreadsheet Conditional Formatting
@@ -29,7 +29,7 @@ There are a few conditional formats that do not have a `CellFormat` property, as
 
 When loading a pre-existing workbook from Excel, the formats will be preserved when that workbook is loaded. The same is true for when you save the workbook out to an Excel file.
 
-The following lists the supported conditional formats in the `XamSpreadsheet` control:
+The following lists the supported conditional formats in the [`IgxSpreadsheetComponent`](/angular-apis/typescript/latest/classes/igxspreadsheetcomponent.html) control:
 
 -   [`AverageConditionalFormat`](/angular-apis/typescript/latest/classes/averageconditionalformat.html): Added using the `AddAverageCondition` method, this conditional format exposes properties which control the visual attributes of a worksheet cell based on whether a cell’s value is above or below the average or standard deviation for the associated range.
 -   [`BlanksConditionalFormat`](/angular-apis/typescript/latest/classes/blanksconditionalformat.html): Added using the `AddBlanksCondition` method, this conditional format exposes properties which control the visual attributes of a worksheet cell based on whether the cell’s value is not set.
@@ -49,7 +49,7 @@ The following lists the supported conditional formats in the `XamSpreadsheet` co
 
 ### Dependencies
 
-In order to add conditional formatting to the `XamSpreadsheet` control, you will need to import the following dependencies:
+In order to add conditional formatting to the [`IgxSpreadsheetComponent`](/angular-apis/typescript/latest/classes/igxspreadsheetcomponent.html) control, you will need to import the following dependencies:
 
 ```ts
 import { CellFill} from "igniteui-angular-excel/ES5/CellFill";
@@ -79,7 +79,7 @@ import { WorkbookColorInfo } from "igniteui-react-excel/ES5/WorkbookColorInfo";
 
 ### Code Snippet
 
-The following code snippet demonstrates how to add each of the conditional formats to a spreadsheet in the `XamSpreadsheet` control:
+The following code snippet demonstrates how to add each of the conditional formats to a spreadsheet in the [`IgxSpreadsheetComponent`](/angular-apis/typescript/latest/classes/igxspreadsheetcomponent.html) control:
 
 ```ts
 let sheet = this.spreadsheet.activeWorksheet;
