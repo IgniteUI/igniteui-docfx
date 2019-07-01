@@ -269,6 +269,9 @@
     - name: Activation
       href: spreadsheet_activation.md
       new: true
+    - name: Chart Adapter
+      href: spreadsheet_chart_adapter.md
+      new: true
     - name: Clipboard
       href: spreadsheet_clipboard.md
       new: true
