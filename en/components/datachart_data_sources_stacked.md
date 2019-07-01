@@ -9,7 +9,7 @@ mentionedTypes: ['XamDataChart']
 
 This topic provides an example on how to implement data source for Stacked Series
 
-```typescript
+```ts
 export class SampleCategoryItem  {
     public Year?: string;
     public USA?: number;

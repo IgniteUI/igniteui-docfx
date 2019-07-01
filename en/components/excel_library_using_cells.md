@@ -1,12 +1,13 @@
 ---
 title: Excel Library| Data Spreadsheet | Ignite UI for Angular | Infragistics
-_description: Use the Excel Library to work with spreadsheet data using Microsoft Excel features. Easily transfer data from excel to your application. 
+_description: Use the Excel Library to work with spreadsheet data using Microsoft Excel features. Easily transfer data from excel to your application.
 _keywords: Excel library, Ignite UI for Angular, Infragistics
+mentionedTypes: ['Workbook']
 ---
 
 ## Using Cells
 
-The `WorksheetCell` objects in an Excel worksheet is the object that holds your actual data values for the worksheet. This topic goes over the many operations that you can perform on these cells, such as accessing them and their regions by name, adding formulas and comments to the cells, and merging and formatting them.
+The [`WorksheetCell`](/angular-apis/typescript/latest/classes/worksheetcell.html) objects in an Excel worksheet is the object that holds your actual data values for the worksheet. This topic goes over the many operations that you can perform on these cells, such as accessing them and their regions by name, adding formulas and comments to the cells, and merging and formatting them.
 
 ### Demo
 
@@ -20,23 +21,23 @@ The `WorksheetCell` objects in an Excel worksheet is the object that holds your 
 
 The following code shows the imports needed to use the code-snippets below:
 
-```typescript
+```ts
 import { Workbook } from "igniteui-angular-excel/ES5/Workbook";
 import { WorkbookFormat } from "igniteui-angular-excel/ES5/WorkbookFormat";
 import { Worksheet } from "igniteui-angular-excel/ES5/Worksheet";
 import { WorksheetTable } from "igniteui-angular-excel/ES5/WorksheetTable";
 import { NamedReference } from "igniteui-angular-excel/ES5/NamedReference";
-import { WorksheetCellComment } from "igniteui-angular-excel/ES5/WorksheetCellComment"; 
-import { FormattedString } from "igniteui-angular-excel/ES5/FormattedString"; 
+import { WorksheetCellComment } from "igniteui-angular-excel/ES5/WorksheetCellComment";
+import { FormattedString } from "igniteui-angular-excel/ES5/FormattedString";
 ```
 
 ### Referencing Cells and Regions
 
-You can access a `WorksheetCell` object or a `WorksheetRegion` object by calling the [`worksheet`](/angular-apis/typescript/latest/classes/worksheetregion.html#worksheet) object’s `getCell` or `getRegion` methods, respectively. Both methods accept a string parameter that references a cell. Getting a reference to a cell is useful when applying formats or working with formulas and cell contents.
+You can access a [`WorksheetCell`](/angular-apis/typescript/latest/classes/worksheetcell.html) object or a [`WorksheetRegion`](/angular-apis/typescript/latest/classes/worksheetregion.html) object by calling the [`worksheet`](/angular-apis/typescript/latest/classes/worksheetregion.html#worksheet) object’s `getCell` or `getRegion` methods, respectively. Both methods accept a string parameter that references a cell. Getting a reference to a cell is useful when applying formats or working with formulas and cell contents.
 
 The following example code demonstrates how to reference cells and regions:
 
-```typescript
+```ts
 var workbook = new Workbook();
 var worksheet = workbook.worksheets().add("Sheet1");
 
@@ -50,12 +51,12 @@ var region = worksheet.getRegion("G1:G10");
 
 In Microsoft Excel, individual cells, as well as cell regions can have names assigned to them. The name of a cell or region can be used to reference that cell or region instead of their address.
 
-The Infragistics Angular Excel Library supports the referencing of cells and regions by name through the `getCell` and `getRegion` methods of the [`worksheet`](/angular-apis/typescript/latest/classes/worksheetregion.html#worksheet) object. You refer to the cell or region using the `NamedReference` instance that refers to that cell or region.
+The Infragistics Angular Excel Library supports the referencing of cells and regions by name through the `getCell` and `getRegion` methods of the [`worksheet`](/angular-apis/typescript/latest/classes/worksheetregion.html#worksheet) object. You refer to the cell or region using the [`NamedReference`](/angular-apis/typescript/latest/classes/namedreference.html) instance that refers to that cell or region.
 
 You can use the following code snippet as an example for naming a cell or region:
 
-```typescript
-var workbook = new Workbook();      
+```ts
+var workbook = new Workbook();
 var worksheet = workbook.worksheets().add("Sheet1");
 
 var cell_reference = workbook.namedReferences().add("myCell", "=Sheet1:A1");
@@ -64,19 +65,19 @@ var region_reference = workbook.namedReferences().add("myRegion", "=Sheet1!A1:B2
 
 The following code can be used to the get the cell and region referenced by the "myCell" and "myRegion" named references above:
 
-```typescript
+```ts
 var cell = worksheet.getCell("myCell");
 var region = worksheet.getRegion("myRegion");
 ```
 
 ### Adding a Comment to a Cell
 
-A comment allows you to display hints or notes for a cell when the end user’s mouse hovers over a cell. The comments display as a tooltip-like callout that contains text. The Infragistics Angular Excel Library allows you to add comments to a cell by setting a `WorksheetCell` object’s `comment` property.
+A comment allows you to display hints or notes for a cell when the end user’s mouse hovers over a cell. The comments display as a tooltip-like callout that contains text. The Infragistics Angular Excel Library allows you to add comments to a cell by setting a [`WorksheetCell`](/angular-apis/typescript/latest/classes/worksheetcell.html) object’s `comment` property.
 
 The following example code demonstrates how to add a comment to a cell:
 
-```typescript
-var workbook = new Workbook();  
+```ts
+var workbook = new Workbook();
 var worksheet = workbook.worksheets().add("Sheet1");
 
 var cellComment = new WorksheetCellComment();
@@ -88,15 +89,15 @@ worksheet.rows(0).cells(0).comment = cellComment;
 
 ### Adding a Formula to a Cell
 
-The Infragistics Angular Excel Library allows you to add Microsoft Excel formulas to a cell or group of cells in a worksheet. You can do this using the `WorksheetCell` object’s `applyFormula` method or by instantiating a [`formula`](/angular-apis/typescript/latest/classes/worksheetcell.html#formula) object and applying it to a cell. Regardless of the manner in which you apply a formula to a cell, you can access the [`formula`](/angular-apis/typescript/latest/classes/worksheetcell.html#formula) object using the `WorksheetCell` object’s [`formula`](/angular-apis/typescript/latest/classes/worksheetcell.html#formula) property. If you need the value, use the cell’s [`value`](/angular-apis/typescript/latest/classes/worksheetcell.html#value) property.
+The Infragistics Angular Excel Library allows you to add Microsoft Excel formulas to a cell or group of cells in a worksheet. You can do this using the [`WorksheetCell`](/angular-apis/typescript/latest/classes/worksheetcell.html) object’s [`applyFormula`](/angular-apis/typescript/latest/classes/worksheetcell.html#applyformula) method or by instantiating a [`formula`](/angular-apis/typescript/latest/classes/worksheetcell.html#formula) object and applying it to a cell. Regardless of the manner in which you apply a formula to a cell, you can access the [`formula`](/angular-apis/typescript/latest/classes/worksheetcell.html#formula) object using the [`WorksheetCell`](/angular-apis/typescript/latest/classes/worksheetcell.html) object’s [`formula`](/angular-apis/typescript/latest/classes/worksheetcell.html#formula) property. If you need the value, use the cell’s [`value`](/angular-apis/typescript/latest/classes/worksheetcell.html#value) property.
 
 The following code shows you how to add a formula to a cell.
 
-```typescript
+```ts
  var workbook = new Workbook();
  var worksheet = workbook.worksheets().add("Sheet1");
  worksheet.rows(5).cells(0).applyFormula("=SUM(A1:A5)");
- 
+
  //Using a Formula object to apply a formula
  var sumFormula = Formula.parse("=SUM(A1:A5)", CellReferenceMode.A1);
  sumFormula.applyTo(worksheet.rows(5).cells(0));
@@ -104,11 +105,11 @@ The following code shows you how to add a formula to a cell.
 
 ### Copying a Cell’s Format
 
-Cells can have different formatting, including background color, format string, and font style. If you need a cell to have the same format as a previously formatted cell, instead of individually setting each option exposed by the `WorksheetCell` object’s `cellFormat` property, you can call the [`cellFormat`](/angular-apis/typescript/latest/classes/worksheetcell.html#cellformat) object’s `setFormatting` method and pass it a [`cellFormat`](/angular-apis/typescript/latest/classes/worksheetcell.html#cellformat) object to copy. This will copy every format setting from the first cell to the second cell. You can also do this for a row, merged cell region, or column.
+Cells can have different formatting, including background color, format string, and font style. If you need a cell to have the same format as a previously formatted cell, instead of individually setting each option exposed by the [`WorksheetCell`](/angular-apis/typescript/latest/classes/worksheetcell.html) object’s `cellFormat` property, you can call the [`cellFormat`](/angular-apis/typescript/latest/classes/worksheetcell.html#cellformat) object’s `setFormatting` method and pass it a [`cellFormat`](/angular-apis/typescript/latest/classes/worksheetcell.html#cellformat) object to copy. This will copy every format setting from the first cell to the second cell. You can also do this for a row, merged cell region, or column.
 
 The following code shows you how to copy the format of the 2nd column to the 4th column:
 
-```typescript
+```ts
 var workbook = new Workbook();
 var worksheet = workbook.worksheets().add("Sheet1");
 
@@ -122,7 +123,7 @@ worksheet.columns(3).cellFormat.setFormatting(worksheet.columns(1).cellFormat);
 
 ### Formatting a Cell
 
-The Infragistics Angular Excel Library allows you to customize the look and behavior of a cell. You can customize a cell by setting properties exposed by the `cellFormat` property of the `WorksheetCell`, `WorksheetRow`, `WorksheetColumn`, or `WorksheetMergedCellsRegion` objects.
+The Infragistics Angular Excel Library allows you to customize the look and behavior of a cell. You can customize a cell by setting properties exposed by the `cellFormat` property of the [`WorksheetCell`](/angular-apis/typescript/latest/classes/worksheetcell.html), [`WorksheetRow`](/angular-apis/typescript/latest/classes/worksheetrow.html), [`WorksheetColumn`](/angular-apis/typescript/latest/classes/worksheetcolumn.html), or [`WorksheetMergedCellsRegion`](/angular-apis/typescript/latest/classes/worksheetmergedcellsregion.html) objects.
 
 You can customize every aspect of a cell’s appearance. You can set a cell’s font, background, and borders, as well as text alignment and rotation. You can even apply a different format on a character-by-character basis for a cell’s text.
 
@@ -130,8 +131,8 @@ You can also format cell values by assigning a format string. An acceptable form
 
 The following code shows you how to format a cell to display numbers as currency:
 
-```typescript
-var workbook = new Workbook(format);      
+```ts
+var workbook = new Workbook(format);
 var workbook = workbook.worksheets().add("Sheet1");
 
 worksheet.columns(2).cellFormat.formatString = "\"$\"#,##0.00";
@@ -141,29 +142,29 @@ worksheet.columns(2).cellFormat.formatString = "\"$\"#,##0.00";
 
 The color palette is analogous to the color dialog in Microsoft Excel 2007 UI. You can open this color dialog by navigating to Excel Options => Save => Colors.
 
-You can create all possible fill types using static properties and methods on the `CellFill` class. They are as follows:
+You can create all possible fill types using static properties and methods on the [`CellFill`](/angular-apis/typescript/latest/classes/cellfill.html) class. They are as follows:
 
 -   `noColor` - A property that represents a fill with no color, which allows a background image of the worksheet, if any, to show through.
 
--   `createSolidFill` - Returns a `CellFillPattern` instance which has a pattern style of `Solid` and a background color set to the `Color` or `WorkbookColorInfo` specified in the method.
+-   `createSolidFill` - Returns a [`CellFillPattern`](/angular-apis/typescript/latest/classes/cellfillpattern.html) instance which has a pattern style of `Solid` and a background color set to the `Color` or [`WorkbookColorInfo`](/angular-apis/typescript/latest/classes/workbookcolorinfo.html) specified in the method.
 
--   `createPatternFill` - Returns a `CellFillPattern` instance which has the specified pattern style and the `Color` or `WorkbookColorInfo` values, specified for the background and pattern colors.
+-   `createPatternFill` - Returns a [`CellFillPattern`](/angular-apis/typescript/latest/classes/cellfillpattern.html) instance which has the specified pattern style and the `Color` or [`WorkbookColorInfo`](/angular-apis/typescript/latest/classes/workbookcolorinfo.html) values, specified for the background and pattern colors.
 
--   `createLinearGradientFill` - Returns a `CellFillLinearGradient` instance with the specified angle and gradient stops.
+-   `createLinearGradientFill` - Returns a [`CellFillLinearGradient`](/angular-apis/typescript/latest/classes/cellfilllineargradient.html) instance with the specified angle and gradient stops.
 
--   `createRectangularGradientFill` - Returns a `CellFillRectangularGradient` instance with the specified left, top, right, and bottom of the inner rectangle and gradient stops. If the inner rectangle values are not specified, the center of the cell is used as the inner rectangle.
+-   `createRectangularGradientFill` - Returns a [`CellFillRectangularGradient`](/angular-apis/typescript/latest/classes/cellfillrectangulargradient.html) instance with the specified left, top, right, and bottom of the inner rectangle and gradient stops. If the inner rectangle values are not specified, the center of the cell is used as the inner rectangle.
 
 The derived types, representing the various fills which can be created, are as follows:
 
--   `CellFillPattern` - A pattern that represents a cell fill of no color, a solid color, or a pattern fill for a cell. It has background color info and a pattern color info which correspond directly to the color sections in the Fill tab of the Format Cells dialog of Excel.
+-   [`CellFillPattern`](/angular-apis/typescript/latest/classes/cellfillpattern.html) - A pattern that represents a cell fill of no color, a solid color, or a pattern fill for a cell. It has background color info and a pattern color info which correspond directly to the color sections in the Fill tab of the Format Cells dialog of Excel.
 
--   `CellFillLinearGradient` - Represents a linear gradient fill. It has an angle, which is degrees clockwise of the left to right linear gradient, and a gradients stops collection which describes two or more color transitions along the length of the gradient.
+-   [`CellFillLinearGradient`](/angular-apis/typescript/latest/classes/cellfilllineargradient.html) - Represents a linear gradient fill. It has an angle, which is degrees clockwise of the left to right linear gradient, and a gradients stops collection which describes two or more color transitions along the length of the gradient.
 
--   `CellFillRectangularGradient` - Represents a rectangular gradient fill. It has top, left, right, and bottom values, which describe, in relative coordinates, the inner rectangle from which the gradient starts and goes out to the cell edges. It also has a gradient stops collection which describes two or more color transitions along the path from the inner rectangle to the cell edges.
+-   [`CellFillRectangularGradient`](/angular-apis/typescript/latest/classes/cellfillrectangulargradient.html) - Represents a rectangular gradient fill. It has top, left, right, and bottom values, which describe, in relative coordinates, the inner rectangle from which the gradient starts and goes out to the cell edges. It also has a gradient stops collection which describes two or more color transitions along the path from the inner rectangle to the cell edges.
 
-The following code snippet demonstrates how to create a solid fill in a `WorksheetCell`:
+The following code snippet demonstrates how to create a solid fill in a [`WorksheetCell`](/angular-apis/typescript/latest/classes/worksheetcell.html):
 
-```typescript
+```ts
 var workbook = new Workbook();
 var worksheet = workbook.worksheets().add("Sheet1");
 
@@ -211,11 +212,11 @@ Each workbook has 12 associated theme colors. They are the following:
 
 -   There are default values when a workbook is created, which can be customized via Excel.
 
-Colors are defined by the `WorkbookColorInfo` class, which is a sealed immutable class. The class has a static `automatic` property, which returns the automatic color, and there are various constructors which allow you to create a `WorkbookColorInfo` instance with a color or a theme value and an optional tint.
+Colors are defined by the [`WorkbookColorInfo`](/angular-apis/typescript/latest/classes/workbookcolorinfo.html) class, which is a sealed immutable class. The class has a static `automatic` property, which returns the automatic color, and there are various constructors which allow you to create a [`WorkbookColorInfo`](/angular-apis/typescript/latest/classes/workbookcolorinfo.html) instance with a color or a theme value and an optional tint.
 
-The `getResolvedColor` method on `WorkbookColorInfo` allows you to determine what color will actually be seen by the user when they open the file in Excel.
+The `getResolvedColor` method on [`WorkbookColorInfo`](/angular-apis/typescript/latest/classes/workbookcolorinfo.html) allows you to determine what color will actually be seen by the user when they open the file in Excel.
 
-If the `WorkbookColorInfo` represents a theme color, you must pass in a Workbook instance to the method so it can get the theme color’s RGB value from the workbook.
+If the [`WorkbookColorInfo`](/angular-apis/typescript/latest/classes/workbookcolorinfo.html) represents a theme color, you must pass in a Workbook instance to the method so it can get the theme color’s RGB value from the workbook.
 
 When saving out in the newer file formats such as .xlsx, the newer color information is saved directly into the file. When saving out in an older file format such as .xls, the index to the closest color in the palette will be saved out. In addition, the older formats have future feature records that can be saved out to indicate the newer color information.
 
@@ -223,9 +224,9 @@ When the older formats are opened in Microsoft Excel 2003 and earlier versions, 
 
 ### Excel Format Support
 
-You can set a host of different formats on a `WorksheetCell` by using the [`cellFormat`](/angular-apis/typescript/latest/classes/worksheetcell.html#cellformat) object returned by the `cellFormat` property of that cell. This [`cellFormat`](/angular-apis/typescript/latest/classes/worksheetcell.html#cellformat) object enables you to style many different aspects of the cell such as borders, font, fill, alignments, and whether or not the cell should shrink to fit or be locked.
+You can set a host of different formats on a [`WorksheetCell`](/angular-apis/typescript/latest/classes/worksheetcell.html) by using the [`cellFormat`](/angular-apis/typescript/latest/classes/worksheetcell.html#cellformat) object returned by the `cellFormat` property of that cell. This [`cellFormat`](/angular-apis/typescript/latest/classes/worksheetcell.html#cellformat) object enables you to style many different aspects of the cell such as borders, font, fill, alignments, and whether or not the cell should shrink to fit or be locked.
 
-You can also access the built-in styles to Microsoft Excel 2007 using the `styles` collection of the `Workbook` object. The full list of styles in Excel can be found in the Cell Styles gallery of the Home tab of Microsoft Excel 2007.
+You can also access the built-in styles to Microsoft Excel 2007 using the `styles` collection of the [`Workbook`](/angular-apis/typescript/latest/classes/workbook.html) object. The full list of styles in Excel can be found in the Cell Styles gallery of the Home tab of Microsoft Excel 2007.
 
 There is a special type of style on the workbook's `styles` collection known as the "normal" style, which can be accessed using that collection's `normalStyle` property, or by indexing into the collection with the name "Normal".
 
@@ -233,7 +234,7 @@ The `normalStyle` contains the default properties for all cells in the workbook,
 
 You can clear the `styles` collection or reset it to its predefined state by using the `clear` and `reset` methods, respectively. Both of these will remove all user-defined styles, but `clear` will clear the `styles` collection entirely.
 
-With this feature, a `style` property has been added to the `CellFormat` object. This is a reference to a `WorkbookStyle` instance, representing the parent style of the format. For formats of a style, this property will always be null, because styles cannot have a parent style. For row, column, and cell formats, the `style` property always returns the `normalStyle` by default.
+With this feature, a `style` property has been added to the `CellFormat` object. This is a reference to a [`WorkbookStyle`](/angular-apis/typescript/latest/classes/workbookstyle.html) instance, representing the parent style of the format. For formats of a style, this property will always be null, because styles cannot have a parent style. For row, column, and cell formats, the `style` property always returns the `normalStyle` by default.
 
 If the `style` property is set to null, it will revert back to the `normalStyle`. If it is set to another style in the styles collection, that style will now hold the defaults for all unset properties on the cell format.
 
@@ -249,13 +250,13 @@ This method returns a `CellFormat` instance which refers back to the associated 
 
 Aside from setting the value or format of cells, you can also merge cells to make two or more cells appear as one. If you merge cells, they must be in a rectangular region.
 
-When you merge cells, each cell in the region will have the same value and cell format. The merged cells will also be associated with the same `WorksheetMergedCellsRegion` object, accessible from their `associatedMergedCellsRegion` property. The resultant `WorksheetMergedCellsRegion` object will also have the same value and cell format as the cells.
+When you merge cells, each cell in the region will have the same value and cell format. The merged cells will also be associated with the same [`WorksheetMergedCellsRegion`](/angular-apis/typescript/latest/classes/worksheetmergedcellsregion.html) object, accessible from their `associatedMergedCellsRegion` property. The resultant [`WorksheetMergedCellsRegion`](/angular-apis/typescript/latest/classes/worksheetmergedcellsregion.html) object will also have the same value and cell format as the cells.
 
 Setting the value (or cell format) of the region or any cell in the region will change the value of all cells and the region. If you unmerge cells, all of the previously merged cells will retain the shared cell format they had before they were unmerged. However, only the top-left cell of the region will retain the shared value.
 
-In order to create a merged cell region, you must add a range of cells to the `Worksheet` object’s `mergedCellsRegions` collection. This collection exposes an `add` method that takes four integer parameters. The four parameters determine the index of the starting row and column (top-left most cell) and the index of the ending row and column (bottom-right most cell).
+In order to create a merged cell region, you must add a range of cells to the [`Worksheet`](/angular-apis/typescript/latest/classes/worksheet.html) object’s `mergedCellsRegions` collection. This collection exposes an `Add` method that takes four integer parameters. The four parameters determine the index of the starting row and column (top-left most cell) and the index of the ending row and column (bottom-right most cell).
 
-```typescript
+```ts
 var workbook = new Workbook();
 var worksheet = workbook.worksheets().add("Sheet1");
 
@@ -321,7 +322,7 @@ Additionally, if the value cannot fit, it will not display as all hashes. Displa
 
 The following code snippet demonstrates the usage of the `getText` method to get the text as it would be displayed in Excel:
 
-```typescript
+```ts
 var workbook = new Workbook();
 var worksheet = this.workbook.worksheets().add("Sheet1");
 

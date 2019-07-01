@@ -1,12 +1,13 @@
 ---
 title: Excel Library| Data Spreadsheet | Ignite UI for Angular | Infragistics
-_description: Use the Excel Library to work with spreadsheet data using Microsoft Excel features. Easily transfer data from excel to your application. 
+_description: Use the Excel Library to work with spreadsheet data using Microsoft Excel features. Easily transfer data from excel to your application.
 _keywords: Excel library, Ignite UI for Angular, Infragistics
+mentionedTypes: ['Workbook']
 ---
 
 ## Using Worksheets
 
-The Infragistics Angular Excel Engine's `Worksheet` is where your data is kept. You can input data by working with the Worksheet's rows and cells and setting their corresponding values. The `Worksheet` allows you to filter, sort, and customize the formats of the cells, as shown below.
+The Infragistics Angular Excel Engine's [`Worksheet`](/angular-apis/typescript/latest/classes/worksheet.html) is where your data is kept. You can input data by working with the Worksheet's rows and cells and setting their corresponding values. The [`Worksheet`](/angular-apis/typescript/latest/classes/worksheet.html) allows you to filter, sort, and customize the formats of the cells, as shown below.
 
 ### Demo
 
@@ -18,7 +19,7 @@ The Infragistics Angular Excel Engine's `Worksheet` is where your data is kept. 
 
 The following code shows the imports needed to use the code-snippets below:
 
-```typescript
+```ts
 import { Workbook } from "igniteui-angular-excel/ES5/Workbook";
 import { Worksheet } from "igniteui-angular-excel/ES5/Worksheet";
 import { WorkbookFormat } from "igniteui-angular-excel/ES5/WorkbookFormat";
@@ -39,16 +40,16 @@ The gridlines are used to visually separate the cells in the worksheet. You may 
 
 You can show or hide the gridlines using the `showGridlines` property of the `displayOptions` of the worksheet. The following code demonstrates how you can hide the gridlines in your worksheet:
 
-```typescript
+```ts
 var workbook = new Workbook(WorkbookFormat.Excel2007);
 var worksheet = workbook.worksheets().add("Sheet1");
-    
+
 worksheet.displayOptions.showGridlines = false;
 ```
 
 You can configure the gridlines' color using the `gridlineColor` property of the `displayOptions` of the worksheet. The following code demonstrates how you can change the gridlines in your worksheet to be red:
 
-```typescript
+```ts
 var workbook = new Workbook(WorkbookFormat.Excel2007);
 var worksheet = workbook.worksheets().add("Sheet1");
 
@@ -61,7 +62,7 @@ The column and row headers are used to visually identify columns and rows. They 
 
 You can show or hide the column and row headers using the `showRowAndColumnHeaders` property of the `displayOptions` of the worksheet. The following code demonstrates how you can hide the row and column headers:
 
-```typescript
+```ts
 var workbook = new Workbook(WorkbookFormat.Excel2007);
 var worksheet = workbook.worksheets().add("Sheet1");
 
@@ -70,24 +71,24 @@ worksheet.displayOptions.showRowAndColumnHeaders = false;
 
 ### Configuring Editing of the Worksheet
 
-By default, the `Worksheet` objects that you save will be editable. You can disable editing of a worksheet by protecting it using the `Worksheet` object's `protect` method. This method has a lot of nullable `bool` arguments that determine which pieces are protected, and one of these options is to allow editing of objects, which if set to `false` will prevent editing of the worksheet.
+By default, the [`Worksheet`](/angular-apis/typescript/latest/classes/worksheet.html) objects that you save will be editable. You can disable editing of a worksheet by protecting it using the [`Worksheet`](/angular-apis/typescript/latest/classes/worksheet.html) object's `protect` method. This method has a lot of nullable `bool` arguments that determine which pieces are protected, and one of these options is to allow editing of objects, which if set to `false` will prevent editing of the worksheet.
 
 The following code demonstrates how to disable editing in your worksheet:
 
-```typescript
+```ts
 var workbook = new Workbook(WorkbookFormat.Excel2007);
 var worksheet = workbook.worksheets().add("Sheet1");
 
 worksheet.protect();
 ```
 
-You can also use the `Worksheet` object's `protect` method to protect a worksheet against structural changes.
+You can also use the [`Worksheet`](/angular-apis/typescript/latest/classes/worksheet.html) object's `protect` method to protect a worksheet against structural changes.
 
-When protection is set, you can set the `CellFormat` object's `locked` property on individual cells, rows, merged cell regions, or columns to override the worksheet object's protection on those objects. For example, if you need all cells of a worksheet to be read-only except for the cells of one column, you can protect the worksheet and then set the `CellFormat` object's `locked` property to `false` on a specific `WorksheetColumn` object. This will allow your users to edit cells within the column while disabling editing of the other cells in the worksheet.
+When protection is set, you can set the `CellFormat` object's `locked` property on individual cells, rows, merged cell regions, or columns to override the worksheet object's protection on those objects. For example, if you need all cells of a worksheet to be read-only except for the cells of one column, you can protect the worksheet and then set the `CellFormat` object's `locked` property to `false` on a specific [`WorksheetColumn`](/angular-apis/typescript/latest/classes/worksheetcolumn.html) object. This will allow your users to edit cells within the column while disabling editing of the other cells in the worksheet.
 
 The following code demonstrates how you can do this:
 
-```typescript
+```ts
 var workbook = new Workbook(WorkbookFormat.Excel2007);
 var worksheet = workbook.worksheets().add("Sheet1");
 
@@ -97,9 +98,9 @@ worksheet.columns(0).cellFormat.locked = false;
 
 ### Filtering Worksheet Regions
 
-Filtering is done by setting a filter condition on a worksheet's `WorksheetFilterSettings` which can be retrieved from the `Worksheet` object's `filterSettings` property. Filter conditions are only reapplied when they're added, removed, modified, or when the `reapplyFilters` method is called on the worksheet. They are not constantly evaluated as data within the region changes.
+Filtering is done by setting a filter condition on a worksheet's [`WorksheetFilterSettings`](/angular-apis/typescript/latest/classes/worksheetfiltersettings.html) which can be retrieved from the [`Worksheet`](/angular-apis/typescript/latest/classes/worksheet.html) object's `filterSettings` property. Filter conditions are only reapplied when they're added, removed, modified, or when the `reapplyFilters` method is called on the worksheet. They are not constantly evaluated as data within the region changes.
 
-You can specify the region to apply the filter by using the `setRegion` method on the `WorksheetFilterSettings` object.
+You can specify the region to apply the filter by using the `setRegion` method on the [`WorksheetFilterSettings`](/angular-apis/typescript/latest/classes/worksheetfiltersettings.html) object.
 
 Below is a list of methods and their descriptions that you can use to add a filter to a worksheet:
 
@@ -118,7 +119,7 @@ Below is a list of methods and their descriptions that you can use to add a filt
 
 You can use the following code snippet as an example to add a filter to a worksheet region:
 
-```typescript
+```ts
 var workbook = new Workbook(WorkbookFormat.Excel2007);
 var worksheet = workbook.worksheets().add("Sheet1");
 
@@ -130,18 +131,18 @@ worksheet.filterSettings.applyAverageFilter(0, AverageFilterType.AboveAverage);
 
 You can freeze rows at the top of your worksheet or columns at the left using the freezing panes features. Frozen rows and columns remain visible at all times while the user is scrolling. The frozen rows and columns are separated from the rest of the worksheet by a single, solid line, which cannot be removed.
 
-In order to enable pane freezing, you need to set the `panesAreFrozen` property of the `Worksheet` object's `displayOptions` to `true`. You can then specify the rows or columns to freeze by using the `frozenRows` and `frozenColumns` properties of the display options `frozenPaneSettings`, respectively.
+In order to enable pane freezing, you need to set the `panesAreFrozen` property of the [`Worksheet`](/angular-apis/typescript/latest/classes/worksheet.html) object's `displayOptions` to `true`. You can then specify the rows or columns to freeze by using the `frozenRows` and `frozenColumns` properties of the display options `frozenPaneSettings`, respectively.
 
 You can also specify the first row in the bottom pane or first column in the right pane using the `firstRowInBottomPane` and `firstColumnInRightPane` properties, respectively.
 
 The following code snippet demonstrates how to use the freezing panes features in a worksheet:
 
-```typescript
+```ts
 var workbook = new Workbook(WorkbookFormat.Excel2007);
 var worksheet = workbook.worksheets().add("Sheet1");
 
 worksheet.displayOptions.panesAreFrozen = true;
-    
+
 worksheet.displayOptions.frozenPaneSettings.frozenRows = 3;
 worksheet.displayOptions.frozenPaneSettings.frozenColumns = 1;
 
@@ -151,11 +152,11 @@ worksheet.displayOptions.frozenPaneSettings.firstRowInBottomPane = 6;
 
 ### Setting the Worksheet Zoom Level
 
-You can change the zoom level for each worksheet independently using the `magnificationInNormalView` property on the `Worksheet` object's `displayOptions`. This property takes a value between 10 and 400 and represents the percentage of zoom that you wish to apply.
+You can change the zoom level for each worksheet independently using the `magnificationInNormalView` property on the [`Worksheet`](/angular-apis/typescript/latest/classes/worksheet.html) object's `displayOptions`. This property takes a value between 10 and 400 and represents the percentage of zoom that you wish to apply.
 
 The following code demonstrates how you can do this:
 
-```typescript
+```ts
 var workbook = new Workbook(WorkbookFormat.Excel2007);
 var worksheet = workbook.worksheets().add("Sheet1");
 
@@ -166,13 +167,13 @@ worksheet.displayOptions.magnificationInNormalView = 300;
 
 Sorting is done by setting a sorting condition on a worksheet level object on either columns or rows. You can sort columns or rows in ascending or descending order.
 
-This is done by specifying a region and sort type to the `Worksheet` object's `WorksheetSortSettings` that can be retrieved using the `sortSettings` property of the sheet.
+This is done by specifying a region and sort type to the [`Worksheet`](/angular-apis/typescript/latest/classes/worksheet.html) object's [`WorksheetSortSettings`](/angular-apis/typescript/latest/classes/worksheetsortsettings.html) that can be retrieved using the `sortSettings` property of the sheet.
 
 The sort conditions in a sheet are only reapplied when sort conditions are added, removed, modified, or when the `reapplySortConditions` method is called on the worksheet. Columns or rows will be sorted within the region. "Rows" is the default sort type.
 
 The following code snippet demonstrates how to apply a sort to a region of cells in a worksheet:
 
-```typescript
+```ts
 var workbook = new Workbook(WorkbookFormat.Excel2007);
 var worksheet = workbook.worksheets().add("Sheet1");
 
@@ -181,7 +182,7 @@ worksheet.sortSettings.sortConditions().addItem(new RelativeIndex(0), new Ordere
 
 ### Worksheet Protection
 
-You can protect a worksheet by calling the `protect` method on the `Worksheet` object. This method exposes many nullable `bool` parameters that allow you to restrict or allow the following user operations:
+You can protect a worksheet by calling the `protect` method on the [`Worksheet`](/angular-apis/typescript/latest/classes/worksheet.html) object. This method exposes many nullable `bool` parameters that allow you to restrict or allow the following user operations:
 
 -   Editing of cells.
 -   Editing of objects such as shapes, comments, charts, or other controls.
@@ -194,11 +195,11 @@ You can protect a worksheet by calling the `protect` method on the `Worksheet` o
 -   Sorting of data.
 -   Usage of pivot tables.
 
-You can remove worksheet protection by calling the `unprotect` method on the `Worksheet` object.
+You can remove worksheet protection by calling the `unprotect` method on the [`Worksheet`](/angular-apis/typescript/latest/classes/worksheet.html) object.
 
 The following code snippet shows how to enable protection of all of the above-listed user operations:
 
-```typescript
+```ts
 var workbook = new Workbook(WorkbookFormat.Excel2007);
 var worksheet = workbook.worksheets().add("Sheet1");
 
@@ -207,23 +208,23 @@ worksheet.protect();
 
 ### Worksheet Conditional Formatting
 
-You can configure the conditional formatting of a `Worksheet` object by using the many "Add" methods exposed on the `conditionalFormats` collection of that worksheet. The first parameter of these "Add" methods is the `string` region of the worksheet that you would like to apply the conditional format to.
+You can configure the conditional formatting of a [`Worksheet`](/angular-apis/typescript/latest/classes/worksheet.html) object by using the many "Add" methods exposed on the `conditionalFormats` collection of that worksheet. The first parameter of these "Add" methods is the `string` region of the worksheet that you would like to apply the conditional format to.
 
-Many of the conditional formats that you can add to your worksheet have a `cellFormat` property that determines the way that the `WorksheetCell` elements should look when the condition in that conditional format holds true. For example, you can use the properties attached to this `cellFormat` property such as `Fill` and `Font` to determine the background and font settings of your cells under a particular conditional format, respectively.
+Many of the conditional formats that you can add to your worksheet have a `cellFormat` property that determines the way that the [`WorksheetCell`](/angular-apis/typescript/latest/classes/worksheetcell.html) elements should look when the condition in that conditional format holds true. For example, you can use the properties attached to this `cellFormat` property such as `Fill` and `Font` to determine the background and font settings of your cells under a particular conditional format, respectively.
 
-There are a few conditional formats that do not have a `cellFormat` property, as their visualization on the worksheet cell behaves differently. These conditional formats are the `DataBarConditionalFormat`, `ColorScaleConditionalFormat`, and `IconSetConditionalFormat`.
+There are a few conditional formats that do not have a `cellFormat` property, as their visualization on the worksheet cell behaves differently. These conditional formats are the [`DataBarConditionalFormat`](/angular-apis/typescript/latest/classes/databarconditionalformat.html), [`ColorScaleConditionalFormat`](/angular-apis/typescript/latest/classes/colorscaleconditionalformat.html), and [`IconSetConditionalFormat`](/angular-apis/typescript/latest/classes/iconsetconditionalformat.html).
 
-When loading a pre-existing `Workbook` from Excel, the formats will be preserved when that `Workbook` is loaded. The same is true for when you save the `Workbook` out to an Excel file.
+When loading a pre-existing [`Workbook`](/angular-apis/typescript/latest/classes/workbook.html) from Excel, the formats will be preserved when that [`Workbook`](/angular-apis/typescript/latest/classes/workbook.html) is loaded. The same is true for when you save the [`Workbook`](/angular-apis/typescript/latest/classes/workbook.html) out to an Excel file.
 
 The following code example demonstrates usage of conditional formats on a worksheet:
 
-```typescript
+```ts
 var workbook = new Workbook(WorkbookFormat.Excel2007);
 var worksheet = workbook.worksheets().add("Sheet1");
 
 var color = new Color();
 color.colorString = "Red";
-    
+
 var format = worksheet.conditionalFormats().addAverageCondition("A1:A10", FormatConditionAboveBelow.AboveAverage);
 format.cellFormat.font.colorInfo = new WorkbookColorInfo(color);
 ```

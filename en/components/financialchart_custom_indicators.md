@@ -1,7 +1,8 @@
 ---
 title: Financial Chart | Data Visualization Tools | Ignite UI for Angular | Infragistics | Custom Indicators
-_description: Use the financial chart component to visualize financial data using a simple API. View the demo, dependencies, usage and toolbar for more information. 
+_description: Use the financial chart component to visualize financial data using a simple API. View the demo, dependencies, usage and toolbar for more information.
 _keywords: financial chart, Ignite UI for Angular, infragistics
+mentionedTypes: ['XamFinancialChart']
 ---
 
 ## Custom Indicators
@@ -34,7 +35,7 @@ The following code example shows how to set up and calculate two custom indicato
  </igx-financial-chart>
 ```
 
-```typescript
+```ts
     public applyCustomIndicators(event: { sender: any, args: FinancialChartCustomIndicatorArgs }) {
         if (event.args.index === 0) {
             const info: FinancialEventArgs = event.args.indicatorInfo;

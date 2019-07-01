@@ -9,7 +9,7 @@ mentionedTypes: ['XamDataChart']
 
 This topic provides an example on how to implement data source for [Polar Series](datachart_series_types_polar.md)
 
-```typescript
+```ts
 export class SamplePolarData {
 
     public static create(): any[] {

@@ -2,6 +2,7 @@
 title: Data Chart | Visualization Tools | Ignite UI for Angular | Infragistics | Scatter Marker
 _description: Create a data chart that displays multiple instances of visual elements in the same plot area in order to create composite chart views.
 _keywords: data chart, Ignite UI for Angular, Infragistics
+mentionedTypes: ['XamDataChart']
 ---
 
 ## Scatter Marker Series
@@ -24,21 +25,21 @@ This topic explains various types of scatter marker series in the Angular data c
 
 The following table lists all types of scatter marker series and their descriptions:
 
-| Series Name                       | Description                                                                            |
-| --------------------------------- | -------------------------------------------------------------------------------------- |
-| `IgxScatterSeriesComponent`       | Displays a marker for data point mapped to `XMemberPath` and `YMemberPath` properties. |
-| `IgxScatterLineSeriesComponent`   | Displays a straight line between each data point in addition to a marker.              |
-| `IgxScatterSplineSeriesComponent` | Displays smooth line interpolated between each data point in addition to a marker.     |
+| Series Name                                                                                                       | Description                                                                            |
+| ----------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| [`IgxScatterSeriesComponent`](/angular-apis/typescript/latest/classes/igxscatterseriescomponent.html)             | Displays a marker for data point mapped to `XMemberPath` and `YMemberPath` properties. |
+| [`IgxScatterLineSeriesComponent`](/angular-apis/typescript/latest/classes/igxscatterlineseriescomponent.html)     | Displays a straight line between each data point in addition to a marker.              |
+| [`IgxScatterSplineSeriesComponent`](/angular-apis/typescript/latest/classes/igxscattersplineseriescomponent.html) | Displays smooth line interpolated between each data point in addition to a marker.     |
 
 ### Required Axes
 
 The Angular data chart component provides various types of axes but only the following types of axes can be used with scatter marker series.
 
-| Series Type                       | YAxis Type                 | XAxis Type                 |
-| --------------------------------- | -------------------------- | -------------------------- |
-| `IgxScatterSeriesComponent`       | `IgxNumericYAxisComponent` | `IgxNumericXAxisComponent` |
-| `IgxScatterLineSeriesComponent`   | `IgxNumericYAxisComponent` | `IgxNumericXAxisComponent` |
-| `IgxScatterSplineSeriesComponent` | `IgxNumericYAxisComponent` | `IgxNumericXAxisComponent` |
+| Series Type                                                                                                       | YAxis Type                                                                                          | XAxis Type                                                                                          |
+| ----------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| [`IgxScatterSeriesComponent`](/angular-apis/typescript/latest/classes/igxscatterseriescomponent.html)             | [`IgxNumericYAxisComponent`](/angular-apis/typescript/latest/classes/igxnumericyaxiscomponent.html) | [`IgxNumericXAxisComponent`](/angular-apis/typescript/latest/classes/igxnumericxaxiscomponent.html) |
+| [`IgxScatterLineSeriesComponent`](/angular-apis/typescript/latest/classes/igxscatterlineseriescomponent.html)     | [`IgxNumericYAxisComponent`](/angular-apis/typescript/latest/classes/igxnumericyaxiscomponent.html) | [`IgxNumericXAxisComponent`](/angular-apis/typescript/latest/classes/igxnumericxaxiscomponent.html) |
+| [`IgxScatterSplineSeriesComponent`](/angular-apis/typescript/latest/classes/igxscattersplineseriescomponent.html) | [`IgxNumericYAxisComponent`](/angular-apis/typescript/latest/classes/igxnumericyaxiscomponent.html) | [`IgxNumericXAxisComponent`](/angular-apis/typescript/latest/classes/igxnumericxaxiscomponent.html) |
 
 ### Required Data
 
@@ -50,7 +51,7 @@ The scatter marker series have the following data requirements:
 
 You can use the [SampleScatterStats](datachart_data_sources_stats.md) as data source which meets above data requirements.
 
-```typescript
+```ts
 this.state = { dataSource: SampleScatterStats.getCountries() }
 ```
 
@@ -58,7 +59,7 @@ this.state = { dataSource: SampleScatterStats.getCountries() }
 
 The scatter marker series requires the following modules:
 
-```typescript
+```ts
 // axis' modules:
 import { IgxNumericYAxis } from "igniteui-angular-charts/ES5/igx-numeric-y-axis";
 import { IgxNumericXAxis } from "igniteui-angular-charts/ES5/igx-numeric-x-axis";
@@ -87,7 +88,7 @@ export class AppModule { /* ... */ }
 
 ### Code Example
 
-This code demonstrates how to create an instance of data chart with `IgxScatterSeriesComponent` and bind it to the data source.
+This code demonstrates how to create an instance of data chart with [`IgxScatterSeriesComponent`](/angular-apis/typescript/latest/classes/igxscatterseriescomponent.html) and bind it to the data source.
 
 ```html
  <igx-data-chart
@@ -106,7 +107,7 @@ This code demonstrates how to create an instance of data chart with `IgxScatterS
  </igx-data-chart>
 ```
 
-Note that you can also use above code to create `IgxScatterLineSeriesComponent` or `IgxScatterSplineSeriesComponent` by replacing `IgxScatterSeriesComponent`.
+Note that you can also use above code to create [`IgxScatterLineSeriesComponent`](/angular-apis/typescript/latest/classes/igxscatterlineseriescomponent.html) or [`IgxScatterSplineSeriesComponent`](/angular-apis/typescript/latest/classes/igxscattersplineseriescomponent.html) by replacing [`IgxScatterSeriesComponent`](/angular-apis/typescript/latest/classes/igxscatterseriescomponent.html).
 
 ### Series Appearance
 
@@ -123,7 +124,7 @@ You can customize appearance of marker using the [Markers](datachart_series_mark
 </igx-scatter-series>
 ```
 
-```typescript
+```ts
 const series1 = new IgxScatterLineSeries({ name: "series1" });
 series1.markerType = MarkerType.Square;
 series1.markerBrush = "White";
