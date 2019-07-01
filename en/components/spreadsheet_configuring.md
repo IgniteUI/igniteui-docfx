@@ -7,7 +7,7 @@ mentionedTypes: ['Spreadsheet']
 
 ## Configuring Spreadsheet
 
-The [`IgxSpreadsheetComponent`](/angular-apis/typescript/latest/classes/igxspreadsheetcomponent.html) allows the user to configure many different aspects of the control, including but not limited to editing of the cells, the visibility of gridlines and headers, protection, zoom level, and various other properties related to the Excel worksheet.
+The Angular Spreadsheet component allows the user to configure many different aspects of the control, including but not limited to editing of the cells, the visibility of gridlines and headers, protection, zoom level, and various other properties related to the Excel worksheet.
 
 ### Demo
 
