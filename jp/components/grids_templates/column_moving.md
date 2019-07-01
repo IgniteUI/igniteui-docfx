@@ -59,16 +59,16 @@ public onColumnMovingEnd(event) {
 }
 ```
 
-### Styling
+### スタイル設定
 
-To get started with styling the @@igComponent column moving headers, we need to import the `index` file, where all the theme functions and component mixins live:
+@@igComponent 列移動ヘッダーのスタイル設定は、すべてのテーマ関数とコンポーネント mixins のある `index` ファイルをインポートする必要があります。
 
  ```scss
 // custom-grid-column-moving-style.component.scss
 @import '~igniteui-angular/lib/core/styles/themes/index';
  ``` 
 
-Following the simplest approach, we create a new theme that extends the [`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) and accepts the `$ghost-header-background`, `$ghost-header-text-color` and the `$ghost-header-icon-color` parameters.
+最も簡単な方法は、[`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) を拡張して `$ghost-header-background`、`$ghost-header-text-color`、`$ghost-header-icon-color` パラメーターを受け入れる新しいテーマを作成します。
 
 ```scss
 // Define dark theme for the column moving
@@ -79,14 +79,14 @@ $dark-grid-column-moving-theme: igx-grid-theme(
 );
 ```
 
-The last step is to **include** the component mixins with its respective theme:
+最後のステップは、それぞれのテーマを持つコンポーネント mixins を**含める**ことです。
 
 ```scss
 @include igx-grid($dark-grid-column-moving-theme);
 ```
 
 > [!NOTE]
-> Depending on the component [**View Encapsulation**](/components/themes/component-themes.html#view-encapsulation) strategy, it may be necessary to `penetrate` this encapsulation using `::ng-deep`
+> コンポーネントの [**View Encapsulation**](/components/themes/component-themes.html#view-encapsulation) ストラテジに基づいて、`::ng-deep` を使用してこのカプセル化を `penetrate` する必要な場合があります。
 
 ```scss
 :host {
@@ -96,12 +96,12 @@ The last step is to **include** the component mixins with its respective theme:
 }
 ```
 
-#### Defining a color palette
+#### カラーパレットの定義
 
-Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [igx-palette]({environment:sassApiUrl}/index.html#function-igx-palette) and [igx-color]({environment:sassApiUrl}/index.html#function-igx-color) functions.
+上記のように色の値をハードコーディングする代わりに、[igx-palette]({environment:sassApiUrl}/index.html#function-igx-palette) と [igx-color]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用することによって色に関してより高い柔軟性を持つことができます。
 
 
-**igx-palette** generates a color palette based on the primary and secondary colors that are passed:
+**igx-palette** は渡された一次色と二次色に基づいてカラーパレットを生成します。
 ```scss
 $yellow-color: #F4D45C;
 $black-color: #575757;
@@ -109,7 +109,7 @@ $black-color: #575757;
 $dark-palette: igx-palette($primary: $yellow-color, $secondary: $black-color);
 ```
 
-And then with [**igx-color**]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the pallete.
+次に [**igx-color**]({environment:sassApiUrl}/index.html#function-igx-color) を使用してパレットから簡単に色を取り出すことができます。
 
 ```scss
 $dark-grid-column-moving-theme: igx-grid-theme(
@@ -122,13 +122,13 @@ $dark-grid-column-moving-theme: igx-grid-theme(
 
 
 > [!NOTE]
-> The igx-color and igx-palette are powerful functions for generating and retrieving colors. Please refer to [`Palettes`](/components/themes/palette.html) topic for detailed guidance on how to use them.
+> igx-color および igx-palette は、色を生成および取得するための重要な機能です。使い方の詳細については[パレット](/components/themes/palette.html)のトピックを参照してください。
 
-#### Using Schemas
+#### スキーマの使用
 
-Going further with the theming engine, you can build a robust and flexible structure that benefits from [schemas](/components/themes/schemas.html). A **schema** is a recipe of a theme.
+テーマ エンジンを使用して、[スキーマ](/components/themes/schemas.html)の利点を使用でき、堅牢で柔軟な構造を構築できます。**スキーマ**はテーマを使用する方法です。
 
-Extend one of the two predefined schemas, that are provided for every component, in this case - [light-grid]({environment:sassApiUrl}/index.html#variable-_light-grid).
+すべてのコンポーネントに提供されている 2 つの定義済みスキーマ (ここでは [light-grid]({environment:sassApiUrl}/index.html#variable-_light-grid) の 1 つを拡張します。
 
 ```scss
 // Extending the dark grid schema
@@ -147,7 +147,7 @@ $dark-grid-column-moving-schema: extend($_light-grid,
 );
 ```
 
-In order to apply our custom schema we have to **extend** one of the globals ([light]({environment:sassApiUrl}/index.html#variable-light-schema) or [dark]({environment:sassApiUrl}/index.html#variable-dark-schema)), which is basically pointing out the components with a custom schema, and after that add it to the respective component theme:
+カスタム スキーマを適用するには、グローバル ([light]({environment:sassApiUrl}/index.html#variable-light-schema) または [dark]({environment:sassApiUrl}/index.html#variable-dark-schema)) の 1 つを拡張する必要があります。これは基本的にカスタム スキーマでコンポーネントを指し示し、その後それぞれのコンポーネントテーマに追加するものです。
 
 ```scss
 // Extending the global dark-schema
@@ -162,9 +162,9 @@ $dark-grid-column-moving-theme: igx-grid-theme(
 );
 ```
 
-Don't forget to include the theme in the same way as it was demonstrated above.
+テーマを上記と同じ方法で含めることに注意してください。
 
-#### Demo
+#### デモ
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:650px">
@@ -172,7 +172,7 @@ Don't forget to include the theme in the same way as it was demonstrated above.
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="column-moving-styled-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="column-moving-styled-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -183,7 +183,7 @@ Don't forget to include the theme in the same way as it was demonstrated above.
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-column-moving-styled-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-column-moving-styled-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -194,7 +194,7 @@ Don't forget to include the theme in the same way as it was demonstrated above.
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-column-moving-styled-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-column-moving-styled-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 <div class="divider--half"></div>
 }
