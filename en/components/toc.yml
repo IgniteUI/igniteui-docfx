@@ -728,3 +728,8 @@
 - name: Localization
   href: localization.md
   new: false
+- name: ZoomSlider
+  header: true
+- name: Zoom Slider Overview
+  new: true
+  href: zoomslider_overview.md
