@@ -258,29 +258,29 @@
       new: true
 - name: Spreadsheet
   href: spreadsheet_overview.md
-  new: true
+  new: false
   items:
     - name: Activation
       href: spreadsheet_activation.md
-      new: true
+      new: false
     - name: Clipboard
       href: spreadsheet_clipboard.md
-      new: true
+      new: false
     - name: Conditional Formatting
       href: spreadsheet_conditional_formatting.md
-      new: true
+      new: false
     - name: Configuring Spreadsheet
       href: spreadsheet_configuring.md
-      new: true
+      new: false
     - name: Commands
       href: spreadsheet_commands.md
-      new: true
+      new: false
     - name: Data Validation
       href: spreadsheet_data_validation.md
-      new: true
+      new: false
     - name: Hyperlinks
       href: spreadsheet_hyperlinks.md
-      new: true      
+      new: false      
 - name: Charts
   header: true
 - name: Category Chart
@@ -320,7 +320,7 @@
       items:
         - name: 축 설정
           href: datachart_axis_settings.md
-          new: true
+          new: false
         #- name: Axis Scales
         #  href: datachart_axis_scales.md
         #  new: true
@@ -329,92 +329,92 @@
         #  new: true
         - name: 축 공유 및 다중 행
           href: datachart_axis_sharing.md
-          new: true
+          new: false
     - name: Series
       href: datachart_series_types.md
-      new: true
+      new: false
       items:
       #  - name: Requirements
       #    href: datachart_series_requirements.md
       #    new: true
         - name: 카테고리 시리즈
           href: datachart_series_types_category.md
-          new: true
+          new: false
         - name: 금융 시리즈 
           href: datachart_series_types_financial.md
-          new: true
+          new: false
         - name: 폴라 시리즈
           href: datachart_series_types_polar.md
-          new: true
+          new: false
         - name: 레이디얼 시리즈 
           href: datachart_series_types_radial.md
-          new: true
+          new: false
         - name: 범위 시리즈
           href: datachart_series_types_range.md
-          new: true
+          new: false
         - name: 분산 영역 시리즈 
           href: datachart_series_types_scatter_area.md
-          new: true
+          new: false
         - name: 분산 등고선 시리즈 
           href: datachart_series_types_scatter_contour.md
-          new: true
+          new: false
         - name: 분산 버블 시리즈 
           href: datachart_series_types_scatter_bubble.md
-          new: true
+          new: false
         # - name: Scatter HD Series
         #  href: datachart_series_types_scatter_hd.md
         #  new: true
         - name: 분산 마커 시리즈
           href: datachart_series_types_scatter_marker.md
-          new: true
+          new: false
         - name: 분산 모양 시리즈
           href: datachart_series_types_shape.md
-          new: true
+          new: false
         - name: 스택 시리즈
           href: datachart_series_types_stacked.md
-          new: true
+          new: false
     #- name: Animations
     #  href: datachart_series_animations.md
     #  new: true
     - name: 시리즈 주석
       href: datachart_series_annotations.md
-      new: true
+      new: false
     - name: 강조 표시
       href: datachart_series_highlighting.md
-      new: true
+      new: false
     - name: 범례
       href: datachart_chart_legends.md
-      new: true
+      new: false
     - name: 마커
       href: datachart_series_markers.md
-      new: true
+      new: false
     - name: 탐색
       href: datachart_chart_navigation.md
+      new: false
+    - name: Synchronization
+      href: datachart_chart_synchronization.md
       new: true
-    #- name: Synchronization
-    #  href: datachart_chart_synchronization.md
-    #  new: true
     - name: 제목 및 부제
       href: datachart_chart_titles.md
-      new: true
+      new: false
     - name: 도구 설명
       href: datachart_series_tooltips.md
-      new: true
+      new: false
     - name: 추세선
       href: datachart_series_trendlines.md
-      new: true
+      new: false
     - name: 데이터 소스
       href: datachart_data_sources.md
-      new: true 
+      new: false 
     #- name: Data Triangulation
     #  href: datachart_data_triangulation.md
     #  new: true
     #- name: Series Error Bars
     #  href: datachart_series_errorbars.md
     #  new: true
-    #- name: Value Overlay
-    #  href: datachart_series_value_overlay.md
-    #  new: true 
+    - name: Value Overlay
+      href: datachart_series_value_overlay.md
+      new: true 
 - name: Financial Chart
   href: financialchart.md
   items:

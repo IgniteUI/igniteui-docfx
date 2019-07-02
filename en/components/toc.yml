@@ -268,28 +268,28 @@
   items:
     - name: Activation
       href: spreadsheet_activation.md
-      new: true
+      new: false
     - name: Chart Adapter
       href: spreadsheet_chart_adapter.md
       new: true
     - name: Clipboard
       href: spreadsheet_clipboard.md
-      new: true
+      new: false
     - name: Conditional Formatting
       href: spreadsheet_conditional_formatting.md
-      new: true
+      new: false
     - name: Configuring Spreadsheet
       href: spreadsheet_configuring.md
-      new: true
+      new: false
     - name: Commands
       href: spreadsheet_commands.md
-      new: true
+      new: false
     - name: Data Validation
       href: spreadsheet_data_validation.md
-      new: true
+      new: false
     - name: Hyperlinks
       href: spreadsheet_hyperlinks.md
-      new: true
+      new: false
 - name: Charts
   header: true
 - name: Category Chart
@@ -332,7 +332,7 @@
           new: true
         - name: Axis Settings
           href: datachart_axis_settings.md
-          new: true
+          new: false
         #- name: Axis Scales
         #  href: datachart_axis_scales.md
         #  new: true
@@ -341,83 +341,83 @@
         #  new: true
         - name: Axis Sharing
           href: datachart_axis_sharing.md
-          new: true
+          new: false
     - name: Series
       href: datachart_series_types.md
-      new: true
+      new: false
       items:
       #  - name: Requirements
       #    href: datachart_series_requirements.md
       #    new: true
         - name: Category Series 
           href: datachart_series_types_category.md
-          new: true
+          new: false
         - name: Financial Series 
           href: datachart_series_types_financial.md
-          new: true
+          new: false
         - name: Polar Series 
           href: datachart_series_types_polar.md
-          new: true
+          new: false
         - name: Radial Series 
           href: datachart_series_types_radial.md
-          new: true
+          new: false
         - name: Range Series 
           href: datachart_series_types_range.md
-          new: true
+          new: false
         - name: Scatter Area Series 
           href: datachart_series_types_scatter_area.md
-          new: true
+          new: false
         - name: Scatter Contour Series 
           href: datachart_series_types_scatter_contour.md
-          new: true
+          new: false
         - name: Scatter Bubble Series 
           href: datachart_series_types_scatter_bubble.md
-          new: true
+          new: false
         # - name: Scatter HD Series
         #  href: datachart_series_types_scatter_hd.md
         #  new: true
         - name: Scatter Marker Series
           href: datachart_series_types_scatter_marker.md
-          new: true
+          new: false
         - name: Scatter Shape Series
           href: datachart_series_types_shape.md
-          new: true        
+          new: false        
         - name: Stacked Series
           href: datachart_series_types_stacked.md
-          new: true
+          new: false
     #- name: Animations
     #  href: datachart_series_animations.md
     #  new: true
     - name: Annotations
       href: datachart_series_annotations.md
-      new: true
+      new: false
     - name: Highlighting
       href: datachart_series_highlighting.md
-      new: true
+      new: false
     - name: Legend
       href: datachart_chart_legends.md
-      new: true
+      new: false
     - name: Markers
       href: datachart_series_markers.md
-      new: true
+      new: false
     - name: Navigation
       href: datachart_chart_navigation.md
-      new: true
+      new: false
     - name: Synchronization
       href: datachart_chart_synchronization.md
       new: true
     - name: Title and Subtitle
       href: datachart_chart_titles.md
-      new: true
+      new: false
     - name: Tooltips
       href: datachart_series_tooltips.md
-      new: true
+      new: false
     - name: Trendlines
       href: datachart_series_trendlines.md
-      new: true
+      new: false
     - name: Data Sources
       href: datachart_data_sources.md
-      new: true 
+      new: false 
     #- name: Data Triangulation
     #  href: datachart_data_triangulation.md
     #  new: true
@@ -472,7 +472,7 @@
   href: sparkline.md
   new: true
 - name: Frameworks
-  header: true
+  header: false
 - name: Excel Library
   href: excel_library.md
   new: false
