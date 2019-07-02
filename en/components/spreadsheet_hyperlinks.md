@@ -1,8 +1,8 @@
 ---
-title: Angular Spreadsheet | Grid Controls | Ignite UI for Angular | Hyperlinks | Infragistics |
+title: Spreadsheet | Grid Controls | Ignite UI for Angular | Hyperlinks | Infragistics |
 _description: Use the Spreadsheet control to embed Excel document creation and editing experiences right into your application.
 _keywords: Spreadsheet, Ignite UI for Angular, Infragistics
-mentionedTypes: ['XamSpreadsheet']
+mentionedTypes: ['Spreadsheet']
 ---
 
 ## Spreadsheet Hyperlinks
@@ -19,7 +19,7 @@ The Angular Spreadsheet component allows display of pre-existing hyperlinks in y
 
 ### Hyperlinks Overview
 
-Hyperlinks are added to the `XamSpreadsheet` control by accessing the `Hyperlinks` collection on the worksheet that you want to place the hyperlink on. This collection has an `Add` method that takes a [`WorksheetHyperlink`](/angular-apis/typescript/latest/classes/worksheethyperlink.html) object, where you can define the cell address, the hyperlink URL to be navigated to, the display text, and a tooltip to optionally be displayed on hover.
+Hyperlinks are added to the [`IgxSpreadsheetComponent`](/angular-apis/typescript/latest/classes/igxspreadsheetcomponent.html) control by accessing the `Hyperlinks` collection on the worksheet that you want to place the hyperlink on. This collection has an `Add` method that takes a [`WorksheetHyperlink`](/angular-apis/typescript/latest/classes/worksheethyperlink.html) object, where you can define the cell address, the hyperlink URL to be navigated to, the display text, and a tooltip to optionally be displayed on hover.
 
 ### Dependencies
 
@@ -33,7 +33,7 @@ import { WorksheetHyperlink } from "igniteui-angular-excel/ES5/WorksheetHyperlin
 
 ### Code Snippet
 
-The following code snippet demonstrates how to add a hyperlink to the currently viewed worksheet in the `XamSpreadsheet` control:
+The following code snippet demonstrates how to add a hyperlink to the currently viewed worksheet in the [`IgxSpreadsheetComponent`](/angular-apis/typescript/latest/classes/igxspreadsheetcomponent.html) control:
 
 ```ts
 this.spreadsheet.activeWorksheet.hyperlinks().add(new WorksheetHyperlink("A1", "http://www.infragistics.com", "Infragistics", "Infragistics Home Page"));
