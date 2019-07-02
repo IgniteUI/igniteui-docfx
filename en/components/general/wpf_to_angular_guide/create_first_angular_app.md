@@ -25,8 +25,8 @@ We are going to be prompted "Would we like to add Angular routing?". For this de
 Now we have to change directories to the demo-app folder that was just created and execute a command to open Visual Studio Code.
 
 ```cmd
-> cd demo-app
-> code .
+cd demo-app
+code .
 ```
 
 This is going to launch a new instance of Visual Studio Code that contains your Angular application. Now this is the part that is probably the most overwhelming to desktop developers trying to learn Angular - the folder structure.
