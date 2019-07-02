@@ -78,7 +78,7 @@ $dark-grid-paginator: igx-grid-paginator-theme(
 
 # <a name='#workflow'>Workflow</a>
 
-When working on an issue for the Ignite UI Angular DocFX Site Builder, you need to be aware of and to follow a correct status workflow. We have created a number of status labels in order to communicate well what the current status of a single issue/pull request is. The statuses are as follows:
+When working on an issue for the Ignite UI for Angular DocFX Site Builder, you need to be aware of and to follow a correct status workflow. We have created a number of status labels in order to communicate well what the current status of a single issue/pull request is. The statuses are as follows:
 
 ## Development - applicable to issues and pull requests
 1. `status: in-review` this is the initial status of an issue. If the label is not placed, go ahead and place it.
