@@ -1,21 +1,21 @@
 @@if (igxName === 'IgxGrid') {
 ---
 title:  Angular Grid Sizing | Ignite UI for Angular | infragistics 
-_description: Learn how to apply material density capabilities to the Material UI table component by using a set of compact view options in the Ignite UI Grid angular component.
+_description: Learn how to correctly size your UI Grid Angular component depending on your goals by using the width and height options.
 _keywords: sizing, igniteui for angular, infragistics
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
 title:  Angular Tree Grid Sizing | Ignite UI for Angular | infragistics 
-_description: Learn how to apply material density capabilities to the Material UI table component by using a set of compact view options in the Ignite UI Grid angular component.
+_description: Learn how to correctly size your UI Grid Angular component depending on your goals by using the width and height options.
 _keywords: sizing, igniteui for angular, infragistics
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
 title:  Angular Hierarchical Grid Sizing | Ignite UI for Angular | infragistics 
-_description: Learn how to apply material density capabilities to the Material UI table component by using a set of compact view options in the Ignite UI Grid angular component.
+_description: Learn how to correctly size your UI Grid Angular component depending on your goals by using the width and height options.
 _keywords:  sizing, igniteui for angular, infragistics
 ---
 }
@@ -76,6 +76,8 @@ The [**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) `heigh
 
     ![](../../images/grid_sizing/height-null-24rows.jpg)
 
+**Note:** Due to this behavior if the grid data contains too many rows, it might have significant performance impact to the browser, since all rows would be rendered without virtualization.
+
 #### Pixels
 
 Setting the [**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) `height` in pixels is more straightforward since the grid will size to that specific size in all occasions similarly to how `width` in pixels is set.
@@ -91,6 +93,14 @@ Setting the [**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html
 #### Percentage
 
 When the `height` input is set to percentages the [**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) will size based on the parent element height. If the parent element has height set in pixels or percentages the grid will size relative to the size ot the parent.
+
+* If we set the parent element height to `800px` and the [**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) to `100%` height this means that the grid will be sized to 100 percents of `800px`.
+
+    ![](../../images/grid_sizing/height-percent-100-parent-800px.jpg)
+
+* If we want the grid to be sized to `100%` from the browser window we would need to set the `body` height to `100%` and set to the parent element of the grid also height of `100%`. In this case the parent element can be sized and the grid will size accordingly if the browser is resized.
+
+    ![](../../images/grid_sizing/height-percent-100-parent-100.jpg)
 
 If the parent element does not have defined height, the browser does not assign height to it initially and sizes it based on its children and their size. That is why there is no way for the grid to know what base height to use in order to apply percentage sizing based on it. For this reason it will render maximum of 10 rows and if they are more a vertical scrollbar will be rendered, otherwise the grid will fit to number of rendered rows. We will look in this scenario in more detail in the next examples.
 
