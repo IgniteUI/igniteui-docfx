@@ -766,19 +766,26 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 
 @@if (igxName === 'IgxHierarchicalGrid'){
 #### Demo
-
+<div class="sample-container loading" style="height:560px">
+    <iframe id="custom-hGrid-paging-style-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-paging-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
+<br/>  
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-sample-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-paging-style" 
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="custom-hGrid-paging-style-iframe" 
         data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz
     </button>
 </div>
 }
 
+
 @@if (igxName === 'IgxTreeGrid'){
 #### Demo
-
+<div class="sample-container loading" style="height:560px">
+    <iframe id="custom-treegrid-paging-style-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-paging-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
+<br/>  
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-sample-src="{environment:demosBaseUrl}/tree-grid/treegrid-paging-style" 
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="custom-treegrid-paging-style-iframe" 
         data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz
     </button>
 </div>
