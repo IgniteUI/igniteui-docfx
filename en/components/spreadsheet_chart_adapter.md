@@ -1,5 +1,5 @@
 ---
-title: Angular Spreadsheet | Grid Controls | Ignite UI for Angular | chart adapter | Infragistics |
+title: Spreadsheet | Grid Controls | Ignite UI for Angular | chart adapter | Infragistics |
 _description: Use the Spreadsheet control to embed Excel document creation and editing experiences right into your application.
 _keywords: Spreadsheet, Ignite UI for Angular, Infragistics
 mentionedTypes: ['Spreadsheet']
