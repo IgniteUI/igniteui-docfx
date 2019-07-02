@@ -1,22 +1,22 @@
 
 @@if (igxName === 'IgxGrid') {
 ---
-title: Grid Live Data - Native Angular | Ignite UI for Angular
-_description: The Ignite UI for Angular Data Grid can handle thousands of updates per second.
+title: Grid ライブ データ - ネイティブ Angular | Ignite UI for Angular
+_description: Angular Data Grid の Ignite UI は、毎秒何千もの更新を処理できます。
 _keywords: angular data grid, agular grid updates, angular live data
 ---
 }
 
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Tree Grid Live Data - Native Angular | Ignite UI for Angular
-_description: The Ignite UI for Angular Data Grid can handle thousands of updates per second.
+title: Tree Grid ライブ データ - ネイティブ Angular | Ignite UI for Angular
+_description: The Ignite UI for Angular Data Grid は、毎秒数千に及ぶデータポイントの更新を処理します。
 _keywords: angular data grid, agular grid updates, angular live data
 ---
 }
 
-### Live Updating Demo
-The @@igComponent component in Ignite UI for Angular is able to handle thousands of updates per seconds, while keeping the grid responsive for any interaction that the user may undertake. This sample demonstrates the @@igComponent handling thousands of updates per second.
+### 更新ライブデモ
+Ignite UI for Angularの @@igComponent コンポーネントは、1 秒間に何千もの更新を処理しながら、ユーザーはグリッドをインタラクティブに操作できます。以下は、1 秒間に何千もの更新を処理する @@igComponent のサンプルです。
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:700px">
@@ -26,28 +26,28 @@ The @@igComponent component in Ignite UI for Angular is able to handle thousands
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-finjs-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-## API References
+## API リファレンス
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
 * [IgxGridComponent Styles]({environment:sassApiUrl}/#function-igx-grid-theme)
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 * [IgxGridRowComponent]({environment:angularApiUrl}/classes/igxgridrowcomponent.html)
 * [IgxGridCellComponent]({environment:angularApiUrl}/classes/igxgridcellcomponent.html)
 
-## Additional Resources
+## その他のリソース
 <div class="divider--half"></div>
 
-* [Virtualization and Performance](virtualization.md)
-* [Paging](paging.md)
-* [Filtering](filtering.md)
-* [Sorting](sorting.md)
-* [Summaries](summaries.md)
-* [Column Moving](column_moving.md)
-* [Column Pinning](column_pinning.md)
-* [Column Resizing](column_resizing.md)
-* [Selection](selection.md)
+* [仮想化とパフォーマンス](virtualization.md)
+* [ページング](paging.md)
+* [フィルタリング](filtering.md)
+* [ソート](sorting.md)
+* [集計](summaries.md)
+* [列移動](column_moving.md)
+* [列のピン固定](column_pinning.md)
+* [列のサイズ変更](column_resizing.md)
+* [選択](selection.md)
 
 <div class="divider--half"></div>
-Our community is active and always welcoming to new ideas.
+コミュニティに参加して新しいアイデアをご提案ください。
 
 * [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
 * [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
@@ -58,10 +58,10 @@ Our community is active and always welcoming to new ideas.
     <iframe id="grid-sample-finjs-iframe" data-src='{environment:demosBaseUrl}/treegrid-finjs-sample' width="100%" height="100%" seamless="" frameborder="0" class="lazyload"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-finjs-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-finjs-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
 </div>
 
-## API References
+## API リファレンス
 
 <div class="divider--half"></div>
 
@@ -75,17 +75,15 @@ Our community is active and always welcoming to new ideas.
 * [IgxBaseTransactionService]({environment:angularApiUrl}/classes/igxbasetransactionservice.html)
 
 
-## Additional Resources
+## その他のリソース
 
 <div class="divider--half"></div>
 
-* [Data Grid](../grid/grid.md)
-* [Row Editing](row_editing.md)
+* [データ グリッド](../grid/grid.md)
+* [行編集](row_editing.md)
 
 <div class="divider--half"></div>
-Our community is active and always welcoming to new ideas.
+コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
-
-}
+* [Ignite UI for Angular **フォーラム** (英語) ](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub** (英語) ](https://github.com/IgniteUI/igniteui-angular)
