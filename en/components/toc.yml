@@ -339,7 +339,7 @@
         #  new: true
         # - name: Axis Locations
         #  href: datachart_axis_locations.md
-        #  new: true
+        #  new: false
         - name: Axis Sharing
           href: datachart_axis_sharing.md
           new: false
@@ -382,7 +382,7 @@
           new: false
         - name: Scatter Shape Series
           href: datachart_series_types_shape.md
-          new: false        
+          new: false
         - name: Stacked Series
           href: datachart_series_types_stacked.md
           new: false
@@ -418,7 +418,7 @@
       new: false
     - name: Data Sources
       href: datachart_data_sources.md
-      new: false 
+      new: false
     #- name: Data Triangulation
     #  href: datachart_data_triangulation.md
     #  new: true
@@ -427,7 +427,7 @@
     #  new: true
     - name: Value Overlay
       href: datachart_series_value_overlay.md
-      new: true        
+      new: true
 - name: Financial Chart
   href: financialchart.md
   new: false
@@ -478,7 +478,7 @@
   header: true
 - name: Map
   href: map_overview.md
-  new: true
+  new: false
   items:
     - name: Binding CSV File
       href: map_binding_geographic_csv_files.md
@@ -541,7 +541,7 @@
       href: map_resources_world_util.md
       new: false
 - name: Frameworks
-  header: false
+  header: true
 - name: Excel Library
   href: excel_library.md
   new: false
