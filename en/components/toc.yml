@@ -322,7 +322,7 @@
       new: false
 - name: Data Chart
   href: datachart.md
-  new: true
+  new: false
   items:
     - name: Axis
       href: datachart_axis_types.md
