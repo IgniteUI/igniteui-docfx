@@ -2,18 +2,18 @@
 title: Data Chart | Visualization Tools | Ignite UI for Angular | Infragistics | Value Overlay
 _description: Create a data chart that displays multiple instances of visual elements in the same plot area in order to create composite chart views.
 _keywords: data chart, Ignite UI for Angular, Infragistics
-mentionedTypes: ['XamDataChart']
+mentionedTypes: ['XamDataChart', 'ColumnSeries', 'ValueOverlay']
 namespace: Infragistics.Controls.Charts
 ---
 
 ## Value Overlay
 
-The Ignite UI for Angular data chart component allows for placement of horizontal or vertical lines at a single numeric value that you define through usage of the value overlay. This can help you to visualize data such as the mean or median of a particular series.
+The Ignite UI for Angular data chart component allows for placement of horizontal or vertical lines at a single numeric value that you define through usage of the [`IgxValueOverlayComponent`](/angular-apis/typescript/latest/classes/igxvalueoverlaycomponent.html). This can help you to visualize data such as the mean or median of a particular series.
 
 ### Demo
 
 <div class="sample-container loading" style="height: 500px">
-    <iframe id="data-chart-overview-iframe" src='{environment:demosBaseUrl}/charts/data-chart-type-value-overlay' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="data-chart-overview-iframe" src='{environment:demosBaseUrl}/charts/data-chart-value-overlay' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-overview-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
@@ -22,13 +22,13 @@ The Ignite UI for Angular data chart component allows for placement of horizonta
 
 <div class="divider--half"></div>
 
-Unlike other series types that use a `DataSource` for data binding, the value overlay uses a `Value` property to bind a single numeric value. In addition, the value overlay requires you to define a single [`IgxAxisComponent`](/angular-apis/typescript/latest/classes/igxaxiscomponent.html) to use. If you use an X-axis, the value overlay will be a vertical line, and if you use a Y-axis, it will be a horizontal line.
+Unlike other series types that use a `DataSource` for data binding, the value overlay uses a [`valueMemberPath`](/angular-apis/typescript/latest/classes/igxanchoredcategoryseriescomponent.html#valuememberpath) property to bind a single numeric value. In addition, the value overlay requires you to define a single [`axis`](/angular-apis/typescript/latest/classes/igxvalueoverlaycomponent.html#axis) to use. If you use an X-axis, the value overlay will be a vertical line, and if you use a Y-axis, it will be a horizontal line.
 
-When using a numeric X or Y axis, the `Value` property should reflect the actual numeric value on the axis where you want the value overlay to be drawn. When using a category X or Y axis, the `Value` should reflect the index of the category at which you want the value overlay to appear.
+When using a numeric X or Y axis, the [`valueMemberPath`](/angular-apis/typescript/latest/classes/igxanchoredcategoryseriescomponent.html#valuememberpath) property should reflect the actual numeric value on the axis where you want the value overlay to be drawn. When using a category X or Y axis, the [`valueMemberPath`](/angular-apis/typescript/latest/classes/igxanchoredcategoryseriescomponent.html#valuememberpath) should reflect the index of the category at which you want the value overlay to appear.
 
 When using the value overlay with a numeric angle axis, it will appear as a line from the center of the chart and when using a numeric radius axis, it will appear as a circle.
 
-Value overlay appearance properties are inherited from [`IgxSeriesComponent`](/angular-apis/typescript/latest/classes/igxseriescomponent.html) and so [`brush`](/angular-apis/typescript/latest/classes/igxseriescomponent.html#brush) and [`thickness`](/angular-apis/typescript/latest/classes/igxseriescomponent.html#thickness) for example are available and work the same way they do with other types of series.
+[`IgxValueOverlayComponent`](/angular-apis/typescript/latest/classes/igxvalueoverlaycomponent.html) appearance properties are inherited from `Infragistics.Controls.Charts.Series` and so [`brush`](/angular-apis/typescript/latest/classes/igxseriescomponent.html#brush) and [`thickness`](/angular-apis/typescript/latest/classes/igxseriescomponent.html#thickness) for example are available and work the same way they do with other types of series.
 
 ### Code Example - Value Overlay
 

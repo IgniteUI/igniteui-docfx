@@ -1,12 +1,13 @@
 ---
-title: Angular Spreadsheet | Grid Controls | Ignite UI for Angular | chart adapter | Infragistics |
+title: Spreadsheet | Grid Controls | Ignite UI for Angular | chart adapter | Infragistics |
 _description: Use the Spreadsheet control to embed Excel document creation and editing experiences right into your application.
 _keywords: Spreadsheet, Ignite UI for Angular, Infragistics
+mentionedTypes: ['Spreadsheet']
 ---
 
 ## Spreadsheet Chart Adapter
 
-The Angular Spreadsheet component allows displaying charts in your [`IgxSpreadsheet`](/angular-apis/typescript/latest/classes/igxspreadsheet.html).
+The Angular Spreadsheet component allows displaying charts in your [`IgxSpreadsheetComponent`](/angular-apis/typescript/latest/classes/igxspreadsheetcomponent.html).
 
 ### Demo
 
@@ -18,9 +19,9 @@ The Angular Spreadsheet component allows displaying charts in your [`IgxSpreadsh
 
 ### Chart Adapter Overview
 
-Using `ChartAdapter` you can display the charts in the spreadsheet. The spreadsheet chart adapters creates and initializes chart elements for the spreadsheet based on a Infragistics.Documents.Excel.WorksheetChart instance.
+Using [`chartAdapter`](/angular-apis/typescript/latest/classes/igxspreadsheetcomponent.html#chartadapter) you can display the charts in the spreadsheet. The spreadsheet chart adapters creates and initializes chart elements for the spreadsheet based on a Infragistics.Documents.Excel.WorksheetChart instance.
 
-In order to add a WorksheetChart to a worksheet, you must use the `addChart` method of the worksheet’s Shapes collection.You can find more detail of adding charts in Excel `here`.
+In order to add a WorksheetChart to a worksheet, you must use the [`addChart`](/angular-apis/typescript/latest/classes/igxspreadsheetcomponent.html#addchart) method of the worksheet’s Shapes collection.You can find more detail of adding charts in Excel below.
 
 Here are the steps by step description :
 
@@ -60,7 +61,7 @@ There are over 35 chart types supported by the Spreadsheet ChartAdapters includi
     -   Scatter with straight lines
     -   Scatter with straight lines and markers
     -   Bubble (without effects)
-    -   Bubble (without effects)
+    -   Bubble3DEffect
 -   Stock Charts  
     -   High-low-close
     -   Open-high-low-close
@@ -73,12 +74,12 @@ There are over 35 chart types supported by the Spreadsheet ChartAdapters includi
 -   Combo Charts  
     -   Column and line chart sharing xAxis
     -   Column and line chart and 2nd xAxis
-    -   Staked Area and Column
+    -   Stacked Area and Column
     -   Custom Combination
 
 ### Dependencies
 
-When setting up your spreadsheet control to add charts, you will need to import the `Worksheetchartadapter` class like so:
+When setting up your spreadsheet control to add charts, you will need to import the [`SpreadsheetChartAdapter`](/angular-apis/typescript/latest/classes/spreadsheetchartadapter.html) class like so:
 
 ```ts
 import { IgxSpreadsheetchartadaptermodule } from "igniteui-angular-spreadsheet-chart-adapter/ES5/igx-spreadsheet-chart-adapter-module";
