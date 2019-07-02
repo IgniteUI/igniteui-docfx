@@ -1,7 +1,8 @@
-﻿---
-title: 列移動 - ネイティブ Angular | Ignite UI for Angular
-_description: 列移動機能は、標準ドラッグ/ドロップ マウス ジェスチャでインタラクティブに列を並べ替えます。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Grid, Angular Table, Angular Data Grid コンポーネント, Angular Data Table コンポーネント, Angular Data Grid コントロール, Angular Data Table コントロール, Angular Grid コンポーネント, Angular Table コンポーネント, Angular Grid コントロール, Angular Table コントロール, Angular 高パフォーマンス Grid, Angular 高パフォーマンス Data Table, 列移動, Grid 列移動, Angular Grid 列移動, Angular Data Table 列移動, Angular 列移動
+﻿@@if (igxName === 'IgxGrid') {
+---
+title: Angular Grid Column Moving | Column Order | Ignite UI for Angular | infragistics
+_description: Set custom column order of the Ignite UI Angualr Material table by using the column drag feature of the angular UI grid with the usage of mouse/touch gestures.
+_keywords: column order, igniteui for angular, infragistics
 _language: ja
 ---
 
@@ -20,7 +21,7 @@ Ignite UI for Angular の Grid コンポーネントは、標準ドラッグ/ド
 </ng-template>
 ```
 
-#### デモ
+#### @@igComponent Column Moving Overview
 
 <div class="sample-container loading" style="height:630px">
     <iframe id="column-moving-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-moving-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>

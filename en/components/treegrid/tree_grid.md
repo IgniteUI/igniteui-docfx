@@ -6,7 +6,7 @@ _keywords: angular data grid, igniteui for angular, infragistics
 
 ## Data Tree Grid
 
-<p class="highlight">Display and manipulate hierarchical data with the Ignite UI for Angular Data Tree Grid. Quickly bind your data with very little coding or configuration. Customize its behavior by responding to any user action using angular events. Features include the must have for any angular material table filtering, sorting, paging, templates, movable columns, and the ability to edit and update data, making it the ultimate angular material table or material UI grid.</p>
+<p class="highlight">Display and manipulate hierarchical data with the Ignite UI for Angular Data Tree Grid. Quickly bind your data with very little coding or configuration. Customize its behavior by responding to any user action using angular events. Features include the must have for any Angualr Material table filtering, sorting, paging, templates, movable columns, and the ability to edit and update data, making it the ultimate Angualr Material table or material UI grid.</p>
 
 ### Demo
 

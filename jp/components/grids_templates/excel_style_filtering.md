@@ -1,31 +1,13 @@
-﻿@@if (igxName === 'IgxGrid') {
----
-title: Excel フィルタリングの有効化
-_description: Ignite UI for Angular Data Grid コントロールは、タッチ レスポンシブなデータ グリッドです。階層およびリスト ビューなどの機能があります。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Grid, Angular Table, Angular Data Grid コンポーネント, Angular Data Table コンポーネント, Angular Data Grid コントロール, Angular Data Table コントロール, Angular Grid コンポーネント, Angular Table コンポーネント, Angular Grid コントロール, Angular Table コントロール, Angular 高パフォーマンス Grid, Angular 高パフォーマンス Data Table, フィルタリング, Data Grid フィルタリング, Data Table フィルタリング, Excel, Excel スタイル フィルタリング
+﻿---
+title: Angular Grid Excel Style Filtering | Ignite UI for Angular | infragistics
+_description: Learn how to configure Excel like angular filter of data with the Angular Material table. The grid excel filtering is more convenient and engaging than ever.
+_keywords: excel like filter, igniteui for angular, infragistics
 _language: ja
 ---
-}
-@@if (igxName === 'IgxTreeGrid') {
----
-title: Tree Grid Excel スタイル フィルタリング
-_description: Ignite UI for Angular Tree Grid コントロールは、タッチ レスポンシブなデータ グリッドです。階層およびリスト ビューなどの機能があります。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Tree Grid, Angular Table, Angular Tree Grid コンポーネント, Angular Data Table コンポーネント, Angular Tree Grid コントロール, Angular Data Table コントロール, Angular Tree Grid コンポーネント, Angular Table コンポーネント, Angular Grid コントロール, Angular Table コントロール, Angular 高パフォーマンス Grid, Angular 高パフォーマンス Data Table, Filtering, Tree Grid Filtering, Data Table Filtering, Excel, Excel Style Filtering
-_language: ja
----
-}
-@@if (igxName === 'IgxHierarchicalGrid') {
----
-title: Hierarchical Grid Excel スタイル フィルタリング
-_description: Ignite UI for Angular Hierarchical Grid コントロールは、タッチ レスポンシブなデータ グリッドです。階層およびリスト ビューなどの機能があります。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Hierarchical Grid, Angular Table, Angular Hierarchical Grid コンポーネント, Angular Data Table コンポーネント, Angular Hierarchical  Grid コントロール, Angular Data Table コントロール, Angular Grid コンポーネント, Angular Table コンポーネント, Angular Grid コントロール, Angular Table コントロール, Angular 高パフォーマンス Grid, Angular 高パフォーマンス Data Table, Filtering, Hierarchical Grid Filtering, Data Table Filtering, Excel, Excel Style Filtering
-_language: ja
----
-}
 
 ### @@igComponent Excel スタイル フィルタリング
 
-Ignite UI for Angular @@igComponent コンポーネントは、Excel ライクなフィルター UI をサポートします。
+The grid Excel filtering provides an Excel like filtering UI for any Angular Material table like the @@igComponent.
 
 #### デモ
 
