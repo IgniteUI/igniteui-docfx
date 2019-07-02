@@ -198,7 +198,7 @@ $custom-grid-theme: igx-grid-theme(
 ```
 
 #### カラーパレットの定義
-上記のように色の値をハードコーディングする代わりに、`igx-palette]({environment:sassApiUrl}/index.html#function-igx-palette) と `igx-color]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用することによって色に関してより高い柔軟性を持つことができます。
+上記のように色の値をハードコーディングする代わりに、[`igx-palette]({environment:sassApiUrl}/index.html#function-igx-palette) と [`igx-color]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用することによって色に関してより高い柔軟性を持つことができます。
 
 `igx-palette` は指定した一次色と二次色に基づいてカラーパレットを生成します。
 
