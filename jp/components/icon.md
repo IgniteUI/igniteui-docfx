@@ -112,22 +112,22 @@ public ngOnInit() {
     </button>
 </div>
 
-### Server-side Rendering Note
+### サーバーサイド レンダリング時の注意
 
-> In case you have implemented server side rendering logic in your application using Angular Universal and have used the `IgxIconService` to register icons, this may cause the following exception:
+> Angular Universal を使用してアプリケーションにサーバー側のレンダリング ロジックを実装し、`IgxIconService` を使用してアイコンを登録した場合は、以下の例外が発生することがあります。
 <br/>
-`XMLHttpRequest is not defined. Could not fetch SVG from url.`
+`XMLHttpRequest is not defined. Could not fetch SVG from url.` (XMLHttpRequest が定義されていません。url から SVG をフェッチできませんでした。)　
 <br/>
-In order to avoid this, execute the listed steps:
+これを避けるためには、以下の順序に従って下さい。
 <ol>
 <li>
-Install `xmlhttprequest`:
+`xmlhttprequest` のインストール:
 ```cmd
 npm i xmlhttprequest
 ```
 </li>
 <li>
-On the top of your `server.ts` file, add: 
+`Server.ts` ファイル以外に追加するファイル:  
 ``` typescript
 (global as any).XMLHttpRequest = require('xmlhttprequest').XMLHttpRequest;
 ```
