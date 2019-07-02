@@ -2,13 +2,14 @@
 title: Data Chart | Visualization Tools | Ignite UI for Angular | Infragistics | Data Source
 _description: Create a data chart that displays multiple instances of visual elements in the same plot area in order to create composite chart views.
 _keywords: data chart, Ignite UI for Angular, Infragistics
+mentionedTypes: ['XamDataChart']
 ---
 
 ## Sample Data Source for Scatter Bubble Series
 
 This topic provides an example on how to implement data source for [Scatter Bubble Series](datachart_series_types_scatter_bubble.md) and [Scatter Marker Series](datachart_series_types_scatter_marker.md)
 
-```typescript
+```ts
 export class SampleScatterStats {
 
     public static countries: Country[];

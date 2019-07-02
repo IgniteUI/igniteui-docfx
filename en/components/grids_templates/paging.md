@@ -1,28 +1,11 @@
-@@if (igxName === 'IgxGrid') {
 ---
-title: Grid Paging
-_description: The Ignite UI for Angular Data Grid control features the fastest, touch-responsive data-rich grid with popular features, including hierarchical and list views.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Grid, Angular Table, Angular Data Grid component, Angular Data Table component, Angular Data Grid control, Angular Data Table control, Angular Grid component, Angular Table component, Angular Grid control, Angular Table control, Angular High Performance Grid, Angular High Performance Data Table, Paging, Pagination, Data Grid Paging, Data Table Paging
+title: Angular Grid Pagination | Template | Ignite UI for Angular | Infragistics
+_description: Configure Angular pagination and create custom pages in the Angular Material table by Ignite UI, get data for the requested pages with variety of angular events.
+_keywords: angular pagination, igniteui for angular, infragistics
 ---
-}
-@@if (igxName === 'IgxTreeGrid') {
----
-title: Tree Grid Paging
-_description: The Ignite UI for Angular Tree Grid control features the fastest, touch-responsive data-rich tree grid with popular features, including hierarchical and list views.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Tree Grid, Angular Tree Table, Angular Tree Grid component, Angular Tree Table component, Angular Tree Grid control, Angular Tree Table control, Angular Tree Grid component, Angular Tree Table component, Angular Tree Grid control, Angular Tree Table control, Angular High Performance Tree Grid, Angular High Performance Tree Table, Paging, Pagination, Tree Grid Paging, Tree Table Paging
----
-}
-@@if (igxName === 'IgxHierarchicalGrid') {
----
-title: Hierarchical Grid Paging
-_description: The Ignite UI for Angular Hierarchical Grid control features the fastest, touch-responsive data-rich tree grid with popular features.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Hierarchical Grid, Angular Hierarchical Table, Angular Hierarchical Grid component, Angular Hierarchical Table component, Angular Hierarchical Grid control, Angular Hierarchical Table control, Angular High Performance Hierarchical Grid, Angular High Performance Hierarchical Table, Paging, Pagination, Hierarchical Grid Paging, Hierarchical Table Paging
----
-}
 
-### @@igComponent Paging
-
-In Ignite UI for Angular @@igComponent, **Paging** is initialized on the root `@@igSelector` component and is configurable via the [`paging`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#paging) and [`perPage`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#perpage) inputs.
+### @@igComponent Paging Functionality
+Angular pagination in the @@igComponent is configurable via the [`paging`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#paging) and [`perPage`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#perpage) inputs. As in any Angular Material table, the pagination in @@igComponent supports template for custom pages.
 
 #### Demo
 
@@ -602,8 +585,6 @@ $custom-button-theme: igx-button-theme(
 ```
 }
 
-@@if (igxName === 'IgxGrid'){
-
 ### Styling
 
 To get started with styling the paginator, we need to import the `index` file, where all the theme functions and component mixins live:
@@ -623,7 +604,7 @@ $dark-grid-paginator: igx-grid-paginator-theme(
 );
 ```
 
-The paginator UI also contains buttons, so a new button theme needs to be created too:
+As seen, the `igx-grid-paginator-theme` only controls colors for the paging container, but does not affect the buttons in the pager UI. To style those buttons, let's create a new button theme:
 
 ```scss
 $dark-button: igx-button-theme(
@@ -636,7 +617,7 @@ $dark-button: igx-button-theme(
 );
 ```
 
-In this example we only changed the icon color and background and the button disabled color, but the the [`igx-button-theme`](({environment:sassApiUrl}/index.html#function-igx-button-theme)) provides way more paramaters to control the button style.
+In this example we only changed the icon color and background and the button disabled color, but the the [`igx-button-theme`]({environment:sassApiUrl}/index.html#function-igx-button-theme) provides way more paramaters to control the button style.
 
 The last step is to **include** the component mixins, each with its respective theme: 
 
@@ -648,10 +629,10 @@ The last step is to **include** the component mixins, each with its respective t
 ```
 
 >[!NOTE]
->We include the **igx-button** mixin within the scope of the `igx-paginator`, so that only the paginator buttons could be styled. Otherwise other buttons in the grid would be affected too.
+>We scope the **igx-button** mixin within `.igx-paginator`, so that only the paginator buttons would be styled. Otherwise other buttons in the grid would be affected too.
 
  >[!NOTE]
- >Depending on the component [**View Encapsulation**](../themes/component-themes.md#view-encapsulation) strategy, it may be necessary to `penetrate` this encapsulation using `::ng-deep`:
+ >If the component is using an [`Emulated`](../themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`:
 
 ```scss
 :host {
@@ -666,9 +647,9 @@ The last step is to **include** the component mixins, each with its respective t
 
 #### Defining a color palette
 
-Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [igx-palette]({environment:sassApiUrl}/index.html#function-igx-palette) and [igx-color]({environment:sassApiUrl}/index.html#function-igx-color) functions.
+Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.
 
-**igx-palette** generates a color palette based on the primary and secondary colors that are passed:
+`igx-palette` generates a color palette based on the primary and secondary colors that are passed:
 
 ```scss
 $yellow-color: #F9D342;
@@ -677,7 +658,7 @@ $black-color: #292826;
 $dark-palette: igx-palette($primary: $black-color, $secondary: $yellow-color);
 ```
 
-And then with **igx-color**({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the pallete. 
+And then with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the pallete. 
 
 ```scss
 $dark-grid-paginator: igx-grid-paginator-theme(
@@ -699,7 +680,7 @@ $dark-button: igx-button-theme(
 ```
 
 >[!NOTE]
->The igx-color and igx-palette are powerful functions for generating and retrieving colors. Please refer to [`Palettes`](../themes/palette.md) topic for detailed guidance on how to use them.
+>The `igx-color` and `igx-palette` are powerful functions for generating and retrieving colors. Please refer to [`Palettes`](../themes/palette.md) topic for detailed guidance on how to use them.
 
 #### Using Schemas
 
@@ -770,7 +751,7 @@ $dark-button: igx-button-theme(
 ```
 
 Don't forget to include the themes in the same way as it was demonstrated above.
-
+@@if (igxName === 'IgxGrid'){
 #### Demo
 
 <div class="sample-container loading" style="height:560px">
@@ -781,6 +762,26 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="custom-grid-paging-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
+}
+
+@@if (igxName === 'IgxHierarchicalGrid'){
+#### Demo
+
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-sample-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-paging-style" 
+        data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz
+    </button>
+</div>
+}
+
+@@if (igxName === 'IgxTreeGrid'){
+#### Demo
+
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-sample-src="{environment:demosBaseUrl}/tree-grid/treegrid-paging-style" 
+        data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz
+    </button>
+</div>
 }
 
 ### API References

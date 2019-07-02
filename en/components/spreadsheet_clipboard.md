@@ -2,6 +2,7 @@
 title: Angular Spreadsheet | Grid Controls | Ignite UI for Angular | Clipboard | Infragistics |
 _description: Use the Spreadsheet control to embed Excel document creation and editing experiences right into your application.
 _keywords: Spreadsheet, Ignite UI for Angular, Infragistics
+mentionedTypes: ['XamSpreadsheet']
 ---
 
 ## Working with Clipboard
@@ -20,6 +21,8 @@ This topic explains how to perform clipboard operations on the Ignite UI for Ang
 
 Before making use of the clipboard you will want to import the `SpreadsheetAction`:
 
+<!-- Angular -->
+
 ```ts
 import { IgxSpreadsheetComponent } from "igniteui-angular-spreadsheet/ES5/igx-spreadsheet-component";
 import { SpreadsheetAction } from "igniteui-angular-spreadsheet/ES5/SpreadsheetAction";
@@ -29,14 +32,9 @@ import { SpreadsheetAction } from "igniteui-angular-spreadsheet/ES5/SpreadsheetA
 
 ### Usage
 
-The following code snippet shows how you can execute commands related to the clipboard in the `IgxSpreadsheet` control:
+The following code snippet shows how you can execute commands related to the clipboard in the `XamSpreadsheet` control:
 
-```typescript
-@ViewChild("spreadsheet", { read: IgxSpreadsheetComponent })
-public spreadsheet: IgxSpreadsheetComponent;
-
----
-
+```ts
 public cut(): void {
     this.spreadsheet.executeAction(SpreadsheetAction.Cut);
 }

@@ -2,6 +2,7 @@
 title: Bullet Graph | Data Presentation & Visualization | Ignite UI for Angular | Infragistics
 _description: Create data presentations using the bullet graph component to display ranges or compare multiple measurements. View our data visualization tools.
 _keywords: Bullet Graph, Ignite UI for Angular, Infragistics
+mentionedTypes: ['XamBulletGraph']
 ---
 
 ## Bullet Graph
@@ -24,7 +25,7 @@ The following sample demonstrates how setting multiple properties on the same bu
 
 <div class="divider--half"></div>
 
-The bullet graph supports one scale, one set of tick marks and one set of labels. The bullet graph component also has built-in support for animated transitions. This animation is easily customizable by setting the `transitionDuration` property.
+The bullet graph supports one scale, one set of tick marks and one set of labels. The bullet graph component also has built-in support for animated transitions. This animation is easily customizable by setting the [`transitionDuration`](/angular-apis/typescript/latest/classes/igxbulletgraphcomponent.html#transitionduration) property.
 The features of the bullet graph include configurable orientation and direction, configurable visual elements such as the needle, and more.
 
 ### Dependencies
@@ -36,12 +37,12 @@ When installing the gauge package, the core package must also be installed.
 
 ### Required Modules
 
-The `IgxBulletGraph` requires the following modules:
+The [`IgxBulletGraphComponent`](/angular-apis/typescript/latest/classes/igxbulletgraphcomponent.html) requires the following modules:
 
-```typescript
+```ts
 // app.module.ts
 import { IgxBulletGraphModule } from "igniteui-angular-gauges/ES5/igx-bullet-graph-module";
-import { IgxBulletGraph } from "igniteui-angular-gauges/ES5/igr-bullet-graph";
+import { IgxBulletGraph } from "igniteui-angular-gauges/ES5/igx-bullet-graph";
 
 @NgModule({
     imports: [
@@ -242,7 +243,7 @@ The backing element represents background and border of the bullet graph compone
 
 ### Scale
 
-The scale is visual element that highlights the full range of values in the gauge. You can customize appearance and shape of the scale. The scale can also be inverted (using `isScaleInverted` property) and all labels will be rendered from right-to-left instead of left-to-right.
+The scale is visual element that highlights the full range of values in the gauge. You can customize appearance and shape of the scale. The scale can also be inverted (using [`isScaleInverted`](/angular-apis/typescript/latest/classes/igxbulletgraphcomponent.html#isscaleinverted) property) and all labels will be rendered from right-to-left instead of left-to-right.
 
 ```html
 <igx-bullet-graph

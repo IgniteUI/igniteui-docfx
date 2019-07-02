@@ -1,7 +1,8 @@
 ---
-title: Category Chart | Data Visualization Tools | Ignite UI for Angular | Axis Options | Infragistics 
+title: Category Chart | Data Visualization Tools | Ignite UI for Angular | Axis Options | Infragistics
 _description: Use the category chart component to analyze and  automatically choose the best chart type to represent data. Learn about our chart types for visualization.
-_keywords: category chart, Ignite UI for Angular, infragistics 
+_keywords: category chart, Ignite UI for Angular, infragistics
+mentionedTypes: ['XamCategoryChart']
 ---
 
 ## Axis Options
@@ -89,7 +90,7 @@ The following code snippet demonstrates how to set the color, length and thickne
 
 ### Axis Range
 
-In the category chart component, the range on numeric axes is the difference in numeric values from the beginning of the axis to the end or from the smallest to largest values in the data. The range minimum is the lowest value of the axis. The range maximum is the highest value of the axis. By default, the category chart component will calculate the minimum and maximum values for the y-axis range based on the lowest and highest data points in order to maximize the chart plot area. The automatic calculation of an axis' minimum and maximum values may not be appropriate for your set of data points. For example, if your data has a minimum value of 850, you may want to set the minimum value of the axis using y-axis’s `yAxisMinimumValue` property to 800 so that there will be a space value of 50 between the axis minimum and the lowest value of data points. The same can be applied to the axis maximum value and the highest value of data points using y-axis’s `yAxisMaximumValue` property.
+In the category chart component, the range on numeric axes is the difference in numeric values from the beginning of the axis to the end or from the smallest to largest values in the data. The range minimum is the lowest value of the axis. The range maximum is the highest value of the axis. By default, the category chart component will calculate the minimum and maximum values for the y-axis range based on the lowest and highest data points in order to maximize the chart plot area. The automatic calculation of an axis' minimum and maximum values may not be appropriate for your set of data points. For example, if your data has a minimum value of 850, you may want to set the minimum value of the axis using y-axis’s `YAxisMinimumValue` property to 800 so that there will be a space value of 50 between the axis minimum and the lowest value of data points. The same can be applied to the axis maximum value and the highest value of data points using y-axis’s `YAxisMaximumValue` property.
 
 The following sample code demonstrates how to change the axis range on the y-axis.
 
@@ -107,7 +108,7 @@ The following sample code demonstrates how to change the axis range on the y-axi
 
 ### Axis Interval
 
-In the category chart component, the `yAxisInterval` property specifies how frequently major gridlines and axis labels are rendered on an axis. Similarly, the `yAxisMinorInterval` property specifies how frequently minor gridlines are rendered on an axis.
+In the category chart component, the `YAxisInterval` property specifies how frequently major gridlines and axis labels are rendered on an axis. Similarly, the `YAxisMinorInterval` property specifies how frequently minor gridlines are rendered on an axis.
 
 The following code snippet demonstrates how to configure the interval on the y-axis.
 
@@ -135,7 +136,7 @@ The property accepts a numeric float value between 0 and 1. The value represents
    0 - no gap is rendered between series;
    1 - maximum available gap is rendered between series.
 
-To set the category chart with `xAxisGap` of `0.125` the following code can be used:
+To set the category chart with `XAxisGap` of `0.125` the following code can be used:
 
 ```html
 <igx-category-chart
@@ -157,7 +158,7 @@ The property accepts a numeric float value between -1 and 1. The value represent
 -   Negative value (up to -1): the categories are pushed away from each other producing a gap between themselves.
 -   Positive value (up to 1): the categories are overlapping each other. Value of 1 directs the chart to render categories on top of each other.
 
-The following code example sets the `xAxisOverlap` to 0.
+The following code example sets the `XAxisOverlap` to 0.
 
 ```html
  <igx-category-chart

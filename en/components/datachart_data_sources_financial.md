@@ -2,13 +2,14 @@
 title: Data Chart | Visualization Tools | Ignite UI for Angular | Infragistics | Data Source
 _description: Create a data chart that displays multiple instances of visual elements in the same plot area in order to create composite chart views.
 _keywords: data chart, Ignite UI for Angular, Infragistics
+mentionedTypes: ['XamDataChart', 'FinancialPriceSeries', 'FinancialSeries']
 ---
 
 ## Sample Data Source for Financial Series
 
 This topic provides an example on how to implement data source for [Financial Series](datachart_series_types_financial.md)
 
-```typescript
+```ts
 export class SampleFinancialData {
 
     public static create(): any[] {

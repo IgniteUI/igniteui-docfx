@@ -1,7 +1,8 @@
 ---
-title: Category Chart | Data Visualization Tools | Ignite UI for Angular | Tooltip Types | Infragistics 
+title: Category Chart | Data Visualization Tools | Ignite UI for Angular | Tooltip Types | Infragistics
 _description: Use the category chart component to analyze and  automatically choose the best chart type to represent data. Learn about our chart types for visualization.
-_keywords: category chart, Ignite UI for Angular, infragistics 
+_keywords: category chart, Ignite UI for Angular, infragistics
+mentionedTypes: ['XamCategoryChart', 'ToolTipType']
 ---
 
 ## Tooltip Types
@@ -23,10 +24,10 @@ This topic provides conceptual information about the tooltip types available on 
 
 The category chart component can be configured to display Tooltips in the following ways:
 
-1.  `Default` tooltips will display a tooltip for a single item when the pointer is positioned over it.
-2.  `Item` tooltips will display a tooltip for each data item in the category that the pointer is positioned over.
-3.  `Category` tooltips will display a grouped tooltip for all data points in the category that the pointer is positioned over.
-4.  `None` will prevent tooltips from displaying.
+1.  [`Default`](/angular-apis/typescript/latest/enums/tooltiptype.html#default) tooltips will display a tooltip for a single item when the pointer is positioned over it.
+2.  [`Item`](/angular-apis/typescript/latest/enums/tooltiptype.html#item) tooltips will display a tooltip for each data item in the category that the pointer is positioned over.
+3.  [`Category`](/angular-apis/typescript/latest/enums/tooltiptype.html#category) tooltips will display a grouped tooltip for all data points in the category that the pointer is positioned over.
+4.  [`None`](/angular-apis/typescript/latest/enums/tooltiptype.html#none) will prevent tooltips from displaying.
 
 ```html
 <igx-category-chart

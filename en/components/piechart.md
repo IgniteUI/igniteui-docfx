@@ -2,6 +2,7 @@
 title: Pie Chart | Categorical Data Visualization | Ignite UI for React | Infragistics
 _description: Create a colorful pie chart to display categorical data in Ignite UI for data visualization. View the demo for more information.
 _keywords: pie chart, ignite ui for react, infragistics
+mentionedTypes: ['XamPieChart']
 ---
 
 ## Pie Chart
@@ -31,9 +32,9 @@ When installing the charts package, the core package must also be installed.
 
 ### Required Modules
 
-The `IgxPieChart` requires the following modules:
+The [`IgxPieChart`](/angular-apis/typescript/latest/classes/igxpiechart.html) requires the following modules:
 
-```typescript
+```ts
 // app.module.ts
 
 import { IgxPieChartModule } from "igniteui-angular-charts/ES5/igx-pie-chart-module";
@@ -55,7 +56,7 @@ export class AppModule {}
 Now that the pie chart module is imported, next step is to bind it to data.
 In order to create a pie chart, you must first have data to bind it to. The following code snippet demonstrates how to create a simple data source.
 
-```typescript
+```ts
 var data = [
     { MarketShare: 30, Company: "Google",    },
     { MarketShare: 30, Company: "Apple",     },
@@ -80,7 +81,7 @@ The following code demonstrates how to bind the pie chart to the above data.
 
 ### Legend
 
-In order to display a legend next to the pie chart component an ItemLegend needs to be created and assigned to the `legend` property. The `legendLabelMemberPath` can then be used to specify which property on your data model it will use to display inside the legend for each pie slice.
+In order to display a legend next to the pie chart component an ItemLegend needs to be created and assigned to the `Infragistics.Controls.Charts.Legend` property. The `legendLabelMemberPath` can then be used to specify which property on your data model it will use to display inside the legend for each pie slice.
 
 Additionally you can use the `legendItemTemplate` and `legendItemBadgeTemplate` properties and the various font properties on ItemLegend to further customize the look of the legend items.
 
@@ -137,7 +138,7 @@ If you set `othersCategoryType` to Percent, then `othersCategoryThreshold` will 
 
 ### Explosion
 
-The pie chart component supports explosion of individual pie slices as well as a `sliceClick` event that allows you to modify selection states and implement custom logic
+The pie chart component supports explosion of individual pie slices as well as a `SliceClick` event that allows you to modify selection states and implement custom logic
 
 ```html
 <igx-pie-chart [dataSource]="data"

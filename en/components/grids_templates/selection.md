@@ -1,31 +1,31 @@
 ﻿@@if (igxName === 'IgxGrid') {
 ---
-title: Grid Selection - Native Angular | Ignite UI for Angular
-_description: Single and multi-cell selection is available within the Grid. Multi-cell selection enables range selection of cells. With the Row Selection component in Ignite UI for Angular, there is a checkbox that precedes all other columns within the row, allowing the row to be either selected or deselected and enabling the user to select multiple rows of data.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Grid, Angular Table, Angular Data Grid component, Angular Data Table component, Angular Data Grid control, Angular Data Table control, Angular Grid component, Angular Table component, Angular Grid control, Angular Table control, Angular High Performance Grid, Angular High Performance Data Table, Angular Grid Row Selection, Angular Data Table Row Selection, Angular Row Selection, Angular Grid Selection, Data Grid Row Selection, Data Table Row Selection, Grid Selection
+title: Angular Grid Multi-Cell Selection | Ignite UI for Angular | infragistics 
+_description: Check how easy it is to use Row and Multi-cell data select of the Ignite ui Angular Material table by using angular events, API or with mouse interactions.
+_keywords: data select, igniteui for angular, infragistics
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Grid Selection - Native Angular | Ignite UI for Angular
-_description: Single and multi-cell selection is available within the Grid. Multi-cell selection enables range selection of cells.  With the Row Selection component in Ignite UI for Angular, there is a checkbox that precedes all other columns within the row, allowing the row to be either selected or deselected and enabling the user to select multiple rows of data.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Tree Grid, Angular Tree Table, Angular Tree Grid component, Angular Tree Table component, Angular Tree Grid control, Angular Tree Table control, Angular Tree Grid component, Angular Tree Table component, Angular Tree Grid control, Angular Tree Table control, Angular High Performance Tree Grid, Angular High Performance Tree Table, Angular Tree Grid Row Selection, Angular Tree Table Row Selection, Angular Row Selection, Angular Tree Grid Selection, Tree Grid Row Selection, Tree Table Row Selection, Tree Grid Selection
+title: Angular Tree Grid Multi-Cell Selection | Ignite UI for Angular | infragistics 
+_description: Check how easy it is to use Row and Multi-cell data select of the Ignite ui Angular Material table by using angular events, API or with mouse interactions.
+_keywords: data select, igniteui for angular, infragistics
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Grid Selection - Native Angular | Ignite UI for Angular
-_description: Single and multi-cell selection is available within the Grid. Multi-cell selection enables range selection of cells.  With the Row Selection component in Ignite UI for Angular, there is a checkbox that precedes all other columns within the row, allowing the row to be either selected or deselected and enabling the user to select multiple rows of data.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Hierarchical Grid, Angular Hierarchical Table, Angular Hierarchical Grid component, Angular Hierarchical Table component, Angular Hierarchical Grid control, Angular Hierarchical Table control, Angular High Performance Hierarchical Grid, Angular High Performance Hierarchical Table, Angular Hierarchical Grid Row Selection, Angular Hierarchical Table Row Selection, Angular Row Selection, Angular Hierarchical Grid Selection, Hierarchical Grid Row Selection, Hierarchical Table Row Selection, Hierarchical Grid Selection
+title: Angular Hierarchical Grid Multi-Cell Selection | Ignite UI for Angular | infragistics 
+_description: Check how easy it is to use Row and Multi-cell data select of the Ignite ui Angular Material table by using angular events, API or with mouse interactions.
+_keywords: data select, igniteui for angular, infragistics
 ---
 }
 
 @@if (igxName !== 'IgxHierarchicalGrid') {
 
-### @@igComponent Multi-cell selection
+### @@igComponent Мulti-cell Selection and Row Selection
 
-Multi-cell selection enables range selection of cells in the @@igComponent. Variety of multi-cell selection capabilities are available:
-- By `Mouse drag` - Rectangular selection of cells would be performed.
+Multi-cell selection enables range data selection in the @@igComponent. Variety of multi-cell selection capabilities are available:
+- By `Mouse drag` - Rectangular data selectoion of cells would be performed.
 - By `Ctrl key` press + `Mouse drag` - Multiple range selections would be performed. Any other existing cell selection will be persisted.
 - Instant multi-cell selection by using Shift key. Select single cell and select another single cell by holding the Shift key. Cell range between the two cells will be selected. Keep in mind that if another second cell is selected while holding `Shift key` the cell selection range will be updated based on the first selected cell position (starting point).
 - Keyboard multi-cell selection by using the `Arrow keys` while holding `Shift key`. Multi-cell selection range will be created based on the focused cell.
@@ -386,6 +386,109 @@ public handleRowSelectionChange(args) {
     args.checked = false; // overwrites the checkbox state
 }
 ```
+
+@@if (igxName === 'IgxGrid'){
+### Grid Context Menu
+
+Using the [`onContextMenu`]({environment:angularApiUrl}/classes/igxgridcomponent.html#oncontextmenu) event you can add a custom context menu to facilitate your work with **IgxGrid**. With a **right click** on the grid's body, the event emits the cell on which it is triggered. The **context menu** will operate with the emitted cell.
+
+If there is a **multi-cell selection**, we will put logic, which will check whether the selected cell is in the area of the multi-cell selection. If it is, we will also emit the values of the selected cells.
+
+Basically the main function will look like this:
+
+```typescript
+...
+ public rightClick(eventArgs: any) {
+     // Prevent the default behavior of the right click
+    eventArgs.event.preventDefault();
+    this.multiCellArgs = {};
+    // If we have multi-cell selection, check if selected cell is within the ranges
+    if (this.multiCellSelection) {
+        const node = eventArgs.cell.selectionNode;
+        const isCellWithinRange = this.grid1.getSelectedRanges().some(range => {
+            if (node.column >= range.columnStart &&
+                node.column <= range.columnEnd &&
+                node.row >= range.rowStart &&
+                node.row <= range.rowEnd) {
+                return true;
+            }
+            return false;
+        })
+        // If the cell is within a multi-cell selection range, bind all the selected cells data
+        if (isCellWithinRange) {
+            this.multiCellArgs = { data: this.multiCellSelection.data };
+        }
+    }
+    // Set the position of the context menu
+    this.contextmenuX = eventArgs.event.clientX;
+    this.contextmenuY = eventArgs.event.clientY;
+    this.clickedCell = eventArgs.cell;
+    // Enable the context menu
+    this.contextmenu = true;
+}
+...
+```
+The context menu will have the following functions:
+- Copy the selected cell's *value*
+- Copy the selected cell's *dataRow*
+- If the selected cell is within a **multi cell selection range**, copy all the *selected data*
+
+```typescript
+//contextmenu.component.ts
+...
+    public copySelectedCellData(event) {
+        const selectedData = { [this.cell.column.field]: this.cell.value };
+        this.copyData(JSON.stringify({ [this.cell.column.field]: this.cell.value }));
+        this.onCellValueCopy.emit({ data: selectedData });
+    }
+
+    public copyRowData(event) {
+        const selectedData = this.cell.row.rowData ;
+        this.copyData(JSON.stringify(this.cell.row.rowData));
+        this.onCellValueCopy.emit({ data: selectedData });
+    }
+
+    public copySelectedCells(event) {
+        const selectedData = this.selectedCells.data;
+        this.copyData(JSON.stringify(selectedData));
+        this.onCellValueCopy.emit({ data: selectedData });
+    }
+...
+```
+
+The IgxGrid will fetch the copied data and will paste it in a container element.
+
+The template we are going to use to combine the grid with the context menu:
+```html
+<div class="wrapper">
+    <div class="grid__wrapper" (window:click)="disableContextMenu()">
+        <igx-grid #grid1 [data]="data" [autoGenerate]="false" height="500px" width="100%"
+            (onContextMenu)="rightClick($event)" (onRangeSelection)="getCells($event)"
+            (onSelection)="cellSelection($event)">
+        <!-- Columns area -->
+        </igx-grid>
+        <div *ngIf="contextmenu==true">
+            <contextmenu [x]="contextmenuX" [y]="contextmenuY" [cell]="clickedCell" [selectedCells]="multiCellArgs" (onCellValueCopy)="copy($event)">
+            </contextmenu>
+        </div>
+    </div>
+    <div class="selected-data-area">
+        <div>
+           <pre>{{copiedData}}</pre>
+        </div>
+    </div>
+</div>
+```
+ The result is:
+
+<div class="sample-container loading" style="height:600px">
+    <iframe class="lazyload" id="grid-context-menu-iframe" src='{environment:demosBaseUrl}/grid/grid-contextmenu-sample' width="100%" height="100%" seamless frameBorder="0"></iframe>
+</div>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-context-menu-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
+}
 
 ### API References
 

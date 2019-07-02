@@ -487,6 +487,7 @@ $custom-button-theme: igx-button-theme(
     @include igx-button($custom-button-theme);
 }
 ```
+
 }
 ### API 참조
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)

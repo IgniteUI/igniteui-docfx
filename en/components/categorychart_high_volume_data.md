@@ -1,7 +1,8 @@
 ---
-title: Category Chart | Data Visualization Tools | Ignite UI for Angular | High Volume Data | Infragistics 
+title: Category Chart | Data Visualization Tools | Ignite UI for Angular | High Volume Data | Infragistics
 _description: Use the category chart component to analyze and  automatically choose the best chart type to represent data. Learn about our chart types for visualization.
-_keywords: category chart, Ignite UI for Angular, infragistics 
+_keywords: category chart, Ignite UI for Angular, infragistics
+mentionedTypes: ['XamCategoryChart']
 ---
 
 ## High Volume Data

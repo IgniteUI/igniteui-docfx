@@ -1,10 +1,11 @@
 ## In this topic
  ### 1. [Writing an article](#writing-an-article)
- ### 2. [Workflow](#workflow)
- ### 3. [StackBlitz configuration](#stackblitz-configuration)
- ### 4. [Lazy loading](#lazy-loading-of-samples-in-a-topic)
- ### 5. [Creating shared help topics](#creating-shared-help-topics)
- ### 6. [Updating of Data Visualization related topics](#updating-of-data-visualization-related-topics)
+ ### 2. [Writing a Styling section for article](#styling-section)
+ ### 3. [Workflow](#workflow)
+ ### 4. [StackBlitz configuration](#stackblitz-configuration)
+ ### 5. [Lazy loading](#lazy-loading-of-samples-in-a-topic)
+ ### 6. [Creating shared help topics](#creating-shared-help-topics)
+ ### 7. [Updating of Data Visualization related topics](#updating-of-data-visualization-related-topics)
 
 # <a name='#writing-an-article'>Writing an article</a>
 
@@ -50,6 +51,30 @@ Depending on the set [`dataType`]({environment:angularApiUrl/classes/igxcolumnco
 ```
 
 ### 8. Where does one find further help related to the topic of the article?
+
+# <a name='#styling-section'>Writing a Styling section for article</a>
+
+The main purpose of the Styling section is to provide simple examples on how to style most common parts of the UI (lets say styling for alternate rows in the grid), copy/paste the code in any sample and see it working. In order to write content that fullfills the purpose, follow the steps below:
+
+### 1.	Give the content an `<h3>` Section header, so that it appears on the submenu on the right.
+### 2.	Start the content with the example of adding the theming index file.
+### 3.	Provide the simplest styling example, which is to extend the default theme for the corresponding feature/component. For example, when styling the paginator UI, the `igx-grid-paginator-theme` needs to be extended:
+
+```scss
+$dark-grid-paginator: igx-grid-paginator-theme(
+    $text-color: #F4D45C,
+    $background-color: #575757,
+    $border-color: #292826
+);
+```
+
+### 4.	If other elements in the feature UI are styled by another theme, add example for that theme too. For example - the buttons in the paginator UI require that a new theme for buttons is created.
+### 5.	If a theme provides a ton of parameters for styling, choose those that you decide would be the most common. You may state in one sentence what each property controls, and provide a link to the theme under the SASS API.
+### 6.	Provide the last step, which is to include the component mixin, along with two notes – the first one for scoping any mixin if needed, and the second note about penetrating the `ViewEncapsulation`, along with example on how to overcome the encapsulation.
+### 7.	Add an iframe with an example, along with a Stackblitz button
+### 8.	Examples on styling with `igx-color`, `palettes` and `schemas` are not necessary, but you may add a link to Theming engine topics as they are quite detailed.
+### 9. When adding a section for a certain grid feature, add it for the igxHierachicalGrid and igxTreeGrid as well.
+
 
 # <a name='#workflow'>Workflow</a>
 
@@ -107,7 +132,7 @@ Open both repositories and perform `npm start`. This will start both projects an
 > Note: This status should be set only when the PR is approved. This will indicate that no further changes will be applied.
 2. `status: localized` this status is for issues that were with a pending translation status and have already been localized. Place this status label once these translation changes have been included in the current pull request, or the changes are already pulled with a different pull request.
 
-> Note: Keep in mind that when you submit a change in the EN .md files, you will need to make the same change in the JP and KR versions as well. This will help our Localization team to translate the change.
+> Note: Keep in mind that when you submit a change in the EN .md files, you will need to make the same change in the JP versions as well. This will help our Localization team to translate the change. As for the KR version of the topic, these changes will be handled by the Localization team.
 
 
 # <a name='#stackblitz-configuration'>StackBlitz configuration</a>
@@ -116,7 +141,7 @@ StackBlitz button should be added for each live editing sample.
 In order to do that, certain configuration should be added in the [angular samples](https://github.com/IgniteUI/igniteui-angular-samples) repository. More could be found here [To do](https://github.com/IgniteUI/igniteui-angular-samples/issues/130).
 
 
-StackBlitz button should be referencing the iframe provided by angular samples repo. Add the button in both JP and KR versions of the documentation as well:
+StackBlitz button should be referencing the iframe provided by angular samples repo. Add the button in the JP versions of the documentation as well:
 
 ```html
 <div class="sample-container loading" style="height: 477px">

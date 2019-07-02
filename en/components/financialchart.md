@@ -2,6 +2,7 @@
 title: Financial Chart | Data Visualization Tools | Ignite UI for Angular | Infragistics
 _description: Use the financial chart component to visualize financial data using a simple API. View the demo, dependencies, usage and toolbar for more information.
 _keywords: financial chart, Ignite UI for Angular, infragistics
+mentionedTypes: ['XamFinancialChart']
 ---
 
 ## Financial Chart
@@ -24,17 +25,17 @@ Once the user binds the data, the chart offers multiple ways in which the data c
 
 The financial chart component analyzes and selects data columns - Date/Time column to use for x-axis and Open, High, Low, Close, Volume columns or the first 5 numeric columns for y-axis. Beyond this, the user can specify the chart type to either Bar, Candle, Column, and Line. With its five main visual elements, a toolbar, a prices view, a volume view, an indicators view, and a navigation view, data has become more perceptible.
 
-You can explicitly specify the chart type by setting the `chartType` property to one of the following options:
+You can explicitly specify the chart type by setting the [`ChartType`](/angular-apis/typescript/latest/enums/charttype.html) property to one of the following options:
 
-| Property | Description                                                                                                                                                                                                                                        |
-| -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `bar`    | Specifies the bar series with markers at each data point                                                                                                                                                                                           |
-| `candle` | Specifies the candle series                                                                                                                                                                                                                        |
-| `column` | Specifies the column series                                                                                                                                                                                                                        |
-| `line`   | Specifies the line series                                                                                                                                                                                                                          |
-| `auto`   | Specifies automatic selection of chart type based on Data Adapter which suggest one of above values based names and number of numeric columns in your data. For example, it will suggest `bar` for data items with Open, High, Low, Close columns. |
+| Property                                                                                | Description                                                                                                                                                                                                                                        |
+| --------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `Bar`                                                                                   | Specifies the bar series with markers at each data point                                                                                                                                                                                           |
+| `Candle`                                                                                | Specifies the candle series                                                                                                                                                                                                                        |
+| [`IgxColumnComponent`](/angular-apis/typescript/latest/classes/igxcolumncomponent.html) | Specifies the column series                                                                                                                                                                                                                        |
+| `Line`                                                                                  | Specifies the line series                                                                                                                                                                                                                          |
+| `auto`                                                                                  | Specifies automatic selection of chart type based on Data Adapter which suggest one of above values based names and number of numeric columns in your data. For example, it will suggest `Bar` for data items with Open, High, Low, Close columns. |
 
-Refer to the [Financial Chart Panes](financialchart_panes.md) topics for  information on other chart panes.
+Refer to the [Financial Chart Panes](financialchart_chart_panes.md) topics for  information on other chart panes.
 
 ```html
  <igx-financial-chart
@@ -53,7 +54,7 @@ When installing the chart package, the core package must also be installed.
 
 The Angular financial chart component requires the following modules:
 
-```typescript
+```ts
 // app.module.ts
 import {IgxFinancialChartModule} from "igniteui-angular-charts/ES5/igx-financial-chart-module";
 
@@ -73,9 +74,9 @@ export class AppModule {}
 
 Now that the financial chart module is imported, next step is to bind it to data.
 
-In order to create an `IgxFinancialChart` control, you must first have data to bind it to. The following code snippet demonstrates how to create a simple data source.
+In order to create an [`IgxFinancialChart`](/angular-apis/typescript/latest/classes/igxfinancialchart.html) control, you must first have data to bind it to. The following code snippet demonstrates how to create a simple data source.
 
-```typescript
+```ts
 let data = [
 	{ time: new Date(2013, 1, 1), open: 268.93, high: 268.93, low: 262.80, close: 265.00, volume: 6118146 },
 	{ time: new Date(2013, 1, 4), open: 262.78, high: 264.68, low: 259.07, close: 259.98, volume: 3723793 },
@@ -121,3 +122,17 @@ Also, you can hide the toolbar if you wish to maximize vertical space for the ch
     isToolbarVisible="false">
  </igx-financial-chart>
 ```
+
+### Additional Resources
+
+-   [Binding Multiple Sources](financialchart_binding_multiple_sources.md)
+-   [Binding High Volume Data](financialchart_binding_large_data.md)
+-   [Binding Real-Time Data](financialchart_binding_live_data.md)
+-   [Chart Annotations](financialchart_chart_annotations.md)
+-   [Chart Configuration](financialchart_chart_configuration.md)
+-   [Chart Display Types](financialchart_chart_display_types.md)
+-   [Chart Panes](financialchart_chart_panes.md)
+-   [Chart Performance](financialchart_chart_performance.md)
+    <!-- - [Custom Indicators](financialchart_custom_indicators.md) -->
+    <!-- - [Tooltip Templates](financialchart_tooltip_templates.md) -->
+    <!-- - [Tooltip Types](financialchart_tooltip_types.md) -->

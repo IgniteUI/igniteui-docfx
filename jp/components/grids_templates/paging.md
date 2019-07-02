@@ -189,7 +189,9 @@ export class HGridRemotePagingSampleComponent implements OnInit, AfterViewInit, 
 }
 }
 @@if (igxName === 'IgxTreeGrid') {
+
 このサンプルでは、​​子レコードがいくつあっても、ページごとに一定数のルート レコードを表示する方法を示します。レベル (root または child) に関係なく一定数のレコードを表示するビルトインの Tree Grid ページング アルゴリズムをキャンセルするには、[`perPage`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#perpage) プロパティを `Number.MAX_SAFE_INTEGER` に設定してください。
+
 ```html
 <igx-tree-grid #treeGrid ...
                [paging]="true" [perPage]="maxPerPage">
@@ -570,7 +572,7 @@ public changeTemplate() {
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-remote-paging-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-remote-paging-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -601,6 +603,208 @@ $custom-button-theme: igx-button-theme(
 }
 ```
 }
+
+### スタイル設定
+
+ページネータのスタイル設定を始めるには、すべてのテーマ関数とコンポーネントミックスインが存在するインデックス ファイルをインポートする必要があります。
+
+```scss
+// custom-grid-paging-style.component.scss
+@import '~igniteui-angular/lib/core/styles/themes/index';
+``` 
+
+最も簡単な方法で igx-grid-paginator-theme を拡張し`$text-color`、`$background-color` および `$border-color` パラメータを受け入れる新しいテーマを作成します。
+
+```scss
+$dark-grid-paginator: igx-grid-paginator-theme(
+    $text-color: #F4D45C,
+    $background-color: #575757,
+    $border-color: #292826
+);
+```
+
+`igx-grid-paginator-theme` はページング コンテナの色の制御のみですが、ポケットベル UI のボタンには影響しません。これらのボタンにスタイル設定するために、新しいボタン テーマを作成しましょう。
+
+```scss
+$dark-button: igx-button-theme(
+    $icon-color: #FFCD0F,
+    $icon-hover-color: #292826,
+    $icon-hover-background: #FFCD0F,
+    $icon-focus-color: #292826,
+    $icon-focus-background: #FFCD0F,
+    $disabled-color: #16130C
+);
+```
+
+この例では、アイコンの色と背景、ボタンの無効な色のみを変更しましたが、igx-button-themeではボタン スタイルを制御するためのパラメータを増やすことができます。
+
+最後のステップは、それぞれのテーマを持つコンポーネント mixins を**含める**ことです。 
+
+```scss
+@include igx-grid-paginator($dark-grid-paginator);
+.igx-paginator {
+    @include igx-button($dark-button);
+}
+```
+
+>[!NOTE]
+>igx-button mixins を `.igx-paginator` 内でスコープして、ページネータ ボタンのみにスタイルが設定されるようにします。そうでない場合は、グリッド内の他のボタンも影響を受けます。
+
+ >[!NOTE]
+ >コンポーネントが[`エミュレート`](../themes/component-themes.md#view-encapsulation)された ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を貫通する必要があります。
+
+```scss
+:host {
+    ::ng-deep {
+        @include igx-grid-paginator($dark-grid-paginator);
+        .igx-paginator {
+            @include igx-button($dark-button);
+        }
+    }
+}
+```
+
+#### カラーパレットの定義
+
+上記のように色の値をハードコーディングする代わりに、[`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) および [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用することによって色に関してより高い柔軟性を持つことができます。
+
+`igx-palette` は渡された一次色と二次色に基づいてカラーパレットを生成します。
+
+```scss
+$yellow-color: #F9D342;
+$black-color: #292826;
+
+$dark-palette: igx-palette($primary: $black-color, $secondary: $yellow-color);
+```
+
+[`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) を使用してパレットから簡単に色を取り出すことができます。 
+
+```scss
+$dark-grid-paginator: igx-grid-paginator-theme(
+    $palette: $dark-palette,
+    $text-color: igx-color($dark-palette, "secondary", 400),
+    $background-color: igx-color($dark-palette, "primary", 200),
+    $border-color:  igx-color($dark-palette, "primary", 500)
+);
+
+$dark-button: igx-button-theme(
+    $palette: $dark-palette,
+    $icon-color: igx-color($dark-palette, "secondary", 700),
+    $icon-hover-color: igx-color($dark-palette, "primary", 500),
+    $icon-hover-background: igx-color($dark-palette, "secondary", 500),
+    $icon-focus-color: igx-color($dark-palette, "primary", 500),
+    $icon-focus-background: igx-color($dark-palette, "secondary", 500),
+    $disabled-color: igx-color($dark-palette, "primary", 700)
+);
+```
+
+>[!NOTE]
+>`igx-color` および `igx-palette` は、色を生成および取得するための重要な機能です。使い方の詳細については[`パレット`](../themes/palette.md)のトピックを参照してください。
+
+#### スキーマの使用
+
+テーマ エンジンには [**スキーマ**](../themes/schemas.md)を使用できる利点があり、堅牢で柔軟な構造を構築できます。**スキーマ**はテーマを使用するための方法です。
+
+すべてのコンポーネントに提供されている 2 つの定義済みスキーマ (この場合は ([`dark-grid-pagination`]({environment:sassApiUrl}/index.html#variable-_dark-grid-pagination) と [`dark-button`]({environment:sassApiUrl}/index.html#variable-_dark-button) スキーマ) の 1 つを拡張します。 
+
+```scss
+// Extending the dark paginator schema
+$dark-grid-paginator-schema: extend($_dark-grid-pagination,
+        (
+            text-color:(
+                igx-color: ("secondary", 400)
+            ),
+            background-color:(
+                igx-color: ("primary", 200)
+            ),
+            border-color:(
+                igx-color:( "primary", 500)
+            )
+        )
+);
+// Extending the dark button schema
+$dark-button-schema: extend($_dark-button,
+        (
+            icon-color:(
+                igx-color:("secondary", 700)
+            ),
+            icon-hover-color:(
+                igx-color:("primary", 500)
+            ),
+            icon-hover-background:(
+                igx-color:("secondary", 500)
+            ),
+            icon-focus-color:(
+                igx-color:("primary", 500)
+            ),
+            icon-focus-background:(
+                igx-color:("secondary", 500)
+            ),
+            disabled-color:(
+                igx-color:("primary", 700)
+            )
+        )
+);
+```
+
+カスタム スキーマを適用するには、グローバル (軽量または暗色) の 1 つを**拡張**する必要があります。これは基本的にカスタム スキーマでコンポーネントを指し示し、その後それぞれのコンポーネント テーマに追加する方法です。
+
+```scss
+// Extending the global dark-schema
+$custom-dark-schema: extend($dark-schema,(
+    igx-grid-paginator: $dark-grid-paginator-schema,
+    igx-button: $dark-button-schema
+));
+
+// Defining grid-paginator-theme with the global dark schema
+$dark-grid-paginator: igx-grid-paginator-theme(
+  $palette: $dark-palette,
+  $schema: $custom-dark-schema
+);
+
+// Defining button-theme with the global dark schema
+$dark-button: igx-button-theme(
+  $palette: $dark-palette,
+  $schema: $custom-dark-schema
+);
+```
+
+テーマを上記と同じ方法で含める必要があることに注意してください。
+
+@@if (igxName === 'IgxGrid'){
+
+#### デモ
+
+<div class="sample-container loading" style="height:560px">
+    <iframe id="custom-grid-paging-style-iframe" src='{environment:demosBaseUrl}/grid/custom-grid-paging-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="custom-grid-paging-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+</div>
+<div class="divider--half"></div>
+}
+
+@@if (igxName === 'IgxHierarchicalGrid'){
+#### デモ
+
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-sample-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-paging-style" 
+        data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示
+    </button>
+</div>
+}
+
+@@if (igxName === 'IgxTreeGrid'){
+#### デモ
+
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-sample-src="{environment:demosBaseUrl}/tree-grid/treegrid-paging-style" 
+        data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示
+    </button>
+</div>
+}
+
 ### API リファレンス
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
 * [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-grid-theme)

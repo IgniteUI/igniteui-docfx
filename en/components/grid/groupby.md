@@ -1,13 +1,12 @@
 ---
-title: Group By Component – Native Angular | Ignite UI for Angular
-_description: The Ignite UI for Angular Group By component allows users to group data based on common values for particular columns.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Components, Angular Data Grid component, Angular Data Grid control, Angular Grid component, Angular Grid control, Angular High Performance Grid, group by, groupby, grouping, column grouping
+title: Angular Grid Group By | Column Group | Ignite UI for Angular | infragistics
+_description: Configure angular group by that allows visualizing of data records in angular material table, visualize the grouped data in separate and convenient column group.
+_keywords: angular group by, igniteui for angular, infragistics
 ---
 
 ### Grid Group By
 
-[`igxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) supports column grouping that allows for visualizing data records in hierarchical groups according to the column group values. Groups can be expanded or collapsed and the order of grouping may be changed through the UI or API.
-
+A Group by behavior in an Angular Material table or UI grid creates grouped data rows based on the column values. The Group By in [`igxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) allows for visualizing the groups in a hierarchical structure. The grouped data rows can be expanded or collapsed and the order of grouping may be changed through the UI or API.
 
 #### Demo
 
@@ -20,7 +19,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 #### Initial Grouping State
 
-It is possible to set the initial grouping of the grid by an array of expressions to the [`groupingExpressions`]({environment:angularApiUrl}/classes/igxgridcomponent.html#groupingexpressions) property of the grid.
+It is possible to define initial grouping of the grid by assigning an array of expressions to the [`groupingExpressions`]({environment:angularApiUrl}/classes/igxgridcomponent.html#groupingexpressions) property of the grid.
 
 ```typescript
 public ngOnInit() {
@@ -52,7 +51,7 @@ public ngOnInit() {
 }
 ```
 
-During runtime the expressions are gettable and settable from the [`groupingExpressions`]({environment:angularApiUrl}/classes/igxgridcomponent.html#groupingexpressions) property. If you need to just add or change an existing expression you may also use the [`groupBy`]({environment:angularApiUrl}/classes/igxgridcomponent.html#groupby) method with either a single or an array of [`ISortingExpression`]({environment:angularApiUrl}/interfaces/isortingexpression.html).
+During runtime the expressions are gettable and settable from the [`groupingExpressions`]({environment:angularApiUrl}/classes/igxgridcomponent.html#groupingexpressions) property. If you need to add or change an existing expression you may also use the [`groupBy`]({environment:angularApiUrl}/classes/igxgridcomponent.html#groupby) method with either a single or an array of [`ISortingExpression`]({environment:angularApiUrl}/interfaces/isortingexpression.html).
 
 ```typescript
 grid.groupBy({ fieldName: 'ProductName', dir: SortingDirection.Desc, ignoreCase: true });

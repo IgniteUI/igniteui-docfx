@@ -2,6 +2,7 @@
 title: Radial Gauge Chart | Data Visualization Tools | Ignite UI for Angular | Infragistics
 _description: Create a colorful radial gauge to display a number of visual elements, such as needle, tick marks and ranges. View our data visualization tools.
 _keywords: Radial Gauge, Ignite UI for Angular, Infragistics
+mentionedTypes: ['XamRadialGauge']
 ---
 
 ## Radial Gauge
@@ -33,12 +34,12 @@ When installing the gauge package, the core package must also be installed.
 
 ### Required Modules
 
-The `IgxRadialGauge` requires the following modules:
+The [`IgxRadialGauge`](/angular-apis/typescript/latest/classes/igxradialgauge.html) requires the following modules:
 
-```typescript
+```ts
 // app.module.ts
 import { IgxRadialGaugeModule } from "igniteui-angular-gauges/ES5/igx-radial-gauge-module";
-import { IgrRadialGauge } from "igniteui-angular-gauges/ES5/igx-radial-gauge";
+import { IgxRadialGauge } from "igniteui-angular-gauges/ES5/igx-radial-gauge";
 
 @NgModule({
     imports: [
@@ -62,18 +63,18 @@ The following code demonstrates how create a radial gauge containing a needle an
     interval="5"
     minimumValue="0"
     maximumValue="50">
-    <igx-radial-graph-range startValue="0"
+    <igx-radial-gauge-range startValue="0"
                             endValue="30"
                             brush="red">
-    </igx-radial-graph-range>
-    <igx-radial-graph-range startValue="30"
+    </igx-radial-gauge-range>
+    <igx-radial-gauge-range startValue="30"
                             endValue="60"
                             brush="yellow">
-    </igx-radial-graph-range>
-    <igx-radial-graph-range startValue="60"
+    </igx-radial-gauge-range>
+    <igx-radial-gauge-range startValue="60"
                             endValue="100"
                             brush="green">
-    </igx-radial-graph-range>
+    </igx-radial-gauge-range>
 </igx-radial-gauge>
 ```
 
@@ -230,7 +231,7 @@ Radial gauge needles are visual elements used to signify a gauge set value. Need
 
 The supported needle shapes and caps are set using the `needleShape` and `needlePivotShape` properties.
 
-You can enable an interactive mode of the gauge (using `isNeedleDraggingEnabled` property) and the end-user will be able to change value by dragging the needle between values of `minimumValue` and `maximumValue` properties.
+You can enable an interactive mode of the gauge (using [`isNeedleDraggingEnabled`](/angular-apis/typescript/latest/classes/igxradialgaugecomponent.html#isneedledraggingenabled) property) and the end-user will be able to change value by dragging the needle between values of `minimumValue` and `maximumValue` properties.
 
 ```html
 <igx-radial-gauge

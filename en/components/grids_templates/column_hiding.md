@@ -1,29 +1,28 @@
 @@if (igxName === 'IgxGrid') {
 ---
-title: Column Hiding Component – Native Angular | Ignite UI for Angular
-_description: Column hiding with the Ignite UI for Angular Column Hiding component allows the users hide and show columns by using a built-in UI of the Data Grid.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Components, Angular Grid, Angular Table, Angular Data Grid component, Angular Data Table component, Angular Data Grid control, Angular Data Table control, Angular Grid component, Angular Table component, Angular Grid control, Angular Table control, Angular High Performance Grid, Angular High Performance Data Table, grid column hiding, column hiding, angular grid column hiding, angular data table column hiding, angular column hiding
+title: Angular Grid Column Hiding | Ignite UI for Angular | Infragistics
+_description: Learn how to use the Column Hiding feature that allows users to change the visible state of the columns directly through the UI of the Ignite Material UI table
+_keywords: column hiding, ignite ui for angular, infragistics
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Column Hiding Component – Native Angular | Ignite UI for Angular
-_description: Column hiding with the Ignite UI for Angular Column Hiding component allows the users hide and show columns by using a built-in UI of the Tree Grid.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Components, Angular Tree Grid, Angular Tree Table, Angular Tree Grid component, Angular Tree Table component, Angular Tree Grid control, Angular Tree Table control, Angular Tree Grid component, Angular Tree Table component, Angular Tree Grid control, Angular Tree Table control, Angular High Performance Tree Grid, Angular High Performance Tree Table, tree grid column hiding, column hiding, angular tree grid column hiding, angular tree table column hiding, angular column hiding
+title: Angular Tree Grid Column Hiding | Ignite UI for Angular | Infragistics
+_description: Learn how to use the Column Hiding feature that allows users to change the visible state of the columns directly through the UI of the Ignite Material UI table
+_keywords: column hiding, ignite ui for angular, infragistics
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Column Hiding Component – Native Angular | Ignite UI for Angular
-_description: Column hiding with the Ignite UI for Angular Column Hiding component allows the users hide and show columns by using a built-in UI of the Hierarchical Grid.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Components, Angular Hierarchical Grid, Angular Hierarchical Table, Angular Hierarchical Grid component, Angular Hierarchical Table component, Angular Hierarchical Grid control, Angular Hierarchical Table control, Angular High Performance Hierarchical Grid, Angular High Performance Hierarchical Table, hierarchical grid column hiding, column hiding, angular hierarchical grid column hiding, angular hierarchical table column hiding, angular column hiding
+title: Angular Hierarchical Grid Column Hiding | Ignite UI for Angular | Infragistics
+_description: Learn how to use the Column Hiding feature that allows users to change the visible state of the columns directly through the UI of the Ignite Material UI table
+_keywords: column hiding, ignite ui for angular, infragistics
 ---
 }
 
-
 ### @@igComponent Column Hiding
 
-The Ignite UI for Angular @@igComponent provides an [`IgxColumnHidingComponent`]({environment:angularApiUrl}/classes/igxcolumnhidingcomponent.html), which allows users to hide and show columns directly through the **UI**. The @@igComponent has a built-in column hiding UI, which can be used through the @@igComponent's toolbar. In addition, developers can always define the column hiding UI as a separate component and place it anywhere they want on the page.
+The Ignite UI for Angular @@igComponent provides an [`IgxColumnHidingComponent`]({environment:angularApiUrl}/classes/igxcolumnhidingcomponent.html), which allows users to perform column hiding directly through the **UI** or by using the angular component. The Material UI Grid has a built-in column hiding UI, which can be used through the @@igComponent's toolbar to change the visible state of the columns. In addition, developers can always define the column hiding UI as a separate component and place it anywhere they want on the page.
 
 #### Demo
 
