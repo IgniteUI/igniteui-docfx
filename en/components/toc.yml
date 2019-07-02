@@ -672,6 +672,9 @@
 - name: Drag and Drop
   href: drag_drop.md
   new: false
+- name: Zoom Slider
+  new: true
+  href: zoomslider_overview.md
 - name: Menus
   header: true
 - name: Navigation Drawer
@@ -728,8 +731,3 @@
 - name: Localization
   href: localization.md
   new: false
-- name: ZoomSlider
-  header: true
-- name: Zoom Slider Overview
-  new: true
-  href: zoomslider_overview.md
