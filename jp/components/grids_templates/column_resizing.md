@@ -187,7 +187,7 @@ $custom-grid-theme: igx-grid-theme(
 
 ```
  >[!NOTE]
- >コンポーネントが [`Emulated`](../themes/component-themes.md#view-encapsulation)  ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を`ペネトレーション`する必要があります。
+ >コンポーネントが [`Emulated`](../themes/component-themes.md#view-encapsulation) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を`ペネトレーション`する必要があります。
 
 ```scss
 :host {
@@ -200,7 +200,7 @@ $custom-grid-theme: igx-grid-theme(
 #### カラーパレットの定義
 上記のように色の値をハードコーディングする代わりに、`igx-palette]({environment:sassApiUrl}/index.html#function-igx-palette) と `igx-color]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用することによって色に関してより高い柔軟性を持つことができます。
 
-`Igx-palette` は指定した一次色と二次色に基づいてカラーパレットを生成します。
+`igx-palette` は指定した一次色と二次色に基づいてカラーパレットを生成します。
 
 ```scss
 $primary-color: #0288D1;
@@ -219,7 +219,7 @@ $custom-grid-theme: igx-grid-theme(
 ```
 
 >[!NOTE]
->`Igx-color` と ` igx-palette` は色を生成したり取り出したりするための関数です。使い方の詳細については [`パレット`](../themes/palette.md) のトピックを参照してください。
+>`igx-color` と `igx-palette` は色を生成したり取り出したりするための関数です。使い方の詳細については [`パレット`](../themes/palette.md) のトピックを参照してください。
 
 #### スキーマの使用
 テーマ エンジンを使用して [スキーマ](../themes/schemas.md)の利点を使用でき、堅牢で柔軟な構造を構築できます。**スキーマ**はテーマを使用する方法です。
