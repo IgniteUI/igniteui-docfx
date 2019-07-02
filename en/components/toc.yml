@@ -327,6 +327,9 @@
       href: datachart_axis_types.md
       new: true
       items:
+        - name: Axis Annotations
+          href: datachart_axis_annotations.md
+          new: true
         - name: Axis Settings
           href: datachart_axis_settings.md
           new: true
@@ -465,6 +468,9 @@
 - name: Pie Chart
   href: piechart.md
   new: false
+- name: Sparkline
+  href: sparkline.md
+  new: true
 - name: Frameworks
   header: true
 - name: Excel Library
@@ -504,9 +510,6 @@
 - name: Radial Gauge
   href: radialgauge.md
   new: false
-- name: Sparkline
-  href: sparkline.md
-  new: true
 - name: Maps
   header: true
 - name: Map
