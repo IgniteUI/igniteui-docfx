@@ -1,21 +1,21 @@
 ﻿@@if (igxName === 'IgxGrid') {
 ---
 title: Angular Grid Summaries| Group Footer | Ignite UI for Angular | Infragistics
-_description: Configure angular grid summaries in the group footer of the column and use the option to set custom angular template in the Ignite UI for angular Material UI
+_description: Configure Аngular grid summaries in the group footer of the column and use the option to set custom angular template in the Ignite UI for angular Material UI
 _keywords: angular grid summaries, igniteui for angular, infragistics
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
 title: Angular Tree Grid Summaries| Group Footer | Ignite UI for Angular | Infragistics
-_description: Configure angular grid summaries in the group footer of the column and use the option to set custom angular template in the Ignite UI for angular Material UI
+_description: Configure Аngular grid summaries in the group footer of the column and use the option to set custom angular template in the Ignite UI for angular Material UI
 _keywords: angular grid summaries, ignite ui for angular, infragistics
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
 title: Angular Hierarchical Grid Summaries| Group Footer | Ignite UI for Angular | Infragistics
-_description: Configure angular grid summaries in the group footer of the column and use the option to set custom angular template in the Ignite UI for angular Material UI
+_description: Configure Аngular grid summaries in the group footer of the column and use the option to set custom angular template in the Ignite UI for angular Material UI
 _keywords: angular grid summaries, ignite ui for angular, infragistics
 ---
 }

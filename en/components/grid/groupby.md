@@ -1,6 +1,6 @@
 ---
 title: Angular Grid Group By | Column Group | Ignite UI for Angular | infragistics
-_description: Configure angular group by that allows visualizing of data records in angular material table, visualize the grouped data in separate and convenient column group.
+_description: Configure angular group by that allows visualizing of data records in Angular Material table, visualize the grouped data in separate and convenient column group.
 _keywords: angular group by, igniteui for angular, infragistics
 ---
 

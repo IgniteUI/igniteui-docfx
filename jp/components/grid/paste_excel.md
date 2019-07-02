@@ -1,16 +1,17 @@
 ---
-title: Excel からの貼り付け - ネイティブ Angular | Ignite UI for Angular
-_description: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Grid, Angular Data Grid, Angular Grid コントロール, Angular Grid コンポーネント, Excel から貼り付け, Angular Excel からの貼り付け
+title: Paste from Excel | Export Selected Data | Ignite UI for Angular | infragistics 
+_description: Configure the Angular Grid to paste data from excel, by using rich and performand API with less code, and use the rich API do export selected grid data easily.
+_keywords: export selected, igniteui for angular, infragistics
 _language: ja
 ---
 
-### Excel からの貼り付け
+### Grid Paste from Excel demonstration
 
 Ignite UI for Angular [`IgxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) は、クリップボードにコピーした Excel データを読み込むことができます。このトピックでは、カスタムコードを使用して実装する方法について説明します。
 
 #### Excel からデータを貼り付けるデモ
 
-このサンプルでは、Excel から [`IgxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) の貼り付けを実装する方法を紹介します。
+This sample demonstrates how to implement pasting from Excel into the [`igxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) Material UI table.
 サンプルは、Excel スプレッドシートを開いて行をコピーし、キーボード (Ctrl + V、Shift + Insert、Command + V) を使用してグリッドに貼り付けます。
 
 上部に2 つのオプションとドロップダウン ボタンがあります。
@@ -226,7 +227,7 @@ export class PasteHandler {
 
 <div class="divider--half"></div>
 
-* [Excel Exporter](export_excel.md)
+* [Excel Exporter](export_excel.md) - Use the Excel Exporter service to export data to Excel from IgxGrid. It also provides the option to only export the selected data from the IgxGrid. The exporting functionality is encapsulated in the IgxExcelExporterService class and the data is exported in MS Excel table format. This format allows features like filtering, sorting, etc. To do this you need to invoke the IgxExcelExporterService's export method and pass the IgxGrid component as first argument.
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。

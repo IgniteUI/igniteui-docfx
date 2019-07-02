@@ -1,7 +1,7 @@
 ---
 title: Linear Gauge コンポーネント - ネイティブ Angular | Ignite UI for Angular
 _description: Linear Gauge コンポーネントを使用して、シンプルで簡潔なビューでデータを可視化します。構成可能な要素、依存関係、そしてコードスニペットについて学びます。
-_keywords: Angular, Ignite UI for Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular リニア ゲージ コンポーネント, Angular リニア ゲージ
+_keywords: angular, Ignite UI for Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular リニア ゲージ コンポーネント, Angular リニア ゲージ
 _language: ja
 ---
 
