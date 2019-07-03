@@ -446,7 +446,7 @@
       new: false
     - name: Chart Configuration
       href: financialchart_chart_configuration.md
-      new: false
+      new: false          
     - name: Chart Display Types
       href: financialchart_chart_display_types.md
       new: false
@@ -503,6 +503,9 @@
       new: true
     - name: Displaying Esri Imagery
       href: map_displaying_esri_imagery.md
+      new: true
+    - name: Displaying Heat Tiles Imagery
+      href: map_displaying_heat_imagery.md
       new: true
     - name: Displaying OSM Imagery
       href: map_displaying_osm_imagery.md
