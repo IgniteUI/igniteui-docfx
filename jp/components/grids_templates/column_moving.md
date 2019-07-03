@@ -1,7 +1,7 @@
 ﻿@@if (igxName === 'IgxGrid') {
 ---
 title: Angular Grid Column Moving | Column Order | Ignite UI for Angular | infragistics
-_description: Set custom column order of the Ignite UI for Angular Material table by using the column drag feature of the Angular UI grid with the usage of mouse/touch gestures.
+_description: Angular UI グリッドの列ドラッグ機能でマウス/タッチ ジェスチャを使用して、Angular Material テーブルの Ignite UI のカスタム列の順序を設定します。
 _keywords: column order, igniteui for angular, infragistics
 _language: ja
 ---

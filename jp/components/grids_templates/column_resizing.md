@@ -1,22 +1,22 @@
 ﻿@@if (igxName === 'IgxGrid') {
 ---
-title: Angular Grid Column Resizing | Ignite UI for Angular | Infragistics
-_description: Start using Angular Grid Column Resizing based on angular drag resizing in order to change grid column width easily. Angular drag resizing has never been so easy.
+title: Angular Grid 列サイズ変更|Ignite UI for Angular |Infragistics
+_description: Angular Grid グリッド列のサイズ変更は Angular ドラッグ サイズ変更に基づいて、グリッド列の幅を簡単に変更できます。Angular ドラッグ サイズ変更が大変使いやすくなりました。
 _keywords: grid column resizing, igniteui for angular, infragistics
 _language: ja
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular Tree Grid Column Resizing | Ignite UI for Angular | Infragistics
-_description: Start using Angular Tree Grid Column Resizing based on angular drag resizing in order to change grid column width easily. Angular drag resizing has never been so easy.
+title: Angular Tree Grid 列サイズ変更|Ignite UI for Angular |Infragistics
+_description: Angular Tree Grid グリッド列のサイズ変更は Angular ドラッグ サイズ変更に基づいて、グリッド列の幅を簡単に変更できます。Angular ドラッグ サイズ変更が大変使いやすくなりました。
 _keywords: grid column resizing, igniteui for angular, infragistics
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular Hierarchical Grid Column Resizing | Ignite UI for Angular | Infragistics
-_description: Start using Angular Hierarchical Grid Column Resizing based on angular drag resizing in order to change grid column width easily. Angular drag resizing has never been so easy.
+title: Angular Hierarchical Grid 列サイズ変更|Ignite UI for Angular |Infragistics
+_description: Angular Hierarchical Grid グリッド列のサイズ変更は Angular ドラッグ サイズ変更に基づいて、グリッド列の幅を簡単に変更できます。Angular ドラッグ サイズ変更が大変使いやすくなりました。
 _keywords: grid column resizing, igniteui for angular, infragistics
 ---
 }
@@ -24,7 +24,7 @@ _keywords: grid column resizing, igniteui for angular, infragistics
 
 ### @@igComponent 列サイズ変更
 
-With deferred grid column resizing, the user will see a temporary resize indicator while the Angular drag resizing operation is in effect. The new grid column width is applied once the drag operation has ended.
+グリッド列のサイズ変更遅延では、Angular ドラッグ操作の実行中にサイズ変更インジケーターが一時的に表示されます。ドラッグ操作が完了すると、新しいグリッド列幅が適用されます。
 
 #### @@igComponent 列サイズ変更のデモ
 
