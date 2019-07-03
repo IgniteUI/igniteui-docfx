@@ -16,7 +16,7 @@
   href: grid/grid.md
   new: true
   items:
-    - name: Live Data / Real-Time
+    - name: ライブデータ/リアルタイムデモ
       href: grid/live_data.md
       new: false
     - name: 仮想化とパフォーマンス

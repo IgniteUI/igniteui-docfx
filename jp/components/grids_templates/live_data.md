@@ -15,7 +15,7 @@ _keywords: angular data grid, agular grid updates, angular live data
 ---
 }
 
-### 更新ライブデモ
+### 更新のライブデモ
 Ignite UI for Angularの @@igComponent コンポーネントは、1 秒間に何千もの更新を処理しながら、ユーザーはグリッドをインタラクティブに操作できます。以下は、1 秒間に何千もの更新を処理する @@igComponent のサンプルです。
 
 @@if (igxName === 'IgxGrid') {
