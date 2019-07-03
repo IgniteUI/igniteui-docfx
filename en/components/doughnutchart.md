@@ -31,7 +31,7 @@ When installing the charts package, the core package must also be installed.
 
 ### Required Modules
 
-The $PlatformShor$ douhgnut chart component requires the following modules:
+The Angular douhgnut chart component requires the following modules:
 
 ```ts
 // app.module.ts
@@ -153,7 +153,7 @@ The doughnut chart component exposes the API for setting the state of one or mor
 
 **Changing the selection state upon slice click** - If you attach an event handler for the `SliceClick` event, it supplies a reference to the clicked slice in the event arguments allowing you to modify its selection state. The doughnut chart exposes a `SelectedStyle` property that determines the look of the selected slices. By default, no style is applied, and selecting a slice will not alter its appearance in any way. In order to apply your own style to the selected slices you need to define a Style with `TargetType` of Slice and set it as the value of the `SelectedStyle` property.
 
-**Setting the IsSelected property** - The $PlatformShor$ doughnut chart component holds references to all the slices allowing you to modify their `IsSelected` property directly. The doughnut chart exposes a `SliceClick` event used to change the selected/unselected state of a slice.
+**Setting the IsSelected property** - The Angular doughnut chart component holds references to all the slices allowing you to modify their `IsSelected` property directly. The doughnut chart exposes a `SliceClick` event used to change the selected/unselected state of a slice.
 
 **Modifying the contents of the SelectedSlices collection** - You can change the selected slice by changing the contents of the `SelectedSlices` collection. The doughnut chart holds references to all the slices allowing you to modify their `IsSelected` property directly to the Slice objects.
 
