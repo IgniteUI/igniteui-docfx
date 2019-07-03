@@ -7,12 +7,12 @@ _language: ja
 
 ## 軸オプション
 
-`IgxCategoryChart` コントロールでは、軸は軸線、目盛、タイトル、や軸のラベルの外観を設定する基本プロパティを提供します。
+[`IgxCategoryChart`](/angular-apis/typescript/latest/classes/igxcategorychart.html) コントロールでは、軸は軸線、目盛、タイトル、や軸のラベルの外観を設定する基本プロパティを提供します。
 
 ### デモ
 
-<div class="sample-container" style="height: 550px">
-    <iframe id="category-chart-axis-options-sample-iframe" src='{environment:demosBaseUrl}/charts/category-chart-axis-options-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 550px">
+    <iframe id="category-chart-axis-options-sample-iframe" src='{environment:demosBaseUrl}/charts/category-chart-axis-options-sample' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="category-chart-axis-options-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
@@ -90,7 +90,7 @@ Category Chart コントロールの軸タイトル機能は、チャートの x
 
 ### 軸の範囲
 
-Category Chart コントロールの数値軸の範囲は軸の始めと終わり、つまりデータの最大値と最小値の数値の差です。範囲の最大値は、軸の最大値、範囲の最小値は、軸の最小値です。Category Chart コントロールは、チャート プロット領域を最大化するために、デフォルトで最小データ ポイントおよび最大データ ポイントに基づいて軸の範囲の最大値と最小値を計算します。軸の最大値と最小値の自動計算は、データ ポイントのセットに適切でない場合があります。たとえば、データの最小値が 850 の場合、y 軸の `yAxisMinimumValue` プロパティを使用して y 軸の最小値を 800 に設定してください。。これにより、軸の最小値とデータ ポイントの最小値の間に 50 のスペース値ができます。y 軸の `yAxisMaximumValue` プロパティを使用すれば軸の最大値とデータ ポイントの最大値にも同様のことが適用できます。
+Category Chart コントロールの数値軸の範囲は軸の始めと終わり、つまりデータの最大値と最小値の数値の差です。範囲の最大値は、軸の最大値、範囲の最小値は、軸の最小値です。Category Chart コントロールは、チャート プロット領域を最大化するために、デフォルトで最小データ ポイントおよび最大データ ポイントに基づいて軸の範囲の最大値と最小値を計算します。軸の最大値と最小値の自動計算は、データ ポイントのセットに適切でない場合があります。たとえば、データの最小値が 850 の場合、y 軸の `YAxisMinimumValue` プロパティを使用して y 軸の最小値を 800 に設定してください。。これにより、軸の最小値とデータ ポイントの最小値の間に 50 のスペース値ができます。y 軸の `YAxisMaximumValue` プロパティを使用すれば軸の最大値とデータ ポイントの最大値にも同様のことが適用できます。
 
 以下のサンプル コードは、y 軸で軸の範囲を変更する方法を示します。
 
@@ -108,7 +108,7 @@ Category Chart コントロールの数値軸の範囲は軸の始めと終わ�
 
 ### 軸間隔
 
-Category Chart コントロールで、`yAxisInterval` プロパティは主グリッド線および軸ラベルが軸に描画される頻度を指定します。同様に、`yAxisMinorInterval` プロパティは副グリッド線が軸に描画される頻度を指定します。
+Category Chart コントロールで、`YAxisInterval` プロパティは主グリッド線および軸ラベルが軸に描画される頻度を指定します。同様に、`YAxisMinorInterval` プロパティは副グリッド線が軸に描画される頻度を指定します。
 
 以下のコード スニペットは、Y 軸の間隔を設定する方法を示します。
 
@@ -137,7 +137,7 @@ Category Chart コントロールの軸間隔機能は、チャート シリー�
 -   0 - シリーズ間の間隔は描画されません。
 -   1 - シリーズ間に利用可能な最大の間隔が描画されます。
 
-Category Chart の `xAxisGap` を `0.125` に設定するには、以下のコードを使用します。
+Category Chart の `XAxisGap` を `0.125` に設定するには、以下のコードを使用します。
 
 ```html
 <igx-category-chart
@@ -159,7 +159,7 @@ Category Chart コントロールの軸重複機能は、描画されるカテ�
 -   負の値 (-1 以上): カテゴリは互いに生成する間隔によって引き離されます。
 -   正の数 (1 以下): カテゴリが互いに重なります。値 1 は、互いのチャート上にカテゴリを描画します。
 
-以下のコード例は、`xAxisOverlap` を 0 に設定します。
+以下のコード例は、`XAxisOverlap` を 0 に設定します。
 
 ```html
  <igx-category-chart

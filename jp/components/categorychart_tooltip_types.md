@@ -7,12 +7,12 @@ _language: ja
 
 ## ツールチップ タイプ
 
-このトピックでは、`IgxCategoryChart` のツールチップ タイプについて説明します。
+このトピックでは、[`IgxCategoryChart`](/angular-apis/typescript/latest/classes/igxcategorychart.html) のツールチップ タイプについて説明します。
 
 ### デモ
 
-<div class="sample-container" style="height: 500px">
-    <iframe id="category-chart-tooltip-types-iframe" src='{environment:demosBaseUrl}/charts/category-chart-tooltip-types' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 500px">
+    <iframe id="category-chart-tooltip-types-iframe" src='{environment:demosBaseUrl}/charts/category-chart-tooltip-types' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="category-chart-tooltip-types-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示
@@ -22,7 +22,7 @@ _language: ja
 
 ### ツールチップ タイプ
 
-`IgxCategoryChart` は以下の方法でツールチップの表示を設定できます。
+[`IgxCategoryChart`](/angular-apis/typescript/latest/classes/igxcategorychart.html) は以下の方法でツールチップの表示を設定できます。
 
 1.  `Default` ツールチップはポインターが項目上に配置されたときに単一の項目に対してツールチップを表示できます。
 2.  `Item` ツールチップはポインターが項目上に配置されたときに各データ項目に対してツールチップを表示できます。

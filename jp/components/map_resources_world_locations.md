@@ -11,7 +11,7 @@ _language: ja
 
 ### コード スニペット
 
-```typescript
+```ts
 export default class WorldLocations {
 
     private static locations: any[] = [];

@@ -7,12 +7,12 @@ _language: ja
 
 ## ツールチップ テンプレート
 
-`IgxFinancialChart` コントロールは、シリーズの種類ごとに既定のツールチップを提供します。デフォルト ツールチップは特定のシリーズ項目に関連するすべての情報を表示します。これはシリーズ タイトル、データ値、および軸値を含みます。シリーズのスタイルと一致します。デフォルトのツールチップが適切でない場合、 ツールチップのコンテンツおよびルック アンド フィールをカスタマイズできます。
+[`IgxFinancialChart`](/angular-apis/typescript/latest/classes/igxfinancialchart.html) コントロールは、シリーズの種類ごとに既定のツールチップを提供します。デフォルト ツールチップは特定のシリーズ項目に関連するすべての情報を表示します。これはシリーズ タイトル、データ値、および軸値を含みます。シリーズのスタイルと一致します。デフォルトのツールチップが適切でない場合、 ツールチップのコンテンツおよびルック アンド フィールをカスタマイズできます。
 
 ### デモ
 
-<div class="sample-container" style="height: 500px">
-    <iframe id="financial-chart-tooltip-template-iframe" src='{environment:demosBaseUrl}/charts/financial-chart-tooltip-template' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 500px">
+    <iframe id="financial-chart-tooltip-template-iframe" src='{environment:demosBaseUrl}/charts/financial-chart-tooltip-template' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="financial-chart-tooltip-template-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示

@@ -7,12 +7,12 @@ _language: ja
 
 ## カスタム インジケーター
 
-`IgxFinancialChart` コントロールでは、インジケーター ペインに表示するカスタム財務指標を定義できます。
+[`IgxFinancialChart`](/angular-apis/typescript/latest/classes/igxfinancialchart.html) コントロールでは、インジケーター ペインに表示するカスタム財務指標を定義できます。
 
 ### デモ
 
-<div class="sample-container" style="height: 550px">
-    <iframe id="financial-chart-custom-indicators-iframe" src='{environment:demosBaseUrl}/charts/financial-chart-custom-indicators' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 550px">
+    <iframe id="financial-chart-custom-indicators-iframe" src='{environment:demosBaseUrl}/charts/financial-chart-custom-indicators' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="financial-chart-custom-indicators-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
@@ -21,7 +21,7 @@ _language: ja
 
 <div class="divider--half"></div>
 
-`IgxFinancialChart` でカスタム財務指標を有効にするには、`customIndicatorNames` プロパティに名前を追加し、`applyCustomIndicators` イベントで計算を実行します。
+[`IgxFinancialChart`](/angular-apis/typescript/latest/classes/igxfinancialchart.html) でカスタム財務指標を有効にするには、`customIndicatorNames` プロパティに名前を追加し、`applyCustomIndicators` イベントで計算を実行します。
 
 以下のコード例は、2 つのカスタム インジケーターを設定して計算する方法を紹介します。単純移動平均 (SMA) およびランダム値を表示するインジケーターを使用します。
 
@@ -35,7 +35,7 @@ _language: ja
  </igx-financial-chart>
 ```
 
-```typescript
+```ts
     public applyCustomIndicators(event: { sender: any, args: FinancialChartCustomIndicatorArgs }) {
         if (event.args.index === 0) {
             const info: FinancialEventArgs = event.args.indicatorInfo;

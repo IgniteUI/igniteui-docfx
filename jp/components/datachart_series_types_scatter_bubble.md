@@ -7,13 +7,13 @@ _language: ja
 
 ## 散布図 - バブル シリーズ
 
-このトピックは、コード例を示して `IgxDataChart` コントロールで散布 `BubbleSeries` 使用する方法を説明します。このシリーズ
+このトピックは、コード例を示して [`IgxDataChart`](/angular-apis/typescript/latest/classes/igxdatachart.html) コントロールで散布 [`IgxBubbleSeriesComponent`](/angular-apis/typescript/latest/classes/igxbubbleseriescomponent.html) 使用する方法を説明します。このシリーズ
 データをプロットするためにデカルト座標系 (x, y) を使用する[散布図 - マーカーシリーズ](datachart_series_types_scatter_marker.md) に似ています。このシリーズはスケールされたバブルの集まりとしてデータを表示します。それぞれがその位置を決定する一対の数値X / Y値とそのサイズを決定する 3 番目の値を持ちます。
 
 ### デモ
 
-<div class="sample-container" style="height: 500px">
-    <iframe id="data-chart-type-scatter-series-iframe" src='{environment:demosBaseUrl}/charts/data-chart-type-scatter-series' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 500px">
+    <iframe id="data-chart-type-scatter-series-iframe" src='{environment:demosBaseUrl}/charts/data-chart-type-scatter-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-type-scatter-series-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
@@ -24,19 +24,19 @@ _language: ja
 
 ### 軸の要件
 
-`IgxDataChart` コントロールにはさまざまな種類の軸がありますが、`BubbleSeries` では `IgxNumericYAxisComponent` と `IgxNumericYAxisComponent` のみ使用できます。
+[`IgxDataChart`](/angular-apis/typescript/latest/classes/igxdatachart.html) コントロールにはさまざまな種類の軸がありますが、[`IgxBubbleSeriesComponent`](/angular-apis/typescript/latest/classes/igxbubbleseriescomponent.html) では [`IgxNumericYAxisComponent`](/angular-apis/typescript/latest/classes/igxnumericyaxiscomponent.html) と [`IgxNumericYAxisComponent`](/angular-apis/typescript/latest/classes/igxnumericyaxiscomponent.html) のみ使用できます。
 
 ### データの要件
 
-`BubbleSeries` には以下のデータ要件があります。
+[`IgxBubbleSeriesComponent`](/angular-apis/typescript/latest/classes/igxbubbleseriescomponent.html) には以下のデータ要件があります。
 
 -   データソースはデータ項目の配列またはリストである必要があります。
 -   データソースはデータ項目を少なくとも 1 つ含む必要があります。含まない場合はチャートに散布シェイプ シリーズを描画しません。
--   すべてのデータ項目には、`XMemberPath`、`YMemberPath`、`RadiusMemberPath` プロパティにマップされる 3 つの数値データ列を含める必要があります。
+-   すべてのデータ項目には、`XMemberPath`、`YMemberPath`、[`radiusMemberPath`](/angular-apis/typescript/latest/classes/igxbubbleseriescomponent.html#radiusmemberpath) プロパティにマップされる 3 つの数値データ列を含める必要があります。
 
 上記データ要件を満たすデータソースとして [SamplePolarData](datachart_data_sources_stats.md) を使用できます。
 
-```typescript
+```ts
 this.state = { dataSource: SampleScatterStats.getCountries() }
 ```
 
@@ -44,7 +44,7 @@ this.state = { dataSource: SampleScatterStats.getCountries() }
 
 散布バブル シリーズは以下のモジュールを要求します。
 
-```typescript
+```ts
 // axis' modules:
 import { IgxNumericYAxis } from "igniteui-angular-charts/ES5/igx-numeric-y-axis";
 import { IgxNumericXAxis } from "igniteui-angular-charts/ES5/igx-numeric-x-axis";
@@ -56,7 +56,7 @@ import { IgxCustomPaletteBrushScale } from "igniteui-angular-charts/ES5/igx-cust
 import { BrushSelectionMode } from "igniteui-angular-charts/ES5/BrushSelectionMode";
 import { MarkerType } from "igniteui-angular-charts/ES5/MarkerType";
 // data chart's modules:
-import { IgxDataChartModule } from 'igniteui-angular-charts/ES5/igx-data-chart-module';
+import { IgxDataChartModule } from "igniteui-angular-charts/ES5/igx-data-chart-module";
 import { IgxDataChartCoreModule } from "igniteui-angular-charts/ES5/igx-data-chart-core-module";
 import { IgxDataChartScatterCoreModule } from "igniteui-angular-charts/ES5/igx-data-chart-scatter-core-module";
 import { IgxDataChartScatterModule } from "igniteui-angular-charts/ES5/igx-data-chart-scatter-module";
@@ -75,23 +75,24 @@ export class AppModule { /* ... */ }
 
 ### コード例
 
-このコードは、`BubbleSeries` でデータチャートのインスタンスを作成し、データソースにバインドする方法を説明します。
+このコードは、[`IgxBubbleSeriesComponent`](/angular-apis/typescript/latest/classes/igxbubbleseriescomponent.html) でデータチャートのインスタンスを作成し、データソースにバインドする方法を説明します。
 
 ```html
  <igx-data-chart
     [dataSource]="dataSource"
     width="700px"
     height="500px">
-    <igx-numeric-x-axis name="xAxis" isLogarithmic="true" />
-    <igx-numeric-y-axis name="yAxis" isLogarithmic="true" />
+    <igx-numeric-x-axis name="xAxis" isLogarithmic="true"></igx-numeric-x-axis>
+    <igx-numeric-y-axis name="yAxis" isLogarithmic="true"></igx-numeric-y-axis>
 
     <igx-bubble-series
-     name="series1"
-     xAxisName="xAxis"
-     yAxisName="yAxis"
-     xMemberPath="Population"
-     yMemberPath="GdpTotal"
-     radiusMemberPath="GdpPerCapita" />
+        name="series1"
+        xAxisName="xAxis"
+        yAxisName="yAxis"
+        xMemberPath="Population"
+        yMemberPath="GdpTotal"
+        radiusMemberPath="GdpPerCapita">
+    </igx-bubble-series>
  </igx-data-chart>
 ```
 
@@ -104,20 +105,20 @@ BubbleSeries  の外観は、[Markers](datachart_series_markers.md) プロパテ
  name="series1"
  markerType="Square"
  markerBrush="White"
- markerOutline="Blue"
-/>
+ markerOutline="Blue">
+</igx-bubble-series>
 ```
 
 ### バブル半径スケール
 
-`RadiusScale` は、バブルのサイズを決定する BubbleSeries のオプション機能です。この機能は、`SizeScale` オブジェクトを介して実装できます。半径スケールが設定されると、最小のバブルは `MinimumValue` と等しくなり、最大のバブルは `MaximumValue` と等しくなり、すべての残りのバブルはそれに応じて拡大/縮小されます。サイズ スケールはリニアと対数のどちらでもかまいません。半径スケールが設定されていない場合、各バブルのサイズは `RadiusMemberPath` プロパティにマップされたデータ列の値と等しくなります。
+[`radiusScale`](/angular-apis/typescript/latest/classes/igxbubbleseriescomponent.html#radiusscale) は、バブルのサイズを決定する BubbleSeries のオプション機能です。この機能は、[`IgxSizeScaleComponent`](/angular-apis/typescript/latest/classes/igxsizescalecomponent.html) オブジェクトを介して実装できます。半径スケールが設定されると、最小のバブルは [`minimumValue`](/angular-apis/typescript/latest/classes/igxsizescalecomponent.html#minimumvalue) と等しくなり、最大のバブルは [`maximumValue`](/angular-apis/typescript/latest/classes/igxsizescalecomponent.html#maximumvalue) と等しくなり、すべての残りのバブルはそれに応じて拡大/縮小されます。サイズ スケールはリニアと対数のどちらでもかまいません。半径スケールが設定されていない場合、各バブルのサイズは `RadiusMemberPath` プロパティにマップされたデータ列の値と等しくなります。
 
 ### バブル塗りつぶしスケール
 
-`FillScale` は、単一の `BubbleSeries` 内のカラーパターンを決定するオプション機能です。このシリーズは、以下の塗りつぶしスケールをサポートします。
+`FillScale` は、単一の [`IgxBubbleSeriesComponent`](/angular-apis/typescript/latest/classes/igxbubbleseriescomponent.html) 内のカラーパターンを決定するオプション機能です。このシリーズは、以下の塗りつぶしスケールをサポートします。
 
--   `ValueBrushScale` は、`FillMemberPath` プロパティにマップされたデータ列の値のセットを使用して、バブルの補間ブラシを決定します。またユーザー指定の `MinimumValue` や `MaximumValue` を持つこともできます。このスケールで範囲が設定されると、範囲外になる値を持つバブルが `Brushes` コレクションからブラシを取得せずに、色も付けられません。
--   `CustomPaletteBrushScale` は、`Brushes` コレクションからブラシを選択するバブル マーカーのインデックスを使用します。`BrushSelectionMode` プロパティが `Select` enumerable値に設定されている場合、バブルは順番に色付けされ、`Interpolate` に設定されます。ブラシは、バブルのインデックスとコレクション内のブラシの数に基づいて補間されます。
+-   [`IgxValueBrushScaleComponent`](/angular-apis/typescript/latest/classes/igxvaluebrushscalecomponent.html) は、`FillMemberPath` プロパティにマップされたデータ列の値のセットを使用して、バブルの補間ブラシを決定します。またユーザー指定の [`minimumValue`](/angular-apis/typescript/latest/classes/igxvaluebrushscalecomponent.html#minimumvalue) や [`maximumValue`](/angular-apis/typescript/latest/classes/igxvaluebrushscalecomponent.html#maximumvalue) を持つこともできます。このスケールで範囲が設定されると、範囲外になる値を持つバブルが `Brushes` コレクションからブラシを取得せずに、色も付けられません。
+-   [`IgxCustomPaletteBrushScaleComponent`](/angular-apis/typescript/latest/classes/igxcustompalettebrushscalecomponent.html) は、`Brushes` コレクションからブラシを選択するバブル マーカーのインデックスを使用します。[`brushSelectionMode`](/angular-apis/typescript/latest/classes/igxcustompalettebrushscalecomponent.html#brushselectionmode) プロパティが `Select` enumerable値に設定されている場合、バブルは順番に色付けされ、`Interpolate` に設定されます。ブラシは、バブルのインデックスとコレクション内のブラシの数に基づいて補間されます。
 
 ### その他のリソース
 
