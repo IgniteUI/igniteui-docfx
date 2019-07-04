@@ -19,6 +19,9 @@
     - name: Angular Events
       href: general/wpf_to_angular_guide/angular_events.md
       new: false
+    - name: Transforming Data with Angular Pipes
+      href: general/wpf_to_angular_guide/angular_pipes.md
+      new: false
 - name: Grids & Lists
   href: grids_and_lists.md
   header: true
