@@ -299,6 +299,199 @@ If you want the buttons to be part of the keyboard navigation, then each on of t
 </ng-template>
  ```
 
+### Styling
+
+Using the [IgniteUI theme engine](../themes/index.md), we can greatly alter the row-editing overlay. 
+In the below steps, we'll go through the process of changing the look of our row-editing banner by passing custom templates for with the `igxRowEditActions` and `igxRowEditText` directives and making use of the [`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme), [`igx-banner-theme`]({environment:sassApiUrl}/index.html#function-igx-banner-theme), [`igx-input-group-theme`]({environment:sassApiUrl}/index.html#function-igx-input-group-theme) and [`igx-button-theme`]({environment:sassApiUrl}/index.html#function-igx-button-theme).
+
+#### Passing custom templates
+
+The first thing we can do is pass our custom buttons and banner text in the component's template:
+
+```html
+<!-- in component.html -->
+<@@igSelector>
+    ...
+    <ng-template igxRowEditText let-rowChangesCount>
+        <span class="changes"> Changes: {{rowChangesCount}}</span>
+    </ng-template>
+    ...
+    <ng-template igxRowEditActions let-endRowEdit>
+        <span class="custom-failure">
+            <button igxButton="icon" class="custom-button" igxRowEditTabStop (click)="endRowEdit(false)">
+                <igx-icon>clear</igx-icon>
+            </button>
+        </span>
+        <span class="custom-success">
+            <button igxButton="icon" class="custom-button" igxRowEditTabStop (click)="endRowEdit(true)">
+                <igx-icon>check</igx-icon>
+            </button>
+        </span>
+    </ng-template>
+    ...
+</@@igSelector>
+```
+
+With this quick adjustment, our buttons will now be **X** and **✔** instead of **Dismiss** and **Done**. 
+Now that we've added the custom templates, it's time for the theme engine to do some heavy lifting.
+
+#### Import theme
+
+In order for us to use the funcitons exposed by the theme engine, we need to import the `index` file in our style file: 
+
+```scss
+// in component.scss
+@import '~igniteui-angular/lib/core/styles/themes/index';
+```
+
+#### Define colors
+
+After we've imported the `index` file we can go ahead and use the [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) and [`igx-contrast-color`]({environment:sassApiUrl}/index.html#function-igx-contrast-color) functions to define some color variables:
+```scss
+$banner-color: igx-color($default-palette, "primary", 400);
+$editing-color: igx-contrast-color($default-palette, "primary", 200);
+$success: igx-color($default-palette, "success", 500);
+$failure: igx-color($default-palette, "error", 500);
+```
+All of the colors are based off of the [`$default-palette`]({environment:sassApiUrl}/index.html#variable-default-palette) - the default palette exposed by the igx-theme.
+
+We'll use the colors as follows:
+    - `$banner-color` - this will be the color we will use for the background of the row-editing overlay
+    - `$editing-color` - we'll use this to change the background on the edited cell
+    - `$success`, `$failure` - we'll generate a palette out of these and use it to style the buttons in the banner
+
+#### Define palette & themes
+
+Next, we can define our custom palette (for the buttons) and our custom themes which we would like to use. (You can learn more about palettes [here](../themes/palette.md))
+
+To define the palette, we make use of the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) function:
+
+```scss
+$my-success-error-palette: igx-palette($primary: $success, $secondary: $failure);
+```
+
+In order to style the cell's background color, all we have to do is define a theme that extends the `igx-grid-theme` and change the property of `cell-editing-backgroud`:
+```scss
+$custom-grid: igx-grid-theme(
+    $cell-editing-background: $editing-color
+);
+```
+
+This changes the background of the cell, but not the input *inside of* the cell. For that, we'll have to use `igx-input-group-theme` function:
+```scss
+$input-group: igx-input-group-theme(
+  $filled-text-color: $editing-color,
+  $focused-text-color: $editing-color,
+  $idle-text-color: $editing-color
+);
+```
+
+Our custom grid and input-group themes will take care of the editing parts in the grid.
+Now, all that's left is to define two more themes to style the row-editing overlay. The overlay itself is composed of a banner (the background-part) and the custom text and buttons we passed.
+To style the banner, we'll create a custom banner theme and scope it to the overlay container:
+```scss
+$banner-theme: igx-banner-theme(
+    $banner-background: igx-color($default-palette, "primary", 100),
+    $banner-message-color: igx-contrast($default-palette, "primary", 100),
+    $banner-border-color: igx-color($default-palette, "second", 800)
+);
+```
+
+For the buttons, we'll need to create two themes - since we want the buttons to be different from one another and to have either a red or green highlight (for `dismiss` and `done`, resp.):
+```scss
+$button-theme-success: igx-button-theme(
+    $icon-color: igx-contrast($my-success-error-palette, "primary", 200),
+    $icon-hover-color: igx-contrast($my-success-error-palette, "primary", 600),
+    $icon-focus-color: igx-contrast($my-success-error-palette, "primary", 300),
+    $icon-background: igx-color($my-success-error-palette, "primary", 200),
+    $icon-hover-background: igx-color($my-success-error-palette, "primary", 600),
+    $icon-focus-background: igx-color($my-success-error-palette, "primary", 300)
+);
+$button-theme-failure: igx-button-theme(
+    $icon-color: igx-contrast($my-success-error-palette, "secondary", 200),
+    $icon-hover-color: igx-contrast($my-success-error-palette, "secondary", 600),
+    $icon-focus-color: igx-contrast($my-success-error-palette, "secondary", 300),
+    $icon-background: igx-color($my-success-error-palette, "secondary", 200),
+    $icon-hover-background: igx-color($my-success-error-palette, "secondary", 600),
+    $icon-focus-background: igx-color($my-success-error-palette, "secondary", 300)
+);
+```
+
+To define the two themes, we use the custom palette we created earlier, since the `igx-palette` function conveniently creates color shades for us to use!
+
+#### Applying
+
+All that's left is to properly scope our newly created themes to our component.
+For the buttons, we can use our class selector that we added earlier, in the [templates](#passing-custom-templates) section
+
+```scss
+.custom-failure {
+    @include igx-button($button-theme-failure);
+  }
+
+.custom-success {
+    @include igx-button($button-theme-success);
+  }
+```
+
+As for input, grid and banner themes, we pass them under the context of our sample component:
+```scss
+.sample-wrapper {
+    @include igx-grid($custom-grid);
+    @include igx-input-group($input-group);
+    @include igx-banner($banner-theme);
+}
+```
+>[!NOTE]
+ >If the component is using an [`Emulated ViewEncapsulation`](../themes/component-themes.md#view-encapsulation), it is necessary to penetrate this encapsulation using `::ng-deep`:
+ ```scss
+    ::ng-deep {
+        .sample-wrapper {
+            @include igx-grid($custom-grid);
+            @include igx-input-group($input-group);
+            @include igx-banner($banner-theme);
+        }
+    }
+```
+
+#### Demo
+
+@@if (igxName === 'IgxGrid'){
+<div class="sample-container loading" style="height:560px">
+    <iframe id="grid-row-edit-style-iframe" src='{environment:demosBaseUrl}/grid/grid-row-edit-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-row-edit-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
+}
+
+@@if (igxName === 'IgxHierarchicalGrid'){
+<div class="sample-container loading" style="height:560px">
+    <iframe id="hierarchical-grid-row-edit-style-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-row-edit-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
+<br/>  
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="hierarchical-grid-row-edit-style-iframe" 
+        data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz
+    </button>
+</div>
+}
+
+
+@@if (igxName === 'IgxTreeGrid'){
+<div class="sample-container loading" style="height:560px">
+    <iframe id="treegrid-row-edit-style-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-row-edit-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
+<br/>  
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="treegrid-row-edit-style-iframe" 
+        data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz
+    </button>
+</div>
+}
+
 ### API References
 
 * [rowEditable]({environment:angularApiUrl}/classes/@@igTypeDoc.html#roweditable)
