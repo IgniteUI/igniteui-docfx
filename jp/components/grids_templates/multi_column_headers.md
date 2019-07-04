@@ -1,26 +1,26 @@
 ﻿@@if (igxName === 'IgxGrid') {
 ---
-title: Angular Multi Column Headers | Ignite UI for Angular | Infragistics
-_description: Start to group column headers by placing them under a common hierarchical header with the help of Ignite UI Material UI grid and combine them into multi headers
+title: Angular 複数列ヘッダー | Ignite UI for Angular | Infragistics
+_description: Ignite UI Material UI グリッドを使用して列ヘッダーを共通の階層ヘッダーの下に配置し、それらを複数のヘッダーに結合することで、列ヘッダーのグループ化を開始します。
 _keywords: column headers, ignite ui for angular, infragistics
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular Multi Column Headers | Ignite UI for Angular | Infragistics
-_description: Start to group column headers by placing them under a common hierarchical header with the help of Ignite UI Material UI grid and combine them into multi headers
+title: Angular 複数列ヘッダー | Ignite UI for Angular の | Infragistics
+_description: Ignite UI Material UI グリッドを使用して列ヘッダーを共通の階層ヘッダーの下に配置し、それらを複数のヘッダーに結合することで、列ヘッダーのグループ化を開始します。
 _keywords: column headers, ignite ui for angular, infragistics
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular Multi Column Headers | Ignite UI for Angular | Infragistics
-_description: Start to group column headers by placing them under a common hierarchical header with the help of Ignite UI Material UI grid and combine them into multi headers
-_keywords: column headers, ignite ui for angular, infragistics
+title: Angular 複数列ヘッダー | Ignite UI for Angular | Infragistics
+_description: Ignite UI Material UI グリッドを使用して列ヘッダーを共通の階層ヘッダーの下に配置し、それらを複数のヘッダーに結合することで、列ヘッダーのグループ化を開始します。
+_keywords: 列ヘッダー, ignite ui for angular, infragistics
 ---
 }
 
-### @@igComponent Multi Column Headers Overview
+### @@igComponent 複数列ヘッダーの概要
 
 [`@@igxName`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) supports `multi-column headers` which allows you to group columns by placing them under a common multi headers. Each multi column headers group could be a representation of combinations between other groups or columns within the Material UI grid.
 
