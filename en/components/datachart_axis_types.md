@@ -27,22 +27,22 @@ The Angular data chart component supports various types of axis that are intende
 
 | Axis Type          | Supported Series Types                                                                                                                                                                                                                                                            |
 | ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| CategoryYAxis      | only [`IgxBarSeriesComponent`](/angular-apis/typescript/latest/classes/igxbarseriescomponent.html) in [Category Series](datachart_series_types_category.md) group                                                                                                                 |
-| CategoryXAxis      | all [Financial Series](datachart_series_types_financial.md), [Range Series](datachart_series_types_range.md),  [Category Series](datachart_series_types_category.md) (except [`IgxBarSeriesComponent`](/angular-apis/typescript/latest/classes/igxbarseriescomponent.html))       |
-| TimeXAxis          | all [Financial Series](datachart_series_types_financial.md), [Range Series](datachart_series_types_range.md),  [Category Series](datachart_series_types_category.md) (except [`IgxBarSeriesComponent`](/angular-apis/typescript/latest/classes/igxbarseriescomponent.html))       |
-| OrdinalTimeXAxis   | all [Financial Series](datachart_series_types_financial.md), [Range Series](datachart_series_types_range.md),  [Category Series](datachart_series_types_category.md) (except [`IgxBarSeriesComponent`](/angular-apis/typescript/latest/classes/igxbarseriescomponent.html))       |
+| CategoryYAxis      | only [`IgxBarSeriesComponent`](/components/datachart_axis_types.html) in [Category Series](datachart_series_types_category.md) group                                                                                                                 |
+| CategoryXAxis      | all [Financial Series](datachart_series_types_financial.md), [Range Series](datachart_series_types_range.md),  [Category Series](datachart_series_types_category.md) (except [`IgxBarSeriesComponent`](/components/datachart_axis_types.html))       |
+| TimeXAxis          | all [Financial Series](datachart_series_types_financial.md), [Range Series](datachart_series_types_range.md),  [Category Series](datachart_series_types_category.md) (except [`IgxBarSeriesComponent`](/components/datachart_axis_types.html))       |
+| OrdinalTimeXAxis   | all [Financial Series](datachart_series_types_financial.md), [Range Series](datachart_series_types_range.md),  [Category Series](datachart_series_types_category.md) (except [`IgxBarSeriesComponent`](/components/datachart_axis_types.html))       |
 | PercentChangeYAxis | all [Financial Series](datachart_series_types_financial.md), [Range Series](datachart_series_types_range.md), [Category Series](datachart_series_types_category.md), [Scatter Series](datachart_series_types_scatter_bubble.md), [Shape Series](datachart_series_types_shape.md)  |
 | NumericYAxis       | all [Scatter Series](datachart_series_types_scatter_bubble.md), [Shape Series](datachart_series_types_shape.md), [Financial Series](datachart_series_types_financial.md), [Range Series](datachart_series_types_range.md), [Category Series](datachart_series_types_category.md)  |
-| NumericXAxis       | all [Scatter Series](datachart_series_types_scatter_bubble.md), [Shape Series](datachart_series_types_shape.md), and [`IgxBarSeriesComponent`](/angular-apis/typescript/latest/classes/igxbarseriescomponent.html) in [Category Series](datachart_series_types_category.md) group |
+| NumericXAxis       | all [Scatter Series](datachart_series_types_scatter_bubble.md), [Shape Series](datachart_series_types_shape.md), and [`IgxBarSeriesComponent`](/components/datachart_axis_types.html) in [Category Series](datachart_series_types_category.md) group |
 | NumericAngleAxis   | all [Polar Series](datachart_series_types_polar.md)                                                                                                                                                                                                                               |
 | NumericRadiusAxis  | all [Polar Series](datachart_series_types_polar.md) and [Radial Series](datachart_series_types_radial.md)                                                                                                                                                                         |
 | CategoryAngleAxis  | all  [Radial Series](datachart_series_types_radial.md)                                                                                                                                                                                                                            |
 
 ### Category X Axis
 
-The [`IgxCategoryXAxisComponent`](/angular-apis/typescript/latest/classes/igxcategoryxaxiscomponent.html) treats the data as a sequence of category data items. Labels on this axis are placed along the X-Axis, according to their position in the sequence. This type of axis can display almost any type of data including strings and numbers. This type of axis is compatible with the [Financial Series](datachart_series_types_financial.md), [Range Series](datachart_series_types_range.md),  and [Category Series](datachart_series_types_category.md) (except [`IgxBarSeriesComponent`](/angular-apis/typescript/latest/classes/igxbarseriescomponent.html))
+The [`IgxCategoryXAxisComponent`](/components/datachart_axis_types.html) treats the data as a sequence of category data items. Labels on this axis are placed along the X-Axis, according to their position in the sequence. This type of axis can display almost any type of data including strings and numbers. This type of axis is compatible with the [Financial Series](datachart_series_types_financial.md), [Range Series](datachart_series_types_range.md),  and [Category Series](datachart_series_types_category.md) (except [`IgxBarSeriesComponent`](/components/datachart_axis_types.html))
 
-The following code snippet demonstrates how to add a [`IgxCategoryXAxisComponent`](/angular-apis/typescript/latest/classes/igxcategoryxaxiscomponent.html) to the Angular data chart component:
+The following code snippet demonstrates how to add a [`IgxCategoryXAxisComponent`](/components/datachart_axis_types.html) to the Angular data chart component:
 
 ```html
 <igx-data-chart [dataSource]="data"
@@ -54,9 +54,9 @@ The following code snippet demonstrates how to add a [`IgxCategoryXAxisComponent
 
 ### Category Y Axis
 
-The [`IgxCategoryYAxisComponent`](/angular-apis/typescript/latest/classes/igxcategoryyaxiscomponent.html) treats the data as a sequence of category data items. Labels on this axis are placed along the Y-Axis, according to their position in the sequence. This type of axis can display almost any type of data including strings and numbers. This type of axis is compatible only with [`IgxBarSeriesComponent`](/angular-apis/typescript/latest/classes/igxbarseriescomponent.html) within the [Category Series](datachart_series_types_category.md) group.
+The [`IgxCategoryYAxisComponent`](/components/datachart_axis_types.html) treats the data as a sequence of category data items. Labels on this axis are placed along the Y-Axis, according to their position in the sequence. This type of axis can display almost any type of data including strings and numbers. This type of axis is compatible only with [`IgxBarSeriesComponent`](/components/datachart_axis_types.html) within the [Category Series](datachart_series_types_category.md) group.
 
-The following code snippet demonstrates how to add a [`IgxCategoryYAxisComponent`](/angular-apis/typescript/latest/classes/igxcategoryyaxiscomponent.html) to the data chart component:
+The following code snippet demonstrates how to add a [`IgxCategoryYAxisComponent`](/components/datachart_axis_types.html) to the data chart component:
 
 ```html
 <igx-data-chart [dataSource]="data"
@@ -68,10 +68,10 @@ The following code snippet demonstrates how to add a [`IgxCategoryYAxisComponent
 
 ### Category DateTime X Axis
 
-The [`IgxCategoryDateTimeXAxisComponent`](/angular-apis/typescript/latest/classes/igxcategorydatetimexaxiscomponent.html) Axis treats the data as a sequence of category data items that are sorted by date. Labels on this axis are placed along the X-Axis, according to the value in a data column that is mapped using the [`dateTimeMemberPath`](/angular-apis/typescript/latest/classes/igxtimeaxisbasecomponent.html#datetimememberpath) property of this axis. Also in order to display the formatted labels you can use the ‘FormatLabel’ event.
-This type of axis is compatible with the [Financial Series](datachart_series_types_financial.md), [Range Series](datachart_series_types_range.md), and [Category Series](datachart_series_types_category.md) (except [`IgxBarSeriesComponent`](/angular-apis/typescript/latest/classes/igxbarseriescomponent.html))
+The [`IgxCategoryDateTimeXAxisComponent`](/components/datachart_axis_types.html) Axis treats the data as a sequence of category data items that are sorted by date. Labels on this axis are placed along the X-Axis, according to the value in a data column that is mapped using the [`dateTimeMemberPath`](/components/datachart_axis_types.html) property of this axis. Also in order to display the formatted labels you can use the ‘FormatLabel’ event.
+This type of axis is compatible with the [Financial Series](datachart_series_types_financial.md), [Range Series](datachart_series_types_range.md), and [Category Series](datachart_series_types_category.md) (except [`IgxBarSeriesComponent`](/components/datachart_axis_types.html))
 
-The following code snippet demonstrates how to add a [`IgxCategoryDateTimeXAxisComponent`](/angular-apis/typescript/latest/classes/igxcategorydatetimexaxiscomponent.html) to the Angular data chart component:
+The following code snippet demonstrates how to add a [`IgxCategoryDateTimeXAxisComponent`](/components/datachart_axis_types.html) to the Angular data chart component:
 
 ```html
 <igx-data-chart [dataSource]="data"
@@ -86,9 +86,9 @@ The following code snippet demonstrates how to add a [`IgxCategoryDateTimeXAxisC
 
 ### Numeric X Axis
 
-The [`IgxNumericXAxisComponent`](/angular-apis/typescript/latest/classes/igxnumericxaxiscomponent.html) treats the data as continously varying numerical data items. Labels on this axis are placed along the X-Axis. Location of labels varies according to the value in a data column that is mapped using their corresponding value-mapping properties. This type of axis is compatible with the [Scatter Series](datachart_series_types_scatter_bubble.md) and [Shape Series](datachart_series_types_shape.md) types. Also, this axis is compatible with the [`IgxBarSeriesComponent`](/angular-apis/typescript/latest/classes/igxbarseriescomponent.html) type of [Category Series](datachart_series_types_category.md), in which the `ValueMemberPath` property will be used to map the data column.
+The [`IgxNumericXAxisComponent`](/components/datachart_axis_types.html) treats the data as continously varying numerical data items. Labels on this axis are placed along the X-Axis. Location of labels varies according to the value in a data column that is mapped using their corresponding value-mapping properties. This type of axis is compatible with the [Scatter Series](datachart_series_types_scatter_bubble.md) and [Shape Series](datachart_series_types_shape.md) types. Also, this axis is compatible with the [`IgxBarSeriesComponent`](/components/datachart_axis_types.html) type of [Category Series](datachart_series_types_category.md), in which the `ValueMemberPath` property will be used to map the data column.
 
-The following code snippet demonstrates how to add a [`IgxNumericXAxisComponent`](/angular-apis/typescript/latest/classes/igxnumericxaxiscomponent.html) to the Angular data chart component:
+The following code snippet demonstrates how to add a [`IgxNumericXAxisComponent`](/components/datachart_axis_types.html) to the Angular data chart component:
 
 ```html
 <igx-data-chart [dataSource]="data"
@@ -100,9 +100,9 @@ The following code snippet demonstrates how to add a [`IgxNumericXAxisComponent`
 
 ### Numeric Y Axis
 
-The [`IgxNumericYAxisComponent`](/angular-apis/typescript/latest/classes/igxnumericyaxiscomponent.html) treats the data as continuously varying numerical data items. Labels on this axis are placed along the Y-axis. Location of labels varies according to the value in a data column that is mapped using their corresponding value-mapping properties. This type of axis is compatible with the [Scatter Series](datachart_series_types_scatter_bubble.md) and [Shape Series](datachart_series_types_shape.md) types. Also, this axis is compatible with [Financial Series](datachart_series_types_financial.md), [Range Series](datachart_series_types_range.md), and [Category Series](datachart_series_types_category.md) types (except [`IgxBarSeriesComponent`](/angular-apis/typescript/latest/classes/igxbarseriescomponent.html)).
+The [`IgxNumericYAxisComponent`](/components/datachart_axis_types.html) treats the data as continuously varying numerical data items. Labels on this axis are placed along the Y-axis. Location of labels varies according to the value in a data column that is mapped using their corresponding value-mapping properties. This type of axis is compatible with the [Scatter Series](datachart_series_types_scatter_bubble.md) and [Shape Series](datachart_series_types_shape.md) types. Also, this axis is compatible with [Financial Series](datachart_series_types_financial.md), [Range Series](datachart_series_types_range.md), and [Category Series](datachart_series_types_category.md) types (except [`IgxBarSeriesComponent`](/components/datachart_axis_types.html)).
 
-The following code snippet demonstrates how to add a [`IgxNumericYAxisComponent`](/angular-apis/typescript/latest/classes/igxnumericyaxiscomponent.html) to the Angular data chart component:
+The following code snippet demonstrates how to add a [`IgxNumericYAxisComponent`](/components/datachart_axis_types.html) to the Angular data chart component:
 
 ```html
 <igx-data-chart [dataSource]="data"
@@ -114,11 +114,11 @@ The following code snippet demonstrates how to add a [`IgxNumericYAxisComponent`
 
 ### Time X Axis
 
-The [`IgxTimeXAxisComponent`](/angular-apis/typescript/latest/classes/igxtimexaxiscomponent.html) treats the data as a sequence of category data items that are sorted by date. Labels on this axis are placed along the X-Axis, according to the value in a data column that is mapped using the [`dateTimeMemberPath`](/angular-apis/typescript/latest/classes/igxtimeaxisbasecomponent.html#datetimememberpath) property of this axis. This type of axis is compatible with the [Financial Series](datachart_series_types_financial.md), [Range Series](datachart_series_types_range.md), and [Category Series](datachart_series_types_category.md) types.
+The [`IgxTimeXAxisComponent`](/components/datachart_axis_types.html) treats the data as a sequence of category data items that are sorted by date. Labels on this axis are placed along the X-Axis, according to the value in a data column that is mapped using the [`dateTimeMemberPath`](/components/datachart_axis_types.html) property of this axis. This type of axis is compatible with the [Financial Series](datachart_series_types_financial.md), [Range Series](datachart_series_types_range.md), and [Category Series](datachart_series_types_category.md) types.
 
-The [`IgxTimeXAxisComponent`](/angular-apis/typescript/latest/classes/igxtimexaxiscomponent.html) also supports the ability to exclude intervals of data with [`breaks`](/angular-apis/typescript/latest/classes/igxtimexaxiscomponent.html#breaks). As a result, labels will not appear at the excluded interval. For example, working/non-working days, holidays, or weekends.
+The [`IgxTimeXAxisComponent`](/components/datachart_axis_types.html) also supports the ability to exclude intervals of data with [`breaks`](/components/datachart_axis_types.html). As a result, labels will not appear at the excluded interval. For example, working/non-working days, holidays, or weekends.
 
-The following code snippet demonstrates how to add a [`IgxTimeXAxisComponent`](/angular-apis/typescript/latest/classes/igxtimexaxiscomponent.html) to the Angular data chart component:
+The following code snippet demonstrates how to add a [`IgxTimeXAxisComponent`](/components/datachart_axis_types.html) to the Angular data chart component:
 
 ```html
 <igx-data-chart [dataSource]="data"
@@ -130,9 +130,9 @@ The following code snippet demonstrates how to add a [`IgxTimeXAxisComponent`](/
 
 ### Ordinal Time X Axis
 
-The main difference between the [`IgxOrdinalTimeXAxisComponent`](/angular-apis/typescript/latest/classes/igxordinaltimexaxiscomponent.html) and the [`IgxTimeXAxisComponent`](/angular-apis/typescript/latest/classes/igxtimexaxiscomponent.html) is that in the ordinal axis, the dates displayed are assumed to be equidistant. The [`IgxTimeXAxisComponent`](/angular-apis/typescript/latest/classes/igxtimexaxiscomponent.html) currently sorts and aligns the dates according to a chronological timescale. Therefore, we recommend using [`IgxOrdinalTimeXAxisComponent`](/angular-apis/typescript/latest/classes/igxordinaltimexaxiscomponent.html) for better performance or when your data items are already in chronological order with the same time interval.
+The main difference between the [`IgxOrdinalTimeXAxisComponent`](/components/datachart_axis_types.html) and the [`IgxTimeXAxisComponent`](/components/datachart_axis_types.html) is that in the ordinal axis, the dates displayed are assumed to be equidistant. The [`IgxTimeXAxisComponent`](/components/datachart_axis_types.html) currently sorts and aligns the dates according to a chronological timescale. Therefore, we recommend using [`IgxOrdinalTimeXAxisComponent`](/components/datachart_axis_types.html) for better performance or when your data items are already in chronological order with the same time interval.
 
-The following code snippet demonstrates how to add a [`IgxOrdinalTimeXAxisComponent`](/angular-apis/typescript/latest/classes/igxordinaltimexaxiscomponent.html) to the Angular data chart component:
+The following code snippet demonstrates how to add a [`IgxOrdinalTimeXAxisComponent`](/components/datachart_axis_types.html) to the Angular data chart component:
 
 ```html
 <igx-data-chart [dataSource]="data"
@@ -144,11 +144,11 @@ The following code snippet demonstrates how to add a [`IgxOrdinalTimeXAxisCompon
 
 ### Percent Change Y Axis
 
-The [`IgxPercentChangeYAxisComponent`](/angular-apis/typescript/latest/classes/igxpercentchangeyaxiscomponent.html) works such that it takes the first point in your series as a reference value. Each value after the first value is scaled according to what percent increase or decrease it is compared to the reference value.
+The [`IgxPercentChangeYAxisComponent`](/components/datachart_axis_types.html) works such that it takes the first point in your series as a reference value. Each value after the first value is scaled according to what percent increase or decrease it is compared to the reference value.
 
-This axis type is based on [`IgxNumericYAxisComponent`](/angular-apis/typescript/latest/classes/igxnumericyaxiscomponent.html), and so will support the same series types. For [Category Series](datachart_series_types_category.md), the reference value will correspond to the `ValueMemberPath` for those series. For[Scatter Series](datachart_series_types_scatter_bubble.md), the reference value will correspond to the `YMemberPath` of those series. For [Financial Series](datachart_series_types_financial.md), the reference value will correspond to the first value mappted to `OpenMemberPath` property.
+This axis type is based on [`IgxNumericYAxisComponent`](/components/datachart_axis_types.html), and so will support the same series types. For [Category Series](datachart_series_types_category.md), the reference value will correspond to the `ValueMemberPath` for those series. For[Scatter Series](datachart_series_types_scatter_bubble.md), the reference value will correspond to the `YMemberPath` of those series. For [Financial Series](datachart_series_types_financial.md), the reference value will correspond to the first value mappted to `OpenMemberPath` property.
 
-The following code snippet demonstrates how to add a [`IgxPercentChangeYAxisComponent`](/angular-apis/typescript/latest/classes/igxpercentchangeyaxiscomponent.html) to the Angular data chart component:
+The following code snippet demonstrates how to add a [`IgxPercentChangeYAxisComponent`](/components/datachart_axis_types.html) to the Angular data chart component:
 
 ```html
 <igx-data-chart [dataSource]="data"

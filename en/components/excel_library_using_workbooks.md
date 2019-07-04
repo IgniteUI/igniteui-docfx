@@ -19,7 +19,7 @@ The Infragistics Angular Excel Engine enables you to save data to and load data 
 
 ### Change Default Font
 
-First create a new instance of [`IWorkbookFont`](/angular-apis/typescript/latest/classes/iworkbookfont.html). Next, add the new font to the `styles` collection of the [`Workbook`](/angular-apis/typescript/latest/classes/workbook.html). This style contains the default properties for all cells in the workbook, unless otherwise specified on a row, column, or cell. Changing properties of the style will change the default cell format properties in the workbook.
+First create a new instance of [`IWorkbookFont`](/components/excel_library_using_workbooks.html). Next, add the new font to the `styles` collection of the [`Workbook`](/components/excel_library_using_workbooks.html). This style contains the default properties for all cells in the workbook, unless otherwise specified on a row, column, or cell. Changing properties of the style will change the default cell format properties in the workbook.
 
 ```ts
 var workbook = new Workbook();
@@ -31,7 +31,7 @@ font.height = 16 * 20;
 
 ### Setting Workbook Properties
 
-Microsoft Excel® document properties provide information to help organize and keep track of your documents. You can use the Infragistics Angular Excel Library to set these properties using the [`Workbook`](/angular-apis/typescript/latest/classes/workbook.html) object’s `documentProperties` property. The available properties are:
+Microsoft Excel® document properties provide information to help organize and keep track of your documents. You can use the Infragistics Angular Excel Library to set these properties using the [`Workbook`](/components/excel_library_using_workbooks.html) object’s `documentProperties` property. The available properties are:
 
 -   `author`
 
@@ -67,11 +67,11 @@ The protection is not enforced via the Infragistics Excel Engine's object model.
 
 Protection is applied to a workbook by invoking its `protect` method.
 
-When a [`Workbook`](/angular-apis/typescript/latest/classes/workbook.html) is protected without a password, the end user may unprotect the [`Workbook`](/angular-apis/typescript/latest/classes/workbook.html) in Excel without having to supply a password. To programatically unprotect a [`Workbook`](/angular-apis/typescript/latest/classes/workbook.html), one may use the `unprotect` method.
+When a [`Workbook`](/components/excel_library_using_workbooks.html) is protected without a password, the end user may unprotect the [`Workbook`](/components/excel_library_using_workbooks.html) in Excel without having to supply a password. To programatically unprotect a [`Workbook`](/components/excel_library_using_workbooks.html), one may use the `unprotect` method.
 
-When a [`Workbook`](/angular-apis/typescript/latest/classes/workbook.html) is protected, the values of the properties of the [`WorkbookProtection`](/angular-apis/typescript/latest/classes/workbookprotection.html) instance from this [`Workbook`](/angular-apis/typescript/latest/classes/workbook.html)'s `protection` property indicate the disabled operations.
+When a [`Workbook`](/components/excel_library_using_workbooks.html) is protected, the values of the properties of the [`WorkbookProtection`](/components/excel_library_using_workbooks.html) instance from this [`Workbook`](/components/excel_library_using_workbooks.html)'s `protection` property indicate the disabled operations.
 
-If [`isProtected`](/angular-apis/typescript/latest/classes/workbook.html#isprotected) is already true, the `protect` method will be ignored.
+If [`isProtected`](/components/excel_library_using_workbooks.html) is already true, the `protect` method will be ignored.
 
 ```ts
 var workbook = new Workbook();
