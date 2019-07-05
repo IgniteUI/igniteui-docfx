@@ -1,28 +1,31 @@
 ﻿@@if (igxName === 'IgxGrid') {
 ---
-title: Angular Multi Column Headers | Ignite UI for Angular | Infragistics
-_description: Start to group column headers by placing them under a common hierarchical header with the help of Ignite UI Material UI grid and combine them into multi headers
-_keywords: column headers, ignite ui for angular, infragistics
+title: Angular 複数列ヘッダー|Ignite UI for Angular |Infragistics
+_description: Ignite UI Material UI グリッドを使用して列ヘッダーを共通の階層ヘッダーの下に配置し、それらを複数のヘッダーに結合することで、列ヘッダーのグループ化を開始します。
+_keywords: column headers, ignite ui for angular, infragistics, 列ヘッダー,
+_language: ja
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular Multi Column Headers | Ignite UI for Angular | Infragistics
-_description: Start to group column headers by placing them under a common hierarchical header with the help of Ignite UI Material UI grid and combine them into multi headers
-_keywords: column headers, ignite ui for angular, infragistics
+title: Angular 複数列ヘッダー|Ignite UI for Angular |Infragistics
+_description: Ignite UI Material UI グリッドを使用して列ヘッダーを共通の階層ヘッダーの下に配置し、それらを複数のヘッダーに結合することで、列ヘッダーのグループ化を開始します。
+_keywords: column headers, ignite ui for angular, infragistics, 列ヘッダー,
+_language: ja
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular Multi Column Headers | Ignite UI for Angular | Infragistics
-_description: Start to group column headers by placing them under a common hierarchical header with the help of Ignite UI Material UI grid and combine them into multi headers
-_keywords: column headers, ignite ui for angular, infragistics
+title: Angular 複数列ヘッダー|Ignite UI for Angular |Infragistics
+_description: Ignite UI Material UI グリッドを使用して列ヘッダーを共通の階層ヘッダーの下に配置し、それらを複数のヘッダーに結合することで、列ヘッダーのグループ化を開始します。
+_keywords: column headers, ignite ui for angular, infragistics, 列ヘッダー,
+_language: ja
 ---
 }
 
-### @@igComponent Multi Column Headers Overview
+### @@igComponent 複数列ヘッダーの概要
 
-[`@@igxName`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) supports `multi-column headers` which allows you to group columns by placing them under a common multi headers. Each multi column headers group could be a representation of combinations between other groups or columns within the Material UI grid.
+[`@@igxName`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) は、共通の列ヘッダー下で行のグループ化が可能な`複数列ヘッダー`をサポートします。各複数列ヘッダーグループは、マテリアル UI グリッド内でその他複数のグループや列を組み合わせることができます。
 
 #### デモ
 
