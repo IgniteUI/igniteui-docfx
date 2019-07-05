@@ -1,14 +1,15 @@
 ---
-title: Map | Data Visualization Tools | Ignite UI for Angular | Data Utility | Infragistics
-_description: The Map allows you to display data that contains geographic locations from view models or geo-spatial data loaded from shape files on geographic imagery maps.View the demo, dependencies, usage and toolbar for more information.
-_keywords: map, Ignite UI for Angular, infragistics
+title: Map |データ可視化ツール|Ignite UI for Angular |データ ユーティリティ|Infragistics
+_description: Map コンポーネントは、ビュー モデルからの地理的位置を含むデータ、またはシェープ ファイルから地理的画像マップへ読み込んだ地理空間データを表示できます。
+_keywords: map, Ignite UI for Angular, infragistics, マップ,
+_language: ja
 ---
 
-## Esri Utility
+## Esri ユーティリティ
 
-The resource topic provides implementation of an utility that helps with using [`ArcGISOnlineMapImagery`](/angular-apis/typescript/latest/classes/arcgisonlinemapimagery.html) provided by Esri Maps in [`IgxGeographicMapComponent`](/angular-apis/typescript/latest/classes/igxgeographicmapcomponent.html).
+[`IgxGeographicMapComponent`](/components/map_resources_esri.html) で Esri Maps が提供する [`ArcGISOnlineMapImagery`](/components/map_resources_esri.html) を使用する際に役立つユーティリティの実装方法について示します。
 
-### Code Snippet
+### コード スニペット
 
 ```ts
 export class EsriUtility {

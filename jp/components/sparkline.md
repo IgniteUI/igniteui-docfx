@@ -54,11 +54,11 @@ export class AppModule {}
 $ ProductName $ スパークライン コンポーネントは、以下のスパークライン タイプをサポートしています。
 
 -   `Area`
--   [`IgxColumnComponent`](/angular-apis/typescript/latest/classes/igxcolumncomponent.html)
+-   [`IgxColumnComponent`](/components/sparkline.html)
 -   `Line`
 -   `Win/Loss`
 
-タイプは [`displayType`](/angular-apis/typescript/latest/classes/igxsparklinecomponent.html#displaytype) プロパティの設定により定義されます。[`displayType`](/angular-apis/typescript/latest/classes/igxsparklinecomponent.html#displaytype) プロパティが指定されていない場合は、既定では `Line` 型が表示されます。
+タイプは [`displayType`](/components/sparkline.html) プロパティの設定により定義されます。[`displayType`](/components/sparkline.html) プロパティが指定されていない場合は、既定では `Line` 型が表示されます。
 
 `Win/Loss` スパークライン タイプは、柱状のチャート タイプです。ここでは、各列の値はデータセットの正の最大値 (正の値の場合) または負の最小値 (負の値の場合) に等しくなり、多くの場合 Win または Loss  (または似たような相反する概念) を意味します。`Win/Loss` スパークラインを正しく表示するには、データセットには正の値と負の値が必要です。
 
@@ -94,7 +94,7 @@ Ignite UI for Angular スパークライン コンポーネントを使用する
 -   `終値`: スパークラインの最後のデータ ポイントにマーカーを表示します。
 -   `負数`: スパークラインにプロットされた負のデータ点にマーカーを表示します。
 
-上記のすべてのマーカーは、色、可視性、およびサイズの観点で関連マーカー タイプのプロパティを使用してカスタマイズできます。たとえば、上記の `Low` マーカーは、[`lowMarkerBrush`](/angular-apis/typescript/latest/classes/igxsparklinecomponent.html#lowmarkerbrush)、[`lowMarkerVisibility`](/angular-apis/typescript/latest/classes/igxsparklinecomponent.html#lowmarkervisibility)、[`lowMarkerSize`](/angular-apis/typescript/latest/classes/igxsparklinecomponent.html#lowmarkersize) の各プロパティを持ちます。
+上記のすべてのマーカーは、色、可視性、およびサイズの観点で関連マーカー タイプのプロパティを使用してカスタマイズできます。たとえば、上記の `Low` マーカーは、[`lowMarkerBrush`](/components/sparkline.html)、[`lowMarkerVisibility`](/components/sparkline.html)、[`lowMarkerSize`](/components/sparkline.html) の各プロパティを持ちます。
 
 ```html
 <igx-sparkline
@@ -128,11 +128,11 @@ Ignite UI for Angular スパークライン コンポーネントの通常の範
 
 通常の範囲は、最大データ ポイントよりも広い場合もあれば、それを超える場合もあります。また、しきい値インジケータとして機能するように、スパークラインの `Line` 表示タイプと同じ幅にすることもできます。正常範囲の幅は、正常範囲を表示するために最低限必要な以下の 3 つのプロパティによって決まります。
 
--   [`normalRangeVisibility`](/angular-apis/typescript/latest/classes/igxsparklinecomponent.html#normalrangevisibility): 標準範囲が表示されるかどうか。
--   [`normalRangeMaximum`](/angular-apis/typescript/latest/classes/igxsparklinecomponent.html#normalrangemaximum): 範囲の下境界線。
--   [`normalRangeMinimum`](/angular-apis/typescript/latest/classes/igxsparklinecomponent.html#normalrangeminimum): 範囲の上境界線。
+-   [`normalRangeVisibility`](/components/sparkline.html): 標準範囲が表示されるかどうか。
+-   [`normalRangeMaximum`](/components/sparkline.html): 範囲の下境界線。
+-   [`normalRangeMinimum`](/components/sparkline.html): 範囲の上境界線。
 
-既定では、標準範囲は表示されません。有効にすると、標準範囲は薄い灰色の外観で表示されますが、[`normalRangeFill`](/angular-apis/typescript/latest/classes/igxsparklinecomponent.html#normalrangefill) プロパティを使用して構成することもできます。
+既定では、標準範囲は表示されません。有効にすると、標準範囲は薄い灰色の外観で表示されますが、[`normalRangeFill`](/components/sparkline.html) プロパティを使用して構成することもできます。
 
 DisplayNormalRangeInFront プロパティを設定することで、スパークライン コンポーネントのプロットされたシリーズの前または後ろに標準範囲を表示するかどうかを設定することもできます。
 
@@ -157,9 +157,9 @@ DisplayNormalRangeInFront プロパティを設定することで、スパーク
 
 ### トレンドライン
 
-Ignite UI for Angular スパークライン コンポーネントは、実際のスパークライン レイヤーの上に別のレイヤーとして表示される一連のトレンドラインをサポートしています。近似曲線を表示するには、[`trendLineType`](/angular-apis/typescript/latest/classes/igxsparklinecomponent.html#trendlinetype) プロパティを使用します。
+Ignite UI for Angular スパークライン コンポーネントは、実際のスパークライン レイヤーの上に別のレイヤーとして表示される一連のトレンドラインをサポートしています。近似曲線を表示するには、[`trendLineType`](/components/sparkline.html) プロパティを使用します。
 
-近似曲線は、チャートがバインドされているデータの値を使用して、[`trendLineType`](/angular-apis/typescript/latest/classes/igxsparklinecomponent.html#trendlinetype) プロパティで指定されたアルゴリズムに従って計算されます。
+近似曲線は、チャートがバインドされているデータの値を使用して、[`trendLineType`](/components/sparkline.html) プロパティで指定されたアルゴリズムに従って計算されます。
 
 近似曲線は一度に 1 つだけ表示でき、デフォルトでは近似曲線は表示されません。
 
@@ -204,7 +204,7 @@ Ignite UI for Angular スパークライン コンポーネントは、実際の
 
 Ignite UI for Angular スパークライン コンポーネントは、不明な値を検出し、指定された補間アルゴリズムを介して不明な値のためのスペースを描画することができます。データに null 値が含まれていて、この機能を使用しない場合、つまり補間が指定されていない場合、不明な値はプロットされません。
 
-未知の値をプロットするために、スパークライン コンポーネントの [`unknownValuePlotting`](/angular-apis/typescript/latest/classes/igxsparklinecomponent.html#unknownvalueplotting) プロパティを設定することができます。
+未知の値をプロットするために、スパークライン コンポーネントの [`unknownValuePlotting`](/components/sparkline.html) プロパティを設定することができます。
 
 ```html
 <igx-sparkline

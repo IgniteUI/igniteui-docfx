@@ -1,15 +1,16 @@
 ---
-title: Spreadsheet | Grid Controls | Ignite UI for Angular | Hyperlinks | Infragistics |
-_description: Use the Spreadsheet control to embed Excel document creation and editing experiences right into your application.
+title: Spreadsheet | Grid コントロール | Ignite UI for Angular | ハイパーリンク | Infragistics |
+_description: スプレッドシート コントロールを使用して、Excel ドキュメントの作成と編集機能をアプリケーションに直接埋め込むことができます。
 _keywords: Spreadsheet, Ignite UI for Angular, Infragistics
 mentionedTypes: ['Spreadsheet']
+_language: ja
 ---
 
-## Spreadsheet Hyperlinks
+## Spreadsheet ハイパーリンク
 
-The Angular Spreadsheet component allows display of pre-existing hyperlinks in your Excel workbook as well as insertion of new ones that can link to websites, file directories, and even other worksheets in the workbook.
+$ PlatformShort$ Spreadsheet コンポーネントを使用すると、Excelワークブックに既存のハイパーリンクを表示したり、Webサイト、ファイルディレクトリ、およびワークブック内の他のワークシートにリンクできる新しいハイパーリンクを挿入したりできます。
 
-### Demo
+### デモ
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="spreadsheet-overview-sample-iframe" src='{environment:demosBaseUrl}/spreadsheet/spreadsheet-hyperlinks' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -17,25 +18,23 @@ The Angular Spreadsheet component allows display of pre-existing hyperlinks in y
 
 <div class="divider--half"></div>
 
-### Hyperlinks Overview
+### ハイパーリンク概要
 
-Hyperlinks are added to the [`IgxSpreadsheetComponent`](/angular-apis/typescript/latest/classes/igxspreadsheetcomponent.html) control by accessing the `Hyperlinks` collection on the worksheet that you want to place the hyperlink on. This collection has an `Add` method that takes a [`WorksheetHyperlink`](/angular-apis/typescript/latest/classes/worksheethyperlink.html) object, where you can define the cell address, the hyperlink URL to be navigated to, the display text, and a tooltip to optionally be displayed on hover.
+ハイパーリンクを配置するワークシートの `Hyperlinks` コレクションにアクセスすると、ハイパーリンクが `表計算、スプレッドシート` コントロールに追加されます。このコレクションには、[`WorksheetHyperlink`](/components/spreadsheet_hyperlinks.html) オブジェクトを受け取る `add` メソッドがあり、セル アドレス、移動先のハイパーリンク URL、表示テキスト、およびオプションでホバー時に表示するツールチップを定義できます。
 
-### Dependencies
+### 依存関係
 
-When setting up your spreadsheet control to use hyperlinks, you will need to import the [`WorksheetHyperlink`](/angular-apis/typescript/latest/classes/worksheethyperlink.html) class like so:
+ハイパーリンクを使用するようにスプレッドシート コントロールを設定するときは、[`WorksheetHyperlink`](/components/spreadsheet_hyperlinks.html) クラスをインポートする必要があります。
+
+<!-- Angular -->
 
 ```ts
 import { WorksheetHyperlink } from "igniteui-angular-excel/ES5/WorksheetHyperlink";
 ```
 
-```ts
-import { WorksheetHyperlink } from "igniteui-react-excel/ES5/WorksheetHyperlink";
-```
+### コード スニペット
 
-### Code Snippet
-
-The following code snippet demonstrates how to add a hyperlink to the currently viewed worksheet in the [`IgxSpreadsheetComponent`](/angular-apis/typescript/latest/classes/igxspreadsheetcomponent.html) control:
+次のコードスニペットは、[`IgxSpreadsheetComponent`](/components/spreadsheet_hyperlinks.html) コントロールで現在表示されているワークシートにハイパーリンクを追加する方法を示しています。
 
 ```ts
 this.spreadsheet.activeWorksheet.hyperlinks().add(new WorksheetHyperlink("A1", "http://www.infragistics.com", "Infragistics", "Infragistics Home Page"));

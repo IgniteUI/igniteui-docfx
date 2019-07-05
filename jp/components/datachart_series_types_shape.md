@@ -7,7 +7,7 @@ _language: ja
 
 ## 散布図 - 図形シリーズ
 
-このトピックは、[`IgxDataChart`](/angular-apis/typescript/latest/classes/igxdatachart.html) コントロールの図形シリーズのさまざまなタイプについて説明します。散布図シリーズは、一連の形状 (1 つまたは複数の X/Y 座標の配列) をとり、それらをデカルト (x、y) 座標系のポリゴン ([`IgxScatterPolygonSeriesComponent`](/angular-apis/typescript/latest/classes/igxscatterpolygonseriescomponent.html)) またはポリライン ([`IgxScatterPolylineSeriesComponent`](/angular-apis/typescript/latest/classes/igxscatterpolylineseriescomponent.html)) のコレクションとして描画するチャート シリーズのグループです。
+このトピックは、[`IgxDataChart`](/components/datachart_series_types_shape.html) コントロールの図形シリーズのさまざまなタイプについて説明します。散布図シリーズは、一連の形状 (1 つまたは複数の X/Y 座標の配列) をとり、それらをデカルト (x、y) 座標系のポリゴン ([`IgxScatterPolygonSeriesComponent`](/components/datachart_series_types_shape.html)) またはポリライン ([`IgxScatterPolylineSeriesComponent`](/components/datachart_series_types_shape.html)) のコレクションとして描画するチャート シリーズのグループです。
 
 散布図シリーズは科学データの強調領域でよく使用されますが、ダイアグラム、青写真、さらには建物の間取り図のプロットにも使用できます。
 
@@ -29,17 +29,17 @@ _language: ja
 
 | シリーズ名                                                                                                                 | 説明                                                                              |
 | --------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| [`IgxScatterPolygonSeriesComponent`](/angular-apis/typescript/latest/classes/igxscatterpolygonseriescomponent.html)   | `ShapeMemberPath` プロパティにマッピングされた各図形の多角形を表示します。国境などの図形をレンダリングするのに便利です。           |
-| [`IgxScatterPolylineSeriesComponent`](/angular-apis/typescript/latest/classes/igxscatterpolylineseriescomponent.html) | `ShapeMemberPath` プロパティにマッピングされた各図形のポリラインを表示します。ネットワークグラフのように断線をレンダリングするのに便利です。 |
+| [`IgxScatterPolygonSeriesComponent`](/components/datachart_series_types_shape.html)   | `ShapeMemberPath` プロパティにマッピングされた各図形の多角形を表示します。国境などの図形をレンダリングするのに便利です。           |
+| [`IgxScatterPolylineSeriesComponent`](/components/datachart_series_types_shape.html) | `ShapeMemberPath` プロパティにマッピングされた各図形のポリラインを表示します。ネットワークグラフのように断線をレンダリングするのに便利です。 |
 
 ### 軸の要件
 
-[`IgxDataChart`](/angular-apis/typescript/latest/classes/igxdatachart.html) コントロールはさまざまな軸タイプを提供しますが、ラジアル シリーズで使用できるのは以下のタイプの軸のみです。
+[`IgxDataChart`](/components/datachart_series_types_shape.html) コントロールはさまざまな軸タイプを提供しますが、ラジアル シリーズで使用できるのは以下のタイプの軸のみです。
 
 | シリーズ タイプ                                                                                                              | YAxis タイプ                                                                                           | XAxis タイプ                                                                                           |
 | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
-| [`IgxScatterPolygonSeriesComponent`](/angular-apis/typescript/latest/classes/igxscatterpolygonseriescomponent.html)   | [`IgxNumericYAxisComponent`](/angular-apis/typescript/latest/classes/igxnumericyaxiscomponent.html) | [`IgxNumericXAxisComponent`](/angular-apis/typescript/latest/classes/igxnumericxaxiscomponent.html) |
-| [`IgxScatterPolylineSeriesComponent`](/angular-apis/typescript/latest/classes/igxscatterpolylineseriescomponent.html) | [`IgxNumericYAxisComponent`](/angular-apis/typescript/latest/classes/igxnumericyaxiscomponent.html) | [`IgxNumericXAxisComponent`](/angular-apis/typescript/latest/classes/igxnumericxaxiscomponent.html) |
+| [`IgxScatterPolygonSeriesComponent`](/components/datachart_series_types_shape.html)   | [`IgxNumericYAxisComponent`](/components/datachart_series_types_shape.html) | [`IgxNumericXAxisComponent`](/components/datachart_series_types_shape.html) |
+| [`IgxScatterPolylineSeriesComponent`](/components/datachart_series_types_shape.html) | [`IgxNumericYAxisComponent`](/components/datachart_series_types_shape.html) | [`IgxNumericXAxisComponent`](/components/datachart_series_types_shape.html) |
 
 ### データの要件
 
@@ -47,7 +47,7 @@ _language: ja
 
 -   データソースはデータ項目の配列やリストである必要があります。
 -   データソースはデータ項目を少なくとも 1 つ含む必要があります。含まない場合はチャートに散布シェイプ シリーズを描画しません。
--   すべてのデータ項目には、スキャッタシェイプシリーズの `ShapeMemberPath` プロパティにマッピングする必要がある1つのシェイプデータ列（XまたはY座標の配列）を含める必要があります ([`IgxScatterPolygonSeriesComponent`](/angular-apis/typescript/latest/classes/igxscatterpolygonseriescomponent.html) など)
+-   すべてのデータ項目には、スキャッタシェイプシリーズの `ShapeMemberPath` プロパティにマッピングする必要がある1つのシェイプデータ列（XまたはY座標の配列）を含める必要があります ([`IgxScatterPolygonSeriesComponent`](/components/datachart_series_types_shape.html) など)
 
 上記データ要件を満たすデータソースとして [SampleShapeData](datachart_data_sources_shape.md) を使用できます。
 
@@ -105,7 +105,7 @@ export class AppModule { /* ... */ }
  </igx-data-chart>
 ```
 
-[`IgxScatterPolygonSeriesComponent`](/angular-apis/typescript/latest/classes/igxscatterpolygonseriescomponent.html) を置き換えることで [`IgxScatterPolylineSeriesComponent`](/angular-apis/typescript/latest/classes/igxscatterpolylineseriescomponent.html) を作成するために上記のコードを使用することもできます。
+[`IgxScatterPolygonSeriesComponent`](/components/datachart_series_types_shape.html) を置き換えることで [`IgxScatterPolylineSeriesComponent`](/components/datachart_series_types_shape.html) を作成するために上記のコードを使用することもできます。
 
 ### その他のリソース
 

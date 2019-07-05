@@ -7,7 +7,7 @@ _language: ja
 
 ## ハイライト
 
-このトピックでは、[`IgxCategoryChart`](/angular-apis/typescript/latest/classes/igxcategorychart.html) のハイライト機能について説明します。
+このトピックでは、[`IgxCategoryChart`](/components/categorychart_highlighting.html) のハイライト機能について説明します。
 
 ### デモ
 

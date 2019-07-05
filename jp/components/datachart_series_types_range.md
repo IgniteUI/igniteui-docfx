@@ -7,7 +7,7 @@ _language: ja
 
 ## エリア シリーズ
 
-このトピックでは、[`IgxDataChart`](/angular-apis/typescript/latest/classes/igxdatachart.html) コントロールのさまざまな種類のエリア シリーズについて説明します。エリア シリーズは、2 つの数値データ列を使用し、それらを水平方向に引き伸ばされたデータポイントのコレクションとしてレンダリングする一連のチャート シリーズです ([`IgxRangeAreaSeriesComponent`](/angular-apis/typescript/latest/classes/igxrangeareaseriescomponent.html) など)。
+このトピックでは、[`IgxDataChart`](/components/datachart_series_types_range.html) コントロールのさまざまな種類のエリア シリーズについて説明します。エリア シリーズは、2 つの数値データ列を使用し、それらを水平方向に引き伸ばされたデータポイントのコレクションとしてレンダリングする一連のチャート シリーズです ([`IgxRangeAreaSeriesComponent`](/components/datachart_series_types_range.html) など)。
 
 ### デモ
 
@@ -27,17 +27,17 @@ _language: ja
 
 | シリーズ名                                                                                                         | 説明                                                                                |
 | ------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| [`IgxRangeAreaSeriesComponent`](/angular-apis/typescript/latest/classes/igxrangeareaseriescomponent.html)     | データポイントの High / Low 値のペア間の塗りつぶされた領域/範囲を表示します。                                     |
-| [`IgxRangeColumnSeriesComponent`](/angular-apis/typescript/latest/classes/igxrangecolumnseriescomponent.html) | カテゴリは横に並べられ、値は縦に並べられます。高値/低値のデータポイント間の個別の列に離散データを表示します。カテゴリは水平方向、値は垂直方向にプロットされます。 |
+| [`IgxRangeAreaSeriesComponent`](/components/datachart_series_types_range.html)     | データポイントの High / Low 値のペア間の塗りつぶされた領域/範囲を表示します。                                     |
+| [`IgxRangeColumnSeriesComponent`](/components/datachart_series_types_range.html) | カテゴリは横に並べられ、値は縦に並べられます。高値/低値のデータポイント間の個別の列に離散データを表示します。カテゴリは水平方向、値は垂直方向にプロットされます。 |
 
 ### 軸の要件
 
-[`IgxDataChart`](/angular-apis/typescript/latest/classes/igxdatachart.html) コントロールはさまざまな軸タイプを提供しますが、エリア シリーズで使用できるのは以下のタイプの軸のみです。
+[`IgxDataChart`](/components/datachart_series_types_range.html) コントロールはさまざまな軸タイプを提供しますが、エリア シリーズで使用できるのは以下のタイプの軸のみです。
 
 | Series タイプ                                                                                                    | YAxis タイプ                                                                                           | XAxis タイプ                                                                                                                                                                                                                                                                                                         |
 | ------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [`IgxRangeAreaSeriesComponent`](/angular-apis/typescript/latest/classes/igxrangeareaseriescomponent.html)     | [`IgxNumericYAxisComponent`](/angular-apis/typescript/latest/classes/igxnumericyaxiscomponent.html) | [`IgxCategoryXAxisComponent`](/angular-apis/typescript/latest/classes/igxcategoryxaxiscomponent.html), [`IgxOrdinalTimeXAxisComponent`](/angular-apis/typescript/latest/classes/igxordinaltimexaxiscomponent.html), [`IgxTimeXAxisComponent`](/angular-apis/typescript/latest/classes/igxtimexaxiscomponent.html) |
-| [`IgxRangeColumnSeriesComponent`](/angular-apis/typescript/latest/classes/igxrangecolumnseriescomponent.html) | [`IgxNumericYAxisComponent`](/angular-apis/typescript/latest/classes/igxnumericyaxiscomponent.html) | [`IgxCategoryXAxisComponent`](/angular-apis/typescript/latest/classes/igxcategoryxaxiscomponent.html), [`IgxOrdinalTimeXAxisComponent`](/angular-apis/typescript/latest/classes/igxordinaltimexaxiscomponent.html), [`IgxTimeXAxisComponent`](/angular-apis/typescript/latest/classes/igxtimexaxiscomponent.html) |
+| [`IgxRangeAreaSeriesComponent`](/components/datachart_series_types_range.html)     | [`IgxNumericYAxisComponent`](/components/datachart_series_types_range.html) | [`IgxCategoryXAxisComponent`](/components/datachart_series_types_range.html), [`IgxOrdinalTimeXAxisComponent`](/components/datachart_series_types_range.html), [`IgxTimeXAxisComponent`](/components/datachart_series_types_range.html) |
+| [`IgxRangeColumnSeriesComponent`](/components/datachart_series_types_range.html) | [`IgxNumericYAxisComponent`](/components/datachart_series_types_range.html) | [`IgxCategoryXAxisComponent`](/components/datachart_series_types_range.html), [`IgxOrdinalTimeXAxisComponent`](/components/datachart_series_types_range.html), [`IgxTimeXAxisComponent`](/components/datachart_series_types_range.html) |
 
 ### データの要件
 
@@ -45,8 +45,8 @@ _language: ja
 
 -   データソースはデータ項目の配列またはリストである必要があります。
 -   データソースはデータ項目を少なくとも 1 つ含む必要があります。含まない場合はチャートはエリア シリーズを描画しません。
--   すべてのデータ項目には、カテゴリ軸の `Label` プロパティにマッピングする必要があるラベルデータ列（文字列または日時）を少なくとも1つ含める必要があります（[`IgxCategoryXAxisComponent`](/angular-apis/typescript/latest/classes/igxcategoryxaxiscomponent.html) など）。
--   すべてのデータ項目には、極座標シリーズの `HighMemberPath` と `LowMemberPath` プロパティを使用してマッピングする必要がある少なくとも2つの数値データ列 ([`IgxRangeAreaSeriesComponent`](/angular-apis/typescript/latest/classes/igxrangeareaseriescomponent.html) など）を含める必要があります。
+-   すべてのデータ項目には、カテゴリ軸の `Label` プロパティにマッピングする必要があるラベルデータ列（文字列または日時）を少なくとも1つ含める必要があります（[`IgxCategoryXAxisComponent`](/components/datachart_series_types_range.html) など）。
+-   すべてのデータ項目には、極座標シリーズの `HighMemberPath` と `LowMemberPath` プロパティを使用してマッピングする必要がある少なくとも2つの数値データ列 ([`IgxRangeAreaSeriesComponent`](/components/datachart_series_types_range.html) など）を含める必要があります。
 
 上記データ要件を満たすデータソースとして [SampleRangeData](datachart_data_sources_range.md) を使用できます。
 
@@ -85,7 +85,7 @@ import { IgxDataChartCategoryModule } from "igniteui-angular-charts/ES5/igx-data
 
 ### コード例
 
-このコードは、[`IgxRangeColumnSeriesComponent`](/angular-apis/typescript/latest/classes/igxrangecolumnseriescomponent.html) でデータチャートのインスタンスを作成し、データソースにバインドする方法を説明します。
+このコードは、[`IgxRangeColumnSeriesComponent`](/components/datachart_series_types_range.html) でデータチャートのインスタンスを作成し、データソースにバインドする方法を説明します。
 
 ```html
  <igx-data-chart
@@ -104,7 +104,7 @@ import { IgxDataChartCategoryModule } from "igniteui-angular-charts/ES5/igx-data
  </igx-data-chart>
 ```
 
-[`IgxRangeColumnSeriesComponent`](/angular-apis/typescript/latest/classes/igxrangecolumnseriescomponent.html) を置き換えることで [`IgxRangeAreaSeriesComponent`](/angular-apis/typescript/latest/classes/igxrangeareaseriescomponent.html) を作成するために上記のコードを使用することもできます。
+[`IgxRangeColumnSeriesComponent`](/components/datachart_series_types_range.html) を置き換えることで [`IgxRangeAreaSeriesComponent`](/components/datachart_series_types_range.html) を作成するために上記のコードを使用することもできます。
 
 ### その他のリソース
 

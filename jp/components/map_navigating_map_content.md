@@ -1,54 +1,56 @@
 ---
-title: Map | Data Visualization Tools | Ignite UI for Angular | Map Navigation | Infragistics
-_description: The Map allows you to navigate using geographic coordinates or relative window coordinates.
-_keywords: map, Ignite UI for Angular, infragistics
+title: マップ | データ可視化ツール | Ignite UI for Angular | マップ ナビゲーション | Infragistics
+_description: マップでは、地理座標またはウィンドウ座標を使用して移動できます。
+_keywords: map, Ignite UI for Angular, infragistics, マップ,
+mentionedTypes: ['XamGeographicMap']
+_language: ja
 ---
 
-## Navigating Map Content
+## マップ コンテンツをナビゲート
 
-Navigation in the [`IgxGeographicMapComponent`](/angular-apis/typescript/latest/classes/igxgeographicmapcomponent.html) control is enabled by default and it allows zooming and panning of the map content. However, this behavior can be changed using the [`zoomable`](/angular-apis/typescript/latest/classes/igxgeographicmapcomponent.html#zoomable) property. It is important to know that the map allows only synchronized zooming - scaling the map content with preserved aspect ratio. As result, it is not possible to scale the map content vertically without scaling it also horizontally and vice versa.
+[`IgxGeographicMapComponent`](/components/map_navigating_map_content.html) コントロールのナビゲーションは、既定では有効にされており、マップ コンテンツのズームとパンが可能です。ただし、HorizontalZoomable および VerticalZoomable プロパティを使用して、この動作を変更できます。知っておくべき重要な情報としては xamGeographicMap コントロールのズームは、あらかじめ決められた割合に同期してマップ コンテンツをスケーリングする動作に過ぎません。その結果、水平方向およびその逆にも拡大縮小することなく、マップ コンテンツを垂直方向に拡大縮小することはできません。
 
-### Demo
+### デモ
 
 <div class="sample-container loading" style="height: 400px">
     <iframe id="geo-map-navigation-iframe" src='{environment:demosBaseUrl}/maps/geo-map-navigation' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="geo-map-navigation-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="geo-map-navigation-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示
     </button>
 </div>
 
 <div class="divider--half"></div>
 
-### Geographic Coordinates
+### 地理座標
 
-You navigate map content within geographic region bound by these coordinates:
+これらの座標で囲まれた地理的領域内の地図コンテンツをナビゲートします。
 
--   horizontally from 180°E (negative) to 180°W (positive) longitudes
--   vertically from 85°S (negative) to 85°N (positive) latitudes
+-   経度180°E(マイナス) から 180°W(プラス) の緯度
+-   南緯 85 度 (マイナス) から北緯 85 度 (プラス)
 
-This code snippet shows how navigate the map using geographic coordinates:
+このコードスニペットでは、マップ 方法地理座標をナビゲートする方法を示します。
 
-### Window Coordinates
+### ウィンドウ座標
 
-Also, you can navigate map content within window rectangle bound by these relative coordinates:
+また、これらの相対座標で囲まれたウィンドウ長方形内でマップ コンテンツをナビゲートすることもできます。
 
--   horizontally from 0.0 to 1.0 values
--   vertically from 0.0 to 1.0 values
+-   水平方向に 0.0 から 1.0 の値
+-   垂直方向に 0.0 から 1.0 の値
 
-This code snippet shows how navigate the map using relative window coordinates:
+このコードスニペットは、相対ウィンドウ座標を使用してマップをナビゲートする方法を示しています。
 
-### Properties
+### プロパティ
 
-The following table summarizes properties that can be used in navigation of the [`IgxGeographicMapComponent`](/angular-apis/typescript/latest/classes/igxgeographicmapcomponent.html) control:
+以下の表は [`IgxGeographicMapComponent`](/components/map_navigating_map_content.html) コントロールのナビゲーションで使用できるプロパティをまとめたものです。
 
-| Property Name                                                                                                   | Property Type | Description                                                                                                                                                                                           |
-| --------------------------------------------------------------------------------------------------------------- | ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `WindowRect`                                                                                                    | Rect          | Sets new position and size of the navigation window in viewable area of the map content. Rect with 0, 0, 1, 1 values will zoom out the entire map content in the navigation window.                   |
-| [`windowScale`](/angular-apis/typescript/latest/classes/igxgeographicmapcomponent.html#windowscale)             | number        | Sets new size of the navigation window in of the map control. It is equivalent smallest value of Width or Height stored in the `WindowRect` property                                                  |
-| `WindowPositionHorizontal`                                                                                      | number        | Sets new horizontal position of the navigation window’s anchor point from the left edge of the map control. It is equivalent to value stored in the Left of the `WindowRect` property.                |
-| `WindowPositionVertical`                                                                                        | number        | Sets new vertical position of the navigation window’s anchor point from the top edge of the map control. It is equivalent to value stored in the Top of the `WindowRect` property.                    |
-| `ActualWindowRect`                                                                                              | Rect          | Indicates current position and size of the navigation window in viewable area of the map content. Rect with 0, 0, 1, 1 values displays the entire map content in the navigation window.               |
-| [`actualWindowScale`](/angular-apis/typescript/latest/classes/igxgeographicmapcomponent.html#actualwindowscale) | number        | Indicates current size of the navigation window in of the map control. It is equivalent to smallest value of Width or Height stored in the `ActualWindowRect` property                                |
-| `ActualWindowPositionHorizontal`                                                                                | number        | Indicates current horizontal position of the navigation window’s anchor point from the left edge of the map control. It is equivalent to value stored in the Left of the `ActualWindowRect` property. |
-| `ActualWindowPositionVertical`                                                                                  | number        | Indicates vertical position of the navigation window’s anchor point from the top edge of the map control. It is equivalent to value stored in the Top of the `ActualWindowRect` property.             |
+| プロパティ名                                                                                                                                   | プロパティ型 | 説明                                                                                                                                                                                                 |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [`windowRect`](/components/map_navigating_map_content.html)                                         | Rect   | 地図コンテンツの表示領域にナビゲーション ウィンドウの新しい位置とサイズを設定します。0、0、1、1 の値で長方形を指定すると、ナビゲーション ウィンドウのマップ コンテンツ全体がズームアウトされます。                                                                                              |
+| [`windowScale`](/components/map_navigating_map_content.html)                                      | number | マップ コントロールのナビゲーション ウィンドウの新しいサイズを設定します。WindowRect プロパティに格納されている Width または Height の最小値です。                                                                                                            |
+| [`windowPositionHorizontal`](/components/map_navigating_map_content.html)             | number | マップ コントロールの左端からのナビゲーション ウィンドウのアンカー ポイントの新しい水平位置を設定します。これは [`windowRect`](/components/map_navigating_map_content.html) プロパティの Left に保存された値と等しくなります。            |
+| [`windowPositionVertical`](/components/map_navigating_map_content.html)                 | number | ナビゲーション ウィンドウのアンカー ポイントの、地図コントロールの上端からの新しい垂直位置を設定します。これは [`windowRect`](/components/map_navigating_map_content.html) プロパティの Top に保存された値と等しくなります。              |
+| [`actualWindowRect`](/components/map_navigating_map_content.html)                             | Rect   | マップ コンテンツの表示領域内のナビゲーション ウィンドウの現在の位置とサイズを示します。0、0、1、1の値で長方形を指定すると、ナビゲーション ウィンドウにマップ コンテンツ全体が表示されます。                                                                                                 |
+| [`actualWindowScale`](/components/map_navigating_map_content.html)                          | number | マップ コントロールのナビゲーション ウィンドウの現在のサイズを示します。[`actualWindowRect`](/components/map_navigating_map_content.html) プロパティに格納されている Width または Height の最小値と同じです。        |
+| [`actualWindowPositionHorizontal`](/components/map_navigating_map_content.html) | number | マップ コントロールの左端からのナビゲーション ウィンドウのアンカー ポイントの現在の水平位置を示します。これは [`actualWindowRect`](/components/map_navigating_map_content.html) プロパティの Left に保存された値と等しくなります。 |
+| [`actualWindowPositionVertical`](/components/map_navigating_map_content.html)     | number | ナビゲーション ウィンドウの垂直方向のアンカー ポイントを Map コントロールの上端から指定します。これは [`actualWindowRect`](/components/map_navigating_map_content.html) プロパティの Top に保存された値と等しくなります。    |

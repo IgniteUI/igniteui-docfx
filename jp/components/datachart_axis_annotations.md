@@ -1,43 +1,44 @@
 ---
-title: Data Chart | Visualization Tools | Ignite UI for Angular | Infragistics | Axis Annotations
-_description: Create a data chart that displays multiple instances of visual elements in the same plot area in order to create composite chart views.
-_keywords: data chart, Ignite UI for Angular, Infragistics
+title: データ チャート | 可視化ツール | Ignite UI for Angular | Infragistics | 軸の注釈
+_description: 同じプロット領域に視覚要素の複数インスタンスを表示するデータ チャートを作成し、複合チャートビューを作成します。
+_keywords: データチャート, Ignite UI for Angular, Infragistics
 mentionedTypes: ['XamDataChart']
+_language: ja
 ---
 
-## Axis Annotations
+## 軸の注釈
 
-In the Ignite UI for Angular data chart component, you are able to add annotations to your axes to show particular values at different points on that axis. This can help you to visualize things such as final series values, overlay values, and values corresponding to crosshairs in the chart.
+Ignite UI for Angular データチャート コンポーネントでは、軸に注釈を追加して、その軸上のさまざまな点に特定の値を表示することができます。これによって最終的なシリーズ値、オーバーレイ値、チャート内の十字線に対応する値などを視覚化するのに役立ちます。
 
-### Demo
+### デモ
 
 <div class="sample-container loading" style="height: 450px">
     <iframe id="data-chart-axis-locations-iframe" src='{environment:demosBaseUrl}/charts/data-chart-axis-annotations' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-axis-locations-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-axis-locations-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示
     </button>
 </div>
 
 <div class="divider--half"></div>
 
-In the Ignite UI for Angular data chart, the following are the series and layers that support axis annotations:
+以下は、Ignite UI for Angular データチャートで軸の注釈をサポートするシリーズとレイヤーです。
 
--   [`IgxCrosshairLayerComponent`](/angular-apis/typescript/latest/classes/igxcrosshairlayercomponent.html)
--   [`IgxFinalValueLayerComponent`](/angular-apis/typescript/latest/classes/igxfinalvaluelayercomponent.html)
--   [`IgxValueOverlayComponent`](/angular-apis/typescript/latest/classes/igxvalueoverlaycomponent.html)
+-   [`IgxCrosshairLayerComponent`](/components/datachart_axis_annotations.html)
+-   [`IgxFinalValueLayerComponent`](/components/datachart_axis_annotations.html)
+-   [`IgxValueOverlayComponent`](/components/datachart_axis_annotations.html)
 
-You can enable the axis annotations by setting the [`isAxisAnnotationEnabled`](/angular-apis/typescript/latest/classes/igxvalueoverlaycomponent.html#isaxisannotationenabled) property of the corresponding layer or overlay to `true`. In doing so, this will place a box on the corresponding owning axis or axes with the value that that particular overlay or layer represents at the point that it is currently at. For example, with the [`IgxCrosshairLayerComponent`](/angular-apis/typescript/latest/classes/igxcrosshairlayercomponent.html), these annotations can appear on both the X and Y axes and will move around and change as you scroll around the plot area.
+軸の注釈を有効にするには、対応するレイヤーまたはオーバーレイの IsAxisAnnotationEnabled プロパティを true に設定します。これにより、対応する所有軸または軸上に特定のオーバーレイまたはレイヤーのある現在のポイントで表す値を持つボックスを配置します。たとえば、CrosshairLayer を使用すると、これらの注釈は X 軸と Y 軸の両方に表示され、プロット領域のスクロールに従って変化します。
 
-The [`isAxisAnnotationEnabled`](/angular-apis/typescript/latest/classes/igxcrosshairlayercomponent.html#isaxisannotationenabled) property does not exist on the [`IgxFinalValueLayerComponent`](/angular-apis/typescript/latest/classes/igxfinalvaluelayercomponent.html), as this layer is an axis annotation in itself and has no other visualization other than the annotation on the axis.
+[`isAxisAnnotationEnabled`](/components/datachart_axis_annotations.html) プロパティは [`IgxFinalValueLayerComponent`](/components/datachart_axis_annotations.html) には存在しません。このレイヤーはそれ自体が軸の注釈であり、軸上の注釈以外の視覚タイプは他にありません。
 
-You can customize the axis annotations in background, value precision, outline, padding, stroke (outline) thickness, and text color. These can be set using the [`axisAnnotationBackground`](/angular-apis/typescript/latest/classes/igxfinalvaluelayercomponent.html#axisannotationbackground), [`axisAnnotationInterpolatedValuePrecision`](/angular-apis/typescript/latest/classes/igxfinalvaluelayercomponent.html#axisannotationinterpolatedvalueprecision), [`axisAnnotationOutline`](/angular-apis/typescript/latest/classes/igxfinalvaluelayercomponent.html#axisannotationoutline), `AxisAnnotationPadding`, [`axisAnnotationStrokeThickness`](/angular-apis/typescript/latest/classes/igxfinalvaluelayercomponent.html#axisannotationstrokethickness), and [`axisAnnotationTextColor`](/angular-apis/typescript/latest/classes/igxfinalvaluelayercomponent.html#axisannotationtextcolor) properties, respectively. In addition to these properties, there is also an `AxisAnnotationFormatLabel` event that you can use to fully customize what exactly is shown in axis annotations.
+背景、値の精度、アウトライン、パディング、ストローク (アウトライン) の太さ、およびテキストの色で軸の注釈をカスタマイズできます。これらは、それぞれ [`axisAnnotationBackground`](/components/datachart_axis_annotations.html)、[`axisAnnotationInterpolatedValuePrecision`](/components/datachart_axis_annotations.html)、[`axisAnnotationOutline`](/components/datachart_axis_annotations.html)、`AxisAnnotationPadding`、[`axisAnnotationStrokeThickness`](/components/datachart_axis_annotations.html)、[`axisAnnotationTextColor`](/components/datachart_axis_annotations.html) プロパティを使用して設定できます。これらのプロパティに加えて、`AxisAnnotationFormatLabel` イベントもあります。これを使用して、軸注釈に表示されるコンテンツを完全にカスタマイズできます。
 
-Note, the [`IgxCrosshairLayerComponent`](/angular-apis/typescript/latest/classes/igxcrosshairlayercomponent.html) has the ability to show annotations on both the X and Y axis. These can be customized individually, and as such, each of the above properties exist, but with either an `XAxis` or a `YAxis` placed in front of the name. For example, [`xAxisAnnotationBackground`](/angular-apis/typescript/latest/classes/igxcrosshairlayercomponent.html#xaxisannotationbackground) or [`yAxisAnnotationTextColor`](/angular-apis/typescript/latest/classes/igxcrosshairlayercomponent.html#yaxisannotationtextcolor).
+[`IgxCrosshairLayerComponent`](/components/datachart_axis_annotations.html) には、X 軸と Y 軸の両方に注釈を表示する機能があります。これらは個別にカスタマイズできるため、上記の各プロパティは存在しますが、名前の前に Xaxis または Yaxis  があります。たとえば、[`xAxisAnnotationBackground`](/components/datachart_axis_annotations.html) または [`yAxisAnnotationTextColor`](/components/datachart_axis_annotations.html) です。
 
-### Code Example
+### コード例
 
-This code demonstrates how to create a Ignite UI for Angular data chart with each of the layers and the overlay with axis annotations enabled for each. In this case, the [`IgxFinalValueLayerComponent`](/angular-apis/typescript/latest/classes/igxfinalvaluelayercomponent.html) is also customized to have a yellow text color.
+このコードは、各レイヤーとそれに対して有効になっている軸注釈を使用したオーバーレイを使用して $ ProductName$ データチャートを作成する方法を示します。ここでは、[`IgxFinalValueLayerComponent`](/components/datachart_axis_annotations.html) も黄色のテキスト色になるようにカスタマイズされています。
 
 ```html
 <igx-data-chart [dataSource]="data" width="100%" height="500px">
@@ -54,7 +55,7 @@ This code demonstrates how to create a Ignite UI for Angular data chart with eac
 </igx-data-chart>
 ```
 
-### Additional Resources
+### その他のリソース
 
--   [Data Chart Series Annotations](datachart_series_annotations.md)
--   [Value Overlay](datachart_series_value_overlay.md)
+-   [データ チャート シリーズ注釈](datachart_series_annotations.md)
+-   [値オーバーレイ](datachart_series_value_overlay.md)

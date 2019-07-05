@@ -7,7 +7,7 @@ _language: ja
 
 ## 構成オプション
 
-[`IgxFinancialChart`](/angular-apis/typescript/latest/classes/igxfinancialchart.html) コントロールで、ナビゲーション動作、トレンドライン レイヤー、オーバーレイ、凡例、チャート タイトル、チャート サブタイトルなどのカスタマイズ可能なビジュアルがあります。コード例を使用してプロパティでファイナンシャル チャートをカスタマイズする方法を説明します。
+[`IgxFinancialChart`](/components/financialchart_chart_configuration.html) コントロールで、ナビゲーション動作、トレンドライン レイヤー、オーバーレイ、凡例、チャート タイトル、チャート サブタイトルなどのカスタマイズ可能なビジュアルがあります。コード例を使用してプロパティでファイナンシャル チャートをカスタマイズする方法を説明します。
 
 ### デモ
 
@@ -23,12 +23,12 @@ _language: ja
 
 ### ナビゲーションの構成
 
-[`IgxFinancialChart`](/angular-apis/typescript/latest/classes/igxfinancialchart.html) コントロールでは、チャート ナビゲーションがデフォルトで有効になっています。ただし、以下のプロパティを設定することによって、カスタマイズできます。
+[`IgxFinancialChart`](/components/financialchart_chart_configuration.html) コントロールでは、チャート ナビゲーションがデフォルトで有効になっています。ただし、以下のプロパティを設定することによって、カスタマイズできます。
 
 -   `IsHorizontalZoomEnabled` - チャートがユーザー操作により水平方向にズーム可能かどうかを指定します。デフォルトでこのプロパティは true に設定されます。
 -   `IsVerticalZoomEnabled` - チャートがユーザー操作により垂直方向にズーム可能かどうかを指定します。デフォルトでこのプロパティは false に設定されます。
 -   `IsWindowSyncedToVisibleRange` - true に設定される場合、Y 軸は表示データ範囲に自動的にサイズ変更します。デフォルトでこのプロパティは false に設定されます。
--   `WindowRect` - [`IgxFinancialChart`](/angular-apis/typescript/latest/classes/igxfinancialchart.html) のスクロール状態およびズーム状態を取得または設定するために使用できます。`windowRect` は、 0 ~ 1 の間の座標およびサイズの Rectangle として表現されます。
+-   `WindowRect` - [`IgxFinancialChart`](/components/financialchart_chart_configuration.html) のスクロール状態およびズーム状態を取得または設定するために使用できます。`windowRect` は、 0 ~ 1 の間の座標およびサイズの Rectangle として表現されます。
 
 ```html
  <igx-financial-chart

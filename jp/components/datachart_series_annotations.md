@@ -7,7 +7,7 @@ _language: ja
 
 ## シリーズの注釈
 
-[`IgxDataChart`](/angular-apis/typescript/latest/classes/igxdatachart.html) は、チャートにプロットされたポイントに関するコンテキスト情報を注釈として表示することを可能にするレイヤーをサポートします。これは、シリーズを見るだけでは把握できないような、より多くの情報をエンドユーザーに表示するのに役立ちます。
+[`IgxDataChart`](/components/datachart_series_annotations.html) は、チャートにプロットされたポイントに関するコンテキスト情報を注釈として表示することを可能にするレイヤーをサポートします。これは、シリーズを見るだけでは把握できないような、より多くの情報をエンドユーザーに表示するのに役立ちます。
 
 ### デモ
 
@@ -23,7 +23,7 @@ _language: ja
 
 ### コールアウト レイヤー
 
-[`IgxDataChart`](/angular-apis/typescript/latest/classes/igxdatachart.html) はチャート既存または新しいデータの注釈を表示します。注釈は、データソース内の指定されたデータ値の横に表示されます。
+[`IgxDataChart`](/components/datachart_series_annotations.html) はチャート既存または新しいデータの注釈を表示します。注釈は、データソース内の指定されたデータ値の横に表示されます。
 
 コールアウト注釈を使用して、メモやデータポイントに関する特定の詳細など、ユーザーに追加情報を表示します
 
@@ -60,7 +60,7 @@ _language: ja
 
 十字線レイヤーは、各シリーズが個別の線をセットでレンダリングするように設定されているすべてのシリーズの実際の値で交差する交差ラインとしてレンダリングされます。
 
-デフォルトでは [`IgxDataChart`](/angular-apis/typescript/latest/classes/igxdatachart.html) コントロールのすべてのシリーズをターゲットとするように、特定のシリーズを 1 つだけ表示するように十字線レイヤーを構成できます。これを実行するには、`TargetSeries` プロパティを設定します。
+デフォルトでは [`IgxDataChart`](/components/datachart_series_annotations.html) コントロールのすべてのシリーズをターゲットとするように、特定のシリーズを 1 つだけ表示するように十字線レイヤーを構成できます。これを実行するには、`TargetSeries` プロパティを設定します。
 
 デフォルトでは、十字線の色は、相互作用しているシリーズの色です。ただし、このデフォルト値は、十字線に使用される色を選択できるようにオーバーライドできます。これは、`Brush` プロパティを設定することによって行います。
 
@@ -88,7 +88,7 @@ _language: ja
 
 ### 最終値レイヤー
 
-最終値レイヤーには、[`IgxDataChart`](/angular-apis/typescript/latest/classes/igxdatachart.html) コントロールのシリーズの最終値を表す注釈がチャートの軸に沿って表示されます。
+最終値レイヤーには、[`IgxDataChart`](/components/datachart_series_annotations.html) コントロールのシリーズの最終値を表す注釈がチャートの軸に沿って表示されます。
 
 複数の最終値レイヤーを異なる設定で使用したい場合は、注釈を設定して特定のシリーズをターゲットにすることができます。これには `TargetSeries` プロパティを設定します。
 

@@ -7,8 +7,8 @@ _language: ja
 
 ## 散布図 - 等高線シリーズ
 
-このトピックは、コード例を示して [`IgxDataChart`](/angular-apis/typescript/latest/classes/igxdatachart.html) コントロールで [`IgxScatterContourSeriesComponent`](/angular-apis/typescript/latest/classes/igxscattercontourseriescomponent.html) を使用する方法を説明します。このシリーズ
-各ポイントに数値が割り当てられた X および Y データの三角測量に基づいて色付きの等高線を描画します。このシリーズのタイプはヒート マップ、磁場の強さ、またはオフィスの Wi-Fi の強さを描画する場合などに便利です。[`IgxScatterContourSeriesComponent`](/angular-apis/typescript/latest/classes/igxscattercontourseriescomponent.html) は [`IgxScatterAreaSeriesComponent`](/angular-apis/typescript/latest/classes/igxscatterareaseriescomponent.html) とよく似ていますが、塗りつぶしスケールを使用して色付けされた等高線としてデータを表し、散布エリア シリーズはカラースケールを使用して補間された面としてデータを表します。
+このトピックは、コード例を示して [`IgxDataChart`](/components/datachart_series_types_scatter_contour.html) コントロールで [`IgxScatterContourSeriesComponent`](/components/datachart_series_types_scatter_contour.html) を使用する方法を説明します。このシリーズ
+各ポイントに数値が割り当てられた X および Y データの三角測量に基づいて色付きの等高線を描画します。このシリーズのタイプはヒート マップ、磁場の強さ、またはオフィスの Wi-Fi の強さを描画する場合などに便利です。[`IgxScatterContourSeriesComponent`](/components/datachart_series_types_scatter_contour.html) は [`IgxScatterAreaSeriesComponent`](/components/datachart_series_types_scatter_contour.html) とよく似ていますが、塗りつぶしスケールを使用して色付けされた等高線としてデータを表し、散布エリア シリーズはカラースケールを使用して補間された面としてデータを表します。
 
 ### デモ
 
@@ -24,15 +24,15 @@ _language: ja
 
 ### 軸の要件
 
-[`IgxDataChart`](/angular-apis/typescript/latest/classes/igxdatachart.html) コントロールにはさまざまな種類の軸がありますが、ScatterContourSeries では [`IgxNumericYAxisComponent`](/angular-apis/typescript/latest/classes/igxnumericyaxiscomponent.html) と [`IgxNumericYAxisComponent`](/angular-apis/typescript/latest/classes/igxnumericyaxiscomponent.html) のみ使用できます。
+[`IgxDataChart`](/components/datachart_series_types_scatter_contour.html) コントロールにはさまざまな種類の軸がありますが、ScatterContourSeries では [`IgxNumericYAxisComponent`](/components/datachart_series_types_scatter_contour.html) と [`IgxNumericYAxisComponent`](/components/datachart_series_types_scatter_contour.html) のみ使用できます。
 
 ### データの要件
 
- [`IgxScatterContourSeriesComponent`](/angular-apis/typescript/latest/classes/igxscattercontourseriescomponent.html) には以下のデータ要件があります。
+ [`IgxScatterContourSeriesComponent`](/components/datachart_series_types_scatter_contour.html) には以下のデータ要件があります。
 
 -   データソースはデータ項目の配列またはリストである必要があります。
 -   データソースはデータ項目を少なくとも 1 つ含む必要があります。含まない場合はチャートに散布シェイプ シリーズを描画しません。
--   すべてのデータ項目には、`XMemberPath`、`YMemberPath`、[`valueMemberPath`](/angular-apis/typescript/latest/classes/igxscattercontourseriescomponent.html#valuememberpath) プロパティにマップされる 3 つの数値データ列を含める必要があります。
+-   すべてのデータ項目には、`XMemberPath`、`YMemberPath`、[`valueMemberPath`](/components/datachart_series_types_scatter_contour.html) プロパティにマップされる 3 つの数値データ列を含める必要があります。
 
 上記データ要件を満たすデータソースとして [SamplePolarData](datachart_data_sources_scatter.md) を使用できます。
 
@@ -72,7 +72,7 @@ export class AppModule { /* ... */ }
 
 ### コード例
 
-このコードは、[`IgxScatterContourSeriesComponent`](/angular-apis/typescript/latest/classes/igxscattercontourseriescomponent.html) でデータチャートのインスタンスを作成し、データソースにバインドする方法を説明します。
+このコードは、[`IgxScatterContourSeriesComponent`](/components/datachart_series_types_scatter_contour.html) でデータチャートのインスタンスを作成し、データソースにバインドする方法を説明します。
 
 ```html
  <igx-data-chart
@@ -94,19 +94,19 @@ export class AppModule { /* ... */ }
 
 ### 等高線の塗りつぶしスケール
 
-[`IgxScatterContourSeriesComponent`](/angular-apis/typescript/latest/classes/igxscattercontourseriescomponent.html) の [`fillScale`](/angular-apis/typescript/latest/classes/igxscattercontourseriescomponent.html#fillscale) プロパティを使用して等高線の塗りブラシを解決します。
+[`IgxScatterContourSeriesComponent`](/components/datachart_series_types_scatter_contour.html) の [`fillScale`](/components/datachart_series_types_scatter_contour.html) プロパティを使用して等高線の塗りブラシを解決します。
 
-提供されている [`IgxValueBrushScaleComponent`](/angular-apis/typescript/latest/classes/igxvaluebrushscalecomponent.html) クラスはほとんどの色付けのニーズを満たすはずですが、このクラスから継承して独自の色付けのロジックを指定することができます。以下の表は [`IgxScatterContourSeriesComponent`](/angular-apis/typescript/latest/classes/igxscattercontourseriescomponent.html) の面のカラーリングに影響する [`IgxValueBrushScaleComponent`](/angular-apis/typescript/latest/classes/igxvaluebrushscalecomponent.html) プロパティをリストします。
+提供されている [`IgxValueBrushScaleComponent`](/components/datachart_series_types_scatter_contour.html) クラスはほとんどの色付けのニーズを満たすはずですが、このクラスから継承して独自の色付けのロジックを指定することができます。以下の表は [`IgxScatterContourSeriesComponent`](/components/datachart_series_types_scatter_contour.html) の面のカラーリングに影響する [`IgxValueBrushScaleComponent`](/components/datachart_series_types_scatter_contour.html) プロパティをリストします。
 
 -   `Brushes` は、輪郭を塗りつぶすためのブラシのコレクションを設定します。
 -   `Brushes` は、ブラシを割り当てるための最大値を設定します。指定した値がこの値より大きい場合は透明になります。
--   [`minimumValue`](/angular-apis/typescript/latest/classes/igxvaluebrushscalecomponent.html#minimumvalue) は、ブラシを割り当てるための最小値を設定します。指定した値がこの値より小さい場合は透明になります。
+-   [`minimumValue`](/components/datachart_series_types_scatter_contour.html) は、ブラシを割り当てるための最小値を設定します。指定した値がこの値より小さい場合は透明になります。
 
 ### 等高線値リゾルバー
 
-[`IgxScatterContourSeriesComponent`](/angular-apis/typescript/latest/classes/igxscattercontourseriescomponent.html) は、[`valueMemberPath`](/angular-apis/typescript/latest/classes/igxscattercontourseriescomponent.html#valuememberpath) プロパティにマップされた項目の最小値と最大値の間を等間隔でちょうど 10 本の等高線を使用して描画します。これより多くの等高線が必要な場合、またはこれより少ない等高線が必要な場合、等高線の数を持つ [`IgxLinearContourValueResolverComponent`](/angular-apis/typescript/latest/classes/igxlinearcontourvalueresolvercomponent.html) を [`IgxScatterContourSeriesComponent`](/angular-apis/typescript/latest/classes/igxscattercontourseriescomponent.html) の [`valueResolver`](/angular-apis/typescript/latest/classes/igxscattercontourseriescomponent.html#valueresolver) プロパティに割り当てることができます。
+[`IgxScatterContourSeriesComponent`](/components/datachart_series_types_scatter_contour.html) は、[`valueMemberPath`](/components/datachart_series_types_scatter_contour.html) プロパティにマップされた項目の最小値と最大値の間を等間隔でちょうど 10 本の等高線を使用して描画します。これより多くの等高線が必要な場合、またはこれより少ない等高線が必要な場合、等高線の数を持つ [`IgxLinearContourValueResolverComponent`](/components/datachart_series_types_scatter_contour.html) を [`IgxScatterContourSeriesComponent`](/components/datachart_series_types_scatter_contour.html) の [`valueResolver`](/components/datachart_series_types_scatter_contour.html) プロパティに割り当てることができます。
 
-以下のコードは、[`IgxScatterContourSeriesComponent`](/angular-apis/typescript/latest/classes/igxscattercontourseriescomponent.html) の等高線の数を構成する方法を示します。
+以下のコードは、[`IgxScatterContourSeriesComponent`](/components/datachart_series_types_scatter_contour.html) の等高線の数を構成する方法を示します。
 
 ### その他のリソース
 

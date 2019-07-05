@@ -7,7 +7,7 @@ _language: ja
 
 ## 軸
 
-[`IgxDataChart`](/angular-apis/typescript/latest/classes/igxdatachart.html) コントロールの軸は、軸の主線、グリッド線、目盛り、タイトル、およびラベルの外観を指定するための基本プロパティを提供します。チャートがサポートするさまざまなシリーズ タイプの [`IgxDataChart`](/angular-apis/typescript/latest/classes/igxdatachart.html) で使用できる複数の軸タイプがあります。シリーズのタイプは、一緒に使用できる軸タイプを決定します。
+[`IgxDataChart`](/components/datachart_axis_types.html) コントロールの軸は、軸の主線、グリッド線、目盛り、タイトル、およびラベルの外観を指定するための基本プロパティを提供します。チャートがサポートするさまざまなシリーズ タイプの [`IgxDataChart`](/components/datachart_axis_types.html) で使用できる複数の軸タイプがあります。シリーズのタイプは、一緒に使用できる軸タイプを決定します。
 
 ### デモ
 
@@ -23,26 +23,26 @@ _language: ja
 
 ### サポートされる軸
 
-[`IgxDataChart`](/angular-apis/typescript/latest/classes/igxdatachart.html) コントロールは、特定の種類のシリーズで使用することを目的としたさまざまな種類の軸をサポートします。以下の表はシリーズ タイプで使用できます。
+[`IgxDataChart`](/components/datachart_axis_types.html) コントロールは、特定の種類のシリーズで使用することを目的としたさまざまな種類の軸をサポートします。以下の表はシリーズ タイプで使用できます。
 
 | 軸タイプ               | サポートされるシリーズ タイプ                                                                                                                                                                                                                                                     |
 | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| CategoryYAxis      | [Category ](datachart_series_types_category.md) グループの [`IgxBarSeriesComponent`](/angular-apis/typescript/latest/classes/igxbarseriescomponent.html) のみ                                                                                                              |
-| CategoryXAxis      | すべての [Financial シリーズ](datachart_series_types_financial.md)、[Range シリーズ](datachart_series_types_range.md)、[Category シリーズ](datachart_series_types_category.md) ([`IgxBarSeriesComponent`](/angular-apis/typescript/latest/classes/igxbarseriescomponent.html) 以外)     |
-| TimeXAxis          | すべての [Financial シリーズ](datachart_series_types_financial.md)、[Range シリーズ](datachart_series_types_range.md)、[Category シリーズ](datachart_series_types_category.md) ([`IgxBarSeriesComponent`](/angular-apis/typescript/latest/classes/igxbarseriescomponent.html) 以外)     |
-| OrdinalTimeXAxis   | すべての [Financial シリーズ](datachart_series_types_financial.md)、[Range シリーズ](datachart_series_types_range.md)、[Category シリーズ](datachart_series_types_category.md) ([`IgxBarSeriesComponent`](/angular-apis/typescript/latest/classes/igxbarseriescomponent.html) 以外)     |
+| CategoryYAxis      | [Category ](datachart_series_types_category.md) グループの [`IgxBarSeriesComponent`](/components/datachart_axis_types.html) のみ                                                                                                              |
+| CategoryXAxis      | すべての [Financial シリーズ](datachart_series_types_financial.md)、[Range シリーズ](datachart_series_types_range.md)、[Category シリーズ](datachart_series_types_category.md) ([`IgxBarSeriesComponent`](/components/datachart_axis_types.html) 以外)     |
+| TimeXAxis          | すべての [Financial シリーズ](datachart_series_types_financial.md)、[Range シリーズ](datachart_series_types_range.md)、[Category シリーズ](datachart_series_types_category.md) ([`IgxBarSeriesComponent`](/components/datachart_axis_types.html) 以外)     |
+| OrdinalTimeXAxis   | すべての [Financial シリーズ](datachart_series_types_financial.md)、[Range シリーズ](datachart_series_types_range.md)、[Category シリーズ](datachart_series_types_category.md) ([`IgxBarSeriesComponent`](/components/datachart_axis_types.html) 以外)     |
 | PercentChangeYAxis | すべての [Financial シリーズ](datachart_series_types_financial.md)、[Range シリーズ](datachart_series_types_range.md)、[Category シリーズ](datachart_series_types_category.md)、[Scatter シリーズ](datachart_series_types_scatter_bubble.md)、[Shape シリーズ](datachart_series_types_shape.md) |
 | NumericYAxis       | すべての [Scatter シリーズ](datachart_series_types_scatter_bubble.md)、[Shape シリーズ](datachart_series_types_shape.md)、[Financial シリーズ](datachart_series_types_financial.md)、[Range シリーズ](datachart_series_types_range.md)、[Category シリーズ](datachart_series_types_category.md) |
-| NumericXAxis       | [Category シリーズ](datachart_series_types_category.md) グループのすべての [Scatter シリーズ](datachart_series_types_scatter_bubble.md)、[Shape シリーズ](datachart_series_types_shape.md)、[`IgxBarSeriesComponent`](/angular-apis/typescript/latest/classes/igxbarseriescomponent.html)  |
+| NumericXAxis       | [Category シリーズ](datachart_series_types_category.md) グループのすべての [Scatter シリーズ](datachart_series_types_scatter_bubble.md)、[Shape シリーズ](datachart_series_types_shape.md)、[`IgxBarSeriesComponent`](/components/datachart_axis_types.html)  |
 | NumericAngleAxis   | すべての [極座標シリーズ](datachart_series_types_polar.md)                                                                                                                                                                                                                     |
 | NumericRadiusAxis  | すべての [極座標シリーズ](datachart_series_types_polar.md) と [ラジアル シリーズ](datachart_series_types_radial.md)                                                                                                                                                                     |
 | CategoryAngleAxis  | すべての [ラジアル シリーズ](datachart_series_types_radial.md)                                                                                                                                                                                                                  |
 
 ### カテゴリ X 軸
 
-[`IgxCategoryXAxisComponent`](/angular-apis/typescript/latest/classes/igxcategoryxaxiscomponent.html)は、データをカテゴリのデータ項目のシーケンスとして扱っています。この軸のラベルがシーケンスの位置に応じて、X 軸に沿って配置されます。この軸の種類では、数字、文字列などのほぼすべてのデータのタイプを表示できます。軸のタイプは、[Financial シリーズ](datachart_series_types_financial.md)、[Range シリーズ](datachart_series_types_range.md)、[Category シリーズ](datachart_series_types_category.md) ([`IgxBarSeriesComponent`](/angular-apis/typescript/latest/classes/igxbarseriescomponent.html) 以外)と互換性があります。
+[`IgxCategoryXAxisComponent`](/components/datachart_axis_types.html)は、データをカテゴリのデータ項目のシーケンスとして扱っています。この軸のラベルがシーケンスの位置に応じて、X 軸に沿って配置されます。この軸の種類では、数字、文字列などのほぼすべてのデータのタイプを表示できます。軸のタイプは、[Financial シリーズ](datachart_series_types_financial.md)、[Range シリーズ](datachart_series_types_range.md)、[Category シリーズ](datachart_series_types_category.md) ([`IgxBarSeriesComponent`](/components/datachart_axis_types.html) 以外)と互換性があります。
 
-以下のコードは、[`IgxCategoryXAxisComponent`](/angular-apis/typescript/latest/classes/igxcategoryxaxiscomponent.html) を [`IgxDataChart`](/angular-apis/typescript/latest/classes/igxdatachart.html) コントロールに追加する方法を示します。
+以下のコードは、[`IgxCategoryXAxisComponent`](/components/datachart_axis_types.html) を [`IgxDataChart`](/components/datachart_axis_types.html) コントロールに追加する方法を示します。
 
 ```html
 <igx-data-chart [dataSource]="data"
@@ -54,9 +54,9 @@ _language: ja
 
 ### カテゴリ Y 軸
 
-[`IgxCategoryYAxisComponent`](/angular-apis/typescript/latest/classes/igxcategoryyaxiscomponent.html)は、データをカテゴリのデータ項目のシーケンスとして扱っています。この軸のラベルがシーケンスの位置に応じて、Y 軸に沿って配置されます。この軸の種類では、数字、文字列などのほぼすべてのデータのタイプを表示できます。この軸タイプは、[Category Series](datachart_series_types_category.md) グループ内の [`IgxBarSeriesComponent`](/angular-apis/typescript/latest/classes/igxbarseriescomponent.html) とのみ互換性があります。
+[`IgxCategoryYAxisComponent`](/components/datachart_axis_types.html)は、データをカテゴリのデータ項目のシーケンスとして扱っています。この軸のラベルがシーケンスの位置に応じて、Y 軸に沿って配置されます。この軸の種類では、数字、文字列などのほぼすべてのデータのタイプを表示できます。この軸タイプは、[Category Series](datachart_series_types_category.md) グループ内の [`IgxBarSeriesComponent`](/components/datachart_axis_types.html) とのみ互換性があります。
 
-以下のコード スニペットは、[`IgxCategoryYAxisComponent`](/angular-apis/typescript/latest/classes/igxcategoryyaxiscomponent.html) を [`IgxDataChart`](/angular-apis/typescript/latest/classes/igxdatachart.html) コントロールに追加する方法を示します。
+以下のコード スニペットは、[`IgxCategoryYAxisComponent`](/components/datachart_axis_types.html) を [`IgxDataChart`](/components/datachart_axis_types.html) コントロールに追加する方法を示します。
 
 ```html
 <igx-data-chart [dataSource]="data"
@@ -68,9 +68,9 @@ _language: ja
 
 ### カテゴリ DateTime X 軸
 
-[`IgxCategoryDateTimeXAxisComponent`](/angular-apis/typescript/latest/classes/igxcategorydatetimexaxiscomponent.html) は、日付順に並べ替えられた一連のカテゴリデータ項目としてデータを扱います。この軸のラベルは、この軸の `DateTimeMemberPath` プロパティを使用してマップされるデータ列の値に基づいて X 軸に沿って配置されます。軸のタイプは、[Financial シリーズ](datachart_series_types_financial.md)、[Range シリーズ](datachart_series_types_range.md)、[Category シリーズ](datachart_series_types_category.md) ([`IgxBarSeriesComponent`](/angular-apis/typescript/latest/classes/igxbarseriescomponent.html) 以外)と互換性があります。
+[`IgxCategoryDateTimeXAxisComponent`](/components/datachart_axis_types.html) は、日付順に並べ替えられた一連のカテゴリデータ項目としてデータを扱います。この軸のラベルは、この軸の `DateTimeMemberPath` プロパティを使用してマップされるデータ列の値に基づいて X 軸に沿って配置されます。軸のタイプは、[Financial シリーズ](datachart_series_types_financial.md)、[Range シリーズ](datachart_series_types_range.md)、[Category シリーズ](datachart_series_types_category.md) ([`IgxBarSeriesComponent`](/components/datachart_axis_types.html) 以外)と互換性があります。
 
-以下のコード スニペットは、[`IgxCategoryDateTimeXAxisComponent`](/angular-apis/typescript/latest/classes/igxcategorydatetimexaxiscomponent.html) を [`IgxDataChart`](/angular-apis/typescript/latest/classes/igxdatachart.html) コントロールに追加する方法を示します。
+以下のコード スニペットは、[`IgxCategoryDateTimeXAxisComponent`](/components/datachart_axis_types.html) を [`IgxDataChart`](/components/datachart_axis_types.html) コントロールに追加する方法を示します。
 
 ```html
 <igx-data-chart [dataSource]="data"
@@ -84,9 +84,9 @@ _language: ja
 
 ### 数字 X 軸
 
-[`IgxNumericXAxisComponent`](/angular-apis/typescript/latest/classes/igxnumericxaxiscomponent.html) は、データをカテゴリのデータ項目のシーケンスとして扱っています。この軸のラベルは X-Axis に沿ってに配置されます。ラベルの位置は、対応する値マッピング プロパティを使用してマップされたデータ列の値に基づいて変わります。このタイプの軸は、[Scatter シリーズ](datachart_series_types_scatter_bubble.md)と [Shape シリーズ](datachart_series_types_shape.md) のタイプと互換性があります。また、この軸は [`IgxBarSeriesComponent`](/angular-apis/typescript/latest/classes/igxbarseriescomponent.html) タイプの [カテゴリ シリーズ](datachart_series_types_category.md) と互換性があります。ここでは、`ValueMemberPath` プロパティを使用してデータ列をマップします。
+[`IgxNumericXAxisComponent`](/components/datachart_axis_types.html) は、データをカテゴリのデータ項目のシーケンスとして扱っています。この軸のラベルは X-Axis に沿ってに配置されます。ラベルの位置は、対応する値マッピング プロパティを使用してマップされたデータ列の値に基づいて変わります。このタイプの軸は、[Scatter シリーズ](datachart_series_types_scatter_bubble.md)と [Shape シリーズ](datachart_series_types_shape.md) のタイプと互換性があります。また、この軸は [`IgxBarSeriesComponent`](/components/datachart_axis_types.html) タイプの [カテゴリ シリーズ](datachart_series_types_category.md) と互換性があります。ここでは、`ValueMemberPath` プロパティを使用してデータ列をマップします。
 
-以下のコード スニペットは、[`IgxNumericXAxisComponent`](/angular-apis/typescript/latest/classes/igxnumericxaxiscomponent.html) を [`IgxDataChart`](/angular-apis/typescript/latest/classes/igxdatachart.html) コントロールに追加する方法を示します。
+以下のコード スニペットは、[`IgxNumericXAxisComponent`](/components/datachart_axis_types.html) を [`IgxDataChart`](/components/datachart_axis_types.html) コントロールに追加する方法を示します。
 
 ```html
 <igx-data-chart [dataSource]="data"
@@ -98,9 +98,9 @@ _language: ja
 
 ### 数字 Y 軸
 
-[`IgxNumericYAxisComponent`](/angular-apis/typescript/latest/classes/igxnumericyaxiscomponent.html) は、データをカテゴリのデータ項目のシーケンスとして扱っています。この軸のラベルは Y 軸に沿ってに配置されます。ラベルの位置は、対応する値マッピング プロパティを使用してマップされたデータ列の値に基づいて変わります。このタイプの軸は、[Scatter シリーズ](datachart_series_types_scatter_bubble.md)と [Shape シリーズ](datachart_series_types_shape.md) のタイプと互換性があります。また、このタイプの軸は、[Financial シリーズ](datachart_series_types_financial.md)、[Range シリーズ](datachart_series_types_range.md)、[Category シリーズ](datachart_series_types_category.md) ([`IgxBarSeriesComponent`](/angular-apis/typescript/latest/classes/igxbarseriescomponent.html) を除く) タイプと互換性があります。
+[`IgxNumericYAxisComponent`](/components/datachart_axis_types.html) は、データをカテゴリのデータ項目のシーケンスとして扱っています。この軸のラベルは Y 軸に沿ってに配置されます。ラベルの位置は、対応する値マッピング プロパティを使用してマップされたデータ列の値に基づいて変わります。このタイプの軸は、[Scatter シリーズ](datachart_series_types_scatter_bubble.md)と [Shape シリーズ](datachart_series_types_shape.md) のタイプと互換性があります。また、このタイプの軸は、[Financial シリーズ](datachart_series_types_financial.md)、[Range シリーズ](datachart_series_types_range.md)、[Category シリーズ](datachart_series_types_category.md) ([`IgxBarSeriesComponent`](/components/datachart_axis_types.html) を除く) タイプと互換性があります。
 
-以下のコード スニペットは、[`IgxNumericYAxisComponent`](/angular-apis/typescript/latest/classes/igxnumericyaxiscomponent.html) を [`IgxDataChart`](/angular-apis/typescript/latest/classes/igxdatachart.html) コントロールに追加する方法を示します。
+以下のコード スニペットは、[`IgxNumericYAxisComponent`](/components/datachart_axis_types.html) を [`IgxDataChart`](/components/datachart_axis_types.html) コントロールに追加する方法を示します。
 
 ```html
 <igx-data-chart [dataSource]="data"
@@ -112,11 +112,11 @@ _language: ja
 
 ### 時間 X 軸
 
-[`IgxTimeXAxisComponent`](/angular-apis/typescript/latest/classes/igxtimexaxiscomponent.html) は、日付順に並べ替えられた一連のカテゴリデータ項目としてデータを扱います。この軸のラベルは、この軸の `DateTimeMemberPath` プロパティを使用してマップされるデータ列の値に基づいて X 軸に沿って配置されます。このタイプの軸は、[Financial シリーズ](datachart_series_types_financial.md)、[Range シリーズ](datachart_series_types_range.md)、[Category シリーズ](datachart_series_types_category.md) と互換性があります。
+[`IgxTimeXAxisComponent`](/components/datachart_axis_types.html) は、日付順に並べ替えられた一連のカテゴリデータ項目としてデータを扱います。この軸のラベルは、この軸の `DateTimeMemberPath` プロパティを使用してマップされるデータ列の値に基づいて X 軸に沿って配置されます。このタイプの軸は、[Financial シリーズ](datachart_series_types_financial.md)、[Range シリーズ](datachart_series_types_range.md)、[Category シリーズ](datachart_series_types_category.md) と互換性があります。
 
-[`IgxTimeXAxisComponent`](/angular-apis/typescript/latest/classes/igxtimexaxiscomponent.html) に [`breaks`](/angular-apis/typescript/latest/classes/igxtimexaxiscomponent.html#breaks) を使用してデータの間隔を除外するオプションがあります。その結果として、ラベルは除外された間隔で表示されません。たとえば、勤務日/休業日、休日、週末などです。
+[`IgxTimeXAxisComponent`](/components/datachart_axis_types.html) に [`breaks`](/components/datachart_axis_types.html) を使用してデータの間隔を除外するオプションがあります。その結果として、ラベルは除外された間隔で表示されません。たとえば、勤務日/休業日、休日、週末などです。
 
-以下のコード スニペットは、[`IgxTimeXAxisComponent`](/angular-apis/typescript/latest/classes/igxtimexaxiscomponent.html) を [`IgxDataChart`](/angular-apis/typescript/latest/classes/igxdatachart.html) コントロールに追加する方法を示します。
+以下のコード スニペットは、[`IgxTimeXAxisComponent`](/components/datachart_axis_types.html) を [`IgxDataChart`](/components/datachart_axis_types.html) コントロールに追加する方法を示します。
 
 ```html
 <igx-data-chart [dataSource]="data"
@@ -128,9 +128,9 @@ _language: ja
 
 ### 序数時間 X 軸の
 
-[`IgxOrdinalTimeXAxisComponent`](/angular-apis/typescript/latest/classes/igxordinaltimexaxiscomponent.html) と [`IgxTimeXAxisComponent`](/angular-apis/typescript/latest/classes/igxtimexaxiscomponent.html) の主な違いは、序数軸で表示される日付は等距離であると見なされることです。[`IgxTimeXAxisComponent`](/angular-apis/typescript/latest/classes/igxtimexaxiscomponent.html) は現在、日付を時系列に従って並べ替えます。そのため、パフォーマンスを向上させるため、またはデータ項目が同じ時間間隔で時系列順になっている場合は、[`IgxOrdinalTimeXAxisComponent`](/angular-apis/typescript/latest/classes/igxordinaltimexaxiscomponent.html) を使用することをお勧めします。
+[`IgxOrdinalTimeXAxisComponent`](/components/datachart_axis_types.html) と [`IgxTimeXAxisComponent`](/components/datachart_axis_types.html) の主な違いは、序数軸で表示される日付は等距離であると見なされることです。[`IgxTimeXAxisComponent`](/components/datachart_axis_types.html) は現在、日付を時系列に従って並べ替えます。そのため、パフォーマンスを向上させるため、またはデータ項目が同じ時間間隔で時系列順になっている場合は、[`IgxOrdinalTimeXAxisComponent`](/components/datachart_axis_types.html) を使用することをお勧めします。
 
-以下のコード スニペットは、[`IgxOrdinalTimeXAxisComponent`](/angular-apis/typescript/latest/classes/igxordinaltimexaxiscomponent.html) を [`IgxDataChart`](/angular-apis/typescript/latest/classes/igxdatachart.html) コントロールに追加する方法を示します。
+以下のコード スニペットは、[`IgxOrdinalTimeXAxisComponent`](/components/datachart_axis_types.html) を [`IgxDataChart`](/components/datachart_axis_types.html) コントロールに追加する方法を示します。
 
 ```html
 <igx-data-chart [dataSource]="data"
@@ -142,11 +142,11 @@ _language: ja
 
 ### Y軸の変化率
 
-[`IgxPercentChangeYAxisComponent`](/angular-apis/typescript/latest/classes/igxpercentchangeyaxiscomponent.html) は、参照値としてシリーズの最初のポイントを取得します。それ以後の値は参照値に比較して増減パーセントに基づいて拡大縮小されます。
+[`IgxPercentChangeYAxisComponent`](/components/datachart_axis_types.html) は、参照値としてシリーズの最初のポイントを取得します。それ以後の値は参照値に比較して増減パーセントに基づいて拡大縮小されます。
 
-この軸タイプは [`IgxNumericYAxisComponent`](/angular-apis/typescript/latest/classes/igxnumericyaxiscomponent.html) に基づいているため、同じシリーズ タイプをサポートします。[Category シリーズ](datachart_series_types_category.md)の場合、参照値はそれらのシリーズの `ValueMemberPath` に対応します。[散布シリーズ](datachart_series_types_scatter_bubble.md)の場合、参照値はそれらのシリーズの `YMemberPath` に対応します。[ファイナンシャル シリーズ](datachart_series_types_financial.md)の場合、参照値は `OpenMemberPath` プロパティにマッピングされた最初の値に対応します。
+この軸タイプは [`IgxNumericYAxisComponent`](/components/datachart_axis_types.html) に基づいているため、同じシリーズ タイプをサポートします。[Category シリーズ](datachart_series_types_category.md)の場合、参照値はそれらのシリーズの `ValueMemberPath` に対応します。[散布シリーズ](datachart_series_types_scatter_bubble.md)の場合、参照値はそれらのシリーズの `YMemberPath` に対応します。[ファイナンシャル シリーズ](datachart_series_types_financial.md)の場合、参照値は `OpenMemberPath` プロパティにマッピングされた最初の値に対応します。
 
-以下のコード スニペットは、[`IgxPercentChangeYAxisComponent`](/angular-apis/typescript/latest/classes/igxpercentchangeyaxiscomponent.html) を [`IgxDataChart`](/angular-apis/typescript/latest/classes/igxdatachart.html) コントロールに追加する方法を示します。
+以下のコード スニペットは、[`IgxPercentChangeYAxisComponent`](/components/datachart_axis_types.html) を [`IgxDataChart`](/components/datachart_axis_types.html) コントロールに追加する方法を示します。
 
 ```html
 <igx-data-chart [dataSource]="data"

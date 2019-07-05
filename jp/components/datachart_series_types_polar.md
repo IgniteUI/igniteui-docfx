@@ -7,7 +7,7 @@ _language: ja
 
 ## 極座標シリーズ
 
-このトピックは、[`IgxDataChart`](/angular-apis/typescript/latest/classes/igxdatachart.html) コントロールの極座標 シリーズのさまざまなタイプについて説明します。極座標シリーズは、デカルト（x、y）座標系の代わりに極座標（角度、半径）座標シリーズを使用してチャートにデータをプロットする一連のシリーズです。つまり、極座標シリーズは[散布シリーズ](datachart_series_types_scatter_marker.md) の概念を使用して、水平線に沿って伸びるのではなく円の周りを囲みます。このシリーズのグループは、極座標系を使用して複数の異なるデータのシリーズ内の項目間の関係を示すために使用されます。
+このトピックは、[`IgxDataChart`](/components/datachart_series_types_polar.html) コントロールの極座標 シリーズのさまざまなタイプについて説明します。極座標シリーズは、デカルト（x、y）座標系の代わりに極座標（角度、半径）座標シリーズを使用してチャートにデータをプロットする一連のシリーズです。つまり、極座標シリーズは[散布シリーズ](datachart_series_types_scatter_marker.md) の概念を使用して、水平線に沿って伸びるのではなく円の周りを囲みます。このシリーズのグループは、極座標系を使用して複数の異なるデータのシリーズ内の項目間の関係を示すために使用されます。
 
 極座標シリーズでは、データの不均等な散らばりやデータの塊に注意が向けられます。これらは科学的なデータ (風の方向と速度、磁場の強さと方向、太陽系内の物体の位置など) をプロットするためによく使用され、予測結果と収集データの偏差を強調することができます。
 
@@ -29,23 +29,23 @@ _language: ja
 
 | シリーズ名                                                                                                                 | 説明                                                            |
 | --------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
-| [`IgxPolarAreaSeriesComponent`](/angular-apis/typescript/latest/classes/igxpolarareaseriescomponent.html)             | 極座標 (角度/半径) 座標にあるデータ ポイントを結ぶ直線の集合で囲まれ、塗りつぶされた多角形を表示します        |
-| [`IgxPolarSplineAreaSeriesComponent`](/angular-apis/typescript/latest/classes/igxpolarsplineareaseriescomponent.html) | 極座標（角度/半径）座標にあるデータ ポイントを結ぶ滑らかな/補間された線の集合で囲まれ、塗りつぶされた多角形を表示します |
-| [`IgxPolarSplineSeriesComponent`](/angular-apis/typescript/latest/classes/igxpolarsplineseriescomponent.html)         | 極座標 (角度/半径) 座標にあるデータ ポイントを結ぶ滑らかな/補間された集合を表示します。               |
-| [`IgxPolarScatterSeriesComponent`](/angular-apis/typescript/latest/classes/igxpolarscatterseriescomponent.html)       | 極座標 (角度/半径) 座標にあるデータ ポイントを表すマーカーの集合を表示します。                    |
-| [`IgxPolarLineSeriesComponent`](/angular-apis/typescript/latest/classes/igxpolarlineseriescomponent.html)             | 極座標 (角度/半径) 座標にあるデータ ポイントを結ぶ直線の集合を表示します。                      |
+| [`IgxPolarAreaSeriesComponent`](/components/datachart_series_types_polar.html)             | 極座標 (角度/半径) 座標にあるデータ ポイントを結ぶ直線の集合で囲まれ、塗りつぶされた多角形を表示します        |
+| [`IgxPolarSplineAreaSeriesComponent`](/components/datachart_series_types_polar.html) | 極座標（角度/半径）座標にあるデータ ポイントを結ぶ滑らかな/補間された線の集合で囲まれ、塗りつぶされた多角形を表示します |
+| [`IgxPolarSplineSeriesComponent`](/components/datachart_series_types_polar.html)         | 極座標 (角度/半径) 座標にあるデータ ポイントを結ぶ滑らかな/補間された集合を表示します。               |
+| [`IgxPolarScatterSeriesComponent`](/components/datachart_series_types_polar.html)       | 極座標 (角度/半径) 座標にあるデータ ポイントを表すマーカーの集合を表示します。                    |
+| [`IgxPolarLineSeriesComponent`](/components/datachart_series_types_polar.html)             | 極座標 (角度/半径) 座標にあるデータ ポイントを結ぶ直線の集合を表示します。                      |
 
 ### 軸の要件
 
-[`IgxDataChart`](/angular-apis/typescript/latest/classes/igxdatachart.html) コントロールは、さまざまな軸タイプを提供しますが、極座標シリーズの特定のタイプでは以下の軸タイプのみ使用できます。
+[`IgxDataChart`](/components/datachart_series_types_polar.html) コントロールは、さまざまな軸タイプを提供しますが、極座標シリーズの特定のタイプでは以下の軸タイプのみ使用できます。
 
 | シリーズ タイプ                                                                                                              | 半径軸タイプ                                                                                                        | 角度軸タイプ                                                                                                      |
 | --------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| [`IgxPolarAreaSeriesComponent`](/angular-apis/typescript/latest/classes/igxpolarareaseriescomponent.html)             | [`IgxNumericRadiusAxisComponent`](/angular-apis/typescript/latest/classes/igxnumericradiusaxiscomponent.html) | [`IgxNumericAngleAxisComponent`](/angular-apis/typescript/latest/classes/igxnumericangleaxiscomponent.html) |
-| [`IgxPolarSplineAreaSeriesComponent`](/angular-apis/typescript/latest/classes/igxpolarsplineareaseriescomponent.html) | [`IgxNumericRadiusAxisComponent`](/angular-apis/typescript/latest/classes/igxnumericradiusaxiscomponent.html) | [`IgxNumericAngleAxisComponent`](/angular-apis/typescript/latest/classes/igxnumericangleaxiscomponent.html) |
-| [`IgxPolarSplineSeriesComponent`](/angular-apis/typescript/latest/classes/igxpolarsplineseriescomponent.html)         | [`IgxNumericRadiusAxisComponent`](/angular-apis/typescript/latest/classes/igxnumericradiusaxiscomponent.html) | [`IgxNumericAngleAxisComponent`](/angular-apis/typescript/latest/classes/igxnumericangleaxiscomponent.html) |
-| [`IgxPolarScatterSeriesComponent`](/angular-apis/typescript/latest/classes/igxpolarscatterseriescomponent.html)       | [`IgxNumericRadiusAxisComponent`](/angular-apis/typescript/latest/classes/igxnumericradiusaxiscomponent.html) | [`IgxNumericAngleAxisComponent`](/angular-apis/typescript/latest/classes/igxnumericangleaxiscomponent.html) |
-| [`IgxPolarLineSeriesComponent`](/angular-apis/typescript/latest/classes/igxpolarlineseriescomponent.html)             | [`IgxNumericRadiusAxisComponent`](/angular-apis/typescript/latest/classes/igxnumericradiusaxiscomponent.html) | [`IgxNumericAngleAxisComponent`](/angular-apis/typescript/latest/classes/igxnumericangleaxiscomponent.html) |
+| [`IgxPolarAreaSeriesComponent`](/components/datachart_series_types_polar.html)             | [`IgxNumericRadiusAxisComponent`](/components/datachart_series_types_polar.html) | [`IgxNumericAngleAxisComponent`](/components/datachart_series_types_polar.html) |
+| [`IgxPolarSplineAreaSeriesComponent`](/components/datachart_series_types_polar.html) | [`IgxNumericRadiusAxisComponent`](/components/datachart_series_types_polar.html) | [`IgxNumericAngleAxisComponent`](/components/datachart_series_types_polar.html) |
+| [`IgxPolarSplineSeriesComponent`](/components/datachart_series_types_polar.html)         | [`IgxNumericRadiusAxisComponent`](/components/datachart_series_types_polar.html) | [`IgxNumericAngleAxisComponent`](/components/datachart_series_types_polar.html) |
+| [`IgxPolarScatterSeriesComponent`](/components/datachart_series_types_polar.html)       | [`IgxNumericRadiusAxisComponent`](/components/datachart_series_types_polar.html) | [`IgxNumericAngleAxisComponent`](/components/datachart_series_types_polar.html) |
+| [`IgxPolarLineSeriesComponent`](/components/datachart_series_types_polar.html)             | [`IgxNumericRadiusAxisComponent`](/components/datachart_series_types_polar.html) | [`IgxNumericAngleAxisComponent`](/components/datachart_series_types_polar.html) |
 
 ### データの要件
 
@@ -53,9 +53,9 @@ _language: ja
 
 -   データソースはデータ項目の配列やリストである必要があります。
 -   データソースはデータ項目を少なくとも 1 つ含む必要があります。含まない場合はチャートは極座標シリーズを描画しません。
--   すべてのデータ項目には、極座標シリーズの `AngleMemberPath` および `RadiusMemberPath` プロパティを使用してマッピングする必要がある少なくとも2つの数値データ列 ([`IgxPolarAreaSeriesComponent`](/angular-apis/typescript/latest/classes/igxpolarareaseriescomponent.html) など）を含める必要があります。
+-   すべてのデータ項目には、極座標シリーズの `AngleMemberPath` および `RadiusMemberPath` プロパティを使用してマッピングする必要がある少なくとも2つの数値データ列 ([`IgxPolarAreaSeriesComponent`](/components/datachart_series_types_polar.html) など）を含める必要があります。
 
-極座標シリーズのデータポイントの位置は、「極」と呼ばれる、固定方向からの角度 (角度座標) と固定点 (デカルト座標の原点に類似) からの距離 (半径座標) によって決まります。極から始まり外側に向かう線は、角度軸のグリッド線 ([`IgxNumericAngleAxisComponent`](/angular-apis/typescript/latest/classes/igxnumericangleaxiscomponent.html))、極を囲む同心円は半径軸のグリッド線 ([`IgxNumericRadiusAxisComponent`](/angular-apis/typescript/latest/classes/igxnumericradiusaxiscomponent.html)) です。
+極座標シリーズのデータポイントの位置は、「極」と呼ばれる、固定方向からの角度 (角度座標) と固定点 (デカルト座標の原点に類似) からの距離 (半径座標) によって決まります。極から始まり外側に向かう線は、角度軸のグリッド線 ([`IgxNumericAngleAxisComponent`](/components/datachart_series_types_polar.html))、極を囲む同心円は半径軸のグリッド線 ([`IgxNumericRadiusAxisComponent`](/components/datachart_series_types_polar.html)) です。
 
 上記データ要件を満たすデータソースとして [SamplePolarData](datachart_data_sources_polar.md) を使用できます。
 
@@ -65,7 +65,7 @@ this.state = { dataSource: SamplePolarData.create() }
 
 ### モジュールの要件
 
-[`IgxDataChart`](/angular-apis/typescript/latest/classes/igxdatachart.html) には以下のモジュールが必要です。
+[`IgxDataChart`](/components/datachart_series_types_polar.html) には以下のモジュールが必要です。
 
 ```ts
 // axis' modules:
@@ -98,7 +98,7 @@ import { IgxDataChartPolarModule } from "igniteui-angular-charts/ES5/igx-data-ch
 
 ### コード例
 
-このコードは、[`IgxPolarLineSeriesComponent`](/angular-apis/typescript/latest/classes/igxpolarlineseriescomponent.html) でデータチャートのインスタンスを作成し、データソースにバインドする方法を説明します。
+このコードは、[`IgxPolarLineSeriesComponent`](/components/datachart_series_types_polar.html) でデータチャートのインスタンスを作成し、データソースにバインドする方法を説明します。
 
 ```html
  <igx-data-chart
@@ -117,7 +117,7 @@ import { IgxDataChartPolarModule } from "igniteui-angular-charts/ES5/igx-data-ch
  </igx-data-chart>
 ```
 
-上記のコードを使って [`IgxPolarLineSeriesComponent`](/angular-apis/typescript/latest/classes/igxpolarlineseriescomponent.html) をレンダリングしたい極座標シリーズの名前で置き換えて他のタイプの極座標 シリーズを作成することもできます。
+上記のコードを使って [`IgxPolarLineSeriesComponent`](/components/datachart_series_types_polar.html) をレンダリングしたい極座標シリーズの名前で置き換えて他のタイプの極座標 シリーズを作成することもできます。
 
 ### その他のリソース
 

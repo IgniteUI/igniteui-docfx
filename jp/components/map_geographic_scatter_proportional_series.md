@@ -1,13 +1,13 @@
 ---
 title: マップ | データ可視化ツール | Ignite UI for Angular | Infragistics
 _description: マップを使用すると、ビュー モデルからの地理的位置を含むデータ、またはシェープ ファイルから地理的画像マップにロードされた地理空間データを表示できます。
-_keywords: map, Ignite UI for Angular, infragistics
+_keywords: map, Ignite UI for Angular, infragistics, マップ,
 _language: ja
 ---
 
 ## 散布図 - 比例シリーズの使用
 
-アプリケーション内のデータで指定された地理的な地点のマーカーをプロットするには、マップコンポーネントの [`IgxGeographicProportionalSymbolSeriesComponent`](/angular-apis/typescript/latest/classes/igxgeographicproportionalsymbolseriescomponent.html) を使用します。このマップ シリーズは、百貨店、倉庫、オフィスなど、特定のビジネス ケースに応じたポイントを強調表示する場合に役立ちます。また、動的な車両追跡のためにフリート管理システムまたは GPS システムでこの地図シリーズを使用することができます。
+アプリケーション内のデータで指定された地理的な地点のマーカーをプロットするには、マップコンポーネントの [`IgxGeographicProportionalSymbolSeriesComponent`](/components/map_geographic_scatter_proportional_series.html) を使用します。このマップ シリーズは、百貨店、倉庫、オフィスなど、特定のビジネス ケースに応じたポイントを強調表示する場合に役立ちます。また、動的な車両追跡のためにフリート管理システムまたは GPS システムでこの地図シリーズを使用することができます。
 
 ### デモ
 
@@ -21,21 +21,21 @@ _language: ja
 
 <div class="divider--half"></div>
 
-上のデモは [`IgxGeographicProportionalSymbolSeriesComponent`](/angular-apis/typescript/latest/classes/igxgeographicproportionalsymbolseriescomponent.html) シリーズとそのシリーズのデータ??バインディング オプションを指定する方法を示しています。予定表連動マーカー選択は、マーカー競合回避ロジックと合わせて構成され、マーカー アウトラインと塗りつぶしの色も指定されます。
+上のデモは [`IgxGeographicProportionalSymbolSeriesComponent`](/components/map_geographic_scatter_proportional_series.html) シリーズとそのシリーズのデータ??バインディング オプションを指定する方法を示しています。予定表連動マーカー選択は、マーカー競合回避ロジックと合わせて構成され、マーカー アウトラインと塗りつぶしの色も指定されます。
 
 ### 構成の概要
 
-マップ コントロールの他のタイプの散布図シリーズと同様に、[`IgxGeographicProportionalSymbolSeriesComponent`](/angular-apis/typescript/latest/classes/igxgeographicproportionalsymbolseriescomponent.html) シリーズには、オブジェクトの配列にバインドできる `ItemsSource` プロパティがあります。また、項目ソースの各項目は、地理経度および緯度を表す 2 つのデータ列があります。[`longitudeMemberPath`](/angular-apis/typescript/latest/classes/igxgeographicproportionalsymbolseriescomponent.html#longitudememberpath) および [`latitudeMemberPath`](/angular-apis/typescript/latest/classes/igxgeographicproportionalsymbolseriescomponent.html#latitudememberpath) プロパティを使用してこのデータ列をマップします。  [`radiusScale`](/angular-apis/typescript/latest/classes/igxgeographicproportionalsymbolseriescomponent.html#radiusscale) と [`radiusMemberPath`](/angular-apis/typescript/latest/classes/igxgeographicproportionalsymbolseriescomponent.html#radiusmemberpath) は、バブルの半径を設定します。
+マップ コントロールの他のタイプの散布図シリーズと同様に、[`IgxGeographicProportionalSymbolSeriesComponent`](/components/map_geographic_scatter_proportional_series.html) シリーズには、オブジェクトの配列にバインドできる `ItemsSource` プロパティがあります。また、項目ソースの各項目は、地理経度および緯度を表す 2 つのデータ列があります。[`longitudeMemberPath`](/components/map_geographic_scatter_proportional_series.html) および [`latitudeMemberPath`](/components/map_geographic_scatter_proportional_series.html) プロパティを使用してこのデータ列をマップします。  [`radiusScale`](/components/map_geographic_scatter_proportional_series.html) と [`radiusMemberPath`](/components/map_geographic_scatter_proportional_series.html) は、バブルの半径を設定します。
 
 以下の表に、データ バインドに使用される GeographicHighDensityScatterSeries シリーズのプロパティをまとめています。
 
 | プロパティ                                                                                                                                    | タイプ                                                                         | 説明                                              |
 | ---------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- | ----------------------------------------------- |
 | `ItemsSource`                                                                                                                            | any                                                                         | 項目のソースを取得または設定します                               |
-| [`longitudeMemberPath`](/angular-apis/typescript/latest/classes/igxgeographicproportionalsymbolseriescomponent.html#longitudememberpath) | string                                                                      | ItemsSource プロパティを使用して、割り当てられた商品の経度の値の場所を特定します。 |
-| [`latitudeMemberPath`](/angular-apis/typescript/latest/classes/igxgeographicproportionalsymbolseriescomponent.html#latitudememberpath)   | string                                                                      | ItemsSource プロパティを使用して、割り当てられた商品の緯度値の場所を決定します。  |
-| [`radiusMemberPath`](/angular-apis/typescript/latest/classes/igxgeographicproportionalsymbolseriescomponent.html#radiusmemberpath)       | string                                                                      | シリーズの半径値を取得するために使用するパスを設定します。                   |
-| [`radiusScale`](/angular-apis/typescript/latest/classes/igxgeographicproportionalsymbolseriescomponent.html#radiusscale)                 | [`IgxSizeScale`](/angular-apis/typescript/latest/classes/igxsizescale.html) | 現在のバブル シリーズの半径スケール プロパティを取得または設定します。            |
+| [`longitudeMemberPath`](/components/map_geographic_scatter_proportional_series.html) | string                                                                      | ItemsSource プロパティを使用して、割り当てられた商品の経度の値の場所を特定します。 |
+| [`latitudeMemberPath`](/components/map_geographic_scatter_proportional_series.html)   | string                                                                      | ItemsSource プロパティを使用して、割り当てられた商品の緯度値の場所を決定します。  |
+| [`radiusMemberPath`](/components/map_geographic_scatter_proportional_series.html)       | string                                                                      | シリーズの半径値を取得するために使用するパスを設定します。                   |
+| [`radiusScale`](/components/map_geographic_scatter_proportional_series.html)                 | [`IgxSizeScale`](/components/map_geographic_scatter_proportional_series.html) | 現在のバブル シリーズの半径スケール プロパティを取得または設定します。            |
 | `MinimumValue`                                                                                                                           | any                                                                         | 値のサブ範囲を計算するための最小値を設定します。                        |
 | `MaximumValue`                                                                                                                           | any                                                                         | 値のサブ範囲を計算するための最大値を設定します。                        |
 

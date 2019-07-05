@@ -7,7 +7,7 @@ _language: ja
 
 ## 軸オプション
 
-[`IgxCategoryChart`](/angular-apis/typescript/latest/classes/igxcategorychart.html) コントロールでは、軸は軸線、目盛、タイトル、や軸のラベルの外観を設定する基本プロパティを提供します。
+[`IgxCategoryChart`](/components/categorychart_axis_options.html) コントロールでは、軸は軸線、目盛、タイトル、や軸のラベルの外観を設定する基本プロパティを提供します。
 
 ### デモ
 

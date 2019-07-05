@@ -7,7 +7,7 @@ _language: ja
 
 ## 注釈
 
-このトピックでは、[`IgxCategoryChart`](/angular-apis/typescript/latest/classes/igxcategorychart.html) の注釈やインタラクションについて説明します。
+このトピックでは、[`IgxCategoryChart`](/components/categorychart_annotation_layers.html) の注釈やインタラクションについて説明します。
 
 ### デモ
 

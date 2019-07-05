@@ -34,7 +34,7 @@ gauges パッケージをインストールするときに core パッケージ�
 
 ### 必要なモジュール
 
-[`IgxRadialGauge`](/angular-apis/typescript/latest/classes/igxradialgauge.html) は、以下のモジュールが必要です。
+[`IgxRadialGauge`](/components/radialgauge.html) は、以下のモジュールが必要です。
 
 ```ts
 // app.module.ts

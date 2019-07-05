@@ -7,7 +7,7 @@ _language: ja
 
 ## 散布図 - マーカーシリーズ
 
-このトピックでは、[`IgxDataChart`](/angular-apis/typescript/latest/classes/igxdatachart.html) コントロールのさまざまな種類の散布マーカーシリーズについて説明します。散布マーカー シリーズは、デカルト座標系 (x、y) を使用して各データ項目のマーカーをプロットする一連のシリーズです。
+このトピックでは、[`IgxDataChart`](/components/datachart_series_types_scatter_marker.html) コントロールのさまざまな種類の散布マーカーシリーズについて説明します。散布マーカー シリーズは、デカルト座標系 (x、y) を使用して各データ項目のマーカーをプロットする一連のシリーズです。
 
 ### デモ
 
@@ -27,19 +27,19 @@ _language: ja
 
 | シリーズ名                                                                                                             | 説明                                                              |
 | ----------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------- |
-| [`IgxScatterSeriesComponent`](/angular-apis/typescript/latest/classes/igxscatterseriescomponent.html)             | `XMemberPath` および `YMemberPath` プロパティにマップされたデータポイントのマーカーを表示します。 |
-| [`IgxScatterLineSeriesComponent`](/angular-apis/typescript/latest/classes/igxscatterlineseriescomponent.html)     | マーカーに加えて、各データ ポイント間に直線を表示します。                                   |
-| [`IgxScatterSplineSeriesComponent`](/angular-apis/typescript/latest/classes/igxscattersplineseriescomponent.html) | マーカーに加えて、各データ ポイント間を補間する滑らかな線を表示します。                            |
+| [`IgxScatterSeriesComponent`](/components/datachart_series_types_scatter_marker.html)             | `XMemberPath` および `YMemberPath` プロパティにマップされたデータポイントのマーカーを表示します。 |
+| [`IgxScatterLineSeriesComponent`](/components/datachart_series_types_scatter_marker.html)     | マーカーに加えて、各データ ポイント間に直線を表示します。                                   |
+| [`IgxScatterSplineSeriesComponent`](/components/datachart_series_types_scatter_marker.html) | マーカーに加えて、各データ ポイント間を補間する滑らかな線を表示します。                            |
 
 ### 軸の要件
 
-[`IgxDataChart`](/angular-apis/typescript/latest/classes/igxdatachart.html) コントロールはさまざまな軸タイプを提供しますが、散布マーカー シリーズで使用できるのは以下のタイプの軸のみです。
+[`IgxDataChart`](/components/datachart_series_types_scatter_marker.html) コントロールはさまざまな軸タイプを提供しますが、散布マーカー シリーズで使用できるのは以下のタイプの軸のみです。
 
 | シリーズ タイプ                                                                                                          | YAxis タイプ                                                                                           | XAxis タイプ                                                                                           |
 | ----------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
-| [`IgxScatterSeriesComponent`](/angular-apis/typescript/latest/classes/igxscatterseriescomponent.html)             | [`IgxNumericYAxisComponent`](/angular-apis/typescript/latest/classes/igxnumericyaxiscomponent.html) | [`IgxNumericXAxisComponent`](/angular-apis/typescript/latest/classes/igxnumericxaxiscomponent.html) |
-| [`IgxScatterLineSeriesComponent`](/angular-apis/typescript/latest/classes/igxscatterlineseriescomponent.html)     | [`IgxNumericYAxisComponent`](/angular-apis/typescript/latest/classes/igxnumericyaxiscomponent.html) | [`IgxNumericXAxisComponent`](/angular-apis/typescript/latest/classes/igxnumericxaxiscomponent.html) |
-| [`IgxScatterSplineSeriesComponent`](/angular-apis/typescript/latest/classes/igxscattersplineseriescomponent.html) | [`IgxNumericYAxisComponent`](/angular-apis/typescript/latest/classes/igxnumericyaxiscomponent.html) | [`IgxNumericXAxisComponent`](/angular-apis/typescript/latest/classes/igxnumericxaxiscomponent.html) |
+| [`IgxScatterSeriesComponent`](/components/datachart_series_types_scatter_marker.html)             | [`IgxNumericYAxisComponent`](/components/datachart_series_types_scatter_marker.html) | [`IgxNumericXAxisComponent`](/components/datachart_series_types_scatter_marker.html) |
+| [`IgxScatterLineSeriesComponent`](/components/datachart_series_types_scatter_marker.html)     | [`IgxNumericYAxisComponent`](/components/datachart_series_types_scatter_marker.html) | [`IgxNumericXAxisComponent`](/components/datachart_series_types_scatter_marker.html) |
+| [`IgxScatterSplineSeriesComponent`](/components/datachart_series_types_scatter_marker.html) | [`IgxNumericYAxisComponent`](/components/datachart_series_types_scatter_marker.html) | [`IgxNumericXAxisComponent`](/components/datachart_series_types_scatter_marker.html) |
 
 ### データの要件
 
@@ -88,7 +88,7 @@ export class AppModule { /* ... */ }
 
 ### コード例
 
-このコードは、[`IgxScatterSeriesComponent`](/angular-apis/typescript/latest/classes/igxscatterseriescomponent.html) でデータチャートのインスタンスを作成し、データソースにバインドする方法を説明します。
+このコードは、[`IgxScatterSeriesComponent`](/components/datachart_series_types_scatter_marker.html) でデータチャートのインスタンスを作成し、データソースにバインドする方法を説明します。
 
 ```html
  <igx-data-chart
@@ -107,7 +107,7 @@ export class AppModule { /* ... */ }
  </igx-data-chart>
 ```
 
-[`IgxScatterSeriesComponent`](/angular-apis/typescript/latest/classes/igxscatterseriescomponent.html) を置き換えることで [`IgxScatterLineSeriesComponent`](/angular-apis/typescript/latest/classes/igxscatterlineseriescomponent.html) または [`IgxScatterSplineSeriesComponent`](/angular-apis/typescript/latest/classes/igxscattersplineseriescomponent.html) を作成するために上記のコードを使用することもできます。
+[`IgxScatterSeriesComponent`](/components/datachart_series_types_scatter_marker.html) を置き換えることで [`IgxScatterLineSeriesComponent`](/components/datachart_series_types_scatter_marker.html) または [`IgxScatterSplineSeriesComponent`](/components/datachart_series_types_scatter_marker.html) を作成するために上記のコードを使用することもできます。
 
 ### シリーズの外観
 

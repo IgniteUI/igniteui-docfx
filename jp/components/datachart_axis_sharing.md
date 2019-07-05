@@ -7,7 +7,7 @@ _language: ja
 
 ## 軸共有と複数軸
 
- [`IgxDataChart`](/angular-apis/typescript/latest/classes/igxdatachart.html) コントロールの同じプロット領域に複数の軸を共有して追加できます。すべての軸に対して、チャートプロット領域に関連して位置を指定できます。広範囲の値 (株価や株取引量など) を持つ多くのデータソースをプロットする場合は、複数の軸を使用するのが一般的なシナリオです。
+ [`IgxDataChart`](/components/datachart_axis_sharing.html) コントロールの同じプロット領域に複数の軸を共有して追加できます。すべての軸に対して、チャートプロット領域に関連して位置を指定できます。広範囲の値 (株価や株取引量など) を持つ多くのデータソースをプロットする場合は、複数の軸を使用するのが一般的なシナリオです。
 
 ### デモ
 
@@ -23,7 +23,7 @@ _language: ja
 
 ### コード例
 
-このコードは、2 つのシリーズ間で共有される 2 つの [`IgxNumericYAxisComponent`](/angular-apis/typescript/latest/classes/igxnumericyaxiscomponent.html) と 1 つの [`IgxCategoryXAxisComponent`](/angular-apis/typescript/latest/classes/igxcategoryxaxiscomponent.html) でデータ チャートを作成する方法を示します。
+このコードは、2 つのシリーズ間で共有される 2 つの [`IgxNumericYAxisComponent`](/components/datachart_axis_sharing.html) と 1 つの [`IgxCategoryXAxisComponent`](/components/datachart_axis_sharing.html) でデータ チャートを作成する方法を示します。
 
 ```html
  <igx-data-chart

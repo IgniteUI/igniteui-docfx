@@ -7,7 +7,7 @@ _language: ja
 
 ## 軸設定
 
-[`IgxDataChart`](/angular-apis/typescript/latest/classes/igxdatachart.html) コントロールでは、軸は、軸メインライン、目盛り、タイトル、および軸ラベルの外観を指定するための基本プロパティを提供します。
+[`IgxDataChart`](/components/datachart_axis_settings.html) コントロールでは、軸は、軸メインライン、目盛り、タイトル、および軸ラベルの外観を指定するための基本プロパティを提供します。
 
 ### デモ
 
@@ -23,7 +23,7 @@ _language: ja
 
 ### 軸ラベル
 
-[`IgxDataChart`](/angular-apis/typescript/latest/classes/igxdatachart.html) コントロールは、チャートで表示されるラベルの構成、書式設定、およびラベル フォントのスタイル設定を制御することが可能です。これらのラベルの回転角度、マージン、水平および垂直方向の配置、色、余白、および表示設定を変更できます。
+[`IgxDataChart`](/components/datachart_axis_settings.html) コントロールは、チャートで表示されるラベルの構成、書式設定、およびラベル フォントのスタイル設定を制御することが可能です。これらのラベルの回転角度、マージン、水平および垂直方向の配置、色、余白、および表示設定を変更できます。
 
 次のコード例は、チャートのカテゴリ X 軸のラベルのスタイルを設定する方法を示しています。
 
@@ -39,7 +39,7 @@ _language: ja
 
 ### 軸タイトル
 
-[`IgxDataChart`](/angular-apis/typescript/latest/classes/igxdatachart.html) コントロールの軸タイトル機能を使用すると、チャートの軸にコンテキスト情報を追加できます。さまざまなフォントスタイル、マージン、および配置を適用するなど、さまざまな方法で軸タイトルの外観をカスタマイズできます。
+[`IgxDataChart`](/components/datachart_axis_settings.html) コントロールの軸タイトル機能を使用すると、チャートの軸にコンテキスト情報を追加できます。さまざまなフォントスタイル、マージン、および配置を適用するなど、さまざまな方法で軸タイトルの外観をカスタマイズできます。
 
 次のコード例は、チャートのカテゴリ X 軸のタイトルを設定およびカスタマイズする方法を示しています。
 
@@ -55,7 +55,7 @@ _language: ja
 
 ### 軸目盛
 
-目盛りは、チャートの軸上に点を表示します。スケールに特定の数値ポイント、またはカテゴリ軸にカテゴリ値を表します。[`IgxDataChart`](/angular-apis/typescript/latest/classes/igxdatachart.html) コントロールでは、軸上の目盛りの長さ、太さ、および色を変更できます。
+目盛りは、チャートの軸上に点を表示します。スケールに特定の数値ポイント、またはカテゴリ軸にカテゴリ値を表します。[`IgxDataChart`](/components/datachart_axis_settings.html) コントロールでは、軸上の目盛りの長さ、太さ、および色を変更できます。
 
 次のコード例は、チャートのカテゴリX軸上の目盛りの色、長さ、および太さを設定およびカスタマイズする方法を示しています。
 
@@ -70,11 +70,11 @@ _language: ja
 
 ### 軸の範囲
 
-[`IgxDataChart`](/angular-apis/typescript/latest/classes/igxdatachart.html) コントロールでは、数値軸または時間軸の範囲の最小値と最大値を定義できます。範囲の最小値は軸の最小値で、範囲の最大値は軸の最大値です。これらは対応する軸で `MinimumValue` と `MaximumValue` オプションを設定することによって設定されます。
+[`IgxDataChart`](/components/datachart_axis_settings.html) コントロールでは、数値軸または時間軸の範囲の最小値と最大値を定義できます。範囲の最小値は軸の最小値で、範囲の最大値は軸の最大値です。これらは対応する軸で `MinimumValue` と `MaximumValue` オプションを設定することによって設定されます。
 
-既定では、[`IgxDataChart`](/angular-apis/typescript/latest/classes/igxdatachart.html) コントロールは、データ内の対応する最小値と最大値に基づいて、数値と時間軸の範囲の最小値と最大値を計算しますが、この自動計算は、データセットには適していません。たとえば、データの最小値が 850 の場合、数値軸の `MinimumValue` を 800 に設定して、軸の最小値とデータポイントの最小値の間に 50 のスペース値ができるようにします。`MinimumValue` プロパティを使用して、同じ方法を軸の最小値と最大値に適用することができます。
+既定では、[`IgxDataChart`](/components/datachart_axis_settings.html) コントロールは、データ内の対応する最小値と最大値に基づいて、数値と時間軸の範囲の最小値と最大値を計算しますが、この自動計算は、データセットには適していません。たとえば、データの最小値が 850 の場合、数値軸の `MinimumValue` を 800 に設定して、軸の最小値とデータポイントの最小値の間に 50 のスペース値ができるようにします。`MinimumValue` プロパティを使用して、同じ方法を軸の最小値と最大値に適用することができます。
 
-次のコードスニペットは、[`IgxDataChart`](/angular-apis/typescript/latest/classes/igxdatachart.html) コントロールの軸範囲を変更する方法を示しています。
+次のコードスニペットは、[`IgxDataChart`](/components/datachart_axis_settings.html) コントロールの軸範囲を変更する方法を示しています。
 
 ```html
 <igx-numeric-y-axis #yAxis
@@ -86,7 +86,7 @@ _language: ja
 
 ### 軸グリッド線
 
-[`IgxDataChart`](/angular-apis/typescript/latest/classes/igxdatachart.html) コントロールでは、軸の Interval プロパティによって、主グリッド線と軸ラベルをその軸に描画する頻度が決まります。同様に、`MinorInterval` プロパティは、それらの主グリッド線の間に副グリッド線が描画される頻度を指定します。
+[`IgxDataChart`](/components/datachart_axis_settings.html) コントロールでは、軸の Interval プロパティによって、主グリッド線と軸ラベルをその軸に描画する頻度が決まります。同様に、`MinorInterval` プロパティは、それらの主グリッド線の間に副グリッド線が描画される頻度を指定します。
 
 数値軸の場合、これらの間隔は数値になりますが、カテゴリ軸の場合、これらの値は線を引くのに必要なカテゴリ数の頻度を表します。たとえば、カテゴリ軸で `Interval` を 2 に設定した場合、主グリッド線は 2 カテゴリごとに描画されます。
 
@@ -108,7 +108,7 @@ _language: ja
 
 ### 軸間隔
 
-[`IgxDataChart`](/angular-apis/typescript/latest/classes/igxdatachart.html) コントロールのカテゴリ軸の `Gap` プロパティは、一連のチャート間のスペースの量を決定します。
+[`IgxDataChart`](/components/datachart_axis_settings.html) コントロールのカテゴリ軸の `Gap` プロパティは、一連のチャート間のスペースの量を決定します。
 
 このプロパティは、0 から 1 までの数値を受け入れます。値は、シリーズ間の利用可能なピクセル数からのギャップの相対幅を表します。このプロパティを 0 に設定すると、シリーズ間にギャップがレンダリングされず、1 に設定すると最大ギャップがレンダリングされます。
 
@@ -124,7 +124,7 @@ _language: ja
 
 ### 軸の重複
 
-[`IgxDataChart`](/angular-apis/typescript/latest/classes/igxdatachart.html) コントロールのカテゴリ軸の軸 `Overlap` 機能を使用すると、レンダリングされたカテゴリの重なりを設定できます。
+[`IgxDataChart`](/components/datachart_axis_settings.html) コントロールのカテゴリ軸の軸 `Overlap` 機能を使用すると、レンダリングされたカテゴリの重なりを設定できます。
 
 このプロパティは、-1 から 1 までの数値を受け入れます。値は、各シリーズ専用の使用可能なピクセル数からの相対的な重なりを表します。
 

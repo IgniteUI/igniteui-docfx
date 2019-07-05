@@ -1,7 +1,7 @@
 ---
 title: Map |データ可視化ツール |Ignite UI for Angular |オープンストリートマップ |Infragistics
 _description: マップを使用すると、ビュー モデルからの地理的位置を含むデータ、またはシェープ ファイルから地理的画像マップにロードされた地理空間データを表示できます。
-_keywords: map, Ignite UI for Angular, infragistics
+_keywords: map, Ignite UI for Angular, infragistics, マップ,
 _language: ja
 ---
 
@@ -24,4 +24,4 @@ Open Street Maps は、世界中の OpenStreetMap© のコントリビュータ�
 
 ### コード スニペット
 
-このコード例では、マップコンポーネントの `BackgroundContent` を、[`OpenStreetMapImagery`](/angular-apis/typescript/latest/classes/openstreetmapimagery.html) の地理的画像タイルを提供する OpenStreetMapImagery オブジェクトに明示的に設定しています。
+このコード例では、マップコンポーネントの `BackgroundContent` を、[`OpenStreetMapImagery`](/components/map_displaying_osm_imagery.html) の地理的画像タイルを提供する OpenStreetMapImagery オブジェクトに明示的に設定しています。

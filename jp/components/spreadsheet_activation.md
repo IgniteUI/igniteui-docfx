@@ -8,7 +8,7 @@ mentionedTypes: ['Spreadsheet']
 
 ## スプレッドシートのアクティブ化
 
-[`IgxSpreadsheetComponent`](/angular-apis/typescript/latest/classes/igxspreadsheetcomponent.html) コントロールは、コントロール内で現在アクティブなセル、ペイン、およびワークシートを決定するためのプロパティを公開しています。これは、ユーザーがコントロール内のどこを移動または編集している可能性があるかを判断するのに役立ちます。
+[`IgxSpreadsheetComponent`](/components/spreadsheet_activation.html) コントロールは、コントロール内で現在アクティブなセル、ペイン、およびワークシートを決定するためのプロパティを公開しています。これは、ユーザーがコントロール内のどこを移動または編集している可能性があるかを判断するのに役立ちます。
 
 ### デモ
 
@@ -24,13 +24,13 @@ mentionedTypes: ['Spreadsheet']
 
 ### アクティベーションの概要
 
-[`IgxSpreadsheetComponent`](/angular-apis/typescript/latest/classes/igxspreadsheetcomponent.html) コントロールのアクティブ化は、スプレッドシートの現在の [`workbook`](/angular-apis/typescript/latest/classes/igxspreadsheetcomponent.html#workbook) のセル、ペイン、およびワークシート間で分割されます。3 つの アクティブなプロパティは以下のとおりです。
+[`IgxSpreadsheetComponent`](/components/spreadsheet_activation.html) コントロールのアクティブ化は、スプレッドシートの現在の [`workbook`](/components/spreadsheet_activation.html) のセル、ペイン、およびワークシート間で分割されます。3 つの アクティブなプロパティは以下のとおりです。
 
--   [`activeCell`](/angular-apis/typescript/latest/classes/igxspreadsheetcomponent.html#activecell): スプレッドシート内のアクティブ セルを返すか、設定します。設定するには、[`SpreadsheetCell`](/angular-apis/typescript/latest/classes/spreadsheetcell.html) の新しいインスタンスを作成し、そのセルに関する列と行、またはセルの文字列アドレスなどの情報を渡す必要があります。
--   [`activePane`](/angular-apis/typescript/latest/classes/igxspreadsheetcomponent.html#activepane): スプレッドシート コントロールの現在アクティブなワークシートのアクティブ ペインを返します。
--   [`activeWorksheet`](/angular-apis/typescript/latest/classes/igxspreadsheetcomponent.html#activeworksheet): スプレッドシート コントロールの [`workbook`](/angular-apis/typescript/latest/classes/igxspreadsheetcomponent.html#workbook) 内のアクティブ ワークシートを返すか、設定します。これは、スプレッドシートに添付されているワークブック内の既存のワークシートに設定することで設定できます。
+-   [`activeCell`](/components/spreadsheet_activation.html): スプレッドシート内のアクティブ セルを返すか、設定します。設定するには、[`SpreadsheetCell`](/components/spreadsheet_activation.html) の新しいインスタンスを作成し、そのセルに関する列と行、またはセルの文字列アドレスなどの情報を渡す必要があります。
+-   [`activePane`](/components/spreadsheet_activation.html): スプレッドシート コントロールの現在アクティブなワークシートのアクティブ ペインを返します。
+-   [`activeWorksheet`](/components/spreadsheet_activation.html): スプレッドシート コントロールの [`workbook`](/components/spreadsheet_activation.html) 内のアクティブ ワークシートを返すか、設定します。これは、スプレッドシートに添付されているワークブック内の既存のワークシートに設定することで設定できます。
 
-次のコードスニペットは、[`IgxSpreadsheetComponent`](/angular-apis/typescript/latest/classes/igxspreadsheetcomponent.html) コントロールのセルとワークシートのアクティブ化の設定を示しています。
+次のコードスニペットは、[`IgxSpreadsheetComponent`](/components/spreadsheet_activation.html) コントロールのセルとワークシートのアクティブ化の設定を示しています。
 
 ```ts
 this.spreadsheet.activeWorksheet = this.spreadsheet.workbook.worksheets(1);

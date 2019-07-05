@@ -7,7 +7,7 @@ _language: ja
 
 ## 注釈
 
-このトピックでは、[`IgxFinancialChart`](/angular-apis/typescript/latest/classes/igxfinancialchart.html) の注釈について説明します。
+このトピックでは、[`IgxFinancialChart`](/components/financialchart_chart_annotations.html) の注釈について説明します。
 
 ### デモ
 

@@ -7,7 +7,7 @@ _language: ja
 
 ## リアルタイム データにバインド
 
-[`IgxFinancialChart`](/angular-apis/typescript/latest/classes/igxfinancialchart.html) コントロールはリアルタイムでデータの描画をすばやく処理できるコントロールです。以下のデモでは、Financial Chart のデータが高頻度で更新されています。
+[`IgxFinancialChart`](/components/financialchart_binding_live_data.html) コントロールはリアルタイムでデータの描画をすばやく処理できるコントロールです。以下のデモでは、Financial Chart のデータが高頻度で更新されています。
 
 ### デモ
 

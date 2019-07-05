@@ -32,7 +32,7 @@ chart パッケージをインストールするときに core パッケージ�
 
 ### 必要なモジュール
 
-[`IgxPieChart`](/angular-apis/typescript/latest/classes/igxpiechart.html) は、以下のモジュールが必要です。
+[`IgxPieChart`](/components/piechart.html) は、以下のモジュールが必要です。
 
 ```ts
 // app.module.ts

@@ -8,7 +8,7 @@ _language: ja
 
 ## データ チャート
 
-[`IgxDataChart`](/angular-apis/typescript/latest/classes/igxdatachart.html) は、軸、マーカー、凡例、および注釈レイヤーのモジュール設計を提供するチャート コンポーネントです。チャート機能は、複合チャート ビューを作成するために同じチャート領域でのビジュアル要素の複数のインスタンスを利用できます。
+[`IgxDataChart`](/components/datachart.html) は、軸、マーカー、凡例、および注釈レイヤーのモジュール設計を提供するチャート コンポーネントです。チャート機能は、複合チャート ビューを作成するために同じチャート領域でのビジュアル要素の複数のインスタンスを利用できます。
 
 ### デモ
 
@@ -31,7 +31,7 @@ chart パッケージをインストールするときに core パッケージ�
 
 ### 必要なモジュール
 
-[`IgxDataChart`](/angular-apis/typescript/latest/classes/igxdatachart.html) は、以下のモジュールが必要です。
+[`IgxDataChart`](/components/datachart.html) は、以下のモジュールが必要です。
 
 ```ts
 // data chart's modules required for all series:
@@ -63,18 +63,18 @@ export class AppModule { /* ... */ }
 
 ### サポートされるシリーズ
 
-[`IgxDataChart`](/angular-apis/typescript/latest/classes/igxdatachart.html) コントロールは、[カテゴリ シリーズ](datachart_series_types_category.md)、[ファイナンシャル シリーズ](datachart_series_types_financial.md)、[極座標シリーズ](datachart_series_types_polar.md)、[ラジアル シリーズ](datachart_series_types_radial.md)、[エリア シリーズ](datachart_series_types_range.md)、[散布シリーズ](datachart_series_types_scatter_bubble.md)、[図形シリーズ](datachart_series_types_shape.md) を含む 65 種類以上のシリーズをサポートします。サポートされている [Series](datachart_series_types.md) のタイプとそれらの使用方法のリストについては、シリーズのトピックを参照してください。
+[`IgxDataChart`](/components/datachart.html) コントロールは、[カテゴリ シリーズ](datachart_series_types_category.md)、[ファイナンシャル シリーズ](datachart_series_types_financial.md)、[極座標シリーズ](datachart_series_types_polar.md)、[ラジアル シリーズ](datachart_series_types_radial.md)、[エリア シリーズ](datachart_series_types_range.md)、[散布シリーズ](datachart_series_types_scatter_bubble.md)、[図形シリーズ](datachart_series_types_shape.md) を含む 65 種類以上のシリーズをサポートします。サポートされている [Series](datachart_series_types.md) のタイプとそれらの使用方法のリストについては、シリーズのトピックを参照してください。
 
 ### サポートされる軸
 
-[`IgxDataChart`](/angular-apis/typescript/latest/classes/igxdatachart.html) コントロールは、特定の種類のシリーズで使用することを目的としたさまざまな種類の軸をサポートします。以下の表はシリーズ タイプで使用できます。   これらのタイプの軸の使用方法については、[Series](datachart_series_types.md) と [Axis](datachart_axis_types.md) のトピックを参照してください。
+[`IgxDataChart`](/components/datachart.html) コントロールは、特定の種類のシリーズで使用することを目的としたさまざまな種類の軸をサポートします。以下の表はシリーズ タイプで使用できます。   これらのタイプの軸の使用方法については、[Series](datachart_series_types.md) と [Axis](datachart_axis_types.md) のトピックを参照してください。
 
 | 軸タイプ               | サポートされるシリーズ タイプ                                                                                                                                                                                                                                          |
 | ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| CategoryYAxis      | [Category ](datachart_series_types_category.md) グループの [`IgxBarSeriesComponent`](/angular-apis/typescript/latest/classes/igxbarseriescomponent.html) のみ                                                                                                   |
-| CategoryXAxis      | すべての [ファイナンシャル シリーズ](datachart_series_types_financial.md)、[エリア シリーズ](datachart_series_types_range.md)、[カテゴリ シリーズ](datachart_series_types_category.md) ([`IgxBarSeriesComponent`](/angular-apis/typescript/latest/classes/igxbarseriescomponent.html) 以外) |
-| TimeXAxis          | すべての [ファイナンシャル シリーズ](datachart_series_types_financial.md)、[エリア シリーズ](datachart_series_types_range.md)、[カテゴリ シリーズ](datachart_series_types_category.md) ([`IgxBarSeriesComponent`](/angular-apis/typescript/latest/classes/igxbarseriescomponent.html) 以外) |
-| OrdinalTimeXAxis   | すべての [ファイナンシャル シリーズ](datachart_series_types_financial.md)、[エリア シリーズ](datachart_series_types_range.md)、[カテゴリ シリーズ](datachart_series_types_category.md) ([`IgxBarSeriesComponent`](/angular-apis/typescript/latest/classes/igxbarseriescomponent.html) 以外) |
+| CategoryYAxis      | [Category ](datachart_series_types_category.md) グループの [`IgxBarSeriesComponent`](/components/datachart.html) のみ                                                                                                   |
+| CategoryXAxis      | すべての [ファイナンシャル シリーズ](datachart_series_types_financial.md)、[エリア シリーズ](datachart_series_types_range.md)、[カテゴリ シリーズ](datachart_series_types_category.md) ([`IgxBarSeriesComponent`](/components/datachart.html) 以外) |
+| TimeXAxis          | すべての [ファイナンシャル シリーズ](datachart_series_types_financial.md)、[エリア シリーズ](datachart_series_types_range.md)、[カテゴリ シリーズ](datachart_series_types_category.md) ([`IgxBarSeriesComponent`](/components/datachart.html) 以外) |
+| OrdinalTimeXAxis   | すべての [ファイナンシャル シリーズ](datachart_series_types_financial.md)、[エリア シリーズ](datachart_series_types_range.md)、[カテゴリ シリーズ](datachart_series_types_category.md) ([`IgxBarSeriesComponent`](/components/datachart.html) 以外) |
 | PercentChangeYAxis | すべての [ファイナンシャル シリーズ](datachart_series_types_financial.md)、[エリア シリーズ](datachart_series_types_range.md)、[カテゴリ シリーズ](datachart_series_types_category.md)、[散布シリーズ](datachart_series_types_scatter_bubble.md)、[図形シリーズ](datachart_series_types_shape.md)       |
 | NumericYAxis       | すべての [散布シリーズ](datachart_series_types_scatter_bubble.md)、[図形シリーズ](datachart_series_types_shape.md)、[ファイナンシャル シリーズ](datachart_series_types_financial.md)、[エリア シリーズ](datachart_series_types_range.md)、[カテゴリ シリーズ](datachart_series_types_category.md)       |
 | NumericXAxis       | [カテゴリ シリーズ](datachart_series_types_category.md) グループのすべての [散布シリーズ](datachart_series_types_scatter_bubble.md)、[図形シリーズ](datachart_series_types_shape.md)、BarSeries                                                                                         |
@@ -86,7 +86,7 @@ export class AppModule { /* ... */ }
 
 データチャートモジュールがインポートされたので、次のステップはチャートをデータにバインドすることです。すべてのシリーズを正しく表示するには、特定の数と種類のデータ列が必要です。[データソース](datachart_data_sources.md) のトピックで、系列の種類ごとにデータソースを見つけることができます。
 
-次のコードスニペットは、散布 [`IgxBubbleSeriesComponent`](/angular-apis/typescript/latest/classes/igxbubbleseriescomponent.html) を作成し、それを [SampleScatterStats](datachart_data_sources_stats.md) データにバインドする方法を示しています。
+次のコードスニペットは、散布 [`IgxBubbleSeriesComponent`](/components/datachart.html) を作成し、それを [SampleScatterStats](datachart_data_sources_stats.md) データにバインドする方法を示しています。
 
 > [!NOTE]
 >

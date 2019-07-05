@@ -7,7 +7,7 @@ _language: ja
 
 ## 散布図 - エリア シリーズ
 
-このトピックは、コード例を示して [`IgxDataChart`](/angular-apis/typescript/latest/classes/igxdatachart.html) コントロールで [`IgxScatterAreaSeriesComponent`](/angular-apis/typescript/latest/classes/igxscatterareaseriescomponent.html) を使用する方法を説明します。このシリーズは、各ポイントに数値が割り当てられた X および Y データの三角測量に基づいて色付きの表面を描画します。このシリーズのタイプはヒート マップ、磁場の強さ、またはオフィスの Wi-Fi の強さを描画する場合などに便利です。[`IgxScatterAreaSeriesComponent`](/angular-apis/typescript/latest/classes/igxscatterareaseriescomponent.html) は [`IgxScatterContourSeriesComponent`](/angular-apis/typescript/latest/classes/igxscattercontourseriescomponent.html) と同様ですが、同じ値を持つデータポイントを接続する等線の置換に補完で色つきサーフェス エリアとしてデータを表します。
+このトピックは、コード例を示して [`IgxDataChart`](/components/datachart_series_types_scatter_area.html) コントロールで [`IgxScatterAreaSeriesComponent`](/components/datachart_series_types_scatter_area.html) を使用する方法を説明します。このシリーズは、各ポイントに数値が割り当てられた X および Y データの三角測量に基づいて色付きの表面を描画します。このシリーズのタイプはヒート マップ、磁場の強さ、またはオフィスの Wi-Fi の強さを描画する場合などに便利です。[`IgxScatterAreaSeriesComponent`](/components/datachart_series_types_scatter_area.html) は [`IgxScatterContourSeriesComponent`](/components/datachart_series_types_scatter_area.html) と同様ですが、同じ値を持つデータポイントを接続する等線の置換に補完で色つきサーフェス エリアとしてデータを表します。
 
 ### デモ
 
@@ -23,15 +23,15 @@ _language: ja
 
 ### 軸の要件
 
-[`IgxDataChart`](/angular-apis/typescript/latest/classes/igxdatachart.html) コントロールにはさまざまな種類の軸がありますが、[`IgxScatterAreaSeriesComponent`](/angular-apis/typescript/latest/classes/igxscatterareaseriescomponent.html) では [`IgxNumericYAxisComponent`](/angular-apis/typescript/latest/classes/igxnumericyaxiscomponent.html) と [`IgxNumericYAxisComponent`](/angular-apis/typescript/latest/classes/igxnumericyaxiscomponent.html) のみ使用できます。
+[`IgxDataChart`](/components/datachart_series_types_scatter_area.html) コントロールにはさまざまな種類の軸がありますが、[`IgxScatterAreaSeriesComponent`](/components/datachart_series_types_scatter_area.html) では [`IgxNumericYAxisComponent`](/components/datachart_series_types_scatter_area.html) と [`IgxNumericYAxisComponent`](/components/datachart_series_types_scatter_area.html) のみ使用できます。
 
 ### データの要件
 
-[`IgxScatterAreaSeriesComponent`](/angular-apis/typescript/latest/classes/igxscatterareaseriescomponent.html) には以下のデータ要件があります。
+[`IgxScatterAreaSeriesComponent`](/components/datachart_series_types_scatter_area.html) には以下のデータ要件があります。
 
 -   データソースはデータ項目の配列またはリストである必要があります。
 -   データソースはデータ項目を少なくとも 1 つ含む必要があります。含まない場合はチャートに散布シェイプ シリーズを描画しません。
--   すべてのデータ項目には、`XMemberPath`、`YMemberPath`、そして [`colorMemberPath`](/angular-apis/typescript/latest/classes/igxscatterareaseriescomponent.html#colormemberpath) プロパティにマップされる 3 つの数値データ列を含める必要があります。
+-   すべてのデータ項目には、`XMemberPath`、`YMemberPath`、そして [`colorMemberPath`](/components/datachart_series_types_scatter_area.html) プロパティにマップされる 3 つの数値データ列を含める必要があります。
 
 上記データ要件を満たすデータソースとして [SamplePolarData](datachart_data_sources_scatter.md) を使用できます。
 
@@ -71,7 +71,7 @@ export class AppModule { /* ... */ }
 
 ### コード例
 
-このコードは、[`IgxScatterAreaSeriesComponent`](/angular-apis/typescript/latest/classes/igxscatterareaseriescomponent.html) でデータチャートのインスタンスを作成し、データソースにバインドする方法を説明します。
+このコードは、[`IgxScatterAreaSeriesComponent`](/components/datachart_series_types_scatter_area.html) でデータチャートのインスタンスを作成し、データソースにバインドする方法を説明します。
 
 ```html
  <igx-data-chart
@@ -93,16 +93,16 @@ export class AppModule { /* ... */ }
 
 ### カラー スケール
 
-[`IgxScatterAreaSeriesComponent`](/angular-apis/typescript/latest/classes/igxscatterareaseriescomponent.html) の [`colorScale`](/angular-apis/typescript/latest/classes/igxscatterareaseriescomponent.html#colorscale) プロパティを使用して、ポイントの値を解決し、シリーズの面を塗りつぶします。色は、ピクセル単位の三角ラスタライザーを三角測量データに適用することによって、サーフェスの図形の周りをなめらかに補間します。サーフェスの描画がピクセル単位であるため、カラー スケールはブラシではなく色を使用します。
+[`IgxScatterAreaSeriesComponent`](/components/datachart_series_types_scatter_area.html) の [`colorScale`](/components/datachart_series_types_scatter_area.html) プロパティを使用して、ポイントの値を解決し、シリーズの面を塗りつぶします。色は、ピクセル単位の三角ラスタライザーを三角測量データに適用することによって、サーフェスの図形の周りをなめらかに補間します。サーフェスの描画がピクセル単位であるため、カラー スケールはブラシではなく色を使用します。
 
-提供されている [`IgxCustomPaletteColorScaleComponent`](/angular-apis/typescript/latest/classes/igxcustompalettecolorscalecomponent.html) クラスはほとんどの色付けのニーズを満たすはずですが、[`IgxColorScaleComponent`](/angular-apis/typescript/latest/classes/igxcolorscalecomponent.html) 抽象クラスから継承して独自の色付けのロジックを指定することができます。
+提供されている [`IgxCustomPaletteColorScaleComponent`](/components/datachart_series_types_scatter_area.html) クラスはほとんどの色付けのニーズを満たすはずですが、[`IgxColorScaleComponent`](/components/datachart_series_types_scatter_area.html) 抽象クラスから継承して独自の色付けのロジックを指定することができます。
 
-以下の表は [`IgxScatterAreaSeriesComponent`](/angular-apis/typescript/latest/classes/igxscatterareaseriescomponent.html) の面のカラ―リングに影響する [`IgxCustomPaletteColorScaleComponent`](/angular-apis/typescript/latest/classes/igxcustompalettecolorscalecomponent.html) プロパティをリストします。
+以下の表は [`IgxScatterAreaSeriesComponent`](/components/datachart_series_types_scatter_area.html) の面のカラ―リングに影響する [`IgxCustomPaletteColorScaleComponent`](/components/datachart_series_types_scatter_area.html) プロパティをリストします。
 
--   [`palette`](/angular-apis/typescript/latest/classes/igxcustompalettecolorscalecomponent.html#palette) は、選択する、または補間する色のコレクションを設定します。
--   [`interpolationMode`](/angular-apis/typescript/latest/classes/igxcustompalettecolorscalecomponent.html#interpolationmode) は、パレットから色を取得するメソッドを設定します。
--   [`maximumValue`](/angular-apis/typescript/latest/classes/igxcustompalettecolorscalecomponent.html#maximumvalue) は、色を割り当てるための最大値を設定します。指定した値がこの値より大きい場合は透明になります。
--   [`minimumValue`](/angular-apis/typescript/latest/classes/igxcustompalettecolorscalecomponent.html#minimumvalue) は、色を割り当てるための最小値を設定します。指定した値がこの値より小さい場合は透明になります。
+-   [`palette`](/components/datachart_series_types_scatter_area.html) は、選択する、または補間する色のコレクションを設定します。
+-   [`interpolationMode`](/components/datachart_series_types_scatter_area.html) は、パレットから色を取得するメソッドを設定します。
+-   [`maximumValue`](/components/datachart_series_types_scatter_area.html) は、色を割り当てるための最大値を設定します。指定した値がこの値より大きい場合は透明になります。
+-   [`minimumValue`](/components/datachart_series_types_scatter_area.html) は、色を割り当てるための最小値を設定します。指定した値がこの値より小さい場合は透明になります。
 
 ### その他のリソース
 

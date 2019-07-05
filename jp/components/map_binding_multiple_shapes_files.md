@@ -1,13 +1,13 @@
 ---
 title: マップ | データ可視化ツール | Ignite UI for Angular | 複数シリーズ | Infragistics
 _description: マップを使用すると、ビュー モデルからの地理的位置を含むデータ、またはシェープ ファイルから地理的画像マップにロードされた地理空間データを表示できます。
-_keywords: map, Ignite UI for Angular, infragistics
+_keywords: map, Ignite UI for Angular, infragistics, マップ,
 _language: ja
 ---
 
 ## 複数のシェープファイルのバインドとオーバレイ
 
-[`IgxGeographicMap`](/angular-apis/typescript/latest/classes/igxgeographicmap.html) では、複数の地理的シリーズオブジェクトを追加して、いくつかのシェープファイルを地理空間データとオーバーレイすることができます。たとえば、港湾の地理的位置をプロットするための [`IgxGeographicSymbolSeriesComponent`](/angular-apis/typescript/latest/classes/igxgeographicsymbolseriescomponent.html)、港湾間のルートをプロットするための [`IgxGeographicPolylineSeriesComponent`](/angular-apis/typescript/latest/classes/igxgeographicpolylineseriescomponent.html)、国の形状をプロットするための [`IgxGeographicShapeSeriesComponent`](/angular-apis/typescript/latest/classes/igxgeographicshapeseriescomponent.html) などです。
+[`IgxGeographicMap`](/components/map_binding_multiple_shapes_files.html) では、複数の地理的シリーズオブジェクトを追加して、いくつかのシェープファイルを地理空間データとオーバーレイすることができます。たとえば、港湾の地理的位置をプロットするための [`IgxGeographicSymbolSeriesComponent`](/components/map_binding_multiple_shapes_files.html)、港湾間のルートをプロットするための [`IgxGeographicPolylineSeriesComponent`](/components/map_binding_multiple_shapes_files.html)、国の形状をプロットするための [`IgxGeographicShapeSeriesComponent`](/components/map_binding_multiple_shapes_files.html) などです。
 
 ### デモ
 
@@ -23,9 +23,9 @@ _language: ja
 
 このトピックでは、マップ コンポーネントに複数の地理的シリーズを表示する方法について段階的に説明します。すべての地理的シリーズは、`ShapeDataSource` クラスを使用して形状ファイルからロードされた地理空間データに従ってプロットします。`ShapeDataSource` オブジェクトの詳細については、[シェープファイルのバインディング](map_binding_geographic_shape_files.md)のトピックを参照してください。
 
-[`IgxGeographicSymbolSeriesComponent`](/angular-apis/typescript/latest/classes/igxgeographicsymbolseriescomponent.html) – 主要都市の位置を表示します
-[`IgxGeographicPolylineSeriesComponent`](/angular-apis/typescript/latest/classes/igxgeographicpolylineseriescomponent.html) – 主要なポート間の経路を表示します。
-[`IgxGeographicShapeSeriesComponent`](/angular-apis/typescript/latest/classes/igxgeographicshapeseriescomponent.html) – 世界の国々の形を表示します。
+[`IgxGeographicSymbolSeriesComponent`](/components/map_binding_multiple_shapes_files.html) – 主要都市の位置を表示します
+[`IgxGeographicPolylineSeriesComponent`](/components/map_binding_multiple_shapes_files.html) – 主要なポート間の経路を表示します。
+[`IgxGeographicShapeSeriesComponent`](/components/map_binding_multiple_shapes_files.html) – 世界の国々の形を表示します。
 
 目的のデータをプロットするために、地理的シリーズをこの組み合わせまたは他の組み合わせでも使用できます。
 
@@ -35,14 +35,14 @@ _language: ja
 
 ### オーバーレイ シェイプ ポリゴン
 
-世界の国々の形状で [`IgxGeographicShapeSeriesComponent`](/angular-apis/typescript/latest/classes/igxgeographicshapeseriescomponent.html) オブジェクトを作成し、それを [`IgxGeographicMap`](/angular-apis/typescript/latest/classes/igxgeographicmap.html) の `Infragistics.Controls.Charts.Series` コレクションに追加します。
+世界の国々の形状で [`IgxGeographicShapeSeriesComponent`](/components/map_binding_multiple_shapes_files.html) オブジェクトを作成し、それを [`IgxGeographicMap`](/components/map_binding_multiple_shapes_files.html) の `Infragistics.Controls.Charts.Series` コレクションに追加します。
 
 ### オーバーレイ シェイプ ポリライン
 
-メジャー ポート間のルートで [`IgxGeographicPolylineSeriesComponent`](/angular-apis/typescript/latest/classes/igxgeographicpolylineseriescomponent.html) オブジェクトを作成し、それを [`IgxGeographicMap`](/angular-apis/typescript/latest/classes/igxgeographicmap.html) の `Infragistics.Controls.Charts.Series` コレクションに追加します。
+メジャー ポート間のルートで [`IgxGeographicPolylineSeriesComponent`](/components/map_binding_multiple_shapes_files.html) オブジェクトを作成し、それを [`IgxGeographicMap`](/components/map_binding_multiple_shapes_files.html) の `Infragistics.Controls.Charts.Series` コレクションに追加します。
 
 ### オーバーレイ シェイプ ポイント
 
-主要都市の場所を含む [`IgxGeographicSymbolSeriesComponent`](/angular-apis/typescript/latest/classes/igxgeographicsymbolseriescomponent.html) オブジェクトを作成し、それを [`IgxGeographicMap`](/angular-apis/typescript/latest/classes/igxgeographicmap.html) の `Infragistics.Controls.Charts.Series` コレクションに追加します。
+主要都市の場所を含む [`IgxGeographicSymbolSeriesComponent`](/components/map_binding_multiple_shapes_files.html) オブジェクトを作成し、それを [`IgxGeographicMap`](/components/map_binding_multiple_shapes_files.html) の `Infragistics.Controls.Charts.Series` コレクションに追加します。
 
 また形状ファイルがアプリケーションのために十分な地理的文脈 (国の形状など) を提供した際に、地図背景コンテンツで地理的画像を非表示にしたい場合があります。

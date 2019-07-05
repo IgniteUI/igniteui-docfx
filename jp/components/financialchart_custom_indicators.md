@@ -7,7 +7,7 @@ _language: ja
 
 ## カスタム インジケーター
 
-[`IgxFinancialChart`](/angular-apis/typescript/latest/classes/igxfinancialchart.html) コントロールでは、インジケーター ペインに表示するカスタム財務指標を定義できます。
+[`IgxFinancialChart`](/components/financialchart_custom_indicators.html) コントロールでは、インジケーター ペインに表示するカスタム財務指標を定義できます。
 
 ### デモ
 
@@ -21,7 +21,7 @@ _language: ja
 
 <div class="divider--half"></div>
 
-[`IgxFinancialChart`](/angular-apis/typescript/latest/classes/igxfinancialchart.html) でカスタム財務指標を有効にするには、`customIndicatorNames` プロパティに名前を追加し、`applyCustomIndicators` イベントで計算を実行します。
+[`IgxFinancialChart`](/components/financialchart_custom_indicators.html) でカスタム財務指標を有効にするには、`customIndicatorNames` プロパティに名前を追加し、`applyCustomIndicators` イベントで計算を実行します。
 
 以下のコード例は、2 つのカスタム インジケーターを設定して計算する方法を紹介します。単純移動平均 (SMA) およびランダム値を表示するインジケーターを使用します。
 

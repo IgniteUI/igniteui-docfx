@@ -30,7 +30,7 @@ Doughnut Chart コンポーネントは円チャートと同様、変数の発�
 
 ### 必要なモジュール
 
-[`IgxDoughnutChart`](/angular-apis/typescript/latest/classes/igxdoughnutchart.html) は、以下のモジュールが必要です。
+[`IgxDoughnutChart`](/components/doughnutchart.html) は、以下のモジュールが必要です。
 
 ```ts
 // app.module.ts
@@ -134,7 +134,7 @@ import { SliceClickEventArgs } from "igniteui-react-charts/ES5/igr-slice-click-e
 
 ### 凡例
 
-[`IgxDoughnutChart`](/angular-apis/typescript/latest/classes/igxdoughnutchart.html) は凡例の使用をサポートしています。使用される凡例は、一連のチャートを介して接続されている ItemLegend です。
+[`IgxDoughnutChart`](/components/doughnutchart.html) は凡例の使用をサポートしています。使用される凡例は、一連のチャートを介して接続されている ItemLegend です。
 
 ### 凡例のデモ
 

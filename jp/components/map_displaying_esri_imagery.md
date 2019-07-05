@@ -1,15 +1,16 @@
 ---
-title: Map | Data Visualization Tools | Ignite UI for Angular | Esri Maps | Infragistics
-_description: The Map allows you to display imagery from Esri Street Maps. View the demo and usage for more
-_keywords: map, Ignite UI for Angular, infragistics
+title: マップ | データ可視化ツール | Ignite UI for Angular | Esri マップ | Infragistics
+_description: 地図では、Esri Street Maps の画像を表示できます。デモと使い方をもっと見る
+_keywords: map, Ignite UI for Angular, infragistics, マップ,
 mentionedTypes: ['XamGeographicMap']
+_language: ja
 ---
 
-## Displaying Imagery from Esri Maps
+## Esri Maps から地理的画像を表示
 
-The [`ArcGISOnlineMapImagery`](/angular-apis/typescript/latest/classes/arcgisonlinemapimagery.html) is a free geographic imagery mapping service created by Esri. It provides over 40 styles of geographic imagery tiles of the world. This geographic imagery service can be accessed directly on <a href="https://services.arcgisonline.com/ArcGIS/rest/services" target="_blank">www.arcgisonline.com</a> web site.
+[`ArcGISOnlineMapImagery`](/components/map_displaying_esri_imagery.html) は、Esri によって作成された無料の地理的画像マッピング サービスです。世界の地理的画像タイルの 40 スタイル以上を提供します。この地理的画像サービスは、<a href="http://www.bing.com/maps" target="blank"> www.bing.com/maps</a> Web サイトから直接アクセスできます。
 
-### Demo
+### デモ
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="geo-map-display-esri-imagery-iframe" src='{environment:demosBaseUrl}/maps/geo-map-display-esri-imagery' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -21,8 +22,8 @@ The [`ArcGISOnlineMapImagery`](/angular-apis/typescript/latest/classes/arcgisonl
 
 <div class="divider--half"></div>
 
-### Code Snippet
+### コード スニペット
 
-The following code snippet shows how to display geographic imagery from Esri Maps in [`IgxGeographicMapComponent`](/angular-apis/typescript/latest/classes/igxgeographicmapcomponent.html) using [`ArcGISOnlineMapImagery`](/angular-apis/typescript/latest/classes/arcgisonlinemapimagery.html).
+以下のコード スニペットは、ArcGISOnlineMapImagery を使用して XamGeographicMap で Esri Maps からの地理的画像を表示する方法を示します。
 
-Also, you can use the [EsriUtility](map_resources_esri.md) which defines all styles of Esri Maps.
+また、Esri Maps のすべてのスタイルを定義する EsriUtility を使用することもできます。

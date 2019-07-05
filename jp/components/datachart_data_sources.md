@@ -7,7 +7,7 @@ _language: ja
 
 ## データ ソース
 
-[`IgxDataChart`](/angular-apis/typescript/latest/classes/igxdatachart.html) コントロールでは、すべてのシリーズを正しく表示するために特定の数値とデータ列の型を必要とします。このトピックでは、シリーズの各グループにデータソースを実装する方法の例を示します。
+[`IgxDataChart`](/components/datachart_data_sources.html) コントロールでは、すべてのシリーズを正しく表示するために特定の数値とデータ列の型を必要とします。このトピックでは、シリーズの各グループにデータソースを実装する方法の例を示します。
 
 -   [カテゴリ シリーズ](datachart_series_types_category.md)の [SampleCategoryData](datachart_data_sources_category.md)
 -   [ファイナンシャル シリーズ](datachart_series_types_financial.md)の [SampleFinancialData](datachart_data_sources_financial.md)

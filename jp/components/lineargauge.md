@@ -35,7 +35,7 @@ gauges パッケージをインストールするときに core パッケージ�
 
 ### 必要なモジュール
 
-[`IgxLinearGauge`](/angular-apis/typescript/latest/classes/igxlineargauge.html) は、以下のモジュールが必要です。
+[`IgxLinearGauge`](/components/lineargauge.html) は、以下のモジュールが必要です。
 
 ```ts
 // app.module.ts

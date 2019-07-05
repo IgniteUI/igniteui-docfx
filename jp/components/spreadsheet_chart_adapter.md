@@ -1,15 +1,16 @@
 ---
-title: Spreadsheet | Grid Controls | Ignite UI for Angular | chart adapter | Infragistics |
-_description: Use the Spreadsheet control to embed Excel document creation and editing experiences right into your application.
+title: Spreadsheet | Grid コントロール | Ignite UI for Angular | chart adapter | Infragistics |
+_description: スプレッドシート コントロールを使用して、Excel ドキュメントの作成と編集機能をアプリケーションに直接埋め込むことができます。
 _keywords: Spreadsheet, Ignite UI for Angular, Infragistics
 mentionedTypes: ['Spreadsheet']
+_language: ja
 ---
 
-## Spreadsheet Chart Adapter
+## Spreadsheet チャート アダプター
 
-The Angular Spreadsheet component allows displaying charts in your [`IgxSpreadsheetComponent`](/angular-apis/typescript/latest/classes/igxspreadsheetcomponent.html).
+Angular Spreadsheet コンポーネント`を使用して`Spreadsheet\`にチャートを表示できます。
 
-### Demo
+### デモ
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="spreadsheet-adapter-iframe" src='{environment:demosBaseUrl}/spreadsheet/spreadsheet-adapter' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -17,69 +18,69 @@ The Angular Spreadsheet component allows displaying charts in your [`IgxSpreadsh
 
 <div class="divider--half"></div>
 
-### Chart Adapter Overview
+### チャート アダプターの概要
 
-Using [`chartAdapter`](/angular-apis/typescript/latest/classes/igxspreadsheetcomponent.html#chartadapter) you can display the charts in the spreadsheet. The spreadsheet chart adapters creates and initializes chart elements for the spreadsheet based on a Infragistics.Documents.Excel.WorksheetChart instance.
+[`chartAdapter`](/components/spreadsheet_chart_adapter.html) を使用すると、スプレッドシートにチャートを表示できます。スプレッドシート チャート アダプターは、Infragistics.Documents.Excel.WorksheetChart インスタンスに基づいてスプレッド シートのチャート要素を作成し、初期化します。
 
-In order to add a WorksheetChart to a worksheet, you must use the [`addChart`](/angular-apis/typescript/latest/classes/igxspreadsheetcomponent.html#addchart) method of the worksheet’s Shapes collection.You can find more detail of adding charts in Excel below.
+WorksheetChart をワークシートに追加するには、ワークシートの Shapes コレクションの [`addChart`](/components/spreadsheet_chart_adapter.html) メソッドを使用する必要があります。チャートの追加の詳細については、下記をご覧ください。
 
-Here are the steps by step description :
+以下はその手順です。
 
-1.  Add the SpreadsheetChartAdapterModule reference to your project
-2.  Create an instance of a SpreadsheetChartAdapter class assigning it to the Spreadsheet
-3.  Run your app and load a worksheet containing a chart.
+1.  SpreadsheetChartAdapterModule 参照をプロジェクトに追加します。
+2.  Spreadsheet に割り当てる SpreadsheetChartAdapter クラスのインスタンスを作成します。
+3.  アプリを実行してチャートを含むワークシートを読み込みます。
 
-### Supported Charts Types
+### サポートされるチャート タイプ
 
-There are over 35 chart types supported by the Spreadsheet ChartAdapters including, Line, Area, Column, and Doughnut. See the full list here:
+Spreadsheet ChartAdapter は、折れ線、エリア、柱状、ドーナツを含む 35 以上のチャート タイプがサポートされます。チャート タイプ一覧:
 
--   Column Charts
-    -   Clustered column
-    -   Stacked column
-    -   100% stacked column  
--   Line Charts  
-    -   Line
-    -   Line with Markers
-    -   Stacked line
-    -   Stacked line with markers
-    -   100% stacked line
-    -   100% stacked line with markers  
--   Pie Charts
--   Doughnut Charts  
--   Bar Charts  
-    -   Clustered bar
-    -   Stacked bar
-    -   100% stacked bar
-    -   Area Charts
-    -   Area
-    -   Stacked area
-    -   100% stacked area
--   XY (Scatter) and Bubble Charts  
-    -   Scatter (with Marker only)
-    -   Scatter with smooth lines
-    -   Scatter with smooth lines and markers
-    -   Scatter with straight lines
-    -   Scatter with straight lines and markers
-    -   Bubble (without effects)
+-   柱状チャート
+    -   クラスタ柱状チャート
+    -   積層型の柱状チャート
+    -   100% 積層型柱状チャート  
+-   折れ線チャート  
+    -   折れ線チャート
+    -   マーカー付き折れ線チャート
+    -   積層型折れ線チャート
+    -   マーカー付き積層型折れ線チャート
+    -   100% 積層型折れ線チャート
+    -   マーカー付き 100% 積層型折れ線チャート  
+-   円チャート
+-   ドーナツ型チャート  
+-   棒チャート  
+    -   クラスター棒チャート
+    -   積層型棒チャート
+    -   100% 積層型棒チャート
+    -   エリア チャート
+    -   エリア
+    -   積層型エリア チャート
+    -   100% 積層型エリア チャート
+-   XY (散布図) とバブル チャート  
+    -   散布図 (マーカーのみ)
+    -   滑らかな線を使用した散布図
+    -   滑らかな線とマーカーを使用した散布図
+    -   直接を使用した散布図
+    -   直線とマーカーを使用した散布図
+    -   バブル (エフェクトなし) チャート
     -   Bubble3DEffect
--   Stock Charts  
-    -   High-low-close
-    -   Open-high-low-close
-    -   Volume-high-low-close
-    -   Volume-open-high-low-close
--   Radar Charts  
-    -   Radar without markers
-    -   Radar with markers
-    -   Filled Radar
--   Combo Charts  
-    -   Column and line chart sharing xAxis
-    -   Column and line chart and 2nd xAxis
-    -   Stacked Area and Column
-    -   Custom Combination
+-   株価チャート  
+    -   高値-安値-終値
+    -   始値-高値-安値-終値
+    -   出来高-高値-安値-終値
+    -   出来高-始値-高値-安値-終値
+-   レーダー チャート  
+    -   マーカーなしのレーダー
+    -   マーカー付きレーダー
+    -   塗りつぶしたレーダー
+-   コンボ チャート  
+    -   xAxis を共有する柱状チャートと折れ線チャート
+    -   柱状チャートと折れ線チャート、および第 2 xAxis
+    -   積層エリアと柱状チャート
+    -   カスタムな組み合わせ
 
-### Dependencies
+### 依存関係
 
-When setting up your spreadsheet control to add charts, you will need to import the [`SpreadsheetChartAdapter`](/angular-apis/typescript/latest/classes/spreadsheetchartadapter.html) class like so:
+ハイパーリンクを使用するようにスプレッドシート コントロールを設定するときは、[`SpreadsheetChartAdapter`](/components/spreadsheet_chart_adapter.html) クラスをインポートする必要があります。
 
 ```ts
 import { IgxSpreadsheetchartadaptermodule } from "igniteui-angular-spreadsheet-chart-adapter/ES5/igx-spreadsheet-chart-adapter-module";
@@ -93,9 +94,9 @@ import { Worksheet } from "igniteui-angular-excel/ES5/Worksheet";
 import { WorksheetCell } from "igniteui-angular-excel/ES5/WorksheetCell";
 ```
 
-### Code Snippet
+### コード スニペット
 
-The following code snippet demonstrates how to add charts to the currently viewed worksheet in the [`IgxSpreadsheet`](/angular-apis/typescript/latest/classes/igxspreadsheet.html) control:
+次のコードスニペットは、[`IgxSpreadsheet`](/components/spreadsheet_chart_adapter.html) コントロールで現在表示されているワークシートにハイパーリンクを追加する方法を示しています。
 
 ```typescript
 this.spreadsheet.chartAdapter = new SpreadsheetChartAdapter();

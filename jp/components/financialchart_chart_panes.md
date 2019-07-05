@@ -7,7 +7,7 @@ _language: ja
 
 ## ペイン
 
-[`IgxFinancialChart`](/angular-apis/typescript/latest/classes/igxfinancialchart.html) コントロールには、財務データを表示する複数のペインがあります。
+[`IgxFinancialChart`](/components/financialchart_chart_panes.html) コントロールには、財務データを表示する複数のペインがあります。
 
 ### デモ
 
@@ -82,7 +82,7 @@ _language: ja
  </igx-financial-chart>
 ```
 
-注: `ZoomSliderType` オプションを [`ChartType`](/angular-apis/typescript/latest/enums/charttype.html) オプションと同じ値に設定してください。このように、ズーム スライダーは価格ペインの正しいプレビューを表示します。以下のコードはその方法を示しています。
+注: `ZoomSliderType` オプションを [`ChartType`](/components/financialchart_chart_panes.html) オプションと同じ値に設定してください。このように、ズーム スライダーは価格ペインの正しいプレビューを表示します。以下のコードはその方法を示しています。
 
 ```html
  <igx-financial-chart
