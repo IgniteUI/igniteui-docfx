@@ -9,7 +9,7 @@ _language: ja
 
 このトピックでは、積層シリーズのデータソースを実装する方法の例を示します。
 
-```typescript
+```ts
 export class SampleCategoryItem  {
     public Year?: string;
     public USA?: number;

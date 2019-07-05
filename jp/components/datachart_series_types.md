@@ -7,11 +7,11 @@ _language: ja
 
 ## シリーズ
 
-`IgxDataChart` コントロールでシリーズは類似するシリーズの次のグループに分類されます。カテゴリ シリーズ、ファイナンシャル シリーズ、極座標シリーズ、ラジアル シリーズ、エリア シリーズ、散布図シリーズ、積層シリーズ、図形シリーズ。
+[`IgxDataChart`](/angular-apis/typescript/latest/classes/igxdatachart.html) コントロールでシリーズは類似するシリーズの次のグループに分類されます。カテゴリ シリーズ、ファイナンシャル シリーズ、極座標シリーズ、ラジアル シリーズ、エリア シリーズ、散布図シリーズ、積層シリーズ、図形シリーズ。
 
-これらのシリーズに加えて、`IgxDataChart` コントロールに[シリーズ注釈](datachart_series_annotations.md)と[シリーズ ハイライト](datachart_series_highlighting.md)を追加できます。
+これらのシリーズに加えて、[`IgxDataChart`](/angular-apis/typescript/latest/classes/igxdatachart.html) コントロールに[シリーズ注釈](datachart_series_annotations.md)と[シリーズ ハイライト](datachart_series_highlighting.md)を追加できます。
 
-以下のリストは、各グループのすべてのシリーズ タイプを示します。`IgxDataChart` コントロールで各シリーズを使用する方法についてのヘルプは、シリーズの名前をクリックしてください。
+以下のリストは、各グループのすべてのシリーズ タイプを示します。[`IgxDataChart`](/angular-apis/typescript/latest/classes/igxdatachart.html) コントロールで各シリーズを使用する方法についてのヘルプは、シリーズの名前をクリックしてください。
 
 #### カテゴリ シリーズ
 

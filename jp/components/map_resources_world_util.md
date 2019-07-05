@@ -11,7 +11,7 @@ _language: ja
 
 ### コード スニペット
 
-```typescript
+```ts
 export default class WorldUtils {
 
     // calculate geo-paths between two locations using great circle formula

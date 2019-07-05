@@ -11,8 +11,8 @@ Financial Chart は、シンプルな API を使用して複雑なファイナ�
 
 ### デモ
 
-<div class="sample-container" style="height: 550px">
-    <iframe id="financial-chart-overview-sample-iframe" src='{environment:demosBaseUrl}/charts/financial-chart-overview-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 550px">
+    <iframe id="financial-chart-overview-sample-iframe" src='{environment:demosBaseUrl}/charts/financial-chart-overview-sample' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="financial-chart-overview-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
@@ -25,17 +25,17 @@ Financial Chart は、シンプルな API を使用して複雑なファイナ�
 
 ファイナンシャル チャート コンポーネントはデータ列を解析して選択します。日/時列を X 軸で使用し、Open、High、Low、Close、Volume 列、または最初の 5 つの数値列を Y 軸で使用します。ユーザーがチャート タイプを棒、ローソク足、柱状、または折れ線に設定できます。主要なビジュアル要素にツールバー、価格ペイン、ボリューム ペイン、インジケーター ペイン、およびナビゲーション ペインがあります。
 
-`chartType` プロパティを以下のオプションの 1 つに設定してチャート タイプを明示的に指定することもできます。
+[`ChartType`](/angular-apis/typescript/latest/enums/charttype.html) プロパティを以下のオプションの 1 つに設定してチャート タイプを明示的に指定することもできます。
 
-| プロパティ    | 説明                                                                                                                           |
-| -------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| `bar`    | 各データ ポイントにマーカーがある棒シリーズを指定します。                                                                                                |
-| `candle` | ローソク足シリーズを指定します。                                                                                                             |
-| `column` | 柱状シリーズを指定します。                                                                                                                |
-| `line`   | 折れ線シリーズを指定します。                                                                                                               |
-| `auto`   | データ アダプターに基づいてチャート タイプの自動選択を指定します。これは、データの名前および数値列の数に基づいて上記の値を選択します。たとえば、Open、High、Low、および Close 列があるデータ項目のために `bar` を使用します。 |
+| プロパティ                                                                                   | 説明                                                                                                                           |
+| --------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| `Bar`                                                                                   | 各データ ポイントにマーカーがある棒シリーズを指定します。                                                                                                |
+| `Candle`                                                                                | ローソク足シリーズを指定します。                                                                                                             |
+| [`IgxColumnComponent`](/angular-apis/typescript/latest/classes/igxcolumncomponent.html) | 柱状シリーズを指定します。                                                                                                                |
+| `Line`                                                                                  | 折れ線シリーズを指定します。                                                                                                               |
+| `auto`                                                                                  | データ アダプターに基づいてチャート タイプの自動選択を指定します。これは、データの名前および数値列の数に基づいて上記の値を選択します。たとえば、Open、High、Low、および Close 列があるデータ項目のために `Bar` を使用します。 |
 
-その他のチャート ペインの詳細については、[Financial Chart ペイン](financialchart_panes.md) トピックを参照してください。
+その他のチャート ペインの詳細については、[Financial Chart ペイン](financialchart_chart_panes.md) トピックを参照してください。
 
 ```html
 <igx-financial-chart
@@ -52,11 +52,11 @@ chart パッケージをインストールするときに core パッケージ�
 
 ### 必要なモジュール
 
-`IgxFinancialChart` は、以下のモジュールが必要です。
+[`IgxFinancialChart`](/angular-apis/typescript/latest/classes/igxfinancialchart.html) は、以下のモジュールが必要です。
 
-```typescript
+```ts
 // app.module.ts
-import {IgxFinancialChartModule} from 'igniteui-angular-charts/ES5/igx-financial-chart-module'
+import {IgxFinancialChartModule} from "igniteui-angular-charts/ES5/igx-financial-chart-module";
 
 @NgModule({
     imports: [
@@ -74,9 +74,9 @@ export class AppModule {}
 
 ファイナンシャル チャート モジュールをインポートした後、チャートをデータにバインドします。
 
-`IgxFinancialChart` コントロールを作成するには、はじめにバインドするデータが必要です。以下のコード スニペットは、シンプルなデータソースを作成する方法を示します。
+[`IgxFinancialChart`](/angular-apis/typescript/latest/classes/igxfinancialchart.html) コントロールを作成するには、はじめにバインドするデータが必要です。以下のコード スニペットは、シンプルなデータソースを作成する方法を示します。
 
-```typescript
+```ts
 let data = [
 	{ time: new Date(2013, 1, 1), open: 268.93, high: 268.93, low: 262.80, close: 265.00, volume: 6118146 },
 	{ time: new Date(2013, 1, 4), open: 262.78, high: 264.68, low: 259.07, close: 259.98, volume: 3723793 },
@@ -120,3 +120,17 @@ let data = [
     isToolbarVisible="false">
  </igx-financial-chart>
 ```
+
+### Additional Resources
+
+-   [Binding Multiple Sources](financialchart_binding_multiple_sources.md)
+-   [Binding High Volume Data](financialchart_binding_large_data.md)
+-   [Binding Real-Time Data](financialchart_binding_live_data.md)
+-   [Chart Annotations](financialchart_chart_annotations.md)
+-   [Chart Configuration](financialchart_chart_configuration.md)
+-   [Chart Display Types](financialchart_chart_display_types.md)
+-   [Chart Panes](financialchart_chart_panes.md)
+-   [Chart Performance](financialchart_chart_performance.md)
+    <!-- - [Custom Indicators](financialchart_custom_indicators.md) -->
+    <!-- - [Tooltip Templates](financialchart_tooltip_templates.md) -->
+    <!-- - [Tooltip Types](financialchart_tooltip_types.md) -->

@@ -7,12 +7,12 @@ _language: ja
 
 ## ナビゲーション
 
-`IgxDataChart` コントロールでは、チャート ナビゲーションがデフォルトで無効になっています。有効にするとコードや UI を介してチャートのズームやパンニングができるようになります。
+[`IgxDataChart`](/angular-apis/typescript/latest/classes/igxdatachart.html) コントロールでは、チャート ナビゲーションがデフォルトで無効になっています。有効にするとコードや UI を介してチャートのズームやパンニングができるようになります。
 
 ### デモ
 
-<div class="sample-container" style="height: 500px">
-    <iframe id="data-chart-navigation-iframe" src='{environment:demosBaseUrl}/charts/data-chart-navigation' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 500px">
+    <iframe id="data-chart-navigation-iframe" src='{environment:demosBaseUrl}/charts/data-chart-navigation' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-navigation-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
@@ -23,7 +23,7 @@ _language: ja
 
 チャートでナビゲーションする場合、インポートしてからインタラクティブ モードを登録します。以下のコードを使用できます。
 
-```typescript
+```ts
 import { IgxDataChartInteractivityModule } from "igniteui-angular-charts/ES5/igx-data-chart-interactivity-module";
 
 IgxDataChartInteractivityModule.register();
@@ -49,7 +49,7 @@ UI でのナビゲーションを許可するには、ズームを許可する�
 
 ### マウスとキーボードによるチャート ナビゲーション
 
-`IgxDataChart` コントロールのナビゲーションは、マウスまたはキーボードのいずれかを有効にすると発生します。以下の操作は、デフォルトで以下のマウスまたはキーボード操作を使用して呼び出すことができます。
+[`IgxDataChart`](/angular-apis/typescript/latest/classes/igxdatachart.html) コントロールのナビゲーションは、マウスまたはキーボードのいずれかを有効にすると発生します。以下の操作は、デフォルトで以下のマウスまたはキーボード操作を使用して呼び出すことができます。
 
 -   `Panning`:  キーボードの矢印キーを使用するか、Shift キーを押しながらマウスでクリックしてドラッグします。
 -   `Zoom In`:  キーボードのPageUpキーを使用するか、マウスホイールを回転させます。
@@ -110,7 +110,7 @@ The following code snippet demonstrates how to enable the overview plus detail p
 
 ### コードによるチャート ナビゲーション
 
-`IgxDataChart` コントロールは、チャートでズームまたはパン操作が行われるたびに更新されるいくつかのナビゲーション プロパティを提供します。各プロパティは、チャートでズームやパンニングするためにコードで設定できます。以下は、これらのプロパティの一覧です。
+[`IgxDataChart`](/angular-apis/typescript/latest/classes/igxdatachart.html) コントロールは、チャートでズームまたはパン操作が行われるたびに更新されるいくつかのナビゲーション プロパティを提供します。各プロパティは、チャートでズームやパンニングするためにコードで設定できます。以下は、これらのプロパティの一覧です。
 
 -   `WindowPositionHorizontal`: コンテンツ ビュー長方形の X 部分を表す数値は、チャートで表示されます。
 -   `WindowPositionVertical`: 数値は、チャートに表示されるコンテンツビュー四角形のの Y 部分を表します。
@@ -118,9 +118,9 @@ The following code snippet demonstrates how to enable the overview plus detail p
 -   `WindowScaleHorizontal`: チャートで表示されるコンテンツ ビュー長方形の幅部分を表す数値。
 -   `WindowScaleVertical`: チャートで表示されるコンテンツ ビュー長方形の高さ部分を表す数値。
 
-次のコードスニペットは、`WindowRect` コントロールのビューをプログラムで変更する方法を示しています。以下では、`IgxDataChart` コントロールを表す変数名 chart があると仮定します。
+次のコードスニペットは、`WindowRect` コントロールのビューをプログラムで変更する方法を示しています。以下では、[`IgxDataChart`](/angular-apis/typescript/latest/classes/igxdatachart.html) コントロールを表す変数名 chart があると仮定します。
 
-```typescript
+```ts
 // Zoom in by a factor of 0.05
 this.chart.windowScaleVertical -= 0.05;
 this.chart.windowScaleHorizontal -= 0.05;

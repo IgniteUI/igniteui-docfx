@@ -3,22 +3,46 @@ title: Data Chart コンポーネント - ネイティブ Angular|Ignite UI for 
 _description: Ignite UI for Angular Data Chart は、軸、マーカー、凡例、および注釈レイヤーのモジュール設計を提供するチャート コンポーネントです。チャート機能は、複合チャート ビューを作成するために同じチャート領域でのビジュアル要素の複数のインスタンスを利用できます。
 _keywords: Ignite UI for Angular, Angular, Native Angular コンポーネント スイート, Native Angular コントロール, ネイティブ Angular コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular チャート, Angular チャート コントロール, Angular チャート例, Angular チャート コンポーネント, Angular データ チャート
 _language: ja
+mentionedTypes: ['XamDataChart', 'ColumnSeries', 'ValueOverlay']
+namespace: Infragistics.Controls.Charts
 ---
 
-## Data Chart (TODO add feature name)
+## Value Overlay
 
-The Data Chart is ...TODO ...
+The Ignite UI for Angular data chart component allows for placement of horizontal or vertical lines at a single numeric value that you define through usage of the [`IgxValueOverlayComponent`](/angular-apis/typescript/latest/classes/igxvalueoverlaycomponent.html). This can help you to visualize data such as the mean or median of a particular series.
 
 ### Demo
 
-<div class="sample-container" style="height: 500px">
-    <iframe id="data-chart-overview-iframe" src='{environment:demosBaseUrl}/charts/data-chart-overview' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 500px">
+    <iframe id="data-chart-overview-iframe" src='{environment:demosBaseUrl}/charts/data-chart-type-value-overlay' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-overview-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-overview-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
     </button>
 </div>
 
 <div class="divider--half"></div>
 
-TODO add content
+Unlike other series types that use a `DataSource` for data binding, the value overlay uses a [`valueMemberPath`](/angular-apis/typescript/latest/classes/igxanchoredcategoryseriescomponent.html#valuememberpath) property to bind a single numeric value. In addition, the value overlay requires you to define a single [`axis`](/angular-apis/typescript/latest/classes/igxvalueoverlaycomponent.html#axis) to use. If you use an X-axis, the value overlay will be a vertical line, and if you use a Y-axis, it will be a horizontal line.
+
+When using a numeric X or Y axis, the [`valueMemberPath`](/angular-apis/typescript/latest/classes/igxanchoredcategoryseriescomponent.html#valuememberpath) property should reflect the actual numeric value on the axis where you want the value overlay to be drawn. When using a category X or Y axis, the [`valueMemberPath`](/angular-apis/typescript/latest/classes/igxanchoredcategoryseriescomponent.html#valuememberpath) should reflect the index of the category at which you want the value overlay to appear.
+
+When using the value overlay with a numeric angle axis, it will appear as a line from the center of the chart and when using a numeric radius axis, it will appear as a circle.
+
+[`IgxValueOverlayComponent`](/angular-apis/typescript/latest/classes/igxvalueoverlaycomponent.html) appearance properties are inherited from `Infragistics.Controls.Charts.Series` and so [`brush`](/angular-apis/typescript/latest/classes/igxseriescomponent.html#brush) and [`thickness`](/angular-apis/typescript/latest/classes/igxseriescomponent.html#thickness) for example are available and work the same way they do with other types of series.
+
+### Code Example - Value Overlay
+
+The following code snippet demonstrates adding a value overlay to the Ignite UI for Angular data chart component:
+
+```html
+<igx-data-chart #chart height="600px" width="800px" [dataSource]="data">
+  <igx-category-x-axis #xAxis label="Label"></igx-category-x-axis>
+  <igx-numeric-y-axis #yAxis></igx-numeric-y-axis>
+
+  <igx-column-series [xAxis]="xAxis" [yAxis]="yAxis" valueMemberPath="Value"></igx-column-series>
+
+  <igx-value-overlay [axis]="yAxis" value=5 thickness=5></igx-value-overlay>
+
+</igx-data-chart>
+```

@@ -1,7 +1,7 @@
 ---
 title: Linear Gauge コンポーネント - ネイティブ Angular | Ignite UI for Angular
 _description: Linear Gauge コンポーネントを使用して、シンプルで簡潔なビューでデータを可視化します。構成可能な要素、依存関係、そしてコードスニペットについて学びます。
-_keywords: angular, Ignite UI for Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular リニア ゲージ コンポーネント, Angular リニア ゲージ
+_keywords: Angular, Ignite UI for Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular リニア ゲージ コンポーネント, Angular リニア ゲージ
 _language: ja
 ---
 
@@ -17,7 +17,7 @@ Linear Gauge コンポーネントは、データをリニア ゲージ形式で
 以下のサンプルは、同じゲージでいくつかのプロパティを設定して全く異なるゲージにする方法を示します。
 
 <div class="sample-container loading" style="height: 155px">
-    <iframe id="linear-gauge-sample-iframe" src='{environment:demosBaseUrl}/gauges/linear-gauge-animation' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="linear-gauge-sample-iframe" src='{environment:demosBaseUrl}/gauges/linear-gauge-animation' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="linear-gauge-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示
@@ -35,12 +35,12 @@ gauges パッケージをインストールするときに core パッケージ�
 
 ### 必要なモジュール
 
-`IgxLinearGauge` は、以下のモジュールが必要です。
+[`IgxLinearGauge`](/angular-apis/typescript/latest/classes/igxlineargauge.html) は、以下のモジュールが必要です。
 
-```typescript
+```ts
 // app.module.ts
-import { IgxLinearGaugeModule } from 'igniteui-angular-gauges/ES5/igx-linear-gauge-module';
-import { IgxLinearGauge } from 'igniteui-angular-gauges/ES5/igx-linear-gauge';
+import { IgxLinearGaugeModule } from "igniteui-angular-gauges/ES5/igx-linear-gauge-module";
+import { IgxLinearGauge } from "igniteui-angular-gauges/ES5/igx-linear-gauge";
 
 @NgModule({
     imports: [
@@ -52,16 +52,16 @@ import { IgxLinearGauge } from 'igniteui-angular-gauges/ES5/igx-linear-gauge';
 export class AppModule {}
 ```
 
-```typescript
-import { IgrLinearGaugeModule } from 'igniteui-react-gauges/ES5/igr-linear-gauge-module';
-import { IgxLinearGauge } from 'ignite-react-gauges/ES5/igx-linear-gauge';
+```ts
+import { IgrLinearGaugeModule } from "igniteui-react-gauges/ES5/igr-linear-gauge-module";
+import { IgxLinearGauge } from "ignite-react-gauges/ES5/igx-linear-gauge";
 
 IgrLinearGaugeModule.register();
 ```
 
-```typescript
-import { IgcLinearGaugeModule } from 'igniteui-webcomponents-gauges/ES5/igc-linear-gauge-module';
-import { IgxLinearGauge } from 'ignite-webcomponents-gauges/ES5/igx-linear-gauge';
+```ts
+import { IgcLinearGaugeModule } from "igniteui-webcomponents-gauges/ES5/igc-linear-gauge-module";
+import { IgxLinearGauge } from "ignite-webcomponents-gauges/ES5/igx-linear-gauge";
 
 IgcLinearGaugeModule.register();
 ```
@@ -80,13 +80,16 @@ IgcLinearGaugeModule.register();
                    value = "43">
     <igx-linear-graph-range startValue="0"
                             endValue="15"
-                            brush="red"/>
+                            brush="red">
+    </igx-linear-graph-range>
     <igx-linear-graph-range startValue="15"
                             endValue="30"
-                            brush="yellow"/>
+                            brush="yellow">
+    </igx-linear-graph-range>
     <igx-linear-graph-range startValue="30"
                             endValue="55"
-                            brush="green"/>
+                            brush="green">
+    </igx-linear-graph-range>
  </igx-linear-gauge>
 ```
 
@@ -122,7 +125,7 @@ IgcLinearGaugeModule.register();
 ```
 
 <div class="sample-container loading" style="height: 125px">
-    <iframe id="linear-gauge-ranges-iframe" src='{environment:demosBaseUrl}/gauges/linear-gauge-ranges' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="linear-gauge-ranges-iframe" data-src='{environment:demosBaseUrl}/gauges/linear-gauge-ranges' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="linear-gauge-ranges-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
@@ -153,8 +156,8 @@ IgcLinearGaugeModule.register();
 </igx-linear-gauge>
 ```
 
-<div class="sample-container" style="height: 125px">
-    <iframe id="linear-gauge-ranges-iframe" src='{environment:demosBaseUrl}/gauges/linear-gauge-ranges' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 125px">
+    <iframe id="linear-gauge-ranges-iframe" data-src='{environment:demosBaseUrl}/gauges/linear-gauge-ranges' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="linear-gauge-ranges-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
@@ -190,7 +193,7 @@ IgcLinearGaugeModule.register();
 ```
 
 <div class="sample-container loading" style="height: 125px">
-    <iframe id="linear-gauge-tickmarks-iframe" src='{environment:demosBaseUrl}/gauges/linear-gauge-tickmarks' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="linear-gauge-tickmarks-iframe" data-src='{environment:demosBaseUrl}/gauges/linear-gauge-tickmarks' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="linear-gauge-tickmarks-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示
@@ -216,7 +219,7 @@ IgcLinearGaugeModule.register();
 ```
 
 <div class="sample-container loading" style="height: 125px">
-    <iframe id="linear-gauge-labels-iframe" src='{environment:demosBaseUrl}/gauges/linear-gauge-labels' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="linear-gauge-labels-iframe" data-src='{environment:demosBaseUrl}/gauges/linear-gauge-labels' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="linear-gauge-labels-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
@@ -241,7 +244,7 @@ IgcLinearGaugeModule.register();
 ```
 
 <div class="sample-container loading" style="height: 125px">
-    <iframe id="linear-gauge-backing-iframe" src='{environment:demosBaseUrl}/gauges/linear-gauge-backing' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="linear-gauge-backing-iframe" data-src='{environment:demosBaseUrl}/gauges/linear-gauge-backing' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="linear-gauge-backing-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示
@@ -250,7 +253,7 @@ IgcLinearGaugeModule.register();
 
 ### スケール
 
-スケールはゲージで値の全範囲を強調表示する視覚的な要素です。外観やスケールの図形のカスタマイズ、更にスケールを反転 (`isScaleInverted` プロパティを使用) させて、すべてのラベルを左から右ではなく、右から左へ描画することもできます。
+スケールはゲージで値の全範囲を強調表示する視覚的な要素です。外観やスケールの図形のカスタマイズ、更にスケールを反転 (`IsScaleInverted` プロパティを使用) させて、すべてのラベルを左から右ではなく、右から左へ描画することもできます。
 
 ```html
 <igx-linear-gauge
@@ -269,7 +272,7 @@ IgcLinearGaugeModule.register();
 ```
 
 <div class="sample-container loading" style="height: 125px">
-    <iframe id="linear-gauge-scale-iframe" src='{environment:demosBaseUrl}/gauges/linear-gauge-scale' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="linear-gauge-scale-iframe" data-src='{environment:demosBaseUrl}/gauges/linear-gauge-scale' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="linear-gauge-scale-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示

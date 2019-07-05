@@ -11,8 +11,8 @@ Ignite UI for Angular Map コンポーネントを使用すると、ビューモ
 
 ### デモ
 
-<div class="sample-container" style="height: 400px">
-    <iframe id="geo-map-overview-iframe" src='{environment:demosBaseUrl}/maps/geo-map-overview' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 400px">
+    <iframe id="geo-map-overview-iframe" src='{environment:demosBaseUrl}/maps/geo-map-overview' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="geo-map-overview-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示
@@ -23,7 +23,7 @@ Ignite UI for Angular Map コンポーネントを使用すると、ビューモ
 
 地図コンポーネントを使用すると、Bing Maps™ および Open Street Maps から地理的画像をレンダリングできます。マップは何万ものデータポイントをプロットし、コントロールがリアルタイム フィードを処理できるように数ミリ秒ごとにそれらを更新します。
 
-マップの `IgxSeriesComponent` プロパティは、無制限の地理的シリーズのレンダリングをサポートするために使用されます。このプロパティは、地理的シリーズ オブジェクトのコレクションで、任意のタイプの地理的シリーズをそれに追加できます。たとえば、都市などの地理的位置をプロットするために `GeographicSymbolSeries`、またこれらの地理的位置の間の接続 (道路など) をプロットするために `GeographicPolylineSeries` を追加できます。
+マップの `Infragistics.Controls.Charts.Series` プロパティは、無制限の地理的シリーズのレンダリングをサポートするために使用されます。このプロパティは、地理的シリーズ オブジェクトのコレクションで、任意のタイプの地理的シリーズをそれに追加できます。たとえば、都市などの地理的位置をプロットするために [`IgxGeographicSymbolSeriesComponent`](/angular-apis/typescript/latest/classes/igxgeographicsymbolseriescomponent.html)、またこれらの地理的位置の間の接続 (道路など) をプロットするために [`IgxGeographicPolylineSeriesComponent`](/angular-apis/typescript/latest/classes/igxgeographicpolylineseriescomponent.html) を追加できます。
 
 Map は、マウス、キーボード、またはコードビハインドを使用して、マップ コンテンツをナビゲートするためのカスタマイズ可能なナビゲーション動作を提供します。
 
@@ -37,11 +37,11 @@ Map は、マウス、キーボード、またはコードビハインドを使�
 
 ### 必要なモジュール
 
-`IgxGeographicMap` は、以下のモジュールが必要です。
+[`IgxGeographicMap`](/angular-apis/typescript/latest/classes/igxgeographicmap.html) は、以下のモジュールが必要です。
 
-```typescript
+```ts
 // app.module.ts
-import {IgxMapModule} from 'igniteui-angular-maps/ES5/igx-map-module'
+import {IgxMapModule} from "igniteui-angular-maps/ES5/igx-map-module";
 
 @NgModule({
     imports: [

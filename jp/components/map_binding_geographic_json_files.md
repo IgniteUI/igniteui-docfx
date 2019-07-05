@@ -7,12 +7,12 @@ _language: ja
 
 ## 地理的位置と JSON ファイルのバインド
 
-`IgxGeographicMap` は、さまざまな種類のファイルからロードされた地理データをプロットできます。たとえば、JavaScript Object Notation (JSON) ファイルから地理的位置をロードできます。
+[`IgxGeographicMap`](/angular-apis/typescript/latest/classes/igxgeographicmap.html) は、さまざまな種類のファイルからロードされた地理データをプロットできます。たとえば、JavaScript Object Notation (JSON) ファイルから地理的位置をロードできます。
 
 ### デモ
 
-<div class="sample-container" style="height: 400px">
-    <iframe id="geo-map-binding-data-json-points-iframe" src='{environment:demosBaseUrl}/maps/geo-map-binding-data-json-points' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 400px">
+    <iframe id="geo-map-binding-data-json-points-iframe" src='{environment:demosBaseUrl}/maps/geo-map-binding-data-json-points' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="geo-map-binding-data-json-points-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示
@@ -25,7 +25,7 @@ _language: ja
 
 JSON ファイルからのデータの例:
 
-```typescript
+```ts
 [
  { "n": "Sydney Island", "y": -16.68972, "x": 139.45917 },
  { "n": "Sydney Creek", "y": -16.3, "x": 128.95 },
@@ -36,4 +36,4 @@ JSON ファイルからのデータの例:
 
 ### コード スニペット
 
-次のコードは、マップコンポーネント内の `GeographicHighDensityScatterSeries` を、ロードされた JSON ファイルから作成された地理的位置を含むオブジェクトの配列にバインドします。
+次のコードは、マップコンポーネント内の [`IgxGeographicHighDensityScatterSeriesComponent`](/angular-apis/typescript/latest/classes/igxgeographichighdensityscatterseriescomponent.html) を、ロードされた JSON ファイルから作成された地理的位置を含むオブジェクトの配列にバインドします。

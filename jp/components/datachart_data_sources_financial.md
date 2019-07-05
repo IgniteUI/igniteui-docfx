@@ -9,7 +9,7 @@ _language: ja
 
 このトピックでは、[ファイナンシャル シリーズ](datachart_series_types_financial.md) のデータソースを実装する方法の例を示します。
 
-```typescript
+```ts
 export class SampleFinancialData {
 
     public static create(): any[] {

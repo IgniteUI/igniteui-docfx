@@ -9,7 +9,7 @@ _language: ja
 
 このトピックでは、[極座標シリーズ](datachart_series_types_polar.md) のデータソースを実装する方法の例を示します。
 
-```typescript
+```ts
 export class SamplePolarData {
 
     public static create(): any[] {
