@@ -85,7 +85,7 @@ This pane controls the zoom of all the displayed panes. This pane is displayed b
  </igx-financial-chart>
 ```
 
-Note that you should set the `ZoomSliderType` option to the same value as the [`ChartType`](/components/financialchart_chart_panes.html) option is set to. This way, the zoom slider will show correct preview of the price pane. The following code demonstrates how to do this:
+Note that you should set the `ZoomSliderType` option to the same value as the [`ChartType`](financialchart_chart_panes.md) option is set to. This way, the zoom slider will show correct preview of the price pane. The following code demonstrates how to do this:
 
 ```html
  <igx-financial-chart

@@ -54,11 +54,11 @@ export class AppModule {}
 The Ignite UI for Angular sparkline component supports the following types of sparklines:
 
 -   `Area`
--   [`IgxColumnComponent`](/components/sparkline.html)
+-   [`IgxColumnComponent`](sparkline.md)
 -   `Line`
 -   `Win/Loss`
 
-The type is defined by setting the [`displayType`](/components/sparkline.html) property. If the [`displayType`](/components/sparkline.html) property is not specified, then by default, the `Line` type is displayed.
+The type is defined by setting the [`displayType`](sparkline.md) property. If the [`displayType`](sparkline.md) property is not specified, then by default, the `Line` type is displayed.
 
 The `Win/Loss` sparkline type is a column chart type, in which the value of each column is equal to either the positive maximum (for positive values) or the negative minimum (for negative values) of the bound data set, often denoting a Win or a Loss, or similar opposing concepts. For the `Win/Loss` sparkline to display properly, the data set should have both positive and negative values.
 
@@ -83,7 +83,7 @@ If the `Win/Loss` sparkline is bound to the same data as the other types such as
 
 ### Markers
 
-The Ignite UI for Angular sparkline component allows you to show markers as circular colored icons on your series to indicate the individual data points based on X/Y coordinates. Markers can be set on sparklines of display types `Line`, `Area`, and [`IgxColumnComponent`](/components/sparkline.html). The `Win/Loss` type of sparkline does not currently accept markers. By default, markers are not displayed.
+The Ignite UI for Angular sparkline component allows you to show markers as circular colored icons on your series to indicate the individual data points based on X/Y coordinates. Markers can be set on sparklines of display types `Line`, `Area`, and [`IgxColumnComponent`](sparkline.md). The `Win/Loss` type of sparkline does not currently accept markers. By default, markers are not displayed.
 
 Markers in the sparkline can be placed in any combination of the following locations:
 
@@ -94,7 +94,7 @@ Markers in the sparkline can be placed in any combination of the following locat
 -   `Last`: Display a marker on the last data point in the sparkline.
 -   `Negative`: Display markers on the negative data points plotted in the sparkline.
 
-All of the markers mentioned above can be customized using the related marker types' property in aspects of color, visibility, and size. For example, the `Low` markers above will have properties [`lowMarkerBrush`](/components/sparkline.html), [`lowMarkerVisibility`](/components/sparkline.html), and [`lowMarkerSize`](/components/sparkline.html).
+All of the markers mentioned above can be customized using the related marker types' property in aspects of color, visibility, and size. For example, the `Low` markers above will have properties [`lowMarkerBrush`](sparkline.md), [`lowMarkerVisibility`](sparkline.md), and [`lowMarkerSize`](sparkline.md).
 
 ```html
 <igx-sparkline
@@ -128,13 +128,13 @@ The normal range feature of the Ignite UI for Angular sparkline component is a h
 
 The normal range can be wider than the maximum data point or beyond, and it can also be as thin as the sparkline's `Line` display type, to serve as a threshold indicator, for instance. The width of the normal range is determined by the following three properties, which serve as the minimum settings required for displaying the normal range:
 
--   [`normalRangeVisibility`](/components/sparkline.html): Whether or not the normal range is visible.
--   [`normalRangeMaximum`](/components/sparkline.html): The bottom border of the range.
--   [`normalRangeMinimum`](/components/sparkline.html): The top border of the range.
+-   [`normalRangeVisibility`](sparkline.md): Whether or not the normal range is visible.
+-   [`normalRangeMaximum`](sparkline.md): The bottom border of the range.
+-   [`normalRangeMinimum`](sparkline.md): The top border of the range.
 
-By default, the normal range is not displayed. When enabled, the normal range shows up with a light gray color appearance, which can also be configured using the [`normalRangeFill`](/components/sparkline.html) property.
+By default, the normal range is not displayed. When enabled, the normal range shows up with a light gray color appearance, which can also be configured using the [`normalRangeFill`](sparkline.md) property.
 
-You can also configure whether or not to show the normal range in front of or behind the plotted series in your sparkline component by setting the [`displayNormalRangeInFront`](/components/sparkline.html) property.
+You can also configure whether or not to show the normal range in front of or behind the plotted series in your sparkline component by setting the [`displayNormalRangeInFront`](sparkline.md) property.
 
 ```html
 <igx-sparkline
@@ -157,9 +157,9 @@ You can also configure whether or not to show the normal range in front of or be
 
 ### Trendlines
 
-The Ignite UI for Angular sparkline component has support for a range of trendlines that display as another layer on top of the actual sparkline layer. To display a sparkline, you can use the [`trendLineType`](/components/sparkline.html) property.
+The Ignite UI for Angular sparkline component has support for a range of trendlines that display as another layer on top of the actual sparkline layer. To display a sparkline, you can use the [`trendLineType`](sparkline.md) property.
 
-The trendlines are calculated according to the algorithm specified by the [`trendLineType`](/components/sparkline.html) property using the values of the data the the chart is bound to.
+The trendlines are calculated according to the algorithm specified by the [`trendLineType`](sparkline.md) property using the values of the data the the chart is bound to.
 
 Trendlines can only be displayed one at a time and by default, the trendline is not displayed.
 
@@ -204,7 +204,7 @@ The following code example shows how to enable a trendline in the Ignite UI for 
 
 The Ignite UI for Angular sparkline component can detect unknown values and render the space for unknown values through a specified interpolation algorithm. If your data contains null values and you do not use this feature, meaning no interpolation is specified, the unknown value will not be plotted.
 
-In order to plot the unknown values, you can set the [`unknownValuePlotting`](/components/sparkline.html) property of the sparkline component.
+In order to plot the unknown values, you can set the [`unknownValuePlotting`](sparkline.md) property of the sparkline component.
 
 ```html
 <igx-sparkline

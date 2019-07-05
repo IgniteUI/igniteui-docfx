@@ -7,7 +7,7 @@ mentionedTypes: ['XamGeographicMap']
 
 ## Binding and Overlaying Multiple Shape Files
 
-In the `GeographicMap`, you can add multiple geographic series objects to overlay a few shapefiles with geo-spacial data. For example, [`IgxGeographicSymbolSeriesComponent`](/components/map_binding_multiple_shapes_files.html) for plotting geographic locations of ports, the [`IgxGeographicPolylineSeriesComponent`](/components/map_binding_multiple_shapes_files.html) for plotting routes between ports, and the [`IgxGeographicShapeSeriesComponent`](/components/map_binding_multiple_shapes_files.html) for plotting shapes of countries.
+In the `GeographicMap`, you can add multiple geographic series objects to overlay a few shapefiles with geo-spacial data. For example, [`IgxGeographicSymbolSeriesComponent`](map_binding_multiple_shapes_files.md) for plotting geographic locations of ports, the [`IgxGeographicPolylineSeriesComponent`](map_binding_multiple_shapes_files.md) for plotting routes between ports, and the [`IgxGeographicShapeSeriesComponent`](map_binding_multiple_shapes_files.md) for plotting shapes of countries.
 
 ### Demo
 
@@ -23,9 +23,9 @@ In the `GeographicMap`, you can add multiple geographic series objects to overla
 
 This topic takes you step-by-step towards displaying multiple geographic series in the map component. All geographic series plot following geo-spatial data loaded from shape files using the `ShapeDataSource` class. Refer to the [Binding Shape Files](map_binding_geographic_shape_files.md) topic for more information about `ShapeDataSource` object.
 
--   [`IgxGeographicSymbolSeriesComponent`](/components/map_binding_multiple_shapes_files.html) – displays locations of major cities
--   [`IgxGeographicPolylineSeriesComponent`](/components/map_binding_multiple_shapes_files.html) – displays routes between major ports
--   [`IgxGeographicShapeSeriesComponent`](/components/map_binding_multiple_shapes_files.html) – displays shapes of countries of the world
+-   [`IgxGeographicSymbolSeriesComponent`](map_binding_multiple_shapes_files.md) – displays locations of major cities
+-   [`IgxGeographicPolylineSeriesComponent`](map_binding_multiple_shapes_files.md) – displays routes between major ports
+-   [`IgxGeographicShapeSeriesComponent`](map_binding_multiple_shapes_files.md) – displays shapes of countries of the world
 
 You can use geographic series in this or other combinations to plot desired data.
 
@@ -122,15 +122,15 @@ sdsLocations.dataBind();
 
 ### Overlaying Shape Polygons
 
-Create [`IgxGeographicShapeSeriesComponent`](/components/map_binding_multiple_shapes_files.html) object with shapes of countries of the world and add it to `Infragistics.Controls.Charts.Series` collection of the `GeographicMap`.
+Create [`IgxGeographicShapeSeriesComponent`](map_binding_multiple_shapes_files.md) object with shapes of countries of the world and add it to `Infragistics.Controls.Charts.Series` collection of the `GeographicMap`.
 
 ### Overlaying Shape Polyline
 
-Create [`IgxGeographicPolylineSeriesComponent`](/components/map_binding_multiple_shapes_files.html) object with routes between major ports and add it to `Infragistics.Controls.Charts.Series` collection of the `GeographicMap`.
+Create [`IgxGeographicPolylineSeriesComponent`](map_binding_multiple_shapes_files.md) object with routes between major ports and add it to `Infragistics.Controls.Charts.Series` collection of the `GeographicMap`.
 
 ### Overlaying Shape Points
 
-Create [`IgxGeographicSymbolSeriesComponent`](/components/map_binding_multiple_shapes_files.html) object with locations of major cities and add it to `Infragistics.Controls.Charts.Series` collection of the `GeographicMap`.
+Create [`IgxGeographicSymbolSeriesComponent`](map_binding_multiple_shapes_files.md) object with locations of major cities and add it to `Infragistics.Controls.Charts.Series` collection of the `GeographicMap`.
 
 Also, you might want to hide geographic imagery from the map background content if your shape files provided sufficient geographic context (e.g. shape of countries) for your application.
 

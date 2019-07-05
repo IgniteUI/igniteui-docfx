@@ -7,7 +7,7 @@ mentionedTypes: ['XamGeographicMap']
 
 ## Using Shape Polyline Series
 
-Use the map component's [`IgxGeographicPolylineSeriesComponent`](/components/map_geographic_shape_polyline_series.html) to display geo-spatial data using polylines in a geographic context. This type of geographic series is often used to render roads or connections between geographic locations such as cities or airports.
+Use the map component's [`IgxGeographicPolylineSeriesComponent`](map_geographic_shape_polyline_series.md) to display geo-spatial data using polylines in a geographic context. This type of geographic series is often used to render roads or connections between geographic locations such as cities or airports.
 
 ### Demo
 
@@ -21,15 +21,15 @@ Use the map component's [`IgxGeographicPolylineSeriesComponent`](/components/map
 
 <div class="divider--half"></div>
 
-The [`IgxGeographicPolylineSeriesComponent`](/components/map_geographic_shape_polyline_series.html) works a lot like the [`IgxGeographicShapeSeriesComponent`](/components/map_geographic_shape_polyline_series.html) except that geo-spatial data is rendered with polylines instead of polygons.
+The [`IgxGeographicPolylineSeriesComponent`](map_geographic_shape_polyline_series.md) works a lot like the [`IgxGeographicShapeSeriesComponent`](map_geographic_shape_polyline_series.md) except that geo-spatial data is rendered with polylines instead of polygons.
 
 ### Data Requirements
 
-Similarly to other types of geographic series in the control, the [`IgxGeographicPolylineSeriesComponent`](/components/map_geographic_shape_polyline_series.html) has the `ItemsSource` property which can be bound to an array of objects. In addition, each data item in this object must have one data column that stores single/multiple shapes using an array of arrays of objects with x and y values representing geographic locations. This data column is then mapped to the ShapeMemberPath property. The [`IgxGeographicPolylineSeriesComponent`](/components/map_geographic_shape_polyline_series.html) uses points of this mapped data column to plot polygons in the control.
+Similarly to other types of geographic series in the control, the [`IgxGeographicPolylineSeriesComponent`](map_geographic_shape_polyline_series.md) has the `ItemsSource` property which can be bound to an array of objects. In addition, each data item in this object must have one data column that stores single/multiple shapes using an array of arrays of objects with x and y values representing geographic locations. This data column is then mapped to the ShapeMemberPath property. The [`IgxGeographicPolylineSeriesComponent`](map_geographic_shape_polyline_series.md) uses points of this mapped data column to plot polygons in the control.
 
 ### Code Snippet
 
-The following code shows how to bind the [`IgxGeographicPolylineSeriesComponent`](/components/map_geographic_shape_polyline_series.html) to locations of cities loaded from a shape file using the `ShapeDataSource`.
+The following code shows how to bind the [`IgxGeographicPolylineSeriesComponent`](map_geographic_shape_polyline_series.md) to locations of cities loaded from a shape file using the `ShapeDataSource`.
 
 <!-- Angular -->
 
