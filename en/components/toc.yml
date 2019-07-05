@@ -749,3 +749,7 @@
 - name: Transaction Service
   href: transaction.md
   new: true
+  items:
+    - name: How to use igxBaseTransaction, igxTransaction, igxHierarchical transaction
+      href: transaction-how-to.md
+      new: true

@@ -19,7 +19,7 @@ A detailed example of how you may use `igxBaseTransaction` to enable Row Editing
 
 ### General information on igxTransactionService and igxHierarchicalTransactionService
 
-`igxTransactionService` and `igxHierarchicalTransactionService` are injectable middlewares a component can use to accumulate changes without affecting the underlying data. The provider exposes API to access, manipulate changes (undo and redo) and discard or commit all to the data.
+`igxTransactionService` and `igxHierarchicalTransactionService` are injectable middlewares, that implement the `TransactionService` interface. A component may use those to accumulate changes without affecting the underlying data. The provider exposes API to access, manipulate changes (undo and redo) and discard or commit all to the data.
 
 `igxTransactionService` and `igxHierarchicalTransactionService` work with both cell editing and row editing. The transaction for the cell edit is added when the cell exits edit mode, while row transaction is created, when the row exits edit mode. But in both cases the state of the grid edits consist of all updated, added and deleted rows and their last states. Those can later be inspected, manipulated and submitted at once. Changes are collected for individual cells or rows, depending on editing mode, and accumulated per data row/record.
 
