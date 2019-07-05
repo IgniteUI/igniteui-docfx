@@ -16,6 +16,9 @@
     - name: Create your first Angular app
       href: general/wpf_to_angular_guide/create_first_angular_app.md
       new: false
+    - name: Create your UI with Angular components
+      href: general/wpf_to_angular_guide/create_ui_with_components.md
+      new: false
     - name: Angular Events
       href: general/wpf_to_angular_guide/angular_events.md
       new: false
