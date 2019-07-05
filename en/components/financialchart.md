@@ -25,13 +25,13 @@ Once the user binds the data, the chart offers multiple ways in which the data c
 
 The financial chart component analyzes and selects data columns - Date/Time column to use for x-axis and Open, High, Low, Close, Volume columns or the first 5 numeric columns for y-axis. Beyond this, the user can specify the chart type to either Bar, Candle, Column, and Line. With its five main visual elements, a toolbar, a prices view, a volume view, an indicators view, and a navigation view, data has become more perceptible.
 
-You can explicitly specify the chart type by setting the [`ChartType`](/angular-apis/typescript/latest/enums/charttype.html) property to one of the following options:
+You can explicitly specify the chart type by setting the [`ChartType`](/components/financialchart.html) property to one of the following options:
 
 | Property                                                                                | Description                                                                                                                                                                                                                                        |
 | --------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `Bar`                                                                                   | Specifies the bar series with markers at each data point                                                                                                                                                                                           |
 | `Candle`                                                                                | Specifies the candle series                                                                                                                                                                                                                        |
-| [`IgxColumnComponent`](/angular-apis/typescript/latest/classes/igxcolumncomponent.html) | Specifies the column series                                                                                                                                                                                                                        |
+| [`IgxColumnComponent`](/components/financialchart.html) | Specifies the column series                                                                                                                                                                                                                        |
 | `Line`                                                                                  | Specifies the line series                                                                                                                                                                                                                          |
 | `auto`                                                                                  | Specifies automatic selection of chart type based on Data Adapter which suggest one of above values based names and number of numeric columns in your data. For example, it will suggest `Bar` for data items with Open, High, Low, Close columns. |
 
@@ -74,7 +74,7 @@ export class AppModule {}
 
 Now that the financial chart module is imported, next step is to bind it to data.
 
-In order to create an [`IgxFinancialChart`](/angular-apis/typescript/latest/classes/igxfinancialchart.html) control, you must first have data to bind it to. The following code snippet demonstrates how to create a simple data source.
+In order to create an [`IgxFinancialChart`](/components/financialchart.html) control, you must first have data to bind it to. The following code snippet demonstrates how to create a simple data source.
 
 ```ts
 let data = [

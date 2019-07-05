@@ -79,7 +79,7 @@ The following is a list of the supported versions of Excel.\*\*
 
 Now that the Excel Library module is imported, next step is to load a workbook.
 
-In order to load and save [`Workbook`](/angular-apis/typescript/latest/classes/workbook.html) objects, you can utilize the save method of the actual [`Workbook`](/angular-apis/typescript/latest/classes/workbook.html) object, and the static `Workbook.load` method. In the following code snippet, an external [ExcelUtility](https://github.com/IgniteUI/igniteui-angular-samples/blob/master/src/app/utilities/excel-utility.ts) class is used to save and load a [`Workbook`](/angular-apis/typescript/latest/classes/workbook.html):
+In order to load and save [`Workbook`](/components/excel_library.html) objects, you can utilize the save method of the actual [`Workbook`](/components/excel_library.html) object, and the static `Workbook.load` method. In the following code snippet, an external [ExcelUtility](https://github.com/IgniteUI/igniteui-angular-samples/blob/master/src/app/utilities/excel-utility.ts) class is used to save and load a [`Workbook`](/components/excel_library.html):
 
 ```ts
 import { Workbook } from "igniteui-angular-excel/ES5/Workbook";

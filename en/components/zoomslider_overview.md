@@ -4,6 +4,10 @@ _description: Use the zoombar within the data chart to easily display a subset o
 mentionedTypes: ['ZoomSlider, XamDataChart']
 ---
 
+### Zoom Slider
+
+The ZoomSlider control provides zooming functionality to range-enabled controls. The ZoomSlider features a horizontal scroll bar, a thumbnail of the whole range, and a resizable zoom-range window. The ZoomSlider cannot work as a standalone control and it acts as an enhancement for range-based controls like the DataChart.
+
 ### Demo
 
 <div class="sample-container loading" style="height: 400px">
@@ -15,8 +19,6 @@ mentionedTypes: ['ZoomSlider, XamDataChart']
 </div>
 
 <div class="divider--half"></div>
-
-The ZoomSlider control provides zooming functionality to range-enabled controls. The ZoomSlider features a horizontal scroll bar, a thumbnail of the whole range, and a resizable zoom-range window. The ZoomSlider cannot work as a standalone control and it acts as an enhancement for range-based controls like the DataChart.
 
 ### Usage
 
@@ -59,10 +61,11 @@ When installing the chart package, the core package must also be installed.
 
 ### Required Modules
 
-The [`IgxZoomSliderComponent`](/angular-apis/typescript/latest/classes/igxzoomslidercomponent.html) requires the following modules:
+The [`IgxZoomSliderComponent`](/components/zoomslider_overview.html) requires the following modules:
 
 ```ts
 import { IgxZoomSliderModule } from "igniteui-angular-charts/ES5/igx-zoom-slider-module";
+import { IgxZoomSliderComponent} from 'igniteui-angular-charts/ES5/igx-zoom-slider-component';
 
 @NgModule({
     imports: [
@@ -74,11 +77,7 @@ import { IgxZoomSliderModule } from "igniteui-angular-charts/ES5/igx-zoom-slider
 export class AppModule {}
 ```
 
-### Imports
-
-```ts
-import { IgxZoomSliderComponent} from 'igniteui-angular-charts/ES5/igx-zoom-slider-component';
-```
+### Code Snippet
 
 The following code demonstrates how to setup the ZoomSlider.
 
