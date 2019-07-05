@@ -70,9 +70,9 @@ The following code example shows how to set and customize the color, length, and
 
 ### Axis Range
 
-In the Angular data chart component, you can define a range minimum and range maximum value of a numeric or time axis. The range minimum is the lowest value of the axis and the range maximum is the highest value of the axis. These are set by setting the [`minimumValue`](/components/datachart_axis_settings.html) and [`maximumValue`](/components/datachart_axis_settings.html) options on the corresponding axes.
+In the Angular data chart component, you can define a range minimum and range maximum value of a numeric or time axis. The range minimum is the lowest value of the axis and the range maximum is the highest value of the axis. These are set by setting the [`minimumValue`](datachart_axis_settings.md) and [`maximumValue`](datachart_axis_settings.md) options on the corresponding axes.
 
-By default, the data chart component will calculate the minimum and maximum values for the numeric and time axis range based on the lowest and highest corresponding value points in your data, but this automatic calculation may not be appropriate for your set of data points in all cases. For example, if your data has a minimum value of 850, you may want to set the [`minimumValue`](/components/datachart_axis_settings.html) of the numeric axis to 800 so that there will be a space value of 50 between the axis minimum and the lowest value of data points. The same idea can be applied to the axis minimum value and the highest value of data points using the [`maximumValue`](/components/datachart_axis_settings.html) property.
+By default, the data chart component will calculate the minimum and maximum values for the numeric and time axis range based on the lowest and highest corresponding value points in your data, but this automatic calculation may not be appropriate for your set of data points in all cases. For example, if your data has a minimum value of 850, you may want to set the [`minimumValue`](datachart_axis_settings.md) of the numeric axis to 800 so that there will be a space value of 50 between the axis minimum and the lowest value of data points. The same idea can be applied to the axis minimum value and the highest value of data points using the [`maximumValue`](datachart_axis_settings.md) property.
 
 The following code snippet demonstrates changing an axis range in the data chart component:
 
@@ -86,9 +86,9 @@ The following code snippet demonstrates changing an axis range in the data chart
 
 ### Axis Gridlines
 
-In the Angular data chart component, the [`interval`](/components/datachart_axis_settings.html) property of an axis determines how frequently the major gridlines and axis labels are rendered on that axis. Similarly, the [`minorInterval`](/components/datachart_axis_settings.html) property specifies how frequently minor gridlines are rendered between those major gridlines.
+In the Angular data chart component, the [`interval`](datachart_axis_settings.md) property of an axis determines how frequently the major gridlines and axis labels are rendered on that axis. Similarly, the [`minorInterval`](datachart_axis_settings.md) property specifies how frequently minor gridlines are rendered between those major gridlines.
 
-For numeric axes, these intervals will be numeric, but for category axes, these values will represent the frequency of the number of categories that you wish for the lines to be drawn. For example, if you set the [`interval`](/components/datachart_axis_settings.html) to 2 on a category axis, the major gridlines would be drawn every 2 categories.
+For numeric axes, these intervals will be numeric, but for category axes, these values will represent the frequency of the number of categories that you wish for the lines to be drawn. For example, if you set the [`interval`](datachart_axis_settings.md) to 2 on a category axis, the major gridlines would be drawn every 2 categories.
 
 You can also configure the color and thickness of the intervals on the axes in the chart by setting the corresponding stroke and stroke thickness properties.
 
@@ -108,7 +108,7 @@ The following code snippet demonstrates how to configure the intervals on the ax
 
 ### Axis Gap
 
-The [`gap`](/components/datachart_axis_settings.html) property on the category axes of the Angular data chart component determines the amount of space between series of the data chart.
+The [`gap`](datachart_axis_settings.md) property on the category axes of the Angular data chart component determines the amount of space between series of the data chart.
 
 This property accepts a numeric value between 0 and 1. The value represents a relative width of the gap out of the available number of pixels between the series. Setting this property to 0 would mean there is no gap rendered between the series, and setting it 1 woudl render the maximum available gap.
 
@@ -124,7 +124,7 @@ The following sample code demonstrates setting an x-axis gap:
 
 ### Axis Overlap
 
-The axis [`overlap`](/components/datachart_axis_settings.html) feature of the category axes of the Angular data chart component allows setting the overlap of the rendered categories.
+The axis [`overlap`](datachart_axis_settings.md) feature of the category axes of the Angular data chart component allows setting the overlap of the rendered categories.
 
 This property accepts a numeric value between -1 and 1. The value represents a relative overlap out of the available number of pixels dedicated to each series.
 
@@ -132,7 +132,7 @@ Setting this property to a negative value (down to -1) results in the categories
 
 Setting this property to a positive value (up to 1) results in the categories overlapping each other. A value of 1 directs the chart to render the categories on top of each other.
 
-The following code snippet sets the x-axis [`overlap`](/components/datachart_axis_settings.html) to 0:
+The following code snippet sets the x-axis [`overlap`](datachart_axis_settings.md) to 0:
 
 ```html
 <igx-category-x-axis #xAxis

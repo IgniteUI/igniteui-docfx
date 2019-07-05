@@ -23,7 +23,7 @@ mentionedTypes: ['XamDataChart', 'CategoryXAxis', 'NumericYAxis', 'CategoryDateT
 
 ### Code Example
 
-This code demonstrates how to create data chart with two [`IgxNumericYAxisComponent`](/components/datachart_axis_sharing.html) and one [`IgxCategoryXAxisComponent`](/components/datachart_axis_sharing.html) that will be shared between two series.
+This code demonstrates how to create data chart with two [`IgxNumericYAxisComponent`](datachart_axis_sharing.md) and one [`IgxCategoryXAxisComponent`](datachart_axis_sharing.md) that will be shared between two series.
 
 ```html
  <igx-data-chart

@@ -7,7 +7,7 @@ mentionedTypes: ['XamGeographicMap']
 
 ## Using Scatter Symbol Series
 
-Use the map component's [`IgxGeographicSymbolSeriesComponent`](/components/map_geographic_scatter_symbol_series.html) to display geo-spatial data using points or markers in a geographic context. This type of geographic series is often used to render a collection of geographic locations such as cities, airports, earthquakes, or points of interests.
+Use the map component's [`IgxGeographicSymbolSeriesComponent`](map_geographic_scatter_symbol_series.md) to display geo-spatial data using points or markers in a geographic context. This type of geographic series is often used to render a collection of geographic locations such as cities, airports, earthquakes, or points of interests.
 
 ### Demo
 
@@ -23,11 +23,11 @@ Use the map component's [`IgxGeographicSymbolSeriesComponent`](/components/map_g
 
 ### Data Requirements
 
-Similarly to other types of geographic series in the map component, the [`IgxGeographicSymbolSeriesComponent`](/components/map_geographic_scatter_symbol_series.html) has the `ItemsSource` property which can be bound to an array of objects. In addition, each data item in this object must have two numeric data columns that store a geographic location (longitude and latitude). These data columns are then mapped to the [`latitudeMemberPath`](/components/map_geographic_scatter_symbol_series.html) and [`longitudeMemberPath`](/components/map_geographic_scatter_symbol_series.html) properties. The [`IgxGeographicSymbolSeriesComponent`](/components/map_geographic_scatter_symbol_series.html) uses values of these mapped data columns to plot symbol elements in the geographic map component.
+Similarly to other types of geographic series in the map component, the [`IgxGeographicSymbolSeriesComponent`](map_geographic_scatter_symbol_series.md) has the `ItemsSource` property which can be bound to an array of objects. In addition, each data item in this object must have two numeric data columns that store a geographic location (longitude and latitude). These data columns are then mapped to the [`latitudeMemberPath`](map_geographic_scatter_symbol_series.md) and [`longitudeMemberPath`](map_geographic_scatter_symbol_series.md) properties. The [`IgxGeographicSymbolSeriesComponent`](map_geographic_scatter_symbol_series.md) uses values of these mapped data columns to plot symbol elements in the geographic map component.
 
 ### Code Snippet
 
-The following code shows how to bind the [`IgxGeographicSymbolSeriesComponent`](/components/map_geographic_scatter_symbol_series.html) to locations of cities loaded from a shape file using the `ShapeDataSource`.
+The following code shows how to bind the [`IgxGeographicSymbolSeriesComponent`](map_geographic_scatter_symbol_series.md) to locations of cities loaded from a shape file using the `ShapeDataSource`.
 
 <!-- Angular -->
 

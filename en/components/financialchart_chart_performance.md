@@ -56,11 +56,11 @@ Also, you should consider the following features of the financial chart when opt
 
 ### Chart Type
 
-Setting the [`ChartType`](/components/financialchart_chart_performance.html) option can have the following impact on chart performance:
+Setting the [`ChartType`](financialchart_chart_performance.md) option can have the following impact on chart performance:
 
--   [`line`](/components/financialchart_chart_performance.html) - is the least expensive chart type to render and it is recommended when rendering a lot of data points or when plotting a lot of data sources.
--   [`IgxColumnComponent`](/components/financialchart_chart_performance.html) - is more expensive to render than the `Line` chart type and it is recommended when rendering data items with single numeric value.
--   `Bar` - is more expensive to render than the [`IgxColumnComponent`](/components/financialchart_chart_performance.html) chart type and it is recommended when rendering data items with OHLC  numeric values.
+-   [`line`](financialchart_chart_performance.md) - is the least expensive chart type to render and it is recommended when rendering a lot of data points or when plotting a lot of data sources.
+-   [`IgxColumnComponent`](financialchart_chart_performance.md) - is more expensive to render than the `Line` chart type and it is recommended when rendering data items with single numeric value.
+-   `Bar` - is more expensive to render than the [`IgxColumnComponent`](financialchart_chart_performance.md) chart type and it is recommended when rendering data items with OHLC  numeric values.
 -   `Candle` - is more expensive to render than the `Bar` chart type and it is also recommended when rendering data items with OHLC  numeric values.
 
 ### Volume Type
@@ -69,7 +69,7 @@ Setting the `VolumeType` option can have the following impact on chart performan
 
 -   `Line` - is the least expensive volume type to render and it is recommended when rendering a lot of data points or when plotting a lot of data sources.
 -   `area` - is more expensive to render than the `Line` volume type.
--   [`IgxColumnComponent`](/components/financialchart_chart_performance.html) - is more expensive to render than the `area` volume type and it is recommended when rendering volume data of 1-3 stocks.
+-   [`IgxColumnComponent`](financialchart_chart_performance.md) - is more expensive to render than the `area` volume type and it is recommended when rendering volume data of 1-3 stocks.
 
 ### Marker Type
 

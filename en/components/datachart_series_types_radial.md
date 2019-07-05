@@ -27,11 +27,11 @@ The following table lists all types of radial series and their descriptions:
 
 | Series Name                                                                                                 | Description                                                                                                                                                       |
 | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [`IgxRadialAreaSeriesComponent`](/components/datachart_series_types_radial.html) | Displays a filled polygon enclosed by a collection of straight lines connecting data points which are located at the radial (angle/radius) coordinates            |
+| [`IgxRadialAreaSeriesComponent`](datachart_series_types_radial.md) | Displays a filled polygon enclosed by a collection of straight lines connecting data points which are located at the radial (angle/radius) coordinates            |
 | `RadialSplineAreaSeries`                                                                                    | Displays a filled polygon enclosed by a collection of smooth/interpolated lines connecting data points which are located at the radial (angle/radius) coordinates |
 | `RadialSplineSeries`                                                                                        | Displays a collection of smooth/interpolated lines connecting data points which are located at the radial (angle/radius) coordinates                              |
 | `RadialScatterSeries`                                                                                       | Displays a collection of markers representing data points which are located at the radial (angle/radius) coordinates                                              |
-| [`IgxRadialLineSeriesComponent`](/components/datachart_series_types_radial.html) | Displays a collection of straight lines connecting data points which are located at the radial (angle/radius) coordinates                                         |
+| [`IgxRadialLineSeriesComponent`](datachart_series_types_radial.md) | Displays a collection of straight lines connecting data points which are located at the radial (angle/radius) coordinates                                         |
 
 ### Required Axes
 
@@ -39,10 +39,10 @@ The Angular data chart component provides various types of axes but only the fol
 
 | Series Type                                                                                                     | Radius Axis Type                                                                                              | Angle Axis Type                                                                                               |
 | --------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
-| [`IgxRadialAreaSeriesComponent`](/components/datachart_series_types_radial.html)     | [`IgxNumericRadiusAxisComponent`](/components/datachart_series_types_radial.html) | [`IgxCategoryAngleAxisComponent`](/components/datachart_series_types_radial.html) |
-| [`IgxRadialPieSeriesComponent`](/components/datachart_series_types_radial.html)       | [`IgxNumericRadiusAxisComponent`](/components/datachart_series_types_radial.html) | [`IgxCategoryAngleAxisComponent`](/components/datachart_series_types_radial.html) |
-| [`IgxRadialColumnSeriesComponent`](/components/datachart_series_types_radial.html) | [`IgxNumericRadiusAxisComponent`](/components/datachart_series_types_radial.html) | [`IgxCategoryAngleAxisComponent`](/components/datachart_series_types_radial.html) |
-| [`IgxRadialLineSeriesComponent`](/components/datachart_series_types_radial.html)     | [`IgxNumericRadiusAxisComponent`](/components/datachart_series_types_radial.html) | [`IgxCategoryAngleAxisComponent`](/components/datachart_series_types_radial.html) |
+| [`IgxRadialAreaSeriesComponent`](datachart_series_types_radial.md)     | [`IgxNumericRadiusAxisComponent`](datachart_series_types_radial.md) | [`IgxCategoryAngleAxisComponent`](datachart_series_types_radial.md) |
+| [`IgxRadialPieSeriesComponent`](datachart_series_types_radial.md)       | [`IgxNumericRadiusAxisComponent`](datachart_series_types_radial.md) | [`IgxCategoryAngleAxisComponent`](datachart_series_types_radial.md) |
+| [`IgxRadialColumnSeriesComponent`](datachart_series_types_radial.md) | [`IgxNumericRadiusAxisComponent`](datachart_series_types_radial.md) | [`IgxCategoryAngleAxisComponent`](datachart_series_types_radial.md) |
+| [`IgxRadialLineSeriesComponent`](datachart_series_types_radial.md)     | [`IgxNumericRadiusAxisComponent`](datachart_series_types_radial.md) | [`IgxCategoryAngleAxisComponent`](datachart_series_types_radial.md) |
 
 ### Required Data
 
@@ -50,8 +50,8 @@ Radial series have the following data requirements:
 
 -   The data source must be an array or a list of data items
 -   The data source must contain at least one data item otherwise the chart will not render the radial series.
--   All data items must contain at least one label data column (string or date time) which should be mapped to the `Label` property of the category axis (e.g. [`IgxCategoryAngleAxisComponent`](/components/datachart_series_types_radial.html))
--   All data items must contain at least one numeric data column which should be mapped using the [`valueMemberPath`](/components/datachart_series_types_radial.html) property of radial series (e.g. [`IgxRadialAreaSeriesComponent`](/components/datachart_series_types_radial.html))
+-   All data items must contain at least one label data column (string or date time) which should be mapped to the `Label` property of the category axis (e.g. [`IgxCategoryAngleAxisComponent`](datachart_series_types_radial.md))
+-   All data items must contain at least one numeric data column which should be mapped using the [`valueMemberPath`](datachart_series_types_radial.md) property of radial series (e.g. [`IgxRadialAreaSeriesComponent`](datachart_series_types_radial.md))
 
 You can use the [SampleRadialData](datachart_data_sources_radial.md) as data source which meets above data requirements.
 
@@ -94,7 +94,7 @@ import { IgxDataChartRadialModule } from "igniteui-angular-charts/ES5/igx-data-c
 
 ### Code Example
 
-This code demonstrates how to create an instance of data chart with [`IgxRadialAreaSeriesComponent`](/components/datachart_series_types_radial.html) and bind it to the data source.
+This code demonstrates how to create an instance of data chart with [`IgxRadialAreaSeriesComponent`](datachart_series_types_radial.md) and bind it to the data source.
 
 ```html
  <igx-data-chart
@@ -112,7 +112,7 @@ This code demonstrates how to create an instance of data chart with [`IgxRadialA
  </igx-data-chart>
 ```
 
-Note that you can also use above code to create other type of radial series by replacing [`IgxRadialAreaSeriesComponent`](/components/datachart_series_types_radial.html) with name of radial series that you want to render.
+Note that you can also use above code to create other type of radial series by replacing [`IgxRadialAreaSeriesComponent`](datachart_series_types_radial.md) with name of radial series that you want to render.
 
 ### Additional Resources
 

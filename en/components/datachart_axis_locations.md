@@ -23,7 +23,7 @@ mentionedTypes: ['XamDataChart']
 
 ### Code Example
 
-This code demonstrates how to create data chart with two [`IgxNumericYAxisComponent`](/components/datachart_axis_locations.html) that will be placed on left/right sides and two [`IgxCategoryXAxisComponent`](/components/datachart_axis_locations.html) that will be stacked on one another.
+This code demonstrates how to create data chart with two [`IgxNumericYAxisComponent`](datachart_axis_locations.md) that will be placed on left/right sides and two [`IgxCategoryXAxisComponent`](datachart_axis_locations.md) that will be stacked on one another.
 
 ```html
    <igx-data-chart
