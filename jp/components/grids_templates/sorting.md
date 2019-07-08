@@ -1,6 +1,6 @@
 ﻿@@if (igxName === 'IgxGrid') {
 ---
-title: Angular Grid ソート|Data Sorting |Ignite UI for Angular |infragistics
+title: Angular Grid ソート|データ ソート |Ignite UI for Angular |infragistics
 _description: Ignite UI Material UI グリッドの Angular Sort 機能を使用し、機能豊かなな API と Angular イベントを使って並べ替え可能な列の組み合わせを構成する方法。
 _keywords: angular sort, ignite ui for angular, infragistics
 _language: ja
@@ -8,7 +8,7 @@ _language: ja
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular Tree Grid ソート|Data Sorting |Ignite UI for Angular |infragistics
+title: Angular Tree Grid ソート|データ ソート |Ignite UI for Angular |infragistics
 _description: Ignite UI Material UI グリッドの Angular Sort 機能を使用し、機能豊かなな API と Angular イベントを使って並べ替え可能な列の組み合わせを構成する方法。
 _keywords: angular sort, ignite ui for angular, infragistics
 _language: ja
