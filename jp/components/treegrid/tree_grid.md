@@ -1,13 +1,13 @@
 ---
 title: Angular Data Tree Grid | Material Table | Ignite UI for Angular | Infragistics
-_description: Learn how to use Ignite UI for Angular data grid, based on Angular Material Table and create a touch-responsive angular component with variety of angular events.
-_keywords: angular data grid, igniteui for angular, infragistics
+_description: Angular Material Table に基づいて Ignite UI for Angular データグリッドの使用方法を学び、さまざまな Angular イベントを含むタッチレスポンシブ Angular コンポーネントを作成します。
+_keywords: Angular データ グリッド, igniteui for angular, infragistics
 _language: ja
 ---
 
-## Data Tree Grid
+## データ ツリー グリッド
 
-<p class="highlight">Display and manipulate hierarchical data with the Ignite UI for Angular Data Tree Grid. Quickly bind your data with very little coding or configuration. Customize its behavior by responding to any user action using angular events. Features include the must have for any Angular Material table filtering, sorting, paging, templates, movable columns, and the ability to edit and update data, making it the ultimate Angular Material table or material UI grid.</p>
+<p class="highlight">Ignite UI for Angular Data Tree Grid を使用して階層データを表示および操作します。最小限のコードと構成でデータをすばやくバインドできます。Angular イベントを使用してユーザーの操作に応答する際の動作をカスタマイズします。Angular Material テーブルのフィルタリング、ソート、ページング、テンプレート、移動可能な列、およびデータを編集および更新する機能を備えているため、Angular Material テーブルまたはマテリアル UI グリッドになります。</p>
 
 ### デモ
 

@@ -1,24 +1,24 @@
 ﻿@@if (igxName === 'IgxGrid') {
 ---
-title: Angular Grid Multi-Cell Selection | Ignite UI for Angular | infragistics 
-_description: Check how easy it is to use Row and Multi-cell data select of the Ignite UI for Angular Material table by using angular events, API or with mouse interactions.
-_keywords: data select, igniteui for angular, infragistics
+title: Angular Grid 複数セル選択 | Ignite UI for Angular | infragistics 
+_description: Angular イベント、API、あるいはマウス操作によって、Angular Material の Ignite UI テーブル の行および複数セル データの選択が簡単に実行できます。
+_keywords: データ選択, igniteui for angular, infragistics
 _language: ja
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular Tree Grid Multi-Cell Selection | Ignite UI for Angular | infragistics 
-_description: Check how easy it is to use Row and Multi-cell data select of the Ignite UI for Angular Material table by using angular events, API or with mouse interactions.
-_keywords: data select, igniteui for angular, infragistics
+title: Angular Tree Grid 複数セル選択 | Ignite UI for Angular | infragistics 
+_description: Angular イベント、API、あるいはマウス操作によって、Angular Material の Ignite UI テーブル の行および複数セル データの選択が簡単に実行できます。
+_keywords: データ選択, igniteui for angular, infragistics
 _language: ja
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular Hierarchical Grid Multi-Cell Selection | Ignite UI for Angular | infragistics 
-_description: Check how easy it is to use Row and Multi-cell data select of the Ignite UI for Angular Material table by using angular events, API or with mouse interactions.
-_keywords: data select, igniteui for angular, infragistics
+title: Angular Hierarchical Grid 複数セル選択 | Ignite UI for Angular | infragistics 
+_description: Angular イベント、API、あるいはマウス操作によって、Angular Material の Ignite UI テーブル の行および複数セル データの選択が簡単に実行できます。
+_keywords: データ選択, igniteui for angular, infragistics
 _language: ja
 ---
 }
@@ -26,10 +26,10 @@ _language: ja
 
 @@if (igxName !== 'IgxHierarchicalGrid') {
 
-### @@igComponent Мulti-cell Selection and Row Selection
+### @@ igComponent  - 複数セル選択と行選択
 
-Multi-cell selection enables range data selection in the @@igComponent. Variety of multi-cell selection capabilities are available:
-- By `Mouse drag` - Rectangular data selectoion of cells would be performed.
+複数セル選択は @@igComponent のセルの範囲選択を可能にします。さまざまな複数セル選択の機能が含まれます。
+- `マウス ドラッグ` - セルの長方形データ選択。
 - `Ctrl キー` 押下 + マウス ドラッグ - 複数の範囲が選択されます。他の既存のセル選択は保持されます。
 - Shift キーを使用して複数セルの選択をインスタンス化します。Shift キーを押しながら、単一セルを選択して別の単一セルを選択します。2 つのセル間のセル範囲が選択されます。`Shift キー`を押しながら他の 2 番目のセルを選択すると、最初に選択したセルの位置 (開始点) に基づいてセル選択範囲が更新されます。
 - `Shift キー`を押しながら`矢印キー`を使用してキーボードで複数セルを選択します。マルチセル選択範囲は、フォーカスされたセルに基づいて作成されます。

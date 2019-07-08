@@ -1,13 +1,13 @@
 ﻿---
-title: Angular Grid Row Editing | UI Grid | Ignite UI for Angular | Infragistics
-_description: Learn how to configure in row data manipulations with Ignite UI for Angular. Intuitive grid row editing and CRUD capabilities are available with the UI grid.
+title: Tree Grid 行編集 | UI Grid | Ignite UI for Angular | Infragistics
+_description: Ignite UI for Angular を使用して行内データ操作を構成する方法を学びます。直感的なグリッド行編集と CRUD 機能は、UI グリッドで利用できます。
 _keywords: row editing, igniteui for angular, infragistics
 _language: ja
 ---
 
-### @@igComponent Row Editing and Usage
+### @@igComponent の行編集と使用方法
 
-Row editing allows updating of several cells in the row, before submitting, at once, all those changes. Grid Row Editing as part of the Angular CRUD is happening in row in the UI grid. Leverages the pending changes functionality of the new transaction provider.
+行編集では、一度にすべての変更を送信する前に行内の複数のセルを更新できます。Angular CRUD の一部としてのグリッド行編集は、UI グリッド内で行単位で行われます。新しいトランザクション プロバイダーの保留中の変更を利用できます。
 
 
 #### デモ

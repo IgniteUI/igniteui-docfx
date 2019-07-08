@@ -1,24 +1,24 @@
 ﻿@@if (igxName === 'IgxGrid') {
 ---
-title: Angular 複数列ヘッダー|Ignite UI for Angular |Infragistics
+title: Angular 複数列ヘッダー | Ignite UI for Angular | Infragistics
 _description: Ignite UI Material UI グリッドを使用して列ヘッダーを共通の階層ヘッダーの下に配置し、それらを複数のヘッダーに結合することで、列ヘッダーのグループ化を開始します。
-_keywords: column headers, ignite ui for angular, infragistics, 列ヘッダー,
+_keywords: column headers, ignite ui for angular, infragistics
 _language: ja
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular 複数列ヘッダー|Ignite UI for Angular |Infragistics
+title: Angular 複数列ヘッダー | Ignite UI for Angular の | Infragistics
 _description: Ignite UI Material UI グリッドを使用して列ヘッダーを共通の階層ヘッダーの下に配置し、それらを複数のヘッダーに結合することで、列ヘッダーのグループ化を開始します。
-_keywords: column headers, ignite ui for angular, infragistics, 列ヘッダー,
+_keywords: column headers, ignite ui for angular, infragistics
 _language: ja
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular 複数列ヘッダー|Ignite UI for Angular |Infragistics
+title: Angular 複数列ヘッダー | Ignite UI for Angular | Infragistics
 _description: Ignite UI Material UI グリッドを使用して列ヘッダーを共通の階層ヘッダーの下に配置し、それらを複数のヘッダーに結合することで、列ヘッダーのグループ化を開始します。
-_keywords: column headers, ignite ui for angular, infragistics, 列ヘッダー,
+_keywords: 列ヘッダー, ignite ui for angular, infragistics
 _language: ja
 ---
 }

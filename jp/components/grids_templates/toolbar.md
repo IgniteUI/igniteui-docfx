@@ -1,13 +1,13 @@
 ---
-title: Angular Grid Toolbar | Material Table | Ignite UI for Angular | infragistics 
-_description: Understand how to use the Ignite UI for Angular Toolbar for essential UI operations. The Material UI table toolbar hosts different UI controls related to different features.
-_keywords: angular toolbar, igniteui for angular, infragistics
+title: Angular Grid ツール バー | Material Table | Ignite UI for Angular | infragistics 
+_description: 重要な UI 操作のための Angular Toolbar 用の Ignite UI を使用方法をご紹介します。マテリアル UI テーブル ツールバーは、さまざまな機能に関連するさまざまな UI コントロールをホストします。
+_keywords: Angular ツール バー, igniteui for angular, infragistics
 _language: ja
 ---
 
-### @@igComponent Toolbar container for UI operations
+### UI 操作のための @@igComponent ツールバー コンテナ
 
-The @@igComponent in Ignite UI for Angular provides an [`IgxGridToolbarComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html) which is essentially a container for **UI** operations. The Angular toolbar is located at the top of the Angular component, i.e the @@igComponent and it matches its horizontal size. The toolbar container hosts different UI controls which are related to some of the @@igComponent's features - column hiding, column pinning, excel exporting, etc and supports Angular events.
+Ignite UI for Angular の @@igComponent は、UI 操作のコンテナとなる [`IgxGridToolbarComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html) 機能をサポートします。Angular ツールバーは Angular コンポーネントの一番上、つまり @@igComponent にあり、水平方向のサイズと一致します。ツールバーのコンテナは、グリッド機能に関連するさまざまな UI コントロール (列の非表示、列ピン固定、エクセル エクスポート、Angular イベントなど) をホストします。
 
 #### デモ
 

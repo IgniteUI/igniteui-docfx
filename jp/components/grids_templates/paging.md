@@ -1,13 +1,13 @@
 ﻿---
-title: Angular Grid Pagination | Template | Ignite UI for Angular | Infragistics
-_description: Configure Angular pagination and create custom pages in the Angular Material table by Ignite UI, get data for the requested pages with variety of angular events.
+title: Angular Grid 改ページ | テンプレート | Ignite UI for Angular | Infragistics
+_description: Angular ページネーションを設定し、Ignite UI を使用して Angular Material テーブルにカスタム ページを作成し、要求されたページのデータをさまざまな Angular イベントで取得します。
 _keywords: angular pagination, igniteui for angular, infragistics
 _language: ja
 ---
 
 ### @@igComponent ページング
 
-Angular pagination in the @@igComponent is configurable via the [`paging`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#paging) and [`perPage`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#perpage) inputs. As in any Angular Material table, the pagination in @@igComponent supports template for custom pages.
+@@igComponent の Angular 改ページは、[`paging`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#paging) と [`perPage`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#perpage) で設定できます。他の Angular Material テーブルと同様に、@@igComponent の改ページはカスタム ページのテンプレートをサポートします。
 #### デモ
 
 @@if (igxName === 'IgxGrid') {

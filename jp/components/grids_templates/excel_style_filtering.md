@@ -1,13 +1,13 @@
 ﻿---
-title: Angular Grid Excel Style Filtering | Ignite UI for Angular | infragistics
-_description: Learn how to configure Excel like angular filter of data with the Angular Material table. The grid excel filtering is more convenient and engaging than ever.
-_keywords: excel like filter, igniteui for angular, infragistics
+title: Angular Grid Excel スタイル フィルタリング | Ignite UI for Angular の | infragistics
+_description: Angular Material テーブルでデータ フィルターのように Excel を設定する方法を学びます。グリッド Excel フィルタリングがより使いやすくなりました。
+_keywords: Excel ライクなフィルター, igniteui for angular, infragistics
 _language: ja
 ---
 
 ### @@igComponent Excel スタイル フィルタリング
 
-The grid Excel filtering provides an Excel like filtering UI for any Angular Material table like the @@igComponent.
+グリッド Excel フィルタリングは、@@igComponent などの Angular Material テーブルに対して Excel のようなフィルタリング UI を提供します。
 
 #### デモ
 
