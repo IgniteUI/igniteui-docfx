@@ -26,5 +26,3 @@ The Transaction Service is fully integrated in our igxGrid, igxHierarchicalGrid 
 
 * [How to use igxBaseTransaction, igxTransaction, igxHierarchical transaction](transaction-how-to.md)
 * [Implementing Transaction service (with igxList)](transaction-implement.md)
-* [Custom Transaction Service](transaction-custom.md)
-* [Transaction Service Guide](transaction-guide.md)

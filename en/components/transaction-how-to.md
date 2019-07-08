@@ -25,6 +25,8 @@ A detailed example of how you may use `igxBaseTransaction` to enable Row Editing
 
 ### Using igxTransactionService
 
+`igxTransactionService` extends `IgxBaseTransactionService`.
+
 You need to define the `igxTransactionService` as a provider for the igxGrid or for some of its parent components in order to have Batch Editing feature enabled.
 
 You may find a detailed example of how igxGrid with Batch Editing is implemented in the following topic:
@@ -32,7 +34,9 @@ You may find a detailed example of how igxGrid with Batch Editing is implemented
 
 ### Using igxHierarchicalTransactionService
 
-If you want to achieve Batch Editing using the igxTreegrid or the igxHierarchicalGrid, you need to define the `igxTransactionService` as a provider for the grid or for some of its parent components.
+`igxHierarchicalTransactionService` extends `IgxTransactionService`.
+
+If you want to achieve Batch Editing using the igxTreegrid or the igxHierarchicalGrid, you need to define the `IgxHierarchicalTransactionService` as a provider for the grid or for some of its parent components.
 
 You may find a detailed examples of how igxTreeGrid and igxHierarchicalGrid with Batch Editing are implemented in the following topics:
 * [Tree Grid Batch Editing](treegrid/batch_editing.md)
