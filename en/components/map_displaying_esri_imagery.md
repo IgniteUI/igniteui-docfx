@@ -7,7 +7,7 @@ mentionedTypes: ['XamGeographicMap']
 
 ## Displaying Imagery from Esri Maps
 
-The [`ArcGISOnlineMapImagery`](/angular-apis/typescript/latest/classes/arcgisonlinemapimagery.html) is a free geographic imagery mapping service created by Esri. It provides over 40 styles of geographic imagery tiles of the world. This geographic imagery service can be accessed directly on <a href="https://services.arcgisonline.com/ArcGIS/rest/services" target="_blank">www.arcgisonline.com</a> web site.
+The [`ArcGISOnlineMapImagery`](map_displaying_esri_imagery.md) is a free geographic imagery mapping service created by Esri. It provides over 40 styles of geographic imagery tiles of the world. This geographic imagery service can be accessed directly on <a href="https://services.arcgisonline.com/ArcGIS/rest/services" target="_blank">www.arcgisonline.com</a> web site.
 
 ### Demo
 
@@ -23,6 +23,6 @@ The [`ArcGISOnlineMapImagery`](/angular-apis/typescript/latest/classes/arcgisonl
 
 ### Code Snippet
 
-The following code snippet shows how to display geographic imagery from Esri Maps in [`IgxGeographicMapComponent`](/angular-apis/typescript/latest/classes/igxgeographicmapcomponent.html) using [`ArcGISOnlineMapImagery`](/angular-apis/typescript/latest/classes/arcgisonlinemapimagery.html).
+The following code snippet shows how to display geographic imagery from Esri Maps in [`IgxGeographicMapComponent`](map_displaying_esri_imagery.md) using [`ArcGISOnlineMapImagery`](map_displaying_esri_imagery.md).
 
 Also, you can use the [EsriUtility](map_resources_esri.md) which defines all styles of Esri Maps.

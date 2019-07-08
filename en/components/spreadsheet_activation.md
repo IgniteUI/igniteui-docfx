@@ -20,15 +20,15 @@ The Angular Spreadsheet component exposes properties that allow you to determine
 
 ### Activation Overview
 
-The activation of the [`IgxSpreadsheetComponent`](/angular-apis/typescript/latest/classes/igxspreadsheetcomponent.html) control is split up between the cells, panes, and worksheets of the current [`workbook`](/angular-apis/typescript/latest/classes/igxspreadsheetcomponent.html#workbook) of the spreadsheet. The three "active" properties are described below:
+The activation of the [`IgxSpreadsheetComponent`](spreadsheet_activation.md) control is split up between the cells, panes, and worksheets of the current [`workbook`](spreadsheet_activation.md) of the spreadsheet. The three "active" properties are described below:
 
--   [`activeCell`](/angular-apis/typescript/latest/classes/igxspreadsheetcomponent.html#activecell): Returns or sets the active cell in the spreadsheet. To set it, you must create a new instance of [`SpreadsheetCell`](/angular-apis/typescript/latest/classes/spreadsheetcell.html) and pass in information about that cell, such as the column and row or the string address of the cell.
--   [`activePane`](/angular-apis/typescript/latest/classes/igxspreadsheetcomponent.html#activepane): Returns the active pane in the currently active worksheet of the spreadsheet control.
--   [`activeWorksheet`](/angular-apis/typescript/latest/classes/igxspreadsheetcomponent.html#activeworksheet): Returns or sets the active worksheet in the [`workbook`](/angular-apis/typescript/latest/classes/igxspreadsheetcomponent.html#workbook) of the spreadsheet control. This can be set by setting it to an existing worksheet in the [`workbook`](/angular-apis/typescript/latest/classes/igxspreadsheetcomponent.html#workbook) attached to the spreadsheet.
+-   [`activeCell`](spreadsheet_activation.md): Returns or sets the active cell in the spreadsheet. To set it, you must create a new instance of [`SpreadsheetCell`](spreadsheet_activation.md) and pass in information about that cell, such as the column and row or the string address of the cell.
+-   [`activePane`](spreadsheet_activation.md): Returns the active pane in the currently active worksheet of the spreadsheet control.
+-   [`activeWorksheet`](spreadsheet_activation.md): Returns or sets the active worksheet in the [`workbook`](spreadsheet_activation.md) of the spreadsheet control. This can be set by setting it to an existing worksheet in the [`workbook`](spreadsheet_activation.md) attached to the spreadsheet.
 
 ### Code Snippet
 
-The following code snippet shows setting activation of the cell and worksheet in the [`IgxSpreadsheetComponent`](/angular-apis/typescript/latest/classes/igxspreadsheetcomponent.html) control:
+The following code snippet shows setting activation of the cell and worksheet in the [`IgxSpreadsheetComponent`](spreadsheet_activation.md) control:
 
 ```ts
 this.spreadsheet.activeWorksheet = this.spreadsheet.workbook.worksheets(1);

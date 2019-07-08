@@ -7,7 +7,7 @@ mentionedTypes: ['XamGeographicMap']
 
 ## Esri Utility
 
-The resource topic provides implementation of an utility that helps with using [`ArcGISOnlineMapImagery`](/angular-apis/typescript/latest/classes/arcgisonlinemapimagery.html) provided by Esri Maps in [`IgxGeographicMapComponent`](/angular-apis/typescript/latest/classes/igxgeographicmapcomponent.html).
+The resource topic provides implementation of an utility that helps with using [`ArcGISOnlineMapImagery`](map_resources_esri.md) provided by Esri Maps in [`IgxGeographicMapComponent`](map_resources_esri.md).
 
 ### Code Snippet
 

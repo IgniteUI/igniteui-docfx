@@ -24,19 +24,19 @@ The category chart component is a Ignite UI for Angular charting component that 
 
  A user can bind a collection of data, a group of collections, and a data property and let the charting control do the rest. The component will analyze the data and then automatically choose the best chart type to represent the data.
 
-By using a smart Data Adapter, the data is analyzed and the appropriate visualization is rendered. For example, if the [`ChartType`](/angular-apis/typescript/latest/enums/charttype.html) property is set to [`Auto`](/angular-apis/typescript/latest/enums/categorycharttype.html#auto), the control will use a column chart for a small data sets or a line chart for larger data sets.
+By using a smart Data Adapter, the data is analyzed and the appropriate visualization is rendered. For example, if the [`ChartType`](categorychart.md) property is set to [`Auto`](categorychart.md), the control will use a column chart for a small data sets or a line chart for larger data sets.
 
-However, you can also explicitly specify the chart type by setting the [`ChartType`](/angular-apis/typescript/latest/enums/charttype.html) to:
+However, you can also explicitly specify the chart type by setting the [`ChartType`](categorychart.md) to:
 
--   [`line`](/angular-apis/typescript/latest/enums/charttype.html#line)
--   [`area`](/angular-apis/typescript/latest/enums/charttype.html#area)
--   [`Column`](/angular-apis/typescript/latest/enums/categorycharttype.html#column)
--   [`Point`](/angular-apis/typescript/latest/enums/categorycharttype.html#point)
--   [`Spline`](/angular-apis/typescript/latest/enums/categorycharttype.html#spline)
--   [`SplineArea`](/angular-apis/typescript/latest/enums/categorycharttype.html#splinearea)
--   [`StepArea`](/angular-apis/typescript/latest/enums/categorycharttype.html#steparea)
--   [`StepLine`](/angular-apis/typescript/latest/enums/categorycharttype.html#stepline)
--   [`waterfall`](/angular-apis/typescript/latest/enums/charttype.html#waterfall)
+-   [`line`](categorychart.md)
+-   [`area`](categorychart.md)
+-   [`Column`](categorychart.md)
+-   [`Point`](categorychart.md)
+-   [`Spline`](categorychart.md)
+-   [`SplineArea`](categorychart.md)
+-   [`StepArea`](categorychart.md)
+-   [`StepLine`](categorychart.md)
+-   [`waterfall`](categorychart.md)
 
 Another example of the intuitive behavior of the category chart component is that you do not need to explicitly set the labels. The category chart will use the first appropriate string property that it finds within the data you provided and will use that for the labels.
 
@@ -49,7 +49,7 @@ When installing the chart package, the core package must also be installed.
 
 ### Required Modules
 
-The [`IgxCategoryChartComponent`](/angular-apis/typescript/latest/classes/igxcategorychartcomponent.html) requires the following modules:
+The [`IgxCategoryChartComponent`](categorychart.md) requires the following modules:
 
 ```ts
 // app.module.ts
@@ -65,7 +65,7 @@ import { IgxCategoryChartModule } from "igniteui-angular-charts/ES5/igx-category
 export class AppModule {}
 ```
 
-It's also possible to load a more minimal configuration of category chart whereby it can only load a subset of the possible series, and exclude other optional features by instead loading the [`IgxCategoryChartCoreModule`](/angular-apis/typescript/latest/classes/igxcategorychartcoremodule.html), and the dynamic module for the series in question, e.g. [`IgxLineSeriesDynamicModule`](/angular-apis/typescript/latest/classes/igxlineseriesdynamicmodule.html). If the [`chartType`](/angular-apis/typescript/latest/classes/igxcategorychartcomponent.html#charttype) is [`Auto`](/angular-apis/typescript/latest/enums/categorycharttype.html#auto), it wil make sure to select a series type that has been loaded.
+It's also possible to load a more minimal configuration of category chart whereby it can only load a subset of the possible series, and exclude other optional features by instead loading the [`IgxCategoryChartCoreModule`](categorychart.md), and the dynamic module for the series in question, e.g. [`IgxLineSeriesDynamicModule`](categorychart.md). If the [`chartType`](categorychart.md) is [`Auto`](categorychart.md), it wil make sure to select a series type that has been loaded.
 
 <div class="divider--half"></div>
 
@@ -98,23 +98,23 @@ The following code demonstrates how to bind the category chart to the above data
 
 ### Chart Types
 
-You can override the default behavior of the category chart and set which type of chart should be displayed. This is done by setting the [`chartType`](/angular-apis/typescript/latest/classes/igxcategorychartcomponent.html#charttype) property.
+You can override the default behavior of the category chart and set which type of chart should be displayed. This is done by setting the [`chartType`](categorychart.md) property.
 Below are listed all of the types that the category chart supports.
 
 > [!NOTE]
-> Special case is the [`Auto`](/angular-apis/typescript/latest/enums/categorycharttype.html#auto) setting of that property. If [`Auto`](/angular-apis/typescript/latest/enums/categorycharttype.html#auto) is used the chart will analyze assigned data and will assign the most suitable chart type.
+> Special case is the [`Auto`](categorychart.md) setting of that property. If [`Auto`](categorychart.md) is used the chart will analyze assigned data and will assign the most suitable chart type.
 
 ### Supported chart types
 
 | Property                                                                                | Description                                                                        | Example                                      |
 | --------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | -------------------------------------------- |
-| [`Line`](/angular-apis/typescript/latest/enums/categorycharttype.html#line)             | Specifies category line series with markers at each data point                     | ![](../images/category_chart_line.png)       |
-| [`Area`](/angular-apis/typescript/latest/enums/categorycharttype.html#area)             | Specifies category area series                                                     | ![](../images/category_chart_area.png)       |
-| [`Column`](/angular-apis/typescript/latest/enums/categorycharttype.html#column)         | Specifies category column chart with vertical rectangles at each data point        | ![](../images/category_chart_column.png)     |
-| [`Point`](/angular-apis/typescript/latest/enums/categorycharttype.html#point)           | Specifies category point chart with markers at each data point                     | ![](../images/category_chart_point.png)      |
-| [`StepLine`](/angular-apis/typescript/latest/enums/categorycharttype.html#stepline)     | Specifies category step line chart                                                 | ![](../images/category_chart_stepline.png)   |
-| [`StepArea`](/angular-apis/typescript/latest/enums/categorycharttype.html#steparea)     | Specifies category step area chart                                                 | ![](../images/category_chart_steparea.png)   |
-| [`Spline`](/angular-apis/typescript/latest/enums/categorycharttype.html#spline)         | Specifies category spline line series with markers at each data point              | ![](../images/category_chart_spline.png)     |
-| [`SplineArea`](/angular-apis/typescript/latest/enums/categorycharttype.html#splinearea) | Specifies category spline area series                                              | ![](../images/category_chart_splinearea.png) |
-| [`Waterfall`](/angular-apis/typescript/latest/enums/categorycharttype.html#waterfall)   | Specifies category waterfall chart                                                 | ![](../images/category_chart_waterfall.png)  |
-| [`Auto`](/angular-apis/typescript/latest/enums/categorycharttype.html#auto)             | Specifies automatic selection of chart type based on suggestions from Data Adapter |                                              |
+| [`Line`](categorychart.md)             | Specifies category line series with markers at each data point                     | ![](../images/category_chart_line.png)       |
+| [`Area`](categorychart.md)             | Specifies category area series                                                     | ![](../images/category_chart_area.png)       |
+| [`Column`](categorychart.md)         | Specifies category column chart with vertical rectangles at each data point        | ![](../images/category_chart_column.png)     |
+| [`Point`](categorychart.md)           | Specifies category point chart with markers at each data point                     | ![](../images/category_chart_point.png)      |
+| [`StepLine`](categorychart.md)     | Specifies category step line chart                                                 | ![](../images/category_chart_stepline.png)   |
+| [`StepArea`](categorychart.md)     | Specifies category step area chart                                                 | ![](../images/category_chart_steparea.png)   |
+| [`Spline`](categorychart.md)         | Specifies category spline line series with markers at each data point              | ![](../images/category_chart_spline.png)     |
+| [`SplineArea`](categorychart.md) | Specifies category spline area series                                              | ![](../images/category_chart_splinearea.png) |
+| [`Waterfall`](categorychart.md)   | Specifies category waterfall chart                                                 | ![](../images/category_chart_waterfall.png)  |
+| [`Auto`](categorychart.md)             | Specifies automatic selection of chart type based on suggestions from Data Adapter |                                              |

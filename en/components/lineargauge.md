@@ -34,7 +34,7 @@ When installing the gauge package, the core package must also be installed.
 
 ### Required Modules
 
-The [`IgxLinearGauge`](/angular-apis/typescript/latest/classes/igxlineargauge.html) requires the following modules:
+The [`IgxLinearGauge`](lineargauge.md) requires the following modules:
 
 ```ts
 // app.module.ts
@@ -236,7 +236,7 @@ The backing element represents background and border of the linear gauge compone
 
 ### Scale
 
-The scale is a visual element that highlights the full range of values in the linear gauge. You can customize the appearance and the shape of the scale. It can also be inverted (using [`isScaleInverted`](/angular-apis/typescript/latest/classes/igxlineargaugecomponent.html#isscaleinverted) property) and all labels will be rendered from right-to-left instead of left-to-right.
+The scale is a visual element that highlights the full range of values in the linear gauge. You can customize the appearance and the shape of the scale. It can also be inverted (using [`isScaleInverted`](lineargauge.md) property) and all labels will be rendered from right-to-left instead of left-to-right.
 
 ```html
 <igx-linear-gauge

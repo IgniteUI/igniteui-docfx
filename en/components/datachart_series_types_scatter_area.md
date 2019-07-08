@@ -7,7 +7,7 @@ mentionedTypes: ['XamDataChart','ScatterAreaSeries','ScatterContourSeries']
 
 ## Scatter Area Series
 
-This topic explains, with code examples, how to use  [`IgxScatterAreaSeriesComponent`](/angular-apis/typescript/latest/classes/igxscatterareaseriescomponent.html) in the Angular data chart component. This series draws a colored surface based on a triangulation of X and Y data with a numeric value assigned to each point. This type of series is useful for rendering heat maps, magnetic field strength or Wi-Fi strength in an office. The [`IgxScatterAreaSeriesComponent`](/angular-apis/typescript/latest/classes/igxscatterareaseriescomponent.html) works a lot like the [`IgxScatterContourSeriesComponent`](/angular-apis/typescript/latest/classes/igxscattercontourseriescomponent.html) except that it represents data as interpolated and colored surface instead of contour lines connecting data points with the same values.
+This topic explains, with code examples, how to use  [`IgxScatterAreaSeriesComponent`](datachart_series_types_scatter_area.md) in the Angular data chart component. This series draws a colored surface based on a triangulation of X and Y data with a numeric value assigned to each point. This type of series is useful for rendering heat maps, magnetic field strength or Wi-Fi strength in an office. The [`IgxScatterAreaSeriesComponent`](datachart_series_types_scatter_area.md) works a lot like the [`IgxScatterContourSeriesComponent`](datachart_series_types_scatter_area.md) except that it represents data as interpolated and colored surface instead of contour lines connecting data points with the same values.
 
 ### Demo
 
@@ -23,15 +23,15 @@ This topic explains, with code examples, how to use  [`IgxScatterAreaSeriesCompo
 
 ### Required Axes
 
-The Angular data chart component provides various types of axes but only [`IgxNumericYAxisComponent`](/angular-apis/typescript/latest/classes/igxnumericyaxiscomponent.html) and [`IgxNumericYAxisComponent`](/angular-apis/typescript/latest/classes/igxnumericyaxiscomponent.html) can be used with [`IgxScatterAreaSeriesComponent`](/angular-apis/typescript/latest/classes/igxscatterareaseriescomponent.html).
+The Angular data chart component provides various types of axes but only [`IgxNumericYAxisComponent`](datachart_series_types_scatter_area.md) and [`IgxNumericYAxisComponent`](datachart_series_types_scatter_area.md) can be used with [`IgxScatterAreaSeriesComponent`](datachart_series_types_scatter_area.md).
 
 ### Required Data
 
-The [`IgxScatterAreaSeriesComponent`](/angular-apis/typescript/latest/classes/igxscatterareaseriescomponent.html) has the following data requirements:
+The [`IgxScatterAreaSeriesComponent`](datachart_series_types_scatter_area.md) has the following data requirements:
 
 -   The data source must be an array or a list of data items
 -   The data source must contain at least one data item otherwise the chart will not render the scatter shape series.
--   All data items must contain 3 numeric data columns which should be mapped to the [`xMemberPath`](/angular-apis/typescript/latest/classes/igxscattertriangulationseriescomponent.html#xmemberpath), [`yMemberPath`](/angular-apis/typescript/latest/classes/igxscattertriangulationseriescomponent.html#ymemberpath), and [`colorMemberPath`](/angular-apis/typescript/latest/classes/igxscatterareaseriescomponent.html#colormemberpath) properties.
+-   All data items must contain 3 numeric data columns which should be mapped to the [`xMemberPath`](datachart_series_types_scatter_area.md), [`yMemberPath`](datachart_series_types_scatter_area.md), and [`colorMemberPath`](datachart_series_types_scatter_area.md) properties.
 
 You can use the [SampleScatterData](datachart_data_sources_scatter.md) as data source which meets above data requirements.
 
@@ -71,7 +71,7 @@ export class AppModule { /* ... */ }
 
 ### Code Example
 
-This code demonstrates how to create an instance of data chart with  [`IgxScatterAreaSeriesComponent`](/angular-apis/typescript/latest/classes/igxscatterareaseriescomponent.html) and bind it to the data source.
+This code demonstrates how to create an instance of data chart with  [`IgxScatterAreaSeriesComponent`](datachart_series_types_scatter_area.md) and bind it to the data source.
 
 ```html
  <igx-data-chart
@@ -93,14 +93,14 @@ This code demonstrates how to create an instance of data chart with  [`IgxScatte
 
 ### Color Scale
 
-Use the [`colorScale`](/angular-apis/typescript/latest/classes/igxscatterareaseriescomponent.html#colorscale) property of the[`IgxScatterAreaSeriesComponent`](/angular-apis/typescript/latest/classes/igxscatterareaseriescomponent.html) to resolve values of points and thus fill the surface of the series. The colors are smoothly interpolated around the shape of the surface by applying a pixel-wise triangle rasterizer to triangulation data. Because rendering of the surface is pixel-wise, the color scale uses colors instead of brushes.
+Use the [`colorScale`](datachart_series_types_scatter_area.md) property of the[`IgxScatterAreaSeriesComponent`](datachart_series_types_scatter_area.md) to resolve values of points and thus fill the surface of the series. The colors are smoothly interpolated around the shape of the surface by applying a pixel-wise triangle rasterizer to triangulation data. Because rendering of the surface is pixel-wise, the color scale uses colors instead of brushes.
 
-The provided [`IgxCustomPaletteColorScaleComponent`](/angular-apis/typescript/latest/classes/igxcustompalettecolorscalecomponent.html) class should satisfy most coloring needs, but you can inherit from the [`colorScale`](/angular-apis/typescript/latest/classes/igxscatterareaseriescomponent.html#colorscale) abstract class and provide your own coloring logic.
+The provided [`IgxCustomPaletteColorScaleComponent`](datachart_series_types_scatter_area.md) class should satisfy most coloring needs, but you can inherit from the [`colorScale`](datachart_series_types_scatter_area.md) abstract class and provide your own coloring logic.
 
-The following table list properties of the [`IgxCustomPaletteColorScaleComponent`](/angular-apis/typescript/latest/classes/igxcustompalettecolorscalecomponent.html) affecting surface coloring of the [`IgxScatterAreaSeriesComponent`](/angular-apis/typescript/latest/classes/igxscatterareaseriescomponent.html).
+The following table list properties of the [`IgxCustomPaletteColorScaleComponent`](datachart_series_types_scatter_area.md) affecting surface coloring of the [`IgxScatterAreaSeriesComponent`](datachart_series_types_scatter_area.md).
 
 -   `Palette`  sets the collection of colors to select from or to interpolate between.
--   [`InterpolationMode`](/angular-apis/typescript/latest/enums/interpolationmode.html) sets the method getting a color from the Palette.
+-   [`InterpolationMode`](datachart_series_types_scatter_area.md) sets the method getting a color from the Palette.
 -   `MaximumValue` sets the highest value to assign a color. Any given value greater than this value will be Transparent.
 -   `MinimumValue` sets the lowest value to assign a color. Any given value less than this value will be Transparent.
 
