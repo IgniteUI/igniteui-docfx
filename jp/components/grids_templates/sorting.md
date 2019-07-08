@@ -1,6 +1,6 @@
 ﻿@@if (igxName === 'IgxGrid') {
 ---
-title: Angular Grid Sorting | Data Sorting | Ignite UI for Angular | infragistics
+title: Angular Grid ソート|Data Sorting |Ignite UI for Angular |infragistics
 _description: Ignite UI Material UI グリッドの Angular Sort 機能を使用し、機能豊かなな API と Angular イベントを使って並べ替え可能な列の組み合わせを構成する方法。
 _keywords: angular sort, ignite ui for angular, infragistics
 _language: ja
@@ -8,7 +8,7 @@ _language: ja
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular Tree Grid Sorting | Data Sorting | Ignite UI for Angular | infragistics
+title: Angular Tree Grid ソート|Data Sorting |Ignite UI for Angular |infragistics
 _description: Ignite UI Material UI グリッドの Angular Sort 機能を使用し、機能豊かなな API と Angular イベントを使って並べ替え可能な列の組み合わせを構成する方法。
 _keywords: angular sort, ignite ui for angular, infragistics
 _language: ja
@@ -16,16 +16,16 @@ _language: ja
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular Hierarchical Grid Sorting | Data Sorting | Ignite UI for Angular | infragistics
+title: Angular Hierarchical Grid ソート |データ ソート|Ignite UI for Angular |“infragistics”
 _description: Ignite UI Material UI グリッドの Angular Sort 機能を使用し、機能豊かなな API と Angular イベントを使って並べ替え可能な列の組み合わせを構成する方法。
 _keywords: angular sort, ignite ui for angular, infragistics
 _language: ja
 ---
 }
 
-### @@igComponent Sorting Overview
+### @@igComponent ソートの概要
 
-In Ignite UI for Angular @@igComponent, data sorting is enabled on a per-column level, meaning that the **@@igSelector** can have a mix of sortable and non-sortable columns. Performing angular sort actions enables you to change the display order of the records based on specified criteria.
+Ignite UI for Angular @@igComponent では、列レベルでのデータ ソートが可能です。つまり、**@@igSelector** にソート可能な列とソート不可の列の両方を持つことができます。Angular でソートを実行すると、指定した条件に基づいてレコードの表示順序を変更できます。
 
 #### デモ
 更に **@@igSelector** の [`onContextMenu`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#oncontextmenu) を使用して並べ替えにカスタム contextmenu が追加されます。
