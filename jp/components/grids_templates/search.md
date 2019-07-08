@@ -1,28 +1,31 @@
 ﻿@@if (igxName === 'IgxGrid') {
 ---
-title: Angular Grid search | search data | Ignite UI for Angular | Infragistics 
-_description: Learn how to perform grid seach with the Ignite Angular Material table using rich API. It also allows instant content search in the virtualized data of the Grid
+title: Angular Grid 検索|search data |Ignite UI for Angular |Infragistics 
+_description: 機能豊かな API を使用して Ignite Angular Material テーブルでグリッド検索を実行する方法。また、グリッドの仮想化データでコンテンツの即時検索が可能。
 _keywords: Content search, ignite ui for angular, infragistics
+_language: ja
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular Tree Grid search | search data | Ignite UI for Angular | Infragistics
-_description: Learn how to perform grid seach with the Ignite Angular Material table using rich API. It also allows instant content search in the virtualized data of the Grid
+title: Angular Tree Grid 検索|search data |Ignite UI for Angular |Infragistics
+_description: 機能豊かな API を使用して Ignite Angular Material テーブルでグリッド検索を実行する方法。また、グリッドの仮想化データでコンテンツの即時検索が可能。
 _keywords: Content search, ignite ui for angular, infragistics
+_language: ja
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular Hierarchical Grid search | search data | Ignite UI for Angular | Infragistics
-_description: Learn how to perform grid seach with the Ignite Angular Material table using rich API. It also allows instant content search in the virtualized data of the Grid
+title: Angular Hierarchical Grid 検索|search data |Ignite UI for Angular |Infragistics
+_description: 機能豊かな API を使用して Ignite Angular Material テーブルでグリッド検索を実行する方法。また、グリッドの仮想化データでコンテンツの即時検索が可能。
 _keywords: Content search, ignite ui for angular, infragistics
+_language: ja
 ---
 }
 
-### @@igComponent Searching through virtualized content
+### @@igComponent の仮想コンテンツ検索機能
 
-While browsers natively provide content search functionality, most of the time the @@igComponent virtualizes its columns and rows that are out of view. In these cases, the native grid search is unable to search data in the virtualized cells, since they are not part of the DOM. We have extended the Ignite UI for Angular Material table based grid with a **search API** that allows you to search through the **virtualized content** of the @@igComponent.
+ブラウザーにはネイティブなコンテンツ検索機能がありますが、ほとんどの場合で @@igComponent は表示範囲外の行列を仮想化します。そのため、ネイティブ グリッド検索は DOM の一部でないため仮想化セルでデータを検索できません。@@igComponent では、Angular Material テーブル ベースのグリッドの拡張により、検索 API を使用した**仮想コンテンツ**の検索が可能です。
 
 #### デモ
 
