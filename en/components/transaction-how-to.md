@@ -6,6 +6,10 @@ _keywords: Ignite UI for Angular, transaction
 
 ## How to use igxBaseTransaction, igxTransaction, igxHierarchicalTransaction services
 
+### Transaction, State, Transaction Log
+
+{{ Explain the transaction and state }}
+
 ### Using igxBaseTransaction
 
 Our grid module provides a very basic implementation of the Transaction service (`igxBaseTransaction`) with just pending session functionality allowing for Row Editing feature. By using `startPending()` and `endPending()` Row editing can combine multiple per-cell operations into a single change. This means editing multiple cells of a single record creates a single transaction and you can handle just the row edit event.

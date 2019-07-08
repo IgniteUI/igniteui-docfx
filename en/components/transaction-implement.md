@@ -37,4 +37,22 @@ When we click the `add` button, we add a new transaction to the Transaction log,
 
 `this._transactions.add({ id: 2, type: TransactionType.ADD, newValue: person });`
 
-At this moment, our transaction is added to the transaction log, we see the new item is added to the list that we are manipulating but the change is still not committed. We will do additional changes to the list and will commit them at once when we are ready. 
+At this moment, our transaction is added to the transaction log, we see the new item is added to the list that we are manipulating but the change is still not committed. We may do additional changes to the list and commit them at once when we are ready.
+
+To update an existin item, we will add a transaction of type `UPDATE` to the Transaction log. In our example. we change the second item of the list:
+
+`this._transactions.add({ id: 3, type: TransactionType.UPDATE, newValue: { age: newAge } }, this.people[1]);`
+
+By clicking the `delete` button we will remove the first item in the list - a transaction of type `DELETE` will be added to the Transaction log.
+
+`this._transactions.add(
+        { id: 1, type: TransactionType.DELETE, newValue: { name: this.name, age: this.age } }, this.people[0]);
+    }`
+
+Once we are done with all our changes, we may commit them all at once using the `commit` method of the `igxTransactionService`. It applies all transactions over the provided data:
+
+`this._transactions.commit(this.people);`
+
+At any point of our interaction with the list, we may clear the Transaction log, using the `clear` method.
+
+`this._transactions.clear();`
