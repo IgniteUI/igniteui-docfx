@@ -1,10 +1,10 @@
 ---
-title: Implementing Transaction service
+title: How to use the Transaction service
 _description: 
 _keywords: Ignite UI for Angular, transaction
 ---
 
-## Implementing Transaction service
+## How to use the Transaction service
 
 You may get advantage of the Transaction Service when using any control that needs to preserve state and to commit many transactions at once. 
 

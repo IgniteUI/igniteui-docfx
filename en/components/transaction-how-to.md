@@ -1,16 +1,24 @@
 ---
-title: How to use igxBaseTransaction, igxTransaction, igxHierarchical transaction services
+title: igxBaseTransaction, igxTransaction and igxHierarchical transaction explained
 _description: 
 _keywords: Ignite UI for Angular, transaction
 ---
 
-## How to use igxBaseTransaction, igxTransaction, igxHierarchicalTransaction services
+## igxBaseTransaction, igxTransaction and igxHierarchical transaction explained
 
 ### Transaction, State, Transaction Log
 
-{{ Explain the transaction and state }}
+The Transaction is the main building block of the Transaction service. The Transaction is actually every operation that you execute on the data. The `Transaction` interface defines three properties: `id`, `newValue` and `type`.
+
+The `id` of the Transaction should be unique and defines the record that this transaction is affecting. The `type` may be any of the three transaction types: `ADD`, `DELETE` and `UPDATE`, depending what operation you execute. The `newValue` contains the value of the new record in case you are adding an `ADD` transaction. If you are editing an existing record, the `newValue` would contain the changes only. If you are deleting a record, the `newValue` will contain the value of the deleted record. 
+
+You may see an example of how adding each type of transaction looks like in the [How to use the Transaction service](transaction-example.md) topic.
+
+Every time you add a Transaction, it is added to the transaction log and undo stack. All the changes in the transaction log are then accumulated per record. From that point, the service maintains an aggregated `State`. The `State`consists of unique records and every record may be of one of the supported transaction types, mentioned above.
+
 
 ### Using igxBaseTransaction
+{{ no undo/redo }}
 
 Our grid module provides a very basic implementation of the Transaction service (`igxBaseTransaction`) with just pending session functionality allowing for Row Editing feature. By using `startPending()` and `endPending()` Row editing can combine multiple per-cell operations into a single change. This means editing multiple cells of a single record creates a single transaction and you can handle just the row edit event.
 
@@ -29,6 +37,9 @@ A detailed example of how you may use `igxBaseTransaction` to enable Row Editing
 
 ### Using igxTransactionService
 
+{{ It has undo/redo - it has pending transaction 
+Undo/redo stack is an array that contains array of transactions. }}
+
 `igxTransactionService` extends `IgxBaseTransactionService`.
 
 You need to define the `igxTransactionService` as a provider for the igxGrid or for some of its parent components in order to have Batch Editing feature enabled.
@@ -37,6 +48,8 @@ You may find a detailed example of how igxGrid with Batch Editing is implemented
 * [Grid Batch Editing](grid/batch_editing.md)
 
 ### Using igxHierarchicalTransactionService
+
+{{ it has relation between the parents and the children }}
 
 `igxHierarchicalTransactionService` extends `IgxTransactionService`.
 

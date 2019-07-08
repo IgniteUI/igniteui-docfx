@@ -750,6 +750,9 @@
   href: transaction.md
   new: true
   items:
-    - name: How to use igxBaseTransaction, igxTransaction, igxHierarchical transaction
+    - name: igxBaseTransaction, igxTransaction and igxHierarchical transaction explained
       href: transaction-how-to.md
+      new: true
+    - name: How to use the Transaction service
+      href: transaction-example.md
       new: true
