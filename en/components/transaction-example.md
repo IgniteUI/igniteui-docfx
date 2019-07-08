@@ -39,7 +39,7 @@ When we click the `add` button, we add a new transaction to the Transaction log,
 
 At this moment, our transaction is added to the transaction log, we see the new item is added to the list that we are manipulating but the change is still not committed. We may do additional changes to the list and commit them at once when we are ready.
 
-To update an existin item, we will add a transaction of type `UPDATE` to the Transaction log. In our example. we change the second item of the list:
+To update an existing item, we will add a transaction of type `UPDATE` to the Transaction log. In our example. we change the second item of the list:
 
 `this._transactions.add({ id: 3, type: TransactionType.UPDATE, newValue: { age: newAge } }, this.people[1]);`
 

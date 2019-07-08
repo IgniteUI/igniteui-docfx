@@ -53,6 +53,8 @@ You may find a detailed example of how igxGrid with Batch Editing is implemented
 
 `igxHierarchicalTransactionService` extends `IgxTransactionService`.
 
+The `igxHierarchicalTransactionService` is designed to handle the relations between parents and children in `igxHierarchicalGrid` and `igxTreeGrid` so that a new record will be added to the place you expect when adding an `ADD` transaction. And when you delete a parent record, its' children will be promoted to the higher level of hierarchy.
+
 If you want to achieve Batch Editing using the igxTreegrid or the igxHierarchicalGrid, you need to define the `IgxHierarchicalTransactionService` as a provider for the grid or for some of its parent components.
 
 You may find a detailed examples of how igxTreeGrid and igxHierarchicalGrid with Batch Editing are implemented in the following topics:

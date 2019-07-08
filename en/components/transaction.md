@@ -11,9 +11,12 @@ The Transaction Service is an injectable middleware (through Angular's DI) that 
     <img src="https://cdn-images-1.medium.com/max/800/1*O-6DidcFW_XCSqgKRfXf_Q.png"
         style="display:flex;max-height:400px;margin:auto auto 20px auto;" />
 
+> [!NOTE]
+> The data transformation from the schema above is not mandatory. You do not need to use a pipe in order to use the Transition service.
+
 The Transaction Service allows adding a transaction, committing or clearing all changes. As it keeps a detailed log, it can also execute undo and redo operations.
 
-Every time you execute an operation (transaction), it is added to the transaction log and undo stack. All the changes in the transaction log are then accumulated per record. From that point, the service maintains an aggregated state that consists only of add/update/delete operations for unique records. This is based on a `State` interface which has three properties: `recordRef`, `type` and `value`.
+Every time you execute an operation (**transaction**), it is added to the transaction log and undo stack. All the changes in the transaction log are then accumulated per record. From that point, the service maintains an aggregated **state** that consists only of add/update/delete operations for unique records. This is based on a `State` interface which has three properties: `recordRef`, `type` and `value`.
 
 We have built three classes on top of the Transaction Service that provide the user with the ability to commit all the changes he has made, while working with the Ignite UI for Angular controls, at once. Those classes are `igxBaseTransactionService`, `igxTransactionService` and `igxHierarchicalTransactionService`.
 
