@@ -18,11 +18,12 @@ Every time you add a Transaction, it is added to the transaction log and undo st
 
 
 ### Using igxBaseTransaction
-{{ no undo/redo }}
 
-Our grid module provides a very basic implementation of the Transaction service (`igxBaseTransaction`) with just pending session functionality allowing for Row Editing feature. By using `startPending()` and `endPending()` Row editing can combine multiple per-cell operations into a single change. This means editing multiple cells of a single record creates a single transaction and you can handle just the row edit event.
+Our grid module provides a very basic implementation of the Transaction service (`igxBaseTransactionService`) with just pending session functionality allowing for Row Editing feature. By using `startPending()` and `endPending()` Row editing can combine multiple per-cell operations into a single change. This means editing multiple cells of a single record creates a single transaction and you can handle just the row edit event.
 
 With the accumulated state being a partial object, we can also use the service to check which cell has been edited and build UI around that.
+
+The `igxBaseTransactionService` has no undo stack so it does not provide undo/redo functionality.
 
 A detailed example of how you may use `igxBaseTransaction` to enable Row Editing is provided in the following topics:
 * [Grid Row Editing](grid/row_editing.md)
@@ -37,12 +38,11 @@ A detailed example of how you may use `igxBaseTransaction` to enable Row Editing
 
 ### Using igxTransactionService
 
-{{ It has undo/redo - it has pending transaction 
-Undo/redo stack is an array that contains array of transactions. }}
-
 `igxTransactionService` extends `IgxBaseTransactionService`.
 
 You need to define the `igxTransactionService` as a provider for the igxGrid or for some of its parent components in order to have Batch Editing feature enabled.
+
+The `igxTransactionService` provides an undo stack so you may get advantage of the undo/redo functionality. The Undo stack is actually an array that contains array of transactions. When using the `igxTransactionService`, you may check the `canUndo` accessor in order to understand if there are any transactions in the Undo stack. If it does - you may use the `undo` method to remove the last transaction and `redo` to apply the last undone transaction.
 
 You may find a detailed example of how igxGrid with Batch Editing is implemented in the following topic:
 * [Grid Batch Editing](grid/batch_editing.md)
