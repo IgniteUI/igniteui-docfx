@@ -6,13 +6,13 @@ _keywords: Ignite UI for Angular, transaction
 
 ## How to use the Transaction service
 
-You may get advantage of the Transaction Service when using any control that needs to preserve state and to commit many transactions at once. 
+You may get advantage of the Transaction Service when using any component that needs to preserve the state of its data source and to commit many transactions at once. 
 
-When working with the Ignite Ui for Angular grid controls, you may use the `igxTransactionService` and `igxHierarchicalTransactionService` that are integrated with the grids and provide batch editing out of the box. However, if you need to use transactions with any other Ignite UI for Angular control, you may use the `igxTransactionService` and implement similar behavior. 
+When working with the Ignite Ui for Angular grid components, you may use the `igxTransactionService` and `igxHierarchicalTransactionService` that are integrated with the grids and provide batch editing out of the box. However, if you need to use transactions with any other Ignite UI for Angular component, you may use the `igxTransactionService` and implement similar behavior. 
 
-You may use the `igxTransactionService` with any custom control that you create and in this topic we will use `igxList` component to demonstrate how to enable transactions.
+You may use the `igxTransactionService` with any custom component that you create and in this topic we will use `igxList` component to demonstrate how to enable transactions.
 
-In our html template, below the list control, we add a form with four buttons:
+In our html template, below the list component, we add a form with four buttons:
 
 `
 <form #buttonsForm class="options">
@@ -37,7 +37,7 @@ When we click the `add` button, we add a new transaction to the Transaction log,
 
 `this._transactions.add({ id: 2, type: TransactionType.ADD, newValue: person });`
 
-At this moment, our transaction is added to the transaction log, we see the new item is added to the list that we are manipulating but the change is still not committed. We may do additional changes to the list and commit them at once when we are ready.
+At this moment, our transaction is added to the transaction log, we see the new item is added to the list that we are manipulating but the change is still not committed. The data source is not changed yet. We may do additional changes to the list and commit them at once when we are ready.
 
 To update an existing item, we will add a transaction of type `UPDATE` to the Transaction log. In our example. we change the second item of the list:
 

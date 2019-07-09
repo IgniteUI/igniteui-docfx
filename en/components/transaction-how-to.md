@@ -16,6 +16,7 @@ You may see an example of how adding each type of transaction looks like in the 
 
 Every time you add a Transaction, it is added to the transaction log and undo stack. All the changes in the transaction log are then accumulated per record. From that point, the service maintains an aggregated `State`. The `State`consists of unique records and every record may be of one of the supported transaction types, mentioned above.
 
+While adding transactions you may turn on pending transactions by calling `startPending`. All subsequent transactions will be accumulated in single transaction until you call `endPending`. If you pass `true` to `endPending` all accumulated transactions will be added as a single transaction in the transaction log and in the undo stack.
 
 ### Using igxBaseTransaction
 
@@ -32,7 +33,7 @@ A detailed example of how you may use `igxBaseTransaction` to enable Row Editing
 
 ### General information on igxTransactionService and igxHierarchicalTransactionService
 
-`igxTransactionService` and `igxHierarchicalTransactionService` are injectable middlewares, that implement the `TransactionService` interface. A component may use those to accumulate changes without affecting the underlying data. The provider exposes API to access, manipulate changes (undo and redo) and discard or commit all to the data.
+`igxTransactionService` and `igxHierarchicalTransactionService` are injectable middlewares, that implement the `TransactionService` interface. A component may use those to accumulate changes without affecting the underlying data. The provider exposes API to access, manipulate changes (undo and redo) and discard or commit all changes or a single change to the data.
 
 `igxTransactionService` and `igxHierarchicalTransactionService` work with both cell editing and row editing. The transaction for the cell edit is added when the cell exits edit mode, while row transaction is created, when the row exits edit mode. But in both cases the state of the grid edits consist of all updated, added and deleted rows and their last states. Those can later be inspected, manipulated and submitted at once. Changes are collected for individual cells or rows, depending on editing mode, and accumulated per data row/record.
 
