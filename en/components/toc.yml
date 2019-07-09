@@ -13,46 +13,18 @@
     - name: Step-by-Step Guide
       href: general/cli/step-by-step-guide.md
       new: false
+    - name: Ignite UI for Angular templates
+      href: general/cli/cli-templates.md
+      new: false
     - name: Angular Authentication Project Template
       href: general/cli/auth-template.md
+      new: false    
+    - name: ig new 
+      href: general/cli/ig-new.md
       new: false
-    - name: Ignite UI CLI Commands
-      href: general/cli/cli-commands.md
+    - name: ig add 
+      href: general/cli/ig-add.md
       new: false
-      items:
-        - name: ig new 
-          href: general/cli/ig-new.md
-          new: false
-        - name: ig add 
-          href: general/cli/ig-add.md
-          new: false
-        - name: ig start
-          href: general/cli/ig-start.md
-          new: false
-        - name: ig build 
-          href: general/cli/ig-build.md
-          new: false
-        - name: ig quickstart 
-          href: general/cli/ig-quickstart.md
-          new: false
-        - name: ig generate 
-          href: general/cli/ig-generate.md
-          new: false
-        - name: ig help 
-          href: general/cli/ig-help.md
-          new: false
-        - name: ig config 
-          href: general/cli/ig-config.md
-          new: false
-        - name: ig doc 
-          href: general/cli/ig-doc.md
-          new: false
-        - name: ig list 
-          href: general/cli/ig-list.md
-          new: false
-        - name: ig test 
-          href: general/cli/ig-test.md
-          new: false
 - name: Grids & Lists
   href: grids_and_lists.md
   header: true
