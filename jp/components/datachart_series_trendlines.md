@@ -7,12 +7,12 @@ _language: ja
 
 ## トレンドライン
 
-`IgxDataChart` コントロールは、シリーズにバインドされたデータの傾向を識別するのに役立つ傾向線をサポートしています。
+[`IgxDataChart`](/components/datachart_series_trendlines.html) コントロールは、シリーズにバインドされたデータの傾向を識別するのに役立つ傾向線をサポートしています。
 
 ### デモ
 
-<div class="sample-container" style="height: 500px">
-    <iframe id="data-chart-series-trendlines-iframe" src='{environment:demosBaseUrl}/charts/data-chart-series-trendlines' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 500px">
+    <iframe id="data-chart-series-trendlines-iframe" src='{environment:demosBaseUrl}/charts/data-chart-series-trendlines' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-series-trendlines-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
@@ -21,26 +21,26 @@ _language: ja
 
 <div class="divider--half"></div>
 
-`IgxDataChart` コントロールでは、チャート ナビゲーションがデフォルトで無効になっています。それらを設定するために、トレンドラインを表示したい対応するシリーズに `TrendLineType` プロパティを設定できます。ブラシ、ピリオド、太さ、破線の配列など、トレンドラインの複数の外観プロパティを変更できます。
+[`IgxDataChart`](/components/datachart_series_trendlines.html) コントロールでは、チャート ナビゲーションがデフォルトで無効になっています。それらを設定するために、トレンドラインを表示したい対応するシリーズに [`TrendLineType`](/components/datachart_series_trendlines.html) プロパティを設定できます。ブラシ、ピリオド、太さ、破線の配列など、トレンドラインの複数の外観プロパティを変更できます。
 
 近似曲線は、積層シリーズとエリア シリーズを除くすべてのシリーズでサポートされています。以下は、一連のチャートで使用できるトレンドラインのリストです。
 
--   `None`
--   `CubicFit`
--   `CumulativeAverage`
--   `ExponentialAverage`
--   `ExponentialFit`
--   `LinearFit`
--   `LogarithmicFit`
--   `ModifiedAverage`
--   `PowerLawFit`
--   `QuadraticFit`
--   `QuarticFit`
--   `QuinticFit`
--   `SimpleAverage`
--   `WeightedAverage`
+-   [`None`](/components/datachart_series_trendlines.html)
+-   [`CubicFit`](/components/datachart_series_trendlines.html)
+-   [`CumulativeAverage`](/components/datachart_series_trendlines.html)
+-   [`ExponentialAverage`](/components/datachart_series_trendlines.html)
+-   [`ExponentialFit`](/components/datachart_series_trendlines.html)
+-   [`LinearFit`](/components/datachart_series_trendlines.html)
+-   [`LogarithmicFit`](/components/datachart_series_trendlines.html)
+-   [`ModifiedAverage`](/components/datachart_series_trendlines.html)
+-   [`PowerLawFit`](/components/datachart_series_trendlines.html)
+-   [`QuadraticFit`](/components/datachart_series_trendlines.html)
+-   [`QuarticFit`](/components/datachart_series_trendlines.html)
+-   [`QuinticFit`](/components/datachart_series_trendlines.html)
+-   [`SimpleAverage`](/components/datachart_series_trendlines.html)
+-   [`WeightedAverage`](/components/datachart_series_trendlines.html)
 
-次のコードスニペットは、`TrendLineType` コントロールのシリーズに近似曲線を追加する方法を示しています。
+次のコードスニペットは、[`TrendLineType`](/components/datachart_series_trendlines.html) コントロールのシリーズに近似曲線を追加する方法を示しています。
 
 ```html
 <igx-data-chart  [dataSource]="data"

@@ -11,15 +11,13 @@ _language: ja
 
 ### デモ
 
-<div class="sample-container" style="height: 500px">
-    <iframe id="excel-library-overview-sample-iframe" 
-	src='{environment:demosBaseUrl}/excel-library/working-with-charts' 
-	width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 500px">
+    <iframe id="excel-library-overview-sample-iframe" src='{environment:demosBaseUrl}/excel-library/working-with-charts' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="excel-library-overview-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示
-    </button> 
-</div> 
+    </button>
+</div>
 
 <div class="divider--half"></div>
 
@@ -33,8 +31,8 @@ addChart メソッドはワークシートに追加されるワークシート �
 
 以下のコードは、Excel チャート機能を有効にする方法を示します。
 
-```typescript
-var chart = ws.shapes().addChart(ChartType.ColumnClustered, 
+```ts
+var chart = ws.shapes().addChart(ChartType.ColumnClustered,
       ws.rows(0).cells(0), { x: 0, y: 0 },
       ws.rows(0).cells(headers.length - 1), { x: 100, y: 100 });
 

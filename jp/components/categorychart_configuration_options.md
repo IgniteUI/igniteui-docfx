@@ -11,8 +11,8 @@ _language: ja
 
 ### デモ
 
-<div class="sample-container" style="height: 550px">
-    <iframe id="category-chart-config-options-sample-iframe" src='{environment:demosBaseUrl}/charts/category-chart-config-options-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 550px">
+    <iframe id="category-chart-config-options-sample-iframe" src='{environment:demosBaseUrl}/charts/category-chart-config-options-sample' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="category-chart-config-options-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
@@ -80,8 +80,8 @@ _language: ja
 
 チャートでタイトルおよびサブタイトル情報がサイズ変更できます。
 
-> [!NOTE] 
-> デフォルトでトランジションイン アニメーションは無効ですが、`isTransitionInEnabled` オプションを `true` に設定してトランジションイン アニメーションを有効にできます。
+> [!NOTE]
+> デフォルトでトランジションイン アニメーションは無効ですが、`IsTransitionInEnabled` オプションを `true` に設定してトランジションイン アニメーションを有効にできます。
 
 トランジションイン アニメーションのトランジション タイプ、データ ポイントに相対するスピード、およびイージング関数によって管理されるイージング トランジションを構成できます。
 

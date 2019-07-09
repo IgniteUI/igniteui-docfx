@@ -1,8 +1,9 @@
 ---
-title: Angular Spreadsheet | Grid コントロール | Ignite UI for Angular | コマンド | Infragistics |
+title: Spreadsheet | Grid コントロール | Ignite UI for Angular | コマンド | Infragistics |
 _description: スプレッドシート コントロールを使用して、Excel ドキュメントの作成と編集のエクスペリエンスをアプリケーションに直接埋め込むことができます。
 _keywords: Spreadsheet, Ignite UI for Angular, Infragistics
 _language: ja
+mentionedTypes: ['Spreadsheet']
 ---
 
 ## コマンドの使用
@@ -11,8 +12,8 @@ Angular Spreadsheet コンポーネントは、スプレッドシートのさま
 
 ### デモ
 
-<div class="sample-container" style="height: 500px">
-    <iframe id="spreadsheet-commands-sample-iframe" src='{environment:demosBaseUrl}/spreadsheet/spreadsheet-commands' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 500px">
+    <iframe id="spreadsheet-commands-sample-iframe" src='{environment:demosBaseUrl}/spreadsheet/spreadsheet-commands' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="spreadsheet-commands-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz　で表示
@@ -25,7 +26,7 @@ Angular Spreadsheet コンポーネントは、スプレッドシートのさま
 
 コマンドボードを利用する前に、`SpreadsheetAction` をインポートします。
 
-```typescript
+```ts
 import { IgxSpreadsheetComponent } from "igniteui-angular-spreadsheet/ES5/igx-spreadsheet-component";
 import { SpreadsheetAction } from "igniteui-angular-spreadsheet/ES5/SpreadsheetAction";
 ```
@@ -36,7 +37,7 @@ import { SpreadsheetAction } from "igniteui-angular-spreadsheet/ES5/SpreadsheetA
 
 以下のコード スニペットは、データの検証規則を設定する方法を示します。
 
-```typescript
+```ts
 @ViewChild("spreadsheet", { read: IgxSpreadsheetComponent })
 public spreadsheet: IgxSpreadsheetComponent;
 

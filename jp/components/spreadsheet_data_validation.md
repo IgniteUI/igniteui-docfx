@@ -1,8 +1,9 @@
 ---
-title: Angular Spreadsheet | Grid Controls | Ignite UI for Angular | データ検証 | Infragistics |
+title: Spreadsheet | Grid Controls | Ignite UI for Angular | データ検証 | Infragistics |
 _description: スプレッドシート コントロールを使用して、Excel ドキュメントの作成と編集のエクスペリエンスをアプリケーションに直接埋め込むことができます。
 _keywords: Spreadsheet, Ignite UI for Angular, Infragistics
 _language: ja
+mentionedTypes: ['Spreadsheet']
 ---
 
 ## データ検証
@@ -11,8 +12,8 @@ _language: ja
 
 ### デモ
 
-<div class="sample-container" style="height: 500px">
-    <iframe id="spreadsheet-data-validation-sample-iframe" src='{environment:demosBaseUrl}/spreadsheet/spreadsheet-data-validation' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 500px">
+    <iframe id="spreadsheet-data-validation-sample-iframe" src='{environment:demosBaseUrl}/spreadsheet/spreadsheet-data-validation' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="spreadsheet-data-validation-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示
@@ -25,7 +26,7 @@ _language: ja
 
 データ検証ルールを設定するときは、使用するルールをインポートする必要があります。
 
-```typescript
+```ts
 import { AnyValueDataValidationRule } from "igniteui-angular-excel/ES5/AnyValueDataValidationRule";
 import { CustomDataValidationRule } from "igniteui-angular-excel/ES5/CustomDataValidationRule";
 import { DataValidationErrorStyle } from "igniteui-angular-excel/ES5/DataValidationErrorStyle";
@@ -36,13 +37,24 @@ import { TwoConstraintDataValidationOperator } from "igniteui-angular-excel/ES5/
 import { TwoConstraintDataValidationRule } from "igniteui-angular-excel/ES5/TwoConstraintDataValidationRule";
 ```
 
+```ts
+import { AnyValueDataValidationRule } from "igniteui-react-excel/ES5/AnyValueDataValidationRule";
+import { CustomDataValidationRule } from "igniteui-react-excel/ES5/CustomDataValidationRule";
+import { DataValidationErrorStyle } from "igniteui-react-excel/ES5/DataValidationErrorStyle";
+import { ListDataValidationRule } from "igniteui-react-excel/ES5/ListDataValidationRule";
+import { OneConstraintDataValidationOperator } from "igniteui-react-excel/ES5/OneConstraintDataValidationOperator";
+import { OneConstraintDataValidationRule } from "igniteui-react-excel/ES5/OneConstraintDataValidationRule";
+import { TwoConstraintDataValidationOperator } from "igniteui-react-excel/ES5/TwoConstraintDataValidationOperator";
+import { TwoConstraintDataValidationRule } from "igniteui-react-excel/ES5/TwoConstraintDataValidationRule";
+```
+
 <div class="divider--half"></div>
 
 ### 使用方法
 
 以下のコード スニペットは、データの検証規則を設定する方法を示します。
 
-```typescript
+```ts
 // this validation rule has only input message set
 const valRule1 = new AnyValueDataValidationRule();
 valRule1.inputMessageTitle = "Hotel room booking form";

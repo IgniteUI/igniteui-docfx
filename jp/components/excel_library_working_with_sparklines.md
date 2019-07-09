@@ -7,19 +7,17 @@ _language: ja
 
 ## Excel ライブラリ スパークライン
 
-このトピックでは、データ トレンドを視覚的に表すために Infragistics Excel Library を使用して Excel® ワークシート (.xlsx) にスパークラインを追加する方法を表します。スパークラインでデータの変更を簡単に可視化でき、ワークシートのセル内のどこでも配置できます。 
+このトピックでは、データ トレンドを視覚的に表すために Infragistics Excel Library を使用して Excel® ワークシート (.xlsx) にスパークラインを追加する方法を表します。スパークラインでデータの変更を簡単に可視化でき、ワークシートのセル内のどこでも配置できます。
 
 ### デモ
 
-<div class="sample-container" style="height: 500px">
-    <iframe id="excel-library-overview-sample-iframe" 
-	src='{environment:demosBaseUrl}/excel-library/working-with-sparklines' 
-	width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 500px">
+    <iframe id="excel-library-overview-sample-iframe" src='{environment:demosBaseUrl}/excel-library/working-with-sparklines' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="excel-library-overview-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示
-    </button> 
-</div> 
+    </button>
+</div>
 
 <div class="divider--half"></div>
 
@@ -33,11 +31,11 @@ _language: ja
 
 以下のコードは、sparklineGroups コレクションを使用してスパークラインをワークシートへ追加する方法を示します。
 
-```typescript
+```ts
 var workbook: Workbook;
 var sheet1 = workbook.worksheets().add("'Sparklines");
 var sheet2 = workbook.worksheets().add("Data");
-sheet1.sparklineGroups().add($.ig.excel.SparklineType.Line, "Sparklines!A1:A1", "Data!A2:A11"); 
-sheet1.sparklineGroups().add($.ig.excel.SparklineType.Column, "Sparklines!B1:B1", "Data!A2:A11"); 
+sheet1.sparklineGroups().add($.ig.excel.SparklineType.Line, "Sparklines!A1:A1", "Data!A2:A11");
+sheet1.sparklineGroups().add($.ig.excel.SparklineType.Column, "Sparklines!B1:B1", "Data!A2:A11");
 workbook.save(workbook, "Sparklines.xlsx");
 ```
