@@ -61,7 +61,7 @@ Ignite UI for Angular @@igComponent の[`IgxColumnHidingComponent`]({environment
 
 }
 
-### @@igComponent setup
+### @@igComponent の設定
 @@igComponent を作成してからデータをバインドします。列でフィルタリングと並べ替えも有効にします。
 
 @@if (igxName === 'IgxGrid') {
@@ -230,7 +230,7 @@ public ngAfterViewInit() {
 
 列非表示 UI の機能セットを使用するには、列非表示 UI コンポーネントへの参照を返すツールバーの [`columnHidingUI`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html#columnhidingui) プロパティを使用します。相対する API にアクセスし、アプリケーションの要件に基づいて使用できます。
 
-このトピックのはじめにあるコードの結果は [Column Hiding Demo](#demo) セクションで確認できます。
+このトピックのはじめにあるコードの結果は、[列非表示のデモ](#demo)セクションで確認できます。
 
 @@if (igxName !== 'IgxHierarchicalGrid') {
 ### カスタム列の非表示 UI
