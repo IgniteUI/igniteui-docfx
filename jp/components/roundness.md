@@ -1,11 +1,11 @@
 ---
-title: 丸み
+title: 角の丸み付け
 _description: Ignite UI for Angular は、border-radius を変更してコンポーネントの形を変更できます。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ
 _language: ja
 ---
 
-## コンポーネントの丸み
+## 角の丸み付け
 <p class="highlight">Ignite UI for Angular は、border-radius を変更してコンポーネントの形を変更できます。</p>
 
 <div class="divider--half"></div>
