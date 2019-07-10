@@ -343,6 +343,103 @@ public selection = true;
 
 **注:** セル選択は [`onSelection`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onselection) をトリガーしますが [`onRowSelectionChange`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onrowselectionchange) はトリガーしません。
 
+### Styling
+
+The theme engine exposes properties that allows us to style the range of selected cells.
+
+#### Import theme
+
+To get started with styling the selection, we need to import the `index` file, where all the theme functions and component mixins live:
+
+```scss
+// in component.scss
+@import '~igniteui-angular/lib/core/styles/themes/index';
+``` 
+
+#### Define colors
+
+Once done, we can make use of the [`igx-contrast-color`]({environment:sassApiUrl}/index.html#function-igx-contrast-color) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions. With them, we define the colors we would like to use for our selection range:
+```scss
+    $text-color: igx-contrast-color($default-palette, 'primary', 900);
+    $background-color: igx-color($default-palette, "primary", 900);
+    $border-yellow: #f2c43c;
+```
+
+#### Create custom theme
+ 
+Next we create a new theme that extends the [`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) passing our `text-color`, `background-color` and `border-yellow` variables as `$cell-selected-text-color`, `$cell-selected-background` and `$cell-active-border-color`, respectively:
+
+```scss
+$custom-grid-theme: igx-grid-theme(
+    $cell-selected-text-color: $text-color,
+    $cell-active-border-color: $border-yellow,
+    $cell-selected-background: $background-color
+);
+```
+
+#### Apply theme
+
+Afterwards, all we need to do is include the mixin in our component's style (could also be in the app styles), so that our @@igSelector uses the newly created theme instead of the default one:
+
+```scss
+    @include igx-grid($custom-grid-theme);
+```
+
+ >[!NOTE]
+ >If the component is using an [`Emulated ViewEncapsulation`](../themes/component-themes.md#view-encapsulation), it is necessary to penetrate this encapsulation using `::ng-deep`.
+ > We scope the style under `:host` selector so as not to affect any other grids we might have in our application.
+
+ ```scss
+    :host { 
+        ::ng-deep {
+            @include igx-grid($custom-grid-theme);
+        }
+    }
+```
+
+
+With the custom theme applied, the selected grid cells are highlighted with our selected colors:
+
+@@if (igxName === 'IgxGrid'){
+#### Demo
+
+<div class="sample-container loading" style="height:620px">
+    <iframe id="grid-multi-cell-selection-style-iframe" src='{environment:demosBaseUrl}/grid/grid-multi-cell-selection-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-multi-cell-selection-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
+}
+
+@@if (igxName === 'IgxHierarchicalGrid'){
+#### Demo
+<div class="sample-container loading" style="height:620px">
+    <iframe id="hierarchical-grid-multi-cell-style-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-multi-cell-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
+<br/>  
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="hierarchical-grid-multi-cell-style-iframe" 
+        data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz
+    </button>
+</div>
+}
+
+
+@@if (igxName === 'IgxTreeGrid'){
+#### Demo
+<div class="sample-container loading" style="height:620px">
+    <iframe id="tree-grid-multi-cell-selection-style-iframe" src='{environment:demosBaseUrl}/tree-grid/tree-grid-multi-cell-selection-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
+<br/>  
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="custom-tree-grid-multi-cell-selection-style-iframe" 
+        data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz
+    </button>
+</div>
+}
+
 ### コード スニペット
 
 #### コードで行を選択
