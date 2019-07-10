@@ -9,7 +9,7 @@ _language: ja
 
 このトピックでは、[散布図シリーズ](datachart_series_types_shape.md) のデータソースを実装する方法の例を示します。
 
-```typescript
+```ts
 export class SampleShapeData {
 
     public static create(): any[] {
