@@ -275,7 +275,7 @@ public ngAfterViewInit() {
             <option [value]="val" [selected]="perPage == val" *ngFor="let val of [5, 10, 15, 20]">{{ val
                 }}</option>
         </select>
-    <div>
+    </div>
 </ng-template>
 ```
 ```typescript
