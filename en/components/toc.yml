@@ -687,6 +687,9 @@
   - name: Scrolling Strategies
     href: overlay_scroll.md
     new: false
+  - name: Styling
+    href: overlay_styling.md
+    new: true
 - name: Drag and Drop
   href: drag_drop.md
   new: false
