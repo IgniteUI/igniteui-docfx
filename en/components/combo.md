@@ -107,9 +107,9 @@ When igxCombo is opened, allow custom values are enabled and add item button is 
 - `ArrowUp` focus will be moved back to the last list item or if list is empty will be moved to the search input.
 
 ## Styling
-Using the [Ignite UI for Angular Theming](../themes/index.md), we can greatly alter the **igx-combo** appearance. 
-Since `igx-combo` extends `igx-drop-down`, it also makes good use of its existing `igx-drop-down` styling, so you can directly refer to the [igx-drop-down styling guide](../themes/drop_down.md) for details.
-On top of that, `IgxCombo` includes an `IgxInputGroup` as well, so any styling to the input-group will affect the `IgxCombo` component. You can refer to [igx-input-group styling guide](../themes/input_group.md) for details.
+Using the [Ignite UI for Angular Theming](themes/index.md), we can greatly alter the **igx-combo** appearance. 
+Since `igx-combo` extends `igx-drop-down`, it also makes good use of its existing `igx-drop-down` styling, so you can directly refer to the [igx-drop-down styling guide](drop_down.md#styling) for details.
+On top of that, `IgxCombo` includes an `IgxInputGroup` as well, so any styling to the input-group will affect the `IgxCombo` component. You can refer to [igx-input-group styling guide](input_group.md#styling) for details.
 
 ### Code snippets
 ```scss
@@ -154,7 +154,12 @@ $custom-drop-down-theme: igx-drop-down-theme(
 $custom-combo-theme: igx-combo-theme(
     $search-separator-border-color: $my-dark-purple
 );
+```
 
+### Applying
+All that's left is to properly scope our newly created themes. Here we will assume you want to style a particular `IgxCombo` so the other components of this type in your application will not be affected by the custom themes. For details regarding applying theme globally or scoped, you can refer to [igx-drop-down styling guide](drop_down.md#applying)
+
+```
 // Pass our custom-drop-down-theme and custom-combo-theme to respectively `igx-drop-down` and igx-combo mixins.
 :host {
    ::ng-deep {
@@ -175,6 +180,8 @@ $custom-combo-theme: igx-combo-theme(
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="combo-styling" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
+
+<div class="divider--half"></div>
 
 ## API
 <div class="divider--half"></div>
