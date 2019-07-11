@@ -276,8 +276,7 @@ public ngAfterViewInit() {
                 <igx-icon fontSet="material">last_page</igx-icon>
             </button>
             <select style="margin-left: 1rem;" (change)="parseToInt($event.target.value);">
-                <option [value]="val" [selected]="perPage == val" *ngFor="let val of [5, 10, 15, 20]">{{ val
-                    }}</option>
+                <option [value]="val" [selected]="perPage == val" *ngFor="let val of [5, 10, 15, 20]">{{ val }}</option>
             </select>
         </div>
     </ng-template>
@@ -376,8 +375,7 @@ public ngAfterViewInit() {
             <igx-icon fontSet="material">last_page</igx-icon>
         </button>
         <select style="margin-left: 1rem;" (change)="perPage = parseToInt($event.target.value);">
-            <option [value]="val" [selected]="perPage == val" *ngFor="let val of [5, 10, 12, 25, 50]">{{ val
-            }}</option>
+            <option [value]="val" [selected]="perPage == val" *ngFor="let val of [5, 10, 12, 25, 50]">{{ val }}</option>
         </select>
     </div>
 </ng-template>
