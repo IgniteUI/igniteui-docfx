@@ -25,8 +25,11 @@
     - name: Transforming Data with Angular Pipes
       href: general/wpf_to_angular_guide/angular_pipes.md
       new: false
-    - name: Angular One-Way Binding
+    - name: One-Way Binding
       href: general/wpf_to_angular_guide/one_way_binding.md
+      new: false
+    - name: Two-Way Binding
+      href: general/wpf_to_angular_guide/two_way_binding.md
       new: false
 - name: Grids & Lists
   href: grids_and_lists.md
