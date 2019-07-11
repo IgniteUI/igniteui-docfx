@@ -7,7 +7,7 @@ _language: ja
 
 ## 注釈
 
-このトピックでは、[`IgxCategoryChart`](/components/categorychart_annotation_layers.html) の注釈やインタラクションについて説明します。
+このトピックでは、[`IgxCategoryChart`](categorychart_annotation_layers.md) の注釈やインタラクションについて説明します。
 
 ### デモ
 

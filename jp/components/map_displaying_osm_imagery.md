@@ -24,4 +24,4 @@ Open Street Maps は、世界中の OpenStreetMap© のコントリビュータ�
 
 ### コード スニペット
 
-このコード例では、マップコンポーネントの `BackgroundContent` を、[`OpenStreetMapImagery`](/components/map_displaying_osm_imagery.html) の地理的画像タイルを提供する OpenStreetMapImagery オブジェクトに明示的に設定しています。
+このコード例では、マップコンポーネントの `BackgroundContent` を、[`OpenStreetMapImagery`](map_displaying_osm_imagery.md) の地理的画像タイルを提供する OpenStreetMapImagery オブジェクトに明示的に設定しています。

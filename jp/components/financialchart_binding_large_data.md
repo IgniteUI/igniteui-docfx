@@ -7,7 +7,7 @@ _language: ja
 
 ## 大規模なデータの処理
 
-[`IgxFinancialChart`](/components/financialchart_binding_large_data.html) コントロールは大規模なデータを処理できます。以下のデモは 20 年にわたるデータをバインドします。折れ線チャートで 1 時間間隔の在庫価格を示します。
+[`IgxFinancialChart`](financialchart_binding_large_data.md) コントロールは大規模なデータを処理できます。以下のデモは 20 年にわたるデータをバインドします。折れ線チャートで 1 時間間隔の在庫価格を示します。
 
 <div class="divider"></div>
 

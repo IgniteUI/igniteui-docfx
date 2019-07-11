@@ -38,7 +38,7 @@ gauges パッケージのインストール時に core パッケージもイン�
 
 ### 必要なモジュール
 
-[`IgxBulletGraphComponent`](/components/bulletgraph.html) は、以下のモジュールが必要です。
+[`IgxBulletGraphComponent`](bulletgraph.md) は、以下のモジュールが必要です。
 
 ```ts
 // app.module.ts
@@ -250,7 +250,7 @@ export class AppModule {}
 
 ### スケール
 
-スケールはゲージで値の全範囲を強調表示する視覚的な要素です。外観やスケールの図形のカスタマイズ、更にスケールを反転 ([`isScaleInverted`](/components/bulletgraph.html) プロパティを使用) させて、すべてのラベルを左から右ではなく、右から左へ描画することもできます。
+スケールはゲージで値の全範囲を強調表示する視覚的な要素です。外観やスケールの図形のカスタマイズ、更にスケールを反転 ([`isScaleInverted`](bulletgraph.md) プロパティを使用) させて、すべてのラベルを左から右ではなく、右から左へ描画することもできます。
 
 ```html
 <igx-bullet-graph

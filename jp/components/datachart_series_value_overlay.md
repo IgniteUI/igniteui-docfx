@@ -23,13 +23,13 @@ Ignite UI for Angular データチャート コンポーネントを使用する
 
 <div class="divider--half"></div>
 
-データバインディングに `DataSource` を使用する他のシリーズタイプとは異なり、値オーバーレイは [`valueMemberPath`](/components/datachart_series_value_overlay.html) プロパティを使用して単一の数値をバインドします。値オーバーレイでは、使用する単一の軸を定義する必要があります。X 軸を使用する場合、値のオーバーレイは垂直線になり、Y 軸を使用する場合は、水平線になります。
+データバインディングに `DataSource` を使用する他のシリーズタイプとは異なり、値オーバーレイは [`valueMemberPath`](datachart_series_value_overlay.md) プロパティを使用して単一の数値をバインドします。値オーバーレイでは、使用する単一の軸を定義する必要があります。X 軸を使用する場合、値のオーバーレイは垂直線になり、Y 軸を使用する場合は、水平線になります。
 
-数値のX軸またはY軸を使用する場合、[`valueMemberPath`](/components/datachart_series_value_overlay.html) プロパティは、値のオーバーレイを描画する軸上の実際の数値を反映する必要があります。数値の X 軸または Y 軸を使用する場合、[`valueMemberPath`](/components/datachart_series_value_overlay.html) は、値のオーバーレイを描画する軸上の実際の数値を反映する必要があります。
+数値のX軸またはY軸を使用する場合、[`valueMemberPath`](datachart_series_value_overlay.md) プロパティは、値のオーバーレイを描画する軸上の実際の数値を反映する必要があります。数値の X 軸または Y 軸を使用する場合、[`valueMemberPath`](datachart_series_value_overlay.md) は、値のオーバーレイを描画する軸上の実際の数値を反映する必要があります。
 
 数値オーバーレイを角度角軸で使用すると、チャートの中心からの線として表示され、半径半径軸を使用すると、円として表示されます。
 
-[`IgxValueOverlayComponent`](/components/datachart_series_value_overlay.html) 外観プロパティは、`Infragistics.Controls.Charts.Series` から継承されているため、例えば [`brush`](/components/datachart_series_value_overlay.html) と [`thickness`](/components/datachart_series_value_overlay.html) を使用でき、他のタイプのシリーズと同じように機能します。
+[`IgxValueOverlayComponent`](datachart_series_value_overlay.md) 外観プロパティは、`Infragistics.Controls.Charts.Series` から継承されているため、例えば [`brush`](datachart_series_value_overlay.md) と [`thickness`](datachart_series_value_overlay.md) を使用でき、他のタイプのシリーズと同じように機能します。
 
 ### コード例 - 値のオーバーレイ
 

@@ -8,7 +8,7 @@ _language: ja
 
 ## マップ コンテンツをナビゲート
 
-[`IgxGeographicMapComponent`](/components/map_navigating_map_content.html) コントロールのナビゲーションは、既定では有効にされており、マップ コンテンツのズームとパンが可能です。ただし、HorizontalZoomable および VerticalZoomable プロパティを使用して、この動作を変更できます。知っておくべき重要な情報としては xamGeographicMap コントロールのズームは、あらかじめ決められた割合に同期してマップ コンテンツをスケーリングする動作に過ぎません。その結果、水平方向およびその逆にも拡大縮小することなく、マップ コンテンツを垂直方向に拡大縮小することはできません。
+[`IgxGeographicMapComponent`](map_navigating_map_content.md) コントロールのナビゲーションは、既定では有効にされており、マップ コンテンツのズームとパンが可能です。ただし、HorizontalZoomable および VerticalZoomable プロパティを使用して、この動作を変更できます。知っておくべき重要な情報としては xamGeographicMap コントロールのズームは、あらかじめ決められた割合に同期してマップ コンテンツをスケーリングする動作に過ぎません。その結果、水平方向およびその逆にも拡大縮小することなく、マップ コンテンツを垂直方向に拡大縮小することはできません。
 
 ### デモ
 
@@ -42,15 +42,15 @@ _language: ja
 
 ### プロパティ
 
-以下の表は [`IgxGeographicMapComponent`](/components/map_navigating_map_content.html) コントロールのナビゲーションで使用できるプロパティをまとめたものです。
+以下の表は [`IgxGeographicMapComponent`](map_navigating_map_content.md) コントロールのナビゲーションで使用できるプロパティをまとめたものです。
 
 | プロパティ名                                                                                                                                   | プロパティ型 | 説明                                                                                                                                                                                                 |
 | ---------------------------------------------------------------------------------------------------------------------------------------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [`windowRect`](/components/map_navigating_map_content.html)                                         | Rect   | 地図コンテンツの表示領域にナビゲーション ウィンドウの新しい位置とサイズを設定します。0、0、1、1 の値で長方形を指定すると、ナビゲーション ウィンドウのマップ コンテンツ全体がズームアウトされます。                                                                                              |
-| [`windowScale`](/components/map_navigating_map_content.html)                                      | number | マップ コントロールのナビゲーション ウィンドウの新しいサイズを設定します。WindowRect プロパティに格納されている Width または Height の最小値です。                                                                                                            |
-| [`windowPositionHorizontal`](/components/map_navigating_map_content.html)             | number | マップ コントロールの左端からのナビゲーション ウィンドウのアンカー ポイントの新しい水平位置を設定します。これは [`windowRect`](/components/map_navigating_map_content.html) プロパティの Left に保存された値と等しくなります。            |
-| [`windowPositionVertical`](/components/map_navigating_map_content.html)                 | number | ナビゲーション ウィンドウのアンカー ポイントの、地図コントロールの上端からの新しい垂直位置を設定します。これは [`windowRect`](/components/map_navigating_map_content.html) プロパティの Top に保存された値と等しくなります。              |
-| [`actualWindowRect`](/components/map_navigating_map_content.html)                             | Rect   | マップ コンテンツの表示領域内のナビゲーション ウィンドウの現在の位置とサイズを示します。0、0、1、1の値で長方形を指定すると、ナビゲーション ウィンドウにマップ コンテンツ全体が表示されます。                                                                                                 |
-| [`actualWindowScale`](/components/map_navigating_map_content.html)                          | number | マップ コントロールのナビゲーション ウィンドウの現在のサイズを示します。[`actualWindowRect`](/components/map_navigating_map_content.html) プロパティに格納されている Width または Height の最小値と同じです。        |
-| [`actualWindowPositionHorizontal`](/components/map_navigating_map_content.html) | number | マップ コントロールの左端からのナビゲーション ウィンドウのアンカー ポイントの現在の水平位置を示します。これは [`actualWindowRect`](/components/map_navigating_map_content.html) プロパティの Left に保存された値と等しくなります。 |
-| [`actualWindowPositionVertical`](/components/map_navigating_map_content.html)     | number | ナビゲーション ウィンドウの垂直方向のアンカー ポイントを Map コントロールの上端から指定します。これは [`actualWindowRect`](/components/map_navigating_map_content.html) プロパティの Top に保存された値と等しくなります。    |
+| [`windowRect`](map_navigating_map_content.md)                                         | Rect   | 地図コンテンツの表示領域にナビゲーション ウィンドウの新しい位置とサイズを設定します。0、0、1、1 の値で長方形を指定すると、ナビゲーション ウィンドウのマップ コンテンツ全体がズームアウトされます。                                                                                              |
+| [`windowScale`](map_navigating_map_content.md)                                      | number | マップ コントロールのナビゲーション ウィンドウの新しいサイズを設定します。WindowRect プロパティに格納されている Width または Height の最小値です。                                                                                                            |
+| [`windowPositionHorizontal`](map_navigating_map_content.md)             | number | マップ コントロールの左端からのナビゲーション ウィンドウのアンカー ポイントの新しい水平位置を設定します。これは [`windowRect`](map_navigating_map_content.md) プロパティの Left に保存された値と等しくなります。            |
+| [`windowPositionVertical`](map_navigating_map_content.md)                 | number | ナビゲーション ウィンドウのアンカー ポイントの、地図コントロールの上端からの新しい垂直位置を設定します。これは [`windowRect`](map_navigating_map_content.md) プロパティの Top に保存された値と等しくなります。              |
+| [`actualWindowRect`](map_navigating_map_content.md)                             | Rect   | マップ コンテンツの表示領域内のナビゲーション ウィンドウの現在の位置とサイズを示します。0、0、1、1の値で長方形を指定すると、ナビゲーション ウィンドウにマップ コンテンツ全体が表示されます。                                                                                                 |
+| [`actualWindowScale`](map_navigating_map_content.md)                          | number | マップ コントロールのナビゲーション ウィンドウの現在のサイズを示します。[`actualWindowRect`](map_navigating_map_content.md) プロパティに格納されている Width または Height の最小値と同じです。        |
+| [`actualWindowPositionHorizontal`](map_navigating_map_content.md) | number | マップ コントロールの左端からのナビゲーション ウィンドウのアンカー ポイントの現在の水平位置を示します。これは [`actualWindowRect`](map_navigating_map_content.md) プロパティの Left に保存された値と等しくなります。 |
+| [`actualWindowPositionVertical`](map_navigating_map_content.md)     | number | ナビゲーション ウィンドウの垂直方向のアンカー ポイントを Map コントロールの上端から指定します。これは [`actualWindowRect`](map_navigating_map_content.md) プロパティの Top に保存された値と等しくなります。    |

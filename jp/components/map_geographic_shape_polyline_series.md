@@ -7,7 +7,7 @@ _language: ja
 
 ## 図形ポリライン シリーズの使用
 
-地理的コンテキストでポリラインを使用して地理空間データを表示するには、マップコンポーネントの [`IgxGeographicPolylineSeriesComponent`](/components/map_geographic_shape_polyline_series.html) を使用します。地理的シリーズのこのタイプは、都市または空港などの地理的位置間の道路または接続を描画するためによく使用されます。
+地理的コンテキストでポリラインを使用して地理空間データを表示するには、マップコンポーネントの [`IgxGeographicPolylineSeriesComponent`](map_geographic_shape_polyline_series.md) を使用します。地理的シリーズのこのタイプは、都市または空港などの地理的位置間の道路または接続を描画するためによく使用されます。
 
 ### デモ
 
@@ -21,15 +21,15 @@ _language: ja
 
 <div class="divider--half"></div>
 
-[`IgxGeographicPolylineSeriesComponent`](/components/map_geographic_shape_polyline_series.html) は、[`IgxGeographicShapeSeriesComponent`](/components/map_geographic_shape_polyline_series.html) とよく似ていますが、地理空間データがポリゴンではなくポリラインでレンダリングされる点が異なります。
+[`IgxGeographicPolylineSeriesComponent`](map_geographic_shape_polyline_series.md) は、[`IgxGeographicShapeSeriesComponent`](map_geographic_shape_polyline_series.md) とよく似ていますが、地理空間データがポリゴンではなくポリラインでレンダリングされる点が異なります。
 
 ### データ要件
 
-コントロール内の他の種類の地理的シリーズと同様に、[`IgxGeographicPolylineSeriesComponent`](/components/map_geographic_shape_polyline_series.html)  には、オブジェクトの配列にバインドできる `ItemsSource` プロパティがあります。さらに、このオブジェクトの各データ項目には、地理的位置を表す x 値と y 値を持つオブジェクトの配列の配列を使用して単一または複数の形状を格納する 1 つのデータ列が必要です。このデータ列は、ShapeMemberPath プロパティにマップされます。[`IgxGeographicPolylineSeriesComponent`](/components/map_geographic_shape_polyline_series.html) は、コントロールで多角形をプロットするために、このマップされたデータ列のポイントを使用します。
+コントロール内の他の種類の地理的シリーズと同様に、[`IgxGeographicPolylineSeriesComponent`](map_geographic_shape_polyline_series.md)  には、オブジェクトの配列にバインドできる `ItemsSource` プロパティがあります。さらに、このオブジェクトの各データ項目には、地理的位置を表す x 値と y 値を持つオブジェクトの配列の配列を使用して単一または複数の形状を格納する 1 つのデータ列が必要です。このデータ列は、ShapeMemberPath プロパティにマップされます。[`IgxGeographicPolylineSeriesComponent`](map_geographic_shape_polyline_series.md) は、コントロールで多角形をプロットするために、このマップされたデータ列のポイントを使用します。
 
 ### コード スニペット
 
-以下のコードは、`ShapeDataSource` を使用してシェイプ ファイルからロードした都市の場所に [`IgxGeographicPolylineSeriesComponent`](/components/map_geographic_shape_polyline_series.html) をバインドする方法を示します。
+以下のコードは、`ShapeDataSource` を使用してシェイプ ファイルからロードした都市の場所に [`IgxGeographicPolylineSeriesComponent`](map_geographic_shape_polyline_series.md) をバインドする方法を示します。
 
 <!-- Angular -->
 

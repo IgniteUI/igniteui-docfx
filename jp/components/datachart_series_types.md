@@ -7,11 +7,11 @@ _language: ja
 
 ## シリーズ
 
-[`IgxDataChart`](/components/datachart_series_types.html) コントロールでシリーズは類似するシリーズの次のグループに分類されます。カテゴリ シリーズ、ファイナンシャル シリーズ、極座標シリーズ、ラジアル シリーズ、エリア シリーズ、散布図シリーズ、積層シリーズ、図形シリーズ。
+[`IgxDataChart`](datachart_series_types.md) コントロールでシリーズは類似するシリーズの次のグループに分類されます。カテゴリ シリーズ、ファイナンシャル シリーズ、極座標シリーズ、ラジアル シリーズ、エリア シリーズ、散布図シリーズ、積層シリーズ、図形シリーズ。
 
-これらのシリーズに加えて、[`IgxDataChart`](/components/datachart_series_types.html) コントロールに[シリーズ注釈](datachart_series_annotations.md)と[シリーズ ハイライト](datachart_series_highlighting.md)を追加できます。
+これらのシリーズに加えて、[`IgxDataChart`](datachart_series_types.md) コントロールに[シリーズ注釈](datachart_series_annotations.md)と[シリーズ ハイライト](datachart_series_highlighting.md)を追加できます。
 
-以下のリストは、各グループのすべてのシリーズ タイプを示します。[`IgxDataChart`](/components/datachart_series_types.html) コントロールで各シリーズを使用する方法についてのヘルプは、シリーズの名前をクリックしてください。
+以下のリストは、各グループのすべてのシリーズ タイプを示します。[`IgxDataChart`](datachart_series_types.md) コントロールで各シリーズを使用する方法についてのヘルプは、シリーズの名前をクリックしてください。
 
 #### カテゴリ シリーズ
 

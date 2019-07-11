@@ -12,10 +12,10 @@ Financial Chart は、シンプルな API を使用して複雑なファイナ�
 ### デモ
 
 <div class="sample-container loading" style="height: 550px">
-    <iframe id="financial-chart-overview-sample-iframe" src='{environment:demosBaseUrl}/charts/financial-chart-overview-sample' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="financial-chart-overview-iframe" src='{environment:demosBaseUrl}/charts/financial-chart-overview' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="financial-chart-overview-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="financial-chart-overview-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
     </button>
 </div>
 
@@ -25,13 +25,13 @@ Financial Chart は、シンプルな API を使用して複雑なファイナ�
 
 ファイナンシャル チャート コンポーネントはデータ列を解析して選択します。日/時列を X 軸で使用し、Open、High、Low、Close、Volume 列、または最初の 5 つの数値列を Y 軸で使用します。ユーザーがチャート タイプを棒、ローソク足、柱状、または折れ線に設定できます。主要なビジュアル要素にツールバー、価格ペイン、ボリューム ペイン、インジケーター ペイン、およびナビゲーション ペインがあります。
 
-[`ChartType`](/components/financialchart.html) プロパティを以下のオプションの 1 つに設定してチャート タイプを明示的に指定することもできます。
+[`ChartType`](financialchart.md) プロパティを以下のオプションの 1 つに設定してチャート タイプを明示的に指定することもできます。
 
 | プロパティ                                                                                   | 説明                                                                                                                           |
 | --------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
 | `Bar`                                                                                   | 各データ ポイントにマーカーがある棒シリーズを指定します。                                                                                                |
 | `Candle`                                                                                | ローソク足シリーズを指定します。                                                                                                             |
-| [`IgxColumnComponent`](/components/financialchart.html) | 柱状シリーズを指定します。                                                                                                                |
+| [`IgxColumnComponent`](financialchart.md) | 柱状シリーズを指定します。                                                                                                                |
 | `Line`                                                                                  | 折れ線シリーズを指定します。                                                                                                               |
 | `auto`                                                                                  | データ アダプターに基づいてチャート タイプの自動選択を指定します。これは、データの名前および数値列の数に基づいて上記の値を選択します。たとえば、Open、High、Low、および Close 列があるデータ項目のために `Bar` を使用します。 |
 
@@ -52,7 +52,7 @@ chart パッケージをインストールするときに core パッケージ�
 
 ### 必要なモジュール
 
-[`IgxFinancialChart`](/components/financialchart.html) は、以下のモジュールが必要です。
+[`IgxFinancialChart`](financialchart.md) は、以下のモジュールが必要です。
 
 ```ts
 // app.module.ts
@@ -74,7 +74,7 @@ export class AppModule {}
 
 ファイナンシャル チャート モジュールをインポートした後、チャートをデータにバインドします。
 
-[`IgxFinancialChart`](/components/financialchart.html) コントロールを作成するには、はじめにバインドするデータが必要です。以下のコード スニペットは、シンプルなデータソースを作成する方法を示します。
+[`IgxFinancialChart`](financialchart.md) コントロールを作成するには、はじめにバインドするデータが必要です。以下のコード スニペットは、シンプルなデータソースを作成する方法を示します。
 
 ```ts
 let data = [

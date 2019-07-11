@@ -24,21 +24,21 @@ Ignite UI for Angular データチャート コンポーネントでは、軸に
 
 以下は、Ignite UI for Angular データチャートで軸の注釈をサポートするシリーズとレイヤーです。
 
--   [`IgxCrosshairLayerComponent`](/components/datachart_axis_annotations.html)
--   [`IgxFinalValueLayerComponent`](/components/datachart_axis_annotations.html)
--   [`IgxValueOverlayComponent`](/components/datachart_axis_annotations.html)
+-   [`IgxCrosshairLayerComponent`](datachart_axis_annotations.md)
+-   [`IgxFinalValueLayerComponent`](datachart_axis_annotations.md)
+-   [`IgxValueOverlayComponent`](datachart_axis_annotations.md)
 
 軸の注釈を有効にするには、対応するレイヤーまたはオーバーレイの IsAxisAnnotationEnabled プロパティを true に設定します。これにより、対応する所有軸または軸上に特定のオーバーレイまたはレイヤーのある現在のポイントで表す値を持つボックスを配置します。たとえば、CrosshairLayer を使用すると、これらの注釈は X 軸と Y 軸の両方に表示され、プロット領域のスクロールに従って変化します。
 
-[`isAxisAnnotationEnabled`](/components/datachart_axis_annotations.html) プロパティは [`IgxFinalValueLayerComponent`](/components/datachart_axis_annotations.html) には存在しません。このレイヤーはそれ自体が軸の注釈であり、軸上の注釈以外の視覚タイプは他にありません。
+[`isAxisAnnotationEnabled`](datachart_axis_annotations.md) プロパティは [`IgxFinalValueLayerComponent`](datachart_axis_annotations.md) には存在しません。このレイヤーはそれ自体が軸の注釈であり、軸上の注釈以外の視覚タイプは他にありません。
 
-背景、値の精度、アウトライン、パディング、ストローク (アウトライン) の太さ、およびテキストの色で軸の注釈をカスタマイズできます。これらは、それぞれ [`axisAnnotationBackground`](/components/datachart_axis_annotations.html)、[`axisAnnotationInterpolatedValuePrecision`](/components/datachart_axis_annotations.html)、[`axisAnnotationOutline`](/components/datachart_axis_annotations.html)、`AxisAnnotationPadding`、[`axisAnnotationStrokeThickness`](/components/datachart_axis_annotations.html)、[`axisAnnotationTextColor`](/components/datachart_axis_annotations.html) プロパティを使用して設定できます。これらのプロパティに加えて、`AxisAnnotationFormatLabel` イベントもあります。これを使用して、軸注釈に表示されるコンテンツを完全にカスタマイズできます。
+背景、値の精度、アウトライン、パディング、ストローク (アウトライン) の太さ、およびテキストの色で軸の注釈をカスタマイズできます。これらは、それぞれ [`axisAnnotationBackground`](datachart_axis_annotations.md)、[`axisAnnotationInterpolatedValuePrecision`](datachart_axis_annotations.md)、[`axisAnnotationOutline`](datachart_axis_annotations.md)、`AxisAnnotationPadding`、[`axisAnnotationStrokeThickness`](datachart_axis_annotations.md)、[`axisAnnotationTextColor`](datachart_axis_annotations.md) プロパティを使用して設定できます。これらのプロパティに加えて、`AxisAnnotationFormatLabel` イベントもあります。これを使用して、軸注釈に表示されるコンテンツを完全にカスタマイズできます。
 
-[`IgxCrosshairLayerComponent`](/components/datachart_axis_annotations.html) には、X 軸と Y 軸の両方に注釈を表示する機能があります。これらは個別にカスタマイズできるため、上記の各プロパティは存在しますが、名前の前に Xaxis または Yaxis  があります。たとえば、[`xAxisAnnotationBackground`](/components/datachart_axis_annotations.html) または [`yAxisAnnotationTextColor`](/components/datachart_axis_annotations.html) です。
+[`IgxCrosshairLayerComponent`](datachart_axis_annotations.md) には、X 軸と Y 軸の両方に注釈を表示する機能があります。これらは個別にカスタマイズできるため、上記の各プロパティは存在しますが、名前の前に Xaxis または Yaxis  があります。たとえば、[`xAxisAnnotationBackground`](datachart_axis_annotations.md) または [`yAxisAnnotationTextColor`](datachart_axis_annotations.md) です。
 
 ### コード例
 
-このコードは、各レイヤーとそれに対して有効になっている軸注釈を使用したオーバーレイを使用して $ ProductName$ データチャートを作成する方法を示します。ここでは、[`IgxFinalValueLayerComponent`](/components/datachart_axis_annotations.html) も黄色のテキスト色になるようにカスタマイズされています。
+このコードは、各レイヤーとそれに対して有効になっている軸注釈を使用したオーバーレイを使用して $ ProductName$ データチャートを作成する方法を示します。ここでは、[`IgxFinalValueLayerComponent`](datachart_axis_annotations.md) も黄色のテキスト色になるようにカスタマイズされています。
 
 ```html
 <igx-data-chart [dataSource]="data" width="100%" height="500px">

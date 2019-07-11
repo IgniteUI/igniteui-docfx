@@ -7,7 +7,7 @@ _language: ja
 
 ## ツールチップ タイプ
 
-このトピックでは、[`IgxFinancialChart`](/components/financialchart_tooltip_types.html) のツールチップ タイプについて説明します。
+このトピックでは、[`IgxFinancialChart`](financialchart_tooltip_types.md) のツールチップ タイプについて説明します。
 
 ### デモ
 

@@ -7,7 +7,7 @@ _language: ja
 
 ## 凡例
 
-凡例は、エンドユーザーが [`IgxDataChart`](/components/datachart_chart_legends.html) コントロールにプロットされたデータに関連するコンテキスト情報を使用してチャートシリーズのビジュアルを識別するのに役立ちます。プロットエリアに表示されるデータを理解しやすくするために、ほとんどのチャートには凡例が少なくとも 1 つ必要ですが、必須ではなく、チャートはデフォルトで凡例なしで表示できます。
+凡例は、エンドユーザーが [`IgxDataChart`](datachart_chart_legends.md) コントロールにプロットされたデータに関連するコンテキスト情報を使用してチャートシリーズのビジュアルを識別するのに役立ちます。プロットエリアに表示されるデータを理解しやすくするために、ほとんどのチャートには凡例が少なくとも 1 つ必要ですが、必須ではなく、チャートはデフォルトで凡例なしで表示できます。
 
 ### デモ
 
@@ -23,11 +23,11 @@ _language: ja
 
 ### 凡例概要
 
-デフォルトでは、[`IgxDataChart`](/components/datachart_chart_legends.html) はチャート内のどのシリーズの凡例も表示しません。複数のシリーズに共通の凡例を表示したい場合は、`IgxLegend` オブジェクトをアプリケーションに追加してから、それをチャートの `Infragistics.Controls.Charts.Legend` プロパティに設定する必要があります。
+デフォルトでは、[`IgxDataChart`](datachart_chart_legends.md) はチャート内のどのシリーズの凡例も表示しません。複数のシリーズに共通の凡例を表示したい場合は、`IgxLegend` オブジェクトをアプリケーションに追加してから、それをチャートの `Infragistics.Controls.Charts.Legend` プロパティに設定する必要があります。
 
 さらに、各シリーズオブジェクトの `Title` プロパティを設定しないと、凡例にデフォルトのシリーズタイトルが使用されます。
 
-次のコードスニペットは、[`IgxDataChart`](/components/datachart_chart_legends.html) コントロールで凡例を使用する方法を示しています。
+次のコードスニペットは、[`IgxDataChart`](datachart_chart_legends.md) コントロールで凡例を使用する方法を示しています。
 
 ```html
 <div>

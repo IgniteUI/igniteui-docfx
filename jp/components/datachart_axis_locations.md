@@ -23,7 +23,7 @@ _language: ja
 
 ### コード例
 
-このコードは、左右に配置される 2 つの [`IgxNumericYAxisComponent`](/components/datachart_axis_locations.html) と、互いに積み重ねられる2つの [`IgxCategoryXAxisComponent`](/components/datachart_axis_locations.html) を使用してデータチャートを作成する方法を示します。
+このコードは、左右に配置される 2 つの [`IgxNumericYAxisComponent`](datachart_axis_locations.md) と、互いに積み重ねられる2つの [`IgxCategoryXAxisComponent`](datachart_axis_locations.md) を使用してデータチャートを作成する方法を示します。
 
 ```html
  <igx-data-chart

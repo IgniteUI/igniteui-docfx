@@ -20,9 +20,9 @@ Angular Spreadsheet コンポーネント`を使用して`Spreadsheet\`にチャ
 
 ### チャート アダプターの概要
 
-[`chartAdapter`](/components/spreadsheet_chart_adapter.html) を使用すると、スプレッドシートにチャートを表示できます。スプレッドシート チャート アダプターは、Infragistics.Documents.Excel.WorksheetChart インスタンスに基づいてスプレッド シートのチャート要素を作成し、初期化します。
+[`chartAdapter`](spreadsheet_chart_adapter.md) を使用すると、スプレッドシートにチャートを表示できます。スプレッドシート チャート アダプターは、Infragistics.Documents.Excel.WorksheetChart インスタンスに基づいてスプレッド シートのチャート要素を作成し、初期化します。
 
-WorksheetChart をワークシートに追加するには、ワークシートの Shapes コレクションの [`addChart`](/components/spreadsheet_chart_adapter.html) メソッドを使用する必要があります。チャートの追加の詳細については、下記をご覧ください。
+WorksheetChart をワークシートに追加するには、ワークシートの Shapes コレクションの [`addChart`](spreadsheet_chart_adapter.md) メソッドを使用する必要があります。チャートの追加の詳細については、下記をご覧ください。
 
 以下はその手順です。
 
@@ -80,7 +80,7 @@ Spreadsheet ChartAdapter は、折れ線、エリア、柱状、ドーナツを�
 
 ### 依存関係
 
-ハイパーリンクを使用するようにスプレッドシート コントロールを設定するときは、[`SpreadsheetChartAdapter`](/components/spreadsheet_chart_adapter.html) クラスをインポートする必要があります。
+ハイパーリンクを使用するようにスプレッドシート コントロールを設定するときは、[`SpreadsheetChartAdapter`](spreadsheet_chart_adapter.md) クラスをインポートする必要があります。
 
 ```ts
 import { IgxSpreadsheetchartadaptermodule } from "igniteui-angular-spreadsheet-chart-adapter/ES5/igx-spreadsheet-chart-adapter-module";
@@ -96,7 +96,7 @@ import { WorksheetCell } from "igniteui-angular-excel/ES5/WorksheetCell";
 
 ### コード スニペット
 
-次のコードスニペットは、[`IgxSpreadsheet`](/components/spreadsheet_chart_adapter.html) コントロールで現在表示されているワークシートにハイパーリンクを追加する方法を示しています。
+次のコードスニペットは、[`IgxSpreadsheet`](spreadsheet_chart_adapter.md) コントロールで現在表示されているワークシートにハイパーリンクを追加する方法を示しています。
 
 ```typescript
 this.spreadsheet.chartAdapter = new SpreadsheetChartAdapter();

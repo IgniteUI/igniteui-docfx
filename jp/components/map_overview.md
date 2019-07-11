@@ -23,7 +23,7 @@ Ignite UI for Angular Map コンポーネントを使用すると、ビューモ
 
 地図コンポーネントを使用すると、Bing Maps™ および Open Street Maps から地理的画像をレンダリングできます。マップは何万ものデータポイントをプロットし、コントロールがリアルタイム フィードを処理できるように数ミリ秒ごとにそれらを更新します。
 
-マップの `Infragistics.Controls.Charts.Series` プロパティは、無制限の地理的シリーズのレンダリングをサポートするために使用されます。このプロパティは、地理的シリーズ オブジェクトのコレクションで、任意のタイプの地理的シリーズをそれに追加できます。たとえば、都市などの地理的位置をプロットするために [`IgxGeographicSymbolSeriesComponent`](/components/map_overview.html)、またこれらの地理的位置の間の接続 (道路など) をプロットするために [`IgxGeographicPolylineSeriesComponent`](/components/map_overview.html) を追加できます。
+マップの `Infragistics.Controls.Charts.Series` プロパティは、無制限の地理的シリーズのレンダリングをサポートするために使用されます。このプロパティは、地理的シリーズ オブジェクトのコレクションで、任意のタイプの地理的シリーズをそれに追加できます。たとえば、都市などの地理的位置をプロットするために [`IgxGeographicSymbolSeriesComponent`](map_overview.md)、またこれらの地理的位置の間の接続 (道路など) をプロットするために [`IgxGeographicPolylineSeriesComponent`](map_overview.md) を追加できます。
 
 Map は、マウス、キーボード、またはコードビハインドを使用して、マップ コンテンツをナビゲートするためのカスタマイズ可能なナビゲーション動作を提供します。
 
@@ -37,7 +37,7 @@ Map は、マウス、キーボード、またはコードビハインドを使�
 
 ### 必要なモジュール
 
-[`IgxGeographicMap`](/components/map_overview.html) は、以下のモジュールが必要です。
+[`IgxGeographicMap`](map_overview.md) は、以下のモジュールが必要です。
 
 ```ts
 // app.module.ts

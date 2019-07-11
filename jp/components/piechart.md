@@ -14,10 +14,10 @@ _language: ja
 ### デモ
 
 <div class="sample-container loading" style="height: 350px">
-    <iframe id="pie-chart-data-sample-iframe" src='{environment:demosBaseUrl}/charts/pie-chart-data-sample' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="pie-chart-overview-iframe" src='{environment:demosBaseUrl}/charts/pie-chart-overview' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn"  data-iframe-id="pie-chart-data-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
+    <button data-localize="stackblitz" class="stackblitz-btn"  data-iframe-id="pie-chart-overview-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
     </button>
 </div>
 
@@ -32,7 +32,7 @@ chart パッケージをインストールするときに core パッケージ�
 
 ### 必要なモジュール
 
-[`IgxPieChart`](/components/piechart.html) は、以下のモジュールが必要です。
+[`IgxPieChart`](piechart.md) は、以下のモジュールが必要です。
 
 ```ts
 // app.module.ts

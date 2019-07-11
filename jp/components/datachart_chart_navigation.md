@@ -7,7 +7,7 @@ _language: ja
 
 ## ナビゲーション
 
-[`IgxDataChart`](/components/datachart_chart_navigation.html) コントロールでは、チャート ナビゲーションがデフォルトで無効になっています。有効にするとコードや UI を介してチャートのズームやパンニングができるようになります。
+[`IgxDataChart`](datachart_chart_navigation.md) コントロールでは、チャート ナビゲーションがデフォルトで無効になっています。有効にするとコードや UI を介してチャートのズームやパンニングができるようになります。
 
 ### デモ
 
@@ -49,7 +49,7 @@ UI でのナビゲーションを許可するには、ズームを許可する�
 
 ### マウスとキーボードによるチャート ナビゲーション
 
-[`IgxDataChart`](/components/datachart_chart_navigation.html) コントロールのナビゲーションは、マウスまたはキーボードのいずれかを有効にすると発生します。以下の操作は、デフォルトで以下のマウスまたはキーボード操作を使用して呼び出すことができます。
+[`IgxDataChart`](datachart_chart_navigation.md) コントロールのナビゲーションは、マウスまたはキーボードのいずれかを有効にすると発生します。以下の操作は、デフォルトで以下のマウスまたはキーボード操作を使用して呼び出すことができます。
 
 -   `Panning`:  キーボードの矢印キーを使用するか、Shift キーを押しながらマウスでクリックしてドラッグします。
 -   `Zoom In`:  キーボードのPageUpキーを使用するか、マウスホイールを回転させます。
@@ -110,7 +110,7 @@ The following code snippet demonstrates how to enable the overview plus detail p
 
 ### コードによるチャート ナビゲーション
 
-[`IgxDataChart`](/components/datachart_chart_navigation.html) コントロールは、チャートでズームまたはパン操作が行われるたびに更新されるいくつかのナビゲーション プロパティを提供します。各プロパティは、チャートでズームやパンニングするためにコードで設定できます。以下は、これらのプロパティの一覧です。
+[`IgxDataChart`](datachart_chart_navigation.md) コントロールは、チャートでズームまたはパン操作が行われるたびに更新されるいくつかのナビゲーション プロパティを提供します。各プロパティは、チャートでズームやパンニングするためにコードで設定できます。以下は、これらのプロパティの一覧です。
 
 -   `WindowPositionHorizontal`: コンテンツ ビュー長方形の X 部分を表す数値は、チャートで表示されます。
 -   `WindowPositionVertical`: 数値は、チャートに表示されるコンテンツビュー四角形のの Y 部分を表します。
@@ -118,7 +118,7 @@ The following code snippet demonstrates how to enable the overview plus detail p
 -   `WindowScaleHorizontal`: チャートで表示されるコンテンツ ビュー長方形の幅部分を表す数値。
 -   `WindowScaleVertical`: チャートで表示されるコンテンツ ビュー長方形の高さ部分を表す数値。
 
-次のコードスニペットは、`WindowRect` コントロールのビューをプログラムで変更する方法を示しています。以下では、[`IgxDataChart`](/components/datachart_chart_navigation.html) コントロールを表す変数名 chart があると仮定します。
+次のコードスニペットは、`WindowRect` コントロールのビューをプログラムで変更する方法を示しています。以下では、[`IgxDataChart`](datachart_chart_navigation.md) コントロールを表す変数名 chart があると仮定します。
 
 ```ts
 // Zoom in by a factor of 0.05

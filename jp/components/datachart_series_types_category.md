@@ -7,7 +7,7 @@ _language: ja
 
 ## カテゴリ シリーズ
 
-このトピックは、[`IgxDataChart`](/components/datachart_series_types_category.html) コントロールのファイナカテゴリ シリーズのさまざまなタイプについて説明します。カテゴリ シリーズは、データを取り入れてそれを水平線 ([`IgxColumnSeriesComponent`](/components/datachart_series_types_category.html) など) または垂直線 ([`IgxBarSeriesComponent`](/components/datachart_series_types_category.html) など) に沿って延ばしたデータ ポイントのコレクションとして描画するチャート シリーズの中でも、もっとも簡単で一般的な形のグループです。
+このトピックは、[`IgxDataChart`](datachart_series_types_category.md) コントロールのファイナカテゴリ シリーズのさまざまなタイプについて説明します。カテゴリ シリーズは、データを取り入れてそれを水平線 ([`IgxColumnSeriesComponent`](datachart_series_types_category.md) など) または垂直線 ([`IgxBarSeriesComponent`](datachart_series_types_category.md) など) に沿って延ばしたデータ ポイントのコレクションとして描画するチャート シリーズの中でも、もっとも簡単で一般的な形のグループです。
 
 ### デモ
 
@@ -27,32 +27,32 @@ _language: ja
 
 | シリーズ名                                                                                                       | 概要                                                                                                                                                                                            |
 | ----------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [`IgxAreaSeriesComponent`](/components/datachart_series_types_category.html)             | その下の領域が塗りつぶされる線で接続された、均等に配置された一連の点を表示します。カテゴリは水平に配置され、値は垂直に配置されます。                                                                                                                            |
-| [`IgxBarSeriesComponent`](/components/datachart_series_types_category.html)               | 個々のデータを別々の行に表示します。他のシリーズとは異なり、カテゴリは縦に並べられ、値は横にプロットされます。つまり、このシリーズは [`IgxColumnSeriesComponent`](/components/datachart_series_types_category.html) に似てますが、時計回りに90度回転されます。 |
-| [`IgxColumnSeriesComponent`](/components/datachart_series_types_category.html)         | 個々のデータを別々の列に表示します。カテゴリは水平方向、値は垂直方向にプロットされます。データ シリーズの経時的な変化を表示、または複数の項目を比較するために使用します。                                                                                                         |
-| [`IgxLineSeriesComponent`](/components/datachart_series_types_category.html)             | 直線で結ばれた均等に配置された点のセットを表示します。経時的に連続的に変化するデータまたは情報を示すために使用します。ポイントの間の関係を強調する必要がある場合に役立ちます。                                                                                                       |
-| [`IgxPointSeriesComponent`](/components/datachart_series_types_category.html)           | 線で結ばずにデータポイントの位置にマーカーを表示します。これらのマーカーの形状は、`markerType` プロパティを使用して変更されます。                                                                                                                       |
-| [`IgxSplineSeriesComponent`](/components/datachart_series_types_category.html)         | データ表示を向上させるためにスプライン補間を使用して生成した滑らかな線で接続された、均等に配置された点のセットを表示します。                                                                                                                                |
-| [`IgxSplineAreaSeriesComponent`](/components/datachart_series_types_category.html) | データの表示を向上させるためのスプライン補間とスムージングの追加機能を持つ [`IgxAreaSeriesComponent`](/components/datachart_series_types_category.html) タイプ。                                                    |
-| [`IgxStepLineSeriesComponent`](/components/datachart_series_types_category.html)     | [`IgxLineSeriesComponent`](/components/datachart_series_types_category.html) と同じですが、値が点間の最短経路をトレースする直線ではなく、段階的に連続する垂直線と水平線で接続されている点が異なります。                                 |
-| [`IgxStepAreaSeriesComponent`](/components/datachart_series_types_category.html)     | [`IgxStepLineSeriesComponent`](/components/datachart_series_types_category.html) と同じですが、連続する垂直線と水平線がデータポイント間の変化を段階的に進行させるのではなく、値より下の領域が塗りつぶされる点が異なります。                 |
-| [`IgxWaterfallSeriesComponent`](/components/datachart_series_types_category.html)   | ポイントの集合を、連続するデータ ポイントの値同士の差異を示す垂直列として表示します。列は色でコード化され、値が正の変化であるか負の変化であるかを区別します。カテゴリは水平方向、値は垂直方向にプロットされます。データ ポイントの経時的な変化を表示、または複数の項目を比較するために使用します。                                            |
+| [`IgxAreaSeriesComponent`](datachart_series_types_category.md)             | その下の領域が塗りつぶされる線で接続された、均等に配置された一連の点を表示します。カテゴリは水平に配置され、値は垂直に配置されます。                                                                                                                            |
+| [`IgxBarSeriesComponent`](datachart_series_types_category.md)               | 個々のデータを別々の行に表示します。他のシリーズとは異なり、カテゴリは縦に並べられ、値は横にプロットされます。つまり、このシリーズは [`IgxColumnSeriesComponent`](datachart_series_types_category.md) に似てますが、時計回りに90度回転されます。 |
+| [`IgxColumnSeriesComponent`](datachart_series_types_category.md)         | 個々のデータを別々の列に表示します。カテゴリは水平方向、値は垂直方向にプロットされます。データ シリーズの経時的な変化を表示、または複数の項目を比較するために使用します。                                                                                                         |
+| [`IgxLineSeriesComponent`](datachart_series_types_category.md)             | 直線で結ばれた均等に配置された点のセットを表示します。経時的に連続的に変化するデータまたは情報を示すために使用します。ポイントの間の関係を強調する必要がある場合に役立ちます。                                                                                                       |
+| [`IgxPointSeriesComponent`](datachart_series_types_category.md)           | 線で結ばずにデータポイントの位置にマーカーを表示します。これらのマーカーの形状は、`markerType` プロパティを使用して変更されます。                                                                                                                       |
+| [`IgxSplineSeriesComponent`](datachart_series_types_category.md)         | データ表示を向上させるためにスプライン補間を使用して生成した滑らかな線で接続された、均等に配置された点のセットを表示します。                                                                                                                                |
+| [`IgxSplineAreaSeriesComponent`](datachart_series_types_category.md) | データの表示を向上させるためのスプライン補間とスムージングの追加機能を持つ [`IgxAreaSeriesComponent`](datachart_series_types_category.md) タイプ。                                                    |
+| [`IgxStepLineSeriesComponent`](datachart_series_types_category.md)     | [`IgxLineSeriesComponent`](datachart_series_types_category.md) と同じですが、値が点間の最短経路をトレースする直線ではなく、段階的に連続する垂直線と水平線で接続されている点が異なります。                                 |
+| [`IgxStepAreaSeriesComponent`](datachart_series_types_category.md)     | [`IgxStepLineSeriesComponent`](datachart_series_types_category.md) と同じですが、連続する垂直線と水平線がデータポイント間の変化を段階的に進行させるのではなく、値より下の領域が塗りつぶされる点が異なります。                 |
+| [`IgxWaterfallSeriesComponent`](datachart_series_types_category.md)   | ポイントの集合を、連続するデータ ポイントの値同士の差異を示す垂直列として表示します。列は色でコード化され、値が正の変化であるか負の変化であるかを区別します。カテゴリは水平方向、値は垂直方向にプロットされます。データ ポイントの経時的な変化を表示、または複数の項目を比較するために使用します。                                            |
 
 ### 軸の要件
 
- [`IgxDataChart`](/components/datachart_series_types_category.html) コントロールは、さまざまな軸タイプを提供しますが、カテゴリ シリーズの特定のタイプでは以下の軸タイプのみ使用できます。
+ [`IgxDataChart`](datachart_series_types_category.md) コントロールは、さまざまな軸タイプを提供しますが、カテゴリ シリーズの特定のタイプでは以下の軸タイプのみ使用できます。
 
 | シリーズ タイプ                                                                                                    | YAxis タイプ                                                                                             | XAxis タイプ                                                                                                                                                                                                                                                                                                         |
 | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [`IgxBarSeriesComponent`](/components/datachart_series_types_category.html)               | [`IgxCategoryYAxisComponent`](/components/datachart_series_types_category.html) | [`IgxNumericXAxisComponent`](/components/datachart_series_types_category.html)                                                                                                                                                                                                               |
-| [`IgxAreaSeriesComponent`](/components/datachart_series_types_category.html)             | [`IgxNumericYAxisComponent`](/components/datachart_series_types_category.html)   | [`IgxCategoryXAxisComponent`](/components/datachart_series_types_category.html), [`IgxOrdinalTimeXAxisComponent`](/components/datachart_series_types_category.html), [`IgxTimeXAxisComponent`](/components/datachart_series_types_category.html) |
-| [`IgxColumnSeriesComponent`](/components/datachart_series_types_category.html)         | [`IgxNumericYAxisComponent`](/components/datachart_series_types_category.html)   | [`IgxCategoryXAxisComponent`](/components/datachart_series_types_category.html), [`IgxOrdinalTimeXAxisComponent`](/components/datachart_series_types_category.html), [`IgxTimeXAxisComponent`](/components/datachart_series_types_category.html) |
-| [`IgxLineSeriesComponent`](/components/datachart_series_types_category.html)             | [`IgxNumericYAxisComponent`](/components/datachart_series_types_category.html)   | [`IgxCategoryXAxisComponent`](/components/datachart_series_types_category.html), [`IgxOrdinalTimeXAxisComponent`](/components/datachart_series_types_category.html), [`IgxTimeXAxisComponent`](/components/datachart_series_types_category.html) |
-| [`IgxSplineSeriesComponent`](/components/datachart_series_types_category.html)         | [`IgxNumericYAxisComponent`](/components/datachart_series_types_category.html)   | [`IgxCategoryXAxisComponent`](/components/datachart_series_types_category.html), [`IgxOrdinalTimeXAxisComponent`](/components/datachart_series_types_category.html), [`IgxTimeXAxisComponent`](/components/datachart_series_types_category.html) |
-| [`IgxSplineAreaSeriesComponent`](/components/datachart_series_types_category.html) | [`IgxNumericYAxisComponent`](/components/datachart_series_types_category.html)   | [`IgxCategoryXAxisComponent`](/components/datachart_series_types_category.html), [`IgxOrdinalTimeXAxisComponent`](/components/datachart_series_types_category.html), [`IgxTimeXAxisComponent`](/components/datachart_series_types_category.html) |
-| [`IgxStepAreaSeriesComponent`](/components/datachart_series_types_category.html)     | [`IgxNumericYAxisComponent`](/components/datachart_series_types_category.html)   | [`IgxCategoryXAxisComponent`](/components/datachart_series_types_category.html), [`IgxOrdinalTimeXAxisComponent`](/components/datachart_series_types_category.html), [`IgxTimeXAxisComponent`](/components/datachart_series_types_category.html) |
-| [`IgxStepLineSeriesComponent`](/components/datachart_series_types_category.html)     | [`IgxNumericYAxisComponent`](/components/datachart_series_types_category.html)   | [`IgxCategoryXAxisComponent`](/components/datachart_series_types_category.html), [`IgxOrdinalTimeXAxisComponent`](/components/datachart_series_types_category.html), [`IgxTimeXAxisComponent`](/components/datachart_series_types_category.html) |
-| [`IgxWaterfallSeriesComponent`](/components/datachart_series_types_category.html)   | [`IgxNumericYAxisComponent`](/components/datachart_series_types_category.html)   | [`IgxCategoryXAxisComponent`](/components/datachart_series_types_category.html), [`IgxOrdinalTimeXAxisComponent`](/components/datachart_series_types_category.html), [`IgxTimeXAxisComponent`](/components/datachart_series_types_category.html) |
+| [`IgxBarSeriesComponent`](datachart_series_types_category.md)               | [`IgxCategoryYAxisComponent`](datachart_series_types_category.md) | [`IgxNumericXAxisComponent`](datachart_series_types_category.md)                                                                                                                                                                                                               |
+| [`IgxAreaSeriesComponent`](datachart_series_types_category.md)             | [`IgxNumericYAxisComponent`](datachart_series_types_category.md)   | [`IgxCategoryXAxisComponent`](datachart_series_types_category.md), [`IgxOrdinalTimeXAxisComponent`](datachart_series_types_category.md), [`IgxTimeXAxisComponent`](datachart_series_types_category.md) |
+| [`IgxColumnSeriesComponent`](datachart_series_types_category.md)         | [`IgxNumericYAxisComponent`](datachart_series_types_category.md)   | [`IgxCategoryXAxisComponent`](datachart_series_types_category.md), [`IgxOrdinalTimeXAxisComponent`](datachart_series_types_category.md), [`IgxTimeXAxisComponent`](datachart_series_types_category.md) |
+| [`IgxLineSeriesComponent`](datachart_series_types_category.md)             | [`IgxNumericYAxisComponent`](datachart_series_types_category.md)   | [`IgxCategoryXAxisComponent`](datachart_series_types_category.md), [`IgxOrdinalTimeXAxisComponent`](datachart_series_types_category.md), [`IgxTimeXAxisComponent`](datachart_series_types_category.md) |
+| [`IgxSplineSeriesComponent`](datachart_series_types_category.md)         | [`IgxNumericYAxisComponent`](datachart_series_types_category.md)   | [`IgxCategoryXAxisComponent`](datachart_series_types_category.md), [`IgxOrdinalTimeXAxisComponent`](datachart_series_types_category.md), [`IgxTimeXAxisComponent`](datachart_series_types_category.md) |
+| [`IgxSplineAreaSeriesComponent`](datachart_series_types_category.md) | [`IgxNumericYAxisComponent`](datachart_series_types_category.md)   | [`IgxCategoryXAxisComponent`](datachart_series_types_category.md), [`IgxOrdinalTimeXAxisComponent`](datachart_series_types_category.md), [`IgxTimeXAxisComponent`](datachart_series_types_category.md) |
+| [`IgxStepAreaSeriesComponent`](datachart_series_types_category.md)     | [`IgxNumericYAxisComponent`](datachart_series_types_category.md)   | [`IgxCategoryXAxisComponent`](datachart_series_types_category.md), [`IgxOrdinalTimeXAxisComponent`](datachart_series_types_category.md), [`IgxTimeXAxisComponent`](datachart_series_types_category.md) |
+| [`IgxStepLineSeriesComponent`](datachart_series_types_category.md)     | [`IgxNumericYAxisComponent`](datachart_series_types_category.md)   | [`IgxCategoryXAxisComponent`](datachart_series_types_category.md), [`IgxOrdinalTimeXAxisComponent`](datachart_series_types_category.md), [`IgxTimeXAxisComponent`](datachart_series_types_category.md) |
+| [`IgxWaterfallSeriesComponent`](datachart_series_types_category.md)   | [`IgxNumericYAxisComponent`](datachart_series_types_category.md)   | [`IgxCategoryXAxisComponent`](datachart_series_types_category.md), [`IgxOrdinalTimeXAxisComponent`](datachart_series_types_category.md), [`IgxTimeXAxisComponent`](datachart_series_types_category.md) |
 
 ### データの要件
 
@@ -60,8 +60,8 @@ _language: ja
 
 -   データソースはデータ項目の配列またはリストである必要があります。
 -   データソースには少なくとも1つのデータ項目が含まれている必要があります。そうでない場合、チャートはカテゴリ シリーズをレンダリングしません。
--   すべてのデータ項目には、財務軸 ([`IgxCategoryXAxisComponent`](/components/datachart_series_types_category.html) など) の `Label` プロパティにマッピングする必要があるデータ列 （文字列または日時）を少なくとも 1 列含める必要があります
--   データ項目は、カテゴリシリーズ ([`IgxLineSeriesComponent`](/components/datachart_series_types_category.html) など) の `ValueMemberPath` プロパティを使用してマップする数値データ列を少なくとも 1 列含む必要があります。
+-   すべてのデータ項目には、財務軸 ([`IgxCategoryXAxisComponent`](datachart_series_types_category.md) など) の `Label` プロパティにマッピングする必要があるデータ列 （文字列または日時）を少なくとも 1 列含める必要があります
+-   データ項目は、カテゴリシリーズ ([`IgxLineSeriesComponent`](datachart_series_types_category.md) など) の `ValueMemberPath` プロパティを使用してマップする数値データ列を少なくとも 1 列含む必要があります。
 
 上記データ要件を満たすデータソースとして [SampleCategoryData](datachart_data_sources_category.md) を使用できます。
 
@@ -108,7 +108,7 @@ import { IgxDataChartCategoryModule } from "igniteui-angular-charts/ES5/igx-data
 
 ### コード例 - 列シリーズ
 
-このコードは、 [`IgxColumnSeriesComponent`](/components/datachart_series_types_category.html)  でデータチャートのインスタンスを作成し、データソースにバインドする方法を説明します。
+このコードは、 [`IgxColumnSeriesComponent`](datachart_series_types_category.md)  でデータチャートのインスタンスを作成し、データソースにバインドする方法を説明します。
 
 ```html
  <igx-data-chart
@@ -128,7 +128,7 @@ import { IgxDataChartCategoryModule } from "igniteui-angular-charts/ES5/igx-data
 
 ### コード例 - バーシリーズ
 
-上記のコードを使って  [`IgxColumnSeriesComponent`](/components/datachart_series_types_category.html)  をレンダリングしたいシリーズの名前で置き換えて他のタイプのカテゴリ シリーズを作成することもできます。ただし、 [`IgxBarSeriesComponent`](/components/datachart_series_types_category.html)  は、他のタイプの軸が必要なため、この規則の例外となります。このコードは、[`IgxBarSeriesComponent`](/components/datachart_series_types_category.html) でデータチャートのインスタンスを作成し、データソースにバインドする方法を説明します。
+上記のコードを使って  [`IgxColumnSeriesComponent`](datachart_series_types_category.md)  をレンダリングしたいシリーズの名前で置き換えて他のタイプのカテゴリ シリーズを作成することもできます。ただし、 [`IgxBarSeriesComponent`](datachart_series_types_category.md)  は、他のタイプの軸が必要なため、この規則の例外となります。このコードは、[`IgxBarSeriesComponent`](datachart_series_types_category.md) でデータチャートのインスタンスを作成し、データソースにバインドする方法を説明します。
 
 ```html
  <igx-data-chart
