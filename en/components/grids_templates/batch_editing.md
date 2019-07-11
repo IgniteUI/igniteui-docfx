@@ -118,7 +118,7 @@ export class GridWithTransactionsComponent { }
 ```typescript
 import { Component, ViewChild } from "@angular/core";
 import { IgxGridComponent, IgxGridTransaction, IgxToggleDirective,
-    IgxTransactionService, IgxTreeGridComponent } from "igniteui-angular";
+    IgxHierarchicalTransactionService, IgxTreeGridComponent } from "igniteui-angular";
 
 @Component({
     providers: [{ provide: IgxGridTransaction, useClass: IgxHierarchicalTransactionService }],
