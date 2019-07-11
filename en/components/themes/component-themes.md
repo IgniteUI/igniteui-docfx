@@ -42,7 +42,7 @@ $new-avatar-theme: igx-avatar-theme(
     $icon-background: purple
 );
 
-// Pass the theme to a to the `igx-avatar` mixin
+// Pass the theme to the `igx-avatar` mixin
 @include igx-avatar($new-avatar-theme);
 ```
 

@@ -463,9 +463,9 @@ All that's left is to properly scope our newly created themes.
 In case you want this newly created `igx-drop-down` theme to be applied [`globally`](../themes/component-themes.md##creating-themes) in your app (to all of the components of this type, keep in mind we are actually extending igx-drop-down-theme), all that is needed is to include the theme in your app root style file. The same applies for our custom button theme:
 ```scss
 // in root app.scss
-// Pass our drop-down theme to a to the `igx-drop-down` mixin
+// Pass our drop-down theme to the `igx-drop-down` mixin
     @include igx-drop-down($custom-drop-down-theme);
-// Pass our button theme to a to the `igx-button` mixin
+// Pass our button theme to the `igx-button` mixin
     @include igx-button($custom-button-theme);
 
 ```
