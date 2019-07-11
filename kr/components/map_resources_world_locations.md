@@ -10,7 +10,7 @@ The resource topic provides implementation of data utility for generating geogra
 
 ### Code Snippet
 
-```typescript
+```ts
 export default class WorldLocations {
 
     private static locations: any[] = [];

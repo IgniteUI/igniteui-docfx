@@ -6,7 +6,7 @@ _keywords: map, Ignite UI for Angular, infragistics
 
 ## Binding Multiple Data Sources
 
-In the `IgxGeographicMap`, you can add multiple geographic series objects to overlay custom data sources with geo-spacial data. For example, `GeographicSymbolSeries` for plotting geographic locations of airports, the `GeographicPolylineSeries` for plotting flights between airports, and 2nd `GeographicPolylineSeries` for plotting gridlines of major geographic coordinates.
+In the [`IgxGeographicMap`](map_binding_multiple_data_sources.md), you can add multiple geographic series objects to overlay custom data sources with geo-spacial data. For example, [`IgxGeographicSymbolSeriesComponent`](map_binding_multiple_data_sources.md) for plotting geographic locations of airports, the [`IgxGeographicPolylineSeriesComponent`](map_binding_multiple_data_sources.md) for plotting flights between airports, and 2nd [`IgxGeographicPolylineSeriesComponent`](map_binding_multiple_data_sources.md) for plotting gridlines of major geographic coordinates.
 
 ### Demo
 
@@ -22,22 +22,22 @@ In the `IgxGeographicMap`, you can add multiple geographic series objects to ove
 
 This topic takes you step-by-step towards displaying multiple geographic series that will plot following geo-spatial data:
 
-`GeographicSymbolSeries` – displays locations of major airports
-`GeographicPolylineSeries` – displays flights between airports
-`GeographicPolylineSeries` – displays gridlines of major coordinates
+[`IgxGeographicSymbolSeriesComponent`](map_binding_multiple_data_sources.md) – displays locations of major airports
+[`IgxGeographicPolylineSeriesComponent`](map_binding_multiple_data_sources.md) – displays flights between airports
+[`IgxGeographicPolylineSeriesComponent`](map_binding_multiple_data_sources.md) – displays gridlines of major coordinates
 
 You can use geographic series in this or other combinations to plot desired data.
 
 ### Creating Data Sources
 
-Create data sources for all geographic series that you want to display in the `IgxGeographicMap`. For example, you can the use[WorldConnections](map_resources_world_connections.md) script.
+Create data sources for all geographic series that you want to display in the [`IgxGeographicMap`](map_binding_multiple_data_sources.md). For example, you can the use[WorldConnections](map_resources_world_connections.md) script.
 
 ### Overlaying Flights
 
-Create first `GeographicPolylineSeries` object with flight connections between major airports and add it to `IgxSeriesComponent` collection of the `IgxGeographicMap`.
+Create first [`IgxGeographicPolylineSeriesComponent`](map_binding_multiple_data_sources.md) object with flight connections between major airports and add it to `Infragistics.Controls.Charts.Series` collection of the [`IgxGeographicMap`](map_binding_multiple_data_sources.md).
 
 ### Overlaying Gridlines
 
-Create second `GeographicPolylineSeries` object with geographic gridlines and add it to `IgxSeriesComponent` collection of the `IgxGeographicMap`.
+Create second [`IgxGeographicPolylineSeriesComponent`](map_binding_multiple_data_sources.md) object with geographic gridlines and add it to `Infragistics.Controls.Charts.Series` collection of the [`IgxGeographicMap`](map_binding_multiple_data_sources.md).
 
-Create `GeographicSymbolSeries` object with geographic gridlines and add it to `IgxSeriesComponent` collection of the geographic `IgxGeographicMap`.
+Create [`IgxGeographicSymbolSeriesComponent`](map_binding_multiple_data_sources.md) object with geographic gridlines and add it to `Infragistics.Controls.Charts.Series` collection of the geographic [`IgxGeographicMap`](map_binding_multiple_data_sources.md).

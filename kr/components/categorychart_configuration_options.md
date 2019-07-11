@@ -1,5 +1,5 @@
 ---
-제목: 카테고리 차트 | 데이터 비주얼라이제이션 도구 | Ignite UI for Angular | 컨피규레이터 옵션 | Infragistics 
+제목: 카테고리 차트 | 데이터 비주얼라이제이션 도구 | Ignite UI for Angular | 컨피규레이터 옵션 | Infragistics
 _description: 범주 차트 구성 요소를 사용하여 데이터를 나타내는 데 가장 적합한 차트 유형을 분석하고 자동으로 선택합니다. 시각화를위한 차트 유형에 대해 알아보십시오.
 _keywords: category chart, Ignite UI for Angular, infragistics
 _language: kr
@@ -80,7 +80,7 @@ _language: kr
 
 제목 및 부제 정보에 대한 차트 크기가 조정되도록 허용됩니다.
 
-기본적으로 애니메이션 변환은 비활성화이며, `isTransitionInEnabled` 옵션을 “true”로 설정하여 애니메이션 변환을 활성화할 수 있습니다.
+기본적으로 애니메이션 변환은 비활성화이며, `IsTransitionInEnabled` 옵션을 “true”로 설정하여 애니메이션 변환을 활성화할 수 있습니다.
 
 애니메이션 변환은 변환 유형, 데이터 점에 대한 속도 및 이징 변환(이징 함수로 관리)을 구성할 수 있습니다.
 

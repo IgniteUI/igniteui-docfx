@@ -7,7 +7,7 @@ _language: kr
 
 ## 추세선
 
-`IgxDataChart` 제어는 시리즈에 바인딩된 데이터의 추세를 식별하는 데 도움이 되는 추세선을 지원합니다.
+[`IgxDataChart`](datachart_series_trendlines.md) 제어는 시리즈에 바인딩된 데이터의 추세를 식별하는 데 도움이 되는 추세선을 지원합니다.
 
 ### 데모
 
@@ -21,26 +21,26 @@ _language: kr
 
 <div class="divider--half"></div>
 
-`IgxDataChart` 제어의 추세선은 기본적으로 무효로 되어 있습니다. 이것을 설정하기 위해 추세선을 표시할 해당 시리즈에서 `TrendLineType` 속성을 설정할 수 있습니다. 브러시, 기간, 두께, 대시 배열과 같은 추세선의 여러 모양 속성을 수정할 수 있습니다.
+[`IgxDataChart`](datachart_series_trendlines.md) 제어의 추세선은 기본적으로 무효로 되어 있습니다. 이것을 설정하기 위해 추세선을 표시할 해당 시리즈에서 [`TrendLineType`](datachart_series_trendlines.md) 속성을 설정할 수 있습니다. 브러시, 기간, 두께, 대시 배열과 같은 추세선의 여러 모양 속성을 수정할 수 있습니다.
 
 추세선은 스택 시리즈 및 범위 시리즈를 제외한 모든 시리즈에서 지원됩니다. 다음은 차트 시리즈에서 사용할 수 있는 추세선 목록입니다:
 
--   `None`
--   `CubicFit`
--   `CumulativeAverage`
--   `ExponentialAverage`
--   `ExponentialFit`
--   `LinearFit`
--   `LogarithmicFit`
--   `ModifiedAverage`
--   `PowerLawFit`
--   `QuadraticFit`
--   `QuarticFit`
--   `QuinticFit`
--   `SimpleAverage`
--   `WeightedAverage`
+-   [`None`](datachart_series_trendlines.md)
+-   [`CubicFit`](datachart_series_trendlines.md)
+-   [`CumulativeAverage`](datachart_series_trendlines.md)
+-   [`ExponentialAverage`](datachart_series_trendlines.md)
+-   [`ExponentialFit`](datachart_series_trendlines.md)
+-   [`LinearFit`](datachart_series_trendlines.md)
+-   [`LogarithmicFit`](datachart_series_trendlines.md)
+-   [`ModifiedAverage`](datachart_series_trendlines.md)
+-   [`PowerLawFit`](datachart_series_trendlines.md)
+-   [`QuadraticFit`](datachart_series_trendlines.md)
+-   [`QuarticFit`](datachart_series_trendlines.md)
+-   [`QuinticFit`](datachart_series_trendlines.md)
+-   [`SimpleAverage`](datachart_series_trendlines.md)
+-   [`WeightedAverage`](datachart_series_trendlines.md)
 
-다음 코드 조각은 `IgxDataChart` 제어의 시리즈에 추세선을 추가하는 방법을 보여 줍니다:
+다음 코드 조각은 [`IgxDataChart`](datachart_series_trendlines.md) 제어의 시리즈에 추세선을 추가하는 방법을 보여 줍니다:
 
 ```html
 <igx-data-chart  [dataSource]="data"

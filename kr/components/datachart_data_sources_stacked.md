@@ -9,7 +9,7 @@ _language: kr
 
 이 항목에서는 스택 시리즈의 데이터 소스를 구현하는 방법에 대한 예제를 제공합니다
 
-```typescript
+```ts
 export class SampleCategoryItem  {
     public Year?: string;
     public USA?: number;

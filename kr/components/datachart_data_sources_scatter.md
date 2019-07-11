@@ -9,7 +9,7 @@ _language: kr
 
 이 항목에서는 [분산 XY 시리즈](datachart_series_types_range.md)의 데이터 소스를 구현하는 방법에 대한 예제를 제공합니다
 
-```typescript
+```ts
 export class SampleScatterData {
 
     public static create(): any[] {
