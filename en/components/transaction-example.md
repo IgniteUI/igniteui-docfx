@@ -8,18 +8,19 @@ _keywords: Ignite UI for Angular, transaction
 
 You may get advantage of the Transaction Service when using any component that needs to preserve the state of its data source and to commit many transactions at once. 
 
-When working with the Ignite Ui for Angular grid components, you may use the `igxTransactionService` and `igxHierarchicalTransactionService` that are integrated with the grids and provide batch editing out of the box. However, if you need to use transactions with any other Ignite UI for Angular component, you may use the `igxTransactionService` and implement similar behavior. 
+When working with the Ignite Ui for Angular grid components, you may use the `igxTransactionService` and `igxHierarchicalTransactionService` that are integrated with the grids and provide batch editing out of the box. However, if you need to use transactions with any other Ignite UI for Angular or custom component, you may again use the `igxTransactionService` and implement similar behavior. 
 
-You may use the `igxTransactionService` with any custom component that you create and in this topic we will use `igxList` component to demonstrate how to enable transactions.
+In this topic we will use `igxList` component to demonstrate how to enable transactions.
 
-In our html template, below the list component, we add a form with four buttons:
+In our html template, below the list component, we add a form with five buttons:
 
 `
 <form #buttonsForm class="options">
-    <button #add igxButton (click)="onAdd($event)" class="add">Add New Item</button>
-    <button #edit igxButton (click)="onEdit($event)" class="edit">Edit Second item</button>
-    <button #delete igxButton (click)="onDelete($event)">Delete First item</button>
+    <button igxButton (click)="onCommit($event)">Commit Transaction</button>
+    <button #add igxButton (click)="onAdd($event)" class="add">Add New Row</button>
+    <button #edit igxButton (click)="onEdit($event)" class="edit">Edit Second Row</button>
     <button #clear igxButton (click)="onClear($event)" class="clear">Clear Transactions</button>
+    <button #delete igxButton (click)="onDelete($event)">Delete First Row</button>
 </form>
 `
 
@@ -35,23 +36,21 @@ Our class constructor should look like this:
 
 When we click the `add` button, we add a new transaction to the Transaction log, providing the `id`, the `TransactionType` and the `newValue` properties: 
 
-`this._transactions.add({ id: 2, type: TransactionType.ADD, newValue: person });`
+`this._transactions.add({ id: 2, type: TransactionType.ADD, newValue: employee });`
 
 At this moment, our transaction is added to the transaction log, we see the new item is added to the list that we are manipulating but the change is still not committed. The data source is not changed yet. We may do additional changes to the list and commit them at once when we are ready.
 
 To update an existing item, we will add a transaction of type `UPDATE` to the Transaction log. In our example. we change the second item of the list:
 
-`this._transactions.add({ id: 3, type: TransactionType.UPDATE, newValue: { age: newAge } }, this.people[1]);`
+`this._transactions.add({ id: 3, type: TransactionType.UPDATE, newValue: { position: newPosition } }, this.employee[1]);`
 
 By clicking the `delete` button we will remove the first item in the list - a transaction of type `DELETE` will be added to the Transaction log.
 
-`this._transactions.add(
-        { id: 1, type: TransactionType.DELETE, newValue: { name: this.name, age: this.age } }, this.people[0]);
-    }`
+`this._transactions.add({ id: 1, type: TransactionType.DELETE, newValue: { position: this.position } }, this.employee[0]);`
 
 Once we are done with all our changes, we may commit them all at once using the `commit` method of the `igxTransactionService`. It applies all transactions over the provided data:
 
-`this._transactions.commit(this.people);`
+`this._transactions.commit(this.employee);`
 
 At any point of our interaction with the list, we may clear the Transaction log, using the `clear` method.
 
