@@ -31,6 +31,9 @@
     - name: Two-Way Binding
       href: general/wpf_to_angular_guide/two_way_binding.md
       new: false
+    - name: Structural Directives in Angular
+      href: general/wpf_to_angular_guide/structural_directives.md
+      new: false
 - name: Grids & Lists
   href: grids_and_lists.md
   header: true
@@ -359,28 +362,28 @@
       #  - name: Requirements
       #    href: datachart_series_requirements.md
       #    new: true
-        - name: Category Series 
+        - name: Category Series
           href: datachart_series_types_category.md
           new: true
-        - name: Financial Series 
+        - name: Financial Series
           href: datachart_series_types_financial.md
           new: true
-        - name: Polar Series 
+        - name: Polar Series
           href: datachart_series_types_polar.md
           new: true
-        - name: Radial Series 
+        - name: Radial Series
           href: datachart_series_types_radial.md
           new: true
-        - name: Range Series 
+        - name: Range Series
           href: datachart_series_types_range.md
           new: true
-        - name: Scatter Area Series 
+        - name: Scatter Area Series
           href: datachart_series_types_scatter_area.md
           new: true
-        - name: Scatter Contour Series 
+        - name: Scatter Contour Series
           href: datachart_series_types_scatter_contour.md
           new: true
-        - name: Scatter Bubble Series 
+        - name: Scatter Bubble Series
           href: datachart_series_types_scatter_bubble.md
           new: true
         # - name: Scatter HD Series
@@ -391,7 +394,7 @@
           new: true
         - name: Scatter Shape Series
           href: datachart_series_types_shape.md
-          new: true        
+          new: true
         - name: Stacked Series
           href: datachart_series_types_stacked.md
           new: true
@@ -427,7 +430,7 @@
       new: true
     - name: Data Sources
       href: datachart_data_sources.md
-      new: true 
+      new: true
     #- name: Data Triangulation
     #  href: datachart_data_triangulation.md
     #  new: true
@@ -436,7 +439,7 @@
     #  new: true
     #- name: Value Overlay
     #  href: datachart_series_value_overlay.md
-    #  new: true        
+    #  new: true
 - name: Financial Chart
   href: financialchart.md
   items:
