@@ -1,5 +1,5 @@
 ---
-title: WPF to Angular guide
+title: Structural Directives in Angular
 _description: WPF to Angular guide topics help you switch from WPF to Angular.
 _keywords: WPF, Windows Presentation Foundation, Angular, Ignite UI for Angular
 ---
@@ -116,3 +116,14 @@ If all went well, now we should see that for each item in that array we are usin
 ```
 That is how easy it is to add and remove elements to your view in your angular application - just use a structural directive and you are done.
 
+## Additional Resources
+* [Desktop to Web: Structural Directives in Angular](https://www.youtube.com/watch?v=vQe7R78Od8k&t=95s)
+* [Desktop to Web: Create your first Angular App](https://www.youtube.com/watch?v=dhjrAPPad54&list=PLG8rj6Rr0BU-AqcJMuwggKy0GMIkjkt3j)
+* [Desktop to Web: Create your UI with Angular components](https://www.youtube.com/watch?v=z1SZUezpRXY&t=487s)
+* [Angular Application Shell](https://angular.io/tutorial/toh-pt0)
+
+<div class="divider--half"></div>
+Our community is active and always welcoming to new ideas.
+
+* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
