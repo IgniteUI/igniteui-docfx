@@ -106,6 +106,7 @@ The actual property name is wrapped into square brackets, and its value does not
 
 ## Additional Resources
 * [Desktop to Web: One-way data binding with Angular interpolation and property binding](https://www.youtube.com/watch?v=fP7iVhFNTOk&list=PLG8rj6Rr0BU-AqcJMuwggKy0GMIkjkt3j)
+* [Two-way binding in Angular](two_way_binding.md)
 * [Angular Displaying Data](https://angular.io/guide/displaying-data#displaying-data)
 
 <div class="divider--half"></div>
